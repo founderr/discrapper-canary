@@ -233,7 +233,7 @@ let M = () => {
       })
     }) : null
   },
-  y = () => (0, f.useShouldShowHelplineLink)() ? (0, n.jsxs)("div", {
+  x = () => (0, f.useShouldShowHelplineLink)() ? (0, n.jsxs)("div", {
     className: i()(g.__invalid_helpLineInfo, A.marginTop20),
     children: [(0, n.jsx)(o.Heading, {
       className: g.supportHeader,
@@ -249,7 +249,7 @@ let M = () => {
       })
     })]
   }) : null,
-  x = () => {
+  y = () => {
     let e = (0, h.useUserForLinkStatus)(I.UserLinkStatus.PENDING),
       t = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
         count: e.length
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, E.default)();
   return (0, n.jsxs)("div", {
     className: g.container,
-    children: [e ? (0, n.jsx)(L, {}) : (0, n.jsx)(R, {}), (0, n.jsx)(M, {}), (0, n.jsx)(x, {}), (0, n.jsx)(P, {}), (0, n.jsx)(y, {})]
+    children: [e ? (0, n.jsx)(L, {}) : (0, n.jsx)(R, {}), (0, n.jsx)(M, {}), (0, n.jsx)(y, {}), (0, n.jsx)(P, {}), (0, n.jsx)(x, {})]
   })
 }

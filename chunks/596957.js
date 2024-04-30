@@ -28,7 +28,7 @@ var n = a("735250"),
   O = a("617015"),
   M = a("981631"),
   P = a("689938"),
-  y = a("954360");
+  x = a("954360");
 t.default = function(e) {
   let {
     sectionFilter: t,
@@ -36,7 +36,7 @@ t.default = function(e) {
   } = e, {
     analyticsLocations: l
   } = (0, h.default)(E.default.FRIENDS_LIST), {
-    rows: x,
+    rows: y,
     section: D
   } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, I.useIsClearIncomingFriendRequestsEnabled)(), [G, w] = s.useState(() => {
     let e = {};
@@ -52,9 +52,9 @@ t.default = function(e) {
       ...G,
       [t]: ""
     })
-  }, [G, t]), F = x.filter(t, G[t]);
+  }, [G, t]), F = y.filter(t, G[t]);
   if (0 === F.length && "" === G[t]) return (0, n.jsxs)("div", {
-    className: y.emptyStateContainer,
+    className: x.emptyStateContainer,
     children: [t === M.FriendsSections.ONLINE && (0, n.jsx)(_.default, {}), (0, n.jsx)(A.default, {
       type: t,
       onClick: () => {
@@ -70,13 +70,13 @@ t.default = function(e) {
     children: (0, n.jsxs)(c.default, {
       section: M.AnalyticsSections.FRIENDS_LIST,
       children: [(0, n.jsx)(p.default, {
-        className: i()(y.searchBar, H ? y.searchEmptyState : null),
+        className: i()(x.searchBar, H ? x.searchEmptyState : null),
         query: G[t],
         onChange: k,
         onClear: B,
         size: p.default.Sizes.MEDIUM
       }), t === M.FriendsSections.ONLINE && "" === G[t] && (0, n.jsx)(_.default, {}), (0, n.jsxs)("div", {
-        className: y.sectionTitle,
+        className: x.sectionTitle,
         children: [(0, n.jsx)(L.default, {
           id: a,
           title: function(e, t) {
@@ -106,7 +106,7 @@ t.default = function(e) {
         }), Y && (0, n.jsx)(o.Button, {
           look: o.ButtonLooks.LINK,
           color: o.ButtonColors.LINK,
-          className: y.clearButton,
+          className: x.clearButton,
           size: o.Button.Sizes.TINY,
           onClick: e => {
             e.stopPropagation(), d.default.confirmClearPendingRelationships(V)
@@ -115,7 +115,7 @@ t.default = function(e) {
           children: P.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON
         })]
       }), H ? (0, n.jsx)("div", {
-        className: y.emptyStateContainer,
+        className: x.emptyStateContainer,
         children: (0, n.jsx)(A.default, {
           type: A.FriendsSearchStatus.SECTION_NO_RESULTS
         }, D)

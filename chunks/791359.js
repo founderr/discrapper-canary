@@ -32,7 +32,7 @@ var n = a("735250"),
   O = a("689938"),
   M = a("884724");
 let P = 15 * p.default.Millis.MINUTE,
-  y = (0, v.default)(function(e) {
+  x = (0, v.default)(function(e) {
     let {
       party: t,
       onUserContextMenu: a,
@@ -92,7 +92,7 @@ let P = 15 * p.default.Millis.MINUTE,
       }
     }) : null
   }),
-  x = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
+  y = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
 
 function D() {
   let {
@@ -109,7 +109,7 @@ function D() {
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
   s.useEffect(() => (c.default.wait(() => I.mount()), () => c.default.wait(() => I.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
-    a && !l && x()
+    a && !l && y()
   }, [a, l]);
   let o = s.useMemo(() => {
       let t = new Map,
@@ -130,7 +130,7 @@ function D() {
     let {
       party: t
     } = e;
-    return (0, n.jsx)(y, {
+    return (0, n.jsx)(x, {
       party: t,
       quest: o.get(t.id)
     }, t.id)

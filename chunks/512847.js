@@ -104,7 +104,7 @@ function P() {
   }), null
 }
 
-function y() {
+function x() {
   return O([g.default], () => g.default.isCurrentUserSpeaking(), (e, t) => {
     if (e !== t) {
       let e = S.default.isSelfMute();
@@ -113,7 +113,7 @@ function y() {
   }), null
 }
 
-function x() {
+function y() {
   return O([S.default], () => S.default.isSelfMutedTemporarily(), (e, t) => {
     if (e !== t) {
       let e = S.default.isSelfMute();
@@ -252,6 +252,6 @@ function G() {
 
 function w() {
   return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(M, {}), (0, n.jsx)(P, {}), (0, n.jsx)(y, {}), (0, n.jsx)(x, {}), (0, n.jsx)(D, {}), (0, n.jsx)(U, {}), (0, n.jsx)(b, {}), (0, n.jsx)(j, {}), (0, n.jsx)(G, {})]
+    children: [(0, n.jsx)(M, {}), (0, n.jsx)(P, {}), (0, n.jsx)(x, {}), (0, n.jsx)(y, {}), (0, n.jsx)(D, {}), (0, n.jsx)(U, {}), (0, n.jsx)(b, {}), (0, n.jsx)(j, {}), (0, n.jsx)(G, {})]
   })
 }

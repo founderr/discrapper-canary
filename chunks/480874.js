@@ -46,7 +46,7 @@ function L() {
     } = (0, C.useMessageRequestActions)({
       onError: M
     }),
-    y = s.useCallback(() => {
+    x = s.useCallback(() => {
       P(t.map(e => e.channel.id))
     }, [t, P]);
   s.useEffect(() => {
@@ -56,7 +56,7 @@ function L() {
       name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let x = s.useCallback(e => {
+  let y = s.useCallback(e => {
       var a, s;
       let {
         row: r
@@ -84,7 +84,7 @@ function L() {
           tag: "span",
           children: "•"
         }), (0, n.jsx)(u.Button, {
-          onClick: y,
+          onClick: x,
           look: u.ButtonLooks.LINK,
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
@@ -93,7 +93,7 @@ function L() {
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [a, y, L]);
+    }, "message-requests-spam-title"), [a, x, L]);
   return 0 === t.length ? (0, n.jsx)(I.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, n.jsx)(r.ListNavigatorProvider, {
@@ -118,7 +118,7 @@ function L() {
           sectionHeight: g.LIST_SECTION_HEIGHT,
           rowHeight: g.LIST_ROW_HEIGHT,
           renderSection: D,
-          renderRow: x,
+          renderRow: y,
           sections: [t.length],
           chunkSize: 30,
           fade: !0,

@@ -40,8 +40,8 @@ t.default = e => {
   } = e, {
     id: M,
     discoverySplash: P,
-    icon: y,
-    name: x,
+    icon: x,
+    name: y,
     description: D,
     presenceCount: b,
     memberCount: U,
@@ -61,7 +61,7 @@ t.default = e => {
     }
   }(L), Y = null !== (t = _.default.getGuildIconURL({
     id: M,
-    icon: y,
+    icon: x,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
     let {
@@ -160,7 +160,7 @@ t.default = e => {
               }), (0, n.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: A.headerTitle,
-                children: x
+                children: y
               })]
             })]
           }), (0, n.jsx)(r.Text, {

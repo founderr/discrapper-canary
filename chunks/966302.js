@@ -32,8 +32,8 @@ var n = a("735250"),
   O = a("451478"),
   M = a("465670"),
   P = a("421600"),
-  y = a("792125"),
-  x = a("358221"),
+  x = a("792125"),
+  y = a("358221"),
   D = a("793865"),
   b = a("981631"),
   U = a("65154"),
@@ -149,7 +149,7 @@ function Y(e) {
     y: a,
     x: l,
     channel: f
-  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, T] = (0, o.useStateFromStoresArray)([L.default], () => [L.default.supports(U.Features.VIDEO), Object.keys(L.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, T] = (0, o.useStateFromStoresArray)([L.default], () => [L.default.supports(U.Features.VIDEO), Object.keys(L.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), v = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -203,7 +203,7 @@ function Y(e) {
       children: (0, n.jsxs)(r.animated.div, {
         className: i()(G.root, w.elevationHigh, {
           [G.previewCamera]: C
-        }, C ? (0, y.getThemeClass)("dark") : null),
+        }, C ? (0, x.getThemeClass)("dark") : null),
         style: {
           ...t,
           width: v.value.interpolate([0, 1], [D.width, F.width]),

@@ -92,7 +92,7 @@ t.default = e => {
   } = (0, d.useStateFromStoresObject)([h.default], () => {
     var e;
     return null !== (e = h.default.getStateForGuild(a).progress) && void 0 !== e ? e : h.DEFAULT_CLAN_PROGRESS
-  }), y = s.useMemo(() => (null == L ? void 0 : L.size) > 0 ? (0, _.formatSelectionList)(Array.from(L), I.MAX_TRAITS_TO_DISPLAY) : null, [L]);
+  }), x = s.useMemo(() => (null == L ? void 0 : L.size) > 0 ? (0, _.formatSelectionList)(Array.from(L), I.MAX_TRAITS_TO_DISPLAY) : null, [L]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
       className: g.scrollBg,
@@ -132,12 +132,12 @@ t.default = e => {
         }), (0, n.jsx)(N, {
           applicationIds: p,
           playstyle: v
-        }), null != y ? (0, n.jsx)(c.Text, {
+        }), null != x ? (0, n.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: g.overviewText,
           children: T.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
-            traits: y
+            traits: x
           })
         }) : null, (0, n.jsx)(c.Text, {
           variant: "text-sm/normal",

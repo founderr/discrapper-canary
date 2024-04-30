@@ -35,8 +35,8 @@ var n = a("735250"),
   O = a("792125"),
   M = a("280570"),
   P = a("914788"),
-  y = a("841409"),
-  x = a("652262"),
+  x = a("841409"),
+  y = a("652262"),
   D = a("880257"),
   b = a("631885"),
   U = a("830746"),
@@ -136,11 +136,11 @@ function q() {
     t = (0, b.useAcceptedRequestsCount)(),
     a = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
     l = (0, u.useStateFromStores)([P.default], () => P.default.getIsInitialized()),
-    r = (0, x.useSelectedTeenId)(),
+    r = (0, y.useSelectedTeenId)(),
     {
       selectedTab: f,
       handleTabChange: h
-    } = (0, y.default)(),
+    } = (0, x.default)(),
     _ = (0, N.useUID)(),
     S = A.default.getCurrentUser(),
     T = null != e,
@@ -184,10 +184,10 @@ function q() {
 function Q() {
   let {
     analyticsLocations: e
-  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, D.default)(), a = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([P.default], () => P.default.getIsInitialized()), S = (0, x.useSelectedTeenId)(), v = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
+  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, D.default)(), a = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([P.default], () => P.default.getIsInitialized()), S = (0, y.useSelectedTeenId)(), v = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
     selectedTab: L,
     handleTabChange: O
-  } = (0, y.default)(), U = (0, N.useUID)(), j = A.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
+  } = (0, x.default)(), U = (0, N.useUID)(), j = A.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
   if (s.useEffect(() => {
       f.setHomeLink(k.Routes.FAMILY_CENTER), (0, I.trackAppUIViewed)("family-center"), !P.default.isLoading() && P.default.canRefetch() && M.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
         dismissAction: F.ContentDismissActionType.AUTO,

@@ -36,8 +36,8 @@ var n, s, l = a("735250"),
   O = a("602623"),
   M = a("626135"),
   P = a("823379"),
-  y = a("15274"),
-  x = a("924301"),
+  x = a("15274"),
+  y = a("924301"),
   D = a("504160"),
   b = a("151864"),
   U = a("835184"),
@@ -152,7 +152,7 @@ function Q(e) {
   let {
     guildEvent: t,
     noticeType: a
-  } = e, n = (0, F.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([x.default], () => x.default.isInterestedInEventRecurrence(t.id, n), [t.id, n]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
+  } = e, n = (0, F.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([y.default], () => y.default.isInterestedInEventRecurrence(t.id, n), [t.id, n]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
   return !s && null == i && (0, D.markUpcomingEventNoticeAsSeen)(t.id), (0, l.jsxs)(o.Button, {
     fullWidth: !0,
     className: K.joinButton,
@@ -205,7 +205,7 @@ function Z(e) {
     children: [(0, l.jsxs)("div", {
       className: K.textBlock,
       children: [(0, l.jsx)(o.Clickable, {
-        onClick: () => (0, y.openGuildEventDetails)({
+        onClick: () => (0, x.openGuildEventDetails)({
           eventId: a.id
         }),
         className: K.eventNameClickable,
@@ -290,7 +290,7 @@ function J(e) {
   let {
     guildEvent: t
   } = e, a = i.useCallback(() => {
-    (0, y.openGuildEventDetails)({
+    (0, x.openGuildEventDetails)({
       eventId: t.id
     })
   }, [t]);

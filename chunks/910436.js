@@ -109,7 +109,7 @@ function p(e) {
       activity: O,
       game: M,
       playingMembers: P,
-      activityUser: y
+      activityUser: x
     } = e;
     if (null == O || null == O.type) return null;
     if (g.length > 1 && O.type === S.ActivityTypes.PLAYING && !(0, i.default)(O) && null != M) R((0, n.jsx)(_.default.GameSection, {
@@ -134,14 +134,14 @@ function p(e) {
     } else if ((null != O.assets || (0, i.default)(O)) && O.type === S.ActivityTypes.PLAYING) R((0, n.jsx)(_.default.RichPresenceSection, {
       activity: O,
       getAssetImage: E.getAssetImage
-    }, "rich-presence-".concat(null !== (f = O.session_id) && void 0 !== f ? f : t, "-").concat(y.id)));
+    }, "rich-presence-".concat(null !== (f = O.session_id) && void 0 !== f ? f : t, "-").concat(x.id)));
     else if ((0, d.default)(O)) {
       let e = T.length > 0 && T[0].members.length > 1,
         a = P.length > 1;
       R((0, n.jsx)(_.default.TwitchSection, {
         guildId: null == v ? void 0 : v.id,
         activity: O,
-        user: e || a ? y : null,
+        user: e || a ? x : null,
         getAssetImage: E.getAssetImage
       }, "streaming-".concat(null !== (h = O.session_id) && void 0 !== h ? h : t)))
     } else(0, o.default)(O) ? R((0, n.jsx)(_.default.SpotifySection, {
@@ -154,10 +154,10 @@ function p(e) {
       },
       getAssetImage: E.getAssetImage,
       members: P
-    }, "spotify-".concat(null !== (C = O.session_id) && void 0 !== C ? C : t, "-").concat(y.id))) : (null != O.assets || (0, i.default)(O)) && O.type === S.ActivityTypes.LISTENING ? R((0, n.jsx)(_.default.RichPresenceSection, {
+    }, "spotify-".concat(null !== (C = O.session_id) && void 0 !== C ? C : t, "-").concat(x.id))) : (null != O.assets || (0, i.default)(O)) && O.type === S.ActivityTypes.LISTENING ? R((0, n.jsx)(_.default.RichPresenceSection, {
       activity: O,
       getAssetImage: E.getAssetImage
-    }, "rich-presence-".concat(null !== (I = O.session_id) && void 0 !== I ? I : t, "-").concat(y.id))) : (0, u.default)(O) && R((0, n.jsx)(_.default.XboxSection, {
+    }, "rich-presence-".concat(null !== (I = O.session_id) && void 0 !== I ? I : t, "-").concat(x.id))) : (0, u.default)(O) && R((0, n.jsx)(_.default.XboxSection, {
       title: M.name
     }, "xbox-".concat(null !== (N = O.session_id) && void 0 !== N ? N : t)));
     null != p && null != M && M.id === p.config.applicationId && R((0, n.jsx)(c.default, {

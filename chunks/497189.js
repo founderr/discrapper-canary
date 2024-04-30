@@ -160,7 +160,7 @@ t.default = s.memo(function(e) {
     config: {
       duration: 0
     }
-  }), y = (0, l.useSpring)({
+  }), x = (0, l.useSpring)({
     from: v ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     } : {
@@ -171,7 +171,7 @@ t.default = s.memo(function(e) {
     },
     config: R,
     delay: 400
-  }), x = (0, l.useSpring)({
+  }), y = (0, l.useSpring)({
     from: v ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     } : {
@@ -236,7 +236,7 @@ t.default = s.memo(function(e) {
       children: [(0, n.jsx)(l.animated.div, {
         className: N.clanCardOuterContainer,
         style: {
-          ...y,
+          ...x,
           ...M
         },
         children: (0, n.jsx)(C.ClanDiscoveryCardView, {
@@ -246,7 +246,7 @@ t.default = s.memo(function(e) {
       }), (0, n.jsx)(l.animated.div, {
         className: N.clanCardInnerContainer,
         style: {
-          ...x,
+          ...y,
           ...M
         },
         children: (0, n.jsx)(C.ClanDiscoveryCardView, {

@@ -36,8 +36,8 @@ async function A(e, t, a) {
     state: O,
     nonce: M,
     scope: P,
-    permissions: y,
-    guild_id: x,
+    permissions: x,
+    guild_id: y,
     channel_id: D,
     prompt: b,
     disable_guild_select: U,
@@ -112,7 +112,7 @@ async function A(e, t, a) {
   null == a || a(u.application, D);
   let B = S.NONE;
   try {
-    B = l.deserialize(null != y ? y : 0)
+    B = l.deserialize(null != x ? x : 0)
   } catch (e) {}
   return null != u.integration_type && Object.values(s.ApplicationIntegrationType).includes(u.integration_type) && (r = new Map).set(u.integration_type, u), t({
     clientId: A,
@@ -124,7 +124,7 @@ async function A(e, t, a) {
     codeChallenge: L,
     codeChallengeMethod: R,
     state: O,
-    guildId: x,
+    guildId: y,
     channelId: D,
     prompt: b,
     disableGuildSelect: U,

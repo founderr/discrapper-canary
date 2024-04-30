@@ -32,8 +32,8 @@ var n = a("735250"),
   O = a("372900"),
   M = a("6039"),
   P = a("637853"),
-  y = a("326145"),
-  x = a("269675"),
+  x = a("326145"),
+  y = a("269675"),
   D = a("242601"),
   b = a("416568"),
   U = a("613609"),
@@ -139,7 +139,7 @@ let em = () => (0, n.jsx)("div", {
         return d ? (0, n.jsx)(eS, {
           guildId: s,
           initialTab: v.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
-        }) : (0, n.jsx)(x.default, {
+        }) : (0, n.jsx)(y.default, {
           guildId: s
         });
       case eE.StaticChannelRoute.GUILD_SHOP:
@@ -177,7 +177,7 @@ let em = () => (0, n.jsx)("div", {
       default:
         (0, ea.assertNever)(l)
     }
-    if ((0, P.isBlockedByOnboarding)(r, o)) return (0, n.jsx)(y.default, {
+    if ((0, P.isBlockedByOnboarding)(r, o)) return (0, n.jsx)(x.default, {
       guildId: s,
       channelId: l
     });
@@ -242,8 +242,8 @@ let eR = e => (0, n.jsx)(eN, {
       inviteCode: t.params.inviteCode
     }) : null
   },
-  ey = () => (0, n.jsx)(ed.default, {}),
-  ex = () => (0, n.jsx)(ec.default, {}),
+  ex = () => (0, n.jsx)(ed.default, {}),
+  ey = () => (0, n.jsx)(ec.default, {}),
   eD = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return function(t) {
@@ -417,12 +417,12 @@ function eF() {
                   impressionName: u.ImpressionNames.ACTIVITIES
                 }), (0, n.jsx)(p.default, {
                   path: ef.Routes.APPLICATION_LIBRARY,
-                  render: ey,
+                  render: ex,
                   impressionName: u.ImpressionNames.APPLICATION_LIBRARY,
                   disableTrack: !0
                 }), (0, n.jsx)(p.default, {
                   path: ef.Routes.APPLICATION_STORE,
-                  render: ex,
+                  render: ey,
                   impressionName: u.ImpressionNames.APPLICATION_STORE,
                   disableTrack: !0
                 }), (0, n.jsx)(p.default, {

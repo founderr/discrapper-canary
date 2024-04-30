@@ -60,12 +60,12 @@ let N = (0, _.makeLazy)({
   },
   M = "SHOWN",
   P = "HIDDEN",
-  y = {
+  x = {
     friction: 10,
     tension: 100
   };
 
-function x() {
+function y() {
   return l.useEffect(() => (h.default.enable(), h.default.enableTemp(E.SETTINGS_LAYERS_LAYOUT), () => h.default.disableTemp()), []), null
 }
 class D extends(n = l.PureComponent) {
@@ -108,10 +108,10 @@ class D extends(n = l.PureComponent) {
     } = this.state;
     o.default.parallel([o.default.spring(t, {
       toValue: 1,
-      ...y
+      ...x
     }), o.default.spring(a, {
       toValue: 1,
-      ...y
+      ...x
     })]).start(() => this.animateComplete(e))
   }
   animateOut(e) {
@@ -122,10 +122,10 @@ class D extends(n = l.PureComponent) {
     } = this.state;
     p.ComponentDispatch.dispatch(T.ComponentActions.LAYER_POP_START), o.default.parallel([o.default.spring(t, {
       toValue: 0,
-      ...y
+      ...x
     }), o.default.spring(a, {
       toValue: 1.1,
-      ...y
+      ...x
     })]).start(() => {
       e(), p.ComponentDispatch.dispatch(T.ComponentActions.LAYER_POP_COMPLETE)
     })
@@ -138,10 +138,10 @@ class D extends(n = l.PureComponent) {
     } = this.state;
     o.default.parallel([o.default.spring(e, {
       toValue: 0,
-      ...y
+      ...x
     }), o.default.spring(t, {
       toValue: .93,
-      ...y
+      ...x
     })]).start(() => this.animateComplete())
   }
   animateComplete(e) {
@@ -230,7 +230,7 @@ class b extends l.PureComponent {
     let n;
     return n = "string" == typeof e ? O[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(D, {
       mode: t === a - 1 ? M : P,
-      children: [(0, s.jsx)(x, {}), n]
+      children: [(0, s.jsx)(y, {}), n]
     }, "layer-".concat(t))
   }
   renderArtisanalHack() {

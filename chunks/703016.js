@@ -28,8 +28,8 @@ var n = a("913527"),
   O = a("689938");
 let M = [],
   P = null,
-  y = null,
   x = null,
+  y = null,
   D = /\|\|([\s\S]+?)\|\|/g;
 
 function b(e, t, a, n) {
@@ -64,16 +64,16 @@ function b(e, t, a, n) {
 function U() {
   if (!i.supported) return !1;
   let e = d.default.locale;
-  if (null == x) {
+  if (null == y) {
     var t;
-    x = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
+    y = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
   }
-  let a = x.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
-  y = a.length > 0 ? a[0] : null
+  let a = y.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
+  x = a.length > 0 ? a[0] : null
 }
 async function j(e, t, a, n, s) {
   let l = i.createUtterance(e, a);
-  null !== l && (null == y && U(), t ? await (0, N.stopSpeaking)() : null == P || P.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != n && l.addEventListener("start", n), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, y))
+  null !== l && (null == x && U(), t ? await (0, N.stopSpeaking)() : null == P || P.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != n && l.addEventListener("start", n), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, x))
 }
 
 function G(e, t, a, n, s) {
@@ -121,8 +121,8 @@ function F(e) {
     v = o === g || o === N,
     O = c.EnableTTSCommand.getSetting() && u.tts && v,
     P = S.default.getTTSType(),
-    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === R.TTSNotificationTypes.ALL_CHANNELS || P === R.TTSNotificationTypes.SELECTED_CHANNEL && v);
-  if ((O || y) && ((null === (a = u.author) || void 0 === a ? void 0 : a.id) == null || !p.default.isBlocked(u.author.id))) {
+    x = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === R.TTSNotificationTypes.ALL_CHANNELS || P === R.TTSNotificationTypes.SELECTED_CHANNEL && v);
+  if ((O || x) && ((null === (a = u.author) || void 0 === a ? void 0 : a.id) == null || !p.default.isBlocked(u.author.id))) {
     if (M.indexOf(u.id) >= 0) return !1;
     M.unshift(u.id) > 10 && M.pop();
     let e = C.getGuildId();

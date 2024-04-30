@@ -61,7 +61,7 @@ function S(e) {
     src: g ? S.heroArtImageLinkLightTheme : S.heroArtImageLinkDarkTheme
   });
   let P = g ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
-    y = "" !== S.modalTopPill ? () => (0, n.jsx)(f.PremiumPillWithSparkles, {
+    x = "" !== S.modalTopPill ? () => (0, n.jsx)(f.PremiumPillWithSparkles, {
       text: S.modalTopPill,
       className: C.modalTopPill,
       colorOptions: P
@@ -69,7 +69,7 @@ function S(e) {
   return {
     renderModalProps: p,
     header: S.header,
-    modalTopExtra: y,
+    modalTopExtra: x,
     subHeader: S.subheader,
     subHeaderExtra: O,
     heroArt: M,

@@ -32,8 +32,8 @@ var n = a("735250"),
   O = a("631885"),
   M = a("457396"),
   P = a("51596"),
-  y = a("905423"),
-  x = a("155409"),
+  x = a("905423"),
+  y = a("155409"),
   D = a("210887"),
   b = a("695346"),
   U = a("283595"),
@@ -235,7 +235,7 @@ let eo = e => {
     homeLink: s,
     storeLink: l,
     premiumTabSelected: o
-  } = e, [d, c] = (0, y.default)(e => {
+  } = e, [d, c] = (0, x.default)(e => {
     let {
       channelId: t,
       path: a
@@ -251,7 +251,7 @@ let eo = e => {
   return (0, n.jsxs)("nav", {
     className: $.privateChannels,
     "aria-label": J.default.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
-    children: [(0, n.jsx)(x.default, {
+    children: [(0, n.jsx)(y.default, {
       tutorialId: "direct-messages",
       position: "right",
       offsetX: -52,

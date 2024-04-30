@@ -28,8 +28,8 @@ var n = a("735250"),
   O = a("451576"),
   M = a("938655"),
   P = a("403404"),
-  y = a("100527"),
-  x = a("906732"),
+  x = a("100527"),
+  y = a("906732"),
   D = a("158631"),
   b = a("793865"),
   U = a("933557"),
@@ -82,8 +82,8 @@ var n = a("735250"),
   eO = a("626135"),
   eM = a("63063"),
   eP = a("51144"),
-  ey = a("594117"),
-  ex = a("226323"),
+  ex = a("594117"),
+  ey = a("226323"),
   eD = a("981631"),
   eb = a("190378"),
   eU = a("689938"),
@@ -288,7 +288,7 @@ function eV(e) {
     enableActivities: a
   } = e, s = (0, A.useAppContext)(), {
     analyticsLocations: l
-  } = (0, x.default)(), r = s === eD.AppContext.POPOUT, o = (0, R.useEmbeddedActivityLaunchability)(t.id), u = (0, R.getEmbeddedActivityLaunchabilityLabel)(o), [f] = (0, d.useStateFromStores)([N.default], () => null != t.id && "" !== t.id ? N.default.getEmbeddedActivitiesForChannel(t.id) : N.NO_ACTIVITIES), {
+  } = (0, y.default)(), r = s === eD.AppContext.POPOUT, o = (0, R.useEmbeddedActivityLaunchability)(t.id), u = (0, R.getEmbeddedActivityLaunchabilityLabel)(o), [f] = (0, d.useStateFromStores)([N.default], () => null != t.id && "" !== t.id ? N.default.getEmbeddedActivitiesForChannel(t.id) : N.NO_ACTIVITIES), {
     userInActivity: E
   } = (0, d.useStateFromStoresObject)([N.default], () => ({
     userInActivity: null != N.default.getSelfEmbeddedActivityForChannel(t.id)
@@ -510,7 +510,7 @@ class eW extends s.PureComponent {
       voiceStates: t,
       showVoiceStates: a
     } = this.props;
-    return null != e && a && 0 !== t.length ? (0, n.jsx)(ex.default, {
+    return null != e && a && 0 !== t.length ? (0, n.jsx)(ey.default, {
       voiceStates: t,
       channel: e,
       className: ej.voiceUsers
@@ -585,7 +585,7 @@ class eW extends s.PureComponent {
           }), (0, n.jsxs)(eg.default, {
             grow: 0,
             shrink: 0,
-            children: [t ? this.renderNoiseCancellation() : null, (0, n.jsx)(ey.default, {
+            children: [t ? this.renderNoiseCancellation() : null, (0, n.jsx)(ex.default, {
               channel: e
             })]
           })]
@@ -735,8 +735,8 @@ t.default = (0, T.default)(function(e) {
   }, [S, p, R]);
   let {
     analyticsLocations: M
-  } = (0, x.default)(y.default.RTC_PANEL), P = (0, v.default)(null != u ? u : eD.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), b = (0, O.default)(null == o ? void 0 : o.id), U = (0, D.default)();
-  return (0, n.jsx)(x.AnalyticsLocationProvider, {
+  } = (0, y.default)(x.default.RTC_PANEL), P = (0, v.default)(null != u ? u : eD.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), b = (0, O.default)(null == o ? void 0 : o.id), U = (0, D.default)();
+  return (0, n.jsx)(y.AnalyticsLocationProvider, {
     value: M,
     children: (0, n.jsxs)("div", {
       className: ej.wrapper,

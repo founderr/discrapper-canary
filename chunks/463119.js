@@ -69,7 +69,7 @@ let M = e => {
       children: o
     })
   },
-  y = s.memo(function(e) {
+  x = s.memo(function(e) {
     let {
       displayOptions: t,
       assetId: a
@@ -98,7 +98,7 @@ let M = e => {
       })]
     })
   }),
-  x = e => {
+  y = e => {
     let {
       selected: t,
       locationState: a,
@@ -109,7 +109,7 @@ let M = e => {
       f(!1), null == e || e()
     }, []);
     return (0, n.jsx)(d.Tooltip, {
-      text: (0, n.jsx)(y, {
+      text: (0, n.jsx)(x, {
         displayOptions: l,
         assetId: l.assetIds[r]
       }),
@@ -187,7 +187,7 @@ let M = e => {
           displayOptions: s
         });
       case v.CollectiblesMarketingVariant.COACHTIP:
-        return (0, n.jsx)(x, {
+        return (0, n.jsx)(y, {
           selected: t,
           locationState: a,
           displayOptions: s

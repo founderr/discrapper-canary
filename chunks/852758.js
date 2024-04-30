@@ -63,7 +63,7 @@ function L() {
         Layer: p.default
       })
     },
-    y = () => {
+    x = () => {
       (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -111,7 +111,7 @@ function L() {
     },
     theme: t,
     onClick: e => {
-      e === T.VerificationTypes.EMAIL_OR_PHONE || e === T.VerificationTypes.EMAIL || e === T.VerificationTypes.REVERIFY_EMAIL ? P() : y()
+      e === T.VerificationTypes.EMAIL_OR_PHONE || e === T.VerificationTypes.EMAIL || e === T.VerificationTypes.REVERIFY_EMAIL ? P() : x()
     },
     onLogout: () => {
       (0, o.openModalLazy)(async () => {

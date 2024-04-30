@@ -36,7 +36,7 @@ function P(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-class y extends s.PureComponent {
+class x extends s.PureComponent {
   createSound() {
     let {
       soundpack: e
@@ -254,7 +254,7 @@ t.default = d.default.connectStores([_.default, p.default, m.default, h.default]
     soundpack: l,
     reducedMotion: i
   } = e;
-  return t ? (0, n.jsx)(y, {
+  return t ? (0, n.jsx)(x, {
     reducedMotion: i,
     soundpack: l,
     connected: a,

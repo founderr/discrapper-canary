@@ -49,9 +49,9 @@ t.default = e => {
   let {
     guilds: M,
     loading: P
-  } = m, y = null == M || 0 === M.length;
-  if (!P && y) return null;
-  let x = async e => {
+  } = m, x = null == M || 0 === M.length;
+  if (!P && x) return null;
+  let y = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
         page: f.AnalyticsPages.GUILD_DISCOVERY
@@ -74,7 +74,7 @@ t.default = e => {
   } else t = M.slice(0, R).map(e => (0, n.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
-    onView: x,
+    onView: y,
     theme: p,
     onGuildCardSeen: g,
     onTagClick: v

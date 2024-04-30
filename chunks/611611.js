@@ -28,9 +28,9 @@ var l = a("735250"),
   P = a("689938"),
   I = a("865990");
 let g = (0, _.uid)(),
-  x = (0, _.uid)();
+  p = (0, _.uid)();
 
-function p(e) {
+function x(e) {
   let {
     question: t,
     onChange: a,
@@ -40,11 +40,11 @@ function p(e) {
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(u.FormTitle, {
       tag: u.FormTitleTags.LABEL,
-      htmlFor: x,
+      htmlFor: p,
       children: P.default.Messages.CREATE_POLL_QUESTION_INPUT_LABEL
     }), (0, l.jsx)(u.TextArea, {
       inputRef: o,
-      id: x,
+      id: p,
       placeholder: P.default.Messages.CREATE_POLL_QUESTION_PLACEHOLDER,
       value: t,
       className: r()(I.questionInput, {
@@ -113,7 +113,7 @@ function S(e) {
     name: o.ImpressionNames.POLL_EDITOR_VIEWED
   });
   let L = n.useRef(null),
-    x = n.useRef([]),
+    p = n.useRef([]),
     v = n.useRef([]),
     j = n.useRef(null),
     D = n.useRef([]),
@@ -192,7 +192,7 @@ function S(e) {
       }
       ea(!1)
     }
-  }, [$, w, et, ea, v, x]);
+  }, [$, w, et, ea, v, p]);
   let ei = (0, c.default)({
     disabled: ee,
     onSubmit: Z
@@ -220,7 +220,7 @@ function S(e) {
       children: [null != Q && (0, l.jsx)(u.FormErrorBlock, {
         className: I.apiErrorBlock,
         children: Q.getAnyErrorMessage()
-      }), (0, l.jsx)(p, {
+      }), (0, l.jsx)(x, {
         question: U,
         onChange: W,
         error: null == $ ? void 0 : $.question,
@@ -250,7 +250,7 @@ function S(e) {
           answerTextInputRefs: v,
           error: null == $ ? void 0 : $["answer-".concat(e.localCreationAnswerId)],
           canRemoveAnswer: X,
-          ref: e => x.current[a] = e,
+          ref: e => p.current[a] = e,
           inputRef: e => v.current[a] = e,
           deleteButtonRef: e => D.current[a] = e
         }, e.localCreationAnswerId)), V && (0, l.jsxs)(u.Clickable, {

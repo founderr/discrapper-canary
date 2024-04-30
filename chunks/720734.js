@@ -32,8 +32,8 @@ var n = a("735250"),
   O = a("304761"),
   M = a("865427"),
   P = a("571250"),
-  y = a("628581"),
-  x = a("55311"),
+  x = a("628581"),
+  y = a("55311"),
   D = a("575175"),
   b = a("64220"),
   U = a("377171"),
@@ -86,8 +86,8 @@ var n = a("735250"),
   eO = a("333454"),
   eM = a("864441"),
   eP = a("26290"),
-  ey = a("626135"),
-  ex = a("768581"),
+  ex = a("626135"),
+  ey = a("768581"),
   eD = a("572004"),
   eb = a("70956"),
   eU = a("374023"),
@@ -229,7 +229,7 @@ class eK extends s.PureComponent {
       showTaglessAccountPanel: r
     } = this.props;
     if (null == a) return null;
-    let o = (0, ex.getAvatarDecorationURL)({
+    let o = (0, ey.getAvatarDecorationURL)({
       avatarDecoration: a.avatarDecoration,
       size: (0, R.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
     });
@@ -322,7 +322,7 @@ class eK extends s.PureComponent {
           serverMute: l,
           suppress: r,
           awaitingRemote: s,
-          tooltipText: d ? eF.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, y.default)(a, l, r, s),
+          tooltipText: d ? eF.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, x.default)(a, l, r, s),
           tooltipColor: d ? m.TooltipColors.GREEN : void 0,
           tooltipForceOpen: d || void 0,
           onMouseEnter: this.handleMouseEnterMute,
@@ -457,7 +457,7 @@ class eK extends s.PureComponent {
       let {
         serverDeaf: e
       } = this.props;
-      (0, x.default)(e)
+      (0, y.default)(e)
     }), eV(this, "handleOpenAccountSettings", () => {
       this.handleOpenSettings()
     }), eV(this, "handleOpenSettings", function() {
@@ -531,7 +531,7 @@ class eK extends s.PureComponent {
       (0, eD.copy)(ej.default.getUserTag(e, {
         decoration: "never",
         identifiable: "always"
-      })), ey.default.track(ew.AnalyticEvents.TEXT_COPIED, {
+      })), ex.default.track(ew.AnalyticEvents.TEXT_COPIED, {
         type: "User Tag"
       });
       let n = {
@@ -646,9 +646,9 @@ function ez() {
       return (0, M.probablyHasBuildOverride)() ? null === (e = O.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     P = (0, r.useStateFromStores)([eI.default], () => eI.default.getPremiumTypeSubscription()),
-    y = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
-    x = (0, r.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
-    D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || x || eU.ProcessArgs.isDisallowPopupsSet(),
+    x = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
+    y = (0, r.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
+    D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || y || eU.ProcessArgs.isDisallowPopupsSet(),
     b = (0, Q.useIsEligibleForPomelo)();
   s.useEffect(() => {
     z.default.trackExposure({
@@ -729,7 +729,7 @@ function ez() {
     showTagAsButton: k,
     showTaglessAccountPanel: V,
     speaking: f,
-    speakingWhileMuted: y,
+    speakingWhileMuted: x,
     status: c,
     streaming: d,
     suppress: I,

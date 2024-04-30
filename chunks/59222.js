@@ -76,8 +76,8 @@ t.default = e => {
     theme: O,
     currentCategoryId: M,
     currentCategoryName: P,
-    onViewGuild: y,
-    onGuildCardSeen: x,
+    onViewGuild: x,
+    onGuildCardSeen: y,
     placeholder: D,
     onTagClick: b
   } = e, U = i().uniqueId("GuildDiscovery"), {
@@ -170,11 +170,11 @@ t.default = e => {
               guilds: j,
               loading: G,
               loadingPlaceholderCount: T,
-              onViewGuild: y,
+              onViewGuild: x,
               loadingGuildId: R,
               theme: O,
               analyticsContext: h.AnalyticsContexts.SEARCH,
-              onGuildCardSeen: x,
+              onGuildCardSeen: y,
               onTagClick: b
             }), t]
           })

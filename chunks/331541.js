@@ -32,8 +32,8 @@ var n = a("735250"),
   O = a("318661"),
   M = a("502762"),
   P = a("192133"),
-  y = a("138394"),
-  x = a("131640"),
+  x = a("138394"),
+  y = a("131640"),
   D = a("695346"),
   b = a("199902"),
   U = a("293273"),
@@ -286,7 +286,7 @@ function $(e) {
             user: t,
             displayProfile: F,
             profileType: z.UserProfileTypes.POPOUT,
-            children: [(0, n.jsx)(x.default, {
+            children: [(0, n.jsx)(y.default, {
               user: t,
               displayProfile: F,
               onClose: () => null == b ? void 0 : b(),
@@ -307,7 +307,7 @@ function $(e) {
                 canDM: !1,
                 hideNote: !0,
                 showCopiableUsername: !0
-              }), (0, n.jsx)(y.default, {
+              }), (0, n.jsx)(x.default, {
                 className: Q.divider
               }), (0, n.jsxs)(E.Menu, {
                 navId: "account",

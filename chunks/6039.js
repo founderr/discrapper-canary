@@ -27,18 +27,18 @@ t.default = e => {
   let {
     guildId: v,
     inviteCode: L
-  } = e, [R, O] = s.useState(T.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
-    hasFetchedRequestToJoinGuilds: x,
+  } = e, [R, O] = s.useState(T.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), x = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+    hasFetchedRequestToJoinGuilds: y,
     guildPreviewDisabled: D
   } = (0, l.useStateFromStoresObject)([C.default], () => ({
     hasFetchedRequestToJoinGuilds: C.default.hasFetchedRequestToJoinGuilds,
     guildPreviewDisabled: C.default.getJoinRequestGuild(v)
   }));
   s.useEffect(() => {
-    null != y && (0, r.transitionTo)(I.Routes.CHANNEL(v))
-  }, [y, v]), s.useEffect(() => {
-    !x && f.default.fetchRequestToJoinGuilds()
-  }, [x]);
+    null != x && (0, r.transitionTo)(I.Routes.CHANNEL(v))
+  }, [x, v]), s.useEffect(() => {
+    !y && f.default.fetchRequestToJoinGuilds()
+  }, [y]);
   let b = s.useCallback(e => {
       O(t => Math.max(t, e))
     }, []),

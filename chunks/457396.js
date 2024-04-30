@@ -33,8 +33,8 @@ var s = a("924826"),
   O = a("474936"),
   M = a("921944"),
   P = a("689938"),
-  y = a("47848");
-let x = "NitroTabButton",
+  x = a("47848");
+let y = "NitroTabButton",
   D = e => {
     let t, a, {
         selected: D,
@@ -51,13 +51,13 @@ let x = "NitroTabButton",
       V = (0, T.useIsEligibleForBogoPromotion)(),
       Y = (0, N.default)(),
       W = (0, p.useTenureRewardBadgeDescription)(),
-      K = (0, h.useShouldShowNewOfferBadgeForAprilMarketingMoment)(x),
-      z = (0, R.useIsEligibleSenderForReferralProgramTabBadge)(x),
+      K = (0, h.useShouldShowNewOfferBadgeForAprilMarketingMoment)(y),
+      z = (0, R.useIsEligibleSenderForReferralProgramTabBadge)(y),
       q = D || null != B || null != F || V || K || Y || null != W || null != G && Date.now() - G.createdAt.getTime() > 2592e6 || (0, E.hasPremiumSubscriptionToDisplay)(G, w),
       {
         enabled: Q
       } = _.ReferralProgramRecipient.useExperiment({
-        location: x
+        location: y
       }, {
         autoTrackExposure: !1
       }),
@@ -84,7 +84,7 @@ let x = "NitroTabButton",
       })
     }) : H && (a = (0, n.jsx)(I.LocalizedPricingBadgeIcon, {
       entryPoint: I.BadgeEntryPoint.PrivateMessages
-    }), !D && (t = y.localizeBadge)) : a = (0, n.jsx)(g.PremiumTrialOfferTabBadge, {
+    }), !D && (t = x.localizeBadge)) : a = (0, n.jsx)(g.PremiumTrialOfferTabBadge, {
       trialOffer: B,
       isTabSelected: D
     });

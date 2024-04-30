@@ -33,7 +33,7 @@ let M = [L.ClanSetupSteps.FOUNDATIONAL_INTRO, L.ClanSetupSteps.GAMES, L.ClanSetu
     [L.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, L.ClanSetupSteps.CUSTOMIZE_BANNER],
     [L.ClanSetupSteps.MEMBER_APPLICATION]
   ],
-  y = e => {
+  x = e => {
     let {
       progress: t,
       setCurrentStep: a,
@@ -114,7 +114,7 @@ t.default = e => {
   }), {
     requiredGameId: A,
     gameApplicationIds: P,
-    playstyle: x,
+    playstyle: y,
     interests: D,
     description: b,
     tag: U,
@@ -180,7 +180,7 @@ t.default = e => {
                   title: R.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
                   description: R.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
                   handleUpdate: Y,
-                  playstyle: x,
+                  playstyle: y,
                   error: null == f ? void 0 : f.playstyle
                 });
               case L.ClanSetupSteps.UTILITY_TRAITS:
@@ -253,7 +253,7 @@ t.default = e => {
             }
           })()
         })
-      }), (0, n.jsx)(y, {
+      }), (0, n.jsx)(x, {
         setCurrentStep: F,
         progress: c,
         onLastStep: K

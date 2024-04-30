@@ -32,13 +32,13 @@ function N(e) {
     baseChannelId: a
   } = e, N = (0, p.default)(t), v = (0, c.useListHasSingleMessageRequest)(), L = (0, c.useListHasSingleSpamMessageRequest)(), R = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), O = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), M = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), P = s.useCallback(() => {
     _.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), R && v && (0, h.transitionToChannel)(t.id), O && L && (0, h.transitionToChannel)(t.id)
-  }, [t.id, O, L, R, v]), y = s.useCallback(() => {
+  }, [t.id, O, L, R, v]), x = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(T.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), {
-    markAsNotSpam: x
+    markAsNotSpam: y
   } = (0, f.useMessageRequestActions)({
     onAcceptSuccess: P,
-    onError: y
+    onError: x
   });
   if (null == t || !t.isDM()) return null;
   let D = [(0, n.jsx)(S.default.Icon, {
@@ -64,7 +64,7 @@ function N(e) {
       }), (0, n.jsx)(i.Button, {
         className: A.hamBannerButton,
         size: i.ButtonSizes.SMALL,
-        onClick: () => x(t, M),
+        onClick: () => y(t, M),
         children: T.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
       })]
     }), (0, n.jsx)("div", {

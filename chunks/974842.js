@@ -33,7 +33,7 @@ t.default = e => {
     for (let e = 0; e < f.CLAN_BADGE_PALETTE_PRESETS.length; e++)
       if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === l && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === I) return e;
     return p
-  }), [y, x] = s.useState(!1), D = p === M ? R : f.CLAN_BADGE_PALETTE_PRESETS[M];
+  }), [x, y] = s.useState(!1), D = p === M ? R : f.CLAN_BADGE_PALETTE_PRESETS[M];
   return s.useEffect(() => {
     if (v === a && D.primary === l && D.secondary === I) return;
     let e = document.querySelector("#".concat(m));
@@ -135,12 +135,12 @@ t.default = e => {
                   secondary: (0, r.int2hex)(e)
                 }))
               },
-              shouldShow: y,
-              onRequestClose: () => x(!1),
+              shouldShow: x,
+              onRequestClose: () => y(!1),
               children: e => (0, n.jsx)(u.Clickable, {
                 ...e,
                 onClick: () => {
-                  P(p), x(e => !e)
+                  P(p), y(e => !e)
                 },
                 className: i()(_.badgeAssetContainer, {
                   [_.badgeAssetContainerSelected]: p === M

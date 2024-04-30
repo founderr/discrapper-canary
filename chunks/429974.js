@@ -33,10 +33,10 @@ async function m(e) {
     M = u.default.isMobileOnline(S),
     {
       party: P,
-      assets: y,
-      application_id: x
+      assets: x,
+      application_id: y
     } = null != R ? R : {},
-    D = null != x ? o.default.getApplication(x) : null,
+    D = null != y ? o.default.getApplication(y) : null,
     b = M ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
     U = O === h.StatusTypes.ONLINE ? b : O;
   C = await (0, s.openModalLazy)(async () => {
@@ -62,7 +62,7 @@ async function m(e) {
     application_name: null == R ? void 0 : R.name,
     sku_id: null !== (i = null == D ? void 0 : D.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(S),
-    has_images: !!(null !== (m = null == y ? void 0 : y.large_image) && void 0 !== m ? m : null == y ? void 0 : y.small_image),
+    has_images: !!(null !== (m = null == x ? void 0 : x.large_image) && void 0 !== m ? m : null == x ? void 0 : x.small_image),
     party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
     party_id: null == P ? void 0 : P.id,
     party_platform: (0, _.isSpotifyParty)(null == P ? void 0 : P.id) ? h.PlatformTypes.SPOTIFY : null,

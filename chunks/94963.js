@@ -91,12 +91,12 @@ t.default = e => {
   } = e, d = (0, f.useStateFromStores)([C.default], () => C.default.getGuild(u)), c = null !== (t = (0, f.useStateFromStores)([_.default], () => _.default.getMemberCount(u))) && void 0 !== t ? t : 0, [L, R] = s.useState(o.banner), [O, M] = s.useState({
     primary: o.brandPrimaryColor,
     secondary: o.brandSecondaryColor
-  }), [P, y] = s.useState(() => {
+  }), [P, x] = s.useState(() => {
     if (o.brandPrimaryColor === o.badgePrimaryColor && o.brandSecondaryColor === o.badgeSecondaryColor) return 0;
     for (let e = 0; e < p.CLAN_BRAND_PALETTE_PRESETS.length; e++)
       if (p.CLAN_BRAND_PALETTE_PRESETS[e].primary === o.brandPrimaryColor && p.CLAN_BRAND_PALETTE_PRESETS[e].secondary === o.brandSecondaryColor) return e + 1;
     return A
-  }), [x, D] = s.useState(!1), b = A === P, U = b ? O : 0 === P ? {
+  }), [y, D] = s.useState(!1), b = A === P, U = b ? O : 0 === P ? {
     primary: o.badgePrimaryColor,
     secondary: o.badgeSecondaryColor
   } : p.CLAN_BRAND_PALETTE_PRESETS[P - 1];
@@ -131,7 +131,7 @@ t.default = e => {
             className: T.colorPickerGrid,
             children: [(0, n.jsx)(E.Clickable, {
               onClick: () => {
-                y(0), M({
+                x(0), M({
                   primary: o.badgePrimaryColor,
                   secondary: o.badgeSecondaryColor
                 })
@@ -147,7 +147,7 @@ t.default = e => {
             }), p.CLAN_BRAND_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(E.Clickable, {
               "aria-label": e.name,
               onClick: () => {
-                y(t + 1), M(p.CLAN_BRAND_PALETTE_PRESETS[t])
+                x(t + 1), M(p.CLAN_BRAND_PALETTE_PRESETS[t])
               },
               className: i()(T.brandItemContainer, {
                 [T.brandItemContainerSelected]: P === t + 1
@@ -172,12 +172,12 @@ t.default = e => {
                   secondary: (0, r.int2hex)(e)
                 }))
               },
-              shouldShow: x,
+              shouldShow: y,
               onRequestClose: () => D(!1),
               children: e => (0, n.jsx)(E.Clickable, {
                 ...e,
                 onClick: () => {
-                  y(A), D(e => !e)
+                  x(A), D(e => !e)
                 },
                 className: i()(T.brandItemContainer, {
                   [T.brandItemContainerSelected]: P === A

@@ -60,11 +60,11 @@ class O extends(n = l.PureComponent) {
       presenceCount: O,
       memberCount: M,
       keywords: P
-    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
+    } = t, x = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), y = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), D = null != x ? x : this.getDefaultSplashURL(n, y), b = m.default.getGuildIconURL({
+    }), D = null != y ? y : this.getDefaultSplashURL(n, x), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -120,7 +120,7 @@ class O extends(n = l.PureComponent) {
                   src: D,
                   alt: "",
                   className: r()(A.splashImage, {
-                    [A.splashImageHeight]: !y
+                    [A.splashImageHeight]: !x
                   }),
                   onLoad: () => this.setState({
                     loaded: !0

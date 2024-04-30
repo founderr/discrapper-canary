@@ -35,7 +35,7 @@ function P() {
   let e = N.getGuildId();
   A = g = M(N), null == g[L] && (L = e), s = null != v, n = h.areChannelsLocked(N, v), R = null, T = !1, I = m.FormStates.CLOSED, p.clear()
 }
-class y extends(l = c.default.Store) {
+class x extends(l = c.default.Store) {
   initialize() {
     this.waitFor(_.default, C.default)
   }
@@ -76,12 +76,12 @@ class y extends(l = c.default.Store) {
     return O
   }
 }
-o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.defineProperty(i, r, {
+o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = x) ? Object.defineProperty(i, r, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = o, t.default = new y(E.default, {
+}) : i[r] = o, t.default = new x(E.default, {
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
     let {
       section: t

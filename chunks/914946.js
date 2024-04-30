@@ -85,8 +85,8 @@ let M = null !== (n = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
       a = t[t.length - 1];
     return /^\d+$/.test(a) ? e : t.slice(-2).join(".")
   }(),
-  y = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(P), "|discordapp.com|discord.com)$")),
-  x = 1 * g.default.Millis.MINUTE,
+  x = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(P), "|discordapp.com|discord.com)$")),
+  y = 1 * g.default.Millis.MINUTE,
   D = {};
 
 function b(e) {
@@ -205,7 +205,7 @@ function F(e) {
   } catch (e) {
     return !1
   }
-  return window.location.hostname === t && "localhost" === t || null == e.match("staging") && (!!(y.test(e) && y.test(a)) || !1)
+  return window.location.hostname === t && "localhost" === t || null == e.match("staging") && (!!(x.test(e) && x.test(a)) || !1)
 }
 
 function H(e, t, a) {
@@ -281,7 +281,7 @@ function K(e, t, a) {
 }
 async function z(e, t) {
   let a = D[e];
-  null == a && (a = new i.default(t ? 2 : 60, x), D[e] = a), await a.process()
+  null == a && (a = new i.default(t ? 2 : 60, y), D[e] = a), await a.process()
 }
 
 function q(e, t) {

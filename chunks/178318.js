@@ -109,7 +109,7 @@ class P extends _.default {
     this._sendCallback = e, this._closeCallback = t
   }
 }
-class y extends l.EventEmitter {
+class x extends l.EventEmitter {
   handleRequest(e, t) {
     let [a, n] = v(e.url).split("?"), s = v(e.method);
     if ("/rpc" === a && "OPTIONS" === s) {
@@ -197,4 +197,4 @@ class y extends l.EventEmitter {
     new T.ws.Server(a).on("connection", e => this.handleConnection(e))
   }
 }
-t.default = new y
+t.default = new x

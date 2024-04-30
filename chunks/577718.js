@@ -28,8 +28,8 @@ var n = a("735250"),
   O = a("79469"),
   M = a("741160"),
   P = a("829972"),
-  y = a("31932"),
-  x = a("642301");
+  x = a("31932"),
+  y = a("642301");
 
 function D(e) {
   null != e && _.default.open(e.id, g.GuildSettingsSections.OVERVIEW, {
@@ -92,7 +92,7 @@ t.default = s.memo(function(e) {
       },
       location_stack: f
     })
-  }, w = (0, i.isThemeDark)(a) ? P : y, [k, B] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, w = (0, i.isThemeDark)(a) ? P : x, [k, B] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, n.jsx)(n.Fragment, {
     children: (() => {
       switch (k) {
@@ -218,7 +218,7 @@ t.default = s.memo(function(e) {
               secondaryButtonCTA: L.default.Messages.NO_THANKS,
               asset: (0, n.jsx)("img", {
                 alt: "",
-                src: x,
+                src: y,
                 className: O.fullWidthImage
               }),
               onClick: () => {

@@ -41,7 +41,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       title: O,
       videoPosterUrl: M,
       videoUrl: P,
-      ctaOnClick: y
+      ctaOnClick: x
     } = function(e) {
       switch (e) {
         case "BOOSTING":
@@ -66,7 +66,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
           }
       }
     }(n), {
-      analyticsLocations: x
+      analyticsLocations: y
     } = (0, E.default)(s);
     i.useEffect(() => {
       C.default.track(m.AnalyticEvents.TOOLTIP_VIEWED, {
@@ -76,7 +76,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
     let D = (0, u.useAppContext)() === m.AppContext.POPOUT,
       b = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
     return (0, l.jsx)(E.AnalyticsLocationProvider, {
-      value: x,
+      value: y,
       children: (0, l.jsx)("div", {
         className: I.wrapper,
         children: (0, l.jsx)("div", {
@@ -122,7 +122,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               }), (0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,
-                onClick: null != y ? y : () => {
+                onClick: null != x ? x : () => {
                   a(S.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
                     channel: b.isGuildVoice() ? b : void 0,
                     guildId: b.guild_id,
@@ -133,7 +133,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                       objectType: m.AnalyticsObjectTypes.ACTIVITY
                     },
                     openInPopout: D,
-                    analyticsLocations: x
+                    analyticsLocations: y
                   }), (0, d.fetchShelf)({
                     guildId: b.guild_id
                   }))

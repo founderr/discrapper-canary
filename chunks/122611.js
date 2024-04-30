@@ -32,7 +32,7 @@ function P(e) {
   e.stopPropagation()
 }
 
-function y(e) {
+function x(e) {
   var t;
   let {
     guild: a
@@ -147,7 +147,7 @@ t.default = e => {
         guildId: t.id
       })
   }
-  return T.ProcessArgs.isDisallowPopupsSet() ? null : (0, n.jsx)(y, {
+  return T.ProcessArgs.isDisallowPopupsSet() ? null : (0, n.jsx)(x, {
     guild: e.guild
   })
 }

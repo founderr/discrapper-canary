@@ -31,8 +31,8 @@ t.default = e => {
     badgeKind: O,
     badgePrimaryColor: M,
     badgeSecondaryColor: P,
-    banner: y,
-    brandPrimaryColor: x,
+    banner: x,
+    brandPrimaryColor: y,
     brandSecondaryColor: D,
     wildcardDescriptors: b,
     badgeImage: U
@@ -48,8 +48,8 @@ t.default = e => {
         badgeKind: O,
         badgePrimaryColor: M,
         badgeSecondaryColor: P,
-        banner: y,
-        brandPrimaryColor: x,
+        banner: x,
+        brandPrimaryColor: y,
         brandSecondaryColor: D,
         wildcardDescriptors: b,
         badgeImage: U
@@ -64,7 +64,7 @@ t.default = e => {
       return a => (0, n.jsx)(e, {
         guildId: t,
         tag: L,
-        brandPrimaryColor: x,
+        brandPrimaryColor: y,
         ...a
       })
     })

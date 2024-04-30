@@ -28,8 +28,8 @@ var n = a("735250"),
   O = a("230307"),
   M = a("502568"),
   P = a("900849"),
-  y = a("2485"),
-  x = a("879484"),
+  x = a("2485"),
+  y = a("879484"),
   D = a("117496"),
   b = a("296386"),
   U = a("150192"),
@@ -167,12 +167,12 @@ class q extends s.PureComponent {
       categories: o,
       currentCategoryName: u
     } = this.props;
-    x.DiscoveryTagsExperiment.trackExposure({
+    y.DiscoveryTagsExperiment.trackExposure({
       location: "54961b_1"
     });
     let {
       shouldDisplayRecommendedSearchTags: d
-    } = x.DiscoveryTagsExperiment.getCurrentConfig({
+    } = y.DiscoveryTagsExperiment.getCurrentConfig({
       location: "54961b_2"
     }, {
       autoTrackExposure: !1
@@ -278,12 +278,12 @@ class q extends s.PureComponent {
       currentCategoryId: r,
       guilds: u
     } = this.props, d = l.length > 0;
-    x.DiscoveryTagsExperiment.trackExposure({
+    y.DiscoveryTagsExperiment.trackExposure({
       location: "54961b_3"
     });
     let {
       shouldDisplayRecommendedSearchTags: f
-    } = x.DiscoveryTagsExperiment.getCurrentConfig({
+    } = y.DiscoveryTagsExperiment.getCurrentConfig({
       location: "54961b_4"
     }, {
       autoTrackExposure: !1
@@ -490,7 +490,7 @@ function Z(e) {
 t.default = function(e) {
   let {
     searchRoute: t
-  } = e, a = (0, y.useClanDiscoveryExperimentEnabled)("guild_discovery"), s = (0, f.useStateFromStores)([L.default], () => L.default.getCurrentCategoryId()), l = (0, f.useStateFromStores)([L.default], () => L.default.getIsReady());
+  } = e, a = (0, x.useClanDiscoveryExperimentEnabled)("guild_discovery"), s = (0, f.useStateFromStores)([L.default], () => L.default.getCurrentCategoryId()), l = (0, f.useStateFromStores)([L.default], () => L.default.getIsReady());
   return a && (!l || s === F.CategoryId.Clans) ? (0, n.jsx)(j.default, {}) : (0, n.jsx)(Z, {
     searchRoute: t
   })

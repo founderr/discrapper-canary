@@ -28,8 +28,8 @@ var n = a("735250"),
   O = a("366966"),
   M = a("151011"),
   P = a("774832"),
-  y = a("465670"),
-  x = a("786048"),
+  x = a("465670"),
+  y = a("786048"),
   D = a("897353"),
   b = a("424218"),
   U = a("780570"),
@@ -474,7 +474,7 @@ let X = () => (0, n.jsx)(Y, {
     onClick: () => _.resume()
   }),
   J = () => (0, n.jsx)(Y, {
-    icon: x.default,
+    icon: y.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
     onClick: () => _.pause()
   }),
@@ -493,7 +493,7 @@ let X = () => (0, n.jsx)(Y, {
       item: t
     } = e;
     return (0, n.jsx)(Y, {
-      icon: y.default,
+      icon: x.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
       onClick: () => _.cancel(t.applicationId, t.branchId)
     })

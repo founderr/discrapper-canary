@@ -27,7 +27,7 @@ function R() {
   A = p.FormStates.OPEN, N = {}, v = !1
 }
 let O = c().debounce(() => {
-  v && ((null == T || c().isEqual(T, M(T.id))) && (v = !1), !v && y.emitChange())
+  v && ((null == T || c().isEqual(T, M(T.id))) && (v = !1), !v && x.emitChange())
 }, 500);
 
 function M(e) {
@@ -79,7 +79,7 @@ u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = P) ? Object.d
   configurable: !0,
   writable: !0
 }) : r[o] = u;
-let y = new P(E.default, __OVERLAY__ ? {} : {
+let x = new P(E.default, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_INIT: R,
   INTEGRATION_SETTINGS_SAVE_SUCCESS: R,
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
@@ -164,4 +164,4 @@ let y = new P(E.default, __OVERLAY__ ? {} : {
     A = p.FormStates.OPEN, N = null !== (t = e.errors) && void 0 !== t ? t : {}
   }
 });
-t.default = y
+t.default = x

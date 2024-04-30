@@ -30,8 +30,8 @@ var n, s, l = a("735250"),
   O = a("427679"),
   M = a("448206"),
   P = a("484459"),
-  y = a("103575"),
-  x = a("496675"),
+  x = a("103575"),
+  y = a("496675"),
   D = a("594174"),
   b = a("465670"),
   U = a("242315"),
@@ -59,7 +59,7 @@ function Y(e) {
     isEventNoticeHidden: S.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [r, s]), K = null == n ? void 0 : n.id, z = (0, u.useStateFromStoresArray)([L.default], () => [...new Set(L.default.getMutableParticipants(K, R.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([L.default], () => null != K ? L.default.getParticipantCount(K, R.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([x.default], () => x.default.can(B.Permissions.CONNECT, n)), Z = (0, M.default)(null == n ? void 0 : n.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
+  }), [r, s]), K = null == n ? void 0 : n.id, z = (0, u.useStateFromStoresArray)([L.default], () => [...new Set(L.default.getMutableParticipants(K, R.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([L.default], () => null != K ? L.default.getParticipantCount(K, R.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([y.default], () => y.default.can(B.Permissions.CONNECT, n)), Z = (0, M.default)(null == n ? void 0 : n.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
   i.useEffect(() => {
     null != X && (0, f.getUser)(X)
   }, [X]);
@@ -281,7 +281,7 @@ function Y(e) {
         preload: () => (0, P.maybeFetchUserProfileForPopout)(e, {
           guildId: t.id
         }),
-        renderPopout: t => (0, l.jsx)(y.default, {
+        renderPopout: t => (0, l.jsx)(x.default, {
           ...t,
           location: "LiveChannelNotice",
           userId: e.id,

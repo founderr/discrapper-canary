@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useIsEligibleForQuestBarProgressCTA: function() {
     return i
   }
 });
-var a = n("818083"),
-  s = n("977156");
-let l = (0, a.createExperiment)({
+var n = a("818083"),
+  s = a("977156");
+let l = (0, n.createExperiment)({
     id: "2024-03_quest_bar_progress_cta",
     kind: "user",
     label: "Quest Bar Progress CTA",
@@ -30,15 +30,15 @@ let l = (0, a.createExperiment)({
   i = e => {
     let {
       location: t,
-      autoTrackExposure: n = !1
-    } = e, a = (0, s.useIsEligibleForQuests)({
+      autoTrackExposure: a = !1
+    } = e, n = (0, s.useIsEligibleForQuests)({
       location: t
     }), {
       enabled: i
     } = l.useExperiment({
       location: t
     }, {
-      autoTrackExposure: n
+      autoTrackExposure: a
     });
-    return a && i
+    return n && i
   }

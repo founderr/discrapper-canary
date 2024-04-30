@@ -28,9 +28,9 @@ var n = a("735250"),
   O = a("292352"),
   M = a("981631"),
   P = a("689938"),
-  y = a("27155");
+  x = a("27155");
 
-function x() {
+function y() {
   let e = s.useCallback(() => {
     (0, o.openModalLazy)(async () => {
       let {
@@ -42,10 +42,10 @@ function x() {
     })
   }, []);
   return (0, n.jsx)(o.Clickable, {
-    className: y.tooltip,
+    className: x.tooltip,
     onClick: e,
     children: (0, n.jsx)(d.default, {
-      className: y.icon,
+      className: x.icon,
       width: 15,
       height: 15
     })
@@ -83,12 +83,12 @@ function D(e) {
     }, [r, E.timestampFormatter]),
     R = s.useCallback(() => (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(o.Text, {
-        className: y.sectionHeader,
+        className: x.sectionHeader,
         variant: "eyebrow",
         color: "header-secondary",
         children: v
       }), void 0 !== E.sectionDescription ? (0, n.jsx)(o.Text, {
-        className: y.sectionDescription,
+        className: x.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
         children: E.sectionDescription(null != l && l, T)
@@ -97,9 +97,9 @@ function D(e) {
   if (0 === r.length) return null;
   let M = r.slice(0, C);
   return (0, n.jsxs)("div", {
-    className: y.actionSection,
+    className: x.actionSection,
     children: [R(), (0, n.jsx)("div", {
-      className: y.actions,
+      className: x.actions,
       style: {
         maxHeight: 65 * M.length
       },
@@ -107,14 +107,14 @@ function D(e) {
         row: t
       }))
     }), M.length !== u ? (0, n.jsx)(o.Clickable, {
-      className: y.loadMoreBar,
+      className: x.loadMoreBar,
       onClick: g,
       role: "button",
       children: c ? (0, n.jsx)(o.Spinner, {
         type: o.Spinner.Type.PULSING_ELLIPSIS,
-        className: y.spinner
+        className: x.spinner
       }) : (0, n.jsx)(o.Text, {
-        className: y.loadMore,
+        className: x.loadMore,
         variant: "text-sm/bold",
         children: P.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
           pageSize: Math.min(u - M.length, O.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
@@ -136,7 +136,7 @@ let b = () => {
       children: l
     }) : (0, n.jsxs)(n.Fragment, {
       children: [e ? null : (0, n.jsx)(u.default, {
-        className: y.icon
+        className: x.icon
       }), (0, n.jsx)(o.Text, {
         variant: "eyebrow",
         children: a
@@ -150,12 +150,12 @@ let b = () => {
       avatarSize: s = o.AvatarSizes.SIZE_40
     } = e, l = (0, p.useTeenUserForId)(t);
     return void 0 === l ? null : (0, n.jsxs)("div", {
-      className: y.accountRow,
+      className: x.accountRow,
       children: [(0, n.jsx)(v.FamilyCenterAvatar, {
         user: l,
         avatarSize: s
       }), (0, n.jsxs)("div", {
-        className: y.headerText,
+        className: x.headerText,
         children: [(0, n.jsx)(L.default, {
           user: l
         }), void 0 !== a ? (0, n.jsx)(o.Text, {
@@ -181,7 +181,7 @@ let b = () => {
         avatarSize: o.AvatarSizes.SIZE_24
       }), []);
     return (0, n.jsx)(o.Select, {
-      className: y.select,
+      className: x.select,
       renderOptionLabel: i,
       renderOptionValue: e => {
         let [t] = e;
@@ -211,21 +211,21 @@ t.default = e => {
     user: t
   } = e, a = Array.from(O.ACTION_TO_TEXT.entries()), s = (0, S.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, T.useActivityWindowTimeStamp)(l);
   return (0, n.jsxs)("div", {
-    className: y.container,
+    className: x.container,
     children: [(0, n.jsxs)("div", {
-      className: y.connectedCounter,
-      children: [(0, n.jsx)(b, {}), (0, n.jsx)(x, {})]
+      className: x.connectedCounter,
+      children: [(0, n.jsx)(b, {}), (0, n.jsx)(y, {})]
     }), (0, n.jsxs)("div", {
-      className: y.card,
+      className: x.card,
       children: [(0, n.jsx)("div", {
-        className: y.header,
+        className: x.header,
         children: (0, n.jsx)(G, {
           userId: t.id
         })
       }), (0, n.jsxs)("div", {
-        className: y.content,
+        className: x.content,
         children: [(0, n.jsx)("div", {
-          className: y.activityCounterRow,
+          className: x.activityCounterRow,
           children: a.map(e => {
             let [t, a] = e;
             return (0, n.jsx)(g.default, {
@@ -234,14 +234,14 @@ t.default = e => {
             }, "counter-".concat(t))
           })
         }), (0, n.jsx)("div", {
-          className: y.activityOverview,
+          className: x.activityOverview,
           children: s ? a.map(e => {
             let [t] = e;
             return (0, n.jsx)(D, {
               displayType: t
             }, "".concat(t, "-list"))
           }) : (0, n.jsx)(R.default, {
-            className: y.emptyActivity,
+            className: x.emptyActivity,
             text: null != i ? i : ""
           })
         })]

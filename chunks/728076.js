@@ -19,11 +19,11 @@ function _(e, t, a) {
   let _ = e.id,
     m = l.useRef();
   null == m.current && (m.current = [(0, d.generateEmptyPollAnswer)(), (0, d.generateEmptyPollAnswer)()]);
-  let [f, L] = l.useState(m.current), [R, C] = l.useState(""), [N, T] = l.useState(n.PollLayoutTypes.DEFAULT), [h, O] = l.useState(!1), [P, I] = l.useState(c.PollDurations.ONE_DAY), [g, x] = l.useState({}), [p, M] = l.useState(!1), S = f.filter(e => (0, d.isAnswerFilled)(e, N)), v = f.filter(e => (0, d.isIncompleteAnswer)(e, N)), j = R.length > 0 && S.length >= c.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === v.length, [D, {
+  let [f, L] = l.useState(m.current), [R, C] = l.useState(""), [N, T] = l.useState(n.PollLayoutTypes.DEFAULT), [h, O] = l.useState(!1), [P, I] = l.useState(c.PollDurations.ONE_DAY), [g, p] = l.useState({}), [x, M] = l.useState(!1), S = f.filter(e => (0, d.isAnswerFilled)(e, N)), v = f.filter(e => (0, d.isIncompleteAnswer)(e, N)), j = R.length > 0 && S.length >= c.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === v.length, [D, {
     error: b,
     loading: w
   }] = (0, s.default)(u.default.createPoll), U = f.length < c.MAX_NUMBER_OF_ANSWERS_PER_POLL, y = f.length > c.MIN_NUMBER_OF_ANSWERS_PER_POLL, k = l.useCallback(e => {
-    x(e => {
+    p(e => {
       let t = {
         ...e
       };
@@ -35,7 +35,7 @@ function _(e, t, a) {
       index: a,
       localCreationAnswerId: l
     } = e;
-    x(e => {
+    p(e => {
       let t = {
         ...e
       };
@@ -106,7 +106,7 @@ function _(e, t, a) {
         t = {};
       return 0 === R.trim().length && (e = !1, t.question = E.default.Messages.CREATE_POLL_QUESTION_REQUIRED), f.filter(e => (0, d.isAnswerFilled)(e, N)).length < c.MIN_NUMBER_OF_ANSWERS_PER_POLL && (e = !1, t["answer-".concat(f[0].localCreationAnswerId)] = E.default.Messages.CREATE_POLL_MINIMUM_ANSWERS_REQUIRED), f.forEach(a => {
         (0, d.isIncompleteAnswer)(a, N) && (e = !1, t["answer-".concat(a.localCreationAnswerId)] = E.default.Messages.CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT)
-      }), x(t), M(!e), e
+      }), p(t), M(!e), e
     }, [f, R, N]),
     q = l.useCallback(async () => {
       await D({
@@ -148,7 +148,7 @@ function _(e, t, a) {
     handleSubmitPoll: J,
     submitting: w,
     createPollError: b,
-    shouldFocusOnInvalidField: p,
+    shouldFocusOnInvalidField: x,
     setShouldFocusOnInvalidField: M
   }
 }
