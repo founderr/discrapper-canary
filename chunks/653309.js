@@ -1,5 +1,8 @@
 "use strict";
 n.r(t), n.d(t, {
+  cssClasses: function() {
+    return d
+  },
   default: function() {
     return _
   }
@@ -27,7 +30,8 @@ let d = {
   syntaxAfter: o.syntaxAfter,
   codeBlockText: o.codeBlockText,
   codeBlockSyntax: o.codeBlockSyntax,
-  codeBlockLang: o.codeBlockLang
+  codeBlockLang: o.codeBlockLang,
+  subtext: o.subtext
 };
 
 function _(e, t) {

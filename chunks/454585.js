@@ -54,7 +54,7 @@ let _ = {
       height: 14,
       width: 14
     }
-  })]), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading"),
+  })]), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading", "subtext"),
   O = {
     text: o.default.RULES.text
   };
