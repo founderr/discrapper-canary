@@ -61,7 +61,7 @@ function m(e) {
     message: t,
     compact: n
   } = e, l = t.embeds[0], i = a.useMemo(() => (function(e) {
-    if (null == e.fields) return null;
+    if ((null == e ? void 0 : e.fields) == null) return null;
     let t = {},
       n = {};
     for (let s of e.fields) switch (s.rawName) {
