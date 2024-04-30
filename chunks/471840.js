@@ -29,14 +29,14 @@ var i = l("735250"),
   g = l("566620"),
   N = l("421"),
   j = l("895395"),
-  D = l("49978"),
-  y = l("427996"),
+  y = l("49978"),
+  D = l("427996"),
   M = l("701488"),
   L = l("981631"),
   V = l("689938"),
   R = l("228983"),
-  b = l("361205"),
-  O = l("812320");
+  O = l("361205"),
+  b = l("812320");
 let H = (0, A.cssValueToNumber)(o.default.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
   F = (0, A.cssValueToNumber)(o.default.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
   B = (0, A.cssValueToNumber)(o.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + H + (0, A.cssValueToNumber)(o.default.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
@@ -54,25 +54,25 @@ function Y(e) {
     ...B
   } = e, Y = (0, d.useStateFromStores)([_.default], () => _.default.getIsEnabled(), []), {
     analyticsLocations: k
-  } = (0, I.default)(H), [P, G] = a.useState(C), U = (0, u.default)(P), [W, Z] = a.useState(null), [z, q] = a.useState(v), [J, K] = a.useState(void 0), [X] = (0, m.default)(null == z ? [] : [z]), Q = a.useRef(null), $ = a.useMemo(() => ({
+  } = (0, I.default)(H), [P, G] = a.useState(C), U = (0, u.default)(P), [Z, W] = a.useState(null), [z, q] = a.useState(v), [J, K] = a.useState(void 0), [X] = (0, m.default)(null == z ? [] : [z]), Q = a.useRef(null), $ = a.useMemo(() => ({
     application_id: z,
     source_section: n.section,
     impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW
   }), [n.section, z]);
   a.useEffect(() => {
-    if (P === M.ActivityShelfSlides.DIRECTORY && null != U && U !== M.ActivityShelfSlides.DIRECTORY && null != W) {
+    if (P === M.ActivityShelfSlides.DIRECTORY && null != U && U !== M.ActivityShelfSlides.DIRECTORY && null != Z) {
       var e;
       null === (e = Q.current) || void 0 === e || e.scrollTo({
-        top: W
+        top: Z
       })
     }
-  }, [W, U, P]);
+  }, [Z, U, P]);
   let ee = a.useCallback(e => {
       var t;
       let {
         applicationId: l
       } = e, i = null === (t = Q.current) || void 0 === t ? void 0 : t.scrollTop;
-      null != i && Z(i), q(l), G(M.ActivityShelfSlides.SELECT_CHANNEL)
+      null != i && W(i), q(l), G(M.ActivityShelfSlides.SELECT_CHANNEL)
     }, []),
     et = a.useCallback(e => {
       let {
@@ -134,11 +134,11 @@ function Y(e) {
       ...B,
       children: [(0, i.jsx)("img", {
         alt: V.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT,
-        src: b,
+        src: O,
         className: R.shelfTopBackground
       }), (0, i.jsx)("img", {
         alt: V.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT,
-        src: O,
+        src: b,
         className: R.shelfTopForeground
       }), (0, i.jsxs)(c.ModalHeader, {
         separator: !1,
@@ -179,7 +179,7 @@ function Y(e) {
           className: R.modalCloseButton,
           onClick: o
         })]
-      }), P === M.ActivityShelfSlides.DIRECTORY && Y ? (0, i.jsx)(y.DeveloperShelfControls, {}) : null, (0, i.jsx)("div", {
+      }), P === M.ActivityShelfSlides.DIRECTORY && Y ? (0, i.jsx)(D.DeveloperShelfControls, {}) : null, (0, i.jsx)("div", {
         className: R.modalDivider
       }), (0, i.jsxs)(c.Slides, {
         activeSlide: P,
@@ -213,7 +213,7 @@ function Y(e) {
           },
           children: (0, i.jsx)(w, {
             slide: P,
-            children: (0, i.jsx)(D.default, {
+            children: (0, i.jsx)(y.default, {
               applicationId: z,
               selectedChannelId: J,
               setSelectedChannelId: K,
@@ -251,7 +251,7 @@ function Y(e) {
                 }), (0, i.jsx)(c.ModalFooter, {
                   separator: !1,
                   className: R.footer,
-                  children: (0, i.jsx)(D.ChannelSelectorFooter, {
+                  children: (0, i.jsx)(y.ChannelSelectorFooter, {
                     onBack: el,
                     onClose: o,
                     guildId: l,

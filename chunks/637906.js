@@ -1,6 +1,6 @@
 "use strict";
-n.r(t);
-let a = (0, n("818083").createExperiment)({
+a.r(t);
+let n = (0, a("818083").createExperiment)({
   kind: "user",
   id: "2023-08_dcf_ml_model",
   label: "DCF ML Perks Relevance Model",
@@ -39,4 +39,4 @@ let a = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = a
+t.default = n

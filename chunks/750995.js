@@ -1,26 +1,26 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("524437"),
-  l = n("481060"),
-  i = n("570140"),
-  r = n("317770"),
-  o = n("605236"),
-  u = n("650774"),
-  d = n("430824"),
-  c = n("496675"),
-  f = n("228392"),
-  E = n("981631"),
-  h = n("921944");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("524437"),
+  l = a("481060"),
+  i = a("570140"),
+  r = a("317770"),
+  o = a("605236"),
+  u = a("650774"),
+  d = a("430824"),
+  c = a("496675"),
+  f = a("228392"),
+  E = a("981631"),
+  h = a("921944");
 let _ = e => {
   var t;
-  let n = d.default.getGuild(e),
-    a = !!(null == n ? void 0 : n.hasFeature(E.GuildFeatures.COMMUNITY)),
-    l = c.default.can(E.Permissions.MANAGE_CHANNELS, n),
+  let a = d.default.getGuild(e),
+    n = !!(null == a ? void 0 : a.hasFeature(E.GuildFeatures.COMMUNITY)),
+    l = c.default.can(E.Permissions.MANAGE_CHANNELS, a),
     i = (0, o.isDismissibleContentDismissed)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL),
     r = null !== (t = u.default.getMemberCount(e)) && void 0 !== t ? t : 0;
-  return a && l && !i && r >= 200
+  return n && l && !i && r >= 200
 };
 class C extends r.default {
   _initialize() {
@@ -44,11 +44,11 @@ class C extends r.default {
     (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("18417")]).then(n.bind(n, "740696"));
-      return n => (0, a.jsx)(e, {
-        ...n,
+      } = await Promise.all([a.e("99387"), a.e("18417")]).then(a.bind(a, "740696"));
+      return a => (0, n.jsx)(e, {
+        ...a,
         onClose: e => {
-          i(e), n.onClose()
+          i(e), a.onClose()
         },
         guildId: t,
         shouldUpsellCreation: !0

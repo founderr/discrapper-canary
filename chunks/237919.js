@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return T
+    return g
   }
-}), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
-  r = n("442837"),
-  o = n("481060"),
-  u = n("570140"),
-  d = n("287259"),
-  c = n("819640"),
-  f = n("490983"),
-  E = n("799777"),
-  h = n("6048"),
-  _ = n("5967"),
-  C = n("346329"),
-  m = n("981631"),
-  S = n("689938"),
-  p = n("890255");
+}), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("120356"),
+  i = a.n(l),
+  r = a("442837"),
+  o = a("481060"),
+  u = a("570140"),
+  d = a("287259"),
+  c = a("819640"),
+  f = a("490983"),
+  E = a("799777"),
+  h = a("6048"),
+  _ = a("5967"),
+  C = a("346329"),
+  m = a("981631"),
+  S = a("689938"),
+  p = a("890255");
 
-function I(e, t, n) {
+function I(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
-class g extends s.Component {
+class T extends s.Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown)
   }
@@ -49,9 +49,9 @@ class g extends s.Component {
   updateActiveRow(e) {
     let {
       applicationViewItems: t,
-      activeRowKey: n
-    } = this.props, a = t.findIndex(e => e.key === n), s = 0;
-    a >= 0 && (s = (a + e) % t.length) < 0 && (s = t.length - 1);
+      activeRowKey: a
+    } = this.props, n = t.findIndex(e => e.key === a), s = 0;
+    n >= 0 && (s = (n + e) % t.length) < 0 && (s = t.length - 1);
     let l = t[s];
     d.updateActiveRowKey(null != l ? l.key : null, !0)
   }
@@ -61,12 +61,12 @@ class g extends s.Component {
     } = this.props, {
       focused: t
     } = this.state;
-    return (0, a.jsx)("div", {
+    return (0, n.jsx)("div", {
       className: i()({
         [p.libraryFilter]: !0,
         [p.focused]: t
       }),
-      children: (0, a.jsx)(h.default, {
+      children: (0, n.jsx)(h.default, {
         className: p.searchBar,
         ref: this.setRef,
         onChange: d.updateLibraryFilter,
@@ -94,25 +94,25 @@ class g extends s.Component {
     }), I(this, "handleKeyDown", e => {
       var t;
       let {
-        activeRowKey: n,
-        hasModalOpen: a,
+        activeRowKey: a,
+        hasModalOpen: n,
         applicationViewItems: s
       } = this.props, {
         searchBarRef: l
       } = this;
-      if (a || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
+      if (n || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
       let i = null === (t = (0, _.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
       if (!(i !== l.inputRef.current && (0, _.isInputLikeElement)(i))) switch (e.which) {
         case m.KeyboardKeys.ESCAPE:
           e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
           break;
         case m.KeyboardKeys.ENTER:
-          if (null != n) {
+          if (null != a) {
             e.preventDefault();
-            let t = s.find(e => e.key === n);
+            let t = s.find(e => e.key === a);
             if (null == t) return;
-            let a = t.libraryApplication;
-            C.performDefaultLibraryApplicationAction(a, {
+            let n = t.libraryApplication;
+            C.performDefaultLibraryApplicationAction(n, {
               analyticsParams: {
                 source: m.AnalyticsLocations.APPLICATION_LIBRARY,
                 location: {
@@ -135,10 +135,10 @@ class g extends s.Component {
   }
 }
 
-function T() {
+function g() {
   let e = (0, r.useStateFromStores)([c.default], () => c.default.hasLayers()),
     t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-  return (0, a.jsx)(g, {
+  return (0, n.jsx)(T, {
     activeRowKey: (0, r.useStateFromStores)([E.default], () => E.default.activeRowKey),
     hasModalOpen: t || e,
     filterQuery: (0, r.useStateFromStores)([f.default], () => f.default.applicationFilterQuery),

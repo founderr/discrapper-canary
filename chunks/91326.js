@@ -1,34 +1,34 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("442837"),
-  l = n("471445"),
-  i = n("862099"),
-  r = n("938475"),
-  o = n("689938"),
-  u = n("382224");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("442837"),
+  l = a("471445"),
+  i = a("862099"),
+  r = a("938475"),
+  o = a("689938"),
+  u = a("382224");
 t.default = function(e) {
   let {
     name: t,
-    channel: n
-  } = e, d = (0, s.useStateFromStoresArray)([r.default], () => r.default.getVoiceStatesForChannel(n).map(e => {
+    channel: a
+  } = e, d = (0, s.useStateFromStoresArray)([r.default], () => r.default.getVoiceStatesForChannel(a).map(e => {
     let {
       user: t
     } = e;
     return t
-  }), [n]), c = (0, l.getChannelIconComponent)(n);
-  return (0, a.jsx)(i.GuildNoticeBody, {
+  }), [a]), c = (0, l.getChannelIconComponent)(a);
+  return (0, n.jsx)(i.GuildNoticeBody, {
     heading: o.default.Messages.STAGE_CHANNEL_LIVE_NOW,
     topic: t,
     location: o.default.Messages.HUB_STUDY_ROOM_VOICE_CHANNEL_TOOLTIP,
-    locationIcon: null != c ? (0, a.jsx)(c, {
+    locationIcon: null != c ? (0, n.jsx)(c, {
       width: 16,
       height: 16,
       className: u.icon
     }) : null,
-    children: (0, a.jsx)(i.LiveVoiceOrStageChannelNotice, {
-      channel: n,
+    children: (0, n.jsx)(i.LiveVoiceOrStageChannelNotice, {
+      channel: a,
       speakers: d,
       voiceType: i.VoiceChannelType.STUDY_ROOM
     })

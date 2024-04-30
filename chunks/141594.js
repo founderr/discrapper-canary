@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("470079"),
-  s = n("442837"),
-  l = n("524437"),
-  i = n("243778"),
-  r = n("594174"),
-  o = n("51144"),
-  u = n("410154"),
-  d = n("683167"),
-  c = n("302800"),
-  f = n("921944");
+a.r(t), a("47120");
+var n = a("470079"),
+  s = a("442837"),
+  l = a("524437"),
+  i = a("243778"),
+  r = a("594174"),
+  o = a("51144"),
+  u = a("410154"),
+  d = a("683167"),
+  c = a("302800"),
+  f = a("921944");
 let E = "useCollectiblesShopTabNewBadge";
 t.default = () => {
   let e = (0, s.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
     t = (0, u.default)(E) === u.CollectiblesShopMarketingVariants.SHY,
-    n = (0, d.useShopNewBadgeCoachtipEdition)(E),
-    h = a.useMemo(() => {
+    a = (0, d.useShopNewBadgeCoachtipEdition)(E),
+    h = n.useMemo(() => {
       if ((0, o.ageEligibleForPremiumUpsell)(e)) {
-        if (n === c.ShopCoachtipEditions.GALAXY) return [l.DismissibleContent.COLLECTIBLES_SHOP_GALAXY_COACHTIP];
-        if (n === c.ShopCoachtipEditions.LOFI_VIBES) return [l.DismissibleContent.COLLECTIBLES_SHOP_LOFI_VIBES_COACHTIP];
+        if (a === c.ShopCoachtipEditions.GALAXY) return [l.DismissibleContent.COLLECTIBLES_SHOP_GALAXY_COACHTIP];
+        if (a === c.ShopCoachtipEditions.LOFI_VIBES) return [l.DismissibleContent.COLLECTIBLES_SHOP_LOFI_VIBES_COACHTIP];
         else if (t) return [l.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]
       }
       return []
-    }, [e, n, t]),
+    }, [e, a, t]),
     [_, C] = (0, i.useSelectedDismissibleContent)(h, void 0, !0),
     m = null != _ ? c.CollectiblesDCToDisplayOptions[_] : null;
   return {

@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return f
   }
 });
-var a = n("735250"),
-  s = n("470079"),
-  l = n("481060"),
-  i = n("703656"),
-  r = n("134726"),
-  o = n("308083"),
-  u = n("981631"),
-  d = n("689938"),
-  c = n("422906");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("481060"),
+  i = a("703656"),
+  r = a("134726"),
+  o = a("308083"),
+  u = a("981631"),
+  d = a("689938"),
+  c = a("422906");
 
 function f(e) {
   let {
     guildId: t
   } = e, {
-    enableClanCreation: n,
+    enableClanCreation: a,
     defaultGameId: f
   } = r.ClanGuildExperiment.useExperiment({
     guildId: t,
@@ -26,15 +26,15 @@ function f(e) {
   }), E = s.useCallback(() => {
     (0, i.transitionTo)(u.Routes.GUILD_DISCOVERY)
   }, []);
-  return n ? (0, a.jsxs)(l.Clickable, {
+  return a ? (0, n.jsxs)(l.Clickable, {
     onClick: E,
     className: c.upsellContainer,
-    children: [(0, a.jsx)(l.Text, {
+    children: [(0, n.jsx)(l.Text, {
       variant: "text-xs/bold",
       color: "text-warning",
       className: c.exclusive,
       children: d.default.Messages.CLAN_UPSELL_INVITE
-    }), (0, a.jsx)(l.Text, {
+    }), (0, n.jsx)(l.Text, {
       variant: "text-sm/semibold",
       color: "header-primary",
       children: f === o.VALORANT_ID ? d.default.Messages.CLAN_UPSELL_CONTENT_VALORANT : f === o.GENSHIN_ID ? d.default.Messages.CLAN_UPSELL_CONTENT_GENSHIN : d.default.Messages.CLAN_UPSELL_CONTENT

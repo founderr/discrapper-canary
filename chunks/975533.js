@@ -1,28 +1,28 @@
 "use strict";
-n.r(t);
-var a = n("570140"),
-  s = n("846027"),
-  l = n("13245"),
-  i = n("287734"),
-  r = n("872810"),
-  o = n("223245"),
-  u = n("317770"),
-  d = n("924557"),
-  c = n("39604"),
-  f = n("569545"),
-  E = n("722835"),
-  h = n("703656"),
-  _ = n("641015"),
-  C = n("183584"),
-  m = n("199902"),
-  S = n("131951"),
-  p = n("246946"),
-  I = n("808506"),
-  g = n("237997"),
-  T = n("626135"),
-  A = n("554174"),
-  N = n("981631"),
-  v = n("65154");
+a.r(t);
+var n = a("570140"),
+  s = a("846027"),
+  l = a("13245"),
+  i = a("287734"),
+  r = a("872810"),
+  o = a("223245"),
+  u = a("317770"),
+  d = a("924557"),
+  c = a("39604"),
+  f = a("569545"),
+  E = a("722835"),
+  h = a("703656"),
+  _ = a("641015"),
+  C = a("183584"),
+  m = a("199902"),
+  S = a("131951"),
+  p = a("246946"),
+  I = a("808506"),
+  T = a("237997"),
+  g = a("626135"),
+  A = a("554174"),
+  N = a("981631"),
+  v = a("65154");
 let L = {
   [N.GlobalKeybindActions.TOGGLE_PRIORITY_SPEAKER]: {
     onTrigger() {},
@@ -103,7 +103,7 @@ let L = {
   [N.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK]: {
     onTrigger(e) {
       let t = (0, A.default)();
-      null != t && (e ? l.default.setUILocked(!g.default.isUILocked(t), t) : l.default.setInputLocked(!I.default.isInputLocked(t), t))
+      null != t && (e ? l.default.setUILocked(!T.default.isUILocked(t), t) : l.default.setInputLocked(!I.default.isInputLocked(t), t))
     },
     keyEvents: {
       keyup: !0,
@@ -114,7 +114,7 @@ let L = {
     onTrigger() {
       let e = I.default.getFocusedPID(),
         t = null != e;
-      null != e && t && g.default.isPinned(N.OverlayWidgets.TEXT) && I.default.isReady(e) && I.default.isInputLocked(e) && l.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
+      null != e && t && T.default.isPinned(N.OverlayWidgets.TEXT) && I.default.isReady(e) && I.default.isInputLocked(e) && l.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
     },
     keyEvents: {
       keyup: !0,
@@ -163,7 +163,7 @@ let L = {
     onTrigger: () => {
       if (!(0, _.canSelectedVoiceChannelUseSoundboard)()) return;
       let e = (0, A.default)();
-      null != e && (g.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
+      null != e && (T.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
     },
     keyEvents: {
       keyup: !0,
@@ -186,7 +186,7 @@ let L = {
   },
   [N.GlobalKeybindActions.SAVE_CLIP]: {
     onTrigger: () => {
-      (0, d.areClipsEnabled)() && (T.default.track(N.AnalyticEvents.CLIP_SAVE_KEYBIND_PRESSED), (0, c.saveClip)())
+      (0, d.areClipsEnabled)() && (g.default.track(N.AnalyticEvents.CLIP_SAVE_KEYBIND_PRESSED), (0, c.saveClip)())
     },
     keyEvents: {
       keyup: !1,
@@ -197,10 +197,10 @@ let L = {
     onTrigger(e, t) {
       let {
         params: {
-          channelId: n
+          channelId: a
         }
       } = t;
-      null != n && i.default.selectVoiceChannel(n)
+      null != a && i.default.selectVoiceChannel(a)
     },
     keyEvents: {
       keyup: !0,
@@ -223,7 +223,7 @@ let L = {
 };
 class R extends u.default {
   _initialize() {
-    a.default.wait(() => a.default.dispatch({
+    n.default.wait(() => n.default.dispatch({
       type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS",
       keybinds: L
     }))

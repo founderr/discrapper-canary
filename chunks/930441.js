@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   EMAILS_SUBSECTION: function() {
     return i
   },
@@ -13,9 +13,9 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a, s, l = n("689938");
+var n, s, l = a("689938");
 let i = "emails";
-(a = s || (s = {})).COMMUNICATION = "communication", a.SOCIAL = "social", a.TIPS = "tips", a.RECOMMENDATIONS_AND_EVENTS = "recommendations_and_events", a.UPDATES_AND_ANNOUNCEMENTS = "updates_and_announcements", a.FAMILY_CENTER_DIGEST = "family_center_digest";
+(n = s || (s = {})).COMMUNICATION = "communication", n.SOCIAL = "social", n.TIPS = "tips", n.RECOMMENDATIONS_AND_EVENTS = "recommendations_and_events", n.UPDATES_AND_ANNOUNCEMENTS = "updates_and_announcements", n.FAMILY_CENTER_DIGEST = "family_center_digest";
 let r = ["tips", "recommendations_and_events", "updates_and_announcements"],
   o = [{
     category: "communication",

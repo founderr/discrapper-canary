@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return A
   }
-}), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
-  r = n("512722"),
-  o = n.n(r),
-  u = n("481060"),
-  d = n("194359"),
-  c = n("153124"),
-  f = n("657682"),
-  E = n("981631"),
-  h = n("420212"),
-  _ = n("689938"),
-  C = n("660905"),
-  m = n("949086");
+}), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("120356"),
+  i = a.n(l),
+  r = a("512722"),
+  o = a.n(r),
+  u = a("481060"),
+  d = a("194359"),
+  c = a("153124"),
+  f = a("657682"),
+  E = a("981631"),
+  h = a("420212"),
+  _ = a("689938"),
+  C = a("660905"),
+  m = a("949086");
 let S = {
     canSend: !1,
     hint: null,
@@ -27,9 +27,9 @@ let S = {
   },
   p = (0, c.uid)(),
   I = "".concat(p, "-decription"),
-  g = "".concat(p, "-error");
+  T = "".concat(p, "-error");
 
-function T(e, t) {
+function g(e, t) {
   switch (t.type) {
     case "RESET":
       return S;
@@ -51,75 +51,75 @@ function T(e, t) {
 function A() {
   let e = s.createRef(),
     t = s.createRef(),
-    [n, l] = s.useReducer(T, S),
+    [a, l] = s.useReducer(g, S),
     {
       canSend: r,
       hint: c,
       success: A,
       error: N
-    } = n;
+    } = a;
   return s.useEffect(() => {
     null != A && (o()(null != e.current, "Input is submitting when not mounted"), e.current.value = "", e.current.focus())
-  }, [A, e]), (0, a.jsxs)("form", {
+  }, [A, e]), (0, n.jsxs)("form", {
     onSubmit: t => {
       t.preventDefault(), o()(null != e.current, "Input is submitted when not mounted");
-      let n = e.current.value.trim();
-      !n.includes("#") && n.startsWith("@") && (n = n.substring(1));
-      let a = (0, f.validateDiscordTag)(n);
-      if (null != a) {
+      let a = e.current.value.trim();
+      !a.includes("#") && a.startsWith("@") && (a = a.substring(1));
+      let n = (0, f.validateDiscordTag)(a);
+      if (null != n) {
         l({
           type: "ERROR",
-          text: a
+          text: n
         });
         return
       }
       d.default.sendRequest({
-        discordTag: n,
+        discordTag: a,
         context: {
           location: "Add Friend"
         }
       }).then(() => l({
         type: "SUCCESS",
         text: _.default.Messages.ADD_FRIEND_SUCCESS.format({
-          discordTag: n
+          discordTag: a
         })
       }), e => {
         var t;
         return l({
           type: "ERROR",
-          text: (0, f.humanizeAbortCode)(null === (t = e.body) || void 0 === t ? void 0 : t.code, n)
+          text: (0, f.humanizeAbortCode)(null === (t = e.body) || void 0 === t ? void 0 : t.code, a)
         })
       })
     },
     autoComplete: "off",
-    children: [(0, a.jsx)(u.FormText, {
+    children: [(0, n.jsx)(u.FormText, {
       id: I,
       type: u.FormText.Types.DESCRIPTION,
       children: _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION
-    }), (0, a.jsx)(u.FocusRing, {
+    }), (0, n.jsx)(u.FocusRing, {
       focusTarget: e,
       ringTarget: t,
       ringClassName: C.ring,
-      children: (0, a.jsxs)("div", {
+      children: (0, n.jsxs)("div", {
         ref: t,
         className: i()(C.addFriendInputWrapper, {
           [C.success]: A,
           [C.error]: N
         }),
-        children: [(0, a.jsx)(u.TextInput, {
+        children: [(0, n.jsx)(u.TextInput, {
           id: p,
           inputRef: e,
           className: C.addFriendInput,
           inputClassName: C.input,
           onKeyPress: t => {
-            let n = t.currentTarget.value;
-            if (t.key !== h.KeyboardEventKey.Enter && n.includes("#")) {
+            let a = t.currentTarget.value;
+            if (t.key !== h.KeyboardEventKey.Enter && a.includes("#")) {
               o()(null != e.current, "Input is handling keypress when not mounted");
-              let a = n.indexOf("#"),
+              let n = a.indexOf("#"),
                 s = e.current.selectionStart,
                 l = t.key === h.KeyboardEventKey.Backspace || t.key === h.KeyboardEventKey.ArrowRight || t.key === h.KeyboardEventKey.ArrowLeft,
                 i = t.which >= 48 && t.which <= 57;
-              null != s && s > a && /^(.+?#\d{4})$/.test(n) && !l ? t.preventDefault() : null != s && s > a && !i && !l && t.preventDefault()
+              null != s && s > n && /^(.+?#\d{4})$/.test(a) && !l ? t.preventDefault() : null != s && s > n && !i && !l && t.preventDefault()
             }
           },
           onChange: e => {
@@ -130,8 +130,8 @@ function A() {
               return
             }
             let t = "",
-              [, n] = e.split("#");
-            null != n && (t = e + E.PLACEHOLDER_TAG.slice(null != n ? n.length + 1 : 0)), l({
+              [, a] = e.split("#");
+            null != a && (t = e + E.PLACEHOLDER_TAG.slice(null != a ? a.length + 1 : 0)), l({
               type: "HINT",
               text: t
             })
@@ -144,25 +144,25 @@ function A() {
           placeholder: _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-label": _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-invalid": null != N || void 0,
-          "aria-describedby": null != N ? g : I
-        }), null != c && (0, a.jsx)("div", {
+          "aria-describedby": null != N ? T : I
+        }), null != c && (0, n.jsx)("div", {
           className: C.addFriendHint,
           "aria-hidden": !0,
           children: c
-        }), (0, a.jsx)(u.Button, {
+        }), (0, n.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           disabled: !r,
           type: "submit",
           children: _.default.Messages.ADD_FRIEND_BUTTON
         })]
       })
-    }), null != N && (0, a.jsx)(u.FormText, {
+    }), null != N && (0, n.jsx)(u.FormText, {
       role: "alert",
-      id: g,
+      id: T,
       type: u.FormText.Types.ERROR,
       className: m.marginTop8,
       children: N
-    }), null != A && (0, a.jsx)(u.FormText, {
+    }), null != A && (0, n.jsx)(u.FormText, {
       role: "status",
       type: u.FormText.Types.SUCCESS,
       className: m.marginTop8,

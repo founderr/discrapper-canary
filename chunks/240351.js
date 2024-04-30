@@ -1,24 +1,24 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("858719"),
-  i = n("448448");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("481060"),
+  l = a("858719"),
+  i = a("448448");
 t.default = e => {
   let {
     header: t,
-    displayType: n
-  } = e, r = (0, l.useActionTotalsForDisplayType)(n);
-  return (0, a.jsxs)("div", {
+    displayType: a
+  } = e, r = (0, l.useActionTotalsForDisplayType)(a);
+  return (0, n.jsxs)("div", {
     className: i.counter,
-    children: [(0, a.jsx)(s.Heading, {
+    children: [(0, n.jsx)(s.Heading, {
       variant: "heading-xxl/medium",
       color: r > 0 ? "text-brand" : "text-muted",
-      children: (0, a.jsx)(s.HeadingLevel, {
+      children: (0, n.jsx)(s.HeadingLevel, {
         children: null != r ? r : 0
       })
-    }), (0, a.jsx)(s.Text, {
+    }), (0, n.jsx)(s.Text, {
       variant: "text-sm/semibold",
       children: t
     })]

@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useFormattedGameNames: function() {
     return d
   }
 });
-var a = n("392711"),
-  s = n.n(a),
-  l = n("442837"),
-  i = n("77498"),
-  r = n("823379"),
-  o = n("353093"),
-  u = n("308083");
+var n = a("392711"),
+  s = a.n(n),
+  l = a("442837"),
+  i = a("77498"),
+  r = a("823379"),
+  o = a("353093"),
+  u = a("308083");
 
 function d(e) {
   return (0, l.useStateFromStores)([i.default], () => {

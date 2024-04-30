@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("481060"),
-  i = n("231467"),
-  r = n("207796"),
-  o = n("436137"),
-  u = n("559469"),
-  d = n("689938"),
-  c = n("720395");
+a.r(t), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("481060"),
+  i = a("231467"),
+  r = a("207796"),
+  o = a("436137"),
+  u = a("559469"),
+  d = a("689938"),
+  c = a("720395");
 t.default = s.memo(function(e) {
   let {
     selectedGame: t,
-    onClick: n
+    onClick: a
   } = e, [f, E] = s.useMemo(() => {
     switch (t) {
       case r.ClanDiscoveryGame.GENSHIN:
@@ -21,56 +21,56 @@ t.default = s.memo(function(e) {
         return [d.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_TITLE, d.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE]
     }
   }, [t]);
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: c.upsellContainer,
-    children: [(0, a.jsx)("div", {
+    children: [(0, n.jsx)("div", {
       className: c.cardsContainer,
-      children: (0, a.jsxs)("div", {
+      children: (0, n.jsxs)("div", {
         className: c.cards,
-        children: [(0, a.jsx)("div", {
+        children: [(0, n.jsx)("div", {
           className: c.clanCardOuterContainer,
-          children: (0, a.jsx)(i.ClanDiscoveryCardView, {
+          children: (0, n.jsx)(i.ClanDiscoveryCardView, {
             clan: u.FAKE_DISCOVERY_UPSELL_CLANS["0"],
             className: c.clanCardOuterLeft
           })
-        }), (0, a.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: c.clanCardInnerContainer,
-          children: (0, a.jsx)(i.ClanDiscoveryCardView, {
+          children: (0, n.jsx)(i.ClanDiscoveryCardView, {
             clan: u.FAKE_DISCOVERY_UPSELL_CLANS["1"],
             className: c.clanCardInnerLeft
           })
-        }), (0, a.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: c.clanCardCenterContainer,
-          children: (0, a.jsx)(i.ClanDiscoveryCardView, {
+          children: (0, n.jsx)(i.ClanDiscoveryCardView, {
             clan: u.FAKE_DISCOVERY_UPSELL_CLANS["4"],
             className: c.clanCardCenter
           })
-        }), (0, a.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: c.clanCardInnerContainer,
-          children: (0, a.jsx)(i.ClanDiscoveryCardView, {
+          children: (0, n.jsx)(i.ClanDiscoveryCardView, {
             clan: u.FAKE_DISCOVERY_UPSELL_CLANS["2"],
             className: c.clanCardInnerRight
           })
-        }), (0, a.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: c.clanCardOuterContainer,
-          children: (0, a.jsx)(i.ClanDiscoveryCardView, {
+          children: (0, n.jsx)(i.ClanDiscoveryCardView, {
             clan: u.FAKE_DISCOVERY_UPSELL_CLANS["3"],
             className: c.clanCardOuterRight
           })
         })]
       })
-    }), (0, a.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: c.upsellDetails,
-      children: [(0, a.jsx)(l.Heading, {
+      children: [(0, n.jsx)(l.Heading, {
         className: c.upsellTitle,
         variant: "heading-xxl/semibold",
         children: f
-      }), (0, a.jsx)(l.Text, {
+      }), (0, n.jsx)(l.Text, {
         className: c.upsellSubtitle,
         variant: "text-md/medium",
         children: E
-      }), (0, a.jsx)(o.default, {
-        onClick: n,
+      }), (0, n.jsx)(o.default, {
+        onClick: a,
         children: d.default.Messages.CLAN_DISCOVERY_UPSELL_GET_STARTED
       })]
     })]

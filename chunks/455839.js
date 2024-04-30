@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   GuildDiscoveryMenuPopout: function() {
     return C
   },
@@ -7,57 +7,57 @@ n.r(t), n.d(t, {
     return _
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("442837"),
-  l = n("481060"),
-  i = n("239091"),
-  r = n("299206"),
-  o = n("726521"),
-  u = n("430824"),
-  d = n("496675"),
-  c = n("795295"),
-  f = n("556017"),
-  E = n("981631"),
-  h = n("689938");
+var n = a("735250");
+a("470079");
+var s = a("442837"),
+  l = a("481060"),
+  i = a("239091"),
+  r = a("299206"),
+  o = a("726521"),
+  u = a("430824"),
+  d = a("496675"),
+  c = a("795295"),
+  f = a("556017"),
+  E = a("981631"),
+  h = a("689938");
 
 function _(e) {
   let {
     guild: t,
-    shiftId: n,
+    shiftId: a,
     onSelect: _,
     closePopout: C,
     "aria-label": m
   } = e, S = (0, r.default)({
     id: t.id,
     label: h.default.Messages.COPY_ID_GUILD,
-    shiftId: n,
+    shiftId: a,
     onSuccess: C
   }), p = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), I = (0, s.useStateFromStores)([d.default], () => d.default.can(E.Permissions.ADMINISTRATOR, p)), {
-    canSeeInAppReportingButtons: g
+    canSeeInAppReportingButtons: T
   } = f.DiscoveryInAppReportingExperiment.useExperiment({
     location: "0e35b9_1"
   }, {
     autoTrackExposure: !1
-  }), T = () => {
+  }), g = () => {
     (0, i.closeContextMenu)(), null == C || C()
   };
-  return (0, a.jsxs)(l.Menu, {
+  return (0, n.jsxs)(l.Menu, {
     onSelect: _,
     navId: "guild-discovery-context-menu",
     "aria-label": null != m ? m : h.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onClose: i.closeContextMenu,
-    children: [(0, a.jsx)(l.MenuGroup, {
-      children: !I && g ? (0, a.jsx)(l.MenuItem, {
+    children: [(0, n.jsx)(l.MenuGroup, {
+      children: !I && T ? (0, n.jsx)(l.MenuItem, {
         id: "report-guild-discovery-listing",
         label: h.default.Messages.REPORT_SERVER_NO_NAME,
         action: () => {
-          (0, o.showReportModalForDiscoverableGuild)(t), T()
+          (0, o.showReportModalForDiscoverableGuild)(t), g()
         },
         icon: c.default,
         color: "danger"
       }) : null
-    }), (0, a.jsx)(l.MenuGroup, {
+    }), (0, n.jsx)(l.MenuGroup, {
       children: S
     })]
   })
@@ -65,11 +65,11 @@ function _(e) {
 let C = e => {
   let {
     guild: t,
-    children: n,
+    children: a,
     onRequestOpen: s,
     onRequestClose: i
   } = e;
-  return (0, a.jsx)(l.Popout, {
+  return (0, n.jsx)(l.Popout, {
     onRequestOpen: s,
     onRequestClose: i,
     animation: l.Popout.Animation.NONE,
@@ -78,13 +78,13 @@ let C = e => {
     align: "right",
     renderPopout: e => {
       let {
-        closePopout: n
+        closePopout: a
       } = e;
-      return (0, a.jsx)(_, {
+      return (0, n.jsx)(_, {
         guild: t,
-        closePopout: n
+        closePopout: a
       })
     },
-    children: n
+    children: a
   })
 }

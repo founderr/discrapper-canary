@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("237997"),
-  s = n("998502"),
-  l = n("576027"),
-  i = n("13838"),
-  r = n("812967"),
-  o = n("350085"),
-  u = n("910484"),
-  d = n("443952"),
-  c = n("266572"),
-  f = n("177698"),
-  E = n("121826"),
-  h = n("567481"),
-  _ = n("498164"),
-  C = n("111097"),
-  m = n("908711"),
-  S = n("197941"),
-  p = n("462414"),
-  I = n("662194"),
-  g = n("188861");
-let T = {
+a.r(t), a("47120");
+var n = a("237997"),
+  s = a("998502"),
+  l = a("576027"),
+  i = a("13838"),
+  r = a("812967"),
+  o = a("350085"),
+  u = a("910484"),
+  d = a("443952"),
+  c = a("266572"),
+  f = a("177698"),
+  E = a("121826"),
+  h = a("567481"),
+  _ = a("498164"),
+  C = a("111097"),
+  m = a("908711"),
+  S = a("197941"),
+  p = a("462414"),
+  I = a("662194"),
+  T = a("188861");
+let g = {
     ...l.crossPlatformCommands,
     ...d.default,
     ...c.default,
@@ -40,13 +40,13 @@ let T = {
   };
 t.default = {
   server: r.default,
-  commands: T,
+  commands: g,
   events: A,
-  stores: [a.default],
-  transports: [g.default],
+  stores: [n.default],
+  transports: [T.default],
   registerTransportsForEmbeddedPlatform: function() {
     s.default.ensureModule("discord_rpc").then(() => {
-      for (let e of [n("178318").default, n("967351").default]) r.default.registerTransport(e)
+      for (let e of [a("178318").default, a("967351").default]) r.default.registerTransport(e)
     })
   }
 }

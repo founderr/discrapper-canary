@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   UserTriggerAAExperiment: function() {
     return l
   },
@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("818083"),
-  s = n("987338");
-let l = (0, a.createExperiment)({
+var n = a("818083"),
+  s = a("987338");
+let l = (0, n.createExperiment)({
     kind: "user",
     id: s.userTriggerExperimentId,
     label: "Trigger Debugging User AA Experiment",
@@ -24,7 +24,7 @@ let l = (0, a.createExperiment)({
       }
     }]
   }),
-  i = (0, a.createExperiment)({
+  i = (0, n.createExperiment)({
     kind: "guild",
     id: s.guildTriggerExperimentId,
     label: "Trigger Debugging Guild AA Experiment",
@@ -41,7 +41,7 @@ let l = (0, a.createExperiment)({
   }),
   r = e => {
     let t = "guild trigger debug",
-      n = "user trigger debug";
+      a = "user trigger debug";
     i.useExperiment({
       location: t,
       guildId: e
@@ -51,10 +51,10 @@ let l = (0, a.createExperiment)({
       location: t,
       guildId: e
     }), l.useExperiment({
-      location: n
+      location: a
     }, {
       autoTrackExposure: !1
     }), l.trackExposure({
-      location: n
+      location: a
     })
   }

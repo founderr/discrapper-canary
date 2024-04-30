@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   GameSelector: function() {
     return h
   },
@@ -9,27 +9,27 @@ n.r(t), n.d(t, {
   TraitSelector: function() {
     return f
   }
-}), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("143927"),
-  i = n("950279"),
-  r = n("741595"),
-  o = n("359380"),
-  u = n("207796"),
-  d = n("316553"),
-  c = n("689938");
+}), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("143927"),
+  i = a("950279"),
+  r = a("741595"),
+  o = a("359380"),
+  u = a("207796"),
+  d = a("316553"),
+  c = a("689938");
 
 function f() {
   let e = (0, u.useClanDiscoveryUIStore)(e => e.game, l.default),
     t = (0, d.useDiscoveryGameApplicationId)({
       selectedGame: e
     }),
-    n = (0, u.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default),
+    a = (0, u.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default),
     i = (0, u.useClanDiscoveryUIStore)(e => e.setSelectedTraits, l.default),
-    r = s.useMemo(() => new Set(n), [n]),
+    r = s.useMemo(() => new Set(a), [a]),
     f = s.useCallback(e => i(Array.from(e)), [i]);
-  return (0, a.jsx)(o.default, {
+  return (0, n.jsx)(o.default, {
     title: c.default.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
     description: c.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
     handleUpdate: f,
@@ -41,11 +41,11 @@ function f() {
 function E() {
   let e = (0, u.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, l.default),
     t = (0, u.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, l.default),
-    n = s.useCallback(e => t(e), [t]);
-  return (0, a.jsx)(r.default, {
+    a = s.useCallback(e => t(e), [t]);
+  return (0, n.jsx)(r.default, {
     title: c.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
     description: c.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
-    handleUpdate: n,
+    handleUpdate: a,
     playstyle: e
   })
 }
@@ -55,14 +55,14 @@ function h() {
     t = (0, d.useDiscoveryGameApplicationId)({
       selectedGame: e
     }),
-    n = (0, u.useClanDiscoveryUIStore)(e => e.selectedGames, l.default),
-    r = s.useMemo(() => new Set(n), [n]),
+    a = (0, u.useClanDiscoveryUIStore)(e => e.selectedGames, l.default),
+    r = s.useMemo(() => new Set(a), [a]),
     o = (0, u.useClanDiscoveryUIStore)(e => e.setSelectedGames, l.default),
     [f, E] = s.useState(null),
     h = s.useCallback(e => {
       e.size > 3 ? E(c.default.Messages.CLAN_DISCOVERY_MAX_GAMES_SELECTED) : (E(null), o(Array.from(e)))
     }, [o]);
-  return (0, a.jsx)(i.default, {
+  return (0, n.jsx)(i.default, {
     title: c.default.Messages.CLAN_DISCOVERY_GAME_TITLE,
     description: c.default.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
     requiredGameId: t,

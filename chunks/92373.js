@@ -1,20 +1,20 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
-  r = n("183249"),
-  o = n("481060"),
-  u = n("442837"),
-  d = n("210753"),
-  c = n("77498"),
-  f = n("441674"),
-  E = n("111008");
+a.r(t);
+var n = a("735250"),
+  s = a("470079"),
+  l = a("120356"),
+  i = a.n(l),
+  r = a("183249"),
+  o = a("481060"),
+  u = a("442837"),
+  d = a("210753"),
+  c = a("77498"),
+  f = a("441674"),
+  E = a("111008");
 t.default = function(e) {
   let {
     applicationId: t,
-    imageContainerClassName: n,
+    imageContainerClassName: a,
     onClick: l,
     selected: h
   } = e, _ = (0, o.useToken)(o.tokens.colors.WHITE), {
@@ -24,34 +24,34 @@ t.default = function(e) {
     coverImageHeight: 336,
     coverImageWidth: 252
   }), S = (0, u.useStateFromStores)([c.default], () => {
-    var e, n;
-    return null !== (n = null === (e = c.default.getGameById(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : ""
+    var e, a;
+    return null !== (a = null === (e = c.default.getGameById(t)) || void 0 === e ? void 0 : e.name) && void 0 !== a ? a : ""
   }), p = s.useCallback(() => {
     null == l || l(t)
-  }, [t, l]), I = s.useMemo(() => C ? null : null == m ? (0, a.jsx)("div", {
+  }, [t, l]), I = s.useMemo(() => C ? null : null == m ? (0, n.jsx)("div", {
     className: E.gameUnknownImage,
-    children: (0, a.jsx)(r.UnknownGameIcon, {
+    children: (0, n.jsx)(r.UnknownGameIcon, {
       height: 32,
       width: 32
     })
-  }) : (0, a.jsx)("img", {
+  }) : (0, n.jsx)("img", {
     className: E.gameImage,
     alt: S,
     src: m
   }), [m, C, S]);
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: E.selectedGame,
-    children: [(0, a.jsxs)(o.Clickable, {
+    children: [(0, n.jsxs)(o.Clickable, {
       onClick: p,
-      className: i()(n, C ? E.gameImageLoading : void 0, E.gameImageBackground),
-      children: [h && (0, a.jsx)("div", {
+      className: i()(a, C ? E.gameImageLoading : void 0, E.gameImageBackground),
+      children: [h && (0, n.jsx)("div", {
         className: E.checkBackground,
-        children: (0, a.jsx)(f.default, {
+        children: (0, n.jsx)(f.default, {
           backgroundColor: _.hex(),
           className: E.selectedGameCheck
         })
       }), I]
-    }), (0, a.jsx)(o.Text, {
+    }), (0, n.jsx)(o.Text, {
       className: E.gameName,
       variant: "text-xs/normal",
       color: "header-primary",

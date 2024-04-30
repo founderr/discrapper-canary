@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("718017"),
-  i = n("442837"),
-  r = n("607070"),
-  o = n("931240"),
-  u = n("650461"),
-  d = n("35313"),
-  c = n("602014"),
-  f = n("188837"),
-  E = n("496376"),
-  h = n("308083"),
-  _ = n("156610");
+a.r(t), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("718017"),
+  i = a("442837"),
+  r = a("607070"),
+  o = a("931240"),
+  u = a("650461"),
+  d = a("35313"),
+  c = a("602014"),
+  f = a("188837"),
+  E = a("496376"),
+  h = a("308083"),
+  _ = a("156610");
 t.default = e => {
   let {
     guildId: t,
-    onClose: n,
+    onClose: a,
     gameId: C
   } = e, m = (0, i.useStateFromStores)([u.default], () => null == u.default.getStateForGuild(t).progress), S = (0, i.useStateFromStores)([r.default], () => r.default.useReducedMotion), [p, I] = s.useState(m && !S ? h.ClanSetupModalPages.INTRO_ANIMATION : h.ClanSetupModalPages.SETUP);
   s.useEffect(() => {
@@ -24,30 +24,30 @@ t.default = e => {
       requiredGameId: C
     })
   }, [C, t]);
-  let g = (0, d.useFullScreenModalAnimationStyle)();
-  return (0, a.jsx)(l.animated.div, {
-    style: g,
+  let T = (0, d.useFullScreenModalAnimationStyle)();
+  return (0, n.jsx)(l.animated.div, {
+    style: T,
     className: _.modal,
-    children: (0, a.jsx)("div", {
+    children: (0, n.jsx)("div", {
       className: _.modalContents,
       children: (() => {
         switch (p) {
           case h.ClanSetupModalPages.INTRO_ANIMATION:
-            return (0, a.jsx)(c.default, {
+            return (0, n.jsx)(c.default, {
               guildId: t,
               setPage: I
             });
           case h.ClanSetupModalPages.SETUP:
-            return (0, a.jsx)(E.default, {
+            return (0, n.jsx)(E.default, {
               guildId: t,
               setPage: I,
-              onClose: n
+              onClose: a
             });
           case h.ClanSetupModalPages.SIGN:
-            return (0, a.jsx)(f.default, {
+            return (0, n.jsx)(f.default, {
               guildId: t,
               setPage: I,
-              onClose: n
+              onClose: a
             });
           default:
             return null

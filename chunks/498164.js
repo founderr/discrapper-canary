@@ -1,26 +1,26 @@
 "use strict";
-n.r(t);
-var a, s, l = n("735250");
-n("470079");
-var i = n("756647"),
-  r = n("481060"),
-  o = n("570140"),
-  u = n("355467"),
-  d = n("899742"),
-  c = n("457330"),
-  f = n("533307"),
-  E = n("447543"),
-  h = n("962220"),
-  _ = n("703656"),
-  C = n("314897"),
-  m = n("594174"),
-  S = n("626135"),
-  p = n("585483"),
-  I = n("591759"),
-  g = n("998502"),
-  T = n("996106"),
-  A = n("186901"),
-  N = n("981631");
+a.r(t);
+var n, s, l = a("735250");
+a("470079");
+var i = a("756647"),
+  r = a("481060"),
+  o = a("570140"),
+  u = a("355467"),
+  d = a("899742"),
+  c = a("457330"),
+  f = a("533307"),
+  E = a("447543"),
+  h = a("962220"),
+  _ = a("703656"),
+  C = a("314897"),
+  m = a("594174"),
+  S = a("626135"),
+  p = a("585483"),
+  I = a("591759"),
+  T = a("998502"),
+  g = a("996106"),
+  A = a("186901"),
+  N = a("981631");
 
 function v(e, t) {
   null != e && S.default.track(N.AnalyticEvents.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
@@ -30,7 +30,7 @@ function v(e, t) {
     fingerprint: (0, i.extractId)(e),
     link_type: t
   })
-}(a = s || (s = {})).SETTINGS = "settings", a.CHANGELOG = "changelog", a.LIBRARY = "library", a.STORE = "store", a.INVITE = "invite", a.CHANNEL = "channel", a.GUILD_SETTINGS = "guild_settings", t.default = {
+}(n = s || (s = {})).SETTINGS = "settings", n.CHANGELOG = "changelog", n.LIBRARY = "library", n.STORE = "store", n.INVITE = "invite", n.CHANNEL = "channel", n.GUILD_SETTINGS = "guild_settings", t.default = {
   [N.RPCCommands.INVITE_BROWSER]: {
     scope: A.RPC_PRIVATE_SCOPE,
     async handler(e) {
@@ -39,18 +39,18 @@ function v(e, t) {
           code: t
         }
       } = e, {
-        invite: n
+        invite: a
       } = await E.default.resolveInvite(t, "Desktop Modal");
-      if (null == n) throw new T.default({
+      if (null == a) throw new g.default({
         errorCode: N.RPCErrors.INVALID_INVITE
       }, "Invalid invite id: ".concat(t));
       return C.default.isAuthenticated() ? o.default.dispatch({
         type: "INVITE_MODAL_OPEN",
-        invite: n,
+        invite: a,
         code: t,
         context: N.AppContext.APP
       }) : (0, _.replaceWith)(N.Routes.INVITE(t)), {
-        invite: n,
+        invite: a,
         code: t
       }
     }
@@ -65,21 +65,21 @@ function v(e, t) {
       } = e;
       if (null == m.default.getCurrentUser()) return;
       let {
-        guildTemplate: a
+        guildTemplate: n
       } = await h.default.resolveGuildTemplate(t);
-      if (null == a) throw new T.default({
+      if (null == n) throw new g.default({
         errorCode: N.RPCErrors.INVALID_GUILD_TEMPLATE
       }, "Invalid guild template id: ".concat(t));
-      return g.default.focus(), (0, r.openModalLazy)(async () => {
+      return T.default.focus(), (0, r.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("10778"), n.e("90424")]).then(n.bind(n, "766775"));
+        } = await Promise.all([a.e("99387"), a.e("10778"), a.e("90424")]).then(a.bind(a, "766775"));
         return t => (0, l.jsx)(e, {
           ...t,
-          guildTemplate: a
+          guildTemplate: n
         })
       }), {
-        guildTemplate: a,
+        guildTemplate: n,
         code: t
       }
     }
@@ -92,27 +92,27 @@ function v(e, t) {
           code: t
         }
       } = e;
-      return new Promise((e, a) => {
+      return new Promise((e, n) => {
         o.default.wait(() => {
-          f.default.resolveGiftCode(t, !0, !0).then(a => {
+          f.default.resolveGiftCode(t, !0, !0).then(n => {
             let {
               giftCode: s
-            } = a;
-            g.default.focus(), S.default.track(N.AnalyticEvents.OPEN_MODAL, {
+            } = n;
+            T.default.focus(), S.default.track(N.AnalyticEvents.OPEN_MODAL, {
               type: "gift_accept",
               location: N.DIRECT_ANALYTICS_LOCATION
             }), (0, r.openModalLazy)(async () => {
               let {
                 default: e
-              } = await Promise.all([n.e("99387"), n.e("8016"), n.e("92446")]).then(n.bind(n, "409858"));
-              return n => (0, l.jsx)(e, {
+              } = await Promise.all([a.e("99387"), a.e("8016"), a.e("92446")]).then(a.bind(a, "409858"));
+              return a => (0, l.jsx)(e, {
                 code: t,
-                ...n
+                ...a
               })
             }), e({
               giftCode: s
             })
-          }).catch(() => a(new T.default({
+          }).catch(() => n(new g.default({
             errorCode: N.RPCErrors.INVALID_GIFT_CODE
           }, "Invalid gift code: ".concat(t))))
         })
@@ -125,36 +125,36 @@ function v(e, t) {
       let {
         args: {
           type: t,
-          params: n
+          params: a
         }
       } = e;
-      switch (g.default.focus(), t) {
+      switch (T.default.focus(), t) {
         case A.RPCDeepLinks.USER_SETTINGS:
-          null != n && ((0, _.replaceWith)(N.Routes.SETTINGS(n.section, n.subsection)), v(n.fingerprint, "settings"));
+          null != a && ((0, _.replaceWith)(N.Routes.SETTINGS(a.section, a.subsection)), v(a.fingerprint, "settings"));
           break;
         case A.RPCDeepLinks.CHANGELOG:
-          null != n && ((0, _.replaceWith)(I.default.formatPathWithQuery(N.Routes.CHANGELOGS(n.date), n.query)), v(n.fingerprint, "changelog"));
+          null != a && ((0, _.replaceWith)(I.default.formatPathWithQuery(N.Routes.CHANGELOGS(a.date), a.query)), v(a.fingerprint, "changelog"));
           break;
         case A.RPCDeepLinks.LIBRARY:
-          (0, _.replaceWith)(N.Routes.APPLICATION_LIBRARY), null != n && v(n.fingerprint, "library");
+          (0, _.replaceWith)(N.Routes.APPLICATION_LIBRARY), null != a && v(a.fingerprint, "library");
           break;
         case A.RPCDeepLinks.STORE_HOME:
-          (0, _.replaceWith)(N.Routes.APPLICATION_STORE), null != n && v(n.fingerprint, "store");
+          (0, _.replaceWith)(N.Routes.APPLICATION_STORE), null != a && v(a.fingerprint, "store");
           break;
         case A.RPCDeepLinks.STORE_LISTING:
-          null != n && ((0, _.replaceWith)(N.Routes.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), v(n.fingerprint, "store"));
+          null != a && ((0, _.replaceWith)(N.Routes.APPLICATION_STORE_LISTING_SKU(a.skuId, a.slug)), v(a.fingerprint, "store"));
           break;
         case A.RPCDeepLinks.PICK_GUILD_SETTINGS:
-          null != n && ((0, _.replaceWith)({
-            pathname: N.Routes.PICK_GUILD_SETTINGS(n.section, n.subsection),
-            search: n.search
-          }), v(n.fingerprint, "guild_settings"));
+          null != a && ((0, _.replaceWith)({
+            pathname: N.Routes.PICK_GUILD_SETTINGS(a.section, a.subsection),
+            search: a.search
+          }), v(a.fingerprint, "guild_settings"));
           break;
         case A.RPCDeepLinks.CHANNEL:
-          null != n && ((0, _.replaceWith)({
-            pathname: N.Routes.CHANNEL(n.guildId, n.channelId, n.messageId),
-            search: n.search
-          }), v(n.fingerprint, "channel"))
+          null != a && ((0, _.replaceWith)({
+            pathname: N.Routes.CHANNEL(a.guildId, a.channelId, a.messageId),
+            search: a.search
+          }), v(a.fingerprint, "channel"))
       }
     }
   },
@@ -164,10 +164,10 @@ function v(e, t) {
       let {
         args: {
           handoffToken: t,
-          fingerprint: n
+          fingerprint: a
         }
       } = e;
-      g.default.focus(null, !0), (0, d.handoffEnd)(t, n)
+      T.default.focus(null, !0), (0, d.handoffEnd)(t, a)
     }
   },
   [N.RPCCommands.CONNECTIONS_CALLBACK]: {
@@ -176,15 +176,15 @@ function v(e, t) {
       let {
         args: {
           providerType: t,
-          code: n,
-          openid_params: a,
+          code: a,
+          openid_params: n,
           state: s
         }
       } = e;
       try {
         return await c.default.callback(t, {
-          code: n,
-          openid_params: a,
+          code: a,
+          openid_params: n,
           state: s
         })
       } catch (e) {
@@ -198,15 +198,15 @@ function v(e, t) {
       let {
         args: {
           state: t,
-          path: n,
-          query: a
+          path: a,
+          query: n
         }
       } = e;
       return (0, u.popupBridgeCallback)({
         paymentSourceType: N.PaymentSourceTypes.PAYPAL,
         state: t,
-        path: n,
-        query: a
+        path: a,
+        query: n
       })
     }
   },
@@ -216,16 +216,16 @@ function v(e, t) {
       let {
         args: {
           state: t,
-          path: n,
-          query: a,
+          path: a,
+          query: n,
           payment_source_type: s
         }
       } = e;
       return (0, u.popupBridgeCallback)({
         paymentSourceType: s,
         state: t,
-        path: n,
-        query: a
+        path: a,
+        query: n
       })
     }
   }

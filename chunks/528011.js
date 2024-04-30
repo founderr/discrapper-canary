@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   shouldShowRaidNotificationNagbar: function() {
-    return _
+    return p
   },
   useGuildIncidentsState: function() {
-    return p
+    return _
   }
 }), n("47120");
 var r = n("149765"),
@@ -22,7 +22,7 @@ var r = n("149765"),
   h = n("676770"),
   E = n("981631");
 
-function p(e) {
+function _(e) {
   let {
     showAlertMode: t
   } = (0, f.useGuildAlertModeEnabled)(null != e ? e : E.ZERO_STRING_GUILD_ID), n = (0, i.useStateFromStores)([s.default, o.default], () => {
@@ -38,7 +38,7 @@ function p(e) {
   }
 }
 
-function _() {
+function p() {
   var e;
   let t = function(e) {
       let t = a.default.getCurrentUser(),
@@ -61,9 +61,9 @@ function _() {
     } = (0, f.getGuildAlertModeEnabled)(null != t ? t : E.ZERO_STRING_GUILD_ID),
     i = null !== (e = l.default.getGuildsProto()) && void 0 !== e ? e : {},
     o = null != t ? i[t] : null,
-    p = null != o && o.disableRaidAlertNag;
+    _ = null != o && o.disableRaidAlertNag;
   return {
-    show: null != t && n && !p,
+    show: null != t && n && !_,
     guildId: t
   }
 }

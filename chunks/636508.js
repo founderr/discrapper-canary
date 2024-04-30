@@ -9,9 +9,9 @@ n.r(t), n.d(t, {
 });
 var s = n("470079"),
   i = n("442837"),
-  a = n("592125"),
-  l = n("944486"),
-  u = n("914010"),
+  u = n("592125"),
+  a = n("944486"),
+  l = n("914010"),
   r = n("771845");
 
 function c() {
@@ -20,9 +20,9 @@ function c() {
     allowGdmActivityChannelSuggestion: t
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
     allowGdmActivityChannelSuggestion: !1
-  }, n = l.default.getVoiceChannelId(), s = a.default.getChannel(n);
+  }, n = a.default.getVoiceChannelId(), s = u.default.getChannel(n);
   if (null != s && null != s.guild_id) return s.guild_id;
-  if (null == s || !t) return null !== (e = u.default.getLastSelectedGuildId()) && void 0 !== e ? e : r.default.getFlattenedGuildIds()[0]
+  if (null == s || !t) return null !== (e = l.default.getLastSelectedGuildId()) && void 0 !== e ? e : r.default.getFlattenedGuildIds()[0]
 }
 
 function o() {

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   ActivityDirectoryFooter: function() {
-    return D
+    return y
   },
   default: function() {
     return j
@@ -40,15 +40,15 @@ function j(e) {
     onClose: r,
     onActivityItemVisible: o,
     scrollerRef: S
-  } = e, [j, D] = a.useState(0), y = (0, E.default)({
+  } = e, [j, y] = a.useState(0), D = (0, E.default)({
     guildId: l,
     enableFilter: !0,
     channel: t
   }), M = (0, d.useStateFromStores)([h.default], () => h.default.getCurrentUser()), L = (0, d.useStateFromStores)([f.default], () => f.default.getGuild(l), [l]), {
     analyticsLocations: V
   } = (0, v.default)(u.default.ACTIVITY_DIRECTORY), R = (0, T.default)(null == t ? void 0 : t.id), {
-    isDeveloperActivityShelfEnabled: b,
-    filter: O
+    isDeveloperActivityShelfEnabled: O,
+    filter: b
   } = (0, d.useStateFromStoresObject)([I.default], () => ({
     filter: I.default.getFilter(),
     isDeveloperActivityShelfEnabled: I.default.getIsEnabled()
@@ -61,7 +61,7 @@ function j(e) {
 
       function t() {
         var e, t;
-        D(null !== (t = null === (e = S.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
+        y(null !== (t = null === (e = S.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
       }
     }, [S]), a.useEffect(() => {
       (R || null != l) && (0, m.fetchShelf)({
@@ -69,7 +69,7 @@ function j(e) {
         force: !0
       })
     }, [l, R]), (0, C.useFetchDeveloperActivityShelfItems)(), null == L && !R || null == M) return null;
-  let H = y.length > 0;
+  let H = D.length > 0;
   return (0, i.jsx)(v.AnalyticsLocationProvider, {
     value: V,
     children: (0, i.jsxs)("div", {
@@ -85,7 +85,7 @@ function j(e) {
             height: (e => {
               let t = 1 === e.length;
               return _ + Math.ceil(e.length / 2) * (t ? N : g)
-            })(y)
+            })(D)
           }
         })
       }) : null, (0, i.jsx)(c.Scroller, {
@@ -95,8 +95,8 @@ function j(e) {
           className: A.scrollSection,
           children: (0, i.jsx)("div", {
             className: s()(A.shelf),
-            children: y.map(e => (0, i.jsx)(x.default, {
-              large: 1 === y.length,
+            children: D.map(e => (0, i.jsx)(x.default, {
+              large: 1 === D.length,
               activityItem: e,
               channel: t,
               guildId: l,
@@ -108,11 +108,11 @@ function j(e) {
               }
             }, "activity-shelf-item-".concat(e.application.id)))
           })
-        }) : b && O.length > 0 ? (0, i.jsx)(c.Text, {
+        }) : O && b.length > 0 ? (0, i.jsx)(c.Text, {
           variant: "text-md/normal",
           className: A.filterError,
           children: p.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({
-            filter: O
+            filter: b
           })
         }) : (0, i.jsx)("div", {
           className: A.spinnerContainer,
@@ -123,7 +123,7 @@ function j(e) {
   })
 }
 
-function D() {
+function y() {
   return (0, i.jsx)(c.Text, {
     variant: "text-sm/normal",
     children: p.default.Messages.EMBEDDED_ACTIVITIES_FEEDBACK_SURVEY.format({

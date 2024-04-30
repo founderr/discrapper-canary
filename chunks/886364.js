@@ -1,27 +1,27 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
+a.r(t);
+var n = a("735250");
+a("470079");
 t.default = e => {
   let {
     id: t,
-    startColor: n,
+    startColor: a,
     stopColor: s,
     color: l,
     stop: i
   } = e;
-  return (0, a.jsxs)("linearGradient", {
+  return (0, n.jsxs)("linearGradient", {
     id: t,
-    children: [(0, a.jsx)("stop", {
+    children: [(0, n.jsx)("stop", {
       offset: "0",
-      stopColor: n
-    }), (0, a.jsx)("stop", {
+      stopColor: a
+    }), (0, n.jsx)("stop", {
       offset: i,
       stopColor: s
-    }), (0, a.jsx)("stop", {
+    }), (0, n.jsx)("stop", {
       offset: i,
       stopColor: l
-    }), (0, a.jsx)("stop", {
+    }), (0, n.jsx)("stop", {
       offset: "1",
       stopColor: l
     })]

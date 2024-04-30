@@ -16,15 +16,15 @@ var l = s("735250"),
   f = s("761174"),
   S = s("706454"),
   m = s("246946"),
-  v = s("785717"),
-  I = s("648067"),
+  I = s("785717"),
+  v = s("648067"),
   E = s("588822"),
   x = s("81334"),
-  A = s("652853"),
-  _ = s("335191"),
-  T = s("347949"),
-  N = s("988246"),
-  U = s("689938"),
+  _ = s("652853"),
+  A = s("335191"),
+  U = s("347949"),
+  T = s("988246"),
+  N = s("689938"),
   C = s("175839");
 
 function g(e) {
@@ -36,18 +36,18 @@ function g(e) {
     scrollToConnections: h = !1
   } = e, {
     trackUserProfileAction: p
-  } = (0, v.useUserProfileAnalyticsContext)(), j = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
-    theme: R
-  } = (0, A.useUserProfileThemeContext)(), P = (0, r.useStateFromStores)([S.default], () => S.default.locale), M = (0, d.useIsInUserClanExperiment)(), y = (0, f.useIsUserRecentGamesEnabled)({
+  } = (0, I.useUserProfileAnalyticsContext)(), R = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
+    theme: j
+  } = (0, _.useUserProfileThemeContext)(), P = (0, r.useStateFromStores)([S.default], () => S.default.locale), M = (0, d.useIsInUserClanExperiment)(), y = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
-  }), O = (0, I.default)(s.id), L = a.useRef(null);
+  }), O = (0, v.default)(s.id), L = a.useRef(null);
   return (a.useLayoutEffect(() => {
     if (h) {
       var e;
       null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [h]), j) ? (0, l.jsx)(N.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
+  }, [h]), R) ? (0, l.jsx)(T.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: C.infoScroller,
     children: [(0, l.jsxs)("div", {
@@ -56,7 +56,7 @@ function g(e) {
         children: [(0, l.jsx)(o.Heading, {
           variant: "eyebrow",
           className: C.userInfoSectionHeader,
-          children: U.default.Messages.USER_PROFILE_ABOUT_ME
+          children: N.default.Messages.USER_PROFILE_ABOUT_ME
         }), (0, l.jsx)(E.default, {
           className: C.userInfoText,
           userBio: null !== (t = null == i ? void 0 : i.bio) && void 0 !== t ? t : ""
@@ -73,14 +73,14 @@ function g(e) {
             userId: s.id
           })
         })
-      }), y && (0, l.jsx)(T.UserProfileRecentGamesContainer, {
+      }), y && (0, l.jsx)(U.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
         containerClassName: n()(C.userInfoText, C.recentGames)
       }), (0, l.jsx)(o.Heading, {
         variant: "eyebrow",
         className: C.userInfoSectionHeader,
-        children: U.default.Messages.NOTE
+        children: N.default.Messages.NOTE
       }), (0, l.jsx)(u.default, {
         userId: s.id,
         autoFocus: g,
@@ -89,10 +89,10 @@ function g(e) {
           action: "SET_NOTE"
         })
       })]
-    }), (0, l.jsx)(_.ConnectedUserAccounts, {
+    }), (0, l.jsx)(A.ConnectedUserAccounts, {
       ref: L,
       connectedAccounts: O,
-      theme: R,
+      theme: j,
       locale: P,
       className: C.userInfoSection,
       userId: s.id

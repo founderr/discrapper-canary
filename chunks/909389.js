@@ -1,14 +1,14 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("35148"),
-  l = n("266685"),
-  i = n("212169");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("35148"),
+  l = a("266685"),
+  i = a("212169");
 t.default = function(e) {
   let {
     expandedContentRef: t,
-    expansionSpring: n,
+    expansionSpring: a,
     isExpanded: r,
     isExpansionAnimationComplete: o,
     onCtxMenuOpened: u,
@@ -17,15 +17,15 @@ t.default = function(e) {
     quest: f,
     useReducedMotion: E
   } = e;
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(s.default, {
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(s.default, {
       className: i.content,
-      expansionSpring: n,
+      expansionSpring: a,
       isExpanded: r,
       isExpansionAnimationComplete: o,
       quest: f,
       useReducedMotion: E
-    }), (0, a.jsx)(l.default, {
+    }), (0, n.jsx)(l.default, {
       className: i.content,
       onCtxMenuOpen: u,
       onCtxMenuClose: d,

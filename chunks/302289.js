@@ -1,34 +1,34 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("785681"),
-  i = n("130310"),
-  r = n("689938"),
-  o = n("160526"),
-  u = n("128216");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("481060"),
+  l = a("785681"),
+  i = a("130310"),
+  r = a("689938"),
+  o = a("160526"),
+  u = a("128216");
 t.default = () => {
   let e = (0, l.useAgeSpecificText)(r.default.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_TEEN, r.default.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_PARENT);
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: o.container,
-    children: [(0, a.jsxs)("div", {
+    children: [(0, n.jsxs)("div", {
       className: o.__invalid_content,
-      children: [(0, a.jsx)(s.Heading, {
+      children: [(0, n.jsx)(s.Heading, {
         className: o.header,
         variant: "heading-md/bold",
-        children: (0, a.jsx)(s.HeadingLevel, {
+        children: (0, n.jsx)(s.HeadingLevel, {
           children: r.default.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_HEADER
         })
-      }), (0, a.jsx)(s.Text, {
+      }), (0, n.jsx)(s.Text, {
         className: o.description,
         variant: "text-sm/medium",
         color: "text-muted",
         children: e
-      }), (0, a.jsx)(i.default, {})]
-    }), (0, a.jsx)("div", {
+      }), (0, n.jsx)(i.default, {})]
+    }), (0, n.jsx)("div", {
       className: o.artContainer,
-      children: (0, a.jsx)("img", {
+      children: (0, n.jsx)("img", {
         src: u,
         alt: r.default.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_ALT
       })

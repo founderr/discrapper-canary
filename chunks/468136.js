@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("544891"),
-  s = n("626135"),
-  l = n("186901"),
-  i = n("981631");
+a.r(t), a("47120");
+var n = a("544891"),
+  s = a("626135"),
+  l = a("186901"),
+  i = a("981631");
 t.default = {
   [i.RPCCommands.GET_NETWORKING_CONFIG]: {
     scope: l.RPC_LOCAL_SCOPE,
-    handler: () => Promise.all([a.HTTP.get({
+    handler: () => Promise.all([n.HTTP.get({
       url: location.protocol + window.GLOBAL_ENV.NETWORKING_ENDPOINT,
       retries: 3
     }).then(e => {
@@ -17,7 +17,7 @@ t.default = {
         }
       } = e;
       return t
-    }), a.HTTP.post({
+    }), n.HTTP.post({
       url: i.Endpoints.NETWORKING_TOKEN,
       retries: 3,
       oldFormErrors: !0
@@ -29,10 +29,10 @@ t.default = {
       } = e;
       return t
     })]).then(e => {
-      let [t, n] = e;
+      let [t, a] = e;
       return {
         address: t,
-        token: n
+        token: a
       }
     })
   },
@@ -41,9 +41,9 @@ t.default = {
     handler(e) {
       let {
         socket: t,
-        args: n
+        args: a
       } = e;
-      n.application_id = t.application.id, s.default.track(i.AnalyticEvents.NETWORKING_SYSTEM_METRICS, n)
+      a.application_id = t.application.id, s.default.track(i.AnalyticEvents.NETWORKING_SYSTEM_METRICS, a)
     }
   },
   [i.RPCCommands.NETWORKING_PEER_METRICS]: {
@@ -51,14 +51,14 @@ t.default = {
     handler(e) {
       let {
         socket: t,
-        args: n
+        args: a
       } = e;
-      n.application_id = t.application.id, s.default.track(i.AnalyticEvents.NETWORKING_PEER_METRICS, n)
+      a.application_id = t.application.id, s.default.track(i.AnalyticEvents.NETWORKING_PEER_METRICS, a)
     }
   },
   [i.RPCCommands.NETWORKING_CREATE_TOKEN]: {
     scope: l.RPC_LOCAL_SCOPE,
-    handler: () => a.HTTP.post({
+    handler: () => n.HTTP.post({
       url: i.Endpoints.NETWORKING_TOKEN,
       retries: 1,
       oldFormErrors: !0

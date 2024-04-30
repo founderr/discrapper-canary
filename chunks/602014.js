@@ -1,19 +1,19 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("718017"),
-  i = n("620929"),
-  r = n("308083"),
-  o = n("156610");
+a.r(t);
+var n = a("735250"),
+  s = a("470079"),
+  l = a("718017"),
+  i = a("620929"),
+  r = a("308083"),
+  o = a("156610");
 t.default = e => {
   let {
     guildId: t,
-    setPage: n
+    setPage: a
   } = e, u = s.useRef(null), d = s.useRef(null), c = s.useRef(null), f = s.useRef(null);
   s.useEffect(() => {
     setTimeout(() => {
-      n(r.ClanSetupModalPages.SETUP)
+      a(r.ClanSetupModalPages.SETUP)
     }, 2e3)
   });
   let E = (0, l.useSpring)({
@@ -56,17 +56,17 @@ t.default = e => {
         flex: 1
       }
     });
-  return (0, l.useChain)([u, d, c, f], [0, 0, .7, 1], 1200), (0, a.jsxs)("div", {
+  return (0, l.useChain)([u, d, c, f], [0, 0, .7, 1], 1200), (0, n.jsxs)("div", {
     className: o.animationContainer,
-    children: [(0, a.jsx)(l.animated.div, {
+    children: [(0, n.jsx)(l.animated.div, {
       style: C
-    }), (0, a.jsx)(l.animated.div, {
+    }), (0, n.jsx)(l.animated.div, {
       className: o.scrollContainer,
       style: {
         ...E,
         ...h
       },
-      children: (0, a.jsx)(i.default, {
+      children: (0, n.jsx)(i.default, {
         guildId: t,
         animatedTextStyle: _
       })

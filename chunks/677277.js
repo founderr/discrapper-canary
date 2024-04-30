@@ -1,20 +1,20 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("206017"),
-  l = n("360048"),
-  i = n("731455"),
-  r = n("689938"),
-  o = n("318020");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("206017"),
+  l = a("360048"),
+  i = a("731455"),
+  r = a("689938"),
+  o = a("318020");
 t.default = e => {
   let {
     handleCategorySelect: t,
-    shouldDisplaySelectedCategory: n,
+    shouldDisplaySelectedCategory: a,
     currentCategoryId: u
   } = e;
-  return (0, a.jsx)(l.default, {
-    avatar: (0, a.jsx)(s.default, {}),
+  return (0, n.jsx)(l.default, {
+    avatar: (0, n.jsx)(s.default, {}),
     name: r.default.Messages.HUB_SCHOOL_HUBS,
     focusProps: {
       offset: {
@@ -27,7 +27,7 @@ t.default = e => {
       t(i.DISCORD_HUB_ID)
     },
     wrapContent: !0,
-    selected: n && i.DISCORD_HUB_ID === u,
+    selected: a && i.DISCORD_HUB_ID === u,
     className: o.categoryItem,
     selectedClassName: o.selectedCategoryItem,
     innerClassName: o.itemInner

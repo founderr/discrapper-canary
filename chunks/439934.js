@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return b
+    return O
   }
 }), l("47120");
 var i = l("735250"),
@@ -29,8 +29,8 @@ var i = l("735250"),
   g = l("182906"),
   N = l("556505"),
   j = l("513202"),
-  D = l("823531"),
-  y = l("689938"),
+  y = l("823531"),
+  D = l("689938"),
   M = l("955850"),
   L = l("969728");
 
@@ -79,10 +79,10 @@ function R(e) {
     children: [(0, i.jsx)(d.Text, {
       className: M.usersArePlayingText,
       variant: "text-xs/normal",
-      children: o.length > 1 ? y.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+      children: o.length > 1 ? D.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
         username: c,
         count: o.length - 1
-      }) : y.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
+      }) : D.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
         username: c
       })
     }), (0, i.jsx)(m.default, {
@@ -94,7 +94,7 @@ function R(e) {
   })
 }
 
-function b(e) {
+function O(e) {
   var t;
   let {
     activityItem: l,
@@ -105,8 +105,8 @@ function b(e) {
     onActivityItemSelected: T,
     large: x = !1
   } = e, {
-    imageBackground: b,
-    videoUrl: O,
+    imageBackground: O,
+    videoUrl: b,
     activityAction: H,
     joinableEmbeddedApp: F,
     onActivityItemSelected: B,
@@ -124,12 +124,12 @@ function b(e) {
     application: P
   } = l, G = a.useCallback(e => e && (null == C ? void 0 : C({
     applicationId: l.application.id
-  })), [l.application.id, C]), U = (0, c.useIsVisible)(G, .8, !0), [W, Z] = a.useState(!1), [z, q] = a.useState(W);
+  })), [l.application.id, C]), U = (0, c.useIsVisible)(G, .8, !0), [Z, W] = a.useState(!1), [z, q] = a.useState(Z);
   a.useEffect(() => {
-    W && q(!0)
-  }, [W]);
-  let J = () => Z(!0),
-    K = () => Z(!1),
+    Z && q(!0)
+  }, [Z]);
+  let J = () => W(!0),
+    K = () => W(!1),
     X = v.DeveloperMode.useSetting(),
     Q = a.useCallback(() => {
       null == B || B(), u.default.maybeQueryForInstallLessApps(P.id, null == n ? void 0 : n.id)
@@ -137,7 +137,7 @@ function b(e) {
   return (0, i.jsxs)(d.Clickable, {
     onClick: H === A.ActivityAction.START ? Q : void 0,
     onContextMenu: X ? e => {
-      (0, o.openContextMenu)(e, e => (0, i.jsx)(D.default, {
+      (0, o.openContextMenu)(e, e => (0, i.jsx)(y.default, {
         application: P,
         ...e
       }))
@@ -156,20 +156,20 @@ function b(e) {
       onMouseLeave: K,
       onBlur: K,
       children: [(0, i.jsx)(g.default, {
-        imageBackground: b,
+        imageBackground: O,
         applicationName: P.name,
         imageClassName: s()(M.activityImage, {
           [M.large]: !0 === x
         }),
         imageNotFoundClassName: M.brokenImageIconWrapper
-      }), null != O && z && H === A.ActivityAction.START ? (0, i.jsx)("div", {
+      }), null != b && z && H === A.ActivityAction.START ? (0, i.jsx)("div", {
         className: s()(M.activityVideo, {
-          [M.videoFadeOut]: !W
+          [M.videoFadeOut]: !Z
         }),
-        onAnimationEnd: () => W ? null : q(!1),
+        onAnimationEnd: () => Z ? null : q(!1),
         children: (0, i.jsx)(E.default, {
           className: M.activityVideo,
-          src: O,
+          src: b,
           loop: !0,
           autoPlay: !0,
           muted: !0
@@ -187,7 +187,7 @@ function b(e) {
           })
         })
       }), k ? (0, i.jsx)(d.Tooltip, {
-        text: y.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
+        text: D.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
         children: e => (0, i.jsx)("div", {
           className: M.devShelfBadge,
           ...e,

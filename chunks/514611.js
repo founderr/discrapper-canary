@@ -1,44 +1,44 @@
 "use strict";
-n.r(t), n("47120");
-var a, s = n("735250"),
-  l = n("470079"),
-  i = n("120356"),
-  r = n.n(i),
-  o = n("622535"),
-  u = n("481060"),
-  d = n("239091"),
-  c = n("556017"),
-  f = n("879484"),
-  E = n("26580"),
-  h = n("206887"),
-  _ = n("134432"),
-  C = n("695346"),
-  m = n("768581"),
-  S = n("900849"),
-  p = n("940627"),
-  I = n("806519"),
-  g = n("981631"),
-  T = n("689938"),
-  A = n("218290"),
-  N = n("129512"),
-  v = n("330065"),
-  L = n("755386");
+a.r(t), a("47120");
+var n, s = a("735250"),
+  l = a("470079"),
+  i = a("120356"),
+  r = a.n(i),
+  o = a("622535"),
+  u = a("481060"),
+  d = a("239091"),
+  c = a("556017"),
+  f = a("879484"),
+  E = a("26580"),
+  h = a("206887"),
+  _ = a("134432"),
+  C = a("695346"),
+  m = a("768581"),
+  S = a("900849"),
+  p = a("940627"),
+  I = a("806519"),
+  T = a("981631"),
+  g = a("689938"),
+  A = a("218290"),
+  N = a("129512"),
+  v = a("330065"),
+  L = a("755386");
 
-function R(e, t, n) {
+function R(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
-class O extends(a = l.PureComponent) {
+class O extends(n = l.PureComponent) {
   getDefaultSplashURL(e, t) {
     if (t) return L;
     switch (e) {
-      case g.ThemeTypes.DARK:
+      case T.ThemeTypes.DARK:
         return N;
-      case g.ThemeTypes.LIGHT:
+      case T.ThemeTypes.LIGHT:
         return v
     }
   }
@@ -46,8 +46,8 @@ class O extends(a = l.PureComponent) {
     var e;
     let {
       guild: t,
-      className: n,
-      theme: a,
+      className: a,
+      theme: n,
       onTagClick: l
     } = this.props, {
       loaded: i,
@@ -60,11 +60,11 @@ class O extends(a = l.PureComponent) {
       presenceCount: O,
       memberCount: M,
       keywords: P
-    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(g.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
+    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), D = null != x ? x : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
+    }), D = null != x ? x : this.getDefaultSplashURL(n, y), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -98,7 +98,7 @@ class O extends(a = l.PureComponent) {
         active: !d,
         threshold: .55,
         children: (0, s.jsxs)("div", {
-          className: r()(n, {
+          className: r()(a, {
             [A.loaded]: i,
             [A.loading]: !i
           }),
@@ -184,7 +184,7 @@ class O extends(a = l.PureComponent) {
                   }), (0, s.jsx)(u.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                    children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                       membersOnline: O
                     })
                   })]
@@ -195,7 +195,7 @@ class O extends(a = l.PureComponent) {
                   }), (0, s.jsx)(u.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                    children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                       count: M
                     })
                   })]
@@ -223,14 +223,14 @@ class O extends(a = l.PureComponent) {
       } = e.target;
       if (t.includes("Menu")) return;
       let {
-        onView: n,
-        guild: a
+        onView: a,
+        guild: n
       } = this.props;
       e.stopPropagation(), this.setState({
         submitting: !0
       });
       try {
-        null != n && await n(a.id)
+        null != a && await a(n.id)
       } finally {
         this.setState({
           submitting: !1
@@ -239,16 +239,16 @@ class O extends(a = l.PureComponent) {
     }), R(this, "handleVisibilityChange", e => {
       let {
         onGuildCardSeen: t,
-        guild: n
+        guild: a
       } = this.props;
-      null != n && !this.state.hasBeenSeen && e && (this.setState({
+      null != a && !this.state.hasBeenSeen && e && (this.setState({
         hasBeenSeen: e
-      }), null != t && t(n.id))
+      }), null != t && t(a.id))
     }), R(this, "handleContextMenu", e => {
       (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.resolve().then(n.bind(n, "455839"));
+        } = await Promise.resolve().then(a.bind(a, "455839"));
         return t => (0, s.jsx)(e, {
           ...t,
           guild: this.props.guild

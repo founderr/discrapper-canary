@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useIsDmSpamFilterCoachmarkEnabled: function() {
     return s
   }
 });
-let a = (0, n("818083").createExperiment)({
+let n = (0, a("818083").createExperiment)({
   kind: "user",
   id: "2023-04_dm_spam_filter_coachmark",
   label: "Safety DM Spam Filter Coachmark rollout",
@@ -21,7 +21,7 @@ let a = (0, n("818083").createExperiment)({
 });
 
 function s() {
-  return a.useExperiment({
+  return n.useExperiment({
     location: "acbeda_1"
   }, {
     autoTrackExposure: !1

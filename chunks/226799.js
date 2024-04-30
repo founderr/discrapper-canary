@@ -6,29 +6,29 @@ n.r(t), n.d(t, {
 });
 var s = n("701488"),
   i = n("114954"),
-  a = n("956089"),
-  l = n("407407"),
-  u = n("942006"),
+  u = n("956089"),
+  a = n("407407"),
+  l = n("942006"),
   r = n("836479"),
   c = n("779337"),
   o = n("694111"),
   g = n("442405"),
-  d = n("974379"),
-  p = n("873444"),
+  p = n("974379"),
+  d = n("873444"),
   f = n("216989"),
   m = n("188225"),
   I = n("337664"),
   S = n("585681"),
   x = n("288021"),
   h = n("114089"),
-  v = n("8361"),
-  _ = n("655297"),
+  _ = n("8361"),
+  v = n("655297"),
   y = n("616297"),
   A = n("213860"),
   M = n("747604"),
-  j = n("237931"),
+  b = n("237931"),
   C = n("992910"),
-  b = n("652120"),
+  j = n("652120"),
   P = n("824046"),
   N = n("943615"),
   L = n("669001"),
@@ -79,13 +79,13 @@ let G = {
     playersSuggestionMin: 3,
     playersSuggestionMax: 8,
     timeSuggestionMinutes: 10,
-    gameplayImageUrls: [_, y]
+    gameplayImageUrls: [v, y]
   },
   [s.BOBBLE_LEAGUE_APPLICATION_ID]: {
     playersSuggestionMin: 2,
     playersSuggestionMax: 8,
     timeSuggestionMinutes: 15,
-    gameplayImageUrls: [l, u]
+    gameplayImageUrls: [a, l]
   },
   [s.CHECKERS_IN_THE_PARK_APP_ID]: {
     playersSuggestionMin: 2,
@@ -97,25 +97,25 @@ let G = {
     playersSuggestionMin: 2,
     playersSuggestionMax: 16,
     timeSuggestionMinutes: 15,
-    gameplayImageUrls: [d, p]
+    gameplayImageUrls: [p, d]
   },
   [s.BLAZIN_8S_APPLICATION_ID]: {
     playersSuggestionMin: 2,
     playersSuggestionMax: 5,
     timeSuggestionMinutes: 5,
-    gameplayImageUrls: [i, a]
+    gameplayImageUrls: [i, u]
   },
   [s.POKER_NIGHT_APPLICATION_ID]: {
     playersSuggestionMin: 1,
     playersSuggestionMax: 7,
     timeSuggestionMinutes: 15,
-    gameplayImageUrls: [b, P]
+    gameplayImageUrls: [j, P]
   },
   [s.BYS_LETTER_APP_ID]: {
     playersSuggestionMin: 2,
     playersSuggestionMax: 8,
     timeSuggestionMinutes: 15,
-    gameplayImageUrls: [j, C]
+    gameplayImageUrls: [b, C]
   },
   [s.BYS_TWOODLE_APP_ID]: {
     playersSuggestionMin: 2,
@@ -136,6 +136,6 @@ let G = {
     gameplayImageUrls: [N, L]
   },
   [s.KRUNKER_STRIKE_APPLICATION_ID]: {
-    gameplayImageUrls: [x, h, v]
+    gameplayImageUrls: [x, h, _]
   }
 }

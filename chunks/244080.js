@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return s
   }
 });
-var a = n("380349");
+var n = a("380349");
 
 function s(e) {
   let {
     currentActivities: t,
-    isSpotifyActivity: n
-  } = e, s = t[0], l = (0, a.default)(null == s ? void 0 : s.activity, null == s ? void 0 : s.activityUser);
-  return n ? l : null
+    isSpotifyActivity: a
+  } = e, s = t[0], l = (0, n.default)(null == s ? void 0 : s.activity, null == s ? void 0 : s.activityUser);
+  return a ? l : null
 }

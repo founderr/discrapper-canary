@@ -1,38 +1,38 @@
 "use strict";
-let a;
-n.r(t);
-var s, l = n("442837"),
-  i = n("570140"),
-  r = n("133080");
+let n;
+a.r(t);
+var s, l = a("442837"),
+  i = a("570140"),
+  r = a("133080");
 
-function o(e, t, n) {
+function o(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
 let u = (0, r.getDefaultCountryCode)();
 
 function d(e) {
   var t;
   let {
-    countryCode: n
+    countryCode: a
   } = e;
-  null != n && (u = null !== (t = (0, r.getCountryCodeByAlpha2)(n)) && void 0 !== t ? t : (0, r.getDefaultCountryCode)())
+  null != a && (u = null !== (t = (0, r.getCountryCodeByAlpha2)(a)) && void 0 !== t ? t : (0, r.getDefaultCountryCode)())
 }
 class c extends(s = l.default.DeviceSettingsStore) {
   initialize(e) {
-    null != e && (a = e.selectedCountryCode)
+    null != e && (n = e.selectedCountryCode)
   }
   getUserAgnosticState() {
     return {
-      selectedCountryCode: a
+      selectedCountryCode: n
     }
   }
   getCountryCode() {
-    return null != a ? a : u
+    return null != n ? n : u
   }
 }
 o(c, "displayName", "PhoneStore"), o(c, "persistKey", "PhoneStore"), t.default = new c(i.default, {
@@ -40,7 +40,7 @@ o(c, "displayName", "PhoneStore"), o(c, "persistKey", "PhoneStore"), t.default =
     let {
       countryCode: t
     } = e;
-    a = t
+    n = t
   },
   CONNECTION_OPEN: d,
   SET_LOCATION_METADATA: d

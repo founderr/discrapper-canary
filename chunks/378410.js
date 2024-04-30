@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("710845"),
-  s = n("914946"),
-  l = n("452426"),
-  i = n("981631");
-let r = new a.default(i.RPC_APPLICATION_LOGGING_CATEGORY);
+a.r(t), a("47120");
+var n = a("710845"),
+  s = a("914946"),
+  l = a("452426"),
+  i = a("981631");
+let r = new n.default(i.RPC_APPLICATION_LOGGING_CATEGORY);
 t.default = {
   [i.RPCCommands.CAPTURE_LOG]: {
     validation: e => (0, l.default)(e).required().keys({
@@ -15,14 +15,14 @@ t.default = {
       let {
         socket: t,
         args: {
-          level: n,
-          message: a
+          level: a,
+          message: n
         }
       } = e;
       (0, s.validatePostMessageTransport)(t.transport);
       let l = t.application.id,
-        i = "".concat(l, " - ").concat(a);
-      switch (n) {
+        i = "".concat(l, " - ").concat(n);
+      switch (a) {
         case "log":
           r.log(i);
           break;

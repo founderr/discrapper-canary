@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return d
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("82950"),
-  i = n("981631"),
-  r = n("921944"),
-  o = n("689938"),
-  u = n("524094");
+var n = a("735250");
+a("470079");
+var s = a("481060"),
+  l = a("82950"),
+  i = a("981631"),
+  r = a("921944"),
+  o = a("689938"),
+  u = a("524094");
 
 function d(e) {
   let {
     guild: t,
     markAsDismissed: d
   } = e;
-  return (0, a.jsx)(l.default, {
+  return (0, n.jsx)(l.default, {
     guild: t,
     onDismissed: () => d(r.ContentDismissActionType.UNKNOWN),
     onClick: function() {
       (0, s.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.resolve().then(n.bind(n, "650233"));
-        return t => (0, a.jsx)(e, {
+        } = await Promise.resolve().then(a.bind(a, "650233"));
+        return t => (0, n.jsx)(e, {
           ...t
         })
       })

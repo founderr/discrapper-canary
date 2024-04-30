@@ -1,5 +1,5 @@
 "use strict";
-n.r(i);
+n.r(t);
 var e = n("261168"),
   a = {
     date: (0, e.default)({
@@ -30,4 +30,4 @@ var e = n("261168"),
       defaultWidth: "full"
     })
   };
-i.default = a
+t.default = a

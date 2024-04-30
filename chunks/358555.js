@@ -19,8 +19,8 @@ var i = n("120356"),
   g = n("705600"),
   h = n("267642"),
   E = n("981631"),
-  p = n("689938"),
-  _ = n("612113");
+  _ = n("689938"),
+  p = n("612113");
 
 function m(e) {
   let {
@@ -44,31 +44,31 @@ function m(e) {
         }
       })
     },
-    m = u === E.BoostedGuildTiers.NONE ? p.default.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : h.getTierName(u),
+    m = u === E.BoostedGuildTiers.NONE ? _.default.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : h.getTierName(u),
     C = (0, r.jsxs)(r.Fragment, {
       children: [(0, r.jsx)("div", {
-        className: _.tierTooltipTitle,
+        className: p.tierTooltipTitle,
         children: m
       }), (0, r.jsx)("div", {
-        children: p.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBSCRIBER_COUNT_TOOLTIP.format({
+        children: _.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBSCRIBER_COUNT_TOOLTIP.format({
           subscriberCount: S
         })
       })]
     });
   return (0, r.jsx)("div", {
-    className: _.guildIconContainer,
+    className: p.guildIconContainer,
     children: (0, r.jsx)(o.Tooltip, {
       text: C,
       position: "bottom",
       "aria-label": null != m ? m : "",
       children: e => (0, r.jsx)(o.Clickable, {
         ...e,
-        className: _.__invalid_premiumGuildIcon,
+        className: p.__invalid_premiumGuildIcon,
         onClick: g,
         children: (0, r.jsx)(c.default, {
           premiumTier: u,
-          iconBackgroundClassName: n ? _.boostedGuildTierIconBackgroundWithVisibleBanner : null,
-          iconClassName: n && u !== E.BoostedGuildTiers.TIER_3 ? _.boostedGuildTierMutedIconWithVisibleBanner : null
+          iconBackgroundClassName: n ? p.boostedGuildTierIconBackgroundWithVisibleBanner : null,
+          iconClassName: n && u !== E.BoostedGuildTiers.TIER_3 ? p.boostedGuildTierMutedIconWithVisibleBanner : null
         })
       })
     })
@@ -82,24 +82,24 @@ function C(e) {
     disableBoostClick: i
   } = e;
   return (0, u.default)(t) ? (0, r.jsx)("div", {
-    className: _.guildIconV2Container,
+    className: p.guildIconV2Container,
     children: (0, r.jsx)(g.default, {
       guild: t,
       tooltipPosition: "bottom",
       tooltipColor: o.Tooltip.Colors.PRIMARY,
-      className: l()(_.guildBadge, {
-        [_.disableColor]: n
+      className: l()(p.guildBadge, {
+        [p.disableColor]: n
       }),
       disableBoostClick: i
     })
   }) : (0, r.jsx)("div", {
-    className: _.guildIconContainer,
+    className: p.guildIconContainer,
     children: (0, r.jsx)(S.default, {
       guild: t,
       tooltipPosition: "bottom",
       tooltipColor: o.Tooltip.Colors.PRIMARY,
-      className: l()(_.guildBadge, {
-        [_.disableColor]: n
+      className: l()(p.guildBadge, {
+        [p.disableColor]: n
       })
     })
   })

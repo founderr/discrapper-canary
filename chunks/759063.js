@@ -1,10 +1,10 @@
 "use strict";
-n.r(i);
+n.r(t);
 var e = n("799761"),
   a = {
-    ordinalNumber: function(t, i) {
-      var n, e = String(null == i ? void 0 : i.unit),
-        a = Number(t);
+    ordinalNumber: function(i, t) {
+      var n, e = String(null == t ? void 0 : t.unit),
+        a = Number(i);
       return n = "date" === e ? 3 === a || 23 === a ? "-є" : "-е" : "minute" === e || "second" === e || "hour" === e ? "-а" : "-й", a + n
     },
     era: (0, e.default)({
@@ -22,8 +22,8 @@ var e = n("799761"),
         wide: ["1-й квартал", "2-й квартал", "3-й квартал", "4-й квартал"]
       },
       defaultWidth: "wide",
-      argumentCallback: function(t) {
-        return t - 1
+      argumentCallback: function(i) {
+        return i - 1
       }
     }),
     month: (0, e.default)({
@@ -118,4 +118,4 @@ var e = n("799761"),
       defaultFormattingWidth: "wide"
     })
   };
-i.default = a
+t.default = a

@@ -1,63 +1,63 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("785681"),
-  i = n("841409"),
-  r = n("880257"),
-  o = n("631885"),
-  u = n("568671"),
-  d = n("292352"),
-  c = n("689938"),
-  f = n("874670"),
-  E = n("633488"),
-  h = n("361848");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("481060"),
+  l = a("785681"),
+  i = a("841409"),
+  r = a("880257"),
+  o = a("631885"),
+  u = a("568671"),
+  d = a("292352"),
+  c = a("689938"),
+  f = a("874670"),
+  E = a("633488"),
+  h = a("361848");
 let _ = () => {
   let e = (0, o.useUserForLinkStatus)(d.UserLinkStatus.ACTIVE),
     t = (0, r.default)(),
     {
-      handleTabChange: n
+      handleTabChange: a
     } = (0, i.default)();
-  return (0, o.useHasMaxConnections)() || t && e.length > 0 ? null : (0, a.jsx)("div", {
+  return (0, o.useHasMaxConnections)() || t && e.length > 0 ? null : (0, n.jsx)("div", {
     className: f.button,
-    children: t ? (0, a.jsx)(s.Button, {
+    children: t ? (0, n.jsx)(s.Button, {
       fullWidth: !1,
       size: s.ButtonSizes.LARGE,
-      onClick: () => n(d.FamilyCenterSubPages.REQUESTS),
+      onClick: () => a(d.FamilyCenterSubPages.REQUESTS),
       children: c.default.Messages.GET_STARTED
-    }) : (0, a.jsx)(u.default, {})
+    }) : (0, n.jsx)(u.default, {})
   })
 };
 t.default = () => {
   let e = (0, r.default)(),
     t = (0, l.useAgeSpecificText)(c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_TEEN, c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_PARENT),
-    n = (0, l.useAgeSpecificText)(c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_TEEN.format({
+    a = (0, l.useAgeSpecificText)(c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_TEEN.format({
       articleLink: "https://support.discord.com/hc/articles/14155060633623"
     }), c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_PARENT.format({
       articleLink: "https://support.discord.com/hc/articles/14155043715735"
     }));
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: f.container,
-    children: [(0, a.jsxs)("div", {
-      children: [(0, a.jsx)("div", {
-        children: (0, a.jsxs)("div", {
+    children: [(0, n.jsxs)("div", {
+      children: [(0, n.jsx)("div", {
+        children: (0, n.jsxs)("div", {
           className: f.headerText,
-          children: [(0, a.jsx)(s.Heading, {
+          children: [(0, n.jsx)(s.Heading, {
             variant: "heading-xl/medium",
-            children: (0, a.jsx)(s.HeadingLevel, {
+            children: (0, n.jsx)(s.HeadingLevel, {
               children: t
             })
-          }), (0, a.jsx)(s.Text, {
+          }), (0, n.jsx)(s.Text, {
             variant: "text-sm/medium",
             color: "text-muted",
-            children: n
+            children: a
           })]
         })
-      }), (0, a.jsx)(_, {})]
-    }), (0, a.jsx)("div", {
+      }), (0, n.jsx)(_, {})]
+    }), (0, n.jsx)("div", {
       className: f.headerImage,
-      children: (0, a.jsx)("img", {
+      children: (0, n.jsx)("img", {
         src: e ? E : h,
         alt: c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_IMAGE_ALT
       })

@@ -1,13 +1,13 @@
 "use strict";
-n.r(i);
+n.r(t);
 var e = n("475637"),
   a = n("925300"),
   u = {
     ordinalNumber: (0, a.default)({
       matchPattern: /^(\d+)(-?(е|й|є|а|я))?/i,
       parsePattern: /\d+/i,
-      valueCallback: function(t) {
-        return parseInt(t, 10)
+      valueCallback: function(i) {
+        return parseInt(i, 10)
       }
     }),
     era: (0, e.default)({
@@ -33,8 +33,8 @@ var e = n("475637"),
         any: [/1/i, /2/i, /3/i, /4/i]
       },
       defaultParseWidth: "any",
-      valueCallback: function(t) {
-        return t + 1
+      valueCallback: function(i) {
+        return i + 1
       }
     }),
     month: (0, e.default)({
@@ -86,4 +86,4 @@ var e = n("475637"),
       defaultParseWidth: "any"
     })
   };
-i.default = u
+t.default = u

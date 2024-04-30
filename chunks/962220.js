@@ -1,13 +1,13 @@
 "use strict";
-n.r(t);
-var a = n("39612"),
-  s = n("271579"),
-  l = n("756647"),
-  i = n("625128"),
-  r = n("626135"),
-  o = n("954824"),
-  u = n("751189"),
-  d = n("981631");
+a.r(t);
+var n = a("39612"),
+  s = a("271579"),
+  l = a("756647"),
+  i = a("625128"),
+  r = a("626135"),
+  o = a("954824"),
+  u = a("751189"),
+  d = a("981631");
 let c = "template";
 t.default = {
   ...u.default,
@@ -16,9 +16,9 @@ t.default = {
   },
   openMobileApp(e, t) {
     if (null != platform.ua && platform.ua.toLowerCase().indexOf("googlebot") > -1) return;
-    let n = null != e ? (0, a.getGuildTemplateDynamicLinkTemplate)(e) : (0, a.getDefaultDynamicLinkTemplate)(),
+    let a = null != e ? (0, n.getGuildTemplateDynamicLinkTemplate)(e) : (0, n.getDefaultDynamicLinkTemplate)(),
       i = (0, s.generateAttemptId)(),
-      u = (0, s.default)(n, {
+      u = (0, s.default)(a, {
         utmSource: c,
         fingerprint: t,
         attemptId: i

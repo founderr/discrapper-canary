@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useGuildsEligibleForClanConversion: function() {
     return c
   }
-}), n("47120");
-var a = n("392711"),
-  s = n.n(a),
-  l = n("442837"),
-  i = n("134726"),
-  r = n("430824"),
-  o = n("496675"),
-  u = n("981631"),
-  d = n("231338");
+}), a("47120");
+var n = a("392711"),
+  s = a.n(n),
+  l = a("442837"),
+  i = a("134726"),
+  r = a("430824"),
+  o = a("496675"),
+  u = a("981631"),
+  d = a("231338");
 
 function c() {
   return (0, l.useStateFromStoresArray)([o.default, r.default], () => s()(r.default.getGuilds()).values().filter(e => !e.hasFeature(u.GuildFeatures.CLAN) && o.default.can(d.Permissions.ADMINISTRATOR, e) && i.ClanGuildExperiment.getCurrentConfig({

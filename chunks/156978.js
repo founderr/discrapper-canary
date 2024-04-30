@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return r
   }
 });
-var a = n("735250"),
-  s = n("470079"),
-  l = n("122611"),
-  i = n("235939");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("122611"),
+  i = a("235939");
 
 function r(e) {
   let {
     guild: t,
-    setHasSubheader: n
+    setHasSubheader: a
   } = e, r = s.useRef(null);
   return s.useLayoutEffect(() => {
     let e = r.current;
-    null != e && n(e.childNodes.length > 0)
-  }), (0, a.jsx)("div", {
+    null != e && a(e.childNodes.length > 0)
+  }), (0, n.jsx)("div", {
     className: i.container,
     ref: r,
-    children: (0, a.jsx)(l.default, {
+    children: (0, n.jsx)(l.default, {
       guild: t
     })
   })

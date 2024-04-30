@@ -1,18 +1,18 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("14199"),
-  l = n("780384"),
-  i = n("981631");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("14199"),
+  l = a("780384"),
+  i = a("981631");
 let r = e => {
   let {
     theme: t,
-    ...n
+    ...a
   } = e, r = (0, l.isThemeDark)(t) ? "dark" : "light";
-  return (0, a.jsx)(s.default, {
+  return (0, n.jsx)(s.default, {
     sitekey: i.RECAPTCHA_SITE_KEY,
-    ...n,
+    ...a,
     theme: r
   })
 };

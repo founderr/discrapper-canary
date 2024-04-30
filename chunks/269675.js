@@ -1,81 +1,81 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return M
   }
 });
-var a = n("735250"),
-  s = n("470079"),
-  l = n("873546"),
-  i = n("442837"),
-  r = n("481060"),
-  o = n("355467"),
-  u = n("270237"),
-  d = n("252618"),
-  c = n("423000"),
-  f = n("200876"),
-  E = n("674180"),
-  h = n("38618"),
-  _ = n("984370"),
-  C = n("430824"),
-  m = n("351402"),
-  S = n("730647"),
-  p = n("772021"),
-  I = n("396828"),
-  g = n("475413"),
-  T = n("20967"),
-  A = n("504762"),
-  N = n("807152"),
-  v = n("176505"),
-  L = n("689938"),
-  R = n("55514");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("873546"),
+  i = a("442837"),
+  r = a("481060"),
+  o = a("355467"),
+  u = a("270237"),
+  d = a("252618"),
+  c = a("423000"),
+  f = a("200876"),
+  E = a("674180"),
+  h = a("38618"),
+  _ = a("984370"),
+  C = a("430824"),
+  m = a("351402"),
+  S = a("730647"),
+  p = a("772021"),
+  I = a("396828"),
+  T = a("475413"),
+  g = a("20967"),
+  A = a("504762"),
+  N = a("807152"),
+  v = a("176505"),
+  L = a("689938"),
+  R = a("55514");
 
 function O(e) {
   let {
     guildId: t
-  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), O = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), P = (0, p.default)(t), y = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), x = (0, S.useGroupListingsFetchContext)(), {
+  } = e, a = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), O = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), P = (0, p.default)(t), y = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), x = (0, S.useGroupListingsFetchContext)(), {
     shouldHideGuildPurchaseEntryPoints: D,
     restrictionsLoading: b
-  } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !x || y || b;
+  } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == a || !x || y || b;
   (0, d.usePageTitle)({
     subsection: L.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
-    location: null == n ? void 0 : n.name
+    location: null == a ? void 0 : a.name
   }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
-  let j = O && (null == n || !(M || P) || D && !b);
+  let j = O && (null == a || !(M || P) || D && !b);
   if (s.useEffect(() => {
       o.fetchSubscriptions()
     }, []), s.useEffect(() => {
       j && !l.isMobile && (0, c.handleInaccessiblePage)(t, v.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
     }, [t, j]), l.isMobile && j) {
-    let e = null == n ? T.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : T.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
-    return (0, a.jsx)(T.GuildRoleSubscriptionsOverviewErrorPage, {
+    let e = null == a ? g.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : g.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
+    return (0, n.jsx)(g.GuildRoleSubscriptionsOverviewErrorPage, {
       errorType: e
     })
   }
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: R.container,
-    children: [(0, a.jsxs)(_.default, {
-      toolbar: (0, a.jsx)(s.Fragment, {}),
+    children: [(0, n.jsxs)(_.default, {
+      toolbar: (0, n.jsx)(s.Fragment, {}),
       className: R.headerBar,
-      children: [(0, a.jsx)(_.default.Icon, {
+      children: [(0, n.jsx)(_.default.Icon, {
         icon: I.default,
         "aria-hidden": !0
-      }), (0, a.jsx)(_.default.Title, {
+      }), (0, n.jsx)(_.default.Title, {
         children: L.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
       })]
-    }), (0, a.jsx)("div", {
+    }), (0, n.jsx)("div", {
       id: N.OVERVIEW_NOTICE_ROOT
-    }), (0, a.jsx)("div", {
+    }), (0, n.jsx)("div", {
       className: R.content,
-      children: M ? (0, a.jsx)(r.ScrollerNone, {
+      children: M ? (0, n.jsx)(r.ScrollerNone, {
         className: R.scroller,
-        children: (0, a.jsx)("div", {
+        children: (0, n.jsx)("div", {
           className: R.scrollerContent,
-          children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(g.default, {
-            guild: n
+          children: U ? (0, n.jsx)(r.Spinner, {}) : (0, n.jsx)(T.default, {
+            guild: a
           })
         })
-      }) : (0, a.jsx)(A.default, {})
+      }) : (0, n.jsx)(A.default, {})
     })]
   })
 }
@@ -84,10 +84,10 @@ function M(e) {
   let {
     guildId: t
   } = e;
-  return (0, a.jsx)(S.GroupListingsFetchContextProvider, {
+  return (0, n.jsx)(S.GroupListingsFetchContextProvider, {
     guildId: t,
     refetchOnMount: !0,
-    children: (0, a.jsx)(O, {
+    children: (0, n.jsx)(O, {
       guildId: t
     })
   })

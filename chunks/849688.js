@@ -1,19 +1,19 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
-  r = n("25752"),
-  o = n("481060"),
-  u = n("442837"),
-  d = n("465670"),
-  c = n("792125"),
-  f = n("547280"),
-  E = n("678513"),
-  h = n("981631"),
-  _ = n("689938"),
-  C = n("816109");
+a.r(t);
+var n = a("735250"),
+  s = a("470079"),
+  l = a("120356"),
+  i = a.n(l),
+  r = a("25752"),
+  o = a("481060"),
+  u = a("442837"),
+  d = a("465670"),
+  c = a("792125"),
+  f = a("547280"),
+  E = a("678513"),
+  h = a("981631"),
+  _ = a("689938"),
+  C = a("816109");
 let m = (0, c.getThemeClass)(h.ThemeTypes.DARK);
 t.default = function(e) {
   let {
@@ -22,9 +22,9 @@ t.default = function(e) {
     null != l && (0, o.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("22862")]).then(n.bind(n, "646202"));
-      return n => (0, a.jsx)(e, {
-        ...n,
+      } = await Promise.all([a.e("99387"), a.e("22862")]).then(a.bind(a, "646202"));
+      return a => (0, n.jsx)(e, {
+        ...a,
         target: l,
         guildId: t.id
       })
@@ -34,43 +34,43 @@ t.default = function(e) {
   }, [l]);
   if (null == l) return null;
   let p = "url(".concat(l.backgroundAssetUrl, ") black top / cover no-repeat");
-  return (0, a.jsx)(o.ThemeContextProvider, {
+  return (0, n.jsx)(o.ThemeContextProvider, {
     theme: h.ThemeTypes.DARK,
-    children: (0, a.jsx)("div", {
+    children: (0, n.jsx)("div", {
       className: i()(C.container, m),
-      children: (0, a.jsxs)("div", {
+      children: (0, n.jsxs)("div", {
         className: C.card,
         style: {
           background: p
         },
-        children: [(0, a.jsxs)("div", {
+        children: [(0, n.jsxs)("div", {
           className: C.eyebrow,
-          children: [(0, a.jsx)(r.EnvelopeIcon, {
+          children: [(0, n.jsx)(r.EnvelopeIcon, {
             height: 12,
             width: 12,
             color: "currentColor"
-          }), (0, a.jsx)(o.Text, {
+          }), (0, n.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "none",
             children: _.default.Messages.SIGNUP_NOTICE_EYEBROW
           })]
-        }), (0, a.jsx)(o.Heading, {
+        }), (0, n.jsx)(o.Heading, {
           variant: "heading-sm/medium",
           children: l.noticeHeader
-        }), (0, a.jsx)(o.Button, {
+        }), (0, n.jsx)(o.Button, {
           className: C.button,
           color: "none",
           onClick: c,
-          children: (0, a.jsx)(o.Text, {
+          children: (0, n.jsx)(o.Text, {
             variant: "text-sm/medium",
             color: "none",
             children: _.default.Messages.SIGNUP_NOTICE_CTA
           })
-        }), (0, a.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: C.dismiss,
-          children: (0, a.jsx)(o.Clickable, {
+          children: (0, n.jsx)(o.Clickable, {
             onClick: S,
-            children: (0, a.jsx)(d.default, {
+            children: (0, n.jsx)(d.default, {
               height: 16,
               width: 16,
               color: "currentColor"

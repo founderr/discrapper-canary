@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n("653041");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("481060"),
-  i = n("570140"),
-  r = n("906732"),
-  o = n("451603"),
-  u = n("885714"),
-  d = n("514611"),
-  c = n("127541"),
-  f = n("981631"),
-  E = n("701367");
+a.r(t), a("653041");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("481060"),
+  i = a("570140"),
+  r = a("906732"),
+  o = a("451603"),
+  u = a("885714"),
+  d = a("514611"),
+  c = a("127541"),
+  f = a("981631"),
+  E = a("701367");
 let h = [
     [1696, 20],
     [1432, 16],
@@ -25,21 +25,21 @@ let h = [
   ];
 t.default = e => {
   let t, {
-    title: n,
+    title: a,
     subtitle: C,
     guildsData: m,
     analyticsContext: S,
     theme: p,
     onViewGuild: I,
-    fetchGuilds: g,
-    onGuildCardSeen: T,
+    fetchGuilds: T,
+    onGuildCardSeen: g,
     currentCategoryId: A,
     loadId: N,
     onTagClick: v,
     showMoreCards: L = !1
   } = e;
   s.useEffect(() => {
-    i.default.wait(() => g())
+    i.default.wait(() => T())
   }, [A]);
   let R = (0, c.default)(L ? _ : h),
     {
@@ -69,30 +69,30 @@ t.default = e => {
   };
   if (P || null == M) {
     let e = [];
-    for (let t = 0; t < R; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
+    for (let t = 0; t < R; t++) e.push((0, n.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = M.slice(0, R).map(e => (0, a.jsx)(d.default, {
+  } else t = M.slice(0, R).map(e => (0, n.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
     onView: x,
     theme: p,
-    onGuildCardSeen: T,
+    onGuildCardSeen: g,
     onTagClick: v
   }, e.id));
-  return (0, a.jsx)("section", {
+  return (0, n.jsx)("section", {
     className: E.guildListSection,
-    children: (0, a.jsxs)(l.HeadingLevel, {
-      component: (0, a.jsx)(l.Heading, {
+    children: (0, n.jsxs)(l.HeadingLevel, {
+      component: (0, n.jsx)(l.Heading, {
         className: E.__invalid_title,
         variant: "heading-lg/semibold",
-        children: n
+        children: a
       }),
-      children: [null != C && (0, a.jsx)(l.Text, {
+      children: [null != C && (0, n.jsx)(l.Text, {
         className: E.subtitle,
         variant: "text-sm/normal",
         color: "header-secondary",
         children: C
-      }), (0, a.jsx)("div", {
+      }), (0, n.jsx)("div", {
         className: E.guildList,
         children: t
       })]

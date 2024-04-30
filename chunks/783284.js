@@ -1,20 +1,20 @@
 "use strict";
 
-function e(t, i) {
-  if (void 0 !== t.one && 1 === i) return t.one;
-  var n = i % 10,
-    e = i % 100;
-  return 1 === n && 11 !== e ? t.singularNominative.replace("{{count}}", String(i)) : n >= 2 && n <= 4 && (e < 10 || e > 20) ? t.singularGenitive.replace("{{count}}", String(i)) : t.pluralGenitive.replace("{{count}}", String(i))
+function e(i, t) {
+  if (void 0 !== i.one && 1 === t) return i.one;
+  var n = t % 10,
+    e = t % 100;
+  return 1 === n && 11 !== e ? i.singularNominative.replace("{{count}}", String(t)) : n >= 2 && n <= 4 && (e < 10 || e > 20) ? i.singularGenitive.replace("{{count}}", String(t)) : i.pluralGenitive.replace("{{count}}", String(t))
 }
 
-function a(t) {
-  return function(i, n) {
-    if (!n || !n.addSuffix) return e(t.regular, i);
-    if (n.comparison && n.comparison > 0) return t.future ? e(t.future, i) : "за " + e(t.regular, i);
-    return t.past ? e(t.past, i) : e(t.regular, i) + " тому"
+function a(i) {
+  return function(t, n) {
+    if (!n || !n.addSuffix) return e(i.regular, t);
+    if (n.comparison && n.comparison > 0) return i.future ? e(i.future, t) : "за " + e(i.regular, t);
+    return i.past ? e(i.past, t) : e(i.regular, t) + " тому"
   }
 }
-n.r(i);
+n.r(t);
 var u = {
   lessThanXSeconds: a({
     regular: {
@@ -47,8 +47,8 @@ var u = {
       pluralGenitive: "за {{count}} секунд"
     }
   }),
-  halfAMinute: function(t, i) {
-    if (i && i.addSuffix) return i.comparison && i.comparison > 0 ? "за півхвилини" : "півхвилини тому";
+  halfAMinute: function(i, t) {
+    if (t && t.addSuffix) return t.comparison && t.comparison > 0 ? "за півхвилини" : "півхвилини тому";
     return "півхвилини"
   },
   lessThanXMinutes: a({
@@ -190,6 +190,6 @@ var u = {
     }
   })
 };
-i.default = function(t, i, n) {
-  return n = n || {}, u[t](i, n)
+t.default = function(i, t, n) {
+  return n = n || {}, u[i](t, n)
 }
