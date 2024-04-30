@@ -22,8 +22,8 @@ function m(e) {
     user: t,
     displayProfile: s,
     initialSection: m,
-    autoFocusNote: I,
-    transitionState: v,
+    autoFocusNote: v,
+    transitionState: I,
     onClose: E
   } = e, x = (0, a.default)(s);
   return (0, l.jsxs)("div", {
@@ -49,13 +49,13 @@ function m(e) {
     }), (0, l.jsx)(d.default, {
       user: t
     }), (0, l.jsxs)(o.default.Overlay, {
-      children: [v === f.ModalTransitionState.ENTERED && (0, l.jsx)(n.default, {
+      children: [I === f.ModalTransitionState.ENTERED && (0, l.jsx)(n.default, {
         onTooltipClose: E
       }), (0, l.jsx)(c.default, {
         user: t,
         displayProfile: s,
         initialSection: m,
-        autoFocusNote: I,
+        autoFocusNote: v,
         onClose: E
       })]
     })]

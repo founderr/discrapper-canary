@@ -16,8 +16,8 @@ var l = s("735250"),
   f = s("158776"),
   S = s("5192"),
   m = s("785717"),
-  I = s("318661"),
-  v = s("502762"),
+  v = s("318661"),
+  I = s("502762"),
   E = s("705556"),
   x = s("301984"),
   _ = s("94918"),
@@ -25,8 +25,8 @@ var l = s("735250"),
   U = s("980768"),
   T = s("806926"),
   N = s("740021"),
-  C = s("228168"),
-  g = s("981631"),
+  g = s("228168"),
+  C = s("981631"),
   h = s("689938"),
   p = s("750721");
 
@@ -36,14 +36,14 @@ function R(e) {
     guildId: s,
     channelId: R,
     messageId: j,
-    roleId: P,
-    friendToken: M,
+    roleId: M,
+    friendToken: P,
     initialSection: y,
     autoFocusNote: O,
     transitionState: L,
     sourceAnalyticsLocations: F = [],
     onClose: D
-  } = e, b = s === g.ME ? void 0 : s, {
+  } = e, b = s === C.ME ? void 0 : s, {
     analyticsLocations: B
   } = (0, d.default)([...F, u.default.SIMPLIFIED_PROFILE_MODAL]), G = (0, m.useTrackUserProfileAction)({
     layout: "SIMPLIFIED_MODAL",
@@ -51,8 +51,8 @@ function R(e) {
     guildId: b,
     channelId: R,
     messageId: j,
-    roleId: P
-  }), [k, w] = a.useState(b), V = (0, I.default)(t.id), H = (0, I.default)(t.id, b), Y = null == k ? V : H, {
+    roleId: M
+  }), [k, w] = a.useState(b), V = (0, v.default)(t.id), H = (0, v.default)(t.id, b), Y = null == k ? V : H, {
     activity: z,
     customStatusActivity: W
   } = (0, i.useStateFromStoresObject)([f.default], () => ({
@@ -60,13 +60,13 @@ function R(e) {
       let {
         type: t
       } = e;
-      return t !== g.ActivityTypes.CUSTOM_STATUS
+      return t !== C.ActivityTypes.CUSTOM_STATUS
     }),
     customStatusActivity: f.default.findActivity(t.id, e => {
       let {
         type: t
       } = e;
-      return t === g.ActivityTypes.CUSTOM_STATUS
+      return t === C.ActivityTypes.CUSTOM_STATUS
     })
   })), Z = a.createRef(), J = (0, o.default)(Z);
   return (0, l.jsx)(d.AnalyticsLocationProvider, {
@@ -77,7 +77,7 @@ function R(e) {
       guildId: b,
       channelId: R,
       messageId: j,
-      roleId: P,
+      roleId: M,
       children: (0, l.jsxs)(n.ModalRoot, {
         transitionState: L,
         className: p.root,
@@ -85,12 +85,12 @@ function R(e) {
         "aria-label": h.default.Messages.USER_PROFILE_MODAL,
         children: [(0, l.jsx)("div", {
           ref: Z,
-          children: (0, l.jsxs)(v.default, {
+          children: (0, l.jsxs)(I.default, {
             user: t,
             displayProfile: Y,
-            profileType: C.UserProfileTypes.FULL_SIZE,
+            profileType: g.UserProfileTypes.FULL_SIZE,
             children: [(0, l.jsxs)(U.default, {
-              profileType: C.UserProfileTypes.FULL_SIZE,
+              profileType: g.UserProfileTypes.FULL_SIZE,
               isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !J,
               children: [(0, l.jsx)(_.default, {
                 user: t,
@@ -99,7 +99,7 @@ function R(e) {
                 onClose: D
               }), (0, l.jsx)(x.default, {
                 user: t,
-                friendToken: M
+                friendToken: P
               }), (0, l.jsx)(E.default, {
                 type: "overlay",
                 user: t,

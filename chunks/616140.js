@@ -16,8 +16,8 @@ var l = s("735250"),
   f = s("621853"),
   S = s("944546"),
   m = s("470900"),
-  I = s("988246"),
-  v = s("834534"),
+  v = s("988246"),
+  I = s("834534"),
   E = s("228168"),
   x = s("689938"),
   _ = s("788741");
@@ -57,30 +57,30 @@ function U(e) {
     autoFocusNote: T,
     onClose: N
   } = e, {
-    trackUserProfileAction: C
-  } = (0, c.useUserProfileAnalyticsContext)(), g = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()), h = (0, n.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), p = A({
+    trackUserProfileAction: g
+  } = (0, c.useUserProfileAnalyticsContext)(), C = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()), h = (0, n.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), p = A({
     user: f,
-    currentUser: g
-  }), [R, j] = a.useState(T), [P, M] = a.useState(null !== (s = null === (t = p.find(e => {
+    currentUser: C
+  }), [R, j] = a.useState(T), [M, P] = a.useState(null !== (s = null === (t = p.find(e => {
     let {
       section: t
     } = e;
     return t === U
   })) || void 0 === t ? void 0 : t.section) && void 0 !== s ? s : E.UserProfileSections.USER_INFO), y = a.useCallback(e => {
-    C({
+    g({
       action: "PRESS_SECTION",
       section: e
-    }), M(e), j(!1)
-  }, [C, M]);
-  return null == g ? null : h ? (0, l.jsx)("div", {
+    }), P(e), j(!1)
+  }, [g, P]);
+  return null == C ? null : h ? (0, l.jsx)("div", {
     className: _.container,
-    children: (0, l.jsx)(I.default, {})
+    children: (0, l.jsx)(v.default, {})
   }) : (0, l.jsxs)("div", {
     className: _.container,
     children: [(0, l.jsx)(r.TabBar, {
       className: _.tabBar,
       type: "top",
-      selectedItem: P,
+      selectedItem: M,
       onItemSelect: y,
       children: p.map(e => {
         let {
@@ -97,16 +97,16 @@ function U(e) {
           })
         }, t)
       })
-    }), (0, i.match)(P).with(E.UserProfileSections.MUTUAL_FRIENDS, () => (0, l.jsx)(S.default, {
+    }), (0, i.match)(M).with(E.UserProfileSections.MUTUAL_FRIENDS, () => (0, l.jsx)(S.default, {
       user: f,
       onClose: N
     })).with(E.UserProfileSections.MUTUAL_GUILDS, () => (0, l.jsx)(m.default, {
       user: f,
       onClose: N
-    })).otherwise(() => (0, l.jsx)(v.default, {
+    })).otherwise(() => (0, l.jsx)(I.default, {
       className: _.infoTab,
       user: f,
-      currentUser: g,
+      currentUser: C,
       displayProfile: x,
       autoFocusNote: R
     }))]

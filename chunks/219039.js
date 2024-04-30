@@ -1,28 +1,28 @@
 "use strict";
-t.r(a), t.d(a, {
+s.r(t), s.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
-var l = t("735250");
-t("470079");
-var n = t("481060"),
-  i = t("689938"),
-  r = t("395169");
+var a = s("735250");
+s("470079");
+var n = s("481060"),
+  l = s("689938"),
+  i = s("395169");
 
-function s(e) {
+function r(e) {
   let {
-    count: a
+    count: t
   } = e;
-  return (0, l.jsxs)("div", {
-    className: r.countContainer,
-    children: [(0, l.jsx)("div", {
-      className: r.dot
-    }), (0, l.jsx)(n.Text, {
+  return (0, a.jsxs)("div", {
+    className: i.countContainer,
+    children: [(0, a.jsx)("div", {
+      className: i.dot
+    }), (0, a.jsx)(n.Text, {
       variant: "text-xs/medium",
       color: "header-secondary",
-      children: i.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
-        count: a
+      children: l.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+        count: t
       })
     })]
   })

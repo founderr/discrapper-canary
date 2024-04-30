@@ -1,106 +1,106 @@
 "use strict";
-n.r(t), n("47120");
-var r = n("735250"),
-  i = n("470079"),
-  s = n("481060"),
-  a = n("442837"),
-  o = n("863249"),
-  l = n("944163"),
-  d = n("983736"),
-  u = n("200305"),
-  c = n("594174"),
-  f = n("153124"),
-  h = n("231467"),
-  m = n("981631"),
-  p = n("689938"),
-  E = n("461456");
+i.r(a), i("47120");
+var l = i("735250"),
+  s = i("470079"),
+  t = i("481060"),
+  d = i("442837"),
+  r = i("863249"),
+  o = i("944163"),
+  n = i("983736"),
+  c = i("200305"),
+  u = i("594174"),
+  f = i("153124"),
+  m = i("231467"),
+  v = i("981631"),
+  h = i("689938"),
+  x = i("461456");
 
-function x(e) {
+function C(e) {
   let {
-    guildId: t,
-    formState: n,
-    updateFormState: i
+    guildId: a,
+    formState: i,
+    updateFormState: s
   } = e;
-  return (0, r.jsxs)("div", {
-    className: E.verificationForm,
-    children: [(0, r.jsx)(s.Heading, {
+  return (0, l.jsxs)("div", {
+    className: x.verificationForm,
+    children: [(0, l.jsx)(t.Heading, {
       variant: "heading-xxl/normal",
       color: "header-primary",
-      children: p.default.Messages.CLAN_DISCOVERY_PROFILE_TITLE
-    }), (0, r.jsx)(s.Text, {
+      children: h.default.Messages.CLAN_DISCOVERY_PROFILE_TITLE
+    }), (0, l.jsx)(t.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      children: p.default.Messages.CLAN_DISCOVERY_PROFILE_SUBTITLE
-    }), (0, r.jsx)(u.MemberVerificationFormRenderer, {
-      guildId: t,
-      formState: n,
-      updateFormState: i
+      children: h.default.Messages.CLAN_DISCOVERY_PROFILE_SUBTITLE
+    }), (0, l.jsx)(c.MemberVerificationFormRenderer, {
+      guildId: a,
+      formState: i,
+      updateFormState: s
     })]
   })
 }
-t.default = function(e) {
-  var t, n;
+a.default = function(e) {
+  var a, i;
   let {
-    clan: u,
-    transitionState: _,
-    onClose: v
-  } = e, N = (0, f.useUID)(), R = (0, a.useStateFromStores)([l.default], () => l.default.get(u.id)), [F, T] = i.useState(null !== (n = null == R ? void 0 : R.formFields) && void 0 !== n ? n : []), I = (0, a.useStateFromStores)([c.default], () => c.default.getCurrentUser()), C = null == I ? void 0 : I.verified, g = null == I ? void 0 : I.isPhoneVerified();
-  i.useEffect(() => {
-    o.default.fetchVerificationForm(u.id)
-  }, [u.id]), i.useEffect(() => {
-    null != R && T(R.formFields)
-  }, [R]);
-  let j = i.useCallback(async e => {
-      await o.default.submitVerificationForm(u.id, e)
-    }, [u.id]),
-    P = i.useCallback(async () => {
-      await j({
-        ...null != R ? R : l.NO_MEMBER_VERIFICATION_FORM,
-        formFields: F
-      }), v()
-    }, [j, v, R, F]),
-    O = !((null == R ? void 0 : null === (t = R.guild) || void 0 === t ? void 0 : t.verification_level) === m.VerificationLevels.VERY_HIGH ? g : C || g) || F.some(e => !(0, d.isValidFormResponse)(e));
-  return (0, r.jsxs)(s.ModalRoot, {
-    transitionState: _,
-    "aria-labelledby": N,
-    size: s.ModalSize.DYNAMIC,
-    className: E.container,
+    clan: c,
+    transitionState: S,
+    onClose: F
+  } = e, I = (0, f.useUID)(), N = (0, d.useStateFromStores)([o.default], () => o.default.get(c.id)), [j, p] = s.useState(null !== (i = null == N ? void 0 : N.formFields) && void 0 !== i ? i : []), E = (0, d.useStateFromStores)([u.default], () => u.default.getCurrentUser()), R = null == E ? void 0 : E.verified, _ = null == E ? void 0 : E.isPhoneVerified();
+  s.useEffect(() => {
+    r.default.fetchVerificationForm(c.id)
+  }, [c.id]), s.useEffect(() => {
+    null != N && p(N.formFields)
+  }, [N]);
+  let M = s.useCallback(async e => {
+      await r.default.submitVerificationForm(c.id, e)
+    }, [c.id]),
+    b = s.useCallback(async () => {
+      await M({
+        ...null != N ? N : o.NO_MEMBER_VERIFICATION_FORM,
+        formFields: j
+      }), F()
+    }, [M, F, N, j]),
+    g = !((null == N ? void 0 : null === (a = N.guild) || void 0 === a ? void 0 : a.verification_level) === v.VerificationLevels.VERY_HIGH ? _ : R || _) || j.some(e => !(0, n.isValidFormResponse)(e));
+  return (0, l.jsxs)(t.ModalRoot, {
+    transitionState: S,
+    "aria-labelledby": I,
+    size: t.ModalSize.DYNAMIC,
+    className: x.container,
     hideShadow: !0,
-    children: [(0, r.jsxs)("div", {
-      className: E.body,
-      children: [(0, r.jsx)("div", {
-        className: E.applicationContainer,
-        children: (0, r.jsx)(s.ScrollerNone, {
+    children: [(0, l.jsxs)("div", {
+      className: x.body,
+      children: [(0, l.jsx)("div", {
+        className: x.applicationContainer,
+        children: (0, l.jsx)(t.ScrollerNone, {
           fade: !0,
-          className: E.scroller,
-          children: (0, r.jsx)(x, {
-            guildId: u.id,
-            formState: F,
-            updateFormState: T
+          className: x.scroller,
+          children: (0, l.jsx)(C, {
+            guildId: c.id,
+            formState: j,
+            updateFormState: p
           })
         })
-      }), (0, r.jsx)("div", {
-        className: E.verticalRule
-      }), (0, r.jsxs)("div", {
-        className: E.clanContainer,
-        children: [(0, r.jsx)(h.ClanDiscoveryCardView, {
-          clan: u,
-          className: E.card,
+      }), (0, l.jsx)("div", {
+        className: x.verticalRule
+      }), (0, l.jsxs)("div", {
+        className: x.clanContainer,
+        children: [(0, l.jsx)(m.ClanDiscoveryCardView, {
+          clan: c,
+          className: x.card,
           expanded: !0
-        }), (0, r.jsx)(s.Button, {
+        }), (0, l.jsx)(t.Button, {
           type: "submit",
-          onClick: P,
-          disabled: O,
-          children: p.default.Messages.APPLY
+          onClick: b,
+          disabled: g,
+          children: h.default.Messages.APPLY
         })]
       })]
-    }), (0, r.jsx)("div", {
-      className: E.closeButtonContainer,
-      children: (0, r.jsx)(s.Button, {
-        onClick: v,
-        look: s.ButtonLooks.OUTLINED,
-        color: s.ButtonColors.PRIMARY,
-        children: p.default.Messages.CLOSE
+    }), (0, l.jsx)("div", {
+      className: x.closeButtonContainer,
+      children: (0, l.jsx)(t.Button, {
+        onClick: F,
+        look: t.ButtonLooks.OUTLINED,
+        color: t.ButtonColors.PRIMARY,
+        children: h.default.Messages.CLOSE
       })
     })]
   })

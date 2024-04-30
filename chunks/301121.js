@@ -31,8 +31,8 @@ var a = s("735250"),
   R = s("278828"),
   M = s("480294"),
   v = s("430824"),
-  D = s("663389"),
-  L = s("594174"),
+  L = s("663389"),
+  D = s("594174"),
   P = s("285952"),
   j = s("153124"),
   b = s("626135"),
@@ -712,8 +712,8 @@ class es extends n.PureComponent {
 }
 
 function ea() {
-  let e = (0, c.useStateFromStores)([L.default], () => {
-      let e = L.default.getCurrentUser();
+  let e = (0, c.useStateFromStores)([D.default], () => {
+      let e = D.default.getCurrentUser();
       return o()(null != e, "ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined"), e
     }),
     t = (0, c.useStateFromStoresObject)([M.default], () => ({
@@ -722,7 +722,7 @@ function ea() {
       personalization: M.default.hasConsented(Y.Consents.PERSONALIZATION)
     })),
     s = (0, c.useStateFromStores)([C.default], () => C.default.getFetchError()),
-    n = (0, c.useStateFromStores)([D.default], () => D.default.getSubsection()),
+    n = (0, c.useStateFromStores)([L.default], () => L.default.getSubsection()),
     l = (0, g.useIsEligibleForExplicitMediaRedaction)(),
     i = (0, p.default)();
   return (0, a.jsx)(es, {

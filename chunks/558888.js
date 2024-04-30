@@ -20,8 +20,8 @@ function m(e) {
   let {
     user: t
   } = e, s = (0, i.useStateFromStores)([o.default], () => null != o.default.getAnyStreamForUser(t.id)), m = (0, i.useStateFromStores)([u.default], () => u.default.getActivities(t.id)), {
-    streamingActivity: I,
-    restActivities: v
+    streamingActivity: v,
+    restActivities: I
   } = a.useMemo(() => {
     let e = m.filter(e => e.type !== f.ActivityTypes.CUSTOM_STATUS),
       t = s ? e.find(e => e.type === f.ActivityTypes.PLAYING) : null,
@@ -43,19 +43,19 @@ function m(e) {
       user: t,
       source: x,
       className: S.userProfileActivity,
-      activity: I,
+      activity: v,
       actionColor: S.actionColor,
       hideHeader: !0,
       onAction: () => {
         _({
           action: "JOIN_ACTIVITY"
         }), (0, c.trackUserProfileActivityJoined)({
-          activity: I,
+          activity: v,
           analyticsLocations: E,
           ...A
         })
       }
-    }) : null, v.map(e => (0, l.jsx)(n.default, {
+    }) : null, I.map(e => (0, l.jsx)(n.default, {
       type: n.UserActivityTypes.SIMPLIFIED_PROFILE,
       activity: e,
       user: t,

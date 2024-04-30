@@ -32,8 +32,8 @@ var n = s("990547"),
   R = s("977156"),
   M = s("652380"),
   v = s("171156"),
-  D = s("906467"),
-  L = s("131951"),
+  L = s("906467"),
+  D = s("131951"),
   P = s("25990"),
   j = s("87086"),
   b = s("759231"),
@@ -90,8 +90,8 @@ function ev(e) {
   let {
     unseenGiftCount: t,
     showPrepaidPaymentPastDueWarning: ev,
-    impressionSource: eD,
-    numOfPendingFamilyRequests: eL,
+    impressionSource: eL,
+    numOfPendingFamilyRequests: eD,
     isOverlaySupported: eP,
     isClipsBetaTagShowing: ej = !1,
     shouldMergeGameSettings: eb
@@ -137,7 +137,7 @@ function ev(e) {
     label: ex.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
     ariaLabel: ex.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
     element: en.default,
-    badgeCount: eL,
+    badgeCount: eD,
     newIndicator: (0, a.jsx)(U.TextBadge, {
       text: ex.default.Messages.NEW,
       color: g.default.BG_BRAND
@@ -165,7 +165,7 @@ function ev(e) {
     element: es.default,
     impressionName: n.ImpressionNames.USER_SETTINGS_CONNECTIONS,
     impressionProperties: {
-      source: eD
+      source: eL
     },
     newIndicatorDismissibleContentTypes: [l.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION]
   }, {
@@ -236,7 +236,7 @@ function ev(e) {
     section: eA.UserSettingsSections.VOICE,
     label: ex.default.Messages.VOICE_AND_VIDEO,
     element: eC.default,
-    predicate: () => L.default.isSupported()
+    predicate: () => D.default.isSupported()
   }, {
     section: eA.UserSettingsSections.POGGERMODE,
     label: ex.default.Messages.POGGERMODE,
@@ -339,42 +339,42 @@ function ev(e) {
     section: eA.UserSettingsSections.EXPERIMENTS,
     label: "Experiments",
     element: eI.default,
-    predicate: () => D.default.isDeveloper
+    predicate: () => L.default.isDeveloper
   }, {
     section: eA.UserSettingsSections.DEVELOPER_OPTIONS,
     label: "Developer Options",
     element: ea.default,
-    predicate: () => D.default.isDeveloper
+    predicate: () => L.default.isDeveloper
   }, {
     section: eA.UserSettingsSections.HOTSPOT_OPTIONS,
     label: "Hotspot Options",
     element: H.default,
-    predicate: () => D.default.isDeveloper
+    predicate: () => L.default.isDeveloper
   }, {
     section: eA.UserSettingsSections.DISMISSIBLE_CONTENT_OPTIONS,
     label: "Dismissible Contents",
     element: h.default,
-    predicate: () => D.default.isDeveloper
+    predicate: () => L.default.isDeveloper
   }, {
     section: eA.UserSettingsSections.PAYMENT_FLOW_MODAL_TEST_PAGE,
     label: "Payment Flow Modals",
     element: V.default,
-    predicate: () => D.default.isDeveloper
+    predicate: () => L.default.isDeveloper
   }, {
     section: eA.UserSettingsSections.TEXT_PLAYGROUND,
     label: "Text Playground",
     element: eg.default,
-    predicate: () => (0, Q.shouldShowTextPlayground)() || D.default.isDeveloper
+    predicate: () => (0, Q.shouldShowTextPlayground)() || L.default.isDeveloper
   }, {
     section: eA.UserSettingsSections.TEXT_COMPONENT,
     label: "Text Components",
     element: z.default,
-    predicate: () => (0, Q.shouldShowTextPlayground)() || D.default.isDeveloper
+    predicate: () => (0, Q.shouldShowTextPlayground)() || L.default.isDeveloper
   }, {
     section: eA.UserSettingsSections.PROFILE_EFFECTS_PREVIEW_TOOL,
     label: "Profile Effects Preview Tool",
     element: _.default,
-    predicate: () => D.default.isDeveloper
+    predicate: () => L.default.isDeveloper
   }, {
     section: eA.UserSettingsSections.QUEST_PREVIEW_TOOL,
     label: "Quest Preview Tool",

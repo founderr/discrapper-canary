@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return L
+    return D
   }
 });
 var a = s("735250"),
@@ -31,15 +31,15 @@ var a = s("735250"),
   R = s("689938"),
   M = s("825722"),
   v = s("894881"),
-  D = s("949086");
+  L = s("949086");
 
-function L() {
+function D() {
   let e = (0, r.useStateFromStores)([f.default], () => f.default.getHardwareH264()),
     {
       clipsEnabled: t,
       remindersEnabled: s,
       decoupledClipsEnabled: l,
-      clipsLength: L,
+      clipsLength: D,
       clipsQuality: P
     } = (0, r.useStateFromStoresObject)([g.default], () => g.default.getSettings()),
     j = (0, r.useStateFromStores)([g.default], () => g.default.getHardwareClassification()),
@@ -155,7 +155,7 @@ function L() {
       })]
     }), U && y && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.FormDivider, {}), (0, a.jsx)(o.FormSection, {
-        className: D.marginTop20,
+        className: L.marginTop20,
         disabled: !e,
         children: (0, a.jsx)(o.FormSwitch, {
           hideBorder: !0,
@@ -172,7 +172,7 @@ function L() {
       })]
     }), B && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.FormDivider, {}), (0, a.jsx)(o.FormSection, {
-        className: D.marginTop20,
+        className: L.marginTop20,
         children: (0, a.jsx)(o.FormSwitch, {
           hideBorder: !0,
           className: v.formItem,
@@ -183,13 +183,13 @@ function L() {
         })
       })]
     }), (0, a.jsx)(o.FormDivider, {}), (0, a.jsxs)(o.FormSection, {
-      className: D.marginTop20,
+      className: L.marginTop20,
       children: [(0, a.jsx)(p.SelectItem, {
         className: v.formItem,
         select: N.updateClipsLength,
         title: R.default.Messages.CLIPS_SETTINGS_LENGTH,
         note: R.default.Messages.CLIPS_SETTINGS_LENGTH_HELP,
-        value: L,
+        value: D,
         options: G
       }), (0, a.jsx)(p.SelectItem, {
         className: v.formItem,
