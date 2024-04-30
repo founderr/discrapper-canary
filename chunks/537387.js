@@ -18,12 +18,8 @@ function l(e) {
     className: r,
     innerClassName: l,
     ...u
-  } = e, d = (0, i.jsx)(t, {
-    width: 16,
-    height: 16,
-    color: "currentColor"
-  });
-  return null != n ? (0, i.jsx)(a.TooltipContainer, {
+  } = e;
+  return (0, i.jsx)(a.TooltipContainer, {
     text: n,
     children: (0, i.jsx)(a.Button, {
       className: s()(o.button, r),
@@ -32,17 +28,13 @@ function l(e) {
       look: a.Button.Looks.FILLED,
       size: a.Button.Sizes.NONE,
       grow: !1,
+      "aria-label": n,
       ...u,
-      children: d
+      children: (0, i.jsx)(t, {
+        width: 16,
+        height: 16,
+        color: "currentColor"
+      })
     })
-  }) : (0, i.jsx)(a.Button, {
-    className: s()(o.button, r),
-    innerClassName: s()(o.buttonInner, l),
-    color: o.color,
-    look: a.Button.Looks.FILLED,
-    size: a.Button.Sizes.NONE,
-    grow: !1,
-    ...u,
-    children: d
   })
 }
