@@ -156,8 +156,10 @@ t.default = s.memo(function(e) {
     to: {
       opacity: 1
     },
-    config: R,
-    duration: 200
+    delay: 300,
+    config: {
+      duration: 0
+    }
   }), y = (0, l.useSpring)({
     from: v ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
@@ -168,7 +170,7 @@ t.default = s.memo(function(e) {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     },
     config: R,
-    delay: 200
+    delay: 400
   }), x = (0, l.useSpring)({
     from: v ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
@@ -179,7 +181,7 @@ t.default = s.memo(function(e) {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     },
     config: R,
-    delay: 200
+    delay: 400
   }), D = (0, l.useSpring)({
     from: v ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
@@ -190,7 +192,7 @@ t.default = s.memo(function(e) {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     },
     config: R,
-    delay: 200
+    delay: 400
   }), b = (0, l.useSpring)({
     from: v ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
@@ -201,7 +203,7 @@ t.default = s.memo(function(e) {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     },
     config: R,
-    delay: 200
+    delay: 400
   }), U = (0, l.useSpring)({
     from: v ? {
       transform: "scale(1)",
@@ -226,22 +228,27 @@ t.default = s.memo(function(e) {
       transform: "translateY(0px)"
     },
     config: R,
-    delay: 200
+    delay: 400
   }), G = s.useMemo(() => null == d ? A.default.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : A.default.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [d]);
   return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsxs)(l.animated.div, {
+    children: [(0, n.jsxs)("div", {
       className: N.cardsContainer,
-      style: M,
       children: [(0, n.jsx)(l.animated.div, {
         className: N.clanCardOuterContainer,
-        style: y,
+        style: {
+          ...y,
+          ...M
+        },
         children: (0, n.jsx)(C.ClanDiscoveryCardView, {
           clan: T.FAKE_DISCOVERY_UPSELL_CLANS["0"],
           className: N.clanCardOuterLeft
         })
       }), (0, n.jsx)(l.animated.div, {
         className: N.clanCardInnerContainer,
-        style: x,
+        style: {
+          ...x,
+          ...M
+        },
         children: (0, n.jsx)(C.ClanDiscoveryCardView, {
           clan: T.FAKE_DISCOVERY_UPSELL_CLANS["1"],
           className: N.clanCardInnerLeft
@@ -263,14 +270,20 @@ t.default = s.memo(function(e) {
         })
       }), (0, n.jsx)(l.animated.div, {
         className: N.clanCardInnerContainer,
-        style: D,
+        style: {
+          ...D,
+          ...M
+        },
         children: (0, n.jsx)(C.ClanDiscoveryCardView, {
           clan: T.FAKE_DISCOVERY_UPSELL_CLANS["2"],
           className: N.clanCardInnerRight
         })
       }), (0, n.jsx)(l.animated.div, {
         className: N.clanCardOuterContainer,
-        style: b,
+        style: {
+          ...b,
+          ...M
+        },
         children: (0, n.jsx)(C.ClanDiscoveryCardView, {
           clan: T.FAKE_DISCOVERY_UPSELL_CLANS["3"],
           className: N.clanCardOuterRight
