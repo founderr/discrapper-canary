@@ -1,60 +1,59 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return _
   }
 });
 var l = n("735250"),
   a = n("470079"),
-  s = n("924826"),
-  i = n("442837"),
-  r = n("493683"),
-  o = n("859802"),
-  u = n("511642"),
-  d = n("931261"),
-  c = n("703656"),
-  f = n("306680"),
-  h = n("356842"),
-  m = n("308570"),
+  s = n("442837"),
+  i = n("493683"),
+  r = n("859802"),
+  o = n("511642"),
+  u = n("931261"),
+  d = n("703656"),
+  c = n("306680"),
+  f = n("356842"),
+  h = n("308570"),
   p = n("434479"),
-  C = n("981631"),
-  g = n("176505"),
-  E = n("490897"),
-  _ = n("689938");
+  m = n("981631"),
+  C = n("176505"),
+  g = n("490897"),
+  E = n("689938");
 
-function S(e) {
+function _(e) {
   let {
     guild: t,
     selected: n
-  } = e, S = (0, s.useListItem)("home-tab-".concat(t.id)), {
-    showBadge: I
-  } = o.GuildHomeBadgeExperiment.useExperiment({
+  } = e, {
+    showBadge: _
+  } = r.GuildHomeBadgeExperiment.useExperiment({
     location: "487e85_1"
   }, {
     autoTrackExposure: !1
   });
   a.useEffect(() => {
-    o.GuildHomeBadgeExperiment.trackExposure({
+    r.GuildHomeBadgeExperiment.trackExposure({
       location: "487e85_2"
     })
   }, []);
-  let N = (0, d.useCanSeeOnboardingHome)(t.id),
-    T = (0, i.useStateFromStores)([f.default], () => f.default.hasUnread(t.id, E.ReadStateTypes.GUILD_HOME) && I, [t.id, I]);
-  return (0, l.jsx)(p.default, {
-    ...S,
-    renderIcon: e => N ? (0, l.jsx)(m.default, {
+  let S = (0, u.useCanSeeOnboardingHome)(t.id),
+    I = (0, s.useStateFromStores)([c.default], () => c.default.hasUnread(t.id, g.ReadStateTypes.GUILD_HOME) && _, [t.id, _]);
+  return (0, l.jsx)(p.BasicChannelRow, {
+    id: "home-tab-".concat(t.id),
+    renderIcon: e => S ? (0, l.jsx)(h.default, {
       className: e
-    }) : (0, l.jsx)(h.default, {
+    }) : (0, l.jsx)(f.default, {
       className: e
     }),
-    text: N ? _.default.Messages.SERVER_GUIDE : _.default.Messages.GUILD_HOME,
-    showUnread: T,
+    text: S ? E.default.Messages.SERVER_GUIDE : E.default.Messages.GUILD_HOME,
     selected: n,
+    showUnread: I,
     onMouseDown: function() {
-      r.default.preload(t.id, g.StaticChannelRoute.GUILD_HOME)
+      i.default.preload(t.id, C.StaticChannelRoute.GUILD_HOME)
     },
     onClick: function() {
-      (0, u.ackGuildHome)(t.id), (0, c.transitionTo)(C.Routes.CHANNEL(t.id, g.StaticChannelRoute.GUILD_HOME))
+      (0, o.ackGuildHome)(t.id), (0, d.transitionTo)(m.Routes.CHANNEL(t.id, C.StaticChannelRoute.GUILD_HOME))
     }
   })
 }

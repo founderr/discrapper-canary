@@ -1,6 +1,5 @@
 "use strict";
 e.exports = {
-  channelLabel: "channelLabel__86693",
   closeButton: "closeButton__5a65e",
   gifSection: "gifSection__63d19",
   money: "money_daa704",

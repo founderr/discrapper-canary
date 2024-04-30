@@ -5,24 +5,23 @@ var l = n("735250"),
   s = n("442837"),
   i = n("481060"),
   r = n("554747"),
-  o = n("593364"),
-  u = n("703656"),
-  d = n("944486"),
-  c = n("305878"),
-  f = n("104259"),
-  h = n("782089"),
+  o = n("434479"),
+  u = n("593364"),
+  d = n("703656"),
+  c = n("944486"),
+  f = n("305878"),
+  h = n("104259"),
+  p = n("782089"),
   m = n("729285"),
-  p = n("360048"),
   C = n("147754"),
   g = n("688438"),
   E = n("981631"),
-  _ = n("689938"),
-  S = n("79391");
-let I = [{
-  icon: (0, l.jsx)(c.default, {
-    className: S.icon
-  }),
+  _ = n("689938");
+let S = [{
   key: "EVENTS",
+  renderIcon: e => (0, l.jsx)(f.default, {
+    className: e
+  }),
   getName: e => {
     let {
       numEvents: t
@@ -41,17 +40,17 @@ let I = [{
     })
   })
 }, {
-  icon: (0, l.jsx)(f.default, {
-    className: S.icon
-  }),
   key: "JOIN_SERVERS",
-  getName: () => _.default.Messages.HUB_SIDEBAR_JOIN_SERVERS,
-  handler: (e, t) => (0, u.transitionToGuild)(e.id, t.id)
-}, {
-  icon: (0, l.jsx)(m.default, {
-    className: S.icon
+  renderIcon: e => (0, l.jsx)(h.default, {
+    className: e
   }),
+  getName: () => _.default.Messages.HUB_SIDEBAR_JOIN_SERVERS,
+  handler: (e, t) => (0, d.transitionToGuild)(e.id, t.id)
+}, {
   key: "ADD_SERVERS",
+  renderIcon: e => (0, l.jsx)(m.default, {
+    className: e
+  }),
   getName: () => _.default.Messages.HUB_SIDEBAR_ADD_SERVERS,
   handler: (e, t) => (0, i.openModalLazy)(async () => {
     let {
@@ -65,10 +64,10 @@ let I = [{
     })
   })
 }, {
-  icon: (0, l.jsx)(h.default, {
-    className: S.icon
-  }),
   key: "INVITE_MEMBERS",
+  renderIcon: e => (0, l.jsx)(p.default, {
+    className: e
+  }),
   getName: () => _.default.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
   handler: (e, t) => (0, i.openModalLazy)(async () => {
     let {
@@ -94,42 +93,33 @@ t.default = e => {
     })
   }, [t.id]);
   let {
-    showHubEventsList: u
+    showHubEventsList: d
   } = C.default.useExperiment({
     guildId: t.id,
     location: "543af8_2"
   }, {
     autoTrackExposure: !1
-  }), c = (0, s.useStateFromStores)([d.default], () => null != n && d.default.getChannelId() === n.id), f = a.useMemo(() => ({
+  }), f = (0, s.useStateFromStores)([c.default], () => null != n && c.default.getChannelId() === n.id), h = a.useMemo(() => ({
     numEvents: i.length
-  }), [i.length]), h = e => {
-    if (null != n) {
-      let l = I.find(t => t.key === e);
-      null == l || l.handler(t, n)
-    }
-  }, m = (0, g.useHubUnreadCount)(n);
-  return (0, l.jsx)("div", {
-    children: I.map(e => {
-      if (!u && "EVENTS" === e.key) return null;
-      let t = c && "JOIN_SERVERS" === e.key;
-      return (0, l.jsx)(p.default, {
-        avatar: e.icon,
-        name: e.getName(f),
-        focusProps: {
-          offset: {
-            right: 4,
-            top: 1,
-            bottom: 1
-          }
-        },
-        onClick: () => h(e.key),
-        selected: t,
-        className: S.optionItem,
-        selectedClassName: S.__invalid_selected,
-        innerClassName: S.itemInner,
-        avatarClassName: S.avatar,
-        children: "JOIN_SERVERS" === e.key && m > 0 ? (0, o.renderMentionBadge)(m) : null
-      }, e.key)
+  }), [i.length]), p = (0, g.useHubUnreadCount)(n);
+  return (0, l.jsx)(l.Fragment, {
+    children: S.map(e => {
+      let {
+        key: a,
+        getName: s,
+        handler: i,
+        renderIcon: r
+      } = e;
+      if (!d && "EVENTS" === a) return null;
+      let c = "".concat(a, "-").concat(t.id);
+      return (0, l.jsx)(o.BasicChannelRow, {
+        id: c,
+        renderIcon: r,
+        text: s(h),
+        selected: f && "JOIN_SERVERS" === a,
+        onClick: null != n ? () => i(t, n) : void 0,
+        trailing: "JOIN_SERVERS" === a && p > 0 ? (0, u.renderMentionBadge)(p) : null
+      }, c)
     })
   })
 }
