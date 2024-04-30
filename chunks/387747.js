@@ -30,29 +30,32 @@ function _() {
       location: "UserSettingsInventory"
     }, {
       autoTrackExposure: !0
-    });
-  return (0, i.useBlockedPaymentsConfig)() ? (0, a.jsx)(r.BlockedPaymentsContentSettings, {}) : (0, a.jsxs)(a.Fragment, {
-    children: [t && (0, a.jsx)(d.default, {
-      location: l.default.USER_SETTINGS_GIFT_INVENTORY,
-      className: m.giftNitro,
-      imageClassName: m.giftNitroImage,
-      textContainerOverrideStyles: {
-        padding: "32px",
-        width: "360px"
-      },
-      analyticsLocation: {
-        page: T.AnalyticsPages.GIFTING_SETTINGS,
-        section: T.AnalyticsSections.GIFT_BANNER
-      }
-    }), (0, a.jsx)(n.default, {
-      section: T.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
-      children: (0, a.jsx)(S.default, {})
+    }),
+    s = (0, i.useBlockedPaymentsConfig)();
+  return (0, a.jsxs)(a.Fragment, {
+    children: [!s && (0, a.jsxs)(a.Fragment, {
+      children: [t && (0, a.jsx)(d.default, {
+        location: l.default.USER_SETTINGS_GIFT_INVENTORY,
+        className: m.giftNitro,
+        imageClassName: m.giftNitroImage,
+        textContainerOverrideStyles: {
+          padding: "32px",
+          width: "360px"
+        },
+        analyticsLocation: {
+          page: T.AnalyticsPages.GIFTING_SETTINGS,
+          section: T.AnalyticsSections.GIFT_BANNER
+        }
+      }), (0, a.jsx)(n.default, {
+        section: T.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
+        children: (0, a.jsx)(S.default, {})
+      })]
     }), e && (0, a.jsx)(n.default, {
       section: T.AnalyticsSections.QUESTS,
       children: (0, a.jsx)(c.default, {})
-    }), (0, a.jsx)(n.default, {
+    }), !s && (0, a.jsx)(n.default, {
       section: T.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
       children: (0, a.jsx)(E.default, {})
-    })]
+    }), s && (0, a.jsx)(r.BlockedPaymentsContentSettings, {})]
   })
 }
