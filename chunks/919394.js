@@ -28,14 +28,16 @@ let c = (e, t) => ({
       text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
     });
     let a = (0, r.getStreakCount)(e);
-    if (null != a && a > 1 && n.push({
-        iconPath: u.FLASH_ICON_PATH,
-        text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
-          days: a
-        })
-      }), (0, r.isEntryResurrected)(e) && n.push({
+    null != a && a > 1 && n.push({
+      iconPath: u.FLASH_ICON_PATH,
+      text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+        days: a
+      })
+    });
+    let l = (0, r.getResurrectedEntryLastPlayTime)(e);
+    if (null != l && n.push({
         iconPath: u.RESURRECTED_ICON_PATH,
-        text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
+        text: (0, r.getFullResurrectedBadgeText)(l)
       }), (0, r.isEntryMarathon)(e) && n.push({
         iconPath: u.TIMER_ICON_PATH,
         text: (0, r.isEntryActive)(e) ? (0, r.getMarathonName)(e) : (0, r.getFullMarathonDescription)(e)

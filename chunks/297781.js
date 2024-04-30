@@ -164,11 +164,17 @@ function j(e) {
 function P(e) {
   let {
     entry: t
-  } = e;
-  return (0, I.isEntryResurrected)(t) ? (0, s.jsx)(R, {
+  } = e, {
+    location: n
+  } = M(), a = (0, I.getResurrectedEntryLastPlayTime)(t);
+  if (null == a) return null;
+  let l = (0, I.getFullResurrectedBadgeText)(a);
+  return (0, s.jsx)(R, {
     Icon: f.RetryIcon,
-    text: N.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
-  }) : null
+    showTooltip: 0 === n,
+    tooltipText: l,
+    text: 1 === n ? l : N.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
+  })
 }
 
 function D(e) {
