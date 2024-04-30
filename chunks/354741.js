@@ -6,38 +6,38 @@ var l = n("481060"),
   u = n("493683"),
   i = n("239091"),
   s = n("883385"),
-  r = n("108843"),
-  o = n("947440"),
+  o = n("108843"),
+  r = n("947440"),
   d = n("100527"),
   c = n("299206"),
   f = n("895563"),
   M = n("212205"),
-  m = n("62420"),
+  _ = n("62420"),
   C = n("122074"),
-  _ = n("314897"),
-  h = n("858687"),
-  I = n("461535"),
+  I = n("314897"),
+  m = n("858687"),
+  h = n("461535"),
   E = n("776568"),
   N = n("981631"),
   S = n("689938");
-t.default = (0, r.default)((0, s.default)(function(e) {
+t.default = (0, o.default)((0, s.default)(function(e) {
   let {
     channel: t,
     selected: s,
-    onSelect: r
-  } = e, d = t.isOwner(_.default.getId()), v = (0, I.default)(t), T = (0, E.default)(t), A = (0, C.default)(N.ZERO_STRING_GUILD_ID, t.id), g = (0, h.default)(t, s), p = (0, c.default)({
+    onSelect: o
+  } = e, d = t.isOwner(I.default.getId()), T = (0, h.default)(t), v = (0, E.default)(t), A = (0, C.default)(N.ZERO_STRING_GUILD_ID, t.id), O = (0, m.default)(t, s), g = (0, c.default)({
     id: t.id,
     label: S.default.Messages.COPY_ID_CHANNEL
-  }), x = (0, o.default)(t), O = (0, f.useAddToFavoritesItem)(t), G = (0, f.useRemoveFromFavoritesItem)(t), j = (0, M.default)(t), R = (0, m.default)(t);
+  }), p = (0, r.default)(t), x = (0, f.useAddToFavoritesItem)(t), U = (0, f.useRemoveFromFavoritesItem)(t), G = (0, M.default)(t), F = (0, _.default)(t);
   return null == t || t.isManaged() ? null : (0, a.jsxs)(l.Menu, {
     navId: "gdm-context",
     "aria-label": S.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     onClose: i.closeContextMenu,
-    onSelect: r,
+    onSelect: o,
     children: [(0, a.jsx)(l.MenuGroup, {
-      children: v
+      children: T
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [O, j, R]
+      children: [x, G, F]
     }), (0, a.jsxs)(l.MenuGroup, {
       children: [d ? (0, a.jsx)(l.MenuItem, {
         id: "instant-invites",
@@ -71,15 +71,15 @@ t.default = (0, r.default)((0, s.default)(function(e) {
         action: () => u.default.setIcon(t.id, null)
       }) : null]
     }), (0, a.jsx)(l.MenuGroup, {
-      children: x
+      children: p
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [T, A]
+      children: [v, A]
+    }), (0, a.jsx)(l.MenuGroup, {
+      children: O
+    }), (0, a.jsx)(l.MenuGroup, {
+      children: U
     }), (0, a.jsx)(l.MenuGroup, {
       children: g
-    }), (0, a.jsx)(l.MenuGroup, {
-      children: G
-    }), (0, a.jsx)(l.MenuGroup, {
-      children: p
     })]
   })
 }, {

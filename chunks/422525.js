@@ -4,9 +4,9 @@ i.r(t), i.d(t, {
     return E
   }
 });
-var s = i("735250");
+var n = i("735250");
 i("470079");
-var n = i("442837"),
+var s = i("442837"),
   a = i("481060"),
   l = i("132871"),
   u = i("147890"),
@@ -21,30 +21,30 @@ function E(e) {
   function t(t) {
     o.default.open(e.id, t)
   }
-  let i = (0, n.useStateFromStoresArray)([c.default], () => c.default.getChannels(e.id).SELECTABLE, [e]),
+  let i = (0, s.useStateFromStoresArray)([c.default], () => c.default.getChannels(e.id).SELECTABLE, [e]),
     E = (0, d.default)(e);
-  return __OVERLAY__ || !E ? null : (0, s.jsx)(a.MenuItem, {
+  return __OVERLAY__ || !E ? null : (0, n.jsx)(a.MenuItem, {
     id: "guild-settings",
     label: f.default.Messages.SERVER_SETTINGS,
     action: () => t(),
     children: (0, r.getGuildSettingsSections)(e, i).map(i => {
       let {
-        section: n,
+        section: s,
         label: o
       } = i;
       if (null == o) return null;
-      switch (n) {
+      switch (s) {
         case S.GuildSettingsSections.DELETE:
           return null;
         case S.GuildSettingsSections.COMMUNITY:
-          return (0, s.jsx)(a.MenuItem, {
-            id: n,
-            action: () => t(n),
+          return (0, n.jsx)(a.MenuItem, {
+            id: s,
+            action: () => t(s),
             label: f.default.Messages.GUILD_SETTINGS_COMMUNITY
-          }, n);
+          }, s);
         case S.GuildSettingsSections.APP_DIRECTORY:
-          return (0, s.jsx)(a.MenuItem, {
-            id: n,
+          return (0, n.jsx)(a.MenuItem, {
+            id: s,
             action: () => {
               (0, u.goToAppDirectory)({
                 guildId: e.id,
@@ -54,13 +54,13 @@ function E(e) {
               })
             },
             label: o
-          }, n);
+          }, s);
         default:
-          return (0, s.jsx)(a.MenuItem, {
-            id: n,
-            action: () => t(n),
+          return (0, n.jsx)(a.MenuItem, {
+            id: s,
+            action: () => t(s),
             label: o
-          }, n)
+          }, s)
       }
     })
   })
