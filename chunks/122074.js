@@ -56,7 +56,7 @@ function R(e, t) {
         (0, m.default)(n, "contextMenu"), (0, C.default)();
         return
       }
-      null != t ? (0, T.updateChannelCustomNotificationSound)(e, t, n, "contextMenu") : (0, T.updateGuildCustomNotificationSound)(e, n, "contextMenu")
+      null != t ? (0, T.updateChannelCustomNotificationSound)(e, t, y, n, "contextMenu") : (0, T.updateGuildCustomNotificationSound)(e, y, n, "contextMenu")
     },
     w = G ? r.Text : M.default,
     Y = (0, g.getCustomNotificationSoundpackOptions)(),

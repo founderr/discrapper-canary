@@ -111,7 +111,7 @@ function R(e) {
           }),
           value: null != D ? D : L.Soundpacks.CLASSIC,
           onChange: e => {
-            b(e.value), P && (0, O.updateGuildCustomNotificationSound)(t, e.value, "notificationSettings")
+            b(e.value), P && (0, O.updateGuildCustomNotificationSound)(t, D, e.value, "notificationSettings")
           },
           options: z,
           radioItemClassName: j.option
