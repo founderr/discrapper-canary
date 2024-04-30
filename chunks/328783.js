@@ -1,5 +1,5 @@
 "use strict";
-s.r(t), s("47120");
+s.r(t), s("47120"), s("724458"), s("653041");
 var a = s("735250"),
   n = s("470079"),
   l = s("442837"),
@@ -21,10 +21,13 @@ t.default = n.memo(function() {
       var e;
       return (0, c.getUserClanData)(null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
     }),
-    d = n.useMemo(() => e.map(e => ({
-      label: e.name,
-      value: e.id
-    })), [e]),
+    d = n.useMemo(() => e.reduce((e, t) => {
+      var s;
+      return (null === (s = t.clan) || void 0 === s ? void 0 : s.tag) != null && e.push({
+        label: t.name,
+        value: t.id
+      }), e
+    }, []), [e]),
     _ = n.useCallback(e => {
       var s;
       if (null == e) return null;
@@ -54,9 +57,8 @@ t.default = n.memo(function() {
     titleId: m,
     children: [(0, a.jsx)(i.Text, {
       className: f.subtitle,
-      variant: "text-md/semibold",
-      color: "interactive-active",
-      children: T.default.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN
+      variant: "text-sm/normal",
+      children: T.default.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN_SUBTITLE
     }), (0, a.jsx)(i.Select, {
       className: f.select,
       optionClassName: f.selectPopout,

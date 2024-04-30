@@ -49,7 +49,8 @@ function c(e) {
       className: o()(u.textInputFieldBodyInput, u.fieldBackground),
       value: t.response,
       disabled: !0,
-      autoFocus: !0
+      autoFocus: !0,
+      rows: 2
     })
   })
 }
