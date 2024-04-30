@@ -49,6 +49,7 @@ let d = (e, t) => ({
       case i.ComponentType.CHANNEL_SELECT:
       case i.ComponentType.TEXT:
       case i.ComponentType.MEDIA_GALLERY:
+      case i.ComponentType.SEPARATOR:
         return !0
     }
   };
@@ -56,10 +57,10 @@ let d = (e, t) => ({
 function I(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return e.map((e, n) => (function e(t, n, r) {
-    var a, _, c, I, f, S;
+    var a, _, c, I, f, S, h, A;
     if (!E(t.type)) return null;
     let {
-      includeEmojiSrc: h
+      includeEmojiSrc: m
     } = n;
     switch (t.type) {
       case i.ComponentType.ACTION_ROW: {
@@ -74,7 +75,7 @@ function I(e) {
         }
       }
       case i.ComponentType.BUTTON: {
-        let e = null != t.emoji ? d(t.emoji, h) : void 0;
+        let e = null != t.emoji ? d(t.emoji, m) : void 0;
         return {
           type: i.ComponentType.BUTTON,
           id: T(r),
@@ -94,7 +95,7 @@ function I(e) {
             value: e.value,
             default: e.default,
             description: e.description,
-            emoji: null != e.emoji ? d(e.emoji, h) : void 0
+            emoji: null != e.emoji ? d(e.emoji, m) : void 0
           })), placeholder: null !== (a = t.placeholder) && void 0 !== a ? a : u.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values
         };
       case i.ComponentType.INPUT_TEXT:
@@ -128,6 +129,10 @@ function I(e) {
             description: e.description,
             spoiler: e.spoiler
           }))
+        };
+      case i.ComponentType.SEPARATOR:
+        return {
+          type: i.ComponentType.SEPARATOR, id: T(r), divider: null === (h = t.divider) || void 0 === h || h, spacing: null !== (A = t.spacing) && void 0 !== A ? A : i.SeparatorSpacingSize.SMALL
         };
       default:
         return null
