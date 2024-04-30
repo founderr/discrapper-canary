@@ -31,8 +31,8 @@ var i, r = n("735250"),
   C = n("51144"),
   g = n("508688"),
   L = n("286908"),
-  D = n("377087"),
-  v = n("981631"),
+  v = n("377087"),
+  D = n("981631"),
   M = n("185923"),
   y = n("689938"),
   P = n("580384");
@@ -273,7 +273,7 @@ U(k, "Generic", class e extends B {
     let {
       channel: e,
       category: t
-    } = this.props, n = e.type === v.ChannelTypes.GUILD_CATEGORY ? L.default : (0, S.getChannelIconComponent)(e);
+    } = this.props, n = e.type === D.ChannelTypes.GUILD_CATEGORY ? L.default : (0, S.getChannelIconComponent)(e);
     return (0, r.jsxs)(g.AutocompleteRowContent, {
       children: [null != n && (0, r.jsx)(g.AutocompleteRowIcon, {
         children: (0, r.jsx)(n, {
@@ -295,7 +295,7 @@ U(k, "Generic", class e extends B {
     } = this.props;
     return (0, r.jsxs)(g.AutocompleteRowContent, {
       children: [(0, r.jsx)(g.AutocompleteRowIcon, {
-        children: (0, r.jsx)(D.default, {
+        children: (0, r.jsx)(v.default, {
           className: P.icon,
           foreground: P.iconForeground
         })
@@ -337,14 +337,14 @@ U(k, "Generic", class e extends B {
       emoji: e,
       sentinel: t,
       guild: n
-    } = this.props, i = null != e.id ? (0, r.jsx)("img", {
+    } = this.props, i = null != e.id || "" !== e.url ? (0, r.jsx)("img", {
       alt: "",
       className: P.emojiImage,
-      src: R.default.getEmojiURL({
+      src: null != e.id ? R.default.getEmojiURL({
         id: e.id,
         animated: e.animated,
         size: M.EMOJI_URL_BASE_SIZE
-      })
+      }) : e.url
     }) : (0, r.jsx)("span", {
       className: P.emojiRaw,
       children: e.surrogates
