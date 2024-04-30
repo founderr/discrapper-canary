@@ -38,43 +38,45 @@ async function C(e, t) {
 function m(e) {
   var t;
   let {
-    quest: a,
-    useReducedMotion: l
-  } = e, r = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), o = s.useRef(null), [_, m] = s.useState(!1), S = s.useMemo(() => {
-    if (null == a) return null;
-    let e = (0, f.hexToRgb)(a.config.colors.primary),
+    animationClassName: a,
+    className: l,
+    quest: r,
+    useReducedMotion: o
+  } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), m = s.useRef(null), [S, p] = s.useState(!1), I = s.useMemo(() => {
+    if (null == r) return null;
+    let e = (0, f.hexToRgb)(r.config.colors.primary),
       t = {
         r: e.r / 255,
         g: e.g / 255,
         b: e.b / 255
       },
-      n = h.reduce((e, a) => [...e, a, t.r, t.g, t.b], []);
-    return C(a.id, n)
-  }, [a]), p = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, I = !l && r;
+      a = h.reduce((e, a) => [...e, a, t.r, t.g, t.b], []);
+    return C(r.id, a)
+  }, [r]), T = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = !o && _;
   s.useEffect(() => {
     var e, t, a, n;
-    r ? I && (null === (n = o.current) || void 0 === n || null === (a = n.animation) || void 0 === a || a.play()) : null === (t = o.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
-  }, [I, r]);
-  let T = s.useCallback(() => {
-    m(!0)
+    _ ? g && (null === (n = m.current) || void 0 === n || null === (a = n.animation) || void 0 === a || a.play()) : null === (t = m.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
+  }, [g, _]);
+  let A = s.useCallback(() => {
+    p(!0)
   }, []);
-  return null == S || p ? (0, n.jsx)("div", {
+  return null == I || T ? (0, n.jsx)("div", {
     className: E.backgroundFallback,
     style: {
-      backgroundImage: "linear-gradient(90deg, ".concat(a.config.colors.primary, ", ").concat(a.config.colors.secondary, ")")
+      backgroundImage: "linear-gradient(90deg, ".concat(r.config.colors.primary, ", ").concat(r.config.colors.secondary, ")")
     }
   }) : (0, n.jsx)("div", {
-    className: E.lottieAnimationBackgroundWrapper,
+    className: i()(E.lottieAnimationBackgroundWrapper, l),
     children: (0, n.jsx)(c.default, {
-      ref: o,
-      onComplete: T,
-      importData: () => S,
-      shouldAnimate: !_ && I,
-      className: i()(E.lottieAnimation, E.lottieAnimationBackground),
+      ref: m,
+      onComplete: A,
+      importData: () => I,
+      shouldAnimate: !S && g,
+      className: i()(E.lottieAnimation, E.lottieAnimationBackground, a),
       loop: 0,
       rendererSettings: {
         preserveAspectRatio: "none"
       }
-    }, a.config.colors.primary)
+    }, r.config.colors.primary)
   })
 }
