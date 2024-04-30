@@ -32,12 +32,10 @@ let R = {
 
 function O(e) {
   let {
-    children: t,
-    animatedStyle: a
+    children: t
   } = e;
   return (0, n.jsxs)(l.animated.div, {
     className: N.clanEnvelope,
-    style: a,
     children: [(0, n.jsx)("div", {
       className: N.clanEnvelopeTop,
       children: (0, n.jsx)("img", {
@@ -248,15 +246,18 @@ t.default = s.memo(function(e) {
           clan: T.FAKE_DISCOVERY_UPSELL_CLANS["1"],
           className: N.clanCardInnerLeft
         })
-      }), null != L && (0, n.jsx)(O, {
+      }), null != L && (0, n.jsx)(l.animated.div, {
+        className: N.clanEnvelope,
         style: U,
-        children: (0, n.jsx)("div", {
-          className: N.clanCardCenterContainer,
-          children: (0, n.jsx)(l.animated.div, {
-            style: j,
-            children: (0, n.jsx)(C.ClanDiscoveryCardView, {
-              clan: L,
-              className: N.clanCardCenter
+        children: (0, n.jsx)(O, {
+          children: (0, n.jsx)("div", {
+            className: N.clanCardCenterContainer,
+            children: (0, n.jsx)(l.animated.div, {
+              style: j,
+              children: (0, n.jsx)(C.ClanDiscoveryCardView, {
+                clan: L,
+                className: N.clanCardCenter
+              })
             })
           })
         })
