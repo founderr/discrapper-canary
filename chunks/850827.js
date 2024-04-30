@@ -26,8 +26,8 @@ var r = n("120356"),
   C = n("276149"),
   g = n("636245"),
   L = n("697761"),
-  D = n("611459"),
-  v = n("544671"),
+  v = n("611459"),
+  D = n("544671"),
   M = n("757182"),
   y = n("910424"),
   P = n("981631"),
@@ -54,12 +54,13 @@ t.default = (0, _.default)(e => {
     }),
     j = V === h.Types.PROFILE || V === h.Types.PROFILE_V2 || V === h.Types.SIMPLIFIED_PROFILE,
     W = V === h.Types.STREAM_PREVIEW || null != a,
-    K = (0, A.default)(n),
-    z = (0, E.isStageActivity)(n),
+    K = V === h.Types.SIMPLIFIED_PROFILE || V === h.Types.BITE_SIZE_POPOUT,
+    z = (0, A.default)(n),
+    Z = (0, E.isStageActivity)(n),
     X = j ? S.default.Align.END : S.default.Align.STRETCH,
-    Q = K || W ? S.default.Direction.HORIZONTAL : S.default.Direction.VERTICAL,
+    Q = z || W ? S.default.Direction.HORIZONTAL : S.default.Direction.VERTICAL,
     q = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
-    Z = (0, u.useStateFromStores)([f.default, I.default], () => {
+    J = (0, u.useStateFromStores)([f.default, I.default], () => {
       var e;
       return q ? I.default.getChannel(null === (e = f.default.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
     });
@@ -73,26 +74,27 @@ t.default = (0, _.default)(e => {
     color: B,
     platform: c.default.get(P.PlatformTypes.PLAYSTATION)
   }, "ConnectPlatformActivityButton")];
-  else if (K) {
-    let e = (0, i.jsx)(v.default, {
-      activity: n,
-      user: r,
-      color: B,
-      look: k,
-      guildId: b,
-      channelId: G,
-      source: w
-    }, "spotify-activity-sync-button");
-    t = [(0, i.jsx)(D.default, {
-      activity: n,
-      user: r,
-      color: B,
-      look: k,
-      guildId: b,
-      channelId: G,
-      source: w
-    }, "spotify-activity-play-button"), e]
-  } else if (z) {
+  else if (z) {
+    let e = (0, i.jsx)(D.default, {
+        activity: n,
+        user: r,
+        color: B,
+        look: k,
+        guildId: b,
+        channelId: G,
+        source: w
+      }, "spotify-activity-sync-button"),
+      s = (0, i.jsx)(v.default, {
+        activity: n,
+        user: r,
+        color: B,
+        look: k,
+        guildId: b,
+        channelId: G,
+        source: w
+      }, "spotify-activity-play-button");
+    t = K ? [e, s] : [s, e]
+  } else if (Z) {
     let e = (0, E.unpackStageChannelParty)(n);
     null != e && (t = [(0, i.jsx)(g.default, {
       guildId: e.guildId,
@@ -107,10 +109,10 @@ t.default = (0, _.default)(e => {
     look: k,
     applicationStream: a
   }, "watch-button")];
-  else if (q && null != Z) t = [(0, i.jsx)(C.default, {
+  else if (q && null != J) t = [(0, i.jsx)(C.default, {
     color: B,
     look: k,
-    hangStatusChannel: Z
+    hangStatusChannel: J
   }, "hang-status-button")];
   else {
     let e = (0, i.jsx)(M.default, {
@@ -142,13 +144,13 @@ t.default = (0, _.default)(e => {
     if (null == s && null == a && null == e && null == o) return null;
     t = [s, a, e, o]
   }
-  let J = Q === S.default.Direction.VERTICAL;
+  let $ = Q === S.default.Direction.VERTICAL;
   return (0, i.jsx)(S.default, {
     grow: 0,
     align: X,
     direction: Q,
-    wrap: J ? S.default.Wrap.WRAP : S.default.Wrap.NO_WRAP,
-    className: s()(_, U.buttonsWrapper, J ? U.vertical : U.horizontal),
+    wrap: $ ? S.default.Wrap.WRAP : S.default.Wrap.NO_WRAP,
+    className: s()(_, U.buttonsWrapper, $ ? U.vertical : U.horizontal),
     onClick: function(e) {
       (0, l.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == x || x())
     },
