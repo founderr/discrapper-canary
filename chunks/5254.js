@@ -19,8 +19,7 @@ function m(e) {
     name: null === (t = o().first(e.reasons)) || void 0 === t ? void 0 : t.name,
     user: new c.default(e.suggested_user),
     mutualFriendsCount: e.mutual_friends_count,
-    contactNames: a,
-    isUnseen: !e.is_viewed
+    contactNames: a
   }
 }
 class S extends(n = u.default.Store) {

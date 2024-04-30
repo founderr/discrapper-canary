@@ -7,15 +7,16 @@ var a = s("735250"),
   l = s("236471"),
   o = s("481060"),
   u = s("410154"),
-  d = s("846363"),
-  c = s("314684"),
-  _ = s("565626"),
-  E = s("32173"),
-  T = s("391110"),
-  I = s("75077"),
-  R = s("320319"),
-  f = s("293908");
-let S = e => {
+  d = s("915296"),
+  c = s("846363"),
+  _ = s("314684"),
+  E = s("565626"),
+  T = s("32173"),
+  I = s("391110"),
+  R = s("75077"),
+  f = s("320319"),
+  S = s("293908");
+let m = e => {
   let {
     showAllPerksButton: t,
     leftAlignHeaders: s,
@@ -24,19 +25,19 @@ let S = e => {
   } = e, n = (0, a.jsx)(o.Heading, {
     variant: "heading-xxl/extrabold",
     color: "header-primary",
-    className: null != i ? i : f.heading,
+    className: null != i ? i : S.heading,
     children: r
   });
   return null == t ? n : s ? (0, a.jsxs)("div", {
-    className: f.sectionHeader,
+    className: S.sectionHeader,
     children: [n, null != t && (0, a.jsx)("div", {
-      className: f.showAllPerksButton,
+      className: S.showAllPerksButton,
       children: t
     })]
   }) : (0, a.jsx)("div", {
-    className: f.container,
+    className: S.container,
     children: (0, a.jsx)("div", {
-      className: f.sectionHeaderSeeAll,
+      className: S.sectionHeaderSeeAll,
       children: n
     })
   })
@@ -45,78 +46,90 @@ t.default = e => {
   var t;
   let {
     className: s,
-    variant: i = T.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY,
-    noBackground: m = !1,
-    leftAlignHeaders: A = !1,
-    showAllPerksButton: N,
-    headerClassname: p,
-    isFullScreen: g = !0
-  } = e, C = r.useRef(null), P = (0, c.useFreeBoostUserTenureReward)(), O = (0, _.useShouldScrollToWhatsNew)(P), M = (0, u.default)("perks-discoverability"), h = (0, d.useMarketingOptimizationExperiment)({
+    variant: i = I.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY,
+    noBackground: A = !1,
+    leftAlignHeaders: N = !1,
+    showAllPerksButton: p,
+    headerClassname: g,
+    isFullScreen: C = !0
+  } = e, P = r.useRef(null), O = (0, _.useFreeBoostUserTenureReward)(), M = (0, E.useShouldScrollToWhatsNew)(O), h = (0, u.default)("perks-discoverability"), L = (0, c.useMarketingOptimizationExperiment)({
     autoTrackExposure: !1
   });
-  (0, _.useClearNewBadge)();
-  let L = i === T.PerksDiscoverabilityCardSection.WHATS_NEW,
-    x = (0, c.useClearTenureBadge)();
+  (0, E.useClearNewBadge)();
+  let x = (0, d.useGetMarketingPageNonSubPerkTileOrderExperiment)({
+      location: I.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY
+    }),
+    v = i === I.PerksDiscoverabilityCardSection.WHATS_NEW,
+    b = (0, _.useClearTenureBadge)();
   r.useEffect(() => {
-    L && !O && x()
-  }, [x, L, O]), r.useEffect(() => {
-    let e = C.current;
-    if (null == e || !O || !L) return;
+    v && !M && b()
+  }, [b, v, M]), r.useEffect(() => {
+    let e = P.current;
+    if (null == e || !M || !v) return;
     let t = requestAnimationFrame(() => {
       e.scrollIntoView({
         behavior: "smooth"
-      }), L && x()
+      }), v && b()
     });
     return () => {
-      cancelAnimationFrame(t), L && x()
+      cancelAnimationFrame(t), v && b()
     }
-  }, [C, O, L, x]);
-  let v = (0, I.usePerksDiscoverabilityStrings)(L),
-    b = (0, E.default)(),
-    D = (0, I.getFilteredPerksDiscoverabilityCards)(b, i, M, g, null == P ? void 0 : P.showCard),
-    U = D.some(e => null != e.pillText),
-    [j, y] = r.useState(null),
-    B = r.useRef(new l.Environment);
+  }, [P, M, v, b]);
+  let D = (0, R.usePerksDiscoverabilityStrings)(v),
+    U = (0, T.default)(),
+    j = (0, R.useIsPremiumSubscriber)(),
+    y = (0, R.getFilteredPerksDiscoverabilityCards)({
+      perksCards: U,
+      variant: i,
+      shopMarketingVariation: h,
+      isFullScreen: C,
+      showTenureCard: null == O ? void 0 : O.showCard,
+      tileOrderVariant: x,
+      isPremiumSubscriber: j
+    }),
+    B = y.some(e => null != e.pillText),
+    [G, k] = r.useState(null),
+    H = r.useRef(new l.Environment);
   return (0, a.jsxs)(a.Fragment, {
-    children: [(null == b ? void 0 : null === (t = b.freeBoost) || void 0 === t ? void 0 : t.name) === E.PerksDiscoverabilityCardTypes.FREE_BOOST && (0, a.jsx)(l.ConfettiCanvas, {
-      ref: y,
-      className: f.confettiCanvas,
-      environment: B.current
+    children: [(null == U ? void 0 : null === (t = U.freeBoost) || void 0 === t ? void 0 : t.name) === T.PerksDiscoverabilityCardTypes.FREE_BOOST && (0, a.jsx)(l.ConfettiCanvas, {
+      ref: k,
+      className: S.confettiCanvas,
+      environment: H.current
     }), (0, a.jsxs)("div", {
-      ref: C,
-      className: n()(f.section, {
-        [f.centerAlignSection]: !A,
-        [f.leftAlignSection]: A
+      ref: P,
+      className: n()(S.section, {
+        [S.centerAlignSection]: !N,
+        [S.leftAlignSection]: N
       }, s),
-      children: [(0, a.jsx)(S, {
-        showAllPerksButton: N,
-        leftAlignHeaders: A,
-        title: v.title,
-        headerClassname: p
-      }), !h && (0, a.jsx)(o.Text, {
+      children: [(0, a.jsx)(m, {
+        showAllPerksButton: p,
+        leftAlignHeaders: N,
+        title: D.title,
+        headerClassname: g
+      }), !L && (0, a.jsx)(o.Text, {
         variant: "text-lg/normal",
         color: "header-primary",
-        className: n()(f.subtitle, {
-          [f.subtitle]: null == N || A,
-          [f.subtitleWithButton]: null != N && !A,
-          [f.fullWidth]: L || A,
-          [f.moreSubtitleMargin]: U,
-          [f.leftAlignSubtitle]: A,
-          [f.centerAlignSubtitle]: !A
+        className: n()(S.subtitle, {
+          [S.subtitle]: null == p || N,
+          [S.subtitleWithButton]: null != p && !N,
+          [S.fullWidth]: v || N,
+          [S.moreSubtitleMargin]: B,
+          [S.leftAlignSubtitle]: N,
+          [S.centerAlignSubtitle]: !N
         }),
-        children: v.subtitle
-      }), !A && null != N && (0, a.jsx)("div", {
-        className: n()(f.showAllPerksButtonCenter),
-        children: N
+        children: D.subtitle
+      }), !N && null != p && (0, a.jsx)("div", {
+        className: n()(S.showAllPerksButtonCenter),
+        children: p
       }), (0, a.jsx)("div", {
         className: n()({
-          [f.cardContainer]: g,
-          [f.cardContainerNarrowWidth]: !g
+          [S.cardContainer]: C,
+          [S.cardContainerNarrowWidth]: !C
         }),
-        children: D.map((e, t) => (0, a.jsx)(R.default, {
-          confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? j : void 0,
+        children: y.map((e, t) => (0, a.jsx)(f.default, {
+          confettiCanvas: e.name === T.PerksDiscoverabilityCardTypes.FREE_BOOST ? G : void 0,
           ...e,
-          forceShadow: m
+          forceShadow: A
         }, "".concat(e.name, "_").concat(t)))
       })]
     })]

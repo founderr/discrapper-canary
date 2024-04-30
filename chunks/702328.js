@@ -332,7 +332,8 @@ t.default = e => {
     }), (en === V.PremiumTypes.TIER_2 || null == en) && (0, a.jsx)(K.default, {
       previousComponent: w.NitroLandingPages.MARKETING,
       isAllPerksVisible: eT,
-      setIsAllPerksVisible: eI
+      setIsAllPerksVisible: eI,
+      isFullScreen: s
     })]
   }) : eC
 }
