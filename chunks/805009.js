@@ -151,7 +151,6 @@ class B extends(a = s.Component) {
     }) : n ? null : (0, l.jsx)(l.Fragment, {
       children: (0, l.jsx)(g.default, {
         ...f,
-        fadeClassName: F.fade,
         children: c
       })
     })
