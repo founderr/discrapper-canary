@@ -163,7 +163,7 @@ function X(e) {
       className: i()(T, {
         [K.message]: !0,
         [K.cozyMessage]: !_,
-        [K.mentioned]: r.mentioned && !(0, M.default)(r),
+        [K.mentioned]: r.mentioned,
         [K.ephemeral]: (0, N.hasFlag)(r.flags, Y.MessageFlags.EPHEMERAL),
         [K.systemMessage]: (0, M.default)(r),
         [K.groupStart]: r.id === I || r.type === Y.MessageTypes.REPLY,
@@ -315,7 +315,7 @@ t.default = l.memo(function(e) {
           className: i()(Q, {
             [K.message]: !0,
             [K.cozyMessage]: !X,
-            [K.mentioned]: g.mentioned && !(0, M.default)(g),
+            [K.mentioned]: g.mentioned,
             [K.ephemeral]: (0, N.hasFlag)(g.flags, Y.MessageFlags.EPHEMERAL),
             [K.systemMessage]: (0, M.default)(g),
             [K.groupStart]: !ee && (eH || g.type === Y.MessageTypes.REPLY),
