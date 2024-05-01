@@ -7,32 +7,34 @@ var n = a("735250"),
   r = a("143927"),
   o = a("597312"),
   u = a("780384"),
-  d = a("792125"),
-  c = a("769727"),
-  f = a("207796"),
-  E = a("497189"),
-  h = a("304231"),
-  _ = a("526282"),
-  C = a("802001"),
-  m = a("559469"),
-  S = a("231338"),
-  p = a("495257");
+  d = a("626135"),
+  c = a("792125"),
+  f = a("769727"),
+  E = a("207796"),
+  h = a("497189"),
+  _ = a("304231"),
+  C = a("526282"),
+  m = a("802001"),
+  S = a("559469"),
+  p = a("981631"),
+  I = a("231338"),
+  T = a("495257");
 
-function I(e) {
+function g(e) {
   let {
     children: t,
     selectedGame: a,
     className: l
   } = e, r = s.useMemo(() => {
     switch (a) {
-      case f.ClanDiscoveryGame.GENSHIN:
-        return p.genshinBackgroundImage;
-      case f.ClanDiscoveryGame.VALORANT:
-        return p.valorantBackgroundImage
+      case E.ClanDiscoveryGame.GENSHIN:
+        return T.genshinBackgroundImage;
+      case E.ClanDiscoveryGame.VALORANT:
+        return T.valorantBackgroundImage
     }
-  }, [a]), o = (0, d.getThemeClass)(S.ThemeTypes.DARK);
+  }, [a]), o = (0, c.getThemeClass)(I.ThemeTypes.DARK);
   return (0, n.jsx)(u.ThemeContextProvider, {
-    theme: S.ThemeTypes.DARK,
+    theme: I.ThemeTypes.DARK,
     children: (0, n.jsx)("div", {
       className: i()(r, l, o),
       children: t
@@ -40,31 +42,31 @@ function I(e) {
   })
 }
 
-function T() {
-  let e = (0, f.useClanDiscoveryUIStore)(e => e.game, r.default),
-    [t, a] = s.useState(m.ClanDiscoveryUserScreens.USER_UPSELL),
+function A() {
+  let e = (0, E.useClanDiscoveryUIStore)(e => e.game, r.default),
+    [t, a] = s.useState(S.ClanDiscoveryUserScreens.USER_UPSELL),
     l = s.useCallback(() => {
-      a(m.ClanDiscoveryUserScreens.USER_ONBOARDING)
+      d.default.track(p.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_CLICKED), a(S.ClanDiscoveryUserScreens.USER_ONBOARDING)
     }, [a]);
   switch (t) {
-    case m.ClanDiscoveryUserScreens.USER_UPSELL:
+    case S.ClanDiscoveryUserScreens.USER_UPSELL:
       return (0, n.jsx)(o.ScrollerThin, {
-        className: p.upsellScroller,
+        className: T.upsellScroller,
         fade: !0,
-        children: (0, n.jsx)(I, {
+        children: (0, n.jsx)(g, {
           selectedGame: e,
-          className: p.userUpsell,
-          children: (0, n.jsx)(_.default, {
+          className: T.userUpsell,
+          children: (0, n.jsx)(C.default, {
             selectedGame: e,
             onClick: l
           })
         })
       });
-    case m.ClanDiscoveryUserScreens.USER_ONBOARDING:
-      return (0, n.jsx)(I, {
+    case S.ClanDiscoveryUserScreens.USER_ONBOARDING:
+      return (0, n.jsx)(g, {
         selectedGame: e,
-        className: p.userOnboarding,
-        children: (0, n.jsx)(h.default, {
+        className: T.userOnboarding,
+        children: (0, n.jsx)(_.default, {
           selectedGame: e,
           setScreen: a
         })
@@ -72,31 +74,31 @@ function T() {
   }
 }
 
-function g(e) {
+function N(e) {
   let {
     eligibleGuilds: t
-  } = e, a = (0, f.useClanDiscoveryUIStore)(e => e.game, r.default);
+  } = e, a = (0, E.useClanDiscoveryUIStore)(e => e.game, r.default);
   return (0, n.jsxs)(o.ScrollerThin, {
-    className: p.upsellScroller,
+    className: T.upsellScroller,
     fade: !0,
-    children: [(0, n.jsx)(I, {
+    children: [(0, n.jsx)(g, {
       selectedGame: a,
-      className: p.adminUpsell,
-      children: (0, n.jsx)(E.default, {
+      className: T.adminUpsell,
+      children: (0, n.jsx)(h.default, {
         selectedGame: a,
         eligibleGuilds: t
       })
-    }), (0, n.jsx)(c.ClanDiscoveryTopPicks, {
+    }), (0, n.jsx)(f.ClanDiscoveryTopPicks, {
       limit: 10
     })]
   })
 }
 t.default = s.memo(function() {
-  let e = (0, C.useGuildsEligibleForClanConversion)();
+  let e = (0, m.useGuildsEligibleForClanConversion)();
   return (0, n.jsx)("div", {
-    className: p.container,
-    children: 0 !== e.length ? (0, n.jsx)(g, {
+    className: T.container,
+    children: 0 !== e.length ? (0, n.jsx)(N, {
       eligibleGuilds: e
-    }) : (0, n.jsx)(T, {})
+    }) : (0, n.jsx)(A, {})
   })
 })

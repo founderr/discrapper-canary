@@ -3,75 +3,81 @@ a.r(t), a("47120");
 var n = a("735250"),
   s = a("470079"),
   l = a("481060"),
-  i = a("231467"),
-  r = a("207796"),
-  o = a("436137"),
-  u = a("559469"),
-  d = a("689938"),
-  c = a("720395");
+  i = a("626135"),
+  r = a("231467"),
+  o = a("207796"),
+  u = a("436137"),
+  d = a("559469"),
+  c = a("981631"),
+  f = a("689938"),
+  E = a("720395");
 t.default = s.memo(function(e) {
   let {
     selectedGame: t,
     onClick: a
-  } = e, [f, E] = s.useMemo(() => {
+  } = e;
+  s.useEffect(() => {
+    i.default.track(c.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_VIEWED)
+  }, []);
+  let [h, _] = s.useMemo(() => {
     switch (t) {
-      case r.ClanDiscoveryGame.GENSHIN:
-        return [d.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_TITLE, d.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE];
-      case r.ClanDiscoveryGame.VALORANT:
-        return [d.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_TITLE, d.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE]
+      case o.ClanDiscoveryGame.GENSHIN:
+        return [f.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_TITLE, f.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE];
+      case o.ClanDiscoveryGame.VALORANT:
+        return [f.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_TITLE, f.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE]
     }
   }, [t]);
   return (0, n.jsxs)("div", {
-    className: c.upsellContainer,
+    className: E.upsellContainer,
     children: [(0, n.jsx)("div", {
-      className: c.cardsContainer,
+      className: E.cardsContainer,
       children: (0, n.jsxs)("div", {
-        className: c.cards,
+        className: E.cards,
         children: [(0, n.jsx)("div", {
-          className: c.clanCardOuterContainer,
-          children: (0, n.jsx)(i.ClanDiscoveryCardView, {
-            clan: u.FAKE_DISCOVERY_UPSELL_CLANS["0"],
-            className: c.clanCardOuterLeft
+          className: E.clanCardOuterContainer,
+          children: (0, n.jsx)(r.ClanDiscoveryCardView, {
+            clan: d.FAKE_DISCOVERY_UPSELL_CLANS["0"],
+            className: E.clanCardOuterLeft
           })
         }), (0, n.jsx)("div", {
-          className: c.clanCardInnerContainer,
-          children: (0, n.jsx)(i.ClanDiscoveryCardView, {
-            clan: u.FAKE_DISCOVERY_UPSELL_CLANS["1"],
-            className: c.clanCardInnerLeft
+          className: E.clanCardInnerContainer,
+          children: (0, n.jsx)(r.ClanDiscoveryCardView, {
+            clan: d.FAKE_DISCOVERY_UPSELL_CLANS["1"],
+            className: E.clanCardInnerLeft
           })
         }), (0, n.jsx)("div", {
-          className: c.clanCardCenterContainer,
-          children: (0, n.jsx)(i.ClanDiscoveryCardView, {
-            clan: u.FAKE_DISCOVERY_UPSELL_CLANS["4"],
-            className: c.clanCardCenter
+          className: E.clanCardCenterContainer,
+          children: (0, n.jsx)(r.ClanDiscoveryCardView, {
+            clan: d.FAKE_DISCOVERY_UPSELL_CLANS["4"],
+            className: E.clanCardCenter
           })
         }), (0, n.jsx)("div", {
-          className: c.clanCardInnerContainer,
-          children: (0, n.jsx)(i.ClanDiscoveryCardView, {
-            clan: u.FAKE_DISCOVERY_UPSELL_CLANS["2"],
-            className: c.clanCardInnerRight
+          className: E.clanCardInnerContainer,
+          children: (0, n.jsx)(r.ClanDiscoveryCardView, {
+            clan: d.FAKE_DISCOVERY_UPSELL_CLANS["2"],
+            className: E.clanCardInnerRight
           })
         }), (0, n.jsx)("div", {
-          className: c.clanCardOuterContainer,
-          children: (0, n.jsx)(i.ClanDiscoveryCardView, {
-            clan: u.FAKE_DISCOVERY_UPSELL_CLANS["3"],
-            className: c.clanCardOuterRight
+          className: E.clanCardOuterContainer,
+          children: (0, n.jsx)(r.ClanDiscoveryCardView, {
+            clan: d.FAKE_DISCOVERY_UPSELL_CLANS["3"],
+            className: E.clanCardOuterRight
           })
         })]
       })
     }), (0, n.jsxs)("div", {
-      className: c.upsellDetails,
+      className: E.upsellDetails,
       children: [(0, n.jsx)(l.Heading, {
-        className: c.upsellTitle,
+        className: E.upsellTitle,
         variant: "heading-xxl/semibold",
-        children: f
+        children: h
       }), (0, n.jsx)(l.Text, {
-        className: c.upsellSubtitle,
+        className: E.upsellSubtitle,
         variant: "text-md/medium",
-        children: E
-      }), (0, n.jsx)(o.default, {
+        children: _
+      }), (0, n.jsx)(u.default, {
         onClick: a,
-        children: d.default.Messages.CLAN_DISCOVERY_UPSELL_GET_STARTED
+        children: f.default.Messages.CLAN_DISCOVERY_UPSELL_GET_STARTED
       })]
     })]
   })
