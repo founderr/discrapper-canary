@@ -24,8 +24,8 @@ t.default = function(e) {
     imageMarginX: S,
     imageMarginTop: p,
     trackingSource: I,
-    undismissable: T,
-    onDismissed: g,
+    undismissable: g,
+    onDismissed: T,
     onClick: A,
     cta: N,
     ctaColor: v,
@@ -66,11 +66,11 @@ t.default = function(e) {
   let M = null != S ? "".concat(S, "px") : "16px";
   return (0, n.jsxs)("div", {
     className: h.container,
-    children: [!0 === T ? null : (0, n.jsx)(o.Clickable, {
+    children: [!0 === g ? null : (0, n.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
           notice_type: C
-        }), null == g || g()
+        }), null == T || T()
       },
       className: h.close,
       "aria-label": E.default.Messages.DISMISS,

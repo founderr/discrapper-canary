@@ -28,8 +28,8 @@ function p(e) {
     onChannelContextMenu: a,
     quest: p
   } = e, I = (0, C.useNowPlayingVisible)(), {
-    voiceChannels: T,
-    currentActivities: g,
+    voiceChannels: g,
+    currentActivities: T,
     partiedMembers: A,
     applicationStreams: N,
     guildContext: v
@@ -52,7 +52,7 @@ function p(e) {
   for (let {
       activity: e
     }
-    of(T.length > 0 && T.forEach(e => {
+    of(g.length > 0 && g.forEach(e => {
       let {
         members: t,
         channel: s,
@@ -103,7 +103,7 @@ function p(e) {
         s.default.selectVoiceChannel(t.channelId), (0, l.watchStreamAndTransitionToStream)(t)
       }
     }, "application-stream-".concat(t.ownerId)))
-  }), g.forEach((e, t) => {
+  }), T.forEach((e, t) => {
     var a, s, l, f, h, C, I, N, L;
     let {
       activity: O,
@@ -112,7 +112,7 @@ function p(e) {
       activityUser: x
     } = e;
     if (null == O || null == O.type) return null;
-    if (g.length > 1 && O.type === S.ActivityTypes.PLAYING && !(0, i.default)(O) && null != M) R((0, n.jsx)(_.default.GameSection, {
+    if (T.length > 1 && O.type === S.ActivityTypes.PLAYING && !(0, i.default)(O) && null != M) R((0, n.jsx)(_.default.GameSection, {
       icon: M.getIconURL(m.ICON_SIZE),
       name: M.name,
       partySize: {
@@ -124,7 +124,7 @@ function p(e) {
     }, "game-".concat(null !== (a = O.session_id) && void 0 !== a ? a : t, "-").concat(null !== (s = O.application_id) && void 0 !== s ? s : t)));
     else if ((0, r.default)(O)) {
       let e = new Set(P.map(e => e.id)),
-        t = null === (l = T.find(e => null != e)) || void 0 === l ? void 0 : l.channel;
+        t = null === (l = g.find(e => null != e)) || void 0 === l ? void 0 : l.channel;
       null != t && R((0, n.jsx)(_.default.EmbeddedActivitySection, {
         activity: O,
         participants: e,
@@ -136,7 +136,7 @@ function p(e) {
       getAssetImage: E.getAssetImage
     }, "rich-presence-".concat(null !== (f = O.session_id) && void 0 !== f ? f : t, "-").concat(x.id)));
     else if ((0, d.default)(O)) {
-      let e = T.length > 0 && T[0].members.length > 1,
+      let e = g.length > 0 && g[0].members.length > 1,
         a = P.length > 1;
       R((0, n.jsx)(_.default.TwitchSection, {
         guildId: null == v ? void 0 : v.id,

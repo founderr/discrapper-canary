@@ -22,8 +22,8 @@ var n = a("735250"),
   S = a("730647"),
   p = a("772021"),
   I = a("396828"),
-  T = a("475413"),
-  g = a("20967"),
+  g = a("475413"),
+  T = a("20967"),
   A = a("504762"),
   N = a("807152"),
   v = a("176505"),
@@ -47,8 +47,8 @@ function O(e) {
     }, []), s.useEffect(() => {
       j && !l.isMobile && (0, c.handleInaccessiblePage)(t, v.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
     }, [t, j]), l.isMobile && j) {
-    let e = null == a ? g.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : g.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
-    return (0, n.jsx)(g.GuildRoleSubscriptionsOverviewErrorPage, {
+    let e = null == a ? T.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : T.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
+    return (0, n.jsx)(T.GuildRoleSubscriptionsOverviewErrorPage, {
       errorType: e
     })
   }
@@ -71,7 +71,7 @@ function O(e) {
         className: R.scroller,
         children: (0, n.jsx)("div", {
           className: R.scrollerContent,
-          children: U ? (0, n.jsx)(r.Spinner, {}) : (0, n.jsx)(T.default, {
+          children: U ? (0, n.jsx)(r.Spinner, {}) : (0, n.jsx)(g.default, {
             guild: a
           })
         })

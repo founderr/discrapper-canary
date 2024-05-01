@@ -18,9 +18,9 @@ var n = a("735250"),
   S = a("559469"),
   p = a("981631"),
   I = a("231338"),
-  T = a("495257");
+  g = a("495257");
 
-function g(e) {
+function T(e) {
   let {
     children: t,
     selectedGame: a,
@@ -28,9 +28,9 @@ function g(e) {
   } = e, r = s.useMemo(() => {
     switch (a) {
       case E.ClanDiscoveryGame.GENSHIN:
-        return T.genshinBackgroundImage;
+        return g.genshinBackgroundImage;
       case E.ClanDiscoveryGame.VALORANT:
-        return T.valorantBackgroundImage
+        return g.valorantBackgroundImage
     }
   }, [a]), o = (0, c.getThemeClass)(I.ThemeTypes.DARK);
   return (0, n.jsx)(u.ThemeContextProvider, {
@@ -51,11 +51,11 @@ function A() {
   switch (t) {
     case S.ClanDiscoveryUserScreens.USER_UPSELL:
       return (0, n.jsx)(o.ScrollerThin, {
-        className: T.upsellScroller,
+        className: g.upsellScroller,
         fade: !0,
-        children: (0, n.jsx)(g, {
+        children: (0, n.jsx)(T, {
           selectedGame: e,
-          className: T.userUpsell,
+          className: g.userUpsell,
           children: (0, n.jsx)(C.default, {
             selectedGame: e,
             onClick: l
@@ -63,9 +63,9 @@ function A() {
         })
       });
     case S.ClanDiscoveryUserScreens.USER_ONBOARDING:
-      return (0, n.jsx)(g, {
+      return (0, n.jsx)(T, {
         selectedGame: e,
-        className: T.userOnboarding,
+        className: g.userOnboarding,
         children: (0, n.jsx)(_.default, {
           selectedGame: e,
           setScreen: a
@@ -79,11 +79,11 @@ function N(e) {
     eligibleGuilds: t
   } = e, a = (0, E.useClanDiscoveryUIStore)(e => e.game, r.default);
   return (0, n.jsxs)(o.ScrollerThin, {
-    className: T.upsellScroller,
+    className: g.upsellScroller,
     fade: !0,
-    children: [(0, n.jsx)(g, {
+    children: [(0, n.jsx)(T, {
       selectedGame: a,
-      className: T.adminUpsell,
+      className: g.adminUpsell,
       children: (0, n.jsx)(h.default, {
         selectedGame: a,
         eligibleGuilds: t
@@ -96,7 +96,7 @@ function N(e) {
 t.default = s.memo(function() {
   let e = (0, m.useGuildsEligibleForClanConversion)();
   return (0, n.jsx)("div", {
-    className: T.container,
+    className: g.container,
     children: 0 !== e.length ? (0, n.jsx)(N, {
       eligibleGuilds: e
     }) : (0, n.jsx)(A, {})

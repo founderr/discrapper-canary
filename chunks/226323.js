@@ -22,8 +22,8 @@ var n = a("735250"),
   S = a("314897"),
   p = a("131951"),
   I = a("836946"),
-  T = a("381238"),
-  g = a("255439"),
+  g = a("381238"),
+  T = a("255439"),
   A = a("729285"),
   N = a("150954"),
   v = a("51144"),
@@ -35,22 +35,22 @@ let M = {
   },
   P = {
     serverDeaf: {
-      icon: T.default,
+      icon: g.default,
       colorize: !0,
       getStatus: () => R.default.Messages.SERVER_DEAFENED
     },
     serverMute: {
-      icon: g.default,
+      icon: T.default,
       colorize: !0,
       getStatus: () => R.default.Messages.SERVER_MUTED
     },
     deaf: {
-      icon: T.default,
+      icon: g.default,
       colorize: !1,
       getStatus: () => R.default.Messages.VOICE_CHANNEL_DEAFENED
     },
     mute: {
-      icon: g.default,
+      icon: T.default,
       colorize: !1,
       getStatus: () => R.default.Messages.VOICE_CHANNEL_MUTED
     }
@@ -93,7 +93,7 @@ function y(e) {
     deaf: c,
     serverMute: S,
     serverDeaf: I
-  } = e, T = (0, r.useStateFromStores)([p.default], () => p.default.isLocalMute(o.id)), g = (0, h.default)({
+  } = e, g = (0, r.useStateFromStores)([p.default], () => p.default.isLocalMute(o.id)), T = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
   }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), y = null != u ? u : v.default.getName(o), {
@@ -118,7 +118,7 @@ function y(e) {
     deaf: c,
     serverMute: S,
     mute: d,
-    localMute: T
+    localMute: g
   })) && void 0 !== s ? s : {}, j = null != U ? R.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
     userName: y,
     status: U()
@@ -170,10 +170,10 @@ function y(e) {
         focusProps: M,
         children: (0, n.jsx)(_.default, {
           shakeLocation: L.ShakeLocation.VOICE_USER,
-          isShaking: g,
+          isShaking: T,
           children: (0, n.jsx)("div", {
             className: i()(O.avatar, {
-              [O.speaking]: g
+              [O.speaking]: T
             }),
             style: {
               backgroundImage: "url(".concat(N, ")")

@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("199104"),
   p = a("108427"),
   I = a("210887"),
-  T = a("974042"),
-  g = a("153124"),
+  g = a("974042"),
+  T = a("153124"),
   A = a("988951"),
   N = a("26290"),
   v = a("792125"),
@@ -58,10 +58,10 @@ t.default = function(e) {
     {
       section: D,
       pendingCount: b
-    } = (0, u.useStateFromStoresObject)([T.default], () => T.default.getState()),
+    } = (0, u.useStateFromStoresObject)([g.default], () => g.default.getState()),
     U = (0, u.useStateFromStoresObject)([_.default], () => _.default.getSuggestionCount()),
-    j = (0, g.useUID)(),
-    G = (0, g.useUID)();
+    j = (0, T.useUID)(),
+    G = (0, T.useUID)();
   return (0, n.jsxs)("main", {
     className: x.container,
     "aria-label": P.default.Messages.FRIENDS,

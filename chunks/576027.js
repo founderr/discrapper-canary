@@ -22,8 +22,8 @@ var n = a("688707"),
   S = a("918940"),
   p = a("265067"),
   I = a("881393"),
-  T = a("905534"),
-  g = a("273487"),
+  g = a("905534"),
+  T = a("273487"),
   A = a("543815");
 let N = {
   ...n.default,
@@ -41,9 +41,9 @@ let N = {
   ...m.default,
   ...S.default,
   ...I.default,
-  ...T.default,
-  ...A.default,
   ...g.default,
+  ...A.default,
+  ...T.default,
   ...h.default,
   ...p.default,
   ...s.default

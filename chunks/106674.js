@@ -22,8 +22,8 @@ var n = a("735250"),
   S = a("372662"),
   p = a("632184"),
   I = a("602623"),
-  T = a("51144"),
-  g = a("498058"),
+  g = a("51144"),
+  T = a("498058"),
   A = a("158631"),
   N = a("143614"),
   v = a("981631"),
@@ -60,7 +60,7 @@ function P(e) {
     applicationId: p,
     channelId: I,
     streamKey: P
-  } = a, [x, y] = s.useState(!1), D = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([p]), U = null !== (t = T.default.getGlobalName(D)) && void 0 !== t ? t : T.default.getUserTag(D), j = (0, N.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, I, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, A.default)(), B = (0, g.default)(I);
+  } = a, [x, y] = s.useState(!1), D = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([p]), U = null !== (t = g.default.getGlobalName(D)) && void 0 !== t ? t : g.default.getUserTag(D), j = (0, N.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, I, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, A.default)(), B = (0, T.default)(I);
   if (s.useEffect(() => {
       x && w === I && y(!1)
     }, [w, x, I]), null == D || null == U) return null;

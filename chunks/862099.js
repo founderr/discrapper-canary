@@ -26,8 +26,8 @@ var n, s, l = a("735250"),
   S = a("448206"),
   p = a("496675"),
   I = a("938475"),
-  T = a("808602"),
-  g = a("305878"),
+  g = a("808602"),
+  T = a("305878"),
   A = a("263704"),
   N = a("465670"),
   v = a("242315"),
@@ -170,7 +170,7 @@ function Q(e) {
       width: 16,
       height: 16,
       className: K.buttonIcon
-    }) : (0, l.jsx)(T.default, {
+    }) : (0, l.jsx)(g.default, {
       width: 16,
       height: 16,
       className: K.buttonIcon
@@ -231,7 +231,7 @@ function Z(e) {
       })]
     }), (0, l.jsxs)("div", {
       className: K.textBlock,
-      children: [(0, l.jsx)(g.default, {
+      children: [(0, l.jsx)(T.default, {
         className: K.stageIcon,
         width: 16,
         height: 16

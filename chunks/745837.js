@@ -24,11 +24,11 @@ var s = a("120356"),
   p = a("689938"),
   I = a("352653");
 
-function T(e) {
+function g(e) {
   (0, o.default)(S.GameSettingsTab.CLIPS), (0, _.dismissClipsUserEducation)(e)
 }
 
-function g() {
+function T() {
   let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(m.GlobalKeybindActions.SAVE_CLIP));
   if (null == e) return (0, n.jsx)(n.Fragment, {
     children: p.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
@@ -68,16 +68,16 @@ let A = {
     buttonColor: r.Button.Colors.BRAND,
     bodyCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => T(C.ClipsUserEducationType.Disabled),
+    ctaOnClick: () => g(C.ClipsUserEducationType.Disabled),
     containerClass: I.container
   },
   [C.ClipsUserEducationType.Enabled]: {
     textColor: "always-white",
     buttonLook: r.Button.Looks.INVERTED,
     buttonColor: r.Button.Colors.BRAND,
-    bodyCopy: () => (0, n.jsx)(g, {}),
+    bodyCopy: () => (0, n.jsx)(T, {}),
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => T(C.ClipsUserEducationType.Enabled),
+    ctaOnClick: () => g(C.ClipsUserEducationType.Enabled),
     containerClass: l()(I.container, I.containerEnabled)
   }
 };

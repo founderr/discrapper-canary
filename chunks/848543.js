@@ -22,8 +22,8 @@ var n = a("735250"),
   S = a("242291"),
   p = a("792165"),
   I = a("603074"),
-  T = a("981631"),
-  g = a("921944"),
+  g = a("981631"),
+  T = a("921944"),
   A = a("689938"),
   N = a("594078");
 
@@ -93,7 +93,7 @@ function v(e) {
         disabled: x,
         onClick: () => {
           var t, a;
-          null == a || a(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(g.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!y), F()
+          null == a || a(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(T.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!y), F()
         },
         onMouseEnter: t => {
           var a, n;
@@ -118,7 +118,7 @@ function v(e) {
     !x && D(!y)
   }, [x, y]);
   return (0, m.useComponentAction)({
-    event: T.ComponentActions.TOGGLE_SOUNDBOARD,
+    event: g.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W
   }), (0, n.jsx)(E.AnalyticsLocationProvider, {
     value: w,

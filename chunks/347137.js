@@ -40,10 +40,10 @@ t.default = function() {
   } = (0, i.useStateFromStoresObject)([d.default], () => ({
     currentCategoryId: d.default.getCurrentCategoryId(),
     isViewingSearchResults: d.default.getMostRecentQuery().length > 0
-  })), a = (0, i.useStateFromStores)([h.default], () => h.default.getClanDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), T = null == a ? void 0 : a.map(e => ({
+  })), a = (0, i.useStateFromStores)([h.default], () => h.default.getClanDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), g = null == a ? void 0 : a.map(e => ({
     ...e,
     icon: I(e.categoryId)
-  })), g = e => {
+  })), T = e => {
     (0, r.selectCategory)(e, !0), u.default.closeSidebar(), t && (0, r.clearSearch)()
   };
   return s.useEffect(() => {
@@ -61,19 +61,19 @@ t.default = function() {
           bottom: 1
         }
       },
-      onClick: () => g(m.CategoryId.Clans),
+      onClick: () => T(m.CategoryId.Clans),
       wrapContent: !0,
       selected: e === m.CategoryId.Clans,
       className: p.categoryItem,
       selectedClassName: p.selectedCategoryItem,
       innerClassName: p.itemInner
     }, "clan-discovery-home"), (0, n.jsx)(_.default, {
-      categories: T,
-      handleCategorySelect: g,
+      categories: g,
+      handleCategorySelect: T,
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t
     }), (0, n.jsx)(o.default, {
-      handleCategorySelect: g,
+      handleCategorySelect: T,
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t
     })]

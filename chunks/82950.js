@@ -26,8 +26,8 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       trackingSource: S,
       undismissable: p,
       onDismissed: I,
-      onClick: T,
-      cta: g,
+      onClick: g,
+      cta: T,
       ctaColor: A
     } = e;
     s.useEffect(() => {
@@ -37,7 +37,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       })
     }, [t.id, c]);
     let N = null;
-    "function" == typeof g ? N = g() : null != g && (N = (0, n.jsx)(r.Button, {
+    "function" == typeof T ? N = T() : null != T && (N = (0, n.jsx)(r.Button, {
       className: _.btn,
       size: r.Button.Sizes.SMALL,
       onClick: () => {
@@ -45,11 +45,11 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
           source: S,
           guild_id: t.id,
           notice_type: c
-        }), null == T || T()
+        }), null == g || g()
       },
       fullWidth: !0,
       color: A,
-      children: g
+      children: T
     }));
     let v = null != f ? "".concat(f, "px") : "16px";
     return (0, n.jsxs)("div", {

@@ -28,8 +28,8 @@ var n = a("735250"),
   S = a("610001"),
   p = a("78415"),
   I = a("1964"),
-  T = a("981631"),
-  g = a("815660"),
+  g = a("981631"),
+  T = a("815660"),
   A = a("689938");
 let N = "Email Verification",
   v = "PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY";
@@ -73,14 +73,14 @@ function L() {
           ...t
         })
       }, {
-        modalKey: g.PHONE_VERIFICATION_MODAL_KEY,
+        modalKey: T.PHONE_VERIFICATION_MODAL_KEY,
         Layer: p.default
       })
     };
   return s.useEffect(() => (E.default.disable(), () => {
     E.default.enable()
   }), []), s.useEffect(() => {
-    (null == M ? void 0 : M[0]) === T.VerificationTypes.PHONE && (null == L ? void 0 : L[0]) === T.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
+    (null == M ? void 0 : M[0]) === g.VerificationTypes.PHONE && (null == L ? void 0 : L[0]) === g.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(a.bind(a, "468026"));
@@ -100,7 +100,7 @@ function L() {
     captchaKey: R,
     onCaptchaVerify: e => {
       r.HTTP.post({
-        url: T.Endpoints.CAPTCHA,
+        url: g.Endpoints.CAPTCHA,
         body: {
           captcha_key: e
         },
@@ -111,7 +111,7 @@ function L() {
     },
     theme: t,
     onClick: e => {
-      e === T.VerificationTypes.EMAIL_OR_PHONE || e === T.VerificationTypes.EMAIL || e === T.VerificationTypes.REVERIFY_EMAIL ? P() : x()
+      e === g.VerificationTypes.EMAIL_OR_PHONE || e === g.VerificationTypes.EMAIL || e === g.VerificationTypes.REVERIFY_EMAIL ? P() : x()
     },
     onLogout: () => {
       (0, o.openModalLazy)(async () => {

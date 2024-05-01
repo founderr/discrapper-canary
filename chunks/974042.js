@@ -41,7 +41,7 @@ function I(e) {
   }
 }
 
-function T(e) {
+function g(e) {
   let t = [];
   return l()(f.default.memberOf(e)).map(E.default.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
     null != e && t.push(e)
@@ -50,7 +50,7 @@ function T(e) {
     mutualGuilds: t.slice(0, 5)
   }
 }
-class g extends u.default {
+class T extends u.default {
   get comparator() {
     var e, t, a, n, s;
     return [this.type, null !== (s = null !== (n = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : null === (a = this.user) || void 0 === a ? void 0 : null === (t = a.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : this.usernameLower]
@@ -61,21 +61,21 @@ class g extends u.default {
 }
 class A {
   reset() {
-    let e = l().map(_.default.getRelationships(), (e, t) => new g({
+    let e = l().map(_.default.getRelationships(), (e, t) => new T({
         key: t,
         type: e,
         nickname: _.default.getNickname(t),
         ...p(t),
         ...I(t),
-        ...T(t)
+        ...g(t)
       })),
-      t = l().map(d.default.getSuggestions(), e => new g({
+      t = l().map(d.default.getSuggestions(), e => new T({
         key: e.key,
         type: 99,
         nickname: e.name,
         ...p(e.key),
         ...I(e.key),
-        ...T(e.key)
+        ...g(e.key)
       }));
     return new A(l().concat(e, t))
   }

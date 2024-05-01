@@ -13,7 +13,7 @@ a.r(t), a.d(t, {
     return p
   },
   getCustomConfettiDisplayOptions: function() {
-    return T
+    return g
   }
 }), a("627341");
 var n, s, l, i, r = a("278074"),
@@ -72,4 +72,4 @@ let S = {
       }
     }
   },
-  T = e => (0, r.match)(e).with("1220513977683935373", () => I.SHY).with("1220432647453409384", () => I.SHY).with("1220432697718083614", () => I.SHY).otherwise(() => null)
+  g = e => (0, r.match)(e).with("1220513977683935373", () => I.SHY).with("1220432647453409384", () => I.SHY).with("1220432697718083614", () => I.SHY).otherwise(() => null)

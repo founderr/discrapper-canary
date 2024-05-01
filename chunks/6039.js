@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("390500"),
   p = a("200305"),
   I = a("981631"),
-  T = a("756286"),
-  g = a("689938"),
+  g = a("756286"),
+  T = a("689938"),
   A = a("321970");
 t.default = e => {
   var t;
@@ -27,7 +27,7 @@ t.default = e => {
   let {
     guildId: v,
     inviteCode: L
-  } = e, [R, O] = s.useState(T.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), x = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+  } = e, [R, O] = s.useState(g.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), x = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
     hasFetchedRequestToJoinGuilds: y,
     guildPreviewDisabled: D
   } = (0, l.useStateFromStoresObject)([C.default], () => ({
@@ -47,16 +47,16 @@ t.default = e => {
     }, j = () => {
       f.default.resetGuildJoinRequest(v)
     };
-  let G = (a = g.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
+  let G = (a = T.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
       name: null == D ? void 0 : D.toString()
     }), N = () => {
-      O(Math.max(R, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(I.Routes.ME)
+      O(Math.max(R, g.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(I.Routes.ME)
     }, () => {
       (0, i.openModal)(e => (0, n.jsx)(i.ConfirmModal, {
-        header: g.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
-        cancelText: g.default.Messages.NEVERMIND,
+        header: T.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
+        cancelText: T.default.Messages.NEVERMIND,
         onConfirm: N,
-        confirmText: g.default.Messages.YES_TEXT,
+        confirmText: T.default.Messages.YES_TEXT,
         confirmButtonColor: i.Button.Colors.RED,
         ...e,
         children: (0, n.jsx)(i.Text, {
@@ -91,9 +91,9 @@ t.default = e => {
               });
             case _.GuildJoinRequestApplicationStatuses.REJECTED:
               return (0, n.jsx)(m.default, {
-                reapplyText: g.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
+                reapplyText: T.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                 onReapply: j,
-                confirmText: g.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
+                confirmText: T.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
                 onWithdrawApplication: G,
                 rejectionReason: null == P ? void 0 : P.rejectionReason,
                 guild: D

@@ -22,12 +22,12 @@ t.default = function(e) {
     isExpansionAnimationComplete: S,
     quest: p,
     useReducedMotion: I
-  } = e, T = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = (null !== (s = null === (a = p.userStatus) || void 0 === a ? void 0 : a.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
+  } = e, g = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = (null !== (s = null === (a = p.userStatus) || void 0 === a ? void 0 : a.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
   return (0, n.jsxs)(i.animated.div, {
     "aria-hidden": m && S,
     className: l()(_, h.contentCollapsed, {
       [h.contentCollapsedExpanded]: m,
-      [h.contentCollapsedAccepted]: T
+      [h.contentCollapsedAccepted]: g
     }),
     style: {
       opacity: C.to({
@@ -40,14 +40,14 @@ t.default = function(e) {
       useReducedMotion: I
     }), (0, n.jsx)("div", {
       className: h.contentCollapsedWrapper,
-      children: T ? (0, n.jsxs)("div", {
+      children: g ? (0, n.jsxs)("div", {
         className: h.questProgressWrapper,
         children: [(0, n.jsx)(c.default, {
           className: h.questProgressRewardTile,
           quest: p,
           questContent: o.QuestContent.QUEST_BAR,
           autoplay: !1
-        }), g ? (0, n.jsx)(d.default, {
+        }), T ? (0, n.jsx)(d.default, {
           className: h.questProgressBar,
           quest: p
         }) : (0, n.jsx)(r.Text, {

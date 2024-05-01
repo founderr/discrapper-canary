@@ -22,11 +22,11 @@ t.default = e => {
     null != a && i.default.resolveInvite(a, "Hub").finally(() => p(!1))
   }, [a]);
   let I = (0, l.useStateFromStores)([u.default], () => null != a ? u.default.getInvite(a) : null),
-    T = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(t));
+    g = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(t));
   s.useEffect(() => {
-    null != T && (0, r.transitionTo)(E.Routes.CHANNEL(t))
-  }, [T, t]);
-  let g = s.useCallback(e => {
+    null != g && (0, r.transitionTo)(E.Routes.CHANNEL(t))
+  }, [g, t]);
+  let T = s.useCallback(e => {
       m(t => Math.max(t, e))
     }, []),
     A = (0, c.getArtForPath)();
@@ -37,7 +37,7 @@ t.default = e => {
       splash: A,
       waveState: C,
       showLogo: !1,
-      updateWaveState: g,
+      updateWaveState: T,
       children: [(0, n.jsx)("div", {
         className: _.dragRegion
       }), (0, n.jsx)("div", {

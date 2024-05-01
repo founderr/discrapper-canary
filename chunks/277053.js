@@ -13,8 +13,8 @@ var l, i, r, o, u = a("392711"),
   S = a("71080");
 let p = new Set,
   I = m.FormStates.CLOSED,
-  T = !1,
-  g = null,
+  g = !1,
+  T = null,
   A = null,
   N = null,
   v = null,
@@ -33,26 +33,26 @@ function M(e) {
 function P() {
   if (N = _.default.getChannel(), v = _.default.getCategory(), null == N) return !1;
   let e = N.getGuildId();
-  A = g = M(N), null == g[L] && (L = e), s = null != v, n = h.areChannelsLocked(N, v), R = null, T = !1, I = m.FormStates.CLOSED, p.clear()
+  A = T = M(N), null == T[L] && (L = e), s = null != v, n = h.areChannelsLocked(N, v), R = null, g = !1, I = m.FormStates.CLOSED, p.clear()
 }
 class x extends(l = c.default.Store) {
   initialize() {
     this.waitFor(_.default, C.default)
   }
   hasChanges() {
-    return T
+    return g
   }
   showNotice() {
     return this.hasChanges()
   }
   getPermissionOverwrite(e) {
-    return null == g ? void 0 : g[e]
+    return null == T ? void 0 : T[e]
   }
   get editedPermissionIds() {
     return Array.from(p)
   }
   get permissionOverwrites() {
-    return g
+    return T
   }
   get selectedOverwriteId() {
     return L
@@ -95,29 +95,29 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = x) ? Object.de
       id: t,
       allow: a,
       deny: s
-    } = e, l = null == g ? void 0 : g[t];
+    } = e, l = null == T ? void 0 : T[t];
     if (null == l || null == N) return !1;
     l = {
       ...l,
       allow: a,
       deny: s
-    }, g = {
-      ...g,
+    }, T = {
+      ...T,
       [t]: l
-    }, p.add(t), I = m.FormStates.OPEN, T = !d().isEqual(g, A), n = h.areChannelsLocked(N, v)
+    }, p.add(t), I = m.FormStates.OPEN, g = !d().isEqual(T, A), n = h.areChannelsLocked(N, v)
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {
     let {
       id: t
     } = e;
-    if (null != g && null != g[t]) L = t;
+    if (null != T && null != T[t]) L = t;
     else {
       if (null == N) return !1;
       R = t
     }
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    I = m.FormStates.CLOSED, g = null, A = null, N = null, v = null, T = !1, p.clear(), L = null, R = null
+    I = m.FormStates.CLOSED, T = null, A = null, N = null, v = null, g = !1, p.clear(), L = null, R = null
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -133,11 +133,11 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = x) ? Object.de
       A = M(N);
       let a = {};
       return p.forEach(e => {
-        null != g && (a[e] = g[e])
-      }), null == a[t] && null == N.permissionOverwrites[t] && (a[t] = h.makeEveryoneOverwrite(t)), null == (g = {
+        null != T && (a[e] = T[e])
+      }), null == a[t] && null == N.permissionOverwrites[t] && (a[t] = h.makeEveryoneOverwrite(t)), null == (T = {
         ...N.permissionOverwrites,
         ...a
-      })[L] ? L = t : null != R && null != g[R] && (L = R, R = null), n = h.areChannelsLocked(N, v), !0
+      })[L] ? L = t : null != R && null != T[R] && (L = R, R = null), n = h.areChannelsLocked(N, v), !0
     }(e.id) && (a = !0);
     return a
   },

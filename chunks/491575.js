@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("145604"),
   p = a("556766"),
   I = a("718813"),
-  T = a("981631"),
-  g = a("273535");
+  g = a("981631"),
+  T = a("273535");
 t.default = s.memo(function() {
   let e = s.useRef(null),
     t = s.useCallback(t => {
@@ -33,13 +33,13 @@ t.default = s.memo(function() {
       } = e;
       i()(null != s, "Shakeable is shaken when not mounted"), s.shake(a, n)
     }, []);
-  return s.useEffect(() => (c.default.setLayout(d.default), c.default.enable(), () => c.default.disable()), []), s.useEffect(() => (m.ComponentDispatch.subscribe(T.ComponentActions.SHAKE_APP, t), () => {
-    m.ComponentDispatch.unsubscribe(T.ComponentActions.SHAKE_APP, t)
+  return s.useEffect(() => (c.default.setLayout(d.default), c.default.enable(), () => c.default.disable()), []), s.useEffect(() => (m.ComponentDispatch.subscribe(g.ComponentActions.SHAKE_APP, t), () => {
+    m.ComponentDispatch.unsubscribe(g.ComponentActions.SHAKE_APP, t)
   }), [t]), (0, E.default)(), (0, n.jsxs)(r.Shakeable, {
     ref: e,
-    className: g.app,
+    className: T.app,
     children: [(0, n.jsx)(I.default, {
-      className: g.layers,
+      className: T.layers,
       children: (0, n.jsx)(o.default, {})
     }), (0, n.jsx)(h.default, {}), (0, n.jsx)(u.default, {}), (0, n.jsx)(S.default, {}), (0, n.jsx)(_.default, {}), (0, n.jsx)(r.DnDKeyboardHelpBar, {}), (0, n.jsx)(p.default, {})]
   })

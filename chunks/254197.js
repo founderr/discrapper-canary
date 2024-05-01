@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("977156"),
   p = a("685613"),
   I = a("340100"),
-  T = a("644646"),
-  g = a("78826"),
+  g = a("644646"),
+  T = a("78826"),
   A = a("670638"),
   N = a("667105"),
   v = a("46140"),
@@ -66,7 +66,7 @@ let O = s.forwardRef(function(e, t) {
         className: R.utils,
         children: [(0, n.jsxs)("div", {
           className: R.questAcceptedContentHeading,
-          children: [(0, n.jsx)(T.default, {
+          children: [(0, n.jsx)(g.default, {
             className: R.questProgressRewardTile,
             learnMoreStyle: "icon",
             quest: b,
@@ -162,7 +162,7 @@ let O = s.forwardRef(function(e, t) {
           })]
         }), (0, n.jsxs)("div", {
           className: R.details,
-          children: [(0, n.jsx)(T.default, {
+          children: [(0, n.jsx)(g.default, {
             className: R.rewardTile,
             learnMoreStyle: "text",
             quest: b,
@@ -191,7 +191,7 @@ let O = s.forwardRef(function(e, t) {
         })]
       }), (0, n.jsx)("div", {
         className: R.heroAssetWrapper,
-        children: k ? (0, n.jsx)(g.QuestsAsset, {
+        children: k ? (0, n.jsx)(T.QuestsAsset, {
           id: "QuestBarV2ContentExpanded_heroAnimated",
           children: e => (0, n.jsx)(c.default, {
             ref: e,
@@ -206,7 +206,7 @@ let O = s.forwardRef(function(e, t) {
               type: (0, m.getVideoAssetMimeType)(K)
             })
           })
-        }) : (0, n.jsx)(g.QuestsAsset, {
+        }) : (0, n.jsx)(T.QuestsAsset, {
           id: "QuestBarV2ContentExpanded_heroStatic",
           children: e => (0, n.jsx)("img", {
             ref: e,

@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("112724"),
   p = a("812206"),
   I = a("44315"),
-  T = a("210887"),
-  g = a("283595"),
+  g = a("210887"),
+  T = a("283595"),
   A = a("417363"),
   N = a("941128"),
   v = a("451478"),
@@ -643,18 +643,18 @@ function en(e, t, a, n) {
       branchId: r,
       state: u,
       application: o,
-      libraryApplication: g.default.getLibraryApplication(i, r),
+      libraryApplication: T.default.getLibraryApplication(i, r),
       finished: t,
       index: l
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, T.default, v.default], () => {
+t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, g.default, v.default], () => {
   let e = en(N.default.activeItems, !1, p.default, A.default);
   return {
     applications: [...e, ...en(N.default.finishedItems, !0, p.default, A.default)],
     paused: N.default.paused,
     isFocused: v.default.isFocused(),
-    theme: T.default.theme
+    theme: g.default.theme
   }
 })((0, m.default)(ea)))

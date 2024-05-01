@@ -17,8 +17,8 @@ var i = a("756647"),
   S = a("626135"),
   p = a("585483"),
   I = a("591759"),
-  T = a("998502"),
-  g = a("996106"),
+  g = a("998502"),
+  T = a("996106"),
   A = a("186901"),
   N = a("981631");
 
@@ -41,7 +41,7 @@ function v(e, t) {
       } = e, {
         invite: a
       } = await E.default.resolveInvite(t, "Desktop Modal");
-      if (null == a) throw new g.default({
+      if (null == a) throw new T.default({
         errorCode: N.RPCErrors.INVALID_INVITE
       }, "Invalid invite id: ".concat(t));
       return C.default.isAuthenticated() ? o.default.dispatch({
@@ -67,10 +67,10 @@ function v(e, t) {
       let {
         guildTemplate: n
       } = await h.default.resolveGuildTemplate(t);
-      if (null == n) throw new g.default({
+      if (null == n) throw new T.default({
         errorCode: N.RPCErrors.INVALID_GUILD_TEMPLATE
       }, "Invalid guild template id: ".concat(t));
-      return T.default.focus(), (0, r.openModalLazy)(async () => {
+      return g.default.focus(), (0, r.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([a.e("99387"), a.e("10778"), a.e("90424")]).then(a.bind(a, "766775"));
@@ -98,7 +98,7 @@ function v(e, t) {
             let {
               giftCode: s
             } = n;
-            T.default.focus(), S.default.track(N.AnalyticEvents.OPEN_MODAL, {
+            g.default.focus(), S.default.track(N.AnalyticEvents.OPEN_MODAL, {
               type: "gift_accept",
               location: N.DIRECT_ANALYTICS_LOCATION
             }), (0, r.openModalLazy)(async () => {
@@ -112,7 +112,7 @@ function v(e, t) {
             }), e({
               giftCode: s
             })
-          }).catch(() => n(new g.default({
+          }).catch(() => n(new T.default({
             errorCode: N.RPCErrors.INVALID_GIFT_CODE
           }, "Invalid gift code: ".concat(t))))
         })
@@ -128,7 +128,7 @@ function v(e, t) {
           params: a
         }
       } = e;
-      switch (T.default.focus(), t) {
+      switch (g.default.focus(), t) {
         case A.RPCDeepLinks.USER_SETTINGS:
           null != a && ((0, _.replaceWith)(N.Routes.SETTINGS(a.section, a.subsection)), v(a.fingerprint, "settings"));
           break;
@@ -167,7 +167,7 @@ function v(e, t) {
           fingerprint: a
         }
       } = e;
-      T.default.focus(null, !0), (0, d.handoffEnd)(t, a)
+      g.default.focus(null, !0), (0, d.handoffEnd)(t, a)
     }
   },
   [N.RPCCommands.CONNECTIONS_CALLBACK]: {

@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("976401"),
   p = a("333454"),
   I = a("864441"),
-  T = a("981631"),
-  g = a("689938"),
+  g = a("981631"),
+  T = a("689938"),
   A = a("846267");
 
 function N(e, t, a) {
@@ -45,11 +45,11 @@ class L extends s.PureComponent {
   renderTitle() {
     return (0, n.jsxs)("div", {
       children: [(0, n.jsx)(I.default, {
-        children: this.isHost() ? g.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
+        children: this.isHost() ? T.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
           count: this.props.party.length
-        }) : g.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
+        }) : T.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
       }), (0, n.jsx)(p.default, {
-        children: g.default.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
+        children: T.default.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
       })]
     })
   }
@@ -58,16 +58,16 @@ class L extends s.PureComponent {
       onStopListening: e
     } = this.props;
     return this.isHost() ? null : (0, n.jsx)(S.default, {
-      tooltipText: g.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
+      tooltipText: T.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
       onClick: e,
       icon: _.default
     })
   }
   renderHelpIcon() {
     return this.isHost() ? (0, n.jsx)(S.default, {
-      tooltipText: g.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
+      tooltipText: T.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
       onClick: () => {
-        window.open(m.default.getArticleURL(T.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
+        window.open(m.default.getArticleURL(g.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
       },
       icon: C.default
     }) : null
@@ -98,7 +98,7 @@ class L extends s.PureComponent {
         host: l,
         onUserContextMenu: r
       } = this.props;
-      return a = (null == l ? void 0 : l.id) === e.id ? g.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : g.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, n.jsx)(u.Popout, {
+      return a = (null == l ? void 0 : l.id) === e.id ? T.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : T.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, n.jsx)(u.Popout, {
         preload: () => (0, c.maybeFetchUserProfileForPopout)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => (o()(null != e, ""), (0, n.jsx)(f.default, {
           ...t,
@@ -136,7 +136,7 @@ class L extends s.PureComponent {
       return (0, n.jsx)(u.Popout, {
         renderPopout: s,
         children: a => (0, n.jsx)(u.Tooltip, {
-          text: g.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
+          text: T.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
           children: s => (0, n.jsx)("div", {
             className: i()(A.overflow, t),
             ...s,

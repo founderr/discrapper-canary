@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("207796"),
   p = a("436137"),
   I = a("316553"),
-  T = a("273254"),
-  g = a("559469"),
+  g = a("273254"),
+  T = a("559469"),
   A = a("981631"),
   N = a("308083"),
   v = a("689938"),
@@ -154,7 +154,7 @@ t.default = s.memo(function(e) {
     }, {
       layerKey: N.CLAN_SETUP_MODAL_LAYER_KEY
     })
-  }, [i, S]), R = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = (0, T.useFakeDiscoveryClanForGuild)({
+  }, [i, S]), R = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = (0, g.useFakeDiscoveryClanForGuild)({
     guild: o,
     selectedGame: a
   }), x = (0, l.useSpring)({
@@ -248,7 +248,7 @@ t.default = s.memo(function(e) {
           ...x
         },
         children: (0, n.jsx)(m.ClanDiscoveryCardView, {
-          clan: g.FAKE_DISCOVERY_UPSELL_CLANS["0"],
+          clan: T.FAKE_DISCOVERY_UPSELL_CLANS["0"],
           className: L.clanCardOuterLeft
         })
       }), (0, n.jsx)(l.animated.div, {
@@ -258,7 +258,7 @@ t.default = s.memo(function(e) {
           ...x
         },
         children: (0, n.jsx)(m.ClanDiscoveryCardView, {
-          clan: g.FAKE_DISCOVERY_UPSELL_CLANS["1"],
+          clan: T.FAKE_DISCOVERY_UPSELL_CLANS["1"],
           className: L.clanCardInnerLeft
         })
       }), null != O && (0, n.jsx)(l.animated.div, {
@@ -283,7 +283,7 @@ t.default = s.memo(function(e) {
           ...x
         },
         children: (0, n.jsx)(m.ClanDiscoveryCardView, {
-          clan: g.FAKE_DISCOVERY_UPSELL_CLANS["2"],
+          clan: T.FAKE_DISCOVERY_UPSELL_CLANS["2"],
           className: L.clanCardInnerRight
         })
       }), (0, n.jsx)(l.animated.div, {
@@ -293,7 +293,7 @@ t.default = s.memo(function(e) {
           ...x
         },
         children: (0, n.jsx)(m.ClanDiscoveryCardView, {
-          clan: g.FAKE_DISCOVERY_UPSELL_CLANS["3"],
+          clan: T.FAKE_DISCOVERY_UPSELL_CLANS["3"],
           className: L.clanCardOuterRight
         })
       })]

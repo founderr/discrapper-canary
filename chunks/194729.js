@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("252618"),
   p = a("440190"),
   I = a("5955"),
-  T = a("703656"),
-  g = a("108427"),
+  g = a("703656"),
+  T = a("108427"),
   A = a("706454"),
   N = a("210887"),
   v = a("480294"),
@@ -91,10 +91,10 @@ class q extends s.PureComponent {
         length: parseInt(a, 10)
       })
     } else null != r && r !== F.DISCOVERY_ALL_CATEGORIES_ID && h.default.wait(() => (0, _.selectCategory)(r));
-    let d = null !== (t = null === (e = (0, T.getHistory)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
+    let d = null !== (t = null === (e = (0, g.getHistory)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
     d > 0 && (null === (a = this._scroller.current) || void 0 === a || a.scrollTo({
       to: d
-    })), (0, g.trackAppUIViewed)("guild_discovery")
+    })), (0, T.trackAppUIViewed)("guild_discovery")
   }
   componentDidUpdate(e) {
     let {
@@ -396,8 +396,8 @@ class q extends s.PureComponent {
       let o = null !== (l = null === (s = this._scroller.current) || void 0 === s ? void 0 : s.getScrollerState().scrollTop) && void 0 !== l ? l : 0,
         {
           location: u
-        } = (0, T.getHistory)();
-      (0, T.replaceWith)({
+        } = (0, g.getHistory)();
+      (0, g.replaceWith)({
         ...u,
         state: o
       }), this.setState({

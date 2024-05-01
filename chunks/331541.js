@@ -22,8 +22,8 @@ var n = a("735250"),
   S = a("420660"),
   p = a("100527"),
   I = a("906732"),
-  T = a("521868"),
-  g = a("299206"),
+  g = a("521868"),
+  T = a("299206"),
   A = a("440051"),
   N = a("734934"),
   v = a("158238"),
@@ -265,8 +265,8 @@ function $(e) {
   let el = (0, N.useFocusModeEnabled)(),
     ei = ee === K.StatusTypes.DND,
     er = (0, Y.useMultiAccountMenuItems)(),
-    eo = (0, T.useCustomStatusMenuItem)(null != a ? a : void 0, Q.menuItemFocused),
-    eu = (0, g.default)({
+    eo = (0, g.useCustomStatusMenuItem)(null != a ? a : void 0, Q.menuItemFocused),
+    eu = (0, T.default)({
       id: t.id,
       label: q.default.Messages.COPY_ID_USER,
       showIconFirst: !0

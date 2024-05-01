@@ -17,14 +17,14 @@ let C = "IncomingCallStore",
   S = new Set,
   p = [],
   I = new Map,
-  T = new Set,
-  g = 0,
+  g = new Set,
+  T = 0,
   A = 0,
   N = !1;
 
 function v(e) {
   if (null == e || null == I.get(e)) return !1;
-  I.delete(e), (T = new Set(T)).delete(e)
+  I.delete(e), (g = new Set(g)).delete(e)
 }
 
 function L(e) {
@@ -32,25 +32,25 @@ function L(e) {
     channelId: t,
     ringing: a
   } = e, n = a.includes(f.default.getId());
-  if (!T.has(t) && n) {
+  if (!g.has(t) && n) {
     let e = E.default.getChannel(t);
     if (null == e) return !1;
-    let a = 10 * T.size;
+    let a = 10 * g.size;
     I.set(t, {
       channel: e,
-      x: g + a,
+      x: T + a,
       y: A + a
-    }), (T = new Set(T)).add(t)
+    }), (g = new Set(g)).add(t)
   } else {
-    if (!T.has(t) || n) return !1;
+    if (!g.has(t) || n) return !1;
     v(t)
   }
 }! function() {
   let e = o.Storage.get(C);
-  if (null != e) g = +e.x, A = +e.y;
+  if (null != e) T = +e.x, A = +e.y;
   else {
     let e = a("451478").default.windowSize();
-    g = e.width / 2 - m.width / 2, A = e.height / 2 - m.height / 2
+    T = e.width / 2 - m.width / 2, A = e.height / 2 - m.height / 2
   }
 }();
 
@@ -65,13 +65,13 @@ class O extends(n = r.default.Store) {
     return N ? p : Array.from(I.values())
   }
   getIncomingCallChannelIds() {
-    return N ? S : T
+    return N ? S : g
   }
   getFirstIncomingCallId() {
-    return N ? null : T.values().next().value
+    return N ? null : g.values().next().value
   }
   hasIncomingCalls() {
-    return !N && T.size > 0
+    return !N && g.size > 0
   }
 }
 i = "IncomingCallStore", (l = "displayName") in(s = O) ? Object.defineProperty(s, l, {
@@ -99,8 +99,8 @@ i = "IncomingCallStore", (l = "displayName") in(s = O) ? Object.defineProperty(s
       x: t,
       y: a
     } = e;
-    return g = t, A = a, o.Storage.set(C, {
-      x: g,
+    return T = t, A = a, o.Storage.set(C, {
+      x: T,
       y: A
     }), !1
   },

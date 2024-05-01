@@ -31,15 +31,15 @@ t.default = e => {
     analyticsContext: S,
     theme: p,
     onViewGuild: I,
-    fetchGuilds: T,
-    onGuildCardSeen: g,
+    fetchGuilds: g,
+    onGuildCardSeen: T,
     currentCategoryId: A,
     loadId: N,
     onTagClick: v,
     showMoreCards: L = !1
   } = e;
   s.useEffect(() => {
-    i.default.wait(() => T())
+    i.default.wait(() => g())
   }, [A]);
   let R = (0, c.default)(L ? _ : h),
     {
@@ -76,7 +76,7 @@ t.default = e => {
     guild: e,
     onView: y,
     theme: p,
-    onGuildCardSeen: g,
+    onGuildCardSeen: T,
     onTagClick: v
   }, e.id));
   return (0, n.jsx)("section", {

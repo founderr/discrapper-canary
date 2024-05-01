@@ -22,8 +22,8 @@ var n = a("735250"),
   S = a("626135"),
   p = a("70956"),
   I = a("225559"),
-  T = a("910436"),
-  g = a("203028"),
+  g = a("910436"),
+  T = a("203028"),
   A = a("358924"),
   N = a("292140"),
   v = a("525296"),
@@ -38,10 +38,10 @@ let P = 15 * p.default.Millis.MINUTE,
       onUserContextMenu: a,
       onChannelContextMenu: l,
       quest: i
-    } = e, r = (0, n.jsx)(g.default, {
+    } = e, r = (0, n.jsx)(T.default, {
       party: t,
       onUserContextMenu: a
-    }), u = (0, n.jsx)(T.default, {
+    }), u = (0, n.jsx)(g.default, {
       party: t,
       onChannelContextMenu: l,
       quest: i

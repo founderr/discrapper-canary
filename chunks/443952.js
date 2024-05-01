@@ -19,8 +19,8 @@ var s = a("45792"),
   S = a("885110"),
   p = a("451478"),
   I = a("630388"),
-  T = a("823379"),
-  g = a("591759"),
+  g = a("823379"),
+  T = a("591759"),
   A = a("228488"),
   N = a("996106"),
   v = a("914946"),
@@ -215,13 +215,13 @@ t.default = {
             }, 1e3)
           };
           l.addEventListener("change", () => {
-            (0, T.isNotNullish)(l.files) && e(l.files[0]), i()
+            (0, g.isNotNullish)(l.files) && e(l.files[0]), i()
           }), l.addEventListener("cancel", () => {
             i()
           }), s.document.body.addEventListener("focus", i, !0), s.document.body.appendChild(l), l.click()
         }(async a => {
           let l = await (0, f.uploadImageAttachment)(n, s, a);
-          (0, T.isNotNullish)(l) && (0, T.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
+          (0, g.isNotNullish)(l) && (0, g.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
             image_url: l.url
           }): t(l)
         }, () => t(Error("Upload canceled")))
@@ -257,7 +257,7 @@ t.default = {
       if (null == l) throw new N.default({
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "No channel found");
-      if (!g.default.isDiscordCdnUrl(n)) throw new N.default({
+      if (!T.default.isDiscordCdnUrl(n)) throw new N.default({
         errorCode: x.RPCErrors.INVALID_PAYLOAD
       }, "mediaUrl must be a Discord CDN url");
       (0, h.openActivityShareMomentModal)({

@@ -22,8 +22,8 @@ var n = a("735250"),
   S = a("279240"),
   p = a("765717"),
   I = a("358221"),
-  T = a("823748"),
-  g = a("626421"),
+  g = a("823748"),
+  T = a("626421"),
   A = a("118379"),
   N = a("652515"),
   v = a("544978"),
@@ -94,13 +94,13 @@ let em = () => (0, n.jsx)("div", {
     name: "GuildHomePage",
     renderLoader: em
   }),
-  eT = (0, d.makeLazy)({
+  eg = (0, d.makeLazy)({
     createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("85552"), a.e("16600")]).then(a.bind(a, "545918")),
     webpackId: "545918",
     name: "MemberSafetyPage",
     renderLoader: em
   }),
-  eg = (0, d.makeLazy)({
+  eT = (0, d.makeLazy)({
     createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("66635"), a.e("75475"), a.e("58227"), a.e("38359"), a.e("51199")]).then(a.bind(a, "603072")),
     webpackId: "603072",
     name: "ChannelsAndRolesPage",
@@ -157,7 +157,7 @@ let em = () => (0, n.jsx)("div", {
           guildId: s
         });
       case eE.StaticChannelRoute.CHANNEL_BROWSER:
-        return (0, n.jsx)(eg, {
+        return (0, n.jsx)(eT, {
           guildId: s,
           selectedSection: eh.GuildOnboardingTab.BROWSE
         });
@@ -166,12 +166,12 @@ let em = () => (0, n.jsx)("div", {
           guildId: s
         });
       case eE.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-        return (0, n.jsx)(eg, {
+        return (0, n.jsx)(eT, {
           guildId: s,
           selectedSection: eh.GuildOnboardingTab.CUSTOMIZE
         });
       case eE.StaticChannelRoute.MEMBER_SAFETY:
-        return (0, n.jsx)(eT, {
+        return (0, n.jsx)(eg, {
           guildId: s
         });
       default:
@@ -188,7 +188,7 @@ let em = () => (0, n.jsx)("div", {
         inputSkuId: e
       }, a.id)
     }
-    return (0, n.jsx)(T.default, {})
+    return (0, n.jsx)(g.default, {})
   },
   ev = s.memo(function() {
     let {
@@ -382,7 +382,7 @@ function eF() {
           className: eC.base,
           children: [c.isMobile ? null : (0, n.jsx)(er.default, {}), (0, n.jsxs)("div", {
             className: eC.content,
-            children: [(0, n.jsx)(g.default, {}), (0, n.jsx)(eB, {
+            children: [(0, n.jsx)(T.default, {}), (0, n.jsx)(eB, {
               hasNotice: t,
               sidebarTheme: a,
               hideSidebar: l || i || d || E || m || !h

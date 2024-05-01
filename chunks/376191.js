@@ -28,7 +28,7 @@ function p(e) {
     channel: a,
     otherUser: E,
     active: p
-  } = e, I = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), T = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), g = (0, h.useMessageRequestRelativeTimestampText)(a), {
+  } = e, I = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), g = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), T = (0, h.useMessageRequestRelativeTimestampText)(a), {
     avatarDecorationSrc: A
   } = (0, u.default)({
     user: E,
@@ -47,7 +47,7 @@ function p(e) {
       children: [(0, n.jsxs)("div", {
         className: m.userContainerWithPreview,
         children: [(0, n.jsx)(i.default, {
-          nick: T,
+          nick: g,
           user: E,
           showAccountIdentifier: !0,
           className: m.tagContainer,
@@ -57,7 +57,7 @@ function p(e) {
           className: m.timestampWithPreview,
           color: "text-muted",
           variant: "text-xs/normal",
-          children: g
+          children: T
         })]
       }), (0, n.jsx)("div", {
         className: m.messagePreview,

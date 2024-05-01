@@ -25,7 +25,7 @@ function I() {
   s.default.wait(() => l.close(t)), null === (e = h.default.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), n = null
 }
 
-function T() {
+function g() {
   let e = h.default.getChannelId(),
     t = n === e;
   return function() {
@@ -51,12 +51,12 @@ function T() {
     })), null === (t = h.default.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), n = e
   }(e))
 }
-class g extends i.default {
+class T extends i.default {
   _initialize() {
-    _.default.addChangeListener(T), C.default.addChangeListener(T), h.default.addChangeListener(T), m.default.addChangeListener(T), c.default.addChangeListener(T), u.default.addChangeListener(T), o.default.addChangeListener(T), f.default.addChangeListener(T), r.default.addChangeListener(T)
+    _.default.addChangeListener(g), C.default.addChangeListener(g), h.default.addChangeListener(g), m.default.addChangeListener(g), c.default.addChangeListener(g), u.default.addChangeListener(g), o.default.addChangeListener(g), f.default.addChangeListener(g), r.default.addChangeListener(g)
   }
   _terminate() {
-    _.default.removeChangeListener(T), C.default.removeChangeListener(T), h.default.removeChangeListener(T), m.default.removeChangeListener(T), c.default.removeChangeListener(T), u.default.removeChangeListener(T), o.default.removeChangeListener(T), f.default.removeChangeListener(T), r.default.removeChangeListener(T)
+    _.default.removeChangeListener(g), C.default.removeChangeListener(g), h.default.removeChangeListener(g), m.default.removeChangeListener(g), c.default.removeChangeListener(g), u.default.removeChangeListener(g), o.default.removeChangeListener(g), f.default.removeChangeListener(g), r.default.removeChangeListener(g)
   }
 }
-t.default = new g
+t.default = new T

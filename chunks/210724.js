@@ -22,8 +22,8 @@ var n = a("735250"),
   S = a("874137"),
   p = a("78826"),
   I = a("909389"),
-  T = a("941348"),
-  g = a("46140"),
+  g = a("941348"),
+  T = a("46140"),
   A = a("981631"),
   N = a("905277");
 
@@ -32,7 +32,7 @@ function v(e) {
   let {
     quest: E
   } = e, v = (0, m.useQuestBarLogger)(E), L = (0, C.useIsEligibleForQuests)({
-    location: g.QuestsExperimentLocations.QUESTS_BAR
+    location: T.QuestsExperimentLocations.QUESTS_BAR
   }), R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), M = s.useRef(-1), P = s.useRef(!1), [x, y] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, w] = s.useState(!0), [k, B] = s.useState(240), F = s.useRef(null), H = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, V = s.useRef(H), Y = (null === (a = E.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, W = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, K = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), z = (0, f.useIsQuestExpired)(E), {
     hasError: q,
     isLoading: Q
@@ -126,7 +126,7 @@ function v(e) {
   }), {
     primaryVariant: eo
   } = C.QuestBarExperiment.useExperiment({
-    location: g.QuestsExperimentLocations.QUESTS_BAR
+    location: T.QuestsExperimentLocations.QUESTS_BAR
   }, {
     autoTrackExposure: es && !q
   });
@@ -135,7 +135,7 @@ function v(e) {
     questContent: h.QuestContent.QUEST_BAR,
     overrideVisibility: !O && es,
     children: () => {
-      let e = eo === C.QuestBarExperimentVariants.V2 ? T.default : I.default;
+      let e = eo === C.QuestBarExperimentVariants.V2 ? g.default : I.default;
       return (0, n.jsx)(r.animated.div, {
         "aria-hidden": !es,
         className: i()(N.wrapper, {
@@ -190,7 +190,7 @@ t.default = function(e) {
     overrideQuest: t
   } = e, a = (0, o.useStateFromStores)([E.default], () => null != t ? t : (0, _.getQuestForTargetedContent)(E.default.quests, h.QuestContent.QUEST_BAR));
   return null == a ? null : (0, n.jsx)(p.QuestsAssetContextProvider, {
-    sentrySource: g.QuestsExperimentLocations.QUESTS_BAR,
+    sentrySource: T.QuestsExperimentLocations.QUESTS_BAR,
     children: (0, n.jsx)(v, {
       quest: a
     })

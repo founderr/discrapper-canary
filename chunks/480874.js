@@ -22,8 +22,8 @@ var n = a("735250"),
   S = a("727813"),
   p = a("355350"),
   I = a("307947"),
-  T = a("125855"),
-  g = a("687683"),
+  g = a("125855"),
+  T = a("687683"),
   A = a("981631"),
   N = a("689938"),
   v = a("449846");
@@ -61,7 +61,7 @@ function L() {
       let {
         row: r
       } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (a = s.channel) || void 0 === a ? void 0 : a.id, d = o.channel.id;
-      return (0, n.jsx)(T.default, {
+      return (0, n.jsx)(g.default, {
         index: r,
         className: i()({
           [v.selected]: null != O && O === d,
@@ -95,7 +95,7 @@ function L() {
       }) : null]
     }, "message-requests-spam-title"), [a, x, L]);
   return 0 === t.length ? (0, n.jsx)(I.default, {
-    section: g.MessageRequestSections.SPAM
+    section: T.MessageRequestSections.SPAM
   }) : (0, n.jsx)(r.ListNavigatorProvider, {
     navigator: R,
     children: (0, n.jsx)(r.ListNavigatorContainer, {
@@ -115,8 +115,8 @@ function L() {
           },
           paddingTop: 24,
           paddingBottom: 24,
-          sectionHeight: g.LIST_SECTION_HEIGHT,
-          rowHeight: g.LIST_ROW_HEIGHT,
+          sectionHeight: T.LIST_SECTION_HEIGHT,
+          rowHeight: T.LIST_ROW_HEIGHT,
           renderSection: D,
           renderRow: y,
           sections: [t.length],

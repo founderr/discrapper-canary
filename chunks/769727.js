@@ -22,8 +22,8 @@ var n = a("735250"),
   S = a("10473"),
   p = a("702646"),
   I = a("207796"),
-  T = a("543550"),
-  g = a("976757"),
+  g = a("543550"),
+  T = a("976757"),
   A = a("308083"),
   N = a("689938"),
   v = a("548290");
@@ -38,7 +38,7 @@ function R(e) {
   let {
     limit: a
   } = e, l = (0, I.useClanDiscoveryUIStore)(I.buildSearchCriteriaFromUIState, i()), r = (0, I.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), f = (0, I.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, o.default), E = s.useMemo(() => (0, A.getPlaystyleOptions)(), []), h = f ? null === (t = E[f]) || void 0 === t ? void 0 : t.title : "", C = (0, c.useStateFromStores)([S.default], () => S.default.getSearchResult(l), [l]), m = s.useMemo(() => {
-    if ((0, g.isLoadedSearchResult)(C)) {
+    if ((0, T.isLoadedSearchResult)(C)) {
       let e = C.items;
       return null != a ? e.slice(0, a) : e
     }
@@ -70,7 +70,7 @@ function R(e) {
       className: v.topPicksContent,
       children: m.map((e, t) => (0, n.jsx)(_.default, {
         clan: e,
-        affinity: (0, g.getClanDiscoveryAffinity)(e, l),
+        affinity: (0, T.getClanDiscoveryAffinity)(e, l),
         traitsToHighlight: r,
         className: v.card,
         index: t
@@ -108,7 +108,7 @@ let O = s.memo(function() {
     }, []);
   switch (e) {
     case I.ClanDiscoveryMode.GET_STARTED:
-      return (0, n.jsx)(T.default, {});
+      return (0, n.jsx)(g.default, {});
     case I.ClanDiscoveryMode.DISCOVERY:
     case I.ClanDiscoveryMode.GAMES:
     case I.ClanDiscoveryMode.PLAYSTYLE:

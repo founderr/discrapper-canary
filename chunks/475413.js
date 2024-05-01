@@ -28,15 +28,15 @@ t.default = e => {
   });
   let {
     activeSubscription: p
-  } = (0, r.default)(null == S ? void 0 : S.id), I = (0, l.useSubscriptionsSettings)(m.id), T = null == I ? void 0 : I.description, {
-    editStateIds: g
+  } = (0, r.default)(null == S ? void 0 : S.id), I = (0, l.useSubscriptionsSettings)(m.id), g = null == I ? void 0 : I.description, {
+    editStateIds: T
   } = i.useEditStateIds(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : null, m.id);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(E.default, {
       title: _.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
         serverName: m.toString()
       }),
-      description: null != T ? T : null,
+      description: null != g ? g : null,
       coverImageAsset: null !== (a = null == I ? void 0 : I.cover_image_asset) && void 0 !== a ? a : null,
       guild: m,
       children: [null != S ? (0, n.jsx)(u.default, {
@@ -49,7 +49,7 @@ t.default = e => {
     }), (0, n.jsx)(s.HeadingLevel, {
       children: (0, n.jsx)(c.default, {
         guildId: m.id,
-        children: g.map(e => {
+        children: T.map(e => {
           var t;
           return (0, n.jsx)(f.default, {
             guildId: m.id,

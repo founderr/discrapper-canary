@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("118470"),
   p = a("413307"),
   I = a("849688"),
-  T = a("374023"),
-  g = a("661599"),
+  g = a("374023"),
+  T = a("661599"),
   A = a("923608"),
   N = a("617899"),
   v = a("8521"),
@@ -123,7 +123,7 @@ t.default = e => {
         guild: t
       });
     case R.ConnectedChannelNotices.GUILD_MFA_WARNING:
-      return (0, n.jsx)(g.default, {
+      return (0, n.jsx)(T.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.COMMANDS_MIGRATION:
@@ -147,7 +147,7 @@ t.default = e => {
         guildId: t.id
       })
   }
-  return T.ProcessArgs.isDisallowPopupsSet() ? null : (0, n.jsx)(x, {
+  return g.ProcessArgs.isDisallowPopupsSet() ? null : (0, n.jsx)(x, {
     guild: e.guild
   })
 }

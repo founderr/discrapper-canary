@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   useMultiAccountMenuItems: function() {
-    return T
+    return g
   }
 }), a("653041");
 var n = a("735250");
@@ -24,20 +24,20 @@ var s = a("442837"),
   p = a("689938"),
   I = a("484714");
 
-function T() {
+function g() {
   let e = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()),
     t = (0, s.useStateFromStores)([o.default], () => o.default.hidePersonalInformation),
     {
       multiAccountUsers: a
     } = (0, C.useMultiAccountUsers)(),
-    T = t => {
+    g = t => {
       t !== (null == e ? void 0 : e.id) && (f.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
         location: {
           section: S.AnalyticsSections.PROFILE_POPOUT
         }
       }), h.switchAccount(t))
     },
-    g = a.map(a => {
+    T = a.map(a => {
       let s = new r.default(a),
         o = s.id === (null == e ? void 0 : e.id),
         u = a.tokenStatus === _.MultiAccountTokenStatus.INVALID,
@@ -85,15 +85,15 @@ function T() {
           })
         },
         action: () => {
-          u ? (0, m.default)() : T(s.id)
+          u ? (0, m.default)() : g(s.id)
         }
       }, s.id)
     });
-  return g.push((0, n.jsxs)(n.Fragment, {
+  return T.push((0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(l.MenuSeparator, {}), (0, n.jsx)(l.MenuItem, {
       id: "manage-accounts",
       label: p.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
       action: m.default
     })]
-  })), g
+  })), T
 }

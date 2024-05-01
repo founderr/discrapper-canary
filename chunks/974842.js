@@ -23,8 +23,8 @@ t.default = e => {
     badge: a,
     primaryColor: l,
     secondaryColor: I,
-    tag: T,
-    error: g,
+    tag: g,
+    error: T,
     furthestStep: A
   } = e, N = s.useRef(null), [v, L] = s.useState(a), [R, O] = s.useState({
     primary: l,
@@ -155,15 +155,15 @@ t.default = e => {
         })]
       }), (0, n.jsxs)("div", {
         className: _.tagContainer,
-        children: [null != g && (0, n.jsx)(u.Text, {
+        children: [null != T && (0, n.jsx)(u.Text, {
           variant: "text-sm/normal",
           color: "status-danger",
           className: C.errorText,
-          children: g
+          children: T
         }), (0, n.jsx)(u.TextInput, {
           className: _.tagInputWrapper,
           inputClassName: _.tagInput,
-          value: T,
+          value: g,
           onChange: e => t({
             tag: e
           }),

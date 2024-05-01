@@ -20,9 +20,9 @@ t.default = e => {
   } = e, m = s.useRef(null), S = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
     progress: p,
     errors: I,
-    submitting: T
+    submitting: g
   } = (0, i.useStateFromStoresObject)([d.default], () => d.default.getStateForGuild(t)), {
-    gameApplicationIds: g,
+    gameApplicationIds: T,
     playstyle: A,
     interests: N,
     description: v,
@@ -39,7 +39,7 @@ t.default = e => {
   } = null != p ? p : {}, j = s.useRef(null), G = s.useRef(null), w = s.useRef(null), [k, B] = s.useState(!1), F = async () => {
     try {
       await u.convertGuildToClan(t, {
-        gameApplicationIds: g,
+        gameApplicationIds: T,
         playstyle: A,
         interests: N,
         description: v,
@@ -174,7 +174,7 @@ t.default = e => {
         size: r.Button.Sizes.MEDIUM,
         color: r.Button.Colors.BRAND,
         disabled: !k,
-        submitting: T,
+        submitting: g,
         onClick: F,
         children: E.default.Messages.FINISH
       })]

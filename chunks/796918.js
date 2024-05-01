@@ -24,7 +24,7 @@ t.default = e => {
     n.delete(e), t({
       interests: n
     })
-  }, T = s.useCallback(e => {
+  }, g = s.useCallback(e => {
     if (a.size === d.MAX_NUM_INTERESTS) return;
     let n = null != e ? e : h.trim();
     if (0 === n.length) return;
@@ -32,13 +32,13 @@ t.default = e => {
     s.add(n), t({
       interests: s
     }), _("")
-  }, [t, h, a]), g = s.useCallback(e => {
+  }, [t, h, a]), T = s.useCallback(e => {
     switch (e.key) {
       case "Enter":
       case "Tab":
-        e.preventDefault(), e.stopPropagation(), T()
+        e.preventDefault(), e.stopPropagation(), g()
     }
-  }, [T]);
+  }, [g]);
   return (0, n.jsxs)("div", {
     className: f.slideContentWithSidebar,
     children: [(0, n.jsx)(r.Heading, {
@@ -64,13 +64,13 @@ t.default = e => {
           children: [(0, n.jsx)(r.TextInput, {
             inputClassName: f.input,
             value: h,
-            onKeyDown: g,
+            onKeyDown: T,
             onChange: _,
             placeholder: c.default.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
             maxLength: d.MAX_INTEREST_LENGTH,
             disabled: a.size === d.MAX_NUM_INTERESTS
           }), h.length > 0 && (0, n.jsx)(r.Clickable, {
-            onClick: () => T(h.trim()),
+            onClick: () => g(h.trim()),
             className: i()(f.plusIcon, f.clickable),
             children: (0, n.jsx)(o.default, {
               className: f.icon
@@ -94,7 +94,7 @@ t.default = e => {
               className: i()(f.interestsTag, {
                 [f.selected]: t
               }),
-              onClick: () => t ? I(e) : T(e),
+              onClick: () => t ? I(e) : g(e),
               children: (0, n.jsx)(r.Text, {
                 variant: "text-xs/medium",
                 color: "none",

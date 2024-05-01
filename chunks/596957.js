@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("451478"),
   p = a("6048"),
   I = a("390697"),
-  T = a("434184"),
-  g = a("701861"),
+  g = a("434184"),
+  T = a("701861"),
   A = a("437314"),
   N = a("696577"),
   v = a("163417"),
@@ -125,7 +125,7 @@ t.default = function(e) {
         renderRow: function(e) {
           switch (t) {
             case M.FriendsSections.BLOCKED:
-              return (0, n.jsx)(T.default, {
+              return (0, n.jsx)(g.default, {
                 ...e,
                 isFocused: b
               });
@@ -142,7 +142,7 @@ t.default = function(e) {
             case M.FriendsSections.ONLINE:
             case M.FriendsSections.ALL:
             default:
-              return (0, n.jsx)(g.default, {
+              return (0, n.jsx)(T.default, {
                 ...e,
                 isFocused: b
               })

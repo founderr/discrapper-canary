@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   MAX_GUILDS_PER_PAGE: function() {
-    return T
+    return g
   }
 }), a("47120");
 var n = a("735250"),
@@ -22,8 +22,8 @@ var n = a("735250"),
   S = a("731455"),
   p = a("689938"),
   I = a("356620");
-let T = 12,
-  g = () => {
+let g = 12,
+  T = () => {
     let e = (0, c.getHistory)().location.search;
     return null != e && e.length > 0 && e.startsWith("?") ? r.parse(e) : {}
   },
@@ -86,7 +86,7 @@ t.default = e => {
     total: w
   } = a, [k, B] = s.useState(!1), {
     tag: F
-  } = g(), [H, V] = s.useState(F), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, a) => {
+  } = T(), [H, V] = s.useState(F), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, a) => {
     d.doAlgoliaSearch(l, {
       categoryId: a ? S.DISCOVERY_ALL_CATEGORIES_ID : M,
       preferredLocale: r.code,
@@ -105,7 +105,7 @@ t.default = e => {
     let {
       offset: e,
       tag: t
-    } = g(), a = null != e ? Math.floor(parseInt(e, 10) / T) + 1 : 1;
+    } = T(), a = null != e ? Math.floor(parseInt(e, 10) / g) + 1 : 1;
     V(!!t), 1 === a && B(!0)
   }, [l]);
   let z = M === S.DISCOVERY_ALL_CATEGORIES_ID ? p.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
@@ -149,16 +149,16 @@ t.default = e => {
       categoryId: M,
       categoryName: P,
       onClick: () => {
-        d.selectCategory(S.DISCOVERY_ALL_CATEGORIES_ID), W(0, T, !0)
+        d.selectCategory(S.DISCOVERY_ALL_CATEGORIES_ID), W(0, g, !0)
       }
     }) : (0, n.jsx)("div", {
       className: I.results,
       children: (0, n.jsx)(_.default, {
-        pageSize: T,
+        pageSize: g,
         totalCount: w,
         resetCurrentPage: k,
         onPageChange: e => {
-          W((e - 1) * T, T), K()
+          W((e - 1) * g, g), K()
         },
         children: e => {
           let {
@@ -169,7 +169,7 @@ t.default = e => {
             children: [(0, n.jsx)(m.default, {
               guilds: j,
               loading: G,
-              loadingPlaceholderCount: T,
+              loadingPlaceholderCount: g,
               onViewGuild: x,
               loadingGuildId: R,
               theme: O,

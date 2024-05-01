@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("321488"),
   p = a("417183"),
   I = a("825682"),
-  T = a("170245"),
-  g = a("981631"),
+  g = a("170245"),
+  T = a("981631"),
   A = a("65154"),
   N = a("689938"),
   v = a("412584");
@@ -110,7 +110,7 @@ class O extends s.PureComponent {
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, n.jsxs)("div", {
         className: v.listItemContents,
-        children: [(0, n.jsx)(T.default, {
+        children: [(0, n.jsx)(g.default, {
           user: e,
           status: l,
           isMobile: i,
@@ -148,8 +148,8 @@ class O extends s.PureComponent {
         user: t
       } = this.props;
       e.stopPropagation();
-      let a = i().find(E.default.getMutablePrivateChannels(), e => e.type === g.ChannelTypes.DM && e.getRecipientId() === t.id);
-      null != a ? (0, f.transitionTo)(g.Routes.CHANNEL(g.ME, a.id)) : u.default.openPrivateChannel(t.id)
+      let a = i().find(E.default.getMutablePrivateChannels(), e => e.type === T.ChannelTypes.DM && e.getRecipientId() === t.id);
+      null != a ? (0, f.transitionTo)(T.Routes.CHANNEL(T.ME, a.id)) : u.default.openPrivateChannel(t.id)
     }), L(this, "handleOpenActionsMenu", e => {
       let {
         user: t

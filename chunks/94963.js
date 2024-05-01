@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("688298"),
   p = a("308083"),
   I = a("689938"),
-  T = a("868878"),
-  g = a("418571");
+  g = a("868878"),
+  T = a("418571");
 let A = p.CLAN_BRAND_PALETTE_PRESETS.length + 1,
   N = [{
     name: "Night Sky",
@@ -70,14 +70,14 @@ let A = p.CLAN_BRAND_PALETTE_PRESETS.length + 1,
         width: 24,
         height: 24
       }) : (0, n.jsx)("div", {
-        className: T.brandItemCircle,
+        className: g.brandItemCircle,
         style: {
           background: "linear-gradient(-45deg, ".concat(s, " 50%, ").concat(a, " 50% )")
         }
       }), (0, n.jsx)(E.Text, {
         variant: "text-sm/medium",
         color: "interactive-normal",
-        className: T.noWrap,
+        className: g.noWrap,
         children: t
       })]
     })
@@ -107,28 +107,28 @@ t.default = e => {
       brandSecondaryColor: U.secondary
     })
   }, [l, L, U.primary, U.secondary]), (0, n.jsxs)("div", {
-    className: g.slideContentWithSidebar,
+    className: T.slideContentWithSidebar,
     children: [(0, n.jsx)(E.Heading, {
       variant: "heading-xxl/medium",
-      className: g.title,
+      className: T.title,
       children: I.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_TITLE
     }), (0, n.jsx)(E.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: g.subtitle,
+      className: T.subtitle,
       children: I.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_SUBTITLE
     }), (0, n.jsxs)("div", {
-      className: g.content,
+      className: T.content,
       children: [(0, n.jsxs)("div", {
-        className: T.colorsContainer,
+        className: g.colorsContainer,
         children: [(0, n.jsxs)("div", {
-          className: T.colorPickerContainer,
+          className: g.colorPickerContainer,
           children: [(0, n.jsx)(E.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
             children: I.default.Messages.CLAN_LOOK_BRAND_COLOR
           }), (0, n.jsxs)("div", {
-            className: T.colorPickerGrid,
+            className: g.colorPickerGrid,
             children: [(0, n.jsx)(E.Clickable, {
               onClick: () => {
                 x(0), M({
@@ -136,8 +136,8 @@ t.default = e => {
                   secondary: o.badgeSecondaryColor
                 })
               },
-              className: i()(T.brandItemContainer, {
-                [T.brandItemContainerSelected]: 0 === P
+              className: i()(g.brandItemContainer, {
+                [g.brandItemContainerSelected]: 0 === P
               }),
               children: (0, n.jsx)(v, {
                 name: I.default.Messages.CLAN_LOOK_PRESET_BADGE,
@@ -149,8 +149,8 @@ t.default = e => {
               onClick: () => {
                 x(t + 1), M(p.CLAN_BRAND_PALETTE_PRESETS[t])
               },
-              className: i()(T.brandItemContainer, {
-                [T.brandItemContainerSelected]: P === t + 1
+              className: i()(g.brandItemContainer, {
+                [g.brandItemContainerSelected]: P === t + 1
               }),
               children: (0, n.jsx)(v, {
                 name: e.name,
@@ -179,8 +179,8 @@ t.default = e => {
                 onClick: () => {
                   x(A), D(e => !e)
                 },
-                className: i()(T.brandItemContainer, {
-                  [T.brandItemContainerSelected]: P === A
+                className: i()(g.brandItemContainer, {
+                  [g.brandItemContainerSelected]: P === A
                 }),
                 children: (0, n.jsx)(v, {
                   name: I.default.Messages.CLAN_LOOK_PRESET_CUSTOM,
@@ -190,20 +190,20 @@ t.default = e => {
             })]
           })]
         }), (0, n.jsxs)("div", {
-          className: T.bannerPickerContainer,
+          className: g.bannerPickerContainer,
           children: [(0, n.jsx)(E.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
             children: I.default.Messages.CLAN_LOOK_BANNER
           }), (0, n.jsx)("div", {
-            className: T.bannerPickerGrid,
+            className: g.bannerPickerGrid,
             children: N.map((e, t) => (0, n.jsxs)(E.Clickable, {
               "aria-label": e.name,
               onClick: () => {
                 R(e.bannerKind)
               },
-              className: i()(T.bannerItemContainer, {
-                [T.bannerItemContainerSelected]: e.bannerKind === L
+              className: i()(g.bannerItemContainer, {
+                [g.bannerItemContainerSelected]: e.bannerKind === L
               }),
               children: [(0, n.jsx)(e.icon, {
                 width: 24,
@@ -211,20 +211,20 @@ t.default = e => {
               }), (0, n.jsx)(E.Text, {
                 variant: "text-sm/medium",
                 color: "interactive-normal",
-                className: T.noWrap,
+                className: g.noWrap,
                 children: e.name
               })]
             }, t))
           })]
         })]
       }), (0, n.jsx)("div", {
-        className: T.clanCardWrapper,
+        className: g.clanCardWrapper,
         children: (0, n.jsx)(h.ClanDiscoveryCardView, {
           banner: (0, n.jsx)(m.default, {
             banner: L,
             primaryTintColor: U.primary,
             secondaryTintColor: U.secondary,
-            className: T.clanBannerPreview
+            className: g.clanBannerPreview
           }),
           clan: {
             ...o,

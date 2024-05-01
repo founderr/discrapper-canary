@@ -23,8 +23,8 @@ t.default = () => {
   let e = (0, f.useUserForLinkStatus)(S.UserLinkStatus.ACTIVE),
     t = (0, c.useSelectedTeenUser)(),
     a = (0, s.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
-    T = (0, d.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
-    g = (0, d.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, p.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
+    g = (0, d.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
+    T = (0, d.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, p.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
     A = (0, d.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, p.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
     N = (0, i.useRedesignIconContext)().enabled;
   return void 0 === a ? null : (0, n.jsxs)("div", {
@@ -38,11 +38,11 @@ t.default = () => {
         iconClassName: I.chatCheckIcon,
         icon: o.default,
         header: p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_HEADER,
-        description: T
+        description: g
       }), (0, n.jsx)(C.default, {
         icon: u.default,
         header: p.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
-        description: g
+        description: T
       }), (0, n.jsx)(C.default, {
         icon: N ? l.QrCodeCameraIcon : m.default,
         header: p.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,

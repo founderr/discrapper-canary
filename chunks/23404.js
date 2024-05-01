@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("918701"),
   p = a("874137"),
   I = a("611855"),
-  T = a("670638"),
-  g = a("667105"),
+  g = a("670638"),
+  T = a("667105"),
   A = a("860151"),
   N = a("981631"),
   v = a("689938"),
@@ -79,7 +79,7 @@ t.default = function(e) {
       questContent: m.QuestContent.ACTIVITY_PANEL,
       questContentCTA: E.QuestContentCTA.LEARN_MORE
     }), d.default.open(N.UserSettingsSections.INVENTORY)
-  }, [o]), j = (0, g.useHandleClaimQuestsReward)({
+  }, [o]), j = (0, T.useHandleClaimQuestsReward)({
     quest: o,
     location: m.QuestContent.ACTIVITY_PANEL
   }), G = (0, _.useIsQuestExpired)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (a = o.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, B = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
@@ -107,7 +107,7 @@ t.default = function(e) {
             quest: o
           }) : (0, n.jsx)(I.default, {
             textOpacity: .5
-          }), (0, n.jsx)(T.QuestsEntryContextMenuPopout, {
+          }), (0, n.jsx)(g.QuestsEntryContextMenuPopout, {
             quest: o,
             questContent: m.QuestContent.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,

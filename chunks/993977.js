@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return g
+    return T
   }
 }), a("47120");
 var n = a("735250"),
@@ -59,7 +59,7 @@ function I(e) {
     }), s]
   })
 }
-class T extends s.PureComponent {
+class g extends s.PureComponent {
   handleToggleShortcutDesktop(e) {
     o.InstallShortcutDesktop.updateSetting(e)
   }
@@ -122,13 +122,13 @@ class T extends s.PureComponent {
   }
 }
 
-function g() {
+function T() {
   let e = {
     installShortcutDesktop: o.InstallShortcutDesktop.useSetting(),
     installShortcutStartMenu: o.InstallShortcutStartMenu.useSetting(),
     hiddenLibraryApplicationViewItems: (0, l.useStateFromStores)([u.default], () => u.default.hiddenLibraryApplicationViewItems)
   };
-  return (0, n.jsx)(T, {
+  return (0, n.jsx)(g, {
     ...e
   })
 }

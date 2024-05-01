@@ -67,7 +67,7 @@ t.default = e => {
   })), []), S = s.useMemo(() => Array.from(i), [i]), p = s.useMemo(() => S.filter(e => f.LANGUAGES_SET.has(e)), [S]), I = s.useCallback(e => {
     let t = S.filter(e => !f.LANGUAGES_SET.has(e));
     l(new Set([...t, ...e]))
-  }, [l, S]), T = s.useMemo(() => S.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [S]);
+  }, [l, S]), g = s.useMemo(() => S.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [S]);
   return (0, n.jsxs)("div", {
     className: h.slideContentWithSidebar,
     children: [(0, n.jsx)(r.Heading, {
@@ -121,7 +121,7 @@ t.default = e => {
         className: h.fixedWidthSidebar,
         children: S.length > 0 && (0, n.jsx)(c.default, {
           traits: S,
-          traitsToHighlight: T
+          traitsToHighlight: g
         })
       })]
     })]

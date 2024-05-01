@@ -19,9 +19,9 @@ var s = a("524437"),
   S = a("786397"),
   p = a("248042"),
   I = a("318199"),
-  T = a("474936");
+  g = a("474936");
 
-function g(e, t, a) {
+function T(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
     value: a,
     enumerable: !0,
@@ -38,7 +38,7 @@ class N extends r.default {
     i.default.unsubscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), i.default.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
   constructor(...e) {
-    super(...e), g(this, "maybeOpenServerDriveAnnouncementModal", (e, t) => {
+    super(...e), T(this, "maybeOpenServerDriveAnnouncementModal", (e, t) => {
       let s = (0, I.extractAnnouncementModalContent)({
         content: e,
         isPreview: t
@@ -54,23 +54,23 @@ class N extends r.default {
       }, {
         modalKey: A
       }), !0)
-    }), g(this, "handlePreview", e => {
+    }), T(this, "handlePreview", e => {
       let {
         properties: t
       } = e;
       this.maybeOpenServerDriveAnnouncementModal(t, !0)
-    }), g(this, "getOfferFromStore", () => {
+    }), T(this, "getOfferFromStore", () => {
       let e = u.default.getCurrentUser();
       if ((0, c.isPremium)(e)) return {};
-      let t = [(0, T.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID), (0, T.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID), (0, T.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID), (0, T.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID)].map(e => d.default.getUserDiscountOffer(e)).filter(e => null != e && !(0, C.hasUserDiscountExpired)(e)).shift();
+      let t = [(0, g.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID), (0, g.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID), (0, g.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID), (0, g.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID)].map(e => d.default.getUserDiscountOffer(e)).filter(e => null != e && !(0, C.hasUserDiscountExpired)(e)).shift();
       if (null != t) return {
         userDiscountOffer: t
       };
-      let a = [(0, T.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID), (0, T.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID), (0, T.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID), (0, T.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID), (0, T.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID), (0, T.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID), (0, T.PREMIUM_TIER_2_AUTH3_TRIAL_ID), (0, T.PREMIUM_TIER_2_NEW_USER_CPV_TRIAL_ID)].map(e => d.default.getUserTrialOffer(e)).filter(e => null != e && !(0, S.hasUserTrialOfferExpired)(e)).shift();
+      let a = [(0, g.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID), (0, g.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID), (0, g.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID), (0, g.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID), (0, g.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID), (0, g.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID), (0, g.PREMIUM_TIER_2_AUTH3_TRIAL_ID), (0, g.PREMIUM_TIER_2_NEW_USER_CPV_TRIAL_ID)].map(e => d.default.getUserTrialOffer(e)).filter(e => null != e && !(0, S.hasUserTrialOfferExpired)(e)).shift();
       return null != a ? {
         userTrialOffer: a
       } : {}
-    }), g(this, "mayShowAnnouncementModal", async () => {
+    }), T(this, "mayShowAnnouncementModal", async () => {
       if (await (0, p.maybeFetchActiveBogoPromotion)(), !f.ProcessArgs.isDisallowPopupsSet()) {
         if (!(0, l.hasAnyModalOpen)() && h.default.getCurrentConfig({
             location: "OfferAnnouncementManager"
