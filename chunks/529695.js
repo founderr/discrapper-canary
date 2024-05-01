@@ -59,7 +59,6 @@ e.exports = {
   summariesBetaTag: "summariesBetaTag_a5b15a",
   tooltip: "tooltip_fbc8d9",
   tooltipEmojiName: "tooltipEmojiName__487ec",
-  tooltipPremiumContent: "tooltipPremiumContent_e6a30a",
   topicsCaretLeft: "topicsCaretLeft__79c4a",
   topicsCaretRight: "topicsCaretRight_a22009",
   topicsChatBubbleIcon: "topicsChatBubbleIcon_dba1ed",

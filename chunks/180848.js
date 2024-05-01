@@ -14,8 +14,6 @@ e.exports = {
   guildTitle: "guildTitle_e577f7",
   inventoryCtaButton: "inventoryCtaButton__4f6d2",
   joinGuildLink: "joinGuildLink__0bbf9",
-  nitroText: "nitroText_bfbcea",
-  nitroTextAndBadge: "nitroTextAndBadge__6db36",
   nitroWheel: "nitroWheel__8190b",
   otherEmoji: "otherEmoji__8cb34",
   otherEmojisContainer: "otherEmojisContainer__670e1",
