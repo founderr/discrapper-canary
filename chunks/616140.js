@@ -16,11 +16,11 @@ var l = s("735250"),
   f = s("621853"),
   S = s("944546"),
   m = s("470900"),
-  v = s("988246"),
-  I = s("834534"),
+  I = s("988246"),
+  v = s("834534"),
   E = s("228168"),
-  x = s("689938"),
-  _ = s("788741");
+  _ = s("689938"),
+  x = s("788741");
 let A = e => {
   let {
     user: t,
@@ -31,18 +31,18 @@ let A = e => {
   });
   return t.id === (null == s ? void 0 : s.id) ? [{
     section: E.UserProfileSections.USER_INFO,
-    text: x.default.Messages.USER_PROFILE_ABOUT_ME
+    text: _.default.Messages.USER_PROFILE_ABOUT_ME
   }] : [{
     section: E.UserProfileSections.USER_INFO,
-    text: x.default.Messages.USER_PROFILE_ABOUT_ME
+    text: _.default.Messages.USER_PROFILE_ABOUT_ME
   }, {
     section: E.UserProfileSections.MUTUAL_FRIENDS,
-    text: (0, i.match)(l).with(void 0, () => x.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => x.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => x.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
+    text: (0, i.match)(l).with(void 0, () => _.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => _.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => _.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
       count: e
     }))
   }, {
     section: E.UserProfileSections.MUTUAL_GUILDS,
-    text: (0, i.match)(a).with(void 0, () => x.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => x.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => x.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+    text: (0, i.match)(a).with(void 0, () => _.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => _.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => _.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
       count: e
     }))
   }]
@@ -52,16 +52,16 @@ function U(e) {
   var t, s;
   let {
     user: f,
-    displayProfile: x,
+    displayProfile: _,
     initialSection: U = E.UserProfileSections.USER_INFO,
     autoFocusNote: T,
     onClose: N
   } = e, {
     trackUserProfileAction: g
-  } = (0, c.useUserProfileAnalyticsContext)(), C = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()), h = (0, n.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), p = A({
+  } = (0, c.useUserProfileAnalyticsContext)(), C = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()), h = (0, n.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), R = A({
     user: f,
     currentUser: C
-  }), [R, j] = a.useState(T), [M, P] = a.useState(null !== (s = null === (t = p.find(e => {
+  }), [p, j] = a.useState(T), [M, P] = a.useState(null !== (s = null === (t = R.find(e => {
     let {
       section: t
     } = e;
@@ -73,22 +73,22 @@ function U(e) {
     }), P(e), j(!1)
   }, [g, P]);
   return null == C ? null : h ? (0, l.jsx)("div", {
-    className: _.container,
-    children: (0, l.jsx)(v.default, {})
+    className: x.container,
+    children: (0, l.jsx)(I.default, {})
   }) : (0, l.jsxs)("div", {
-    className: _.container,
+    className: x.container,
     children: [(0, l.jsx)(r.TabBar, {
-      className: _.tabBar,
+      className: x.tabBar,
       type: "top",
       selectedItem: M,
       onItemSelect: y,
-      children: p.map(e => {
+      children: R.map(e => {
         let {
           section: t,
           text: s
         } = e;
         return (0, l.jsx)(r.TabBar.Item, {
-          className: _.tabBarItem,
+          className: x.tabBarItem,
           id: t,
           "aria-label": s,
           children: (0, l.jsx)(o.Text, {
@@ -103,12 +103,12 @@ function U(e) {
     })).with(E.UserProfileSections.MUTUAL_GUILDS, () => (0, l.jsx)(m.default, {
       user: f,
       onClose: N
-    })).otherwise(() => (0, l.jsx)(I.default, {
-      className: _.infoTab,
+    })).otherwise(() => (0, l.jsx)(v.default, {
+      className: x.infoTab,
       user: f,
       currentUser: C,
-      displayProfile: x,
-      autoFocusNote: R
+      displayProfile: _,
+      autoFocusNote: p
     }))]
   })
 }

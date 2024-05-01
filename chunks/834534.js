@@ -16,11 +16,11 @@ var l = s("735250"),
   f = s("706454"),
   S = s("430824"),
   m = s("785717"),
-  v = s("648067"),
-  I = s("588822"),
+  I = s("648067"),
+  v = s("588822"),
   E = s("81334"),
-  x = s("652853"),
-  _ = s("335191"),
+  _ = s("652853"),
+  x = s("335191"),
   A = s("347949"),
   U = s("192591"),
   T = s("351707"),
@@ -35,9 +35,9 @@ function C(e) {
     autoFocusNote: C,
     className: h
   } = e, {
-    theme: p
-  } = (0, x.useUserProfileThemeContext)(), {
-    trackUserProfileAction: R
+    theme: R
+  } = (0, _.useUserProfileThemeContext)(), {
+    trackUserProfileAction: p
   } = (0, m.useUserProfileAnalyticsContext)(), j = null == i ? void 0 : i.guildId, M = (0, r.useStateFromStores)([S.default], () => null != j ? S.default.getGuild(j) : null), {
     recentGames: P,
     isFetching: y,
@@ -48,11 +48,11 @@ function C(e) {
   }, [P]), F = (0, d.useIsUserRecentGamesEnabled)({
     location: "SimplifiedUserProfileModalInfo",
     userId: t.id
-  }), D = (0, r.useStateFromStores)([f.default], () => f.default.locale), b = (0, v.default)(t.id);
+  }), D = (0, r.useStateFromStores)([f.default], () => f.default.locale), b = (0, I.default)(t.id);
   return (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: n()(g.scroller, h),
-    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(I.default, {
+    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(v.default, {
       userBio: i.bio,
       setLineClamp: !1
     }), null != M && (0, l.jsx)(T.default, {
@@ -73,11 +73,11 @@ function C(e) {
       })
     }), b.length > 0 && (0, l.jsx)(U.default, {
       title: N.default.Messages.CONNECTIONS,
-      children: (0, l.jsx)(_.ConnectedUserAccounts, {
+      children: (0, l.jsx)(x.ConnectedUserAccounts, {
         connectedAccounts: b,
         className: g.connections,
         userId: t.id,
-        theme: p,
+        theme: R,
         locale: D
       })
     }), (0, l.jsx)(U.default, {
@@ -86,7 +86,7 @@ function C(e) {
         userId: t.id,
         className: g.note,
         autoFocus: C,
-        onUpdate: () => R({
+        onUpdate: () => p({
           action: "SET_NOTE"
         })
       })

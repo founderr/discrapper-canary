@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return R
+    return p
   }
 }), s("47120");
 var l = s("735250"),
@@ -16,11 +16,11 @@ var l = s("735250"),
   f = s("158776"),
   S = s("5192"),
   m = s("785717"),
-  v = s("318661"),
-  I = s("502762"),
+  I = s("318661"),
+  v = s("502762"),
   E = s("705556"),
-  x = s("301984"),
-  _ = s("94918"),
+  _ = s("301984"),
+  x = s("94918"),
   A = s("664794"),
   U = s("980768"),
   T = s("806926"),
@@ -28,13 +28,13 @@ var l = s("735250"),
   g = s("228168"),
   C = s("981631"),
   h = s("689938"),
-  p = s("750721");
+  R = s("750721");
 
-function R(e) {
+function p(e) {
   let {
     user: t,
     guildId: s,
-    channelId: R,
+    channelId: p,
     messageId: j,
     roleId: M,
     friendToken: P,
@@ -49,10 +49,10 @@ function R(e) {
     layout: "SIMPLIFIED_MODAL",
     userId: t.id,
     guildId: b,
-    channelId: R,
+    channelId: p,
     messageId: j,
     roleId: M
-  }), [k, w] = a.useState(b), V = (0, v.default)(t.id), H = (0, v.default)(t.id, b), Y = null == k ? V : H, {
+  }), [k, w] = a.useState(b), V = (0, I.default)(t.id), H = (0, I.default)(t.id, b), Y = null == k ? V : H, {
     activity: z,
     customStatusActivity: W
   } = (0, i.useStateFromStoresObject)([f.default], () => ({
@@ -75,29 +75,29 @@ function R(e) {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: b,
-      channelId: R,
+      channelId: p,
       messageId: j,
       roleId: M,
       children: (0, l.jsx)(n.ModalRoot, {
         transitionState: L,
-        className: p.root,
+        className: R.root,
         hideShadow: !0,
         "aria-label": h.default.Messages.USER_PROFILE_MODAL,
         children: (0, l.jsx)("div", {
           ref: Z,
-          children: (0, l.jsxs)(I.default, {
+          children: (0, l.jsxs)(v.default, {
             user: t,
             displayProfile: Y,
             profileType: g.UserProfileTypes.FULL_SIZE,
             children: [(0, l.jsxs)(U.default, {
               profileType: g.UserProfileTypes.FULL_SIZE,
               isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !J,
-              children: [(0, l.jsx)(_.default, {
+              children: [(0, l.jsx)(x.default, {
                 user: t,
                 guildId: b,
-                channelId: R,
+                channelId: p,
                 onClose: D
-              }), (0, l.jsx)(x.default, {
+              }), (0, l.jsx)(_.default, {
                 user: t,
                 friendToken: P
               }), (0, l.jsx)(E.default, {
@@ -126,7 +126,7 @@ function R(e) {
                   id: "view-server-profile",
                   label: h.default.Messages.VIEW_SERVER_PROFILE,
                   subtext: h.default.Messages.AKA_DISPLAY_NAME.format({
-                    displayName: S.default.getName(b, R, t)
+                    displayName: S.default.getName(b, p, t)
                   }),
                   action: () => {
                     G({
@@ -140,7 +140,7 @@ function R(e) {
               user: t,
               displayProfile: Y,
               guildId: b,
-              channelId: R,
+              channelId: p,
               activity: z,
               customStatusActivity: W,
               onClose: D

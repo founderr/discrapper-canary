@@ -17,11 +17,11 @@ var a = s("442837"),
   f = s("204197"),
   S = s("78675"),
   m = s("438163"),
-  v = s("652853"),
-  I = s("30556"),
+  I = s("652853"),
+  v = s("30556"),
   E = s("228168"),
-  x = s("182294"),
-  _ = s("231338"),
+  _ = s("182294"),
+  x = s("231338"),
   A = s("100651");
 let U = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
@@ -36,17 +36,17 @@ function T(e) {
     onClose: g
   } = e, {
     theme: C
-  } = (0, v.useUserProfileThemeContext)(), h = (0, c.default)(t.id, T), {
-    avatarSrc: p,
-    eventHandlers: R,
+  } = (0, I.useUserProfileThemeContext)(), h = (0, c.default)(t.id, T), {
+    avatarSrc: R,
+    eventHandlers: p,
     avatarDecorationSrc: j
   } = (0, f.default)({
     user: t,
     guildId: null == s ? void 0 : s.guildId,
-    size: x.AvatarSizes.SIZE_120
+    size: _.AvatarSizes.SIZE_120
   }), [M, P] = (0, a.useStateFromStoresArray)([u.default], () => {
     let e = u.default.isMobileOnline(t.id);
-    return (0, o.shouldDisableUserPresenceInChannel)(t, N) ? [_.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [_.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
+    return (0, o.shouldDisableUserPresenceInChannel)(t, N) ? [x.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [x.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
   });
   return (0, l.jsxs)("header", {
     children: [(0, l.jsx)(S.default, {
@@ -57,11 +57,11 @@ function T(e) {
     }), (0, l.jsx)("div", {
       className: A.inner,
       children: (0, l.jsxs)("div", {
-        ...R,
+        ...p,
         children: [(0, l.jsx)(U, {
-          src: p,
+          src: R,
           avatarDecoration: j,
-          size: x.AvatarSizes.SIZE_120,
+          size: _.AvatarSizes.SIZE_120,
           className: A.avatar,
           status: M,
           statusBackdropColor: (0, n.getStatusBackdropColor)(C),
@@ -70,7 +70,7 @@ function T(e) {
           statusTooltip: !0
         }), (0, l.jsx)("div", {
           className: A.buttons,
-          children: h && (0, l.jsx)(I.default, {
+          children: h && (0, l.jsx)(v.default, {
             user: t,
             onClose: g
           })

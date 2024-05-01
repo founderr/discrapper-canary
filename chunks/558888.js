@@ -20,8 +20,8 @@ function m(e) {
   let {
     user: t
   } = e, s = (0, i.useStateFromStores)([o.default], () => null != o.default.getAnyStreamForUser(t.id)), m = (0, i.useStateFromStores)([u.default], () => u.default.getActivities(t.id)), {
-    streamingActivity: v,
-    restActivities: I
+    streamingActivity: I,
+    restActivities: v
   } = a.useMemo(() => {
     let e = m.filter(e => e.type !== f.ActivityTypes.CUSTOM_STATUS),
       t = s ? e.find(e => e.type === f.ActivityTypes.PLAYING) : null,
@@ -32,40 +32,40 @@ function m(e) {
     }
   }, [s, m]), {
     analyticsLocations: E,
-    newestAnalyticsLocation: x
+    newestAnalyticsLocation: _
   } = (0, r.default)(), {
-    trackUserProfileAction: _,
+    trackUserProfileAction: x,
     ...A
   } = (0, d.useUserProfileAnalyticsContext)();
   return (0, l.jsxs)("div", {
     children: [s ? (0, l.jsx)(n.default, {
       type: n.UserActivityTypes.SIMPLIFIED_PROFILE,
       user: t,
-      source: x,
+      source: _,
       className: S.userProfileActivity,
-      activity: v,
+      activity: I,
       actionColor: S.actionColor,
       hideHeader: !0,
       onAction: () => {
-        _({
+        x({
           action: "JOIN_ACTIVITY"
         }), (0, c.trackUserProfileActivityJoined)({
-          activity: v,
+          activity: I,
           analyticsLocations: E,
           ...A
         })
       }
-    }) : null, I.map(e => (0, l.jsx)(n.default, {
+    }) : null, v.map(e => (0, l.jsx)(n.default, {
       type: n.UserActivityTypes.SIMPLIFIED_PROFILE,
       activity: e,
       user: t,
       useStoreStream: !1,
-      source: x,
+      source: _,
       className: S.userProfileActivity,
       actionColor: S.actionColor,
       hideHeader: !0,
       onAction: () => {
-        _({
+        x({
           action: "JOIN_ACTIVITY"
         }), (0, c.trackUserProfileActivityJoined)({
           activity: e,

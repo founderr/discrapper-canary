@@ -22,10 +22,10 @@ function m(e) {
     user: t,
     displayProfile: s,
     initialSection: m,
-    autoFocusNote: v,
-    transitionState: I,
+    autoFocusNote: I,
+    transitionState: v,
     onClose: E
-  } = e, x = (0, a.default)(s);
+  } = e, _ = (0, a.default)(s);
   return (0, l.jsxs)("div", {
     className: S.container,
     children: [(0, l.jsxs)("div", {
@@ -39,9 +39,9 @@ function m(e) {
         nicknameIcons: (0, l.jsx)(r.default, {
           userId: t.id
         })
-      }), x.length > 0 && (0, l.jsx)(o.default.Overlay, {
+      }), _.length > 0 && (0, l.jsx)(o.default.Overlay, {
         children: (0, l.jsx)(i.default, {
-          badges: x,
+          badges: _,
           className: S.badgeList,
           onClose: E
         })
@@ -49,13 +49,13 @@ function m(e) {
     }), (0, l.jsx)(d.default, {
       user: t
     }), (0, l.jsxs)(o.default.Overlay, {
-      children: [I === f.ModalTransitionState.ENTERED && (0, l.jsx)(n.default, {
+      children: [v === f.ModalTransitionState.ENTERED && (0, l.jsx)(n.default, {
         onTooltipClose: E
       }), (0, l.jsx)(c.default, {
         user: t,
         displayProfile: s,
         initialSection: m,
-        autoFocusNote: v,
+        autoFocusNote: I,
         onClose: E
       })]
     })]
