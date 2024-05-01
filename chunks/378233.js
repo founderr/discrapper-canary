@@ -98,14 +98,16 @@ let {
     size: n = _.DEFAULT_STICKER_DIMENSIONS
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   if (null == e.format_type) return null;
-  let i = c.Endpoints.STICKER_ASSET(e.id, O(e.format_type));
+  let i = e.format_type;
+  e.format_type === d.StickerFormat.GIF && t && (i = d.StickerFormat.PNG);
+  let a = c.Endpoints.STICKER_ASSET(e.id, O(i));
   if ("development" !== T) {
-    if (e.format_type === d.StickerFormat.LOTTIE) return "".concat(location.protocol).concat(f).concat(i);
-    let a = e.format_type === d.StickerFormat.APNG && t && !(0, l.isAndroid)() ? "&passthrough=false" : "",
+    if (e.format_type === d.StickerFormat.LOTTIE) return "".concat(location.protocol).concat(f).concat(a);
+    let i = e.format_type === d.StickerFormat.APNG && t && !(0, l.isAndroid)() ? "&passthrough=false" : "",
       s = Math.min(2, (0, r.getDevicePixelRatio)());
-    return "".concat(location.protocol).concat(I).concat(i, "?size=").concat((0, r.getBestMediaProxySize)(n * s)).concat(a)
+    return "".concat(location.protocol).concat(I).concat(a, "?size=").concat((0, r.getBestMediaProxySize)(n * s)).concat(i)
   }
-  return "".concat(location.protocol).concat(E).concat(i)
+  return "".concat(location.protocol).concat(E).concat(a)
 }, L = (e, t) => {
   let n;
   let i = e.banner_asset_id;
