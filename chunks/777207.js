@@ -32,6 +32,9 @@ let _ = Object.fromEntries(Object.keys(l.default.colors).map(e => [o()(e), e])),
         lineClamp: c,
         WebkitLineClamp: c
       })), void 0 !== E) switch (E) {
+      case "currentColor":
+        t = "currentColor";
+        break;
       case "none":
         t = void 0;
         break;
