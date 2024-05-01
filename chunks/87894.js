@@ -35,8 +35,10 @@ function i(e) {
 }
 
 function r(e) {
-  var t;
-  return (null === (t = e.quest.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null || i(e)
+  let {
+    userStatus: t
+  } = e.quest;
+  return (null == t ? void 0 : t.enrolledAt) != null && null == t.completedAt || i(e)
 }(s = a || (a = {}))[s.FOR_YOU = 0] = "FOR_YOU", s[s.OTHER = 1] = "OTHER";
 let o = 100,
   u = 20,
