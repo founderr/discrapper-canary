@@ -38,7 +38,6 @@ function c(e) {
       children: [(0, s.jsx)(o.default, {
         grow: 0,
         shrink: 1,
-        basis: "50%",
         align: o.default.Align.CENTER,
         children: null == a ? void 0 : a()
       }), (0, s.jsx)(o.default, {
@@ -50,7 +49,6 @@ function c(e) {
         grow: 0,
         shrink: 1,
         justify: o.default.Justify.END,
-        basis: "50%",
         align: o.default.Align.CENTER,
         children: null == i ? void 0 : i()
       })]
