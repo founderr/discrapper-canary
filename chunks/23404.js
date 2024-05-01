@@ -114,7 +114,6 @@ t.default = function(e) {
             showShareLink: !0,
             children: e => (0, n.jsx)(u.Clickable, {
               ...e,
-              className: R.__invalid_submenuWrapper,
               "aria-label": v.default.Messages.ACTIONS,
               children: (0, n.jsx)(f.default, {
                 className: R.submenuIcon
