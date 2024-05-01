@@ -3,6 +3,9 @@ n.r(t), n.d(t, {
   BaseClanTagChiplet: function() {
     return h
   },
+  ClanTagBadge: function() {
+    return S
+  },
   useShouldDisplayClanTag: function() {
     return m
   }
