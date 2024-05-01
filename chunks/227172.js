@@ -4,65 +4,84 @@ var a = n("735250"),
   l = n("470079"),
   s = n("442837"),
   i = n("706454"),
-  r = n("561308"),
-  o = n("919394"),
-  u = n("438226"),
-  d = n("206295"),
-  c = n("91140"),
-  f = n("297781"),
-  h = n("591853"),
-  m = n("689938");
+  r = n("22211"),
+  o = n("561308"),
+  u = n("919394"),
+  d = n("438226"),
+  c = n("206295"),
+  f = n("91140"),
+  h = n("297781"),
+  m = n("591853"),
+  p = n("689938");
 t.default = e => {
   let {
     channel: t,
     entry: n,
-    requestId: p,
-    closePopout: E
+    requestId: E,
+    closePopout: C
   } = e, {
-    applicationImageSrc: C,
-    user: g
-  } = (0, c.useGamingContentData)(n), {
-    primaryColor: S,
-    secondaryColor: _
-  } = (0, d.default)(C), T = (0, s.useStateFromStores)([i.default], () => i.default.locale), I = l.useCallback(e => {
-    if (null != C && null != t && null != g) return (0, o.generateGamingContentImage)({
+    applicationImageSrc: g,
+    user: S
+  } = (0, f.useGamingContentData)(n), {
+    primaryColor: _,
+    secondaryColor: T
+  } = (0, c.default)(g), I = (0, s.useStateFromStores)([i.default], () => i.default.locale), {
+    streamPreviewUrl: A,
+    channel: N
+  } = (0, r.default)(n), v = l.useCallback(e => {
+    if (null != g && null != t && null != S) return (0, u.generateGamingContentImage)({
       entry: n,
-      applicationImageSrc: C,
-      avatarSrc: g.getAvatarURL(t.guild_id, 128),
-      description: (0, u.formatCanvasDescription)(n, t, g),
-      timestamp: (0, r.formatEntryTimestamp)(n, T),
-      colors: [S, _],
+      applicationImageSrc: g,
+      avatarSrc: S.getAvatarURL(t.guild_id, 128),
+      description: (0, d.formatCanvasDescription)(n, t, S),
+      timestamp: (0, o.formatEntryTimestamp)(n, I),
+      colors: [_, T],
       channelId: e
     })
-  }, [C, t, n, T, S, _, g]);
-  return null == g ? null : (0, a.jsxs)(h.Popout, {
-    children: [(0, a.jsx)(h.PopoutContent, {
-      thumbnailSrc: C,
-      user: g,
+  }, [g, t, n, I, _, T, S]);
+  if (null == S) return null;
+  let x = (0, a.jsx)(h.BadgesContainer, {
+      location: h.BadgeLocation.POPOUT,
+      children: f.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
+        entry: n
+      }, t))
+    }),
+    M = null == A ? (0, a.jsx)(m.PopoutContent, {
+      thumbnailSrc: g,
+      user: S,
       channel: t,
-      userDescription: (0, r.isEntryActive)(n) ? m.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : m.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+      userDescription: (0, o.isEntryActive)(n) ? p.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : p.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
       title: n.extra.game_name,
-      badges: (0, a.jsx)(f.BadgesContainer, {
-        location: f.BadgeLocation.POPOUT,
-        children: c.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
-          entry: n
-        }, t))
-      })
-    }), (0, a.jsxs)(h.PopoutInteractionsContainer, {
-      children: [(0, a.jsx)(h.PopoutReactor, {
-        closePopout: E,
-        user: g,
+      badges: x
+    }) : (0, a.jsx)(m.StreamingPopoutContent, {
+      user: S,
+      channel: t,
+      streamPreviewSrc: A,
+      title: n.extra.game_name,
+      badges: x,
+      userDescription: p.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING
+    });
+  return (0, a.jsxs)(m.Popout, {
+    children: [M, (0, a.jsx)(m.PopoutInteractionsContainer, {
+      children: null != N ? (0, a.jsx)(m.VoiceChannelPopoutReactor, {
+        closePopout: C,
+        user: S,
         channel: t,
-        generateReactionImage: I,
-        reactionImageAltText: (0, u.getContentAltText)(n, g),
+        generateReactionImage: v,
+        reactionImageAltText: (0, d.getContentAltText)(n, S),
         entry: n,
-        requestId: p
-      }), (0, a.jsx)(h.PopoutJoinPrompt, {
+        requestId: E,
+        voiceChannel: N,
+        isStreaming: null != A
+      }) : (0, a.jsx)(m.PopoutReactor, {
+        closePopout: C,
+        user: S,
+        channel: t,
+        generateReactionImage: v,
+        reactionImageAltText: (0, d.getContentAltText)(n, S),
         entry: n,
-        user: g,
-        requestId: p,
-        channel: t
-      })]
+        requestId: E
+      })
     })]
   })
 }

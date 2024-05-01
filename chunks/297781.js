@@ -4,34 +4,34 @@ n.r(t), n.d(t, {
     return l
   },
   BadgesContainer: function() {
-    return w
-  },
-  EpisodeBadge: function() {
     return F
   },
+  EpisodeBadge: function() {
+    return U
+  },
   GameTimestampBadge: function() {
-    return y
-  },
-  MarathonBadge: function() {
-    return j
-  },
-  NewGameBadge: function() {
-    return O
-  },
-  ResurrectedBadge: function() {
-    return P
-  },
-  StreakBadge: function() {
-    return D
-  },
-  TopGameBadge: function() {
-    return b
-  },
-  VoiceChannelBadge: function() {
     return L
   },
+  MarathonBadge: function() {
+    return O
+  },
+  NewGameBadge: function() {
+    return y
+  },
+  ResurrectedBadge: function() {
+    return j
+  },
+  StreakBadge: function() {
+    return P
+  },
+  TopGameBadge: function() {
+    return D
+  },
+  VoiceChannelBadge: function() {
+    return R
+  },
   WatchTimestampBadge: function() {
-    return U
+    return b
   }
 });
 var a, l, s = n("735250"),
@@ -49,20 +49,19 @@ var a, l, s = n("735250"),
   C = n("690172"),
   g = n("481060"),
   S = n("70956"),
-  _ = n("162461"),
-  T = n("22211"),
-  I = n("561308"),
-  A = n("371991"),
-  N = n("689938"),
-  v = n("509058");
+  _ = n("22211"),
+  T = n("561308"),
+  I = n("371991"),
+  A = n("689938"),
+  N = n("509058");
 (a = l || (l = {}))[a.CARD = 0] = "CARD", a[a.POPOUT = 1] = "POPOUT";
-let x = i.createContext({});
+let v = i.createContext({});
 
-function M() {
-  return i.useContext(x)
+function x() {
+  return i.useContext(v)
 }
 
-function R(e) {
+function M(e) {
   let {
     Icon: t,
     text: n,
@@ -72,12 +71,12 @@ function R(e) {
   } = e, {
     defaultTextColor: r,
     defaultIconColor: o
-  } = M();
+  } = x();
   return (0, s.jsx)(g.Tooltip, {
     text: l,
     shouldShow: i,
     children: e => (0, s.jsxs)("div", {
-      className: v.badgeContainer,
+      className: N.badgeContainer,
       ...e,
       children: [(0, s.jsx)(t, {
         width: 12,
@@ -86,10 +85,24 @@ function R(e) {
       }), (0, s.jsx)(g.Text, {
         variant: "text-xs/normal",
         color: r,
-        className: v.badgeLabel,
+        className: N.badgeLabel,
         children: n
       })]
     })
+  })
+}
+
+function R(e) {
+  let {
+    entry: t
+  } = e, {
+    channel: n
+  } = (0, _.default)(t), {
+    location: a
+  } = x();
+  return null == n || 1 === a ? null : (0, s.jsx)(M, {
+    Icon: C.VoiceNormalIcon,
+    text: n.name
   })
 }
 
@@ -97,37 +110,34 @@ function L(e) {
   let {
     entry: t
   } = e, {
-    channel: n
-  } = (0, T.default)(t), {
-    showBadge: a
-  } = _.VoiceEnrichmentsExperiment.useExperiment({
-    location: "content_badge"
-  });
-  return a && null != n ? (0, s.jsx)(R, {
-    Icon: C.VoiceNormalIcon,
-    text: n.name
-  }) : null
+    defaultTextColor: n,
+    defaultIconColor: a,
+    location: l
+  } = x(), i = (0, T.isEntryActive)(t), r = 0 === l && i ? g.tokens.colors.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT : a;
+  return (0, s.jsxs)("div", {
+    className: N.badgeContainer,
+    children: [(0, s.jsx)(d.GameControllerIcon, {
+      width: 12,
+      height: 12,
+      color: r
+    }), (0, s.jsx)(I.default, {
+      entry: t,
+      textColor: n
+    })]
+  })
 }
 
 function y(e) {
   let {
     entry: t
   } = e, {
-    defaultTextColor: n,
-    defaultIconColor: a,
-    location: l
-  } = M(), i = (0, I.isEntryActive)(t), r = 0 === l && i ? g.tokens.colors.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT : a;
-  return (0, s.jsxs)("div", {
-    className: v.badgeContainer,
-    children: [(0, s.jsx)(d.GameControllerIcon, {
-      width: 12,
-      height: 12,
-      color: r
-    }), (0, s.jsx)(A.default, {
-      entry: t,
-      textColor: n
-    })]
-  })
+    location: n
+  } = x(), a = 0 === n ? g.tokens.colors.STATUS_POSITIVE : void 0;
+  return (0, T.isEntryNew)(t) ? (0, s.jsx)(M, {
+    Icon: c.NewUserLargeIcon,
+    text: A.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
+    iconColor: a
+  }) : null
 }
 
 function O(e) {
@@ -135,12 +145,17 @@ function O(e) {
     entry: t
   } = e, {
     location: n
-  } = M(), a = 0 === n ? g.tokens.colors.STATUS_POSITIVE : void 0;
-  return (0, I.isEntryNew)(t) ? (0, s.jsx)(R, {
-    Icon: c.NewUserLargeIcon,
-    text: N.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
-    iconColor: a
-  }) : null
+  } = x();
+  if (!(0, T.isEntryMarathon)(t)) return null;
+  let a = (0, T.isEntryActive)(t),
+    l = 0 === n,
+    i = l || a ? (0, T.getMarathonName)(t) : (0, T.getFullMarathonDescription)(t);
+  return (0, s.jsx)(M, {
+    Icon: h.TimerIcon,
+    text: i,
+    tooltipText: (0, T.getMarathonDurationStr)(t),
+    showTooltip: l && !a
+  })
 }
 
 function j(e) {
@@ -148,43 +163,44 @@ function j(e) {
     entry: t
   } = e, {
     location: n
-  } = M();
-  if (!(0, I.isEntryMarathon)(t)) return null;
-  let a = (0, I.isEntryActive)(t),
-    l = 0 === n,
-    i = l || a ? (0, I.getMarathonName)(t) : (0, I.getFullMarathonDescription)(t);
-  return (0, s.jsx)(R, {
-    Icon: h.TimerIcon,
-    text: i,
-    tooltipText: (0, I.getMarathonDurationStr)(t),
-    showTooltip: l && !a
+  } = x(), a = (0, T.getResurrectedEntryLastPlayTime)(t);
+  if (null == a) return null;
+  let l = (0, T.getFullResurrectedBadgeText)(a);
+  return (0, s.jsx)(M, {
+    Icon: f.RetryIcon,
+    showTooltip: 0 === n,
+    tooltipText: l,
+    text: 1 === n ? l : A.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
   })
 }
 
 function P(e) {
   let {
     entry: t
-  } = e, {
-    location: n
-  } = M(), a = (0, I.getResurrectedEntryLastPlayTime)(t);
-  if (null == a) return null;
-  let l = (0, I.getFullResurrectedBadgeText)(a);
-  return (0, s.jsx)(R, {
-    Icon: f.RetryIcon,
-    showTooltip: 0 === n,
-    tooltipText: l,
-    text: 1 === n ? l : N.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
+  } = e, n = (0, T.getStreakCount)(t);
+  return null == n || n < 2 ? null : (0, s.jsx)(M, {
+    Icon: u.FlashIcon,
+    text: A.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+      days: n
+    })
   })
 }
 
 function D(e) {
   let {
     entry: t
-  } = e, n = (0, I.getStreakCount)(t);
-  return null == n || n < 2 ? null : (0, s.jsx)(R, {
-    Icon: u.FlashIcon,
-    text: N.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
-      days: n
+  } = e, {
+    location: n
+  } = x(), a = (0, T.getEntryDuration)(t);
+  if (null == a) return null;
+  let l = 1 === n,
+    i = l ? A.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : A.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
+  return (0, s.jsx)(M, {
+    Icon: p.TrophyIcon,
+    text: (0, s.jsxs)(s.Fragment, {
+      children: [A.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, l ? " — " : ": ", i.format({
+        hours: Math.round(a / S.default.Seconds.HOUR)
+      })]
     })
   })
 }
@@ -193,56 +209,37 @@ function b(e) {
   let {
     entry: t
   } = e, {
-    location: n
-  } = M(), a = (0, I.getEntryDuration)(t);
-  if (null == a) return null;
-  let l = 1 === n,
-    i = l ? N.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : N.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
-  return (0, s.jsx)(R, {
-    Icon: p.TrophyIcon,
-    text: (0, s.jsxs)(s.Fragment, {
-      children: [N.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, l ? " — " : ": ", i.format({
-        hours: Math.round(a / S.default.Seconds.HOUR)
-      })]
-    })
-  })
-}
-
-function U(e) {
-  let {
-    entry: t
-  } = e, {
     defaultTextColor: n,
     defaultIconColor: a
-  } = M();
+  } = x();
   return (0, s.jsxs)("div", {
-    className: v.badgeContainer,
+    className: N.badgeContainer,
     children: [(0, s.jsx)(E.TvIcon, {
       width: 12,
       height: 12,
       color: a
-    }), (0, s.jsx)(A.default, {
+    }), (0, s.jsx)(I.default, {
       entry: t,
       textColor: n
     })]
   })
 }
 
-function F(e) {
+function U(e) {
   var t;
   let {
     entry: n
-  } = e, a = /\w+ (\d+), \w+ (\d+)/.exec(null !== (t = n.extra.media_assets_large_text) && void 0 !== t ? t : ""), l = null != a ? N.default.Messages.MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE.format({
+  } = e, a = /\w+ (\d+), \w+ (\d+)/.exec(null !== (t = n.extra.media_assets_large_text) && void 0 !== t ? t : ""), l = null != a ? A.default.Messages.MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE.format({
     seasonNum: a[1],
     episodeNum: a[2]
   }) : null;
-  return (0, s.jsx)(R, {
+  return (0, s.jsx)(M, {
     Icon: m.TopicsIcon,
     text: l
   })
 }
 
-function w(e) {
+function F(e) {
   let {
     location: t,
     children: n
@@ -252,15 +249,15 @@ function w(e) {
   } : {
     defaultTextColor: "always-white",
     defaultIconColor: g.tokens.colors.TEXT_PRIMARY
-  }, (0, s.jsx)(x.Provider, {
+  }, (0, s.jsx)(v.Provider, {
     value: {
       location: t,
       ...a
     },
     children: (0, s.jsx)("div", {
-      className: o()(v.badgesContainer, {
-        [v.badgesContainerCard]: 0 === t,
-        [v.badgesContainerPopout]: 1 === t
+      className: o()(N.badgesContainer, {
+        [N.badgesContainerCard]: 0 === t,
+        [N.badgesContainerPopout]: 1 === t
       }),
       children: n
     })
