@@ -31,9 +31,12 @@ function v(e) {
   var t, a, l;
   let {
     quest: E
-  } = e, v = (0, m.useQuestBarLogger)(E), L = (0, C.useIsEligibleForQuests)({
+  } = e, v = (0, m.getQuestLogger)({
+    quest: E,
     location: T.QuestsExperimentLocations.QUESTS_BAR
-  }), R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), M = s.useRef(-1), P = s.useRef(!1), [x, y] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, w] = s.useState(!0), [k, B] = s.useState(240), F = s.useRef(null), H = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, V = s.useRef(H), Y = (null === (a = E.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, W = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, K = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), z = (0, f.useIsQuestExpired)(E), {
+  }), R = (0, C.useIsEligibleForQuests)({
+    location: T.QuestsExperimentLocations.QUESTS_BAR
+  }), L = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), M = s.useRef(-1), P = s.useRef(!1), [x, y] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, w] = s.useState(!0), [k, B] = s.useState(240), F = s.useRef(null), H = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, V = s.useRef(H), Y = (null === (a = E.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, W = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, K = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), z = (0, f.useIsQuestExpired)(E), {
     hasError: q,
     isLoading: Q
   } = (0, p.useQuestsAssetsLoadState)(), Z = s.useCallback(() => {
@@ -70,7 +73,7 @@ function v(e) {
   }, [H, Z]), s.useLayoutEffect(() => {
     !Y && H && !V.current && !P.current && b(!1)
   }, [H, Y]);
-  let es = L && !K && !W && !z && !Q,
+  let es = R && !K && !W && !z && !Q,
     el = s.useRef(es);
   s.useLayoutEffect(() => {
     es !== el.current && w(!1), el.current = es
@@ -95,7 +98,7 @@ function v(e) {
       friction: 30,
       clamp: !0
     },
-    immediate: R,
+    immediate: L,
     onRest: () => {
       j(!0)
     },
@@ -116,7 +119,7 @@ function v(e) {
       friction: 10,
       clamp: !0
     },
-    immediate: R,
+    immediate: L,
     onRest: () => {
       w(!0)
     },
@@ -130,7 +133,7 @@ function v(e) {
   }, {
     autoTrackExposure: es && !q
   });
-  return L && (es || !G || Q) && !q ? (0, n.jsx)(S.QuestContentImpressionTracker, {
+  return R && (es || !G || Q) && !q ? (0, n.jsx)(S.QuestContentImpressionTracker, {
     questOrQuests: E,
     questContent: h.QuestContent.QUEST_BAR,
     overrideVisibility: !O && es,
@@ -178,12 +181,12 @@ function v(e) {
             onCtxMenuOpened: X,
             onCtxMenuSelection: $,
             quest: E,
-            useReducedMotion: R
+            useReducedMotion: L
           })
         })
       })
     }
-  }) : (q ? v.log("Not rendered due to asset error") : !L && v.log("Not rendered due to ineligibility"), null)
+  }) : (q ? v.log("Not rendered due to asset error") : !R && v.log("Not rendered due to ineligibility"), null)
 }
 t.default = function(e) {
   let {
