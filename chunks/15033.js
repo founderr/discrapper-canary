@@ -10,8 +10,8 @@ t.default = function(e) {
     onChange: t,
     values: s
   } = e, r = [{
-    label: "Playtime Criteria",
-    value: i.QuestVariants.PLAYTIME_CRITERIA
+    label: "Playtime Task",
+    value: i.QuestVariants.PLAYTIME_TASK
   }, {
     label: "Post Enrollment CTA",
     value: i.QuestVariants.POST_ENROLLMENT_CTA
