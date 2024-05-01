@@ -27,8 +27,8 @@ var n = a("735250"),
   A = a("243778"),
   N = a("922409"),
   v = a("899740"),
-  L = a("28476"),
-  R = a("880257"),
+  R = a("28476"),
+  L = a("880257"),
   O = a("631885"),
   M = a("457396"),
   P = a("51596"),
@@ -144,7 +144,7 @@ let ee = e => {
     } = e, a = (0, v.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
       channelId: l
     } = (0, N.useMessageRequestSidebarState)();
-    if (!(0, L.useShouldShowMessageRequestsRow)()) return null;
+    if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
     let i = null == l ? void 0 : () => h.default.preload(X.ME, l);
     return (0, n.jsx)(q.LinkButton, {
       selected: t,
@@ -161,7 +161,7 @@ let ee = e => {
   es = e => {
     let {
       selected: t
-    } = e, a = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = b.FamilyCenterEnabled.useSetting(), r = (0, R.default)(), [u, d] = s.useState(!0);
+    } = e, a = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = b.FamilyCenterEnabled.useSetting(), r = (0, L.default)(), [u, d] = s.useState(!0);
     return i && r ? (0, n.jsx)(q.LinkButton, {
       selected: t,
       route: X.Routes.FAMILY_CENTER,

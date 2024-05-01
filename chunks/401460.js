@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("392711"),
   l = n.n(o),
   u = n("481060"),
@@ -28,7 +28,7 @@ function A(e) {
   let {
     id: t,
     className: n,
-    onSelect: s,
+    onSelect: a,
     isSelected: o = !1,
     tabIndex: l,
     children: c
@@ -45,10 +45,10 @@ function A(e) {
         ...e,
         ...m,
         tabIndex: null != l ? l : m.tabIndex,
-        className: a()(f.appIconSelection, {
+        className: s()(f.appIconSelection, {
           [f.selected]: o
         }, n),
-        onClick: o ? I.NOOP : () => null == s ? void 0 : s(t),
+        onClick: o ? I.NOOP : () => null == a ? void 0 : a(t),
         children: c
       }), o && (0, i.jsx)(d.SelectionCircle, {})]
     })
@@ -60,15 +60,15 @@ function m(e) {
     icon: t,
     isSelected: n,
     disabled: r,
-    tabIndex: s,
-    onSelect: a
+    tabIndex: a,
+    onSelect: s
   } = e;
   return (0, i.jsx)(A, {
-    onSelect: r ? void 0 : a,
+    onSelect: r ? void 0 : s,
     isSelected: n,
     id: t.id,
     className: r ? f.disabled : void 0,
-    tabIndex: s,
+    tabIndex: a,
     children: (0, i.jsx)(c.default, {
       id: t.id,
       width: E.CUSTOM_BASE_SIZE

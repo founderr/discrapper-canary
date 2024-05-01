@@ -43,7 +43,7 @@ let v = e => (0, S.default)(e).keys({
   channel_id: e.string().allow(null)
 });
 
-function L(e) {
+function R(e) {
   let {
     args: {
       channel_id: t
@@ -53,7 +53,7 @@ function L(e) {
     errorCode: T.RPCErrors.INVALID_CHANNEL
   }, "Invalid channel id: ".concat(t))
 }
-let R = {
+let L = {
   [T.RPCEvents.GUILD_STATUS]: {
     scope: T.OAuth2Scopes.RPC,
     validation: e => (0, S.default)(e).required().keys({
@@ -219,14 +219,14 @@ let R = {
       [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
     validation: v,
-    handler: L
+    handler: R
   },
   [T.RPCEvents.SPEAKING_STOP]: {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
     validation: v,
-    handler: L
+    handler: R
   },
   [T.RPCEvents.GUILD_CREATE]: {
     scope: T.OAuth2Scopes.RPC,
@@ -375,4 +375,4 @@ let R = {
     }
   }
 };
-t.default = R
+t.default = L

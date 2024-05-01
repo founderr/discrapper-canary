@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("411104");
 var i = n("836560"),
   r = n("259443"),
-  s = n("740197"),
-  a = n("106617"),
+  a = n("740197"),
+  s = n("106617"),
   o = n("290488"),
   l = n("830795"),
   u = n("65154"),
@@ -22,7 +22,7 @@ function _(e, t, n) {
   }) : e[t] = n, e
 }
 let c = new r.Logger("Output"),
-  E = new a.default;
+  E = new s.default;
 class I extends i.EventEmitter {
   destroy() {
     var e, t;
@@ -78,7 +78,7 @@ class I extends i.EventEmitter {
   }
   async enable() {
     null != this.cleanup && (this.cleanup(), this.cleanup = void 0), null != this.stream && (E.release(this.stream), this.stream = void 0);
-    let e = await (0, s.getAudioInputDevices)(),
+    let e = await (0, a.getAudioInputDevices)(),
       t = {
         echoCancellation: this.echoCancellation,
         noiseSuppression: this.noiseSuppression,

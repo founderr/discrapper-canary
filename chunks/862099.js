@@ -31,8 +31,8 @@ var n, s, l = a("735250"),
   A = a("263704"),
   N = a("465670"),
   v = a("242315"),
-  L = a("393112"),
-  R = a("170039"),
+  R = a("393112"),
+  L = a("170039"),
   O = a("602623"),
   M = a("626135"),
   P = a("823379"),
@@ -247,7 +247,7 @@ function Z(e) {
         width: 16,
         height: 16,
         className: K.stageIcon
-      }) : (0, l.jsx)(L.default, {
+      }) : (0, l.jsx)(R.default, {
         width: 16,
         height: 16,
         className: K.stageIcon
@@ -275,7 +275,7 @@ function X(e) {
     heading: W.default.Messages.HAPPENING_NOW,
     topic: t.name,
     location: (0, j.guildEventDetailsParser)(a, !0),
-    locationIcon: (0, l.jsx)(L.default, {
+    locationIcon: (0, l.jsx)(R.default, {
       width: 16,
       height: 16,
       className: K.stageIcon
@@ -340,7 +340,7 @@ function ee(e) {
       height: 14,
       className: K.stageIcon
     }),
-    locationIcon: (0, l.jsx)(R.default, {
+    locationIcon: (0, l.jsx)(L.default, {
       width: 16,
       height: 16,
       className: K.stageIcon

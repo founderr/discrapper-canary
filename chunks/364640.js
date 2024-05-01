@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, s = n("626135"),
-  a = n("591759"),
+var i, r, a = n("626135"),
+  s = n("591759"),
   o = n("777754"),
   l = n("754688"),
   u = n("981631");
 (r = i || (i = {})).MESSAGE = "Discord Message Link", r.CHANNEL = "Discord Channel Link", r.SERVER_INVITE = "Discord Server Invite", r.GIFT = "Discord Gift Link", r.UNKNOWN = "Unknown";
 let d = [e => o.default.isInvite(e) ? "Discord Server Invite" : null, e => {
-  let t = a.default.safeParseWithQuery(e);
+  let t = s.default.safeParseWithQuery(e);
   if (null == t) return null;
   let n = (0, l.tryParseChannelPath)(t.path);
   return null == n ? null : _({
@@ -22,7 +22,7 @@ function _(e) {
 }
 t.default = {
   trackDiscordLinkClicked: function(e) {
-    s.default.track(u.AnalyticEvents.LINK_CLICKED, {
+    a.default.track(u.AnalyticEvents.LINK_CLICKED, {
       is_discord_link: !0,
       discord_link_type: _(e)
     })
@@ -30,8 +30,8 @@ t.default = {
   trackLinkClicked: function(e, t) {
     var n, i;
     if (null == e && null == t) return;
-    let r = a.default.isDiscordUrl(e, !0) || null != t;
-    s.default.track(u.AnalyticEvents.LINK_CLICKED, {
+    let r = s.default.isDiscordUrl(e, !0) || null != t;
+    a.default.track(u.AnalyticEvents.LINK_CLICKED, {
       is_discord_link: r,
       discord_link_type: r ? (n = e, null == (i = t) && null == n ? "Unknown" : null == i ? function(e) {
         for (let t of d) {
@@ -48,14 +48,14 @@ t.default = {
       channelId: n,
       guildId: i,
       sourceChannelId: r,
-      sourceGuildId: a
+      sourceGuildId: s
     } = e;
-    s.default.track(u.AnalyticEvents.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
+    a.default.track(u.AnalyticEvents.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
       message_id: t,
       channel_id: n,
       guild_id: i,
       source_channel_id: r,
-      source_guild_id: a
+      source_guild_id: s
     })
   }
 }

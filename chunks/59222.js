@@ -71,8 +71,8 @@ t.default = e => {
     defaultLanguage: r,
     availableLanguages: c,
     isFetchingSearch: v,
-    scroller: L,
-    loadingGuildId: R,
+    scroller: R,
+    loadingGuildId: L,
     theme: O,
     currentCategoryId: M,
     currentCategoryName: P,
@@ -97,7 +97,7 @@ t.default = e => {
       }
     }), B(!1)
   }, K = () => {
-    null == L || L.scrollTo({
+    null == R || R.scrollTo({
       to: 0
     })
   };
@@ -171,7 +171,7 @@ t.default = e => {
               loading: G,
               loadingPlaceholderCount: g,
               onViewGuild: x,
-              loadingGuildId: R,
+              loadingGuildId: L,
               theme: O,
               analyticsContext: h.AnalyticsContexts.SEARCH,
               onGuildCardSeen: y,

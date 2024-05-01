@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, s, a, o = n("392711"),
+var i, r, a, s, o = n("392711"),
   l = n.n(o),
   u = n("149765"),
   d = n("442837"),
@@ -49,9 +49,9 @@ function G(e) {
   if (null == i) return p.NONE;
   let r = O.default.getChannel(e);
   if (null == r) return p.NONE;
-  let s = r.getGuildId(),
-    a = null != s && (I.default.isLurking(s) || (null === (t = C.default.getMember(s, i.id)) || void 0 === t ? void 0 : t.isPending));
-  return !r.isScheduledForDeletion() && !a && l().isEmpty(r.permissionOverwrites) && null != s ? b(s) : p.computePermissions({
+  let a = r.getGuildId(),
+    s = null != a && (I.default.isLurking(a) || (null === (t = C.default.getMember(a, i.id)) || void 0 === t ? void 0 : t.isPending));
+  return !r.isScheduledForDeletion() && !s && l().isEmpty(r.permissionOverwrites) && null != a ? b(a) : p.computePermissions({
     user: i,
     context: r,
     checkElevated: n
@@ -199,8 +199,8 @@ class Z extends(i = d.default.Store) {
     return "channelId" in t && "string" == typeof t.channelId ? this.can(e, O.default.getChannel(t.channelId)) : "guildId" in t && "string" == typeof t.guildId && this.can(e, g.default.getGuild(t.guildId))
   }
   can(e, t, n, i, r) {
-    let s = z(t, n, i, r);
-    return u.has(s, e)
+    let a = z(t, n, i, r);
+    return u.has(a, e)
   }
   canBasicChannel(e, t, n, i, r) {
     return "basicPermissions" in t ? N.default.has(t.basicPermissions, e) : u.has(z(t, n, i, r), N.default.asBigFlag(e))
@@ -216,9 +216,9 @@ class Z extends(i = d.default.Store) {
     if (n.isOwner(i)) return !1;
     let r = L.default.getCurrentUser();
     if (!this.can(e, n)) return !1;
-    let s = null != r ? p.getHighestRole(n, r.id) : void 0,
-      a = p.getHighestRole(n, i);
-    return null != r && p.isRoleHigher(n, r.id, s, a)
+    let a = null != r ? p.getHighestRole(n, r.id) : void 0,
+      s = p.getHighestRole(n, i);
+    return null != r && p.isRoleHigher(n, r.id, a, s)
   }
   getHighestRole(e) {
     let t = L.default.getCurrentUser();
@@ -247,12 +247,12 @@ class Z extends(i = d.default.Store) {
 function X() {
   y = {}, M = {}, P = {}, U = 0
 }
-a = "PermissionStore", (s = "displayName") in(r = Z) ? Object.defineProperty(r, s, {
-  value: a,
+s = "PermissionStore", (a = "displayName") in(r = Z) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new Z(_.default, {
+}) : r[a] = s, t.default = new Z(_.default, {
   BACKGROUND_SYNC: V,
   CONNECTION_OPEN: V,
   OVERLAY_INITIALIZE: V,

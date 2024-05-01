@@ -39,8 +39,8 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("570140"),
-  s = n("881052"),
-  a = n("957730"),
+  a = n("881052"),
+  s = n("957730"),
   o = n("695346"),
   l = n("594174"),
   u = n("626135"),
@@ -58,7 +58,7 @@ async function E(e, t) {
   let _ = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
   if (null == _) return;
   let c = o.UseLegacyChatInput.getSetting();
-  null != e.bio && c && (e.bio = a.default.parse(void 0, e.bio).content);
+  null != e.bio && c && (e.bio = s.default.parse(void 0, e.bio).content);
   try {
     r.default.dispatch({
       type: "USER_PROFILE_UPDATE_START",
@@ -77,7 +77,7 @@ async function E(e, t) {
         ...n.body
       })
     } else {
-      let e = new s.APIError(n);
+      let e = new a.APIError(n);
       r.default.dispatch({
         type: "USER_PROFILE_UPDATE_FAILURE",
         errors: n.body,
@@ -86,7 +86,7 @@ async function E(e, t) {
     }
     return n
   } catch (t) {
-    let e = new s.APIError(t);
+    let e = new a.APIError(t);
     r.default.dispatch({
       type: "USER_PROFILE_UPDATE_FAILURE",
       errors: {},

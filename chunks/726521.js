@@ -39,8 +39,8 @@ n.r(t), n.d(t, {
 });
 var i = n("367907"),
   r = n("427679"),
-  s = n("23750"),
-  a = n("598077"),
+  a = n("23750"),
+  s = n("598077"),
   o = n("595044"),
   l = n("82554"),
   u = n("185625"),
@@ -135,7 +135,7 @@ function A(e, t, n) {
 }
 
 function m(e, t) {
-  let n = new a.default({});
+  let n = new s.default({});
   R(l.UnauthenticatedReportNames.USER, {
     reported_user_id: n.id
   }), (0, d.showReportModal)({
@@ -145,7 +145,7 @@ function m(e, t) {
 }
 
 function N(e, t) {
-  let n = new s.default({});
+  let n = new a.default({});
   R(l.UnauthenticatedReportNames.MESSAGE, {
     message_id: void 0,
     channel_id: void 0

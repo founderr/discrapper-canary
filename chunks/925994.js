@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("653041"), n("757143");
 var i = n("512722"),
   r = n.n(i),
-  s = n("933557"),
-  a = n("660199"),
+  a = n("933557"),
+  s = n("660199"),
   o = n("763296"),
   l = n("592125"),
   u = n("430824"),
@@ -25,11 +25,11 @@ function T(e, t) {
     mode: n,
     ignoreTrailingEmptyNodes: i,
     preventEmojiSurrogates: r
-  } = null != t ? t : {}, [s, a] = (null == t ? void 0 : t.range) != null ? I.RangeUtils.edges(t.range) : [void 0, void 0];
+  } = null != t ? t : {}, [a, s] = (null == t ? void 0 : t.range) != null ? I.RangeUtils.edges(t.range) : [void 0, void 0];
   return f(e, {
     mode: n,
-    start: s,
-    end: a,
+    start: a,
+    end: s,
     ignoreTrailingEmptyNodes: i,
     preventEmojiSurrogates: r
   })
@@ -39,16 +39,16 @@ function f(e, t) {
   var n, i;
   let {
     mode: r,
-    start: s,
-    end: a,
+    start: a,
+    end: s,
     separator: o,
     ignoreEmptyNodes: l,
     ignoreTrailingEmptyNodes: u,
     preventEmojiSurrogates: d
   } = null != t ? t : {}, _ = e.length > 0 && !I.TextUtils.isText(e[0]);
   null == o && (o = _ ? "\n" : "");
-  let c = null !== (n = null == s ? void 0 : s.path[0]) && void 0 !== n ? n : 0,
-    E = null !== (i = null == a ? void 0 : a.path[0]) && void 0 !== i ? i : e.length - 1;
+  let c = null !== (n = null == a ? void 0 : a.path[0]) && void 0 !== n ? n : 0,
+    E = null !== (i = null == s ? void 0 : s.path[0]) && void 0 !== i ? i : e.length - 1;
   if (u)
     for (let t = E; t >= c; t--) {
       let n = e[t];
@@ -70,19 +70,19 @@ function f(e, t) {
   for (let t = c; t <= E; t++) {
     let n = e[t];
     if (l && I.TextUtils.isText(n) && 0 === n.text.length) continue;
-    let i = null != s && t === c ? {
-        path: s.path.slice(1),
-        offset: s.offset
-      } : void 0,
-      o = null != a && t === E ? {
+    let i = null != a && t === c ? {
         path: a.path.slice(1),
         offset: a.offset
+      } : void 0,
+      o = null != s && t === E ? {
+        path: s.path.slice(1),
+        offset: s.offset
       } : void 0,
       u = S(n, {
         mode: r,
         start: i,
         end: o,
-        allowBlockQuotePrefix: null == s || null == a || !T && (!f || h),
+        allowBlockQuotePrefix: null == a || null == s || !T && (!f || h),
         preventEmojiSurrogates: d
       });
     (!l || u.length > 0) && A.push(u)
@@ -100,10 +100,10 @@ function S(e, t) {
   if (I.TextUtils.isText(e)) return function(e, t) {
     var n, i;
     let {
-      start: s,
-      end: a
+      start: a,
+      end: s
     } = null != t ? t : {};
-    return r()(null == s || 0 === s.path.length, "Invalid start provided to serializeText"), r()(null == a || 0 === a.path.length, "Invalid end provided to serializeText"), e.substring(null !== (n = null == s ? void 0 : s.offset) && void 0 !== n ? n : 0, null !== (i = null == a ? void 0 : a.offset) && void 0 !== i ? i : e.length)
+    return r()(null == a || 0 === a.path.length, "Invalid start provided to serializeText"), r()(null == s || 0 === s.path.length, "Invalid end provided to serializeText"), e.substring(null !== (n = null == a ? void 0 : a.offset) && void 0 !== n ? n : 0, null !== (i = null == s ? void 0 : s.offset) && void 0 !== i ? i : e.length)
   }(e.text, t);
   switch (e.type) {
     case "line":
@@ -138,7 +138,7 @@ function S(e, t) {
       if ("raw" === n) return t;
       let i = l.default.getChannel(e.channelId);
       if (null == i) return t;
-      return (0, s.computeChannelName)(i, c.default, d.default, !0, !0)
+      return (0, a.computeChannelName)(i, c.default, d.default, !0, !0)
     }
     case "soundboard": {
       let t = "<sound:".concat(e.soundId, ">");
@@ -152,7 +152,7 @@ function S(e, t) {
       if ("raw" === n) return t;
       let i = l.default.getChannel(e.channelId);
       if (null == i) return t;
-      return (0, s.computeChannelName)(i, c.default, d.default, !0, !0)
+      return (0, a.computeChannelName)(i, c.default, d.default, !0, !0)
     }
     case "roleMention": {
       let t = "<@&".concat(e.roleId, ">");
@@ -174,7 +174,7 @@ function S(e, t) {
     case "commandMention":
       return "</".concat(e.commandName, ":").concat(e.commandId, ">");
     case "timestamp":
-      return (0, a.unparseTimestamp)(e.parsed.timestamp, e.parsed.format);
+      return (0, s.unparseTimestamp)(e.parsed.timestamp, e.parsed.format);
     case "applicationCommand":
       return f(e.children, {
         ...t,

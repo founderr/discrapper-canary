@@ -1,7 +1,7 @@
 "use strict";
 let i;
 n.r(t);
-var r, s, a, o, l = n("259443"),
+var r, a, s, o, l = n("259443"),
   u = n("442837"),
   d = n("570140"),
   _ = n("818083"),
@@ -90,12 +90,12 @@ class O extends(o = u.default.Store) {
     m = !1
   }
 }
-a = "GatewayZstdStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
-  value: a,
+s = "GatewayZstdStore", (a = "displayName") in(r = O) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new O(d.default, {
+}) : r[a] = s, t.default = new O(d.default, {
   CONNECTION_OPEN: function() {
     if (h) {
       S.info("Ignoring zstd experiment config because we fell back to zlib");

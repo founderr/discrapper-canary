@@ -21,8 +21,8 @@ var n, s, l = a("735250"),
   A = a("513202"),
   N = a("906732"),
   v = a("812206"),
-  L = a("933557"),
-  R = a("102172"),
+  R = a("933557"),
+  L = a("102172"),
   O = a("871118"),
   M = a("849171"),
   P = a("314897"),
@@ -262,7 +262,7 @@ es.Header = en, es.Body = e => {
     partySize: u,
     members: d,
     onChannelContextMenu: f
-  } = e, E = i.useRef(null), h = (0, L.default)(s, !0);
+  } = e, E = i.useRef(null), h = (0, R.default)(s, !0);
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
       className: q.voiceSection,
@@ -449,7 +449,7 @@ es.Header = en, es.Body = e => {
     applicationStream: i,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(i.channelId)), [f, E] = (0, R.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
+  } = e, d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(i.channelId)), [f, E] = (0, L.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
     onClick: f ? r : void 0,
     className: q.applicationStreamingPreviewWrapper,
     children: [(0, l.jsx)(O.default, {
@@ -459,7 +459,7 @@ es.Header = en, es.Body = e => {
       className: q.applicationStreamingHoverWrapper,
       children: (0, l.jsx)("div", {
         className: q.applicationStreamingHoverText,
-        children: (0, R.getStreamCTAString)(E)
+        children: (0, L.getStreamCTAString)(E)
       })
     })]
   }), _ = null !== (a = null === (t = (0, g.default)(n, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== a ? a : z.default.Messages.SHARING_SCREEN;

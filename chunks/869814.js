@@ -248,10 +248,10 @@ var i = {
 };
 
 function r(e) {
-  return n(s(e))
+  return n(a(e))
 }
 
-function s(e) {
+function a(e) {
   if (!n.o(i, e)) {
     var t = Error("Cannot find module '" + e + "'");
     throw t.code = "MODULE_NOT_FOUND", t
@@ -260,4 +260,4 @@ function s(e) {
 }
 r.id = '"869814"', r.keys = function() {
   return Object.keys(i)
-}, r.resolve = s, e.exports = r
+}, r.resolve = a, e.exports = r

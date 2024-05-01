@@ -4,19 +4,19 @@ n.r(t), n.d(t, {
     return o
   },
   getVolume: function() {
-    return s
+    return a
   },
   setMuted: function() {
     return l
   },
   setVolume: function() {
-    return a
+    return s
   }
 });
 var i = n("433517");
 let r = "MediaPlayerVolume";
 
-function s() {
+function a() {
   var e;
   let {
     volume: t
@@ -24,7 +24,7 @@ function s() {
   return "number" != typeof t && (t = 1), t = Math.min(1, Math.max(0, t))
 }
 
-function a(e) {
+function s(e) {
   i.Storage.set(r, {
     volume: e,
     muted: o()
@@ -41,7 +41,7 @@ function o() {
 
 function l(e) {
   i.Storage.set(r, {
-    volume: s(),
+    volume: a(),
     muted: e
   })
 }

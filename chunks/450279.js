@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 }), n("47120"), n("653041");
 var i = n("878604");
@@ -13,8 +13,8 @@ function r(e) {
   }
 }
 
-function s(e, t, n, s) {
-  var a, o, l;
+function a(e, t, n, a) {
+  var s, o, l;
   let u = {},
     d = {},
     _ = [],
@@ -38,7 +38,7 @@ function s(e, t, n, s) {
   for (let e of c) {
     let t = d[e.codecId];
     if (null == t) continue;
-    let s = {
+    let a = {
       type: e.kind,
       ssrc: e.ssrc,
       timestamp: e.timestamp,
@@ -49,7 +49,7 @@ function s(e, t, n, s) {
       packetsSent: e.packetsSent
     };
     if ("audio" === e.kind) I.push({
-      ...s,
+      ...a,
       type: "audio"
     });
     else if ("video" === e.kind) {
@@ -59,7 +59,7 @@ function s(e, t, n, s) {
         height: e.frameHeight
       } : void 0;
       I.push({
-        ...s,
+        ...a,
         framesEncoded: e.framesEncoded,
         keyFramesEncoded: e.keyFramesEncoded,
         firCount: e.firCount,
@@ -77,8 +77,8 @@ function s(e, t, n, s) {
   }
   let T = {};
   for (let e of _) {
-    let a = d[e.codecId];
-    if (null == a) continue;
+    let s = d[e.codecId];
+    if (null == s) continue;
     let o = t(e.ssrc);
     if (null == o) continue;
     let l = {
@@ -87,8 +87,8 @@ function s(e, t, n, s) {
       timestamp: e.timestamp,
       sinkWant: (0, i.formatSinkWantStat)(n, e.ssrc, "video" === e.kind),
       sinkWantAsInt: (0, i.formatSinkWantAsInt)(n, e.ssrc),
-      sinkWantLocal: (0, i.formatSinkWantStat)(s, e.ssrc, "video" === e.kind),
-      codec: r(a),
+      sinkWantLocal: (0, i.formatSinkWantStat)(a, e.ssrc, "video" === e.kind),
+      codec: r(s),
       bytesReceived: e.bytesReceived,
       packetsReceived: e.packetsReceived,
       packetsLost: e.packetsLost
@@ -124,7 +124,7 @@ function s(e, t, n, s) {
       })
     }
   }
-  let f = (null !== (a = E.currentRoundTripTime) && void 0 !== a ? a : 0) * 1e3;
+  let f = (null !== (s = E.currentRoundTripTime) && void 0 !== s ? s : 0) * 1e3;
   return {
     transport: {
       availableOutgoingBitrate: null !== (o = E.availableOutgoingBitrate) && void 0 !== o ? o : 0,

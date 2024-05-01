@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  s = n("245561"),
-  a = n("873572"),
+  a = n("245561"),
+  s = n("873572"),
   o = n("659101"),
   l = n("689938"),
   u = n("815391"),
@@ -22,7 +22,7 @@ function _(e) {
   } = e, {
     botUpgraded: c,
     activeSubscriptionListing: E
-  } = (0, a.default)({
+  } = (0, s.default)({
     user: n,
     guildId: _
   }), I = null == E ? void 0 : null === (t = E.sku_benefits) || void 0 === t ? void 0 : t.benefits;
@@ -33,7 +33,7 @@ function _(e) {
       children: l.default.Messages.BOT_PROFILE_BENEFITS_HEADING
     }), (0, i.jsx)("div", {
       className: u.benefitsContainer,
-      children: I.map((e, t) => (0, i.jsx)(s.default, {
+      children: I.map((e, t) => (0, i.jsx)(a.default, {
         showsDescription: !1,
         emojiContainerClassName: u.emojiContainer,
         nameTextVariant: "text-sm/normal",

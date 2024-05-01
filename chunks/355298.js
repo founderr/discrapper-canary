@@ -2,9 +2,9 @@
 n.r(t), n("47120");
 var i = n("133080"),
   r = n("592125"),
-  s = n("412788");
+  a = n("412788");
 
-function a(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -78,7 +78,7 @@ function m(e) {
   } = e;
   E(t)
 }
-class N extends s.default {
+class N extends a.default {
   initialize() {
     this.waitFor(r.default)
   }
@@ -124,4 +124,4 @@ class N extends s.default {
     })
   }
 }
-a(N, "displayName", "MessageRequestStore"), a(N, "LATEST_SNAPSHOT_VERSION", 1), t.default = new N
+s(N, "displayName", "MessageRequestStore"), s(N, "LATEST_SNAPSHOT_VERSION", 1), t.default = new N

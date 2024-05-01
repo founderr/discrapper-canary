@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("411104");
 var i = n("735250"),
   r = n("470079"),
-  s = n("153832"),
-  a = n("924826"),
+  a = n("153832"),
+  s = n("924826"),
   o = n("442837"),
   l = n("481060"),
   u = n("749210"),
@@ -38,8 +38,8 @@ let p = (0, _.default)(function(e) {
     let e = Object.values(C).filter(e => _.includes(e.id)).sort((e, t) => {
       var n, i;
       let r = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null,
-        s = (null === (i = t.tags) || void 0 === i ? void 0 : i.guild_connections) !== null;
-      return r && !s ? 1 : !r && s ? -1 : 0
+        a = (null === (i = t.tags) || void 0 === i ? void 0 : i.guild_connections) !== null;
+      return r && !a ? 1 : !r && a ? -1 : 0
     });
     return null != O ? e.slice(0, O) : e
   }, [C, O, _]), L = _.length - g.length;
@@ -53,17 +53,17 @@ let p = (0, _.default)(function(e) {
       let r = 1 === i ? n : T;
       for (let n = e; n < g.length; n++) {
         let i = g[n],
-          s = p.current[i.id];
-        if (null != s) {
-          if ((t += s.offsetWidth) > r) break;
+          a = p.current[i.id];
+        if (null != a) {
+          if ((t += a.offsetWidth) > r) break;
           t += 4, e++
         }
       }
     }
     R(t => e < g.length ? e : t)
   }, [T, g]);
-  let v = r.useMemo(() => "roles-".concat((0, s.v4)()), []),
-    D = (0, a.default)({
+  let v = r.useMemo(() => "roles-".concat((0, a.v4)()), []),
+    D = (0, s.default)({
       id: v,
       isEnabled: !0,
       scrollToStart: A.NOOP_PROMISE,
@@ -85,9 +85,9 @@ let p = (0, _.default)(function(e) {
         disableBorderColor: !0
       }, e.id)
     });
-  return (0, i.jsx)(a.ListNavigatorProvider, {
+  return (0, i.jsx)(s.ListNavigatorProvider, {
     navigator: D,
-    children: (0, i.jsx)(a.ListNavigatorContainer, {
+    children: (0, i.jsx)(s.ListNavigatorContainer, {
       children: e => {
         let {
           ref: t,
@@ -118,23 +118,23 @@ function O(e) {
   let {
     user: t,
     currentUser: n,
-    guild: s,
-    onOpenProfile: a
+    guild: a,
+    onOpenProfile: s
   } = e, {
     trackUserProfileAction: d
-  } = (0, S.useUserProfileAnalyticsContext)(), _ = (0, o.useStateFromStores)([E.default], () => E.default.getMember(s.id, t.id)), I = null == _ ? void 0 : _.roles, O = null == I || 0 === I.length, R = f.getHighestRole(s, n.id), [C] = (0, o.useStateFromStoresArray)([T.default], () => [T.default.can(A.Permissions.MANAGE_ROLES, s), null != s ? T.default.getGuildVersion(s.id) : null]), g = r.useCallback(e => {
+  } = (0, S.useUserProfileAnalyticsContext)(), _ = (0, o.useStateFromStores)([E.default], () => E.default.getMember(a.id, t.id)), I = null == _ ? void 0 : _.roles, O = null == I || 0 === I.length, R = f.getHighestRole(a, n.id), [C] = (0, o.useStateFromStoresArray)([T.default], () => [T.default.can(A.Permissions.MANAGE_ROLES, a), null != a ? T.default.getGuildVersion(a.id) : null]), g = r.useCallback(e => {
     var n, i;
     d({
       action: "REMOVE_ROLE"
     });
     let r = null !== (i = null == I ? void 0 : I.filter(t => t !== e.id)) && void 0 !== i ? i : [];
-    (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) === null ? u.default.unassignGuildRoleConnection(s.id, e.id) : c.default.updateMemberRoles(s.id, t.id, r, [], [e.id])
-  }, [I, s.id, t.id, d]), L = r.useCallback(e => {
+    (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) === null ? u.default.unassignGuildRoleConnection(a.id, e.id) : c.default.updateMemberRoles(a.id, t.id, r, [], [e.id])
+  }, [I, a.id, t.id, d]), L = r.useCallback(e => {
     d({
       action: "ADD_ROLE"
     });
-    let n = null != I ? I : []; - 1 === n.indexOf(e) && (n = n.concat([e])), c.default.updateMemberRoles(s.id, t.id, n, [e], [])
-  }, [I, s.id, t.id, d]);
+    let n = null != I ? I : []; - 1 === n.indexOf(e) && (n = n.concat([e])), c.default.updateMemberRoles(a.id, t.id, n, [e], [])
+  }, [I, a.id, t.id, d]);
   return O && !C ? null : (0, i.jsxs)("div", {
     className: N.container,
     children: [(0, i.jsxs)("div", {
@@ -143,7 +143,7 @@ function O(e) {
         variant: "text-xs/semibold",
         children: m.default.Messages.ROLES
       }), C && null != _ && (0, i.jsx)(h.default, {
-        guild: s,
+        guild: a,
         guildMember: _,
         highestRole: R,
         onAddRole: L,
@@ -156,12 +156,12 @@ function O(e) {
       children: (0, i.jsx)(p, {
         user: t,
         currentUser: n,
-        guild: s,
+        guild: a,
         userRoles: I,
         highestRole: R,
         canManageRoles: C,
         onRemoveRole: g,
-        onOpenProfile: a
+        onOpenProfile: s
       })
     })]
   })

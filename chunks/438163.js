@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("481060"),
   l = n("596454"),
   u = n("788307"),
@@ -19,7 +19,7 @@ function E(e) {
   let {
     statusActivity: t,
     profileType: n,
-    animate: s = !0,
+    animate: a = !0,
     hideTooltip: E = !1
   } = e, [I, T] = r.useState(1), f = r.useCallback(e => {
     var t;
@@ -39,7 +39,7 @@ function E(e) {
     }) : (0, i.jsx)(u.ActivityEmoji, {
       className: c.statusEmojiOnly,
       emoji: h,
-      animate: s,
+      animate: a,
       hideTooltip: E
     }) : null,
     O = () => N ? (0, i.jsx)(o.Text, {
@@ -47,17 +47,17 @@ function E(e) {
       className: c.statusText,
       children: m
     }) : null,
-    R = a()(c.positionStyle, {
+    R = s()(c.positionStyle, {
       [c.biteSize]: n === _.UserProfileTypes.BITE_SIZE,
       [c.fullSize]: n === _.UserProfileTypes.FULL_SIZE
     }),
-    C = a()(c.statusBubbleOuter, {
+    C = s()(c.statusBubbleOuter, {
       [c.statusBubbleSingleLineEmojiOnlyShape]: 1 === I && !N,
       [c.statusBubbleSingleLineWithTextShape]: 1 === I && N,
       [c.statusBubbleMultiLineShape]: I > 1,
       [c.statusBubbleOuterMaxLine]: I >= 3
     }),
-    g = a()(c.statusBubble, {
+    g = s()(c.statusBubble, {
       [c.statusBubbleSingleLineEmojiOnlyShape]: 1 === I && !N,
       [c.statusBubbleSingleLineWithTextShape]: 1 === I && N,
       [c.statusBubbleMultiLineShape]: I > 1,
@@ -79,7 +79,7 @@ function E(e) {
       })
     })
   });
-  let L = a()({
+  let L = s()({
     [c.statusBubbleSingleLineEmojiOnlyBottomMargin]: 1 === I && !N,
     [c.statusBubbleSingleLineWithTextBottomMargin]: 1 === I && N,
     [c.statusBubbleMultiLineMaxLineBottomMargin]: I > 1

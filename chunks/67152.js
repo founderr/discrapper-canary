@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("481060"),
-  a = n("906732"),
+  a = n("481060"),
+  s = n("906732"),
   o = n("692437"),
   l = n("785717"),
   u = n("588822"),
@@ -24,7 +24,7 @@ t.default = r.memo(function(e) {
     roleId: A
   } = (0, l.useUserProfileAnalyticsContext)(), {
     analyticsLocations: m
-  } = (0, a.default)(), [N, p] = r.useState(!1);
+  } = (0, s.default)(), [N, p] = r.useState(!1);
   return T || null == I || "" === I ? null : (0, i.jsxs)("div", {
     children: [(0, i.jsx)("div", {
       ref: e => {
@@ -35,7 +35,7 @@ t.default = r.memo(function(e) {
         userBio: I,
         setLineClamp: !1
       })
-    }), N && (0, i.jsxs)(s.Clickable, {
+    }), N && (0, i.jsxs)(a.Clickable, {
       onClick: () => {
         null == n || n(), (0, d.openUserProfileModal)({
           userId: t.id,
@@ -50,7 +50,7 @@ t.default = r.memo(function(e) {
         })
       },
       className: E.seeMoreText,
-      children: [(0, i.jsx)(s.Text, {
+      children: [(0, i.jsx)(a.Text, {
         variant: "text-xs/normal",
         children: c.default.Messages.USER_PROFILE_VIEW_FULL_BIO
       }), (0, i.jsx)(o.default, {

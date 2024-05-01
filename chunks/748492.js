@@ -16,8 +16,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("442837"),
+  a = n.n(r),
+  s = n("442837"),
   o = n("481060"),
   l = n("846027"),
   u = n("40851"),
@@ -51,7 +51,7 @@ function U(e) {
     isExpanded: n
   } = e;
   return (0, i.jsx)(S.default, {
-    iconClassName: s()(y.arrowIcon, {
+    iconClassName: a()(y.arrowIcon, {
       [y.arrowIconExpanded]: n
     }),
     onClick: t,
@@ -64,14 +64,14 @@ function b(e) {
   var t, n;
   let {
     channel: r,
-    applicationId: s,
+    applicationId: a,
     onMouseDown: o,
     onMouseMove: S,
     onMouseLeave: m,
     onJumpToChannel: R,
     idle: C,
     selectedParticipant: g
-  } = e, M = (0, u.useAppContext)() === v.AppContext.POPOUT, U = (0, a.useStateFromStores)([p.default], () => p.default.isVideoEnabled()), b = (0, a.useStateFromStores)([p.default], () => Object.values(p.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([s])[0], B = (0, E.default)(r), k = e => {
+  } = e, M = (0, u.useAppContext)() === v.AppContext.POPOUT, U = (0, s.useStateFromStores)([p.default], () => p.default.isVideoEnabled()), b = (0, s.useStateFromStores)([p.default], () => Object.values(p.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([a])[0], B = (0, E.default)(r), k = e => {
     l.default.setVideoEnabled(e)
   };
   return (0, i.jsxs)("div", {
@@ -126,7 +126,7 @@ function b(e) {
           },
           onClosePopout: D.NOOP_NULL
         }), (0, i.jsx)(h.default, {
-          applicationId: s,
+          applicationId: a,
           channelId: r.id,
           className: y.rightPipIcon
         })]
@@ -140,7 +140,7 @@ function G(e) {
   let {
     channel: n,
     applicationId: r,
-    onMouseDown: a,
+    onMouseDown: s,
     onMouseMove: l,
     onMouseLeave: u,
     onJumpToChannel: _,
@@ -148,13 +148,13 @@ function G(e) {
     users: E
   } = e, I = (0, d.default)([r])[0];
   return (0, i.jsxs)(o.Clickable, {
-    className: s()(P.videoControls, P.videoControlsTextActivity),
+    className: a()(P.videoControls, P.videoControlsTextActivity),
     onMouseMove: l,
-    onMouseDown: a,
+    onMouseDown: s,
     onMouseLeave: u,
     onDoubleClick: _,
     children: [(0, i.jsx)("div", {
-      className: s()(P.topControls),
+      className: a()(P.topControls),
       children: (0, i.jsx)(f.PictureInPictureHeader, {
         idle: c,
         title: null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : n.name,
@@ -197,7 +197,7 @@ function B(e) {
   let {
     onMouseDown: n,
     onMouseMove: r,
-    onMouseLeave: a,
+    onMouseLeave: s,
     showControls: o,
     applicationId: l,
     channel: u,
@@ -210,9 +210,9 @@ function B(e) {
     className: y.pipHeader,
     onMouseMove: r,
     onMouseDown: n,
-    onMouseLeave: a,
+    onMouseLeave: s,
     children: (0, i.jsxs)("div", {
-      className: s()(P.topControls, y.pipHeaderContent, {
+      className: a()(P.topControls, y.pipHeaderContent, {
         [y.pipHeaderContentOpen]: o
       }),
       children: [!o && (0, i.jsx)(C.default, {

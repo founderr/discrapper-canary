@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   },
   CreatePollsGuildCoachmarkExperiment: function() {
-    return a
+    return s
   },
   CreatePollsUserExperiment: function() {
-    return s
+    return a
   }
 });
 var i = n("818083");
@@ -26,7 +26,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  a = (0, i.createExperiment)({
     kind: "user",
     id: "2024-01_create_gdm_polls",
     label: "Create GDM Polls",
@@ -41,7 +41,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  a = (0, i.createExperiment)({
+  s = (0, i.createExperiment)({
     kind: "guild",
     id: "2024-03_polls_coachmark",
     label: "Show coachmark for poll creation entry point in guild",

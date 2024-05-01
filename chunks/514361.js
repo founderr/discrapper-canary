@@ -1,7 +1,7 @@
 "use strict";
 let i, r;
 n.r(t), n("47120");
-var s, a = n("442837"),
+var a, s = n("442837"),
   o = n("524437"),
   l = n("570140"),
   u = n("605236"),
@@ -42,7 +42,7 @@ let C = () => {
     let n = null === (t = d.default.getAppearanceSettings()) || void 0 === t ? void 0 : null === (e = t.clientThemeSettings) || void 0 === e ? void 0 : e.backgroundGradientPresetId;
     null != n && (i = h.BACKGROUND_GRADIENT_PRESETS_MAP[n])
   };
-class L extends(s = a.default.PersistedStore) {
+class L extends(a = s.default.PersistedStore) {
   initialize(e) {
     null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? h.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(I.default, _.default, E.default, d.default), this.syncWith([I.default], C), this.syncWith([d.default], g)
   }

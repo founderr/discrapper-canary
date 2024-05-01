@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
     return i
   },
   ModViewPanelNameMap: function() {
-    return s
+    return a
   }
 }), (r = i || (i = {}))[r.UNKNOWN = 0] = "UNKNOWN", r[r.INFO = 1] = "INFO", r[r.MESSAGE_HISTORY = 2] = "MESSAGE_HISTORY", r[r.PERMISSIONS = 3] = "PERMISSIONS";
-let s = {
+let a = {
   0: "UNKNOWN",
   1: "INFO",
   2: "MESSAGE_HISTORY",

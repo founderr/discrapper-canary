@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("718017"),
-  a = n("91192"),
+  a = n("718017"),
+  s = n("91192"),
   o = n("946835"),
   l = n("442837"),
   u = n("780384"),
@@ -54,14 +54,14 @@ t.default = function(e) {
   }), F = (0, C.useIsQuestExpired)(N), H = (null == N ? void 0 : null === (t = N.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, Y = (null == N ? void 0 : null === (S = N.userStatus) || void 0 === S ? void 0 : S.enrolledAt) != null, j = (null == N ? void 0 : null === (h = N.userStatus) || void 0 === h ? void 0 : h.completedAt) != null, W = (0, l.useStateFromStores)([A.default], () => A.default.getState().theme), K = (0, u.isThemeDark)(W) ? P.ThemeTypes.DARK : P.ThemeTypes.LIGHT, z = (0, l.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
     ref: Z,
     height: X
-  } = (0, I.default)(), [Q, q] = r.useState(z), J = (0, T.useWindowDispatch)(), $ = (0, a.useListContainerScrollerRef)();
+  } = (0, I.default)(), [Q, q] = r.useState(z), J = (0, T.useWindowDispatch)(), $ = (0, s.useListContainerScrollerRef)();
   r.useEffect(() => {
     let e = $.current;
     return null == e || e.addEventListener("scroll", k), () => {
       null == e || e.removeEventListener("scroll", k)
     }
   }, [k, $]);
-  let ee = (0, s.useSpring)({
+  let ee = (0, a.useSpring)({
       from: {
         height: 0
       },
@@ -73,7 +73,7 @@ t.default = function(e) {
       immediate: z,
       onRest: () => q(!0)
     }),
-    et = (0, s.useTransition)(Q, {
+    et = (0, a.useTransition)(Q, {
       from: {
         opacity: 0,
         scale: 0
@@ -105,7 +105,7 @@ t.default = function(e) {
         })
       })
     },
-    es = () => {
+    ea = () => {
       (0, R.trackQuestContentClicked)({
         questId: N.id,
         questContent: g.QuestContent.MEMBERS_LIST,
@@ -113,7 +113,7 @@ t.default = function(e) {
         trackGuildAndChannelMetadata: !0
       }), E.default.open(y.UserSettingsSections.INVENTORY)
     },
-    ea = e => {
+    es = e => {
       e.stopPropagation(), er()
     },
     eo = () => {
@@ -123,7 +123,7 @@ t.default = function(e) {
         questContentCTA: R.QuestContentCTA.WATCH_STREAM,
         trackGuildAndChannelMetadata: !0
       }), _.default.selectVoiceChannel(V.id), (0, c.watchStreamAndTransitionToStream)(O);
-      es()
+      ea()
     },
     el = j && !H ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
@@ -133,7 +133,7 @@ t.default = function(e) {
     } : Y ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
       ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_PROGRESS_CTA,
-      handleClickCta: es,
+      handleClickCta: ea,
       tileAssetType: "reward"
     } : w(O, V) ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
@@ -143,14 +143,14 @@ t.default = function(e) {
     } : {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
       ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_BEGIN_CTA,
-      handleClickCta: es,
+      handleClickCta: ea,
       tileAssetType: "game"
     };
   return (0, i.jsx)(v.QuestContentImpressionTracker, {
     questOrQuests: N,
     questContent: g.QuestContent.MEMBERS_LIST,
     trackGuildAndChannelMetadata: !0,
-    children: e => (0, i.jsx)(s.animated.div, {
+    children: e => (0, i.jsx)(a.animated.div, {
       ref: t => {
         e.current = t
       },
@@ -180,7 +180,7 @@ t.default = function(e) {
             }), (0, i.jsxs)(d.Clickable, {
               className: b.help,
               onClick: e => {
-                en(), ea(e)
+                en(), es(e)
               },
               children: [(0, i.jsx)(d.Text, {
                 variant: "text-xs/medium",
@@ -200,7 +200,7 @@ t.default = function(e) {
             className: b.right,
             children: (0, i.jsxs)("div", {
               className: b.imgWrapper,
-              children: [et((e, t) => t && (0, i.jsx)(s.animated.div, {
+              children: [et((e, t) => t && (0, i.jsx)(a.animated.div, {
                 style: e,
                 className: b.imgUnderlay
               })), "game" === el.tileAssetType && (0, i.jsx)("img", {

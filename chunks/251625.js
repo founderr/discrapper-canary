@@ -13,19 +13,19 @@ function r(e) {
   let t = null,
     n = null;
   return function() {
-    for (var r = arguments.length, s = Array(r), a = 0; a < r; a++) s[a] = arguments[a];
-    return !i(t, s) && (n = e(...s)), t = s, n
+    for (var r = arguments.length, a = Array(r), s = 0; s < r; s++) a[s] = arguments[s];
+    return !i(t, a) && (n = e(...a)), t = a, n
   }
 }
 
-function s(e) {
+function a(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 5e3,
     n = -1,
     i = null;
   return () => ((null == i || Date.now() >= n) && (n = Date.now() + t, i = e()), i)
 }
 
-function a(e) {
+function s(e) {
   for (var t in e) e.hasOwnProperty(t) && delete e[t]
 }
 n.r(t), n.d(t, {
@@ -36,9 +36,9 @@ n.r(t), n.d(t, {
     return r
   },
   clearObject: function() {
-    return a
+    return s
   },
   promiseThrottle: function() {
-    return s
+    return a
   }
 }), n("653041"), n("177593"), n("47120")

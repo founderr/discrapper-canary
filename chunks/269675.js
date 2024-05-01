@@ -27,8 +27,8 @@ var n = a("735250"),
   A = a("504762"),
   N = a("807152"),
   v = a("176505"),
-  L = a("689938"),
-  R = a("55514");
+  R = a("689938"),
+  L = a("55514");
 
 function O(e) {
   let {
@@ -38,7 +38,7 @@ function O(e) {
     restrictionsLoading: b
   } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == a || !y || x || b;
   (0, d.usePageTitle)({
-    subsection: L.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
+    subsection: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == a ? void 0 : a.name
   }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
   let j = O && (null == a || !(M || P) || D && !b);
@@ -53,24 +53,24 @@ function O(e) {
     })
   }
   return (0, n.jsxs)("div", {
-    className: R.container,
+    className: L.container,
     children: [(0, n.jsxs)(_.default, {
       toolbar: (0, n.jsx)(s.Fragment, {}),
-      className: R.headerBar,
+      className: L.headerBar,
       children: [(0, n.jsx)(_.default.Icon, {
         icon: I.default,
         "aria-hidden": !0
       }), (0, n.jsx)(_.default.Title, {
-        children: L.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+        children: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
       })]
     }), (0, n.jsx)("div", {
       id: N.OVERVIEW_NOTICE_ROOT
     }), (0, n.jsx)("div", {
-      className: R.content,
+      className: L.content,
       children: M ? (0, n.jsx)(r.ScrollerNone, {
-        className: R.scroller,
+        className: L.scroller,
         children: (0, n.jsx)("div", {
-          className: R.scrollerContent,
+          className: L.scrollerContent,
           children: U ? (0, n.jsx)(r.Spinner, {}) : (0, n.jsx)(g.default, {
             guild: a
           })

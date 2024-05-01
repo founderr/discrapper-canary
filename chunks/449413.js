@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  s = n("454585"),
-  a = n("474333"),
+  a = n("454585"),
+  s = n("474333"),
   o = n("273744"),
   l = n("244974");
 t.default = e => {
@@ -11,13 +11,13 @@ t.default = e => {
     node: {
       info: t
     }
-  } = e, n = r.useRef(s.default.reactParserFor({
-    ...s.default.defaultRules,
+  } = e, n = r.useRef(a.default.reactParserFor({
+    ...a.default.defaultRules,
     link: o.LinkMarkupRule
   }));
-  return null == t ? null : (0, i.jsx)(a.default, {
+  return null == t ? null : (0, i.jsx)(s.default, {
     className: l.infoBox,
-    messageType: a.HelpMessageTypes.INFO,
+    messageType: s.HelpMessageTypes.INFO,
     children: n.current(t)
   })
 }

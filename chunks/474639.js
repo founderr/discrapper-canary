@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("46973"),
   r = n("570140"),
-  s = n("147913"),
-  a = n("579806"),
+  a = n("147913"),
+  s = n("579806"),
   o = n("569545"),
   l = n("441167"),
   u = n("314897"),
@@ -23,7 +23,7 @@ var i = n("46973"),
   A = n("356659"),
   m = n("981631"),
   N = n("70722");
-class p extends s.default {
+class p extends a.default {
   handleRTCConnectionState(e) {
     let {
       context: t,
@@ -31,16 +31,16 @@ class p extends s.default {
       streamKey: r
     } = e;
     if (!(0, T.areClipsEnabled)() || n !== m.RTCConnectionStates.RTC_CONNECTED) return;
-    let s = u.default.getId();
-    if (t === i.MediaEngineContextTypes.DEFAULT) return this.applyUserVoiceRecording(s);
+    let a = u.default.getId();
+    if (t === i.MediaEngineContextTypes.DEFAULT) return this.applyUserVoiceRecording(a);
     if (t === i.MediaEngineContextTypes.STREAM && null != r) {
       let {
         ownerId: e
       } = (0, o.decodeStreamKey)(r);
-      if (e !== s) return;
+      if (e !== a) return;
       let t = c.default.getRTCConnection(r);
       if (null == t) return;
-      this.applyStreamRecording(s, t)
+      this.applyStreamRecording(a, t)
     }
   }
   handleRTCUserCreate(e) {
@@ -100,20 +100,20 @@ class p extends s.default {
       userId: t,
       context: n,
       channelId: r,
-      guildId: s
+      guildId: a
     } = e;
     if (n !== i.MediaEngineContextTypes.STREAM || !(0, h.default)(d.default)) return;
-    let a = c.default.getRTCConnection(o.encodeStreamKey({
-      streamType: null != s ? N.StreamTypes.GUILD : N.StreamTypes.CALL,
+    let s = c.default.getRTCConnection(o.encodeStreamKey({
+      streamType: null != a ? N.StreamTypes.GUILD : N.StreamTypes.CALL,
       ownerId: t,
       channelId: r,
-      guildId: s
+      guildId: a
     }));
-    null != a && this.applyStreamRecording(t, a)
+    null != s && this.applyStreamRecording(t, s)
   }
   async classifyHardwareAndTrack() {
     try {
-      let e = await a.default.processUtils.getSystemInfo(),
+      let e = await s.default.processUtils.getSystemInfo(),
         t = this.classifyHardware(e);
       return E.default.track(m.AnalyticEvents.CLIPS_HARDWARE_CLASSIFICATION, {
         classification: t,

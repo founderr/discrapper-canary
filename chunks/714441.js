@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   confirmNoSharedServerSubscribeWarningModal: function() {
-    return s
+    return a
   }
 });
 var i = n("735250");
 n("470079");
 var r = n("481060");
 
-function s(e) {
+function a(e) {
   let {
     applicationName: t,
-    onConfirm: s,
-    onCancel: a
+    onConfirm: a,
+    onCancel: s
   } = e;
   return (0, r.openModalLazy)(async () => {
     let {
@@ -21,8 +21,8 @@ function s(e) {
     return n => (0, i.jsx)(e, {
       ...n,
       applicationName: t,
-      onConfirm: s,
-      onCancel: a
+      onConfirm: a,
+      onCancel: s
     })
   }, {
     modalKey: "application-user-subscribe-no-shared-server-warning"

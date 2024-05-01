@@ -39,12 +39,12 @@ function v(e) {
     })),
     {
       lastDismissedGracePeriod: v,
-      isGracePeriodVisible: L
+      isGracePeriodVisible: R
     } = (0, i.useStateFromStoresObject)([p.default], () => ({
       lastDismissedGracePeriod: p.default.getLastDismissedGracePeriodForGuild(n),
       isGracePeriodVisible: p.default.isVisible(n)
     })),
-    R = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
+    L = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
     O = (0, i.useStateFromStores)([g.default], () => g.default.isVisible(e)),
     M = (0, i.useStateFromStores)([S.default], () => S.default.can(N.Permissions.ADMINISTRATOR, e)),
     P = null != v && Date.now() - v <= N.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
@@ -79,8 +79,8 @@ function v(e) {
       }, 30 * Math.random() * T.default.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
-    }, [n, b]), R) return 0;
-  if (L) return 1;
+    }, [n, b]), L) return 0;
+  if (R) return 1;
   if (O) return 2;
   else if (U || null != Y) return 3;
   else if (j) return 4;

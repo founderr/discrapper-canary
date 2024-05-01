@@ -26,14 +26,14 @@ t.default = e => {
     tag: g,
     error: T,
     furthestStep: A
-  } = e, N = s.useRef(null), [v, L] = s.useState(a), [R, O] = s.useState({
+  } = e, N = s.useRef(null), [v, R] = s.useState(a), [L, O] = s.useState({
     primary: l,
     secondary: I
   }), [M, P] = s.useState(() => {
     for (let e = 0; e < f.CLAN_BADGE_PALETTE_PRESETS.length; e++)
       if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === l && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === I) return e;
     return p
-  }), [x, y] = s.useState(!1), D = p === M ? R : f.CLAN_BADGE_PALETTE_PRESETS[M];
+  }), [x, y] = s.useState(!1), D = p === M ? L : f.CLAN_BADGE_PALETTE_PRESETS[M];
   return s.useEffect(() => {
     if (v === a && D.primary === l && D.secondary === I) return;
     let e = document.querySelector("#".concat(m));
@@ -87,7 +87,7 @@ t.default = e => {
           }), (0, n.jsx)("div", {
             className: _.pickerGrid,
             children: S.map(e => (0, n.jsx)(u.Clickable, {
-              onClick: () => L(e),
+              onClick: () => R(e),
               className: i()(_.badgeAssetContainer, {
                 [_.badgeAssetContainerSelected]: e === v
               }),
@@ -122,7 +122,7 @@ t.default = e => {
               })
             }, "".concat(e.primary, ":").concat(e.secondary))), (0, n.jsx)(c.default, {
               showSecondaryColor: f.CLAN_BADGE_NUM_CUSTOMIZABLE_COLORS[v] >= 2,
-              palette: R,
+              palette: L,
               onPrimaryColorChange: e => {
                 O(t => ({
                   ...t,

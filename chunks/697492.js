@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return r
   },
   removeHighFive: function() {
-    return s
+    return a
   },
   setHighFiveEnabled: function() {
-    return a
+    return s
   }
 });
 var i = n("570140");
@@ -27,7 +27,7 @@ function r(e, t, n) {
   })
 }
 
-function s(e, t) {
+function a(e, t) {
   i.default.dispatch({
     type: "HIGH_FIVE_REMOVE",
     channelId: t,
@@ -35,7 +35,7 @@ function s(e, t) {
   })
 }
 
-function a(e) {
+function s(e) {
   i.default.dispatch({
     type: "HIGH_FIVE_SET_ENABLED",
     enabled: e

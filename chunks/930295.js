@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120"), n("411104");
 var i, r = n("735250"),
-  s = n("470079"),
-  a = n("97613"),
-  o = n.n(a),
+  a = n("470079"),
+  s = n("97613"),
+  o = n.n(s),
   l = n("699581"),
   u = n.n(l),
   d = n("374470"),
@@ -30,7 +30,7 @@ function m(e, t, n) {
   }) : e[t] = n, e
 }
 let N = new Set(["Spacebar", " ", "Enter"]);
-class p extends(i = s.Component) {
+class p extends(i = a.Component) {
   shouldShowPopout(e, t) {
     return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout
   }
@@ -69,7 +69,7 @@ class p extends(i = s.Component) {
       children: e,
       useMouseEnter: t
     } = this.props, n = this.shouldShowPopout(this.props, this.state);
-    return (0, r.jsxs)(s.Fragment, {
+    return (0, r.jsxs)(a.Fragment, {
       children: [e({
         onMouseDown: this.handlePreload,
         ...t ? {
@@ -95,8 +95,8 @@ class p extends(i = s.Component) {
       align: t,
       nudgeAlignIntoViewport: n,
       useRawTargetDimensions: i,
-      spacing: s,
-      autoInvert: a,
+      spacing: a,
+      autoInvert: s,
       fixed: o,
       positionKey: l,
       disablePointerEvents: u,
@@ -118,8 +118,8 @@ class p extends(i = s.Component) {
         align: t,
         nudgeAlignIntoViewport: n,
         useRawTargetDimensions: i,
-        spacing: s,
-        autoInvert: a,
+        spacing: a,
+        autoInvert: s,
         fixed: o,
         positionKey: null != l ? l : String(_),
         disablePointerEvents: u,
@@ -134,7 +134,7 @@ class p extends(i = s.Component) {
     })
   }
   constructor(...e) {
-    super(...e), m(this, "domElementRef", s.createRef()), m(this, "layerRef", s.createRef()), m(this, "popoutRef", s.createRef()), m(this, "resizeObserver", void 0), m(this, "popoutId", "popout_".concat(o()())), m(this, "loadingTimeout", new _.Timeout), m(this, "validClickTimeout", new _.Timeout), m(this, "isValidClickStart", !1), m(this, "state", {
+    super(...e), m(this, "domElementRef", a.createRef()), m(this, "layerRef", a.createRef()), m(this, "popoutRef", a.createRef()), m(this, "resizeObserver", void 0), m(this, "popoutId", "popout_".concat(o()())), m(this, "loadingTimeout", new _.Timeout), m(this, "validClickTimeout", new _.Timeout), m(this, "isValidClickStart", !1), m(this, "state", {
       renderedPosition: this.props.position,
       shouldShowPopout: !1,
       shouldShowLoadingState: !1,
@@ -181,8 +181,8 @@ class p extends(i = s.Component) {
         t(e);
         return
       }
-      let s = null != n;
-      (s ? n : this.state.shouldShowPopout) ? null == r || r(): null == i || i(), !s && this.setState(e => {
+      let a = null != n;
+      (a ? n : this.state.shouldShowPopout) ? null == r || r(): null == i || i(), !a && this.setState(e => {
         let {
           shouldShowPopout: t
         } = e;

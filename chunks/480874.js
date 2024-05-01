@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return L
+    return R
   }
 });
 var n = a("735250"),
@@ -28,13 +28,13 @@ var n = a("735250"),
   N = a("689938"),
   v = a("449846");
 
-function L() {
+function R() {
   let e = s.useRef(null),
     t = (0, S.default)(),
     a = (0, p.useSpamMessageRequestCount)(),
     l = (0, _.useListHasSingleSpamMessageRequest)(),
-    L = (0, d.useIsRejectAllMessageRequestsEnabled)(),
-    R = (0, c.default)("message-requests-spam-list"),
+    R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
+    L = (0, c.default)("message-requests-spam-list"),
     {
       channelId: O
     } = (0, m.useMessageRequestSidebarState)(),
@@ -76,7 +76,7 @@ function L() {
       className: v.sectionTitle,
       children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: a
-      }), L && a > 0 ? (0, n.jsxs)(n.Fragment, {
+      }), R && a > 0 ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(u.Text, {
           className: v.titleDivider,
           variant: "eyebrow",
@@ -93,11 +93,11 @@ function L() {
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [a, x, L]);
+    }, "message-requests-spam-title"), [a, x, R]);
   return 0 === t.length ? (0, n.jsx)(I.default, {
     section: T.MessageRequestSections.SPAM
   }) : (0, n.jsx)(r.ListNavigatorProvider, {
-    navigator: R,
+    navigator: L,
     children: (0, n.jsx)(r.ListNavigatorContainer, {
       children: a => {
         let {

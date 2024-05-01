@@ -27,21 +27,21 @@ let T = s.memo(function(e) {
     error: l,
     message: T
   } = (0, C.useMessageRequestPreview)(t), A = (0, r.useStateFromStores)([E.default], () => null != T && E.default.isBlocked(T.author.id), [T]), N = (0, r.useStateFromStores)([f.default], () => f.default.can(m.Permissions.MANAGE_MESSAGES, t)), v = c.RenderSpoilers.useSetting(), {
-    content: L
+    content: R
   } = s.useMemo(() => (null == T ? void 0 : T.content) != null && "" !== T.content ? (0, d.default)(T, {
     formatInline: !0,
     noStyleAndInteraction: !0
   }) : {
     content: null
-  }, [T]), R = null;
-  if (l) R = (0, n.jsx)(o.Text, {
+  }, [T]), L = null;
+  if (l) L = (0, n.jsx)(o.Text, {
     className: I.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
     children: p.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (a) {
-    if (null != T && A) R = (0, n.jsx)(o.Text, {
+    if (null != T && A) L = (0, n.jsx)(o.Text, {
       className: I.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
@@ -51,11 +51,11 @@ let T = s.memo(function(e) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, _.renderSingleLineMessage)(T, L, A, i()(I.messageContent, g.inlineFormat, g.__invalid_smallFontSize), {
+      } = (0, _.renderSingleLineMessage)(T, R, A, i()(I.messageContent, g.inlineFormat, g.__invalid_smallFontSize), {
         iconClass: I.messageContentIcon,
         iconSize: S.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
-      R = null != t ? (0, n.jsx)(o.Text, {
+      L = null != t ? (0, n.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         className: I.messageContent,
@@ -67,18 +67,18 @@ let T = s.memo(function(e) {
         className: I.messageReplacement,
         children: e
       })
-    } else R = (0, n.jsx)(o.Text, {
+    } else L = (0, n.jsx)(o.Text, {
       className: I.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
       children: p.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
-  } else R = null;
+  } else L = null;
   return (0, n.jsx)(h.ObscuredDisplayContext.Provider, {
     value: (0, u.default)(v, N),
     children: (0, n.jsx)(o.FocusBlock, {
       className: I.messageFocusBlock,
-      children: R
+      children: L
     })
   })
 });

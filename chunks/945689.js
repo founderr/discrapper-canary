@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   }
 }), n("47120");
 var i = n("31775"),
   r = n.n(i);
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,7 +15,7 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class s {
   reset() {
     this._subscriptions = {}
   }
@@ -48,6 +48,6 @@ class a {
     return !!n.has(t) && (n.del(t), this._onChange(e, n.keys()), !0)
   }
   constructor(e) {
-    s(this, "_subscriptions", {}), s(this, "_onChange", void 0), this._onChange = e
+    a(this, "_subscriptions", {}), a(this, "_onChange", void 0), this._onChange = e
   }
 }

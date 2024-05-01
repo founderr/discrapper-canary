@@ -27,8 +27,8 @@ var n = a("735250"),
   A = a("871499"),
   N = a("136995"),
   v = a("25827"),
-  L = a("131951"),
-  R = a("594174"),
+  R = a("131951"),
+  L = a("594174"),
   O = a("451478"),
   M = a("465670"),
   P = a("421600"),
@@ -56,9 +56,9 @@ let k = {
 function H(e) {
   let {
     header: t
-  } = e, a = L.default.getCameraComponent(), l = (0, o.useStateFromStores)([L.default], () => L.default.getVideoDeviceId()), i = (0, p.default)();
+  } = e, a = R.default.getCameraComponent(), l = (0, o.useStateFromStores)([R.default], () => R.default.getVideoDeviceId()), i = (0, p.default)();
   return s.useEffect(() => {
-    let e = R.default.getCurrentUser();
+    let e = L.default.getCurrentUser();
     if (i && null != e) {
       let t = (0, m.getLastUsedVideoBackgroundOption)(e);
       (0, S.applyBackgroundOptionPreview)(t, l, {
@@ -149,7 +149,7 @@ function Y(e) {
     y: a,
     x: l,
     channel: f
-  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, g] = (0, o.useStateFromStoresArray)([L.default], () => [L.default.supports(U.Features.VIDEO), Object.keys(L.default.getVideoDevices()).length]), T = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, g] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), T = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), v = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -164,7 +164,7 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
-  let R = A === b.ChannelModes.VIDEO && I && g > 0,
+  let L = A === b.ChannelModes.VIDEO && I && g > 0,
     M = (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(P.default, {
         className: G.icon,
@@ -187,7 +187,7 @@ function Y(e) {
         })]
       })]
     }),
-    D = R ? k : B;
+    D = L ? k : B;
   return (0, n.jsx)(E.default, {
     className: G.wrapper,
     selector: ".".concat(G.root),
@@ -216,10 +216,10 @@ function Y(e) {
           className: G.mainChannelInfo,
           children: M
         }), (0, n.jsx)(V, {
-          canVideo: R,
+          canVideo: L,
           channel: f,
           numVideoDevices: g
-        }), R && !C ? (0, n.jsx)(u.Button, {
+        }), L && !C ? (0, n.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           fullWidth: !0,
           look: u.Button.Looks.LINK,

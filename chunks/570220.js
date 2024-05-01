@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("411104");
 var i = n("470079"),
   r = n("836560");
-class s extends r.EventEmitter {
+class a extends r.EventEmitter {
   on() {
     return this
   }
@@ -23,9 +23,9 @@ class s extends r.EventEmitter {
     return !1
   }
 }
-let a = i.createContext(new s),
+let s = i.createContext(new a),
   {
     Provider: o,
     Consumer: l
-  } = a;
-t.default = a
+  } = s;
+t.default = s

@@ -15,8 +15,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("653041"), n("789020");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("873546"),
   l = n("442837"),
   u = n("481060"),
@@ -57,7 +57,7 @@ function F(e) {
     avatarSrc: t,
     avatarDecorationSrc: n,
     compact: r,
-    onClick: s,
+    onClick: a,
     onContextMenu: o,
     onMouseDown: l,
     onMouseEnter: u,
@@ -68,7 +68,7 @@ function F(e) {
   } = e;
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)("img", {
-      onClick: s,
+      onClick: a,
       onContextMenu: o,
       onMouseDown: l,
       onKeyDown: _,
@@ -76,9 +76,9 @@ function F(e) {
       onMouseLeave: d,
       src: t,
       "aria-hidden": !0,
-      className: a()(E, V.avatar, {
+      className: s()(E, V.avatar, {
         [V.compact]: r,
-        [V.clickable]: null != s,
+        [V.clickable]: null != a,
         [V.communicationDisabledOpacity]: c
       }),
       alt: " "
@@ -94,8 +94,8 @@ function F(e) {
 function H(e, t, n) {
   let {
     message: r,
-    channel: s,
-    author: a,
+    channel: a,
+    author: s,
     compact: o = !1,
     onContextMenu: l,
     showUsernamePopout: u,
@@ -106,8 +106,8 @@ function H(e, t, n) {
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(w.default, {
       message: r,
-      channel: s,
-      author: a,
+      channel: a,
+      author: s,
       compact: o,
       roleIcon: d,
       showPopout: u,
@@ -129,8 +129,8 @@ function H(e, t, n) {
 function Y(e) {
   var t, n;
   let {
-    props: s,
-    guildId: a,
+    props: a,
+    guildId: s,
     handleRenderPopout: c,
     showCommunicationDisabledStyles: E = !1,
     className: I
@@ -144,11 +144,11 @@ function Y(e) {
     onClickAvatar: N,
     onPopoutRequestClose: C,
     showAvatarPopout: g
-  } = s, [L, v] = r.useState(!1), {
+  } = a, [L, v] = r.useState(!1), {
     analyticsLocations: D
   } = (0, _.default)(d.default.AVATAR), P = (0, l.useStateFromStores)([R.default], () => {
     var e;
-    return null !== (e = s.displayCompactAvatars) && void 0 !== e ? e : R.default.displayCompactAvatars
+    return null !== (e = a.displayCompactAvatars) && void 0 !== e ? e : R.default.displayCompactAvatars
   }), U = null != T.messageReference && null != T.webhookId, b = T.author, {
     id: G
   } = b, w = S ? 32 : 80, {
@@ -157,7 +157,7 @@ function Y(e) {
     eventHandlers: x
   } = (0, O.default)({
     user: b,
-    guildId: a,
+    guildId: s,
     size: w,
     animateOnHover: null != h ? !L : !A,
     showPending: !0
@@ -176,13 +176,13 @@ function Y(e) {
     value: D,
     children: (0, i.jsx)(u.Popout, {
       preload: U ? void 0 : function() {
-        return (0, p.maybeFetchUserProfileForPopout)(T.author.id, null != f.guildMemberAvatar && null != a ? M.default.getGuildMemberAvatarURLSimple({
-          guildId: a,
+        return (0, p.maybeFetchUserProfileForPopout)(T.author.id, null != f.guildMemberAvatar && null != s ? M.default.getGuildMemberAvatarURLSimple({
+          guildId: s,
           userId: T.author.id,
           avatar: f.guildMemberAvatar,
           size: 80
         }) : T.author.getAvatarURL(void 0, 80, !1), {
-          guildId: a,
+          guildId: s,
           channelId: T.channel_id
         })
       },
@@ -225,7 +225,7 @@ function j(e) {
     message: t,
     avatar: n,
     username: r,
-    usernameSpanId: s,
+    usernameSpanId: a,
     usernameClassName: o,
     compact: l,
     showTimestamp: d,
@@ -238,7 +238,7 @@ function j(e) {
   } = e;
   return (0, i.jsxs)(i.Fragment, {
     children: [!l && n, (0, i.jsxs)(u.H, {
-      className: a()(V.header, I),
+      className: s()(V.header, I),
       "aria-describedby": E,
       "aria-labelledby": c,
       children: [d && l && (0, i.jsx)(b.default, {
@@ -249,7 +249,7 @@ function j(e) {
         className: T,
         isInline: !1
       }), l && n, (0, i.jsx)("span", {
-        id: s,
+        id: a,
         className: o,
         children: r
       }), d && !l && (0, i.jsx)(b.default, {
@@ -302,7 +302,7 @@ function z(e) {
   let {
     message: t,
     repliedMessage: n,
-    compact: s = !1,
+    compact: a = !1,
     renderPopout: o,
     showTimestampOnHover: d,
     roleIcon: _,
@@ -318,7 +318,7 @@ function z(e) {
   }), z = (0, l.useStateFromStores)([R.default], () => {
     var t;
     return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : R.default.displayCompactAvatars
-  }), Z = (!s || z) && null != _ && null != b ? (0, i.jsx)(u.Popout, {
+  }), Z = (!a || z) && null != _ && null != b ? (0, i.jsx)(u.Popout, {
     animation: u.Popout.Animation.TRANSLATE,
     align: "center",
     autoInvert: !0,
@@ -338,17 +338,17 @@ function z(e) {
         onClick: t
       })
     }
-  }, "role-icon-children") : (!s || z) && null != _ ? (0, i.jsx)(D.default, {
+  }, "role-icon-children") : (!a || z) && null != _ ? (0, i.jsx)(D.default, {
     ..._,
     className: V.roleIcon
   }, "role-icon-children") : null, X = (0, G.renderSystemTag)({
     message: t,
     channel: O,
     user: null == t ? void 0 : t.author,
-    compact: s,
+    compact: a,
     isRepliedMessage: !1
   }), Q = [], q = L.default.getCurrentUser(), J = U.default.isPremium(t.author), $ = U.default.isPremium(q), ee = null == O ? void 0 : O.isPrivate();
-  (0, T.shouldShowNitroBadge)(null != _, "Message Username") && J && !s && !ee && Q.push((0, i.jsx)(K, {
+  (0, T.shouldShowNitroBadge)(null != _, "Message Username") && J && !a && !ee && Q.push((0, i.jsx)(K, {
     currentUserIsPremium: $,
     author: t.author
   }, "nitro-author")), null != Z && Q.push(Z), null != b && Q.push((0, i.jsx)(I.default, {
@@ -366,8 +366,8 @@ function z(e) {
   en[w.UsernameDecorationTypes.SYSTEM_TAG] = X, en[w.UsernameDecorationTypes.BADGES] = Q;
   let ei = H(e, M, en),
     er = (0, f.getMessageUsernameId)(t, h),
-    es = (0, f.getMessageTimestampId)(t),
-    ea = N ? "".concat(er) : "".concat(er, " ").concat(es),
+    ea = (0, f.getMessageTimestampId)(t),
+    es = N ? "".concat(er) : "".concat(er, " ").concat(ea),
     eo = (null == n ? void 0 : n.state) === A.ReferencedMessageState.LOADED ? (0, f.getMessageReplyId)(t) : void 0;
   return (0, i.jsx)(j, {
     message: t,
@@ -380,7 +380,7 @@ function z(e) {
             ...e,
             width: 12,
             height: 12,
-            className: s ? V.compactCommunicationDisabled : V.communicationDisabled
+            className: a ? V.compactCommunicationDisabled : V.communicationDisabled
           }), (0, i.jsx)(u.HiddenVisually, {
             children: k.default.Messages.GUILD_COMMUNICATION_DISABLED_BOTTOM_SHEET_TITLE
           })]
@@ -388,14 +388,14 @@ function z(e) {
       }), ei]
     }),
     usernameSpanId: (0, f.getMessageUsernameId)(t, h),
-    usernameClassName: a()(V.headerText, {
+    usernameClassName: s()(V.headerText, {
       [V.hasRoleIcon]: null != Z,
       [V.hasBadges]: null != X || et.length > 0
     }),
-    compact: s,
+    compact: a,
     showTimestamp: !0 !== N,
     showTimestampOnHover: d,
-    ariaLabelledBy: ea,
+    ariaLabelledBy: es,
     ariaDescribedBy: eo,
     className: p,
     badges: et

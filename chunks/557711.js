@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("481060"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("432247"),
   l = n("5192"),
   u = n("829820"),
@@ -30,17 +30,17 @@ function _(e) {
     disabled: h,
     onClick: A
   } = (0, u.useSpotifySyncAction)(t, n, c, l.default.getNickname(_, r, n));
-  return (0, i.jsx)(a.Tooltip, {
+  return (0, i.jsx)(s.Tooltip, {
     text: f,
     children: e => {
       let {
         onMouseEnter: n,
         onMouseLeave: r
       } = e;
-      return (0, i.jsx)(a.Button, {
+      return (0, i.jsx)(s.Button, {
         ...T,
-        size: s()(E, d.iconButtonSize),
-        className: s()(I, d.iconButton),
+        size: a()(E, d.iconButtonSize),
+        className: a()(I, d.iconButton),
         onClick: A,
         onMouseEnter: n,
         onMouseLeave: r,

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("1561"),
   l = n("761224"),
   u = n("898560"),
@@ -21,7 +21,7 @@ function T(e) {
   let {
     color: t = "default",
     label: n,
-    icon: s,
+    icon: a,
     showIconFirst: T = !1,
     imageUrl: f,
     hint: S,
@@ -48,7 +48,7 @@ function T(e) {
     N && ((0, d.ensureItemVisible)(b), null == C || C())
   }, [N, C]), (0, i.jsxs)(o.Clickable, {
     innerRef: b,
-    className: a()(I.item, I.labelContainer, E.MENU_ITEM_COLORS[t], g, {
+    className: s()(I.item, I.labelContainer, E.MENU_ITEM_COLORS[t], g, {
       [I.disabled]: m,
       [I.focused]: N,
       [null != L ? L : ""]: N
@@ -57,11 +57,11 @@ function T(e) {
     "aria-disabled": m,
     ...p,
     "data-menu-item": "true",
-    children: [T && null != s && (0, i.jsx)("div", {
+    children: [T && null != a && (0, i.jsx)("div", {
       className: I.iconContainerLeft,
-      children: (0, i.jsx)(s, {
+      children: (0, i.jsx)(a, {
         ...y,
-        className: a()(I.icon, null == y ? void 0 : y.className),
+        className: s()(I.icon, null == y ? void 0 : y.className),
         isFocused: N
       })
     }), (0, i.jsxs)("div", {
@@ -73,11 +73,11 @@ function T(e) {
     }), null != S && (0, i.jsx)("div", {
       className: I.hintContainer,
       children: (0, l.renderSubnode)(S, e)
-    }), !T && null != s && (0, i.jsx)("div", {
+    }), !T && null != a && (0, i.jsx)("div", {
       className: I.iconContainer,
-      children: (0, i.jsx)(s, {
+      children: (0, i.jsx)(a, {
         ...y,
-        className: a()(I.icon, null == y ? void 0 : y.className),
+        className: s()(I.icon, null == y ? void 0 : y.className),
         isFocused: N
       })
     }), null != f && (0, i.jsx)("div", {
@@ -90,7 +90,7 @@ function T(e) {
     }), A && (0, i.jsxs)("div", {
       className: I.iconContainer,
       children: [(0, i.jsx)(c.default, {
-        className: a()(I.caret, v)
+        className: s()(I.caret, v)
       }), P && (0, i.jsx)(_.default, {
         className: I.sparkles
       })]

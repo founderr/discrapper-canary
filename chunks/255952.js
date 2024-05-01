@@ -87,7 +87,7 @@ function v(e) {
   })
 }
 
-function L(e) {
+function R(e) {
   let {
     focused: t
   } = e;
@@ -105,7 +105,7 @@ function L(e) {
     })]
   })
 }
-let R = e => {
+let L = e => {
   let {
     customStatus: t,
     onClose: l,
@@ -208,7 +208,7 @@ let R = e => {
         let {
           isFocused: t
         } = e;
-        return (0, n.jsx)(L, {
+        return (0, n.jsx)(R, {
           focused: t
         })
       },
@@ -219,7 +219,7 @@ let R = e => {
 t.default = (0, d.default)(e => {
   let t = (0, r.useStateFromStores)([C.default], () => C.default.getCustomStatusActivity()),
     a = _.StatusSetting.useSetting();
-  return (0, n.jsx)(R, {
+  return (0, n.jsx)(L, {
     ...e,
     customStatus: t,
     status: a

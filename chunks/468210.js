@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("399606"),
+  a = n.n(r),
+  s = n("399606"),
   o = n("607070"),
   l = n("301822"),
   u = n("498003");
@@ -16,7 +16,7 @@ var r = n("120356"),
 function d(e) {
   let {
     className: t
-  } = e, r = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+  } = e, r = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   async function d() {
     let {
       default: e
@@ -26,6 +26,6 @@ function d(e) {
   return (0, i.jsx)(l.default, {
     importData: d,
     shouldAnimate: !r,
-    className: s()(u.sparkles, t)
+    className: a()(u.sparkles, t)
   })
 }

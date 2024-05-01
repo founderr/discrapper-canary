@@ -27,8 +27,8 @@ var n = a("735250"),
   A = a("979651"),
   N = a("938475"),
   v = a("823379"),
-  L = a("557177"),
-  R = a("981631");
+  R = a("557177"),
+  L = a("981631");
 
 function O(e, t, a, n) {
   s.useEffect(() => {
@@ -36,7 +36,7 @@ function O(e, t, a, n) {
       l = new r.BatchedStoreListener(e, () => {
         let e = t(),
           l = a(s, e);
-        null != l && !p.default.isSoundDisabled(l) && (0, L.playSound)(l, null != n ? n : .4), s = e
+        null != l && !p.default.isSoundDisabled(l) && (0, R.playSound)(l, null != n ? n : .4), s = e
       });
     return l.attach("useSound"), () => l.detach()
   })
@@ -80,8 +80,8 @@ function P() {
     return {
       channelType: t,
       guildId: a,
-      connected: s === R.RTCConnectionStates.RTC_CONNECTED,
-      connectHasStarted: !n && s !== R.RTCConnectionStates.DISCONNECTED || s === R.RTCConnectionStates.RTC_CONNECTED,
+      connected: s === L.RTCConnectionStates.RTC_CONNECTED,
+      connectHasStarted: !n && s !== L.RTCConnectionStates.DISCONNECTED || s === L.RTCConnectionStates.RTC_CONNECTED,
       awaitingRemote: null != u.default.getAwaitingRemoteSessionInfo(),
       connectedRemote: null != u.default.getRemoteSessionId()
     }
@@ -108,7 +108,7 @@ function x() {
   return O([T.default], () => T.default.isCurrentUserSpeaking(), (e, t) => {
     if (e !== t) {
       let e = S.default.isSelfMute();
-      if (S.default.getMode() === R.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
+      if (S.default.getMode() === L.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
     }
   }), null
 }
@@ -117,7 +117,7 @@ function y() {
   return O([S.default], () => S.default.isSelfMutedTemporarily(), (e, t) => {
     if (e !== t) {
       let e = S.default.isSelfMute();
-      if (S.default.getMode() === R.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
+      if (S.default.getMode() === L.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
     }
   }), null
 }
@@ -153,7 +153,7 @@ function U() {
       null != n && (e = n.type, t = N.default.countVoiceStatesForChannel(n.id) - (A.default.isInChannel(n.id) ? 1 : 0), s = h.default.getAllApplicationStreamsForChannel(n.id).map(e => e.ownerId))
     }
     let o = null;
-    return (null == (o = 1 === r.length ? r[0] : h.default.getCurrentUserActiveStream()) ? void 0 : o.state) === R.ApplicationStreamStates.CONNECTING && (o = null), null != o && (l = (0, d.encodeStreamKey)(o), i = h.default.getViewerIds(l).filter(e => e !== n).length), {
+    return (null == (o = 1 === r.length ? r[0] : h.default.getCurrentUserActiveStream()) ? void 0 : o.state) === L.ApplicationStreamStates.CONNECTING && (o = null), null != o && (l = (0, d.encodeStreamKey)(o), i = h.default.getViewerIds(l).filter(e => e !== n).length), {
       channelType: e,
       voiceChannelId: a,
       voiceChannelUserCount: t,

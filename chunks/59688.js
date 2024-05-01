@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   useCanShowNewGuildTooltipActivityEmptyState: function() {
-    return s
+    return a
   }
 });
 let i = (0, n("818083").createExperiment)({
@@ -43,7 +43,7 @@ function r() {
   return e
 }
 
-function s() {
+function a() {
   let {
     showNewGuildTooltipActivityEmptyState: e
   } = i.useExperiment({

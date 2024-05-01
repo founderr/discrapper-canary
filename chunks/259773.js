@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("481060"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("278297"),
   l = n("138599"),
   u = n("897353"),
@@ -22,7 +22,7 @@ t.default = e => {
   } = e;
   return (0, i.jsx)(o.MessagesInteractionContext.Consumer, {
     children: e => (0, i.jsxs)("div", {
-      className: s()(r, _.wrapper, {
+      className: a()(r, _.wrapper, {
         [_.disableInteractions]: e.disableInteractions
       }),
       children: [E && null == t ? (0, i.jsx)("div", {
@@ -30,9 +30,9 @@ t.default = e => {
         children: (0, i.jsx)(u.default, {
           className: _.iconPlay
         })
-      }) : null, null != t ? (0, i.jsx)(a.Clickable, {
+      }) : null, null != t ? (0, i.jsx)(s.Clickable, {
         onClick: t,
-        className: s()(_.iconWrapperActive),
+        className: a()(_.iconWrapperActive),
         tabIndex: E ? -1 : 0,
         "aria-label": d.default.Messages.PLAY,
         children: (0, i.jsx)(u.default, {

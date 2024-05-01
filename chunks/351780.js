@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
 var i, r = n("392711"),
-  s = n("442837"),
-  a = n("570140"),
+  a = n("442837"),
+  s = n("570140"),
   o = n("524484");
 
 function l(e, t, n) {
@@ -39,7 +39,7 @@ let u = !1,
     warningSeen: !1
   },
   _ = (0, r.cloneDeep)(d);
-class c extends(i = s.default.DeviceSettingsStore) {
+class c extends(i = a.default.DeviceSettingsStore) {
   initialize(e) {
     _ = {
       ..._,
@@ -78,7 +78,7 @@ class c extends(i = s.default.DeviceSettingsStore) {
     return _.comboSoundsEnabled
   }
 }
-l(c, "displayName", "PoggermodeSettingsStore"), l(c, "persistKey", "PoggermodeSettingsStore"), t.default = new c(a.default, {
+l(c, "displayName", "PoggermodeSettingsStore"), l(c, "persistKey", "PoggermodeSettingsStore"), t.default = new c(s.default, {
   POGGERMODE_SETTINGS_UPDATE: function(e) {
     let {
       settings: t

@@ -26,8 +26,8 @@ t.default = e => {
     playstyle: A,
     interests: N,
     description: v,
-    tag: L,
-    verificationForm: R,
+    tag: R,
+    verificationForm: L,
     badgeKind: O,
     badgePrimaryColor: M,
     badgeSecondaryColor: P,
@@ -43,8 +43,8 @@ t.default = e => {
         playstyle: A,
         interests: N,
         description: v,
-        tag: L,
-        verificationForm: R,
+        tag: R,
+        verificationForm: L,
         badgeKind: O,
         badgePrimaryColor: M,
         badgeSecondaryColor: P,
@@ -63,7 +63,7 @@ t.default = e => {
       } = await Promise.all([a.e("99387"), a.e("63636")]).then(a.bind(a, "511385"));
       return a => (0, n.jsx)(e, {
         guildId: t,
-        tag: L,
+        tag: R,
         brandPrimaryColor: y,
         ...a
       })

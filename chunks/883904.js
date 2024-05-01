@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   handleDCDismissed: function() {
-    return s
+    return a
   },
   handleDCShownToUser: function() {
     return r
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return o
   },
   resetDismissibleContentFrameworkStore: function() {
-    return a
+    return s
   }
 });
 var i = n("570140");
@@ -20,13 +20,13 @@ let r = e => {
       dismissibleContent: e
     })
   },
-  s = e => {
+  a = e => {
     i.default.dispatch({
       type: "DCF_HANDLE_DC_DISMISSED",
       dismissibleContent: e
     })
   },
-  a = () => {
+  s = () => {
     i.default.dispatch({
       type: "DCF_RESET"
     })

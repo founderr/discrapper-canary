@@ -9,18 +9,18 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("470079"),
   r = n("399606"),
-  s = n("634894"),
-  a = n("335131"),
+  a = n("634894"),
+  s = n("335131"),
   o = n("597688"),
   l = n("337679"),
   u = n("1870");
 
 function d() {
   let e = "useFetchPurchases";
-  (0, s.useTriggerDebuggingAA)({
+  (0, a.useTriggerDebuggingAA)({
     location: e + " auto on",
     autoTrackExposure: !0
-  }), (0, s.useTriggerDebuggingAA)({
+  }), (0, a.useTriggerDebuggingAA)({
     location: e + " auto off",
     autoTrackExposure: !1
   });
@@ -30,7 +30,7 @@ function d() {
     location: "useFetchPurchases"
   });
   return (0, i.useEffect)(() => {
-    (!c || !(_.size > 0)) && (0, a.fetchCollectiblesPurchases)()
+    (!c || !(_.size > 0)) && (0, s.fetchCollectiblesPurchases)()
   }, [c]), {
     isClaiming: n,
     fetchError: o,
@@ -43,10 +43,10 @@ function d() {
 function _(e) {
   var t;
   let n = "useFetchCollectiblesCategoriesAndPurchases";
-  (0, s.useTriggerDebuggingAA)({
+  (0, a.useTriggerDebuggingAA)({
     location: n + " auto on",
     autoTrackExposure: !0
-  }), (0, s.useTriggerDebuggingAA)({
+  }), (0, a.useTriggerDebuggingAA)({
     location: n + " auto off",
     autoTrackExposure: !1
   });
@@ -56,10 +56,10 @@ function _(e) {
     error: _
   } = function(e) {
     let t = "useMaybeFetchCollectiblesCategories";
-    (0, s.useTriggerDebuggingAA)({
+    (0, a.useTriggerDebuggingAA)({
       location: t + " auto on",
       autoTrackExposure: !0
-    }), (0, s.useTriggerDebuggingAA)({
+    }), (0, a.useTriggerDebuggingAA)({
       location: t + " auto off",
       autoTrackExposure: !1
     });
@@ -68,7 +68,7 @@ function _(e) {
       return [o.default.isFetchingCategories, o.default.error, null !== (e = o.default.lastFetched) && void 0 !== e ? e : 0, o.default.categories]
     });
     return (0, i.useEffect)(() => {
-      !(n || l || Date.now() - u < 6e5) && (0, a.fetchCollectiblesCategories)(e)
+      !(n || l || Date.now() - u < 6e5) && (0, s.fetchCollectiblesCategories)(e)
     }, [n, u, l, e]), {
       isFetching: n,
       categories: d,

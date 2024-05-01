@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("381499"),
-  s = n("570140"),
-  a = n("496929"),
+  a = n("570140"),
+  s = n("496929"),
   o = n("706454"),
   l = n("675478"),
   u = n("164207"),
@@ -20,7 +20,7 @@ var i = n("544891"),
   E = n("981631");
 async function I() {
   if (!_.default.isFetchingActiveOutboundPromotions) try {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "ACTIVE_OUTBOUND_PROMOTIONS_FETCH"
     });
     let t = u.PromotionPreviewExperiment.getCurrentConfig({
@@ -38,23 +38,23 @@ async function I() {
       r = _.default.consumedInboundPromotionId;
     if (!_.default.hasFetchedConsumedInboundPromotionId) {
       var e;
-      let t = (await (0, a.fetchUserEntitlementsForApplication)(c.PREMIUM_SUBSCRIPTION_APPLICATION, !1)).find(e => null != e.promotion_id && !0 === e.consumed);
+      let t = (await (0, s.fetchUserEntitlementsForApplication)(c.PREMIUM_SUBSCRIPTION_APPLICATION, !1)).find(e => null != e.promotion_id && !0 === e.consumed);
       r = null !== (e = null == t ? void 0 : t.promotion_id) && void 0 !== e ? e : null
     }
-    s.default.dispatch({
+    a.default.dispatch({
       type: "ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS",
       activeOutboundPromotions: n.map(e => (0, d.outboundPromotionFromServer)(e)),
       consumedInboundPromotionId: r
     })
   } catch (e) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL"
     })
   }
 }
 async function T() {
   if (!_.default.isFetchingActiveBogoPromotion) try {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "ACTIVE_BOGO_PROMOTION_FETCH"
     });
     let e = (await i.HTTP.get({
@@ -63,12 +63,12 @@ async function T() {
         locale: o.default.locale
       }
     })).body;
-    s.default.dispatch({
+    a.default.dispatch({
       type: "ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS",
       activePromotion: (0, d.bogoPromotionFromServer)(e)
     })
   } catch (e) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "ACTIVE_BOGO_PROMOTION_FETCH_FAIL"
     })
   }
@@ -76,7 +76,7 @@ async function T() {
 t.default = {
   fetchActiveOutboundPromotions: I,
   dismissOutboundPromotionNotice: function() {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "OUTBOUND_PROMOTION_NOTICE_DISMISS"
     });
     let e = _.default.lastDismissedOutboundPromotionStartDate;
@@ -87,7 +87,7 @@ t.default = {
     }, l.UserSettingsDelay.INFREQUENT_USER_ACTION)
   },
   markOutboundPromotionsSeen() {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "OUTBOUND_PROMOTIONS_SEEN"
     })
   },

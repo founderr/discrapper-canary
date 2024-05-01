@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   openBroadcastingPrivacySettingsModal: function() {
-    return s
+    return a
   }
 });
 var i = n("735250");
 n("470079");
 var r = n("481060");
 
-function s(e, t, s) {
+function a(e, t, a) {
   (0, r.openModalLazy)(async () => {
     let {
       default: r
@@ -16,7 +16,7 @@ function s(e, t, s) {
     return n => (0, i.jsx)(r, {
       headerText: e,
       buttonCTA: t,
-      onSave: s,
+      onSave: a,
       ...n
     })
   })

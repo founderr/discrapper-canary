@@ -9,15 +9,15 @@ n.r(t), n.d(t, {
 });
 var i = n("564334"),
   r = n("302221"),
-  s = n("563114");
-let a = e => {
+  a = n("563114");
+let s = e => {
     var t, n;
     let {
-      colors: s,
-      saturationFactor: a = 1
+      colors: a,
+      saturationFactor: s = 1
     } = e;
-    if (null == s || s.length < 1) return null;
-    let o = (0, r.findColorByHsv)(s),
+    if (null == a || a.length < 1) return null;
+    let o = (0, r.findColorByHsv)(a),
       l = i.default.parseString("#ffffff");
     if (null == l) return null;
     let u = i.default.parseString("#36393e");
@@ -28,29 +28,29 @@ let a = e => {
       c = null !== (t = (0, r.getAccessibleColor)({
         colors: [(0, r.getColorLightnessAdjusted)(d, .6, !0), l],
         ratio: 3,
-        saturationFactor: a
+        saturationFactor: s
       })) && void 0 !== t ? t : d,
       E = null !== (n = (0, r.getAccessibleColor)({
         colors: [(0, r.getColorLightnessAdjusted)(d, .6, !1), u],
         ratio: 5,
-        saturationFactor: a
+        saturationFactor: s
       })) && void 0 !== n ? n : d,
       I = (0, r.getAccessibleColor)({
         colors: [d, l],
         ratio: 7,
-        saturationFactor: a
+        saturationFactor: s
       }),
       T = (0, r.getAccessibleColor)({
         colors: [d, u],
         ratio: 7,
-        saturationFactor: a
+        saturationFactor: s
       });
     return {
       LIGHT: {
         accentColor: null == I ? void 0 : I.toHexString(),
         backgroundColor: (0, r.getSaturatedColorHex)({
           colorRGB: c,
-          saturationFactor: a
+          saturationFactor: s
         }),
         highlightColor: null == d ? void 0 : d.toHexString(),
         opacity: (null == _ ? void 0 : _.saturation) < .1 ? .35 : .1
@@ -59,7 +59,7 @@ let a = e => {
         accentColor: null == T ? void 0 : T.toHexString(),
         backgroundColor: (0, r.getSaturatedColorHex)({
           colorRGB: E,
-          saturationFactor: a
+          saturationFactor: s
         }),
         highlightColor: null == d ? void 0 : d.toHexString(),
         opacity: (null == _ ? void 0 : _.saturation) < .1 ? .5 : .2
@@ -71,11 +71,11 @@ let a = e => {
       colors: t,
       saturationFactor: n = 1,
       shouldProcessMobileColors: i = !1
-    } = e, r = a({
+    } = e, r = s({
       colors: t,
       saturationFactor: n
     });
-    return s.default.applyPlatformToThemedEmojiColorPalette({
+    return a.default.applyPlatformToThemedEmojiColorPalette({
       palette: r,
       shouldProcessMobileColors: i
     })
@@ -87,11 +87,11 @@ let a = e => {
         colors: e,
         saturationFactor: t
       }),
-      s = n ? null == r ? void 0 : r.DARK : null == r ? void 0 : r.LIGHT;
+      a = n ? null == r ? void 0 : r.DARK : null == r ? void 0 : r.LIGHT;
     return {
-      backgroundColor: null == s ? void 0 : s.backgroundColor,
-      accentColor: null == s ? void 0 : s.accentColor,
-      highlightColor: null == s ? void 0 : s.highlightColor,
-      opacity: null !== (i = null == s ? void 0 : s.opacity) && void 0 !== i ? i : .15
+      backgroundColor: null == a ? void 0 : a.backgroundColor,
+      accentColor: null == a ? void 0 : a.accentColor,
+      highlightColor: null == a ? void 0 : a.highlightColor,
+      opacity: null !== (i = null == a ? void 0 : a.opacity) && void 0 !== i ? i : .15
     }
   }

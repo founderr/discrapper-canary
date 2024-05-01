@@ -11,10 +11,10 @@ n.r(t), n.d(t, {
     return c
   },
   canvasHeight: function() {
-    return a
+    return s
   },
   canvasWidth: function() {
-    return s
+    return a
   },
   fontPadding: function() {
     return u
@@ -38,8 +38,8 @@ n.r(t), n.d(t, {
     return I
   }
 });
-let s = 348,
-  a = 88;
+let a = 348,
+  s = 88;
 (r = i || (i = {})).AssetImage = "AssetImage", r.ApplicationImage = "ApplicationImage", r.Platform = "Platform", r.StreamPreview = "StreamPreview", r.HangStatus = "HangStatus";
 let o = 12,
   l = 12,

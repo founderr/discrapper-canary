@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i, r = n("442837"),
-  s = n("570140"),
-  a = n("626135"),
+  a = n("570140"),
+  s = n("626135"),
   o = n("358085"),
   l = n("998502"),
   u = n("828695");
@@ -36,7 +36,7 @@ async function E() {
         hash: n,
         data: i
       }
-      of e) a.default.track(t, i), (_ = {
+      of e) s.default.track(t, i), (_ = {
       hashes: {
         ..._.hashes
       }
@@ -62,7 +62,7 @@ class I extends(i = r.default.PersistedStore) {
   }
 }
 d(I, "displayName", "SystemAnalyticsStore"), d(I, "persistKey", "SystemAnalyticsStore");
-let T = new I(s.default, {
+let T = new I(a.default, {
   START_SESSION: function() {
     return E(), !1
   }

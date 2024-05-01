@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("725686"),
-  s = n.n(r),
-  a = n("481060"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("285952"),
   l = n("395361"),
   u = n("829820"),
@@ -27,15 +27,15 @@ function _(e) {
     disabled: T,
     onClick: f
   } = (0, u.useSpotifyPlayAction)(t, n, r);
-  return (0, i.jsx)(a.Tooltip, {
+  return (0, i.jsx)(s.Tooltip, {
     text: E,
     children: e => {
       let {
         onMouseEnter: t,
         onMouseLeave: n
       } = e;
-      return (0, i.jsx)(a.Button, {
-        ...s()(_, ["channelId", "guildId"]),
+      return (0, i.jsx)(s.Button, {
+        ...a()(_, ["channelId", "guildId"]),
         onClick: f,
         onMouseEnter: t,
         onMouseLeave: n,

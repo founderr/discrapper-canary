@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 });
 var i = n("454585"),
   r = n("551452"),
-  s = n("532901");
-let a = {
+  a = n("532901");
+let s = {
     ...i.default.guildEventRules.link,
-    react: (0, s.default)({
+    react: (0, a.default)({
       enableBuildOverrides: !1,
       mustConfirmExternalLink: !0
     }).react
@@ -24,6 +24,6 @@ let a = {
   },
   l = i.default.reactParserFor({
     ...i.default.guildEventRules,
-    link: a,
+    link: s,
     channelMention: o
   })

@@ -21,13 +21,13 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("408210"),
-  a = n("260034"),
+  a = n("408210"),
+  s = n("260034"),
   o = n("993365"),
   l = n("524290");
 
 function u(e) {
-  return (0, i.jsx)(s.Cell, {
+  return (0, i.jsx)(a.Cell, {
     ...e,
     className: l.cell
   })
@@ -38,7 +38,7 @@ function d(e) {
     children: t,
     ...n
   } = e;
-  return (0, i.jsx)(s.Column, {
+  return (0, i.jsx)(a.Column, {
     ...n,
     className: l.column,
     children: (0, i.jsx)(o.Text, {
@@ -50,21 +50,21 @@ function d(e) {
 }
 
 function _(e) {
-  return (0, i.jsx)(s.Row, {
+  return (0, i.jsx)(a.Row, {
     ...e,
     className: l.row
   })
 }
 
 function c(e) {
-  return (0, i.jsx)(s.TableBody, {
+  return (0, i.jsx)(a.TableBody, {
     ...e,
     className: l.body
   })
 }
 
 function E(e) {
-  return (0, i.jsx)(s.TableHeader, {
+  return (0, i.jsx)(a.TableHeader, {
     ...e,
     className: l.header
   })
@@ -81,7 +81,7 @@ function I(e) {
     className: l.container,
     children: [(0, i.jsxs)("div", {
       className: l.toolbar,
-      children: [(0, i.jsx)(a.Heading, {
+      children: [(0, i.jsx)(s.Heading, {
         className: l.__invalid_title,
         variant: "heading-md/semibold",
         id: d,
@@ -89,7 +89,7 @@ function I(e) {
       }), (0, i.jsx)("div", {
         children: n
       })]
-    }), (0, i.jsx)(s.Table, {
+    }), (0, i.jsx)(a.Table, {
       ...u,
       "aria-labelledby": d,
       className: l.table

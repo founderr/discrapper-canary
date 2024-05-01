@@ -1,8 +1,8 @@
 "use strict";
 let i;
 n.r(t);
-var r, s = n("442837"),
-  a = n("570140"),
+var r, a = n("442837"),
+  s = n("570140"),
   o = n("353368");
 
 function l(e, t, n) {
@@ -13,7 +13,7 @@ function l(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class u extends(r = s.default.PersistedStore) {
+class u extends(r = a.default.PersistedStore) {
   initialize(e) {
     var t;
     i = null !== (t = null == e ? void 0 : e.animationType) && void 0 !== t ? t : o.VoiceChannelEffectAnimationType.PREMIUM
@@ -24,7 +24,7 @@ class u extends(r = s.default.PersistedStore) {
     }
   }
 }
-l(u, "displayName", "VoiceChannelEffectsPersistedStore"), l(u, "persistKey", "VoiceChannelEffectsPersistedStore"), t.default = new u(a.default, {
+l(u, "displayName", "VoiceChannelEffectsPersistedStore"), l(u, "persistKey", "VoiceChannelEffectsPersistedStore"), t.default = new u(s.default, {
   VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: () => {
     i = i === o.VoiceChannelEffectAnimationType.BASIC ? o.VoiceChannelEffectAnimationType.PREMIUM : o.VoiceChannelEffectAnimationType.BASIC
   }

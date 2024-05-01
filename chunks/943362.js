@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("700111"),
+  a = n.n(r),
+  s = n("700111"),
   o = n("481060"),
   l = n("239091"),
   u = n("782568"),
@@ -44,8 +44,8 @@ function S(e) {
         onClick: h,
         onContextMenu: A,
         className: "attachmentLink",
-        children: [(0, i.jsx)(a.AttachmentIcon, {
-          className: s()(f.icon, T.icon),
+        children: [(0, i.jsx)(s.AttachmentIcon, {
+          className: a()(f.icon, T.icon),
           color: o.tokens.colors.MENTION_FOREGROUND,
           width: 16,
           height: 16

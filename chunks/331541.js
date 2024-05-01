@@ -27,8 +27,8 @@ var n = a("735250"),
   A = a("440051"),
   N = a("734934"),
   v = a("158238"),
-  L = a("785717"),
-  R = a("221292"),
+  R = a("785717"),
+  L = a("221292"),
   O = a("318661"),
   M = a("502762"),
   P = a("192133"),
@@ -273,7 +273,7 @@ function $(e) {
     });
   return (0, n.jsx)(I.AnalyticsLocationProvider, {
     value: G,
-    children: (0, n.jsx)(L.UserProfileAnalyticsProvider, {
+    children: (0, n.jsx)(R.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",
       userId: t.id,
       guildId: l,
@@ -333,7 +333,7 @@ function $(e) {
                     focusedClassName: Q.menuItemFocused,
                     subMenuIconClassName: Q.subMenuIcon,
                     action: d.isMobile ? function() {
-                      (0, R.trackUserProfileAction)({
+                      (0, L.trackUserProfileAction)({
                         action: "PRESS_SET_STATUS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,
@@ -382,7 +382,7 @@ function $(e) {
                     icon: w.default,
                     showIconFirst: !0,
                     action: () => {
-                      (0, R.trackUserProfileAction)({
+                      (0, L.trackUserProfileAction)({
                         action: "PRESS_SWITCH_ACCOUNTS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,

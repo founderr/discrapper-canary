@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return o
   },
   getPendingAudioSettings: function() {
-    return s
+    return a
   },
   updatePendingSettings: function() {
-    return a
+    return s
   }
 }), n("47120");
 let i = {};
@@ -16,14 +16,14 @@ function r(e, t) {
   return "".concat(e, ":").concat(t)
 }
 
-function s(e, t) {
+function a(e, t) {
   return i[r(e, t)]
 }
 
-function a(e, t, n) {
-  let s = r(e, t);
-  i[s] = {
-    ...i[s],
+function s(e, t, n) {
+  let a = r(e, t);
+  i[a] = {
+    ...i[a],
     ...n
   }
 }

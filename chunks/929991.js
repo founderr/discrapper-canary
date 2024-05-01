@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   flushAnalyticsFeedItems: function() {
-    return a
+    return s
   },
   markAnalyticsFeedItemSeen: function() {
     return r
   },
   markAnalyticsFeedItemUnseen: function() {
-    return s
+    return a
   }
 });
 var i = n("570140");
@@ -21,7 +21,7 @@ function r(e, t, n) {
   })
 }
 
-function s(e, t, n) {
+function a(e, t, n) {
   i.default.dispatch({
     type: "ANALYTICS_FEED_ITEM_UNSEEN",
     id: e,
@@ -30,7 +30,7 @@ function s(e, t, n) {
   })
 }
 
-function a(e, t) {
+function s(e, t) {
   i.default.dispatch({
     type: "ANALYTICS_FEED_FLUSH",
     id: e,

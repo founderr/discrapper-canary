@@ -23,7 +23,7 @@ var n = a("570140"),
   A = a("554174"),
   N = a("981631"),
   v = a("65154");
-let L = {
+let R = {
   [N.GlobalKeybindActions.TOGGLE_PRIORITY_SPEAKER]: {
     onTrigger() {},
     keyEvents: {}
@@ -34,7 +34,7 @@ let L = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK]: {
     onTrigger(e, t) {
-      S.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (L[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
+      S.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
     },
     keyEvents: {
       keyup: !0,
@@ -44,7 +44,7 @@ let L = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: {
     onTrigger(e) {
-      S.default.getMode() === N.InputModes.PUSH_TO_TALK && (L[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), v.MediaEngineContextTypes.DEFAULT))
+      S.default.getMode() === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), v.MediaEngineContextTypes.DEFAULT))
     },
     keyEvents: {
       keyup: !0,
@@ -54,7 +54,7 @@ let L = {
   },
   [N.GlobalKeybindActions.PUSH_TO_MUTE]: {
     onTrigger(e) {
-      if (S.default.getMode() === N.InputModes.VOICE_ACTIVITY) !S.default.isSelfDeaf() && (L[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
+      if (S.default.getMode() === N.InputModes.VOICE_ACTIVITY) !S.default.isSelfDeaf() && (R[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
     },
     keyEvents: {
       keyup: !0,
@@ -221,13 +221,13 @@ let L = {
     }
   }
 };
-class R extends u.default {
+class L extends u.default {
   _initialize() {
     n.default.wait(() => n.default.dispatch({
       type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS",
-      keybinds: L
+      keybinds: R
     }))
   }
   _terminate() {}
 }
-t.default = new R
+t.default = new L

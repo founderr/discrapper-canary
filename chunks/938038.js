@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   GameDisplayModeStorage: function() {
-    return a
+    return s
   }
 });
 var i = n("433517"),
   r = n("593472");
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,32 +15,32 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class s {
   save() {
     let e = {
       games: this.games
     };
-    i.Storage.set(a.storageKey, e)
+    i.Storage.set(s.storageKey, e)
   }
   static load() {
-    return null == a._loaded && (a._loaded = a.loadInternal()), a._loaded
+    return null == s._loaded && (s._loaded = s.loadInternal()), s._loaded
   }
   static loadInternal() {
-    let e = i.Storage.get(a.storageKey);
+    let e = i.Storage.get(s.storageKey);
     if (null != e) {
       var t;
-      return new a(null !== (t = e.games) && void 0 !== t ? t : {})
+      return new s(null !== (t = e.games) && void 0 !== t ? t : {})
     }
-    let n = new a({});
+    let n = new s({});
     return n.save(), n
   }
   static getGameSettings(e) {
     var t;
-    return null == e ? null : null !== (t = a.load().games[e]) && void 0 !== t ? t : null
+    return null == e ? null : null !== (t = s.load().games[e]) && void 0 !== t ? t : null
   }
   static updateGameSettings(e, t) {
     if (null == e) return;
-    let n = a.load(),
+    let n = s.load(),
       i = n.games[e];
     if (null == i) {
       n.games[e] = {
@@ -54,31 +54,31 @@ class a {
   }
   static isPromptingForGameDisable(e) {
     var t, n;
-    return null !== (n = null === (t = a.getGameSettings(e)) || void 0 === t ? void 0 : t.disabled) && void 0 !== n && n
+    return null !== (n = null === (t = s.getGameSettings(e)) || void 0 === t ? void 0 : t.disabled) && void 0 !== n && n
   }
   static setPromptingForGameDisable(e, t) {
-    a.updateGameSettings(e, {
+    s.updateGameSettings(e, {
       disabled: t
     })
   }
   static getGameDisplayMode(e) {
     var t, n;
-    return null == e ? null : null !== (n = null === (t = a.getGameSettings(e)) || void 0 === t ? void 0 : t.screen) && void 0 !== n ? n : null
+    return null == e ? null : null !== (n = null === (t = s.getGameSettings(e)) || void 0 === t ? void 0 : t.screen) && void 0 !== n ? n : null
   }
   static setGameDisplayMode(e, t) {
-    a.updateGameSettings(e, {
+    s.updateGameSettings(e, {
       screen: t
     })
   }
   static clearOldGameSettings() {
-    let e = a.load();
+    let e = s.load();
     if (null == e.games) return;
     let t = Date.now() - 31536e6;
     for (let n in e.games) e.games[n].date < t && delete e.games[n];
     e.save()
   }
   static reset() {
-    let e = a.load();
+    let e = s.load();
     e.games = {}, e.save()
   }
   static isTestMode() {
@@ -90,7 +90,7 @@ class a {
     return e = !!window.__GAME_DISPLAY_MODE_DEBUG__, e
   }
   constructor(e) {
-    s(this, "games", void 0), this.games = e
+    a(this, "games", void 0), this.games = e
   }
 }
-s(a, "_loaded", null), s(a, "storageKey", "GameDisplayModeStorage"), setTimeout(() => a.clearOldGameSettings(), 6e4)
+a(s, "_loaded", null), a(s, "storageKey", "GameDisplayModeStorage"), setTimeout(() => s.clearOldGameSettings(), 6e4)

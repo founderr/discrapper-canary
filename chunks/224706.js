@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("411104");
 var i = n("664751"),
   r = n("544891"),
-  s = n("570140"),
-  a = n("566620"),
+  a = n("570140"),
+  s = n("566620"),
   o = n("812206"),
   l = n("439849"),
   u = n("669764"),
@@ -28,18 +28,18 @@ function R(e) {
     secret: n,
     channelId: i,
     intent: r = p.ActivityIntent.PLAY,
-    embedded: a = !1,
+    embedded: s = !1,
     analyticsLocations: o = []
   } = e;
-  C(t, null, i, a, o).then(() => f.default.waitConnected(t)).then(() => Promise.race([f.default.waitSubscribed(t, N.RPCEvents.ACTIVITY_JOIN)])).then(() => {
-    s.default.dispatch({
+  C(t, null, i, s, o).then(() => f.default.waitConnected(t)).then(() => Promise.race([f.default.waitSubscribed(t, N.RPCEvents.ACTIVITY_JOIN)])).then(() => {
+    a.default.dispatch({
       type: "ACTIVITY_JOIN",
       applicationId: t,
       secret: n,
       intent: r,
-      embedded: a
+      embedded: s
     })
-  }).catch(() => s.default.dispatch({
+  }).catch(() => a.default.dispatch({
     type: "ACTIVITY_JOIN_FAILED",
     applicationId: t
   }))
@@ -48,7 +48,7 @@ function R(e) {
 function C(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     u = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-  if (l) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, a.startEmbeddedActivity)(n, e, u), Promise.resolve());
+  if (l) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, s.startEmbeddedActivity)(n, e, u), Promise.resolve());
   if (_.default.isConnected(e)) return Promise.resolve();
   let c = null;
   if (null == t) {
@@ -58,10 +58,10 @@ function C(e, t, n) {
   if (I.default.isLaunchable(e, t)) {
     var T;
     let n = I.default.getState(e, t),
-      s = E.default.getActiveLaunchOptionId(e, t);
+      a = E.default.getActiveLaunchOptionId(e, t);
     if (null == n) throw Error("Missing dispatch game when launching");
-    let a = E.default.getLibraryApplication(e, t);
-    if (null == a) throw Error("Missing library application when launching");
+    let s = E.default.getLibraryApplication(e, t);
+    if (null == s) throw Error("Missing library application when launching");
     c = (T = e, r.HTTP.post({
       url: N.Endpoints.OAUTH2_AUTHORIZE,
       query: {
@@ -86,32 +86,32 @@ function C(e, t, n) {
     }, e => {
       if (404 === e.status) return null;
       throw e
-    })).then(e => f.default.launchDispatchApplication(n, e, d.default.locale, a.getBranchName(), s))
+    })).then(e => f.default.launchDispatchApplication(n, e, d.default.locale, s.getBranchName(), a))
   } else {
     let t = o.default.getApplication(e);
     c = null != t ? f.default.launch(t) : f.default.launchGame(e)
   }
   let S = Error("game not found");
-  return null != c ? (s.default.dispatch({
+  return null != c ? (a.default.dispatch({
     type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE",
     applicationId: e,
     branchId: t
-  }), s.default.dispatch({
+  }), a.default.dispatch({
     type: "GAME_LAUNCH_START",
     applicationId: e
   }), c.then(t => {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "GAME_LAUNCH_SUCCESS",
       applicationId: e,
       pids: t
     })
   }).catch(t => {
-    m.default.show(N.NoticeTypes.LAUNCH_GAME_FAILURE, O.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), s.default.dispatch({
+    m.default.show(N.NoticeTypes.LAUNCH_GAME_FAILURE, O.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), a.default.dispatch({
       type: "GAME_LAUNCH_FAIL",
       applicationId: e,
       error: S
     })
-  })) : (s.default.dispatch({
+  })) : (a.default.dispatch({
     type: "GAME_LAUNCH_FAIL",
     applicationId: e,
     error: S
@@ -119,7 +119,7 @@ function C(e, t, n) {
 }
 t.default = {
   addGame(e) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "RUNNING_GAME_ADD_OVERRIDE",
       pid: e
     })
@@ -134,20 +134,20 @@ t.default = {
         return
       }
     }
-    s.default.dispatch({
+    a.default.dispatch({
       type: "RUNNING_GAME_TOGGLE_OVERLAY",
       game: e,
       newEnabledValue: t
     })
   },
   toggleDetection(e) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "RUNNING_GAME_TOGGLE_DETECTION",
       game: e
     })
   },
   editName(e, t) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "RUNNING_GAME_EDIT_NAME",
       game: e,
       newName: t
@@ -167,7 +167,7 @@ t.default = {
         i(Error("Did not find data on ".concat(e)));
         return
       }
-      s.default.dispatch({
+      a.default.dispatch({
         type: "GAME_ICON_UPDATE",
         gameName: r.name,
         icon: "data:image/png;base64,".concat(r.icon)
@@ -177,7 +177,7 @@ t.default = {
   async getDetectableGamesSupplemental(e) {
     let t = e.filter(u.default.canFetch);
     if (0 !== t.length) {
-      s.default.dispatch({
+      a.default.dispatch({
         type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH",
         applicationIds: t
       });
@@ -188,13 +188,13 @@ t.default = {
             application_ids: t
           }
         });
-        s.default.dispatch({
+        a.default.dispatch({
           type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS",
           applicationIds: t,
           supplementalGameData: e.body.supplemental_game_data
         })
       } catch {
-        s.default.dispatch({
+        a.default.dispatch({
           type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE",
           applicationIds: t
         })
@@ -202,8 +202,8 @@ t.default = {
     }
   },
   getDetectableGames() {
-    !c.default.fetching && null == c.default.lastFetched && s.default.wait(() => {
-      s.default.dispatch({
+    !c.default.fetching && null == c.default.lastFetched && a.default.wait(() => {
+      a.default.dispatch({
         type: "GAMES_DATABASE_FETCH"
       }), r.HTTP.get({
         url: N.Endpoints.APPLICATIONS_DETECTABLE,
@@ -219,7 +219,7 @@ t.default = {
             etag: n
           }
         } = e;
-        s.default.dispatch({
+        a.default.dispatch({
           type: "GAMES_DATABASE_UPDATE",
           games: t,
           etag: n
@@ -228,11 +228,11 @@ t.default = {
         let {
           status: t
         } = e;
-        304 === t ? s.default.dispatch({
+        304 === t ? a.default.dispatch({
           type: "GAMES_DATABASE_UPDATE",
           games: [],
           etag: c.default.detectableGamesEtag
-        }) : s.default.dispatch({
+        }) : a.default.dispatch({
           type: "GAMES_DATABASE_FETCH_FAIL"
         })
       })
@@ -243,7 +243,7 @@ t.default = {
       name: t,
       iconHash: n,
       publisher: i,
-      distributor: a,
+      distributor: s,
       sku: o,
       executableName: u
     } = e, d = (0, l.cleanExecutablePath)(u);
@@ -255,7 +255,7 @@ t.default = {
           name: t,
           os: (0, S.getPlatformName)(),
           icon: n,
-          distributor_application: (_ = a, c = o, null == _ || "" === _ ? null : {
+          distributor_application: (_ = s, c = o, null == _ || "" === _ ? null : {
             distributor: _,
             sku: c
           }),
@@ -273,7 +273,7 @@ t.default = {
             missing_data: i
           }
         } = e;
-        s.default.dispatch({
+        a.default.dispatch({
           type: "UNVERIFIED_GAME_UPDATE",
           name: t,
           hash: n,
@@ -295,7 +295,7 @@ t.default = {
     })
   },
   deleteEntry(e) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "RUNNING_GAME_DELETE_ENTRY",
       game: e
     })
@@ -307,24 +307,24 @@ t.default = {
       sessionId: n,
       applicationId: i,
       channelId: r,
-      messageId: a,
+      messageId: s,
       intent: o = p.ActivityIntent.PLAY,
       embedded: l = !1
     } = e;
-    if (__OVERLAY__) return s.default.dispatch({
+    if (__OVERLAY__) return a.default.dispatch({
       type: "OVERLAY_JOIN_GAME",
       userId: t,
       sessionId: n,
       applicationId: i,
       channelId: r,
-      messageId: a
+      messageId: s
     }), Promise.resolve(!0);
-    s.default.dispatch({
+    a.default.dispatch({
       type: "ACTIVITY_JOIN_LOADING",
       applicationId: i
     });
     try {
-      let e = await h.default.getJoinSecret(t, n, i, r, a);
+      let e = await h.default.getJoinSecret(t, n, i, r, s);
       return R({
         applicationId: i,
         secret: e,
@@ -333,7 +333,7 @@ t.default = {
         embedded: l
       }), !0
     } catch (e) {
-      return s.default.dispatch({
+      return a.default.dispatch({
         type: "ACTIVITY_JOIN_FAILED",
         applicationId: i
       }), !1

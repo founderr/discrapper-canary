@@ -27,8 +27,8 @@ var n = a("735250"),
   A = a("335131"),
   N = a("141594"),
   v = a("302800"),
-  L = a("981631"),
-  R = a("689938"),
+  R = a("981631"),
+  L = a("689938"),
   O = a("108003");
 let M = e => {
     let {
@@ -37,7 +37,7 @@ let M = e => {
     return (0, n.jsx)(g.TextBadge, {
       className: O.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
-      text: R.default.Messages.NEW
+      text: L.default.Messages.NEW
     })
   },
   P = e => {
@@ -57,9 +57,9 @@ let M = e => {
     }), [c, E]);
     return (0, n.jsx)(f.LinkButton, {
       selected: t,
-      route: L.Routes.COLLECTIBLES_SHOP,
+      route: R.Routes.COLLECTIBLES_SHOP,
       icon: I.default,
-      text: R.default.Messages.COLLECTIBLES_SHOP,
+      text: L.default.Messages.COLLECTIBLES_SHOP,
       locationState: a,
       ...d,
       ...u,

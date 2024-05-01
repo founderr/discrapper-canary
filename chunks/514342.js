@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("481060"),
   l = n("564522");
 
@@ -15,7 +15,7 @@ function u(e) {
   let {
     children: t,
     "aria-label": n,
-    className: s,
+    className: a,
     position: u
   } = e, d = r.useRef(null), _ = null != n ? n : "string" == typeof t && t;
   return (0, i.jsx)(o.Tooltip, {
@@ -29,7 +29,7 @@ function u(e) {
         onMouseLeave: o
       } = n;
       return (0, i.jsx)("div", {
-        className: a()(s, l.overflow),
+        className: s()(a, l.overflow),
         ref: d,
         "aria-hidden": e["aria-hidden"],
         onMouseEnter: () => {

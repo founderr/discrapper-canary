@@ -23,8 +23,8 @@ var n = a("735250"),
   A = a("706454"),
   N = a("210887"),
   v = a("480294"),
-  L = a("683301"),
-  R = a("430824"),
+  R = a("683301"),
+  L = a("430824"),
   O = a("230307"),
   M = a("502568"),
   P = a("900849"),
@@ -66,7 +66,7 @@ class q extends s.PureComponent {
       currentHomepageCategoryId: r,
       mostRecentQuery: o
     } = this.props;
-    if ((0, C.fetchActivityStatistics)(), (0, b.maybeFetchGuildDiscoveryCategories)(), null == L.default.getSearchIndex() && (0, _.createAlgoliaIndex)(), h.default.wait(() => {
+    if ((0, C.fetchActivityStatistics)(), (0, b.maybeFetchGuildDiscoveryCategories)(), null == R.default.getSearchIndex() && (0, _.createAlgoliaIndex)(), h.default.wait(() => {
         (0, m.markView)(H.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
       }), !n && 0 === o.length && P.trackDiscoveryViewed({
         loadId: this.loadId,
@@ -180,7 +180,7 @@ class q extends s.PureComponent {
       categoryName: u
     }) : r === F.DISCOVERY_ALL_CATEGORIES_ID ? V.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : V.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: u
-    }), f = null !== (t = null === (e = s[a]) || void 0 === e ? void 0 : e[r]) && void 0 !== t ? t : L.EMPTY_DISCOVERABLE_GUILDS_SECTION;
+    }), f = null !== (t = null === (e = s[a]) || void 0 === e ? void 0 : e[r]) && void 0 !== t ? t : R.EMPTY_DISCOVERABLE_GUILDS_SECTION;
     return (0, n.jsx)(k.default, {
       loadId: this.loadId,
       searchResults: f,
@@ -209,7 +209,7 @@ class q extends s.PureComponent {
       loadingGuildId: c
     } = this.state, f = u === F.DISCOVERY_ALL_CATEGORIES_ID ? V.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : V.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: d
-    }), E = null !== (t = null === (e = s[a]) || void 0 === e ? void 0 : e[u]) && void 0 !== t ? t : L.EMPTY_DISCOVERABLE_GUILDS_SECTION;
+    }), E = null !== (t = null === (e = s[a]) || void 0 === e ? void 0 : e[u]) && void 0 !== t ? t : R.EMPTY_DISCOVERABLE_GUILDS_SECTION;
     return (0, n.jsx)(w.default, {
       loadId: this.loadId,
       availableLanguages: l,
@@ -439,7 +439,7 @@ class q extends s.PureComponent {
     })
   }
 }
-let Q = f.default.connectStores([N.default, A.default, O.default, v.default, L.default, U.default, R.default], () => {
+let Q = f.default.connectStores([N.default, A.default, O.default, v.default, R.default, U.default, L.default], () => {
   var e;
   let t = F.LANGUAGE_OPTIONS,
     a = A.default.locale,
@@ -448,18 +448,18 @@ let Q = f.default.connectStores([N.default, A.default, O.default, v.default, L.d
     })) && void 0 !== e ? e : t[0],
     s = Object.keys(O.default.applicationStatistics),
     l = v.default.hasConsented(H.Consents.PERSONALIZATION) && s.length > 0,
-    i = L.default.getCurrentCategoryId(),
-    r = L.default.getCurrentHomepageCategoryId();
+    i = R.default.getCurrentCategoryId(),
+    r = R.default.getCurrentHomepageCategoryId();
   return {
-    isFetching: L.default.isFetching(),
-    isFetchingSearch: L.default.isFetchingSearch(),
-    guilds: L.default.getDiscoverableGuilds(),
-    mostRecentQuery: L.default.getMostRecentQuery(),
+    isFetching: R.default.isFetching(),
+    isFetchingSearch: R.default.isFetchingSearch(),
+    guilds: R.default.getDiscoverableGuilds(),
+    mostRecentQuery: R.default.getMostRecentQuery(),
     currentCategoryId: i,
     currentHomepageCategoryId: r,
     currentCategoryName: U.default.getCategoryName(i),
     categories: U.default.getDiscoveryCategories(),
-    userGuilds: R.default.getGuilds(),
+    userGuilds: L.default.getGuilds(),
     theme: N.default.theme,
     mightHaveGamesYouPlay: l,
     availableLanguages: t,
@@ -490,7 +490,7 @@ function Z(e) {
 t.default = function(e) {
   let {
     searchRoute: t
-  } = e, a = (0, x.useClanDiscoveryExperimentEnabled)("guild_discovery"), s = (0, f.useStateFromStores)([L.default], () => L.default.getCurrentCategoryId()), l = (0, f.useStateFromStores)([L.default], () => L.default.getIsReady());
+  } = e, a = (0, x.useClanDiscoveryExperimentEnabled)("guild_discovery"), s = (0, f.useStateFromStores)([R.default], () => R.default.getCurrentCategoryId()), l = (0, f.useStateFromStores)([R.default], () => R.default.getIsReady());
   return a && (!l || s === F.CategoryId.Clans) ? (0, n.jsx)(j.default, {}) : (0, n.jsx)(Z, {
     searchRoute: t
   })

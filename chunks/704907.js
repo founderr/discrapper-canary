@@ -2,8 +2,8 @@
 n.r(t), n("653041"), n("47120");
 var i = n("392711"),
   r = n.n(i),
-  s = n("913527"),
-  a = n.n(s);
+  a = n("913527"),
+  s = n.n(a);
 
 function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -57,20 +57,20 @@ t.default = class e {
     return null != t ? t.frecency : null
   }
   compute() {
-    let e = a()();
+    let e = s()();
     r().forEach(this.usageHistory, (t, n) => {
       let {
         totalUses: i,
-        recentUses: s,
+        recentUses: a,
         frecency: o
       } = t;
       if (-1 !== o) return;
       let l = this.computeBonus(n) / 100;
-      t.score = 0, r().forEach(s, (n, i) => {
+      t.score = 0, r().forEach(a, (n, i) => {
         if (i >= this.maxSamples) return !1;
-        let r = this.computeWeight(e.diff(a()(n), "days"));
+        let r = this.computeWeight(e.diff(s()(n), "days"));
         t.score += l * r
-      }), t.score > 0 ? (t.recentUses.length > 0 && (t.frecency = Math.ceil(t.score / s.length * i)), this.usageHistory[n] = t) : delete this.usageHistory[n]
+      }), t.score > 0 ? (t.recentUses.length > 0 && (t.frecency = Math.ceil(t.score / a.length * i)), this.usageHistory[n] = t) : delete this.usageHistory[n]
     }), this.frequently = r()(this.usageHistory).map((e, t) => {
       let n = this.lookupKey(t);
       return null == n ? null : [n, e.frecency]
@@ -94,8 +94,8 @@ t.default = class e {
     lookupKey: n,
     afterCompute: i,
     numFrequentlyItems: r = 32,
-    maxSamples: s = 10
+    maxSamples: a = 10
   }) {
-    o(this, "dirty", void 0), o(this, "_frequently", void 0), o(this, "numFrequentlyItems", void 0), o(this, "maxSamples", void 0), o(this, "computeBonus", void 0), o(this, "computeWeight", void 0), o(this, "lookupKey", void 0), o(this, "usageHistory", void 0), o(this, "afterCompute", void 0), this.computeBonus = e, this.computeWeight = t, this.afterCompute = i, this.lookupKey = n, this.usageHistory = {}, this.frequently = [], this.maxSamples = s, this.numFrequentlyItems = r, this.dirty = !1
+    o(this, "dirty", void 0), o(this, "_frequently", void 0), o(this, "numFrequentlyItems", void 0), o(this, "maxSamples", void 0), o(this, "computeBonus", void 0), o(this, "computeWeight", void 0), o(this, "lookupKey", void 0), o(this, "usageHistory", void 0), o(this, "afterCompute", void 0), this.computeBonus = e, this.computeWeight = t, this.afterCompute = i, this.lookupKey = n, this.usageHistory = {}, this.frequently = [], this.maxSamples = a, this.numFrequentlyItems = r, this.dirty = !1
   }
 }

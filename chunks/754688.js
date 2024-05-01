@@ -21,10 +21,10 @@ n.r(t), n.d(t, {
 });
 var i = n("592125"),
   r = n("430824"),
-  s = n("496675"),
-  a = n("226951"),
+  a = n("496675"),
+  s = n("226951"),
   o = n("981631");
-let l = Array.from(n("176505").StaticChannelRoutes).map(e => a.default.escape(e)).join("|"),
+let l = Array.from(n("176505").StaticChannelRoutes).map(e => s.default.escape(e)).join("|"),
   u = new RegExp("^/channels/(\\d+|".concat(o.ME, ")(?:/)?(\\d+|").concat(l, ")?")),
   d = new RegExp("^/channels/(\\d+|".concat(o.ME, ")(?:/)(\\d+|").concat(l, ")(?:/)(\\d+)")),
   _ = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
@@ -56,9 +56,9 @@ function f(e) {
       channelId: null !== (r = i[2]) && void 0 !== r ? r : void 0
     }
   }
-  let s = e.match(c);
-  return null != s && s.length > 1 ? {
-    guildId: s[1]
+  let a = e.match(c);
+  return null != a && a.length > 1 ? {
+    guildId: a[1]
   } : null
 }
 
@@ -73,7 +73,7 @@ function S(e) {
 }
 
 function h(e) {
-  return !!e.isPrivate() || s.default.can(o.Permissions.VIEW_CHANNEL, e)
+  return !!e.isPrivate() || a.default.can(o.Permissions.VIEW_CHANNEL, e)
 }
 
 function A(e) {
@@ -83,6 +83,6 @@ function A(e) {
   } = e;
   if (null == r.default.getGuild(t) && t !== o.ME) return !1;
   if (null == n) return !0;
-  let s = i.default.getChannel(n);
-  return null != s && h(s)
+  let a = i.default.getChannel(n);
+  return null != a && h(a)
 }

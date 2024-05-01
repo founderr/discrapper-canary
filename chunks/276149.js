@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  s = n("287734"),
-  a = n("496675"),
+  a = n("287734"),
+  s = n("496675"),
   o = n("19780"),
   l = n("626135"),
   u = n("915863"),
@@ -27,7 +27,7 @@ function c(e) {
       className: t,
       disabled: I,
       onClick: () => {
-        a.default.can(d.Permissions.CONNECT, E), s.default.selectVoiceChannel(E.id), l.default.track(d.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
+        s.default.can(d.Permissions.CONNECT, E), a.default.selectVoiceChannel(E.id), l.default.track(d.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
           source: "UserProfilePopout",
           guild_id: E.guild_id,
           channel_id: E.id

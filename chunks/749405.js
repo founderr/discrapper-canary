@@ -40,7 +40,7 @@ function h(e) {
     onAcceptSuccess: S,
     onRejectSuccess: m,
     onError: C
-  }), L = g || T || A || N || v;
+  }), R = g || T || A || N || v;
   return (0, n.jsxs)("div", {
     className: E.container,
     children: [(0, n.jsx)(c.default, {
@@ -56,7 +56,7 @@ function h(e) {
         onClick: e => {
           e.stopPropagation(), I(h.id)
         },
-        disabled: L,
+        disabled: R,
         submitting: T || v,
         children: f.default.Messages.MESSAGE_REQUEST_IGNORE
       }), (0, n.jsx)(l.Button, {
@@ -66,7 +66,7 @@ function h(e) {
         onClick: e => {
           e.stopPropagation(), p(h.id)
         },
-        disabled: L,
+        disabled: R,
         submitting: g || A || N,
         children: f.default.Messages.MESSAGE_REQUEST_ACCEPT
       })]

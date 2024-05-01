@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i, r, s, a, o, l, u = n("442837"),
+var i, r, a, s, o, l, u = n("442837"),
   d = n("570140"),
   _ = n("865427");
 (i = o || (o = {}))[i.NotResolved = 0] = "NotResolved", i[i.Resolving = 1] = "Resolving", i[i.Resolved = 2] = "Resolved", i[i.Invalid = 3] = "Invalid";
@@ -59,12 +59,12 @@ class T extends(l = u.default.Store) {
     return I
   }
 }
-a = "BuildOverrideStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
-  value: a,
+s = "BuildOverrideStore", (a = "displayName") in(r = T) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new T(d.default, {
+}) : r[a] = s, t.default = new T(d.default, {
   BUILD_OVERRIDE_RESOLVED: function(e) {
     let {
       url: t,

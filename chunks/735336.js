@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("866442"),
   l = n("442837"),
   u = n("692547"),
@@ -66,7 +66,7 @@ let W = {
 function z(e) {
   let {
     type: t,
-    shown: s,
+    shown: a,
     onClick: o
   } = e, u = (0, l.useStateFromStores)([O.default], () => {
     let e = O.default.getCurrentUser();
@@ -75,7 +75,7 @@ function z(e) {
     analyticsLocations: T
   } = (0, E.default)(c.default.BADGE);
   return r.useEffect(() => {
-    s && !I.current && (I.current = !0, y.default.track(F.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    a && !I.current && (I.current = !0, y.default.track(F.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: H.PremiumUpsellTypes.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
       location: {
         page: K[t],
@@ -84,7 +84,7 @@ function z(e) {
       },
       location_stack: T
     }))
-  }, [T, s, t]), (0, i.jsx)(d.Tooltip, {
+  }, [T, a, t]), (0, i.jsx)(d.Tooltip, {
     tooltipContentClassName: j.premiumIconTooltipContent,
     text: u ? Y.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
     children: e => (0, i.jsx)(d.Clickable, {
@@ -98,7 +98,7 @@ function z(e) {
           return n => {
             let {
               onClose: r,
-              ...s
+              ...a
             } = n;
             return (0, i.jsx)(t, {
               analyticsLocations: e,
@@ -111,13 +111,13 @@ function z(e) {
                 }
               }),
               onClose: r,
-              ...s
+              ...a
             })
           }
         }), null == o || o()
       },
-      className: a()(j.premiumIconWrapper, {
-        [j.visible]: s,
+      className: s()(j.premiumIconWrapper, {
+        [j.visible]: a,
         [j.clickable]: !u
       }),
       children: (0, i.jsx)(M.TextBadge, {
@@ -137,11 +137,11 @@ function Z(e) {
     darkenOnHover: t,
     profileType: n,
     profileLabel: r,
-    icon: s,
-    ...a
-  } = e, o = W[n], l = "pencil" === s ? D.default : L.default;
+    icon: a,
+    ...s
+  } = e, o = W[n], l = "pencil" === a ? D.default : L.default;
   return (0, i.jsx)(d.Clickable, {
-    ...a,
+    ...s,
     "aria-label": r,
     className: t ? j.pencilContainerDark : j.pencilContainer,
     children: (0, i.jsx)(d.Tooltip, {
@@ -157,7 +157,7 @@ function Z(e) {
 }
 
 function X(e) {
-  var t, n, s;
+  var t, n, a;
   let {
     user: _,
     displayProfile: c,
@@ -180,7 +180,7 @@ function X(e) {
     overrideBannerSrc: E,
     size: (0, k.getUserBannerSize)(v),
     canAnimate: M || !en ? $ : et
-  }), es = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), ea = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), eo = (0, o.hex2int)((0, I.default)(_.getAvatarURL(L, ea), es, !1)), el = (0, T.default)(null !== (t = null == c ? void 0 : c.primaryColor) && void 0 !== t ? t : eo).hsl, eu = (0, l.useStateFromStores)([G.default], () => G.default.getUserProfile(_.id)), ed = m.default.getChannel(p.default.getChannelId()), {
+  }), ea = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), es = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), eo = (0, o.hex2int)((0, I.default)(_.getAvatarURL(L, es), ea, !1)), el = (0, T.default)(null !== (t = null == c ? void 0 : c.primaryColor) && void 0 !== t ? t : eo).hsl, eu = (0, l.useStateFromStores)([G.default], () => G.default.getUserProfile(_.id)), ed = m.default.getChannel(p.default.getChannelId()), {
     appsInGDMEnabled: e_,
     availableApplications: ec
   } = (0, f.usePrivateChannelIntegrationState)({
@@ -193,12 +193,12 @@ function X(e) {
   });
   return (0, i.jsx)(B.default, {
     isPremium: q,
-    hasThemeColors: null !== (s = null == c ? void 0 : c.canEditThemes) && void 0 !== s && s,
+    hasThemeColors: null !== (a = null == c ? void 0 : c.canEditThemes) && void 0 !== a && a,
     profileType: v,
     hasBanner: null != ei,
     hasProfileEffect: K,
     children: (0, i.jsxs)("div", {
-      className: a()(j.banner, (0, k.getUserBannerStyles)({
+      className: s()(j.banner, (0, k.getUserBannerStyles)({
         profileType: v,
         user: {
           hasBanner: null != ei,

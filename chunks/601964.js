@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("81825"),
   r = n("768581"),
-  s = n("709054"),
-  a = n("624138"),
+  a = n("709054"),
+  s = n("624138"),
   o = n("981631"),
   l = n("185923"),
   u = n("474936");
@@ -71,7 +71,7 @@ class _ extends i.default {
     return null !== (e = this.name) && void 0 !== e ? e : ""
   }
   get acronym() {
-    return (0, a.getAcronym)(this.name)
+    return (0, s.getAcronym)(this.name)
   }
   isOwner(e) {
     let t = "string" == typeof e ? e : null != e ? e.id : null;
@@ -82,7 +82,7 @@ class _ extends i.default {
   }
   isNew() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 7,
-      t = s.default.extractTimestamp(this.id);
+      t = a.default.extractTimestamp(this.id);
     return Date.now() - t < 864e5 * e
   }
   isLurker() {
@@ -92,7 +92,7 @@ class _ extends i.default {
     return this.features.has(e)
   }
   getEveryoneRoleId() {
-    return s.default.castGuildIdAsEveryoneGuildRoleId(this.id)
+    return a.default.castGuildIdAsEveryoneGuildRoleId(this.id)
   }
   getMaxEmojiSlots() {
     return Math.max(this.hasFeature(o.GuildFeatures.MORE_EMOJI) ? 200 : l.EMOJI_MAX_SLOTS, u.BoostedGuildFeatures[this.premiumTier].limits.emoji)

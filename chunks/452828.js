@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
 var i = n("470079");
@@ -15,7 +15,7 @@ let r = Object.freeze({
   dirty: 2
 });
 
-function s() {
+function a() {
   let e = (0, i.useRef)(null),
     t = (0, i.useRef)(r),
     n = (0, i.useCallback)(() => {
@@ -41,16 +41,16 @@ function s() {
           scrollTop: e,
           scrollLeft: i,
           scrollHeight: r,
-          scrollWidth: s,
-          offsetHeight: a,
+          scrollWidth: a,
+          offsetHeight: s,
           offsetWidth: o
         } = n;
         t.current = {
           scrollTop: e,
           scrollLeft: i,
           scrollHeight: r,
-          scrollWidth: s,
-          offsetHeight: a,
+          scrollWidth: a,
+          offsetHeight: s,
           offsetWidth: o,
           dirty: 0
         }

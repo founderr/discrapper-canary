@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   ExtendedMemoryLru: function() {
-    return a
+    return s
   }
 }), n("47120");
 var i = n("689320"),
   r = n("143806");
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,7 +15,7 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class s {
   get totalLength() {
     return this.primary.length + this.extended.length
   }
@@ -74,6 +74,6 @@ class a {
     return i.chain(this.extended.values(), this.primary.values())
   }
   constructor(e, t) {
-    s(this, "primary", void 0), s(this, "extended", void 0), this.primary = new r.Lru(e), this.extended = new r.Lru(t)
+    a(this, "primary", void 0), a(this, "extended", void 0), this.primary = new r.Lru(e), this.extended = new r.Lru(t)
   }
 }

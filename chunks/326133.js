@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("924826"),
   l = n("442837"),
   u = n("481060"),
@@ -19,7 +19,7 @@ var i = n("735250"),
   A = n("51062"),
   m = n("364993");
 t.default = r.forwardRef(function(e, t) {
-  var n, s, N, p, O;
+  var n, a, N, p, O;
   let {
     channel: R,
     type: C,
@@ -50,7 +50,7 @@ t.default = r.forwardRef(function(e, t) {
   if (r.useEffect(() => {
       L(y.isVisible)
     }, [L, y.isVisible]), !y.isVisible || null == y.query || void 0 === B) return null;
-  let V = null !== (s = y.query.typeInfo.renderResults({
+  let V = null !== (a = y.query.typeInfo.renderResults({
     results: y.query.results,
     selectedIndex: y.selectedIndex,
     channel: R,
@@ -59,7 +59,7 @@ t.default = r.forwardRef(function(e, t) {
     options: y.query.options,
     onHover: e => P.onResultHover(e),
     onClick: e => P.onResultClick(e)
-  })) && void 0 !== s ? s : null;
+  })) && void 0 !== a ? a : null;
   if (null == V) return null;
   let x = {
       [m.autocompleteAttached]: null == B,
@@ -70,7 +70,7 @@ t.default = r.forwardRef(function(e, t) {
   null != B && (F = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (p = y.query) || void 0 === p ? void 0 : p.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
   let H = (0, i.jsx)(c.default, {
     id: v,
-    className: a()(m.autocomplete, x),
+    className: s()(m.autocomplete, x),
     innerClassName: m.autocompleteInner,
     onMouseDown: e => e.preventDefault(),
     children: (0, i.jsx)(o.ListNavigatorProvider, {

@@ -3,8 +3,8 @@ n.r(t), n("627341");
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("278074"),
+  a = n.n(r),
+  s = n("278074"),
   o = n("721987"),
   l = n("138655"),
   u = n("793397"),
@@ -12,13 +12,13 @@ var r = n("120356"),
   _ = n("228168"),
   c = n("194502");
 let E = (e, t) => {
-    let n = (0, a.match)(e).with(_.UserProfileTypes.MODAL, () => c.userProfileModalOuter).with(_.UserProfileTypes.PANEL, () => c.userPanelOuter).with(_.UserProfileTypes.CARD, () => c.userCardOuter).with(_.UserProfileTypes.BITE_SIZE, () => c.biteSizeOuter).with(_.UserProfileTypes.FULL_SIZE, () => c.fullSizeOuter).otherwise(() => c.userPopoutOuter),
+    let n = (0, s.match)(e).with(_.UserProfileTypes.MODAL, () => c.userProfileModalOuter).with(_.UserProfileTypes.PANEL, () => c.userPanelOuter).with(_.UserProfileTypes.CARD, () => c.userCardOuter).with(_.UserProfileTypes.BITE_SIZE, () => c.biteSizeOuter).with(_.UserProfileTypes.FULL_SIZE, () => c.fullSizeOuter).otherwise(() => c.userPopoutOuter),
       i = t ? c.userProfileOuterThemed : c.userProfileOuterUnthemed;
-    return s()(n, i)
+    return a()(n, i)
   },
   I = (e, t, n) => {
-    let i = (0, a.match)(e).with(_.UserProfileTypes.MODAL, _.UserProfileTypes.FULL_SIZE, () => c.userProfileModalInner).with(_.UserProfileTypes.PANEL, () => c.userPanelInner).with(_.UserProfileTypes.CARD, () => c.userCardInner).otherwise(() => c.userPopoutInner),
-      r = (0, a.match)(e).with(_.UserProfileTypes.PANEL, () => c.userPanelInnerThemed).with(_.UserProfileTypes.BITE_SIZE, () => c.biteSizeInnerThemed).with(_.UserProfileTypes.FULL_SIZE, () => c.fullSizeInnerThemed).otherwise(() => (0, u.buildGetPremiumUserBannerStyles)({
+    let i = (0, s.match)(e).with(_.UserProfileTypes.MODAL, _.UserProfileTypes.FULL_SIZE, () => c.userProfileModalInner).with(_.UserProfileTypes.PANEL, () => c.userPanelInner).with(_.UserProfileTypes.CARD, () => c.userCardInner).otherwise(() => c.userPopoutInner),
+      r = (0, s.match)(e).with(_.UserProfileTypes.PANEL, () => c.userPanelInnerThemed).with(_.UserProfileTypes.BITE_SIZE, () => c.biteSizeInnerThemed).with(_.UserProfileTypes.FULL_SIZE, () => c.fullSizeInnerThemed).otherwise(() => (0, u.buildGetPremiumUserBannerStyles)({
         premiumUserWithBanner: c.userProfileInnerThemedWithBanner,
         premiumUserWithoutBanner: c.userProfileInnerThemedPremiumWithoutBanner,
         default: c.userProfileInnerThemedNonPremium
@@ -26,7 +26,7 @@ let E = (e, t) => {
         isPremium: t,
         hasBanner: n
       }));
-    return s()(i, r)
+    return a()(i, r)
   };
 
 function T(e) {
@@ -34,7 +34,7 @@ function T(e) {
     user: t,
     displayProfile: n,
     profileType: r,
-    className: a,
+    className: s,
     pendingThemeColors: u,
     pendingProfileEffectId: _,
     themeOverride: T,
@@ -59,7 +59,7 @@ function T(e) {
     secondaryColor: N
   }), R = (null == n ? void 0 : n.canEditThemes) || S, C = null !== _ && ((null == n ? void 0 : n.banner) != null || void 0 !== _);
   return (0, i.jsx)("div", {
-    className: s()(E(r, R), h ? c.showOutOfBoundaryComponents : void 0, O, a),
+    className: a()(E(r, R), h ? c.showOutOfBoundaryComponents : void 0, O, s),
     style: p,
     children: (0, i.jsx)("div", {
       className: I(r, R, C),
@@ -73,7 +73,7 @@ function T(e) {
     })
   })
 }
-let f = e => (0, a.match)(e).with(_.UserProfileTypes.POPOUT, _.UserProfileTypes.SETTINGS, () => c.userPopoutOverlayBackground).with(_.UserProfileTypes.MODAL, () => c.userProfileModalOverlayBackground).with(_.UserProfileTypes.PANEL, () => c.userPanelOverlayBackground).with(_.UserProfileTypes.BITE_SIZE, () => c.biteSizeOverlayBackground).with(_.UserProfileTypes.FULL_SIZE, () => c.fullSizeOverlayBackground).otherwise(() => c.overlayBackground);
+let f = e => (0, s.match)(e).with(_.UserProfileTypes.POPOUT, _.UserProfileTypes.SETTINGS, () => c.userPopoutOverlayBackground).with(_.UserProfileTypes.MODAL, () => c.userProfileModalOverlayBackground).with(_.UserProfileTypes.PANEL, () => c.userPanelOverlayBackground).with(_.UserProfileTypes.BITE_SIZE, () => c.biteSizeOverlayBackground).with(_.UserProfileTypes.FULL_SIZE, () => c.fullSizeOverlayBackground).otherwise(() => c.overlayBackground);
 T.Overlay = function(e) {
   let {
     children: t,
@@ -82,7 +82,7 @@ T.Overlay = function(e) {
     profileType: r
   } = (0, d.useUserProfileThemeContext)();
   return (0, i.jsx)("div", {
-    className: s()(f(r), n),
+    className: a()(f(r), n),
     children: t
   })
 }, t.default = T

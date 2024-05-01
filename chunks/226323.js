@@ -27,8 +27,8 @@ var n = a("735250"),
   A = a("729285"),
   N = a("150954"),
   v = a("51144"),
-  L = a("524484"),
-  R = a("689938"),
+  R = a("524484"),
+  L = a("689938"),
   O = a("689835");
 let M = {
     offset: 2
@@ -37,49 +37,49 @@ let M = {
     serverDeaf: {
       icon: g.default,
       colorize: !0,
-      getStatus: () => R.default.Messages.SERVER_DEAFENED
+      getStatus: () => L.default.Messages.SERVER_DEAFENED
     },
     serverMute: {
       icon: T.default,
       colorize: !0,
-      getStatus: () => R.default.Messages.SERVER_MUTED
+      getStatus: () => L.default.Messages.SERVER_MUTED
     },
     deaf: {
       icon: g.default,
       colorize: !1,
-      getStatus: () => R.default.Messages.VOICE_CHANNEL_DEAFENED
+      getStatus: () => L.default.Messages.VOICE_CHANNEL_DEAFENED
     },
     mute: {
       icon: T.default,
       colorize: !1,
-      getStatus: () => R.default.Messages.VOICE_CHANNEL_MUTED
+      getStatus: () => L.default.Messages.VOICE_CHANNEL_MUTED
     }
   },
   x = {
     serverDeaf: {
       icon: o.HeadphonesDenyIcon,
       colorize: !0,
-      getStatus: () => R.default.Messages.SERVER_DEAFENED
+      getStatus: () => L.default.Messages.SERVER_DEAFENED
     },
     serverMute: {
       icon: d.MicrophoneDenyIcon,
       colorize: !0,
-      getStatus: () => R.default.Messages.SERVER_MUTED
+      getStatus: () => L.default.Messages.SERVER_MUTED
     },
     deaf: {
       icon: u.HeadphonesSlashIcon,
       colorize: !1,
-      getStatus: () => R.default.Messages.VOICE_CHANNEL_DEAFENED
+      getStatus: () => L.default.Messages.VOICE_CHANNEL_DEAFENED
     },
     mute: {
       icon: c.MicrophoneSlashIcon,
       colorize: !1,
-      getStatus: () => R.default.Messages.VOICE_CHANNEL_MUTED
+      getStatus: () => L.default.Messages.VOICE_CHANNEL_MUTED
     },
     localMute: {
       icon: d.MicrophoneDenyIcon,
       colorize: !1,
-      getStatus: () => R.default.Messages.VOICE_CHANNEL_LOCAL_MUTED
+      getStatus: () => L.default.Messages.VOICE_CHANNEL_LOCAL_MUTED
     }
   };
 
@@ -119,7 +119,7 @@ function y(e) {
     serverMute: S,
     mute: d,
     localMute: g
-  })) && void 0 !== s ? s : {}, j = null != U ? R.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
+  })) && void 0 !== s ? s : {}, j = null != U ? L.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
     userName: y,
     status: U()
   }) : y;
@@ -169,7 +169,7 @@ function y(e) {
         onContextMenu: G,
         focusProps: M,
         children: (0, n.jsx)(_.default, {
-          shakeLocation: L.ShakeLocation.VOICE_USER,
+          shakeLocation: R.ShakeLocation.VOICE_USER,
           isShaking: T,
           children: (0, n.jsx)("div", {
             className: i()(O.avatar, {
@@ -204,7 +204,7 @@ function D(e) {
     onClick: () => u(!o),
     color: I.CircleIconButtonColors.PRIMARY,
     size: I.CircleIconButtonSizes.SIZE_24,
-    tooltip: o ? R.default.Messages.VOICE_PANEL_HIDE_EXTRAS : R.default.Messages.VOICE_PANEL_SHOW_EXTRAS,
+    tooltip: o ? L.default.Messages.VOICE_PANEL_HIDE_EXTRAS : L.default.Messages.VOICE_PANEL_SHOW_EXTRAS,
     icon: (0, n.jsx)(d, {
       width: 16,
       height: 16
@@ -228,7 +228,7 @@ function D(e) {
     children: (0, n.jsxs)("div", {
       className: O.voiceUsers,
       role: "group",
-      "aria-label": R.default.Messages.VOICE_PANEL_USERS_A11Y_LABEL,
+      "aria-label": L.default.Messages.VOICE_PANEL_USERS_A11Y_LABEL,
       children: [C.map(e => {
         let {
           user: t,

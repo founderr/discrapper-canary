@@ -27,15 +27,15 @@ async function m(e) {
     analyticsLocation: N
   } = e, v = c.default.getUser(S);
   if (null == v) return;
-  let L = E.default.getUserProfile(S),
-    R = u.default.getPrimaryActivity(S),
+  let R = E.default.getUserProfile(S),
+    L = u.default.getPrimaryActivity(S),
     O = u.default.getStatus(S),
     M = u.default.isMobileOnline(S),
     {
       party: P,
       assets: x,
       application_id: y
-    } = null != R ? R : {},
+    } = null != L ? L : {},
     D = null != y ? o.default.getApplication(y) : null,
     b = M ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
     U = O === h.StatusTypes.ONLINE ? b : O;
@@ -58,18 +58,18 @@ async function m(e) {
     guild_id: I !== h.ME ? I : null,
     channel_id: g,
     other_user_id: S,
-    application_id: null !== (l = null == R ? void 0 : R.application_id) && void 0 !== l ? l : null,
-    application_name: null == R ? void 0 : R.name,
+    application_id: null !== (l = null == L ? void 0 : L.application_id) && void 0 !== l ? l : null,
+    application_name: null == L ? void 0 : L.name,
     sku_id: null !== (i = null == D ? void 0 : D.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(S),
     has_images: !!(null !== (m = null == x ? void 0 : x.large_image) && void 0 !== m ? m : null == x ? void 0 : x.small_image),
     party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
     party_id: null == P ? void 0 : P.id,
     party_platform: (0, _.isSpotifyParty)(null == P ? void 0 : P.id) ? h.PlatformTypes.SPOTIFY : null,
-    game_platform: (0, r.default)(R),
+    game_platform: (0, r.default)(L),
     profile_user_status: U,
-    profile_has_nitro_customization: (null == L ? void 0 : L.banner) != null,
-    profile_has_profile_effect: (null == L ? void 0 : L.profileEffectId) != null,
+    profile_has_nitro_customization: (null == R ? void 0 : R.banner) != null,
+    profile_has_profile_effect: (null == R ? void 0 : R.profileEffectId) != null,
     ...null == N ? null : (0, f.expandLocation)(N)
   })
 }

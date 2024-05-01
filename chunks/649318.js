@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return M
   }
 }), n("47120"), n("536091"), n("411104"), n("653041"), n("724458"), n("852437");
-var i, r, s, a, o = n("403644"),
+var i, r, a, s, o = n("403644"),
   l = n.n(o),
   u = n("565925"),
   d = n.n(u),
@@ -38,7 +38,7 @@ var i, r, s, a, o = n("403644"),
   S = n("65154"),
   h = n("436620");
 let A = new f.Logger("SDP");
-(s = i || (i = {})).AUDIO = "a", s.VIDEO = "v", (a = r || (r = {})).SENDRECV = "sendrecv", a.SENDONLY = "sendonly", a.RECVONLY = "recvonly", a.INACTIVE = "inactive";
+(a = i || (i = {})).AUDIO = "a", a.VIDEO = "v", (s = r || (r = {})).SENDRECV = "sendrecv", s.SENDONLY = "sendonly", s.RECVONLY = "recvonly", s.INACTIVE = "inactive";
 let m = "UDP/TLS/RTP/SAVPF";
 
 function N(e) {
@@ -110,8 +110,8 @@ function R(e) {
     type: n,
     setup: i,
     direction: r,
-    baseSDP: s,
-    codec: a,
+    baseSDP: a,
+    codec: s,
     payload: o,
     bitrate: u,
     ssrcs: d,
@@ -139,7 +139,7 @@ function R(e) {
   };
   let {
     media: [f]
-  } = T.parse(s);
+  } = T.parse(a);
   if (f.type = n, f.protocol = m, f.payloads = o, f.setup = i, f.mid = t, f.rtcpMux = "rtcp-mux", f.direction = r, f.ssrcs = d, d.length > 0 && (null != c && (f.ssrcGroups = l()(d, 4).map(e => {
       let t = e[0].id;
       return {
@@ -162,23 +162,23 @@ function R(e) {
         type: "transport-cc",
         payload: o
       }]), f.rtp.push({
-        codec: a,
+        codec: s,
         encoding: 2,
         payload: o,
         rate: 48e3
-      }), a === S.Codecs.OPUS && f.fmtp.push({
+      }), s === S.Codecs.OPUS && f.fmtp.push({
         config: "minptime=10;useinbandfec=1;usedtx=".concat(E ? "0" : "1"),
         payload: o
       }), f.maxptime = 60;
       break;
     case "video":
       f.ext = _.filter(e => "urn:ietf:params:rtp-hdrext:toffset" === e.uri || "http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time" === e.uri || "urn:3gpp:video-orientation" === e.uri || "http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01" === e.uri || "http://www.webrtc.org/experiments/rtp-hdrext/playout-delay" === e.uri), f.rtp.push({
-        codec: a,
+        codec: s,
         payload: o,
         rate: 9e4
       });
       let A = "x-google-max-bitrate=".concat(u);
-      a === S.Codecs.H264 && (A += ";level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f"), f.fmtp.push({
+      s === S.Codecs.H264 && (A += ";level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f"), f.fmtp.push({
         config: A,
         payload: o
       }), f.rtcpFb = [{
@@ -216,8 +216,8 @@ function C(e) {
     baseSDP: n,
     direction: i,
     audioCodec: r,
-    audioPayloadType: s,
-    audioBitRate: a,
+    audioPayloadType: a,
+    audioBitRate: s,
     videoCodec: o,
     videoPayloadType: l,
     videoBitRate: u,
@@ -236,8 +236,8 @@ function C(e) {
         direction: T,
         baseSDP: n,
         codec: "audio" === I ? r : o,
-        payload: "audio" === I ? s : l,
-        bitrate: "audio" === I ? a : u,
+        payload: "audio" === I ? a : l,
+        bitrate: "audio" === I ? s : u,
         ssrcs: p(_, i, "audio" === I ? "a" : "v"),
         extensions: c
       }))
@@ -245,7 +245,7 @@ function C(e) {
   } else {
     let e = "answer" === t ? "passive" : "actpass",
       I = _.filter(e => {
-        let [t, n, i, r, s] = e;
+        let [t, n, i, r, a] = e;
         return "inactive" !== r && "audio" === i
       }).map(e => {
         let [t, n] = e;
@@ -258,13 +258,13 @@ function C(e) {
         direction: i,
         baseSDP: n,
         codec: r,
-        payload: s,
-        bitrate: a,
+        payload: a,
+        bitrate: s,
         ssrcs: I.flat(),
         extensions: c
       })), l > 0) {
       let t = _.filter(e => {
-        let [t, n, i, r, s] = e;
+        let [t, n, i, r, a] = e;
         return "inactive" !== r && "video" === i
       }).map(e => {
         let [t, n] = e;
@@ -298,8 +298,8 @@ function g(e) {
     baseSDP: n,
     audioCodec: i,
     audioPayloadType: r,
-    audioBitRate: s,
-    videoCodec: a,
+    audioBitRate: a,
+    videoCodec: s,
     videoPayloadType: o,
     videoBitRate: l,
     sendingVideo: u,
@@ -322,9 +322,9 @@ function g(e) {
       setup: I,
       direction: S,
       baseSDP: n,
-      codec: "audio" === f ? i : a,
+      codec: "audio" === f ? i : s,
       payload: "audio" === f ? r : o,
-      bitrate: "audio" === f ? s : l,
+      bitrate: "audio" === f ? a : l,
       ssrcs: t,
       extensions: c,
       rtxPayload: "audio" === f ? null : d,
@@ -339,19 +339,19 @@ function g(e) {
 }
 
 function L(e, t, n, i, r) {
-  let s = e.find(e => e.codec === i);
-  if (null == s) return null;
-  let a = t.find(e => RegExp("^apt=".concat(s.payload)).test(e.config)),
+  let a = e.find(e => e.codec === i);
+  if (null == a) return null;
+  let s = t.find(e => RegExp("^apt=".concat(a.payload)).test(e.config)),
     o = null;
-  if (null != a) {
-    let t = e.find(e => e.codec === S.Codecs.RTX && e.payload === a.payload);
+  if (null != s) {
+    let t = e.find(e => e.codec === S.Codecs.RTX && e.payload === s.payload);
     null != t && (o = t.payload)
   }
   return {
     type: n,
     name: i,
     priority: r + 1,
-    payloadType: s.payload,
+    payloadType: a.payload,
     rtxPayloadType: o
   }
 }
@@ -361,8 +361,8 @@ function v(e) {
     let n, {
       type: i,
       rtp: r,
-      ssrcs: s,
-      fmtp: a,
+      ssrcs: a,
+      fmtp: s,
       direction: o,
       mid: l
     } = t;
@@ -373,15 +373,15 @@ function v(e) {
       }), i) {
       case "audio":
         [S.Codecs.OPUS].forEach((t, n) => {
-          let s = L(r, a, i, t, n);
-          null != s && e.codecs.push(s)
-        }), "sendrecv" === o && null != (n = null == s ? void 0 : s.find(e => "cname" === e.attribute)) && (e.audioSSRC = n.id);
+          let a = L(r, s, i, t, n);
+          null != a && e.codecs.push(a)
+        }), "sendrecv" === o && null != (n = null == a ? void 0 : a.find(e => "cname" === e.attribute)) && (e.audioSSRC = n.id);
         break;
       case "video":
         [S.Codecs.H264, S.Codecs.VP8, S.Codecs.VP9].forEach((t, n) => {
-          let s = L(r, a, i, t, n);
-          null != s && e.codecs.push(s)
-        }), "sendrecv" === o && (null != (n = null == s ? void 0 : s.find(e => "cname" === e.attribute)) && (e.videoSSRC = n.id), null != (n = null == s ? void 0 : s.findLast(e => "cname" === e.attribute)) && (n.id === e.videoSSRC && A.warn("Unable to find a unique rtx SSRC!"), e.rtxSSRC = n.id))
+          let a = L(r, s, i, t, n);
+          null != a && e.codecs.push(a)
+        }), "sendrecv" === o && (null != (n = null == a ? void 0 : a.find(e => "cname" === e.attribute)) && (e.videoSSRC = n.id), null != (n = null == a ? void 0 : a.findLast(e => "cname" === e.attribute)) && (n.id === e.videoSSRC && A.warn("Unable to find a unique rtx SSRC!"), e.rtxSSRC = n.id))
     }
     return e
   }, {

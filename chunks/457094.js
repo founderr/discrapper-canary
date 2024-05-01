@@ -23,8 +23,8 @@ var n = a("735250"),
   A = a("912471"),
   N = a("100527"),
   v = a("74438"),
-  L = a("753450"),
-  R = a("675869"),
+  R = a("753450"),
+  L = a("675869"),
   O = a("77987"),
   M = a("679891"),
   P = a("491575"),
@@ -77,8 +77,8 @@ var n = a("735250"),
   eA = a("262702"),
   eN = a("639033"),
   ev = a("479313"),
-  eL = a("911560"),
-  eR = a("703016"),
+  eR = a("911560"),
+  eL = a("703016"),
   eO = a("171368"),
   eM = a("429974"),
   eP = a("332754"),
@@ -180,13 +180,13 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
       applicationId: a,
       section: s
     } = t.params, l = (0, Z.default)(e0.ApplicationDirectoryProfileSections, s);
-    return (0, n.jsx)(L.default, {
+    return (0, n.jsx)(R.default, {
       applicationId: a,
       initialSection: l
     })
   }),
   e8 = (0, O.makeAuthenticated)(function() {
-    return (0, n.jsx)(R.default, {})
+    return (0, n.jsx)(L.default, {})
   }),
   te = [e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(e1.StaticChannelRoutes).map(e => e$.Routes.CHANNEL(":guildId", e))];
 
@@ -454,7 +454,7 @@ function tl(e) {
 }
 class ti extends s.PureComponent {
   componentDidMount() {
-    x.default.initialize(), eX.default.setZoomFactor(C.default.zoom), eS.default.init(), M.default.initialize(), ed.default.initialize(), B.default.initialize(), eb.default.initialize(), F.default.initialize(), ef.default.initialize(), ee.default.initialize(), m.default.init(), V.default.init(), H.default.init(), el.default.initialize(), T.default.initialize(), w.default.initialize(), eE.default.initialize(), g.default.initialize(), eD.default.initialize(), eu.default.initialize(), I.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), p.default.initialize(), eR.default.init(), eK.default.init(), eW.default.init(), eP.default.init(), eA.default.initialize(), eN.default.initialize(), eM.default.initialize(), ex.default.init(), G.default.initialize(), S.default.initialize(), ep.default.initialize(), eT.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), y.default.initialize(), $.default.init({
+    x.default.initialize(), eX.default.setZoomFactor(C.default.zoom), eS.default.init(), M.default.initialize(), ed.default.initialize(), B.default.initialize(), eb.default.initialize(), F.default.initialize(), ef.default.initialize(), ee.default.initialize(), m.default.init(), V.default.init(), H.default.init(), el.default.initialize(), T.default.initialize(), w.default.initialize(), eE.default.initialize(), g.default.initialize(), eD.default.initialize(), eu.default.initialize(), I.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), p.default.initialize(), eL.default.init(), eK.default.init(), eW.default.init(), eP.default.init(), eA.default.initialize(), eN.default.initialize(), eM.default.initialize(), ex.default.init(), G.default.initialize(), S.default.initialize(), ep.default.initialize(), eT.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), y.default.initialize(), $.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -561,7 +561,7 @@ class ti extends s.PureComponent {
     } = tt(a), i = (0, eC.isValidGuildId)(n) && n !== e$.ME && n !== e$.FAVORITES;
     if (null != s && (0, eC.isValidChannelId)(s) && !(0, e1.isStaticChannelRoute)(s) && i) {
       let a = eG.default.getChannel(s);
-      if (null == a) eL.default.loadThread(s).then(() => tl({
+      if (null == a) eR.default.loadThread(s).then(() => tl({
         channelId: s,
         guildId: n,
         pathname: t
@@ -573,7 +573,7 @@ class ti extends s.PureComponent {
       if (null != l) {
         if (!((0, eC.isValidChannelId)(l) && !(0, e1.isStaticChannelRoute)(s))) return null;
         let a = eG.default.getChannel(l);
-        if (null == a) eL.default.loadThread(l).then(() => tl({
+        if (null == a) eR.default.loadThread(l).then(() => tl({
           channelId: l,
           guildId: n,
           pathname: t

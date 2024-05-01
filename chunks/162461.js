@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   isEligibleForContentInventoryV1: function() {
-    return a
+    return s
   },
   isEligibleForListenedMediaInventory: function() {
     return d
@@ -29,7 +29,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  a = (0, i.createExperiment)({
     kind: "user",
     id: "2024-03_content_inventory_ranker_client_dummy",
     label: "Tracks exposure for which ranker bucket the user is in. This is here to test an exposure bug",
@@ -41,7 +41,7 @@ let r = (0, i.createExperiment)({
     }]
   });
 
-function a(e) {
+function s(e) {
   l.getCurrentConfig({
     location: e
   }, {
@@ -58,7 +58,7 @@ function a(e) {
   }, {
     autoTrackExposure: !0
   });
-  return t && s.getCurrentConfig({
+  return t && a.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !0

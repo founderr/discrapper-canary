@@ -8,7 +8,7 @@ function r(e, t) {
   e.observe(t)
 }
 
-function s(e, t) {
+function a(e, t) {
   e.unobserve(t)
 }
 n.r(t), n.d(t, {
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return i
   },
   unwatch: function() {
-    return s
+    return a
   },
   watch: function() {
     return r

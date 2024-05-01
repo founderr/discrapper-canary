@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getEmojiCaptionsForUser: function() {
-    return a
+    return s
   },
   initiateEmojiInteraction: function() {
     return o
@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("544891"),
   r = n("570140"),
-  s = n("981631");
-async function a() {
+  a = n("981631");
+async function s() {
   r.default.dispatch({
     type: "EMOJI_CAPTIONS_FETCH"
   });
@@ -18,7 +18,7 @@ async function a() {
     let {
       body: e
     } = await i.HTTP.get({
-      url: s.Endpoints.EMOJI_CAPTIONS_GET
+      url: a.Endpoints.EMOJI_CAPTIONS_GET
     }), t = {};
     for (let n of e.items) t[n.emoji_id] = n.emoji_captions;
     r.default.dispatch({

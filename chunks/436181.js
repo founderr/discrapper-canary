@@ -1,10 +1,10 @@
 "use strict";
 n.r(t);
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140");
 let u = null,
   d = !1;
-class _ extends(a = o.default.Store) {
+class _ extends(s = o.default.Store) {
   getLastProgress() {
     return u
   }
@@ -12,12 +12,12 @@ class _ extends(a = o.default.Store) {
     return d
   }
 }
-s = "DispatchApplicationLaunchSetupStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
-  value: s,
+a = "DispatchApplicationLaunchSetupStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new _(l.default, {
+}) : i[r] = a, t.default = new _(l.default, {
   DISPATCH_APPLICATION_LAUNCH_SETUP_START: function() {
     d = !0
   },

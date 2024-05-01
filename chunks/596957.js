@@ -23,8 +23,8 @@ var n = a("735250"),
   A = a("437314"),
   N = a("696577"),
   v = a("163417"),
-  L = a("492347"),
-  R = a("42575"),
+  R = a("492347"),
+  L = a("42575"),
   O = a("617015"),
   M = a("981631"),
   P = a("689938"),
@@ -77,7 +77,7 @@ t.default = function(e) {
         size: p.default.Sizes.MEDIUM
       }), t === M.FriendsSections.ONLINE && "" === G[t] && (0, n.jsx)(_.default, {}), (0, n.jsxs)("div", {
         className: x.sectionTitle,
-        children: [(0, n.jsx)(L.default, {
+        children: [(0, n.jsx)(R.default, {
           id: a,
           title: function(e, t) {
             switch (e) {
@@ -135,7 +135,7 @@ t.default = function(e) {
                 isFocused: b
               });
             case M.FriendsSections.SUGGESTIONS:
-              return (0, n.jsx)(R.default, {
+              return (0, n.jsx)(L.default, {
                 ...e,
                 isFocused: b
               });

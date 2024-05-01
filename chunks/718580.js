@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("718017"),
-  a = n("990547"),
+  a = n("718017"),
+  s = n("990547"),
   o = n("873546"),
   l = n("186325"),
   u = n("393238"),
@@ -30,8 +30,8 @@ function T(e, t) {
     if (0 === n) return "auto";
     let i = "forwards" === t.current,
       r = n > 0,
-      s = !1;
-    return r && i && "left" === e && (s = !0), r && !i && "right" === e && (s = !0), !r && i && "right" === e && (s = !0), !r && !i && "left" === e && (s = !0), s ? "".concat(100 * Math.abs(n), "%") : "auto"
+      a = !1;
+    return r && i && "left" === e && (a = !0), r && !i && "right" === e && (a = !0), !r && i && "right" === e && (a = !0), !r && !i && "left" === e && (a = !0), a ? "".concat(100 * Math.abs(n), "%") : "auto"
   }
 }
 
@@ -68,7 +68,7 @@ function S(e) {
       location_stack: N
     };
   g({
-    type: a.ImpressionTypes.MODAL,
+    type: s.ImpressionTypes.MODAL,
     name: L,
     properties: v,
     _stackContext: {
@@ -85,12 +85,12 @@ function S(e) {
     ...C.enabled ? {
       clamp: !0
     } : null
-  }, U = (0, s.useSpring)({
+  }, U = (0, a.useSpring)({
     immediate: null == O,
     width: null !== (t = A.width) && void 0 !== t ? t : M,
     height: y,
     config: P
-  }), b = (0, s.useTransition)(p, {
+  }), b = (0, a.useTransition)(p, {
     immediate: null == O,
     value: 0,
     from: {
@@ -120,7 +120,7 @@ function S(e) {
   }, F = o.isMobile ? {} : {
     overflow: null !== (n = A.overflow) && void 0 !== n ? n : "hidden"
   };
-  return (0, i.jsx)(s.animated.div, {
+  return (0, i.jsx)(a.animated.div, {
     style: {
       position: "relative",
       width: k,
@@ -131,7 +131,7 @@ function S(e) {
       let {
         key: r
       } = n;
-      return (0, i.jsx)(s.animated.div, {
+      return (0, i.jsx)(a.animated.div, {
         ref: t === p ? D : null,
         style: {
           position: "absolute",

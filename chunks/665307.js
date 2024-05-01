@@ -26,8 +26,8 @@ var n, s = a("735250"),
   A = a("151011"),
   N = a("880008"),
   v = a("466111"),
-  L = a("931003"),
-  R = a("626135"),
+  R = a("931003"),
+  L = a("626135"),
   O = a("780570"),
   M = a("624138"),
   P = a("645818"),
@@ -144,7 +144,7 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
           }), (0, s.jsx)(w, {
             flag: x.LibraryApplicationFlags.OVERLAY_DISABLED,
             item: e,
-            icon: L.default,
+            icon: R.default,
             tooltip: y.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
           }), (0, s.jsx)(P.default, {
             className: r()(D.settingIcon, {
@@ -272,7 +272,7 @@ class F extends(n = l.PureComponent) {
       }
       e.num_applications_total++
     }
-    R.default.track(x.AnalyticEvents.LIBRARY_VIEWED, {
+    L.default.track(x.AnalyticEvents.LIBRARY_VIEWED, {
       ...e,
       load_id: t.loadId
     })
@@ -396,7 +396,7 @@ class F extends(n = l.PureComponent) {
 }
 
 function H(e) {
-  let t = l.useContext(R.AnalyticsContext),
+  let t = l.useContext(L.AnalyticsContext),
     a = (0, o.useLocation)(),
     {
       applicationViewItems: n,

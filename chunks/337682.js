@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   markActivityUsed: function() {
-    return a
+    return s
   },
   setActivityUrlOverride: function() {
-    return s
+    return a
   },
   toggleUseActivityUrlOverride: function() {
     return r
@@ -21,14 +21,14 @@ function r() {
   })
 }
 
-function s(e) {
+function a(e) {
   i.default.dispatch({
     type: "DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE",
     activityUrlOverride: e
   })
 }
 
-function a(e) {
+function s(e) {
   i.default.dispatch({
     type: "DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED",
     applicationId: e,

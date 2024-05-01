@@ -18,8 +18,8 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("570140"),
-  s = n("594190"),
-  a = n("569545"),
+  a = n("594190"),
+  s = n("569545"),
   o = n("598077"),
   l = n("314897"),
   u = n("592125"),
@@ -47,7 +47,7 @@ function T(e, t) {
   let {
     ownerId: i,
     channelId: o
-  } = (0, a.decodeStreamKey)(e);
+  } = (0, s.decodeStreamKey)(e);
   if (null == i || null == o) return;
   let c = l.default.getId();
   if (i !== c) return;
@@ -58,7 +58,7 @@ function T(e, t) {
   if (null == T || i !== T.ownerId || !f) return;
   let S = function(e) {
     var t;
-    let n = I(s.default.getGameForPID(e)),
+    let n = I(a.default.getGameForPID(e)),
       i = d.default.getGameByName(n);
     return null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : "0"
   }(t);

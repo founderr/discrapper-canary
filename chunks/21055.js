@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildDao: function() {
-    return a
+    return s
   }
 });
 var i = n("503461"),
   r = n("190313");
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,12 +15,12 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class s {
   get prefix() {
     return this.table.prefix
   }
   withoutLogging() {
-    return new a(this.originalPrefix, this.table.tableId, this.table.database, !1)
+    return new s(this.originalPrefix, this.table.tableId, this.table.database, !1)
   }
   get(e, t) {
     return this.table.get([e, t])
@@ -51,12 +51,12 @@ class a {
     return this.putWithGeneration(e, t, n, null, r)
   }
   putWithGeneration(e, t, n, r) {
-    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.ConflictOptions.Replace;
+    let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.ConflictOptions.Replace;
     return this.table.put({
       key: [e, t],
       data: n,
       generation: r
-    }, s)
+    }, a)
   }
   delete(e, t) {
     switch (arguments.length) {
@@ -84,7 +84,7 @@ class a {
     return this.table.getMapEntriesSyncUnsafe()
   }
   constructor(e, t, n, i = !0) {
-    s(this, "originalPrefix", void 0), s(this, "table", void 0), this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
+    a(this, "originalPrefix", void 0), a(this, "table", void 0), this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
   }
 }
 class o {
@@ -96,12 +96,12 @@ class o {
     this.putWithGeneration(e, t, n, null, r)
   }
   putWithGeneration(e, t, n, r) {
-    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.ConflictOptions.Replace;
+    let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.ConflictOptions.Replace;
     return this.state.put({
       key: [e, t],
       data: n,
       generation: r
-    }, s)
+    }, a)
   }
   delete(e, t) {
     switch (arguments.length) {
@@ -119,6 +119,6 @@ class o {
     return this.state.deleteGeneration([], e, t)
   }
   constructor(e) {
-    s(this, "state", void 0), this.state = e
+    a(this, "state", void 0), this.state = e
   }
 }

@@ -23,8 +23,8 @@ var n = a("735250"),
   A = a("981631"),
   N = a("308083"),
   v = a("689938"),
-  L = a("258036"),
-  R = a("345480"),
+  R = a("258036"),
+  L = a("345480"),
   O = a("236613");
 let M = {
   mass: 1,
@@ -37,17 +37,17 @@ function P(e) {
     children: t
   } = e;
   return (0, n.jsxs)(l.animated.div, {
-    className: L.clanEnvelope,
+    className: R.clanEnvelope,
     children: [(0, n.jsx)("div", {
-      className: L.clanEnvelopeTop,
+      className: R.clanEnvelopeTop,
       children: (0, n.jsx)("img", {
         src: O,
         alt: ""
       })
     }), t, (0, n.jsx)("div", {
-      className: L.clanEnvelopeBottom,
+      className: R.clanEnvelopeBottom,
       children: (0, n.jsx)("img", {
-        src: R,
+        src: L,
         alt: ""
       })
     })]
@@ -60,13 +60,13 @@ function x(e) {
     icon: a
   } = e;
   return (0, n.jsxs)("div", {
-    className: L.upsellDetail,
+    className: R.upsellDetail,
     children: [(0, n.jsx)(a, {
       height: 24,
       width: 24,
-      className: L.upsellIcon
+      className: R.upsellIcon
     }), (0, n.jsx)(d.Text, {
-      className: L.upsellDetailText,
+      className: R.upsellDetailText,
       variant: "text-md/medium",
       children: t
     })]
@@ -94,11 +94,11 @@ function y(e) {
   })), [l]), _ = l.length > 1;
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(d.Heading, {
-      className: L.upsellTitle,
+      className: R.upsellTitle,
       variant: "heading-xxl/semibold",
       children: [v.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_GUILD_INVITE, (0, n.jsx)("br", {}), E]
     }), (0, n.jsxs)("div", {
-      className: L.upsellDetails,
+      className: R.upsellDetails,
       children: [(0, n.jsx)(x, {
         icon: r.CompassIcon,
         text: v.default.Messages.CLAN_DISCOVERY_UPSELL_VIBES_OR_SKILL
@@ -110,14 +110,14 @@ function y(e) {
         text: v.default.Messages.CLAN_DISCOVERY_UPSELL_MAX_SIZE
       })]
     }), (0, n.jsxs)("div", {
-      className: L.upsellButton,
+      className: R.upsellButton,
       children: [_ && (0, n.jsx)(d.SearchableSelect, {
-        className: L.upsellSelect,
+        className: R.upsellSelect,
         value: t,
         options: h,
         onChange: a
       }), (0, n.jsx)(p.default, {
-        className: _ ? L.buttonWithSelect : void 0,
+        className: _ ? R.buttonWithSelect : void 0,
         onClick: c,
         children: f
       })]
@@ -154,7 +154,7 @@ t.default = s.memo(function(e) {
     }, {
       layerKey: N.CLAN_SETUP_MODAL_LAYER_KEY
     })
-  }, [i, S]), R = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = (0, g.useFakeDiscoveryClanForGuild)({
+  }, [i, S]), L = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = (0, g.useFakeDiscoveryClanForGuild)({
     guild: o,
     selectedGame: a
   }), x = (0, l.useSpring)({
@@ -169,7 +169,7 @@ t.default = s.memo(function(e) {
       duration: 0
     }
   }), D = (0, l.useSpring)({
-    from: R ? {
+    from: L ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     } : {
       transform: "translate(324px, -32px) rotate(8deg) scale(1.25)"
@@ -180,7 +180,7 @@ t.default = s.memo(function(e) {
     config: M,
     delay: 400
   }), b = (0, l.useSpring)({
-    from: R ? {
+    from: L ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     } : {
       transform: "translate(176px, -16px) rotate(4deg) scale(1.1111)"
@@ -191,7 +191,7 @@ t.default = s.memo(function(e) {
     config: M,
     delay: 400
   }), U = (0, l.useSpring)({
-    from: R ? {
+    from: L ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     } : {
       transform: "translate(-176px, -16px) rotate(-4deg) scale(1.1111)"
@@ -202,7 +202,7 @@ t.default = s.memo(function(e) {
     config: M,
     delay: 400
   }), j = (0, l.useSpring)({
-    from: R ? {
+    from: L ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     } : {
       transform: "translate(-324px, -32px) rotate(-8deg) scale(1.25)"
@@ -213,7 +213,7 @@ t.default = s.memo(function(e) {
     config: M,
     delay: 400
   }), G = (0, l.useSpring)({
-    from: R ? {
+    from: L ? {
       transform: "scale(1)",
       opacity: 0
     } : {
@@ -227,7 +227,7 @@ t.default = s.memo(function(e) {
     config: M,
     delay: 200
   }), w = (0, l.useSpring)({
-    from: R ? {
+    from: L ? {
       transform: "translateY(0px)"
     } : {
       transform: "translateY(240px)"
@@ -240,65 +240,65 @@ t.default = s.memo(function(e) {
   }), k = s.useMemo(() => null == d ? v.default.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : v.default.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [d]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
-      className: L.cardsContainer,
+      className: R.cardsContainer,
       children: [(0, n.jsx)(l.animated.div, {
-        className: L.clanCardOuterContainer,
+        className: R.clanCardOuterContainer,
         style: {
           ...D,
           ...x
         },
         children: (0, n.jsx)(m.ClanDiscoveryCardView, {
           clan: T.FAKE_DISCOVERY_UPSELL_CLANS["0"],
-          className: L.clanCardOuterLeft
+          className: R.clanCardOuterLeft
         })
       }), (0, n.jsx)(l.animated.div, {
-        className: L.clanCardInnerContainer,
+        className: R.clanCardInnerContainer,
         style: {
           ...b,
           ...x
         },
         children: (0, n.jsx)(m.ClanDiscoveryCardView, {
           clan: T.FAKE_DISCOVERY_UPSELL_CLANS["1"],
-          className: L.clanCardInnerLeft
+          className: R.clanCardInnerLeft
         })
       }), null != O && (0, n.jsx)(l.animated.div, {
-        className: L.clanEnvelope,
+        className: R.clanEnvelope,
         style: G,
         children: (0, n.jsx)(P, {
           children: (0, n.jsx)("div", {
-            className: L.clanCardCenterContainer,
+            className: R.clanCardCenterContainer,
             children: (0, n.jsx)(l.animated.div, {
               style: w,
               children: (0, n.jsx)(m.ClanDiscoveryCardView, {
                 clan: O,
-                className: L.clanCardCenter
+                className: R.clanCardCenter
               })
             })
           })
         })
       }), (0, n.jsx)(l.animated.div, {
-        className: L.clanCardInnerContainer,
+        className: R.clanCardInnerContainer,
         style: {
           ...U,
           ...x
         },
         children: (0, n.jsx)(m.ClanDiscoveryCardView, {
           clan: T.FAKE_DISCOVERY_UPSELL_CLANS["2"],
-          className: L.clanCardInnerRight
+          className: R.clanCardInnerRight
         })
       }), (0, n.jsx)(l.animated.div, {
-        className: L.clanCardOuterContainer,
+        className: R.clanCardOuterContainer,
         style: {
           ...j,
           ...x
         },
         children: (0, n.jsx)(m.ClanDiscoveryCardView, {
           clan: T.FAKE_DISCOVERY_UPSELL_CLANS["3"],
-          className: L.clanCardOuterRight
+          className: R.clanCardOuterRight
         })
       })]
     }), (0, n.jsx)("div", {
-      className: L.upsellCtaContainer,
+      className: R.upsellCtaContainer,
       children: (0, n.jsx)(y, {
         selectedGuildId: i,
         setSelectedGuildId: r,

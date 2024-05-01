@@ -23,8 +23,8 @@ var n = a("735250"),
   A = a("792258"),
   N = a("657825"),
   v = a("198952"),
-  L = a("329242"),
-  R = a("895328"),
+  R = a("329242"),
+  L = a("895328"),
   O = a("292352"),
   M = a("981631"),
   P = a("689938"),
@@ -69,7 +69,7 @@ function D(e) {
   }, [t, d]);
   i()(E, "No text for action type");
   let v = E.sectionHeader(u),
-    L = s.useCallback(e => {
+    R = s.useCallback(e => {
       let {
         row: t
       } = e, a = r[t];
@@ -81,7 +81,7 @@ function D(e) {
         guildId: a.entity_id
       }, a.event_id) : void 0
     }, [r, E.timestampFormatter]),
-    R = s.useCallback(() => (0, n.jsxs)(n.Fragment, {
+    L = s.useCallback(() => (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(o.Text, {
         className: x.sectionHeader,
         variant: "eyebrow",
@@ -98,12 +98,12 @@ function D(e) {
   let M = r.slice(0, C);
   return (0, n.jsxs)("div", {
     className: x.actionSection,
-    children: [R(), (0, n.jsx)("div", {
+    children: [L(), (0, n.jsx)("div", {
       className: x.actions,
       style: {
         maxHeight: 65 * M.length
       },
-      children: M.map((e, t) => L({
+      children: M.map((e, t) => R({
         row: t
       }))
     }), M.length !== u ? (0, n.jsx)(o.Clickable, {
@@ -156,7 +156,7 @@ let b = () => {
         avatarSize: s
       }), (0, n.jsxs)("div", {
         className: x.headerText,
-        children: [(0, n.jsx)(L.default, {
+        children: [(0, n.jsx)(R.default, {
           user: l
         }), void 0 !== a ? (0, n.jsx)(o.Text, {
           variant: "text-sm/medium",
@@ -240,7 +240,7 @@ t.default = e => {
             return (0, n.jsx)(D, {
               displayType: t
             }, "".concat(t, "-list"))
-          }) : (0, n.jsx)(R.default, {
+          }) : (0, n.jsx)(L.default, {
             className: x.emptyActivity,
             text: null != i ? i : ""
           })

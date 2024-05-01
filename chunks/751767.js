@@ -4,14 +4,14 @@ n.r(t), n.d(t, {
     return o
   },
   getBraintreeSDK: function() {
-    return a
+    return s
   }
 });
 var i = n("663993"),
   r = n("618541"),
-  s = n("981631");
+  a = n("981631");
 
-function a() {
+function s() {
   return (0, i.importWithRetry)({
     createPromise: () => n.e("661").then(n.t.bind(n, "491668", 23)),
     webpackId: "491668"
@@ -25,13 +25,13 @@ function a() {
 
 function o() {
   let e = r.default.getClient();
-  return null == e ? a().then(e => e.client.create({
-    authorization: s.PaymentSettings.BRAINTREE.KEY
+  return null == e ? s().then(e => e.client.create({
+    authorization: a.PaymentSettings.BRAINTREE.KEY
   }).then(e => l(e)).catch(() => null)) : l(e)
 }
 
 function l(e) {
-  return a().then(t => t.dataCollector.create({
+  return s().then(t => t.dataCollector.create({
     client: e
   }).then(e => e.deviceData).catch(() => null))
 }

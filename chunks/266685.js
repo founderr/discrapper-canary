@@ -23,8 +23,8 @@ var n = a("735250"),
   A = a("644646"),
   N = a("78826"),
   v = a("670638"),
-  L = a("667105"),
-  R = a("341907"),
+  R = a("667105"),
+  L = a("341907"),
   O = a("46140"),
   M = a("689938"),
   P = a("861731");
@@ -39,16 +39,16 @@ let x = s.forwardRef(function(e, t) {
     onCtxMenuSelect: j,
     quest: G,
     useReducedMotion: w
-  } = e, k = (0, r.useStateFromStores)([m.default], () => m.default.isEnrolling(G.id), [G]), B = (0, C.useQuestFormattedDate)(G.config.expiresAt), F = (0, C.useQuestFormattedDate)(G.config.rewardCodeExpiresAt), H = s.useMemo(() => (0, p.isAssetAnimated)(G.config.assets.questBarHero), [G]), V = (0, L.useHasLaunchedGame)(G.config.applicationId), Y = s.useCallback(() => {
+  } = e, k = (0, r.useStateFromStores)([m.default], () => m.default.isEnrolling(G.id), [G]), B = (0, C.useQuestFormattedDate)(G.config.expiresAt), F = (0, C.useQuestFormattedDate)(G.config.rewardCodeExpiresAt), H = s.useMemo(() => (0, p.isAssetAnimated)(G.config.assets.questBarHero), [G]), V = (0, R.useHasLaunchedGame)(G.config.applicationId), Y = s.useCallback(() => {
     (0, _.enrollInQuest)(G.id, {
       questContent: S.QuestContent.QUEST_BAR,
       questContentCTA: h.QuestContentCTA.ACCEPT_QUEST
     })
-  }, [G]), W = (0, L.useHandleClaimQuestsReward)({
+  }, [G]), W = (0, R.useHandleClaimQuestsReward)({
     quest: G,
     location: S.QuestContent.QUEST_BAR
   }), K = s.useCallback(() => {
-    (0, R.openGameLink)(G, {
+    (0, L.openGameLink)(G, {
       content: S.QuestContent.QUEST_BAR,
       ctaContent: h.QuestContentCTA.OPEN_GAME_LINK
     })

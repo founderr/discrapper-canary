@@ -2,13 +2,13 @@
 let i;
 n.r(t), n.d(t, {
   astParserFor: function() {
-    return a
+    return s
   },
   reactParserFor: function() {
-    return s
+    return a
   }
 });
 var r = n("840498");
 n.es(r, t);
-let s = (i = n("842091").default).reactParserFor,
-  a = i.astParserFor
+let a = (i = n("842091").default).reactParserFor,
+  s = i.astParserFor

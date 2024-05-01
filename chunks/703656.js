@@ -1,5 +1,5 @@
 "use strict";
-let i, r, s;
+let i, r, a;
 n.r(t), n.d(t, {
   back: function() {
     return L
@@ -38,14 +38,14 @@ n.r(t), n.d(t, {
     return h
   }
 }), n("653041"), n("757143");
-var a = n("539528"),
+var s = n("539528"),
   o = n("710845"),
   l = n("585483"),
   u = n("143816"),
   d = n("981631");
 let _ = new o.default("Routing/Utils"),
   c = [d.RelativeMarketingURLs.DEVELOPER_PORTAL];
-i = __OVERLAY__ ? (0, a.createMemoryHistory)() : (0, a.createBrowserHistory)();
+i = __OVERLAY__ ? (0, s.createMemoryHistory)() : (0, s.createBrowserHistory)();
 let E = !1,
   I = i.listen((e, t) => {
     "REPLACE" !== t && (E = !0, I())
@@ -59,13 +59,13 @@ function f(e, t) {
   return !!("string" == typeof e && c.some(t => e.startsWith(t))) && (_.log("".concat(t, " - route to external path ").concat(e)), window.dispatchEvent(new Event("beforeunload")), window.location[t](e), !0)
 }
 
-function S(e, t, n, a) {
+function S(e, t, n, s) {
   !f(e, "assign") && (_.log("transitionTo - Transitioning to ".concat(e)), null != n && (null == t ? t = {
     source: n
   } : t.source = n), null == t ? i.push(e) : i.push({
     pathname: e,
     ...t
-  }), r = n, s = a)
+  }), r = n, a = s)
 }
 
 function h(e, t, n, i, r) {
@@ -93,7 +93,7 @@ function p() {
 }
 
 function O() {
-  return s
+  return a
 }
 
 function R(e) {

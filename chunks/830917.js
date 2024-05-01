@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   getMainWindowId: function() {
-    return a
+    return s
   },
   getWindowId: function() {
     return r
   },
   setupWindowId: function() {
-    return s
+    return a
   }
 });
 var i = n("392711");
@@ -16,11 +16,11 @@ function r(e) {
   return e.__DISCORD_WINDOW_ID
 }
 
-function s(e) {
+function a(e) {
   let t = (0, i.uniqueId)("window-");
   return e.__DISCORD_WINDOW_ID = t, t
 }
 
-function a() {
+function s() {
   return r(window)
 }

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  s = n("490504"),
-  a = n("946273"),
+  a = n("490504"),
+  s = n("946273"),
   o = n("441110"),
   l = n("689938"),
   u = n("377865");
@@ -18,7 +18,7 @@ function d(e) {
     guild: t,
     message: n
   } = e;
-  return (0, a.useNewMemberBadge)(t.id, n.author.id) ? (0, i.jsx)(r.Popout, {
+  return (0, s.useNewMemberBadge)(t.id, n.author.id) ? (0, i.jsx)(r.Popout, {
     animation: r.Popout.Animation.TRANSLATE,
     align: "center",
     autoInvert: !0,
@@ -46,7 +46,7 @@ function d(e) {
           children: e => (0, i.jsx)("div", {
             className: u.newMemberBadge,
             ...e,
-            children: (0, i.jsx)(s.default, {
+            children: (0, i.jsx)(a.default, {
               width: 20,
               height: 20
             })

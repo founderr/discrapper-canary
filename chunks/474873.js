@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
 var i, r = n("442837"),
-  s = n("570140"),
-  a = n("657254"),
+  a = n("570140"),
+  s = n("657254"),
   o = n("871465");
 
 function l(e, t, n) {
@@ -18,7 +18,7 @@ let u = {
 };
 class d extends(i = r.default.PersistedStore) {
   initialize(e) {
-    a.default.subscribe({
+    s.default.subscribe({
       location: "1"
     }, () => this.emitChange()), null != e && (u = e)
   }
@@ -29,7 +29,7 @@ class d extends(i = r.default.PersistedStore) {
     var e;
     let {
       allowAprilFoolsSoundpack: t
-    } = a.default.getCurrentConfig({
+    } = s.default.getCurrentConfig({
       location: "37bac2_1"
     }, {
       autoTrackExposure: !1
@@ -37,7 +37,7 @@ class d extends(i = r.default.PersistedStore) {
     return t && (e = u.soundpack, Object.values(o.Soundpacks).includes(e)) ? u.soundpack : o.Soundpacks.CLASSIC
   }
 }
-l(d, "displayName", "SoundpackStore"), l(d, "persistKey", "SoundpackStore"), t.default = new d(s.default, {
+l(d, "displayName", "SoundpackStore"), l(d, "persistKey", "SoundpackStore"), t.default = new d(a.default, {
   SET_SOUNDPACK: function(e) {
     let {
       soundpack: t

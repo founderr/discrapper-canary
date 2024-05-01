@@ -27,8 +27,8 @@ var n = a("735250"),
   A = a("358924"),
   N = a("292140"),
   v = a("525296"),
-  L = a("981631"),
-  R = a("674563"),
+  R = a("981631"),
+  L = a("674563"),
   O = a("689938"),
   M = a("884724");
 let P = 15 * p.default.Millis.MINUTE,
@@ -53,9 +53,9 @@ let P = 15 * p.default.Millis.MINUTE,
     } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, I = s.useCallback(() => {
       let e = E.filter(e => {
         var t, a;
-        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (a = e.game) || void 0 === a ? void 0 : a.type) === R.ApplicationTypes.GAME
+        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (a = e.game) || void 0 === a ? void 0 : a.type) === L.ApplicationTypes.GAME
       }).map(e => e.game.name);
-      S.default.track(L.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
+      S.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
         num_users: _,
         num_streams: C,
         num_activities: m,

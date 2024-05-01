@@ -23,21 +23,21 @@ var n = a("735250"),
   A = a("860151"),
   N = a("981631"),
   v = a("689938"),
-  L = a("96751");
+  R = a("96751");
 
-function R(e) {
+function L(e) {
   var t;
   let {
     quest: a
   } = e, s = (0, _.useQuestFormattedDate)(a.config.expiresAt), l = (0, _.useQuestFormattedDate)(a.config.rewardCodeExpiresAt), i = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), d = (0, o.isThemeDark)(i) ? N.ThemeTypes.DARK : N.ThemeTypes.LIGHT, f = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, n.jsxs)("div", {
-    className: L.heading,
+    className: R.heading,
     children: [(0, n.jsx)("img", {
-      className: L.headingGameTile,
+      className: R.headingGameTile,
       alt: "",
       src: (0, S.getGameTileAssetUrl)(a, d)
     }), (0, n.jsxs)("div", {
-      className: L.headingCopy,
+      className: R.headingCopy,
       children: [(0, n.jsx)(u.Heading, {
         variant: "heading-md/semibold",
         color: "header-primary",
@@ -92,8 +92,8 @@ t.default = function(e) {
         ref: t => {
           e.current = t
         },
-        className: i()(L.wrapper, {
-          [L.wrapperQuestAccepted]: w
+        className: i()(R.wrapper, {
+          [R.wrapperQuestAccepted]: w
         }),
         onClick: y,
         onKeyPress: y,
@@ -102,8 +102,8 @@ t.default = function(e) {
         onBlur: x,
         onMouseLeave: x,
         children: [(0, n.jsxs)("div", {
-          className: L.utils,
-          children: [w ? (0, n.jsx)(R, {
+          className: R.utils,
+          children: [w ? (0, n.jsx)(L, {
             quest: o
           }) : (0, n.jsx)(I.default, {
             textOpacity: .5
@@ -114,18 +114,18 @@ t.default = function(e) {
             showShareLink: !0,
             children: e => (0, n.jsx)(u.Clickable, {
               ...e,
-              className: L.__invalid_submenuWrapper,
+              className: R.__invalid_submenuWrapper,
               "aria-label": v.default.Messages.ACTIONS,
               children: (0, n.jsx)(f.default, {
-                className: L.submenuIcon
+                className: R.submenuIcon
               })
             })
           })]
         }), !w && (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(R, {
+          children: [(0, n.jsx)(L, {
             quest: o
           }), (0, n.jsx)(u.Text, {
-            className: L.instructions,
+            className: R.instructions,
             variant: "text-sm/normal",
             color: "text-normal",
             children: (0, S.getQuestsInstructionsToWinReward)({
@@ -134,21 +134,21 @@ t.default = function(e) {
           })]
         }), w && !k && (0, n.jsx)(A.default, {
           autoplay: O,
-          className: L.rewardTileWithInstructions,
+          className: R.rewardTileWithInstructions,
           quest: o,
           questContent: m.QuestContent.ACTIVITY_PANEL
         }), (0, n.jsxs)("div", {
-          className: L.ctas,
+          className: R.ctas,
           children: [!w && (0, n.jsxs)(n.Fragment, {
             children: [(0, n.jsx)(u.Button, {
-              className: L.cta,
+              className: R.cta,
               color: u.Button.Colors.PRIMARY,
               fullWidth: !0,
               size: u.Button.Sizes.SMALL,
               onClick: U,
               children: v.default.Messages.QUESTS_LEARN_MORE_V2
             }), (0, n.jsx)(u.Button, {
-              className: L.cta,
+              className: R.cta,
               color: u.Button.Colors.BRAND,
               fullWidth: !0,
               onClick: D,
@@ -157,14 +157,14 @@ t.default = function(e) {
               children: v.default.Messages.QUESTS_ACCEPT_QUEST
             })]
           }), w && !k && (0, n.jsx)(u.Button, {
-            className: L.cta,
+            className: R.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: b,
             size: u.Button.Sizes.SMALL,
             children: v.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
           }), k && (0, n.jsx)(u.Button, {
-            className: L.cta,
+            className: R.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: j,

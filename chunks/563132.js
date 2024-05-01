@@ -15,8 +15,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("789020");
 var i = n("735250"),
   r = n("470079"),
-  s = n("452079"),
-  a = n("207561"),
+  a = n("452079"),
+  s = n("207561"),
   o = n("153832"),
   l = n("442837"),
   u = n("317381"),
@@ -80,7 +80,7 @@ function B(e) {
     skuIDs: k,
     paymentSourceId: Q,
     isGift: V
-  }), es = (0, L.default)(), [ea, eo] = r.useState(!1), {
+  }), ea = (0, L.default)(), [es, eo] = r.useState(!1), {
     step: el,
     setStep: eu,
     steps: ed,
@@ -95,7 +95,7 @@ function B(e) {
     purchaseError: ef,
     purchaseErrorBlockRef: eS,
     setPurchaseError: eh
-  } = (0, C.default)(), eA = (0, a.useLazyValue)(() => {
+  } = (0, C.default)(), eA = (0, s.useLazyValue)(() => {
     let e = null != f ? f : (0, o.v4)();
     return A.default.addBreadcrumb({
       message: "Checkout session ID: ".concat(e)
@@ -152,8 +152,8 @@ function B(e) {
       setCurrency: en,
       currencyLoading: ei,
       currencies: er,
-      ...es,
-      hasAcceptedTerms: ea,
+      ...ea,
+      hasAcceptedTerms: es,
       setHasAcceptedTerms: eo,
       step: el,
       setStep: eu,
@@ -205,7 +205,7 @@ function B(e) {
       setAnnualDiscountInvoicePreview: e3,
       annualDiscountInvoicePreview: e2
     },
-    children: (0, i.jsx)(s.Elements, {
+    children: (0, i.jsx)(a.Elements, {
       options: P.StripeElementsOptions,
       stripe: W,
       children: x

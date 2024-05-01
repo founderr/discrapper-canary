@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildEntityDao: function() {
-    return a
+    return s
   }
 }), n("627494"), n("757143");
 var i = n("503461"),
   r = n("190313");
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,12 +15,12 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class s {
   get prefix() {
     return this.table.prefix
   }
   withoutLogging() {
-    return new a(this.originalPrefix, this.table.tableId, this.table.database, !1)
+    return new s(this.originalPrefix, this.table.tableId, this.table.database, !1)
   }
   get(e, t) {
     return this.table.get([e, t])
@@ -83,7 +83,7 @@ class a {
     }
   }
   constructor(e, t, n, i = !0) {
-    s(this, "originalPrefix", void 0), s(this, "table", void 0), this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
+    a(this, "originalPrefix", void 0), a(this, "table", void 0), this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
   }
 }
 class o {
@@ -96,11 +96,11 @@ class o {
   }
   putWithGeneration(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
-    return this.transaction.put(a.cell(e, t, n), r)
+    return this.transaction.put(s.cell(e, t, n), r)
   }
   putAll(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.ConflictOptions.Replace;
-    return this.transaction.putAll(t.map(t => a.cell(e, t, null)), n)
+    return this.transaction.putAll(t.map(t => s.cell(e, t, null)), n)
   }
   replaceAll(e, t) {
     this.delete(e), this.putAll(e, t)
@@ -119,6 +119,6 @@ class o {
     return this.transaction.deleteGeneration([], e, t)
   }
   constructor(e) {
-    s(this, "transaction", void 0), this.transaction = e
+    a(this, "transaction", void 0), this.transaction = e
   }
 }

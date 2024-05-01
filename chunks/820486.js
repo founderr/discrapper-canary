@@ -56,7 +56,7 @@ function v(e, t, a) {
     type: f.ConnectedDeviceType.INPUT_AND_OUTPUT
   } : e
 }
-class L extends(n = i.default.DeviceSettingsStore) {
+class R extends(n = i.default.DeviceSettingsStore) {
   initialize(e) {
     this.waitFor(c.default, u.default), C = null != e ? e : _
   }
@@ -82,7 +82,7 @@ class L extends(n = i.default.DeviceSettingsStore) {
     return T
   }
 }
-h(L, "displayName", "ConnectedDeviceStore"), h(L, "persistKey", "ConnectedDeviceStore"), t.default = new L(r.default, {
+h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDeviceStore"), t.default = new R(r.default, {
   MEDIA_ENGINE_DEVICES: function(e) {
     let {
       inputDevices: t,

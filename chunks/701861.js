@@ -24,7 +24,7 @@ var n = a("735250"),
   N = a("689938"),
   v = a("412584");
 
-function L(e, t, a) {
+function R(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
     value: a,
     enumerable: !0,
@@ -33,7 +33,7 @@ function L(e, t, a) {
   }) : e[t] = a, e
 }
 
-function R(e) {
+function L(e) {
   let {
     user: t,
     onSelect: a
@@ -141,20 +141,20 @@ class O extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), L(this, "peopleListItemRef", s.createRef()), L(this, "state", {
+    super(...e), R(this, "peopleListItemRef", s.createRef()), R(this, "state", {
       isActiveRow: !1
-    }), L(this, "handleOpenPrivateChannel", e => {
+    }), R(this, "handleOpenPrivateChannel", e => {
       let {
         user: t
       } = this.props;
       e.stopPropagation();
       let a = i().find(E.default.getMutablePrivateChannels(), e => e.type === T.ChannelTypes.DM && e.getRecipientId() === t.id);
       null != a ? (0, f.transitionTo)(T.Routes.CHANNEL(T.ME, a.id)) : u.default.openPrivateChannel(t.id)
-    }), L(this, "handleOpenActionsMenu", e => {
+    }), R(this, "handleOpenActionsMenu", e => {
       let {
         user: t
       } = this.props;
-      (0, d.openContextMenu)(e, e => (0, n.jsx)(R, {
+      (0, d.openContextMenu)(e, e => (0, n.jsx)(L, {
         ...e,
         user: t
       }), {

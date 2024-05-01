@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("693789"),
-  s = n("952265"),
-  a = n("911969"),
+  a = n("952265"),
+  s = n("911969"),
   o = n("555573"),
   l = n("254711"),
   u = n("213459"),
@@ -34,7 +34,7 @@ let C = {
 };
 
 function g() {
-  (0, s.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("99387"), n.e("87549")]).then(n.bind(n, "913962"));
@@ -50,29 +50,29 @@ let L = {
   queryResults(e, t, n, i, r) {
     if (0 === n.length && i.commands !== m.CommandMode.OLD_BUILT_INS) return C;
     if (i.commands === m.CommandMode.OLD_BUILT_INS) {
-      let i = (0, l.getBuiltInCommands)(a.ApplicationCommandType.CHAT, !1, !1),
+      let i = (0, l.getBuiltInCommands)(s.ApplicationCommandType.CHAT, !1, !1),
         r = RegExp("^".concat(h.default.escape(n)), "i"),
-        s = (0, I.getMatchingGroupCommands)(i, r, {
+        a = (0, I.getMatchingGroupCommands)(i, r, {
           channel: e,
           guild: t
         }, m.MAX_COMMAND_AUTOCOMPLETE_RESULTS),
         o = l.BUILT_IN_SECTIONS[p.BuiltInSectionId.BUILT_IN];
-      return 0 === s.length ? C : {
+      return 0 === a.length ? C : {
         results: {
-          entries: s.map(e => ({
+          entries: a.map(e => ({
             command: e,
             section: o
           }))
         }
       }
     }
-    let s = (0, T.getCommandQuery)(e, n),
+    let a = (0, T.getCommandQuery)(e, n),
       {
         commands: o,
         sections: u
       } = d.executeQuery(e, {
-        commandType: a.ApplicationCommandType.CHAT,
-        text: s.text
+        commandType: s.ApplicationCommandType.CHAT,
+        text: a.text
       }, {
         limit: m.MAX_COMMAND_AUTOCOMPLETE_RESULTS,
         placeholderCount: m.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
@@ -81,8 +81,8 @@ let L = {
       });
     if (null == o) return C;
     let c = o;
-    if (s.hasSpaceTerminator) {
-      let e = s.text.trim(),
+    if (a.hasSpaceTerminator) {
+      let e = a.text.trim(),
         t = e + " ";
       c = c.filter(n => n.name === e || n.name.startsWith(t))
     }
@@ -101,12 +101,12 @@ let L = {
         entries: t
       },
       selectedIndex: n,
-      channel: s,
-      query: a,
+      channel: a,
+      query: s,
       options: o,
       onHover: l,
       onClick: u
-    } = e, d = (0, T.getCommandQuery)(s, a), _ = o.commands === m.CommandMode.OLD_BUILT_INS;
+    } = e, d = (0, T.getCommandQuery)(a, s), _ = o.commands === m.CommandMode.OLD_BUILT_INS;
     return (0, A.renderAutocompleteGroup)({
       query: d.text,
       selectedIndex: n,
@@ -125,8 +125,8 @@ let L = {
         return {
           key: t.id,
           command: t,
-          channel: s,
-          guildId: s.guild_id,
+          channel: a,
+          guildId: a.guild_id,
           showImage: !0,
           section: n
         }
@@ -151,8 +151,8 @@ let L = {
       index: n,
       queryText: i,
       options: r,
-      channel: s,
-      location: a,
+      channel: a,
+      location: s,
       tabOrEnter: l
     } = e, {
       command: u,
@@ -163,9 +163,9 @@ let L = {
       return "".concat(N.COMMAND_SENTINEL).concat(e.name)
     }(u));
     else {
-      let e = a;
+      let e = s;
       null == e && (e = l ? E.ApplicationCommandTriggerLocations.QUERY : E.ApplicationCommandTriggerLocations.DISCOVERY), o.setActiveCommand({
-        channelId: s.id,
+        channelId: a.id,
         command: u,
         section: null != d ? d : null,
         location: e,

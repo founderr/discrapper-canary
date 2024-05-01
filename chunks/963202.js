@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   useIsInUserClanExperiment: function() {
-    return a
+    return s
   }
 });
 var i = n("818083"),
   r = n("308083");
-let s = (0, i.createExperiment)({
+let a = (0, i.createExperiment)({
   kind: "user",
   id: "2024-02_clans",
   label: "Clans",
@@ -38,13 +38,13 @@ let s = (0, i.createExperiment)({
   }]
 });
 
-function a() {
+function s() {
   let {
     autoTrackExposure: e = !1,
     disable: t = !1,
     location: n
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-  return s.useExperiment({
+  return a.useExperiment({
     location: n
   }, {
     autoTrackExposure: e,

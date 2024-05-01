@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("873546"),
   r = n("149765"),
-  s = n("581364"),
-  a = n("69580"),
+  a = n("581364"),
+  s = n("69580"),
   o = n("626135"),
   l = n("49012"),
   u = n("981631");
@@ -21,7 +21,7 @@ function d(e) {
     installParams: n,
     integrationTypesConfig: i
   } = e;
-  return null != t || null != n || null != i && Object.values(i).some(e => null != e && null != e.oauth2_install_params) && (0, s.isUserInUserAppExperiment)({
+  return null != t || null != n || null != i && Object.values(i).some(e => null != e && null != e.oauth2_install_params) && (0, a.isUserInUserAppExperiment)({
     location: "canInstallApplication"
   })
 }
@@ -49,7 +49,7 @@ function _(e) {
     });
     return
   }
-  if (null != _ && Object.values(_).some(e => null != e && null != e.oauth2_install_params) && (0, s.isUserInUserAppExperiment)({
+  if (null != _ && Object.values(_).some(e => null != e && null != e.oauth2_install_params) && (0, a.isUserInUserAppExperiment)({
       location: "installApplication"
     })) {
     o.default.track(u.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
@@ -58,7 +58,7 @@ function _(e) {
       auth_type: "in_app",
       source: T,
       device_platform: i.isMobile ? "mobile_web" : "desktop_web"
-    }), (0, a.openOAuth2Modal)({
+    }), (0, s.openOAuth2Modal)({
       clientId: t,
       guildId: c,
       channelId: E,
@@ -72,7 +72,7 @@ function _(e) {
     auth_type: "in_app",
     source: T,
     device_platform: i.isMobile ? "mobile_web" : "desktop_web"
-  }), (0, a.openOAuth2Modal)({
+  }), (0, s.openOAuth2Modal)({
     clientId: t,
     guildId: c,
     channelId: E,

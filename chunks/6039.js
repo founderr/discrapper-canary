@@ -26,8 +26,8 @@ t.default = e => {
   let a, N;
   let {
     guildId: v,
-    inviteCode: L
-  } = e, [R, O] = s.useState(g.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), x = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+    inviteCode: R
+  } = e, [L, O] = s.useState(g.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), x = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
     hasFetchedRequestToJoinGuilds: y,
     guildPreviewDisabled: D
   } = (0, l.useStateFromStoresObject)([C.default], () => ({
@@ -50,7 +50,7 @@ t.default = e => {
   let G = (a = T.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
       name: null == D ? void 0 : D.toString()
     }), N = () => {
-      O(Math.max(R, g.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(I.Routes.ME)
+      O(Math.max(L, g.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(I.Routes.ME)
     }, () => {
       (0, i.openModal)(e => (0, n.jsx)(i.ConfirmModal, {
         header: T.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
@@ -75,7 +75,7 @@ t.default = e => {
     children: (0, n.jsxs)(u.default, {
       embedded: !0,
       splash: w,
-      waveState: R,
+      waveState: L,
       showLogo: !1,
       updateWaveState: b,
       children: [(0, n.jsx)("div", {
@@ -101,7 +101,7 @@ t.default = e => {
             default:
               return (0, n.jsx)(p.default, {
                 guildId: v,
-                inviteCode: L,
+                inviteCode: R,
                 onComplete: U
               })
           }

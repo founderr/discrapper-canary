@@ -39,8 +39,8 @@ t.default = () => {
     A = f.default.useIsRingtoneDisabled(),
     N = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
     v = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
-    L = s.useRef(!1),
-    R = (0, r.useStableMemo)(() => {
+    R = s.useRef(!1),
+    L = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
       if (T && !A) return (0, S.createSound)(c.default.ringtone, e);
       if (v === p.Soundpacks.CLASSIC) {
@@ -50,14 +50,14 @@ t.default = () => {
       return (0, S.createSoundForPack)("call_ringing", v)
     }, [v, A, T]);
   return s.useEffect(() => () => {
-    R.stop()
-  }, [R]), s.useEffect(() => {
+    L.stop()
+  }, [L]), s.useEffect(() => {
     if (N || l) {
-      L.current && (R.stop(), L.current = !1);
+      R.current && (L.stop(), R.current = !1);
       return
     }
-    a && !L.current ? (R.loop(), L.current = !0) : !a && L.current && (R.stop(), L.current = !1)
-  }, [l, N, a, R]), (0, o.useTransition)(t, {
+    a && !R.current ? (L.loop(), R.current = !0) : !a && R.current && (L.stop(), R.current = !1)
+  }, [l, N, a, L]), (0, o.useTransition)(t, {
     keys: e => {
       var t;
       return null === (t = e.channel) || void 0 === t ? void 0 : t.id

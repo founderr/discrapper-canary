@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return l
   },
   dismissChannelSafetyWarnings: function() {
-    return a
+    return s
   },
   reportFalsePositive: function() {
     return d
@@ -18,15 +18,15 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("570140"),
-  s = n("981631");
+  a = n("981631");
 
-function a(e, t) {
+function s(e, t) {
   return r.default.dispatch({
     type: "DISMISS_CHANNEL_SAFETY_WARNINGS",
     channelId: e,
     warningIds: t
   }), i.HTTP.post({
-    url: s.Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(e),
+    url: a.Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(e),
     body: {
       warning_ids: t
     },
@@ -59,6 +59,6 @@ function u(e) {
 
 function d(e) {
   return i.HTTP.post({
-    url: s.Endpoints.SAFETY_WARNING_FALSE_POSITIVE(e)
+    url: a.Endpoints.SAFETY_WARNING_FALSE_POSITIVE(e)
   })
 }

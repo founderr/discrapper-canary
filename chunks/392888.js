@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("544891"),
-  s = n("433517"),
-  a = n("481060"),
+  a = n("433517"),
+  s = n("481060"),
   o = n("147913"),
   l = n("480294"),
   u = n("9156"),
@@ -17,7 +17,7 @@ var r = n("544891"),
   c = n("981631");
 class E extends o.default {
   handlePostConnectionOpen() {
-    if (!s.Storage.get("turnedOffNewNotifications") && !!l.default.hasConsented(c.Consents.PERSONALIZATION) && !!d.NotificationsExperiment.getCurrentConfig({
+    if (!a.Storage.get("turnedOffNewNotifications") && !!l.default.hasConsented(c.Consents.PERSONALIZATION) && !!d.NotificationsExperiment.getCurrentConfig({
         location: "NotificationMigrationManager"
       }, {
         autoTrackExposure: !1
@@ -35,18 +35,18 @@ class E extends o.default {
     if (!e) return;
     let {
       body: {
-        guild_noise: s,
+        guild_noise: a,
         usage: o
       }
     } = await r.HTTP.get("/users/@me/notification-migration-data2"), l = (0, _.transformUsageData)(o), {
       default: u
     } = await Promise.all([n.e("99387"), n.e("53512")]).then(n.bind(n, "753521"));
-    if (!(0, a.hasAnyModalOpen)()) d.UnreadsEntryPointExperiment.trackExposure({
+    if (!(0, s.hasAnyModalOpen)()) d.UnreadsEntryPointExperiment.trackExposure({
       location: "NotificationMigrationManager"
-    }), t && ((0, _.hasGoodCandidateServers)(s, l) ? (0, a.openModal)(e => (0, i.jsx)(u, {
+    }), t && ((0, _.hasGoodCandidateServers)(a, l) ? (0, s.openModal)(e => (0, i.jsx)(u, {
       ...e,
       dismissable: !1,
-      guildPain: s,
+      guildPain: a,
       myUsage: l
     }), {
       onCloseRequest: () => {}
@@ -81,10 +81,10 @@ async function I(e) {
   let {
     body: {
       guild_noise: t,
-      usage: s
+      usage: a
     }
-  } = await r.HTTP.get("/users/@me/notification-migration-data2"), o = (0, _.transformUsageData)(s);
-  (0, a.openModalLazy)(async () => {
+  } = await r.HTTP.get("/users/@me/notification-migration-data2"), o = (0, _.transformUsageData)(a);
+  (0, s.openModalLazy)(async () => {
     let {
       default: r
     } = await Promise.all([n.e("99387"), n.e("53512")]).then(n.bind(n, "753521"));

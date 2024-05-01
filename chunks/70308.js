@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("718017"),
-  a = n("442837"),
+  a = n("718017"),
+  s = n("442837"),
   o = n("607070"),
   l = n("345332"),
   u = n("417153"),
@@ -76,7 +76,7 @@ function I() {
   let c = (0, u.useToastStore)(e => e.currentToast),
     I = r.useRef(null !== (n = null == c ? void 0 : null === (e = c.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : d.TOAST_DEFAULT_OPTIONS.position),
     T = r.useRef(null !== (_ = null == c ? void 0 : null === (t = c.options) || void 0 === t ? void 0 : t.duration) && void 0 !== _ ? _ : d.TOAST_DEFAULT_OPTIONS.duration),
-    f = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+    f = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   r.useEffect(() => {
     if (null != c) {
       var e, t, n, i;
@@ -87,7 +87,7 @@ function I() {
       var e, t;
       return E[null !== (t = null == c ? void 0 : null === (e = c.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : I.current]
     }, [c]),
-    h = (0, s.useTransition)(c, {
+    h = (0, a.useTransition)(c, {
       keys: e => {
         var t;
         return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""
@@ -101,7 +101,7 @@ function I() {
     }, T.current)
   }, [c]), (0, i.jsx)("div", {
     className: S.styles,
-    children: h((e, t) => null === t ? null : (0, i.jsx)(s.animated.div, {
+    children: h((e, t) => null === t ? null : (0, i.jsx)(a.animated.div, {
       style: e,
       children: (0, i.jsx)(l.Toast, {
         ...t

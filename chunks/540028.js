@@ -3,8 +3,8 @@ n.r(t), n("653041"), n("47120");
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  s = n("692547"),
-  a = n("481060"),
+  a = n("692547"),
+  s = n("481060"),
   o = n("475179"),
   l = n("519938"),
   u = n("317381"),
@@ -23,7 +23,7 @@ function m(e) {
   let {
     closePopout: t,
     idle: n,
-    pipWindows: s,
+    pipWindows: a,
     voiceChannelId: I,
     onSelect: T
   } = e;
@@ -32,14 +32,14 @@ function m(e) {
     m = (0, r.useStateFromStores)([E.default], () => E.default.pipWindow),
     N = (0, r.useStateFromStores)([_.default], () => _.default.getSelectedParticipant(I)),
     p = (0, r.useStateFromStores)([_.default], () => _.default.getStreamParticipants(I));
-  return (0, i.jsx)(a.Menu, {
+  return (0, i.jsx)(s.Menu, {
     navId: "pip-menu",
     "aria-label": "switch PIP",
     onClose: t,
     onSelect: T,
     children: (function() {
-      let e = s.find(e => e.component === f.PictureInPictureComponents.EMBED_IFRAME),
-        t = s.find(e => e.component === f.PictureInPictureComponents.VIDEO),
+      let e = a.find(e => e.component === f.PictureInPictureComponents.EMBED_IFRAME),
+        t = a.find(e => e.component === f.PictureInPictureComponents.VIDEO),
         n = [];
       return null != e && (null == m ? void 0 : m.id) !== e.id && n.push({
         pipWindow: e
@@ -56,7 +56,7 @@ function m(e) {
       var t;
       let n = e.pipWindow.id,
         r = null === (t = e.participant) || void 0 === t ? void 0 : t.id,
-        s = function(e) {
+        a = function(e) {
           if (e.pipWindow.component === f.PictureInPictureComponents.EMBED_IFRAME && null != A) {
             var t;
             let e = null === (t = d.default.getApplication(A.applicationId)) || void 0 === t ? void 0 : t.name;
@@ -69,9 +69,9 @@ function m(e) {
           })
         }(e),
         u = "".concat(n).concat(null != r ? r : "");
-      return (0, i.jsx)(a.MenuItem, {
+      return (0, i.jsx)(s.MenuItem, {
         id: u,
-        label: s,
+        label: a,
         action: () => (function(e) {
           (null == m ? void 0 : m.id) !== e.pipWindow.id && (0, l.switchPIPFocus)(e.pipWindow.id);
           let t = e.participant;
@@ -89,7 +89,7 @@ t.default = function(e) {
     var n;
     return e.ownerId !== (null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && e.channelId === t
   }), u = 1 === o.length && o[0].component === f.PictureInPictureComponents.EMBED_IFRAME || 0 === l.length, d = 1 === o.length && l.length <= 1;
-  return u || d ? null : (0, i.jsx)(a.Popout, {
+  return u || d ? null : (0, i.jsx)(s.Popout, {
     position: "bottom",
     renderPopout: e => (0, i.jsx)(m, {
       voiceChannelId: t,
@@ -97,11 +97,11 @@ t.default = function(e) {
       idle: n,
       ...e
     }),
-    children: e => (0, i.jsx)(a.Clickable, {
+    children: e => (0, i.jsx)(s.Clickable, {
       className: A.menuIcon,
       ...e,
       children: (0, i.jsx)(T.default, {
-        color: s.default.unsafe_rawColors.WHITE_500.css
+        color: a.default.unsafe_rawColors.WHITE_500.css
       })
     })
   })

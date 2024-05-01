@@ -88,7 +88,7 @@ t.default = e => {
     handleUpdate: l,
     progress: o,
     guildId: u
-  } = e, d = (0, f.useStateFromStores)([C.default], () => C.default.getGuild(u)), c = null !== (t = (0, f.useStateFromStores)([_.default], () => _.default.getMemberCount(u))) && void 0 !== t ? t : 0, [L, R] = s.useState(o.banner), [O, M] = s.useState({
+  } = e, d = (0, f.useStateFromStores)([C.default], () => C.default.getGuild(u)), c = null !== (t = (0, f.useStateFromStores)([_.default], () => _.default.getMemberCount(u))) && void 0 !== t ? t : 0, [R, L] = s.useState(o.banner), [O, M] = s.useState({
     primary: o.brandPrimaryColor,
     secondary: o.brandSecondaryColor
   }), [P, x] = s.useState(() => {
@@ -102,11 +102,11 @@ t.default = e => {
   } : p.CLAN_BRAND_PALETTE_PRESETS[P - 1];
   return s.useEffect(() => {
     l({
-      banner: L,
+      banner: R,
       brandPrimaryColor: U.primary,
       brandSecondaryColor: U.secondary
     })
-  }, [l, L, U.primary, U.secondary]), (0, n.jsxs)("div", {
+  }, [l, R, U.primary, U.secondary]), (0, n.jsxs)("div", {
     className: T.slideContentWithSidebar,
     children: [(0, n.jsx)(E.Heading, {
       variant: "heading-xxl/medium",
@@ -200,10 +200,10 @@ t.default = e => {
             children: N.map((e, t) => (0, n.jsxs)(E.Clickable, {
               "aria-label": e.name,
               onClick: () => {
-                R(e.bannerKind)
+                L(e.bannerKind)
               },
               className: i()(g.bannerItemContainer, {
-                [g.bannerItemContainerSelected]: e.bannerKind === L
+                [g.bannerItemContainerSelected]: e.bannerKind === R
               }),
               children: [(0, n.jsx)(e.icon, {
                 width: 24,
@@ -221,7 +221,7 @@ t.default = e => {
         className: g.clanCardWrapper,
         children: (0, n.jsx)(h.ClanDiscoveryCardView, {
           banner: (0, n.jsx)(m.default, {
-            banner: L,
+            banner: R,
             primaryTintColor: U.primary,
             secondaryTintColor: U.secondary,
             className: g.clanBannerPreview
@@ -234,7 +234,7 @@ t.default = e => {
             memberCount: c,
             games: Array.from(o.gameApplicationIds),
             traits: Array.from(o.interests),
-            banner: L,
+            banner: R,
             badge: {
               badgeKind: o.badgeKind,
               primaryColor: o.badgePrimaryColor,

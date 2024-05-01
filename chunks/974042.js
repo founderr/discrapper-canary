@@ -133,29 +133,29 @@ class A {
 }
 let N = !0,
   v = !1,
-  L = m.FriendsSections.ONLINE,
-  R = new A,
+  R = m.FriendsSections.ONLINE,
+  L = new A,
   O = !0,
   M = !1;
 
 function P() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  N && (e || L !== m.FriendsSections.ONLINE && L !== m.FriendsSections.ADD_FRIEND) && !v && (N = !1, v = !0, o.default.fetchRelationships())
+  N && (e || R !== m.FriendsSections.ONLINE && R !== m.FriendsSections.ADD_FRIEND) && !v && (N = !1, v = !0, o.default.fetchRelationships())
 }
 
 function x() {
-  if (N = !0, O ? v = !1 : P(), R = R.reset(), M) return;
-  let e = R.getRelationshipCounts();
-  L = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
+  if (N = !0, O ? v = !1 : P(), L = L.reset(), M) return;
+  let e = L.getRelationshipCounts();
+  R = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
 }
 
 function y() {
-  R = O ? new A : R.reset()
+  L = O ? new A : L.reset()
 }
 
 function D(e) {
   return function() {
-    return !O && !!R.update(e) && (R = R.clone(), !0)
+    return !O && !!L.update(e) && (L = L.clone(), !0)
   }
 }
 class b extends(n = i.default.Store) {
@@ -165,9 +165,9 @@ class b extends(n = i.default.Store) {
   getState() {
     return {
       fetching: v,
-      section: L,
+      section: R,
       pendingCount: _.default.getPendingCount(),
-      rows: R
+      rows: L
     }
   }
 }
@@ -176,7 +176,7 @@ S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     x()
   },
   FRIENDS_SET_SECTION: function(e) {
-    L = e.section, P()
+    R = e.section, P()
   },
   CHANNEL_SELECT: function(e) {
     let {
@@ -197,6 +197,6 @@ S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     return O = t !== m.DrawerTabTypes.FRIENDS, y(), !O
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
-    L = e.section, M = !0
+    R = e.section, M = !0
   }
 })

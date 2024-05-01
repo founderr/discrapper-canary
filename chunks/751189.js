@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("544891"),
   r = n("570140"),
-  s = n("626135"),
-  a = n("741847"),
+  a = n("626135"),
+  s = n("741847"),
   o = n("981631");
 t.default = {
   resolveGuildTemplate: function e(t) {
@@ -15,7 +15,7 @@ t.default = {
       oldFormErrors: !0
     }).then(e => {
       let n = e.body;
-      return s.default.track(o.AnalyticEvents.GUILD_TEMPLATE_RESOLVED, {
+      return a.default.track(o.AnalyticEvents.GUILD_TEMPLATE_RESOLVED, {
         resolved: !0,
         guild_template_code: t,
         guild_template_name: n.name,
@@ -26,10 +26,10 @@ t.default = {
         guildTemplate: n,
         code: t
       }), {
-        guildTemplate: (0, a.default)(n),
+        guildTemplate: (0, s.default)(n),
         code: t
       }
-    }, () => (s.default.track(o.AnalyticEvents.GUILD_TEMPLATE_RESOLVED, {
+    }, () => (a.default.track(o.AnalyticEvents.GUILD_TEMPLATE_RESOLVED, {
       resolved: !1,
       guild_template_code: t
     }), r.default.dispatch({
@@ -71,11 +71,11 @@ t.default = {
       code: t
     })
   }),
-  updateGuildTemplate: (e, t, n, s) => i.HTTP.patch({
+  updateGuildTemplate: (e, t, n, a) => i.HTTP.patch({
     url: o.Endpoints.GUILD_TEMPLATE(e, t),
     body: {
       name: n,
-      description: s
+      description: a
     },
     oldFormErrors: !0
   }).then(e => {

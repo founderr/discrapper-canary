@@ -7,7 +7,7 @@ a.r(t), a.d(t, {
     return v
   },
   default: function() {
-    return L
+    return R
   }
 }), a("47120");
 var n = a("735250"),
@@ -34,22 +34,22 @@ var n = a("735250"),
 let N = "Email Verification",
   v = "PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY";
 
-function L() {
+function R() {
   let {
     action: e,
     theme: t
   } = (0, i.useStateFromStoresObject)([m.default, C.default], () => ({
     action: m.default.getAction(),
     theme: C.default.theme
-  })), L = I.default.getVerificationTypes(e), [R, O] = s.useState(0), M = (0, f.default)(L);
+  })), R = I.default.getVerificationTypes(e), [L, O] = s.useState(0), M = (0, f.default)(R);
   (0, h.default)({
     type: l.ImpressionTypes.MODAL,
     name: l.ImpressionNames.USER_ACTION_REQUIRED,
     properties: {
-      verification_type: L[0],
-      verification_types: L
+      verification_type: R[0],
+      verification_types: R
     }
-  }, {}, [L.toString()]);
+  }, {}, [R.toString()]);
   let P = () => {
       (0, c.accountDetailsInit)(), (0, o.openModalLazy)(async () => {
         let {
@@ -80,7 +80,7 @@ function L() {
   return s.useEffect(() => (E.default.disable(), () => {
     E.default.enable()
   }), []), s.useEffect(() => {
-    (null == M ? void 0 : M[0]) === g.VerificationTypes.PHONE && (null == L ? void 0 : L[0]) === g.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
+    (null == M ? void 0 : M[0]) === g.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === g.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(a.bind(a, "468026"));
@@ -95,9 +95,9 @@ function L() {
       Layer: p.default,
       onCloseCallback: P
     })
-  }, [L, M]), (0, n.jsx)(S.default, {
-    types: L,
-    captchaKey: R,
+  }, [R, M]), (0, n.jsx)(S.default, {
+    types: R,
+    captchaKey: L,
     onCaptchaVerify: e => {
       r.HTTP.post({
         url: g.Endpoints.CAPTCHA,

@@ -24,8 +24,8 @@ var o = a("149765"),
   A = a("710845"),
   N = a("38618"),
   v = a("218543"),
-  L = a("314897"),
-  R = a("944486"),
+  R = a("314897"),
+  L = a("944486"),
   O = a("914010"),
   M = a("449934"),
   P = a("576376"),
@@ -72,7 +72,7 @@ async function Y(e, t, a) {
   let i = N.default.getSocket();
   i.connect();
   let o = null !== (n = O.default.getGuildId()) && void 0 !== n ? n : null,
-    d = null !== (s = R.default.getChannelId()) && void 0 !== s ? s : null,
+    d = null !== (s = L.default.getChannelId()) && void 0 !== s ? s : null,
     f = performance.now(),
     E = v.default.loadCachedMessages.measureAsyncWithoutNesting(() => V(e, o, d)),
     h = v.default.fetchGuildCache.measureAsync(() => K(e, a)),
@@ -82,10 +82,10 @@ async function Y(e, t, a) {
     T = null == e ? Promise.resolve([]) : r.default.timeAsync("\uD83D\uDCBE", "cache: read_states", () => S.default.getAll(e)),
     A = null == e ? Promise.resolve([]) : r.default.timeAsync("\uD83D\uDCBE", "cache: user_guild_settings", () => p.default.getAll(e)),
     [
-      [L, M], P, x, D, U, j, G
+      [R, M], P, x, D, U, j, G
     ] = await Promise.all([E, h, _, C, m, T, A]),
     w = performance.now() - f;
-  if (b.verbose("cache loaded in ".concat(w, "ms (channel_history ").concat(L, "ms)")), null == M) return (0, y.default)("database:history_cache_null"), b.verbose("finished without dispatching CACHE_LOADED"), [!1, null, 0];
+  if (b.verbose("cache loaded in ".concat(w, "ms (channel_history ").concat(R, "ms)")), null == M) return (0, y.default)("database:history_cache_null"), b.verbose("finished without dispatching CACHE_LOADED"), [!1, null, 0];
   {
     let n = Object.fromEntries(M.members.map(e => [e.userId, e])),
       s = null != x.guildId && null != x.channels,
@@ -295,7 +295,7 @@ class Z extends(n = u.default.Store) {
       return
     }
     try {
-      let t = L.default.getId(),
+      let t = R.default.getId(),
         n = T.default.carefullyOpenDatabase(t),
         [s, l, i] = await v.default.loadMiniCache.measureAsync(() => Y(n, t, e));
       s ? (a(), await q(n, t, l, i)) : (a(), await (Q(() => c.default.dispatch({

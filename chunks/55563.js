@@ -1,7 +1,7 @@
 "use strict";
 let i;
 n.r(t), n("47120");
-var r, s, a, o, l = n("442837"),
+var r, a, s, o, l = n("442837"),
   u = n("570140"),
   d = n("706454"),
   _ = n("659181"),
@@ -60,12 +60,12 @@ class R extends(r = l.Store) {
     return I.has(e)
   }
 }
-o = "SKUStore", (a = "displayName") in(s = R) ? Object.defineProperty(s, a, {
+o = "SKUStore", (s = "displayName") in(a = R) ? Object.defineProperty(a, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new R(u.default, {
+}) : a[s] = o, t.default = new R(u.default, {
   STORE_LISTINGS_FETCH_SUCCESS: function(e) {
     let {
       storeListings: t

@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("913527"),
   r = n.n(i),
-  s = n("570140"),
-  a = n("147913"),
+  a = n("570140"),
+  s = n("147913"),
   o = n("959546"),
   l = n("594174"),
   u = n("580130"),
@@ -21,7 +21,7 @@ function A(e) {
   let t = o.default.createFromServer(e.entitlement);
   (0, I.isPremiumTier2Entitlement)(t) ? m({
     forceRefresh: !0
-  }): (0, I.isValidTenureRewardEntitlement)(t) && null != E.default.getTenureRewardStatusForRewardId(t.skuId) && s.default.dispatch({
+  }): (0, I.isValidTenureRewardEntitlement)(t) && null != E.default.getTenureRewardStatusForRewardId(t.skuId) && a.default.dispatch({
     type: "USER_TENURE_REWARD_STATUS_DELETE",
     tenureRewardIds: [t.skuId]
   })
@@ -35,9 +35,9 @@ function m() {
   let t = u.default.getForApplication(T.PREMIUM_SUBSCRIPTION_APPLICATION),
     n = (0, I.getPremiumTier2Entitlement)(t),
     i = (0, I.getTenureRewardEntitlement)([f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH, f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS], t),
-    a = l.default.getCurrentUser();
-  if (!(0, d.isPremiumExactly)(a, T.PremiumTypes.TIER_2) && null == n) {
-    s.default.dispatch({
+    s = l.default.getCurrentUser();
+  if (!(0, d.isPremiumExactly)(s, T.PremiumTypes.TIER_2) && null == n) {
+    a.default.dispatch({
       type: "USER_TENURE_REWARD_STATUS_RESET"
     });
     return
@@ -57,14 +57,14 @@ function m() {
       let e = u.default.getForApplication(T.PREMIUM_SUBSCRIPTION_APPLICATION);
       if (null == e) return;
       let t = Array.from(e).filter(e => null != E.default.getTenureRewardStatusForRewardId(e.skuId)).map(e => e.skuId);
-      t.length > 0 && s.default.dispatch({
+      t.length > 0 && a.default.dispatch({
         type: "USER_TENURE_REWARD_STATUS_DELETE",
         tenureRewardIds: t
       })
     }
 }
 async function N() {
-  !h && (h = !0, await _.syncUserTenureRewardStatus(), h = !1, s.default.wait(() => (function() {
+  !h && (h = !0, await _.syncUserTenureRewardStatus(), h = !1, a.default.wait(() => (function() {
     var e;
     if (p(), E.default.getFetchState() !== E.FetchState.FETCHED || h) return;
     let t = null !== (e = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS);
@@ -85,7 +85,7 @@ function O() {
 function R() {
   m()
 }
-class C extends a.default {
+class C extends s.default {
   forceRefreshIfOutdated() {
     let e = E.default.getState();
     null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 864e5 && m({

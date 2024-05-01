@@ -32,8 +32,8 @@ function v(e) {
     channel: t,
     iconClassName: l,
     className: v,
-    innerClassName: L,
-    ...R
+    innerClassName: R,
+    ...L
   } = e, {
     mute: O,
     suppress: M
@@ -89,7 +89,7 @@ function v(e) {
           [N.disabled]: x
         }),
         wrapperClassName: v,
-        innerClassName: L,
+        innerClassName: R,
         disabled: x,
         onClick: () => {
           var t, a;
@@ -97,16 +97,16 @@ function v(e) {
         },
         onMouseEnter: t => {
           var a, n;
-          null === (a = R.onMouseEnter) || void 0 === a || a.call(R, t), null == e || null === (n = e.onMouseEnter) || void 0 === n || n.call(e), H()
+          null === (a = L.onMouseEnter) || void 0 === a || a.call(L, t), null == e || null === (n = e.onMouseEnter) || void 0 === n || n.call(e), H()
         },
         onMouseLeave: t => {
           var a, n;
-          null === (a = R.onMouseLeave) || void 0 === a || a.call(R, t), null == e || null === (n = e.onMouseLeave) || void 0 === n || n.call(e), V()
+          null === (a = L.onMouseLeave) || void 0 === a || a.call(L, t), null == e || null === (n = e.onMouseLeave) || void 0 === n || n.call(e), V()
         },
         onContextMenu: k,
         fullWidth: !0,
         size: d.Button.Sizes.SMALL,
-        ...R,
+        ...L,
         children: (0, n.jsx)(B, {
           className: l,
           size: "sm",

@@ -41,7 +41,7 @@ function v(e) {
   return "function" == typeof e ? e() : e
 }
 
-function L() {
+function R() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
     t = e > 0 ? void 0 : () => {
       if (!v(s.listening)) return;
@@ -54,7 +54,7 @@ function L() {
   s.listen(S.RPC_STARTING_PORT + e % S.RPC_PORT_RANGE, "127.0.0.1", t)
 }
 
-function R(e, t, a) {
+function L(e, t, a) {
   let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
     s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
     l = null != v(e.headers).origin ? {
@@ -71,7 +71,7 @@ function R(e, t, a) {
 
 function O(e, t, a, n) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-  R(e, t, {
+  L(e, t, {
     code: s,
     message: n
   }, a)
@@ -113,7 +113,7 @@ class x extends l.EventEmitter {
   handleRequest(e, t) {
     let [a, n] = v(e.url).split("?"), s = v(e.method);
     if ("/rpc" === a && "OPTIONS" === s) {
-      R(e, t, {
+      L(e, t, {
         body: ""
       });
       return
@@ -130,7 +130,7 @@ class x extends l.EventEmitter {
           } = o.parse(null !== (e = a.get("callback")) && void 0 !== e ? e : "");
           n === location.protocol && s === location.host ? t.setHeader("Location", a.get("callback")) : t.setHeader("Location", T), t.writeHead(301), t.end()
         },
-        u = new P(l ? R.bind(null, e, t) : r, l ? O.bind(null, e, t, 400) : r, Number(a.get("v")), s);
+        u = new P(l ? L.bind(null, e, t) : r, l ? O.bind(null, e, t, 400) : r, Number(a.get("v")), s);
       if (l)(0, C.validateSocketClient)(u, v(e.headers).origin, a.get("client_id")).then(() => {
         let a = "";
         e.on("data", e => a += e), e.on("error", () => O(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(u, a))
@@ -188,8 +188,8 @@ class x extends l.EventEmitter {
     super();
     let t = 0;
     (s = g.http.createServer()).on("error", e => {
-      A.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => L(++t), 1e3)
-    }), s.on("request", this.handleRequest.bind(this)), L(t);
+      A.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => R(++t), 1e3)
+    }), s.on("request", this.handleRequest.bind(this)), R(t);
     let a = {
       instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
       server: s

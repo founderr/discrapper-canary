@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   getHasImportantUnread: function() {
-    return a
+    return s
   }
 }), n("442837");
 var i = n("306680"),
   r = n("9156"),
-  s = n("490897");
+  a = n("490897");
 
-function a(e) {
-  return i.default.hasUnread(e.id) && r.default.resolveUnreadSetting(e) === s.UnreadSetting.ALL_MESSAGES
+function s(e) {
+  return i.default.hasUnread(e.id) && r.default.resolveUnreadSetting(e) === a.UnreadSetting.ALL_MESSAGES
 }

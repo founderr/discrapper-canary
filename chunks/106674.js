@@ -27,8 +27,8 @@ var n = a("735250"),
   A = a("158631"),
   N = a("143614"),
   v = a("981631"),
-  L = a("70722"),
-  R = a("689938"),
+  R = a("70722"),
+  L = a("689938"),
   O = a("564773");
 
 function M(e) {
@@ -74,7 +74,7 @@ function P(e) {
       s = t.length >= v.MAX_GROUP_DM_BROADCAST_PARTICIPANTS;
     return {
       buttonColor: s ? r.ButtonColors.RED : r.ButtonColors.GREEN,
-      buttonCTA: s ? R.default.Messages.BROADCAST_FULL : n ? R.default.Messages.VIEW_BROADCAST : R.default.Messages.JOIN_BROADCAST,
+      buttonCTA: s ? L.default.Messages.BROADCAST_FULL : n ? L.default.Messages.VIEW_BROADCAST : L.default.Messages.JOIN_BROADCAST,
       disabled: s
     }
   }(i, B);
@@ -92,9 +92,9 @@ function P(e) {
       }), (0, n.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: null != b ? R.default.Messages.STREAMING.format({
+        children: null != b ? L.default.Messages.STREAMING.format({
           name: b.name
-        }) : R.default.Messages.STREAMING_A_GAME
+        }) : L.default.Messages.STREAMING_A_GAME
       }), (0, n.jsxs)("div", {
         className: O.activity,
         children: [B.length > 0 && (0, n.jsx)(M, {
@@ -126,7 +126,7 @@ function P(e) {
     }), null != G ? (0, n.jsx)(f.default, {
       className: O.stream,
       stream: {
-        streamType: L.StreamTypes.CALL,
+        streamType: R.StreamTypes.CALL,
         ownerId: i,
         channelId: I
       }

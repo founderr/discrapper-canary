@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return o
   },
   CreatorMonetizationRavenOnboardingGuildExperiment: function() {
-    return s
+    return a
   },
   CreatorMonetizationRavenOnboardingUserExperiment: function() {
-    return a
+    return s
   }
 });
 var i = n("818083");
@@ -32,7 +32,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  a = (0, i.createExperiment)({
     kind: "guild",
     id: "2022-09_creator_monetization_raven",
     label: "Creator Monetization Onboarding v2",
@@ -47,7 +47,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  a = (0, i.createExperiment)({
+  s = (0, i.createExperiment)({
     kind: "user",
     id: "2022-09_creator_monetization_raven_users",
     label: "Creator Monetization Onboarding v2 Users",

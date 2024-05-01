@@ -84,15 +84,15 @@ t.default = e => {
   }), {
     gameApplicationIds: p,
     playstyle: v,
-    interests: L,
-    tag: R,
+    interests: R,
+    tag: L,
     badgeKind: O,
     badgePrimaryColor: M,
     badgeSecondaryColor: P
   } = (0, d.useStateFromStoresObject)([h.default], () => {
     var e;
     return null !== (e = h.default.getStateForGuild(a).progress) && void 0 !== e ? e : h.DEFAULT_CLAN_PROGRESS
-  }), x = s.useMemo(() => (null == L ? void 0 : L.size) > 0 ? (0, _.formatSelectionList)(Array.from(L), I.MAX_TRAITS_TO_DISPLAY) : null, [L]);
+  }), x = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? (0, _.formatSelectionList)(Array.from(R), I.MAX_TRAITS_TO_DISPLAY) : null, [R]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
       className: T.scrollBg,
@@ -108,7 +108,7 @@ t.default = e => {
         fade: !0,
         className: T.overviewSidebarContent,
         children: [(0, n.jsx)(A, {
-          tag: R,
+          tag: L,
           badge: O,
           primaryColor: M,
           secondaryColor: P

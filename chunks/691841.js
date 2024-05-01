@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("470079"),
   r = n("924826"),
-  s = n("536895"),
-  a = n("40851"),
+  a = n("536895"),
+  s = n("40851"),
   o = n("590921");
 
 function l(e) {
@@ -19,7 +19,7 @@ function l(e) {
     onFocus: c
   } = e, {
     renderWindow: E
-  } = i.useContext(a.default), I = (e, t) => {
+  } = i.useContext(s.default), I = (e, t) => {
     var n;
     if (null === (n = d.current) || void 0 === n || n.scrollToTop(), e && null != _.query) {
       let e = _.query.typeInfo.focusMode,
@@ -35,7 +35,7 @@ function l(e) {
   }, f = (0, r.default)({
     id: u,
     isEnabled: _.isVisible,
-    orientation: s.Orientations.VERTICAL,
+    orientation: a.Orientations.VERTICAL,
     useVirtualFocus: !0,
     setFocus: (e, t) => {
       let n = E.document.querySelector(e);

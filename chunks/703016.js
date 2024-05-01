@@ -23,8 +23,8 @@ var n = a("913527"),
   A = a("51144"),
   N = a("196051"),
   v = a("441729"),
-  L = a("653477"),
-  R = a("981631"),
+  R = a("653477"),
+  L = a("981631"),
   O = a("689938");
 let M = [],
   P = null,
@@ -102,7 +102,7 @@ function B(e) {
   let {
     message: s,
     channel: l
-  } = e, i = s.type === R.MessageTypes.REPLY ? u.default.getMessageByReference(s.messageReference) : null, r = (null == i ? void 0 : i.state) === u.ReferencedMessageState.LOADED ? null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.author : null, o = null != r ? null !== (a = _.default.getNick(l.guild_id, null == r ? void 0 : r.id)) && void 0 !== a ? a : A.default.getName(r) : null, d = l.getGuildId(), c = null !== (n = _.default.getNick(d, s.author.id)) && void 0 !== n ? n : A.default.getName(s.author);
+  } = e, i = s.type === L.MessageTypes.REPLY ? u.default.getMessageByReference(s.messageReference) : null, r = (null == i ? void 0 : i.state) === u.ReferencedMessageState.LOADED ? null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.author : null, o = null != r ? null !== (a = _.default.getNick(l.guild_id, null == r ? void 0 : r.id)) && void 0 !== a ? a : A.default.getName(r) : null, d = l.getGuildId(), c = null !== (n = _.default.getNick(d, s.author.id)) && void 0 !== n ? n : A.default.getName(s.author);
   return G(b(s.content, c, d, o), !0, l.id, s.id), !0
 }
 
@@ -121,16 +121,16 @@ function F(e) {
     v = o === T || o === N,
     O = c.EnableTTSCommand.getSetting() && u.tts && v,
     P = S.default.getTTSType(),
-    x = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === R.TTSNotificationTypes.ALL_CHANNELS || P === R.TTSNotificationTypes.SELECTED_CHANNEL && v);
+    x = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === L.TTSNotificationTypes.ALL_CHANNELS || P === L.TTSNotificationTypes.SELECTED_CHANNEL && v);
   if ((O || x) && ((null === (a = u.author) || void 0 === a ? void 0 : a.id) == null || !p.default.isBlocked(u.author.id))) {
     if (M.indexOf(u.id) >= 0) return !1;
     M.unshift(u.id) > 10 && M.pop();
     let e = C.getGuildId();
     if (null != e && g.default.getMutedChannels(e).has(o)) return !1;
     let t = null !== (i = null !== (l = _.default.getNick(e, null === (n = u.author) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : A.default.getName(u.author)) && void 0 !== i ? i : "",
-      a = u.type === R.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
+      a = u.type === L.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
       d = null != a ? null !== (r = _.default.getNick(e, null == a ? void 0 : a.id)) && void 0 !== r ? r : A.default.getName(a) : null;
-    G(b(u.content, t, e, d), !1, C.id, u.id, L.MAX_TTS_LENGTH)
+    G(b(u.content, t, e, d), !1, C.id, u.id, R.MAX_TTS_LENGTH)
   }
   return !1
 }

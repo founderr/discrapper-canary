@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("442837"),
   l = n("622535"),
   u = n("481060"),
@@ -24,7 +24,7 @@ t.default = function(e) {
   let {
     closeLayer: t,
     guild: n,
-    onCtaVisibilityChange: s
+    onCtaVisibilityChange: a
   } = e, O = (0, o.useStateFromStores)([c.default], () => c.default.getCurrentUser()), R = (0, o.useStateFromStores)([E.default], () => E.default.boostSlots), {
     analyticsLocations: C
   } = (0, d.default)(), g = r.useMemo(() => Object.keys(R).filter(e => {
@@ -47,7 +47,7 @@ t.default = function(e) {
       children: [(0, i.jsxs)("div", {
         className: p.guildBoostCount,
         children: [(0, i.jsx)(f.default, {
-          className: a()(p.guildBoostBadge, {
+          className: s()(p.guildBoostBadge, {
             [p.guildBoostBadgeWithBoosts]: n.premiumSubscriberCount > 0
           })
         }), (0, i.jsx)(u.Text, {
@@ -67,13 +67,13 @@ t.default = function(e) {
     }), (0, i.jsxs)("div", {
       className: p.guildBoostCtas,
       children: [(0, i.jsx)(l.VisibilitySensor, {
-        onChange: s,
+        onChange: a,
         threshold: .9,
         children: (0, i.jsx)("div", {
-          className: a()(p.guildBoostCta, p.guildBoostCtaBoostWrapper),
+          className: s()(p.guildBoostCta, p.guildBoostCtaBoostWrapper),
           children: (0, i.jsx)(h.default, {
             className: p.guildBoostCtaBoost,
-            innerClassName: a()(p.__invalid_guildBoostCtaContent, p.guildBoostCtaBoostContent),
+            innerClassName: s()(p.__invalid_guildBoostCtaContent, p.guildBoostCtaBoostContent),
             buttonShineClassName: p.guildBoostCtaBoostShine,
             guild: n,
             analyticsLocation: {
@@ -89,8 +89,8 @@ t.default = function(e) {
           })
         })
       }), S.default.hasFreeBoosts(O) || S.default.isPremium(O, m.PremiumTypes.TIER_2) ? (0, i.jsxs)(u.Button, {
-        className: a()(p.guildBoostCta, p.guildBoostCtaSecondary),
-        innerClassName: a()(p.__invalid_guildBoostCtaContent, p.guildBoostCtaGiftContent),
+        className: s()(p.guildBoostCta, p.guildBoostCtaSecondary),
+        innerClassName: s()(p.__invalid_guildBoostCtaContent, p.guildBoostCtaGiftContent),
         look: u.Button.Looks.OUTLINED,
         color: u.Button.Colors.WHITE,
         onClick: function() {
@@ -113,8 +113,8 @@ t.default = function(e) {
           className: p.guildBoostCtaGiftIcon
         }), N.default.Messages.PREMIUM_GUILD_PERKS_MODAL_GIFT_NITRO]
       }) : (0, i.jsx)(u.Button, {
-        className: a()(p.guildBoostCta, p.guildBoostCtaSecondary),
-        innerClassName: a()(p.__invalid_guildBoostCtaContent, p.__invalid_guildBoostCtaSubscribeContent),
+        className: s()(p.guildBoostCta, p.guildBoostCtaSecondary),
+        innerClassName: s()(p.__invalid_guildBoostCtaContent, p.__invalid_guildBoostCtaSubscribeContent),
         look: u.Button.Looks.OUTLINED,
         color: u.Button.Colors.WHITE,
         onClick: function() {

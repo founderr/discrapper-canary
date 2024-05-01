@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("442837"),
+  a = n.n(r),
+  s = n("442837"),
   o = n("481060"),
   l = n("2052"),
   u = n("594174"),
@@ -48,7 +48,7 @@ function m(e) {
     lineClamp: R
   } = e, {
     location: C
-  } = (0, l.useAnalyticsContext)(), g = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()), L = c.default.canUsePremiumGuildMemberProfile(g);
+  } = (0, l.useAnalyticsContext)(), g = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), L = c.default.canUsePremiumGuildMemberProfile(g);
   return _ || null == r || "" === r ? null : (0, i.jsxs)(I.default, {
     lastSection: N,
     children: [(0, i.jsxs)(o.Heading, {
@@ -82,7 +82,7 @@ function m(e) {
           },
           guild: t,
           size: d.default.Sizes.SMOL,
-          className: s()(S.aboutMeGuildIcon, {
+          className: a()(S.aboutMeGuildIcon, {
             [S.nonPremiumHoverState]: !L
           })
         })

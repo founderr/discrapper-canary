@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return L
   }
 }), n("47120"), n("724458"), n("653041");
-var i, r, s = n("392711"),
-  a = n("759174"),
+var i, r, a = n("392711"),
+  s = n("759174"),
   o = n("586902"),
   l = n("317381"),
   u = n("569545"),
@@ -121,7 +121,7 @@ class L {
   _getEmbeddedActivities() {
     let e = l.default.getEmbeddedActivitiesForChannel(this.channelId),
       t = l.default.getSelfEmbeddedActivityForChannel(this.channelId);
-    return null == t ? e : (0, s.uniqBy)([...e, t], e => e.applicationId)
+    return null == t ? e : (0, a.uniqBy)([...e, t], e => e.applicationId)
   }
   _getParticipantsForEmbeddedActivities() {
     return this._getEmbeddedActivities().map((e, t) => {
@@ -138,7 +138,7 @@ class L {
     })
   }
   _getParticipantsForUser(e) {
-    var t, n, i, r, s, a;
+    var t, n, i, r, a, s;
     let l, c;
     let m = [],
       p = f.default.getUser(e);
@@ -164,7 +164,7 @@ class L {
       userNick: A.default.getName(null == g ? void 0 : g.getGuildId(), this.channelId, p),
       localVideoDisabled: I.default.isLocalVideoDisabled(p.id)
     }, m.push(l));
-    let v = null !== (s = d.default.getStreamForUser(e, null == g ? void 0 : g.getGuildId())) && void 0 !== s ? s : d.default.getActiveStreamForUser(e, null == g ? void 0 : g.getGuildId());
+    let v = null !== (a = d.default.getStreamForUser(e, null == g ? void 0 : g.getGuildId())) && void 0 !== a ? a : d.default.getActiveStreamForUser(e, null == g ? void 0 : g.getGuildId());
     if (null != v && v.channelId === this.channelId) {
       let t = (0, u.encodeStreamKey)(v),
         n = this.getParticipant(t),
@@ -180,7 +180,7 @@ class L {
         ...r,
         type: i ? N.ParticipantTypes.HIDDEN_STREAM : N.ParticipantTypes.STREAM,
         id: t,
-        userVideo: null !== (a = null == R ? void 0 : R.selfVideo) && void 0 !== a && a,
+        userVideo: null !== (s = null == R ? void 0 : R.selfVideo) && void 0 !== s && s,
         user: p,
         userNick: A.default.getName(null == g ? void 0 : g.getGuildId(), this.channelId, p),
         stream: v
@@ -189,7 +189,7 @@ class L {
     return m
   }
   constructor(e) {
-    R(this, "channelId", void 0), R(this, "call", void 0), R(this, "participants", {}), R(this, "lastSpoke", {}), R(this, "participantByIndex", new a.SecondaryIndexMap(e => {
+    R(this, "channelId", void 0), R(this, "call", void 0), R(this, "participants", {}), R(this, "lastSpoke", {}), R(this, "participantByIndex", new s.SecondaryIndexMap(e => {
       var t;
       let n = [];
       return e.type === N.ParticipantTypes.USER && e.speaking && n.push("SPEAKING"), e.type === N.ParticipantTypes.USER && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo) ? (n.push("VIDEO"), !e.localVideoDisabled && n.push("FILTERED")) : (0, N.isStreamParticipant)(e) && (n.push("STREAM"), e.type !== N.ParticipantTypes.HIDDEN_STREAM && null != e.streamId && n.push("FILTERED")), e.type === N.ParticipantTypes.ACTIVITY && n.push("ACTIVITY"), n

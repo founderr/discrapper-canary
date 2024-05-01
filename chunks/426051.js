@@ -42,7 +42,7 @@ function m(e) {
     onAcceptSuccess: g,
     onRejectSuccess: I,
     onError: p
-  }), L = A || N, R = L || v;
+  }), R = A || N, L = R || v;
   return (0, n.jsxs)("div", {
     className: C.container,
     children: [(0, n.jsx)(E.default, {
@@ -58,8 +58,8 @@ function m(e) {
         onClick: e => {
           T(m.id), e.stopPropagation()
         },
-        disabled: R,
-        submitting: L,
+        disabled: L,
+        submitting: R,
         children: _.default.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
       }), (0, n.jsx)(h.default, {
         className: C.button,

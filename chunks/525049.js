@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return o
   },
   DIAGONAL_FACEPILE_STATUS_TO_AVATAR_RATIO: function() {
-    return a
+    return s
   },
   DIAGONAL_FACEPILE_STROKE_FACTOR: function() {
-    return s
+    return a
   },
   DIAGONAL_FACEPILE_TYPING_WIDTH_TO_HEIGHT_RATIO: function() {
     return l
@@ -21,7 +21,7 @@ n.r(t), n.d(t, {
 });
 let i = .5,
   r = 1,
-  s = .125,
-  a = .5,
+  a = .125,
+  s = .5,
   o = 1 / 3.5,
   l = 2.35

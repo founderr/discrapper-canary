@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("470079"),
   r = n("979590"),
-  s = n.n(r),
-  a = n("866442"),
+  a = n.n(r),
+  s = n("866442"),
   o = n("442837"),
   l = n("607070");
 t.default = e => {
@@ -13,7 +13,7 @@ t.default = e => {
       h: n,
       s: i,
       l: r
-    } = s()((0, a.int2hex)(e)).toHsl(), o = s()({
+    } = a()((0, s.int2hex)(e)).toHsl(), o = a()({
       h: n,
       s: i * t,
       l: r

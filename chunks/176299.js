@@ -27,8 +27,8 @@ var n = a("735250"),
   A = a("118379"),
   N = a("652515"),
   v = a("544978"),
-  L = a("194729"),
-  R = a("668940"),
+  R = a("194729"),
+  L = a("668940"),
   O = a("372900"),
   M = a("6039"),
   P = a("637853"),
@@ -197,13 +197,13 @@ let em = () => (0, n.jsx)("div", {
     } = (0, q.default)(), a = (0, f.useStateFromStores)([ee.default], () => null != t ? t : ee.default.getChannelId(e));
     return function() {
       return window.location.pathname.startsWith(ef.Routes.GUILD_DISCOVERY)
-    }() ? (0, n.jsx)(R.default, {}) : null != e ? (0, n.jsx)(D.default, {
+    }() ? (0, n.jsx)(L.default, {}) : null != e ? (0, n.jsx)(D.default, {
       selectedChannelId: a,
       guildId: e
     }, e) : (0, n.jsx)(eo.default, {})
   });
 
-function eL(e) {
+function eR(e) {
   let t = (0, q.default)(e => {
     let {
       guildId: t
@@ -215,12 +215,12 @@ function eL(e) {
     guildId: t
   })
 }
-let eR = e => (0, n.jsx)(eN, {
+let eL = e => (0, n.jsx)(eN, {
     ...e
   }),
   eO = e => {
     let t = null != e && e.length > 0 && e.startsWith("?") ? e.split("?")[1] : null;
-    return (0, n.jsx)(L.default, {
+    return (0, n.jsx)(R.default, {
       searchRoute: t
     })
   },
@@ -326,7 +326,7 @@ function eB(e) {
       "aria-label": e_.default.Messages.ACCOUNT_A11Y_LABEL,
       children: [(0, n.jsx)(z.default, {}), (0, n.jsx)(V.default, {}), (0, n.jsx)(eu.default, {
         section: ef.AnalyticsSections.ACTIVITY_PANEL,
-        children: (0, n.jsx)(eL, {
+        children: (0, n.jsx)(eR, {
           className: eC.activityPanel
         })
       }), (0, n.jsx)(eu.default, {
@@ -453,7 +453,7 @@ function eF() {
                   disableTrack: !0
                 }), (0, n.jsx)(p.default, {
                   path: [ef.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), ef.Routes.CHANNEL(ef.ME, ":channelId"), ef.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
-                  render: eR,
+                  render: eL,
                   impressionName: u.ImpressionNames.GUILD_CHANNEL,
                   disableTrack: !0
                 }), (0, n.jsx)(p.default, {

@@ -3,8 +3,8 @@ n.r(t), n("627341");
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("278074"),
+  a = n.n(r),
+  s = n("278074"),
   o = n("442837"),
   l = n("481060"),
   u = n("884697"),
@@ -66,7 +66,7 @@ t.default = e => {
     purchase: N
   } = (0, d.default)(null == r ? void 0 : r.skuId), p = E.default.canUseCollectibles(t), O = (0, u.isPremiumCollectiblesPurchase)(N), R = (0, u.isPremiumCollectiblesProduct)(m), C = !p && O;
   return null != m && (null == N || C) ? (0, i.jsxs)("div", {
-    className: s()(f.modalPreview, f.shopPreviewContainer, _),
+    className: a()(f.modalPreview, f.shopPreviewContainer, _),
     children: [(0, i.jsx)("div", {
       className: f.shopPreviewBanner,
       children: (0, i.jsx)(I.default, {
@@ -81,11 +81,11 @@ t.default = e => {
         children: m.name
       }), (0, i.jsx)(l.Text, {
         variant: "text-sm/normal",
-        children: C ? T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, a.match)([R, p]).with([!0, !0], () => T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+        children: C ? T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, s.match)([R, p]).with([!0, !0], () => T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
       })]
     })]
   }) : (0, i.jsxs)("div", {
-    className: s()(f.modalPreview, _),
+    className: a()(f.modalPreview, _),
     children: [(0, i.jsxs)("div", {
       className: f.previewSections,
       children: [(0, i.jsx)("div", {
@@ -99,20 +99,20 @@ t.default = e => {
         className: f.smallDecorationPreviewsContainer,
         children: S.map(e => {
           let {
-            avatarSize: s,
-            showStatus: a
+            avatarSize: a,
+            showStatus: s
           } = e;
           return (0, i.jsx)("div", {
             className: f.smallDecorationPreview,
             children: (0, i.jsx)(I.default, {
               user: t,
               guildId: n,
-              avatarSize: s,
+              avatarSize: a,
               avatarDecorationOverride: r,
-              status: a ? A : void 0,
+              status: s ? A : void 0,
               "aria-hidden": !0
             })
-          }, "".concat(s).concat(a))
+          }, "".concat(a).concat(s))
         })
       })]
     }), null != N && (0, i.jsx)(h, {

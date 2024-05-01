@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i, r, s, a, o, l, u = n("442837"),
+var i, r, a, s, o, l, u = n("442837"),
   d = n("570140");
 (i = o || (o = {}))[i.UNKNOWN = 0] = "UNKNOWN", i[i.PENDING = 1] = "PENDING", i[i.DONE = 2] = "DONE";
 let _ = 0,
@@ -17,12 +17,12 @@ class E extends(l = u.default.Store) {
     return c
   }
 }
-a = "BrowserCheckoutStateStore", (s = "displayName") in(r = E) ? Object.defineProperty(r, s, {
-  value: a,
+s = "BrowserCheckoutStateStore", (a = "displayName") in(r = E) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new E(d.default, {
+}) : r[a] = s, t.default = new E(d.default, {
   USER_PAYMENT_BROWSER_CHECKOUT_STARTED: function(e) {
     _ = 1, c = e.loadId
   },

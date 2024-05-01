@@ -1,5 +1,5 @@
 "use strict";
-let i, r, s;
+let i, r, a;
 n.r(t), n.d(t, {
   filterEmpty: function() {
     return u
@@ -17,7 +17,7 @@ n.r(t), n.d(t, {
     return c
   }
 }), n("757143"), n("47120"), n("512722");
-var a = n("911969"),
+var s = n("911969"),
   o = n("93725"),
   l = n("226951");
 
@@ -56,14 +56,14 @@ function _(e, t) {
 }
 
 function c(e, t) {
-  if (e !== s) {
+  if (e !== a) {
     var n;
-    s = e;
+    a = e;
     let {
       group: t,
-      decimal: a
+      decimal: s
     } = null !== (n = o.numberParts[e]) && void 0 !== n ? n : o.numberParts["en-US"];
-    i = RegExp(l.default.escape(t), "g"), r = RegExp(l.default.escape(a), "g")
+    i = RegExp(l.default.escape(t), "g"), r = RegExp(l.default.escape(s), "g")
   }
   return t.replace(i, "").replace(r, ".")
 }
@@ -73,7 +73,7 @@ function E(e, t) {
   for (let r of t) {
     var i;
     let t = null === (i = e.options) || void 0 === i ? void 0 : i.find(e => e.name === r.name);
-    if (r.type !== a.ApplicationCommandOptionType.ATTACHMENT)(null == t || !t.autocomplete) && (n[r.name] = r)
+    if (r.type !== s.ApplicationCommandOptionType.ATTACHMENT)(null == t || !t.autocomplete) && (n[r.name] = r)
   }
   return n
 }

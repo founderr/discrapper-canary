@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i, r, s, a, o, l, u = n("442837"),
+var i, r, a, s, o, l, u = n("442837"),
   d = n("570140"),
   _ = n("128069"),
   c = n("38618");
@@ -34,12 +34,12 @@ class h extends(l = u.default.Store) {
     return T
   }
 }
-a = "PurchaseTokenAuthStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
-  value: a,
+s = "PurchaseTokenAuthStore", (a = "displayName") in(r = h) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new h(d.default, {
+}) : r[a] = s, t.default = new h(d.default, {
   SKU_PURCHASE_FAIL: f,
   PREMIUM_PAYMENT_SUBSCRIBE_FAIL: f,
   USER_PAYMENT_CLIENT_ADD: function(e) {

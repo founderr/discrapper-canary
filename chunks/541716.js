@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var i, r, s = n("873546"),
-  a = n("703558");
+var i, r, a = n("873546"),
+  s = n("703558");
 (i = r || (r = {}))[i.TOOLTIP = 0] = "TOOLTIP", i[i.STATIC = 1] = "STATIC";
 let o = {
     analyticsName: "normal",
@@ -22,8 +22,8 @@ let o = {
       enabled: !0
     },
     drafts: {
-      type: a.DraftType.ChannelMessage,
-      commandType: a.DraftType.SlashCommand,
+      type: s.DraftType.ChannelMessage,
+      commandType: s.DraftType.SlashCommand,
       autoSave: !0
     },
     emojis: {
@@ -50,8 +50,8 @@ let o = {
     },
     submit: {
       button: !0,
-      ignorePreference: s.isMobile,
-      disableEnterToSubmit: s.isMobile,
+      ignorePreference: a.isMobile,
+      disableEnterToSubmit: a.isMobile,
       clearOnSubmit: !0,
       useDisabledStylesOnSubmit: !0
     },
@@ -69,7 +69,7 @@ let o = {
       forceChatLayer: !0
     },
     drafts: {
-      type: a.DraftType.ChannelMessage,
+      type: s.DraftType.ChannelMessage,
       autoSave: !0
     },
     emojis: {
@@ -94,8 +94,8 @@ let o = {
     },
     submit: {
       button: !0,
-      ignorePreference: s.isMobile,
-      disableEnterToSubmit: s.isMobile,
+      ignorePreference: a.isMobile,
+      disableEnterToSubmit: a.isMobile,
       clearOnSubmit: !0,
       useDisabledStylesOnSubmit: !0
     },
@@ -115,8 +115,8 @@ let o = {
     },
     disableAutoFocus: !0,
     drafts: {
-      type: a.DraftType.ChannelMessage,
-      commandType: a.DraftType.SlashCommand
+      type: s.DraftType.ChannelMessage,
+      commandType: s.DraftType.SlashCommand
     },
     emojis: {
       button: !0
@@ -136,8 +136,8 @@ let o = {
     },
     submit: {
       button: !0,
-      ignorePreference: s.isMobile,
-      disableEnterToSubmit: s.isMobile,
+      ignorePreference: a.isMobile,
+      disableEnterToSubmit: a.isMobile,
       clearOnSubmit: !0,
       useDisabledStylesOnSubmit: !0
     },
@@ -150,7 +150,7 @@ let o = {
   d = {
     analyticsName: "edit",
     drafts: {
-      type: a.DraftType.ChannelMessage
+      type: s.DraftType.ChannelMessage
     },
     emojis: {
       button: !0
@@ -172,7 +172,7 @@ let o = {
   _ = {
     analyticsName: "forum",
     drafts: {
-      type: a.DraftType.ChannelMessage
+      type: s.DraftType.ChannelMessage
     },
     emojis: {
       button: !0
@@ -196,7 +196,7 @@ let o = {
   c = {
     analyticsName: "voice_channel_status",
     drafts: {
-      type: a.DraftType.ChannelMessage
+      type: s.DraftType.ChannelMessage
     },
     emojis: {
       button: !0
@@ -225,7 +225,7 @@ let o = {
     analyticsName: "thread_creation",
     attachments: !0,
     drafts: {
-      type: a.DraftType.FirstThreadMessage
+      type: s.DraftType.FirstThreadMessage
     },
     emojis: {
       button: !0
@@ -257,7 +257,7 @@ let o = {
     analyticsName: "create_forum_post",
     attachments: !0,
     drafts: {
-      type: a.DraftType.FirstThreadMessage
+      type: s.DraftType.FirstThreadMessage
     },
     gifs: {
       allowSending: !0
@@ -283,7 +283,7 @@ let o = {
     analyticsName: "create_poll",
     attachments: !0,
     drafts: {
-      type: a.DraftType.ChannelMessage
+      type: s.DraftType.ChannelMessage
     },
     emojis: {
       button: !0
@@ -302,7 +302,7 @@ let o = {
   f = {
     analyticsName: "user_profile",
     drafts: {
-      type: a.DraftType.ChannelMessage
+      type: s.DraftType.ChannelMessage
     },
     emojis: {
       button: !0
@@ -325,7 +325,7 @@ let o = {
   S = {
     analyticsName: "profile_bio_input",
     drafts: {
-      type: a.DraftType.ChannelMessage
+      type: s.DraftType.ChannelMessage
     },
     emojis: {
       button: !0
@@ -343,7 +343,7 @@ let o = {
   h = {
     analyticsName: "custom_gift_type",
     drafts: {
-      type: a.DraftType.ChannelMessage
+      type: s.DraftType.ChannelMessage
     },
     emojis: {},
     permissions: {
@@ -359,7 +359,7 @@ let o = {
   A = {
     analyticsName: "rules_input",
     drafts: {
-      type: a.DraftType.ChannelMessage
+      type: s.DraftType.ChannelMessage
     },
     permissions: {
       requireSendMessages: !0
@@ -373,7 +373,7 @@ let o = {
   m = {
     analyticsName: "forum_channel_guidelines",
     drafts: {
-      type: a.DraftType.ChannelMessage
+      type: s.DraftType.ChannelMessage
     },
     permissions: {
       requireSendMessages: !1
@@ -407,7 +407,7 @@ let o = {
     ATOMIC_REACTOR_REPLY_INPUT: {
       analyticsName: "atomic_reator_reply_input",
       drafts: {
-        type: a.DraftType.ChannelMessage
+        type: s.DraftType.ChannelMessage
       },
       permissions: {
         requireSendMessages: !0

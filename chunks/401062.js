@@ -13,8 +13,8 @@ n.r(t), n.d(t, {
     return R
   }
 });
-var i, r, s = n("392711"),
-  a = n("544891"),
+var i, r, a = n("392711"),
+  s = n("544891"),
   o = n("570140"),
   l = n("100527"),
   u = n("367907"),
@@ -33,7 +33,7 @@ var i, r, s = n("392711"),
 
 function p(e) {
   let t = new AbortController,
-    n = (0, s.throttle)(n => {
+    n = (0, a.throttle)(n => {
       E.default.getVoiceChannelId() !== e && t.abort()
     }, 1e3);
   return {
@@ -46,23 +46,23 @@ function O(e, t, n) {
   var i;
   let {
     abortController: r,
-    onRequestProgress: s
+    onRequestProgress: a
   } = p(e), o = null !== (i = f.default.getState().animationType) && void 0 !== i ? i : A.VoiceChannelEffectAnimationType.BASIC, u = {
     animation_type: o,
     animation_id: (0, h.sampleAnimationId)(o, h.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
   };
-  a.HTTP.post({
+  s.HTTP.post({
     url: m.Endpoints.CUSTOM_CALL_SOUNDS(e),
     body: u,
     signal: r.signal,
-    onRequestProgress: s
+    onRequestProgress: a
   }).then(m.NOOP_NULL, () => {
     if (r.signal.aborted) return
   }), (0, c.default)([l.default.CHANNEL_CALL], n, t, _.AnalyticsSoundType.ENTRY)
 }
 
 function R(e, t, n, i) {
-  var r, s;
+  var r, a;
   let o = d.default.getCustomEmojiById(null !== (r = t.emojiId) && void 0 !== r ? r : ""),
     {
       abortController: l,
@@ -71,9 +71,9 @@ function R(e, t, n, i) {
     E = {
       sound_id: t.soundId,
       emoji_id: t.emojiId,
-      emoji_name: null !== (s = t.emojiName) && void 0 !== s ? s : null == o ? void 0 : o.name
+      emoji_name: null !== (a = t.emojiName) && void 0 !== a ? a : null == o ? void 0 : o.name
     };
-  t.guildId !== N.DEFAULT_SOUND_GUILD_ID && (E.source_guild_id = t.guildId), a.HTTP.post({
+  t.guildId !== N.DEFAULT_SOUND_GUILD_ID && (E.source_guild_id = t.guildId), s.HTTP.post({
     url: m.Endpoints.SEND_SOUNDBOARD_SOUND(e),
     body: E,
     signal: l.signal,
@@ -88,7 +88,7 @@ let C = async e => {
     emoji: n,
     location: i,
     animationType: r,
-    animationId: s,
+    animationId: a,
     isPremium: l
   } = e;
   if (null == n || S.default.isOnCooldown) return;
@@ -98,14 +98,14 @@ let C = async e => {
       emoji_id: n.id,
       emoji_name: n.name,
       animation_type: u,
-      animation_id: s
+      animation_id: a
     } : {
       emoji_id: null,
       emoji_name: n.optionallyDiverseSequence,
       animation_type: u,
-      animation_id: s
+      animation_id: a
     };
-    await a.HTTP.post({
+    await s.HTTP.post({
       url: m.Endpoints.VOICE_CHANNEL_EFFECTS(t.id),
       body: e
     }), L(t, n, i, u), o.default.dispatch({
@@ -126,8 +126,8 @@ let C = async e => {
 }, L = (e, t, n, i) => {
   let {
     unicode: r,
-    custom: s,
-    customExternal: a,
+    custom: a,
+    customExternal: s,
     managed: o,
     managedExternal: l,
     animated: d
@@ -137,8 +137,8 @@ let C = async e => {
     guild_id: e.getGuildId(),
     location: n,
     emoji_unicode: r,
-    emoji_custom: s,
-    emoji_custom_external: a,
+    emoji_custom: a,
+    emoji_custom_external: s,
     emoji_managed: o,
     emoji_managed_external: l,
     emoji_animated: d,

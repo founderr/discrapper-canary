@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("442837"),
+  a = n.n(r),
+  s = n("442837"),
   o = n("420660"),
   l = n("199902"),
   u = n("158776"),
@@ -33,7 +33,7 @@ function S(e) {
     customStatusActivity: N,
     status: p,
     isMobile: O
-  } = (0, a.useStateFromStoresObject)([l.default, u.default], () => {
+  } = (0, s.useStateFromStoresObject)([l.default, u.default], () => {
     let e = null != l.default.getAnyStreamForUser(t.id);
     return {
       activity: u.default.findActivity(t.id, t => {
@@ -51,7 +51,7 @@ function S(e) {
       status: u.default.getStatus(t.id),
       isMobile: u.default.isMobileOnline(t.id)
     }
-  }), R = s()(f.header, {
+  }), R = a()(f.header, {
     [f.noCustomStatusMargin]: null == N
   });
   return (0, i.jsxs)("header", {

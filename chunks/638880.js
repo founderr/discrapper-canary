@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("812206"),
   r = n("592125"),
-  s = n("944486"),
-  a = n("594174"),
+  a = n("944486"),
+  s = n("594174"),
   o = n("867176"),
   l = n("566620"),
   u = n("882347"),
@@ -25,9 +25,9 @@ async function f(e) {
     locationObject: S,
     embeddedActivitiesManager: h,
     analyticsLocations: A
-  } = e, m = r.default.getChannel(f), N = null == m ? void 0 : m.getGuildId(), p = null == N || "" === N, O = a.default.getCurrentUser();
+  } = e, m = r.default.getChannel(f), N = null == m ? void 0 : m.getGuildId(), p = null == N || "" === N, O = s.default.getCurrentUser();
   if (null == m || p && !m.isPrivate() || null == f || null == O) return Promise.resolve(!1);
-  if (s.default.getVoiceChannelId() === f && (null == n ? void 0 : n.id) === t) return (0, E.default)(N, f), Promise.resolve(!0);
+  if (a.default.getVoiceChannelId() === f && (null == n ? void 0 : n.id) === t) return (0, E.default)(N, f), Promise.resolve(!0);
   if (!await (0, u.confirmActivityLaunchChecks)({
       applicationId: t,
       application: i.default.getApplication(t),

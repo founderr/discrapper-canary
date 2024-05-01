@@ -1,7 +1,7 @@
 "use strict";
 let i;
 n.r(t);
-var r, s, a, o, l = n("569048"),
+var r, a, s, o, l = n("569048"),
   u = n.n(l),
   d = n("167006"),
   _ = n.n(d),
@@ -24,9 +24,9 @@ class C extends(o = I.default.Store) {
     let {
       targetType: i,
       targetUserId: r,
-      targetApplicationId: s
+      targetApplicationId: a
     } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return i === S.InviteTargetTypes.STREAM && null != r ? null === (t = A[e]) || void 0 === t ? void 0 : t[r] : i === S.InviteTargetTypes.EMBEDDED_APPLICATION && null != s ? null === (n = m[e]) || void 0 === n ? void 0 : n[s] : h[e]
+    return i === S.InviteTargetTypes.STREAM && null != r ? null === (t = A[e]) || void 0 === t ? void 0 : t[r] : i === S.InviteTargetTypes.EMBEDDED_APPLICATION && null != a ? null === (n = m[e]) || void 0 === n ? void 0 : n[a] : h[e]
   }
   getFriendInvite() {
     return i
@@ -38,12 +38,12 @@ class C extends(o = I.default.Store) {
     return null != i && !O && !R
   }
 }
-a = "InstantInviteStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
-  value: a,
+s = "InstantInviteStore", (a = "displayName") in(r = C) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new C(T.default, {
+}) : r[a] = s, t.default = new C(T.default, {
   CONNECTION_OPEN: function() {
     h = {}, A = {}, m = {}, N = {}, i = null, O = !1, R = !1, p = !1
   },

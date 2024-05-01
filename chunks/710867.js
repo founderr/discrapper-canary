@@ -8,8 +8,8 @@ t.default = e => {
     profileEffectConfig: t,
     onReady: n
   } = e, {
-    pendingRef: s,
-    setPending: a
+    pendingRef: a,
+    setPending: s
   } = (0, r.default)(t.effects, n);
   return (0, i.jsx)("div", {
     children: t.effects.map(e => (0, i.jsx)("img", {
@@ -21,7 +21,7 @@ t.default = e => {
         position: "absolute"
       },
       onLoad: () => {
-        a(s.current - 1), s.current = s.current - 1
+        s(a.current - 1), a.current = a.current - 1
       }
     }, e.src))
   })

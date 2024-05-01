@@ -16,8 +16,8 @@ n.r(t), n.d(t, {
     return I
   }
 });
-var i, r, s = n("442837"),
-  a = n("223892"),
+var i, r, a = n("442837"),
+  s = n("223892"),
   o = n("674180"),
   l = n("496675"),
   u = n("594174"),
@@ -33,21 +33,21 @@ function c(e) {
         isOwner: n,
         canManageGuildRoleSubscriptions: i,
         isGuildEligibleForRoleSubscriptions: r,
-        isExpeditedMonetizationOnboardingGuild: s,
-        isUserInCreatorMonetizationEligibleCountry: a,
+        isExpeditedMonetizationOnboardingGuild: a,
+        isUserInCreatorMonetizationEligibleCountry: s,
         shouldRestrictUpdatingRoleSubscriptionSettings: o
       } = e;
-      return !!t.hasFeature(_.GuildFeatures.COMMUNITY) && !!i && (!o || !!n) && (!!(t.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE) || t.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!r || !!s) && n && a)
+      return !!t.hasFeature(_.GuildFeatures.COMMUNITY) && !!i && (!o || !!n) && (!!(t.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE) || t.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!r || !!a) && n && s)
     }(e)) return 3;
   let {
     guild: t,
     isOwner: n,
     isUserInCreatorMonetizationEligibleCountry: i,
     isMonetizationWaitlistEnabledForGuild: r,
-    isGuildEligibleForRoleSubscriptions: s,
-    isExpeditedMonetizationOnboardingGuild: a
+    isGuildEligibleForRoleSubscriptions: a,
+    isExpeditedMonetizationOnboardingGuild: s
   } = e;
-  return n && !i && r ? 1 : n && r && (s || a) && !t.hasFeature(_.GuildFeatures.COMMUNITY) ? 2 : 0
+  return n && !i && r ? 1 : n && r && (a || s) && !t.hasFeature(_.GuildFeatures.COMMUNITY) ? 2 : 0
 }
 
 function E(e) {
@@ -56,14 +56,14 @@ function E(e) {
 
 function I(e) {
   let t = (0, d.useGuildEligibleForRoleSubscriptions)(null == e ? void 0 : e.id),
-    n = (0, a.useIsExpeditedOnboardingGuild)(e),
-    i = (0, a.useIsMonetizationWaitlistEnabledForGuild)(null == e ? void 0 : e.id),
+    n = (0, s.useIsExpeditedOnboardingGuild)(e),
+    i = (0, s.useIsMonetizationWaitlistEnabledForGuild)(null == e ? void 0 : e.id),
     r = T(e),
-    l = (0, s.useStateFromStores)([u.default], () => {
+    l = (0, a.useStateFromStores)([u.default], () => {
       let t = u.default.getCurrentUser();
       return null != t && (null == e ? void 0 : e.isOwner(t)) === !0
     }),
-    _ = (0, a.useIsUserInCreatorMonetizationEligibleCountry)(),
+    _ = (0, s.useIsUserInCreatorMonetizationEligibleCountry)(),
     {
       shouldRestrictUpdatingCreatorMonetizationSettings: E
     } = (0, o.useShouldRestrictUpdatingCreatorMonetizationSettings)(null == e ? void 0 : e.id);
@@ -80,7 +80,7 @@ function I(e) {
 }
 
 function T(e) {
-  return (0, s.useStateFromStores)([l.default], () => f(e), [e])
+  return (0, a.useStateFromStores)([l.default], () => f(e), [e])
 }
 
 function f(e) {

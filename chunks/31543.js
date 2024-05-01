@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  s = n("143927"),
-  a = n("260866"),
+  a = n("143927"),
+  s = n("260866"),
   o = n("461745"),
   l = n("806966"),
   u = n("28546"),
@@ -22,7 +22,7 @@ let I = r.forwardRef(function(e, t) {
   } = (0, u.useExpressionPickerStore)(e => ({
     searchQuery: e.searchQuery,
     isSearchSuggestion: e.isSearchSuggestion
-  }), s.default), m = l.StickerPickerStore.useStore(e => e.searchPlaceholder), N = l.StickerPickerStore.useStore(e => e.inspectedExpressionPosition, s.default), p = r.useCallback(e => {
+  }), a.default), m = l.StickerPickerStore.useStore(e => e.searchPlaceholder), N = l.StickerPickerStore.useStore(e => e.inspectedExpressionPosition, a.default), p = r.useCallback(e => {
     var t;
     l.StickerPickerStore.setActiveCategoryIndex("" === e ? 0 : _.INACTIVE_CATEGORY_INDEX), l.StickerPickerStore.setInspectedExpressionPosition(0, 0), l.StickerPickerStore.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = I.current) || void 0 === t || t.scrollTo(0)
   }, [I]), O = r.useCallback(() => {
@@ -57,7 +57,7 @@ let I = r.forwardRef(function(e, t) {
         "aria-haspopup": "grid",
         "aria-controls": _.GRID_NAVIGATOR_ID,
         "aria-expanded": !0,
-        "aria-activedescendant": (0, a.makeGridId)(_.GRID_NAVIGATOR_ID, N.columnIndex, N.rowIndex)
+        "aria-activedescendant": (0, s.makeGridId)(_.GRID_NAVIGATOR_ID, N.columnIndex, N.rowIndex)
       }
     })
   })

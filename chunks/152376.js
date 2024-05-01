@@ -24,8 +24,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("392711"),
   r = n("524437"),
-  s = n("570140"),
-  a = n("92114"),
+  a = n("570140"),
+  s = n("92114"),
   o = n("367907"),
   l = n("962086"),
   u = n("160404"),
@@ -47,7 +47,7 @@ function A(e, t, n, i) {
   }
   let r = E.default.getChannelIdFlags(e, t);
   !n && (r = (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.FAVORITED, !1));
-  let a = (0, f.getCurrentChannelSettings)(e, t),
+  let s = (0, f.getCurrentChannelSettings)(e, t),
     _ = {
       flags: (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, n)
     };
@@ -57,12 +57,12 @@ function A(e, t, n, i) {
         [t]: _
       }
     }
-  }), s.default.dispatch({
+  }), a.default.dispatch({
     type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE",
     guildId: e,
     channelId: t,
     settings: _
-  }), (0, f.trackChannelNotificationSettingsUpdate)(e, t, _, a, f.NotificationLabel.optedIn(n), i), g(e), I.default.track(S.AnalyticEvents.CHANNEL_LIST_UPDATED, {
+  }), (0, f.trackChannelNotificationSettingsUpdate)(e, t, _, s, f.NotificationLabel.optedIn(n), i), g(e), I.default.track(S.AnalyticEvents.CHANNEL_LIST_UPDATED, {
     ...(0, o.collectGuildAnalyticsMetadata)(e),
     ...(0, o.collectChannelAnalyticsMetadata)(c.default.getChannel(t)),
     action_type: n ? "add" : "remove",
@@ -80,7 +80,7 @@ function m(e, t, n, i) {
   }
   let r = E.default.getChannelIdFlags(e, t);
   !n && (r = (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.FAVORITED, !1));
-  let a = (0, f.getCurrentChannelSettings)(e, t),
+  let s = (0, f.getCurrentChannelSettings)(e, t),
     _ = {
       flags: (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, n)
     };
@@ -95,12 +95,12 @@ function m(e, t, n, i) {
       }
     })
   }
-  s.default.dispatch({
+  a.default.dispatch({
     type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE",
     guildId: e,
     channelId: t,
     settings: _
-  }), (0, f.trackChannelNotificationSettingsUpdate)(e, t, _, a, f.NotificationLabel.optedIn(n), i), g(e), I.default.track(S.AnalyticEvents.CHANNEL_LIST_UPDATED, {
+  }), (0, f.trackChannelNotificationSettingsUpdate)(e, t, _, s, f.NotificationLabel.optedIn(n), i), g(e), I.default.track(S.AnalyticEvents.CHANNEL_LIST_UPDATED, {
     ...(0, o.collectGuildAnalyticsMetadata)(e),
     ...(0, o.collectChannelAnalyticsMetadata)(c.default.getChannel(t)),
     action_type: n ? "add" : "remove",
@@ -112,7 +112,7 @@ async function N(e, t) {
     [e]: {
       channel_overrides: t
     }
-  }), s.default.dispatch({
+  }), a.default.dispatch({
     type: "USER_GUILD_SETTINGS_REMOVE_PENDING_CHANNEL_UPDATES",
     guildId: e,
     updates: t
@@ -138,7 +138,7 @@ function O(e, t) {
       }
     }), n) {
     let t = (0, T.setFlag)(E.default.getGuildFlags(e), h.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON, !0);
-    a.default.updateGuildAndChannelNotificationSettings(e, {
+    s.default.updateGuildAndChannelNotificationSettings(e, {
       flags: t,
       channel_overrides: r
     }, f.NotificationLabels.OptedIn), I.default.track(S.AnalyticEvents.CHANNEL_LIST_UPDATED, {
@@ -146,7 +146,7 @@ function O(e, t) {
       action_type: "add_many_and_enable_guild",
       location: i
     })
-  } else a.default.updateChannelOverrideSettingsBulk(e, r, f.NotificationLabels.OptedIn), I.default.track(S.AnalyticEvents.CHANNEL_LIST_UPDATED, {
+  } else s.default.updateChannelOverrideSettingsBulk(e, r, f.NotificationLabels.OptedIn), I.default.track(S.AnalyticEvents.CHANNEL_LIST_UPDATED, {
     ...(0, o.collectGuildAnalyticsMetadata)(e),
     action_type: "add_many",
     location: i
@@ -161,7 +161,7 @@ function R(e, t, n) {
     return
   }
   let i = E.default.getGuildFlags(e);
-  a.default.updateGuildNotificationSettings(e, {
+  s.default.updateGuildNotificationSettings(e, {
     flags: (0, T.setFlag)(i, h.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON, t)
   }, f.NotificationLabel.optedIn(t)), I.default.track(S.AnalyticEvents.CHANNEL_LIST_UPDATED, {
     ...(0, o.collectGuildAnalyticsMetadata)(e),
@@ -173,7 +173,7 @@ function R(e, t, n) {
 function C(e, t, n, i) {
   if (null == e || u.default.isFullServerPreview(e)) return;
   let r = E.default.getChannelIdFlags(e, t);
-  !(0, T.hasFlag)(r, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) && n && (r = (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, !0)), a.default.updateChannelOverrideSettings(e, t, {
+  !(0, T.hasFlag)(r, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) && n && (r = (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, !0)), s.default.updateChannelOverrideSettings(e, t, {
     flags: (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.FAVORITED, n)
   }, f.NotificationLabel.favorited(n)), I.default.track(S.AnalyticEvents.CHANNEL_LIST_UPDATED, {
     ...(0, o.collectGuildAnalyticsMetadata)(e),
@@ -187,7 +187,7 @@ function g(e) {
 }
 
 function L(e, t) {
-  s.default.dispatch({
+  a.default.dispatch({
     type: "DISMISS_FAVORITE_SUGGESTION",
     guildId: e,
     channelId: t

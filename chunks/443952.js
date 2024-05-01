@@ -24,8 +24,8 @@ var s = a("45792"),
   A = a("228488"),
   N = a("996106"),
   v = a("914946"),
-  L = a("452426"),
-  R = a("561205"),
+  R = a("452426"),
+  L = a("561205"),
   O = a("600027"),
   M = a("852926"),
   P = a("186901"),
@@ -91,7 +91,7 @@ t.default = {
     scope: {
       [P.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, L.default)(e).required().keys({
+    validation: e => (0, R.default)(e).required().keys({
       user_id: e.string().required(),
       type: e.number().required().valid([x.ActivityActionTypes.JOIN]),
       content: e.string().min(0).max(1024),
@@ -117,7 +117,7 @@ t.default = {
     scope: {
       [P.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, L.default)(e).required().keys({
+    validation: e => (0, R.default)(e).required().keys({
       type: e.number().required().valid([x.ActivityActionTypes.JOIN]),
       user_id: e.string().required(),
       session_id: e.string().required(),
@@ -195,7 +195,7 @@ t.default = {
       if (null == n) throw new N.default({
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      let s = null === (t = (0, R.default)()) || void 0 === t ? void 0 : t.id;
+      let s = null === (t = (0, L.default)()) || void 0 === t ? void 0 : t.id;
       if (null == s) throw new N.default({
         errorCode: x.RPCErrors.UNKNOWN_ERROR
       }, "Unable to find selected channel");
@@ -253,7 +253,7 @@ t.default = {
       if (!(0, I.hasFlag)(null !== (t = a.application.flags) && void 0 !== t ? t : 0, x.ApplicationFlags.EMBEDDED)) throw new N.default({
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
-      let l = (0, R.default)();
+      let l = (0, L.default)();
       if (null == l) throw new N.default({
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "No channel found");

@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return o
   },
   isAvatarDecorationRecord: function() {
-    return a
+    return s
   }
 });
 var i = n("979554"),
   r = n("656698");
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -18,7 +18,7 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let a = e => e instanceof o;
+let s = e => e instanceof o;
 class o extends r.default {
   static fromServer(e) {
     return new o({
@@ -27,6 +27,6 @@ class o extends r.default {
     })
   }
   constructor(e) {
-    super(e), s(this, "asset", void 0), s(this, "label", void 0), this.type = i.CollectiblesItemType.AVATAR_DECORATION, this.asset = e.asset, this.label = e.label
+    super(e), a(this, "asset", void 0), a(this, "label", void 0), this.type = i.CollectiblesItemType.AVATAR_DECORATION, this.asset = e.asset, this.label = e.label
   }
 }

@@ -2,7 +2,7 @@
 n.r(t), n("47120");
 var i = n("442837"),
   r = n("570140");
-class s extends i.Store {
+class a extends i.Store {
   allGuildIds() {
     return this.guildIds
   }
@@ -40,4 +40,4 @@ class s extends i.Store {
     }) : e[t] = n
   }
 }
-t.default = new s
+t.default = new a

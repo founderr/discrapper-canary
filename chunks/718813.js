@@ -42,12 +42,12 @@ let N = (0, _.makeLazy)({
     webpackId: "869779",
     name: "ChannelSettings"
   }),
-  L = (0, _.makeLazy)({
+  R = (0, _.makeLazy)({
     createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("93521"), a.e("18249")]).then(a.bind(a, "838819")),
     webpackId: "838819",
     name: "CollectiblesShop"
   }),
-  R = (0, _.makeLazy)({
+  L = (0, _.makeLazy)({
     createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("66635"), a.e("33053"), a.e("49146"), a.e("75475"), a.e("58227"), a.e("85093"), a.e("85552"), a.e("43502")]).then(a.bind(a, "994763")),
     webpackId: "994763",
     name: "GuildSettings"
@@ -55,8 +55,8 @@ let N = (0, _.makeLazy)({
   O = {
     [g.Layers.USER_SETTINGS]: () => (0, s.jsx)(N, {}),
     [g.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(v, {}),
-    [g.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(R, {}),
-    [g.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(L, {})
+    [g.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(L, {}),
+    [g.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(R, {})
   },
   M = "SHOWN",
   P = "HIDDEN",

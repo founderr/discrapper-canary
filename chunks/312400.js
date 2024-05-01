@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   NewUserUnreadsEntryPointExperiment: function() {
-    return a
+    return s
   },
   NotificationsExperiment: function() {
     return r
   },
   UnreadsEntryPointExperiment: function() {
-    return s
+    return a
   }
 });
 var i = n("818083");
@@ -26,7 +26,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  a = (0, i.createExperiment)({
     kind: "user",
     id: "2024-01_unreads",
     label: "Unreads Experiment (grey-dot mode)",
@@ -61,7 +61,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  a = (0, i.createExperiment)({
+  s = (0, i.createExperiment)({
     kind: "user",
     id: "2024-03_unreads_new_users",
     label: "Unreads Experiment (grey-dot mode) (new users)",

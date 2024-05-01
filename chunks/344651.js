@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("392711"),
   r = n.n(i);
 n("724522");
-var s = n("442837"),
-  a = n("570140"),
+var a = n("442837"),
+  s = n("570140"),
   o = n("749210"),
   l = n("821849"),
   u = n("232567"),
@@ -41,12 +41,12 @@ let M = new d.default("ConnectionStore"),
     };
     let i = (0, f.createChannelRecordFromServer)(t),
       r = A.default.getChannel(t.id),
-      s = null == r ? void 0 : r.merge({
+      a = null == r ? void 0 : r.merge({
         ...i,
         recipients: r.recipients,
         bitrate: null !== (n = i.bitrate) && void 0 !== n ? n : r.bitrate
       });
-    return e.channels.push(null != s ? s : i), e
+    return e.channels.push(null != a ? a : i), e
   }, e => "CHANNEL_UPDATE" !== e),
   P = new v.default(D.socket, (e, t) => ((e = null == e ? {
     type: "SOUNDBOARD_SOUNDS_RECEIVED",
@@ -93,14 +93,14 @@ function k(e) {
 }
 
 function V(e) {
-  a.default.dispatch(e).catch(t => D.socket.resetSocketOnDispatchError({
+  s.default.dispatch(e).catch(t => D.socket.resetSocketOnDispatchError({
     error: t,
     action: e.type
   }))
 }
 
 function x(e, t, n) {
-  var i, s, a;
+  var i, a, s;
   let {
     roles: o,
     nick: l,
@@ -113,7 +113,7 @@ function x(e, t, n) {
     communication_disabled_until: T,
     unusual_dm_activity_until: f
   } = n, S = m.default.getMember(e, t.id);
-  (!(null != S && S.nick === l && S.avatar === u && r().isEqual(S.roles, o)) || (null === (i = S.avatarDecoration) || void 0 === i ? void 0 : i.asset) !== (null == d ? void 0 : d.asset) || (null === (s = S.avatarDecoration) || void 0 === s ? void 0 : s.skuId) !== (null == d ? void 0 : d.sku_id) || S.premiumSince !== c || S.isPending !== E || S.joinedAt !== I || S.communicationDisabledUntil !== T || S.flags !== _ || (null !== (a = S.unusualDMActivityUntil) && void 0 !== a ? a : null) !== (null != f ? f : null)) && V({
+  (!(null != S && S.nick === l && S.avatar === u && r().isEqual(S.roles, o)) || (null === (i = S.avatarDecoration) || void 0 === i ? void 0 : i.asset) !== (null == d ? void 0 : d.asset) || (null === (a = S.avatarDecoration) || void 0 === a ? void 0 : a.skuId) !== (null == d ? void 0 : d.sku_id) || S.premiumSince !== c || S.isPending !== E || S.joinedAt !== I || S.communicationDisabledUntil !== T || S.flags !== _ || (null !== (s = S.unusualDMActivityUntil) && void 0 !== s ? s : null) !== (null != f ? f : null)) && V({
     type: "GUILD_MEMBER_ADD",
     guildId: e,
     user: t,
@@ -165,21 +165,21 @@ function Y(e) {
     user: n,
     status: i,
     activities: r,
-    clientStatus: s,
-    broadcast: a
+    clientStatus: a,
+    broadcast: s
   } = e;
   b.add({
     guildId: t,
     user: n,
     status: i,
-    clientStatus: s,
+    clientStatus: a,
     activities: r,
-    broadcast: a
+    broadcast: s
   })
 }
 B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGuildIds([e.id]), e => {
   I.default.initialGuild.measure(() => {
-    s.default.Emitter.batched(() => {
+    a.default.Emitter.batched(() => {
       let t = L.hydrateInitialGuild(e, D.socket.identifyStartTime);
       null != p.default.getCurrentUser() && (V({
         type: "GUILD_CREATE",
@@ -208,7 +208,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
   })
 }), w(["READY_SUPPLEMENTAL"], e => {
   I.default.readySupplemental.measure(() => {
-    s.default.Emitter.batched(() => {
+    a.default.Emitter.batched(() => {
       var t, n;
       e = I.default.hydrateReadySupplemental.measure(() => L.hydrateReadySupplementalPayload(e, D.socket.identifyStartTime));
       let i = e => e.map(e => ({
@@ -222,15 +222,15 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
       r.forEach(e => {
         e.presences = i(e.presences || [])
       });
-      let s = e.presences ? i(e.presences) : [],
-        a = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map(e => (0, f.createChannelRecordFromServer)(e)),
+      let a = e.presences ? i(e.presences) : [],
+        s = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map(e => (0, f.createChannelRecordFromServer)(e)),
         o = null !== (n = e.game_invites) && void 0 !== n ? n : [];
       I.default.dispatchReadySupplemental.measure(() => {
         V({
           type: "CONNECTION_OPEN_SUPPLEMENTAL",
           guilds: r,
-          presences: s,
-          lazyPrivateChannels: a,
+          presences: a,
+          lazyPrivateChannels: s,
           gameInvites: o
         })
       });
@@ -281,15 +281,15 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
     return
   }
   I.default.ready.measure(() => {
-    s.default.Emitter.batched(() => {
+    a.default.Emitter.batched(() => {
       let t = (e = I.default.hydrateReady.measure(() => L.hydrateReadyPayloadPrioritized(e, D.socket.identifyStartTime, n))).private_channels.map(e => (0, f.createChannelRecordFromServer)(e)),
         i = e.guilds.filter(e => !0 === e.unavailable && !0 !== e.geo_restricted).map(e => e.id),
         r = e.guilds.filter(e => !0 !== e.unavailable),
-        s = e.guilds.filter(e => !0 === e.geo_restricted);
+        a = e.guilds.filter(e => !0 === e.geo_restricted);
       r.forEach(e => {
         e.presences = []
       });
-      let a = null == e.user_settings_proto ? void 0 : (0, T.b64ToPreloadedUserSettingsProto)(e.user_settings_proto);
+      let s = null == e.user_settings_proto ? void 0 : (0, T.b64ToPreloadedUserSettingsProto)(e.user_settings_proto);
       I.default.dispatchReady.measure(() => {
         var n;
         V({
@@ -317,13 +317,13 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
           pendingPayments: e.pending_payments,
           countryCode: null !== (n = e.country_code) && void 0 !== n ? n : void 0,
           guildJoinRequests: e.guild_join_requests || [],
-          userSettingsProto: a,
+          userSettingsProto: s,
           apiCodeVersion: e.api_code_version,
           auth: e.auth,
           notificationSettings: {
             flags: e.notification_settings.flags
           },
-          geoRestrictedGuilds: s
+          geoRestrictedGuilds: a
         })
       }), null != e.auth_token && V({
         type: "UPDATE_TOKEN",
@@ -562,7 +562,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
     guildId: e.id
   })
 }), w(["GUILD_MEMBERS_CHUNK"], e => {
-  s.default.Emitter.batched(() => {
+  a.default.Emitter.batched(() => {
     U.add({
       guildId: e.guild_id,
       members: e.members,
@@ -572,21 +572,21 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
         user: n,
         status: i,
         client_status: r,
-        activities: s,
-        broadcast: a
+        activities: a,
+        broadcast: s
       } = t;
       return Y({
         guildId: e.guild_id,
         user: n,
         status: i,
-        activities: s,
+        activities: a,
         clientStatus: r,
-        broadcast: a
+        broadcast: s
       })
     }), v.default.flush("GUILD_MEMBERS_CHUNK")
   })
 }), w(["THREAD_MEMBER_LIST_UPDATE"], e => {
-  s.default.Emitter.batched(() => {
+  a.default.Emitter.batched(() => {
     V({
       type: "THREAD_MEMBER_LIST_UPDATE",
       guildId: e.guild_id,
@@ -597,16 +597,16 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
         user: n,
         status: i,
         client_status: r,
-        activities: s,
-        broadcast: a
+        activities: a,
+        broadcast: s
       } = t;
       return Y({
         guildId: e.guild_id,
         user: n,
         status: i,
-        activities: s,
+        activities: a,
         clientStatus: r,
-        broadcast: a
+        broadcast: s
       })
     }), v.default.flush()
   })
@@ -937,7 +937,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
     })
   })
 }), w(["GUILD_MEMBER_LIST_UPDATE"], e => {
-  s.default.Emitter.batched(() => {
+  a.default.Emitter.batched(() => {
     let t = t => {
       if (null == t.member) return;
       let {

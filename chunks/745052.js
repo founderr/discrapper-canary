@@ -23,8 +23,8 @@ var n = a("735250"),
   A = a("984370"),
   N = a("797614"),
   v = a("359110"),
-  L = a("6025"),
-  R = a("897473"),
+  R = a("6025"),
+  L = a("897473"),
   O = a("108427"),
   M = a("970731"),
   P = a("210887"),
@@ -156,7 +156,7 @@ function es(e) {
     pageWidth: t,
     onSidebarResize: a
   } = e, s = (0, u.useStateFromStores)([x.default], () => x.default.getSidebarState(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(null == s ? void 0 : s.channelId));
-  if (null == s || s.type !== R.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+  if (null == s || s.type !== L.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
   return (0, n.jsx)(S.default, {
     sidebarType: S.ChatSidebarType.MessageRequestSidebar,
@@ -248,14 +248,14 @@ let eo = (0, h.default)(function(e) {
     [d, E] = s.useState(!1),
     h = (0, u.useStateFromStores)([x.default], () => {
       let e = x.default.getSidebarState(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
-      return null != e && e.type === R.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
+      return null != e && e.type === L.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
     }),
     _ = null == h ? void 0 : h.channelId,
     C = null != h,
     m = (0, k.useIsEitherTypeOfMessageRequest)(_),
     S = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), L.default.closeChannelSidebar(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
   let [p, g] = s.useState(Z.MessageRequestSections.REQUESTS);
   return (0, I.usePageTitle)({

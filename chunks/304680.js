@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return d
   },
   close: function() {
-    return a
+    return s
   },
   open: function() {
-    return s
+    return a
   },
   openReplay: function() {
     return o
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
 var i = n("570140"),
   r = n("579806");
 
-function s(e) {
+function a(e) {
   i.default.dispatch({
     type: "RTC_DEBUG_MODAL_OPEN",
     section: e
@@ -31,7 +31,7 @@ function s(e) {
   })
 }
 
-function a() {
+function s() {
   i.default.dispatch({
     type: "RTC_DEBUG_MODAL_CLOSE"
   })

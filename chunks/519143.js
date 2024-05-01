@@ -2,15 +2,15 @@
 n.r(t), n("47120");
 var i = n("355467"),
   r = n("147913"),
-  s = n("400407");
-class a extends r.default {
+  a = n("400407");
+class s extends r.default {
   constructor(...e) {
     var t, n, r;
     super(...e), t = this, n = "actions", r = {
       POST_CONNECTION_OPEN: () => {
         let {
           enabled: e
-        } = s.LocalizedPricingPromoManagerExperiment.getCurrentConfig({
+        } = a.LocalizedPricingPromoManagerExperiment.getCurrentConfig({
           location: "cd74f0_1"
         }, {
           autoTrackExposure: !1
@@ -25,4 +25,4 @@ class a extends r.default {
     }) : t[n] = r
   }
 }
-t.default = new a
+t.default = new s

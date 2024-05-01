@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("829968"),
+  a = n.n(r),
+  s = n("829968"),
   o = n("346656"),
   l = n("438071"),
   u = n("474936"),
@@ -57,7 +57,7 @@ let c = {
           default:
             return 80
         }
-      }(h))), null == (t = (0, a.default)(T, t)) && null != E) {
+      }(h))), null == (t = (0, s.default)(T, t)) && null != E) {
       let e = function(e) {
         switch (e) {
           case c.XSMALL:
@@ -72,13 +72,13 @@ let c = {
         }
       }(h);
       return (0, i.jsx)(o.default, {
-        className: s()(_.gameIcon, S, f),
+        className: a()(_.gameIcon, S, f),
         guild: E,
         size: e
       })
     }
     if (null == t) return (0, i.jsx)(l.default, {
-      className: s()(_.gameIcon, h, f)
+      className: a()(_.gameIcon, h, f)
     });
     let A = null == r ? void 0 : r.name,
       m = null != A && "" !== A ? d.default.Messages.APPLICATION_ICON_A11Y_LABEL.format({
@@ -87,7 +87,7 @@ let c = {
     return (0, i.jsx)("img", {
       alt: m,
       src: t,
-      className: s()(_.gameIcon, h, f)
+      className: a()(_.gameIcon, h, f)
     })
   };
 E.Sizes = c, t.default = E
