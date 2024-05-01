@@ -7,10 +7,10 @@ a.r(t), a.d(t, {
 var n = a("735250"),
   s = a("470079"),
   l = a("481060"),
-  i = a("703656"),
+  i = a("725568"),
   r = a("134726"),
-  o = a("308083"),
-  u = a("981631"),
+  o = a("603839"),
+  u = a("308083"),
   d = a("689938"),
   c = a("422906");
 
@@ -24,8 +24,19 @@ function f(e) {
     guildId: t,
     location: "ClanUpsellNotice"
   }), E = s.useCallback(() => {
-    (0, i.transitionTo)(u.Routes.GUILD_DISCOVERY)
-  }, []);
+    (0, i.openFullScreenLayer)(e => {
+      let {
+        closeLayer: a
+      } = e;
+      return (0, n.jsx)(o.default, {
+        onClose: a,
+        guildId: t,
+        gameId: f
+      })
+    }, {
+      layerKey: u.CLAN_SETUP_MODAL_LAYER_KEY
+    })
+  }, [f, t]);
   return a ? (0, n.jsxs)(l.Clickable, {
     onClick: E,
     className: c.upsellContainer,
@@ -37,7 +48,7 @@ function f(e) {
     }), (0, n.jsx)(l.Text, {
       variant: "text-sm/semibold",
       color: "header-primary",
-      children: f === o.VALORANT_ID ? d.default.Messages.CLAN_UPSELL_CONTENT_VALORANT : f === o.GENSHIN_ID ? d.default.Messages.CLAN_UPSELL_CONTENT_GENSHIN : d.default.Messages.CLAN_UPSELL_CONTENT
+      children: f === u.VALORANT_ID ? d.default.Messages.CLAN_UPSELL_CONTENT_VALORANT : f === u.GENSHIN_ID ? d.default.Messages.CLAN_UPSELL_CONTENT_GENSHIN : d.default.Messages.CLAN_UPSELL_CONTENT
     })]
   }) : null
 }
