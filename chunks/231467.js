@@ -149,7 +149,7 @@ function v(e) {
             className: R.cardFooterOtherCount,
             children: (0, i.jsx)(o.Text, {
               variant: "text-xs/medium",
-              color: "interactive-normal",
+              color: "always-white",
               children: "+".concat(r.length)
             })
           })]
