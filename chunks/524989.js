@@ -38,7 +38,7 @@ t.default = function(e) {
     renderOverflow: s,
     className: d,
     maxLines: _,
-    overflowWidth: c = 65,
+    initialOverflowWidth: c = 65,
     spacing: E = 8
   } = e, [I, T] = r.useState(() => ({
     parentWidth: 0,
@@ -60,14 +60,18 @@ t.default = function(e) {
   });
   return r.useLayoutEffect(() => {
     T(e => {
-      var n;
-      let i = [...e.widths];
-      return null === (n = S.current) || void 0 === n || n.childNodes.forEach((e, t) => {
+      var n, i, r;
+      let s = [...e.widths],
+        a = null !== (r = null === (n = S.current) || void 0 === n ? void 0 : n.childNodes.length) && void 0 !== r ? r : 0,
+        o = e.overflow.length > 0,
+        l = e.overflowWidth;
+      return null === (i = S.current) || void 0 === i || i.childNodes.forEach((e, t) => {
         let n = e.offsetWidth;
-        i[t] = n
+        o && t === a - 1 ? l = n : s[t] = n
       }), u(t, {
         ...e,
-        widths: i
+        widths: s,
+        overflowWidth: l
       })
     })
   }, [S, t, T]), (0, i.jsxs)("div", {
