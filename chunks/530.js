@@ -58,7 +58,7 @@ function _(e) {
           text: u.default.Messages.USER_PROFILE_PRONOUNS,
           children: (0, i.jsx)(a.Text, {
             variant: h,
-            className: d.userTag,
+            className: d.pronouns,
             children: I
           })
         })]
