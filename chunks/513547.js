@@ -173,6 +173,7 @@ let S = {
     fractionLost: !0,
     framesCaptured: !0,
     framesRendered: !0,
+    noiseCancellerFrames: !0,
     noiseCancellerProcessTime: !0,
     sinkWantAsInt: !0,
     sumOfSquaredFramesDurations: !0,
