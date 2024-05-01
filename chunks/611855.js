@@ -12,7 +12,7 @@ t.default = function(e) {
     className: t,
     color: n = "header-primary",
     textOpacity: a = .9,
-    bgOpacity: u = .2
+    bgOpacity: u = .4
   } = e;
   return (0, s.jsxs)(i.Text, {
     variant: "text-xxs/medium",
