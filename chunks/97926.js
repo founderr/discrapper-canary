@@ -56,14 +56,19 @@ t.default = () => {
       }
       if (T && !o) return -1;
       if (f && !S) return 1;
-      let m = e.targetedContent.includes(u.QuestContent.GIFT_INVENTORY_FOR_YOU),
-        _ = t.targetedContent.includes(u.QuestContent.GIFT_INVENTORY_FOR_YOU);
-      if (m && !T && !o && _ && !f && !S) return 0;
-      if (m && !T && !o) return -1;
-      if (_ && !f && !S) return 1;
-      let g = o && d,
-        h = S && E;
-      return g && !h ? 1 : !g && h ? -1 : 0
+      let m = (0, c.isTargetedForContent)(e, u.QuestContent.QUEST_BAR),
+        _ = (0, c.isTargetedForContent)(t, u.QuestContent.QUEST_BAR);
+      if (m && _) return 0;
+      if (m) return -1;
+      if (_) return 1;
+      let g = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
+        h = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
+      if (g && !T && !o && h && !f && !S) return 0;
+      if (g && !T && !o) return -1;
+      if (h && !f && !S) return 1;
+      let I = o && d,
+        N = S && E;
+      return I && !N ? 1 : !I && N ? -1 : 0
     }).map(e => e.id);
     return p.current = !0, C.current = e, e
   }, [I]), O = n.useRef(null), x = n.useMemo(() => {
