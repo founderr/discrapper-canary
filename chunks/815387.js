@@ -652,7 +652,8 @@ let eR = Object.freeze({
     })
   },
   [eN.MessageTypes.VOICE_HANGOUT_INVITE]: void 0,
-  [eN.MessageTypes.POLL_RESULT]: C.default
+  [eN.MessageTypes.POLL_RESULT]: C.default,
+  [eN.MessageTypes.CHANGELOG]: void 0
 });
 t.default = a.memo(function(e) {
   let {

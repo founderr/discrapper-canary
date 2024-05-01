@@ -12973,14 +12973,13 @@ html .progress__00e29 {
     flex: 0 0 auto
 }
 
-.wildcards__62f49 {
-    display: inline-flex;
-    flex: 1 1 auto;
-    overflow: hidden
-}
-
-.wildcardsOverride__26026 {
-    color: var(--text-normal)
+.wildCardText_ed09a2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 12px;
+    font-weight: 600
 }
 
 .container__86b23 {
