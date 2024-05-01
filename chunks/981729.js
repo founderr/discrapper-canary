@@ -23,8 +23,8 @@ var i, r, s, a = n("735250"),
   E = n("873546"),
   I = n("374470"),
   T = n("846519"),
-  f = n("186325"),
-  S = n("426945"),
+  f = n("377527"),
+  S = n("186325"),
   h = n("607070"),
   A = n("153850"),
   m = n("4922");
@@ -130,10 +130,10 @@ let p = Object.freeze({}),
       ...r
     } = e, {
       reducedMotion: s
-    } = o.useContext(f.AccessibilityPreferencesContext);
+    } = o.useContext(S.AccessibilityPreferencesContext);
     return (0, c.useTransition)(t, {
       keys: e => e ? "tooltip" : "empty",
-      config: S.TOOLTIP_SPRING_CONFIG,
+      config: f.TOOLTIP_SPRING_CONFIG,
       from: s.enabled ? g : C,
       enter: L,
       leave: s.enabled ? g : C,
