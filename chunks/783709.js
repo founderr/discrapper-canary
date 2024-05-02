@@ -74,7 +74,7 @@ function x(e) {
     channel: r,
     messageId: l.id,
     interactionData: l.interactionData
-  })), [r, l.id, l.interactionData]), D = (0, I.useNullableUserAuthor)(null === (t = l.interaction) || void 0 === t ? void 0 : t.user, r), P = a.useMemo(() => e.compact ? (0, p.default)((0, C.dateFormat)(d()(), "LT")) : null, [e.compact]), y = (0, f.useIsActivitiesInTextEnabled)(r.id, "ExecutedCommand"), U = l.interaction;
+  })), [r, l.id, l.interactionData]), D = (0, I.useNullableUserAuthor)(null === (t = l.interaction) || void 0 === t ? void 0 : t.user, r), P = a.useMemo(() => e.compact ? (0, p.default)((0, C.dateFormat)(d()(), "LT")) : null, [e.compact]), y = (0, f.useIsActivitiesInTextEnabled)(r.id, !0, "ExecutedCommand"), U = l.interaction;
   if (null == U || null == D) return null;
   let j = () => {
     let t = function(e, t) {

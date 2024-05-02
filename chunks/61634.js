@@ -78,7 +78,7 @@ function O(e) {
   }(e, n);
   let i = (0, x.default)(e),
     R = (0, r.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForGuild(e)),
-    O = (0, d.useIsActivitiesInTextEnabled)(null === (t = R[0]) || void 0 === t ? void 0 : t.channelId, "GuildMediaState"),
+    O = (0, d.useIsActivitiesInTextEnabled)(null === (t = R[0]) || void 0 === t ? void 0 : t.channelId, !1, "GuildMediaState"),
     {
       guildHasVoice: D,
       guildHasVideo: b,

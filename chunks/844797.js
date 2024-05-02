@@ -19,7 +19,7 @@ function u(e) {
     channelId: t,
     SelectedChannelStore: n,
     ChannelStore: i
-  } = e, r = i.getChannel(t), a = (0, s.isActivitiesInTextEnabled)(r, "isActivityInTextChannel");
+  } = e, r = i.getChannel(t), a = (0, s.isActivitiesInTextEnabled)(r, !1, "isActivityInTextChannel");
   return !!((null == r ? void 0 : r.type) === l.ChannelTypes.GUILD_TEXT && a || null != r && r.isPrivate() && a && null == n.getVoiceChannelId()) || !1
 }
 

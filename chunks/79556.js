@@ -251,7 +251,7 @@ function P(e) {
   } = (0, m.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), O = (0, i.useStateFromStores)([T.default], () => {
     let e = T.default.getCurrentUser();
     return null != e && (!t.isNSFW() || e.nsfwAllowed)
-  }, [t]), D = (0, c.useIsActivitiesInTextEnabled)(t.id, "webGuildTextChannel"), b = (0, v.default)({
+  }, [t]), D = (0, c.useIsActivitiesInTextEnabled)(t.id, !1, "webGuildTextChannel"), b = (0, v.default)({
     channel: t,
     isChannelCollapsed: !1,
     isChannelSelected: o,

@@ -27,7 +27,7 @@ function u(e) {
       isJoinAction: !l,
       text: l ? o.default.Messages.START : o.default.Messages.EMBEDDED_ACTIVITIES_JOIN,
       tooltip: void 0
-    }, d = (0, i.isActivitiesInTextEnabled)(a, "EmbeddedApplicationInstanceUtils");
+    }, d = (0, i.isActivitiesInTextEnabled)(a, l, "EmbeddedApplicationInstanceUtils");
     if (null != t && null != s && t.launchId === s.launchId) return {
       ...u,
       disabled: !0,

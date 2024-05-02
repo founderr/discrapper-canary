@@ -18580,7 +18580,7 @@ span.clanTag_f4aadc {
 }
 
 .activityCardContainer__6615c:hover {
-    border: 1px solid var(--border-subtle);
+    outline: 1px solid var(--border-subtle);
     box-shadow: var(--shadow-low-hover)
 }
 
@@ -23895,10 +23895,15 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     margin-top: 10px
 }
 
-.actionsSimplifiedProfile__448de,
 .actionsProfile_e93ceb,
 .actionsProfileV2_eea61b {
     margin-left: 20px;
+    margin-top: 0;
+    flex: 1 1 auto
+}
+
+.actionsSimplifiedProfile__448de {
+    margin-left: 10px;
     margin-top: 0;
     flex: 1 1 auto
 }
