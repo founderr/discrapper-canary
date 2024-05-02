@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("979651"),
   I = n("808268"),
   A = n("502568"),
-  N = n("488131"),
-  v = n("689938");
+  v = n("488131"),
+  N = n("689938");
 
 function x(e) {
   let {
@@ -36,7 +36,7 @@ function x(e) {
   function i() {
     s(e => !e)
   }
-  let r = v.default.Messages.MORE;
+  let r = N.default.Messages.MORE;
   return (0, a.jsx)(o.Popout, {
     shouldShow: n,
     animation: o.Popout.Animation.NONE,
@@ -73,21 +73,21 @@ function M(e) {
     onSelect: l
   } = e, s = (0, u.default)(t), I = (0, m.default)(t), A = (0, C.default)(t.id), x = (0, E.default)(t), M = (0, S.default)({
     id: t.id,
-    label: v.default.Messages.COPY_ID_THREAD
+    label: N.default.Messages.COPY_ID_THREAD
   }), R = (0, d.default)(t), L = (0, c.default)(t), y = (0, f.default)(t, "Toolbar Overflow"), O = (0, p.default)(t), j = (0, h.default)(t), P = (0, g.default)(t), D = _.UseThreadSidebar.useSetting(), b = (0, r.useStateFromStores)([T.default], () => !i().isEmpty(T.default.getVoiceStatesForChannel(t.id)));
   return (0, a.jsxs)(o.Menu, {
     navId: "thread-context",
     onClose: n,
-    "aria-label": v.default.Messages.THREAD_ACTIONS_MENU_LABEL,
+    "aria-label": N.default.Messages.THREAD_ACTIONS_MENU_LABEL,
     onSelect: l,
     children: [(0, a.jsxs)(o.MenuGroup, {
       children: [y, j]
     }), (0, a.jsxs)(o.MenuGroup, {
       children: [x, O, A, D && !b ? (0, a.jsx)(o.MenuItem, {
         id: "open",
-        label: v.default.Messages.OPEN_IN_SPLIT_VIEW,
+        label: N.default.Messages.OPEN_IN_SPLIT_VIEW,
         action: function() {
-          (0, N.openThreadSidebarForViewing)(t)
+          (0, v.openThreadSidebarForViewing)(t)
         }
       }) : null]
     }), (0, a.jsxs)(o.MenuGroup, {

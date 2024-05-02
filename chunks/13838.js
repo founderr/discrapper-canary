@@ -14,13 +14,13 @@ var a = n("392711"),
   h = n("979651"),
   _ = n("996106"),
   C = n("914946"),
-  m = n("238679"),
-  S = n("452426"),
+  S = n("238679"),
+  m = n("452426"),
   p = n("295424"),
   I = n("863141"),
   T = n("186901"),
   g = n("981631");
-let A = e => (0, S.default)(e).required().keys({
+let A = e => (0, m.default)(e).required().keys({
   channel_id: e.string().required()
 });
 
@@ -39,7 +39,7 @@ function N(e) {
     errorCode: g.RPCErrors.INVALID_CHANNEL
   }, "Invalid nsfw channel id: ".concat(s.id))
 }
-let v = e => (0, S.default)(e).keys({
+let v = e => (0, m.default)(e).keys({
   channel_id: e.string().allow(null)
 });
 
@@ -56,7 +56,7 @@ function R(e) {
 let L = {
   [g.RPCEvents.GUILD_STATUS]: {
     scope: g.OAuth2Scopes.RPC,
-    validation: e => (0, S.default)(e).required().keys({
+    validation: e => (0, m.default)(e).required().keys({
       guild_id: e.string().required()
     }),
     handler(e) {
@@ -91,7 +91,7 @@ let L = {
     scope: {
       [T.RPC_SCOPE_CONFIG.ANY]: [g.OAuth2Scopes.RPC, g.OAuth2Scopes.RPC_VOICE_READ]
     },
-    validation: e => (0, S.default)(e).required().keys({
+    validation: e => (0, m.default)(e).required().keys({
       channel_id: e.string().required()
     }),
     handler(e) {
@@ -124,7 +124,7 @@ let L = {
     scope: {
       [T.RPC_SCOPE_CONFIG.ANY]: [g.OAuth2Scopes.RPC, g.OAuth2Scopes.RPC_VOICE_READ]
     },
-    validation: e => (0, S.default)(e).required().keys({
+    validation: e => (0, m.default)(e).required().keys({
       channel_id: e.string().required()
     }),
     handler(e) {
@@ -157,7 +157,7 @@ let L = {
     scope: {
       [T.RPC_SCOPE_CONFIG.ANY]: [g.OAuth2Scopes.RPC, g.OAuth2Scopes.RPC_VOICE_READ]
     },
-    validation: e => (0, S.default)(e).required().keys({
+    validation: e => (0, m.default)(e).required().keys({
       channel_id: e.string().required()
     }),
     handler(e) {
@@ -284,7 +284,7 @@ let L = {
     },
     handler() {}
   },
-  [g.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: m.activityInstanceConnectedParticipantsUpdateEvent,
+  [g.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: S.activityInstanceConnectedParticipantsUpdateEvent,
   [g.RPCEvents.THERMAL_STATE_UPDATE]: {
     scope: {
       [T.RPC_SCOPE_CONFIG.ANY]: [T.RPC_AUTHENTICATED_SCOPE]

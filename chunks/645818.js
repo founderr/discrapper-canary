@@ -22,7 +22,7 @@ let _ = new Set([E.CloudSyncStateTypes.PUSHING, E.CloudSyncStateTypes.PULLING]),
     [E.CloudSyncStateTypes.CONFLICT]: u.default,
     [E.CloudSyncStateTypes.ERROR]: u.default
   });
-class m extends s.PureComponent {
+class S extends s.PureComponent {
   componentDidMount() {
     this.getIsRecentlySynced() && this.setRecentlySyncedTimeout()
   }
@@ -117,4 +117,4 @@ t.default = l.default.connectStores([o.default], e => {
   return {
     cloudSyncState: o.default.getState(t.id, t.branchId)
   }
-})(m)
+})(S)

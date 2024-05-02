@@ -31,8 +31,8 @@ var a = s("735250"),
   R = s("210887"),
   M = s("740492"),
   v = s("695346"),
-  L = s("329013"),
-  D = s("333859"),
+  D = s("329013"),
+  L = s("333859"),
   P = s("981631"),
   j = s("921944"),
   b = s("959517"),
@@ -227,9 +227,9 @@ class W extends n.Component {
         children: [(0, a.jsx)("div", {
           className: y.title,
           children: U.default.Messages.THEME
-        }), (0, a.jsx)(L.ClientThemesSidebarButton, {})]
+        }), (0, a.jsx)(D.ClientThemesSidebarButton, {})]
       }),
-      children: [(0, a.jsx)(L.UserSettingsAppearanceClientThemes, {}), (0, a.jsx)(D.UserSettingsAppearanceInAppIcon, {}), (0, a.jsx)(u.FormSwitch, {
+      children: [(0, a.jsx)(D.UserSettingsAppearanceClientThemes, {}), (0, a.jsx)(L.UserSettingsAppearanceInAppIcon, {}), (0, a.jsx)(u.FormSwitch, {
         value: s && (0, d.isThemeLight)(e) && !t,
         disabled: e !== P.ThemeTypes.LIGHT || t || null != n,
         onChange: this.handleDarkSidebarChecked,

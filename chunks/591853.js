@@ -41,8 +41,8 @@ var u = n("442837"),
   T = n("475179"),
   I = n("220779"),
   A = n("201133"),
-  N = n("605236"),
-  v = n("543241"),
+  v = n("605236"),
+  N = n("543241"),
   x = n("359110"),
   M = n("12168"),
   R = n("592125"),
@@ -129,7 +129,7 @@ function et(e) {
     requestId: h
   } = e, m = (0, u.useStateFromStores)([H.default], () => H.default.isChannelReplyMode()), [p, E] = l.useState(null), g = (0, u.useStateFromStores)([y.default], () => y.default.can(Z.Permissions.SEND_MESSAGES, t)), T = (0, B.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
-  }), [v, x] = l.useState(!1), [M, L] = l.useState(!1), O = "#".concat(t.name), j = w.default.getName(t.guild_id, t.id, n), P = m ? q.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : q.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, D = async e => {
+  }), [N, x] = l.useState(!1), [M, L] = l.useState(!1), O = "#".concat(t.name), j = w.default.getName(t.guild_id, t.id, n), P = m ? q.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : q.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, D = async e => {
     if (null != e) {
       if (U.default.track(Z.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: K.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
@@ -137,7 +137,7 @@ function et(e) {
           guild_id: t.guild_id
         }), T) {
         let l;
-        if ((0, N.markDismissibleContentAsDismissed)(d.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), x(!0), L(!1), m) l = t;
+        if ((0, v.markDismissibleContentAsDismissed)(d.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), x(!0), L(!1), m) l = t;
         else {
           var a;
           let e = await _.default.getOrEnsurePrivateChannel(n.id);
@@ -158,7 +158,7 @@ function et(e) {
     }
   }, b = async e => {
     let a;
-    if (T && (0, N.markDismissibleContentAsDismissed)(d.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m) a = t;
+    if (T && (0, v.markDismissibleContentAsDismissed)(d.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m) a = t;
     else {
       let e = await _.default.openPrivateChannel(n.id, !1, !1),
         t = R.default.getChannel(e);
@@ -194,11 +194,11 @@ function et(e) {
   };
   return (0, a.jsxs)("div", {
     style: {
-      pointerEvents: v ? "none" : "all"
+      pointerEvents: N ? "none" : "all"
     },
     children: [(0, a.jsx)(z.default, {
       sent: M,
-      shown: v,
+      shown: N,
       className: X.toastContainer
     }), T ? (0, a.jsx)(W.default, {
       children: (0, a.jsxs)("div", {
@@ -247,7 +247,7 @@ let en = e => {
   let {
     channel: t,
     onClickSuggestion: n
-  } = e, l = (0, v.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
+  } = e, l = (0, N.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
     emoji: e,
     url: e.url
   } : {
@@ -410,7 +410,7 @@ function ei(e) {
     reactionImageAltText: d,
     generateReactionImage: f,
     isStreaming: C = !1
-  } = e, N = w.default.getName(i.guild_id, i.id, t), [v, M] = l.useState(!1), y = (0, u.useStateFromStores)([L.default], () => L.default.getGuild(s.guild_id)), P = (0, u.useStateFromStoresArray)([O.default], () => O.default.getVoiceStatesForChannel(s), [s]), b = async e => {
+  } = e, v = w.default.getName(i.guild_id, i.id, t), [N, M] = l.useState(!1), y = (0, u.useStateFromStores)([L.default], () => L.default.getGuild(s.guild_id)), P = (0, u.useStateFromStoresArray)([O.default], () => O.default.getVoiceStatesForChannel(s), [s]), b = async e => {
     let a = await _.default.openPrivateChannel(t.id, !1, !1),
       l = R.default.getChannel(a);
     o()(null != l, "DM channel must be defined");
@@ -471,9 +471,9 @@ function ei(e) {
       })]
     }), (0, a.jsx)("div", {
       className: X.voicePopoutDivider
-    }), v ? (0, a.jsx)(I.ReplyInput, {
+    }), N ? (0, a.jsx)(I.ReplyInput, {
       placeholder: q.default.Messages.TEXTAREA_PLACEHOLDER.format({
-        channel: "@".concat(N)
+        channel: "@".concat(v)
       }),
       onEnter: b,
       showEmojiButton: !0,

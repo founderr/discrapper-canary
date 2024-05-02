@@ -98,14 +98,14 @@ function v() {
         className: O.marginBottom20,
         type: E.FormTextTypes.DESCRIPTION,
         children: x.default.Messages.GUILD_TEMPLATE_SETTINGS_DESCRIPTION.format()
-      }), (0, l.jsx)(G, {}), (0, l.jsx)(E.FormDivider, {
+      }), (0, l.jsx)(j, {}), (0, l.jsx)(E.FormDivider, {
         className: L.divider
-      }), (0, l.jsx)(j, {})]
+      }), (0, l.jsx)(G, {})]
     })
   })
 }
 
-function j() {
+function G() {
   let {
     guild: e
   } = C.default.getProps();
@@ -162,7 +162,7 @@ function j() {
   })
 }
 
-function G() {
+function j() {
   return (0, l.jsxs)("div", {
     className: L.descriptionBox,
     children: [(0, l.jsxs)("div", {

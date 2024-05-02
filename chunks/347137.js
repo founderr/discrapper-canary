@@ -14,23 +14,23 @@ var a = n("735250"),
   h = n("150192"),
   _ = n("889010"),
   C = n("488905"),
-  m = n("731455"),
-  S = n("689938"),
+  S = n("731455"),
+  m = n("689938"),
   p = n("614563");
 let I = e => {
   switch (e) {
-    case m.CategoryId.Activity:
-      return m.CategoryIcons.Activity;
-    case m.CategoryId.Music:
-      return m.CategoryIcons.Music;
-    case m.CategoryId.Television:
-      return m.CategoryIcons.Television;
-    case m.CategoryId.Science:
-      return m.CategoryIcons.Science;
-    case m.CategoryId.Education:
-      return m.CategoryIcons.Education;
+    case S.CategoryId.Activity:
+      return S.CategoryIcons.Activity;
+    case S.CategoryId.Music:
+      return S.CategoryIcons.Music;
+    case S.CategoryId.Television:
+      return S.CategoryIcons.Television;
+    case S.CategoryId.Science:
+      return S.CategoryIcons.Science;
+    case S.CategoryId.Education:
+      return S.CategoryIcons.Education;
     default:
-      return m.CategoryIcons.Server
+      return S.CategoryIcons.Server
   }
 };
 t.default = function() {
@@ -50,10 +50,10 @@ t.default = function() {
     (0, E.maybeFetchGuildDiscoveryCategories)(!1, !0)
   }, [e]), (0, a.jsxs)(l.Scroller, {
     children: [(0, a.jsx)(C.DiscoverySidebarHeader, {
-      text: S.default.Messages.DISCOVER
+      text: m.default.Messages.DISCOVER
     }), (0, a.jsx)(f.default, {
       avatar: (0, a.jsx)(c.default, {}),
-      name: S.default.Messages.HOME,
+      name: m.default.Messages.HOME,
       focusProps: {
         offset: {
           right: 4,
@@ -61,9 +61,9 @@ t.default = function() {
           bottom: 1
         }
       },
-      onClick: () => g(m.CategoryId.Clans),
+      onClick: () => g(S.CategoryId.Clans),
       wrapContent: !0,
-      selected: e === m.CategoryId.Clans,
+      selected: e === S.CategoryId.Clans,
       className: p.categoryItem,
       selectedClassName: p.selectedCategoryItem,
       innerClassName: p.itemInner

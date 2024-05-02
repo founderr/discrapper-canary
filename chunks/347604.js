@@ -36,10 +36,10 @@ t.default = e => {
   } = (0, o.useStateFromStoresObject)([u.default], () => ({
     canEnableDiscovery: u.default.passesChecklist(t.id),
     isPendingSuccess: u.default.isPendingSuccess(t.id)
-  }), [t.id]), [D, v] = (0, o.useStateFromStoresArray)([S.default], () => [null, S.default.getMemberCount(t.id)], [t.id]), j = l.useCallback(() => {
+  }), [t.id]), [D, v] = (0, o.useStateFromStoresArray)([S.default], () => [null, S.default.getMemberCount(t.id)], [t.id]), G = l.useCallback(() => {
     null != s && s()
-  }, [s]), G = null;
-  return n ? M ? G = N.default.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !p && (G = N.default.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : G = N.default.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, a.jsxs)("div", {
+  }, [s]), j = null;
+  return n ? M ? j = N.default.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !p && (j = N.default.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : j = N.default.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, a.jsxs)("div", {
     className: g.container,
     children: [(0, a.jsx)("img", {
       alt: "",
@@ -93,14 +93,14 @@ t.default = e => {
         })
       })
     }), (0, a.jsx)(d.Tooltip, {
-      text: G,
+      text: j,
       children: e => (0, a.jsx)(d.Button, {
         ...e,
         className: g.enableButton,
         color: d.Button.Colors.BRAND,
         size: d.Button.Sizes.LARGE,
         disabled: !p || !n,
-        onClick: j,
+        onClick: G,
         children: N.default.Messages.GUILD_SETTINGS_SET_UP_DISCOVERY
       })
     }), (0, a.jsx)(f.default, {

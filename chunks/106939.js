@@ -21,8 +21,8 @@ var a = n("735250"),
   h = n("100527"),
   _ = n("906732"),
   C = n("252618"),
-  m = n("605236"),
-  S = n("984370"),
+  S = n("605236"),
+  m = n("984370"),
   p = n("797614"),
   I = n("108427"),
   T = n("210887"),
@@ -35,8 +35,8 @@ var a = n("735250"),
   O = n("792125"),
   M = n("280570"),
   P = n("914788"),
-  x = n("841409"),
-  y = n("652262"),
+  y = n("841409"),
+  x = n("652262"),
   D = n("880257"),
   b = n("631885"),
   U = n("830746"),
@@ -44,8 +44,8 @@ var a = n("735250"),
   G = n("521450"),
   w = n("292352"),
   k = n("981631"),
-  B = n("723359"),
-  F = n("921944"),
+  F = n("723359"),
+  B = n("921944"),
   H = n("689938"),
   V = n("611012");
 let Y = {
@@ -96,19 +96,19 @@ function z(e) {
     section: n,
     handleItemSelect: s
   } = e, l = (0, N.useUID)(), o = (0, b.usePendingRequestCount)();
-  return (0, a.jsxs)(S.default, {
+  return (0, a.jsxs)(m.default, {
     className: i()((0, O.getThemeClass)(t), V.sidebarTabBar),
     scrollable: r.isMobile,
     role: "navigation",
     "aria-labelledby": l,
     toolbar: !0,
-    children: [(0, a.jsx)(S.default.Icon, {
+    children: [(0, a.jsx)(m.default.Icon, {
       icon: v.default,
       "aria-hidden": !0
-    }), (0, a.jsx)(S.default.Title, {
+    }), (0, a.jsx)(m.default.Title, {
       id: l,
       children: H.default.Messages.FAMILY_CENTER_TITLE
-    }), (0, a.jsx)(S.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
+    }), (0, a.jsx)(m.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
       "aria-label": H.default.Messages.FAMILY_CENTER_TITLE,
       selectedItem: n,
       type: "top-pill",
@@ -134,20 +134,20 @@ function z(e) {
 function q() {
   let e = (0, D.default)(),
     t = (0, b.useAcceptedRequestsCount)(),
-    n = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
+    n = (0, S.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
     l = (0, u.useStateFromStores)([P.default], () => P.default.getIsInitialized()),
-    r = (0, y.useSelectedTeenId)(),
+    r = (0, x.useSelectedTeenId)(),
     {
       selectedTab: f,
       handleTabChange: h
-    } = (0, x.default)(),
+    } = (0, y.default)(),
     _ = (0, N.useUID)(),
-    S = A.default.getCurrentUser(),
+    m = A.default.getCurrentUser(),
     T = null != e,
-    g = l && null != S && !T;
+    g = l && null != m && !T;
   return (s.useEffect(() => {
-    (0, I.trackAppUIViewed)("family-center"), M.default.initialPageLoad(), !n && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
-      dismissAction: F.ContentDismissActionType.AUTO,
+    (0, I.trackAppUIViewed)("family-center"), M.default.initialPageLoad(), !n && (0, S.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+      dismissAction: B.ContentDismissActionType.AUTO,
       forceTrack: !0
     })
   }, []), s.useEffect(() => {
@@ -160,7 +160,7 @@ function q() {
     }), p.default.increment({
       name: o.MetricEvents.FAMILY_CENTER_VIEW
     }))
-  }, [l, T]), g) ? ((0, E.openAgeGateModal)(B.AgeGateSource.FAMILY_CENTER), null) : (0, a.jsxs)("main", {
+  }, [l, T]), g) ? ((0, E.openAgeGateModal)(F.AgeGateSource.FAMILY_CENTER), null) : (0, a.jsxs)("main", {
     className: i()(V.container),
     "aria-label": H.default.Messages.FAMILY_CENTER_TITLE,
     children: [(0, a.jsx)(C.AppPageTitle, {
@@ -184,20 +184,20 @@ function q() {
 function Q() {
   let {
     analyticsLocations: e
-  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, D.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([P.default], () => P.default.getIsInitialized()), S = (0, y.useSelectedTeenId)(), v = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
+  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, D.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, S.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([P.default], () => P.default.getIsInitialized()), m = (0, x.useSelectedTeenId)(), v = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
     selectedTab: R,
     handleTabChange: O
-  } = (0, x.default)(), U = (0, N.useUID)(), j = A.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
+  } = (0, y.default)(), U = (0, N.useUID)(), j = A.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
   if (s.useEffect(() => {
-      f.setHomeLink(k.Routes.FAMILY_CENTER), (0, I.trackAppUIViewed)("family-center"), !P.default.isLoading() && P.default.canRefetch() && M.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
-        dismissAction: F.ContentDismissActionType.AUTO,
+      f.setHomeLink(k.Routes.FAMILY_CENTER), (0, I.trackAppUIViewed)("family-center"), !P.default.isLoading() && P.default.canRefetch() && M.default.initialPageLoad(), !l && (0, S.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+        dismissAction: B.ContentDismissActionType.AUTO,
         forceTrack: !0
       })
     }, []), s.useEffect(() => {
       r && G && (L.default.track(k.AnalyticEvents.FAMILY_CENTER_VIEWED, {
         is_considered_adult: t,
         num_of_accepted_links: n,
-        selected_teen_id: S,
+        selected_teen_id: m,
         initial_page: w.FamilyCenterSubPageAnalyticsIds[R],
         source: w.FamilyCenterPageLocationAnalyticsIds[w.FamilyCenterPageLocation.SIDENAV]
       }), p.default.increment({
@@ -206,7 +206,7 @@ function Q() {
     }, [r, G]), s.useEffect(() => {
       let e = g.FamilyCenterEnabled.getSetting();
       r && t && void 0 === e && g.FamilyCenterEnabled.updateSetting(!0)
-    }, [r, t]), Y) return (0, E.openAgeGateModal)(B.AgeGateSource.FAMILY_CENTER), null;
+    }, [r, t]), Y) return (0, E.openAgeGateModal)(F.AgeGateSource.FAMILY_CENTER), null;
   let K = R !== w.FamilyCenterSubPages.SETTINGS ? R : w.FamilyCenterSubPages.ACTIVITY,
     q = W[K];
   return (0, a.jsx)(_.AnalyticsLocationProvider, {

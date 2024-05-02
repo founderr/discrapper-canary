@@ -27,8 +27,8 @@ var a = s("735250"),
   R = s("358085"),
   M = s("210887"),
   v = s("981631"),
-  L = s("689938"),
-  D = s("849564"),
+  D = s("689938"),
+  L = s("849564"),
   P = s("976587"),
   j = s("26673"),
   b = s("199100"),
@@ -46,10 +46,10 @@ function F(e) {
     label: null != e.name ? e.name : ""
   }));
   return (0, a.jsxs)(d.Dialog, {
-    className: i()(D.addGamePopout, P.elevationBorderHigh),
-    "aria-label": L.default.Messages.SETTINGS_GAMES_ADD_NEW_GAME,
+    className: i()(L.addGamePopout, P.elevationBorderHigh),
+    "aria-label": D.default.Messages.SETTINGS_GAMES_ADD_NEW_GAME,
     children: [(0, a.jsx)(d.SearchableSelect, {
-      placeholder: L.default.Messages.SELECT,
+      placeholder: D.default.Messages.SELECT,
       value: l,
       options: c,
       onChange: function(e) {
@@ -58,19 +58,19 @@ function F(e) {
     }), (0, a.jsx)(d.FormDivider, {
       className: i()(U.marginTop8, U.marginBottom8)
     }), (0, a.jsxs)("div", {
-      className: i()(D.actions, j.horizontal),
+      className: i()(L.actions, j.horizontal),
       children: [(0, a.jsx)(d.Button, {
-        className: D.cancelButton,
+        className: L.cancelButton,
         look: d.ButtonLooks.LINK,
         color: d.ButtonColors.PRIMARY,
         onClick: t,
-        children: L.default.Messages.CANCEL
+        children: D.default.Messages.CANCEL
       }), (0, a.jsx)(d.Button, {
         disabled: null == l,
         onClick: function() {
           null != l && (u.default.addGame(l), t())
         },
-        children: L.default.Messages.SETTINGS_GAMES_ADD_NEW_GAME
+        children: D.default.Messages.SETTINGS_GAMES_ADD_NEW_GAME
       })]
     })]
   })
@@ -83,10 +83,10 @@ function G(e) {
     nowPlaying: l = !1,
     isOverride: E
   } = e, m = (0, r.useStateFromStoresObject)([T.default, S.default, f.default], () => (0, S.transformForGameSettings)(s)), [x, R] = n.useState(!1), [M, P] = n.useState(null !== (t = m.name) && void 0 !== t ? t : "???"), U = i()(j.flexCenter, {
-    [D.game]: !l,
-    [D.activeGame]: l,
+    [L.game]: !l,
+    [L.activeGame]: l,
     [b.card]: !l,
-    [D.nowPlaying]: null != m && l
+    [L.nowPlaying]: null != m && l
   });
 
   function y() {
@@ -111,23 +111,23 @@ function G(e) {
     O.default.track(v.AnalyticEvents.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
       application_id: null == e ? void 0 : e.id,
       game_name: m.name
-    }), (0, d.showToast)((0, d.createToast)(L.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({
+    }), (0, d.showToast)((0, d.createToast)(D.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({
       gameName: m.name
     }), d.ToastType.SUCCESS)), R(!0)
   }
   return (0, a.jsxs)("div", {
     className: U,
     children: [(0, a.jsxs)("div", {
-      className: i()(D.gameNameLastPlayed, j.vertical),
+      className: i()(L.gameNameLastPlayed, j.vertical),
       children: [m.verified && !E ? (0, a.jsxs)("div", {
-        className: D.detectedApplication,
+        className: L.detectedApplication,
         children: [(0, a.jsx)("div", {
-          className: D.gameName,
+          className: L.gameName,
           children: m.name
         }), (0, a.jsx)(d.Tooltip, {
-          text: L.default.Messages.SETTINGS_GAMES_VERIFIED_ICON,
+          text: D.default.Messages.SETTINGS_GAMES_VERIFIED_ICON,
           children: e => (0, a.jsx)(_.default, {
-            className: D.gameVerifiedIcon,
+            className: L.gameVerifiedIcon,
             size: 18,
             color: o.default.unsafe_rawColors.BRAND_500.css,
             ...e,
@@ -139,7 +139,7 @@ function G(e) {
           })
         })]
       }) : (0, a.jsx)("input", {
-        className: i()(D.gameName, D.gameNameInput),
+        className: i()(L.gameName, L.gameNameInput),
         type: "text",
         maxLength: 128,
         value: M,
@@ -152,10 +152,10 @@ function G(e) {
           played: t,
           exePath: s
         } = m;
-        return l ? e = L.default.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE : null != t && "" !== t && (e = L.default.Messages.SETTINGS_GAMES_LAST_PLAYED.format({
+        return l ? e = D.default.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE : null != t && "" !== t && (e = D.default.Messages.SETTINGS_GAMES_LAST_PLAYED.format({
           when: t
         })), (0, a.jsx)("div", {
-          className: D.lastPlayed,
+          className: L.lastPlayed,
           children: (0, a.jsx)(g.default, {
             hoverText: null != s && "" !== s ? s.toUpperCase() : "",
             children: e
@@ -163,23 +163,23 @@ function G(e) {
         })
       }()]
     }), E ? null : x ? null : (0, a.jsx)("div", {
-      className: i()(j.flexCenter, j.noWrap, j.justifyBetween, D.toggleContainer),
+      className: i()(j.flexCenter, j.noWrap, j.justifyBetween, L.toggleContainer),
       children: (0, a.jsx)(d.Tooltip, {
-        text: L.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION,
+        text: D.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION,
         children: e => {
           let {
             onMouseEnter: t,
             onMouseLeave: s
           } = e;
           return (0, a.jsx)(d.Clickable, {
-            "aria-label": L.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION,
-            className: D.toggleIcon,
+            "aria-label": D.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION,
+            className: L.toggleIcon,
             onClick: w,
             onMouseEnter: t,
             onMouseLeave: s,
             children: (0, a.jsx)(N.default, {
-              className: D.toggleIconOn,
-              foreground: D.fill,
+              className: L.toggleIconOn,
+              foreground: L.fill,
               width: 24,
               height: 24
             })
@@ -190,29 +190,29 @@ function G(e) {
       let {
         detectable: e
       } = m, t = e ? (0, a.jsx)(h.default, {
-        className: D.toggleIconOn,
-        foreground: D.fill,
+        className: L.toggleIconOn,
+        foreground: L.fill,
         width: 24,
         height: 24
       }) : (0, a.jsx)(I.default, {
-        className: D.toggleIconOff,
-        background: D.fill,
-        foreground: D.fill,
+        className: L.toggleIconOff,
+        background: L.fill,
+        foreground: L.fill,
         width: 24,
         height: 24
       });
       return (0, a.jsx)("div", {
-        className: i()(j.flexCenter, j.noWrap, j.justifyBetween, D.toggleContainer),
+        className: i()(j.flexCenter, j.noWrap, j.justifyBetween, L.toggleContainer),
         children: (0, a.jsx)(d.Tooltip, {
-          text: L.default.Messages.SETTINGS_GAMES_TOGGLE_DETECTION,
+          text: D.default.Messages.SETTINGS_GAMES_TOGGLE_DETECTION,
           children: e => {
             let {
               onMouseEnter: s,
               onMouseLeave: n
             } = e;
             return (0, a.jsx)(d.Clickable, {
-              "aria-label": L.default.Messages.SETTINGS_GAMES_TOGGLE_DETECTION,
-              className: D.toggleIcon,
+              "aria-label": D.default.Messages.SETTINGS_GAMES_TOGGLE_DETECTION,
+              className: L.toggleIcon,
               onClick: k,
               onMouseEnter: s,
               onMouseLeave: n,
@@ -227,30 +227,30 @@ function G(e) {
         overlay: e,
         overlayWarn: t
       } = m, s = e ? (0, a.jsx)(p.default, {
-        className: D.toggleIconOn,
-        foreground: D.fill
+        className: L.toggleIconOn,
+        foreground: L.fill
       }) : (0, a.jsx)(C.default, {
-        className: D.toggleIconOff,
-        foreground: D.fill
+        className: L.toggleIconOff,
+        foreground: L.fill
       }), n = t ? (0, a.jsx)(d.Tooltip, {
-        text: L.default.Messages.SETTINGS_GAMES_OVERLAY_WARNING,
+        text: D.default.Messages.SETTINGS_GAMES_OVERLAY_WARNING,
         children: e => (0, a.jsx)("i", {
-          className: D.overlayWarningIcon,
+          className: L.overlayWarningIcon,
           ...e
         })
       }) : null;
       return (0, a.jsxs)("div", {
-        className: i()(j.flexCenter, j.noWrap, j.justifyBetween, D.toggleContainer),
+        className: i()(j.flexCenter, j.noWrap, j.justifyBetween, L.toggleContainer),
         children: [n, (0, a.jsx)(d.Tooltip, {
-          text: L.default.Messages.SETTINGS_GAMES_TOGGLE_OVERLAY,
+          text: D.default.Messages.SETTINGS_GAMES_TOGGLE_OVERLAY,
           children: t => {
             let {
               onMouseEnter: n,
               onMouseLeave: l
             } = t;
             return (0, a.jsx)(d.Clickable, {
-              "aria-label": L.default.Messages.SETTINGS_GAMES_TOGGLE_OVERLAY,
-              className: D.toggleIcon,
+              "aria-label": D.default.Messages.SETTINGS_GAMES_TOGGLE_OVERLAY,
+              className: L.toggleIcon,
               onClick: () => {
                 var t;
                 return t = !e, void u.default.toggleOverlay(m, t)
@@ -263,7 +263,7 @@ function G(e) {
         })]
       })
     }(), !l || E ? (0, a.jsx)(c.default, {
-      className: D.removeGame,
+      className: L.removeGame,
       onClick: y
     }) : null]
   })
@@ -271,15 +271,15 @@ function G(e) {
 
 function k() {
   return (0, a.jsx)("div", {
-    className: i()(j.flexCenter, D.notDetected, D.activeGame),
+    className: i()(j.flexCenter, L.notDetected, L.activeGame),
     children: (0, a.jsxs)("div", {
-      className: i()(D.gameNameLastPlayed, j.vertical),
+      className: i()(L.gameNameLastPlayed, j.vertical),
       children: [(0, a.jsx)("div", {
-        className: D.gameName,
-        children: L.default.Messages.SETTINGS_GAMES_NO_GAME_DETECTED
+        className: L.gameName,
+        children: D.default.Messages.SETTINGS_GAMES_NO_GAME_DETECTED
       }), (0, a.jsx)("div", {
-        className: D.lastPlayed,
-        children: L.default.Messages.SETTINGS_GAMES_NOT_PLAYING
+        className: L.lastPlayed,
+        children: D.default.Messages.SETTINGS_GAMES_NOT_PLAYING
       })]
     })
   })
@@ -316,16 +316,16 @@ t.default = function(e) {
   }));
   return n.useEffect(() => ((0, E.watchCandidateGames)(), E.stopWatchingCandidateGames), []), (0, a.jsxs)(d.FormSection, {
     tag: "h1",
-    title: s ? L.default.Messages.REGISTERED_GAMES : null,
+    title: s ? D.default.Messages.REGISTERED_GAMES : null,
     className: t,
     children: [null != o ? (0, a.jsx)(G, {
       rawGame: o,
       isOverride: u.has(o.exePath),
       nowPlaying: !0
     }, (0, S.gameKey)(o)) : (0, a.jsx)(k, {}), (0, a.jsxs)("div", {
-      className: i()(D.nowPlayingAdd, U.marginReset, U.marginTop8, U.marginBottom20),
+      className: i()(L.nowPlayingAdd, U.marginReset, U.marginTop8, U.marginBottom20),
       children: [(0, a.jsx)("span", {
-        children: L.default.Messages.SETTINGS_GAMES_NOT_SEEING_GAME
+        children: D.default.Messages.SETTINGS_GAMES_NOT_SEEING_GAME
       }), (0, a.jsx)(d.Popout, {
         renderPopout: e => {
           let {
@@ -342,21 +342,21 @@ t.default = function(e) {
           look: d.ButtonLooks.LINK,
           size: d.ButtonSizes.MIN,
           color: d.ButtonColors.LINK,
-          children: L.default.Messages.SETTINGS_GAMES_ADD_GAME
+          children: D.default.Messages.SETTINGS_GAMES_ADD_GAME
         })
       })]
     }), 0 === l.length ? (0, a.jsx)(w, {
       children: (0, a.jsx)(m.EmptyStateText, {
-        children: L.default.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
+        children: D.default.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
       })
     }) : (0, a.jsxs)(d.FormSection, {
       className: U.marginTop40,
       children: [(0, a.jsx)(d.FormTitle, {
         className: U.marginBottom4,
-        children: L.default.Messages.SETTINGS_GAMES_ADDED_GAMES_LABEL
+        children: D.default.Messages.SETTINGS_GAMES_ADDED_GAMES_LABEL
       }), (0, a.jsx)(d.FormText, {
         type: d.FormTextTypes.DESCRIPTION,
-        children: L.default.Messages.SETTINGS_GAMES_IGDB_ATTRIBUTION.format({
+        children: D.default.Messages.SETTINGS_GAMES_IGDB_ATTRIBUTION.format({
           igdbLink: "https://www.igdb.com/about"
         })
       }), l.map(e => (0, a.jsx)(G, {

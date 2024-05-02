@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("617136"),
   _ = n("272008"),
   C = n("113434"),
-  m = n("569984"),
-  S = n("497505"),
+  S = n("569984"),
+  m = n("497505"),
   p = n("918701"),
   I = n("865364"),
   T = n("340100"),
@@ -28,31 +28,31 @@ var a = n("735250"),
   O = n("46140"),
   M = n("689938"),
   P = n("861731");
-let x = s.forwardRef(function(e, t) {
+let y = s.forwardRef(function(e, t) {
   var n, l;
   let {
     className: I,
-    isExpanded: x,
+    isExpanded: y,
     isExpansionAnimationComplete: D,
     onCtxMenuOpen: b,
     onCtxMenuClose: U,
     onCtxMenuSelect: j,
     quest: G,
     useReducedMotion: w
-  } = e, k = (0, r.useStateFromStores)([m.default], () => m.default.isEnrolling(G.id), [G]), B = (0, C.useQuestFormattedDate)(G.config.expiresAt), F = (0, C.useQuestFormattedDate)(G.config.rewardCodeExpiresAt), H = s.useMemo(() => (0, p.isAssetAnimated)(G.config.assets.questBarHero), [G]), V = (0, R.useHasLaunchedGame)(G.config.applicationId), Y = s.useCallback(() => {
+  } = e, k = (0, r.useStateFromStores)([S.default], () => S.default.isEnrolling(G.id), [G]), F = (0, C.useQuestFormattedDate)(G.config.expiresAt), B = (0, C.useQuestFormattedDate)(G.config.rewardCodeExpiresAt), H = s.useMemo(() => (0, p.isAssetAnimated)(G.config.assets.questBarHero), [G]), V = (0, R.useHasLaunchedGame)(G.config.applicationId), Y = s.useCallback(() => {
     (0, _.enrollInQuest)(G.id, {
-      questContent: S.QuestContent.QUEST_BAR,
+      questContent: m.QuestContent.QUEST_BAR,
       questContentCTA: h.QuestContentCTA.ACCEPT_QUEST
     })
   }, [G]), W = (0, R.useHandleClaimQuestsReward)({
     quest: G,
-    location: S.QuestContent.QUEST_BAR
+    location: m.QuestContent.QUEST_BAR
   }), K = s.useCallback(() => {
     (0, L.openGameLink)(G, {
-      content: S.QuestContent.QUEST_BAR,
+      content: m.QuestContent.QUEST_BAR,
       ctaContent: h.QuestContentCTA.OPEN_GAME_LINK
     })
-  }, [G]), z = G.config.variants.includes(O.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)(G) > 0, [G]), Q = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Z = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, X = s.useMemo(() => (0, p.hasQuestCollectibleRewards)(G.config), [G.config]), J = x && D, $ = (0, p.getQuestBarHeroAssetUrl)(G), ee = (0, p.getQuestsInstructionsToWinReward)({
+  }, [G]), z = G.config.variants.includes(O.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)(G) > 0, [G]), Q = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Z = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, X = s.useMemo(() => (0, p.hasQuestCollectibleRewards)(G.config), [G.config]), J = y && D, $ = (0, p.getQuestBarHeroAssetUrl)(G), ee = (0, p.getQuestsInstructionsToWinReward)({
     quest: G
   }), et = (0, E.isWeb)(), en = s.useMemo(() => {
     let e = (0, u.getContrastingColor)(G.config.colors.primary, {
@@ -81,7 +81,7 @@ let x = s.forwardRef(function(e, t) {
             className: P.questProgressRewardTile,
             learnMoreStyle: "icon",
             quest: G,
-            questContent: S.QuestContent.QUEST_BAR
+            questContent: m.QuestContent.QUEST_BAR
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsx)(d.Heading, {
               color: "always-white",
@@ -92,9 +92,9 @@ let x = s.forwardRef(function(e, t) {
               color: "always-white",
               variant: "text-xxs/normal",
               children: Z ? M.default.Messages.QUESTS_CLAIM_BY.format({
-                expirationDate: F
-              }) : M.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: B
+              }) : M.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
+                expirationDate: F
               })
             })]
           })]
@@ -102,7 +102,7 @@ let x = s.forwardRef(function(e, t) {
           onOpen: b,
           onClose: U,
           onSelect: j,
-          questContent: S.QuestContent.QUEST_BAR,
+          questContent: m.QuestContent.QUEST_BAR,
           quest: G,
           shouldShowDisclosure: !1,
           showShareLink: !0,
@@ -130,7 +130,7 @@ let x = s.forwardRef(function(e, t) {
         children: ee
       }), (0, a.jsx)(T.default, {
         quest: G
-      }), !et && !q && !V && z && (0, a.jsx)(y, {
+      }), !et && !q && !V && z && (0, a.jsx)(x, {
         style: en,
         onClick: J ? K : void 0
       })]
@@ -147,7 +147,7 @@ let x = s.forwardRef(function(e, t) {
             onOpen: b,
             onClose: U,
             onSelect: j,
-            questContent: S.QuestContent.QUEST_BAR,
+            questContent: m.QuestContent.QUEST_BAR,
             quest: G,
             shouldShowDisclosure: !0,
             showShareLink: !0,
@@ -166,7 +166,7 @@ let x = s.forwardRef(function(e, t) {
             className: P.rewardTile,
             learnMoreStyle: "text",
             quest: G,
-            questContent: S.QuestContent.QUEST_BAR
+            questContent: m.QuestContent.QUEST_BAR
           }), (0, a.jsx)(d.Heading, {
             className: P.title,
             color: "always-white",
@@ -224,7 +224,7 @@ let x = s.forwardRef(function(e, t) {
   })
 });
 
-function y(e) {
+function x(e) {
   let {
     style: t,
     onClick: n
@@ -242,4 +242,4 @@ function y(e) {
     children: M.default.Messages.QUESTS_PLAY_GAME
   }) : null
 }
-t.default = x
+t.default = y

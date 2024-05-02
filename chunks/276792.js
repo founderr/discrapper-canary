@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   adaptAnnouncementModalVariant1: function() {
-    return S
+    return m
   }
 });
 var a = n("735250");
@@ -19,19 +19,19 @@ var s = n("524437"),
   h = n("981631"),
   _ = n("689938"),
   C = n("731396"),
-  m = n("74316");
+  S = n("74316");
 
-function S(e) {
+function m(e) {
   var t, n;
   let {
-    content: S,
+    content: m,
     renderModalProps: p,
     analyticsLocations: I,
     analyticsLocation: T,
     isLightTheme: g
-  } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(S.dismissKey)]), {
+  } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(m.dismissKey)]), {
     onClose: N
-  } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", L = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = p, v = null != m.button && "" !== m.button.copy ? m.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", L = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, o.transitionTo)(h.Routes.APPLICATION_STORE), N()
   } : () => (0, r.default)({
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
@@ -44,9 +44,9 @@ function S(e) {
     onClose: e => {
       e && N()
     }
-  }), O = "" !== S.helpArticleId ? () => (0, a.jsx)(i.Anchor, {
+  }), O = "" !== m.helpArticleId ? () => (0, a.jsx)(i.Anchor, {
     className: C.termsApplyAnchor,
-    href: c.default.getArticleURL(S.helpArticleId),
+    href: c.default.getArticleURL(m.helpArticleId),
     children: (0, a.jsx)(i.Heading, {
       variant: "heading-md/normal",
       className: C.termsApplyBodyText,
@@ -54,26 +54,26 @@ function S(e) {
     })
   }) : void 0, M = {
     type: "video",
-    src: g ? S.heroArtVideoLinkLightTheme : S.videoLink
+    src: g ? m.heroArtVideoLinkLightTheme : m.videoLink
   };
-  ("" !== S.heroArtImageLinkDarkTheme || "" !== S.heroArtImageLinkLightTheme) && (M = {
+  ("" !== m.heroArtImageLinkDarkTheme || "" !== m.heroArtImageLinkLightTheme) && (M = {
     type: "image",
-    src: g ? S.heroArtImageLinkLightTheme : S.heroArtImageLinkDarkTheme
+    src: g ? m.heroArtImageLinkLightTheme : m.heroArtImageLinkDarkTheme
   });
   let P = g ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
-    x = "" !== S.modalTopPill ? () => (0, a.jsx)(f.PremiumPillWithSparkles, {
-      text: S.modalTopPill,
+    y = "" !== m.modalTopPill ? () => (0, a.jsx)(f.PremiumPillWithSparkles, {
+      text: m.modalTopPill,
       className: C.modalTopPill,
       colorOptions: P
     }) : void 0;
   return {
     renderModalProps: p,
-    header: S.header,
-    modalTopExtra: x,
-    subHeader: S.subheader,
+    header: m.header,
+    modalTopExtra: y,
+    subHeader: m.subheader,
     subHeaderExtra: O,
     heroArt: M,
-    featureCards: S.featureCards.map(e => ({
+    featureCards: m.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
       imageSrc: g ? e.imageLinkLightTheme : e.imageLink,
@@ -98,10 +98,10 @@ function S(e) {
         children: [(0, a.jsx)("img", {
           alt: "",
           className: C.nitroIconSubHeader,
-          src: m
+          src: S
         }), v]
       })
     },
-    modalDismissibleContent: "" !== S.dismissKey ? Number(S.dismissKey) : void 0
+    modalDismissibleContent: "" !== m.dismissKey ? Number(m.dismissKey) : void 0
   }
 }

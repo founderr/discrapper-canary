@@ -18,7 +18,7 @@ t.default = e => {
     guildId: t,
     onClose: n,
     gameId: C
-  } = e, m = (0, i.useStateFromStores)([u.default], () => null == u.default.getStateForGuild(t).progress), S = (0, i.useStateFromStores)([r.default], () => r.default.useReducedMotion), [p, I] = s.useState(m && !S ? h.ClanSetupModalPages.INTRO_ANIMATION : h.ClanSetupModalPages.SETUP);
+  } = e, S = (0, i.useStateFromStores)([u.default], () => null == u.default.getStateForGuild(t).progress), m = (0, i.useStateFromStores)([r.default], () => r.default.useReducedMotion), [p, I] = s.useState(S && !m ? h.ClanSetupModalPages.INTRO_ANIMATION : h.ClanSetupModalPages.SETUP);
   s.useEffect(() => {
     null != C && (0, o.updateClanSetup)(t, {
       requiredGameId: C

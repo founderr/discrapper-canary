@@ -1,7 +1,7 @@
 "use strict";
 t.r(r), t.d(r, {
   default: function() {
-    return Z
+    return K
   }
 }), t("653041"), t("47120");
 var a = t("735250"),
@@ -37,8 +37,8 @@ var k = t("392750"),
   D = t("958328"),
   I = t("514866"),
   O = t("678639"),
-  P = t("351930"),
-  A = t("771751"),
+  A = t("351930"),
+  P = t("771751"),
   B = t("596768"),
   M = t("621060"),
   F = t("689938"),
@@ -130,7 +130,7 @@ function G() {
       }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") && (e.push({
         id: "trials",
         name: "Trials",
-        render: () => (0, a.jsx)(A.default, {})
+        render: () => (0, a.jsx)(P.default, {})
       }), e.push({
         id: "payments",
         name: "Payments",
@@ -138,7 +138,7 @@ function G() {
       }), e.push({
         id: "subscriptions",
         name: "Subscriptions",
-        render: () => (0, a.jsx)(P.default, {})
+        render: () => (0, a.jsx)(A.default, {})
       }), e.push({
         id: "billing",
         name: "Billing",
@@ -239,7 +239,7 @@ function W() {
   })
 }
 
-function Z(e) {
+function K(e) {
   let {
     mobile: r
   } = e;

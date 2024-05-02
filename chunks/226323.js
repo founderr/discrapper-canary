@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("586902"),
   _ = n("512384"),
   C = n("484459"),
-  m = n("103575"),
-  S = n("314897"),
+  S = n("103575"),
+  m = n("314897"),
   p = n("131951"),
   I = n("836946"),
   T = n("381238"),
@@ -55,7 +55,7 @@ let M = {
       getStatus: () => L.default.Messages.VOICE_CHANNEL_MUTED
     }
   },
-  x = {
+  y = {
     serverDeaf: {
       icon: o.HeadphonesDenyIcon,
       colorize: !0,
@@ -83,7 +83,7 @@ let M = {
     }
   };
 
-function y(e) {
+function x(e) {
   var t, s;
   let {
     channel: l,
@@ -91,12 +91,12 @@ function y(e) {
     nick: u,
     mute: d,
     deaf: c,
-    serverMute: S,
+    serverMute: m,
     serverDeaf: I
   } = e, T = (0, r.useStateFromStores)([p.default], () => p.default.isLocalMute(o.id)), g = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
-  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), y = null != u ? u : v.default.getName(o), {
+  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), x = null != u ? u : v.default.getName(o), {
     icon: D,
     colorize: b,
     getStatus: U
@@ -108,21 +108,21 @@ function y(e) {
       mute: s,
       localMute: l
     } = e, i = (0, f.useRedesignIconContext)().enabled;
-    if (t) return i ? x.serverDeaf : P.serverDeaf;
-    if (n) return i ? x.deaf : P.deaf;
-    if (a) return i ? x.serverMute : P.serverMute;
-    else if (l) return i ? x.localMute : P.mute;
-    else if (s) return i ? x.mute : P.mute
+    if (t) return i ? y.serverDeaf : P.serverDeaf;
+    if (n) return i ? y.deaf : P.deaf;
+    if (a) return i ? y.serverMute : P.serverMute;
+    else if (l) return i ? y.localMute : P.mute;
+    else if (s) return i ? y.mute : P.mute
   }({
     serverDeaf: I,
     deaf: c,
-    serverMute: S,
+    serverMute: m,
     mute: d,
     localMute: T
   })) && void 0 !== s ? s : {}, j = null != U ? L.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
-    userName: y,
+    userName: x,
     status: U()
-  }) : y;
+  }) : x;
 
   function G(e) {
     null != A ? (0, E.openContextMenuLazy)(e, async () => {
@@ -153,7 +153,7 @@ function y(e) {
       channelId: l.id
     }),
     position: "top",
-    renderPopout: e => (0, a.jsx)(m.default, {
+    renderPopout: e => (0, a.jsx)(S.default, {
       location: "RTCConnectionVoiceUsers",
       userId: o.id,
       guildId: A,
@@ -210,7 +210,7 @@ function D(e) {
       height: 16
     }),
     focusProps: M
-  }), E = (0, r.useStateFromStores)([S.default], () => S.default.getId(), []), [h, _] = function(e, t) {
+  }), E = (0, r.useStateFromStores)([m.default], () => m.default.getId(), []), [h, _] = function(e, t) {
     let n = [];
     for (let a of e) {
       if (a.user.id !== t) {
@@ -235,7 +235,7 @@ function D(e) {
           nick: s,
           voiceState: l
         } = e;
-        return t.id !== E ? (0, a.jsx)(y, {
+        return t.id !== E ? (0, a.jsx)(x, {
           channel: n,
           user: t,
           nick: s,

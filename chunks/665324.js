@@ -33,8 +33,8 @@ var a = s("735250"),
   M = s("267642"),
   D = s("358085"),
   v = s("999382"),
-  j = s("70409"),
-  G = s("981631"),
+  G = s("70409"),
+  j = s("981631"),
   U = s("710111"),
   P = s("689938"),
   b = s("823411");
@@ -86,8 +86,8 @@ function H(e) {
           return e = l, void(0, T.openGuildBoostingMarketingModal)({
             guildId: e,
             location: {
-              section: G.AnalyticsSections.GUILD_SETTINGS_SOUNDBOARD,
-              object: G.AnalyticsObjects.BOOST_GEM_ICON
+              section: j.AnalyticsSections.GUILD_SETTINGS_SOUNDBOARD,
+              object: j.AnalyticsObjects.BOOST_GEM_ICON
             }
           })
         },
@@ -215,7 +215,7 @@ function V(e) {
           currentTier: E,
           availableSounds: _
         })
-      }), (0, a.jsx)(j.default, {
+      }), (0, a.jsx)(G.default, {
         guild: t,
         numSounds: n.length,
         isOutOfSlots: 0 === _
@@ -256,14 +256,14 @@ function Y(e) {
     emojiName: g
   } = t, C = (0, d.useStateFromStores)([h.default], () => null != T ? T : h.default.getUser(m), [m, T]), {
     canManageGuildExpression: R
-  } = (0, S.useManageResourcePermissions)(o), M = l.useMemo(() => R(t), [t, R]), D = null != N || null != g, [v, j] = l.useState(!1);
-  async function G() {
+  } = (0, S.useManageResourcePermissions)(o), M = l.useMemo(() => R(t), [t, R]), D = null != N || null != g, [v, G] = l.useState(!1);
+  async function j() {
     if (!v) {
-      j(!0);
+      G(!0);
       try {
         await (0, f.deleteSound)(o.id, u)
       } catch {
-        j(!1)
+        G(!1)
       }
     }
   }
@@ -332,7 +332,7 @@ function Y(e) {
             }),
             confirmText: P.default.Messages.DELETE,
             cancelText: P.default.Messages.CANCEL,
-            onConfirm: G,
+            onConfirm: j,
             ...e,
             children: (0, a.jsx)(c.Text, {
               variant: "text-md/normal",

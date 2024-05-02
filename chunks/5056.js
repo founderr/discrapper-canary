@@ -1,36 +1,36 @@
 "use strict";
 n.r(t);
-var i = n("735250"),
+var a = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  i = n("120356"),
+  s = n.n(i),
   l = n("481060"),
   o = n("282597"),
-  u = n("877715"),
-  c = n("729285"),
-  d = n("838221"),
+  c = n("877715"),
+  d = n("729285"),
+  u = n("838221"),
   f = n("246364"),
-  p = n("700833"),
-  m = n("689938"),
-  E = n("915580");
+  m = n("700833"),
+  h = n("689938"),
+  p = n("915580");
 
-function I(e) {
+function T(e) {
   let {
     onClick: t,
     text: n,
     icon: r
   } = e;
-  return (0, i.jsx)("div", {
-    className: E.addFormFieldContainer,
-    children: (0, i.jsxs)(l.Clickable, {
-      className: E.addFormField,
+  return (0, a.jsx)("div", {
+    className: p.addFormFieldContainer,
+    children: (0, a.jsxs)(l.Clickable, {
+      className: p.addFormField,
       onClick: t,
-      children: [(0, i.jsx)(r, {
-        className: E.icon,
+      children: [(0, a.jsx)(r, {
+        className: p.icon,
         height: 16,
         width: 16
-      }), (0, i.jsx)(l.FormText, {
-        className: E.addFormFieldText,
+      }), (0, a.jsx)(l.FormText, {
+        className: p.addFormFieldText,
         children: n
       })]
     })
@@ -39,67 +39,67 @@ function I(e) {
 t.default = function(e) {
   let {
     addFormField: t,
-    showManualApprovalWarning: s,
-    guild: _,
-    showHeader: h
-  } = e, T = r.useCallback(e => {
-    (0, p.openEmptyFormFieldModal)(e, t, _)
-  }, [t, _]), g = r.useCallback(e => {
-    s ? (0, l.openModalLazy)(async () => {
+    showManualApprovalWarning: i,
+    guild: E,
+    showHeader: C
+  } = e, _ = r.useCallback(e => {
+    (0, m.openEmptyFormFieldModal)(e, t, E)
+  }, [t, E]), g = r.useCallback(e => {
+    i ? (0, l.openModalLazy)(async () => {
       let {
         default: t
       } = await Promise.all([n.e("99387"), n.e("54845")]).then(n.bind(n, "199836"));
-      return n => (0, i.jsx)(t, {
+      return n => (0, a.jsx)(t, {
         ...n,
-        onSubmit: () => T(e)
+        onSubmit: () => _(e)
       })
-    }) : T(e)
-  }, [s, T]);
-  return (0, i.jsxs)("div", {
-    className: a()(E.spacingContainer, E.backgroundContainer),
-    children: [h && (0, i.jsx)("div", {
-      className: E.containerTopHat,
-      children: (0, i.jsx)(l.Text, {
-        className: E.containerTopHatText,
+    }) : _(e)
+  }, [i, _]);
+  return (0, a.jsxs)("div", {
+    className: s()(p.spacingContainer, p.backgroundContainer),
+    children: [C && (0, a.jsx)("div", {
+      className: p.containerTopHat,
+      children: (0, a.jsx)(l.Text, {
+        className: p.containerTopHatText,
         variant: "text-xs/bold",
         color: "header-secondary",
-        children: m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_REQUIRED
+        children: h.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_REQUIRED
       })
-    }), (0, i.jsxs)("div", {
-      className: E.leftRailIconContainer,
-      children: [(0, i.jsx)("div", {
-        className: E.iconContainer,
-        children: (0, i.jsx)(c.default, {
+    }), (0, a.jsxs)("div", {
+      className: p.leftRailIconContainer,
+      children: [(0, a.jsx)("div", {
+        className: p.iconContainer,
+        children: (0, a.jsx)(d.default, {
           width: 18,
           height: 20,
-          className: E.icon
+          className: p.icon
         })
-      }), (0, i.jsxs)(l.FormSection, {
-        children: [(0, i.jsx)(l.FormTitle, {
+      }), (0, a.jsxs)(l.FormSection, {
+        children: [(0, a.jsx)(l.FormTitle, {
           tag: "h3",
-          className: E.leftRailIconContainerTitle,
-          children: m.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS
-        }), (0, i.jsx)(l.FormText, {
-          className: E.leftRailIconContainerDescription,
+          className: p.leftRailIconContainerTitle,
+          children: h.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS
+        }), (0, a.jsx)(l.FormText, {
+          className: p.leftRailIconContainerDescription,
           type: l.FormText.Types.DESCRIPTION,
-          children: m.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS_DESCRIPTION
-        }), (0, i.jsx)(I, {
+          children: h.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS_DESCRIPTION
+        }), (0, a.jsx)(T, {
           formFieldType: f.VerificationFormFieldTypes.TEXT_INPUT,
           addFormField: t,
-          icon: d.default,
-          text: m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
+          icon: u.default,
+          text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
           onClick: () => g(f.VerificationFormFieldTypes.TEXT_INPUT)
-        }), (0, i.jsx)(I, {
+        }), (0, a.jsx)(T, {
           formFieldType: f.VerificationFormFieldTypes.PARAGRAPH,
           addFormField: t,
-          icon: u.default,
-          text: m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
+          icon: c.default,
+          text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
           onClick: () => g(f.VerificationFormFieldTypes.PARAGRAPH)
-        }), (0, i.jsx)(I, {
+        }), (0, a.jsx)(T, {
           formFieldType: f.VerificationFormFieldTypes.MULTIPLE_CHOICE,
           addFormField: t,
           icon: o.default,
-          text: m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_MULTIPLE_CHOICE,
+          text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_MULTIPLE_CHOICE,
           onClick: () => g(f.VerificationFormFieldTypes.MULTIPLE_CHOICE)
         })]
       })]

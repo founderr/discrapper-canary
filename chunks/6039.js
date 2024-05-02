@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("944163"),
   _ = n("246364"),
   C = n("937111"),
-  m = n("523924"),
-  S = n("390500"),
+  S = n("523924"),
+  m = n("390500"),
   p = n("200305"),
   I = n("981631"),
   T = n("756286"),
@@ -27,18 +27,18 @@ t.default = e => {
   let {
     guildId: v,
     inviteCode: R
-  } = e, [L, O] = s.useState(T.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), x = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
-    hasFetchedRequestToJoinGuilds: y,
+  } = e, [L, O] = s.useState(T.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+    hasFetchedRequestToJoinGuilds: x,
     guildPreviewDisabled: D
   } = (0, l.useStateFromStoresObject)([C.default], () => ({
     hasFetchedRequestToJoinGuilds: C.default.hasFetchedRequestToJoinGuilds,
     guildPreviewDisabled: C.default.getJoinRequestGuild(v)
   }));
   s.useEffect(() => {
-    null != x && (0, r.transitionTo)(I.Routes.CHANNEL(v))
-  }, [x, v]), s.useEffect(() => {
-    !y && f.default.fetchRequestToJoinGuilds()
-  }, [y]);
+    null != y && (0, r.transitionTo)(I.Routes.CHANNEL(v))
+  }, [y, v]), s.useEffect(() => {
+    !x && f.default.fetchRequestToJoinGuilds()
+  }, [x]);
   let b = s.useCallback(e => {
       O(t => Math.max(t, e))
     }, []),
@@ -85,12 +85,12 @@ t.default = e => {
         children: (() => {
           switch (null == P ? void 0 : P.applicationStatus) {
             case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
-              return (0, a.jsx)(S.default, {
+              return (0, a.jsx)(m.default, {
                 onWithdrawApplication: G,
                 guild: D
               });
             case _.GuildJoinRequestApplicationStatuses.REJECTED:
-              return (0, a.jsx)(m.default, {
+              return (0, a.jsx)(S.default, {
                 reapplyText: g.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                 onReapply: j,
                 confirmText: g.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,

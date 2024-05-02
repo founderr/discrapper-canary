@@ -15,8 +15,8 @@ var l = n("481060"),
   h = n("995532"),
   _ = n("486472"),
   C = n("430824"),
-  m = n("914010"),
-  S = n("594174"),
+  S = n("914010"),
+  m = n("594174"),
   p = n("823379"),
   I = n("358085"),
   T = n("929809"),
@@ -52,7 +52,7 @@ class M extends r.default {
         f.default.flowStart(L.FlowType.ORGANIC_MARKETING, L.RegistrationSteps.NUF_STARTED)
     }
     let r = !1,
-      O = m.default.getGuildId();
+      O = S.default.getGuildId();
     if (i === A.NewUserTypes.INVITE_UNCLAIMED) {
       let e = C.default.getGuild(O);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
@@ -115,14 +115,14 @@ class M extends r.default {
       open: e => u.openClaimAccountModal(I.isPlatformEmbedded, e),
       predicate: () => {
         var e;
-        return !r && null != S.default.getCurrentUser() && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
+        return !r && null != m.default.getCurrentUser() && !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
       }
     }, {
       key: "Verification Gate with Claim Account",
       open: e => (0, d.openMemberVerificationModal)(O, null != e ? e : void 0),
       predicate: () => {
         var e;
-        return r && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED
+        return r && !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED
       }
     }, {
       key: "Guild Welcome Modal",

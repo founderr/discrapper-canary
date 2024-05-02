@@ -15,8 +15,8 @@ var s = n("524437"),
   h = n("913976"),
   _ = n("328882"),
   C = n("104494"),
-  m = n("29920"),
-  S = n("786397"),
+  S = n("29920"),
+  m = n("786397"),
   p = n("248042"),
   I = n("318199"),
   T = n("474936");
@@ -66,7 +66,7 @@ class N extends r.default {
       if (null != t) return {
         userDiscountOffer: t
       };
-      let n = [(0, T.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID), (0, T.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID), (0, T.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID), (0, T.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID), (0, T.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID), (0, T.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID), (0, T.PREMIUM_TIER_2_AUTH3_TRIAL_ID), (0, T.PREMIUM_TIER_2_NEW_USER_CPV_TRIAL_ID)].map(e => d.default.getUserTrialOffer(e)).filter(e => null != e && !(0, S.hasUserTrialOfferExpired)(e)).shift();
+      let n = [(0, T.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID), (0, T.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID), (0, T.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID), (0, T.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID), (0, T.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID), (0, T.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID), (0, T.PREMIUM_TIER_2_AUTH3_TRIAL_ID), (0, T.PREMIUM_TIER_2_NEW_USER_CPV_TRIAL_ID)].map(e => d.default.getUserTrialOffer(e)).filter(e => null != e && !(0, m.hasUserTrialOfferExpired)(e)).shift();
       return null != n ? {
         userTrialOffer: n
       } : {}
@@ -77,7 +77,7 @@ class N extends r.default {
           }).enabled) {
           let e = u.default.getCurrentUser();
           null != e && e.verified && !(0, c.isPremium)(e) && d.default.shouldFetchOffer() && E.default.captureMessage("Should not need to fetch premium User Offers again when opening announcement modal");
-          let t = await (0, m.fetchPremiumMarketingContentWithUserOffer)(this.getOfferFromStore());
+          let t = await (0, S.fetchPremiumMarketingContentWithUserOffer)(this.getOfferFromStore());
           if (null == t) {
             _.default.getCurrentConfig({
               location: "OfferAnnouncementManager"

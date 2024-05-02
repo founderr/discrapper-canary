@@ -33,7 +33,7 @@ function E(e) {
   } = e, [g, S] = a.useState(!1), {
     requestId: _,
     entries: T
-  } = (0, u.default)(E), I = (0, l.useStateFromStores)([o.default], () => o.default.hidden), A = (0, l.useStateFromStores)([i.default], () => i.default.isFocused()), [N, v, x, M] = a.useMemo(() => {
+  } = (0, u.default)(E), I = (0, l.useStateFromStores)([o.default], () => o.default.hidden), A = (0, l.useStateFromStores)([i.default], () => i.default.isFocused()), [v, N, x, M] = a.useMemo(() => {
     let e;
     if (null == T || 0 === T.length || null == _) return [t, n, p];
     let a = g ? T.length : 3,
@@ -92,8 +92,8 @@ function E(e) {
       all_item_ids: n
     })
   }), [_, E, C, I, A]), {
-    groups: N,
-    rows: v,
+    groups: v,
+    rows: N,
     version: x,
     updateMaxRowSeen: O
   }

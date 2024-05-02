@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("34131"),
   _ = n("434404"),
   C = n("567458"),
-  m = n("782959"),
-  S = n("276645"),
+  S = n("782959"),
+  m = n("276645"),
   p = n("970731"),
   I = n("626135"),
   T = n("267642"),
@@ -28,8 +28,8 @@ var a = n("735250"),
   O = n("79469"),
   M = n("741160"),
   P = n("829972"),
-  x = n("31932"),
-  y = n("642301");
+  y = n("31932"),
+  x = n("642301");
 
 function D(e) {
   null != e && _.default.open(e.id, g.GuildSettingsSections.OVERVIEW, {
@@ -92,15 +92,15 @@ t.default = s.memo(function(e) {
       },
       location_stack: f
     })
-  }, w = (0, i.isThemeDark)(n) ? P : x, [k, B] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, w = (0, i.isThemeDark)(n) ? P : y, [k, F] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, a.jsx)(a.Fragment, {
     children: (() => {
       switch (k) {
         case l.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(S.default, {
+            renderPopout: (0, a.jsx)(m.default, {
               guildId: s.id,
-              markAsDismissed: B
+              markAsDismissed: F
             }),
             renderGuildHeaderDropdownButton: r
           });
@@ -119,7 +119,7 @@ t.default = s.memo(function(e) {
               secondaryButtonCTA: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
               onSecondaryClick: () => D(),
               onClick: () => D(s),
-              markAsDismissed: B
+              markAsDismissed: F
             }),
             renderGuildHeaderDropdownButton: r
           });
@@ -138,7 +138,7 @@ t.default = s.memo(function(e) {
               secondaryButtonCTA: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
               onSecondaryClick: () => D(),
               onClick: () => D(s),
-              markAsDismissed: B
+              markAsDismissed: F
             }),
             renderGuildHeaderDropdownButton: r
           });
@@ -146,7 +146,7 @@ t.default = s.memo(function(e) {
           return (0, a.jsx)(j, {
             renderPopout: (0, a.jsx)(E.default, {
               guildId: s.id,
-              markAsDismissed: B
+              markAsDismissed: F
             }),
             renderGuildHeaderDropdownButton: r
           });
@@ -155,7 +155,7 @@ t.default = s.memo(function(e) {
             renderPopout: (0, a.jsx)(d.default, {
               onClick: () => b(s, !0),
               onSecondaryClick: () => b(s),
-              markAsDismissed: B
+              markAsDismissed: F
             }),
             renderGuildHeaderDropdownButton: r
           });
@@ -163,7 +163,7 @@ t.default = s.memo(function(e) {
           return (0, a.jsx)(j, {
             renderPopout: (0, a.jsx)(u.default, {
               guild: s,
-              markAsDismissed: B
+              markAsDismissed: F
             }),
             renderGuildHeaderDropdownButton: r
           });
@@ -186,14 +186,14 @@ t.default = s.memo(function(e) {
               secondaryButtonCTA: R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_SECONDARY,
               onSecondaryClick: () => U(f),
               onClick: () => U(f, s),
-              markAsDismissed: B
+              markAsDismissed: F
             }),
             renderGuildHeaderDropdownButton: r
           });
         case l.DismissibleContent.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
           return (0, a.jsx)(j, {
             renderPopout: (0, a.jsx)(C.default, {
-              markAsDismissed: B
+              markAsDismissed: F
             }),
             renderGuildHeaderDropdownButton: r
           });
@@ -204,8 +204,8 @@ t.default = s.memo(function(e) {
               header: R.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
               content: R.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
               buttonCTA: R.default.Messages.GOT_IT,
-              onClick: () => B(A.ContentDismissActionType.UNKNOWN),
-              markAsDismissed: B
+              onClick: () => F(A.ContentDismissActionType.UNKNOWN),
+              markAsDismissed: F
             }),
             renderGuildHeaderDropdownButton: r
           });
@@ -218,21 +218,21 @@ t.default = s.memo(function(e) {
               secondaryButtonCTA: R.default.Messages.NO_THANKS,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: y,
+                src: x,
                 className: O.fullWidthImage
               }),
               onClick: () => {
                 _.default.open(s.id, g.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), R.default.Messages.USE_SOUNDBOARD)
               },
-              markAsDismissed: B
+              markAsDismissed: F
             }),
             renderGuildHeaderDropdownButton: r
           });
         case l.DismissibleContent.MEDIA_CHANNEL_UPSELL:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(m.default, {
+            renderPopout: (0, a.jsx)(S.default, {
               guildId: s.id,
-              markAsDismissed: B
+              markAsDismissed: F
             }),
             renderGuildHeaderDropdownButton: r
           });
@@ -240,7 +240,7 @@ t.default = s.memo(function(e) {
           return (0, a.jsx)(j, {
             renderPopout: (0, a.jsx)(h.default, {
               guildId: s.id,
-              markAsDismissed: B
+              markAsDismissed: F
             }),
             renderGuildHeaderDropdownButton: r
           });

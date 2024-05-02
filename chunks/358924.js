@@ -12,8 +12,8 @@ var a, s, l = n("735250"),
   h = n("726542"),
   _ = n("638880"),
   C = n("655922"),
-  m = n("122810"),
-  S = n("833664"),
+  S = n("122810"),
+  m = n("833664"),
   p = n("503438"),
   I = n("420660"),
   T = n("74433"),
@@ -26,8 +26,8 @@ var a, s, l = n("735250"),
   O = n("871118"),
   M = n("849171"),
   P = n("314897"),
-  x = n("592125"),
-  y = n("594174"),
+  y = n("592125"),
+  x = n("594174"),
   D = n("368874"),
   b = n("366695"),
   U = n("366966"),
@@ -35,8 +35,8 @@ var a, s, l = n("735250"),
   G = n("619271"),
   w = n("395361"),
   k = n("639351"),
-  B = n("632184"),
-  F = n("368666"),
+  F = n("632184"),
+  B = n("368666"),
   H = n("81063"),
   V = n("823379"),
   Y = n("51144"),
@@ -91,7 +91,7 @@ class et extends i.Component {
     } = this.props, {
       timestamps: n
     } = t;
-    return null == n || !(0, S.default)(t) || (0, p.default)(t) ? null : J(e = (0, m.default)(t) ? (0, l.jsx)($, {
+    return null == n || !(0, m.default)(t) || (0, p.default)(t) ? null : J(e = (0, S.default)(t) ? (0, l.jsx)($, {
       timestamps: n
     }) : (0, l.jsx)(U.default, {
       start: n.start,
@@ -289,7 +289,7 @@ es.Header = ea, es.Body = e => {
             })
           }), (0, l.jsx)("div", {
             className: q.voiceSectionIconWrapper,
-            children: (0, l.jsx)(B.default, {
+            children: (0, l.jsx)(F.default, {
               className: q.voiceSectionIcon
             })
           })]
@@ -449,7 +449,7 @@ es.Header = ea, es.Body = e => {
     applicationStream: i,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(i.channelId)), [f, E] = (0, L.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
+  } = e, d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(i.channelId)), [f, E] = (0, L.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
     onClick: f ? r : void 0,
     className: q.applicationStreamingPreviewWrapper,
     children: [(0, l.jsx)(O.default, {
@@ -473,8 +473,8 @@ es.Header = ea, es.Body = e => {
         className: q.applicationStreamingAvatar
       }), (0, l.jsxs)("div", {
         children: [X(Y.default.getName(s)), J(_)]
-      }), (0, l.jsx)(F.default, {
-        size: F.default.Sizes.SMALL
+      }), (0, l.jsx)(B.default, {
+        size: B.default.Sizes.SMALL
       })]
     }), h]
   })
@@ -491,30 +491,30 @@ es.Header = ea, es.Body = e => {
       return d(t)
     })
   }, [f]);
-  let h = (0, u.useStateFromStoresArray)([y.default, P.default], () => Array.from(s).map(e => P.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
+  let h = (0, u.useStateFromStoresArray)([x.default, P.default], () => Array.from(s).map(e => P.default.getId() === e ? null : x.default.getUser(e)).filter(V.isNotNullish)),
     C = (0, E.useAnalyticsContext)(),
     {
-      analyticsLocations: m
+      analyticsLocations: S
     } = (0, N.default)();
   if (null == f) return null;
-  let S = v.default.getApplication(f);
-  if (null == S) return null;
+  let m = v.default.getApplication(f);
+  if (null == m) return null;
   let p = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    I = (0, H.getAssetImage)(S.id, o, 300);
+    I = (0, H.getAssetImage)(m.id, o, 300);
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
       children: [(0, l.jsx)(b.default, {
-        game: S,
+        game: m,
         size: b.default.Sizes.XSMALL,
         className: q.embeddedActivityIcon
       }), (0, l.jsx)("div", {
         className: q.embeddedActivityName,
         children: (0, l.jsx)(c.Text, {
           variant: "text-sm/semibold",
-          children: S.name
+          children: m.name
         })
       }), null != p ? (0, l.jsx)("div", {
         className: q.embeddedActivityTimeElapsed,
@@ -530,7 +530,7 @@ es.Header = ea, es.Body = e => {
       className: q.embeddedActivityPlayerContainer,
       children: [null != I ? (0, l.jsx)("img", {
         src: I,
-        alt: S.name,
+        alt: m.name,
         className: q.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {
         className: q.embeddedActivityImageOverlay,
@@ -549,7 +549,7 @@ es.Header = ea, es.Body = e => {
                 activityChannelId: n.id,
                 locationObject: C.location,
                 embeddedActivitiesManager: A.default,
-                analyticsLocations: m
+                analyticsLocations: S
               })
             },
             children: z.default.Messages.JOIN

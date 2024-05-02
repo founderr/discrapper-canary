@@ -11,7 +11,7 @@ let E = {},
   _ = !1,
   C = !1;
 
-function m(e) {
+function S(e) {
   var t;
   let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
   return {
@@ -22,7 +22,7 @@ function m(e) {
     contactNames: n
   }
 }
-class S extends(a = u.default.Store) {
+class m extends(a = u.default.Store) {
   initialize() {
     this.waitFor(f.default)
   }
@@ -39,17 +39,17 @@ class S extends(a = u.default.Store) {
     return E[e]
   }
 }
-i = "FriendSuggestionStore", (l = "displayName") in(s = S) ? Object.defineProperty(s, l, {
+i = "FriendSuggestionStore", (l = "displayName") in(s = m) ? Object.defineProperty(s, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new S(d.default, {
+}) : s[l] = i, t.default = new m(d.default, {
   CONNECTION_OPEN: function(e) {
     E = {}, (h = e.friendSuggestionCount) > 0 && (C = !0, _ || !C || (_ = !0, C = !1))
   },
   FRIEND_SUGGESTION_CREATE: function(e) {
-    let t = m(e.suggestion);
+    let t = S(e.suggestion);
     if (null != E[t.key]) return !1;
     h++, E = {
       ...E,
@@ -61,7 +61,7 @@ i = "FriendSuggestionStore", (l = "displayName") in(s = S) ? Object.defineProper
   },
   LOAD_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
     var t;
-    _ = !1, t = e.suggestions, E = o().chain(t).map(e => m(e)).keyBy(e => e.key).value(), h = o().keys(E).length
+    _ = !1, t = e.suggestions, E = o().chain(t).map(e => S(e)).keyBy(e => e.key).value(), h = o().keys(E).length
   },
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function() {
     _ = !1, E = {}

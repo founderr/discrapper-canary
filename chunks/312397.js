@@ -36,8 +36,8 @@ var a = s("735250"),
   M = s("859802"),
   D = s("744178"),
   v = s("35125"),
-  j = s("536442"),
-  G = s("142497"),
+  G = s("536442"),
+  j = s("142497"),
   U = s("884858"),
   P = s("516129"),
   b = s("813197"),
@@ -955,7 +955,7 @@ function eR() {
     analyticsLocations: d
   } = (0, g.default)(m.default.OVERVIEW);
   l.useEffect(() => {
-    (0, G.hideHotspot)(j.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
+    (0, j.hideHotspot)(G.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
   }, []);
   let u = (0, c.useStateFromStores)([F.default], () => F.default.getCategories(null == t ? void 0 : t.id)),
     E = l.useMemo(() => (0, h.default)(u._categories, u), [u]),

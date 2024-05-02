@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("806519"),
   _ = n("768581"),
   C = n("900849"),
-  m = n("556017"),
-  S = n("879484"),
+  S = n("556017"),
+  m = n("879484"),
   p = n("26580"),
   I = n("206887"),
   T = n("981631"),
@@ -40,14 +40,14 @@ t.default = e => {
   } = e, {
     id: M,
     discoverySplash: P,
-    icon: x,
-    name: y,
+    icon: y,
+    name: x,
     description: D,
     presenceCount: b,
     memberCount: U,
     keywords: j
-  } = l, [G, w] = s.useState(!1), [k, B] = s.useState(!1), {
-    analyticsLocations: F
+  } = l, [G, w] = s.useState(!1), [k, F] = s.useState(!1), {
+    analyticsLocations: B
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: M,
     splash: P,
@@ -61,7 +61,7 @@ t.default = e => {
     }
   }(R), Y = null !== (t = _.default.getGuildIconURL({
     id: M,
-    icon: x,
+    icon: y,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
     let {
@@ -77,28 +77,28 @@ t.default = e => {
             page: T.AnalyticsPages.GUILD_DISCOVERY,
             section: T.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
-          analyticsLocations: F
+          analyticsLocations: B
         });
         return
       }
-      B(!0);
+      F(!0);
       try {
         null != L && await L(l.id)
       } finally {
-        B(!1)
+        F(!1)
       }
     }
   };
-  s.useEffect(() => S.DiscoveryTagsExperiment.trackExposure({
+  s.useEffect(() => m.DiscoveryTagsExperiment.trackExposure({
     location: "4302e4_1"
   }));
   let {
     shouldDisplayTags: K
-  } = S.DiscoveryTagsExperiment.useExperiment({
+  } = m.DiscoveryTagsExperiment.useExperiment({
     location: "4302e4_2"
   }, {
     autoTrackExposure: !1
-  }), z = (0, m.useCanSeeDiscoveryContextMenu)();
+  }), z = (0, S.useCanSeeDiscoveryContextMenu)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: A.card,
@@ -160,7 +160,7 @@ t.default = e => {
               }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: A.headerTitle,
-                children: y
+                children: x
               })]
             })]
           }), (0, a.jsx)(r.Text, {

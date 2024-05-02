@@ -27,8 +27,8 @@ t.default = e => {
     secondaryColor: T
   } = (0, c.default)(g), I = (0, s.useStateFromStores)([i.default], () => i.default.locale), {
     streamPreviewUrl: A,
-    channel: N
-  } = (0, r.default)(n), v = l.useCallback(e => {
+    channel: v
+  } = (0, r.default)(n), N = l.useCallback(e => {
     if (null != g && null != t && null != S) return (0, u.generateGamingContentImage)({
       entry: n,
       applicationImageSrc: g,
@@ -63,21 +63,21 @@ t.default = e => {
     });
   return (0, a.jsxs)(m.Popout, {
     children: [M, (0, a.jsx)(m.PopoutInteractionsContainer, {
-      children: null != N ? (0, a.jsx)(m.VoiceChannelPopoutReactor, {
+      children: null != v ? (0, a.jsx)(m.VoiceChannelPopoutReactor, {
         closePopout: C,
         user: S,
         channel: t,
-        generateReactionImage: v,
+        generateReactionImage: N,
         reactionImageAltText: (0, d.getContentAltText)(n, S),
         entry: n,
         requestId: E,
-        voiceChannel: N,
+        voiceChannel: v,
         isStreaming: null != A
       }) : (0, a.jsx)(m.PopoutReactor, {
         closePopout: C,
         user: S,
         channel: t,
-        generateReactionImage: v,
+        generateReactionImage: N,
         reactionImageAltText: (0, d.getContentAltText)(n, S),
         entry: n,
         requestId: E

@@ -33,8 +33,8 @@ var a = s("735250"),
   M = s("987134"),
   D = s("768581"),
   v = s("900849"),
-  j = s("434404"),
-  G = s("999382"),
+  G = s("434404"),
+  j = s("999382"),
   U = s("450474"),
   P = s("354051"),
   b = s("347604"),
@@ -52,21 +52,21 @@ function w(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let V = i.default.connectStores([G.default], () => {
+let V = i.default.connectStores([j.default], () => {
   let {
     guild: e,
     originalGuild: t,
     submitting: s,
     guildMetadata: a
-  } = G.default.getProps();
+  } = j.default.getProps();
   return {
     guild: e,
     submitting: s,
     onReset() {
-      null != e && j.default.init(e.id)
+      null != e && G.default.init(e.id)
     },
     onSave() {
-      null != e && ((0, I.trackDiscoverySettingsChange)(e, t), j.default.saveGuild(e.id, {
+      null != e && ((0, I.trackDiscoverySettingsChange)(e, t), G.default.saveGuild(e.id, {
         features: e.features,
         discoverySplash: e.discoverySplash,
         description: e.description,
@@ -414,7 +414,7 @@ class Y extends l.PureComponent {
       } = this.props;
       if (null == e) return;
       let t = new Set(e.features);
-      e.hasFeature(y.GuildFeatures.DISCOVERABLE) ? t.delete(y.GuildFeatures.DISCOVERABLE) : t.add(y.GuildFeatures.DISCOVERABLE), j.default.updateGuild({
+      e.hasFeature(y.GuildFeatures.DISCOVERABLE) ? t.delete(y.GuildFeatures.DISCOVERABLE) : t.add(y.GuildFeatures.DISCOVERABLE), G.default.updateGuild({
         features: t
       })
     }), w(this, "handleEnableDiscovery", async () => {
@@ -436,11 +436,11 @@ class Y extends l.PureComponent {
         }
       })
     }), w(this, "handleSplashChange", e => {
-      j.default.updateGuild({
+      G.default.updateGuild({
         discoverySplash: e
       })
     }), w(this, "handleLocaleChange", e => {
-      j.default.updateGuild({
+      G.default.updateGuild({
         preferredLocale: e
       })
     }), w(this, "handlePrimaryCategoryChange", e => {
@@ -476,13 +476,13 @@ class Y extends l.PureComponent {
     })
   }
 }
-t.default = i.default.connectStores([G.default, O.default, _.default, L.default, f.default, p.default, A.default], () => {
+t.default = i.default.connectStores([j.default, O.default, _.default, L.default, f.default, p.default, A.default], () => {
   let {
     guild: e,
     errors: t,
     submitting: s,
     guildMetadata: a
-  } = G.default.getProps(), l = O.default.can(y.Permissions.MANAGE_GUILD, e), n = O.default.can(y.Permissions.ADMINISTRATOR, e), i = null != e ? _.default.getDiscoveryChecklist(e.id) : null, r = null != e ? L.default.getChannels(e.id) : null, o = [];
+  } = j.default.getProps(), l = O.default.can(y.Permissions.MANAGE_GUILD, e), n = O.default.can(y.Permissions.ADMINISTRATOR, e), i = null != e ? _.default.getDiscoveryChecklist(e.id) : null, r = null != e ? L.default.getChannels(e.id) : null, o = [];
   null != r && r[0, L.GUILD_SELECTABLE_CHANNELS_KEY].forEach(e => {
     let {
       channel: t

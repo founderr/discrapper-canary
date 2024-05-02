@@ -31,8 +31,8 @@ var a = s("735250"),
   R = s("976758"),
   M = s("526761"),
   v = s("981631"),
-  L = s("65154"),
-  D = s("689938"),
+  D = s("65154"),
+  L = s("689938"),
   P = s("949086");
 let j = (0, T.uid)(),
   b = "".concat(f.default.getArticleURL(v.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm");
@@ -40,8 +40,8 @@ let j = (0, T.uid)(),
 function U(e, t, s) {
   (0, o.openModal)(n => (0, a.jsx)(o.ConfirmModal, {
     header: e,
-    confirmText: D.default.Messages.OKAY,
-    cancelText: D.default.Messages.CANCEL,
+    confirmText: L.default.Messages.OKAY,
+    cancelText: L.default.Messages.CANCEL,
     onConfirm: s,
     ...n,
     children: (0, a.jsx)(o.Text, {
@@ -73,11 +73,11 @@ function y() {
     attenuateWhileSpeakingOthers: S.default.getAttenuateWhileSpeakingOthers(),
     audioSubsystem: S.default.getAudioSubsystem(),
     silenceWarning: S.default.getEnableSilenceWarning(),
-    debugLoggingEnabled: S.default.supports(L.Features.DEBUG_LOGGING),
-    legacyAudioSubsystemSupported: S.default.supports(L.Features.LEGACY_AUDIO_SUBSYSTEM),
-    experimentalAudioSubsystemSupported: S.default.supports(L.Features.EXPERIMENTAL_AUDIO_SUBSYSTEM),
-    qosSupported: S.default.supports(L.Features.QOS),
-    attenuationSupported: S.default.supports(L.Features.ATTENUATION)
+    debugLoggingEnabled: S.default.supports(D.Features.DEBUG_LOGGING),
+    legacyAudioSubsystemSupported: S.default.supports(D.Features.LEGACY_AUDIO_SUBSYSTEM),
+    experimentalAudioSubsystemSupported: S.default.supports(D.Features.EXPERIMENTAL_AUDIO_SUBSYSTEM),
+    qosSupported: S.default.supports(D.Features.QOS),
+    attenuationSupported: S.default.supports(D.Features.ATTENUATION)
   })), w = (0, r.useStateFromStores)([E.default], () => E.default.getSubsection()), H = n.createRef(), V = m.isPlatformEmbedded && y && null != c.default.fileManager.readLogFiles;
   return n.useEffect(() => {
     if (w === M.SOUNDBOARD_SUBSECTION) {
@@ -86,16 +86,16 @@ function y() {
     }
   }, [H, w]), (0, a.jsxs)(o.FormSection, {
     tag: o.FormTitleTags.H1,
-    title: D.default.Messages.VOICE_SETTINGS,
+    title: L.default.Messages.VOICE_SETTINGS,
     children: [(0, a.jsx)(I.default, {}), (0, a.jsx)(R.default, {}), (0, a.jsx)(p.default, {}), (0, a.jsx)(o.FormText, {
       className: P.marginBottom20,
       type: o.FormText.Types.DESCRIPTION,
-      children: D.default.Messages.FORM_HELP_VOICE_VIDEO_TROUBLESHOOTING_GUIDE.format({
+      children: L.default.Messages.FORM_HELP_VOICE_VIDEO_TROUBLESHOOTING_GUIDE.format({
         guideURL: b
       })
     }), (0, a.jsx)(o.FormDivider, {
       className: i()(P.marginBottom20)
-    }), (0, a.jsx)(N.default, {}), e === L.InputModes.VOICE_ACTIVITY && (0, a.jsx)(x.default, {}), (0, a.jsx)(o.FormDivider, {
+    }), (0, a.jsx)(N.default, {}), e === D.InputModes.VOICE_ACTIVITY && (0, a.jsx)(x.default, {}), (0, a.jsx)(o.FormDivider, {
       className: P.marginBottom40
     }), (0, a.jsx)("div", {
       style: {
@@ -106,16 +106,16 @@ function y() {
       component: (0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H1,
         className: P.marginBottom20,
-        children: D.default.Messages.SETTINGS_ADVANCED
+        children: L.default.Messages.SETTINGS_ADVANCED
       }),
       children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(O.default, {}), G && (0, a.jsx)(o.FormSection, {
         className: P.marginBottom20,
-        title: D.default.Messages.FORM_LABEL_QOS,
+        title: L.default.Messages.FORM_LABEL_QOS,
         children: (0, a.jsx)(o.FormSwitch, {
           value: t,
           onChange: e => d.default.setQoS(e),
-          note: D.default.Messages.FORM_HELP_QOS,
-          children: D.default.Messages.FORM_CHECKBOX_QOS
+          note: L.default.Messages.FORM_HELP_QOS,
+          children: L.default.Messages.FORM_CHECKBOX_QOS
         })
       }), k && (0, a.jsxs)(o.FormSection, {
         className: P.marginBottom20,
@@ -123,7 +123,7 @@ function y() {
           id: j,
           tag: o.FormTitleTags.H5,
           className: P.marginBottom8,
-          children: D.default.Messages.FORM_LABEL_ATTENUATION
+          children: L.default.Messages.FORM_LABEL_ATTENUATION
         }), (0, a.jsx)(o.Slider, {
           initialValue: s,
           onValueChange: e => {
@@ -133,39 +133,39 @@ function y() {
         }), (0, a.jsx)(o.FormText, {
           className: P.marginBottom20,
           type: o.FormText.Types.DESCRIPTION,
-          children: D.default.Messages.FORM_HELP_ATTENUATION
+          children: L.default.Messages.FORM_HELP_ATTENUATION
         }), (0, a.jsx)(o.FormDivider, {
           className: P.marginBottom20
         }), (0, a.jsx)(o.FormSwitch, {
           value: l,
           onChange: e => d.default.setAttenuation(s, e, T),
-          children: D.default.Messages.ATTENUATE_WHILE_SPEAKING_SELF
+          children: L.default.Messages.ATTENUATE_WHILE_SPEAKING_SELF
         }), (0, a.jsx)(o.FormSwitch, {
           value: T,
           onChange: e => d.default.setAttenuation(s, l, e),
-          children: D.default.Messages.ATTENUATE_WHILE_SPEAKING_OTHERS
+          children: L.default.Messages.ATTENUATE_WHILE_SPEAKING_OTHERS
         })]
       }), (B || F) && (0, a.jsxs)(o.FormSection, {
         className: P.marginBottom20,
-        title: D.default.Messages.FORM_LABEL_SUBSYSTEM,
+        title: L.default.Messages.FORM_LABEL_SUBSYSTEM,
         children: [(0, a.jsx)(o.SingleSelect, {
           className: P.marginBottom20,
           value: f,
           options: function(e, t) {
             let s = [{
-              value: L.AudioSubsystems.STANDARD,
+              value: D.AudioSubsystems.STANDARD,
               label: "Standard"
             }];
             return e && s.push({
-              value: L.AudioSubsystems.LEGACY,
+              value: D.AudioSubsystems.LEGACY,
               label: "Legacy"
             }), t && s.push({
-              value: L.AudioSubsystems.EXPERIMENTAL,
+              value: D.AudioSubsystems.EXPERIMENTAL,
               label: "Experimental"
             }), s
           }(B, F),
           onChange: e => {
-            U(D.default.Messages.SWITCH_SUBSYSTEM, D.default.Messages.SWITCH_SUBSYSTEM_BODY, () => d.default.setAudioSubsystem(e))
+            U(L.default.Messages.SWITCH_SUBSYSTEM, L.default.Messages.SWITCH_SUBSYSTEM_BODY, () => d.default.setAudioSubsystem(e))
           }
         }), (0, a.jsx)(o.FormDivider, {
           className: P.marginBottom20
@@ -173,11 +173,11 @@ function y() {
       }), m.isPlatformEmbedded && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(C.default, {}), (0, a.jsx)(o.FormSection, {
           className: P.marginBottom20,
-          title: D.default.Messages.FORM_LABEL_VOICE_DIAGNOSTICS,
+          title: L.default.Messages.FORM_LABEL_VOICE_DIAGNOSTICS,
           children: (0, a.jsx)(o.FormSwitch, {
             value: v,
             onChange: e => d.default.setSilenceWarning(e),
-            children: D.default.Messages.DISPLAY_SILENCE_WARNING
+            children: L.default.Messages.DISPLAY_SILENCE_WARNING
           })
         })]
       }), V && (0, a.jsx)(h.default, {}), (0, a.jsx)(o.FormItem, {
@@ -185,10 +185,10 @@ function y() {
           look: o.Button.Looks.OUTLINED,
           color: o.Button.Colors.RED,
           onClick: () => {
-            U(D.default.Messages.RESET_VOICE_SETTINGS, D.default.Messages.RESET_VOICE_SETTINGS_BODY, d.default.reset)
+            U(L.default.Messages.RESET_VOICE_SETTINGS, L.default.Messages.RESET_VOICE_SETTINGS_BODY, d.default.reset)
           },
           size: o.Button.Sizes.SMALL,
-          children: D.default.Messages.RESET_VOICE_SETTINGS
+          children: L.default.Messages.RESET_VOICE_SETTINGS
         })
       })]
     })]

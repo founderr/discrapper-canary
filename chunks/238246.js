@@ -20,8 +20,8 @@ var a, l = n("735250"),
   T = n("168551"),
   I = n("597952"),
   A = n("628123"),
-  N = n("151851"),
-  v = n("587061"),
+  v = n("151851"),
+  N = n("587061"),
   x = n("392358"),
   M = n("892254"),
   R = n("706454"),
@@ -139,7 +139,7 @@ class V extends(a = s.Component) {
       guestWindow: S,
       clientThemesClassName: _,
       contentClassName: T
-    } = this.props, v = (0, D.getPlatform)(), x = r()(p, {
+    } = this.props, N = (0, D.getPlatform)(), x = r()(p, {
       "mouse-mode": o,
       "reduce-motion": c,
       "full-motion": !c,
@@ -166,9 +166,9 @@ class V extends(a = s.Component) {
                       children: (0, l.jsxs)(j.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
                           className: B.popout,
-                          children: [g && null != v ? (0, l.jsx)(N.default, {
+                          children: [g && null != N ? (0, l.jsx)(v.default, {
                             focused: n,
-                            type: v,
+                            type: N,
                             windowKey: i,
                             macOSFrame: !0
                           }) : null, (0, l.jsx)("div", {
@@ -238,8 +238,8 @@ let W = s.forwardRef(function(e, t) {
       systemForcedColors: p.default.systemForcedColors,
       useForcedColors: p.default.useForcedColors
     })),
-    N = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
-  (0, v.default)(n, !1);
+    v = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
+  (0, N.default)(n, !1);
   let M = (0, x.default)(n, a),
     {
       analyticsLocations: y
@@ -266,7 +266,7 @@ let W = s.forwardRef(function(e, t) {
         keyboardModeEnabled: h,
         mouseModeEnabled: M,
         reducedMotionEnabled: m,
-        connectedToEmbeddedActivity: N,
+        connectedToEmbeddedActivity: v,
         fontScaleClass: E,
         saturation: g,
         clientThemesClassName: j,

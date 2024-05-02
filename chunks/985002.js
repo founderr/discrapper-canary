@@ -14,7 +14,7 @@ function o(e) {
   let {
     onError: t,
     onSuccess: n
-  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, m] = a.useState(!1), [S, p] = a.useState(!1), [I, T] = a.useState(!1), [g, A] = a.useState(!1), N = o || d || f || h || S || g, v = a.useCallback(async e => {
+  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, S] = a.useState(!1), [m, p] = a.useState(!1), [I, T] = a.useState(!1), [g, A] = a.useState(!1), N = o || d || f || h || m || g, v = a.useCallback(async e => {
     if (!N) {
       u(!0);
       try {
@@ -64,14 +64,14 @@ function o(e) {
     }
   }, [N, t, n]), M = a.useCallback(async () => {
     if (!C) {
-      m(!0);
+      S(!0);
       try {
         await (0, l.getLinkCodeForCurrentUser)(), null == n || n()
       } catch (n) {
         let e = new s.APIError(n);
         null == t || t(e)
       } finally {
-        m(!1)
+        S(!1)
       }
     }
   }, [C, t, n]), P = a.useCallback(async e => {
@@ -86,8 +86,8 @@ function o(e) {
         T(!1)
       }
     }
-  }, [I, t, n]), x = a.useCallback(async (e, a) => {
-    if (!S) {
+  }, [I, t, n]), y = a.useCallback(async (e, a) => {
+    if (!m) {
       p(!0);
       try {
         await l.default.requestLink(e, a), null == n || n()
@@ -98,7 +98,7 @@ function o(e) {
         p(!1)
       }
     }
-  }, [S, t, n]);
+  }, [m, t, n]);
   return {
     acceptLinkRequest: v,
     declineLinkRequest: R,
@@ -106,7 +106,7 @@ function o(e) {
     cancelLinkRequest: O,
     selectTeenUser: P,
     getLinkCode: M,
-    requestLink: x,
+    requestLink: y,
     loadMore: a.useCallback(async e => {
       let n = i.default.getActionsForDisplayType(e),
         a = n[n.length - 1],
@@ -130,7 +130,7 @@ function o(e) {
     isCancelLoading: h,
     isGetLinkCodeLoading: C,
     isSelectTeenUserLoading: I,
-    isRequestingLink: S,
+    isRequestingLink: m,
     isMoreLoading: g
   }
 }

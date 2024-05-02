@@ -14,8 +14,8 @@ var a = n("913527"),
   h = n("592125"),
   _ = n("271383"),
   C = n("430824"),
-  m = n("131951"),
-  S = n("292959"),
+  S = n("131951"),
+  m = n("292959"),
   p = n("699516"),
   I = n("944486"),
   T = n("9156"),
@@ -28,8 +28,8 @@ var a = n("913527"),
   O = n("689938");
 let M = [],
   P = null,
-  x = null,
   y = null,
+  x = null,
   D = /\|\|([\s\S]+?)\|\|/g;
 
 function b(e, t, n, a) {
@@ -64,16 +64,16 @@ function b(e, t, n, a) {
 function U() {
   if (!i.supported) return !1;
   let e = d.default.locale;
-  if (null == y) {
+  if (null == x) {
     var t;
-    y = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
+    x = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
   }
-  let n = y.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
-  x = n.length > 0 ? n[0] : null
+  let n = x.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
+  y = n.length > 0 ? n[0] : null
 }
 async function j(e, t, n, a, s) {
   let l = i.createUtterance(e, n);
-  null !== l && (null == x && U(), t ? await (0, N.stopSpeaking)() : null == P || P.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, x))
+  null !== l && (null == y && U(), t ? await (0, N.stopSpeaking)() : null == P || P.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, y))
 }
 
 function G(e, t, n, a, s) {
@@ -97,7 +97,7 @@ function k() {
   return null !== P && P.removeEventListener("end", N.stopSpeaking), i.cancelAll(), P = null, !0
 }
 
-function B(e) {
+function F(e) {
   var t, n, a;
   let {
     message: s,
@@ -106,23 +106,23 @@ function B(e) {
   return G(b(s.content, c, d, o), !0, l.id, s.id), !0
 }
 
-function F(e) {
+function B(e) {
   var t, n, a, s, l, i, r;
   let {
     channelId: o,
     message: u,
     optimistic: d
   } = e;
-  if (d || m.default.isSelfDeaf()) return !1;
+  if (d || S.default.isSelfDeaf()) return !1;
   let C = h.default.getChannel(o);
   if (null == C) return !1;
   let g = I.default.getChannelId(),
     N = E.default.getCurrentSidebarChannelId(g),
     v = o === g || o === N,
     O = c.EnableTTSCommand.getSetting() && u.tts && v,
-    P = S.default.getTTSType(),
-    x = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === L.TTSNotificationTypes.ALL_CHANNELS || P === L.TTSNotificationTypes.SELECTED_CHANNEL && v);
-  if ((O || x) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !p.default.isBlocked(u.author.id))) {
+    P = m.default.getTTSType(),
+    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === L.TTSNotificationTypes.ALL_CHANNELS || P === L.TTSNotificationTypes.SELECTED_CHANNEL && v);
+  if ((O || y) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !p.default.isBlocked(u.author.id))) {
     if (M.indexOf(u.id) >= 0) return !1;
     M.unshift(u.id) > 10 && M.pop();
     let e = C.getGuildId();
@@ -144,10 +144,10 @@ function H(e) {
 }
 
 function V() {
-  m.default.isSelfDeaf() && i.cancelAll()
+  S.default.isSelfDeaf() && i.cancelAll()
 }
 t.default = {
   init() {
-    l.default.subscribe("SPEAK_TEXT", w), l.default.subscribe("SPEAK_MESSAGE", B), l.default.subscribe("STOP_SPEAKING", k), l.default.subscribe("MESSAGE_CREATE", F), l.default.subscribe("MESSAGE_DELETE", H), l.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", V), l.default.subscribe("USER_SETTINGS_PROTO_UPDATE", U), l.default.subscribe("I18N_LOAD_SUCCESS", U)
+    l.default.subscribe("SPEAK_TEXT", w), l.default.subscribe("SPEAK_MESSAGE", F), l.default.subscribe("STOP_SPEAKING", k), l.default.subscribe("MESSAGE_CREATE", B), l.default.subscribe("MESSAGE_DELETE", H), l.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", V), l.default.subscribe("USER_SETTINGS_PROTO_UPDATE", U), l.default.subscribe("I18N_LOAD_SUCCESS", U)
   }
 }

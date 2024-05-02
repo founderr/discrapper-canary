@@ -84,7 +84,7 @@ function x() {
 function R() {
   if (A.lifecycle === h.SpeedTestLifecycles.CONNECTING) {
     var e;
-    P(h.SpeedTestLifecycles.PINGING), null === (e = A.connection) || void 0 === e || e.setPingInterval(500), L()
+    P(h.SpeedTestLifecycles.PINGING), null === (e = A.connection) || void 0 === e || e.setPingInterval(500), D()
   }
 }
 
@@ -96,17 +96,17 @@ function M(e, t) {
 }
 
 function v(e) {
-  void 0 !== e && A.pings.length < 10 && (A.pings.push(e), A.pings.length < 10 && P(h.SpeedTestLifecycles.PINGING), L())
+  void 0 !== e && A.pings.length < 10 && (A.pings.push(e), A.pings.length < 10 && P(h.SpeedTestLifecycles.PINGING), D())
 }
 
-function L() {
+function D() {
   if (A.lifecycle === h.SpeedTestLifecycles.PINGING && 10 === A.pings.length) {
     var e;
     null === (e = A.connection) || void 0 === e || e.setPingInterval(5e3), A.currentTest = 0, j()
   }
 }
 
-function D() {
+function L() {
   if (null == A.connection) return !1;
   A.connection.destroy(), A.connection = null
 }
@@ -176,7 +176,7 @@ async function U() {
     headers: {
       "Content-Type": "text/plain"
     }
-  })]), P(h.SpeedTestLifecycles.COMPLETED), D(), m.default.stopSpeedTest(), A.running = !1, A.notes = ""
+  })]), P(h.SpeedTestLifecycles.COMPLETED), L(), m.default.stopSpeedTest(), A.running = !1, A.notes = ""
 }
 class y extends(a = r.default.Store) {
   initialize() {
@@ -230,10 +230,10 @@ i = "RTCSpeedTestStore", (l = "displayName") in(n = y) ? Object.defineProperty(n
   writable: !0
 }) : n[l] = i, t.default = new y(d.default, {
   RTC_SPEED_TEST_START_TEST: function(e) {
-    !A.running && (P(h.SpeedTestLifecycles.AWAITING_ENDPOINT), A.running = !0, A.currentTest = null, A.results = [], A.failed = !1, A.pings = [], A.connected = !1, D())
+    !A.running && (P(h.SpeedTestLifecycles.AWAITING_ENDPOINT), A.running = !0, A.currentTest = null, A.results = [], A.failed = !1, A.pings = [], A.connected = !1, L())
   },
   RTC_SPEED_TEST_STOP_TEST: function(e) {
-    A.running = !1, D(), A.lifecycle !== h.SpeedTestLifecycles.COMPLETED && P(h.SpeedTestLifecycles.CANCELLED)
+    A.running = !1, L(), A.lifecycle !== h.SpeedTestLifecycles.COMPLETED && P(h.SpeedTestLifecycles.CANCELLED)
   },
   SPEED_TEST_CREATE: function(e) {
     if (!A.running) {
@@ -243,11 +243,11 @@ i = "RTCSpeedTestStore", (l = "displayName") in(n = y) ? Object.defineProperty(n
     A.rtcServerId = e.rtcServerId
   },
   SPEED_TEST_DELETE: function(e) {
-    D(), A.running = !1, A.lifecycle !== h.SpeedTestLifecycles.COMPLETED && P(h.SpeedTestLifecycles.INACTIVE)
+    L(), A.running = !1, A.lifecycle !== h.SpeedTestLifecycles.COMPLETED && P(h.SpeedTestLifecycles.INACTIVE)
   },
   SPEED_TEST_SERVER_UPDATE: function(e) {
     var t;
-    D(), A.endpoint = null !== (t = e.endpoint) && void 0 !== t ? t : null, A.connection = new _.default({
+    L(), A.endpoint = null !== (t = e.endpoint) && void 0 !== t ? t : null, A.connection = new _.default({
       userId: c.default.getId(),
       sessionId: c.default.getSessionId(),
       rtcServerId: A.rtcServerId,

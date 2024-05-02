@@ -6,16 +6,16 @@ n.r(t), n.d(t, {
 });
 var a = n("735250");
 n("470079");
-var s = n("108930"),
-  l = n("86406"),
-  i = n("146068"),
-  r = n("308545"),
+var r = n("108930"),
+  i = n("86406"),
+  s = n("146068"),
+  l = n("308545"),
   o = n("397697"),
-  u = n("129871"),
+  c = n("129871"),
   d = n("206851"),
-  c = n("246933"),
+  u = n("246933"),
   f = n("995414"),
-  E = n("308083");
+  m = n("308083");
 
 function h(e) {
   let {
@@ -23,39 +23,39 @@ function h(e) {
     ...n
   } = e;
   switch (t) {
-    case E.ClanBannerKind.NIGHT_SKY:
+    case m.ClanBannerKind.NIGHT_SKY:
       return (0, a.jsx)(o.default, {
         ...n
       });
-    case E.ClanBannerKind.CASTLE:
-      return (0, a.jsx)(s.default, {
-        ...n
-      });
-    case E.ClanBannerKind.WORLD_MAP:
-      return (0, a.jsx)(f.default, {
-        ...n
-      });
-    case E.ClanBannerKind.SEA_FOAM:
-      return (0, a.jsx)(u.default, {
-        ...n
-      });
-    case E.ClanBannerKind.WARP_TUNNEL:
-      return (0, a.jsx)(c.default, {
-        ...n
-      });
-    case E.ClanBannerKind.HOUSE:
-      return (0, a.jsx)(i.default, {
-        ...n
-      });
-    case E.ClanBannerKind.HEIGHTMAP:
-      return (0, a.jsx)(l.default, {
-        ...n
-      });
-    case E.ClanBannerKind.MESH:
+    case m.ClanBannerKind.CASTLE:
       return (0, a.jsx)(r.default, {
         ...n
       });
-    case E.ClanBannerKind.SPATTER:
+    case m.ClanBannerKind.WORLD_MAP:
+      return (0, a.jsx)(f.default, {
+        ...n
+      });
+    case m.ClanBannerKind.SEA_FOAM:
+      return (0, a.jsx)(c.default, {
+        ...n
+      });
+    case m.ClanBannerKind.WARP_TUNNEL:
+      return (0, a.jsx)(u.default, {
+        ...n
+      });
+    case m.ClanBannerKind.HOUSE:
+      return (0, a.jsx)(s.default, {
+        ...n
+      });
+    case m.ClanBannerKind.HEIGHTMAP:
+      return (0, a.jsx)(i.default, {
+        ...n
+      });
+    case m.ClanBannerKind.MESH:
+      return (0, a.jsx)(l.default, {
+        ...n
+      });
+    case m.ClanBannerKind.SPATTER:
       return (0, a.jsx)(d.default, {
         ...n
       })

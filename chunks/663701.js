@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("493683"),
   _ = n("348600"),
   C = n("257968"),
-  m = n("367907"),
-  S = n("770471"),
+  S = n("367907"),
+  m = n("770471"),
   p = n("158631"),
   I = n("143614"),
   T = n("463119"),
@@ -32,8 +32,8 @@ var a = n("735250"),
   O = n("631885"),
   M = n("457396"),
   P = n("51596"),
-  x = n("905423"),
-  y = n("155409"),
+  y = n("905423"),
+  x = n("155409"),
   D = n("210887"),
   b = n("695346"),
   U = n("283595"),
@@ -41,8 +41,8 @@ var a = n("735250"),
   G = n("923834"),
   w = n("55563"),
   k = n("774343"),
-  B = n("517802"),
-  F = n("436088"),
+  F = n("517802"),
+  B = n("436088"),
   H = n("427828"),
   V = n("916187"),
   Y = n("158010"),
@@ -61,7 +61,7 @@ let ee = e => {
       ...n
     } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, I.default)(), {
       canViewBroadcasts: r
-    } = S.default.useExperiment({
+    } = m.default.useExperiment({
       location: "friends_tab_no_track"
     }), u = (0, p.default)();
     return (0, a.jsxs)(q.LinkButton, {
@@ -70,7 +70,7 @@ let ee = e => {
       icon: W.default,
       text: J.default.Messages.FRIENDS,
       onClick: () => {
-        m.default.trackWithMetadata(X.AnalyticEvents.BROADCAST_LIST_VISITED, {
+        S.default.trackWithMetadata(X.AnalyticEvents.BROADCAST_LIST_VISITED, {
           num_active_broadcasts: i.length,
           friends_tab_clicked: !0,
           is_broadcasting: u
@@ -82,7 +82,7 @@ let ee = e => {
         color: g.default.BG_BRAND,
         text: (0, a.jsxs)("div", {
           className: $.broadcastingBadge,
-          children: [(0, a.jsx)(F.default, {
+          children: [(0, a.jsx)(B.default, {
             className: $.broadcastingIcon
           }), (0, a.jsx)(E.Text, {
             variant: "text-xs/semibold",
@@ -125,7 +125,7 @@ let ee = e => {
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: n,
-      icon: B.default,
+      icon: F.default,
       iconClassName: i()($.activitiesBirthdayIcon, {
         [$.activitiesBirthdayIconLight]: "light" === u
       }),
@@ -235,7 +235,7 @@ let eo = e => {
     homeLink: s,
     storeLink: l,
     premiumTabSelected: o
-  } = e, [d, c] = (0, x.default)(e => {
+  } = e, [d, c] = (0, y.default)(e => {
     let {
       channelId: t,
       path: n
@@ -251,7 +251,7 @@ let eo = e => {
   return (0, a.jsxs)("nav", {
     className: $.privateChannels,
     "aria-label": J.default.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
-    children: [(0, a.jsx)(y.default, {
+    children: [(0, a.jsx)(x.default, {
       tutorialId: "direct-messages",
       position: "right",
       offsetX: -52,

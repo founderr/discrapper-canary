@@ -24,11 +24,11 @@ t.default = () => {
       return []
     }, [e, n, t]),
     [_, C] = (0, i.useSelectedDismissibleContent)(h, void 0, !0),
-    m = null != _ ? c.CollectiblesDCToDisplayOptions[_] : null;
+    S = null != _ ? c.CollectiblesDCToDisplayOptions[_] : null;
   return {
-    collectiblesShopTabNewBadgeDisplayOptions: m,
+    collectiblesShopTabNewBadgeDisplayOptions: S,
     dismissCollectiblesShopTabNewBadge: () => {
-      null != m && C(f.ContentDismissActionType.AUTO)
+      null != S && C(f.ContentDismissActionType.AUTO)
     }
   }
 }

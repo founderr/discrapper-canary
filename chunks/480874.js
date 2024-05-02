@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("626135"),
   _ = n("26373"),
   C = n("486622"),
-  m = n("922409"),
-  S = n("727813"),
+  S = n("922409"),
+  m = n("727813"),
   p = n("355350"),
   I = n("307947"),
   T = n("125855"),
@@ -30,14 +30,14 @@ var a = n("735250"),
 
 function R() {
   let e = s.useRef(null),
-    t = (0, S.default)(),
+    t = (0, m.default)(),
     n = (0, p.useSpamMessageRequestCount)(),
     l = (0, _.useListHasSingleSpamMessageRequest)(),
     R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
     L = (0, c.default)("message-requests-spam-list"),
     {
       channelId: O
-    } = (0, m.useMessageRequestSidebarState)(),
+    } = (0, S.useMessageRequestSidebarState)(),
     M = s.useCallback(() => {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
@@ -46,7 +46,7 @@ function R() {
     } = (0, C.useMessageRequestActions)({
       onError: M
     }),
-    x = s.useCallback(() => {
+    y = s.useCallback(() => {
       P(t.map(e => e.channel.id))
     }, [t, P]);
   s.useEffect(() => {
@@ -56,7 +56,7 @@ function R() {
       name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let y = s.useCallback(e => {
+  let x = s.useCallback(e => {
       var n, s;
       let {
         row: r
@@ -84,7 +84,7 @@ function R() {
           tag: "span",
           children: "•"
         }), (0, a.jsx)(u.Button, {
-          onClick: x,
+          onClick: y,
           look: u.ButtonLooks.LINK,
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
@@ -93,7 +93,7 @@ function R() {
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, x, R]);
+    }, "message-requests-spam-title"), [n, y, R]);
   return 0 === t.length ? (0, a.jsx)(I.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
@@ -118,7 +118,7 @@ function R() {
           sectionHeight: g.LIST_SECTION_HEIGHT,
           rowHeight: g.LIST_ROW_HEIGHT,
           renderSection: D,
-          renderRow: y,
+          renderRow: x,
           sections: [t.length],
           chunkSize: 30,
           fade: !0,

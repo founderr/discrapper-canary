@@ -102,7 +102,7 @@ let R = l.memo(function() {
       isFirstChannel: _,
       isLastChannel: C,
       tooltipDirection: L = "right"
-    } = e, O = (0, f.useIsChecked)(t.id, l.id), A = (0, f.useIsDisabled)(t.id, l.id), p = (0, f.useDisabledTooltip)(t.id, l.id), M = (0, f.useTooltip)(n.id, l.id), D = null != (0, m.default)(n).find(e => e.id === t.id), v = (0, c.useIsChattableChannel)(t.id), j = e => {
+    } = e, O = (0, f.useIsChecked)(t.id, l.id), A = (0, f.useIsDisabled)(t.id, l.id), p = (0, f.useDisabledTooltip)(t.id, l.id), M = (0, f.useTooltip)(n.id, l.id), D = null != (0, m.default)(n).find(e => e.id === t.id), v = (0, c.useIsChattableChannel)(t.id), G = e => {
       if (!A) return e.stopPropagation(), (0, u.canChannelBeDefault)(n.id, t.id) ? (0, S.toggleDefaultChannel)(t.id) : (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -113,7 +113,7 @@ let R = l.memo(function() {
           startingChannelId: t.id
         })
       }), !0
-    }, G = e => {
+    }, j = e => {
       t.isGuildVocal() ? (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -126,7 +126,7 @@ let R = l.memo(function() {
       }) : (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([s.e("49237"), s.e("99387"), s.e("30386"), s.e("79695"), s.e("48375"), s.e("81539"), s.e("57878"), s.e("67535"), s.e("95393"), s.e("39285"), s.e("14262"), s.e("70866"), s.e("6380"), s.e("87983"), s.e("8739"), s.e("58286"), s.e("7590"), s.e("90687"), s.e("41947"), s.e("37766"), s.e("53466"), s.e("38779"), s.e("25464"), s.e("30243"), s.e("23404"), s.e("78690"), s.e("37220"), s.e("61447"), s.e("91315"), s.e("18320"), s.e("80954"), s.e("37839"), s.e("36254")]).then(s.bind(s, "373651"));
+        } = await Promise.all([s.e("49237"), s.e("99387"), s.e("30386"), s.e("79695"), s.e("48375"), s.e("81539"), s.e("57878"), s.e("67535"), s.e("95393"), s.e("39285"), s.e("14262"), s.e("7590"), s.e("70866"), s.e("6380"), s.e("87983"), s.e("8739"), s.e("58286"), s.e("90687"), s.e("41947"), s.e("37766"), s.e("53466"), s.e("38779"), s.e("25464"), s.e("30243"), s.e("23404"), s.e("78690"), s.e("37220"), s.e("61447"), s.e("91315"), s.e("18320"), s.e("80954"), s.e("37839"), s.e("36254")]).then(s.bind(s, "373651"));
         return s => (0, a.jsx)(e, {
           ...s,
           channel: t,
@@ -146,8 +146,8 @@ let R = l.memo(function() {
             [h.disabled]: A
           }),
           ...e,
-          onClick: j,
-          onContextMenu: G,
+          onClick: G,
+          onContextMenu: j,
           children: [(0, a.jsx)("div", {
             className: h.channelInfo,
             children: (0, a.jsxs)("div", {

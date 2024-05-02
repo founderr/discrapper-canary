@@ -1,62 +1,62 @@
 "use strict";
 n.r(t), n("47120");
-var i = n("735250");
+var a = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("692547"),
+  i = n.n(r),
+  s = n("692547"),
   l = n("481060"),
   o = n("259580"),
-  u = n("196345"),
-  c = n("137158"),
-  d = n("689938"),
+  c = n("196345"),
+  d = n("137158"),
+  u = n("689938"),
   f = n("915580");
 t.default = function(e) {
   let {
     channelId: t,
     formField: n,
     index: r,
-    isDragEnabled: p,
-    isDropHovered: m,
-    onDrop: E,
-    onEdit: I,
-    onRemove: _,
-    canRemove: h,
-    title: T,
+    isDragEnabled: m,
+    isDropHovered: h,
+    onDrop: p,
+    onEdit: T,
+    onRemove: E,
+    canRemove: C,
+    title: _,
     actionsLocation: g
-  } = e, C = n.values, x = C.slice(0, 1), v = C.length - x.length;
-  return (0, i.jsxs)(c.default, {
+  } = e, x = n.values, I = x.slice(0, 1), v = x.length - I.length;
+  return (0, a.jsxs)(d.default, {
     field: n,
     index: r,
-    isDragEnabled: p,
-    isDropHovered: m,
-    onDrop: E,
-    onEdit: I,
-    onRemove: _,
-    title: T,
-    canRemove: h,
+    isDragEnabled: m,
+    isDropHovered: h,
+    onDrop: p,
+    onEdit: T,
+    onRemove: E,
+    title: _,
+    canRemove: C,
     actionsLocation: g,
-    children: [(0, i.jsx)(u.TermsFieldBody, {
-      className: s()(f.fieldBackground, {
+    children: [(0, a.jsx)(c.TermsFieldBody, {
+      className: i()(f.fieldBackground, {
         [f.withFooter]: 0 !== v
       }),
-      terms: x,
+      terms: I,
       channelId: t
-    }), 0 !== v && (0, i.jsxs)(l.Clickable, {
-      className: s()(f.fieldFooterContainer, f.clickable),
-      onClick: I,
-      children: [(0, i.jsx)(l.FormText, {
+    }), 0 !== v && (0, a.jsxs)(l.Clickable, {
+      className: i()(f.fieldFooterContainer, f.clickable),
+      onClick: T,
+      children: [(0, a.jsx)(l.FormText, {
         className: f.clickable,
-        children: d.default.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({
+        children: u.default.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({
           count: v
         })
-      }), (0, i.jsx)(o.default, {
+      }), (0, a.jsx)(o.default, {
         className: f.termsFieldCaretIcon,
         height: 14,
         width: 14,
-        color: a.default.unsafe_rawColors.WHITE_500.css
+        color: s.default.unsafe_rawColors.WHITE_500.css
       })]
-    }), (0, i.jsx)(u.TermsFieldCheckbox, {
+    }), (0, a.jsx)(c.TermsFieldCheckbox, {
       disabled: !0,
       checked: !1
     })]

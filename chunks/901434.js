@@ -23,7 +23,7 @@ t.default = function(e) {
     hasConnectPermission: S
   } = e, _ = (0, d.useShowMemberVerificationGate)(g.guild_id), T = l.useCallback(() => {
     _ ? (0, u.openMemberVerificationModal)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id)
-  }, [g.id, g.guild_id, _]), I = h.filter(e => e.type === m.StageChannelParticipantTypes.VOICE), A = 4 === I.length ? 2 : 3, N = (0, s.useStateFromStoresArray)([o.default], () => I.map(e => o.default.getParticipant(g.id, e.id)).filter(f.isNotNullish), [g.id, I]);
+  }, [g.id, g.guild_id, _]), I = h.filter(e => e.type === m.StageChannelParticipantTypes.VOICE), A = 4 === I.length ? 2 : 3, v = (0, s.useStateFromStoresArray)([o.default], () => I.map(e => o.default.getParticipant(g.id, e.id)).filter(f.isNotNullish), [g.id, I]);
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)("div", {
@@ -31,7 +31,7 @@ t.default = function(e) {
       style: {
         maxWidth: 168 * A
       },
-      children: N.slice(0, 5).map(e => (0, a.jsx)(c.default, {
+      children: v.slice(0, 5).map(e => (0, a.jsx)(c.default, {
         participant: e,
         channel: g,
         className: E.tile,

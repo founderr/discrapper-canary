@@ -23,7 +23,7 @@ function C(e) {
     party: t,
     close: n,
     onSelect: C
-  } = e, m = (0, u.default)(t), S = (0, f.default)(t), p = (0, c.default)(t), I = (0, d.default)(t), T = (0, r.default)(t), g = (0, o.default)(t);
+  } = e, S = (0, u.default)(t), m = (0, f.default)(t), p = (0, c.default)(t), I = (0, d.default)(t), T = (0, r.default)(t), g = (0, o.default)(t);
   return s.useEffect(() => {
     let e = t.currentActivities.filter(e => {
       var t, n;
@@ -38,8 +38,8 @@ function C(e) {
     onClose: n,
     "aria-label": _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onSelect: C,
-    children: [m, (0, a.jsxs)(l.MenuGroup, {
-      children: [S, p]
+    children: [S, (0, a.jsxs)(l.MenuGroup, {
+      children: [m, p]
     }), (0, a.jsx)(l.MenuGroup, {
       children: I
     }), (0, a.jsx)(l.MenuGroup, {

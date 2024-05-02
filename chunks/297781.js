@@ -53,12 +53,12 @@ var a, l, s = n("735250"),
   T = n("561308"),
   I = n("371991"),
   A = n("689938"),
-  N = n("509058");
+  v = n("509058");
 (a = l || (l = {}))[a.CARD = 0] = "CARD", a[a.POPOUT = 1] = "POPOUT";
-let v = i.createContext({});
+let N = i.createContext({});
 
 function x() {
-  return i.useContext(v)
+  return i.useContext(N)
 }
 
 function M(e) {
@@ -76,7 +76,7 @@ function M(e) {
     text: l,
     shouldShow: i,
     children: e => (0, s.jsxs)("div", {
-      className: N.badgeContainer,
+      className: v.badgeContainer,
       ...e,
       children: [(0, s.jsx)(t, {
         width: 12,
@@ -85,7 +85,7 @@ function M(e) {
       }), (0, s.jsx)(g.Text, {
         variant: "text-xs/normal",
         color: r,
-        className: N.badgeLabel,
+        className: v.badgeLabel,
         children: n
       })]
     })
@@ -115,7 +115,7 @@ function L(e) {
     location: l
   } = x(), i = (0, T.isEntryActive)(t), r = 0 === l && i ? g.tokens.colors.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT : a;
   return (0, s.jsxs)("div", {
-    className: N.badgeContainer,
+    className: v.badgeContainer,
     children: [(0, s.jsx)(d.GameControllerIcon, {
       width: 12,
       height: 12,
@@ -213,7 +213,7 @@ function b(e) {
     defaultIconColor: a
   } = x();
   return (0, s.jsxs)("div", {
-    className: N.badgeContainer,
+    className: v.badgeContainer,
     children: [(0, s.jsx)(E.TvIcon, {
       width: 12,
       height: 12,
@@ -249,15 +249,15 @@ function F(e) {
   } : {
     defaultTextColor: "always-white",
     defaultIconColor: g.tokens.colors.TEXT_PRIMARY
-  }, (0, s.jsx)(v.Provider, {
+  }, (0, s.jsx)(N.Provider, {
     value: {
       location: t,
       ...a
     },
     children: (0, s.jsx)("div", {
-      className: o()(N.badgesContainer, {
-        [N.badgesContainerCard]: 0 === t,
-        [N.badgesContainerPopout]: 1 === t
+      className: o()(v.badgesContainer, {
+        [v.badgesContainerCard]: 0 === t,
+        [v.badgesContainerPopout]: 1 === t
       }),
       children: n
     })

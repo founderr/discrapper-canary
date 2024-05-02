@@ -14,9 +14,9 @@ var a = n("735250"),
   h = n("594174"),
   _ = n("643126"),
   C = n("823379"),
-  m = n("689938");
+  S = n("689938");
 
-function S(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -47,7 +47,7 @@ class p extends s.PureComponent {
     }) : null
   }
   constructor(...e) {
-    super(...e), S(this, "handleUserContextMenu", (e, t) => {
+    super(...e), m(this, "handleUserContextMenu", (e, t) => {
       (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -57,13 +57,13 @@ class p extends s.PureComponent {
           user: t
         })
       })
-    }), S(this, "renderOverflowPopout", () => {
+    }), m(this, "renderOverflowPopout", () => {
       let {
         party: e
       } = this.props;
       return (0, a.jsx)(u.default, {
         party: e,
-        header: m.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
+        header: S.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
           count: e.length
         })
       })

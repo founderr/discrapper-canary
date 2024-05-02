@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return L
+    return D
   }
 });
 var a = s("735250");
@@ -33,10 +33,10 @@ var n = s("512722"),
   M = s("689938"),
   v = s("547304");
 
-function L(e) {
-  var t, s, n, L;
+function D(e) {
+  var t, s, n, D;
   let {
-    guild: D
+    guild: L
   } = e, P = (0, i.useStateFromStores)([h.default], () => {
     let e = h.default.getCurrentUser();
     return l()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
@@ -68,7 +68,7 @@ function L(e) {
       errors: A.default.getErrors(),
       guild: A.default.getGuild()
     }
-  }), w = null != D ? D : k;
+  }), w = null != L ? L : k;
   l()(null != w, "guild should not be null");
   let H = (0, o.useGuildAutomodProfileQuarantineErrors)(w.id),
     V = (0, i.useStateFromStores)([g.default], () => null == w.id ? null : g.default.getMember(w.id, P.id)),
@@ -167,7 +167,7 @@ function L(e) {
           })]
         }),
         onBioChange: e => (0, O.setNewPendingGuildIdentityBio)(e, q),
-        errors: null !== (L = null == G ? void 0 : G.bio) && void 0 !== L ? L : null == H ? void 0 : H.bio,
+        errors: null !== (D = null == G ? void 0 : G.bio) && void 0 !== D ? D : null == H ? void 0 : H.bio,
         pendingBio: y,
         currentBio: q,
         disabled: !W

@@ -1,17 +1,17 @@
 "use strict";
 a.r(t), a.d(t, {
   staffOnlyGuildSettingsAccess: function() {
-    return o
+    return d
   },
   useGuildAccessRateInsightExperiment: function() {
-    return d
+    return r
   }
 });
 var n = a("470079"),
-  s = a("818083"),
+  i = a("818083"),
   l = a("594174"),
-  i = a("981631");
-let r = (0, s.createExperiment)({
+  s = a("981631");
+let u = (0, i.createExperiment)({
   kind: "guild",
   id: "2022-03_guild_access_rate_insight_experiment",
   label: "Guild Access Rate Insight Experiment",
@@ -27,23 +27,23 @@ let r = (0, s.createExperiment)({
   }]
 });
 
-function o(e) {
+function d(e) {
   var t;
-  return (null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && r.getCurrentConfig({
+  return (null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && u.getCurrentConfig({
     guildId: e,
     location: "77b4b2_1"
   }).showAccessRate
 }
 
-function d(e) {
+function r(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   return n.useEffect(() => {
-    !t && null != e && r.trackExposure({
+    !t && null != e && u.trackExposure({
       guildId: e,
       location: "77b4b2_2"
     })
-  }, [e, t]), r.useExperiment({
-    guildId: null != e ? e : i.EMPTY_STRING_SNOWFLAKE_ID,
+  }, [e, t]), u.useExperiment({
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: "77b4b2_3"
   }, {
     autoTrackExposure: !1,

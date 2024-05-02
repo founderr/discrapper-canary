@@ -5,8 +5,8 @@ var E = s("735250"),
   a = s("120356"),
   n = s.n(a),
   T = s("628238"),
-  u = s("998951"),
-  i = s("25015"),
+  i = s("998951"),
+  u = s("25015"),
   A = s("963550"),
   l = s("845080"),
   I = s("913144");
@@ -16,22 +16,22 @@ t.default = _.memo(function(e) {
     message: s,
     channel: _,
     compact: a,
-    className: L,
+    className: r,
     isGroupStart: o,
-    hideSimpleEmbedContent: r = !0,
+    hideSimpleEmbedContent: L = !0,
     disableInteraction: d
   } = e, S = (0, T.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()), {
     content: N
-  } = (0, i.default)(s, {
-    hideSimpleEmbedContent: r,
+  } = (0, u.default)(s, {
+    hideSimpleEmbedContent: L,
     allowList: S,
     allowHeading: S,
     allowLinks: !0,
     previewLinkTarget: !0
   });
-  return (0, E.jsx)(u.default, {
+  return (0, E.jsx)(i.default, {
     compact: a,
-    className: n()(L, {
+    className: n()(r, {
       [I.message]: !0,
       [I.cozyMessage]: !a,
       [I.groupStart]: o

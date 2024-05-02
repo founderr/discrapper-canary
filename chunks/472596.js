@@ -7,13 +7,13 @@ s.r(t), s.d(t, {
     return S
   },
   openMemberProfile: function() {
-    return L
+    return r
   },
   useContextMenuModerateRoles: function() {
     return o
   },
   useContextMenuModerateUser: function() {
-    return r
+    return L
   },
   useHighestRole: function() {
     return d
@@ -22,18 +22,18 @@ s.r(t), s.d(t, {
 var E, _, a = s("470079"),
   n = s("399606"),
   T = s("906732"),
-  u = s("171368"),
-  i = s("430824"),
+  i = s("171368"),
+  u = s("430824"),
   A = s("594174"),
   l = s("91047"),
   I = s("981631");
-let L = (e, t) => {
+let r = (e, t) => {
   let {
     guildId: s,
     userId: E,
     colorRoleId: _
   } = e;
-  (0, u.openUserProfileModal)({
+  (0, i.openUserProfileModal)({
     userId: E,
     guildId: s,
     sourceAnalyticsLocations: t,
@@ -61,7 +61,7 @@ function o(e, t, s) {
   }, [e, E, s, t])
 }
 
-function r(e, t, s) {
+function L(e, t, s) {
   let {
     analyticsLocations: E
   } = (0, T.default)();
@@ -79,11 +79,11 @@ function r(e, t, s) {
 }
 
 function d(e) {
-  return (0, n.useStateFromStores)([i.default], () => {
+  return (0, n.useStateFromStores)([u.default], () => {
     var t;
     if (null == e) return null;
-    let s = i.default.getGuild(e.guildId);
-    return null == s || null == e.highestRoleId ? null : null !== (t = i.default.getRole(s.id, e.highestRoleId)) && void 0 !== t ? t : null
+    let s = u.default.getGuild(e.guildId);
+    return null == s || null == e.highestRoleId ? null : null !== (t = u.default.getRole(s.id, e.highestRoleId)) && void 0 !== t ? t : null
   }, [e])
 }
 

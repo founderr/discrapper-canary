@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("906732"),
   I = n("493324"),
   A = n("611064"),
-  N = n("677432"),
-  v = n("178762"),
+  v = n("677432"),
+  N = n("178762"),
   x = n("868671"),
   M = n("623624"),
   R = n("518738"),
@@ -414,13 +414,13 @@ class ee extends l.Component {
         }
         if (i.type === j.MemberListRowTypes.CONTENT_INVENTORY) {
           let e = "content-inventory-".concat(i.entry.id);
-          return null != i.entry.original_id && (e += "-".concat(i.entry.original_id)), (0, a.jsx)(v.default, {
+          return null != i.entry.original_id && (e += "-".concat(i.entry.original_id)), (0, a.jsx)(N.default, {
             ...i,
             channel: this.props.channel,
             index: l
           }, e)
         }
-        if (i.type === j.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(N.default, {}, "content-inventory-hidden-entry")
+        if (i.type === j.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(v.default, {}, "content-inventory-hidden-entry")
       }
       return (0, a.jsx)($, {
         index: l
@@ -447,7 +447,7 @@ class ee extends l.Component {
         return function(e, a) {
           if (e === x.CONTENT_FEED_SECTION) {
             let e = t[n + 1 + a];
-            return (0, v.getContentRowHeight)(e)
+            return (0, N.getContentRowHeight)(e)
           }
           return Z
         }

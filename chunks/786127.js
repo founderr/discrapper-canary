@@ -1,40 +1,40 @@
 "use strict";
 n.r(t);
-var i = n("735250");
+var a = n("735250");
 n("470079");
 var r = n("707592"),
-  s = n("137158"),
-  a = n("689938"),
+  i = n("137158"),
+  s = n("689938"),
   l = n("915580");
 t.default = function(e) {
   let {
     formField: t,
     index: n,
     isDragEnabled: o,
-    isDropHovered: u,
-    onDrop: c,
-    onEdit: d,
+    isDropHovered: c,
+    onDrop: d,
+    onEdit: u,
     onRemove: f,
-    canRemove: p,
-    actionsLocation: m
+    canRemove: m,
+    actionsLocation: h
   } = e, {
-    label: E,
-    placeholder: I
+    label: p,
+    placeholder: T
   } = t;
-  return (0, i.jsx)(s.default, {
+  return (0, a.jsx)(i.default, {
     field: t,
     index: n,
     isDragEnabled: o,
-    isDropHovered: u,
-    onDrop: c,
-    onEdit: d,
+    isDropHovered: c,
+    onDrop: d,
+    onEdit: u,
     onRemove: f,
-    title: E,
-    canRemove: p,
-    actionsLocation: m,
-    children: (0, i.jsx)(r.TextInputFieldBody, {
+    title: p,
+    canRemove: m,
+    actionsLocation: h,
+    children: (0, a.jsx)(r.TextInputFieldBody, {
       className: l.fieldBackground,
-      placeholder: null != I ? I : a.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
+      placeholder: null != T ? T : s.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0
     })
   })

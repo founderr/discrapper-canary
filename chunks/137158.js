@@ -1,145 +1,145 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return _
   }
 }), n("47120");
-var i = n("735250"),
+var a = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  i = n("120356"),
+  s = n.n(i),
   l = n("392711"),
   o = n("942389"),
-  u = n("299468"),
-  c = n("490236"),
-  d = n("692547"),
+  c = n("299468"),
+  d = n("490236"),
+  u = n("692547"),
   f = n("481060"),
-  p = n("548343"),
-  m = n("689938"),
-  E = n("915580");
+  m = n("548343"),
+  h = n("689938"),
+  p = n("915580");
 
-function I(e) {
+function T(e) {
   let {
     title: t,
     children: n,
     onEdit: r,
-    onRemove: s,
+    onRemove: i,
     canRemove: l,
     actionsLocation: o
   } = e;
-  return (0, i.jsxs)("div", {
-    className: E.backgroundContainer,
-    children: [(0, i.jsxs)("div", {
-      className: E.containerPadding,
-      children: [(0, i.jsx)(f.FormTitle, {
+  return (0, a.jsxs)("div", {
+    className: p.backgroundContainer,
+    children: [(0, a.jsxs)("div", {
+      className: p.containerPadding,
+      children: [(0, a.jsx)(f.FormTitle, {
         tag: "h3",
-        className: E.containerTitle,
+        className: p.containerTitle,
         children: t
       }), n]
-    }), "footer" === o && (0, i.jsxs)(f.FormSection, {
-      className: E.containerFooter,
-      children: [(0, i.jsx)(f.Tooltip, {
-        text: m.default.Messages.CLAN_APPLICATION_CANT_REMOVE_FIELD,
+    }), "footer" === o && (0, a.jsxs)(f.FormSection, {
+      className: p.containerFooter,
+      children: [(0, a.jsx)(f.Tooltip, {
+        text: h.default.Messages.CLAN_APPLICATION_CANT_REMOVE_FIELD,
         shouldShow: !l,
-        children: e => (0, i.jsx)(f.Button, {
+        children: e => (0, a.jsx)(f.Button, {
           ...e,
-          className: a()(E.removeButton, E.button),
+          className: s()(p.removeButton, p.button),
           size: f.Button.Sizes.SMALL,
           look: f.Button.Looks.BLANK,
-          onClick: s,
+          onClick: i,
           disabled: !l,
-          children: m.default.Messages.REMOVE
+          children: h.default.Messages.REMOVE
         })
-      }), (0, i.jsx)(f.Button, {
-        className: E.button,
+      }), (0, a.jsx)(f.Button, {
+        className: p.button,
         size: f.Button.Sizes.SMALL,
         color: f.Button.Colors.PRIMARY,
         onClick: r,
-        children: m.default.Messages.EDIT
+        children: h.default.Messages.EDIT
       })]
     })]
   })
 }
-let _ = "FORM_FIELD";
+let E = "FORM_FIELD";
 
-function h(e) {
+function C(e) {
   let {
     index: t,
     field: n,
-    isDropHovered: s,
-    onDrop: u
-  } = e, c = (0, l.debounce)(async (e, t, n) => {
-    await u(e, t, n)
-  }), f = r.useRef(null), [, m] = (0, o.useDrag)({
-    type: _,
+    isDropHovered: i,
+    onDrop: c
+  } = e, d = (0, l.debounce)(async (e, t, n) => {
+    await c(e, t, n)
+  }), f = r.useRef(null), [, h] = (0, o.useDrag)({
+    type: E,
     item: {
       index: t,
       field: n
     },
     end: (e, t) => {
-      null != e && !t.didDrop() && c(e.field, null, !0)
+      null != e && !t.didDrop() && d(e.field, null, !0)
     }
-  }), [, h] = (0, o.useDrop)({
-    accept: _,
+  }), [, C] = (0, o.useDrop)({
+    accept: E,
     hover: (e, n) => {
-      var i;
+      var a;
       let {
         index: r
-      } = e, s = null === (i = f.current) || void 0 === i ? void 0 : i.getBoundingClientRect(), a = n.getClientOffset();
-      if (null == s || null == a) return;
-      let l = (s.bottom - s.top) / 2,
-        o = a.y - s.top;
-      (!(r < t) || !(o < l)) && (!(r > t) || !(o < l)) && r !== t && c(e.field, t, !1)
+      } = e, i = null === (a = f.current) || void 0 === a ? void 0 : a.getBoundingClientRect(), s = n.getClientOffset();
+      if (null == i || null == s) return;
+      let l = (i.bottom - i.top) / 2,
+        o = s.y - i.top;
+      (!(r < t) || !(o < l)) && (!(r > t) || !(o < l)) && r !== t && d(e.field, t, !1)
     },
     drop: e => {
-      c(e.field, t, !0)
+      d(e.field, t, !0)
     }
   });
-  return r.useLayoutEffect(() => (m(h(f)), () => {
-    h(null), m(null)
-  }), [m, h]), (0, i.jsxs)("div", {
+  return r.useLayoutEffect(() => (h(C(f)), () => {
+    C(null), h(null)
+  }), [h, C]), (0, a.jsxs)("div", {
     ref: f,
     "data-dnd-name": "field-".concat(t),
-    className: a()(E.dragContainer, {
-      [E.dropHovered]: s
+    className: s()(p.dragContainer, {
+      [p.dropHovered]: i
     }),
-    children: [(0, i.jsx)("div", {
-      className: E.dragIconContainer,
-      children: (0, i.jsx)(p.default, {
-        className: E.dragIcon,
-        color: d.default.unsafe_rawColors.PRIMARY_400.css
+    children: [(0, a.jsx)("div", {
+      className: p.dragIconContainer,
+      children: (0, a.jsx)(m.default, {
+        className: p.dragIcon,
+        color: u.default.unsafe_rawColors.PRIMARY_400.css
       })
-    }), (0, i.jsx)(I, {
+    }), (0, a.jsx)(T, {
       ...e
     })]
   })
 }
 
-function T(e) {
-  return (0, i.jsxs)("div", {
-    className: E.formFieldContainer,
-    children: [(0, i.jsx)("div", {
-      className: E.spacingContainer,
-      children: e.isDragEnabled ? (0, i.jsx)(h, {
+function _(e) {
+  return (0, a.jsxs)("div", {
+    className: p.formFieldContainer,
+    children: [(0, a.jsx)("div", {
+      className: p.spacingContainer,
+      children: e.isDragEnabled ? (0, a.jsx)(C, {
         ...e
-      }) : (0, i.jsx)(I, {
+      }) : (0, a.jsx)(T, {
         ...e
       })
-    }), "side" === e.actionsLocation && (0, i.jsxs)("div", {
-      className: E.actionButtonsContainer,
-      children: [(0, i.jsx)(f.Clickable, {
-        className: E.actionButton,
+    }), "side" === e.actionsLocation && (0, a.jsxs)("div", {
+      className: p.actionButtonsContainer,
+      children: [(0, a.jsx)(f.Clickable, {
+        className: p.actionButton,
         onClick: e.onEdit,
-        "aria-label": m.default.Messages.EDIT,
-        children: (0, i.jsx)(u.PencilIcon, {
+        "aria-label": h.default.Messages.EDIT,
+        children: (0, a.jsx)(c.PencilIcon, {
           width: 16,
           height: 16
         })
-      }), e.canRemove && (0, i.jsx)(f.Clickable, {
-        className: E.actionButton,
+      }), e.canRemove && (0, a.jsx)(f.Clickable, {
+        className: p.actionButton,
         onClick: e.onRemove,
-        "aria-label": m.default.Messages.REMOVE,
-        children: (0, i.jsx)(c.TrashIcon, {
+        "aria-label": h.default.Messages.REMOVE,
+        children: (0, a.jsx)(d.TrashIcon, {
           width: 16,
           height: 16
         })

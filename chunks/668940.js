@@ -15,22 +15,22 @@ var s = n("442837"),
   h = n("889010"),
   _ = n("488905"),
   C = n("347137"),
-  m = n("731455"),
-  S = n("689938");
+  S = n("731455"),
+  m = n("689938");
 let p = e => {
     switch (e) {
-      case m.CategoryId.Activity:
-        return m.CategoryIcons.Activity;
-      case m.CategoryId.Music:
-        return m.CategoryIcons.Music;
-      case m.CategoryId.Television:
-        return m.CategoryIcons.Television;
-      case m.CategoryId.Science:
-        return m.CategoryIcons.Science;
-      case m.CategoryId.Education:
-        return m.CategoryIcons.Education;
+      case S.CategoryId.Activity:
+        return S.CategoryIcons.Activity;
+      case S.CategoryId.Music:
+        return S.CategoryIcons.Music;
+      case S.CategoryId.Television:
+        return S.CategoryIcons.Television;
+      case S.CategoryId.Science:
+        return S.CategoryIcons.Science;
+      case S.CategoryId.Education:
+        return S.CategoryIcons.Education;
       default:
-        return m.CategoryIcons.Discover
+        return S.CategoryIcons.Discover
     }
   },
   I = () => {
@@ -48,7 +48,7 @@ let p = e => {
     };
     return (0, a.jsxs)(l.Scroller, {
       children: [(0, a.jsx)(_.DiscoverySidebarHeader, {
-        text: S.default.Messages.DISCOVER
+        text: m.default.Messages.DISCOVER
       }), (0, a.jsx)(h.default, {
         categories: r,
         handleCategorySelect: c,

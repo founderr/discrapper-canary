@@ -39,7 +39,7 @@ let C = e => {
         (0, E.assertNever)(e)
     }
   },
-  m = e => {
+  S = e => {
     let {
       categories: t,
       currentCategoryId: n,
@@ -66,4 +66,4 @@ let C = e => {
       }, e.categoryId))
     })
   };
-m.Icons = h.CategoryIcons, t.default = m
+S.Icons = h.CategoryIcons, t.default = S

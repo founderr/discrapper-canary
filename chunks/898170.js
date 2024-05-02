@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   QuestBarBackgroundAnimation: function() {
-    return m
+    return S
   }
 }), n("47120"), n("724458");
 var a = n("735250"),
@@ -35,14 +35,14 @@ async function C(e, t) {
   }(a, _, t), a
 }
 
-function m(e) {
+function S(e) {
   var t;
   let {
     animationClassName: n,
     className: l,
     quest: r,
     useReducedMotion: o
-  } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), m = s.useRef(null), [S, p] = s.useState(!1), I = s.useMemo(() => {
+  } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), S = s.useRef(null), [m, p] = s.useState(!1), I = s.useMemo(() => {
     if (null == r) return null;
     let e = (0, f.hexToRgb)(r.config.colors.primary),
       t = {
@@ -55,7 +55,7 @@ function m(e) {
   }, [r]), T = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = !o && _;
   s.useEffect(() => {
     var e, t, n, a;
-    _ ? g && (null === (a = m.current) || void 0 === a || null === (n = a.animation) || void 0 === n || n.play()) : null === (t = m.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
+    _ ? g && (null === (a = S.current) || void 0 === a || null === (n = a.animation) || void 0 === n || n.play()) : null === (t = S.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
   }, [g, _]);
   let A = s.useCallback(() => {
     p(!0)
@@ -68,10 +68,10 @@ function m(e) {
   }) : (0, a.jsx)("div", {
     className: i()(E.lottieAnimationBackgroundWrapper, l),
     children: (0, a.jsx)(c.default, {
-      ref: m,
+      ref: S,
       onComplete: A,
       importData: () => I,
-      shouldAnimate: !S && g,
+      shouldAnimate: !m && g,
       className: i()(E.lottieAnimation, E.lottieAnimationBackground, n),
       loop: 0,
       rendererSettings: {

@@ -26,8 +26,8 @@ var l = n("120356"),
   T = n("134483"),
   I = n("809244"),
   A = n("618158"),
-  N = n("496675"),
-  v = n("366695"),
+  v = n("496675"),
+  N = n("366695"),
   x = n("586791"),
   M = n("502568"),
   R = n("792125"),
@@ -95,7 +95,7 @@ function G(e) {
   if ((null == l ? void 0 : l.type) === D.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(M.default.Divider, {
       className: w.divider
-    }), (0, a.jsx)(v.default, {
+    }), (0, a.jsx)(N.default, {
       game: n,
       className: w.activityIcon
     }), (0, a.jsx)(r.Text, {
@@ -147,11 +147,11 @@ function V(e) {
   } = (0, i.useStateFromStoresObject)([L.default], () => ({
     focusedParticipant: L.default.getSelectedParticipant(t.id),
     participantsOpen: L.default.getParticipantsOpen(t.id)
-  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), v = F.default.Messages.VOICE_CHANNEL;
-  t.isDM() ? v = F.default.Messages.DM : t.isGroupDM() && (v = F.default.Messages.GROUP_DM);
+  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), N = F.default.Messages.VOICE_CHANNEL;
+  t.isDM() ? N = F.default.Messages.DM : t.isGroupDM() && (N = F.default.Messages.GROUP_DM);
   let y = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
     j = t.isGuildVoice() && u && null != y && y.length > 0,
-    H = (0, i.useStateFromStores)([N.default], () => N.default.can(b.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
+    H = (0, i.useStateFromStores)([v.default], () => v.default.can(b.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
     B = j ? (0, a.jsx)(r.Tooltip, {
       text: F.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
@@ -210,7 +210,7 @@ function V(e) {
       children: [null != I ? (0, a.jsx)(M.default.Icon, {
         icon: I,
         disabled: !0,
-        "aria-label": v
+        "aria-label": N
       }) : null, (0, a.jsx)(M.default.Title, {
         children: C
       }), (0, a.jsx)(S.HeaderGuildBreadcrumb, {

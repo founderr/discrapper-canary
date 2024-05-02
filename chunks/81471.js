@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("68588"),
   _ = n("512665"),
   C = n("868807"),
-  m = n("981631"),
-  S = n("768760"),
+  S = n("981631"),
+  m = n("768760"),
   p = n("689938"),
   I = n("268559"),
   T = n("990291");
@@ -26,7 +26,7 @@ let g = s.memo(function(e) {
     loaded: n,
     error: l,
     message: g
-  } = (0, C.useMessageRequestPreview)(t), A = (0, r.useStateFromStores)([E.default], () => null != g && E.default.isBlocked(g.author.id), [g]), N = (0, r.useStateFromStores)([f.default], () => f.default.can(m.Permissions.MANAGE_MESSAGES, t)), v = c.RenderSpoilers.useSetting(), {
+  } = (0, C.useMessageRequestPreview)(t), A = (0, r.useStateFromStores)([E.default], () => null != g && E.default.isBlocked(g.author.id), [g]), N = (0, r.useStateFromStores)([f.default], () => f.default.can(S.Permissions.MANAGE_MESSAGES, t)), v = c.RenderSpoilers.useSetting(), {
     content: R
   } = s.useMemo(() => (null == g ? void 0 : g.content) != null && "" !== g.content ? (0, d.default)(g, {
     formatInline: !0,
@@ -53,7 +53,7 @@ let g = s.memo(function(e) {
         renderedContent: t
       } = (0, _.renderSingleLineMessage)(g, R, A, i()(I.messageContent, T.inlineFormat, T.__invalid_smallFontSize), {
         iconClass: I.messageContentIcon,
-        iconSize: S.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+        iconSize: m.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
       L = null != t ? (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",

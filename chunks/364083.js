@@ -5,28 +5,28 @@ n.r(t), n.d(t, {
   }
 });
 var a = n("470079"),
-  s = n("392711"),
-  l = n.n(s),
-  i = n("442837"),
-  r = n("77498"),
+  r = n("392711"),
+  i = n.n(r),
+  s = n("442837"),
+  l = n("77498"),
   o = n("308083");
 
-function u(e) {
+function c(e) {
   var t;
   return null !== (t = o.HOISTED_SEARCH_APPLICATION_IDS_BY_PRIORITY.get(e)) && void 0 !== t ? t : 0
 }
 
 function d() {
-  let e = (0, i.useStateFromStores)([r.default], () => l()(r.default.games).map(e => ({
+  let e = (0, s.useStateFromStores)([l.default], () => i()(l.default.games).map(e => ({
       value: e.id,
       label: e.name
     })).sortBy(e => {
       let {
         value: t
       } = e;
-      return u(t)
+      return c(t)
     }).reverse().value(), []),
-    t = a.useCallback((e, t) => u(t.item.value) - u(e.item.value), []);
+    t = a.useCallback((e, t) => c(t.item.value) - c(e.item.value), []);
   return {
     options: e,
     matchSorterOptions: a.useMemo(() => ({

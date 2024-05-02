@@ -73,8 +73,8 @@ function I(e) {
     {
       disabled: A
     } = I,
-    N = l.useRef(null),
-    v = (0, o.useStateFromStores)([d.default], () => d.default.getChatOpen(n), [n]),
+    v = l.useRef(null),
+    N = (0, o.useStateFromStores)([d.default], () => d.default.getChatOpen(n), [n]),
     {
       isShowing: x,
       unreadCount: M,
@@ -100,8 +100,8 @@ function I(e) {
       }
     }(n),
     L = l.useCallback(() => {
-      null == c || c(), !v && h && (null == E || E()), u.default.updateChatOpen(n, !v)
-    }, [n, v, c, h, E]),
+      null == c || c(), !N && h && (null == E || E()), u.default.updateChatOpen(n, !N)
+    }, [n, N, c, h, E]),
     y = l.useCallback(e => {
       let {
         className: t
@@ -113,7 +113,7 @@ function I(e) {
     }, [n]),
     O = l.useCallback(() => {
       var e;
-      null === (e = N.current) || void 0 === e || e.focus()
+      null === (e = v.current) || void 0 === e || e.focus()
     }, []);
   (0, m.useComponentAction)({
     event: g.ComponentActions.FOCUS_CHAT_BUTTON,
@@ -133,11 +133,11 @@ function I(e) {
       clearTimeout(e)
     }
   }, [j]);
-  let b = [t = f && A ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : v ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT];
+  let b = [t = f && A ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT];
   return R > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: R
   })), M > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(C.default, {
-    buttonRef: N,
+    buttonRef: v,
     onClick: L,
     label: t,
     "aria-label": b.join(", "),

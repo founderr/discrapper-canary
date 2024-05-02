@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return v
   }
 }), n("47120"), n("653041");
 var a = n("470079"),
@@ -570,7 +570,7 @@ class A {
   }
 }
 
-function N(e) {
+function v(e) {
   let {
     messages: t,
     channel: n,

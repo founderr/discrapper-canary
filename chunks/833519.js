@@ -28,8 +28,8 @@ var a = n("735250"),
   T = n("592125"),
   I = n("131951"),
   A = n("451478"),
-  N = n("40300"),
-  v = n("167580"),
+  v = n("40300"),
+  N = n("167580"),
   x = n("368666"),
   M = n("685203"),
   R = n("112560"),
@@ -118,7 +118,7 @@ function V(e) {
       streamerId: z.id,
       hasScreenMessage: null != ee,
       stream: Y
-    }) : null, (0, a.jsx)(N.default, {
+    }) : null, (0, a.jsx)(v.default, {
       onResize: s,
       wrapperClassName: H.videoWrapper,
       className: H.content,
@@ -163,7 +163,7 @@ function V(e) {
           })
         },
         isSmall: et,
-        children: (0, a.jsx)(v.default, {
+        children: (0, a.jsx)(N.default, {
           className: H.addStreamIcon
         })
       }) : null]

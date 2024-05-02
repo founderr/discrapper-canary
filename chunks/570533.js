@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return u
+    return i
   }
 });
 var E = s("470079"),
@@ -10,7 +10,7 @@ var E = s("470079"),
   n = s("889564");
 let T = [];
 
-function u(e) {
+function i(e) {
   let t = (0, _.useStateFromStores)([a.default], () => a.default.getGuildEmoji(e), [e]);
   return E.useMemo(() => null == t ? T : t.filter(t => (0, n.isRoleSubscriptionEmoji)(t, e)), [t, e])
 }

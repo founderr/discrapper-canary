@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("400354"),
   _ = n("652844"),
   C = n("789639"),
-  m = n("481060"),
-  S = n("355467"),
+  S = n("481060"),
+  m = n("355467"),
   p = n("239091"),
   I = n("230711"),
   T = n("255952"),
@@ -32,8 +32,8 @@ var a = n("735250"),
   O = n("304761"),
   M = n("865427"),
   P = n("571250"),
-  x = n("628581"),
-  y = n("55311"),
+  y = n("628581"),
+  x = n("55311"),
   D = n("575175"),
   b = n("64220"),
   U = n("377171"),
@@ -41,8 +41,8 @@ var a = n("735250"),
   G = n("427217"),
   w = n("605236"),
   k = n("243778"),
-  B = n("730417"),
-  F = n("524347"),
+  F = n("730417"),
+  B = n("524347"),
   H = n("853197"),
   V = n("810280"),
   Y = n("60762"),
@@ -72,8 +72,8 @@ var a = n("735250"),
   eh = n("819640"),
   e_ = n("131951"),
   eC = n("19780"),
-  em = n("885110"),
-  eS = n("246946"),
+  eS = n("885110"),
+  em = n("246946"),
   ep = n("594174"),
   eI = n("78839"),
   eT = n("285952"),
@@ -86,8 +86,8 @@ var a = n("735250"),
   eO = n("333454"),
   eM = n("864441"),
   eP = n("26290"),
-  ex = n("626135"),
-  ey = n("768581"),
+  ey = n("626135"),
+  ex = n("768581"),
   eD = n("572004"),
   eb = n("70956"),
   eU = n("374023"),
@@ -95,8 +95,8 @@ var a = n("735250"),
   eG = n("998502"),
   ew = n("981631"),
   ek = n("215023"),
-  eB = n("702512"),
-  eF = n("689938"),
+  eF = n("702512"),
+  eB = n("689938"),
   eH = n("823020");
 
 function eV(e, t, n) {
@@ -107,7 +107,7 @@ function eV(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let eY = eG.default.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
+let eY = eG.default.getEnableHardwareAcceleration() ? S.AnimatedAvatar : S.Avatar,
   eW = 30 * eb.default.Millis.DAY;
 class eK extends s.PureComponent {
   get isCopiedStreakGodlike() {
@@ -132,8 +132,8 @@ class eK extends s.PureComponent {
   renderCopiedSuccess() {
     let {
       copiedStreak: e
-    } = this.state, t = [eF.default.Messages.COPY_SUCCESS_1, eF.default.Messages.COPY_SUCCESS_2, eF.default.Messages.COPY_SUCCESS_3, eF.default.Messages.COPY_SUCCESS_4, eF.default.Messages.COPY_SUCCESS_5, eF.default.Messages.COPY_SUCCESS_6, eF.default.Messages.COPY_SUCCESS_7, eF.default.Messages.COPY_SUCCESS_8, eF.default.Messages.COPY_SUCCESS_9, eF.default.Messages.COPY_SUCCESS_10, eF.default.Messages.COPY_SUCCESS_11], n = Math.min(Math.max(0, e - 1), t.length - 1);
-    return (0, a.jsx)(m.Shaker, {
+    } = this.state, t = [eB.default.Messages.COPY_SUCCESS_1, eB.default.Messages.COPY_SUCCESS_2, eB.default.Messages.COPY_SUCCESS_3, eB.default.Messages.COPY_SUCCESS_4, eB.default.Messages.COPY_SUCCESS_5, eB.default.Messages.COPY_SUCCESS_6, eB.default.Messages.COPY_SUCCESS_7, eB.default.Messages.COPY_SUCCESS_8, eB.default.Messages.COPY_SUCCESS_9, eB.default.Messages.COPY_SUCCESS_10, eB.default.Messages.COPY_SUCCESS_11], n = Math.min(Math.max(0, e - 1), t.length - 1);
+    return (0, a.jsx)(S.Shaker, {
       isShaking: this.isCopiedStreakGodlike,
       children: t[n]
     })
@@ -183,11 +183,11 @@ class eK extends s.PureComponent {
     } = this.state;
     if (null == e) return null;
     let s = null,
-      l = m.TooltipColors.PRIMARY;
-    return eD.SUPPORTS_COPY && (s = eF.default.Messages.ACCOUNT_CLICK_TO_COPY, n && (s = this.renderCopiedSuccess(), l = this.isCopiedStreakGodlike ? m.TooltipColors.RED : m.TooltipColors.GREEN)), (0, a.jsx)(m.Tooltip, {
+      l = S.TooltipColors.PRIMARY;
+    return eD.SUPPORTS_COPY && (s = eB.default.Messages.ACCOUNT_CLICK_TO_COPY, n && (s = this.renderCopiedSuccess(), l = this.isCopiedStreakGodlike ? S.TooltipColors.RED : S.TooltipColors.GREEN)), (0, a.jsx)(S.Tooltip, {
       text: s,
       forceOpen: t,
-      "aria-label": !!eD.SUPPORTS_COPY && eF.default.Messages.ACCOUNT_CLICK_TO_COPY,
+      "aria-label": !!eD.SUPPORTS_COPY && eB.default.Messages.ACCOUNT_CLICK_TO_COPY,
       color: l,
       delay: 500,
       onAnimationRest: (e, a) => {
@@ -201,7 +201,7 @@ class eK extends s.PureComponent {
           onMouseEnter: s,
           ...l
         } = e;
-        return (0, a.jsx)(m.Clickable, {
+        return (0, a.jsx)(S.Clickable, {
           ...l,
           onMouseEnter: () => {
             n ? (this.copiedTimeout.stop(), this.setState({
@@ -229,29 +229,29 @@ class eK extends s.PureComponent {
       showTaglessAccountPanel: r
     } = this.props;
     if (null == n) return null;
-    let o = (0, ey.getAvatarDecorationURL)({
+    let o = (0, ex.getAvatarDecorationURL)({
       avatarDecoration: n.avatarDecoration,
-      size: (0, L.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
+      size: (0, L.getDecorationSizeForAvatarSize)(S.AvatarSizes.SIZE_32)
     });
     return (0, a.jsx)(g.default, {
       object: ew.AnalyticsObjects.AVATAR,
-      children: (0, a.jsx)(m.Popout, {
+      children: (0, a.jsx)(S.Popout, {
         renderPopout: this.renderStatusPickerPopout,
         position: "top",
         align: "left",
-        animation: m.Popout.Animation.FADE,
+        animation: S.Popout.Animation.FADE,
         spacing: 14,
         fixed: !0,
         preload: () => (0, ei.default)(n.id, null == n ? void 0 : n.getAvatarURL(null, 80)),
-        children: (u, d) => (0, a.jsxs)(m.Clickable, {
+        children: (u, d) => (0, a.jsxs)(S.Clickable, {
           ...u,
-          "aria-label": eF.default.Messages.SET_STATUS,
+          "aria-label": eB.default.Messages.SET_STATUS,
           className: i()(eH.avatarWrapper, {
             [eH.withTagAsButton]: l,
             [eH.withTagless]: r
           }),
           children: [(0, a.jsx)(eY, {
-            size: m.AvatarSizes.SIZE_32,
+            size: S.AvatarSizes.SIZE_32,
             src: n.getAvatarURL(void 0, 32, !1),
             avatarDecoration: o,
             "aria-label": n.username,
@@ -266,7 +266,7 @@ class eK extends s.PureComponent {
               tooltipText: null,
               icon: d.isShown ? eA.default : eN.default,
               role: "switch",
-              "aria-label": eF.default.Messages.SET_STATUS
+              "aria-label": eB.default.Messages.SET_STATUS
             }) : this.renderNameTag()
           }) : null]
         })
@@ -322,8 +322,8 @@ class eK extends s.PureComponent {
           serverMute: l,
           suppress: r,
           awaitingRemote: s,
-          tooltipText: d ? eF.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, x.default)(n, l, r, s),
-          tooltipColor: d ? m.TooltipColors.GREEN : void 0,
+          tooltipText: d ? eB.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, y.default)(n, l, r, s),
+          tooltipColor: d ? S.TooltipColors.GREEN : void 0,
           tooltipForceOpen: d || void 0,
           onMouseEnter: this.handleMouseEnterMute,
           onMouseLeave: this.handleMouseLeaveMute,
@@ -344,7 +344,7 @@ class eK extends s.PureComponent {
             } = e;
             switch (t) {
               case o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2:
-                return (0, a.jsx)(m.Popout, {
+                return (0, a.jsx)(S.Popout, {
                   position: "top",
                   align: "center",
                   shouldShow: !0,
@@ -352,29 +352,29 @@ class eK extends s.PureComponent {
                   children: this.renderSettingsGear
                 });
               case o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP:
-                return (0, a.jsx)(m.Popout, {
+                return (0, a.jsx)(S.Popout, {
                   position: "top",
                   align: "center",
                   shouldShow: !0,
                   renderPopout: () => (0, a.jsx)(V.default, {
                     markAsDismissed: n,
-                    partnerGame: eB.PartnerGame.FORTNITE
+                    partnerGame: eF.PartnerGame.FORTNITE
                   }),
                   children: this.renderSettingsGear
                 });
               case o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP:
-                return (0, a.jsx)(m.Popout, {
+                return (0, a.jsx)(S.Popout, {
                   position: "top",
                   align: "center",
                   shouldShow: !0,
                   renderPopout: () => (0, a.jsx)(Y.default, {
                     markAsDismissed: n,
-                    partnerGame: eB.PartnerGame.FORTNITE
+                    partnerGame: eF.PartnerGame.FORTNITE
                   }),
                   children: this.renderSettingsGear
                 });
               case o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING:
-                return (0, a.jsx)(m.Popout, {
+                return (0, a.jsx)(S.Popout, {
                   position: "top",
                   align: "center",
                   shouldShow: !0,
@@ -384,7 +384,7 @@ class eK extends s.PureComponent {
                   children: this.renderSettingsGear
                 });
               case o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK:
-                return (0, a.jsx)(m.Popout, {
+                return (0, a.jsx)(S.Popout, {
                   position: "top",
                   align: "center",
                   shouldShow: !0,
@@ -394,7 +394,7 @@ class eK extends s.PureComponent {
                   children: this.renderSettingsGear
                 });
               case o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE:
-                return (0, a.jsx)(m.Popout, {
+                return (0, a.jsx)(S.Popout, {
                   position: "top",
                   align: "center",
                   shouldShow: !0,
@@ -404,7 +404,7 @@ class eK extends s.PureComponent {
                   children: this.renderSettingsGear
                 });
               case o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION:
-                return (0, a.jsx)(m.Popout, {
+                return (0, a.jsx)(S.Popout, {
                   position: "top",
                   align: "center",
                   shouldShow: !0,
@@ -414,7 +414,7 @@ class eK extends s.PureComponent {
                   children: this.renderSettingsGear
                 });
               case o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING:
-                return (0, a.jsx)(m.Popout, {
+                return (0, a.jsx)(S.Popout, {
                   position: "top",
                   align: "center",
                   shouldShow: !0,
@@ -424,7 +424,7 @@ class eK extends s.PureComponent {
                   children: this.renderSettingsGear
                 });
               case o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK:
-                return (0, a.jsx)(m.Popout, {
+                return (0, a.jsx)(S.Popout, {
                   position: "top",
                   align: "center",
                   shouldShow: !0,
@@ -457,7 +457,7 @@ class eK extends s.PureComponent {
       let {
         serverDeaf: e
       } = this.props;
-      (0, y.default)(e)
+      (0, x.default)(e)
     }), eV(this, "handleOpenAccountSettings", () => {
       this.handleOpenSettings()
     }), eV(this, "handleOpenSettings", function() {
@@ -531,7 +531,7 @@ class eK extends s.PureComponent {
       (0, eD.copy)(ej.default.getUserTag(e, {
         decoration: "never",
         identifiable: "always"
-      })), ex.default.track(ew.AnalyticEvents.TEXT_COPIED, {
+      })), ey.default.track(ew.AnalyticEvents.TEXT_COPIED, {
         type: "User Tag"
       });
       let a = {
@@ -611,15 +611,15 @@ class eK extends s.PureComponent {
 function ez() {
   var e, t;
   let n = (0, r.useStateFromStores)([ep.default], () => ep.default.getCurrentUser()),
-    l = (0, B.useShowEligibilityEnrollmentTooltip)(eB.PartnerGame.FORTNITE),
+    l = (0, F.useShowEligibilityEnrollmentTooltip)(eF.PartnerGame.FORTNITE),
     i = (0, r.useStateFromStores)([ef.default], () => ef.default.getId()),
     u = (0, j.useCustomStatusActivity)(),
     {
       streaming: d,
       status: c
-    } = (0, r.useStateFromStoresObject)([em.default], () => ({
-      streaming: null != em.default.findActivity(e => e.type === ew.ActivityTypes.STREAMING),
-      status: em.default.getStatus()
+    } = (0, r.useStateFromStoresObject)([eS.default], () => ({
+      streaming: null != eS.default.findActivity(e => e.type === ew.ActivityTypes.STREAMING),
+      status: eS.default.getStatus()
     })),
     f = (0, R.default)({
       userId: i
@@ -627,7 +627,7 @@ function ez() {
     E = ej.default.useUserTag(n, {
       decoration: "never"
     }),
-    h = (0, r.useStateFromStores)([eS.default], () => eS.default.hidePersonalInformation),
+    h = (0, r.useStateFromStores)([em.default], () => em.default.hidePersonalInformation),
     _ = (0, r.useStateFromStores)([eC.default, eE.default], () => {
       let e = eC.default.getChannelId();
       return null != e ? eE.default.getChannel(e) : null
@@ -646,9 +646,9 @@ function ez() {
       return (0, M.probablyHasBuildOverride)() ? null === (e = O.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     P = (0, r.useStateFromStores)([eI.default], () => eI.default.getPremiumTypeSubscription()),
-    x = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
-    y = (0, r.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
-    D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || y || eU.ProcessArgs.isDisallowPopupsSet(),
+    y = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
+    x = (0, r.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
+    D = (0, S.useModalsStore)(S.hasAnyModalOpenSelector) || x || eU.ProcessArgs.isDisallowPopupsSet(),
     b = (0, Q.useIsEligibleForPomelo)();
   s.useEffect(() => {
     z.default.trackExposure({
@@ -665,8 +665,8 @@ function ez() {
     }, {
       autoTrackExposure: !1
     }),
-    Y = (0, r.useStateFromStores)([F.default], () => F.default.isCurrentQuestCompleted),
-    q = (0, r.useStateFromStores)([F.default], () => F.default.currentDropQuestGameTitle),
+    Y = (0, r.useStateFromStores)([B.default], () => B.default.isCurrentQuestCompleted),
+    q = (0, r.useStateFromStores)([B.default], () => B.default.currentDropQuestGameTitle),
     J = (0, K.useIsHomeSelected)(),
     et = (0, N.useIsDmSpamFilterCoachmarkEnabled)(),
     en = (0, $.useCanSeeSafetyEducationBlockMuteCoachmark)(),
@@ -702,9 +702,9 @@ function ez() {
         (async () => {
           if (!e && null == n && !!i) {
             if (!a) {
-              await (0, S.fetchMostRecentSubscription)();
+              await (0, m.fetchMostRecentSubscription)();
               return
-            }!u && !t && await (0, S.getPerksRelevance)()
+            }!u && !t && await (0, m.getPerksRelevance)()
           }
         })()
       }, [i, n, e, a, t, u]), !e && !!i && !u && null != n && n
@@ -713,7 +713,7 @@ function ez() {
       avatar: [],
       settings: []
     };
-  return !D && (eg && eA.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), l && (eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && q === (null === (t = (0, H.getDrop)(eB.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), J && et && eA.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eT && eA.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), el && eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), ei && eA.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eo && eA.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eK, {
+  return !D && (eg && eA.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), l && (eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && q === (null === (t = (0, H.getDrop)(eF.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), J && et && eA.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eT && eA.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), el && eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), ei && eA.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eo && eA.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eK, {
     currentUser: n,
     customStatusActivity: u,
     dismissibleContents: eA,
@@ -729,7 +729,7 @@ function ez() {
     showTagAsButton: k,
     showTaglessAccountPanel: V,
     speaking: f,
-    speakingWhileMuted: x,
+    speakingWhileMuted: y,
     status: c,
     streaming: d,
     suppress: I,
@@ -745,7 +745,7 @@ function eq(e) {
     isEligibleForPomelo: n,
     onClick: s,
     onContextMenu: l
-  } = e, i = (0, m.useRedesignIconContext)().enabled, r = null, o = ev.default, u = (0, C.useSettingsLottie)();
+  } = e, i = (0, S.useRedesignIconContext)().enabled, r = null, o = ev.default, u = (0, C.useSettingsLottie)();
   return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eR.default, {
     width: 9,
     height: 9,
@@ -756,9 +756,9 @@ function eq(e) {
     className: eH.hasBuildOverride,
     "aria-hidden": !0
   })), (0, a.jsx)(eL.default, {
-    tooltipText: null != t ? eF.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
+    tooltipText: null != t ? eB.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
       webBuildOverride: t.id
-    }) : eF.default.Messages.USER_SETTINGS,
+    }) : eB.default.Messages.USER_SETTINGS,
     onClick: s,
     onContextMenu: l,
     innerClassName: null != t || n ? eH.buildOverrideButton : null,
@@ -782,10 +782,10 @@ function eQ(e) {
     onClick: E,
     onContextMenu: h
   } = e, C = t || l || n, {
-    Component: S,
+    Component: m,
     play: p,
     events: I
-  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), T = n || l ? c.MicrophoneDenyIcon : S;
+  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), T = n || l ? c.MicrophoneDenyIcon : m;
   return s.useEffect(() => () => p(), [C, p]), (0, a.jsx)(eL.default, {
     tooltipText: r,
     tooltipColor: o,
@@ -800,13 +800,13 @@ function eQ(e) {
       size: "custom",
       width: 20,
       height: 20,
-      color: C ? m.tokens.colors.STATUS_DANGER : "currentColor"
+      color: C ? S.tokens.colors.STATUS_DANGER : "currentColor"
     }),
     iconForeground: C ? eH.strikethrough : null,
     onClick: E,
     onContextMenu: h,
     role: "switch",
-    "aria-label": eF.default.Messages.MUTE,
+    "aria-label": eB.default.Messages.MUTE,
     "aria-checked": C,
     disabled: i
   })
@@ -835,7 +835,7 @@ function eZ(e) {
       size: "custom",
       width: 20,
       height: 20,
-      color: u ? m.tokens.colors.STATUS_DANGER : "currentColor"
+      color: u ? S.tokens.colors.STATUS_DANGER : "currentColor"
     }),
     onClick: r,
     onContextMenu: o,
@@ -844,7 +844,7 @@ function eZ(e) {
     }),
     iconForeground: u ? eH.strikethrough : null,
     role: "switch",
-    "aria-label": eF.default.Messages.DEAFEN,
+    "aria-label": eB.default.Messages.DEAFEN,
     "aria-checked": u,
     disabled: l
   })

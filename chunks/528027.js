@@ -10,8 +10,8 @@ var _ = s("120356"),
   a = s.n(_),
   n = s("596454"),
   T = s("377171"),
-  u = s("403910"),
-  i = s("549631"),
+  i = s("403910"),
+  u = s("549631"),
   A = s("934465");
 
 function l(e) {
@@ -21,13 +21,13 @@ function l(e) {
     emojiId: _,
     emojiName: l,
     className: I
-  } = e, L = (0, u.default)(s, _);
-  return null != L || null != l ? (0, E.jsx)(n.default, {
-    emojiId: null == L ? void 0 : L.id,
-    emojiName: null != l ? l : null == L ? void 0 : L.name,
-    animated: null !== (t = null == L ? void 0 : L.animated) && void 0 !== t && t,
+  } = e, r = (0, i.default)(s, _);
+  return null != r || null != l ? (0, E.jsx)(n.default, {
+    emojiId: null == r ? void 0 : r.id,
+    emojiName: null != l ? l : null == r ? void 0 : r.name,
+    animated: null !== (t = null == r ? void 0 : r.animated) && void 0 !== t && t,
     className: a()(A.emojiIcon, I)
-  }) : (0, E.jsx)(i.default, {
+  }) : (0, E.jsx)(u.default, {
     className: a()(A.emojiIcon, I),
     color: T.default.CREATOR_REVENUE_LOCKED_CHANNEL_ICON
   })

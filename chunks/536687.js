@@ -19,8 +19,8 @@ var a, s, l = n("470079"),
   h = n("270144"),
   _ = n("400271"),
   C = n("678513"),
-  m = n("899667"),
-  S = n("496675"),
+  S = n("899667"),
+  m = n("496675"),
   p = n("541566"),
   I = n("192513"),
   T = n("255791"),
@@ -33,9 +33,9 @@ function v(e) {
   let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : N.EMPTY_STRING_SNOWFLAKE_ID,
     {
       lastFetchedAt: a
-    } = (0, i.useStateFromStoresObject)([m.default], () => ({
-      appliedGuildBoosts: m.default.getAppliedGuildBoostsForGuild(n),
-      lastFetchedAt: m.default.getLastFetchedAtForGuild(n)
+    } = (0, i.useStateFromStoresObject)([S.default], () => ({
+      appliedGuildBoosts: S.default.getAppliedGuildBoostsForGuild(n),
+      lastFetchedAt: S.default.getLastFetchedAtForGuild(n)
     })),
     {
       lastDismissedGracePeriod: s,
@@ -46,12 +46,12 @@ function v(e) {
     })),
     R = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
     L = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
-    O = (0, i.useStateFromStores)([S.default], () => S.default.can(N.Permissions.ADMINISTRATOR, e)),
+    O = (0, i.useStateFromStores)([m.default], () => m.default.can(N.Permissions.ADMINISTRATOR, e)),
     M = null != s && Date.now() - s <= N.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     P = null != e ? e.premiumSubscriberCount : 0,
-    x = (0, A.getGuildTierFromAppliedBoostCount)(P, n) !== N.BoostedGuildTiers.NONE,
-    y = null != a && Date.now() - a <= 432e5,
-    D = !y && !M && O && x,
+    y = (0, A.getGuildTierFromAppliedBoostCount)(P, n) !== N.BoostedGuildTiers.NONE,
+    x = null != a && Date.now() - a <= 432e5,
+    D = !x && !M && O && y,
     b = (0, d.useGuildHasLiveChannelNotice)(n),
     U = (0, i.useStateFromStores)([I.default], () => I.default.isVisible(e)),
     j = E.default.useShouldShowChannelNotice(n),
@@ -60,11 +60,11 @@ function v(e) {
       enableStudyGroup: w
     } = (0, f.useHubStudyGroupExperiment)(e),
     k = G.length > 0,
-    B = w && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.HUB)),
+    F = w && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.HUB)),
     {
-      enableClanCreation: F
+      enableClanCreation: B
     } = (0, o.useClanGuildExperiment)(e, "useVisibleConnectedNotice"),
-    H = O && F && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.CLAN)),
+    H = O && B && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.CLAN)),
     V = (0, c.useGuildUpcomingEventsNotice)(n),
     Y = (0, i.useStateFromStores)([C.default], () => null != C.default.getActiveGuildSignUp(n));
   if (l.useEffect(() => {
@@ -83,7 +83,7 @@ function v(e) {
   else if (U) return 4;
   else if (j) return 5;
   else if (k) return 6;
-  else if (B) return 7;
+  else if (F) return 7;
   else if (Y) return 8;
   else if (H) return 9;
   return null

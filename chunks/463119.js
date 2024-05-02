@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("607070"),
   _ = n("100527"),
   C = n("906732"),
-  m = n("821982"),
-  S = n("377171"),
+  S = n("821982"),
+  m = n("377171"),
   p = n("633302"),
   I = n("126900"),
   T = n("26290"),
@@ -36,7 +36,7 @@ let M = e => {
     } = e;
     return (0, a.jsx)(T.TextBadge, {
       className: O.newBadge,
-      color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
+      color: null != t ? t : m.default.STATUS_DANGER_BACKGROUND,
       text: L.default.Messages.NEW
     })
   },
@@ -69,11 +69,11 @@ let M = e => {
       children: o
     })
   },
-  x = s.memo(function(e) {
+  y = s.memo(function(e) {
     let {
       displayOptions: t,
       assetId: n
-    } = e, s = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), l = null != n ? (0, m.default)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
+    } = e, s = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), l = null != n ? (0, S.default)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
     return (0, a.jsxs)("div", {
       className: O.shopMarketingTooltipContent,
       children: [(0, a.jsx)("div", {
@@ -98,18 +98,18 @@ let M = e => {
       })]
     })
   }),
-  y = e => {
+  x = e => {
     let {
       selected: t,
       locationState: n,
       displayOptions: l
     } = e, [r, o] = s.useState(0), [c, f] = s.useState(!1), h = (0, E.default)(), _ = l.entrypointDecorationAssets, C = s.useCallback(e => {
       o(e => (e + 1) % l.assetIds.length), f(!0), null == e || e()
-    }, [l.assetIds]), m = s.useCallback(e => {
+    }, [l.assetIds]), S = s.useCallback(e => {
       f(!1), null == e || e()
     }, []);
     return (0, a.jsx)(d.Tooltip, {
-      text: (0, a.jsx)(x, {
+      text: (0, a.jsx)(y, {
         displayOptions: l,
         assetId: l.assetIds[r]
       }),
@@ -125,7 +125,7 @@ let M = e => {
         locationState: n,
         ...e,
         onMouseEnter: () => C(e.onMouseEnter),
-        onMouseLeave: () => m(e.onMouseLeave),
+        onMouseLeave: () => S(e.onMouseLeave),
         children: [null != _ && (0, a.jsx)("img", {
           src: (0, u.isThemeDark)(h) ? _.srcDark : _.srcLight,
           className: i()(O.marketingButtonImage, {
@@ -187,7 +187,7 @@ let M = e => {
           displayOptions: s
         });
       case v.CollectiblesMarketingVariant.COACHTIP:
-        return (0, a.jsx)(y, {
+        return (0, a.jsx)(x, {
           selected: t,
           locationState: n,
           displayOptions: s

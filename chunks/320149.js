@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("359110"),
   _ = n("6025"),
   C = n("433355"),
-  m = n("465670"),
-  S = n("502568"),
+  S = n("465670"),
+  m = n("502568"),
   p = n("933557"),
   I = n("287746"),
   T = n("689938"),
@@ -32,22 +32,22 @@ function N(e) {
     baseChannelId: n
   } = e, N = (0, p.default)(t), v = (0, c.useListHasSingleMessageRequest)(), R = (0, c.useListHasSingleSpamMessageRequest)(), L = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), O = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), M = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), P = s.useCallback(() => {
     _.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), L && v && (0, h.transitionToChannel)(t.id), O && R && (0, h.transitionToChannel)(t.id)
-  }, [t.id, O, R, L, v]), x = s.useCallback(() => {
+  }, [t.id, O, R, L, v]), y = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(T.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), {
-    markAsNotSpam: y
+    markAsNotSpam: x
   } = (0, f.useMessageRequestActions)({
     onAcceptSuccess: P,
-    onError: x
+    onError: y
   });
   if (null == t || !t.isDM()) return null;
-  let D = [(0, a.jsx)(S.default.Icon, {
-    icon: m.default,
+  let D = [(0, a.jsx)(m.default.Icon, {
+    icon: S.default,
     tooltip: T.default.Messages.CLOSE,
     onClick: () => _.default.closeChannelSidebar(n)
   }, "close")];
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(S.default, {
+    children: [(0, a.jsx)(m.default, {
       toolbar: D,
       "aria-label": T.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
       children: (0, o.renderTitle)({
@@ -64,7 +64,7 @@ function N(e) {
       }), (0, a.jsx)(i.Button, {
         className: A.hamBannerButton,
         size: i.ButtonSizes.SMALL,
-        onClick: () => y(t, M),
+        onClick: () => x(t, M),
         children: T.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
       })]
     }), (0, a.jsx)("div", {

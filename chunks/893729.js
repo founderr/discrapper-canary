@@ -9,14 +9,14 @@ var E = s("735250"),
   a = s("120356"),
   n = s.n(a),
   T = s("442837"),
-  u = s("518738"),
-  i = s("786761"),
+  i = s("518738"),
+  u = s("786761"),
   A = s("3148"),
   l = s("753206"),
   I = s("594174"),
-  L = s("5192"),
+  r = s("5192"),
   o = s("792125"),
-  r = s("981631"),
+  L = s("981631"),
   d = s("689938"),
   S = s("779165");
 
@@ -28,7 +28,7 @@ function N(e) {
     theme: N,
     content: g = d.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
     className: D
-  } = e, c = (0, T.useStateFromStores)([I.default], () => I.default.getCurrentUser()), G = L.default.useName(s, null, c), O = (0, u.getRoleIconProps)(a), U = _.useMemo(() => (0, i.createMessageRecord)({
+  } = e, c = (0, T.useStateFromStores)([I.default], () => I.default.getCurrentUser()), G = r.default.useName(s, null, c), O = (0, i.getRoleIconProps)(a), U = _.useMemo(() => (0, u.createMessageRecord)({
     ...(0, A.default)({
       channelId: "0",
       content: g,
@@ -38,7 +38,7 @@ function N(e) {
       allowedMentions: void 0,
       author: c
     }),
-    state: r.MessageStates.SENT,
+    state: L.MessageStates.SENT,
     id: "0"
   }), [c, g]), C = {
     nick: G,

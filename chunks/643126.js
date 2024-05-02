@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("409216"),
   _ = n("465670"),
   C = n("87888"),
-  m = n("63063"),
-  S = n("976401"),
+  S = n("63063"),
+  m = n("976401"),
   p = n("333454"),
   I = n("864441"),
   T = n("981631"),
@@ -57,17 +57,17 @@ class R extends s.PureComponent {
     let {
       onStopListening: e
     } = this.props;
-    return this.isHost() ? null : (0, a.jsx)(S.default, {
+    return this.isHost() ? null : (0, a.jsx)(m.default, {
       tooltipText: g.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
       onClick: e,
       icon: _.default
     })
   }
   renderHelpIcon() {
-    return this.isHost() ? (0, a.jsx)(S.default, {
+    return this.isHost() ? (0, a.jsx)(m.default, {
       tooltipText: g.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
       onClick: () => {
-        window.open(m.default.getArticleURL(T.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
+        window.open(S.default.getArticleURL(T.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
       },
       icon: C.default
     }) : null

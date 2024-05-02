@@ -17,8 +17,8 @@ var a, s = n("735250"),
   h = n("714338"),
   _ = n("663993"),
   C = n("210887"),
-  m = n("819640"),
-  S = n("725568"),
+  S = n("819640"),
+  m = n("725568"),
   p = n("585483"),
   I = n("792125"),
   T = n("981631"),
@@ -60,12 +60,12 @@ let N = (0, _.makeLazy)({
   },
   M = "SHOWN",
   P = "HIDDEN",
-  x = {
+  y = {
     friction: 10,
     tension: 100
   };
 
-function y() {
+function x() {
   return l.useEffect(() => (h.default.enable(), h.default.enableTemp(E.SETTINGS_LAYERS_LAYOUT), () => h.default.disableTemp()), []), null
 }
 class D extends(a = l.PureComponent) {
@@ -108,10 +108,10 @@ class D extends(a = l.PureComponent) {
     } = this.state;
     o.default.parallel([o.default.spring(t, {
       toValue: 1,
-      ...x
+      ...y
     }), o.default.spring(n, {
       toValue: 1,
-      ...x
+      ...y
     })]).start(() => this.animateComplete(e))
   }
   animateOut(e) {
@@ -122,10 +122,10 @@ class D extends(a = l.PureComponent) {
     } = this.state;
     p.ComponentDispatch.dispatch(T.ComponentActions.LAYER_POP_START), o.default.parallel([o.default.spring(t, {
       toValue: 0,
-      ...x
+      ...y
     }), o.default.spring(n, {
       toValue: 1.1,
-      ...x
+      ...y
     })]).start(() => {
       e(), p.ComponentDispatch.dispatch(T.ComponentActions.LAYER_POP_COMPLETE)
     })
@@ -138,10 +138,10 @@ class D extends(a = l.PureComponent) {
     } = this.state;
     o.default.parallel([o.default.spring(e, {
       toValue: 0,
-      ...x
+      ...y
     }), o.default.spring(t, {
       toValue: .93,
-      ...x
+      ...y
     })]).start(() => this.animateComplete())
   }
   animateComplete(e) {
@@ -230,7 +230,7 @@ class b extends l.PureComponent {
     let a;
     return a = "string" == typeof e ? O[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(D, {
       mode: t === n - 1 ? M : P,
-      children: [(0, s.jsx)(y, {}), a]
+      children: [(0, s.jsx)(x, {}), a]
     }, "layer-".concat(t))
   }
   renderArtisanalHack() {
@@ -251,8 +251,8 @@ class b extends l.PureComponent {
 
 function U(e) {
   let t = (0, u.useStateFromStores)([C.default], () => C.default.darkSidebar) ? T.ThemeTypes.DARK : void 0,
-    n = (0, u.useStateFromStores)([m.default], () => m.default.getLayers()),
-    a = (0, S.useFullScreenLayerStore)(e => e.fullScreenLayers.length > 0);
+    n = (0, u.useStateFromStores)([S.default], () => S.default.getLayers()),
+    a = (0, m.useFullScreenLayerStore)(e => e.fullScreenLayers.length > 0);
   return (0, s.jsx)(b, {
     ...e,
     sidebarTheme: t,

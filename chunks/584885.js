@@ -27,8 +27,8 @@ t.default = e => {
   let t, {
     title: n,
     subtitle: C,
-    guildsData: m,
-    analyticsContext: S,
+    guildsData: S,
+    analyticsContext: m,
     theme: p,
     onViewGuild: I,
     fetchGuilds: T,
@@ -45,13 +45,13 @@ t.default = e => {
     {
       analyticsLocations: O
     } = (0, r.default)();
-  if (null == m) return null;
+  if (null == S) return null;
   let {
     guilds: M,
     loading: P
-  } = m, x = null == M || 0 === M.length;
-  if (!P && x) return null;
-  let y = async e => {
+  } = S, y = null == M || 0 === M.length;
+  if (!P && y) return null;
+  let x = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
         page: f.AnalyticsPages.GUILD_DISCOVERY
@@ -64,7 +64,7 @@ t.default = e => {
     });
     else {
       let t = M.findIndex(t => t.id === e);
-      await I(e, t, S, N)
+      await I(e, t, m, N)
     }
   };
   if (P || null == M) {
@@ -74,7 +74,7 @@ t.default = e => {
   } else t = M.slice(0, L).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
-    onView: y,
+    onView: x,
     theme: p,
     onGuildCardSeen: g,
     onTagClick: v

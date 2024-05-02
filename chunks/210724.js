@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("497505"),
   _ = n("918701"),
   C = n("977156"),
-  m = n("5881"),
-  S = n("874137"),
+  S = n("5881"),
+  m = n("874137"),
   p = n("78826"),
   I = n("909389"),
   T = n("941348"),
@@ -31,23 +31,23 @@ function v(e) {
   var t, n, l;
   let {
     quest: E
-  } = e, v = (0, m.getQuestLogger)({
+  } = e, v = (0, S.getQuestLogger)({
     quest: E,
     location: g.QuestsExperimentLocations.QUESTS_BAR
   }), R = (0, C.useIsEligibleForQuests)({
     location: g.QuestsExperimentLocations.QUESTS_BAR
-  }), L = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), M = s.useRef(-1), P = s.useRef(!1), [x, y] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, w] = s.useState(!0), [k, B] = s.useState(240), F = s.useRef(null), H = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, V = s.useRef(H), Y = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, W = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, K = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), z = (0, f.useIsQuestExpired)(E), {
+  }), L = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), M = s.useRef(-1), P = s.useRef(!1), [y, x] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, w] = s.useState(!0), [k, F] = s.useState(240), B = s.useRef(null), H = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, V = s.useRef(H), Y = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, W = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, K = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), z = (0, f.useIsQuestExpired)(E), {
     hasError: q,
     isLoading: Q
   } = (0, p.useQuestsAssetsLoadState)(), Z = s.useCallback(() => {
     var e, t;
-    B((null !== (t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), b(!0)
+    F((null !== (t = null === (e = B.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), b(!0)
   }, []), X = s.useCallback(() => {
-    y(!0)
+    x(!0)
   }, []), J = s.useCallback(() => {
-    y(!1), !P.current && !Y && b(!1)
+    x(!1), !P.current && !Y && b(!1)
   }, [Y]), $ = s.useCallback(() => {
-    y(!1), !Y && b(!1), P.current = !1
+    x(!1), !Y && b(!1), P.current = !1
   }, [Y]), ee = s.useCallback(function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
       {
@@ -55,8 +55,8 @@ function v(e) {
       } = e;
     t ? M.current = window.setTimeout(Z, 75) : Z()
   }, [Z]), et = s.useCallback(() => {
-    if (window.clearTimeout(M.current), !Y && !x) !P.current && b(!1)
-  }, [x, Y]), en = s.useCallback(() => {
+    if (window.clearTimeout(M.current), !Y && !y) !P.current && b(!1)
+  }, [y, Y]), en = s.useCallback(() => {
     (0, c.trackQuestEvent)({
       questId: E.id,
       event: A.AnalyticEvents.QUEST_HOVER
@@ -133,7 +133,7 @@ function v(e) {
   }, {
     autoTrackExposure: es && !q
   });
-  return R && (es || !G || Q) && !q ? (0, a.jsx)(S.QuestContentImpressionTracker, {
+  return R && (es || !G || Q) && !q ? (0, a.jsx)(m.QuestContentImpressionTracker, {
     questOrQuests: E,
     questContent: h.QuestContent.QUEST_BAR,
     overrideVisibility: !O && es,
@@ -173,7 +173,7 @@ function v(e) {
             }).to(e => "translateY(".concat(e, "%)"))
           },
           children: (0, a.jsx)(e, {
-            expandedContentRef: F,
+            expandedContentRef: B,
             expansionSpring: ei,
             isExpanded: D,
             isExpansionAnimationComplete: U,

@@ -13,8 +13,8 @@ var a, s = n("735250"),
   h = n("206887"),
   _ = n("134432"),
   C = n("695346"),
-  m = n("768581"),
-  S = n("900849"),
+  S = n("768581"),
+  m = n("900849"),
   p = n("940627"),
   I = n("806519"),
   T = n("981631"),
@@ -60,11 +60,11 @@ class O extends(a = l.PureComponent) {
       presenceCount: O,
       memberCount: M,
       keywords: P
-    } = t, x = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), y = m.default.getGuildDiscoverySplashURL({
+    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), x = S.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), D = null != y ? y : this.getDefaultSplashURL(a, x), b = m.default.getGuildIconURL({
+    }), D = null != x ? x : this.getDefaultSplashURL(a, y), b = S.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -120,7 +120,7 @@ class O extends(a = l.PureComponent) {
                   src: D,
                   alt: "",
                   className: r()(A.splashImage, {
-                    [A.splashImageHeight]: !x
+                    [A.splashImageHeight]: !y
                   }),
                   onLoad: () => this.setState({
                     loaded: !0
@@ -174,7 +174,7 @@ class O extends(a = l.PureComponent) {
                 tags: P,
                 onTagClick: e => l(e, t.id),
                 guildId: t.id,
-                section: S.AnalyticsContexts.POPULAR
+                section: m.AnalyticsContexts.POPULAR
               }), (0, s.jsxs)("div", {
                 className: A.memberInfo,
                 children: [null != O && (0, s.jsxs)("div", {

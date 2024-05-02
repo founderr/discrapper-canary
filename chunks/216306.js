@@ -4,13 +4,13 @@ s.r(t), s.d(t, {
     return h
   },
   getActiveAgoTimestamp: function() {
-    return y
+    return P
   },
   getFirstRouteFor: function() {
     return f
   },
   useChannelBrowserChannelCount: function() {
-    return P
+    return y
   },
   useChannelBrowserSections: function() {
     return p
@@ -24,14 +24,14 @@ var E = s("470079"),
   a = s.n(_),
   n = s("913527"),
   T = s.n(n),
-  u = s("442837"),
-  i = s("524437"),
+  i = s("442837"),
+  u = s("524437"),
   A = s("45114"),
   l = s("740504"),
   I = s("605236"),
-  L = s("931261"),
+  r = s("931261"),
   o = s("540126"),
-  r = s("671098"),
+  L = s("671098"),
   d = s("703656"),
   S = s("592125"),
   N = s("324067"),
@@ -49,7 +49,7 @@ function M(e, t) {
 
 function R(e, t, s, _) {
   _ = _.toLowerCase();
-  let n = (0, L.useCanSeeOnboardingHome)(e),
+  let n = (0, r.useCanSeeOnboardingHome)(e),
     T = E.useCallback((e, t) => !(n && e.channel.hasFlag(G.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== c.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || a()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [n]);
   return E.useMemo(() => {
     let e = {
@@ -85,7 +85,7 @@ function f(e) {
 
 function h(e, t) {
   let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-  (0, r.bulkClearRecents)(e, t), (0, A.bulkAck)(t.map(e => ({
+  (0, L.bulkClearRecents)(e, t), (0, A.bulkAck)(t.map(e => ({
     channelId: e,
     readStateType: U.ReadStateTypes.CHANNEL,
     messageId: g.default.lastMessageId(e)
@@ -93,8 +93,8 @@ function h(e, t) {
 }
 
 function p(e, t, s, E) {
-  let _ = (0, I.useIsDismissibleContentDismissed)(i.DismissibleContent.CHANNEL_BROWSER_NUX),
-    a = (0, u.useStateFromStoresObject)([S.default], () => {
+  let _ = (0, I.useIsDismissibleContentDismissed)(u.DismissibleContent.CHANNEL_BROWSER_NUX),
+    a = (0, i.useStateFromStoresObject)([S.default], () => {
       let t = {},
         s = S.default.getMutableGuildChannelsForGuild(e);
       for (let e in s) {
@@ -121,9 +121,9 @@ function p(e, t, s, E) {
   }), n
 }
 
-function P(e) {
+function y(e) {
   var t, s;
-  let E = (0, u.useStateFromStores)([N.default], () => N.default.getCategories(e)),
+  let E = (0, i.useStateFromStores)([N.default], () => N.default.getCategories(e)),
     _ = E._categories.length,
     a = E._categories[E._categories.length - 1];
   if (null == a) return 0;
@@ -131,7 +131,7 @@ function P(e) {
   return null == n ? 0 : 0 === n.length ? a.index + 2 - _ : n[n.length - 1].index + 2 - _
 }
 
-function y(e) {
+function P(e) {
   var t;
   return C.default.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
     timeAgo: T()(D.default.extractTimestamp(null !== (t = g.default.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow()

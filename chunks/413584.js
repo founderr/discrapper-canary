@@ -29,8 +29,8 @@ var a = s("735250"),
   M = s("700785"),
   D = s("434404"),
   v = s("92160"),
-  j = s("981631"),
-  G = s("231338"),
+  G = s("981631"),
+  j = s("231338"),
   U = s("689938"),
   P = s("894045");
 let b = "WELCOME_CHANNEL",
@@ -48,7 +48,7 @@ let b = "WELCOME_CHANNEL",
       p = l.useRef(null),
       D = (0, u.useStateFromStores)([C.default], () => C.default.getChannel(o.channel_id)),
       v = (0, u.useStateFromStores)([f.default], () => null != o.emoji_id ? f.default.getUsableCustomEmojiById(o.emoji_id) : null),
-      B = null != D && M.canEveryoneRole(j.Permissions.VIEW_CHANNEL, D),
+      B = null != D && M.canEveryoneRole(G.Permissions.VIEW_CHANNEL, D),
       y = null !== (t = (0, S.getChannelIconComponent)(D)) && void 0 !== t ? t : O.default,
       F = (0, T.default)(D, !1),
       {
@@ -142,7 +142,7 @@ let b = "WELCOME_CHANNEL",
             onSave: I
           })
         }, {
-          onCloseRequest: () => G.NOOP_NULL
+          onCloseRequest: () => j.NOOP_NULL
         }),
         children: U.default.Messages.EDIT
       }), x && (0, a.jsx)(h.default, {
@@ -166,7 +166,7 @@ t.default = e => {
     enabled: b
   } = r, {
     homeSettingsEnabled: y
-  } = (0, m.useOnboardingHomeAdminExperiment)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : j.EMPTY_STRING_SNOWFLAKE_ID), F = () => {
+  } = (0, m.useOnboardingHomeAdminExperiment)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : G.EMPTY_STRING_SNOWFLAKE_ID), F = () => {
     if (null != n) O !== d.description && ((0, N.saveWelcomeScreen)(n.id, {
       description: null == O ? void 0 : O.trim()
     }), f(!0))
@@ -209,7 +209,7 @@ t.default = e => {
       onSave: w
     })
   }, {
-    onCloseRequest: () => G.NOOP_NULL
+    onCloseRequest: () => j.NOOP_NULL
   }), () => {
     W.current = !0
   }), []), l.useEffect(() => () => {
@@ -219,7 +219,7 @@ t.default = e => {
         s = !1;
       null == M || M.forEach(a => {
         e.push(a.description), t.push(a.channel_id), null != a.emoji_id && (s = !0)
-      }), p.default.track(j.AnalyticEvents.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
+      }), p.default.track(G.AnalyticEvents.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
         guild_id: null == n ? void 0 : n.id,
         options: e,
         options_channel_ids: t,
@@ -230,7 +230,7 @@ t.default = e => {
     }
   }, [S, M, O, b, n, W]), l.useEffect(() => () => (0, N.clearWelcomeScreenSettings)(), []);
   let z = l.useCallback(() => {
-    null != n && D.default.open(n.id, j.GuildSettingsSections.ONBOARDING)
+    null != n && D.default.open(n.id, G.GuildSettingsSections.ONBOARDING)
   }, [n]);
   return null == n ? null : (0, a.jsxs)(c.FormSection, {
     title: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
@@ -311,7 +311,7 @@ t.default = e => {
               F()
             },
             onKeyDown: e => {
-              e.keyCode === j.KeyboardKeys.ENTER && e.preventDefault()
+              e.keyCode === G.KeyboardKeys.ENTER && e.preventDefault()
             },
             value: O,
             maxLength: 140,
@@ -346,7 +346,7 @@ t.default = e => {
               onSave: w
             })
           }, {
-            onCloseRequest: () => G.NOOP_NULL
+            onCloseRequest: () => j.NOOP_NULL
           }),
           className: P.addChannelButton,
           disabled: y,

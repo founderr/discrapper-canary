@@ -28,8 +28,8 @@ var a = n("735250"),
   T = n("512665"),
   I = n("768581"),
   A = n("70956"),
-  N = n("823379"),
-  v = n("792125"),
+  v = n("823379"),
+  N = n("792125"),
   x = n("981631"),
   M = n("768760"),
   R = n("174740");
@@ -45,13 +45,13 @@ function y(e) {
       messageId: n.id,
       flash: !0
     }))
-  }, [n.channel_id, n.id]), N = null != n.content && "" !== n.content ? (0, p.default)(n, {
+  }, [n.channel_id, n.id]), v = null != n.content && "" !== n.content ? (0, p.default)(n, {
     isInteracting: c
   }).content : null, {
-    contentPlaceholder: v,
+    contentPlaceholder: N,
     renderedContent: x,
     icon: L
-  } = (0, T.renderSingleLineMessage)(n, N, s, R.messageContent, {
+  } = (0, T.renderSingleLineMessage)(n, v, s, R.messageContent, {
     iconClass: R.messageContentIcon,
     iconSize: M.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
   }), y = (0, C.getMessageStickers)(n), O = y.length > 0 ? y.map(e => (0, a.jsx)(g.default, {
@@ -74,7 +74,7 @@ function y(e) {
         [R.mentioned]: n.mentioned
       }),
       children: [null !== (t = null != x ? x : O) && void 0 !== t ? t : (0, a.jsx)("span", {
-        children: v
+        children: N
       }), null != O ? null : L]
     }), (0, a.jsx)("img", {
       alt: "",
@@ -127,7 +127,7 @@ function O(e) {
     let E = null !== (t = h.current) && void 0 !== t ? t : r;
     return {
       toastsHidden: d,
-      toastMessages: (0, u.useStateFromStoresArray)([S.default], () => E.map(e => S.default.getMessage(n, e)), [n, E]).filter(N.isNotNullish)
+      toastMessages: (0, u.useStateFromStoresArray)([S.default], () => E.map(e => S.default.getMessage(n, e)), [n, E]).filter(v.isNotNullish)
     }
   }({
     channelId: t,
@@ -186,7 +186,7 @@ function O(e) {
       }
     });
   return (0, a.jsx)("div", {
-    className: i()(n, (0, v.getThemeClass)(x.ThemeTypes.DARK)),
+    className: i()(n, (0, N.getThemeClass)(x.ThemeTypes.DARK)),
     onMouseEnter: () => {
       d(!0)
     },

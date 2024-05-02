@@ -6,19 +6,19 @@ n.r(t), n.d(t, {
 });
 var a = n("735250");
 n("470079");
-var s = n("249849"),
-  l = n("907561"),
-  i = n("689938"),
-  r = n("408263");
+var r = n("249849"),
+  i = n("907561"),
+  s = n("689938"),
+  l = n("408263");
 let o = ["#00ff00"],
-  u = ["#000000", "#ed1c24"],
+  c = ["#000000", "#ed1c24"],
   d = [.7],
-  c = [{
+  u = [{
     base: 1,
     tint: 2
   }],
   f = [0, .2],
-  E = [{
+  m = [{
     base: 1,
     tint: 0
   }, {
@@ -31,31 +31,31 @@ function h(e) {
     width: t,
     height: n,
     primaryTintColor: h,
-    secondaryTintColor: _,
-    ...C
+    secondaryTintColor: p,
+    ...T
   } = e, {
-    primaryColorsTransformed: m,
-    secondaryColorsTransformed: S
-  } = (0, s.getTransformedBadgeColors)({
+    primaryColorsTransformed: E,
+    secondaryColorsTransformed: C
+  } = (0, r.getTransformedBadgeColors)({
     primaryBaseColors: o,
     primaryTintColor: h,
     primaryTintLuminances: d,
-    primaryLuminanceWeights: c,
-    secondaryBaseColors: u,
-    secondaryTintColor: _,
+    primaryLuminanceWeights: u,
+    secondaryBaseColors: c,
+    secondaryTintColor: p,
     secondaryTintLuminances: f,
-    secondaryLuminanceWeights: E
+    secondaryLuminanceWeights: m
   }), {
-    bannerPreviewRef: p,
-    onLoad: I
-  } = (0, l.useClanBannerStyleInjection)(m, S);
+    bannerPreviewRef: _,
+    onLoad: g
+  } = (0, i.useClanBannerStyleInjection)(E, C);
   return (0, a.jsx)("object", {
-    ...C,
-    ref: p,
-    "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
+    ...T,
+    ref: _,
+    "aria-label": s.default.Messages.CLAN_LOOK_BANNER,
     width: t,
     height: n,
-    data: r,
-    onLoad: I
+    data: l,
+    onLoad: g
   })
 }

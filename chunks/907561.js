@@ -1,26 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   useClanBannerStyleInjection: function() {
-    return s
+    return r
   }
 });
 var a = n("470079");
 
-function s(e, t) {
+function r(e, t) {
   let n = a.useRef(null),
-    s = a.useCallback(() => {
+    r = a.useCallback(() => {
       var a;
       if (null == n.current) return;
-      let s = null === (a = n.current) || void 0 === a ? void 0 : a.getSVGDocument();
-      if (null == s) return;
-      let l = s.getElementById("clan-banner-custom-style-node");
-      if (null == l) return;
-      let i = e.map((e, t) => ".primary-".concat(t, " { fill: ").concat(e, "; stop-color: ").concat(e, " }")).join(" "),
-        r = t.map((e, t) => ".secondary-".concat(t, " { fill: ").concat(e, "; stop-color: ").concat(e, " }")).join(" ");
-      l.textContent = "".concat(i, " ").concat(r)
+      let r = null === (a = n.current) || void 0 === a ? void 0 : a.getSVGDocument();
+      if (null == r) return;
+      let i = r.getElementById("clan-banner-custom-style-node");
+      if (null == i) return;
+      let s = e.map((e, t) => ".primary-".concat(t, " { fill: ").concat(e, "; stop-color: ").concat(e, " }")).join(" "),
+        l = t.map((e, t) => ".secondary-".concat(t, " { fill: ").concat(e, "; stop-color: ").concat(e, " }")).join(" ");
+      i.textContent = "".concat(s, " ").concat(l)
     }, [e, t]);
-  return a.useEffect(() => s(), [s]), {
+  return a.useEffect(() => r(), [r]), {
     bannerPreviewRef: n,
-    onLoad: s
+    onLoad: r
   }
 }

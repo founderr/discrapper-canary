@@ -1,19 +1,19 @@
 "use strict";
 s.r(t), s.d(t, {
   NO_WELCOME_SCREEN: function() {
-    return i
+    return u
   }
 });
 var E, _, a, n, T = s("442837"),
-  u = s("570140");
-let i = {},
+  i = s("570140");
+let u = {},
   A = {},
   l = {},
   I = !1,
-  L = !1,
+  r = !1,
   o = !1;
 
-function r(e) {
+function L(e) {
   let {
     guild: t
   } = e.invite;
@@ -25,14 +25,14 @@ function d(e) {
     welcomeScreen: t,
     guildId: s
   } = e;
-  A[s] = null != t ? t : i
+  A[s] = null != t ? t : u
 }
 class S extends(n = T.default.Store) {
   get(e) {
     if (null != e) return A[e]
   }
   isFetching() {
-    return L
+    return r
   }
   hasError() {
     return o
@@ -52,9 +52,9 @@ a = "WelcomeScreenStore", (_ = "displayName") in(E = S) ? Object.defineProperty(
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : E[_] = a, t.default = new S(u.default, {
-  INVITE_RESOLVE_SUCCESS: r,
-  INVITE_ACCEPT_SUCCESS: r,
+}) : E[_] = a, t.default = new S(i.default, {
+  INVITE_RESOLVE_SUCCESS: L,
+  INVITE_ACCEPT_SUCCESS: L,
   WELCOME_SCREEN_SUBMIT_SUCCESS: d,
   WELCOME_SCREEN_UPDATE: d,
   WELCOME_SCREEN_VIEW: function(e) {
@@ -76,17 +76,17 @@ a = "WelcomeScreenStore", (_ = "displayName") in(E = S) ? Object.defineProperty(
     l[t] = !1
   },
   WELCOME_SCREEN_FETCH_START: function() {
-    L = !0, o = !1
+    r = !0, o = !1
   },
   WELCOME_SCREEN_FETCH_SUCCESS: function(e) {
-    L = !1, o = !1;
+    r = !1, o = !1;
     let {
       welcomeScreen: t,
       guildId: s
     } = e;
-    A[s] = null != t ? t : i
+    A[s] = null != t ? t : u
   },
   WELCOME_SCREEN_FETCH_FAIL: function() {
-    L = !1, o = !0
+    r = !1, o = !0
   }
 })

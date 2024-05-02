@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("631885"),
   _ = n("895328"),
   C = n("568671"),
-  m = n("419821"),
-  S = n("367515"),
+  S = n("419821"),
+  m = n("367515"),
   p = n("250285"),
   I = n("292352"),
   T = n("689938"),
@@ -138,9 +138,9 @@ function O(e) {
     return null == i ? null : (0, a.jsx)(p.default, {
       userId: i.id,
       isLast: r,
-      children: () => t === I.UserLinkStatus.ACTIVE ? (0, a.jsx)(m.UserLinkAcceptedRequestRow, {
+      children: () => t === I.UserLinkStatus.ACTIVE ? (0, a.jsx)(S.UserLinkAcceptedRequestRow, {
         user: i
-      }) : (0, a.jsx)(S.UserLinkPendingRequestRow, {
+      }) : (0, a.jsx)(m.UserLinkPendingRequestRow, {
         user: i
       })
     }, i.id)
@@ -233,7 +233,7 @@ let M = () => {
       })
     }) : null
   },
-  x = () => (0, f.useShouldShowHelplineLink)() ? (0, a.jsxs)("div", {
+  y = () => (0, f.useShouldShowHelplineLink)() ? (0, a.jsxs)("div", {
     className: i()(g.__invalid_helpLineInfo, A.marginTop20),
     children: [(0, a.jsx)(o.Heading, {
       className: g.supportHeader,
@@ -249,7 +249,7 @@ let M = () => {
       })
     })]
   }) : null,
-  y = () => {
+  x = () => {
     let e = (0, h.useUserForLinkStatus)(I.UserLinkStatus.PENDING),
       t = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
         count: e.length
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, E.default)();
   return (0, a.jsxs)("div", {
     className: g.container,
-    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(L, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {}), (0, a.jsx)(x, {})]
+    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(L, {}), (0, a.jsx)(M, {}), (0, a.jsx)(x, {}), (0, a.jsx)(P, {}), (0, a.jsx)(y, {})]
   })
 }

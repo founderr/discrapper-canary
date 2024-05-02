@@ -14,9 +14,9 @@ var a = n("735250"),
   h = n("998502"),
   _ = n("689938"),
   C = n("826937"),
-  m = n("949086");
+  S = n("949086");
 
-function S(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -106,7 +106,7 @@ class p extends s.PureComponent {
             })
           }), (0, a.jsx)(i.FormItem, {
             title: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION,
-            className: m.marginTop20,
+            className: S.marginTop20,
             children: (0, a.jsx)(i.TextInput, {
               disabled: !0,
               value: e
@@ -153,10 +153,10 @@ class p extends s.PureComponent {
     return this.props.editingPath === this.props.path ? this.renderEditing() : this.renderViewing()
   }
   constructor(...e) {
-    super(...e), S(this, "state", {
+    super(...e), m(this, "state", {
       label: void 0,
       isDefault: null
-    }), S(this, "handleStartEditing", () => {
+    }), m(this, "handleStartEditing", () => {
       let {
         path: e,
         label: t,
@@ -167,7 +167,7 @@ class p extends s.PureComponent {
         label: t,
         isDefault: n
       })
-    }), S(this, "handleStopEditing", () => {
+    }), m(this, "handleStopEditing", () => {
       let {
         onToggleEditing: e
       } = this.props;
@@ -175,7 +175,7 @@ class p extends s.PureComponent {
         label: void 0,
         isDefault: null
       })
-    }), S(this, "handleRemoveLocation", () => {
+    }), m(this, "handleRemoveLocation", () => {
       (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
         ...e,
         header: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
@@ -189,16 +189,16 @@ class p extends s.PureComponent {
           children: _.default.Messages.USER_SETTINGS_GAMES_REMOVE_LOCATION_BODY
         })
       }))
-    }), S(this, "handleSaveChanges", () => {
+    }), m(this, "handleSaveChanges", () => {
       (0, r.updateInstallLocation)(this.props.path, {
         label: null != this.state.label ? this.state.label : this.props.label,
         isDefault: null != this.state.isDefault ? this.state.isDefault : this.props.isDefault
       }), this.handleStopEditing()
-    }), S(this, "handleLabelChange", e => {
+    }), m(this, "handleLabelChange", e => {
       this.setState({
         label: e
       })
-    }), S(this, "handleToggleDefault", () => {
+    }), m(this, "handleToggleDefault", () => {
       this.setState({
         isDefault: !this.state.isDefault
       })
@@ -251,13 +251,13 @@ class I extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), S(this, "state", {
+    super(...e), m(this, "state", {
       editingPath: null
-    }), S(this, "handleAddInstallationLocation", () => {
+    }), m(this, "handleAddInstallationLocation", () => {
       h.default.showOpenDialog(["openDirectory"]).then(e => {
         null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0] && (0, r.addInstallLocation)(e[0])
       })
-    }), S(this, "handleToggleEditing", e => {
+    }), m(this, "handleToggleEditing", e => {
       this.setState({
         editingPath: e
       })

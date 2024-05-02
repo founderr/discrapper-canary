@@ -33,8 +33,8 @@ var a = s("735250"),
   M = s("142961"),
   D = s("232764"),
   v = s("729311"),
-  j = s("850864"),
-  G = s("966301"),
+  G = s("850864"),
+  j = s("966301"),
   U = s("981631"),
   P = s("689938"),
   b = s("398416");
@@ -93,8 +93,8 @@ function y(e) {
     });
   if (B) {
     if (g === p.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) return (0, a.jsx)(v.GuildSettingsDefaultChannelsNotice, {});
-    if (g === p.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) return (0, a.jsx)(G.GuildSettingsOnboardingPromptsNotice, {});
-    else if (g === p.GuildSettingsOnboardingPage.HOME_SETTINGS) return (0, a.jsx)(j.GuildSettingsHomeSettingsNotice, {})
+    if (g === p.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) return (0, a.jsx)(j.GuildSettingsOnboardingPromptsNotice, {});
+    else if (g === p.GuildSettingsOnboardingPage.HOME_SETTINGS) return (0, a.jsx)(G.GuildSettingsHomeSettingsNotice, {})
   }
   let q = g === p.ONBOARDING_STEPS[p.ONBOARDING_STEPS.length - 1],
     $ = async () => {

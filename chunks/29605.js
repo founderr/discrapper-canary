@@ -36,8 +36,8 @@ var a = s("735250"),
   M = s("768581"),
   D = s("176354"),
   v = s("267642"),
-  j = s("434404"),
-  G = s("471613"),
+  G = s("434404"),
+  j = s("471613"),
   U = s("999382"),
   P = s("981631"),
   b = s("185923"),
@@ -277,9 +277,9 @@ t.default = () => {
     {
       revision: d,
       emojis: I
-    } = (0, E.useStateFromStoresObject)([G.default], () => ({
-      revision: G.default.getEmojiRevision(e.id),
-      emojis: G.default.getEmojis(e.id)
+    } = (0, E.useStateFromStoresObject)([j.default], () => ({
+      revision: j.default.getEmojiRevision(e.id),
+      emojis: j.default.getEmojis(e.id)
     })),
     T = (0, m.default)(d),
     [S, h] = l.useState(!1),
@@ -343,7 +343,7 @@ t.default = () => {
         }), Z && (0, a.jsx)(_.FormText, {
           type: _.FormTextTypes.DESCRIPTION,
           children: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_SETTINGS_MANAGE_PREMIUM_TEXT.format({
-            onClick: () => j.default.open(e.id, P.GuildSettingsSections.ROLE_SUBSCRIPTIONS, void 0, P.GuildSettingsSubsections.ROLE_SUBSCRIPTION_EMOJI)
+            onClick: () => G.default.open(e.id, P.GuildSettingsSections.ROLE_SUBSCRIPTIONS, void 0, P.GuildSettingsSubsections.ROLE_SUBSCRIPTION_EMOJI)
           })
         }), (0, a.jsxs)("div", {
           children: [(0, a.jsx)(_.FormTitle, {

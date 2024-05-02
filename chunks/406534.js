@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("765104"),
   I = n("122707"),
   A = n("779836"),
-  N = n("23750"),
-  v = n("496675"),
+  v = n("23750"),
+  N = n("496675"),
   x = n("306680"),
   M = n("944486"),
   R = n("594174"),
@@ -66,7 +66,7 @@ let J = l.memo(function(e) {
   return (0, a.jsx)(w.default, {
     isGroupStart: s,
     channel: n,
-    message: new N.default({
+    message: new v.default({
       id: t.id,
       key: "pending-upload-".concat(t.id),
       type: Z.MessageTypes.DEFAULT,
@@ -162,7 +162,7 @@ function $(e) {
         }, e.key)
       }
       if (null != ei && ei > e.content.timestamp.getTime() * O.default.Millis.SECOND) return;
-      let s = v.default.can(Z.Permissions.CREATE_INSTANT_INVITE, L);
+      let s = N.default.can(Z.Permissions.CREATE_INSTANT_INVITE, L);
       if ((0, D.default)(e.content, s)) return;
       e.type === Z.ChannelStreamTypes.MESSAGE && null == eT && (eT = e);
       let i = e.groupId === (null == eT ? void 0 : eT.groupId) ? eT.content.id : e.groupId,
@@ -179,9 +179,9 @@ function $(e) {
       }, e.content.id)
     });
   eI.push(...eA);
-  let eN = en[en.length - 1];
+  let ev = en[en.length - 1];
   if (null != eu && ea.forEach((e, t) => {
-      let n = 0 === t && (0, b.isNewGroupItem)(L, eN, new N.default({
+      let n = 0 === t && (0, b.isNewGroupItem)(L, ev, new v.default({
         type: Z.MessageTypes.DEFAULT,
         author: eu
       }));

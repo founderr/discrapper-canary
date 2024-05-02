@@ -17,7 +17,7 @@ t.default = e => {
     guildId: t,
     setPage: _,
     onClose: C
-  } = e, m = s.useRef(null), S = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
+  } = e, S = s.useRef(null), m = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
     progress: p,
     errors: I,
     submitting: T
@@ -31,12 +31,12 @@ t.default = e => {
     badgeKind: O,
     badgePrimaryColor: M,
     badgeSecondaryColor: P,
-    banner: x,
-    brandPrimaryColor: y,
+    banner: y,
+    brandPrimaryColor: x,
     brandSecondaryColor: D,
     wildcardDescriptors: b,
     badgeImage: U
-  } = null != p ? p : {}, j = s.useRef(null), G = s.useRef(null), w = s.useRef(null), [k, B] = s.useState(!1), F = async () => {
+  } = null != p ? p : {}, j = s.useRef(null), G = s.useRef(null), w = s.useRef(null), [k, F] = s.useState(!1), B = async () => {
     try {
       await u.convertGuildToClan(t, {
         gameApplicationIds: g,
@@ -48,8 +48,8 @@ t.default = e => {
         badgeKind: O,
         badgePrimaryColor: M,
         badgeSecondaryColor: P,
-        banner: x,
-        brandPrimaryColor: y,
+        banner: y,
+        brandPrimaryColor: x,
         brandSecondaryColor: D,
         wildcardDescriptors: b,
         badgeImage: U
@@ -64,7 +64,7 @@ t.default = e => {
       return n => (0, a.jsx)(e, {
         guildId: t,
         tag: R,
-        brandPrimaryColor: y,
+        brandPrimaryColor: x,
         ...n
       })
     })
@@ -73,7 +73,7 @@ t.default = e => {
     config: l.config.slow,
     from: {
       flex: 1,
-      paddingLeft: S ? 120 : 0
+      paddingLeft: m ? 120 : 0
     },
     to: {
       flex: 1,
@@ -83,9 +83,9 @@ t.default = e => {
     ref: G,
     config: l.config.slow,
     from: {
-      flex: S ? 1 : 0,
-      paddingRight: S ? 120 : 0,
-      marginLeft: S ? -32 : 0
+      flex: m ? 1 : 0,
+      paddingRight: m ? 120 : 0,
+      marginLeft: m ? -32 : 0
     },
     to: {
       flex: 1,
@@ -125,8 +125,8 @@ t.default = e => {
       children: (0, a.jsx)(c.default, {
         guildId: t,
         signed: k,
-        setSigned: B,
-        signRef: m
+        setSigned: F,
+        signRef: S
       })
     }), (0, a.jsxs)(l.animated.div, {
       className: h.signTextRight,
@@ -139,9 +139,9 @@ t.default = e => {
         size: r.Button.Sizes.SMALL,
         onClick: () => {
           var e;
-          null === (e = m.current) || void 0 === e || e.scrollIntoView({
+          null === (e = S.current) || void 0 === e || e.scrollIntoView({
             behavior: "smooth"
-          }), B(!0)
+          }), F(!0)
         },
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, a.jsx)(r.Text, {
@@ -175,7 +175,7 @@ t.default = e => {
         color: r.Button.Colors.BRAND,
         disabled: !k,
         submitting: T,
-        onClick: F,
+        onClick: B,
         children: E.default.Messages.FINISH
       })]
     })]

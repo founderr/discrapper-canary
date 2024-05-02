@@ -22,8 +22,8 @@ var a, s, l = n("735250"),
   h = n("565799"),
   _ = n("501655"),
   C = n("192079"),
-  m = n("427679"),
-  S = n("448206"),
+  S = n("427679"),
+  m = n("448206"),
   p = n("496675"),
   I = n("938475"),
   T = n("808602"),
@@ -36,8 +36,8 @@ var a, s, l = n("735250"),
   O = n("602623"),
   M = n("626135"),
   P = n("823379"),
-  x = n("15274"),
-  y = n("924301"),
+  y = n("15274"),
+  x = n("924301"),
   D = n("504160"),
   b = n("151864"),
   U = n("835184"),
@@ -45,8 +45,8 @@ var a, s, l = n("735250"),
   G = n("497656"),
   w = n("79874"),
   k = n("554747"),
-  B = n("230900"),
-  F = n("854698"),
+  F = n("230900"),
+  B = n("854698"),
   H = n("139712"),
   V = n("765305"),
   Y = n("981631"),
@@ -152,7 +152,7 @@ function Q(e) {
   let {
     guildEvent: t,
     noticeType: n
-  } = e, a = (0, F.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([y.default], () => y.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
+  } = e, a = (0, B.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([x.default], () => x.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
   return !s && null == i && (0, D.markUpcomingEventNoticeAsSeen)(t.id), (0, l.jsxs)(o.Button, {
     fullWidth: !0,
     className: K.joinButton,
@@ -183,14 +183,14 @@ function Z(e) {
   let {
     guildEvent: n,
     noticeType: a
-  } = e, s = (0, B.getLocationFromEvent)(n), r = null != s ? (0, j.guildEventDetailsParser)(s, !0) : null, d = (0, B.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
+  } = e, s = (0, F.getLocationFromEvent)(n), r = null != s ? (0, j.guildEventDetailsParser)(s, !0) : null, d = (0, F.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
     startTime: f,
     endTime: E
   } = (0, w.default)(n.id), {
     startDateTimeString: h,
     upcomingEvent: _,
     diffMinutes: C
-  } = (0, F.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), m = _ ? C > 0 ? W.default.Messages.STARTING_IN_MINUTES.format({
+  } = (0, B.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), S = _ ? C > 0 ? W.default.Messages.STARTING_IN_MINUTES.format({
     minutes: C
   }) : W.default.Messages.STARTING_SOON : W.default.Messages.STARTING_ON_DATE.format({
     date: h
@@ -205,7 +205,7 @@ function Z(e) {
     children: [(0, l.jsxs)("div", {
       className: K.textBlock,
       children: [(0, l.jsx)(o.Clickable, {
-        onClick: () => (0, x.openGuildEventDetails)({
+        onClick: () => (0, y.openGuildEventDetails)({
           eventId: n.id
         }),
         className: K.eventNameClickable,
@@ -239,7 +239,7 @@ function Z(e) {
         color: "header-secondary",
         variant: "text-xs/normal",
         className: K.startTime,
-        children: m
+        children: S
       })]
     }), (0, l.jsxs)("div", {
       className: K.textBlock,
@@ -267,7 +267,7 @@ function Z(e) {
 function X(e) {
   let {
     guildEvent: t
-  } = e, n = (0, B.getLocationFromEvent)(t);
+  } = e, n = (0, F.getLocationFromEvent)(t);
   return null == n ? null : (0, l.jsx)(z, {
     onClickCloseIcon: () => (0, D.hideLiveChannelNotice)({
       eventId: null == t ? void 0 : t.id
@@ -290,7 +290,7 @@ function J(e) {
   let {
     guildEvent: t
   } = e, n = i.useCallback(() => {
-    (0, x.openGuildEventDetails)({
+    (0, y.openGuildEventDetails)({
       eventId: t.id
     })
   }, [t]);
@@ -359,7 +359,7 @@ function et(e) {
     channel: t,
     speakers: n,
     voiceType: a
-  } = e, s = t.getGuildId(), u = i.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([p.default], () => p.default.can(Y.Permissions.CONNECT, t)), c = (0, S.default)(t.id), f = W.default.Messages.JOIN;
+  } = e, s = t.getGuildId(), u = i.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([p.default], () => p.default.can(Y.Permissions.CONNECT, t)), c = (0, m.default)(t.id), f = W.default.Messages.JOIN;
   switch (a) {
     case 1:
       f = W.default.Messages.JOIN;
@@ -397,7 +397,7 @@ function et(e) {
     guild: t
   } = e, {
     showRedesignedLiveChannelNotice: n
-  } = (0, d.useChannelNoticeRedesignExperiment)(!0), a = (0, G.useActiveEventOrStageInstanceChannel)(t.id), s = (0, k.useGuildActiveEvent)(t.id), i = (0, k.useGuildUpcomingEventsNotice)(t.id), o = (0, r.useStateFromStores)([m.default], () => m.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
+  } = (0, d.useChannelNoticeRedesignExperiment)(!0), a = (0, G.useActiveEventOrStageInstanceChannel)(t.id), s = (0, k.useGuildActiveEvent)(t.id), i = (0, k.useGuildUpcomingEventsNotice)(t.id), o = (0, r.useStateFromStores)([S.default], () => S.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: u,
     isEventNoticeHidden: f
   } = (0, r.useStateFromStoresObject)([b.default], () => ({

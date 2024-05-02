@@ -19,17 +19,17 @@ var s = n("120356"),
   h = n("435064"),
   _ = n("39604"),
   C = n("356659"),
-  m = n("981631"),
-  S = n("332325"),
+  S = n("981631"),
+  m = n("332325"),
   p = n("689938"),
   I = n("352653");
 
 function T(e) {
-  (0, o.default)(S.GameSettingsTab.CLIPS), (0, _.dismissClipsUserEducation)(e)
+  (0, o.default)(m.GameSettingsTab.CLIPS), (0, _.dismissClipsUserEducation)(e)
 }
 
 function g() {
-  let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(m.GlobalKeybindActions.SAVE_CLIP));
+  let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(S.GlobalKeybindActions.SAVE_CLIP));
   if (null == e) return (0, a.jsx)(a.Fragment, {
     children: p.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
   });
@@ -58,7 +58,7 @@ let A = {
     }),
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
     ctaOnClick: () => {
-      window.open(f.default.getArticleURL(m.HelpdeskArticles.CLIPS), "_blank")
+      window.open(f.default.getArticleURL(S.HelpdeskArticles.CLIPS), "_blank")
     },
     containerClass: I.container
   },
@@ -99,10 +99,10 @@ function N() {
       textColor: c,
       buttonColor: f,
       buttonLook: E,
-      containerClass: m
+      containerClass: S
     } = A[s];
   return (0, a.jsxs)("div", {
-    className: m,
+    className: S,
     children: [(0, a.jsx)(r.Text, {
       color: c,
       variant: "text-sm/medium",

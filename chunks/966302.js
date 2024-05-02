@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("43267"),
   _ = n("933557"),
   C = n("703656"),
-  m = n("932724"),
-  S = n("672339"),
+  S = n("932724"),
+  m = n("672339"),
   p = n("898531"),
   I = n("923973"),
   T = n("189771"),
@@ -32,8 +32,8 @@ var a = n("735250"),
   O = n("451478"),
   M = n("465670"),
   P = n("421600"),
-  x = n("792125"),
-  y = n("358221"),
+  y = n("792125"),
+  x = n("358221"),
   D = n("793865"),
   b = n("981631"),
   U = n("65154"),
@@ -44,11 +44,11 @@ let k = {
     width: 232,
     height: 315
   },
-  B = {
+  F = {
     width: 232,
     height: 267
   },
-  F = {
+  B = {
     width: 475,
     height: 267
   };
@@ -60,8 +60,8 @@ function H(e) {
   return s.useEffect(() => {
     let e = L.default.getCurrentUser();
     if (i && null != e) {
-      let t = (0, m.getLastUsedVideoBackgroundOption)(e);
-      (0, S.applyBackgroundOptionPreview)(t, l, {
+      let t = (0, S.getLastUsedVideoBackgroundOption)(e);
+      (0, m.applyBackgroundOptionPreview)(t, l, {
         track: !1
       }).catch(b.NOOP)
     }
@@ -72,8 +72,8 @@ function H(e) {
       children: (0, a.jsx)(n, {
         disabled: !1,
         deviceId: l,
-        width: F.width,
-        height: F.height
+        width: B.width,
+        height: B.height
       })
     }), (0, a.jsx)("div", {
       className: G.previewChannelHeader,
@@ -149,7 +149,7 @@ function Y(e) {
     y: n,
     x: l,
     channel: f
-  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, S] = s.useState(!1), m = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), v = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -169,7 +169,7 @@ function Y(e) {
       children: [(0, a.jsx)(P.default, {
         className: G.icon,
         ringing: g,
-        src: null != S ? S : "",
+        src: null != m ? m : "",
         ringingType: P.default.RingingType.INCOMING,
         size: C ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
       }), (0, a.jsxs)("div", {
@@ -187,7 +187,7 @@ function Y(e) {
         })]
       })]
     }),
-    D = L ? k : B;
+    D = L ? k : F;
   return (0, a.jsx)(E.default, {
     className: G.wrapper,
     selector: ".".concat(G.root),
@@ -203,12 +203,12 @@ function Y(e) {
       children: (0, a.jsxs)(r.animated.div, {
         className: i()(G.root, w.elevationHigh, {
           [G.previewCamera]: C
-        }, C ? (0, x.getThemeClass)("dark") : null),
+        }, C ? (0, y.getThemeClass)("dark") : null),
         style: {
           ...t,
-          width: v.value.interpolate([0, 1], [D.width, F.width]),
-          minHeight: v.value.interpolate([0, 1], [D.height, F.height]),
-          translateX: v.value.interpolate([0, 1], [0, -1 * Math.abs(F.width - D.width) / 2])
+          width: v.value.interpolate([0, 1], [D.width, B.width]),
+          minHeight: v.value.interpolate([0, 1], [D.height, B.height]),
+          translateX: v.value.interpolate([0, 1], [0, -1 * Math.abs(B.width - D.width) / 2])
         },
         children: [C ? (0, a.jsx)(H, {
           header: M
@@ -225,7 +225,7 @@ function Y(e) {
           look: u.Button.Looks.LINK,
           color: u.Button.Colors.PRIMARY,
           className: G.previewButton,
-          onClick: () => m(!0),
+          onClick: () => S(!0),
           children: j.default.Messages.INCOMING_CALL_PREVIEW_CAMERA
         }) : null]
       })

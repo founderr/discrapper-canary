@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return m
   }
 });
 var a = n("735250"),
@@ -19,7 +19,7 @@ var a = n("735250"),
   _ = n("689938"),
   C = n("623696");
 
-function m(e, t, n) {
+function S(e, t, n) {
   return (0, a.jsxs)("button", {
     className: C.container,
     onClick: n,
@@ -43,7 +43,7 @@ function m(e, t, n) {
   }, t)
 }
 
-function S() {
+function m() {
   let e = Object.values(u.default.getGuilds()).filter(e => e.hasFeature(h.GuildFeatures.HUB)),
     t = e => {
       c.default.track(h.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
@@ -60,13 +60,13 @@ function S() {
       })
     }), (0, a.jsxs)("div", {
       className: C.grid,
-      children: [e.map(e => m(f.default.getGuildIconURL({
+      children: [e.map(e => S(f.default.getGuildIconURL({
         id: e.id,
         icon: e.icon,
         size: 240
       }), e.name, () => {
         t(e.id)
-      })), m(d.default, _.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
+      })), S(d.default, _.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
         (0, i.clearSearch)(), c.default.track(h.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.transitionTo)(h.Routes.GUILD_DISCOVERY)
       })]
     })]

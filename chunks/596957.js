@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("906732"),
   _ = n("205976"),
   C = n("699516"),
-  m = n("974042"),
-  S = n("451478"),
+  S = n("974042"),
+  m = n("451478"),
   p = n("6048"),
   I = n("390697"),
   T = n("434184"),
@@ -28,7 +28,7 @@ var a = n("735250"),
   O = n("617015"),
   M = n("981631"),
   P = n("689938"),
-  x = n("954360");
+  y = n("954360");
 t.default = function(e) {
   let {
     sectionFilter: t,
@@ -36,9 +36,9 @@ t.default = function(e) {
   } = e, {
     analyticsLocations: l
   } = (0, h.default)(E.default.FRIENDS_LIST), {
-    rows: y,
+    rows: x,
     section: D
-  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, I.useIsClearIncomingFriendRequestsEnabled)(), [G, w] = s.useState(() => {
+  } = (0, r.useStateFromStoresObject)([S.default], () => S.default.getState()), b = (0, r.useStateFromStores)([m.default], () => m.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, I.useIsClearIncomingFriendRequestsEnabled)(), [G, w] = s.useState(() => {
     let e = {};
     for (let t of Object.values(M.FriendsSections)) e[t] = "";
     return e
@@ -47,14 +47,14 @@ t.default = function(e) {
       ...G,
       [t]: e
     })
-  }, [G, t]), B = s.useCallback(() => {
+  }, [G, t]), F = s.useCallback(() => {
     w({
       ...G,
       [t]: ""
     })
-  }, [G, t]), F = y.filter(t, G[t]);
-  if (0 === F.length && "" === G[t]) return (0, a.jsxs)("div", {
-    className: x.emptyStateContainer,
+  }, [G, t]), B = x.filter(t, G[t]);
+  if (0 === B.length && "" === G[t]) return (0, a.jsxs)("div", {
+    className: y.emptyStateContainer,
     children: [t === M.FriendsSections.ONLINE && (0, a.jsx)(_.default, {}), (0, a.jsx)(A.default, {
       type: t,
       onClick: () => {
@@ -62,21 +62,21 @@ t.default = function(e) {
       }
     }, D)]
   });
-  let H = 0 === F.length && "" !== G[t],
-    V = F.filter(e => e.type === M.RelationshipTypes.PENDING_INCOMING).length,
+  let H = 0 === B.length && "" !== G[t],
+    V = B.filter(e => e.type === M.RelationshipTypes.PENDING_INCOMING).length,
     Y = t === M.FriendsSections.PENDING && V > 0 && j && V >= O.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
   return (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: l,
     children: (0, a.jsxs)(c.default, {
       section: M.AnalyticsSections.FRIENDS_LIST,
       children: [(0, a.jsx)(p.default, {
-        className: i()(x.searchBar, H ? x.searchEmptyState : null),
+        className: i()(y.searchBar, H ? y.searchEmptyState : null),
         query: G[t],
         onChange: k,
-        onClear: B,
+        onClear: F,
         size: p.default.Sizes.MEDIUM
       }), t === M.FriendsSections.ONLINE && "" === G[t] && (0, a.jsx)(_.default, {}), (0, a.jsxs)("div", {
-        className: x.sectionTitle,
+        className: y.sectionTitle,
         children: [(0, a.jsx)(R.default, {
           id: n,
           title: function(e, t) {
@@ -102,11 +102,11 @@ t.default = function(e) {
                   count: t.toString()
                 })
             }
-          }(t, F.length)
+          }(t, B.length)
         }), Y && (0, a.jsx)(o.Button, {
           look: o.ButtonLooks.LINK,
           color: o.ButtonColors.LINK,
-          className: x.clearButton,
+          className: y.clearButton,
           size: o.Button.Sizes.TINY,
           onClick: e => {
             e.stopPropagation(), d.default.confirmClearPendingRelationships(V)
@@ -115,13 +115,13 @@ t.default = function(e) {
           children: P.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON
         })]
       }), H ? (0, a.jsx)("div", {
-        className: x.emptyStateContainer,
+        className: y.emptyStateContainer,
         children: (0, a.jsx)(A.default, {
           type: A.FriendsSearchStatus.SECTION_NO_RESULTS
         }, D)
       }) : (0, a.jsx)(v.default, {
         relationshipCount: U,
-        statusSections: [F],
+        statusSections: [B],
         renderRow: function(e) {
           switch (t) {
             case M.FriendsSections.BLOCKED:

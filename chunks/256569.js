@@ -95,8 +95,8 @@ function T(e) {
   }), {
     state: {
       value: v,
-      tags: j,
-      selections: G,
+      tags: G,
+      selections: j,
       isSelecting: U
     }
   } = g, [P, b] = l.useState(!1), B = l.useCallback(() => {
@@ -106,8 +106,8 @@ function T(e) {
     })
   }, [M]);
   l.useEffect(() => {
-    !P && n(j)
-  }, [n, j, P]), l.useEffect(() => {
+    !P && n(G)
+  }, [n, G, P]), l.useEffect(() => {
     !P && o(v)
   }, [o, v, P]);
   let y = l.useCallback(function() {
@@ -117,7 +117,7 @@ function T(e) {
     F = l.useCallback(e => t => {
       if (t) {
         var s;
-        let t = G.includes(j[e]);
+        let t = j.includes(G[e]);
         null === (s = f.current) || void 0 === s || s.focus(), t ? p(e) : (A(e), setImmediate(() => {
           var e;
           null === (e = f.current) || void 0 === e || e.blur(), setTimeout(() => {
@@ -126,7 +126,7 @@ function T(e) {
           }, 16)
         }))
       } else p(e, !0), b(!0)
-    }, [A, p, G, j]);
+    }, [A, p, j, G]);
   return (0, a.jsxs)("div", {
     className: i()(E.mainContainer, T),
     ref: m,
@@ -135,16 +135,16 @@ function T(e) {
     children: [(0, a.jsxs)(I, {
       ref: N,
       onClick: B,
-      children: [j.map((e, t) => (0, a.jsx)(d.default, {
+      children: [G.map((e, t) => (0, a.jsx)(d.default, {
         value: e,
         onChange: O(t),
         onBlur: y,
         onFocus: F(t),
         onRemove: () => L(t),
-        isSelected: G.includes(e),
+        isSelected: j.includes(e),
         isSelecting: U,
         error: u[e],
-        forceShowErrorTooltip: !P && t === j.length - 1
+        forceShowErrorTooltip: !P && t === G.length - 1
       }, t)), (0, a.jsx)("input", {
         className: i()(E.mainTextInput, {
           [E.isEditingOtherNodes]: P
@@ -154,14 +154,14 @@ function T(e) {
         onKeyDownCapture: R,
         onPaste: h,
         onBlur: D,
-        placeholder: 0 === j.length ? _ : void 0,
+        placeholder: 0 === G.length ? _ : void 0,
         value: v
       })]
     }), null != S && (0, a.jsxs)(r.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
       className: E.maxTags,
-      children: [null !== (t = null == j ? void 0 : j.length) && void 0 !== t ? t : 0, "/", S]
+      children: [null !== (t = null == G ? void 0 : G.length) && void 0 !== t ? t : 0, "/", S]
     })]
   })
 }

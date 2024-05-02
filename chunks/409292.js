@@ -22,7 +22,7 @@ function C(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class m extends s.Component {
+class S extends s.Component {
   componentDidMount() {
     this.fetchStoreListing(), (0, u.trackAppUIViewed)("channel_store_listing")
   }
@@ -72,4 +72,4 @@ t.default = (0, o.default)(i.default.connectStores([d.default], e => {
   return {
     skuId: null != n ? n : d.default.getSkuIdForChannel(t.id)
   }
-})(m))
+})(S))

@@ -9,8 +9,8 @@ var a, s, l, i, r, o = n("442837"),
   h = n("594190"),
   _ = n("454175"),
   C = n("619914"),
-  m = n("581883"),
-  S = n("70956"),
+  S = n("581883"),
+  m = n("70956"),
   p = n("780570"),
   I = n("314897"),
   T = n("77498"),
@@ -19,13 +19,13 @@ var a, s, l, i, r, o = n("442837"),
   N = n("944486"),
   v = n("981631");
 let R = "ActivityTrackingStore",
-  L = 30 * S.default.Millis.MINUTE,
-  O = 5 * S.default.Millis.MINUTE,
+  L = 30 * m.default.Millis.MINUTE,
+  O = 5 * m.default.Millis.MINUTE,
   M = null !== (a = u.Storage.get(R)) && void 0 !== a ? a : {},
   P = {},
-  x = !1;
+  y = !1;
 
-function y(e) {
+function x(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   t && D(e, !0);
   let n = P[e.applicationId];
@@ -79,16 +79,16 @@ function b() {
       exePath: (0, E.removeExecutablePathPrefix)(null != s ? s : "")
     })
   }
-  for (let t of Object.keys(M)) !n.has(t) && y(M[t], e)
+  for (let t of Object.keys(M)) !n.has(t) && x(M[t], e)
 }
 
 function U() {
-  for (let e of Object.keys(M)) y(M[e]);
-  x = !1
+  for (let e of Object.keys(M)) x(M[e]);
+  y = !1
 }
 class j extends(s = o.default.Store) {
   initialize() {
-    this.waitFor(h.default, m.default, g.default), this.syncWith([m.default], b)
+    this.waitFor(h.default, S.default, g.default), this.syncWith([S.default], b)
   }
   getActivities() {
     return M
@@ -102,9 +102,9 @@ r = "ActivityTrackingStore", (i = "displayName") in(l = j) ? Object.defineProper
 }) : l[i] = r, new j(c.default, {
   RUNNING_GAMES_CHANGE: () => b(),
   CONNECTION_OPEN: function() {
-    if (x) return !1;
+    if (y) return !1;
     for (let e of Object.keys(M)) D(M[e]);
-    b(!1), x = !0
+    b(!1), y = !0
   },
   CONNECTION_CLOSED: function(e) {
     let {
