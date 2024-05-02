@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return L
+    return v
   },
   useLightningCheckoutEligibility: function() {
-    return v
+    return L
   }
 }), a("47120");
 var l = a("735250"),
@@ -60,7 +60,7 @@ let b = e => {
     })
   };
 
-function v() {
+function L() {
   let {
     defaultPaymentSource: e
   } = (0, g.default)({
@@ -72,14 +72,14 @@ function v() {
   }
 }
 
-function L(e) {
+function v(e) {
   let {
     onPurchaseComplete: t,
     onError: a,
     onReviewPurchase: r,
     paymentSource: g,
-    loadId: v,
-    skuId: L,
+    loadId: L,
+    skuId: v,
     isGift: I = !1,
     analyticsLocations: N
   } = e, {
@@ -87,23 +87,23 @@ function L(e) {
     setStep: y,
     paymentError: O,
     paymentAuthenticationState: k,
-    application: R,
-    skuPricePreviewsById: A
-  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = A[L], F = null != D ? D[g.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : null;
+    application: A,
+    skuPricePreviewsById: R
+  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = R[v], F = null != D ? D[g.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : null;
   s.useEffect(() => {
     _ !== h.Step.REVIEW && y(h.Step.REVIEW)
   }), s.useEffect(() => {
     k === f.PaymentAuthenticationState.ERROR && a(O)
   }, [a, O, k]);
   let w = async () => {
-    n()(null != F, "skuPricePreview can't be null"), n()(null != R, "application can't be null");
+    n()(null != F, "skuPricePreview can't be null"), n()(null != A, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(R.id, L, {
+      await (0, o.purchaseSKU)(A.id, v, {
         expectedAmount: F.amount,
         expectedCurrency: F.currency,
         isGift: I,
         paymentSource: g,
-        loadId: v
+        loadId: L
       }), P(!1), t()
     } catch (t) {
       let e = t instanceof c.BillingError ? t : new c.BillingError(t);
@@ -126,7 +126,6 @@ function L(e) {
         })
       })
     }), (0, l.jsx)("div", {
-      color: "always-white",
       className: S.legalTerms,
       children: (0, l.jsxs)("p", {
         children: ["Non-refundable. By clicking, you are agreeing to our", " ", (0, l.jsx)(i.Anchor, {
@@ -148,7 +147,7 @@ function L(e) {
       className: S.reviewButton,
       onClick: () => {
         r(), (0, E.default)({
-          skuId: L,
+          skuId: v,
           analyticsLocations: N,
           returnRef: B
         })

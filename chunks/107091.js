@@ -24,8 +24,8 @@ var l = a("735250"),
   S = a("333867"),
   b = a("329067"),
   T = a("981631"),
-  v = a("302800"),
-  L = a("689938"),
+  L = a("302800"),
+  v = a("689938"),
   I = a("777374");
 let N = e => {
   let {
@@ -48,13 +48,13 @@ function _(e) {
     onUse: y,
     onError: O,
     onReviewPurchase: k,
-    confettiCanvas: R = null
-  } = e, A = (0, r.v4)(), j = s.useRef(null), [P] = t.items, {
+    confettiCanvas: A = null
+  } = e, R = (0, r.v4)(), j = s.useRef(null), [P] = t.items, {
     analyticsLocations: B
   } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
     confettiColors: D,
     buttonColors: F
-  } = (0, C.default)(t.styles), M = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), w = (0, v.getCustomConfettiDisplayOptions)(t.skuId), [H, U] = s.useState(!1), [W, G] = s.useState(!1), V = null != F ? {
+  } = (0, C.default)(t.styles), M = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), w = (0, L.getCustomConfettiDisplayOptions)(t.skuId), [H, U] = s.useState(!1), [W, G] = s.useState(!1), V = null != F ? {
     background: (0, h.getBackgroundGradient)(F, 90),
     color: F.text.toHslString()
   } : void 0, z = (0, E.default)({
@@ -77,14 +77,12 @@ function _(e) {
     children: [W && (0, l.jsxs)("div", {
       className: I.cardDetails,
       children: [(0, l.jsx)(o.Text, {
-        color: "always-white",
         variant: "text-lg/bold",
         className: I.productName,
         children: "Uh oh, something went wrong"
       }), (0, l.jsx)("div", {
         className: I.innerBlur,
         children: (0, l.jsx)(o.Text, {
-          color: "always-white",
           className: I.description,
           variant: "text-md/normal",
           children: "Recheck your payment information, then try again."
@@ -102,14 +100,12 @@ function _(e) {
     }), !W && (H ? (0, l.jsxs)("div", {
       className: I.cardDetails,
       children: [(0, l.jsxs)(o.Text, {
-        color: "always-white",
         variant: "text-lg/bold",
         className: I.productName,
         children: ["You've Collected ", t.name, "!"]
       }), (0, l.jsx)("div", {
         className: I.innerBlur,
         children: (0, l.jsx)(o.Text, {
-          color: "always-white",
           className: I.description,
           variant: "text-md/normal",
           children: "This decoration is now part of your collection and can be used anytime!"
@@ -128,17 +124,16 @@ function _(e) {
             analyticsLocations: B
           })
         },
-        children: L.default.Messages.COLLECTIBLES_USE_NOW
+        children: v.default.Messages.COLLECTIBLES_USE_NOW
       })]
     }) : (0, l.jsxs)("div", {
       className: I.cardDetails,
       children: [(0, l.jsx)(o.Text, {
-        color: "always-white",
         variant: "text-lg/bold",
         className: I.productName,
         children: t.name
       }), (0, l.jsx)(x.PaymentContextProvider, {
-        loadId: A,
+        loadId: R,
         stepConfigs: [],
         applicationId: T.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
@@ -151,7 +146,7 @@ function _(e) {
       })]
     })), !W && H && !(null != w) && !M && (0, l.jsx)(p.default, {
       confettiTarget: j.current,
-      confettiCanvas: R,
+      confettiCanvas: A,
       sprites: (0, h.getConfettiSprites)(t.categorySkuId),
       colors: null == D ? void 0 : D.map(e => e.toHexString())
     })]
