@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var r = n("249849"),
-  i = n("907561"),
-  s = n("689938"),
+  s = n("907561"),
+  i = n("689938"),
   l = n("408263");
 let o = ["#00ff00"],
   c = ["#000000", "#ed1c24"],
@@ -32,9 +32,9 @@ function h(e) {
     height: n,
     primaryTintColor: h,
     secondaryTintColor: p,
-    ...T
+    ...E
   } = e, {
-    primaryColorsTransformed: E,
+    primaryColorsTransformed: T,
     secondaryColorsTransformed: C
   } = (0, r.getTransformedBadgeColors)({
     primaryBaseColors: o,
@@ -46,16 +46,58 @@ function h(e) {
     secondaryTintLuminances: f,
     secondaryLuminanceWeights: m
   }), {
-    bannerPreviewRef: _,
-    onLoad: g
-  } = (0, i.useClanBannerStyleInjection)(E, C);
-  return (0, a.jsx)("object", {
-    ...T,
-    ref: _,
-    "aria-label": s.default.Messages.CLAN_LOOK_BANNER,
+    styleContent: _,
+    containerId: g
+  } = (0, s.useClanBannerStyleInjection)(T, C);
+  return (0, a.jsxs)("svg", {
+    ...E,
+    "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
     height: n,
-    data: l,
-    onLoad: g
+    viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
+    children: [(0, a.jsxs)("defs", {
+      children: [(0, a.jsx)("defs", {
+        children: (0, a.jsxs)("linearGradient", {
+          id: "line-gradient",
+          x1: "0",
+          x2: "1",
+          y1: "0",
+          y2: "1",
+          children: [(0, a.jsx)("stop", {
+            stopColor: C[1],
+            offset: "0%"
+          }), (0, a.jsx)("stop", {
+            stopColor: T[0],
+            offset: "50%"
+          }), (0, a.jsx)("stop", {
+            stopColor: T[0],
+            offset: "80%"
+          }), (0, a.jsx)("stop", {
+            stopColor: C[1],
+            offset: "100%"
+          })]
+        })
+      }), (0, a.jsx)("style", {
+        children: _
+      })]
+    }), (0, a.jsx)("use", {
+      href: "".concat(l, "#wrapper-layer"),
+      id: g
+    }), (0, a.jsx)("use", {
+      href: "".concat(l, "#heightmap-lines-0"),
+      style: {
+        fill: "url(#line-gradient)"
+      }
+    }), (0, a.jsx)("use", {
+      href: "".concat(l, "#heightmap-lines-1"),
+      style: {
+        fill: "url(#line-gradient)"
+      }
+    }), (0, a.jsx)("use", {
+      href: "".concat(l, "#heightmap-lines-2"),
+      style: {
+        fill: "url(#line-gradient)"
+      }
+    })]
   })
 }
