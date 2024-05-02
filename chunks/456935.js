@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   r = n("470079"),
-  i = n("692547"),
-  s = n("481060"),
+  s = n("692547"),
+  i = n("481060"),
   l = n("496675"),
   o = n("916187"),
   c = n("736921"),
@@ -31,21 +31,21 @@ function p(e) {
       return ""
   }
 }
-let T = {
+let E = {
   [f.VerificationLevels.NONE]: "",
-  [f.VerificationLevels.LOW]: i.default.unsafe_rawColors.GREEN_360.css,
-  [f.VerificationLevels.MEDIUM]: i.default.unsafe_rawColors.YELLOW_300.css,
-  [f.VerificationLevels.HIGH]: i.default.unsafe_rawColors.ORANGE_345.css,
-  [f.VerificationLevels.VERY_HIGH]: i.default.unsafe_rawColors.RED_400.css
+  [f.VerificationLevels.LOW]: s.default.unsafe_rawColors.GREEN_360.css,
+  [f.VerificationLevels.MEDIUM]: s.default.unsafe_rawColors.YELLOW_300.css,
+  [f.VerificationLevels.HIGH]: s.default.unsafe_rawColors.ORANGE_345.css,
+  [f.VerificationLevels.VERY_HIGH]: s.default.unsafe_rawColors.RED_400.css
 };
 t.default = function(e) {
   let {
     guild: t
-  } = e, i = l.default.can(f.Permissions.MANAGE_GUILD, t), E = t.verificationLevel, C = E === f.VerificationLevels.VERY_HIGH ? c.default : o.default, _ = r.useMemo(() => p(E), [E]), g = T[E], x = (0, a.jsx)("div", {
+  } = e, s = l.default.can(f.Permissions.MANAGE_GUILD, t), T = t.verificationLevel, C = T === f.VerificationLevels.VERY_HIGH ? c.default : o.default, _ = r.useMemo(() => p(T), [T]), g = E[T], x = (0, a.jsx)("div", {
     className: h.verificationLevelTitle,
     children: m.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {
-        return (0, a.jsx)(s.Text, {
+        return (0, a.jsx)(i.Text, {
           className: h.verificationLevelHook,
           style: {
             color: g
@@ -55,7 +55,7 @@ t.default = function(e) {
         }, "hook")
       }
     })
-  }), I = E === f.VerificationLevels.VERY_HIGH ? m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
+  }), I = T === f.VerificationLevels.VERY_HIGH ? m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
   return (0, a.jsx)(u.default, {
     title: x,
     children: (0, a.jsxs)("div", {
@@ -64,13 +64,13 @@ t.default = function(e) {
         width: 20,
         height: 20,
         className: h.icon
-      }), (0, a.jsx)(s.Text, {
+      }), (0, a.jsx)(i.Text, {
         className: h.guildVerificationText,
         variant: "text-sm/normal",
         children: I
-      }), i && (0, a.jsx)(s.Clickable, {
+      }), s && (0, a.jsx)(i.Clickable, {
         className: h.iconInteractiveContainer,
-        onClick: () => (0, s.openModalLazy)(async () => {
+        onClick: () => (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("27933")]).then(n.bind(n, "694278"));

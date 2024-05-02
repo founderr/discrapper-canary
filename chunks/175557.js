@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var r = n("108930"),
-  i = n("86406"),
-  s = n("146068"),
+  s = n("86406"),
+  i = n("146068"),
   l = n("308545"),
   o = n("397697"),
   c = n("129871"),
@@ -44,11 +44,11 @@ function h(e) {
         ...n
       });
     case m.ClanBannerKind.HOUSE:
-      return (0, a.jsx)(s.default, {
+      return (0, a.jsx)(i.default, {
         ...n
       });
     case m.ClanBannerKind.HEIGHTMAP:
-      return (0, a.jsx)(i.default, {
+      return (0, a.jsx)(s.default, {
         ...n
       });
     case m.ClanBannerKind.MESH:

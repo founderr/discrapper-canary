@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var r = n("707592"),
-  i = n("137158"),
-  s = n("689938"),
+  s = n("137158"),
+  i = n("689938"),
   l = n("915580");
 t.default = function(e) {
   let {
@@ -19,9 +19,9 @@ t.default = function(e) {
     actionsLocation: h
   } = e, {
     label: p,
-    placeholder: T
+    placeholder: E
   } = t;
-  return (0, a.jsx)(i.default, {
+  return (0, a.jsx)(s.default, {
     field: t,
     index: n,
     isDragEnabled: o,
@@ -34,7 +34,7 @@ t.default = function(e) {
     actionsLocation: h,
     children: (0, a.jsx)(r.TextInputFieldBody, {
       className: l.fieldBackground,
-      placeholder: null != T ? T : s.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
+      placeholder: null != E ? E : i.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0
     })
   })

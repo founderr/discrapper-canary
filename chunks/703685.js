@@ -4,19 +4,19 @@ n.r(t), n.d(t, {
     return I
   },
   CustomColorPicker: function() {
-    return v
+    return N
   },
   DefaultColorButton: function() {
     return x
   },
   default: function() {
-    return N
+    return v
   }
 }), n("47120");
 var a = n("735250"),
   r = n("470079"),
-  i = n("120356"),
-  s = n.n(i),
+  s = n("120356"),
+  i = n.n(s),
   l = n("924826"),
   o = n("866442"),
   c = n("481060"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   m = n("263704"),
   h = n("214623"),
   p = n("502568"),
-  T = n("981631"),
-  E = n("689938"),
+  E = n("981631"),
+  T = n("689938"),
   C = n("395788");
 let _ = () => Promise.resolve();
 
@@ -36,17 +36,17 @@ function g(e) {
     color: t,
     isDefault: n = !1,
     isCustom: r = !1,
-    isSelected: i = !1,
+    isSelected: s = !1,
     disabled: d = !1,
     style: f = {},
     onClick: p,
-    "aria-label": E
+    "aria-label": T
   } = e, _ = (0, l.useListItem)("color-".concat(t)), g = null != t ? (0, o.int2hex)(t) : f.backgroundColor, x = !1;
-  return r && !i ? x = !0 : (r || i) && (x = (0, o.getDarkness)(t) > .1), (0, a.jsx)(c.FocusRing, {
+  return r && !s ? x = !0 : (r || s) && (x = (0, o.getDarkness)(t) > .1), (0, a.jsx)(c.FocusRing, {
     offset: -2,
     children: (0, a.jsxs)("button", {
       type: "button",
-      className: s()(C.colorPickerSwatch, {
+      className: i()(C.colorPickerSwatch, {
         [C.disabled]: d,
         [C.default]: n,
         [C.custom]: r,
@@ -58,21 +58,21 @@ function g(e) {
         ...f,
         backgroundColor: g
       },
-      "aria-label": null != E ? E : g,
+      "aria-label": null != T ? T : g,
       ..._,
       children: [r ? (0, a.jsx)(h.default, {
         className: C.colorPickerDropper,
         foreground: C.colorPickerDropperFg,
         width: 14,
         height: 14,
-        color: (0, u.getColor)(x ? T.Color.WHITE_500 : T.Color.BLACK_500)
+        color: (0, u.getColor)(x ? E.Color.WHITE_500 : E.Color.BLACK_500)
       }) : null, function() {
         let e = 16,
           t = 16;
-        if ((r || n) && (e = 32, t = 24), i) return (0, a.jsx)(m.default, {
+        if ((r || n) && (e = 32, t = 24), s) return (0, a.jsx)(m.default, {
           width: e,
           height: t,
-          color: (0, u.getColor)(x ? T.Color.WHITE_500 : T.Color.BLACK_500)
+          color: (0, u.getColor)(x ? E.Color.WHITE_500 : E.Color.BLACK_500)
         })
       }()]
     })
@@ -112,47 +112,47 @@ class I extends r.PureComponent {
     })
   }
 }
-let v = r.memo(function(e) {
+let N = r.memo(function(e) {
   let {
     value: t,
     eagerUpdate: n = !1,
-    onChange: i,
+    onChange: s,
     onClose: l,
     suggestedColors: u,
     middle: m,
-    footer: T,
+    footer: E,
     showEyeDropper: _,
     wrapperComponentType: g,
     className: x
-  } = e, I = (0, d.default)(), v = function(e) {
+  } = e, I = (0, d.default)(), N = function(e) {
     if (null == e) return null;
     if ("string" == typeof e) return (0, o.isValidHex)(e) ? (0, o.hex2int)(e) : null;
     return e
-  }(t), N = null != v ? v : 0, S = (0, o.int2hex)(N), A = (0, o.int2hslRaw)(N), [L, b] = r.useState({
-    current: N,
+  }(t), v = null != N ? N : 0, A = (0, o.int2hex)(v), S = (0, o.int2hslRaw)(v), [L, R] = r.useState({
+    current: v,
     pending: {
-      hex: S,
-      hsl: A
+      hex: A,
+      hsl: S
     },
-    input: S
+    input: A
   });
   r.useEffect(() => {
-    if (null == v || v === L.current) return;
-    let e = (0, o.int2hex)(v),
-      t = (0, o.int2hslRaw)(v);
-    b({
-      current: v,
+    if (null == N || N === L.current) return;
+    let e = (0, o.int2hex)(N),
+      t = (0, o.int2hslRaw)(N);
+    R({
+      current: N,
       pending: {
         hex: e,
         hsl: t
       },
       input: e
     })
-  }, [v, L]), r.useEffect(() => l, [l]);
-  let R = e => {
+  }, [N, L]), r.useEffect(() => l, [l]);
+  let y = e => {
       let t = "#" === e[0] ? e : "#".concat(e);
       if (!(0, o.isValidHex)(t)) {
-        b(e => ({
+        R(e => ({
           ...e,
           input: t
         }));
@@ -160,52 +160,52 @@ let v = r.memo(function(e) {
       }
       let n = (0, o.hex2int)(t),
         a = (0, o.int2hslRaw)(n);
-      b({
+      R({
         current: n,
         pending: {
           hex: t,
           hsl: a
         },
         input: t
-      }), i(n)
+      }), s(n)
     },
-    M = async () => {
+    b = async () => {
       if (null != I) try {
         let {
           sRGBHex: e
         } = await I.open();
-        R(e)
+        y(e)
       } catch {}
-    }, y = r.useCallback(e => {
-      b(t => ({
+    }, j = r.useCallback(e => {
+      R(t => ({
         ...t,
         pending: e,
         input: e.hex
-      })), n && i((0, o.hex2int)(e.hex))
-    }, [n, i]), j = e => {
-      i((0, o.hex2int)(e))
+      })), n && s((0, o.hex2int)(e.hex))
+    }, [n, s]), M = e => {
+      s((0, o.hex2int)(e))
     }, O = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(f.default, {
-        onChange: y,
+        onChange: j,
         onChangeComplete: e => {
           let {
             hex: t
           } = e;
-          return j(t)
+          return M(t)
         },
         color: L.pending.hsl
       }), m, (0, a.jsxs)("div", {
         className: C.customColorPickerInputContainer,
         children: [_ && null != I && (0, a.jsx)(p.Icon, {
-          onClick: M,
-          tooltip: E.default.Messages.PICK_A_COLOR_FROM_THE_PAGE,
+          onClick: b,
+          tooltip: T.default.Messages.PICK_A_COLOR_FROM_THE_PAGE,
           tooltipPosition: "top",
           className: C.customColorPickerEyeDropper,
           icon: h.default
         }), (0, a.jsx)(c.TextInput, {
           className: C.customColorPickerInput,
           value: L.input,
-          onChange: R,
+          onChange: y,
           maxLength: 7
         })]
       }), null != u && u.length > 0 && (0, a.jsx)("div", {
@@ -216,23 +216,23 @@ let v = r.memo(function(e) {
             backgroundColor: e
           },
           className: C.suggestedColor,
-          onClick: () => R(e)
+          onClick: () => y(e)
         }, "".concat(e, "-").concat(t)))
-      }), T]
+      }), E]
     }), D = null != g ? g : c.Dialog;
   return (0, a.jsx)(D, {
-    "aria-label": E.default.Messages.PICK_A_COLOR,
-    className: s()(C.customColorPicker, x),
+    "aria-label": T.default.Messages.PICK_A_COLOR,
+    className: i()(C.customColorPicker, x),
     children: O
   })
 });
 
-function N(e) {
+function v(e) {
   let {
     className: t,
     defaultColor: n,
     customColor: r,
-    colors: i,
+    colors: s,
     value: o,
     disabled: c,
     onChange: d,
@@ -247,26 +247,26 @@ function N(e) {
       onClick: d,
       disabled: c
     }, e))
-  }), p = i.slice(0, i.length / 2), T = i.slice(i.length / 2, i.length), E = (0, l.default)({
+  }), p = s.slice(0, s.length / 2), E = s.slice(s.length / 2, s.length), T = (0, l.default)({
     id: "color-picker",
     isEnabled: !0,
     scrollToStart: _,
     scrollToEnd: _
   });
   return (0, a.jsx)(l.ListNavigatorProvider, {
-    navigator: E,
+    navigator: T,
     children: (0, a.jsx)(l.ListNavigatorContainer, {
       children: e => {
         let {
-          ref: i,
+          ref: s,
           ...l
         } = e;
         return (0, a.jsxs)("div", {
-          className: s()(C.container, t),
-          ref: i,
+          className: i()(C.container, t),
+          ref: s,
           ...l,
           children: [(0, a.jsx)("div", {
-            className: s()(C.defaultContainer, m),
+            className: i()(C.defaultContainer, m),
             children: u({
               value: o,
               color: n,
@@ -274,7 +274,7 @@ function N(e) {
               disabled: c
             })
           }), (0, a.jsx)("div", {
-            className: s()(C.customContainer, m),
+            className: i()(C.customContainer, m),
             children: f({
               value: o,
               customColor: r,
@@ -282,7 +282,7 @@ function N(e) {
             })
           }), (0, a.jsxs)("div", {
             className: C.__invalid_presets,
-            children: [h(p), h(T)]
+            children: [h(p), h(E)]
           })]
         })
       }

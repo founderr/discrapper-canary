@@ -118,11 +118,11 @@ function L(e) {
     r || v(!0), null == E || E(!0)
   }, [r, E]), R = a.useCallback(() => {
     r || v(!1), null == E || E(!1)
-  }, [r, E]), M = s || null == o ? null : (0, g.renderMediaBadge)(o), y = !s && u > 0 ? (0, g.renderMentionBadge)(u) : null;
+  }, [r, E]), M = s || null == o ? null : (0, g.renderMediaBadge)(o), O = !s && u > 0 ? (0, g.renderMentionBadge)(u) : null;
   return (0, l.jsx)(c.BlobMask, {
     selected: !n,
     upperBadge: M,
-    lowerBadge: y,
+    lowerBadge: O,
     lowerBadgeWidth: (0, m.getBadgeWidthForValue)(u),
     children: (0, l.jsx)(c.Clickable, {
       className: i()(S.folder, {

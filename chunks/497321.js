@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var a, r = n("735250"),
-  i = n("470079"),
-  s = n("120356"),
-  l = n.n(s),
+  s = n("470079"),
+  i = n("120356"),
+  l = n.n(i),
   o = n("481060"),
   c = n("37234"),
   d = n("230711"),
@@ -19,7 +19,7 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends(a = i.Component) {
+class p extends(a = s.Component) {
   render() {
     return (0, r.jsxs)("div", {
       className: m.streamerModeEnabled,

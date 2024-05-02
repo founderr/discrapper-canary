@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   r = n("470079"),
-  i = n("442837"),
-  s = n("481060"),
+  s = n("442837"),
+  i = n("481060"),
   l = n("32966"),
   o = n("314897"),
   c = n("77498"),
@@ -17,68 +17,68 @@ t.default = e => {
     title: t,
     description: n,
     handleUpdate: p,
-    gameApplicationIds: T,
-    error: E,
+    gameApplicationIds: E,
+    error: T,
     requiredGameId: C
-  } = e, _ = (0, i.useStateFromStores)([o.default], () => o.default.getId()), {
+  } = e, _ = (0, s.useStateFromStores)([o.default], () => o.default.getId()), {
     recentGames: g
   } = (0, l.useUserRecentGames)(_), {
     options: x,
     matchSorterOptions: I
   } = (0, d.useClanSetupGameSelectableSearch)();
   r.useEffect(() => {
-    null != C && !T.has(C) && x.length > 0 && N(C)
+    null != C && !E.has(C) && x.length > 0 && v(C)
   }, [x.length, C]);
-  let v = e => {
-      if (!T.has(e) || e === C) return;
-      let t = new Set(T);
+  let N = e => {
+      if (!E.has(e) || e === C) return;
+      let t = new Set(E);
       t.delete(e), p(t)
     },
-    N = e => {
-      if (T.size === f.MAX_NUM_SELECTED_GAMES || T.has(e) || null == c.default.getGameById(e)) return;
-      let t = new Set(T);
+    v = e => {
+      if (E.size === f.MAX_NUM_SELECTED_GAMES || E.has(e) || null == c.default.getGameById(e)) return;
+      let t = new Set(E);
       t.add(e), p(t)
     };
   return (0, a.jsxs)("div", {
     className: h.slideContent,
-    children: [(0, a.jsx)(s.Heading, {
+    children: [(0, a.jsx)(i.Heading, {
       variant: "heading-xxl/medium",
       className: h.title,
       children: t
-    }), (0, a.jsx)(s.Text, {
+    }), (0, a.jsx)(i.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: h.subtitle,
       children: n
     }), (0, a.jsx)("div", {
       className: h.inputContainer,
-      children: (0, a.jsx)(s.SearchableSelect, {
+      children: (0, a.jsx)(i.SearchableSelect, {
         wrapperClassName: h.input,
         options: x,
         value: "",
         placeholder: m.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-        onChange: N,
-        isDisabled: T.size === f.MAX_NUM_SELECTED_GAMES,
+        onChange: v,
+        isDisabled: E.size === f.MAX_NUM_SELECTED_GAMES,
         matchSorterOptions: I
       })
     }), (0, a.jsxs)("div", {
       className: h.contentWithMinHeight,
-      children: [null != E && (0, a.jsx)(s.Text, {
+      children: [null != T && (0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "status-danger",
         className: h.errorText,
-        children: E
-      }), T.size > 0 && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(s.Text, {
+        children: T
+      }), E.size > 0 && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
           className: h.contentLabel,
           children: m.default.Messages.CLAN_SETUP_SELECTED_GAMES
         }), (0, a.jsx)("div", {
           className: h.selectedSection,
-          children: Array.from(T).map(e => (0, a.jsx)(u.default, {
+          children: Array.from(E).map(e => (0, a.jsx)(u.default, {
             applicationId: e,
-            onClick: e !== C ? v : void 0,
+            onClick: e !== C ? N : void 0,
             imageContainerClassName: e !== C ? h.clickableGame : h.defaultGame,
             selected: !0
           }, e))
@@ -86,7 +86,7 @@ t.default = e => {
           className: h.divider
         })]
       }), null != g && g.length > 0 && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(s.Text, {
+        children: [(0, a.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
           className: h.contentLabel,
@@ -95,7 +95,7 @@ t.default = e => {
           className: h.selectedSection,
           children: g.map(e => (0, a.jsx)(u.default, {
             applicationId: e.applicationId,
-            onClick: N,
+            onClick: v,
             imageContainerClassName: h.clickableGame
           }, e.applicationId))
         })]

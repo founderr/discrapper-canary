@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return h
   },
   updateGuildDiscoveryMetadataReasonsToJoin: function() {
-    return T
+    return E
   },
   updateGuildDiscoveryMetadataSocialLinks: function() {
-    return E
+    return T
   },
   updateGuildEmojiDiscoverabilityEnabled: function() {
     return m
@@ -42,14 +42,14 @@ n.r(t), n.d(t, {
 });
 var a = n("544891"),
   r = n("570140"),
-  i = n("706454"),
-  s = n("150192"),
+  s = n("706454"),
+  i = n("150192"),
   l = n("981631");
 async function o() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    n = i.default.locale;
-  if (n === s.default.getFetchedLocale()) return;
+    n = s.default.locale;
+  if (n === i.default.getFetchedLocale()) return;
   let o = await a.HTTP.get({
     url: l.Endpoints.GUILD_DISCOVERY_CATEGORIES,
     query: {
@@ -70,8 +70,8 @@ async function c(e) {
     let {
       primary_category_id: t,
       category_ids: n,
-      keywords: i,
-      emoji_discoverability_enabled: s,
+      keywords: s,
+      emoji_discoverability_enabled: i,
       partner_actioned_timestamp: o,
       partner_application_timestamp: c,
       is_published: d,
@@ -84,8 +84,8 @@ async function c(e) {
     })).body, h = {
       primaryCategoryId: t,
       secondaryCategoryIds: n,
-      keywords: i,
-      emojiDiscoverabilityEnabled: s,
+      keywords: s,
+      emojiDiscoverabilityEnabled: i,
       partnerActionedTimestamp: o,
       partnerApplicationTimestamp: c,
       isPublished: d,
@@ -161,7 +161,7 @@ function p(e, t) {
   })
 }
 
-function T(e, t) {
+function E(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -169,7 +169,7 @@ function T(e, t) {
   })
 }
 
-function E(e, t) {
+function T(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -180,8 +180,8 @@ async function C(e) {
   let {
     guildId: t,
     primaryCategoryId: n,
-    keywords: i,
-    emojiDiscoverabilityEnabled: s,
+    keywords: s,
+    emojiDiscoverabilityEnabled: i,
     partnerActionedTimestamp: o,
     partnerApplicationTimestamp: c,
     isPublished: d,
@@ -194,8 +194,8 @@ async function C(e) {
       primary_category_id: e,
       category_ids: h,
       keywords: p,
-      emoji_discoverability_enabled: T,
-      partner_actioned_timestamp: E,
+      emoji_discoverability_enabled: E,
+      partner_actioned_timestamp: T,
       partner_application_timestamp: C,
       is_published: _,
       reasons_to_join: g,
@@ -205,10 +205,10 @@ async function C(e) {
       url: l.Endpoints.GUILD_DISCOVERY_METADATA(t),
       body: {
         primary_category_id: n,
-        emoji_discoverability_enabled: s,
+        emoji_discoverability_enabled: i,
         partner_actioned_timestamp: o,
         partner_application_timestamp: c,
-        keywords: i,
+        keywords: s,
         is_published: d,
         reasons_to_join: u,
         social_links: f,
@@ -223,8 +223,8 @@ async function C(e) {
         primaryCategoryId: e,
         secondaryCategoryIds: h,
         keywords: p,
-        emojiDiscoverabilityEnabled: T,
-        partnerActionedTimestamp: E,
+        emojiDiscoverabilityEnabled: E,
+        partnerActionedTimestamp: T,
         partnerApplicationTimestamp: C,
         isPublished: _,
         reasonsToJoin: g,

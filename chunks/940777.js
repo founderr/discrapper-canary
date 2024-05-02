@@ -31,14 +31,14 @@ var l = n("735250"),
   x = n("919755"),
   R = n("110977"),
   M = n("603274"),
-  y = n("981631"),
-  O = n("689938"),
+  O = n("981631"),
+  y = n("689938"),
   D = n("240993");
 let b = {
   analyticsSource: {
-    page: y.AnalyticsPages.GUILD_CHANNEL,
-    section: y.AnalyticsSections.CHANNEL_LIST,
-    object: y.AnalyticsObjects.CHANNEL
+    page: O.AnalyticsPages.GUILD_CHANNEL,
+    section: O.AnalyticsSections.CHANNEL_LIST,
+    object: O.AnalyticsObjects.CHANNEL
   }
 };
 
@@ -56,9 +56,9 @@ function j() {
       favoriteChannels: L.default.getFavoriteChannels(),
       favoriteServerMuted: L.default.favoriteServerMuted
     })),
-    w = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(y.FAVORITES)),
+    w = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(O.FAVORITES)),
     F = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(w)),
-    B = (0, C.default)(e => e.guildId) === y.FAVORITES,
+    B = (0, C.default)(e => e.guildId) === O.FAVORITES,
     {
       badge: V,
       unread: H
@@ -113,12 +113,12 @@ function j() {
           lowerBadge: Y,
           children: (0, l.jsx)(T.default, {
             ...e,
-            ariaLabel: O.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
-              guildName: O.default.Messages.FAVORITES_GUILD_NAME,
+            ariaLabel: y.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
+              guildName: y.default.Messages.FAVORITES_GUILD_NAME,
               mentions: V
             }),
             to: {
-              pathname: y.Routes.CHANNEL(y.FAVORITES, w),
+              pathname: O.Routes.CHANNEL(O.FAVORITES, w),
               state: b
             },
             selected: B || j,

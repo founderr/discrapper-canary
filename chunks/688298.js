@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   r = n("470079"),
-  i = n("481060"),
-  s = n("703685"),
+  s = n("481060"),
+  i = n("703685"),
   l = n("689938"),
   o = n("109267");
 
@@ -18,9 +18,9 @@ function c(e) {
     onPrimaryColorChange: c,
     onSecondaryColorChange: d
   } = e, u = r.useRef(null);
-  return (0, i.useFocusLock)(u), (0, a.jsxs)("div", {
+  return (0, s.useFocusLock)(u), (0, a.jsxs)("div", {
     className: o.popoutContainer,
-    children: [(0, a.jsx)(i.Text, {
+    children: [(0, a.jsx)(s.Text, {
       variant: "text-xs/semibold",
       color: "header-secondary",
       className: o.customColorsHeader,
@@ -35,11 +35,11 @@ function c(e) {
           style: {
             backgroundColor: n.primary
           }
-        }), (0, a.jsx)(i.Text, {
+        }), (0, a.jsx)(s.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
           children: l.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
-        }), (0, a.jsx)(s.CustomColorPicker, {
+        }), (0, a.jsx)(i.CustomColorPicker, {
           className: o.colorPicker,
           value: n.primary,
           eagerUpdate: !0,
@@ -54,11 +54,11 @@ function c(e) {
           style: {
             backgroundColor: n.secondary
           }
-        }), (0, a.jsx)(i.Text, {
+        }), (0, a.jsx)(s.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
           children: l.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
-        }), (0, a.jsx)(s.CustomColorPicker, {
+        }), (0, a.jsx)(i.CustomColorPicker, {
           className: o.colorPicker,
           value: n.secondary,
           eagerUpdate: !0,
@@ -76,12 +76,12 @@ function d(e) {
     shouldShow: t,
     showSecondaryColor: n,
     onRequestClose: r,
-    children: s,
+    children: i,
     palette: l,
     onPrimaryColorChange: o,
     onSecondaryColorChange: d
   } = e;
-  return (0, a.jsx)(i.Popout, {
+  return (0, a.jsx)(s.Popout, {
     renderPopout: () => (0, a.jsx)(c, {
       showSecondaryColor: n,
       palette: l,
@@ -91,8 +91,8 @@ function d(e) {
     position: "left",
     shouldShow: t,
     onRequestClose: r,
-    animation: i.Popout.Animation.TRANSLATE,
+    animation: s.Popout.Animation.TRANSLATE,
     animationPosition: "right",
-    children: s
+    children: i
   })
 }

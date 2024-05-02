@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a, r, i, s, l = n("442837"),
+var a, r, s, i, l = n("442837"),
   o = n("570140");
 let c = 1e3,
   d = 200,
   u = {},
   f = !1;
-class m extends(s = l.default.Store) {
+class m extends(i = l.default.Store) {
   isLoading() {
     return f
   }
@@ -29,12 +29,12 @@ class m extends(s = l.default.Store) {
     return u[e]
   }
 }
-i = "DiscoverGuildChecklistStore", (r = "displayName") in(a = m) ? Object.defineProperty(a, r, {
-  value: i,
+s = "DiscoverGuildChecklistStore", (r = "displayName") in(a = m) ? Object.defineProperty(a, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[r] = i, t.default = new m(o.default, {
+}) : a[r] = s, t.default = new m(o.default, {
   DISCOVER_CHECKLIST_FETCH_START: function(e) {
     f = !0
   },

@@ -1,12 +1,12 @@
 "use strict";
-t.r(r);
-var a = t("319301");
+r.r(t);
+var a = r("319301");
 let i = {
   figma: {
     category: "embeds"
   }
 };
-r.default = (0, a.defineColorTokens)({
+t.default = (0, a.defineColorTokens)({
   "embed-title": {
     name: "header-primary",
     meta: i

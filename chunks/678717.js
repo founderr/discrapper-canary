@@ -1,59 +1,59 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return K
   }
-}), t("653041"), t("47120");
-var a = t("735250"),
-  i = t("470079"),
-  l = t("120356"),
-  n = t.n(l),
-  o = t("990547"),
-  c = t("442837"),
-  s = t("481060"),
-  d = t("347469"),
-  u = t("213609"),
-  h = t("906467"),
-  m = t("259580"),
-  p = t("465670"),
-  g = t("54017"),
-  f = t("502568"),
-  b = t("31336"),
-  y = t("19759"),
-  x = t("432877");
-t("381996");
-var k = t("392750"),
-  v = t("926976"),
-  j = t("592197"),
-  C = t("860337"),
-  w = t("789654"),
-  S = t("691867"),
-  N = t("916790"),
-  T = t("912072"),
-  L = t("246992"),
-  E = t("442954"),
-  _ = t("702904"),
-  R = t("248526"),
-  D = t("958328"),
-  I = t("514866"),
-  O = t("678639"),
-  A = t("351930"),
-  P = t("771751"),
-  B = t("596768"),
-  M = t("621060"),
-  F = t("689938"),
-  H = t("350802"),
-  U = t("893048");
+}), r("653041"), r("47120");
+var a = r("735250"),
+  i = r("470079"),
+  l = r("120356"),
+  n = r.n(l),
+  o = r("990547"),
+  s = r("442837"),
+  c = r("481060"),
+  d = r("347469"),
+  u = r("213609"),
+  h = r("906467"),
+  m = r("259580"),
+  p = r("465670"),
+  g = r("54017"),
+  f = r("502568"),
+  b = r("31336"),
+  y = r("19759"),
+  x = r("432877");
+r("381996");
+var k = r("392750"),
+  v = r("926976"),
+  j = r("592197"),
+  C = r("860337"),
+  w = r("789654"),
+  S = r("691867"),
+  T = r("916790"),
+  N = r("912072"),
+  L = r("246992"),
+  E = r("442954"),
+  _ = r("702904"),
+  R = r("248526"),
+  D = r("958328"),
+  I = r("514866"),
+  O = r("678639"),
+  A = r("351930"),
+  P = r("771751"),
+  B = r("596768"),
+  M = r("621060"),
+  F = r("689938"),
+  H = r("350802"),
+  U = r("893048");
 
-function z(e) {
+function G(e) {
   let {
-    resizableNode: r,
-    onResize: t,
+    resizableNode: t,
+    onResize: r,
     onResizeEnd: i
   } = e, l = (0, d.default)({
     minDimension: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
-    resizableDomNodeRef: r,
-    onElementResize: t,
+    resizableDomNodeRef: t,
+    onElementResize: r,
     onElementResizeEnd: i,
     orientation: d.ResizeOrientation.HORIZONTAL_LEFT
   });
@@ -63,9 +63,9 @@ function z(e) {
   })
 }
 
-function G() {
+function z() {
   var e;
-  let r = i.useMemo(() => {
+  let t = i.useMemo(() => {
       let e = [{
         id: "analytics",
         name: "Analytics",
@@ -81,7 +81,7 @@ function G() {
       }, {
         id: "dispatcher",
         name: "Dispatcher",
-        render: () => (0, a.jsx)(N.default, {})
+        render: () => (0, a.jsx)(T.default, {})
       }];
       return h.default.isDeveloper && (e.push({
         id: "quick_actions",
@@ -106,13 +106,13 @@ function G() {
       }), e.push({
         id: "overlays",
         name: "Dev Overlays",
-        render: () => (0, a.jsx)(T.default, {
+        render: () => (0, a.jsx)(N.default, {
           devSettingsCategory: x.DevSettingsCategory.OVERLAYS
         })
       }), e.push({
         id: "messaging",
         name: "Messaging",
-        render: () => (0, a.jsx)(T.default, {
+        render: () => (0, a.jsx)(N.default, {
           devSettingsCategory: x.DevSettingsCategory.MESSAGING
         })
       }), e.push({
@@ -146,18 +146,18 @@ function G() {
       })), e
     }, []),
     {
-      TabBar: t,
+      TabBar: r,
       renderSelectedTab: l,
       selectedTabId: n
     } = (0, M.default)({
-      tabs: r,
+      tabs: t,
       initialSelectedTabId: null !== (e = y.default.lastOpenTabId) && void 0 !== e ? e : void 0,
       onChangeTab: e => {
         (0, b.updateDevToolsSettings)({
           lastOpenTabId: e
         })
       }
-    }, [r]);
+    }, [t]);
   return (0, u.default)({
     type: o.ImpressionTypes.PANE,
     name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
@@ -178,7 +178,7 @@ function G() {
       }), (0, a.jsx)(f.default.Title, {
         children: "DevTools"
       })]
-    }), (0, a.jsx)(t, {}), l(), (0, a.jsx)(L.DevToolsLayerContainer, {
+    }), (0, a.jsx)(r, {}), l(), (0, a.jsx)(L.DevToolsLayerContainer, {
       className: H.layerContainer
     })]
   })
@@ -186,42 +186,42 @@ function G() {
 
 function V() {
   let e = i.useRef(null),
-    r = (0, c.useStateFromStores)([y.default], () => y.default.sidebarWidth),
-    [t, l] = i.useState(null),
+    t = (0, s.useStateFromStores)([y.default], () => y.default.sidebarWidth),
+    [r, l] = i.useState(null),
     o = i.useCallback(e => (0, b.updateDevToolsSettings)({
       sidebarWidth: e
     }), []);
   return (i.useEffect(() => {
-    null === t && null !== r && l(r)
-  }, [r, t]), null === t) ? null : (0, a.jsxs)("div", {
+    null === r && null !== t && l(t)
+  }, [t, r]), null === r) ? null : (0, a.jsxs)("div", {
     ref: e,
     className: n()(H.container),
     style: {
       minWidth: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
-      width: t
+      width: r
     },
-    children: [(0, a.jsx)(z, {
+    children: [(0, a.jsx)(G, {
       resizableNode: e,
       onResize: l,
       onResizeEnd: o
     }), (0, a.jsx)("div", {
       className: H.sidebarContent,
-      children: (0, a.jsx)(G, {})
+      children: (0, a.jsx)(z, {})
     })]
   })
 }
 
 function W() {
-  let e = (0, c.useStateFromStores)([y.default], () => y.default.displayTools);
+  let e = (0, s.useStateFromStores)([y.default], () => y.default.displayTools);
   return e ? (0, a.jsx)("div", {
     className: n()(H.container, H.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
       className: H.sidebarContent,
-      children: (0, a.jsx)(G, {})
+      children: (0, a.jsx)(z, {})
     })
   }) : (0, a.jsx)("div", {
     className: H.container,
-    children: (0, a.jsx)(s.Clickable, {
+    children: (0, a.jsx)(c.Clickable, {
       onClick: b.toggleDisplayDevTools,
       children: (0, a.jsxs)(f.default, {
         className: n()(U.headerBar, H.mobileHeaderCollapsed),
@@ -241,7 +241,7 @@ function W() {
 
 function K(e) {
   let {
-    mobile: r
+    mobile: t
   } = e;
-  return r ? (0, a.jsx)(W, {}) : (0, a.jsx)(V, {})
+  return t ? (0, a.jsx)(W, {}) : (0, a.jsx)(V, {})
 }

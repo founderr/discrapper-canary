@@ -27,7 +27,7 @@ var l, a = n("735250"),
   R = n("981631"),
   M = n("565710");
 
-function y(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -35,7 +35,7 @@ function y(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let O = {
+let y = {
   friction: 28,
   tension: 600
 };
@@ -45,11 +45,11 @@ function D(e) {
     case "height":
     case "opacity":
       return {
-        duration: 150, ...O
+        duration: 150, ...y
       };
     case "scale":
       return {
-        ...O
+        ...y
       };
     default:
       throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)))
@@ -187,7 +187,7 @@ class b extends(l = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), y(this, "state", {
+    super(...e), O(this, "state", {
       hovered: !1,
       animating: !0,
       controller: new i.Controller({
@@ -196,7 +196,7 @@ class b extends(l = s.PureComponent) {
         opacity: 0,
         config: D
       })
-    }), y(this, "handleContextMenu", e => {
+    }), O(this, "handleContextMenu", e => {
       let {
         channel: t
       } = this.props, l = t.type === R.ChannelTypes.DM ? S.default.getUser(t.getRecipientId()) : null;
@@ -222,7 +222,7 @@ class b extends(l = s.PureComponent) {
     })
   }
 }
-y(b, "defaultProps", {
+O(b, "defaultProps", {
   badge: 0,
   audio: !1,
   video: !1,

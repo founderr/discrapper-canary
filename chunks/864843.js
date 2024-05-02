@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   r = n("470079"),
-  i = n("481060"),
-  s = n("355467"),
+  s = n("481060"),
+  i = n("355467"),
   l = n("887706"),
   o = n("270144"),
   c = n("171246"),
@@ -21,10 +21,10 @@ function m(e) {
   } = e, n = (0, c.isApplicationGuildSubscription)(t.sku_flags);
   return (0, c.isApplicationUserSubscription)(t.sku_flags) || n ? (0, a.jsxs)("div", {
     className: f.cta,
-    children: [(0, a.jsx)(i.Heading, {
+    children: [(0, a.jsx)(s.Heading, {
       variant: "heading-lg/bold",
       children: n ? u.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_HEADER : u.default.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_HEADER
-    }), (0, a.jsx)(i.Heading, {
+    }), (0, a.jsx)(s.Heading, {
       color: "interactive-normal",
       variant: "heading-md/normal",
       children: n ? u.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS : u.default.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_DETAILS.format({
@@ -42,9 +42,9 @@ function h(e) {
     applicationPrimarySkuId: u,
     analyticsLocation: h,
     onComplete: p,
-    forcesTransitionToGuild: T
+    forcesTransitionToGuild: E
   } = e, {
-    listingsLoaded: E
+    listingsLoaded: T
   } = (0, o.useFetchListingsForApplication)(c, u), {
     entitlementsLoaded: C
   } = (0, o.useFetchEntitlementsForGuild)({
@@ -53,11 +53,11 @@ function h(e) {
     subscriptionGroupListing: _
   } = (0, o.useActiveSubscriptionListingForApplication)(c, n), g = (0, l.default)();
   r.useEffect(() => {
-    g && s.fetchSubscriptions()
+    g && i.fetchSubscriptions()
   }, [g]);
   let x = null == _ ? void 0 : _.id,
     I = null == _ ? void 0 : null === (t = _.subscription_listings) || void 0 === t ? void 0 : t.filter(e => e.published);
-  return E && (null == n || C) ? null == x || null == I || 0 === I.length ? null : (0, a.jsx)("div", {
+  return T && (null == n || C) ? null == x || null == I || 0 === I.length ? null : (0, a.jsx)("div", {
     className: f.container,
     children: I.map(e => (0, a.jsxs)(r.Fragment, {
       children: [(0, a.jsx)(m, {
@@ -68,11 +68,11 @@ function h(e) {
         groupListingId: x,
         analyticsLocation: h,
         onComplete: p,
-        forcesTransitionToGuild: T
+        forcesTransitionToGuild: E
       })]
     }, e.id))
   }) : (0, a.jsx)("div", {
     className: f.loadingContainer,
-    children: (0, a.jsx)(i.Spinner, {})
+    children: (0, a.jsx)(s.Spinner, {})
   })
 }

@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var a, r, i, s, l = n("442837"),
+var a, r, s, i, l = n("442837"),
   o = n("570140");
 let c = {},
   d = null,
@@ -10,10 +10,10 @@ let c = {},
   h = null,
   p = null;
 
-function T() {
+function E() {
   m = !0
 }
-class E extends(a = l.default.Store) {
+class T extends(a = l.default.Store) {
   getAppliedGuildBoostsForGuild(e) {
     return null != c[e] ? c[e].subscriptions : null
   }
@@ -42,12 +42,12 @@ class E extends(a = l.default.Store) {
     return f
   }
 }
-s = "AppliedGuildBoostStore", (i = "displayName") in(r = E) ? Object.defineProperty(r, i, {
-  value: s,
+i = "AppliedGuildBoostStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[i] = s, t.default = new E(o.default, {
+}) : r[s] = i, t.default = new T(o.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
@@ -70,8 +70,8 @@ s = "AppliedGuildBoostStore", (i = "displayName") in(r = E) ? Object.definePrope
     } = e;
     d = t
   },
-  GUILD_UNAPPLY_BOOST_START: T,
-  GUILD_APPLY_BOOST_START: T,
+  GUILD_UNAPPLY_BOOST_START: E,
+  GUILD_APPLY_BOOST_START: E,
   GUILD_APPLY_BOOST_SUCCESS: function(e) {
     let {
       appliedGuildBoost: t

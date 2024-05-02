@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("470079"),
   r = n("399606"),
-  i = n("544891"),
-  s = n("570140"),
+  s = n("544891"),
+  i = n("570140"),
   l = n("367907"),
   o = n("430824"),
   c = n("496675"),
@@ -24,11 +24,11 @@ t.default = {
         var t;
         let n = Date.now(),
           a = null !== (t = p.get(e)) && void 0 !== t ? t : 0;
-        !(n < a + h) && (p.set(e, n), i.HTTP.post({
+        !(n < a + h) && (p.set(e, n), s.HTTP.post({
           url: m.Endpoints.GUILD_MIGRATE_COMMAND_SCOPE(e)
         }).then(t => {
           var n, a;
-          s.default.dispatch({
+          i.default.dispatch({
             type: "COMMANDS_MIGRATION_UPDATE_SUCCESS",
             guildId: e,
             integrationIdsWithAppCommands: null !== (a = null === (n = t.body) || void 0 === n ? void 0 : n.integration_ids_with_app_commands) && void 0 !== a ? a : []
@@ -42,14 +42,14 @@ t.default = {
     return t && n
   },
   dismissNotice(e) {
-    s.default.dispatch({
+    i.default.dispatch({
       type: "COMMANDS_MIGRATION_NOTICE_DISMISSED",
       guildId: e
     })
   },
   dismissOverviewTooltip(e, t) {
     var n;
-    s.default.dispatch({
+    i.default.dispatch({
       type: "COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED",
       guildId: e,
       integrationId: t.id
@@ -61,7 +61,7 @@ t.default = {
   },
   dismissToggleTooltip(e, t) {
     var n;
-    void 0 !== t && (s.default.dispatch({
+    void 0 !== t && (i.default.dispatch({
       type: "COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED",
       integrationId: t.id
     }), d.default.track(m.AnalyticEvents.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var r = n("900015"),
-  i = n("481060"),
-  s = n("231467"),
+  s = n("481060"),
+  i = n("231467"),
   l = n("689938"),
   o = n("599666");
 
@@ -25,14 +25,14 @@ function c(e) {
         height: 12,
         width: 12,
         className: o.tags
-      }), (0, a.jsx)(i.Text, {
+      }), (0, a.jsx)(s.Text, {
         variant: "text-xs/semibold",
         color: "text-muted",
         children: l.default.Messages.CLAN_SETUP_NUM_TRAITS.format({
           n: t.length
         })
       })]
-    }), (0, a.jsx)(s.ClanDiscoveryCardTraits, {
+    }), (0, a.jsx)(i.ClanDiscoveryCardTraits, {
       traits: t,
       traitsToHighlight: n,
       expanded: !0

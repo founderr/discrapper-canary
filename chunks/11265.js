@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   r = n("470079"),
-  i = n("120356"),
-  s = n.n(i),
+  s = n("120356"),
+  i = n.n(s),
   l = n("718017"),
   o = n("442837"),
   c = n("481060"),
@@ -15,20 +15,20 @@ t.default = r.memo(function(e) {
   let {
     renderHeader: t,
     children: n,
-    isExpanded: i,
+    isExpanded: s,
     isStuck: h,
     onExpand: p,
-    disableAnimation: T,
-    disableBackground: E
+    disableAnimation: E,
+    disableBackground: T
   } = e, C = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [_, g] = r.useState(!0), [x, I] = r.useState(!1), {
-    ref: v,
-    height: N = 0
+    ref: N,
+    height: v = 0
   } = (0, d.default)(), {
-    ref: S,
-    height: A = 0
-  } = (0, d.default)(), [L, b] = r.useState(i), R = (0, l.useSpring)({
-    height: L ? A + N : N,
-    immediate: _ || C || T,
+    ref: A,
+    height: S = 0
+  } = (0, d.default)(), [L, R] = r.useState(s), y = (0, l.useSpring)({
+    height: L ? S + v : v,
+    immediate: _ || C || E,
     config: {
       ...l.config.stiff,
       clamp: !0
@@ -41,32 +41,32 @@ t.default = r.memo(function(e) {
     }
   });
   return r.useLayoutEffect(() => {
-    I(!1), b(i)
-  }, [i]), r.useLayoutEffect(() => {
+    I(!1), R(s)
+  }, [s]), r.useLayoutEffect(() => {
     let e = setTimeout(() => {
       g(!1)
     }, 100);
     return () => clearTimeout(e)
   }, []), (0, a.jsx)(c.Clickable, {
-    className: s()(m.editCard, {
-      [m.toggled]: i,
-      [m.noBackground]: E
+    className: i()(m.editCard, {
+      [m.toggled]: s,
+      [m.noBackground]: T
     }),
     children: (0, a.jsxs)(l.animated.div, {
-      className: s()(m.contentExpandContainer, {
-        [m.showOverflow]: i && x
+      className: i()(m.contentExpandContainer, {
+        [m.showOverflow]: s && x
       }),
-      style: R,
+      style: y,
       children: [(0, a.jsx)(c.Clickable, {
-        innerRef: v,
+        innerRef: N,
         onClick: h ? void 0 : p,
-        className: s()(m.innerHeader, {
-          [m.toggled]: i && h
+        className: i()(m.innerHeader, {
+          [m.toggled]: s && h
         }),
         "aria-label": f.default.Messages.EXPAND,
         children: t
       }), (0, a.jsx)("div", {
-        ref: S,
+        ref: A,
         children: n
       })]
     })

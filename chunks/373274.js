@@ -33,8 +33,8 @@ var l, a = n("735250"),
   x = n("592125"),
   R = n("796974"),
   M = n("984933"),
-  y = n("914010"),
-  O = n("153124"),
+  O = n("914010"),
+  y = n("153124"),
   D = n("540126"),
   b = n("734307"),
   j = n("854444"),
@@ -247,7 +247,7 @@ class eo extends(l = s.PureComponent) {
       showNewUnreadsBar: n
     } = this.props;
     return (0, a.jsx)(s.Fragment, {
-      children: (0, a.jsx)(O.UID, {
+      children: (0, a.jsx)(y.UID, {
         children: l => (0, a.jsx)(d.HeadingLevel, {
           component: (0, a.jsx)(d.HiddenVisually, {
             children: (0, a.jsx)(d.H, {
@@ -712,7 +712,7 @@ let eu = e => {
     selectedVoiceChannelId: l
   } = e, i = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), {
     analyticsLocations: r
-  } = (0, C.default)(m.default.GUILD_CHANNEL_LIST), d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(n)), c = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(l)), f = (0, u.useStateFromStores)([y.default], () => y.default.getGuildId()), g = (0, N.useOptInEnabledForGuild)(t), E = s.useRef(null), _ = s.useCallback((e, t) => {
+  } = (0, C.default)(m.default.GUILD_CHANNEL_LIST), d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(n)), c = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(l)), f = (0, u.useStateFromStores)([O.default], () => O.default.getGuildId()), g = (0, N.useOptInEnabledForGuild)(t), E = s.useRef(null), _ = s.useCallback((e, t) => {
     let n = E.current;
     if (null != n) {
       if (el.ID_REGEX.test(t) || (0, ea.isStaticChannelRoute)(t)) n.scrollToChannel(t, !1, 2 * en.SCROLL_TO_SPACER, () => {

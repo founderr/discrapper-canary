@@ -30,8 +30,8 @@ var l, a = n("735250"),
   x = n("51596"),
   R = n("823385"),
   M = n("670512"),
-  y = n("981631"),
-  O = n("689938"),
+  O = n("981631"),
+  y = n("689938"),
   D = n("469979");
 
 function b(e, t, n) {
@@ -49,12 +49,12 @@ let j = {
     className: D.emptyState,
     children: [(0, a.jsx)("div", {
       className: D.emptyStateNote,
-      children: O.default.Messages.QUICKSWITCHER_EMPTY_TEXT
+      children: y.default.Messages.QUICKSWITCHER_EMPTY_TEXT
     }), (0, a.jsx)("div", {
       className: D.emptyStateCTA,
       children: (0, a.jsx)(d.Anchor, {
-        href: v.default.getArticleURL(y.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL),
-        children: O.default.Messages.QUICKSWITCHER_EMPTY_CTA
+        href: v.default.getArticleURL(O.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL),
+        children: y.default.Messages.QUICKSWITCHER_EMPTY_CTA
       })
     })]
   });
@@ -169,7 +169,7 @@ class k extends s.PureComponent {
     return (0, a.jsx)(d.FocusRing, {
       children: (0, a.jsx)("input", {
         className: D.input,
-        "aria-label": O.default.Messages.QUICK_SWITCHER,
+        "aria-label": y.default.Messages.QUICK_SWITCHER,
         ref: this.inputRef,
         type: "text",
         role: "combobox",
@@ -177,7 +177,7 @@ class k extends s.PureComponent {
         "aria-expanded": l,
         "aria-activedescendant": l ? this.getRowId(e) : void 0,
         "aria-autocomplete": "list",
-        placeholder: O.default.Messages.QUICKSWITCHER_PLACEHOLDER,
+        placeholder: y.default.Messages.QUICKSWITCHER_PLACEHOLDER,
         onChange: this.handleInputChange,
         onKeyDown: this.handleKeyDown,
         value: this.state.query,
@@ -198,7 +198,7 @@ class k extends s.PureComponent {
     return 0 === t.length && e.length > 0 ? (0, a.jsx)(P, {}) : 0 === t.length ? null : (0, a.jsx)(d.ListAuto, {
       innerId: this._listId,
       innerRole: "listbox",
-      "aria-label": O.default.Messages.QUICK_SWITCHER_RESULTS_LABEL,
+      "aria-label": y.default.Messages.QUICK_SWITCHER_RESULTS_LABEL,
       ref: this.scrollerRef,
       sectionHeight: 0,
       rowHeight: 34,
@@ -210,7 +210,7 @@ class k extends s.PureComponent {
     })
   }
   focusNode(e) {
-    L.ComponentDispatch.dispatch(y.ComponentActions.QUICKSWITCHER_RESULT_FOCUS, {
+    L.ComponentDispatch.dispatch(O.ComponentActions.QUICKSWITCHER_RESULT_FOCUS, {
       node: e
     })
   }
@@ -223,12 +223,12 @@ class k extends s.PureComponent {
         [D.hasContent]: this.state.query.length > 0
       }),
       type: N.default.Types.INLINE,
-      children: O.default.Messages.QUICKSWITCHER_PROTIP.format({
-        userSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.USER, O.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-        textChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.TEXT_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-        voiceChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.VOICE_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-        guildSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.GUILD, O.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
-        helpdeskArticle: v.default.getArticleURL(y.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL)
+      children: y.default.Messages.QUICKSWITCHER_PROTIP.format({
+        userSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.USER, y.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+        textChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.TEXT_CHANNEL, y.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+        voiceChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.VOICE_CHANNEL, y.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+        guildSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.GUILD, y.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+        helpdeskArticle: v.default.getArticleURL(O.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL)
       })
     })
   }
@@ -245,7 +245,7 @@ class k extends s.PureComponent {
   }
   render() {
     return (0, a.jsx)(d.ModalRoot, {
-      "aria-label": O.default.Messages.QUICK_SWITCHER,
+      "aria-label": y.default.Messages.QUICK_SWITCHER,
       size: d.ModalSize.DYNAMIC,
       transitionState: this.props.transitionState,
       className: r()(D.container, o.isMobile && D.mobileContainer),
@@ -298,10 +298,10 @@ class k extends s.PureComponent {
             s = E.default.getGuild(l.getGuildId());
           if (null == s) return;
           switch (l.type) {
-            case y.ChannelTypes.GUILD_TEXT:
-            case y.ChannelTypes.GUILD_ANNOUNCEMENT:
-            case y.ChannelTypes.GUILD_FORUM:
-            case y.ChannelTypes.GUILD_MEDIA:
+            case O.ChannelTypes.GUILD_TEXT:
+            case O.ChannelTypes.GUILD_ANNOUNCEMENT:
+            case O.ChannelTypes.GUILD_FORUM:
+            case O.ChannelTypes.GUILD_MEDIA:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -313,8 +313,8 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case y.ChannelTypes.GUILD_VOICE:
-            case y.ChannelTypes.GUILD_STAGE_VOICE:
+            case O.ChannelTypes.GUILD_VOICE:
+            case O.ChannelTypes.GUILD_STAGE_VOICE:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -326,9 +326,9 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case y.ChannelTypes.ANNOUNCEMENT_THREAD:
-            case y.ChannelTypes.PUBLIC_THREAD:
-            case y.ChannelTypes.PRIVATE_THREAD:
+            case O.ChannelTypes.ANNOUNCEMENT_THREAD:
+            case O.ChannelTypes.PUBLIC_THREAD:
+            case O.ChannelTypes.PRIVATE_THREAD:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -339,7 +339,7 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case y.ChannelTypes.GUILD_STORE:
+            case O.ChannelTypes.GUILD_STORE:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -351,7 +351,7 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case y.ChannelTypes.GUILD_DIRECTORY:
+            case O.ChannelTypes.GUILD_DIRECTORY:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e

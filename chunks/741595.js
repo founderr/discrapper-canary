@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   r = n("470079"),
-  i = n("120356"),
-  s = n.n(i),
+  s = n("120356"),
+  i = n.n(s),
   l = n("481060"),
   o = n("441674"),
   c = n("308083"),
@@ -12,7 +12,7 @@ t.default = e => {
   let {
     title: t,
     description: n,
-    handleUpdate: i,
+    handleUpdate: s,
     playstyle: u,
     error: f
   } = e, m = (0, l.useToken)(l.tokens.colors.WHITE), h = r.useMemo(() => Object.values((0, c.getPlaystyleOptions)()), []);
@@ -35,10 +35,10 @@ t.default = e => {
     }), (0, a.jsx)("div", {
       className: d.playstyleSelect,
       children: h.map(e => (0, a.jsxs)(l.Clickable, {
-        className: s()(d.playstyleOption, {
+        className: i()(d.playstyleOption, {
           [d.selectedPlaystyle]: e.type === u
         }),
-        onClick: () => i(e.type),
+        onClick: () => s(e.type),
         children: [(0, a.jsx)(l.Heading, {
           variant: "heading-xxl/medium",
           children: e.emoji

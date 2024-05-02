@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   r = n("470079"),
-  i = n("120356"),
-  s = n.n(i),
+  s = n("120356"),
+  i = n.n(s),
   l = n("481060"),
   o = n("729285"),
   c = n("87576"),
@@ -18,8 +18,8 @@ t.default = e => {
   let {
     handleUpdate: t,
     interests: n,
-    error: i
-  } = e, [h, p] = r.useState(""), T = r.useMemo(() => Array.from(n), [n]), E = r.useMemo(() => T.filter(m), [T]), C = r.useMemo(() => [...d.SUGGESTED_TRAITS_SET, ...E], [E]), _ = r.useMemo(() => T.filter(e => !d.ALL_TRAITS_SET.has(e) && !d.LANGUAGES_SET.has(e)), [T]), g = e => {
+    error: s
+  } = e, [h, p] = r.useState(""), E = r.useMemo(() => Array.from(n), [n]), T = r.useMemo(() => E.filter(m), [E]), C = r.useMemo(() => [...d.SUGGESTED_TRAITS_SET, ...T], [T]), _ = r.useMemo(() => E.filter(e => !d.ALL_TRAITS_SET.has(e) && !d.LANGUAGES_SET.has(e)), [E]), g = e => {
     let a = new Set(n);
     a.delete(e), t({
       interests: a
@@ -50,11 +50,11 @@ t.default = e => {
       color: "header-secondary",
       className: f.subtitle,
       children: u.default.Messages.CLAN_SETUP_INTERESTS_SUBTITLE
-    }), null != i && (0, a.jsx)(l.Text, {
+    }), null != s && (0, a.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
       className: f.errorText,
-      children: i
+      children: s
     }), (0, a.jsxs)("div", {
       className: f.content,
       children: [(0, a.jsxs)("div", {
@@ -71,7 +71,7 @@ t.default = e => {
             disabled: n.size === d.MAX_NUM_INTERESTS
           }), h.length > 0 && (0, a.jsx)(l.Clickable, {
             onClick: () => x(h.trim()),
-            className: s()(f.plusIcon, f.clickable),
+            className: i()(f.plusIcon, f.clickable),
             children: (0, a.jsx)(o.default, {
               className: f.icon
             })
@@ -91,7 +91,7 @@ t.default = e => {
           children: C.map(e => {
             let t = n.has(e);
             return (0, a.jsx)(l.Clickable, {
-              className: s()(f.interestsTag, {
+              className: i()(f.interestsTag, {
                 [f.selected]: t
               }),
               onClick: () => t ? g(e) : x(e),
@@ -105,8 +105,8 @@ t.default = e => {
         })]
       }), (0, a.jsx)("div", {
         className: f.fixedWidthSidebar,
-        children: T.length > 0 && (0, a.jsx)(c.default, {
-          traits: T,
+        children: E.length > 0 && (0, a.jsx)(c.default, {
+          traits: E,
           traitsToHighlight: _
         })
       })]

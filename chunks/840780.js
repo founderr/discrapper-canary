@@ -27,8 +27,8 @@ var l = n("735250"),
   x = n("933557"),
   R = n("311352"),
   M = n("730417"),
-  y = n("524347"),
-  O = n("853197"),
+  O = n("524347"),
+  y = n("853197"),
   D = n("616360"),
   b = n("858064"),
   j = n("594190"),
@@ -96,7 +96,7 @@ let eM = (0, g.default)(function(e) {
     children: t
   })
 });
-class ey extends a.PureComponent {
+class eO extends a.PureComponent {
   componentDidUpdate(e) {
     !e.dropsActivityPanelExperienceBlocked && this.props.dropsActivityPanelExperienceBlocked && this.setState({
       isDropsActivityPanelTooltipOpen: !1
@@ -446,7 +446,7 @@ class ey extends a.PureComponent {
         userId: n
       } = this.props;
       if (null == e) return;
-      let l = (0, O.getDrop)(e);
+      let l = (0, y.getDrop)(e);
       null != l && (e_.default.track(eT.AnalyticEvents.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
         user_id: n,
         drops_quest_id: l.dropsQuestId,
@@ -483,7 +483,7 @@ t.default = (0, E.default)(function(e) {
   let {
     guildId: n,
     ...a
-  } = e, s = (0, u.useStateFromStores)([W.default], () => W.default.getId()), i = (0, u.useStateFromStores)([j.default, el.default], () => (0, B.default)(j.default, el.default)), r = (0, u.useStateFromStores)([ee.default, z.default], () => z.default.getChannel(ee.default.getVoiceChannelId())), o = (0, u.useStateFromStores)([I.default], () => I.default.getConnectedActivityChannelId()), c = (0, u.useStateFromStores)([z.default], () => z.default.getChannel(o)), f = (0, u.useStateFromStores)([X.default], () => X.default.getGuild(null == c ? void 0 : c.guild_id)), [h, p] = (0, u.useStateFromStoresArray)([K.default], () => [K.default.getCurrentUserActiveStream(), K.default.getStreamerActiveStreamMetadata()]), m = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), C = (0, u.useStateFromStores)([y.default], () => y.default.getActivityPanelTooltipAction()), {
+  } = e, s = (0, u.useStateFromStores)([W.default], () => W.default.getId()), i = (0, u.useStateFromStores)([j.default, el.default], () => (0, B.default)(j.default, el.default)), r = (0, u.useStateFromStores)([ee.default, z.default], () => z.default.getChannel(ee.default.getVoiceChannelId())), o = (0, u.useStateFromStores)([I.default], () => I.default.getConnectedActivityChannelId()), c = (0, u.useStateFromStores)([z.default], () => z.default.getChannel(o)), f = (0, u.useStateFromStores)([X.default], () => X.default.getGuild(null == c ? void 0 : c.guild_id)), [h, p] = (0, u.useStateFromStoresArray)([K.default], () => [K.default.getCurrentUserActiveStream(), K.default.getStreamerActiveStreamMetadata()]), m = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), C = (0, u.useStateFromStores)([O.default], () => O.default.getActivityPanelTooltipAction()), {
     partnerGame: g,
     dropsActivityPanelExperienceBlocked: E,
     showDropsSparkles: S
@@ -491,12 +491,12 @@ t.default = (0, E.default)(function(e) {
     if (null != p && null != p.id) return p.id;
     if (null != i && null != i.id) return i.id;
     if (null != N) return N.applicationId
-  }()) && void 0 !== t ? t : ""]), R = (0, u.useStateFromStores)([Q.default], () => (0, U.default)(Q.default) && (0, eS.isWindows)()), O = (0, u.useStateFromStores)([J.default], () => null != s ? J.default.findActivity(s, e => e.type === eT.ActivityTypes.PLAYING) : null), D = null != h && h.ownerId === s && h.state !== eT.ApplicationStreamStates.ENDED, b = (0, u.useStateFromStores)([et.default], () => et.default.getBroadcast()), P = (0, L.default)() && null != i, w = (0, u.useStateFromStores)([en.default, $.default], () => null != c ? (0, x.computeChannelName)(c, en.default, $.default) : void 0), F = (0, H.default)(null == r ? void 0 : r.id, s);
-  return (0, l.jsx)(ey, {
+  }()) && void 0 !== t ? t : ""]), R = (0, u.useStateFromStores)([Q.default], () => (0, U.default)(Q.default) && (0, eS.isWindows)()), y = (0, u.useStateFromStores)([J.default], () => null != s ? J.default.findActivity(s, e => e.type === eT.ActivityTypes.PLAYING) : null), D = null != h && h.ownerId === s && h.state !== eT.ApplicationStreamStates.ENDED, b = (0, u.useStateFromStores)([et.default], () => et.default.getBroadcast()), P = (0, L.default)() && null != i, w = (0, u.useStateFromStores)([en.default, $.default], () => null != c ? (0, x.computeChannelName)(c, en.default, $.default) : void 0), F = (0, H.default)(null == r ? void 0 : r.id, s);
+  return (0, l.jsx)(eO, {
     ...a,
     guildId: n,
     canGoLive: R,
-    activity: O,
+    activity: y,
     embeddedActivity: N,
     showDropsSparkles: S,
     dropsPartnerGame: g,

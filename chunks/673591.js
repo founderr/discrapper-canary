@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var r = n("120356"),
-  i = n.n(r),
-  s = n("354676"),
+  s = n.n(r),
+  i = n("354676"),
   l = n("936476");
 
 function o(e) {
@@ -17,19 +17,19 @@ function o(e) {
     className: n
   } = e;
   return (0, a.jsxs)("div", {
-    className: i()(l.badgeContainer, n),
+    className: s()(l.badgeContainer, n),
     children: [(0, a.jsx)("div", {
       className: l.newBadge,
       children: t
     }), (0, a.jsx)("span", {
-      className: i()(l.star, l.starLeft),
-      children: (0, a.jsx)(s.default, {
+      className: s()(l.star, l.starLeft),
+      children: (0, a.jsx)(i.default, {
         width: "10",
         height: "10"
       })
     }), (0, a.jsx)("span", {
-      className: i()(l.star, l.starRight),
-      children: (0, a.jsx)(s.default, {
+      className: s()(l.star, l.starRight),
+      children: (0, a.jsx)(i.default, {
         width: "13",
         height: "13"
       })

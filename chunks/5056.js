@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   r = n("470079"),
-  i = n("120356"),
-  s = n.n(i),
+  s = n("120356"),
+  i = n.n(s),
   l = n("481060"),
   o = n("282597"),
   c = n("877715"),
@@ -14,7 +14,7 @@ var a = n("735250"),
   h = n("689938"),
   p = n("915580");
 
-function T(e) {
+function E(e) {
   let {
     onClick: t,
     text: n,
@@ -39,13 +39,13 @@ function T(e) {
 t.default = function(e) {
   let {
     addFormField: t,
-    showManualApprovalWarning: i,
-    guild: E,
+    showManualApprovalWarning: s,
+    guild: T,
     showHeader: C
   } = e, _ = r.useCallback(e => {
-    (0, m.openEmptyFormFieldModal)(e, t, E)
-  }, [t, E]), g = r.useCallback(e => {
-    i ? (0, l.openModalLazy)(async () => {
+    (0, m.openEmptyFormFieldModal)(e, t, T)
+  }, [t, T]), g = r.useCallback(e => {
+    s ? (0, l.openModalLazy)(async () => {
       let {
         default: t
       } = await Promise.all([n.e("99387"), n.e("54845")]).then(n.bind(n, "199836"));
@@ -54,9 +54,9 @@ t.default = function(e) {
         onSubmit: () => _(e)
       })
     }) : _(e)
-  }, [i, _]);
+  }, [s, _]);
   return (0, a.jsxs)("div", {
-    className: s()(p.spacingContainer, p.backgroundContainer),
+    className: i()(p.spacingContainer, p.backgroundContainer),
     children: [C && (0, a.jsx)("div", {
       className: p.containerTopHat,
       children: (0, a.jsx)(l.Text, {
@@ -83,19 +83,19 @@ t.default = function(e) {
           className: p.leftRailIconContainerDescription,
           type: l.FormText.Types.DESCRIPTION,
           children: h.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS_DESCRIPTION
-        }), (0, a.jsx)(T, {
+        }), (0, a.jsx)(E, {
           formFieldType: f.VerificationFormFieldTypes.TEXT_INPUT,
           addFormField: t,
           icon: u.default,
           text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
           onClick: () => g(f.VerificationFormFieldTypes.TEXT_INPUT)
-        }), (0, a.jsx)(T, {
+        }), (0, a.jsx)(E, {
           formFieldType: f.VerificationFormFieldTypes.PARAGRAPH,
           addFormField: t,
           icon: c.default,
           text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
           onClick: () => g(f.VerificationFormFieldTypes.PARAGRAPH)
-        }), (0, a.jsx)(T, {
+        }), (0, a.jsx)(E, {
           formFieldType: f.VerificationFormFieldTypes.MULTIPLE_CHOICE,
           addFormField: t,
           icon: o.default,

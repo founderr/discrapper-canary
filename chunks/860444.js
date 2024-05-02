@@ -1,12 +1,12 @@
 "use strict";
-t.r(r);
-var a = t("319301");
+r.r(t);
+var a = r("319301");
 let i = {
   figma: {
     ignore: !0
   }
 };
-r.default = (0, a.defineColorTokens)({
+t.default = (0, a.defineColorTokens)({
   "profile-gradient-overlay-synced-with-user-theme": {
     dark: {
       color: "black.500",

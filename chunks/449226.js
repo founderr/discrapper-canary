@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var r = n("120356"),
-  i = n.n(r),
-  s = n("481060"),
+  s = n.n(r),
+  i = n("481060"),
   l = n("875058");
 
 function o(e) {
@@ -21,13 +21,13 @@ function o(e) {
   } = e, d = e => {
     e.stopPropagation(), e.preventDefault()
   };
-  return (0, a.jsx)(s.Clickable, {
+  return (0, a.jsx)(i.Clickable, {
     onClick: d,
     onMouseDown: d,
     onMouseUp: d,
-    className: i()(l.switch, o),
+    className: s()(l.switch, o),
     ...c,
-    children: (0, a.jsx)(s.Switch, {
+    children: (0, a.jsx)(i.Switch, {
       checked: t,
       onChange: n,
       disabled: r

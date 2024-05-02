@@ -39,8 +39,8 @@ function x(e) {
     mentionCount: x = 0,
     unread: R = !1,
     defaultFolderName: M,
-    useCircleMask: y = !1,
-    draggable: O = !1,
+    useCircleMask: O = !1,
+    draggable: y = !1,
     sorting: D = !1,
     onDragStart: b,
     onDragEnd: j,
@@ -100,7 +100,7 @@ function x(e) {
       selected: s,
       disableWrapper: !0,
       children: (0, l.jsx)("div", {
-        ref: O ? Z : void 0,
+        ref: y ? Z : void 0,
         className: i()({
           [T.wobble]: !z && Y && !d
         }),
@@ -108,7 +108,7 @@ function x(e) {
         children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(C.default, {
           folderNode: t,
           expanded: d,
-          forceCircular: y,
+          forceCircular: O,
           sorting: D,
           mediaState: p,
           mentionCount: x,
@@ -122,7 +122,7 @@ function x(e) {
           folderIconContent: w
         })
       })
-    }), O ? (0, l.jsx)(g.default, {
+    }), y ? (0, l.jsx)(g.default, {
       name: q,
       targetNode: t,
       onDragOverChanged: X
@@ -149,7 +149,7 @@ function x(e) {
         role: "group",
         children: V.map(U)
       }, a)
-    }), O && d ? (0, l.jsx)(g.FolderEndDropTarget, {
+    }), y && d ? (0, l.jsx)(g.FolderEndDropTarget, {
       name: q,
       targetNode: t
     }) : null]

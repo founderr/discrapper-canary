@@ -27,14 +27,14 @@ var l = n("735250"),
   x = n("252686"),
   R = n("682662"),
   M = n("674552"),
-  y = n("981631"),
-  O = n("689938"),
+  O = n("981631"),
+  y = n("689938"),
   D = n("263");
 let b = {
   analyticsSource: {
-    page: y.AnalyticsPages.GUILD_CHANNEL,
-    section: y.AnalyticsSections.CHANNEL_LIST,
-    object: y.AnalyticsObjects.CHANNEL
+    page: O.AnalyticsPages.GUILD_CHANNEL,
+    section: O.AnalyticsSections.CHANNEL_LIST,
+    object: O.AnalyticsObjects.CHANNEL
   }
 };
 
@@ -94,7 +94,7 @@ t.default = a.memo(function(e) {
         dragging: e.isDragging()
       })
     }),
-    ei = (0, o.useTreeItem)(null != $ ? $ : y.EMPTY_STRING_SNOWFLAKE_ID),
+    ei = (0, o.useTreeItem)(null != $ ? $ : O.EMPTY_STRING_SNOWFLAKE_ID),
     [er, eo] = a.useState(!1),
     eu = !Q && er,
     [ed, ec] = a.useState(!1),
@@ -148,7 +148,7 @@ t.default = a.memo(function(e) {
         ef || ec(!1)
       }
     }) : (0, l.jsx)(N.default, {
-      ariaLabel: O.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
+      ariaLabel: y.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
         guildName: V.toString(),
         mentions: z
       }),

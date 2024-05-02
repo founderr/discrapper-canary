@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var r = n("442837"),
-  i = n("481060"),
-  s = n("863249"),
+  s = n("481060"),
+  i = n("863249"),
   l = n("944163"),
   o = n("616230"),
   c = n("430824"),
@@ -20,11 +20,11 @@ t.default = e => {
   });
   return null == n ? null : (0, a.jsxs)("div", {
     className: f.slideContent,
-    children: [(0, a.jsx)(i.Heading, {
+    children: [(0, a.jsx)(s.Heading, {
       variant: "heading-xxl/medium",
       className: f.title,
       children: u.default.Messages.CLAN_SETUP_APPLICATION_TITLE
-    }), (0, a.jsx)(i.Text, {
+    }), (0, a.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: f.subtitle,
@@ -33,8 +33,8 @@ t.default = e => {
       children: (0, a.jsx)(o.default, {
         guild: n,
         isClanContext: !0,
-        onFieldsSave: (e, t) => (s.default.updateVerificationFormFieldsLocal(e, t), Promise.resolve()),
-        onDescriptionSave: (e, t) => (s.default.updateVerificationFormDescriptionLocal(e, t), Promise.resolve()),
+        onFieldsSave: (e, t) => (i.default.updateVerificationFormFieldsLocal(e, t), Promise.resolve()),
+        onDescriptionSave: (e, t) => (i.default.updateVerificationFormDescriptionLocal(e, t), Promise.resolve()),
         verificationForm: m
       })
     })]

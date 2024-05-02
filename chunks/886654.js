@@ -2,16 +2,16 @@
 n.r(t);
 var a = n("735250"),
   r = n("470079"),
-  i = n("673591");
+  s = n("673591");
 t.default = e => {
   let {
     copy: t,
     isSelected: n = !1,
-    onSelect: s
+    onSelect: i
   } = e;
   return r.useEffect(() => {
-    n && (null == s || s())
-  }, [n, s]), (0, a.jsx)(i.default, {
+    n && (null == i || i())
+  }, [n, i]), (0, a.jsx)(s.default, {
     copy: t
   })
 }

@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   r = n("470079"),
-  i = n("120356"),
-  s = n.n(i),
+  s = n("120356"),
+  i = n.n(s),
   l = n("481060"),
   o = n("90062"),
   c = n("964309"),
@@ -16,7 +16,7 @@ let p = e => {
   let {
     title: t,
     icon: n,
-    traits: i,
+    traits: s,
     interests: o,
     handleUpdate: c
   } = e, d = r.useCallback(e => {
@@ -35,10 +35,10 @@ let p = e => {
       children: t
     }), (0, a.jsx)("div", {
       className: h.interestsCategory,
-      children: i.map(e => {
+      children: s.map(e => {
         let t = o.has(e);
         return (0, a.jsxs)(l.Clickable, {
-          className: s()(h.interestsTag, {
+          className: i()(h.interestsTag, {
             [h.selected]: t
           }),
           onClick: () => t ? d(e) : u(e),
@@ -58,16 +58,16 @@ t.default = e => {
   let {
     title: t,
     description: n,
-    handleUpdate: i,
-    interests: s,
-    requiredGameId: T
-  } = e, E = r.useMemo(() => m.default.getAvailableLocales().map(e => ({
+    handleUpdate: s,
+    interests: i,
+    requiredGameId: E
+  } = e, T = r.useMemo(() => m.default.getAvailableLocales().map(e => ({
     value: e.value,
     label: e.localizedName
-  })), []), C = r.useMemo(() => Array.from(s), [s]), _ = r.useMemo(() => C.filter(e => f.LANGUAGES_SET.has(e)), [C]), g = r.useCallback(e => {
+  })), []), C = r.useMemo(() => Array.from(i), [i]), _ = r.useMemo(() => C.filter(e => f.LANGUAGES_SET.has(e)), [C]), g = r.useCallback(e => {
     let t = C.filter(e => !f.LANGUAGES_SET.has(e));
-    i(new Set([...t, ...e]))
-  }, [i, C]), x = r.useMemo(() => C.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [C]);
+    s(new Set([...t, ...e]))
+  }, [s, C]), x = r.useMemo(() => C.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [C]);
   return (0, a.jsxs)("div", {
     className: h.slideContentWithSidebar,
     children: [(0, a.jsx)(l.Heading, {
@@ -83,24 +83,24 @@ t.default = e => {
       className: h.content,
       children: [(0, a.jsxs)("div", {
         className: h.mainPanelContainer,
-        children: [T === f.VALORANT_ID && (0, a.jsx)(p, {
+        children: [E === f.VALORANT_ID && (0, a.jsx)(p, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
           icon: d.default,
           traits: f.VALORANT_TRAITS,
-          interests: s,
-          handleUpdate: i
+          interests: i,
+          handleUpdate: s
         }), (0, a.jsx)(p, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
           icon: o.default,
           traits: f.AGE_TRAITS,
-          interests: s,
-          handleUpdate: i
+          interests: i,
+          handleUpdate: s
         }), (0, a.jsx)(p, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
           icon: c.default,
           traits: f.IDENTITY_TRAITS,
-          interests: s,
-          handleUpdate: i
+          interests: i,
+          handleUpdate: s
         }), (0, a.jsx)(l.Text, {
           className: h.interestsCategoryTitle,
           variant: "text-xs/semibold",
@@ -110,7 +110,7 @@ t.default = e => {
           className: h.languageSelect,
           children: (0, a.jsx)(l.SearchableSelect, {
             wrapperClassName: h.input,
-            options: E,
+            options: T,
             value: _,
             onChange: g,
             placeholder: m.default.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,

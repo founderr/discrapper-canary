@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Application: function() {
-    return O
+    return y
   },
   Channel: function() {
     return R
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return b
   },
   User: function() {
-    return y
+    return O
   }
 }), n("47120");
 var l, a = n("735250"),
@@ -382,7 +382,7 @@ class M extends s.Component {
     })
   }
 }
-class y extends s.Component {
+class O extends s.Component {
   renderIcon() {
     let {
       user: e
@@ -474,7 +474,7 @@ class y extends s.Component {
     })
   }
 }
-class O extends s.Component {
+class y extends s.Component {
   renderContent() {
     let {
       children: e,

@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   r = n("470079"),
-  i = n("120356"),
-  s = n.n(i),
+  s = n("120356"),
+  i = n.n(s),
   l = n("183249"),
   o = n("481060"),
   c = n("442837"),
@@ -15,11 +15,11 @@ t.default = function(e) {
   let {
     applicationId: t,
     imageContainerClassName: n,
-    onClick: i,
+    onClick: s,
     selected: h
   } = e, p = (0, o.useToken)(o.tokens.colors.WHITE), {
-    isFetching: T,
-    coverImageUrl: E
+    isFetching: E,
+    coverImageUrl: T
   } = (0, d.useDetectableGameSupplementalData)(t, {
     coverImageHeight: 336,
     coverImageWidth: 252
@@ -27,8 +27,8 @@ t.default = function(e) {
     var e, n;
     return null !== (n = null === (e = u.default.getGameById(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : ""
   }), _ = r.useCallback(() => {
-    null == i || i(t)
-  }, [t, i]), g = r.useMemo(() => T ? null : null == E ? (0, a.jsx)("div", {
+    null == s || s(t)
+  }, [t, s]), g = r.useMemo(() => E ? null : null == T ? (0, a.jsx)("div", {
     className: m.gameUnknownImage,
     children: (0, a.jsx)(l.UnknownGameIcon, {
       height: 32,
@@ -37,13 +37,13 @@ t.default = function(e) {
   }) : (0, a.jsx)("img", {
     className: m.gameImage,
     alt: C,
-    src: E
-  }), [E, T, C]);
+    src: T
+  }), [T, E, C]);
   return (0, a.jsxs)("div", {
     className: m.selectedGame,
     children: [(0, a.jsxs)(o.Clickable, {
       onClick: _,
-      className: s()(n, T ? m.gameImageLoading : void 0, m.gameImageBackground),
+      className: i()(n, E ? m.gameImageLoading : void 0, m.gameImageBackground),
       children: [h && (0, a.jsx)("div", {
         className: m.checkBackground,
         children: (0, a.jsx)(f.default, {

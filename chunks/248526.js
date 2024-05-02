@@ -1,19 +1,19 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return g
   }
-}), t("47120");
-var a = t("735250"),
-  i = t("470079"),
-  l = t("848246"),
-  n = t("442837"),
-  o = t("481060"),
-  c = t("570140"),
-  s = t("485731"),
-  d = t("594174"),
-  u = t("246992"),
-  h = t("297175");
+}), r("47120");
+var a = r("735250"),
+  i = r("470079"),
+  l = r("848246"),
+  n = r("442837"),
+  o = r("481060"),
+  s = r("570140"),
+  c = r("485731"),
+  d = r("594174"),
+  u = r("246992"),
+  h = r("297175");
 let m = [{
     label: "No Override",
     value: !1
@@ -31,7 +31,7 @@ let m = [{
 
 function g() {
   let e = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
-    [r, t] = i.useState(!1),
+    [t, r] = i.useState(!1),
     [g, f] = i.useState(!1);
   return (0, a.jsxs)("div", {
     className: h.container,
@@ -41,9 +41,9 @@ function g() {
       tag: o.FormTitleTags.H3,
       children: (0, a.jsx)(o.SingleSelect, {
         options: m,
-        value: r,
+        value: t,
         onChange: e => {
-          t(e)
+          r(e)
         },
         popoutLayerContext: u.devToolsLayerContext
       })
@@ -60,13 +60,13 @@ function g() {
         popoutLayerContext: u.devToolsLayerContext
       })
     }), (0, a.jsx)(o.Button, {
-      onClick: () => void(c.default.dispatch({
+      onClick: () => void(s.default.dispatch({
         type: "PREMIUM_PERKS_DEMO_OVERRIDE",
         perkType: l.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
         user: e,
-        available: r,
+        available: t,
         activateSuccess: g
-      }), (0, s.hqStreamingSetEnabled)(!1), (0, s.hqStreamingPopoutDismissed)(!1), (0, s.hqStreamingFrameAnimationPlayed)(!1), (0, s.hqStreamingUnlockAnimationPlayed)(!1)),
+      }), (0, c.hqStreamingSetEnabled)(!1), (0, c.hqStreamingPopoutDismissed)(!1), (0, c.hqStreamingFrameAnimationPlayed)(!1), (0, c.hqStreamingUnlockAnimationPlayed)(!1)),
       children: "Update"
     })]
   })

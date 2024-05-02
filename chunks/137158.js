@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   r = n("470079"),
-  i = n("120356"),
-  s = n.n(i),
+  s = n("120356"),
+  i = n.n(s),
   l = n("392711"),
   o = n("942389"),
   c = n("299468"),
@@ -18,12 +18,12 @@ var a = n("735250"),
   h = n("689938"),
   p = n("915580");
 
-function T(e) {
+function E(e) {
   let {
     title: t,
     children: n,
     onEdit: r,
-    onRemove: i,
+    onRemove: s,
     canRemove: l,
     actionsLocation: o
   } = e;
@@ -43,10 +43,10 @@ function T(e) {
         shouldShow: !l,
         children: e => (0, a.jsx)(f.Button, {
           ...e,
-          className: s()(p.removeButton, p.button),
+          className: i()(p.removeButton, p.button),
           size: f.Button.Sizes.SMALL,
           look: f.Button.Looks.BLANK,
-          onClick: i,
+          onClick: s,
           disabled: !l,
           children: h.default.Messages.REMOVE
         })
@@ -60,18 +60,18 @@ function T(e) {
     })]
   })
 }
-let E = "FORM_FIELD";
+let T = "FORM_FIELD";
 
 function C(e) {
   let {
     index: t,
     field: n,
-    isDropHovered: i,
+    isDropHovered: s,
     onDrop: c
   } = e, d = (0, l.debounce)(async (e, t, n) => {
     await c(e, t, n)
   }), f = r.useRef(null), [, h] = (0, o.useDrag)({
-    type: E,
+    type: T,
     item: {
       index: t,
       field: n
@@ -80,15 +80,15 @@ function C(e) {
       null != e && !t.didDrop() && d(e.field, null, !0)
     }
   }), [, C] = (0, o.useDrop)({
-    accept: E,
+    accept: T,
     hover: (e, n) => {
       var a;
       let {
         index: r
-      } = e, i = null === (a = f.current) || void 0 === a ? void 0 : a.getBoundingClientRect(), s = n.getClientOffset();
-      if (null == i || null == s) return;
-      let l = (i.bottom - i.top) / 2,
-        o = s.y - i.top;
+      } = e, s = null === (a = f.current) || void 0 === a ? void 0 : a.getBoundingClientRect(), i = n.getClientOffset();
+      if (null == s || null == i) return;
+      let l = (s.bottom - s.top) / 2,
+        o = i.y - s.top;
       (!(r < t) || !(o < l)) && (!(r > t) || !(o < l)) && r !== t && d(e.field, t, !1)
     },
     drop: e => {
@@ -100,8 +100,8 @@ function C(e) {
   }), [h, C]), (0, a.jsxs)("div", {
     ref: f,
     "data-dnd-name": "field-".concat(t),
-    className: s()(p.dragContainer, {
-      [p.dropHovered]: i
+    className: i()(p.dragContainer, {
+      [p.dropHovered]: s
     }),
     children: [(0, a.jsx)("div", {
       className: p.dragIconContainer,
@@ -109,7 +109,7 @@ function C(e) {
         className: p.dragIcon,
         color: u.default.unsafe_rawColors.PRIMARY_400.css
       })
-    }), (0, a.jsx)(T, {
+    }), (0, a.jsx)(E, {
       ...e
     })]
   })
@@ -122,7 +122,7 @@ function _(e) {
       className: p.spacingContainer,
       children: e.isDragEnabled ? (0, a.jsx)(C, {
         ...e
-      }) : (0, a.jsx)(T, {
+      }) : (0, a.jsx)(E, {
         ...e
       })
     }), "side" === e.actionsLocation && (0, a.jsxs)("div", {

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return v
   }
 }), n("47120");
 var a = n("735250"),
   r = n("470079"),
-  i = n("120356"),
-  s = n.n(i),
+  s = n("120356"),
+  i = n.n(s),
   l = n("442837"),
   o = n("481060"),
   c = n("11265"),
@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("571728"),
   h = n("755340"),
   p = n("794358"),
-  T = n("931468"),
-  E = n("449226"),
+  E = n("931468"),
+  T = n("449226"),
   C = n("689938"),
   _ = n("875058"),
   g = n("453522");
@@ -26,8 +26,8 @@ var a = n("735250"),
 function x(e) {
   let {
     guild: t,
-    isExpanded: i,
-    emptyFormFields: s,
+    isExpanded: s,
+    emptyFormFields: i,
     hasTermsField: l
   } = e, c = t.hasVerificationGate(), [u, f] = r.useState(c), m = e => {
     e.preventDefault(), e.stopPropagation()
@@ -38,7 +38,7 @@ function x(e) {
       f(u)
     }
   }, x = e => {
-    e && s ? (0, o.openModalLazy)(async () => {
+    e && i ? (0, o.openModalLazy)(async () => {
       let {
         ConfirmModal: t
       } = await Promise.resolve().then(n.bind(n, "481060"));
@@ -74,17 +74,17 @@ function x(e) {
         variant: "text-md/semibold",
         color: "header-primary",
         children: C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_SCREENING
-      }), (i || s && !u) && (0, a.jsx)(o.Text, {
+      }), (s || i && !u) && (0, a.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
         children: C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
-      }), !i && (0, a.jsx)("div", {
+      }), !s && (0, a.jsx)("div", {
         className: g.pillRow,
         children: l && (0, a.jsxs)(o.Text, {
           color: "interactive-normal",
           variant: "text-xs/medium",
           className: _.valuePill,
-          children: [(0, a.jsx)(T.default, {
+          children: [(0, a.jsx)(E.default, {
             width: 16,
             height: 16
           }), C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
@@ -92,7 +92,7 @@ function x(e) {
       })]
     }), (0, a.jsx)("div", {
       className: g.previewAndEnable,
-      children: i || u || !s ? (0, a.jsxs)(a.Fragment, {
+      children: s || u || !i ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(o.Clickable, {
           onMouseDown: m,
           onMouseUp: m,
@@ -109,7 +109,7 @@ function x(e) {
               ...e
             })
           })
-        }), (0, a.jsx)(E.default, {
+        }), (0, a.jsx)(T.default, {
           checked: u,
           onChange: () => x(!u)
         })]
@@ -123,53 +123,53 @@ function x(e) {
 async function I(e, t) {
   await d.default.updateVerificationForm(e, t)
 }
-async function v(e, t) {
+async function N(e, t) {
   await d.default.updateVerificationFormDescription(e, t)
 }
 
-function N(e) {
-  var t, n, i;
+function v(e) {
+  var t, n, s;
   let {
     guild: o,
     isClanContext: p = !1,
-    onFieldsSave: T,
-    onDescriptionSave: E,
+    onFieldsSave: E,
+    onDescriptionSave: T,
     verificationForm: C
-  } = e, [N, S] = r.useState(p), A = r.useRef(!1), L = r.useCallback(() => {
-    A.current = !0
-  }, []), b = null !== (t = (0, m.useSubmittedGuildJoinRequestTotal)({
+  } = e, [v, A] = r.useState(p), S = r.useRef(!1), L = r.useCallback(() => {
+    S.current = !0
+  }, []), R = null !== (t = (0, m.useSubmittedGuildJoinRequestTotal)({
     guildId: o.id
-  })) && void 0 !== t ? t : 0, R = (0, l.useStateFromStores)([u.default], () => null != C ? C : u.default.get(o.id)), M = null !== (n = null == R ? void 0 : R.formFields) && void 0 !== n ? n : [];
+  })) && void 0 !== t ? t : 0, y = (0, l.useStateFromStores)([u.default], () => null != C ? C : u.default.get(o.id)), b = null !== (n = null == y ? void 0 : y.formFields) && void 0 !== n ? n : [];
   r.useEffect(() => {
     d.default.fetchVerificationForm(o.id)
   }, [o.id]);
-  let y = !p;
+  let j = !p;
   return (0, a.jsx)(c.default, {
-    renderHeader: y ? (0, a.jsx)(x, {
+    renderHeader: j ? (0, a.jsx)(x, {
       guild: o,
-      isExpanded: N,
-      emptyFormFields: (null == M ? void 0 : M.length) == null || (null == M ? void 0 : M.length) === 0,
-      hasTermsField: null == M ? void 0 : M.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
+      isExpanded: v,
+      emptyFormFields: (null == b ? void 0 : b.length) == null || (null == b ? void 0 : b.length) === 0,
+      hasTermsField: null == b ? void 0 : b.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
     }) : null,
-    isExpanded: N,
-    onExpand: () => S(!N),
+    isExpanded: v,
+    onExpand: () => A(!v),
     disableAnimation: p,
-    disableBackground: !y,
+    disableBackground: !j,
     children: (0, a.jsx)("div", {
-      className: s()(_.itemBodyContainer, {
-        [_.noPadding]: !y,
-        [g.rulesScreeningItemsNoBorder]: !y
+      className: i()(_.itemBodyContainer, {
+        [_.noPadding]: !j,
+        [g.rulesScreeningItemsNoBorder]: !j
       }),
-      children: null != R && (0, a.jsx)(h.default, {
+      children: null != y && (0, a.jsx)(h.default, {
         guild: o,
-        submittedGuildJoinRequestsCount: b,
-        formFields: M,
+        submittedGuildJoinRequestsCount: R,
+        formFields: b,
         onFormFieldUpdate: L,
         hideVerificationLevelField: !0,
         isClanContext: p,
-        onFieldsSave: null != T ? T : I,
-        onDescriptionSave: null != E ? E : v,
-        formDescription: null !== (i = null == R ? void 0 : R.description) && void 0 !== i ? i : ""
+        onFieldsSave: null != E ? E : I,
+        onDescriptionSave: null != T ? T : N,
+        formDescription: null !== (s = null == y ? void 0 : y.description) && void 0 !== s ? s : ""
       })
     })
   })

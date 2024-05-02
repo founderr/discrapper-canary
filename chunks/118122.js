@@ -54,7 +54,7 @@ function L(e) {
     lastTargetNode: n
   } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([m.default], () => m.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, S.CREATE_GUILD_MODAL_KEY)), {
     analyticsLocations: M
-  } = (0, u.default)(), y = (0, r.useRedesignIconContext)().enabled, O = (0, l.jsx)(E.default, {
+  } = (0, u.default)(), O = (0, r.useRedesignIconContext)().enabled, y = (0, l.jsx)(E.default, {
     showPill: !1,
     id: "create-join-button",
     onClick: () => {
@@ -74,15 +74,15 @@ function L(e) {
     selected: R,
     onContextMenu: A,
     tooltip: I.default.Messages.ADD_A_SERVER,
-    icon: y ? i.PlusMediumIcon : C.default
+    icon: O ? i.PlusMediumIcon : C.default
   });
-  return t ? O : (0, l.jsx)("div", {
+  return t ? y : (0, l.jsx)("div", {
     className: N.tutorialContainer,
     children: (0, l.jsxs)(h.default, {
       tutorialId: x ? "create-more-servers" : "create-first-server",
       inlineSpecs: T,
       position: "right",
-      children: [O, null != n && (0, l.jsx)(g.default, {
+      children: [y, null != n && (0, l.jsx)(g.default, {
         name: I.default.Messages.DND_END_OF_LIST,
         targetNode: n,
         below: !0,
