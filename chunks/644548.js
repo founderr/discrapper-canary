@@ -55,8 +55,8 @@ t.default = e => {
   return null != g && null != T && null != I && (0, c.isAllowedRange)(I) ? (0, a.jsxs)(h.Popout, {
     children: [(0, a.jsx)(h.PopoutContent, {
       thumbnailSrc: C,
-      user: g,
       channel: t,
+      entry: n,
       userDescription: m.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
       title: n.extra.game_name,
       badges: (0, a.jsx)(f.BadgesContainer, {

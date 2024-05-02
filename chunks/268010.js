@@ -39,7 +39,7 @@ t.default = e => {
   } = (0, c.useWatchContentData)(n), {
     primaryColor: T,
     secondaryColor: I
-  } = (0, d.default)(S), A = (0, s.useStateFromStores)([i.default], () => i.default.locale), v = l.useCallback(e => {
+  } = (0, d.default)(S), A = (0, s.useStateFromStores)([i.default], () => i.default.locale), N = l.useCallback(e => {
     if (null != g && null != S) return (0, u.generateWatchContentImage)({
       entry: n,
       mediaImageSrc: S,
@@ -54,8 +54,8 @@ t.default = e => {
   return null == g ? null : (0, a.jsxs)(h.Popout, {
     children: [(0, a.jsx)(h.PopoutContent, {
       thumbnailSrc: S,
-      user: g,
       channel: t,
+      entry: n,
       userDescription: (0, o.isEntryActive)(n) ? m.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : m.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
       title: n.extra.media_title,
       subtitle: n.extra.media_subtitle,
@@ -70,7 +70,7 @@ t.default = e => {
         closePopout: C,
         user: g,
         channel: t,
-        generateReactionImage: v,
+        generateReactionImage: N,
         reactionImageAltText: E(n, g),
         entry: n,
         requestId: r

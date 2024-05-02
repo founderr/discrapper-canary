@@ -17,6 +17,7 @@ e.exports = {
   popout: "popout_cfa8bc",
   popoutContentBody: "popoutContentBody_f9fe14",
   popoutContentHeader: "popoutContentHeader_daecb8",
+  popoutStackedAvatar: "popoutStackedAvatar__339c9",
   popoutStreamImg: "popoutStreamImg_a5f0ae",
   popoutThumbnailContainer: "popoutThumbnailContainer_b66fac",
   popoutUserContainer: "popoutUserContainer__5ed24",

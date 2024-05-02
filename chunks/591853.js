@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   Popout: function() {
-    return Q
+    return $
   },
   PopoutContent: function() {
-    return el
+    return ei
   },
   PopoutInteractionsContainer: function() {
-    return ee
+    return en
   },
   PopoutReactor: function() {
-    return et
+    return ea
   },
   StreamingPopoutContent: function() {
-    return es
+    return er
   },
   VoiceChannelPopoutReactor: function() {
-    return ei
+    return eo
   }
 }), n("47120");
 var a = n("735250"),
@@ -41,46 +41,48 @@ var u = n("442837"),
   T = n("475179"),
   I = n("220779"),
   A = n("201133"),
-  v = n("605236"),
-  N = n("543241"),
-  x = n("359110"),
-  M = n("12168"),
-  R = n("592125"),
-  L = n("430824"),
-  y = n("496675"),
-  O = n("938475"),
-  j = n("346656"),
-  P = n("682864"),
-  D = n("409216"),
-  b = n("368666"),
-  U = n("626135"),
-  F = n("768581"),
-  w = n("5192"),
-  k = n("485267"),
-  H = n("71585"),
-  B = n("571243"),
-  G = n("69259"),
-  V = n("206295"),
-  W = n("111386"),
-  Y = n("43205"),
-  z = n("469153"),
-  K = n("206583"),
-  Z = n("981631"),
-  q = n("689938"),
-  X = n("50928");
+  N = n("605236"),
+  v = n("543241"),
+  x = n("318374"),
+  M = n("359110"),
+  R = n("12168"),
+  L = n("592125"),
+  y = n("430824"),
+  O = n("496675"),
+  j = n("938475"),
+  P = n("346656"),
+  D = n("682864"),
+  b = n("409216"),
+  U = n("368666"),
+  F = n("626135"),
+  w = n("768581"),
+  k = n("5192"),
+  H = n("485267"),
+  B = n("71585"),
+  G = n("192918"),
+  V = n("571243"),
+  W = n("69259"),
+  Y = n("206295"),
+  z = n("111386"),
+  K = n("43205"),
+  Z = n("469153"),
+  q = n("206583"),
+  X = n("981631"),
+  Q = n("689938"),
+  J = n("50928");
 
-function Q(e) {
+function $(e) {
   let {
     children: t
   } = e, n = l.useRef(null);
   return (0, S.useFocusLock)(n), (0, a.jsx)("div", {
-    className: X.popout,
+    className: J.popout,
     ref: n,
     children: t
   })
 }
 
-function J(e) {
+function ee(e) {
   let {
     children: t,
     backgroundImgSrc: n,
@@ -88,9 +90,9 @@ function J(e) {
   } = e, {
     primaryColor: s,
     secondaryColor: r
-  } = (0, V.default)(n);
+  } = (0, Y.default)(n);
   return (0, a.jsx)("div", {
-    className: i()(X.hero, "theme-".concat(Z.ThemeTypes.DARK)),
+    className: i()(J.hero, "theme-".concat(X.ThemeTypes.DARK)),
     style: {
       background: "linear-gradient(45deg, ".concat(s, ", ").concat(r, ")"),
       ...l
@@ -98,19 +100,19 @@ function J(e) {
     children: t
   })
 }
-let $ = l.createContext(null);
+let et = l.createContext(null);
 
-function ee(e) {
+function en(e) {
   let {
     children: t
   } = e, n = l.useRef(null);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      className: X.interactionsContainerHeader,
+      className: J.interactionsContainerHeader,
       ref: e => n.current = e
     }), (0, a.jsx)("div", {
-      className: X.interactionsContainer,
-      children: (0, a.jsx)($.Provider, {
+      className: J.interactionsContainer,
+      children: (0, a.jsx)(et.Provider, {
         value: n.current,
         children: t
       })
@@ -118,7 +120,7 @@ function ee(e) {
   })
 }
 
-function et(e) {
+function ea(e) {
   let {
     channel: t,
     user: n,
@@ -127,51 +129,51 @@ function et(e) {
     closePopout: r,
     entry: c,
     requestId: h
-  } = e, m = (0, u.useStateFromStores)([H.default], () => H.default.isChannelReplyMode()), [p, E] = l.useState(null), g = (0, u.useStateFromStores)([y.default], () => y.default.can(Z.Permissions.SEND_MESSAGES, t)), T = (0, B.useIsEligibleForMemberlistOneClickReply)({
+  } = e, m = (0, u.useStateFromStores)([B.default], () => B.default.isChannelReplyMode()), [p, E] = l.useState(null), g = (0, u.useStateFromStores)([O.default], () => O.default.can(X.Permissions.SEND_MESSAGES, t)), T = (0, V.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
-  }), [N, x] = l.useState(!1), [M, L] = l.useState(!1), O = "#".concat(t.name), j = w.default.getName(t.guild_id, t.id, n), P = m ? q.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : q.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, D = async e => {
+  }), [v, x] = l.useState(!1), [M, R] = l.useState(!1), y = "#".concat(t.name), j = k.default.getName(t.guild_id, t.id, n), P = m ? Q.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : Q.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, D = async e => {
     if (null != e) {
-      if (U.default.track(Z.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
-          surface_type: K.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
+      if (F.default.track(X.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
+          surface_type: q.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
           channel_id: t.id,
           guild_id: t.guild_id
         }), T) {
         let l;
-        if ((0, v.markDismissibleContentAsDismissed)(d.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), x(!0), L(!1), m) l = t;
+        if ((0, N.markDismissibleContentAsDismissed)(d.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), x(!0), R(!1), m) l = t;
         else {
           var a;
           let e = await _.default.getOrEnsurePrivateChannel(n.id);
-          l = null !== (a = R.default.getChannel(e)) && void 0 !== a ? a : null
+          l = null !== (a = L.default.getChannel(e)) && void 0 !== a ? a : null
         }
-        return o()(null != l, "Send channel must be defined"), F({
+        return o()(null != l, "Send channel must be defined"), U({
           reply: ":".concat(e.name, ":"),
           sendToChannel: l,
           onComplete: () => {
-            L(!0), setTimeout(() => {
+            R(!0), setTimeout(() => {
               x(!1), r()
             }, 600)
           },
-          interactionType: K.ContentInventoryInteractionTypes.REACTION_EMOJI_REACT_SENT
+          interactionType: q.ContentInventoryInteractionTypes.REACTION_EMOJI_REACT_SENT
         })
       }
       null != p && (p.insertEmoji(e, !1, !1), p.focus())
     }
   }, b = async e => {
     let a;
-    if (T && (0, v.markDismissibleContentAsDismissed)(d.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m) a = t;
+    if (T && (0, N.markDismissibleContentAsDismissed)(d.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m) a = t;
     else {
       let e = await _.default.openPrivateChannel(n.id, !1, !1),
-        t = R.default.getChannel(e);
+        t = L.default.getChannel(e);
       o()(null != t, "DM channel must be defined"), a = t
     }
-    let l = a.type === Z.ChannelTypes.DM ? K.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT : K.ContentInventoryInteractionTypes.CHANNEL_REACTION_MESSAGE_SENT;
-    return F({
+    let l = a.type === X.ChannelTypes.DM ? q.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT : q.ContentInventoryInteractionTypes.CHANNEL_REACTION_MESSAGE_SENT;
+    return U({
       reply: e,
       sendToChannel: a,
       onComplete: r,
       interactionType: l
     })
-  }, F = async e => {
+  }, U = async e => {
     let {
       reply: n,
       sendToChannel: a,
@@ -183,7 +185,7 @@ function et(e) {
       channel: a,
       altText: i,
       reply: n
-    }), (0, G.trackInteraction)(r, {
+    }), (0, W.trackInteraction)(r, {
       entry: c,
       channelId: t.id,
       guildId: t.guild_id,
@@ -194,16 +196,16 @@ function et(e) {
   };
   return (0, a.jsxs)("div", {
     style: {
-      pointerEvents: N ? "none" : "all"
+      pointerEvents: v ? "none" : "all"
     },
-    children: [(0, a.jsx)(z.default, {
+    children: [(0, a.jsx)(Z.default, {
       sent: M,
-      shown: N,
-      className: X.toastContainer
-    }), T ? (0, a.jsx)(W.default, {
+      shown: v,
+      className: J.toastContainer
+    }), T ? (0, a.jsx)(z.default, {
       children: (0, a.jsxs)("div", {
-        className: X.emojiHotrailShareToChannel,
-        children: [(0, a.jsx)(en, {
+        className: J.emojiHotrailShareToChannel,
+        children: [(0, a.jsx)(el, {
           channel: t,
           onClickSuggestion: D
         }), (0, a.jsx)(I.ReactionPickerButton, {
@@ -211,19 +213,19 @@ function et(e) {
         })]
       })
     }) : (0, a.jsx)("div", {
-      className: X.emojiHotrailShareToChannel,
-      children: (0, a.jsx)(en, {
+      className: J.emojiHotrailShareToChannel,
+      children: (0, a.jsx)(el, {
         channel: t,
         onClickSuggestion: D
       })
     }), (0, a.jsxs)("div", {
-      className: X.inputContainerShareToChannel,
+      className: J.inputContainerShareToChannel,
       children: [g && (0, a.jsx)(S.Tooltip, {
         text: P,
         children: e => (0, a.jsx)(S.Clickable, {
           ...e,
-          className: X.shareToChannelButton,
-          onClick: k.toggleContentInventoryReplyMode,
+          className: J.shareToChannelButton,
+          onClick: H.toggleContentInventoryReplyMode,
           children: m ? (0, a.jsx)(C.TextIcon, {
             width: 20,
             height: 20
@@ -233,8 +235,8 @@ function et(e) {
           })
         })
       }), (0, a.jsx)(I.ReplyInput, {
-        placeholder: q.default.Messages.TEXTAREA_PLACEHOLDER.format({
-          channel: m ? O : "@".concat(j)
+        placeholder: Q.default.Messages.TEXTAREA_PLACEHOLDER.format({
+          channel: m ? y : "@".concat(j)
         }),
         onEnter: b,
         setEditorRef: e => E(e),
@@ -243,16 +245,16 @@ function et(e) {
     })]
   })
 }
-let en = e => {
+let el = e => {
   let {
     channel: t,
     onClickSuggestion: n
-  } = e, l = (0, N.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
+  } = e, l = (0, v.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
     emoji: e,
     url: e.url
   } : {
     emoji: e,
-    url: (0, F.getEmojiURL)({
+    url: (0, w.getEmojiURL)({
       id: e.id,
       animated: e.animated,
       size: 58
@@ -266,19 +268,19 @@ let en = e => {
       } = e;
       return null != l ? (0, a.jsx)("div", {
         children: (0, a.jsx)(S.TooltipContainer, {
-          text: q.default.Messages.CONTENT_INVENTORY_REPLY_WITH_EMOJI.format({
+          text: Q.default.Messages.CONTENT_INVENTORY_REPLY_WITH_EMOJI.format({
             emojiName: t.name
           }),
           position: "top",
-          "aria-label": q.default.Messages.CONTENT_INVENTORY_REPLY_WITH_EMOJI.format({
+          "aria-label": Q.default.Messages.CONTENT_INVENTORY_REPLY_WITH_EMOJI.format({
             emojiName: t.name
           }),
           color: S.Tooltip.Colors.PRIMARY,
-          children: (0, a.jsx)(M.HotBarEmoji, {
+          children: (0, a.jsx)(R.HotBarEmoji, {
             emoji: t,
             isDisabled: !1,
             onClick: () => n(t),
-            className: X.emoji
+            className: J.emoji
           })
         })
       }, t.name) : null
@@ -286,33 +288,38 @@ let en = e => {
   })
 };
 
-function ea(e) {
+function es(e) {
   let {
-    user: t,
-    channel: n,
-    userDescription: l,
-    headerIcons: s
-  } = e, i = n.guild_id, r = w.default.getName(i, n.id, t);
+    channel: t,
+    userDescription: n,
+    headerIcons: s,
+    entry: i
+  } = e, r = t.guild_id, o = (0, G.default)(i), u = l.useMemo(() => o.slice(-3), [o]), d = o[o.length - 1], c = o[o.length - 2];
   return (0, a.jsxs)("div", {
-    className: X.popoutContentHeader,
+    className: J.popoutContentHeader,
     children: [(0, a.jsxs)("div", {
-      className: X.popoutUserContainer,
-      children: [(0, a.jsx)(S.Avatar, {
-        src: t.getAvatarURL(i, 24),
+      className: J.popoutUserContainer,
+      children: [(0, a.jsx)(x.default, {
+        maxUsers: 3,
+        users: u,
         size: S.AvatarSizes.SIZE_24,
-        "aria-label": "avatar"
-      }), (0, a.jsx)(P.default, {
+        avatarClassName: J.popoutStackedAvatar,
+        hideOverflowCount: !0,
+        disableUsernameTooltip: !0
+      }), (0, a.jsx)(D.default, {
         size: 8,
         horizontal: !0
       }), (0, a.jsx)(S.Heading, {
         variant: "heading-sm/normal",
         color: "text-secondary",
-        children: l.format({
-          username: r,
+        children: n.format({
+          user1: k.default.getName(r, t.id, d),
+          user2: k.default.getName(r, t.id, c),
+          countOthers: o.length - 1,
           nameHook: (e, t) => (0, a.jsx)(S.Text, {
             variant: "text-sm/medium",
             color: "header-primary",
-            className: X.popoutUsername,
+            className: J.popoutUsername,
             children: e
           }, t)
         })
@@ -321,7 +328,7 @@ function ea(e) {
   })
 }
 
-function el(e) {
+function ei(e) {
   let {
     thumbnailSrc: t,
     title: n,
@@ -329,22 +336,22 @@ function el(e) {
     badges: s,
     ...i
   } = e;
-  return (0, a.jsxs)(J, {
+  return (0, a.jsxs)(ee, {
     backgroundImgSrc: t,
-    children: [(0, a.jsx)(ea, {
+    children: [(0, a.jsx)(es, {
       ...i
-    }), (0, a.jsx)(P.default, {
+    }), (0, a.jsx)(D.default, {
       size: 16
     }), (0, a.jsxs)("div", {
-      className: X.popoutContentBody,
+      className: J.popoutContentBody,
       children: [(0, a.jsx)("div", {
-        className: X.popoutThumbnailContainer,
-        children: (0, a.jsx)(Y.ContentImage, {
+        className: J.popoutThumbnailContainer,
+        children: (0, a.jsx)(K.ContentImage, {
           size: 72,
           src: t,
-          className: X.contentImage
+          className: J.contentImage
         })
-      }), (0, a.jsx)(P.default, {
+      }), (0, a.jsx)(D.default, {
         size: 16,
         horizontal: !0
       }), (0, a.jsxs)("div", {
@@ -357,7 +364,7 @@ function el(e) {
           variant: "text-md/normal",
           color: "text-secondary",
           children: l
-        }) : null, (0, a.jsx)(P.default, {
+        }) : null, (0, a.jsx)(D.default, {
           size: 8
         }), s]
       })]
@@ -365,42 +372,42 @@ function el(e) {
   })
 }
 
-function es(e) {
+function er(e) {
   let {
     title: t,
     badges: n,
     streamPreviewSrc: l,
     ...s
   } = e;
-  return (0, a.jsxs)(J, {
+  return (0, a.jsxs)(ee, {
     style: {
       background: "linear-gradient(45deg, #24282B, #1A2020)"
     },
-    children: [(0, a.jsx)(ea, {
+    children: [(0, a.jsx)(es, {
       ...s,
-      headerIcons: (0, a.jsx)(b.default, {
-        size: b.default.Sizes.SMALL
+      headerIcons: (0, a.jsx)(U.default, {
+        size: U.default.Sizes.SMALL
       })
-    }), (0, a.jsx)(P.default, {
+    }), (0, a.jsx)(D.default, {
       size: 16
     }), (0, a.jsx)("img", {
       src: l,
-      className: X.popoutStreamImg,
+      className: J.popoutStreamImg,
       alt: ""
-    }), (0, a.jsx)(P.default, {
+    }), (0, a.jsx)(D.default, {
       size: 16
     }), (0, a.jsx)(S.Heading, {
       variant: "heading-md/semibold",
       color: "header-primary",
       lineClamp: 3,
       children: t
-    }), (0, a.jsx)(P.default, {
+    }), (0, a.jsx)(D.default, {
       size: 8
     }), n]
   })
 }
 
-function ei(e) {
+function eo(e) {
   let {
     user: t,
     entry: n,
@@ -410,9 +417,9 @@ function ei(e) {
     reactionImageAltText: d,
     generateReactionImage: f,
     isStreaming: C = !1
-  } = e, v = w.default.getName(i.guild_id, i.id, t), [N, M] = l.useState(!1), y = (0, u.useStateFromStores)([L.default], () => L.default.getGuild(s.guild_id)), P = (0, u.useStateFromStoresArray)([O.default], () => O.default.getVoiceStatesForChannel(s), [s]), b = async e => {
+  } = e, N = k.default.getName(i.guild_id, i.id, t), [v, x] = l.useState(!1), R = (0, u.useStateFromStores)([y.default], () => y.default.getGuild(s.guild_id)), O = (0, u.useStateFromStoresArray)([j.default], () => j.default.getVoiceStatesForChannel(s), [s]), D = async e => {
     let a = await _.default.openPrivateChannel(t.id, !1, !1),
-      l = R.default.getChannel(a);
+      l = L.default.getChannel(a);
     o()(null != l, "DM channel must be defined");
     let s = await f(l.id);
     o()(null != s, "Reaction image must be defined"), await (0, A.sendReply)({
@@ -420,22 +427,22 @@ function ei(e) {
       channel: l,
       altText: d,
       reply: e
-    }), (0, G.trackInteraction)(K.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT, {
+    }), (0, W.trackInteraction)(q.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT, {
       entry: n,
       channelId: i.id,
       guildId: i.guild_id,
       requestId: r
     })
   };
-  return null == y ? null : (0, a.jsxs)("div", {
+  return null == R ? null : (0, a.jsxs)("div", {
     children: [(0, a.jsxs)("div", {
-      className: X.voiceChannelPopoutReactorHeader,
+      className: J.voiceChannelPopoutReactorHeader,
       children: [(0, a.jsxs)("div", {
-        className: X.voiceChannelPopoutReactorChannel,
-        children: [(0, a.jsx)(j.default, {
-          guild: y,
-          size: j.default.Sizes.SMOL,
-          className: X.voiceChannelGuildIcon,
+        className: J.voiceChannelPopoutReactorChannel,
+        children: [(0, a.jsx)(P.default, {
+          guild: R,
+          size: P.default.Sizes.SMOL,
+          className: J.voiceChannelGuildIcon,
           active: !0
         }), (0, a.jsx)(m.ChevronSmallRightIcon, {
           width: 12,
@@ -450,18 +457,18 @@ function ei(e) {
           color: "text-normal",
           children: s.name
         })]
-      }), (0, a.jsx)(D.default, {
-        guildId: y.id,
-        users: P,
+      }), (0, a.jsx)(b.default, {
+        guildId: R.id,
+        users: O,
         max: 3,
         renderUser: (e, t) => (0, a.jsx)(S.Avatar, {
-          src: e.user.getAvatarURL(y.id, 16),
+          src: e.user.getAvatarURL(R.id, 16),
           size: S.AvatarSizes.SIZE_16,
           "aria-label": "avatar",
           className: t
         }),
         renderMoreUsers: e => (0, a.jsx)("div", {
-          className: X.voiceChannelAdditionalParticipants,
+          className: J.voiceChannelAdditionalParticipants,
           children: (0, a.jsx)(S.Text, {
             variant: "text-xxs/semibold",
             color: "text-normal",
@@ -470,16 +477,16 @@ function ei(e) {
         })
       })]
     }), (0, a.jsx)("div", {
-      className: X.voicePopoutDivider
-    }), N ? (0, a.jsx)(I.ReplyInput, {
-      placeholder: q.default.Messages.TEXTAREA_PLACEHOLDER.format({
-        channel: "@".concat(v)
+      className: J.voicePopoutDivider
+    }), v ? (0, a.jsx)(I.ReplyInput, {
+      placeholder: Q.default.Messages.TEXTAREA_PLACEHOLDER.format({
+        channel: "@".concat(N)
       }),
-      onEnter: b,
+      onEnter: D,
       showEmojiButton: !0,
       renderAttachButton: () => (0, a.jsx)(S.Clickable, {
-        onClick: () => M(!1),
-        className: X.voicePopoutMessageCloseIcon,
+        onClick: () => x(!1),
+        className: J.voicePopoutMessageCloseIcon,
         children: (0, a.jsx)(p.CloseSmallIcon, {
           width: 20,
           height: 20,
@@ -487,27 +494,27 @@ function ei(e) {
         })
       })
     }) : (0, a.jsxs)("div", {
-      className: X.voicePopoutActionButtons,
+      className: J.voicePopoutActionButtons,
       children: [(0, a.jsxs)(S.Button, {
-        className: X.secondaryButton,
+        className: J.secondaryButton,
         color: S.Button.Colors.CUSTOM,
         fullWidth: !0,
-        onClick: () => M(!0),
-        innerClassName: X.iconButton,
+        onClick: () => x(!0),
+        innerClassName: J.iconButton,
         size: S.Button.Sizes.LARGE,
         children: [(0, a.jsx)(h.ChatIcon, {
           width: 20,
           height: 20,
-          colorClass: X.secondaryText
+          colorClass: J.secondaryText
         }), (0, a.jsx)(S.Text, {
           variant: "text-md/semibold",
-          className: X.secondaryText,
-          children: q.default.Messages.USER_POPOUT_MESSAGE
+          className: J.secondaryText,
+          children: Q.default.Messages.USER_POPOUT_MESSAGE
         })]
       }), (0, a.jsxs)(S.Button, {
         color: S.Button.Colors.GREEN,
         onClick: () => {
-          T.default.updateChatOpen(s.id, !0), (0, x.transitionToChannel)(s.id), (0, G.trackInteraction)(K.ContentInventoryInteractionTypes.VOICE_CHANNEL_PREVIEWED, {
+          T.default.updateChatOpen(s.id, !0), (0, M.transitionToChannel)(s.id), (0, W.trackInteraction)(q.ContentInventoryInteractionTypes.VOICE_CHANNEL_PREVIEWED, {
             entry: n,
             channelId: i.id,
             guildId: i.guild_id,
@@ -517,7 +524,7 @@ function ei(e) {
           })
         },
         fullWidth: !0,
-        innerClassName: X.iconButton,
+        innerClassName: J.iconButton,
         size: S.Button.Sizes.LARGE,
         children: [C ? (0, a.jsx)(E.ScreenIcon, {
           width: 20,
@@ -530,7 +537,7 @@ function ei(e) {
         }), (0, a.jsx)(S.Text, {
           variant: "text-md/semibold",
           color: "always-white",
-          children: q.default.Messages.PREVIEW
+          children: Q.default.Messages.PREVIEW
         })]
       })]
     })]
