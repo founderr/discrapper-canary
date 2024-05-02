@@ -1,5 +1,6 @@
 "use strict";
 e.exports = {
+  browseButton: "browseButton__17d35",
   buttonWithSelect: "buttonWithSelect_eaaa35",
   cardsContainer: "cardsContainer__59327",
   clanCard: "clanCard_ea2802",
@@ -16,6 +17,9 @@ e.exports = {
   clanEnvelope: "clanEnvelope__0b99c",
   clanEnvelopeBottom: "clanEnvelopeBottom_e5cdee",
   clanEnvelopeTop: "clanEnvelopeTop_bf09a8",
+  reserveButton: "reserveButton_c5765e",
+  spacer: "spacer__960c0",
+  upsellBackButton: "upsellBackButton__339ae",
   upsellButton: "upsellButton__6cfb7",
   upsellCtaContainer: "upsellCtaContainer__5221e",
   upsellDetail: "upsellDetail__401db",
@@ -23,5 +27,6 @@ e.exports = {
   upsellDetails: "upsellDetails_dbe31a",
   upsellIcon: "upsellIcon__05e46",
   upsellSelect: "upsellSelect_e29580",
+  upsellStaticHeader: "upsellStaticHeader__04b50",
   upsellTitle: "upsellTitle__75ee7"
 }

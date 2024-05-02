@@ -5,54 +5,57 @@ var a = n("735250"),
   l = n("120356"),
   i = n.n(l),
   r = n("143927"),
-  o = n("531057"),
-  u = n("149020"),
-  d = n("738232"),
-  c = n("376644"),
-  f = n("481060"),
-  E = n("105671"),
-  h = n("92373"),
-  _ = n("207796"),
-  C = n("308083"),
-  m = n("689938"),
-  S = n("506254");
+  o = n("442837"),
+  u = n("531057"),
+  d = n("149020"),
+  c = n("738232"),
+  f = n("376644"),
+  E = n("481060"),
+  h = n("963202"),
+  _ = n("105671"),
+  C = n("92373"),
+  S = n("430824"),
+  m = n("207796"),
+  p = n("308083"),
+  I = n("689938"),
+  T = n("506254");
 
-function p(e) {
+function g(e) {
   let {
     icon: t,
     text: n,
     ariaLabel: s,
     tooltip: l,
     onClick: r,
-    isActive: u,
+    isActive: o,
     autoWidth: d = !1
   } = e;
-  return (0, a.jsx)(f.Tooltip, {
+  return (0, a.jsx)(E.Tooltip, {
     text: l,
     position: "bottom",
     "aria-label": s,
-    shouldShow: u,
-    tooltipClassName: i()(S.filterTooltip, {
-      [S.filterTooltipAutoWidth]: d
+    shouldShow: o,
+    tooltipClassName: i()(T.filterTooltip, {
+      [T.filterTooltipAutoWidth]: d
     }),
-    tooltipContentClassName: S.filterTooltipContent,
-    children: e => (0, a.jsxs)(f.Button, {
+    tooltipContentClassName: T.filterTooltipContent,
+    children: e => (0, a.jsxs)(E.Button, {
       ...e,
-      className: i()(S.filterPill, {
-        [S.filterPillActive]: u
+      className: i()(T.filterPill, {
+        [T.filterPillActive]: o
       }),
-      innerClassName: S.filterPillContents,
-      look: f.ButtonLooks.OUTLINED,
-      color: f.ButtonColors.CUSTOM,
+      innerClassName: T.filterPillContents,
+      look: E.ButtonLooks.OUTLINED,
+      color: E.ButtonColors.CUSTOM,
       onClick: r,
       children: [t, (0, a.jsxs)("div", {
-        className: S.filterPillText,
-        children: [(0, a.jsx)(f.Text, {
+        className: T.filterPillText,
+        children: [(0, a.jsx)(E.Text, {
           variant: "text-xs/medium",
           color: "none",
           children: n
-        }), (0, a.jsx)(o.ChevronSmallDownIcon, {
-          className: S.chevron,
+        }), (0, a.jsx)(u.ChevronSmallDownIcon, {
+          className: T.chevron,
           color: "currentColor"
         })]
       })]
@@ -60,27 +63,27 @@ function p(e) {
   })
 }
 
-function I() {
+function A() {
   var e;
-  let t = (0, _.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
-    n = (0, _.useClanDiscoveryUIStore)(e => e.setMode, r.default),
+  let t = (0, m.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
+    n = (0, m.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     l = s.useCallback(() => {
-      n(_.ClanDiscoveryMode.GAMES)
+      n(m.ClanDiscoveryMode.GAMES)
     }, [n]),
-    i = null !== (e = (0, E.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
+    i = null !== (e = (0, _.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
     o = (0, a.jsx)("div", {
-      className: S.gamesTooltip,
-      children: t.map(e => (0, a.jsx)(h.default, {
+      className: T.gamesTooltip,
+      children: t.map(e => (0, a.jsx)(C.default, {
         applicationId: e
       }, e))
     }),
-    d = (0, a.jsx)(u.GameControllerIcon, {
-      className: S.filterPillIcon,
+    u = (0, a.jsx)(d.GameControllerIcon, {
+      className: T.filterPillIcon,
       color: "currentColor"
     });
-  return (0, a.jsx)(p, {
-    icon: d,
-    text: m.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
+  return (0, a.jsx)(g, {
+    icon: u,
+    text: I.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
       count: t.length
     }),
     tooltip: o,
@@ -91,36 +94,36 @@ function I() {
   })
 }
 
-function T() {
-  let e = s.useMemo(C.getPlaystyleOptions, []),
-    t = (0, _.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
-    n = (0, _.useClanDiscoveryUIStore)(e => e.setMode, r.default),
+function N() {
+  let e = s.useMemo(p.getPlaystyleOptions, []),
+    t = (0, m.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
+    n = (0, m.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     l = null != t ? e[t] : null,
     i = null == l ? void 0 : l.title,
     o = s.useCallback(() => {
-      n(_.ClanDiscoveryMode.PLAYSTYLE)
+      n(m.ClanDiscoveryMode.PLAYSTYLE)
     }, [n]);
   if (null == l || null == i) return null;
   let u = (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(f.Heading, {
+      children: [(0, a.jsx)(E.Heading, {
         variant: "heading-xxl/medium",
         children: l.emoji
       }), (0, a.jsxs)("div", {
-        children: [(0, a.jsx)(f.Heading, {
+        children: [(0, a.jsx)(E.Heading, {
           variant: "heading-md/medium",
           children: l.title
-        }), (0, a.jsx)(f.Text, {
+        }), (0, a.jsx)(E.Text, {
           variant: "text-xs/normal",
           children: l.subtitle
         })]
       })]
     }),
-    c = (0, a.jsx)(d.ReactionIcon, {
-      className: S.filterPillIcon,
+    d = (0, a.jsx)(c.ReactionIcon, {
+      className: T.filterPillIcon,
       color: "currentColor"
     });
-  return (0, a.jsx)(p, {
-    icon: c,
+  return (0, a.jsx)(g, {
+    icon: d,
     text: i,
     tooltip: u,
     onClick: o,
@@ -129,43 +132,68 @@ function T() {
   })
 }
 
-function g() {
-  let e = (0, _.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
-    t = (0, _.useClanDiscoveryUIStore)(e => e.setMode, r.default),
+function v() {
+  let e = (0, m.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
+    t = (0, m.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     n = s.useCallback(() => {
-      t(_.ClanDiscoveryMode.TRAITS)
+      t(m.ClanDiscoveryMode.TRAITS)
     }, [t]);
   if (null == e) return null;
   let l = (0, a.jsx)("div", {
-      className: S.traitsTooltip,
+      className: T.traitsTooltip,
       children: e.map(e => (0, a.jsx)("div", {
-        className: S.trait,
-        children: (0, a.jsx)(f.Text, {
+        className: T.trait,
+        children: (0, a.jsx)(E.Text, {
           variant: "text-xs/medium",
           color: "none",
           children: e
         })
       }, e))
     }),
-    i = (0, a.jsx)(c.TagIcon, {
-      className: S.filterPillIcon,
+    i = (0, a.jsx)(f.TagIcon, {
+      className: T.filterPillIcon,
       color: "currentColor"
     });
-  return (0, a.jsx)(p, {
+  return (0, a.jsx)(g, {
     icon: i,
-    text: m.default.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
+    text: I.default.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
     tooltip: l,
     onClick: n,
     isActive: e.length > 0,
     ariaLabel: e.join(", ")
   })
 }
+
+function R() {
+  let e = (0, m.useClanDiscoveryUIStore)(e => e.setMode, r.default),
+    t = (0, o.useStateFromStoresArray)([S.default], () => Object.values(S.default.getGuilds()));
+  return (0, h.useAnyClanGuildExperimentEnabled)(t, "clan_discovery_add_clan") ? (0, a.jsxs)(E.Clickable, {
+    className: i()(T.buttonPill),
+    onClick: () => e(m.ClanDiscoveryMode.ADMIN_UPSELL),
+    children: [(0, a.jsx)(f.TagIcon, {
+      className: T.filterPillIcon,
+      color: "currentColor"
+    }), (0, a.jsx)("div", {
+      className: T.filterPillText,
+      children: (0, a.jsx)(E.Text, {
+        variant: "text-xs/medium",
+        color: "none",
+        children: I.default.Messages.CLAN_DISCOVERY_ADD_CLAN
+      })
+    })]
+  }) : null
+}
 t.default = function() {
-  return (0, a.jsx)("div", {
-    className: S.toolbar,
-    children: (0, a.jsxs)("div", {
-      className: S.preferences,
-      children: [(0, a.jsx)(I, {}), (0, a.jsx)(T, {}), (0, a.jsx)(g, {})]
-    })
+  return (0, a.jsxs)("div", {
+    className: T.toolbar,
+    children: [(0, a.jsx)("div", {
+      className: T.addClan,
+      children: (0, a.jsx)(R, {})
+    }), (0, a.jsxs)("div", {
+      className: T.preferences,
+      children: [(0, a.jsx)(A, {}), (0, a.jsx)(N, {}), (0, a.jsx)(v, {})]
+    }), (0, a.jsx)("div", {
+      className: T.actions
+    })]
   })
 }

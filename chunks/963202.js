@@ -12,6 +12,9 @@ n.r(t), n.d(t, {
   useClanGuildExperimentDefaultGameId: function() {
     return E
   },
+  useClanPrepilotExperimentEnabled: function() {
+    return I
+  },
   useIsInUserClanExperiment: function() {
     return u
   }
@@ -196,4 +199,19 @@ function E(e) {
       autoTrackExposure: r
     });
   return null !== (i = null !== (n = null !== (t = a.defaultGameId) && void 0 !== t ? t : u.defaultGameId) && void 0 !== n ? n : d.defaultGameId) && void 0 !== i ? i : null
+}
+
+function I(e) {
+  let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+    n = o.getCurrentConfig({
+      location: e
+    }, {
+      autoTrackExposure: t
+    }).enableClanCreation,
+    i = l.getCurrentConfig({
+      location: e
+    }, {
+      autoTrackExposure: t
+    }).enableClanCreation;
+  return n || i
 }

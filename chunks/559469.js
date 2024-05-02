@@ -1,61 +1,58 @@
 "use strict";
 n.r(t), n.d(t, {
-  ClanDiscoveryUserScreens: function() {
-    return s
-  },
   FAKE_DISCOVERY_UPSELL_CLANS: function() {
-    return o
+    return i
   }
 });
-var a, s, l = n("116175"),
-  i = n("308083");
+var a = n("116175"),
+  s = n("308083");
 
-function r(e) {
+function l(e) {
   let {
     id: t,
     preset: n,
-    banner: a
+    banner: l
   } = e;
   return {
     id: t,
     name: "",
     description: "",
     memberCount: 0,
-    games: [i.VALORANT_ID],
-    playstyle: i.ClanPlaystyles.CASUAL,
+    games: [s.VALORANT_ID],
+    playstyle: s.ClanPlaystyles.CASUAL,
     tag: "",
     traits: [],
-    banner: a,
+    banner: l,
     badge: {
-      badgeKind: l.ClanBadgeKind.SWORD,
-      primaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].primary,
-      secondaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].secondary
+      badgeKind: a.ClanBadgeKind.SWORD,
+      primaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].primary,
+      secondaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].secondary
     },
     branding: {
-      primaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].primary,
-      secondaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].secondary
+      primaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].primary,
+      secondaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].secondary
     },
     wildcardDescriptors: []
   }
-}(a = s || (s = {})).USER_UPSELL = "user_upsell", a.USER_ONBOARDING = "user_onboarding";
-let o = [r({
+}
+let i = [l({
   id: "1",
-  preset: i.ClanBrandPresets.ZEPHYR,
-  banner: i.ClanBannerKind.WORLD_MAP
-}), r({
+  preset: s.ClanBrandPresets.ZEPHYR,
+  banner: s.ClanBannerKind.WORLD_MAP
+}), l({
   id: "2",
-  preset: i.ClanBrandPresets.THUNDER,
-  banner: i.ClanBannerKind.CASTLE
-}), r({
+  preset: s.ClanBrandPresets.THUNDER,
+  banner: s.ClanBannerKind.CASTLE
+}), l({
   id: "3",
-  preset: i.ClanBrandPresets.MARSH,
-  banner: i.ClanBannerKind.SEA_FOAM
-}), r({
+  preset: s.ClanBrandPresets.MARSH,
+  banner: s.ClanBannerKind.SEA_FOAM
+}), l({
   id: "4",
-  preset: i.ClanBrandPresets.BOULDER,
-  banner: i.ClanBannerKind.NIGHT_SKY
-}), r({
+  preset: s.ClanBrandPresets.BOULDER,
+  banner: s.ClanBannerKind.NIGHT_SKY
+}), l({
   id: "5",
-  preset: i.ClanBrandPresets.SOUL,
-  banner: i.ClanBannerKind.SEA_FOAM
+  preset: s.ClanBrandPresets.SOUL,
+  banner: s.ClanBannerKind.SEA_FOAM
 })]
