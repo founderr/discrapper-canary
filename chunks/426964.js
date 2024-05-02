@@ -14,7 +14,7 @@ var i = n("735250"),
   d = n("314897"),
   _ = n("271383"),
   c = n("594174"),
-  E = n("626135"),
+  E = n("970606"),
   I = n("645896"),
   T = n("905362"),
   f = n("353093"),
@@ -36,13 +36,8 @@ function p(e) {
     source: C
   } = e, g = (0, I.useClanInfo)(null !== (t = null == p ? void 0 : p.identityGuildId) && void 0 !== t ? t : null), L = null == p ? void 0 : p.tag, v = (0, S.default)("clan_guild_profile"), D = null == p ? void 0 : p.identityGuildId, M = (0, s.useStateFromStores)([d.default], () => d.default.getId()), y = (0, s.useStateFromStores)([_.default], () => null != D ? _.default.getMember(D, M) : null, [D, M]), P = (0, s.useStateFromStores)([c.default], () => c.default.getUser(M), [M]), U = (null == y ? void 0 : y.joinedAt) != null, b = (0, f.isGuildAdoptedUserClanIdentity)(D, null == P ? void 0 : P.clan), G = null != (0, l.default)(D);
   r.useEffect(() => {
-    E.default.track(h.AnalyticEvents.CLAN_PROFILE_VIEWED, {
-      guild_id: D,
-      is_member: U,
-      has_join_request: G,
-      source: C
-    })
-  }, [D, U, G, C]);
+    null != D && (0, E.trackClanProfileViewed)(D, G, C)
+  }, [D, G, C]);
   let w = r.useCallback(e => {
       null != D && (e.stopPropagation(), e.preventDefault(), null == R || R(), (0, T.openAdoptClanIdentityModal)(D))
     }, [D, R]),
