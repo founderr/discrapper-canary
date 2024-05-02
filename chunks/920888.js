@@ -1,9 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
-  findReactionIndex: function() {
-    return p
-  }
-}), n("47120"), n("653041");
+n.r(t), n("47120"), n("653041");
 var s = n("735250"),
   a = n("470079"),
   l = n("120356"),

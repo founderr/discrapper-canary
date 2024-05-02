@@ -59,7 +59,7 @@ a = "ForumPostRecentMessageStore", (r = "displayName") in(i = m) ? Object.define
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = a, t.default = new m(l.default, {
+}) : i[r] = a, new m(l.default, {
   CONNECTION_OPEN: function() {
     I = {}
   },

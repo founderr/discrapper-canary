@@ -4,13 +4,10 @@ n.r(t), n.d(t, {
     return d
   },
   transitionToMessage: function() {
-    return E
+    return c
   },
   transitionToThread: function() {
     return _
-  },
-  transitionToThreadMessage: function() {
-    return c
   }
 });
 var i = n("512722"),
@@ -35,12 +32,6 @@ function _(e, t, n) {
 }
 
 function c(e, t, n, i) {
-  r()(null != e.parent_id, "Thread must have a parent ID.");
-  let a = (0, s.getGuildIdForGenericRedirect)(e);
-  (0, l.transitionTo)(u.Routes.CHANNEL(a, e.id, t), i, n)
-}
-
-function E(e, t, n, i) {
   let r = o.default.getChannel(e);
   if (null == r) return;
   let a = (0, s.getGuildIdForGenericRedirect)(r);
