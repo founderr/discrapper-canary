@@ -40,14 +40,14 @@ let O = [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.UT
       tag: h,
       verificationForm: _,
       furthestStep: C
-    } = t, m = s.useMemo(() => null != _ && _.formFields.some(e => !(0, f.isTermsFormField)(e)), [_]), S = s.useMemo(() => {
+    } = t, m = s.useMemo(() => null != _ && _.formFields.some(e => !(0, f.isTermsFormField)(e)), [_]), S = s.useMemo(() => Array.from(d).filter(e => !v.ALL_TRAITS_SET.has(e) && !v.LANGUAGES_SET.has(e)), [d]), p = s.useMemo(() => {
       switch (i) {
         case v.ClanSetupSteps.GAMES:
           return 0 === r.size;
         case v.ClanSetupSteps.PLAYSTYLE:
           return u === v.ClanPlaystyles.NONE;
         case v.ClanSetupSteps.INTERESTS:
-          return 0 === d.size;
+          return S.length < 3;
         case v.ClanSetupSteps.DESCRIPTION:
           return 0 === E.length;
         case v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
@@ -57,13 +57,13 @@ let O = [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.UT
         default:
           return !1
       }
-    }, [i, E.length, r.size, m, d.size, u, h.length]), p = 0 === i, I = s.useCallback(() => {
+    }, [i, E.length, r.size, m, S.length, u, h.length]), I = 0 === i, T = s.useCallback(() => {
       i === O.length - 1 ? l() : n(i + 1)
-    }, [i, l, n]), T = s.useCallback(() => {
+    }, [i, l, n]), A = s.useCallback(() => {
       n(i - 1)
-    }, [i, n]), A = s.useCallback(e => {
+    }, [i, n]), N = s.useCallback(e => {
       n(e)
-    }, [n]), N = s.useMemo(() => [{
+    }, [n]), M = s.useMemo(() => [{
       index: v.ClanSetupSteps.GAMES,
       name: R.default.Messages.CLAN_SETUP_GAMES_STEP
     }, {
@@ -91,16 +91,16 @@ let O = [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.UT
     return (0, a.jsxs)("div", {
       className: L.footer,
       children: [(0, a.jsx)(g.ClanSetupProgress, {
-        steps: N,
+        steps: M,
         currentStepIndex: i,
         furthestStepIndex: C,
-        onStepClick: A
+        onStepClick: N
       }), (0, a.jsx)(g.ClanSetupProgressButtons, {
         className: L.footerButtons,
-        isBackDisabled: p,
-        isNextDisabled: S,
-        onNextClick: I,
-        onBackClick: T,
+        isBackDisabled: I,
+        isNextDisabled: p,
+        onNextClick: T,
+        onBackClick: A,
         children: (0, a.jsxs)("div", {
           className: L.footerAlphaMsg,
           children: [(0, a.jsx)(c.default, {

@@ -79,7 +79,7 @@ t.default = e => {
           children: Array.from(C).map(e => (0, a.jsx)(c.default, {
             applicationId: e,
             onClick: e !== S ? A : void 0,
-            imageContainerClassName: e !== S ? h.clickableGame : void 0,
+            imageContainerClassName: e !== S ? h.clickableGame : h.defaultGame,
             selected: !0
           }, e))
         }), (0, a.jsx)("div", {
