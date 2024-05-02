@@ -1,30 +1,30 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("392711"),
-  s = a.n(n),
-  l = a("710845"),
-  i = a("581883"),
-  r = a("314897"),
-  o = a("287328"),
-  u = a("261875");
+n.r(t), n("47120");
+var a = n("392711"),
+  s = n.n(a),
+  l = n("710845"),
+  i = n("581883"),
+  r = n("314897"),
+  o = n("287328"),
+  u = n("261875");
 
-function d(e, t, a) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 let c = new l.default("UserSettingsProto");
 t.default = new class e {
   async getAll(e) {
     let t = performance.now(),
-      a = await o.default.userSettings(e).getMany(),
-      n = performance.now();
-    c.verbose("loaded in ".concat(n - t, "ms (settings: ").concat(a.length, ")"));
+      n = await o.default.userSettings(e).getMany(),
+      a = performance.now();
+    c.verbose("loaded in ".concat(a - t, "ms (settings: ").concat(n.length, ")"));
     let s = {};
-    for (let e of a) s[e.id] = e.value;
+    for (let e of n) s[e.id] = e.value;
     return s
   }
   resetInMemoryState() {}
@@ -38,14 +38,14 @@ t.default = new class e {
       let e = r.default.getId(),
         t = u.default.database(e);
       null == t || t.transaction(e => {
-        var t, a;
-        let n = i.default.computeState(),
+        var t, n;
+        let a = i.default.computeState(),
           s = o.default.userSettingsTransaction(e);
-        for (let e in n) s.put({
+        for (let e in a) s.put({
           id: Number(e),
-          value: n[e]
+          value: a[e]
         });
-        let l = null !== (a = null === (t = i.default.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== a ? a : -1;
+        let l = null !== (n = null === (t = i.default.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
         o.default.nonGuildVersionsTransaction(e).put({
           id: "user_settings_version",
           version: l

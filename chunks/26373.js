@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useListHasSingleMessageRequest: function() {
     return u
   },
@@ -7,29 +7,29 @@ a.r(t), a.d(t, {
     return d
   }
 });
-var n = a("470079"),
-  s = a("442837"),
-  l = a("355298"),
-  i = a("333984"),
-  r = a("899740"),
-  o = a("355350");
+var a = n("470079"),
+  s = n("442837"),
+  l = n("355298"),
+  i = n("333984"),
+  r = n("899740"),
+  o = n("355350");
 
 function u() {
   let e = (0, r.useMessageRequestsCount)(),
-    t = n.useRef(e),
-    a = (0, s.useStateFromStores)([l.default], () => l.default.isReady()),
-    i = n.useRef(a);
-  return n.useEffect(() => {
-    a && !i.current && (i.current = !0, t.current = e)
-  }, [a, e]), t.current <= 1 && 1 === e
+    t = a.useRef(e),
+    n = (0, s.useStateFromStores)([l.default], () => l.default.isReady()),
+    i = a.useRef(n);
+  return a.useEffect(() => {
+    n && !i.current && (i.current = !0, t.current = e)
+  }, [n, e]), t.current <= 1 && 1 === e
 }
 
 function d() {
   let e = (0, o.useSpamMessageRequestCount)(),
-    t = n.useRef(e),
-    a = (0, s.useStateFromStores)([i.default], () => i.default.isReady()),
-    l = n.useRef(a);
-  return n.useEffect(() => {
-    a && !l.current && (l.current = !0, t.current = e)
-  }, [a, e]), t.current <= 1 && 1 === e
+    t = a.useRef(e),
+    n = (0, s.useStateFromStores)([i.default], () => i.default.isReady()),
+    l = a.useRef(n);
+  return a.useEffect(() => {
+    n && !l.current && (l.current = !0, t.current = e)
+  }, [n, e]), t.current <= 1 && 1 === e
 }

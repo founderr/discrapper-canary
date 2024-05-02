@@ -1,18 +1,18 @@
 "use strict";
 
-function n(e, t, a) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return s
   }
-}), a("653041");
+}), n("653041");
 class s {
   _processQueue() {
     setTimeout(() => {
@@ -32,6 +32,6 @@ class s {
     })
   }
   constructor(e, t) {
-    n(this, "_capacity", void 0), n(this, "_tokenCount", void 0), n(this, "_queue", void 0), n(this, "_intervalPeriod", void 0), n(this, "_intervalID", void 0), this._capacity = e, this._tokenCount = e, this._queue = [], this._intervalPeriod = t / e, this._intervalID = null
+    a(this, "_capacity", void 0), a(this, "_tokenCount", void 0), a(this, "_queue", void 0), a(this, "_intervalPeriod", void 0), a(this, "_intervalID", void 0), this._capacity = e, this._tokenCount = e, this._queue = [], this._intervalPeriod = t / e, this._intervalID = null
   }
 }

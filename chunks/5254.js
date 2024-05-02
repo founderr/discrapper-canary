@@ -1,11 +1,11 @@
 "use strict";
-a.r(t), a("47120");
-var n, s, l, i, r = a("392711"),
-  o = a.n(r),
-  u = a("442837"),
-  d = a("570140"),
-  c = a("598077"),
-  f = a("594174");
+n.r(t), n("47120");
+var a, s, l, i, r = n("392711"),
+  o = n.n(r),
+  u = n("442837"),
+  d = n("570140"),
+  c = n("598077"),
+  f = n("594174");
 let E = {},
   h = 0,
   _ = !1,
@@ -13,16 +13,16 @@ let E = {},
 
 function m(e) {
   var t;
-  let a = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
+  let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
   return {
     key: e.suggested_user.id,
     name: null === (t = o().first(e.reasons)) || void 0 === t ? void 0 : t.name,
     user: new c.default(e.suggested_user),
     mutualFriendsCount: e.mutual_friends_count,
-    contactNames: a
+    contactNames: n
   }
 }
-class S extends(n = u.default.Store) {
+class S extends(a = u.default.Store) {
   initialize() {
     this.waitFor(f.default)
   }
@@ -31,8 +31,8 @@ class S extends(n = u.default.Store) {
   }
   getSuggestions() {
     return Object.entries(E).map(e => {
-      let [t, a] = e;
-      return a
+      let [t, n] = e;
+      return n
     })
   }
   getSuggestion(e) {

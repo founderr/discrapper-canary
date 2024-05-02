@@ -1,38 +1,38 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("613828"),
-  i = a("442837"),
-  r = a("493683"),
-  o = a("112724"),
-  u = a("108427"),
-  d = a("184107"),
-  c = a("410575"),
-  f = a("613311"),
-  E = a("601564"),
-  h = a("981631"),
-  _ = a("314865");
+n.r(t), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("613828"),
+  i = n("442837"),
+  r = n("493683"),
+  o = n("112724"),
+  u = n("108427"),
+  d = n("184107"),
+  c = n("410575"),
+  f = n("613311"),
+  E = n("601564"),
+  h = n("981631"),
+  _ = n("314865");
 
-function C(e, t, a) {
+function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 class m extends s.Component {
   componentDidMount() {
     this.fetchStoreListing(), (0, u.trackAppUIViewed)("channel_store_listing")
   }
   render() {
-    return null != this.props.skuId ? (0, n.jsx)(c.default, {
+    return null != this.props.skuId ? (0, a.jsx)(c.default, {
       page: h.AnalyticsPages.CHANNEL_STORE_LISTING,
       root: !0,
-      children: (0, n.jsx)("div", {
+      children: (0, a.jsx)("div", {
         className: _.applicationStore,
-        children: (0, n.jsx)(l.Route, {
+        children: (0, a.jsx)(l.Route, {
           path: "*",
           render: this.renderApplicationListing
         })
@@ -43,19 +43,19 @@ class m extends s.Component {
     super(...e), C(this, "fetchStoreListing", e => {
       let {
         channel: t,
-        inputSkuId: a
+        inputSkuId: n
       } = this.props;
-      return null != e ? r.default.fetchChannelStoreListing(t.id, e) : null != a ? r.default.fetchChannelStoreListing(t.id, a) : r.default.fetchChannelStoreListing(t.id)
+      return null != e ? r.default.fetchChannelStoreListing(t.id, e) : null != n ? r.default.fetchChannelStoreListing(t.id, n) : r.default.fetchChannelStoreListing(t.id)
     }), C(this, "renderApplicationListing", e => {
       let {
         location: t
       } = e, {
-        channel: a,
+        channel: n,
         skuId: s,
         width: l
       } = this.props;
-      return (0, n.jsx)(f.default, {
-        channel: a,
+      return (0, a.jsx)(f.default, {
+        channel: n,
         inputSkuId: s,
         fetchStoreListing: this.fetchStoreListing,
         location: t,
@@ -67,9 +67,9 @@ class m extends s.Component {
 t.default = (0, o.default)(i.default.connectStores([d.default], e => {
   let {
     channel: t,
-    inputSkuId: a
+    inputSkuId: n
   } = e;
   return {
-    skuId: null != a ? a : d.default.getSkuIdForChannel(t.id)
+    skuId: null != n ? n : d.default.getSkuIdForChannel(t.id)
   }
 })(m))

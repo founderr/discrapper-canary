@@ -1,42 +1,42 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return o
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("120356"),
-  l = a.n(s),
-  i = a("481060"),
-  r = a("757937");
+var a = n("735250");
+n("470079");
+var s = n("120356"),
+  l = n.n(s),
+  i = n("481060"),
+  r = n("757937");
 
 function o(e) {
   let {
     padded: t = !0,
-    inset: a = !1,
+    inset: n = !1,
     active: s = !1,
     className: o,
     children: u,
     onClick: d,
     ...c
   } = e;
-  return null != d ? (0, n.jsx)(i.Clickable, {
+  return null != d ? (0, a.jsx)(i.Clickable, {
     onClick: d,
     tabIndex: null != d ? 0 : -1,
     className: l()(o, {
-      [r.outer]: !a,
-      [r.inset]: a,
+      [r.outer]: !n,
+      [r.inset]: n,
       [r.padded]: t,
       [r.active]: s,
       [r.interactive]: null != d
     }),
     ...c,
     children: u
-  }) : (0, n.jsx)("div", {
+  }) : (0, a.jsx)("div", {
     className: l()(o, {
-      [r.outer]: !a,
-      [r.inset]: a,
+      [r.outer]: !n,
+      [r.inset]: n,
       [r.padded]: t,
       [r.active]: s
     }),

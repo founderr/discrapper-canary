@@ -1,15 +1,15 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useClanSetupGameSelectableSearch: function() {
     return d
   }
 });
-var n = a("470079"),
-  s = a("392711"),
-  l = a.n(s),
-  i = a("442837"),
-  r = a("77498"),
-  o = a("308083");
+var a = n("470079"),
+  s = n("392711"),
+  l = n.n(s),
+  i = n("442837"),
+  r = n("77498"),
+  o = n("308083");
 
 function u(e) {
   var t;
@@ -26,10 +26,10 @@ function d() {
       } = e;
       return u(t)
     }).reverse().value(), []),
-    t = n.useCallback((e, t) => u(t.item.value) - u(e.item.value), []);
+    t = a.useCallback((e, t) => u(t.item.value) - u(e.item.value), []);
   return {
     options: e,
-    matchSorterOptions: n.useMemo(() => ({
+    matchSorterOptions: a.useMemo(() => ({
       baseSort: t,
       keys: ["label"]
     }), [t])

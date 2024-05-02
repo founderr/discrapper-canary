@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   ClanDiscoveryUserScreens: function() {
     return s
   },
@@ -7,14 +7,14 @@ a.r(t), a.d(t, {
     return o
   }
 });
-var n, s, l = a("116175"),
-  i = a("308083");
+var a, s, l = n("116175"),
+  i = n("308083");
 
 function r(e) {
   let {
     id: t,
-    preset: a,
-    banner: n
+    preset: n,
+    banner: a
   } = e;
   return {
     id: t,
@@ -25,19 +25,19 @@ function r(e) {
     playstyle: i.ClanPlaystyles.CASUAL,
     tag: "",
     traits: [],
-    banner: n,
+    banner: a,
     badge: {
       badgeKind: l.ClanBadgeKind.SWORD,
-      primaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
-      secondaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
+      primaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].primary,
+      secondaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].secondary
     },
     branding: {
-      primaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
-      secondaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
+      primaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].primary,
+      secondaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].secondary
     },
     wildcardDescriptors: []
   }
-}(n = s || (s = {})).USER_UPSELL = "user_upsell", n.USER_ONBOARDING = "user_onboarding";
+}(a = s || (s = {})).USER_UPSELL = "user_upsell", a.USER_ONBOARDING = "user_onboarding";
 let o = [r({
   id: "1",
   preset: i.ClanBrandPresets.ZEPHYR,

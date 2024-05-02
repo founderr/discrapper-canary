@@ -1,21 +1,21 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return d
   }
 });
-var n = a("735250"),
-  s = a("470079"),
-  l = a("481060"),
-  i = a("946314"),
-  r = a("921944"),
-  o = a("689938"),
-  u = a("212552");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("481060"),
+  i = n("946314"),
+  r = n("921944"),
+  o = n("689938"),
+  u = n("212552");
 
 function d(e) {
   let {
     onClick: t,
-    onSecondaryClick: a,
+    onSecondaryClick: n,
     onComponentMount: d,
     markAsDismissed: c
   } = e;
@@ -26,29 +26,29 @@ function d(e) {
       t(e), null == c || c(r.ContentDismissActionType.PRIMARY)
     }, [t, c]),
     E = s.useCallback(() => {
-      null == a || a(), null == c || c(r.ContentDismissActionType.SECONDARY)
-    }, [a, c]);
-  return (0, n.jsxs)("div", {
+      null == n || n(), null == c || c(r.ContentDismissActionType.SECONDARY)
+    }, [n, c]);
+  return (0, a.jsxs)("div", {
     className: u.tooltipWrapper,
-    children: [(0, n.jsx)(l.Heading, {
+    children: [(0, a.jsx)(l.Heading, {
       className: u.tooltipHeader,
       variant: "heading-md/semibold",
       children: o.default.Messages.SERVER_DISCOVERY_TOOLTIP_TITLE
-    }), (0, n.jsx)(l.Text, {
+    }), (0, a.jsx)(l.Text, {
       className: u.tooltipText,
       variant: "text-sm/normal",
       children: o.default.Messages.SERVER_DISCOVERY_TOOLTIP_DESCRIPTION.format({
         count: i.LOWERED_MINIMUM_SIZE
       })
-    }), (0, n.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: u.buttonsContainer,
-      children: [(0, n.jsx)(l.Button, {
+      children: [(0, a.jsx)(l.Button, {
         fullWidth: !0,
         size: l.Button.Sizes.SMALL,
         color: l.Button.Colors.BRAND,
         onClick: f,
         children: o.default.Messages.LEARN_MORE
-      }), (0, n.jsx)(l.Button, {
+      }), (0, a.jsx)(l.Button, {
         fullWidth: !0,
         size: l.Button.Sizes.SMALL,
         look: l.Button.Looks.BLANK,

@@ -1,22 +1,22 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return u
   }
 });
-var n = a("996106"),
-  s = a("631467"),
-  l = a("76238"),
-  i = a("186901"),
-  r = a("981631");
+var a = n("996106"),
+  s = n("631467"),
+  l = n("76238"),
+  i = n("186901"),
+  r = n("981631");
 
-function o(e, t, a) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 class u extends l.default {
   send(e) {
@@ -32,19 +32,19 @@ class u extends l.default {
   constructor({
     origin: e,
     postMessageToRPCClient: t,
-    frameId: a,
+    frameId: n,
     version: s,
     encoding: l,
     logger: u,
     postClose: d,
     onSendingToRPCClient: c
   }) {
-    if (super(i.TransportTypes.POST_MESSAGE, s, l), o(this, "origin", void 0), o(this, "frameId", void 0), o(this, "postMessageToRPCClient", void 0), o(this, "logger", void 0), o(this, "postClose", void 0), o(this, "onSendingToRPCClient", void 0), o(this, "closed", void 0), -1 === ["etf", "json"].indexOf(l)) throw new n.default({
+    if (super(i.TransportTypes.POST_MESSAGE, s, l), o(this, "origin", void 0), o(this, "frameId", void 0), o(this, "postMessageToRPCClient", void 0), o(this, "logger", void 0), o(this, "postClose", void 0), o(this, "onSendingToRPCClient", void 0), o(this, "closed", void 0), -1 === ["etf", "json"].indexOf(l)) throw new a.default({
       closeCode: r.RPCCloseCodes.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(l));
-    if ("etf" === l) throw new n.default({
+    if ("etf" === l) throw new a.default({
       closeCode: r.RPCCloseCodes.INVALID_ENCODING
     }, "Erlpack cannot be used on this client");
-    this.origin = e, this.postMessageToRPCClient = t, this.frameId = a, this.logger = u, this.postClose = d, this.onSendingToRPCClient = c, this.closed = !1
+    this.origin = e, this.postMessageToRPCClient = t, this.frameId = n, this.logger = u, this.postClose = d, this.onSendingToRPCClient = c, this.closed = !1
   }
 }

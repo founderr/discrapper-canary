@@ -67,7 +67,7 @@ async function E(e, t) {
     url: d.Endpoints.GET_REFERRAL_ELIGIBLE_USERS,
     body: {
       index: e,
-      limit: 30,
+      limit: 10,
       search_query: t
     },
     oldFormErrors: !0

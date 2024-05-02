@@ -1,15 +1,15 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return h
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("249849"),
-  l = a("907561"),
-  i = a("689938"),
-  r = a("12008");
+var a = n("735250");
+n("470079");
+var s = n("249849"),
+  l = n("907561"),
+  i = n("689938"),
+  r = n("12008");
 let o = ["#01007f", "#0000b0", "#0000e1", "#2d3dee", "#5470e9", "#a091eb", "#cc99ff"],
   u = ["#a7e4e4", "#ffffff"],
   d = [.01, .03, .055, .1, .19, .25, .35],
@@ -47,7 +47,7 @@ let o = ["#01007f", "#0000b0", "#0000e1", "#2d3dee", "#5470e9", "#a091eb", "#cc9
 function h(e) {
   let {
     width: t,
-    height: a,
+    height: n,
     primaryTintColor: h,
     secondaryTintColor: _,
     ...C
@@ -67,12 +67,12 @@ function h(e) {
     bannerPreviewRef: p,
     onLoad: I
   } = (0, l.useClanBannerStyleInjection)(m, S);
-  return (0, n.jsx)("object", {
+  return (0, a.jsx)("object", {
     ...C,
     ref: p,
     "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
-    height: a,
+    height: n,
     data: r,
     onLoad: I
   })

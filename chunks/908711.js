@@ -1,7 +1,7 @@
 "use strict";
-a.r(t);
-var n = a("408841"),
-  s = a("981631");
+n.r(t);
+var a = n("408841"),
+  s = n("981631");
 t.default = {
-  [s.RPCCommands.SEND_GENERIC_EVENT]: n.deprecatedCommand
+  [s.RPCCommands.SEND_GENERIC_EVENT]: a.deprecatedCommand
 }

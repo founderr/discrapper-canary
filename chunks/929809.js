@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   setNewUser: function() {
     return s
   },
@@ -7,17 +7,17 @@ a.r(t), a.d(t, {
     return l
   }
 });
-var n = a("570140");
+var a = n("570140");
 
 function s(e) {
-  n.default.wait(() => n.default.dispatch({
+  a.default.wait(() => a.default.dispatch({
     type: "NUF_NEW_USER",
     newUserType: e
   }))
 }
 
 function l() {
-  n.default.wait(() => n.default.dispatch({
+  a.default.wait(() => a.default.dispatch({
     type: "NUF_COMPLETE"
   }))
 }

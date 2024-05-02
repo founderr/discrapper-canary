@@ -1,20 +1,20 @@
 "use strict";
-a.r(t), a("47120");
-var n, s = a("442837"),
-  l = a("570140"),
-  i = a("701488");
+n.r(t), n("47120");
+var a, s = n("442837"),
+  l = n("570140"),
+  i = n("701488");
 
-function r(e, t, a) {
+function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 let o = new Set,
   u = new Set([i.WhatsNewSection.DISCORD_TURNS_8]);
-class d extends(n = s.default.PersistedStore) {
+class d extends(a = s.default.PersistedStore) {
   initialize(e) {
     null != e && (Array.isArray(e.acknowledged) && (o = new Set(e.acknowledged)), Array.isArray(e.opened) && (u = new Set(e.opened)))
   }

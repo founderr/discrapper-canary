@@ -1,32 +1,32 @@
 "use strict";
-a.r(t);
-var n = a("735250");
-a("470079");
-var s = a("718017"),
-  l = a("442837"),
-  i = a("536442"),
-  r = a("984933"),
-  o = a("496675"),
-  u = a("51382"),
-  d = a("91326"),
-  c = a("503856"),
-  f = a("981631");
+n.r(t);
+var a = n("735250");
+n("470079");
+var s = n("718017"),
+  l = n("442837"),
+  i = n("536442"),
+  r = n("984933"),
+  o = n("496675"),
+  u = n("51382"),
+  d = n("91326"),
+  c = n("503856"),
+  f = n("981631");
 
 function E(e) {
   let {
     channel: t,
-    guild: a
+    guild: n
   } = e, r = (0, l.useStateFromStores)([i.HotspotStore], () => i.HotspotStore.hasHotspot(i.HotspotLocations.HUB_STUDY_ROOM_NOTICE)), o = (0, c.useConnectedInCurrentHub)(t.guild_id), f = (0, s.useSpring)({
     maxHeight: o ? 0 : 300,
     overflow: "hidden",
     delay: 400
   });
-  return (0, n.jsx)(s.animated.div, {
+  return (0, a.jsx)(s.animated.div, {
     style: f,
-    children: r ? (0, n.jsx)(u.default, {
+    children: r ? (0, a.jsx)(u.default, {
       channel: t,
-      guild: a
-    }) : (0, n.jsx)(d.default, {
+      guild: n
+    }) : (0, a.jsx)(d.default, {
       name: "\uD83D\uDCDA☕ ".concat(t.name),
       channel: t
     })
@@ -35,9 +35,9 @@ function E(e) {
 t.default = function(e) {
   let {
     guild: t
-  } = e, a = (0, l.useStateFromStores)([r.default], () => r.default.getChannels(t.id)[r.GUILD_VOCAL_CHANNELS_KEY][0]), s = (0, l.useStateFromStores)([o.default], () => null != a && o.default.can(f.Permissions.CONNECT, a.channel));
-  return t.hasFeature(f.GuildFeatures.HUB) && null != a && s ? (0, n.jsx)(E, {
-    channel: a.channel,
+  } = e, n = (0, l.useStateFromStores)([r.default], () => r.default.getChannels(t.id)[r.GUILD_VOCAL_CHANNELS_KEY][0]), s = (0, l.useStateFromStores)([o.default], () => null != n && o.default.can(f.Permissions.CONNECT, n.channel));
+  return t.hasFeature(f.GuildFeatures.HUB) && null != n && s ? (0, a.jsx)(E, {
+    channel: n.channel,
     guild: t
   }) : null
 }

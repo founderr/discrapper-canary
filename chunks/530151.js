@@ -1,89 +1,89 @@
 "use strict";
-a.r(t), a("411104"), a("47120"), a("724458"), a("653041");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("120356"),
-  i = a.n(l),
-  r = a("392711"),
-  o = a.n(r),
-  u = a("442837"),
-  d = a("692547"),
-  c = a("780384"),
-  f = a("481060"),
-  E = a("570140"),
-  h = a("239091"),
-  _ = a("51025"),
-  C = a("785547"),
-  m = a("730749"),
-  S = a("112724"),
-  p = a("812206"),
-  I = a("44315"),
-  g = a("210887"),
-  T = a("283595"),
-  A = a("417363"),
-  N = a("941128"),
-  v = a("451478"),
-  R = a("285952"),
-  L = a("366695"),
-  O = a("366966"),
-  M = a("151011"),
-  P = a("774832"),
-  x = a("465670"),
-  y = a("786048"),
-  D = a("897353"),
-  b = a("424218"),
-  U = a("780570"),
-  j = a("353042"),
-  G = a("86826"),
-  w = a("981631"),
-  k = a("689938"),
-  B = a("221419");
+n.r(t), n("411104"), n("47120"), n("724458"), n("653041");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("392711"),
+  o = n.n(r),
+  u = n("442837"),
+  d = n("692547"),
+  c = n("780384"),
+  f = n("481060"),
+  E = n("570140"),
+  h = n("239091"),
+  _ = n("51025"),
+  C = n("785547"),
+  m = n("730749"),
+  S = n("112724"),
+  p = n("812206"),
+  I = n("44315"),
+  T = n("210887"),
+  g = n("283595"),
+  A = n("417363"),
+  N = n("941128"),
+  v = n("451478"),
+  R = n("285952"),
+  L = n("366695"),
+  O = n("366966"),
+  M = n("151011"),
+  P = n("774832"),
+  x = n("465670"),
+  y = n("786048"),
+  D = n("897353"),
+  b = n("424218"),
+  U = n("780570"),
+  j = n("353042"),
+  G = n("86826"),
+  w = n("981631"),
+  k = n("689938"),
+  B = n("221419");
 
-function F(e, t, a) {
+function F(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 let H = e => {
     let {
       className: t,
-      children: a,
+      children: n,
       onContextMenu: s,
       item: l
     } = e;
-    return (0, n.jsx)("div", {
+    return (0, a.jsx)("div", {
       className: t,
       onContextMenu: e => s(e, l),
-      children: a
+      children: n
     })
   },
   V = [d.default.unsafe_rawColors.BLUE_345.css, d.default.colors.INTERACTIVE_NORMAL.css],
   Y = e => {
     let {
       tooltip: t,
-      onClick: a,
+      onClick: n,
       icon: s
     } = e;
-    return (0, n.jsx)(f.Tooltip, {
+    return (0, a.jsx)(f.Tooltip, {
       text: t,
       children: e => {
         let {
           onMouseEnter: l,
           onMouseLeave: i
         } = e;
-        return (0, n.jsx)(f.Button, {
+        return (0, a.jsx)(f.Button, {
           "aria-label": t,
           className: B.actionButton,
           innerClassName: B.actionButtonContents,
           color: f.Button.Colors.PRIMARY,
           size: f.Button.Sizes.ICON,
-          onClick: a,
+          onClick: n,
           onMouseEnter: l,
           onMouseLeave: i,
-          children: (0, n.jsx)(s, {
+          children: (0, a.jsx)(s, {
             className: B.actionIcon
           })
         })
@@ -106,83 +106,83 @@ function W(e, t) {
 }
 let K = {
   [w.LocalDispatchApplicationStates.INSTALLING]: {
-    [O.TimeUnits.NONE]: (e, t, a, n) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+    [O.TimeUnits.NONE]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
       percent: e,
       progress: t,
-      total: a
+      total: n
     }),
-    [O.TimeUnits.SECONDS]: (e, t, a, n) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+    [O.TimeUnits.SECONDS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
       percent: e,
       progress: t,
-      total: a,
-      timeRemaining: n
+      total: n,
+      timeRemaining: a
     }),
-    [O.TimeUnits.MINUTES]: (e, t, a, n) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+    [O.TimeUnits.MINUTES]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
       percent: e,
       progress: t,
-      total: a,
-      timeRemaining: n
+      total: n,
+      timeRemaining: a
     }),
-    [O.TimeUnits.HOURS]: (e, t, a, n) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+    [O.TimeUnits.HOURS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
       percent: e,
       progress: t,
-      total: a,
-      timeRemaining: n
+      total: n,
+      timeRemaining: a
     })
   },
   [w.LocalDispatchApplicationStates.UPDATING]: {
-    [O.TimeUnits.NONE]: (e, t, a, n) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
+    [O.TimeUnits.NONE]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
       percent: e,
       progress: t,
-      total: a
+      total: n
     }),
-    [O.TimeUnits.SECONDS]: (e, t, a, n) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
+    [O.TimeUnits.SECONDS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
       percent: e,
       progress: t,
-      total: a,
-      timeRemaining: n
+      total: n,
+      timeRemaining: a
     }),
-    [O.TimeUnits.MINUTES]: (e, t, a, n) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
+    [O.TimeUnits.MINUTES]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
       percent: e,
       progress: t,
-      total: a,
-      timeRemaining: n
+      total: n,
+      timeRemaining: a
     }),
-    [O.TimeUnits.HOURS]: (e, t, a, n) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
+    [O.TimeUnits.HOURS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
       percent: e,
       progress: t,
-      total: a,
-      timeRemaining: n
+      total: n,
+      timeRemaining: a
     })
   },
   [w.LocalDispatchApplicationStates.REPAIRING]: {
-    [O.TimeUnits.NONE]: (e, t, a, n) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+    [O.TimeUnits.NONE]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
       percent: e,
       progress: t,
-      total: a
+      total: n
     }),
-    [O.TimeUnits.SECONDS]: (e, t, a, n) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+    [O.TimeUnits.SECONDS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
       percent: e,
       progress: t,
-      total: a,
-      timeRemaining: n
+      total: n,
+      timeRemaining: a
     }),
-    [O.TimeUnits.MINUTES]: (e, t, a, n) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+    [O.TimeUnits.MINUTES]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
       percent: e,
       progress: t,
-      total: a,
-      timeRemaining: n
+      total: n,
+      timeRemaining: a
     }),
-    [O.TimeUnits.HOURS]: (e, t, a, n) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+    [O.TimeUnits.HOURS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
       percent: e,
       progress: t,
-      total: a,
-      timeRemaining: n
+      total: n,
+      timeRemaining: a
     })
   }
 };
 
-function z(e, t, a, n, s) {
+function z(e, t, n, a, s) {
   let l = K[t],
     i = null != l ? Object.keys(l) : [],
     {
@@ -191,7 +191,7 @@ function z(e, t, a, n, s) {
     } = (0, O.getTimeAndUnit)(null != e ? e / 60 : null, i);
   if (null != l && null != r) {
     let e = l[r];
-    return null != e ? e(a, n, s, o) : null
+    return null != e ? e(n, a, s, o) : null
   }
   return null
 }
@@ -199,56 +199,56 @@ function z(e, t, a, n, s) {
 function q(e) {
   let {
     type: t,
-    stage: a,
-    percent: n,
+    stage: n,
+    percent: a,
     progress: s,
     total: l,
     secondsRemaining: i
-  } = e, r = W(l, a), o = W(s, a);
-  switch (a) {
+  } = e, r = W(l, n), o = W(s, n);
+  switch (n) {
     case w.DispatchApplicationStages.QUEUED:
       if (0 === s) return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_WAITING_FOR_ANOTHER_NO_TRANSITION;
       return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_WAITING_FOR_ANOTHER.format({
-        percent: n,
+        percent: a,
         progress: o,
         total: r
       });
     case w.DispatchApplicationStages.PLANNING:
       return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PLANNING.format({
-        percent: n
+        percent: a
       });
     case w.DispatchApplicationStages.ALLOCATING_DISK:
       return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_ALLOCATING_DISK.format({
-        percent: n
+        percent: a
       });
     case w.DispatchApplicationStages.PATCHING:
-      return z(i, t, n, o, r);
+      return z(i, t, a, o, r);
     case w.DispatchApplicationStages.FINALIZING:
       return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINALIZING.format({
-        percent: n
+        percent: a
       });
     case w.DispatchApplicationStages.PAUSING:
       return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSING.format({
-        percent: n,
+        percent: a,
         progress: o,
         total: r
       });
     case w.DispatchApplicationStages.VERIFYING:
       return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_VERIFYING.format({
-        percent: n,
+        percent: a,
         progress: o,
         total: r
       });
     case w.DispatchApplicationStages.POST_INSTALL_SCRIPTS:
       return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_POST_INSTALL_SCRIPTS.format({
-        percent: n,
+        percent: a,
         progress: o,
         total: r
       });
     case w.DispatchApplicationStages.REPAIRING:
-      if (t === w.LocalDispatchApplicationStates.REPAIRING) return z(i, t, n, o, r);
+      if (t === w.LocalDispatchApplicationStates.REPAIRING) return z(i, t, a, o, r);
       return k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_REPAIRING.format({
-        percent: n,
+        percent: a,
         progress: o,
         total: r
       })
@@ -270,19 +270,19 @@ class Z extends s.PureComponent {
   renderBody(e) {
     let {
       percent: t,
-      foregroundColor: a,
+      foregroundColor: n,
       foregroundGradientColor: s,
       message: l
     } = e;
-    return (0, n.jsxs)(R.default, {
+    return (0, a.jsxs)(R.default, {
       direction: R.default.Direction.VERTICAL,
-      children: [(0, n.jsx)(f.Progress, {
+      children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
-        foregroundColor: (0, I.getColor)(a),
+        foregroundColor: (0, I.getColor)(n),
         foregroundGradientColor: null != s ? [(0, I.getColor)(s[0]), (0, I.getColor)(s[1])] : void 0,
         animate: this.isFocused
-      }), (0, n.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: B.progressCellText,
         children: null != l ? l : ""
       })]
@@ -291,18 +291,18 @@ class Z extends s.PureComponent {
   renderStackedProgress(e) {
     let {
       percents: t,
-      message: a
+      message: n
     } = e;
-    return (0, n.jsxs)(R.default, {
+    return (0, a.jsxs)(R.default, {
       direction: R.default.Direction.VERTICAL,
-      children: [(0, n.jsx)(f.StackedProgress, {
+      children: [(0, a.jsx)(f.StackedProgress, {
         percents: t,
         size: f.Progress.Sizes.SMALL,
         foregroundColors: V,
         animate: this.isFocused
-      }), (0, n.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: B.progressCellText,
-        children: null != a ? a : ""
+        children: null != n ? n : ""
       })]
     })
   }
@@ -322,34 +322,34 @@ class Z extends s.PureComponent {
     let e, t;
     let {
       item: {
-        state: a,
-        theme: n
+        state: n,
+        theme: a
       }
     } = this.props;
-    if (null != a) {
+    if (null != n) {
       let {
-        progress: n,
+        progress: a,
         total: s,
         stage: l
-      } = a;
-      if (null != n && null != s) {
-        let a = W(s, l),
-          i = W(n, l),
-          r = Math.floor(t = U.calculateProgressPercentage(n, s));
+      } = n;
+      if (null != a && null != s) {
+        let n = W(s, l),
+          i = W(a, l),
+          r = Math.floor(t = U.calculateProgressPercentage(a, s));
         e = l === w.DispatchApplicationStages.PAUSING ? k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSING.format({
           percent: r,
           progress: i,
-          total: a
+          total: n
         }) : k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_QUEUED.format({
           percent: r,
           progress: i,
-          total: a
+          total: n
         })
       }
     }
     return (null == t || null == e) && (t = 0, e = k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_QUEUED_NO_TRANSITION), this.renderBody({
       percent: t,
-      foregroundColor: (0, c.isThemeLight)(n) ? w.Color.PRIMARY_300 : w.Color.PRIMARY_500,
+      foregroundColor: (0, c.isThemeLight)(a) ? w.Color.PRIMARY_300 : w.Color.PRIMARY_500,
       message: e
     })
   }
@@ -362,15 +362,15 @@ class Z extends s.PureComponent {
     } = this.props;
     if (null == e) return null;
     let {
-      progress: a,
-      total: n
+      progress: n,
+      total: a
     } = e;
-    if (null == a || null == n) return null;
-    let s = U.calculateProgressPercentage(a, n),
-      l = 0 === a && 1 === n ? k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED_NO_TRANSITION : k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED.format({
+    if (null == n || null == a) return null;
+    let s = U.calculateProgressPercentage(n, a),
+      l = 0 === n && 1 === a ? k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED_NO_TRANSITION : k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_PAUSED.format({
         percent: Math.floor(s),
-        progress: (0, b.formatSize)(a),
-        total: (0, b.formatSize)(n)
+        progress: (0, b.formatSize)(n),
+        total: (0, b.formatSize)(a)
       });
     return this.renderBody({
       message: l,
@@ -379,7 +379,7 @@ class Z extends s.PureComponent {
     })
   }
   renderProgressPatching() {
-    return (0, n.jsx)(j.default, {
+    return (0, a.jsx)(j.default, {
       getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
       updateInterval: 5e3,
       children: this.renderProgressPatchingBody
@@ -392,20 +392,20 @@ class Z extends s.PureComponent {
     if (null == e) return null;
     let {
       total: t,
-      progress: a,
-      stage: n,
+      progress: n,
+      stage: a,
       type: s
     } = e;
-    if (null == t || null == a || null == n) return null;
-    let l = U.calculateProgressPercentage(a, t),
+    if (null == t || null == n || null == a) return null;
+    let l = U.calculateProgressPercentage(n, t),
       i = Math.floor(l);
     return this.renderBody({
       percent: l,
       message: q({
         type: s,
-        stage: n,
+        stage: a,
         percent: i,
-        progress: a,
+        progress: n,
         total: t
       }),
       foregroundColor: w.Color.BLUE_345
@@ -437,25 +437,25 @@ class Z extends s.PureComponent {
     super(...e), F(this, "renderProgressPatchingBody", (e, t) => {
       let {
         item: {
-          state: a
+          state: n
         }
       } = this.props;
-      if (null == a) return null;
+      if (null == n) return null;
       let {
-        stage: n,
+        stage: a,
         progress: s,
         total: l,
         type: i,
         readerProgress: r
-      } = a;
-      if (null == s || null == l || null == n) return null;
+      } = n;
+      if (null == s || null == l || null == a) return null;
       let o = U.calculateProgressPercentage(s, l),
         u = U.calculateProgressPercentage(null != r ? r : 0, l),
         d = e[e.length - 1] / t * 1e3,
         c = l - s,
         f = q({
           type: i,
-          stage: n,
+          stage: a,
           percent: Math.floor(o),
           progress: s,
           total: l,
@@ -468,12 +468,12 @@ class Z extends s.PureComponent {
     })
   }
 }
-let X = () => (0, n.jsx)(Y, {
+let X = () => (0, a.jsx)(Y, {
     icon: D.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
     onClick: () => _.resume()
   }),
-  J = () => (0, n.jsx)(Y, {
+  J = () => (0, a.jsx)(Y, {
     icon: y.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
     onClick: () => _.pause()
@@ -482,7 +482,7 @@ let X = () => (0, n.jsx)(Y, {
     let {
       item: t
     } = e;
-    return (0, n.jsx)(Y, {
+    return (0, a.jsx)(Y, {
       icon: P.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
       onClick: () => _.moveUp(t.applicationId, t.branchId)
@@ -492,7 +492,7 @@ let X = () => (0, n.jsx)(Y, {
     let {
       item: t
     } = e;
-    return (0, n.jsx)(Y, {
+    return (0, a.jsx)(Y, {
       icon: x.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
       onClick: () => _.cancel(t.applicationId, t.branchId)
@@ -501,13 +501,13 @@ let X = () => (0, n.jsx)(Y, {
   et = [{
     key: Q.NAME,
     cellClassName: B.nameCell,
-    render: e => (0, n.jsxs)(R.default, {
+    render: e => (0, a.jsxs)(R.default, {
       align: R.default.Align.CENTER,
-      children: [(0, n.jsx)(L.default, {
+      children: [(0, a.jsx)(L.default, {
         game: e.application,
         className: B.__invalid_gameIcon,
         size: L.default.Sizes.SMALL
-      }), (0, n.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: B.nameCellText,
         children: e.application.name
       })]
@@ -517,7 +517,7 @@ let X = () => (0, n.jsx)(Y, {
     cellClassName: B.progressCell,
     headerCellClassName: B.progressCellHeader,
     bodyCellClassName: B.progressCellBody,
-    render: (e, t) => (0, n.jsx)(Z, {
+    render: (e, t) => (0, a.jsx)(Z, {
       item: e,
       cellProps: t
     })
@@ -525,27 +525,27 @@ let X = () => (0, n.jsx)(Y, {
     key: Q.ACTIONS,
     cellClassName: B.actionsCell,
     render(e, t) {
-      let a, s;
-      return e.finished ? a = null != e.libraryApplication ? (0, n.jsx)(C.default, {
+      let n, s;
+      return e.finished ? n = null != e.libraryApplication ? (0, a.jsx)(C.default, {
         libraryApplication: e.libraryApplication,
         size: f.Button.Sizes.SMALL,
         className: B.gameActionButton,
         source: w.AnalyticsLocations.APPLICATION_LIBRARY_UPDATES
-      }) : null : null != e.state ? e.state.type !== w.LocalDispatchApplicationStates.UP_TO_DATE && (a = e.index > 0 ? (0, n.jsx)($, {
+      }) : null : null != e.state ? e.state.type !== w.LocalDispatchApplicationStates.UP_TO_DATE && (n = e.index > 0 ? (0, a.jsx)($, {
         item: e
-      }) : null != t && t.paused ? (0, n.jsx)(X, {}) : (0, n.jsx)(J, {
+      }) : null != t && t.paused ? (0, a.jsx)(X, {}) : (0, a.jsx)(J, {
         item: e
-      }), s = (0, n.jsx)(ee, {
+      }), s = (0, a.jsx)(ee, {
         item: e
-      })) : s = (0, n.jsx)(ee, {
+      })) : s = (0, a.jsx)(ee, {
         item: e
-      }), (0, n.jsxs)(R.default, {
+      }), (0, a.jsxs)(R.default, {
         justify: R.default.Justify.END,
-        children: [a, s]
+        children: [n, s]
       })
     }
   }];
-class ea extends s.PureComponent {
+class en extends s.PureComponent {
   componentDidMount() {
     window.addEventListener("resize", this.throttledUpdateHeight)
   }
@@ -570,24 +570,24 @@ class ea extends s.PureComponent {
       theme: l,
       analyticsContext: r
     } = this.props;
-    return 0 === e.length ? null : (0, n.jsxs)("div", {
+    return 0 === e.length ? null : (0, a.jsxs)("div", {
       className: B.gameUpdates,
-      children: [(0, n.jsxs)("div", {
+      children: [(0, a.jsxs)("div", {
         className: B.headerRow,
-        children: [(0, n.jsx)(G.default, {
+        children: [(0, a.jsx)(G.default, {
           className: i()(B.headerCell, B.networkProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesDownloaded,
           color: w.Color.GREEN_360,
           animate: s
-        }), (0, n.jsx)(G.default, {
+        }), (0, a.jsx)(G.default, {
           className: i()(B.headerCell, B.diskProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
           color: w.Color.BLUE_345,
           animate: s
         })]
-      }), (0, n.jsx)(M.default, {
+      }), (0, a.jsx)(M.default, {
         hasHeader: !1,
         columns: et,
         data: e,
@@ -605,8 +605,8 @@ class ea extends s.PureComponent {
             return s = e, l = t, i = r, void h.openContextMenuLazy(s, async () => {
               let {
                 default: e
-              } = await a.e("98335").then(a.bind(a, "485292"));
-              return t => (0, n.jsx)(e, {
+              } = await n.e("98335").then(n.bind(n, "485292"));
+              return t => (0, a.jsx)(e, {
                 ...t,
                 applicationId: l.applicationId,
                 branchId: l.branchId,
@@ -625,36 +625,36 @@ class ea extends s.PureComponent {
       let {
         height: e,
         onHeightTallerThanHalfViewportChange: t
-      } = this.props, a = e > window.innerHeight / 2;
-      this.isTallerThanHalfViewport !== a && (this.isTallerThanHalfViewport = a, t(a))
+      } = this.props, n = e > window.innerHeight / 2;
+      this.isTallerThanHalfViewport !== n && (this.isTallerThanHalfViewport = n, t(n))
     }, 1e3))
   }
 }
 
-function en(e, t, a, n) {
+function ea(e, t, n, a) {
   return e.reduce((e, s, l) => {
     let {
       applicationId: i,
       branchId: r
-    } = s, o = a.getApplication(i), u = n.getState(i, r);
+    } = s, o = n.getApplication(i), u = a.getState(i, r);
     return null != o && e.push({
       key: "".concat(i, ":").concat(r),
       applicationId: i,
       branchId: r,
       state: u,
       application: o,
-      libraryApplication: T.default.getLibraryApplication(i, r),
+      libraryApplication: g.default.getLibraryApplication(i, r),
       finished: t,
       index: l
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, g.default, v.default], () => {
-  let e = en(N.default.activeItems, !1, p.default, A.default);
+t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, T.default, v.default], () => {
+  let e = ea(N.default.activeItems, !1, p.default, A.default);
   return {
-    applications: [...e, ...en(N.default.finishedItems, !0, p.default, A.default)],
+    applications: [...e, ...ea(N.default.finishedItems, !0, p.default, A.default)],
     paused: N.default.paused,
     isFocused: v.default.isFocused(),
-    theme: g.default.theme
+    theme: T.default.theme
   }
-})((0, m.default)(ea)))
+})((0, m.default)(en)))

@@ -1,17 +1,17 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useClanBannerStyleInjection: function() {
     return s
   }
 });
-var n = a("470079");
+var a = n("470079");
 
 function s(e, t) {
-  let a = n.useRef(null),
-    s = n.useCallback(() => {
-      var n;
-      if (null == a.current) return;
-      let s = null === (n = a.current) || void 0 === n ? void 0 : n.getSVGDocument();
+  let n = a.useRef(null),
+    s = a.useCallback(() => {
+      var a;
+      if (null == n.current) return;
+      let s = null === (a = n.current) || void 0 === a ? void 0 : a.getSVGDocument();
       if (null == s) return;
       let l = s.getElementById("clan-banner-custom-style-node");
       if (null == l) return;
@@ -19,8 +19,8 @@ function s(e, t) {
         r = t.map((e, t) => ".secondary-".concat(t, " { fill: ").concat(e, "; stop-color: ").concat(e, " }")).join(" ");
       l.textContent = "".concat(i, " ").concat(r)
     }, [e, t]);
-  return n.useEffect(() => s(), [s]), {
-    bannerPreviewRef: a,
+  return a.useEffect(() => s(), [s]), {
+    bannerPreviewRef: n,
     onLoad: s
   }
 }

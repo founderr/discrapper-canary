@@ -1,13 +1,13 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return r
   }
 });
-var n = a("392711"),
-  s = a.n(n),
-  l = a("186901"),
-  i = a("981631");
+var a = n("392711"),
+  s = n.n(a),
+  l = n("186901"),
+  i = n("981631");
 
 function r(e, t) {
   return {
@@ -17,26 +17,26 @@ function r(e, t) {
       },
       handler: () => t => {
         let {
-          prevState: a,
-          dispatch: n
+          prevState: n,
+          dispatch: a
         } = t, l = e();
-        return !s().isEqual(l, a) && n(l), l
+        return !s().isEqual(l, n) && a(l), l
       }
     },
     [i.RPCEvents.VOICE_SETTINGS_UPDATE_2]: {
       scope: l.RPC_LOCAL_SCOPE,
       handler(e) {
         let {
-          socket: a
+          socket: n
         } = e;
         return e => {
           let {
-            prevState: n,
+            prevState: a,
             dispatch: l
           } = e;
-          if (null == a.application.id) return n;
-          let i = t(a.application.id);
-          return !s().isEqual(i, n) && l(i), i
+          if (null == n.application.id) return a;
+          let i = t(n.application.id);
+          return !s().isEqual(i, a) && l(i), i
         }
       }
     }

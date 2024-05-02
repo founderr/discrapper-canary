@@ -1,26 +1,26 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return o
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("481060"),
-  l = a("970731"),
-  i = a("689938"),
-  r = a("533173");
+var a = n("735250");
+n("470079");
+var s = n("481060"),
+  l = n("970731"),
+  i = n("689938"),
+  r = n("533173");
 
 function o(e) {
   let {
     guildId: t,
     markAsDismissed: o
   } = e;
-  return (0, n.jsx)(l.default, {
+  return (0, a.jsx)(l.default, {
     className: r.container,
-    asset: (0, n.jsx)("img", {
+    asset: (0, a.jsx)("img", {
       className: r.image,
-      src: a("297806"),
+      src: n("297806"),
       alt: ""
     }),
     header: i.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_TITLE,
@@ -35,9 +35,9 @@ function o(e) {
       (0, s.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([a.e("49237"), a.e("99387"), a.e("5863"), a.e("29041")]).then(a.bind(a, "751212"));
-        return a => (0, n.jsx)(e, {
-          ...a,
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("5863"), n.e("29041")]).then(n.bind(n, "751212"));
+        return n => (0, a.jsx)(e, {
+          ...n,
           guildId: t
         })
       })

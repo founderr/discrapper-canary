@@ -1,23 +1,23 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useFakeDiscoveryClanForGuild: function() {
     return o
   }
 });
-var n = a("470079"),
-  s = a("468194"),
-  l = a("316553"),
-  i = a("116175"),
-  r = a("308083");
+var a = n("470079"),
+  s = n("468194"),
+  l = n("316553"),
+  i = n("116175"),
+  r = n("308083");
 
 function o(e) {
   let {
     guild: t,
-    selectedGame: a
+    selectedGame: n
   } = e, o = (0, l.useDiscoveryGameApplicationId)({
-    selectedGame: a
-  }), u = n.useMemo(() => null == o ? [] : [o], [o]);
-  return n.useMemo(() => {
+    selectedGame: n
+  }), u = a.useMemo(() => null == o ? [] : [o], [o]);
+  return a.useMemo(() => {
     var e;
     return null == t ? null : {
       id: t.id,

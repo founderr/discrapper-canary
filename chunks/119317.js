@@ -1,10 +1,10 @@
 "use strict";
-a.r(t);
-var n = a("735250"),
-  s = a("470079"),
-  l = a("664751"),
-  i = a("481060"),
-  r = a("703656");
+n.r(t);
+var a = n("735250"),
+  s = n("470079"),
+  l = n("664751"),
+  i = n("481060"),
+  r = n("703656");
 class o extends s.PureComponent {
   componentDidUpdate(e) {
     let {
@@ -18,36 +18,36 @@ class o extends s.PureComponent {
     let {
       totalCount: e,
       pageSize: t,
-      maxVisiblePages: a,
+      maxVisiblePages: n,
       children: s
     } = this.props, {
       currentPage: l
     } = this.state;
     return s({
-      controller: (0, n.jsx)(i.Paginator, {
+      controller: (0, a.jsx)(i.Paginator, {
         totalCount: e,
         pageSize: t,
         currentPage: l,
-        maxVisiblePages: a,
+        maxVisiblePages: n,
         onPageChange: this.handlePageChange
       })
     })
   }
   constructor(e) {
-    var t, a, n;
-    super(e), t = this, a = "handlePageChange", n = e => {
+    var t, n, a;
+    super(e), t = this, n = "handlePageChange", a = e => {
       let {
         onPageChange: t
       } = this.props;
       this.setState({
         currentPage: e
       }), null != t && t(e)
-    }, a in t ? Object.defineProperty(t, a, {
-      value: n,
+    }, n in t ? Object.defineProperty(t, n, {
+      value: a,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[a] = n;
+    }) : t[n] = a;
     let s = (0, r.getHistory)().location.search,
       {
         offset: i

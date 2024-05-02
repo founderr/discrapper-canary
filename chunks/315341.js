@@ -1,34 +1,34 @@
 "use strict";
-a.r(t), a("518263"), a("970173"), a("520712"), a("268111"), a("941497"), a("32026"), a("480839"), a("744285"), a("492257"), a("873817");
-var n = a("442837"),
-  s = a("524437"),
-  l = a("381499"),
-  i = a("433517"),
-  r = a("581364"),
-  o = a("536442"),
-  u = a("592125"),
-  d = a("915486"),
-  c = a("48481"),
-  f = a("981631"),
-  E = a("798077");
+n.r(t), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817");
+var a = n("442837"),
+  s = n("524437"),
+  l = n("381499"),
+  i = n("433517"),
+  r = n("581364"),
+  o = n("536442"),
+  u = n("592125"),
+  d = n("915486"),
+  c = n("48481"),
+  f = n("981631"),
+  E = n("798077");
 
 function h(e, t) {
-  let a = !1;
+  let n = !1;
   return null == e.userContent && (e.userContent = {
     dismissedContents: new Uint8Array,
     lastReceivedChangelogId: "0"
-  }), null == e.userContent.dismissedContents && (e.userContent.dismissedContents = new Uint8Array), !(0, d.hasBit)(e.userContent.dismissedContents, t) && (e.userContent.dismissedContents = (0, d.addBit)(e.userContent.dismissedContents, t), a = !0), a
+  }), null == e.userContent.dismissedContents && (e.userContent.dismissedContents = new Uint8Array), !(0, d.hasBit)(e.userContent.dismissedContents, t) && (e.userContent.dismissedContents = (0, d.addBit)(e.userContent.dismissedContents, t), n = !0), n
 }
 
-function _(e, t, a) {
-  return !!o.HotspotStore.hasHiddenHotspot(t) && h(e, a)
+function _(e, t, n) {
+  return !!o.HotspotStore.hasHiddenHotspot(t) && h(e, n)
 }
 let C = [{
   version: 2,
   run(e) {
-    var t, a, n;
+    var t, n, a;
     let l;
-    if ((n = l || (l = {})).Mentions = "Recent Mentions", n.Unreads = "Inbox", null != e.inbox) return !1;
+    if ((a = l || (l = {})).Mentions = "Recent Mentions", a.Unreads = "Inbox", null != e.inbox) return !1;
     let r = !1,
       o = s.InboxSettings.create();
     e.inbox = o, i.Storage.get("seenInboxTutorial", !1) && (o.viewedTutorial = !0, r = !0);
@@ -37,8 +37,8 @@ let C = [{
     let f = null !== (t = i.Storage.get("unread-messages-collapsed-channels")) && void 0 !== t ? t : {};
     for (let t in f) {
       if (!f[t]) continue;
-      let n = u.default.getChannel(t);
-      null != n && (r = !0, (0, c.mutateUserChannelSettings)(e, null !== (a = n.guild_id) && void 0 !== a ? a : "0", n.id, e => {
+      let a = u.default.getChannel(t);
+      null != a && (r = !0, (0, c.mutateUserChannelSettings)(e, null !== (n = a.guild_id) && void 0 !== n ? n : "0", a.id, e => {
         e.collapsedInInbox = !0
       }))
     }
@@ -52,12 +52,12 @@ let C = [{
   run(e) {
     let {
       state: t
-    } = n.default.PersistedStore.migrateAndReadStoreState("EmojiStore", [() => ({
+    } = a.default.PersistedStore.migrateAndReadStoreState("EmojiStore", [() => ({
       diversitySurrogate: i.Storage.get("EmojiDiversitySurrogate") || ""
     })]);
     if (null == t) return !1;
-    let a = !1;
-    return null != t.diversitySurrogate && "" !== t.diversitySurrogate && (null == e.textAndImages && (e.textAndImages = s.TextAndImagesSettings.create()), null == e.textAndImages.diversitySurrogate && (e.textAndImages.diversitySurrogate = l.StringValue.create()), e.textAndImages.diversitySurrogate.value = t.diversitySurrogate, a = !0), a
+    let n = !1;
+    return null != t.diversitySurrogate && "" !== t.diversitySurrogate && (null == e.textAndImages && (e.textAndImages = s.TextAndImagesSettings.create()), null == e.textAndImages.diversitySurrogate && (e.textAndImages.diversitySurrogate = l.StringValue.create()), e.textAndImages.diversitySurrogate.value = t.diversitySurrogate, n = !0), n
   },
   cleanup() {}
 }, {
@@ -72,9 +72,9 @@ let C = [{
 }, {
   version: 5,
   run(e) {
-    var t, a, n, r, o, u, d;
+    var t, n, a, r, o, u, d;
     let c = !1;
-    e.textAndImages = null !== (t = e.textAndImages) && void 0 !== t ? t : s.TextAndImagesSettings.create(), e.notifications = null !== (a = e.notifications) && void 0 !== a ? a : s.NotificationSettings.create(), e.privacy = null !== (n = e.privacy) && void 0 !== n ? n : s.PrivacySettings.create(), e.voiceAndVideo = null !== (r = e.voiceAndVideo) && void 0 !== r ? r : s.VoiceAndVideoSettings.create(), e.gameLibrary = null !== (o = e.gameLibrary) && void 0 !== o ? o : s.GameLibrarySettings.create(), e.debug = null !== (u = e.debug) && void 0 !== u ? u : s.DebugSettings.create();
+    e.textAndImages = null !== (t = e.textAndImages) && void 0 !== t ? t : s.TextAndImagesSettings.create(), e.notifications = null !== (n = e.notifications) && void 0 !== n ? n : s.NotificationSettings.create(), e.privacy = null !== (a = e.privacy) && void 0 !== a ? a : s.PrivacySettings.create(), e.voiceAndVideo = null !== (r = e.voiceAndVideo) && void 0 !== r ? r : s.VoiceAndVideoSettings.create(), e.gameLibrary = null !== (o = e.gameLibrary) && void 0 !== o ? o : s.GameLibrarySettings.create(), e.debug = null !== (u = e.debug) && void 0 !== u ? u : s.DebugSettings.create();
     let f = null !== (d = i.Storage.get("UserSettingsStore")) && void 0 !== d ? d : {};
     return "boolean" == typeof f.useRichChatTextBox && (e.textAndImages.useRichChatInput = l.BoolValue.create({
       value: f.useRichChatTextBox
@@ -121,9 +121,9 @@ let C = [{
   version: 10,
   run(e) {
     var t;
-    let a = _(e, o.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, s.DismissibleContent.CHANNEL_NOTICE_HUBLINK),
-      n = null !== (t = i.Storage.get("channelNotices")) && void 0 !== t ? t : {};
-    return !1 === n[f.ChannelNoticeTypes.INVITE] && h(e, s.DismissibleContent.CHANNEL_NOTICE_INVITE) && (a = !0), !1 === n[f.ChannelNoticeTypes.QUICKSWITCHER] && h(e, s.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER) && (a = !0), !1 === n[f.ChannelNoticeTypes.GUILD_BOOSTING] && h(e, s.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (a = !0), a
+    let n = _(e, o.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, s.DismissibleContent.CHANNEL_NOTICE_HUBLINK),
+      a = null !== (t = i.Storage.get("channelNotices")) && void 0 !== t ? t : {};
+    return !1 === a[f.ChannelNoticeTypes.INVITE] && h(e, s.DismissibleContent.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === a[f.ChannelNoticeTypes.QUICKSWITCHER] && h(e, s.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === a[f.ChannelNoticeTypes.GUILD_BOOSTING] && h(e, s.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n
   },
   cleanup() {
     i.Storage.remove("channelNotices")
@@ -166,9 +166,9 @@ let C = [{
   run(e) {
     let t = i.Storage.get("PromotionsPersistedStore");
     if (null == t) return !1;
-    let a = t._state.lastDismissedOutboundPromotionStartDate;
-    return null != a && (null == e.userContent && (e.userContent = s.UserContentSettings.create()), null == e.userContent.lastDismissedOutboundPromotionStartDate) && (e.userContent.lastDismissedOutboundPromotionStartDate = l.StringValue.create({
-      value: a
+    let n = t._state.lastDismissedOutboundPromotionStartDate;
+    return null != n && (null == e.userContent && (e.userContent = s.UserContentSettings.create()), null == e.userContent.lastDismissedOutboundPromotionStartDate) && (e.userContent.lastDismissedOutboundPromotionStartDate = l.StringValue.create({
+      value: n
     }), !0)
   },
   cleanup() {}
@@ -177,11 +177,11 @@ let C = [{
   run(e) {
     let {
       state: t
-    } = n.default.PersistedStore.migrateAndReadStoreState("ExpressionSuggestionsPersistedStore", null);
+    } = a.default.PersistedStore.migrateAndReadStoreState("ExpressionSuggestionsPersistedStore", null);
     if (null == t) return !1;
-    let a = t.expressionSuggestionsEnabled;
-    return null != a && (null == e.textAndImages && (e.textAndImages = s.TextAndImagesSettings.create()), null == e.textAndImages.expressionSuggestionsEnabled) && (e.textAndImages.expressionSuggestionsEnabled = l.BoolValue.create({
-      value: a
+    let n = t.expressionSuggestionsEnabled;
+    return null != n && (null == e.textAndImages && (e.textAndImages = s.TextAndImagesSettings.create()), null == e.textAndImages.expressionSuggestionsEnabled) && (e.textAndImages.expressionSuggestionsEnabled = l.BoolValue.create({
+      value: n
     }), !0)
   },
   cleanup() {
@@ -198,8 +198,8 @@ let C = [{
   version: 19,
   run(e) {
     var t;
-    let a = !1;
-    return null !== (t = i.Storage.get("forumHelperCardStorageKey")) && void 0 !== t && t && (a = h(e, s.DismissibleContent.FORUM_CHANNEL_HELPER_CARD)), a
+    let n = !1;
+    return null !== (t = i.Storage.get("forumHelperCardStorageKey")) && void 0 !== t && t && (n = h(e, s.DismissibleContent.FORUM_CHANNEL_HELPER_CARD)), n
   },
   cleanup() {
     i.Storage.remove("forumHelperCardStorageKey")

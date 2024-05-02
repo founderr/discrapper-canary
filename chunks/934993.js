@@ -1,10 +1,10 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("570140"),
-  s = a("996106"),
-  l = a("452426"),
-  i = a("186901"),
-  r = a("981631");
+n.r(t), n("47120");
+var a = n("570140"),
+  s = n("996106"),
+  l = n("452426"),
+  i = n("186901"),
+  r = n("981631");
 t.default = {
   [r.RPCCommands.SET_CONFIG]: {
     scope: i.RPC_AUTHENTICATED_SCOPE,
@@ -15,7 +15,7 @@ t.default = {
       let {
         socket: t,
         args: {
-          use_interactive_pip: a
+          use_interactive_pip: n
         }
       } = e;
       if (t.transport !== i.TransportTypes.POST_MESSAGE) throw new s.default({
@@ -24,14 +24,14 @@ t.default = {
       if (null == t.application.id) throw new s.default({
         errorCode: r.RPCErrors.INVALID_COMMAND
       }, "invalid application");
-      return n.default.dispatch({
+      return a.default.dispatch({
         type: "EMBEDDED_ACTIVITY_SET_CONFIG",
         applicationId: t.application.id,
         config: {
-          useInteractivePIP: a
+          useInteractivePIP: n
         }
       }), Promise.resolve({
-        use_interactive_pip: a
+        use_interactive_pip: n
       })
     }
   }

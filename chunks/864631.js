@@ -1,8 +1,8 @@
 "use strict";
 
-function n(e) {}
-a.r(t), a.d(t, {
+function a(e) {}
+n.r(t), n.d(t, {
   default: function() {
-    return n
+    return a
   }
 })

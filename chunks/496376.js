@@ -1,35 +1,35 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("120356"),
-  i = a.n(l),
-  r = a("442837"),
-  o = a("481060"),
-  u = a("224706"),
-  d = a("607070"),
-  c = a("132580"),
-  f = a("246364"),
-  E = a("931240"),
-  h = a("650461"),
-  _ = a("620929"),
-  C = a("94963"),
-  m = a("745628"),
-  S = a("950279"),
-  p = a("796918"),
-  I = a("513532"),
-  g = a("741595"),
-  T = a("754961"),
-  A = a("974842"),
-  N = a("359380"),
-  v = a("308083"),
-  R = a("689938"),
-  L = a("156610");
+n.r(t), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("442837"),
+  o = n("481060"),
+  u = n("224706"),
+  d = n("607070"),
+  c = n("132580"),
+  f = n("246364"),
+  E = n("931240"),
+  h = n("650461"),
+  _ = n("620929"),
+  C = n("94963"),
+  m = n("745628"),
+  S = n("950279"),
+  p = n("796918"),
+  I = n("513532"),
+  T = n("741595"),
+  g = n("754961"),
+  A = n("974842"),
+  N = n("359380"),
+  v = n("308083"),
+  R = n("689938"),
+  L = n("156610");
 let O = [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.UTILITY_TRAITS, v.ClanSetupSteps.INTERESTS, v.ClanSetupSteps.DESCRIPTION, v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, v.ClanSetupSteps.CUSTOMIZE_BANNER, v.ClanSetupSteps.MEMBER_APPLICATION],
   M = e => {
     let {
       progress: t,
-      setCurrentStep: a,
+      setCurrentStep: n,
       onLastStep: l
     } = e, {
       currentStep: i,
@@ -58,12 +58,12 @@ let O = [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.UT
           return !1
       }
     }, [i, E.length, r.size, m, d.size, u, h.length]), p = 0 === i, I = s.useCallback(() => {
-      i === O.length - 1 ? l() : a(i + 1)
-    }, [i, l, a]), g = s.useCallback(() => {
-      a(i - 1)
-    }, [i, a]), A = s.useCallback(e => {
-      a(e)
-    }, [a]), N = s.useMemo(() => [{
+      i === O.length - 1 ? l() : n(i + 1)
+    }, [i, l, n]), T = s.useCallback(() => {
+      n(i - 1)
+    }, [i, n]), A = s.useCallback(e => {
+      n(e)
+    }, [n]), N = s.useMemo(() => [{
       index: v.ClanSetupSteps.GAMES,
       name: R.default.Messages.CLAN_SETUP_GAMES_STEP
     }, {
@@ -88,24 +88,24 @@ let O = [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.UT
       index: v.ClanSetupSteps.MEMBER_APPLICATION,
       name: R.default.Messages.CLAN_SETUP_APPLICATIONS_STEP
     }], []);
-    return (0, n.jsxs)("div", {
+    return (0, a.jsxs)("div", {
       className: L.footer,
-      children: [(0, n.jsx)(T.ClanSetupProgress, {
+      children: [(0, a.jsx)(g.ClanSetupProgress, {
         steps: N,
         currentStepIndex: i,
         furthestStepIndex: C,
         onStepClick: A
-      }), (0, n.jsx)(T.ClanSetupProgressButtons, {
+      }), (0, a.jsx)(g.ClanSetupProgressButtons, {
         className: L.footerButtons,
         isBackDisabled: p,
         isNextDisabled: S,
         onNextClick: I,
-        onBackClick: g,
-        children: (0, n.jsxs)("div", {
+        onBackClick: T,
+        children: (0, a.jsxs)("div", {
           className: L.footerAlphaMsg,
-          children: [(0, n.jsx)(c.default, {
+          children: [(0, a.jsx)(c.default, {
             className: L.footerAlphaTag
-          }), (0, n.jsx)(o.Text, {
+          }), (0, a.jsx)(o.Text, {
             variant: "text-sm/medium",
             children: "This is currently in Alpha, use test servers only!"
           })]
@@ -116,20 +116,20 @@ let O = [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.UT
 t.default = e => {
   let {
     guildId: t,
-    setPage: a,
+    setPage: n,
     onClose: l
   } = e, {
     progress: c,
     errors: f
   } = (0, r.useStateFromStoresObject)([h.default], () => {
     var e;
-    let a = h.default.getStateForGuild(t);
+    let n = h.default.getStateForGuild(t);
     return {
-      progress: null !== (e = a.progress) && void 0 !== e ? e : h.DEFAULT_CLAN_PROGRESS,
-      errors: a.errors
+      progress: null !== (e = n.progress) && void 0 !== e ? e : h.DEFAULT_CLAN_PROGRESS,
+      errors: n.errors
     }
   }), {
-    requiredGameId: T,
+    requiredGameId: g,
     gameApplicationIds: P,
     playstyle: x,
     interests: y,
@@ -156,21 +156,21 @@ t.default = e => {
       interests: e
     }), [F]),
     W = s.useCallback(() => {
-      k(!1), setTimeout(() => a(v.ClanSetupModalPages.SIGN), 199)
-    }, [a]);
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(o.Button, {
+      k(!1), setTimeout(() => n(v.ClanSetupModalPages.SIGN), 199)
+    }, [n]);
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(o.Button, {
       className: L.closeButton,
       look: o.Button.Looks.OUTLINED,
       size: o.Button.Sizes.MEDIUM,
       color: o.Button.Colors.PRIMARY,
       onClick: l,
       children: R.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
-    }), (0, n.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: i()(L.mainContent, L.fadeIn, {
         [L.fadeOut]: !w
       }),
-      children: [(0, n.jsx)(o.Sequencer, {
+      children: [(0, a.jsx)(o.Sequencer, {
         step: U,
         steps: O,
         sideMargin: 24,
@@ -178,22 +178,22 @@ t.default = e => {
         className: L.sequencer,
         innerClassName: L.sequencer,
         animatedNodeClassName: L.sequencer,
-        children: (0, n.jsx)(o.ScrollerThin, {
+        children: (0, a.jsx)(o.ScrollerThin, {
           className: L.scroller,
           fade: !0,
           children: (() => {
             switch (U) {
               case v.ClanSetupSteps.GAMES:
-                return (0, n.jsx)(S.default, {
+                return (0, a.jsx)(S.default, {
                   title: R.default.Messages.CLAN_SETUP_GAMES_TITLE,
                   description: R.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
                   handleUpdate: H,
                   gameApplicationIds: P,
-                  requiredGameId: T,
+                  requiredGameId: g,
                   error: null == f ? void 0 : f.gameApplicationIds
                 });
               case v.ClanSetupSteps.PLAYSTYLE:
-                return (0, n.jsx)(g.default, {
+                return (0, a.jsx)(T.default, {
                   title: R.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
                   description: R.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
                   handleUpdate: V,
@@ -201,28 +201,28 @@ t.default = e => {
                   error: null == f ? void 0 : f.playstyle
                 });
               case v.ClanSetupSteps.UTILITY_TRAITS:
-                return (0, n.jsx)(N.default, {
+                return (0, a.jsx)(N.default, {
                   title: R.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
                   description: R.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
-                  requiredGameId: T,
+                  requiredGameId: g,
                   handleUpdate: Y,
                   interests: y
                 });
               case v.ClanSetupSteps.INTERESTS:
-                return (0, n.jsx)(p.default, {
+                return (0, a.jsx)(p.default, {
                   handleUpdate: F,
                   interests: y,
                   error: null == f ? void 0 : f.interests
                 });
               case v.ClanSetupSteps.DESCRIPTION:
-                return (0, n.jsx)(m.default, {
+                return (0, a.jsx)(m.default, {
                   handleUpdate: F,
                   description: D,
                   wildcardDescriptors: c.wildcardDescriptors,
                   errors: f
                 });
               case v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
-                return (0, n.jsx)(A.default, {
+                return (0, a.jsx)(A.default, {
                   handleUpdate: F,
                   tag: b,
                   error: null == f ? void 0 : f.tag,
@@ -232,30 +232,30 @@ t.default = e => {
                   furthestStep: j
                 });
               case v.ClanSetupSteps.CUSTOMIZE_BANNER:
-                return (0, n.jsx)(C.default, {
+                return (0, a.jsx)(C.default, {
                   handleUpdate: F,
                   progress: c,
                   guildId: t
                 });
               case v.ClanSetupSteps.MEMBER_APPLICATION:
-                return (0, n.jsx)(I.default, {
+                return (0, a.jsx)(I.default, {
                   guildId: t
                 })
             }
           })()
         })
-      }), (0, n.jsx)(M, {
+      }), (0, a.jsx)(M, {
         setCurrentStep: B,
         progress: c,
         onLastStep: W
       })]
-    }), (0, n.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: L.divider
-    }), (0, n.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: i()(L.overviewSidebar, {
         [L.fadeOut]: G && !w
       }),
-      children: (0, n.jsx)(_.default, {
+      children: (0, a.jsx)(_.default, {
         guildId: t
       })
     })]

@@ -1,25 +1,25 @@
 "use strict";
-a.r(t);
-var n = a("735250");
-a("470079");
-var s = a("570140"),
-  l = a("317770"),
-  i = a("663993"),
-  r = a("788983"),
-  o = a("981631");
-a("732207");
+n.r(t);
+var a = n("735250");
+n("470079");
+var s = n("570140"),
+  l = n("317770"),
+  i = n("663993"),
+  r = n("788983"),
+  o = n("981631");
+n("732207");
 let u = (0, i.makeLazy)({
-    createPromise: () => a.e("58621").then(a.bind(a, "223455")),
+    createPromise: () => n.e("58621").then(n.bind(n, "223455")),
     webpackId: "223455",
     name: "PopoutWindowChannelCall"
   }),
   d = (0, i.makeLazy)({
-    createPromise: () => a.e("91032").then(a.bind(a, "432472")),
+    createPromise: () => n.e("91032").then(n.bind(n, "432472")),
     webpackId: "432472",
     name: "PopoutWindowStageChannelCall"
   }),
   c = (0, i.makeLazy)({
-    createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("33053"), a.e("92006")]).then(a.bind(a, "945778")),
+    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("33053"), n.e("92006")]).then(n.bind(n, "945778")),
     webpackId: "945778",
     name: "PopoutWindowRTCDebug"
   });
@@ -34,10 +34,10 @@ class f extends l.default {
     let {
       channel: t
     } = e;
-    r.open(o.PopoutWindowKeys.CHANNEL_CALL_POPOUT, e => t.isGuildStageVoice() ? (0, n.jsx)(d, {
+    r.open(o.PopoutWindowKeys.CHANNEL_CALL_POPOUT, e => t.isGuildStageVoice() ? (0, a.jsx)(d, {
       windowKey: e,
       channelId: t.id
-    }) : (0, n.jsx)(u, {
+    }) : (0, a.jsx)(u, {
       windowKey: e,
       channelId: t.id
     }), {
@@ -46,7 +46,7 @@ class f extends l.default {
     })
   }
   handleOpenRTCDebugPopout() {
-    r.open(o.PopoutWindowKeys.RTC_DEBUG_POPOUT, e => (0, n.jsx)(c, {
+    r.open(o.PopoutWindowKeys.RTC_DEBUG_POPOUT, e => (0, a.jsx)(c, {
       windowKey: e
     }), {
       defaultWidth: 854,

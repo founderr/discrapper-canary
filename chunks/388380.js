@@ -1,12 +1,12 @@
 "use strict";
-a.r(t);
-var n = a("544891"),
-  s = a("570140"),
-  l = a("981631");
+n.r(t);
+var a = n("544891"),
+  s = n("570140"),
+  l = n("981631");
 t.default = {
   async fetch() {
     try {
-      let e = await n.HTTP.get({
+      let e = await a.HTTP.get({
         url: l.Endpoints.FRIEND_SUGGESTIONS
       });
       s.default.dispatch({
@@ -20,6 +20,6 @@ t.default = {
     }
   },
   ignore(e) {
-    n.HTTP.del(l.Endpoints.FRIEND_SUGGESTION(e))
+    a.HTTP.del(l.Endpoints.FRIEND_SUGGESTION(e))
   }
 }

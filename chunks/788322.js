@@ -1,33 +1,33 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   DiscoverSearchResultPlaceholder: function() {
     return R
   }
-}), a("47120");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("120356"),
-  i = a.n(l),
-  r = a("481060"),
-  o = a("239091"),
-  u = a("906732"),
-  d = a("134432"),
-  c = a("451603"),
-  f = a("885714"),
-  E = a("940627"),
-  h = a("806519"),
-  _ = a("768581"),
-  C = a("900849"),
-  m = a("556017"),
-  S = a("879484"),
-  p = a("26580"),
-  I = a("206887"),
-  g = a("981631"),
-  T = a("689938"),
-  A = a("37807"),
-  N = a("129512"),
-  v = a("330065");
-let R = () => (0, n.jsx)("div", {
+}), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("481060"),
+  o = n("239091"),
+  u = n("906732"),
+  d = n("134432"),
+  c = n("451603"),
+  f = n("885714"),
+  E = n("940627"),
+  h = n("806519"),
+  _ = n("768581"),
+  C = n("900849"),
+  m = n("556017"),
+  S = n("879484"),
+  p = n("26580"),
+  I = n("206887"),
+  T = n("981631"),
+  g = n("689938"),
+  A = n("37807"),
+  N = n("129512"),
+  v = n("330065");
+let R = () => (0, a.jsx)("div", {
   className: A.placeholder
 });
 t.default = e => {
@@ -54,9 +54,9 @@ t.default = e => {
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
-      case g.ThemeTypes.DARK:
+      case T.ThemeTypes.DARK:
         return N;
-      case g.ThemeTypes.LIGHT:
+      case T.ThemeTypes.LIGHT:
         return v
     }
   }(R), Y = null !== (t = _.default.getGuildIconURL({
@@ -71,11 +71,11 @@ t.default = e => {
       if ((0, c.isAtGuildCapAndNonPremium)()) {
         (0, f.default)({
           analyticsSource: {
-            page: g.AnalyticsPages.GUILD_DISCOVERY
+            page: T.AnalyticsPages.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: g.AnalyticsPages.GUILD_DISCOVERY,
-            section: g.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+            page: T.AnalyticsPages.GUILD_DISCOVERY,
+            section: T.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
           analyticsLocations: F
         });
@@ -99,13 +99,13 @@ t.default = e => {
   }, {
     autoTrackExposure: !1
   }), z = (0, m.useCanSeeDiscoveryContextMenu)();
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsxs)("div", {
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsxs)("div", {
       className: A.card,
-      children: [k ? (0, n.jsx)(r.Spinner, {
+      children: [k ? (0, a.jsx)(r.Spinner, {
         type: r.Spinner.Type.PULSING_ELLIPSIS,
         className: A.spinner
-      }) : null, (0, n.jsxs)(r.Clickable, {
+      }) : null, (0, a.jsxs)(r.Clickable, {
         className: i()(A.container, {
           [A.hover]: G,
           [A.submitting]: k
@@ -115,8 +115,8 @@ t.default = e => {
           (0, o.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await Promise.resolve().then(a.bind(a, "455839"));
-            return t => (0, n.jsx)(e, {
+            } = await Promise.resolve().then(n.bind(n, "455839"));
+            return t => (0, a.jsx)(e, {
               ...t,
               guild: l
             })
@@ -124,89 +124,89 @@ t.default = e => {
         },
         onMouseEnter: () => w(!0),
         onMouseLeave: () => w(!1),
-        children: [(0, n.jsx)("div", {
+        children: [(0, a.jsx)("div", {
           className: i()(A.splashContainer, {
             [A.splashContainerWithTags]: K
           }),
-          children: (0, n.jsx)("img", {
+          children: (0, a.jsx)("img", {
             src: V,
             alt: "",
             className: A.splashImage,
             width: 240
           })
-        }), (0, n.jsxs)("div", {
+        }), (0, a.jsxs)("div", {
           className: i()(A.content, {
             [A.contentWithTags]: K
           }),
-          children: [(0, n.jsxs)("div", {
+          children: [(0, a.jsxs)("div", {
             className: A.header,
-            children: [(0, n.jsx)(h.default, {
+            children: [(0, a.jsx)(h.default, {
               mask: h.default.Masks.SQUIRCLE,
               width: 32,
               height: 32,
-              children: (0, n.jsx)("img", {
+              children: (0, a.jsx)("img", {
                 src: Y,
                 alt: "",
                 className: A.avatar
               })
-            }), (0, n.jsxs)("div", {
+            }), (0, a.jsxs)("div", {
               className: A.headerName,
-              children: [(0, n.jsx)("div", {
-                children: (0, n.jsx)(E.default, {
+              children: [(0, a.jsx)("div", {
+                children: (0, a.jsx)(E.default, {
                   guild: l,
                   className: A.guildBadge,
                   size: 16
                 })
-              }), (0, n.jsx)(r.Heading, {
+              }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: A.headerTitle,
                 children: y
               })]
             })]
-          }), (0, n.jsx)(r.Text, {
+          }), (0, a.jsx)(r.Text, {
             className: A.description,
             variant: "text-sm/normal",
             children: D
-          }), K && null != j && null != O && (0, n.jsx)(p.DiscoveryTags, {
+          }), K && null != j && null != O && (0, a.jsx)(p.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: p.DiscoveryTagStyle.ALT,
             onTagClick: e => O(e, l.id),
             tags: j,
             section: C.AnalyticsContexts.SEARCH
-          }), (0, n.jsxs)("div", {
+          }), (0, a.jsxs)("div", {
             className: A.memberInfo,
-            children: [null != b && (0, n.jsx)("div", {
+            children: [null != b && (0, a.jsx)("div", {
               className: A.memberCount,
-              children: (0, n.jsx)(r.Text, {
+              children: (0, a.jsx)(r.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
-                children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                   membersOnline: b
                 })
               })
-            }), null != U && (0, n.jsxs)(n.Fragment, {
-              children: [(0, n.jsx)("div", {
+            }), null != U && (0, a.jsxs)(a.Fragment, {
+              children: [(0, a.jsx)("div", {
                 className: A.dotSeparator
-              }), (0, n.jsx)("div", {
+              }), (0, a.jsx)("div", {
                 className: A.memberCount,
-                children: (0, n.jsx)(r.Text, {
+                children: (0, a.jsx)(r.Text, {
                   variant: "text-xs/normal",
                   color: "header-secondary",
-                  children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                  children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                     count: U
                   })
                 })
               })]
             })]
           })]
-        }), z ? (0, n.jsx)("div", {
+        }), z ? (0, a.jsx)("div", {
           className: A.actionButtons,
-          children: (0, n.jsx)(I.default, {
+          children: (0, a.jsx)(I.default, {
             guild: l
           })
         }) : null]
       })]
-    }), (0, n.jsx)("hr", {
+    }), (0, a.jsx)("hr", {
       className: A.separator
     })]
   })

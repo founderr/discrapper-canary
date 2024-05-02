@@ -1,41 +1,41 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("120356"),
-  i = a.n(l),
-  r = a("143927"),
-  o = a("597312"),
-  u = a("780384"),
-  d = a("626135"),
-  c = a("792125"),
-  f = a("769727"),
-  E = a("207796"),
-  h = a("497189"),
-  _ = a("304231"),
-  C = a("526282"),
-  m = a("802001"),
-  S = a("559469"),
-  p = a("981631"),
-  I = a("231338"),
-  g = a("495257");
+n.r(t), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("143927"),
+  o = n("597312"),
+  u = n("780384"),
+  d = n("626135"),
+  c = n("792125"),
+  f = n("769727"),
+  E = n("207796"),
+  h = n("497189"),
+  _ = n("304231"),
+  C = n("526282"),
+  m = n("802001"),
+  S = n("559469"),
+  p = n("981631"),
+  I = n("231338"),
+  T = n("495257");
 
-function T(e) {
+function g(e) {
   let {
     children: t,
-    selectedGame: a,
+    selectedGame: n,
     className: l
   } = e, r = s.useMemo(() => {
-    switch (a) {
+    switch (n) {
       case E.ClanDiscoveryGame.GENSHIN:
-        return g.genshinBackgroundImage;
+        return T.genshinBackgroundImage;
       case E.ClanDiscoveryGame.VALORANT:
-        return g.valorantBackgroundImage
+        return T.valorantBackgroundImage
     }
-  }, [a]), o = (0, c.getThemeClass)(I.ThemeTypes.DARK);
-  return (0, n.jsx)(u.ThemeContextProvider, {
+  }, [n]), o = (0, c.getThemeClass)(I.ThemeTypes.DARK);
+  return (0, a.jsx)(u.ThemeContextProvider, {
     theme: I.ThemeTypes.DARK,
-    children: (0, n.jsx)("div", {
+    children: (0, a.jsx)("div", {
       className: i()(r, l, o),
       children: t
     })
@@ -44,31 +44,31 @@ function T(e) {
 
 function A() {
   let e = (0, E.useClanDiscoveryUIStore)(e => e.game, r.default),
-    [t, a] = s.useState(S.ClanDiscoveryUserScreens.USER_UPSELL),
+    [t, n] = s.useState(S.ClanDiscoveryUserScreens.USER_UPSELL),
     l = s.useCallback(() => {
-      d.default.track(p.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_CLICKED), a(S.ClanDiscoveryUserScreens.USER_ONBOARDING)
-    }, [a]);
+      d.default.track(p.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_CLICKED), n(S.ClanDiscoveryUserScreens.USER_ONBOARDING)
+    }, [n]);
   switch (t) {
     case S.ClanDiscoveryUserScreens.USER_UPSELL:
-      return (0, n.jsx)(o.ScrollerThin, {
-        className: g.upsellScroller,
+      return (0, a.jsx)(o.ScrollerThin, {
+        className: T.upsellScroller,
         fade: !0,
-        children: (0, n.jsx)(T, {
+        children: (0, a.jsx)(g, {
           selectedGame: e,
-          className: g.userUpsell,
-          children: (0, n.jsx)(C.default, {
+          className: T.userUpsell,
+          children: (0, a.jsx)(C.default, {
             selectedGame: e,
             onClick: l
           })
         })
       });
     case S.ClanDiscoveryUserScreens.USER_ONBOARDING:
-      return (0, n.jsx)(T, {
+      return (0, a.jsx)(g, {
         selectedGame: e,
-        className: g.userOnboarding,
-        children: (0, n.jsx)(_.default, {
+        className: T.userOnboarding,
+        children: (0, a.jsx)(_.default, {
           selectedGame: e,
-          setScreen: a
+          setScreen: n
         })
       })
   }
@@ -77,28 +77,28 @@ function A() {
 function N(e) {
   let {
     eligibleGuilds: t
-  } = e, a = (0, E.useClanDiscoveryUIStore)(e => e.game, r.default);
-  return (0, n.jsxs)(o.ScrollerThin, {
-    className: g.upsellScroller,
+  } = e, n = (0, E.useClanDiscoveryUIStore)(e => e.game, r.default);
+  return (0, a.jsxs)(o.ScrollerThin, {
+    className: T.upsellScroller,
     fade: !0,
-    children: [(0, n.jsx)(T, {
-      selectedGame: a,
-      className: g.adminUpsell,
-      children: (0, n.jsx)(h.default, {
-        selectedGame: a,
+    children: [(0, a.jsx)(g, {
+      selectedGame: n,
+      className: T.adminUpsell,
+      children: (0, a.jsx)(h.default, {
+        selectedGame: n,
         eligibleGuilds: t
       })
-    }), (0, n.jsx)(f.ClanDiscoveryTopPicks, {
+    }), (0, a.jsx)(f.ClanDiscoveryTopPicks, {
       limit: 10
     })]
   })
 }
 t.default = s.memo(function() {
   let e = (0, m.useGuildsEligibleForClanConversion)();
-  return (0, n.jsx)("div", {
-    className: g.container,
-    children: 0 !== e.length ? (0, n.jsx)(N, {
+  return (0, a.jsx)("div", {
+    className: T.container,
+    children: 0 !== e.length ? (0, a.jsx)(N, {
       eligibleGuilds: e
-    }) : (0, n.jsx)(A, {})
+    }) : (0, a.jsx)(A, {})
   })
 })

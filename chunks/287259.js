@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   sortList: function() {
     return s
   },
@@ -10,10 +10,10 @@ a.r(t), a.d(t, {
     return l
   }
 });
-var n = a("570140");
+var a = n("570140");
 
 function s(e, t) {
-  n.default.dispatch({
+  a.default.dispatch({
     type: "LIBRARY_TABLE_SORT_UPDATE",
     key: e,
     direction: t
@@ -21,7 +21,7 @@ function s(e, t) {
 }
 
 function l(e) {
-  n.default.dispatch({
+  a.default.dispatch({
     type: "LIBRARY_APPLICATION_FILTER_UPDATE",
     query: e
   })
@@ -29,7 +29,7 @@ function l(e) {
 
 function i(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  n.default.dispatch({
+  a.default.dispatch({
     type: "LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE",
     key: e,
     isKeyboardEvent: t
