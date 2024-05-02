@@ -386,6 +386,7 @@ e.exports = Object.freeze({
   CLAN_SETTTINGS_SELECT_PLAYSTYLE: "Select Playstyle",
   CLAN_SETTINGS_PERSONALITY_INFO: "Personality Info",
   CLAN_SETTINGS_SELECT_TRAITS: "Select Traits",
+  CLAN_SETTINGS_SELECT_INTERESTS: "Select Topics",
   CLAN_SETTINGS_WRITE_DESCRIPTION: "Write Description",
   CLAN_SETTINGS_CUSTOMIZE_IDENTITY: "Customize Identity",
   CLAN_SETTINGS_CLAN_BADGE: "Gaming Guild Badge",
