@@ -107,7 +107,7 @@ function _(e) {
         className: I.innerBlur,
         children: (0, l.jsx)(o.Text, {
           className: I.description,
-          variant: "text-md/normal",
+          variant: "text-xs/normal",
           children: "This decoration is now part of your collection and can be used anytime!"
         })
       }), (0, l.jsx)(N, {
