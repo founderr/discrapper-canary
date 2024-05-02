@@ -12,62 +12,67 @@ var l = s("735250"),
   o = s("906732"),
   u = s("199902"),
   d = s("158776"),
-  c = s("785717"),
-  f = s("221292"),
-  S = s("981631"),
-  m = s("583483"),
-  I = s("613398");
+  c = s("543595"),
+  f = s("785717"),
+  S = s("221292"),
+  m = s("981631"),
+  I = s("583483"),
+  E = s("613398");
 
 function v(e) {
   let {
-    user: t
-  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), v = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), E = a.useMemo(() => v.filter(e => e.type !== S.ActivityTypes.CUSTOM_STATUS), [v]), _ = a.useMemo(() => s ? E.find(e => e.type === S.ActivityTypes.PLAYING) : null, [E, s]), x = a.useMemo(() => E.filter(e => e !== _), [_, E]), {
-    analyticsLocations: A
+    user: t,
+    type: s
+  } = e, v = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), x = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), T = a.useMemo(() => v ? x.find(e => e.type === m.ActivityTypes.PLAYING) : null, [x, v]), U = a.useMemo(() => x.filter(e => e !== T), [T, x]), {
+    analyticsLocations: A,
+    newestAnalyticsLocation: N
   } = (0, o.default)(), {
-    trackUserProfileAction: U,
-    ...T
-  } = (0, c.useUserProfileAnalyticsContext)(), N = {
+    trackUserProfileAction: g,
+    ...C
+  } = (0, f.useUserProfileAnalyticsContext)(), h = {
     location: {
-      page: S.AnalyticsPages.USER_PROFILE,
-      section: S.AnalyticsSections.PROFILE_MODAL
+      page: m.AnalyticsPages.USER_PROFILE,
+      section: m.AnalyticsSections.PROFILE_MODAL
     }
   };
   return (0, l.jsxs)(n.ScrollerThin, {
-    className: I.listScroller,
+    className: E.listScroller,
     fade: !0,
-    children: [s ? (0, l.jsx)(r.default, {
-      type: r.UserActivityTypes.PROFILE_V2,
+    children: [v ? (0, l.jsx)(r.default, {
+      type: s,
       user: t,
-      source: "Profile Modal",
-      className: m.userProfileActivity,
-      activity: _,
-      actionColor: m.actionColor,
-      analyticsParams: N,
+      source: N,
+      className: I.userProfileActivity,
+      hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
+      activity: T,
+      actionColor: I.actionColor,
+      analyticsParams: h,
       onAction: () => {
-        U({
+        g({
           action: "JOIN_ACTIVITY"
-        }), (0, f.trackUserProfileActivityJoined)({
-          activity: _,
+        }), (0, S.trackUserProfileActivityJoined)({
+          activity: T,
           analyticsLocations: A,
-          ...T
+          ...C
         })
       }
-    }) : null, x.map(e => (0, l.jsx)(r.default, {
-      type: r.UserActivityTypes.PROFILE_V2,
+    }) : null, U.map(e => (0, l.jsx)(r.default, {
+      type: s,
       activity: e,
       user: t,
       useStoreStream: !1,
-      source: "Profile Modal",
-      className: m.userProfileActivity,
-      actionColor: m.actionColor,
-      analyticsParams: N,
+      source: N,
+      className: I.userProfileActivity,
+      hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
+      actionColor: I.actionColor,
+      analyticsParams: h,
       onAction: () => {
-        U({
+        g({
           action: "JOIN_ACTIVITY"
-        }), (0, f.trackUserProfileActivityJoined)({
+        }), (0, S.trackUserProfileActivityJoined)({
           activity: e,
           analyticsLocations: A,
-          ...T
+          ...C
         })
       }
     }, "".concat(e.application_id, "-").concat(e.session_id, "-").concat(e.name)))]

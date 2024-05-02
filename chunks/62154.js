@@ -1,53 +1,55 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var l = s("735250");
 s("470079");
-var a = s("100849"),
-  i = s("487922"),
-  n = s("620648"),
-  r = s("944546"),
-  o = s("470900"),
-  u = s("228168");
+var a = s("543595"),
+  i = s("100849"),
+  n = s("487922"),
+  r = s("620648"),
+  o = s("944546"),
+  u = s("470900"),
+  d = s("228168");
 
-function d(e) {
+function c(e) {
   let {
     displayProfile: t,
     user: s,
-    selectedSection: d,
-    autoFocusNote: c,
-    onClose: f
+    selectedSection: c,
+    autoFocusNote: f,
+    onClose: S
   } = e;
-  switch (d) {
-    case u.UserProfileSections.ACTIVITY:
-      return (0, l.jsx)(a.default, {
-        user: s
+  switch (c) {
+    case d.UserProfileSections.ACTIVITY:
+      return (0, l.jsx)(i.default, {
+        user: s,
+        type: a.Types.PROFILE_V2
       });
-    case u.UserProfileSections.MUTUAL_GUILDS:
+    case d.UserProfileSections.MUTUAL_GUILDS:
+      return (0, l.jsx)(u.default, {
+        user: s,
+        onClose: S
+      });
+    case d.UserProfileSections.MUTUAL_FRIENDS:
       return (0, l.jsx)(o.default, {
         user: s,
-        onClose: f
+        onClose: S
       });
-    case u.UserProfileSections.MUTUAL_FRIENDS:
-      return (0, l.jsx)(r.default, {
-        user: s,
-        onClose: f
-      });
-    case u.UserProfileSections.BOT_DATA_ACCESS:
-      return (0, l.jsx)(i.default, {
+    case d.UserProfileSections.BOT_DATA_ACCESS:
+      return (0, l.jsx)(n.default, {
         user: s
       });
-    case u.UserProfileSections.USER_INFO_CONNECTIONS:
-    case u.UserProfileSections.USER_INFO:
+    case d.UserProfileSections.USER_INFO_CONNECTIONS:
+    case d.UserProfileSections.USER_INFO:
     default:
-      return (0, l.jsx)(n.default, {
+      return (0, l.jsx)(r.default, {
         displayProfile: t,
-        autoFocusNote: c,
+        autoFocusNote: f,
         user: s,
-        scrollToConnections: d === u.UserProfileSections.USER_INFO_CONNECTIONS
+        scrollToConnections: c === d.UserProfileSections.USER_INFO_CONNECTIONS
       })
   }
 }

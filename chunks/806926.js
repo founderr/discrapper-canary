@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return S
   }
 });
 var l = s("735250");
@@ -12,26 +12,25 @@ var a = s("290421"),
   r = s("681837"),
   o = s("502762"),
   u = s("530"),
-  d = s("558888"),
-  c = s("616140"),
-  f = s("602091"),
-  S = s("727004");
+  d = s("616140"),
+  c = s("602091"),
+  f = s("727004");
 
-function m(e) {
+function S(e) {
   let {
     user: t,
     displayProfile: s,
-    initialSection: m,
-    autoFocusNote: I,
-    transitionState: v,
+    initialSection: S,
+    autoFocusNote: m,
+    transitionState: I,
     onClose: E
-  } = e, _ = (0, a.default)(s);
+  } = e, v = (0, a.default)(s);
   return (0, l.jsxs)("div", {
-    className: S.container,
+    className: f.container,
     children: [(0, l.jsxs)("div", {
-      className: S.usernameBadgeList,
+      className: f.usernameBadgeList,
       children: [(0, l.jsx)(u.default, {
-        className: S.username,
+        className: f.username,
         user: t,
         guildId: null == s ? void 0 : s.guildId,
         pronouns: null == s ? void 0 : s.pronouns,
@@ -39,23 +38,21 @@ function m(e) {
         nicknameIcons: (0, l.jsx)(r.default, {
           userId: t.id
         })
-      }), _.length > 0 && (0, l.jsx)(o.default.Overlay, {
+      }), v.length > 0 && (0, l.jsx)(o.default.Overlay, {
         children: (0, l.jsx)(i.default, {
-          badges: _,
-          className: S.badgeList,
+          badges: v,
+          className: f.badgeList,
           onClose: E
         })
       })]
-    }), (0, l.jsx)(d.default, {
-      user: t
     }), (0, l.jsxs)(o.default.Overlay, {
-      children: [v === f.ModalTransitionState.ENTERED && (0, l.jsx)(n.default, {
+      children: [I === c.ModalTransitionState.ENTERED && (0, l.jsx)(n.default, {
         onTooltipClose: E
-      }), (0, l.jsx)(c.default, {
+      }), (0, l.jsx)(d.default, {
         user: t,
         displayProfile: s,
-        initialSection: m,
-        autoFocusNote: I,
+        initialSection: S,
+        autoFocusNote: m,
         onClose: E
       })]
     })]
