@@ -10,6 +10,9 @@ n.r(t), n.d(t, {
     return o
   },
   buildSearchCriteriaFromUIState: function() {
+    return h
+  },
+  resetClanDiscovery: function() {
     return E
   },
   useClanDiscoveryUIStore: function() {
@@ -68,7 +71,18 @@ let f = (0, u.default)((0, d.persist)(e => ({
   })
 }));
 
-function E(e) {
+function E() {
+  f.setState({
+    mode: "admin_upsell",
+    game: "valorant",
+    userUpsellScreen: "user_upsell",
+    selectedGames: [],
+    selectedPlaystyle: null,
+    selectedTraits: []
+  })
+}
+
+function h(e) {
   var t;
   let n = e.selectedGames,
     a = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;

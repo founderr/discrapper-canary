@@ -1,27 +1,32 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
-    return u
+    return h
   }
 });
-var a = t("735250"),
-  i = t("470079"),
-  l = t("120356"),
-  n = t.n(l),
-  o = t("481060"),
-  c = t("931240"),
-  s = t("696310"),
-  d = t("893048");
+var a = r("735250"),
+  i = r("470079"),
+  l = r("120356"),
+  n = r.n(l),
+  o = r("481060"),
+  s = r("931240"),
+  c = r("207796"),
+  d = r("696310"),
+  u = r("893048");
 
-function u() {
+function h() {
   let e = i.useRef(null);
-  return (0, a.jsx)("div", {
+  return (0, a.jsxs)("div", {
     ref: e,
-    className: n()(d.panel, s.panel),
-    children: (0, a.jsx)(o.Button, {
+    className: n()(u.panel, d.panel),
+    children: [(0, a.jsx)(o.Button, {
       size: o.Button.Sizes.SMALL,
-      onClick: c.resetClanSetup,
+      onClick: s.resetClanSetup,
       children: "Reset Every Clan Setup State"
-    })
+    }), (0, a.jsx)(o.Button, {
+      size: o.Button.Sizes.SMALL,
+      onClick: c.resetClanDiscovery,
+      children: "Reset Clan Discovery State"
+    })]
   })
 }
