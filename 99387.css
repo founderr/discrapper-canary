@@ -84809,7 +84809,8 @@ input::-webkit-inner-spin-button {
 }
 
 .reviewButton__0cd54 {
-    margin-bottom: -8px
+    margin-bottom: -8px;
+    color: var(--interactive-active)
 }
 
 .countDownWrapper__60b05 {

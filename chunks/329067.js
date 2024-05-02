@@ -87,18 +87,18 @@ function v(e) {
     setStep: y,
     paymentError: O,
     paymentAuthenticationState: k,
-    application: R,
-    skuPricePreviewsById: A
-  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = A[v], F = null != D ? D[g.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : null;
+    application: A,
+    skuPricePreviewsById: R
+  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = R[v], F = null != D ? D[g.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : null;
   s.useEffect(() => {
     _ !== h.Step.REVIEW && y(h.Step.REVIEW)
   }), s.useEffect(() => {
     k === f.PaymentAuthenticationState.ERROR && a(O)
   }, [a, O, k]);
   let w = async () => {
-    n()(null != F, "skuPricePreview can't be null"), n()(null != R, "application can't be null");
+    n()(null != F, "skuPricePreview can't be null"), n()(null != A, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(R.id, v, {
+      await (0, o.purchaseSKU)(A.id, v, {
         expectedAmount: F.amount,
         expectedCurrency: F.currency,
         isGift: I,
@@ -126,7 +126,6 @@ function v(e) {
         })
       })
     }), (0, l.jsx)("div", {
-      color: "always-white",
       className: S.legalTerms,
       children: (0, l.jsxs)("p", {
         children: ["Non-refundable. By clicking, you are agreeing to our", " ", (0, l.jsx)(i.Anchor, {
