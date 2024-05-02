@@ -35067,24 +35067,22 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 
 .progressContainer__378bd {
     display: flex;
+    flex-direction: row;
+    align-items: flex-end;
     gap: 4px;
     width: 100%
 }
 
-.progressStepContainer__76950 {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    height: 4px;
-    padding: 8px 0
-}
-
 .progressStepTooltip_defee0 {
-    margin-bottom: -4px
+    margin-bottom: -4px;
+    text-align: center;
+    display: flex;
+    flex: 1
 }
 
 .progressStep_dec95e {
-    flex: 1;
+    flex-shrink: 0;
+    height: 4px;
     border-radius: var(--radius-sm);
     background-color: var(--interactive-muted);
     overflow: hidden;
@@ -35101,6 +35099,22 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 
 .customProgressStepFill_e1a0a9 {
     background-color: var(--custom-clan-bg)
+}
+
+.progressStepWrapper__6113c {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    padding: 8px 0
+}
+
+.errorIcon__11e5e {
+    align-self: center;
+    height: 12px;
+    width: 12px;
+    color: var(--status-danger)
 }
 
 .buttonsContainer_a90621 {
@@ -35368,6 +35382,17 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 
 .charterClanBadge__6db2b {
     margin-right: 4px
+}
+
+.errorText_e99eec {
+    text-align: right;
+    margin-right: 16px
+}
+
+.errorLink_e96e0d {
+    color: var(--status-danger);
+    -webkit-text-decoration: underline;
+    text-decoration: underline
 }
 
 .modal_a2e1b0 {
