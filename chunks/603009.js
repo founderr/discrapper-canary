@@ -20,9 +20,9 @@ var a = n("735250"),
   E = n("914010"),
   C = n("153850"),
   g = n("626135"),
-  S = n("963202"),
-  _ = n("905362"),
-  T = n("353093"),
+  S = n("905362"),
+  _ = n("353093"),
+  T = n("169559"),
   I = n("940725"),
   A = n("114487"),
   v = n("979264"),
@@ -38,7 +38,7 @@ function L(e) {
     showToast: s,
     onConfirm: o,
     onDismiss: m
-  } = e, [p, E] = l.useState(!1), g = l.useRef(null), [_, I] = l.useState(0), N = (0, S.useIsInUserClanExperiment)(), x = l.useCallback(e => {
+  } = e, [p, E] = l.useState(!1), g = l.useRef(null), [S, I] = l.useState(0), N = (0, T.default)("guild_clan_tag_toast"), x = l.useCallback(e => {
     if (null == e) return;
     let t = e.getBoundingClientRect();
     I(window.innerWidth - t.right)
@@ -82,7 +82,7 @@ function L(e) {
       delay: 200
     });
   if (!N) return null;
-  let D = (0, T.getClanBadgeUrl)(n.id, null === (t = n.clan) || void 0 === t ? void 0 : t.badge);
+  let D = (0, _.getClanBadgeUrl)(n.id, null === (t = n.clan) || void 0 === t ? void 0 : t.badge);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       ref: L,
@@ -96,7 +96,7 @@ function L(e) {
           className: i()(R.wrapper),
           style: {
             ...e,
-            right: _ + 12
+            right: S + 12
           },
           ref: g,
           children: (0, a.jsx)(d.ClickableContainer, {
@@ -155,7 +155,7 @@ function L(e) {
 }
 
 function y(e) {
-  let {} = e, t = (0, c.useStateFromStores)([E.default], () => E.default.getGuildId()), n = (0, I.useShouldShowUserClanTagUpsell)(t), s = (0, c.useStateFromStores)([p.default], () => p.default.getGuild(t), [t]), [i, r] = l.useState(!1), u = l.useRef(null), d = (0, S.useIsInUserClanExperiment)();
+  let {} = e, t = (0, c.useStateFromStores)([E.default], () => E.default.getGuildId()), n = (0, I.useShouldShowUserClanTagUpsell)(t, "clan_tag_upsell_toast"), s = (0, c.useStateFromStores)([p.default], () => p.default.getGuild(t), [t]), [i, r] = l.useState(!1), u = l.useRef(null);
   l.useEffect(() => (n && (u.current = window.setTimeout(() => {
     r(!0), g.default.track(N.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
       type: o.DismissibleGuildContent[o.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE],
@@ -164,16 +164,16 @@ function y(e) {
   }, 2500)), () => {
     null != u.current && window.clearTimeout(u.current)
   }), []);
-  let f = l.useCallback(() => {
-      r(!1), null != t && (0, _.openAdoptClanIdentityModal)(t)
+  let d = l.useCallback(() => {
+      r(!1), null != t && (0, S.openAdoptClanIdentityModal)(t)
     }, [, t]),
-    h = l.useCallback(() => {
+    f = l.useCallback(() => {
       r(!1), null != t && (0, m.markContentAsDismissed)(o.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : N.EMPTY_STRING_SNOWFLAKE_ID, !0, x.ContentDismissActionType.DISMISS)
     }, [t]);
-  return d && n && null != t && null != s ? (0, a.jsx)(L, {
+  return n && null != t && null != s ? (0, a.jsx)(L, {
     guild: s,
-    onConfirm: f,
-    onDismiss: h,
+    onConfirm: d,
+    onDismiss: f,
     showToast: i
   }) : null
 }

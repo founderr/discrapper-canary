@@ -22,7 +22,7 @@ function h(e) {
   } = e, n = (0, l.useStateFromStores)([r.default], () => r.default.getGuild(t)), {
     enableClanCreation: h,
     defaultGameId: _
-  } = (0, u.useClanGuildExperiment)(n, "ClanUpsellNotice"), C = s.useCallback(() => {
+  } = (0, u.useClanPrepilotExperiment)(n, "ClanUpsellNotice"), C = s.useCallback(() => {
     (0, o.openFullScreenLayer)(e => {
       let {
         closeLayer: n

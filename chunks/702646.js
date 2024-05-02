@@ -167,7 +167,7 @@ function v() {
 function R() {
   let e = (0, m.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     t = (0, o.useStateFromStoresArray)([S.default], () => Object.values(S.default.getGuilds()));
-  return (0, h.useAnyClanGuildExperimentEnabled)(t, "clan_discovery_add_clan") ? (0, a.jsxs)(E.Clickable, {
+  return (0, h.useAnyClanPrepilotExperimentEnabled)(t, "clan_discovery_add_clan") ? (0, a.jsxs)(E.Clickable, {
     className: i()(T.buttonPill),
     onClick: () => e(m.ClanDiscoveryMode.ADMIN_UPSELL),
     children: [(0, a.jsx)(f.TagIcon, {

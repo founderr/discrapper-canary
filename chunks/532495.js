@@ -11,7 +11,7 @@ var n = s("512722"),
   i = s("442837"),
   r = s("809206"),
   o = s("634894"),
-  d = s("963202"),
+  d = s("169559"),
   u = s("328783"),
   c = s("295474"),
   S = s("150039"),
@@ -80,7 +80,7 @@ function j() {
       location: "28tk0bf_7",
       autoTrackExposure: !0
     }),
-    ea = (0, d.useIsInUserClanExperiment)();
+    ea = (0, d.default)("user_profile");
   return (0, a.jsxs)("div", {
     className: P.sectionsContainer,
     children: [(0, a.jsx)(m.default, {

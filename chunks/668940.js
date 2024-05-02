@@ -10,46 +10,45 @@ var s = n("442837"),
   u = n("285865"),
   d = n("683301"),
   c = n("430824"),
-  f = n("2485"),
-  E = n("150192"),
-  h = n("889010"),
-  _ = n("488905"),
-  C = n("347137"),
-  S = n("731455"),
-  m = n("689938");
-let p = e => {
+  f = n("150192"),
+  E = n("889010"),
+  h = n("488905"),
+  _ = n("347137"),
+  C = n("731455"),
+  S = n("689938");
+let m = e => {
     switch (e) {
-      case S.CategoryId.Activity:
-        return S.CategoryIcons.Activity;
-      case S.CategoryId.Music:
-        return S.CategoryIcons.Music;
-      case S.CategoryId.Television:
-        return S.CategoryIcons.Television;
-      case S.CategoryId.Science:
-        return S.CategoryIcons.Science;
-      case S.CategoryId.Education:
-        return S.CategoryIcons.Education;
+      case C.CategoryId.Activity:
+        return C.CategoryIcons.Activity;
+      case C.CategoryId.Music:
+        return C.CategoryIcons.Music;
+      case C.CategoryId.Television:
+        return C.CategoryIcons.Television;
+      case C.CategoryId.Science:
+        return C.CategoryIcons.Science;
+      case C.CategoryId.Education:
+        return C.CategoryIcons.Education;
       default:
-        return S.CategoryIcons.Discover
+        return C.CategoryIcons.Discover
     }
   },
-  I = () => {
+  p = () => {
     let {
       currentCategoryId: e,
       isViewingSearchResults: t
     } = (0, s.useStateFromStoresObject)([d.default], () => ({
       currentCategoryId: d.default.getCurrentCategoryId(),
       isViewingSearchResults: d.default.getMostRecentQuery().length > 0
-    })), n = (0, s.useStateFromStores)([E.default], () => E.default.getDiscoveryCategories(), [], E.areDiscoveryCategoriesEqual), r = null == n ? void 0 : n.map(e => ({
+    })), n = (0, s.useStateFromStores)([f.default], () => f.default.getDiscoveryCategories(), [], f.areDiscoveryCategoriesEqual), r = null == n ? void 0 : n.map(e => ({
       ...e,
-      icon: p(e.categoryId)
+      icon: m(e.categoryId)
     })), c = e => {
       (0, i.selectCategory)(e, !0), u.default.closeSidebar(), t && (0, i.clearSearch)()
     };
     return (0, a.jsxs)(l.Scroller, {
-      children: [(0, a.jsx)(_.DiscoverySidebarHeader, {
-        text: m.default.Messages.DISCOVER
-      }), (0, a.jsx)(h.default, {
+      children: [(0, a.jsx)(h.DiscoverySidebarHeader, {
+        text: S.default.Messages.DISCOVER
+      }), (0, a.jsx)(E.default, {
         categories: r,
         handleCategorySelect: c,
         currentCategoryId: e,
@@ -63,7 +62,9 @@ let p = e => {
   };
 t.default = function() {
   let e = (0, s.useStateFromStoresArray)([c.default], () => Object.values(c.default.getGuilds())),
-    t = (0, r.useAnyClanGuildExperimentEnabled)(e, "guild_discovery_sidebar"),
-    n = (0, f.useClanDiscoveryExperimentEnabled)("guild_discovery_sidebar");
-  return t || n ? (0, a.jsx)(C.default, {}) : (0, a.jsx)(I, {})
+    t = (0, r.useAnyClanPrepilotExperimentEnabled)(e, "guild_discovery_sidebar"),
+    {
+      clanDiscoveryEnabled: n
+    } = (0, r.useClanPilotExperiment)("guild_discovery_sidebar");
+  return t || n ? (0, a.jsx)(_.default, {}) : (0, a.jsx)(p, {})
 }

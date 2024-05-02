@@ -130,7 +130,7 @@ t.default = e => {
     }
   }), v = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(t)), {
     defaultGameId: G
-  } = (0, _.useClanGuildExperiment)(v, "ClanSettingsModal"), j = (0, T.useFullScreenModalAnimationStyle)();
+  } = (0, _.useClanPrepilotExperiment)(v, "ClanSettingsModal"), j = (0, T.useFullScreenModalAnimationStyle)();
   l.useEffect(() => {
     o.default.getDetectableGames()
   }, []), l.useEffect(() => {

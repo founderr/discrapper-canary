@@ -11,7 +11,7 @@ var l = s("735250"),
   r = s("442837"),
   o = s("481060"),
   u = s("666520"),
-  d = s("963202"),
+  d = s("169559"),
   c = s("369077"),
   f = s("761174"),
   S = s("706454"),
@@ -38,10 +38,10 @@ function C(e) {
     trackUserProfileAction: R
   } = (0, I.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
     theme: j
-  } = (0, x.useUserProfileThemeContext)(), M = (0, r.useStateFromStores)([S.default], () => S.default.locale), P = (0, d.useIsInUserClanExperiment)(), y = (0, f.useIsUserRecentGamesEnabled)({
+  } = (0, x.useUserProfileThemeContext)(), M = (0, r.useStateFromStores)([S.default], () => S.default.locale), P = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
-  }), O = (0, v.default)(s.id), L = a.useRef(null);
+  }), y = (0, d.default)("user_profile"), O = (0, v.default)(s.id), L = a.useRef(null);
   return (a.useLayoutEffect(() => {
     if (h) {
       var e;
@@ -65,7 +65,7 @@ function C(e) {
         userId: s.id,
         headingClassName: g.userInfoSectionHeader,
         textClassName: g.userInfoText
-      }), P && (0, l.jsx)("div", {
+      }), y && (0, l.jsx)("div", {
         className: g.clans,
         children: (0, l.jsx)("div", {
           className: g.userInfoText,
@@ -73,7 +73,7 @@ function C(e) {
             userId: s.id
           })
         })
-      }), y && (0, l.jsx)(U.UserProfileRecentGamesContainer, {
+      }), P && (0, l.jsx)(U.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
         containerClassName: n()(g.userInfoText, g.recentGames)

@@ -14,5 +14,5 @@ var a = n("392711"),
   d = n("231338");
 
 function c() {
-  return (0, l.useStateFromStoresArray)([o.default, r.default], () => s()(r.default.getGuilds()).values().filter(e => !e.hasFeature(u.GuildFeatures.CLAN) && o.default.can(d.Permissions.ADMINISTRATOR, e) && (0, i.isClanGuildExperimentEnabled)(e, "useEligibleGuildsForClans")).value())
+  return (0, l.useStateFromStoresArray)([o.default, r.default], () => s()(r.default.getGuilds()).values().filter(e => !e.hasFeature(u.GuildFeatures.CLAN) && o.default.can(d.Permissions.ADMINISTRATOR, e) && (0, i.isClanPrepilotExperimentEnabled)(e, "useEligibleGuildsForClans")).value())
 }

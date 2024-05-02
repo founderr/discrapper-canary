@@ -562,7 +562,7 @@ function eK(e, t) {
     ...s,
     isGuildAuditLogV2Enabled: !1,
     showAccessRate: !1,
-    canAccessClanSettings: (0, f.isClanGuildExperimentEnabled)(e, "guild context menu") && s.isGuildAdmin && e.hasFeature(eF.GuildFeatures.CLAN)
+    canAccessClanSettings: (0, f.isClanPrepilotExperimentEnabled)(e, "guild context menu") && s.isGuildAdmin && e.hasFeature(eF.GuildFeatures.CLAN)
   }).filter(e => {
     let {
       section: t
@@ -730,7 +730,7 @@ function eJ() {
     showAccessRate: j
   } = (0, es.useGuildAccessRateInsightExperiment)(null == s ? void 0 : s.id, !O || !R || !C), {
     enableClanCreation: U
-  } = (0, f.useClanGuildExperiment)(s, "guild settings", !1), P = S.isGuildAdmin && U && (null == s ? void 0 : s.hasFeature(eF.GuildFeatures.CLAN)), b = (0, i.useStateFromStores)([k.default], () => {
+  } = (0, f.useClanPrepilotExperiment)(s, "guild settings", !1), P = S.isGuildAdmin && U && (null == s ? void 0 : s.hasFeature(eF.GuildFeatures.CLAN)), b = (0, i.useStateFromStores)([k.default], () => {
     var e;
     return (null == s ? void 0 : s.id) != null && (null === (e = k.default.getForGuild(s.id)) || void 0 === e ? void 0 : e.isDirty) === !0
   }, [s]), B = (0, i.useStateFromStores)([Q.default], () => Q.default.getMemberCount(null == s ? void 0 : s.id), [s]), y = (0, x.useGuildAuditLogV2Enabled)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : eF.EMPTY_STRING_SNOWFLAKE_ID);

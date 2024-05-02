@@ -16219,6 +16219,12 @@ span.clanTag_f4aadc {
     border-radius: 8px
 }
 
+.underlineOnHover__6bbb7:hover,
+.underlineOnHover__6bbb7:focus-visible {
+    -webkit-text-decoration: underline;
+    text-decoration: underline
+}
+
 .section__62b44 {
     padding-top: 12px
 }

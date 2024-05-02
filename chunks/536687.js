@@ -63,7 +63,7 @@ function v(e) {
     F = w && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.HUB)),
     {
       enableClanCreation: B
-    } = (0, o.useClanGuildExperiment)(e, "useVisibleConnectedNotice"),
+    } = (0, o.useClanPrepilotExperiment)(e, "useVisibleConnectedNotice"),
     H = O && B && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.CLAN)),
     V = (0, c.useGuildUpcomingEventsNotice)(n),
     Y = (0, i.useStateFromStores)([C.default], () => null != C.default.getActiveGuildSignUp(n));

@@ -17,9 +17,9 @@ var i = n("735250"),
   o = n("442837"),
   l = n("481060"),
   u = n("594174"),
-  d = n("963202"),
-  _ = n("645896"),
-  c = n("353093"),
+  d = n("645896"),
+  _ = n("353093"),
+  c = n("954138"),
   E = n("426964"),
   I = n("308083"),
   T = n("689938"),
@@ -46,19 +46,19 @@ let S = r.memo(function(e) {
       textClassName: a,
       onClick: o,
       onMouseEnter: u,
-      textVariant: _ = "text-xs/medium",
-      textColor: c = "text-normal",
+      textVariant: d = "text-xs/medium",
+      textColor: _ = "text-normal",
       badgeSize: E = I.ClanTagBadgeSize.SIZE_12,
       inline: T = !0
     } = e;
-    return (0, d.useIsInUserClanExperiment)() ? (0, i.jsx)(l.Clickable, {
+    return (0, c.default)("base_clan_tag_chiplet") ? (0, i.jsx)(l.Clickable, {
       tag: "span",
       onClick: o,
       onMouseEnter: u,
       className: s()(f.chipletContainerInner, T && f.chipletContainerInline, null != o && f.clickable, r),
       children: (0, i.jsxs)(l.Text, {
-        variant: _,
-        color: c,
+        variant: d,
+        color: _,
         tag: "span",
         className: s()(f.text, a),
         children: [null != n && "string" == typeof n ? (0, i.jsx)(S, {
@@ -74,9 +74,9 @@ function A(e) {
   let {
     clan: a,
     userId: s,
-    children: d,
+    children: _,
     source: c
-  } = e, I = (0, o.useStateFromStores)([u.default], () => u.default.getUser(s), [s]), T = null !== (t = null == I ? void 0 : I.clan) && void 0 !== t ? t : a, [S, h] = (0, _.useFetchClanInfo)(null !== (n = null == T ? void 0 : T.identityGuildId) && void 0 !== n ? n : null), A = r.useCallback(() => {
+  } = e, I = (0, o.useStateFromStores)([u.default], () => u.default.getUser(s), [s]), T = null !== (t = null == I ? void 0 : I.clan) && void 0 !== t ? t : a, [S, h] = (0, d.useFetchClanInfo)(null !== (n = null == T ? void 0 : T.identityGuildId) && void 0 !== n ? n : null), A = r.useCallback(() => {
     h()
   }, [h]);
   return (0, i.jsx)(l.Popout, {
@@ -106,7 +106,7 @@ function A(e) {
         var t;
         A(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
       },
-      children: d
+      children: _
     })
   })
 }
@@ -116,8 +116,8 @@ function m(e) {
     {
       tag: n,
       guildId: i
-    } = (0, c.getUserClanData)(null == t ? void 0 : t.clan);
-  return !!(0, d.useIsInUserClanExperiment)() && null != i && null != n || !1
+    } = (0, _.getUserClanData)(null == t ? void 0 : t.clan);
+  return !!(0, c.default)("clan_tag_chiplet") && null != i && null != n || !1
 }
 t.default = r.memo(function(e) {
   var t;
@@ -127,7 +127,7 @@ t.default = r.memo(function(e) {
     className: a,
     textVariant: l,
     textColor: d,
-    badgeSize: _,
+    badgeSize: c,
     disableTooltip: E = !1,
     inline: I = !0,
     source: T
@@ -135,16 +135,16 @@ t.default = r.memo(function(e) {
     tag: p,
     badge: O,
     guildId: R
-  } = (0, c.getUserClanData)(N);
+  } = (0, _.getUserClanData)(N);
   if (!m(r) || null == R) return null;
-  let C = (0, c.getClanBadgeUrl)(R, O, _);
+  let C = (0, _.getClanBadgeUrl)(R, O, c);
   return E ? (0, i.jsx)(h, {
     clanTag: p,
     clanBadge: C,
     className: s()(f.noTooltip, a),
     textVariant: l,
     textColor: d,
-    badgeSize: _,
+    badgeSize: c,
     inline: I
   }) : (0, i.jsx)(A, {
     clan: N,
@@ -156,7 +156,7 @@ t.default = r.memo(function(e) {
       className: a,
       textVariant: l,
       textColor: d,
-      badgeSize: _,
+      badgeSize: c,
       inline: I
     })
   })
