@@ -108,7 +108,8 @@ async function x(e) {
       raw_thermal_state: T,
       is_activity_start: u,
       shelf_rank: null == d ? void 0 : null === (o = d.activity) || void 0 === o ? void 0 : o.shelf_rank,
-      shelf_sorted_rank: _ > 0 ? _ : null
+      shelf_sorted_rank: _ > 0 ? _ : null,
+      activities_infra_version: null == e ? void 0 : e.activities_infra_version
     })
   }
 }
@@ -194,7 +195,8 @@ function j(e, t, n, i, r, s) {
     activitySessionId: E,
     activityUserSessionId: (0, a.v4)(),
     launchId: i,
-    mediaSessionIds: null != c ? [c] : []
+    mediaSessionIds: null != c ? [c] : [],
+    activities_infra_version: "location" in t ? 2 : 1
   }), delete k[n])
 }
 
