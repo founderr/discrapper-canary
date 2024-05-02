@@ -196,7 +196,7 @@ t.default = a.memo(function(e) {
     }), (0, l.jsx)(v.default, {
       guild: V,
       disabled: Q,
-      isHovered: !ea && eu,
+      isDragging: ea,
       children: eT
     }), X ? (0, l.jsx)(L.default, {
       name: V.name,

@@ -112,12 +112,14 @@ function J(e) {
     onClick: t,
     disabled: n,
     inCall: i
-  } = e, r = i ? Z.default.Messages.GUILD_POPOUT_JOINED : Z.default.Messages.JOIN;
+  } = e, r = i ? Z.default.Messages.GUILD_POPOUT_JOINED : Z.default.Messages.JOIN, o = s.useCallback(e => {
+    e.stopPropagation(), t()
+  }, [t]);
   return (0, a.jsx)(d.Button, {
     size: d.Button.Sizes.SMALL,
     color: d.Button.Colors.GREEN,
     disabled: n,
-    onClick: t,
+    onClick: o,
     className: X.joinButton,
     children: r
   })
@@ -135,7 +137,7 @@ function $(e) {
     totalUsers: T,
     usersToShow: f,
     othersCount: S
-  } = (0, W.useGetActivityUsers)(n, r, t), h = (0, c.useGetOrFetchApplication)(i), {
+  } = (0, W.useGetCardUsers)(n, r, t), h = (0, c.useGetOrFetchApplication)(i), {
     needSubscriptionToAccess: m
   } = (0, A.default)(null != t ? t : void 0), N = (0, u.useStateFromStores)([b.default], () => b.default.isInChannel(t)), p = s.useCallback(() => {
     (0, v.transitionToGuild)(r, t)
@@ -192,7 +194,7 @@ function ee(e) {
     othersCount: N,
     streamUserIds: p,
     streamerUsersText: O
-  } = (0, W.useGetActivityUsers)(c, r, _), R = s.useCallback(() => {
+  } = (0, W.useGetCardUsers)(c, r, _), R = s.useCallback(() => {
     (0, v.transitionToGuild)(r, _)
   }, [_, r]), C = s.useCallback(() => {
     null != I && E.default.handleVoiceConnect({
@@ -303,7 +305,9 @@ function en(e) {
   return (0, a.jsxs)(d.ClickableContainer, {
     onClick: T,
     tag: "div",
-    "aria-label": "",
+    "aria-label": Z.default.Messages.GUILD_POPOUT_EMPTY_PROMPT_ARIA.format({
+      channelName: null == _ ? void 0 : _.name
+    }),
     className: l()(X.emptyActivityCardContainer, X.activityCardContainer),
     children: [(0, a.jsx)(F.default, {
       width: 12,
@@ -335,7 +339,7 @@ function ei(e) {
       isUserLurking: e,
       isUnverifiedAccount: !y.default.getCheck(t.id).canChat
     }
-  }), l = (0, W.useGuildActivity)(t), _ = s.useMemo(() => l.map(e => {
+  }), l = (0, W.useGuildPopoutCards)(t), _ = s.useMemo(() => l.map(e => {
     if ("hangout" === e.category) return (0, a.jsx)(ee, {
       hangoutActivity: e,
       guildId: t.id,
