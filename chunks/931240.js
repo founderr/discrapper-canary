@@ -7,22 +7,25 @@ n.r(t), n.d(t, {
     return l
   },
   disableClan: function() {
-    return f
+    return S
   },
   fetchClanSettings: function() {
-    return I
+    return T
   },
   getClanInfo: function() {
     return u
   },
+  resetClanSetup: function() {
+    return _
+  },
   saveClanSettings: function() {
-    return T
+    return f
   },
   updateClanSettings: function() {
-    return c
+    return E
   },
   updateClanSetup: function() {
-    return _
+    return c
   }
 }), n("47120");
 var i = n("544891"),
@@ -93,7 +96,13 @@ async function d(e, t) {
   }
 }
 
-function _(e, t) {
+function _() {
+  r.default.dispatch({
+    type: "CLAN_SETUP_RESET"
+  })
+}
+
+function c(e, t) {
   r.default.dispatch({
     type: "CLAN_SETUP_UPDATE",
     guildId: e,
@@ -101,14 +110,14 @@ function _(e, t) {
   })
 }
 
-function c(e, t) {
+function E(e, t) {
   r.default.dispatch({
     type: "CLAN_SETTINGS_UPDATE",
     guildId: e,
     updates: t
   })
 }
-let E = e => {
+let I = e => {
   var t, n, i, r, a, s;
   return {
     tag: e.tag,
@@ -130,7 +139,7 @@ let E = e => {
     brandSecondaryColor: e.brand_color_secondary
   }
 };
-async function I(e) {
+async function T(e) {
   r.default.dispatch({
     type: "CLAN_SETTINGS_FETCH_START"
   });
@@ -140,10 +149,10 @@ async function I(e) {
   r.default.dispatch({
     type: "CLAN_SETTINGS_FETCH_SUCCESS",
     guildId: e,
-    settings: E(t.body)
+    settings: I(t.body)
   })
 }
-async function T(e, t) {
+async function f(e, t) {
   var n, r, a, o;
   return await i.HTTP.patch({
     url: s.Endpoints.CLAN_SETTINGS(e),
@@ -167,7 +176,7 @@ async function T(e, t) {
     }
   })
 }
-async function f(e) {
+async function S(e) {
   try {
     await i.HTTP.post({
       url: s.Endpoints.DISABLE_CLAN(e)

@@ -93461,6 +93461,13 @@ div.content_aac020 {
     pointer-events: all
 }
 
+.panel_fc65ac {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
 .button__02764 {
     margin-top: 10px;
     margin-bottom: 14px

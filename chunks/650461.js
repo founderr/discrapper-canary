@@ -133,6 +133,9 @@ class g extends(E = n.default.PersistedStore) {
   }
 }
 I(g, "displayName", "ClanSetupStore"), I(g, "persistKey", "ClanSetupStore"), t.default = new g(T.default, {
+  CLAN_SETUP_RESET: function() {
+    r.clear(), o.clear()
+  },
   CLAN_SETUP_UPDATE: function(e) {
     let {
       guildId: t,
