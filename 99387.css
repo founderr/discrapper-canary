@@ -26675,6 +26675,32 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     width: 32px
 }
 
+.editGradient__9944c {
+    background: linear-gradient(90deg, rgba(49, 51, 56, 0)0%, var(--bg-surface-overlay)100%);
+    position: absolute;
+    top: 10px;
+    right: 28px;
+    width: 44px;
+    height: 16px
+}
+
+.editGradientEmojiOnly_fff8b9 {
+    height: 32px
+}
+
+.editClickable__86536 {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    opacity: 1;
+    background: var(--bg-surface-overlay);
+    cursor: pointer
+}
+
+.editClickableEmojiOnly__74b19 {
+    height: 32px
+}
+
 .header__725f2 {
     z-index: 2;
     min-height: calc(45px + var(--custom-user-banner-height-bite-size))

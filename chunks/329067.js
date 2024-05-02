@@ -10,8 +10,8 @@ a.r(t), a.d(t, {
 var l = a("735250"),
   s = a("470079"),
   r = a("512722"),
-  i = a.n(r),
-  n = a("481060"),
+  n = a.n(r),
+  i = a("481060"),
   o = a("16084"),
   u = a("244526"),
   c = a("881052"),
@@ -24,19 +24,19 @@ var l = a("735250"),
   E = a("333867"),
   g = a("74179"),
   x = a("981631"),
-  b = a("255094");
-let S = e => {
+  S = a("255094");
+let b = e => {
     let {
       children: t,
       style: a,
       className: s,
       ...r
     } = e;
-    return (0, l.jsx)(n.Button, {
-      size: n.ButtonSizes.SMALL,
+    return (0, l.jsx)(i.Button, {
+      size: i.ButtonSizes.SMALL,
       fullWidth: !0,
-      look: n.Button.Looks.FILLED,
-      color: n.ButtonColors.GREEN,
+      look: i.Button.Looks.FILLED,
+      color: i.ButtonColors.GREEN,
       style: a,
       className: s,
       ...r,
@@ -49,10 +49,10 @@ let S = e => {
       className: a,
       ...s
     } = e;
-    return (0, l.jsx)(n.Button, {
-      size: n.ButtonSizes.SMALL,
-      look: n.ButtonLooks.BLANK,
-      color: n.ButtonColors.TRANSPARENT,
+    return (0, l.jsx)(i.Button, {
+      size: i.ButtonSizes.SMALL,
+      look: i.ButtonLooks.BLANK,
+      color: i.ButtonColors.TRANSPARENT,
       className: a,
       fullWidth: !0,
       ...s,
@@ -89,14 +89,14 @@ function L(e) {
     paymentAuthenticationState: k,
     application: R,
     skuPricePreviewsById: A
-  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = A[L], F = null != D ? D[g.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : "";
+  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = A[L], F = null != D ? D[g.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : null;
   s.useEffect(() => {
     _ !== h.Step.REVIEW && y(h.Step.REVIEW)
   }), s.useEffect(() => {
     k === f.PaymentAuthenticationState.ERROR && a(O)
   }, [a, O, k]);
   let w = async () => {
-    i()(null != F, "skuPricePreview can't be null"), i()(null != R, "application can't be null");
+    n()(null != F, "skuPricePreview can't be null"), n()(null != R, "application can't be null");
     try {
       await (0, o.purchaseSKU)(R.id, L, {
         expectedAmount: F.amount,
@@ -113,9 +113,9 @@ function L(e) {
     e === h.Step.CONFIRM && (P(!1), t()), y(e)
   }, [y, t]);
   return (0, f.usePaymentStepForAuthentication)(_, k, H), (0, l.jsxs)("div", {
-    className: b.reviewContainer,
-    children: [(0, l.jsx)(n.FormSection, {
-      children: (0, l.jsx)(n.FormItem, {
+    className: S.reviewContainer,
+    children: [(0, l.jsx)(i.FormSection, {
+      children: (0, l.jsx)(i.FormItem, {
         children: (0, l.jsx)(u.default, {
           paymentSource: g,
           isDefault: !0,
@@ -127,23 +127,25 @@ function L(e) {
       })
     }), (0, l.jsx)("div", {
       color: "always-white",
-      className: b.legalTerms,
+      className: S.legalTerms,
       children: (0, l.jsxs)("p", {
-        children: ["Non-refundable. By clicking, you are agreeing to our", " ", (0, l.jsx)(n.Anchor, {
+        children: ["Non-refundable. By clicking, you are agreeing to our", " ", (0, l.jsx)(i.Anchor, {
           href: m.default.getArticleURL(x.HelpdeskArticles.PAID_TERMS),
           children: "Paid Services Terms."
         })]
       })
-    }), (0, l.jsx)(S, {
-      className: b.buyButton,
+    }), (0, l.jsx)(b, {
+      className: S.buyButton,
       submitting: j,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
         P(!0), await w()
       },
-      children: "Pay " + M
+      children: null !== M ? "Pay " + M : (0, l.jsx)(i.Spinner, {
+        type: i.Spinner.Type.PULSING_ELLIPSIS
+      })
     }), !j && (0, l.jsx)(T, {
-      className: b.reviewButton,
+      className: S.reviewButton,
       onClick: () => {
         r(), (0, E.default)({
           skuId: L,
