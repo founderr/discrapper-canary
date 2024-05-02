@@ -41,7 +41,7 @@ var i = n("367907"),
   r = n("427679"),
   a = n("23750"),
   s = n("598077"),
-  o = n("595044"),
+  o = n("91156"),
   l = n("82554"),
   u = n("185625"),
   d = n("443599"),
@@ -66,18 +66,18 @@ function E(e, t) {
   }, {}, t)
 }
 
-function I(e, t) {
+function I(e, t, n) {
   R(l.ReportNames.MESSAGE, {
     message_id: e.id,
     channel_id: e.channel_id
   });
-  let n = (0, o.shouldShowFraudMenuVariant)();
+  let i = (0, o.isIarMessageDislikeEnabled)(t);
   (0, d.showReportModal)({
     name: l.ReportNames.MESSAGE,
     record: e
   }, {
-    variant: n ? "4" : void 0
-  }, t)
+    variant: i ? "5_dislike_experiment" : void 0
+  }, n)
 }
 
 function T(e, t) {
