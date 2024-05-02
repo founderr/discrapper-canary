@@ -130,27 +130,31 @@ t.default = e => {
     }
   }), v = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(t)), {
     defaultGameId: G
-  } = (0, _.useClanPrepilotExperiment)(v, "ClanSettingsModal"), j = (0, T.useFullScreenModalAnimationStyle)();
-  l.useEffect(() => {
+  } = (0, _.useClanPrepilotExperiment)(v, "ClanSettingsModal"), j = (0, T.useFullScreenModalAnimationStyle)(), U = l.useCallback(e => {
+    "Escape" === e.key && (e.stopPropagation(), s())
+  }, [s]);
+  l.useEffect(() => (window.addEventListener("keydown", U), () => {
+    window.removeEventListener("keydown", U)
+  }), [U]), l.useEffect(() => {
     o.default.getDetectableGames()
   }, []), l.useEffect(() => {
     (0, E.fetchClanSettings)(t)
   }, [t]);
-  let U = e => (0, E.updateClanSettings)(t, {
+  let P = e => (0, E.updateClanSettings)(t, {
       gameApplicationIds: e
     }),
-    P = e => (0, E.updateClanSettings)(t, {
+    b = e => (0, E.updateClanSettings)(t, {
       playstyle: e
     }),
-    b = e => (0, E.updateClanSettings)(t, {
+    B = e => (0, E.updateClanSettings)(t, {
       interests: e
     }),
-    B = e => (0, E.updateClanSettings)(t, e),
-    y = async () => {
+    y = e => (0, E.updateClanSettings)(t, e),
+    F = async () => {
       await (0, E.saveClanSettings)(t, M), s()
     };
   if (null == M) return null;
-  let F = A();
+  let H = A();
   return (0, a.jsxs)(n.animated.div, {
     style: j,
     className: O.modal,
@@ -159,7 +163,7 @@ t.default = e => {
       look: r.Button.Looks.OUTLINED,
       size: r.Button.Sizes.SMALL,
       color: r.Button.Colors.PRIMARY,
-      onClick: y,
+      onClick: F,
       children: L.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, a.jsxs)("div", {
       className: O.modalContents,
@@ -170,7 +174,7 @@ t.default = e => {
           selectedItem: c,
           onItemSelect: p,
           orientation: "vertical",
-          children: F.map((e, l) => {
+          children: H.map((e, l) => {
             switch (e.section) {
               case d.SectionTypes.HEADER:
                 return (0, a.jsx)(r.TabBar.Header, {
@@ -201,7 +205,7 @@ t.default = e => {
               return (0, a.jsx)(m.default, {
                 title: L.default.Messages.CLAN_SETUP_GAMES_TITLE,
                 description: L.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-                handleUpdate: U,
+                handleUpdate: P,
                 gameApplicationIds: null !== (e = M.gameApplicationIds) && void 0 !== e ? e : new Set,
                 requiredGameId: null != G ? G : void 0,
                 error: D.gameApplicationIds
@@ -210,7 +214,7 @@ t.default = e => {
               return (0, a.jsx)(h.default, {
                 title: L.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
                 description: L.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
-                handleUpdate: P,
+                handleUpdate: b,
                 playstyle: M.playstyle,
                 error: D.playstyle
               });
@@ -218,25 +222,25 @@ t.default = e => {
               return (0, a.jsx)(R.default, {
                 title: L.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
                 description: L.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
-                handleUpdate: b,
+                handleUpdate: B,
                 interests: M.interests
               });
             case x.ClanSetupSteps.INTERESTS:
               return (0, a.jsx)(N.default, {
-                handleUpdate: B,
+                handleUpdate: y,
                 interests: M.interests,
                 error: D.interests
               });
             case x.ClanSetupSteps.DESCRIPTION:
               return (0, a.jsx)(f.default, {
-                handleUpdate: B,
+                handleUpdate: y,
                 description: M.description,
                 wildcardDescriptors: M.wildcardDescriptors,
                 errors: D
               });
             case x.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
               return (0, a.jsx)(C.default, {
-                handleUpdate: B,
+                handleUpdate: y,
                 tag: M.tag,
                 error: D.tag,
                 badge: M.badgeKind,
@@ -251,7 +255,7 @@ t.default = e => {
             case x.ClanSetupSteps.CUSTOMIZE_BANNER:
               return (0, a.jsx)(S.default, {
                 guildId: t,
-                handleUpdate: B,
+                handleUpdate: y,
                 progress: M
               });
             default:
