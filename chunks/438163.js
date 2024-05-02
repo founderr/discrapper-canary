@@ -68,7 +68,7 @@ function N(e) {
       children: P
     }) : null,
     x = () => {
-      if (!L) return null;
+      if (!b || !L) return null;
       let e = y && !U;
       return (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("div", {
