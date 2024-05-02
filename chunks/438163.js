@@ -42,10 +42,15 @@ function N(e) {
     var t;
     if (null == e) return;
     let n = e.getBoundingClientRect(),
-      i = parseFloat(null !== (t = window.getComputedStyle(e).getPropertyValue("line-height")) && void 0 !== t ? t : "0");
-    D(Math.floor(n.height / i))
+      i = parseFloat(null !== (t = window.getComputedStyle(e).getPropertyValue("line-height")) && void 0 !== t ? t : "0"),
+      r = n.height;
+    i > 0 && r > 0 && D(Math.floor(r / i))
   }, []), B = (0, E.useResizeObserver)(w);
-  if (!L && !b) return null;
+  if (r.useLayoutEffect(() => {
+      setTimeout(() => {
+        w(B.current)
+      }, 200)
+    }, [B, w]), !L && !b) return null;
   let k = () => y ? U ? (0, i.jsx)(_.default, {
       className: A.statusEmojiInline,
       emojiId: M.id,
