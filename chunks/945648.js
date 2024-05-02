@@ -10,6 +10,8 @@ e.exports = {
   headerContent: "headerContent_b106c0",
   headerContentEmbed: "headerContentEmbed__211c5",
   headerExpandedContent: "headerExpandedContent__58282",
+  headerExpandedWrapper: "headerExpandedWrapper__7cc6d",
+  heading: "heading__506a4",
   iconLogotypeContainer: "iconLogotypeContainer__3d6e2",
   iconWrapper: "iconWrapper__75528",
   iconsContainer: "iconsContainer__1ce98",

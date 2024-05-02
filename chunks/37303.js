@@ -26,7 +26,7 @@ let T = e => {
     containerRef: C,
     size: A,
     height: g
-  } = (0, E.useQuestCardSize)(), M = (0, i.useIsEligibleForConcurrentQuests)({
+  } = (0, E.useQuestCardSize)([t]), M = (0, i.useIsEligibleForConcurrentQuests)({
     location: _.QuestsExperimentLocations.QUESTS_CARD
   }), {
     expansionSpring: R,

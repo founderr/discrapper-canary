@@ -11,17 +11,21 @@ var i = n("470079");
 
 function r() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-  let [r, s] = i.useState(void 0), [o, l] = i.useState(void 0), u = i.useRef(null);
-  return a(u, e => {
+  let [r, s] = i.useState(void 0), [o, l] = i.useState(void 0), [u, d] = i.useState(void 0), [_, c] = i.useState(void 0), E = i.useRef(null);
+  return a(E, e => {
     let {
       width: t,
-      height: n
+      height: n,
+      scrollWidth: i,
+      scrollHeight: r
     } = e;
-    l(n), s(t)
+    l(n), s(t), d(i), c(r)
   }, t), {
-    ref: u,
+    ref: E,
     width: r,
-    height: o
+    height: o,
+    scrollHeight: _,
+    scrollWidth: u
   }
 }
 

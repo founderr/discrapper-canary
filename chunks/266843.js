@@ -14,20 +14,20 @@ var s = n("470079"),
   r = n("607070"),
   o = n("87894");
 
-function u() {
-  let e = s.useRef(null),
-    [t, n] = s.useState("lg"),
-    [a, l] = s.useState(void 0);
-  return (0, i.useDimensionsEffect)(e, e => {
+function u(e) {
+  let t = s.useRef(null),
+    [n, a] = s.useState("lg"),
+    [l, r] = s.useState(void 0);
+  return (0, i.useDimensionsEffect)(t, e => {
     let {
       width: t,
-      scrollHeight: s
+      scrollHeight: n
     } = e;
-    return (l(s), null == t || t > o.QUESTS_CARD_SMALL_BREAKPOINT_PX) ? n("lg") : t > o.QUESTS_CARD_EXTRA_SMALL_BREAKPOINT_PX ? n("sm") : n("xs")
-  }), {
-    containerRef: e,
-    size: t,
-    height: a
+    return (r(n), null == t || t > o.QUESTS_CARD_SMALL_BREAKPOINT_PX) ? a("lg") : t > o.QUESTS_CARD_EXTRA_SMALL_BREAKPOINT_PX ? a("sm") : a("xs")
+  }, null != e ? e : []), {
+    containerRef: t,
+    size: n,
+    height: l
   }
 }
 
