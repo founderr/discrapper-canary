@@ -80,14 +80,16 @@ function E(e) {
   }, [T]), a.useEffect(() => (R.current = 0, y.current = Date.now(), () => {
     var e, t;
     if (null == _ || null == y.current || Date.now() - y.current < 3e3) return;
-    let n = null !== (t = null === (e = L.current) || void 0 === e ? void 0 : e.slice(0, R.current).map(e => e.id)) && void 0 !== t ? t : [];
+    let n = null !== (t = null === (e = L.current) || void 0 === e ? void 0 : e.map(e => e.id)) && void 0 !== t ? t : [],
+      a = n.slice(0, R.current);
     !I && A && r.default.track(h.AnalyticEvents.RANKING_ITEMS_SEEN, {
       request_id: _,
       first_shown_at: y.current,
-      item_ids: n,
+      item_ids: a,
       surface_type: c.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
       channel_id: E,
-      guild_id: C
+      guild_id: C,
+      all_item_ids: n
     })
   }), [_, E, C, I, A]), {
     groups: N,
