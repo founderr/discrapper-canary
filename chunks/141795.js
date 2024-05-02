@@ -38,7 +38,7 @@ let O = new u.default("CloudUpload.tsx"),
 (r = i || (i = {})).NOT_STARTED = "NOT_STARTED", r.STARTED = "STARTED", r.UPLOADING = "UPLOADING", r.ERROR = "ERROR", r.COMPLETED = "COMPLETED", r.CANCELED = "CANCELED";
 class C {
   constructor() {
-    p(this, "numChunks", void 0), p(this, "totalRequestCount", void 0), p(this, "timing", {}), p(this, "compressAndExtractDisabled", void 0), p(this, "fileAlreadyPrepped", void 0), p(this, "imageCompressionQuality", void 0), p(this, "videoCompressionQuality", void 0), p(this, "convertedMimeType", void 0)
+    p(this, "numChunks", void 0), p(this, "totalRequestCount", void 0), p(this, "timing", {}), p(this, "compressAndExtractDisabled", void 0), p(this, "fileAlreadyPrepped", void 0), p(this, "imageCompressionQuality", void 0), p(this, "videoCompressionQuality", void 0), p(this, "convertedMimeType", void 0), p(this, "sourceMediaWidth", void 0), p(this, "sourceMediaHeight", void 0), p(this, "sourceMediaFormat", void 0), p(this, "sourceVideoBitrate", void 0)
   }
 }
 class g extends A.default {
@@ -253,7 +253,7 @@ class g extends A.default {
     let n = t.uri,
       i = t.file.name,
       r = t.file.type;
-    if ((0, A.isResolvedUpload)(t.file) && (this.uploadAnalytics.imageCompressionQuality = t.file.imageCompressionQuality, this.uploadAnalytics.videoCompressionQuality = t.file.videoCompressionQuality, this.uploadAnalytics.convertedMimeType = t.file.type), this.filename = i, null == i || null == n || null == r) throw O.error("Insufficient file data: ".concat({
+    if ((0, A.isResolvedUpload)(t.file) && (this.uploadAnalytics.imageCompressionQuality = t.file.imageCompressionQuality, this.uploadAnalytics.videoCompressionQuality = t.file.videoCompressionQuality, this.uploadAnalytics.convertedMimeType = t.file.type, void 0 !== t.file.videoMetadata && (this.uploadAnalytics.sourceMediaWidth = t.file.videoMetadata.width, this.uploadAnalytics.sourceMediaHeight = t.file.videoMetadata.height, this.uploadAnalytics.sourceMediaFormat = t.file.videoMetadata.format, this.uploadAnalytics.sourceVideoBitrate = t.file.videoMetadata.bitrate)), this.filename = i, null == i || null == n || null == r) throw O.error("Insufficient file data: ".concat({
       filename: i,
       uri: n,
       mimeType: r
@@ -343,6 +343,10 @@ class g extends A.default {
       video_compression_quality: null !== (a = this.uploadAnalytics.videoCompressionQuality) && void 0 !== a ? a : "unknown",
       was_converted: this.mimeType !== this.uploadAnalytics.convertedMimeType,
       was_compressed: this.currentSize < this.preCompressionSize,
+      source_media_width: this.uploadAnalytics.sourceMediaWidth,
+      source_media_height: this.uploadAnalytics.sourceMediaHeight,
+      source_media_format: this.uploadAnalytics.sourceMediaFormat,
+      source_video_bitrate: this.uploadAnalytics.sourceVideoBitrate,
       connection_type: E.default.getType(),
       effective_connection_speed: E.default.getEffectiveConnectionSpeed(),
       service_provider: E.default.getServiceProvider()
