@@ -29,7 +29,7 @@ function _(e, t, n) {
       let [t, n] = e;
       return !0 === n && t in o.cssClasses ? o.cssClasses[t] : null
     }).filter(e => null != e).join(" ")
-  }(null !== (r = T[0]) && void 0 !== r ? r : {});
+  }(null !== (r = null == T ? void 0 : T[0]) && void 0 !== r ? r : {});
   switch (I.type) {
     case "line":
       if (null === (u = I.codeBlockState) || void 0 === u ? void 0 : u.isInCodeBlock) return (0, i.jsx)("div", {
