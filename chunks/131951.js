@@ -1113,7 +1113,7 @@ class tm extends(l = f.default.Store) {
         autoTrackExposure: e
       }).enableGoLiveSimulcast))) n.push({
       rid: "50",
-      type: eS.MediaTypes.VIDEO,
+      type: t === eS.MediaEngineContextTypes.DEFAULT ? eS.MediaTypes.VIDEO : eS.MediaTypes.SCREEN,
       quality: 50
     });
     return n
