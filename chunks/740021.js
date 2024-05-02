@@ -75,10 +75,8 @@ function A(e) {
             onClose: g
           })
         }), (0, l.jsx)(m.UserProfileCustomStatusBubble, {
-          user: t,
           statusActivity: d,
-          profileType: v.UserProfileTypes.FULL_SIZE,
-          onClose: g
+          profileType: v.UserProfileTypes.FULL_SIZE
         })]
       })
     })]
