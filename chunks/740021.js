@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return A
   }
 }), s("47120");
 var l = s("735250");
@@ -18,25 +18,25 @@ var a = s("442837"),
   S = s("78675"),
   m = s("438163"),
   I = s("652853"),
-  v = s("30556"),
-  E = s("228168"),
+  E = s("30556"),
+  v = s("228168"),
   _ = s("182294"),
   x = s("231338"),
-  A = s("100651");
+  T = s("100651");
 let U = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
-function T(e) {
+function A(e) {
   let {
     user: t,
     displayProfile: s,
     activity: i,
     customStatusActivity: d,
-    guildId: T,
+    guildId: A,
     channelId: N,
     onClose: g
   } = e, {
     theme: C
-  } = (0, I.useUserProfileThemeContext)(), h = (0, c.default)(t.id, T), {
+  } = (0, I.useUserProfileThemeContext)(), h = (0, c.default)(t.id, A), {
     avatarSrc: R,
     eventHandlers: p,
     avatarDecorationSrc: j
@@ -52,31 +52,33 @@ function T(e) {
     children: [(0, l.jsx)(S.default, {
       user: t,
       displayProfile: s,
-      profileType: E.UserProfileTypes.FULL_SIZE,
+      profileType: v.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null
     }), (0, l.jsx)("div", {
-      className: A.inner,
+      className: T.inner,
       children: (0, l.jsxs)("div", {
         ...p,
         children: [(0, l.jsx)(U, {
           src: R,
           avatarDecoration: j,
           size: _.AvatarSizes.SIZE_120,
-          className: A.avatar,
+          className: T.avatar,
           status: M,
           statusBackdropColor: (0, n.getStatusBackdropColor)(C),
           "aria-label": t.username,
           isMobile: P,
           statusTooltip: !0
         }), (0, l.jsx)("div", {
-          className: A.buttons,
-          children: h && (0, l.jsx)(v.default, {
+          className: T.buttons,
+          children: h && (0, l.jsx)(E.default, {
             user: t,
             onClose: g
           })
-        }), null != d && (0, l.jsx)(m.UserProfileCustomStatusBubble, {
+        }), (0, l.jsx)(m.UserProfileCustomStatusBubble, {
+          user: t,
           statusActivity: d,
-          profileType: E.UserProfileTypes.FULL_SIZE
+          profileType: v.UserProfileTypes.FULL_SIZE,
+          onClose: g
         })]
       })
     })]
