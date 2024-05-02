@@ -20,8 +20,8 @@ var l = a("735250"),
   S = a("906732"),
   b = a("1585"),
   T = a("125988"),
-  v = a("74179"),
-  L = a("107091"),
+  L = a("74179"),
+  v = a("107091"),
   I = a("197115"),
   N = a("300284"),
   _ = a("876917"),
@@ -98,7 +98,7 @@ t.default = function(e) {
     analyticsLocations: D
   } = (0, S.default)(x.default.COLLECTIBLES_SHOP_CARD), el = s.useRef(null), es = (0, g.default)(el), {
     defaultPaymentSource: er
-  } = (0, v.default)({
+  } = (0, L.default)({
     isGift: !1,
     activeSubscription: null
   }), [en, ei] = s.useState(!1), eo = es || en, eu = (0, f.useStateFromStores)([k.default], () => k.default.getCurrentUser()), [ec] = t.items, {
@@ -113,8 +113,8 @@ t.default = function(e) {
   }), {
     backgroundColors: eC,
     buttonColors: ep
-  } = (0, U.default)(t.styles), eh = (0, w.getFormattedPriceForCollectiblesProduct)(t, o, !1), eE = (0, w.isPremiumCollectiblesProduct)(t), eg = (0, w.isFreeCollectiblesProduct)(t), [ex, eS, eb] = (0, f.useStateFromStoresArray)([M.default], () => [M.default.getPurchase(t.skuId), M.default.isClaiming === t.skuId, null != M.default.isClaiming && M.default.isClaiming !== t.skuId]), eT = (0, f.useStateFromStores)([O.default], () => (0, C.isThemeDark)(O.default.theme)), ev = (0, w.isProductNew)(t.skuId), {
-    hoverVariant: eL
+  } = (0, U.default)(t.styles), eh = (0, w.getFormattedPriceForCollectiblesProduct)(t, o, !1), eE = (0, w.isPremiumCollectiblesProduct)(t), eg = (0, w.isFreeCollectiblesProduct)(t), [ex, eS, eb] = (0, f.useStateFromStoresArray)([M.default], () => [M.default.getPurchase(t.skuId), M.default.isClaiming === t.skuId, null != M.default.isClaiming && M.default.isClaiming !== t.skuId]), eT = (0, f.useStateFromStores)([O.default], () => (0, C.isThemeDark)(O.default.theme)), eL = (0, w.isProductNew)(t.skuId), {
+    hoverVariant: ev
   } = (0, H.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard"), [eI, eN] = s.useState(!1), e_ = s.useRef(null), ey = s.useRef(new i.Environment), [eO, ek] = s.useState(!1), [eR, eA] = s.useState(null), ej = null != ex || eO;
   s.useEffect(() => {
     let {
@@ -205,7 +205,11 @@ t.default = function(e) {
           })
         }
       } : {
-        onClick: () => eN(!0)
+        onClick: () => {
+          eA(null), eN(!0), h.default.dispatch({
+            type: "LIGHTNING_CHECKOUT_OPEN"
+          })
+        }
       };
       return (0, l.jsxs)("div", {
         className: Z.buttonsContainer,
@@ -265,7 +269,7 @@ t.default = function(e) {
       })]
     }),
     ez = () => {
-      eA(null), eN(!1), h.default.dispatch({
+      eN(!1), h.default.dispatch({
         type: "LIGHTNING_CHECKOUT_CLOSE"
       })
     },
@@ -289,7 +293,7 @@ t.default = function(e) {
           environment: ey.current
         }), (0, l.jsxs)(p.Clickable, {
           innerRef: el,
-          className: n()(Z.shopCard, (0, c.match)(eL).with(H.ShopCardHoverAnimationVariant.CONTROL, () => Z.shopCardDefaultAnimation).with(H.ShopCardHoverAnimationVariant.TRANSFORMATION, () => Z.shopCardTransformationAnimation).otherwise(() => void 0)),
+          className: n()(Z.shopCard, (0, c.match)(ev).with(H.ShopCardHoverAnimationVariant.CONTROL, () => Z.shopCardDefaultAnimation).with(H.ShopCardHoverAnimationVariant.TRANSFORMATION, () => Z.shopCardTransformationAnimation).otherwise(() => void 0)),
           onBlur: () => ei(!1),
           onClick: eM,
           style: null != eC ? {
@@ -322,7 +326,7 @@ t.default = function(e) {
             }),
             children: [(0, l.jsx)("div", {
               className: n()(Z.cardBackground, eT ? Z.darkCardBackground : Z.lightCardBackground, (null == ec ? void 0 : ec.type) === d.CollectiblesItemType.PROFILE_EFFECT ? Z.cardLowOpacity : null)
-            }), eI ? (0, l.jsx)(L.default, {
+            }), eI ? (0, l.jsx)(v.default, {
               product: t,
               paymentSource: er,
               itemPreview: eV(),
@@ -355,7 +359,7 @@ t.default = function(e) {
             category: a,
             className: Z.limitedTimeBadge,
             display: "card"
-          }), ev && (0, l.jsx)(B.TextBadge, {
+          }), eL && (0, l.jsx)(B.TextBadge, {
             text: X.default.Messages.NEW,
             disableColor: !0,
             className: Z.newBadge
