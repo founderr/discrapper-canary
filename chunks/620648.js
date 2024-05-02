@@ -17,13 +17,13 @@ var l = s("735250"),
   S = s("706454"),
   m = s("246946"),
   I = s("785717"),
-  v = s("648067"),
-  E = s("588822"),
+  E = s("648067"),
+  v = s("588822"),
   _ = s("81334"),
   x = s("652853"),
-  A = s("335191"),
+  T = s("335191"),
   U = s("347949"),
-  T = s("988246"),
+  A = s("988246"),
   N = s("689938"),
   g = s("175839");
 
@@ -41,13 +41,13 @@ function C(e) {
   } = (0, x.useUserProfileThemeContext)(), M = (0, r.useStateFromStores)([S.default], () => S.default.locale), P = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
-  }), y = (0, d.default)("user_profile"), O = (0, v.default)(s.id), L = a.useRef(null);
+  }), O = (0, d.default)("user_profile"), y = (0, E.default)(s.id), L = a.useRef(null);
   return (a.useLayoutEffect(() => {
     if (h) {
       var e;
       null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [h]), p) ? (0, l.jsx)(T.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
+  }, [h]), p) ? (0, l.jsx)(A.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: g.infoScroller,
     children: [(0, l.jsxs)("div", {
@@ -57,7 +57,7 @@ function C(e) {
           variant: "eyebrow",
           className: g.userInfoSectionHeader,
           children: N.default.Messages.USER_PROFILE_ABOUT_ME
-        }), (0, l.jsx)(E.default, {
+        }), (0, l.jsx)(v.default, {
           className: g.userInfoText,
           userBio: null !== (t = null == i ? void 0 : i.bio) && void 0 !== t ? t : ""
         })]
@@ -65,7 +65,7 @@ function C(e) {
         userId: s.id,
         headingClassName: g.userInfoSectionHeader,
         textClassName: g.userInfoText
-      }), y && (0, l.jsx)("div", {
+      }), O && (0, l.jsx)("div", {
         className: g.clans,
         children: (0, l.jsx)("div", {
           className: g.userInfoText,
@@ -89,9 +89,9 @@ function C(e) {
           action: "SET_NOTE"
         })
       })]
-    }), (0, l.jsx)(A.ConnectedUserAccounts, {
+    }), (0, l.jsx)(T.ConnectedUserAccounts, {
       ref: L,
-      connectedAccounts: O,
+      connectedAccounts: y,
       theme: j,
       locale: M,
       className: g.userInfoSection,

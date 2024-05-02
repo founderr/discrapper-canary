@@ -10,8 +10,8 @@ var s = a("735250"),
   r = a("442837"),
   i = a("481060"),
   o = a("607070"),
-  d = a("109434"),
-  u = a("456269"),
+  u = a("109434"),
+  d = a("456269"),
   c = a("228392"),
   m = a("479099"),
   h = a("981631"),
@@ -27,34 +27,34 @@ function C(e) {
     channel: t,
     closePopout: a,
     setPopoutRef: C
-  } = e, _ = (0, u.useVisibleForumTags)(t), {
-    tagFilter: S
-  } = (0, d.useForumChannelStore)(t.id), T = (0, d.useForumChannelStoreApi)(), p = (0, r.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), E = n.useCallback(e => {
+  } = e, _ = (0, d.useVisibleForumTags)(t), {
+    tagFilter: p
+  } = (0, u.useForumChannelStore)(t.id), T = (0, u.useForumChannelStoreApi)(), S = (0, r.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), E = n.useCallback(e => {
     (0, c.trackForumTagFilterClicked)({
       guildId: t.guild_id,
       channelId: t.id,
       tagId: e,
-      filterTagIds: Array.from(S),
-      added: !S.has(e),
+      filterTagIds: Array.from(p),
+      added: !p.has(e),
       location: {
         page: h.AnalyticsPages.GUILD_CHANNEL,
         section: h.AnalyticsSections.FORUM_CHANNEL_HEADER,
         object: h.AnalyticsObjects.CHANNEL_TAG
       }
     }), T.getState().toggleTagFilter(t.id, e)
-  }, [t, S, T]), N = n.useCallback(() => {
-    T.getState().setTagFilter(t.id, new Set), !p && a()
-  }, [T, t.id, p, a]), M = (0, l.default)({
+  }, [t, p, T]), N = n.useCallback(() => {
+    T.getState().setTagFilter(t.id, new Set), !S && a()
+  }, [T, t.id, S, a]), M = (0, l.default)({
     id: "".concat(t.id, "-all-tags-dropdown-navigator"),
     isEnabled: !0,
     wrap: !0,
     scrollToStart: x,
     scrollToEnd: x
-  }), v = n.useRef(null);
+  }), A = n.useRef(null);
   return n.useEffect(() => {
     requestAnimationFrame(() => {
-      if (null != v.current) {
-        let e = v.current.querySelector(".".concat(g.tag));
+      if (null != A.current) {
+        let e = A.current.querySelector(".".concat(g.tag));
         null != e && e.focus()
       }
     })
@@ -77,7 +77,7 @@ function C(e) {
             className: g.countText,
             color: "none",
             variant: "text-xs/medium",
-            children: S.size
+            children: p.size
           })
         })]
       })
@@ -91,14 +91,14 @@ function C(e) {
           } = e;
           return (0, s.jsx)("div", {
             ref: e => {
-              t.current = e, v.current = e
+              t.current = e, A.current = e
             },
             ...a,
             className: g.tagContainer,
             children: _.map(e => (0, s.jsx)(m.default, {
               className: g.tag,
               tag: e,
-              selected: S.has(e.id),
+              selected: p.has(e.id),
               onClick: () => E(e.id)
             }, e.id))
           })

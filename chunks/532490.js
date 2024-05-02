@@ -29,8 +29,8 @@ t.default = i.memo(function(e) {
     signHintButtonText: S,
     signHintHelperText: _,
     signHintPosition: T = "left"
-  } = e, I = i.useRef(null), [A, v] = i.useState(!1), N = i.useCallback(e => {
-    e.preventDefault(), e.stopPropagation(), null == l || l(), v(!0)
+  } = e, I = i.useRef(null), [A, N] = i.useState(!1), v = i.useCallback(e => {
+    e.preventDefault(), e.stopPropagation(), null == l || l(), N(!0)
   }, [l]), [x, M] = i.useState(!1), [R, L] = i.useState(!1), y = i.useRef(null), O = i.useCallback(e => {
     e && (y.current = setTimeout(() => {
       L(!0)
@@ -92,7 +92,7 @@ t.default = i.memo(function(e) {
           children: a
         })
       }), (0, s.jsxs)(c.Clickable, {
-        onClick: N,
+        onClick: v,
         className: o()(g.signatureBlock, {
           [g.clickable]: null != l
         }),
@@ -119,7 +119,7 @@ t.default = i.memo(function(e) {
                   var t;
                   null === (t = I.current) || void 0 === t || t.scrollIntoView({
                     behavior: "smooth"
-                  }), N(e)
+                  }), v(e)
                 },
                 children: [(0, s.jsx)("div", {
                   className: g.signCarot,

@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   ForumListLayoutRenderOptions: function() {
-    return d
+    return u
   },
   GRID_POST_CONTROLS_MARGIN: function() {
     return i
@@ -13,7 +13,7 @@ a.r(t), a.d(t, {
     return c
   },
   getFrameDimensions: function() {
-    return u
+    return d
   },
   getGridPostHeight: function() {
     return m
@@ -57,13 +57,13 @@ class o {
     l(this, "minWidth", void 0), l(this, "maxWidth", void 0), l(this, "gap", void 0), n()(e < t, "minWidth needs to be smaller than maxWidth"), this.minWidth = e, this.maxWidth = t, this.gap = a
   }
 }
-let d = {
+let u = {
     columns: 1,
     columnWidth: 450
   },
-  u = e => {
+  d = e => {
     let t = e - 2;
     return [t, Math.ceil(t * r)]
   },
   c = 12,
-  m = e => 60 + u(e - 2 * c)[1] + 24 + 3 * i
+  m = e => 60 + d(e - 2 * c)[1] + 24 + 3 * i

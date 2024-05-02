@@ -17,13 +17,13 @@ var l = s("735250"),
   S = s("233440"),
   m = s("314897"),
   I = s("158776"),
-  v = s("699516"),
-  E = s("621113"),
+  E = s("699516"),
+  v = s("621113"),
   _ = s("759231"),
   x = s("998502"),
-  A = s("785717"),
+  T = s("785717"),
   U = s("621853"),
-  T = s("204197"),
+  A = s("204197"),
   N = s("735336"),
   g = s("520978"),
   C = s("184325"),
@@ -33,8 +33,8 @@ var l = s("735250"),
   j = s("981631"),
   M = s("231338"),
   P = s("689938"),
-  y = s("370386");
-let O = r.AvatarSizes.SIZE_120,
+  O = s("370386");
+let y = r.AvatarSizes.SIZE_120,
   L = x.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function F(e) {
@@ -48,17 +48,17 @@ function F(e) {
     isStreaming: G,
     hasProfileEffect: k,
     onClose: w
-  } = e, V = (0, i.useStateFromStores)([v.default], () => v.default.getRelationshipType(x.id)), H = (0, i.useStateFromStores)([I.default], () => I.default.isMobileOnline(x.id)), Y = (0, i.useStateFromStores)([I.default], () => I.default.getStatus(x.id)), z = (0, i.useStateFromStores)([U.default], () => U.default.getUserProfile(x.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === x.id), {
+  } = e, V = (0, i.useStateFromStores)([E.default], () => E.default.getRelationshipType(x.id)), H = (0, i.useStateFromStores)([I.default], () => I.default.isMobileOnline(x.id)), Y = (0, i.useStateFromStores)([I.default], () => I.default.getStatus(x.id)), z = (0, i.useStateFromStores)([U.default], () => U.default.getUserProfile(x.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === x.id), {
     theme: Z
   } = (0, h.useUserProfileThemeContext)(), {
-    trackUserProfileAction: J
-  } = (0, A.useUserProfileAnalyticsContext)(), {
-    avatarSrc: K,
+    trackUserProfileAction: K
+  } = (0, T.useUserProfileAnalyticsContext)(), {
+    avatarSrc: J,
     eventHandlers: Q,
     avatarDecorationSrc: q
-  } = (0, T.default)({
+  } = (0, A.default)({
     user: x,
-    size: O
+    size: y
   }), X = a.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(x, D), [x, D]);
 
   function $() {
@@ -66,7 +66,7 @@ function F(e) {
   }
 
   function ee() {
-    J({
+    K({
       action: "REMOVE_FRIEND"
     }), c.default.removeFriend(x.id, {
       location: "User Profile"
@@ -74,14 +74,14 @@ function F(e) {
   }
 
   function et(e) {
-    J({
+    K({
       action: "SEND_MESSAGE"
     }), o.default.openPrivateChannel(x.id, !1, !1, e), $()
   }
 
   function es() {
     try {
-      J({
+      K({
         action: "BLOCK"
       }), c.default.addRelationship({
         userId: x.id,
@@ -97,7 +97,7 @@ function F(e) {
 
   function el() {
     let e = "@me" === F ? void 0 : F;
-    J({
+    K({
       action: "REPORT"
     }), (0, f.showReportModalForUser)(x, e)
   }
@@ -110,14 +110,14 @@ function F(e) {
       profileType: p.UserProfileTypes.MODAL,
       hasProfileEffect: k
     }), (0, l.jsxs)("div", {
-      className: y.header,
+      className: O.header,
       children: [(0, l.jsx)("div", {
         ...Q,
         children: (0, l.jsx)(L, {
-          src: K,
+          src: J,
           avatarDecoration: q,
-          size: O,
-          className: y.avatar,
+          size: y,
+          className: O.avatar,
           status: X ? M.StatusTypes.UNKNOWN : G ? M.StatusTypes.STREAMING : Y,
           statusBackdropColor: (0, r.getStatusBackdropColor)(Z),
           isMobile: H,
@@ -125,27 +125,27 @@ function F(e) {
           "aria-label": x.username
         })
       }), (0, l.jsxs)("div", {
-        className: y.headerTop,
+        className: O.headerTop,
         children: [(null == z ? void 0 : z.profileFetchFailed) && !x.isClyde() ? (0, l.jsx)(r.Tooltip, {
           text: P.default.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
           children: e => (0, l.jsx)(_.default, {
             ...e,
-            className: y.warningCircleIcon,
+            className: O.warningCircleIcon,
             color: n.default.unsafe_rawColors.YELLOW_300.css
           })
         }) : (0, l.jsx)(C.default, {
           user: x,
-          className: y.badgeList,
+          className: O.badgeList,
           guildId: F,
           size: C.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
           shrinkToSize: C.BadgeSizes.SIZE_18,
           onBadgeClick: w
         }), (0, l.jsxs)("div", {
-          className: y.relationshipButtons,
+          className: O.relationshipButtons,
           children: [(0, l.jsx)(g.default, {
-            className: y.applicationInstallButton,
+            className: O.applicationInstallButton,
             application: null == z ? void 0 : z.application
           }), (0, l.jsx)(R.default, {
             user: x,
@@ -153,7 +153,7 @@ function F(e) {
             relationshipType: V,
             onAddFriend: function() {
               try {
-                J({
+                K({
                   action: "SEND_FRIEND_REQUEST"
                 }), c.default.addRelationship({
                   userId: x.id,
@@ -168,7 +168,7 @@ function F(e) {
               }
             },
             onIgnoreFriend: function() {
-              J({
+              K({
                 action: "CANCEL_FRIEND_REQUEST"
               }), c.default.cancelFriendRequest(x.id, {
                 location: "User Profile"
@@ -182,7 +182,7 @@ function F(e) {
               }
             },
             onClick: function(e) {
-              J({
+              K({
                 action: "PRESS_OPTIONS"
               }), (0, u.openContextMenuLazy)(e, async () => {
                 let {
@@ -194,7 +194,7 @@ function F(e) {
                   onRemoveFriend: ee,
                   onBlock: es,
                   onReport: el,
-                  onCopyId: () => J({
+                  onCopyId: () => K({
                     action: "COPY_USER_ID"
                   }),
                   onMessage: () => et("User Profile Modal - Context Menu"),
@@ -202,8 +202,8 @@ function F(e) {
                 })
               })
             },
-            children: (0, l.jsx)(E.default, {
-              className: y.additionalActionsIcon
+            children: (0, l.jsx)(v.default, {
+              className: O.additionalActionsIcon
             })
           })]
         })]

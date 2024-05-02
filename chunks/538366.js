@@ -10,8 +10,8 @@ var s = a("735250"),
   r = a("665906"),
   i = a("634648"),
   o = a("499033"),
-  d = a("692437"),
-  u = a("585483"),
+  u = a("692437"),
+  d = a("585483"),
   c = a("456269"),
   m = a("228392"),
   h = a("981631"),
@@ -24,7 +24,7 @@ function x(e) {
     guildId: x,
     tagFilter: C,
     channel: _
-  } = e, S = (0, c.useCanManageChannel)(_), T = (0, r.useCanStartThread)(_), p = _.isMediaChannel(), E = n.useCallback(() => {
+  } = e, p = (0, c.useCanManageChannel)(_), T = (0, r.useCanStartThread)(_), S = _.isMediaChannel(), E = n.useCallback(() => {
     (0, m.trackForumUpsellModalViewed)(), (0, l.openModalLazy)(async () => {
       let {
         default: e
@@ -34,7 +34,7 @@ function x(e) {
         guildId: x
       })
     })
-  }, [x]), N = C.size > 0, M = T || S, v = !N && S && !p, A = n.useCallback(() => v ? E() : T ? void u.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [E, v, T]);
+  }, [x]), N = C.size > 0, M = T || p, A = !N && p && !S, v = n.useCallback(() => A ? E() : T ? void d.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [E, A, T]);
   return (0, s.jsxs)("div", {
     className: g.container,
     children: [(0, s.jsxs)("div", {
@@ -66,10 +66,10 @@ function x(e) {
       look: l.Button.Looks.BLANK,
       size: l.Button.Sizes.MIN,
       color: l.Button.Colors.GREEN,
-      onClick: A,
+      onClick: v,
       className: g.cta,
       innerClassName: g.button,
-      children: [v ? f.default.Messages.FORUM_EMPTY_STATE_CTA : f.default.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, s.jsx)(d.default, {
+      children: [A ? f.default.Messages.FORUM_EMPTY_STATE_CTA : f.default.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, s.jsx)(u.default, {
         width: 12
       })]
     })]

@@ -27,8 +27,8 @@ var i = n("120356"),
   T = n("906732"),
   I = n("835473"),
   A = n("314897"),
-  v = n("594174"),
-  N = n("602623"),
+  N = n("594174"),
+  v = n("602623"),
   x = n("823379"),
   M = n("5192"),
   R = n("689938"),
@@ -43,7 +43,7 @@ function O(e) {
     channelId: a,
     users: l
   } = e, i = null != t ? t : u.AvatarSizes.SIZE_32, r = (0, u.getAvatarSize)(i);
-  return (0, s.jsx)(N.default, {
+  return (0, s.jsx)(v.default, {
     size: r,
     guildId: n,
     users: l,
@@ -74,10 +74,10 @@ function j(e) {
     width: C
   } = e;
   let S = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
-  let [_] = (l = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], I = (0, o.useStateFromStoresArray)([v.default, A.default], () => Array.from(i).map(e => A.default.getId() === e ? null : v.default.getUser(e)).filter(x.isNotNullish)), N = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
+  let [_] = (l = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], I = (0, o.useStateFromStoresArray)([N.default, A.default], () => Array.from(i).map(e => A.default.getId() === e ? null : N.default.getUser(e)).filter(x.isNotNullish)), v = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
     analyticsLocations: y
   } = (0, T.default)(), j = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == I ? void 0 : I[0]), D = (0, h.useEmbeddedActivityJoinability)({
-    userId: null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
+    userId: null === (t = N.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
     channelId: E.id,
     application: m
   }) === h.EmbeddedActivityJoinability.CAN_JOIN, b = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
@@ -111,8 +111,8 @@ function j(e) {
       className: L.buttons,
       children: D ? (0, s.jsx)(u.Button, {
         onClick: function(e) {
-          e.stopPropagation(), null != N && (0, f.default)({
-            applicationId: N.applicationId,
+          e.stopPropagation(), null != v && (0, f.default)({
+            applicationId: v.applicationId,
             currentEmbeddedApplication: p,
             activityChannelId: E.id,
             locationObject: j.location,

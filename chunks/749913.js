@@ -10,8 +10,8 @@ var s = a("735250"),
   r = a.n(l),
   i = a("512722"),
   o = a.n(i),
-  d = a("143927"),
-  u = a("924826"),
+  u = a("143927"),
+  d = a("924826"),
   c = a("536895"),
   m = a("442837"),
   h = a("481060"),
@@ -20,38 +20,38 @@ var s = a("735250"),
   x = a("541716"),
   C = a("67158"),
   _ = a("893718"),
-  S = a("472243"),
+  p = a("472243"),
   T = a("436660"),
-  p = a("284182"),
+  S = a("284182"),
   E = a("795639"),
   N = a("957730"),
   M = a("25015"),
-  v = a("252032"),
-  A = a("913663"),
+  A = a("252032"),
+  v = a("913663"),
   I = a("268350"),
   j = a("456077"),
-  R = a("488131"),
-  O = a("602034"),
+  O = a("488131"),
+  R = a("602034"),
   b = a("23750"),
-  F = a("703558"),
-  L = a("496675"),
+  L = a("703558"),
+  F = a("496675"),
   P = a("300429"),
   y = a("117530"),
   D = a("594174"),
-  U = a("86813"),
-  w = a("814550"),
+  w = a("86813"),
+  U = a("814550"),
   k = a("696202"),
   H = a("794358"),
   B = a("880008"),
   G = a("634648"),
   V = a("185403"),
-  W = a("664800"),
-  z = a("548420"),
+  z = a("664800"),
+  W = a("548420"),
   K = a("459273"),
   Y = a("838440"),
   X = a("127654"),
-  Z = a("681154"),
-  q = a("883429"),
+  q = a("681154"),
+  Z = a("883429"),
   Q = a("945141"),
   J = a("456269"),
   $ = a("103921"),
@@ -64,8 +64,8 @@ var s = a("735250"),
   er = a("81490"),
   ei = a("710352"),
   eo = a("981631"),
-  ed = a("176505"),
-  eu = a("689938"),
+  eu = a("176505"),
+  ed = a("689938"),
   ec = a("249933");
 let em = x.ChatInputTypes.CREATE_FORUM_POST;
 
@@ -77,7 +77,7 @@ function eh(e) {
     canCreatePost: i,
     inputRef: o
   } = e, {
-    textAreaState: u,
+    textAreaState: d,
     formOpen: c,
     previewing: f
   } = (0, es.useForumPostComposerStore)(e => {
@@ -91,9 +91,9 @@ function eh(e) {
       formOpen: a,
       previewing: s
     }
-  }, d.default), [g, x] = n.useState(null), C = n.useContext(K.ComponentDispatchGroupContext), _ = n.useCallback(() => {
+  }, u.default), [g, x] = n.useState(null), C = n.useContext(K.ComponentDispatchGroupContext), _ = n.useCallback(() => {
     C.bumpDispatchPriority()
-  }, [C]), S = (0, m.useStateFromStores)([L.default], () => L.default.can(eo.Permissions.ATTACH_FILES, t)), T = (0, m.useStateFromStoresArray)([y.default], () => y.default.getUploads(t.id, F.DraftType.FirstThreadMessage)), M = c && S && i, v = (null == t ? void 0 : t.isMediaChannel()) === !0, j = function(e, t) {
+  }, [C]), p = (0, m.useStateFromStores)([F.default], () => F.default.can(eo.Permissions.ATTACH_FILES, t)), T = (0, m.useStateFromStoresArray)([y.default], () => y.default.getUploads(t.id, L.DraftType.FirstThreadMessage)), M = c && p && i, A = (null == t ? void 0 : t.isMediaChannel()) === !0, j = function(e, t) {
     let a = (0, es.useForumPostComposerStoreApi)(),
       s = (0, J.useChannelTemplate)(e);
     return n.useCallback(() => {
@@ -109,7 +109,7 @@ function eh(e) {
           var e, a, s, n;
           null === (a = t.current) || void 0 === a || null === (e = a._textArea) || void 0 === e || e.setSelectionRange(r.length, r.length), null === (n = t.current) || void 0 === n || null === (s = n._textArea) || void 0 === s || s.focus()
         }
-      }, 0), (o && r.length > 0 || i.textValue.trim().length > 0 && i.textValue.trim() !== s || y.default.getUploads(e.id, F.DraftType.FirstThreadMessage).length > 0) && l())
+      }, 0), (o && r.length > 0 || i.textValue.trim().length > 0 && i.textValue.trim() !== s || y.default.getUploads(e.id, L.DraftType.FirstThreadMessage).length > 0) && l())
     }, [a, e.id, s, t])
   }(t, o), b = function(e) {
     let {
@@ -121,7 +121,7 @@ function eh(e) {
       return {
         formOpen: t
       }
-    }, d.default), a = (0, es.useForumPostComposerStoreApi)(), s = (0, O.useCreateForumPost)({
+    }, u.default), a = (0, es.useForumPostComposerStoreApi)(), s = (0, R.useCreateForumPost)({
       parentChannel: e
     });
     n.useEffect(() => {
@@ -142,31 +142,31 @@ function eh(e) {
       } = N.default.parse(e, t);
       if (t = i, null == s || 0 === s.length) {
         var o;
-        s = null === (o = A.default.getStickerPreview(e.id, em.drafts.type)) || void 0 === o ? void 0 : o.map(e => e.id)
+        s = null === (o = v.default.getStickerPreview(e.id, em.drafts.type)) || void 0 === o ? void 0 : o.map(e => e.id)
       }
-      if ((null == n || 0 === n.length) && (n = y.default.getUploads(e.id, F.DraftType.FirstThreadMessage)), null != n && n.length > 0 && e.isMediaChannel()) {
+      if ((null == n || 0 === n.length) && (n = y.default.getUploads(e.id, L.DraftType.FirstThreadMessage)), null != n && n.length > 0 && e.isMediaChannel()) {
         let e = n.findIndex(e => !0 === e.isThumbnail);
         if (e > -1) {
           let t = n[e];
           n.splice(e, 1), n.unshift(t)
         }
       }
-      let d = 0 === l.length,
-        u = (null == t || 0 === t.length) && (null == s || 0 === s.length) && 0 === n.length;
+      let u = 0 === l.length,
+        d = (null == t || 0 === t.length) && (null == s || 0 === s.length) && 0 === n.length;
       return {
         content: t,
         stickers: s,
         uploads: n,
-        hasNameError: d,
-        hasMessageError: u
+        hasNameError: u,
+        hasMessageError: d
       }
     }, [e, a]);
     return n.useCallback(async (t, n, r) => {
       let {
         setNameError: i,
         setMessageError: o,
-        setSubmitting: d,
-        resetFormState: u,
+        setSubmitting: u,
+        resetFormState: d,
         formOpen: c,
         setFormOpen: m,
         setPreviewing: h,
@@ -183,22 +183,22 @@ function eh(e) {
       let {
         content: C,
         stickers: _,
-        uploads: S,
+        uploads: p,
         hasNameError: T,
-        hasMessageError: p
+        hasMessageError: S
       } = l(t, n, r);
-      if (i(T ? (0, Z.makeEmptyTitleError)() : null), o(p ? (0, Z.makeEmptyMessageError)() : null), T || p) return {
+      if (i(T ? (0, q.makeEmptyTitleError)() : null), o(S ? (0, q.makeEmptyMessageError)() : null), T || S) return {
         shouldClear: !1,
         shouldRefocus: !0
       };
       try {
-        d(!0);
+        u(!0);
         let {
           valid: t
         } = await (0, Y.applyChatRestrictions)({
           content: C,
           stickers: _,
-          uploads: S,
+          uploads: p,
           type: em,
           channel: e
         });
@@ -206,25 +206,25 @@ function eh(e) {
           shouldClear: !1,
           shouldRefocus: !0
         };
-        let a = await s(C, _, S);
-        return (0, R.openThreadSidebarForViewing)(a), q.default.resort(e.id), (0, I.clearStickerPreview)(e.id, em.drafts.type), u(), m(!1), h(!1), Q.default.markAsSeen(e.id), g(!1), {
+        let a = await s(C, _, p);
+        return (0, O.openThreadSidebarForViewing)(a), Z.default.resort(e.id), (0, I.clearStickerPreview)(e.id, em.drafts.type), d(), m(!1), h(!1), Q.default.markAsSeen(e.id), g(!1), {
           shouldClear: !0,
           shouldRefocus: !1
         }
       } catch (t) {
         var E, N;
-        return (null === (E = t.body) || void 0 === E ? void 0 : E.code) === eo.AbortCodes.AUTOMOD_TITLE_BLOCKED ? i((0, Z.makeAutomodViolationError)(t.body, e)) : (null === (N = t.body) || void 0 === N ? void 0 : N.code) === eo.AbortCodes.AUTOMOD_MESSAGE_BLOCKED && o((0, Z.makeAutomodViolationError)(t.body, e)), {
+        return (null === (E = t.body) || void 0 === E ? void 0 : E.code) === eo.AbortCodes.AUTOMOD_TITLE_BLOCKED ? i((0, q.makeAutomodViolationError)(t.body, e)) : (null === (N = t.body) || void 0 === N ? void 0 : N.code) === eo.AbortCodes.AUTOMOD_MESSAGE_BLOCKED && o((0, q.makeAutomodViolationError)(t.body, e)), {
           shouldClear: !1,
           shouldRefocus: !0
         }
       } finally {
-        d(!1)
+        u(!1)
       }
     }, [s, l, e, a])
   }(t);
-  return n.useLayoutEffect(l, [c, u, T, l]), (0, s.jsx)(s.Fragment, {
+  return n.useLayoutEffect(l, [c, d, T, l]), (0, s.jsx)(s.Fragment, {
     children: (0, s.jsx)("div", {
-      "aria-label": i ? eu.default.Messages.NEW_FORUM_POST : eu.default.Messages.SEARCH,
+      "aria-label": i ? ed.default.Messages.NEW_FORUM_POST : ed.default.Messages.SEARCH,
       className: r()(ec.container, {
         [ec.collapsed]: !c
       }),
@@ -255,17 +255,17 @@ function eh(e) {
               parentChannel: t,
               submit: b,
               disabled: !i
-            }), f && (0, s.jsx)(eS, {})]
-          }), M && (v ? (0, s.jsx)(E.MediaPostThumbnail, {
+            }), f && (0, s.jsx)(ep, {})]
+          }), M && (A ? (0, s.jsx)(E.MediaPostThumbnail, {
             parentChannel: t
           }) : (0, s.jsx)(ea.default, {
             channelId: t.id
           }))]
         }), (0, s.jsxs)("div", {
           className: ec.form,
-          children: [M && v && (0, s.jsx)(p.default, {
+          children: [M && A && (0, s.jsx)(S.default, {
             parentChannel: t
-          }), c && (0, s.jsx)(ep, {
+          }), c && (0, s.jsx)(eS, {
             className: ec.horizontalPadding,
             parentChannel: t,
             canCreatePost: i
@@ -284,7 +284,7 @@ let ef = n.memo(function(e) {
       formOpen: r,
       name: i,
       textAreaState: o,
-      hasClickedForm: u,
+      hasClickedForm: d,
       submitting: c
     } = (0, es.useForumPostComposerStore)(e => {
       let {
@@ -305,13 +305,13 @@ let ef = n.memo(function(e) {
         hasClickedForm: r,
         submitting: i
       }
-    }, d.default), m = (0, es.useForumPostComposerStoreApi)(), x = (0, J.useChannelTemplate)(t), C = n.useCallback(() => {
+    }, u.default), m = (0, es.useForumPostComposerStoreApi)(), x = (0, J.useChannelTemplate)(t), C = n.useCallback(() => {
       var e;
-      m.getState().resetFormState(), f.default.clearDraft(t.id, F.DraftType.ThreadSettings), f.default.clearDraft(t.id, F.DraftType.FirstThreadMessage), g.default.clearAll(t.id, F.DraftType.FirstThreadMessage), m.getState().setFormOpen(!1), m.getState().setBodyFocused(!1), m.getState().setTitleFocused(!1), m.getState().setHasClickedForm(!1), m.getState().setPreviewing(!1), null === (e = l.current) || void 0 === e || e.blur(), (0, ee.trackForumNewPostCleared)({
+      m.getState().resetFormState(), f.default.clearDraft(t.id, L.DraftType.ThreadSettings), f.default.clearDraft(t.id, L.DraftType.FirstThreadMessage), g.default.clearAll(t.id, L.DraftType.FirstThreadMessage), m.getState().setFormOpen(!1), m.getState().setBodyFocused(!1), m.getState().setTitleFocused(!1), m.getState().setHasClickedForm(!1), m.getState().setPreviewing(!1), null === (e = l.current) || void 0 === e || e.blur(), (0, ee.trackForumNewPostCleared)({
         guildId: t.guild_id,
         channelId: t.id
       })
-    }, [m, t.id, t.guild_id, l]), _ = n.useMemo(() => a && !r ? (0, s.jsx)(ev, {}) : a || r || 0 !== o.textValue.trim().length && o.textValue.trim() !== x ? !r && (i.trim().length > 0 || o.textValue.trim().length > 0 && o.textValue.trim() !== x || y.default.getUploads(t.id, F.DraftType.FirstThreadMessage).length > 0) && u ? (0, s.jsx)(V.default, {
+    }, [m, t.id, t.guild_id, l]), _ = n.useMemo(() => a && !r ? (0, s.jsx)(eA, {}) : a || r || 0 !== o.textValue.trim().length && o.textValue.trim() !== x ? !r && (i.trim().length > 0 || o.textValue.trim().length > 0 && o.textValue.trim() !== x || y.default.getUploads(t.id, L.DraftType.FirstThreadMessage).length > 0) && d ? (0, s.jsx)(V.default, {
       className: ec.pencilIcon,
       width: 24,
       height: 24
@@ -320,7 +320,7 @@ let ef = n.memo(function(e) {
       width: 24,
       height: 24
     }) : (0, s.jsx)(h.Tooltip, {
-      text: eu.default.Messages.FORUM_CLEAR_ALL,
+      text: ed.default.Messages.FORUM_CLEAR_ALL,
       children: e => (0, s.jsx)(h.Clickable, {
         ...e,
         onClick: C,
@@ -330,11 +330,11 @@ let ef = n.memo(function(e) {
           height: 24
         })
       })
-    }) : (0, s.jsx)(W.default, {
+    }) : (0, s.jsx)(z.default, {
       className: ec.searchIcon,
       width: 24,
       height: 24
-    }), [a, r, u, i, o.textValue, C, t.id, x, c]);
+    }), [a, r, d, i, o.textValue, C, t.id, x, c]);
     return (0, s.jsx)("div", {
       className: ec.prefixElement,
       children: _
@@ -348,7 +348,7 @@ let ef = n.memo(function(e) {
       editorRef: r
     } = e, {
       formOpen: i,
-      nameError: u,
+      nameError: d,
       name: c,
       textAreaState: f,
       previewing: g
@@ -371,7 +371,7 @@ let ef = n.memo(function(e) {
         hasClickedForm: r,
         submitting: i
       }
-    }, d.default), x = (0, es.useForumPostComposerStoreApi)(), C = null != t.topic && 0 !== t.topic.length, _ = Q.default.hasSeen(t.id), S = (0, J.useChannelTemplate)(t), T = (0, m.useStateFromStores)([D.default], () => D.default.getCurrentUser());
+    }, u.default), x = (0, es.useForumPostComposerStoreApi)(), C = null != t.topic && 0 !== t.topic.length, _ = Q.default.hasSeen(t.id), p = (0, J.useChannelTemplate)(t), T = (0, m.useStateFromStores)([D.default], () => D.default.getCurrentUser());
     o()(null != T, "current user cannot be null");
     (0, K.useComponentAction)({
       event: eo.ComponentActions.FOCUS_COMPOSER_TITLE,
@@ -381,23 +381,23 @@ let ef = n.memo(function(e) {
         null == t || t.focus(), x.getState().setTitleFocused(!0), x.getState().setFormOpen(!0), x.getState().setHasClickedForm(!0)
       }
     });
-    let p = n.useCallback(e => {
+    let S = n.useCallback(e => {
         let a = e.clipboardData.files[0];
-        null != a && a.type.startsWith("image/") && (e.preventDefault(), (0, X.promptToUpload)([a], t, F.DraftType.FirstThreadMessage), x.getState().setFormOpenFromUserAction())
+        null != a && a.type.startsWith("image/") && (e.preventDefault(), (0, X.promptToUpload)([a], t, L.DraftType.FirstThreadMessage), x.getState().setFormOpenFromUserAction())
       }, [t, x]),
-      E = (0, Z.renderError)(u, {
+      E = (0, q.renderError)(d, {
         content: c
       });
     return (0, s.jsxs)("div", {
       className: ec.titleContainer,
-      onPaste: p,
+      onPaste: S,
       children: [i && g ? (0, s.jsx)(h.Heading, {
         variant: "heading-md/semibold",
         className: ec.title,
         children: c
       }) : (0, s.jsx)(h.TextArea, {
         value: c,
-        placeholder: l ? i || f.textValue.length > 0 && f.textValue.trim() !== S ? eu.default.Messages.FORUM_POST_TITLE_PLACEHOLDER_FOCUSED : eu.default.Messages.FORUM_POST_TITLE_PLACEHOLDER_SEARCH : eu.default.Messages.SEARCH,
+        placeholder: l ? i || f.textValue.length > 0 && f.textValue.trim() !== p ? ed.default.Messages.FORUM_POST_TITLE_PLACEHOLDER_FOCUSED : ed.default.Messages.FORUM_POST_TITLE_PLACEHOLDER_SEARCH : ed.default.Messages.SEARCH,
         flex: !0,
         autosize: i,
         rows: 1,
@@ -409,8 +409,8 @@ let ef = n.memo(function(e) {
           x.getState().setName(a);
           let s = 0 === a.trim().length,
             n = 0 === f.textValue.trim().length,
-            l = f.textValue.trim() === S;
-          s && (n || l) && x.getState().setHasClickedForm(!1), !i && q.default.updateForumSearchQuery(t.id, a)
+            l = f.textValue.trim() === p;
+          s && (n || l) && x.getState().setHasClickedForm(!1), !i && Z.default.updateForumSearchQuery(t.id, a)
         },
         onFocus: () => {
           x.getState().setTitleFocused(!0), x.getState().setBodyFocused(!1)
@@ -418,7 +418,7 @@ let ef = n.memo(function(e) {
         onBlur: () => {
           x.getState().setTitleFocused(!1);
           let e = (0, j.default)(c, !0);
-          e !== c && (x.getState().setName(e), !i && q.default.updateForumSearchQuery(t.id, e))
+          e !== c && (x.getState().setName(e), !i && Z.default.updateForumSearchQuery(t.id, e))
         },
         onKeyDown: e => {
           var s, n;
@@ -467,14 +467,14 @@ function ex(e) {
     n.getState().setGuidelinesOpen(!a)
   };
   return l ? (0, s.jsx)(h.Tooltip, {
-    text: eu.default.Messages.FORUM_POST_GUIDELINES_TITLE,
+    text: ed.default.Messages.FORUM_POST_GUIDELINES_TITLE,
     children: e => (0, s.jsx)(h.Clickable, {
       ...e,
       onClick: i,
       className: r()(ec.forumPostFormButton, {
         [ec.forumPostFormButtonActive]: a
       }),
-      children: (0, s.jsx)(w.default, {
+      children: (0, s.jsx)(U.default, {
         ...e,
         width: 24,
         height: 24
@@ -498,7 +498,7 @@ let eC = n.memo(function(e) {
       allowList: !0,
       allowHeading: !0,
       previewLinkTarget: !0
-    }), i = (0, v.default)({
+    }), i = (0, A.default)({
       message: n,
       channel: t
     }, l, !1);
@@ -513,7 +513,7 @@ let eC = n.memo(function(e) {
       submit: a,
       disabled: l = !1,
       editorRef: i,
-      setEditorRef: u
+      setEditorRef: d
     } = e, c = (0, m.useStateFromStores)([D.default], () => D.default.getCurrentUser());
     o()(null != c, "current user cannot be null");
     let {
@@ -521,7 +521,7 @@ let eC = n.memo(function(e) {
       previewing: g,
       textAreaState: x,
       bodyFocused: C,
-      formOpen: S
+      formOpen: p
     } = (0, es.useForumPostComposerStore)(e => {
       let {
         messageError: t,
@@ -537,27 +537,27 @@ let eC = n.memo(function(e) {
         bodyFocused: n,
         formOpen: l
       }
-    }, d.default), p = (0, es.useForumPostComposerStoreApi)();
+    }, u.default), S = (0, es.useForumPostComposerStoreApi)();
     n.useEffect(() => () => (0, ee.maybeTrackForumNewPostDraftCreated)({
       guildId: t.guild_id,
       channelId: t.id
     }), [t.guild_id, t.id]);
     let E = n.useCallback(() => {
-        p.getState().setBodyFocused(!0)
-      }, [p]),
+        S.getState().setBodyFocused(!0)
+      }, [S]),
       N = n.useCallback(() => {
-        p.getState().setBodyFocused(!1)
-      }, [p]),
+        S.getState().setBodyFocused(!1)
+      }, [S]),
       M = n.useCallback((e, t, a) => {
         let {
           setTextAreaState: s
-        } = p.getState();
+        } = S.getState();
         s({
           textValue: t,
           richValue: a
         })
-      }, [p]),
-      v = n.useCallback(e => {
+      }, [S]),
+      A = n.useCallback(e => {
         let {
           value: t,
           uploads: s,
@@ -572,7 +572,7 @@ let eC = n.memo(function(e) {
       event: eo.ComponentActions.TEXTAREA_BLUR,
       handler: N
     });
-    let A = (0, Z.renderError)(f, {
+    let v = (0, q.renderError)(f, {
       content: x.textValue
     });
     return (0, s.jsx)("div", {
@@ -586,18 +586,18 @@ let eC = n.memo(function(e) {
           onClick: E,
           children: (0, s.jsx)(_.default, {
             type: em,
-            setEditorRef: u,
+            setEditorRef: d,
             channel: t,
-            placeholder: eu.default.Messages.FORUM_POST_MESSAGE_PLACEHOLDER,
+            placeholder: ed.default.Messages.FORUM_POST_MESSAGE_PLACEHOLDER,
             textValue: x.textValue,
             richValue: x.richValue,
             focused: C,
             className: ec.channelTextArea,
             innerClassName: r()(ec.channelTextAreaInner, {
-              [ec.channelTextAreaInnerError]: null != A
+              [ec.channelTextAreaInnerError]: null != v
             }),
             onChange: M,
-            onSubmit: v,
+            onSubmit: A,
             promptToUpload: X.promptToUpload,
             disabled: l,
             onKeyDown: e => {
@@ -608,24 +608,24 @@ let eC = n.memo(function(e) {
                 if (null == t) return;
                 "Home" === e.key ? T.SlateTransforms.resetSelectionToStart(t) : T.SlateTransforms.resetSelectionToEnd(t)
               }
-              S && "Escape" === e.key && !p.getState().submitting && (null == i || i.blur(), p.getState().setFormOpen(!1), p.getState().setTitleFocused(!1), p.getState().setBodyFocused(!1), p.getState().setPreviewing(!1))
+              p && "Escape" === e.key && !S.getState().submitting && (null == i || i.blur(), S.getState().setFormOpen(!1), S.getState().setTitleFocused(!1), S.getState().setBodyFocused(!1), S.getState().setPreviewing(!1))
             },
             autoCompletePosition: "bottom"
           })
         }), (0, s.jsx)(h.InputError, {
-          error: A
+          error: v
         })]
       })
     })
   });
 
-function eS() {
+function ep() {
   return (0, s.jsx)("div", {
     className: ec.previewModeIndicator,
     children: (0, s.jsx)(h.Text, {
       variant: "text-sm/normal",
       color: "interactive-normal",
-      children: eu.default.Messages.PREVIEW_MODE
+      children: ed.default.Messages.PREVIEW_MODE
     })
   })
 }
@@ -647,7 +647,7 @@ function eT() {
       a.getState().setPreviewing(!t), (0, ee.trackForumPreviewPostClicked)()
     }, [t, a]);
   return e ? (0, s.jsx)(h.Tooltip, {
-    text: t ? eu.default.Messages.EXIT_PREVIEW : eu.default.Messages.PREVIEW,
+    text: t ? ed.default.Messages.EXIT_PREVIEW : ed.default.Messages.PREVIEW,
     children: e => (0, s.jsx)(h.Clickable, {
       ...e,
       onClick: l,
@@ -666,7 +666,7 @@ function eT() {
     })
   }) : null
 }
-let ep = n.memo(function(e) {
+let eS = n.memo(function(e) {
   let {
     parentChannel: t,
     canCreatePost: a,
@@ -687,8 +687,8 @@ let ep = n.memo(function(e) {
       name: s
     }
   }), {
-    rateLimitPerUser: d
-  } = t, u = d > 0, c = (0, m.useStateFromStores)([P.default], () => P.default.getSlowmodeCooldownGuess(t.id, P.SlowmodeType.CreateThread)), f = (0, m.useStateFromStores)([L.default], () => L.default.can(eo.Permissions.MANAGE_THREADS, t) || L.default.can(eo.Permissions.MANAGE_CHANNELS, t)), g = t.hasFlag(ed.ChannelFlags.REQUIRE_TAG) && 0 === i.size && o.length > 0 && r.textValue.length > 0, x = (0, es.useForumPostComposerStoreApi)(), _ = n.useCallback(() => {
+    rateLimitPerUser: u
+  } = t, d = u > 0, c = (0, m.useStateFromStores)([P.default], () => P.default.getSlowmodeCooldownGuess(t.id, P.SlowmodeType.CreateThread)), f = (0, m.useStateFromStores)([F.default], () => F.default.can(eo.Permissions.MANAGE_THREADS, t) || F.default.can(eo.Permissions.MANAGE_CHANNELS, t)), g = t.hasFlag(eu.ChannelFlags.REQUIRE_TAG) && 0 === i.size && o.length > 0 && r.textValue.length > 0, x = (0, es.useForumPostComposerStoreApi)(), _ = n.useCallback(() => {
     x.getState().setBodyFocused(!1)
   }, [x]), T = n.useMemo(() => "" !== o.trim() && "" !== r.textValue.trim(), [o, r.textValue]);
   return n.useEffect(() => {
@@ -708,13 +708,13 @@ let ep = n.memo(function(e) {
           children: [g && (0, s.jsx)(h.Text, {
             variant: "text-sm/normal",
             color: "text-danger",
-            children: eu.default.Messages.FORUM_POST_TAG_REQUIRED_ERROR
-          }), (0, s.jsx)(S.default, {
+            children: ed.default.Messages.FORUM_POST_TAG_REQUIRED_ERROR
+          }), (0, s.jsx)(p.default, {
             type: em,
             textValue: r.textValue,
             className: ec.characterCount
-          }), u && (0, s.jsx)(el.default, {
-            rateLimitPerUser: d,
+          }), d && (0, s.jsx)(el.default, {
+            rateLimitPerUser: u,
             slowmodeCooldownGuess: c,
             isBypassSlowmode: f,
             leadingIcon: !0
@@ -725,7 +725,7 @@ let ep = n.memo(function(e) {
           parentChannel: t,
           disableIfInvalid: !0,
           canCreatePost: a,
-          disabled: u && !f && c > 0
+          disabled: d && !f && c > 0
         })]
       }), (0, s.jsx)(C.default, {
         type: em,
@@ -746,8 +746,8 @@ function eE(e) {
     submitting: r,
     textAreaState: i,
     name: o,
-    appliedTags: d,
-    formOpen: u
+    appliedTags: u,
+    formOpen: d
   } = (0, es.useForumPostComposerStore)(e => {
     let {
       submitting: t,
@@ -763,7 +763,7 @@ function eE(e) {
       appliedTags: n,
       formOpen: l
     }
-  }), c = t.hasFlag(ed.ChannelFlags.REQUIRE_TAG) && 0 === d.size && o.length > 0 && i.textValue.length > 0, f = (0, m.useStateFromStoresArray)([y.default], () => y.default.getUploads(t.id, F.DraftType.FirstThreadMessage)), g = i.textValue.trim().length > 0 || f.length > 0, x = !c && g && o.trim().length > 0;
+  }), c = t.hasFlag(eu.ChannelFlags.REQUIRE_TAG) && 0 === u.size && o.length > 0 && i.textValue.length > 0, f = (0, m.useStateFromStoresArray)([y.default], () => y.default.getUploads(t.id, L.DraftType.FirstThreadMessage)), g = i.textValue.trim().length > 0 || f.length > 0, x = !c && g && o.trim().length > 0;
   if (__OVERLAY__) return null;
   let C = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -782,12 +782,12 @@ function eE(e) {
       }), (0, s.jsx)(h.Text, {
         variant: "text-md/semibold",
         color: "none",
-        children: u ? eu.default.Messages.SUBMIT_POST : eu.default.Messages.NEW_FORUM_POST_NEW
+        children: d ? ed.default.Messages.SUBMIT_POST : ed.default.Messages.NEW_FORUM_POST_NEW
       })]
     })
   };
   return a ? C() : (0, s.jsx)(h.Tooltip, {
-    text: eu.default.Messages.FORUM_NO_POST_PERMISSION_HELP,
+    text: ed.default.Messages.FORUM_NO_POST_PERMISSION_HELP,
     children: e => C(e)
   })
 }
@@ -814,7 +814,7 @@ function eM(e) {
       toggleAppliedTag: a,
       setPopoutOpen: s
     }
-  }, d.default), o = a.size >= ei.MAX_FORUM_POST_TAGS, m = (0, u.default)({
+  }, u.default), o = a.size >= ei.MAX_FORUM_POST_TAGS, m = (0, d.default)({
     id: "".concat(t.id, "-post-form-tags-navigator"),
     isEnabled: !0,
     wrap: !0,
@@ -824,7 +824,7 @@ function eM(e) {
   }), {
     containerRef: f,
     containerWidth: g
-  } = (0, er.default)(), x = n.useRef(null), [C, _] = n.useState(!0), S = (0, J.useVisibleForumTags)(t), [T, p] = n.useState(0);
+  } = (0, er.default)(), x = n.useRef(null), [C, _] = n.useState(!0), p = (0, J.useVisibleForumTags)(t), [T, S] = n.useState(0);
   return (n.useLayoutEffect(() => {
     var e;
     let t = x.current,
@@ -844,22 +844,22 @@ function eM(e) {
         if (l - t > r) break;
         a - e > s && (s = a - e)
       }
-      p(s)
+      S(s)
     }
-  }, [S, C, f, g]), 0 === S.length) ? null : (0, s.jsx)(s.Fragment, {
+  }, [p, C, f, g]), 0 === p.length) ? null : (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)("div", {
       className: ec.tagsContainer,
       ref: f,
-      children: [(0, s.jsx)(z.default, {
+      children: [(0, s.jsx)(W.default, {
         className: ec.tagsIcon,
         width: 16,
         height: 16
       }), (0, s.jsx)("div", {
         className: ec.tagList,
         ref: x,
-        children: (0, s.jsx)(u.ListNavigatorProvider, {
+        children: (0, s.jsx)(d.ListNavigatorProvider, {
           navigator: m,
-          children: (0, s.jsx)(u.ListNavigatorContainer, {
+          children: (0, s.jsx)(d.ListNavigatorContainer, {
             children: e => {
               let {
                 ref: t,
@@ -869,8 +869,8 @@ function eM(e) {
                 className: ec.tagListInner,
                 ref: t,
                 ...n,
-                children: S.map(e => (0, s.jsx)(en.default, {
-                  ariaLabel: eu.default.Messages.FORUM_TAG_A11Y_ADD_TAG.format({
+                children: p.map(e => (0, s.jsx)(en.default, {
+                  ariaLabel: ed.default.Messages.FORUM_TAG_A11Y_ADD_TAG.format({
                     tagName: e.name
                   }),
                   tag: e,
@@ -909,8 +909,8 @@ function eM(e) {
             left: T
           },
           look: h.Button.Looks.LINK,
-          "aria-label": eu.default.Messages.ADD_TAG_FORUM_POST,
-          children: [eu.default.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL, (0, s.jsx)(U.default, {
+          "aria-label": ed.default.Messages.ADD_TAG_FORUM_POST,
+          children: [ed.default.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL, (0, s.jsx)(w.default, {
             width: 16
           })]
         })
@@ -919,8 +919,8 @@ function eM(e) {
         className: r()(ec.tagsButton, ec.tagsButtonPlaceholder),
         innerClassName: ec.tagsButtonInner,
         look: h.Button.Looks.LINK,
-        "aria-label": eu.default.Messages.ADD_TAG_FORUM_POST,
-        children: [eu.default.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL, (0, s.jsx)(U.default, {
+        "aria-label": ed.default.Messages.ADD_TAG_FORUM_POST,
+        children: [ed.default.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL, (0, s.jsx)(w.default, {
           width: 16
         })]
       })]
@@ -928,7 +928,7 @@ function eM(e) {
   })
 }
 
-function ev(e) {
+function eA(e) {
   let {
     style: t,
     className: a

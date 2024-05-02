@@ -25,9 +25,9 @@ var a = n("735250"),
   T = n("931261"),
   I = n("305762"),
   A = n("689938"),
-  v = n("496250");
+  N = n("496250");
 
-function N(e) {
+function v(e) {
   let {
     action: t
   } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getChannel(t.channelId)), l = (0, c.default)(n, !0);
@@ -60,7 +60,7 @@ function x(e) {
     emojiName: s,
     size: I.CTAEmojiSize.MEDIUM,
     defaultComponent: (0, a.jsx)(r, {
-      className: v.channelIcon
+      className: N.channelIcon
     })
   })
 }
@@ -99,7 +99,7 @@ function M(e) {
     null != I && (0, g.selectNewMemberActionChannel)(f, I.channelId)
   }, [f, I]);
   return null == E || R && !y ? null : (0, a.jsx)("div", {
-    className: i()(v.container, m),
+    className: i()(N.container, m),
     children: y && null != I ? (0, a.jsx)(r.default.div, {
       style: {
         marginBottom: P.interpolate({
@@ -108,35 +108,35 @@ function M(e) {
         })
       },
       children: (0, a.jsxs)(u.Clickable, {
-        className: i()(v.banner, v.clickable),
+        className: i()(N.banner, N.clickable),
         onClick: D,
         children: [(0, a.jsx)(x, {
           channelId: I.channelId,
           emojiId: null === (t = I.emoji) || void 0 === t ? void 0 : t.id,
           emojiName: null == I ? void 0 : null === (n = I.emoji) || void 0 === n ? void 0 : n.name
         }), (0, a.jsxs)("div", {
-          className: v.text,
+          className: N.text,
           children: [(0, a.jsx)(u.Text, {
             variant: "text-md/semibold",
             color: "header-primary",
             children: A.default.Messages.MEMBER_ACTIONS_NEXT_STEP.format({
               step: I.title
             })
-          }), (0, a.jsx)(N, {
+          }), (0, a.jsx)(v, {
             action: I
           })]
         }), (0, a.jsx)("div", {
-          className: v.iconCircle,
+          className: N.iconCircle,
           children: (0, a.jsx)(p.default, {
             width: 16,
             height: 16,
             color: L.hex(),
-            className: v.nextIcon
+            className: N.nextIcon
           })
         })]
       })
     }) : (0, a.jsxs)(r.default.div, {
-      className: v.banner,
+      className: N.banner,
       style: {
         marginBottom: j.interpolate({
           inputRange: [0, 1],
@@ -148,7 +148,7 @@ function M(e) {
         emojiId: null === (s = E.emoji) || void 0 === s ? void 0 : s.id,
         emojiName: null == E ? void 0 : null === (c = E.emoji) || void 0 === c ? void 0 : c.name
       }), (0, a.jsxs)("div", {
-        className: v.text,
+        className: N.text,
         children: [(0, a.jsx)(u.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
@@ -159,7 +159,7 @@ function M(e) {
           children: A.default.Messages.MEMBER_ACTION_CHAT
         })]
       }), T ? (0, a.jsx)(C.default, {
-        className: v.completed,
+        className: N.completed,
         backgroundColor: L.hex(),
         width: 20,
         height: 20

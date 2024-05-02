@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("348600"),
   I = n("566620"),
   A = n("127255"),
-  v = n("5200"),
-  N = n("558317"),
+  N = n("5200"),
+  v = n("558317"),
   x = n("403404"),
   M = n("981631"),
   R = n("689938"),
@@ -152,13 +152,13 @@ let j = "vc-activities-".concat((0, o.v4)()),
               children: X
             }), (0, a.jsxs)("div", {
               className: L.activityContainer,
-              children: [K.map(e => (0, a.jsx)(v.ActivitySuggestion, {
+              children: [K.map(e => (0, a.jsx)(N.ActivitySuggestion, {
                 channel: n,
                 activityItem: e,
                 onClick: () => {
                   o(), b()
                 },
-                aspectRatio: v.ActivitySuggestion.AspectRatio.THIRTEEN_BY_ELEVEN,
+                aspectRatio: N.ActivitySuggestion.AspectRatio.THIRTEEN_BY_ELEVEN,
                 animatedDivClass: L.activitySuggestion
               }, e.application.id)), (0, a.jsx)("div", {
                 className: i()(L.wumpusRocketOuterContainer, {
@@ -166,7 +166,7 @@ let j = "vc-activities-".concat((0, o.v4)()),
                 }),
                 children: (0, a.jsx)("div", {
                   className: L.wumpusRocketInnerContainer,
-                  children: (0, a.jsx)(N.default, {
+                  children: (0, a.jsx)(v.default, {
                     className: L.wumpusRocket
                   })
                 })

@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   MediaPostThumbnail: function() {
-    return F
+    return L
   }
 });
 var s = a("735250"),
@@ -10,8 +10,8 @@ var s = a("735250"),
   r = a.n(l),
   i = a("512722"),
   o = a.n(i),
-  d = a("399606"),
-  u = a("481060"),
+  u = a("399606"),
+  d = a("481060"),
   c = a("166459"),
   m = a("607070"),
   h = a("541716"),
@@ -20,21 +20,21 @@ var s = a("735250"),
   x = a("470623"),
   C = a("983200"),
   _ = a("153124"),
-  S = a("350722"),
+  p = a("350722"),
   T = a("586791"),
-  p = a("839811"),
+  S = a("839811"),
   E = a("185403"),
   N = a("740727"),
   M = a("810090"),
-  v = a("127654"),
-  A = a("124252"),
+  A = a("127654"),
+  v = a("124252"),
   I = a("689938"),
   j = a("493803");
-let R = [{
+let O = [{
     name: "Media Post Thumbnail",
     extensions: ["jpg", "jpeg", "png", "gif", "webp"]
   }],
-  O = (0, _.uid)();
+  R = (0, _.uid)();
 
 function b(e) {
   let {
@@ -65,7 +65,7 @@ function b(e) {
     })
   })
 }
-let F = e => {
+let L = e => {
   var t;
   let {
     parentChannel: l
@@ -78,19 +78,19 @@ let F = e => {
     return {
       textAreaState: t
     }
-  }), C = (0, d.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), _ = (0, A.default)(l, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), M = n.useMemo(() => _.find(e => e.isThumbnail), [_]), F = null != _ && _.length > 0, L = n.useMemo(() => {
+  }), C = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), _ = (0, v.default)(l, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), M = n.useMemo(() => _.find(e => e.isThumbnail), [_]), L = null != _ && _.length > 0, F = n.useMemo(() => {
     let e = (null == _ ? void 0 : _.length) > 1 ? 1.15 : 1;
     return {
       width: 153 * e,
       height: 86 * e
     }
   }, [_]), P = n.useCallback(e => {
-    null != M && c.default.remove(l.id, M.id, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type), (0, v.promptToUpload)(e.currentTarget.files, l, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type, {
+    null != M && c.default.remove(l.id, M.id, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type), (0, A.promptToUpload)(e.currentTarget.files, l, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type, {
       requireConfirm: !0,
       isThumbnail: !0
     }), e.currentTarget.value = null
   }, [l, M]), y = e => {
-    e.stopPropagation(), (null == M ? void 0 : M.upload) != null && (0, u.openModalLazy)(async () => {
+    e.stopPropagation(), (null == M ? void 0 : M.upload) != null && (0, d.openModalLazy)(async () => {
       let e = M.upload;
       o()(null != e, "upload should not be null");
       let {
@@ -116,26 +116,26 @@ let F = e => {
         disableSpoiler: !0
       })
     })
-  }, D = (0, s.jsx)(S.default, {
-    color: u.ButtonColors.CUSTOM,
+  }, D = (0, s.jsx)(p.default, {
+    color: d.ButtonColors.CUSTOM,
     className: r()(j.uploadFileInputContainer),
     innerClassName: j.uploadThumbnailContainer,
     onChange: P,
     multiple: !1,
     "aria-hidden": !0,
-    filters: R,
-    "aria-describedby": O,
-    "aria-label": F ? I.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL : I.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL,
-    children: F ? (0, s.jsxs)(s.Fragment, {
+    filters: O,
+    "aria-describedby": R,
+    "aria-label": L ? I.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL : I.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL,
+    children: L ? (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(b, {
         mediaAttachments: _,
-        containerWidth: L.width,
-        containerHeight: L.height
+        containerWidth: F.width,
+        containerHeight: F.height
       }), (0, s.jsxs)("div", {
         className: r()(j.changeThumbnailLabelContainer, {
           [j.changeThumbnailLabelOverflow]: (null == _ ? void 0 : _.length) > 2
         }),
-        children: [(0, s.jsx)(u.Text, {
+        children: [(0, s.jsx)(d.Text, {
           variant: "text-xs/medium",
           color: "header-secondary",
           children: I.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL
@@ -146,9 +146,9 @@ let F = e => {
         })]
       })]
     }) : (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(p.default, {
+      children: [(0, s.jsx)(S.default, {
         className: j.uploadIcon
-      }), (0, s.jsx)(u.Text, {
+      }), (0, s.jsx)(d.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         children: I.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL
@@ -157,7 +157,7 @@ let F = e => {
   });
   return (0, s.jsx)("div", {
     className: j.thumbnailContainer,
-    style: L,
+    style: F,
     children: null != M ? (0, s.jsx)(g.default, {
       actions: (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(f.default, {

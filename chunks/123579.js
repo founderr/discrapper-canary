@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("314897"),
   I = n("592125"),
   A = n("496675"),
-  v = n("158776"),
-  N = n("246946"),
+  N = n("158776"),
+  v = n("246946"),
   x = n("594174"),
   M = n("979651"),
   R = n("5192"),
@@ -95,28 +95,28 @@ t.default = e => {
       activity: eT,
       customStatusActivity: eI,
       isApplicationStreaming: eA,
-      isMobile: ev,
-      status: eN,
+      isMobile: eN,
+      status: ev,
       hangStatusActivity: ex
-    } = (0, u.useStateFromStoresObject)([_.default, v.default, A.default], () => {
+    } = (0, u.useStateFromStoresObject)([_.default, N.default, A.default], () => {
       let e = null != _.default.getAnyStreamForUser(ec.id);
       return {
-        activity: v.default.findActivity(ec.id, t => {
+        activity: N.default.findActivity(ec.id, t => {
           let {
             type: n
           } = t;
           return e ? n === ea.ActivityTypes.PLAYING : n !== ea.ActivityTypes.CUSTOM_STATUS && n !== ea.ActivityTypes.HANG_STATUS
         }),
-        customStatusActivity: v.default.findActivity(ec.id, e => {
+        customStatusActivity: N.default.findActivity(ec.id, e => {
           let {
             type: t
           } = e;
           return t === ea.ActivityTypes.CUSTOM_STATUS
         }),
         isApplicationStreaming: e,
-        isMobile: v.default.isMobileOnline(ec.id),
-        status: ef ? null : v.default.getStatus(ec.id),
-        hangStatusActivity: e_ && null != eS && A.default.can(ea.Permissions.CONNECT, eS) ? v.default.findActivity(ec.id, e => {
+        isMobile: N.default.isMobileOnline(ec.id),
+        status: ef ? null : N.default.getStatus(ec.id),
+        hangStatusActivity: e_ && null != eS && A.default.can(ea.Permissions.CONNECT, eS) ? N.default.findActivity(ec.id, e => {
           let {
             type: t
           } = e;
@@ -126,7 +126,7 @@ t.default = e => {
     }),
     eM = null != eT || null != ex || eA,
     eR = null !== (t = R.default.getNickname(null, n.id, ec)) && void 0 !== t ? t : L.default.getName(ec),
-    eL = (0, u.useStateFromStores)([N.default], () => N.default.hidePersonalInformation),
+    eL = (0, u.useStateFromStores)([v.default], () => v.default.hidePersonalInformation),
     [ey, eO, ej, eP, eD] = (0, u.useStateFromStoresArray)([P.default], () => [P.default.getMutualFriendsCount(ec.id), P.default.getMutualFriends(ec.id), P.default.getMutualGuilds(ec.id), P.default.isFetchingProfile(ec.id), P.default.isFetchingFriends(ec.id)]),
     eb = !ec.bot && null != ej && ej.length > 0,
     eU = !ec.bot && null != ey && ey > 0,
@@ -145,13 +145,13 @@ t.default = e => {
   }, [ec]), l.useEffect(() => {
     null != eh && eg && (0, U.trackProfilePanelViewed)({
       displayProfile: eh,
-      isMobile: ev,
+      isMobile: eN,
       loadDurationMs: Date.now() - eo.current,
       activity: eT,
       customStatusActivity: eI,
-      status: eN
+      status: ev
     })
-  }, [eh, ev, eT, eI, eN, eg]);
+  }, [eh, eN, eT, eI, ev, eg]);
   let ek = null == ej ? void 0 : ej.map(e => (0, a.jsx)(ee.default, {
       connection: e,
       user: ec,

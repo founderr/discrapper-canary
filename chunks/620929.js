@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CharterScrollGameSection: function() {
-    return N
+    return v
   }
 });
 var a = n("735250"),
@@ -26,7 +26,7 @@ var a = n("735250"),
   I = n("689938"),
   A = n("156610");
 
-function v(e) {
+function N(e) {
   let {
     tag: t,
     badge: n,
@@ -54,7 +54,7 @@ function v(e) {
   })
 }
 
-function N(e) {
+function v(e) {
   let {
     applicationIds: t,
     playstyle: n,
@@ -113,7 +113,7 @@ t.default = e => {
       children: (0, a.jsxs)(c.ScrollerNone, {
         fade: !0,
         className: A.overviewSidebarContent,
-        children: [(0, a.jsx)(v, {
+        children: [(0, a.jsx)(N, {
           tag: R,
           badge: L,
           primaryColor: null != y ? y : _.CLAN_BADGE_PRIMARY_DEFAULT,
@@ -135,7 +135,7 @@ t.default = e => {
           children: I.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
             date: o()().format("MMMM YYYY")
           })
-        }), (0, a.jsx)(N, {
+        }), (0, a.jsx)(v, {
           applicationIds: S,
           playstyle: x
         }), null != j ? (0, a.jsx)(c.Text, {

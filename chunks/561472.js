@@ -24,10 +24,10 @@ t.default = function(e) {
     style: n,
     channel: T,
     draftType: I
-  } = e, [A, v] = l.useState(!0), N = (0, s.useStateFromStores)([c.default], () => c.default.hasLayers()), x = (0, s.useStateFromStores)([f.default], () => null != T && f.default.can(S.Permissions.ATTACH_FILES, T), [T]), M = null != (0, s.useStateFromStores)([i.default], () => i.default.getActiveCommand(T.id)), R = T.getGuildId(), L = I === o.DraftType.FirstThreadMessage, y = (0, s.useStateFromStores)([m.default], () => {
+  } = e, [A, N] = l.useState(!0), v = (0, s.useStateFromStores)([c.default], () => c.default.hasLayers()), x = (0, s.useStateFromStores)([f.default], () => null != T && f.default.can(S.Permissions.ATTACH_FILES, T), [T]), M = null != (0, s.useStateFromStores)([i.default], () => i.default.getActiveCommand(T.id)), R = T.getGuildId(), L = I === o.DraftType.FirstThreadMessage, y = (0, s.useStateFromStores)([m.default], () => {
     var e;
     return !0 == !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed)
-  }), O = (0, s.useStateFromStores)([u.default], () => u.default.didAgree(R)) && !y, j = l.useMemo(() => !N && (T.isPrivate() && !T.isManaged() || null != R && (!T.isNSFW() || O) && x && d.default.canChatInGuild(R)), [x, O, T, R, N]), P = L ? S.ChannelTypesSets.GUILD_THREADS_ONLY.has(T.type) ? _.default.Messages.UPLOAD_TO_NEW_POST : _.default.Messages.UPLOAD_TO_NEW_THREAD : A ? _.default.Messages.UPLOAD_TO.format({
+  }), O = (0, s.useStateFromStores)([u.default], () => u.default.didAgree(R)) && !y, j = l.useMemo(() => !v && (T.isPrivate() && !T.isManaged() || null != R && (!T.isNSFW() || O) && x && d.default.canChatInGuild(R)), [x, O, T, R, v]), P = L ? S.ChannelTypesSets.GUILD_THREADS_ONLY.has(T.type) ? _.default.Messages.UPLOAD_TO_NEW_POST : _.default.Messages.UPLOAD_TO_NEW_THREAD : A ? _.default.Messages.UPLOAD_TO.format({
     destination: (0, r.computeChannelName)(T, m.default, h.default, !0)
   }) : _.default.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
   return M || !j ? null : (0, a.jsx)(C.default, {
@@ -43,10 +43,10 @@ t.default = function(e) {
         showLargeMessageDialog: !1
       }), p.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.TEXTAREA_FOCUS))
     },
-    onDragClear: () => v(!0),
+    onDragClear: () => N(!0),
     onDragOver: e => {
       if (M) return !1;
-      !L && e.shiftKey === A && v(!e.shiftKey)
+      !L && e.shiftKey === A && N(!e.shiftKey)
     }
   })
 }

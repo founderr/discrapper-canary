@@ -16,8 +16,8 @@ var s = a("735250"),
   r = a("536895"),
   i = a("260866");
 let o = "data-grid-item-id",
-  d = "data-grid-section",
-  u = "data-grid-prev-section-boundary",
+  u = "data-grid-section",
+  d = "data-grid-prev-section-boundary",
   c = new Set([r.Keys.UP, r.Keys.DOWN, r.Keys.LEFT, r.Keys.RIGHT]);
 
 function m(e) {
@@ -25,7 +25,7 @@ function m(e) {
     section: t,
     column: a,
     row: s
-  } = e, n = "[".concat(d, '="').concat(t, '"]'), l = "[".concat("aria-colindex", '="').concat(a, '"]'), r = "[".concat("aria-rowindex", '="').concat(s, '"]');
+  } = e, n = "[".concat(u, '="').concat(t, '"]'), l = "[".concat("aria-colindex", '="').concat(a, '"]'), r = "[".concat("aria-rowindex", '="').concat(s, '"]');
   return "".concat(n).concat(l).concat(r)
 }
 
@@ -34,7 +34,7 @@ function h(e) {
     id: t,
     isEnabled: a,
     setFocus: s
-  } = e, d = n.useRef(null), h = n.useRef(!1), f = n.useRef(null), g = n.useRef(a);
+  } = e, u = n.useRef(null), h = n.useRef(!1), f = n.useRef(null), g = n.useRef(a);
   n.useLayoutEffect(() => {
     g.current = a
   }, [a]);
@@ -51,13 +51,13 @@ function h(e) {
         null === (t = document.querySelector(e)) || void 0 === t || t.focus()
       }
     }, []),
-    S = n.useCallback(e => {
-      d.current = e;
+    p = n.useCallback(e => {
+      u.current = e;
       let a = (0, i.createSelector)(e, o),
         s = (0, i.getItemId)(e);
       C(a, s), (0, l.notifyFocusSubscribers)(t, s, !0)
     }, [t, C]),
-    [T, p] = n.useState(!1),
+    [T, S] = n.useState(!1),
     E = n.useRef(T);
   n.useLayoutEffect(() => {
     E.current = T
@@ -70,12 +70,12 @@ function h(e) {
     };
 
     function a() {
-      p(!0)
+      S(!0)
     }
 
     function s(e) {
-      !e.currentTarget.contains(e.relatedTarget) && (p(!1), requestAnimationFrame(() => {
-        let e = d.current;
+      !e.currentTarget.contains(e.relatedTarget) && (S(!1), requestAnimationFrame(() => {
+        let e = u.current;
         null !== e && null == x((0, i.createSelector)(e, o)) && _((0, i.createSelector)(t, "data-grid-id"))
       }))
     }
@@ -88,11 +88,11 @@ function h(e) {
     function l() {
       h.current = !0
     }
-  }, [t, C, _, S, x]);
+  }, [t, C, _, p, x]);
   let N = n.useCallback(e => {
       var t, a;
       if (!g.current) return;
-      let s = d.current,
+      let s = u.current,
         n = f.current;
       if (null == s) return;
       let l = (0, i.createSelector)(s, o),
@@ -110,7 +110,7 @@ function h(e) {
           }));
           if (null != e) {
             let t = e.getAttribute(o);
-            null != t && S(t)
+            null != t && p(t)
           }
           return
         }
@@ -122,7 +122,7 @@ function h(e) {
           }));
           if (null != e) {
             let t = e.getAttribute(o);
-            null != t && S(t)
+            null != t && p(t)
           }
           return
         }
@@ -138,14 +138,14 @@ function h(e) {
               column: T
             }))), null != e) {
             let t = e.getAttribute(o);
-            null != t && S(t)
+            null != t && p(t)
           }
           return
         }
         case r.Keys.UP: {
           let e;
           if (0 === _) {
-            let t = parseInt(h.getAttribute(u));
+            let t = parseInt(h.getAttribute(d));
             null == (e = x(m({
               section: C - 1,
               row: t,
@@ -162,14 +162,14 @@ function h(e) {
           }));
           if (null != e) {
             let t = e.getAttribute(o);
-            null != t && S(t)
+            null != t && p(t)
           }
           return
         }
         case r.Keys.SPACE:
         case r.Keys.ENTER: {
           if (e.repeat) return;
-          let t = d.current;
+          let t = u.current;
           if (null != t) {
             let s = x((0, i.createSelector)(t, o)),
               n = null !== (a = null == s ? void 0 : s.ownerDocument) && void 0 !== a ? a : document,
@@ -178,10 +178,10 @@ function h(e) {
           }
         }
       }
-    }, [x, S]),
+    }, [x, p]),
     M = n.useCallback(e => {
       let a = null != e ? (0, i.createListItemId)(t, e) : null;
-      d.current = a
+      u.current = a
     }, [t]);
   return n.useMemo(() => ({
     id: t,
@@ -218,8 +218,8 @@ function C(e) {
     h(e === t ? 0 : -1)
   }), [t, f]), {
     [o]: (0, i.createListItemId)(f, t),
-    [d]: a,
-    [u]: c[a],
+    [u]: a,
+    [d]: c[a],
     role: "gridcell",
     "aria-rowindex": s,
     "aria-colindex": r,
@@ -239,18 +239,18 @@ function _(e) {
       onKeyDown: i,
       ref: o
     }
-  } = a, d = n.useMemo(() => ({
+  } = a, u = n.useMemo(() => ({
     id: l,
     setFocus: r
-  }), [l, r]), u = n.useMemo(() => ({
+  }), [l, r]), d = n.useMemo(() => ({
     onKeyDown: i,
     ref: o,
     id: l
   }), [i, o, l]);
   return (0, s.jsx)(x.Provider, {
-    value: u,
+    value: d,
     children: (0, s.jsx)(g.Provider, {
-      value: d,
+      value: u,
       children: t
     })
   })

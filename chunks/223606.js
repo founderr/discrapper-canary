@@ -23,7 +23,7 @@ let h = {},
   E = 0,
   _ = {},
   p = {},
-  m = (e, t) => {
+  C = (e, t) => {
     let n = (0, s.getFailedMessageId)(e),
       r = {
         id: n,
@@ -33,7 +33,7 @@ let h = {},
       };
     h[n] = r, E++
   },
-  C = e => h[e],
+  m = e => h[e],
   I = e => {
     null != h[e] && delete h[e], E++
   };
@@ -43,7 +43,7 @@ function T(e) {
     messageData: t,
     errorResponseBody: n
   } = e;
-  return m(t, n), !0
+  return C(t, n), !0
 }
 
 function R(e) {
@@ -78,7 +78,7 @@ class M extends(r = i.default.PersistedStore) {
   }
   getMessage(e) {
     var t;
-    return null == e ? null : null !== (t = C(e)) && void 0 !== t ? t : null
+    return null == e ? null : null !== (t = m(e)) && void 0 !== t ? t : null
   }
   getMessagesVersion() {
     return E

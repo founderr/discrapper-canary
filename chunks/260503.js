@@ -31,7 +31,7 @@ function l(e) {
     null == a || a.scrollToTop({
       callback: () => requestAnimationFrame(e)
     })
-  }), []), d = s.useCallback(() => new Promise(e => {
+  }), []), u = s.useCallback(() => new Promise(e => {
     let a = t.current;
     null == a || a.scrollToBottom({
       callback: () => requestAnimationFrame(e)
@@ -41,7 +41,7 @@ function l(e) {
     id: "forum-channel-list-".concat(l.id),
     isEnabled: r,
     scrollToStart: o,
-    scrollToEnd: d,
+    scrollToEnd: u,
     setFocus: i
   })
 }

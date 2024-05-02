@@ -24,8 +24,8 @@ var a, l = n("735250"),
   T = n("366695"),
   I = n("119828"),
   A = n("156338"),
-  v = n("794358"),
-  N = n("381238"),
+  N = n("794358"),
+  v = n("381238"),
   x = n("255439"),
   M = n("374129"),
   R = n("639351"),
@@ -175,7 +175,7 @@ class B extends(a = s.Component) {
       hangStatusActivity: S,
       showHangStatus: _,
       isSelf: T,
-      application: N,
+      application: v,
       guildId: x,
       channelId: j,
       user: w,
@@ -228,11 +228,11 @@ class B extends(a = s.Component) {
     }, "stream")) : f && B.push((0, l.jsx)(h.TooltipContainer, {
       className: F.iconSpacing,
       text: U.default.Messages.WATCH_STREAM_WATCHING,
-      children: (0, l.jsx)(v.default, {
+      children: (0, l.jsx)(N.default, {
         className: r()(F.icon, m)
       })
     }, "watch"));
-    let Y = null != N && !(0, O.hasFlag)(N.flags, P.ApplicationFlags.EMBEDDED),
+    let Y = null != v && !(0, O.hasFlag)(v.flags, P.ApplicationFlags.EMBEDDED),
       z = null == S && Y;
     return 0 !== B.length || null != W || _ || z ? (0, l.jsxs)("div", {
       className: F.icons,
@@ -244,7 +244,7 @@ class B extends(a = s.Component) {
         className: F.iconGroup,
         onMouseEnter: () => null == k ? void 0 : k(!0),
         children: z ? (0, l.jsx)(G, {
-          application: N,
+          application: v,
           iconClassName: m,
           guildId: x,
           channelId: j,
@@ -420,7 +420,7 @@ function V(e) {
         }),
         color: "currentColor"
       })
-    } else e = (0, l.jsx)(N.default, {
+    } else e = (0, l.jsx)(v.default, {
       className: r()(F.icon, t, {
         [F.iconServer]: f
       })

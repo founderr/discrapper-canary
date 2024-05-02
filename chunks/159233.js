@@ -31,7 +31,7 @@ function E(e) {
       (null == _ || e) && !T ? (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("58023"), n.e("18803")]).then(n.bind(n, "779250"));
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("58023"), n.e("10045")]).then(n.bind(n, "779250"));
         return n => (0, l.jsx)(e, {
           ...n,
           guildScheduledEventId: t,

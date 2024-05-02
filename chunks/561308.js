@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return I
   },
   getMarathonDurationStr: function() {
-    return N
+    return v
   },
   getMarathonName: function() {
     return x
@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return T
   },
   getStreakCount: function() {
-    return v
+    return N
   },
   isEntryActive: function() {
     return p
@@ -174,12 +174,12 @@ function A(e) {
   return e.content_type === r.ContentInventoryEntryType.TOP_GAME
 }
 
-function v(e) {
+function N(e) {
   let t = e.traits.find(e => e.type === i.ContentInventoryTraitType.STREAK_DAYS);
   return null == t ? void 0 : t.streak_count_days
 }
 
-function N(e) {
+function v(e) {
   let t = g(e);
   if (null == t) return null;
   let n = Math.round(t / o.default.Seconds.HOUR);
@@ -195,7 +195,7 @@ function x(e) {
 }
 
 function M(e) {
-  let t = N(e),
+  let t = v(e),
     n = x(e);
   return null == t ? n : "".concat(n, " — ").concat(t)
 }

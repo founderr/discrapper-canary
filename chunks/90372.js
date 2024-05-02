@@ -9,15 +9,15 @@ t.default = {
     let {
       guildId: t,
       channelId: a
-    } = e, i = s.useRef(null), o = (0, l.getMainWindowId)(), d = !n.default.isFocused(o);
+    } = e, i = s.useRef(null), o = (0, l.getMainWindowId)(), u = !n.default.isFocused(o);
     return s.useLayoutEffect(() => (null == i.current && (i.current = new r.default({
       guildId: t,
       channelId: a,
-      isPaused: d,
+      isPaused: u,
       windowId: o
     }), i.current.initialize()), () => {
       var e;
       null === (e = i.current) || void 0 === e || e.terminate(), i.current = null
-    }), [a, t, d, o]), i.current
+    }), [a, t, u, o]), i.current
   }
 }

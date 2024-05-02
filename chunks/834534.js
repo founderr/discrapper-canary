@@ -17,13 +17,13 @@ var l = s("735250"),
   S = s("430824"),
   m = s("785717"),
   I = s("648067"),
-  v = s("588822"),
-  E = s("81334"),
+  E = s("588822"),
+  v = s("81334"),
   _ = s("652853"),
   x = s("335191"),
-  A = s("347949"),
+  T = s("347949"),
   U = s("192591"),
-  T = s("351707"),
+  A = s("351707"),
   N = s("689938"),
   g = s("634516");
 
@@ -40,8 +40,8 @@ function C(e) {
     trackUserProfileAction: p
   } = (0, m.useUserProfileAnalyticsContext)(), j = null == i ? void 0 : i.guildId, M = (0, r.useStateFromStores)([S.default], () => null != j ? S.default.getGuild(j) : null), {
     recentGames: P,
-    isFetching: y,
-    currentUserApplicationIds: O
+    isFetching: O,
+    currentUserApplicationIds: y
   } = (0, c.useUserRecentGames)(t.id), L = a.useMemo(() => {
     var e;
     return null !== (e = null == P ? void 0 : P.slice(0, 6)) && void 0 !== e ? e : []
@@ -52,24 +52,24 @@ function C(e) {
   return (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: n()(g.scroller, h),
-    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(v.default, {
+    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(E.default, {
       userBio: i.bio,
       setLineClamp: !1
-    }), null != M && (0, l.jsx)(T.default, {
+    }), null != M && (0, l.jsx)(A.default, {
       user: t,
       currentUser: s,
       guild: M
-    }), (0, l.jsx)(E.default, {
+    }), (0, l.jsx)(v.default, {
       className: g.section,
       userId: t.id,
       guildId: null == i ? void 0 : i.guildId,
       headingVariant: "text-xs/semibold"
-    }), F && !y && L.length > 0 && (0, l.jsx)(U.default, {
+    }), F && !O && L.length > 0 && (0, l.jsx)(U.default, {
       title: N.default.Messages.LAST_PLAYED_GAMES,
-      children: (0, l.jsx)(A.UserProfileRecentGames, {
+      children: (0, l.jsx)(T.UserProfileRecentGames, {
         userId: t.id,
         recentGames: L,
-        currentUserApplicationIds: O
+        currentUserApplicationIds: y
       })
     }), b.length > 0 && (0, l.jsx)(U.default, {
       title: N.default.Messages.CONNECTIONS,

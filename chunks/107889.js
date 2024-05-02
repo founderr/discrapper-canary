@@ -17,13 +17,13 @@ var l = s("735250"),
   S = s("5192"),
   m = s("785717"),
   I = s("318661"),
-  v = s("502762"),
-  E = s("705556"),
+  E = s("502762"),
+  v = s("705556"),
   _ = s("301984"),
   x = s("94918"),
-  A = s("664794"),
+  T = s("664794"),
   U = s("980768"),
-  T = s("806926"),
+  A = s("806926"),
   N = s("740021"),
   g = s("228168"),
   C = s("981631"),
@@ -38,8 +38,8 @@ function p(e) {
     messageId: j,
     roleId: M,
     friendToken: P,
-    initialSection: y,
-    autoFocusNote: O,
+    initialSection: O,
+    autoFocusNote: y,
     transitionState: L,
     sourceAnalyticsLocations: F = [],
     onClose: D
@@ -68,7 +68,7 @@ function p(e) {
       } = e;
       return t === C.ActivityTypes.CUSTOM_STATUS
     })
-  })), Z = a.createRef(), J = (0, o.default)(Z);
+  })), Z = a.createRef(), K = (0, o.default)(Z);
   return (0, l.jsx)(d.AnalyticsLocationProvider, {
     value: B,
     children: (0, l.jsx)(m.UserProfileAnalyticsProvider, {
@@ -85,13 +85,13 @@ function p(e) {
         "aria-label": h.default.Messages.USER_PROFILE_MODAL,
         children: (0, l.jsx)("div", {
           ref: Z,
-          children: (0, l.jsxs)(v.default, {
+          children: (0, l.jsxs)(E.default, {
             user: t,
             displayProfile: Y,
             profileType: g.UserProfileTypes.FULL_SIZE,
             children: [(0, l.jsxs)(U.default, {
               profileType: g.UserProfileTypes.FULL_SIZE,
-              isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !J,
+              isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !K,
               children: [(0, l.jsx)(x.default, {
                 user: t,
                 guildId: b,
@@ -100,14 +100,14 @@ function p(e) {
               }), (0, l.jsx)(_.default, {
                 user: t,
                 friendToken: P
-              }), (0, l.jsx)(E.default, {
+              }), (0, l.jsx)(v.default, {
                 type: "overlay",
                 user: t,
                 guildId: b,
                 onClose: () => {
                   D(), (0, r.popLayer)()
                 }
-              }), (0, l.jsx)(A.default, {
+              }), (0, l.jsx)(T.default, {
                 user: t,
                 guildId: b,
                 viewProfileItem: (null == H ? void 0 : H.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, l.jsx)(n.MenuItem, {
@@ -144,16 +144,16 @@ function p(e) {
               activity: z,
               customStatusActivity: W,
               onClose: D
-            }), (0, l.jsx)(T.default, {
+            }), (0, l.jsx)(A.default, {
               user: t,
               displayProfile: Y,
-              initialSection: y,
-              autoFocusNote: O,
+              initialSection: O,
+              autoFocusNote: y,
               transitionState: L,
               onClose: D
             }), (null == Y ? void 0 : Y.profileEffectId) != null && (0, l.jsx)(c.default, {
               profileEffectId: null == Y ? void 0 : Y.profileEffectId,
-              isHovering: J
+              isHovering: K
             })]
           })
         })

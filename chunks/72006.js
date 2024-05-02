@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return x
   },
   clearContent: function() {
-    return L
+    return A
   },
   createEmptyEditorState: function() {
-    return A
+    return L
   },
   deleteContent: function() {
     return v
@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return l()
   },
   getFirstTextBlock: function() {
-    return O
+    return b
   },
   isEmpty: function() {
     return B
   },
   miscCommand: function() {
-    return b
+    return O
   },
   replaceAllContent: function() {
     return P
@@ -31,19 +31,19 @@ n.r(t), n.d(t, {
     return U
   },
   setCollapsedEndSelection: function() {
-    return D
-  },
-  setCollapsedSelection: function() {
     return j
   },
-  setCollapsedStartSelection: function() {
-    return G
+  setCollapsedSelection: function() {
+    return D
   },
-  setToEndSelection: function() {
+  setCollapsedStartSelection: function() {
     return w
   },
-  setToStartSelection: function() {
+  setToEndSelection: function() {
     return y
+  },
+  setToStartSelection: function() {
+    return G
   },
   truncateContent: function() {
     return F
@@ -68,9 +68,9 @@ var r = n("16464"),
   E = n("405141"),
   _ = n.n(E),
   p = n("960973"),
-  m = n.n(p),
-  C = n("93874"),
-  I = n.n(C),
+  C = n.n(p),
+  m = n("93874"),
+  I = n.n(m),
   T = n("295985"),
   R = n.n(T);
 
@@ -113,7 +113,7 @@ function v(e, t) {
     case "delete-word":
       return S()(t);
     case "backspace":
-      return m()(t);
+      return C()(t);
     case "backspace-word":
       return d()(t);
     case "backspace-to-start-of-line":
@@ -123,7 +123,7 @@ function v(e, t) {
   }
 }
 
-function b(e, t) {
+function O(e, t) {
   switch (e) {
     case "transpose-characters":
       return R()(t);
@@ -136,7 +136,7 @@ function b(e, t) {
   }
 }
 
-function O(e) {
+function b(e) {
   return e.getCurrentContent().getFirstBlock().getText()
 }
 
@@ -175,48 +175,48 @@ function x(e, t) {
   }), t
 }
 
-function A(e) {
+function L(e) {
   return r.EditorState.createEmpty(new r.CompositeDecorator(e))
 }
 
-function L(e) {
+function A(e) {
   let t = r.EditorState.push(e, r.ContentState.createFromText("")),
     n = e.getSelection();
   return null != n && n.hasFocus && (t = r.EditorState.moveFocusToEnd(t)), t
 }
 
 function P(e, t) {
-  let n = O(t);
+  let n = b(t);
   return N(e, t, 0, n.length)
 }
 
-function j(e, t) {
+function D(e, t) {
   let n = t.getSelection();
   return n = (n = n.set("focusOffset", e)).set("anchorOffset", e), r.EditorState.forceSelection(t, n)
 }
 
-function D(e) {
-  return j(e.getCurrentContent().getFirstBlock().getText().length, e)
+function j(e) {
+  return D(e.getCurrentContent().getFirstBlock().getText().length, e)
+}
+
+function w(e) {
+  return D(0, e)
 }
 
 function G(e) {
-  return j(0, e)
-}
-
-function y(e) {
   let t = e.getSelection();
   return t = (t = t.set("focusOffset", 0)).set("isBackward", !0), r.EditorState.forceSelection(e, t)
 }
 
-function w(e) {
-  let t = O(e),
+function y(e) {
+  let t = b(e),
     n = e.getSelection();
   return n = (n = n.set("focusOffset", t.length)).set("isBackward", !1), r.EditorState.forceSelection(e, n)
 }
 
 function F(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
-    n = O(e);
+    n = b(e);
   if (n.length > t) {
     let i = e.getSelection();
     e = N("", e, t, n.length), i.getAnchorOffset() > t && (i = i.set("anchorOffset", t)), i.getFocusOffset() > t && (i = i.set("focusOffset", t)), e = r.EditorState.forceSelection(e, i)
@@ -243,5 +243,5 @@ function U(e) {
 }
 
 function B(e) {
-  return 0 === O(e).length
+  return 0 === b(e).length
 }

@@ -22,28 +22,28 @@ var s = a("470079"),
 let r = 0,
   i = 4,
   o = 4,
-  d = "absolute",
-  u = (e, t, a, s) => {
+  u = "absolute",
+  d = (e, t, a, s) => {
     if (0 === a) return [];
     if (1 === a) return [{
       width: e,
       height: t,
       top: 0,
       left: 0,
-      position: d
+      position: u
     }];
     if (2 === a) {
       let a = Math.ceil((e - s) / 2);
       return [{
         top: 0,
         left: 0,
-        position: d,
+        position: u,
         width: a,
         height: t
       }, {
         top: 0,
         left: a + s,
-        position: d,
+        position: u,
         width: a,
         height: t
       }]
@@ -54,19 +54,19 @@ let r = 0,
       return [{
         top: 0,
         left: 0,
-        position: d,
+        position: u,
         width: a,
         height: t
       }, {
         top: 0,
         left: a + s,
-        position: d,
+        position: u,
         width: a,
         height: n
       }, {
         top: n + s,
         left: a + s,
-        position: d,
+        position: u,
         width: a,
         height: n
       }]
@@ -76,25 +76,25 @@ let r = 0,
       return [{
         top: 0,
         left: 0,
-        position: d,
+        position: u,
         width: a,
         height: n
       }, {
         top: n + s,
         left: 0,
-        position: d,
+        position: u,
         width: a,
         height: n
       }, {
         top: 0,
         left: a + s,
-        position: d,
+        position: u,
         width: a,
         height: n
       }, {
         top: n + s,
         left: a + s,
-        position: d,
+        position: u,
         width: a,
         height: n
       }]
@@ -121,7 +121,7 @@ function m(e) {
       o = c.get(i);
     if (null != o) return o;
     {
-      let e = u(l, r, n, 4);
+      let e = d(l, r, n, 4);
       return c.set(i, e), e
     }
   })({
@@ -145,6 +145,6 @@ function f(e) {
     imageContainerStyles: t,
     containerWidth: a,
     containerHeight: n
-  } = e, l = s.useRef(h(t)), r = s.useRef(a), i = s.useRef(n), o = a > r.current + 100, d = n > i.current + 100;
-  return (o || d) && (l.current = h(t)), l.current
+  } = e, l = s.useRef(h(t)), r = s.useRef(a), i = s.useRef(n), o = a > r.current + 100, u = n > i.current + 100;
+  return (o || u) && (l.current = h(t)), l.current
 }

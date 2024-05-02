@@ -34,16 +34,16 @@ let h = e => {
       onClick: E,
       onContextMenu: _,
       tooltip: p = null,
-      tooltipColor: m,
-      tooltipPosition: C = "bottom",
+      tooltipColor: C,
+      tooltipPosition: m = "bottom",
       tooltipDisabled: I,
       hideOnClick: T = !0,
       role: R,
       "aria-label": M,
       "aria-hidden": N,
       "aria-checked": v,
-      "aria-expanded": b,
-      "aria-haspopup": O
+      "aria-expanded": O,
+      "aria-haspopup": b
     } = e, x = (0, r.jsx)(h, {
       x: 0,
       y: 0,
@@ -53,18 +53,18 @@ let h = e => {
       foreground: null != d ? d : void 0,
       background: null != f ? f : void 0,
       color: c
-    }), A = M;
-    return null == A && "string" == typeof p && (A = p), (0, r.jsx)(a.Tooltip, {
+    }), L = M;
+    return null == L && "string" == typeof p && (L = p), (0, r.jsx)(a.Tooltip, {
       text: p,
-      color: m,
-      position: C,
+      color: C,
+      position: m,
       hideOnClick: T,
       shouldShow: !I,
       children: e => {
         let {
           onMouseEnter: p,
-          onMouseLeave: m,
-          onFocus: C,
+          onMouseLeave: C,
+          onFocus: m,
           onBlur: I
         } = e;
         return null == E ? (0, r.jsx)("div", {
@@ -80,8 +80,8 @@ let h = e => {
             color: c,
             "aria-hidden": N,
             onMouseEnter: p,
-            onMouseLeave: m,
-            onFocus: C,
+            onMouseLeave: C,
+            onFocus: m,
             onBlur: I
           })
         }) : (0, r.jsxs)(a.Clickable, {
@@ -89,8 +89,8 @@ let h = e => {
           onClick: o ? void 0 : E,
           onContextMenu: o ? void 0 : _,
           onMouseEnter: p,
-          onMouseLeave: m,
-          onFocus: C,
+          onMouseLeave: C,
+          onFocus: m,
           onBlur: I,
           className: s()(t, {
             [g.iconWrapper]: !0,
@@ -98,11 +98,11 @@ let h = e => {
             [g.selected]: l
           }),
           role: R,
-          "aria-label": A,
+          "aria-label": L,
           "aria-hidden": N,
           "aria-checked": v,
-          "aria-haspopup": O,
-          "aria-expanded": b,
+          "aria-haspopup": b,
+          "aria-expanded": O,
           tabIndex: o || null == E ? -1 : 0,
           children: [u ? (0, r.jsx)(S.default, {
             mask: S.default.Masks.HEADER_BAR_BADGE,
@@ -134,20 +134,20 @@ let h = e => {
       "aria-labelledby": E,
       role: _,
       scrollable: p,
-      transparent: m = !1
-    } = e, C = i.useRef(null), I = i.useContext(c.default);
+      transparent: C = !1
+    } = e, m = i.useRef(null), I = i.useContext(c.default);
     return (0, r.jsx)("section", {
       className: s()(t, g.container, {
-        [g.themed]: !m,
-        [g.transparent]: m,
+        [g.themed]: !C,
+        [g.transparent]: C,
         [g.themedMobile]: u.isMobile
       }),
       "aria-label": h,
       "aria-labelledby": E,
       role: _,
-      ref: C,
+      ref: m,
       children: (0, r.jsxs)(a.FocusRingScope, {
-        containerRef: C,
+        containerRef: m,
         children: [(0, r.jsxs)("div", {
           className: g.upperContainer,
           children: [(0, r.jsxs)("div", {

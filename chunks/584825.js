@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useArchiveSubscriptionListing: function() {
-    return m
+    return C
   },
   useDeleteSubscriptionListing: function() {
     return p
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return h
   },
   usePublishSubscriptionListing: function() {
-    return C
+    return m
   },
   useSubscriptionListing: function() {
     return g
@@ -129,7 +129,7 @@ let d = [],
       }
     }
   },
-  m = () => {
+  C = () => {
     let [e, t] = (0, l.default)(u.archiveSubscriptionListing), {
       loading: n,
       error: r
@@ -140,7 +140,7 @@ let d = [],
       archiveSubscriptionListing: e
     }
   },
-  C = () => {
+  m = () => {
     let [e, t] = r.useState(!1), [n, i] = r.useState(null);
     return {
       error: n,

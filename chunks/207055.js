@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("158776"),
   I = n("885110"),
   A = n("797258"),
-  v = n("606304"),
-  N = n("979651"),
+  N = n("606304"),
+  v = n("979651"),
   x = n("805009"),
   M = n("700785"),
   R = n("51144"),
@@ -40,7 +40,7 @@ let D = l.memo(e => {
     channel: i,
     sessionId: o,
     nick: _
-  } = e, x = s.id, P = (0, r.useStateFromStores)([C.default], () => C.default.getId() === x, [x]), [D, b, U] = (0, r.useStateFromStoresArray)([S.default], () => P ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(x), !1, S.default.isLocalVideoDisabled(x)], [P, x]), F = (0, r.useStateFromStores)([v.default], () => v.default.isPrioritySpeaker(x)), w = (0, u.default)({
+  } = e, x = s.id, P = (0, r.useStateFromStores)([C.default], () => C.default.getId() === x, [x]), [D, b, U] = (0, r.useStateFromStoresArray)([S.default], () => P ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(x), !1, S.default.isLocalVideoDisabled(x)], [P, x]), F = (0, r.useStateFromStores)([N.default], () => N.default.isPrioritySpeaker(x)), w = (0, u.default)({
     userId: x,
     checkSoundSharing: !0
   }), k = (0, r.useStateFromStores)([g.default], () => g.default.isGuestOrLurker(i.guild_id, x)), H = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
@@ -52,7 +52,7 @@ let D = l.memo(e => {
   null != W && L.default.trackExposure({
     location: "voice_users"
   });
-  let [Y, z] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(x, i.getGuildId()), E.default.getActiveStreamForUser(x, i.getGuildId())], [i, x]), K = (0, r.useStateFromStores)([A.default], () => A.default.getSessionById(o)), Z = R.default.useName(s), q = (0, r.useStateFromStores)([N.default], () => N.default.getVoicePlatformForChannel(i.id, x), [i.id, x]), {
+  let [Y, z] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(x, i.getGuildId()), E.default.getActiveStreamForUser(x, i.getGuildId())], [i, x]), K = (0, r.useStateFromStores)([A.default], () => A.default.getSessionById(o)), Z = R.default.useName(s), q = (0, r.useStateFromStores)([v.default], () => v.default.getVoicePlatformForChannel(i.id, x), [i.id, x]), {
     enableHangStatus: X
   } = h.HangStatusExperiment.useExperiment({
     guildId: i.guild_id,
@@ -103,14 +103,14 @@ t.default = function(e) {
     withGuildIcon: E = !1,
     className: g,
     children: S
-  } = e, [I, A] = l.useState(null), [v, N] = l.useState(!1), M = l.useRef(null), R = l.useRef(new o.DelayedCall(50, () => {
+  } = e, [I, A] = l.useState(null), [N, v] = l.useState(!1), M = l.useRef(null), R = l.useRef(new o.DelayedCall(50, () => {
     A(M.current), M.current = null
   })), L = l.useRef(new o.DelayedCall(175, () => {
     A(null)
   })), j = l.useCallback(e => {
-    t && (N(!0), L.current.cancel(), M.current = e, R.current.delay())
+    t && (v(!0), L.current.cancel(), M.current = e, R.current.delay())
   }, [t]), b = l.useCallback(e => {
-    t && (R.current.cancel(), I === e && (N(!1), L.current.delay()))
+    t && (R.current.cancel(), I === e && (v(!1), L.current.delay()))
   }, [t, I]), U = (0, r.useStateFromStoresArray)([T.default], () => {
     if (d) return [];
     let e = new Set;
@@ -148,7 +148,7 @@ t.default = function(e) {
         canDrag: n && _.default.can(O.Permissions.MOVE_MEMBERS, s),
         showPreview: j,
         hidePreview: b,
-        previewIsOpen: v,
+        previewIsOpen: N,
         shouldShowPreview: I === l.id,
         tabIndex: h,
         location: m

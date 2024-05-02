@@ -31,9 +31,9 @@ let I = (e, t) => {
     }
   },
   A = (e, t) => e < T.singleSpeaker ? 1 : e < T.twoSpeakers ? 2 : e < T.threeSpeakers ? 3 : t ? 3 : 4,
-  v = e => Math.floor((e - 32) / 102);
+  N = e => Math.floor((e - 32) / 102);
 
-function N(e) {
+function v(e) {
   return e.type === f.StageChannelParticipantTypes.VOICE
 }
 t.default = (0, o.default)(e => {
@@ -50,7 +50,7 @@ t.default = (0, o.default)(e => {
     selectedParticipantId: u.default.getSelectedParticipantId(a.id),
     largeStream: u.default.getStageStreamSize(a.id),
     chatOpen: u.default.getChatOpen(a.id)
-  }), [a.id]), R = (0, c.useActualStageSpeakerCount)(a.id), L = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), y = (0, r.useStateFromStores)([d.default], () => null != T ? d.default.getParticipant(a.id, T) : null), O = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), j = O.filter(N), P = null != O.find(e => e.type === f.StageChannelParticipantTypes.STREAM), D = v(l), b = A(l, M), U = {
+  }), [a.id]), R = (0, c.useActualStageSpeakerCount)(a.id), L = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), y = (0, r.useStateFromStores)([d.default], () => null != T ? d.default.getParticipant(a.id, T) : null), O = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), j = O.filter(v), P = null != O.find(e => e.type === f.StageChannelParticipantTypes.STREAM), D = N(l), b = A(l, M), U = {
     [f.StageChannelParticipantNamedIndex.SPEAKER]: b,
     [f.StageChannelParticipantNamedIndex.AUDIENCE]: D,
     [f.StageChannelParticipantNamedIndex.SELECTED]: 1

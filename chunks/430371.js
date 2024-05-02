@@ -30,8 +30,8 @@ function A(e) {
       onSelectParticipant: n,
       onContextMenuParticipant: s,
       onFullscreenParticipant: A,
-      participants: v,
-      filteredParticipants: N,
+      participants: N,
+      filteredParticipants: v,
       popoutWindow: x,
       inCall: M,
       channel: R,
@@ -126,11 +126,11 @@ function A(e) {
     eu = l.useCallback(e => {
       G(e), W(!1)
     }, []),
-    ed = Q || j ? [] : (0, p.getPipParticipants)(v, L, H),
+    ed = Q || j ? [] : (0, p.getPipParticipants)(N, L, H),
     {
       visibleParticipants: ec,
       participantTileWidth: ef
-    } = (0, E.useVisibleParticipants)(P, N);
+    } = (0, E.useVisibleParticipants)(P, v);
   return (0, a.jsxs)("div", {
     className: i()(_.root, S.flexCenter, O),
     children: [(0, a.jsxs)("div", {

@@ -22,7 +22,7 @@ var i = n("120356"),
   _ = n("689938"),
   p = n("612113");
 
-function m(e) {
+function C(e) {
   let {
     guild: t,
     isBannerVisible: n,
@@ -44,11 +44,11 @@ function m(e) {
         }
       })
     },
-    m = u === E.BoostedGuildTiers.NONE ? _.default.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : h.getTierName(u),
-    C = (0, r.jsxs)(r.Fragment, {
+    C = u === E.BoostedGuildTiers.NONE ? _.default.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : h.getTierName(u),
+    m = (0, r.jsxs)(r.Fragment, {
       children: [(0, r.jsx)("div", {
         className: p.tierTooltipTitle,
-        children: m
+        children: C
       }), (0, r.jsx)("div", {
         children: _.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBSCRIBER_COUNT_TOOLTIP.format({
           subscriberCount: S
@@ -58,9 +58,9 @@ function m(e) {
   return (0, r.jsx)("div", {
     className: p.guildIconContainer,
     children: (0, r.jsx)(o.Tooltip, {
-      text: C,
+      text: m,
       position: "bottom",
-      "aria-label": null != m ? m : "",
+      "aria-label": null != C ? C : "",
       children: e => (0, r.jsx)(o.Clickable, {
         ...e,
         className: p.__invalid_premiumGuildIcon,
@@ -75,7 +75,7 @@ function m(e) {
   })
 }
 
-function C(e) {
+function m(e) {
   let {
     guild: t,
     disableColor: n,
@@ -111,14 +111,14 @@ function I(e) {
     isBannerVisible: n,
     disableBoostClick: i
   } = e;
-  return (0, u.default)(t) ? (0, r.jsx)(C, {
+  return (0, u.default)(t) ? (0, r.jsx)(m, {
     guild: t,
     disableColor: !1,
     disableBoostClick: i
-  }) : t.hasFeature(E.GuildFeatures.VERIFIED) || t.hasFeature(E.GuildFeatures.PARTNERED) ? (0, r.jsx)(C, {
+  }) : t.hasFeature(E.GuildFeatures.VERIFIED) || t.hasFeature(E.GuildFeatures.PARTNERED) ? (0, r.jsx)(m, {
     guild: t,
     disableColor: !n
-  }) : (0, r.jsx)(m, {
+  }) : (0, r.jsx)(C, {
     guild: t,
     isBannerVisible: n,
     disableBoostClick: i

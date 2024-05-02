@@ -4,10 +4,10 @@ a.r(t), a.d(t, {
     return c
   },
   makeEmptyMessageError: function() {
-    return u
+    return d
   },
   makeEmptyTitleError: function() {
-    return d
+    return u
   },
   renderError: function() {
     return m
@@ -27,11 +27,11 @@ function o(e) {
   return i(0, e)
 }
 
-function d() {
+function u() {
   return i(0, r.default.Messages.FORUM_POST_EMPTY_TITLE_ERROR)
 }
 
-function u() {
+function d() {
   return i(0, r.default.Messages.FORUM_POST_EMPTY_MESSAGE_ERROR)
 }
 

@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return p
   }
 });
 var s = a("735250");
@@ -11,8 +11,8 @@ var n = a("120356"),
   r = a("481060"),
   i = a("465670"),
   o = a("68972"),
-  d = a("507893"),
-  u = a("228392"),
+  u = a("507893"),
+  d = a("228392"),
   c = a("404616"),
   m = a("710352"),
   h = a("921944"),
@@ -22,13 +22,13 @@ var n = a("120356"),
   C = a("439978"),
   _ = a("504764");
 
-function S(e) {
+function p(e) {
   let {
     onDismiss: t
   } = e;
   return (0, s.jsxs)(r.Clickable, {
     onClick: () => {
-      open(m.COMMUNITY_PORTAL_FORUM_PAGE), (0, u.trackForumHelperCardClicked)({
+      open(m.COMMUNITY_PORTAL_FORUM_PAGE), (0, d.trackForumHelperCardClicked)({
         readGuideCta: !0
       })
     },
@@ -45,7 +45,7 @@ function S(e) {
           children: f.default.Messages.DISCORD_NAME
         }), (0, s.jsxs)("div", {
           className: x.notice,
-          children: [(0, s.jsx)(d.default, {
+          children: [(0, s.jsx)(u.default, {
             className: x.infoIcon
           }), (0, s.jsx)(r.Text, {
             variant: "text-sm/normal",
@@ -55,7 +55,7 @@ function S(e) {
         })]
       }), (0, s.jsx)(r.Clickable, {
         onClick: e => {
-          e.stopPropagation(), t(h.ContentDismissActionType.DISMISS), (0, u.trackForumHelperCardClicked)({
+          e.stopPropagation(), t(h.ContentDismissActionType.DISMISS), (0, d.trackForumHelperCardClicked)({
             readGuideCta: !1
           })
         },

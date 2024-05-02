@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildProductListingPopout: function() {
-    return C
+    return m
   },
   default: function() {
     return I
@@ -25,7 +25,7 @@ var i = n("120356"),
   _ = n("689938"),
   p = n("571011");
 
-function m(e) {
+function C(e) {
   let {
     showEditProduct: t,
     showUnpublishProduct: n,
@@ -39,16 +39,16 @@ function m(e) {
     onCopyLink: g,
     onTestDownload: h,
     onReportProduct: E,
-    closePopout: m,
-    onSelect: C
+    closePopout: C,
+    onSelect: m
   } = e;
   return (0, r.jsx)("div", {
     className: p.menuContainer,
     children: (0, r.jsxs)(s.Menu, {
       navId: "guild-product-context",
-      onClose: m,
+      onClose: C,
       "aria-label": _.default.Messages.GUILD_PRODUCTS_ACTION_MENU_LABEL,
-      onSelect: C,
+      onSelect: m,
       children: [(0, r.jsxs)(s.MenuGroup, {
         children: [t && (0, r.jsx)(s.MenuItem, {
           id: "guild-product-edit",
@@ -88,7 +88,7 @@ function m(e) {
   })
 }
 
-function C(e) {
+function m(e) {
   let {
     product: t,
     guildId: n,
@@ -103,7 +103,7 @@ function C(e) {
     onDeleteProduct: g,
     onCopyProductLink: h,
     onTestDownload: E,
-    onReportProduct: C
+    onReportProduct: m
   } = e;
   return (0, r.jsx)("div", {
     onClick: e => {
@@ -114,7 +114,7 @@ function C(e) {
       align: "top",
       spacing: -8,
       animation: s.Popout.Animation.FADE,
-      renderPopout: e => (0, r.jsx)(m, {
+      renderPopout: e => (0, r.jsx)(C, {
         ...e,
         guildId: n,
         productId: t.id,
@@ -129,7 +129,7 @@ function C(e) {
         onDeleteProduct: g,
         onCopyLink: h,
         onTestDownload: E,
-        onReportProduct: C
+        onReportProduct: m
       }),
       children: (e, n) => {
         let {
@@ -171,7 +171,7 @@ function I(e) {
     }),
     onClick: T ? void 0 : i,
     onContextMenu: function(e) {
-      (0, o.openContextMenuLazy)(e, () => Promise.resolve(e => (0, r.jsx)(m, {
+      (0, o.openContextMenuLazy)(e, () => Promise.resolve(e => (0, r.jsx)(C, {
         ...e,
         closePopout: o.closeContextMenu,
         guildId: n,
@@ -226,7 +226,7 @@ function I(e) {
         }), (0, r.jsx)(a.default, {
           size: 16
         }), t.published ? (0, r.jsx)(h.PublishedBadge, {}) : (0, r.jsx)(h.DraftBadge, {})]
-      }), !T && (0, r.jsx)(C, {
+      }), !T && (0, r.jsx)(m, {
         product: t,
         guildId: n,
         showEditProduct: !0,
