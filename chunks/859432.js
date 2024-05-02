@@ -11,7 +11,7 @@ var n = a("735250"),
   c = a("553385"),
   S = a("52011"),
   f = a("890477"),
-  E = a("134726"),
+  E = a("963202"),
   T = a("593128"),
   p = a("458034"),
   I = a("706140"),
@@ -35,14 +35,14 @@ var n = a("735250"),
   P = a("271383"),
   O = a("496675"),
   U = a("9156"),
-  B = a("594174"),
-  F = a("825185"),
+  F = a("594174"),
+  B = a("825185"),
   w = a("808602"),
   H = a("386103"),
   V = a("632310"),
   Y = a("615814"),
-  k = a("937482"),
-  W = a("709586"),
+  W = a("937482"),
+  k = a("709586"),
   z = a("185403"),
   Z = a("151785"),
   K = a("288176"),
@@ -67,7 +67,7 @@ let el = s.memo(function(e) {
     guild: t,
     onClose: l,
     onSelect: m
-  } = e, el = (0, r.useStateFromStores)([B.default], () => B.default.getCurrentUser());
+  } = e, el = (0, r.useStateFromStores)([F.default], () => F.default.getCurrentUser());
   i()(null != el, "GuildHeaderPopout: user cannot be undefined"), s.useEffect(() => {
     X.default.track($.AnalyticEvents.GUILD_DROPDOWN_MENU_VIEWED, {
       guild_id: t.id
@@ -139,12 +139,7 @@ let el = s.memo(function(e) {
     }).enabled,
     {
       enableClanCreation: eR
-    } = E.ClanGuildExperiment.useExperiment({
-      guildId: t.id,
-      location: "guild header"
-    }, {
-      autoTrackExposure: !1
-    }),
+    } = (0, E.useClanGuildExperiment)(t, "guild header"),
     [eG] = (0, I.useGetDismissibleContent)([o.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
     ev = eb && eG === o.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
   return ef || eE ? (0, n.jsx)(d.Menu, {
@@ -212,7 +207,7 @@ let el = s.memo(function(e) {
       children: [er ? (0, n.jsx)(d.MenuItem, {
         id: "settings",
         label: ea.default.Messages.SERVER_SETTINGS,
-        icon: k.default,
+        icon: W.default,
         action: () => {
           G.default.open(t.id, $.GuildSettingsSections.OVERVIEW)
         }
@@ -249,7 +244,7 @@ let el = s.memo(function(e) {
       children: (0, n.jsx)(d.MenuItem, {
         id: "premium-subscribe",
         label: ea.default.Messages.PREMIUM_GUILD_HEADER_DROPDOWN_NITRO_SERVER_SUBSCRIBE,
-        icon: W.default,
+        icon: k.default,
         action: () => {
           (0, L.openGuildBoostingMarketingModal)({
             guildId: t.id,
@@ -277,14 +272,14 @@ let el = s.memo(function(e) {
       }) : null, eI, er ? (0, n.jsx)(d.MenuItem, {
         id: "settings",
         label: ea.default.Messages.SERVER_SETTINGS,
-        icon: k.default,
+        icon: W.default,
         action: () => {
           G.default.open(t.id, $.GuildSettingsSections.OVERVIEW)
         }
       }) : null, eu && eR && t.hasFeature($.GuildFeatures.CLAN) ? (0, n.jsx)(d.MenuItem, {
         id: "guild-settings",
         label: ea.default.Messages.CLAN_SETTINGS,
-        icon: k.default,
+        icon: W.default,
         action: () => (0, J.openFullScreenLayer)(e => {
           let {
             closeLayer: a
@@ -299,7 +294,7 @@ let el = s.memo(function(e) {
       }) : null, ed ? (0, n.jsx)(d.MenuItem, {
         id: "insights",
         label: ea.default.Messages.SERVER_INSIGHTS,
-        icon: F.default,
+        icon: B.default,
         action: () => G.default.open(t.id, $.GuildSettingsSections.ANALYTICS)
       }) : null, eo ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(d.MenuItem, {

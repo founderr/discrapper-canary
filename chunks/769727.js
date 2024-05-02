@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryTopPicks: function() {
-    return L
+    return O
   }
 }), n("47120");
 var a = n("735250"),
@@ -14,72 +14,73 @@ var a = n("735250"),
   d = n("481060"),
   c = n("442837"),
   f = n("224706"),
-  E = n("2485"),
-  h = n("229765"),
-  _ = n("231467"),
-  C = n("480222"),
-  m = n("807933"),
-  S = n("10473"),
-  p = n("702646"),
-  I = n("207796"),
-  T = n("543550"),
-  g = n("976757"),
-  A = n("308083"),
-  N = n("689938"),
-  v = n("548290");
-let R = {
-  [I.ClanDiscoveryMode.PLAYSTYLE]: m.PlayStyleSelector,
-  [I.ClanDiscoveryMode.TRAITS]: m.TraitSelector,
-  [I.ClanDiscoveryMode.GAMES]: m.GameSelector
+  E = n("963202"),
+  h = n("2485"),
+  _ = n("229765"),
+  C = n("231467"),
+  m = n("480222"),
+  S = n("807933"),
+  p = n("10473"),
+  I = n("702646"),
+  T = n("207796"),
+  g = n("543550"),
+  A = n("976757"),
+  N = n("308083"),
+  v = n("689938"),
+  R = n("548290");
+let L = {
+  [T.ClanDiscoveryMode.PLAYSTYLE]: S.PlayStyleSelector,
+  [T.ClanDiscoveryMode.TRAITS]: S.TraitSelector,
+  [T.ClanDiscoveryMode.GAMES]: S.GameSelector
 };
 
-function L(e) {
+function O(e) {
   var t;
   let {
     limit: n
-  } = e, l = (0, I.useClanDiscoveryUIStore)(I.buildSearchCriteriaFromUIState, i()), r = (0, I.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), f = (0, I.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, o.default), E = s.useMemo(() => (0, A.getPlaystyleOptions)(), []), h = f ? null === (t = E[f]) || void 0 === t ? void 0 : t.title : "", C = (0, c.useStateFromStores)([S.default], () => S.default.getSearchResult(l), [l]), m = s.useMemo(() => {
-    if ((0, g.isLoadedSearchResult)(C)) {
-      let e = C.items;
+  } = e, l = (0, T.useClanDiscoveryUIStore)(T.buildSearchCriteriaFromUIState, i()), r = (0, T.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), f = (0, T.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, o.default), E = s.useMemo(() => (0, N.getPlaystyleOptions)(), []), h = f ? null === (t = E[f]) || void 0 === t ? void 0 : t.title : "", _ = (0, c.useStateFromStores)([p.default], () => p.default.getSearchResult(l), [l]), m = s.useMemo(() => {
+    if ((0, A.isLoadedSearchResult)(_)) {
+      let e = _.items;
       return null != n ? e.slice(0, n) : e
     }
     return null
-  }, [n, C]);
+  }, [n, _]);
   return null == m ? null : (0, a.jsxs)("div", {
-    className: v.topPicks,
+    className: R.topPicks,
     children: [(0, a.jsxs)("div", {
-      className: v.topPicksHeader,
+      className: R.topPicksHeader,
       children: [(0, a.jsxs)("div", {
-        className: v.topPicksTitle,
+        className: R.topPicksTitle,
         children: [(0, a.jsx)(u.TrophyIcon, {
           color: "currentColor"
         }), (0, a.jsx)(d.Heading, {
           variant: "heading-md/medium",
           color: "header-primary",
-          children: N.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE
+          children: v.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE
         })]
       }), (0, a.jsx)("div", {
-        className: v.topPicksSpacer
+        className: R.topPicksSpacer
       }), (0, a.jsx)(d.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        children: N.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE.format({
+        children: v.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE.format({
           playstyle: h
         })
       })]
     }), (0, a.jsx)("div", {
-      className: v.topPicksContent,
-      children: m.map((e, t) => (0, a.jsx)(_.default, {
+      className: R.topPicksContent,
+      children: m.map((e, t) => (0, a.jsx)(C.default, {
         clan: e,
-        affinity: (0, g.getClanDiscoveryAffinity)(e, l),
+        affinity: (0, A.getClanDiscoveryAffinity)(e, l),
         traitsToHighlight: r,
-        className: v.card,
+        className: R.card,
         index: t
       }, e.id))
     })]
   })
 }
-let O = s.memo(function() {
-  let e = (0, I.useClanDiscoveryUIStore)(e => e.mode, o.default),
+let M = s.memo(function() {
+  let e = (0, T.useClanDiscoveryUIStore)(e => e.mode, o.default),
     [, t] = s.useState(0),
     n = (0, r.useTransition)([e], {
       key: e => e,
@@ -101,25 +102,25 @@ let O = s.memo(function() {
       onRest: () => t(e => e + 1)
     }),
     l = s.useCallback(e => {
-      let t = R[e];
-      return null == t ? null : (0, a.jsx)(C.default, {
+      let t = L[e];
+      return null == t ? null : (0, a.jsx)(m.default, {
         children: (0, a.jsx)(t, {})
       })
     }, []);
   switch (e) {
-    case I.ClanDiscoveryMode.GET_STARTED:
-      return (0, a.jsx)(T.default, {});
-    case I.ClanDiscoveryMode.DISCOVERY:
-    case I.ClanDiscoveryMode.GAMES:
-    case I.ClanDiscoveryMode.PLAYSTYLE:
-    case I.ClanDiscoveryMode.TRAITS:
+    case T.ClanDiscoveryMode.GET_STARTED:
+      return (0, a.jsx)(g.default, {});
+    case T.ClanDiscoveryMode.DISCOVERY:
+    case T.ClanDiscoveryMode.GAMES:
+    case T.ClanDiscoveryMode.PLAYSTYLE:
+    case T.ClanDiscoveryMode.TRAITS:
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(d.ScrollerAuto, {
           fade: !0,
-          className: v.scroller,
-          children: [(0, a.jsx)(p.default, {}), (0, a.jsx)("div", {
-            className: v.content,
-            children: (0, a.jsx)(L, {})
+          className: R.scroller,
+          children: [(0, a.jsx)(I.default, {}), (0, a.jsx)("div", {
+            className: R.content,
+            children: (0, a.jsx)(O, {})
           })]
         }), (0, a.jsx)("div", {
           children: n((e, t) => (0, a.jsx)(r.animated.div, {
@@ -132,24 +133,26 @@ let O = s.memo(function() {
 });
 t.default = s.memo(function() {
   return ! function() {
-    let e = (0, I.useClanDiscoveryUIStore)(e => e.game, o.default),
-      t = (0, I.useClanDiscoveryUIStore)(e => e.setGame, o.default),
-      n = (0, I.useClanDiscoveryUIStore)(e => e.setSelectedGames, o.default),
-      a = (0, I.useClanDiscoveryUIStore)(e => e.selectedGames, o.default),
-      l = (0, I.useClanDiscoveryUIStore)(I.buildSearchCriteriaFromUIState, i()),
-      r = (0, E.useClanDiscoveryExperimentDefaultGameId)("clan_discovery"),
-      u = (0, c.useStateFromStores)([S.default], () => S.default.hasLoadedStaticClanDiscovery(e));
+    let e = (0, T.useClanDiscoveryUIStore)(e => e.game, o.default),
+      t = (0, T.useClanDiscoveryUIStore)(e => e.setGame, o.default),
+      n = (0, T.useClanDiscoveryUIStore)(e => e.setSelectedGames, o.default),
+      a = (0, T.useClanDiscoveryUIStore)(e => e.selectedGames, o.default),
+      l = (0, T.useClanDiscoveryUIStore)(T.buildSearchCriteriaFromUIState, i()),
+      r = (0, E.useClanGuildExperimentDefaultGameId)("clan_discovery"),
+      u = (0, h.useClanDiscoveryExperimentDefaultGameId)("clan_discovery"),
+      d = null != r ? r : u,
+      C = (0, c.useStateFromStores)([p.default], () => p.default.hasLoadedStaticClanDiscovery(e));
     s.useEffect(() => {
-      !(a.length > 0) && (r === A.VALORANT_ID ? (t(I.ClanDiscoveryGame.VALORANT), n([r])) : r === A.GENSHIN_ID && (t(I.ClanDiscoveryGame.GENSHIN), n([r])))
-    }, [t, n, r, a]), s.useEffect(() => {
-      !u && (0, h.loadStaticClanDiscovery)(e)
-    }, [e, u]), s.useEffect(() => {
-      u && (0, h.searchClanDiscovery)(e, l)
-    }, [e, l, u]), s.useEffect(() => {
+      !(a.length > 0) && (d === N.VALORANT_ID ? (t(T.ClanDiscoveryGame.VALORANT), n([d])) : d === N.GENSHIN_ID && (t(T.ClanDiscoveryGame.GENSHIN), n([d])))
+    }, [t, n, d, a]), s.useEffect(() => {
+      !C && (0, _.loadStaticClanDiscovery)(e)
+    }, [e, C]), s.useEffect(() => {
+      C && (0, _.searchClanDiscovery)(e, l)
+    }, [e, l, C]), s.useEffect(() => {
       f.default.getDetectableGames()
     }, [])
   }(), (0, a.jsx)("main", {
-    className: v.container,
-    children: (0, a.jsx)(O, {})
+    className: R.container,
+    children: (0, a.jsx)(M, {})
   })
 })
