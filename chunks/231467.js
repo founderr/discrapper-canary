@@ -109,7 +109,12 @@ function v(e) {
         className: C.overflowTooltip,
         children: e.map(e => (0, i.jsx)("div", {
           className: C.trait,
-          children: e
+          children: (0, i.jsx)(o.Text, {
+            variant: "text-xs/normal",
+            color: "text-normal",
+            lineClamp: 1,
+            children: e
+          })
         }, e))
       }),
       "aria-label": "overflow",
