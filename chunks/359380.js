@@ -1,32 +1,32 @@
 "use strict";
 n.r(t), n("47120");
 var a = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  i = n.n(s),
+  i = n("470079"),
+  r = n("120356"),
+  s = n.n(r),
   l = n("481060"),
   o = n("90062"),
-  c = n("964309"),
-  d = n("898543"),
+  d = n("964309"),
+  c = n("898543"),
   u = n("87576"),
   f = n("308083"),
   m = n("689938"),
   h = n("418571");
-let p = e => {
+let E = e => {
   let {
     title: t,
     icon: n,
-    traits: s,
+    traits: r,
     interests: o,
-    handleUpdate: c
-  } = e, d = r.useCallback(e => {
+    handleUpdate: d
+  } = e, c = i.useCallback(e => {
     let t = new Set(o);
-    t.delete(e), c(t)
-  }, [c, o]), u = r.useCallback(e => {
+    t.delete(e), d(t)
+  }, [d, o]), u = i.useCallback(e => {
     if (o.size === f.MAX_NUM_INTERESTS) return;
     let t = new Set(o);
-    t.add(e), c(t)
-  }, [c, o]);
+    t.add(e), d(t)
+  }, [d, o]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(l.Text, {
       className: h.interestsCategoryTitle,
@@ -35,13 +35,13 @@ let p = e => {
       children: t
     }), (0, a.jsx)("div", {
       className: h.interestsCategory,
-      children: s.map(e => {
+      children: r.map(e => {
         let t = o.has(e);
         return (0, a.jsxs)(l.Clickable, {
-          className: i()(h.interestsTag, {
+          className: s()(h.interestsTag, {
             [h.selected]: t
           }),
-          onClick: () => t ? d(e) : u(e),
+          onClick: () => t ? c(e) : u(e),
           children: [(0, a.jsx)(n, {
             className: h.utilityTagIcon
           }), (0, a.jsx)(l.Text, {
@@ -58,16 +58,16 @@ t.default = e => {
   let {
     title: t,
     description: n,
-    handleUpdate: s,
-    interests: i,
-    requiredGameId: E
-  } = e, T = r.useMemo(() => m.default.getAvailableLocales().map(e => ({
+    handleUpdate: r,
+    interests: s,
+    requiredGameId: T
+  } = e, p = i.useMemo(() => m.default.getAvailableLocales().map(e => ({
     value: e.value,
     label: e.localizedName
-  })), []), C = r.useMemo(() => Array.from(i), [i]), _ = r.useMemo(() => C.filter(e => f.LANGUAGES_SET.has(e)), [C]), g = r.useCallback(e => {
-    let t = C.filter(e => !f.LANGUAGES_SET.has(e));
-    s(new Set([...t, ...e]))
-  }, [s, C]), x = r.useMemo(() => C.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [C]);
+  })), []), _ = i.useMemo(() => Array.from(s), [s]), C = i.useMemo(() => _.filter(e => f.LANGUAGES_SET.has(e)), [_]), g = i.useCallback(e => {
+    let t = _.filter(e => !f.LANGUAGES_SET.has(e));
+    r(new Set([...t, ...e]))
+  }, [r, _]), x = i.useMemo(() => _.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [_]);
   return (0, a.jsxs)("div", {
     className: h.slideContentWithSidebar,
     children: [(0, a.jsx)(l.Heading, {
@@ -83,24 +83,24 @@ t.default = e => {
       className: h.content,
       children: [(0, a.jsxs)("div", {
         className: h.mainPanelContainer,
-        children: [E === f.VALORANT_ID && (0, a.jsx)(p, {
+        children: [T === f.VALORANT_ID && (0, a.jsx)(E, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
-          icon: d.default,
+          icon: c.default,
           traits: f.VALORANT_TRAITS,
-          interests: i,
-          handleUpdate: s
-        }), (0, a.jsx)(p, {
+          interests: s,
+          handleUpdate: r
+        }), (0, a.jsx)(E, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
           icon: o.default,
           traits: f.AGE_TRAITS,
-          interests: i,
-          handleUpdate: s
-        }), (0, a.jsx)(p, {
+          interests: s,
+          handleUpdate: r
+        }), (0, a.jsx)(E, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
-          icon: c.default,
+          icon: d.default,
           traits: f.IDENTITY_TRAITS,
-          interests: i,
-          handleUpdate: s
+          interests: s,
+          handleUpdate: r
         }), (0, a.jsx)(l.Text, {
           className: h.interestsCategoryTitle,
           variant: "text-xs/semibold",
@@ -110,8 +110,8 @@ t.default = e => {
           className: h.languageSelect,
           children: (0, a.jsx)(l.SearchableSelect, {
             wrapperClassName: h.input,
-            options: T,
-            value: _,
+            options: p,
+            value: C,
             onChange: g,
             placeholder: m.default.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
             multi: !0
@@ -119,8 +119,8 @@ t.default = e => {
         })]
       }), (0, a.jsx)("div", {
         className: h.fixedWidthSidebar,
-        children: C.length > 0 && (0, a.jsx)(u.default, {
-          traits: C,
+        children: _.length > 0 && (0, a.jsx)(u.default, {
+          traits: _,
           traitsToHighlight: x
         })
       })]

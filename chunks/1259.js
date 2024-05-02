@@ -8,14 +8,14 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var a = n("470079"),
-  r = n("442837"),
-  s = n("818083"),
-  i = n("650774"),
+  i = n("442837"),
+  r = n("818083"),
+  s = n("650774"),
   l = n("430824"),
   o = n("496675"),
-  c = n("946314"),
-  d = n("981631");
-let u = (0, s.createExperiment)({
+  d = n("946314"),
+  c = n("981631");
+let u = (0, r.createExperiment)({
   kind: "guild",
   id: "2021-12_discovery_requirements_m2",
   label: "Lower Server Discovery member count requirements",
@@ -32,12 +32,12 @@ let u = (0, s.createExperiment)({
 });
 
 function f(e) {
-  let t = (0, r.useStateFromStores)([l.default], () => l.default.getGuild(e)),
-    n = (0, r.useStateFromStores)([o.default], () => o.default.can(d.Permissions.ADMINISTRATOR, t)),
-    s = null == t ? void 0 : t.hasFeature(d.GuildFeatures.COMMUNITY),
-    [f] = (0, r.useStateFromStoresArray)([i.default], () => [i.default.getMemberCount(e)], [e]),
-    m = (null != f ? f : 0) >= c.LOWERED_MINIMUM_SIZE && (null != f ? f : 0) < c.DEFAULT_MINIMUM_SIZE,
-    h = n && s && m;
+  let t = (0, i.useStateFromStores)([l.default], () => l.default.getGuild(e)),
+    n = (0, i.useStateFromStores)([o.default], () => o.default.can(c.Permissions.ADMINISTRATOR, t)),
+    r = null == t ? void 0 : t.hasFeature(c.GuildFeatures.COMMUNITY),
+    [f] = (0, i.useStateFromStoresArray)([s.default], () => [s.default.getMemberCount(e)], [e]),
+    m = (null != f ? f : 0) >= d.LOWERED_MINIMUM_SIZE && (null != f ? f : 0) < d.DEFAULT_MINIMUM_SIZE,
+    h = n && r && m;
   a.useEffect(() => {
     h && u.trackExposure({
       guildId: e,
@@ -45,7 +45,7 @@ function f(e) {
     })
   }, [e, h]);
   let {
-    enableLowerMemberCountReq: p
+    enableLowerMemberCountReq: E
   } = u.useExperiment({
     guildId: e,
     location: "747eb3_2"
@@ -53,5 +53,5 @@ function f(e) {
     autoTrackExposure: !1,
     disable: !h
   });
-  return p
+  return E
 }

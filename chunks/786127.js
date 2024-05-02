@@ -2,39 +2,39 @@
 n.r(t);
 var a = n("735250");
 n("470079");
-var r = n("707592"),
-  s = n("137158"),
-  i = n("689938"),
+var i = n("707592"),
+  r = n("137158"),
+  s = n("689938"),
   l = n("915580");
 t.default = function(e) {
   let {
     formField: t,
     index: n,
     isDragEnabled: o,
-    isDropHovered: c,
-    onDrop: d,
+    isDropHovered: d,
+    onDrop: c,
     onEdit: u,
     onRemove: f,
     canRemove: m,
     actionsLocation: h
   } = e, {
-    label: p,
-    placeholder: E
+    label: E,
+    placeholder: T
   } = t;
-  return (0, a.jsx)(s.default, {
+  return (0, a.jsx)(r.default, {
     field: t,
     index: n,
     isDragEnabled: o,
-    isDropHovered: c,
-    onDrop: d,
+    isDropHovered: d,
+    onDrop: c,
     onEdit: u,
     onRemove: f,
-    title: p,
+    title: E,
     canRemove: m,
     actionsLocation: h,
-    children: (0, a.jsx)(r.TextInputFieldBody, {
+    children: (0, a.jsx)(i.TextInputFieldBody, {
       className: l.fieldBackground,
-      placeholder: null != E ? E : i.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
+      placeholder: null != T ? T : s.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0
     })
   })

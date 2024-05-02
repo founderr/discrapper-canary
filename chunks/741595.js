@@ -1,50 +1,50 @@
 "use strict";
 n.r(t);
 var a = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  i = n.n(s),
+  i = n("470079"),
+  r = n("120356"),
+  s = n.n(r),
   l = n("481060"),
   o = n("441674"),
-  c = n("308083"),
-  d = n("418571");
+  d = n("308083"),
+  c = n("418571");
 t.default = e => {
   let {
     title: t,
     description: n,
-    handleUpdate: s,
+    handleUpdate: r,
     playstyle: u,
     error: f
-  } = e, m = (0, l.useToken)(l.tokens.colors.WHITE), h = r.useMemo(() => Object.values((0, c.getPlaystyleOptions)()), []);
+  } = e, m = (0, l.useToken)(l.tokens.colors.WHITE), h = i.useMemo(() => Object.values((0, d.getPlaystyleOptions)()), []);
   return (0, a.jsxs)("div", {
-    className: d.slideContent,
+    className: c.slideContent,
     children: [(0, a.jsx)(l.Heading, {
       variant: "heading-xxl/medium",
-      className: d.title,
+      className: c.title,
       children: t
     }), (0, a.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: d.subtitle,
+      className: c.subtitle,
       children: n
     }), null != f && (0, a.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
-      className: d.errorText,
+      className: c.errorText,
       children: f
     }), (0, a.jsx)("div", {
-      className: d.playstyleSelect,
+      className: c.playstyleSelect,
       children: h.map(e => (0, a.jsxs)(l.Clickable, {
-        className: i()(d.playstyleOption, {
-          [d.selectedPlaystyle]: e.type === u
+        className: s()(c.playstyleOption, {
+          [c.selectedPlaystyle]: e.type === u
         }),
-        onClick: () => s(e.type),
+        onClick: () => r(e.type),
         children: [(0, a.jsx)(l.Heading, {
           variant: "heading-xxl/medium",
           children: e.emoji
         }), (0, a.jsx)(l.Heading, {
           variant: "heading-md/medium",
-          className: d.playstyleTitle,
+          className: c.playstyleTitle,
           children: e.title
         }), (0, a.jsx)(l.Text, {
           variant: "text-xs/normal",
@@ -52,7 +52,7 @@ t.default = e => {
           children: e.subtitle
         }), e.type === u && (0, a.jsx)(o.default, {
           backgroundColor: m.hex(),
-          className: d.checkmark
+          className: c.checkmark
         })]
       }, e.type))
     })]

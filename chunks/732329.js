@@ -20,16 +20,16 @@ var l = a("735250"),
   S = a("642619"),
   b = a("594174"),
   T = a("725808"),
-  v = a("794358"),
-  L = a("466111"),
+  L = a("794358"),
+  v = a("466111"),
   I = a("26290"),
   N = a("998502"),
   _ = a("335131"),
   y = a("1870"),
   O = a("884697"),
   k = a("624377"),
-  R = a("813083"),
-  A = a("680942"),
+  A = a("813083"),
+  R = a("680942"),
   j = a("558060"),
   P = a("237031"),
   B = a("372654"),
@@ -69,7 +69,7 @@ let H = N.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
       innerClassName: w.previewButtonInner,
       "aria-label": M.default.Messages.PREVIEW,
       ...a,
-      children: (0, l.jsx)(v.default, {
+      children: (0, l.jsx)(L.default, {
         width: 24,
         height: 24
       })
@@ -80,7 +80,7 @@ t.default = function(e) {
     product: t,
     category: a,
     onMount: r,
-    isPremiumUser: v = !1,
+    isPremiumUser: L = !1,
     isGiftEasterEggEnabled: N
   } = e, {
     analyticsLocations: z
@@ -96,7 +96,7 @@ t.default = function(e) {
   }), {
     buttonColors: ea,
     backgroundColors: el
-  } = (0, k.default)(t.styles), es = (0, O.getFormattedPriceForCollectiblesProduct)(t, v, !1), er = (0, O.isPremiumCollectiblesProduct)(t), en = (0, O.isFreeCollectiblesProduct)(t), [ei, eo, eu] = (0, o.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), ec = s.useRef(null);
+  } = (0, k.default)(t.styles), es = (0, O.getFormattedPriceForCollectiblesProduct)(t, L, !1), er = (0, O.isPremiumCollectiblesProduct)(t), en = (0, O.isFreeCollectiblesProduct)(t), [ei, eo, eu] = (0, o.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), ec = s.useRef(null);
   s.useEffect(() => {
     let {
       current: e
@@ -169,14 +169,14 @@ t.default = function(e) {
       } : void 0,
       className: w.defaultPreviewButtonColor,
       onClick: ep
-    }) : (0, l.jsx)(A.default, {
+    }) : (0, l.jsx)(R.default, {
       product: t,
       returnRef: K,
       isGiftEasterEggEnabled: N,
       tooltipDelay: 250
     }),
     ex = () => {
-      if (er && !v && !en) return eh();
+      if (er && !L && !en) return eh();
       let e = null != ea ? {
           background: (0, B.getBackgroundGradient)(ea, 90),
           color: ea.text.toHslString()
@@ -236,7 +236,7 @@ t.default = function(e) {
         children: e => (0, l.jsx)(I.TextBadge, {
           ...e,
           className: w.premiumWheelBadge,
-          text: (0, l.jsx)(L.default, {
+          text: (0, l.jsx)(v.default, {
             className: w.premiumWheel
           })
         })
@@ -287,7 +287,7 @@ t.default = function(e) {
             children: ex()
           })]
         })]
-      }), (0, l.jsx)(R.default, {
+      }), (0, l.jsx)(A.default, {
         category: a,
         className: w.limitedTimeBadge,
         display: "card"

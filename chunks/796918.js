@@ -1,38 +1,38 @@
 "use strict";
 n.r(t), n("47120");
 var a = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  i = n.n(s),
+  i = n("470079"),
+  r = n("120356"),
+  s = n.n(r),
   l = n("481060"),
   o = n("729285"),
-  c = n("87576"),
-  d = n("308083"),
+  d = n("87576"),
+  c = n("308083"),
   u = n("689938"),
   f = n("418571");
 
 function m(e) {
-  return !d.ALL_TRAITS_SET.has(e) && !d.SUGGESTED_TRAITS_SET.has(e) && !d.LANGUAGES_SET.has(e)
+  return !c.ALL_TRAITS_SET.has(e) && !c.SUGGESTED_TRAITS_SET.has(e) && !c.LANGUAGES_SET.has(e)
 }
 t.default = e => {
   let {
     handleUpdate: t,
     interests: n,
-    error: s
-  } = e, [h, p] = r.useState(""), E = r.useMemo(() => Array.from(n), [n]), T = r.useMemo(() => E.filter(m), [E]), C = r.useMemo(() => [...d.SUGGESTED_TRAITS_SET, ...T], [T]), _ = r.useMemo(() => E.filter(e => !d.ALL_TRAITS_SET.has(e) && !d.LANGUAGES_SET.has(e)), [E]), g = e => {
+    error: r
+  } = e, [h, E] = i.useState(""), T = i.useMemo(() => Array.from(n), [n]), p = i.useMemo(() => T.filter(m), [T]), _ = i.useMemo(() => [...c.SUGGESTED_TRAITS_SET, ...p], [p]), C = i.useMemo(() => T.filter(e => !c.ALL_TRAITS_SET.has(e) && !c.LANGUAGES_SET.has(e)), [T]), g = e => {
     let a = new Set(n);
     a.delete(e), t({
       interests: a
     })
-  }, x = r.useCallback(e => {
-    if (n.size === d.MAX_NUM_INTERESTS) return;
+  }, x = i.useCallback(e => {
+    if (n.size === c.MAX_NUM_INTERESTS) return;
     let a = null != e ? e : h.trim();
     if (0 === a.length) return;
-    let r = new Set(n);
-    r.add(a), t({
-      interests: r
-    }), p("")
-  }, [t, h, n]), I = r.useCallback(e => {
+    let i = new Set(n);
+    i.add(a), t({
+      interests: i
+    }), E("")
+  }, [t, h, n]), I = i.useCallback(e => {
     switch (e.key) {
       case "Enter":
       case "Tab":
@@ -50,11 +50,11 @@ t.default = e => {
       color: "header-secondary",
       className: f.subtitle,
       children: u.default.Messages.CLAN_SETUP_INTERESTS_SUBTITLE
-    }), null != s && (0, a.jsx)(l.Text, {
+    }), null != r && (0, a.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
       className: f.errorText,
-      children: s
+      children: r
     }), (0, a.jsxs)("div", {
       className: f.content,
       children: [(0, a.jsxs)("div", {
@@ -65,13 +65,13 @@ t.default = e => {
             inputClassName: f.input,
             value: h,
             onKeyDown: I,
-            onChange: p,
+            onChange: E,
             placeholder: u.default.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
-            maxLength: d.MAX_INTEREST_LENGTH,
-            disabled: n.size === d.MAX_NUM_INTERESTS
+            maxLength: c.MAX_INTEREST_LENGTH,
+            disabled: n.size === c.MAX_NUM_INTERESTS
           }), h.length > 0 && (0, a.jsx)(l.Clickable, {
             onClick: () => x(h.trim()),
-            className: i()(f.plusIcon, f.clickable),
+            className: s()(f.plusIcon, f.clickable),
             children: (0, a.jsx)(o.default, {
               className: f.icon
             })
@@ -88,10 +88,10 @@ t.default = e => {
           children: u.default.Messages.CLAN_SETUP_SUGGESTED_INTERESTS
         }), (0, a.jsx)("div", {
           className: f.interestsCategory,
-          children: C.map(e => {
+          children: _.map(e => {
             let t = n.has(e);
             return (0, a.jsx)(l.Clickable, {
-              className: i()(f.interestsTag, {
+              className: s()(f.interestsTag, {
                 [f.selected]: t
               }),
               onClick: () => t ? g(e) : x(e),
@@ -105,9 +105,9 @@ t.default = e => {
         })]
       }), (0, a.jsx)("div", {
         className: f.fixedWidthSidebar,
-        children: E.length > 0 && (0, a.jsx)(c.default, {
-          traits: E,
-          traitsToHighlight: _
+        children: T.length > 0 && (0, a.jsx)(d.default, {
+          traits: T,
+          traitsToHighlight: C
         })
       })]
     })]

@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_MINIMUM_SIZE: function() {
-    return c
+    return d
   },
   LOWERED_MINIMUM_SIZE: function() {
-    return d
+    return c
   }
 });
-var a, r, s, i, l = n("442837"),
+var a, i, r, s, l = n("442837"),
   o = n("570140");
-let c = 1e3,
-  d = 200,
+let d = 1e3,
+  c = 200,
   u = {},
   f = !1;
-class m extends(i = l.default.Store) {
+class m extends(s = l.default.Store) {
   isLoading() {
     return f
   }
@@ -29,12 +29,12 @@ class m extends(i = l.default.Store) {
     return u[e]
   }
 }
-s = "DiscoverGuildChecklistStore", (r = "displayName") in(a = m) ? Object.defineProperty(a, r, {
-  value: s,
+r = "DiscoverGuildChecklistStore", (i = "displayName") in(a = m) ? Object.defineProperty(a, i, {
+  value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[r] = s, t.default = new m(o.default, {
+}) : a[i] = r, t.default = new m(o.default, {
   DISCOVER_CHECKLIST_FETCH_START: function(e) {
     f = !0
   },
@@ -60,7 +60,7 @@ s = "DiscoverGuildChecklistStore", (r = "displayName") in(a = m) ? Object.define
       gracePeriodEndDate: null != n.grace_period_end_date ? new Date(n.grace_period_end_date) : null,
       retentionHealthy: n.retention_healthy,
       engagementHealthy: n.engagement_healthy,
-      minimumGuildSize: null != n.minimum_size ? n.minimum_size : c,
+      minimumGuildSize: null != n.minimum_size ? n.minimum_size : d,
       healthScore: n.health_score,
       minimumGuildAge: null !== (t = n.minimum_age) && void 0 !== t ? t : 0,
       age: n.age

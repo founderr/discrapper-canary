@@ -10,8 +10,8 @@ var a, n, l, i, d = s("392711"),
   g = s("592125"),
   M = s("271383"),
   _ = s("430824"),
-  h = s("375954"),
-  m = s("699516"),
+  m = s("375954"),
+  h = s("699516"),
   N = s("594174");
 let S = {};
 
@@ -39,12 +39,12 @@ function I(e) {
 
 function C() {
   r().forEach(S, e => {
-    e.messages = e.messages.map(e => e.set("blocked", m.default.isBlocked(e.author.id)))
+    e.messages = e.messages.map(e => e.set("blocked", h.default.isBlocked(e.author.id)))
   })
 }
 class p extends(a = u.default.Store) {
   initialize() {
-    this.waitFor(g.default, _.default, M.default, h.default, N.default, E.default)
+    this.waitFor(g.default, _.default, M.default, m.default, N.default, E.default)
   }
   getPinnedMessages(e) {
     var t;

@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return i
   }
 });
 var a = n("735250");
 
-function r(e) {
+function i(e) {
   return (0, a.jsx)("svg", {
     width: "12",
     height: "12",

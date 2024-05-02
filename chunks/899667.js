@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n("47120");
-var a, r, s, i, l = n("442837"),
+var a, i, r, s, l = n("442837"),
   o = n("570140");
-let c = {},
-  d = null,
+let d = {},
+  c = null,
   u = [],
   f = !1,
   m = !1,
   h = null,
-  p = null;
+  E = null;
 
-function E() {
+function T() {
   m = !0
 }
-class T extends(a = l.default.Store) {
+class p extends(a = l.default.Store) {
   getAppliedGuildBoostsForGuild(e) {
-    return null != c[e] ? c[e].subscriptions : null
+    return null != d[e] ? d[e].subscriptions : null
   }
   getLastFetchedAtForGuild(e) {
-    return null != c[e] ? c[e].lastFetchedAt : null
+    return null != d[e] ? d[e].lastFetchedAt : null
   }
   getCurrentUserAppliedBoosts() {
     return u
@@ -33,27 +33,27 @@ class T extends(a = l.default.Store) {
     return h
   }
   get unapplyBoostError() {
-    return p
+    return E
   }
   get cooldownEndsAt() {
-    return d
+    return c
   }
   get isFetchingCurrentUserAppliedBoosts() {
     return f
   }
 }
-i = "AppliedGuildBoostStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
-  value: i,
+s = "AppliedGuildBoostStore", (r = "displayName") in(i = p) ? Object.defineProperty(i, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = i, t.default = new T(o.default, {
+}) : i[r] = s, t.default = new p(o.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
       appliedBoosts: n
     } = e;
-    c[t] = {
+    d[t] = {
       subscriptions: n,
       lastFetchedAt: Date.now()
     }
@@ -68,10 +68,10 @@ i = "AppliedGuildBoostStore", (s = "displayName") in(r = T) ? Object.definePrope
     let {
       endsAt: t
     } = e;
-    d = t
+    c = t
   },
-  GUILD_UNAPPLY_BOOST_START: E,
-  GUILD_APPLY_BOOST_START: E,
+  GUILD_UNAPPLY_BOOST_START: T,
+  GUILD_APPLY_BOOST_START: T,
   GUILD_APPLY_BOOST_SUCCESS: function(e) {
     let {
       appliedGuildBoost: t
@@ -94,7 +94,7 @@ i = "AppliedGuildBoostStore", (s = "displayName") in(r = T) ? Object.definePrope
     let {
       error: t
     } = e;
-    m = !1, p = t
+    m = !1, E = t
   },
   USER_APPLIED_BOOSTS_FETCH_START: function() {
     f = !0
