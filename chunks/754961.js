@@ -1,112 +1,125 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanSetupProgress: function() {
-    return E
+    return _
   },
   ClanSetupProgressButtons: function() {
-    return h
+    return C
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("120356"),
-  l = n.n(s),
-  i = n("718017"),
-  r = n("442837"),
-  o = n("481060"),
-  u = n("607070"),
-  d = n("689938"),
-  c = n("156610");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("718017"),
+  o = n("442837"),
+  u = n("481060"),
+  d = n("607070"),
+  c = n("676327"),
+  f = n("689938"),
+  E = n("156610");
 
-function f(e) {
+function h(e) {
   let {
     index: t,
     onClick: n,
-    name: s,
-    isActive: f,
-    animate: E
-  } = e, h = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), _ = (0, i.useSpring)({
-    transform: f ? "translateX(0%)" : "translateX(-100%)",
+    name: l,
+    isActive: h,
+    animate: _,
+    fillBackgroundColor: C
+  } = e, S = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), m = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY), p = s.useMemo(() => (0, c.getClanBackgroundStyles)(C, m.hex()), [C, m]), I = null != p, T = (0, r.useSpring)({
+    transform: h ? "translateX(0%)" : "translateX(-100%)",
     config: {
-      ...i.config.stiff,
+      ...r.config.stiff,
       clamp: !0
     },
-    immediate: h || !E
+    immediate: S || !_
   });
-  return (0, a.jsx)(o.Tooltip, {
-    color: o.Tooltip.Colors.BRAND,
-    text: s,
+  return (0, a.jsx)(u.Tooltip, {
+    color: u.Tooltip.Colors.BRAND,
+    text: l,
     shouldShow: null != n,
-    tooltipClassName: c.progressStepTooltip,
-    children: e => (0, a.jsx)(o.Clickable, {
+    tooltipClassName: E.progressStepTooltip,
+    children: e => (0, a.jsx)(u.Clickable, {
       ...e,
-      "aria-label": d.default.Messages.STEP_NUMBER.format({
+      "aria-label": f.default.Messages.STEP_NUMBER.format({
         number: t
       }),
       onClick: n,
-      className: l()(c.progressStepContainer, {
-        [c.clickable]: null != n
+      className: i()(E.progressStepContainer, {
+        [E.clickable]: null != n
       }),
       children: (0, a.jsx)("div", {
-        className: c.progressStep,
-        children: (0, a.jsx)(i.animated.div, {
-          className: c.progressStepFill,
-          style: _
+        className: E.progressStep,
+        children: (0, a.jsx)(r.animated.div, {
+          style: {
+            ...T,
+            ...p
+          },
+          className: i()(E.progressStepFill, {
+            [E.customProgressStepFill]: I
+          })
         })
       })
     })
   })
 }
 
-function E(e) {
+function _(e) {
   let {
     steps: t,
     currentStepIndex: n,
     furthestStepIndex: s,
-    onStepClick: l
+    onStepClick: l,
+    stepFillColor: i
   } = e;
   return (0, a.jsx)("div", {
-    className: c.progressContainer,
+    className: E.progressContainer,
     children: t.map(e => {
       let {
         index: t,
-        name: i
+        name: r
       } = e;
-      return (0, a.jsx)(f, {
-        name: i,
+      return (0, a.jsx)(h, {
+        name: r,
         onClick: t <= s ? () => l(t) : void 0,
         isActive: t <= n,
         index: t,
+        fillBackgroundColor: i,
         animate: n === t || n + 1 === t
-      }, i)
+      }, r)
     })
   })
 }
 
-function h(e) {
+function C(e) {
   let {
     children: t,
     className: n,
-    isBackDisabled: s,
-    isNextDisabled: i,
-    onNextClick: r,
-    onBackClick: u
-  } = e;
+    isBackDisabled: l,
+    isNextDisabled: r,
+    onNextClick: o,
+    onBackClick: d,
+    nextButtonBackgroundColor: h
+  } = e, _ = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY), C = s.useMemo(() => (0, c.getClanPrimaryButtonStyles)(h, _.hex()), [h, _]), S = null != C;
   return (0, a.jsxs)("div", {
-    className: l()(c.buttonsContainer, n),
-    children: [(0, a.jsx)(o.Button, {
-      look: o.Button.Looks.OUTLINED,
-      size: o.Button.Sizes.MEDIUM,
-      color: o.Button.Colors.PRIMARY,
-      onClick: u,
-      disabled: s,
-      children: d.default.Messages.PAGINATION_PREVIOUS
-    }), t, (0, a.jsx)(o.Button, {
-      look: o.Button.Looks.FILLED,
-      size: o.Button.Sizes.MEDIUM,
-      onClick: r,
-      disabled: i,
-      children: d.default.Messages.PAGINATION_NEXT
+    className: i()(E.buttonsContainer, n),
+    children: [(0, a.jsx)(u.Button, {
+      look: u.Button.Looks.OUTLINED,
+      size: u.Button.Sizes.MEDIUM,
+      color: u.Button.Colors.PRIMARY,
+      onClick: d,
+      disabled: l,
+      children: f.default.Messages.PAGINATION_PREVIOUS
+    }), t, (0, a.jsx)(u.Button, {
+      style: C,
+      className: S ? E.customButton : void 0,
+      look: u.Button.Looks.FILLED,
+      size: u.Button.Sizes.MEDIUM,
+      color: S ? u.Button.Colors.CUSTOM : u.Button.Colors.BRAND,
+      onClick: o,
+      disabled: r,
+      children: f.default.Messages.PAGINATION_NEXT
     })]
   })
 }

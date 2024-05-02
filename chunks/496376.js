@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("650461"),
   _ = n("620929"),
   C = n("94963"),
-  m = n("745628"),
-  S = n("950279"),
+  S = n("745628"),
+  m = n("950279"),
   p = n("796918"),
   I = n("513532"),
   T = n("741595"),
@@ -39,15 +39,16 @@ let O = [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.UT
       description: E,
       tag: h,
       verificationForm: _,
-      furthestStep: C
-    } = t, m = s.useMemo(() => null != _ && _.formFields.some(e => !(0, f.isTermsFormField)(e)), [_]), S = s.useMemo(() => Array.from(d).filter(e => !v.ALL_TRAITS_SET.has(e) && !v.LANGUAGES_SET.has(e)), [d]), p = s.useMemo(() => {
+      furthestStep: C,
+      brandPrimaryColor: S
+    } = t, m = s.useMemo(() => null != _ && _.formFields.some(e => !(0, f.isTermsFormField)(e)), [_]), p = s.useMemo(() => Array.from(d).filter(e => !v.ALL_TRAITS_SET.has(e) && !v.LANGUAGES_SET.has(e)), [d]), I = s.useMemo(() => {
       switch (i) {
         case v.ClanSetupSteps.GAMES:
           return 0 === r.size;
         case v.ClanSetupSteps.PLAYSTYLE:
           return u === v.ClanPlaystyles.NONE;
         case v.ClanSetupSteps.INTERESTS:
-          return S.length < 3;
+          return p.length < 3;
         case v.ClanSetupSteps.DESCRIPTION:
           return 0 === E.length;
         case v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
@@ -57,13 +58,13 @@ let O = [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.UT
         default:
           return !1
       }
-    }, [i, E.length, r.size, m, S.length, u, h.length]), I = 0 === i, T = s.useCallback(() => {
+    }, [i, E.length, r.size, m, p.length, u, h.length]), T = 0 === i, A = s.useCallback(() => {
       i === O.length - 1 ? l() : n(i + 1)
-    }, [i, l, n]), A = s.useCallback(() => {
+    }, [i, l, n]), N = s.useCallback(() => {
       n(i - 1)
-    }, [i, n]), N = s.useCallback(e => {
+    }, [i, n]), M = s.useCallback(e => {
       n(e)
-    }, [n]), M = s.useMemo(() => [{
+    }, [n]), P = s.useMemo(() => [{
       index: v.ClanSetupSteps.GAMES,
       name: R.default.Messages.CLAN_SETUP_GAMES_STEP
     }, {
@@ -91,16 +92,18 @@ let O = [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.UT
     return (0, a.jsxs)("div", {
       className: L.footer,
       children: [(0, a.jsx)(g.ClanSetupProgress, {
-        steps: M,
+        steps: P,
         currentStepIndex: i,
         furthestStepIndex: C,
-        onStepClick: N
+        onStepClick: M,
+        stepFillColor: S
       }), (0, a.jsx)(g.ClanSetupProgressButtons, {
         className: L.footerButtons,
-        isBackDisabled: I,
-        isNextDisabled: p,
-        onNextClick: T,
-        onBackClick: A,
+        isBackDisabled: T,
+        isNextDisabled: I,
+        onNextClick: A,
+        onBackClick: N,
+        nextButtonBackgroundColor: S,
         children: (0, a.jsxs)("div", {
           className: L.footerAlphaMsg,
           children: [(0, a.jsx)(c.default, {
@@ -131,8 +134,8 @@ t.default = e => {
   }), {
     requiredGameId: g,
     gameApplicationIds: P,
-    playstyle: x,
-    interests: y,
+    playstyle: y,
+    interests: x,
     description: D,
     tag: b,
     currentStep: U,
@@ -141,20 +144,20 @@ t.default = e => {
   s.useEffect(() => {
     u.default.getDetectableGames()
   }, []);
-  let B = s.useCallback(e => E.updateClanSetup(t, {
+  let F = s.useCallback(e => E.updateClanSetup(t, {
       currentStep: e,
       furthestStep: null == j || e > j ? e : j
     }), [t, j]),
-    F = s.useCallback(e => E.updateClanSetup(t, e), [t]),
-    H = s.useCallback(e => F({
+    B = s.useCallback(e => E.updateClanSetup(t, e), [t]),
+    H = s.useCallback(e => B({
       gameApplicationIds: e
-    }), [F]),
-    V = s.useCallback(e => F({
+    }), [B]),
+    V = s.useCallback(e => B({
       playstyle: e
-    }), [F]),
-    Y = s.useCallback(e => F({
+    }), [B]),
+    Y = s.useCallback(e => B({
       interests: e
-    }), [F]),
+    }), [B]),
     W = s.useCallback(() => {
       k(!1), setTimeout(() => n(v.ClanSetupModalPages.SIGN), 199)
     }, [n]);
@@ -184,7 +187,7 @@ t.default = e => {
           children: (() => {
             switch (U) {
               case v.ClanSetupSteps.GAMES:
-                return (0, a.jsx)(S.default, {
+                return (0, a.jsx)(m.default, {
                   title: R.default.Messages.CLAN_SETUP_GAMES_TITLE,
                   description: R.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
                   handleUpdate: H,
@@ -197,7 +200,7 @@ t.default = e => {
                   title: R.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
                   description: R.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
                   handleUpdate: V,
-                  playstyle: x,
+                  playstyle: y,
                   error: null == f ? void 0 : f.playstyle
                 });
               case v.ClanSetupSteps.UTILITY_TRAITS:
@@ -206,24 +209,24 @@ t.default = e => {
                   description: R.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
                   requiredGameId: g,
                   handleUpdate: Y,
-                  interests: y
+                  interests: x
                 });
               case v.ClanSetupSteps.INTERESTS:
                 return (0, a.jsx)(p.default, {
-                  handleUpdate: F,
-                  interests: y,
+                  handleUpdate: B,
+                  interests: x,
                   error: null == f ? void 0 : f.interests
                 });
               case v.ClanSetupSteps.DESCRIPTION:
-                return (0, a.jsx)(m.default, {
-                  handleUpdate: F,
+                return (0, a.jsx)(S.default, {
+                  handleUpdate: B,
                   description: D,
                   wildcardDescriptors: c.wildcardDescriptors,
                   errors: f
                 });
               case v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
                 return (0, a.jsx)(A.default, {
-                  handleUpdate: F,
+                  handleUpdate: B,
                   tag: b,
                   error: null == f ? void 0 : f.tag,
                   badge: c.badgeKind,
@@ -233,7 +236,7 @@ t.default = e => {
                 });
               case v.ClanSetupSteps.CUSTOMIZE_BANNER:
                 return (0, a.jsx)(C.default, {
-                  handleUpdate: F,
+                  handleUpdate: B,
                   progress: c,
                   guildId: t
                 });
@@ -245,7 +248,7 @@ t.default = e => {
           })()
         })
       }), (0, a.jsx)(M, {
-        setCurrentStep: B,
+        setCurrentStep: F,
         progress: c,
         onLastStep: W
       })]
