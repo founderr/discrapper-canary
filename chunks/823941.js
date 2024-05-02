@@ -10,8 +10,8 @@ a.r(t), a.d(t, {
 var l = a("735250"),
   s = a("470079"),
   r = a("120356"),
-  i = a.n(r),
-  n = a("180650"),
+  n = a.n(r),
+  i = a("180650"),
   o = a("399606"),
   u = a("481060"),
   c = a("906732"),
@@ -24,8 +24,8 @@ var l = a("735250"),
   E = a("624377"),
   g = a("141011"),
   x = a("813083"),
-  b = a("67938"),
-  S = a("372654"),
+  S = a("67938"),
+  b = a("372654"),
   T = a("215023"),
   v = a("474936"),
   L = a("689938"),
@@ -36,8 +36,8 @@ let N = (0, h.getLogoSize)(96),
       category: t
     } = e, {
       analyticsLocations: a
-    } = (0, c.default)(), r = s.useRef(null), i = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser());
-    return p.default.canUseCollectibles(i) ? (0, l.jsx)(l.Fragment, {
+    } = (0, c.default)(), r = s.useRef(null), n = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser());
+    return p.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
       children: t.summary
     }) : (0, l.jsx)(l.Fragment, {
       children: L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
@@ -72,13 +72,13 @@ function y(e) {
   } = e, {
     backgroundColors: c
   } = (0, E.default)(s.styles), d = !!(null === (t = T.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
-  return s.skuId === n.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(b.ShyBanner, {
+  return s.skuId === i.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(S.ShyBanner, {
     category: s
   }) : (0, l.jsxs)(g.default, {
     asset: s.banner,
-    className: i()(I.shopBanner, r),
+    className: n()(I.shopBanner, r),
     style: null != c ? {
-      background: "".concat((0, S.getBackgroundGradient)(c), " border-box border-box"),
+      background: "".concat((0, b.getBackgroundGradient)(c), " border-box border-box"),
       outlineColor: c.border.toHslString()
     } : void 0,
     children: [(0, l.jsxs)("div", {
@@ -98,11 +98,11 @@ function y(e) {
         maxWidth: null === (a = T.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
       }
     }), (0, l.jsx)(u.Text, {
-      className: i()(I.summary, {
+      className: n()(I.summary, {
         [I.blackSummary]: d
       }),
       variant: "text-md/normal",
-      children: s.skuId === n.CollectiblesCategorySkuId.DISXCORE ? (0, l.jsx)(_, {
+      children: s.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, l.jsx)(_, {
         category: s
       }) : s.summary
     }), !o && (0, l.jsx)(x.default, {

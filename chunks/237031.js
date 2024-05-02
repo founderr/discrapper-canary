@@ -1,21 +1,21 @@
 "use strict";
 a.r(t), a.d(t, {
   closeCollectiblesShopProductDetailsModal: function() {
-    return n
+    return i
   },
   openCollectiblesShopProductDetailsModal: function() {
-    return i
+    return n
   }
 });
 var l = a("735250");
 a("470079");
 var s = a("481060");
 let r = "collectibles shop product details modal",
-  i = e => {
+  n = e => {
     let {
       product: t,
-      category: i,
-      analyticsSource: n,
+      category: n,
+      analyticsSource: i,
       analyticsLocations: o,
       returnRef: u
     } = e;
@@ -26,8 +26,8 @@ let r = "collectibles shop product details modal",
       return a => (0, l.jsx)(e, {
         ...a,
         product: t,
-        category: i,
-        analyticsSource: n,
+        category: n,
+        analyticsSource: i,
         analyticsLocations: o,
         returnRef: u
       })
@@ -35,6 +35,6 @@ let r = "collectibles shop product details modal",
       modalKey: r
     })
   },
-  n = () => {
+  i = () => {
     (0, s.closeModal)(r)
   }

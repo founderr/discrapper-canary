@@ -4,12 +4,12 @@ a.r(t), a.d(t, {
     return s
   },
   useShopCardHoverAnimationExperiment: function() {
-    return n
+    return i
   }
 });
 var l, s, r = a("818083");
 (l = s || (s = {}))[l.CONTROL = 0] = "CONTROL", l[l.TRANSFORMATION = 1] = "TRANSFORMATION", l[l.NO_MOVEMENT = 2] = "NO_MOVEMENT";
-let i = (0, r.createExperiment)({
+let n = (0, r.createExperiment)({
     kind: "user",
     id: "2024-03_shop_card_hover_animation",
     label: "Shop card hover animation experiment",
@@ -30,6 +30,6 @@ let i = (0, r.createExperiment)({
       }
     }]
   }),
-  n = e => i.useExperiment({
+  i = e => n.useExperiment({
     location: e
   })

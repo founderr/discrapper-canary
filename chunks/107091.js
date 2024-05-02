@@ -7,8 +7,8 @@ a.r(t), a.d(t, {
 var l = a("735250"),
   s = a("470079"),
   r = a("153832"),
-  i = a("979554"),
-  n = a("399606"),
+  n = a("979554"),
+  i = a("399606"),
   o = a("481060"),
   u = a("37234"),
   c = a("607070"),
@@ -21,8 +21,8 @@ var l = a("735250"),
   E = a("300284"),
   g = a("642619"),
   x = a("563132"),
-  b = a("333867"),
-  S = a("329067"),
+  S = a("333867"),
+  b = a("329067"),
   T = a("981631"),
   v = a("302800"),
   L = a("689938"),
@@ -54,7 +54,7 @@ function _(e) {
   } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
     confettiColors: D,
     buttonColors: F
-  } = (0, C.default)(t.styles), M = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), w = (0, v.getCustomConfettiDisplayOptions)(t.skuId), [H, U] = s.useState(!1), [W, G] = s.useState(!1), V = null != F ? {
+  } = (0, C.default)(t.styles), M = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), w = (0, v.getCustomConfettiDisplayOptions)(t.skuId), [H, U] = s.useState(!1), [W, G] = s.useState(!1), V = null != F ? {
     background: (0, h.getBackgroundGradient)(F, 90),
     color: F.text.toHslString()
   } : void 0, z = (0, E.default)({
@@ -91,7 +91,7 @@ function _(e) {
         })
       }), (0, l.jsx)(o.Button, {
         onClick: () => {
-          k(), (0, b.default)({
+          k(), (0, S.default)({
             skuId: t.skuId,
             analyticsLocations: B,
             returnRef: j
@@ -117,13 +117,13 @@ function _(e) {
       }), (0, l.jsx)(N, {
         style: V,
         onClick: () => {
-          if (y(), (0, u.popLayer)(), z(), (null == P ? void 0 : P.type) === i.CollectiblesItemType.AVATAR_DECORATION) {
+          if (y(), (0, u.popLayer)(), z(), (null == P ? void 0 : P.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
             (0, m.openAvatarDecorationModal)({
               initialSelectedDecoration: P,
               analyticsLocations: B
             });
             return
-          }(null == P ? void 0 : P.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
+          }(null == P ? void 0 : P.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
             initialSelectedEffectId: P.id,
             analyticsLocations: B
           })
@@ -145,7 +145,7 @@ function _(e) {
         isGift: !1,
         activeSubscription: null,
         purchaseType: T.PurchaseTypes.ONE_TIME,
-        children: (0, l.jsx)(S.default, {
+        children: (0, l.jsx)(b.default, {
           ...K
         })
       })]

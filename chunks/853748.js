@@ -7,8 +7,8 @@ a.r(t), a.d(t, {
 var l = a("735250"),
   s = a("470079"),
   r = a("120356"),
-  i = a.n(r),
-  n = a("718017"),
+  n = a.n(r),
+  i = a("718017"),
   o = a("873546"),
   u = a("399606"),
   c = a("481060"),
@@ -24,12 +24,12 @@ function p(e) {
     days: a,
     hours: s,
     minutes: r,
-    seconds: i
-  } = (0, d.default)(t), n = function(e, t, a, l) {
+    seconds: n
+  } = (0, d.default)(t), i = function(e, t, a, l) {
     let s = (e, t) => "".concat(e.toString().padStart(2, "0")).concat(t),
       r = [];
     return e > 0 && r.push(s(e, m.default.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || r.length > 0) && r.push(s(t, m.default.Messages.COUNTDOWN_UNITS_HOURS)), (a > 0 || r.length > 0) && r.push(s(a, m.default.Messages.COUNTDOWN_UNITS_MINUTES)), r.push(s(l, m.default.Messages.COUNTDOWN_UNITS_SECONDS)), r.join(":")
-  }(a, s, r, i);
+  }(a, s, r, n);
   return (0, l.jsx)(c.Text, {
     variant: "heading-md/medium",
     className: C.countdown,
@@ -37,7 +37,7 @@ function p(e) {
     children: (0, l.jsx)("div", {
       role: "timer",
       "aria-relevant": "all",
-      children: n
+      children: i
     })
   })
 }
@@ -47,7 +47,7 @@ let h = s.memo(function(e) {
     isVisible: a,
     displayOptions: s,
     isFullScreen: r
-  } = e, d = (0, u.useStateFromStores)([f.default], () => f.default.useReducedMotion), m = (0, n.useSpring)({
+  } = e, d = (0, u.useStateFromStores)([f.default], () => f.default.useReducedMotion), m = (0, i.useSpring)({
     transform: "translateX(-50%) ".concat(a ? "translateY(-100%)" : "translateY(0%)"),
     opacity: a ? 1 : 0,
     config: {
@@ -56,8 +56,8 @@ let h = s.memo(function(e) {
     },
     immediate: d
   });
-  return (0, l.jsxs)(n.animated.div, {
-    className: i()([C.countDownWrapper, r && C.fullScreenWrapper, o.isMobile && C.mobileWrapper]),
+  return (0, l.jsxs)(i.animated.div, {
+    className: n()([C.countDownWrapper, r && C.fullScreenWrapper, o.isMobile && C.mobileWrapper]),
     role: "status",
     style: {
       backgroundColor: s.backgroundColor,

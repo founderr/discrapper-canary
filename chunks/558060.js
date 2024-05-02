@@ -8,8 +8,8 @@ var l = a("735250");
 a("470079");
 var s = a("120356"),
   r = a.n(s),
-  i = a("399606"),
-  n = a("663002"),
+  n = a("399606"),
+  i = a("663002"),
   o = a("481060"),
   u = a("210887"),
   c = a("594174"),
@@ -28,8 +28,8 @@ function g(e) {
     innerClassName: s,
     disableTooltipPointerEvents: g,
     alwaysWhiteText: x = !0,
-    nitroWheelColor: b
-  } = e, S = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser()), T = (0, i.useStateFromStores)([u.default], () => (0, n.isThemeDark)(u.default.theme)), v = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
+    nitroWheelColor: S
+  } = e, b = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), T = (0, n.useStateFromStores)([u.default], () => (0, i.isThemeDark)(u.default.theme)), v = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
   if (null == v) return null;
   if (v.amount <= 0) return (0, l.jsx)("div", {
     className: r()(E.priceTagsContainer, a),
@@ -40,7 +40,7 @@ function g(e) {
     })
   });
   let L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
-    I = !f.default.canUseCollectibles(S);
+    I = !f.default.canUseCollectibles(b);
   return (0, l.jsxs)("div", {
     className: r()(E.priceTagsContainer, a),
     children: [(0, l.jsx)(C.default, {
@@ -68,7 +68,7 @@ function g(e) {
             className: r()(E.premiumIcon, {
               [E.fullPrice]: I
             }),
-            color: null != b ? b : x || T ? "white" : "black"
+            color: null != S ? S : x || T ? "white" : "black"
           })
         }
       })
