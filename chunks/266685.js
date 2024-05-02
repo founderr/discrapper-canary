@@ -131,7 +131,6 @@ let y = s.forwardRef(function(e, t) {
       }), (0, a.jsx)(T.default, {
         quest: G
       }), !et && !q && !V && z && (0, a.jsx)(x, {
-        style: en,
         onClick: J ? K : void 0
       })]
     }) : (0, a.jsxs)("div", {
