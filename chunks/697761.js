@@ -17,13 +17,14 @@ function u(e) {
     activity: t,
     user: n,
     look: u,
-    color: d
+    color: d,
+    onAction: _
   } = e;
   return (0, a.default)(t, o.ActivityFlags.INSTANCE) ? (0, i.jsx)(s.default, {
     look: u,
     color: d,
-    onClick: function() {
-      new r.default("UserActivityActions").log("notify", n.id, t)
+    onClick: () => {
+      null == _ || _(), new r.default("UserActivityActions").log("notify", n.id, t)
     },
     fullWidth: !0,
     children: l.default.Messages.USER_ACTIVITY_ACTION_NOTIFY_ME

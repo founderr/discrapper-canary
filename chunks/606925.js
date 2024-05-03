@@ -15,26 +15,29 @@ var r = n("442837"),
 
 function d(e) {
   let {
-    color: t,
-    look: n,
-    platform: d
+    platform: t,
+    color: n,
+    look: d,
+    onAction: _
   } = e;
-  return (0, r.useStateFromStores)([s.default], () => s.default.getAccounts().some(e => e.type === d.type)) ? null : (0, i.jsx)(o.default, {
-    onClick: () => (0, a.default)({
-      platformType: d.type,
-      location: "Activity Action"
-    }),
-    color: t,
-    look: n,
+  return (0, r.useStateFromStores)([s.default], () => s.default.getAccounts().some(e => e.type === t.type)) ? null : (0, i.jsx)(o.default, {
+    onClick: () => {
+      null == _ || _(), (0, a.default)({
+        platformType: t.type,
+        location: "Activity Action"
+      })
+    },
+    color: n,
+    look: d,
     fullWidth: !0,
     children: (0, i.jsxs)("div", {
       className: u.flex,
       children: [(0, i.jsx)("img", {
         alt: "",
         className: u.platformIcon,
-        src: d.icon.whiteSVG
+        src: t.icon.whiteSVG
       }), l.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
-        platform: d.name
+        platform: t.name
       })]
     })
   }, "connect-platform-activity")

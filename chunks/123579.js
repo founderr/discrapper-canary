@@ -238,7 +238,7 @@ t.default = e => {
               })]
             }), eM ? (0, a.jsx)(w.default.Overlay, {
               children: (0, a.jsx)(W.default, {
-                activity: null != eT ? eT : ex,
+                activity: null != eT || eA ? eT : ex,
                 user: ec,
                 channelId: n.id,
                 analyticsParams: {

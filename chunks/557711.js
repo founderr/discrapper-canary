@@ -23,13 +23,15 @@ function _(e) {
     source: c,
     size: E,
     className: I,
-    ...T
+    onAction: T
   } = e, {
     tooltip: f,
     loading: S,
     disabled: h,
     onClick: A
-  } = (0, u.useSpotifySyncAction)(t, n, c, l.default.getNickname(_, r, n));
+  } = (0, u.useSpotifySyncAction)(t, n, c, l.default.getNickname(_, r, n)), m = () => {
+    null == T || T(), A()
+  };
   return (0, i.jsx)(s.Tooltip, {
     text: f,
     children: e => {
@@ -38,10 +40,9 @@ function _(e) {
         onMouseLeave: r
       } = e;
       return (0, i.jsx)(s.Button, {
-        ...T,
         size: a()(E, d.iconButtonSize),
         className: a()(I, d.iconButton),
-        onClick: A,
+        onClick: m,
         onMouseEnter: n,
         onMouseLeave: r,
         disabled: h,

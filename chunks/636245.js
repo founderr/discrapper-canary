@@ -16,16 +16,19 @@ t.default = e => {
     channelId: n,
     color: r,
     look: c,
-    isProfile: E
-  } = e, I = (0, s.useStateFromStores)([l.default], () => l.default.isInChannel(n), [n]);
+    isProfile: E,
+    onAction: I
+  } = e, T = (0, s.useStateFromStores)([l.default], () => l.default.isInChannel(n), [n]);
   return (0, i.jsx)(u.default, {
     className: a()(_.button, {
       [_.popout]: !E
     }),
     color: r,
     look: c,
-    disabled: I,
-    onClick: () => o.connectOrLurkStage(t, n),
+    disabled: T,
+    onClick: () => {
+      null == I || I(), o.connectOrLurkStage(t, n)
+    },
     fullWidth: !0,
     children: d.default.Messages.STAGE_CHANNEL_JOIN_BUTTON
   }, "stage")

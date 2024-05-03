@@ -16,10 +16,11 @@ function l(e) {
     activity: t,
     color: n,
     user: l,
-    look: u
+    look: u,
+    onAction: d
   } = e;
   if ((null == t ? void 0 : t.buttons) == null || t.buttons.length < 1) return null;
-  async function d(e, t, n) {
+  async function _(e, t, n) {
     try {
       let i = await (0, r.getMetadata)(e, t);
       if (i.button_urls.length <= n) return;
@@ -37,7 +38,9 @@ function l(e) {
     children: t.buttons.map((e, r) => (0, i.jsx)(o.default, {
       color: n,
       look: u,
-      onClick: () => d(t, l.id, r),
+      onClick: () => {
+        null == d || d(), _(t, l.id, r)
+      },
       children: e
     }, "customButton-".concat(r)))
   })

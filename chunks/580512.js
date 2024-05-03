@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return E
   }
 });
 var i = n("735250");
@@ -9,44 +9,68 @@ n("470079");
 var r = n("442837"),
   a = n("717881"),
   s = n("906732"),
-  o = n("158776"),
-  l = n("785717"),
-  u = n("221292"),
-  d = n("981631"),
-  _ = n("810480");
+  o = n("199902"),
+  l = n("158776"),
+  u = n("785717"),
+  d = n("221292"),
+  _ = n("981631"),
+  c = n("810480");
 
-function c(e) {
+function E(e) {
   let {
     user: t,
     guild: n,
-    channelId: c,
-    onClose: E
+    channelId: E,
+    onClose: I
   } = e, {
-    analyticsLocations: I,
-    newestAnalyticsLocation: T
+    analyticsLocations: T,
+    newestAnalyticsLocation: f
   } = (0, s.default)(), {
-    trackUserProfileAction: f,
-    ...S
-  } = (0, l.useUserProfileAnalyticsContext)(), h = (0, r.useStateFromStores)([o.default], () => o.default.findActivity(t.id, e => null != e.type && e.type !== d.ActivityTypes.CUSTOM_STATUS), [t]);
+    trackUserProfileAction: S,
+    ...h
+  } = (0, u.useUserProfileAnalyticsContext)(), {
+    isApplicationStreaming: A,
+    activity: m
+  } = (0, r.useStateFromStoresObject)([o.default, l.default], () => {
+    let e = null != o.default.getAnyStreamForUser(t.id);
+    return {
+      isApplicationStreaming: e,
+      activity: e ? l.default.findActivity(t.id, e => {
+        let {
+          type: t
+        } = e;
+        return t === _.ActivityTypes.PLAYING
+      }) : l.default.findActivity(t.id, e => {
+        let {
+          type: t
+        } = e;
+        return t !== _.ActivityTypes.CUSTOM_STATUS
+      })
+    }
+  });
   return (0, i.jsx)(a.default, {
     type: a.UserActivityTypes.BITE_SIZE_POPOUT,
-    activity: h,
-    className: _.activity,
-    source: T,
+    activity: m,
+    className: c.activity,
+    source: f,
     user: t,
     guildId: null == n ? void 0 : n.id,
-    channelId: c,
-    onOpenGameProfile: E,
+    channelId: E,
+    onOpenGameProfile: I,
     onAction: () => {
-      f({
+      S({
         action: "JOIN_ACTIVITY"
-      }), (0, u.trackUserProfileActivityJoined)({
-        activity: h,
-        analyticsLocations: I,
-        ...S
-      }), null == E || E()
+      }), (0, d.trackUserProfileActivityJoined)({
+        activityType: A ? _.ActivityTypes.STREAMING : null == m ? void 0 : m.type,
+        activityName: null == m ? void 0 : m.name,
+        activityPlatform: null == m ? void 0 : m.platform,
+        activitySessionId: null == m ? void 0 : m.session_id,
+        applicationId: null == m ? void 0 : m.application_id,
+        analyticsLocations: T,
+        ...h
+      }), null == I || I()
     },
-    actionColor: _.buttonColor,
+    actionColor: c.buttonColor,
     hideHeader: !0
   })
 }

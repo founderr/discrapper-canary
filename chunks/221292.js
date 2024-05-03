@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return p
   },
   trackUserProfileBadgeHovered: function() {
-    return R
+    return C
   },
   trackUserProfileBadgePressed: function() {
     return O
   },
   trackUserProfileRecentGamesViewed: function() {
-    return C
+    return R
   }
 }), n("653041");
 var i = n("367907"),
@@ -135,8 +135,12 @@ let f = e => {
       channelId: r,
       analyticsLocations: a,
       layout: s,
-      activity: o,
-      voiceChannelId: l
+      activityType: o,
+      activityName: l,
+      activityPlatform: d,
+      activitySessionId: _,
+      applicationId: c,
+      voiceChannelId: E
     } = e;
     u.default.track(I.AnalyticEvents.USER_PROFILE_ACTIVITY_JOINED, {
       ...(0, i.collectGuildAnalyticsMetadata)(n),
@@ -148,12 +152,12 @@ let f = e => {
       }),
       ...m(t),
       location_stack: a,
-      activity_type: null != l ? "VOICE" : h(null == o ? void 0 : o.type),
-      activity_name: null == o ? void 0 : o.name,
-      activity_platform: null == o ? void 0 : o.platform,
-      activity_session_id: null == o ? void 0 : o.session_id,
-      application_id: null == o ? void 0 : o.application_id,
-      voice_channel_id: l
+      activity_type: null != E ? "VOICE" : h(o),
+      activity_name: l,
+      activity_platform: d,
+      activity_session_id: _,
+      application_id: c,
+      voice_channel_id: E
     })
   },
   O = e => {
@@ -178,7 +182,7 @@ let f = e => {
       badge: o
     })
   },
-  C = e => {
+  R = e => {
     let {
       userId: t,
       guildId: n,
@@ -204,7 +208,7 @@ let f = e => {
       profile_shared_applications_ids: d
     })
   },
-  R = e => {
+  C = e => {
     let {
       userId: t,
       guildId: n,

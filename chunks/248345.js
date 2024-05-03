@@ -1,54 +1,60 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return E
   }
 });
 var i = n("735250");
 n("470079");
-var r = n("717881"),
-  a = n("906732"),
-  s = n("785717"),
-  o = n("221292"),
-  l = n("659101"),
-  u = n("981631"),
-  d = n("389573");
+var r = n("442837"),
+  a = n("717881"),
+  s = n("906732"),
+  o = n("199902"),
+  l = n("785717"),
+  u = n("221292"),
+  d = n("659101"),
+  _ = n("981631"),
+  c = n("389573");
 
-function _(e) {
+function E(e) {
   let {
     activity: t,
     user: n,
-    guild: _,
-    channelId: c,
-    onClose: E,
-    analyticsParams: I
+    guild: E,
+    channelId: I,
+    onClose: T,
+    analyticsParams: f
   } = e, {
-    analyticsLocations: T
-  } = (0, a.default)(), {
-    trackUserProfileAction: f,
-    ...S
-  } = (0, s.useUserProfileAnalyticsContext)();
-  return (0, i.jsx)(l.default, {
-    children: (0, i.jsx)(r.default, {
-      type: r.UserActivityTypes.USER_POPOUT_V2,
+    analyticsLocations: S
+  } = (0, s.default)(), {
+    trackUserProfileAction: h,
+    ...A
+  } = (0, l.useUserProfileAnalyticsContext)(), m = (0, r.useStateFromStores)([o.default], () => null != o.default.getAnyStreamForUser(n.id));
+  return (0, i.jsx)(d.default, {
+    children: (0, i.jsx)(a.default, {
+      type: a.UserActivityTypes.USER_POPOUT_V2,
       activity: t,
-      className: d.activity,
+      className: c.activity,
       user: n,
-      guildId: null == _ ? void 0 : _.id,
-      channelId: c,
-      source: u.AnalyticsLocations.PROFILE_POPOUT,
-      onOpenGameProfile: E,
+      guildId: null == E ? void 0 : E.id,
+      channelId: I,
+      source: _.AnalyticsLocations.PROFILE_POPOUT,
+      onOpenGameProfile: T,
       onAction: () => {
-        f({
+        h({
           action: "JOIN_ACTIVITY"
-        }), (0, o.trackUserProfileActivityJoined)({
-          activity: t,
-          analyticsLocations: T,
-          ...S
-        }), null == E || E()
+        }), (0, u.trackUserProfileActivityJoined)({
+          activityType: m ? _.ActivityTypes.STREAMING : null == t ? void 0 : t.type,
+          activityName: null == t ? void 0 : t.name,
+          activityPlatform: null == t ? void 0 : t.platform,
+          activitySessionId: null == t ? void 0 : t.session_id,
+          applicationId: null == t ? void 0 : t.application_id,
+          analyticsLocations: S,
+          ...A
+        }), null == T || T()
       },
-      actionColor: d.buttonColor,
-      analyticsParams: I
+      actionColor: c.buttonColor,
+      analyticsParams: f
     })
   })
 }

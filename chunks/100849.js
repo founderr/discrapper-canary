@@ -23,9 +23,9 @@ function v(e) {
   let {
     user: t,
     type: s
-  } = e, v = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), x = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), T = a.useMemo(() => v ? x.find(e => e.type === m.ActivityTypes.PLAYING) : null, [x, v]), U = a.useMemo(() => x.filter(e => e !== T), [T, x]), {
+  } = e, v = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), T = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), x = a.useMemo(() => v ? T.find(e => e.type === m.ActivityTypes.PLAYING) : null, [T, v]), N = a.useMemo(() => T.filter(e => e !== x), [x, T]), {
     analyticsLocations: A,
-    newestAnalyticsLocation: N
+    newestAnalyticsLocation: U
   } = (0, o.default)(), {
     trackUserProfileAction: g,
     ...C
@@ -41,27 +41,31 @@ function v(e) {
     children: [v ? (0, l.jsx)(r.default, {
       type: s,
       user: t,
-      source: N,
+      source: U,
       className: I.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
-      activity: T,
+      activity: x,
       actionColor: I.actionColor,
       analyticsParams: h,
       onAction: () => {
         g({
           action: "JOIN_ACTIVITY"
         }), (0, S.trackUserProfileActivityJoined)({
-          activity: T,
+          activityType: m.ActivityTypes.STREAMING,
+          activityName: null == x ? void 0 : x.name,
+          activityPlatform: null == x ? void 0 : x.platform,
+          activitySessionId: null == x ? void 0 : x.session_id,
+          applicationId: null == x ? void 0 : x.application_id,
           analyticsLocations: A,
           ...C
         })
       }
-    }) : null, U.map(e => (0, l.jsx)(r.default, {
+    }) : null, N.map(e => (0, l.jsx)(r.default, {
       type: s,
       activity: e,
       user: t,
       useStoreStream: !1,
-      source: N,
+      source: U,
       className: I.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       actionColor: I.actionColor,
@@ -70,7 +74,11 @@ function v(e) {
         g({
           action: "JOIN_ACTIVITY"
         }), (0, S.trackUserProfileActivityJoined)({
-          activity: e,
+          activityType: e.type,
+          activityName: e.name,
+          activityPlatform: e.platform,
+          activitySessionId: e.session_id,
+          applicationId: e.application_id,
           analyticsLocations: A,
           ...C
         })

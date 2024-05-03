@@ -16,27 +16,15 @@ function u(e) {
   let {
     activity: t,
     user: n,
-    color: u,
-    look: d,
-    guildId: _,
-    channelId: c,
-    source: E
+    source: u,
+    onAction: d
   } = e;
-  if (null == t || !(0, a.default)(t, o.ActivityFlags.PLAY) || !(0, s.default)(t)) return null;
-  let I = {
-    key: "play",
+  return null != t && (0, a.default)(t, o.ActivityFlags.PLAY) && (0, s.default)(t) ? (0, i.jsx)(r.default, {
     className: l.button,
     size: l.buttonSize,
-    color: u,
-    look: d,
     activity: t,
     user: n,
-    fullWidth: !0
-  };
-  return (0, i.jsx)(r.default, {
-    guildId: null != _ ? _ : void 0,
-    channelId: c,
-    source: E,
-    ...I
-  })
+    source: u,
+    onAction: d
+  }, "play") : null
 }

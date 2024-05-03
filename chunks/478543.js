@@ -73,12 +73,12 @@ t.default = e => {
     linkMeta: E,
     url: p,
     applyBuildOverride: O,
-    clearBuildOverride: C
-  } = e, [R, g] = r.useState(!1), L = r.useCallback(() => {
-    !R && (g(!0), O().catch(() => g(!1)))
-  }, [O, R]), v = r.useCallback(() => {
-    !R && (g(!0), C().catch(() => g(!1)))
-  }, [C, R]);
+    clearBuildOverride: R
+  } = e, [C, g] = r.useState(!1), L = r.useCallback(() => {
+    !C && (g(!0), O().catch(() => g(!1)))
+  }, [O, C]), v = r.useCallback(() => {
+    !C && (g(!0), R().catch(() => g(!1)))
+  }, [R, C]);
   return (0, i.jsxs)("div", {
     className: A.wrapper,
     children: [(t = E, n = p, a = o, (0, i.jsxs)(u.Text, {
@@ -137,13 +137,14 @@ t.default = e => {
         }(I.reason);
         l()(null != o, "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved");
         let {
-          discord_web: S
-        } = o.targetBuildOverride;
-        if (l()(null != S, "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web should never be null if resolved"), t = S, null == (n = s) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type) r = h.default.Messages.BUILD_OVERRIDE_APPLY, i = d, a = u.Button.Colors.GREEN;
+          discord_web: S,
+          discord_developers: A
+        } = o.targetBuildOverride, m = null != S ? S : A;
+        if (l()(null != m, "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved"), t = m, null == (n = s) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type) r = h.default.Messages.BUILD_OVERRIDE_APPLY, i = d, a = u.Button.Colors.GREEN;
         else r = h.default.Messages.BUILD_OVERRIDE_CLEAR, i = _, a = u.Button.Colors.RED;
         return N({
           subHead: h.default.Messages.BUILD_OVERRIDE_ID,
-          buildDetails: S.id,
+          buildDetails: m.id,
           buttonClick: i,
           buttonText: r,
           buttonColor: a,
@@ -154,7 +155,7 @@ t.default = e => {
         linkMeta: E,
         applyBuildOverride: L,
         clearBuildOverride: v,
-        submitting: R
+        submitting: C
       })]
     })]
   })

@@ -15,10 +15,12 @@ function l(e) {
   let {
     activity: t,
     color: n,
-    look: l
+    look: l,
+    onAction: u
   } = e;
   return (0, a.default)(t) ? (0, i.jsx)(s.default, {
     onClick: () => {
+      null == u || u();
       let e = (0, r.default)(t);
       return window.open(null != e ? e : void 0)
     },
