@@ -21,6 +21,7 @@ function l(e) {
   } = e;
   return (0, i.jsx)(s.TooltipContainer, {
     text: n,
+    color: s.TooltipColors.NESTED,
     children: (0, i.jsx)(s.Button, {
       className: a()(o.button, r),
       innerClassName: a()(o.buttonInner, l),

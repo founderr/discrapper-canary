@@ -37,6 +37,7 @@ function I(e) {
   return (0, i.jsx)(u.TooltipContainer, {
     text: h,
     "aria-label": A,
+    color: u.TooltipColors.NESTED,
     children: (0, i.jsx)(u.Clickable, {
       onClick: () => {
         I({

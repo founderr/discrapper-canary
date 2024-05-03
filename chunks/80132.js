@@ -41,6 +41,7 @@ function m(e) {
     role: "group",
     children: t.map(e => (0, i.jsx)(s.TooltipContainer, {
       text: e.description,
+      color: s.TooltipColors.NESTED,
       children: (0, i.jsx)(s.Anchor, {
         onClick: t => {
           p({

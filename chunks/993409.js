@@ -27,6 +27,7 @@ function u(e) {
   });
   return r ? (0, i.jsx)(o.Tooltip, {
     text: n,
+    color: o.TooltipColors.NESTED,
     children: e => (0, i.jsx)(s.Button, {
       className: a()(l.compactButton, u),
       innerClassName: a()(l.compactButtonInner, d),

@@ -65,6 +65,7 @@ function f(e) {
         })
       }), null != f && "" !== f && (0, i.jsx)(s.Tooltip, {
         text: I.default.Messages.USER_PROFILE_PRONOUNS,
+        color: s.TooltipColors.NESTED,
         children: e => (0, i.jsx)(s.Text, {
           ...e,
           variant: "text-sm/normal",

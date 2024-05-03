@@ -36,7 +36,7 @@ function N(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(a = i || (i = {})).PRIMARY = "primary", a.BLACK = "black", a.GREY = "grey", a.BRAND = "brand", a.GREEN = "green", a.YELLOW = "yellow", a.RED = "red", a.CUSTOM = "custom", a.PREMIUM = "premium";
+}(a = i || (i = {})).PRIMARY = "primary", a.NESTED = "nested", a.BLACK = "black", a.GREY = "grey", a.BRAND = "brand", a.GREEN = "green", a.YELLOW = "yellow", a.RED = "red", a.CUSTOM = "custom", a.PREMIUM = "premium";
 let p = Object.freeze({}),
   O = Object.freeze({
     top: m.tooltipTop,
@@ -46,6 +46,7 @@ let p = Object.freeze({}),
     center: m.tooltipCenter,
     window_center: m.tooltipCenter,
     primary: m.tooltipPrimary,
+    nested: m.tooltipNested,
     black: m.tooltipBlack,
     grey: m.tooltipGrey,
     brand: m.tooltipBrand,

@@ -85,6 +85,7 @@ function z(e) {
       location_stack: T
     }))
   }, [T, a, t]), (0, i.jsx)(d.Tooltip, {
+    color: d.TooltipColors.NESTED,
     tooltipContentClassName: j.premiumIconTooltipContent,
     text: u ? Y.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
     children: e => (0, i.jsx)(d.Clickable, {
@@ -146,6 +147,7 @@ function Z(e) {
     className: t ? j.pencilContainerDark : j.pencilContainer,
     children: (0, i.jsx)(d.Tooltip, {
       text: r,
+      color: d.TooltipColors.NESTED,
       children: e => (0, i.jsx)(l, {
         ...e,
         width: o,
@@ -258,6 +260,7 @@ function X(e) {
         className: j.pencilContainer,
         children: (0, i.jsx)(d.Tooltip, {
           text: Y.default.Messages.BACK,
+          color: d.TooltipColors.NESTED,
           children: e => (0, i.jsx)(g.default, {
             ...e,
             className: j.closeIcon,

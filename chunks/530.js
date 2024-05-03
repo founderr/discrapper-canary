@@ -56,6 +56,7 @@ function _(e) {
           className: d.dotSpacer
         }), (0, i.jsx)(s.TooltipContainer, {
           text: u.default.Messages.USER_PROFILE_PRONOUNS,
+          color: s.TooltipColors.NESTED,
           children: (0, i.jsx)(s.Text, {
             variant: h,
             className: d.pronouns,

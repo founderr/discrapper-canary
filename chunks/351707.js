@@ -72,6 +72,7 @@ function U(e) {
           ...a,
           children: [C, m && (0, l.jsx)(o.Tooltip, {
             text: x.default.Messages.USER_PROFILE_ADD_ROLE,
+            color: o.TooltipColors.NESTED,
             children: e => (0, l.jsx)("div", {
               ...e,
               children: (0, l.jsx)(d.OverflowAddRolesButton, {

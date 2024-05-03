@@ -50,6 +50,7 @@ function T(e) {
         className: I.memberSince,
         children: [(0, i.jsx)(a.Tooltip, {
           text: E.default.Messages.DISCORD_NAME,
+          color: a.TooltipColors.NESTED,
           children: e => (0, i.jsx)(_.default, {
             ...e,
             className: I.discordIcon
@@ -65,6 +66,7 @@ function T(e) {
         className: I.memberSince,
         children: [(0, i.jsx)(a.Tooltip, {
           text: m.name,
+          color: a.TooltipColors.NESTED,
           children: e => (0, i.jsx)(d.default, {
             ...e,
             guild: m,

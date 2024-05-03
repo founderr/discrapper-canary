@@ -68,7 +68,7 @@ function g(e) {
         className: R.recentGameTitleContainer,
         children: [(0, i.jsx)(c.Tooltip, {
           text: a.name,
-          color: c.Tooltip.Colors.PRIMARY,
+          color: c.Tooltip.Colors.NESTED,
           shouldShow: T,
           children: e => (0, i.jsx)("span", {
             ref: u,
@@ -78,7 +78,7 @@ function g(e) {
           })
         }), n && (0, i.jsx)(c.Tooltip, {
           text: C.default.Messages.USER_RECENT_GAMES_YOU_BOTH_PLAY,
-          color: c.Tooltip.Colors.PRIMARY,
+          color: c.Tooltip.Colors.NESTED,
           children: e => (0, i.jsx)("div", {
             className: R.sharedGameIcon,
             ...e,

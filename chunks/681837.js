@@ -24,6 +24,7 @@ function _(e) {
   }) ? (0, i.jsx)(s.TooltipContainer, {
     className: d.container,
     text: u.default.Messages.USER_PROFILE_LOAD_ERROR,
+    color: s.TooltipColors.NESTED,
     children: (0, i.jsx)(o.default, {
       color: a.default.colors.STATUS_WARNING.css,
       width: 16,

@@ -109,6 +109,7 @@ let C = s.memo(function(e) {
       });
       return f ? (0, a.jsx)(d.TooltipContainer, {
         text: p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
+        color: d.TooltipColors.NESTED,
         children: e
       }) : e
     })(), k && V && (0, a.jsx)("div", {
@@ -136,6 +137,7 @@ let C = s.memo(function(e) {
       });
       return f ? (0, a.jsx)(d.TooltipContainer, {
         text: p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
+        color: d.TooltipColors.NESTED,
         children: e
       }) : e
     })()]

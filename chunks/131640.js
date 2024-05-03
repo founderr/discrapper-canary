@@ -57,6 +57,7 @@ function B(e) {
     children: [(null == o ? void 0 : o.profileFetchFailed) && (!t.isClyde() || c) && (0, i.jsx)(d.Tooltip, {
       text: U.default.Messages.USER_PROFILE_LOAD_ERROR,
       spacing: 16,
+      color: d.TooltipColors.NESTED,
       children: e => (0, i.jsx)(S.default, {
         ...e,
         className: b.warningCircleIcon,
