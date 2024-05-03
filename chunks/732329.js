@@ -28,8 +28,8 @@ var l = a("735250"),
   y = a("1870"),
   O = a("884697"),
   k = a("624377"),
-  A = a("813083"),
-  R = a("680942"),
+  R = a("813083"),
+  A = a("680942"),
   j = a("558060"),
   P = a("237031"),
   B = a("372654"),
@@ -169,7 +169,7 @@ t.default = function(e) {
       } : void 0,
       className: w.defaultPreviewButtonColor,
       onClick: ep
-    }) : (0, l.jsx)(R.default, {
+    }) : (0, l.jsx)(A.default, {
       product: t,
       returnRef: K,
       isGiftEasterEggEnabled: N,
@@ -287,7 +287,7 @@ t.default = function(e) {
             children: ex()
           })]
         })]
-      }), (0, l.jsx)(A.default, {
+      }), (0, l.jsx)(R.default, {
         category: a,
         className: w.limitedTimeBadge,
         display: "card"

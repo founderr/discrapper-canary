@@ -20,11 +20,11 @@ var l = s("735250"),
   E = s("648067"),
   v = s("588822"),
   _ = s("81334"),
-  x = s("652853"),
-  T = s("335191"),
-  U = s("347949"),
+  T = s("652853"),
+  x = s("335191"),
+  N = s("347949"),
   A = s("988246"),
-  N = s("689938"),
+  U = s("689938"),
   g = s("175839");
 
 function C(e) {
@@ -35,19 +35,19 @@ function C(e) {
     autoFocusNote: C = !1,
     scrollToConnections: h = !1
   } = e, {
-    trackUserProfileAction: R
-  } = (0, I.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
+    trackUserProfileAction: p
+  } = (0, I.useUserProfileAnalyticsContext)(), R = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
     theme: j
-  } = (0, x.useUserProfileThemeContext)(), M = (0, r.useStateFromStores)([S.default], () => S.default.locale), P = (0, f.useIsUserRecentGamesEnabled)({
+  } = (0, T.useUserProfileThemeContext)(), M = (0, r.useStateFromStores)([S.default], () => S.default.locale), P = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
-  }), O = (0, d.default)("user_profile"), y = (0, E.default)(s.id), L = a.useRef(null);
+  }), y = (0, d.default)("user_profile"), O = (0, E.default)(s.id), L = a.useRef(null);
   return (a.useLayoutEffect(() => {
     if (h) {
       var e;
       null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [h]), p) ? (0, l.jsx)(A.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
+  }, [h]), R) ? (0, l.jsx)(A.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: g.infoScroller,
     children: [(0, l.jsxs)("div", {
@@ -56,7 +56,7 @@ function C(e) {
         children: [(0, l.jsx)(o.Heading, {
           variant: "eyebrow",
           className: g.userInfoSectionHeader,
-          children: N.default.Messages.USER_PROFILE_ABOUT_ME
+          children: U.default.Messages.USER_PROFILE_ABOUT_ME
         }), (0, l.jsx)(v.default, {
           className: g.userInfoText,
           userBio: null !== (t = null == i ? void 0 : i.bio) && void 0 !== t ? t : ""
@@ -65,7 +65,7 @@ function C(e) {
         userId: s.id,
         headingClassName: g.userInfoSectionHeader,
         textClassName: g.userInfoText
-      }), O && (0, l.jsx)("div", {
+      }), y && (0, l.jsx)("div", {
         className: g.clans,
         children: (0, l.jsx)("div", {
           className: g.userInfoText,
@@ -73,25 +73,25 @@ function C(e) {
             userId: s.id
           })
         })
-      }), P && (0, l.jsx)(U.UserProfileRecentGamesContainer, {
+      }), P && (0, l.jsx)(N.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
         containerClassName: n()(g.userInfoText, g.recentGames)
       }), (0, l.jsx)(o.Heading, {
         variant: "eyebrow",
         className: g.userInfoSectionHeader,
-        children: N.default.Messages.NOTE
+        children: U.default.Messages.NOTE
       }), (0, l.jsx)(u.default, {
         userId: s.id,
         autoFocus: C,
         className: g.note,
-        onUpdate: () => R({
+        onUpdate: () => p({
           action: "SET_NOTE"
         })
       })]
-    }), (0, l.jsx)(T.ConnectedUserAccounts, {
+    }), (0, l.jsx)(x.ConnectedUserAccounts, {
       ref: L,
-      connectedAccounts: y,
+      connectedAccounts: O,
       theme: j,
       locale: M,
       className: g.userInfoSection,

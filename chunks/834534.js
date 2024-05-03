@@ -20,11 +20,11 @@ var l = s("735250"),
   E = s("588822"),
   v = s("81334"),
   _ = s("652853"),
-  x = s("335191"),
-  T = s("347949"),
-  U = s("192591"),
+  T = s("335191"),
+  x = s("347949"),
+  N = s("192591"),
   A = s("351707"),
-  N = s("689938"),
+  U = s("689938"),
   g = s("634516");
 
 function C(e) {
@@ -35,13 +35,13 @@ function C(e) {
     autoFocusNote: C,
     className: h
   } = e, {
-    theme: R
+    theme: p
   } = (0, _.useUserProfileThemeContext)(), {
-    trackUserProfileAction: p
+    trackUserProfileAction: R
   } = (0, m.useUserProfileAnalyticsContext)(), j = null == i ? void 0 : i.guildId, M = (0, r.useStateFromStores)([S.default], () => null != j ? S.default.getGuild(j) : null), {
     recentGames: P,
-    isFetching: O,
-    currentUserApplicationIds: y
+    isFetching: y,
+    currentUserApplicationIds: O
   } = (0, c.useUserRecentGames)(t.id), L = a.useMemo(() => {
     var e;
     return null !== (e = null == P ? void 0 : P.slice(0, 6)) && void 0 !== e ? e : []
@@ -64,29 +64,29 @@ function C(e) {
       userId: t.id,
       guildId: null == i ? void 0 : i.guildId,
       headingVariant: "text-xs/semibold"
-    }), F && !O && L.length > 0 && (0, l.jsx)(U.default, {
-      title: N.default.Messages.LAST_PLAYED_GAMES,
-      children: (0, l.jsx)(T.UserProfileRecentGames, {
+    }), F && !y && L.length > 0 && (0, l.jsx)(N.default, {
+      title: U.default.Messages.LAST_PLAYED_GAMES,
+      children: (0, l.jsx)(x.UserProfileRecentGames, {
         userId: t.id,
         recentGames: L,
-        currentUserApplicationIds: y
+        currentUserApplicationIds: O
       })
-    }), b.length > 0 && (0, l.jsx)(U.default, {
-      title: N.default.Messages.CONNECTIONS,
-      children: (0, l.jsx)(x.ConnectedUserAccounts, {
+    }), b.length > 0 && (0, l.jsx)(N.default, {
+      title: U.default.Messages.CONNECTIONS,
+      children: (0, l.jsx)(T.ConnectedUserAccounts, {
         connectedAccounts: b,
         className: g.connections,
         userId: t.id,
-        theme: R,
+        theme: p,
         locale: D
       })
-    }), (0, l.jsx)(U.default, {
-      title: N.default.Messages.NOTE,
+    }), (0, l.jsx)(N.default, {
+      title: U.default.Messages.NOTE,
       children: (0, l.jsx)(u.default, {
         userId: t.id,
         className: g.note,
         autoFocus: C,
-        onUpdate: () => p({
+        onUpdate: () => R({
           action: "SET_NOTE"
         })
       })

@@ -28,8 +28,8 @@ var l = a("735250"),
   y = a("819640"),
   O = a("594174"),
   k = a("292665"),
-  A = a("682864"),
-  R = a("471731"),
+  R = a("682864"),
+  A = a("471731"),
   j = a("626135"),
   P = a("74538"),
   B = a("792125"),
@@ -85,7 +85,7 @@ function ei(e) {
         color: "header-secondary",
         variant: "text-sm/bold",
         children: t
-      }) : (0, l.jsx)(A.default, {
+      }) : (0, l.jsx)(R.default, {
         size: 24
       }), (0, l.jsx)("div", {
         className: n()(en.cardsContainer, d ? en.tallerShopCard : en.regularShopCard),
@@ -164,7 +164,7 @@ t.default = function(e) {
     analyticsLocations: i
   } = (0, g.default)([...r, E.default.COLLECTIBLES_SHOP]), p = (0, u.useStateFromStores)([y.default], () => y.default.getLayers().includes(et.Layers.COLLECTIBLES_SHOP)), I = (0, d.useHasAnyModalOpen)(), {
     onClose: N
-  } = (0, Z.useCollectiblesShopRouting)(), A = (0, u.useStateFromStores)([O.default], () => O.default.getCurrentUser()), w = P.default.canUseCollectibles(A), W = (0, S.default)("shop_disable_cache"), G = (0, S.default)("shop_include_unpublished"), {
+  } = (0, Z.useCollectiblesShopRouting)(), R = (0, u.useStateFromStores)([O.default], () => O.default.getCurrentUser()), w = P.default.canUseCollectibles(R), W = (0, S.default)("shop_disable_cache"), G = (0, S.default)("shop_include_unpublished"), {
     categories: z,
     isFetchingCategories: K,
     error: X
@@ -265,7 +265,7 @@ t.default = function(e) {
       children: [t ? null : (0, l.jsxs)(T.default, {
         className: n()((0, B.getThemeClass)(ex), en.__invalid_headerBar),
         toolbar: !0,
-        children: [(0, l.jsx)(R.default, {
+        children: [(0, l.jsx)(A.default, {
           className: en.logo
         }), (0, l.jsx)(T.default.Title, {
           className: en.title,

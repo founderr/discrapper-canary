@@ -1,97 +1,97 @@
 "use strict";
-let i;
-n.r(t), n("757143");
-var r = n("302454"),
-  a = n.n(r),
-  s = n("594199");
-let o = a().defaultRules.lheading,
-  l = a().defaultRules.heading,
-  u = a().defaultRules.link,
-  d = a().defaultRules.image,
-  _ = a().defaultRules.list,
-  c = a().defaultRules.blockQuote,
-  E = a().defaultRules.paragraph,
-  I = /\{(.+?)}/,
-  T = /^\$(\w+?)\$/;
-i = n("235375");
-let f = e => {
+let n;
+a.r(t), a("757143");
+var l = a("302454"),
+  s = a.n(l),
+  r = a("594199");
+let o = s().defaultRules.lheading,
+  i = s().defaultRules.heading,
+  c = s().defaultRules.link,
+  u = s().defaultRules.image,
+  d = s().defaultRules.list,
+  h = s().defaultRules.blockQuote,
+  p = s().defaultRules.paragraph,
+  g = /\{(.+?)}/,
+  f = /^\$(\w+?)\$/;
+n = a("235375");
+let C = e => {
     let {
       transformUpperCase: t = !1
     } = e;
-    return (e, n, i) => {
-      let r = I.exec(e[1]),
-        s = e[1].replace(I, "");
-      return t && (s = s.toUpperCase()), {
-        className: null != r ? r[1] : null,
+    return (e, a, n) => {
+      let l = g.exec(e[1]),
+        r = e[1].replace(g, "");
+      return t && (r = r.toUpperCase()), {
+        className: null != l ? l[1] : null,
         level: "=" === e[2] ? 1 : 2,
-        content: a().parseInline(n, s, i)
+        content: s().parseInline(a, r, n)
       }
     }
   },
-  S = e => ({
-    ...i.baseRules,
+  m = e => ({
+    ...n.baseRules,
     image: {
-      ...d,
-      ..."function" == typeof i.customRules.image ? i.customRules.image(e) : i.customRules.image
+      ...u,
+      ..."function" == typeof n.customRules.image ? n.customRules.image(e) : n.customRules.image
     },
     link: {
-      ...u,
-      ..."function" == typeof i.customRules.link ? i.customRules.link(e) : i.customRules.link
+      ...c,
+      ..."function" == typeof n.customRules.link ? n.customRules.link(e) : n.customRules.link
     },
     list: {
-      ..._,
-      ..."function" == typeof i.customRules.list ? i.customRules.list(e) : i.customRules.list
+      ...d,
+      ..."function" == typeof n.customRules.list ? n.customRules.list(e) : n.customRules.list
     },
     interpolation: {
-      order: s.default.order,
-      match: e => T.exec(e),
-      parse(e, t, n) {
-        let i = n.interpolations[e[1]];
-        return null == i ? {
+      order: r.default.order,
+      match: e => f.exec(e),
+      parse(e, t, a) {
+        let n = a.interpolations[e[1]];
+        return null == n ? {
           type: "text",
           content: e[0]
         } : {
           type: "interpolation",
-          renderer: i
+          renderer: n
         }
       },
       react: e => e.renderer()
     },
     lheading: {
       ...o,
-      parse: f({
+      parse: C({
         transformUpperCase: !0
       }),
-      ..."function" == typeof i.customRules.lheading ? i.customRules.lheading(e) : i.customRules.lheading
+      ..."function" == typeof n.customRules.lheading ? n.customRules.lheading(e) : n.customRules.lheading
     },
     heading: {
-      ...l,
-      ..."function" == typeof i.customRules.heading ? i.customRules.heading(e) : i.customRules.heading
+      ...i,
+      ..."function" == typeof n.customRules.heading ? n.customRules.heading(e) : n.customRules.heading
     },
     blockQuote: {
-      ...c,
-      ..."function" == typeof i.customRules.blockQuote ? i.customRules.blockQuote(e) : i.customRules.blockQuote
+      ...h,
+      ..."function" == typeof n.customRules.blockQuote ? n.customRules.blockQuote(e) : n.customRules.blockQuote
     },
     paragraph: {
-      ...E,
-      ..."function" == typeof i.customRules.paragraph ? i.customRules.paragraph(e) : i.customRules.paragraph
+      ...p,
+      ..."function" == typeof n.customRules.paragraph ? n.customRules.paragraph(e) : n.customRules.paragraph
     }
   }),
-  h = e => ({
+  x = e => ({
     lheading: {
       ...o,
-      parse: f({
+      parse: C({
         transformUpperCase: !1
       }),
-      ..."function" == typeof i.customRules.lheading ? i.customRules.lheading(e) : i.customRules.lheading
+      ..."function" == typeof n.customRules.lheading ? n.customRules.lheading(e) : n.customRules.lheading
     }
   });
 t.default = {
   getDefaultRules: e => ({
-    ...S(e)
+    ...m(e)
   }),
   getSpecialRules: e => ({
-    ...S(e),
-    ...h(e)
+    ...m(e),
+    ...x(e)
   })
 }

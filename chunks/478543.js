@@ -73,12 +73,12 @@ t.default = e => {
     linkMeta: E,
     url: p,
     applyBuildOverride: O,
-    clearBuildOverride: R
-  } = e, [C, g] = r.useState(!1), L = r.useCallback(() => {
-    !C && (g(!0), O().catch(() => g(!1)))
-  }, [O, C]), v = r.useCallback(() => {
-    !C && (g(!0), R().catch(() => g(!1)))
-  }, [R, C]);
+    clearBuildOverride: C
+  } = e, [R, g] = r.useState(!1), L = r.useCallback(() => {
+    !R && (g(!0), O().catch(() => g(!1)))
+  }, [O, R]), v = r.useCallback(() => {
+    !R && (g(!0), C().catch(() => g(!1)))
+  }, [C, R]);
   return (0, i.jsxs)("div", {
     className: A.wrapper,
     children: [(t = E, n = p, a = o, (0, i.jsxs)(u.Text, {
@@ -155,7 +155,7 @@ t.default = e => {
         linkMeta: E,
         applyBuildOverride: L,
         clearBuildOverride: v,
-        submitting: C
+        submitting: R
       })]
     })]
   })

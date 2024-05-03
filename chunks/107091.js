@@ -48,8 +48,8 @@ function _(e) {
     onUse: y,
     onError: O,
     onReviewPurchase: k,
-    confettiCanvas: A = null
-  } = e, R = (0, r.v4)(), j = s.useRef(null), [P] = t.items, {
+    confettiCanvas: R = null
+  } = e, A = (0, r.v4)(), j = s.useRef(null), [P] = t.items, {
     analyticsLocations: B
   } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
     confettiColors: D,
@@ -133,7 +133,7 @@ function _(e) {
         className: I.productName,
         children: t.name
       }), (0, l.jsx)(x.PaymentContextProvider, {
-        loadId: R,
+        loadId: A,
         stepConfigs: [],
         applicationId: T.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
@@ -146,7 +146,7 @@ function _(e) {
       })]
     })), !W && H && !(null != w) && !M && (0, l.jsx)(p.default, {
       confettiTarget: j.current,
-      confettiCanvas: A,
+      confettiCanvas: R,
       sprites: (0, h.getConfettiSprites)(t.categorySkuId),
       colors: null == D ? void 0 : D.map(e => e.toHexString())
     })]

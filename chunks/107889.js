@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return R
   }
 }), s("47120");
 var l = s("735250"),
@@ -20,26 +20,26 @@ var l = s("735250"),
   E = s("502762"),
   v = s("705556"),
   _ = s("301984"),
-  x = s("94918"),
-  T = s("664794"),
+  T = s("94918"),
+  x = s("664794"),
   N = s("980768"),
-  U = s("806926"),
-  A = s("740021"),
+  A = s("806926"),
+  U = s("740021"),
   g = s("228168"),
   C = s("981631"),
   h = s("689938"),
-  R = s("750721");
+  p = s("750721");
 
-function p(e) {
+function R(e) {
   let {
     user: t,
     guildId: s,
-    channelId: p,
+    channelId: R,
     messageId: j,
     roleId: M,
     friendToken: P,
-    initialSection: O,
-    autoFocusNote: y,
+    initialSection: y,
+    autoFocusNote: O,
     transitionState: L,
     sourceAnalyticsLocations: F = [],
     onClose: D
@@ -49,7 +49,7 @@ function p(e) {
     layout: "SIMPLIFIED_MODAL",
     userId: t.id,
     guildId: b,
-    channelId: p,
+    channelId: R,
     messageId: j,
     roleId: M
   }), [k, w] = a.useState(b), V = (0, I.default)(t.id), H = (0, I.default)(t.id, b), Y = null == k ? V : H, {
@@ -75,12 +75,12 @@ function p(e) {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: b,
-      channelId: p,
+      channelId: R,
       messageId: j,
       roleId: M,
       children: (0, l.jsx)(n.ModalRoot, {
         transitionState: L,
-        className: R.root,
+        className: p.root,
         hideShadow: !0,
         "aria-label": h.default.Messages.USER_PROFILE_MODAL,
         children: (0, l.jsxs)(E.default, {
@@ -91,10 +91,10 @@ function p(e) {
           children: [(0, l.jsxs)(N.default, {
             profileType: g.UserProfileTypes.FULL_SIZE,
             isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !K,
-            children: [(0, l.jsx)(x.default, {
+            children: [(0, l.jsx)(T.default, {
               user: t,
               guildId: b,
-              channelId: p,
+              channelId: R,
               onClose: D
             }), (0, l.jsx)(_.default, {
               user: t,
@@ -106,7 +106,7 @@ function p(e) {
               onClose: () => {
                 D(), (0, r.popLayer)()
               }
-            }), (0, l.jsx)(T.default, {
+            }), (0, l.jsx)(x.default, {
               user: t,
               guildId: b,
               viewProfileItem: (null == H ? void 0 : H.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, l.jsx)(n.MenuItem, {
@@ -125,7 +125,7 @@ function p(e) {
                 id: "view-server-profile",
                 label: h.default.Messages.VIEW_SERVER_PROFILE,
                 subtext: h.default.Messages.AKA_DISPLAY_NAME.format({
-                  displayName: S.default.getName(b, p, t)
+                  displayName: S.default.getName(b, R, t)
                 }),
                 action: () => {
                   G({
@@ -135,19 +135,19 @@ function p(e) {
                 }
               })
             })]
-          }), (0, l.jsx)(A.default, {
-            user: t,
-            displayProfile: Y,
-            guildId: b,
-            channelId: p,
-            activity: z,
-            customStatusActivity: W,
-            onClose: D
           }), (0, l.jsx)(U.default, {
             user: t,
             displayProfile: Y,
-            initialSection: O,
-            autoFocusNote: y,
+            guildId: b,
+            channelId: R,
+            activity: z,
+            customStatusActivity: W,
+            onClose: D
+          }), (0, l.jsx)(A.default, {
+            user: t,
+            displayProfile: Y,
+            initialSection: y,
+            autoFocusNote: O,
             transitionState: L,
             onClose: D
           }), (null == Y ? void 0 : Y.profileEffectId) != null && (0, l.jsx)(c.default, {
