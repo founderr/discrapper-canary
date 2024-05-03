@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return M
   },
   TooltipLayer: function() {
-    return R
+    return C
   }
 }), n("411104"), n("47120");
 var i, r, a, s = n("735250"),
@@ -55,7 +55,7 @@ let p = Object.freeze({}),
     custom: null,
     premium: m.tooltipPremium
   }),
-  R = e => {
+  C = e => {
     let {
       targetElementRef: t,
       align: n = "center",
@@ -110,7 +110,7 @@ let p = Object.freeze({}),
       }
     })
   },
-  C = {
+  R = {
     scale: .95,
     opacity: 0
   },
@@ -134,11 +134,11 @@ let p = Object.freeze({}),
     return (0, c.useTransition)(t, {
       keys: e => e ? "tooltip" : "empty",
       config: f.TOOLTIP_SPRING_CONFIG,
-      from: a.enabled ? g : C,
+      from: a.enabled ? g : R,
       enter: L,
-      leave: a.enabled ? g : C,
+      leave: a.enabled ? g : R,
       onRest: n
-    })((e, t) => t ? (0, s.jsx)(R, {
+    })((e, t) => t ? (0, s.jsx)(C, {
       animationStyle: e,
       targetElementRef: i,
       ...r

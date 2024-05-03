@@ -64,7 +64,7 @@ n.r(t), n.d(t, {
     return W
   },
   getItemsFromNewAdditionalPlans: function() {
-    return eC
+    return eR
   },
   getItemsWithUpsertedPlanIdForGroup: function() {
     return eL
@@ -112,7 +112,7 @@ n.r(t), n.d(t, {
     return X
   },
   hasPremiumSubscriptionToDisplay: function() {
-    return eR
+    return eC
   },
   isPremium: function() {
     return L.isPremium
@@ -160,8 +160,8 @@ var c = n("710845"),
   N = n("509545"),
   p = n("78839"),
   O = n("122289"),
-  R = n("424218"),
-  C = n("358085"),
+  C = n("424218"),
+  R = n("358085"),
   g = n("380684"),
   L = n("111361"),
   v = n("74538"),
@@ -518,19 +518,19 @@ function J(e) {
     renewalInvoicePreview: m
   } = e, N = P.SubscriptionPlanInfo[E], p = v.default.formatPriceString(v.default.getDefaultPrice(N.id), N.interval), {
     annualDiscountPercentage: O
-  } = (0, T.getAnnualDiscountsExperimentConfig)("PremiumUtils"), R = eT(c) || null == c.paymentSourceId && !c.isPurchasedExternally && !(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), C = null != I, g = c.status === M.SubscriptionStatusTypes.UNPAID && null !== c.latestInvoice && (null === (n = c.latestInvoice) || void 0 === n ? void 0 : n.status) === M.InvoiceStatusTypes.OPEN, L = R ? M.SubscriptionStatusTypes.CANCELED : g ? M.SubscriptionStatusTypes.UNPAID : c.status, D = null === (a = null !== (r = null == m ? void 0 : m.taxInclusive) && void 0 !== r ? r : null === (i = c.latestInvoice) || void 0 === i ? void 0 : i.taxInclusive) || void 0 === a || a, y = P.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (f ? er(c.additionalPlans) : 0);
+  } = (0, T.getAnnualDiscountsExperimentConfig)("PremiumUtils"), C = eT(c) || null == c.paymentSourceId && !c.isPurchasedExternally && !(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), R = null != I, g = c.status === M.SubscriptionStatusTypes.UNPAID && null !== c.latestInvoice && (null === (n = c.latestInvoice) || void 0 === n ? void 0 : n.status) === M.InvoiceStatusTypes.OPEN, L = C ? M.SubscriptionStatusTypes.CANCELED : g ? M.SubscriptionStatusTypes.UNPAID : c.status, D = null === (a = null !== (r = null == m ? void 0 : m.taxInclusive) && void 0 !== r ? r : null === (i = c.latestInvoice) || void 0 === i ? void 0 : i.taxInclusive) || void 0 === a || a, y = P.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (f ? er(c.additionalPlans) : 0);
   switch (E) {
     case P.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
     case P.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
       switch (L) {
         case M.SubscriptionStatusTypes.CANCELED:
-          return C ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format({
+          return R ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format({
             price: I
           }) : b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_TAX_EXCLUSIVE.format({
             price: I
           }) : b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE;
         case M.SubscriptionStatusTypes.ACCOUNT_HOLD:
-          return C ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format({
+          return R ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format({
             price: I
           }) : b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({
             price: I
@@ -550,7 +550,7 @@ function J(e) {
             resumeDate: c.pauseEndsAt
           });
         default:
-          return C ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({
+          return R ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({
             price: I
           }) : b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_TAX_EXCLUSIVE.format({
             price: I
@@ -560,13 +560,13 @@ function J(e) {
     case P.SubscriptionPlans.PREMIUM_YEAR_TIER_1:
       switch (L) {
         case M.SubscriptionStatusTypes.CANCELED:
-          return C ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format({
+          return R ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format({
             price: I
           }) : b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_TAX_EXCLUSIVE.format({
             price: I
           }) : b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE;
         case M.SubscriptionStatusTypes.ACCOUNT_HOLD:
-          return C ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format({
+          return R ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format({
             price: I
           }) : b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({
             price: I
@@ -586,7 +586,7 @@ function J(e) {
             resumeDate: c.pauseEndsAt
           });
         default:
-          return C ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({
+          return R ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({
             price: I
           }) : b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_TAX_EXCLUSIVE.format({
             price: I
@@ -598,7 +598,7 @@ function J(e) {
     case P.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2:
       switch (L) {
         case M.SubscriptionStatusTypes.CANCELED:
-          return C ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION.format({
+          return R ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION.format({
             price: I,
             num: y
           }) : b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_TAX_EXCLUSIVE.format({
@@ -608,7 +608,7 @@ function J(e) {
             num: y
           });
         case M.SubscriptionStatusTypes.ACCOUNT_HOLD:
-          return C ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD.format({
+          return R ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD.format({
             price: I,
             num: y
           }) : b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({
@@ -649,7 +649,7 @@ function J(e) {
             percent: null !== (u = null == A ? void 0 : A.percentage) && void 0 !== u ? u : P.DISCOUNT_PERCENTAGE_FALLBACK,
             regularPrice: p,
             numMonths: null !== (_ = null == A ? void 0 : A.duration) && void 0 !== _ ? _ : P.DISCOUNT_DURATION_FALLBACK
-          }) : C ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
+          }) : R ? D ? b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
             price: I,
             num: y
           }) : b.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_TAX_EXCLUSIVE.format({
@@ -1142,11 +1142,11 @@ function eO(e, t) {
   throw Error("Invalid external payment gateway ".concat(e))
 }
 
-function eR(e, t) {
+function eC(e, t) {
   return (0, L.isPremium)(e) || ef(null == t ? void 0 : t.status)
 }
 
-function eC(e, t) {
+function eR(e, t) {
   var n, i;
   let r = [],
     a = (null !== (i = null === (n = e.renewalMutations) || void 0 === n ? void 0 : n.items) && void 0 !== i ? i : e.items).find(e => P.PREMIUM_PLANS.has(e.planId));
@@ -1216,7 +1216,7 @@ function ey(e) {
       useSpace: !0
     },
     n = P.PremiumUserLimits[e].fileSize;
-  return (0, R.formatSize)(n / 1024, {
+  return (0, C.formatSize)(n / 1024, {
     useKibibytes: !0,
     useSpace: t.useSpace
   })
@@ -1334,7 +1334,7 @@ t.default = Object.freeze({
     } else return e.status === M.SubscriptionStatusTypes.BILLING_RETRY ? b.default.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
       endDate: d()(e.currentPeriodStart).add(P.PAID_SUBSCRIPTION_MAX_BILLING_RETRY_DAYS, "days"),
       price: i
-    }) : e.status === M.SubscriptionStatusTypes.ACCOUNT_HOLD ? e.isPurchasedViaGoogle && !(0, C.isAndroid)() ? b.default.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
+    }) : e.status === M.SubscriptionStatusTypes.ACCOUNT_HOLD ? e.isPurchasedViaGoogle && !(0, R.isAndroid)() ? b.default.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
       endDate: d()(e.currentPeriodStart).add(P.MAX_ACCOUNT_HOLD_DAYS, "days"),
       paymentGatewayName: U.PaymentGatewayToFriendlyName[e.paymentGateway],
       paymentSourceLink: eO(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")

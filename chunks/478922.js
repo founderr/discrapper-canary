@@ -37,8 +37,8 @@ function _(e, t, n) {
       chunkSize: N,
       renderSection: p,
       renderItem: O,
-      getSectionProps: R,
-      itemGutter: C,
+      getSectionProps: C,
+      itemGutter: R,
       removeEdgeItemGutters: g,
       sectionGutter: L,
       padding: v,
@@ -75,7 +75,7 @@ function _(e, t, n) {
       getItemHeight: A,
       getSectionHeight: m,
       chunkSize: N,
-      itemGutter: C,
+      itemGutter: R,
       removeEdgeItemGutters: g,
       sectionGutter: L,
       padding: v,
@@ -128,7 +128,7 @@ function _(e, t, n) {
               n = Y[e],
               r = W[e],
               a = Y[(0, u.getMasonryListSectionHeaderKey)(t)],
-              s = null == R ? void 0 : R(t);
+              s = null == C ? void 0 : C(t);
             return null != n && null != r ? (0, i.jsxs)("div", {
               style: n,
               ...s,
@@ -139,7 +139,7 @@ function _(e, t, n) {
             }, e) : null
           })
         })
-      }), [W, O, p, Y, K, R, j])
+      }), [W, O, p, Y, K, C, j])
     })
   })
 }

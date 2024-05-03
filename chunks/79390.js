@@ -28,13 +28,13 @@ n.r(t), n.d(t, {
     return g
   },
   useCanPostImagePolls: function() {
-    return C
+    return R
   },
   useCanPostPollsInChannel: function() {
     return O
   },
   useCanShowPollsChatInputCoachmarkInGuild: function() {
-    return R
+    return C
   }
 }), n("757143"), n("47120"), n("724458");
 var i = n("392711"),
@@ -98,7 +98,7 @@ function O(e) {
   return i || r
 }
 
-function R(e) {
+function C(e) {
   let {
     enabled: t
   } = f.CreatePollsGuildCoachmarkExperiment.useExperiment({
@@ -108,7 +108,7 @@ function R(e) {
   return t
 }
 
-function C() {
+function R() {
   return !1
 }
 

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getComparator: function() {
-    return R
+    return C
   }
 }), n("47120"), n("724458");
 var i, r = n("392711"),
@@ -44,15 +44,15 @@ function O(e, t, n) {
   let r = null !== (i = null == t ? void 0 : t.nick) && void 0 !== i ? i : f.default.getName(n);
   return {
     member: t,
-    comparator: R(e, r)
+    comparator: C(e, r)
   }
 }
 
-function R(e, t) {
+function C(e, t) {
   return "".concat(e.selfStream ? "\0" : "\x01").concat(t.toLowerCase(), "\0").concat(e.userId)
 }
 
-function C(e, t, n) {
+function R(e, t, n) {
   var i;
   let r = E.default.getUser(n),
     a = null == r;
@@ -80,7 +80,7 @@ class g {
       n = this._voiceStates.get(e),
       i = E.default.getUser(e);
     if (null != t && null != i) {
-      if (null == n) return this._voiceStates.set(e, C(t, this.guildId, e)), !0;
+      if (null == n) return this._voiceStates.set(e, R(t, this.guildId, e)), !0;
       if (n.voiceState !== t) {
         var r;
         let a = p(this.guildId, i),
@@ -88,7 +88,7 @@ class g {
         return this._voiceStates.set(e, {
           ...n,
           member: a,
-          comparator: R(t, s),
+          comparator: C(t, s),
           nick: s,
           voiceState: t
         }), !0
@@ -120,7 +120,7 @@ class g {
   updateUsers() {
     return null == this._pending && this._voiceStates.values().reduce((e, t) => {
       let n = E.default.getUser(t.user.id);
-      return null != n && t.user !== n ? (this._voiceStates.set(n.id, C(t.voiceState, this.guildId, n.id)), !0) : e
+      return null != n && t.user !== n ? (this._voiceStates.set(n.id, R(t.voiceState, this.guildId, n.id)), !0) : e
     }, !1)
   }
   getUserIds() {

@@ -33,51 +33,51 @@ function O(e) {
       scopes: a,
       redirectUri: o,
       approximateGuildCount: O,
-      isEmbeddedFlow: C,
+      isEmbeddedFlow: R,
       disclosures: g
     } = e,
     L = new Date(f.default.extractTimestamp(r.id)),
     v = (0, h.getSecurityMessage)(a),
     D = (0, T.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, A.ApplicationFlags.EMBEDDED);
-  if (null != o && !D && !C) {
+  if (null != o && !D && !R) {
     let e = new URL(o);
     n = null != e.host && e.host.length > 0 ? e.origin : e.href
   }
   return (0, i.jsxs)("div", {
     className: p.applicationDetails,
-    children: [null != n ? (0, i.jsx)(R, {
+    children: [null != n ? (0, i.jsx)(C, {
       className: p.redirectWarning,
       icon: _.default,
       text: N.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
         origin: n
       })
-    }) : null, (0, i.jsx)(R, {
+    }) : null, (0, i.jsx)(C, {
       icon: c.default,
       text: (0, S.getApplicationDetailsText)(r)
-    }), (0, i.jsx)(R, {
+    }), (0, i.jsx)(C, {
       icon: u.default,
       text: N.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
         date: L
       })
-    }), a.includes(m.OAuth2Scopes.BOT) && null != O ? (0, i.jsx)(R, {
+    }), a.includes(m.OAuth2Scopes.BOT) && null != O ? (0, i.jsx)(C, {
       icon: E.default,
       text: N.default.Messages.OAUTH2_DETAILS_GUILDS.format({
         guildCount: O
       })
-    }) : null, (0, i.jsx)(R, {
+    }) : null, (0, i.jsx)(C, {
       icon: I.default,
       text: v
-    }), null != g && g.includes(l.ApplicationDisclosure.IP_LOCATION) ? (0, i.jsx)(R, {
+    }), null != g && g.includes(l.ApplicationDisclosure.IP_LOCATION) ? (0, i.jsx)(C, {
       icon: d.default,
       text: N.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE
-    }) : null, null != g && g.includes(l.ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS) ? (0, i.jsx)(R, {
+    }) : null, null != g && g.includes(l.ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS) ? (0, i.jsx)(C, {
       icon: s.EmbedIcon,
       text: N.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE
     }) : null]
   })
 }
 
-function R(e) {
+function C(e) {
   let {
     icon: t,
     text: n,

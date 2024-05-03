@@ -33,8 +33,8 @@ let A = 12 * d.default.Millis.HOUR,
   N = 1 * d.default.Millis.SECOND,
   p = 5 * d.default.Millis.SECOND,
   O = 1 * d.default.Millis.SECOND,
-  R = d.default.Millis.DAY,
-  C = 30 * d.default.Millis.MINUTE,
+  C = d.default.Millis.DAY,
+  R = 30 * d.default.Millis.MINUTE,
   g = e => (0, a.encodeStreamKey)({
     streamType: S.StreamTypes.CALL,
     channelId: e,
@@ -225,8 +225,8 @@ class y extends i.default {
       this.questsLastFetchAttemptedAt = Date.now()
     }), h(this, "handlePostConnectionOpen", () => {
       window.clearTimeout(this.questsInitialFetchTimerId), window.clearTimeout(this.questsRecurringFetchTimerId), this.questsRecurringFetchTimerId = window.setInterval(() => {
-        Date.now() - this.questsLastFetchAttemptedAt > R && (this.questsLastFetchAttemptedAt = Date.now(), this.maybeFetchCurrentQuests())
-      }, C), this.questsInitialFetchTimerId = window.setTimeout(() => {
+        Date.now() - this.questsLastFetchAttemptedAt > C && (this.questsLastFetchAttemptedAt = Date.now(), this.maybeFetchCurrentQuests())
+      }, R), this.questsInitialFetchTimerId = window.setTimeout(() => {
         0 === c.default.lastFetchedCurrentQuests && this.maybeFetchCurrentQuests()
       }, Math.floor(Math.random() * p))
     }), h(this, "handleSendHeartbeatSuccess", e => {

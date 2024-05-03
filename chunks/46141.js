@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return g
   },
   BancontactSourceRecord: function() {
-    return R
+    return C
   },
   CashAppSourceRecord: function() {
-    return C
+    return R
   },
   CreditCardSourceRecord: function() {
     return d
@@ -156,7 +156,7 @@ class u extends i.default {
           ...i
         });
       case o.PaymentSourceTypes.BANCONTACT:
-        return new R({
+        return new C({
           ...i
         });
       case o.PaymentSourceTypes.IDEAL:
@@ -165,7 +165,7 @@ class u extends i.default {
           bank: e.bank
         });
       case o.PaymentSourceTypes.CASH_APP:
-        return new C({
+        return new R({
           ...i,
           username: e.username
         });
@@ -202,13 +202,13 @@ class u extends i.default {
       case o.PaymentSourceTypes.GOPAY_WALLET:
         return new O(e);
       case o.PaymentSourceTypes.BANCONTACT:
-        return new R(e);
+        return new C(e);
       case o.PaymentSourceTypes.EPS:
         return new T(e);
       case o.PaymentSourceTypes.IDEAL:
         return new f(e);
       case o.PaymentSourceTypes.CASH_APP:
-        return new C(e);
+        return new R(e);
       default:
         (0, s.assertNever)(t)
     }
@@ -311,12 +311,12 @@ class O extends u {
     if (super(e), e.type !== o.PaymentSourceTypes.GOPAY_WALLET) throw Error("Cannot instantiate GoPayWalletSourceRecord with type: ".concat(e.type, ", must be ").concat(o.PaymentSourceTypes.GOPAY_WALLET))
   }
 }
-class R extends u {
+class C extends u {
   constructor(e) {
     if (super(e), e.type !== o.PaymentSourceTypes.BANCONTACT) throw Error("Cannot instantiate BancontactSourceRecord with type: ".concat(e.type, ", must be ").concat(o.PaymentSourceTypes.BANCONTACT))
   }
 }
-class C extends u {
+class R extends u {
   constructor(e) {
     if (super(e), l(this, "username", void 0), e.type !== o.PaymentSourceTypes.CASH_APP) throw Error("Cannot instantiate Cashapp with type: ".concat(e.type, ", must be ").concat(o.PaymentSourceTypes.CASH_APP));
     this.username = e.username || ""

@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return p
   },
   updateImpersonatedData: function() {
-    return R
+    return C
   },
   updateImpersonatedRoles: function() {
     return O
@@ -107,7 +107,7 @@ function O(e, t) {
   })
 }
 
-function R(e, t) {
+function C(e, t) {
   A(e, {
     type: T.ImpersonateType.NEW_MEMBER,
     ...t

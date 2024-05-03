@@ -16,8 +16,8 @@ var a, s, o, l, u = n("512722"),
   N = n("703656"),
   p = n("786213"),
   O = n("626135"),
-  R = n("449934"),
-  C = n("960048"),
+  C = n("449934"),
+  R = n("960048"),
   g = n("117240"),
   L = n("412788"),
   v = n("981631"),
@@ -130,7 +130,7 @@ function eE(e) {
   es("handleLogout called."), e_(), eu(), !(null == e ? void 0 : e.isSwitchingAccount) && eo(), E.default.PersistedStore.clearAll({
     omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
     type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-  }), L.default.clearAll(), A.clear(), C.default.clearUser(), T.Storage.remove(b), G = null, H = (null == e ? void 0 : e.isSwitchingAccount) ? v.LoginStates.LOGGING_IN : v.LoginStates.NONE, Y = v.RegistrationStates.NONE, K = "", q = "", Z = null, z = !1, J = !1, $ = !1, ee = {}, et = {}
+  }), L.default.clearAll(), A.clear(), R.default.clearUser(), T.Storage.remove(b), G = null, H = (null == e ? void 0 : e.isSwitchingAccount) ? v.LoginStates.LOGGING_IN : v.LoginStates.NONE, Y = v.RegistrationStates.NONE, K = "", q = "", Z = null, z = !1, J = !1, $ = !1, ee = {}, et = {}
 }
 class eI extends(a = E.default.Store) {
   initialize() {
@@ -167,10 +167,10 @@ class eI extends(a = E.default.Store) {
     return k
   }
   getToken() {
-    return (0, R.getToken)()
+    return (0, C.getToken)()
   }
   isAuthenticated() {
-    return (0, R.isAuthenticated)()
+    return (0, C.isAuthenticated)()
   }
   getFingerprint() {
     return V
@@ -257,7 +257,7 @@ l = "AuthenticationStore", (o = "displayName") in(s = eI) ? Object.definePropert
       analyticsToken: a,
       auth: s
     } = e;
-    es("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, k = r, F = a, G = n.id, w = n.email, void 0 !== s && (W = s.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
+    es("handleConnectionOpen called"), R.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, k = r, F = a, G = n.id, w = n.email, void 0 !== s && (W = s.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -267,7 +267,7 @@ l = "AuthenticationStore", (o = "displayName") in(s = eI) ? Object.definePropert
       analyticsToken: r,
       token: a
     } = e;
-    C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, F = r, ed(a), eu(), G = n.id, T.Storage.set(b, n.id)
+    R.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, F = r, ed(a), eu(), G = n.id, T.Storage.set(b, n.id)
   },
   CONNECTION_CLOSED: function(e) {
     let {

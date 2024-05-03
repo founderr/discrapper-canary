@@ -20,8 +20,8 @@ var i, a, n = s("735250"),
   E = s("740504"),
   T = s("933557"),
   _ = s("471445"),
-  x = s("423589"),
-  I = s("74888"),
+  I = s("423589"),
+  x = s("74888"),
   C = s("444899"),
   O = s("11352"),
   p = s("610617"),
@@ -58,7 +58,7 @@ class W extends l.PureComponent {
       overrides: s,
       channelOverridesProp: i
     } = t;
-    return e.channelOverrides !== i ? (s = new Set(s), (0, x.filterOverrides)(e.channelOverrides).forEach(e => s.add(e)), {
+    return e.channelOverrides !== i ? (s = new Set(s), (0, I.filterOverrides)(e.channelOverrides).forEach(e => s.add(e)), {
       overrides: s,
       channelOverridesProp: e.channelOverrides
     }) : null
@@ -85,7 +85,7 @@ class W extends l.PureComponent {
       let {
         overrides: e
       } = this.state;
-      e = new Set(e), (0, x.filterOverrides)(this.props.channelOverrides).forEach(t => e.add(t)), this.setState({
+      e = new Set(e), (0, I.filterOverrides)(this.props.channelOverrides).forEach(t => e.add(t)), this.setState({
         overrides: e
       })
     }
@@ -166,7 +166,7 @@ class W extends l.PureComponent {
           })]
         }), (0, n.jsx)(g.SingleSelect, {
           className: Y.muteTimeSelector,
-          options: (0, x.getMuteTimeOptions)(),
+          options: (0, I.getMuteTimeOptions)(),
           value: a,
           onChange: this.handleSelectMuteTime
         })]
@@ -391,7 +391,7 @@ class W extends l.PureComponent {
   }
   constructor(...e) {
     super(...e), V(this, "_scroller", null), V(this, "_channelRefs", {}), V(this, "state", {
-      overrides: new Set((0, x.filterOverrides)(this.props.channelOverrides)),
+      overrides: new Set((0, I.filterOverrides)(this.props.channelOverrides)),
       channelOverridesProp: this.props.channelOverrides,
       lastSelected: null
     }), V(this, "setScrollerRef", e => {
@@ -478,7 +478,7 @@ function z(e) {
 }
 
 function K(e) {
-  let t = (0, x.useShouldUseNewNotificationSystem)("NotificationSettingsModal") ? I.default : z;
+  let t = (0, I.useShouldUseNewNotificationSystem)("NotificationSettingsModal") ? x.default : z;
   return (0, n.jsx)(t, {
     ...e
   })

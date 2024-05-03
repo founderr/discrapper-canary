@@ -57,12 +57,12 @@ function T(e) {
     theme: null != T ? T : A,
     primaryColor: m,
     secondaryColor: N
-  }), R = (null == n ? void 0 : n.canEditThemes) || S, C = null !== _ && ((null == n ? void 0 : n.banner) != null || void 0 !== _);
+  }), C = (null == n ? void 0 : n.canEditThemes) || S, R = null !== _ && ((null == n ? void 0 : n.banner) != null || void 0 !== _);
   return (0, i.jsx)("div", {
-    className: a()(E(r, R), h ? c.showOutOfBoundaryComponents : void 0, O, s),
+    className: a()(E(r, C), h ? c.showOutOfBoundaryComponents : void 0, O, s),
     style: p,
     children: (0, i.jsx)("div", {
-      className: I(r, R, C),
+      className: I(r, C, R),
       children: (0, i.jsx)(d.UserProfileThemeContextProvider, {
         profileType: r,
         theme: null != T ? T : A,

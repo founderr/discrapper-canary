@@ -118,8 +118,8 @@ class m extends(r = o.PureComponent) {
       fillStyles: N,
       mini: p,
       hideBubble: O,
-      defaultValue: R,
-      orientation: C,
+      defaultValue: C,
+      orientation: R,
       onValueRender: g,
       renderMarker: L,
       getAriaValueText: v,
@@ -136,7 +136,7 @@ class m extends(r = o.PureComponent) {
     let k = "".concat(B, "%"),
       V = null != a && null != r ? a.map((e, t) => {
         let n = r[t],
-          i = null != R && R === n,
+          i = null != C && C === n,
           a = this.renderMark(n);
         return (0, s.jsx)("div", {
           className: u()(f.mark, {
@@ -171,7 +171,7 @@ class m extends(r = o.PureComponent) {
         "aria-valuemax": _,
         "aria-valuenow": t,
         "aria-disabled": c,
-        "aria-orientation": C,
+        "aria-orientation": R,
         "aria-hidden": U,
         "aria-label": b,
         "aria-labelledby": G,

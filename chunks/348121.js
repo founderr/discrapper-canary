@@ -38,10 +38,10 @@ function c(e) {
       fetched: e.fetched,
       premiumLikelihood: e.premiumLikelihood
     }
-  }), p = (0, i.useStateFromStores)([a.default], () => a.default.isLoadedForSKUs([_.PremiumSubscriptionSKUs.TIER_0, _.PremiumSubscriptionSKUs.TIER_2])), O = !f && S && !T && (h ? !N || !p : !N), R = _.PremiumTypes.TIER_2;
+  }), p = (0, i.useStateFromStores)([a.default], () => a.default.isLoadedForSKUs([_.PremiumSubscriptionSKUs.TIER_0, _.PremiumSubscriptionSKUs.TIER_2])), O = !f && S && !T && (h ? !N || !p : !N), C = _.PremiumTypes.TIER_2;
   if (T) {
     let e = I.subscription_trial;
-    (null == e ? void 0 : e.sku_id) === _.PremiumSubscriptionSKUs.TIER_0 ? R = _.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === _.PremiumSubscriptionSKUs.TIER_2 && (R = _.PremiumTypes.TIER_2)
+    (null == e ? void 0 : e.sku_id) === _.PremiumSubscriptionSKUs.TIER_0 ? C = _.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === _.PremiumSubscriptionSKUs.TIER_2 && (C = _.PremiumTypes.TIER_2)
   } else if (!f && !O && S) {
     if (h) {
       let {
@@ -49,11 +49,11 @@ function c(e) {
       } = (0, s.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
         amount: t
       } = (0, s.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
-      R = (0, u.getHigherExpectedValue)(m, e, t)
-    } else A && (R = (0, u.getHighestLikelihood)(m))
+      C = (0, u.getHigherExpectedValue)(m, e, t)
+    } else A && (C = (0, u.getHighestLikelihood)(m))
   }
   return {
     isLoading: O,
-    suggestedPremiumType: R
+    suggestedPremiumType: C
   }
 }

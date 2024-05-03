@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return v
   },
   generateSessionDescription: function() {
-    return C
+    return R
   },
   generateUnifiedSessionDescription: function() {
     return g
@@ -104,7 +104,7 @@ function O(e) {
   })
 }
 
-function R(e) {
+function C(e) {
   let {
     mid: t,
     type: n,
@@ -210,7 +210,7 @@ function R(e) {
   return f
 }
 
-function C(e) {
+function R(e) {
   let {
     type: t,
     baseSDP: n,
@@ -229,7 +229,7 @@ function C(e) {
     let e = "answer" === t ? "passive" : "active";
     _.forEach(t => {
       let [i, _, I, T, f] = t;
-      if ("video" !== I || 0 !== l && 0 !== d) E.push(R({
+      if ("video" !== I || 0 !== l && 0 !== d) E.push(C({
         mid: f,
         type: I,
         setup: e,
@@ -251,7 +251,7 @@ function C(e) {
         let [t, n] = e;
         return p(n, t, "a")
       });
-    if (E.push(R({
+    if (E.push(C({
         mid: "audio",
         type: "audio",
         setup: e,
@@ -270,7 +270,7 @@ function C(e) {
         let [t, n] = e;
         return p(n, t, "v")
       });
-      E.push(R({
+      E.push(C({
         mid: "video",
         type: "video",
         setup: e,
@@ -316,7 +316,7 @@ function g(e) {
       mid: h
     } = e;
     "" !== T ? t = p(T, _, "audio" === f ? "a" : "v") : (t = [], "sendonly" === S ? S = "inactive" : "sendrecv" === S && (S = "recvonly"));
-    E.push(R({
+    E.push(C({
       mid: h,
       type: f,
       setup: I,

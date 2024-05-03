@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   clearPurchaseError: function() {
-    return R
+    return C
   },
   fetchPurchasePreview: function() {
     return A
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return O
   },
   showPurchaseConfirmationStep: function() {
-    return C
+    return R
   },
   updateSKUPaymentIsGift: function() {
     return g
@@ -156,7 +156,7 @@ async function p(e, t, n) {
       skuId: t
     })
   });
-  let R = d.default.inTestModeForApplication(e) || l.default.inDevModeForApplication(e);
+  let C = d.default.inTestModeForApplication(e) || l.default.inDevModeForApplication(e);
   try {
     let e = {
       gift: h,
@@ -164,7 +164,7 @@ async function p(e, t, n) {
       gateway_checkout_context: await (0, _.createGatewayCheckoutContext)(o),
       load_id: p
     };
-    if (R) e.test_mode = !0;
+    if (C) e.test_mode = !0;
     else {
       if (null != o && (e.payment_source_id = o.id, e.payment_source_token = await (0, T.createPaymentSourceToken)(o), f.ADYEN_PAYMENT_SOURCES.has(o.type))) {
         let t = await (0, T.popupBridgeState)(o.type);
@@ -223,13 +223,13 @@ async function O() {
   }
 }
 
-function R() {
+function C() {
   r.default.dispatch({
     type: "SKU_PURCHASE_CLEAR_ERROR"
   })
 }
 
-function C() {
+function R() {
   r.default.wait(() => r.default.dispatch({
     type: "SKU_PURCHASE_SHOW_CONFIRMATION_STEP"
   }))

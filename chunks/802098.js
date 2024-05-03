@@ -20,7 +20,7 @@ let I = {},
 function O() {
   m = _.LastReceivedChangelogId.getSetting()
 }
-class R extends(i = o.default.Store) {
+class C extends(i = o.default.Store) {
   initialize() {
     this.waitFor(d.default, c.default), this.syncWith([d.default], () => !0), this.syncWith([c.default], O);
     let e = l.Storage.get(A);
@@ -68,12 +68,12 @@ class R extends(i = o.default.Store) {
     return p.size > 0
   }
 }
-s = "ChangelogStore", (a = "displayName") in(r = R) ? Object.defineProperty(r, a, {
+s = "ChangelogStore", (a = "displayName") in(r = C) ? Object.defineProperty(r, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new R(u.default, {
+}) : r[a] = s, t.default = new C(u.default, {
   CHANGE_LOG_LOCK: function(e) {
     let {
       key: t

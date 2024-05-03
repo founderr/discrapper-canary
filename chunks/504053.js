@@ -21,7 +21,7 @@ function r(e) {
     for (let a = 0; a < n; a++)
       for (let s = a ? 0 : 1; s * n < t * (n - a); s++) r.push(((e[m + (N >> 1)] >> ((1 & N++) << 2) & 15) / 7.5 - 1) * i);
     return r
-  }, O = p(f, S, (u >> 18 & 31) / 31 / 2), R = p(3, 3, (d >> 3 & 63) / 63 * n), C = p(3, 3, (d >> 9 & 63) / 63 * n), g = I ? p(5, 5, A) : [], L = (0, i.thumbHashToApproximateAspectRatio)(e), v = l(L > 1 ? 32 : 32 * L), D = l(L > 1 ? 32 / L : 32), M = new Uint8Array(v * D * 4), y = [], P = [];
+  }, O = p(f, S, (u >> 18 & 31) / 31 / 2), C = p(3, 3, (d >> 3 & 63) / 63 * n), R = p(3, 3, (d >> 9 & 63) / 63 * n), g = I ? p(5, 5, A) : [], L = (0, i.thumbHashToApproximateAspectRatio)(e), v = l(L > 1 ? 32 : 32 * L), D = l(L > 1 ? 32 / L : 32), M = new Uint8Array(v * D * 4), y = [], P = [];
   for (let e = 0, n = 0; e < D; e++)
     for (let i = 0; i < v; i++, n += 4) {
       let l = _,
@@ -35,7 +35,7 @@ function r(e) {
       for (let e = 0, t = 0; e < 3; e++)
         for (let n = e ? 0 : 1, i = 2 * P[e]; n < 3 - e; n++, t++) {
           let e = y[n] * i;
-          u += R[t] * e, d += C[t] * e
+          u += C[t] * e, d += R[t] * e
         }
       if (I)
         for (let e = 0, t = 0; e < 5; e++)

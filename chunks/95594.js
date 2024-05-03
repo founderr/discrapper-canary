@@ -37,8 +37,8 @@ function l(e) {
   } = e, m = (0, a.default)(), N = (0, i.useRef)(o), [p] = (0, i.useState)(() => new r.default), {
     offsetWidth: O
   } = c(), {
-    dirty: R,
-    chunkStart: C,
+    dirty: C,
+    chunkStart: R,
     chunkEnd: g,
     forceUpdateOnChunkChange: L
   } = (0, s.default)({
@@ -46,7 +46,7 @@ function l(e) {
     getScrollerState: c,
     forceUpdate: m
   });
-  return N.current = (0, i.useMemo)(() => R > 0 ? N.current : (p.mergeProps({
+  return N.current = (0, i.useMemo)(() => C > 0 ? N.current : (p.mergeProps({
     sections: t,
     columns: n,
     getItemKey: l,
@@ -60,7 +60,7 @@ function l(e) {
     paddingVertical: S,
     paddingHorizontal: h,
     dir: A
-  }), p.computeVisibleSections(Math.max(0, C * _), g * _), p.getState()), [R, p, t, n, l, u, d, C, g, _, E, I, T, f, S, h, O, A]), {
+  }), p.computeVisibleSections(Math.max(0, R * _), g * _), p.getState()), [C, p, t, n, l, u, d, R, g, _, E, I, T, f, S, h, O, A]), {
     ...N.current,
     masonryComputer: p,
     forceUpdateOnChunkChange: L,

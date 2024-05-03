@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return l.convertSkemaError
   },
   getAPIBaseURL: function() {
-    return R
+    return C
   },
   setAwaitOnline: function() {
     return v
@@ -74,7 +74,7 @@ function E(e, t, n, i, s) {
   let A = () => {
     t.backoff = null != t.backoff ? t.backoff : new a.default, t.retried = (null != t.retried ? t.retried : 0) + 1, t.backoff.fail(() => L(t.url).then(() => E(e, t, n, i, s)))
   };
-  null == C || null === (I = C.prepareRequest) || void 0 === I || I.call(C, h), h.ok(e => null != e.status), h.then(r => {
+  null == R || null === (I = R.prepareRequest) || void 0 === I || I.call(R, h), h.ok(e => null != e.status), h.then(r => {
     var a, u, d;
     if (null != t.retries && t.retries-- > 0 && c.has(r.status)) return A();
     let _ = {
@@ -105,7 +105,7 @@ function E(e, t, n, i, s) {
         }))
       };
     if ((null == t ? void 0 : null === (a = t.interceptResponse) || void 0 === a ? void 0 : a.call(t, r, T, S)) !== !0) {
-      if ((null == C ? void 0 : null === (u = C.interceptResponse) || void 0 === u ? void 0 : u.call(C, r, T, S)) !== !0) {
+      if ((null == R ? void 0 : null === (u = R.interceptResponse) || void 0 === u ? void 0 : u.call(R, r, T, S)) !== !0) {
         if (r.ok) n(_);
         else {
           if (t.oldFormErrors && (null == _ ? void 0 : null === (d = _.body) || void 0 === d ? void 0 : d.code) === o.INVALID_FORM_BODY_ERROR_CODE) {
@@ -203,14 +203,14 @@ if (n.g.isServerRendering) {
   h = e, A = e, m = e, N = e, p = e
 }
 
-function R() {
+function C() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   return "https:" + window.GLOBAL_ENV.API_ENDPOINT + (e ? "/v".concat(window.GLOBAL_ENV.API_VERSION) : "")
 }
-let C = null;
+let R = null;
 
 function g(e) {
-  C = e
+  R = e
 }
 let L = () => Promise.resolve();
 

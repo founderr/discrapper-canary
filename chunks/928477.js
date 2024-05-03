@@ -41,15 +41,15 @@ var i, r, a = n("470079"),
   N = n("630388"),
   p = n("709054"),
   O = n("968437"),
-  R = n("665906"),
-  C = n("456077"),
+  C = n("665906"),
+  R = n("456077"),
   g = n("124368"),
   L = n("981631"),
   v = n("689938");
 
 function D(e) {
-  let t = (0, R.useCanStartPublicThread)(e);
-  return (0, R.useCanStartPrivateThread)(e) ? t ? 2 : 3 : 1
+  let t = (0, C.useCanStartPublicThread)(e);
+  return (0, C.useCanStartPrivateThread)(e) ? t ? 2 : 3 : 1
 }
 
 function M(e, t) {
@@ -65,7 +65,7 @@ function y(e, t) {
   if ("" !== o) return o.length > 40 ? o.substring(0, 40) + "..." : o;
   {
     let t = I.default.unparse(null !== (a = null == s ? void 0 : s.content) && void 0 !== a ? a : "", e.id, !0),
-      n = (0, C.default)(t.split("\n")[0], !0);
+      n = (0, R.default)(t.split("\n")[0], !0);
     n = n.replace(/^[ #-]+/, "");
     let i = [];
     for (;;) {
@@ -106,8 +106,8 @@ function P(e) {
       let e = y(t, n);
       N = "" !== e ? e : v.default.Messages.THREAD
     }
-    let R = (0, O.getAutoArchiveDuration)(t),
-      C = f.default.getChannel(p.default.castMessageIdAsChannelId(n)),
+    let C = (0, O.getAutoArchiveDuration)(t),
+      R = f.default.getChannel(p.default.castMessageIdAsChannelId(n)),
       g = await G(t, () => {
         let e = null != n ? L.Endpoints.CHANNEL_MESSAGE_THREADS(t.id, n) : L.Endpoints.CHANNEL_THREADS(t.id);
         return s.HTTP.post({
@@ -115,12 +115,12 @@ function P(e) {
           body: {
             name: N,
             type: m ? L.ChannelTypes.PRIVATE_THREAD : t.type === L.ChannelTypes.GUILD_ANNOUNCEMENT ? L.ChannelTypes.ANNOUNCEMENT_THREAD : L.ChannelTypes.PUBLIC_THREAD,
-            auto_archive_duration: R,
+            auto_archive_duration: C,
             location: o
           }
         })
       });
-    g !== C && (u.default.clearDraft(t.id, S.DraftType.ThreadSettings), u.default.clearDraft(t.id, S.DraftType.FirstThreadMessage), null == l || l(g), (A || e.length > 0 || null != a && a.length > 0 || null != T && T.length > 0) && function(e, t, n, i, r) {
+    g !== R && (u.default.clearDraft(t.id, S.DraftType.ThreadSettings), u.default.clearDraft(t.id, S.DraftType.FirstThreadMessage), null == l || l(g), (A || e.length > 0 || null != a && a.length > 0 || null != T && T.length > 0) && function(e, t, n, i, r) {
       if (null != r && null != i && i.length > 0) r(e, i, t, n);
       else if (null != n && n.length > 0) d.default.sendStickers(e.id, n, t);
       else d.default.sendMessage(e.id, I.default.parse(e, t))

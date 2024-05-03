@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SmallMutualFriendsAndGuilds: function() {
-    return R
+    return C
   }
 }), n("47120");
 var i, r, a = n("735250"),
@@ -25,7 +25,7 @@ var f = n("342656"),
   p = n("689938"),
   O = n("946150");
 (r = i || (i = {}))[r.NOT_CHECKED = 0] = "NOT_CHECKED", r[r.NOT_OVERFLOWING = 1] = "NOT_OVERFLOWING", r[r.OVERFLOWING_LARGE_ONLY = 2] = "OVERFLOWING_LARGE_ONLY", r[r.OVERFLOWING_ALL = 3] = "OVERFLOWING_ALL";
-let R = s.memo(function(e) {
+let C = s.memo(function(e) {
   let {
     user: t,
     mutualFriends: n,
@@ -39,8 +39,8 @@ let R = s.memo(function(e) {
   } = e, {
     analyticsLocations: A
   } = (0, _.default)(), {
-    guildId: R,
-    channelId: C,
+    guildId: C,
+    channelId: R,
     messageId: g,
     roleId: L
   } = (0, S.useUserProfileAnalyticsContext)(), v = s.useMemo(() => {
@@ -72,14 +72,14 @@ let R = s.memo(function(e) {
     (0, m.openUserProfileModal)({
       userId: t.id,
       sourceAnalyticsLocations: A,
-      guildId: R,
-      channelId: C,
+      guildId: C,
+      channelId: R,
       messageId: g,
       roleId: L,
       section: e,
       analyticsLocation: o
     }), null == r || r()
-  }, [o, A, r, t.id, R, C, g, L]);
+  }, [o, A, r, t.id, C, R, g, L]);
   s.useEffect(() => {
     B()
   }, [B, M]);
@@ -163,17 +163,17 @@ t.default = s.memo(function(e) {
     autoTrackExposure: !1,
     location: E,
     disable: m
-  }), C = (0, A.useMutualGuilds)(i), g = (0, h.useMutualFriends)(i);
-  return !N || m || (null == g || 0 === g.length) && 0 === C.length ? null : (0, a.jsxs)("div", {
+  }), R = (0, A.useMutualGuilds)(i), g = (0, h.useMutualFriends)(i);
+  return !N || m || (null == g || 0 === g.length) && 0 === R.length ? null : (0, a.jsxs)("div", {
     className: l()(O.mainContainer, s),
     children: [(0, a.jsx)(d.Heading, {
       variant: "eyebrow",
       className: O.__invalid_title,
       children: p.default.Messages.USER_PROFILE_MUTUALS_TITLE
-    }), (0, a.jsx)(R, {
+    }), (0, a.jsx)(C, {
       user: i,
       mutualFriends: g,
-      mutualGuilds: C,
+      mutualGuilds: R,
       onClose: r
     })]
   })

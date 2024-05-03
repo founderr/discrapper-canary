@@ -40,13 +40,13 @@ function I(e) {
     forceTooltipOpen: N = !1,
     buttonRef: p,
     grow: O,
-    "aria-label": R
+    "aria-label": C
   } = e;
   return (0, i.jsx)(d.default, {
     children: (0, i.jsx)(s.Tooltip, {
       position: A,
       text: t,
-      "aria-label": R,
+      "aria-label": C,
       shouldShow: m,
       forceOpen: N,
       children: e => {
@@ -89,7 +89,7 @@ function I(e) {
           wrapperClassName: c,
           buttonRef: p,
           grow: O,
-          "aria-label": R,
+          "aria-label": C,
           ...N,
           children: (0, i.jsx)(T, {
             className: a()(E.controlIcon, I, {

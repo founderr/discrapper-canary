@@ -29,8 +29,8 @@ function p(e, t, n) {
   }) : e[t] = n, e
 }
 let O = null !== (r = (0, E.default)()) && void 0 !== r ? r : m.ThemeTypes.DARK,
-  R = null,
-  C = !1;
+  C = null,
+  R = !1;
 
 function g() {
   return function() {
@@ -66,19 +66,19 @@ class M extends(a = s.default.PersistedStore) {
     }
   }
   get darkSidebar() {
-    return (0, u.isThemeLight)(this.theme) && S.default.darkSidebar && !C
+    return (0, u.isThemeLight)(this.theme) && S.default.darkSidebar && !R
   }
   get theme() {
     return g()
   }
   get systemTheme() {
-    return R
+    return C
   }
   get systemPrefersColorScheme() {
     return i
   }
   get isSystemThemeAvailable() {
-    return null !== R
+    return null !== C
   }
 }
 p(M, "displayName", "ThemeStore"), p(M, "persistKey", "ThemeStore"), p(M, "migrations", [e => {
@@ -110,7 +110,7 @@ p(M, "displayName", "ThemeStore"), p(M, "persistKey", "ThemeStore"), p(M, "migra
     } = e;
     O = null != i && null !== (n = null === (t = N.BACKGROUND_GRADIENT_PRESETS_MAP[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : g();
     let r = null != i;
-    return C !== r ? (C = r, !0) : function() {
+    return R !== r ? (R = r, !0) : function() {
       let e = g();
       return !(0, c.areThemesEqualForGradientThemes)(O, e) && (O = e, !0)
     }()
@@ -120,7 +120,7 @@ p(M, "displayName", "ThemeStore"), p(M, "persistKey", "ThemeStore"), p(M, "migra
     let {
       systemTheme: t
     } = e;
-    return R = t, D()
+    return C = t, D()
   },
   ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function(e) {
     return i = e.systemPrefersColorScheme, D()

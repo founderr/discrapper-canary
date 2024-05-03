@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return R
   }
 }), n("773603"), n("411104"), n("47120"), n("600040");
 var i = n("264344"),
@@ -33,8 +33,8 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = new a.Logger("MediaEngineWebRTC");
-class C extends s.default {
+let C = new a.Logger("MediaEngineWebRTC");
+class R extends s.default {
   destroy() {
     null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), this.voiceActivityInput = null), this.eachConnection(e => e.destroy()), this.emit(d.MediaEngineEvent.Destroy), this.removeAllListeners()
   }
@@ -42,7 +42,7 @@ class C extends s.default {
     !this.interacted && (document.createElement("audio").play(), this.interacted = !0), this.eachConnection(e => e.interact())
   }
   static supported() {
-    return !__OVERLAY__ && (p.BROWSER_SUPPORTS_VOICE && null != window.AudioContext && null != window.RTCPeerConnection ? (n("250678"), !0) : (R.info("WebRTC is not supported on", r().name, r().version), !1))
+    return !__OVERLAY__ && (p.BROWSER_SUPPORTS_VOICE && null != window.AudioContext && null != window.RTCPeerConnection ? (n("250678"), !0) : (C.info("WebRTC is not supported on", r().name, r().version), !1))
   }
   supported() {
     return !0

@@ -22,8 +22,8 @@ var r = n("120356"),
   N = n("952561"),
   p = n("606925"),
   O = n("719216"),
-  R = n("429589"),
-  C = n("276149"),
+  C = n("429589"),
+  R = n("276149"),
   g = n("636245"),
   L = n("697761"),
   v = n("611459"),
@@ -109,7 +109,7 @@ t.default = (0, _.default)(e => {
     look: k,
     applicationStream: s
   }, "watch-button")];
-  else if (q && null != J) t = [(0, i.jsx)(C.default, {
+  else if (q && null != J) t = [(0, i.jsx)(R.default, {
     color: B,
     look: k,
     hangStatusChannel: J
@@ -120,7 +120,7 @@ t.default = (0, _.default)(e => {
         color: B,
         look: k
       }, "watch-button"),
-      a = (0, i.jsx)(R.default, {
+      a = (0, i.jsx)(C.default, {
         activity: n,
         currentEmbeddedApplication: H,
         user: r,

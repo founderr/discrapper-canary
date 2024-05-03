@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return h
   },
   hasModalOpen: function() {
-    return R
+    return C
   },
   hasModalOpenSelector: function() {
     return O
@@ -79,7 +79,7 @@ async function I(e) {
       }, n)
     }, 300),
     l = await e();
-  return clearTimeout(o), s ? R(a, n) && S(a, l, i.onCloseRequest, i.onCloseCallback, n) : T(l, {
+  return clearTimeout(o), s ? C(a, n) && S(a, l, i.onCloseRequest, i.onCloseCallback, n) : T(l, {
     ...i,
     modalKey: a
   }, n), a
@@ -189,6 +189,6 @@ function O(e, t) {
   return null != i && i.some(e => e.key === t)
 }
 
-function R(e, t) {
+function C(e, t) {
   return O(E.getState(), e, t)
 }

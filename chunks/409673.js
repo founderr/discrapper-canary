@@ -28,8 +28,8 @@ var i = n("735250"),
   N = n("208049"),
   p = n("763296"),
   O = n("697426"),
-  R = n("242291"),
-  C = n("706667"),
+  C = n("242291"),
+  R = n("706667"),
   g = n("286654"),
   L = n("675654"),
   v = n("689938"),
@@ -105,7 +105,7 @@ t.default = r.forwardRef(function(e, t) {
     playSoundboardSound: q,
     previewSound: J,
     isPlayingSound: $
-  } = (0, C.default)(P, null !== (n = null == U ? void 0 : U.id) && void 0 !== n ? n : null), {
+  } = (0, R.default)(P, null !== (n = null == U ? void 0 : U.id) && void 0 !== n ? n : null), {
     createMultipleConfettiAt: ee
   } = r.useContext(I.ConfettiCannonContext), et = r.useRef(null);
   let en = (a = P.soundId, m = et.current, r.useMemo(() => {
@@ -127,7 +127,7 @@ t.default = r.forwardRef(function(e, t) {
     el = "sound-".concat(P.soundId),
     eu = (0, o.useListItem)(el),
     ed = null != z || null != Z,
-    e_ = !(0, R.canUseSoundboardSound)(X, P, U),
+    e_ = !(0, C.canUseSoundboardSound)(X, P, U),
     ec = w || k && !e_;
 
   function eE(e) {

@@ -50,11 +50,11 @@ function T(e) {
       });
       return
     }
-    let R = p ? E.MAX_MESSAGE_LENGTH_PREMIUM : E.MAX_MESSAGE_LENGTH;
-    if (f.length > R) {
+    let C = p ? E.MAX_MESSAGE_LENGTH_PREMIUM : E.MAX_MESSAGE_LENGTH;
+    if (f.length > C) {
       if (p || null == A) {
         ;
-        n = f.length, u = R, (0, r.openModal)(e => (0, i.jsx)(s.default, {
+        n = f.length, u = C, (0, r.openModal)(e => (0, i.jsx)(s.default, {
           title: I.default.Messages.MESSAGE_TOO_LONG_HEADER,
           body: I.default.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
             currentLength: n,

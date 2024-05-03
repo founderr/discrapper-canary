@@ -47,12 +47,12 @@ function E(e) {
       animate: a,
       hideTooltip: E
     }) : null,
-    R = () => A ? (0, i.jsx)(o.Text, {
+    C = () => A ? (0, i.jsx)(o.Text, {
       variant: "text-sm/medium",
       className: c.statusText,
       children: h
     }) : null,
-    C = () => {
+    R = () => {
       let e = s()({
         [c.content]: S && !A || I < 2,
         [c.contentOverflow]: I >= 2
@@ -60,7 +60,7 @@ function E(e) {
       return (0, i.jsxs)("div", {
         className: e,
         ref: p,
-        children: [O(), R()]
+        children: [O(), C()]
       })
     },
     g = s()(c.positionStyle, {
@@ -87,7 +87,7 @@ function E(e) {
       className: L,
       children: (0, i.jsx)("span", {
         className: v,
-        children: C()
+        children: R()
       })
     })
   });
@@ -103,7 +103,7 @@ function E(e) {
         className: L,
         children: (0, i.jsx)("span", {
           className: v,
-          children: C()
+          children: R()
         })
       })
     })

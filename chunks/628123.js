@@ -21,9 +21,9 @@ var i = n("735250"),
   N = n("998502"),
   p = n("981631"),
   O = n("689938"),
-  R = n("898816");
+  C = n("898816");
 
-function C(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -49,7 +49,7 @@ function g() {
     size: _.ButtonSizes.LARGE,
     onClick: n,
     submitting: e,
-    className: R.clearOverrideButton,
+    className: C.clearOverrideButton,
     children: O.default.Messages.CLEAR_BUILD_OVERRIDE
   })
 }
@@ -111,7 +111,7 @@ class v extends r.PureComponent {
           })]
         }),
         n = (0, i.jsxs)("div", {
-          className: R.buttons,
+          className: C.buttons,
           children: [(0, i.jsx)(_.Button, {
             size: _.ButtonSizes.LARGE,
             onClick: this._handleSubmitReport,
@@ -122,16 +122,16 @@ class v extends r.PureComponent {
         title: O.default.Messages.UNSUPPORTED_BROWSER_TITLE,
         note: null != t ? t() : e,
         action: n,
-        className: R.errorPage
+        className: C.errorPage
       })
     }
     return e
   }
   constructor(...e) {
-    super(...e), C(this, "state", {
+    super(...e), R(this, "state", {
       error: null,
       info: null
-    }), C(this, "discordErrorsSet", !1)
+    }), R(this, "discordErrorsSet", !1)
   }
 }
 t.default = v

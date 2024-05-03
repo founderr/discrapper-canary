@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("360048"),
   p = n("624138"),
   O = n("51144"),
-  R = n("788307"),
-  C = n("981631"),
+  C = n("788307"),
+  R = n("981631"),
   g = n("674563"),
   L = n("524484"),
   v = n("689938"),
@@ -92,9 +92,9 @@ t.default = function(e) {
       ed(e)
     },
     eN = () => {
-      let e = null != w ? w.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null,
+      let e = null != w ? w.find(e => e.type === R.ActivityTypes.CUSTOM_STATUS) : null,
         t = null != e && null != b && (0, _.default)(e, b, H);
-      return (0, i.jsx)(R.default, {
+      return (0, i.jsx)(C.default, {
         className: D.activity,
         textClassName: D.activityText,
         emojiClassName: D.activityEmoji,
@@ -127,7 +127,7 @@ t.default = function(e) {
         })
       })
     }),
-    eR = () => {
+    eC = () => {
       let e = (null == b ? void 0 : b.isClyde()) ? g.BotTagTypes.AI : g.BotTagTypes.BOT;
       return null != b && b.bot ? (0, i.jsx)(S.default, {
         className: D.botTag,
@@ -135,12 +135,12 @@ t.default = function(e) {
         verified: b.isVerifiedBot()
       }) : null
     },
-    eC = () => (0, i.jsxs)(i.Fragment, {
-      children: [eR(), ep(), eO()]
+    eR = () => (0, i.jsxs)(i.Fragment, {
+      children: [eC(), ep(), eO()]
     }),
     eg = (e, t) => {
       let n = V ? l.AnimatedAvatar : l.Avatar,
-        r = (0, u.default)(w) ? C.StatusTypes.STREAMING : k;
+        r = (0, u.default)(w) ? R.StatusTypes.STREAMING : k;
       return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(n, {
           ...eE,
@@ -173,7 +173,7 @@ t.default = function(e) {
         className: D.clanTag
       })]
     }),
-    ev = k === C.StatusTypes.OFFLINE;
+    ev = k === R.StatusTypes.OFFLINE;
   return null == b ? (0, i.jsx)(h.default, {
     avatarSize: l.AvatarSizes.SIZE_32,
     className: D.placeholder
@@ -220,7 +220,7 @@ t.default = function(e) {
       }),
       avatar: eg(b, ev),
       subText: eN(),
-      decorators: eC(),
+      decorators: eR(),
       "aria-controls": q,
       "aria-expanded": J,
       "aria-setsize": ee,

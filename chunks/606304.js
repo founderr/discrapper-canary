@@ -44,7 +44,7 @@ function O(e) {
   } = e;
   S = t.id, h = n, A = null
 }
-class R extends(i = o.default.Store) {
+class C extends(i = o.default.Store) {
   initialize() {
     this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(c.default)
   }
@@ -88,12 +88,12 @@ class R extends(i = o.default.Store) {
     return null != S && this.isPrioritySpeaker(S, e) && this.isSpeaking(S, e)
   }
 }
-s = "SpeakingStore", (a = "displayName") in(r = R) ? Object.defineProperty(r, a, {
+s = "SpeakingStore", (a = "displayName") in(r = C) ? Object.defineProperty(r, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new R(l.default, {
+}) : r[a] = s, t.default = new C(l.default, {
   CONNECTION_OPEN: O,
   OVERLAY_INITIALIZE: O,
   SPEAKING: function(e) {

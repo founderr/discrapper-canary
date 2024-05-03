@@ -32,8 +32,8 @@ function O(e) {
     currentUser: n,
     displayProfile: r,
     guild: O,
-    isHovering: R,
-    onOpenProfile: C,
+    isHovering: C,
+    onOpenProfile: R,
     channelId: g,
     onClose: L
   } = e, {
@@ -45,7 +45,7 @@ function O(e) {
     className: p.body,
     children: [(0, i.jsx)(E.default, {
       user: t,
-      onOpenProfile: () => C(!1),
+      onOpenProfile: () => R(!1),
       guildId: null == O ? void 0 : O.id,
       usernameIcon: t.hasAvatarForGuild(null == O ? void 0 : O.id) && (0, i.jsx)(f.default, {
         user: t,
@@ -61,10 +61,10 @@ function O(e) {
           userId: t.id
         }), v && !y && (0, i.jsx)(c.default, {
           className: a()(p.noteIcon, {
-            [p.visible]: R
+            [p.visible]: C
           }),
           user: t,
-          onOpenProfile: () => C(!0)
+          onOpenProfile: () => R(!0)
         })]
       })
     }), (0, i.jsx)(N.default, {
@@ -84,7 +84,7 @@ function O(e) {
       user: t,
       currentUser: n,
       guild: O,
-      onOpenProfile: () => C(!1)
+      onOpenProfile: () => R(!1)
     }), M && (0, i.jsx)(A.default, {
       user: t,
       channelId: g,

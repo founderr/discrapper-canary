@@ -21,7 +21,7 @@ t.default = function(e) {
     pulseSpeakingIndicator: S = !1,
     speaking: h = !1,
     ...A
-  } = e, m = null != T ? T : n, N = (0, o.default)(m, a.default.unsafe_rawColors.PRIMARY_800.css), p = (0, l.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, O = (0, _.default)(null != f ? f : E.EMPTY_STRING_SNOWFLAKE_ID), R = null == O ? void 0 : O.getBannerURL({
+  } = e, m = null != T ? T : n, N = (0, o.default)(m, a.default.unsafe_rawColors.PRIMARY_800.css), p = (0, l.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, O = (0, _.default)(null != f ? f : E.EMPTY_STRING_SNOWFLAKE_ID), C = null == O ? void 0 : O.getBannerURL({
     size: 1024,
     canAnimate: c.GifAutoPlay.getSetting()
   });
@@ -30,7 +30,7 @@ t.default = function(e) {
         dispatchWait: !0
       })
     }, [p, f]), null == n) return null;
-  let C = (0, i.jsx)(s.Avatar, {
+  let R = (0, i.jsx)(s.Avatar, {
       className: I.avatarWrapper,
       src: n,
       ...A
@@ -39,12 +39,12 @@ t.default = function(e) {
       ...t,
       backgroundColor: N
     };
-  return null != R && h && p && (g.backgroundImage = "url(".concat(R, ")"), g.backgroundSize = "cover"), (0, i.jsx)("div", {
+  return null != C && h && p && (g.backgroundImage = "url(".concat(C, ")"), g.backgroundSize = "cover"), (0, i.jsx)("div", {
     style: g,
     className: I.background,
     children: S ? (0, i.jsx)(u.default, {
       shouldAnimate: h,
-      children: C
-    }) : C
+      children: R
+    }) : R
   })
 }

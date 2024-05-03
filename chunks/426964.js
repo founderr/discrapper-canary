@@ -32,17 +32,17 @@ function p(e) {
   let {
     clan: p,
     isLoading: O,
-    onClose: R,
-    source: C
+    onClose: C,
+    source: R
   } = e, g = (0, I.useClanInfo)(null !== (t = null == p ? void 0 : p.identityGuildId) && void 0 !== t ? t : null), L = null == p ? void 0 : p.tag, v = (0, S.default)("clan_guild_profile"), D = null == p ? void 0 : p.identityGuildId, M = (0, s.useStateFromStores)([d.default], () => d.default.getId()), y = (0, s.useStateFromStores)([_.default], () => null != D ? _.default.getMember(D, M) : null, [D, M]), P = (0, s.useStateFromStores)([c.default], () => c.default.getUser(M), [M]), U = (null == y ? void 0 : y.joinedAt) != null, b = (0, f.isGuildAdoptedUserClanIdentity)(D, null == P ? void 0 : P.clan), G = null != (0, l.default)(D);
   r.useEffect(() => {
-    null != D && (0, E.trackClanProfileViewed)(D, G, C)
-  }, [D, G, C]);
+    null != D && (0, E.trackClanProfileViewed)(D, G, R)
+  }, [D, G, R]);
   let w = r.useCallback(e => {
-      null != D && (e.stopPropagation(), e.preventDefault(), null == R || R(), (0, T.openAdoptClanIdentityModal)(D))
-    }, [D, R]),
+      null != D && (e.stopPropagation(), e.preventDefault(), null == C || C(), (0, T.openAdoptClanIdentityModal)(D))
+    }, [D, C]),
     B = r.useCallback(e => {
-      if (null != g) e.stopPropagation(), e.preventDefault(), null == R || R(), !G && (0, a.openModalLazy)(async () => {
+      if (null != g) e.stopPropagation(), e.preventDefault(), null == C || C(), !G && (0, a.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("80026"), n.e("18482")]).then(n.bind(n, "767593"));
@@ -51,7 +51,7 @@ function p(e) {
           clan: g
         })
       })
-    }, [g, G, R]),
+    }, [g, G, C]),
     k = r.useCallback(() => {
       null != D && (0, u.transitionTo)(h.Routes.GUILD_MEMBER_VERIFICATION(D))
     }, [D]),

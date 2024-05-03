@@ -39,8 +39,8 @@ var c = n("120356"),
   N = n("607070"),
   p = n("100527"),
   O = n("906732"),
-  R = n("535322"),
-  C = n("706454"),
+  C = n("535322"),
+  R = n("706454"),
   g = n("594174"),
   L = n("78839"),
   v = n("332475"),
@@ -220,7 +220,7 @@ function eu(e) {
       variant: "text-md/normal",
       color: "always-white",
       children: n
-    }), i ? (0, _.jsx)(R.default, {
+    }), i ? (0, _.jsx)(C.default, {
       className: ei.newTagItem,
       forceUseColorForSparkles: !0,
       shouldInheritBackgroundColor: !0,
@@ -289,13 +289,13 @@ function e_(e) {
   if (!t && i && !s) {
     let e = x.default.formatPriceString(x.default.getDefaultPrice(n === ee.PremiumTypes.TIER_0 ? ee.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : ee.SubscriptionPlans.PREMIUM_MONTH_TIER_2), ee.SubscriptionIntervalTypes.MONTH);
     if (0 === r) {
-      var R, C, v, D;
+      var C, R, v, D;
       return (0, _.jsx)(A.Heading, {
         variant: "heading-md/normal",
         color: "always-white",
         className: ei.trialHeader,
         children: en.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW.format({
-          planName: (0, x.getTierDisplayName)(null !== (C = ee.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (R = null == O ? void 0 : O.sku_id) && void 0 !== R ? R : ee.PremiumSubscriptionSKUs.NONE]) && void 0 !== C ? C : ee.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+          planName: (0, x.getTierDisplayName)(null !== (R = ee.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (C = null == O ? void 0 : O.sku_id) && void 0 !== C ? C : ee.PremiumSubscriptionSKUs.NONE]) && void 0 !== R ? R : ee.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
           duration: (0, x.formatIntervalDuration)({
             intervalType: null !== (v = null == O ? void 0 : O.interval) && void 0 !== v ? v : ee.SubscriptionIntervalTypes.DAY,
             intervalCount: null !== (D = null == O ? void 0 : O.interval_count) && void 0 !== D ? D : 30,
@@ -476,7 +476,7 @@ function eI(e) {
     featureSet: t = 0,
     isModal: n = !1,
     isGift: i = !1
-  } = e, r = (0, f.useStateFromStores)([C.default], () => C.default.locale), a = (0, f.useStateFromStores)([H.default], () => H.default.affinities), {
+  } = e, r = (0, f.useStateFromStores)([R.default], () => R.default.locale), a = (0, f.useStateFromStores)([H.default], () => H.default.affinities), {
     planSelectionEnabled: s
   } = F.default.useExperiment({
     location: "planSelection"
@@ -557,13 +557,13 @@ function eT(e) {
     N = (0, z.usePremiumTrialOffer)(),
     p = null == N ? void 0 : null === (t = N.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
     O = (null == T ? void 0 : T.trialId) != null ? null == S ? void 0 : S.premiumType : null,
-    R = (0, Y.useIsInPremiumOfferExperience)(),
-    C = (0, K.usePremiumDiscountOffer)(),
+    C = (0, Y.useIsInPremiumOfferExperience)(),
+    R = (0, K.usePremiumDiscountOffer)(),
     D = (0, Y.useHasDiscountApplied)(),
-    M = null != p || null != O ? 0 : null != C || D ? 1 : null,
+    M = null != p || null != O ? 0 : null != R || D ? 1 : null,
     y = 1 === d,
     P = (0, X.useIsEligibleForBogoPromotion)(),
-    b = !l && R,
+    b = !l && C,
     G = (0, X.getBOGOPillCopy)(),
     w = (0, h.isThemeLight)((0, m.default)()),
     B = w ? 5 : 2,
@@ -583,10 +583,10 @@ function eT(e) {
       [ei.tier2Stacked]: y,
       [ei.tier2]: !y
     }),
-    children: [!l && null != C && (0, K.discountOfferHasTier)(C, ee.PremiumSubscriptionSKUs.TIER_2) && void 0 !== C.discount.amount ? (0, _.jsxs)(_.Fragment, {
+    children: [!l && null != R && (0, K.discountOfferHasTier)(R, ee.PremiumSubscriptionSKUs.TIER_2) && void 0 !== R.discount.amount ? (0, _.jsxs)(_.Fragment, {
       children: [(0, _.jsx)(eo, {
         text: D ? en.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED : en.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
-          percent: C.discount.amount
+          percent: R.discount.amount
         }),
         className: ei.topRimPill,
         colorOptions: B
@@ -655,7 +655,7 @@ function eT(e) {
             isGift: l,
             premiumTier: ee.PremiumTypes.TIER_2,
             offerType: M,
-            offerTierMatchesCard: p === ee.PremiumSubscriptionSKUs.TIER_2 || (0, K.discountOfferHasTier)(C, ee.PremiumSubscriptionSKUs.TIER_2),
+            offerTierMatchesCard: p === ee.PremiumSubscriptionSKUs.TIER_2 || (0, K.discountOfferHasTier)(R, ee.PremiumSubscriptionSKUs.TIER_2),
             showYearlyPrice: a,
             isStacked: y,
             isFullScreen: c,
@@ -690,7 +690,7 @@ function eT(e) {
           ctaButton: r,
           isGift: l,
           trialOfferTier: p,
-          discountOffer: C
+          discountOffer: R
         })]
       })]
     }), !y && (0, _.jsx)(Q.default, {
@@ -698,7 +698,7 @@ function eT(e) {
       ctaButton: r,
       isGift: l,
       trialOfferTier: p,
-      discountOffer: C
+      discountOffer: R
     })]
   })
 }

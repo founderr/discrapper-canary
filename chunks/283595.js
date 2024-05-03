@@ -21,13 +21,13 @@ let A = !1,
   N = {},
   p = new Set,
   O = {},
-  R = {},
-  C = !1;
+  C = {},
+  R = !1;
 
 function g() {
   d.Storage.set(S, {
     ...h(),
-    activeLaunchOptionIds: R
+    activeLaunchOptionIds: C
   })
 }
 
@@ -68,7 +68,7 @@ class P extends(i = u.default.Store) {
   initialize() {
     this.waitFor(T.default);
     let e = d.Storage.get(S);
-    null != e && (null == e.activeLaunchOptionIds ? g() : R = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? L() : O = e.activeLibraryApplicationBranchIds)
+    null != e && (null == e.activeLaunchOptionIds ? g() : C = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? L() : O = e.activeLibraryApplicationBranchIds)
   }
   get libraryApplications() {
     return function(e) {
@@ -114,7 +114,7 @@ class P extends(i = u.default.Store) {
     return p.has((0, I.getComboId)(e, t))
   }
   getActiveLaunchOptionId(e, t) {
-    return R[(0, I.getComboId)(e, t)]
+    return C[(0, I.getComboId)(e, t)]
   }
   get fetched() {
     return A
@@ -123,7 +123,7 @@ class P extends(i = u.default.Store) {
     return l()(y()).values().filter(e => (0, I.isUserEntitledToLibraryApplication)(e)).map(e => e.branchId).value()
   }
   get hasRemovedLibraryApplicationThisSession() {
-    return C
+    return R
   }
   whenInitialized(e) {
     this.addConditionalChangeListener(() => {
@@ -158,7 +158,7 @@ s = "LibraryApplicationStore", (a = "displayName") in(r = P) ? Object.defineProp
       branchId: n,
       flags: i
     } = e, r = (0, I.getComboId)(t, n), a = M(t, n);
-    null != a && !a.isHidden() && E.hasFlag(i, f.LibraryApplicationFlags.HIDDEN) && (C = !0), p.add(r)
+    null != a && !a.isHidden() && E.hasFlag(i, f.LibraryApplicationFlags.HIDDEN) && (R = !0), p.add(r)
   },
   LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: D,
   LIBRARY_APPLICATION_UPDATE: D,
@@ -168,7 +168,7 @@ s = "LibraryApplicationStore", (a = "displayName") in(r = P) ? Object.defineProp
       branchId: n,
       launchOptionId: i
     } = e;
-    R[(0, I.getComboId)(t, n)] = i, g()
+    C[(0, I.getComboId)(t, n)] = i, g()
   },
   LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function(e) {
     let {

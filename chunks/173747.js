@@ -17,8 +17,8 @@ var i, r, a, s, o = n("392711"),
   N = n("804739");
 let p = new Set,
   O = {},
-  R = new Set,
-  C = {},
+  C = new Set,
+  R = {},
   g = new Set,
   L = {},
   v = 10 * A.default.Millis.MINUTE,
@@ -65,16 +65,16 @@ class w extends(i = u.default.Store) {
     return null == O[t] ? null : O[t].manifestIds
   }
   hasNoBuild(e, t) {
-    return R.has(t)
+    return C.has(t)
   }
   isFetching(e, t) {
     return p.has(t)
   }
   needsToFetchBuildSize(e) {
-    return !C.hasOwnProperty(e)
+    return !R.hasOwnProperty(e)
   }
   getBuildSize(e) {
-    return C[e]
+    return R[e]
   }
 }
 s = "ApplicationBuildStore", (a = "displayName") in(r = w) ? Object.defineProperty(r, a, {
@@ -117,7 +117,7 @@ s = "ApplicationBuildStore", (a = "displayName") in(r = w) ? Object.defineProper
         return t
       }),
       s = r.id;
-    R.delete(n), O[n] = {
+    C.delete(n), O[n] = {
       id: s,
       applicationId: t,
       branchId: n,
@@ -129,26 +129,26 @@ s = "ApplicationBuildStore", (a = "displayName") in(r = w) ? Object.defineProper
     let {
       branchId: t
     } = e;
-    p.delete(t), R.add(t)
+    p.delete(t), C.add(t)
   },
   APPLICATION_BUILD_SIZE_FETCH_START: function(e) {
     let {
       buildId: t
     } = e;
-    !C.hasOwnProperty(t) && (C[t] = null)
+    !R.hasOwnProperty(t) && (R[t] = null)
   },
   APPLICATION_BUILD_SIZE_FETCH_SUCCESS: function(e) {
     let {
       buildId: t,
       sizeKB: n
     } = e;
-    C[t] = n
+    R[t] = n
   },
   APPLICATION_BUILD_SIZE_FETCH_FAIL: function(e) {
     let {
       buildId: t
     } = e;
-    null == C[t] && delete C[t]
+    null == R[t] && delete R[t]
   },
   APPLICATION_BRANCHES_FETCH_SUCCESS: function(e) {
     let {

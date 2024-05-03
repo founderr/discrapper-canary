@@ -17,9 +17,9 @@ let A = Object.freeze([]),
   N = {},
   p = {},
   O = {},
-  R = {};
+  C = {};
 
-function C(e, t) {
+function R(e, t) {
   let n = m[e];
   return null != n ? n[t] : null
 }
@@ -87,7 +87,7 @@ function y(e) {
       timestamp: Date.now()
     }
   }
-  return delete R[n], D(n), !0
+  return delete C[n], D(n), !0
 }
 
 function P(e) {
@@ -146,7 +146,7 @@ class G extends(i = _.default.Store) {
       a = S.default.getUser(e);
     if (null != a && a.hasFlag(h.UserFlags.BOT_HTTP_INTERACTIONS) && (r = h.StatusTypes.UNKNOWN), null == a ? void 0 : a.isClyde()) return h.StatusTypes.ONLINE;
     if (null == i) return null !== (t = N[e]) && void 0 !== t ? t : r;
-    let s = C(e, i);
+    let s = R(e, i);
     return null !== (n = null == s ? void 0 : s.status) && void 0 !== n ? n : r
   }
   getActivities(e) {
@@ -155,7 +155,7 @@ class G extends(i = _.default.Store) {
       var n;
       return null !== (n = p[e]) && void 0 !== n ? n : A
     }
-    let i = C(e, t);
+    let i = R(e, t);
     return null == i || null == i.activities ? A : i.activities
   }
   getPrimaryActivity(e) {
@@ -180,7 +180,7 @@ class G extends(i = _.default.Store) {
     return this.getActivities(e, n).find(t)
   }
   getActivityMetadata(e) {
-    return R[e]
+    return C[e]
   }
   getUserIds() {
     return T.default.keys(p)
@@ -197,7 +197,7 @@ class G extends(i = _.default.Store) {
       presencesForGuilds: m,
       statuses: N,
       activities: p,
-      activityMetadata: R,
+      activityMetadata: C,
       clientStatuses: O
     }
   }
@@ -216,7 +216,7 @@ s = "PresenceStore", (a = "displayName") in(r = G) ? Object.defineProperty(r, a,
       guilds: t,
       presences: n
     } = e, i = f.default.getId();
-    m = {}, R = {}, N = {
+    m = {}, C = {}, N = {
       [i]: N[i]
     }, p = {
       [i]: p[i]
@@ -263,7 +263,7 @@ s = "PresenceStore", (a = "displayName") in(r = G) ? Object.defineProperty(r, a,
     let {
       presences: t
     } = e;
-    m = t.presencesForGuilds, N = t.statuses, p = t.activities, R = t.activityMetadata
+    m = t.presencesForGuilds, N = t.statuses, p = t.activities, C = t.activityMetadata
   },
   GUILD_CREATE: function(e) {
     let {
@@ -344,7 +344,7 @@ s = "PresenceStore", (a = "displayName") in(r = G) ? Object.defineProperty(r, a,
       userId: t,
       metadata: n
     } = e;
-    return R[t] = n, !1
+    return C[t] = n, !1
   },
   THREAD_MEMBER_LIST_UPDATE: function(e) {
     let {
@@ -379,6 +379,6 @@ s = "PresenceStore", (a = "displayName") in(r = G) ? Object.defineProperty(r, a,
   SELF_PRESENCE_STORE_UPDATE: function(e) {
     let t = f.default.getId();
     if (N[t] === e.status && p[t] === e.activities) return !1;
-    N[t] = e.status, p[t] = e.activities, delete R[t]
+    N[t] = e.status, p[t] = e.activities, delete C[t]
   }
 })

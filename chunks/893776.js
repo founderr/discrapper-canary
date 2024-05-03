@@ -24,7 +24,7 @@ var r, a, s = n("990547"),
 let p = new E.default("AuthenticationActionCreators"),
   O = null;
 
-function R(e) {
+function C(e) {
   let t = {
     type: "LOGOUT",
     ...e
@@ -35,9 +35,9 @@ function R(e) {
   })
 }
 
-function C() {
+function R() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Routes.DEFAULT_LOGGED_OUT;
-  R();
+  C();
   let t = (0, I.getRootNavigationRefIfInExperiment)();
   null != e && (null != t ? (A.default.popAll(), t.navigate("auth")) : (0, T.transitionTo)(e))
 }(a = r || (r = {})).MFA = "MFA", a.SUCCESS = "SUCCESS", t.default = {
@@ -220,7 +220,7 @@ function C() {
     })
   },
   logoutInternal(e) {
-    R(e)
+    C(e)
   },
   logout() {
     var e;
@@ -244,7 +244,7 @@ function C() {
         }
       }
     }).finally(() => {
-      (null == n || n === f.default.getId()) && C(t)
+      (null == n || n === f.default.getId()) && R(t)
     })
   },
   switchAccountToken(e) {
@@ -253,7 +253,7 @@ function C() {
     p.log("Switching accounts", {
       wasLoggedIn: null != n,
       tokenHasChanged: e !== n
-    }), R({
+    }), C({
       isSwitchingAccount: !0
     });
     let i = this.loginToken(e, !0).then(() => {
@@ -269,7 +269,7 @@ function C() {
     return l.HTTP.get({
       url: m.Endpoints.ME,
       oldFormErrors: !0
-    }).catch(() => C(e))
+    }).catch(() => R(e))
   },
   verify(e) {
     null != e ? h.default.post({

@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return g
   },
   hydrateReadySupplementalPayload: function() {
-    return R
+    return C
   },
   preloadReadyPayloadData: function() {
-    return C
+    return R
   }
 }), n("653041"), n("47120"), n("411104");
 var i = n("512722"),
@@ -38,7 +38,7 @@ let m = new E.default("ReadyPayloadUtils"),
   p = null,
   O = {};
 
-function R(e, t) {
+function C(e, t) {
   var n;
   let {
     guilds: i,
@@ -69,7 +69,7 @@ function R(e, t) {
   }
 }
 
-function C() {
+function R() {
   let e = o.default.database(),
     t = (0, c.isCacheEnabled)() ? l.default.getCommittedVersions() : Promise.resolve({}),
     n = (0, c.isCacheEnabled)() ? d.default.getGuildIds() : Promise.resolve(new Set);

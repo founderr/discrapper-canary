@@ -4,16 +4,16 @@ n.r(t);
 var S, h, A, m, N = n("979554"),
   p = n("442837"),
   O = n("570140"),
-  R = n("981631");
-let C = R.FormStates.CLOSED,
+  C = n("981631");
+let R = C.FormStates.CLOSED,
   g = {};
 
 function L() {
-  C = R.FormStates.OPEN, g = {}
+  R = C.FormStates.OPEN, g = {}
 }
 
 function v() {
-  C = R.FormStates.CLOSED, g = {}
+  R = C.FormStates.CLOSED, g = {}
 }
 
 function D() {
@@ -33,7 +33,7 @@ function P() {
 }
 class U extends(m = p.default.Store) {
   getFormState() {
-    return C
+    return R
   }
   getErrors() {
     return g
@@ -42,7 +42,7 @@ class U extends(m = p.default.Store) {
     return void 0 !== i || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== d || void 0 !== _ || void 0 !== a || void 0 !== s || void 0 !== r
   }
   getIsSubmitDisabled() {
-    return void 0 !== l && l.length > R.BIO_MAX_LENGTH
+    return void 0 !== l && l.length > C.BIO_MAX_LENGTH
   }
   getPendingAvatar() {
     return i
@@ -122,19 +122,19 @@ A = "UserSettingsAccountStore", (h = "displayName") in(S = U) ? Object.definePro
     let {
       section: t
     } = e;
-    return t === R.UserSettingsSections.ACCOUNT && L()
+    return t === C.UserSettingsSections.ACCOUNT && L()
   },
   USER_SETTINGS_ACCOUNT_CLOSE: v,
   USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
     D(), P(), v()
   },
   USER_SETTINGS_ACCOUNT_SUBMIT: function() {
-    C = R.FormStates.SUBMITTING, g = {}
+    R = C.FormStates.SUBMITTING, g = {}
   },
   USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: function(e) {
     var t;
-    if (C !== R.FormStates.SUBMITTING) return !1;
-    C = R.FormStates.OPEN, g = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (R !== C.FormStates.SUBMITTING) return !1;
+    R = C.FormStates.OPEN, g = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function(e) {
     let {

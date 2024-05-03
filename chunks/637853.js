@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return A
   },
   isChattableChannel: function() {
-    return R
+    return C
   },
   isChattableChannelId: function() {
     return O
@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return S
   },
   useIsChattableChannel: function() {
-    return C
+    return R
   }
 }), n("789020"), n("47120"), n("724458"), n("653041"), n("536091");
 var i = n("442837"),
@@ -114,17 +114,17 @@ function p(e, t, n) {
 }
 
 function O(e) {
-  return R(s.default.getChannel(e))
-}
-
-function R(e) {
-  return !!(null != e && (0, E.canChannelBeDefault)(e.guild_id, e.id)) && (e.isForumChannel() ? c.canEveryoneRole(I.Permissions.SEND_MESSAGES_IN_THREADS, e) : c.canEveryoneRole(I.Permissions.SEND_MESSAGES, e))
+  return C(s.default.getChannel(e))
 }
 
 function C(e) {
+  return !!(null != e && (0, E.canChannelBeDefault)(e.guild_id, e.id)) && (e.isForumChannel() ? c.canEveryoneRole(I.Permissions.SEND_MESSAGES_IN_THREADS, e) : c.canEveryoneRole(I.Permissions.SEND_MESSAGES, e))
+}
+
+function R(e) {
   return (0, i.useStateFromStores)([s.default], () => {
     let t = s.default.getChannel(e);
-    return (0, _.isNotNullish)(t) && R(t)
+    return (0, _.isNotNullish)(t) && C(t)
   })
 }
 
@@ -172,7 +172,7 @@ function v(e, t) {
     return t
   }), i = s, n.filter(e => {
     var t;
-    return R(null === (t = i[e]) || void 0 === t ? void 0 : t.channel)
+    return C(null === (t = i[e]) || void 0 === t ? void 0 : t.channel)
   })), r]
 }
 
@@ -186,7 +186,7 @@ function M(e, t) {
       i = [],
       r = [],
       a = {};
-    for (let e of n[o.GUILD_SELECTABLE_CHANNELS_KEY])(0, E.canChannelBeDefault)(e.channel.guild_id, e.channel.id) && (t.has(e.channel.id) && !e.channel.isCategory() || !e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id)) && (a[e.channel.id] = e, i.push(e.channel), R(e.channel) && r.push(e.channel.id));
+    for (let e of n[o.GUILD_SELECTABLE_CHANNELS_KEY])(0, E.canChannelBeDefault)(e.channel.guild_id, e.channel.id) && (t.has(e.channel.id) && !e.channel.isCategory() || !e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id)) && (a[e.channel.id] = e, i.push(e.channel), C(e.channel) && r.push(e.channel.id));
     return [r, i]
   }, [e, t], D)
 }

@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("981631"),
   p = n("689938"),
   O = n("43055");
-let R = (0, h.uid)(),
-  C = _.default.convert.fromCodePoint("1f44f"),
+let C = (0, h.uid)(),
+  R = _.default.convert.fromCodePoint("1f44f"),
   g = (0, m.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
   L = (0, m.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
   v = e => {
@@ -32,7 +32,7 @@ let R = (0, h.uid)(),
       onClick: r,
       delay: a,
       index: s
-    } = e, o = (0, d.useListItem)("item-".concat(s)), l = A.default.getURL(C + n), c = (0, u.useSpring)({
+    } = e, o = (0, d.useListItem)("item-".concat(s)), l = A.default.getURL(R + n), c = (0, u.useSpring)({
       opacity: 1,
       from: {
         opacity: t ? 0 : 1
@@ -124,7 +124,7 @@ t.default = e => {
     selectedSurrogate: n,
     className: a,
     hasTabWrapper: s
-  } = e, o = A.default.getURL(C + n), [l, u] = r.useState(!1), d = (0, T.default)(null, () => u(!1)), _ = r.useRef(null);
+  } = e, o = A.default.getURL(R + n), [l, u] = r.useState(!1), d = (0, T.default)(null, () => u(!1)), _ = r.useRef(null);
   return (0, i.jsxs)("div", {
     ref: d,
     className: a,
@@ -137,7 +137,7 @@ t.default = e => {
       "aria-label": p.default.Messages.EMOJI_MODIFIER_MENU_BUTTON,
       "aria-haspopup": !0,
       "aria-expanded": l,
-      "aria-controls": R,
+      "aria-controls": C,
       tabIndex: l ? -1 : 0,
       children: (0, i.jsx)("div", {
         className: O.diversityEmojiItemImage,
@@ -150,7 +150,7 @@ t.default = e => {
         e.keyCode === N.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != _.current && _.current.focus())
       },
       children: (0, i.jsx)(D, {
-        id: R,
+        id: C,
         hasTabWrapper: s,
         selectedSurrogate: n,
         onClick: e => {

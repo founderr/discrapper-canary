@@ -22,8 +22,8 @@ var i = s("735250"),
   E = s("466111"),
   T = s("759231"),
   _ = s("26290"),
-  x = s("74538"),
-  I = s("671105"),
+  I = s("74538"),
+  x = s("671105"),
   C = s("552958"),
   O = s("213931"),
   p = s("940165"),
@@ -42,7 +42,7 @@ function R(e) {
     playSound: b,
     isPlaying: U,
     soundpackPlaying: G
-  } = (0, C.default)(), F = (0, I.useGuildCustomNotificationSound)(t), P = x.default.canUseCustomNotificationSounds(R), D = P ? F : L.Soundpacks.CLASSIC, k = a.useRef(0), y = a.useRef(-1), [H, w] = a.useState(!1), B = (0, L.getCustomNotificationSoundpackOptions)(), Y = a.useCallback(() => {
+  } = (0, C.default)(), F = (0, x.useGuildCustomNotificationSound)(t), P = I.default.canUseCustomNotificationSounds(R), D = P ? F : L.Soundpacks.CLASSIC, k = a.useRef(0), y = a.useRef(-1), [H, w] = a.useState(!1), B = (0, L.getCustomNotificationSoundpackOptions)(), Y = a.useCallback(() => {
     clearTimeout(y.current), k.current += 1, k.current > 10 && (w(!0), h.Storage.set(L.CUSTOM_NOTIFICATION_SOUNDS_ASMR_STORAGE_KEY, !0)), y.current = setTimeout(() => {
       k.current = 0
     }, 1e3)
@@ -61,7 +61,7 @@ function R(e) {
   a.useEffect(() => () => {
     X(v.ContentDismissActionType.AUTO_DISMISS)
   }, [X]);
-  let J = x.default.canUseCustomNotificationSounds(R),
+  let J = I.default.canUseCustomNotificationSounds(R),
     Q = (0, u.useStateFromStores)([f.default], () => f.default.isMuted(t), [t]);
   return null == R ? null : (0, i.jsxs)("div", {
     children: [(0, i.jsxs)("div", {

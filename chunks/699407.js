@@ -59,7 +59,7 @@ let c = 1500,
     function O() {
       if (a = null, !N()) return;
       let e = f.slice();
-      f = [], R(e).then(() => {
+      f = [], C(e).then(() => {
         e.forEach(e => {
           var t;
           null === (t = e.resolve) || void 0 === t || t.call(e)
@@ -73,7 +73,7 @@ let c = 1500,
       })
     }
 
-    function R(e) {
+    function C(e) {
       let t = Date.now(),
         n = e.map(e => ({
           ...e,
@@ -129,13 +129,13 @@ let c = 1500,
         null != _ && (d.properties.client_uuid = I.generate(_)), f.push(d), f.length > 1e4 && (f = f.slice(-1e4)), i ? O() : p()
       }), !1
     };
-    class C extends l.Store {
+    class R extends l.Store {
       initialize() {
         null != m && this.waitFor(...m)
       }
       constructor(...e) {
-        super(...e), _(this, "submitEventsImmediately", R)
+        super(...e), _(this, "submitEventsImmediately", C)
       }
     }
-    return _(C, "displayName", "AnalyticsTrackingStore"), new C(t, n)
+    return _(R, "displayName", "AnalyticsTrackingStore"), new R(t, n)
   }

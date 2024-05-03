@@ -32,7 +32,7 @@ function p(e) {
     className: r
   } = e, p = _.default.getChannel(c.default.getChannelId()), {
     appsInGDMEnabled: O,
-    availableApplications: R
+    availableApplications: C
   } = (0, d.usePrivateChannelIntegrationState)({
     channelId: null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : A.EMPTY_STRING_SNOWFLAKE_ID
   });
@@ -41,7 +41,7 @@ function p(e) {
       installParams: n.installParams,
       integrationTypesConfig: n.integrationTypesConfig
     })) return null;
-  let C = O && null != R.find(e => e.id === (null == n ? void 0 : n.id));
+  let R = O && null != C.find(e => e.id === (null == n ? void 0 : n.id));
   return (0, i.jsx)(s.Button, {
     color: s.Button.Colors.PRIMARY,
     look: s.Button.Looks.FILLED,
@@ -63,7 +63,7 @@ function p(e) {
       }))
     } : void 0,
     onClick: () => {
-      C ? (0, u.openOAuth2Modal)({
+      R ? (0, u.openOAuth2Modal)({
         clientId: n.id,
         scopes: [A.OAuth2Scopes.APPLICATIONS_COMMANDS],
         channelId: p.id,
@@ -86,7 +86,7 @@ function p(e) {
         horizontal: !0
       }), (0, i.jsx)("span", {
         className: N.applicationInstallButtonText,
-        children: C ? m.default.Messages.ADD : m.default.Messages.APPLICATION_ADD_BUTTON
+        children: R ? m.default.Messages.ADD : m.default.Messages.APPLICATION_ADD_BUTTON
       }), null == n.customInstallUrl || S.default.isDiscordUrl(n.customInstallUrl) ? null : (0, i.jsx)(I.default, {
         className: N.launchIcon,
         width: 16,

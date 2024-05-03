@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return O
   },
   filterHasAnswer: function() {
-    return C
+    return R
   },
   getAutocompleteMode: function() {
     return S
@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return I
   },
   showDatePicker: function() {
-    return R
+    return C
   },
   tokenizeQuery: function() {
     return p
@@ -220,11 +220,11 @@ function O() {
   return N.clearCache()
 }
 
-function R(e) {
+function C(e) {
   return null != e ? E[e] : null
 }
 
-function C(e, t) {
+function R(e, t) {
   let n = d.IS_SEARCH_FILTER_TOKEN.test(e.type);
   return (null != t || !n) && (null == t || !n || !!d.IS_SEARCH_ANSWER_TOKEN.test(t.type)) && !0
 }

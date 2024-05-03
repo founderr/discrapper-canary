@@ -58,7 +58,7 @@ n.r(t), n.d(t, {
     return B
   },
   MAX_GAMES_TO_DISPLAY: function() {
-    return C
+    return R
   },
   MAX_INTEREST_LENGTH: function() {
     return O
@@ -76,7 +76,7 @@ n.r(t), n.d(t, {
     return g
   },
   MAX_WILDCARD_LENGTH: function() {
-    return R
+    return C
   },
   PLAYSTYLE_GROUPS: function() {
     return v
@@ -125,8 +125,8 @@ let h = 4,
   N = 20,
   p = 30,
   O = 24,
-  R = 12,
-  C = 3,
+  C = 12,
+  R = 3,
   g = 5;
 f()("2024-01-01T00:00:00");
 let L = "";

@@ -28,19 +28,19 @@ async function h(e) {
     inputApplication: m,
     analyticsLocations: N,
     embeddedActivitiesManager: p
-  } = e, O = E.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === h && (null == A || e.launchId === A)), R = m;
-  if (null == R) {
+  } = e, O = E.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === h && (null == A || e.launchId === A)), C = m;
+  if (null == C) {
     let e = await r.default.fetchApplication(h);
-    R = o.default.createFromServer(e)
+    C = o.default.createFromServer(e)
   }
-  if (null == O || null == R) return;
-  let C = _.default.getCurrentUser(),
+  if (null == O || null == C) return;
+  let R = _.default.getCurrentUser(),
     g = l.default.getChannel(n),
     L = (0, f.default)({
-      userId: null == C ? void 0 : C.id,
-      application: R,
+      userId: null == R ? void 0 : R.id,
+      application: C,
       channelId: n,
-      currentUser: C,
+      currentUser: R,
       isActivitiesEnabledForCurrentPlatform: (0, T.getIsActivitiesEnabledForCurrentPlatform)(g),
       ChannelStore: l.default,
       VoiceStateStore: c.default,

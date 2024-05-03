@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("691251"),
   p = n("98528"),
   O = n("551058"),
-  R = n("536442"),
-  C = n("75145"),
+  C = n("536442"),
+  R = n("75145"),
   g = n("197115"),
   L = n("695346"),
   v = n("594174"),
@@ -104,7 +104,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       j.current !== H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(j.current), j.current = window.requestAnimationFrame(() => {
         A.EmojiPickerStore.setInspectedExpressionPosition(t, n, N.InspectedExpressionChangeSource.MOUSE_EVENT), A.EmojiPickerStore.setSearchPlaceholder(i), j.current = H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
       })
-    }, []), ea = (0, _.useStateFromStores)([R.HotspotStore], () => R.HotspotStore.hasHotspot(R.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), es = r.useMemo(() => l().memoize((e, t) => {
+    }, []), ea = (0, _.useStateFromStores)([C.HotspotStore], () => C.HotspotStore.hasHotspot(C.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), es = r.useMemo(() => l().memoize((e, t) => {
       let n = a[e],
         r = E[t.sectionIndex];
       return (0, i.jsx)(x.default, {
@@ -184,7 +184,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       }, [t, E, U, en, et]),
       eu = r.useCallback(e => {
         let n = E[e];
-        return n.sectionId !== F.EmojiCategoryTypes.PREMIUM_UPSELL || t.has(n.sectionId) || U ? en(e) ? (0, i.jsx)(C.default, {
+        return n.sectionId !== F.EmojiCategoryTypes.PREMIUM_UPSELL || t.has(n.sectionId) || U ? en(e) ? (0, i.jsx)(R.default, {
           glowOpacity: P
         }) : et(e) ? (0, i.jsx)("div", {
           className: K.nitroBottomDivider
@@ -224,8 +224,8 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       collapsedSections: E,
       setCollapsedSections: N,
       getEmojiItemProps: O,
-      getEmojiRowProps: R,
-      rowCount: C,
+      getEmojiRowProps: C,
+      rowCount: R,
       isUsingKeyboardNavigation: U,
       channelGuildId: G,
       messageId: w,
@@ -268,7 +268,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       sectionDescriptors: l,
       setCollapsedSections: N,
       getEmojiItemProps: O,
-      getEmojiRowProps: R,
+      getEmojiRowProps: C,
       isScrolling: V,
       isUsingKeyboardNavigation: U,
       allowAnimatedEmoji: Y,
@@ -324,7 +324,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         renderSection: e_,
         renderSectionHeader: ec,
         renderSectionFooter: eE,
-        rowCount: C,
+        rowCount: R,
         rowCountBySection: c,
         rowHeight: en(s),
         sectionHeaderHeight: eT,

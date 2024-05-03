@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   guildEventDetailsParser: function() {
-    return l
+    return i
   }
 });
-var i = n("454585"),
-  r = n("551452"),
-  a = n("532901");
-let s = {
-    ...i.default.guildEventRules.link,
-    react: (0, a.default)({
+var l = a("454585"),
+  n = a("551452"),
+  s = a("532901");
+let r = {
+    ...l.default.guildEventRules.link,
+    react: (0, s.default)({
       enableBuildOverrides: !1,
       mustConfirmExternalLink: !0
     }).react
   },
-  o = {
-    ...i.default.guildEventRules.channelMention,
-    react: (0, r.default)({
+  u = {
+    ...l.default.guildEventRules.channelMention,
+    react: (0, n.default)({
       enableBuildOverrides: !1,
       shouldCloseDefaultModals: !0,
       shouldStopPropagation: !0
     }).react
   },
-  l = i.default.reactParserFor({
-    ...i.default.guildEventRules,
-    link: s,
-    channelMention: o
+  i = l.default.reactParserFor({
+    ...l.default.guildEventRules,
+    link: r,
+    channelMention: u
   })

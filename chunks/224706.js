@@ -22,7 +22,7 @@ var i = n("664751"),
   p = n("701488"),
   O = n("689938");
 
-function R(e) {
+function C(e) {
   let {
     applicationId: t,
     secret: n,
@@ -31,7 +31,7 @@ function R(e) {
     embedded: s = !1,
     analyticsLocations: o = []
   } = e;
-  C(t, null, i, s, o).then(() => f.default.waitConnected(t)).then(() => Promise.race([f.default.waitSubscribed(t, N.RPCEvents.ACTIVITY_JOIN)])).then(() => {
+  R(t, null, i, s, o).then(() => f.default.waitConnected(t)).then(() => Promise.race([f.default.waitSubscribed(t, N.RPCEvents.ACTIVITY_JOIN)])).then(() => {
     a.default.dispatch({
       type: "ACTIVITY_JOIN",
       applicationId: t,
@@ -45,7 +45,7 @@ function R(e) {
   }))
 }
 
-function C(e, t, n) {
+function R(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     u = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
   if (l) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, s.startEmbeddedActivity)(n, e, u), Promise.resolve());
@@ -300,7 +300,7 @@ t.default = {
       game: e
     })
   },
-  launch: C,
+  launch: R,
   async join(e) {
     let {
       userId: t,
@@ -325,7 +325,7 @@ t.default = {
     });
     try {
       let e = await h.default.getJoinSecret(t, n, i, r, s);
-      return R({
+      return C({
         applicationId: i,
         secret: e,
         channelId: r,
@@ -339,5 +339,5 @@ t.default = {
       }), !1
     }
   },
-  joinWithSecret: R
+  joinWithSecret: C
 }

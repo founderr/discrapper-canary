@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var s = n("735250"),
-  l = n("470079"),
-  a = n("120356"),
-  r = n.n(a),
-  u = n("725436"),
-  i = n("749839"),
-  c = n("990291");
+var l = a("735250"),
+  n = a("470079"),
+  s = a("120356"),
+  r = a.n(s),
+  u = a("725436"),
+  i = a("749839"),
+  d = a("990291");
 
-function d(e) {
+function c(e) {
   let {
     description: t,
-    className: n,
-    guildId: a,
-    truncate: d = !0
-  } = e, o = l.useMemo(() => (0, u.guildEventDetailsParser)(t, !0, {
-    guildId: a,
+    className: a,
+    guildId: s,
+    truncate: c = !0
+  } = e, o = n.useMemo(() => (0, u.guildEventDetailsParser)(t, !0, {
+    guildId: s,
     allowLinks: !0,
     allowHeading: !0,
     allowList: !0
-  }), [t, a]);
-  return (0, s.jsx)("div", {
-    className: r()(i.descriptionText, n, c.markup, {
-      [i.truncate]: d
+  }), [t, s]);
+  return (0, l.jsx)("div", {
+    className: r()(i.descriptionText, a, d.markup, {
+      [i.truncate]: c
     }),
     children: o
   })

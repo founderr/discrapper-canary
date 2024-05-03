@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return L
   },
   setGuildOptIn: function() {
-    return R
+    return C
   },
   setIsFavorite: function() {
-    return C
+    return R
   },
   setOptInChannel: function() {
     return A
@@ -153,7 +153,7 @@ function O(e, t) {
   })
 }
 
-function R(e, t, n) {
+function C(e, t, n) {
   if (u.default.isFullServerPreview(e)) {
     (0, l.updateImpersonatedData)(e, {
       optInEnabled: t
@@ -170,7 +170,7 @@ function R(e, t, n) {
   })
 }
 
-function C(e, t, n, i) {
+function R(e, t, n, i) {
   if (null == e || u.default.isFullServerPreview(e)) return;
   let r = E.default.getChannelIdFlags(e, t);
   !(0, T.hasFlag)(r, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) && n && (r = (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, !0)), s.default.updateChannelOverrideSettings(e, t, {

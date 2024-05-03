@@ -28,8 +28,8 @@ var i = n("735250"),
   N = n("748500"),
   p = n("836879"),
   O = n("191741"),
-  R = n("768581"),
-  C = n("55935"),
+  C = n("768581"),
+  R = n("55935"),
   g = n("823379"),
   L = n("113039"),
   v = n("768760"),
@@ -160,7 +160,7 @@ function G(e) {
       var e, n, a, o, u;
       return e = r.message.author, n = l, a = t, o = E, u = I, (0, i.jsx)("img", {
         alt: "",
-        src: (null == n ? void 0 : n.guildMemberAvatar) != null && null != a ? (0, R.getGuildMemberAvatarURLSimple)({
+        src: (null == n ? void 0 : n.guildMemberAvatar) != null && null != a ? (0, C.getGuildMemberAvatarURLSimple)({
           guildId: a,
           userId: e.id,
           avatar: n.guildMemberAvatar
@@ -257,7 +257,7 @@ function G(e) {
       default:
         (0, g.assertNever)(n)
     }
-  }(e), G = r.useMemo(() => e.compact ? (0, T.default)((0, C.dateFormat)(l()(), "LT")) : null, [e.compact]);
+  }(e), G = r.useMemo(() => e.compact ? (0, T.default)((0, R.dateFormat)(l()(), "LT")) : null, [e.compact]);
   return null != n && null != a && (t = M.default.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
     author: null == a ? void 0 : a.nick,
     repliedAuthor: null == n ? void 0 : n.nick

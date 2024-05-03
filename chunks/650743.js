@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return R
   }
 });
 var i = n("735250");
@@ -26,20 +26,20 @@ var r = n("399606"),
   N = n("763296"),
   p = n("981631"),
   O = n("689938"),
-  R = n("819216");
+  C = n("819216");
 
-function C(e) {
+function R(e) {
   let {
     soundboardSound: t,
-    closePicker: C
+    closePicker: R
   } = e, g = (0, _.useExpressionPickerStore)(e => e.searchQuery), L = (0, r.useStateFromStores)([N.default], () => null != t && N.default.isFavoriteSound(t.soundId)), v = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(null == t ? void 0 : t.guildId)), D = (0, r.useStateFromStores)([l.default], () => l.default.useReducedMotion, []), M = (0, r.useStateFromStores)([T.default], () => T.default.isFocused()), y = (0, r.useStateFromStores)([I.default], () => I.default.getKeybindForAction(p.GlobalKeybindActions.SOUNDBOARD_HOLD));
   if (null != t && g.length > 0) return (0, i.jsx)(c.default, {
     graphicPrimary: null != t.emojiId || null != t.emojiName ? (0, i.jsx)(o.default, {
       emojiId: t.emojiId,
       emojiName: t.emojiName,
-      className: R.emoji
+      className: C.emoji
     }) : (0, i.jsx)(S.default, {
-      className: R.emoji
+      className: C.emoji
     }),
     graphicSecondary: null != v ? (0, i.jsx)(d.default, {
       guild: v,
@@ -50,7 +50,7 @@ function C(e) {
     isFavorite: L
   });
   let P = () => {
-      C(), (0, s.openModalLazy)(async () => {
+      R(), (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("49237"), n.e("99387"), n.e("54626")]).then(n.bind(n, "355453"));
@@ -68,16 +68,16 @@ function C(e) {
       }, t)
     }) : null;
   return null == b ? null : (0, i.jsxs)("div", {
-    className: R.keybindHint,
+    className: C.keybindHint,
     children: [(0, i.jsx)(h.default, {
-      className: R.warningIcon
+      className: C.warningIcon
     }), (0, i.jsx)(s.Text, {
       variant: "text-sm/medium",
       color: "text-normal",
-      className: R.keybindHintText,
+      className: C.keybindHintText,
       children: b
     }), (0, i.jsx)(s.Clickable, {
-      className: R.closeButton,
+      className: C.closeButton,
       onClick: () => (0, u.markDismissibleContentAsDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
       children: (0, i.jsx)(f.default, {
         width: 16,

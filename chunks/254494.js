@@ -61,17 +61,17 @@ t.default = function(e) {
         null === (i = n.current) || void 0 === i || i.scrollToSectionTop(e)
       }
     }, [n, u]),
-    R = r.useCallback(e => A(a[e], e, () => O(e), p === e), [p, a, O, A]),
-    C = r.useMemo(() => "function" == typeof S ? e => S(a[e], e) : S, [a, S]);
+    C = r.useCallback(e => A(a[e], e, () => O(e), p === e), [p, a, O, A]),
+    R = r.useMemo(() => "function" == typeof S ? e => S(a[e], e) : S, [a, S]);
   return (0, i.jsxs)("div", {
     className: s()(d.wrapper, E),
     children: [(0, i.jsx)(o.default, {
       listPadding: I,
       onScroll: h,
       ref: t,
-      renderRow: R,
+      renderRow: C,
       rowCount: T,
-      rowHeight: C,
+      rowHeight: R,
       hideScrollbar: !0,
       rowCountBySection: m,
       renderSection: N

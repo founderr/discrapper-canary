@@ -28,13 +28,13 @@ function O() {
   return !1
 }
 
-function R(e) {
+function C(e) {
   let t = !1,
     n = N(e.guildId);
   return "GUILD_ROLE_DELETE" === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t
 }
 
-function C(e) {
+function R(e) {
   let {
     guildId: t,
     userId: n
@@ -188,8 +188,8 @@ let v = new L(l.default, {
     } = e;
     return N(t).removeMember(n.id)
   },
-  GUILD_ROLE_UPDATE: R,
-  GUILD_ROLE_DELETE: R,
+  GUILD_ROLE_UPDATE: C,
+  GUILD_ROLE_DELETE: C,
   GUILD_MEMBER_PROFILE_UPDATE: function(e) {
     let {
       guildId: t,
@@ -197,8 +197,8 @@ let v = new L(l.default, {
     } = e;
     return N(t).updateMembersByMemberIds([n.user.id])
   },
-  GUILD_ROLE_MEMBER_REMOVE: C,
-  GUILD_ROLE_MEMBER_ADD: C,
+  GUILD_ROLE_MEMBER_REMOVE: R,
+  GUILD_ROLE_MEMBER_ADD: R,
   THREAD_MEMBER_LIST_UPDATE: function(e) {
     let {
       guildId: t,

@@ -35,14 +35,14 @@ function S(e, t, n, i, r) {
     userId: A,
     roleIds: p,
     isImpersonating: O,
-    hasBaseAccessPermissions: R
+    hasBaseAccessPermissions: C
   } = t;
   if (e.type !== u) return 2;
   if (e.nsfw && !S) return 1;
-  let C = (0, I.computeCommandContextType)(a, r);
+  let R = (0, I.computeCommandContextType)(a, r);
   if (null != e.contexts) {
-    if (!e.contexts.includes(C)) return 4
-  } else if (e.inputType === c.ApplicationCommandInputType.BOT && (!1 === e.dmPermission && C === l.InteractionContextType.BOT_DM || C === l.InteractionContextType.PRIVATE_CHANNEL)) return 4;
+    if (!e.contexts.includes(R)) return 4
+  } else if (e.inputType === c.ApplicationCommandInputType.BOT && (!1 === e.dmPermission && R === l.InteractionContextType.BOT_DM || R === l.InteractionContextType.PRIVATE_CHANNEL)) return 4;
   if (null != e.predicate && a instanceof d.ChannelRecordBase) {
     let t = _.default.getGuild(a.guild_id);
     if (!e.predicate({
@@ -53,7 +53,7 @@ function S(e, t, n, i, r) {
   if (e.applicationId === T.BuiltInSectionId.BUILT_IN) return 0;
   let g = (0, I.getContextGuildId)(a);
   if (null == g || o.has(h, f.Permissions.ADMINISTRATOR)) return 0;
-  if (!R) return 5;
+  if (!C) return 5;
   if (a instanceof d.ChannelRecordBase) {
     s()(void 0 !== i, "missing applicationAllowedForChannel");
     let t = m(e.permissions, a, g);

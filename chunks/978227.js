@@ -5,13 +5,13 @@ n.r(l), n.d(l, {
   }
 });
 var t = n("470079"),
-  a = n("442837"),
-  s = n("749210"),
+  s = n("442837"),
+  a = n("749210"),
   i = n("594174");
 
 function u(e) {
-  let l = (0, a.useStateFromStores)([i.default], () => i.default.getUser(null == e ? void 0 : e.creator_id), [e]);
+  let l = (0, s.useStateFromStores)([i.default], () => i.default.getUser(null == e ? void 0 : e.creator_id), [e]);
   return t.useEffect(() => {
-    null == l && (null == e ? void 0 : e.creator_id) != null && s.default.requestMembersById(e.guild_id, e.creator_id)
+    null == l && (null == e ? void 0 : e.creator_id) != null && a.default.requestMembersById(e.guild_id, e.creator_id)
   }, [e, l]), l
 }

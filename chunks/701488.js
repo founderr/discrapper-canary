@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ACTIVITY_INVITE_COVER_IMAGE_SIZE: function() {
-    return C
+    return R
   },
   ACTIVITY_SHELF_WEB_MODAL_KEY: function() {
     return $
@@ -125,8 +125,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i, r, a, s, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O = n("911969"),
-  R = n("981631");
-let C = 160,
+  C = n("981631");
+let R = 160,
   g = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
   L = "438122941302046720",
   v = "773336526917861400",
@@ -181,5 +181,5 @@ let en = {
     has_csp_exception: !1,
     displays_advertisements: !1
   },
-  er = [R.ChannelTypes.GUILD_TEXT, R.ChannelTypes.DM, R.ChannelTypes.GROUP_DM],
+  er = [C.ChannelTypes.GUILD_TEXT, C.ChannelTypes.DM, C.ChannelTypes.GROUP_DM],
   ea = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"

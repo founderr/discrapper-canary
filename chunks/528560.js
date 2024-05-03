@@ -1,32 +1,32 @@
 "use strict";
-t.r(l), t.d(l, {
+n.r(l), n.d(l, {
   BellIcon: function() {
-    return s
+    return i
   }
 });
-var c = t("735250");
-t("470079");
-var i = t("692547"),
-  n = t("331595");
-let s = e => {
+var t = n("735250");
+n("470079");
+var s = n("692547"),
+  a = n("331595");
+let i = e => {
   let {
     width: l = 24,
-    height: t = 24,
-    color: s = i.default.colors.INTERACTIVE_NORMAL,
-    colorClass: r = "",
-    ...a
+    height: n = 24,
+    color: i = s.default.colors.INTERACTIVE_NORMAL,
+    colorClass: u = "",
+    ...o
   } = e;
-  return (0, c.jsx)("svg", {
-    ...(0, n.default)(a),
+  return (0, t.jsx)("svg", {
+    ...(0, a.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
     width: l,
-    height: t,
+    height: n,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: (0, c.jsx)("path", {
-      fill: "string" == typeof s ? s : s.css,
+    children: (0, t.jsx)("path", {
+      fill: "string" == typeof i ? i : i.css,
       d: "M9.7 2.89c.18-.07.32-.24.37-.43a2 2 0 0 1 3.86 0c.05.2.19.36.38.43A7 7 0 0 1 19 9.5v2.09c0 .12.05.24.13.33l1.1 1.22a3 3 0 0 1 .77 2.01v.28c0 .67-.34 1.29-.95 1.56-1.31.6-4 1.51-8.05 1.51-4.05 0-6.74-.91-8.05-1.5-.61-.28-.95-.9-.95-1.57v-.28a3 3 0 0 1 .77-2l1.1-1.23a.5.5 0 0 0 .13-.33V9.5a7 7 0 0 1 4.7-6.61ZM9.18 19.84A.16.16 0 0 0 9 20a3 3 0 1 0 6 0c0-.1-.09-.17-.18-.16a24.86 24.86 0 0 1-5.64 0Z",
-      className: r
+      className: u
     })
   })
 }

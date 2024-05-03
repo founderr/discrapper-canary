@@ -21,8 +21,8 @@ var i = n("392711"),
   N = n("246946"),
   p = n("594174"),
   O = n("483360"),
-  R = n("176354"),
-  C = n("51144"),
+  C = n("176354"),
+  R = n("51144"),
   g = n("981631"),
   L = n("185923"),
   v = n("689938");
@@ -224,14 +224,14 @@ let P = d.default.RULES,
         if (null == r) return {
           content: e[0]
         };
-        let a = C.default.getUserTag(r, {
+        let a = R.default.getUserTag(r, {
           identifiable: i && N.default.enabled ? "never" : "always"
         });
         if (!i) return {
           content: "@".concat(a)
         };
         {
-          let e = C.default.getGlobalName(r);
+          let e = R.default.getGlobalName(r);
           return {
             content: null != e ? "@".concat(e) : "@".concat(a)
           }
@@ -437,7 +437,7 @@ t.default = {
         validNonShortcutEmojis: []
       };
     return o.content = (n = o.content, i = s, r = (t, n) => {
-      R.default.isEmojiPremiumLocked({
+      C.default.isEmojiPremiumLocked({
         emoji: t,
         channel: e,
         intention: L.EmojiIntention.CHAT

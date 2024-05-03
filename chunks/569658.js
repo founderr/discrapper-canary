@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return I
   }
 });
 var i = s("735250");
@@ -31,7 +31,7 @@ let _ = e => {
   return (0, c.isGuildSelectableChannelType)(t) || t === m.ChannelTypes.GUILD_CATEGORY
 };
 
-function x(e) {
+function I(e) {
   var t;
   let {
     guildId: s,
@@ -39,18 +39,18 @@ function x(e) {
   } = e;
   let {
     channels: c,
-    categories: x
+    categories: I
   } = (t = s, (0, l.useStateFromStoresObject)([S.default], () => {
     let e = S.default.getCategories(t);
     return {
       channels: (0, o.default)(e._categories, e, _),
       categories: e
     }
-  })), I = n()(c).filter(e => {
+  })), x = n()(c).filter(e => {
     let {
       channel: t
     } = e;
-    return t.type !== m.ChannelTypes.GUILD_CATEGORY || null != x[t.id] && x[t.id].length > 0
+    return t.type !== m.ChannelTypes.GUILD_CATEGORY || null != I[t.id] && I[t.id].length > 0
   }).map(e => {
     let {
       channel: t
@@ -69,7 +69,7 @@ function x(e) {
       children: (0, i.jsx)(r.SearchableSelect, {
         value: m.EMPTY_STRING_SNOWFLAKE_ID,
         onChange: a,
-        options: I,
+        options: x,
         renderOptionLabel: e => {
           let t = h.default.getChannel(e.value);
           if (null == t) return e.label;

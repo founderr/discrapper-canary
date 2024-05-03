@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   canUseSoundboardSound: function() {
-    return C
+    return R
   },
   getAmplitudinalSoundboardVolume: function() {
     return O
@@ -52,13 +52,13 @@ function O() {
   return null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100
 }
 
-function R(e, t) {
+function C(e, t) {
   return (null == t ? void 0 : t.guild_id) == null || _.default.can(p.Permissions.USE_EXTERNAL_SOUNDS, t) || e.guildId === N.DEFAULT_SOUND_GUILD_ID || e.guildId === (null == t ? void 0 : t.guild_id)
 }
 
-function C(e, t, n) {
+function R(e, t, n) {
   let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-  return (I.default.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === N.DEFAULT_SOUND_GUILD_ID) && R(t, n) && (!i || t.available)
+  return (I.default.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === N.DEFAULT_SOUND_GUILD_ID) && C(t, n) && (!i || t.available)
 }
 
 function g(e, t, n) {
@@ -74,7 +74,7 @@ async function L(e) {
     s = S.default.getSound(r, i.soundId);
   if (null != s) {
     var o, l;
-    if (!R(s, n) || !C(t, s, n, !0)) return null;
+    if (!C(s, n) || !R(t, s, n, !0)) return null;
     o = s, l = n.id, (0, f.playSoundLocally)(l, o, h.LocalSoundTrigger.JOINED_VOICE_CHANNEL), (0, u.sendVoiceChannelCustomCallSoundEffect)(l, o, __OVERLAY__)
   }
 }

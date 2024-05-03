@@ -28,8 +28,8 @@ var r = n("952639"),
   N = n("93735"),
   p = n("522664"),
   O = n("651530"),
-  R = n("163268"),
-  C = n("735020"),
+  C = n("163268"),
+  R = n("735020"),
   g = n("981631"),
   L = n("526761");
 let v = 3e3,
@@ -61,19 +61,19 @@ function U(e, t) {
         let {
           setAt: n
         } = M[y(e)];
-        if (t === R.TimeoutCancelSource.UPDATE) {
+        if (t === C.TimeoutCancelSource.UPDATE) {
           var i, r;
           let t = null !== (i = e.attachments) && void 0 !== i ? i : [],
             n = null !== (r = e.embeds) && void 0 !== r ? r : [],
-            a = t.filter(e => (0, R.isMediaObscured)({
-              type: R.ObscuredMediaTypes.Attachment,
+            a = t.filter(e => (0, C.isMediaObscured)({
+              type: C.ObscuredMediaTypes.Attachment,
               media: e
             }, !0)),
-            s = n.filter(e => (0, R.isMediaObscured)({
-              type: R.ObscuredMediaTypes.Embed,
+            s = n.filter(e => (0, C.isMediaObscured)({
+              type: C.ObscuredMediaTypes.Embed,
               media: e
             }, !0));
-          (0, R.trackExplicitMediaScanComplete)({
+          (0, C.trackExplicitMediaScanComplete)({
             messageId: e.id,
             channelId: e.channel_id,
             numOfAttachments: t.length,
@@ -81,7 +81,7 @@ function U(e, t) {
             numOfExplicitAttachments: a.length,
             numOfExplicitEmbeds: s.length
           })
-        }(0, R.trackScanTiming)(n, t)
+        }(0, C.trackScanTiming)(n, t)
       }(e, t), delete M[n], !0
   }
   return !1
@@ -108,13 +108,13 @@ function G(e, t) {
       setAt: Date.now(),
       timeout: setTimeout(() => {
         ! function(e) {
-          if (U(e, R.TimeoutCancelSource.TIMEOUT)) {
+          if (U(e, C.TimeoutCancelSource.TIMEOUT)) {
             let t = S.default.getMessage(e.channel_id, e.id),
               {
                 attachmentIds: n,
                 embedIds: i
               } = (0, N.getUnscannedAttachmentsAndEmbedIdsForTimeout)(t);
-            (0, R.trackScanningTimedOut)({
+            (0, C.trackScanningTimedOut)({
               channelId: e.channel_id,
               messageId: e.id,
               attachmentIds: n,
@@ -157,9 +157,9 @@ function B(e, t) {
     messagesPendingScan: n,
     attributesByChannelId: i
   } = function(e) {
-    let t = e.filter(e => (0, N.hasAttachmentsOrEmbeds)(e) && (0, R.shouldRedactExplicitContent)(e)),
+    let t = e.filter(e => (0, N.hasAttachmentsOrEmbeds)(e) && (0, C.shouldRedactExplicitContent)(e)),
       n = e.map(e => {
-        if (null != e && "referenced_message" in e && null != e.referenced_message && (0, N.hasAttachmentsOrEmbeds)(e.referenced_message) && (0, R.shouldRedactExplicitContent)(e.referenced_message)) return e.referenced_message
+        if (null != e && "referenced_message" in e && null != e.referenced_message && (0, N.hasAttachmentsOrEmbeds)(e.referenced_message) && (0, C.shouldRedactExplicitContent)(e.referenced_message)) return e.referenced_message
       }).filter(function(e) {
         return null != e
       });
@@ -172,7 +172,7 @@ function B(e, t) {
   }(e);
   return m.default.entries(i).forEach(e => {
     let [t, n] = e;
-    (0, R.trackExplicitMediaRedactableMessagedLoaded)({
+    (0, C.trackExplicitMediaRedactableMessagedLoaded)({
       channelId: t,
       numOfAttachments: n.numOfAttachments,
       numOfAttachmentsPendingScan: n.numOfAttachmentsPendingScan,
@@ -189,8 +189,8 @@ function k(e) {
   } = e;
   if (!(0, O.isEligibleForExplicitMediaRedaction)() || null == o.channel_id || null == o.id || (null === (t = o.author) || void 0 === t ? void 0 : t.id) === I.default.getId() || null == o.embeds && null == o.attachments || (null === (n = o.embeds) || void 0 === n ? void 0 : n.length) === 0 && (null === (i = o.attachments) || void 0 === i ? void 0 : i.length) === 0) return !1;
   if (!(0, N.hasUnscannedAttachmentsOrEmbedsForTimeout)(o)) {
-    let e = null !== (s = null !== (a = S.default.getMessage(o.channel_id, o.id)) && void 0 !== a ? a : C.default.getMessage(o.id, o.channel_id)) && void 0 !== s ? s : null === (r = E.default.getMessage(o.channel_id, o.id)) || void 0 === r ? void 0 : r.message;
-    null != e && !(0, N.hasUnscannedAttachmentsOrEmbedsForTimeout)((0, _.updateMessageRecord)(e, o)) && U(e, R.TimeoutCancelSource.UPDATE)
+    let e = null !== (s = null !== (a = S.default.getMessage(o.channel_id, o.id)) && void 0 !== a ? a : R.default.getMessage(o.id, o.channel_id)) && void 0 !== s ? s : null === (r = E.default.getMessage(o.channel_id, o.id)) || void 0 === r ? void 0 : r.message;
+    null != e && !(0, N.hasUnscannedAttachmentsOrEmbedsForTimeout)((0, _.updateMessageRecord)(e, o)) && U(e, C.TimeoutCancelSource.UPDATE)
   }
   let l = h.default.getChannelId(),
     u = T.default.getCurrentSidebarChannelId(l);
@@ -292,11 +292,11 @@ function z(e) {
       messagesPendingScan: t,
       attributesByChannelId: n
     } = function(e) {
-      let t = e.filter(e => (0, N.hasAttachmentsOrEmbeds)(e) && (0, R.shouldRedactExplicitContent)(e)),
+      let t = e.filter(e => (0, N.hasAttachmentsOrEmbeds)(e) && (0, C.shouldRedactExplicitContent)(e)),
         n = e.map(e => {
           if (g.MessageTypesWithLazyLoadedReferences.has(e.type) && null != e.messageReference) {
             let t = E.default.getMessageByReference(e.messageReference);
-            if (t.state === E.ReferencedMessageState.LOADED && null != t.message && (0, N.hasAttachmentsOrEmbeds)(t.message) && (0, R.shouldRedactExplicitContent)(t.message)) return t.message
+            if (t.state === E.ReferencedMessageState.LOADED && null != t.message && (0, N.hasAttachmentsOrEmbeds)(t.message) && (0, C.shouldRedactExplicitContent)(t.message)) return t.message
           }
         }).filter(function(e) {
           return null != e
@@ -310,7 +310,7 @@ function z(e) {
     }(e);
     return m.default.entries(n).forEach(e => {
       let [t, n] = e;
-      (0, R.trackExplicitMediaRedactableMessagedLoaded)({
+      (0, C.trackExplicitMediaRedactableMessagedLoaded)({
         channelId: t,
         numOfAttachments: n.numOfAttachments,
         numOfAttachmentsPendingScan: n.numOfAttachmentsPendingScan,

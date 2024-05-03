@@ -1,92 +1,92 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   GuildEventDetails: function() {
-    return g
+    return x
   },
   GuildEventStatus: function() {
-    return R
+    return g
   },
   default: function() {
-    return p
+    return R
   }
 });
-var s = n("735250");
-n("470079");
-var l = n("120356"),
-  a = n.n(l),
-  r = n("442837"),
-  u = n("481060"),
-  i = n("271383"),
-  c = n("158010"),
-  d = n("51144"),
-  o = n("924301"),
-  E = n("894017"),
-  f = n("79874"),
-  T = n("315416"),
-  v = n("236373"),
-  N = n("854698"),
-  _ = n("391174"),
-  S = n("95291"),
-  h = n("390966"),
-  m = n("689938"),
-  D = n("127790");
+var l = a("735250");
+a("470079");
+var n = a("120356"),
+  s = a.n(n),
+  r = a("442837"),
+  u = a("481060"),
+  i = a("271383"),
+  d = a("158010"),
+  c = a("51144"),
+  o = a("924301"),
+  E = a("894017"),
+  f = a("79874"),
+  T = a("315416"),
+  m = a("236373"),
+  N = a("854698"),
+  v = a("391174"),
+  _ = a("95291"),
+  h = a("390966"),
+  S = a("689938"),
+  D = a("127790");
 
-function R(e) {
+function g(e) {
   let {
     className: t,
-    creator: n,
-    guildId: l,
-    isNew: _,
-    isHub: S = !1,
-    guildEventId: R,
-    eventPreview: g,
-    recurrenceId: p
-  } = e, x = (0, r.useStateFromStores)([o.default], () => o.default.getGuildScheduledEvent(R)), C = (0, T.default)(l, R, p), I = null != x ? x : g, L = (0, r.useStateFromStores)([i.default], () => i.default.getNick(l, null == n ? void 0 : n.id), [l, n]);
-  p = null == I || null != p ? p : (0, N.getNextRecurrenceIdInEvent)(I);
+    creator: a,
+    guildId: n,
+    isNew: v,
+    isHub: _ = !1,
+    guildEventId: g,
+    eventPreview: x,
+    recurrenceId: R
+  } = e, L = (0, r.useStateFromStores)([o.default], () => o.default.getGuildScheduledEvent(g)), C = (0, T.default)(n, g, R), A = null != L ? L : x, I = (0, r.useStateFromStores)([i.default], () => i.default.getNick(n, null == a ? void 0 : a.id), [n, a]);
+  R = null == A || null != R ? R : (0, N.getNextRecurrenceIdInEvent)(A);
   let {
-    startTime: A
-  } = (0, f.default)(R, p, g), G = (0, E.default)(p, R), j = (null == I ? void 0 : I.scheduled_start_time) != null ? (0, N.getRecurrenceStatus)(G, A, new Date(I.scheduled_start_time)) : null;
-  if (null == I) return null;
+    startTime: p
+  } = (0, f.default)(g, R, x), j = (0, E.default)(R, g), O = (null == A ? void 0 : A.scheduled_start_time) != null ? (0, N.getRecurrenceStatus)(j, p, new Date(A.scheduled_start_time)) : null;
+  if (null == A) return null;
   let {
-    entity_type: O,
+    entity_type: G,
     status: M,
     recurrence_rule: U
-  } = I;
-  return (0, s.jsxs)("div", {
-    className: a()(D.statusContainer, t),
-    children: [(0, s.jsx)(h.GuildEventTimeStatus, {
-      startTime: A.toISOString(),
-      status: null != j ? j : M,
-      eventType: O,
-      isNew: _,
-      recurrenceRule: (0, v.recurrenceRuleFromServer)(U),
-      guildEventId: R,
-      recurrenceId: p
-    }), (0, s.jsx)("div", {
+  } = A;
+  return (0, l.jsxs)("div", {
+    className: s()(D.statusContainer, t),
+    children: [(0, l.jsx)(h.GuildEventTimeStatus, {
+      startTime: p.toISOString(),
+      status: null != O ? O : M,
+      eventType: G,
+      isNew: v,
+      recurrenceRule: (0, m.recurrenceRuleFromServer)(U),
+      guildEventId: g,
+      recurrenceId: R
+    }), (0, l.jsx)("div", {
       className: D.spacer
-    }), !S && null != n && (0, s.jsx)(u.Tooltip, {
-      text: m.default.Messages.GUILD_EVENT_CREATED_BY.format({
-        username: null != L ? L : d.default.getName(n)
+    }), !_ && null != a && (0, l.jsx)(u.Tooltip, {
+      text: S.default.Messages.GUILD_EVENT_CREATED_BY.format({
+        username: null != I ? I : c.default.getName(a)
       }),
-      children: e => (0, s.jsx)(u.Avatar, {
+      children: e => (0, l.jsx)(u.Avatar, {
         ...e,
-        src: n.getAvatarURL(l, 20),
+        src: a.getAvatarURL(n, 20),
         size: u.AvatarSizes.SIZE_20,
-        "aria-label": null != L ? L : n.username,
+        "aria-label": null != I ? I : a.username,
         className: D.creator
       })
-    }), (0, s.jsx)(u.Tooltip, {
-      text: m.default.Messages.GUILD_EVENT_INTERESTED_COUNT.format({
+    }), (0, l.jsx)(u.Tooltip, {
+      text: S.default.Messages.GUILD_EVENT_INTERESTED_COUNT.format({
         count: C
       }),
-      children: e => (0, s.jsxs)("div", {
+      children: e => (0, l.jsxs)("div", {
         className: D.rsvpCount,
         ...e,
-        children: [(0, s.jsx)(c.default, {
+        children: [(0, l.jsx)(d.default, {
           width: 12,
           height: 12,
           className: D.rsvpIcon
-        }), (0, s.jsx)(u.Text, {
+        }), (0, l.jsx)(u.Text, {
           color: "header-secondary",
           variant: "text-sm/normal",
           children: C
@@ -96,79 +96,79 @@ function R(e) {
   })
 }
 
-function g(e) {
+function x(e) {
   let {
     headerVariant: t = "heading-lg/medium",
-    descriptionClassName: n,
-    name: l,
+    descriptionClassName: a,
+    name: n,
     description: r,
     truncate: i,
-    guildId: c,
-    imageSource: d
+    guildId: d,
+    imageSource: c
   } = e;
-  return (0, s.jsxs)("div", {
-    className: a()({
-      [D.withThumbnail]: null != d
+  return (0, l.jsxs)("div", {
+    className: s()({
+      [D.withThumbnail]: null != c
     }),
-    children: [(0, s.jsxs)("div", {
-      className: a()({
-        [D.descriptionWithThumbnail]: null != d
+    children: [(0, l.jsxs)("div", {
+      className: s()({
+        [D.descriptionWithThumbnail]: null != c
       }),
-      children: [(0, s.jsx)(u.Heading, {
+      children: [(0, l.jsx)(u.Heading, {
         variant: t,
         selectable: !0,
         className: D.eventName,
-        children: l
-      }), null != r && (0, s.jsx)(_.default, {
+        children: n
+      }), null != r && (0, l.jsx)(v.default, {
         description: r,
-        className: a()(n, D.description),
+        className: s()(a, D.description),
         truncate: i,
-        guildId: c
+        guildId: d
       })]
-    }), null != d && (0, s.jsx)("div", {
+    }), null != c && (0, l.jsx)("div", {
       className: D.thumbnailContainer,
-      children: (0, s.jsx)(S.default, {
-        source: d,
+      children: (0, l.jsx)(_.default, {
+        source: c,
         className: D.thumbnail
       })
     })]
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     headerVariant: t,
-    descriptionClassName: n,
-    creator: l,
-    name: a,
+    descriptionClassName: a,
+    creator: n,
+    name: s,
     description: r,
     imageSource: u,
     isHub: i = !1,
-    truncate: c,
-    guildId: d,
+    truncate: d,
+    guildId: c,
     isNew: o,
     guildEventId: E,
     eventPreview: f,
     recurrenceId: T
   } = e;
-  return (0, s.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: D.container,
-    children: [(0, s.jsx)(R, {
+    children: [(0, l.jsx)(g, {
       className: D.eventInfoStatusContainer,
-      creator: l,
-      guildId: d,
+      creator: n,
+      guildId: c,
       isHub: i,
       isNew: o,
       guildEventId: E,
       eventPreview: f,
       recurrenceId: T
-    }), (0, s.jsx)(g, {
-      name: a,
+    }), (0, l.jsx)(x, {
+      name: s,
       description: r,
       headerVariant: t,
-      descriptionClassName: n,
-      truncate: c,
-      guildId: d,
+      descriptionClassName: a,
+      truncate: d,
+      guildId: c,
       imageSource: u
     })]
   })

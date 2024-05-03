@@ -27,9 +27,9 @@ t.default = function(e) {
     onDismiss: a,
     onCtaClick: O
   } = e, {
-    location: R
+    location: C
   } = (0, u.useAnalyticsContext)(), {
-    analyticsLocations: C
+    analyticsLocations: R
   } = (0, d.default)(), {
     isLoading: g,
     suggestedPremiumType: L
@@ -40,14 +40,14 @@ t.default = function(e) {
   }), v = r.useRef(!1), D = r.useCallback(() => {
     (0, _.default)({
       subscriptionTier: h.default.getSkuIdForPremiumType(L),
-      analyticsLocations: C,
+      analyticsLocations: R,
       analyticsObject: {
-        ...R,
+        ...C,
         object: A.AnalyticsObjects.BUTTON_CTA,
         objectType: A.AnalyticsObjectTypes.TIER_2
       }
     }), null == O || O()
-  }, [C, R, O, L]), M = L === m.PremiumTypes.TIER_0;
+  }, [R, C, O, L]), M = L === m.PremiumTypes.TIER_0;
   return (0, i.jsx)("div", {
     className: s()(p.wrapper, n),
     children: g ? (0, i.jsx)(l.Spinner, {
@@ -56,8 +56,8 @@ t.default = function(e) {
       onChange: e => {
         e && !v.current && (S.default.track(A.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
           type: m.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
-          location: R,
-          location_stack: C,
+          location: C,
+          location_stack: R,
           sku_id: h.default.getSkuIdForPremiumType(L)
         }), v.current = !0)
       },

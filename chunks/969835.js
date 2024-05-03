@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("171368"),
   p = n("958120"),
   O = n("23293"),
-  R = n("228168"),
-  C = n("689938");
+  C = n("228168"),
+  R = n("689938");
 
 function g(e) {
   e.stopPropagation()
@@ -85,9 +85,9 @@ function L(e) {
         children: (0, i.jsxs)(f.default, {
           user: t,
           displayProfile: x,
-          profileType: R.UserProfileTypes.BITE_SIZE,
+          profileType: C.UserProfileTypes.BITE_SIZE,
           children: [(0, i.jsxs)(m.default, {
-            profileType: R.UserProfileTypes.BITE_SIZE,
+            profileType: C.UserProfileTypes.BITE_SIZE,
             isFaded: (null == x ? void 0 : x.profileEffectId) != null && !F,
             children: [(0, i.jsx)(h.default, {
               user: t,
@@ -101,7 +101,7 @@ function L(e) {
               guildId: n,
               viewProfileItem: (0, i.jsx)(s.MenuItem, {
                 id: "view-profile",
-                label: C.default.Messages.VIEW_FULL_PROFILE,
+                label: R.default.Messages.VIEW_FULL_PROFILE,
                 action: () => {
                   G({
                     action: "PRESS_VIEW_PROFILE",

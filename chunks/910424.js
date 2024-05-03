@@ -40,7 +40,7 @@ function m(e) {
       } = e;
       return t !== N.ownerId
     }).length > 0
-  })), R = (0, r.useStateFromStores)([c.default], () => c.default.getChannel(null == N ? void 0 : N.channelId)), [C, g] = (0, d.useCanWatchStream)(R), L = (0, u.useWindowDispatch)(), v = null != p && null != N && p.state !== S.ApplicationStreamStates.ENDED && p.ownerId === N.ownerId, D = e => {
+  })), C = (0, r.useStateFromStores)([c.default], () => c.default.getChannel(null == N ? void 0 : N.channelId)), [R, g] = (0, d.useCanWatchStream)(C), L = (0, u.useWindowDispatch)(), v = null != p && null != N && p.state !== S.ApplicationStreamStates.ENDED && p.ownerId === N.ownerId, D = e => {
     null != N && (o.default.selectVoiceChannel(N.channelId), !v && (0, l.watchStreamAndTransitionToStream)(N, {
       forceMultiple: e
     }), L.dispatch(S.ComponentActions.POPOUT_CLOSE), T.ComponentDispatch.dispatch(S.ComponentActions.MODAL_CLOSE), s.default.popAll())
@@ -54,7 +54,7 @@ function m(e) {
   };
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)(f.default, {
-      disabled: t || v || !C,
+      disabled: t || v || !R,
       onClick: () => D(!1),
       ...y,
       fullWidth: !0,

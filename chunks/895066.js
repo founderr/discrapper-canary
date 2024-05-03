@@ -222,8 +222,8 @@ class d {
             let N = null !== (i = e.transport.ping) && void 0 !== i ? i : 0,
               p = t.packetsReceived,
               O = t.packetsLost,
-              R = t.bytesReceived,
-              C = null !== (a = t.fecPacketsReceived) && void 0 !== a ? a : 0,
+              C = t.bytesReceived,
+              R = null !== (a = t.fecPacketsReceived) && void 0 !== a ? a : 0,
               g = null !== (s = t.fecPacketsDiscarded) && void 0 !== s ? s : 0,
               L = null !== (o = t.jitterBuffer) && void 0 !== o ? o : 0,
               v = {
@@ -256,9 +256,9 @@ class d {
                 s = this.inboundStats[n].mosBuckets;
               e > 0 && i >= 0 && (a = this.calculateMos(N + L, r().clamp(i / (e + i), 0, 1)), s[Math.floor(a)]++), this.inboundStats[n] = {
                 packetsReceived: p,
-                bytesReceived: R,
+                bytesReceived: C,
                 packetsLost: O,
-                fecPacketsReceived: C,
+                fecPacketsReceived: R,
                 fecPacketsDiscarded: g,
                 mos: a,
                 mosSum: this.inboundStats[n].mosSum + a,
@@ -280,9 +280,9 @@ class d {
               }
             } else this.inboundStats[n] = {
               packetsReceived: p,
-              bytesReceived: R,
+              bytesReceived: C,
               packetsLost: O,
-              fecPacketsReceived: C,
+              fecPacketsReceived: R,
               fecPacketsDiscarded: g,
               mos: 0,
               mosSum: 0,

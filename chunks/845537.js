@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return g
   },
   Emoji: function() {
-    return C
+    return R
   },
   RoleMention: function() {
     return D
@@ -53,9 +53,9 @@ var r = n("442837"),
   N = n("377668"),
   p = n("689938"),
   O = n("571199"),
-  R = n("990291");
+  C = n("990291");
 
-function C(e) {
+function R(e) {
   let {
     emoji: t
   } = e;
@@ -217,7 +217,7 @@ function b(e) {
     timestamp: t
   } = e;
   return (0, i.jsx)("span", {
-    className: R.timestamp,
+    className: C.timestamp,
     children: t.formatted
   })
 }

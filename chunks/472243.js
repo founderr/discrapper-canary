@@ -29,9 +29,9 @@ function m(e) {
     type: N,
     textValue: p,
     maxCharacterCount: O,
-    showRemainingCharsAfterCount: R,
-    className: C
-  } = e, g = (0, s.useStateFromStores)([c.default], () => I.default.canUseIncreasedMessageLength(c.default.getCurrentUser())), L = (0, d.default)(), v = null != O ? O : L, D = null !== (m = null != R ? R : O) && void 0 !== m ? m : L / 10, M = p.length, y = null != N.upsellLongMessages && (null != M ? M : 0) > f.MAX_MESSAGE_LENGTH && g, P = null != N.upsellLongMessages && !g, U = (null === (n = (0, _.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2, b = v - M, G = b > D, w = b < 0 && U, B = 0 === b ? h.default.Messages.CHARACTER_COUNT_AT_LIMIT : b > 0 ? h.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
+    showRemainingCharsAfterCount: C,
+    className: R
+  } = e, g = (0, s.useStateFromStores)([c.default], () => I.default.canUseIncreasedMessageLength(c.default.getCurrentUser())), L = (0, d.default)(), v = null != O ? O : L, D = null !== (m = null != C ? C : O) && void 0 !== m ? m : L / 10, M = p.length, y = null != N.upsellLongMessages && (null != M ? M : 0) > f.MAX_MESSAGE_LENGTH && g, P = null != N.upsellLongMessages && !g, U = (null === (n = (0, _.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2, b = v - M, G = b > D, w = b < 0 && U, B = 0 === b ? h.default.Messages.CHARACTER_COUNT_AT_LIMIT : b > 0 ? h.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
     count: b
   }) : h.default.Messages.CHARACTER_COUNT_OVER_LIMIT, {
     analyticsLocations: k
@@ -39,7 +39,7 @@ function m(e) {
   return y && b >= 0 || !G || P && !G ? (0, i.jsx)(u.AnalyticsLocationProvider, {
     value: k,
     children: (0, i.jsxs)("div", {
-      className: a()(C, A.characterCount, {
+      className: a()(R, A.characterCount, {
         [A.error]: b < 0
       }),
       children: [(0, i.jsxs)("div", {

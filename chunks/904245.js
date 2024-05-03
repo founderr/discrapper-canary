@@ -21,8 +21,8 @@ var i = n("278074"),
   N = n("409059"),
   p = n("264229"),
   O = n("366980"),
-  R = n("287925"),
-  C = n("779832"),
+  C = n("287925"),
+  R = n("779832"),
   g = n("459618"),
   L = n("541288"),
   v = n("3148"),
@@ -507,9 +507,9 @@ let ef = {
       let a = await (0, b.default)(e);
       if (null != a) return eS.sendMessage(a, t, i, r);
       let s = () => eS._sendMessage(e, t, r),
-        o = R.LocalMessageBackgroundSendingExperiment.getCurrentConfig({
+        o = C.LocalMessageBackgroundSendingExperiment.getCurrentConfig({
           location: "8e1e29_1"
-        }).enableBackgroundSending ? C.default.backgroundify(s, void 0) : s,
+        }).enableBackgroundSending ? R.default.backgroundify(s, void 0) : s,
         l = null !== (n = r.nonce) && void 0 !== n ? n : (0, v.createNonce)();
       return (r = {
         ...r,
@@ -624,11 +624,11 @@ let ef = {
           stickerIds: A,
           messageReference: p,
           allowedMentions: O,
-          poll: R
+          poll: C
         } = n,
-        C = null !== (i = n.flags) && void 0 !== i ? i : 0,
+        R = null !== (i = n.flags) && void 0 !== i ? i : 0,
         [M, w] = (0, k.default)(l);
-      if (M && (l = w, C = (0, et.addFlag)(C, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == f && null == A && null == R) return Promise.resolve();
+      if (M && (l = w, R = (0, et.addFlag)(R, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == f && null == A && null == C) return Promise.resolve();
       let V = null != p ? eo.MessageTypes.REPLY : eo.MessageTypes.DEFAULT,
         x = null !== (a = n.nonce) && void 0 !== a ? a : (0, v.createNonce)();
       if (!1 !== n.eagerDispatch) {
@@ -639,9 +639,9 @@ let ef = {
           type: V,
           messageReference: p,
           allowedMentions: O,
-          flags: 0 !== C ? C : void 0,
+          flags: 0 !== R ? R : void 0,
           nonce: x,
-          poll: (0, U.createPollServerDataFromCreateRequest)(R)
+          poll: (0, U.createPollServerDataFromCreateRequest)(C)
         });
         (0, y.updateComboOnMessageSend)(e, t.id), null != A && (t.sticker_items = A.map(e => B.default.getStickerById(e)).filter(e => null != e)), eS.receiveMessage(e, t, !0, n)
       }
@@ -662,7 +662,7 @@ let ef = {
           tts: E,
           message_reference: p,
           allowed_mentions: O,
-          flags: C
+          flags: R
         }
       };
       if (null != f) {
@@ -678,7 +678,7 @@ let ef = {
           null != n.party && null != n.party.id && (t.party_id = n.party.id), F.message.application_id = n.application_id, F.message.activity = t
         }
       }
-      return null != R && (F.message.poll = R), null != A && (F.message.sticker_ids = A), P.default.isEnabled() && (F.message.has_poggermode_enabled = !0), new Promise((t, i) => {
+      return null != C && (F.message.poll = C), null != A && (F.message.sticker_ids = A), P.default.isEnabled() && (F.message.has_poggermode_enabled = !0), new Promise((t, i) => {
         let a = Date.now(),
           s = u.default.length,
           _ = Math.floor(1e4 * Math.random());
@@ -689,7 +689,7 @@ let ef = {
               duration: _,
               queueSize: s
             },
-            poll: R
+            poll: C
           }), g.default.recordMessageSendApiResponse(x), o.default.dispatch({
             type: "SLOWMODE_RESET_COOLDOWN",
             slowmodeType: q.SlowmodeType.SendMessage,
@@ -806,7 +806,7 @@ let ef = {
                 }
               }) : u.body.code === eo.AbortCodes.POGGERMODE_TEMPORARILY_DISABLED ? o.default.dispatch({
                 type: "POGGERMODE_TEMPORARILY_DISABLED"
-              }) : null != R || eS.sendClydeError(e, u.body.code)
+              }) : null != C || eS.sendClydeError(e, u.body.code)
             }
             t ? eS.deleteMessage(e, x, !0) : (o.default.dispatch({
               type: "MESSAGE_SEND_FAILED",
