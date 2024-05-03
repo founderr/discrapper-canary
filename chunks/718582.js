@@ -88,36 +88,38 @@ function M(e) {
           return i.includes(t.id)
         }) && t !== e.afkChannelId && m.includes(t)
       }).map(e => {
-        let t = l.default.getEmbeddedActivitiesForChannel(e);
-        if (t.length > 0)
-          for (let e of t) return {
+        let t = I.default.getAllApplicationStreamsForChannel(e).map(e => e.ownerId),
+          n = l.default.getEmbeddedActivitiesForChannel(e);
+        if (n.length > 0)
+          for (let e of n) return {
             category: g.CardCategory.EMBEDDED_ACTIVITY,
-            embeddedActivity: e
+            embeddedActivity: e,
+            streamersCount: t.length
           };
-        let n = a[e].filter(O.isNotNullish);
-        for (let t of n) {
-          let i = S.default.findActivity(t.user.id, y(t));
-          if (null != i && !(0, u.default)(i)) return {
+        let i = a[e].filter(O.isNotNullish);
+        for (let n of i) {
+          let r = S.default.findActivity(n.user.id, y(n));
+          if (null != r && !(0, u.default)(r)) return {
             category: g.CardCategory.GAMING,
             channelId: e,
-            game: i,
-            voiceStates: n
+            game: r,
+            voiceStates: i,
+            streamersCount: t.length
           }
         }
-        let i = n.map(e => {
+        let r = i.map(e => {
             let {
               user: t
             } = e;
             return t.id
           }),
-          r = N.default.hasVideo(e),
-          s = I.default.getAllApplicationStreamsForChannel(e).map(e => e.ownerId);
+          s = N.default.hasVideo(e);
         return {
           category: g.CardCategory.HANGOUT,
           channelId: e,
-          userIds: i,
-          streamUserIds: s,
-          channelHasVideo: r
+          userIds: r,
+          streamUserIds: t,
+          channelHasVideo: s
         }
       })
     }, [m, C, e.afkChannelId, t]),
