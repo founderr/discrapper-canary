@@ -46,6 +46,7 @@ function S(e) {
         })
       })]
     }), (0, l.jsxs)(o.default.Overlay, {
+      className: f.overlay,
       children: [I === c.ModalTransitionState.ENTERED && (0, l.jsx)(n.default, {
         onTooltipClose: E
       }), (0, l.jsx)(d.default, {

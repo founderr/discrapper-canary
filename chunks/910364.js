@@ -22,9 +22,9 @@ var l = s("735250"),
   _ = s("342656"),
   x = s("785717"),
   T = s("221292"),
-  U = s("621853"),
-  A = s("318661"),
-  N = s("706327"),
+  N = s("621853"),
+  U = s("318661"),
+  A = s("706327"),
   g = s("484404"),
   C = s("502762"),
   h = s("62154"),
@@ -42,10 +42,10 @@ function y(e) {
     section: r,
     setSection: o,
     hasActivity: u
-  } = e, d = (0, i.useStateFromStores)([U.default], () => {
+  } = e, d = (0, i.useStateFromStores)([N.default], () => {
     var e, s;
-    return (null === (s = U.default.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null
-  }), f = (0, N.useMutualFriends)(t), S = (0, i.useStateFromStores)([U.default], () => U.default.getMutualGuilds(t.id)), m = t.bot || s, {
+    return (null === (s = N.default.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null
+  }), f = (0, A.useMutualFriends)(t), S = (0, i.useStateFromStores)([N.default], () => N.default.getMutualGuilds(t.id)), m = t.bot || s, {
     enabled: I
   } = (0, _.useProfileMutualsExperiment)({
     autoTrackExposure: !0,
@@ -104,8 +104,8 @@ function L(e) {
   var t, s;
   let {
     user: _,
-    guildId: U,
-    channelId: N,
+    guildId: N,
+    channelId: A,
     messageId: L,
     roleId: F,
     friendToken: D,
@@ -114,11 +114,11 @@ function L(e) {
     transitionState: G,
     sourceAnalyticsLocations: k = [],
     onClose: w
-  } = e, V = null !== (t = (0, i.useStateFromStores)([v.default], () => v.default.getUser(_.id))) && void 0 !== t ? t : _, H = (0, A.default)(null !== (s = V.id) && void 0 !== s ? s : ""), {
+  } = e, V = null !== (t = (0, i.useStateFromStores)([v.default], () => v.default.getUser(_.id))) && void 0 !== t ? t : _, H = (0, U.default)(null !== (s = V.id) && void 0 !== s ? s : ""), {
     analyticsLocations: Y
   } = (0, f.default)([...k, c.default.PROFILE_MODAL]);
   (0, u.useSubscribeGuildMembers)({
-    [U]: [V.id]
+    [N]: [V.id]
   });
   let z = (0, i.useStateFromStores)([m.default], () => null != m.default.getAnyStreamForUser(V.id)),
     W = (0, i.useStateFromStores)([E.default], () => E.default.findActivity(V.id, e => e.type !== M.ActivityTypes.CUSTOM_STATUS)),
@@ -135,21 +135,21 @@ function L(e) {
         action: "PRESS_SECTION",
         layout: "MODAL",
         userId: V.id,
-        guildId: U,
-        channelId: N,
+        guildId: N,
+        channelId: A,
         messageId: L,
         roleId: F,
         analyticsLocations: Y
       }), K(!0), Q(e)
-    }, [V.id, U, N, L, F, Y]),
+    }, [V.id, N, A, L, F, Y]),
     el = null == H ? void 0 : H.profileEffectId;
   return (0, l.jsx)(f.AnalyticsLocationProvider, {
     value: Y,
     children: (0, l.jsx)(x.UserProfileAnalyticsProvider, {
       layout: "MODAL",
       userId: V.id,
-      guildId: U,
-      channelId: N,
+      guildId: N,
+      channelId: A,
       messageId: L,
       roleId: F,
       children: (0, l.jsx)(r.default, {
@@ -159,48 +159,47 @@ function L(e) {
           className: O.root,
           hideShadow: !0,
           "aria-label": P.default.Messages.USER_PROFILE_MODAL,
-          children: [(0, l.jsx)("div", {
+          children: [(0, l.jsxs)(C.default, {
+            user: V,
+            displayProfile: H,
+            profileType: j.UserProfileTypes.MODAL,
             ref: ee,
-            children: (0, l.jsxs)(C.default, {
-              user: V,
+            children: [(0, l.jsx)(R.default, {
+              className: O.topSection,
               displayProfile: H,
-              profileType: j.UserProfileTypes.MODAL,
-              children: [(0, l.jsx)(R.default, {
-                className: O.topSection,
-                displayProfile: H,
-                user: V,
-                friendToken: D,
-                onClose: w,
-                isStreaming: (0, d.default)(W),
-                guildId: U,
-                channelId: N,
-                hasProfileEffect: null != el
-              }), (0, l.jsxs)(C.default.Overlay, {
-                children: [G === n.ModalTransitionState.ENTERED && (0, l.jsx)(g.default, {
-                  onTooltipClose: w
-                }), (0, l.jsxs)("div", {
-                  className: O.body,
-                  children: [(0, l.jsx)(p.default, {
-                    user: V,
-                    displayProfile: H
-                  }), $ ? (0, l.jsx)(y, {
-                    user: V,
-                    section: J === j.UserProfileSections.USER_INFO_CONNECTIONS ? j.UserProfileSections.USER_INFO : J,
-                    setSection: es,
-                    hasActivity: X,
-                    isCurrentUser: q
-                  }) : (0, l.jsx)("div", {
-                    className: O.divider
-                  }), (0, l.jsx)(h.default, {
-                    displayProfile: H,
-                    user: V,
-                    autoFocusNote: b && !Z,
-                    selectedSection: J,
-                    onClose: w
-                  })]
+              user: V,
+              friendToken: D,
+              onClose: w,
+              isStreaming: (0, d.default)(W),
+              guildId: N,
+              channelId: A,
+              hasProfileEffect: null != el
+            }), (0, l.jsxs)(C.default.Overlay, {
+              className: O.overlay,
+              children: [G === n.ModalTransitionState.ENTERED && (0, l.jsx)(g.default, {
+                onTooltipClose: w
+              }), (0, l.jsxs)("div", {
+                className: O.body,
+                children: [(0, l.jsx)(p.default, {
+                  user: V,
+                  displayProfile: H
+                }), $ ? (0, l.jsx)(y, {
+                  user: V,
+                  section: J === j.UserProfileSections.USER_INFO_CONNECTIONS ? j.UserProfileSections.USER_INFO : J,
+                  setSection: es,
+                  hasActivity: X,
+                  isCurrentUser: q
+                }) : (0, l.jsx)("div", {
+                  className: O.divider
+                }), (0, l.jsx)(h.default, {
+                  displayProfile: H,
+                  user: V,
+                  autoFocusNote: b && !Z,
+                  selectedSection: J,
+                  onClose: w
                 })]
               })]
-            })
+            })]
           }), null != el && (0, l.jsx)(S.default, {
             profileEffectId: el,
             bannerAdjustment: 0,

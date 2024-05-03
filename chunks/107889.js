@@ -22,9 +22,9 @@ var l = s("735250"),
   _ = s("301984"),
   x = s("94918"),
   T = s("664794"),
-  U = s("980768"),
-  A = s("806926"),
-  N = s("740021"),
+  N = s("980768"),
+  U = s("806926"),
+  A = s("740021"),
   g = s("228168"),
   C = s("981631"),
   h = s("689938"),
@@ -83,79 +83,77 @@ function p(e) {
         className: R.root,
         hideShadow: !0,
         "aria-label": h.default.Messages.USER_PROFILE_MODAL,
-        children: (0, l.jsx)("div", {
+        children: (0, l.jsxs)(E.default, {
+          user: t,
+          displayProfile: Y,
+          profileType: g.UserProfileTypes.FULL_SIZE,
           ref: Z,
-          children: (0, l.jsxs)(E.default, {
-            user: t,
-            displayProfile: Y,
+          children: [(0, l.jsxs)(N.default, {
             profileType: g.UserProfileTypes.FULL_SIZE,
-            children: [(0, l.jsxs)(U.default, {
-              profileType: g.UserProfileTypes.FULL_SIZE,
-              isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !K,
-              children: [(0, l.jsx)(x.default, {
-                user: t,
-                guildId: b,
-                channelId: p,
-                onClose: D
-              }), (0, l.jsx)(_.default, {
-                user: t,
-                friendToken: P
-              }), (0, l.jsx)(v.default, {
-                type: "overlay",
-                user: t,
-                guildId: b,
-                onClose: () => {
-                  D(), (0, r.popLayer)()
-                }
-              }), (0, l.jsx)(T.default, {
-                user: t,
-                guildId: b,
-                viewProfileItem: (null == H ? void 0 : H.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, l.jsx)(n.MenuItem, {
-                  id: "view-main-profile",
-                  label: h.default.Messages.VIEW_MAIN_PROFILE,
-                  subtext: h.default.Messages.AKA_DISPLAY_NAME.format({
-                    displayName: S.default.getName(void 0, void 0, t)
-                  }),
-                  action: () => {
-                    G({
-                      action: "PRESS_VIEW_MAIN_PROFILE",
-                      analyticsLocations: B
-                    }), w(void 0)
-                  }
-                }) : (0, l.jsx)(n.MenuItem, {
-                  id: "view-server-profile",
-                  label: h.default.Messages.VIEW_SERVER_PROFILE,
-                  subtext: h.default.Messages.AKA_DISPLAY_NAME.format({
-                    displayName: S.default.getName(b, p, t)
-                  }),
-                  action: () => {
-                    G({
-                      action: "PRESS_VIEW_SERVER_PROFILE",
-                      analyticsLocations: B
-                    }), w(b)
-                  }
-                })
-              })]
-            }), (0, l.jsx)(N.default, {
+            isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !K,
+            children: [(0, l.jsx)(x.default, {
               user: t,
-              displayProfile: Y,
               guildId: b,
               channelId: p,
-              activity: z,
-              customStatusActivity: W,
               onClose: D
-            }), (0, l.jsx)(A.default, {
+            }), (0, l.jsx)(_.default, {
               user: t,
-              displayProfile: Y,
-              initialSection: O,
-              autoFocusNote: y,
-              transitionState: L,
-              onClose: D
-            }), (null == Y ? void 0 : Y.profileEffectId) != null && (0, l.jsx)(c.default, {
-              profileEffectId: null == Y ? void 0 : Y.profileEffectId,
-              isHovering: K
+              friendToken: P
+            }), (0, l.jsx)(v.default, {
+              type: "overlay",
+              user: t,
+              guildId: b,
+              onClose: () => {
+                D(), (0, r.popLayer)()
+              }
+            }), (0, l.jsx)(T.default, {
+              user: t,
+              guildId: b,
+              viewProfileItem: (null == H ? void 0 : H.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, l.jsx)(n.MenuItem, {
+                id: "view-main-profile",
+                label: h.default.Messages.VIEW_MAIN_PROFILE,
+                subtext: h.default.Messages.AKA_DISPLAY_NAME.format({
+                  displayName: S.default.getName(void 0, void 0, t)
+                }),
+                action: () => {
+                  G({
+                    action: "PRESS_VIEW_MAIN_PROFILE",
+                    analyticsLocations: B
+                  }), w(void 0)
+                }
+              }) : (0, l.jsx)(n.MenuItem, {
+                id: "view-server-profile",
+                label: h.default.Messages.VIEW_SERVER_PROFILE,
+                subtext: h.default.Messages.AKA_DISPLAY_NAME.format({
+                  displayName: S.default.getName(b, p, t)
+                }),
+                action: () => {
+                  G({
+                    action: "PRESS_VIEW_SERVER_PROFILE",
+                    analyticsLocations: B
+                  }), w(b)
+                }
+              })
             })]
-          })
+          }), (0, l.jsx)(A.default, {
+            user: t,
+            displayProfile: Y,
+            guildId: b,
+            channelId: p,
+            activity: z,
+            customStatusActivity: W,
+            onClose: D
+          }), (0, l.jsx)(U.default, {
+            user: t,
+            displayProfile: Y,
+            initialSection: O,
+            autoFocusNote: y,
+            transitionState: L,
+            onClose: D
+          }), (null == Y ? void 0 : Y.profileEffectId) != null && (0, l.jsx)(c.default, {
+            profileEffectId: null == Y ? void 0 : Y.profileEffectId,
+            isHovering: K
+          })]
         })
       })
     })

@@ -2,6 +2,7 @@
 e.exports = {
   body: "body_bd4552",
   divider: "divider__7116f",
+  overlay: "overlay__679e5",
   root: "root_ba16f0",
   tabBar: "tabBar__35f81",
   tabBarContainer: "tabBarContainer_b283be",

@@ -5,7 +5,7 @@ e.exports = {
   biteSizeOuter: "biteSizeOuter_e0bb1d userPopoutOuter_d67f56 userProfileOuter__35e59",
   biteSizeOverlayBackground: "biteSizeOverlayBackground__11aa7 overlayBackground__345c9",
   fullSizeInnerThemed: "fullSizeInnerThemed_ae6977",
-  fullSizeOuter: "fullSizeOuter__64397 userProfileModalOuter__90b4a userProfileOuter__35e59",
+  fullSizeOuter: "fullSizeOuter__64397 userProfileOuter__35e59",
   fullSizeOverlayBackground: "fullSizeOverlayBackground_a28b53 overlayBackground__345c9",
   overlayBackground: "overlayBackground__345c9",
   showOutOfBoundaryComponents: "showOutOfBoundaryComponents__3e39f",
