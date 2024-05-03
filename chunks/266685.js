@@ -238,7 +238,7 @@ function x(e) {
     fullWidth: !0,
     onClick: n,
     size: d.Button.Sizes.NONE,
-    children: M.default.Messages.QUESTS_PLAY_GAME
+    children: M.default.Messages.QUESTS_GET_THIS_GAME
   }) : null
 }
 t.default = y
