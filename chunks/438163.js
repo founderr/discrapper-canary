@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   UserProfileCustomStatusBubble: function() {
-    return E
+    return c
   }
 }), n("47120");
 var i = n("735250"),
@@ -9,101 +9,100 @@ var i = n("735250"),
   a = n("120356"),
   s = n.n(a),
   o = n("481060"),
-  l = n("596454"),
-  u = n("788307"),
-  d = n("393903"),
-  _ = n("228168"),
-  c = n("336428");
+  l = n("788307"),
+  u = n("393903"),
+  d = n("228168"),
+  _ = n("336428");
 
-function E(e) {
+function c(e) {
   let {
     statusActivity: t,
     profileType: n,
     animate: a = !0,
-    hideTooltip: E = !1
-  } = e, [I, T] = r.useState(1), {
-    emoji: f
-  } = null != t ? t : {}, S = null != f, h = (null == t ? void 0 : t.state) != null && "" !== t.state ? t.state : null, A = null != h && h.length > 0, m = S || A, N = r.useCallback(e => {
+    hideTooltip: c = !1
+  } = e, [E, I] = r.useState(1), {
+    emoji: T
+  } = null != t ? t : {}, f = null != T, S = (null == t ? void 0 : t.state) != null && "" !== t.state ? t.state : null, h = null != S && S.length > 0, A = f || h, m = r.useCallback(e => {
     var t;
     if (null == e) return;
     let n = e.getBoundingClientRect(),
       i = parseFloat(null !== (t = window.getComputedStyle(e).getPropertyValue("line-height")) && void 0 !== t ? t : "0"),
       r = n.height;
-    i > 0 && r > 0 && T(Math.floor(r / i))
-  }, []), p = (0, d.useResizeObserver)(N);
+    i > 0 && r > 0 && I(Math.floor(r / i))
+  }, []), N = (0, u.useResizeObserver)(m);
   if (r.useLayoutEffect(() => {
       setTimeout(() => {
-        N(p.current)
+        m(N.current)
       }, 200)
-    }, [p, N]), !m) return null;
-  let O = () => S ? A ? (0, i.jsx)(l.default, {
-      className: c.statusEmojiInline,
-      emojiId: f.id,
-      emojiName: f.name,
-      animated: !!f.animated
-    }) : (0, i.jsx)(u.ActivityEmoji, {
-      className: c.statusEmojiOnly,
-      emoji: f,
+    }, [N, m]), !A) return null;
+  let p = () => f ? h ? (0, i.jsx)(l.ActivityEmoji, {
+      className: _.statusEmojiInline,
+      emoji: T,
       animate: a,
-      hideTooltip: E
+      hideTooltip: c
+    }) : (0, i.jsx)(l.ActivityEmoji, {
+      className: _.statusEmojiOnly,
+      emoji: T,
+      animate: a,
+      hideTooltip: c
     }) : null,
-    C = () => A ? (0, i.jsx)(o.Text, {
+    O = () => h ? (0, i.jsx)(o.Text, {
       variant: "text-sm/medium",
-      className: c.statusText,
-      children: h
+      className: _.statusText,
+      children: S
     }) : null,
-    R = () => {
+    C = () => {
       let e = s()({
-        [c.content]: S && !A || I < 2,
-        [c.contentOverflow]: I >= 2
+        [_.content]: f && !h || E < 2,
+        [_.contentOverflow]: E >= 2
       });
       return (0, i.jsxs)("div", {
         className: e,
-        ref: p,
-        children: [O(), C()]
+        ref: N,
+        children: [p(), O()]
       })
     },
-    g = s()(c.positionStyle, {
-      [c.biteSize]: n === _.UserProfileTypes.BITE_SIZE,
-      [c.fullSize]: n === _.UserProfileTypes.FULL_SIZE
+    R = s()(_.positionStyle, {
+      [_.biteSize]: n === d.UserProfileTypes.BITE_SIZE,
+      [_.fullSize]: n === d.UserProfileTypes.FULL_SIZE
     }),
-    L = s()(c.statusBubbleOuter, {
-      [c.statusBubbleShape]: I <= 1 && !A && S || I > 1,
-      [c.statusBubbleSingleLineWithTextShape]: 1 === I && A,
-      [c.biteSize]: n === _.UserProfileTypes.BITE_SIZE,
-      [c.fullSize]: n === _.UserProfileTypes.FULL_SIZE
+    g = s()(_.statusBubbleOuter, {
+      [_.statusBubbleShape]: E <= 1 && !h && f || E > 1,
+      [_.statusBubbleSingleLineWithTextShape]: 1 === E && h,
+      [_.biteSize]: n === d.UserProfileTypes.BITE_SIZE,
+      [_.fullSize]: n === d.UserProfileTypes.FULL_SIZE
     }),
-    v = s()(c.statusBubble, {
-      [c.statusBubbleShape]: I <= 1 && !A && S || I > 1,
-      [c.statusBubbleSingleLineWithTextShape]: I <= 1 && A,
-      [c.statusBubbleEmojiOnlyPadding]: S && !A,
-      [c.statusBubbleWithTextPadding]: A,
-      [c.statusBubbleWithTextMinWidth]: A,
-      [c.statusBubbleCopyStatusCursor]: m
+    L = s()(_.statusBubble, {
+      [_.statusBubbleShape]: E <= 1 && !h && f || E > 1,
+      [_.statusBubbleSingleLineWithTextShape]: E <= 1 && h,
+      [_.statusBubbleEmojiOnlyPadding]: f && !h,
+      [_.statusBubbleWithTextPadding]: h,
+      [_.statusBubbleWithTextMinWidth]: h,
+      [_.statusBubbleCopyStatusCursor]: A
     });
-  if (n === _.UserProfileTypes.FULL_SIZE) return (0, i.jsx)("div", {
-    className: g,
+  if (n === d.UserProfileTypes.FULL_SIZE) return (0, i.jsx)("div", {
+    className: R,
     children: (0, i.jsx)("div", {
-      className: L,
+      className: g,
       children: (0, i.jsx)("span", {
-        className: v,
-        children: R()
+        className: L,
+        children: C()
       })
     })
   });
-  let D = s()({
-    [c.statusBubbleEmojiOnlyBottomMargin]: S && !A,
-    [c.statusBubbleMultiLineBottomMargin]: I > 1 && A
+  let v = s()({
+    [_.statusBubbleEmojiOnlyBottomMargin]: f && !h,
+    [_.statusBubbleMultiLineBottomMargin]: E > 1 && h
   });
   return (0, i.jsx)("div", {
-    className: D,
+    className: v,
     children: (0, i.jsx)("div", {
-      className: g,
+      className: R,
       children: (0, i.jsx)("div", {
-        className: L,
+        className: g,
         children: (0, i.jsx)("span", {
-          className: v,
-          children: R()
+          className: L,
+          children: C()
         })
       })
     })
