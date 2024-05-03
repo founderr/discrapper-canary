@@ -17,14 +17,19 @@ function u(e) {
     activity: t,
     user: n,
     source: u,
-    onAction: d
+    look: d,
+    color: _,
+    onAction: c
   } = e;
   return null != t && (0, a.default)(t, o.ActivityFlags.PLAY) && (0, s.default)(t) ? (0, i.jsx)(r.default, {
     className: l.button,
     size: l.buttonSize,
+    look: d,
+    color: _,
+    fullWidth: !0,
     activity: t,
     user: n,
     source: u,
-    onAction: d
+    onAction: c
   }, "play") : null
 }

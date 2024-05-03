@@ -78,12 +78,16 @@ t.default = (0, d.default)(e => {
             guildId: d,
             channelId: U,
             source: b,
+            look: w,
+            color: G,
             onAction: k
           }, "spotify-activity-sync-button"),
           r = (0, i.jsx)(L.default, {
             activity: t,
             user: n,
             source: b,
+            look: w,
+            color: G,
             onAction: k
           }, "spotify-activity-play-button");
         return j ? (0, i.jsxs)(i.Fragment, {
