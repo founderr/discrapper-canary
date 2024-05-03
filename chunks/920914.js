@@ -27,8 +27,8 @@ var a = s("735250"),
   R = s("246946"),
   M = s("186095"),
   v = s("797717"),
-  L = s("346656"),
-  D = s("465670"),
+  D = s("346656"),
+  L = s("465670"),
   P = s("692437"),
   j = s("507957"),
   b = s("26290"),
@@ -73,8 +73,8 @@ let Q = e => {
     className: K.integrationWrapper,
     children: [(0, a.jsxs)("div", {
       className: K.integration,
-      children: [(0, a.jsx)(L.default, {
-        size: L.default.Sizes.SMALL,
+      children: [(0, a.jsx)(D.default, {
+        size: D.default.Sizes.SMALL,
         guild: l.guild,
         className: K.guildIcon
       }), (0, a.jsxs)("div", {
@@ -112,7 +112,7 @@ function q(e) {
     [C, A] = n.useState(T.friendSync),
     [O, x] = n.useState(T.visibility),
     [R, M] = n.useState(T.metadataVisibility),
-    [L, P] = n.useState(T.showActivity),
+    [D, P] = n.useState(T.showActivity),
     [U, B] = n.useState(null),
     [Y, z] = n.useState(null),
     [q, Z] = n.useState(!1),
@@ -239,7 +239,7 @@ function q(e) {
               right: -4
             }
           },
-          children: (0, a.jsx)(D.default, {
+          children: (0, a.jsx)(L.default, {
             width: 16,
             height: 16
           })
@@ -328,7 +328,7 @@ function q(e) {
     })), H.ACTIVITY_PLATFORM_TYPES.has(T.type) && (r = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
-      value: L,
+      value: D,
       onChange: ei,
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/semibold",
