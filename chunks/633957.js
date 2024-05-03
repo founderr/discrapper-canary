@@ -85,7 +85,7 @@ function v(e) {
     } finally {
       D(!1)
     }
-  };
+  }, z = K.disabled ? M.default.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
   return (0, s.jsx)("div", {
     className: R.container,
     children: (0, s.jsxs)("div", {
@@ -96,7 +96,7 @@ function v(e) {
           className: R.__invalid_endedNote,
           children: (0, s.jsx)(i.Text, {
             variant: "text-md/medium",
-            children: M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED
+            children: z
           })
         }) : (0, s.jsx)(i.Text, {
           variant: "text-md/medium",
