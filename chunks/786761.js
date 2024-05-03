@@ -40,54 +40,61 @@ let m = new _.default({
 });
 
 function N(e) {
-  var t, n, i, r, l, T, h, N, p, O;
+  var t, n, i, r, l, T, h, N, p, O, v;
   let {
-    reactions: v,
-    interactionData: D
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], y = null !== (l = e.mention_roles) && void 0 !== l ? l : [], P = null !== (T = e.mention_channels) && void 0 !== T ? T : [], U = e.message_reference, b = new Date(e.timestamp), G = e.type === A.MessageTypes.THREAD_CREATED ? [] : (0, a.default)(e.content);
-  let w = null == (p = e).author ? m : null != p.webhook_id ? new _.default(p.author) : null !== (O = I.default.getUser(p.author.id)) && void 0 !== O ? O : new _.default(p.author),
-    B = null == e ? void 0 : e.gift_info,
-    k = null != e.interaction ? u.default.createFromServer(e.interaction) : null,
-    V = e.type === A.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
-    x = e.type === A.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
-    F = e.content;
-  return e.type === A.MessageTypes.PREMIUM_REFERRAL && (F = ""), new d.default({
+    reactions: D,
+    interactionData: M
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, y = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], P = null !== (l = e.mention_roles) && void 0 !== l ? l : [], U = null !== (T = e.mention_channels) && void 0 !== T ? T : [], b = e.message_reference, G = new Date(e.timestamp), w = e.type === A.MessageTypes.THREAD_CREATED ? [] : (0, a.default)(e.content);
+  let B = null == (p = e).author ? m : null != p.webhook_id ? new _.default(p.author) : null !== (O = I.default.getUser(p.author.id)) && void 0 !== O ? O : new _.default(p.author),
+    k = null == e ? void 0 : e.gift_info,
+    V = null != e.interaction ? u.default.createFromServer(e.interaction) : null,
+    x = e.type === A.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
+    F = e.type === A.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
+    H = e.content;
+  return (e.type === A.MessageTypes.PREMIUM_REFERRAL && (H = ""), null != (v = e).message_snapshots && v.message_snapshots.length > 0) ? new d.default({
+    id: e.id,
+    channel_id: e.channel_id,
+    type: A.MessageTypes.DEFAULT,
+    author: B,
+    timestamp: G,
+    isUnsupported: !0
+  }) : new d.default({
     ...e,
-    author: w,
+    author: B,
     webhookId: e.webhook_id,
-    blocked: E.default.isBlocked(w.id) || null != V && E.default.isBlocked(V),
-    timestamp: b,
+    blocked: E.default.isBlocked(B.id) || null != x && E.default.isBlocked(x),
+    timestamp: G,
     editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
     mentionEveryone: e.mention_everyone,
-    mentions: M,
-    mentionRoles: y,
-    mentionChannels: P,
-    messageReference: U,
+    mentions: y,
+    mentionRoles: P,
+    mentionChannels: U,
+    messageReference: b,
     mentioned: (0, S.isMentioned)({
       userId: c.default.getId(),
       channelId: e.channel_id,
       mentionEveryone: null !== (h = e.mention_everyone) && void 0 !== h && h,
-      mentionUsers: M,
-      mentionRoles: y
+      mentionUsers: y,
+      mentionRoles: P
     }),
     attachments: R(e),
     embeds: g(e),
     components: (0, s.transformComponents)(null !== (N = e.components) && void 0 !== N ? N : [], {
       includeEmojiSrc: !1
     }),
-    codedLinks: G,
+    codedLinks: w,
     giftCodes: (0, f.isGiftCodeEmbed)(e) ? (0, f.findGiftCodes)(null == e ? void 0 : e.embeds[0].url) : (0, f.findGiftCodes)(e.content),
-    content: F,
-    referralTrialOfferId: x,
-    call: C(e.call, b),
-    reactions: L(null != v ? v : e.reactions, e.poll),
-    interaction: k,
-    interactionData: null != D ? D : e.interaction_data,
+    content: H,
+    referralTrialOfferId: F,
+    call: C(e.call, G),
+    reactions: L(null != D ? D : e.reactions, e.poll),
+    interaction: V,
+    interactionData: null != M ? M : e.interaction_data,
     interactionMetadata: e.interaction_metadata,
     roleSubscriptionData: e.role_subscription_data,
     purchaseNotification: e.purchase_notification,
     poll: null == e.poll ? void 0 : (0, o.default)(e.poll),
-    giftInfo: null == B ? void 0 : B
+    giftInfo: null == k ? void 0 : k
   })
 }
 

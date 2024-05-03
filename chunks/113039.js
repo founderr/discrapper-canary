@@ -53,7 +53,8 @@ t.default = r.memo(function(e) {
       [T.messageContent]: !0,
       [T.isSending]: N && !p,
       [T.markupRtl]: "rtl" === l()(a.content),
-      [T.isFailed]: m
+      [T.isFailed]: m,
+      [T.isUnsupported]: a.isUnsupported
     }),
     children: [null != o ? o : f(a, u), A && null != a.editedTimestamp && (0, i.jsxs)(i.Fragment, {
       children: [" ", (0, i.jsx)(_.default, {

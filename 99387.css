@@ -44780,13 +44780,18 @@ img.thumbnail__18ece {
     gap: 8px
 }
 
-.secondaryButton_fc9605 {
-    background-color: var(--background-accent)
+.theme-dark .secondaryButton_fc9605 .secondaryText__7a32f {
+    color: rgba(255, 255, 255, .8);
+    fill: rgba(255, 255, 255, .8)
 }
 
-.secondaryButton_fc9605 .secondaryText__7a32f {
-    color: var(--redesign-button-secondary-text);
-    fill: var(--interactive-normal)
+.theme-light .secondaryButton_fc9605 .secondaryText__7a32f {
+    color: rgba(255, 255, 255, .9);
+    fill: rgba(255, 255, 255, .9)
+}
+
+.secondaryButton_fc9605 {
+    background-color: var(--background-accent)
 }
 
 .secondaryButton_fc9605:hover {
