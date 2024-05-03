@@ -26,41 +26,39 @@ function T(e) {
     onClose: t
   } = e, s = (0, r.useAnalyticsContext)(), {
     analyticsLocations: T
-  } = (0, d.default)(), [_, x] = a.useState(!1), I = a.useCallback(e => {
+  } = (0, d.default)(), [_, I] = a.useState(!1), x = a.useCallback(e => {
     !_ && e && (S.default.track(f.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: g.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
       location: s.location,
       location_stack: T
-    }), x(!0))
-  }, [s.location, T, _]), C = (0, o.useIsVisible)(I, .8, !0);
+    }), I(!0))
+  }, [s.location, T, _]), C = (0, o.useIsVisible)(x, .8, !0);
   return (0, i.jsxs)("div", {
     ref: C,
     className: E.container,
     children: [(0, i.jsx)(h.default, {
       color: u.GradientCssUrls.PREMIUM_TIER_2,
       className: E.nitroWheel
-    }), (0, i.jsx)(n.Text, {
+    }), (0, i.jsxs)(n.Text, {
       className: E.text,
       variant: "text-sm/normal",
-      children: m.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_UPSELL
-    }), (0, i.jsx)(n.Text, {
-      className: E.text,
-      variant: "text-sm/normal",
-      children: (0, i.jsx)(c.default, {
+      children: [m.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_UPSELL, " ", (0, i.jsx)(c.default, {
         onClick: () => {
           t(), l.default.open(f.UserSettingsSections.PREMIUM)
         },
         children: m.default.Messages.LEARN_MORE
+      })]
+    }), (0, i.jsx)("div", {
+      children: (0, i.jsx)(N.default, {
+        className: E.nitroButton,
+        buttonText: m.default.Messages.PREMIUM_UPSELL_GET_NITRO,
+        size: n.Button.Sizes.SMALL,
+        shinyButtonClassName: E.nitroButton,
+        subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
+        premiumModalAnalyticsLocation: {
+          section: f.AnalyticsSections.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL
+        }
       })
-    }), (0, i.jsx)(N.default, {
-      className: E.nitroButton,
-      buttonText: m.default.Messages.PREMIUM_UPSELL_GET_NITRO,
-      size: n.Button.Sizes.SMALL,
-      shinyButtonClassName: E.nitroButton,
-      subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
-      premiumModalAnalyticsLocation: {
-        section: f.AnalyticsSections.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL
-      }
     })]
   })
 }
