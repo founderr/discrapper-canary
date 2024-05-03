@@ -17,31 +17,36 @@ var a = s("735250"),
   _ = s("71038"),
   g = s("786792"),
   h = s("329213");
-let I = () => (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
-      className: _.artContainer,
-      "aria-hidden": !0,
-      role: "presentation",
-      children: (0, a.jsx)("img", {
-        src: s("353437"),
-        className: _.art,
-        alt: " "
-      })
-    }), (0, a.jsxs)("div", {
-      className: _.mainColumn,
-      children: [(0, a.jsx)(o.Heading, {
-        variant: "heading-lg/extrabold",
-        color: "always-white",
-        className: _.title,
-        children: m.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
-      }), (0, a.jsx)(o.Text, {
-        className: _.__invalid_textBody,
-        variant: "text-sm/normal",
-        color: "always-white",
-        children: m.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+let I = e => {
+    let {
+      artSrc: t
+    } = e;
+    return (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)("div", {
+        className: _.artContainer,
+        "aria-hidden": !0,
+        role: "presentation",
+        children: (0, a.jsx)("img", {
+          src: t,
+          className: _.art,
+          alt: " "
+        })
+      }), (0, a.jsxs)("div", {
+        className: _.mainColumn,
+        children: [(0, a.jsx)(o.Heading, {
+          variant: "heading-lg/extrabold",
+          color: "always-white",
+          className: _.title,
+          children: m.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
+        }), (0, a.jsx)(o.Text, {
+          className: _.__invalid_textBody,
+          variant: "text-sm/normal",
+          color: "always-white",
+          children: m.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+        })]
       })]
-    })]
-  }),
+    })
+  },
   N = () => (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: _.artContainer,
@@ -74,31 +79,6 @@ let I = () => (0, a.jsxs)(a.Fragment, {
       "aria-hidden": !0,
       role: "presentation",
       children: (0, a.jsx)("img", {
-        src: s("861636"),
-        className: _.art,
-        alt: " "
-      })
-    }), (0, a.jsxs)("div", {
-      className: _.mainColumn,
-      children: [(0, a.jsx)(o.Heading, {
-        variant: "heading-lg/extrabold",
-        color: "always-white",
-        className: _.title,
-        children: m.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
-      }), (0, a.jsx)(o.Text, {
-        className: _.__invalid_textBody,
-        variant: "text-sm/normal",
-        color: "always-white",
-        children: m.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
-      })]
-    })]
-  }),
-  C = () => (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
-      className: _.artContainer,
-      "aria-hidden": !0,
-      role: "presentation",
-      children: (0, a.jsx)("img", {
         src: s("43563"),
         className: _.art,
         alt: " "
@@ -118,11 +98,17 @@ let I = () => (0, a.jsxs)(a.Fragment, {
       })]
     })]
   }),
-  A = e => {
+  C = e => {
     let {
       variation: t
     } = e;
-    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(N, {})).with(E.CollectiblesShopMarketingVariants.SPRINGTOONS, () => (0, a.jsx)(p, {})).with(E.CollectiblesShopMarketingVariants.SHY, () => (0, a.jsx)(C, {})).otherwise(() => (0, a.jsx)(I, {}))
+    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(N, {})).with(E.CollectiblesShopMarketingVariants.SPRINGTOONS, () => (0, a.jsx)(I, {
+      artSrc: s("861636")
+    })).with(E.CollectiblesShopMarketingVariants.SHY, () => (0, a.jsx)(p, {})).with(E.CollectiblesShopMarketingVariants.GALAXY, () => (0, a.jsx)(I, {
+      artSrc: s("161594")
+    })).otherwise(() => (0, a.jsx)(I, {
+      artSrc: s("353437")
+    }))
   };
 t.default = () => {
   let {
@@ -139,7 +125,7 @@ t.default = () => {
     style: {
       backgroundImage: "url(".concat(s === E.CollectiblesShopMarketingVariants.SHY ? h : g, ")")
     },
-    children: [(0, a.jsx)(A, {
+    children: [(0, a.jsx)(C, {
       variation: s
     }), (0, a.jsx)(o.Button, {
       onClick: () => {

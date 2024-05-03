@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
   }
 });
 var i, r, a = n("818083");
-(i = r || (r = {}))[i.DEFAULT = 0] = "DEFAULT", i[i.WINTER_2023_DROP = 1] = "WINTER_2023_DROP", i[i.MONSTER_DROP = 2] = "MONSTER_DROP", i[i.SPRINGTOONS = 4] = "SPRINGTOONS", i[i.SHY = 5] = "SHY";
+(i = r || (r = {}))[i.DEFAULT = 0] = "DEFAULT", i[i.WINTER_2023_DROP = 1] = "WINTER_2023_DROP", i[i.MONSTER_DROP = 2] = "MONSTER_DROP", i[i.SPRINGTOONS = 4] = "SPRINGTOONS", i[i.SHY = 5] = "SHY", i[i.GALAXY = 6] = "GALAXY";
 let s = (0, a.createExperiment)({
   kind: "user",
   id: "2023-12_collectibles_shop_marketing",
@@ -36,6 +36,12 @@ let s = (0, a.createExperiment)({
     label: "Shy 2024",
     config: {
       variant: 5
+    }
+  }, {
+    id: 6,
+    label: "Galaxy 2024",
+    config: {
+      variant: 6
     }
   }]
 });
