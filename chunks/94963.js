@@ -119,116 +119,119 @@ t.default = e => {
       brandPrimaryColor: V.primary,
       brandSecondaryColor: V.secondary
     })
-  }, [M, O, V.primary, V.secondary]), (0, a.jsxs)("div", {
+  }, [M, O, V.primary, V.secondary]), (0, a.jsx)("div", {
     className: v.slideContentWithSidebar,
-    children: [(0, a.jsx)(m.Heading, {
-      variant: "heading-xxl/medium",
-      className: v.title,
-      children: x.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_TITLE
-    }), (0, a.jsx)(m.Text, {
-      variant: "text-md/normal",
-      color: "header-secondary",
-      className: v.subtitle,
-      children: x.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_SUBTITLE
-    }), (0, a.jsxs)("div", {
-      className: v.content,
+    children: (0, a.jsxs)("div", {
+      className: I.content,
       children: [(0, a.jsxs)("div", {
-        className: I.colorsContainer,
-        children: [(0, a.jsxs)("div", {
-          className: I.colorPickerContainer,
-          children: [(0, a.jsx)(m.Text, {
-            variant: "text-xs/semibold",
-            color: "text-muted",
-            children: x.default.Messages.CLAN_LOOK_BRAND_COLOR
-          }), (0, a.jsxs)("div", {
-            className: I.colorPickerGrid,
-            children: [(0, a.jsx)(m.Clickable, {
-              onClick: () => {
-                var e, t;
-                U(0), F({
-                  primary: null !== (e = L.badgePrimaryColor) && void 0 !== e ? e : g.CLAN_BRAND_PRIMARY_DEFAULT,
-                  secondary: null !== (t = L.badgeSecondaryColor) && void 0 !== t ? t : g.CLAN_BRAND_SECONDARY_DEFAULT
-                })
-              },
-              className: s()(I.brandItemContainer, {
-                [I.brandItemContainerSelected]: 0 === w
-              }),
-              children: (0, a.jsx)(A, {
-                name: x.default.Messages.CLAN_LOOK_PRESET_BADGE,
-                primaryColor: L.badgePrimaryColor,
-                secondaryColor: L.badgeSecondaryColor
-              })
-            }), g.CLAN_BRAND_PALETTE_PRESETS.map((e, t) => (0, a.jsx)(m.Clickable, {
-              "aria-label": e.name,
-              onClick: () => {
-                U(t + 1), F(g.CLAN_BRAND_PALETTE_PRESETS[t])
-              },
-              className: s()(I.brandItemContainer, {
-                [I.brandItemContainerSelected]: w === t + 1
-              }),
-              children: (0, a.jsx)(A, {
-                name: e.name,
-                primaryColor: e.primary,
-                secondaryColor: e.secondary
-              })
-            }, t)), (0, a.jsx)(_.default, {
-              showSecondaryColor: !0,
-              palette: P,
-              onPrimaryColorChange: e => {
-                F(t => ({
-                  ...t,
-                  primary: (0, l.int2hex)(e)
-                }))
-              },
-              onSecondaryColorChange: e => {
-                F(t => ({
-                  ...t,
-                  secondary: (0, l.int2hex)(e)
-                }))
-              },
-              shouldShow: G,
-              onRequestClose: () => B(!1),
-              children: e => (0, a.jsx)(m.Clickable, {
-                ...e,
+        className: I.leftColumn,
+        children: [(0, a.jsx)(m.Heading, {
+          variant: "heading-xxl/medium",
+          className: v.title,
+          children: x.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_TITLE
+        }), (0, a.jsx)(m.Text, {
+          variant: "text-md/normal",
+          color: "header-secondary",
+          className: v.subtitle,
+          children: x.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_SUBTITLE
+        }), (0, a.jsxs)("div", {
+          className: I.colorsContainer,
+          children: [(0, a.jsxs)("div", {
+            className: I.colorPickerContainer,
+            children: [(0, a.jsx)(m.Text, {
+              variant: "text-xs/semibold",
+              color: "text-muted",
+              children: x.default.Messages.CLAN_LOOK_BRAND_COLOR
+            }), (0, a.jsxs)("div", {
+              className: I.colorPickerGrid,
+              children: [(0, a.jsx)(m.Clickable, {
                 onClick: () => {
-                  U(N), B(e => !e)
+                  var e, t;
+                  U(0), F({
+                    primary: null !== (e = L.badgePrimaryColor) && void 0 !== e ? e : g.CLAN_BRAND_PRIMARY_DEFAULT,
+                    secondary: null !== (t = L.badgeSecondaryColor) && void 0 !== t ? t : g.CLAN_BRAND_SECONDARY_DEFAULT
+                  })
                 },
                 className: s()(I.brandItemContainer, {
-                  [I.brandItemContainerSelected]: w === N
+                  [I.brandItemContainerSelected]: 0 === w
                 }),
                 children: (0, a.jsx)(A, {
-                  name: x.default.Messages.CLAN_LOOK_PRESET_CUSTOM,
-                  isCustom: !0
+                  name: x.default.Messages.CLAN_LOOK_PRESET_BADGE,
+                  primaryColor: L.badgePrimaryColor,
+                  secondaryColor: L.badgeSecondaryColor
                 })
-              })
-            })]
-          })]
-        }), (0, a.jsxs)("div", {
-          className: I.bannerPickerContainer,
-          children: [(0, a.jsx)(m.Text, {
-            variant: "text-xs/semibold",
-            color: "text-muted",
-            children: x.default.Messages.CLAN_LOOK_BANNER
-          }), (0, a.jsx)("div", {
-            className: I.bannerPickerGrid,
-            children: S.map((e, t) => (0, a.jsxs)(m.Clickable, {
-              "aria-label": e.name,
-              onClick: () => {
-                D(e.bannerKind)
-              },
-              className: s()(I.bannerItemContainer, {
-                [I.bannerItemContainerSelected]: e.bannerKind === O
-              }),
-              children: [(0, a.jsx)(e.icon, {
-                width: 24,
-                height: 24
-              }), (0, a.jsx)(m.Text, {
-                variant: "text-sm/medium",
-                color: "interactive-normal",
-                className: I.noWrap,
-                children: e.name
+              }), g.CLAN_BRAND_PALETTE_PRESETS.map((e, t) => (0, a.jsx)(m.Clickable, {
+                "aria-label": e.name,
+                onClick: () => {
+                  U(t + 1), F(g.CLAN_BRAND_PALETTE_PRESETS[t])
+                },
+                className: s()(I.brandItemContainer, {
+                  [I.brandItemContainerSelected]: w === t + 1
+                }),
+                children: (0, a.jsx)(A, {
+                  name: e.name,
+                  primaryColor: e.primary,
+                  secondaryColor: e.secondary
+                })
+              }, t)), (0, a.jsx)(_.default, {
+                showSecondaryColor: !0,
+                palette: P,
+                onPrimaryColorChange: e => {
+                  F(t => ({
+                    ...t,
+                    primary: (0, l.int2hex)(e)
+                  }))
+                },
+                onSecondaryColorChange: e => {
+                  F(t => ({
+                    ...t,
+                    secondary: (0, l.int2hex)(e)
+                  }))
+                },
+                shouldShow: G,
+                onRequestClose: () => B(!1),
+                children: e => (0, a.jsx)(m.Clickable, {
+                  ...e,
+                  onClick: () => {
+                    U(N), B(e => !e)
+                  },
+                  className: s()(I.brandItemContainer, {
+                    [I.brandItemContainerSelected]: w === N
+                  }),
+                  children: (0, a.jsx)(A, {
+                    name: x.default.Messages.CLAN_LOOK_PRESET_CUSTOM,
+                    isCustom: !0
+                  })
+                })
               })]
-            }, t))
+            })]
+          }), (0, a.jsxs)("div", {
+            className: I.bannerPickerContainer,
+            children: [(0, a.jsx)(m.Text, {
+              variant: "text-xs/semibold",
+              color: "text-muted",
+              children: x.default.Messages.CLAN_LOOK_BANNER
+            }), (0, a.jsx)("div", {
+              className: I.bannerPickerGrid,
+              children: S.map((e, t) => (0, a.jsxs)(m.Clickable, {
+                "aria-label": e.name,
+                onClick: () => {
+                  D(e.bannerKind)
+                },
+                className: s()(I.bannerItemContainer, {
+                  [I.bannerItemContainerSelected]: e.bannerKind === O
+                }),
+                children: [(0, a.jsx)(e.icon, {
+                  width: 24,
+                  height: 24
+                }), (0, a.jsx)(m.Text, {
+                  variant: "text-sm/medium",
+                  color: "interactive-normal",
+                  className: I.noWrap,
+                  children: e.name
+                })]
+              }, t))
+            })]
           })]
         })]
       }), (0, a.jsx)("div", {
@@ -261,6 +264,6 @@ t.default = e => {
           }
         })
       })]
-    })]
+    })
   })
 }

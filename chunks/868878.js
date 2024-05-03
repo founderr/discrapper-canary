@@ -12,5 +12,7 @@ e.exports = {
   colorPickerContainer: "colorPickerContainer__9b7d0",
   colorPickerGrid: "colorPickerGrid_ba6389",
   colorsContainer: "colorsContainer__2dee9",
+  content: "content__4e550",
+  leftColumn: "leftColumn__82ee9",
   noWrap: "noWrap__133e4"
 }
