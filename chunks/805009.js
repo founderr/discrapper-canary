@@ -142,7 +142,11 @@ class B extends(a = s.Component) {
       clan: t.clan,
       userId: t.id,
       disableTooltip: !0,
-      className: F.clanTag
+      className: F.clanTag,
+      profileViewedAnalytics: {
+        source: d ? P.AnalyticsSections.OVERLAY : P.AnalyticsLocations.VOICE_PANEL,
+        tagUserId: t.id
+      }
     };
     return d ? (0, l.jsxs)(l.Fragment, {
       children: [c, (0, l.jsx)(C.default, {

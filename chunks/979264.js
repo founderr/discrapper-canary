@@ -67,49 +67,48 @@ let S = r.memo(function(e) {
         }) : n, t]
       })
     }) : null
-  });
-
-function A(e) {
-  var t, n;
-  let {
-    clan: a,
-    userId: s,
-    children: _,
-    source: c
-  } = e, I = (0, o.useStateFromStores)([u.default], () => u.default.getUser(s), [s]), T = null !== (t = null == I ? void 0 : I.clan) && void 0 !== t ? t : a, [S, h] = (0, d.useFetchClanInfo)(null !== (n = null == T ? void 0 : T.identityGuildId) && void 0 !== n ? n : null), A = r.useCallback(() => {
-    h()
-  }, [h]);
-  return (0, i.jsx)(l.Popout, {
-    renderPopout: e => {
-      let {
-        closePopout: t
-      } = e;
-      return (0, i.jsx)(E.default, {
-        isLoading: S,
-        clan: T,
-        onClose: t,
-        source: c
+  }),
+  A = r.memo(function(e) {
+    var t, n;
+    let {
+      clan: a,
+      userId: s,
+      children: _,
+      profileViewedAnalytics: c
+    } = e, I = (0, o.useStateFromStores)([u.default], () => u.default.getUser(s), [s]), T = null !== (t = null == I ? void 0 : I.clan) && void 0 !== t ? t : a, [S, h] = (0, d.useFetchClanInfo)(null !== (n = null == T ? void 0 : T.identityGuildId) && void 0 !== n ? n : null), A = r.useCallback(() => {
+      h()
+    }, [h]);
+    return (0, i.jsx)(l.Popout, {
+      renderPopout: e => {
+        let {
+          closePopout: t
+        } = e;
+        return (0, i.jsx)(E.default, {
+          isLoading: S,
+          clan: T,
+          onClose: t,
+          profileViewedAnalytics: c
+        })
+      },
+      position: "top",
+      animationPosition: "top",
+      spacing: 16,
+      children: e => (0, i.jsx)(l.Clickable, {
+        className: f.clickable,
+        tag: "span",
+        ...e,
+        onClick: t => {
+          var n;
+          null === (n = e.onClick) || void 0 === n || n.call(e, t), t.preventDefault(), t.stopPropagation()
+        },
+        onMouseEnter: () => {
+          var t;
+          A(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
+        },
+        children: _
       })
-    },
-    position: "top",
-    animationPosition: "top",
-    spacing: 16,
-    children: e => (0, i.jsx)(l.Clickable, {
-      className: f.clickable,
-      tag: "span",
-      ...e,
-      onClick: t => {
-        var n;
-        null === (n = e.onClick) || void 0 === n || n.call(e, t), t.preventDefault(), t.stopPropagation()
-      },
-      onMouseEnter: () => {
-        var t;
-        A(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
-      },
-      children: _
     })
-  })
-}
+  });
 
 function m(e) {
   let t = (0, o.useStateFromStores)([u.default], () => u.default.getUser(e), [e]),
@@ -130,7 +129,7 @@ t.default = r.memo(function(e) {
     badgeSize: c,
     disableTooltip: E = !1,
     inline: I = !0,
-    source: T
+    profileViewedAnalytics: T
   } = e, S = (0, o.useStateFromStores)([u.default], () => u.default.getUser(r), [r]), N = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n, {
     tag: p,
     badge: O,
@@ -149,7 +148,7 @@ t.default = r.memo(function(e) {
   }) : (0, i.jsx)(A, {
     clan: N,
     userId: r,
-    source: T,
+    profileViewedAnalytics: T,
     children: (0, i.jsx)(h, {
       clanTag: p,
       clanBadge: R,

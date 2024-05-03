@@ -67,7 +67,12 @@ function R(e) {
     V = null != i.messageReference && null != i.webhookId,
     x = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
     F = (0, h.useCanSeeRemixBadge)(),
-    H = {
+    H = s.useMemo(() => ({
+      source: p.AnalyticsSections.CHANNEL,
+      messageId: i.id,
+      tagUserId: i.author.id
+    }), [i.id, i.author.id]),
+    Y = {
       className: O.username,
       style: "username" === x && null != B ? {
         color: B
@@ -79,7 +84,7 @@ function R(e) {
           clan: n.clan,
           userId: i.author.id,
           className: O.clanTagChiplet,
-          source: p.AnalyticsSections.CHANNEL
+          profileViewedAnalytics: H
         })]
       }) : (0, a.jsx)(a.Fragment, {
         children: G + w
@@ -110,20 +115,20 @@ function R(e) {
       return (0, a.jsx)(_.Clickable, {
         tag: "span",
         ...n,
-        ...H,
-        className: l()(H.className, O.clickable, g)
+        ...Y,
+        className: l()(Y.className, O.clickable, g)
       })
     }
   }) : (0, a.jsx)(_.Clickable, {
-    ...H,
-    className: l()(H.className, g)
+    ...Y,
+    className: l()(Y.className, g)
   });
-  let Y = null != P ? P[0] : null,
-    j = null != P ? P[1] : null;
+  let j = null != P ? P[0] : null,
+    W = null != P ? P[1] : null;
   return (0, a.jsxs)(I.AnalyticsLocationProvider, {
     value: b,
-    children: [null != Y && o ? (0, a.jsxs)(a.Fragment, {
-      children: [" ", Y, " "]
+    children: [null != j && o ? (0, a.jsxs)(a.Fragment, {
+      children: [" ", j, " "]
     }) : null, "dot" === x ? (0, a.jsx)(_.RoleDot, {
       color: B,
       name: k,
@@ -132,9 +137,9 @@ function R(e) {
       clan: n.clan,
       userId: i.author.id,
       className: O.clanTagChiplet,
-      source: p.AnalyticsSections.CHANNEL
-    }), null != j ? (0, a.jsx)(a.Fragment, {
-      children: j
-    }) : null, null == Y || o ? null : Y, null != i && (0, S.default)(i) && F && y ? (0, a.jsx)(C, {}) : null]
+      profileViewedAnalytics: H
+    }), null != W ? (0, a.jsx)(a.Fragment, {
+      children: W
+    }) : null, null == j || o ? null : j, null != i && (0, S.default)(i) && F && y ? (0, a.jsx)(C, {}) : null]
   })
 }(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"
