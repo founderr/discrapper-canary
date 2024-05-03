@@ -1,28 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   AGE_TRAITS: function() {
-    return b
+    return G
   },
   ALL_TRAITS_SET: function() {
-    return w
+    return B
   },
   CLAN_BRAND_PALETTE_PRESETS: function() {
-    return V
-  },
-  CLAN_BRAND_PALETTE_PRESETS_BY_NAME: function() {
-    return H
-  },
-  CLAN_BRAND_PRIMARY_DEFAULT: function() {
     return x
   },
-  CLAN_BRAND_SECONDARY_DEFAULT: function() {
+  CLAN_BRAND_PALETTE_PRESETS_BY_NAME: function() {
+    return Y
+  },
+  CLAN_BRAND_PRIMARY_DEFAULT: function() {
     return F
+  },
+  CLAN_BRAND_SECONDARY_DEFAULT: function() {
+    return H
   },
   CLAN_SETTINGS_MODAL_LAYER_KEY: function() {
     return m
   },
   CLAN_SETUP_MODAL_LAYER_KEY: function() {
     return A
+  },
+  CLAN_SETUP_TAG_PLACEHOLDERS: function() {
+    return v
   },
   ClanBannerKind: function() {
     return s
@@ -46,16 +49,16 @@ n.r(t), n.d(t, {
     return L
   },
   GENSHIN_ID: function() {
-    return P
+    return U
   },
   HOISTED_SEARCH_APPLICATION_IDS_BY_PRIORITY: function() {
-    return K
+    return z
   },
   IDENTITY_TRAITS: function() {
-    return G
+    return w
   },
   LANGUAGES_SET: function() {
-    return B
+    return k
   },
   MAX_GAMES_TO_DISPLAY: function() {
     return R
@@ -79,41 +82,41 @@ n.r(t), n.d(t, {
     return C
   },
   PLAYSTYLE_GROUPS: function() {
-    return v
-  },
-  SUGGESTED_TRAITS_SET: function() {
-    return k
-  },
-  VALORANT_ID: function() {
-    return y
-  },
-  VALORANT_TRAITS: function() {
-    return U
-  },
-  ensureUserClanData: function() {
-    return j
-  },
-  getPlaystyleOptions: function() {
-    return M
-  },
-  getPlaystyleTitle: function() {
     return D
   },
+  SUGGESTED_TRAITS_SET: function() {
+    return V
+  },
+  VALORANT_ID: function() {
+    return P
+  },
+  VALORANT_TRAITS: function() {
+    return b
+  },
+  ensureUserClanData: function() {
+    return W
+  },
+  getPlaystyleOptions: function() {
+    return y
+  },
+  getPlaystyleTitle: function() {
+    return M
+  },
   getRandomClanBrandPreset: function() {
-    return Y
+    return j
   },
   getSortedTraits: function() {
     return function e(t, n) {
       let i = null != n ? e(t.filter(e => null == n ? void 0 : n.includes(e))) : [];
-      for (let e of U) !i.includes(e) && t.includes(e) && i.push(e);
       for (let e of b) !i.includes(e) && t.includes(e) && i.push(e);
       for (let e of G) !i.includes(e) && t.includes(e) && i.push(e);
+      for (let e of w) !i.includes(e) && t.includes(e) && i.push(e);
       for (let e of t) !i.includes(e) && i.push(e);
       return i
     }
   },
   toServerClanData: function() {
-    return W
+    return K
   }
 }), n("47120"), n("653041");
 var i, r, a, s, o, l, u, d, _, c, E, I, T = n("913527"),
@@ -131,16 +134,17 @@ let h = 4,
 f()("2024-01-01T00:00:00");
 let L = "";
 (u = i || (i = {}))[u.NONE = 0] = "NONE", u[u.SOCIAL = 1] = "SOCIAL", u[u.CASUAL = 2] = "CASUAL", u[u.COMPETITIVE = 3] = "COMPETITIVE", u[u.CREATIVE = 4] = "CREATIVE", u[u.VERY_HARDCORE = 5] = "VERY_HARDCORE";
-let v = {
-  0: "NONE",
-  4: "NONE",
-  1: "CASUAL",
-  2: "CASUAL",
-  3: "COMPETITIVE",
-  5: "COMPETITIVE"
-};
+let v = ["cozy", "crunchy", "chaos"],
+  D = {
+    0: "NONE",
+    4: "NONE",
+    1: "CASUAL",
+    2: "CASUAL",
+    3: "COMPETITIVE",
+    5: "COMPETITIVE"
+  };
 
-function D(e) {
+function M(e) {
   switch (e) {
     case 1:
       return S.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;
@@ -155,7 +159,7 @@ function D(e) {
   }
 }
 
-function M() {
+function y() {
   return {
     1: {
       type: 1,
@@ -183,16 +187,16 @@ function M() {
     }
   }
 }(d = r || (r = {}))[d.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", d[d.SETUP = 1] = "SETUP", d[d.SIGN = 2] = "SIGN", (_ = a || (a = {}))[_.GAMES = 0] = "GAMES", _[_.PLAYSTYLE = 1] = "PLAYSTYLE", _[_.UTILITY_TRAITS = 2] = "UTILITY_TRAITS", _[_.INTERESTS = 3] = "INTERESTS", _[_.DESCRIPTION = 4] = "DESCRIPTION", _[_.CUSTOMIZE_TAG_BADGE = 5] = "CUSTOMIZE_TAG_BADGE", _[_.CUSTOMIZE_BANNER = 6] = "CUSTOMIZE_BANNER", _[_.MEMBER_APPLICATION = 7] = "MEMBER_APPLICATION";
-let y = "700136079562375258",
-  P = "762434991303950386",
-  U = ["Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF", "Unrated", "All Ranks", "Bronze+", "Silver+", "Gold+", "Platinum+", "Diamond+"],
-  b = ["20+", "30+", "40+", "All Ages"],
-  G = ["Beginner Friendly", "PUGs", "LGBTQIA+", "Parent Friendly", "Work-life Balance", "Streamers"],
-  w = new Set([...U, ...b, ...G]),
-  B = new Set(S.default.getAvailableLocales().map(e => e.value)),
-  k = new Set(["anime", "fanart", "venting", "movie nights", "gacha games", "skincare", "microwaved food", "board games", "sci-fi books", "sleeping", "brunch pics", "pet pictures", "recipes", "speedrunning", "eating on mic", "k-pop", "deafened", "programming", "study buddies", "DnD", "lore dumping", "sleepy cats", "podcasts", "houseplants", "knitting", "tech", "keyboards", "desk setups", "bad movies", "hiking", "lo-fi chilling", "watch together", "listen alongs", "late night tacos", "drip", "trading", "travel", "cups", "coffee", "F1"]);
+let P = "700136079562375258",
+  U = "762434991303950386",
+  b = ["Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF", "Unrated", "All Ranks", "Bronze+", "Silver+", "Gold+", "Platinum+", "Diamond+"],
+  G = ["20+", "30+", "40+", "All Ages"],
+  w = ["Beginner Friendly", "PUGs", "LGBTQIA+", "Parent Friendly", "Work-life Balance", "Streamers"],
+  B = new Set([...b, ...G, ...w]),
+  k = new Set(S.default.getAvailableLocales().map(e => e.value)),
+  V = new Set(["anime", "fanart", "venting", "movie nights", "gacha games", "skincare", "microwaved food", "board games", "sci-fi books", "sleeping", "brunch pics", "pet pictures", "recipes", "speedrunning", "eating on mic", "k-pop", "deafened", "programming", "study buddies", "DnD", "lore dumping", "sleepy cats", "podcasts", "houseplants", "knitting", "tech", "keyboards", "desk setups", "bad movies", "hiking", "lo-fi chilling", "watch together", "listen alongs", "late night tacos", "drip", "trading", "travel", "cups", "coffee", "F1"]);
 (c = s || (s = {}))[c.NIGHT_SKY = 0] = "NIGHT_SKY", c[c.CASTLE = 1] = "CASTLE", c[c.WORLD_MAP = 2] = "WORLD_MAP", c[c.SEA_FOAM = 3] = "SEA_FOAM", c[c.WARP_TUNNEL = 4] = "WARP_TUNNEL", c[c.HOUSE = 5] = "HOUSE", c[c.HEIGHTMAP = 6] = "HEIGHTMAP", c[c.MESH = 7] = "MESH", c[c.SPATTER = 8] = "SPATTER", (E = o || (o = {})).BOULDER = "boulder", E.CASCADE = "cascade", E.THUNDER = "thunder", E.SOUL = "soul", E.MARSH = "marsh", E.VOLCANO = "volcano", E.EARTH = "earth", E.ZEPHYR = "zephyr";
-let V = [{
+let x = [{
     name: "boulder",
     primary: "#8c8d8d",
     secondary: "#d0d0d1"
@@ -225,18 +229,18 @@ let V = [{
     primary: "#4892d5",
     secondary: "#78b6f0"
   }],
-  x = V[0].primary,
-  F = V[0].secondary,
-  H = Object.fromEntries(V.map(e => [e.name, {
+  F = x[0].primary,
+  H = x[0].secondary,
+  Y = Object.fromEntries(x.map(e => [e.name, {
     primary: e.primary,
     secondary: e.secondary
   }]));
 
-function Y() {
-  return V[Math.floor(Math.random() * V.length)]
+function j() {
+  return x[Math.floor(Math.random() * x.length)]
 }
 
-function j(e) {
+function W(e) {
   return null == e ? null : "identityGuildId" in e ? e : {
     identityGuildId: e.identity_guild_id,
     identityEnabled: e.identity_enabled,
@@ -245,10 +249,10 @@ function j(e) {
   }
 }
 
-function W(e) {
+function K(e) {
   return {
     tag: e.tag
   }
 }
-let K = new Map(["432980957394370572", "363445589247131668", "356869127241072640", "700136079562375258", "356875570916753438", "1158877933042143272", "1197827812623650866", "356876176465199104", "1167674267748540516", "542075586886107149", "356875221078245376", "1149118246826561609", "356877880938070016", "356875988589740042", "762434991303950386", "356873622985506820", "356876590342340608", "1205090671527071784", "1182713227491147776", "631914894446297148", "1137125502985961543", "357607478105604096", "359509007423242240", "1121201675240210523", "643897785271189524", "742897755160313986", "356888738724446208", "1199745463918788740", "1116835216464543946", "406637848297472017", "356888961353908224", "905961880789590076", "367827983903490050", "356944273133928458", "356942674672091136", "946609449680908348", "356875762940379136", "615752773690064908", "357607133254254632", "356943499456937984", "477175586805252107", "787443973538971748", "359508713658253318", "356877880938070016", "422772752647323649", "356954277803065354", "359509387670192128", "428055627030331402", "363447565905166336", "372438022647578634", "614380482620293151", "506950362461110273", "356879032584896512", "1161772875901051042", "535371564850479134", "363413743335374859", "385538724592746496", "426526722322726912", "1174041358995042375", "1124351876033425529", "477152881196269569", "1113966530531704943", "425778010222886912", "356875890958925834", "1124358970618953818", "356888577310851072", "398632010442211348", "1124349969906815007", "770314100885422095", "1080277149623271444", "428054228511227914", "358420454764969994", "358421669603311616", "363430548028522496", "1129504162200166401", "1200228630245159032", "356889262362329098", "356887282982191114", "363409643973771264", "1164697075582238730", "940810636273795162", "982316905262120990", "359510095811444736", "363411421553360896", "359509332490059776", "1162076274622222346", "1162085521816813721", "359507724196773888", "359801269008859136", "569253958967885828", "457301824110723113", "1140238527980916757", "1124353632758939688", "542075586886107149", "512699108809637890", "653432003798106122"].map((e, t, n) => [e, n.length - t]));
+let z = new Map(["432980957394370572", "363445589247131668", "356869127241072640", "700136079562375258", "356875570916753438", "1158877933042143272", "1197827812623650866", "356876176465199104", "1167674267748540516", "542075586886107149", "356875221078245376", "1149118246826561609", "356877880938070016", "356875988589740042", "762434991303950386", "356873622985506820", "356876590342340608", "1205090671527071784", "1182713227491147776", "631914894446297148", "1137125502985961543", "357607478105604096", "359509007423242240", "1121201675240210523", "643897785271189524", "742897755160313986", "356888738724446208", "1199745463918788740", "1116835216464543946", "406637848297472017", "356888961353908224", "905961880789590076", "367827983903490050", "356944273133928458", "356942674672091136", "946609449680908348", "356875762940379136", "615752773690064908", "357607133254254632", "356943499456937984", "477175586805252107", "787443973538971748", "359508713658253318", "356877880938070016", "422772752647323649", "356954277803065354", "359509387670192128", "428055627030331402", "363447565905166336", "372438022647578634", "614380482620293151", "506950362461110273", "356879032584896512", "1161772875901051042", "535371564850479134", "363413743335374859", "385538724592746496", "426526722322726912", "1174041358995042375", "1124351876033425529", "477152881196269569", "1113966530531704943", "425778010222886912", "356875890958925834", "1124358970618953818", "356888577310851072", "398632010442211348", "1124349969906815007", "770314100885422095", "1080277149623271444", "428054228511227914", "358420454764969994", "358421669603311616", "363430548028522496", "1129504162200166401", "1200228630245159032", "356889262362329098", "356887282982191114", "363409643973771264", "1164697075582238730", "940810636273795162", "982316905262120990", "359510095811444736", "363411421553360896", "359509332490059776", "1162076274622222346", "1162085521816813721", "359507724196773888", "359801269008859136", "569253958967885828", "457301824110723113", "1140238527980916757", "1124353632758939688", "542075586886107149", "512699108809637890", "653432003798106122"].map((e, t, n) => [e, n.length - t]));
 (I = l || (l = {}))[I.SIZE_12 = 12] = "SIZE_12", I[I.SIZE_16 = 16] = "SIZE_16", I[I.SIZE_24 = 24] = "SIZE_24", I[I.SIZE_36 = 36] = "SIZE_36"

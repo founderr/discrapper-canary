@@ -6,8 +6,8 @@ var a = n("735250"),
   s = n.n(r),
   l = n("481060"),
   o = n("90062"),
-  d = n("964309"),
-  c = n("898543"),
+  c = n("964309"),
+  d = n("898543"),
   u = n("87576"),
   f = n("308083"),
   m = n("689938"),
@@ -18,15 +18,15 @@ let E = e => {
     icon: n,
     traits: r,
     interests: o,
-    handleUpdate: d
-  } = e, c = i.useCallback(e => {
+    handleUpdate: c
+  } = e, d = i.useCallback(e => {
     let t = new Set(o);
-    t.delete(e), d(t)
-  }, [d, o]), u = i.useCallback(e => {
+    t.delete(e), c(t)
+  }, [c, o]), u = i.useCallback(e => {
     if (o.size === f.MAX_NUM_INTERESTS) return;
     let t = new Set(o);
-    t.add(e), d(t)
-  }, [d, o]);
+    t.add(e), c(t)
+  }, [c, o]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(l.Text, {
       className: h.interestsCategoryTitle,
@@ -41,7 +41,7 @@ let E = e => {
           className: s()(h.interestsTag, {
             [h.selected]: t
           }),
-          onClick: () => t ? c(e) : u(e),
+          onClick: () => t ? d(e) : u(e),
           children: [(0, a.jsx)(n, {
             className: h.utilityTagIcon
           }), (0, a.jsx)(l.Text, {
@@ -60,17 +60,23 @@ t.default = e => {
     description: n,
     handleUpdate: r,
     interests: s,
-    requiredGameId: T
-  } = e, p = i.useMemo(() => m.default.getAvailableLocales().map(e => ({
+    requiredGameId: T,
+    optional: p = !1
+  } = e, _ = i.useMemo(() => m.default.getAvailableLocales().map(e => ({
     value: e.value,
     label: e.localizedName
-  })), []), _ = i.useMemo(() => Array.from(s), [s]), C = i.useMemo(() => _.filter(e => f.LANGUAGES_SET.has(e)), [_]), g = i.useCallback(e => {
-    let t = _.filter(e => !f.LANGUAGES_SET.has(e));
+  })), []), C = i.useMemo(() => Array.from(s), [s]), g = i.useMemo(() => C.filter(e => f.LANGUAGES_SET.has(e)), [C]), x = i.useCallback(e => {
+    let t = C.filter(e => !f.LANGUAGES_SET.has(e));
     r(new Set([...t, ...e]))
-  }, [r, _]), x = i.useMemo(() => _.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [_]);
+  }, [r, C]), I = i.useMemo(() => C.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [C]);
   return (0, a.jsxs)("div", {
     className: h.slideContentWithSidebar,
-    children: [(0, a.jsx)(l.Heading, {
+    children: [p && (0, a.jsx)(l.Text, {
+      variant: "text-sm/medium",
+      color: "header-secondary",
+      className: h.optionalTag,
+      children: m.default.Messages.CLAN_SETUP_OPTIONAL
+    }), (0, a.jsx)(l.Heading, {
       variant: "heading-xxl/medium",
       className: h.title,
       children: t
@@ -85,7 +91,7 @@ t.default = e => {
         className: h.mainPanelContainer,
         children: [T === f.VALORANT_ID && (0, a.jsx)(E, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
-          icon: c.default,
+          icon: d.default,
           traits: f.VALORANT_TRAITS,
           interests: s,
           handleUpdate: r
@@ -97,7 +103,7 @@ t.default = e => {
           handleUpdate: r
         }), (0, a.jsx)(E, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
-          icon: d.default,
+          icon: c.default,
           traits: f.IDENTITY_TRAITS,
           interests: s,
           handleUpdate: r
@@ -110,18 +116,18 @@ t.default = e => {
           className: h.languageSelect,
           children: (0, a.jsx)(l.SearchableSelect, {
             wrapperClassName: h.input,
-            options: p,
-            value: C,
-            onChange: g,
+            options: _,
+            value: g,
+            onChange: x,
             placeholder: m.default.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
             multi: !0
           })
         })]
       }), (0, a.jsx)("div", {
         className: h.fixedWidthSidebar,
-        children: _.length > 0 && (0, a.jsx)(u.default, {
-          traits: _,
-          traitsToHighlight: x
+        children: C.length > 0 && (0, a.jsx)(u.default, {
+          traits: C,
+          traitsToHighlight: I
         })
       })]
     })]

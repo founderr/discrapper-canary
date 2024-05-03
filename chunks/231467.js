@@ -207,37 +207,36 @@ function M(e) {
     clan: r,
     bannerComponent: a,
     expanded: l,
-    affinity: d,
-    isMember: _,
-    traitsToHighlight: T,
-    className: f
+    isMember: d,
+    traitsToHighlight: _,
+    className: T
   } = e, {
-    tag: S,
-    badge: h,
+    tag: f,
+    badge: S,
     branding: {
-      primaryColor: A,
-      secondaryColor: N
+      primaryColor: h,
+      secondaryColor: A
     },
-    banner: p
-  } = r, L = (0, u.default)(r.games), M = C.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+    banner: N
+  } = r, p = (0, u.default)(r.games), L = C.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: r.memberCount
-  }), y = null !== (t = m.default.getGuildIconURL({
+  }), M = null !== (t = m.default.getGuildIconURL({
     id: r.id,
     icon: r.icon,
     size: 64,
     canAnimate: !0
   })) && void 0 !== t ? t : void 0;
   return (0, i.jsxs)("div", {
-    className: s()(R.card, f),
+    className: s()(R.card, T),
     children: [(0, i.jsx)("div", {
       className: R.cardBrandingHeader,
       style: {
-        background: "linear-gradient(90deg, ".concat(A, ", ").concat(N, ")")
+        background: "linear-gradient(90deg, ".concat(h, ", ").concat(A, ")")
       },
       children: null != a ? a : (0, i.jsx)(I.default, {
-        banner: p,
-        primaryTintColor: A,
-        secondaryTintColor: N
+        banner: N,
+        primaryTintColor: h,
+        secondaryTintColor: A
       })
     }), (0, i.jsxs)("div", {
       className: R.cardContent,
@@ -247,7 +246,7 @@ function M(e) {
           className: R.cardNameAndTagWrapper,
           children: [(0, i.jsx)(c.ClanGuildIconSimple, {
             guildName: r.name,
-            guildIconURL: y,
+            guildIconURL: M,
             iconSize: 64,
             className: R.clanIcon
           }), (0, i.jsx)("div", {
@@ -255,20 +254,20 @@ function M(e) {
             children: (0, i.jsx)(o.Tooltip, {
               text: C.default.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
               position: "top",
-              shouldShow: !_,
+              shouldShow: !d,
               children: e => (0, i.jsxs)("div", {
                 ...e,
                 className: R.clanTagChiplet,
                 children: [(0, i.jsx)(E.ClanBadge, {
                   width: 16,
                   height: 16,
-                  badge: h.badgeKind,
-                  primaryTintColor: h.primaryColor,
-                  secondaryTintColor: h.secondaryColor
+                  badge: S.badgeKind,
+                  primaryTintColor: S.primaryColor,
+                  secondaryTintColor: S.secondaryColor
                 }), (0, i.jsx)(o.Text, {
                   variant: "text-xs/medium",
                   color: "text-primary",
-                  children: S
+                  children: f
                 })]
               })
             })
@@ -305,9 +304,9 @@ function M(e) {
           children: r.description
         })
       }), (0, i.jsx)(v, {
-        traits: (0, O.getSortedTraits)(r.traits, T),
+        traits: (0, O.getSortedTraits)(r.traits, _),
         expanded: l,
-        traitsToHighlight: T
+        traitsToHighlight: _
       })]
     }), (0, i.jsxs)("div", {
       className: R.cardFooter,
@@ -318,28 +317,21 @@ function M(e) {
           children: (0, i.jsx)(o.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            children: M
+            children: L
           })
         })
       }), (0, i.jsx)("div", {
         className: R.cardFooterGames,
         children: (0, i.jsx)(D, {
-          games: L
+          games: p
         })
       })]
-    }), null != d ? (0, i.jsxs)("div", {
+    }), (0, i.jsx)("div", {
       className: R.cardBrandingFooter,
       style: {
-        background: "linear-gradient(90deg, ".concat(A, ", ").concat(N, ")")
-      },
-      children: [(0, i.jsx)(o.Text, {
-        variant: "text-xxs/normal",
-        children: d
-      }), (0, i.jsx)(o.Text, {
-        variant: "text-xxs/normal",
-        children: _ ? ", Joined" : ", Not Joined"
-      })]
-    }) : null]
+        background: "linear-gradient(90deg, ".concat(h, ", ").concat(A, ")")
+      }
+    })]
   })
 }
 t.default = function(e) {

@@ -7,13 +7,13 @@ var i = n("120356"),
   s = n("481060"),
   l = n("308083"),
   o = n("689938"),
-  d = n("418571");
+  c = n("418571");
 t.default = e => {
   let {
     handleUpdate: t,
     description: n,
     wildcardDescriptors: i,
-    errors: c
+    errors: d
   } = e, u = (e, n) => {
     let a = [...i];
     a[n] = e, t({
@@ -21,23 +21,23 @@ t.default = e => {
     })
   };
   return (0, a.jsxs)("div", {
-    className: d.slideContent,
+    className: c.slideContent,
     children: [(0, a.jsx)(s.Heading, {
       variant: "heading-xxl/medium",
-      className: d.title,
+      className: c.title,
       children: o.default.Messages.CLAN_SETUP_DESCRIPTION_TITLE
     }), (0, a.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: d.subtitle,
+      className: c.subtitle,
       children: o.default.Messages.CLAN_SETUP_DESCRIPTION_SUBTITLE
-    }), (null == c ? void 0 : c.description) != null && (0, a.jsx)(s.Text, {
+    }), (null == d ? void 0 : d.description) != null && (0, a.jsx)(s.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
-      className: d.errorText,
-      children: c.description
+      className: c.errorText,
+      children: d.description
     }), (0, a.jsx)(s.TextArea, {
-      className: d.input,
+      className: c.input,
       maxLength: 160,
       onChange: e => t({
         description: e
@@ -50,38 +50,38 @@ t.default = e => {
     }), (0, a.jsx)(s.Text, {
       variant: "text-sm/medium",
       color: "header-secondary",
-      className: d.optionalTag,
+      className: c.optionalTag,
       children: o.default.Messages.CLAN_SETUP_OPTIONAL
     }), (0, a.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: d.title,
+      className: c.title,
       children: o.default.Messages.CLAN_SETUP_WILDCARDS_SUBTITLE
-    }), (null == c ? void 0 : c.wildcardDescriptors) != null && (0, a.jsx)(s.Text, {
+    }), (null == d ? void 0 : d.wildcardDescriptors) != null && (0, a.jsx)(s.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
-      className: d.errorText,
-      children: c.wildcardDescriptors
+      className: c.errorText,
+      children: d.wildcardDescriptors
     }), (0, a.jsxs)("div", {
-      className: d.wildcardRow,
+      className: c.wildcardRow,
       children: [(0, a.jsx)(s.TextInput, {
-        inputClassName: r()(d.input, d.wildcardInput),
+        inputClassName: r()(c.input, c.wildcardInput),
         value: i[0],
         onChange: e => u(e, 0),
         maxLength: l.MAX_WILDCARD_LENGTH,
-        placeholder: o.default.Messages.CLAN_SETUP_TAG_PLACEHOLDER
+        placeholder: l.CLAN_SETUP_TAG_PLACEHOLDERS["0"]
       }), (0, a.jsx)(s.TextInput, {
-        inputClassName: r()(d.input, d.wildcardInput),
+        inputClassName: r()(c.input, c.wildcardInput),
         value: i[1],
         onChange: e => u(e, 1),
         maxLength: l.MAX_WILDCARD_LENGTH,
-        placeholder: o.default.Messages.CLAN_SETUP_TAG_PLACEHOLDER
+        placeholder: l.CLAN_SETUP_TAG_PLACEHOLDERS["1"]
       }), (0, a.jsx)(s.TextInput, {
-        inputClassName: r()(d.input, d.wildcardInput),
+        inputClassName: r()(c.input, c.wildcardInput),
         value: i[2],
         onChange: e => u(e, 2),
         maxLength: l.MAX_WILDCARD_LENGTH,
-        placeholder: o.default.Messages.CLAN_SETUP_TAG_PLACEHOLDER
+        placeholder: l.CLAN_SETUP_TAG_PLACEHOLDERS["2"]
       })]
     })]
   })

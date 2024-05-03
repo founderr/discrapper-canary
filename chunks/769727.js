@@ -34,17 +34,16 @@ let R = {
 };
 
 function L(e) {
-  var t;
   let {
-    limit: n
-  } = e, l = (0, I.useClanDiscoveryUIStore)(I.buildSearchCriteriaFromUIState, i()), r = (0, I.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), f = (0, I.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, o.default), E = s.useMemo(() => (0, A.getPlaystyleOptions)(), []), h = f ? null === (t = E[f]) || void 0 === t ? void 0 : t.title : "", C = (0, c.useStateFromStores)([m.default], () => m.default.getSearchResult(l), [l]), S = s.useMemo(() => {
-    if ((0, g.isLoadedSearchResult)(C)) {
-      let e = C.items;
-      return null != n ? e.slice(0, n) : e
+    limit: t
+  } = e, n = (0, I.useClanDiscoveryUIStore)(I.buildSearchCriteriaFromUIState, i()), l = (0, I.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), r = (0, c.useStateFromStores)([m.default], () => m.default.getSearchResult(n), [n]), f = s.useMemo(() => {
+    if ((0, g.isLoadedSearchResult)(r)) {
+      let e = r.items;
+      return null != t ? e.slice(0, t) : e
     }
     return null
-  }, [n, C]);
-  return null == S ? null : (0, a.jsxs)("div", {
+  }, [t, r]);
+  return null == f ? null : (0, a.jsxs)("div", {
     className: v.topPicks,
     children: [(0, a.jsxs)("div", {
       className: v.topPicksHeader,
@@ -62,16 +61,14 @@ function L(e) {
       }), (0, a.jsx)(d.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        children: N.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE.format({
-          playstyle: h
-        })
+        children: N.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
       })]
     }), (0, a.jsx)("div", {
       className: v.topPicksContent,
-      children: S.map((e, t) => (0, a.jsx)(_.default, {
+      children: f.map((e, t) => (0, a.jsx)(_.default, {
         clan: e,
-        affinity: (0, g.getClanDiscoveryAffinity)(e, l),
-        traitsToHighlight: r,
+        affinity: (0, g.getClanDiscoveryAffinity)(e, n),
+        traitsToHighlight: l,
         className: v.card,
         index: t
       }, e.id))
