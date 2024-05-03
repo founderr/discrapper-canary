@@ -51,7 +51,7 @@ function c(e) {
       className: _.statusText,
       children: S
     }) : null,
-    C = () => {
+    R = () => {
       let e = s()({
         [_.content]: f && !h || E < 2,
         [_.contentOverflow]: E >= 2
@@ -62,7 +62,7 @@ function c(e) {
         children: [p(), O()]
       })
     },
-    R = s()(_.positionStyle, {
+    C = s()(_.positionStyle, {
       [_.biteSize]: n === d.UserProfileTypes.BITE_SIZE,
       [_.fullSize]: n === d.UserProfileTypes.FULL_SIZE
     }),
@@ -81,12 +81,12 @@ function c(e) {
       [_.statusBubbleCopyStatusCursor]: A
     });
   if (n === d.UserProfileTypes.FULL_SIZE) return (0, i.jsx)("div", {
-    className: R,
+    className: C,
     children: (0, i.jsx)("div", {
       className: g,
       children: (0, i.jsx)("span", {
         className: L,
-        children: C()
+        children: R()
       })
     })
   });
@@ -97,12 +97,12 @@ function c(e) {
   return (0, i.jsx)("div", {
     className: v,
     children: (0, i.jsx)("div", {
-      className: R,
+      className: C,
       children: (0, i.jsx)("div", {
         className: g,
         children: (0, i.jsx)("span", {
           className: L,
-          children: C()
+          children: R()
         })
       })
     })

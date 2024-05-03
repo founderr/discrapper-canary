@@ -45,13 +45,13 @@ function _(e, t, n, i, r) {
     N++, p += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0
   });
   let O = "\n**Pain**:\n- Everyones: ".concat(d.PainLevel[null !== (o = T.everyones) && void 0 !== o ? o : 0], "\n- Messages: ").concat(d.PainLevel[null !== (u = T.messages) && void 0 !== u ? u : 0], "\n- Size: ").concat(f, "\n**Remote**:\n- Channels: ").concat(N, "\n- AllVisits: ").concat(m.map(e => e.totalOpensAcrossAllServers).join(" / "), "\n- GuildVisits: ").concat(m.map(e => e.guildOpens).join(" / "), "\n- Biggest Channel (abs): ").concat(m.map(e => e.biggestChannel).join(" / "), "\n- Biggest Channel (%): ").concat(m.map(e => e.biggestChannelFormatted).join(" / "), "\n- Sent Msgs: ").concat(p, "\n"),
-    C = A.guildOpens >= .02 * A.totalOpensAcrossAllServers,
-    R = (null !== (_ = S.guildOpens) && void 0 !== _ ? _ : 0) > 0;
+    R = A.guildOpens >= .02 * A.totalOpensAcrossAllServers,
+    C = (null !== (_ = S.guildOpens) && void 0 !== _ ? _ : 0) > 0;
   if (T.messages === d.PainLevel.High) {
-    if (!r) return [d.Mode.UseGreyDot, C, "UseGreyDot" + O];
-    if (!C && R) return [d.Mode.UseGreyDot, C, "UseGreyDot" + O]
+    if (!r) return [d.Mode.UseGreyDot, R, "UseGreyDot" + O];
+    if (!R && C) return [d.Mode.UseGreyDot, R, "UseGreyDot" + O]
   }
-  return [d.Mode.KeepAsIs, C, "KeepAsIs" + O]
+  return [d.Mode.KeepAsIs, R, "KeepAsIs" + O]
 }
 
 function c(e, t, n, i) {

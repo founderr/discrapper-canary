@@ -1,77 +1,77 @@
 "use strict";
-t.r(a), t.d(a, {
+a.r(t), a.d(t, {
   FilterLoadingIndicator: function() {
-    return M
+    return m
   },
   default: function() {
-    return m
+    return M
   }
-}), t("47120");
-var s = t("735250"),
-  n = t("470079"),
-  l = t("120356"),
-  o = t.n(l),
-  c = t("442837"),
-  i = t("846519"),
-  r = t("481060"),
-  d = t("846027"),
-  u = t("695346"),
-  _ = t("716161"),
-  O = t("938117"),
-  E = t("131951"),
-  g = t("626135"),
-  A = t("981631"),
-  p = t("689938"),
-  f = t("240660");
+}), a("47120");
+var s = a("735250"),
+  n = a("470079"),
+  l = a("120356"),
+  o = a.n(l),
+  i = a("442837"),
+  c = a("846519"),
+  r = a("481060"),
+  d = a("846027"),
+  u = a("695346"),
+  _ = a("716161"),
+  O = a("938117"),
+  E = a("131951"),
+  p = a("626135"),
+  A = a("981631"),
+  g = a("689938"),
+  f = a("240660");
 
-function M() {
-  let [e, a] = n.useState(!1), t = (0, c.useStateFromStores)([E.default], () => E.default.isMediaFilterSettingLoading());
+function m() {
+  let [e, t] = n.useState(!1), a = (0, i.useStateFromStores)([E.default], () => E.default.isMediaFilterSettingLoading());
   return (n.useEffect(() => {
-    let e = new i.Timeout;
-    return t ? e.start(150, () => {
-      a(!0)
-    }) : (e.stop(), a(!1)), () => e.stop()
-  }, [t]), e) ? (0, s.jsx)("div", {
+    let e = new c.Timeout;
+    return a ? e.start(150, () => {
+      t(!0)
+    }) : (e.stop(), t(!1)), () => e.stop()
+  }, [a]), e) ? (0, s.jsx)("div", {
     className: f.filterLoadingIndicator,
     children: (0, s.jsx)(r.Spinner, {})
   }) : null
 }
 
-function m(e) {
+function M(e) {
   let {
-    hideDeviceSelector: a = !1,
-    hideDeviceHeader: t = !1,
+    hideDeviceSelector: t = !1,
+    hideDeviceHeader: a = !1,
     onLearnMore: l,
-    selectedBackgroundOption: i,
-    onSelectBackgroundOption: M,
-    renderCamera: m,
-    hidePreviewToggle: v = !1,
-    showSmallBackgroundOptions: I = !1
-  } = e, h = (0, c.useStateFromStores)([E.default], () => E.default.getVideoDeviceId()), x = (0, c.useStateFromStoresArray)([E.default], () => Object.values(E.default.getVideoDevices())), C = u.AlwaysPreviewVideo.useSetting(), N = x.map(e => {
+    selectedBackgroundOption: c,
+    onSelectBackgroundOption: m,
+    renderCamera: M,
+    hidePreviewToggle: I = !1,
+    showSmallBackgroundOptions: v = !1
+  } = e, h = (0, i.useStateFromStores)([E.default], () => E.default.getVideoDeviceId()), x = (0, i.useStateFromStoresArray)([E.default], () => Object.values(E.default.getVideoDevices())), C = u.AlwaysPreviewVideo.useSetting(), N = x.map(e => {
     let {
-      id: a,
-      name: t
+      id: t,
+      name: a
     } = e;
     return {
-      value: a,
-      label: t
+      value: t,
+      label: a
     }
   });
   return n.useEffect(() => {
     (0, _.fetchVideoFilterAssets)()
   }, []), (0, s.jsxs)(s.Fragment, {
-    children: [m(h), E.default.isEnabled() ? null : (0, s.jsx)(r.Text, {
+    children: [M(h), E.default.isEnabled() ? null : (0, s.jsx)(r.Text, {
       className: f.permissionWarning,
       color: "interactive-normal",
       variant: "text-sm/normal",
-      children: p.default.Messages.FORM_WARNING_VIDEO_PREVIEW.format({
+      children: g.default.Messages.FORM_WARNING_VIDEO_PREVIEW.format({
         onEnableClick: d.default.enable
       })
-    }), v ? null : (0, s.jsx)(r.FormSwitch, {
+    }), I ? null : (0, s.jsx)(r.FormSwitch, {
       className: f.previewToggle,
-      note: p.default.Messages.CAMERA_PREVIEW_ALWAYS_PREVIEW_NOTE,
+      note: g.default.Messages.CAMERA_PREVIEW_ALWAYS_PREVIEW_NOTE,
       onChange: e => {
-        u.AlwaysPreviewVideo.updateSetting(e), g.default.track(A.AnalyticEvents.UPDATE_USER_SETTINGS_LOCAL, {
+        u.AlwaysPreviewVideo.updateSetting(e), p.default.track(A.AnalyticEvents.UPDATE_USER_SETTINGS_LOCAL, {
           always_preview_video: e
         })
       },
@@ -79,18 +79,18 @@ function m(e) {
       hideBorder: !0,
       children: (0, s.jsx)("div", {
         className: f.cameraPreviewTitle,
-        children: p.default.Messages.CAMERA_PREVIEW_ALWAYS_PREVIEW
+        children: g.default.Messages.CAMERA_PREVIEW_ALWAYS_PREVIEW
       })
-    }), a ? null : (0, s.jsxs)(s.Fragment, {
-      children: [t ? null : (0, s.jsx)(r.Heading, {
+    }), t ? null : (0, s.jsxs)(s.Fragment, {
+      children: [a ? null : (0, s.jsx)(r.Heading, {
         className: f.spacingTop24,
         variant: "eyebrow",
         color: "header-secondary",
-        children: p.default.Messages.CAMERA_PREVIEW_CAMERA
+        children: g.default.Messages.CAMERA_PREVIEW_CAMERA
       }), (0, s.jsx)(r.SingleSelect, {
-        placeholder: p.default.Messages.CHANGE_CAMERA,
+        placeholder: g.default.Messages.CHANGE_CAMERA,
         className: o()(f.selector, {
-          [f.selectorNoHeader]: t
+          [f.selectorNoHeader]: a
         }),
         options: N,
         value: h,
@@ -98,10 +98,10 @@ function m(e) {
       })]
     }), (0, s.jsx)(O.default, {
       onLearnMore: l,
-      selectedBackgroundOption: i,
-      onSelectBackgroundOption: M,
+      selectedBackgroundOption: c,
+      onSelectBackgroundOption: m,
       currentDeviceId: h,
-      smallerBackgroundOptions: I
+      smallerBackgroundOptions: v
     })]
   })
 }

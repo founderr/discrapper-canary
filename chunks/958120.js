@@ -32,9 +32,9 @@ function m(e) {
     isHovering: N,
     onOpenProfile: p,
     channelId: O,
-    onClose: C
+    onClose: R
   } = e, {
-    moreUserDetailsEnabled: R
+    moreUserDetailsEnabled: C
   } = (0, u.useSimplifiedProfileExperiment)({
     location: "BiteSizeProfileBody"
   }), g = l.default.getName(null == m ? void 0 : m.id, O, t), L = (0, s.useStateFromStores)([o.default], () => o.default.hidePersonalInformation);
@@ -51,12 +51,12 @@ function m(e) {
       pronouns: null == r ? void 0 : r.pronouns,
       tags: (0, i.jsx)(E.UserProfileBadgesTag, {
         displayProfile: r,
-        onClose: C
+        onClose: R
       }),
       nicknameIcons: (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(d.default, {
           userId: t.id
-        }), R && !L && (0, i.jsx)(_.default, {
+        }), C && !L && (0, i.jsx)(_.default, {
           className: a()(A.noteIcon, {
             [A.visible]: N
           }),
@@ -66,17 +66,17 @@ function m(e) {
       })
     }), (0, i.jsx)(h.default, {
       user: t,
-      onClose: C
-    }), R && (0, i.jsx)(f.default, {
+      onClose: R
+    }), C && (0, i.jsx)(f.default, {
       user: t,
       bio: null == r ? void 0 : r.bio,
       hidePersonalInformation: L,
-      onClose: C
+      onClose: R
     }), (0, i.jsx)(T.default, {
       user: t,
       guild: m,
       channelId: O,
-      onClose: C
+      onClose: R
     }), null != m && (0, i.jsx)(S.default, {
       user: t,
       currentUser: n,

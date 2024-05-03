@@ -54,8 +54,8 @@ t.default = s.memo(function(e) {
     onFocus: N,
     onBlur: p,
     pulse: O,
-    sparkle: C,
-    notification: R,
+    sparkle: R,
+    notification: C,
     "aria-label": g,
     "aria-expanded": L,
     "aria-haspopup": v,
@@ -67,7 +67,7 @@ t.default = s.memo(function(e) {
     let {
       component: t
     } = e;
-    return null != R ? (0, a.jsxs)("div", {
+    return null != C ? (0, a.jsxs)("div", {
       className: I.buttonContent,
       children: [(0, a.jsx)(E.default, {
         className: I.iconMask,
@@ -126,7 +126,7 @@ t.default = s.memo(function(e) {
           })
         })
       }, i) : void 0
-    }), C && (0, a.jsxs)("div", {
+    }), R && (0, a.jsxs)("div", {
       className: I.sparkleContainer,
       children: [(0, a.jsx)(c.default, {
         className: I.sparkleStar

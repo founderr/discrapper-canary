@@ -1,4 +1,4 @@
-var n = {
+var i = {
   "./2017-11-16.mp4": "221825",
   "./2019-12-17.mp4": "666940",
   "./channel-following.png": "247815",
@@ -23,17 +23,17 @@ var n = {
   "./store.jpg": "926213"
 };
 
-function l(e) {
-  return a(s(e))
+function r(e) {
+  return n(a(e))
 }
 
-function s(e) {
-  if (!a.o(n, e)) {
+function a(e) {
+  if (!n.o(i, e)) {
     var t = Error("Cannot find module '" + e + "'");
     throw t.code = "MODULE_NOT_FOUND", t
   }
-  return n[e]
+  return i[e]
 }
-l.id = '"866483"', l.keys = function() {
-  return Object.keys(n)
-}, l.resolve = s, e.exports = l
+r.id = '"866483"', r.keys = function() {
+  return Object.keys(i)
+}, r.resolve = a, e.exports = r

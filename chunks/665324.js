@@ -103,7 +103,7 @@ function H(e) {
     })]
   })
 }
-let k = e => {
+let w = e => {
     let {
       renderPopoutBody: t,
       renderPopoutChildren: s,
@@ -125,7 +125,7 @@ let k = e => {
       children: e => s(e)
     })
   },
-  w = () => (0, a.jsx)(k, {
+  k = () => (0, a.jsx)(w, {
     renderPopoutBody: () => (0, a.jsx)(c.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
@@ -178,7 +178,7 @@ function V(e) {
     },
     disabled: _ <= 0 || !r,
     children: P.default.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND
-  }) : (0, a.jsx)(w, {});
+  }) : (0, a.jsx)(k, {});
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       children: [(0, a.jsx)(c.Text, {

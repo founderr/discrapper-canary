@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n("47120");
-var a, i, r, s, l = n("442837"),
-  o = n("570140");
+a.r(t), a("47120");
+var n, r, i, s, l = a("442837"),
+  o = a("570140");
 let c = {},
   d = null,
   u = [],
@@ -13,7 +13,7 @@ let c = {},
 function T() {
   m = !0
 }
-class p extends(a = l.default.Store) {
+class p extends(n = l.default.Store) {
   getAppliedGuildBoostsForGuild(e) {
     return null != c[e] ? c[e].subscriptions : null
   }
@@ -42,19 +42,19 @@ class p extends(a = l.default.Store) {
     return f
   }
 }
-s = "AppliedGuildBoostStore", (r = "displayName") in(i = p) ? Object.defineProperty(i, r, {
+s = "AppliedGuildBoostStore", (i = "displayName") in(r = p) ? Object.defineProperty(r, i, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new p(o.default, {
+}) : r[i] = s, t.default = new p(o.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
-      appliedBoosts: n
+      appliedBoosts: a
     } = e;
     c[t] = {
-      subscriptions: n,
+      subscriptions: a,
       lastFetchedAt: Date.now()
     }
   },
@@ -75,8 +75,8 @@ s = "AppliedGuildBoostStore", (r = "displayName") in(i = p) ? Object.definePrope
   GUILD_APPLY_BOOST_SUCCESS: function(e) {
     let {
       appliedGuildBoost: t
-    } = e, n = new Set(t.map(e => e.id));
-    u = [...t, ...u.filter(e => !n.has(e.id))], h = null, m = !1
+    } = e, a = new Set(t.map(e => e.id));
+    u = [...t, ...u.filter(e => !a.has(e.id))], h = null, m = !1
   },
   GUILD_APPLY_BOOST_FAIL: function(e) {
     let {

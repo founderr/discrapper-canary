@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ReferencePositionLayer: function() {
-    return R
+    return C
   },
   referencePortalAwareContains: function() {
     return m
@@ -86,14 +86,14 @@ function O(e, t, n) {
   return n
 }
 
-function C(e) {
+function R(e) {
   let {
     targetRef: t,
     overrideTargetRect: n
   } = e;
   return null != n ? n : (u()(null != t.current, "Invalid ref"), t.current.getBoundingClientRect())
 }
-class R extends(i = a.Component) {
+class C extends(i = a.Component) {
   formatDimension(e) {
     return this.props.useRawTargetDimensions ? e : Math.ceil(e)
   }
@@ -214,7 +214,7 @@ class R extends(i = a.Component) {
     var i, r, a;
     let {
       spacing: s = 0
-    } = this.props, o = C(this.props), l = n.getBoundingClientRect();
+    } = this.props, o = R(this.props), l = n.getBoundingClientRect();
     let u = (i = o, r = l.left, a = l.top, {
       top: i.top - a,
       left: i.left - r,
@@ -315,8 +315,8 @@ class R extends(i = a.Component) {
   }
   componentDidUpdate(e, t) {
     if ((N(e) !== N(this.props) || ! function(e, t) {
-        let n = C(e),
-          i = C(t);
+        let n = R(e),
+          i = R(t);
         return n.top === i.top && n.left === i.left
       }(e, this.props)) && this.updatePosition(), t.position !== this.state.position) {
       var n, i;
@@ -392,7 +392,7 @@ class R extends(i = a.Component) {
     })
   }
 }
-h(R, "defaultProps", {
+h(C, "defaultProps", {
   nudgeAlignIntoViewport: !1,
   spacing: 0,
   autoInvert: !1,

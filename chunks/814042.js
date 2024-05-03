@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   StickersPremiumUpsell: function() {
-    return C
+    return R
   }
 });
 var i = n("735250"),
@@ -25,34 +25,34 @@ var i = n("735250"),
   N = n("325687"),
   p = n("867250");
 let O = () => (0, f.setShowPremiumUpsell)(!1),
-  C = e => {
+  R = e => {
     var t, n, a;
     let {
       onLearnMore: f
     } = e, {
-      analyticsLocations: C
+      analyticsLocations: R
     } = (0, u.default)(l.default.PREMIUM_UPSELL);
     r.useEffect(() => {
       I.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         location_section: h.AnalyticsSections.STICKER_PICKER_UPSELL,
         type: A.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
-        location_stack: C
+        location_stack: R
       })
-    }, [C]);
-    let R = (0, _.usePremiumTrialOffer)(),
+    }, [R]);
+    let C = (0, _.usePremiumTrialOffer)(),
       g = (0, d.usePremiumDiscountOffer)(),
-      L = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === A.PremiumSubscriptionSKUs.TIER_0,
-      v = null != R || null != g;
+      L = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === A.PremiumSubscriptionSKUs.TIER_0,
+      v = null != C || null != g;
     return (0, i.jsxs)("div", {
       className: s()(N.upsellWrapper, {
         [N.unifyTrialUpsell]: v
       }),
       children: [v ? (0, i.jsx)(c.default, {
-        trialOffer: R,
+        trialOffer: C,
         discountOffer: g,
         onClose: O,
         type: A.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
-        subscriptionTier: null !== (a = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : A.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: null !== (a = null == C ? void 0 : null === (n = C.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : A.PremiumSubscriptionSKUs.TIER_2,
         children: L ? m.default.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
           planName: (0, T.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
           onClick: f

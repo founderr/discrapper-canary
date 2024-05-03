@@ -45,8 +45,8 @@ var a = s("735250"),
   y = s("592125"),
   F = s("324067"),
   H = s("650774"),
-  k = s("496675"),
-  w = s("699516"),
+  w = s("496675"),
+  k = s("699516"),
   V = s("594174"),
   Y = s("285952"),
   W = s("976644"),
@@ -95,7 +95,7 @@ function eN(e) {
     label: t,
     channel: s,
     category: l
-  } = e, n = (0, R.getChannelIconComponent)(s), i = null != l ? (0, C.computeChannelName)(l, V.default, w.default) : null;
+  } = e, n = (0, R.getChannelIconComponent)(s), i = null != l ? (0, C.computeChannelName)(l, V.default, k.default) : null;
   return (0, a.jsx)(z.default, {
     title: t,
     icon: n,
@@ -106,7 +106,7 @@ function eN(e) {
 function eg(e) {
   return {
     value: e.id,
-    label: (0, C.computeChannelName)(e, V.default, w.default),
+    label: (0, C.computeChannelName)(e, V.default, k.default),
     channel: e,
     category: y.default.getChannel(e.parent_id)
   }
@@ -962,9 +962,9 @@ function eR() {
     {
       canManageGuild: _,
       isGuildAdmin: I
-    } = (0, c.useStateFromStoresObject)([k.default], () => ({
-      canManageGuild: k.default.can(es.Permissions.MANAGE_GUILD, t),
-      isGuildAdmin: k.default.can(es.Permissions.ADMINISTRATOR, t)
+    } = (0, c.useStateFromStoresObject)([w.default], () => ({
+      canManageGuild: w.default.can(es.Permissions.MANAGE_GUILD, t),
+      isGuildAdmin: w.default.can(es.Permissions.ADMINISTRATOR, t)
     })),
     T = (0, c.useStateFromStores)([H.default], () => H.default.getMemberCount(null == t ? void 0 : t.id)),
     S = (0, c.useStateFromStores)([V.default], () => V.default.getCurrentUser());

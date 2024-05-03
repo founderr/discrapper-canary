@@ -15,8 +15,8 @@ var d, _, c, E, I = n("392711"),
   N = n("703656"),
   p = n("131704"),
   O = n("823379"),
-  C = n("314897"),
-  R = n("592125"),
+  R = n("314897"),
+  C = n("592125"),
   g = n("984933"),
   L = n("430824"),
   v = n("131951"),
@@ -42,7 +42,7 @@ function k() {
     selectedChannelIds: U,
     mostRecentSelectedTextChannelIds: G,
     knownThreadIds: T()(U).values().concat(T().values(G)).filter(O.isNotNullish).uniq().filter(e => {
-      let t = R.default.getBasicChannel(e);
+      let t = C.default.getBasicChannel(e);
       return w.has(e) || null != t && p.THREAD_CHANNEL_TYPES.has(t.type)
     }).value()
   })
@@ -57,14 +57,14 @@ function V(e) {
 
 function x(e, t) {
   if (null == e || null == t || G[e] === t) return !1;
-  let n = R.default.getChannel(t),
+  let n = C.default.getChannel(t),
     i = null != n && (0, p.isGuildTextChannelType)(n.type),
     r = (null == n ? void 0 : n.getGuildId()) === e;
   return !!i && !!r && (G[e] = t, !0)
 }
 
 function F(e) {
-  let t = R.default.getMutableBasicGuildChannelsForGuild(e),
+  let t = C.default.getMutableBasicGuildChannelsForGuild(e),
     n = T().find(t, e => e.type === M.ChannelTypes.GUILD_VOICE);
   return null == n ? void 0 : n.id
 }
@@ -73,9 +73,9 @@ function H() {
   let e = !1,
     t = L.default.getGuilds();
   return T().each(U, (t, n) => {
-    (null == t || !R.default.hasChannel(t) && t !== a && !w.has(t) && !(0, y.isGuildHomeChannel)(t)) && (delete U[n], delete b[n], e = !0)
+    (null == t || !C.default.hasChannel(t) && t !== a && !w.has(t) && !(0, y.isGuildHomeChannel)(t)) && (delete U[n], delete b[n], e = !0)
   }), T().each(G, (t, n) => {
-    (null == t || !R.default.hasChannel(t) && !w.has(t)) && (delete G[n], e = !0)
+    (null == t || !C.default.hasChannel(t) && !w.has(t)) && (delete G[n], e = !0)
   }), T().each(t, e => {
     let t = U[e.id];
     null == G[e.id] && x(e.id, t)
@@ -118,7 +118,7 @@ class W extends(d = f.default.Store) {
         null: null
       })
     }
-    this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(L.default, R.default, D.default, g.default, v.default)
+    this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(L.default, C.default, D.default, g.default, v.default)
   }
   getChannelId(e) {
     var t, n;
@@ -153,7 +153,7 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
   writable: !0
 }) : _[c] = E, t.default = new W(h.default, {
   CONNECTION_OPEN: function(e) {
-    i = e.sessionId, null != o && null == R.default.getChannel(o) && (o = null), H() && k()
+    i = e.sessionId, null != o && null == C.default.getChannel(o) && (o = null), H() && k()
   },
   OVERLAY_INITIALIZE: function(e) {
     i = e.sessionId, o = e.selectedVoiceChannelId, U = {}, b = {}, a = e.selectedChannelId, U[e.selectedGuildId] = e.selectedChannelId, x(e.selectedGuildId, a), H()
@@ -213,7 +213,7 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
       channelId: t
     } = e;
     if (null == t) {
-      let e = R.default.getChannel(o),
+      let e = C.default.getChannel(o),
         t = null == e ? void 0 : e.guild_id;
       null != t && t !== D.default.getGuildId() && U[t] === o && (U[t] = V(t))
     }
@@ -227,15 +227,15 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
       var n, r, a;
       if (t.sessionId === i) {
         clearInterval(u);
-        let e = null === (n = R.default.getChannel(o)) || void 0 === n ? void 0 : n.getGuildId();
+        let e = null === (n = C.default.getChannel(o)) || void 0 === n ? void 0 : n.getGuildId();
         t.guildId !== e && null == t.channelId || (o = t.channelId), l = Date.now(), null != o && (u = setInterval(() => {
           l = Date.now(), k()
         }, 6e4)), k()
       } else {
-        if (t.userId !== C.default.getId()) return e;
+        if (t.userId !== R.default.getId()) return e;
         clearInterval(u), u = void 0, l = 0;
-        let n = null === (r = R.default.getChannel(o)) || void 0 === r ? void 0 : r.getGuildId(),
-          i = null === (a = R.default.getChannel(t.channelId)) || void 0 === a ? void 0 : a.getGuildId();
+        let n = null === (r = C.default.getChannel(o)) || void 0 === r ? void 0 : r.getGuildId(),
+          i = null === (a = C.default.getChannel(t.channelId)) || void 0 === a ? void 0 : a.getGuildId();
         null != n && i === n && (o = null), k()
       }
       return !0

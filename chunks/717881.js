@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("199902"),
   p = n("592125"),
   O = n("430824"),
-  C = n("496675"),
-  R = n("979651"),
+  R = n("496675"),
+  C = n("979651"),
   g = n("543595"),
   L = n("626135"),
   v = n("153066"),
@@ -72,9 +72,9 @@ t.default = function(e) {
     hideHeader: d = !1,
     analyticsParams: _,
     ...v
-  } = e, U = (0, o.useStateFromStores)([R.default, p.default], () => {
+  } = e, U = (0, o.useStateFromStores)([C.default, p.default], () => {
     var e;
-    return p.default.getChannel(null === (e = R.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId)
+    return p.default.getChannel(null === (e = C.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId)
   }), {
     enableHangStatus: b
   } = A.HangStatusExperiment.useExperiment({
@@ -82,9 +82,9 @@ t.default = function(e) {
     location: "UserActivityContainer"
   }, {
     autoTrackExposure: !1
-  }), G = (0, o.useStateFromStores)([N.default], () => a ? N.default.getAnyStreamForUser(n.id) : null), w = b && C.default.can(D.Permissions.CONNECT, U), B = (null == t ? void 0 : t.type) === D.ActivityTypes.HANG_STATUS && w ? U : null, k = (0, o.useStateFromStores)([O.default, R.default, p.default], () => {
+  }), G = (0, o.useStateFromStores)([N.default], () => a ? N.default.getAnyStreamForUser(n.id) : null), w = b && R.default.can(D.Permissions.CONNECT, U), B = (null == t ? void 0 : t.type) === D.ActivityTypes.HANG_STATUS && w ? U : null, k = (0, o.useStateFromStores)([O.default, C.default, p.default], () => {
     var e, i;
-    return (0, u.default)(t, D.ActivityFlags.EMBEDDED) ? O.default.getGuild(null === (e = p.default.getChannel(null === (i = R.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != B ? O.default.getGuild(B.getGuildId()) : null
+    return (0, u.default)(t, D.ActivityFlags.EMBEDDED) ? O.default.getGuild(null === (e = p.default.getChannel(null === (i = C.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != B ? O.default.getGuild(B.getGuildId()) : null
   }), V = (0, o.useStateFromStores)([O.default], () => null != G ? O.default.getGuild(G.guildId) : null), x = (0, o.useStateFromStores)([c.default], () => {
     if (null != t) return null != t.application_id ? c.default.getApplication(t.application_id) : c.default.getApplicationByName(t.name);
     return null

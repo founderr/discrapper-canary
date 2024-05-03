@@ -22,8 +22,8 @@ var i, r, a, s = n("735250"),
   N = n("802856"),
   p = n("420660"),
   O = n("471445"),
-  C = n("833858"),
-  R = n("223135"),
+  R = n("833858"),
+  C = n("223135"),
   g = n("769654"),
   L = n("750154"),
   v = n("768581"),
@@ -182,7 +182,7 @@ class z extends(r = o.PureComponent) {
     let r, a;
     if (e.type === k.ActivityTypes.HANG_STATUS) return (0, s.jsx)("div", {
       className: F.assets,
-      children: (0, s.jsx)(R.default, {
+      children: (0, s.jsx)(C.default, {
         hangStatusActivity: e,
         className: u()(F.assetsHangStatus, this.getTypeClass("assetsSmallImage", "WithoutLargeImage"))
       })
@@ -307,7 +307,7 @@ class z extends(r = o.PureComponent) {
     let o = (0, A.default)(e),
       l = e.name,
       u = l;
-    return (a === k.ActivityTypes.HANG_STATUS ? u = (0, C.getHangStatusText)(e) : o && null != n ? u = (0, s.jsx)("span", {
+    return (a === k.ActivityTypes.HANG_STATUS ? u = (0, R.getHangStatusText)(e) : o && null != n ? u = (0, s.jsx)("span", {
       className: F.activityName,
       children: u
     }) : !o && (l = r, u = r, (0, m.default)(e) && null != e.sync_id && null != r ? u = (0, s.jsx)(E.Anchor, {

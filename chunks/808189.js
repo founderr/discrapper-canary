@@ -22,8 +22,8 @@ var r = n("120356"),
   N = n("981631"),
   p = n("474936"),
   O = n("689938"),
-  C = n("277801");
-let R = [{
+  R = n("277801");
+let C = [{
   tier: N.BoostedGuildTiers.TIER_1,
   perks: [{
     icon: l.default,
@@ -88,46 +88,46 @@ t.default = function(e) {
     guild: t
   } = e;
   return (0, i.jsx)("div", {
-    className: C.tierCards,
-    children: R.map(e => (0, i.jsxs)("div", {
-      className: C.tierCard,
+    className: R.tierCards,
+    children: C.map(e => (0, i.jsxs)("div", {
+      className: R.tierCard,
       children: [e.tier === N.BoostedGuildTiers.TIER_3 && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("div", {
-          className: a()(C.tierCardBorderHighlight, C.tierCardBorderHighlightTopRight)
+          className: a()(R.tierCardBorderHighlight, R.tierCardBorderHighlightTopRight)
         }), (0, i.jsx)("div", {
-          className: a()(C.tierCardBorderHighlight, C.tierCardBorderHighlightBottomLeft)
+          className: a()(R.tierCardBorderHighlight, R.tierCardBorderHighlightBottomLeft)
         }), (0, i.jsxs)("div", {
-          className: a()(C.tierCardSparkleHighlight, C.tierCardSparkleHighlightTopRight),
+          className: a()(R.tierCardSparkleHighlight, R.tierCardSparkleHighlightTopRight),
           children: [(0, i.jsx)(f.default, {
-            className: C.tierCardSparkle1
+            className: R.tierCardSparkle1
           }), (0, i.jsx)(f.default, {
-            className: C.tierCardSparkle2
+            className: R.tierCardSparkle2
           }), (0, i.jsx)(T.default, {
-            className: C.tierCardSparkle3
+            className: R.tierCardSparkle3
           })]
         }), (0, i.jsx)("div", {
-          className: a()(C.tierCardSparkleHighlight, C.tierCardSparkleHighlightBottomLeft),
+          className: a()(R.tierCardSparkleHighlight, R.tierCardSparkleHighlightBottomLeft),
           children: (0, i.jsx)(f.default, {
-            className: C.tierCardSparkle1
+            className: R.tierCardSparkle1
           })
         })]
       }), e.tier === t.premiumTier && (0, i.jsx)(s.Text, {
-        className: C.tierCardCurrentTier,
+        className: R.tierCardCurrentTier,
         tag: "div",
         variant: "text-xs/semibold",
         color: "always-white",
         children: O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_CURRENT_TIER_LABEL
       }), (0, i.jsxs)("div", {
-        className: C.tierCardHeader,
+        className: R.tierCardHeader,
         children: [(0, i.jsx)(s.Heading, {
-          className: C.tierCardHeading,
+          className: R.tierCardHeading,
           variant: "heading-xxl/semibold",
           color: "always-white",
           children: (0, m.getTierName)(e.tier, {
             useLevels: !1
           })
         }), (0, i.jsx)(s.Text, {
-          className: C.tierCardBoostRequirement,
+          className: R.tierCardBoostRequirement,
           variant: "text-md/normal",
           color: "always-white",
           children: O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTS_REQUIRED.format({
@@ -135,18 +135,18 @@ t.default = function(e) {
           })
         })]
       }), (0, i.jsx)("ul", {
-        className: C.tierCardList,
+        className: R.tierCardList,
         children: e.perks.map((e, t) => null == e.predicate || e.predicate() ? (0, i.jsxs)("li", {
-          className: C.tierCardPerkRow,
+          className: R.tierCardPerkRow,
           children: [(0, i.jsxs)(s.Text, {
-            className: C.tierCardListItem,
+            className: R.tierCardListItem,
             variant: "text-md/normal",
             color: "always-white",
             children: [(0, i.jsx)(e.icon, {
-              className: C.tierCardListIcon
+              className: R.tierCardListIcon
             }), e.getCopy()]
           }), e.isNew ? (0, i.jsx)(o.default, {
-            className: C.tierCardNewFeatureBadge,
+            className: R.tierCardNewFeatureBadge,
             forceUseColorForSparkles: !0,
             shouldInheritBackgroundColor: !0,
             shouldInheritTextColor: !0

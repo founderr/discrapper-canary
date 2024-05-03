@@ -17,8 +17,8 @@ var i, r, a, s, o = n("392711"),
   N = n("944486"),
   p = n("885110"),
   O = n("959457"),
-  C = n("358085"),
-  R = n("138859"),
+  R = n("358085"),
+  C = n("138859"),
   g = n("955132"),
   L = n("645436"),
   v = n("344651"),
@@ -117,7 +117,7 @@ s = "GatewayConnectionStore", (a = "displayName") in(r = H) ? Object.definePrope
     return g.localVoiceState.update({
       guildId: e.guildId,
       channelId: e.channelId
-    }), (0, C.isIOS)() && null == e.channelId && w === D.AppStates.BACKGROUND && g.socket.close(!0), !1
+    }), (0, R.isIOS)() && null == e.channelId && w === D.AppStates.BACKGROUND && g.socket.close(!0), !1
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
@@ -164,7 +164,7 @@ s = "GatewayConnectionStore", (a = "displayName") in(r = H) ? Object.definePrope
     })
   },
   APP_STATE_UPDATE: function(e) {
-    return (0, C.isIOS)() ? (T.default.isAuthenticated() && (w === D.AppStates.INACTIVE && e.state === D.AppStates.BACKGROUND && null == g.localVoiceState.channelId ? g.socket.close(!0) : w === D.AppStates.BACKGROUND && e.state === D.AppStates.ACTIVE && (L.setIsPaused(!1), g.socket.connect())), w = e.state) : e.state === D.AppStates.ACTIVE && (L.setIsPaused(!1), T.default.isAuthenticated() && g.socket.resetBackoff("App state is active")), !1
+    return (0, R.isIOS)() ? (T.default.isAuthenticated() && (w === D.AppStates.INACTIVE && e.state === D.AppStates.BACKGROUND && null == g.localVoiceState.channelId ? g.socket.close(!0) : w === D.AppStates.BACKGROUND && e.state === D.AppStates.ACTIVE && (L.setIsPaused(!1), g.socket.connect())), w = e.state) : e.state === D.AppStates.ACTIVE && (L.setIsPaused(!1), T.default.isAuthenticated() && g.socket.resetBackoff("App state is active")), !1
   },
   GUILD_MEMBERS_REQUEST: function(e) {
     return g.socket.isSessionEstablished() && ("userIds" in e ? l()(e.userIds).chunk(100).forEach(t => {
@@ -281,7 +281,7 @@ s = "GatewayConnectionStore", (a = "displayName") in(r = H) ? Object.definePrope
     return g.socket.isSessionEstablished() && g.socket.remoteCommand(t, n), !1
   },
   RESET_SOCKET: function(e) {
-    g.socket.connectionState !== R.default.WILL_RECONNECT && g.socket.resetSocketOnError(e.args)
+    g.socket.connectionState !== C.default.WILL_RECONNECT && g.socket.resetSocketOnError(e.args)
   },
   RTC_SPEED_TEST_START_TEST: function() {
     return g.socket.isSessionEstablished() && g.socket.speedTestCreate(m.default.getPreferredRegion()), !1

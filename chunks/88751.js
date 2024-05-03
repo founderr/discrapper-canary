@@ -20,7 +20,7 @@ let p = {},
     moderator: !1
   };
 
-function C(e, t) {
+function R(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   null == p[t] && (p[t] = {});
   let i = function(e, t) {
@@ -47,7 +47,7 @@ function C(e, t) {
   return p[t][e] = i, i
 }
 
-function R(e, t) {
+function C(e, t) {
   var n;
   if (null == t) return !1;
   let i = E.default.getChannel(t);
@@ -111,8 +111,8 @@ class D extends(r = _.default.Store) {
     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (null == e || null == t) return O;
     let r = null === (n = p[t]) || void 0 === n ? void 0 : n[e];
-    if (null != r) return i && null == r.moderator ? C(e, t, !0) : r;
-    return C(e, t, i)
+    if (null != r) return i && null == r.moderator ? R(e, t, !0) : r;
+    return R(e, t, i)
   }
 }
 l = "StageChannelRoleStore", (o = "displayName") in(s = D) ? Object.defineProperty(s, o, {
@@ -141,7 +141,7 @@ l = "StageChannelRoleStore", (o = "displayName") in(s = D) ? Object.defineProper
   PASSIVE_UPDATE_V1: function(e) {
     var t;
     let n = g(e.guildId);
-    for (let i of null !== (t = e.voiceStates) && void 0 !== t ? t : []) n = R(i.userId, i.channelId) || n;
+    for (let i of null !== (t = e.voiceStates) && void 0 !== t ? t : []) n = C(i.userId, i.channelId) || n;
     return n
   },
   VOICE_STATE_UPDATES: function(e) {
@@ -153,7 +153,7 @@ l = "StageChannelRoleStore", (o = "displayName") in(s = D) ? Object.defineProper
         userId: n,
         channelId: i
       } = t;
-      return R(n, i) || e
+      return C(n, i) || e
     }, !1)
   },
   GUILD_CREATE: v,

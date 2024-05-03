@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
     return es
   },
   ChannelChangeStrings: function() {
-    return b
+    return x
   },
   CommandPermissionChangeStrings: function() {
     return et
@@ -61,7 +61,7 @@ s.r(t), s.d(t, {
     return ee
   },
   UserChangeStrings: function() {
-    return x
+    return b
   },
   VoiceChannelStatusStrings: function() {
     return e_
@@ -175,7 +175,7 @@ let V = new r.default("AuditLogUtils"),
     [y.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
     ...F()
   }),
-  b = () => ({
+  x = () => ({
     [y.AuditLogChangeKeys.NAME]: eS(H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE, H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE),
     [y.AuditLogChangeKeys.POSITION]: eS(H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE, H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE),
     [y.AuditLogChangeKeys.TOPIC]: eg(H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE, H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR),
@@ -199,7 +199,7 @@ let V = new r.default("AuditLogUtils"),
     [y.AuditLogChangeKeys.AVAILABLE_TAG_EDIT]: H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_UPDATE,
     [y.AuditLogChangeKeys.AVAILABLE_TAG_DELETE]: H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_DELETE
   }),
-  x = () => ({
+  b = () => ({
     [y.AuditLogChangeKeys.NICK]: eg(H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE, H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE, H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE),
     [y.AuditLogChangeKeys.DEAF]: {
       true: H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON,

@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  i = n("470079"),
-  r = n("481060"),
-  s = n("881052"),
-  l = n("484455"),
-  o = n("592286"),
-  c = n("689938"),
-  d = n("915580");
+a.r(t), a("47120");
+var n = a("735250"),
+  r = a("470079"),
+  i = a("481060"),
+  s = a("881052"),
+  l = a("484455"),
+  o = a("592286"),
+  c = a("689938"),
+  d = a("915580");
 t.default = function(e) {
   let {
     guildId: t,
-    onSave: n,
+    onSave: a,
     formDescription: u
-  } = e, [f, m] = i.useState(null), [h, E] = i.useState(u), T = i.useRef(!1), p = i.useRef(!1);
-  i.useEffect(() => () => {
+  } = e, [f, m] = r.useState(null), [h, E] = r.useState(u), T = r.useRef(!1), p = r.useRef(!1);
+  r.useEffect(() => () => {
     p.current = !0
   }, []);
-  let _ = i.useCallback(async () => {
+  let _ = r.useCallback(async () => {
     if (!T.current) {
       m(null);
       try {
-        await n(t, h)
+        await a(t, h)
       } catch (e) {
         if (p.current) return;
         m(new s.APIError(e).getAnyErrorMessage())
@@ -30,10 +30,10 @@ t.default = function(e) {
         T.current = !1
       }
     }
-  }, [h, t, n]);
-  return (0, a.jsxs)(l.default, {
+  }, [h, t, a]);
+  return (0, n.jsxs)(l.default, {
     title: c.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
-    children: [(0, a.jsx)(r.TextArea, {
+    children: [(0, n.jsx)(i.TextArea, {
       className: d.fieldBackground,
       maxLength: o.MAX_DESCRIPTION_LENGTH,
       value: null != h ? h : "",
@@ -43,7 +43,7 @@ t.default = function(e) {
       },
       onBlur: _,
       autosize: !0
-    }), null != f && "" !== f ? (0, a.jsx)(r.Text, {
+    }), null != f && "" !== f ? (0, n.jsx)(i.Text, {
       className: d.errorText,
       variant: "text-xs/normal",
       color: "text-danger",

@@ -31,8 +31,8 @@ var a = s("735250"),
   R = s("532432"),
   M = s("504983"),
   v = s("134795"),
-  D = s("513901"),
-  L = s("451392"),
+  L = s("513901"),
+  D = s("451392"),
   P = s("981631"),
   j = s("474936"),
   b = s("526761"),
@@ -135,7 +135,7 @@ function B(e) {
               variant: "text-sm/normal",
               children: U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_DESCRIPTION
             })]
-          }), (0, a.jsx)(L.default, {
+          }), (0, a.jsx)(D.default, {
             className: y.customizationSection,
             user: G,
             pendingAvatar: null != Q ? Q : H,
@@ -161,7 +161,7 @@ function B(e) {
             className: y.customizationSection,
             user: G,
             sectionTitle: U.default.Messages.USER_SETTINGS_AVATAR_DECORATION
-          }, "decoration"), (0, a.jsx)(D.default, {
+          }, "decoration"), (0, a.jsx)(L.default, {
             className: y.customizationSection,
             isTryItOutFlow: !0,
             initialSelectedEffectId: $,

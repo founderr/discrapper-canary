@@ -55,7 +55,7 @@ n.r(t), n.d(t, {
     return O
   },
   isNotEveryoneRoleId: function() {
-    return C
+    return R
   },
   isPrivateGuildChannel: function() {
     return F
@@ -131,28 +131,28 @@ function O(e, t) {
   return E.default.castGuildIdAsEveryoneGuildRoleId(e) === t
 }
 
-function C(e, t) {
+function R(e, t) {
   return !O(e, t)
 }
 
-function R(e, t) {
+function C(e, t) {
   return !O(e.id, t.id)
 }
 
 function g(e, t, n, i) {
   let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return Object.values(t).filter(t => !h(t) && p(n, t.id, i) && R(e, t) && r(t.name)).sort(m).map(e => A(e))
+  return Object.values(t).filter(t => !h(t) && p(n, t.id, i) && C(e, t) && r(t.name)).sort(m).map(e => A(e))
 }
 
 function L(e, t, n, r) {
   let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return Object.values(t).filter(t => !h(t) && p(n, t.id, r) && R(e, t) && a(t.name)).sort(m).map(e => A(e, i.has(e.permissions, r)))
+  return Object.values(t).filter(t => !h(t) && p(n, t.id, r) && C(e, t) && a(t.name)).sort(m).map(e => A(e, i.has(e.permissions, r)))
 }
 
 function v(e, t, n, i, r) {
   var a, s, o, l, u;
   let d = [];
-  return 0 === (d = (a = e, s = t, o = n, l = i, u = r, Object.values(s).filter(e => h(e) || !p(o, e.id, l, u) && R(a, e))).sort(m).map(e => A(e))).length ? N(S.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d
+  return 0 === (d = (a = e, s = t, o = n, l = i, u = r, Object.values(s).filter(e => h(e) || !p(o, e.id, l, u) && C(a, e))).sort(m).map(e => A(e))).length ? N(S.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d
 }
 
 function D(e, t, n, r, a) {
@@ -160,7 +160,7 @@ function D(e, t, n, r, a) {
   let _ = [];
   return 0 === (_ = (s = e, o = t, l = n, u = r, d = a, Object.values(o).filter(e => {
     var t;
-    return h(e) || !p(l, e.id, u, d) && R(s, e) || i.has(i.combine(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
+    return h(e) || !p(l, e.id, u, d) && C(s, e) || i.has(i.combine(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
   })).sort(m).map(e => A(e, i.has(e.permissions, r)))).length ? N(S.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : _
 }
 

@@ -80,7 +80,7 @@ let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       canManageGuild: U
     } = (0, n.useStateFromStoresObject)([f.default], () => ({
       canManageGuild: f.default.can(p.Permissions.MANAGE_GUILD, s)
-    })), P = (0, n.useStateFromStores)([L.default], () => L.default.isGuildMetadataLoaded()), b = (0, n.useStateFromStores)([L.default], () => null != s ? L.default.getMetadata() : null), B = (0, n.useStateFromStores)([L.default], () => null != s && (null == b ? void 0 : b.isPublished) ? L.default.getSlug() : null), [y, F] = l.useState([!0]), [H, k] = l.useState(!0), [w, V] = l.useState([!1]), [Y, W] = l.useState([""]), z = e => {
+    })), P = (0, n.useStateFromStores)([L.default], () => L.default.isGuildMetadataLoaded()), b = (0, n.useStateFromStores)([L.default], () => null != s ? L.default.getMetadata() : null), B = (0, n.useStateFromStores)([L.default], () => null != s && (null == b ? void 0 : b.isPublished) ? L.default.getSlug() : null), [y, F] = l.useState([!0]), [H, w] = l.useState(!0), [k, V] = l.useState([!1]), [Y, W] = l.useState([""]), z = e => {
       let t = Object.entries(M.ALLOWED_SOCIAL_LINKS_DOMAINS).filter(e => !Y.includes(e[1].presentation)).map(e => ({
         label: e[1].presentation,
         value: e[0]
@@ -110,7 +110,7 @@ let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
             let l = K(s);
             null !== l ? (t[a] = l, e[a] = !0) : e[a] = !1
           } else e[a] = !0
-        }), W(t), F(e), k(e.every(e => !0 === e))
+        }), W(t), F(e), w(e.every(e => !0 === e))
       }
     }, [b]);
     let Z = (0, n.useStateFromStores)([L.default], () => null != s ? L.default.getErrors() : null),
@@ -172,7 +172,7 @@ let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
         let a = [...b.socialLinks],
           l = [...Y],
           n = [...y];
-        l[t] = e, a[t] = M.ALLOWED_SOCIAL_LINKS_DOMAINS[e].baseUrl, n[t] = !0, F(n), W(l), k(n.every(e => !0 === e)), c.updateGuildDiscoveryMetadataSocialLinks(s.id, a)
+        l[t] = e, a[t] = M.ALLOWED_SOCIAL_LINKS_DOMAINS[e].baseUrl, n[t] = !0, F(n), W(l), w(n.every(e => !0 === e)), c.updateGuildDiscoveryMetadataSocialLinks(s.id, a)
       },
       ea = (e, t) => {
         let a = [...b.socialLinks],
@@ -181,7 +181,7 @@ let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
         0 === l.length && n.length > 1 && !1 === RegExp("^https?:").test(n) && (n = "https://" + n), a[t] = n, c.updateGuildDiscoveryMetadataSocialLinks(s.id, a)
       },
       el = e => {
-        let t = [...w];
+        let t = [...k];
         t.splice(e, 1), V(t);
         let a = [...y];
         a.splice(e, 1), F(a);
@@ -225,7 +225,7 @@ let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
         value: e.categoryId
       })),
       ed = (e, t) => {
-        let s = [...w];
+        let s = [...k];
         s[e] = t, V(s)
       };
     return (0, a.jsx)("div", {
@@ -474,7 +474,7 @@ let G = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           width: 20,
                           height: 20
                         }, "validation-failed-" + t), U && (0, a.jsx)(o.default, {
-                          className: w[t] ? b.isPublished ? v.deleteButtonMax : v.deleteButtonMin : b.isPublished ? v.deleteButtonHiddenMax : v.deleteButtonHiddenMin,
+                          className: k[t] ? b.isPublished ? v.deleteButtonMax : v.deleteButtonMin : b.isPublished ? v.deleteButtonHiddenMax : v.deleteButtonHiddenMin,
                           onClick: () => el(t)
                         }, "delete-button-" + t)]
                       }, "social-container-" + t)), (null == Z ? void 0 : Z.social_links) != null ? (0, a.jsx)(r.Text, {

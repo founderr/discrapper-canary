@@ -125,8 +125,8 @@ class p extends(i = a.Component) {
       resizeable: A,
       className: p,
       id: O,
-      rows: C,
-      flex: R,
+      rows: R,
+      flex: C,
       autosize: g,
       required: L,
       onInvalid: v,
@@ -134,11 +134,11 @@ class p extends(i = a.Component) {
     } = this.props, M = g ? E.TextAreaAutosize : "textarea", y = this.hasError(), P = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, U = this.getAriaDescribedBy();
     return (0, r.jsxs)("div", {
       className: o()(f.inputWrapper, {
-        [T.flex]: R
+        [T.flex]: C
       }),
       children: [(0, r.jsxs)("div", {
         className: o()(T.inputMaxLength, {
-          [T.flex]: R
+          [T.flex]: C
         }),
         children: [(0, r.jsx)(u.FocusRing, {
           children: (0, r.jsx)(M, {
@@ -168,7 +168,7 @@ class p extends(i = a.Component) {
             onFocus: this.onFocus,
             onKeyDown: this.onKeyDown,
             onInvalid: v,
-            rows: C,
+            rows: R,
             ref: D
           })
         }), null != l && (0, r.jsx)(_.HiddenVisually, {

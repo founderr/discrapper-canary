@@ -40,8 +40,8 @@ var i = n("470079"),
   N = n("630388"),
   p = n("823379"),
   O = n("960048"),
-  C = n("709054"),
-  R = n("223683"),
+  R = n("709054"),
+  C = n("223683"),
   g = n("630114"),
   L = n("506712"),
   v = n("468788"),
@@ -178,7 +178,7 @@ async function k(e, t) {
         }
       }),
       n = {
-        num_unread_guilds_before: C.default.keys(e).filter(e => f.default.hasUnread(e)).length,
+        num_unread_guilds_before: R.default.keys(e).filter(e => f.default.hasUnread(e)).length,
         unmuted_server_ids: t.filter(e => A.default.isMuted(e.plan.guildId)).map(e => e.plan.guildId)
       };
     return () => {
@@ -187,7 +187,7 @@ async function k(e, t) {
         auto_migrated: !0,
         pre_selected_server_ids: Object.values(e).filter(e => e.mode === D.Mode.UseGreyDot).map(e => e.guildId),
         final_selected_server_ids: t.map(e => e.plan.guildId),
-        num_unread_guids_after: C.default.keys(e).filter(e => f.default.hasUnread(e)).length,
+        num_unread_guids_after: R.default.keys(e).filter(e => f.default.hasUnread(e)).length,
         num_tiny_servers_selected: t.filter(e => e.memberCount <= 20).length,
         num_small_servers_selected: t.filter(e => e.memberCount > 20 && e.memberCount <= 200).length,
         num_medium_servers_selected: t.filter(e => e.memberCount > 200 && e.memberCount <= 1e3).length,
@@ -245,7 +245,7 @@ async function x(e) {
   return await e()
 }
 async function F() {
-  let e = await (0, R.listSnapshots)();
+  let e = await (0, C.listSnapshots)();
   e.length > 0 ? await
 
   function() {
@@ -259,13 +259,13 @@ async function F() {
         onCancel: () => e(!1)
       })
     })
-  }() && (0, R.backupSettings)(e): (0, R.takeSnapshot)("Backup from ".concat(new Date().toLocaleDateString()))
+  }() && (0, C.backupSettings)(e): (0, C.takeSnapshot)("Backup from ".concat(new Date().toLocaleDateString()))
 }
 async function H() {
   o.Storage.set("turnedOffNewNotifications", !0), m.default.track(M.AnalyticEvents.NOTIFICATION_MIGRATION_OPTOUT, {
     num_guilds_with_new_setting: Object.values(S.default.getGuilds()).filter(e => A.default.resolveGuildUnreadSetting(e) === y.UnreadSetting.ONLY_MENTIONS).length
   });
-  let e = await (0, R.listSnapshots)(),
+  let e = await (0, C.listSnapshots)(),
     t = a().sortBy(e, e => new Date(e.recorded_at).getTime());
   if (t.length > 0) {
     let e = t[t.length - 1];
@@ -275,7 +275,7 @@ async function H() {
       onConfirm: t,
       cancelText: "Cancel",
       onCancel: () => {}
-    })), await (0, R.restoreSnapshot)(e.id), await d.default.setAccountFlag(v.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
+    })), await (0, C.restoreSnapshot)(e.id), await d.default.setAccountFlag(v.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
   } else await d.default.setAccountFlag(v.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
 }
 

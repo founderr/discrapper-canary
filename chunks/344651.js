@@ -26,8 +26,8 @@ var a = n("442837"),
   N = n("819640"),
   p = n("594174"),
   O = n("979651"),
-  C = n("509545"),
-  R = n("78839"),
+  R = n("509545"),
+  C = n("78839"),
   g = n("936101"),
   L = n("868158"),
   v = n("483012"),
@@ -901,18 +901,18 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
     entitlement: e
   })
 }), w(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-  N.default.hasLayers() && (n("355467").fetchPaymentSources(), l.fetchSubscriptionPlansBySKUs(C.default.getFetchedSKUIDs()))
+  N.default.hasLayers() && (n("355467").fetchPaymentSources(), l.fetchSubscriptionPlansBySKUs(R.default.getFetchedSKUIDs()))
 }), w(["USER_SUBSCRIPTIONS_UPDATE"], () => {
   u.fetchCurrentUser(), N.default.hasLayers() && n("355467").fetchSubscriptions()
 }), w(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], e => {
   V({
     type: "GUILD_BOOST_SLOT_CREATE",
-    guildBoostSlot: S.default.createFromServer(e, R.default.getSubscriptionById(e.subscription_id))
+    guildBoostSlot: S.default.createFromServer(e, C.default.getSubscriptionById(e.subscription_id))
   })
 }), w(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], e => {
   V({
     type: "GUILD_BOOST_SLOT_UPDATE",
-    guildBoostSlot: S.default.createFromServer(e, R.default.getSubscriptionById(e.subscription_id))
+    guildBoostSlot: S.default.createFromServer(e, C.default.getSubscriptionById(e.subscription_id))
   })
 }), w(["BILLING_POPUP_BRIDGE_CALLBACK"], e => {
   V({

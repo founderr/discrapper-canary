@@ -57,12 +57,12 @@ async function f(e, t) {
     channel: u.default.getChannel(p)
   })) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : void 0);
   let O = E.default.getUserProfile(e),
-    C = E.default.getMutualGuilds(e),
-    R = E.default.getMutualFriends(e),
+    R = E.default.getMutualGuilds(e),
+    C = E.default.getMutualFriends(e),
     g = E.default.getMutualFriendsCount(e),
     L = E.default.isFetchingProfile(e),
-    v = !Array.isArray(C) && T,
-    D = !Array.isArray(R) && S,
+    v = !Array.isArray(R) && T,
+    D = !Array.isArray(C) && S,
     M = null == g && f,
     y = (null == O ? void 0 : O.profileFetchFailed) || !L && (v || M || D),
     P = A ? I.default : void 0,

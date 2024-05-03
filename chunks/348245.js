@@ -21,8 +21,8 @@ var r = n("266067"),
   N = n("914010"),
   p = n("70956"),
   O = n("796798"),
-  C = n("198620"),
-  R = n("981631"),
+  R = n("198620"),
+  C = n("981631"),
   g = n("176505"),
   L = n("689938");
 
@@ -56,14 +56,14 @@ function M(e) {
     return
   }
   let T = S.default.getChannel(n);
-  if ((null == T ? void 0 : T.type) === R.ChannelTypes.GUILD_STORE || (null == T ? void 0 : T.type) != null && R.ChannelTypesSets.GUILD_THREADS_ONLY.has(T.type)) {
+  if ((null == T ? void 0 : T.type) === C.ChannelTypes.GUILD_STORE || (null == T ? void 0 : T.type) != null && C.ChannelTypesSets.GUILD_THREADS_ONLY.has(T.type)) {
     I && D.log("Skipping fetch because channel is a forum/store");
     return
   }
   let f = c.default.getOrCreate(n);
   O.AttachmentLinkRefreshExperiment.getCurrentConfig({
     location: "fetch_messages"
-  }).enabled && f.some(C.messageHasExpiredAttachmentUrl) && (D.log("Found expired attachment link, clearing messages"), c.default.clear(n), f = c.default.getOrCreate(n)), null != f.jumpTargetId && null == r && (f = f.mutate({
+  }).enabled && f.some(R.messageHasExpiredAttachmentUrl) && (D.log("Found expired attachment link, clearing messages"), c.default.clear(n), f = c.default.getOrCreate(n)), null != f.jumpTargetId && null == r && (f = f.mutate({
     jumpTargetId: null,
     jumped: !1,
     jumpType: d.JumpTypes.ANIMATED
@@ -95,7 +95,7 @@ function M(e) {
         return s.Storage.set(P, i), !0
       }(n)) D.log("Jumping to start of thread ".concat(T.id)), u.default.fetchMessages({
       channelId: n,
-      limit: R.MAX_MESSAGES_PER_CHANNEL,
+      limit: C.MAX_MESSAGES_PER_CHANNEL,
       jump: {
         messageId: n,
         flash: !1
@@ -107,7 +107,7 @@ function M(e) {
       let e = A.default.getTrackedAckMessageId(T.id);
       D.log("Jumping to most recent message in thread ".concat(T.id, " - ").concat(e)), u.default.fetchMessages({
         channelId: n,
-        limit: R.MAX_MESSAGES_PER_CHANNEL,
+        limit: C.MAX_MESSAGES_PER_CHANNEL,
         jump: {
           messageId: e,
           flash: !1,
@@ -118,7 +118,7 @@ function M(e) {
       })
     } else u.default.fetchMessages({
       channelId: n,
-      limit: R.MAX_MESSAGES_PER_CHANNEL,
+      limit: C.MAX_MESSAGES_PER_CHANNEL,
       isPreload: o,
       skipLocalFetch: _,
       jump: {
@@ -137,7 +137,7 @@ function U() {
     if (null != n) {
       var t;
       let e = (0, r.matchPath)(location.pathname, {
-        path: R.Routes.CHANNEL(":guild", ":channel", ":message"),
+        path: C.Routes.CHANNEL(":guild", ":channel", ":message"),
         exact: !0
       });
       M({
@@ -216,7 +216,7 @@ function V(e) {
     channelId: n,
     context: i
   } = e;
-  i === R.CURRENT_APP_CONTEXT && (M({
+  i === C.CURRENT_APP_CONTEXT && (M({
     guildId: t,
     channelId: n
   }), B(t, n))
@@ -240,7 +240,7 @@ function F(e) {
   } = e;
   u.default.fetchMessages({
     channelId: t,
-    limit: R.MAX_MESSAGES_PER_CHANNEL
+    limit: C.MAX_MESSAGES_PER_CHANNEL
   })
 }
 
@@ -249,7 +249,7 @@ function H(e) {
     response: t
   } = e;
   if (null == t || null == t.body) return null;
-  if (t.body.code === R.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) {
+  if (t.body.code === C.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) {
     let e = t.body.retry_after;
     null != e && l.default.show({
       title: L.default.Messages.RATE_LIMITED,
@@ -278,7 +278,7 @@ function j(e) {
     d = n === o || n === l;
   r && E.default.isConnected() && d && u.default.fetchMessages({
     channelId: n,
-    limit: R.MAX_MESSAGES_PER_CHANNEL,
+    limit: C.MAX_MESSAGES_PER_CHANNEL,
     jump: i
   })
 }
@@ -304,7 +304,7 @@ function K(e) {
   if ("active" !== t) return !1;
   let n = m.default.getChannelId();
   if (null == n) return !1;
-  u.default.fetchNewLocalMessages(n, R.MAX_MESSAGES_PER_CHANNEL)
+  u.default.fetchNewLocalMessages(n, C.MAX_MESSAGES_PER_CHANNEL)
 }
 class z extends _.default {
   _initialize() {

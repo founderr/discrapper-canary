@@ -1,37 +1,37 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  i = n("470079"),
-  r = n("120356"),
-  s = n.n(r),
-  l = n("481060"),
-  o = n("282597"),
-  c = n("877715"),
-  d = n("729285"),
-  u = n("838221"),
-  f = n("246364"),
-  m = n("700833"),
-  h = n("689938"),
-  E = n("915580");
+a.r(t);
+var n = a("735250"),
+  r = a("470079"),
+  i = a("120356"),
+  s = a.n(i),
+  l = a("481060"),
+  o = a("282597"),
+  c = a("877715"),
+  d = a("729285"),
+  u = a("838221"),
+  f = a("246364"),
+  m = a("700833"),
+  h = a("689938"),
+  E = a("915580");
 
 function T(e) {
   let {
     onClick: t,
-    text: n,
-    icon: i
+    text: a,
+    icon: r
   } = e;
-  return (0, a.jsx)("div", {
+  return (0, n.jsx)("div", {
     className: E.addFormFieldContainer,
-    children: (0, a.jsxs)(l.Clickable, {
+    children: (0, n.jsxs)(l.Clickable, {
       className: E.addFormField,
       onClick: t,
-      children: [(0, a.jsx)(i, {
+      children: [(0, n.jsx)(r, {
         className: E.icon,
         height: 16,
         width: 16
-      }), (0, a.jsx)(l.FormText, {
+      }), (0, n.jsx)(l.FormText, {
         className: E.addFormFieldText,
-        children: n
+        children: a
       })]
     })
   })
@@ -39,63 +39,63 @@ function T(e) {
 t.default = function(e) {
   let {
     addFormField: t,
-    showManualApprovalWarning: r,
+    showManualApprovalWarning: i,
     guild: p,
     showHeader: _
-  } = e, C = i.useCallback(e => {
+  } = e, C = r.useCallback(e => {
     (0, m.openEmptyFormFieldModal)(e, t, p)
-  }, [t, p]), g = i.useCallback(e => {
-    r ? (0, l.openModalLazy)(async () => {
+  }, [t, p]), g = r.useCallback(e => {
+    i ? (0, l.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([n.e("99387"), n.e("54845")]).then(n.bind(n, "199836"));
-      return n => (0, a.jsx)(t, {
-        ...n,
+      } = await Promise.all([a.e("99387"), a.e("54845")]).then(a.bind(a, "199836"));
+      return a => (0, n.jsx)(t, {
+        ...a,
         onSubmit: () => C(e)
       })
     }) : C(e)
-  }, [r, C]);
-  return (0, a.jsxs)("div", {
+  }, [i, C]);
+  return (0, n.jsxs)("div", {
     className: s()(E.spacingContainer, E.backgroundContainer),
-    children: [_ && (0, a.jsx)("div", {
+    children: [_ && (0, n.jsx)("div", {
       className: E.containerTopHat,
-      children: (0, a.jsx)(l.Text, {
+      children: (0, n.jsx)(l.Text, {
         className: E.containerTopHatText,
         variant: "text-xs/bold",
         color: "header-secondary",
         children: h.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_REQUIRED
       })
-    }), (0, a.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: E.leftRailIconContainer,
-      children: [(0, a.jsx)("div", {
+      children: [(0, n.jsx)("div", {
         className: E.iconContainer,
-        children: (0, a.jsx)(d.default, {
+        children: (0, n.jsx)(d.default, {
           width: 18,
           height: 20,
           className: E.icon
         })
-      }), (0, a.jsxs)(l.FormSection, {
-        children: [(0, a.jsx)(l.FormTitle, {
+      }), (0, n.jsxs)(l.FormSection, {
+        children: [(0, n.jsx)(l.FormTitle, {
           tag: "h3",
           className: E.leftRailIconContainerTitle,
           children: h.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS
-        }), (0, a.jsx)(l.FormText, {
+        }), (0, n.jsx)(l.FormText, {
           className: E.leftRailIconContainerDescription,
           type: l.FormText.Types.DESCRIPTION,
           children: h.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS_DESCRIPTION
-        }), (0, a.jsx)(T, {
+        }), (0, n.jsx)(T, {
           formFieldType: f.VerificationFormFieldTypes.TEXT_INPUT,
           addFormField: t,
           icon: u.default,
           text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
           onClick: () => g(f.VerificationFormFieldTypes.TEXT_INPUT)
-        }), (0, a.jsx)(T, {
+        }), (0, n.jsx)(T, {
           formFieldType: f.VerificationFormFieldTypes.PARAGRAPH,
           addFormField: t,
           icon: c.default,
           text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
           onClick: () => g(f.VerificationFormFieldTypes.PARAGRAPH)
-        }), (0, a.jsx)(T, {
+        }), (0, n.jsx)(T, {
           formFieldType: f.VerificationFormFieldTypes.MULTIPLE_CHOICE,
           addFormField: t,
           icon: o.default,

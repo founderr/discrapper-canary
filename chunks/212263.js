@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("176354"),
   p = n("74538"),
   O = n("543241"),
-  C = n("149203"),
-  R = n("981631"),
+  R = n("149203"),
+  C = n("981631"),
   g = n("185923"),
   L = n("474936"),
   v = n("689938"),
@@ -51,16 +51,16 @@ t.default = e => {
   return r.useEffect(() => {
     if (!W) {
       let e;
-      e = G === g.EmojiIntention.REACTION ? L.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : b.subCategory === C.EmojiSubCategory.TOP_GUILD_EMOJI ? L.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : b.subCategory === C.EmojiSubCategory.NEWLY_ADDED_EMOJI ? L.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : L.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
+      e = G === g.EmojiIntention.REACTION ? L.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : b.subCategory === R.EmojiSubCategory.TOP_GUILD_EMOJI ? L.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : b.subCategory === R.EmojiSubCategory.NEWLY_ADDED_EMOJI ? L.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : L.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
       let t = b.emoji;
-      m.default.track(R.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      m.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         type: e,
         is_animated: t.animated,
         is_external: !N.default.isInternalEmojiForGuildId(t, null == U ? void 0 : U.getGuildId()),
         has_search_query: null != z && "" !== z,
         location: {
           ...w,
-          object: R.AnalyticsObjects.EMOJI
+          object: C.AnalyticsObjects.EMOJI
         },
         location_stack: Z,
         sku_id: (0, p.castPremiumSubscriptionAsSkuId)(p.default.getSkuIdForPremiumType(K))
@@ -108,8 +108,8 @@ t.default = e => {
         subscriptionTier: Q ? L.PremiumSubscriptionSKUs.TIER_0 : L.PremiumSubscriptionSKUs.TIER_2,
         submitting: k,
         premiumModalAnalyticsLocation: {
-          section: R.AnalyticsSections.EMOJI_PICKER_POPOUT,
-          object: R.AnalyticsObjects.BUTTON_CTA
+          section: C.AnalyticsSections.EMOJI_PICKER_POPOUT,
+          object: C.AnalyticsObjects.BUTTON_CTA
         },
         size: l.Button.Sizes.SMALL,
         color: l.Button.Colors.GREEN,

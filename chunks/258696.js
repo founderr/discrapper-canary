@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("764794"),
   p = n("241553"),
   O = n("319417"),
-  C = n("728386"),
-  R = n("474936"),
+  R = n("728386"),
+  C = n("474936"),
   g = n("414367");
 
 function L(e) {
@@ -74,7 +74,7 @@ t.default = r.memo(function(e) {
     location: "dc120b_4"
   }, {
     autoTrackExposure: !1
-  }), j = f.default.getCurrentUser(), W = null !== (c = (0, s.useStateFromStores)([_.default], () => Y && S.default.isPremiumExactly(j, R.PremiumTypes.TIER_2) ? _.default.getReferralsRemaining() : 0)) && void 0 !== c ? c : 0, K = (0, s.useStateFromStores)([_.default], () => {
+  }), j = f.default.getCurrentUser(), W = null !== (c = (0, s.useStateFromStores)([_.default], () => Y && S.default.isPremiumExactly(j, C.PremiumTypes.TIER_2) ? _.default.getReferralsRemaining() : 0)) && void 0 !== c ? c : 0, K = (0, s.useStateFromStores)([_.default], () => {
     if (!P.isDM() || void 0 === P.recipients || P.recipients.length > 1 || !Y) return !1;
     let e = P.recipients[0];
     return _.default.getSentUserIds().includes(e)
@@ -88,7 +88,7 @@ t.default = r.memo(function(e) {
       r = _.default.getRecipientEligibility(t);
     return [Y && i && r, r]
   });
-  return (!a.isMobile && (P.isDM() && (null === (m = M.gifts) || void 0 === m ? void 0 : m.button) != null && null == V && (S.default.isPremiumExactly(j, R.PremiumTypes.TIER_2) && Z && E.default.trackExposure({
+  return (!a.isMobile && (P.isDM() && (null === (m = M.gifts) || void 0 === m ? void 0 : m.button) != null && null == V && (S.default.isPremiumExactly(j, C.PremiumTypes.TIER_2) && Z && E.default.trackExposure({
     location: "dc120b_5"
   }), z && H.push((0, i.jsx)(N.default, {
     disabled: y,
@@ -101,7 +101,7 @@ t.default = r.memo(function(e) {
   }, "gift")), (null === (v = M.gifs) || void 0 === v ? void 0 : v.button) != null && null == V && H.push((0, i.jsx)(A.default, {
     disabled: y,
     type: M
-  }, "gif")), (null === (D = M.stickers) || void 0 === D ? void 0 : D.button) != null && null == V && H.push((0, i.jsx)(C.default, {
+  }, "gif")), (null === (D = M.stickers) || void 0 === D ? void 0 : D.button) != null && null == V && H.push((0, i.jsx)(R.default, {
     disabled: y,
     type: M
   }, "sticker"))), (null === (t = M.emojis) || void 0 === t ? void 0 : t.button) != null && (null == V || null != x && x.type !== o.ApplicationCommandOptionType.ATTACHMENT) && H.push((0, i.jsx)(h.default, {

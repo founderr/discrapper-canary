@@ -24,7 +24,7 @@ t.default = e => {
     root_node_id: m,
     success_node_id: N,
     fail_node_id: p
-  } = n, [O, C] = r.useState(m), [R, g] = r.useState(void 0), [L, v] = r.useState(void 0), [D, M] = r.useState([]), [y, P] = r.useState(void 0), U = e => {
+  } = n, [O, R] = r.useState(m), [C, g] = r.useState(void 0), [L, v] = r.useState(void 0), [D, M] = r.useState([]), [y, P] = r.useState(void 0), U = e => {
     var n;
     let {
       destination: i
@@ -43,7 +43,7 @@ t.default = e => {
         next_node: a.id
       })
     }
-    C(r)
+    R(r)
   }, b = async e => {
     var i;
     let r = S ? await (0, u.submitReport)(n, t, [...D, e]) : await (0, u.submitUnauthenticatedReport)(n, t, [...D, e], f),
@@ -65,7 +65,7 @@ t.default = e => {
         next_node: A[a].id
       })
     }
-    g(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), v(null == r ? void 0 : r.textInput), C(a), M(i), null == T || T("..")
+    g(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), v(null == r ? void 0 : r.textInput), R(a), M(i), null == T || T("..")
   }, w = [], B = [];
   for (let e in A) {
     var k, V;
@@ -100,7 +100,7 @@ t.default = e => {
             onModalClose: E.onClose,
             onSelectChild: U,
             onNavigateBack: G,
-            multiSelect: R,
+            multiSelect: C,
             textInput: L,
             successNodeId: N,
             failNodeId: p,

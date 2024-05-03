@@ -180,10 +180,10 @@ t.default = e => {
         y = B || j.length > 0,
         F = O - L,
         H = s("872732"),
-        k = G - j.length,
-        w = B ? Math.min(5 - (j.length + 0) % 5, k) : 0,
+        w = G - j.length,
+        k = B ? Math.min(5 - (j.length + 0) % 5, w) : 0,
         V = [];
-      for (let e = 0; e < w; e++) V.push((0, a.jsx)(A, {}, "placeholder-".concat(e)));
+      for (let e = 0; e < k; e++) V.push((0, a.jsx)(A, {}, "placeholder-".concat(e)));
       let Y = b === E + 1 && b > M,
         W = B || Y || E > M;
       return Y ? l = (0, a.jsx)(c.default, {

@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return J
   },
   GUILD_CHANNEL_TYPES: function() {
-    return R
+    return C
   },
   GUILD_FAVORITES_CHANNEL_TYPES: function() {
     return et
@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return L
   },
   GUILD_WEBHOOK_CHANNEL_TYPES: function() {
-    return C
+    return R
   },
   GuildTextualChannelRecord: function() {
     return eS
@@ -159,11 +159,11 @@ let N = new Set([T.ChannelTypes.DM, T.ChannelTypes.GROUP_DM, T.ChannelTypes.GUIL
 function O(e) {
   return p.has(e)
 }
-let C = new Set([T.ChannelTypes.GUILD_TEXT, T.ChannelTypes.GUILD_ANNOUNCEMENT, T.ChannelTypes.GUILD_FORUM, T.ChannelTypes.GUILD_MEDIA, T.ChannelTypes.GUILD_VOICE, T.ChannelTypes.GUILD_STAGE_VOICE]),
-  R = new Set([T.ChannelTypes.GUILD_TEXT, T.ChannelTypes.GUILD_VOICE, T.ChannelTypes.GUILD_STAGE_VOICE, T.ChannelTypes.GUILD_CATEGORY, T.ChannelTypes.GUILD_ANNOUNCEMENT, T.ChannelTypes.GUILD_STORE, T.ChannelTypes.ANNOUNCEMENT_THREAD, T.ChannelTypes.PUBLIC_THREAD, T.ChannelTypes.PRIVATE_THREAD, T.ChannelTypes.GUILD_DIRECTORY, T.ChannelTypes.GUILD_FORUM, T.ChannelTypes.GUILD_MEDIA]);
+let R = new Set([T.ChannelTypes.GUILD_TEXT, T.ChannelTypes.GUILD_ANNOUNCEMENT, T.ChannelTypes.GUILD_FORUM, T.ChannelTypes.GUILD_MEDIA, T.ChannelTypes.GUILD_VOICE, T.ChannelTypes.GUILD_STAGE_VOICE]),
+  C = new Set([T.ChannelTypes.GUILD_TEXT, T.ChannelTypes.GUILD_VOICE, T.ChannelTypes.GUILD_STAGE_VOICE, T.ChannelTypes.GUILD_CATEGORY, T.ChannelTypes.GUILD_ANNOUNCEMENT, T.ChannelTypes.GUILD_STORE, T.ChannelTypes.ANNOUNCEMENT_THREAD, T.ChannelTypes.PUBLIC_THREAD, T.ChannelTypes.PRIVATE_THREAD, T.ChannelTypes.GUILD_DIRECTORY, T.ChannelTypes.GUILD_FORUM, T.ChannelTypes.GUILD_MEDIA]);
 
 function g(e) {
-  return R.has(e)
+  return C.has(e)
 }
 T.ChannelTypes.GUILD_TEXT, T.ChannelTypes.GUILD_ANNOUNCEMENT, T.ChannelTypes.GUILD_FORUM, T.ChannelTypes.GUILD_MEDIA;
 let L = new Set([T.ChannelTypes.GUILD_VOICE, T.ChannelTypes.GUILD_STAGE_VOICE]);
@@ -711,7 +711,7 @@ class ep extends eI {
   }
 }
 class eO extends ep {}
-class eC extends eI {
+class eR extends eI {
   static fromServer(e, t) {
     var n, i, r, a, s;
     let o = {
@@ -751,14 +751,14 @@ class eC extends eI {
       userLimit_: e.user_limit,
       videoQualityMode: e.video_quality_mode
     };
-    return (0, d.dangerouslyCast)(o, eC)
+    return (0, d.dangerouslyCast)(o, eR)
   }
   constructor(e) {
     var t;
     super(e), this.appliedTags = null !== (t = e.appliedTags) && void 0 !== t ? t : [], this.bitrate_ = e.bitrate_, this.flags_ = e.flags_, this.lastMessageId = e.lastMessageId, this.lastPinTimestamp = e.lastPinTimestamp, this.member = e.member, this.memberCount = e.memberCount, this.memberIdsPreview = e.memberIdsPreview, this.messageCount = e.messageCount, this.nsfw_ = e.nsfw_, this.ownerId = e.ownerId, this.parent_id = e.parent_id, this.parentChannelThreadType = e.parentChannelThreadType, this.rateLimitPerUser_ = e.rateLimitPerUser_, this.rtcRegion = e.rtcRegion, this.threadMetadata = e.threadMetadata, this.userLimit_ = e.userLimit_, this.videoQualityMode = e.videoQualityMode
   }
 }
-let eR = {
+let eC = {
   [T.ChannelTypes.DM]: ep.fromServer,
   [T.ChannelTypes.GROUP_DM]: ep.fromServer,
   [T.ChannelTypes.GUILD_TEXT]: eS.fromServer,
@@ -767,9 +767,9 @@ let eR = {
   [T.ChannelTypes.GUILD_CATEGORY]: eS.fromServer,
   [T.ChannelTypes.GUILD_ANNOUNCEMENT]: eS.fromServer,
   [T.ChannelTypes.GUILD_STORE]: eS.fromServer,
-  [T.ChannelTypes.ANNOUNCEMENT_THREAD]: eC.fromServer,
-  [T.ChannelTypes.PUBLIC_THREAD]: eC.fromServer,
-  [T.ChannelTypes.PRIVATE_THREAD]: eC.fromServer,
+  [T.ChannelTypes.ANNOUNCEMENT_THREAD]: eR.fromServer,
+  [T.ChannelTypes.PUBLIC_THREAD]: eR.fromServer,
+  [T.ChannelTypes.PRIVATE_THREAD]: eR.fromServer,
   [T.ChannelTypes.GUILD_DIRECTORY]: eS.fromServer,
   [T.ChannelTypes.GUILD_FORUM]: eh.fromServer,
   [T.ChannelTypes.GUILD_MEDIA]: eh.fromServer
@@ -777,7 +777,7 @@ let eR = {
 
 function eg(e, t) {
   var n, i;
-  return (null !== (i = eR[null !== (n = e.type) && void 0 !== n ? n : T.ChannelTypes.GUILD_TEXT]) && void 0 !== i ? i : eT.fromServer)(e, t)
+  return (null !== (i = eC[null !== (n = e.type) && void 0 !== n ? n : T.ChannelTypes.GUILD_TEXT]) && void 0 !== i ? i : eT.fromServer)(e, t)
 }
 
 function eL(e) {
@@ -792,9 +792,9 @@ let ev = {
   [T.ChannelTypes.GUILD_CATEGORY]: class e extends eS {},
   [T.ChannelTypes.GUILD_ANNOUNCEMENT]: class e extends eS {},
   [T.ChannelTypes.GUILD_STORE]: class e extends eS {},
-  [T.ChannelTypes.ANNOUNCEMENT_THREAD]: eC,
-  [T.ChannelTypes.PUBLIC_THREAD]: eC,
-  [T.ChannelTypes.PRIVATE_THREAD]: eC,
+  [T.ChannelTypes.ANNOUNCEMENT_THREAD]: eR,
+  [T.ChannelTypes.PUBLIC_THREAD]: eR,
+  [T.ChannelTypes.PRIVATE_THREAD]: eR,
   [T.ChannelTypes.GUILD_DIRECTORY]: class e extends eS {},
   [T.ChannelTypes.GUILD_FORUM]: eh,
   [T.ChannelTypes.GUILD_MEDIA]: eh

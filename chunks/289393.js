@@ -31,8 +31,8 @@ let A = new c.SecondaryIndexMap(e => [T(e.guild_id), ...e.subscription_listings_
   N = {},
   p = new Set,
   O = {},
-  C = {},
   R = {},
+  C = {},
   g = {},
   L = new Map;
 
@@ -83,10 +83,10 @@ class P extends(r = _.default.Store) {
     return O[e]
   }
   getSubscriptionTrial(e) {
-    return C[e]
+    return R[e]
   }
   getMonetizationRestrictions(e) {
-    return R[e]
+    return C[e]
   }
   getMonetizationRestrictionsFetchState(e) {
     var t;
@@ -103,7 +103,7 @@ l = "GuildRoleSubscriptionsStore", (o = "displayName") in(s = P) ? Object.define
   writable: !0
 }) : s[o] = l, t.default = new P(E.default, {
   CONNECTION_OPEN: function() {
-    A.clear(), m.clear(), N = {}, p.clear(), O = {}, C = {}, R = {}, g = {}, L.clear()
+    A.clear(), m.clear(), N = {}, p.clear(), O = {}, R = {}, C = {}, g = {}, L.clear()
   },
   GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function(e) {
     let {
@@ -126,7 +126,7 @@ l = "GuildRoleSubscriptionsStore", (o = "displayName") in(s = P) ? Object.define
       subscriptionTrials: r
     } = e;
     for (let e of (N[t] = 2, n)) D(e);
-    for (let e of (O[t] = i, r)) C[e.id] = e
+    for (let e of (O[t] = i, r)) R[e.id] = e
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function(e) {
     let {
@@ -181,7 +181,7 @@ l = "GuildRoleSubscriptionsStore", (o = "displayName") in(s = P) ? Object.define
     let {
       subscriptionTrial: t
     } = e;
-    C[t.id] = t
+    R[t.id] = t
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS: function(e) {
     let {
@@ -194,13 +194,13 @@ l = "GuildRoleSubscriptionsStore", (o = "displayName") in(s = P) ? Object.define
       guildId: t,
       restrictions: n
     } = e;
-    R[t] = n, g[t] = 2
+    C[t] = n, g[t] = 2
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function(e) {
     let {
       guildId: t
     } = e;
-    g[t] = 2, R[t] = I.DefaultCreatorMonetizationRestrictions
+    g[t] = 2, C[t] = I.DefaultCreatorMonetizationRestrictions
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED: function(e) {
     let {

@@ -25,8 +25,8 @@ t.default = e => {
       guildId: N,
       groupListingId: p,
       analyticsLocation: O,
-      showBenefitsFirst: C,
-      onComplete: R,
+      showBenefitsFirst: R,
+      onComplete: C,
       forcesTransitionToGuild: g
     } = e,
     L = null == a ? void 0 : a.subscription_plans[0],
@@ -80,8 +80,8 @@ t.default = e => {
           eligibleApplicationSubscriptionGuilds: k,
           planGroup: b,
           applicationId: U.id,
-          showBenefitsFirst: C,
-          onComplete: R,
+          showBenefitsFirst: R,
+          onComplete: C,
           forcesTransitionToGuild: g
         })
       };
@@ -90,7 +90,7 @@ t.default = e => {
         onConfirm: e,
         onCancel: () => {}
       }) : e()
-    }, [M, L, b, U, N, j, x, G, O, w, C, k, R, g]),
+    }, [M, L, b, U, N, j, x, G, O, w, R, k, C, g]),
     canOpenModal: K,
     cannotOpenReason: n
   }

@@ -22,7 +22,7 @@ var i = n("470079"),
   h = n("185923");
 
 function A(e, t, n) {
-  var A, m, N, p, O, C, R;
+  var A, m, N, p, O, R, C;
   let {
     channel: g,
     type: L
@@ -64,10 +64,10 @@ function A(e, t, n) {
     hidePersonalInformation: G,
     hideMentionDescription: L === l.ChatInputTypes.RULES_INPUT,
     emojiIntention: L === l.ChatInputTypes.RULES_INPUT ? h.EmojiIntention.COMMUNITY_CONTENT : h.EmojiIntention.CHAT,
-    currentWord: null !== (C = null == V ? void 0 : V.word) && void 0 !== C ? C : "",
+    currentWord: null !== (R = null == V ? void 0 : V.word) && void 0 !== R ? R : "",
     currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
     optionText: null != B ? (0, s.getString)({
-      [B.name]: null !== (R = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentCommandOptionValue()) && void 0 !== R ? R : []
+      [B.name]: null !== (C = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentCommandOptionValue()) && void 0 !== C ? C : []
     }, B.name) : ""
   }, [F] = i.useState(() => new I.default(x));
   return i.useEffect(() => {

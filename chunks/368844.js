@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return g
   },
   useFindFirstMediaProperties: function() {
-    return C
+    return R
   },
   useFirstMediaIsEmbed: function() {
-    return R
+    return C
   },
   useForumPostMediaProperties: function() {
     return O
@@ -142,14 +142,14 @@ function O(e, t) {
   return [...n, ...N(e, t)]
 }
 
-function C(e, t) {
+function R(e, t) {
   var n, i;
   let r = m(e),
     a = N(e, t);
   return null !== (i = null !== (n = r[0]) && void 0 !== n ? n : a[0]) && void 0 !== i ? i : null
 }
 
-function R(e, t) {
+function C(e, t) {
   let n = m(e),
     i = N(e, t);
   return null == n[0] && null != i[0]

@@ -26,7 +26,7 @@ t.default = e => {
     roleIcon: t,
     guild: n
   } = e, {
-    name: C
+    name: R
   } = t;
   r.useEffect(() => {
     h.default.track(m.AnalyticEvents.OPEN_POPOUT, {
@@ -35,12 +35,12 @@ t.default = e => {
       ...(0, o.collectChannelAnalyticsMetadata)(c.default.getChannel(I.default.getChannelId(n.id)))
     })
   }, []);
-  let R = (0, a.useStateFromStores)([E.default], () => null != t.roleId ? E.default.getRole(n.id, t.roleId) : void 0),
-    g = (0, d.isSubscriptionRole)(R),
+  let C = (0, a.useStateFromStores)([E.default], () => null != t.roleId ? E.default.getRole(n.id, t.roleId) : void 0),
+    g = (0, d.isSubscriptionRole)(C),
     L = g ? p.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({
-      name: C
+      name: R
     }) : p.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({
-      name: C
+      name: R
     }),
     v = {
       ...t,
@@ -67,7 +67,7 @@ t.default = e => {
               variant: "heading-md/semibold",
               className: O.roleName,
               children: (0, i.jsx)(T.default, {
-                children: C
+                children: R
               })
             }), (0, i.jsx)(s.Text, {
               variant: "text-sm/normal",

@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("944486"),
   p = n("594174"),
   O = n("979651"),
-  C = n("181106"),
-  R = n("417363"),
+  R = n("181106"),
+  C = n("417363"),
   g = n("358085"),
   L = n("804739"),
   v = n("317381"),
@@ -58,10 +58,10 @@ function V(e) {
     channelId: null == q ? void 0 : q.channelId,
     userId: Y.id,
     activity: t
-  }), $ = (0, a.useStateFromStores)([h.default, E.default, R.default, T.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, L.isLaunchable)({
+  }), $ = (0, a.useStateFromStores)([h.default, E.default, C.default, T.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, L.isLaunchable)({
     LibraryApplicationStore: h.default,
     LaunchableGameStore: E.default,
-    DispatchApplicationStore: R.default,
+    DispatchApplicationStore: C.default,
     ConnectedAppsStore: T.default,
     applicationId: t.application_id
   })), ee = (0, a.useStateFromStores)([v.default], () => Array.from(v.default.getSelfEmbeddedActivities().values()).some(e => {
@@ -70,7 +70,7 @@ function V(e) {
       channelId: i
     } = e;
     return n === (null == t ? void 0 : t.application_id) && i === J
-  })), et = (0, a.useStateFromStores)([C.default], () => null != t && null != t.application_id && C.default.getState(t.application_id, B.ActivityActionTypes.JOIN) === B.ActivityActionStates.LOADING), [en] = (0, c.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), ei = (0, a.useStateFromStores)([I.default, S.default, f.default, m.default, N.default, O.default, A.default], () => (0, M.default)({
+  })), et = (0, a.useStateFromStores)([R.default], () => null != t && null != t.application_id && R.default.getState(t.application_id, B.ActivityActionTypes.JOIN) === B.ActivityActionStates.LOADING), [en] = (0, c.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), ei = (0, a.useStateFromStores)([I.default, S.default, f.default, m.default, N.default, O.default, A.default], () => (0, M.default)({
     user: Y,
     activity: t,
     application: en,

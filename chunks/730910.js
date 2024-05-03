@@ -57,10 +57,10 @@ function y(e) {
     hasChanges: A.default.hasChanges(),
     hasConfiguredAnythingForCurrentStep: A.default.hasConfiguredAnythingForCurrentStep(),
     hasErrors: A.default.hasErrors()
-  })), k = (0, o.useStateFromStores)([A.default], () => {
+  })), w = (0, o.useStateFromStores)([A.default], () => {
     let e = (0, p.pageToEducationUpsellType)(g);
     return null != e && !A.default.isEducationUpsellDismissed(e)
-  }), w = (0, o.useStateFromStores)([I.default], () => I.default.useReducedMotion), V = (0, _.default)(), Y = l.useRef(null), [{
+  }), k = (0, o.useStateFromStores)([I.default], () => I.default.useReducedMotion), V = (0, _.default)(), Y = l.useRef(null), [{
     spring: W
   }, z] = (0, r.useSpring)(() => ({
     spring: 0
@@ -129,16 +129,16 @@ function y(e) {
         skip: !1
       }), await $() && (0, C.goToPrevOnboardingStep)(n, g)
     }, es = null;
-  k && (g === p.GuildSettingsOnboardingPage.SAFETY_CHECK ? es = (0, a.jsx)(D.SafetyCheckUpsell, {}) : g === p.GuildSettingsOnboardingPage.DEFAULT_CHANNELS ? es = (0, a.jsx)(D.DefaultChannelsUpsell, {}) : g === p.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS ? es = (0, a.jsx)(D.CustomizationQuestionsUpsell, {}) : g === p.GuildSettingsOnboardingPage.HOME_SETTINGS && (es = (0, a.jsx)(D.HomeSettingsUpsell, {})));
+  w && (g === p.GuildSettingsOnboardingPage.SAFETY_CHECK ? es = (0, a.jsx)(D.SafetyCheckUpsell, {}) : g === p.GuildSettingsOnboardingPage.DEFAULT_CHANNELS ? es = (0, a.jsx)(D.DefaultChannelsUpsell, {}) : g === p.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS ? es = (0, a.jsx)(D.CustomizationQuestionsUpsell, {}) : g === p.GuildSettingsOnboardingPage.HOME_SETTINGS && (es = (0, a.jsx)(D.HomeSettingsUpsell, {})));
   let ea = (0, a.jsx)(E.Button, {
       className: i()(b.button, {
-        [b.hidden]: k
+        [b.hidden]: w
       }),
       color: E.Button.Colors.PRIMARY,
       look: E.Button.Looks.OUTLINED,
       size: E.Button.Sizes.SMALL,
       onClick: et,
-      disabled: k || H,
+      disabled: w || H,
       children: (0, a.jsxs)("span", {
         className: b.button,
         children: [(0, a.jsx)(S.default, {
@@ -153,7 +153,7 @@ function y(e) {
       look: E.Button.Looks.FILLED,
       size: E.Button.Sizes.SMALL,
       onClick: ee,
-      disabled: k || H,
+      disabled: w || H,
       children: (0, a.jsxs)(r.animated.span, {
         className: b.button,
         style: {
@@ -177,11 +177,11 @@ function y(e) {
         children: (0, a.jsxs)("div", {
           className: b.flexContainer,
           ref: Y,
-          children: [k ? (0, a.jsxs)("div", {
+          children: [w ? (0, a.jsxs)("div", {
             className: b.educationUpsellRoot,
             children: [(0, a.jsx)("img", {
               className: i()(b.wumpus, {
-                [b.animated]: !w
+                [b.animated]: !k
               }),
               src: s("33631"),
               alt: "wumpus"

@@ -22,13 +22,13 @@ n.r(t), n.d(t, {
     return A
   },
   trackGuildJoinClicked: function() {
-    return R
+    return C
   },
   trackSearchClosed: function() {
     return N
   },
   trackSearchResultsViewed: function() {
-    return C
+    return R
   },
   trackSearchStarted: function() {
     return p
@@ -206,7 +206,7 @@ function O(e, t, n, i) {
   })
 }
 
-function C(e) {
+function R(e) {
   let {
     loadId: t,
     searchId: n,
@@ -228,7 +228,7 @@ function C(e) {
   })
 }
 
-function R(e) {
+function C(e) {
   let t = l.default.getLoadId(e);
   E.default.track(I.AnalyticEvents.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
     guild_id: e,

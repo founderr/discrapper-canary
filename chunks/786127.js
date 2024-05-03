@@ -1,15 +1,15 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var i = n("707592"),
-  r = n("137158"),
-  s = n("689938"),
-  l = n("915580");
+a.r(t);
+var n = a("735250");
+a("470079");
+var r = a("707592"),
+  i = a("137158"),
+  s = a("689938"),
+  l = a("915580");
 t.default = function(e) {
   let {
     formField: t,
-    index: n,
+    index: a,
     isDragEnabled: o,
     isDropHovered: c,
     onDrop: d,
@@ -21,9 +21,9 @@ t.default = function(e) {
     label: E,
     placeholder: T
   } = t;
-  return (0, a.jsx)(r.default, {
+  return (0, n.jsx)(i.default, {
     field: t,
-    index: n,
+    index: a,
     isDragEnabled: o,
     isDropHovered: c,
     onDrop: d,
@@ -32,7 +32,7 @@ t.default = function(e) {
     title: E,
     canRemove: m,
     actionsLocation: h,
-    children: (0, a.jsx)(i.TextInputFieldBody, {
+    children: (0, n.jsx)(r.TextInputFieldBody, {
       className: l.fieldBackground,
       placeholder: null != T ? T : s.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0

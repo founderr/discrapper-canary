@@ -33,8 +33,8 @@ let A = "scientist:triggered",
   N = "userExperimentOverrides",
   p = "guildExperimentOverrides",
   O = new _.default("ExperimentStore"),
-  C = !1,
-  R = {},
+  R = !1,
+  C = {},
   g = {},
   L = [],
   v = [],
@@ -85,7 +85,7 @@ function H(e) {
 let Y = Date.now();
 
 function j(e, t, n, i) {
-  let r = R[F(e, t, n, i)];
+  let r = C[F(e, t, n, i)];
   return !(null == r || Date.now() - r.time > 6048e5) && r.hash === H(t)
 }
 
@@ -138,10 +138,10 @@ function W(e) {
       fingerprint: s
     })
   }
-  R[F(t, n, i, u)] = {
+  C[F(t, n, i, u)] = {
     time: Date.now(),
     hash: H(n)
-  }, ei(R)
+  }, ei(C)
 }
 
 function K(e) {
@@ -180,7 +180,7 @@ function Z(e) {
       experiments: n,
       guildExperiments: i
     } = e;
-  t && X(n, i), C = !0
+  t && X(n, i), R = !0
 }
 
 function X(e, t) {
@@ -275,22 +275,22 @@ function J(e) {
     serializedExperimentStore: t,
     user: n
   } = e;
-  !b && x(n) && (b = !0), C = t.hasLoadedExperiments, R = t.trackedExposureExperiments, D = t.loadedUserExperiments, P = t.userExperimentOverrides, U = t.guildExperimentOverrides, M = q(t.loadedGuildExperiments), y = {}
+  !b && x(n) && (b = !0), R = t.hasLoadedExperiments, C = t.trackedExposureExperiments, D = t.loadedUserExperiments, P = t.userExperimentOverrides, U = t.guildExperimentOverrides, M = q(t.loadedGuildExperiments), y = {}
 }
 
 function $() {
-  C = !0
+  R = !0
 }
 
 function ee(e) {
   let {
     isSwitchingAccount: t
   } = e;
-  u.Storage.remove(A), !t && (u.Storage.remove(m), u.Storage.remove(N), u.Storage.remove(p), P = {}, U = {}), D = {}, L = [], R = {}, C = !1
+  u.Storage.remove(A), !t && (u.Storage.remove(m), u.Storage.remove(N), u.Storage.remove(p), P = {}, U = {}), D = {}, L = [], C = {}, R = !1
 }
 
 function et() {
-  C = !1, R = {}, u.Storage.remove(A)
+  R = !1, C = {}, u.Storage.remove(A)
 }
 
 function en() {
@@ -407,7 +407,7 @@ function eo(e) {
 }
 class el extends E.default {
   initialize() {
-    R = function() {
+    C = function() {
       let e = u.Storage.get(A);
       if (null == e || 1 !== e.v) return {};
       let t = e.e,
@@ -457,7 +457,7 @@ class el extends E.default {
     }
   }
   get hasLoadedExperiments() {
-    return C
+    return R
   }
   hasRegisteredExperiment(e) {
     return null != g[e]
@@ -548,7 +548,7 @@ class el extends E.default {
   }
   getRecentExposures(e, t) {
     let n = "".concat(e, "|").concat(t, "|");
-    return Object.entries(R).filter(e => {
+    return Object.entries(C).filter(e => {
       let [t] = e;
       return t.startsWith(n)
     }).map(e => {
@@ -591,8 +591,8 @@ class el extends E.default {
     for (let t in M)
       for (let n of (e[t] = JSON.parse(JSON.stringify(M[t])), e[t].populations)) n.filters = [];
     return {
-      hasLoadedExperiments: C,
-      trackedExposureExperiments: R,
+      hasLoadedExperiments: R,
+      trackedExposureExperiments: C,
       loadedUserExperiments: D,
       loadedGuildExperiments: e,
       userExperimentOverrides: P,

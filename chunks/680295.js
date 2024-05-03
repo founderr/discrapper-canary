@@ -34,7 +34,7 @@ let h = e => {
       introDelay: m = d.ENTRY_DELAY
     } = e, N = r.useRef(null), [p, O] = r.useState([]);
     (0, T.default)(h);
-    let [C, R] = r.useState(0), [g, L] = r.useState(0), {
+    let [R, C] = r.useState(0), [g, L] = r.useState(0), {
       accessibilityLabel: v
     } = h, [D, M] = r.useState(-m), {
       stop: y,
@@ -51,12 +51,12 @@ let h = e => {
       p.forEach(n => {
         let i = n.start + n.duration;
         i > e && (e = i), n.loop && n.start < t && (t = n.start)
-      }), R(t), L(e)
+      }), C(t), L(e)
     }, [L, p]);
     let [b, G] = r.useState(!1);
     return r.useEffect(() => {
-      !0 !== u && !o && (y(), M(0)), !o && b && U.current && (y(), M(0)), a && o && !U.current && (P(), h.animationType === _.AnimationTypes.PERSISTENT ? M(I === _.RestartMethod.FromStart ? 0 : C) : M(0))
-    }, [o, b, C, a, y, P, U, h.animationType, u, I]), (0, i.jsx)("div", {
+      !0 !== u && !o && (y(), M(0)), !o && b && U.current && (y(), M(0)), a && o && !U.current && (P(), h.animationType === _.AnimationTypes.PERSISTENT ? M(I === _.RestartMethod.FromStart ? 0 : R) : M(0))
+    }, [o, b, R, a, y, P, U, h.animationType, u, I]), (0, i.jsx)("div", {
       ref: N,
       className: s()(S.profileEffects, {
         [S.hovered]: o && l

@@ -21,13 +21,13 @@ var i = n("735250"),
   N = n("689938"),
   p = n("750178");
 let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
-  C = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewPadding),
-  R = r.memo(function(e) {
+  R = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewPadding),
+  C = r.memo(function(e) {
     let {
       isDisplayingIndividualStickers: t = !1,
       preferAnimation: a = !0,
       getStickerItemProps: l,
-      getStickerRowProps: R,
+      getStickerRowProps: C,
       gutterWidth: g,
       inspectedStickerPosition: L,
       isScrolling: v,
@@ -37,7 +37,7 @@ let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
       rowIndex: P,
       stickerClassName: U,
       stickerDescriptors: b,
-      stickerPadding: G = C,
+      stickerPadding: G = R,
       stickerSize: w = O,
       ownedStickerPacks: B,
       enlargeOnInteraction: k = !1,
@@ -59,12 +59,12 @@ let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
     return (0, i.jsx)("div", {
       className: p.row,
       style: j,
-      ...null == R ? void 0 : R(P),
+      ...null == C ? void 0 : C(P),
       children: b.map(e => {
         var _;
         let O = e.visibleRowIndex === (null == L ? void 0 : L.rowIndex) && e.columnIndex === (null == L ? void 0 : L.columnIndex),
-          C = e.type === f.StickerGridItemTypes.STICKER && k && O,
-          R = (0, o.throttle)(() => {
+          R = e.type === f.StickerGridItemTypes.STICKER && k && O,
+          C = (0, o.throttle)(() => {
             (null == v ? void 0 : v.current) !== !0 && (null == D ? void 0 : D.current) !== !0 && !O && (null == M || M(e))
           }, 250),
           {
@@ -84,8 +84,8 @@ let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
                 }),
                 innerRef: g,
                 tabIndex: b,
-                onFocus: null != G ? G : R,
-                onMouseMove: R,
+                onFocus: null != G ? G : C,
+                onMouseMove: C,
                 onClick: () => {
                   e.type === f.StickerGridItemTypes.CREATE_STICKER && (I.default.track(m.AnalyticEvents.OPEN_MODAL, {
                     type: m.AnalyticsSections.CREATE_STICKER_MODAL,
@@ -126,8 +126,8 @@ let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
               }),
               innerRef: g,
               tabIndex: b,
-              onFocus: null != G ? G : R,
-              onMouseMove: R,
+              onFocus: null != G ? G : C,
+              onMouseMove: C,
               onClick: t => {
                 (null == v ? void 0 : v.current) !== !0 && (null == D ? void 0 : D.current) !== !0 && (null == y || y(e, t))
               },
@@ -153,7 +153,7 @@ let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
                 }), (0, i.jsx)(h.default, {
                   className: s()(p.stickerNode, {
                     [p.stickerNodeDimmed]: k && !O && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
-                    [p.stickerNodeHidden]: C,
+                    [p.stickerNodeHidden]: R,
                     [p.stickerUnsendable]: F && !(0, T.isSendableSticker)(e.sticker, x, V)
                   }),
                   disableAnimation: !O && !a,
@@ -172,4 +172,4 @@ let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
       })
     })
   });
-t.default = R
+t.default = C

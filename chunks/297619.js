@@ -1,40 +1,40 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var i = n("120356"),
-  r = n.n(i),
-  s = n("481060"),
-  l = n("814550"),
-  o = n("246364"),
-  c = n("700833"),
-  d = n("689938"),
-  u = n("915580");
+a.r(t);
+var n = a("735250");
+a("470079");
+var r = a("120356"),
+  i = a.n(r),
+  s = a("481060"),
+  l = a("814550"),
+  o = a("246364"),
+  c = a("700833"),
+  d = a("689938"),
+  u = a("915580");
 t.default = function(e) {
   let {
     addFormField: t,
-    guild: n
+    guild: a
   } = e;
-  return (0, a.jsxs)("div", {
-    className: r()(u.spacingContainer, u.leftRailIconContainer, u.backgroundContainer),
-    children: [(0, a.jsx)("div", {
+  return (0, n.jsxs)("div", {
+    className: i()(u.spacingContainer, u.leftRailIconContainer, u.backgroundContainer),
+    children: [(0, n.jsx)("div", {
       className: u.iconContainer,
-      children: (0, a.jsx)(l.default, {
+      children: (0, n.jsx)(l.default, {
         width: 18,
         height: 20,
         className: u.icon
       })
-    }), (0, a.jsxs)(s.FormSection, {
-      children: [(0, a.jsx)(s.FormTitle, {
+    }), (0, n.jsxs)(s.FormSection, {
+      children: [(0, n.jsx)(s.FormTitle, {
         tag: "h3",
         className: u.leftRailIconContainerTitle,
         children: d.default.Messages.MEMBER_VERIFICATION_GET_STARTED_TITLE
-      }), (0, a.jsx)(s.FormText, {
+      }), (0, n.jsx)(s.FormText, {
         className: u.leftRailIconContainerDescription,
         type: s.FormText.Types.DESCRIPTION,
         children: d.default.Messages.MEMBER_VERIFICATION_GET_STARTED_DESCRIPTION
-      }), (0, a.jsx)(s.Button, {
-        onClick: () => (0, c.openEmptyFormFieldModal)(o.VerificationFormFieldTypes.TERMS, t, n),
+      }), (0, n.jsx)(s.Button, {
+        onClick: () => (0, c.openEmptyFormFieldModal)(o.VerificationFormFieldTypes.TERMS, t, a),
         children: d.default.Messages.MEMBER_VERIFICATION_GET_STARTED_BUTTON
       })]
     })]

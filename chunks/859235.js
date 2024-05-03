@@ -34,15 +34,15 @@ t.default = s.forwardRef(function(e, t) {
     draftType: p,
     size: O = 1
   } = e, {
-    onFocus: C,
-    ...R
+    onFocus: R,
+    ...C
   } = (0, u.useListItem)(n), {
     handleFocus: g,
     handleBlur: L
-  } = (0, I.useFocusInside)(C), v = 0 === O, D = null != o;
+  } = (0, I.useFocusInside)(R), v = 0 === O, D = null != o;
   return (0, a.jsx)(d.FocusRing, {
     children: (0, a.jsx)("li", {
-      ...R,
+      ...C,
       onFocus: g,
       onBlur: L,
       onKeyDown: e => {

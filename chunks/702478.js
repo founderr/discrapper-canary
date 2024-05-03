@@ -38,7 +38,7 @@ var a = s("735250"),
   y = s("280632"),
   F = s("44234"),
   H = s("117428");
-let k = function(e, t, s) {
+let w = function(e, t, s) {
     let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
       l = null;
     return null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (l = D.default.Messages.GUILD_ANALYTICS_METRICS_LAST_WEEK) : l = D.default.Messages.PERCENTAGE_SINCE_LAST_WEEK.format({
@@ -50,7 +50,7 @@ let k = function(e, t, s) {
       isTrendingDown: t < 0
     }
   },
-  w = function(e) {
+  k = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return t || e === A.AbortCodes.NOT_ENOUGH_GUILD_MEMBERS ? (0, a.jsx)(c.FormErrorBlock, {
       icon: N.default,
@@ -303,18 +303,18 @@ t.default = () => {
       children: [(0, a.jsx)(E.default, {
         title: D.default.Messages.WEEKLY_VISITORS,
         tooltipText: D.default.Messages.VISITORS_INFO,
-        ...k(i.visitors, i.visitorsChange, n)
+        ...w(i.visitors, i.visitorsChange, n)
       }), (0, a.jsx)(E.default, {
         title: D.default.Messages.WEEKLY_COMMUNICATORS,
         tooltipText: D.default.Messages.COMMUNICATORS_INFO,
-        ...k(i.communicators, i.communicatorsChange, n)
+        ...w(i.communicators, i.communicatorsChange, n)
       }), (0, a.jsx)(E.default, {
         title: D.default.Messages.WEEKLY_NEW_MEMBERS,
-        ...k(i.newMembers, i.newMembersChange, n)
+        ...w(i.newMembers, i.newMembersChange, n)
       }), (0, a.jsx)(E.default, {
         title: D.default.Messages.WEEKLY_NEW_MEMBER_RETENTION,
         tooltipText: D.default.Messages.NEW_MEMBER_RETENTION_INFO,
-        ...k(i.pctRetained, i.pctRetainedChange, n, !0)
+        ...w(i.pctRetained, i.pctRetainedChange, n, !0)
       })]
     })
   }) : null;
@@ -324,7 +324,7 @@ t.default = () => {
     children: [(0, a.jsx)(c.FormText, {
       type: c.FormTextTypes.DESCRIPTION,
       children: D.default.Messages.GUILD_ANALYTICS_DESCRIPTION.format()
-    }), w(o, d), null != e ? (0, a.jsx)(W, {
+    }), k(o, d), null != e ? (0, a.jsx)(W, {
       guildId: e
     }) : null, (0, a.jsxs)("div", {
       className: v.developerPortalCtaWrapper,

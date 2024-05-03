@@ -85,7 +85,7 @@ n.r(t), n.d(t, {
     return M
   },
   StatsFilter: function() {
-    return C
+    return R
   },
   VIDEO_QUALITY_FRAMERATE: function() {
     return Q
@@ -106,14 +106,14 @@ n.r(t), n.d(t, {
     return G
   },
   VideoToggleReason: function() {
-    return R
+    return C
   },
   defaultVideoQualityOptions: function() {
     return en
   }
 });
-var i, r, a, s, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, C, R, g, L, v, D, M, y, P, U, b, G, w, B = n("268146");
-(i = m || (m = {})).DEFAULT = "default", i.STREAM = "stream", (r = N || (N = {})).AUDIO_INPUT = "audioinput", r.AUDIO_OUTPUT = "audiooutput", r.VIDEO_INPUT = "videoinput", (a = p || (p = {})).PUSH_TO_TALK = "PUSH_TO_TALK", a.VOICE_ACTIVITY = "VOICE_ACTIVITY", (s = O || (O = {})).DISCONNECTED = "DISCONNECTED", s.CONNECTING = "CONNECTING", s.CONNECTED = "CONNECTED", s.NO_ROUTE = "NO_ROUTE", s.ICE_CHECKING = "ICE_CHECKING", s.DTLS_CONNECTING = "DTLS_CONNECTING", (o = C || (C = {}))[o.TRANSPORT = 1] = "TRANSPORT", o[o.OUTBOUND = 2] = "OUTBOUND", o[o.INBOUND = 4] = "INBOUND", o[o.ALL = 7] = "ALL", (l = R || (R = {})).MANUAL_DISABLE = "video_manual_disable", l.MANUAL_ENABLE = "video_manual_enable", l.MANUAL_REENABLE = "video_manual_reenable", l.AUTO_DISABLE = "video_auto_disable", l.AUTO_ENABLE = "video_auto_enable", l.AUTO_DOWNGRADE = "video_auto_downgrade", l.AUTO_UPGRADE = "video_auto_upgrade,";
+var i, r, a, s, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, R, C, g, L, v, D, M, y, P, U, b, G, w, B = n("268146");
+(i = m || (m = {})).DEFAULT = "default", i.STREAM = "stream", (r = N || (N = {})).AUDIO_INPUT = "audioinput", r.AUDIO_OUTPUT = "audiooutput", r.VIDEO_INPUT = "videoinput", (a = p || (p = {})).PUSH_TO_TALK = "PUSH_TO_TALK", a.VOICE_ACTIVITY = "VOICE_ACTIVITY", (s = O || (O = {})).DISCONNECTED = "DISCONNECTED", s.CONNECTING = "CONNECTING", s.CONNECTED = "CONNECTED", s.NO_ROUTE = "NO_ROUTE", s.ICE_CHECKING = "ICE_CHECKING", s.DTLS_CONNECTING = "DTLS_CONNECTING", (o = R || (R = {}))[o.TRANSPORT = 1] = "TRANSPORT", o[o.OUTBOUND = 2] = "OUTBOUND", o[o.INBOUND = 4] = "INBOUND", o[o.ALL = 7] = "ALL", (l = C || (C = {})).MANUAL_DISABLE = "video_manual_disable", l.MANUAL_ENABLE = "video_manual_enable", l.MANUAL_REENABLE = "video_manual_reenable", l.AUTO_DISABLE = "video_auto_disable", l.AUTO_ENABLE = "video_auto_enable", l.AUTO_DOWNGRADE = "video_auto_downgrade", l.AUTO_UPGRADE = "video_auto_upgrade,";
 let k = 100,
   V = 18,
   x = 64e3,

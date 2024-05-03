@@ -33,9 +33,9 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let C = Object.freeze({});
+let R = Object.freeze({});
 
-function R(e, t) {
+function C(e, t) {
   var n, i;
   if (!t.frecencyBoosters) return {};
   let r = c.default.getFrequentlyWithoutFetchingLatest(),
@@ -138,7 +138,7 @@ class g {
   }
   queryTextChannels(e, t) {
     if (!this._include(N.AutocompleterResultTypes.TEXT_CHANNEL)) return [];
-    let n = R(N.AutocompleterResultTypes.TEXT_CHANNEL, this.options),
+    let n = C(N.AutocompleterResultTypes.TEXT_CHANNEL, this.options),
       {
         blacklist: i
       } = this.options;
@@ -155,7 +155,7 @@ class g {
     if (!this._include(N.AutocompleterResultTypes.VOICE_CHANNEL)) return [];
     let {
       voiceChannelGuildFilter: n
-    } = this.options, i = R(N.AutocompleterResultTypes.VOICE_CHANNEL, this.options);
+    } = this.options, i = C(N.AutocompleterResultTypes.VOICE_CHANNEL, this.options);
     return f.default.queryChannels({
       query: e,
       guildId: n,
@@ -167,7 +167,7 @@ class g {
   }
   queryGuilds(e, t) {
     if (!this._include(N.AutocompleterResultTypes.GUILD)) return [];
-    let n = R(N.AutocompleterResultTypes.GUILD, this.options),
+    let n = C(N.AutocompleterResultTypes.GUILD, this.options),
       {
         blacklist: i
       } = this.options;
@@ -187,13 +187,13 @@ class g {
     let {
       userFilters: r
     } = this.options;
-    void 0 !== t && S.default.requestMembers(t, e, 100), i.setLimit(n), i.setQuery(e, r, this._userBlacklist, R(N.AutocompleterResultTypes.USER, this.options))
+    void 0 !== t && S.default.requestMembers(t, e, 100), i.setLimit(n), i.setQuery(e, r, this._userBlacklist, C(N.AutocompleterResultTypes.USER, this.options))
   }
   queryGroupDMs(e, t) {
     if (!this._include(N.AutocompleterResultTypes.GROUP_DM)) return [];
     let {
       blacklist: n
-    } = this.options, i = R(N.AutocompleterResultTypes.GROUP_DM, this.options);
+    } = this.options, i = C(N.AutocompleterResultTypes.GROUP_DM, this.options);
     return f.default.queryGroupDMs({
       query: e,
       limit: t,
@@ -229,8 +229,8 @@ class g {
       score: 1
     }] : []
   }
-  constructor(e, t, n = 100, i = C) {
-    O(this, "query", ""), O(this, "options", C), O(this, "results", []), O(this, "_userResults", []), O(this, "_groupDMResults", []), O(this, "_textChannelResults", []), O(this, "_voiceChannelResults", []), O(this, "_guildResults", []), O(this, "_applicationResults", []), O(this, "_linkResults", []), O(this, "_asyncTimeout", void 0), O(this, "userSearchContext", void 0), O(this, "onResultsChange", void 0), O(this, "resultTypes", void 0), O(this, "_userBlacklist", null), O(this, "_limit", void 0), O(this, "parseUserResults", e => {
+  constructor(e, t, n = 100, i = R) {
+    O(this, "query", ""), O(this, "options", R), O(this, "results", []), O(this, "_userResults", []), O(this, "_groupDMResults", []), O(this, "_textChannelResults", []), O(this, "_voiceChannelResults", []), O(this, "_guildResults", []), O(this, "_applicationResults", []), O(this, "_linkResults", []), O(this, "_asyncTimeout", void 0), O(this, "userSearchContext", void 0), O(this, "onResultsChange", void 0), O(this, "resultTypes", void 0), O(this, "_userBlacklist", null), O(this, "_limit", void 0), O(this, "parseUserResults", e => {
       let {
         results: t
       } = e;

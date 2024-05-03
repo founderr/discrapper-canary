@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return L
   },
   useMultiSelectState: function() {
-    return C
+    return R
   },
   useSingleSelectState: function() {
     return O
   },
   useVariableSelect: function() {
-    return R
+    return C
   }
 }), n("47120");
 var i = n("735250"),
@@ -60,7 +60,7 @@ function O(e) {
   }
 }
 
-function C(e) {
+function R(e) {
   let {
     value: t,
     onChange: n,
@@ -80,7 +80,7 @@ function C(e) {
   }
 }
 
-function R(e) {
+function C(e) {
   let {
     value: t,
     onChange: n,
@@ -151,8 +151,8 @@ function y(e) {
     popoutWidth: T,
     clearable: h = !1,
     look: O = m.SelectLooks.FILLED,
-    onClose: C,
-    onOpen: R,
+    onClose: R,
+    onOpen: C,
     renderOptionLabel: g = D,
     renderOptionValue: L = M,
     popoutClassName: v,
@@ -172,8 +172,8 @@ function y(e) {
     width: K,
     height: z
   } = (0, E.default)(), Z = r.useCallback(e => {
-    Y !== e && !o && (j(e), e ? null == R || R() : null == C || C())
-  }, [o, C, R, Y]), X = r.useCallback(e => {
+    Y !== e && !o && (j(e), e ? null == C || C() : null == R || R())
+  }, [o, R, C, Y]), X = r.useCallback(e => {
     Y && !e && Z(!1)
   }, [Z, Y]), Q = (0, I.useIsVisible)(X), q = r.useCallback(e => {
     if (w(e), G) {
@@ -301,7 +301,7 @@ function P(e) {
     buttonHeight: A,
     updatePosition: m,
     popoutPosition: N
-  } = e, [O, C] = r.useState(0), R = r.useRef(null), g = r.useId(), L = (0, o.default)({
+  } = e, [O, R] = r.useState(0), C = r.useRef(null), g = r.useId(), L = (0, o.default)({
     id: g,
     async scrollToEnd() {},
     async scrollToStart() {},
@@ -315,8 +315,8 @@ function P(e) {
     A > 0 && m()
   }, [A, m]), (0, T.default)(m), r.useLayoutEffect(() => {
     var e, t;
-    let n = null === (t = R.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
-    null != n && C(n)
+    let n = null === (t = C.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
+    null != n && R(n)
   }, [I]), r.useEffect(() => {
     m()
   }, [m, O]);
@@ -363,7 +363,7 @@ function P(e) {
             children: M
           }), (0, i.jsx)("div", {
             "aria-hidden": !0,
-            ref: R,
+            ref: C,
             className: p.measurement,
             children: M.slice(0, I)
           })]

@@ -16,8 +16,8 @@ var a, s, o, l, u = n("348327"),
   N = n("780570"),
   p = n("314897"),
   O = n("77498"),
-  C = n("517100"),
-  R = n("283595"),
+  R = n("517100"),
+  C = n("283595"),
   g = n("293273"),
   L = n("158776"),
   v = n("797258"),
@@ -33,7 +33,7 @@ let M = !1,
   k = [];
 
 function V(e) {
-  return (0, N.shouldShareApplicationActivity)(e, R.default)
+  return (0, N.shouldShareApplicationActivity)(e, C.default)
 }
 
 function x(e) {
@@ -56,7 +56,7 @@ function x(e) {
 
 function F() {
   var e;
-  if (U = null !== (e = C.default.getIdleSince()) && void 0 !== e ? e : 0, G = C.default.isAFK(), w) y = P, H();
+  if (U = null !== (e = R.default.getIdleSince()) && void 0 !== e ? e : 0, G = R.default.isAFK(), w) y = P, H();
   else if (M) y = D.StatusTypes.INVISIBLE;
   else {
     let e = h.StatusSetting.getSetting();
@@ -82,7 +82,7 @@ function Y() {
 }
 class j extends(a = E.default.Store) {
   initialize() {
-    this.waitFor(C.default, A.default, g.default, v.default, R.default, O.default), this.syncWith([g.default], F)
+    this.waitFor(R.default, A.default, g.default, v.default, C.default, O.default), this.syncWith([g.default], F)
   }
   getLocalPresence() {
     return {

@@ -18,16 +18,16 @@ let T = {},
   p = new Set,
   O = {};
 
-function C(e) {
+function R(e) {
   T[e.id] = _.default.createFromServer(e), null == S[e.sku_id] && (S[e.sku_id] = new Set), null == h[e.application_id] && (h[e.application_id] = new Set), null != e.subscription_id && (null == O[e.subscription_id] && (O[e.subscription_id] = new Set), O[e.subscription_id].add(e.id)), h[e.application_id].add(e.id), S[e.sku_id].add(e.id)
 }
 
-function R(e) {
+function C(e) {
   f[e.id] = _.default.createFromServer(e)
 }
 
 function g(e) {
-  return C(e.entitlement)
+  return R(e.entitlement)
 }
 class L extends(i = u.Store) {
   initialize() {
@@ -111,20 +111,20 @@ s = "EntitlementStore", (a = "displayName") in(r = L) ? Object.defineProperty(r,
       applicationId: t,
       entitlements: n
     } = e;
-    for (let e of (N.delete(t), p.add(t), n)) !0 !== e.consumed && C(e)
+    for (let e of (N.delete(t), p.add(t), n)) !0 !== e.consumed && R(e)
   },
   ENTITLEMENT_FETCH_APPLICATION_FAIL: function() {},
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function(e) {
     let {
       entitlements: t
     } = e;
-    f = {}, t.forEach(R)
+    f = {}, t.forEach(C)
   },
   SKU_PURCHASE_SUCCESS: function(e) {
     let {
       entitlements: t
     } = e;
-    for (let e of t) C(e)
+    for (let e of t) R(e)
   },
   LIBRARY_FETCH_SUCCESS: function(e) {
     let {
@@ -132,7 +132,7 @@ s = "EntitlementStore", (a = "displayName") in(r = L) ? Object.defineProperty(r,
     } = e;
     for (let e of t)
       if (null != e.entitlements)
-        for (let t of e.entitlements) C(t)
+        for (let t of e.entitlements) R(t)
   },
   ENTITLEMENT_CREATE: g,
   ENTITLEMENT_UPDATE: g,
@@ -158,7 +158,7 @@ s = "EntitlementStore", (a = "displayName") in(r = L) ? Object.defineProperty(r,
     let {
       entitlements: t
     } = e;
-    for (let e of (m = !0, A = !1, t)) C(e)
+    for (let e of (m = !0, A = !1, t)) R(e)
   },
   ENTITLEMENTS_FETCH_FOR_USER_FAIL: function() {
     m = !1, A = !1

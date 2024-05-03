@@ -30,8 +30,8 @@ var r, a, s, o, l = n("392711"),
   N = n("77498"),
   p = n("283595"),
   O = n("417363"),
-  C = n("626135"),
-  R = n("70956"),
+  R = n("626135"),
+  C = n("70956"),
   g = n("877481"),
   L = n("823379"),
   v = n("358085"),
@@ -231,7 +231,7 @@ function el(e) {
   var t, n;
   let i = {
     ...e,
-    played: null != e.lastFocused && 0 !== e.lastFocused ? _()(new Date(e.lastFocused * R.default.Millis.SECOND)).fromNow() : " ",
+    played: null != e.lastFocused && 0 !== e.lastFocused ? _()(new Date(e.lastFocused * C.default.Millis.SECOND)).fromNow() : " ",
     overlay: (t = e, null !== (n = K.enableOverlay[ei(t)]) && void 0 !== n ? n : er(t).enabled),
     verified: N.default.isGameInDatabase(e),
     detectable: ea(e)
@@ -517,7 +517,7 @@ o = "RunningGameStore", (s = "displayName") in(a = eE) ? Object.defineProperty(a
   RUNNING_GAME_TOGGLE_OVERLAY: function(e) {
     if (K.enableOverlay[ei(e.game)] = e.newEnabledValue, eo(), !__OVERLAY__) {
       let t = null != e.game.id ? N.default.getDetectableGame(e.game.id) : null;
-      null != t && C.default.track(P.AnalyticEvents.OVERLAY_TOGGLED, {
+      null != t && R.default.track(P.AnalyticEvents.OVERLAY_TOGGLED, {
         enabled: e.newEnabledValue,
         setting_type: "overlay toggled - game",
         application_id: t.id,
@@ -529,7 +529,7 @@ o = "RunningGameStore", (s = "displayName") in(a = eE) ? Object.defineProperty(a
     let {
       game: t
     } = e, n = ea(t);
-    K.enableDetection[ei(t)] = !n, eo(), C.default.track(P.AnalyticEvents.USER_SETTINGS_GAME_DETECTION_TOGGLE, {
+    K.enableDetection[ei(t)] = !n, eo(), R.default.track(P.AnalyticEvents.USER_SETTINGS_GAME_DETECTION_TOGGLE, {
       enabled: !n
     })
   },

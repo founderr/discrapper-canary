@@ -92,9 +92,9 @@ function o(e) {
     }
   }, [I, t, T, l, d]), O = i.useCallback(() => {
     !f && S(!0)
-  }, [f]), C = i.useCallback(e => {
+  }, [f]), R = i.useCallback(e => {
     e.target !== e.currentTarget && !e.currentTarget.contains(e.relatedTarget) && f && S(!1)
-  }, [f]), R = i.useCallback(() => {
+  }, [f]), C = i.useCallback(() => {
     E({
       type: r.MenuActionType.SET_FOCUS_PATH,
       path: []
@@ -105,10 +105,10 @@ function o(e) {
     tabIndex: -1,
     onKeyDown: p,
     onFocus: O,
-    onBlur: C,
-    onMouseLeave: R,
+    onBlur: R,
+    onMouseLeave: C,
     "aria-activedescendant": T.length > 0 ? (0, s.makeId)(t, T.join("--")) : void 0
-  }), [t, p, O, C, R, T]), v = i.useCallback(e => {
+  }), [t, p, O, R, C, T]), v = i.useCallback(e => {
     let {
       path: n
     } = e;

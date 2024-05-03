@@ -48,7 +48,7 @@ var i = n("367907"),
   _ = n("981631");
 
 function c(e, t) {
-  C(l.ReportNames.GUILD_DISCOVERY, {
+  R(l.ReportNames.GUILD_DISCOVERY, {
     guild_id: e.id
   }), (0, d.showReportModal)({
     name: l.ReportNames.GUILD_DISCOVERY,
@@ -57,7 +57,7 @@ function c(e, t) {
 }
 
 function E(e, t) {
-  C(l.ReportNames.GUILD_DIRECTORY_ENTRY, {
+  R(l.ReportNames.GUILD_DIRECTORY_ENTRY, {
     channel_id: e.channelId,
     guild_id: e.guildId
   }), (0, d.showReportModal)({
@@ -67,7 +67,7 @@ function E(e, t) {
 }
 
 function I(e, t, n) {
-  C(l.ReportNames.MESSAGE, {
+  R(l.ReportNames.MESSAGE, {
     message_id: e.id,
     channel_id: e.channel_id
   });
@@ -82,7 +82,7 @@ function I(e, t, n) {
 
 function T(e, t) {
   let n = r.default.getStageInstanceByChannel(e.id);
-  null != n && (C(l.ReportNames.STAGE_CHANNEL, {
+  null != n && (R(l.ReportNames.STAGE_CHANNEL, {
     stage_instance_id: n.id,
     channel_id: n.channel_id,
     guild_id: n.guild_id
@@ -94,7 +94,7 @@ function T(e, t) {
 
 function f(e, t) {
   var n;
-  C(l.ReportNames.GUILD_SCHEDULED_EVENT, {
+  R(l.ReportNames.GUILD_SCHEDULED_EVENT, {
     guild_scheduled_event_id: e.id,
     guild_id: e.guild_id,
     channel_id: null !== (n = e.channel_id) && void 0 !== n ? n : void 0
@@ -105,7 +105,7 @@ function f(e, t) {
 }
 
 function S(e, t) {
-  C(l.ReportNames.FIRST_DM, {
+  R(l.ReportNames.FIRST_DM, {
     message_id: e.id,
     channel_id: e.channel_id
   }), (0, d.showReportModal)({
@@ -125,7 +125,7 @@ async function h(e, t) {
 }
 
 function A(e, t, n) {
-  C(l.ReportNames.USER, {
+  R(l.ReportNames.USER, {
     reported_user_id: e.id
   }), (0, d.showReportModal)({
     name: l.ReportNames.USER,
@@ -136,7 +136,7 @@ function A(e, t, n) {
 
 function m(e, t) {
   let n = new s.default({});
-  C(l.UnauthenticatedReportNames.USER, {
+  R(l.UnauthenticatedReportNames.USER, {
     reported_user_id: n.id
   }), (0, d.showReportModal)({
     name: l.UnauthenticatedReportNames.USER,
@@ -146,7 +146,7 @@ function m(e, t) {
 
 function N(e, t) {
   let n = new a.default({});
-  C(l.UnauthenticatedReportNames.MESSAGE, {
+  R(l.UnauthenticatedReportNames.MESSAGE, {
     message_id: void 0,
     channel_id: void 0
   }), (0, d.showReportModal)({
@@ -168,7 +168,7 @@ async function p(e, t, n) {
 }
 
 function O(e, t) {
-  C(l.ReportNames.MESSAGE, {
+  R(l.ReportNames.MESSAGE, {
     message_id: e.id,
     channel_id: e.channel_id
   }), (0, d.showReportModal)({
@@ -179,7 +179,7 @@ function O(e, t) {
   }, t)
 }
 
-function C(e, t) {
+function R(e, t) {
   i.default.trackWithMetadata(_.AnalyticEvents.IAR_MODAL_OPEN, {
     report_type: e,
     ...t

@@ -37,8 +37,8 @@ var i = n("735250"),
   N = n("687476"),
   p = n("761966"),
   O = n("563927"),
-  C = n("98278"),
-  R = n("197115"),
+  R = n("98278"),
+  C = n("197115"),
   g = n("703656"),
   L = n("944486"),
   v = n("914010"),
@@ -284,7 +284,7 @@ let z = () => ({
           g(), w.default.track(H.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
             location_page: ee.page,
             location_section: ee.section
-          }), (0, C.navigateToPremiumMarketingPage)()
+          }), (0, R.navigateToPremiumMarketingPage)()
         }
       }),
       el = q && en && !er && (Z && et || !Z),
@@ -335,7 +335,7 @@ let z = () => ({
                 children: eu
               })]
             })]
-          }), ec ? (0, i.jsx)(R.default, {
+          }), ec ? (0, i.jsx)(C.default, {
             className: K.ctaButton,
             subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2,
             size: d.Button.Sizes.SMALL,
@@ -436,7 +436,7 @@ let z = () => ({
           ...t
         })
       }, e.id)), !l && (_ === x.EmojiPopoutType.GET_PREMIUM ? (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(R.default, {
+        children: [(0, i.jsx)(C.default, {
           subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2,
           buttonText: s.text,
           className: K.ctaButton,

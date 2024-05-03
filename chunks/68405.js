@@ -90,7 +90,7 @@ function O(e, t) {
   })
 }
 
-function C(e, t, n) {
+function R(e, t, n) {
   let i = Date.now();
   p(t), s.HTTP.get({
     url: h.Endpoints.GIFS_SEARCH,
@@ -117,7 +117,7 @@ function C(e, t, n) {
     query: e
   }))
 }
-let R = r().debounce(C, 250);
+let C = r().debounce(R, 250);
 
 function g(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -125,7 +125,7 @@ function g(e, t) {
   "" === e ? v() : (l.default.dispatch({
     type: "GIF_PICKER_QUERY",
     query: e
-  }), n ? C(e, t, i) : R(e, t, i))
+  }), n ? R(e, t, i) : C(e, t, i))
 }
 
 function L(e) {

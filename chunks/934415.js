@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return v
   },
   permissionOverwritesForRoles: function() {
-    return R
+    return C
   },
   previousTextChannelRouteForGuild: function() {
     return b
@@ -67,7 +67,7 @@ function O(e, t) {
   return e === t || e === N
 }
 
-function C(e, t, n) {
+function R(e, t, n) {
   let r = T.NONE;
   return ((0, u.isGuildSelectableChannelType)(t) || t === N) && (r = i.add(r, S.Permissions.VIEW_CHANNEL)), (O(t, m) || O(t, p)) && (r = i.add(r, S.Permissions.VIEW_CHANNEL), r = i.add(r, S.Permissions.CONNECT)), {
     id: e,
@@ -77,7 +77,7 @@ function C(e, t, n) {
   }
 }
 
-function R(e, t, n) {
+function C(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     s = [];
   if (n.length > 0 || a) {
@@ -91,16 +91,16 @@ function R(e, t, n) {
     }))
   }
   return n.forEach(e => {
-    s.push(C(e, t, r.PermissionOverwriteType.ROLE))
+    s.push(R(e, t, r.PermissionOverwriteType.ROLE))
   }), s
 }
 
 function g(e, t) {
-  return C(e, t, r.PermissionOverwriteType.MEMBER)
+  return R(e, t, r.PermissionOverwriteType.MEMBER)
 }
 
 function L(e, t) {
-  return C(e, t, r.PermissionOverwriteType.ROLE)
+  return R(e, t, r.PermissionOverwriteType.ROLE)
 }
 
 function v(e) {

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return M
   },
   getFilenameForSticker: function() {
-    return R
+    return C
   },
   getMessageStickers: function() {
     return G
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return g
   },
   getStickerFormatTypeFromFileType: function() {
-    return C
+    return R
   },
   getStickerPackBannerAssetUrl: function() {
     return L
@@ -78,7 +78,7 @@ let {
     default:
       throw Error("Unexpected format type: ".concat(e))
   }
-}, C = e => {
+}, R = e => {
   switch (e) {
     case "application/json":
       return d.StickerFormat.LOTTIE;
@@ -92,7 +92,7 @@ let {
     default:
       throw Error("Unexpected file type: ".concat(e))
   }
-}, R = e => null == e ? null : "".concat(e.name, ".").concat(O(e.format_type)), g = function(e) {
+}, C = e => null == e ? null : "".concat(e.name, ".").concat(O(e.format_type)), g = function(e) {
   let {
     isPreview: t = !1,
     size: n = _.DEFAULT_STICKER_DIMENSIONS

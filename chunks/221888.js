@@ -26,7 +26,7 @@ var i = n("735250"),
   p = n("689938"),
   O = n("119013");
 
-function C(e, t) {
+function R(e, t) {
   switch (e) {
     case m.ParticipantTypes.ACTIVITY:
       return p.default.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format({
@@ -41,7 +41,7 @@ function C(e, t) {
   }
 }
 
-function R(e) {
+function C(e) {
   let {
     users: t,
     disableInteraction: n,
@@ -49,7 +49,7 @@ function R(e) {
     participantType: a,
     channelId: o,
     handleUserContextMenu: l
-  } = e, u = C(a, t.length);
+  } = e, u = R(a, t.length);
   return (0, i.jsx)(_.Dialog, {
     "aria-label": u,
     className: O.popoutWrapper,
@@ -84,7 +84,7 @@ function g(e) {
     maxVisibleUsers: a = 3,
     className: o,
     participantType: l
-  } = e, u = C(l, t.length), d = t.length < a ? t.map(e => (0, i.jsx)("div", {
+  } = e, u = R(l, t.length), d = t.length < a ? t.map(e => (0, i.jsx)("div", {
     className: O.viewersTooltipItem,
     children: A.default.getName(n, r, e)
   }, e.id)) : u;
@@ -113,7 +113,7 @@ function v(e) {
     compact: S = !1,
     disableInteraction: A = !1,
     maxVisibleUsers: p = 3
-  } = e, [C, v] = r.useState(!1), D = r.useRef(new d.DelayedCall(150, () => v(!1))), M = (0, u.useStateFromStoresArray)([I.default, T.default], () => {
+  } = e, [R, v] = r.useState(!1), D = r.useRef(new d.DelayedCall(150, () => v(!1))), M = (0, u.useStateFromStoresArray)([I.default, T.default], () => {
     if (o.type === m.ParticipantTypes.STREAM) {
       let e = I.default.getViewerIds(o.id);
       return e.length > 0 ? e.map(e => T.default.getUser(e)).filter(h.isNotNullish) : L
@@ -160,7 +160,7 @@ function v(e) {
       onMouseEnter: y,
       onMouseLeave: P,
       children: (0, i.jsx)(_.Popout, {
-        renderPopout: () => (0, i.jsx)(R, {
+        renderPopout: () => (0, i.jsx)(C, {
           participantType: o.type,
           handleUserContextMenu: U,
           guildId: a,
@@ -168,7 +168,7 @@ function v(e) {
           users: M,
           disableInteraction: A
         }),
-        shouldShow: C,
+        shouldShow: R,
         position: "top",
         children: () => (0, i.jsx)("div", {
           className: s()(O.viewers, f),

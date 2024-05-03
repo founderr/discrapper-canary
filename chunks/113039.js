@@ -43,9 +43,9 @@ t.default = r.memo(function(e) {
     content: u,
     onUpdate: S,
     contentRef: h
-  } = e, A = a.isEdited(), m = a.state === c.MessageStates.SEND_FAILED, N = a.state === c.MessageStates.SENDING, p = a.isCommandType(), O = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(), C = r.useRef(!1);
+  } = e, A = a.isEdited(), m = a.state === c.MessageStates.SEND_FAILED, N = a.state === c.MessageStates.SENDING, p = a.isCommandType(), O = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(), R = r.useRef(!1);
   return r.useLayoutEffect(() => {
-    C.current ? null != S && S() : C.current = !0
+    R.current ? null != S && S() : R.current = !0
   }, [S, a.content, u, O, o]), (0, i.jsxs)("div", {
     id: (0, d.getMessageContentId)(a),
     ref: h,

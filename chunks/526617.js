@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("259580"),
   p = n("855693"),
   O = n("68972"),
-  C = n("887208"),
-  R = n("664800"),
+  R = n("887208"),
+  C = n("664800"),
   g = n("632184"),
   L = n("74538"),
   v = n("697426"),
@@ -68,7 +68,7 @@ function Y(e) {
         children: [function() {
           switch (t.type) {
             case v.SoundboardSoundGridSectionType.FAVORITES:
-              return (0, i.jsx)(C.default, {
+              return (0, i.jsx)(R.default, {
                 className: x.headerIcon
               });
             case v.SoundboardSoundGridSectionType.RECENTLY_HEARD:
@@ -90,7 +90,7 @@ function Y(e) {
                 className: x.headerIcon
               });
             case v.SoundboardSoundGridSectionType.SEARCH:
-              return (0, i.jsx)(R.default, {
+              return (0, i.jsx)(C.default, {
                 className: x.headerIcon
               })
           }
@@ -185,8 +185,8 @@ function K(e) {
     shouldShowUpsell: N = !0,
     gridNotice: p,
     soundButtonOverlay: O,
-    listPadding: C,
-    renderHeader: R,
+    listPadding: R,
+    renderHeader: C,
     defaultSoundsOnly: P = !1
   } = e, {
     analyticsLocations: U
@@ -256,8 +256,8 @@ function K(e) {
   }), [eE]), eT = r.useCallback(e => (0, i.jsx)(b.default, {
     soundboardListRef: e,
     categories: $,
-    listPadding: C
-  }), [$, C]), ef = r.useCallback(e => {
+    listPadding: R
+  }), [$, R]), ef = r.useCallback(e => {
     if ((null == e ? void 0 : e.item.type) === v.SoundboardSoundItemType.SOUND) {
       var t;
       return (0, i.jsx)(G.default, {
@@ -294,7 +294,7 @@ function K(e) {
       renderEmptySearchState: j,
       renderInspector: ef,
       gridNotice: p,
-      renderHeader: R
+      renderHeader: C
     })]
   })
 }

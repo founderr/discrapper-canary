@@ -66,13 +66,13 @@ function O() {
   return p(null !== (t = d.default.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = d.default.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : [])
 }
 
-function C() {
+function R() {
   var e, t;
   let n = d.default.getGuildFolders();
   return !(null != i && a()(i, n)) && p(null != (i = n) ? i : [], null !== (t = null === (e = d.default.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : [])
 }
 
-function R(e) {
+function C(e) {
   let {
     sourceId: t,
     targetId: n,
@@ -186,8 +186,8 @@ class P extends f.default {
       GUILD_CREATE: O,
       GUILD_DELETE: O,
       GUILD_MEMBER_ADD: D,
-      USER_SETTINGS_PROTO_UPDATE: C,
-      GUILD_MOVE_BY_ID: R,
+      USER_SETTINGS_PROTO_UPDATE: R,
+      GUILD_MOVE_BY_ID: C,
       GUILD_FOLDER_CREATE_LOCAL: g,
       GUILD_FOLDER_EDIT_LOCAL: L,
       GUILD_FOLDER_DELETE_LOCAL: v

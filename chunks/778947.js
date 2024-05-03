@@ -34,8 +34,8 @@ var i = n("735250"),
   N = n("621853"),
   p = n("484459"),
   O = n("204197"),
-  C = n("740492"),
-  R = n("430824"),
+  R = n("740492"),
+  C = n("430824"),
   g = n("496675"),
   L = n("594174"),
   v = n("789695"),
@@ -142,13 +142,13 @@ function Y(e) {
     animate: A = !0,
     onContextMenu: m,
     onClickAvatar: N,
-    onPopoutRequestClose: R,
+    onPopoutRequestClose: C,
     showAvatarPopout: g
   } = a, [L, v] = r.useState(!1), {
     analyticsLocations: D
-  } = (0, _.default)(d.default.AVATAR), P = (0, l.useStateFromStores)([C.default], () => {
+  } = (0, _.default)(d.default.AVATAR), P = (0, l.useStateFromStores)([R.default], () => {
     var e;
-    return null !== (e = a.displayCompactAvatars) && void 0 !== e ? e : C.default.displayCompactAvatars
+    return null !== (e = a.displayCompactAvatars) && void 0 !== e ? e : R.default.displayCompactAvatars
   }), U = null != T.messageReference && null != T.webhookId, b = T.author, {
     id: G
   } = b, w = S ? 32 : 80, {
@@ -189,7 +189,7 @@ function Y(e) {
       renderPopout: c,
       shouldShow: g,
       position: o.isMobile ? "window_center" : "right",
-      onRequestClose: R,
+      onRequestClose: C,
       children: e => F({
         ...x,
         avatarSrc: Y,
@@ -310,14 +310,14 @@ function z(e) {
     hideTimestamp: N,
     className: p,
     channel: O
-  } = e, M = r.useMemo(() => null != o ? e => o(e, t) : void 0, [o, t]), [, y] = (0, E.default)(t.author.id, e.guildId), b = (0, l.useStateFromStores)([R.default], () => R.default.getGuild(e.guildId), [e.guildId]), x = null != t.author && null != b && g.default.canManageUser(B.Permissions.MODERATE_MEMBERS, t.author, b), F = y && x, W = Y({
+  } = e, M = r.useMemo(() => null != o ? e => o(e, t) : void 0, [o, t]), [, y] = (0, E.default)(t.author.id, e.guildId), b = (0, l.useStateFromStores)([C.default], () => C.default.getGuild(e.guildId), [e.guildId]), x = null != t.author && null != b && g.default.canManageUser(B.Permissions.MODERATE_MEMBERS, t.author, b), F = y && x, W = Y({
     props: e,
     guildId: e.guildId,
     handleRenderPopout: M,
     showCommunicationDisabledStyles: F
-  }), z = (0, l.useStateFromStores)([C.default], () => {
+  }), z = (0, l.useStateFromStores)([R.default], () => {
     var t;
-    return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : C.default.displayCompactAvatars
+    return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : R.default.displayCompactAvatars
   }), Z = (!a || z) && null != _ && null != b ? (0, i.jsx)(u.Popout, {
     animation: u.Popout.Animation.TRANSLATE,
     align: "center",

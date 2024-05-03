@@ -28,14 +28,14 @@ var i = n("302454"),
   N = n("375954"),
   p = n("699516"),
   O = n("944486"),
-  C = n("626135"),
-  R = n("981631"),
+  R = n("626135"),
+  C = n("981631"),
   g = n("689938");
 
 function L(e, t) {
   var n;
   let i = S.default.getChannel(O.default.getChannelId());
-  return !!(null == i || i.type !== R.ChannelTypes.DM || p.default.isFriend(null !== (n = i.getRecipientId()) && void 0 !== n ? n : "")) && e === t
+  return !!(null == i || i.type !== C.ChannelTypes.DM || p.default.isFriend(null !== (n = i.getRecipientId()) && void 0 !== n ? n : "")) && e === t
 }
 
 function v(e, t) {
@@ -70,16 +70,16 @@ function v(e, t) {
       t = S.default.getBasicChannel(M);
     P = null !== (V = null == t ? void 0 : t.guild_id) && void 0 !== V ? V : null;
     let n = h.default.getGuild(P),
-      i = (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(R.MessageFlags.IS_CROSSPOST)) && null != P;
+      i = (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(C.MessageFlags.IS_CROSSPOST)) && null != P;
     i && (null == e ? void 0 : null === (k = e.messageReference) || void 0 === k ? void 0 : k.guild_id) != null ? (b = e.messageReference.message_id, G = e.messageReference.channel_id, w = e.messageReference.guild_id) : w = P;
-    let r = (null == t ? void 0 : t.type) === R.ChannelTypes.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(R.GuildFeatures.COMMUNITY)) === !0,
-      a = (null == e ? void 0 : e.hasFlag(R.MessageFlags.EPHEMERAL)) === !0;
+    let r = (null == t ? void 0 : t.type) === C.ChannelTypes.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(C.GuildFeatures.COMMUNITY)) === !0,
+      a = (null == e ? void 0 : e.hasFlag(C.MessageFlags.EPHEMERAL)) === !0;
     U = null != e && !a && (i || r)
   }
   if (null != M) {
     let e = S.default.getChannel(M),
       t = h.default.getGuild(null == e ? void 0 : e.getGuildId());
-    null != e && null != t && t.hasFeature(R.GuildFeatures.DISCOVERABLE) && C.default.track(R.AnalyticEvents.URL_CLICKED, {
+    null != e && null != t && t.hasFeature(C.GuildFeatures.DISCOVERABLE) && R.default.track(C.AnalyticEvents.URL_CLICKED, {
       url_domain: (0, m.getHostname)(y),
       guild_id: t.id,
       channel_id: e.id

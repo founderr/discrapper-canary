@@ -106,7 +106,7 @@ function H(e) {
   })
 }
 
-function k(e) {
+function w(e) {
   let {
     guildId: t
   } = e;
@@ -129,7 +129,7 @@ function k(e) {
     }) || null == t ? x.delete(e) : s[a] = t
   }), 0 === x.size && (O = !1), A = !1, p = [...s]
 }
-class w extends(i = I.default.Store) {
+class k extends(i = I.default.Store) {
   initialize() {
     this.waitFor(h.default, S.default, f.default)
   }
@@ -179,13 +179,13 @@ class w extends(i = I.default.Store) {
     return U
   }
 }
-d = "GuildSettingsRolesStore", (o = "displayName") in(r = w) ? Object.defineProperty(r, o, {
+d = "GuildSettingsRolesStore", (o = "displayName") in(r = k) ? Object.defineProperty(r, o, {
   value: d,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[o] = d;
-let V = new w(T.default, __OVERLAY__ ? {} : {
+let V = new k(T.default, __OVERLAY__ ? {} : {
   GUILD_SETTINGS_ROLES_INIT: () => B(),
   GUILD_SETTINGS_INIT: b,
   GUILD_SETTINGS_SET_SECTION: b,
@@ -311,10 +311,10 @@ let V = new w(T.default, __OVERLAY__ ? {} : {
   GUILD_SETTINGS_CLOSE: function() {
     a = null, M = p = [], j.clear(), x.clear(), U.clear(), G = new Set, O = !1, A = !1, v = !1, L = R.FormStates.CLOSED
   },
-  GUILD_ROLE_CREATE: k,
-  GUILD_ROLE_UPDATE: k,
+  GUILD_ROLE_CREATE: w,
+  GUILD_ROLE_UPDATE: w,
   GUILD_ROLE_DELETE: function(e) {
-    return G.has(e.roleId) && (G.delete(e.roleId), j.delete(e.roleId), U.delete(e.roleId), v = !1), k(e)
+    return G.has(e.roleId) && (G.delete(e.roleId), j.delete(e.roleId), U.delete(e.roleId), v = !1), w(e)
   },
   GUILD_SETTINGS_ROLES_SUBMITTING: function() {
     L = R.FormStates.SUBMITTING

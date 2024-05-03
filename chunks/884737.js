@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return h
   },
   CommandPermissionChangeStrings: function() {
-    return b
+    return x
   },
   DEFAULT_FOR_STRINGS_KEY: function() {
     return M
@@ -25,7 +25,7 @@ s.r(t), s.d(t, {
     return P
   },
   NotRenderedChanges: function() {
-    return x
+    return b
   },
   RoleChangeStrings: function() {
     return y
@@ -302,7 +302,7 @@ let C = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
     ...R()
   }),
-  b = e => {
+  x = e => {
     let t = {
       ...R()
     };
@@ -310,7 +310,7 @@ let C = new A.default("AuditLogUtils"),
       e.newValue ? e.newValue.permission ? t[e.key] = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_GRANTED : t[e.key] = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_DENIED : t[e.key] = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_REMOVED
     }), t
   },
-  x = {
+  b = {
     [G.AuditLogTargetTypes.CHANNEL]: {
       [G.AuditLogChangeKeys.ID]: !0,
       [G.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0

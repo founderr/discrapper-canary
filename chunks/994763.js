@@ -45,8 +45,8 @@ var a = s("735250"),
   y = s("220685"),
   F = s("751189"),
   H = s("409059"),
-  k = s("810788"),
-  w = s("918658"),
+  w = s("810788"),
+  k = s("918658"),
   V = s("210887"),
   Y = s("524329"),
   W = s("575258"),
@@ -99,12 +99,12 @@ var a = s("735250"),
   ey = s("981631"),
   eF = s("308083"),
   eH = s("190378"),
-  ek = s("135899"),
-  ew = s("689938"),
+  ew = s("135899"),
+  ek = s("689938"),
   eV = s("354104");
 
 function eY(e) {
-  return "" !== e.toString() ? e.toString() : ew.default.Messages.SERVER_SETTINGS
+  return "" !== e.toString() ? e.toString() : ek.default.Messages.SERVER_SETTINGS
 }
 
 function eW(e) {
@@ -122,7 +122,7 @@ function eW(e) {
     isOwner: D,
     isOwnerWithRequiredMfaLevel: F,
     showDirtyGuildTemplateIndicator: H,
-    memberCount: w,
+    memberCount: k,
     isGuildAuditLogV2Enabled: V,
     showAccessRate: Y,
     onboardingStep: z,
@@ -143,15 +143,15 @@ function eW(e) {
   }), eW = (0, G.isGuildEligibleForGuildProducts)(t.id, "guild_settings"), ez = !1 === t.hasFeature(ey.GuildFeatures.CREATOR_MONETIZABLE) && !1 === t.hasFeature(ey.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL), eK = eW && ez ? {
     label: (0, a.jsx)("div", {
       className: eV.roleSubLabel,
-      children: ew.default.Messages.GUILD_SETTINGS_ENABLE_MONETIZATION_TAB_TITLE
+      children: ek.default.Messages.GUILD_SETTINGS_ENABLE_MONETIZATION_TAB_TITLE
     }),
-    ariaLabel: ew.default.Messages.GUILD_SETTINGS_ENABLE_MONETIZATION_TAB_TITLE
+    ariaLabel: ek.default.Messages.GUILD_SETTINGS_ENABLE_MONETIZATION_TAB_TITLE
   } : {
     label: (0, a.jsx)("div", {
       className: eV.roleSubLabel,
-      children: ew.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+      children: ek.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
     }),
-    ariaLabel: ew.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+    ariaLabel: ek.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
   };
   return [{
     section: c.SectionTypes.HEADER,
@@ -159,8 +159,8 @@ function eW(e) {
   }, {
     section: ey.GuildSettingsSections.OVERVIEW,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_OVERVIEW,
-    label: ew.default.Messages.OVERVIEW,
-    ariaLabel: ew.default.Messages.OVERVIEW,
+    label: ek.default.Messages.OVERVIEW,
+    ariaLabel: ek.default.Messages.OVERVIEW,
     element: ep.default,
     notice: {
       stores: [eo.default],
@@ -169,10 +169,10 @@ function eW(e) {
   }, {
     section: ey.GuildSettingsSections.ROLES,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_ROLES,
-    label: ew.default.Messages.ROLES,
+    label: ek.default.Messages.ROLES,
     element: eT.default,
     type: c.ContentTypes.MINIMAL,
-    ariaLabel: ew.default.Messages.GUILD_SETTINGS_ROLE_ICON_SIDEBAR_NEW_ARIA_LABEL,
+    ariaLabel: ek.default.Messages.GUILD_SETTINGS_ROLE_ICON_SIDEBAR_NEW_ARIA_LABEL,
     notice: {
       stores: [er.default],
       element: eT.GuildSettingsRolesNotice
@@ -181,27 +181,27 @@ function eW(e) {
   }, {
     section: ey.GuildSettingsSections.EMOJI,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_EMOJI,
-    label: ew.default.Messages.EMOJI,
+    label: ek.default.Messages.EMOJI,
     element: eR.default,
     predicate: () => _
   }, {
     section: ey.GuildSettingsSections.STICKERS,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_STICKERS,
-    label: ew.default.Messages.GUILD_SETTINGS_STICKERS,
-    ariaLabel: ew.default.Messages.GUILD_SETTINGS_STICKERS,
+    label: ek.default.Messages.GUILD_SETTINGS_STICKERS,
+    ariaLabel: ek.default.Messages.GUILD_SETTINGS_STICKERS,
     element: ej.default,
     predicate: () => _
   }, {
     section: ey.GuildSettingsSections.SOUNDBOARD,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_SOUNDBOARD,
-    label: ew.default.Messages.GUILD_SETTINGS_SOUNDBOARD,
-    ariaLabel: ew.default.Messages.GUILD_SETTINGS_SOUNDBOARD,
+    label: ek.default.Messages.GUILD_SETTINGS_SOUNDBOARD,
+    ariaLabel: ek.default.Messages.GUILD_SETTINGS_SOUNDBOARD,
     element: eG.default,
     predicate: () => _
   }, {
     section: ey.GuildSettingsSections.WIDGET,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_WIDGET,
-    label: ew.default.Messages.WIDGET,
+    label: ek.default.Messages.WIDGET,
     element: eB.default,
     predicate: () => l
   }, {
@@ -210,7 +210,7 @@ function eW(e) {
     label: (0, a.jsx)(eP.default, {
       showDirtyIndicator: H
     }),
-    ariaLabel: ew.default.Messages.GUILD_TEMPLATES,
+    ariaLabel: ek.default.Messages.GUILD_TEMPLATES,
     element: eU.default,
     notice: {
       stores: [eU.GuildSettingsTemplateMetadataStore],
@@ -220,7 +220,7 @@ function eW(e) {
   }, {
     section: ey.GuildSettingsSections.VANITY_URL,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_VANITY_URL,
-    label: ew.default.Messages.VANITY_URL,
+    label: ek.default.Messages.VANITY_URL,
     element: eb.default,
     notice: {
       stores: [ed.default],
@@ -232,13 +232,13 @@ function eW(e) {
     predicate: () => l || I
   }, {
     section: c.SectionTypes.HEADER,
-    label: ew.default.Messages.APPS,
+    label: ek.default.Messages.APPS,
     predicate: () => l || I
   }, {
     section: ey.GuildSettingsSections.INTEGRATIONS,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_INTEGRATION,
-    label: ew.default.Messages.INTEGRATIONS,
-    ariaLabel: ew.default.Messages.INTEGRATIONS,
+    label: ek.default.Messages.INTEGRATIONS,
+    ariaLabel: ek.default.Messages.INTEGRATIONS,
     element: ex.default,
     notice: {
       stores: [ei.default, eo.default],
@@ -247,8 +247,8 @@ function eW(e) {
     predicate: () => l || I
   }, {
     section: ey.GuildSettingsSections.APP_DIRECTORY,
-    label: ew.default.Messages.APP_DIRECTORY,
-    ariaLabel: ew.default.Messages.APP_DIRECTORY,
+    label: ek.default.Messages.APP_DIRECTORY,
+    ariaLabel: ek.default.Messages.APP_DIRECTORY,
     onClick() {
       (0, S.goToAppDirectory)({
         guildId: t.id,
@@ -263,50 +263,50 @@ function eW(e) {
     predicate: () => l
   }, {
     section: c.SectionTypes.HEADER,
-    label: ew.default.Messages.MODERATION,
+    label: ek.default.Messages.MODERATION,
     predicate: () => l
   }, {
     section: ey.GuildSettingsSections.SAFETY,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_SAFETY,
-    label: ew.default.Messages.SAFETY_SETUP,
-    ariaLabel: ew.default.Messages.SAFETY_SETUP,
+    label: ek.default.Messages.SAFETY_SETUP,
+    ariaLabel: ek.default.Messages.SAFETY_SETUP,
     element: eS.default,
     newIndicatorDismissibleContentTypes: [r.DismissibleContent.COMMUNITY_GUILD_SETTINGS_SAFETY],
     predicate: () => l && t.hasFeature(ey.GuildFeatures.COMMUNITY)
   }, {
     section: ey.GuildSettingsSections.MODERATION,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_MODERATION,
-    label: ew.default.Messages.SAFETY_SETUP,
+    label: ek.default.Messages.SAFETY_SETUP,
     element: eD.default,
     predicate: () => l && !t.hasFeature(ey.GuildFeatures.COMMUNITY)
   }, {
     section: ey.GuildSettingsSections.GUILD_AUTOMOD,
     label: (0, a.jsx)("div", {
       className: eV.landingPageTabLink,
-      children: ew.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE
+      children: ek.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE
     }),
-    ariaLabel: ew.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
+    ariaLabel: ek.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
     element: O.default,
     newIndicatorDismissibleContentTypes: null,
     predicate: () => !t.hasFeature(ey.GuildFeatures.COMMUNITY) && ((0, L.canCurrentUserManageAutomod)(t.id) || (0, L.canCurrentUserManageMessageFilters)(t.id))
   }, {
     section: ey.GuildSettingsSections.AUDIT_LOG,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_AUDIT_LOG,
-    label: ew.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
+    label: ek.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
     element: eu.default,
     type: c.ContentTypes.CUSTOM,
     predicate: () => i
   }, {
     section: ey.GuildSettingsSections.AUDIT_LOG_V2,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_AUDIT_LOG_V2,
-    label: ew.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
+    label: ek.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
     element: x.default,
     type: c.ContentTypes.CUSTOM,
     predicate: () => u && V
   }, {
     section: ey.GuildSettingsSections.BANS,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_BANS,
-    label: ew.default.Messages.BANS,
+    label: ek.default.Messages.BANS,
     element: em.default,
     predicate: () => g
   }, {
@@ -314,12 +314,12 @@ function eW(e) {
     predicate: () => l || A
   }, {
     section: c.SectionTypes.HEADER,
-    label: ew.default.Messages.COMMUNITY,
+    label: ek.default.Messages.COMMUNITY,
     predicate: () => !el && (l || A)
   }, {
     section: ey.GuildSettingsSections.CLAN,
-    label: ew.default.Messages.CLAN_SETTINGS,
-    ariaLabel: ew.default.Messages.CLAN_SETTINGS,
+    label: ek.default.Messages.CLAN_SETTINGS,
+    ariaLabel: ek.default.Messages.CLAN_SETTINGS,
     onClick() {
       (0, $.openFullScreenLayer)(e => {
         let {
@@ -337,10 +337,10 @@ function eW(e) {
   }, {
     section: ey.GuildSettingsSections.COMMUNITY,
     impressionName: t.hasFeature(ey.GuildFeatures.COMMUNITY) ? n.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW : n.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
-    label: t.hasFeature(ey.GuildFeatures.COMMUNITY) ? ew.default.Messages.OVERVIEW : ew.default.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
+    label: t.hasFeature(ey.GuildFeatures.COMMUNITY) ? ek.default.Messages.OVERVIEW : ek.default.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
     element: eN.default,
-    ariaLabel: t.hasFeature(ey.GuildFeatures.COMMUNITY) ? ew.default.Messages.OVERVIEW : ew.default.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
-    newIndicator: !t.hasFeature(ey.GuildFeatures.COMMUNITY) && null != w && w >= ek.COMMUNITY_UPSELL_MINIMUM_GUILD_SIZE && k.default.hasHotspot(eH.HotspotLocations.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
+    ariaLabel: t.hasFeature(ey.GuildFeatures.COMMUNITY) ? ek.default.Messages.OVERVIEW : ek.default.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
+    newIndicator: !t.hasFeature(ey.GuildFeatures.COMMUNITY) && null != k && k >= ew.COMMUNITY_UPSELL_MINIMUM_GUILD_SIZE && w.default.hasHotspot(eH.HotspotLocations.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
     notice: {
       stores: [eo.default],
       element: eN.GuildSettingsCommunityOverviewNotice
@@ -348,9 +348,9 @@ function eW(e) {
     predicate: () => l
   }, {
     section: ey.GuildSettingsSections.ONBOARDING,
-    label: ew.default.Messages.ONBOARDING,
+    label: ek.default.Messages.ONBOARDING,
     element: eA.default,
-    ariaLabel: ew.default.Messages.ONBOARDING,
+    ariaLabel: ek.default.Messages.ONBOARDING,
     newIndicatorDismissibleContentTypes: Z ? null : [r.DismissibleContent.COMMUNITY_ONBOARDING_NEW_BADGE],
     notice: {
       stores: [ec.default],
@@ -361,11 +361,11 @@ function eW(e) {
       let {
         homeSettingsEnabled: s
       } = (0, v.getOnboardingHomeAdminExperiment)(e);
-      if (p.default.getEnabled(e)) return ew.default.Messages.GUILD_ONBOARDING_ON.toUpperCase();
-      if ((0, e_.isOnboardingWizardCompleted)(e)) return ew.default.Messages.GUILD_ONBOARDING_OFF.toUpperCase();
+      if (p.default.getEnabled(e)) return ek.default.Messages.GUILD_ONBOARDING_ON.toUpperCase();
+      if ((0, e_.isOnboardingWizardCompleted)(e)) return ek.default.Messages.GUILD_ONBOARDING_OFF.toUpperCase();
       let a = eE.COMPLETABLE_ONBOARDING_STEPS.filter(e => !!s || e !== eE.GuildSettingsOnboardingPage.HOME_SETTINGS || !1),
         l = a.findIndex(e => e === t);
-      if (-1 !== l) return ew.default.Messages.GUILD_ONBOARDING_SETUP_STEP_COUNTER.format({
+      if (-1 !== l) return ek.default.Messages.GUILD_ONBOARDING_SETUP_STEP_COUNTER.format({
         count: l + 1,
         total: a.length
       })
@@ -373,31 +373,31 @@ function eW(e) {
   }, {
     section: ey.GuildSettingsSections.ANALYTICS,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_ANALYTICS,
-    label: ew.default.Messages.SERVER_INSIGHTS,
-    ariaLabel: ew.default.Messages.SERVER_INSIGHTS,
+    label: ek.default.Messages.SERVER_INSIGHTS,
+    ariaLabel: ek.default.Messages.SERVER_INSIGHTS,
     element: ef.default,
-    newIndicator: k.default.hasHotspot(eH.HotspotLocations.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
+    newIndicator: w.default.hasHotspot(eH.HotspotLocations.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
     newIndicatorDismissibleContentTypes: Y ? [r.DismissibleContent.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
     predicate: () => A && t.hasFeature(ey.GuildFeatures.COMMUNITY)
   }, {
     section: ey.GuildSettingsSections.DISCOVERY,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
-    label: ew.default.Messages.DISCOVERY,
+    label: ek.default.Messages.DISCOVERY,
     element: eh.default,
     notice: {
       stores: [eo.default],
       element: eh.GuildSettingsDiscoveryNotice
     },
     predicate: () => l && t.hasFeature(ey.GuildFeatures.COMMUNITY),
-    ariaLabel: t.hasFeature(ey.GuildFeatures.DISCOVERABLE) ? ew.default.Messages.DISCOVERY : ew.default.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
+    ariaLabel: t.hasFeature(ey.GuildFeatures.DISCOVERABLE) ? ek.default.Messages.DISCOVERY : ek.default.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
   }, {
     section: ey.GuildSettingsSections.DISCOVERY_LANDING_PAGE,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_DISCOVERY_LANDING_PAGE,
     label: (0, a.jsxs)("div", {
       className: eV.landingPageTabLink,
-      children: [ew.default.Messages.DISCOVERY_LANDING_PAGE, " ", (0, a.jsx)(C.default, {})]
+      children: [ek.default.Messages.DISCOVERY_LANDING_PAGE, " ", (0, a.jsx)(C.default, {})]
     }),
-    ariaLabel: ew.default.Messages.DISCOVERY_LANDING_PAGE,
+    ariaLabel: ek.default.Messages.DISCOVERY_LANDING_PAGE,
     element: eC.default,
     notice: {
       stores: [eo.default],
@@ -408,8 +408,8 @@ function eW(e) {
   }, {
     section: ey.GuildSettingsSections.COMMUNITY_WELCOME,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME,
-    label: ew.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
-    ariaLabel: ew.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
+    label: ek.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
+    ariaLabel: ek.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
     element: eg.default,
     notice: {
       stores: [W.default],
@@ -421,7 +421,7 @@ function eW(e) {
     predicate: en
   }, {
     section: c.SectionTypes.HEADER,
-    label: ew.default.Messages.MONETIZATION,
+    label: ek.default.Messages.MONETIZATION,
     predicate: en
   }, {
     ...eK,
@@ -432,16 +432,16 @@ function eW(e) {
     newIndicatorDismissibleContentTypes: (0, b.isEligibleForNewBadge)(t) ? [r.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
   }, {
     section: ey.GuildSettingsSections.GUILD_PRODUCTS,
-    label: ew.default.Messages.GUILD_PRODUCTS_TITLE,
-    ariaLabel: ew.default.Messages.GUILD_PRODUCTS_TITLE,
+    label: ek.default.Messages.GUILD_PRODUCTS_TITLE,
+    ariaLabel: ek.default.Messages.GUILD_PRODUCTS_TITLE,
     element: j.default,
     predicate: () => en() && (0, G.isGuildEligibleForGuildProducts)(t.id, "guild_product_settings_predicate") && (0, U.hasEnabledMonetization)(t)
   }, {
     section: ey.GuildSettingsSections.ROLE_SUBSCRIPTIONS_STORE_PAGE,
     impressionName: n.ImpressionNames.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_GUILD_SETTINGS,
     newIndicator: 2022 === new Date().getFullYear(),
-    label: ew.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
-    ariaLabel: ew.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
+    label: ek.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
+    ariaLabel: ek.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
     element: y.default,
     predicate: () => en() && (0, U.hasEnabledMonetization)(t)
   }, {
@@ -449,8 +449,8 @@ function eW(e) {
   }, {
     section: ey.GuildSettingsSections.GUILD_PREMIUM,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
-    label: ew.default.Messages.GUILD_PREMIUM,
-    ariaLabel: ew.default.Messages.GUILD_PREMIUM,
+    label: ek.default.Messages.GUILD_PREMIUM,
+    ariaLabel: ek.default.Messages.GUILD_PREMIUM,
     element: eM.default,
     className: eV.serverBoostTabItem,
     icon: (0, a.jsx)(ev.default, {
@@ -460,19 +460,19 @@ function eW(e) {
     section: c.SectionTypes.DIVIDER
   }, {
     section: c.SectionTypes.HEADER,
-    label: ew.default.Messages.USER_MANAGEMENT
+    label: ek.default.Messages.USER_MANAGEMENT
   }, {
     section: ey.GuildSettingsSections.MEMBERS,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_MEMBERS,
     label: (0, a.jsx)(eO.GuildSettingsMembersRow, {}),
-    ariaLabel: ew.default.Messages.MEMBERS,
+    ariaLabel: ek.default.Messages.MEMBERS,
     element: eO.default,
     type: c.ContentTypes.CUSTOM,
     predicate: () => R
   }, {
     section: ey.GuildSettingsSections.INSTANT_INVITES,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_INVITES,
-    label: ew.default.Messages.INVITES,
+    label: ek.default.Messages.INVITES,
     element: eL.default,
     type: c.ContentTypes.CUSTOM,
     predicate: () => l
@@ -486,11 +486,11 @@ function eW(e) {
       if (null == e) return;
       let l = t.toString(),
         n = {
-          header: ew.default.Messages.DELETE_SERVER_TITLE.format({
+          header: ek.default.Messages.DELETE_SERVER_TITLE.format({
             name: l
           }),
-          confirmText: ew.default.Messages.DELETE_SERVER,
-          cancelText: ew.default.Messages.CANCEL,
+          confirmText: ek.default.Messages.DELETE_SERVER,
+          cancelText: ek.default.Messages.CANCEL,
           onConfirm: () => {
             ee.ComponentDispatch.subscribeOnce(ey.ComponentActions.LAYER_POP_COMPLETE, () => {
               ea.default.deleteGuild(t.id, l).then(() => {
@@ -523,7 +523,7 @@ function eW(e) {
         ...n,
         children: (0, a.jsx)(o.Text, {
           variant: "text-md/normal",
-          children: ew.default.Messages.DELETE_SERVER_BODY.format({
+          children: ek.default.Messages.DELETE_SERVER_BODY.format({
             name: l
           })
         })
@@ -535,16 +535,16 @@ function eW(e) {
           ...t,
           ...n,
           validationText: l,
-          instructionText: ew.default.Messages.DELETE_SERVER_ENTER_NAME,
-          errorText: ew.default.Messages.DELETE_SERVER_INCORRECT_NAME,
-          children: ew.default.Messages.DELETE_SERVER_BODY.format({
+          instructionText: ek.default.Messages.DELETE_SERVER_ENTER_NAME,
+          errorText: ek.default.Messages.DELETE_SERVER_INCORRECT_NAME,
+          children: ek.default.Messages.DELETE_SERVER_BODY.format({
             name: l
           })
         })
       })
     },
-    label: ew.default.Messages.DELETE_SERVER,
-    ariaLabel: ew.default.Messages.DELETE_SERVER,
+    label: ek.default.Messages.DELETE_SERVER,
+    ariaLabel: ek.default.Messages.DELETE_SERVER,
     icon: (0, a.jsx)(q.default, {
       width: 16,
       height: 16
@@ -686,7 +686,7 @@ class eX extends l.PureComponent {
         onClose: d.popLayer,
         title: eY(i),
         sections: D
-      }), (0, a.jsx)(w.ViewingRolesSettingsNotice, {
+      }), (0, a.jsx)(k.ViewingRolesSettingsNotice, {
         guildId: i.id
       })]
     })
@@ -738,7 +738,7 @@ function eQ() {
   }, [h]);
   let B = (0, i.useStateFromStores)([ec.default], () => ec.default.getCurrentPage()),
     y = (0, i.useStateFromStores)([p.default], () => null != f && p.default.getEnabled(f)),
-    k = (0, i.useStateFromStores)([z.default], () => null != f && z.default.isEmpty(f));
+    w = (0, i.useStateFromStores)([z.default], () => null != f && z.default.isEmpty(f));
   return (0, a.jsx)(I.AnalyticsLocationProvider, {
     value: u,
     children: (0, a.jsx)(eX, {
@@ -756,7 +756,7 @@ function eQ() {
       showAccessRate: G,
       onboardingStep: B,
       onboardingEnabled: y,
-      welcomeScreenEmpty: k,
+      welcomeScreenEmpty: w,
       guildMetadata: o,
       canAccessClanSettings: j
     })

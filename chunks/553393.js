@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("430824"),
   p = n("496675"),
   O = n("979651"),
-  C = n("617136"),
-  R = n("113434"),
+  R = n("617136"),
+  C = n("113434"),
   g = n("497505"),
   L = n("918701"),
   v = n("874137"),
@@ -51,7 +51,7 @@ t.default = function(e) {
   }), x = (0, M.useHandleClaimQuestsReward)({
     quest: N,
     location: g.QuestContent.MEMBERS_LIST
-  }), F = (0, R.useIsQuestExpired)(N), H = (null == N ? void 0 : null === (t = N.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, Y = (null == N ? void 0 : null === (S = N.userStatus) || void 0 === S ? void 0 : S.enrolledAt) != null, j = (null == N ? void 0 : null === (h = N.userStatus) || void 0 === h ? void 0 : h.completedAt) != null, W = (0, l.useStateFromStores)([A.default], () => A.default.getState().theme), K = (0, u.isThemeDark)(W) ? P.ThemeTypes.DARK : P.ThemeTypes.LIGHT, z = (0, l.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
+  }), F = (0, C.useIsQuestExpired)(N), H = (null == N ? void 0 : null === (t = N.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, Y = (null == N ? void 0 : null === (S = N.userStatus) || void 0 === S ? void 0 : S.enrolledAt) != null, j = (null == N ? void 0 : null === (h = N.userStatus) || void 0 === h ? void 0 : h.completedAt) != null, W = (0, l.useStateFromStores)([A.default], () => A.default.getState().theme), K = (0, u.isThemeDark)(W) ? P.ThemeTypes.DARK : P.ThemeTypes.LIGHT, z = (0, l.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
     ref: Z,
     height: X
   } = (0, I.default)(), [Q, q] = r.useState(z), J = (0, T.useWindowDispatch)(), $ = (0, s.useListContainerScrollerRef)();
@@ -89,10 +89,10 @@ t.default = function(e) {
     ei = "top" === B ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px");
   if (null == N || F || H && !w(O, V)) return null;
   let er = () => {
-      (0, C.trackQuestContentClicked)({
+      (0, R.trackQuestContentClicked)({
         questId: N.id,
         questContent: g.QuestContent.MEMBERS_LIST,
-        questContentCTA: C.QuestContentCTA.OPEN_DISCLOSURE,
+        questContentCTA: R.QuestContentCTA.OPEN_DISCLOSURE,
         trackGuildAndChannelMetadata: !0
       }), (0, d.openModalLazy)(async () => {
         let {
@@ -106,10 +106,10 @@ t.default = function(e) {
       })
     },
     ea = () => {
-      (0, C.trackQuestContentClicked)({
+      (0, R.trackQuestContentClicked)({
         questId: N.id,
         questContent: g.QuestContent.MEMBERS_LIST,
-        questContentCTA: C.QuestContentCTA.LEARN_MORE,
+        questContentCTA: R.QuestContentCTA.LEARN_MORE,
         trackGuildAndChannelMetadata: !0
       }), E.default.open(y.UserSettingsSections.INVENTORY)
     },
@@ -117,10 +117,10 @@ t.default = function(e) {
       e.stopPropagation(), er()
     },
     eo = () => {
-      if (w(O, V) && null != V) return (0, C.trackQuestContentClicked)({
+      if (w(O, V) && null != V) return (0, R.trackQuestContentClicked)({
         questId: N.id,
         questContent: g.QuestContent.MEMBERS_LIST,
-        questContentCTA: C.QuestContentCTA.WATCH_STREAM,
+        questContentCTA: R.QuestContentCTA.WATCH_STREAM,
         trackGuildAndChannelMetadata: !0
       }), _.default.selectVoiceChannel(V.id), (0, c.watchStreamAndTransitionToStream)(O);
       ea()

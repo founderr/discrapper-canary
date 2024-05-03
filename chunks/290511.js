@@ -40,13 +40,13 @@ n.r(t), n.d(t, {
     return o
   },
   clientPromptToServerPrompt: function() {
-    return R
+    return C
   },
   getDefaultPrompt: function() {
     return O
   },
   getEmptyPrompt: function() {
-    return C
+    return R
   },
   isDefaultPrompt: function() {
     return p
@@ -96,7 +96,7 @@ function O() {
   }
 }
 
-function C(e) {
+function R(e) {
   return {
     id: String(Date.now()),
     title: "",
@@ -108,7 +108,7 @@ function C(e) {
   }
 }
 
-function R(e) {
+function C(e) {
   return {
     id: e.id,
     options: e.options.map(e => {

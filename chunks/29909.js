@@ -29,7 +29,7 @@ t.default = r.memo(function(e) {
     }, 500);
     return () => clearTimeout(e)
   }, [A]);
-  let C = e => {
+  let R = e => {
     e.preventDefault(), e.stopPropagation(), m(!0), N ? (0, l.removeFavoriteGIF)(f) : ((0, l.addFavoriteGIF)({
       url: f,
       src: a,
@@ -47,7 +47,7 @@ t.default = r.memo(function(e) {
         [T.showPulse]: A
       }),
       onMouseDown: e => e.preventDefault(),
-      onClick: C,
+      onClick: R,
       onDoubleClick: e => e.preventDefault(),
       children: (0, i.jsx)(O, {
         className: T.icon

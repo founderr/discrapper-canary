@@ -61,8 +61,8 @@ var i = n("990547"),
   N = n("573261"),
   p = n("317381"),
   O = n("844797"),
-  C = n("672181"),
-  R = n("917107"),
+  R = n("672181"),
+  C = n("917107"),
   g = n("981631"),
   L = n("674563"),
   v = n("245335");
@@ -80,7 +80,7 @@ function D(e, t, n) {
     channelId: e,
     applicationId: t,
     analyticsLocations: n
-  }), (0, R.default)(e) ? (o.default.selectParticipant(e, t), o.default.updateLayout(e, g.ChannelLayouts.NO_CHAT)) : (0, C.default)(e)
+  }), (0, C.default)(e) ? (o.default.selectParticipant(e, t), o.default.updateLayout(e, g.ChannelLayouts.NO_CHAT)) : (0, R.default)(e)
 }
 async function M(e) {
   var t, n;

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return R
   }
 });
 var i = n("735250"),
@@ -26,11 +26,11 @@ var i = n("735250"),
   p = n("689938"),
   O = n("243935");
 
-function C(e) {
+function R(e) {
   var t, n, a;
   let {
-    className: C,
-    onClose: R
+    className: R,
+    onClose: C
   } = e;
   (0, T.useFetchStickerPacks)();
   let {
@@ -50,13 +50,13 @@ function C(e) {
     M = null != v || null != D,
     y = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === N.PremiumSubscriptionSKUs.TIER_0;
   return (0, i.jsxs)("div", {
-    className: s()(O.emptyState, C, {
+    className: s()(O.emptyState, R, {
       [O.unifyTrialUpsell]: M
     }),
     children: [M ? (0, i.jsx)(E.default, {
       discountOffer: D,
       trialOffer: v,
-      onClose: R,
+      onClose: C,
       type: N.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
       subscriptionTier: null !== (a = null == v ? void 0 : null === (n = v.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : N.PremiumSubscriptionSKUs.TIER_2,
       children: p.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE

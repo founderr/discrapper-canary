@@ -1,23 +1,23 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  i = n("470079"),
-  r = n("574523"),
-  s = n("475521"),
-  l = n("248438");
-let o = (0, r.CustomPicker)(e => (0, a.jsxs)("div", {
+a.r(t);
+var n = a("735250"),
+  r = a("470079"),
+  i = a("574523"),
+  s = a("475521"),
+  l = a("248438");
+let o = (0, i.CustomPicker)(e => (0, n.jsxs)("div", {
   className: l.wrapper,
-  children: [(0, a.jsx)("div", {
+  children: [(0, n.jsx)("div", {
     className: l.saturation,
-    children: (0, a.jsx)(s.Saturation, {
+    children: (0, n.jsx)(s.Saturation, {
       ...e
     })
-  }), (0, a.jsx)("div", {
+  }), (0, n.jsx)("div", {
     className: l.hue,
-    children: (0, a.jsx)(s.Hue, {
+    children: (0, n.jsx)(s.Hue, {
       ...e,
       direction: "horizontal"
     })
   })]
 }));
-t.default = i.memo(o)
+t.default = r.memo(o)

@@ -13,10 +13,10 @@ var i, r, a, s, o, l, u, d, _ = n("392711"),
   N = n("830168"),
   p = n("358085"),
   O = n("417363"),
-  C = n("981631"),
-  R = n("186901");
+  R = n("981631"),
+  C = n("186901");
 (s = i || (i = {})).INSTALL = "Install", s.REPAIR = "Repair", (o = r || (r = {})).PATCH = "Patch", o.REPAIR = "Repair";
-let g = [R.DispatchErrorCodes.AUTHENTICATION_FAILED, R.DispatchErrorCodes.NOT_ENTITLED],
+let g = [C.DispatchErrorCodes.AUTHENTICATION_FAILED, C.DispatchErrorCodes.NOT_ENTITLED],
   L = "DispatchManagerStore",
   v = [],
   D = [],
@@ -196,7 +196,7 @@ d = "DispatchManagerStore", (u = "displayName") in(l = K) ? Object.definePropert
         applicationId: n,
         branchId: r
       } = (0, m.convertComboId)(t), a = O.default.getState(n, r), s = A.default.getTargetBuildId(n, r), o = A.default.getTargetManifests(n, r);
-      if (null != a && a.type === C.LocalDispatchApplicationStates.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && c().isEqual(a.manifestIds, a.targetManifestIds) && c().isEqual(a.manifestIds, o)) {
+      if (null != a && a.type === R.LocalDispatchApplicationStates.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && c().isEqual(a.manifestIds, a.targetManifestIds) && c().isEqual(a.manifestIds, o)) {
         if (D.push(t), b.has(t)) {
           switch (b.get(t)) {
             case "Install":
@@ -220,7 +220,7 @@ d = "DispatchManagerStore", (u = "displayName") in(l = K) ? Object.definePropert
     } = t;
     if (null != n) {
       if (g.includes(n)) j();
-      else if (n === R.DispatchErrorCodes.APPLICATION_NOT_FOUND) {
+      else if (n === C.DispatchErrorCodes.APPLICATION_NOT_FOUND) {
         let {
           context: e
         } = t;

@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("360048"),
   p = n("624138"),
   O = n("51144"),
-  C = n("788307"),
-  R = n("981631"),
+  R = n("788307"),
+  C = n("981631"),
   g = n("674563"),
   L = n("524484"),
   v = n("689938"),
@@ -77,7 +77,7 @@ t.default = function(e) {
     animateOnHover: !(n || el),
     guildId: Y
   }), eT = r.useMemo(() => ({
-    source: R.AnalyticsSections.MEMBER_LIST,
+    source: C.AnalyticsSections.MEMBER_LIST,
     tagUserId: er
   }), [er]), [ef, eS] = r.useState(!1);
   r.useEffect(() => {
@@ -95,9 +95,9 @@ t.default = function(e) {
       e_(e)
     },
     eO = () => {
-      let e = null != w ? w.find(e => e.type === R.ActivityTypes.CUSTOM_STATUS) : null,
+      let e = null != w ? w.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null,
         t = null != e && null != b && (0, _.default)(e, b, H);
-      return (0, i.jsx)(C.default, {
+      return (0, i.jsx)(R.default, {
         className: D.activity,
         textClassName: D.activityText,
         emojiClassName: D.activityEmoji,
@@ -110,14 +110,14 @@ t.default = function(e) {
         hasQuest: null != eh
       })
     },
-    eC = () => null != p && p && null == y ? (0, i.jsx)(l.Tooltip, {
+    eR = () => null != p && p && null == y ? (0, i.jsx)(l.Tooltip, {
       text: null != M ? M : v.default.Messages.GUILD_OWNER,
       children: e => (0, i.jsx)(A.default, {
         ...e,
         className: D.ownerIcon
       })
     }) : null,
-    eR = () => null == F ? null : (0, i.jsx)(l.Tooltip, {
+    eC = () => null == F ? null : (0, i.jsx)(l.Tooltip, {
       text: v.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
         date: F
       }),
@@ -139,11 +139,11 @@ t.default = function(e) {
       }) : null
     },
     eL = () => (0, i.jsxs)(i.Fragment, {
-      children: [eg(), eC(), eR()]
+      children: [eg(), eR(), eC()]
     }),
     ev = (e, t) => {
       let n = V ? l.AnimatedAvatar : l.Avatar,
-        r = (0, u.default)(w) ? R.StatusTypes.STREAMING : k;
+        r = (0, u.default)(w) ? C.StatusTypes.STREAMING : k;
       return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(n, {
           ...eI,
@@ -177,7 +177,7 @@ t.default = function(e) {
         profileViewedAnalytics: eT
       })]
     }),
-    eM = k === R.StatusTypes.OFFLINE;
+    eM = k === C.StatusTypes.OFFLINE;
   return null == b ? (0, i.jsx)(h.default, {
     avatarSize: l.AvatarSizes.SIZE_32,
     className: D.placeholder

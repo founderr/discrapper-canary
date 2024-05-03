@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("607070"),
   p = n("545006"),
   O = n("213609"),
-  C = n("613413"),
-  R = n("327943"),
+  R = n("613413"),
+  C = n("327943"),
   g = n("907459"),
   L = n("559407"),
   v = n("514361"),
@@ -81,7 +81,7 @@ t.default = function(e) {
     skipsSettingDefaultPageTitle: n
   } = e, {
     pathname: a
-  } = (0, u.useLocation)(), E = (0, K.getPlatform)(), A = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), Z = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [J, er] = (0, _.useStateFromStoresArray)([v.default], () => [v.default.isEditorOpen, v.default.isCoachmark]), ea = (0, _.useStateFromStores)([R.default], () => R.default.isEditorOpen), {
+  } = (0, u.useLocation)(), E = (0, K.getPlatform)(), A = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), Z = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [J, er] = (0, _.useStateFromStoresArray)([v.default], () => [v.default.isEditorOpen, v.default.isCoachmark]), ea = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
     enabled: es
   } = b.default.useExperiment({
     location: "client_themes_coachmark_reintro"
@@ -143,7 +143,7 @@ t.default = function(e) {
                             children: [(0, i.jsx)("div", {
                               className: s()(A ? et.mobileApp : et.app),
                               children: t
-                            }), (0, i.jsx)(L.default, {}), (0, i.jsx)(S.default, {}), (0, i.jsx)(I.Modals, {}), (0, i.jsx)(h.default, {}), (0, i.jsx)(Y.FullScreenLayers, {}), (0, i.jsx)(H.AppLayerContainer, {}), (0, i.jsx)(j.VerificationLayerContainer, {}), (0, i.jsx)(I.ToastContainer, {}), (0, i.jsx)(C.default, {}), (0, i.jsx)(U.default, {}), (0, i.jsx)(en, {})]
+                            }), (0, i.jsx)(L.default, {}), (0, i.jsx)(S.default, {}), (0, i.jsx)(I.Modals, {}), (0, i.jsx)(h.default, {}), (0, i.jsx)(Y.FullScreenLayers, {}), (0, i.jsx)(H.AppLayerContainer, {}), (0, i.jsx)(j.VerificationLayerContainer, {}), (0, i.jsx)(I.ToastContainer, {}), (0, i.jsx)(R.default, {}), (0, i.jsx)(U.default, {}), (0, i.jsx)(en, {})]
                           })
                         })
                       })

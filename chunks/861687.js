@@ -24,8 +24,8 @@ var i, r = n("654861"),
   N = n("148959"),
   p = n("227196"),
   O = n("926951"),
-  C = n("859132"),
-  R = n("384406"),
+  R = n("859132"),
+  C = n("384406"),
   g = n("166884"),
   L = n("868616"),
   v = n("848886"),
@@ -580,14 +580,14 @@ class el extends _.default {
       if (s && o) {
         let {
           bucket: e
-        } = C.default.getCurrentConfig({
+        } = R.default.getCurrentConfig({
           location: "RTCConnection DesktopEncodingOptionsSet"
         });
         l.setCallExperience(e)
       } else if (!s && !o) {
         let {
           bucket: e
-        } = R.default.getCurrentConfig({
+        } = C.default.getCurrentConfig({
           location: "RTCConnection DesktopEncodingOptionsSet"
         });
         l.setCallExperience(e)

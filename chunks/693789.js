@@ -123,8 +123,8 @@ function A(e) {
     submitting: N = !1,
     type: p = "button",
     style: O,
-    wrapperClassName: C,
-    className: R,
+    wrapperClassName: R,
+    className: C,
     innerClassName: g,
     onClick: L,
     onDoubleClick: v,
@@ -176,7 +176,7 @@ function A(e) {
       disabled: m,
       style: O,
       rel: G,
-      className: s()(R, h({
+      className: s()(C, h({
         look: t,
         color: n,
         borderColor: a,
@@ -186,7 +186,7 @@ function A(e) {
         grow: A,
         submitting: N,
         disabled: m
-      }), Y ? null : C),
+      }), Y ? null : R),
       children: [N && !m ? (0, i.jsx)(d.Spinner, {
         type: d.Spinner.Type.PULSING_ELLIPSIS,
         className: c.spinner,
@@ -198,7 +198,7 @@ function A(e) {
     })
   });
   return Y ? (0, i.jsxs)("span", {
-    className: s()(c.disabledButtonWrapper, C, T, {
+    className: s()(c.disabledButtonWrapper, R, T, {
       [c.grow]: A,
       [c.fullWidth]: f
     }),
@@ -227,17 +227,17 @@ function m(e) {
     onMouseDown: N,
     onMouseUp: p,
     children: O,
-    rel: C,
-    ...R
+    rel: R,
+    ...C
   } = e;
   return (0, i.jsx)(o.Link, {
-    ...R,
+    ...C,
     to: A,
     onClick: m,
     onMouseUp: p,
     onMouseDown: N,
     style: _,
-    rel: C,
+    rel: R,
     className: s()(T, c.button, t, n, r, a, l, {
       [c.fullWidth]: u,
       [c.grow]: d,

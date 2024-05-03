@@ -21,8 +21,8 @@ var i, r, a, s, o = n("392711"),
   N = n("823379"),
   p = n("709054"),
   O = n("314897"),
-  C = n("430824"),
-  R = n("594174"),
+  R = n("430824"),
+  C = n("594174"),
   g = n("981631");
 let L = new S.default("ChannelStore"),
   v = {},
@@ -43,7 +43,7 @@ let L = new S.default("ChannelStore"),
   Y = 0;
 class j {
   static loadAllMissingChannels() {
-    let e = C.default.getGuildIds().filter(e => !k.has(e));
+    let e = R.default.getGuildIds().filter(e => !k.has(e));
     return this.loadGuildIds(e)
   }
   static loadGuildFromChannelId(e) {
@@ -251,7 +251,7 @@ function el() {
 }
 class eu extends(i = d.default.Store) {
   initialize() {
-    this.waitFor(T.default, R.default, C.default, h.default), this.syncWith([h.default], el)
+    this.waitFor(T.default, C.default, R.default, h.default), this.syncWith([h.default], el)
   }
   hasChannel(e) {
     return null != Z(e)
@@ -263,7 +263,7 @@ class eu extends(i = d.default.Store) {
     if (null != e) return X(e)
   }
   loadAllGuildAndPrivateChannelsFromDisk() {
-    for (let e of C.default.getGuildIds()) W(e, 1, "loadAllGuildAndPrivateChannelsFromDisk");
+    for (let e of R.default.getGuildIds()) W(e, 1, "loadAllGuildAndPrivateChannelsFromDisk");
     return {
       ...D,
       ...y

@@ -29,7 +29,7 @@ function c(e) {
       (0, i.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("5528"), n.e("59075")]).then(n.bind(n, "601572"));
+        } = await Promise.all([n.e("99387"), n.e("5528"), n.e("24267")]).then(n.bind(n, "601572"));
         return t => (0, a.jsx)(e, {
           ...t,
           videoEnabled: c

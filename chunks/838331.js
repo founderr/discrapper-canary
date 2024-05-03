@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return O
   },
   ComboboxItem: function() {
-    return R
+    return C
   },
   useMultiSelect: function() {
     return A
@@ -72,8 +72,8 @@ function O(e) {
     multiSelect: A = !1,
     autoFocus: m = !1,
     maxVisibleItems: O = 5,
-    itemToString: C = N,
-    showScrollbar: R = !1
+    itemToString: R = N,
+    showScrollbar: C = !1
   } = e, [g, L] = r.useState(""), [v] = r.useState(!0), [D, M] = r.useState(null), y = r.useId(), P = r.useRef(null);
   r.useLayoutEffect(() => {
     let e = document.querySelector("[".concat(S, '="').concat(D, '"]')),
@@ -116,7 +116,7 @@ function O(e) {
       scrollToEnd: B,
       setFocus: k
     }),
-    x = R ? _.ListThin : _.ListNone;
+    x = C ? _.ListThin : _.ListNone;
   return (0, i.jsx)(o.ListNavigatorProvider, {
     navigator: V,
     children: (0, i.jsx)(o.ListNavigatorContainer, {
@@ -145,7 +145,7 @@ function O(e) {
             onBlur: () => M(null),
             onClear: () => L(""),
             className: s()({
-              [f.searchWithScrollbar]: R
+              [f.searchWithScrollbar]: C
             }),
             inputProps: {
               "aria-multiline": !1,
@@ -167,7 +167,7 @@ function O(e) {
                 activeDescendant: D,
                 selected: a,
                 setSelected: l,
-                itemToString: C
+                itemToString: R
               },
               children: (0, i.jsx)(x, {
                 ...o,
@@ -178,7 +178,7 @@ function O(e) {
                 id: y,
                 ref: P,
                 className: s()(f.list, I, {
-                  [f.scroller]: R
+                  [f.scroller]: C
                 }),
                 sections: [U.length],
                 sectionHeight: 0,
@@ -198,9 +198,9 @@ function O(e) {
     })
   })
 }
-let C = r.createContext(null);
+let R = r.createContext(null);
 
-function R(e) {
+function C(e) {
   var t;
   let {
     value: n,
@@ -228,13 +228,13 @@ function R(e) {
     role: "option",
     "aria-selected": N,
     "aria-disabled": l,
-    children: (0, i.jsx)(C.Provider, {
+    children: (0, i.jsx)(R.Provider, {
       value: n,
       children: a
     })
   })
 }
-R.Colors = h, R.Label = function(e) {
+C.Colors = h, C.Label = function(e) {
   let {
     children: t
   } = e;
@@ -242,7 +242,7 @@ R.Colors = h, R.Label = function(e) {
     className: f.itemLabel,
     children: t
   })
-}, R.Icon = function(e) {
+}, C.Icon = function(e) {
   let {
     children: t
   } = e;
@@ -250,12 +250,12 @@ R.Colors = h, R.Label = function(e) {
     className: f.itemCheckbox,
     children: t
   })
-}, R.Checkbox = function(e) {
+}, C.Checkbox = function(e) {
   let {
     checked: t
   } = e, {
     selected: n
-  } = r.useContext(p), a = r.useContext(C);
+  } = r.useContext(p), a = r.useContext(R);
   return (0, i.jsx)("span", {
     className: f.itemCheckbox,
     children: (0, i.jsx)(l.Checkbox, {
@@ -265,10 +265,10 @@ R.Colors = h, R.Label = function(e) {
       size: 20
     })
   })
-}, R.Checkmark = function() {
+}, C.Checkmark = function() {
   let {
     selected: e
-  } = r.useContext(p), t = r.useContext(C);
+  } = r.useContext(p), t = r.useContext(R);
   return e.has(t) ? (0, i.jsx)("span", {
     className: f.itemCheckbox,
     children: (0, i.jsx)(I.default, {

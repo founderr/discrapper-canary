@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("14770"),
   p = n("981631"),
   O = n("689079"),
-  C = n("689938"),
-  R = n("188213"),
+  R = n("689938"),
+  C = n("188213"),
   g = n("990291");
 
 function L(e) {
@@ -45,7 +45,7 @@ function L(e) {
     })
   }, [t, n, a]);
   return (0, i.jsxs)("li", {
-    className: R.command,
+    className: C.command,
     onClick: s,
     children: [(0, i.jsx)(o.Text, {
       variant: "text-sm/semibold",
@@ -98,38 +98,38 @@ function v(e) {
       return (0, I.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
     }, [null === (n = u.application) || void 0 === n ? void 0 : n.description]);
   return (0, i.jsxs)(o.ScrollerNone, {
-    className: R.container,
+    className: C.container,
     fade: !0,
     children: [(0, i.jsx)("div", {
-      className: R.headerWhenSideCard,
+      className: C.headerWhenSideCard,
       style: {
         backgroundColor: y
       },
       children: (0, i.jsx)(o.Clickable, {
-        "aria-label": C.default.Messages.CLOSE,
+        "aria-label": R.default.Messages.CLOSE,
         onClick: D,
-        className: R.headerCloseButton,
+        className: C.headerCloseButton,
         children: (0, i.jsx)(T.default, {})
       })
     }), (0, i.jsxs)("div", {
-      className: R.contentContainer,
+      className: C.contentContainer,
       children: [(0, i.jsxs)("div", {
-        className: R.appIcon,
+        className: C.appIcon,
         children: [(0, i.jsx)(P, {
           channel: a,
           section: u,
           width: 72,
           height: 72
         }), (0, i.jsx)("div", {
-          className: R.appIconBorderThingy
+          className: C.appIconBorderThingy
         })]
       }), (0, i.jsxs)("section", {
         children: [(0, i.jsx)(o.Heading, {
-          className: R.appName,
+          className: C.appName,
           variant: "heading-lg/bold",
           children: u.name
         }), (0, i.jsx)(o.Text, {
-          className: s()(R.__invalid_appDescription, g.markup),
+          className: s()(C.__invalid_appDescription, g.markup),
           variant: "text-sm/medium",
           lineClamp: 3,
           children: U
@@ -138,12 +138,12 @@ function v(e) {
         commands: p,
         channel: a
       }), (0, i.jsxs)("div", {
-        className: R.commandListHeader,
+        className: C.commandListHeader,
         children: [(0, i.jsx)(o.Heading, {
           variant: "text-md/medium",
           children: "All Commands"
         }), (0, i.jsxs)(o.Text, {
-          className: R.sortSelector,
+          className: C.sortSelector,
           variant: "text-md/medium",
           children: ["Popular", (0, i.jsx)(f.default, {})]
         })]

@@ -124,7 +124,7 @@ function O(e) {
   }
 }
 
-function C(e) {
+function R(e) {
   let {
     children: t,
     size: n,
@@ -140,8 +140,8 @@ function C(e) {
     ariaHidden: N,
     status: p,
     isMobile: O = !1,
-    isTyping: C = !1,
-    avatarDecoration: R,
+    isTyping: R = !1,
+    avatarDecoration: C,
     typingOffset: g,
     specs: L
   } = e, v = {
@@ -210,7 +210,7 @@ function C(e) {
         return c.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_120
     }
     return null
-  }(p, n, O, C), P = null != R && (0, i.jsx)("svg", {
+  }(p, n, O, R), P = null != C && (0, i.jsx)("svg", {
     width: M + g,
     height: M,
     viewBox: "0 0 ".concat(M + g, " ").concat(M),
@@ -226,7 +226,7 @@ function C(e) {
         className: h.avatarStack,
         children: (0, i.jsx)("img", {
           className: h.avatar,
-          src: R,
+          src: C,
           alt: " ",
           "aria-hidden": !0
         })
@@ -259,7 +259,7 @@ function C(e) {
   })
 }
 
-function R(e) {
+function C(e) {
   let {
     src: t,
     isSpeaking: n
@@ -292,7 +292,7 @@ function g(e) {
     "aria-hidden": O = !1,
     "aria-label": g
   } = e, L = n !== T.StatusTypes.UNKNOWN ? n : null, v = (0, I.getAvatarSpecs)(r), D = null != L ? Math.ceil((v.status * I.TYPING_WIDTH_RATIO - v.status) / 2) : 0, M = v.size + D, y = (0, d.useStatusFillColor)(L, a);
-  return (0, i.jsx)(C, {
+  return (0, i.jsx)(R, {
     ...e,
     ariaLabel: g,
     ariaHidden: O,
@@ -374,7 +374,7 @@ function g(e) {
           }
           throw Error("getMaskId(): Unsupported type, size: ".concat(t, ", status: ").concat(e, ", isMobile: ").concat(n ? "true" : "false"))
         }(L, r, o, l), ")"),
-        children: (0, i.jsx)(R, {
+        children: (0, i.jsx)(C, {
           src: t,
           isSpeaking: S
         })
@@ -449,7 +449,7 @@ function L(e) {
     from: G,
     to: w
   }), j = (0, I.getAvatarSize)(S), W = (0, I.getAvatarSpecs)(S), K = W.status * I.TYPING_WIDTH_RATIO, z = W.status * I.MOBILE_HEIGHT_RATIO, Z = null != g ? (W.status * I.TYPING_WIDTH_RATIO - W.status) / 2 : 0, X = W.size - W.status - Z - W.offset, Q = W.size - z - W.offset, q = W.size + Math.ceil(Z);
-  return (0, i.jsx)(C, {
+  return (0, i.jsx)(R, {
     ...e,
     ariaLabel: y,
     ariaHidden: M,
@@ -486,7 +486,7 @@ function L(e) {
         width: j,
         height: j,
         mask: "url(#".concat(U, ")"),
-        children: (0, i.jsx)(R, {
+        children: (0, i.jsx)(C, {
           src: N,
           isSpeaking: f
         })

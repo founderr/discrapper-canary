@@ -75,8 +75,8 @@ function p(e) {
   } = t, {
     nick: p,
     colorString: O,
-    colorRoleName: C
-  } = (0, d.default)(a), R = function(e, t) {
+    colorRoleName: R
+  } = (0, d.default)(a), C = function(e, t) {
     let n = e.id,
       i = t.id;
     return (0, o.useStateFromStores)([T.default], () => {
@@ -88,7 +88,7 @@ function p(e) {
       }
       return 10
     }, [n, i])
-  }(r, a), g = (0, E.useCanStartPublicThread)(r, a), L = n.showThreadPromptOnReply && R >= 2 && g;
+  }(r, a), g = (0, E.useCanStartPublicThread)(r, a), L = n.showThreadPromptOnReply && C >= 2 && g;
 
   function v(e) {
     e.stopPropagation(), (0, _.setPendingReplyShouldMention)(r.id, !u)
@@ -118,7 +118,7 @@ function p(e) {
                 className: m.name,
                 name: p,
                 color: O,
-                roleName: C
+                roleName: R
               }, t)
             })
           })
@@ -170,7 +170,7 @@ function p(e) {
       }), L && (0, i.jsx)(N, {
         channel: r,
         message: a,
-        replyChainLength: R
+        replyChainLength: C
       })]
     })
   })

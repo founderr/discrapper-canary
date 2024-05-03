@@ -71,21 +71,21 @@ t.default = a.default.connectStores([d.default, o.default, f.default, _.default,
     N = null != S && !(0, l.default)(S.channelId, E.default, T.default),
     p = o.default.getActivityPanelMode(),
     O = null != S && N && p === m.ActivityPanelModes.PANEL,
-    C = f.default.windowSize();
+    R = f.default.windowSize();
   if (c && (u && O || !O)) {
     let e = d.default.getWindow(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-    C = null == e ? C : {
+    R = null == e ? R : {
       width: e.innerWidth,
       height: e.innerHeight
     }
   }!u && O ? r = A.AppContext.APP : s && (r = A.AppContext.POPOUT), a = u && N ? null : N || !c || s ? null != S && p === m.ActivityPanelModes.PANEL && N ? null !== (t = I.default.pipActivityWindow) && void 0 !== t ? t : I.default.pipVideoWindow : null !== (n = I.default.pipVideoWindow) && void 0 !== n ? n : I.default.pipActivityWindow : null;
-  let R = Array.from(I.default.pipWindows.values()),
-    g = R.find(e => e.component === A.PictureInPictureComponents.VIDEO);
+  let C = Array.from(I.default.pipWindows.values()),
+    g = C.find(e => e.component === A.PictureInPictureComponents.VIDEO);
   return {
     selectedPIPWindow: a,
-    pipWindows: [g, R.find(e => e.component === A.PictureInPictureComponents.EMBED_IFRAME)].filter(h.isNotNullish),
-    maxX: C.width,
-    maxY: C.height,
+    pipWindows: [g, C.find(e => e.component === A.PictureInPictureComponents.EMBED_IFRAME)].filter(h.isNotNullish),
+    maxX: R.width,
+    maxY: R.height,
     theme: _.default.theme,
     dockedRect: I.default.getDockedRect(null !== (i = null == a ? void 0 : a.id) && void 0 !== i ? i : ""),
     appContext: r,

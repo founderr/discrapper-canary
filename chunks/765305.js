@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return M
   },
   EntityChannelTypes: function() {
-    return R
+    return C
   },
   EventDetailSections: function() {
     return o
@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return i
   },
   GuildScheduledEventStatusDone: function() {
-    return C
+    return R
   },
   GuildScheduledEventUserResponses: function() {
     return u
@@ -69,9 +69,9 @@ let A = 100,
   p = "Guild Events Modal",
   O = "-1";
 (d = i || (i = {}))[d.SCHEDULED = 1] = "SCHEDULED", d[d.ACTIVE = 2] = "ACTIVE", d[d.COMPLETED = 3] = "COMPLETED", d[d.CANCELED = 4] = "CANCELED";
-let C = new Set([3, 4]);
+let R = new Set([3, 4]);
 (_ = r || (r = {}))[_.NONE = 0] = "NONE", _[_.STAGE_INSTANCE = 1] = "STAGE_INSTANCE", _[_.VOICE = 2] = "VOICE", _[_.EXTERNAL = 3] = "EXTERNAL", _[_.PRIME_TIME = 4] = "PRIME_TIME", (c = a || (a = {}))[c.EVENT_START = 1] = "EVENT_START", (E = s || (s = {}))[E.PUBLIC = 1] = "PUBLIC", E[E.GUILD_ONLY = 2] = "GUILD_ONLY";
-let R = {
+let C = {
     1: h.ChannelTypes.GUILD_STAGE_VOICE,
     2: h.ChannelTypes.GUILD_VOICE
   },

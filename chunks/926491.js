@@ -17,8 +17,8 @@ let m = 2,
   N = new Map,
   p = new Map,
   O = null,
-  C = [],
-  R = null,
+  R = [],
+  C = null,
   g = !1,
   L = new Map,
   v = (e, t) => {
@@ -49,7 +49,7 @@ let m = 2,
       value: e.name.trim().toLocaleLowerCase()
     };
     if ((0, A.isStandardSticker)(e)) {
-      let t = C.find(t => t.id === e.pack_id),
+      let t = R.find(t => t.id === e.pack_id),
         r = [i, ...(null != n ? n : "").split(",").map(e => ({
           type: h.StickerMetadataTypes.TAG,
           value: e.trim().toLocaleLowerCase()
@@ -85,15 +85,15 @@ let m = 2,
     }
   }, U = (e, t, n) => {
     N.set(e.id, e);
-    let i = [...C];
+    let i = [...R];
     if (t) {
-      let t = i.findIndex(t => t.id === e.id); - 1 !== t ? i[t] = e : i.push(e), C = i
+      let t = i.findIndex(t => t.id === e.id); - 1 !== t ? i[t] = e : i.push(e), R = i
     }(t || n) && e.stickers.forEach(e => y(e))
   }, b = () => {
     L.forEach((e, t) => {
       let n = f.default.getGuild(t);
       null != n && e.forEach(e => P(e, n))
-    }), C.forEach(e => {
+    }), R.forEach(e => {
       e.stickers.forEach(e => P(e))
     })
   };
@@ -116,7 +116,7 @@ class w extends(i = l.default.Store) {
     return M(), null == O && (O = new Map, b()), O
   }
   get hasLoadedStickerPacks() {
-    return null != R && R + D > Date.now()
+    return null != C && C + D > Date.now()
   }
   get isFetchingStickerPacks() {
     return g
@@ -128,10 +128,10 @@ class w extends(i = l.default.Store) {
     return N.get(e)
   }
   getPremiumPacks() {
-    return C
+    return R
   }
   isPremiumPack(e) {
-    return C.some(t => t.id === e)
+    return R.some(t => t.id === e)
   }
   getRawStickersByGuild() {
     return L
@@ -177,7 +177,7 @@ s = "StickersStore", (a = "displayName") in(r = w) ? Object.defineProperty(r, a,
     }), L.delete(n.id), L = new Map(L)
   },
   LOGOUT: () => {
-    m = 0, C = [], p.clear(), N.clear(), O = null, L.clear(), L = new Map(L), g = !1, R = null
+    m = 0, R = [], p.clear(), N.clear(), O = null, L.clear(), L = new Map(L), g = !1, C = null
   },
   STICKER_PACKS_FETCH_START: () => {
     g = !0
@@ -186,7 +186,7 @@ s = "StickersStore", (a = "displayName") in(r = w) ? Object.defineProperty(r, a,
     let {
       packs: t
     } = e;
-    t.forEach(e => U(e, !0)), R = Date.now(), g = !1
+    t.forEach(e => U(e, !0)), C = Date.now(), g = !1
   },
   STICKER_PACK_FETCH_SUCCESS: e => {
     let {

@@ -57,9 +57,9 @@ function S(e) {
   });
   let p = A.activeSlide,
     O = (0, d.default)(A.activeSlide);
-  let C = (f = null != O ? m[O] : null, S = m[p], null == f ? null : f.index > S.index ? "backwards" : f.index < S.index ? "forwards" : null),
+  let R = (f = null != O ? m[O] : null, S = m[p], null == f ? null : f.index > S.index ? "backwards" : f.index < S.index ? "forwards" : null),
     {
-      reducedMotion: R
+      reducedMotion: C
     } = r.useContext(l.AccessibilityPreferencesContext),
     g = r.useContext(c.default),
     L = m[p].impressionName,
@@ -82,7 +82,7 @@ function S(e) {
   } = (0, u.default)(p), P = {
     ...I,
     ...A.springConfig,
-    ...R.enabled ? {
+    ...C.enabled ? {
       clamp: !0
     } : null
   }, U = (0, a.useSpring)({
@@ -109,7 +109,7 @@ function S(e) {
       } = t;
       n === p && null != A.onSlideReady && A.onSlideReady(n)
     }
-  }), G = (0, E.default)(C), {
+  }), G = (0, E.default)(R), {
     width: w,
     centered: B = !0
   } = A, k = o.isMobile ? "100%" : U.width.to(e => Math.round(e)), V = o.isMobile ? "100%" : U.height.to(e => Math.round(e)), x = o.isMobile ? {} : B ? {
@@ -140,7 +140,7 @@ function S(e) {
           backfaceVisibility: "hidden",
           width: o.isMobile ? "100%" : w,
           ...x,
-          ...R.enabled ? {
+          ...C.enabled ? {
             opacity: e.value.to(e => 1 - Math.abs(e))
           } : {
             left: e.value.to(T("left", G)),

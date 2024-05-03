@@ -144,7 +144,7 @@ class O extends(i = r.default.PersistedStore) {
   }
 }
 I(O, "displayName", "NotificationCenterItemsStore"), I(O, "persistKey", "NotificationCenterItemsStore_v2");
-let C = new O(a.default, {
+let R = new O(a.default, {
   CONNECTION_OPEN: function(e) {
     S();
     let t = [];
@@ -262,4 +262,4 @@ let C = new O(a.default, {
     }
   }
 });
-t.default = C
+t.default = R

@@ -100,7 +100,7 @@ function G(e) {
     }), (0, m.updateRoleConnectionConfigurations)(s.id, D(a, B))
   }
 
-  function k() {
+  function w() {
     c.default.dispatch({
       type: "CONNECTIONS_GRID_MODAL_SHOW",
       onComplete: e => H(e),
@@ -109,9 +109,9 @@ function G(e) {
       onCompleteApplication: e => H(L.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE, e)
     })
   }
-  let w = null;
-  if (0 === y.length) w = (0, a.jsx)(v, {
-    handleAddVerificationClicked: k,
+  let k = null;
+  if (0 === y.length) k = (0, a.jsx)(v, {
+    handleAddVerificationClicked: w,
     locked: n
   });
   else if (y.length > 0) {
@@ -122,13 +122,13 @@ function G(e) {
       size: u.Button.Sizes.LARGE,
       look: u.Button.Looks.BLANK,
       color: u.Button.Colors.LINK,
-      onClick: k,
+      onClick: w,
       disabled: n,
       children: (0, a.jsxs)("div", {
         className: A.addVerificationButtonAppendTextContainer,
         children: [(0, a.jsx)(I.default, {}), O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION]
       })
-    })), w = (0, a.jsxs)(a.Fragment, {
+    })), k = (0, a.jsxs)(a.Fragment, {
       children: [(V = () => (0, m.updateRoleConnectionConfigurations)(s.id, []), Y = n, (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)("div", {
           className: A.headerTitleContainer,
@@ -256,7 +256,7 @@ function G(e) {
           color: "text-normal",
           children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MEMBERS_WARNING
         })]
-      }) : null, w]
+      }) : null, k]
     })
   })
 }

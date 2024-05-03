@@ -34,7 +34,7 @@ function m() {
       })) || void 0 === s ? void 0 : s[0]) && (e = null != r ? r : null === (l = n.first()) || void 0 === l ? void 0 : null === (o = l.user) || void 0 === o ? void 0 : o.id)
     }
   }
-  r !== e && (r = e, t && C.emitChange())
+  r !== e && (r = e, t && R.emitChange())
 }
 let N = d().debounce(m, 300);
 
@@ -55,7 +55,7 @@ l = "VideoSpeakerStore", (o = "displayName") in(s = O) ? Object.defineProperty(s
   configurable: !0,
   writable: !0
 }) : s[o] = l;
-let C = new O(c.default, {
+let R = new O(c.default, {
   AUDIO_SET_LOCAL_VIDEO_DISABLED: p
 });
-t.default = C
+t.default = R

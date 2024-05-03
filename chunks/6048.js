@@ -100,8 +100,8 @@ class h extends(i = a.PureComponent) {
       autoComplete: N,
       inputProps: p,
       hideSearchIcon: O,
-      "aria-label": C = E.default.Messages.SEARCH,
-      ...R
+      "aria-label": R = E.default.Messages.SEARCH,
+      ...C
     } = this.props;
     return (0, r.jsx)(u.FocusRing, {
       focusTarget: this.inputRef,
@@ -111,7 +111,7 @@ class h extends(i = a.PureComponent) {
           [I.disabled]: f
         }),
         ref: this.containerRef,
-        ...R,
+        ...C,
         children: (0, r.jsxs)("div", {
           className: I.inner,
           children: [(0, r.jsx)("input", {
@@ -128,7 +128,7 @@ class h extends(i = a.PureComponent) {
             disabled: f,
             autoFocus: t,
             autoComplete: N,
-            "aria-label": C,
+            "aria-label": R,
             ref: this.inputRef
           }), !O && (0, r.jsx)(S, {
             size: T,

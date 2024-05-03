@@ -28,8 +28,8 @@ var i = n("512722"),
   N = n("594174"),
   p = n("70956"),
   O = n("51144"),
-  C = n("895924"),
-  R = n("689079"),
+  R = n("895924"),
+  C = n("689079"),
   g = n("981631"),
   L = n("590433"),
   v = n("689938");
@@ -39,16 +39,16 @@ let D = n("227419").default,
     return null === (n = e.find(e => e.name === t)) || void 0 === n ? void 0 : n.value
   },
   y = {
-    [R.BuiltInSectionId.BUILT_IN]: {
-      id: R.BuiltInSectionId.BUILT_IN,
-      type: C.ApplicationCommandSectionType.BUILT_IN,
+    [C.BuiltInSectionId.BUILT_IN]: {
+      id: C.BuiltInSectionId.BUILT_IN,
+      type: R.ApplicationCommandSectionType.BUILT_IN,
       get name() {
         return v.default.Messages.COMMAND_SECTION_BUILT_IN_NAME
       }
     },
-    [R.BuiltInSectionId.FRECENCY]: {
-      id: R.BuiltInSectionId.FRECENCY,
-      type: C.ApplicationCommandSectionType.BUILT_IN,
+    [C.BuiltInSectionId.FRECENCY]: {
+      id: C.BuiltInSectionId.FRECENCY,
+      type: R.ApplicationCommandSectionType.BUILT_IN,
       get name() {
         return v.default.Messages.FREQUENTLY_USED
       }
@@ -59,8 +59,8 @@ let D = n("227419").default,
     name: "shrug",
     displayName: "shrug",
     type: c.ApplicationCommandType.CHAT,
-    inputType: C.ApplicationCommandInputType.BUILT_IN_TEXT,
-    applicationId: R.BuiltInSectionId.BUILT_IN,
+    inputType: R.ApplicationCommandInputType.BUILT_IN_TEXT,
+    applicationId: C.BuiltInSectionId.BUILT_IN,
     get description() {
       return v.default.Messages.COMMAND_SHRUG_DESCRIPTION
     },
@@ -90,8 +90,8 @@ let D = n("227419").default,
     name: "tableflip",
     displayName: "tableflip",
     type: c.ApplicationCommandType.CHAT,
-    inputType: C.ApplicationCommandInputType.BUILT_IN_TEXT,
-    applicationId: R.BuiltInSectionId.BUILT_IN,
+    inputType: R.ApplicationCommandInputType.BUILT_IN_TEXT,
+    applicationId: C.BuiltInSectionId.BUILT_IN,
     get description() {
       return v.default.Messages.COMMAND_TABLEFLIP_DESCRIPTION
     },
@@ -121,8 +121,8 @@ let D = n("227419").default,
     name: "unflip",
     displayName: "unflip",
     type: c.ApplicationCommandType.CHAT,
-    inputType: C.ApplicationCommandInputType.BUILT_IN_TEXT,
-    applicationId: R.BuiltInSectionId.BUILT_IN,
+    inputType: R.ApplicationCommandInputType.BUILT_IN_TEXT,
+    applicationId: C.BuiltInSectionId.BUILT_IN,
     get description() {
       return v.default.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION
     },
@@ -152,8 +152,8 @@ let D = n("227419").default,
     name: "tts",
     displayName: "tts",
     type: c.ApplicationCommandType.CHAT,
-    inputType: C.ApplicationCommandInputType.BUILT_IN_TEXT,
-    applicationId: R.BuiltInSectionId.BUILT_IN,
+    inputType: R.ApplicationCommandInputType.BUILT_IN_TEXT,
+    applicationId: C.BuiltInSectionId.BUILT_IN,
     get description() {
       return v.default.Messages.COMMAND_TTS_DESCRIPTION
     },
@@ -190,8 +190,8 @@ let D = n("227419").default,
     name: "me",
     displayName: "me",
     type: c.ApplicationCommandType.CHAT,
-    inputType: C.ApplicationCommandInputType.BUILT_IN_TEXT,
-    applicationId: R.BuiltInSectionId.BUILT_IN,
+    inputType: R.ApplicationCommandInputType.BUILT_IN_TEXT,
+    applicationId: C.BuiltInSectionId.BUILT_IN,
     get description() {
       return v.default.Messages.COMMAND_ME_DESCRIPTION
     },
@@ -222,8 +222,8 @@ let D = n("227419").default,
     name: "spoiler",
     displayName: "spoiler",
     type: c.ApplicationCommandType.CHAT,
-    inputType: C.ApplicationCommandInputType.BUILT_IN_TEXT,
-    applicationId: R.BuiltInSectionId.BUILT_IN,
+    inputType: R.ApplicationCommandInputType.BUILT_IN_TEXT,
+    applicationId: C.BuiltInSectionId.BUILT_IN,
     get description() {
       return v.default.Messages.COMMAND_SPOILER_DESCRIPTION
     },
@@ -254,8 +254,8 @@ let D = n("227419").default,
     name: "nick",
     displayName: "nick",
     type: c.ApplicationCommandType.CHAT,
-    inputType: C.ApplicationCommandInputType.BUILT_IN,
-    applicationId: R.BuiltInSectionId.BUILT_IN,
+    inputType: R.ApplicationCommandInputType.BUILT_IN,
+    applicationId: C.BuiltInSectionId.BUILT_IN,
     get description() {
       return v.default.Messages.COMMAND_NICK_DESCRIPTION
     },
@@ -294,8 +294,8 @@ let D = n("227419").default,
     name: "thread",
     displayName: "thread",
     type: c.ApplicationCommandType.CHAT,
-    inputType: C.ApplicationCommandInputType.BUILT_IN,
-    applicationId: R.BuiltInSectionId.BUILT_IN,
+    inputType: R.ApplicationCommandInputType.BUILT_IN,
+    applicationId: C.BuiltInSectionId.BUILT_IN,
     get description() {
       return v.default.Messages.COMMAND_THREAD_DESCRIPTION
     },
@@ -343,8 +343,8 @@ let D = n("227419").default,
     name: "kick",
     displayName: "kick",
     type: c.ApplicationCommandType.CHAT,
-    inputType: C.ApplicationCommandInputType.BUILT_IN,
-    applicationId: R.BuiltInSectionId.BUILT_IN,
+    inputType: R.ApplicationCommandInputType.BUILT_IN,
+    applicationId: C.BuiltInSectionId.BUILT_IN,
     get description() {
       return v.default.Messages.COMMAND_KICK_DESCRIPTION
     },
@@ -407,8 +407,8 @@ let D = n("227419").default,
     name: "ban",
     displayName: "ban",
     type: c.ApplicationCommandType.CHAT,
-    inputType: C.ApplicationCommandInputType.BUILT_IN,
-    applicationId: R.BuiltInSectionId.BUILT_IN,
+    inputType: R.ApplicationCommandInputType.BUILT_IN,
+    applicationId: C.BuiltInSectionId.BUILT_IN,
     get description() {
       return v.default.Messages.COMMAND_BAN_DESCRIPTION
     },
@@ -515,8 +515,8 @@ let D = n("227419").default,
     name: "timeout",
     displayName: "timeout",
     type: c.ApplicationCommandType.CHAT,
-    inputType: C.ApplicationCommandInputType.BUILT_IN,
-    applicationId: R.BuiltInSectionId.BUILT_IN,
+    inputType: R.ApplicationCommandInputType.BUILT_IN,
+    applicationId: C.BuiltInSectionId.BUILT_IN,
     get description() {
       return v.default.Messages.COMMAND_TIMEOUT_DESCRIPTION
     },
@@ -605,8 +605,8 @@ let D = n("227419").default,
     name: "msg",
     displayName: "msg",
     type: c.ApplicationCommandType.CHAT,
-    inputType: C.ApplicationCommandInputType.BUILT_IN,
-    applicationId: R.BuiltInSectionId.BUILT_IN,
+    inputType: R.ApplicationCommandInputType.BUILT_IN,
+    applicationId: C.BuiltInSectionId.BUILT_IN,
     get description() {
       return v.default.Messages.COMMAND_MSG_DESCRIPTION
     },
@@ -658,5 +658,5 @@ let D = n("227419").default,
   b = P.filter(e => ["gif", "tenor", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"].includes(e.name)),
   G = (e, t, n) => {
     let i = t ? P : b;
-    return i = i.filter(t => t.type === e && (!n || t.inputType === C.ApplicationCommandInputType.BUILT_IN_TEXT || t.inputType === C.ApplicationCommandInputType.BUILT_IN_INTEGRATION))
+    return i = i.filter(t => t.type === e && (!n || t.inputType === R.ApplicationCommandInputType.BUILT_IN_TEXT || t.inputType === R.ApplicationCommandInputType.BUILT_IN_INTEGRATION))
   }

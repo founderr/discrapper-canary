@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   areDiscoveryCategoriesEqual: function() {
     return h
   }
-}), n("653041"), n("47120");
-var a, i, r, s, l = n("392711"),
-  o = n.n(l),
-  c = n("442837"),
-  d = n("570140"),
-  u = n("823379"),
-  f = n("731455"),
-  m = n("689938");
+}), a("653041"), a("47120");
+var n, r, i, s, l = a("392711"),
+  o = a.n(l),
+  c = a("442837"),
+  d = a("570140"),
+  u = a("823379"),
+  f = a("731455"),
+  m = a("689938");
 
 function h(e, t) {
   return o().isEqual(e.map(e => [e.categoryId, e.name]), t.map(e => [e.categoryId, e.name]))
@@ -19,7 +19,7 @@ let E = null,
   T = [],
   p = [],
   _ = {};
-class C extends(a = c.default.Store) {
+class C extends(n = c.default.Store) {
   getPrimaryCategories() {
     return T
   }
@@ -47,50 +47,50 @@ class C extends(a = c.default.Store) {
     return e === f.DISCOVERY_ALL_CATEGORIES_ID ? m.default.Messages.HOME : _[e]
   }
 }
-s = "GuildDiscoveryCategoryStore", (r = "displayName") in(i = C) ? Object.defineProperty(i, r, {
+s = "GuildDiscoveryCategoryStore", (i = "displayName") in(r = C) ? Object.defineProperty(r, i, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new C(d.default, {
+}) : r[i] = s, t.default = new C(d.default, {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
     let t, {
-        categories: n,
-        locale: a
+        categories: a,
+        locale: n
       } = e,
-      i = [],
-      r = [];
-    if (n.sort((e, t) => e.name < t.name ? -1 : 1).forEach(e => {
+      r = [],
+      i = [];
+    if (a.sort((e, t) => e.name < t.name ? -1 : 1).forEach(e => {
         let {
-          id: n,
-          name: a,
+          id: a,
+          name: n,
           is_primary: s
         } = e;
-        if (n !== f.DEFAULT_DISCOVERY_CATEGORY_ID) {
-          if (n === f.OTHER_DISCOVERY_CATEGORY_ID) {
+        if (a !== f.DEFAULT_DISCOVERY_CATEGORY_ID) {
+          if (a === f.OTHER_DISCOVERY_CATEGORY_ID) {
             t = {
-              categoryId: n,
-              name: a
+              categoryId: a,
+              name: n
             };
             return
-          }!0 === s && i.push({
-            categoryId: n,
-            name: a
-          }), r.push({
-            categoryId: n,
-            name: a
-          }), _[n] = a
+          }!0 === s && r.push({
+            categoryId: a,
+            name: n
+          }), i.push({
+            categoryId: a,
+            name: n
+          }), _[a] = n
         }
       }), null != t) {
       let {
         categoryId: e,
-        name: n
+        name: a
       } = t;
-      i.push({
+      r.push({
         categoryId: e,
-        name: n
-      }), _[e] = n
+        name: a
+      }), _[e] = a
     }
-    E = a, T = i, p = r
+    E = n, T = r, p = i
   }
 })

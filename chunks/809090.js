@@ -31,9 +31,9 @@ function c(e) {
     N(!0), null == T || T()
   }, [T]), O = r.useCallback(() => {
     N(!1), null == f || f()
-  }, [f]), C = r.useCallback(() => {
+  }, [f]), R = r.useCallback(() => {
     N(!0), null == S || S()
-  }, [S]), R = r.useCallback(() => {
+  }, [S]), C = r.useCallback(() => {
     N(!1), null == h || h()
   }, [h]), g = r.useMemo(() => {
     if (t.type === u.ApplicationCommandSectionType.APPLICATION) {
@@ -56,8 +56,8 @@ function c(e) {
     }),
     onFocus: p,
     onBlur: O,
-    onMouseOver: C,
-    onMouseLeave: R,
+    onMouseOver: R,
+    onMouseLeave: C,
     children: (0, i.jsx)(o.default, {
       className: d.mask,
       mask: I && (n || m) ? o.MaskIDs.SQUIRCLE : o.MaskIDs.AVATAR_DEFAULT,

@@ -33,10 +33,10 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let C = (e, t) => (0, i.jsx)(h.CategoryColumn, {
+let R = (e, t) => (0, i.jsx)(h.CategoryColumn, {
   columns: e
 }, t);
-class R extends r.PureComponent {
+class C extends r.PureComponent {
   componentDidMount() {
     0 === this.props.trendingCategories.length && (0, _.fetchTrending)()
   }
@@ -149,7 +149,7 @@ class R extends r.PureComponent {
       return 0 === r.length ? (0, i.jsx)(h.ResultsLoader, {
         columns: e,
         width: t,
-        renderColumn: C
+        renderColumn: R
       }) : (0, i.jsx)(d.MasonryList, {
         ref: this._masonryRef,
         fade: !0,
@@ -180,7 +180,7 @@ function g(e) {
   let t = (0, o.useStateFromStores)([E.default], () => E.default.getTrendingCategories()),
     n = (0, f.useFavoriteGIFs)(),
     r = (0, A.useElementPools)();
-  return (0, i.jsx)(R, {
+  return (0, i.jsx)(C, {
     ...e,
     ...r,
     trendingCategories: t,

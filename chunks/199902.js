@@ -14,8 +14,8 @@ var o, l, u, d, _ = n("442837"),
   N = n("430824"),
   p = n("131951"),
   O = n("496675"),
-  C = n("19780"),
-  R = n("944486"),
+  R = n("19780"),
+  C = n("944486"),
   g = n("979651"),
   L = n("981631"),
   v = n("70722");
@@ -97,7 +97,7 @@ class k extends(o = _.default.Store) {
     return null !== (t = this.getActiveStreamForStreamKey(n)) && void 0 !== t ? t : null
   }
   getCurrentUserActiveStream() {
-    let e = R.default.getVoiceChannelId(),
+    let e = C.default.getVoiceChannelId(),
       t = m.default.getChannel(e);
     return null == t ? null : this.getActiveStreamForUser(A.default.getId(), t.getGuildId())
   }
@@ -108,7 +108,7 @@ class k extends(o = _.default.Store) {
   }
   getStreamerActiveStreamMetadata() {
     var e;
-    let t = R.default.getVoiceChannelId(),
+    let t = C.default.getVoiceChannelId(),
       n = m.default.getChannel(t);
     if (null == n) return null;
     let i = this.getActiveStreamForUser(A.default.getId(), n.getGuildId());
@@ -197,7 +197,7 @@ d = "ApplicationStreamingStore", (u = "displayName") in(l = k) ? Object.definePr
         }).ownerId] && (r[l.ownerId] = {}), r[l.ownerId][null !== (u = l.guildId) && void 0 !== u ? u : L.NULL_STRING_GUILD_ID] = l, !0
       } {
         let t = A.default.getSessionId();
-        return n === A.default.getId() && s !== t && null != C.default.getChannelId() ? e : function(e, t) {
+        return n === A.default.getId() && s !== t && null != R.default.getChannelId() ? e : function(e, t) {
           var n;
           let i = null != t ? t : L.NULL_STRING_GUILD_ID;
           return (null === (n = r[e]) || void 0 === n ? void 0 : n[i]) != null && (delete r[e][i], !0)

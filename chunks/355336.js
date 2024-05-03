@@ -35,23 +35,23 @@ function d(e, t) {
       customTheme: h = !1,
       style: A,
       ...m
-    } = t, N = r.useRef(null), p = r.useRef(null), [O, C] = r.useState(!1), {
-      scrollerRef: R,
+    } = t, N = r.useRef(null), p = r.useRef(null), [O, R] = r.useState(!1), {
+      scrollerRef: C,
       getScrollerState: g
-    } = (0, l.useUncachedScrollerState)(), L = (0, l.useScrollSpring)(R);
+    } = (0, l.useUncachedScrollerState)(), L = (0, l.useScrollSpring)(C);
     r.useImperativeHandle(d, () => ({
-      getScrollerNode: () => R.current,
+      getScrollerNode: () => C.current,
       isScrolling: () => null != N.current,
       getScrollerState: g,
-      ...(0, l.getAnimatedScrollHelpers)(R, g, L)
-    }), [R, g, L]);
+      ...(0, l.getAnimatedScrollHelpers)(C, g, L)
+    }), [C, g, L]);
     let v = r.useCallback(e => {
-      null == N.current ? C(!0) : clearTimeout(N.current), N.current = setTimeout(() => {
-        N.current = null, C(!1)
+      null == N.current ? R(!0) : clearTimeout(N.current), N.current = setTimeout(() => {
+        N.current = null, R(!1)
       }, 200), null != T && T(e)
     }, [T]);
     return r.useEffect(() => () => clearTimeout(N.current), []), (0, l.useResizeObserverSubscription)({
-      ref: R,
+      ref: C,
       key: "container",
       onUpdate: E,
       resizeObserver: a,
@@ -63,7 +63,7 @@ function d(e, t) {
       resizeObserver: a,
       listenerMap: n
     }), (0, i.jsx)("div", {
-      ref: R,
+      ref: C,
       className: s()(c, {
         [u.fade]: S,
         [u.customTheme]: h,

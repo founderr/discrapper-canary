@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return N
   },
   getManyCurrentChannelSettings: function() {
-    return C
+    return R
   },
   getManyCurrentGuildSettings: function() {
     return p
@@ -139,8 +139,8 @@ function m(e, t, n, i, r, a) {
     m = h(T, S, "RETURN_PREVIOUS_WHEN_CHANGED"),
     N = u.default.getChannel(t),
     p = null !== (s = m("channel_flags")) && void 0 !== s ? s : 0,
-    C = (null !== (d = S.channel_flags) && void 0 !== d ? d : 0) ^ p,
-    R = 0 === (0, _.removeFlags)(C, I.ChannelNotificationSettingsFlags.FAVORITED, I.ChannelNotificationSettingsFlags.OPT_IN_ENABLED);
+    R = (null !== (d = S.channel_flags) && void 0 !== d ? d : 0) ^ p,
+    C = 0 === (0, _.removeFlags)(R, I.ChannelNotificationSettingsFlags.FAVORITED, I.ChannelNotificationSettingsFlags.OPT_IN_ENABLED);
   o.default.trackWithMetadata(c.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
     ...S,
     ...l.default.getStats(e),
@@ -155,7 +155,7 @@ function m(e, t, n, i, r, a) {
     channel_muted_until_old: m("channel_muted_until"),
     channel_is_overridden_old: m("channel_is_overridden"),
     channel_message_notification_settings_old: m("channel_message_notification_settings"),
-    is_opt_in_only_change: R
+    is_opt_in_only_change: C
   })
 }
 
@@ -191,7 +191,7 @@ function O(e, t) {
   }
 }
 
-function C(e, t) {
+function R(e, t) {
   let n = new Map;
   return t.forEach(t => n.set(t, O(e, t))), n
 }

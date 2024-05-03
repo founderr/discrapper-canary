@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return p
   },
   playBurstReaction: function() {
-    return C
+    return R
   },
   removeAllReactions: function() {
-    return R
+    return C
   },
   removeEmojiReactions: function() {
     return g
@@ -183,7 +183,7 @@ async function O(e, t, n) {
   })
 }
 
-function C(e) {
+function R(e) {
   let {
     channelId: t,
     messageId: n,
@@ -198,13 +198,13 @@ function C(e) {
     key: r
   })
 }
-async function R(e, t, n) {
+async function C(e, t, n) {
   let i = null != n && !!n.isRetry;
   await d.default.unarchiveThreadIfNecessary(e), a.HTTP.del({
     url: S.Endpoints.REMOVE_REACTIONS(e, t),
     oldFormErrors: !0
   }).catch(n => {
-    A(n, () => R(e, t, {
+    A(n, () => C(e, t, {
       isRetry: !0
     }), {
       isRetry: i

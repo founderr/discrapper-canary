@@ -11,7 +11,7 @@ n.r(t), n.d(t, {
     return v
   },
   getFingerprintLocation: function() {
-    return R
+    return C
   },
   getHistory: function() {
     return N
@@ -26,7 +26,7 @@ n.r(t), n.d(t, {
     return g
   },
   isValidFingerprintRoute: function() {
-    return C
+    return R
   },
   replaceWith: function() {
     return m
@@ -96,7 +96,7 @@ function O() {
   return a
 }
 
-function C(e) {
+function R(e) {
   if (null == e) {
     var t;
     e = null !== (t = i.location.pathname) && void 0 !== t ? t : ""
@@ -104,7 +104,7 @@ function C(e) {
   return !e.startsWith(d.Routes.HANDOFF) && !0
 }
 
-function R(e) {
+function C(e) {
   if (null == e) {
     var t;
     e = null !== (t = i.location.pathname) && void 0 !== t ? t : ""

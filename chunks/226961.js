@@ -94,14 +94,14 @@ function O(e) {
   }
 }
 
-function C() {
+function R() {
   Object.values(_.MediaEngineContextTypes).forEach(e => {
     T[e] = {}
   })
 }
-C();
+R();
 
-function R() {
+function C() {
   null != N && (N.destroy(), N = null)
 }
 class g extends(i = r.default.Store) {
@@ -129,7 +129,7 @@ c(g, "displayName", "RTCDebugStore"), t.default = new g(s.default, {
     I = null !== (t = e.section) && void 0 !== t ? t : E
   },
   RTC_DEBUG_MODAL_CLOSE: function() {
-    R()
+    C()
   },
   RTC_DEBUG_MODAL_SET_SECTION: function(e) {
     I = e.section
@@ -188,7 +188,7 @@ c(g, "displayName", "RTCDebugStore"), t.default = new g(s.default, {
     let {
       path: t
     } = e, n = l.default.getMediaEngine();
-    if (R(), !n.supports(_.Features.CONNECTION_REPLAY) || 0 === t.length) return;
+    if (C(), !n.supports(_.Features.CONNECTION_REPLAY) || 0 === t.length) return;
     let i = n.createReplayConnection(_.MediaEngineContextTypes.DEFAULT, t);
     null != i && (N = i, i.on(a.BaseConnectionEvent.Video, (e, t, n, r, a) => {
       s.default.dispatch({
@@ -210,7 +210,7 @@ c(g, "displayName", "RTCDebugStore"), t.default = new g(s.default, {
     m = t
   },
   VOICE_CHANNEL_SELECT: function(e) {
-    null != e.channelId && C()
+    null != e.channelId && R()
   }
 }), l.default.getMediaEngine().on(a.MediaEngineEvent.ConnectionStats, function(e) {
   Object.values(_.MediaEngineContextTypes).forEach(t => {

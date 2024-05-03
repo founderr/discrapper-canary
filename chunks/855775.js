@@ -20,8 +20,8 @@ let c = "no_payment_source",
   N = null,
   p = !1,
   O = !1,
-  C = !1,
   R = !1,
+  C = !1,
   g = null,
   L = new Set;
 
@@ -34,7 +34,7 @@ class D extends(a = u.default.Store) {
   }
   isOpen() {
     let e = __OVERLAY__ ? _.AppContext.OVERLAY : _.AppContext.APP;
-    return g === e && C
+    return g === e && R
   }
   get isPurchasingSKU() {
     return m
@@ -64,7 +64,7 @@ class D extends(a = u.default.Store) {
     return I
   }
   get isGift() {
-    return R
+    return C
   }
   isFetchingSKU(e) {
     return L.has(e)
@@ -77,13 +77,13 @@ l = "SKUPaymentModalStore", (o = "displayName") in(s = D) ? Object.definePropert
   writable: !0
 }) : s[o] = l, t.default = new D(d.default, {
   SKU_PURCHASE_MODAL_OPEN: function(e) {
-    v(), E = e.skuId, T = e.applicationId, O = e.isIAP, f = e.analyticsLocation, g = e.context, R = e.isGift, C = !0, p = !1, i = e.resolve, r = e.reject, N = null, A = null, S = e.promotionId
+    v(), E = e.skuId, T = e.applicationId, O = e.isIAP, f = e.analyticsLocation, g = e.context, C = e.isGift, R = !0, p = !1, i = e.resolve, r = e.reject, N = null, A = null, S = e.promotionId
   },
   SKU_PURCHASE_MODAL_CLOSE: function(e) {
     let {
       error: t
     } = e;
-    C = !1, g = null, v(t)
+    R = !1, g = null, v(t)
   },
   SKU_PURCHASE_PREVIEW_FETCH: function(e) {
     let {
@@ -134,14 +134,14 @@ l = "SKUPaymentModalStore", (o = "displayName") in(s = D) ? Object.definePropert
     N = null
   },
   SKU_PURCHASE_UPDATE_IS_GIFT: function(e) {
-    R = e.isGift
+    C = e.isGift
   },
   OVERLAY_SET_INPUT_LOCKED: function(e) {
     let {
       locked: t
     } = e;
     if (!t || null == g) return !1;
-    C = !1, g = null, v()
+    R = !1, g = null, v()
   },
   GIFT_CODE_CREATE: function(e) {
     let {

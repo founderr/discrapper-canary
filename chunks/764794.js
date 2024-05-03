@@ -29,7 +29,7 @@ t.default = r.memo(function(e) {
     location: "ec41f5_1"
   }, {
     autoTrackExposure: !0
-  }), O = p ? h.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : N ? h.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : h.default.Messages.SHARE_NITRO_TOOLTIP, C = p ? h.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [R, g] = r.useState(!1), [L, v] = r.useState(!1), D = (0, o.default)(null, () => v(!1)), {
+  }), O = p ? h.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : N ? h.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : h.default.Messages.SHARE_NITRO_TOOLTIP, R = p ? h.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [C, g] = r.useState(!1), [L, v] = r.useState(!1), D = (0, o.default)(null, () => v(!1)), {
     analyticsLocations: M
   } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), y = m.isDM() && void 0 !== m.recipients ? m.recipients[0] : null, P = (0, l.default)();
   return t ? null : (0, i.jsxs)("div", {
@@ -44,10 +44,10 @@ t.default = r.memo(function(e) {
     }), (0, i.jsx)(a.Tooltip, {
       text: O,
       shouldShow: !L,
-      "aria-label": null != C ? C : O,
+      "aria-label": null != R ? R : O,
       children: e => (0, i.jsx)("div", {
         onMouseEnter: () => {
-          !L && !R && (g(!0), T.default.track(f.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+          !L && !C && (g(!0), T.default.track(f.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
             location_stack: M,
             step: S.ReferralTrialsAnalyticSteps.BADGE_TOOLTIP_VIEWED,
             other_user_id: Number(y)
@@ -60,7 +60,7 @@ t.default = r.memo(function(e) {
           ...e,
           innerClassName: A.button,
           isActive: L,
-          "aria-label": null != C ? C : O,
+          "aria-label": null != R ? R : O,
           "aria-haspopup": "dialog",
           onClick: () => {
             v(e => !e), T.default.track(f.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
@@ -71,7 +71,7 @@ t.default = r.memo(function(e) {
           },
           children: (0, i.jsx)(I.default, {
             referralsRemaining: n,
-            hovered: R,
+            hovered: C,
             isResending: N,
             shouldShowBirthdayUX: p,
             isLightTheme: (0, s.isThemeLight)(P)

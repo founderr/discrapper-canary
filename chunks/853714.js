@@ -148,7 +148,7 @@ class H extends l.PureComponent {
   }
 }
 
-function k(e) {
+function w(e) {
   let {
     logs: t,
     guildId: s,
@@ -195,7 +195,7 @@ function k(e) {
     })
   })
 }
-class w extends l.PureComponent {
+class k extends l.PureComponent {
   componentDidMount() {
     (0, _.fetchLogs)(this.props.guildId), document.addEventListener("click", this.handleOutsideClick)
   }
@@ -299,7 +299,7 @@ class w extends l.PureComponent {
         })]
       })
     }
-    return (0, a.jsx)(k, {
+    return (0, a.jsx)(w, {
       logs: l,
       guildId: u,
       guild: c,
@@ -543,4 +543,4 @@ t.default = c.default.connectStores([D.default, v.default, C.default, m.default,
     theme: m.default.theme,
     hide: R.default.enabled
   }
-})(w)
+})(k)

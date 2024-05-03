@@ -45,8 +45,8 @@ var a = s("735250"),
   y = s("700785"),
   F = s("434404"),
   H = s("999382"),
-  k = s("8426"),
-  w = s("969632"),
+  w = s("8426"),
+  k = s("969632"),
   V = s("981631"),
   Y = s("30513"),
   W = s("486324"),
@@ -71,7 +71,7 @@ function $(e) {
         ...s,
         guildId: t,
         welcomeMessage: n,
-        onSave: e => (0, k.updateWelcomeMessage)(e)
+        onSave: e => (0, w.updateWelcomeMessage)(e)
       })
     })
   }, [t, n]), u = (0, r.useStateFromStores)([x.default], () => x.default.getId());
@@ -129,7 +129,7 @@ function ee(e) {
     drag: y,
     dragSourcePosition: F,
     drop: H,
-    setIsDraggable: w
+    setIsDraggable: k
   } = (0, _.default)({
     type: "NEW_MEMBER_ACTION",
     index: S,
@@ -138,7 +138,7 @@ function ee(e) {
     onDragComplete: R,
     onDragReset: x
   }), V = l.useCallback((e, t) => {
-    (0, k.updateNewMemberActionIconData)(e.channelId, t)
+    (0, w.updateNewMemberActionIconData)(e.channelId, t)
   }, []), Y = l.useCallback(() => {
     if (null != I) return (0, d.openModalLazy)(async () => {
       let {
@@ -167,8 +167,8 @@ function ee(e) {
       ref: e => y(H(e)),
       children: [(0, a.jsx)("div", {
         className: Z.dragContainer,
-        onMouseEnter: () => w(!0),
-        onMouseLeave: () => w(!1),
+        onMouseEnter: () => k(!0),
+        onMouseLeave: () => k(!1),
         children: (0, a.jsx)(G.default, {
           className: Z.dragIcon
         })
@@ -229,35 +229,35 @@ function ee(e) {
 function et(e) {
   let {
     guildId: t
-  } = e, s = (0, r.useStateFromStoresArray)([w.default], () => {
+  } = e, s = (0, r.useStateFromStoresArray)([k.default], () => {
     var e;
-    return null !== (e = w.default.getSettings().newMemberActions) && void 0 !== e ? e : []
+    return null !== (e = k.default.getSettings().newMemberActions) && void 0 !== e ? e : []
   }), n = l.useCallback((e, s) => {
     if (null == t) return;
-    (0, k.addNewMemberAction)(e);
-    let a = w.default.getSettings();
+    (0, w.addNewMemberAction)(e);
+    let a = k.default.getSettings();
     if (null == a) return;
     let {
       channelId: l
     } = e;
-    (0, k.saveHomeSettings)(t, a, !0).then(() => {
-      null != s && (0, k.updateNewMemberActionIcon)(t, l, s, !0)
+    (0, w.saveHomeSettings)(t, a, !0).then(() => {
+      null != s && (0, w.updateNewMemberActionIcon)(t, l, s, !0)
     })
   }, [t]), i = l.useCallback((e, a, l) => {
     var n;
     if (null == t) return;
     let i = null === (n = s[e]) || void 0 === n ? void 0 : n.channelId;
     if (null == i) return;
-    let r = w.default.getSettings();
+    let r = k.default.getSettings();
     if (null == r) return;
-    let o = w.default.hasActionIconChanged(i);
-    (0, k.updateNewMemberAction)(i, a), (0, k.saveHomeSettings)(t, r, !0).then(() => {
-      (0, k.updateNewMemberActionIcon)(t, i, l, o)
+    let o = k.default.hasActionIconChanged(i);
+    (0, w.updateNewMemberAction)(i, a), (0, w.saveHomeSettings)(t, r, !0).then(() => {
+      (0, w.updateNewMemberActionIcon)(t, i, l, o)
     })
   }, [s, t]), o = l.useCallback(e => {
     var t;
     let a = null === (t = s[e]) || void 0 === t ? void 0 : t.channelId;
-    null != a && (0, k.deleteNewMemberAction)(a)
+    null != a && (0, w.deleteNewMemberAction)(a)
   }, [s]), d = s.map(e => ({
     ...e,
     id: e.channelId
@@ -265,7 +265,7 @@ function et(e) {
     handleDragStart: u,
     handleDragReset: c,
     handleDragComplete: E
-  } = (0, I.default)(d, k.reorderNewMemberActions);
+  } = (0, I.default)(d, w.reorderNewMemberActions);
   return null == t ? null : (0, a.jsxs)("div", {
     className: Z.section,
     children: [s.map((e, s) => (0, a.jsx)(ee, {
@@ -537,13 +537,13 @@ function ei(e) {
       onDragReset: E
     }),
     M = l.useCallback(e => {
-      (0, k.updateResourceChannel)(n.channelId, e)
+      (0, w.updateResourceChannel)(n.channelId, e)
     }, [n.channelId]),
     D = l.useCallback((e, s) => {
       if (null == t) return;
-      let a = w.default.getSettings();
-      null != a && ((0, k.updateResourceChannel)(n.channelId, e), (0, k.saveHomeSettings)(t, a).then(() => {
-        (0, k.updateResourceChannelIcon)(t, e.channelId, s)
+      let a = k.default.getSettings();
+      null != a && ((0, w.updateResourceChannel)(n.channelId, e), (0, w.saveHomeSettings)(t, a).then(() => {
+        (0, w.updateResourceChannelIcon)(t, e.channelId, s)
       }))
     }, [t, n]),
     v = l.useCallback(() => {
@@ -556,7 +556,7 @@ function ei(e) {
           guildId: t,
           resourceChannel: n,
           onSave: M,
-          onDelete: () => (0, k.deleteResourceChannel)(n.channelId),
+          onDelete: () => (0, w.deleteResourceChannel)(n.channelId),
           onIconUpload: D
         })
       })
@@ -628,7 +628,7 @@ function er(e) {
     channel: s,
     isLast: n
   } = e, i = l.useCallback(() => {
-    (0, k.addResourceChannel)({
+    (0, w.addResourceChannel)({
       channelId: s.id,
       title: s.name,
       description: "",
@@ -664,12 +664,12 @@ function er(e) {
 function eo(e) {
   let {
     guildId: t
-  } = e, s = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(t)), n = (0, r.useStateFromStoresArray)([w.default], () => {
+  } = e, s = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(t)), n = (0, r.useStateFromStoresArray)([k.default], () => {
     var e, t;
-    return null !== (t = null === (e = w.default.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map(e => e.channelId)) && void 0 !== t ? t : []
-  }), i = (0, r.useStateFromStoresArray)([w.default], () => w.default.getDismissedSuggestedChannelIds(t)), o = (0, r.useStateFromStores)([O.default], () => null == t ? [] : O.default.getSelectableChannels(t)).filter(e => !i.includes(e.channel.id) && !n.includes(e.channel.id) && e.channel.type === V.ChannelTypes.GUILD_TEXT && y.canEveryoneRole(V.Permissions.VIEW_CHANNEL, e.channel) && !y.canEveryoneRole(V.Permissions.SEND_MESSAGES, e.channel) && e.channel.id !== (null == s ? void 0 : s.rulesChannelId)).slice(0, 5), u = l.useCallback(() => {
+    return null !== (t = null === (e = k.default.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map(e => e.channelId)) && void 0 !== t ? t : []
+  }), i = (0, r.useStateFromStoresArray)([k.default], () => k.default.getDismissedSuggestedChannelIds(t)), o = (0, r.useStateFromStores)([O.default], () => null == t ? [] : O.default.getSelectableChannels(t)).filter(e => !i.includes(e.channel.id) && !n.includes(e.channel.id) && e.channel.type === V.ChannelTypes.GUILD_TEXT && y.canEveryoneRole(V.Permissions.VIEW_CHANNEL, e.channel) && !y.canEveryoneRole(V.Permissions.SEND_MESSAGES, e.channel) && e.channel.id !== (null == s ? void 0 : s.rulesChannelId)).slice(0, 5), u = l.useCallback(() => {
     let e = o.map(e => e.channel.id);
-    (0, k.dismissSuggestedChannels)(t, e)
+    (0, w.dismissSuggestedChannels)(t, e)
   }, [t, o]);
   return o.length <= 0 || n.length >= m.RESOURCE_CHANNEL_MAX ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
@@ -710,9 +710,9 @@ function eo(e) {
 function ed(e) {
   let {
     guildId: t
-  } = e, n = (0, r.useStateFromStoresArray)([w.default], () => {
+  } = e, n = (0, r.useStateFromStoresArray)([k.default], () => {
     var e;
-    return null !== (e = w.default.getSettings().resourceChannels) && void 0 !== e ? e : []
+    return null !== (e = k.default.getSettings().resourceChannels) && void 0 !== e ? e : []
   }), i = n.map(e => ({
     ...e,
     id: e.channelId
@@ -720,11 +720,11 @@ function ed(e) {
     handleDragStart: o,
     handleDragReset: u,
     handleDragComplete: c
-  } = (0, I.default)(i, k.reorderResourceChannels), E = l.useCallback((e, s) => {
+  } = (0, I.default)(i, w.reorderResourceChannels), E = l.useCallback((e, s) => {
     if (null == t) return;
-    let a = w.default.getSettings();
-    null != a && ((0, k.addResourceChannel)(e), (0, k.saveHomeSettings)(t, a).then(() => {
-      (0, k.updateResourceChannelIcon)(t, e.channelId, s)
+    let a = k.default.getSettings();
+    null != a && ((0, w.addResourceChannel)(e), (0, w.saveHomeSettings)(t, a).then(() => {
+      (0, w.updateResourceChannelIcon)(t, e.channelId, s)
     }))
   }, [t]), _ = l.useCallback(() => {
     if (null != t) return (0, d.openModalLazy)(async () => {
@@ -734,7 +734,7 @@ function ed(e) {
       return s => (0, a.jsx)(e, {
         ...s,
         guildId: t,
-        onSave: k.addResourceChannel,
+        onSave: w.addResourceChannel,
         onIconUpload: E
       })
     })
@@ -774,9 +774,9 @@ function ec(e) {
   let {
     saveOnClose: t,
     guildId: s
-  } = e, n = (0, r.useStateFromStoresObject)([w.default], () => {
+  } = e, n = (0, r.useStateFromStoresObject)([k.default], () => {
     var e;
-    return null !== (e = w.default.getSettings().welcomeMessage) && void 0 !== e ? e : {
+    return null !== (e = k.default.getSettings().welcomeMessage) && void 0 !== e ? e : {
       authorIds: [],
       message: ""
     }
@@ -789,8 +789,8 @@ function ec(e) {
   }], E = (0, r.useStateFromStores)([R.default], () => R.default.theme);
   return l.useEffect(() => () => {
     if (null == s) return;
-    let e = w.default.getSettings();
-    (0, k.saveHomeSettings)(s, e)
+    let e = k.default.getSettings();
+    (0, w.saveHomeSettings)(s, e)
   }, [t, s]), (0, a.jsxs)("div", {
     className: Z.page,
     children: [(0, a.jsxs)("div", {
@@ -909,15 +909,15 @@ function ec(e) {
 
 function eE() {
   let e = (0, r.useStateFromStores)([H.default], () => H.default.getGuild()),
-    t = (0, r.useStateFromStores)([w.default], () => w.default.getSettings()),
-    s = (0, r.useStateFromStores)([w.default], () => w.default.getSubmitting());
+    t = (0, r.useStateFromStores)([k.default], () => k.default.getSettings()),
+    s = (0, r.useStateFromStores)([k.default], () => k.default.getSubmitting());
   return null == e ? null : (0, a.jsx)(u.default, {
     onSave: () => {
       try {
-        (0, k.saveHomeSettings)(e.id, t)
+        (0, w.saveHomeSettings)(e.id, t)
       } catch {}
     },
-    onReset: k.resetHomeSettings,
+    onReset: w.resetHomeSettings,
     submitting: s,
     onSaveText: K.default.Messages.SAVE
   })

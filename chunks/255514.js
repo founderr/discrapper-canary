@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("449413"),
   p = n("266080"),
   O = n("316617"),
-  C = n("15682"),
-  R = n("905434"),
+  R = n("15682"),
+  C = n("905434"),
   g = n("196627"),
   L = n("739319"),
   v = n("842401"),
@@ -149,7 +149,7 @@ t.default = e => {
       }), null != U(t, "leave_guild") && "guild" === n.name && (0, i.jsx)(p.default, {
         guildId: n.record.id,
         reportId: V
-      }), null != U(t, "channel_preview") && "stage_channel" === n.name && (0, i.jsx)(R.default, {
+      }), null != U(t, "channel_preview") && "stage_channel" === n.name && (0, i.jsx)(C.default, {
         stageInstance: n.record
       }), null != U(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, i.jsx)(A.default, {
         event: n.record
@@ -157,7 +157,7 @@ t.default = e => {
         entry: n.record
       }), null != U(t, "guild_discovery_preview") && "guild_discovery" === n.name && (0, i.jsx)(h.default, {
         entry: n.record
-      }), null != F && (0, i.jsx)(C.default, {
+      }), null != F && (0, i.jsx)(R.default, {
         element: F,
         onChange: (e, t) => {
           let n = {

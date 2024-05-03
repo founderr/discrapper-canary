@@ -28,7 +28,7 @@ s.r(t), s.d(t, {
     return P
   },
   useIntangibleBenefits: function() {
-    return b
+    return x
   },
   useName: function() {
     return h
@@ -190,14 +190,14 @@ function F(e) {
 }
 let K = [];
 
-function b(e) {
+function x(e) {
   let t = f(e, e => null == e ? K : e.role_benefits.benefits.filter(o.isIntangibleBenefit));
   return R(e, "intangibleBenefits", t)
 }
-let x = new Set;
+let b = new Set;
 
 function j(e, t) {
-  if (0 === e.length) return x;
+  if (0 === e.length) return b;
   let s = e.filter(e => e.roles.includes(t));
   return new Set(s.map(e => {
     let {
@@ -210,7 +210,7 @@ function j(e, t) {
 function w(e, t) {
   let s = (0, D.default)(t, e),
     _ = (0, u.useStateFromStoresArray)([I.default], () => I.default.getGuildEmoji(t), [t]);
-  return R(e, "tierEmojiIds", E.useMemo(() => null == s ? x : j(_, s.id), [_, s]))
+  return R(e, "tierEmojiIds", E.useMemo(() => null == s ? b : j(_, s.id), [_, s]))
 }
 
 function k(e) {

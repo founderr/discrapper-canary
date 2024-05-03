@@ -1,68 +1,68 @@
 "use strict";
-t.r(a), t.d(a, {
+a.r(t), a.d(t, {
   default: function() {
     return h
   }
-}), t("47120");
-var s = t("735250"),
-  n = t("470079"),
-  l = t("442837"),
-  o = t("481060"),
-  c = t("2052"),
-  i = t("857185"),
-  r = t("911200"),
-  d = t("594174"),
-  u = t("74538"),
-  _ = t("716161"),
-  O = t("634041"),
-  E = t("647177"),
-  g = t("672339"),
-  A = t("898531"),
-  p = t("636188"),
-  f = t("678916"),
-  M = t("981631"),
-  m = t("869783"),
-  v = t("689938"),
-  I = t("736351");
+}), a("47120");
+var s = a("735250"),
+  n = a("470079"),
+  l = a("442837"),
+  o = a("481060"),
+  i = a("2052"),
+  c = a("857185"),
+  r = a("911200"),
+  d = a("594174"),
+  u = a("74538"),
+  _ = a("716161"),
+  O = a("634041"),
+  E = a("647177"),
+  p = a("672339"),
+  A = a("898531"),
+  g = a("636188"),
+  f = a("678916"),
+  m = a("981631"),
+  M = a("869783"),
+  I = a("689938"),
+  v = a("736351");
 
 function h(e) {
   let {
-    onLearnMore: a,
+    onLearnMore: t,
     selectedBackgroundOption: h,
     onSelectBackgroundOption: x,
     currentDeviceId: C,
     smallerBackgroundOptions: N
   } = e, R = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), [T, k] = n.useState(null);
-  (0, i.useMaybeFetchPremiumLikelihood)(r.default);
+  (0, c.useMaybeFetchPremiumLikelihood)(r.default);
   let D = (0, A.default)(),
     B = u.default.canUseCustomBackgrounds(R),
     U = (0, l.useStateFromStoresObject)([O.default], () => B ? O.default.videoFilterAssets : {}),
     j = n.useMemo(() => Object.values(U).filter(e => e.type === f.VideoFilterType.BACKGROUND), [U]),
-    L = (0, c.useAnalyticsContext)();
+    P = (0, i.useAnalyticsContext)();
   n.useEffect(() => {
-    D ? (0, g.applyBackgroundOptionPreview)(h, C, {
+    D ? (0, p.applyBackgroundOptionPreview)(h, C, {
       track: !1
     }).catch(() => x(null)) : null != h && x(null)
   }, [C]);
   let V = e => {
-    x(e), (0, g.applyBackgroundOptionPreview)(e, C, {
-      location: L.location
+    x(e), (0, p.applyBackgroundOptionPreview)(e, C, {
+      location: P.location
     }).then(() => k(null)).catch(() => {
-      k(v.default.Messages.VIDEO_BACKGROUND_ERROR_APPLY), (0, g.applyBackgroundOptionPreview)(null, C, {
-        location: L.location
+      k(I.default.Messages.VIDEO_BACKGROUND_ERROR_APPLY), (0, p.applyBackgroundOptionPreview)(null, C, {
+        location: P.location
       })
     })
   };
   return D ? (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(o.Heading, {
-      className: I.spacingTop24,
+      className: v.spacingTop24,
       variant: "eyebrow",
       color: "header-secondary",
-      children: v.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND
+      children: I.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND
     }), null != T ? (0, s.jsx)(o.FormErrorBlock, {
-      className: I.videoBackgroundError,
+      className: v.videoBackgroundError,
       children: T
-    }) : null, (0, s.jsx)(p.default, {
+    }) : null, (0, s.jsx)(g.default, {
       canUseCustomBackgrounds: B,
       customBackgroundOptions: j,
       selectedOption: h,
@@ -71,23 +71,23 @@ function h(e) {
         (0, o.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([t.e("99387"), t.e("87200")]).then(t.bind(t, "592163"));
-          return t => (0, s.jsx)(e, {
-            ...t,
-            onLearnMore: a,
+          } = await Promise.all([a.e("99387"), a.e("87200")]).then(a.bind(a, "592163"));
+          return a => (0, s.jsx)(e, {
+            ...a,
+            onLearnMore: t,
             analyticsSource: {
-              ...L.location,
-              object: M.AnalyticsObjects.BUTTON_CTA
+              ...P.location,
+              object: m.AnalyticsObjects.BUTTON_CTA
             }
           })
         })
       },
-      onAddBackgroundImage: function(e, a) {
-        let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      onAddBackgroundImage: function(e, t) {
+        let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return new Promise(async s => {
           try {
             let s = await (0, _.uploadVideoFilterAsset)(e, f.VideoFilterType.BACKGROUND);
-            V(s), (0, E.trackBackgroundOptionAdded)(s, a.type === m.FileTypes.MP4, t), k(null)
+            V(s), (0, E.trackBackgroundOptionAdded)(s, t.type === M.FileTypes.MP4, a), k(null)
           } catch (e) {
             k(e.message)
           }

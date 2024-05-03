@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return h
   },
   getChannelIdForItem: function() {
-    return C
+    return R
   },
   getFeatureItemsTimes: function() {
     return p
@@ -153,7 +153,7 @@ let N = e => E.default.Messages.GUILD_FEED_FEATURE_ITEM_MENU_ITEM_TEXT.format({
   }],
   O = (e, t) => null != t && t.isThread() ? d.default.castChannelIdAsMessageId(t.id) : null != e && "details" in e && null != e.details && "initialMessageId" in e.details ? e.details.initialMessageId : null;
 
-function C(e) {
+function R(e) {
   switch (e.type) {
     case a.GuildFeedItemTypes.MESSAGE:
     case a.GuildFeedItemTypes.FORUM_POST:

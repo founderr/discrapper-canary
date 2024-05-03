@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("594174"),
   p = n("797053"),
   O = n("5192"),
-  C = n("51144"),
-  R = n("377668");
+  R = n("51144"),
+  C = n("377668");
 
 function g(e) {
   let {
@@ -78,7 +78,7 @@ function L(e) {
         guildId: P
       })
     })
-  }, b = C.default.useName(M), G = (0, l.useStateFromStores)([S.default, h.default, m.default], () => O.default.getNickname(P, a, M)), w = A.default.getGuild(P), B = (0, E.useClydeEnabled)(w, y) && r === R.CLYDE_AI_USER_ID ? R.CLYDE_AI_MENTION_COLOR : null;
+  }, b = R.default.useName(M), G = (0, l.useStateFromStores)([S.default, h.default, m.default], () => O.default.getNickname(P, a, M)), w = A.default.getGuild(P), B = (0, E.useClydeEnabled)(w, y) && r === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null;
   if (null == M) return (0, i.jsx)(g, {
     userId: I,
     className: t,

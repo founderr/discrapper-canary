@@ -25,7 +25,7 @@ let I = r.forwardRef(function(e, t) {
     className: S,
     initialAnimation: h,
     markers: A
-  } = e, [m, N] = r.useState(null), p = r.useRef(null), O = r.useRef(null), C = r.useRef(null), R = "custom" === I ? {
+  } = e, [m, N] = r.useState(null), p = r.useRef(null), O = r.useRef(null), R = r.useRef(null), C = "custom" === I ? {
     width: T,
     height: f
   } : (0, d.getIconSize)(I), g = !(0, c.default)("lottie_hover_multiple_loop"), L = r.useContext(u.AccessibilityPreferencesContext).reducedMotion.enabled, {
@@ -35,18 +35,18 @@ let I = r.forwardRef(function(e, t) {
   }), D = L || !v;
   return r.useImperativeHandle(t, () => ({
     play: e => {
-      if (null != C.current) {
+      if (null != R.current) {
         if (O.current = e, D) {
           let t = A[e];
-          C.current.setSegment(t.start, t.start + t.duration), C.current.goToAndStop(t.duration, !0)
-        } else C.current.setLoop(!g && e.includes("hover")), C.current.goToAndPlay(e)
+          R.current.setSegment(t.start, t.start + t.duration), R.current.goToAndStop(t.duration, !0)
+        } else R.current.setLoop(!g && e.includes("hover")), R.current.goToAndPlay(e)
       }
     },
     stop: () => {
-      null != C.current && !D && C.current.goToAndStop(0, !0)
+      null != R.current && !D && R.current.goToAndStop(0, !0)
     },
     stopIfPlaying: e => {
-      null != C.current && !D && O.current === e && C.current.goToAndStop(0, !0)
+      null != R.current && !D && O.current === e && R.current.goToAndStop(0, !0)
     }
   }), [D, g, A]), r.useEffect(() => {
     null == m && o().then(e => N(e.default))
@@ -60,7 +60,7 @@ let I = r.forwardRef(function(e, t) {
       let e = A[r];
       n = [e.start, e.start + e.duration]
     }
-    null != p.current && (C.current = i.loadAnimation({
+    null != p.current && (R.current = i.loadAnimation({
       container: p.current,
       renderer: "svg",
       loop: !1,
@@ -70,12 +70,12 @@ let I = r.forwardRef(function(e, t) {
     }))
   }), () => {
     var e;
-    null === (e = C.current) || void 0 === e || e.destroy()
+    null === (e = R.current) || void 0 === e || e.destroy()
   }), [m, h, A]), (0, i.jsx)("div", {
     style: {
       "--__lottieIconColor": null != a && "string" == typeof a ? a : null == a ? void 0 : a.css,
       display: "flex",
-      ...R
+      ...C
     },
     className: s()(E.lottieIcon, S),
     ref: p

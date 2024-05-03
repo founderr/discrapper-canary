@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return C
   }
 }), n("47120");
 var i = n("735250"),
@@ -26,13 +26,13 @@ var i = n("735250"),
   p = n("531578"),
   O = n("235445");
 
-function C(e) {
+function R(e) {
   let {
     summary: t,
     channel: _,
     members: m,
-    guildId: C,
-    unread: R,
+    guildId: R,
+    unread: C,
     onClick: g
   } = e, [L, v] = r.useState(!1), D = (0, u.getTimestampString)(f.default.extractTimestamp(t.startId)), M = (0, a.useStateFromStores)([S.default], () => S.default.summaryFeedback(t)), y = (e, n) => {
     e.stopPropagation(), (0, h.default)({
@@ -59,7 +59,7 @@ function C(e) {
     onMouseLeave: () => v(!1),
     children: [(0, i.jsx)(T.default, {
       hovered: L,
-      unread: R,
+      unread: C,
       className: O.unreadPill
     }), (0, i.jsx)("div", {
       className: O.rowHeader,
@@ -97,7 +97,7 @@ function C(e) {
             },
             maxAvatarsShown: 3,
             members: m,
-            guildId: C
+            guildId: R
           })]
         })]
       })
@@ -132,7 +132,7 @@ function C(e) {
   })
 }
 
-function R(e) {
+function C(e) {
   let {
     summaries: t,
     summariesMembers: n,
@@ -146,7 +146,7 @@ function R(e) {
     children: t.map((e, t) => {
       var r;
       let a = null !== (r = n[t]) && void 0 !== r ? r : [];
-      return (0, i.jsx)(C, {
+      return (0, i.jsx)(R, {
         summary: e,
         channel: s,
         members: a,

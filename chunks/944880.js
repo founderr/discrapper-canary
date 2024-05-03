@@ -82,10 +82,10 @@ function O() {
   p()
 }
 
-function C() {
+function R() {
   m()
 }
-class R extends s.default {
+class C extends s.default {
   forceRefreshIfOutdated() {
     let e = E.default.getState();
     null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 864e5 && m({
@@ -95,7 +95,7 @@ class R extends s.default {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      POST_CONNECTION_OPEN: C,
+      POST_CONNECTION_OPEN: R,
       CONNECTION_CLOSED: O,
       ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => m(),
       ENTITLEMENT_CREATE: A,
@@ -110,4 +110,4 @@ class R extends s.default {
     }) : t[n] = i
   }
 }
-t.default = new R
+t.default = new C

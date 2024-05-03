@@ -154,7 +154,7 @@ function O(e) {
   })
 }
 
-function C(e) {
+function R(e) {
   return (0, i.jsx)(l.Tooltip, {
     text: S.default.Messages.PREVIEW_WHOLE_FILE,
     children: t => (0, i.jsx)(l.Clickable, {
@@ -171,7 +171,7 @@ function C(e) {
   })
 }
 
-function R(e) {
+function C(e) {
   var t;
   let {
     url: n,
@@ -184,15 +184,15 @@ function R(e) {
     setLanguage: I,
     bytesLeft: T,
     className: f
-  } = e, A = null == o ? void 0 : o.split("\n"), R = null !== (t = null == A ? void 0 : A.length) && void 0 !== t ? t : 0, g = d ? 100 : 6, L = 0 === T, v = "";
-  L && d && R > g ? v = "\n..." : !L && (v = "..."), "" !== v && (L ? v += " " + S.default.Messages.PREVIEW_LINES_LEFT.format({
-    lines: R - g
+  } = e, A = null == o ? void 0 : o.split("\n"), C = null !== (t = null == A ? void 0 : A.length) && void 0 !== t ? t : 0, g = d ? 100 : 6, L = 0 === T, v = "";
+  L && d && C > g ? v = "\n..." : !L && (v = "..."), "" !== v && (L ? v += " " + S.default.Messages.PREVIEW_LINES_LEFT.format({
+    lines: C - g
   }) : v += " " + S.default.Messages.PREVIEW_BYTES_LEFT.format({
     formattedBytes: (0, _.formatKbSize)(T)
   }));
   let D = (null == A ? void 0 : A.slice(0, g).join("\n")) + v,
     M = (0, u.sanitizeWhitespace)(D),
-    y = d || g < R;
+    y = d || g < C;
   return (0, i.jsxs)("div", {
     className: s()(f, h.container),
     children: [(0, i.jsx)("div", {
@@ -214,8 +214,8 @@ function R(e) {
           expanded: d,
           setExpanded: c,
           isWholeFile: L,
-          numLines: R
-        }), (0, i.jsx)(C, {
+          numLines: C
+        }), (0, i.jsx)(R, {
           url: n,
           fileName: r,
           fileSize: a,
@@ -339,7 +339,7 @@ t.default = r.memo(function(e) {
     onClick: u,
     onContextMenu: d,
     className: l
-  }) : (0, i.jsx)(R, {
+  }) : (0, i.jsx)(C, {
     url: t,
     fileName: n,
     fileSize: a,

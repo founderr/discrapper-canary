@@ -34,15 +34,15 @@ let p = (0, _.default)(function(e) {
     width: T,
     onRemoveRole: S,
     onOpenProfile: h
-  } = e, p = r.useRef({}), [O, C] = r.useState(null), R = (0, o.useStateFromStores)([I.default], () => I.default.getRoles(u.id)), g = r.useMemo(() => {
-    let e = Object.values(R).filter(e => _.includes(e.id)).sort((e, t) => {
+  } = e, p = r.useRef({}), [O, R] = r.useState(null), C = (0, o.useStateFromStores)([I.default], () => I.default.getRoles(u.id)), g = r.useMemo(() => {
+    let e = Object.values(C).filter(e => _.includes(e.id)).sort((e, t) => {
       var n, i;
       let r = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null,
         a = (null === (i = t.tags) || void 0 === i ? void 0 : i.guild_connections) !== null;
       return r && !a ? 1 : !r && a ? -1 : 0
     });
     return null != O ? e.slice(0, O) : e
-  }, [R, O, _]), L = _.length - g.length;
+  }, [C, O, _]), L = _.length - g.length;
   r.useLayoutEffect(() => {
     if ("number" != typeof T) throw Error("Unexpected null width");
     let e = 0,
@@ -60,7 +60,7 @@ let p = (0, _.default)(function(e) {
         }
       }
     }
-    C(t => e < g.length ? e : t)
+    R(t => e < g.length ? e : t)
   }, [T, g]);
   let v = r.useMemo(() => "roles-".concat((0, a.v4)()), []),
     D = (0, s.default)({
@@ -122,7 +122,7 @@ function O(e) {
     onOpenProfile: s
   } = e, {
     trackUserProfileAction: d
-  } = (0, S.useUserProfileAnalyticsContext)(), _ = (0, o.useStateFromStores)([E.default], () => E.default.getMember(a.id, t.id)), I = null == _ ? void 0 : _.roles, O = null == I || 0 === I.length, C = f.getHighestRole(a, n.id), [R] = (0, o.useStateFromStoresArray)([T.default], () => [T.default.can(A.Permissions.MANAGE_ROLES, a), null != a ? T.default.getGuildVersion(a.id) : null]), g = r.useCallback(e => {
+  } = (0, S.useUserProfileAnalyticsContext)(), _ = (0, o.useStateFromStores)([E.default], () => E.default.getMember(a.id, t.id)), I = null == _ ? void 0 : _.roles, O = null == I || 0 === I.length, R = f.getHighestRole(a, n.id), [C] = (0, o.useStateFromStoresArray)([T.default], () => [T.default.can(A.Permissions.MANAGE_ROLES, a), null != a ? T.default.getGuildVersion(a.id) : null]), g = r.useCallback(e => {
     var n, i;
     d({
       action: "REMOVE_ROLE"
@@ -135,17 +135,17 @@ function O(e) {
     });
     let n = null != I ? I : []; - 1 === n.indexOf(e) && (n = n.concat([e])), c.default.updateMemberRoles(a.id, t.id, n, [e], [])
   }, [I, a.id, t.id, d]);
-  return O && !R ? null : (0, i.jsxs)("div", {
+  return O && !C ? null : (0, i.jsxs)("div", {
     className: N.container,
     children: [(0, i.jsxs)("div", {
       className: N.rolesHeader,
       children: [(0, i.jsx)(l.Heading, {
         variant: "text-xs/semibold",
         children: m.default.Messages.ROLES
-      }), R && null != _ && (0, i.jsx)(h.default, {
+      }), C && null != _ && (0, i.jsx)(h.default, {
         guild: a,
         guildMember: _,
-        highestRole: C,
+        highestRole: R,
         onAddRole: L,
         className: N.addRoleButton
       })]
@@ -158,8 +158,8 @@ function O(e) {
         currentUser: n,
         guild: a,
         userRoles: I,
-        highestRole: C,
-        canManageRoles: R,
+        highestRole: R,
+        canManageRoles: C,
         onRemoveRole: g,
         onOpenProfile: s
       })
