@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return p
   }
 }), n("47120");
 var u = n("735250"),
@@ -17,9 +17,9 @@ var u = n("735250"),
   S = n("828695"),
   E = n("740727"),
   M = n("499533"),
-  m = n("689938");
+  T = n("689938");
 
-function p(e) {
+function m(e) {
   let {
     id: t,
     experiment: n,
@@ -46,7 +46,7 @@ function p(e) {
   }, t)
 }
 
-function T() {
+function p() {
   let e = (0, o.useStateFromStores)([f.default, S.default], () => {
       let e = S.default.getRegisteredExperiments();
       return Object.keys(e).map(t => {
@@ -80,8 +80,8 @@ function T() {
       } = e;
       return -1 === t
     }), [a]),
-    M = r.useMemo(() => c.map(p), [c]),
-    T = r.useMemo(() => E.map(p), [E]);
+    M = r.useMemo(() => c.map(m), [c]),
+    p = r.useMemo(() => E.map(m), [E]);
   return [(0, u.jsx)(d.MenuControlItem, {
     id: "experiments-search",
     control: (e, r) => (0, u.jsx)(d.MenuSearchControl, {
@@ -89,7 +89,7 @@ function T() {
       query: t,
       onChange: n,
       ref: r,
-      placeholder: m.default.Messages.SEARCH
+      placeholder: T.default.Messages.SEARCH
     })
-  }, "experiments-search"), (0, u.jsx)(d.MenuSeparator, {}, "separator"), ...M, M.length > 0 ? (0, u.jsx)(d.MenuSeparator, {}, "separator-2") : null, ...T]
+  }, "experiments-search"), (0, u.jsx)(d.MenuSeparator, {}, "separator"), ...M, M.length > 0 ? (0, u.jsx)(d.MenuSeparator, {}, "separator-2") : null, ...p]
 }

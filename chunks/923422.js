@@ -13,19 +13,19 @@ var u = n("735250"),
   S = n("366953"),
   E = n("361695"),
   M = n("606669"),
-  m = n("53432"),
-  p = n("74869"),
-  T = n("828064"),
+  T = n("53432"),
+  m = n("74869"),
+  p = n("828064"),
   I = n("308512"),
   h = n("594791"),
-  _ = n("393431"),
-  g = n("981631"),
+  g = n("393431"),
+  _ = n("981631"),
   C = n("689938");
 t.default = (0, o.default)(function(e) {
   let {
     webBuildOverride: t,
     onSelect: n
-  } = e, [o, d] = r.useState(!1), x = (0, T.default)(), v = (0, I.default)(), R = (0, m.default)(), j = (0, M.default)(), L = (0, _.default)(), b = (0, h.default)(), A = (0, p.default)(), {
+  } = e, [o, d] = r.useState(!1), x = (0, p.default)(), v = (0, I.default)(), R = (0, T.default)(), j = (0, M.default)(), b = (0, g.default)(), A = (0, h.default)(), L = (0, m.default)(), {
     analyticsLocations: O
   } = (0, c.default)(), N = r.useMemo(() => (0, S.getRecentBuildOverrides)(), []);
   async function y() {
@@ -37,20 +37,20 @@ t.default = (0, o.default)(function(e) {
   }
   let k = e => {
       switch (e) {
-        case g.UserSettingsSections.GAMES:
+        case _.UserSettingsSections.GAMES:
           return x;
-        case g.UserSettingsSections.STREAMER_MODE:
+        case _.UserSettingsSections.STREAMER_MODE:
           return v;
-        case g.UserSettingsSections.APPEARANCE:
+        case _.UserSettingsSections.APPEARANCE:
           return R;
-        case g.UserSettingsSections.ACCESSIBILITY:
+        case _.UserSettingsSections.ACCESSIBILITY:
           return j;
-        case g.UserSettingsSections.VOICE:
-          return L;
-        case g.UserSettingsSections.TEXT:
+        case _.UserSettingsSections.VOICE:
           return b;
-        case g.UserSettingsSections.EXPERIMENTS:
+        case _.UserSettingsSections.TEXT:
           return A;
+        case _.UserSettingsSections.EXPERIMENTS:
+          return L;
         default:
           return null
       }
@@ -78,7 +78,7 @@ t.default = (0, o.default)(function(e) {
           id: s,
           label: n,
           action: () => null != r ? r() : function(e, t) {
-            let n = Object.values(g.UserSettingsSections).filter(t => t === e)[0];
+            let n = Object.values(_.UserSettingsSections).filter(t => t === e)[0];
             null != n && l.default.open(n, void 0, {
               analyticsLocations: t
             })

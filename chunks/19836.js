@@ -55,7 +55,7 @@ function m(e) {
       variant: "eyebrow",
       className: h.title,
       children: [f.default.Messages.USER_POPOUT_ABOUT_ME, null != t && m && (0, i.jsx)(o.Tooltip, {
-        color: o.Tooltip.Colors.CUSTOM,
+        color: o.Tooltip.Colors.NESTED,
         tooltipClassName: S.aboutMeGuildIconTooltip,
         "aria-label": f.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
           guildName: t.name
