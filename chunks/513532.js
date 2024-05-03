@@ -30,6 +30,7 @@ t.default = e => {
       className: f.subtitle,
       children: u.default.Messages.CLAN_SETUP_APPLICATION_SUBTITLE
     }), (0, n.jsx)("div", {
+      className: f.maxWidthContainer,
       children: (0, n.jsx)(o.default, {
         guild: a,
         isClanContext: !0,

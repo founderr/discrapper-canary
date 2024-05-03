@@ -70,7 +70,7 @@ t.default = e => {
     i(new Set([...t, ...e]))
   }, [i, C]), I = r.useMemo(() => C.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [C]);
   return (0, n.jsxs)("div", {
-    className: h.slideContentWithSidebar,
+    className: h.slideContent,
     children: [p && (0, n.jsx)(l.Text, {
       variant: "text-sm/medium",
       color: "header-secondary",

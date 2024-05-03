@@ -125,22 +125,22 @@ t.default = e => {
       brandPrimaryColor: V.primary,
       brandSecondaryColor: V.secondary
     })
-  }, [m, O, V.primary, V.secondary]), (0, n.jsx)("div", {
-    className: M.slideContentWithSidebar,
-    children: (0, n.jsxs)("div", {
+  }, [m, O, V.primary, V.secondary]), (0, n.jsxs)("div", {
+    className: M.slideContent,
+    children: [(0, n.jsx)(C.Heading, {
+      variant: "heading-xxl/medium",
+      className: M.title,
+      children: R.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_TITLE
+    }), (0, n.jsx)(C.Text, {
+      variant: "text-md/normal",
+      color: "header-secondary",
+      className: M.subtitle,
+      children: R.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_SUBTITLE
+    }), (0, n.jsxs)("div", {
       className: L.content,
-      children: [(0, n.jsxs)("div", {
+      children: [(0, n.jsx)("div", {
         className: L.leftColumn,
-        children: [(0, n.jsx)(C.Heading, {
-          variant: "heading-xxl/medium",
-          className: M.title,
-          children: R.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_TITLE
-        }), (0, n.jsx)(C.Text, {
-          variant: "text-md/normal",
-          color: "header-secondary",
-          className: M.subtitle,
-          children: R.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_SUBTITLE
-        }), (0, n.jsxs)("div", {
+        children: (0, n.jsxs)("div", {
           className: L.colorsContainer,
           children: [(0, n.jsxs)("div", {
             className: L.colorPickerContainer,
@@ -239,7 +239,7 @@ t.default = e => {
               }, t))
             })]
           })]
-        })]
+        })
       }), (0, n.jsx)("div", {
         className: L.clanCardWrapper,
         children: (0, n.jsx)(g.ClanDiscoveryCardView, {
@@ -270,6 +270,6 @@ t.default = e => {
           }
         })
       })]
-    })
+    })]
   })
 }

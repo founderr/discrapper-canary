@@ -155,7 +155,11 @@ t.default = e => {
         })]
       }), (0, n.jsxs)("div", {
         className: E.tagContainer,
-        children: [null != I && (0, n.jsx)(c.Text, {
+        children: [(0, n.jsx)(c.Text, {
+          variant: "text-xs/semibold",
+          color: "text-muted",
+          children: h.default.Messages.CLAN_OVERVIEW_LABEL_CLAN_TAG
+        }), null != I && (0, n.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "status-danger",
           className: T.errorText,

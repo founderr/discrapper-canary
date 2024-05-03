@@ -36,17 +36,20 @@ t.default = e => {
       color: "status-danger",
       className: c.errorText,
       children: d.description
-    }), (0, n.jsx)(s.TextArea, {
-      className: c.input,
-      maxLength: 160,
-      onChange: e => t({
-        description: e
-      }),
-      value: a,
-      rows: 5,
-      autoFocus: !0,
-      autosize: !0,
-      placeholder: o.default.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
+    }), (0, n.jsx)("div", {
+      className: c.maxWidthContainer,
+      children: (0, n.jsx)(s.TextArea, {
+        className: c.input,
+        maxLength: 160,
+        onChange: e => t({
+          description: e
+        }),
+        value: a,
+        rows: 5,
+        autoFocus: !0,
+        autosize: !0,
+        placeholder: o.default.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
+      })
     }), (0, n.jsx)(s.Text, {
       variant: "text-sm/medium",
       color: "header-secondary",
