@@ -11,7 +11,6 @@ var i = {
   "./call_ringing.mp3": "563705",
   "./call_ringing_beat.mp3": "271527",
   "./call_ringing_halloween.mp3": "768953",
-  "./call_ringing_snow_halation.mp3": "988363",
   "./call_ringing_snowsgiving.mp3": "36644",
   "./clip_error.mp3": "45594",
   "./clip_save.mp3": "121420",
