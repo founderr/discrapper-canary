@@ -28,7 +28,7 @@ function N(e) {
     className: x,
     onClose: f,
     onNext: T
-  } = e, g = (0, c.useEmitAppealIngestionEvent)(), p = null !== (t = null == s ? void 0 : s.explainer_link) && void 0 !== t ? t : "", m = null != s && null != s.flagged_content && s.flagged_content.length > 0, C = (0, r.capitalizeText)(null == s ? void 0 : s.description), L = !N && !I, h = (0, d.useIsSafetyHubDisplayGuildViolationsEnabled)("classification_evidence"), M = null != s && ((0, r.isGuildClassification)(s) && h || m);
+  } = e, g = (0, c.useEmitAppealIngestionEvent)(), p = null !== (t = null == s ? void 0 : s.explainer_link) && void 0 !== t ? t : "", C = null != s && null != s.flagged_content && s.flagged_content.length > 0, m = (0, r.capitalizeText)(null == s ? void 0 : s.description), L = !N && !I, h = (0, d.useIsSafetyHubDisplayGuildViolationsEnabled)("classification_evidence"), M = null != s && ((0, r.isGuildClassification)(s) && h || C);
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(i.ModalHeader, {
       direction: o.default.Direction.VERTICAL,
@@ -51,9 +51,7 @@ function N(e) {
       className: n()(A.modalContent, !M && A.evidenceOffset, x),
       paddingFix: !1,
       children: [M && (0, l.jsx)(E.ClassificationEvidence, {
-        flaggedContent: null !== (a = s.flagged_content) && void 0 !== a ? a : [],
-        actions: s.actions,
-        guildMetadata: s.guild_metadata
+        flaggedContent: null !== (a = s.flagged_content) && void 0 !== a ? a : []
       }), (0, l.jsx)(i.Text, {
         className: A.optionHeader,
         color: "header-secondary",
@@ -63,7 +61,7 @@ function N(e) {
         className: A.policyContainer,
         children: (0, l.jsx)(i.Text, {
           variant: "text-md/semibold",
-          children: C
+          children: m
         })
       }), I && (0, l.jsx)(u.default, {
         url: _.SafetyHubLinks.AGE_VERIFICATION_LINK,

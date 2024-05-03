@@ -1,34 +1,27 @@
 "use strict";
-a.r(t), a.d(t, {
+i.r(t), i.d(t, {
   ClassificationEvidence: function() {
-    return d
+    return r
   }
 });
-var i = a("735250");
-a("470079");
-var n = a("481060"),
-  l = a("219230"),
-  s = a("205752"),
-  o = a("621145"),
-  r = a("689938"),
-  c = a("579054");
-let d = e => {
+var a = i("735250");
+i("470079");
+var n = i("481060"),
+  l = i("621145"),
+  s = i("689938"),
+  o = i("579054");
+let r = e => {
   let {
-    flaggedContent: t,
-    actions: a,
-    guildMetadata: d
-  } = e, u = (0, l.useIsSafetyHubDisplayGuildViolationsEnabled)("classification_evidence");
-  return 0 !== t.length || u && null != d ? (0, i.jsxs)("div", {
-    className: c.classificationEvidenceContainer,
-    children: [(0, i.jsx)(n.Text, {
+    flaggedContent: t
+  } = e;
+  return 0 === t.length ? null : (0, a.jsxs)("div", {
+    className: o.classificationEvidenceContainer,
+    children: [(0, a.jsx)(n.Text, {
       variant: "eyebrow",
       color: "text-muted",
-      children: r.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
-    }), u && null != d ? (0, i.jsx)(s.default, {
-      guildMetadata: d,
-      actions: a
-    }) : (0, i.jsx)(o.default, {
+      children: s.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
+    }), (0, a.jsx)(l.default, {
       flaggedContent: t
     })]
-  }) : null
+  })
 }

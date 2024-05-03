@@ -4,9 +4,6 @@ n.r(t), n.d(t, {
   AccountStandingState: function() {
     return o
   },
-  ActionType: function() {
-    return r
-  },
   AppealStatusType: function() {
     return l
   },
