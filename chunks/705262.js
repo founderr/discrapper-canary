@@ -14,12 +14,12 @@ var i, r, a = n("735250"),
   u = n("278074"),
   d = n("442837"),
   _ = n("524437"),
-  c = n("780384"),
-  E = n("481060"),
-  I = n("153867"),
-  T = n("607070"),
-  f = n("100527"),
-  S = n("906732"),
+  c = n("481060"),
+  E = n("153867"),
+  I = n("607070"),
+  T = n("100527"),
+  f = n("906732"),
+  S = n("540059"),
   h = n("98278"),
   A = n("639119"),
   m = n("165583"),
@@ -79,7 +79,7 @@ let V = Object.freeze({
     }, () => B.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => B.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
     return (0, a.jsxs)("div", {
       className: k.title,
-      children: [(0, a.jsx)(E.Heading, {
+      children: [(0, a.jsx)(c.Heading, {
         "aria-label": r,
         variant: "text-md/medium",
         children: r
@@ -116,7 +116,7 @@ let V = Object.freeze({
     }, () => B.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
       onPremiumClick: h.navigateToPremiumMarketingPage
     })).otherwise(() => B.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
-    return (0, a.jsx)(E.Heading, {
+    return (0, a.jsx)(c.Heading, {
       variant: "text-sm/normal",
       children: o
     })
@@ -125,7 +125,7 @@ let V = Object.freeze({
     let {
       type: t,
       children: n
-    } = e, i = (0, g.useUID)(), r = (0, E.useRadioGroup)({
+    } = e, i = (0, g.useUID)(), r = (0, c.useRadioGroup)({
       orientation: "horizontal",
       labelledBy: i
     }), o = s.useMemo(() => ({
@@ -148,25 +148,35 @@ j.Basic = e => {
     delay: n
   } = s.useContext(x), {
     analyticsLocations: i
-  } = (0, S.default)(f.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([O.default, C.default, D.default], () => [O.default.theme, null == D.default.gradientPreset, C.default.useSystemTheme === b.SystemThemeState.ON]), _ = e => {
+  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([O.default, C.default, D.default], () => [O.default.theme, null == D.default.gradientPreset, C.default.useSystemTheme === b.SystemThemeState.ON]), _ = e => {
     (0, v.resetBackgroundGradientPreset)(), F({
       isPersisted: !0,
       analyticsLocations: i,
       themeName: "default ".concat(e)
-    }), (0, I.saveClientTheme)({
+    }), (0, E.saveClientTheme)({
       theme: e
     }, n)
-  };
+  }, c = (0, S.useIsDesktopVisualRefreshEnabled)("appearance_settings");
   return (0, a.jsxs)("section", {
     className: l()(k.presets, t),
     children: [(0, a.jsx)(M.DefaultThemeSelection, {
       theme: w.ThemeTypes.LIGHT,
-      isSelected: o && !u && (0, c.isThemeLight)(r),
+      isSelected: o && !u && r === w.ThemeTypes.LIGHT,
       onSelect: () => _(w.ThemeTypes.LIGHT)
     }), (0, a.jsx)(M.DefaultThemeSelection, {
       theme: w.ThemeTypes.DARK,
-      isSelected: o && !u && (0, c.isThemeDark)(r),
+      isSelected: o && !u && r === w.ThemeTypes.DARK,
       onSelect: () => _(w.ThemeTypes.DARK)
+    }), c && (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(M.DefaultThemeSelection, {
+        theme: w.ThemeTypes.DARKER,
+        isSelected: o && !u && r === w.ThemeTypes.DARKER,
+        onSelect: () => _(w.ThemeTypes.DARKER)
+      }), (0, a.jsx)(M.DefaultThemeSelection, {
+        theme: w.ThemeTypes.MIDNIGHT,
+        isSelected: o && !u && r === w.ThemeTypes.MIDNIGHT,
+        onSelect: () => _(w.ThemeTypes.MIDNIGHT)
+      })]
     }), (0, a.jsx)(M.DefaultThemeSelection, {
       theme: "system",
       isSelected: o && u,
@@ -183,24 +193,24 @@ j.Basic = e => {
     type: u,
     delay: c
   } = s.useContext(x), {
-    analyticsLocations: E
-  } = (0, S.default)(f.default.CLIENT_THEMES_THEME_SELECTOR), [N, O, C] = (0, d.useStateFromStoresArray)([D.default], () => {
+    analyticsLocations: S
+  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [N, O, C] = (0, d.useStateFromStoresArray)([D.default], () => {
     var e;
     return [D.default.isPreview, D.default.isCoachmark, null === (e = D.default.gradientPreset) || void 0 === e ? void 0 : e.id]
-  }), [g, L] = s.useState(!1), [P, G] = s.useState(-1), w = (0, d.useStateFromStores)([T.default], () => T.default.useReducedMotion), V = (null === (i = (0, A.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === U.PremiumSubscriptionSKUs.TIER_2;
+  }), [g, L] = s.useState(!1), [P, G] = s.useState(-1), w = (0, d.useStateFromStores)([I.default], () => I.default.useReducedMotion), V = (null === (i = (0, A.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === U.PremiumSubscriptionSKUs.TIER_2;
   s.useEffect(() => {
     (P === y.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || C === _.BackgroundGradientPresetId.EASTER_EGG) && L(!0)
   }, [P, u, C]);
   let j = (e, t) => {
     if ((0, v.updateBackgroundGradientPreset)(e.id), F({
         isPersisted: !N,
-        analyticsLocations: E,
+        analyticsLocations: S,
         themeName: _.BackgroundGradientPresetId[e.id]
       }), N) {
       (0, p.setUseSystemTheme)(b.SystemThemeState.OFF);
       return
     }
-    if ((0, I.saveClientTheme)({
+    if ((0, E.saveClientTheme)({
         backgroundGradientPresetId: e.id,
         theme: e.theme
       }, c), null != t) {

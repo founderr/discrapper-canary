@@ -84,7 +84,13 @@ function N(e) {
     systemPrefersColorScheme: f.ThemeTypes.LIGHT
   }, () => h.lightIcon).with({
     theme: f.ThemeTypes.LIGHT
-  }, () => h.lightIcon).otherwise(() => h.darkIcon), N = (0, s.match)(t).with(f.ThemeTypes.LIGHT, () => S.default.Messages.THEME_LIGHT).with(f.ThemeTypes.DARK, () => S.default.Messages.THEME_DARK).with("system", () => S.default.Messages.THEME_SYSTEM).exhaustive(), p = (0, _.useRedesignIconContext)().enabled;
+  }, () => h.lightIcon).with({
+    theme: f.ThemeTypes.DARK
+  }, () => h.darkIcon).with({
+    theme: f.ThemeTypes.DARKER
+  }, () => h.darkerIcon).with({
+    theme: f.ThemeTypes.MIDNIGHT
+  }, () => h.midnightIcon).otherwise(() => h.darkIcon), N = (0, s.match)(t).with(f.ThemeTypes.LIGHT, () => S.default.Messages.THEME_LIGHT).with(f.ThemeTypes.DARK, () => S.default.Messages.THEME_DARK).with(f.ThemeTypes.DARKER, () => "Darker").with(f.ThemeTypes.MIDNIGHT, () => S.default.Messages.THEME_MIDNIGHT).with("system", () => S.default.Messages.THEME_SYSTEM).exhaustive(), p = (0, _.useRedesignIconContext)().enabled;
   return (0, i.jsx)(m, {
     onSelect: r,
     isSelected: n,
