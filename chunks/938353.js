@@ -558,12 +558,10 @@ class eK extends(s = l.Component) {
   renderEmbeddedApplicationInstanceEmbed(e) {
     let {
       application: t,
-      activityInstance: n,
-      interaction: s
+      interaction: n
     } = e;
-    return null == t || null == n || (null == s ? void 0 : s.type) !== T.InteractionTypes.APPLICATION_COMMAND ? null : (0, a.jsx)(eA.default, {
+    return null == t || (null == n ? void 0 : n.type) !== T.InteractionTypes.APPLICATION_COMMAND ? null : (0, a.jsx)(eA.default, {
       application: t,
-      activityInstance: n,
       channelId: this.props.channel.id,
       guildId: this.props.channel.guild_id
     })
