@@ -42,12 +42,7 @@ t.default = () => {
     R = s.useRef(!1),
     L = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
-      if (g && !A) return (0, m.createSound)(c.default.ringtone, e);
-      if (v === p.Soundpacks.CLASSIC) {
-        let t = 500 === i().random(1, 1e3) ? "call_ringing_beat" : "call_ringing";
-        return (0, m.createSound)(t, e)
-      }
-      return (0, m.createSoundForPack)("call_ringing", v)
+      return g && !A ? (0, m.createSound)(c.default.ringtone, e) : v === p.Soundpacks.CLASSIC ? (0, m.createSound)(500 !== i().random(1, 1e3) ? "call_ringing" : i().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, m.createSoundForPack)("call_ringing", v)
     }, [v, A, g]);
   return s.useEffect(() => () => {
     L.stop()
