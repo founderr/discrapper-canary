@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var a = n("735250");
@@ -12,7 +12,7 @@ var i = n("900015"),
   l = n("689938"),
   o = n("599666");
 
-function d(e) {
+function c(e) {
   let {
     traits: t,
     traitsToHighlight: n

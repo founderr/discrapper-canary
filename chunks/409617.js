@@ -27,12 +27,12 @@ function x(e) {
     onClose: n,
     onNext: x,
     onBack: f
-  } = e, T = (0, _.useSafetyHubAppealSignal)(), g = (0, o.useStateFromStores)([u.default], () => u.default.getFreeTextAppealReason()), [p, m] = s.useState(""), [C, L] = s.useState(!1);
+  } = e, T = (0, _.useSafetyHubAppealSignal)(), g = (0, o.useStateFromStores)([u.default], () => u.default.getFreeTextAppealReason()), [p, C] = s.useState(""), [m, L] = s.useState(!1);
   s.useEffect(() => {
-    m(null != g ? g : ""), L(T === S.AppealIngestionSignal.SOMETHING_ELSE)
+    C(null != g ? g : ""), L(T === S.AppealIngestionSignal.SOMETHING_ELSE)
   }, [g, T]);
   let h = e => {
-      L(e === S.AppealIngestionSignal.SOMETHING_ELSE), e !== S.AppealIngestionSignal.SOMETHING_ELSE && (m(""), r.default.dispatch({
+      L(e === S.AppealIngestionSignal.SOMETHING_ELSE), e !== S.AppealIngestionSignal.SOMETHING_ELSE && (C(""), r.default.dispatch({
         type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
         userInput: ""
       })), r.default.dispatch({
@@ -77,13 +77,13 @@ function x(e) {
           } = e;
           return h(t)
         }
-      }), C && (0, l.jsxs)(l.Fragment, {
+      }), m && (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(d.TextArea, {
           rows: 4,
           maxLength: 1024,
           placeholder: A.default.Messages.APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_PLACEHOLDER,
           value: p,
-          onChange: m,
+          onChange: C,
           autoFocus: !0
         }), (0, l.jsx)(d.Text, {
           variant: "text-sm/normal",

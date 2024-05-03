@@ -6,8 +6,8 @@ var a = n("735250"),
   s = n("481060"),
   l = n("32966"),
   o = n("314897"),
-  d = n("77498"),
-  c = n("364083"),
+  c = n("77498"),
+  d = n("364083"),
   u = n("92373"),
   f = n("308083"),
   m = n("689938"),
@@ -25,7 +25,7 @@ t.default = e => {
   } = (0, l.useUserRecentGames)(C), {
     options: x,
     matchSorterOptions: I
-  } = (0, c.useClanSetupGameSelectableSearch)();
+  } = (0, d.useClanSetupGameSelectableSearch)();
   i.useEffect(() => {
     null != _ && !T.has(_) && x.length > 0 && N(_)
   }, [x.length, _]);
@@ -35,7 +35,7 @@ t.default = e => {
       t.delete(e), E(t)
     },
     N = e => {
-      if (T.size === f.MAX_NUM_SELECTED_GAMES || T.has(e) || null == d.default.getGameById(e)) return;
+      if (T.size === f.MAX_NUM_SELECTED_GAMES || T.has(e) || null == c.default.getGameById(e)) return;
       let t = new Set(T);
       t.add(e), E(t)
     };

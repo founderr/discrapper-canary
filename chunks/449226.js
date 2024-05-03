@@ -17,16 +17,16 @@ function o(e) {
     onChange: n,
     disabled: i,
     className: o,
-    tooltipProps: d
-  } = e, c = e => {
+    tooltipProps: c
+  } = e, d = e => {
     e.stopPropagation(), e.preventDefault()
   };
   return (0, a.jsx)(s.Clickable, {
-    onClick: c,
-    onMouseDown: c,
-    onMouseUp: c,
+    onClick: d,
+    onMouseDown: d,
+    onMouseUp: d,
     className: r()(l.switch, o),
-    ...d,
+    ...c,
     children: (0, a.jsx)(s.Switch, {
       checked: t,
       onChange: n,

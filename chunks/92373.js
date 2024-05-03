@@ -6,8 +6,8 @@ var a = n("735250"),
   s = n.n(r),
   l = n("183249"),
   o = n("481060"),
-  d = n("442837"),
-  c = n("210753"),
+  c = n("442837"),
+  d = n("210753"),
   u = n("77498"),
   f = n("441674"),
   m = n("111008");
@@ -20,10 +20,10 @@ t.default = function(e) {
   } = e, E = (0, o.useToken)(o.tokens.colors.WHITE), {
     isFetching: T,
     coverImageUrl: p
-  } = (0, c.useDetectableGameSupplementalData)(t, {
+  } = (0, d.useDetectableGameSupplementalData)(t, {
     coverImageHeight: 336,
     coverImageWidth: 252
-  }), _ = (0, d.useStateFromStores)([u.default], () => {
+  }), _ = (0, c.useStateFromStores)([u.default], () => {
     var e, n;
     return null !== (n = null === (e = u.default.getGameById(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : ""
   }), C = i.useCallback(() => {

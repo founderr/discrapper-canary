@@ -6,8 +6,8 @@ var a = n("735250"),
   s = n.n(r),
   l = n("481060"),
   o = n("441674"),
-  d = n("308083"),
-  c = n("418571");
+  c = n("308083"),
+  d = n("418571");
 t.default = e => {
   let {
     title: t,
@@ -15,28 +15,28 @@ t.default = e => {
     handleUpdate: r,
     playstyle: u,
     error: f
-  } = e, m = (0, l.useToken)(l.tokens.colors.WHITE), h = i.useMemo(() => Object.values((0, d.getPlaystyleOptions)()), []);
+  } = e, m = (0, l.useToken)(l.tokens.colors.WHITE), h = i.useMemo(() => Object.values((0, c.getPlaystyleOptions)()), []);
   return (0, a.jsxs)("div", {
-    className: c.slideContent,
+    className: d.slideContent,
     children: [(0, a.jsx)(l.Heading, {
       variant: "heading-xxl/medium",
-      className: c.title,
+      className: d.title,
       children: t
     }), (0, a.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: c.subtitle,
+      className: d.subtitle,
       children: n
     }), null != f && (0, a.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
-      className: c.errorText,
+      className: d.errorText,
       children: f
     }), (0, a.jsx)("div", {
-      className: c.playstyleSelect,
+      className: d.playstyleSelect,
       children: h.map(e => (0, a.jsxs)(l.Clickable, {
-        className: s()(c.playstyleOption, {
-          [c.selectedPlaystyle]: e.type === u
+        className: s()(d.playstyleOption, {
+          [d.selectedPlaystyle]: e.type === u
         }),
         onClick: () => r(e.type),
         children: [(0, a.jsx)(l.Heading, {
@@ -44,7 +44,7 @@ t.default = e => {
           children: e.emoji
         }), (0, a.jsx)(l.Heading, {
           variant: "heading-md/medium",
-          className: c.playstyleTitle,
+          className: d.playstyleTitle,
           children: e.title
         }), (0, a.jsx)(l.Text, {
           variant: "text-xs/normal",
@@ -52,7 +52,7 @@ t.default = e => {
           children: e.subtitle
         }), e.type === u && (0, a.jsx)(o.default, {
           backgroundColor: m.hex(),
-          className: c.checkmark
+          className: d.checkmark
         })]
       }, e.type))
     })]

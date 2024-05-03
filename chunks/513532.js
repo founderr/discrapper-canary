@@ -7,16 +7,16 @@ var i = n("442837"),
   s = n("863249"),
   l = n("944163"),
   o = n("616230"),
-  d = n("430824"),
-  c = n("650461"),
+  c = n("430824"),
+  d = n("650461"),
   u = n("689938"),
   f = n("418571");
 t.default = e => {
   let {
     guildId: t
-  } = e, n = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(t)), m = (0, i.useStateFromStores)([l.default, c.default], () => {
+  } = e, n = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(t)), m = (0, i.useStateFromStores)([l.default, d.default], () => {
     var e, n, a;
-    return null !== (a = null === (n = c.default.getStateForGuild(t)) || void 0 === n ? void 0 : null === (e = n.progress) || void 0 === e ? void 0 : e.verificationForm) && void 0 !== a ? a : l.default.get(t)
+    return null !== (a = null === (n = d.default.getStateForGuild(t)) || void 0 === n ? void 0 : null === (e = n.progress) || void 0 === e ? void 0 : e.verificationForm) && void 0 !== a ? a : l.default.get(t)
   });
   return null == n ? null : (0, a.jsxs)("div", {
     className: f.slideContent,

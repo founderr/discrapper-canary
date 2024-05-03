@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_MINIMUM_SIZE: function() {
-    return d
+    return c
   },
   LOWERED_MINIMUM_SIZE: function() {
-    return c
+    return d
   }
 });
 var a, i, r, s, l = n("442837"),
   o = n("570140");
-let d = 1e3,
-  c = 200,
+let c = 1e3,
+  d = 200,
   u = {},
   f = !1;
 class m extends(s = l.default.Store) {
@@ -60,7 +60,7 @@ r = "DiscoverGuildChecklistStore", (i = "displayName") in(a = m) ? Object.define
       gracePeriodEndDate: null != n.grace_period_end_date ? new Date(n.grace_period_end_date) : null,
       retentionHealthy: n.retention_healthy,
       engagementHealthy: n.engagement_healthy,
-      minimumGuildSize: null != n.minimum_size ? n.minimum_size : d,
+      minimumGuildSize: null != n.minimum_size ? n.minimum_size : c,
       healthScore: n.health_score,
       minimumGuildAge: null !== (t = n.minimum_age) && void 0 !== t ? t : 0,
       age: n.age

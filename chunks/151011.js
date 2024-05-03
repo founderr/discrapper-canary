@@ -5,8 +5,8 @@ var a, i = n("735250"),
   s = n("120356"),
   l = n.n(s),
   o = n("481060"),
-  d = n("86813"),
-  c = n("826026"),
+  c = n("86813"),
+  d = n("826026"),
   u = n("981631"),
   f = n("455030");
 
@@ -45,7 +45,7 @@ class E extends(a = r.PureComponent) {
       stickyHeader: E
     } = this.props, T = e.map(e => {
       let s = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
-        h = n === u.TableSortDirections.ASCENDING ? c.default : d.default;
+        h = n === u.TableSortDirections.ASCENDING ? d.default : c.default;
       return (0, i.jsx)(o.Clickable, {
         className: l()(f.headerCell, r, e.headerCellClassName, e.cellClassName, a === e.key && m, {
           [f.clickable]: this.isSortable(e)
@@ -75,8 +75,8 @@ class E extends(a = r.PureComponent) {
       sortDirection: i,
       bodyCellClassName: s,
       rowClassName: o,
-      cellProps: d,
-      rowProps: c,
+      cellProps: c,
+      rowProps: d,
       rowComponent: m,
       cellComponent: h
     } = this.props, E = t;
@@ -94,13 +94,13 @@ class E extends(a = r.PureComponent) {
     }
     return E.map((t, n) => {
       let a = e.map(e => (0, r.createElement)(h, {
-        ...d,
+        ...c,
         key: e.key,
         item: t,
         className: l()(s, e.bodyCellClassName, e.cellClassName)
-      }, null != e.render ? e.render(t, d, n) : t[e.key]));
+      }, null != e.render ? e.render(t, c, n) : t[e.key]));
       return (0, r.createElement)(m, {
-        ...c,
+        ...d,
         key: t.key,
         item: t,
         className: l()(f.row, o)

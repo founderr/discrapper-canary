@@ -10,8 +10,8 @@ var a = n("735250"),
   s = n.n(r),
   l = n("442837"),
   o = n("481060"),
-  d = n("11265"),
-  c = n("863249"),
+  c = n("11265"),
+  d = n("863249"),
   u = n("944163"),
   f = n("246364"),
   m = n("571728"),
@@ -29,11 +29,11 @@ function x(e) {
     isExpanded: r,
     emptyFormFields: s,
     hasTermsField: l
-  } = e, d = t.hasVerificationGate(), [u, f] = i.useState(d), m = e => {
+  } = e, c = t.hasVerificationGate(), [u, f] = i.useState(c), m = e => {
     e.preventDefault(), e.stopPropagation()
   }, h = async e => {
     try {
-      f(e), await c.default.enableVerificationForm(t.id, e)
+      f(e), await d.default.enableVerificationForm(t.id, e)
     } catch {
       f(u)
     }
@@ -121,10 +121,10 @@ function x(e) {
   })
 }
 async function I(e, t) {
-  await c.default.updateVerificationForm(e, t)
+  await d.default.updateVerificationForm(e, t)
 }
 async function v(e, t) {
-  await c.default.updateVerificationFormDescription(e, t)
+  await d.default.updateVerificationFormDescription(e, t)
 }
 
 function N(e) {
@@ -141,10 +141,10 @@ function N(e) {
     guildId: o.id
   })) && void 0 !== t ? t : 0, L = (0, l.useStateFromStores)([u.default], () => null != _ ? _ : u.default.get(o.id)), b = null !== (n = null == L ? void 0 : L.formFields) && void 0 !== n ? n : [];
   i.useEffect(() => {
-    c.default.fetchVerificationForm(o.id)
+    d.default.fetchVerificationForm(o.id)
   }, [o.id]);
   let y = !E;
-  return (0, a.jsx)(d.default, {
+  return (0, a.jsx)(c.default, {
     renderHeader: y ? (0, a.jsx)(x, {
       guild: o,
       isExpanded: N,

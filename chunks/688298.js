@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 });
 var a = n("735250"),
@@ -11,12 +11,12 @@ var a = n("735250"),
   l = n("689938"),
   o = n("109267");
 
-function d(e) {
+function c(e) {
   let {
     showSecondaryColor: t,
     palette: n,
-    onPrimaryColorChange: d,
-    onSecondaryColorChange: c
+    onPrimaryColorChange: c,
+    onSecondaryColorChange: d
   } = e, u = i.useRef(null);
   return (0, r.useFocusLock)(u), (0, a.jsxs)("div", {
     className: o.popoutContainer,
@@ -45,7 +45,7 @@ function d(e) {
           eagerUpdate: !0,
           wrapperComponentType: "div",
           showEyeDropper: !0,
-          onChange: d
+          onChange: c
         })]
       }), t && (0, a.jsxs)("div", {
         className: o.colorColumn,
@@ -64,14 +64,14 @@ function d(e) {
           eagerUpdate: !0,
           wrapperComponentType: "div",
           showEyeDropper: !0,
-          onChange: c
+          onChange: d
         })]
       })]
     })]
   })
 }
 
-function c(e) {
+function d(e) {
   let {
     shouldShow: t,
     showSecondaryColor: n,
@@ -79,14 +79,14 @@ function c(e) {
     children: s,
     palette: l,
     onPrimaryColorChange: o,
-    onSecondaryColorChange: c
+    onSecondaryColorChange: d
   } = e;
   return (0, a.jsx)(r.Popout, {
-    renderPopout: () => (0, a.jsx)(d, {
+    renderPopout: () => (0, a.jsx)(c, {
       showSecondaryColor: n,
       palette: l,
       onPrimaryColorChange: o,
-      onSecondaryColorChange: c
+      onSecondaryColorChange: d
     }),
     position: "left",
     shouldShow: t,

@@ -10,9 +10,9 @@ var a = n("470079"),
   s = n("442837"),
   l = n("846519"),
   o = n("224706"),
-  d = n("669764");
+  c = n("669764");
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -33,7 +33,7 @@ let u = new class e {
     })
   }
   constructor() {
-    c(this, "_fetched", new Set), c(this, "_pending", new Set), c(this, "_flushHandler", new l.DelayedCall(0, () => this._flush()))
+    d(this, "_fetched", new Set), d(this, "_pending", new Set), d(this, "_flushHandler", new l.DelayedCall(0, () => this._flush()))
   }
 };
 
@@ -45,10 +45,10 @@ function f(e, t) {
     width: t.coverImageWidth,
     height: t.coverImageHeight
   } : void 0, [t]);
-  return (0, s.useStateFromStoresObject)([d.default], () => ({
-    isFetching: d.default.isFetching(e),
-    localizedName: d.default.getLocalizedName(e),
-    themes: d.default.getThemes(e),
-    coverImageUrl: d.default.getCoverImageUrl(e, n)
+  return (0, s.useStateFromStoresObject)([c.default], () => ({
+    isFetching: c.default.isFetching(e),
+    localizedName: c.default.getLocalizedName(e),
+    themes: c.default.getThemes(e),
+    coverImageUrl: c.default.getCoverImageUrl(e, n)
   }))
 }

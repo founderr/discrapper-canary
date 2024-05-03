@@ -10,8 +10,8 @@ var a = n("735250"),
   s = n("481060"),
   l = n("496675"),
   o = n("916187"),
-  d = n("736921"),
-  c = n("185403"),
+  c = n("736921"),
+  d = n("185403"),
   u = n("484455"),
   f = n("981631"),
   m = n("689938"),
@@ -41,7 +41,7 @@ let T = {
 t.default = function(e) {
   let {
     guild: t
-  } = e, r = l.default.can(f.Permissions.MANAGE_GUILD, t), p = t.verificationLevel, _ = p === f.VerificationLevels.VERY_HIGH ? d.default : o.default, C = i.useMemo(() => E(p), [p]), g = T[p], x = (0, a.jsx)("div", {
+  } = e, r = l.default.can(f.Permissions.MANAGE_GUILD, t), p = t.verificationLevel, _ = p === f.VerificationLevels.VERY_HIGH ? c.default : o.default, C = i.useMemo(() => E(p), [p]), g = T[p], x = (0, a.jsx)("div", {
     className: h.verificationLevelTitle,
     children: m.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {
@@ -79,7 +79,7 @@ t.default = function(e) {
             guild: t
           })
         }),
-        children: (0, a.jsx)(c.default, {
+        children: (0, a.jsx)(d.default, {
           width: 20,
           height: 20,
           className: h.iconInteractive

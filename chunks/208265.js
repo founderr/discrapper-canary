@@ -30,19 +30,19 @@ function A(e) {
   s.useEffect(() => {
     T ? x(A) : x(E.AppealIngestionSlideTypes.COLLECT_SIGNAL)
   }, [x, A, T]);
-  let m = s.useCallback(() => {
+  let C = s.useCallback(() => {
       r.default.close(), N()
     }, [N]),
-    C = s.useCallback(() => {
+    m = s.useCallback(() => {
       var e, t;
       let a = null;
-      (a = T ? null === (e = E.SlidesOrderDsaEligible[I]) || void 0 === e ? void 0 : e.next : null === (t = E.SlidesOrderNonDsaEligible[I]) || void 0 === t ? void 0 : t.next) ? x(a): m()
-    }, [I, T, m]),
+      (a = T ? null === (e = E.SlidesOrderDsaEligible[I]) || void 0 === e ? void 0 : e.next : null === (t = E.SlidesOrderNonDsaEligible[I]) || void 0 === t ? void 0 : t.next) ? x(a): C()
+    }, [I, T, C]),
     L = s.useCallback(() => {
       var e, t;
       let a;
-      (a = T ? null === (e = E.SlidesOrderDsaEligible[I]) || void 0 === e ? void 0 : e.prev : null === (t = E.SlidesOrderNonDsaEligible[I]) || void 0 === t ? void 0 : t.prev) ? x(a): m()
-    }, [I, T, m]);
+      (a = T ? null === (e = E.SlidesOrderDsaEligible[I]) || void 0 === e ? void 0 : e.prev : null === (t = E.SlidesOrderNonDsaEligible[I]) || void 0 === t ? void 0 : t.prev) ? x(a): C()
+    }, [I, T, C]);
   return (0, l.jsx)(n.ModalRoot, {
     transitionState: a,
     disableTrack: !0,
@@ -56,8 +56,8 @@ function A(e) {
           id: E.AppealIngestionSlideTypes.SPEED_BUMP,
           children: (0, l.jsx)(u.default, {
             classification: f,
-            onClose: m,
-            onNext: C,
+            onClose: C,
+            onNext: m,
             isSpam: g,
             isCoppa: p
           })
@@ -65,28 +65,28 @@ function A(e) {
           id: E.AppealIngestionSlideTypes.COLLECT_SIGNAL,
           children: (0, l.jsx)(o.default, {
             isDsaEligible: T,
-            onClose: m,
-            onNext: C,
+            onClose: C,
+            onNext: m,
             onBack: L
           })
         }), (0, l.jsx)(n.Slide, {
           id: E.AppealIngestionSlideTypes.CONFIRM_SUBMISSION,
           children: (0, l.jsx)(d.default, {
-            onClose: m,
-            onNext: C,
+            onClose: C,
+            onNext: m,
             onBack: L
           })
         }), (0, l.jsx)(n.Slide, {
           id: E.AppealIngestionSlideTypes.REQUEST_SENT,
           children: (0, l.jsx)(c.default, {
-            onNext: C
+            onNext: m
           })
         }), (0, l.jsx)(n.Slide, {
           id: E.AppealIngestionSlideTypes.THANKS,
           children: (0, l.jsx)(o.default, {
             isDsaEligible: T,
-            onClose: m,
-            onNext: C,
+            onClose: C,
+            onNext: m,
             onBack: L
           })
         })]

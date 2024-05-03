@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return g
   },
   fetchMetadataForGuild: function() {
-    return d
+    return c
   },
   fetchSlugForGuild: function() {
-    return c
+    return d
   },
   maybeFetchGuildDiscoveryCategories: function() {
     return o
@@ -65,7 +65,7 @@ async function o() {
     forClanDiscovery: t
   })
 }
-async function d(e) {
+async function c(e) {
   try {
     let {
       primary_category_id: t,
@@ -73,8 +73,8 @@ async function d(e) {
       keywords: r,
       emoji_discoverability_enabled: s,
       partner_actioned_timestamp: o,
-      partner_application_timestamp: d,
-      is_published: c,
+      partner_application_timestamp: c,
+      is_published: d,
       reasons_to_join: u,
       social_links: f,
       about: m
@@ -87,8 +87,8 @@ async function d(e) {
       keywords: r,
       emojiDiscoverabilityEnabled: s,
       partnerActionedTimestamp: o,
-      partnerApplicationTimestamp: d,
-      isPublished: c,
+      partnerApplicationTimestamp: c,
+      isPublished: d,
       reasonsToJoin: u,
       socialLinks: f,
       about: m
@@ -104,7 +104,7 @@ async function d(e) {
     })
   }
 }
-async function c(e) {
+async function d(e) {
   try {
     let t = (await a.HTTP.get({
       url: l.Endpoints.GUILD_DISCOVERY_SLUG(e)
@@ -183,8 +183,8 @@ async function _(e) {
     keywords: r,
     emojiDiscoverabilityEnabled: s,
     partnerActionedTimestamp: o,
-    partnerApplicationTimestamp: d,
-    isPublished: c,
+    partnerApplicationTimestamp: c,
+    isPublished: d,
     reasonsToJoin: u,
     socialLinks: f,
     about: m
@@ -207,9 +207,9 @@ async function _(e) {
         primary_category_id: n,
         emoji_discoverability_enabled: s,
         partner_actioned_timestamp: o,
-        partner_application_timestamp: d,
+        partner_application_timestamp: c,
         keywords: r,
-        is_published: c,
+        is_published: d,
         reasons_to_join: u,
         social_links: f,
         about: m

@@ -10,8 +10,8 @@ var a = n("735250"),
   s = n("442837"),
   l = n("477690"),
   o = n("481060"),
-  d = n("887706"),
-  c = n("34674"),
+  c = n("887706"),
+  d = n("34674"),
   u = n("817460"),
   f = n("703656"),
   m = n("351402"),
@@ -76,8 +76,8 @@ function R(e) {
     analyticsLocation: l,
     onComplete: E,
     forcesTransitionToGuild: v
-  }), O = t.subscription_plans[0], D = 0 === O.price, P = (null == L ? void 0 : L.id) === t.id, F = (0, d.default)(), w = F && !y || R, G = () => {
-    F ? b() : (0, c.redirectToLogin)({
+  }), O = t.subscription_plans[0], D = 0 === O.price, P = (null == L ? void 0 : L.id) === t.id, F = (0, c.default)(), w = F && !y || R, U = () => {
+    F ? b() : (0, d.redirectToLogin)({
       [N]: "true"
     })
   };
@@ -123,7 +123,7 @@ function R(e) {
               ...e,
               disabled: w,
               submitting: !1,
-              onClick: G,
+              onClick: U,
               children: x.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
             })
           })

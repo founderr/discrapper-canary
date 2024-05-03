@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("653041"), n("47120");
 var a, i, r, s, l = n("392711"),
   o = n.n(l),
-  d = n("442837"),
-  c = n("570140"),
+  c = n("442837"),
+  d = n("570140"),
   u = n("823379"),
   f = n("731455"),
   m = n("689938");
@@ -19,7 +19,7 @@ let E = null,
   T = [],
   p = [],
   _ = {};
-class C extends(a = d.default.Store) {
+class C extends(a = c.default.Store) {
   getPrimaryCategories() {
     return T
   }
@@ -52,7 +52,7 @@ s = "GuildDiscoveryCategoryStore", (r = "displayName") in(i = C) ? Object.define
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new C(c.default, {
+}) : i[r] = s, t.default = new C(d.default, {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
     let t, {
         categories: n,

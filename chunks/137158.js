@@ -10,8 +10,8 @@ var a = n("735250"),
   s = n.n(r),
   l = n("392711"),
   o = n("942389"),
-  d = n("299468"),
-  c = n("490236"),
+  c = n("299468"),
+  d = n("490236"),
   u = n("692547"),
   f = n("481060"),
   m = n("548343"),
@@ -67,9 +67,9 @@ function _(e) {
     index: t,
     field: n,
     isDropHovered: r,
-    onDrop: d
-  } = e, c = (0, l.debounce)(async (e, t, n) => {
-    await d(e, t, n)
+    onDrop: c
+  } = e, d = (0, l.debounce)(async (e, t, n) => {
+    await c(e, t, n)
   }), f = i.useRef(null), [, h] = (0, o.useDrag)({
     type: p,
     item: {
@@ -77,7 +77,7 @@ function _(e) {
       field: n
     },
     end: (e, t) => {
-      null != e && !t.didDrop() && c(e.field, null, !0)
+      null != e && !t.didDrop() && d(e.field, null, !0)
     }
   }), [, _] = (0, o.useDrop)({
     accept: p,
@@ -89,10 +89,10 @@ function _(e) {
       if (null == r || null == s) return;
       let l = (r.bottom - r.top) / 2,
         o = s.y - r.top;
-      (!(i < t) || !(o < l)) && (!(i > t) || !(o < l)) && i !== t && c(e.field, t, !1)
+      (!(i < t) || !(o < l)) && (!(i > t) || !(o < l)) && i !== t && d(e.field, t, !1)
     },
     drop: e => {
-      c(e.field, t, !0)
+      d(e.field, t, !0)
     }
   });
   return i.useLayoutEffect(() => (h(_(f)), () => {
@@ -131,7 +131,7 @@ function C(e) {
         className: E.actionButton,
         onClick: e.onEdit,
         "aria-label": h.default.Messages.EDIT,
-        children: (0, a.jsx)(d.PencilIcon, {
+        children: (0, a.jsx)(c.PencilIcon, {
           width: 16,
           height: 16
         })
@@ -139,7 +139,7 @@ function C(e) {
         className: E.actionButton,
         onClick: e.onRemove,
         "aria-label": h.default.Messages.REMOVE,
-        children: (0, a.jsx)(c.TrashIcon, {
+        children: (0, a.jsx)(d.TrashIcon, {
           width: 16,
           height: 16
         })

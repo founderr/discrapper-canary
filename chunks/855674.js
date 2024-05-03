@@ -2,8 +2,8 @@
 let a;
 n.r(t), n("47120");
 var i, r, s, l, o = n("392711"),
-  d = n.n(o),
-  c = n("442837"),
+  c = n.n(o),
+  d = n("442837"),
   u = n("570140"),
   f = n("308063");
 let m = {},
@@ -24,15 +24,15 @@ function p(e) {
   } = e;
   T(t)[n.id] = n
 }
-class _ extends(i = c.default.Store) {
+class _ extends(i = d.default.Store) {
   isFetching(e, t) {
     return null != h[E(e, t)]
   }
   getWebhooksForGuild(e) {
-    return d().values(T(e))
+    return c().values(T(e))
   }
   getWebhooksForChannel(e, t) {
-    return d()(T(e)).values().filter(e => e.channel_id === t).value()
+    return c()(T(e)).values().filter(e => e.channel_id === t).value()
   }
   get error() {
     return a
@@ -57,7 +57,7 @@ l = "WebhooksStore", (s = "displayName") in(r = _) ? Object.defineProperty(r, s,
     }
     a = null;
     let s = [];
-    null != n && (s = d()(T(t)).values().filter(e => e.channel_id !== n).value());
+    null != n && (s = c()(T(t)).values().filter(e => e.channel_id !== n).value());
     let l = m[t] = {};
     s.concat(i).forEach(e => l[e.id] = e), delete h[E(t, n)]
   },

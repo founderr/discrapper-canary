@@ -6,26 +6,26 @@ var a = n("735250"),
   s = n.n(r),
   l = n("481060"),
   o = n("729285"),
-  d = n("87576"),
-  c = n("308083"),
+  c = n("87576"),
+  d = n("308083"),
   u = n("689938"),
   f = n("418571");
 
 function m(e) {
-  return !c.ALL_TRAITS_SET.has(e) && !c.SUGGESTED_TRAITS_SET.has(e) && !c.LANGUAGES_SET.has(e)
+  return !d.ALL_TRAITS_SET.has(e) && !d.SUGGESTED_TRAITS_SET.has(e) && !d.LANGUAGES_SET.has(e)
 }
 t.default = e => {
   let {
     handleUpdate: t,
     interests: n,
     error: r
-  } = e, [h, E] = i.useState(""), T = i.useMemo(() => Array.from(n), [n]), p = i.useMemo(() => T.filter(m), [T]), _ = i.useMemo(() => [...c.SUGGESTED_TRAITS_SET, ...p], [p]), C = i.useMemo(() => T.filter(e => !c.ALL_TRAITS_SET.has(e) && !c.LANGUAGES_SET.has(e)), [T]), g = e => {
+  } = e, [h, E] = i.useState(""), T = i.useMemo(() => Array.from(n), [n]), p = i.useMemo(() => T.filter(m), [T]), _ = i.useMemo(() => [...d.SUGGESTED_TRAITS_SET, ...p], [p]), C = i.useMemo(() => T.filter(e => !d.ALL_TRAITS_SET.has(e) && !d.LANGUAGES_SET.has(e)), [T]), g = e => {
     let a = new Set(n);
     a.delete(e), t({
       interests: a
     })
   }, x = i.useCallback(e => {
-    if (n.size === c.MAX_NUM_INTERESTS) return;
+    if (n.size === d.MAX_NUM_INTERESTS) return;
     let a = null != e ? e : h.trim();
     if (0 === a.length) return;
     let i = new Set(n);
@@ -67,8 +67,8 @@ t.default = e => {
             onKeyDown: I,
             onChange: E,
             placeholder: u.default.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
-            maxLength: c.MAX_INTEREST_LENGTH,
-            disabled: n.size === c.MAX_NUM_INTERESTS
+            maxLength: d.MAX_INTEREST_LENGTH,
+            disabled: n.size === d.MAX_NUM_INTERESTS
           }), h.length > 0 && (0, a.jsx)(l.Clickable, {
             onClick: () => x(h.trim()),
             className: s()(f.plusIcon, f.clickable),
@@ -105,7 +105,7 @@ t.default = e => {
         })]
       }), (0, a.jsx)("div", {
         className: f.fixedWidthSidebar,
-        children: T.length > 0 && (0, a.jsx)(d.default, {
+        children: T.length > 0 && (0, a.jsx)(c.default, {
           traits: T,
           traitsToHighlight: C
         })

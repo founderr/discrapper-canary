@@ -7,8 +7,8 @@ var i = n("120356"),
   s = n("692547"),
   l = n("481060"),
   o = n("259580"),
-  d = n("196345"),
-  c = n("137158"),
+  c = n("196345"),
+  d = n("137158"),
   u = n("689938"),
   f = n("915580");
 t.default = function(e) {
@@ -25,7 +25,7 @@ t.default = function(e) {
     title: C,
     actionsLocation: g
   } = e, x = n.values, I = x.slice(0, 1), v = x.length - I.length;
-  return (0, a.jsxs)(c.default, {
+  return (0, a.jsxs)(d.default, {
     field: n,
     index: i,
     isDragEnabled: m,
@@ -36,7 +36,7 @@ t.default = function(e) {
     title: C,
     canRemove: _,
     actionsLocation: g,
-    children: [(0, a.jsx)(d.TermsFieldBody, {
+    children: [(0, a.jsx)(c.TermsFieldBody, {
       className: r()(f.fieldBackground, {
         [f.withFooter]: 0 !== v
       }),
@@ -56,7 +56,7 @@ t.default = function(e) {
         width: 14,
         color: s.default.unsafe_rawColors.WHITE_500.css
       })]
-    }), (0, a.jsx)(d.TermsFieldCheckbox, {
+    }), (0, a.jsx)(c.TermsFieldCheckbox, {
       disabled: !0,
       checked: !1
     })]
