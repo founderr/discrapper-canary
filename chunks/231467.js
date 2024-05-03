@@ -209,18 +209,19 @@ function M(e) {
     expanded: l,
     isMember: d,
     traitsToHighlight: _,
-    className: T
+    className: T,
+    showBrandingFooter: f = !1
   } = e, {
-    tag: f,
-    badge: S,
+    tag: S,
+    badge: h,
     branding: {
-      primaryColor: h,
-      secondaryColor: A
+      primaryColor: A,
+      secondaryColor: N
     },
-    banner: N
-  } = r, p = (0, u.default)(r.games), L = C.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+    banner: p
+  } = r, L = (0, u.default)(r.games), M = C.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: r.memberCount
-  }), M = null !== (t = m.default.getGuildIconURL({
+  }), y = null !== (t = m.default.getGuildIconURL({
     id: r.id,
     icon: r.icon,
     size: 64,
@@ -231,12 +232,12 @@ function M(e) {
     children: [(0, i.jsx)("div", {
       className: R.cardBrandingHeader,
       style: {
-        background: "linear-gradient(90deg, ".concat(h, ", ").concat(A, ")")
+        background: "linear-gradient(90deg, ".concat(A, ", ").concat(N, ")")
       },
       children: null != a ? a : (0, i.jsx)(I.default, {
-        banner: N,
-        primaryTintColor: h,
-        secondaryTintColor: A
+        banner: p,
+        primaryTintColor: A,
+        secondaryTintColor: N
       })
     }), (0, i.jsxs)("div", {
       className: R.cardContent,
@@ -246,7 +247,7 @@ function M(e) {
           className: R.cardNameAndTagWrapper,
           children: [(0, i.jsx)(c.ClanGuildIconSimple, {
             guildName: r.name,
-            guildIconURL: M,
+            guildIconURL: y,
             iconSize: 64,
             className: R.clanIcon
           }), (0, i.jsx)("div", {
@@ -261,13 +262,13 @@ function M(e) {
                 children: [(0, i.jsx)(E.ClanBadge, {
                   width: 16,
                   height: 16,
-                  badge: S.badgeKind,
-                  primaryTintColor: S.primaryColor,
-                  secondaryTintColor: S.secondaryColor
+                  badge: h.badgeKind,
+                  primaryTintColor: h.primaryColor,
+                  secondaryTintColor: h.secondaryColor
                 }), (0, i.jsx)(o.Text, {
                   variant: "text-xs/medium",
                   color: "text-primary",
-                  children: f
+                  children: S
                 })]
               })
             })
@@ -317,19 +318,19 @@ function M(e) {
           children: (0, i.jsx)(o.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            children: L
+            children: M
           })
         })
       }), (0, i.jsx)("div", {
         className: R.cardFooterGames,
         children: (0, i.jsx)(D, {
-          games: p
+          games: L
         })
       })]
-    }), (0, i.jsx)("div", {
+    }), f && (0, i.jsx)("div", {
       className: R.cardBrandingFooter,
       style: {
-        background: "linear-gradient(90deg, ".concat(h, ", ").concat(A, ")")
+        background: "linear-gradient(90deg, ".concat(A, ", ").concat(N, ")")
       }
     })]
   })
@@ -369,7 +370,8 @@ t.default = function(e) {
     className: R.clickableCard,
     children: (0, i.jsx)(M, {
       ...e,
-      isMember: d
+      isMember: d,
+      showBrandingFooter: !0
     })
   })
 }
