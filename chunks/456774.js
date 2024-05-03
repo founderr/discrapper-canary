@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   default: function() {
-    return es
+    return eo
   }
 });
 var i, r, a = n("735250"),
@@ -41,29 +41,30 @@ var i, r, a = n("735250"),
   w = n("940627"),
   B = n("705600"),
   k = n("305878"),
-  V = n("737688"),
-  x = n("242315"),
-  F = n("507893"),
-  H = n("944581"),
-  Y = n("645284"),
-  j = n("632184"),
-  W = n("806519"),
-  K = n("59688"),
-  z = n("718582"),
-  Z = n("981631"),
-  X = n("765305"),
-  Q = n("689938"),
-  q = n("569779");
+  V = n("119828"),
+  x = n("737688"),
+  F = n("242315"),
+  H = n("507893"),
+  Y = n("944581"),
+  j = n("645284"),
+  W = n("632184"),
+  K = n("806519"),
+  z = n("59688"),
+  Z = n("718582"),
+  X = n("981631"),
+  Q = n("765305"),
+  q = n("689938"),
+  J = n("569779");
 (i = r || (r = {})).HANGOUT = "hangout", i.EMBEDDED_ACTIVITY = "embedded-activity", i.EVENT = "event", i.GAMING = "gaming", i.EMPTY = "empty";
 
-function J(e) {
+function $(e) {
   let {
     users: t,
     othersCount: n,
     extraPill: i
   } = e;
   return (0, a.jsxs)("div", {
-    className: q.facepile,
+    className: J.facepile,
     children: [t.map((e, i) => {
       let r = (0, a.jsx)(_.default, {
         user: e,
@@ -71,65 +72,61 @@ function J(e) {
         "aria-label": ""
       });
       return i === t.length - 1 && 0 === n ? (0, a.jsx)("div", {
-        className: q.facePileItem,
+        className: J.facePileItem,
         children: r
-      }, e.id) : (0, a.jsx)(W.default, {
+      }, e.id) : (0, a.jsx)(K.default, {
         width: 24,
         height: 24,
-        mask: W.default.Masks.GUILD_POPOUT_FACE_PILE_AVATAR,
-        className: q.facePileItem,
+        mask: K.default.Masks.GUILD_POPOUT_FACE_PILE_AVATAR,
+        className: J.facePileItem,
         children: r
       }, e.id)
     }), n > 0 && (0, a.jsxs)(d.Text, {
       color: "interactive-normal",
       variant: "text-xs/medium",
-      className: q.othersCount,
+      className: J.othersCount,
       children: ["+", n]
     }), i]
   })
 }
 
-function $(e) {
+function ee(e) {
   let {
     title: t,
     subtitle: n,
-    icon: i,
-    iconLocation: r,
-    usersToShow: s,
-    othersCount: o,
-    extraPill: l
+    usersToShow: i,
+    othersCount: r,
+    icon: s,
+    extraPill: o
   } = e;
   return (0, a.jsxs)("div", {
-    className: q.cardDetailsContainer,
-    children: [(0, a.jsxs)("div", {
-      className: q.cardDetailsTextContainer,
-      children: ["title" === r && i, (0, a.jsx)(d.Heading, {
-        color: "header-primary",
-        variant: "heading-sm/semibold",
-        lineClamp: 1,
-        children: t
-      })]
+    className: J.cardDetailsContainer,
+    children: [(0, a.jsx)(d.Heading, {
+      color: "header-primary",
+      variant: "heading-sm/semibold",
+      lineClamp: 1,
+      children: t
     }), (0, a.jsxs)("div", {
-      className: q.cardDetailsTextContainer,
-      children: ["subtitle" === r && i, (0, a.jsx)(d.Text, {
+      className: J.cardDetailsTextContainer,
+      children: [s, (0, a.jsx)(d.Text, {
         color: "text-secondary",
         variant: "text-xs/medium",
         lineClamp: 1,
         children: n
       })]
-    }), (0, a.jsx)(J, {
-      users: s,
-      othersCount: o,
-      extraPill: l
+    }), (0, a.jsx)($, {
+      users: i,
+      othersCount: r,
+      extraPill: o
     })]
   })
 }
 
-function ee(e) {
+function et(e) {
   let {
     onClick: t,
     inCall: n
-  } = e, i = n ? Q.default.Messages.GUILD_POPOUT_JOINED : Q.default.Messages.JOIN, r = s.useCallback(e => {
+  } = e, i = n ? q.default.Messages.GUILD_POPOUT_JOINED : q.default.Messages.JOIN, r = s.useCallback(e => {
     e.stopPropagation(), t()
   }, [t]);
   return (0, a.jsx)(d.Button, {
@@ -137,12 +134,12 @@ function ee(e) {
     color: d.Button.Colors.GREEN,
     disabled: n,
     onClick: r,
-    className: q.joinButton,
+    className: J.joinButton,
     children: i
   })
 }
 
-function et(e) {
+function en(e) {
   let {
     channelId: t,
     userIds: n,
@@ -150,16 +147,16 @@ function et(e) {
     guildId: r,
     streamersCount: o,
     cardType: _
-  } = e, T = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(t)), f = (0, u.useStateFromStores)([U.default], () => !U.default.can(Z.Permissions.CONNECT, T)), {
+  } = e, T = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(t)), f = (0, u.useStateFromStores)([U.default], () => !U.default.can(X.Permissions.CONNECT, T)), {
     totalUsers: S,
     usersToShow: h,
     othersCount: A
-  } = (0, z.useGetCardUsers)(n, r, t), N = (0, c.useGetOrFetchApplication)(i), {
+  } = (0, Z.useGetCardUsers)(n, r, t), N = (0, c.useGetOrFetchApplication)(i), {
     needSubscriptionToAccess: p
   } = (0, m.default)(null != t ? t : void 0), O = (0, u.useStateFromStores)([b.default], () => b.default.isInChannel(t)), R = s.useCallback(() => {
     (0, v.transitionToGuild)(r, t)
   }, [t, r]), C = s.useCallback(() => {
-    null != T && (T.type === Z.ChannelTypes.GUILD_VOICE && !f && E.default.handleVoiceConnect({
+    null != T && (T.type === X.ChannelTypes.GUILD_VOICE && !f && E.default.handleVoiceConnect({
       channel: T,
       connected: O,
       needSubscriptionToAccess: p,
@@ -169,11 +166,11 @@ function et(e) {
   if (null == N || null == T) return null;
   let g = (0, I.getSimpleChannelIconComponent)(T.type),
     L = o > 0 ? (0, a.jsxs)("div", {
-      className: q.numberPill,
-      children: [(0, a.jsx)(Y.default, {
+      className: J.numberPill,
+      children: [(0, a.jsx)(j.default, {
         width: 12,
         height: 12,
-        className: l()(q.cardIcon, q.cardDetailsIcon)
+        className: l()(J.cardIcon, J.cardDetailsIcon)
       }), (0, a.jsx)(d.Text, {
         color: "text-normal",
         variant: "text-xs/normal",
@@ -183,116 +180,114 @@ function et(e) {
   return (0, a.jsxs)(d.ClickableContainer, {
     onClick: R,
     tag: "div",
-    "aria-label": Q.default.Messages.GUILD_POPOUT_ACTIVITY_EMBEDDED_ACTIVITY_CARD_ARIA.format({
+    "aria-label": q.default.Messages.GUILD_POPOUT_ACTIVITY_EMBEDDED_ACTIVITY_CARD_ARIA.format({
       users: S,
       gameName: N.name,
       channelName: null == T ? void 0 : T.name
     }),
-    className: q.cardContainer,
+    className: J.cardContainer,
     children: [(0, a.jsx)(G.default, {
       game: N,
-      className: q.cardImage
-    }), (0, a.jsx)($, {
+      className: J.cardImage
+    }), (0, a.jsx)(ee, {
       title: N.name,
       subtitle: null == T ? void 0 : T.name,
       icon: null != g ? (0, a.jsx)(g, {
         width: 12,
         height: 12,
-        className: l()(q.cardIcon, q.cardDetailsIcon)
+        className: l()(J.cardIcon, J.cardDetailsIcon)
       }) : null,
-      iconLocation: "subtitle",
       usersToShow: h,
       othersCount: A,
       extraPill: L
-    }), (0, a.jsx)(ee, {
+    }), (0, a.jsx)(et, {
       onClick: C,
       inCall: O
-    }), "gaming" === _ ? (0, a.jsx)(V.default, {
+    }), "gaming" === _ ? (0, a.jsx)(x.default, {
       width: 12,
       height: 12,
-      className: l()(q.cardIcon, q.cardTypeIcon)
-    }) : (0, a.jsx)(H.default, {
+      className: l()(J.cardIcon, J.cardTypeIcon)
+    }) : (0, a.jsx)(Y.default, {
       width: 12,
       height: 12,
-      className: l()(q.cardIcon, q.cardTypeIcon)
+      className: l()(J.cardIcon, J.cardTypeIcon)
     })]
   })
 }
 
-function en(e) {
+function ei(e) {
   var t, n;
   let {
     hangoutActivity: i,
     guildId: r
   } = e, {
     channelId: o,
-    userIds: _
-  } = i, c = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(o)), {
-    needSubscriptionToAccess: I
-  } = (0, m.default)(null !== (t = null == c ? void 0 : c.id) && void 0 !== t ? t : void 0), T = (0, u.useStateFromStores)([U.default], () => !U.default.can(Z.Permissions.CONNECT, c)), f = (0, u.useStateFromStores)([b.default], () => b.default.isInChannel(o)), {
-    totalUsers: S,
-    usersToShow: h,
-    othersCount: A,
-    streamUserIds: N,
-    streamerUsersText: p
-  } = (0, z.useGetCardUsers)(_, r, o), O = s.useCallback(() => {
+    userIds: _,
+    streamUserIds: c,
+    channelHasVideo: I
+  } = i, T = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(o)), {
+    needSubscriptionToAccess: f
+  } = (0, m.default)(null !== (t = null == T ? void 0 : T.id) && void 0 !== t ? t : void 0), S = (0, u.useStateFromStores)([U.default], () => !U.default.can(X.Permissions.CONNECT, T)), h = (0, u.useStateFromStores)([b.default], () => b.default.isInChannel(o)), {
+    totalUsers: A,
+    usersToShow: N,
+    othersCount: p,
+    streamerUsersText: O
+  } = (0, Z.useGetCardUsers)(_, r, o, c), R = s.useCallback(() => {
     (0, v.transitionToGuild)(r, o)
-  }, [o, r]), R = s.useCallback(() => {
-    null != c && (!T && E.default.handleVoiceConnect({
-      channel: c,
-      connected: f,
-      needSubscriptionToAccess: I,
-      locked: T
+  }, [o, r]), C = s.useCallback(() => {
+    null != T && (!S && E.default.handleVoiceConnect({
+      channel: T,
+      connected: h,
+      needSubscriptionToAccess: f,
+      locked: S
     }), (0, v.transitionToGuild)(r, o))
-  }, [c, o, r, f, T, I]);
+  }, [T, o, r, h, S, f]), g = c.length > 0 ? (0, a.jsx)(j.default, {
+    width: 24,
+    height: 24,
+    className: J.cardImageIcon
+  }) : I ? (0, a.jsx)(V.default, {
+    width: 24,
+    height: 24,
+    className: J.cardImageIcon
+  }) : (0, a.jsx)(W.default, {
+    width: 24,
+    height: 24,
+    className: J.cardImageIcon
+  });
   return (0, a.jsxs)(d.ClickableContainer, {
-    onClick: O,
+    onClick: R,
     tag: "div",
-    "aria-label": Q.default.Messages.GUILD_POPOUT_ACTIVITY_HANGOUT_CARD_ARIA.format({
-      users: S,
-      channelName: null == c ? void 0 : c.name
+    "aria-label": q.default.Messages.GUILD_POPOUT_ACTIVITY_HANGOUT_CARD_ARIA.format({
+      users: A,
+      channelName: null == T ? void 0 : T.name
     }),
-    className: q.cardContainer,
+    className: J.cardContainer,
     children: [(0, a.jsx)("div", {
-      className: l()(q.cardImage, q.cardImageIcon),
-      children: N.length > 0 ? (0, a.jsx)(Y.default, {
-        width: 12,
-        height: 12,
-        className: q.cardIcon
-      }) : (0, a.jsx)(j.default, {
-        width: 12,
-        height: 12,
-        className: q.cardIcon
-      })
-    }), (0, a.jsx)($, {
-      title: null !== (n = null == c ? void 0 : c.name) && void 0 !== n ? n : "",
-      subtitle: N.length > 0 ? p : "",
-      icon: (0, a.jsx)(j.default, {
-        width: 12,
-        height: 12,
-        className: l()(q.cardIcon, q.cardDetailsIcon)
-      }),
-      iconLocation: "title",
-      usersToShow: h,
-      othersCount: A
+      className: l()(J.cardImage, J.cardImageIconContainer),
+      children: g
     }), (0, a.jsx)(ee, {
-      onClick: R,
-      inCall: f
+      title: null !== (n = null == T ? void 0 : T.name) && void 0 !== n ? n : "",
+      subtitle: c.length > 0 ? O : "",
+      usersToShow: N,
+      othersCount: p
+    }), (0, a.jsx)(et, {
+      onClick: C,
+      inCall: h
     })]
   })
 }
 
-function ei(e) {
+function er(e) {
   var t;
   let {
     event: n
   } = e, i = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(n.channel_id)), {
     needSubscriptionToAccess: r
-  } = (0, m.default)(null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : void 0), o = (0, u.useStateFromStores)([U.default], () => !U.default.can(Z.Permissions.CONNECT, i)), _ = (0, u.useStateFromStores)([b.default], () => b.default.isInChannel(null == i ? void 0 : i.id)), {
+  } = (0, m.default)(null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : void 0), o = (0, u.useStateFromStores)([U.default], () => !U.default.can(X.Permissions.CONNECT, i)), _ = (0, u.useStateFromStores)([b.default], () => b.default.isInChannel(null == i ? void 0 : i.id)), {
     usersToShow: c,
     othersCount: I,
     audienceCount: T
-  } = (0, z.useGetEventCardUsers)(i), f = (0, p.getLocationDataForEvent)(n, i), S = null == f ? void 0 : f.locationName, h = null == f ? void 0 : f.IconComponent, A = s.useCallback(() => {
+  } = (0, Z.useGetEventCardUsers)(i), f = (0, p.getLocationDataForEvent)(n, i), S = null == f ? void 0 : f.locationName, h = null == f ? void 0 : f.IconComponent, A = s.useCallback(() => {
     (0, N.openGuildEventDetails)({
       eventId: n.id
     })
@@ -307,18 +302,18 @@ function ei(e) {
       let e = await (0, M.connectOrLurkStage)(n.guild_id, i.id);
       (0, D.navigateToStage)(e)
     };
-    n.entity_type === X.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? e() : n.entity_type === X.GuildScheduledEventEntityTypes.VOICE && (!o && E.default.handleVoiceConnect({
+    n.entity_type === Q.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? e() : n.entity_type === Q.GuildScheduledEventEntityTypes.VOICE && (!o && E.default.handleVoiceConnect({
       channel: i,
       connected: _,
       needSubscriptionToAccess: r,
       locked: o
     }), (0, v.transitionToGuild)(n.guild_id, i.id))
   }, [i, n.entity_type, n.guild_id, n.id, _, o, r]), R = null != T ? (0, a.jsxs)("div", {
-    className: q.numberPill,
-    children: [(0, a.jsx)(x.default, {
+    className: J.numberPill,
+    children: [(0, a.jsx)(F.default, {
       width: 12,
       height: 12,
-      className: l()(q.cardIcon, q.cardDetailsIcon)
+      className: l()(J.cardIcon, J.cardDetailsIcon)
     }), (0, a.jsx)(d.Text, {
       color: "text-normal",
       variant: "text-xs/normal",
@@ -328,48 +323,47 @@ function ei(e) {
   return (0, a.jsxs)(d.ClickableContainer, {
     onClick: A,
     tag: "div",
-    "aria-label": Q.default.Messages.GUILD_POPOUT_ACTIVITY_EVENT_CARD_ARIA.format({
+    "aria-label": q.default.Messages.GUILD_POPOUT_ACTIVITY_EVENT_CARD_ARIA.format({
       eventName: n.name
     }),
-    className: q.cardContainer,
+    className: J.cardContainer,
     children: [(0, a.jsx)("div", {
-      className: l()(q.cardImage, q.cardImageIcon),
+      className: l()(J.cardImage, J.cardImageIconContainer),
       children: (0, a.jsx)(k.default, {
-        width: 12,
-        height: 12,
-        className: q.cardIcon
+        width: 24,
+        height: 24,
+        className: J.cardImageIcon
       })
-    }), (0, a.jsx)($, {
+    }), (0, a.jsx)(ee, {
       title: n.name,
       subtitle: null != i ? i.name : S,
       icon: null != h ? (0, a.jsx)(h, {
         width: 12,
         height: 12,
-        className: l()(q.cardIcon, q.cardDetailsIcon)
+        className: l()(J.cardIcon, J.cardDetailsIcon)
       }) : null,
-      iconLocation: "subtitle",
       usersToShow: c,
       othersCount: I,
       extraPill: R
-    }), (0, a.jsx)(ee, {
+    }), (0, a.jsx)(et, {
       onClick: O,
       inCall: _
     }), (0, a.jsx)(k.default, {
       width: 12,
       height: 12,
-      className: l()(q.cardIcon, q.cardTypeIcon)
+      className: l()(J.cardIcon, J.cardTypeIcon)
     })]
   })
 }
 
-function er(e) {
+function ea(e) {
   var t;
   let {
     channelId: n,
     guildId: i
   } = e, r = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(n)), {
     needSubscriptionToAccess: o
-  } = (0, m.default)(null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : void 0), l = (0, u.useStateFromStores)([U.default], () => !U.default.can(Z.Permissions.CONNECT, r)), _ = s.useCallback(() => {
+  } = (0, m.default)(null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : void 0), l = (0, u.useStateFromStores)([U.default], () => !U.default.can(X.Permissions.CONNECT, r)), _ = s.useCallback(() => {
     (0, v.transitionToGuild)(i, n)
   }, [n, i]), c = s.useCallback(() => {
     null != r && (!l && E.default.handleVoiceConnect({
@@ -382,37 +376,37 @@ function er(e) {
   return (0, a.jsxs)(d.ClickableContainer, {
     onClick: _,
     tag: "div",
-    "aria-label": Q.default.Messages.GUILD_POPOUT_EMPTY_PROMPT_ARIA.format({
+    "aria-label": q.default.Messages.GUILD_POPOUT_EMPTY_PROMPT_ARIA.format({
       channelName: null == r ? void 0 : r.name
     }),
-    className: q.emptyStateCardContainer,
-    children: [(0, a.jsx)(j.default, {
+    className: J.emptyStateCardContainer,
+    children: [(0, a.jsx)(W.default, {
       width: 12,
       height: 12,
-      color: "white"
+      className: J.cardIcon
     }), (0, a.jsx)("div", {
-      className: q.cardDetailsContainer,
+      className: J.cardDetailsContainer,
       children: (0, a.jsx)(d.Text, {
         variant: "text-sm/semibold",
         color: "header-primary",
         lineClamp: 1,
         children: null == r ? void 0 : r.name
       })
-    }), (0, a.jsx)(ee, {
+    }), (0, a.jsx)(et, {
       onClick: c
     })]
   })
 }
 
-function ea(e) {
+function es(e) {
   let {
     guild: t
-  } = e, i = (0, K.useCanShowNewGuildTooltipActivityEmptyState)(), r = (0, z.useGuildPopoutCards)(t), o = s.useMemo(() => r.map(e => {
-    if ("hangout" === e.category) return (0, a.jsx)(en, {
+  } = e, i = (0, z.useCanShowNewGuildTooltipActivityEmptyState)(), r = (0, Z.useGuildPopoutCards)(t), o = s.useMemo(() => r.map(e => {
+    if ("hangout" === e.category) return (0, a.jsx)(ei, {
       hangoutActivity: e,
       guildId: t.id
     }, "".concat(e.category, "-").concat(e.channelId));
-    if ("event" === e.category) return (0, a.jsx)(ei, {
+    if ("event" === e.category) return (0, a.jsx)(er, {
       event: e.event
     }, "".concat(e.category, "-").concat(e.event.id));
     if ("embedded-activity" === e.category) {
@@ -421,7 +415,7 @@ function ea(e) {
         applicationId: i,
         userIds: r
       } = e.embeddedActivity;
-      return (0, a.jsx)(et, {
+      return (0, a.jsx)(en, {
         channelId: n,
         applicationId: i,
         userIds: Array.from(r),
@@ -436,7 +430,7 @@ function ea(e) {
         voiceStates: r,
         streamersCount: s
       } = e;
-      return (0, a.jsx)(et, {
+      return (0, a.jsx)(en, {
         channelId: n,
         applicationId: i.application_id,
         userIds: r.map(e => {
@@ -449,7 +443,7 @@ function ea(e) {
         streamersCount: s,
         cardType: "gaming"
       }, "".concat(e.category, "-").concat(e.channelId))
-    } else if ("empty" === e.category) return (0, a.jsx)(er, {
+    } else if ("empty" === e.category) return (0, a.jsx)(ea, {
       channelId: e.channelId,
       guildId: t.id
     }, "".concat(e.category, "-").concat(e.channelId))
@@ -457,20 +451,20 @@ function ea(e) {
   if (0 === r.length) return null;
   if ("empty" === r[0].category) return i ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: q.emptyStatePrompt,
+      className: J.emptyStatePrompt,
       children: [(0, a.jsx)("img", {
         src: n("121727"),
         alt: ""
       }), (0, a.jsxs)("div", {
-        className: q.emptyStateTextContainer,
+        className: J.emptyStateTextContainer,
         children: [(0, a.jsx)(d.Heading, {
           variant: "heading-sm/semibold",
           color: "header-primary",
-          children: Q.default.Messages.GUILD_POPOUT_EMPTY_PROMPT_HEADER
+          children: q.default.Messages.GUILD_POPOUT_EMPTY_PROMPT_HEADER
         }), (0, a.jsx)(d.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          children: Q.default.Messages.GUILD_POPOUT_EMPTY_PROMPT_BODY
+          children: q.default.Messages.GUILD_POPOUT_EMPTY_PROMPT_BODY
         })]
       })]
     }), o]
@@ -480,7 +474,7 @@ function ea(e) {
   })
 }
 
-function es(e) {
+function eo(e) {
   let {
     guild: t,
     closePopout: n
@@ -500,53 +494,53 @@ function es(e) {
       isUnverifiedAccount: !P.default.getCheck(t.id).canChat
     }
   }), c = () => {
-    g.default.isFullServerPreview(t.id) && (0, v.transitionTo)(Z.Routes.CHANNEL(t.id)), S.default.shouldShowOnboarding(t.id) && (f.default.finishOnboarding(t.id), (0, h.discardOnboardingPromise)(t.id)), (0, C.stopImpersonating)(t.id), R.default.open(t.id, o), o === Z.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, A.announceDeleteTemplateChannels)(t.id)
+    g.default.isFullServerPreview(t.id) && (0, v.transitionTo)(X.Routes.CHANNEL(t.id)), S.default.shouldShowOnboarding(t.id) && (f.default.finishOnboarding(t.id), (0, h.discardOnboardingPromise)(t.id)), (0, C.stopImpersonating)(t.id), R.default.open(t.id, o), o === X.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, A.announceDeleteTemplateChannels)(t.id)
   };
   return (0, a.jsxs)("div", {
-    className: q.container,
+    className: J.container,
     children: [(0, a.jsxs)("div", {
-      className: q.header,
+      className: J.header,
       children: [i ? (0, a.jsx)(B.default, {
         guild: t,
         size: 16,
-        className: q.rowIconV2
+        className: J.rowIconV2
       }) : (0, a.jsx)(w.default, {
         guild: t,
         size: 20,
-        className: q.rowIcon
+        className: J.rowIcon
       }), (0, a.jsx)(d.Text, {
         variant: "text-md/bold",
         color: "header-primary",
         lineClamp: 1,
         children: t.name
       })]
-    }), !l && !_ && (0, a.jsx)(ea, {
+    }), !l && !_ && (0, a.jsx)(es, {
       guild: t
     }), r ? (0, a.jsxs)("div", {
-      className: q.footer,
-      children: [(0, a.jsx)(F.default, {
+      className: J.footer,
+      children: [(0, a.jsx)(H.default, {
         width: 12,
         height: 12,
-        className: q.infoIcon
+        className: J.infoIcon
       }), (0, a.jsx)(d.Text, {
         color: "text-muted",
         variant: "text-xs/medium",
-        children: Q.default.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
+        children: q.default.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
           onClick: () => {
-            n(), R.default.open(t.id, Z.GuildSettingsSections.INSTANT_INVITES)
+            n(), R.default.open(t.id, X.GuildSettingsSections.INSTANT_INVITES)
           }
         })
       })]
     }) : null, s ? (0, a.jsxs)("div", {
-      className: q.footer,
-      children: [(0, a.jsx)(F.default, {
+      className: J.footer,
+      children: [(0, a.jsx)(H.default, {
         width: 12,
         height: 12,
-        className: q.infoIcon
+        className: J.infoIcon
       }), (0, a.jsx)(d.Text, {
         color: "text-muted",
         variant: "text-xs/medium",
-        children: Q.default.Messages.GUILD_POPOUT_VIEWING_AS_ROLES.format({
+        children: q.default.Messages.GUILD_POPOUT_VIEWING_AS_ROLES.format({
           onClick: () => {
             n(), c()
           }

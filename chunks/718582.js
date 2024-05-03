@@ -168,9 +168,8 @@ function M(e) {
 }
 let y = e => t => [L.ActivityTypes.PLAYING, L.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId);
 
-function P(e, t, n) {
-  let i = (0, o.useStateFromStoresArray)([I.default], () => I.default.getAllApplicationStreamsForChannel(n).map(e => e.ownerId), [n]),
-    s = (0, o.useStateFromStoresArray)([T.default, A.default, m.default], () => {
+function P(e, t, n, i) {
+  let s = (0, o.useStateFromStoresArray)([T.default, A.default, m.default], () => {
       let t = T.default.hasConsented(L.Consents.PERSONALIZATION),
         n = A.default.getUserAffinities(),
         i = a()(e).map(e => m.default.getUser(e)).filter(O.isNotNullish).value();
@@ -181,19 +180,21 @@ function P(e, t, n) {
     }),
     l = s.slice(0, 7),
     u = Math.max(0, s.length - l.length),
-    d = 1 === i.length ? i[0] : null,
-    _ = R.default.getName(t, n, m.default.getUser(d)),
-    c = null != d ? v.default.Messages.GUILD_POPOUT_ACTIVITY_STREAMER.format({
-      username: _
+    d = "";
+  if (null != i && i.length > 0) {
+    let e = 1 === i.length ? i[0] : null,
+      r = R.default.getName(t, n, m.default.getUser(e));
+    d = null != e ? v.default.Messages.GUILD_POPOUT_ACTIVITY_STREAMER.format({
+      username: r
     }) : v.default.Messages.GUILD_POPOUT_ACTIVITY_STREAMERS.format({
       streamerCount: i.length
-    });
+    })
+  }
   return {
     totalUsers: s.length,
     usersToShow: l,
     othersCount: u,
-    streamUserIds: i,
-    streamerUsersText: c
+    streamerUsersText: d
   }
 }
 
