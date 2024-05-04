@@ -123,6 +123,7 @@ function ed(e) {
         [eo.locked]: n
       }),
       isWatching: A,
+      isOverlay: !0,
       size: c,
       priority: I,
       mute: M || B || O,

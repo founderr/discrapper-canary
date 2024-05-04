@@ -2,57 +2,67 @@
 n.r(t), n("47120");
 var a = n("735250"),
   l = n("470079"),
-  s = n("434650"),
-  i = n("393903"),
-  r = n("979264"),
-  o = n("915432");
+  s = n("120356"),
+  i = n.n(s),
+  r = n("434650"),
+  o = n("393903"),
+  u = n("979264"),
+  d = n("915432");
 t.default = l.memo(function(e) {
   let {
     children: t,
-    ...n
-  } = e, u = l.useRef(null), [d, c] = l.useState({
+    isOverlay: n,
+    ...s
+  } = e, c = l.useRef(null), [f, h] = l.useState({
     maskImage: "none"
-  }), f = l.useCallback(() => {
+  }), m = l.useCallback(() => {
     var e, t;
-    let n = null === (e = h.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
-      a = null === (t = u.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
-    if (null == n || null == a) {
-      c({
+    if (n) {
+      h({
         maskImage: "none"
       });
       return
     }
-    let l = a.right - n.right,
-      s = a.width - l;
-    if (s > a.width) {
-      c({
+    let a = null === (e = p.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
+      l = null === (t = c.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+    if (null == a || null == l) {
+      h({
         maskImage: "none"
       });
       return
     }
-    c({
-      maskImage: "linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) ".concat(s, "px)")
+    let s = l.right - a.right,
+      i = l.width - s;
+    if (i > l.width) {
+      h({
+        maskImage: "none"
+      });
+      return
+    }
+    h({
+      maskImage: "linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) ".concat(i, "px)")
     })
-  }, []), h = (0, i.useResizeObserver)(f), m = (0, r.useShouldDisplayClanTag)(n.userId);
+  }, []), p = (0, o.useResizeObserver)(m), E = (0, u.useShouldDisplayClanTag)(s.userId);
   l.useEffect(() => {
-    null != h.current && f()
-  }, [m]);
-  let p = (0, s.useIsVisible)(f);
+    null != p.current && m()
+  }, [E]);
+  let C = (0, r.useIsVisible)(m);
   return (0, a.jsxs)("div", {
-    className: o.container,
-    ref: h,
+    className: i()(d.container, n && d.isOverlayContainer),
+    ref: p,
     children: [(0, a.jsx)("div", {
-      className: o.usernameContainer,
+      className: d.usernameContainer,
       children: t
     }), (0, a.jsx)("div", {
-      className: o.chipletParent,
-      ref: p,
+      className: d.chipletParent,
+      ref: C,
       children: (0, a.jsx)("span", {
-        className: o.chipletContainer,
-        ref: u,
-        style: d,
-        children: (0, a.jsx)(r.default, {
-          ...n
+        className: i()(d.chipletContainer, !E && n && d.noPadding),
+        ref: c,
+        style: f,
+        children: (0, a.jsx)(u.default, {
+          ...s,
+          className: i()(s.className, n && d.isOverlayTag)
         })
       })
     })]
