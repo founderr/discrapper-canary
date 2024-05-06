@@ -250,7 +250,7 @@ t.default = function(e) {
           ...er,
           avatarDecoration: es,
           src: eE && et ? null == ea ? void 0 : ea.getAvatarURL(void 0, 152, !0) : en,
-          imageClassName: et ? V.fadeInAvatarImg : void 0,
+          imageClassName: eE && et ? V.fadeInAvatarImg : void 0,
           className: n()(V.avatar, {
             [V.avatarPurchased]: null != ed
           }),
