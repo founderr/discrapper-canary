@@ -36,9 +36,6 @@ n.r(t), n.d(t, {
   ClanPlaystyles: function() {
     return i
   },
-  ClanSetupModalPages: function() {
-    return r
-  },
   ClanSetupSteps: function() {
     return a
   },

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanSetupProgress: function() {
-    return S
+    return m
   },
   ClanSetupProgressButtons: function() {
-    return m
+    return S
   }
 });
 var a = n("735250"),
@@ -19,7 +19,7 @@ var a = n("735250"),
   f = n("676327"),
   E = n("284019"),
   h = n("689938"),
-  _ = n("156610");
+  _ = n("258082");
 
 function C(e) {
   let {
@@ -28,9 +28,9 @@ function C(e) {
     name: l,
     isActive: E,
     animate: C,
-    fillBackgroundColor: S,
-    hasError: m
-  } = e, p = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), I = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY), T = s.useMemo(() => (0, f.getClanPrimaryButtonStyles)(S, I.hex()), [S, I]), g = null != T, A = (0, r.useSpring)({
+    fillBackgroundColor: m,
+    hasError: S
+  } = e, p = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), I = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY), T = s.useMemo(() => (0, f.getClanPrimaryButtonStyles)(m, I.hex()), [m, I]), g = null != T, A = (0, r.useSpring)({
     transform: E ? "translateX(0%)" : "translateX(-100%)",
     config: {
       ...r.config.stiff,
@@ -49,9 +49,9 @@ function C(e) {
     })]
   });
   return (0, a.jsx)(u.Tooltip, {
-    color: m ? u.Tooltip.Colors.GREY : u.Tooltip.Colors.BRAND,
-    text: m ? N : l,
-    "aria-label": m ? h.default.Messages.CLAN_SUBMIT_ERROR_TITLE : l,
+    color: S ? u.Tooltip.Colors.GREY : u.Tooltip.Colors.BRAND,
+    text: S ? N : l,
+    "aria-label": S ? h.default.Messages.CLAN_SUBMIT_ERROR_TITLE : l,
     shouldShow: null != n,
     tooltipStyle: T,
     tooltipClassName: _.progressStepTooltip,
@@ -62,7 +62,7 @@ function C(e) {
       }),
       onClick: n,
       className: _.progressStepWrapper,
-      children: [m && (0, a.jsx)(c.default, {
+      children: [S && (0, a.jsx)(c.default, {
         className: _.errorIcon
       }), (0, a.jsx)("div", {
         className: _.progressStep,
@@ -80,62 +80,70 @@ function C(e) {
   })
 }
 
-function S(e) {
+function m(e) {
   let {
     steps: t,
     currentStepIndex: n,
     furthestStepIndex: s,
     onStepClick: l,
-    stepFillColor: i
+    stepFillColor: o,
+    animationStyle: u,
+    className: d
   } = e;
-  return (0, a.jsx)("div", {
-    className: _.progressContainer,
+  return (0, a.jsx)(r.animated.div, {
+    style: u,
+    className: i()(_.progressContainer, d),
     children: t.map(e => {
       let {
         index: t,
-        name: r,
-        hasError: o
+        name: i,
+        hasError: r
       } = e;
       return (0, a.jsx)(C, {
-        name: r,
+        name: i,
         onClick: t <= s ? () => l(t) : void 0,
         isActive: t <= n,
-        hasError: o,
+        hasError: r,
         index: t,
-        fillBackgroundColor: i,
+        fillBackgroundColor: o,
         animate: n === t || n + 1 === t
-      }, r)
+      }, i)
     })
   })
 }
 
-function m(e) {
+function S(e) {
   let {
-    children: t,
-    className: n,
-    isBackDisabled: s,
-    isNextDisabled: l,
-    onNextClick: r,
+    className: t,
+    isBackDisabled: n,
+    isNextDisabled: s,
+    onNextClick: l,
     onBackClick: o,
-    nextButtonBackgroundColor: d
+    nextButtonBackgroundColor: d,
+    nextButtonClassName: c,
+    nextButtonAnimationStyle: f
   } = e;
   return (0, a.jsxs)("div", {
-    className: i()(_.buttonsContainer, n),
+    className: i()(_.buttonsContainer, t),
     children: [(0, a.jsx)(u.Button, {
       look: u.Button.Looks.OUTLINED,
       size: u.Button.Sizes.MEDIUM,
       color: u.Button.Colors.PRIMARY,
       onClick: o,
-      disabled: s,
-      children: h.default.Messages.PAGINATION_PREVIOUS
-    }), t, (0, a.jsx)(E.default, {
-      themeColor: d,
-      color: u.Button.Colors.BRAND,
-      look: u.Button.Looks.FILLED,
-      size: u.Button.Sizes.MEDIUM,
-      onClick: r,
-      disabled: l,
-      children: h.default.Messages.PAGINATION_NEXT
+      disabled: n,
+      children: h.default.Messages.BACK
+    }), (0, a.jsx)(r.animated.div, {
+      style: f,
+      children: (0, a.jsx)(E.default, {
+        className: c,
+        themeColor: d,
+        color: u.Button.Colors.BRAND,
+        look: u.Button.Looks.FILLED,
+        size: u.Button.Sizes.MEDIUM,
+        onClick: l,
+        disabled: s,
+        children: h.default.Messages.NEXT
+      })
     })]
   })
 }
