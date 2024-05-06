@@ -132664,6 +132664,14 @@ div.nagbar_c731ff {
     min-height: 120px
 }
 
+.theme-light .sliderBar__3c099 {
+    background-color: var(--primary-200)
+}
+
+.theme-dark .sliderBar__3c099 {
+    background-color: var(--primary-400)
+}
+
 .sliderBar__3c099.speaking_cc1a7e {
     background-color: var(--green-230)
 }
