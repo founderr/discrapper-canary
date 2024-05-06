@@ -50419,8 +50419,7 @@ div:has(>div>.modal__06f49) {
 }
 
 .verticalSeparator__0074c {
-    margin: 0 32px;
-    border: 1px solid var(--background-modifier-accent)
+    margin: 0 32px
 }
 
 .authCaptcha__2ec56 {
