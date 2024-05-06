@@ -1,21 +1,21 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   DiscoveryRequirementsM2Experiment: function() {
     return u
   },
   useLowerMemberCountRequirements: function() {
     return f
   }
-}), a("47120");
-var n = a("470079"),
-  i = a("442837"),
-  r = a("818083"),
-  s = a("650774"),
-  l = a("430824"),
-  o = a("496675"),
-  c = a("946314"),
-  d = a("981631");
-let u = (0, r.createExperiment)({
+}), n("47120");
+var a = n("470079"),
+  r = n("442837"),
+  s = n("818083"),
+  i = n("650774"),
+  l = n("430824"),
+  o = n("496675"),
+  c = n("946314"),
+  d = n("981631");
+let u = (0, s.createExperiment)({
   kind: "guild",
   id: "2021-12_discovery_requirements_m2",
   label: "Lower Server Discovery member count requirements",
@@ -32,20 +32,20 @@ let u = (0, r.createExperiment)({
 });
 
 function f(e) {
-  let t = (0, i.useStateFromStores)([l.default], () => l.default.getGuild(e)),
-    a = (0, i.useStateFromStores)([o.default], () => o.default.can(d.Permissions.ADMINISTRATOR, t)),
-    r = null == t ? void 0 : t.hasFeature(d.GuildFeatures.COMMUNITY),
-    [f] = (0, i.useStateFromStoresArray)([s.default], () => [s.default.getMemberCount(e)], [e]),
+  let t = (0, r.useStateFromStores)([l.default], () => l.default.getGuild(e)),
+    n = (0, r.useStateFromStores)([o.default], () => o.default.can(d.Permissions.ADMINISTRATOR, t)),
+    s = null == t ? void 0 : t.hasFeature(d.GuildFeatures.COMMUNITY),
+    [f] = (0, r.useStateFromStoresArray)([i.default], () => [i.default.getMemberCount(e)], [e]),
     m = (null != f ? f : 0) >= c.LOWERED_MINIMUM_SIZE && (null != f ? f : 0) < c.DEFAULT_MINIMUM_SIZE,
-    h = a && r && m;
-  n.useEffect(() => {
+    h = n && s && m;
+  a.useEffect(() => {
     h && u.trackExposure({
       guildId: e,
       location: "747eb3_1"
     })
   }, [e, h]);
   let {
-    enableLowerMemberCountReq: E
+    enableLowerMemberCountReq: p
   } = u.useExperiment({
     guildId: e,
     location: "747eb3_2"
@@ -53,5 +53,5 @@ function f(e) {
     autoTrackExposure: !1,
     disable: !h
   });
-  return E
+  return p
 }

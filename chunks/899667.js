@@ -1,19 +1,19 @@
 "use strict";
-a.r(t), a("47120");
-var n, i, r, s, l = a("442837"),
-  o = a("570140");
+n.r(t), n("47120");
+var a, r, s, i, l = n("442837"),
+  o = n("570140");
 let c = {},
   d = null,
   u = [],
   f = !1,
   m = !1,
   h = null,
-  E = null;
+  p = null;
 
 function T() {
   m = !0
 }
-class p extends(n = l.default.Store) {
+class E extends(a = l.default.Store) {
   getAppliedGuildBoostsForGuild(e) {
     return null != c[e] ? c[e].subscriptions : null
   }
@@ -33,7 +33,7 @@ class p extends(n = l.default.Store) {
     return h
   }
   get unapplyBoostError() {
-    return E
+    return p
   }
   get cooldownEndsAt() {
     return d
@@ -42,19 +42,19 @@ class p extends(n = l.default.Store) {
     return f
   }
 }
-s = "AppliedGuildBoostStore", (r = "displayName") in(i = p) ? Object.defineProperty(i, r, {
-  value: s,
+i = "AppliedGuildBoostStore", (s = "displayName") in(r = E) ? Object.defineProperty(r, s, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new p(o.default, {
+}) : r[s] = i, t.default = new E(o.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
-      appliedBoosts: a
+      appliedBoosts: n
     } = e;
     c[t] = {
-      subscriptions: a,
+      subscriptions: n,
       lastFetchedAt: Date.now()
     }
   },
@@ -75,8 +75,8 @@ s = "AppliedGuildBoostStore", (r = "displayName") in(i = p) ? Object.definePrope
   GUILD_APPLY_BOOST_SUCCESS: function(e) {
     let {
       appliedGuildBoost: t
-    } = e, a = new Set(t.map(e => e.id));
-    u = [...t, ...u.filter(e => !a.has(e.id))], h = null, m = !1
+    } = e, n = new Set(t.map(e => e.id));
+    u = [...t, ...u.filter(e => !n.has(e.id))], h = null, m = !1
   },
   GUILD_APPLY_BOOST_FAIL: function(e) {
     let {
@@ -94,7 +94,7 @@ s = "AppliedGuildBoostStore", (r = "displayName") in(i = p) ? Object.definePrope
     let {
       error: t
     } = e;
-    m = !1, E = t
+    m = !1, p = t
   },
   USER_APPLIED_BOOSTS_FETCH_START: function() {
     f = !0

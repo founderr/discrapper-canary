@@ -1,15 +1,15 @@
 "use strict";
-let n;
-a.r(t), a("47120");
-var i, r, s, l, o = a("392711"),
-  c = a.n(o),
-  d = a("442837"),
-  u = a("570140"),
-  f = a("308063");
+let a;
+n.r(t), n("47120");
+var r, s, i, l, o = n("392711"),
+  c = n.n(o),
+  d = n("442837"),
+  u = n("570140"),
+  f = n("308063");
 let m = {},
   h = {};
 
-function E(e, t) {
+function p(e, t) {
   return null == t && (t = "guild"), "".concat(e, ":").concat(t)
 }
 
@@ -17,16 +17,16 @@ function T(e) {
   return null != m[e] ? m[e] : (m[e] = {}, m[e])
 }
 
-function p(e) {
+function E(e) {
   let {
     guildId: t,
-    webhook: a
+    webhook: n
   } = e;
-  T(t)[a.id] = a
+  T(t)[n.id] = n
 }
-class _ extends(i = d.default.Store) {
+class C extends(r = d.default.Store) {
   isFetching(e, t) {
-    return null != h[E(e, t)]
+    return null != h[p(e, t)]
   }
   getWebhooksForGuild(e) {
     return c().values(T(e))
@@ -35,46 +35,46 @@ class _ extends(i = d.default.Store) {
     return c()(T(e)).values().filter(e => e.channel_id === t).value()
   }
   get error() {
-    return n
+    return a
   }
 }
-l = "WebhooksStore", (s = "displayName") in(r = _) ? Object.defineProperty(r, s, {
+l = "WebhooksStore", (i = "displayName") in(s = C) ? Object.defineProperty(s, i, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = l, t.default = new _(u.default, {
+}) : s[i] = l, t.default = new C(u.default, {
   WEBHOOKS_UPDATE: function(e) {
     let {
       guildId: t,
-      channelId: a,
-      webhooks: i,
-      error: r
+      channelId: n,
+      webhooks: r,
+      error: s
     } = e;
-    if (null == i) {
-      null != r ? (n = r, delete h[E(t, a)]) : null != a && null != m[t] && (n = null, f.default.fetchForChannel(t, a));
+    if (null == r) {
+      null != s ? (a = s, delete h[p(t, n)]) : null != n && null != m[t] && (a = null, f.default.fetchForChannel(t, n));
       return
     }
-    n = null;
-    let s = [];
-    null != a && (s = c()(T(t)).values().filter(e => e.channel_id !== a).value());
+    a = null;
+    let i = [];
+    null != n && (i = c()(T(t)).values().filter(e => e.channel_id !== n).value());
     let l = m[t] = {};
-    s.concat(i).forEach(e => l[e.id] = e), delete h[E(t, a)]
+    i.concat(r).forEach(e => l[e.id] = e), delete h[p(t, n)]
   },
   WEBHOOKS_FETCHING: function(e) {
     let {
       guildId: t,
-      channelId: a
+      channelId: n
     } = e;
-    h[E(t, a)] = !0
+    h[p(t, n)] = !0
   },
-  WEBHOOK_CREATE: p,
-  WEBHOOK_UPDATE: p,
+  WEBHOOK_CREATE: E,
+  WEBHOOK_UPDATE: E,
   WEBHOOK_DELETE: function(e) {
     let {
       guildId: t,
-      webhookId: a
+      webhookId: n
     } = e;
-    delete T(t)[a]
+    delete T(t)[n]
   }
 })

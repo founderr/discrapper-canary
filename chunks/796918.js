@@ -1,15 +1,15 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  i = a("470079"),
-  r = a("120356"),
-  s = a.n(r),
-  l = a("481060"),
-  o = a("729285"),
-  c = a("87576"),
-  d = a("308083"),
-  u = a("689938"),
-  f = a("418571");
+n.r(t), n("47120");
+var a = n("735250"),
+  r = n("470079"),
+  s = n("120356"),
+  i = n.n(s),
+  l = n("481060"),
+  o = n("729285"),
+  c = n("87576"),
+  d = n("308083"),
+  u = n("689938"),
+  f = n("418571");
 
 function m(e) {
   return !d.ALL_TRAITS_SET.has(e) && !d.SUGGESTED_TRAITS_SET.has(e) && !d.LANGUAGES_SET.has(e)
@@ -17,85 +17,85 @@ function m(e) {
 t.default = e => {
   let {
     handleUpdate: t,
-    interests: a,
-    error: r
-  } = e, [h, E] = i.useState(""), T = i.useMemo(() => Array.from(a), [a]), p = i.useMemo(() => T.filter(m), [T]), _ = i.useMemo(() => [...d.SUGGESTED_TRAITS_SET, ...p], [p]), C = i.useMemo(() => T.filter(e => !d.ALL_TRAITS_SET.has(e) && !d.LANGUAGES_SET.has(e)), [T]), g = e => {
-    let n = new Set(a);
-    n.delete(e), t({
-      interests: n
+    interests: n,
+    error: s
+  } = e, [h, p] = r.useState(""), T = r.useMemo(() => Array.from(n), [n]), E = r.useMemo(() => T.filter(m), [T]), C = r.useMemo(() => [...d.SUGGESTED_TRAITS_SET, ...E], [E]), _ = r.useMemo(() => T.filter(e => !d.ALL_TRAITS_SET.has(e) && !d.LANGUAGES_SET.has(e)), [T]), x = e => {
+    let a = new Set(n);
+    a.delete(e), t({
+      interests: a
     })
-  }, x = i.useCallback(e => {
-    if (a.size === d.MAX_NUM_INTERESTS) return;
-    let n = null != e ? e : h.trim();
-    if (0 === n.length) return;
-    let i = new Set(a);
-    i.add(n), t({
-      interests: i
-    }), E("")
-  }, [t, h, a]), I = i.useCallback(e => {
+  }, g = r.useCallback(e => {
+    if (n.size === d.MAX_NUM_INTERESTS) return;
+    let a = null != e ? e : h.trim();
+    if (0 === a.length) return;
+    let r = new Set(n);
+    r.add(a), t({
+      interests: r
+    }), p("")
+  }, [t, h, n]), I = r.useCallback(e => {
     switch (e.key) {
       case "Enter":
       case "Tab":
-        e.preventDefault(), e.stopPropagation(), x()
+        e.preventDefault(), e.stopPropagation(), g()
     }
-  }, [x]);
-  return (0, n.jsxs)("div", {
+  }, [g]);
+  return (0, a.jsxs)("div", {
     className: f.slideContentWithSidebar,
-    children: [(0, n.jsx)(l.Heading, {
+    children: [(0, a.jsx)(l.Heading, {
       variant: "heading-xxl/medium",
       className: f.title,
       children: u.default.Messages.CLAN_SETUP_INTERESTS_TITLE
-    }), (0, n.jsx)(l.Text, {
+    }), (0, a.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: f.subtitle,
       children: u.default.Messages.CLAN_SETUP_INTERESTS_SUBTITLE
-    }), null != r && (0, n.jsx)(l.Text, {
+    }), null != s && (0, a.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
       className: f.errorText,
-      children: r
-    }), (0, n.jsxs)("div", {
+      children: s
+    }), (0, a.jsxs)("div", {
       className: f.content,
-      children: [(0, n.jsxs)("div", {
+      children: [(0, a.jsxs)("div", {
         className: f.mainPanelContainer,
-        children: [(0, n.jsxs)("div", {
+        children: [(0, a.jsxs)("div", {
           className: f.inputContainer,
-          children: [(0, n.jsx)(l.TextInput, {
+          children: [(0, a.jsx)(l.TextInput, {
             inputClassName: f.input,
             value: h,
             onKeyDown: I,
-            onChange: E,
+            onChange: p,
             placeholder: u.default.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
             maxLength: d.MAX_INTEREST_LENGTH,
-            disabled: a.size === d.MAX_NUM_INTERESTS
-          }), h.length > 0 && (0, n.jsx)(l.Clickable, {
-            onClick: () => x(h.trim()),
-            className: s()(f.plusIcon, f.clickable),
-            children: (0, n.jsx)(o.default, {
+            disabled: n.size === d.MAX_NUM_INTERESTS
+          }), h.length > 0 && (0, a.jsx)(l.Clickable, {
+            onClick: () => g(h.trim()),
+            className: i()(f.plusIcon, f.clickable),
+            children: (0, a.jsx)(o.default, {
               className: f.icon
             })
-          }), h.length > 0 && (0, n.jsx)(l.Text, {
+          }), h.length > 0 && (0, a.jsx)(l.Text, {
             color: "text-muted",
             variant: "text-xs/normal",
             className: f.enterToSearchText,
             children: u.default.Messages.CLAN_SETUP_INTERESTS_HELP
           })]
-        }), (0, n.jsx)(l.Text, {
+        }), (0, a.jsx)(l.Text, {
           className: f.interestsCategoryTitle,
           variant: "text-xs/semibold",
           color: "text-muted",
           children: u.default.Messages.CLAN_SETUP_SUGGESTED_INTERESTS
-        }), (0, n.jsx)("div", {
+        }), (0, a.jsx)("div", {
           className: f.interestsCategory,
-          children: _.map(e => {
-            let t = a.has(e);
-            return (0, n.jsx)(l.Clickable, {
-              className: s()(f.interestsTag, f.selectableOption, {
+          children: C.map(e => {
+            let t = n.has(e);
+            return (0, a.jsx)(l.Clickable, {
+              className: i()(f.interestsTag, f.selectableOption, {
                 [f.selectedOption]: t
               }),
-              onClick: () => t ? g(e) : x(e),
-              children: (0, n.jsx)(l.Text, {
+              onClick: () => t ? x(e) : g(e),
+              children: (0, a.jsx)(l.Text, {
                 variant: "text-xs/medium",
                 color: "none",
                 children: e
@@ -103,11 +103,11 @@ t.default = e => {
             }, e)
           })
         })]
-      }), (0, n.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: f.fixedWidthSidebar,
-        children: T.length > 0 && (0, n.jsx)(c.default, {
+        children: T.length > 0 && (0, a.jsx)(c.default, {
           traits: T,
-          traitsToHighlight: C
+          traitsToHighlight: _
         })
       })]
     })]

@@ -1,17 +1,17 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useFullScreenModalAnimationStyle: function() {
     return l
   }
 });
-var n = a("718017"),
-  i = a("748780"),
-  r = a("442837"),
-  s = a("607070");
+var a = n("718017"),
+  r = n("748780"),
+  s = n("442837"),
+  i = n("607070");
 
 function l() {
-  let e = (0, r.useStateFromStores)([s.default], () => s.default.useReducedMotion);
-  return (0, n.useSpring)({
+  let e = (0, s.useStateFromStores)([i.default], () => i.default.useReducedMotion);
+  return (0, a.useSpring)({
     from: {
       opacity: e ? 1 : 0,
       transform: e ? "scale(1)" : "scale(1.2)"
@@ -21,7 +21,7 @@ function l() {
       transform: "scale(1)"
     },
     config: {
-      easing: i.default.Easing.quad,
+      easing: r.default.Easing.quad,
       duration: e ? 0 : 200,
       clamp: !0
     }

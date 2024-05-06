@@ -1,17 +1,17 @@
 "use strict";
-a.r(t);
-var n = a("735250"),
-  i = a("470079"),
-  r = a("673591");
+n.r(t);
+var a = n("735250"),
+  r = n("470079"),
+  s = n("673591");
 t.default = e => {
   let {
     copy: t,
-    isSelected: a = !1,
-    onSelect: s
+    isSelected: n = !1,
+    onSelect: i
   } = e;
-  return i.useEffect(() => {
-    a && (null == s || s())
-  }, [a, s]), (0, n.jsx)(r.default, {
+  return r.useEffect(() => {
+    n && (null == i || i())
+  }, [n, i]), (0, a.jsx)(s.default, {
     copy: t
   })
 }

@@ -1,34 +1,34 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  i = a("470079"),
-  r = a("120356"),
-  s = a.n(r),
-  l = a("718017"),
-  o = a("442837"),
-  c = a("481060"),
-  d = a("393238"),
-  u = a("607070"),
-  f = a("689938"),
-  m = a("532136");
-t.default = i.memo(function(e) {
+n.r(t), n("47120");
+var a = n("735250"),
+  r = n("470079"),
+  s = n("120356"),
+  i = n.n(s),
+  l = n("718017"),
+  o = n("442837"),
+  c = n("481060"),
+  d = n("393238"),
+  u = n("607070"),
+  f = n("689938"),
+  m = n("532136");
+t.default = r.memo(function(e) {
   let {
     renderHeader: t,
-    children: a,
-    isExpanded: r,
+    children: n,
+    isExpanded: s,
     isStuck: h,
-    onExpand: E,
+    onExpand: p,
     disableAnimation: T,
-    disableBackground: p
-  } = e, _ = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [C, g] = i.useState(!0), [x, I] = i.useState(!1), {
-    ref: v,
-    height: N = 0
+    disableBackground: E
+  } = e, C = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [_, x] = r.useState(!0), [g, I] = r.useState(!1), {
+    ref: N,
+    height: v = 0
   } = (0, d.default)(), {
     ref: A,
     height: S = 0
-  } = (0, d.default)(), [R, L] = i.useState(r), M = (0, l.useSpring)({
-    height: R ? S + N : N,
-    immediate: C || _ || T,
+  } = (0, d.default)(), [L, R] = r.useState(s), b = (0, l.useSpring)({
+    height: L ? S + v : v,
+    immediate: _ || C || T,
     config: {
       ...l.config.stiff,
       clamp: !0
@@ -40,34 +40,34 @@ t.default = i.memo(function(e) {
       I(!0)
     }
   });
-  return i.useLayoutEffect(() => {
-    I(!1), L(r)
-  }, [r]), i.useLayoutEffect(() => {
+  return r.useLayoutEffect(() => {
+    I(!1), R(s)
+  }, [s]), r.useLayoutEffect(() => {
     let e = setTimeout(() => {
-      g(!1)
+      x(!1)
     }, 100);
     return () => clearTimeout(e)
-  }, []), (0, n.jsx)(c.Clickable, {
-    className: s()(m.editCard, {
-      [m.toggled]: r,
-      [m.noBackground]: p
+  }, []), (0, a.jsx)(c.Clickable, {
+    className: i()(m.editCard, {
+      [m.toggled]: s,
+      [m.noBackground]: E
     }),
-    children: (0, n.jsxs)(l.animated.div, {
-      className: s()(m.contentExpandContainer, {
-        [m.showOverflow]: r && x
+    children: (0, a.jsxs)(l.animated.div, {
+      className: i()(m.contentExpandContainer, {
+        [m.showOverflow]: s && g
       }),
-      style: M,
-      children: [(0, n.jsx)(c.Clickable, {
-        innerRef: v,
-        onClick: h ? void 0 : E,
-        className: s()(m.innerHeader, {
-          [m.toggled]: r && h
+      style: b,
+      children: [(0, a.jsx)(c.Clickable, {
+        innerRef: N,
+        onClick: h ? void 0 : p,
+        className: i()(m.innerHeader, {
+          [m.toggled]: s && h
         }),
         "aria-label": f.default.Messages.EXPAND,
         children: t
-      }), (0, n.jsx)("div", {
+      }), (0, a.jsx)("div", {
         ref: A,
-        children: a
+        children: n
       })]
     })
   })

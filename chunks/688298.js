@@ -1,66 +1,66 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return d
   }
 });
-var n = a("735250"),
-  i = a("470079"),
-  r = a("481060"),
-  s = a("703685"),
-  l = a("689938"),
-  o = a("109267");
+var a = n("735250"),
+  r = n("470079"),
+  s = n("481060"),
+  i = n("703685"),
+  l = n("689938"),
+  o = n("109267");
 
 function c(e) {
   let {
     showSecondaryColor: t,
-    palette: a,
+    palette: n,
     onPrimaryColorChange: c,
     onSecondaryColorChange: d
-  } = e, u = i.useRef(null);
-  return (0, r.useFocusLock)(u), (0, n.jsxs)("div", {
+  } = e, u = r.useRef(null);
+  return (0, s.useFocusLock)(u), (0, a.jsxs)("div", {
     className: o.popoutContainer,
-    children: [(0, n.jsx)(r.Text, {
+    children: [(0, a.jsx)(s.Text, {
       variant: "text-xs/semibold",
       color: "header-secondary",
       className: o.customColorsHeader,
       children: l.default.Messages.CLAN_PALETTE_PICKER_CUSTOM_COLORS
-    }), (0, n.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       ref: u,
       className: o.colorPickersContainer,
-      children: [(0, n.jsxs)("div", {
+      children: [(0, a.jsxs)("div", {
         className: o.colorColumn,
-        children: [(0, n.jsx)("div", {
+        children: [(0, a.jsx)("div", {
           className: o.colorSwatch,
           style: {
-            backgroundColor: a.primary
+            backgroundColor: n.primary
           }
-        }), (0, n.jsx)(r.Text, {
+        }), (0, a.jsx)(s.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
           children: l.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
-        }), (0, n.jsx)(s.CustomColorPicker, {
+        }), (0, a.jsx)(i.CustomColorPicker, {
           className: o.colorPicker,
-          value: a.primary,
+          value: n.primary,
           eagerUpdate: !0,
           wrapperComponentType: "div",
           showEyeDropper: !0,
           onChange: c
         })]
-      }), t && (0, n.jsxs)("div", {
+      }), t && (0, a.jsxs)("div", {
         className: o.colorColumn,
-        children: [(0, n.jsx)("div", {
+        children: [(0, a.jsx)("div", {
           className: o.colorSwatch,
           style: {
-            backgroundColor: a.secondary
+            backgroundColor: n.secondary
           }
-        }), (0, n.jsx)(r.Text, {
+        }), (0, a.jsx)(s.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
           children: l.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
-        }), (0, n.jsx)(s.CustomColorPicker, {
+        }), (0, a.jsx)(i.CustomColorPicker, {
           className: o.colorPicker,
-          value: a.secondary,
+          value: n.secondary,
           eagerUpdate: !0,
           wrapperComponentType: "div",
           showEyeDropper: !0,
@@ -74,25 +74,25 @@ function c(e) {
 function d(e) {
   let {
     shouldShow: t,
-    showSecondaryColor: a,
-    onRequestClose: i,
-    children: s,
+    showSecondaryColor: n,
+    onRequestClose: r,
+    children: i,
     palette: l,
     onPrimaryColorChange: o,
     onSecondaryColorChange: d
   } = e;
-  return (0, n.jsx)(r.Popout, {
-    renderPopout: () => (0, n.jsx)(c, {
-      showSecondaryColor: a,
+  return (0, a.jsx)(s.Popout, {
+    renderPopout: () => (0, a.jsx)(c, {
+      showSecondaryColor: n,
       palette: l,
       onPrimaryColorChange: o,
       onSecondaryColorChange: d
     }),
     position: "left",
     shouldShow: t,
-    onRequestClose: i,
-    animation: r.Popout.Animation.TRANSLATE,
+    onRequestClose: r,
+    animation: s.Popout.Animation.TRANSLATE,
     animationPosition: "right",
-    children: s
+    children: i
   })
 }

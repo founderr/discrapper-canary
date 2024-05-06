@@ -1,15 +1,15 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useClanSetupGameSelectableSearch: function() {
     return d
   }
 });
-var n = a("470079"),
-  i = a("392711"),
-  r = a.n(i),
-  s = a("442837"),
-  l = a("77498"),
-  o = a("308083");
+var a = n("470079"),
+  r = n("392711"),
+  s = n.n(r),
+  i = n("442837"),
+  l = n("77498"),
+  o = n("308083");
 
 function c(e) {
   var t;
@@ -17,7 +17,7 @@ function c(e) {
 }
 
 function d() {
-  let e = (0, s.useStateFromStores)([l.default], () => r()(l.default.games).map(e => ({
+  let e = (0, i.useStateFromStores)([l.default], () => s()(l.default.games).map(e => ({
       value: e.id,
       label: e.name
     })).sortBy(e => {
@@ -26,10 +26,10 @@ function d() {
       } = e;
       return c(t)
     }).reverse().value(), []),
-    t = n.useCallback((e, t) => c(t.item.value) - c(e.item.value), []);
+    t = a.useCallback((e, t) => c(t.item.value) - c(e.item.value), []);
   return {
     options: e,
-    matchSorterOptions: n.useMemo(() => ({
+    matchSorterOptions: a.useMemo(() => ({
       baseSort: t,
       keys: ["label"]
     }), [t])

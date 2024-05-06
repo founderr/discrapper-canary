@@ -1,12 +1,12 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useShouldShowNewOfferBadgeForAprilMarketingMoment: function() {
-    return s
+    return i
   }
 });
-var n = a("524437"),
-  i = a("605236");
-let r = (0, a("818083").createExperiment)({
+var a = n("524437"),
+  r = n("605236");
+let s = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-04_april_marketing_moment_experiment",
   label: "2024 April Marketing Moment",
@@ -22,11 +22,11 @@ let r = (0, a("818083").createExperiment)({
   }]
 });
 
-function s(e) {
-  let t = r.useExperiment({
+function i(e) {
+  let t = s.useExperiment({
       location: e
     }).enabled,
-    a = (0, i.useIsDismissibleContentDismissed)(n.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE);
-  return t && !a
+    n = (0, r.useIsDismissibleContentDismissed)(a.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE);
+  return t && !n
 }
-t.default = r
+t.default = s

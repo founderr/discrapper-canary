@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return h
   }
 });
-var i = n("735250");
+var a = n("735250");
 n("470079");
 var r = n("249849"),
-  a = n("907561"),
-  s = n("689938"),
-  o = n("408263");
-let l = ["#00ff00"],
-  u = ["#000000", "#ed1c24"],
+  s = n("907561"),
+  i = n("689938"),
+  l = n("408263");
+let o = ["#00ff00"],
+  c = ["#000000", "#ed1c24"],
   d = [.7],
-  _ = [{
+  u = [{
     base: 1,
     tint: 2
   }],
-  c = [0, .2],
-  E = [{
+  f = [0, .2],
+  m = [{
     base: 1,
     tint: 0
   }, {
@@ -26,75 +26,75 @@ let l = ["#00ff00"],
     tint: 4
   }];
 
-function I(e) {
+function h(e) {
   let {
     width: t,
     height: n,
-    primaryTintColor: I,
-    secondaryTintColor: T,
-    ...f
+    primaryTintColor: h,
+    secondaryTintColor: p,
+    ...T
   } = e, {
-    primaryColorsTransformed: S,
-    secondaryColorsTransformed: h
+    primaryColorsTransformed: E,
+    secondaryColorsTransformed: C
   } = (0, r.getTransformedBadgeColors)({
-    primaryBaseColors: l,
-    primaryTintColor: I,
+    primaryBaseColors: o,
+    primaryTintColor: h,
     primaryTintLuminances: d,
-    primaryLuminanceWeights: _,
-    secondaryBaseColors: u,
-    secondaryTintColor: T,
-    secondaryTintLuminances: c,
-    secondaryLuminanceWeights: E
+    primaryLuminanceWeights: u,
+    secondaryBaseColors: c,
+    secondaryTintColor: p,
+    secondaryTintLuminances: f,
+    secondaryLuminanceWeights: m
   }), {
-    styleContent: A,
-    containerId: m
-  } = (0, a.useClanBannerStyleInjection)(S, h);
-  return (0, i.jsxs)("svg", {
-    ...f,
-    "aria-label": s.default.Messages.CLAN_LOOK_BANNER,
+    styleContent: _,
+    containerId: x
+  } = (0, s.useClanBannerStyleInjection)(E, C);
+  return (0, a.jsxs)("svg", {
+    ...T,
+    "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
     height: n,
-    viewBox: "0 0 ".concat(a.CLAN_BANNER_WIDTH, " ").concat(a.CLAN_BANNER_HEIGHT),
-    children: [(0, i.jsxs)("defs", {
-      children: [(0, i.jsx)("defs", {
-        children: (0, i.jsxs)("linearGradient", {
+    viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
+    children: [(0, a.jsxs)("defs", {
+      children: [(0, a.jsx)("defs", {
+        children: (0, a.jsxs)("linearGradient", {
           id: "line-gradient",
           x1: "0",
           x2: "1",
           y1: "0",
           y2: "1",
-          children: [(0, i.jsx)("stop", {
-            stopColor: h[1],
+          children: [(0, a.jsx)("stop", {
+            stopColor: C[1],
             offset: "0%"
-          }), (0, i.jsx)("stop", {
-            stopColor: S[0],
+          }), (0, a.jsx)("stop", {
+            stopColor: E[0],
             offset: "50%"
-          }), (0, i.jsx)("stop", {
-            stopColor: S[0],
+          }), (0, a.jsx)("stop", {
+            stopColor: E[0],
             offset: "80%"
-          }), (0, i.jsx)("stop", {
-            stopColor: h[1],
+          }), (0, a.jsx)("stop", {
+            stopColor: C[1],
             offset: "100%"
           })]
         })
-      }), (0, i.jsx)("style", {
-        children: A
+      }), (0, a.jsx)("style", {
+        children: _
       })]
-    }), (0, i.jsx)("use", {
-      href: "".concat(o, "#wrapper-layer"),
-      id: m
-    }), (0, i.jsx)("use", {
-      href: "".concat(o, "#heightmap-lines-0"),
+    }), (0, a.jsx)("use", {
+      href: "".concat(l, "#wrapper-layer"),
+      id: x
+    }), (0, a.jsx)("use", {
+      href: "".concat(l, "#heightmap-lines-0"),
       style: {
         fill: "url(#line-gradient)"
       }
-    }), (0, i.jsx)("use", {
-      href: "".concat(o, "#heightmap-lines-1"),
+    }), (0, a.jsx)("use", {
+      href: "".concat(l, "#heightmap-lines-1"),
       style: {
         fill: "url(#line-gradient)"
       }
-    }), (0, i.jsx)("use", {
-      href: "".concat(o, "#heightmap-lines-2"),
+    }), (0, a.jsx)("use", {
+      href: "".concat(l, "#heightmap-lines-2"),
       style: {
         fill: "url(#line-gradient)"
       }

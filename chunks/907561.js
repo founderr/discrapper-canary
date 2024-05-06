@@ -1,27 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   CLAN_BANNER_HEIGHT: function() {
-    return s
+    return i
   },
   CLAN_BANNER_WIDTH: function() {
-    return a
+    return s
   },
   useClanBannerStyleInjection: function() {
-    return o
+    return l
   }
 });
-var i = n("470079"),
+var a = n("470079"),
   r = n("153832");
-let a = 262,
-  s = 100;
+let s = 262,
+  i = 100;
 
-function o(e, t) {
-  let n = i.useMemo(() => "clan-banner-container-".concat((0, r.v4)()), []);
+function l(e, t) {
+  let n = a.useMemo(() => "clan-banner-container-".concat((0, r.v4)()), []);
   return {
-    styleContent: i.useMemo(() => {
-      let i = e.map((e, t) => "--primary-".concat(t, ": ").concat(e, ";")).join("\n"),
+    styleContent: a.useMemo(() => {
+      let a = e.map((e, t) => "--primary-".concat(t, ": ").concat(e, ";")).join("\n"),
         r = t.map((e, t) => "--secondary-".concat(t, ": ").concat(e, ";")).join("\n");
-      return "#".concat(n, " {\n        ").concat(i, "\n        ").concat(r, "\n      }")
+      return "#".concat(n, " {\n        ").concat(a, "\n        ").concat(r, "\n      }")
     }, [n, e, t]),
     containerId: n
   }
