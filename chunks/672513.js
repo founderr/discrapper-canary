@@ -8,11 +8,16 @@ var i = n("981631");
 
 function r(e, t) {
   let n = new Date;
-  if (e === i.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM) return {
-    time_minus: t.map(e => n.getTime() - e.timestamp.getTime()),
-    channel_ids: t.map(e => e.channelId),
-    channel_types: t.map(e => e.channelType),
-    rtc_states: t.map(e => e.rtcState)
-  };
-  throw Error("getClicksteamDrainEvent: Unknown event: ".concat(e))
+  switch (e) {
+    case i.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM:
+      return {
+        time_minus: t.map(e => n.getTime() - e.timestamp.getTime()), channel_ids: t.map(e => e.channelId), channel_types: t.map(e => e.channelType), rtc_states: t.map(e => e.rtcState)
+      };
+    case i.AnalyticEvents.GUILD_VIEWED_CLICKSTREAM:
+      return {
+        time_minus: t.map(e => n.getTime() - e.timestamp.getTime()), guild_ids: t.map(e => e.guildId), rtc_states: t.map(e => e.rtcState)
+      };
+    default:
+      throw Error("getClicksteamDrainEvent: Unknown event: ".concat(e))
+  }
 }

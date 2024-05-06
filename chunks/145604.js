@@ -201,7 +201,9 @@ class z extends s.PureComponent {
         viewing_all_channels: !j.default.isOptInEnabled(G),
         num_recent_channels: g.default.recentsChannelCount(G)
       };
-      (0, u.trackWithMetadata)(W.AnalyticEvents.GUILD_VIEWED, e)
+      (0, u.trackWithMetadata)(W.AnalyticEvents.GUILD_VIEWED, e), (0, f.trackClickstream)(W.AnalyticEvents.GUILD_VIEWED_CLICKSTREAM, {
+        guildId: G
+      })
     } else w && null == G && k === W.Routes.FRIENDS && (!e.connected || z !== e.friendsTabSection || k !== e.homeLink) ? B.default.track(W.AnalyticEvents.FRIENDS_LIST_VIEWED, {
       tab_opened: z,
       ...(0, d.default)(),
