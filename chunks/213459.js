@@ -674,34 +674,36 @@ function en(e, t, n) {
     let s = [];
     if (r === g.ScoreMethod.APPLICATION_ONLY || r === g.ScoreMethod.COMMAND_OR_APPLICATION) {
       let t = i.name.toLocaleLowerCase();
-      t.startsWith(e) ? a = 5 : t.includes(e) && (a = 6)
+      if (t.startsWith(e)) a = 5;
+      else if (t.includes(e)) a = 6;
+      else {
+        var o, l;
+        let t = null === (l = i.application) || void 0 === l ? void 0 : null === (o = l.description) || void 0 === o ? void 0 : o.toLocaleLowerCase();
+        (null == t ? void 0 : t.includes(e)) && (a = 8)
+      }
     }
-    let o = t[0],
-      l = t.slice(1).join(" ");
+    let u = t[0],
+      d = t.slice(1).join(" ");
     for (let t of n) {
       let n;
-      if (r === g.ScoreMethod.COMMAND_ONLY || r === g.ScoreMethod.COMMAND_OR_APPLICATION) {
-        var u;
-        n = null !== (u = function(e, t, n, i) {
-          var r;
-          let a = e.name,
-            s = e.displayName;
-          if (a.startsWith(t) || s.startsWith(t)) return 0;
-          if (a.startsWith(n) && a.split(" ").slice(1).join(" ").startsWith(i) || s.startsWith(n) && s.split(" ").slice(1).join(" ").startsWith(i)) return 1;
-          if (a.includes(t) || (null == s ? void 0 : s.includes(t))) return 2;
-          let o = !1;
-          for (let {
-              name: n,
-              serverLocalizedName: i
-            }
-            of null !== (r = e.options) && void 0 !== r ? r : []) {
-            if (n.startsWith(t) || "".concat(a, " ").concat(n).startsWith(t) || null != s && "".concat(s, " ").concat(n).startsWith(t) || null != i && (i.startsWith(t) || "".concat(a, " ").concat(i).startsWith(t) || null != s && "".concat(s, " ").concat(i).startsWith(t))) return 3;
-            (n.includes(t) || (null == i ? void 0 : i.includes(t))) && (o = !0)
+      (r === g.ScoreMethod.COMMAND_ONLY || r === g.ScoreMethod.COMMAND_OR_APPLICATION) && (n = function(e, t, n, i) {
+        var r;
+        let a = e.name,
+          s = e.displayName;
+        if (a.startsWith(t) || s.startsWith(t)) return 0;
+        if (a.startsWith(n) && a.split(" ").slice(1).join(" ").startsWith(i) || s.startsWith(n) && s.split(" ").slice(1).join(" ").startsWith(i)) return 1;
+        if (a.includes(t) || (null == s ? void 0 : s.includes(t))) return 2;
+        let o = !1;
+        for (let {
+            name: n,
+            serverLocalizedName: i
           }
-          if (o) return 4
-        }(t, e, o, l)) && void 0 !== u ? u : a
-      } else n = a;
-      void 0 !== n && s.push({
+          of null !== (r = e.options) && void 0 !== r ? r : []) {
+          if (n.startsWith(t) || "".concat(a, " ").concat(n).startsWith(t) || null != s && "".concat(s, " ").concat(n).startsWith(t) || null != i && (i.startsWith(t) || "".concat(a, " ").concat(i).startsWith(t) || null != s && "".concat(s, " ").concat(i).startsWith(t))) return 3;
+          (n.includes(t) || (null == i ? void 0 : i.includes(t))) && (o = !0)
+        }
+        return o ? 4 : e.description.toLocaleLowerCase().includes(t) ? 7 : void 0
+      }(t, e, u, d)), (void 0 === n || void 0 !== a && a < n) && (n = a), void 0 !== n && s.push({
         ...t,
         score: n
       })
@@ -765,7 +767,7 @@ function eo(e, t) {
       permission: i
     });
   return n
-}(a = r || (r = {}))[a.COMMAND_NAME_STARTS_WITH = 0] = "COMMAND_NAME_STARTS_WITH", a[a.STARTS_WITH_COMMAND_NAME = 1] = "STARTS_WITH_COMMAND_NAME", a[a.COMMAND_NAME_CONTAINS = 2] = "COMMAND_NAME_CONTAINS", a[a.STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME = 3] = "STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME", a[a.OPTION_NAME_CONTAINS = 4] = "OPTION_NAME_CONTAINS", a[a.SECTION_NAME_STARTS_WITH = 5] = "SECTION_NAME_STARTS_WITH", a[a.SECTION_NAME_CONTAINS = 6] = "SECTION_NAME_CONTAINS";
+}(a = r || (r = {}))[a.COMMAND_NAME_STARTS_WITH = 0] = "COMMAND_NAME_STARTS_WITH", a[a.STARTS_WITH_COMMAND_NAME = 1] = "STARTS_WITH_COMMAND_NAME", a[a.COMMAND_NAME_CONTAINS = 2] = "COMMAND_NAME_CONTAINS", a[a.STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME = 3] = "STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME", a[a.OPTION_NAME_CONTAINS = 4] = "OPTION_NAME_CONTAINS", a[a.SECTION_NAME_STARTS_WITH = 5] = "SECTION_NAME_STARTS_WITH", a[a.SECTION_NAME_CONTAINS = 6] = "SECTION_NAME_CONTAINS", a[a.COMMAND_DESCRIPTION_CONTAINS = 7] = "COMMAND_DESCRIPTION_CONTAINS", a[a.SECTION_DESCRIPTION_CONTAINS = 8] = "SECTION_DESCRIPTION_CONTAINS";
 
 function el(e, t) {
   return X.collator.compare(e, t)
