@@ -29,7 +29,7 @@ function _(e) {
     animate: C,
     fillBackgroundColor: S,
     hasError: m
-  } = e, p = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), I = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY), T = s.useMemo(() => (0, f.getClanBackgroundStyles)(S, I.hex()), [S, I]), g = null != T, A = (0, r.useSpring)({
+  } = e, p = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), I = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY), T = s.useMemo(() => (0, f.getClanPrimaryButtonStyles)(S, I.hex()), [S, I]), g = null != T, A = (0, r.useSpring)({
     transform: _ ? "translateX(0%)" : "translateX(-100%)",
     config: {
       ...r.config.stiff,
@@ -52,6 +52,7 @@ function _(e) {
     text: m ? N : l,
     "aria-label": m ? E.default.Messages.CLAN_SUBMIT_ERROR_TITLE : l,
     shouldShow: null != n,
+    tooltipStyle: T,
     tooltipClassName: h.progressStepTooltip,
     children: e => (0, a.jsxs)(u.Clickable, {
       ...e,

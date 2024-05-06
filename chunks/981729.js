@@ -65,32 +65,36 @@ let p = Object.freeze({}),
       children: a,
       onNonAccessibleClick: o,
       tooltipClassName: l,
-      tooltipContentClassName: d,
-      spacing: _ = 8,
-      animationStyle: E,
-      disableTooltipPointerEvents: I = !1,
-      allowOverflow: T = !1
-    } = e, f = "".concat("string" == typeof a ? a : "", ":").concat(i);
+      tooltipStyle: d,
+      tooltipContentClassName: _,
+      spacing: E = 8,
+      animationStyle: I,
+      disableTooltipPointerEvents: T = !1,
+      allowOverflow: f = !1
+    } = e, S = "".concat("string" == typeof a ? a : "", ":").concat(i);
     return (0, s.jsx)(A.AppReferencePositionLayer, {
-      disablePointerEvents: I,
+      disablePointerEvents: T,
       targetRef: t,
       position: i,
       autoInvert: !0,
       align: n,
-      positionKey: f,
-      spacing: _,
+      positionKey: S,
+      spacing: E,
       nudgeAlignIntoViewport: !0,
       children: e => {
         let {
           position: t,
-          nudge: _
+          nudge: E
         } = e;
         return (0, s.jsxs)(c.animated.div, {
           onClick: o,
           className: u()(m.tooltip, O[null != t ? t : i], O[r], {
-            [m.tooltipDisablePointerEvents]: I
+            [m.tooltipDisablePointerEvents]: T
           }, l),
-          style: E,
+          style: {
+            ...I,
+            ...d
+          },
           children: [(0, s.jsx)("div", {
             className: m.tooltipPointer,
             style: function(e, t, n) {
@@ -100,11 +104,11 @@ let p = Object.freeze({}),
               return t === (i ? "top" : "left") ? (r = "0%", a += 16) : t === (i ? "bottom" : "right") && (r = "100%", a -= 20), {
                 [i ? "top" : "left"]: "calc(".concat(r, " + ").concat(a, "px)")
               }
-            }(null != t ? t : i, n, _)
+            }(null != t ? t : i, n, E)
           }), (0, s.jsx)("div", {
             className: u()(m.tooltipContent, {
-              [m.tooltipContentAllowOverflow]: T
-            }, d),
+              [m.tooltipContentAllowOverflow]: f
+            }, _),
             children: a
           })]
         })
@@ -198,27 +202,29 @@ class D extends(r = o.Component) {
       color: i,
       spacing: r,
       tooltipClassName: a,
-      tooltipContentClassName: o,
-      disableTooltipPointerEvents: l,
-      onAnimationRest: u,
-      allowOverflow: d,
-      clickableOnMobile: _,
-      hideOnClick: c
-    } = this.props, I = (E.isMobile || E.isTablet) && !0 === _ && c, T = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement, f = null;
-    return f = e instanceof Function ? T ? e() : null : e, (0, s.jsx)(v, {
-      disableTooltipPointerEvents: !1 !== l && !I || !0 === l,
+      tooltipStyle: o,
+      tooltipContentClassName: l,
+      disableTooltipPointerEvents: u,
+      onAnimationRest: d,
+      allowOverflow: _,
+      clickableOnMobile: c,
+      hideOnClick: I
+    } = this.props, T = (E.isMobile || E.isTablet) && !0 === c && I, f = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement, S = null;
+    return S = e instanceof Function ? f ? e() : null : e, (0, s.jsx)(v, {
+      disableTooltipPointerEvents: !1 !== u && !T || !0 === u,
       targetElementRef: this.domElementRef,
+      tooltipStyle: o,
       tooltipClassName: a,
-      tooltipContentClassName: o,
+      tooltipContentClassName: l,
       align: t,
       position: n,
       color: i,
       spacing: r,
-      isVisible: T,
-      onAnimationRest: u,
-      onNonAccessibleClick: I ? this.handleClick : void 0,
-      allowOverflow: d,
-      children: f
+      isVisible: f,
+      onAnimationRest: d,
+      onNonAccessibleClick: T ? this.handleClick : void 0,
+      allowOverflow: _,
+      children: S
     })
   }
   show() {

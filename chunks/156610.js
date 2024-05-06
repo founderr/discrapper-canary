@@ -33,6 +33,7 @@ e.exports = {
   previousButton: "previousButton_b43130",
   progressContainer: "progressContainer__378bd",
   progressStep: "progressStep_dec95e",
+  progressStepContainer: "progressStepContainer__76950",
   progressStepFill: "progressStepFill__47c59",
   progressStepTooltip: "progressStepTooltip_defee0",
   progressStepWrapper: "progressStepWrapper__6113c",
