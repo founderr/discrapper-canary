@@ -19,9 +19,9 @@ var l = a("735250"),
   x = a("702486"),
   b = a("580747"),
   S = a("605236"),
-  T = a("984370"),
-  L = a("329067"),
-  v = a("51855"),
+  v = a("984370"),
+  T = a("329067"),
+  L = a("51855"),
   I = a("479446"),
   N = a("981632"),
   _ = a("290026"),
@@ -77,7 +77,7 @@ function ei(e) {
   let S = s.useCallback(e => t => {
       e.skuId === g && (c.current = t.current)
     }, [g, c]),
-    T = (e, t) => 0 === e.length ? null : (0, l.jsxs)("div", {
+    v = (e, t) => 0 === e.length ? null : (0, l.jsxs)("div", {
       children: [null != t ? (0, l.jsx)(f.Text, {
         className: n()(en.itemTypeTitle, {
           [en.itemTypeTitleForTallerCard]: d
@@ -98,8 +98,8 @@ function ei(e) {
         }, e.skuId))
       })]
     });
-  return x ? T(h) : (0, l.jsxs)(l.Fragment, {
-    children: [T(null !== (t = E[o.CollectiblesItemType.AVATAR_DECORATION]) && void 0 !== t ? t : [], er.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), T(null !== (a = E[o.CollectiblesItemType.PROFILE_EFFECT]) && void 0 !== a ? a : [], er.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE)]
+  return x ? v(h) : (0, l.jsxs)(l.Fragment, {
+    children: [v(null !== (t = E[o.CollectiblesItemType.AVATAR_DECORATION]) && void 0 !== t ? t : [], er.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), v(null !== (a = E[o.CollectiblesItemType.PROFILE_EFFECT]) && void 0 !== a ? a : [], er.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE)]
   })
 }
 
@@ -179,14 +179,14 @@ t.default = function(e) {
     } = (0, M.useCollectiblesShopTallerCardsExperiment)({
       location: "CollectiblesShop"
     }),
-    ei = v.default.useExperiment({
+    ei = L.default.useExperiment({
       location: E.default.COLLECTIBLES_SHOP
     }, {
       autoTrackExposure: !1
     }),
     {
       userIsEligible: eu
-    } = (0, L.useLightningCheckoutEligibility)(),
+    } = (0, T.useLightningCheckoutEligibility)(),
     ec = ei.enabled && eu,
     ed = s.useRef(null),
     [ef, em] = s.useState(!1);
@@ -233,7 +233,7 @@ t.default = function(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [t, p, I, N]), s.useEffect(() => {
-    eu && v.default.trackExposure({
+    eu && L.default.trackExposure({
       location: E.default.COLLECTIBLES_SHOP
     })
   }, [eu]);
@@ -262,12 +262,12 @@ t.default = function(e) {
     children: [(0, l.jsxs)("div", {
       className: en.shop,
       ref: t ? eb : void 0,
-      children: [t ? null : (0, l.jsxs)(T.default, {
+      children: [t ? null : (0, l.jsxs)(v.default, {
         className: n()((0, B.getThemeClass)(ex), en.__invalid_headerBar),
         toolbar: !0,
         children: [(0, l.jsx)(A.default, {
           className: en.logo
-        }), (0, l.jsx)(T.default.Title, {
+        }), (0, l.jsx)(v.default.Title, {
           className: en.title,
           children: er.default.Messages.COLLECTIBLES_SHOP
         })]

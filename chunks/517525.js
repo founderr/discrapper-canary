@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("74538"),
   I = n("557457"),
   A = n("475674"),
-  N = n("981631"),
-  v = n("474936"),
+  v = n("981631"),
+  N = n("474936"),
   x = n("689938"),
   M = n("706119");
 let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
@@ -83,7 +83,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         location: U
       } = (0, h.useAnalyticsContext)(),
       F = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-      w = o && !T.default.isPremium(F, v.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, F),
+      w = o && !T.default.isPremium(F, N.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, F),
       k = l.useCallback(() => {
         w && b && (0, f.openModalLazy)(async () => {
           let {
@@ -96,8 +96,8 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         })
       }, [w, b, U]);
     if (l.useEffect(() => {
-        !R && b && (_.default.track(N.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-          type: v.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
+        !R && b && (_.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+          type: N.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
           location_stack: P

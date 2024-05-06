@@ -30,14 +30,14 @@ function S(e) {
     canManageGuildEvent: I
   } = (0, r.useManageResourcePermissions)(T), A = I(_);
   if (null == _) return null;
-  let N = () => {
+  let v = () => {
       if (null != T && (0, p.default)(T)) {
         (0, h.openEndEventModal)(T, S);
         return
       }
       n()
     },
-    v = () => {
+    N = () => {
       m.default.endEvent(_.id, _.guild_id)
     };
   return A ? (0, a.jsx)(s.Popout, {
@@ -54,7 +54,7 @@ function S(e) {
           children: (0, a.jsx)(s.MenuItem, {
             id: "end-voice-event",
             color: "danger",
-            action: v,
+            action: N,
             label: C.default.Messages.END_EVENT,
             icon: f.default
           })
@@ -72,7 +72,7 @@ function S(e) {
         label: C.default.Messages.DISCONNECT_SELF,
         color: "red",
         iconComponent: c.default,
-        onClick: N,
+        onClick: v,
         onPopoutClick: t,
         className: g.buttonSpacing
       })

@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("569984"),
   I = n("497505"),
   A = n("918701"),
-  N = n("5881"),
-  v = n("874137"),
+  v = n("5881"),
+  N = n("874137"),
   x = n("340100"),
   M = n("611855"),
   R = n("644646"),
@@ -82,7 +82,7 @@ t.default = function(e) {
   }, [z]), ee = (0, y.useHandleClaimQuestsReward)({
     quest: z,
     location: I.QuestContent.QUEST_LIVE_STREAM
-  }), et = l.useMemo(() => (0, N.getQuestLogger)({
+  }), et = l.useMemo(() => (0, v.getQuestLogger)({
     quest: z,
     location: j.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
   }), [z]), en = (0, _.useIsQuestExpired)(z);
@@ -104,7 +104,7 @@ t.default = function(e) {
     quest: z,
     questContent: I.QuestContent.QUEST_LIVE_STREAM
   });
-  return (0, a.jsx)(v.QuestContentImpressionTracker, {
+  return (0, a.jsx)(N.QuestContentImpressionTracker, {
     questOrQuests: z,
     overrideVisibility: !B,
     questContent: I.QuestContent.QUEST_LIVE_STREAM,

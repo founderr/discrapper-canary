@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("390322"),
   I = n("616286"),
   A = n("961048"),
-  N = n("179424"),
-  v = n("786915"),
+  v = n("179424"),
+  N = n("786915"),
   x = n("975146"),
   M = n("991617"),
   R = n("606304"),
@@ -95,7 +95,7 @@ function B(e) {
   if (B) {
     let e = (null == y ? void 0 : y.type) === U.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(y.id) : void 0,
       t = (null == y ? void 0 : y.type) === U.ParticipantTypes.ACTIVITY ? y.id : void 0;
-    Z.push((0, a.jsx)(v.default, {
+    Z.push((0, a.jsx)(N.default, {
       className: k.button,
       channel: n,
       applicationId: t,
@@ -138,7 +138,7 @@ function B(e) {
         className: k.button
       })
     }
-  }, "call-members-popout")), i && Z.push(null != y ? (0, a.jsx)(N.default, {
+  }, "call-members-popout")), i && Z.push(null != y ? (0, a.jsx)(v.default, {
     className: k.button,
     channelId: g
   }, "deselect-participant") : (0, a.jsx)(M.default, {

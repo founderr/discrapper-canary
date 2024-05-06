@@ -27,8 +27,8 @@ t.default = (0, r.default)(e => {
     onSelectParticipant: T,
     onContextMenuParticipant: I,
     onFullscreenParticipant: A,
-    channel: N,
-    hasConnectPermission: v,
+    channel: v,
+    hasConnectPermission: N,
     className: x,
     inCall: M,
     showParticipants: R = !0,
@@ -45,16 +45,16 @@ t.default = (0, r.default)(e => {
     c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
   }, [y, O]);
   let F = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.some(e => (0, o.isActivityParticipantCurrentUserCurrentSession)(e))), [n, r]);
-  if ((null == b ? void 0 : b.channelId) === N.id) return (0, a.jsx)(h.default, {
+  if ((null == b ? void 0 : b.channelId) === v.id) return (0, a.jsx)(h.default, {
     height: O
   });
-  if ((null == N ? void 0 : N.isGuildVocal()) && !M) return (0, a.jsx)(f.default, {
-    channel: N,
+  if ((null == v ? void 0 : v.isGuildVocal()) && !M) return (0, a.jsx)(f.default, {
+    channel: v,
     participants: t,
-    hasConnectPermission: v
+    hasConnectPermission: N
   });
   if (P === C.ChannelModes.VOICE) return (0, a.jsx)(u.default, {
-    guildId: N.guild_id,
+    guildId: v.guild_id,
     width: y,
     className: S.voiceCallWrapper,
     participants: t,
@@ -62,14 +62,14 @@ t.default = (0, r.default)(e => {
   });
   if (n = M ? n : t, null == s) return 0 === n.length ? (0, a.jsx)(E.default, {
     className: i()(S.videoGrid, S.hiddenParticipants),
-    channelId: N.id,
+    channelId: v.id,
     width: y
   }) : (0, a.jsx)(d.default, {
     className: S.videoGridWrapper,
     justify: d.default.Justify.CENTER,
     align: d.default.Align.CENTER,
     children: (0, a.jsx)(m.default, {
-      channel: N,
+      channel: v,
       className: S.videoGrid,
       participants: F,
       totalNumberOfParticipants: t.length,
@@ -94,7 +94,7 @@ t.default = (0, r.default)(e => {
     width: y,
     layout: _,
     inCall: M,
-    channel: N,
+    channel: v,
     showParticipants: R,
     forceShowToggleParticipants: U
   })

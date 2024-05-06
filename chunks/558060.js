@@ -29,26 +29,26 @@ function g(e) {
     disableTooltipPointerEvents: g,
     alwaysWhiteText: x = !0,
     nitroWheelColor: b
-  } = e, S = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), T = (0, n.useStateFromStores)([u.default], () => (0, i.isThemeDark)(u.default.theme)), L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
-  if (null == L) return null;
-  if (L.amount <= 0) return (0, l.jsx)("div", {
+  } = e, S = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), v = (0, n.useStateFromStores)([u.default], () => (0, i.isThemeDark)(u.default.theme)), T = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
+  if (null == T) return null;
+  if (T.amount <= 0) return (0, l.jsx)("div", {
     className: r()(E.priceTagsContainer, a),
     children: (0, l.jsx)(C.default, {
       alwaysWhiteText: x,
-      price: L,
+      price: T,
       className: s
     })
   });
-  let v = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
+  let L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
     I = !f.default.canUseCollectibles(S);
   return (0, l.jsxs)("div", {
     className: r()(E.priceTagsContainer, a),
     children: [(0, l.jsx)(C.default, {
       alwaysWhiteText: x,
-      price: L,
+      price: T,
       className: r()([s, I ? void 0 : E.strikedPrice])
-    }), null != v && (0, l.jsx)(C.default, {
-      price: v,
+    }), null != L && (0, l.jsx)(C.default, {
+      price: L,
       alwaysWhiteText: x,
       renderPrice: I ? e => h.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
         price: e
@@ -68,7 +68,7 @@ function g(e) {
             className: r()(E.premiumIcon, {
               [E.fullPrice]: I
             }),
-            color: null != b ? b : x || T ? "white" : "black"
+            color: null != b ? b : x || v ? "white" : "black"
           })
         }
       })

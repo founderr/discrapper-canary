@@ -50,10 +50,10 @@ function E(e) {
     outlineColorDark: T,
     outlineColorLight: I,
     streamerId: A,
-    deadDrawables: N
+    deadDrawables: v
   } = e;
   C.save();
-  let v = o.default.getEmojiImage(null !== (n = null !== (t = E.emojiId) && void 0 !== t ? t : E.emojiName) && void 0 !== n ? n : ""),
+  let N = o.default.getEmojiImage(null !== (n = null !== (t = E.emojiId) && void 0 !== t ? t : E.emojiName) && void 0 !== n ? n : ""),
     x = (0, d.normalizeCoordinate)(E.x, g),
     M = (0, d.normalizeCoordinate)(E.y, S),
     {
@@ -92,6 +92,6 @@ function E(e) {
         l = n.x - a / 2 * window.devicePixelRatio,
         s = n.y - 1.2 * a * window.devicePixelRatio;
       e.globalAlpha = n.opacity, e.drawImage(t, a / 2 + l, a / 2 + s, a, a)
-    })(C, v, e)), E.lastUpdatedAt + f.EMOJI_HOSE_PING_DELAY < Date.now() && (0, r.stopRenderedEmojiHose)(A, E), E.state === u.EmojiHoseState.STOP && (a = E, !(Object.keys(null !== (i = m.getState().particles[a.id]) && void 0 !== i ? i : {}).length > 0))) N.push(E);
+    })(C, N, e)), E.lastUpdatedAt + f.EMOJI_HOSE_PING_DELAY < Date.now() && (0, r.stopRenderedEmojiHose)(A, E), E.state === u.EmojiHoseState.STOP && (a = E, !(Object.keys(null !== (i = m.getState().particles[a.id]) && void 0 !== i ? i : {}).length > 0))) v.push(E);
   C.restore()
 }

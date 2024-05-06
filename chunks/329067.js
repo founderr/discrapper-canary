@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return v
+    return L
   },
   useLightningCheckoutEligibility: function() {
-    return L
+    return T
   }
 }), a("47120");
 var l = a("735250"),
@@ -43,7 +43,7 @@ let S = e => {
       children: t
     })
   },
-  T = e => {
+  v = e => {
     let {
       children: t,
       className: a,
@@ -60,7 +60,7 @@ let S = e => {
     })
   };
 
-function L() {
+function T() {
   let {
     defaultPaymentSource: e
   } = (0, g.default)({
@@ -72,14 +72,14 @@ function L() {
   }
 }
 
-function v(e) {
+function L(e) {
   let {
     onPurchaseComplete: t,
     onError: a,
     onReviewPurchase: r,
     paymentSource: g,
-    loadId: L,
-    skuId: v,
+    loadId: T,
+    skuId: L,
     isGift: I = !1,
     analyticsLocations: N
   } = e, {
@@ -89,7 +89,7 @@ function v(e) {
     paymentAuthenticationState: k,
     application: R,
     skuPricePreviewsById: A
-  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = A[v], F = null != D ? D[g.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : null;
+  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = A[L], F = null != D ? D[g.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : null;
   s.useEffect(() => {
     _ !== h.Step.REVIEW && y(h.Step.REVIEW)
   }), s.useEffect(() => {
@@ -98,12 +98,12 @@ function v(e) {
   let w = async () => {
     n()(null != F, "skuPricePreview can't be null"), n()(null != R, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(R.id, v, {
+      await (0, o.purchaseSKU)(R.id, L, {
         expectedAmount: F.amount,
         expectedCurrency: F.currency,
         isGift: I,
         paymentSource: g,
-        loadId: L
+        loadId: T
       }), P(!1), t()
     } catch (t) {
       let e = t instanceof c.BillingError ? t : new c.BillingError(t);
@@ -143,11 +143,11 @@ function v(e) {
       children: null !== M ? "Pay " + M : (0, l.jsx)(i.Spinner, {
         type: i.Spinner.Type.PULSING_ELLIPSIS
       })
-    }), !j && (0, l.jsx)(T, {
+    }), !j && (0, l.jsx)(v, {
       className: b.reviewButton,
       onClick: () => {
         r(), (0, E.default)({
-          skuId: v,
+          skuId: L,
           analyticsLocations: N,
           returnRef: B
         })

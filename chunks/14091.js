@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("406326"),
   I = n("619753"),
   A = n("981631"),
-  N = n("689938"),
-  v = n("909429");
+  v = n("689938"),
+  N = n("909429");
 
 function x(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -81,9 +81,9 @@ let R = e => {
     children: t
   } = e;
   return (0, a.jsx)("div", {
-    className: v.emptyResultsWrap,
+    className: N.emptyResultsWrap,
     children: (0, a.jsx)("div", {
-      className: v.emptyResultsContent,
+      className: N.emptyResultsContent,
       children: t
     })
   })
@@ -125,11 +125,11 @@ class L extends l.PureComponent {
       isHistoricalIndexing: r
     } = this.props.search;
     return (0, a.jsxs)("section", {
-      className: v.searchResultsWrap,
-      "aria-label": N.default.Messages.SEARCH_RESULTS_SECTION_LABEL,
+      className: N.searchResultsWrap,
+      "aria-label": v.default.Messages.SEARCH_RESULTS_SECTION_LABEL,
       children: [this.renderHeader(), (0, a.jsx)(d.AdvancedScroller, {
         ref: this.scrollerRef,
-        className: v.scroller,
+        className: N.scroller,
         children: this.renderContent()
       }), (0, a.jsx)(M, {
         searchType: t,
@@ -220,35 +220,35 @@ class L extends l.PureComponent {
         documentsIndexed: s
       })
     }), x(this, "renderIndexing", () => {
-      let e = E.default.getSearchType(this.props.searchId) === A.SearchTypes.GUILD ? N.default.Messages.SEARCH_GUILD_STILL_INDEXING : N.default.Messages.SEARCH_DM_STILL_INDEXING;
+      let e = E.default.getSearchType(this.props.searchId) === A.SearchTypes.GUILD ? v.default.Messages.SEARCH_GUILD_STILL_INDEXING : v.default.Messages.SEARCH_DM_STILL_INDEXING;
       return (0, a.jsxs)(R, {
         children: [(0, a.jsx)(g.default, {}), (0, a.jsx)("div", {
-          className: (v.emptyResultsText, v.stillIndexing),
+          className: (N.emptyResultsText, N.stillIndexing),
           children: e
         })]
       })
     }), x(this, "renderNoResults", () => {
       let {
         showNoResultsAlt: e
-      } = this.props.search, t = e ? N.default.Messages.SEARCH_NO_RESULTS_ALT : N.default.Messages.SEARCH_NO_RESULTS;
+      } = this.props.search, t = e ? v.default.Messages.SEARCH_NO_RESULTS_ALT : v.default.Messages.SEARCH_NO_RESULTS;
       return (0, a.jsxs)(R, {
         children: [(0, a.jsx)("div", {
-          className: i()(v.noResultsImage, {
-            [v.alt]: e
+          className: i()(N.noResultsImage, {
+            [N.alt]: e
           })
         }), (0, a.jsx)("div", {
-          className: i()(v.emptyResultsText, v.noResults, {
-            [v.alt]: e
+          className: i()(N.emptyResultsText, N.noResults, {
+            [N.alt]: e
           }),
           children: t
         })]
       })
     }), x(this, "renderError", () => (0, a.jsxs)(R, {
       children: [(0, a.jsx)("div", {
-        className: v.errorImage
+        className: N.errorImage
       }), (0, a.jsx)("div", {
-        className: i()(v.emptyResultsText, v.errorMessage),
-        children: N.default.Messages.SEARCH_ERROR
+        className: i()(N.emptyResultsText, N.errorMessage),
+        children: v.default.Messages.SEARCH_ERROR
       })]
     })), x(this, "renderContent", () => {
       let {

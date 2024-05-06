@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("36311"),
   I = n("112724"),
   A = n("902840"),
-  N = n("110924"),
-  v = n("317381"),
+  v = n("110924"),
+  N = n("317381"),
   x = n("82888"),
   M = n("917107"),
   R = n("358221"),
@@ -75,8 +75,8 @@ var a = n("735250"),
   eT = n("377929"),
   eI = n("900157"),
   eA = n("108427"),
-  eN = n("171368"),
-  ev = n("123579"),
+  ev = n("171368"),
+  eN = n("123579"),
   ex = n("524329"),
   eM = n("995532"),
   eR = n("738643"),
@@ -266,7 +266,7 @@ class e5 extends l.PureComponent {
       showCall: r
     } = this.props;
     if (o()(null != t, "Missing channel in Channel.renderSidebar"), __OVERLAY__ || s);
-    else if (i === eX.ChannelSections.PROFILE && t.isPrivate()) return (0, a.jsx)(ev.default, {
+    else if (i === eX.ChannelSections.PROFILE && t.isPrivate()) return (0, a.jsx)(eN.default, {
       channel: t,
       showCall: r
     }, "private-channel-profile-".concat(t.id));
@@ -487,7 +487,7 @@ class e5 extends l.PureComponent {
       let {
         channel: e
       } = this.props;
-      o()(null == e ? void 0 : e.isPrivate(), "Missing private channel in Channel.openUserProfile"), (0, eN.openUserProfileModal)({
+      o()(null == e ? void 0 : e.isPrivate(), "Missing private channel in Channel.openUserProfile"), (0, ev.openUserProfileModal)({
         userId: e.getRecipientId(),
         guildId: e.guild_id,
         channelId: e.id,
@@ -739,12 +739,12 @@ t.default = l.memo(function(e) {
     let e = null != r ? R.default.getParticipants(r) : [],
       t = null != r ? R.default.getActivityParticipants(r) : [];
     return e.length - t.length > 0
-  }, [r]), I = (0, h.useStateFromStores)([v.default], () => {
+  }, [r]), I = (0, h.useStateFromStores)([N.default], () => {
     var e;
-    return v.default.getSelfEmbeddedActivityForChannel(null !== (e = null == u ? void 0 : u.id) && void 0 !== e ? e : eX.EMPTY_STRING_SNOWFLAKE_ID)
-  }), x = (0, h.useStateFromStores)([v.default], () => v.default.getActivityPanelMode()), L = null != I && !(0, M.default)(null == u ? void 0 : u.id) && x === eQ.ActivityPanelModes.PANEL, y = (0, h.useStateFromStores)([eH.default], () => null != u && u.isVocalThread() && !d().isEmpty(eH.default.getVoiceStatesForChannel(u.id)), [u]), O = (null == u ? void 0 : u.isGuildVocal()) || L && !(null == u ? void 0 : u.isPrivate()) || T || y, {
+    return N.default.getSelfEmbeddedActivityForChannel(null !== (e = null == u ? void 0 : u.id) && void 0 !== e ? e : eX.EMPTY_STRING_SNOWFLAKE_ID)
+  }), x = (0, h.useStateFromStores)([N.default], () => N.default.getActivityPanelMode()), L = null != I && !(0, M.default)(null == u ? void 0 : u.id) && x === eQ.ActivityPanelModes.PANEL, y = (0, h.useStateFromStores)([eH.default], () => null != u && u.isVocalThread() && !d().isEmpty(eH.default.getVoiceStatesForChannel(u.id)), [u]), O = (null == u ? void 0 : u.isGuildVocal()) || L && !(null == u ? void 0 : u.isPrivate()) || T || y, {
     welcomeModalChannelId: j
-  } = (0, c.useLocation)(), P = (0, h.useStateFromStores)([er.default], () => null != u && er.default.isLurking(u.guild_id), [u]), D = (0, h.useStateFromStores)([eM.default], () => eM.default.hasSeen(null == u ? void 0 : u.guild_id, P), [u, P]), U = (0, h.useStateFromStores)([R.default, v.default], () => null != v.default.getConnectedActivityChannelId() && v.default.getActivityPanelMode() === eQ.ActivityPanelModes.PANEL ? v.default.getFocusedLayout() === eQ.FocusedActivityLayouts.NO_CHAT ? eX.ChannelLayouts.NO_CHAT : eX.ChannelLayouts.NORMAL : null != r ? R.default.getLayout(r) : eX.ChannelLayouts.NORMAL, [r]), F = (0, h.useStateFromStores)([R.default], () => null != u ? R.default.getSelectedParticipant(u.id) : null), w = (0, h.useStateFromStores)([ek.default], () => ek.default.getCurrentUser()), k = (0, es.default)(S), H = (0, eR.default)(j, null == S ? void 0 : S.id), {
+  } = (0, c.useLocation)(), P = (0, h.useStateFromStores)([er.default], () => null != u && er.default.isLurking(u.guild_id), [u]), D = (0, h.useStateFromStores)([eM.default], () => eM.default.hasSeen(null == u ? void 0 : u.guild_id, P), [u, P]), U = (0, h.useStateFromStores)([R.default, N.default], () => null != N.default.getConnectedActivityChannelId() && N.default.getActivityPanelMode() === eQ.ActivityPanelModes.PANEL ? N.default.getFocusedLayout() === eQ.FocusedActivityLayouts.NO_CHAT ? eX.ChannelLayouts.NO_CHAT : eX.ChannelLayouts.NORMAL : null != r ? R.default.getLayout(r) : eX.ChannelLayouts.NORMAL, [r]), F = (0, h.useStateFromStores)([R.default], () => null != u ? R.default.getSelectedParticipant(u.id) : null), w = (0, h.useStateFromStores)([ek.default], () => ek.default.getCurrentUser()), k = (0, es.default)(S), H = (0, eR.default)(j, null == S ? void 0 : S.id), {
     section: B,
     channelSidebarState: G
   } = (0, h.useStateFromStoresObject)([eL.default], () => ({
@@ -769,8 +769,8 @@ t.default = l.memo(function(e) {
   }, [s, ee]);
   let et = (0, A.useChannelSummariesExperiment)(u),
     en = null != u && u.isPrivate(),
-    ea = (0, N.default)(en),
-    el = (0, N.default)(null == u ? void 0 : u.id);
+    ea = (0, v.default)(en),
+    el = (0, v.default)(null == u ? void 0 : u.id);
   l.useEffect(() => {
     let e = ea && !en,
       t = ea && en && (null == u ? void 0 : u.id) !== el;

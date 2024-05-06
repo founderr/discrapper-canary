@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("401062"),
   I = n("696900"),
   A = n("456631"),
-  N = n("963838"),
-  v = n("535879"),
+  v = n("963838"),
+  N = n("535879"),
   x = n("310892"),
   M = n("12168"),
   R = n("353368"),
@@ -56,7 +56,7 @@ function k(e) {
     intention: U
   })).slice(0, y.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT), Y = (null !== (t = A.default.recentlyUsedEmojis) && void 0 !== t ? t : []).filter(e => !W.slice(0, y.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT - 1).some(t => t.name === e.name));
   Y.length > 0 && W.splice(W.length - 1, 1, Y[0]);
-  let z = (0, N.sampleAnimationId)(B),
+  let z = (0, v.sampleAnimationId)(B),
     K = e => {
       u.default.dispatch({
         type: "VOICE_CHANNEL_EFFECT_RECENT_EMOJI",
@@ -135,7 +135,7 @@ function k(e) {
           onExpandedToggle: q,
           analyticsOverride: F,
           emojiSearchProps: {
-            accessory: (0, a.jsx)(v.default, {
+            accessory: (0, a.jsx)(N.default, {
               labelText: D.default.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
               value: $,
               onChange: () => {

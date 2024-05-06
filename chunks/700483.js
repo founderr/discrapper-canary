@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("923973"),
   I = n("829750"),
   A = n("189771"),
-  N = n("294629"),
-  v = n("793319"),
+  v = n("294629"),
+  N = n("793319"),
   x = n("560688"),
   M = n("390322"),
   R = n("871499"),
@@ -137,7 +137,7 @@ function ef(e) {
     canManageGuildEvent: s
   } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([X.default], () => X.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([C.default], () => C.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), {
     suppress: h
-  } = (0, N.default)(t), m = O.default.getId(), [p] = (0, el.default)(t), E = q.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), S = s(c);
+  } = (0, v.default)(t), m = O.default.getId(), [p] = (0, el.default)(t), E = q.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), S = s(c);
   return f ? (E || S) && null != u ? (0, a.jsx)(o.Popout, {
     renderPopout: e => {
       let {
@@ -300,7 +300,7 @@ let ep = l.memo(function(e) {
     suppress: n,
     selfMute: l,
     mute: s
-  } = (0, N.default)(t), u = (0, K.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([p.default], () => null != p.default.getAwaitingRemoteSessionInfo()), {
+  } = (0, v.default)(t), u = (0, K.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([p.default], () => null != p.default.getAwaitingRemoteSessionInfo()), {
     cameraUnavailable: C,
     enabled: g
   } = (0, T.default)(), S = (0, A.default)(t), {
@@ -334,7 +334,7 @@ let ep = l.memo(function(e) {
           hasPermission: S,
           enabled: g,
           cameraUnavailable: C,
-          onChange: v.handleToggleVideo,
+          onChange: N.handleToggleVideo,
           onCameraUnavailable: x.default,
           channelLimitReached: R,
           channelLimit: _,
@@ -342,7 +342,7 @@ let ep = l.memo(function(e) {
           onPopoutClick: n
         })
       }
-    }), (0, a.jsx)(v.GoLiveButton, {
+    }), (0, a.jsx)(N.GoLiveButton, {
       channel: t,
       currentUser: O,
       exitFullScreen: () => null,

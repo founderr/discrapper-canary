@@ -25,7 +25,7 @@ t.default = function(e) {
     !n && S(e => !e)
   }, [n]);
 
-  function N(e) {
+  function v(e) {
     !(null == e ? void 0 : e.shiftKey) && T.dispatch(E.ComponentActions.POPOUT_CLOSE)
   }
   return (l.useEffect(() => (p.ComponentDispatch.subscribe(E.ComponentActions.TOGGLE_CHANNEL_PINS, A), () => {
@@ -41,7 +41,7 @@ t.default = function(e) {
     renderPopout: function(e) {
       return (0, a.jsx)(r.default, {
         ...e,
-        onJump: N,
+        onJump: v,
         channel: t
       })
     },

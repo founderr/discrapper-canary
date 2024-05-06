@@ -23,9 +23,9 @@ var l = a("735250"),
   x = a("563132"),
   b = a("333867"),
   S = a("329067"),
-  T = a("981631"),
-  L = a("302800"),
-  v = a("689938"),
+  v = a("981631"),
+  T = a("302800"),
+  L = a("689938"),
   I = a("777374");
 let N = {
     xMin: -50,
@@ -59,7 +59,7 @@ function y(e) {
     analyticsLocations: D
   } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
     buttonColors: F
-  } = (0, C.default)(t.styles), M = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), w = (0, L.getCustomConfettiDisplayOptions)(t.skuId), [H, U] = s.useState(!1), [W, G] = s.useState(!1), V = null != F ? {
+  } = (0, C.default)(t.styles), M = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), w = (0, T.getCustomConfettiDisplayOptions)(t.skuId), [H, U] = s.useState(!1), [W, G] = s.useState(!1), V = null != F ? {
     background: (0, p.getBackgroundGradient)(F, 90),
     color: F.text.toHslString()
   } : void 0, z = (0, E.default)({
@@ -129,7 +129,7 @@ function y(e) {
             analyticsLocations: D
           })
         },
-        children: v.default.Messages.COLLECTIBLES_USE_NOW
+        children: L.default.Messages.COLLECTIBLES_USE_NOW
       })]
     }) : (0, l.jsxs)("div", {
       className: I.cardDetails,
@@ -140,11 +140,11 @@ function y(e) {
       }), (0, l.jsx)(x.PaymentContextProvider, {
         loadId: j,
         stepConfigs: [],
-        applicationId: T.COLLECTIBLES_APPLICATION_ID,
+        applicationId: v.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
         isGift: !1,
         activeSubscription: null,
-        purchaseType: T.PurchaseTypes.ONE_TIME,
+        purchaseType: v.PurchaseTypes.ONE_TIME,
         children: (0, l.jsx)(S.default, {
           ...K
         })

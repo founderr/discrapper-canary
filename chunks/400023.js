@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("375954"),
   I = n("496675"),
   A = n("306680"),
-  N = n("62817"),
-  v = n("594174"),
+  v = n("62817"),
+  N = n("594174"),
   x = n("68588"),
   M = n("459273"),
   R = n("255269"),
@@ -48,8 +48,8 @@ let F = l.memo(function(e) {
     channelStream: _,
     uploads: T,
     hasUnreads: A,
-    editingMessageId: N,
-    fontSize: v,
+    editingMessageId: v,
+    fontSize: N,
     keyboardModeEnabled: x,
     filterAfterTimestamp: R,
     showingQuarantineBanner: L,
@@ -59,28 +59,28 @@ let F = l.memo(function(e) {
     messageGroups: 30,
     groupRange: 4,
     attachments: 8,
-    fontSize: v,
+    fontSize: N,
     groupSpacing: c
   }) : (0, y.generateMessageSpecs)({
     compact: !1,
     messageGroups: 26,
     groupRange: 4,
     attachments: 8,
-    fontSize: v,
+    fontSize: N,
     groupSpacing: c
-  }), [S, v, c]), B = (0, j.default)({
+  }), [S, N, c]), B = (0, j.default)({
     messages: E,
     channel: m,
     compact: S,
     hasUnreads: A,
-    focusId: N,
+    focusId: v,
     placeholderHeight: H.totalHeight,
     canLoadMore: null == R,
     handleScrollToBottom: l.useCallback(() => k(!0), [k]),
     handleScrollFromBottom: l.useCallback(() => k(!1), [k])
   }), G = (0, O.default)({
     scrollerRef: B.ref,
-    isEditing: null != N,
+    isEditing: null != v,
     keyboardModeEnabled: x,
     hasMoreAfter: E.hasMoreAfter
   });
@@ -269,7 +269,7 @@ t.default = l.memo(function(e) {
       }, {
         autoTrackExposure: !1
       }),
-      r = null !== (n = null === (t = v.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(D.UserFlags.SPAMMER)) && void 0 !== n && n,
+      r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(D.UserFlags.SPAMMER)) && void 0 !== n && n,
       u = (0, c.useChannelSummariesExperiment)(e),
       d = (0, h.default)("use_topic_dividers_in_chat"),
       f = (0, o.useStateFromStoresArray)([E.default], () => {
@@ -306,7 +306,7 @@ t.default = l.memo(function(e) {
       messages: U,
       channelStream: w,
       permissionVersion: p,
-      uploads: (0, o.useStateFromStores)([N.default], () => N.default.getFiles(t.id), [t]),
+      uploads: (0, o.useStateFromStores)([v.default], () => v.default.getFiles(t.id), [t]),
       unreadCount: (0, o.useStateFromStores)([A.default], () => A.default.getUnreadCount(t.id), [t]),
       hasUnreads: null != k,
       canChat: M,

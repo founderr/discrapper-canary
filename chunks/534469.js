@@ -28,8 +28,8 @@ var a = n("735250"),
   T = n("906467"),
   I = n("323873"),
   A = n("998951"),
-  N = n("630388"),
-  v = n("709054"),
+  v = n("630388"),
+  N = n("709054"),
   x = n("534091"),
   M = n("901461"),
   R = n("739566"),
@@ -119,7 +119,7 @@ function X(e) {
     compact: _ = !1,
     className: T,
     groupId: I
-  } = e, v = r.type === Y.MessageTypes.REPLY ? r.messageReference : void 0, {
+  } = e, N = r.type === Y.MessageTypes.REPLY ? r.messageReference : void 0, {
     onFocus: x,
     ...L
   } = (0, u.useListItem)(null !== (t = e.id) && void 0 !== t ? t : ""), {
@@ -130,7 +130,7 @@ function X(e) {
     popouts: B,
     selected: Z,
     setPopout: q
-  } = (0, P.default)(r.id, W.DEFAULT_POPOUTS), X = S.InlineEmbedMedia.useSetting(), Q = S.RenderEmbeds.useSetting(), J = (0, d.useStateFromStores)([C.default], () => C.default.getMessageByReference(v)), $ = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()), {
+  } = (0, P.default)(r.id, W.DEFAULT_POPOUTS), X = S.InlineEmbedMedia.useSetting(), Q = S.RenderEmbeds.useSetting(), J = (0, d.useStateFromStores)([C.default], () => C.default.getMessageByReference(N)), $ = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()), {
     handleMouseEnter: ee,
     handleMouseLeave: et,
     isHovered: en
@@ -164,7 +164,7 @@ function X(e) {
         [K.message]: !0,
         [K.cozyMessage]: !_,
         [K.mentioned]: r.mentioned,
-        [K.ephemeral]: (0, N.hasFlag)(r.flags, Y.MessageFlags.EPHEMERAL),
+        [K.ephemeral]: (0, v.hasFlag)(r.flags, Y.MessageFlags.EPHEMERAL),
         [K.systemMessage]: (0, M.default)(r),
         [K.groupStart]: r.id === I || r.type === Y.MessageTypes.REPLY,
         [K.selected]: el
@@ -173,12 +173,12 @@ function X(e) {
       onKeyDown: eo,
       onFocus: F,
       onBlur: w,
-      childrenRepliedMessage: (0, G.default)(e, q, B, v, J),
+      childrenRepliedMessage: (0, G.default)(e, q, B, N, J),
       childrenHeader: (0, k.default)({
         messageProps: e,
         setPopout: q,
         messagePopouts: B,
-        replyReference: v,
+        replyReference: N,
         author: eu,
         repliedMessage: J,
         roleIcon: em
@@ -252,8 +252,8 @@ t.default = l.memo(function(e) {
     eT = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled),
     eI = eo || e_ || eT && eE,
     eA = eI || ep,
-    eN = (0, d.useStateFromStores)([_.default], () => g.hasFlag(Y.MessageFlags.HAS_THREAD) && _.default.getChannel(v.default.castMessageIdAsChannelId(g.id))),
-    ev = g.isFirstMessageInForumPost(Z),
+    ev = (0, d.useStateFromStores)([_.default], () => g.hasFlag(Y.MessageFlags.HAS_THREAD) && _.default.getChannel(N.default.castMessageIdAsChannelId(g.id))),
+    eN = g.isFirstMessageInForumPost(Z),
     ex = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = g.editedTimestamp) && void 0 !== n ? n : g.timestamp).valueOf()),
     eM = (0, d.useStateFromStores)([T.default], () => T.default.isDeveloper),
     {
@@ -263,8 +263,8 @@ t.default = l.memo(function(e) {
       hideSimpleEmbedContent: el && es,
       isInteracting: eA,
       formatInline: !1,
-      allowList: ev || ex,
-      allowHeading: ev || ex,
+      allowList: eN || ex,
+      allowHeading: eN || ex,
       allowLinks: !0,
       allowDevLinks: eM,
       previewLinkTarget: !0
@@ -316,7 +316,7 @@ t.default = l.memo(function(e) {
             [K.message]: !0,
             [K.cozyMessage]: !X,
             [K.mentioned]: g.mentioned,
-            [K.ephemeral]: (0, N.hasFlag)(g.flags, Y.MessageFlags.EPHEMERAL),
+            [K.ephemeral]: (0, v.hasFlag)(g.flags, Y.MessageFlags.EPHEMERAL),
             [K.systemMessage]: (0, M.default)(g),
             [K.groupStart]: !ee && (eH || g.type === Y.MessageTypes.REPLY),
             [K.selected]: eI,
@@ -353,7 +353,7 @@ t.default = l.memo(function(e) {
           childrenMessageContent: s,
           onMouseMove: ef,
           onMouseLeave: eh,
-          hasThread: !ee && g.hasFlag(Y.MessageFlags.HAS_THREAD) && null != eN,
+          hasThread: !ee && g.hasFlag(Y.MessageFlags.HAS_THREAD) && null != ev,
           isSystemMessage: (0, M.default)(g),
           hasReply: g.type === Y.MessageTypes.REPLY,
           messageRef: ew

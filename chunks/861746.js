@@ -19,9 +19,9 @@ var l = a("735250"),
   x = a("607070"),
   b = a("100527"),
   S = a("906732"),
-  T = a("1585"),
-  L = a("125988"),
-  v = a("377171"),
+  v = a("1585"),
+  T = a("125988"),
+  L = a("377171"),
   I = a("74179"),
   N = a("107091"),
   _ = a("197115"),
@@ -53,7 +53,7 @@ var l = a("735250"),
 let J = M.default.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
   ee = p.AvatarSizes.SIZE_152,
   et = p.AvatarSizes.SIZE_120,
-  ea = (0, T.getDecorationSizeForAvatarSize)(ee),
+  ea = (0, v.getDecorationSizeForAvatarSize)(ee),
   el = e => {
     let {
       children: t,
@@ -107,7 +107,7 @@ t.default = function(e) {
     avatarDecorationSrc: eC,
     eventHandlers: ep,
     avatarPlaceholderSrc: eh
-  } = (0, L.default)({
+  } = (0, T.default)({
     user: ef,
     avatarDecorationOverride: (null == em ? void 0 : em.type) === d.CollectiblesItemType.AVATAR_DECORATION ? em : void 0,
     size: ea,
@@ -115,9 +115,9 @@ t.default = function(e) {
   }), {
     backgroundColors: eE,
     buttonColors: eg
-  } = (0, G.default)(t.styles), ex = (0, U.getFormattedPriceForCollectiblesProduct)(t, o, !1), eb = (0, U.isPremiumCollectiblesProduct)(t), eS = (0, U.isFreeCollectiblesProduct)(t), [eT, eL, ev] = (0, f.useStateFromStoresArray)([H.default], () => [H.default.getPurchase(t.skuId), H.default.isClaiming === t.skuId, null != H.default.isClaiming && H.default.isClaiming !== t.skuId]), eI = (0, f.useStateFromStores)([R.default], () => (0, C.isThemeDark)(R.default.theme)), eN = (0, U.isProductNew)(t.skuId), {
+  } = (0, G.default)(t.styles), ex = (0, U.getFormattedPriceForCollectiblesProduct)(t, o, !1), eb = (0, U.isPremiumCollectiblesProduct)(t), eS = (0, U.isFreeCollectiblesProduct)(t), [ev, eT, eL] = (0, f.useStateFromStoresArray)([H.default], () => [H.default.getPurchase(t.skuId), H.default.isClaiming === t.skuId, null != H.default.isClaiming && H.default.isClaiming !== t.skuId]), eI = (0, f.useStateFromStores)([R.default], () => (0, C.isThemeDark)(R.default.theme)), eN = (0, U.isProductNew)(t.skuId), {
     hoverVariant: e_
-  } = (0, W.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard"), [ey, eO] = s.useState(!1), ek = s.useRef(null), eR = s.useRef(new i.Environment), [eA, ej] = s.useState(!1), [eP, eB] = s.useState(null), eD = null != eT || eA;
+  } = (0, W.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard"), [ey, eO] = s.useState(!1), ek = s.useRef(null), eR = s.useRef(new i.Environment), [eA, ej] = s.useState(!1), [eP, eB] = s.useState(null), eD = null != ev || eA;
   s.useEffect(() => {
     let {
       current: e
@@ -134,7 +134,7 @@ t.default = function(e) {
     eM = s.useRef(null),
     ew = () => {
       if ((0, E.popLayer)(), eF(), (null == em ? void 0 : em.type) === d.CollectiblesItemType.AVATAR_DECORATION) {
-        (0, T.openAvatarDecorationModal)({
+        (0, v.openAvatarDecorationModal)({
           initialSelectedDecoration: em,
           analyticsLocations: M
         });
@@ -162,7 +162,7 @@ t.default = function(e) {
       children: (0, l.jsx)(_.default, {
         fullWidth: !0,
         className: q.__invalid_premiumSubscribeButton,
-        disabled: ev,
+        disabled: eL,
         onClick: e => e.stopPropagation(),
         buttonText: Q.default.Messages.UNLOCK_WITH_NITRO,
         subscriptionTier: Z.PremiumSubscriptionSKUs.TIER_2
@@ -204,7 +204,7 @@ t.default = function(e) {
     eK = () => {
       if (eb && !o && !eS) return eG();
       let e = eb ? {
-        submitting: eL,
+        submitting: eT,
         submittingStartedLabel: Q.default.Messages.COLLECTIBLES_COLLECTING,
         submittingFinishedLabel: Q.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
         onClick: async () => {
@@ -223,11 +223,11 @@ t.default = function(e) {
       return (0, l.jsxs)("div", {
         className: q.buttonsContainer,
         children: [eD ? (0, l.jsx)(el, {
-          disabled: ev,
+          disabled: eL,
           onClick: ew,
           children: Q.default.Messages.COLLECTIBLES_USE_NOW
         }) : (0, l.jsx)(el, {
-          disabled: ev,
+          disabled: eL,
           className: q.purchaseButton,
           ...e,
           children: eb ? Q.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : Q.default.Messages.COLLECTIBLES_PURCHASE.format({
@@ -362,7 +362,7 @@ t.default = function(e) {
               children: (0, l.jsx)(P.default, {
                 width: 16,
                 height: 16,
-                color: eI ? v.default.WHITE : v.default.BLACK
+                color: eI ? L.default.WHITE : L.default.BLACK
               })
             }), eD && !ey && (0, l.jsx)("div", {
               className: q.checkmarkWrapper,

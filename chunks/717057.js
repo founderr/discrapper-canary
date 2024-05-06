@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("645896"),
   I = n("676327"),
   A = n("353093"),
-  N = n("532490"),
-  v = n("979264"),
+  v = n("532490"),
+  N = n("979264"),
   x = n("620929"),
   M = n("284019"),
   R = n("308083"),
@@ -39,14 +39,14 @@ function O(e) {
     let e = S.default.extractTimestamp(n);
     return d()(new Date(e)).format("MMMM YYYY")
   }, [n]), u = l.useMemo(() => new Set(s.games), [s.games]);
-  return (0, a.jsx)(N.default, {
+  return (0, a.jsx)(v.default, {
     guildId: n,
-    signHintPosition: N.SignHintPosition.LEFT,
+    signHintPosition: v.SignHintPosition.LEFT,
     primaryColor: null === (t = s.branding) || void 0 === t ? void 0 : t.primaryColor,
     onSignCharter: i,
     children: (0, a.jsxs)("div", {
       className: y.scrollContentsContainer,
-      children: [(0, a.jsx)(v.BaseClanTagChiplet, {
+      children: [(0, a.jsx)(N.BaseClanTagChiplet, {
         clanBadge: (0, A.getClanBadgeUrl)(n, s.badge.imageHash, R.ClanTagBadgeSize.SIZE_24),
         clanTag: s.tag,
         textVariant: "heading-lg/semibold",
@@ -94,13 +94,13 @@ t.default = function(e) {
     onClose: r,
     onAccept: u,
     ...d
-  } = e, S = (0, C.useUID)(), N = (0, T.useClanInfo)(s), [x, j] = l.useState(!0), [P, D] = l.useState(!1), b = l.useCallback(() => {
+  } = e, S = (0, C.useUID)(), v = (0, T.useClanInfo)(s), [x, j] = l.useState(!0), [P, D] = l.useState(!1), b = l.useCallback(() => {
     u(), r()
   }, [u, r]);
   l.useEffect(() => {
-    null == N && b()
-  }, [N, b]);
-  let U = null == N ? void 0 : null === (t = N.branding) || void 0 === t ? void 0 : t.primaryColor,
+    null == v && b()
+  }, [v, b]);
+  let U = null == v ? void 0 : null === (t = v.branding) || void 0 === t ? void 0 : t.primaryColor,
     F = l.useCallback(() => {
       (0, _.adoptClanIdentity)(s, x), b()
     }, [s, b, x]),
@@ -110,11 +110,11 @@ t.default = function(e) {
     k = (0, f.useStateFromStores)([p.default], () => p.default.getGuild(s)),
     H = (0, f.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
     B = (0, f.useStateFromStores)([m.default], () => null != H ? m.default.getMember(s, H.id) : null);
-  if (null == k || null == H || null == B || null == N) return null;
+  if (null == k || null == H || null == B || null == v) return null;
   let G = null != U ? {
       background: "radial-gradient(circle at top left, ".concat(i()(U).alpha(.3).hex(), " 0%, transparent 50%)")
     } : void 0,
-    V = (0, A.getClanBadgeUrl)(k.id, N.badge.imageHash, R.ClanTagBadgeSize.SIZE_36);
+    V = (0, A.getClanBadgeUrl)(k.id, v.badge.imageHash, R.ClanTagBadgeSize.SIZE_36);
   return (0, a.jsx)(h.ModalRoot, {
     ...d,
     transitionState: d.transitionState,
@@ -158,9 +158,9 @@ t.default = function(e) {
                   className: y.userName,
                   name: g.default.getName(s, null, H),
                   color: null !== (n = B.colorString) && void 0 !== n ? n : void 0
-                }), x && (0, a.jsx)(v.BaseClanTagChiplet, {
+                }), x && (0, a.jsx)(N.BaseClanTagChiplet, {
                   clanBadge: V,
-                  clanTag: N.tag,
+                  clanTag: v.tag,
                   badgeSize: R.ClanTagBadgeSize.SIZE_12,
                   textVariant: "text-xs/normal"
                 })]
@@ -200,7 +200,7 @@ t.default = function(e) {
         className: y.scrollMainContainer,
         children: (0, a.jsx)(O, {
           guildId: s,
-          clanInfo: N,
+          clanInfo: v,
           onSignCharter: w
         })
       }), (0, a.jsx)(M.default, {

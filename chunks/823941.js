@@ -26,9 +26,9 @@ var l = a("735250"),
   x = a("813083"),
   b = a("67938"),
   S = a("372654"),
-  T = a("215023"),
-  L = a("474936"),
-  v = a("689938"),
+  v = a("215023"),
+  T = a("474936"),
+  L = a("689938"),
   I = a("402739");
 let N = (0, h.getLogoSize)(96),
   _ = e => {
@@ -40,13 +40,13 @@ let N = (0, h.getLogoSize)(96),
     return p.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
       children: t.summary
     }) : (0, l.jsx)(l.Fragment, {
-      children: v.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
+      children: L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
         getPremium: e => (0, l.jsx)(u.Clickable, {
           innerRef: r,
           className: I.getPremiumHook,
           onClick: () => {
             (0, d.default)({
-              subscriptionTier: L.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: a,
               returnRef: r
             })
@@ -71,7 +71,7 @@ function y(e) {
     hideLimitedTimeBadge: o = !1
   } = e, {
     backgroundColors: c
-  } = (0, E.default)(s.styles), d = !!(null === (t = T.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
+  } = (0, E.default)(s.styles), d = !!(null === (t = v.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
   return s.skuId === i.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(b.ShyBanner, {
     category: s
   }) : (0, l.jsxs)(g.default, {
@@ -95,7 +95,7 @@ function y(e) {
       }),
       alt: s.name,
       style: {
-        maxWidth: null === (a = T.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
+        maxWidth: null === (a = v.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
       }
     }), (0, l.jsx)(u.Text, {
       className: n()(I.summary, {
