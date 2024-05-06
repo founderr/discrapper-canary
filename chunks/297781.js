@@ -113,16 +113,16 @@ function L(e) {
     defaultTextColor: n,
     defaultIconColor: a,
     location: l
-  } = x(), i = (0, T.isEntryActive)(t), r = 0 === l && i ? g.tokens.colors.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT : a;
+  } = x(), i = 0 === l, r = (0, T.isEntryActive)(t), o = i && r ? g.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
   return (0, s.jsxs)("div", {
     className: N.badgeContainer,
     children: [(0, s.jsx)(d.GameControllerIcon, {
       width: 12,
       height: 12,
-      color: r
+      color: o
     }), (0, s.jsx)(I.default, {
       entry: t,
-      textColor: n
+      textColor: u
     })]
   })
 }
