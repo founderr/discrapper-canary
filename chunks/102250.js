@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return q
+    return X
   }
 });
 var s = n("735250"),
@@ -60,18 +60,22 @@ function V(e) {
   switch (a) {
     case S.IS_BACKWARDS_COMPAT_RAID_TYPE:
     case d.AutomodNotificationEmbedTypeKeys.RAID:
-      return (0, s.jsx)(W, {
-        message: t,
-        compact: n
-      });
-    case d.AutomodNotificationEmbedTypeKeys.MENTION_RAID:
       return (0, s.jsx)(z, {
         message: t,
         compact: n
       });
-    case d.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED:
-      return (0, s.jsx)(K, {
+    case d.AutomodNotificationEmbedTypeKeys.MENTION_RAID:
+      return (0, s.jsx)(Q, {
         message: t,
+        compact: n
+      });
+    case d.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED:
+      return (0, s.jsx)(W, {
+        message: t,
+        compact: n
+      });
+    case d.AutomodNotificationEmbedTypeKeys.MODAL_BLOCKED:
+      return (0, s.jsx)(K, {
         compact: n
       });
     default:
@@ -85,7 +89,7 @@ function Y(e) {
   let {
     compact: t
   } = e;
-  return (0, s.jsx)(Q, {
+  return (0, s.jsx)(q, {
     compact: t,
     header: (0, s.jsxs)(a.Fragment, {
       children: [(0, s.jsx)(U.default, {
@@ -107,6 +111,31 @@ function Y(e) {
 }
 
 function K(e) {
+  let {
+    compact: t
+  } = e;
+  return (0, s.jsx)(q, {
+    compact: t,
+    header: (0, s.jsxs)(a.Fragment, {
+      children: [(0, s.jsx)(U.default, {
+        width: 16,
+        height: 16,
+        color: E.default.colors.HEADER_SECONDARY.css
+      }), (0, s.jsx)(T.Text, {
+        variant: "text-md/semibold",
+        color: "header-secondary",
+        children: k.default.Messages.GUILD_AUTOMOD_NOTFICATION_MODAL_BLOCKED_TITLE
+      })]
+    }),
+    content: (0, s.jsx)(T.Text, {
+      variant: "text-md/normal",
+      color: "text-muted",
+      children: k.default.Messages.GUILD_AUTOMOD_NOTFICATION_MODAL_BLOCKED_DESCRIPTION
+    })
+  })
+}
+
+function W(e) {
   var t;
   let {
     message: n,
@@ -120,7 +149,7 @@ function K(e) {
     guildId: r,
     size: 12
   });
-  return (0, s.jsx)(Q, {
+  return (0, s.jsx)(q, {
     compact: l,
     header: (0, s.jsxs)(a.Fragment, {
       children: [(0, s.jsx)(m.SettingsInfoIcon, {
@@ -189,7 +218,7 @@ function K(e) {
   })
 }
 
-function W(e) {
+function z(e) {
   var t;
   let {
     message: l,
@@ -207,7 +236,7 @@ function W(e) {
     let e = null == g ? void 0 : g.guild_id;
     null != e && (0, C.openRaidResolveModal)(l.id, e)
   }, [l.id, g]), j = I === c.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : _.ChatAlertIcon;
-  return (0, s.jsx)(Q, {
+  return (0, s.jsx)(q, {
     compact: i,
     header: (0, s.jsxs)(a.Fragment, {
       children: [(0, s.jsx)(b, {
@@ -320,7 +349,7 @@ function W(e) {
   })
 }
 
-function z(e) {
+function Q(e) {
   var t;
   let {
     message: n,
@@ -330,7 +359,7 @@ function z(e) {
     decisionId: u,
     suspiciousMentionActivityUntil: d
   } = (0, S.extractAutomodNotificationFields)(n);
-  return (0, s.jsx)(Q, {
+  return (0, s.jsx)(q, {
     compact: l,
     header: (0, s.jsxs)(a.Fragment, {
       children: [(0, s.jsx)(U.default, {
@@ -397,7 +426,7 @@ function z(e) {
   })
 }
 
-function Q(e) {
+function q(e) {
   let {
     compact: t,
     header: n,
@@ -432,7 +461,7 @@ function Q(e) {
   })
 }
 
-function q(e) {
+function X(e) {
   let {
     id: t,
     compact: n,
