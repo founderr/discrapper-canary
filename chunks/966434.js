@@ -1,23 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   }
 });
 var i = n("668781"),
-  r = n("689938");
+  r = n("624138"),
+  a = n("689938");
 
-function a(e, t, n, a) {
-  var s, o;
+function s(e, t, n, s) {
+  var o;
   i.default.show({
-    title: r.default.Messages.EMBEDDED_ACTIVITY_CHANGE_CONFIRM_TITLE,
-    cancelText: r.default.Messages.CANCEL,
-    confirmText: r.default.Messages.CONFIRM,
+    title: a.default.Messages.EMBEDDED_ACTIVITY_CHANGE_CONFIRM_TITLE,
+    cancelText: a.default.Messages.CANCEL,
+    confirmText: a.default.Messages.CONFIRM,
     onConfirm: n,
-    onCancel: a,
-    body: r.default.Messages.EMBEDDED_ACTIVITY_CHANGE_ACTIVITY_CONFIRM_BODY.format({
-      currentApplicationName: null !== (s = null == e ? void 0 : e.name) && void 0 !== s ? s : r.default.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_DEFAULT,
-      currentApplicationChannelName: null !== (o = null == t ? void 0 : t.name) && void 0 !== o ? o : r.default.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_CHANNEL_DEFAULT
+    onCancel: s,
+    body: a.default.Messages.EMBEDDED_ACTIVITY_CHANGE_ACTIVITY_CONFIRM_BODY.format({
+      currentApplicationName: null !== (o = null == e ? void 0 : e.name) && void 0 !== o ? o : a.default.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_DEFAULT,
+      currentApplicationChannelName: (0, r.isNullOrEmpty)(null == t ? void 0 : t.name) ? a.default.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_CHANNEL_DEFAULT : null == t ? void 0 : t.name
     })
   })
 }
