@@ -70,9 +70,8 @@ t.default = e => {
     isQuestExpired: l,
     quest: u,
     location: c,
-    giftInventorySection: I,
-    size: p,
-    expansionSpring: h,
+    size: I,
+    expansionSpring: p,
     isAnimating: y,
     isExpanded: U,
     isInConcurrentQuestExperiment: j,
@@ -84,7 +83,7 @@ t.default = e => {
     ref: F,
     width: k,
     scrollWidth: w
-  } = (0, E.default)(), H = (0, d.useStateFromStores)([m.default], () => m.default.getState().theme), V = (0, d.useStateFromStores)([_.default], () => _.default.useReducedMotion), Y = a.useMemo(() => (0, C.isAssetAnimated)(u.config.assets.hero), [u]), K = a.useRef(null), W = c === S.QuestContent.QUEST_INVENTORY_CARD, z = c === S.QuestContent.QUESTS_EMBED, Q = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, q = (0, N.useQuestFormattedDate)(u.config.expiresAt, {
+  } = (0, E.default)(), H = (0, d.useStateFromStores)([m.default], () => m.default.getState().theme), V = (0, d.useStateFromStores)([_.default], () => _.default.useReducedMotion), Y = a.useMemo(() => (0, C.isAssetAnimated)(u.config.assets.hero), [u]), K = a.useRef(null), W = (0, v.isQuestCardInGiftInventory)(c), z = c === S.QuestContent.QUESTS_EMBED, Q = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, q = (0, N.useQuestFormattedDate)(u.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -93,7 +92,11 @@ t.default = e => {
     month: "long",
     day: "numeric"
   }), Z = e => {
-    e.stopPropagation(), b()
+    e.stopPropagation(), b(), (0, h.trackQuestContentClicked)({
+      questId: u.id,
+      questContent: c,
+      questContentCTA: U ? h.QuestContentCTA.COLLAPSE : h.QuestContentCTA.EXPAND
+    })
   };
   a.useEffect(() => {
     Y && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), K.current.currentTime = 0))
@@ -103,7 +106,7 @@ t.default = e => {
     className: i()(x.outerContainer, {
       [x.outerContainerGiftInventory]: W,
       [x.outerContainerEmbed]: z,
-      [x.outerContainerXs]: "xs" === p
+      [x.outerContainerXs]: "xs" === I
     }),
     "aria-label": O.default.Messages.EXPAND,
     style: {
@@ -111,7 +114,7 @@ t.default = e => {
     },
     children: [(0, s.jsx)(D, {
       style: {
-        opacity: h.to({
+        opacity: p.to({
           range: [0, 1],
           output: [.25, 1]
         })
@@ -136,7 +139,7 @@ t.default = e => {
           [x.headerContentEmbed]: z
         }),
         style: {
-          y: W ? h.to({
+          y: W ? p.to({
             range: [0, 1],
             output: [v.QUESTS_CARD_COLLAPSED_HEIGHT_PX, 0]
           }) : void 0
@@ -144,7 +147,7 @@ t.default = e => {
         children: [W && (0, s.jsx)(r.animated.div, {
           className: x.headerCollapsedContent,
           style: {
-            opacity: h.to({
+            opacity: p.to({
               range: [0, 1],
               output: [1, 0]
             }),
@@ -159,7 +162,7 @@ t.default = e => {
               className: x.headerCollapsedContentRewardWrapper,
               children: (0, s.jsx)(M.default, {
                 quest: u,
-                questContent: S.QuestContent.QUEST_INVENTORY_CARD,
+                questContent: c,
                 className: x.headerCollapsedRewardTile
               })
             }), (0, s.jsxs)("div", {
@@ -192,7 +195,7 @@ t.default = e => {
             [x.outerContainerEmbed]: z
           }),
           style: {
-            opacity: h.to({
+            opacity: p.to({
               range: [0, 1],
               output: [0, 1]
             }),
@@ -218,7 +221,7 @@ t.default = e => {
                 shouldShow: null != k && null != w && k < w,
                 children: e => (0, s.jsx)(f.Heading, {
                   ref: F,
-                  variant: "lg" === p ? "heading-xxl/bold" : "sm" === p ? "heading-xl/bold" : "heading-lg/bold",
+                  variant: "lg" === I ? "heading-xxl/bold" : "sm" === I ? "heading-xl/bold" : "heading-lg/bold",
                   className: x.heading,
                   ...e,
                   children: u.config.messages.questName
@@ -242,7 +245,7 @@ t.default = e => {
       }), (0, s.jsxs)(r.animated.div, {
         className: x.iconsContainer,
         style: {
-          top: W ? h.to({
+          top: W ? p.to({
             range: [0, 1],
             output: [v.QUESTS_CARD_COLLAPSED_HEIGHT_PX / 2 - v.QUESTS_CARD_ICON_SIZE_PX / 2, v.QUESTS_CARD_PADDING_Y_PX]
           }) : v.QUESTS_CARD_PADDING_Y_PX
@@ -255,7 +258,7 @@ t.default = e => {
           showShareLink: !l && z,
           children: e => (0, s.jsx)(r.animated.div, {
             style: {
-              opacity: h,
+              opacity: p,
               visibility: y || U ? "visible" : "hidden"
             },
             "aria-hidden": !y && !U,
@@ -268,16 +271,13 @@ t.default = e => {
               })
             })
           })
-        }), j && !(0, v.shouldQuestCardBeExpandedPermanently)({
-          location: c,
-          giftInventorySection: I
-        }) && (0, s.jsx)(f.Clickable, {
+        }), j && !(0, v.shouldQuestCardBeExpandedPermanently)(c) && (0, s.jsx)(f.Clickable, {
           onClick: Z,
           className: x.iconWrapper,
           "aria-label": U ? O.default.Messages.COLLAPSE : O.default.Messages.EXPAND,
           children: (0, s.jsx)(L, {
             style: {
-              rotate: h.to({
+              rotate: p.to({
                 range: [0, 1],
                 output: [0, 180]
               })

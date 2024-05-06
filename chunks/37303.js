@@ -20,26 +20,24 @@ var s = n("735250"),
 let T = e => {
   let {
     quest: t,
-    location: n,
-    giftInventorySection: T
-  } = e, [I, p] = a.useState(!1), h = a.useCallback(() => p(!0), []), N = a.useCallback(() => p(!1), []), S = (0, r.useIsQuestExpired)(t), {
-    containerRef: C,
-    size: A,
-    height: g
-  } = (0, E.useQuestCardSize)([t]), M = (0, i.useIsEligibleForConcurrentQuests)({
+    location: n
+  } = e, [T, I] = a.useState(!1), p = a.useCallback(() => I(!0), []), h = a.useCallback(() => I(!1), []), N = (0, r.useIsQuestExpired)(t), {
+    containerRef: S,
+    size: C,
+    height: A
+  } = (0, E.useQuestCardSize)([t]), g = (0, i.useIsEligibleForConcurrentQuests)({
     location: _.QuestsExperimentLocations.QUESTS_CARD
   }), {
-    expansionSpring: R,
-    isAnimating: v,
-    isExpanded: O,
-    toggleExpanded: x
+    expansionSpring: M,
+    isAnimating: R,
+    isExpanded: v,
+    toggleExpanded: O
   } = (0, E.useQuestCardAnimation)({
-    initiallyExpanded: !M || (0, d.shouldQuestBeInitiallyExpanded)({
-      giftInventorySection: T,
+    initiallyExpanded: !g || (0, d.shouldQuestBeInitiallyExpanded)({
       location: n,
       quest: t
     })
-  }), L = null != g ? g : d.QUESTS_CARD_MAX_HEIGHT_FALLBACK_PX;
+  }), x = null != A ? A : d.QUESTS_CARD_MAX_HEIGHT_FALLBACK_PX;
   return (0, s.jsx)(u.QuestContentImpressionTracker, {
     questOrQuests: t,
     questContent: n,
@@ -47,39 +45,38 @@ let T = e => {
     children: e => (0, s.jsx)(s.Fragment, {
       children: (0, s.jsxs)(l.animated.div, {
         style: {
-          maxHeight: n === o.QuestContent.QUESTS_EMBED ? void 0 : R.to({
+          maxHeight: n === o.QuestContent.QUESTS_EMBED ? void 0 : M.to({
             range: [0, 1],
-            output: [d.QUESTS_CARD_COLLAPSED_HEIGHT_PX, L]
+            output: [d.QUESTS_CARD_COLLAPSED_HEIGHT_PX, x]
           })
         },
         ref: t => {
-          e.current = t, C.current = t
+          e.current = t, S.current = t
         },
         className: m.questsCard,
-        onFocus: h,
-        onMouseEnter: h,
-        onBlur: N,
-        onMouseLeave: N,
+        onFocus: p,
+        onMouseEnter: p,
+        onBlur: h,
+        onMouseLeave: h,
         children: [(0, s.jsx)(f.default, {
-          isFocused: I,
-          isQuestExpired: S,
+          isFocused: T,
+          isQuestExpired: N,
           location: n,
           quest: t,
-          size: A,
-          expansionSpring: R,
-          isAnimating: v,
-          isExpanded: O,
-          isInConcurrentQuestExperiment: M,
-          giftInventorySection: T,
-          toggleExpanded: x
+          size: C,
+          expansionSpring: M,
+          isAnimating: R,
+          isExpanded: v,
+          isInConcurrentQuestExperiment: g,
+          toggleExpanded: O
         }), (0, s.jsx)(c.default, {
           quest: t,
-          isQuestExpired: S,
+          isQuestExpired: N,
           location: n,
-          size: A,
-          isFocused: I,
-          isExpanded: O,
-          isAnimating: v
+          size: C,
+          isFocused: T,
+          isExpanded: v,
+          isAnimating: R
         })]
       })
     })

@@ -350,7 +350,7 @@ function O() {
           isPreview: !0,
           children: (0, a.jsx)(c.QuestsCard, {
             quest: t,
-            location: o.QuestContent.QUEST_INVENTORY_CARD
+            location: o.QuestContent.GIFT_INVENTORY_FOR_YOU
           })
         })]
       })]
