@@ -1,9 +1,9 @@
 "use strict";
 a.r(t);
 var n = a("735250"),
-  r = a("470079"),
-  i = a("120356"),
-  s = a.n(i),
+  i = a("470079"),
+  r = a("120356"),
+  s = a.n(r),
   l = a("481060"),
   o = a("282597"),
   c = a("877715"),
@@ -18,14 +18,14 @@ function T(e) {
   let {
     onClick: t,
     text: a,
-    icon: r
+    icon: i
   } = e;
   return (0, n.jsx)("div", {
     className: E.addFormFieldContainer,
     children: (0, n.jsxs)(l.Clickable, {
       className: E.addFormField,
       onClick: t,
-      children: [(0, n.jsx)(r, {
+      children: [(0, n.jsx)(i, {
         className: E.icon,
         height: 16,
         width: 16
@@ -39,13 +39,13 @@ function T(e) {
 t.default = function(e) {
   let {
     addFormField: t,
-    showManualApprovalWarning: i,
+    showManualApprovalWarning: r,
     guild: p,
     showHeader: _
-  } = e, C = r.useCallback(e => {
+  } = e, C = i.useCallback(e => {
     (0, m.openEmptyFormFieldModal)(e, t, p)
-  }, [t, p]), g = r.useCallback(e => {
-    i ? (0, l.openModalLazy)(async () => {
+  }, [t, p]), g = i.useCallback(e => {
+    r ? (0, l.openModalLazy)(async () => {
       let {
         default: t
       } = await Promise.all([a.e("99387"), a.e("54845")]).then(a.bind(a, "199836"));
@@ -54,7 +54,7 @@ t.default = function(e) {
         onSubmit: () => C(e)
       })
     }) : C(e)
-  }, [i, C]);
+  }, [r, C]);
   return (0, n.jsxs)("div", {
     className: s()(E.spacingContainer, E.backgroundContainer),
     children: [_ && (0, n.jsx)("div", {

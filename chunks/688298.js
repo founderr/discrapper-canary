@@ -5,8 +5,8 @@ a.r(t), a.d(t, {
   }
 });
 var n = a("735250"),
-  r = a("470079"),
-  i = a("481060"),
+  i = a("470079"),
+  r = a("481060"),
   s = a("703685"),
   l = a("689938"),
   o = a("109267");
@@ -17,10 +17,10 @@ function c(e) {
     palette: a,
     onPrimaryColorChange: c,
     onSecondaryColorChange: d
-  } = e, u = r.useRef(null);
-  return (0, i.useFocusLock)(u), (0, n.jsxs)("div", {
+  } = e, u = i.useRef(null);
+  return (0, r.useFocusLock)(u), (0, n.jsxs)("div", {
     className: o.popoutContainer,
-    children: [(0, n.jsx)(i.Text, {
+    children: [(0, n.jsx)(r.Text, {
       variant: "text-xs/semibold",
       color: "header-secondary",
       className: o.customColorsHeader,
@@ -35,7 +35,7 @@ function c(e) {
           style: {
             backgroundColor: a.primary
           }
-        }), (0, n.jsx)(i.Text, {
+        }), (0, n.jsx)(r.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
           children: l.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
@@ -54,7 +54,7 @@ function c(e) {
           style: {
             backgroundColor: a.secondary
           }
-        }), (0, n.jsx)(i.Text, {
+        }), (0, n.jsx)(r.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
           children: l.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
@@ -75,13 +75,13 @@ function d(e) {
   let {
     shouldShow: t,
     showSecondaryColor: a,
-    onRequestClose: r,
+    onRequestClose: i,
     children: s,
     palette: l,
     onPrimaryColorChange: o,
     onSecondaryColorChange: d
   } = e;
-  return (0, n.jsx)(i.Popout, {
+  return (0, n.jsx)(r.Popout, {
     renderPopout: () => (0, n.jsx)(c, {
       showSecondaryColor: a,
       palette: l,
@@ -90,8 +90,8 @@ function d(e) {
     }),
     position: "left",
     shouldShow: t,
-    onRequestClose: r,
-    animation: i.Popout.Animation.TRANSLATE,
+    onRequestClose: i,
+    animation: r.Popout.Animation.TRANSLATE,
     animationPosition: "right",
     children: s
   })

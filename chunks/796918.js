@@ -1,9 +1,9 @@
 "use strict";
 a.r(t), a("47120");
 var n = a("735250"),
-  r = a("470079"),
-  i = a("120356"),
-  s = a.n(i),
+  i = a("470079"),
+  r = a("120356"),
+  s = a.n(r),
   l = a("481060"),
   o = a("729285"),
   c = a("87576"),
@@ -18,21 +18,21 @@ t.default = e => {
   let {
     handleUpdate: t,
     interests: a,
-    error: i
-  } = e, [h, E] = r.useState(""), T = r.useMemo(() => Array.from(a), [a]), p = r.useMemo(() => T.filter(m), [T]), _ = r.useMemo(() => [...d.SUGGESTED_TRAITS_SET, ...p], [p]), C = r.useMemo(() => T.filter(e => !d.ALL_TRAITS_SET.has(e) && !d.LANGUAGES_SET.has(e)), [T]), g = e => {
+    error: r
+  } = e, [h, E] = i.useState(""), T = i.useMemo(() => Array.from(a), [a]), p = i.useMemo(() => T.filter(m), [T]), _ = i.useMemo(() => [...d.SUGGESTED_TRAITS_SET, ...p], [p]), C = i.useMemo(() => T.filter(e => !d.ALL_TRAITS_SET.has(e) && !d.LANGUAGES_SET.has(e)), [T]), g = e => {
     let n = new Set(a);
     n.delete(e), t({
       interests: n
     })
-  }, x = r.useCallback(e => {
+  }, x = i.useCallback(e => {
     if (a.size === d.MAX_NUM_INTERESTS) return;
     let n = null != e ? e : h.trim();
     if (0 === n.length) return;
-    let r = new Set(a);
-    r.add(n), t({
-      interests: r
+    let i = new Set(a);
+    i.add(n), t({
+      interests: i
     }), E("")
-  }, [t, h, a]), I = r.useCallback(e => {
+  }, [t, h, a]), I = i.useCallback(e => {
     switch (e.key) {
       case "Enter":
       case "Tab":
@@ -50,11 +50,11 @@ t.default = e => {
       color: "header-secondary",
       className: f.subtitle,
       children: u.default.Messages.CLAN_SETUP_INTERESTS_SUBTITLE
-    }), null != i && (0, n.jsx)(l.Text, {
+    }), null != r && (0, n.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
       className: f.errorText,
-      children: i
+      children: r
     }), (0, n.jsxs)("div", {
       className: f.content,
       children: [(0, n.jsxs)("div", {

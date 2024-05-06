@@ -5,9 +5,9 @@ a.r(t), a.d(t, {
   }
 }), a("47120");
 var n = a("735250"),
-  r = a("470079"),
-  i = a("120356"),
-  s = a.n(i),
+  i = a("470079"),
+  r = a("120356"),
+  s = a.n(r),
   l = a("392711"),
   o = a("942389"),
   c = a("299468"),
@@ -22,8 +22,8 @@ function T(e) {
   let {
     title: t,
     children: a,
-    onEdit: r,
-    onRemove: i,
+    onEdit: i,
+    onRemove: r,
     canRemove: l,
     actionsLocation: o
   } = e;
@@ -46,7 +46,7 @@ function T(e) {
           className: s()(E.removeButton, E.button),
           size: f.Button.Sizes.SMALL,
           look: f.Button.Looks.BLANK,
-          onClick: i,
+          onClick: r,
           disabled: !l,
           children: h.default.Messages.REMOVE
         })
@@ -54,7 +54,7 @@ function T(e) {
         className: E.button,
         size: f.Button.Sizes.SMALL,
         color: f.Button.Colors.PRIMARY,
-        onClick: r,
+        onClick: i,
         children: h.default.Messages.EDIT
       })]
     })]
@@ -66,11 +66,11 @@ function _(e) {
   let {
     index: t,
     field: a,
-    isDropHovered: i,
+    isDropHovered: r,
     onDrop: c
   } = e, d = (0, l.debounce)(async (e, t, a) => {
     await c(e, t, a)
-  }), f = r.useRef(null), [, h] = (0, o.useDrag)({
+  }), f = i.useRef(null), [, h] = (0, o.useDrag)({
     type: p,
     item: {
       index: t,
@@ -84,24 +84,24 @@ function _(e) {
     hover: (e, a) => {
       var n;
       let {
-        index: r
-      } = e, i = null === (n = f.current) || void 0 === n ? void 0 : n.getBoundingClientRect(), s = a.getClientOffset();
-      if (null == i || null == s) return;
-      let l = (i.bottom - i.top) / 2,
-        o = s.y - i.top;
-      (!(r < t) || !(o < l)) && (!(r > t) || !(o < l)) && r !== t && d(e.field, t, !1)
+        index: i
+      } = e, r = null === (n = f.current) || void 0 === n ? void 0 : n.getBoundingClientRect(), s = a.getClientOffset();
+      if (null == r || null == s) return;
+      let l = (r.bottom - r.top) / 2,
+        o = s.y - r.top;
+      (!(i < t) || !(o < l)) && (!(i > t) || !(o < l)) && i !== t && d(e.field, t, !1)
     },
     drop: e => {
       d(e.field, t, !0)
     }
   });
-  return r.useLayoutEffect(() => (h(_(f)), () => {
+  return i.useLayoutEffect(() => (h(_(f)), () => {
     _(null), h(null)
   }), [h, _]), (0, n.jsxs)("div", {
     ref: f,
     "data-dnd-name": "field-".concat(t),
     className: s()(E.dragContainer, {
-      [E.dropHovered]: i
+      [E.dropHovered]: r
     }),
     children: [(0, n.jsx)("div", {
       className: E.dragIconContainer,

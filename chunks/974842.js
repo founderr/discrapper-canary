@@ -1,9 +1,9 @@
 "use strict";
 a.r(t), a("47120"), a("315314"), a("610138"), a("216116"), a("78328"), a("815648");
 var n = a("735250"),
-  r = a("470079"),
-  i = a("120356"),
-  s = a.n(i),
+  i = a("470079"),
+  r = a("120356"),
+  s = a.n(r),
   l = a("866442"),
   o = a("19602"),
   c = a("481060"),
@@ -21,37 +21,37 @@ t.default = e => {
   let {
     handleUpdate: t,
     badge: a,
-    primaryColor: i,
+    primaryColor: r,
     secondaryColor: g,
     tag: x,
     error: I,
     furthestStep: v
-  } = e, N = r.useRef(null), [A, S] = r.useState(a), [R, L] = r.useState({
-    primary: null != i ? i : f.CLAN_BADGE_PRIMARY_DEFAULT,
+  } = e, N = i.useRef(null), [A, S] = i.useState(a), [R, L] = i.useState({
+    primary: null != r ? r : f.CLAN_BADGE_PRIMARY_DEFAULT,
     secondary: null != g ? g : f.CLAN_BADGE_SECONDARY_DEFAULT
-  }), [M, b] = r.useState(() => {
+  }), [M, b] = i.useState(() => {
     for (let e = 0; e < f.CLAN_BADGE_PALETTE_PRESETS.length; e++)
-      if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === i && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === g) return e;
+      if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === r && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === g) return e;
     return C
-  }), [j, y] = r.useState(!1), O = C === M ? R : f.CLAN_BADGE_PALETTE_PRESETS[M];
-  return r.useEffect(() => {
-    if (A === a && O.primary === i && O.secondary === g) return;
+  }), [j, y] = i.useState(!1), O = C === M ? R : f.CLAN_BADGE_PALETTE_PRESETS[M];
+  return i.useEffect(() => {
+    if (A === a && O.primary === r && O.secondary === g) return;
     let e = document.querySelector("#".concat(p));
     if (null != e) {
       let a = new XMLSerializer().serializeToString(e),
         n = new Blob([a], {
           type: "image/svg+xml;charset=utf-8"
         }),
-        r = URL.createObjectURL(n),
-        i = new Image;
-      i.width = e.width.baseVal.value, i.height = e.height.baseVal.value, i.onload = function() {
+        i = URL.createObjectURL(n),
+        r = new Image;
+      r.width = e.width.baseVal.value, r.height = e.height.baseVal.value, r.onload = function() {
         if (null == N.current) return;
-        N.current.width = i.width, N.current.height = i.height;
+        N.current.width = r.width, N.current.height = r.height;
         let e = N.current.getContext("2d");
-        if (null != e) e.drawImage(i, 0, 0), URL.revokeObjectURL(r), t({
+        if (null != e) e.drawImage(r, 0, 0), URL.revokeObjectURL(i), t({
           badgeImage: N.current.toDataURL("image/png")
         })
-      }, i.src = r
+      }, r.src = i
     }
     let n = v === m.ClanSetupSteps.CUSTOMIZE_TAG_BADGE ? {
       brandPrimaryColor: O.primary,
@@ -63,7 +63,7 @@ t.default = e => {
       badgeSecondaryColor: O.secondary,
       ...n
     })
-  }, [t, A, O.primary, O.secondary, v, a, i, g]), (0, n.jsxs)("div", {
+  }, [t, A, O.primary, O.secondary, v, a, r, g]), (0, n.jsxs)("div", {
     className: T.slideContent,
     children: [(0, n.jsx)(c.Heading, {
       variant: "heading-xxl/medium",

@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("233304"),
   _ = n("626135"),
   C = n("981631"),
-  S = n("689938"),
-  m = n("128600");
+  m = n("689938"),
+  S = n("128600");
 
 function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -88,7 +88,7 @@ class I extends s.PureComponent {
       isDetectingInput: s
     } = this.state;
     return (0, a.jsx)(d.FormText, {
-      className: m.micTestCaption,
+      className: S.micTestCaption,
       type: d.FormText.Types.DESCRIPTION,
       children: n ? s ? e : t : null
     })
@@ -107,19 +107,19 @@ class I extends s.PureComponent {
     } = this.props, {
       isMicTesting: c,
       volume: f
-    } = this.state, E = e && !c ? S.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
+    } = this.state, E = e && !c ? m.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
     return c && e && !u && this._micTestStop(), (0, a.jsxs)("div", {
-      className: m.container,
+      className: S.container,
       children: [(0, a.jsx)(d.FormTitle, {
         tag: d.FormTitleTags.H5,
-        className: m.title,
+        className: S.title,
         children: t
       }), null != n && (0, a.jsx)(d.FormText, {
         type: d.FormText.Types.DESCRIPTION,
-        className: m.description,
+        className: S.description,
         children: n
       }), (0, a.jsxs)("div", {
-        className: m.micTest,
+        className: S.micTest,
         children: [(0, a.jsx)(d.Tooltip, {
           text: E,
           children: e => {

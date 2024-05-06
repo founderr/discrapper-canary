@@ -17,8 +17,8 @@ var a, s = n("735250"),
   h = n("408814"),
   _ = n("626135"),
   C = n("585483"),
-  S = n("900849"),
-  m = n("878727"),
+  m = n("900849"),
+  S = n("878727"),
   p = n("117496"),
   I = n("150192"),
   T = n("731455"),
@@ -34,7 +34,7 @@ function v(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = u().throttle(S.trackSearchResultsViewed, 1e3, {
+let R = u().throttle(m.trackSearchResultsViewed, 1e3, {
     leading: !1,
     trailing: !0
   }),
@@ -105,7 +105,7 @@ class O extends(a = l.PureComponent) {
       isTagSearch: d
     }), this.setState({
       isHandlingTagSearch: !1
-    })), !t.isSearching && r && S.trackSearchStarted(n, E, c), e.mostRecentQuery !== i && this.setState({
+    })), !t.isSearching && r && m.trackSearchStarted(n, E, c), e.mostRecentQuery !== i && this.setState({
       query: i,
       searchId: (0, p.makeAnalyticsID)(),
       isHandlingTagSearch: !0
@@ -195,7 +195,7 @@ class O extends(a = l.PureComponent) {
     })
   }
   constructor(e) {
-    super(e), v(this, "_searchRef", l.createRef()), v(this, "canSearch", e => e.trim().length >= 2 && !(0, m.searchQueryContainsBannedWord)(e)), v(this, "doSearch", (e, t, n, a) => {
+    super(e), v(this, "_searchRef", l.createRef()), v(this, "canSearch", e => e.trim().length >= 2 && !(0, S.searchQueryContainsBannedWord)(e)), v(this, "doSearch", (e, t, n, a) => {
       var s;
       let {
         defaultLanguage: l,
@@ -204,7 +204,7 @@ class O extends(a = l.PureComponent) {
         query: r,
         selectedLanguage: o
       } = this.state, u = {
-        approximate_member_count: S.MINIMUM_MEMBER_COUNT
+        approximate_member_count: m.MINIMUM_MEMBER_COUNT
       };
       a && f.getSearchResultsCount(r, u), this.setState({
         searchId: (0, p.makeAnalyticsID)(),
@@ -232,7 +232,7 @@ class O extends(a = l.PureComponent) {
         loadId: a,
         currentCategoryId: s
       } = this.props, l = s !== T.DISCOVERY_ALL_CATEGORIES_ID ? s : null;
-      this.canSearch(t) && n && e.charCode === g.KeyboardKeys.ENTER ? (S.trackSearchStarted(a, l), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === g.KeyboardKeys.ENTER && this.setState({
+      this.canSearch(t) && n && e.charCode === g.KeyboardKeys.ENTER ? (m.trackSearchStarted(a, l), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === g.KeyboardKeys.ENTER && this.setState({
         isSearching: !1
       })
     }), v(this, "handleQueryChanged", e => {

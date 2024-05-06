@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("34131"),
   _ = n("434404"),
   C = n("567458"),
-  S = n("782959"),
-  m = n("276645"),
+  m = n("782959"),
+  S = n("276645"),
   p = n("970731"),
   I = n("626135"),
   T = n("267642"),
@@ -98,7 +98,7 @@ t.default = s.memo(function(e) {
       switch (k) {
         case l.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(m.default, {
+            renderPopout: (0, a.jsx)(S.default, {
               guildId: s.id,
               markAsDismissed: F
             }),
@@ -230,7 +230,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.MEDIA_CHANNEL_UPSELL:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(S.default, {
+            renderPopout: (0, a.jsx)(m.default, {
               guildId: s.id,
               markAsDismissed: F
             }),

@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return h
   }
 }), a("653041"), a("47120");
-var n, r, i, s, l = a("392711"),
+var n, i, r, s, l = a("392711"),
   o = a.n(l),
   c = a("442837"),
   d = a("570140"),
@@ -47,19 +47,19 @@ class C extends(n = c.default.Store) {
     return e === f.DISCOVERY_ALL_CATEGORIES_ID ? m.default.Messages.HOME : _[e]
   }
 }
-s = "GuildDiscoveryCategoryStore", (i = "displayName") in(r = C) ? Object.defineProperty(r, i, {
+s = "GuildDiscoveryCategoryStore", (r = "displayName") in(i = C) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[i] = s, t.default = new C(d.default, {
+}) : i[r] = s, t.default = new C(d.default, {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
     let t, {
         categories: a,
         locale: n
       } = e,
-      r = [],
-      i = [];
+      i = [],
+      r = [];
     if (a.sort((e, t) => e.name < t.name ? -1 : 1).forEach(e => {
         let {
           id: a,
@@ -73,10 +73,10 @@ s = "GuildDiscoveryCategoryStore", (i = "displayName") in(r = C) ? Object.define
               name: n
             };
             return
-          }!0 === s && r.push({
+          }!0 === s && i.push({
             categoryId: a,
             name: n
-          }), i.push({
+          }), r.push({
             categoryId: a,
             name: n
           }), _[a] = n
@@ -86,11 +86,11 @@ s = "GuildDiscoveryCategoryStore", (i = "displayName") in(r = C) ? Object.define
         categoryId: e,
         name: a
       } = t;
-      r.push({
+      i.push({
         categoryId: e,
         name: a
       }), _[e] = a
     }
-    E = n, T = r, p = i
+    E = n, T = i, p = r
   }
 })

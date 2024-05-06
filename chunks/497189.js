@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("481060"),
   _ = n("607070"),
   C = n("650461"),
-  S = n("603839"),
-  m = n("430824"),
+  m = n("603839"),
+  S = n("430824"),
   p = n("725568"),
   I = n("626135"),
   T = n("231467"),
@@ -84,7 +84,7 @@ function U(e) {
     selectedGame: r,
     onButtonClick: f,
     buttonText: _
-  } = e, C = (0, g.useClanDiscoveryUIStore)(e => e.setMode, o.default), S = (0, g.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), m = (0, g.useClanDiscoveryUIStore)(e => e.started, o.default), p = s.useMemo(() => {
+  } = e, C = (0, g.useClanDiscoveryUIStore)(e => e.setMode, o.default), m = (0, g.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), S = (0, g.useClanDiscoveryUIStore)(e => e.started, o.default), p = s.useMemo(() => {
     switch (r) {
       case g.ClanDiscoveryGame.GENSHIN:
         return O.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_GENSHIN;
@@ -97,8 +97,8 @@ function U(e) {
   })), [l]), T = s.useCallback(() => {
     C(g.ClanDiscoveryMode.DISCOVERY)
   }, [C]), A = s.useCallback(() => {
-    C(g.ClanDiscoveryMode.GET_STARTED), S(g.ClanDiscoveryUserScreens.USER_ONBOARDING)
-  }, [C, S]), N = !m, v = l.length > 1;
+    C(g.ClanDiscoveryMode.GET_STARTED), m(g.ClanDiscoveryUserScreens.USER_ONBOARDING)
+  }, [C, m]), N = !S, v = l.length > 1;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(h.Heading, {
       className: M.upsellTitle,
@@ -149,7 +149,7 @@ function U(e) {
           children: O.default.Messages.CLAN_DISCOVERY_UPSELL_BROWSE
         })
       })]
-    }), m && (0, a.jsx)("div", {
+    }), S && (0, a.jsx)("div", {
       className: M.upsellStaticHeader,
       children: (0, a.jsx)("div", {
         className: M.upsellBackButton,
@@ -175,7 +175,7 @@ t.default = s.memo(function(e) {
     for (let n of t)
       if (e.has(n.id)) return n.id;
     return t[0].id
-  }), o = (0, f.useStateFromStores)([m.default], () => m.default.getGuild(l)), u = (0, f.useStateFromStores)([C.default], () => C.default.getStateForGuild(l).progress), d = (0, A.useDiscoveryGameApplicationId)({
+  }), o = (0, f.useStateFromStores)([S.default], () => S.default.getGuild(l)), u = (0, f.useStateFromStores)([C.default], () => C.default.getStateForGuild(l).progress), d = (0, A.useDiscoveryGameApplicationId)({
     selectedGame: n
   }), c = s.useCallback(() => {
     I.default.track(R.AnalyticEvents.CLAN_DISCOVERY_ADMIN_INVITE_CLICKED, {
@@ -184,7 +184,7 @@ t.default = s.memo(function(e) {
       let {
         closeLayer: t
       } = e;
-      return (0, a.jsx)(S.default, {
+      return (0, a.jsx)(m.default, {
         onClose: t,
         guildId: l,
         gameId: d

@@ -17,8 +17,8 @@ var l = a("735250"),
   E = a("100527"),
   g = a("906732"),
   x = a("702486"),
-  S = a("580747"),
-  b = a("605236"),
+  b = a("580747"),
+  S = a("605236"),
   T = a("984370"),
   L = a("329067"),
   v = a("51855"),
@@ -72,9 +72,9 @@ function ei(e) {
     unifiedProductCatalogEnabled: x
   } = (0, w.useCollectiblesUnifiedProductCatalogExperiment)({
     location: "CollectiblesShop"
-  }), S = K.default;
-  d && m ? S = X.default : d && (S = q.default);
-  let b = s.useCallback(e => t => {
+  }), b = K.default;
+  d && m ? b = X.default : d && (b = q.default);
+  let S = s.useCallback(e => t => {
       e.skuId === g && (c.current = t.current)
     }, [g, c]),
     T = (e, t) => 0 === e.length ? null : (0, l.jsxs)("div", {
@@ -89,8 +89,8 @@ function ei(e) {
         size: 24
       }), (0, l.jsx)("div", {
         className: n()(en.cardsContainer, d ? en.tallerShopCard : en.regularShopCard),
-        children: e.map(e => (0, l.jsx)(S, {
-          onMount: b(e),
+        children: e.map(e => (0, l.jsx)(b, {
+          onMount: S(e),
           isPremiumUser: C,
           category: r,
           product: e,
@@ -164,7 +164,7 @@ t.default = function(e) {
     analyticsLocations: i
   } = (0, g.default)([...r, E.default.COLLECTIBLES_SHOP]), p = (0, u.useStateFromStores)([y.default], () => y.default.getLayers().includes(et.Layers.COLLECTIBLES_SHOP)), I = (0, d.useHasAnyModalOpen)(), {
     onClose: N
-  } = (0, Z.useCollectiblesShopRouting)(), R = (0, u.useStateFromStores)([O.default], () => O.default.getCurrentUser()), w = P.default.canUseCollectibles(R), W = (0, S.default)("shop_disable_cache"), G = (0, S.default)("shop_include_unpublished"), {
+  } = (0, Z.useCollectiblesShopRouting)(), R = (0, u.useStateFromStores)([O.default], () => O.default.getCurrentUser()), w = P.default.canUseCollectibles(R), W = (0, b.default)("shop_disable_cache"), G = (0, b.default)("shop_include_unpublished"), {
     categories: z,
     isFetchingCategories: K,
     error: X
@@ -215,7 +215,7 @@ t.default = function(e) {
     dismissCollectiblesShopTabNewBadge: eE
   } = (0, J.default)();
   s.useEffect(() => {
-    eE(), !(0, b.isDismissibleContentDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK) && (0, b.markDismissibleContentAsDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK, {
+    eE(), !(0, S.isDismissibleContentDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK) && (0, S.markDismissibleContentAsDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK, {
       dismissAction: ea.ContentDismissActionType.AUTO_DISMISS,
       forceTrack: !0
     })
@@ -245,8 +245,8 @@ t.default = function(e) {
     }, [W, G]),
     ex = (0, h.default)(),
     {
-      containerRef: eS,
-      returnRef: eb
+      containerRef: eb,
+      returnRef: eS
     } = function() {
       let e = s.useRef(null),
         t = s.useRef(null);
@@ -261,7 +261,7 @@ t.default = function(e) {
     value: i,
     children: [(0, l.jsxs)("div", {
       className: en.shop,
-      ref: t ? eS : void 0,
+      ref: t ? eb : void 0,
       children: [t ? null : (0, l.jsxs)(T.default, {
         className: n()((0, B.getThemeClass)(ex), en.__invalid_headerBar),
         toolbar: !0,
@@ -295,7 +295,7 @@ t.default = function(e) {
             }),
             children: [t ? (0, l.jsx)(k.default, {
               title: er.default.Messages.COLLECTIBLES_SHOP,
-              ref: t ? eb : void 0
+              ref: t ? eS : void 0
             }) : null, K ? (0, l.jsx)(Q.default, {}) : X ? (0, l.jsx)(Y.default, {
               onRetry: eg
             }) : (0, l.jsx)("div", {

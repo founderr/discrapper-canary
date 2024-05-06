@@ -28,8 +28,8 @@ function g(e) {
     innerClassName: s,
     disableTooltipPointerEvents: g,
     alwaysWhiteText: x = !0,
-    nitroWheelColor: S
-  } = e, b = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), T = (0, n.useStateFromStores)([u.default], () => (0, i.isThemeDark)(u.default.theme)), L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
+    nitroWheelColor: b
+  } = e, S = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), T = (0, n.useStateFromStores)([u.default], () => (0, i.isThemeDark)(u.default.theme)), L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
   if (null == L) return null;
   if (L.amount <= 0) return (0, l.jsx)("div", {
     className: r()(E.priceTagsContainer, a),
@@ -40,7 +40,7 @@ function g(e) {
     })
   });
   let v = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
-    I = !f.default.canUseCollectibles(b);
+    I = !f.default.canUseCollectibles(S);
   return (0, l.jsxs)("div", {
     className: r()(E.priceTagsContainer, a),
     children: [(0, l.jsx)(C.default, {
@@ -68,7 +68,7 @@ function g(e) {
             className: r()(E.premiumIcon, {
               [E.fullPrice]: I
             }),
-            color: null != S ? S : x || T ? "white" : "black"
+            color: null != b ? b : x || T ? "white" : "black"
           })
         }
       })

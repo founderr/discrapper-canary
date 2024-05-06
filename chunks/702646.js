@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("963202"),
   _ = n("105671"),
   C = n("92373"),
-  S = n("430824"),
-  m = n("207796"),
+  m = n("430824"),
+  S = n("207796"),
   p = n("308083"),
   I = n("689938"),
   T = n("506254");
@@ -65,10 +65,10 @@ function g(e) {
 
 function A() {
   var e;
-  let t = (0, m.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
-    n = (0, m.useClanDiscoveryUIStore)(e => e.setMode, r.default),
+  let t = (0, S.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
+    n = (0, S.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     l = s.useCallback(() => {
-      n(m.ClanDiscoveryMode.GAMES)
+      n(S.ClanDiscoveryMode.GAMES)
     }, [n]),
     i = null !== (e = (0, _.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
     o = (0, a.jsx)("div", {
@@ -96,12 +96,12 @@ function A() {
 
 function N() {
   let e = s.useMemo(p.getPlaystyleOptions, []),
-    t = (0, m.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
-    n = (0, m.useClanDiscoveryUIStore)(e => e.setMode, r.default),
+    t = (0, S.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
+    n = (0, S.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     l = null != t ? e[t] : null,
     i = null == l ? void 0 : l.title,
     o = s.useCallback(() => {
-      n(m.ClanDiscoveryMode.PLAYSTYLE)
+      n(S.ClanDiscoveryMode.PLAYSTYLE)
     }, [n]);
   if (null == l || null == i) return null;
   let u = (0, a.jsxs)(a.Fragment, {
@@ -133,10 +133,10 @@ function N() {
 }
 
 function v() {
-  let e = (0, m.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
-    t = (0, m.useClanDiscoveryUIStore)(e => e.setMode, r.default),
+  let e = (0, S.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
+    t = (0, S.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     n = s.useCallback(() => {
-      t(m.ClanDiscoveryMode.TRAITS)
+      t(S.ClanDiscoveryMode.TRAITS)
     }, [t]);
   if (null == e) return null;
   let l = (0, a.jsx)("div", {
@@ -165,11 +165,11 @@ function v() {
 }
 
 function R() {
-  let e = (0, m.useClanDiscoveryUIStore)(e => e.setMode, r.default),
-    t = (0, o.useStateFromStoresArray)([S.default], () => Object.values(S.default.getGuilds()));
+  let e = (0, S.useClanDiscoveryUIStore)(e => e.setMode, r.default),
+    t = (0, o.useStateFromStoresArray)([m.default], () => Object.values(m.default.getGuilds()));
   return (0, h.useAnyClanPrepilotExperimentEnabled)(t, "clan_discovery_add_clan") ? (0, a.jsxs)(E.Clickable, {
     className: i()(T.buttonPill),
-    onClick: () => e(m.ClanDiscoveryMode.ADMIN_UPSELL),
+    onClick: () => e(S.ClanDiscoveryMode.ADMIN_UPSELL),
     children: [(0, a.jsx)(f.TagIcon, {
       className: T.filterPillIcon,
       color: "currentColor"

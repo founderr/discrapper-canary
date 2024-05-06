@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("607070"),
   _ = n("38618"),
   C = n("197344"),
-  S = n("474873"),
-  m = n("706454"),
+  m = n("474873"),
+  S = n("706454"),
   p = n("215427"),
   I = n("820254"),
   T = n("985806"),
@@ -211,7 +211,7 @@ class y extends s.PureComponent {
           className: M.keybind
         }, t)
       })];
-      return m.default.locale.startsWith("en-") && e.push(O.default.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)]
+      return S.default.locale.startsWith("en-") && e.push(O.default.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)]
     }()), P(this, "_eventLoadingText", function() {
       let e = C.default.getLoadingTips();
       if (null != e && e.length > 0) return e[o().random(e.length - 1)]
@@ -240,11 +240,11 @@ class y extends s.PureComponent {
     }, this._connectedSound.volume = 1
   }
 }
-t.default = d.default.connectStores([_.default, p.default, S.default, h.default], () => ({
+t.default = d.default.connectStores([_.default, p.default, m.default, h.default], () => ({
   isTryingToConnect: _.default.isTryingToConnect(),
   connected: _.default.isConnected(),
   incident: p.default.getIncident(),
-  soundpack: S.default.getSoundpack(),
+  soundpack: m.default.getSoundpack(),
   reducedMotion: h.default.useReducedMotion
 }))(e => {
   let {

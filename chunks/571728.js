@@ -1,15 +1,15 @@
 "use strict";
 a.r(t), a.d(t, {
   useSubmittedGuildJoinRequestTotal: function() {
-    return i
+    return r
   }
 });
 var n = a("442837"),
-  r = a("826581");
+  i = a("826581");
 
-function i(e) {
+function r(e) {
   let {
     guildId: t
   } = e;
-  return (0, n.useStateFromStores)([r.default], () => r.default.getSubmittedGuildJoinRequestTotal(t), [t])
+  return (0, n.useStateFromStores)([i.default], () => i.default.getSubmittedGuildJoinRequestTotal(t), [t])
 }

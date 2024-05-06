@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("570140"),
   _ = n("212093"),
   C = n("827837"),
-  S = n("785570"),
-  m = n("963202"),
+  m = n("785570"),
+  S = n("963202"),
   p = n("252618"),
   I = n("440190"),
   T = n("5955"),
@@ -67,7 +67,7 @@ class q extends s.PureComponent {
       mostRecentQuery: o
     } = this.props;
     if ((0, C.fetchActivityStatistics)(), (0, b.maybeFetchGuildDiscoveryCategories)(), null == L.default.getSearchIndex() && (0, _.createAlgoliaIndex)(), h.default.wait(() => {
-        (0, S.markView)(H.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
+        (0, m.markView)(H.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
       }), !a && 0 === o.length && y.trackDiscoveryViewed({
         loadId: this.loadId,
         gamesYouPlayGuilds: s.guilds,
@@ -490,9 +490,9 @@ function Z(e) {
 t.default = function(e) {
   let {
     searchRoute: t
-  } = e, n = (0, f.useStateFromStoresArray)([O.default], () => Object.values(O.default.getGuilds())), s = (0, m.useAnyClanPrepilotExperimentEnabled)(n, "guild_discovery"), {
+  } = e, n = (0, f.useStateFromStoresArray)([O.default], () => Object.values(O.default.getGuilds())), s = (0, S.useAnyClanPrepilotExperimentEnabled)(n, "guild_discovery"), {
     clanDiscoveryEnabled: l
-  } = (0, m.useClanPilotExperiment)("guild_discovery"), i = (0, f.useStateFromStores)([L.default], () => L.default.getCurrentCategoryId()), r = (0, f.useStateFromStores)([L.default], () => L.default.getIsReady());
+  } = (0, S.useClanPilotExperiment)("guild_discovery"), i = (0, f.useStateFromStores)([L.default], () => L.default.getCurrentCategoryId()), r = (0, f.useStateFromStores)([L.default], () => L.default.getIsReady());
   return (s || l) && (!r || i === B.CategoryId.Clans) ? (0, a.jsx)(j.default, {}) : (0, a.jsx)(Z, {
     searchRoute: t
   })

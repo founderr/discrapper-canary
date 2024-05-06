@@ -17,8 +17,8 @@ var a, s = n("735250"),
   h = n("239091"),
   _ = n("287259"),
   C = n("404133"),
-  S = n("785547"),
-  m = n("490983"),
+  m = n("785547"),
+  S = n("490983"),
   p = n("799777"),
   I = n("285952"),
   T = n("366695"),
@@ -152,7 +152,7 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
             }),
             libraryApplication: e.libraryApplication
           })]
-        }), (0, O.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(S.default, {
+        }), (0, O.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(m.default, {
           analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(G[a], " ").concat(i === y.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
           analyticsListIndex: n,
           source: y.AnalyticsLocations.APPLICATION_LIBRARY,
@@ -402,10 +402,10 @@ function H(e) {
       applicationViewItems: a,
       filterQuery: i,
       fetched: r
-    } = (0, u.useStateFromStoresObject)([m.default], () => ({
-      applicationViewItems: m.default.sortedFilteredLibraryApplicationViewItems,
-      filterQuery: m.default.applicationFilterQuery,
-      fetched: m.default.hasFetchedApplications
+    } = (0, u.useStateFromStoresObject)([S.default], () => ({
+      applicationViewItems: S.default.sortedFilteredLibraryApplicationViewItems,
+      filterQuery: S.default.applicationFilterQuery,
+      fetched: S.default.hasFetchedApplications
     })),
     {
       sortKey: d,

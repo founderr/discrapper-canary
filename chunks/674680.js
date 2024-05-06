@@ -33,17 +33,17 @@ function C(e) {
     achievementId: n,
     unlocked: f,
     size: C = l.AvatarSizes.SIZE_40
-  } = e, S = (0, i.default)(), m = (0, c.getPoggermodeAchievementData)(n);
-  if (null == m) return null;
+  } = e, m = (0, i.default)(), S = (0, c.getPoggermodeAchievementData)(n);
+  if (null == S) return null;
   let p = (0, l.getAvatarSpecs)(C),
     {
       name: I,
       rarity: T
-    } = m,
+    } = S,
     {
       color: g
     } = (0, c.getAchievementStyles)(T),
-    A = (0, s.isThemeDark)(S) ? h : _,
+    A = (0, s.isThemeDark)(m) ? h : _,
     N = (p.size - p.offset - 2 * p.stroke) * .8,
     v = p.size - p.stroke,
     R = {

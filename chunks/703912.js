@@ -18,8 +18,8 @@ var a = n("664751"),
   h = n("307643"),
   _ = n("973616"),
   C = n("594174"),
-  S = n("630388"),
-  m = n("700785"),
+  m = n("630388"),
+  S = n("700785"),
   p = n("996106"),
   I = n("186901"),
   T = n("981631");
@@ -54,7 +54,7 @@ async function A(e, t, n) {
     errorCode: T.RPCErrors.OAUTH2_ERROR
   }, "Client is not logged in");
   let w = null !== (i = d.default.getApplication(A)) && void 0 !== i ? i : _.default.createFromServer(await (0, h.fetchApplication)(A)),
-    k = null != w && (0, S.hasFlag)(w.flags, T.ApplicationFlags.EMBEDDED) && (null === (a = w.integrationTypesConfig) || void 0 === a ? void 0 : a[s.ApplicationIntegrationType.USER_INSTALL]) != null;
+    k = null != w && (0, m.hasFlag)(w.flags, T.ApplicationFlags.EMBEDDED) && (null === (a = w.integrationTypesConfig) || void 0 === a ? void 0 : a[s.ApplicationIntegrationType.USER_INSTALL]) != null;
   o = null == j ? k ? s.ApplicationIntegrationType.USER_INSTALL : s.ApplicationIntegrationType.GUILD_INSTALL : Number(j);
   try {
     u = await (0, f.fetchAuthorization)({
@@ -110,7 +110,7 @@ async function A(e, t, n) {
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
   null == n || n(u.application, D);
-  let F = m.NONE;
+  let F = S.NONE;
   try {
     F = l.deserialize(null != y ? y : 0)
   } catch (e) {}

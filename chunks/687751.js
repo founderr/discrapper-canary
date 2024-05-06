@@ -21,7 +21,7 @@ function C(e, t) {
   let a = d.default.getCurrentUser();
   (null === (n = r.default.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != a && null == a.nsfwAllowed && (0, c.openAgeGateModal)(h.AgeGateSource.NSFW_CHANNEL)
 }
-class S extends i.default {
+class m extends i.default {
   _initialize() {
     l.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.default.subscribe("CHANNEL_SELECT", this.handleChannelSelect), l.default.subscribe("AGE_GATE_MODAL_OPEN", this.handleAgeGateModalOpen), l.default.subscribe("AGE_GATE_MODAL_CLOSE", this.handleAgeGateModalClose), l.default.subscribe("AGE_GATE_SUCCESS_MODAL_OPEN", this.handleAgeGateSuccess), l.default.subscribe("AGE_GATE_FAILURE_MODAL_OPEN", this.handleAgeGateFailure)
   }
@@ -74,4 +74,4 @@ class S extends i.default {
     (0, s.closeModal)(h.EXISTING_USER_AGE_GATE_MODAL_KEY)
   }
 }
-t.default = new S
+t.default = new m

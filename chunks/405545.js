@@ -2,8 +2,8 @@
 a.r(t);
 var n = a("735250");
 a("470079");
-var r = a("120356"),
-  i = a.n(r),
+var i = a("120356"),
+  r = a.n(i),
   s = a("186078"),
   l = a("137158"),
   o = a("915580");
@@ -11,7 +11,7 @@ t.default = function(e) {
   let {
     formField: t,
     index: a,
-    isDragEnabled: r,
+    isDragEnabled: i,
     isDropHovered: c,
     onDrop: d,
     onEdit: u,
@@ -24,7 +24,7 @@ t.default = function(e) {
   return (0, n.jsx)(l.default, {
     field: t,
     index: a,
-    isDragEnabled: r,
+    isDragEnabled: i,
     isDropHovered: c,
     onDrop: d,
     onEdit: u,
@@ -35,7 +35,7 @@ t.default = function(e) {
     children: (0, n.jsx)(s.MultipleChoiceFieldBody, {
       field: t,
       value: void 0,
-      radioItemClassName: i()(o.fieldBackground, o.multipleChoiceFixedTextColor),
+      radioItemClassName: r()(o.fieldBackground, o.multipleChoiceFixedTextColor),
       disabled: !1
     })
   })

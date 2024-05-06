@@ -14,7 +14,7 @@ function o(e) {
   let {
     onError: t,
     onSuccess: n
-  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, S] = a.useState(!1), [m, p] = a.useState(!1), [I, T] = a.useState(!1), [g, A] = a.useState(!1), N = o || d || f || h || m || g, v = a.useCallback(async e => {
+  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, m] = a.useState(!1), [S, p] = a.useState(!1), [I, T] = a.useState(!1), [g, A] = a.useState(!1), N = o || d || f || h || S || g, v = a.useCallback(async e => {
     if (!N) {
       u(!0);
       try {
@@ -64,14 +64,14 @@ function o(e) {
     }
   }, [N, t, n]), M = a.useCallback(async () => {
     if (!C) {
-      S(!0);
+      m(!0);
       try {
         await (0, l.getLinkCodeForCurrentUser)(), null == n || n()
       } catch (n) {
         let e = new s.APIError(n);
         null == t || t(e)
       } finally {
-        S(!1)
+        m(!1)
       }
     }
   }, [C, t, n]), P = a.useCallback(async e => {
@@ -87,7 +87,7 @@ function o(e) {
       }
     }
   }, [I, t, n]), y = a.useCallback(async (e, a) => {
-    if (!m) {
+    if (!S) {
       p(!0);
       try {
         await l.default.requestLink(e, a), null == n || n()
@@ -98,7 +98,7 @@ function o(e) {
         p(!1)
       }
     }
-  }, [m, t, n]);
+  }, [S, t, n]);
   return {
     acceptLinkRequest: v,
     declineLinkRequest: R,
@@ -130,7 +130,7 @@ function o(e) {
     isCancelLoading: h,
     isGetLinkCodeLoading: C,
     isSelectTeenUserLoading: I,
-    isRequestingLink: m,
+    isRequestingLink: S,
     isMoreLoading: g
   }
 }

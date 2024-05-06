@@ -24,8 +24,8 @@ var l = a("735250"),
   E = a("333867"),
   g = a("74179"),
   x = a("981631"),
-  S = a("255094");
-let b = e => {
+  b = a("255094");
+let S = e => {
     let {
       children: t,
       style: a,
@@ -113,7 +113,7 @@ function v(e) {
     e === h.Step.CONFIRM && (P(!1), t()), y(e)
   }, [y, t]);
   return (0, f.usePaymentStepForAuthentication)(_, k, H), (0, l.jsxs)("div", {
-    className: S.reviewContainer,
+    className: b.reviewContainer,
     children: [(0, l.jsx)(i.FormSection, {
       children: (0, l.jsx)(i.FormItem, {
         children: (0, l.jsx)(u.default, {
@@ -126,15 +126,15 @@ function v(e) {
         })
       })
     }), (0, l.jsx)("div", {
-      className: S.legalTerms,
+      className: b.legalTerms,
       children: (0, l.jsxs)("p", {
         children: ["Non-refundable. By clicking, you are agreeing to our", " ", (0, l.jsx)(i.Anchor, {
           href: m.default.getArticleURL(x.HelpdeskArticles.PAID_TERMS),
           children: "Paid Services Terms."
         })]
       })
-    }), (0, l.jsx)(b, {
-      className: S.buyButton,
+    }), (0, l.jsx)(S, {
+      className: b.buyButton,
       submitting: j,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
@@ -144,7 +144,7 @@ function v(e) {
         type: i.Spinner.Type.PULSING_ELLIPSIS
       })
     }), !j && (0, l.jsx)(T, {
-      className: S.reviewButton,
+      className: b.reviewButton,
       onClick: () => {
         r(), (0, E.default)({
           skuId: v,

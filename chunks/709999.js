@@ -17,8 +17,8 @@ var l = a("735250"),
   E = a("1585"),
   g = a("125988"),
   x = a("333867"),
-  S = a("197115"),
-  b = a("300284"),
+  b = a("197115"),
+  S = a("300284"),
   T = a("876917"),
   L = a("642619"),
   v = a("210887"),
@@ -112,7 +112,7 @@ t.default = function(e) {
       e.removeEventListener("focusin", t)
     }
   }, []);
-  let eh = (0, b.default)({
+  let eh = (0, S.default)({
       analyticsLocations: Z
     }),
     eE = s.useRef(null),
@@ -137,11 +137,11 @@ t.default = function(e) {
         returnRef: eE
       })
     },
-    eS = ex(p.default.COLLECTIBLES_SHOP_CARD),
-    eb = ex(p.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    eb = ex(p.default.COLLECTIBLES_SHOP_CARD),
+    eS = ex(p.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eT = () => (0, l.jsx)("div", {
       className: G.hoverUpsellContainer,
-      children: (0, l.jsx)(S.default, {
+      children: (0, l.jsx)(b.default, {
         fullWidth: !0,
         className: G.__invalid_premiumSubscribeButton,
         disabled: ef,
@@ -168,7 +168,7 @@ t.default = function(e) {
       disableTooltipPointerEvents: !0
     }),
     ev = () => eo ? null : eu ? (0, l.jsx)(X, {
-      onClick: eb
+      onClick: eS
     }) : (0, l.jsx)(F.default, {
       product: t,
       returnRef: Q,
@@ -217,7 +217,7 @@ t.default = function(e) {
       innerRef: Q,
       className: n()(G.shopCard, (0, i.match)(ep).with(P.ShopCardHoverAnimationVariant.CONTROL, () => G.shopCardDefaultAnimation).with(P.ShopCardHoverAnimationVariant.TRANSFORMATION, () => G.shopCardTransformationAnimation).otherwise(() => void 0)),
       onBlur: () => J(!1),
-      onClick: eS,
+      onClick: eb,
       style: null != en ? {
         backgroundColor: em ? "var(--background-floating)" : "var(--background-secondary)",
         borderColor: "var(--chat-border)",

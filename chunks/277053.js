@@ -9,10 +9,10 @@ var l, i, r, o, u = n("392711"),
   h = n("700785"),
   _ = n("388610"),
   C = n("592125"),
-  S = n("981631"),
-  m = n("71080");
+  m = n("981631"),
+  S = n("71080");
 let p = new Set,
-  I = S.FormStates.CLOSED,
+  I = m.FormStates.CLOSED,
   T = !1,
   g = null,
   A = null,
@@ -20,7 +20,7 @@ let p = new Set,
   v = null,
   R = null,
   L = null,
-  O = f.Storage.get(m.ADVANCED_MODE_ON_KEY) || !1;
+  O = f.Storage.get(S.ADVANCED_MODE_ON_KEY) || !1;
 
 function M(e) {
   let t = e.getGuildId(),
@@ -33,7 +33,7 @@ function M(e) {
 function P() {
   if (N = _.default.getChannel(), v = _.default.getCategory(), null == N) return !1;
   let e = N.getGuildId();
-  A = g = M(N), null == g[R] && (R = e), s = null != v, a = h.areChannelsLocked(N, v), L = null, T = !1, I = S.FormStates.CLOSED, p.clear()
+  A = g = M(N), null == g[R] && (R = e), s = null != v, a = h.areChannelsLocked(N, v), L = null, T = !1, I = m.FormStates.CLOSED, p.clear()
 }
 class y extends(l = c.default.Store) {
   initialize() {
@@ -86,7 +86,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
     let {
       section: t
     } = e;
-    if (null != N || t !== S.ChannelSettingsSections.PERMISSIONS) return !1;
+    if (null != N || t !== m.ChannelSettingsSections.PERMISSIONS) return !1;
     P()
   },
   CHANNEL_SETTINGS_PERMISSIONS_INIT: P,
@@ -104,7 +104,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
     }, g = {
       ...g,
       [t]: l
-    }, p.add(t), I = S.FormStates.OPEN, T = !d().isEqual(g, A), a = h.areChannelsLocked(N, v)
+    }, p.add(t), I = m.FormStates.OPEN, T = !d().isEqual(g, A), a = h.areChannelsLocked(N, v)
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {
     let {
@@ -117,7 +117,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
     }
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    I = S.FormStates.CLOSED, g = null, A = null, N = null, v = null, T = !1, p.clear(), R = null, L = null
+    I = m.FormStates.CLOSED, g = null, A = null, N = null, v = null, T = !1, p.clear(), R = null, L = null
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -142,18 +142,18 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
     return n
   },
   CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function() {
-    I = S.FormStates.SUBMITTING
+    I = m.FormStates.SUBMITTING
   },
   CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function(e) {
     let {
       silent: t
     } = e;
-    t ? I = S.FormStates.OPEN : (I = S.FormStates.CLOSED, P())
+    t ? I = m.FormStates.OPEN : (I = m.FormStates.CLOSED, P())
   },
   CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function(e) {
     let {
       advancedMode: t
     } = e;
-    O = t, f.Storage.set(m.ADVANCED_MODE_ON_KEY, t)
+    O = t, f.Storage.set(S.ADVANCED_MODE_ON_KEY, t)
   }
 })

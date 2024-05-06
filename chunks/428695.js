@@ -20,8 +20,8 @@ t.default = function(e) {
     message: l,
     image: r,
     type: C,
-    imageStyles: S,
-    imageMarginX: m,
+    imageStyles: m,
+    imageMarginX: S,
     imageMarginTop: p,
     trackingSource: I,
     undismissable: T,
@@ -63,7 +63,7 @@ t.default = function(e) {
     }),
     children: n
   }));
-  let M = null != m ? "".concat(m, "px") : "16px";
+  let M = null != S ? "".concat(S, "px") : "16px";
   return (0, a.jsxs)("div", {
     className: h.container,
     children: [!0 === T ? null : (0, a.jsx)(o.Clickable, {
@@ -86,7 +86,7 @@ t.default = function(e) {
       },
       children: (0, a.jsx)("img", {
         className: h.image,
-        style: S,
+        style: m,
         src: r,
         alt: ""
       })

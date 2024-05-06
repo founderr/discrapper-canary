@@ -31,8 +31,8 @@ var a = s("735250"),
   R = s("626135"),
   M = s("63063"),
   v = s("695346"),
-  D = s("263937"),
-  L = s("996073"),
+  L = s("263937"),
+  D = s("996073"),
   P = s("526761"),
   j = s("981631"),
   b = s("611480"),
@@ -208,7 +208,7 @@ function q() {
 function Z() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.syncProfileThemeWithUserTheme),
     t = n.useRef(null);
-  return (0, L.default)(t, P.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME), (0, a.jsx)(u.FormItem, {
+  return (0, D.default)(t, P.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME), (0, a.jsx)(u.FormItem, {
     ref: t,
     title: y.default.Messages.ACCESSIBILITY_SETTINGS_PROFILE_COLORS_TITLE,
     className: i()(F.marginTop20, B.syncProfileThemeWithUserTheme),
@@ -259,15 +259,15 @@ function J() {
       systemPrefersReducedMotion: r,
       gifAutoPlayOverrideReason: o,
       animateEmojiOverrideReason: c
-    } = (0, d.useStateFromStoresObject)([T.default, D.default], () => ({
+    } = (0, d.useStateFromStoresObject)([T.default, L.default], () => ({
       systemPrefersReducedMotion: T.default.systemPrefersReducedMotion,
       rawPrefersReducedMotion: T.default.rawPrefersReducedMotion,
       useReducedMotion: T.default.useReducedMotion,
-      gifAutoPlayOverrideReason: D.default.getAppliedOverrideReasonKey("gifAutoPlay"),
-      animateEmojiOverrideReason: D.default.getAppliedOverrideReasonKey("animateEmoji")
+      gifAutoPlayOverrideReason: L.default.getAppliedOverrideReasonKey("gifAutoPlay"),
+      animateEmojiOverrideReason: L.default.getAppliedOverrideReasonKey("animateEmoji")
     })),
     S = n.useRef(null);
-  (0, L.default)(S, P.AccessibilityScrollPositions.REDUCED_MOTION);
+  (0, D.default)(S, P.AccessibilityScrollPositions.REDUCED_MOTION);
   let f = n.useCallback((e, t) => {
       (0, E.setPrefersReducedMotion)(t ? "auto" : r)
     }, [r]),
@@ -317,7 +317,7 @@ function J() {
 
 function $() {
   let e = v.AnimateStickers.useSetting(),
-    t = (0, d.useStateFromStores)([D.default], () => D.default.getAppliedOverrideReasonKey("animateStickers")),
+    t = (0, d.useStateFromStores)([L.default], () => L.default.getAppliedOverrideReasonKey("animateStickers")),
     s = n.useCallback(e => {
       v.AnimateStickers.updateSetting(e.value)
     }, []);
@@ -350,7 +350,7 @@ function ee() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.isSubmitButtonEnabled),
     t = v.UseLegacyChatInput.useSetting(),
     s = n.useRef(null);
-  return (0, L.default)(s, P.AccessibilityScrollPositions.LEGACY_CHAT_INPUT), (0, a.jsxs)(u.FormItem, {
+  return (0, D.default)(s, P.AccessibilityScrollPositions.LEGACY_CHAT_INPUT), (0, a.jsxs)(u.FormItem, {
     ref: s,
     children: [(0, a.jsx)(u.FormTitle, {
       className: F.marginBottom8,

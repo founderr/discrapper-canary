@@ -24,8 +24,8 @@ var a = n("735250"),
   h = n("213609"),
   _ = n("144114"),
   C = n("210887"),
-  S = n("23434"),
-  m = n("610001"),
+  m = n("23434"),
+  S = n("610001"),
   p = n("78415"),
   I = n("1964"),
   T = n("981631"),
@@ -38,8 +38,8 @@ function R() {
   let {
     action: e,
     theme: t
-  } = (0, i.useStateFromStoresObject)([S.default, C.default], () => ({
-    action: S.default.getAction(),
+  } = (0, i.useStateFromStoresObject)([m.default, C.default], () => ({
+    action: m.default.getAction(),
     theme: C.default.theme
   })), R = I.default.getVerificationTypes(e), [L, O] = s.useState(0), M = (0, f.default)(R);
   (0, h.default)({
@@ -95,7 +95,7 @@ function R() {
       Layer: p.default,
       onCloseCallback: P
     })
-  }, [R, M]), (0, a.jsx)(m.default, {
+  }, [R, M]), (0, a.jsx)(S.default, {
     types: R,
     captchaKey: L,
     onCaptchaVerify: e => {

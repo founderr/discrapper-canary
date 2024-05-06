@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("292959"),
   _ = n("944486"),
   C = n("246946"),
-  S = n("340895"),
-  m = n("557177"),
+  m = n("340895"),
+  S = n("557177"),
   p = n("871465");
 let I = {
     transform: "scale(0.7)",
@@ -27,13 +27,13 @@ let I = {
   };
 t.default = () => {
   let e = (0, u.useStateFromStores)([_.default], () => _.default.getChannelId()),
-    t = (0, u.useStateFromStoresArray)([S.default], () => S.default.getIncomingCalls().filter(t => {
+    t = (0, u.useStateFromStoresArray)([m.default], () => m.default.getIncomingCalls().filter(t => {
       let {
         channel: n
       } = t;
       return e !== n.id
     })),
-    n = (0, u.useStateFromStores)([S.default], () => S.default.hasIncomingCalls()),
+    n = (0, u.useStateFromStores)([m.default], () => m.default.hasIncomingCalls()),
     l = (0, u.useStateFromStores)([h.default], () => h.default.isSoundDisabled("call_ringing")),
     g = f.default.useIsRingtoneEligible(),
     A = f.default.useIsRingtoneDisabled(),
@@ -42,7 +42,7 @@ t.default = () => {
     R = s.useRef(!1),
     L = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
-      return g && !A ? (0, m.createSound)(c.default.ringtone, e) : v === p.Soundpacks.CLASSIC ? (0, m.createSound)(500 !== i().random(1, 1e3) ? "call_ringing" : i().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, m.createSoundForPack)("call_ringing", v)
+      return g && !A ? (0, S.createSound)(c.default.ringtone, e) : v === p.Soundpacks.CLASSIC ? (0, S.createSound)(500 !== i().random(1, 1e3) ? "call_ringing" : i().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, S.createSoundForPack)("call_ringing", v)
     }, [v, A, g]);
   return s.useEffect(() => () => {
     L.stop()

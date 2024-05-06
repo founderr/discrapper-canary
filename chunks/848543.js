@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("706140"),
   _ = n("294629"),
   C = n("131951"),
-  S = n("459273"),
-  m = n("242291"),
+  m = n("459273"),
+  S = n("242291"),
   p = n("792165"),
   I = n("603074"),
   T = n("981631"),
@@ -37,7 +37,7 @@ function v(e) {
   } = e, {
     mute: O,
     suppress: M
-  } = (0, _.default)(t), P = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), y = O || M || P, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, m.useSoundBoardDismissContentTypes)({
+  } = (0, _.default)(t), P = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), y = O || M || P, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: y
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: w
@@ -117,7 +117,7 @@ function v(e) {
   }), W = s.useCallback(() => {
     !y && D(!x)
   }, [y, x]);
-  return (0, S.useComponentAction)({
+  return (0, m.useComponentAction)({
     event: T.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W
   }), (0, a.jsx)(E.AnalyticsLocationProvider, {

@@ -22,8 +22,8 @@ var l = s("735250"),
   _ = s("81334"),
   T = s("652853"),
   x = s("335191"),
-  N = s("347949"),
-  A = s("988246"),
+  A = s("347949"),
+  N = s("988246"),
   U = s("689938"),
   g = s("175839");
 
@@ -47,7 +47,7 @@ function C(e) {
       var e;
       null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [h]), R) ? (0, l.jsx)(A.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
+  }, [h]), R) ? (0, l.jsx)(N.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: g.infoScroller,
     children: [(0, l.jsxs)("div", {
@@ -73,7 +73,7 @@ function C(e) {
             userId: s.id
           })
         })
-      }), P && (0, l.jsx)(N.UserProfileRecentGamesContainer, {
+      }), P && (0, l.jsx)(A.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
         containerClassName: n()(g.userInfoText, g.recentGames)

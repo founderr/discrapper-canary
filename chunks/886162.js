@@ -20,9 +20,9 @@ var a = n("735250"),
 function _(e) {
   let {
     transitionState: t
-  } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.getAction()), [C, S] = s.useState(!1), m = (0, c.useUID)();
+  } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.getAction()), [C, m] = s.useState(!1), S = (0, c.useUID)();
   async function p() {
-    return S(!0), _ === f.UserRequiredActions.AGREEMENTS && S(await (0, o.acceptAgreements)()), null
+    return m(!0), _ === f.UserRequiredActions.AGREEMENTS && m(await (0, o.acceptAgreements)()), null
   }
   return (0, u.default)({
     type: l.ImpressionTypes.VIEW,
@@ -31,10 +31,10 @@ function _(e) {
       required_action: _
     }
   }, {}, []), (0, a.jsxs)(r.ModalRoot, {
-    "aria-labelledby": m,
+    "aria-labelledby": S,
     transitionState: t,
     children: [(0, a.jsx)("div", {
-      id: m
+      id: S
     }), (0, a.jsx)(r.ModalHeader, {
       separator: !1,
       children: (0, a.jsx)(r.Heading, {

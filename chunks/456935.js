@@ -5,8 +5,8 @@ a.r(t), a.d(t, {
   }
 });
 var n = a("735250"),
-  r = a("470079"),
-  i = a("692547"),
+  i = a("470079"),
+  r = a("692547"),
   s = a("481060"),
   l = a("496675"),
   o = a("916187"),
@@ -33,15 +33,15 @@ function E(e) {
 }
 let T = {
   [f.VerificationLevels.NONE]: "",
-  [f.VerificationLevels.LOW]: i.default.unsafe_rawColors.GREEN_360.css,
-  [f.VerificationLevels.MEDIUM]: i.default.unsafe_rawColors.YELLOW_300.css,
-  [f.VerificationLevels.HIGH]: i.default.unsafe_rawColors.ORANGE_345.css,
-  [f.VerificationLevels.VERY_HIGH]: i.default.unsafe_rawColors.RED_400.css
+  [f.VerificationLevels.LOW]: r.default.unsafe_rawColors.GREEN_360.css,
+  [f.VerificationLevels.MEDIUM]: r.default.unsafe_rawColors.YELLOW_300.css,
+  [f.VerificationLevels.HIGH]: r.default.unsafe_rawColors.ORANGE_345.css,
+  [f.VerificationLevels.VERY_HIGH]: r.default.unsafe_rawColors.RED_400.css
 };
 t.default = function(e) {
   let {
     guild: t
-  } = e, i = l.default.can(f.Permissions.MANAGE_GUILD, t), p = t.verificationLevel, _ = p === f.VerificationLevels.VERY_HIGH ? c.default : o.default, C = r.useMemo(() => E(p), [p]), g = T[p], x = (0, n.jsx)("div", {
+  } = e, r = l.default.can(f.Permissions.MANAGE_GUILD, t), p = t.verificationLevel, _ = p === f.VerificationLevels.VERY_HIGH ? c.default : o.default, C = i.useMemo(() => E(p), [p]), g = T[p], x = (0, n.jsx)("div", {
     className: h.verificationLevelTitle,
     children: m.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {
@@ -68,7 +68,7 @@ t.default = function(e) {
         className: h.guildVerificationText,
         variant: "text-sm/normal",
         children: I
-      }), i && (0, n.jsx)(s.Clickable, {
+      }), r && (0, n.jsx)(s.Clickable, {
         className: h.iconInteractiveContainer,
         onClick: () => (0, s.openModalLazy)(async () => {
           let {

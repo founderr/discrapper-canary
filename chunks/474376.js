@@ -19,8 +19,8 @@ var s = n("442837"),
   h = n("480387"),
   _ = n("726745"),
   C = n("251423"),
-  S = n("383832"),
-  m = n("981631"),
+  m = n("383832"),
+  S = n("981631"),
   p = n("689938"),
   I = n("484714");
 
@@ -31,9 +31,9 @@ function T() {
       multiAccountUsers: n
     } = (0, C.useMultiAccountUsers)(),
     T = t => {
-      t !== (null == e ? void 0 : e.id) && (f.default.track(m.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+      t !== (null == e ? void 0 : e.id) && (f.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
         location: {
-          section: m.AnalyticsSections.PROFILE_POPOUT
+          section: S.AnalyticsSections.PROFILE_POPOUT
         }
       }), h.switchAccount(t))
     },
@@ -70,14 +70,14 @@ function T() {
                 children: f
               })]
             }), o && (0, a.jsx)(d.default, {
-              color: (0, i.getColor)(r ? m.Color.WHITE_500 : m.Color.BRAND_500),
-              backgroundColor: (0, i.getColor)(r ? m.Color.BRAND_500 : m.Color.WHITE_500),
+              color: (0, i.getColor)(r ? S.Color.WHITE_500 : S.Color.BRAND_500),
+              backgroundColor: (0, i.getColor)(r ? S.Color.BRAND_500 : S.Color.WHITE_500),
               width: 18,
               height: 18,
               className: I.activeIcon
             }), u && (0, a.jsx)(c.default, {
-              color: (0, i.getColor)(m.Color.RED_400),
-              backgroundColor: (0, i.getColor)(m.Color.WHITE_500),
+              color: (0, i.getColor)(S.Color.RED_400),
+              backgroundColor: (0, i.getColor)(S.Color.WHITE_500),
               width: 15,
               height: 15,
               className: I.activeIcon
@@ -85,7 +85,7 @@ function T() {
           })
         },
         action: () => {
-          u ? (0, S.default)() : T(s.id)
+          u ? (0, m.default)() : T(s.id)
         }
       }, s.id)
     });
@@ -93,7 +93,7 @@ function T() {
     children: [(0, a.jsx)(l.MenuSeparator, {}), (0, a.jsx)(l.MenuItem, {
       id: "manage-accounts",
       label: p.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
-      action: S.default
+      action: m.default
     })]
   })), g
 }

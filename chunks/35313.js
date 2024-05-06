@@ -5,12 +5,12 @@ a.r(t), a.d(t, {
   }
 });
 var n = a("718017"),
-  r = a("748780"),
-  i = a("442837"),
+  i = a("748780"),
+  r = a("442837"),
   s = a("607070");
 
 function l() {
-  let e = (0, i.useStateFromStores)([s.default], () => s.default.useReducedMotion);
+  let e = (0, r.useStateFromStores)([s.default], () => s.default.useReducedMotion);
   return (0, n.useSpring)({
     from: {
       opacity: e ? 1 : 0,
@@ -21,7 +21,7 @@ function l() {
       transform: "scale(1)"
     },
     config: {
-      easing: r.default.Easing.quad,
+      easing: i.default.Easing.quad,
       duration: e ? 0 : 200,
       clamp: !0
     }

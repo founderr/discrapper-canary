@@ -19,8 +19,8 @@ var a, s, l = n("735250"),
   h = n("592125"),
   _ = n("810090"),
   C = n("626135"),
-  S = n("981631"),
-  m = n("921944"),
+  m = n("981631"),
+  S = n("921944"),
   p = n("689938"),
   I = n("305257");
 (a = s || (s = {})).BOOSTING = "BOOSTING", a.NITRO = "NITRO", a.BASH_OUT = "BASH_OUT", a.GAME_NIGHT = "GAME_NIGHT";
@@ -69,11 +69,11 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       analyticsLocations: x
     } = (0, E.default)(s);
     i.useEffect(() => {
-      C.default.track(S.AnalyticEvents.TOOLTIP_VIEWED, {
+      C.default.track(m.AnalyticEvents.TOOLTIP_VIEWED, {
         type: A
       })
     }, [A]);
-    let D = (0, u.useAppContext)() === S.AppContext.POPOUT,
+    let D = (0, u.useAppContext)() === m.AppContext.POPOUT,
       b = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
     return (0, l.jsx)(E.AnalyticsLocationProvider, {
       value: x,
@@ -116,21 +116,21 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               children: [(0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 onClick: () => {
-                  n(m.ContentDismissActionType.UNKNOWN)
+                  n(S.ContentDismissActionType.UNKNOWN)
                 },
                 children: v
               }), (0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,
                 onClick: null != y ? y : () => {
-                  n(m.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
+                  n(S.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
                     channel: b.isGuildVoice() ? b : void 0,
                     guildId: b.guild_id,
                     locationObject: {
-                      page: S.AnalyticsPages.GUILD_CHANNEL,
-                      section: S.AnalyticsSections.GUILD_CHANNEL_LIST,
-                      object: S.AnalyticsObjects.ACTIVITIES_COACH_MARK,
-                      objectType: S.AnalyticsObjectTypes.ACTIVITY
+                      page: m.AnalyticsPages.GUILD_CHANNEL,
+                      section: m.AnalyticsSections.GUILD_CHANNEL_LIST,
+                      object: m.AnalyticsObjects.ACTIVITIES_COACH_MARK,
+                      objectType: m.AnalyticsObjectTypes.ACTIVITY
                     },
                     openInPopout: D,
                     analyticsLocations: x

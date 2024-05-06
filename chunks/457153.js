@@ -17,20 +17,20 @@ t.default = function(e) {
   var t, s, _;
   let {
     className: C,
-    expansionSpring: S,
-    isExpanded: m,
+    expansionSpring: m,
+    isExpanded: S,
     isExpansionAnimationComplete: p,
     quest: I,
     useReducedMotion: T
   } = e, g = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, A = (null !== (_ = null === (s = I.userStatus) || void 0 === s ? void 0 : s.streamProgressSeconds) && void 0 !== _ ? _ : 0) > 0;
   return (0, a.jsxs)(i.animated.div, {
-    "aria-hidden": m && p,
+    "aria-hidden": S && p,
     className: l()(C, h.contentCollapsed, {
-      [h.contentCollapsedExpanded]: m,
+      [h.contentCollapsedExpanded]: S,
       [h.contentCollapsedAccepted]: g
     }),
     style: {
-      opacity: S.to({
+      opacity: m.to({
         range: [0, 1],
         output: [1, 0]
       })

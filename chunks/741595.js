@@ -1,9 +1,9 @@
 "use strict";
 a.r(t);
 var n = a("735250"),
-  r = a("470079"),
-  i = a("120356"),
-  s = a.n(i),
+  i = a("470079"),
+  r = a("120356"),
+  s = a.n(r),
   l = a("481060"),
   o = a("441674"),
   c = a("308083"),
@@ -12,10 +12,10 @@ t.default = e => {
   let {
     title: t,
     description: a,
-    handleUpdate: i,
+    handleUpdate: r,
     playstyle: u,
     error: f
-  } = e, m = (0, l.useToken)(l.tokens.colors.WHITE), h = r.useMemo(() => Object.values((0, c.getPlaystyleOptions)()), []);
+  } = e, m = (0, l.useToken)(l.tokens.colors.WHITE), h = i.useMemo(() => Object.values((0, c.getPlaystyleOptions)()), []);
   return (0, n.jsxs)("div", {
     className: d.slideContent,
     children: [(0, n.jsx)(l.Heading, {
@@ -38,7 +38,7 @@ t.default = e => {
         className: s()(d.playstyleOption, d.selectableOption, {
           [d.selectedOption]: e.type === u
         }),
-        onClick: () => i(e.type),
+        onClick: () => r(e.type),
         children: [(0, n.jsx)(l.Heading, {
           variant: "heading-xxl/medium",
           children: e.emoji

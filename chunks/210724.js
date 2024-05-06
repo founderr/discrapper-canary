@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("497505"),
   _ = n("918701"),
   C = n("977156"),
-  S = n("5881"),
-  m = n("874137"),
+  m = n("5881"),
+  S = n("874137"),
   p = n("78826"),
   I = n("909389"),
   T = n("941348"),
@@ -31,7 +31,7 @@ function v(e) {
   var t, n, l;
   let {
     quest: E
-  } = e, v = (0, S.getQuestLogger)({
+  } = e, v = (0, m.getQuestLogger)({
     quest: E,
     location: g.QuestsExperimentLocations.QUESTS_BAR
   }), R = (0, C.useIsEligibleForQuests)({
@@ -133,7 +133,7 @@ function v(e) {
   }, {
     autoTrackExposure: es && !q
   });
-  return R && (es || !G || Q) && !q ? (0, a.jsx)(m.QuestContentImpressionTracker, {
+  return R && (es || !G || Q) && !q ? (0, a.jsx)(S.QuestContentImpressionTracker, {
     questOrQuests: E,
     questContent: h.QuestContent.QUEST_BAR,
     overrideVisibility: !O && es,

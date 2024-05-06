@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("43267"),
   _ = n("933557"),
   C = n("703656"),
-  S = n("932724"),
-  m = n("672339"),
+  m = n("932724"),
+  S = n("672339"),
   p = n("898531"),
   I = n("923973"),
   T = n("189771"),
@@ -60,8 +60,8 @@ function H(e) {
   return s.useEffect(() => {
     let e = L.default.getCurrentUser();
     if (i && null != e) {
-      let t = (0, S.getLastUsedVideoBackgroundOption)(e);
-      (0, m.applyBackgroundOptionPreview)(t, l, {
+      let t = (0, m.getLastUsedVideoBackgroundOption)(e);
+      (0, S.applyBackgroundOptionPreview)(t, l, {
         track: !1
       }).catch(b.NOOP)
     }
@@ -149,7 +149,7 @@ function Y(e) {
     y: n,
     x: l,
     channel: f
-  } = e, [C, S] = s.useState(!1), m = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), v = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -169,7 +169,7 @@ function Y(e) {
       children: [(0, a.jsx)(P.default, {
         className: G.icon,
         ringing: g,
-        src: null != m ? m : "",
+        src: null != S ? S : "",
         ringingType: P.default.RingingType.INCOMING,
         size: C ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
       }), (0, a.jsxs)("div", {
@@ -225,7 +225,7 @@ function Y(e) {
           look: u.Button.Looks.LINK,
           color: u.Button.Colors.PRIMARY,
           className: G.previewButton,
-          onClick: () => S(!0),
+          onClick: () => m(!0),
           children: j.default.Messages.INCOMING_CALL_PREVIEW_CAMERA
         }) : null]
       })

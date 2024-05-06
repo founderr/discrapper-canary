@@ -19,7 +19,7 @@ t.default = function(e) {
     animate: E,
     gradientStopColor: h,
     getHistoricalTotalBytes: _
-  } = e, C = (0, i.useColorValue)(f).hex, S = null === (t = (0, i.useColorValue)(h)) || void 0 === t ? void 0 : t.hex;
+  } = e, C = (0, i.useColorValue)(f).hex, m = null === (t = (0, i.useColorValue)(h)) || void 0 === t ? void 0 : t.hex;
   return (0, a.jsx)(u.default, {
     getHistoricalTotalBytes: _,
     children: (e, t, i) => {
@@ -50,7 +50,7 @@ t.default = function(e) {
               className: c.sparkChart,
               updateInterval: t,
               color: C,
-              gradientStopColor: S,
+              gradientStopColor: m,
               numUpdatesToShow: i,
               animate: E,
               pixelWidth: 600,

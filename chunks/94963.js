@@ -1,9 +1,9 @@
 "use strict";
 a.r(t), a("47120");
 var n = a("735250"),
-  r = a("470079"),
-  i = a("120356"),
-  s = a.n(i),
+  i = a("470079"),
+  r = a("120356"),
+  s = a.n(r),
   l = a("866442"),
   o = a("717772"),
   c = a("931622"),
@@ -69,17 +69,17 @@ let b = S.CLAN_BRAND_PALETTE_PRESETS.length + 1,
     let {
       name: t,
       primaryColor: a,
-      secondaryColor: r,
-      isCustom: i
+      secondaryColor: i,
+      isCustom: r
     } = e;
     return (0, n.jsxs)(n.Fragment, {
-      children: [i ? (0, n.jsx)(d.EyeDropperIcon, {
+      children: [r ? (0, n.jsx)(d.EyeDropperIcon, {
         width: 24,
         height: 24
       }) : (0, n.jsx)("div", {
         className: L.brandItemCircle,
         style: {
-          background: "linear-gradient(-45deg, ".concat(r, " 50%, ").concat(a, " 50% )")
+          background: "linear-gradient(-45deg, ".concat(i, " 50%, ").concat(a, " 50% )")
         }
       }), (0, n.jsx)(C.Text, {
         variant: "text-sm/medium",
@@ -90,20 +90,20 @@ let b = S.CLAN_BRAND_PALETTE_PRESETS.length + 1,
     })
   };
 t.default = e => {
-  var t, a, i, o, c, d, u, f;
+  var t, a, r, o, c, d, u, f;
   let {
     handleUpdate: m,
     progress: h,
     guildId: E
-  } = e, T = (0, _.useStateFromStores)([I.default], () => I.default.getGuild(E)), p = null !== (t = (0, _.useStateFromStores)([x.default], () => x.default.getMemberCount(E))) && void 0 !== t ? t : 0, [O, D] = r.useState(h.banner), [P, F] = r.useState({
+  } = e, T = (0, _.useStateFromStores)([I.default], () => I.default.getGuild(E)), p = null !== (t = (0, _.useStateFromStores)([x.default], () => x.default.getMemberCount(E))) && void 0 !== t ? t : 0, [O, D] = i.useState(h.banner), [P, F] = i.useState({
     primary: null !== (a = h.brandPrimaryColor) && void 0 !== a ? a : S.CLAN_BRAND_PRIMARY_DEFAULT,
-    secondary: null !== (i = h.brandSecondaryColor) && void 0 !== i ? i : S.CLAN_BRAND_SECONDARY_DEFAULT
-  }), [w, G] = r.useState(() => {
+    secondary: null !== (r = h.brandSecondaryColor) && void 0 !== r ? r : S.CLAN_BRAND_SECONDARY_DEFAULT
+  }), [w, G] = i.useState(() => {
     if (h.brandPrimaryColor === h.badgePrimaryColor && h.brandSecondaryColor === h.badgeSecondaryColor) return 0;
     for (let e = 0; e < S.CLAN_BRAND_PALETTE_PRESETS.length; e++)
       if (S.CLAN_BRAND_PALETTE_PRESETS[e].primary === h.brandPrimaryColor && S.CLAN_BRAND_PALETTE_PRESETS[e].secondary === h.brandSecondaryColor) return e + 1;
     return b
-  }), [U, B] = r.useState(!1), k = b === w, H = 0 === w, V = r.useMemo(() => {
+  }), [U, B] = i.useState(!1), k = b === w, H = 0 === w, V = i.useMemo(() => {
     if (k) return P;
     if (H) {
       var e, t;
@@ -119,7 +119,7 @@ t.default = e => {
       }
     }
   }, [P, H, k, h.badgePrimaryColor, h.badgeSecondaryColor, w]);
-  return r.useEffect(() => {
+  return i.useEffect(() => {
     m({
       banner: O,
       brandPrimaryColor: V.primary,

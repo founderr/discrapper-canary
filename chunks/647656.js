@@ -74,9 +74,9 @@ t.default = {
         activity: _
       }), Promise.resolve(_);
       _.name = a.application.name, _.application_id = a.application.id;
-      let S = a.transport === f.TransportTypes.POST_MESSAGE,
-        m = (0, d.computeActivityFlags)(_, S);
-      m > 0 && (_.flags = m), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
+      let m = a.transport === f.TransportTypes.POST_MESSAGE,
+        S = (0, d.computeActivityFlags)(_, m);
+      S > 0 && (_.flags = S), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
       let {
         assets: p,
         party: I,
@@ -85,7 +85,7 @@ t.default = {
         buttons: A,
         type: N
       } = _;
-      if ((null == N || N !== E.ActivityTypes.PLAYING && !S) && (_.type = E.ActivityTypes.PLAYING), null != T) {
+      if ((null == N || N !== E.ActivityTypes.PLAYING && !m) && (_.type = E.ActivityTypes.PLAYING), null != T) {
         let e = s().values(T).filter(e => !!e);
         if (null != I && s().intersection(e, [I.id]).length > 0 && !h.includes(a.application.id)) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET

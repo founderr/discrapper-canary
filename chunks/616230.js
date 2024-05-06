@@ -5,9 +5,9 @@ a.r(t), a.d(t, {
   }
 }), a("47120");
 var n = a("735250"),
-  r = a("470079"),
-  i = a("120356"),
-  s = a.n(i),
+  i = a("470079"),
+  r = a("120356"),
+  s = a.n(r),
   l = a("442837"),
   o = a("481060"),
   c = a("11265"),
@@ -26,10 +26,10 @@ var n = a("735250"),
 function x(e) {
   let {
     guild: t,
-    isExpanded: i,
+    isExpanded: r,
     emptyFormFields: s,
     hasTermsField: l
-  } = e, c = t.hasVerificationGate(), [u, f] = r.useState(c), m = e => {
+  } = e, c = t.hasVerificationGate(), [u, f] = i.useState(c), m = e => {
     e.preventDefault(), e.stopPropagation()
   }, h = async e => {
     try {
@@ -74,11 +74,11 @@ function x(e) {
         variant: "text-md/semibold",
         color: "header-primary",
         children: _.default.Messages.GUILD_SETTINGS_SAFETY_RULES_SCREENING
-      }), (i || s && !u) && (0, n.jsx)(o.Text, {
+      }), (r || s && !u) && (0, n.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
         children: _.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
-      }), !i && (0, n.jsx)("div", {
+      }), !r && (0, n.jsx)("div", {
         className: g.pillRow,
         children: l && (0, n.jsxs)(o.Text, {
           color: "interactive-normal",
@@ -92,7 +92,7 @@ function x(e) {
       })]
     }), (0, n.jsx)("div", {
       className: g.previewAndEnable,
-      children: i || u || !s ? (0, n.jsxs)(n.Fragment, {
+      children: r || u || !s ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(o.Clickable, {
           onMouseDown: m,
           onMouseUp: m,
@@ -128,19 +128,19 @@ async function v(e, t) {
 }
 
 function N(e) {
-  var t, a, i;
+  var t, a, r;
   let {
     guild: o,
     isClanContext: E = !1,
     onFieldsSave: T,
     onDescriptionSave: p,
     verificationForm: _
-  } = e, [N, A] = r.useState(E), S = r.useRef(!1), R = r.useCallback(() => {
+  } = e, [N, A] = i.useState(E), S = i.useRef(!1), R = i.useCallback(() => {
     S.current = !0
   }, []), L = null !== (t = (0, m.useSubmittedGuildJoinRequestTotal)({
     guildId: o.id
   })) && void 0 !== t ? t : 0, M = (0, l.useStateFromStores)([u.default], () => null != _ ? _ : u.default.get(o.id)), b = null !== (a = null == M ? void 0 : M.formFields) && void 0 !== a ? a : [];
-  r.useEffect(() => {
+  i.useEffect(() => {
     d.default.fetchVerificationForm(o.id)
   }, [o.id]);
   let j = !E;
@@ -169,7 +169,7 @@ function N(e) {
         isClanContext: E,
         onFieldsSave: null != T ? T : I,
         onDescriptionSave: null != p ? p : v,
-        formDescription: null !== (i = null == M ? void 0 : M.description) && void 0 !== i ? i : ""
+        formDescription: null !== (r = null == M ? void 0 : M.description) && void 0 !== r ? r : ""
       })
     })
   })

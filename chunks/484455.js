@@ -6,8 +6,8 @@ a.r(t), a.d(t, {
 });
 var n = a("735250");
 a("470079");
-var r = a("120356"),
-  i = a.n(r),
+var i = a("120356"),
+  r = a.n(i),
   s = a("481060"),
   l = a("915580");
 
@@ -17,7 +17,7 @@ function o(e) {
     children: a
   } = e;
   return (0, n.jsxs)(s.FormSection, {
-    className: i()(l.backgroundContainer, l.spacingContainer, l.containerPadding),
+    className: r()(l.backgroundContainer, l.spacingContainer, l.containerPadding),
     children: [(0, n.jsx)(s.FormTitle, {
       tag: "h3",
       className: l.containerTitle,

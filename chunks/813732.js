@@ -27,8 +27,8 @@ var a = s("735250"),
   R = s("580130"),
   M = s("285952"),
   v = s("366695"),
-  D = s("626135"),
-  L = s("74538"),
+  L = s("626135"),
+  D = s("74538"),
   P = s("639056"),
   j = s("52164"),
   b = s("91430"),
@@ -69,7 +69,7 @@ function w() {
     }), (0, a.jsx)("p", {
       className: G.accountCreditDescription,
       children: F.default.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
-    }), null != e && L.default.hasAccountCredit(e) ? (0, a.jsx)(P.default, {
+    }), null != e && D.default.hasAccountCredit(e) ? (0, a.jsx)(P.default, {
       className: G.accountCredit,
       entitlements: e
     }) : (0, a.jsx)(k, {})]
@@ -110,7 +110,7 @@ t.default = function() {
         onClickManageSubscription: () => T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, B.ROLE_SUBSCRIPTION_SUBSECTION)
       }), (0, a.jsx)(I.default, {
         onClickManageSubscription: () => {
-          T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, B.APPLICATION_SUBSCRIPTION_SUBSECTION), D.default.track(y.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
+          T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, B.APPLICATION_SUBSCRIPTION_SUBSECTION), L.default.track(y.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
         }
       }), (0, a.jsx)(w, {}), null != e ? (0, a.jsx)(j.default, {
         subscription: e,

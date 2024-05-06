@@ -17,8 +17,8 @@ var l = a("735250"),
   E = a("37234"),
   g = a("727637"),
   x = a("607070"),
-  S = a("100527"),
-  b = a("906732"),
+  b = a("100527"),
+  S = a("906732"),
   T = a("1585"),
   L = a("125988"),
   v = a("377171"),
@@ -98,7 +98,7 @@ t.default = function(e) {
     isGiftEasterEggEnabled: B
   } = e, {
     analyticsLocations: M
-  } = (0, b.default)(S.default.COLLECTIBLES_SHOP_CARD), er = s.useRef(null), en = s.useRef(null), ei = (0, g.default)(er), {
+  } = (0, S.default)(b.default.COLLECTIBLES_SHOP_CARD), er = s.useRef(null), en = s.useRef(null), ei = (0, g.default)(er), {
     defaultPaymentSource: eo
   } = (0, I.default)({
     isGift: !1,
@@ -115,7 +115,7 @@ t.default = function(e) {
   }), {
     backgroundColors: eE,
     buttonColors: eg
-  } = (0, G.default)(t.styles), ex = (0, U.getFormattedPriceForCollectiblesProduct)(t, o, !1), eS = (0, U.isPremiumCollectiblesProduct)(t), eb = (0, U.isFreeCollectiblesProduct)(t), [eT, eL, ev] = (0, f.useStateFromStoresArray)([H.default], () => [H.default.getPurchase(t.skuId), H.default.isClaiming === t.skuId, null != H.default.isClaiming && H.default.isClaiming !== t.skuId]), eI = (0, f.useStateFromStores)([R.default], () => (0, C.isThemeDark)(R.default.theme)), eN = (0, U.isProductNew)(t.skuId), {
+  } = (0, G.default)(t.styles), ex = (0, U.getFormattedPriceForCollectiblesProduct)(t, o, !1), eb = (0, U.isPremiumCollectiblesProduct)(t), eS = (0, U.isFreeCollectiblesProduct)(t), [eT, eL, ev] = (0, f.useStateFromStoresArray)([H.default], () => [H.default.getPurchase(t.skuId), H.default.isClaiming === t.skuId, null != H.default.isClaiming && H.default.isClaiming !== t.skuId]), eI = (0, f.useStateFromStores)([R.default], () => (0, C.isThemeDark)(R.default.theme)), eN = (0, U.isProductNew)(t.skuId), {
     hoverVariant: e_
   } = (0, W.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard"), [ey, eO] = s.useState(!1), ek = s.useRef(null), eR = s.useRef(new i.Environment), [eA, ej] = s.useState(!1), [eP, eB] = s.useState(null), eD = null != eT || eA;
   s.useEffect(() => {
@@ -155,8 +155,8 @@ t.default = function(e) {
         })
       }
     },
-    eU = eH(S.default.COLLECTIBLES_SHOP_CARD),
-    eW = eH(S.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    eU = eH(b.default.COLLECTIBLES_SHOP_CARD),
+    eW = eH(b.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eG = () => (0, l.jsx)("div", {
       className: q.hoverUpsellContainer,
       children: (0, l.jsx)(_.default, {
@@ -182,7 +182,7 @@ t.default = function(e) {
       variant: "text-md/semibold",
       className: q.priceTag,
       children: Q.default.Messages.COLLECTIBLES_ALREADY_OWNED
-    }) : eS ? (0, l.jsx)(p.Text, {
+    }) : eb ? (0, l.jsx)(p.Text, {
       variant: "text-md/semibold",
       className: q.priceTag,
       children: Q.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
@@ -192,7 +192,7 @@ t.default = function(e) {
       className: q.priceTag,
       disableTooltipPointerEvents: !0
     }),
-    ez = () => eS ? null : eb ? (0, l.jsx)(es, {
+    ez = () => eb ? null : eS ? (0, l.jsx)(es, {
       onClick: eW
     }) : (0, l.jsx)(z.default, {
       product: t,
@@ -202,8 +202,8 @@ t.default = function(e) {
       tooltipDelay: 250
     }),
     eK = () => {
-      if (eS && !o && !eb) return eG();
-      let e = eS ? {
+      if (eb && !o && !eS) return eG();
+      let e = eb ? {
         submitting: eL,
         submittingStartedLabel: Q.default.Messages.COLLECTIBLES_COLLECTING,
         submittingFinishedLabel: Q.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
@@ -230,7 +230,7 @@ t.default = function(e) {
           disabled: ev,
           className: q.purchaseButton,
           ...e,
-          children: eS ? Q.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : Q.default.Messages.COLLECTIBLES_PURCHASE.format({
+          children: eb ? Q.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : Q.default.Messages.COLLECTIBLES_PURCHASE.format({
             price: ex
           })
         }), ez()]
@@ -244,7 +244,7 @@ t.default = function(e) {
         className: q.errorImg
       })
     }) : (0, l.jsxs)(l.Fragment, {
-      children: [eS && (0, l.jsx)(p.Tooltip, {
+      children: [eb && (0, l.jsx)(p.Tooltip, {
         tooltipContentClassName: q.premiumWheelTooltipContent,
         color: p.Tooltip.Colors.PRIMARY,
         text: Q.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,

@@ -33,8 +33,8 @@ class E extends i.default {
       }
       let C = o.default.getChannel(_);
       if (!(null == C ? void 0 : C.isGuildStageVoice())) return;
-      let S = (0, d.getAudienceRequestToSpeakState)(h) === d.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-      if (null != C && S) {
+      let m = (0, d.getAudienceRequestToSpeakState)(h) === d.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+      if (null != C && m) {
         if ((0, s.hasModalOpen)(f)) return;
         (0, s.openModalLazy)(async () => {
           let {

@@ -1,8 +1,8 @@
 "use strict";
 a.r(t), a("47120");
 var n = a("735250"),
-  r = a("470079"),
-  i = a("442837"),
+  i = a("470079"),
+  r = a("442837"),
   s = a("481060"),
   l = a("32966"),
   o = a("314897"),
@@ -20,13 +20,13 @@ t.default = e => {
     gameApplicationIds: T,
     error: p,
     requiredGameId: _
-  } = e, C = (0, i.useStateFromStores)([o.default], () => o.default.getId()), {
+  } = e, C = (0, r.useStateFromStores)([o.default], () => o.default.getId()), {
     recentGames: g
   } = (0, l.useUserRecentGames)(C), {
     options: x,
     matchSorterOptions: I
   } = (0, d.useClanSetupGameSelectableSearch)();
-  r.useEffect(() => {
+  i.useEffect(() => {
     null != _ && !T.has(_) && x.length > 0 && N(_)
   }, [x.length, _]);
   let v = e => {

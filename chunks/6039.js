@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("944163"),
   _ = n("246364"),
   C = n("937111"),
-  S = n("523924"),
-  m = n("390500"),
+  m = n("523924"),
+  S = n("390500"),
   p = n("200305"),
   I = n("981631"),
   T = n("756286"),
@@ -85,12 +85,12 @@ t.default = e => {
         children: (() => {
           switch (null == P ? void 0 : P.applicationStatus) {
             case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
-              return (0, a.jsx)(m.default, {
+              return (0, a.jsx)(S.default, {
                 onWithdrawApplication: G,
                 guild: D
               });
             case _.GuildJoinRequestApplicationStatuses.REJECTED:
-              return (0, a.jsx)(S.default, {
+              return (0, a.jsx)(m.default, {
                 reapplyText: g.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                 onReapply: j,
                 confirmText: g.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,

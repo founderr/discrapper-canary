@@ -33,7 +33,7 @@ function T(e) {
     onClick: () => {
       m({
         action: "EDIT_PROFILE"
-      }), N(), null == f || f()
+      }), null == f || f(), N()
     }
   }) : (0, i.jsx)(a.Popout, {
     renderPopout: e => {

@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("918701"),
   _ = n("800599"),
   C = n("594174"),
-  S = n("801077"),
-  m = n("626135"),
+  m = n("801077"),
+  S = n("626135"),
   p = n("70956"),
   I = n("225559"),
   T = n("910436"),
@@ -50,19 +50,19 @@ let P = 15 * p.default.Millis.MINUTE,
       applicationStreams: f,
       currentActivities: E,
       voiceChannels: h
-    } = t, _ = c.length, C = f.length, S = E.length, p = h.length > 0, I = s.useCallback(() => {
+    } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, I = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.ApplicationTypes.GAME
       }).map(e => e.game.name);
-      m.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
+      S.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
         num_users: _,
         num_streams: C,
-        num_activities: S,
+        num_activities: m,
         in_voice_channel: p,
         games_detected: e
       })
-    }, [_, C, S, p, E]), v = o()(I, P);
+    }, [_, C, m, p, E]), v = o()(I, P);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -101,9 +101,9 @@ function D() {
     needsRefresh: n,
     fetching: l,
     currentUser: i
-  } = (0, u.useStateFromStoresObject)([S.default, _.default, C.default], () => ({
-    nowPlayingCards: S.default.nowPlayingCards,
-    loaded: S.default.loaded,
+  } = (0, u.useStateFromStoresObject)([m.default, _.default, C.default], () => ({
+    nowPlayingCards: m.default.nowPlayingCards,
+    loaded: m.default.loaded,
     needsRefresh: _.default.needsRefresh(),
     fetching: _.default.getFetching(),
     currentUser: C.default.getCurrentUser()

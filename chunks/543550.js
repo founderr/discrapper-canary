@@ -21,8 +21,8 @@ var a = n("735250"),
   h = n("207796"),
   _ = n("497189"),
   C = n("304231"),
-  S = n("526282"),
-  m = n("802001"),
+  m = n("526282"),
+  S = n("802001"),
   p = n("981631"),
   I = n("495257");
 let T = e => {
@@ -59,7 +59,7 @@ function g() {
           fade: !0,
           children: (0, a.jsx)("div", {
             className: i()(u, I.userUpsell),
-            children: (0, a.jsx)(S.default, {
+            children: (0, a.jsx)(m.default, {
               selectedGame: e,
               onClick: l
             })
@@ -85,7 +85,7 @@ function A() {
     t = (0, h.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     n = (0, u.useStateFromStoresArray)([c.default], () => Object.values(c.default.getGuilds())),
     l = (0, d.useAnyClanPrepilotExperimentEnabled)(n, "clan_discovery_admin_upsell"),
-    f = (0, m.useGuildsEligibleForClanConversion)();
+    f = (0, S.useGuildsEligibleForClanConversion)();
   s.useEffect(() => {
     (!l || 0 === f.length && l) && t(h.ClanDiscoveryMode.GET_STARTED)
   }, [f.length, l, t]);

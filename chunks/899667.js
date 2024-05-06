@@ -1,6 +1,6 @@
 "use strict";
 a.r(t), a("47120");
-var n, r, i, s, l = a("442837"),
+var n, i, r, s, l = a("442837"),
   o = a("570140");
 let c = {},
   d = null,
@@ -42,12 +42,12 @@ class p extends(n = l.default.Store) {
     return f
   }
 }
-s = "AppliedGuildBoostStore", (i = "displayName") in(r = p) ? Object.defineProperty(r, i, {
+s = "AppliedGuildBoostStore", (r = "displayName") in(i = p) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[i] = s, t.default = new p(o.default, {
+}) : i[r] = s, t.default = new p(o.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,

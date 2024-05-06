@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("6048"),
   _ = n("5967"),
   C = n("346329"),
-  S = n("981631"),
-  m = n("689938"),
+  m = n("981631"),
+  S = n("689938"),
   p = n("890255");
 
 function I(e, t, n) {
@@ -82,7 +82,7 @@ class T extends s.Component {
         },
         maxLength: 100,
         query: e,
-        placeholder: m.default.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
+        placeholder: S.default.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
       })
     })
   }
@@ -103,10 +103,10 @@ class T extends s.Component {
       if (a || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
       let i = null === (t = (0, _.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
       if (!(i !== l.inputRef.current && (0, _.isInputLikeElement)(i))) switch (e.which) {
-        case S.KeyboardKeys.ESCAPE:
+        case m.KeyboardKeys.ESCAPE:
           e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
           break;
-        case S.KeyboardKeys.ENTER:
+        case m.KeyboardKeys.ENTER:
           if (null != n) {
             e.preventDefault();
             let t = s.find(e => e.key === n);
@@ -114,19 +114,19 @@ class T extends s.Component {
             let a = t.libraryApplication;
             C.performDefaultLibraryApplicationAction(a, {
               analyticsParams: {
-                source: S.AnalyticsLocations.APPLICATION_LIBRARY,
+                source: m.AnalyticsLocations.APPLICATION_LIBRARY,
                 location: {
-                  page: S.AnalyticsPages.LIBRARY,
-                  section: S.AnalyticsSections.LIBRARY_APPLICATION_LIST,
-                  object: S.AnalyticsObjects.BUTTON_CTA
+                  page: m.AnalyticsPages.LIBRARY,
+                  section: m.AnalyticsSections.LIBRARY_APPLICATION_LIST,
+                  object: m.AnalyticsObjects.BUTTON_CTA
                 }
               }
             })
           }
           break;
-        case S.KeyboardKeys.ARROW_DOWN:
-        case S.KeyboardKeys.ARROW_UP:
-          e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === S.KeyboardKeys.ARROW_DOWN ? 1 : -1);
+        case m.KeyboardKeys.ARROW_DOWN:
+        case m.KeyboardKeys.ARROW_UP:
+          e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === m.KeyboardKeys.ARROW_DOWN ? 1 : -1);
           break;
         default:
           null != l.inputRef.current && e.target !== l.inputRef.current && l.focus()

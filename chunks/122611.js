@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("862099"),
   _ = n("704631"),
   C = n("819792"),
-  S = n("919285"),
-  m = n("118470"),
+  m = n("919285"),
+  S = n("118470"),
   p = n("413307"),
   I = n("849688"),
   T = n("374023"),
@@ -127,11 +127,11 @@ t.default = e => {
         guild: t
       });
     case L.ConnectedChannelNotices.COMMANDS_MIGRATION:
-      return (0, a.jsx)(S.default, {
+      return (0, a.jsx)(m.default, {
         guild: t
       });
     case L.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
-      return (0, a.jsx)(m.default, {
+      return (0, a.jsx)(S.default, {
         guild: t
       });
     case L.ConnectedChannelNotices.HUB_STUDY_ROOM:

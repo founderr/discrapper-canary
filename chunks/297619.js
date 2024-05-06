@@ -2,8 +2,8 @@
 a.r(t);
 var n = a("735250");
 a("470079");
-var r = a("120356"),
-  i = a.n(r),
+var i = a("120356"),
+  r = a.n(i),
   s = a("481060"),
   l = a("814550"),
   o = a("246364"),
@@ -16,7 +16,7 @@ t.default = function(e) {
     guild: a
   } = e;
   return (0, n.jsxs)("div", {
-    className: i()(u.spacingContainer, u.leftRailIconContainer, u.backgroundContainer),
+    className: r()(u.spacingContainer, u.leftRailIconContainer, u.backgroundContainer),
     children: [(0, n.jsx)("div", {
       className: u.iconContainer,
       children: (0, n.jsx)(l.default, {

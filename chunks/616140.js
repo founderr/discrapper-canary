@@ -22,8 +22,8 @@ var l = s("735250"),
   _ = s("470900"),
   T = s("988246"),
   x = s("834534"),
-  N = s("228168"),
-  A = s("981631"),
+  A = s("228168"),
+  N = s("981631"),
   U = s("689938"),
   g = s("788741");
 let C = e => {
@@ -34,24 +34,24 @@ let C = e => {
     let {
       type: t
     } = e;
-    return t !== A.ActivityTypes.CUSTOM_STATUS
+    return t !== N.ActivityTypes.CUSTOM_STATUS
   })), [r, o] = (0, n.useStateFromStoresArray)([I.default], () => {
     var e, s;
     return [null === (e = I.default.getMutualFriends(t.id)) || void 0 === e ? void 0 : e.length, null === (s = I.default.getMutualGuilds(t.id)) || void 0 === s ? void 0 : s.length]
   }), c = [{
-    section: N.UserProfileSections.USER_INFO,
+    section: A.UserProfileSections.USER_INFO,
     text: U.default.Messages.USER_PROFILE_ABOUT_ME
   }];
   return (null != l || null != a) && c.push({
-    section: N.UserProfileSections.ACTIVITY,
+    section: A.UserProfileSections.ACTIVITY,
     text: U.default.Messages.USER_PROFILE_ACTIVITY
   }), t.id !== (null == s ? void 0 : s.id) && (c.push({
-    section: N.UserProfileSections.MUTUAL_FRIENDS,
+    section: A.UserProfileSections.MUTUAL_FRIENDS,
     text: (0, i.match)(r).with(void 0, () => U.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => U.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => U.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
       count: e
     }))
   }), c.push({
-    section: N.UserProfileSections.MUTUAL_GUILDS,
+    section: A.UserProfileSections.MUTUAL_GUILDS,
     text: (0, i.match)(o).with(void 0, () => U.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => U.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => U.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
       count: e
     }))
@@ -67,13 +67,13 @@ function h(e) {
     autoFocusNote: n,
     onClose: r
   } = e;
-  return t === N.UserProfileSections.ACTIVITY ? (0, l.jsx)(E.default, {
+  return t === A.UserProfileSections.ACTIVITY ? (0, l.jsx)(E.default, {
     user: s,
     type: S.Types.SIMPLIFIED_PROFILE
-  }) : t === N.UserProfileSections.MUTUAL_FRIENDS ? (0, l.jsx)(v.default, {
+  }) : t === A.UserProfileSections.MUTUAL_FRIENDS ? (0, l.jsx)(v.default, {
     user: s,
     onClose: r
-  }) : t === N.UserProfileSections.MUTUAL_GUILDS ? (0, l.jsx)(_.default, {
+  }) : t === A.UserProfileSections.MUTUAL_GUILDS ? (0, l.jsx)(_.default, {
     user: s,
     onClose: r
   }) : (0, l.jsx)(x.default, {
@@ -90,7 +90,7 @@ function p(e) {
   let {
     user: i,
     displayProfile: u,
-    initialSection: d = N.UserProfileSections.USER_INFO,
+    initialSection: d = A.UserProfileSections.USER_INFO,
     autoFocusNote: S,
     onClose: I
   } = e, {
@@ -98,12 +98,12 @@ function p(e) {
   } = (0, m.useUserProfileAnalyticsContext)(), v = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), _ = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), x = C({
     user: i,
     currentUser: v
-  }), [A, U] = a.useState(S), [p, R] = a.useState(null !== (s = null === (t = x.find(e => {
+  }), [N, U] = a.useState(S), [p, R] = a.useState(null !== (s = null === (t = x.find(e => {
     let {
       section: t
     } = e;
     return t === d
-  })) || void 0 === t ? void 0 : t.section) && void 0 !== s ? s : N.UserProfileSections.USER_INFO), j = a.useCallback(e => {
+  })) || void 0 === t ? void 0 : t.section) && void 0 !== s ? s : A.UserProfileSections.USER_INFO), j = a.useCallback(e => {
     E({
       action: "PRESS_SECTION",
       section: e
@@ -139,7 +139,7 @@ function p(e) {
       user: i,
       currentUser: v,
       displayProfile: u,
-      autoFocusNote: A,
+      autoFocusNote: N,
       onClose: I
     })]
   })

@@ -2,8 +2,8 @@
 a.r(t), a("47120");
 var n = a("735250");
 a("470079");
-var r = a("120356"),
-  i = a.n(r),
+var i = a("120356"),
+  r = a.n(i),
   s = a("692547"),
   l = a("481060"),
   o = a("259580"),
@@ -15,7 +15,7 @@ t.default = function(e) {
   let {
     channelId: t,
     formField: a,
-    index: r,
+    index: i,
     isDragEnabled: m,
     isDropHovered: h,
     onDrop: E,
@@ -27,7 +27,7 @@ t.default = function(e) {
   } = e, x = a.values, I = x.slice(0, 1), v = x.length - I.length;
   return (0, n.jsxs)(d.default, {
     field: a,
-    index: r,
+    index: i,
     isDragEnabled: m,
     isDropHovered: h,
     onDrop: E,
@@ -37,13 +37,13 @@ t.default = function(e) {
     canRemove: _,
     actionsLocation: g,
     children: [(0, n.jsx)(c.TermsFieldBody, {
-      className: i()(f.fieldBackground, {
+      className: r()(f.fieldBackground, {
         [f.withFooter]: 0 !== v
       }),
       terms: I,
       channelId: t
     }), 0 !== v && (0, n.jsxs)(l.Clickable, {
-      className: i()(f.fieldFooterContainer, f.clickable),
+      className: r()(f.fieldFooterContainer, f.clickable),
       onClick: T,
       children: [(0, n.jsx)(l.FormText, {
         className: f.clickable,

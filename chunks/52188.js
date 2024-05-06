@@ -7,7 +7,7 @@ a.r(t), a.d(t, {
     return en
   }
 }), a("47120");
-var n, r, i = a("735250");
+var n, i, r = a("735250");
 a("470079");
 var s = a("120356"),
   l = a.n(s),
@@ -59,7 +59,7 @@ var s = a("120356"),
   $ = a("929883"),
   ee = a("261137"),
   et = a("958700");
-(r = n || (n = {}))[r.PrivateMessages = 0] = "PrivateMessages", r[r.SettingsMenu = 1] = "SettingsMenu";
+(i = n || (n = {}))[i.PrivateMessages = 0] = "PrivateMessages", i[i.SettingsMenu = 1] = "SettingsMenu";
 let ea = new Map([
   ["PE", Z],
   ["PH", K],
@@ -109,11 +109,11 @@ function en(e) {
   let {
     entryPoint: t,
     className: a
-  } = e, r = (0, o.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), s = (0, d.useLocalizedPromoQuery)(), h = null == s ? void 0 : s.countryCode;
-  if ((0, u.useTrackLocalizedPricingPromoImpression)(f.AnalyticsSections.SETTINGS_PREMIUM, h), null == h || !ea.has(h) || r) return null;
+  } = e, i = (0, o.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), s = (0, d.useLocalizedPromoQuery)(), h = null == s ? void 0 : s.countryCode;
+  if ((0, u.useTrackLocalizedPricingPromoImpression)(f.AnalyticsSections.SETTINGS_PREMIUM, h), null == h || !ea.has(h) || i) return null;
   let E = ea.get(h),
     T = "badgeIcon" + n[t];
-  return (0, i.jsx)("img", {
+  return (0, r.jsx)("img", {
     className: l()(a, m[T]),
     "aria-hidden": !0,
     alt: "Wumpus holding a country-specific flag",

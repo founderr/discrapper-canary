@@ -18,15 +18,15 @@ t.default = function(e) {
   let {
     className: _,
     expansionSpring: C,
-    isExpanded: S,
-    isExpansionAnimationComplete: m,
+    isExpanded: m,
+    isExpansionAnimationComplete: S,
     quest: p,
     useReducedMotion: I
   } = e, T = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = (null !== (s = null === (n = p.userStatus) || void 0 === n ? void 0 : n.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
   return (0, a.jsxs)(i.animated.div, {
-    "aria-hidden": S && m,
+    "aria-hidden": m && S,
     className: l()(_, h.contentCollapsed, {
-      [h.contentCollapsedExpanded]: S,
+      [h.contentCollapsedExpanded]: m,
       [h.contentCollapsedAccepted]: T
     }),
     style: {

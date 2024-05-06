@@ -5,8 +5,8 @@ a.r(t), a.d(t, {
   }
 }), a("653041"), a("47120");
 var n = a("470079"),
-  r = a("392711"),
-  i = a.n(r),
+  i = a("392711"),
+  r = a.n(i),
   s = a("442837"),
   l = a("846519"),
   o = a("224706"),
@@ -28,7 +28,7 @@ let u = new class e {
     let e = [];
     this._pending.forEach(t => {
       this._fetched.add(t), e.push(t)
-    }), i().chunk(e, 20).forEach(e => {
+    }), r().chunk(e, 20).forEach(e => {
       o.default.getDetectableGamesSupplemental(e)
     })
   }

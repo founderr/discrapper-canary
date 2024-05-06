@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("420212"),
   _ = n("689938"),
   C = n("660905"),
-  S = n("949086");
-let m = {
+  m = n("949086");
+let S = {
     canSend: !1,
     hint: null,
     success: null,
@@ -32,14 +32,14 @@ let m = {
 function g(e, t) {
   switch (t.type) {
     case "RESET":
-      return m;
+      return S;
     case "SUCCESS":
       return {
-        ...m, success: t.text
+        ...S, success: t.text
       };
     case "HINT":
       return {
-        ...m, canSend: !0, hint: t.text
+        ...S, canSend: !0, hint: t.text
       };
     case "ERROR":
       return {
@@ -51,7 +51,7 @@ function g(e, t) {
 function A() {
   let e = s.createRef(),
     t = s.createRef(),
-    [n, l] = s.useReducer(g, m),
+    [n, l] = s.useReducer(g, S),
     {
       canSend: r,
       hint: c,
@@ -160,12 +160,12 @@ function A() {
       role: "alert",
       id: T,
       type: u.FormText.Types.ERROR,
-      className: S.marginTop8,
+      className: m.marginTop8,
       children: N
     }), null != A && (0, a.jsx)(u.FormText, {
       role: "status",
       type: u.FormText.Types.SUCCESS,
-      className: S.marginTop8,
+      className: m.marginTop8,
       children: A
     })]
   })

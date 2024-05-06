@@ -24,8 +24,8 @@ var l = a("735250"),
   E = a("624377"),
   g = a("141011"),
   x = a("813083"),
-  S = a("67938"),
-  b = a("372654"),
+  b = a("67938"),
+  S = a("372654"),
   T = a("215023"),
   L = a("474936"),
   v = a("689938"),
@@ -72,13 +72,13 @@ function y(e) {
   } = e, {
     backgroundColors: c
   } = (0, E.default)(s.styles), d = !!(null === (t = T.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
-  return s.skuId === i.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(S.ShyBanner, {
+  return s.skuId === i.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(b.ShyBanner, {
     category: s
   }) : (0, l.jsxs)(g.default, {
     asset: s.banner,
     className: n()(I.shopBanner, r),
     style: null != c ? {
-      background: "".concat((0, b.getBackgroundGradient)(c), " border-box border-box"),
+      background: "".concat((0, S.getBackgroundGradient)(c), " border-box border-box"),
       outlineColor: c.border.toHslString()
     } : void 0,
     children: [(0, l.jsxs)("div", {

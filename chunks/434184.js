@@ -23,8 +23,8 @@ function C(e) {
     user: t,
     key: n,
     isFocused: C
-  } = e, S = s.useContext(u.AnalyticsContext), {
-    analyticsLocations: m
+  } = e, m = s.useContext(u.AnalyticsContext), {
+    analyticsLocations: S
   } = (0, i.default)(), p = e => {
     e.stopPropagation(), l.default.unblockUser(t.id, {
       location: "Friends"
@@ -34,8 +34,8 @@ function C(e) {
     isFocused: C,
     onClick: () => (0, r.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: m,
-      analyticsLocation: S.location
+      sourceAnalyticsLocations: S,
+      analyticsLocation: m.location
     }),
     user: t,
     children: e => (0, a.jsxs)("div", {

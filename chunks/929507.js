@@ -1,8 +1,8 @@
 "use strict";
 a.r(t), a("47120");
 var n = a("470079"),
-  r = a("399606"),
-  i = a("544891"),
+  i = a("399606"),
+  r = a("544891"),
   s = a("570140"),
   l = a("367907"),
   o = a("430824"),
@@ -15,7 +15,7 @@ let h = 1 * u.default.Millis.DAY,
   E = new Map;
 t.default = {
   useShouldShowChannelNotice(e) {
-    let t = (0, r.useStateFromStores)([o.default, c.default], () => {
+    let t = (0, i.useStateFromStores)([o.default, c.default], () => {
       let t = o.default.getGuild(e);
       return null != t && c.default.can(m.Permissions.ADMINISTRATOR, t)
     });
@@ -24,7 +24,7 @@ t.default = {
         var t;
         let a = Date.now(),
           n = null !== (t = E.get(e)) && void 0 !== t ? t : 0;
-        !(a < n + h) && (E.set(e, a), i.HTTP.post({
+        !(a < n + h) && (E.set(e, a), r.HTTP.post({
           url: m.Endpoints.GUILD_MIGRATE_COMMAND_SCOPE(e)
         }).then(t => {
           var a, n;
@@ -38,7 +38,7 @@ t.default = {
         }))
       }(e)
     }, [e, t]);
-    let a = (0, r.useStateFromStores)([f.default], () => f.default.shouldShowChannelNotice(e));
+    let a = (0, i.useStateFromStores)([f.default], () => f.default.shouldShowChannelNotice(e));
     return t && a
   },
   dismissNotice(e) {

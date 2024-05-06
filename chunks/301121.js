@@ -31,8 +31,8 @@ var a = s("735250"),
   R = s("237292"),
   M = s("604849"),
   v = s("278828"),
-  D = s("480294"),
-  L = s("430824"),
+  L = s("480294"),
+  D = s("430824"),
   P = s("663389"),
   j = s("594174"),
   b = s("285952"),
@@ -136,7 +136,7 @@ function ee() {
                 w.MessageRequestRestrictedDefault.updateSetting(e), $(e, !1)
               },
               onCancel: () => {
-                w.MessageRequestRestrictedDefault.updateSetting(e), w.MessageRequestRestrictedGuildIds.updateSetting(e ? G.default.keys(L.default.getGuilds()) : []), $(e, !0)
+                w.MessageRequestRestrictedDefault.updateSetting(e), w.MessageRequestRestrictedGuildIds.updateSetting(e ? G.default.keys(D.default.getGuilds()) : []), $(e, !0)
               }
             })
           },
@@ -289,7 +289,7 @@ class en extends n.PureComponent {
         w.DefaultGuildsRestricted.updateSetting(e), this.trackDefaultDmsUpdated(e, !1)
       },
       onCancel: () => {
-        w.DefaultGuildsRestricted.updateSetting(e), w.RestrictedGuildIds.updateSetting(e ? G.default.keys(L.default.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0)
+        w.DefaultGuildsRestricted.updateSetting(e), w.RestrictedGuildIds.updateSetting(e ? G.default.keys(D.default.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0)
       }
     })
   }
@@ -310,7 +310,7 @@ class en extends n.PureComponent {
         w.MessageRequestRestrictedDefault.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1)
       },
       onCancel: () => {
-        w.MessageRequestRestrictedDefault.updateSetting(e), w.MessageRequestRestrictedGuildIds.updateSetting(e ? G.default.keys(L.default.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0)
+        w.MessageRequestRestrictedDefault.updateSetting(e), w.MessageRequestRestrictedGuildIds.updateSetting(e ? G.default.keys(D.default.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0)
       }
     })
   }
@@ -768,10 +768,10 @@ function el() {
       let e = j.default.getCurrentUser();
       return o()(null != e, "ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined"), e
     }),
-    t = (0, c.useStateFromStoresObject)([D.default], () => ({
-      fetchedConsents: D.default.fetchedConsents,
-      usageStatistics: D.default.hasConsented(K.Consents.USAGE_STATISTICS),
-      personalization: D.default.hasConsented(K.Consents.PERSONALIZATION)
+    t = (0, c.useStateFromStoresObject)([L.default], () => ({
+      fetchedConsents: L.default.fetchedConsents,
+      usageStatistics: L.default.hasConsented(K.Consents.USAGE_STATISTICS),
+      personalization: L.default.hasConsented(K.Consents.PERSONALIZATION)
     })),
     s = (0, c.useStateFromStores)([O.default], () => O.default.getFetchError()),
     n = (0, c.useStateFromStores)([P.default], () => P.default.getSubsection()),

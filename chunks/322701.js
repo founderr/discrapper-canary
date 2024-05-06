@@ -21,7 +21,7 @@ t.default = function(e) {
     isEnabled: h,
     async scrollToStart() {},
     async scrollToEnd() {}
-  }), C = f !== u.FriendsSections.ONLINE && f !== u.FriendsSections.ALL, S = E || "" !== c || C, m = t.map((e, t) => S ? (0, a.jsx)("div", {
+  }), C = f !== u.FriendsSections.ONLINE && f !== u.FriendsSections.ALL, m = E || "" !== c || C, S = t.map((e, t) => m ? (0, a.jsx)("div", {
     children: e.map(n)
   }, t) : (0, a.jsx)(i.TransitionGroup, {
     transitionAppear: !1,
@@ -40,7 +40,7 @@ t.default = function(e) {
           ref: t,
           className: d.peopleList,
           ...n,
-          children: m
+          children: S
         })
       }
     })

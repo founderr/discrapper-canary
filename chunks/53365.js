@@ -32,8 +32,8 @@ a.r(t), a.d(t, {
   }
 });
 var n = a("544891"),
-  r = a("570140"),
-  i = a("728345"),
+  i = a("570140"),
+  r = a("728345"),
   s = a("981631"),
   l = a("674563");
 async function o(e) {
@@ -69,7 +69,7 @@ async function m(e) {
         nag_guild_ids: e
       }
     });
-    r.default.dispatch({
+    i.default.dispatch({
       type: "CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS",
       eligibleGuilds: t.body.eligible_guilds
     })
@@ -82,7 +82,7 @@ async function h(e, t) {
       team_id: t
     }
   })).body;
-  return null != a.application && r.default.dispatch({
+  return null != a.application && i.default.dispatch({
     type: "APPLICATION_FETCH_SUCCESS",
     application: a.application
   }), a
@@ -106,7 +106,7 @@ async function p(e) {
   })
 }
 async function _(e) {
-  return await p(e), await i.default.getApplicationsForGuild(e, {
+  return await p(e), await r.default.getApplicationsForGuild(e, {
     type: l.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS,
     includeTeam: !0
   })

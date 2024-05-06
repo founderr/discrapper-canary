@@ -15,8 +15,8 @@ var s = n("442837"),
   h = n("488905"),
   _ = n("347137"),
   C = n("731455"),
-  S = n("689938");
-let m = e => {
+  m = n("689938");
+let S = e => {
     switch (e) {
       case C.CategoryId.Activity:
         return C.CategoryIcons.Activity;
@@ -41,13 +41,13 @@ let m = e => {
       isViewingSearchResults: d.default.getMostRecentQuery().length > 0
     })), n = (0, s.useStateFromStores)([f.default], () => f.default.getDiscoveryCategories(), [], f.areDiscoveryCategoriesEqual), r = null == n ? void 0 : n.map(e => ({
       ...e,
-      icon: m(e.categoryId)
+      icon: S(e.categoryId)
     })), c = e => {
       (0, i.selectCategory)(e, !0), u.default.closeSidebar(), t && (0, i.clearSearch)()
     };
     return (0, a.jsxs)(l.Scroller, {
       children: [(0, a.jsx)(h.DiscoverySidebarHeader, {
-        text: S.default.Messages.DISCOVER
+        text: m.default.Messages.DISCOVER
       }), (0, a.jsx)(E.default, {
         categories: r,
         handleCategorySelect: c,

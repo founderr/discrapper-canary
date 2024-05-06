@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("314897"),
   _ = n("944486"),
   C = n("594174"),
-  S = n("366695"),
-  m = n("372662"),
+  m = n("366695"),
+  S = n("372662"),
   p = n("632184"),
   I = n("602623"),
   T = n("51144"),
@@ -117,7 +117,7 @@ function P(e) {
           className: O.button,
           disabled: V,
           innerClassName: O.innerButton,
-          children: [(0, a.jsx)(m.default, {
+          children: [(0, a.jsx)(S.default, {
             width: 16,
             height: 16
           }), H]
@@ -130,9 +130,9 @@ function P(e) {
         ownerId: i,
         channelId: I
       }
-    }) : (0, a.jsx)(S.default, {
+    }) : (0, a.jsx)(m.default, {
       game: b,
-      size: S.default.Sizes.LARGE,
+      size: m.default.Sizes.LARGE,
       className: O.gameIcon
     })]
   })

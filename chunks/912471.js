@@ -18,8 +18,8 @@ var a = n("433517"),
   h = n("981631");
 let _ = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
   C = null,
-  S = null,
   m = null,
+  S = null,
   p = !1;
 async function I() {
   if (p) return;
@@ -34,7 +34,7 @@ async function I() {
     message: "Received invalid Date.now() when generating a heartbeat. Date.now() = ".concat(t, ", timeUntilNextHeartbeat = ").concat(n, ", latestHeartbeatEventTimestamp = ").concat(e)
   }), e > t && (n = 0), f.default.addBreadcrumb({
     message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(n / 1e3, " seconds. Scheduling Heartbeat")
-  }), T(!1), S = setTimeout(() => {
+  }), T(!1), m = setTimeout(() => {
     g(), C = setInterval(() => {
       g()
     }, 15 * d.default.Millis.MINUTE)
@@ -43,9 +43,9 @@ async function I() {
 
 function T() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  null != S && (clearTimeout(S), S = null), null != C && (clearInterval(C), C = null), null != m && e && (f.default.addBreadcrumb({
+  null != m && (clearTimeout(m), m = null), null != C && (clearInterval(C), C = null), null != S && e && (f.default.addBreadcrumb({
     message: "Heartbeat correctly scheduled. Clearing 10s check timeout"
-  }), clearTimeout(m), m = null)
+  }), clearTimeout(S), S = null)
 }
 async function g() {
   let e = Date.now(),

@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("711237"),
   _ = n("532835"),
   C = n("290297"),
-  S = n("918854"),
-  m = n("279240"),
+  m = n("918854"),
+  S = n("279240"),
   p = n("765717"),
   I = n("358221"),
   T = n("823748"),
@@ -72,45 +72,45 @@ var a = n("735250"),
   eh = n("290511"),
   e_ = n("689938"),
   eC = n("936704");
-let eS = () => (0, a.jsx)("div", {
+let em = () => (0, a.jsx)("div", {
     className: eC.loader,
     children: (0, a.jsx)(E.Spinner, {})
   }),
-  em = (0, d.makeLazy)({
+  eS = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("68614")]).then(n.bind(n, "650788")),
     webpackId: "650788",
     name: "GuildShopPage",
-    renderLoader: eS
+    renderLoader: em
   }),
   ep = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("44798")]).then(n.bind(n, "998420")),
     webpackId: "998420",
     name: "GuildMemberApplicationReview",
-    renderLoader: eS
+    renderLoader: em
   }),
   eI = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("51373")]).then(n.bind(n, "231588")),
     webpackId: "231588",
     name: "GuildHomePage",
-    renderLoader: eS
+    renderLoader: em
   }),
   eT = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("85552"), n.e("16600")]).then(n.bind(n, "545918")),
     webpackId: "545918",
     name: "MemberSafetyPage",
-    renderLoader: eS
+    renderLoader: em
   }),
   eg = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("75475"), n.e("58227"), n.e("38359"), n.e("51199")]).then(n.bind(n, "603072")),
     webpackId: "603072",
     name: "ChannelsAndRolesPage",
-    renderLoader: eS
+    renderLoader: em
   }),
   eA = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("75475"), n.e("19878"), n.e("38359"), n.e("50498")]).then(n.bind(n, "599263")),
     webpackId: "599263",
     name: "GuildOnboardingPage",
-    renderLoader: eS
+    renderLoader: em
   }),
   eN = e => {
     let {
@@ -136,14 +136,14 @@ let eS = () => (0, a.jsx)("div", {
     }), d = (0, N.isEligibleForSubscriptionsInGuildShop)(s, "channel_renderer");
     if (null != s && null != l && (0, eE.isStaticChannelRoute)(l)) switch (l) {
       case eE.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
-        return d ? (0, a.jsx)(em, {
+        return d ? (0, a.jsx)(eS, {
           guildId: s,
           initialTab: v.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
         }) : (0, a.jsx)(x.default, {
           guildId: s
         });
       case eE.StaticChannelRoute.GUILD_SHOP:
-        return (0, a.jsx)(em, {
+        return (0, a.jsx)(eS, {
           guildId: s,
           productId: i,
           initialTab: u
@@ -253,10 +253,10 @@ let eL = e => (0, a.jsx)(eN, {
       })
     }
   },
-  eb = e => (0, a.jsx)(m.default, {
+  eb = e => (0, a.jsx)(S.default, {
     ...e
   }),
-  eU = () => (0, a.jsx)(S.default, {}),
+  eU = () => (0, a.jsx)(m.default, {}),
   ej = () => (0, a.jsx)(K.default, {}),
   eG = () => (0, a.jsx)(w.default, {}),
   ew = () => (0, a.jsx)(W.default, {}),
@@ -368,8 +368,8 @@ function eB() {
     }(),
     h = (0, f.useStateFromStores)([F.default], () => F.default.getIsOpen()),
     _ = (0, o.useRouteMatch)([ef.Routes.CHANNEL(ef.ME, ":channelId"), ef.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")]),
-    S = (null == _ ? void 0 : null === (e = _.params) || void 0 === e ? void 0 : e.channelId) === eE.StaticChannelRoute.GUILD_ONBOARDING,
-    m = s.useCallback(() => k.default.openSidebar(), []);
+    m = (null == _ ? void 0 : null === (e = _.params) || void 0 === e ? void 0 : e.channelId) === eE.StaticChannelRoute.GUILD_ONBOARDING,
+    S = s.useCallback(() => k.default.openSidebar(), []);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsxs)("div", {
       className: eC.container,
@@ -385,9 +385,9 @@ function eB() {
             children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(eF, {
               hasNotice: t,
               sidebarTheme: n,
-              hideSidebar: l || i || d || E || S || !h
+              hideSidebar: l || i || d || E || m || !h
             }), (0, a.jsx)(C.default.Provider, {
-              value: m,
+              value: S,
               children: (0, a.jsxs)(o.Switch, {
                 children: [(0, a.jsx)(p.default, {
                   path: ef.Routes.ACTIVITY,

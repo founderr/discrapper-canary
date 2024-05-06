@@ -1,9 +1,9 @@
 "use strict";
 a.r(t);
 var n = a("735250"),
-  r = a("470079"),
-  i = a("120356"),
-  s = a.n(i),
+  i = a("470079"),
+  r = a("120356"),
+  s = a.n(r),
   l = a("183249"),
   o = a("481060"),
   c = a("442837"),
@@ -15,7 +15,7 @@ t.default = function(e) {
   let {
     applicationId: t,
     imageContainerClassName: a,
-    onClick: i,
+    onClick: r,
     selected: h
   } = e, E = (0, o.useToken)(o.tokens.colors.WHITE), {
     isFetching: T,
@@ -26,9 +26,9 @@ t.default = function(e) {
   }), _ = (0, c.useStateFromStores)([u.default], () => {
     var e, a;
     return null !== (a = null === (e = u.default.getGameById(t)) || void 0 === e ? void 0 : e.name) && void 0 !== a ? a : ""
-  }), C = r.useCallback(() => {
-    null == i || i(t)
-  }, [t, i]), g = r.useMemo(() => T ? null : null == p ? (0, n.jsx)("div", {
+  }), C = i.useCallback(() => {
+    null == r || r(t)
+  }, [t, r]), g = i.useMemo(() => T ? null : null == p ? (0, n.jsx)("div", {
     className: m.gameUnknownImage,
     children: (0, n.jsx)(l.UnknownGameIcon, {
       height: 32,

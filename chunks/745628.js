@@ -2,8 +2,8 @@
 a.r(t), a("47120");
 var n = a("735250");
 a("470079");
-var r = a("120356"),
-  i = a.n(r),
+var i = a("120356"),
+  r = a.n(i),
   s = a("481060"),
   l = a("308083"),
   o = a("689938"),
@@ -12,10 +12,10 @@ t.default = e => {
   let {
     handleUpdate: t,
     description: a,
-    wildcardDescriptors: r,
+    wildcardDescriptors: i,
     errors: d
   } = e, u = (e, a) => {
-    let n = [...r];
+    let n = [...i];
     n[a] = e, t({
       wildcardDescriptors: n
     })
@@ -68,20 +68,20 @@ t.default = e => {
     }), (0, n.jsxs)("div", {
       className: c.wildcardRow,
       children: [(0, n.jsx)(s.TextInput, {
-        inputClassName: i()(c.input, c.wildcardInput),
-        value: r[0],
+        inputClassName: r()(c.input, c.wildcardInput),
+        value: i[0],
         onChange: e => u(e, 0),
         maxLength: l.MAX_WILDCARD_LENGTH,
         placeholder: l.CLAN_SETUP_TAG_PLACEHOLDERS["0"]
       }), (0, n.jsx)(s.TextInput, {
-        inputClassName: i()(c.input, c.wildcardInput),
-        value: r[1],
+        inputClassName: r()(c.input, c.wildcardInput),
+        value: i[1],
         onChange: e => u(e, 1),
         maxLength: l.MAX_WILDCARD_LENGTH,
         placeholder: l.CLAN_SETUP_TAG_PLACEHOLDERS["1"]
       }), (0, n.jsx)(s.TextInput, {
-        inputClassName: i()(c.input, c.wildcardInput),
-        value: r[2],
+        inputClassName: r()(c.input, c.wildcardInput),
+        value: i[2],
         onChange: e => u(e, 2),
         maxLength: l.MAX_WILDCARD_LENGTH,
         placeholder: l.CLAN_SETUP_TAG_PLACEHOLDERS["2"]

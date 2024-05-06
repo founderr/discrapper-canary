@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("113434"),
   _ = n("569984"),
   C = n("497505"),
-  S = n("918701"),
-  m = n("977156"),
+  m = n("918701"),
+  S = n("977156"),
   p = n("685613"),
   I = n("340100"),
   T = n("644646"),
@@ -36,7 +36,7 @@ let O = s.forwardRef(function(e, t) {
     onCtxMenuSelect: D,
     quest: b,
     useReducedMotion: U
-  } = e, j = (0, r.useStateFromStores)([_.default], () => _.default.isEnrolling(b.id), [b]), G = (0, h.useQuestFormattedDate)(b.config.expiresAt), w = (0, h.useQuestFormattedDate)(b.config.rewardCodeExpiresAt), k = s.useMemo(() => (0, S.isAssetAnimated)(b.config.assets.questBarHero), [b]), F = s.useCallback(() => {
+  } = e, j = (0, r.useStateFromStores)([_.default], () => _.default.isEnrolling(b.id), [b]), G = (0, h.useQuestFormattedDate)(b.config.expiresAt), w = (0, h.useQuestFormattedDate)(b.config.rewardCodeExpiresAt), k = s.useMemo(() => (0, m.isAssetAnimated)(b.config.assets.questBarHero), [b]), F = s.useCallback(() => {
     (0, E.enrollInQuest)(b.id, {
       questContent: C.QuestContent.QUEST_BAR,
       questContentCTA: f.QuestContentCTA.ACCEPT_QUEST
@@ -46,13 +46,13 @@ let O = s.forwardRef(function(e, t) {
     location: C.QuestContent.QUEST_BAR
   }), {
     primaryVariant: H
-  } = m.QuestBarExperiment.useExperiment({
+  } = S.QuestBarExperiment.useExperiment({
     location: v.QuestsExperimentLocations.QUESTS_BAR
   }, {
     autoTrackExposure: !1
-  }), V = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (null === (l = b.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, W = M && P, K = (0, S.getQuestBarHeroAssetUrl)(b), z = (0, S.getQuestsInstructionsToWinReward)({
+  }), V = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (null === (l = b.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, W = M && P, K = (0, m.getQuestBarHeroAssetUrl)(b), z = (0, m.getQuestsInstructionsToWinReward)({
     quest: b,
-    useV2Variants: H === m.QuestBarExperimentVariants.V2
+    useV2Variants: H === S.QuestBarExperimentVariants.V2
   });
   return (0, a.jsx)("div", {
     "aria-hidden": !W,
@@ -75,7 +75,7 @@ let O = s.forwardRef(function(e, t) {
             children: [(0, a.jsx)(u.Heading, {
               color: "always-white",
               variant: "heading-sm/semibold",
-              children: (0, S.getContextualEntrypointHeading)(b)
+              children: (0, m.getContextualEntrypointHeading)(b)
             }), (0, a.jsx)(u.Text, {
               className: L.questAcceptedContentCopySubheading,
               color: "always-white",
@@ -203,7 +203,7 @@ let O = s.forwardRef(function(e, t) {
             controls: !1,
             children: (0, a.jsx)("source", {
               src: K,
-              type: (0, S.getVideoAssetMimeType)(K)
+              type: (0, m.getVideoAssetMimeType)(K)
             })
           })
         }) : (0, a.jsx)(g.QuestsAsset, {

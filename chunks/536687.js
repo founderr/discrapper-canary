@@ -19,8 +19,8 @@ var a, s, l = n("470079"),
   h = n("270144"),
   _ = n("400271"),
   C = n("678513"),
-  S = n("899667"),
-  m = n("496675"),
+  m = n("899667"),
+  S = n("496675"),
   p = n("541566"),
   I = n("192513"),
   T = n("255791"),
@@ -33,9 +33,9 @@ function v(e) {
   let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : N.EMPTY_STRING_SNOWFLAKE_ID,
     {
       lastFetchedAt: a
-    } = (0, i.useStateFromStoresObject)([S.default], () => ({
-      appliedGuildBoosts: S.default.getAppliedGuildBoostsForGuild(n),
-      lastFetchedAt: S.default.getLastFetchedAtForGuild(n)
+    } = (0, i.useStateFromStoresObject)([m.default], () => ({
+      appliedGuildBoosts: m.default.getAppliedGuildBoostsForGuild(n),
+      lastFetchedAt: m.default.getLastFetchedAtForGuild(n)
     })),
     {
       lastDismissedGracePeriod: s,
@@ -46,7 +46,7 @@ function v(e) {
     })),
     R = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
     L = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
-    O = (0, i.useStateFromStores)([m.default], () => m.default.can(N.Permissions.ADMINISTRATOR, e)),
+    O = (0, i.useStateFromStores)([S.default], () => S.default.can(N.Permissions.ADMINISTRATOR, e)),
     M = null != s && Date.now() - s <= N.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     P = null != e ? e.premiumSubscriberCount : 0,
     y = (0, A.getGuildTierFromAppliedBoostCount)(P, n) !== N.BoostedGuildTiers.NONE,

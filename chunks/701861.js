@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("131951"),
   _ = n("974029"),
   C = n("621113"),
-  S = n("51144"),
-  m = n("321488"),
+  m = n("51144"),
+  S = n("321488"),
   p = n("417183"),
   I = n("825682"),
   T = n("170245"),
@@ -65,7 +65,7 @@ function L(e) {
       action: () => {
         (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
           header: N.default.Messages.REMOVE_FRIEND_TITLE.format({
-            name: S.default.getName(t)
+            name: m.default.getName(t)
           }),
           confirmText: N.default.Messages.REMOVE_FRIEND,
           cancelText: N.default.Messages.CANCEL,
@@ -74,7 +74,7 @@ function L(e) {
           children: (0, a.jsx)(o.Text, {
             variant: "text-md/normal",
             children: N.default.Messages.REMOVE_FRIEND_BODY.format({
-              name: S.default.getName(t)
+              name: m.default.getName(t)
             })
           })
         }))
@@ -125,12 +125,12 @@ class O extends s.PureComponent {
           showAccountIdentifier: !0
         }), (0, a.jsxs)("div", {
           className: v.actions,
-          children: [(0, a.jsx)(m.default, {
+          children: [(0, a.jsx)(S.default, {
             icon: _.default,
             tooltip: N.default.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
-          }), (0, a.jsx)(m.default, {
+          }), (0, a.jsx)(S.default, {
             icon: C.default,
             tooltip: N.default.Messages.MORE,
             onClick: this.handleOpenActionsMenu,

@@ -5,8 +5,8 @@ a.r(t), a.d(t, {
   }
 });
 var n = a("735250"),
-  r = a("470079"),
-  i = a("481060"),
+  i = a("470079"),
+  r = a("481060"),
   s = a("355467"),
   l = a("887706"),
   o = a("270144"),
@@ -21,10 +21,10 @@ function m(e) {
   } = e, a = (0, c.isApplicationGuildSubscription)(t.sku_flags);
   return (0, c.isApplicationUserSubscription)(t.sku_flags) || a ? (0, n.jsxs)("div", {
     className: f.cta,
-    children: [(0, n.jsx)(i.Heading, {
+    children: [(0, n.jsx)(r.Heading, {
       variant: "heading-lg/bold",
       children: a ? u.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_HEADER : u.default.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_HEADER
-    }), (0, n.jsx)(i.Heading, {
+    }), (0, n.jsx)(r.Heading, {
       color: "interactive-normal",
       variant: "heading-md/normal",
       children: a ? u.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS : u.default.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_DETAILS.format({
@@ -52,14 +52,14 @@ function h(e) {
   }), {
     subscriptionGroupListing: C
   } = (0, o.useActiveSubscriptionListingForApplication)(c, a), g = (0, l.default)();
-  r.useEffect(() => {
+  i.useEffect(() => {
     g && s.fetchSubscriptions()
   }, [g]);
   let x = null == C ? void 0 : C.id,
     I = null == C ? void 0 : null === (t = C.subscription_listings) || void 0 === t ? void 0 : t.filter(e => e.published);
   return p && (null == a || _) ? null == x || null == I || 0 === I.length ? null : (0, n.jsx)("div", {
     className: f.container,
-    children: I.map(e => (0, n.jsxs)(r.Fragment, {
+    children: I.map(e => (0, n.jsxs)(i.Fragment, {
       children: [(0, n.jsx)(m, {
         listing: e
       }), (0, n.jsx)(d.default, {
@@ -73,6 +73,6 @@ function h(e) {
     }, e.id))
   }) : (0, n.jsx)("div", {
     className: f.loadingContainer,
-    children: (0, n.jsx)(i.Spinner, {})
+    children: (0, n.jsx)(r.Spinner, {})
   })
 }

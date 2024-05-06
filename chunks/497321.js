@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a("47120");
-var n, r = a("735250"),
-  i = a("470079"),
+var n, i = a("735250"),
+  r = a("470079"),
   s = a("120356"),
   l = a.n(s),
   o = a("481060"),
@@ -19,13 +19,13 @@ function h(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-class E extends(n = i.Component) {
+class E extends(n = r.Component) {
   render() {
-    return (0, r.jsxs)("div", {
+    return (0, i.jsxs)("div", {
       className: m.streamerModeEnabled,
-      children: [(0, r.jsx)("div", {
+      children: [(0, i.jsx)("div", {
         className: m.streamerModeEnabledImage
-      }), (0, r.jsx)(o.Clickable, {
+      }), (0, i.jsx)(o.Clickable, {
         className: l()(m.streamerModeEnabledBtn, {
           [m.disabled]: this.props.disableButton
         }),

@@ -25,8 +25,8 @@ function h(e, t, n) {
 }
 let _ = {},
   C = _,
-  S = !1,
-  m = {},
+  m = !1,
+  S = {},
   p = {},
   I = {},
   T = {
@@ -64,13 +64,13 @@ class R extends(a = i.default.DeviceSettingsStore) {
     return C
   }
   get initialized() {
-    return S
+    return m
   }
   get lastDeviceConnected() {
     return I
   }
   get inputDevices() {
-    return m
+    return S
   }
   get lastInputSystemDevice() {
     return T
@@ -102,11 +102,11 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
           let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
           n !== g.id && (g.justChanged = !0), g.id = n
         }
-      }), !S) {
-      m = a, p = s, S = !0;
+      }), !m) {
+      S = a, p = s, m = !0;
       return
     }
-    let i = Object.keys(m),
+    let i = Object.keys(S),
       r = Object.keys(a),
       o = Object.keys(p),
       u = Object.keys(s),
@@ -116,7 +116,7 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
       I[e] = v(I[e], e, f.ConnectedDeviceType.INPUT)
     }), l().difference(u, o).forEach(e => {
       I[e] = v(I[e], e, f.ConnectedDeviceType.OUTPUT)
-    })), !(l().isEqual(i, r) && l().isEqual(o, u)) && (m = a, p = s, !0)
+    })), !(l().isEqual(i, r) && l().isEqual(o, u)) && (S = a, p = s, !0)
   },
   CONNECTED_DEVICE_SET: function(e) {
     let {
@@ -126,7 +126,7 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
     } = e;
     ! function(e, t, n) {
       if (t === f.ConnectedDevicePreference.INPUT || t === f.ConnectedDevicePreference.INPUT_AND_OUTPUT) {
-        let t = m[e];
+        let t = S[e];
         null != t && r.default.wait(() => o.default.setInputDevice(t, n))
       }
       if (t === f.ConnectedDevicePreference.OUTPUT || t === f.ConnectedDevicePreference.INPUT_AND_OUTPUT) {

@@ -19,8 +19,8 @@ var s = n("287734"),
   h = n("761282"),
   _ = n("358924"),
   C = n("868854"),
-  S = n("817915"),
-  m = n("981631");
+  m = n("817915"),
+  S = n("981631");
 
 function p(e) {
   let {
@@ -112,8 +112,8 @@ function p(e) {
       activityUser: y
     } = e;
     if (null == O || null == O.type) return null;
-    if (g.length > 1 && O.type === m.ActivityTypes.PLAYING && !(0, i.default)(O) && null != M) L((0, a.jsx)(_.default.GameSection, {
-      icon: M.getIconURL(S.ICON_SIZE),
+    if (g.length > 1 && O.type === S.ActivityTypes.PLAYING && !(0, i.default)(O) && null != M) L((0, a.jsx)(_.default.GameSection, {
+      icon: M.getIconURL(m.ICON_SIZE),
       name: M.name,
       partySize: {
         knownSize: P.length,
@@ -131,7 +131,7 @@ function p(e) {
         channel: t,
         guildId: t.guild_id
       }, "embedded-activity-".concat(O.application_id)))
-    } else if ((null != O.assets || (0, i.default)(O)) && O.type === m.ActivityTypes.PLAYING) L((0, a.jsx)(_.default.RichPresenceSection, {
+    } else if ((null != O.assets || (0, i.default)(O)) && O.type === S.ActivityTypes.PLAYING) L((0, a.jsx)(_.default.RichPresenceSection, {
       activity: O,
       getAssetImage: E.getAssetImage
     }, "rich-presence-".concat(null !== (f = O.session_id) && void 0 !== f ? f : t, "-").concat(y.id)));
@@ -154,7 +154,7 @@ function p(e) {
       },
       getAssetImage: E.getAssetImage,
       members: P
-    }, "spotify-".concat(null !== (C = O.session_id) && void 0 !== C ? C : t, "-").concat(y.id))) : (null != O.assets || (0, i.default)(O)) && O.type === m.ActivityTypes.LISTENING ? L((0, a.jsx)(_.default.RichPresenceSection, {
+    }, "spotify-".concat(null !== (C = O.session_id) && void 0 !== C ? C : t, "-").concat(y.id))) : (null != O.assets || (0, i.default)(O)) && O.type === S.ActivityTypes.LISTENING ? L((0, a.jsx)(_.default.RichPresenceSection, {
       activity: O,
       getAssetImage: E.getAssetImage
     }, "rich-presence-".concat(null !== (I = O.session_id) && void 0 !== I ? I : t, "-").concat(y.id))) : (0, u.default)(O) && L((0, a.jsx)(_.default.XboxSection, {

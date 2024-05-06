@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("631885"),
   _ = n("895328"),
   C = n("568671"),
-  S = n("419821"),
-  m = n("367515"),
+  m = n("419821"),
+  S = n("367515"),
   p = n("250285"),
   I = n("292352"),
   T = n("689938"),
@@ -138,9 +138,9 @@ function O(e) {
     return null == i ? null : (0, a.jsx)(p.default, {
       userId: i.id,
       isLast: r,
-      children: () => t === I.UserLinkStatus.ACTIVE ? (0, a.jsx)(S.UserLinkAcceptedRequestRow, {
+      children: () => t === I.UserLinkStatus.ACTIVE ? (0, a.jsx)(m.UserLinkAcceptedRequestRow, {
         user: i
-      }) : (0, a.jsx)(m.UserLinkPendingRequestRow, {
+      }) : (0, a.jsx)(S.UserLinkPendingRequestRow, {
         user: i
       })
     }, i.id)

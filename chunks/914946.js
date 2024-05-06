@@ -65,8 +65,8 @@ var a, s = n("729594"),
   h = n("598077"),
   _ = n("592125"),
   C = n("430824"),
-  S = n("131951"),
-  m = n("375954"),
+  m = n("131951"),
+  S = n("375954"),
   p = n("158776"),
   I = n("594174"),
   T = n("979651"),
@@ -106,13 +106,13 @@ function G(e, t) {
   let n = [],
     a = e.getGuildId();
   return ![O.ChannelTypes.GUILD_CATEGORY, ...(0, E.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
-    m.default.whenReady(e.id, () => t()), o.default.fetchMessages({
+    S.default.whenReady(e.id, () => t()), o.default.fetchMessages({
       channelId: e.id,
       limit: O.MAX_MESSAGES_PER_CHANNEL
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = (!e.isNSFW() || (null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? m.default.getMessages(e.id).toArray().map(w) : [],
+    let s = (!e.isNSFW() || (null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(w) : [],
       l = Object.values(T.default.getVoiceStatesForChannel(e.id)).map(t => k(a, e.id, t));
     return {
       id: e.id,
@@ -169,9 +169,9 @@ function k(e, t, n) {
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
     nick: A.default.getName(e, t, u),
-    mute: S.default.isLocalMute(u.id),
-    volume: S.default.getLocalVolume(u.id),
-    pan: S.default.getLocalPan(u.id),
+    mute: m.default.isLocalMute(u.id),
+    volume: m.default.getLocalVolume(u.id),
+    pan: m.default.getLocalPan(u.id),
     voice_state: {
       mute: a,
       deaf: s,
@@ -289,7 +289,7 @@ function q(e, t) {
 }
 
 function Q(e) {
-  let t = S.default.getSettings(),
+  let t = m.default.getSettings(),
     n = e => Object.values(e).sort((e, t) => e.index - t.index).map(e => ({
       id: e.id,
       name: e.name
@@ -297,12 +297,12 @@ function Q(e) {
     a = e(t);
   return {
     input: {
-      available_devices: n(S.default.getInputDevices()),
+      available_devices: n(m.default.getInputDevices()),
       device_id: t.inputDeviceId,
       volume: t.inputVolume
     },
     output: {
-      available_devices: n(S.default.getOutputDevices()),
+      available_devices: n(m.default.getOutputDevices()),
       device_id: t.outputDeviceId,
       volume: t.outputVolume
     },
@@ -324,7 +324,7 @@ function Q(e) {
 }
 
 function Z(e, t) {
-  let n = S.default.getSettings(e),
+  let n = m.default.getSettings(e),
     a = t(n);
   return {
     input_mode: {

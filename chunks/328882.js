@@ -5,8 +5,8 @@ a.r(t), a.d(t, {
   }
 });
 var n = a("524437"),
-  r = a("605236");
-let i = (0, a("818083").createExperiment)({
+  i = a("605236");
+let r = (0, a("818083").createExperiment)({
   kind: "user",
   id: "2024-04_april_marketing_moment_experiment",
   label: "2024 April Marketing Moment",
@@ -23,10 +23,10 @@ let i = (0, a("818083").createExperiment)({
 });
 
 function s(e) {
-  let t = i.useExperiment({
+  let t = r.useExperiment({
       location: e
     }).enabled,
-    a = (0, r.useIsDismissibleContentDismissed)(n.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE);
+    a = (0, i.useIsDismissibleContentDismissed)(n.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE);
   return t && !a
 }
-t.default = i
+t.default = r

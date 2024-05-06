@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("382600"),
   _ = n("481060"),
   C = n("846027"),
-  S = n("239091"),
-  m = n("925549"),
+  m = n("239091"),
+  S = n("925549"),
   p = n("284056"),
   I = n("324315"),
   T = n("730749"),
@@ -68,8 +68,8 @@ var a = n("735250"),
   eh = n("819640"),
   e_ = n("131951"),
   eC = n("496675"),
-  eS = n("19780"),
-  em = n("699516"),
+  em = n("19780"),
+  eS = n("699516"),
   ep = n("594174"),
   eI = n("979651"),
   eT = n("938475"),
@@ -182,23 +182,23 @@ function eH(e) {
   } = e, r = (0, et.default)(), o = (0, ea.default)(t), u = (0, d.useStateFromStoresObject)([N.default], () => null != N.default.getSelfEmbeddedActivityForChannel(t.id)), c = (0, W.default)(t), {
     reachedLimit: f,
     limit: h
-  } = (0, en.default)(t), S = s.useCallback(() => {
+  } = (0, en.default)(t), m = s.useCallback(() => {
     (0, el.default)()
-  }, []), m = (0, A.useAppContext)(), p = s.useCallback(e => {
+  }, []), S = (0, A.useAppContext)(), p = s.useCallback(e => {
     if (e_.default.isVideoEnabled() === e) return;
     let n = () => {
       var n;
       C.default.setVideoEnabled(e), e && (0, Y.transitionTo)(eD.Routes.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eD.ME, t.id))
     };
-    e ? (0, eo.default)(n, m) : n()
-  }, [t, m]), I = u || n || c, {
+    e ? (0, eo.default)(n, S) : n()
+  }, [t, S]), I = u || n || c, {
     Component: T,
     play: g,
     events: v
   } = (0, E.useVideoLottie)(r.enabled ? "disable" : "enable");
   return s.useEffect(() => () => g(), [r.enabled, g]), (0, a.jsx)(eu.VideoButtonWrapper, {
     onChange: p,
-    onCameraUnavailable: S,
+    onCameraUnavailable: m,
     hasPermission: o,
     channelLimit: h,
     channelLimitReached: f,
@@ -292,8 +292,8 @@ function eV(e) {
     userInActivity: E
   } = (0, d.useStateFromStoresObject)([N.default], () => ({
     userInActivity: null != N.default.getSelfEmbeddedActivityForChannel(t.id)
-  })), h = (0, g.useAnalyticsContext)(), C = (0, R.useShowActivityIndicator)(), S = o !== L.EmbeddedActivityLaunchability.CAN_LAUNCH, {
-    Component: m,
+  })), h = (0, g.useAnalyticsContext)(), C = (0, R.useShowActivityIndicator)(), m = o !== L.EmbeddedActivityLaunchability.CAN_LAUNCH, {
+    Component: S,
     events: p
   } = (0, c.useActivityLottie)();
   return n ? (0, a.jsx)(_.Tooltip, {
@@ -321,17 +321,17 @@ function eV(e) {
         var t;
         p.onMouseLeave(), null == e || null === (t = e.onMouseLeave) || void 0 === t || t.call(e)
       },
-      disabled: S,
+      disabled: m,
       className: i()(ej.button, ej.buttonColor, {
         [ej.buttonActive]: E || null != f,
-        [ej.disabled]: S
+        [ej.disabled]: m
       }),
       innerClassName: ej.buttonContents,
       wrapperClassName: ej.button,
       children: [C ? (0, a.jsx)(M.FreeActivityIndicatorDot, {
         top: -1,
         right: -1
-      }) : null, (0, a.jsx)(m, {
+      }) : null, (0, a.jsx)(S, {
         size: "sm",
         color: "currentColor",
         className: ej.buttonIcon
@@ -352,16 +352,16 @@ function eY(e) {
     E = (0, ea.default)(n),
     h = n.getGuildId(),
     C = (0, d.useStateFromStoresObject)([N.default], () => null != N.default.getSelfEmbeddedActivityForChannel(n.id)),
-    S = (0, W.default)(n),
-    m = s.useCallback(() => {
+    m = (0, W.default)(n),
+    S = s.useCallback(() => {
       (0, er.default)(h, n.id, eD.AnalyticsSections.ACTIVITY_PANEL)
     }, [h, n.id]),
     p = c.find(e => e.ownerId === (null == u ? void 0 : u.id)),
     I = (0, es.useOtherStreams)(n, u, c);
-  t = null == p ? l ? m : ei.default : () => (0, F.default)(p);
+  t = null == p ? l ? S : ei.default : () => (0, F.default)(p);
   let T = null != p || I.length > 0,
     g = E ? eU.default.Messages.SHARE_YOUR_SCREEN : eU.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
-    A = C || r || S,
+    A = C || r || m,
     v = null != p,
     {
       Component: R,
@@ -385,7 +385,7 @@ function eY(e) {
         currentUser: u,
         activeStreams: c,
         onClose: t,
-        handleGoLive: l ? m : ei.default
+        handleGoLive: l ? S : ei.default
       })
     },
     position: "top",
@@ -444,7 +444,7 @@ class eW extends s.PureComponent {
       isBroadcasting: o
     } = this.props;
     if (null == t) return null;
-    let d = (0, U.computeChannelName)(t, ep.default, em.default);
+    let d = (0, U.computeChannelName)(t, ep.default, eS.default);
     return null != n ? (e = eD.Routes.CHANNEL(n.id, t.id), d = "".concat(d, " / ").concat(n.name)) : e = eD.Routes.CHANNEL(eD.ME, t.id), o && t.isBroadcastChannel() && (d = eU.default.Messages.BROADCASTING), (0, a.jsx)(I.default, {
       statusTextClassName: ej.statusWithPopout,
       quality: s,
@@ -619,12 +619,12 @@ class eW extends s.PureComponent {
         guild: n,
         channel: a
       } = this.props;
-      o()(null != a, "Channel is null during navigation click"), e.stopPropagation(), m.default.channelListScrollTo(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eD.ME, a.id)
+      o()(null != a, "Channel is null during navigation click"), e.stopPropagation(), S.default.channelListScrollTo(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eD.ME, a.id)
     }), ew(this, "handleChannelLinkContextMenu", e => {
       let {
         channel: t
       } = this.props;
-      (0, S.openContextMenuLazy)(e, async () => {
+      (0, m.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.e("56944").then(n.bind(n, "600830"));
@@ -686,16 +686,16 @@ t.default = (0, T.default)(function(e) {
     {
       channelId: i,
       ...r
-    } = (0, d.useStateFromStoresObject)([eS.default], () => null != t ? {
+    } = (0, d.useStateFromStoresObject)([em.default], () => null != t ? {
       channelId: t.channelId,
       rtcConnectionQuality: eD.RTCConnectionQuality.FINE,
       rtcConnectionState: eD.RTCConnectionStates.RTC_CONNECTED,
       rtcConnectionLastPing: 0
     } : {
-      channelId: eS.default.getChannelId(),
-      rtcConnectionQuality: eS.default.getQuality(),
-      rtcConnectionState: eS.default.getState(),
-      rtcConnectionLastPing: eS.default.getLastPing()
+      channelId: em.default.getChannelId(),
+      rtcConnectionQuality: em.default.getQuality(),
+      rtcConnectionState: em.default.getState(),
+      rtcConnectionLastPing: em.default.getLastPing()
     }),
     o = (0, d.useStateFromStores)([ef.default], () => ef.default.getChannel(i), [i]),
     u = null == o ? void 0 : o.getGuildId(),
@@ -709,9 +709,9 @@ t.default = (0, T.default)(function(e) {
     E = (0, d.useStateFromStores)([e_.default, H.default], () => H.default.hasHotspot(eb.HotspotLocations.VOICE_PANEL_INTRODUCTION) && (0, eP.isNewUser)(l) && !e_.default.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())),
     h = (0, d.useStateFromStores)([eI.default], () => null != i && eI.default.hasVideo(i), [i]),
     C = (0, d.useStateFromStores)([ed.default], () => ed.default.getCurrentUserActiveStream()),
-    S = (0, d.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
-    m = (0, d.useStateFromStores)([V.default], () => V.default.isViewingRoles(u)),
-    p = (0, d.useStateFromStores)([eC.default], () => m && !eC.default.can(eD.Permissions.VIEW_CHANNEL, o), [m, o]),
+    m = (0, d.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
+    S = (0, d.useStateFromStores)([V.default], () => V.default.isViewingRoles(u)),
+    p = (0, d.useStateFromStores)([eC.default], () => S && !eC.default.can(eD.Permissions.VIEW_CHANNEL, o), [S, o]),
     I = ee.RtcPanelShowVoiceStates.useSetting(),
     [T, g, A] = (0, d.useStateFromStoresArray)([eT.default, z.default], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [z.default.getMutableParticipants(o.id, q.StageChannelParticipantNamedIndex.SPEAKER), z.default.getParticipantsVersion(o.id), null] : [null, null, null != o ? eT.default.getVoiceStatesForChannel(o) : null], [o]),
     N = s.useMemo(() => {
@@ -731,8 +731,8 @@ t.default = (0, T.default)(function(e) {
     }, [T, g, A]),
     [R, L] = s.useState(!1);
   s.useEffect(() => {
-    (m || p) && L(!1)
-  }, [m, p, L]);
+    (S || p) && L(!1)
+  }, [S, p, L]);
   let {
     analyticsLocations: M
   } = (0, x.default)(y.default.RTC_PANEL), P = (0, v.default)(null != u ? u : eD.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), b = (0, O.default)(null == o ? void 0 : o.id), U = (0, D.default)();
@@ -753,13 +753,13 @@ t.default = (0, T.default)(function(e) {
         channel: o,
         hasVideo: h,
         selfStream: C,
-        hasLayers: S,
+        hasLayers: m,
         voiceStates: N,
         showVoiceStates: I,
         shouldShowVoicePanelIntroduction: E,
         isPrivateChannelWithEnabledActivities: b,
         isBroadcasting: U
-      }), !R && m && null != u ? (0, a.jsxs)("div", {
+      }), !R && S && null != u ? (0, a.jsxs)("div", {
         className: ej.viewAsRolesWarning,
         children: [(0, a.jsx)(_.Text, {
           variant: "text-sm/normal",

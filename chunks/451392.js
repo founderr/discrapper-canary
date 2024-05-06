@@ -41,9 +41,9 @@ function g(e) {
     displayProfile: A,
     pendingThemeColors: n,
     isPreview: !0
-  }), R = E.default.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(h, 80), v = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), D = (0, u.useAvatarColors)(M, v, !1);
+  }), R = E.default.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(h, 80), v = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), L = (0, u.useAvatarColors)(M, v, !1);
   if (null == O || null == x) return null;
-  let L = e => {
+  let D = e => {
     i(r()(e, null == A ? void 0 : A.themeColors) ? void 0 : e)
   };
   return (0, a.jsx)(f.default, {
@@ -57,9 +57,9 @@ function g(e) {
       children: [(0, a.jsx)("div", {
         className: _.sparkleContainer,
         children: (0, a.jsx)(T.default, {
-          onChange: e => L([e, x]),
+          onChange: e => D([e, x]),
           color: O,
-          suggestedColors: D,
+          suggestedColors: L,
           showEyeDropper: !0,
           label: (0, a.jsx)(d.Text, {
             className: _.colorSwatchLabel,
@@ -72,9 +72,9 @@ function g(e) {
       }), (0, a.jsx)("div", {
         className: _.sparkleContainer,
         children: (0, a.jsx)(T.default, {
-          onChange: e => L([O, e]),
+          onChange: e => D([O, e]),
           color: x,
-          suggestedColors: D,
+          suggestedColors: L,
           showEyeDropper: !0,
           label: (0, a.jsx)(d.Text, {
             className: _.colorSwatchLabel,
@@ -89,7 +89,7 @@ function g(e) {
         color: d.Button.Colors.PRIMARY,
         look: d.Button.Looks.LINK,
         size: d.Button.Sizes.SMALL,
-        onClick: () => L([null, null]),
+        onClick: () => D([null, null]),
         children: m.default.Messages.USER_SETTINGS_RESET_PROFILE_THEME
       })]
     })

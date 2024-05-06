@@ -14,8 +14,8 @@ var a = n("735250"),
   h = n("252618"),
   _ = n("5254"),
   C = n("984370"),
-  S = n("518311"),
-  m = n("199104"),
+  m = n("518311"),
+  S = n("199104"),
   p = n("108427"),
   I = n("210887"),
   T = n("974042"),
@@ -33,7 +33,7 @@ var a = n("735250"),
 function x() {
   return (0, a.jsxs)("div", {
     className: y.inviteToolbar,
-    children: [(0, a.jsx)(S.default, {
+    children: [(0, a.jsx)(m.default, {
       tooltip: P.default.Messages.NEW_GROUP_DM
     }), (0, a.jsx)(C.default.Divider, {})]
   })
@@ -54,7 +54,7 @@ t.default = function(e) {
   }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
   }, [t]);
-  let S = (0, u.useStateFromStores)([I.default], () => I.default.theme),
+  let m = (0, u.useStateFromStores)([I.default], () => I.default.theme),
     {
       section: D,
       pendingCount: b
@@ -68,7 +68,7 @@ t.default = function(e) {
     children: [(0, a.jsx)(h.AppPageTitle, {
       location: P.default.Messages.FRIENDS
     }), (0, a.jsxs)(C.default, {
-      className: (0, v.getThemeClass)(S),
+      className: (0, v.getThemeClass)(m),
       toolbar: (0, a.jsx)(x, {}),
       scrollable: o.isMobile,
       role: "navigation",
@@ -142,7 +142,7 @@ t.default = function(e) {
         })
       }), (0, a.jsx)("div", {
         className: y.nowPlayingColumn,
-        children: (0, a.jsx)(m.default, {})
+        children: (0, a.jsx)(S.default, {})
       })]
     })]
   })

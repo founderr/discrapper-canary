@@ -12,8 +12,8 @@ var a, s, l = n("735250"),
   h = n("726542"),
   _ = n("638880"),
   C = n("655922"),
-  S = n("122810"),
-  m = n("833664"),
+  m = n("122810"),
+  S = n("833664"),
   p = n("503438"),
   I = n("420660"),
   T = n("74433"),
@@ -91,7 +91,7 @@ class et extends i.Component {
     } = this.props, {
       timestamps: n
     } = t;
-    return null == n || !(0, m.default)(t) || (0, p.default)(t) ? null : J(e = (0, S.default)(t) ? (0, l.jsx)($, {
+    return null == n || !(0, S.default)(t) || (0, p.default)(t) ? null : J(e = (0, m.default)(t) ? (0, l.jsx)($, {
       timestamps: n
     }) : (0, l.jsx)(U.default, {
       start: n.start,
@@ -494,27 +494,27 @@ es.Header = ea, es.Body = e => {
   let h = (0, u.useStateFromStoresArray)([x.default, P.default], () => Array.from(s).map(e => P.default.getId() === e ? null : x.default.getUser(e)).filter(V.isNotNullish)),
     C = (0, E.useAnalyticsContext)(),
     {
-      analyticsLocations: S
+      analyticsLocations: m
     } = (0, N.default)();
   if (null == f) return null;
-  let m = v.default.getApplication(f);
-  if (null == m) return null;
+  let S = v.default.getApplication(f);
+  if (null == S) return null;
   let p = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    I = (0, H.getAssetImage)(m.id, o, 300);
+    I = (0, H.getAssetImage)(S.id, o, 300);
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
       children: [(0, l.jsx)(b.default, {
-        game: m,
+        game: S,
         size: b.default.Sizes.XSMALL,
         className: q.embeddedActivityIcon
       }), (0, l.jsx)("div", {
         className: q.embeddedActivityName,
         children: (0, l.jsx)(c.Text, {
           variant: "text-sm/semibold",
-          children: m.name
+          children: S.name
         })
       }), null != p ? (0, l.jsx)("div", {
         className: q.embeddedActivityTimeElapsed,
@@ -530,7 +530,7 @@ es.Header = ea, es.Body = e => {
       className: q.embeddedActivityPlayerContainer,
       children: [null != I ? (0, l.jsx)("img", {
         src: I,
-        alt: m.name,
+        alt: S.name,
         className: q.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {
         className: q.embeddedActivityImageOverlay,
@@ -549,7 +549,7 @@ es.Header = ea, es.Body = e => {
                 activityChannelId: n.id,
                 locationObject: C.location,
                 embeddedActivitiesManager: A.default,
-                analyticsLocations: S
+                analyticsLocations: m
               })
             },
             children: z.default.Messages.JOIN

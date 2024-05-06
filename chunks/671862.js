@@ -1,11 +1,11 @@
 "use strict";
 a.r(t);
 var n = a("735250"),
-  r = a("470079"),
-  i = a("574523"),
+  i = a("470079"),
+  r = a("574523"),
   s = a("475521"),
   l = a("248438");
-let o = (0, i.CustomPicker)(e => (0, n.jsxs)("div", {
+let o = (0, r.CustomPicker)(e => (0, n.jsxs)("div", {
   className: l.wrapper,
   children: [(0, n.jsx)("div", {
     className: l.saturation,
@@ -20,4 +20,4 @@ let o = (0, i.CustomPicker)(e => (0, n.jsxs)("div", {
     })
   })]
 }));
-t.default = r.memo(o)
+t.default = i.memo(o)

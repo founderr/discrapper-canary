@@ -16,8 +16,8 @@ var a, s, l = n("735250"),
   h = n("471445"),
   _ = n("15274"),
   C = n("924301"),
-  S = n("504160"),
-  m = n("151864"),
+  m = n("504160"),
+  S = n("151864"),
   p = n("725436"),
   I = n("497656"),
   T = n("554747"),
@@ -52,11 +52,11 @@ function Y(e) {
   } = e, a = (0, I.useActiveEventOrStageInstanceChannel)(t.id), s = (0, T.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([O.default], () => O.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: Y,
     isEventNoticeHidden: W
-  } = (0, u.useStateFromStoresObject)([m.default], () => ({
-    isStageNoticeHidden: m.default.isLiveChannelNoticeHidden({
+  } = (0, u.useStateFromStoresObject)([S.default], () => ({
+    isStageNoticeHidden: S.default.isLiveChannelNoticeHidden({
       stageId: null == r ? void 0 : r.id
     }),
-    isEventNoticeHidden: m.default.isLiveChannelNoticeHidden({
+    isEventNoticeHidden: S.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
   }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, L.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, L.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([x.default], () => x.default.can(F.Permissions.CONNECT, a)), Z = (0, M.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
@@ -86,7 +86,7 @@ function Y(e) {
       isEventNoticeHidden: d,
       isStageNoticeHidden: f,
       isStudyRoomNotice: E
-    } = e, _ = null != n && null != a && !f, m = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
+    } = e, _ = null != n && null != a && !f, S = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
     if (E && null != a) {
       let e = (0, h.getChannelIconComponent)(a);
       return {
@@ -118,7 +118,7 @@ function Y(e) {
           }),
           canListenIn: s,
           buttonText: e,
-          onClose: () => (0, S.hideLiveChannelNotice)({
+          onClose: () => (0, m.hideLiveChannelNotice)({
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
@@ -151,7 +151,7 @@ function Y(e) {
           }),
           canListenIn: s,
           buttonText: e,
-          onClose: () => (0, S.hideLiveChannelNotice)({
+          onClose: () => (0, m.hideLiveChannelNotice)({
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
@@ -175,7 +175,7 @@ function Y(e) {
         if (null == e) return {
           noticeType: null
         };
-        let n = C.default.getUserCount(t.id, m);
+        let n = C.default.getUserCount(t.id, S);
         return {
           noticeType: 1,
           title: t.name,
@@ -187,7 +187,7 @@ function Y(e) {
           }),
           canListenIn: !1,
           buttonText: H.default.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE,
-          onClose: () => (0, S.hideLiveChannelNotice)({
+          onClose: () => (0, m.hideLiveChannelNotice)({
             eventId: null == t ? void 0 : t.id
           }),
           users: null == r ? [] : [r],
@@ -207,7 +207,7 @@ function Y(e) {
         }
       } else if (t.entity_type === B.GuildScheduledEventEntityTypes.VOICE && null != a) {
         let e = (0, h.getChannelIconComponent)(a),
-          n = C.default.getUserCount(t.id, m);
+          n = C.default.getUserCount(t.id, S);
         return {
           noticeType: 2,
           title: t.name,
@@ -219,7 +219,7 @@ function Y(e) {
           }) : null,
           canListenIn: s,
           buttonText: H.default.Messages.GUILD_EVENT_JOIN,
-          onClose: () => (0, S.hideLiveChannelNotice)({
+          onClose: () => (0, m.hideLiveChannelNotice)({
             eventId: null == t ? void 0 : t.id
           }),
           users: null == r ? [] : [r],

@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("933970"),
   _ = n("340453"),
   C = n("292352"),
-  S = n("689938"),
-  m = n("382385");
+  m = n("689938"),
+  S = n("382385");
 
 function p(e) {
   let {
@@ -59,30 +59,30 @@ function p(e) {
     })
   }, [I, t]);
   return (0, a.jsxs)("div", {
-    className: m.container,
+    className: S.container,
     children: [(0, a.jsx)("div", {
-      className: m.details,
+      className: S.details,
       children: (0, a.jsx)(_.default, {
         otherUser: t,
         status: C.UserLinkStatus.PENDING
       })
     }), (0, a.jsx)("div", {
-      className: m.actions,
+      className: S.actions,
       children: l ? (0, a.jsx)(h.default, {
         icon: c.default,
-        className: m.__invalid_actionDeny,
-        tooltip: S.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
+        className: S.__invalid_actionDeny,
+        tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
         onClick: A
       }) : (0, a.jsxs)(a.Fragment, {
         children: [p ? null : (0, a.jsx)(h.default, {
           icon: d.default,
-          className: m.__invalid_actionAccept,
-          tooltip: S.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
+          className: S.__invalid_actionAccept,
+          tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
           onClick: T
         }), (0, a.jsx)(h.default, {
           icon: c.default,
-          className: m.__invalid_actionDeny,
-          tooltip: S.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
+          className: S.__invalid_actionDeny,
+          tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
           onClick: g
         })]
       })

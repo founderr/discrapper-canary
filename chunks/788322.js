@@ -18,8 +18,8 @@ var a = n("735250"),
   h = n("806519"),
   _ = n("768581"),
   C = n("900849"),
-  S = n("556017"),
-  m = n("879484"),
+  m = n("556017"),
+  S = n("879484"),
   p = n("26580"),
   I = n("206887"),
   T = n("981631"),
@@ -89,16 +89,16 @@ t.default = e => {
       }
     }
   };
-  s.useEffect(() => m.DiscoveryTagsExperiment.trackExposure({
+  s.useEffect(() => S.DiscoveryTagsExperiment.trackExposure({
     location: "4302e4_1"
   }));
   let {
     shouldDisplayTags: K
-  } = m.DiscoveryTagsExperiment.useExperiment({
+  } = S.DiscoveryTagsExperiment.useExperiment({
     location: "4302e4_2"
   }, {
     autoTrackExposure: !1
-  }), z = (0, S.useCanSeeDiscoveryContextMenu)();
+  }), z = (0, m.useCanSeeDiscoveryContextMenu)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: A.card,

@@ -1,8 +1,8 @@
 "use strict";
 a.r(t), a("47120");
 var n = a("735250"),
-  r = a("470079"),
-  i = a("481060"),
+  i = a("470079"),
+  r = a("481060"),
   s = a("467138"),
   l = a("246364"),
   o = a("983736"),
@@ -24,9 +24,9 @@ t.default = function(e) {
     formDescription: g,
     onFieldsSave: x,
     onDescriptionSave: I
-  } = e, v = r.useRef(!1), [N, A] = r.useState(null), [S, R] = r.useState(e.formFields), L = r.useRef(e.formFields), M = r.useMemo(() => S.filter(o.isAutomaticApprovalFormField), [S]), b = r.useMemo(() => S.filter(o.isManualApprovalFormField), [S]), j = b.length, y = r.useMemo(() => S.length === E.MAX_FORM_ELEMENTS, [S]), O = r.useMemo(() => S.some(l.isTermsFormField), [S]), D = r.useMemo(() => S.some(e => !(0, l.isTermsFormField)(e)), [S]), P = j > 1, F = (0, s.useIsMemberVerificationManualApproval)(t.id) || C, w = r.useCallback(() => {
-    (0, i.showToast)((0, i.createToast)(T.default.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE))
-  }, []), G = r.useCallback(async e => {
+  } = e, v = i.useRef(!1), [N, A] = i.useState(null), [S, R] = i.useState(e.formFields), L = i.useRef(e.formFields), M = i.useMemo(() => S.filter(o.isAutomaticApprovalFormField), [S]), b = i.useMemo(() => S.filter(o.isManualApprovalFormField), [S]), j = b.length, y = i.useMemo(() => S.length === E.MAX_FORM_ELEMENTS, [S]), O = i.useMemo(() => S.some(l.isTermsFormField), [S]), D = i.useMemo(() => S.some(e => !(0, l.isTermsFormField)(e)), [S]), P = j > 1, F = (0, s.useIsMemberVerificationManualApproval)(t.id) || C, w = i.useCallback(() => {
+    (0, r.showToast)((0, r.createToast)(T.default.Messages.ERROR_GENERIC_TITLE, r.ToastType.FAILURE))
+  }, []), G = i.useCallback(async e => {
     if (!v.current) {
       v.current = !0, C && (e = e.filter(e => e.field_type !== l.VerificationFormFieldTypes.TERMS));
       try {
@@ -37,22 +37,22 @@ t.default = function(e) {
         null != N && A(null), v.current = !1
       }
     }
-  }, [N, t.id, p, x, C]), U = r.useCallback(async e => {
+  }, [N, t.id, p, x, C]), U = i.useCallback(async e => {
     let t = e.field_type === l.VerificationFormFieldTypes.TERMS ? [e, ...S] : [...S, e];
     await G(t)
-  }, [S, G]), B = r.useCallback(async (e, t) => {
+  }, [S, G]), B = i.useCallback(async (e, t) => {
     if (S[e] === t) return;
     let a = [...S];
     a[e] = t, await G(a)
-  }, [S, G]), k = r.useCallback(async (e, t, a) => {
+  }, [S, G]), k = i.useCallback(async (e, t, a) => {
     let n = S.indexOf(e),
-      r = [...S];
-    if (null != t && t !== n && (r.splice(n, 1), r.splice(t, 0, e), R(r)), a) try {
-      await G(r), null !== N && A(null)
+      i = [...S];
+    if (null != t && t !== n && (i.splice(n, 1), i.splice(t, 0, e), R(i)), a) try {
+      await G(i), null !== N && A(null)
     } catch (e) {
       w()
     } else N !== t && A(t)
-  }, [N, S, G, w]), H = r.useCallback(async e => {
+  }, [N, S, G, w]), H = i.useCallback(async e => {
     try {
       await G([...S.slice(0, e), ...S.slice(e + 1)])
     } catch (e) {

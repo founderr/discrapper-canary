@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return C
   },
   DiscoveryTags: function() {
-    return S
+    return m
   }
 }), n("47120");
 var a = n("735250"),
@@ -88,7 +88,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
     LIGHT: c.tagLight,
     ALT: c.tagAlt
   },
-  S = e => {
+  m = e => {
     let {
       tags: t,
       onTagClick: n,
@@ -98,21 +98,21 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       guildId: d,
       section: h
     } = e, {
-      ref: S,
-      width: m
+      ref: m,
+      width: S
     } = (0, o.default)(), [p, I] = s.useState(null), T = t.filter(e => !f.includes(e.toLowerCase()));
     return s.useLayoutEffect(() => {
-      if (null == S.current || null == m || 0 === m) return;
+      if (null == m.current || null == S || 0 === S) return;
       let e = 0,
         t = 0,
-        n = m - 40 - 4;
-      for (let a = 0; a < T.length && (t += S.current.children[a].clientWidth + 4, a === T.length - 1 ? !(t > n + 40) : !(t > n)); a++) {
+        n = S - 40 - 4;
+      for (let a = 0; a < T.length && (t += m.current.children[a].clientWidth + 4, a === T.length - 1 ? !(t > n + 40) : !(t > n)); a++) {
         ;
         e++
       }
       I(t => e <= T.length ? e : t)
-    }, [m, S, T]), (0, a.jsxs)("ul", {
-      ref: S,
+    }, [S, m, T]), (0, a.jsxs)("ul", {
+      ref: m,
       className: i()(c.tagContainer, l, {
         [c.invisible]: null == p
       }),

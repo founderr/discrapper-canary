@@ -26,7 +26,7 @@ function C() {
   for (let e of E) s.default.setDisableLocalVideo(e, d.VideoToggleState.MANUAL_ENABLED, c.MediaEngineContextTypes.DEFAULT, !1);
   h.clear(), E.clear()
 }
-class S extends l.default {
+class m extends l.default {
   _initialize() {
     a.default.subscribe("RTC_CONNECTION_VIDEO", this.handleIncomingVideo), a.default.subscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleManualLocalVideoToggle), a.default.subscribe("WINDOW_VISIBILITY_CHANGE", this.handleWindowVisibilityChange), a.default.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), r.default.addChangeListener(this.handlePopoutChange)
   }
@@ -44,8 +44,8 @@ class S extends l.default {
       f = u.default.isVisible(),
       _ = r.default.getWindowVisible(d.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
       C = o.default.isLocalVideoDisabled(t, n),
-      S = h.has(t);
-    l && !f && !_ && !C && !S && (E.add(t), s.default.setDisableLocalVideo(t, d.VideoToggleState.DISABLED, n, !1))
+      m = h.has(t);
+    l && !f && !_ && !C && !m && (E.add(t), s.default.setDisableLocalVideo(t, d.VideoToggleState.DISABLED, n, !1))
   }
   handleManualLocalVideoToggle(e) {
     let {
@@ -70,4 +70,4 @@ class S extends l.default {
     })
   }
 }
-t.default = new S
+t.default = new m
