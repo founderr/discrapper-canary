@@ -132,7 +132,8 @@ t.default = (0, d.default)(e => {
           color: G,
           look: w,
           isEmbedded: V,
-          onAction: k
+          onAction: k,
+          channelId: U
         }, "join-activity-button"), (0, i.jsx)(g.default, {
           activity: t,
           user: n,
