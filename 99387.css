@@ -12961,6 +12961,21 @@ html .progress__00e29 {
     font-weight: 600
 }
 
+.customButton__66f8a {
+    background-color: var(--custom-clan-bg);
+    color: var(--custom-clan-text);
+    transition: background-color.25s
+}
+
+.customButton__66f8a:hover,
+.customButton__66f8a:focus {
+    background-color: var(--custom-clan-hover-bg, hsl(var(--black-500-hsl)/.3))
+}
+
+.customButton__66f8a:active {
+    background-color: var(--custom-clan-active-bg, hsl(var(--black-500-hsl)/.35))
+}
+
 .container__86b23 {
     display: flex;
     flex-direction: column;
@@ -35165,21 +35180,6 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     justify-content: space-between
 }
 
-.customButton__03f9e {
-    background-color: var(--custom-clan-bg);
-    color: var(--custom-clan-text);
-    transition: background-color.25s
-}
-
-.customButton__03f9e:hover,
-.customButton__03f9e:focus {
-    background-color: var(--custom-clan-hover-bg, hsl(var(--black-500-hsl)/.3))
-}
-
-.customButton__03f9e:active {
-    background-color: var(--custom-clan-active-bg, hsl(var(--black-500-hsl)/.35))
-}
-
 .overviewSidebar__995aa {
     display: flex;
     box-sizing: border-box;
@@ -44485,6 +44485,10 @@ div.profileThemedContainer__6e645 {
     opacity: 1
 }
 
+.container__8d997:hover .additionalParticipantBadge__23702 {
+    background: var(--bg-overlay-4, var(--background-accent))
+}
+
 .reply_d4ce98 {
     position: absolute;
     top: 4px;
@@ -44568,7 +44572,7 @@ div.profileThemedContainer__6e645 {
 
 .additionalParticipantBadge__23702 {
     padding: 2.25px 4.4px 2.5px 4.2px;
-    background-color: var(--background-accent);
+    background: var(--bg-overlay-5, var(--background-accent));
     border-radius: 8px;
     margin-left: 4px
 }

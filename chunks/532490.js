@@ -15,7 +15,7 @@ var a, l, s = n("735250"),
   h = n("607070"),
   m = n("594174"),
   p = n("5192"),
-  E = n("353093"),
+  E = n("284019"),
   C = n("689938"),
   g = n("919915");
 (l = a || (a = {})).LEFT = "left", l.RIGHT = "right";
@@ -107,14 +107,10 @@ t.default = i.memo(function(e) {
             },
             children: [(0, s.jsx)("div", {
               className: g.signContainerButton,
-              children: (0, s.jsxs)(c.Button, {
+              children: (0, s.jsxs)(E.default, {
+                themeColor: n,
                 className: g.signButton,
-                color: c.Button.Colors.CUSTOM,
                 size: c.Button.Sizes.SMALL,
-                style: {
-                  backgroundColor: n,
-                  color: (0, E.getAccessibleTextColor)(n).hex()
-                },
                 onClick: e => {
                   var t;
                   null === (t = I.current) || void 0 === t || t.scrollIntoView({

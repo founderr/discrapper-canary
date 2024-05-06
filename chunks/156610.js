@@ -6,7 +6,6 @@ e.exports = {
   charterClanTag: "charterClanTag_bb407f",
   clickable: "clickable_b41429",
   closeButton: "closeButton_e88b7d",
-  customButton: "customButton__03f9e",
   customProgressStepFill: "customProgressStepFill_e1a0a9",
   divider: "divider_ef3200",
   errorIcon: "errorIcon__11e5e",

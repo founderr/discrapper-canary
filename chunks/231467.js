@@ -14,8 +14,8 @@ var i = n("735250"),
   o = n("481060"),
   l = n("442837"),
   u = n("835473"),
-  d = n("353093"),
-  _ = n("728257"),
+  d = n("676327"),
+  _ = n("353093"),
   c = n("114487"),
   E = n("550271"),
   I = n("175557"),
@@ -39,14 +39,14 @@ function g(e) {
     branding: {
       primaryColor: a
     }
-  } = t, s = n.filter(e => e !== O.EMPTY_WILDCARD).join(", "), l = (0, _.useColorIsLowContrastAgainstClientBackground)(a), u = r.useRef(null), [d, c] = r.useState(!1);
+  } = t, s = n.filter(e => e !== O.EMPTY_WILDCARD).join(", "), l = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), u = (0, d.getAccessibleClanColor)(a, l.hex()), _ = r.useRef(null), [c, E] = r.useState(!1);
   if (r.useEffect(() => {
-      let e = u.current;
-      null != e && null != e.offsetWidth && null != e.scrollWidth && c(e.offsetWidth < e.scrollWidth)
+      let e = _.current;
+      null != e && null != e.offsetWidth && null != e.scrollWidth && E(e.offsetWidth < e.scrollWidth)
     }, []), 0 === s.length) return null;
-  let E = {
-    color: l ? "var(--text-normal)" : a
-  };
+  let I = null != u ? {
+    color: u.css()
+  } : void 0;
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(o.Text, {
       variant: "text-xs/normal",
@@ -56,12 +56,12 @@ function g(e) {
     }), (0, i.jsx)(o.Tooltip, {
       text: s,
       color: o.Tooltip.Colors.PRIMARY,
-      shouldShow: d,
+      shouldShow: c,
       children: e => (0, i.jsx)("span", {
         ...e,
-        style: E,
+        style: I,
         className: C.wildCardText,
-        ref: u,
+        ref: _,
         children: s
       })
     })]
@@ -145,7 +145,7 @@ function D(e) {
     if (null == t) return null;
     if (n.length > 4) {
       let r = n.slice(3).map(e => e.name),
-        a = (0, d.formatSelectionList)(r);
+        a = (0, _.formatSelectionList)(r);
       return (0, i.jsx)(o.Tooltip, {
         text: a,
         position: "bottom",
