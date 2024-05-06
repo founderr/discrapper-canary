@@ -1,5 +1,8 @@
 "use strict";
 n.r(t), n.d(t, {
+  trackClanApplyToJoinViewed: function() {
+    return l
+  },
   trackClanProfileViewed: function() {
     return o
   }
@@ -22,8 +25,27 @@ function o(e) {
     is_member: c,
     has_join_request: n,
     source: o,
+    location: o,
     viewing_user_id: d,
     tag_owner_user_id: u,
     message_id: l
+  })
+}
+
+function l(e) {
+  let {
+    guildId: t,
+    source: n,
+    location: r,
+    messageId: o,
+    tagUserId: l
+  } = e, u = i.default.getId();
+  a.default.track(s.AnalyticEvents.CLAN_APPLY_TO_JOIN_VIEWED, {
+    guild_id: t,
+    source: n,
+    location: r,
+    viewing_user_id: u,
+    tag_owner_user_id: l,
+    message_id: o
   })
 }
