@@ -69,10 +69,12 @@ t.default = s.memo(function(e) {
       className: E.upsellDetails,
       children: [(0, a.jsx)(l.Heading, {
         className: E.upsellTitle,
+        color: "header-primary",
         variant: "heading-xxl/semibold",
         children: h
       }), (0, a.jsx)(l.Text, {
         className: E.upsellSubtitle,
+        color: "header-secondary",
         variant: "text-md/medium",
         children: _
       }), (0, a.jsx)(u.default, {

@@ -91,8 +91,8 @@ t.default = e => {
           children: _.map(e => {
             let t = a.has(e);
             return (0, n.jsx)(l.Clickable, {
-              className: s()(f.interestsTag, {
-                [f.selected]: t
+              className: s()(f.interestsTag, f.selectableOption, {
+                [f.selectedOption]: t
               }),
               onClick: () => t ? g(e) : x(e),
               children: (0, n.jsx)(l.Text, {

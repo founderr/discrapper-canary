@@ -38,8 +38,8 @@ let E = e => {
       children: i.map(e => {
         let t = o.has(e);
         return (0, n.jsxs)(l.Clickable, {
-          className: s()(h.interestsTag, {
-            [h.selected]: t
+          className: s()(h.interestsTag, h.selectableOption, {
+            [h.selectedOption]: t
           }),
           onClick: () => t ? d(e) : u(e),
           children: [(0, n.jsx)(a, {

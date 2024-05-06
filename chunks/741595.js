@@ -35,8 +35,8 @@ t.default = e => {
     }), (0, n.jsx)("div", {
       className: d.playstyleSelect,
       children: h.map(e => (0, n.jsxs)(l.Clickable, {
-        className: s()(d.playstyleOption, {
-          [d.selectedPlaystyle]: e.type === u
+        className: s()(d.playstyleOption, d.selectableOption, {
+          [d.selectedOption]: e.type === u
         }),
         onClick: () => i(e.type),
         children: [(0, n.jsx)(l.Heading, {
