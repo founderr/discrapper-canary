@@ -100,7 +100,7 @@ async function M(e) {
     if ((0, O.isActivityInTextStart)(e, o.applicationId, h.default, S.default) || n) {
       let t;
       try {
-        t = await (0, _.default)(e, o.applicationId)
+        n && (t = await (0, _.default)(e, o.applicationId))
       } catch (e) {
         if (e.message !== _.NO_PRIMARY_APP_COMMAND_ERROR) throw e
       }
