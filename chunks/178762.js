@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_CONTENT_ROW_HEIGHT: function() {
-    return I
+    return v
   },
   getContentRowHeight: function() {
-    return A
+    return N
   }
 }), n("47120");
 var a = n("735250"),
@@ -21,23 +21,25 @@ var a = n("735250"),
   m = n("69259"),
   p = n("91140"),
   E = n("227172"),
-  C = n("555672"),
-  g = n("644548"),
-  S = n("335326"),
-  _ = n("268010"),
-  T = n("206583");
-let I = 72;
+  C = n("551228"),
+  g = n("678869"),
+  S = n("555672"),
+  _ = n("644548"),
+  T = n("335326"),
+  I = n("268010"),
+  A = n("206583");
+let v = 72;
 
-function A(e) {
-  return (null == e ? void 0 : e.type) === c.MemberListRowTypes.CONTENT_INVENTORY ? I : 0
+function N(e) {
+  return (null == e ? void 0 : e.type) === c.MemberListRowTypes.CONTENT_INVENTORY ? v : 0
 }
-let N = i().throttle(e => {
-    (0, m.trackInteraction)(T.ContentInventoryInteractionTypes.CARD_HOVER, e)
+let x = i().throttle(e => {
+    (0, m.trackInteraction)(A.ContentInventoryInteractionTypes.CARD_HOVER, e)
   }, 5e3, {
     leading: !0,
     trailing: !1
   }),
-  v = e => {
+  M = e => {
     let {
       entry: t,
       ...n
@@ -49,11 +51,16 @@ let N = i().throttle(e => {
           entry: t
         });
       case o.ContentInventoryEntryType.WATCHED_MEDIA:
-        return (0, a.jsx)(S.default, {
+        return (0, a.jsx)(T.default, {
           ...n,
           entry: t
         });
       case o.ContentInventoryEntryType.TOP_GAME:
+        return (0, a.jsx)(S.default, {
+          ...n,
+          entry: t
+        });
+      case o.ContentInventoryEntryType.LISTENED_SESSION:
         return (0, a.jsx)(C.default, {
           ...n,
           entry: t
@@ -62,7 +69,7 @@ let N = i().throttle(e => {
         return null
     }
   },
-  x = e => {
+  R = e => {
     let {
       entry: t,
       ...n
@@ -74,11 +81,16 @@ let N = i().throttle(e => {
           entry: t
         });
       case o.ContentInventoryEntryType.WATCHED_MEDIA:
-        return (0, a.jsx)(_.default, {
+        return (0, a.jsx)(I.default, {
           ...n,
           entry: t
         });
       case o.ContentInventoryEntryType.TOP_GAME:
+        return (0, a.jsx)(_.default, {
+          ...n,
+          entry: t
+        });
+      case o.ContentInventoryEntryType.LISTENED_SESSION:
         return (0, a.jsx)(g.default, {
           ...n,
           entry: t
@@ -101,7 +113,7 @@ t.default = l.memo(e => {
     openOnHover: g
   } = (0, h.useMemberListHoverInteractions)({
     location: "MemberListContentRow"
-  }), S = l.useRef(!1), [_, I] = l.useState(!1), [A, M] = l.useState(!1), R = l.useCallback(e => {
+  }), S = l.useRef(!1), [_, T] = l.useState(!1), [I, v] = l.useState(!1), N = l.useCallback(e => {
     E && (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -117,12 +129,12 @@ t.default = l.memo(e => {
   return (0, a.jsx)("div", {
     onMouseEnter: () => {
       S.current = !0, setTimeout(() => {
-        S.current && I(!0), g && (0, m.trackInteraction)(T.ContentInventoryInteractionTypes.CARD_CLICK, C)
+        S.current && T(!0), g && (0, m.trackInteraction)(A.ContentInventoryInteractionTypes.CARD_CLICK, C)
       }, 100)
     },
     onMouseLeave: () => {
       S.current = !1, setTimeout(() => {
-        !S.current && I(!1)
+        !S.current && T(!1)
       }, 100)
     },
     children: (0, a.jsx)(u.Popout, {
@@ -130,18 +142,18 @@ t.default = l.memo(e => {
         let {
           closePopout: t
         } = e;
-        return (0, a.jsx)(x, {
+        return (0, a.jsx)(R, {
           closePopout: t,
           updatePopoutPosition: L,
           ...i
         })
       },
       position: "left",
-      shouldShow: g ? _ : A,
+      shouldShow: g ? _ : I,
       positionKey: o,
-      onRequestOpen: () => (0, m.trackInteraction)(T.ContentInventoryInteractionTypes.CARD_CLICK, C),
+      onRequestOpen: () => (0, m.trackInteraction)(A.ContentInventoryInteractionTypes.CARD_CLICK, C),
       onRequestClose: () => {
-        I(!1), M(!1)
+        T(!1), v(!1)
       },
       spacing: 8,
       children: (e, t) => {
@@ -150,7 +162,7 @@ t.default = l.memo(e => {
         } = t;
         return (0, a.jsx)(u.Clickable, {
           onClick: () => {
-            g && !_ && I(!0), M(e => !e)
+            g && !_ && T(!0), v(e => !e)
           },
           children: (0, a.jsx)(u.FocusRing, {
             offset: {
@@ -163,10 +175,10 @@ t.default = l.memo(e => {
               ...e,
               ...p,
               onMouseEnter: () => {
-                N(C)
+                x(C)
               },
-              onContextMenu: R,
-              children: (0, a.jsx)(v, {
+              onContextMenu: N,
+              children: (0, a.jsx)(M, {
                 ...i,
                 selected: n
               })
