@@ -63,15 +63,15 @@ function C(e, t) {
               }(e.lastSpoke)).concat((0, i.default)(e.userNick, e.user))
           }
         })(e, n)),
-        [l, o] = (0, s.partition)(a, c.isStreamParticipant),
-        d = o.findIndex(E),
-        f = null; - 1 !== d && (f = o[d], o.splice(d, 1));
+        [l, o] = (0, s.partition)(a, c.isUserParticipant),
+        d = l.findIndex(E),
+        f = null; - 1 !== d && (f = l[d], l.splice(d, 1));
       let h = null != f ? e - m - 8 : e,
         C = Math.max(0, Math.min(Math.floor((h - 8) / 132), 12, t.length)),
         g = Math.min((h - 8) / C - 8, m),
-        S = Math.max(0, C - l.length),
-        _ = l.slice(0, C),
-        T = o.slice(0, S),
+        S = Math.max(0, C - o.length),
+        _ = o.slice(0, C),
+        T = l.slice(0, S),
         I = Array(S);
       if (S > 0) {
         let e = [];
