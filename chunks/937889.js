@@ -65,10 +65,12 @@ function _(e) {
   }
 }
 
-function c(e, t) {
+function c(e, t, n) {
   return {
     hasSpoilerEmbeds: !1,
-    content: r.default.reactParserFor(a.default.getDefaultRules(t))(e.content, !1, {})
+    content: r.default.reactParserFor(a.default.getDefaultRules(t))(e.content, !1, null != n ? {
+      changeLog: n
+    } : {})
   }
 }
 

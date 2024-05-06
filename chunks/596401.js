@@ -12,7 +12,11 @@ n.r(t), n.d(t, {
   },
   ChangelogPlatforms: function() {
     return i
+  },
+  SYSTEM_UPDATES_USER_ID: function() {
+    return c
   }
 });
-let _ = "CHANGELOG_MODAL";
+let _ = "CHANGELOG_MODAL",
+  c = "1232523165893132288";
 (o = i || (i = {}))[o.DESKTOP = 0] = "DESKTOP", o[o.MOBILE = 1] = "MOBILE", (l = r || (r = {}))[l.YOUTUBE_VIDEO_ID = 0] = "YOUTUBE_VIDEO_ID", l[l.IMAGE = 1] = "IMAGE", (u = a || (a = {}))[u.NOT_LOADED = 0] = "NOT_LOADED", u[u.LOADED_SUCCESS = 1] = "LOADED_SUCCESS", u[u.LOADED_FAILURE = 2] = "LOADED_FAILURE", (d = s || (s = {})).SPECIAL = "special", d.STANDARD = "standard"

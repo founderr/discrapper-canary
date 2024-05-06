@@ -27,7 +27,9 @@ function u(e, t) {
   return i.useMemo(() => null != e.customRenderedContent ? e.customRenderedContent : e.isUnsupported ? {
     content: o.default.Messages.MESSAGE_UNSUPPORTED,
     hasSpoilerEmbeds: !1
-  } : e.isCommandType() && 0 === e.content.length || e.hasFlag(s.MessageFlags.LOADING) ? (0, a.default)(e) : e.type === s.MessageTypes.CHANGELOG ? (0, r.renderChangelogMessageMarkup)(e, l) : (0, r.default)(e, {
+  } : e.isCommandType() && 0 === e.content.length || e.hasFlag(s.MessageFlags.LOADING) ? (0, a.default)(e) : e.type === s.MessageTypes.CHANGELOG ? (0, r.renderChangelogMessageMarkup)(e, l, {
+    track: (e, t) => {}
+  }) : (0, r.default)(e, {
     hideSimpleEmbedContent: n,
     formatInline: u,
     noStyleAndInteraction: d,

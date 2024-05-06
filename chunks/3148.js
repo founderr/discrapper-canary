@@ -55,11 +55,12 @@ function c(e) {
     author: I,
     flags: T,
     nonce: f,
-    poll: S
-  } = e, h = [];
+    poll: S,
+    changelogId: h
+  } = e, A = [];
   if (l === u.MessageTypes.REPLY && (r()(null != c, "Replies must have a message reference"), null == E || E.replied_user)) {
     let e = a.default.getMessageByReference(c);
-    (null == e ? void 0 : e.state) === a.ReferencedMessageState.LOADED && h.push(_(e.message.author))
+    (null == e ? void 0 : e.state) === a.ReferencedMessageState.LOADED && A.push(_(e.message.author))
   }
   return null == I && (I = o.default.getCurrentUser()), I instanceof s.default && (I = _(I)), r()(null != I, "createMessage: author cannot be undefined"), {
     id: null != f ? f : d(),
@@ -70,7 +71,7 @@ function c(e) {
     attachments: [],
     embeds: [],
     pinned: !1,
-    mentions: h,
+    mentions: A,
     mention_channels: [],
     mention_roles: [],
     mention_everyone: !1,
@@ -80,7 +81,8 @@ function c(e) {
     message_reference: c,
     flags: T,
     nonce: f,
-    poll: S
+    poll: S,
+    changelog_id: h
   }
 }
 
