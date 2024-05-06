@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return _
+    return y
   }
 }), a("47120");
 var l = a("735250"),
@@ -16,63 +16,68 @@ var l = a("735250"),
   f = a("906732"),
   m = a("1585"),
   C = a("624377"),
-  p = a("530618"),
-  h = a("372654"),
+  p = a("372654"),
+  h = a("715627"),
   E = a("300284"),
   g = a("642619"),
   x = a("563132"),
-  S = a("333867"),
-  b = a("329067"),
+  b = a("333867"),
+  S = a("329067"),
   T = a("981631"),
   L = a("302800"),
   v = a("689938"),
   I = a("777374");
-let N = e => {
-  let {
-    children: t,
-    ...a
-  } = e;
-  return (0, l.jsx)(o.Button, {
-    fullWidth: !0,
-    look: o.Button.Looks.FILLED,
-    ...a,
-    children: t
-  })
-};
+let N = {
+    xMin: -50,
+    xMax: 50,
+    yMin: -100,
+    yMax: 0
+  },
+  _ = e => {
+    let {
+      children: t,
+      ...a
+    } = e;
+    return (0, l.jsx)(o.Button, {
+      fullWidth: !0,
+      look: o.Button.Looks.FILLED,
+      ...a,
+      children: t
+    })
+  };
 
-function _(e) {
+function y(e) {
   let {
     product: t,
     paymentSource: a,
-    onPurchaseComplete: _,
-    onUse: y,
-    onError: O,
-    onReviewPurchase: k,
-    confettiCanvas: R = null
-  } = e, A = (0, r.v4)(), j = s.useRef(null), [P] = t.items, {
-    analyticsLocations: B
+    onPurchaseComplete: y,
+    onUse: O,
+    onError: k,
+    onReviewPurchase: R,
+    confettiCanvas: A = null
+  } = e, j = (0, r.v4)(), P = s.useRef(null), [B] = t.items, {
+    analyticsLocations: D
   } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
-    confettiColors: D,
     buttonColors: F
   } = (0, C.default)(t.styles), M = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), w = (0, L.getCustomConfettiDisplayOptions)(t.skuId), [H, U] = s.useState(!1), [W, G] = s.useState(!1), V = null != F ? {
-    background: (0, h.getBackgroundGradient)(F, 90),
+    background: (0, p.getBackgroundGradient)(F, 90),
     color: F.text.toHslString()
   } : void 0, z = (0, E.default)({
-    analyticsLocations: B
+    analyticsLocations: D
   }), K = {
     onPurchaseComplete: () => {
-      U(!0), _()
+      U(!0), y()
     },
     onError: e => {
-      O(e), G(!0)
+      k(e), G(!0)
     },
-    onReviewPurchase: k,
+    onReviewPurchase: R,
     paymentSource: a,
     skuId: t.skuId,
-    analyticsLocations: B
+    analyticsLocations: D
   };
   return (0, l.jsxs)("div", {
-    ref: j,
+    ref: P,
     className: I.container,
     children: [W && (0, l.jsxs)("div", {
       className: I.cardDetails,
@@ -89,10 +94,10 @@ function _(e) {
         })
       }), (0, l.jsx)(o.Button, {
         onClick: () => {
-          k(), (0, S.default)({
+          R(), (0, b.default)({
             skuId: t.skuId,
-            analyticsLocations: B,
-            returnRef: j
+            analyticsLocations: D,
+            returnRef: P
           })
         },
         children: "Review Purchase"
@@ -110,18 +115,18 @@ function _(e) {
           variant: "text-xs/normal",
           children: "This decoration is now part of your collection and can be used anytime!"
         })
-      }), (0, l.jsx)(N, {
+      }), (0, l.jsx)(_, {
         style: V,
         onClick: () => {
-          if (y(), (0, u.popLayer)(), z(), (null == P ? void 0 : P.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
+          if (O(), (0, u.popLayer)(), z(), (null == B ? void 0 : B.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
             (0, m.openAvatarDecorationModal)({
-              initialSelectedDecoration: P,
-              analyticsLocations: B
+              initialSelectedDecoration: B,
+              analyticsLocations: D
             });
             return
-          }(null == P ? void 0 : P.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
-            initialSelectedEffectId: P.id,
-            analyticsLocations: B
+          }(null == B ? void 0 : B.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
+            initialSelectedEffectId: B.id,
+            analyticsLocations: D
           })
         },
         children: v.default.Messages.COLLECTIBLES_USE_NOW
@@ -133,22 +138,28 @@ function _(e) {
         className: I.productName,
         children: t.name
       }), (0, l.jsx)(x.PaymentContextProvider, {
-        loadId: A,
+        loadId: j,
         stepConfigs: [],
         applicationId: T.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
         isGift: !1,
         activeSubscription: null,
         purchaseType: T.PurchaseTypes.ONE_TIME,
-        children: (0, l.jsx)(b.default, {
+        children: (0, l.jsx)(S.default, {
           ...K
         })
       })]
-    })), !W && H && !(null != w) && !M && (0, l.jsx)(p.default, {
-      confettiTarget: j.current,
-      confettiCanvas: R,
-      sprites: (0, h.getConfettiSprites)(t.categorySkuId),
-      colors: null == D ? void 0 : D.map(e => e.toHexString())
+    })), !W && H && !(null != w) && !M && (0, l.jsx)(h.default, {
+      confettiTarget: P.current,
+      customConfettiCanvas: A,
+      speedValues: N,
+      numBursts: 3,
+      particlesPerBurst: 50,
+      offsetXPercentageMax: 100,
+      offsetXPercentageMin: 0,
+      offsetYPercentageMax: 100,
+      offsetYPercentageMin: 0,
+      dragCoefficientValue: 1e-4
     })]
   })
 }
