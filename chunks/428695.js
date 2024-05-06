@@ -29,7 +29,8 @@ t.default = function(e) {
     onClick: A,
     cta: N,
     ctaColor: v,
-    centerText: R
+    centerText: R,
+    className: L
   } = e;
   s.useEffect(() => {
     _(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -37,8 +38,8 @@ t.default = function(e) {
       guild_id: t.id
     })
   }, [t.id, C]);
-  let L = null;
-  "function" == typeof N ? L = N() : null != N && (L = (0, a.jsx)(o.Button, {
+  let O = null;
+  "function" == typeof N ? O = N() : null != N && (O = (0, a.jsx)(o.Button, {
     className: h.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
@@ -52,8 +53,8 @@ t.default = function(e) {
     color: v,
     children: N
   }));
-  let O = null;
-  "function" == typeof n ? O = n() : null != n && (O = (0, a.jsx)(o.Text, {
+  let M = null;
+  "function" == typeof n ? M = n() : null != n && (M = (0, a.jsx)(o.Text, {
     variant: "text-md/medium",
     color: "header-primary",
     className: i()(h.title, {
@@ -63,9 +64,18 @@ t.default = function(e) {
     }),
     children: n
   }));
-  let M = null != S ? "".concat(S, "px") : "16px";
+  let P = null;
+  "function" == typeof l ? P = l() : null != l && (P = (0, a.jsx)(o.Text, {
+    className: i()({
+      [h.center]: R
+    }),
+    variant: "text-sm/normal",
+    color: "text-muted",
+    children: l
+  }));
+  let y = null != S ? "".concat(S, "px") : "16px";
   return (0, a.jsxs)("div", {
-    className: h.container,
+    className: i()(h.container, L),
     children: [!0 === T ? null : (0, a.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
@@ -81,8 +91,8 @@ t.default = function(e) {
       className: h.imageContainer,
       style: {
         marginTop: "".concat(p, "px"),
-        marginLeft: M,
-        marginRight: M
+        marginLeft: y,
+        marginRight: y
       },
       children: (0, a.jsx)("img", {
         className: h.image,
@@ -92,14 +102,7 @@ t.default = function(e) {
       })
     }), (0, a.jsxs)("div", {
       className: h.message,
-      children: [O, (0, a.jsx)(o.Text, {
-        className: i()({
-          [h.center]: R
-        }),
-        variant: "text-sm/normal",
-        color: "text-muted",
-        children: l
-      }), L]
+      children: [M, P, O]
     })]
   })
 }

@@ -47,5 +47,8 @@ let f = "lastHiddenChannelNotice",
   }, {
     type: c.ChannelNoticeTypes.LINKED_ROLES_ADMIN,
     dismissibleContentType: a.DismissibleContent.LINKED_ROLE_ADMIN_GUILD
+  }, {
+    type: c.ChannelNoticeTypes.CLAN_ADMIN_UPSELL,
+    dismissibleContentType: a.DismissibleContent.CHANNEL_LIST_CLAN_ADMIN_UPSELL
   }],
   h = E.map(e => e.store).filter(d.isNotNullish)
