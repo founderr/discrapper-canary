@@ -33,81 +33,80 @@ function v(e) {
   var t;
   let {
     application: n,
-    activityInstance: v,
-    channelId: O,
-    guildId: x
-  } = e, [L, D] = a.useState(!1), {
-    analyticsLocations: P
-  } = (0, m.default)(_.default.ACTIVITY_INSTANCE_EMBED), y = (0, r.useAnalyticsContext)(), U = (0, f.default)(), j = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(O)), b = (null == j ? void 0 : null === (t = j.isThread) || void 0 === t ? void 0 : t.call(j)) ? null == j ? void 0 : j.parent_id : O, B = (0, l.useStateFromStores)([I.default], () => I.default.getId()), {
-    embeddedActivity: G,
-    currentEmbeddedActivity: F
+    channelId: v,
+    guildId: O
+  } = e, [x, L] = a.useState(!1), {
+    analyticsLocations: D
+  } = (0, m.default)(_.default.ACTIVITY_INSTANCE_EMBED), P = (0, r.useAnalyticsContext)(), y = (0, f.default)(), U = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(v)), j = (null == U ? void 0 : null === (t = U.isThread) || void 0 === t ? void 0 : t.call(U)) ? null == U ? void 0 : U.parent_id : v, b = (0, l.useStateFromStores)([I.default], () => I.default.getId()), {
+    embeddedActivity: B,
+    currentEmbeddedActivity: G
   } = (0, l.useStateFromStoresObject)([o.default], () => ({
-    embeddedActivity: o.default.getEmbeddedActivitiesForChannel(null != b ? b : "").find(e => e.launchId === v.id),
+    embeddedActivity: o.default.getEmbeddedActivitiesForChannel(null != j ? j : "").find(e => e.applicationId === n.id),
     currentEmbeddedActivity: o.default.getCurrentEmbeddedActivity()
-  })), k = (0, l.useStateFromStoresArray)([N.default], () => {
+  })), F = (0, l.useStateFromStoresArray)([N.default], () => {
     var e;
-    return Array.from(null !== (e = null == G ? void 0 : G.userIds) && void 0 !== e ? e : []).map(e => N.default.getUser(e)).filter(C.isNotNullish)
-  }), w = (0, l.useStateFromStores)([h.default], () => {
+    return Array.from(null !== (e = null == B ? void 0 : B.userIds) && void 0 !== e ? e : []).map(e => N.default.getUser(e)).filter(C.isNotNullish)
+  }), k = (0, l.useStateFromStores)([h.default], () => {
     var e;
-    let t = null == G ? void 0 : G.userIds.values().next().value;
+    let t = null == B ? void 0 : B.userIds.values().next().value;
     return null == t ? null : null === (e = h.default.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details
-  }), H = a.useMemo(() => {
+  }), w = a.useMemo(() => {
     let e = new T.default(n);
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = g.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
-  }, [n]), V = (0, c.useEmbeddedActivityJoinability)({
-    userId: B,
-    channelId: O,
-    application: H
-  }), Y = null == G, K = (0, A.useJoinOrStartButtonState)({
-    embeddedActivity: G,
-    joinability: V,
-    currentEmbeddedActivity: F,
-    channel: j
-  }), W = async () => {
-    D(!0);
+  }, [n]), H = (0, c.useEmbeddedActivityJoinability)({
+    userId: b,
+    channelId: v,
+    application: w
+  }), V = null == B, Y = (0, A.useJoinOrStartButtonState)({
+    embeddedActivity: B,
+    joinability: H,
+    currentEmbeddedActivity: G,
+    channel: U
+  }), K = async () => {
+    L(!0);
     try {
-      Y ? await (0, d.default)({
+      V ? await (0, d.default)({
         targetApplicationId: n.id,
-        currentEmbeddedApplication: U,
-        channelId: O,
-        guildId: x,
-        locationObject: y.location,
+        currentEmbeddedApplication: y,
+        channelId: v,
+        guildId: O,
+        locationObject: P.location,
         embeddedActivitiesManager: E.default,
-        analyticsLocations: P
+        analyticsLocations: D
       }) : await (0, u.default)({
-        applicationId: G.applicationId,
-        currentEmbeddedApplication: U,
-        activityChannelId: O,
-        locationObject: y.location,
+        applicationId: B.applicationId,
+        currentEmbeddedApplication: y,
+        activityChannelId: v,
+        locationObject: P.location,
         embeddedActivitiesManager: E.default,
-        analyticsLocations: P
+        analyticsLocations: D
       })
     } finally {
-      D(!1)
+      L(!1)
     }
-  }, z = K.disabled ? M.default.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
+  }, W = Y.disabled ? M.default.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
   return (0, s.jsx)("div", {
     className: R.container,
     children: (0, s.jsxs)("div", {
       className: R.contentContainer,
       children: [(0, s.jsx)("div", {
         className: R.headerContainer,
-        children: Y ? (0, s.jsx)("div", {
+        children: V ? (0, s.jsx)("div", {
           className: R.__invalid_endedNote,
           children: (0, s.jsx)(i.Text, {
             variant: "text-md/medium",
-            children: z
+            children: W
           })
         }) : (0, s.jsx)(i.Text, {
           variant: "text-md/medium",
           lineClamp: 1,
           color: "text-normal",
-          children: null != w ? w : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
+          children: null != k ? k : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
         })
       }), (0, s.jsxs)("div", {
         className: R.footerContainer,
         children: [(0, s.jsx)(i.Tooltip, {
-          text: K.tooltip,
+          text: Y.tooltip,
           children: e => {
             let {
               onClick: t,
@@ -115,18 +114,18 @@ function v(e) {
             } = e;
             return (0, a.createElement)(i.Button, {
               ...n,
-              key: "".concat(K.isJoinAction),
+              key: "".concat(Y.isJoinAction),
               onClick: () => {
-                W(), null == t || t()
+                K(), null == t || t()
               },
-              color: K.isJoinAction ? i.ButtonColors.GREEN : i.ButtonColors.PRIMARY,
-              submitting: L,
-              disabled: K.disabled
-            }, K.text)
+              color: Y.isJoinAction ? i.ButtonColors.GREEN : i.ButtonColors.PRIMARY,
+              submitting: x,
+              disabled: Y.disabled
+            }, Y.text)
           }
-        }), !Y && (0, s.jsx)(S.default, {
-          guildId: x,
-          users: k,
+        }), !V && (0, s.jsx)(S.default, {
+          guildId: O,
+          users: F,
           max: 4,
           size: S.Sizes.SIZE_32
         })]
