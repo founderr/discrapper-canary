@@ -71,22 +71,27 @@ function A() {
       n(S.ClanDiscoveryMode.GAMES)
     }, [n]),
     i = null !== (e = (0, _.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
-    o = (0, a.jsx)("div", {
+    o = t.slice(0, 2),
+    u = t.length - 2,
+    c = (0, a.jsxs)("div", {
       className: T.gamesTooltip,
-      children: t.map(e => (0, a.jsx)(C.default, {
+      children: [o.map(e => (0, a.jsx)(C.default, {
         applicationId: e
-      }, e))
+      }, e)), u > 0 && (0, a.jsx)(C.default, {
+        applicationId: t[2],
+        remainingGame: u
+      })]
     }),
-    u = (0, a.jsx)(d.GameControllerIcon, {
+    f = (0, a.jsx)(d.GameControllerIcon, {
       className: T.filterPillIcon,
       color: "currentColor"
     });
   return (0, a.jsx)(g, {
-    icon: u,
+    icon: f,
     text: I.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
       count: t.length
     }),
-    tooltip: o,
+    tooltip: c,
     onClick: l,
     isActive: t.length > 0,
     ariaLabel: i,

@@ -10,52 +10,63 @@ var n = a("735250"),
   d = a("210753"),
   u = a("77498"),
   f = a("441674"),
-  m = a("111008");
+  m = a("689938"),
+  h = a("111008");
 t.default = function(e) {
   let {
     applicationId: t,
     imageContainerClassName: a,
     onClick: r,
-    selected: h
-  } = e, E = (0, o.useToken)(o.tokens.colors.WHITE), {
-    isFetching: T,
-    coverImageUrl: p
+    selected: E,
+    remainingGame: T = 0
+  } = e, p = (0, o.useToken)(o.tokens.colors.WHITE), {
+    isFetching: _,
+    coverImageUrl: C
   } = (0, d.useDetectableGameSupplementalData)(t, {
     coverImageHeight: 336,
     coverImageWidth: 252
-  }), _ = (0, c.useStateFromStores)([u.default], () => {
+  }), x = (0, c.useStateFromStores)([u.default], () => {
     var e, a;
     return null !== (a = null === (e = u.default.getGameById(t)) || void 0 === e ? void 0 : e.name) && void 0 !== a ? a : ""
-  }), C = i.useCallback(() => {
+  }), g = i.useCallback(() => {
     null == r || r(t)
-  }, [t, r]), g = i.useMemo(() => T ? null : null == p ? (0, n.jsx)("div", {
-    className: m.gameUnknownImage,
+  }, [t, r]), I = i.useMemo(() => _ ? null : null == C ? (0, n.jsx)("div", {
+    className: h.gameUnknownImage,
     children: (0, n.jsx)(l.UnknownGameIcon, {
       height: 32,
       width: 32
     })
   }) : (0, n.jsx)("img", {
-    className: m.gameImage,
-    alt: _,
-    src: p
-  }), [p, T, _]);
+    className: h.gameImage,
+    alt: x,
+    src: C
+  }), [C, _, x]);
   return (0, n.jsxs)("div", {
-    className: m.selectedGame,
+    className: h.selectedGame,
     children: [(0, n.jsxs)(o.Clickable, {
-      onClick: C,
-      className: s()(a, T ? m.gameImageLoading : void 0, m.gameImageBackground),
-      children: [h && (0, n.jsx)("div", {
-        className: m.checkBackground,
+      onClick: g,
+      className: s()(a, _ ? h.gameImageLoading : void 0, h.gameImageBackground),
+      children: [E && (0, n.jsx)("div", {
+        className: h.checkBackground,
         children: (0, n.jsx)(f.default, {
-          backgroundColor: E.hex(),
-          className: m.selectedGameCheck
+          backgroundColor: p.hex(),
+          className: h.selectedGameCheck
         })
-      }), g]
+      }), I, T > 0 && (0, n.jsx)("div", {
+        className: h.remainingGame,
+        children: (0, n.jsx)(o.Text, {
+          variant: "text-xs/normal",
+          color: "always-white",
+          children: m.default.Messages.COUNT_REMAINING.format({
+            count: T
+          })
+        })
+      })]
     }), (0, n.jsx)(o.Text, {
-      className: m.gameName,
+      className: h.gameName,
       variant: "text-xs/normal",
       color: "header-primary",
-      children: _
+      children: x
     })]
   })
 }

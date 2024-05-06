@@ -45632,6 +45632,18 @@ img.thumbnail__18ece {
     white-space: nowrap
 }
 
+.remainingGame__11ccc {
+    position: absolute;
+    background-color: var(--bg-backdrop);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
 .traitsContainer__01c4b {
     padding: 16px 12px;
     -o-border-image: linear-gradient(180deg, transparent 0%, var(--border-strong)100%)1;
