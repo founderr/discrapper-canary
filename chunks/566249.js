@@ -13,6 +13,8 @@ e.exports = {
   darkCardBackground: "darkCardBackground__38c63",
   description: "description__2ad50",
   detailsWrapper: "detailsWrapper__573b5",
+  fadeIn: "fadeIn__0cac8",
+  fadeInAvatarImg: "fadeInAvatarImg_e7e289",
   hoverUpsellContainer: "hoverUpsellContainer_bb7d22",
   innerBlur: "innerBlur__23958",
   innerHover: "innerHover__055b0",
