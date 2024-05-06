@@ -17,9 +17,11 @@ function l(e) {
     text: n,
     className: r,
     innerClassName: l,
-    ...u
+    tooltipClassName: u,
+    ...d
   } = e;
   return (0, i.jsx)(s.TooltipContainer, {
+    tooltipClassName: u,
     text: n,
     color: s.TooltipColors.NESTED,
     children: (0, i.jsx)(s.Button, {
@@ -30,7 +32,7 @@ function l(e) {
       size: s.Button.Sizes.NONE,
       grow: !1,
       "aria-label": n,
-      ...u,
+      ...d,
       children: (0, i.jsx)(t, {
         width: 16,
         height: 16,

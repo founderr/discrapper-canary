@@ -1,6 +1,7 @@
 "use strict";
 e.exports = {
-  noteClickable: "noteClickable__153b6",
-  noteText: "noteText__9421a",
-  noteTextArea: "noteTextArea__9e075"
+  button: "button__7b26d",
+  color: "color_df1d13",
+  tooltip: "tooltip__74218",
+  visible: "visible__95288"
 }
