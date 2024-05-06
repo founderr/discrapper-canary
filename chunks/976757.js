@@ -31,6 +31,7 @@ function s(e) {
     traits: e.search_terms,
     tag: e.tag,
     banner: e.banner,
+    bannerHash: e.banner_hash,
     badge: {
       badgeKind: e.badge,
       primaryColor: a(e.badge_color_primary, t.primary),

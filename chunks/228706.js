@@ -1,5 +1,6 @@
 "use strict";
 e.exports = {
+  bannerImage: "bannerImage_ded537",
   card: "card_d01b6d",
   cardBrandingFooter: "cardBrandingFooter__98c32",
   cardBrandingHeader: "cardBrandingHeader__1db3b",

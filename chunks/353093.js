@@ -6,6 +6,9 @@ n.r(t), n.d(t, {
   getClanBadgeUrl: function() {
     return _
   },
+  getClanBannerUrl: function() {
+    return c
+  },
   getUserClanData: function() {
     return s
   },
@@ -74,4 +77,12 @@ function _(e, t) {
     CDN_HOST: r
   } = window.GLOBAL_ENV;
   if (null != r) return "".concat(location.protocol, "//").concat(r, "/clan-badges/").concat(e, "/").concat(t, ".png?size=").concat(d[n])
+}
+
+function c(e, t) {
+  if (null == t) return;
+  let {
+    CDN_HOST: n
+  } = window.GLOBAL_ENV;
+  if (null != n) return "".concat(location.protocol, "//").concat(n, "/clan-banners/").concat(e, "/").concat(t, ".png?size=512")
 }
