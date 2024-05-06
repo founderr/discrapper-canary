@@ -118,7 +118,7 @@ function v(e) {
       let e = I.default.getViewerIds(o.id);
       return e.length > 0 ? e.map(e => T.default.getUser(e)).filter(h.isNotNullish) : L
     }
-    return o.type === m.ParticipantTypes.ACTIVITY ? o.participants.size > 0 ? Array.from(o.participants).map(e => T.default.getUser(e)).filter(h.isNotNullish) : L : L
+    return o.type === m.ParticipantTypes.ACTIVITY ? o.participants.length > 0 ? Array.from(o.participants).map(e => T.default.getUser(e.userId)).filter(h.isNotNullish) : L : L
   }, [o]), y = r.useCallback(() => {
     D.current.cancel(), v(!0)
   }, []), P = r.useCallback(() => {

@@ -74,11 +74,9 @@ function V(e) {
   if (!(null != A && d.default.canBasicChannel(m.BasicPermissions.CONNECT, A) || (null == A ? void 0 : A.type) === m.ChannelTypes.DM || (null == A ? void 0 : A.type) === m.ChannelTypes.GROUP_DM)) return;
   let N = I.map(e => e.userId),
     p = l.default.getId(),
-    O = l.default.getSessionId(),
-    v = null === (t = I.find(e => e.userId === p)) || void 0 === t ? void 0 : t.sessionId,
-    D = null == v,
-    M = R.get(o),
-    y = {
+    O = null === (t = I.find(e => e.userId === p)) || void 0 === t ? void 0 : t.sessionId,
+    v = R.get(o),
+    D = {
       analyticsActivitySessionId: null != S ? S : "",
       applicationId: o,
       channelId: a,
@@ -87,22 +85,23 @@ function V(e) {
       launchId: _,
       compositeInstanceId: c,
       url: h,
-      userIds: new Set(N)
+      userIds: new Set(N),
+      participants: I
     };
-  N.some(e => e === p) && null != M && (D || O === v) && R.set(M.applicationId, {
-    ...M,
-    ...y
-  }), null != M && a === M.channelId && !N.some(e => e === p) && Array.from(M.userIds).some(e => e === p) ? L.get(a) === o ? L.delete(a) : R.delete(o) : N.some(e => e === p) && (null == M || M.applicationId !== o || M.channelId !== a) && (v === l.default.getSessionId() && !D || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
+  N.some(e => e === p) && null != v && R.set(v.applicationId, {
+    ...v,
+    ...D
+  }), null != v && a === v.channelId && !N.some(e => e === p) && Array.from(v.userIds).some(e => e === p) ? L.get(a) === o ? L.delete(a) : R.delete(o) : N.some(e => e === p) && (null == v || v.applicationId !== o || v.channelId !== a) && (O === l.default.getSessionId() && null != O || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
     channelId: a,
     applicationId: o,
     launchId: _
   }), E.ComponentDispatch.dispatch(m.ComponentActions.OPEN_EMBEDDED_ACTIVITY, {
     channelId: a
   }));
-  let P = (null !== (n = g.get(a)) && void 0 !== n ? n : []).filter(e => e.applicationId !== o),
-    U = k(r),
-    b = (null !== (i = C.get(U)) && void 0 !== i ? i : []).filter(e => !(e.applicationId === o && e.channelId === a));
-  N.length > 0 && (P.push(y), b.push(y)), g.set(a, P), C.set(U, b)
+  let M = (null !== (n = g.get(a)) && void 0 !== n ? n : []).filter(e => e.applicationId !== o),
+    y = k(r),
+    P = (null !== (i = C.get(y)) && void 0 !== i ? i : []).filter(e => !(e.applicationId === o && e.channelId === a));
+  N.length > 0 && (M.push(D), P.push(D)), g.set(a, M), C.set(y, P)
 }
 
 function x(e) {

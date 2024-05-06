@@ -5,8 +5,8 @@ var a = n("735250"),
   s = n("120356"),
   i = n.n(s),
   r = n("112724"),
-  o = n("351248"),
-  u = n("314897"),
+  o = n("613611"),
+  u = n("351248"),
   d = n("285952"),
   c = n("585483"),
   f = n("340295"),
@@ -44,7 +44,7 @@ t.default = (0, r.default)(e => {
   l.useEffect(() => {
     c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
   }, [y, O]);
-  let F = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(u.default.getId())), [n, r]);
+  let F = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.some(e => (0, o.isActivityParticipantCurrentUserCurrentSession)(e))), [n, r]);
   if ((null == b ? void 0 : b.channelId) === N.id) return (0, a.jsx)(h.default, {
     height: O
   });
@@ -53,7 +53,7 @@ t.default = (0, r.default)(e => {
     participants: t,
     hasConnectPermission: v
   });
-  if (P === C.ChannelModes.VOICE) return (0, a.jsx)(o.default, {
+  if (P === C.ChannelModes.VOICE) return (0, a.jsx)(u.default, {
     guildId: N.guild_id,
     width: y,
     className: S.voiceCallWrapper,

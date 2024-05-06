@@ -125,14 +125,14 @@ class L {
   }
   _getParticipantsForEmbeddedActivities() {
     return this._getEmbeddedActivities().map((e, t) => {
-      var n, i;
+      var n, i, r;
       return {
         type: N.ParticipantTypes.ACTIVITY,
         id: e.applicationId,
         activityType: p.ActivityTypes.PLAYING,
         activityUrl: e.url,
-        participants: new Set(e.userIds),
-        guildId: null !== (i = null === (n = E.default.getChannel(this.channelId)) || void 0 === n ? void 0 : n.getGuildId()) && void 0 !== i ? i : null,
+        participants: [...null !== (i = e.participants) && void 0 !== i ? i : []],
+        guildId: null !== (r = null === (n = E.default.getChannel(this.channelId)) || void 0 === n ? void 0 : n.getGuildId()) && void 0 !== r ? r : null,
         sortKey: t.toString()
       }
     })
