@@ -54947,6 +54947,10 @@ div:has(>div>.modal__06f49) {
     bottom: -8px
 }
 
+.unreadMentionsFixedFooter_b9e41d {
+    bottom: 72px
+}
+
 .fixedDiscoveryIcon__04053 {
     color: var(--text-normal)
 }

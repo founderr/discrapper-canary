@@ -18,10 +18,10 @@ var i = n("735250"),
   I = n("785717"),
   T = n("318661"),
   f = n("502762"),
-  S = n("301984"),
-  h = n("94918"),
-  A = n("664794"),
-  m = n("980768"),
+  S = n("544989"),
+  h = n("301984"),
+  A = n("94918"),
+  m = n("664794"),
   N = n("171368"),
   p = n("958120"),
   O = n("215633"),
@@ -87,17 +87,17 @@ function v(e) {
           user: t,
           displayProfile: F,
           profileType: C.UserProfileTypes.BITE_SIZE,
-          children: [(0, i.jsxs)(m.default, {
+          children: [(0, i.jsxs)(S.default, {
             profileType: C.UserProfileTypes.BITE_SIZE,
-            isFaded: (null == F ? void 0 : F.profileEffectId) != null && !H,
-            children: [(0, i.jsx)(h.default, {
+            isHovering: H,
+            children: [(0, i.jsx)(A.default, {
               user: t,
               guildId: n,
               channelId: v,
               onClose: y
-            }), (0, i.jsx)(S.default, {
+            }), (0, i.jsx)(h.default, {
               user: t
-            }), (0, i.jsx)(A.default, {
+            }), (0, i.jsx)(m.default, {
               user: t,
               guildId: n,
               viewProfileItem: (0, i.jsx)(s.MenuItem, {
@@ -123,7 +123,6 @@ function v(e) {
             currentUser: B,
             displayProfile: F,
             guild: k,
-            isHovering: H,
             onOpenProfile: Y,
             channelId: v,
             onClose: y

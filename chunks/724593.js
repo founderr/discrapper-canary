@@ -1,55 +1,49 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return c
   }
 });
 var i = n("735250");
 n("470079");
-var r = n("120356"),
-  a = n.n(r),
-  s = n("10683"),
-  o = n("793080"),
-  l = n("481060"),
-  u = n("785717"),
-  d = n("702557"),
-  _ = n("537387"),
-  c = n("689938"),
-  E = n("742768");
+var r = n("10683"),
+  a = n("793080"),
+  s = n("481060"),
+  o = n("785717"),
+  l = n("702557"),
+  u = n("537387"),
+  d = n("689938"),
+  _ = n("742768");
 
-function I(e) {
+function c(e) {
   let {
     user: t,
-    isHovering: n,
-    onOpenProfile: r
+    onOpenProfile: n
   } = e, {
-    trackUserProfileAction: I
-  } = (0, u.useUserProfileAnalyticsContext)(), {
-    loading: T,
-    note: f
-  } = (0, d.default)(t.id), S = () => {
-    I({
+    trackUserProfileAction: c
+  } = (0, o.useUserProfileAnalyticsContext)(), {
+    note: E
+  } = (0, l.default)(t.id), I = () => {
+    c({
       action: "PRESS_ADD_NOTE"
-    }), r()
+    }), n()
   };
-  return T ? null : null == f || "" === f ? (0, i.jsx)(_.default, {
-    text: c.default.Messages.ADD_NOTE,
-    "aria-label": c.default.Messages.ADD_NOTE,
-    icon: o.PaperPlusIcon,
-    onClick: S,
-    color: E.color,
-    look: l.Button.Looks.BLANK,
-    className: a()(E.button, {
-      [E.visible]: n
-    })
-  }) : (0, i.jsx)(_.default, {
-    text: f,
-    "aria-label": f,
-    icon: s.PaperIcon,
-    onClick: S,
-    color: E.color,
-    look: l.Button.Looks.BLANK,
-    className: a()(E.button, E.visible),
-    tooltipClassName: E.tooltip
+  return null == E || "" === E ? (0, i.jsx)(u.default, {
+    text: d.default.Messages.ADD_NOTE,
+    "aria-label": d.default.Messages.ADD_NOTE,
+    icon: a.PaperPlusIcon,
+    onClick: I,
+    color: _.color,
+    look: s.Button.Looks.BLANK,
+    className: _.button
+  }) : (0, i.jsx)(u.default, {
+    text: E,
+    "aria-label": E,
+    icon: r.PaperIcon,
+    onClick: I,
+    color: _.color,
+    look: s.Button.Looks.BLANK,
+    className: _.button,
+    tooltipClassName: _.tooltip
   })
 }

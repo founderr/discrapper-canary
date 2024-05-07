@@ -9,20 +9,20 @@ n("470079");
 var r = n("120356"),
   a = n.n(r),
   s = n("228168"),
-  o = n("36108");
+  o = n("330690");
 
 function l(e) {
   let {
     profileType: t,
-    children: n,
-    isFaded: r
+    isHovering: n,
+    children: r
   } = e;
   return (0, i.jsx)("div", {
     className: a()(o.wrapper, {
       [o.biteSize]: t === s.UserProfileTypes.BITE_SIZE,
       [o.fullSize]: t === s.UserProfileTypes.FULL_SIZE,
-      [o.faded]: r
+      [o.hovering]: n
     }),
-    children: n
+    children: r
   })
 }

@@ -17,13 +17,13 @@ var l = s("735250"),
   S = s("785717"),
   m = s("318661"),
   I = s("502762"),
-  E = s("301984"),
-  v = s("94918"),
-  _ = s("664794"),
-  T = s("980768"),
+  E = s("544989"),
+  v = s("301984"),
+  _ = s("94918"),
+  T = s("664794"),
   x = s("806926"),
-  N = s("740021"),
-  A = s("228168"),
+  A = s("740021"),
+  N = s("228168"),
   U = s("981631"),
   g = s("689938"),
   C = s("750721");
@@ -84,20 +84,20 @@ function h(e) {
         children: (0, l.jsxs)(I.default, {
           user: t,
           displayProfile: H,
-          profileType: A.UserProfileTypes.FULL_SIZE,
+          profileType: N.UserProfileTypes.FULL_SIZE,
           ref: z,
-          children: [(0, l.jsxs)(T.default, {
-            profileType: A.UserProfileTypes.FULL_SIZE,
-            isFaded: (null == H ? void 0 : H.profileEffectId) != null && !W,
-            children: [(0, l.jsx)(v.default, {
+          children: [(0, l.jsxs)(E.default, {
+            profileType: N.UserProfileTypes.FULL_SIZE,
+            isHovering: W,
+            children: [(0, l.jsx)(_.default, {
               user: t,
               guildId: F,
               channelId: h,
               onClose: L
-            }), (0, l.jsx)(E.default, {
+            }), (0, l.jsx)(v.default, {
               user: t,
               friendToken: M
-            }), (0, l.jsx)(_.default, {
+            }), (0, l.jsx)(T.default, {
               user: t,
               guildId: F,
               viewProfileItem: (null == w ? void 0 : w.guildId) == null ? null : (null == H ? void 0 : H.guildId) != null ? (0, l.jsx)(n.MenuItem, {
@@ -126,7 +126,7 @@ function h(e) {
                 }
               })
             })]
-          }), (0, l.jsx)(N.default, {
+          }), (0, l.jsx)(A.default, {
             user: t,
             displayProfile: H,
             guildId: F,
