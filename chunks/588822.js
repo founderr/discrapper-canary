@@ -20,20 +20,21 @@ function _(e) {
     animateOnHover: a = !1,
     isHovering: _ = !1,
     lineClamp: c = 6,
-    setLineClamp: E = !0
-  } = e, I = r.useMemo(() => (0, l.parseBioReact)(t), [t]);
+    setLineClamp: E = !0,
+    textColor: I
+  } = e, T = r.useMemo(() => (0, l.parseBioReact)(t), [t]);
   return (0, i.jsx)("div", {
     className: s()(n, d.markup),
     children: (0, i.jsx)(o.Text, {
       variant: "text-sm/normal",
       lineClamp: E ? c : void 0,
-      color: "header-primary",
+      color: void 0 !== I ? I : void 0,
       children: (0, i.jsx)(u.MessagesInteractionContext.Provider, {
         value: {
           disableAnimations: a && !_,
           disableInteractions: !1
         },
-        children: I
+        children: T
       })
     })
   })

@@ -32,7 +32,8 @@ t.default = r.memo(function(e) {
       className: c.descriptionClamp,
       children: (0, i.jsx)(l.default, {
         userBio: E,
-        setLineClamp: !1
+        setLineClamp: !1,
+        textColor: "header-primary"
       })
     }), m && (0, i.jsx)(a.Clickable, {
       onClick: () => {
