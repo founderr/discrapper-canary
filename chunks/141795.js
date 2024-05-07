@@ -315,6 +315,7 @@ class g extends A.default {
       video_upload_quality: c.default.videoUploadQuality,
       data_saving_mode: c.default.dataSavingMode,
       low_quality_image_mode: c.default.lowQualityImageMode,
+      channel_id: this.channelId,
       connection_type: E.default.getType(),
       effective_connection_speed: E.default.getEffectiveConnectionSpeed(),
       service_provider: E.default.getServiceProvider()
@@ -347,6 +348,7 @@ class g extends A.default {
       source_media_height: this.uploadAnalytics.sourceMediaHeight,
       source_media_format: this.uploadAnalytics.sourceMediaFormat,
       source_video_bitrate: this.uploadAnalytics.sourceVideoBitrate,
+      channel_id: this.channelId,
       connection_type: E.default.getType(),
       effective_connection_speed: E.default.getEffectiveConnectionSpeed(),
       service_provider: E.default.getServiceProvider()

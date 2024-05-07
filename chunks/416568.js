@@ -277,7 +277,9 @@ function er(e) {
           ref: ec,
           isVisible: eg.isItemVisible,
           onJumpTo: eg.handleJumpToGuild,
-          className: ee.unreadMentionsIndicatorBottom,
+          className: i()(ee.unreadMentionsIndicatorBottom, {
+            [ee.unreadMentionsFixedFooter]: !n && eN
+          }),
           barClassName: ee.unreadMentionsBar
         })]
       })
