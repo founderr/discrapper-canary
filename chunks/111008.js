@@ -9,5 +9,6 @@ e.exports = {
   placeholderPulse: "placeholderPulse__8767a",
   remainingGame: "remainingGame__11ccc",
   selectedGame: "selectedGame_a69562",
-  selectedGameCheck: "selectedGameCheck_d9d855"
+  selectedGameCheck: "selectedGameCheck_d9d855",
+  selectedGameCheckLocked: "selectedGameCheckLocked_dc2cc2"
 }

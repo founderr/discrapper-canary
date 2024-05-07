@@ -80,7 +80,8 @@ t.default = e => {
             applicationId: e,
             onClick: e !== C ? N : void 0,
             imageContainerClassName: e !== C ? h.clickableGame : h.defaultGame,
-            selected: !0
+            selected: !0,
+            locked: e === C
           }, e))
         }), (0, a.jsx)("div", {
           className: h.divider

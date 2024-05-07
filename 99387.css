@@ -45626,6 +45626,10 @@ img.thumbnail__18ece {
     height: 24px
 }
 
+.selectedGameCheckLocked_dc2cc2 {
+    color: var(--icon-muted)
+}
+
 @keyframes placeholderPulse__8767a {
     0% {
         opacity: .3
@@ -45656,7 +45660,10 @@ img.thumbnail__18ece {
 .gameName_be13e2 {
     text-overflow: ellipsis;
     overflow: hidden;
-    white-space: nowrap
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 4px
 }
 
 .remainingGame__11ccc {

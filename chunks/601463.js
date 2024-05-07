@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return h
   }
 }), n("47120");
 var a = n("735250"),
@@ -10,19 +10,21 @@ var a = n("735250"),
   i = n("442837"),
   r = n("481060"),
   o = n("607070"),
-  u = n("620929"),
-  d = n("689938"),
-  c = n("156610");
+  u = n("63063"),
+  d = n("620929"),
+  c = n("981631"),
+  f = n("689938"),
+  E = n("156610");
 
-function f(e) {
+function h(e) {
   let {
     guildId: t,
     signed: n,
-    setSigned: f,
-    sidebarWidth: E,
-    windowWidth: h,
-    transition: _
-  } = e, C = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), m = s.useRef(null), S = s.useMemo(() => (h - E) / 2, [E, h]), [p, I, T] = (0, l.useSpring)(() => ({
+    setSigned: h,
+    sidebarWidth: _,
+    windowWidth: C,
+    transition: m
+  } = e, S = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = s.useRef(null), I = s.useMemo(() => (C - _) / 2, [_, C]), [T, g, A] = (0, l.useSpring)(() => ({
     to: [{
       transform: "translateX(-8px)"
     }, {
@@ -31,69 +33,72 @@ function f(e) {
     loop: !0
   }));
   s.useEffect(() => {
-    n && (T(), I({
+    n && (A(), g({
       to: {
         transform: "translateX(0px)"
       }
     }))
-  }, [I, n, T]);
-  let g = s.useCallback(() => {
-    var e;
-    null === (e = m.current) || void 0 === e || e.scrollIntoView({
-      behavior: "smooth"
-    }), null == f || f(!0)
-  }, [f]);
+  }, [g, n, A]);
+  let N = s.useCallback(() => {
+      var e;
+      null === (e = p.current) || void 0 === e || e.scrollIntoView({
+        behavior: "smooth"
+      }), null == h || h(!0)
+    }, [h]),
+    v = () => open(u.default.getArticleURL(c.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES));
   return (0, a.jsxs)("div", {
-    className: c.sidebarContent,
-    children: [_((e, t) => t && (0, a.jsx)(l.animated.div, {
-      className: c.sidebarLeftDecorationContainer,
+    className: E.sidebarContent,
+    children: [m((e, t) => t && (0, a.jsx)(l.animated.div, {
+      className: E.sidebarLeftDecorationContainer,
       style: {
         opacity: e.opacity,
         transform: e.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)")),
-        width: S
+        width: I
       },
       children: (0, a.jsxs)("div", {
-        className: c.sidebarLeftDecoration,
+        className: E.sidebarLeftDecoration,
         style: {
-          width: S
+          width: I
         },
         children: [(0, a.jsx)(r.Heading, {
           variant: "heading-xxl/medium",
-          children: d.default.Messages.CLAN_SETUP_SIGN_TITLE
+          children: f.default.Messages.CLAN_SETUP_SIGN_TITLE
         }), (0, a.jsx)(r.Text, {
           variant: "text-md/normal",
           color: "text-muted",
-          children: d.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
+          children: f.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
         })]
       })
-    })), _((e, t) => t && (0, a.jsx)(l.animated.div, {
-      className: c.sidebarRightDecorationContainer,
+    })), m((e, t) => t && (0, a.jsx)(l.animated.div, {
+      className: E.sidebarRightDecorationContainer,
       style: {
         opacity: e.opacity,
         transform: e.opacity.to([0, 1], [-40, 0]).to(e => "translateX(".concat(e, "px)")),
-        width: S
+        width: I
       },
       children: (0, a.jsxs)("div", {
-        className: c.sidebarRightDecoration,
+        className: E.sidebarRightDecoration,
         children: [(0, a.jsx)(l.animated.div, {
-          style: C ? void 0 : p,
+          style: S ? void 0 : T,
           children: (0, a.jsx)(r.Button, {
-            className: c.signButton,
+            className: E.signButton,
             size: r.Button.Sizes.SMALL,
-            onClick: g,
-            children: d.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
+            onClick: N,
+            children: f.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
           })
         }), (0, a.jsx)(r.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: d.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
+          children: f.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_AGREEMENT.format({
+            onGuidelinesClick: v
+          })
         })]
       })
-    })), (0, a.jsx)(u.default, {
+    })), (0, a.jsx)(d.default, {
       guildId: t,
       signed: n,
-      setSigned: f,
-      signRef: m
+      setSigned: h,
+      signRef: p
     })]
   })
 }
