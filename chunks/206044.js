@@ -224,7 +224,9 @@ t.default = e => {
                   variant: "lg" === I ? "heading-xxl/bold" : "sm" === I ? "heading-xl/bold" : "heading-lg/bold",
                   className: x.heading,
                   ...e,
-                  children: u.config.messages.questName
+                  children: O.default.Messages.QUEST.format({
+                    questName: u.config.messages.questName
+                  })
                 })
               }), (0, s.jsx)(f.Text, {
                 variant: "text-xs/normal",
