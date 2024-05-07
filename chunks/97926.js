@@ -82,7 +82,12 @@ t.default = () => {
       questIds: C.filter(e => !_(I.get(e)))
     }] : [];
     return A.current = e, e
-  }, [g, C, I]), x = n.useCallback(e => {
+  }, [g, C, I]), x = O.every(e => {
+    let {
+      questIds: t
+    } = e;
+    return t.length > 0
+  }), R = n.useCallback(e => {
     let {
       questIds: t,
       location: s
@@ -92,11 +97,12 @@ t.default = () => {
         let t = I.get(e);
         return null == t ? null : (0, a.jsx)(S.QuestsCard, {
           quest: t,
-          location: s
+          location: s,
+          initiallyExpanded: !x
         }, t.id)
       })
     })
-  }, [I]);
+  }, [x, I]);
   return t ? (0, a.jsx)(i.Spinner, {
     className: m.spinner
   }) : 0 === C.length ? null : (0, a.jsx)(i.FormSection, {
@@ -128,17 +134,17 @@ t.default = () => {
         } = e;
         return 0 === s.length ? null : (0, a.jsxs)("section", {
           className: m.questsListContainer,
-          children: [(0, a.jsx)(i.Text, {
+          children: [x && (0, a.jsx)(i.Text, {
             variant: "text-xs/semibold",
             color: "header-secondary",
             className: m.sectionHeader,
             children: n
-          }), (0, a.jsx)(x, {
+          }), (0, a.jsx)(R, {
             questIds: s,
             location: t
           })]
         }, t)
-      }) : (0, a.jsx)(x, {
+      }) : (0, a.jsx)(R, {
         questIds: C,
         location: u.QuestContent.GIFT_INVENTORY_FOR_YOU
       })]
