@@ -1,51 +1,117 @@
 "use strict";
 n.r(t), n.d(t, {
+  getProgressStepAnalyticsName: function() {
+    return I
+  },
   trackClanApplyToJoinViewed: function() {
-    return l
+    return u
   },
   trackClanProfileViewed: function() {
-    return o
+    return l
+  },
+  trackConvertStepViewed: function() {
+    return d
+  },
+  trackConvertSuccessModalConfirm: function() {
+    return E
+  },
+  trackConvertSuccessModalViewed: function() {
+    return c
+  },
+  trackSettingsViewed: function() {
+    return _
   }
 });
 var i = n("314897"),
   r = n("271383"),
   a = n("626135"),
-  s = n("981631");
+  s = n("308083"),
+  o = n("981631");
 
-function o(e) {
+function l(e) {
   let {
     guildId: t,
     hasJoinRequest: n,
-    source: o,
+    source: s,
     messageId: l,
     tagUserId: u
   } = e, d = i.default.getId(), _ = r.default.getMember(t, i.default.getId()), c = (null == _ ? void 0 : _.joinedAt) != null;
-  a.default.track(s.AnalyticEvents.CLAN_PROFILE_VIEWED, {
+  a.default.track(o.AnalyticEvents.CLAN_PROFILE_VIEWED, {
     guild_id: t,
     is_member: c,
     has_join_request: n,
-    source: o,
-    location: o,
+    source: s,
+    location: s,
     viewing_user_id: d,
     tag_owner_user_id: u,
     message_id: l
   })
 }
 
-function l(e) {
+function u(e) {
   let {
     guildId: t,
     source: n,
     location: r,
-    messageId: o,
+    messageId: s,
     tagUserId: l
   } = e, u = i.default.getId();
-  a.default.track(s.AnalyticEvents.CLAN_APPLY_TO_JOIN_VIEWED, {
+  a.default.track(o.AnalyticEvents.CLAN_APPLY_TO_JOIN_VIEWED, {
     guild_id: t,
     source: n,
     location: r,
     viewing_user_id: u,
     tag_owner_user_id: l,
-    message_id: o
+    message_id: s
   })
+}
+
+function d(e, t) {
+  a.default.track(o.AnalyticEvents.CLAN_CONVERT_STEP_VIEWED, {
+    guild_id: e,
+    step: t
+  })
+}
+
+function _(e, t) {
+  a.default.track(o.AnalyticEvents.CLAN_SETTINGS_VIEWED, {
+    guild_id: e,
+    page: t
+  })
+}
+
+function c(e) {
+  a.default.track(o.AnalyticEvents.CLAN_CONVERT_SUCCESS_MODAL_VIEWED, {
+    guild_id: e
+  })
+}
+
+function E(e, t) {
+  a.default.track(o.AnalyticEvents.CLAN_CONVERT_SUCCESS_MODAL_CONFIRM, {
+    guild_id: e,
+    enable_tag: t
+  })
+}
+
+function I(e) {
+  switch (e) {
+    case s.ClanSetupSteps.GAMES:
+      return "games";
+    case s.ClanSetupSteps.PLAYSTYLE:
+      return "playstyle";
+    case s.ClanSetupSteps.UTILITY_TRAITS:
+      return "utility_traits";
+    case s.ClanSetupSteps.INTERESTS:
+      return "interests";
+    case s.ClanSetupSteps.DESCRIPTION:
+      return "description";
+    case s.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
+      return "tag";
+    case s.ClanSetupSteps.CUSTOMIZE_BANNER:
+      return "banner";
+    case s.ClanSetupSteps.MEMBER_APPLICATION:
+      return "member_application";
+    default:
+      return e
+  }
 }
