@@ -108,7 +108,7 @@ function O() {
 
 function R(e) {
   let t = i;
-  null != e && (t = c[e], delete c[e], delete E[e]), t === i && (i = null, r = null), f()
+  return null != e && (t = c[e], delete c[e], delete E[e]), t === i && (i = null, r = null), f(), null != t
 }
 
 function C() {

@@ -118,7 +118,7 @@ function e_(e, t) {
 }
 
 function ec() {
-  eo("removeAuthToken called."), _.removeToken()
+  return eo("removeAuthToken called."), _.removeToken()
 }
 
 function eE() {
@@ -128,7 +128,10 @@ function eE() {
 }
 
 function eI(e) {
-  eo("handleLogout called."), ec(), ed(), !(null == e ? void 0 : e.isSwitchingAccount) && el(), E.default.PersistedStore.clearAll({
+  var t;
+  eo("handleLogout called.");
+  let n = ec();
+  !(null !== (t = null == e ? void 0 : e.isSwitchingAccount) && void 0 !== t && t) && (n && ed(), el()), E.default.PersistedStore.clearAll({
     omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
     type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
   }), v.default.clearAll(), m.clear(), g.default.clearUser(), T.Storage.remove(G), w = null, Y = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, j = D.RegistrationStates.NONE, z = "", J = "", X = null, Z = !1, $ = !1, ee = !1, et = {}, en = {}
