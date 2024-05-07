@@ -25,22 +25,23 @@ function u(e) {
     height: 16,
     color: "currentColor"
   });
-  return r ? (0, i.jsx)(o.Tooltip, {
+  return r ? (0, i.jsx)(o.TooltipContainer, {
     text: n,
     color: o.TooltipColors.NESTED,
-    children: e => (0, i.jsx)(s.Button, {
+    "aria-label": _["aria-label"],
+    children: (0, i.jsx)(s.Button, {
       className: a()(l.compactButton, u),
       innerClassName: a()(l.compactButtonInner, d),
       color: a()(s.ButtonColors.PRIMARY, l.color),
       look: s.Button.Looks.FILLED,
       size: s.Button.Sizes.NONE,
       grow: !1,
-      ...e,
       ..._,
       children: c
     })
   }) : (0, i.jsxs)(s.Button, {
-    innerClassName: a()(l.button, u),
+    className: u,
+    innerClassName: a()(l.button, d),
     color: a()(s.ButtonColors.PRIMARY, l.color),
     look: s.Button.Looks.FILLED,
     size: s.Button.Sizes.MEDIUM,
