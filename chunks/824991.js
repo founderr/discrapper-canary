@@ -23,7 +23,7 @@ function _(e) {
     markAsDismissed: n,
     defaultGameId: _
   } = e, C = s.useCallback(() => {
-    (0, o.openFullScreenLayer)(e => {
+    n(f.ContentDismissActionType.TAKE_ACTION), (0, o.openFullScreenLayer)(e => {
       let {
         closeLayer: n
       } = e;
@@ -35,7 +35,7 @@ function _(e) {
     }, {
       layerKey: d.CLAN_SETUP_MODAL_LAYER_KEY
     })
-  }, [_, t.id]), m = s.useCallback(() => (0, a.jsx)(i.Text, {
+  }, [_, t.id, n]), m = s.useCallback(() => (0, a.jsx)(i.Text, {
     variant: "text-xs/normal",
     color: "text-muted",
     className: h.message,
