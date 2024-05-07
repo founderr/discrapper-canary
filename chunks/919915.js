@@ -11,6 +11,7 @@ e.exports = {
   scrollContentContainer: "scrollContentContainer__0a56a",
   signButton: "signButton__517bc",
   signCarot: "signCarot__549a7",
+  signCarotCustomColors: "signCarotCustomColors__1032b",
   signContainerButton: "signContainerButton__9abd2",
   signHintAnimationContainer: "signHintAnimationContainer_d7a8a7",
   signHintContainer: "signHintContainer_e7af42",
