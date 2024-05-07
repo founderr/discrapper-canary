@@ -1,108 +1,108 @@
 "use strict";
 n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+var l = n("735250"),
+  a = n("470079"),
+  s = n("120356"),
+  i = n.n(s),
   r = n("392711"),
   o = n("481060"),
   u = n("367907"),
   d = n("465670"),
   c = n("626135"),
   f = n("981631"),
-  E = n("689938"),
-  h = n("613682");
-let _ = (0, r.debounce)(u.default.trackWithMetadata, 500);
+  h = n("689938"),
+  p = n("613682");
+let m = (0, r.debounce)(u.default.trackWithMetadata, 500);
 t.default = function(e) {
   let {
     guild: t,
     title: n,
-    message: l,
+    message: s,
     image: r,
     type: C,
-    imageStyles: m,
-    imageMarginX: S,
-    imageMarginTop: p,
-    trackingSource: I,
-    undismissable: g,
-    onDismissed: T,
-    onClick: A,
-    cta: N,
-    ctaColor: v,
-    centerText: R,
-    className: L
+    imageStyles: g,
+    imageMarginX: E,
+    imageMarginTop: S,
+    trackingSource: _,
+    undismissable: I,
+    onDismissed: N,
+    onClick: T,
+    cta: A,
+    ctaColor: L,
+    centerText: v,
+    className: x
   } = e;
-  s.useEffect(() => {
-    _(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+  a.useEffect(() => {
+    m(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
       notice_type: C,
       guild_id: t.id
     })
   }, [t.id, C]);
-  let O = null;
-  "function" == typeof N ? O = N() : null != N && (O = (0, a.jsx)(o.Button, {
-    className: h.button,
+  let R = null;
+  "function" == typeof A ? R = A() : null != A && (R = (0, l.jsx)(o.Button, {
+    className: p.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
       null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-        source: I,
+        source: _,
         guild_id: t.id,
         notice_type: C
-      }), null == A || A()
+      }), null == T || T()
     },
     fullWidth: !0,
-    color: v,
-    children: N
+    color: L,
+    children: A
   }));
   let M = null;
-  "function" == typeof n ? M = n() : null != n && (M = (0, a.jsx)(o.Text, {
+  "function" == typeof n ? M = n() : null != n && (M = (0, l.jsx)(o.Text, {
     variant: "text-md/medium",
     color: "header-primary",
-    className: i()(h.title, {
-      [h.noImageTitle]: null == r
+    className: i()(p.title, {
+      [p.noImageTitle]: null == r
     }, {
-      [h.center]: R
+      [p.center]: v
     }),
     children: n
   }));
-  let P = null;
-  "function" == typeof l ? P = l() : null != l && (P = (0, a.jsx)(o.Text, {
+  let y = null;
+  "function" == typeof s ? y = s() : null != s && (y = (0, l.jsx)(o.Text, {
     className: i()({
-      [h.center]: R
+      [p.center]: v
     }),
     variant: "text-sm/normal",
     color: "text-muted",
-    children: l
+    children: s
   }));
-  let y = null != S ? "".concat(S, "px") : "16px";
-  return (0, a.jsxs)("div", {
-    className: i()(h.container, L),
-    children: [!0 === g ? null : (0, a.jsx)(o.Clickable, {
+  let O = null != E ? "".concat(E, "px") : "16px";
+  return (0, l.jsxs)("div", {
+    className: i()(p.container, x),
+    children: [!0 === I ? null : (0, l.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
           notice_type: C
-        }), null == T || T()
+        }), null == N || N()
       },
-      className: h.close,
-      "aria-label": E.default.Messages.DISMISS,
-      children: (0, a.jsx)(d.default, {
-        className: h.closeIcon
+      className: p.close,
+      "aria-label": h.default.Messages.DISMISS,
+      children: (0, l.jsx)(d.default, {
+        className: p.closeIcon
       })
-    }), null != r && (0, a.jsx)("div", {
-      className: h.imageContainer,
+    }), null != r && (0, l.jsx)("div", {
+      className: p.imageContainer,
       style: {
-        marginTop: "".concat(p, "px"),
-        marginLeft: y,
-        marginRight: y
+        marginTop: "".concat(S, "px"),
+        marginLeft: O,
+        marginRight: O
       },
-      children: (0, a.jsx)("img", {
-        className: h.image,
-        style: m,
+      children: (0, l.jsx)("img", {
+        className: p.image,
+        style: g,
         src: r,
         alt: ""
       })
-    }), (0, a.jsxs)("div", {
-      className: h.message,
-      children: [M, P, O]
+    }), (0, l.jsxs)("div", {
+      className: p.message,
+      children: [M, y, R]
     })]
   })
 }

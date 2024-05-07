@@ -21,23 +21,23 @@ var l = n("735250"),
   g = n("467691");
 
 function E() {
-  let [e, t] = a.useState(!1), n = (0, s.useStateFromStores)([u.default], () => u.default.getGuildId()), E = (0, s.useStateFromStores)([o.default], () => o.default.hasFetchedRequestToJoinGuilds), _ = (0, h.default)(), S = (0, i.default)(n), I = a.useMemo(() => {
+  let [e, t] = a.useState(!1), n = (0, s.useStateFromStores)([u.default], () => u.default.getGuildId()), E = (0, s.useStateFromStores)([o.default], () => o.default.hasFetchedRequestToJoinGuilds), S = (0, h.default)(), _ = (0, i.default)(n), I = a.useMemo(() => {
     let t = (0, f.createFolderNode)({
       folderId: c.SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
       folderName: C.default.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
       expanded: e,
       guildIds: []
     });
-    for (let e of _) t.children.push((0, f.createGuildNode)(e, t.id));
+    for (let e of S) t.children.push((0, f.createGuildNode)(e, t.id));
     return t
-  }, [_, e]);
+  }, [S, e]);
   a.useEffect(() => {
     e && !E && r.default.fetchRequestToJoinGuilds()
   }, [e, E]);
-  let N = null != n && _.includes(n);
+  let N = null != n && S.includes(n);
   return (a.useEffect(() => {
-    !e && N && S !== n && t(!0)
-  }, [e, N, S, n]), 0 === _.length) ? null : (0, l.jsx)(p.default, {
+    !e && N && _ !== n && t(!0)
+  }, [e, N, _, n]), 0 === S.length) ? null : (0, l.jsx)(p.default, {
     folderNode: I,
     expanded: e,
     useCircleMask: !e && !N,

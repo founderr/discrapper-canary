@@ -17,8 +17,8 @@ var a = n("848246"),
   C = n("114064"),
   g = n("937579"),
   E = n("485731"),
-  _ = n("841174"),
-  S = n("11352"),
+  S = n("841174"),
+  _ = n("11352"),
   I = n("981631");
 
 function N(e, t, n) {
@@ -103,7 +103,7 @@ class T extends r.default {
     r && i.default.dispatch({
       type: "PREMIUM_PERKS_DEMO_COMPLETE",
       perkType: a.EntitlementFeatureNames.STREAM_HIGH_QUALITY
-    }), r && E.usePerksDemosUIStore.getState().hqStreamingDidEnable && (0, _.default)(s.guild_id)
+    }), r && E.usePerksDemosUIStore.getState().hqStreamingDidEnable && (0, S.default)(s.guild_id)
   }
   constructor(...e) {
     super(...e), N(this, "_premiumPaymentModalCloseResolve", null), N(this, "_premiumPaymentModalCloseReject", null), N(this, "_maybeFetchPremiumOffer", async () => {
@@ -116,7 +116,7 @@ class T extends r.default {
         type: "PREMIUM_MARKETING_DATA_READY"
       })
     }), N(this, "_trackCustomNotificationSoundsExposure", () => {
-      S.CustomNotificationSoundExperiment.trackExposure({
+      _.CustomNotificationSoundExperiment.trackExposure({
         location: "PremiumManager"
       })
     }), N(this, "_handlePremiumPaymentModalOpen", e => {

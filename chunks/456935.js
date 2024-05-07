@@ -1,88 +1,88 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   getVerificationLevelText: function() {
-    return p
+    return I
   }
 });
-var a = n("735250"),
-  r = n("470079"),
-  s = n("692547"),
-  i = n("481060"),
-  l = n("496675"),
-  o = n("916187"),
-  c = n("736921"),
-  d = n("185403"),
-  u = n("484455"),
-  f = n("981631"),
-  m = n("689938"),
-  h = n("915580");
+var a = s("735250"),
+  n = s("470079"),
+  i = s("692547"),
+  E = s("481060"),
+  l = s("496675"),
+  _ = s("916187"),
+  r = s("736921"),
+  u = s("185403"),
+  o = s("484455"),
+  T = s("981631"),
+  d = s("689938"),
+  A = s("915580");
 
-function p(e) {
+function I(e) {
   switch (e) {
-    case f.VerificationLevels.LOW:
-      return m.default.Messages.VERIFICATION_LEVEL_LOW;
-    case f.VerificationLevels.MEDIUM:
-      return m.default.Messages.VERIFICATION_LEVEL_MEDIUM;
-    case f.VerificationLevels.HIGH:
-      return m.default.Messages.VERIFICATION_LEVEL_HIGH;
-    case f.VerificationLevels.VERY_HIGH:
-      return m.default.Messages.VERIFICATION_LEVEL_VERY_HIGH;
+    case T.VerificationLevels.LOW:
+      return d.default.Messages.VERIFICATION_LEVEL_LOW;
+    case T.VerificationLevels.MEDIUM:
+      return d.default.Messages.VERIFICATION_LEVEL_MEDIUM;
+    case T.VerificationLevels.HIGH:
+      return d.default.Messages.VERIFICATION_LEVEL_HIGH;
+    case T.VerificationLevels.VERY_HIGH:
+      return d.default.Messages.VERIFICATION_LEVEL_VERY_HIGH;
     default:
       return ""
   }
 }
-let T = {
-  [f.VerificationLevels.NONE]: "",
-  [f.VerificationLevels.LOW]: s.default.unsafe_rawColors.GREEN_360.css,
-  [f.VerificationLevels.MEDIUM]: s.default.unsafe_rawColors.YELLOW_300.css,
-  [f.VerificationLevels.HIGH]: s.default.unsafe_rawColors.ORANGE_345.css,
-  [f.VerificationLevels.VERY_HIGH]: s.default.unsafe_rawColors.RED_400.css
+let L = {
+  [T.VerificationLevels.NONE]: "",
+  [T.VerificationLevels.LOW]: i.default.unsafe_rawColors.GREEN_360.css,
+  [T.VerificationLevels.MEDIUM]: i.default.unsafe_rawColors.YELLOW_300.css,
+  [T.VerificationLevels.HIGH]: i.default.unsafe_rawColors.ORANGE_345.css,
+  [T.VerificationLevels.VERY_HIGH]: i.default.unsafe_rawColors.RED_400.css
 };
 t.default = function(e) {
   let {
     guild: t
-  } = e, s = l.default.can(f.Permissions.MANAGE_GUILD, t), E = t.verificationLevel, C = E === f.VerificationLevels.VERY_HIGH ? c.default : o.default, _ = r.useMemo(() => p(E), [E]), x = T[E], g = (0, a.jsx)("div", {
-    className: h.verificationLevelTitle,
-    children: m.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
+  } = e, i = l.default.can(T.Permissions.MANAGE_GUILD, t), c = t.verificationLevel, N = c === T.VerificationLevels.VERY_HIGH ? r.default : _.default, S = n.useMemo(() => I(c), [c]), g = L[c], D = (0, a.jsx)("div", {
+    className: A.verificationLevelTitle,
+    children: d.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {
-        return (0, a.jsx)(i.Text, {
-          className: h.verificationLevelHook,
+        return (0, a.jsx)(E.Text, {
+          className: A.verificationLevelHook,
           style: {
-            color: x
+            color: g
           },
           variant: "text-sm/semibold",
-          children: _
+          children: S
         }, "hook")
       }
     })
-  }), I = E === f.VerificationLevels.VERY_HIGH ? m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
-  return (0, a.jsx)(u.default, {
-    title: g,
+  }), C = c === T.VerificationLevels.VERY_HIGH ? d.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : d.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
+  return (0, a.jsx)(o.default, {
+    title: D,
     children: (0, a.jsxs)("div", {
-      className: h.verificationContainer,
-      children: [(0, a.jsx)(C, {
+      className: A.verificationContainer,
+      children: [(0, a.jsx)(N, {
         width: 20,
         height: 20,
-        className: h.icon
-      }), (0, a.jsx)(i.Text, {
-        className: h.guildVerificationText,
+        className: A.icon
+      }), (0, a.jsx)(E.Text, {
+        className: A.guildVerificationText,
         variant: "text-sm/normal",
-        children: I
-      }), s && (0, a.jsx)(i.Clickable, {
-        className: h.iconInteractiveContainer,
-        onClick: () => (0, i.openModalLazy)(async () => {
+        children: C
+      }), i && (0, a.jsx)(E.Clickable, {
+        className: A.iconInteractiveContainer,
+        onClick: () => (0, E.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("27933")]).then(n.bind(n, "694278"));
-          return n => (0, a.jsx)(e, {
-            ...n,
+          } = await Promise.all([s.e("99387"), s.e("27933")]).then(s.bind(s, "694278"));
+          return s => (0, a.jsx)(e, {
+            ...s,
             guild: t
           })
         }),
-        children: (0, a.jsx)(d.default, {
+        children: (0, a.jsx)(u.default, {
           width: 20,
           height: 20,
-          className: h.iconInteractive
+          className: A.iconInteractive
         })
       })]
     })

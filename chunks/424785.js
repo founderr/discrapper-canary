@@ -21,8 +21,8 @@ var a = n("120356"),
   C = n("506936"),
   g = n("359110"),
   E = n("922482"),
-  _ = n("431328"),
-  S = n("501655"),
+  S = n("431328"),
+  _ = n("501655"),
   I = n("427679"),
   N = n("71275"),
   T = n("201469"),
@@ -32,17 +32,17 @@ var a = n("120356"),
   x = n("607744"),
   R = n("496675"),
   M = n("306680"),
-  O = n("9156"),
-  y = n("979651"),
-  D = n("514342"),
-  b = n("974029"),
+  y = n("9156"),
+  O = n("979651"),
+  b = n("514342"),
+  D = n("974029"),
   j = n("934415"),
   P = n("98597"),
-  G = n("648501"),
-  U = n("473403"),
+  U = n("648501"),
+  G = n("473403"),
   w = n("207055"),
-  F = n("981631"),
-  B = n("647086"),
+  B = n("981631"),
+  F = n("647086"),
   V = n("689938"),
   H = n("809164"),
   k = n("473611");
@@ -55,7 +55,7 @@ function Y(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class K extends P.default {
+class W extends P.default {
   getVoiceStatesCount() {
     var e;
     let {
@@ -67,7 +67,7 @@ class K extends P.default {
     let {
       channel: e
     } = this.props;
-    return (0, j.isChannelFull)(e, y.default, v.default)
+    return (0, j.isChannelFull)(e, O.default, v.default)
   }
   getModeClass() {
     let {
@@ -92,7 +92,7 @@ class K extends P.default {
       voiceStates: a,
       collapsed: t,
       tabIndex: n,
-      location: F.AnalyticsLocations.GUILD_CHANNEL_LIST,
+      location: B.AnalyticsLocations.GUILD_CHANNEL_LIST,
       numAudience: s
     })
   }
@@ -116,8 +116,8 @@ class K extends P.default {
       needSubscriptionToAccess: C,
       unread: g,
       resolvedUnreadSetting: E,
-      mentionCount: _,
-      isFavoriteSuggestion: S
+      mentionCount: S,
+      isFavoriteSuggestion: _
     } = this.props, {
       shouldShowGuildVerificationPopout: I
     } = this.state, N = this.getVoiceStatesCount(), T = (0, l.jsxs)("li", {
@@ -139,17 +139,17 @@ class K extends P.default {
               onContextMenu: o,
               ...u
             } = i;
-            return (0, l.jsxs)(U.default, {
+            return (0, l.jsxs)(G.default, {
               className: H.iconVisibility,
               iconClassName: s()({
                 [k.iconLive]: null != p
               }),
               channel: e,
-              selected: !S && t,
+              selected: !_ && t,
               connected: n,
               unread: n ? g : void 0,
               resolvedUnreadSetting: E,
-              mentionCount: _,
+              mentionCount: S,
               locked: a,
               onClick: () => {
                 this.handleClick(), null == r || r()
@@ -159,17 +159,17 @@ class K extends P.default {
               },
               connectDragPreview: d,
               subtitle: this.renderSubtitle(),
-              isFavoriteSuggestion: S,
+              isFavoriteSuggestion: _,
               "aria-label": (0, f.default)({
                 channel: e,
                 unread: g,
-                mentionCount: _,
+                mentionCount: S,
                 userCount: N,
                 isSubscriptionGated: m,
                 needSubscriptionToAccess: C
               }),
               ...u,
-              children: [S && this.renderAcceptSuggestionButton(), S && this.renderRemoveSuggestionButton(), !S && this.renderOpenChatButton(), !S && this.renderInviteButton(), !S && this.renderEditButton(), !S && this.renderChannelInfo()]
+              children: [_ && this.renderAcceptSuggestionButton(), _ && this.renderRemoveSuggestionButton(), !_ && this.renderOpenChatButton(), !_ && this.renderInviteButton(), !_ && this.renderEditButton(), !_ && this.renderChannelInfo()]
             })
           }
         })
@@ -251,7 +251,7 @@ class K extends P.default {
             onMouseLeave: i,
             onFocus: u,
             onBlur: d,
-            children: (0, l.jsx)(b.default, {
+            children: (0, l.jsx)(D.default, {
               width: 16,
               height: 16,
               className: H.actionIcon
@@ -267,13 +267,13 @@ class K extends P.default {
     }), Y(this, "renderSubtitle", () => {
       var e;
       let t = null === (e = this.props.stageInstance) || void 0 === e ? void 0 : e.topic;
-      return null == t ? null : (0, l.jsx)(D.default, {
+      return null == t ? null : (0, l.jsx)(b.default, {
         children: t
       })
     })
   }
 }
-let W = (0, d.makeChannelSortable)((0, c.makeVoiceUserDroppable)(K));
+let K = (0, d.makeChannelSortable)((0, c.makeVoiceUserDroppable)(W));
 
 function z(e) {
   let {
@@ -286,30 +286,30 @@ function z(e) {
   } = e, u = (0, i.useStateFromStoresObject)([M.default], () => ({
     unread: M.default.hasUnread(n.id),
     mentionCount: M.default.getMentionCount(n.id)
-  })), d = (0, i.useStateFromStores)([O.default], () => O.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
+  })), d = (0, i.useStateFromStores)([y.default], () => y.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
     let e = L.default.getChannel(n.parent_id),
       l = x.default.getCheck(n.guild_id);
     return {
-      canManageChannel: null != t && R.default.can(F.Permissions.MANAGE_CHANNELS, n),
-      canReorderChannel: !0 !== a && (t.id === B.FAVORITES_RAW_GUILD_ID || (null != e ? R.default.can(F.Permissions.MANAGE_CHANNELS, e) : R.default.can(F.Permissions.MANAGE_CHANNELS, t))),
-      canMoveMembers: R.default.can(F.Permissions.MOVE_MEMBERS, n),
-      locked: !R.default.can(F.Permissions.CONNECT, n),
-      bypassLimit: R.default.can(F.Permissions.MOVE_MEMBERS, n),
+      canManageChannel: null != t && R.default.can(B.Permissions.MANAGE_CHANNELS, n),
+      canReorderChannel: !0 !== a && (t.id === F.FAVORITES_RAW_GUILD_ID || (null != e ? R.default.can(B.Permissions.MANAGE_CHANNELS, e) : R.default.can(B.Permissions.MANAGE_CHANNELS, t))),
+      canMoveMembers: R.default.can(B.Permissions.MOVE_MEMBERS, n),
+      locked: !R.default.can(B.Permissions.CONNECT, n),
+      bypassLimit: R.default.can(B.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), p = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, _.useStageParticipantsCount)(n.id, S.StageChannelParticipantNamedIndex.AUDIENCE), {
+  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), p = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, S.useStageParticipantsCount)(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E
-  } = (0, m.default)(n.id), v = (0, i.useStateFromStores)([O.default], () => O.default.isFavorite(t.id, n.id)), y = (0, N.getStageHasMedia)(n.id), D = (0, G.default)({
+  } = (0, m.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), b = (0, U.default)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: r,
     voiceStates: o,
     isSubscriptionGated: g,
     needSubscriptionToAccess: E,
-    enableConnectedUserLimit: y || n.userLimit > 0 && n.userLimit < F.MAX_STAGE_VOICE_USER_LIMIT
-  }), b = e.connected && null == D;
-  return (0, l.jsx)(W, {
+    enableConnectedUserLimit: O || n.userLimit > 0 && n.userLimit < B.MAX_STAGE_VOICE_USER_LIMIT
+  }), D = e.connected && null == b;
+  return (0, l.jsx)(K, {
     categoryCollapsed: f,
     connectAction: h,
     numAudience: C,
@@ -320,8 +320,8 @@ function z(e) {
     ...c,
     ...e,
     isFavoriteSuggestion: s && !v,
-    forceShowButtons: b,
-    channelInfo: D,
+    forceShowButtons: D,
+    channelInfo: b,
     resolvedUnreadSetting: d
   })
 }

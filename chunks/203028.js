@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("512722"),
-  l = n.n(s),
-  i = n("841784"),
+  i = n.n(s),
+  l = n("841784"),
   r = n("503438"),
   o = n("802856"),
   u = n("366966"),
@@ -35,25 +35,25 @@ function C(e) {
         user: t
       } = e;
       return t.id
-    })), s = n.filter(e => !a.has(e.id)), l = d.default.getName(t[0].user), i = null != t[1] ? d.default.getName(t[1].user) : null != s[0] ? d.default.getName(s[0]) : null;
+    })), s = n.filter(e => !a.has(e.id)), i = d.default.getName(t[0].user), l = null != t[1] ? d.default.getName(t[1].user) : null != s[0] ? d.default.getName(s[0]) : null;
     switch (n.length) {
       case 1:
-        return l;
+        return i;
       case 2:
         return _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN_ONLY.format({
-          user1: l,
-          user2: i
+          user1: i,
+          user2: l
         });
       default:
         return _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN.format({
-          user1: l,
-          user2: i,
+          user1: i,
+          user2: l,
           extras: n.length - 2
         })
     }
   }(t), {
-    subtitle: I,
-    icon: g
+    subtitle: g,
+    icon: I
   } = function(e) {
     var t;
     let {
@@ -61,10 +61,10 @@ function C(e) {
       partiedMembers: d,
       voiceChannels: C,
       currentActivities: m
-    } = e, S = s.length, p = d.length - S, I = m[0], g = null == I ? void 0 : I.activity, T = null == I ? void 0 : I.startedPlayingTime, A = {
-      name: null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : ""
+    } = e, S = s.length, p = d.length - S, g = m[0], I = null == g ? void 0 : g.activity, T = null == g ? void 0 : g.startedPlayingTime, A = {
+      name: null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : ""
     };
-    if ((0, i.default)(g) && null != g) return {
+    if ((0, l.default)(I) && null != I) return {
       subtitle: (0, a.jsx)(u.default, {
         start: T,
         location: u.default.Locations.ACTIVITY_FEED_NEW,
@@ -72,19 +72,19 @@ function C(e) {
       }),
       icon: null
     };
-    if (S + p === 1 && null != I) {
+    if (S + p === 1 && null != g) {
       let {
         game: e
-      } = I;
-      if (null == g) return {
+      } = g;
+      if (null == I) return {
         subtitle: null,
         icon: null
       };
-      let t = c.createHeader(g);
+      let t = c.createHeader(I);
       if (null != t) return t;
-      switch (g.type) {
+      switch (I.type) {
         case h.ActivityTypes.PLAYING:
-          if ((0, o.default)(g)) return {
+          if ((0, o.default)(I)) return {
             subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
             icon: (0, a.jsx)(f.default.Header.Icon, {
               src: f.default.Header.Icon.Src.XBOX
@@ -107,7 +107,7 @@ function C(e) {
           };
         case h.ActivityTypes.LISTENING:
           let s;
-          return s = (0, r.default)(g) ? (0, a.jsx)(f.default.Header.Icon, {
+          return s = (0, r.default)(I) ? (0, a.jsx)(f.default.Header.Icon, {
             src: f.default.Header.Icon.Src.SPOTIFY
           }) : null != e.getIconURL(E.ICON_SIZE) ? (0, a.jsx)(f.default.Header.Icon, {
             src: e.getIconURL(E.ICON_SIZE)
@@ -115,7 +115,7 @@ function C(e) {
             src: n("211827")
           }), {
             subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
-              name: g.name
+              name: I.name
             }),
             icon: s
           };
@@ -163,7 +163,7 @@ function C(e) {
         game: n,
         startedPlayingTime: s
       } = e;
-      return l()(null != t, "Activity was null somehow"), {
+      return i()(null != t, "Activity was null somehow"), {
         subtitle: (0, a.jsx)(u.default, {
           start: s,
           location: u.default.Locations.ACTIVITY_FEED_NEW,
@@ -185,8 +185,8 @@ function C(e) {
     priorityUser: S,
     guildId: null == m ? void 0 : m.id,
     title: p,
-    subtitle: I,
-    icon: g,
+    subtitle: g,
+    icon: I,
     onContextMenu: e => s(e, S.user)
   })
 }

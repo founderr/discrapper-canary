@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var a, s, l, i, r = n("442837"),
+var a, s, i, l, r = n("442837"),
   o = n("570140"),
   u = n("358085"),
   d = n("998502"),
@@ -10,7 +10,7 @@ var a, s, l, i, r = n("442837"),
 let h = !1,
   _ = !0,
   C = !1;
-class m extends(i = r.default.Store) {
+class m extends(l = r.default.Store) {
   initialize() {
     !(!u.isPlatformEmbedded || __OVERLAY__) && d.default.getGPUDriverVersions().then(e => {
       h = (0, E.default)(e), _ = (0, c.default)(e), C = (0, f.default)(e), this.emitChange()
@@ -33,12 +33,12 @@ class m extends(i = r.default.Store) {
     }
   }
 }
-l = "StreamingCapabilitiesStore", (s = "displayName") in(a = m) ? Object.defineProperty(a, s, {
-  value: l,
+i = "StreamingCapabilitiesStore", (s = "displayName") in(a = m) ? Object.defineProperty(a, s, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = l, t.default = new m(o.default, {
+}) : a[s] = i, t.default = new m(o.default, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       streamingCapabilitiesStoreState: t

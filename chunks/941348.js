@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("457153"),
-  l = n("254197"),
-  i = n("192919");
+  i = n("254197"),
+  l = n("192919");
 t.default = function(e) {
   let {
     expandedContentRef: t,
@@ -19,14 +19,14 @@ t.default = function(e) {
   } = e;
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(s.default, {
-      className: i.content,
+      className: l.content,
       expansionSpring: n,
       isExpanded: r,
       isExpansionAnimationComplete: o,
       quest: f,
       useReducedMotion: E
-    }), (0, a.jsx)(l.default, {
-      className: i.content,
+    }), (0, a.jsx)(i.default, {
+      className: l.content,
       onCtxMenuOpen: u,
       onCtxMenuClose: d,
       onCtxMenuSelect: c,

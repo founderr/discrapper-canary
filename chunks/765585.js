@@ -20,8 +20,8 @@ t.default = a.forwardRef(function(e, t) {
     headerClassName: C,
     contentClassName: g,
     tryItText: E,
-    dismissText: _,
-    onTryFeature: S,
+    dismissText: S,
+    onTryFeature: _,
     onClose: I,
     className: N,
     inlineArt: T = !1,
@@ -31,12 +31,12 @@ t.default = a.forwardRef(function(e, t) {
     dismissibleContent: x,
     position: R = "top",
     align: M = "center",
-    art: O,
-    isPremiumEarlyAccess: y = !1,
-    maxWidth: D = 280
-  } = e, b = L ? r.Button.Sizes.LARGE : r.Button.Sizes.MAX, [j, P] = a.useState(!1), {
-    ref: G,
-    width: U
+    art: y,
+    isPremiumEarlyAccess: O = !1,
+    maxWidth: b = 280
+  } = e, D = L ? r.Button.Sizes.LARGE : r.Button.Sizes.MAX, [j, P] = a.useState(!1), {
+    ref: U,
+    width: G
   } = (0, o.default)();
 
   function w(e) {
@@ -46,9 +46,9 @@ t.default = a.forwardRef(function(e, t) {
   }
   return a.useEffect(() => {
     var e, t;
-    let n = (null !== (t = null === (e = G.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-    !j && n > D && P(!0)
-  }, [j, U, G, D]), a.useEffect(() => {
+    let n = (null !== (t = null === (e = U.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
+    !j && n > b && P(!0)
+  }, [j, G, U, b]), a.useEffect(() => {
     (0, u.requestMarkDismissibleContentAsShown)(x)
   }, [x]), (0, l.jsx)("div", {
     className: N,
@@ -56,22 +56,22 @@ t.default = a.forwardRef(function(e, t) {
     children: (0, l.jsxs)("div", {
       className: i()(p.content, g, {
         [p.contentNoArt]: null == m || T,
-        [p.contentPremium]: A || y
+        [p.contentPremium]: A || O
       }),
       children: [(0, l.jsxs)("div", {
         className: i()(m, T ? p.artInline : p.artAbsolute),
         children: [v && (0, l.jsx)(d.default, {
           className: p.gifTag
-        }), O]
+        }), y]
       }), (0, l.jsxs)("div", {
         className: p.body,
         children: [(0, l.jsxs)(r.Heading, {
           className: i()(A ? p.headerWithPremiumIcon : p.header, C),
           variant: "heading-md/bold",
           color: "always-white",
-          children: [A && !y ? (0, l.jsx)(c.default, {
+          children: [A && !O ? (0, l.jsx)(c.default, {
             className: p.premiumIcon
-          }) : null, y ? (0, l.jsxs)(r.Text, {
+          }) : null, O ? (0, l.jsxs)(r.Text, {
             color: "always-white",
             variant: "eyebrow",
             className: p.earlyAccessBadgeContainer,
@@ -88,27 +88,27 @@ t.default = a.forwardRef(function(e, t) {
           children: n
         }) : n]
       }), (0, l.jsx)("div", {
-        ref: G,
+        ref: U,
         className: j || !L ? p.buttonContainerVertical : p.buttonContainerHorizontal,
-        children: null != S ? (0, l.jsxs)(l.Fragment, {
+        children: null != _ ? (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(r.Button, {
             className: p.button,
-            size: b,
+            size: D,
             onClick: e => {
-              null == I || I(e), S(e), w(f.ContentDismissActionType.PRIMARY)
+              null == I || I(e), _(e), w(f.ContentDismissActionType.PRIMARY)
             },
-            color: A || y ? r.Button.Colors.BRAND : r.Button.Colors.WHITE,
-            look: A || y ? r.Button.Looks.INVERTED : r.Button.Looks.FILLED,
+            color: A || O ? r.Button.Colors.BRAND : r.Button.Colors.WHITE,
+            look: A || O ? r.Button.Looks.INVERTED : r.Button.Looks.FILLED,
             children: null != E ? E : h.default.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }), (0, l.jsx)(r.Button, {
             className: p.button,
-            size: b,
+            size: D,
             onClick: e => {
               null == I || I(e), w(f.ContentDismissActionType.DISMISS)
             },
-            color: A || y ? r.Button.Colors.WHITE : r.Button.Colors.BRAND,
-            look: A || y ? r.Button.Looks.LINK : r.Button.Looks.FILLED,
-            children: null != _ ? _ : h.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
+            color: A || O ? r.Button.Colors.WHITE : r.Button.Colors.BRAND,
+            look: A || O ? r.Button.Looks.LINK : r.Button.Looks.FILLED,
+            children: null != S ? S : h.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
           })]
         }) : (0, l.jsx)(r.Button, {
           className: p.button,

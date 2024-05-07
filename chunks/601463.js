@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return m
   }
 }), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("718017"),
+var l = n("735250"),
+  a = n("470079"),
+  s = n("718017"),
   i = n("442837"),
   r = n("481060"),
   o = n("607070"),
@@ -14,19 +14,19 @@ var a = n("735250"),
   d = n("284019"),
   c = n("620929"),
   f = n("981631"),
-  E = n("689938"),
-  h = n("156610");
+  h = n("689938"),
+  p = n("156610");
 
-function _(e) {
+function m(e) {
   let {
     guildId: t,
     signed: n,
-    setSigned: _,
+    setSigned: m,
     sidebarWidth: C,
-    windowWidth: m,
-    transition: S,
-    brandPrimaryColor: p
-  } = e, I = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), g = s.useRef(null), T = s.useMemo(() => (m - C) / 2, [C, m]), [A, N, v] = (0, l.useSpring)(() => ({
+    windowWidth: g,
+    transition: E,
+    brandPrimaryColor: S
+  } = e, _ = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = a.useRef(null), N = a.useMemo(() => (g - C) / 2, [C, g]), [T, A, L] = (0, s.useSpring)(() => ({
     to: [{
       transform: "translateX(-8px)"
     }, {
@@ -34,74 +34,74 @@ function _(e) {
     }],
     loop: !0
   }));
-  s.useEffect(() => {
-    n && (v(), N({
+  a.useEffect(() => {
+    n && (L(), A({
       to: {
         transform: "translateX(0px)"
       }
     }))
-  }, [N, n, v]);
-  let R = s.useCallback(() => {
+  }, [A, n, L]);
+  let v = a.useCallback(() => {
       var e;
-      null === (e = g.current) || void 0 === e || e.scrollIntoView({
+      null === (e = I.current) || void 0 === e || e.scrollIntoView({
         behavior: "smooth"
-      }), null == _ || _(!0)
-    }, [_]),
-    L = () => open(u.default.getArticleURL(f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES));
-  return (0, a.jsxs)("div", {
-    className: h.sidebarContent,
-    children: [S((e, t) => t && (0, a.jsx)(l.animated.div, {
-      className: h.sidebarLeftDecorationContainer,
+      }), null == m || m(!0)
+    }, [m]),
+    x = () => open(u.default.getArticleURL(f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES));
+  return (0, l.jsxs)("div", {
+    className: p.sidebarContent,
+    children: [E((e, t) => t && (0, l.jsx)(s.animated.div, {
+      className: p.sidebarLeftDecorationContainer,
       style: {
         opacity: e.opacity,
         transform: e.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)")),
-        width: T
+        width: N
       },
-      children: (0, a.jsxs)("div", {
-        className: h.sidebarLeftDecoration,
+      children: (0, l.jsxs)("div", {
+        className: p.sidebarLeftDecoration,
         style: {
-          width: T
+          width: N
         },
-        children: [(0, a.jsx)(r.Heading, {
+        children: [(0, l.jsx)(r.Heading, {
           variant: "heading-xxl/medium",
-          children: E.default.Messages.CLAN_SETUP_SIGN_TITLE
-        }), (0, a.jsx)(r.Text, {
+          children: h.default.Messages.CLAN_SETUP_SIGN_TITLE
+        }), (0, l.jsx)(r.Text, {
           variant: "text-md/normal",
           color: "text-muted",
-          children: E.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
+          children: h.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
         })]
       })
-    })), S((e, t) => t && (0, a.jsx)(l.animated.div, {
-      className: h.sidebarRightDecorationContainer,
+    })), E((e, t) => t && (0, l.jsx)(s.animated.div, {
+      className: p.sidebarRightDecorationContainer,
       style: {
         opacity: e.opacity,
         transform: e.opacity.to([0, 1], [-40, 0]).to(e => "translateX(".concat(e, "px)")),
-        width: T
+        width: N
       },
-      children: (0, a.jsxs)("div", {
-        className: h.sidebarRightDecoration,
-        children: [(0, a.jsx)(l.animated.div, {
-          style: I ? void 0 : A,
-          children: (0, a.jsx)(d.default, {
-            className: h.signButton,
+      children: (0, l.jsxs)("div", {
+        className: p.sidebarRightDecoration,
+        children: [(0, l.jsx)(s.animated.div, {
+          style: _ ? void 0 : T,
+          children: (0, l.jsx)(d.default, {
+            className: p.signButton,
             size: r.Button.Sizes.SMALL,
-            onClick: R,
-            themeColor: p,
-            children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
+            onClick: v,
+            themeColor: S,
+            children: h.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
           })
-        }), (0, a.jsx)(r.Text, {
+        }), (0, l.jsx)(r.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_AGREEMENT.format({
-            onGuidelinesClick: L
+          children: h.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_AGREEMENT.format({
+            onGuidelinesClick: x
           })
         })]
       })
-    })), (0, a.jsx)(c.default, {
+    })), (0, l.jsx)(c.default, {
       guildId: t,
       signed: n,
-      setSigned: _,
-      signRef: g
+      setSigned: m,
+      signRef: I
     })]
   })
 }

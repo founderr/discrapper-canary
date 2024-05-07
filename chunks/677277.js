@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("206017"),
-  l = n("360048"),
-  i = n("731455"),
+  i = n("360048"),
+  l = n("731455"),
   r = n("689938"),
   o = n("318020");
 t.default = e => {
@@ -13,7 +13,7 @@ t.default = e => {
     shouldDisplaySelectedCategory: n,
     currentCategoryId: u
   } = e;
-  return (0, a.jsx)(l.default, {
+  return (0, a.jsx)(i.default, {
     avatar: (0, a.jsx)(s.default, {}),
     name: r.default.Messages.HUB_SCHOOL_HUBS,
     focusProps: {
@@ -24,12 +24,12 @@ t.default = e => {
       }
     },
     onClick: () => {
-      t(i.DISCORD_HUB_ID)
+      t(l.DISCORD_HUB_ID)
     },
     wrapContent: !0,
-    selected: n && i.DISCORD_HUB_ID === u,
+    selected: n && l.DISCORD_HUB_ID === u,
     className: o.categoryItem,
     selectedClassName: o.selectedCategoryItem,
     innerClassName: o.itemInner
-  }, i.DISCORD_HUB_ID)
+  }, l.DISCORD_HUB_ID)
 }

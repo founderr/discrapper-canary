@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("411104");
 var a = n("413135"),
   s = n("836560"),
-  l = n("392711"),
-  i = n.n(l),
+  i = n("392711"),
+  l = n.n(i),
   r = n("710845"),
   o = n("998502"),
   u = n("901077"),
@@ -32,7 +32,7 @@ function S(e) {
   return new Promise((t, n) => {
     "string" == typeof e && (e = E.net.createConnection(e)), e.pause(), e.on("readable", () => {
       try {
-        I(e)
+        g(e)
       } catch (t) {
         e.end(p(_.CLOSE, {
           code: 1003,
@@ -54,7 +54,7 @@ function S(e) {
       }, e => {
         throw a(), e
       });
-    return e.write(p(_.PING, i().uniqueId())), s.then(t, n)
+    return e.write(p(_.PING, l().uniqueId())), s.then(t, n)
   })
 }
 
@@ -62,40 +62,40 @@ function p(e, t) {
   var n;
   t = JSON.stringify(t);
   let s = a.Buffer.byteLength(t),
-    l = a.Buffer.alloc(8 + s);
-  return l.writeInt32LE(e, 0), l.writeInt32LE(s, 4), l.write(t, 8, s), (n = l).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength)
+    i = a.Buffer.alloc(8 + s);
+  return i.writeInt32LE(e, 0), i.writeInt32LE(s, 4), i.write(t, 8, s), (n = i).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength)
 }
 
-function I(e) {
+function g(e) {
   let t = e.read(8);
   if (null == t) return;
   let n = a.Buffer.from(t),
     s = n.readInt32LE(0),
-    l = n.readInt32LE(4);
-  if (!Object.values(_).includes(s) || l < 0) throw Error("protocol error");
-  if (null == (t = e.read(l))) throw Error("data size does not match what was received");
-  let i = JSON.parse((n = a.Buffer.from(t)).toString());
+    i = n.readInt32LE(4);
+  if (!Object.values(_).includes(s) || i < 0) throw Error("protocol error");
+  if (null == (t = e.read(i))) throw Error("data size does not match what was received");
+  let l = JSON.parse((n = a.Buffer.from(t)).toString());
   switch (s) {
     case _.PING:
-      e.emit("ping", i), e.write(p(_.PONG, i));
+      e.emit("ping", l), e.write(p(_.PONG, l));
       break;
     case _.PONG:
-      e.emit("pong", i);
+      e.emit("pong", l);
       break;
     case _.HANDSHAKE:
       if (m(e)) throw Error("already did handshake");
-      C(e, !0), e.emit("handshake", i);
+      C(e, !0), e.emit("handshake", l);
       break;
     case _.FRAME:
       if (!m(e)) throw Error("did not handshake");
-      e.emit("request", i);
+      e.emit("request", l);
       break;
     case _.CLOSE:
       e.end(), e.destroy()
   }
-  I(e)
+  g(e)
 }
-class g extends d.default {
+class I extends d.default {
   send(e) {
     h.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(p(_.FRAME, e))
   }
@@ -106,20 +106,20 @@ class g extends d.default {
     })), this.socket.destroy()
   }
   constructor(e, t, n) {
-    var a, s, l;
-    super("ipc", t, n), a = this, l = void 0, (s = "socket") in a ? Object.defineProperty(a, s, {
-      value: l,
+    var a, s, i;
+    super("ipc", t, n), a = this, i = void 0, (s = "socket") in a ? Object.defineProperty(a, s, {
+      value: i,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : a[s] = l, this.socket = e
+    }) : a[s] = i, this.socket = e
   }
 }
 class T extends s.EventEmitter {
   handleConnection(e) {
     C(e, !1), e.pause(), e.on("readable", () => {
       try {
-        I(e)
+        g(e)
       } catch (t) {
         e.end(p(_.CLOSE, {
           code: f.RPCCloseCodes.CLOSE_UNSUPPORTED,
@@ -131,7 +131,7 @@ class T extends s.EventEmitter {
       let a = t.client_id,
         s = +t.v;
       try {
-        n = new g(e, s, "json")
+        n = new I(e, s, "json")
       } catch (t) {
         e.end(p(_.CLOSE, {
           code: t.code,

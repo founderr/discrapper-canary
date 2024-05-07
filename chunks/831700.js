@@ -21,8 +21,8 @@ var a = n("120356"),
   C = n("718589"),
   g = n("933557"),
   E = n("557135"),
-  _ = n("873696"),
-  S = n("446226"),
+  S = n("873696"),
+  _ = n("446226"),
   I = n("305325"),
   N = n("281956"),
   T = n("66999"),
@@ -32,23 +32,23 @@ var a = n("120356"),
   x = n("359110"),
   R = n("155409"),
   M = n("695346"),
-  O = n("592125"),
-  y = n("430824"),
-  D = n("607744"),
-  b = n("496675"),
+  y = n("592125"),
+  O = n("430824"),
+  b = n("607744"),
+  D = n("496675"),
   j = n("306680"),
   P = n("9156"),
-  G = n("979651"),
-  U = n("974029"),
+  U = n("979651"),
+  G = n("974029"),
   w = n("934415"),
-  F = n("98597"),
-  B = n("648501"),
+  B = n("98597"),
+  F = n("648501"),
   V = n("473403"),
   H = n("830993"),
   k = n("653577"),
   Y = n("207055"),
-  K = n("981631"),
-  W = n("647086"),
+  W = n("981631"),
+  K = n("647086"),
   z = n("689938"),
   Z = n("809164");
 
@@ -60,7 +60,7 @@ function X(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class Q extends F.default {
+class q extends B.default {
   componentWillUnmount() {
     this.activitiesHideTimeout.stop()
   }
@@ -75,7 +75,7 @@ class Q extends F.default {
     let {
       channel: e
     } = this.props;
-    return (0, w.isChannelFull)(e, G.default, y.default)
+    return (0, w.isChannelFull)(e, U.default, O.default)
   }
   getModeClass() {
     let {
@@ -94,7 +94,7 @@ class Q extends F.default {
       connected: n,
       enableHangStatus: a,
       allowChannelTopic: s
-    } = this.props, i = null === (e = (0, _.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
+    } = this.props, i = null === (e = (0, S.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
       hovered: r
     } = this.state;
     return (0, l.jsx)(k.default, {
@@ -122,7 +122,7 @@ class Q extends F.default {
       voiceStates: t,
       withGuildIcon: a,
       tabIndex: s,
-      location: K.AnalyticsLocations.GUILD_CHANNEL_LIST
+      location: W.AnalyticsLocations.GUILD_CHANNEL_LIST
     })
   }
   renderChannelInfo() {
@@ -150,8 +150,8 @@ class Q extends F.default {
       connectUserDropTarget: p,
       connectDragPreview: g,
       canReorderChannel: E,
-      canMoveMembers: _,
-      showTutorial: S,
+      canMoveMembers: S,
+      showTutorial: _,
       hasActiveEvent: I,
       embeddedApps: N,
       isSubscriptionGated: T,
@@ -160,7 +160,7 @@ class Q extends F.default {
     } = this.props, {
       shouldShowActivities: v,
       shouldShowGuildVerificationPopout: x
-    } = this.state, M = this.getVoiceStatesCount(), O = (0, l.jsxs)("li", {
+    } = this.state, M = this.getVoiceStatesCount(), y = (0, l.jsxs)("li", {
       className: s()(this.getModeClass(), {
         [Z.disabled]: this.isDisabled()
       }),
@@ -224,12 +224,12 @@ class Q extends F.default {
         })
       }), this.renderVoiceUsers()]
     });
-    return _ && (O = p(O)), E && (O = f(h(O))), S && (O = (0, l.jsx)(R.default, {
+    return S && (y = p(y)), E && (y = f(h(y))), _ && (y = (0, l.jsx)(R.default, {
       tutorialId: "voice-conversations",
       position: "right",
       offsetX: -20,
-      children: O
-    })), O
+      children: y
+    })), y
   }
   constructor(...e) {
     super(...e), X(this, "state", {
@@ -259,7 +259,7 @@ class Q extends F.default {
     }), X(this, "handleContextMenu", e => {
       let {
         channel: t
-      } = this.props, a = y.default.getGuild(t.getGuildId());
+      } = this.props, a = O.default.getGuild(t.getGuildId());
       null != a && (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -359,7 +359,7 @@ class Q extends F.default {
             onMouseLeave: i,
             onFocus: r,
             onBlur: d,
-            children: (0, l.jsx)(U.default, {
+            children: (0, l.jsx)(G.default, {
               width: 16,
               height: 16,
               className: Z.actionIcon
@@ -375,7 +375,7 @@ class Q extends F.default {
     })
   }
 }
-let q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(Q));
+let Q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(q));
 
 function J(e) {
   let {
@@ -389,21 +389,21 @@ function J(e) {
   } = e, d = (0, i.useStateFromStoresObject)([j.default], () => ({
     unread: j.default.hasUnread(n.id),
     mentionCount: j.default.getMentionCount(n.id)
-  })), c = (0, i.useStateFromStores)([P.default], () => P.default.resolveUnreadSetting(n)), f = (0, i.useStateFromStoresObject)([O.default, D.default, b.default], () => {
-    let e = O.default.getChannel(n.parent_id),
-      l = D.default.getCheck(n.guild_id);
+  })), c = (0, i.useStateFromStores)([P.default], () => P.default.resolveUnreadSetting(n)), f = (0, i.useStateFromStoresObject)([y.default, b.default, D.default], () => {
+    let e = y.default.getChannel(n.parent_id),
+      l = b.default.getCheck(n.guild_id);
     return {
-      canManageChannel: b.default.can(K.Permissions.MANAGE_CHANNELS, n),
-      canReorderChannel: !0 !== a && (t.id === W.FAVORITES_RAW_GUILD_ID || (null != e ? b.default.can(K.Permissions.MANAGE_CHANNELS, e) : b.default.can(K.Permissions.MANAGE_CHANNELS, t))),
-      canMoveMembers: b.default.can(K.Permissions.MOVE_MEMBERS, n),
-      locked: !b.default.can(K.Permissions.CONNECT, n),
-      bypassLimit: b.default.can(K.Permissions.MOVE_MEMBERS, n),
+      canManageChannel: D.default.can(W.Permissions.MANAGE_CHANNELS, n),
+      canReorderChannel: !0 !== a && (t.id === K.FAVORITES_RAW_GUILD_ID || (null != e ? D.default.can(W.Permissions.MANAGE_CHANNELS, e) : D.default.can(W.Permissions.MANAGE_CHANNELS, t))),
+      canMoveMembers: D.default.can(W.Permissions.MOVE_MEMBERS, n),
+      locked: !D.default.can(W.Permissions.CONNECT, n),
+      bypassLimit: D.default.can(W.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), p = (0, i.useStateFromStores)([G.default], () => G.default.hasVideo(n.id)), m = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
-    isSubscriptionGated: _,
+  }), p = (0, i.useStateFromStores)([U.default], () => U.default.hasVideo(n.id)), m = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
+    isSubscriptionGated: S,
     needSubscriptionToAccess: I
-  } = (0, T.default)(n.id), N = (0, S.default)(), L = (0, i.useStateFromStores)([P.default], () => P.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
+  } = (0, T.default)(n.id), N = (0, _.default)(), L = (0, i.useStateFromStores)([P.default], () => P.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
     enableHangStatus: R,
     allowChannelTopic: M
   } = v.HangStatusExperiment.useExperiment({
@@ -411,31 +411,31 @@ function J(e) {
     location: "VoiceChannel"
   }, {
     autoTrackExposure: !1
-  }), y = (0, B.default)({
+  }), O = (0, F.default)({
     channel: n,
     isChannelSelected: r,
     isChannelCollapsed: o,
     voiceStates: u,
-    isSubscriptionGated: _,
+    isSubscriptionGated: S,
     needSubscriptionToAccess: I,
     enableConnectedUserLimit: !0,
     enableActivities: !0
-  }), U = x && null == y;
-  return (0, l.jsx)(q, {
+  }), G = x && null == O;
+  return (0, l.jsx)(Q, {
     channelName: C,
     embeddedApps: m,
-    embeddedActivityType: K.ActivityTypes.PLAYING,
+    embeddedActivityType: W.ActivityTypes.PLAYING,
     video: p,
     hasActiveEvent: null != E,
-    isSubscriptionGated: _,
+    isSubscriptionGated: S,
     needSubscriptionToAccess: I,
     ...d,
     ...f,
     ...e,
     connected: x,
     isFavoriteSuggestion: s && !L,
-    forceShowButtons: U,
-    channelInfo: y,
+    forceShowButtons: G,
+    channelInfo: O,
     enableHangStatus: R,
     allowChannelTopic: M,
     resolvedUnreadSetting: c

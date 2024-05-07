@@ -16,8 +16,8 @@ var l = n("735250"),
   C = n("979651"),
   g = n("938475"),
   E = n("514342"),
-  _ = n("714794"),
-  S = n("135724"),
+  S = n("714794"),
+  _ = n("135724"),
   I = n("25601"),
   N = n("207055"),
   T = n("981631"),
@@ -53,19 +53,19 @@ t.default = a.memo(function(e) {
     thread: t,
     isSelectedChannel: s,
     isSelectedVoice: R,
-    isLast: O,
-    withGuildIcon: y
-  } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
+    isLast: y,
+    withGuildIcon: O
+  } = e, b = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), D = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
     unread: j,
     mentionCount: P
   } = (0, o.useStateFromStoresObject)([m.default], () => ({
     unread: m.default.hasUnread(t.id),
     mentionCount: m.default.getMentionCount(t.id)
-  })), G = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), U = a.useCallback(e => {
+  })), U = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), G = a.useCallback(e => {
     (0, h.openThreadSidebarForViewing)(t, !e.shiftKey, A.OpenThreadAnalyticsLocations.CHANNEL_LIST)
   }, [t]), w = a.useCallback(() => {
     d.default.preload(t.guild_id, t.id)
-  }, [t.guild_id, t.id]), F = a.useCallback(e => {
+  }, [t.guild_id, t.id]), B = a.useCallback(e => {
     let a = p.default.getChannel(t.id);
     null != a && (0, c.openContextMenuLazy)(e, async () => {
       let {
@@ -76,7 +76,7 @@ t.default = a.memo(function(e) {
         channel: a
       })
     })
-  }, [t.id]), B = null == D ? 0 : D.length, {
+  }, [t.id]), F = null == b ? 0 : b.length, {
     role: V,
     ...H
   } = (0, r.useListItem)(t.id), k = a.useRef(null), Y = P > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
@@ -93,9 +93,9 @@ t.default = a.memo(function(e) {
       [v.selected]: s
     }),
     children: [(0, l.jsx)(M, {
-      withGuildIcon: y
-    }), O ? null : (0, l.jsx)(M, {
-      withGuildIcon: y,
+      withGuildIcon: O
+    }), y ? null : (0, l.jsx)(M, {
+      withGuildIcon: O,
       style: {
         transform: "rotateX(180deg) translateY(-9px)"
       }
@@ -110,19 +110,19 @@ t.default = a.memo(function(e) {
       children: (0, l.jsxs)("div", {
         className: i()(v.iconVisibility, x.wrapper, x.typeThread, {
           [x.modeSelected]: s,
-          [x.modeMuted]: !s && G,
-          [x.modeUnreadImportant]: !G && !s && j,
-          [x.withGuildIcon]: y
+          [x.modeMuted]: !s && U,
+          [x.modeUnreadImportant]: !U && !s && j,
+          [x.withGuildIcon]: O
         }),
         onMouseDown: w,
-        onContextMenu: F,
-        children: [!j || G || s ? null : (0, l.jsx)("div", {
+        onContextMenu: B,
+        children: [!j || U || s ? null : (0, l.jsx)("div", {
           className: i()(x.unread, x.unreadImportant)
         }), (0, l.jsx)(u.Clickable, {
           ...H,
           innerRef: k,
           className: x.link,
-          onClick: U,
+          onClick: G,
           "aria-label": Y,
           focusProps: {
             enabled: !1
@@ -135,11 +135,11 @@ t.default = a.memo(function(e) {
               children: t.name
             }), (0, l.jsxs)("div", {
               className: x.children,
-              children: [B > 0 && t.userLimit > 0 ? (0, l.jsx)(S.default, {
-                userCount: B,
-                video: b,
+              children: [F > 0 && t.userLimit > 0 ? (0, l.jsx)(_.default, {
+                userCount: F,
+                video: D,
                 channel: t
-              }) : null, (0, _.default)(P) ? (0, l.jsx)(I.default, {
+              }) : null, (0, S.default)(P) ? (0, l.jsx)(I.default, {
                 mentionsCount: P
               }) : null]
             })]
@@ -150,7 +150,7 @@ t.default = a.memo(function(e) {
       channel: t,
       collapsed: !R,
       collapsedMax: 6,
-      voiceStates: D,
+      voiceStates: b,
       location: T.AnalyticsLocations.GUILD_CHANNEL_LIST
     })]
   })

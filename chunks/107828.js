@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Application: function() {
-    return y
+    return O
   },
   Channel: function() {
     return R
@@ -13,13 +13,13 @@ n.r(t), n.d(t, {
     return x
   },
   Header: function() {
-    return D
-  },
-  Link: function() {
     return b
   },
+  Link: function() {
+    return D
+  },
   User: function() {
-    return O
+    return y
   }
 }), n("47120");
 var l, a = n("735250"),
@@ -37,8 +37,8 @@ var l, a = n("735250"),
   C = n("2093"),
   g = n("366695"),
   E = n("346656"),
-  _ = n("409216"),
-  S = n("136033"),
+  S = n("409216"),
+  _ = n("136033"),
   I = n("757698"),
   N = n("630641"),
   T = n("689938"),
@@ -237,7 +237,7 @@ class R extends(l = s.Component) {
       voiceStates: e,
       channel: t
     } = this.props;
-    return null == e ? null : (0, a.jsx)(_.default, {
+    return null == e ? null : (0, a.jsx)(S.default, {
       className: A.voiceSummaryContainer,
       guildId: t.guild_id,
       users: e.map(e => {
@@ -382,7 +382,7 @@ class M extends s.Component {
     })
   }
 }
-class O extends s.Component {
+class y extends s.Component {
   renderIcon() {
     let {
       user: e
@@ -474,7 +474,7 @@ class O extends s.Component {
     })
   }
 }
-class y extends s.Component {
+class O extends s.Component {
   renderContent() {
     let {
       children: e,
@@ -514,7 +514,7 @@ class y extends s.Component {
     })
   }
 }
-class D extends s.Component {
+class b extends s.Component {
   render() {
     return (0, a.jsx)("div", {
       className: A.__invalid_resultDefault,
@@ -528,7 +528,7 @@ class D extends s.Component {
     })
   }
 }
-class b extends s.Component {
+class D extends s.Component {
   renderContent() {
     let e, t;
     let {
@@ -538,7 +538,7 @@ class b extends s.Component {
     return null == s || void 0 === s.messageId ? (e = T.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, a.jsx)(I.default, {
       width: 16,
       height: 16
-    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(S.default, {
+    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(_.default, {
       width: 16,
       height: 16
     })) : (e = T.default.Messages.QUICKSWITCHER_LINK_NO_ACCESS, t = (0, a.jsx)(N.default, {

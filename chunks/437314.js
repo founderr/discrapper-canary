@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("411104"), n("47120");
 var a, s = n("735250"),
-  l = n("470079"),
-  i = n("748780"),
+  i = n("470079"),
+  l = n("748780"),
   r = n("442837"),
   o = n("481060"),
   u = n("210887"),
@@ -29,7 +29,7 @@ let _ = Object.freeze({
       darkSrc: n("67764"),
       width: 376,
       height: 162,
-      renderContent: e => (0, s.jsxs)(l.Fragment, {
+      renderContent: e => (0, s.jsxs)(i.Fragment, {
         children: [(0, s.jsx)(d.default.Text, {
           note: f.default.Messages.FRIENDS_EMPTY_STATE_ALL
         }), (0, s.jsx)(o.Button, {
@@ -89,7 +89,7 @@ let _ = Object.freeze({
     let {
       theme: t
     } = e, n = f.default.Messages.FRIENDS_EMPTY_STATE_ALL, a = _.SECTION_ALL;
-    return (0, s.jsx)(l.Fragment, {
+    return (0, s.jsx)(i.Fragment, {
       children: (0, s.jsxs)(d.default, {
         theme: t,
         children: [(0, s.jsx)(d.default.Image, {
@@ -103,7 +103,7 @@ let _ = Object.freeze({
       })
     })
   };
-class m extends l.PureComponent {
+class m extends i.PureComponent {
   render() {
     let {
       type: e,
@@ -111,7 +111,7 @@ class m extends l.PureComponent {
       theme: n
     } = this.props, a = {
       opacity: this.state.opacity
-    }, l = function(e) {
+    }, i = function(e) {
       switch (e) {
         case c.FriendsSections.ADD_FRIEND:
         case c.FriendsSections.ALL:
@@ -130,36 +130,36 @@ class m extends l.PureComponent {
           throw Error("FriendsEmptyState: Invalid empty state")
       }
     }(e);
-    return e === c.FriendsSections.ADD_FRIEND ? (0, s.jsx)(i.default.div, {
+    return e === c.FriendsSections.ADD_FRIEND ? (0, s.jsx)(l.default.div, {
       className: E.friendsEmpty,
       style: a,
       children: (0, s.jsx)(C, {
         theme: n
       })
-    }) : (0, s.jsx)(i.default.div, {
+    }) : (0, s.jsx)(l.default.div, {
       className: E.friendsEmpty,
       style: a,
       children: (0, s.jsxs)(d.default, {
         theme: n,
         children: [(0, s.jsx)(d.default.Image, {
-          width: l.width,
-          height: l.height,
-          lightSrc: l.lightSrc,
-          darkSrc: l.darkSrc
-        }), l.renderContent(t)]
+          width: i.width,
+          height: i.height,
+          lightSrc: i.lightSrc,
+          darkSrc: i.darkSrc
+        }), i.renderContent(t)]
       })
     })
   }
   constructor(...e) {
     super(...e), h(this, "state", {
-      opacity: new i.default.Value(1)
+      opacity: new l.default.Value(1)
     }), h(this, "componentWillEnter", e => {
-      this.state.opacity.setValue(0), i.default.timing(this.state.opacity, {
+      this.state.opacity.setValue(0), l.default.timing(this.state.opacity, {
         toValue: 1,
         duration: 250
       }).start(e)
     }), h(this, "componentWillLeave", e => {
-      i.default.timing(this.state.opacity, {
+      l.default.timing(this.state.opacity, {
         toValue: 0,
         duration: 250
       }).start(e)

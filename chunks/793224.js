@@ -21,8 +21,8 @@ var a = n("442837"),
   C = n("594190"),
   g = n("569545"),
   E = n("989941"),
-  _ = n("199902"),
-  S = n("314897"),
+  S = n("199902"),
+  _ = n("314897"),
   I = n("944486"),
   N = n("885110"),
   T = n("449224"),
@@ -34,7 +34,7 @@ var a = n("442837"),
 
 function M() {
   let e = (0, a.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
-    t = (0, a.useStateFromStores)([S.default], () => S.default.getId()),
+    t = (0, a.useStateFromStores)([_.default], () => _.default.getId()),
     n = (0, a.useStateFromStores)([C.default, T.default], () => (0, E.default)(C.default, T.default)),
     {
       canBroadcast: M
@@ -43,23 +43,23 @@ function M() {
     }, {
       autoTrackExposure: !1
     }),
-    O = (0, c.default)() && null != n,
-    y = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
-    D = (0, a.useStateFromStoresArray)([_.default], () => _.default.getAllActiveStreams());
-  if (!O && !y) return null;
+    y = (0, c.default)() && null != n,
+    O = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
+    b = (0, a.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams());
+  if (!y && !O) return null;
   if (d.default.trackExposure({
       location: "broadcast_button_rtc_panel"
     }), !M) return null;
-  let b = [];
-  O && b.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
+  let D = [];
+  y && D.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
   let j = () => {
       o.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
         game_id: null == n ? void 0 : n.id
       })
     },
     P = () => {
-      if (O) {
-        let l = D.find(e => e.ownerId === t);
+      if (y) {
+        let l = b.find(e => e.ownerId === t);
         null == l ? (0, p.openBroadcastingPrivacySettingsModal)(R.default.Messages.START_BROADCASTING, R.default.Messages.START_BROADCASTING_CTA, () => {
           (0, r.createBroadcastChannelOrStartStream)({
             pid: null == n ? void 0 : n.pid,
@@ -68,22 +68,22 @@ function M() {
         }) : (0, u.startBroadcastForStream)((0, g.encodeStreamKey)(l), null == n ? void 0 : n.pid)
       } else(0, u.stopBroadcast)()
     },
-    G = e => (0, l.jsx)(L.default, {
-      tooltipText: O ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,
+    U = e => (0, l.jsx)(L.default, {
+      tooltipText: y ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,
       onClick: () => {
         P(), null == e || e(x.ContentDismissActionType.UNKNOWN)
       },
       onMouseEnter: j,
-      icon: O ? A.default : () => (0, l.jsx)(h.default, {
+      icon: y ? A.default : () => (0, l.jsx)(h.default, {
         width: 20,
         height: 20
       })
     }),
-    U = e => (0, l.jsx)(f.default, {
+    G = e => (0, l.jsx)(f.default, {
       markAsDismissed: e
     });
   return (0, l.jsx)(m.default, {
-    contentTypes: b,
+    contentTypes: D,
     bypassAutoDismiss: !0,
     children: e => {
       let {
@@ -93,10 +93,10 @@ function M() {
       return t === s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP ? (0, l.jsx)(i.Popout, {
         position: "top",
         align: "center",
-        renderPopout: () => U(n),
+        renderPopout: () => G(n),
         shouldShow: !0,
-        children: () => G(n)
-      }) : G()
+        children: () => U(n)
+      }) : U()
     }
   })
 }

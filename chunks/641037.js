@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a = n("735250");
+var l = n("735250");
 n("470079");
-var s = n("481060"),
-  l = n("931240"),
+var a = n("481060"),
+  s = n("931240"),
   i = n("308083"),
   r = n("689938");
 
@@ -67,15 +67,15 @@ async function d(e) {
     progress: r
   } = e;
   try {
-    await l.convertGuildToClan(t, r)
+    await s.convertGuildToClan(t, r)
   } catch (e) {
     return
   }
-  i(), (0, s.openModalLazy)(async () => {
+  i(), (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("99387"), n.e("63636")]).then(n.bind(n, "511385"));
-    return n => (0, a.jsx)(e, {
+    return n => (0, l.jsx)(e, {
       guildId: t,
       tag: r.tag,
       brandPrimaryColor: r.brandPrimaryColor,

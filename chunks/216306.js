@@ -4,136 +4,136 @@ s.r(t), s.d(t, {
     return h
   },
   getActiveAgoTimestamp: function() {
-    return P
+    return v
   },
   getFirstRouteFor: function() {
-    return f
+    return R
   },
   useChannelBrowserChannelCount: function() {
-    return y
-  },
-  useChannelBrowserSections: function() {
     return p
   },
+  useChannelBrowserSections: function() {
+    return m
+  },
   useFilterCategoriesByQuery: function() {
-    return R
+    return U
   }
 }), s("733860");
-var E = s("470079"),
-  _ = s("658722"),
-  a = s.n(_),
-  n = s("913527"),
-  T = s.n(n),
-  i = s("442837"),
-  u = s("524437"),
-  A = s("45114"),
-  l = s("740504"),
-  I = s("605236"),
-  r = s("931261"),
-  o = s("540126"),
-  L = s("671098"),
-  d = s("703656"),
-  S = s("592125"),
+var a = s("470079"),
+  n = s("658722"),
+  i = s.n(n),
+  E = s("913527"),
+  l = s.n(E),
+  _ = s("442837"),
+  r = s("524437"),
+  u = s("45114"),
+  o = s("740504"),
+  T = s("605236"),
+  d = s("931261"),
+  A = s("540126"),
+  I = s("671098"),
+  L = s("703656"),
+  c = s("592125"),
   N = s("324067"),
-  g = s("306680"),
-  D = s("709054"),
-  c = s("981631"),
-  G = s("176505"),
-  O = s("443063"),
-  U = s("490897"),
-  C = s("689938");
+  S = s("306680"),
+  g = s("709054"),
+  D = s("981631"),
+  C = s("176505"),
+  f = s("443063"),
+  O = s("490897"),
+  G = s("689938");
 
 function M(e, t) {
   e.index = t
 }
 
-function R(e, t, s, _) {
-  _ = _.toLowerCase();
-  let n = (0, r.useCanSeeOnboardingHome)(e),
-    T = E.useCallback((e, t) => !(n && e.channel.hasFlag(G.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== c.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || a()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [n]);
-  return E.useMemo(() => {
+function U(e, t, s, n) {
+  n = n.toLowerCase();
+  let E = (0, d.useCanSeeOnboardingHome)(e),
+    l = a.useCallback((e, t) => !(E && e.channel.hasFlag(C.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== D.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || i()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [E]);
+  return a.useMemo(() => {
     let e = {
       null: [],
       _categories: []
     };
-    return s[c.ChannelTypes.GUILD_CATEGORY].forEach(s => {
+    return s[D.ChannelTypes.GUILD_CATEGORY].forEach(s => {
       let {
-        channel: E
+        channel: a
       } = s;
-      "null" === E.id && (e.null = t.null.filter(e => T(e, _))), e[E.id] = t[E.id].filter(e => T(e, _))
-    }), e._categories = t._categories.filter(t => "null" === t.channel.id || 0 === _.length || e[t.channel.id].length > 0), (0, l.default)(e._categories, e).forEach(M), e
-  }, [t, s, T, _])
+      "null" === a.id && (e.null = t.null.filter(e => l(e, n))), e[a.id] = t[a.id].filter(e => l(e, n))
+    }), e._categories = t._categories.filter(t => "null" === t.channel.id || 0 === n.length || e[t.channel.id].length > 0), (0, o.default)(e._categories, e).forEach(M), e
+  }, [t, s, l, n])
 }
 
-function f(e) {
+function R(e) {
   let t = e.getSections();
-  if (t[o.SECTION_INDEX_COMMUNITY] > 0) switch (e.getCommunitySection().getRow(0)) {
-    case O.ChannelListCommunityRow.GUILD_HOME:
-      return G.StaticChannelRoute.GUILD_HOME;
-    case O.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
-      return G.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
-    case O.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS:
-      return G.StaticChannelRoute.MEMBER_APPLICATIONS
+  if (t[A.SECTION_INDEX_COMMUNITY] > 0) switch (e.getCommunitySection().getRow(0)) {
+    case f.ChannelListCommunityRow.GUILD_HOME:
+      return C.StaticChannelRoute.GUILD_HOME;
+    case f.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
+      return C.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
+    case f.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS:
+      return C.StaticChannelRoute.MEMBER_APPLICATIONS
   }
-  for (let E = o.SECTION_INDEX_UNCATEGORIZED_CHANNELS; E < e.voiceChannelsSectionNumber; E++)
-    if (t[E] > 0) {
+  for (let a = A.SECTION_INDEX_UNCATEGORIZED_CHANNELS; a < e.voiceChannelsSectionNumber; a++)
+    if (t[a] > 0) {
       var s;
-      let t = null === (s = e.getChannelFromSectionRow(E, 0)) || void 0 === s ? void 0 : s.channel;
+      let t = null === (s = e.getChannelFromSectionRow(a, 0)) || void 0 === s ? void 0 : s.channel;
       if (null != t) return t.id
     } return null
 }
 
 function h(e, t) {
   let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-  (0, L.bulkClearRecents)(e, t), (0, A.bulkAck)(t.map(e => ({
+  (0, I.bulkClearRecents)(e, t), (0, u.bulkAck)(t.map(e => ({
     channelId: e,
-    readStateType: U.ReadStateTypes.CHANNEL,
-    messageId: g.default.lastMessageId(e)
-  }))), null != s && (0, d.transitionTo)(c.Routes.CHANNEL(e, s))
+    readStateType: O.ReadStateTypes.CHANNEL,
+    messageId: S.default.lastMessageId(e)
+  }))), null != s && (0, L.transitionTo)(D.Routes.CHANNEL(e, s))
 }
 
-function p(e, t, s, E) {
-  let _ = (0, I.useIsDismissibleContentDismissed)(u.DismissibleContent.CHANNEL_BROWSER_NUX),
-    a = (0, i.useStateFromStoresObject)([S.default], () => {
+function m(e, t, s, a) {
+  let n = (0, T.useIsDismissibleContentDismissed)(r.DismissibleContent.CHANNEL_BROWSER_NUX),
+    i = (0, _.useStateFromStoresObject)([c.default], () => {
       let t = {},
-        s = S.default.getMutableGuildChannelsForGuild(e);
+        s = c.default.getMutableGuildChannelsForGuild(e);
       for (let e in s) {
         let {
-          parent_id: _
+          parent_id: n
         } = s[e];
-        if (null != _) {
-          var E;
-          t[_] = (null !== (E = t[_]) && void 0 !== E ? E : 0) + 1
+        if (null != n) {
+          var a;
+          t[n] = (null !== (a = t[n]) && void 0 !== a ? a : 0) + 1
         }
       }
       return t
     }, [e]),
-    n = t._categories.map(e => {
-      let E = t[e.channel.id];
+    E = t._categories.map(e => {
+      let a = t[e.channel.id];
       return {
-        rowCount: "null" !== e.channel.id && 0 === a[e.channel.id] ? 1 : E.length,
-        rowHeight: 0 === E.length ? 0 : s
+        rowCount: "null" !== e.channel.id && 0 === i[e.channel.id] ? 1 : a.length,
+        rowHeight: 0 === a.length ? 0 : s
       }
     });
-  return !_ && null != E && n.unshift({
+  return !n && null != a && E.unshift({
     rowCount: 1,
-    rowHeight: E
-  }), n
+    rowHeight: a
+  }), E
 }
 
-function y(e) {
+function p(e) {
   var t, s;
-  let E = (0, i.useStateFromStores)([N.default], () => N.default.getCategories(e)),
-    _ = E._categories.length,
-    a = E._categories[E._categories.length - 1];
-  if (null == a) return 0;
-  let n = E[null !== (s = null === (t = a.channel) || void 0 === t ? void 0 : t.id) && void 0 !== s ? s : "null"];
-  return null == n ? 0 : 0 === n.length ? a.index + 2 - _ : n[n.length - 1].index + 2 - _
+  let a = (0, _.useStateFromStores)([N.default], () => N.default.getCategories(e)),
+    n = a._categories.length,
+    i = a._categories[a._categories.length - 1];
+  if (null == i) return 0;
+  let E = a[null !== (s = null === (t = i.channel) || void 0 === t ? void 0 : t.id) && void 0 !== s ? s : "null"];
+  return null == E ? 0 : 0 === E.length ? i.index + 2 - n : E[E.length - 1].index + 2 - n
 }
 
-function P(e) {
+function v(e) {
   var t;
-  return C.default.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
-    timeAgo: T()(D.default.extractTimestamp(null !== (t = g.default.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow()
+  return G.default.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
+    timeAgo: l()(g.default.extractTimestamp(null !== (t = S.default.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow()
   })
 }

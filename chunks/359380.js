@@ -1,49 +1,49 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  i = n.n(s),
-  l = n("481060"),
-  o = n("90062"),
-  c = n("964309"),
-  d = n("898543"),
-  u = n("87576"),
-  f = n("308083"),
-  m = n("689938"),
-  h = n("418571");
-let p = e => {
+s.r(t), s("47120");
+var a = s("735250"),
+  n = s("470079"),
+  i = s("120356"),
+  E = s.n(i),
+  l = s("481060"),
+  _ = s("90062"),
+  r = s("964309"),
+  u = s("898543"),
+  o = s("87576"),
+  T = s("308083"),
+  d = s("689938"),
+  A = s("418571");
+let I = e => {
   let {
     title: t,
-    icon: n,
-    traits: s,
-    interests: o,
-    handleUpdate: c
-  } = e, d = r.useCallback(e => {
-    let t = new Set(o);
-    t.delete(e), c(t)
-  }, [c, o]), u = r.useCallback(e => {
-    if (o.size === f.MAX_NUM_INTERESTS) return;
-    let t = new Set(o);
-    t.add(e), c(t)
-  }, [c, o]);
+    icon: s,
+    traits: i,
+    interests: _,
+    handleUpdate: r
+  } = e, u = n.useCallback(e => {
+    let t = new Set(_);
+    t.delete(e), r(t)
+  }, [r, _]), o = n.useCallback(e => {
+    if (_.size === T.MAX_NUM_INTERESTS) return;
+    let t = new Set(_);
+    t.add(e), r(t)
+  }, [r, _]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(l.Text, {
-      className: h.interestsCategoryTitle,
+      className: A.interestsCategoryTitle,
       variant: "text-xs/semibold",
       color: "text-muted",
       children: t
     }), (0, a.jsx)("div", {
-      className: h.interestsCategory,
-      children: s.map(e => {
-        let t = o.has(e);
+      className: A.interestsCategory,
+      children: i.map(e => {
+        let t = _.has(e);
         return (0, a.jsxs)(l.Clickable, {
-          className: i()(h.interestsTag, h.selectableOption, {
-            [h.selectedOption]: t
+          className: E()(A.interestsTag, A.selectableOption, {
+            [A.selectedOption]: t
           }),
-          onClick: () => t ? d(e) : u(e),
-          children: [(0, a.jsx)(n, {
-            className: h.utilityTagIcon
+          onClick: () => t ? u(e) : o(e),
+          children: [(0, a.jsx)(s, {
+            className: A.utilityTagIcon
           }), (0, a.jsx)(l.Text, {
             variant: "text-xs/medium",
             color: "none",
@@ -57,77 +57,77 @@ let p = e => {
 t.default = e => {
   let {
     title: t,
-    description: n,
-    handleUpdate: s,
-    interests: i,
-    requiredGameId: T,
-    optional: E = !1
-  } = e, C = r.useMemo(() => m.default.getAvailableLocales().map(e => ({
+    description: s,
+    handleUpdate: i,
+    interests: E,
+    requiredGameId: L,
+    optional: c = !1
+  } = e, N = n.useMemo(() => d.default.getAvailableLocales().map(e => ({
     value: e.value,
     label: e.localizedName
-  })), []), _ = r.useMemo(() => Array.from(i), [i]), x = r.useMemo(() => _.filter(e => f.LANGUAGES_SET.has(e)), [_]), g = r.useCallback(e => {
-    let t = _.filter(e => !f.LANGUAGES_SET.has(e));
-    s(new Set([...t, ...e]))
-  }, [s, _]), I = r.useMemo(() => _.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [_]);
+  })), []), S = n.useMemo(() => Array.from(E), [E]), g = n.useMemo(() => S.filter(e => T.LANGUAGES_SET.has(e)), [S]), D = n.useCallback(e => {
+    let t = S.filter(e => !T.LANGUAGES_SET.has(e));
+    i(new Set([...t, ...e]))
+  }, [i, S]), C = n.useMemo(() => S.filter(e => T.ALL_TRAITS_SET.has(e) || T.LANGUAGES_SET.has(e)), [S]);
   return (0, a.jsxs)("div", {
-    className: h.slideContent,
-    children: [E && (0, a.jsx)(l.Text, {
+    className: A.slideContent,
+    children: [c && (0, a.jsx)(l.Text, {
       variant: "text-sm/medium",
       color: "header-secondary",
-      className: h.optionalTag,
-      children: m.default.Messages.CLAN_SETUP_OPTIONAL
+      className: A.optionalTag,
+      children: d.default.Messages.CLAN_SETUP_OPTIONAL
     }), (0, a.jsx)(l.Heading, {
       variant: "heading-xxl/medium",
-      className: h.title,
+      className: A.title,
       children: t
     }), (0, a.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: h.subtitle,
-      children: n
+      className: A.subtitle,
+      children: s
     }), (0, a.jsxs)("div", {
-      className: h.content,
+      className: A.content,
       children: [(0, a.jsxs)("div", {
-        className: h.mainPanelContainer,
-        children: [T === f.VALORANT_ID && (0, a.jsx)(p, {
-          title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
-          icon: d.default,
-          traits: f.VALORANT_TRAITS,
-          interests: i,
-          handleUpdate: s
-        }), (0, a.jsx)(p, {
-          title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
-          icon: o.default,
-          traits: f.AGE_TRAITS,
-          interests: i,
-          handleUpdate: s
-        }), (0, a.jsx)(p, {
-          title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
-          icon: c.default,
-          traits: f.IDENTITY_TRAITS,
-          interests: i,
-          handleUpdate: s
+        className: A.mainPanelContainer,
+        children: [L === T.VALORANT_ID && (0, a.jsx)(I, {
+          title: d.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
+          icon: u.default,
+          traits: T.VALORANT_TRAITS,
+          interests: E,
+          handleUpdate: i
+        }), (0, a.jsx)(I, {
+          title: d.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
+          icon: _.default,
+          traits: T.AGE_TRAITS,
+          interests: E,
+          handleUpdate: i
+        }), (0, a.jsx)(I, {
+          title: d.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
+          icon: r.default,
+          traits: T.IDENTITY_TRAITS,
+          interests: E,
+          handleUpdate: i
         }), (0, a.jsx)(l.Text, {
-          className: h.interestsCategoryTitle,
+          className: A.interestsCategoryTitle,
           variant: "text-xs/semibold",
           color: "text-muted",
-          children: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LANGUAGE
+          children: d.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LANGUAGE
         }), (0, a.jsx)("div", {
-          className: h.languageSelect,
+          className: A.languageSelect,
           children: (0, a.jsx)(l.SearchableSelect, {
-            wrapperClassName: h.input,
-            options: C,
-            value: x,
-            onChange: g,
-            placeholder: m.default.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
+            wrapperClassName: A.input,
+            options: N,
+            value: g,
+            onChange: D,
+            placeholder: d.default.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
             multi: !0
           })
         })]
       }), (0, a.jsx)("div", {
-        className: h.fixedWidthSidebar,
-        children: _.length > 0 && (0, a.jsx)(u.default, {
-          traits: _,
-          traitsToHighlight: I
+        className: A.fixedWidthSidebar,
+        children: S.length > 0 && (0, a.jsx)(o.default, {
+          traits: S,
+          traitsToHighlight: C
         })
       })]
     })]

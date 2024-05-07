@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n("47120");
-var a, r = n("735250"),
+var i, r = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  a = n("120356"),
+  l = n.n(a),
   o = n("481060"),
-  c = n("86813"),
-  d = n("826026"),
-  u = n("981631"),
+  u = n("86813"),
+  c = n("826026"),
+  d = n("981631"),
   f = n("455030");
 
-function m(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -18,19 +18,19 @@ function m(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let h = e => (0, r.jsx)("div", {
+let _ = e => (0, r.jsx)("div", {
   className: e.className,
   children: e.children
 });
-class p extends(a = s.PureComponent) {
+class E extends(i = s.PureComponent) {
   isSortable(e) {
     return null != e.sort && !1 !== e.sort
   }
   getDefaultSort(e) {
     return (t, n) => {
-      let a = t[e],
+      let i = t[e],
         r = n[e];
-      return null != a && null != r ? a === r ? 0 : a < r ? -1 : 1 : 0
+      return null != i && null != r ? i === r ? 0 : i < r ? -1 : 1 : 0
     }
   }
   renderHeader() {
@@ -38,32 +38,32 @@ class p extends(a = s.PureComponent) {
       columns: e,
       data: t,
       sortDirection: n,
-      sortKey: a,
+      sortKey: i,
       headerCellClassName: s,
-      headerClassName: i,
-      sortedHeaderCellClassName: m,
-      stickyHeader: p
-    } = this.props, T = e.map(e => {
-      let i = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
-        h = n === u.TableSortDirections.ASCENDING ? d.default : c.default;
+      headerClassName: a,
+      sortedHeaderCellClassName: p,
+      stickyHeader: E
+    } = this.props, I = e.map(e => {
+      let a = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
+        _ = n === d.TableSortDirections.ASCENDING ? c.default : u.default;
       return (0, r.jsx)(o.Clickable, {
-        className: l()(f.headerCell, s, e.headerCellClassName, e.cellClassName, a === e.key && m, {
+        className: l()(f.headerCell, s, e.headerCellClassName, e.cellClassName, i === e.key && p, {
           [f.clickable]: this.isSortable(e)
         }),
         onClick: this.isSortable(e) ? () => this.handleSort(e.key) : void 0,
         children: (0, r.jsxs)("div", {
           className: f.headerCellContent,
-          children: [i, this.isSortable(e) && a === e.key ? (0, r.jsx)(h, {
+          children: [a, this.isSortable(e) && i === e.key ? (0, r.jsx)(_, {
             className: f.sortIcon
           }) : null]
         })
       }, e.key)
     });
-    return (0, r.jsx)(h, {
-      className: l()(i, f.row, {
-        [f.stickyHeader]: p
+    return (0, r.jsx)(_, {
+      className: l()(a, f.row, {
+        [f.stickyHeader]: E
       }),
-      children: T
+      children: I
     })
   }
   renderBody() {
@@ -71,40 +71,40 @@ class p extends(a = s.PureComponent) {
       columns: e,
       data: t,
       sortData: n,
-      sortKey: a,
+      sortKey: i,
       sortDirection: r,
-      bodyCellClassName: i,
+      bodyCellClassName: a,
       rowClassName: o,
-      cellProps: c,
-      rowProps: d,
-      rowComponent: m,
-      cellComponent: h
-    } = this.props, p = t;
+      cellProps: u,
+      rowProps: c,
+      rowComponent: p,
+      cellComponent: _
+    } = this.props, E = t;
     if (n) {
-      let n = null != a ? e.find(e => {
+      let n = null != i ? e.find(e => {
           let {
             key: t
           } = e;
-          return t === a
+          return t === i
         }) : null,
         s = [...t],
-        i = null != n && n.sort,
-        l = null != n && null != a && this.isSortable(n) ? s.sort("function" == typeof i ? (e, t) => i(e, t, r) : this.getDefaultSort(a)) : s;
-      p = null != n && r === u.TableSortDirections.DESCENDING ? l.reverse() : l
+        a = null != n && n.sort,
+        l = null != n && null != i && this.isSortable(n) ? s.sort("function" == typeof a ? (e, t) => a(e, t, r) : this.getDefaultSort(i)) : s;
+      E = null != n && r === d.TableSortDirections.DESCENDING ? l.reverse() : l
     }
-    return p.map((t, n) => {
-      let a = e.map(e => (0, s.createElement)(h, {
-        ...c,
+    return E.map((t, n) => {
+      let i = e.map(e => (0, s.createElement)(_, {
+        ...u,
         key: e.key,
         item: t,
-        className: l()(i, e.bodyCellClassName, e.cellClassName)
-      }, null != e.render ? e.render(t, c, n) : t[e.key]));
-      return (0, s.createElement)(m, {
-        ...d,
+        className: l()(a, e.bodyCellClassName, e.cellClassName)
+      }, null != e.render ? e.render(t, u, n) : t[e.key]));
+      return (0, s.createElement)(p, {
+        ...c,
         key: t.key,
         item: t,
         className: l()(f.row, o)
-      }, a)
+      }, i)
     })
   }
   render() {
@@ -118,19 +118,19 @@ class p extends(a = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), m(this, "handleSort", e => {
+    super(...e), p(this, "handleSort", e => {
       let {
         sortKey: t,
         sortDirection: n,
-        onSort: a
+        onSort: i
       } = this.props;
-      null != a && a(e, t === e ? n === u.TableSortDirections.ASCENDING ? u.TableSortDirections.DESCENDING : u.TableSortDirections.ASCENDING : u.TableSortDirections.ASCENDING)
+      null != i && i(e, t === e ? n === d.TableSortDirections.ASCENDING ? d.TableSortDirections.DESCENDING : d.TableSortDirections.ASCENDING : d.TableSortDirections.ASCENDING)
     })
   }
 }
-m(p, "SortDirection", u.TableSortDirections), m(p, "defaultProps", {
-  initialSortDirection: u.TableSortDirections.ASCENDING,
-  rowHeaderComponent: h,
+p(E, "SortDirection", d.TableSortDirections), p(E, "defaultProps", {
+  initialSortDirection: d.TableSortDirections.ASCENDING,
+  rowHeaderComponent: _,
   rowComponent: e => (0, r.jsx)("div", {
     className: e.className,
     children: e.children
@@ -142,4 +142,4 @@ m(p, "SortDirection", u.TableSortDirections), m(p, "defaultProps", {
   hasHeader: !0,
   sortData: !0,
   stickyHeader: !1
-}), t.default = p
+}), t.default = E

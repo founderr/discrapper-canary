@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("924826"),
-  l = n("442837"),
-  i = n("215569"),
+  i = n("442837"),
+  l = n("215569"),
   r = n("481060"),
   o = n("607070"),
   u = n("981631"),
@@ -16,14 +16,14 @@ t.default = function(e) {
     searchQuery: c,
     sectionFilter: f,
     useReducedMotion: E
-  } = e, h = (0, l.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), _ = (0, s.default)({
+  } = e, h = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), _ = (0, s.default)({
     id: "people",
     isEnabled: h,
     async scrollToStart() {},
     async scrollToEnd() {}
   }), C = f !== u.FriendsSections.ONLINE && f !== u.FriendsSections.ALL, m = E || "" !== c || C, S = t.map((e, t) => m ? (0, a.jsx)("div", {
     children: e.map(n)
-  }, t) : (0, a.jsx)(i.TransitionGroup, {
+  }, t) : (0, a.jsx)(l.TransitionGroup, {
     transitionAppear: !1,
     component: "div",
     children: e.map(n)

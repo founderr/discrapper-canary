@@ -1,4 +1,4 @@
 "use strict";
-A.r(t);
-var a = A("823475");
-A.es(a, t)
+t.r(A);
+var a = t("823475");
+t.es(a, A)

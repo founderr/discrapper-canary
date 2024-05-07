@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return p
   },
   getCustomConfettiDisplayOptions: function() {
-    return g
+    return I
   }
 }), n("627341");
-var a, s, l, i, r = n("278074"),
+var a, s, i, l, r = n("278074"),
   o = n("180650"),
   u = n("524437"),
   d = n("689938"),
@@ -27,7 +27,7 @@ var a, s, l, i, r = n("278074"),
   _ = n("782984"),
   C = n("186077"),
   m = n("376477");
-(l = a || (a = {}))[l.NONE = 0] = "NONE", l[l.TOOLTIP = 1] = "TOOLTIP", l[l.COACHTIP = 2] = "COACHTIP", (i = s || (s = {})).NONE = "NONE", i.SHY = "SHY", i.LOFI_VIBES = "LOFI_VIBES", i.GALAXY = "GALAXY";
+(i = a || (a = {}))[i.NONE = 0] = "NONE", i[i.TOOLTIP = 1] = "TOOLTIP", i[i.COACHTIP = 2] = "COACHTIP", (l = s || (s = {})).NONE = "NONE", l.SHY = "SHY", l.LOFI_VIBES = "LOFI_VIBES", l.GALAXY = "GALAXY";
 let S = {
     [u.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
       type: 2,
@@ -63,7 +63,7 @@ let S = {
     labelColor: "rgba(15, 25, 35, 1)",
     iconSrc: C
   })).otherwise(() => null),
-  I = {
+  g = {
     SHY: {
       confettiAssetSrc: E,
       style: {
@@ -72,4 +72,4 @@ let S = {
       }
     }
   },
-  g = e => (0, r.match)(e).with("1220513977683935373", () => I.SHY).with("1220432647453409384", () => I.SHY).with("1220432697718083614", () => I.SHY).otherwise(() => null)
+  I = e => (0, r.match)(e).with("1220513977683935373", () => g.SHY).with("1220432647453409384", () => g.SHY).with("1220432697718083614", () => g.SHY).otherwise(() => null)

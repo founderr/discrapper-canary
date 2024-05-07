@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("718017"),
   o = n("442837"),
   u = n("481060"),
@@ -21,26 +21,26 @@ var a = n("735250"),
   m = n("932724"),
   S = n("672339"),
   p = n("898531"),
-  I = n("923973"),
-  g = n("189771"),
+  g = n("923973"),
+  I = n("189771"),
   T = n("560688"),
   A = n("871499"),
   N = n("136995"),
   v = n("25827"),
   R = n("131951"),
-  L = n("594174"),
-  O = n("451478"),
+  O = n("594174"),
+  L = n("451478"),
   M = n("465670"),
-  P = n("421600"),
-  y = n("792125"),
+  y = n("421600"),
+  P = n("792125"),
   x = n("358221"),
   D = n("793865"),
   b = n("981631"),
   U = n("65154"),
   j = n("689938"),
   G = n("746302"),
-  w = n("976587");
-let k = {
+  k = n("976587");
+let w = {
     width: 232,
     height: 315
   },
@@ -56,22 +56,22 @@ let k = {
 function H(e) {
   let {
     header: t
-  } = e, n = R.default.getCameraComponent(), l = (0, o.useStateFromStores)([R.default], () => R.default.getVideoDeviceId()), i = (0, p.default)();
+  } = e, n = R.default.getCameraComponent(), i = (0, o.useStateFromStores)([R.default], () => R.default.getVideoDeviceId()), l = (0, p.default)();
   return s.useEffect(() => {
-    let e = L.default.getCurrentUser();
-    if (i && null != e) {
+    let e = O.default.getCurrentUser();
+    if (l && null != e) {
       let t = (0, m.getLastUsedVideoBackgroundOption)(e);
-      (0, S.applyBackgroundOptionPreview)(t, l, {
+      (0, S.applyBackgroundOptionPreview)(t, i, {
         track: !1
       }).catch(b.NOOP)
     }
-  }, [i, l]), (0, a.jsxs)("div", {
+  }, [l, i]), (0, a.jsxs)("div", {
     className: G.previewRoot,
     children: [(0, a.jsx)(u.Spinner, {}), (0, a.jsx)("div", {
       className: G.preview,
       children: (0, a.jsx)(n, {
         disabled: !1,
-        deviceId: l,
+        deviceId: i,
         width: B.width,
         height: B.height
       })
@@ -88,9 +88,9 @@ function V(e) {
     channel: n,
     numVideoDevices: s
   } = e, {
-    cameraUnavailable: l,
+    cameraUnavailable: i,
     enabled: r
-  } = (0, I.default)(), o = (0, g.default)(n);
+  } = (0, g.default)(), o = (0, I.default)(n);
   return (0, a.jsxs)("div", {
     className: G.actions,
     children: [(0, a.jsx)(A.CenterControlButton, {
@@ -113,7 +113,7 @@ function V(e) {
       animation: u.Popout.Animation.FADE,
       children: (e, t) => {
         let {
-          onClick: i
+          onClick: l
         } = e, {
           isShown: u
         } = t;
@@ -123,9 +123,9 @@ function V(e) {
           color: "green",
           centerButton: !0,
           hasPermission: o,
-          cameraUnavailable: l,
+          cameraUnavailable: i,
           channel: n,
-          onPopoutClick: s > 1 ? i : null,
+          onPopoutClick: s > 1 ? l : null,
           className: G.actionButton,
           popoutOpen: u,
           onCameraUnavailable: T.default,
@@ -138,7 +138,7 @@ function V(e) {
       channel: n,
       color: "green",
       centerButton: !0,
-      className: i()(G.actionButton, G.last)
+      className: l()(G.actionButton, G.last)
     })]
   })
 }
@@ -147,9 +147,9 @@ function Y(e) {
   let {
     animatedStyle: t,
     y: n,
-    x: l,
+    x: i,
     channel: f
-  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, g] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), T = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [g, I] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), T = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), v = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -164,13 +164,13 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
-  let L = A === b.ChannelModes.VIDEO && I && g > 0,
+  let O = A === b.ChannelModes.VIDEO && g && I > 0,
     M = (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(P.default, {
+      children: [(0, a.jsx)(y.default, {
         className: G.icon,
         ringing: T,
         src: null != S ? S : "",
-        ringingType: P.default.RingingType.INCOMING,
+        ringingType: y.default.RingingType.INCOMING,
         size: C ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
       }), (0, a.jsxs)("div", {
         className: G.titleGroup,
@@ -187,12 +187,12 @@ function Y(e) {
         })]
       })]
     }),
-    D = L ? k : F;
+    D = O ? w : F;
   return (0, a.jsx)(E.default, {
     className: G.wrapper,
     selector: ".".concat(G.root),
     initialPosition: {
-      left: l,
+      left: i,
       top: n
     },
     maxX: window.innerWidth,
@@ -201,9 +201,9 @@ function Y(e) {
     dragAnywhere: !0,
     children: (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)(r.animated.div, {
-        className: i()(G.root, w.elevationHigh, {
+        className: l()(G.root, k.elevationHigh, {
           [G.previewCamera]: C
-        }, C ? (0, y.getThemeClass)("dark") : null),
+        }, C ? (0, P.getThemeClass)("dark") : null),
         style: {
           ...t,
           width: v.value.interpolate([0, 1], [D.width, B.width]),
@@ -216,10 +216,10 @@ function Y(e) {
           className: G.mainChannelInfo,
           children: M
         }), (0, a.jsx)(V, {
-          canVideo: L,
+          canVideo: O,
           channel: f,
-          numVideoDevices: g
-        }), L && !C ? (0, a.jsx)(u.Button, {
+          numVideoDevices: I
+        }), O && !C ? (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           fullWidth: !0,
           look: u.Button.Looks.LINK,

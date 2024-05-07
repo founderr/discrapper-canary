@@ -2,8 +2,8 @@
 n.r(t), n("653041");
 var a = n("735250"),
   s = n("470079"),
-  l = n("481060"),
-  i = n("570140"),
+  i = n("481060"),
+  l = n("570140"),
   r = n("906732"),
   o = n("451603"),
   u = n("885714"),
@@ -30,8 +30,8 @@ t.default = e => {
     guildsData: m,
     analyticsContext: S,
     theme: p,
-    onViewGuild: I,
-    fetchGuilds: g,
+    onViewGuild: g,
+    fetchGuilds: I,
     onGuildCardSeen: T,
     currentCategoryId: A,
     loadId: N,
@@ -39,18 +39,18 @@ t.default = e => {
     showMoreCards: R = !1
   } = e;
   s.useEffect(() => {
-    i.default.wait(() => g())
+    l.default.wait(() => I())
   }, [A]);
-  let L = (0, c.default)(R ? _ : h),
+  let O = (0, c.default)(R ? _ : h),
     {
-      analyticsLocations: O
+      analyticsLocations: L
     } = (0, r.default)();
   if (null == m) return null;
   let {
     guilds: M,
-    loading: P
-  } = m, y = null == M || 0 === M.length;
-  if (!P && y) return null;
+    loading: y
+  } = m, P = null == M || 0 === M.length;
+  if (!y && P) return null;
   let x = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
@@ -60,18 +60,18 @@ t.default = e => {
         page: f.AnalyticsPages.GUILD_DISCOVERY,
         section: f.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
       },
-      analyticsLocations: O
+      analyticsLocations: L
     });
     else {
       let t = M.findIndex(t => t.id === e);
-      await I(e, t, S, N)
+      await g(e, t, S, N)
     }
   };
-  if (P || null == M) {
+  if (y || null == M) {
     let e = [];
-    for (let t = 0; t < L; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
+    for (let t = 0; t < O; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = M.slice(0, L).map(e => (0, a.jsx)(d.default, {
+  } else t = M.slice(0, O).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
     onView: x,
@@ -81,13 +81,13 @@ t.default = e => {
   }, e.id));
   return (0, a.jsx)("section", {
     className: E.guildListSection,
-    children: (0, a.jsxs)(l.HeadingLevel, {
-      component: (0, a.jsx)(l.Heading, {
+    children: (0, a.jsxs)(i.HeadingLevel, {
+      component: (0, a.jsx)(i.Heading, {
         className: E.__invalid_title,
         variant: "heading-lg/semibold",
         children: n
       }),
-      children: [null != C && (0, a.jsx)(l.Text, {
+      children: [null != C && (0, a.jsx)(i.Text, {
         className: E.subtitle,
         variant: "text-sm/normal",
         color: "header-secondary",

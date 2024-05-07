@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("692547"),
-  l = n("481060"),
-  i = n("436088"),
+  i = n("481060"),
+  l = n("436088"),
   r = n("770471"),
   o = n("143614"),
   u = n("106674"),
@@ -32,14 +32,14 @@ function E() {
       className: f.header,
       children: (0, a.jsxs)("div", {
         className: f.inline,
-        children: [(0, a.jsx)(i.default, {
+        children: [(0, a.jsx)(l.default, {
           color: s.default.colors.HEADER_PRIMARY.css,
           height: 20,
           width: 20
-        }), (0, a.jsx)(l.Heading, {
+        }), (0, a.jsx)(i.Heading, {
           variant: "heading-md/semibold",
           children: c.default.Messages.LIVE_BROADCASTS
-        }), (0, a.jsx)(d.default, {}), (0, a.jsxs)(l.Heading, {
+        }), (0, a.jsx)(d.default, {}), (0, a.jsxs)(i.Heading, {
           variant: "heading-md/semibold",
           children: ["— ", t.length.toLocaleString()]
         })]

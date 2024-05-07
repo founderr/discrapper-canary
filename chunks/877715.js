@@ -1,47 +1,47 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var r = n("960259"),
-  s = n("853706"),
-  i = n("325767");
-t.default = (0, r.replaceIcon)(function(e) {
+s.r(t);
+var a = s("735250");
+s("470079");
+var n = s("960259"),
+  i = s("853706"),
+  E = s("325767");
+t.default = (0, n.replaceIcon)(function(e) {
   let {
     width: t = 16,
-    height: n = 16,
-    color: r = "currentColor",
-    foreground: s,
+    height: s = 16,
+    color: n = "currentColor",
+    foreground: i,
     ...l
   } = e;
   return (0, a.jsxs)("svg", {
-    ...(0, i.default)(l),
+    ...(0, E.default)(l),
     width: t,
-    height: n,
+    height: s,
     viewBox: "0 0 16 16",
     xmlns: "http://www.w3.org/2000/svg",
     children: [(0, a.jsx)("rect", {
-      className: s,
+      className: i,
       y: "3",
       width: "16",
       height: "2",
       rx: "1",
-      fill: r
+      fill: n
     }), (0, a.jsx)("rect", {
-      className: s,
+      className: i,
       y: "11",
       width: "8",
       height: "2",
       rx: "1",
-      fill: r
+      fill: n
     }), (0, a.jsx)("rect", {
-      className: s,
+      className: i,
       y: "7",
       width: "16",
       height: "2",
       rx: "1",
-      fill: r
+      fill: n
     })]
   })
-}, s.ChannelListIcon, void 0, {
+}, i.ChannelListIcon, void 0, {
   size: 16
 })

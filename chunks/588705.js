@@ -20,8 +20,8 @@ var l = n("735250"),
   C = n("806519"),
   g = n("51144"),
   E = n("981631"),
-  _ = n("888592"),
-  S = n("245335"),
+  S = n("888592"),
+  _ = n("245335"),
   I = n("689938"),
   N = n("754613");
 let T = () => (0, l.jsxs)(a.Fragment, {
@@ -83,55 +83,55 @@ t.default = e => {
       multiAccounts: r.default.getUsers()
     }));
   if (null == C) return null;
-  let O = null != C.guild ? new d.default(C.guild) : null,
-    y = null != C.channel ? (0, u.createChannelRecordFromInvite)(C.channel) : null,
-    D = null != C.target_application ? new o.default(C.target_application) : null,
-    b = T || null == C.inviter ? null : new c.default(C.inviter),
-    j = !(null != C.approximate_member_count && C.approximate_member_count > 100 || null != O && O.hasFeature(E.GuildFeatures.COMMUNITY)) && null != b,
+  let y = null != C.guild ? new d.default(C.guild) : null,
+    O = null != C.channel ? (0, u.createChannelRecordFromInvite)(C.channel) : null,
+    b = null != C.target_application ? new o.default(C.target_application) : null,
+    D = T || null == C.inviter ? null : new c.default(C.inviter),
+    j = !(null != C.approximate_member_count && C.approximate_member_count > 100 || null != y && y.hasFeature(E.GuildFeatures.COMMUNITY)) && null != D,
     P = null,
-    G = !1;
-  if (null != O) P = null == b ? I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : I.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
-    username: g.default.getFormattedName(b)
-  }), C.target_type === S.InviteTargetTypes.STREAM && null != C.target_user && (P = I.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
+    U = !1;
+  if (null != y) P = null == D ? I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : I.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
+    username: g.default.getFormattedName(D)
+  }), C.target_type === _.InviteTargetTypes.STREAM && null != C.target_user && (P = I.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
     username: g.default.getFormattedName(C.target_user)
-  })), C.target_type === S.InviteTargetTypes.EMBEDDED_APPLICATION && null != C.target_application && (P = null != b ? I.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
-    username: g.default.getFormattedName(b)
-  }) : I.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY), j && null == D && (n = (0, l.jsx)(m.GuildIcon, {
+  })), C.target_type === _.InviteTargetTypes.EMBEDDED_APPLICATION && null != C.target_application && (P = null != D ? I.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
+    username: g.default.getFormattedName(D)
+  }) : I.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY), j && null == b && (n = (0, l.jsx)(m.GuildIcon, {
     className: N.icon,
-    guild: O,
+    guild: y,
     size: m.GuildIcon.Sizes.SMALL
-  })), a = O.name, null != D && (a = D.name, h = (0, l.jsxs)("div", {
+  })), a = y.name, null != b && (a = b.name, h = (0, l.jsxs)("div", {
     children: [(0, l.jsx)(m.SubTitle, {
       className: N.appIn,
       children: I.default.Messages.EMBEDDED_ACTIVITIES_INVITE_IN
     }), (0, l.jsxs)("div", {
       className: N.guildContainer,
       children: [(0, l.jsx)(m.GuildIcon, {
-        guild: O,
+        guild: y,
         size: m.GuildIcon.Sizes.SMALL
       }), (0, l.jsx)(i.Text, {
         tag: "span",
         variant: "text-lg/normal",
         color: "header-primary",
         className: N.appGuildName,
-        children: O.name
+        children: y.name
       })]
     })]
   }));
-  else if (null != y) {
-    if (null == b) throw Error("no inviter in group DM invite");
-    let e = g.default.getFormattedName(b);
-    null != y.name && "" !== y.name ? (P = I.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
+  else if (null != O) {
+    if (null == D) throw Error("no inviter in group DM invite");
+    let e = g.default.getFormattedName(D);
+    null != O.name && "" !== O.name ? (P = I.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
       username: e
-    }), a = y.name, null != y.icon && (n = (0, l.jsx)(m.ChannelIcon, {
-      channel: y,
+    }), a = O.name, null != O.icon && (n = (0, l.jsx)(m.ChannelIcon, {
+      channel: O,
       size: i.AvatarSizes.SIZE_32
     }))) : (P = I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM, a = e)
-  } else if (null != b) {
-    let e = g.default.getFormattedName(b, !0);
+  } else if (null != D) {
+    let e = g.default.getFormattedName(D, !0);
     a = I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({
       username: e
-    }), G = !0, h = null != L ? null : (0, l.jsx)(m.SubTitle, {
+    }), U = !0, h = null != L ? null : (0, l.jsx)(m.SubTitle, {
       className: N.directInviteSubTitle,
       children: x ? I.default.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION_REGISTER.format({
         username: e
@@ -143,10 +143,10 @@ t.default = e => {
   return (0, l.jsxs)("div", {
     className: N.container,
     children: [(0, l.jsx)(A, {
-      application: D,
-      guild: O,
-      user: j ? b : null,
-      compact: G
+      application: b,
+      guild: y,
+      user: j ? D : null,
+      compact: U
     }), null != L ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(m.SubTitle, {
         children: I.default.Messages.INVITE_MODAL_ERROR_TITLE
@@ -158,13 +158,13 @@ t.default = e => {
         children: P
       }), (0, l.jsxs)(m.Title, {
         className: N.title,
-        children: [null != O ? (0, l.jsx)(p.default, {
-          guild: O,
+        children: [null != y ? (0, l.jsx)(p.default, {
+          guild: y,
           className: N.guildBadge,
           tooltipPosition: "left"
         }) : null, n, a]
       })]
-    }), h, null != D || G || (null == C ? void 0 : null === (t = C.guild) || void 0 === t ? void 0 : t.id) === _.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, l.jsx)(m.ActivityCount, {
+    }), h, null != b || U || (null == C ? void 0 : null === (t = C.guild) || void 0 === t ? void 0 : t.id) === S.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, l.jsx)(m.ActivityCount, {
       className: N.activityCount,
       online: C.approximate_presence_count,
       total: C.approximate_member_count,

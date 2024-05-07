@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   useShopNewBadgeCoachtipEdition: function() {
-    return i
+    return l
   }
 });
 var a = n("818083"),
   s = n("302800");
-let l = (0, a.createExperiment)({
+let i = (0, a.createExperiment)({
     kind: "user",
     id: "2024-04_shop_marketing_badge",
     label: "Shop Marketing New Badge Design Experiment",
@@ -33,6 +33,6 @@ let l = (0, a.createExperiment)({
       }
     }]
   }),
-  i = e => l.useExperiment({
+  l = e => i.useExperiment({
     location: e
   }).coachtipEdition

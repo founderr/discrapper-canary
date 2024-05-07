@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("194359"),
-  i = n("906732"),
+  i = n("194359"),
+  l = n("906732"),
   r = n("171368"),
   o = n("877410"),
   u = n("626135"),
@@ -25,8 +25,8 @@ function C(e) {
     isFocused: C
   } = e, m = s.useContext(u.AnalyticsContext), {
     analyticsLocations: S
-  } = (0, i.default)(), p = e => {
-    e.stopPropagation(), l.default.unblockUser(t.id, {
+  } = (0, l.default)(), p = e => {
+    e.stopPropagation(), i.default.unblockUser(t.id, {
       location: "Friends"
     })
   };

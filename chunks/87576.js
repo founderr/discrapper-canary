@@ -1,40 +1,40 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return c
+    return r
   }
 });
-var a = n("735250");
-n("470079");
-var r = n("900015"),
-  s = n("481060"),
-  i = n("231467"),
-  l = n("689938"),
-  o = n("599666");
+var a = s("735250");
+s("470079");
+var n = s("900015"),
+  i = s("481060"),
+  E = s("231467"),
+  l = s("689938"),
+  _ = s("599666");
 
-function c(e) {
+function r(e) {
   let {
     traits: t,
-    traitsToHighlight: n
+    traitsToHighlight: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: o.traitsContainer,
+    className: _.traitsContainer,
     children: [(0, a.jsxs)("div", {
-      className: o.tagsCount,
-      children: [(0, a.jsx)(r.TagsIcon, {
+      className: _.tagsCount,
+      children: [(0, a.jsx)(n.TagsIcon, {
         height: 12,
         width: 12,
-        className: o.tags
-      }), (0, a.jsx)(s.Text, {
+        className: _.tags
+      }), (0, a.jsx)(i.Text, {
         variant: "text-xs/semibold",
         color: "text-muted",
         children: l.default.Messages.CLAN_SETUP_NUM_TRAITS.format({
           n: t.length
         })
       })]
-    }), (0, a.jsx)(i.ClanDiscoveryCardTraits, {
+    }), (0, a.jsx)(E.ClanDiscoveryCardTraits, {
       traits: t,
-      traitsToHighlight: n,
+      traitsToHighlight: s,
       expanded: !0
     })]
   })

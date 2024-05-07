@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("442837"),
   o = n("663002"),
   u = n("481060"),
@@ -25,11 +25,11 @@ var a = n("735250"),
   v = n("689938"),
   R = n("96751");
 
-function L(e) {
+function O(e) {
   var t;
   let {
     quest: n
-  } = e, s = (0, _.useQuestFormattedDate)(n.config.expiresAt), l = (0, _.useQuestFormattedDate)(n.config.rewardCodeExpiresAt), i = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), d = (0, o.isThemeDark)(i) ? N.ThemeTypes.DARK : N.ThemeTypes.LIGHT, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+  } = e, s = (0, _.useQuestFormattedDate)(n.config.expiresAt), i = (0, _.useQuestFormattedDate)(n.config.rewardCodeExpiresAt), l = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), d = (0, o.isThemeDark)(l) ? N.ThemeTypes.DARK : N.ThemeTypes.LIGHT, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, a.jsxs)("div", {
     className: R.heading,
     children: [(0, a.jsx)("img", {
@@ -48,7 +48,7 @@ function L(e) {
         variant: "text-xs/normal",
         color: "header-secondary",
         children: f ? v.default.Messages.QUESTS_CLAIM_BY_DATE.format({
-          expirationDate: l
+          expirationDate: i
         }) : v.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
           expirationDate: s
         })
@@ -57,10 +57,10 @@ function L(e) {
   })
 }
 t.default = function(e) {
-  var t, n, l;
+  var t, n, i;
   let {
     quest: o
-  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [O, M] = s.useState(!1), y = s.useCallback(() => M(!0), []), P = s.useCallback(() => M(!1), []), x = s.useCallback(e => {
+  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [L, M] = s.useState(!1), y = s.useCallback(() => M(!0), []), P = s.useCallback(() => M(!1), []), x = s.useCallback(e => {
     e.stopPropagation()
   }, []), D = s.useCallback(() => {
     (0, h.enrollInQuest)(o.id, {
@@ -82,7 +82,7 @@ t.default = function(e) {
   }, [o]), j = (0, T.useHandleClaimQuestsReward)({
     quest: o,
     location: m.QuestContent.ACTIVITY_PANEL
-  }), G = (0, _.useIsQuestExpired)(o), k = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, w = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  }), G = (0, _.useIsQuestExpired)(o), k = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, w = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (i = o.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null;
   return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || G || F ? null : (0, a.jsx)(p.QuestContentImpressionTracker, {
     questOrQuests: o,
     questContent: m.QuestContent.ACTIVITY_PANEL,
@@ -92,7 +92,7 @@ t.default = function(e) {
         ref: t => {
           e.current = t
         },
-        className: i()(R.wrapper, {
+        className: l()(R.wrapper, {
           [R.wrapperQuestAccepted]: k
         }),
         onClick: x,
@@ -103,7 +103,7 @@ t.default = function(e) {
         onMouseLeave: P,
         children: [(0, a.jsxs)("div", {
           className: R.utils,
-          children: [k ? (0, a.jsx)(L, {
+          children: [k ? (0, a.jsx)(O, {
             quest: o
           }) : (0, a.jsx)(g.default, {
             textOpacity: .5
@@ -121,7 +121,7 @@ t.default = function(e) {
             })
           })]
         }), !k && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(L, {
+          children: [(0, a.jsx)(O, {
             quest: o
           }), (0, a.jsx)(u.Text, {
             className: R.instructions,
@@ -132,7 +132,7 @@ t.default = function(e) {
             })
           })]
         }), k && !w && (0, a.jsx)(A.default, {
-          autoplay: O,
+          autoplay: L,
           className: R.rewardTileWithInstructions,
           quest: o,
           questContent: m.QuestContent.ACTIVITY_PANEL

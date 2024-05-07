@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("399606"),
   o = n("243778"),
   u = n("914010"),
@@ -15,7 +15,7 @@ var a = n("735250"),
   c = n("921944"),
   f = n("988114");
 let E = s.memo(function(e) {
-  var t, n, l;
+  var t, n, i;
   let {
     state: r,
     markAsDismissed: o
@@ -29,10 +29,10 @@ let E = s.memo(function(e) {
   }, [u, d, o]);
   if (null == E) return null;
   return (0, a.jsx)("div", {
-    className: i()(f.upsell, !(null != (t = c) && !(t.y < 0)) && f.hidden),
-    style: (n = 0, null == (l = c) ? {} : {
-      top: l.top,
-      left: l.right - l.x
+    className: l()(f.upsell, !(null != (t = c) && !(t.y < 0)) && f.hidden),
+    style: (n = 0, null == (i = c) ? {} : {
+      top: i.top,
+      left: i.right - i.x
     }),
     children: E
   })
@@ -53,11 +53,11 @@ function h() {
       return t
     }), c.DismissibleContentGroupName.SIDEBAR);
   if (null == n) return null;
-  let l = t[n];
-  return null == l ? null : (0, a.jsx)("div", {
+  let i = t[n];
+  return null == i ? null : (0, a.jsx)("div", {
     className: f.container,
     children: (0, a.jsx)(E, {
-      state: l,
+      state: i,
       markAsDismissed: s
     })
   })

@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var a, s, l, i, r = n("442837"),
+var a, s, i, l, r = n("442837"),
   o = n("433517"),
   u = n("570140"),
   d = n("695346"),
@@ -16,15 +16,15 @@ let C = "IncomingCallStore",
   },
   S = new Set,
   p = [],
-  I = new Map,
-  g = new Set,
+  g = new Map,
+  I = new Set,
   T = 0,
   A = 0,
   N = !1;
 
 function v(e) {
-  if (null == e || null == I.get(e)) return !1;
-  I.delete(e), (g = new Set(g)).delete(e)
+  if (null == e || null == g.get(e)) return !1;
+  g.delete(e), (I = new Set(I)).delete(e)
 }
 
 function R(e) {
@@ -32,17 +32,17 @@ function R(e) {
     channelId: t,
     ringing: n
   } = e, a = n.includes(f.default.getId());
-  if (!g.has(t) && a) {
+  if (!I.has(t) && a) {
     let e = E.default.getChannel(t);
     if (null == e) return !1;
-    let n = 10 * g.size;
-    I.set(t, {
+    let n = 10 * I.size;
+    g.set(t, {
       channel: e,
       x: T + n,
       y: A + n
-    }), (g = new Set(g)).add(t)
+    }), (I = new Set(I)).add(t)
   } else {
-    if (!g.has(t) || a) return !1;
+    if (!I.has(t) || a) return !1;
     v(t)
   }
 }! function() {
@@ -54,32 +54,32 @@ function R(e) {
   }
 }();
 
-function L() {
+function O() {
   N = h.default.getStatus() === _.StatusTypes.DND || d.FocusMode.getSetting()
 }
-class O extends(a = r.default.Store) {
+class L extends(a = r.default.Store) {
   initialize() {
-    this.waitFor(E.default, h.default), this.syncWith([h.default], L), this.syncWith([c.default], L)
+    this.waitFor(E.default, h.default), this.syncWith([h.default], O), this.syncWith([c.default], O)
   }
   getIncomingCalls() {
-    return N ? p : Array.from(I.values())
+    return N ? p : Array.from(g.values())
   }
   getIncomingCallChannelIds() {
-    return N ? S : g
+    return N ? S : I
   }
   getFirstIncomingCallId() {
-    return N ? null : g.values().next().value
+    return N ? null : I.values().next().value
   }
   hasIncomingCalls() {
-    return !N && g.size > 0
+    return !N && I.size > 0
   }
 }
-i = "IncomingCallStore", (l = "displayName") in(s = O) ? Object.defineProperty(s, l, {
-  value: i,
+l = "IncomingCallStore", (i = "displayName") in(s = L) ? Object.defineProperty(s, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new O(u.default, {
+}) : s[i] = l, t.default = new L(u.default, {
   CALL_CREATE: R,
   CALL_UPDATE: R,
   CALL_DELETE: function(e) {

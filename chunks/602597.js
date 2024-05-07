@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("442837"),
-  l = n("481060"),
-  i = n("749210"),
+  i = n("481060"),
+  l = n("749210"),
   r = n("210887"),
   o = n("514611"),
   u = n("469988"),
@@ -15,7 +15,7 @@ t.default = e => {
     guilds: t
   } = e, n = (0, s.useStateFromStores)([r.default], () => r.default.theme), f = t.map(e => (0, a.jsx)(o.default, {
     className: c.__invalid_guildCard,
-    onView: () => i.default.transitionToGuildSync(e.id),
+    onView: () => l.default.transitionToGuildSync(e.id),
     guild: {
       ...e,
       presenceCount: void 0,
@@ -28,7 +28,7 @@ t.default = e => {
   return (0, a.jsx)("section", {
     className: c.guildListSection,
     children: t.length > 0 ? (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(l.Heading, {
+      children: [(0, a.jsx)(i.Heading, {
         className: c.__invalid_title,
         variant: "heading-lg/semibold",
         children: d.default.Messages.YOUR_HUB

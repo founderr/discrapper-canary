@@ -1,20 +1,20 @@
 "use strict";
 s.r(t), s.d(t, {
   bulkClearRecents: function() {
-    return i
+    return _
   }
 });
-var E = s("835913"),
-  _ = s("570140"),
-  a = s("675478"),
-  n = s("626135"),
-  T = s("981631");
-async function i(e, t) {
-  await (0, a.updateUserGuildSettings)(e, e => (e.guildRecentsDismissedAt = E.Timestamp.fromDate(new Date), !0), a.UserSettingsDelay.INFREQUENT_USER_ACTION), _.default.dispatch({
+var a = s("835913"),
+  n = s("570140"),
+  i = s("675478"),
+  E = s("626135"),
+  l = s("981631");
+async function _(e, t) {
+  await (0, i.updateUserGuildSettings)(e, e => (e.guildRecentsDismissedAt = a.Timestamp.fromDate(new Date), !0), i.UserSettingsDelay.INFREQUENT_USER_ACTION), n.default.dispatch({
     type: "BULK_CLEAR_RECENTS",
     guildId: e,
     channelIds: t
-  }), n.default.track(T.AnalyticEvents.CHANNEL_LIST_UPDATED, {
+  }), E.default.track(l.AnalyticEvents.CHANNEL_LIST_UPDATED, {
     action_type: "recents_dismissed"
   })
 }

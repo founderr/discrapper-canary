@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("120356"),
-  l = n.n(s),
-  i = n("718017"),
+  i = n.n(s),
+  l = n("718017"),
   r = n("481060"),
   o = n("497505"),
   u = n("685613"),
@@ -21,13 +21,13 @@ t.default = function(e) {
     isExpanded: m,
     isExpansionAnimationComplete: S,
     quest: p,
-    useReducedMotion: I
-  } = e, g = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = (null !== (s = null === (n = p.userStatus) || void 0 === n ? void 0 : n.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
-  return (0, a.jsxs)(i.animated.div, {
+    useReducedMotion: g
+  } = e, I = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = (null !== (s = null === (n = p.userStatus) || void 0 === n ? void 0 : n.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
+  return (0, a.jsxs)(l.animated.div, {
     "aria-hidden": m && S,
-    className: l()(_, h.contentCollapsed, {
+    className: i()(_, h.contentCollapsed, {
       [h.contentCollapsedExpanded]: m,
-      [h.contentCollapsedAccepted]: g
+      [h.contentCollapsedAccepted]: I
     }),
     style: {
       opacity: C.to({
@@ -37,10 +37,10 @@ t.default = function(e) {
     },
     children: [(0, a.jsx)(f.QuestBarBackgroundAnimation, {
       quest: p,
-      useReducedMotion: I
+      useReducedMotion: g
     }), (0, a.jsx)("div", {
       className: h.contentCollapsedWrapper,
-      children: g ? (0, a.jsxs)("div", {
+      children: I ? (0, a.jsxs)("div", {
         className: h.questProgressWrapper,
         children: [(0, a.jsx)(c.default, {
           className: h.questProgressRewardTile,

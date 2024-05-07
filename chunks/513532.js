@@ -1,42 +1,42 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var r = n("442837"),
-  s = n("481060"),
-  i = n("863249"),
-  l = n("944163"),
-  o = n("616230"),
-  c = n("430824"),
-  d = n("650461"),
-  u = n("689938"),
-  f = n("418571");
+s.r(t);
+var a = s("735250");
+s("470079");
+var n = s("442837"),
+  i = s("481060"),
+  E = s("863249"),
+  l = s("944163"),
+  _ = s("616230"),
+  r = s("430824"),
+  u = s("650461"),
+  o = s("689938"),
+  T = s("418571");
 t.default = e => {
   let {
     guildId: t
-  } = e, n = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(t)), m = (0, r.useStateFromStores)([l.default, d.default], () => {
-    var e, n, a;
-    return null !== (a = null === (n = d.default.getStateForGuild(t)) || void 0 === n ? void 0 : null === (e = n.progress) || void 0 === e ? void 0 : e.verificationForm) && void 0 !== a ? a : l.default.get(t)
+  } = e, s = (0, n.useStateFromStores)([r.default], () => r.default.getGuild(t)), d = (0, n.useStateFromStores)([l.default, u.default], () => {
+    var e, s, a;
+    return null !== (a = null === (s = u.default.getStateForGuild(t)) || void 0 === s ? void 0 : null === (e = s.progress) || void 0 === e ? void 0 : e.verificationForm) && void 0 !== a ? a : l.default.get(t)
   });
-  return null == n ? null : (0, a.jsxs)("div", {
-    className: f.slideContent,
-    children: [(0, a.jsx)(s.Heading, {
+  return null == s ? null : (0, a.jsxs)("div", {
+    className: T.slideContent,
+    children: [(0, a.jsx)(i.Heading, {
       variant: "heading-xxl/medium",
-      className: f.title,
-      children: u.default.Messages.CLAN_SETUP_APPLICATION_TITLE
-    }), (0, a.jsx)(s.Text, {
+      className: T.title,
+      children: o.default.Messages.CLAN_SETUP_APPLICATION_TITLE
+    }), (0, a.jsx)(i.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: f.subtitle,
-      children: u.default.Messages.CLAN_SETUP_APPLICATION_SUBTITLE
+      className: T.subtitle,
+      children: o.default.Messages.CLAN_SETUP_APPLICATION_SUBTITLE
     }), (0, a.jsx)("div", {
-      className: f.maxWidthContainer,
-      children: (0, a.jsx)(o.default, {
-        guild: n,
+      className: T.maxWidthContainer,
+      children: (0, a.jsx)(_.default, {
+        guild: s,
         isClanContext: !0,
-        onFieldsSave: (e, t) => (i.default.updateVerificationFormFieldsLocal(e, t), Promise.resolve()),
-        onDescriptionSave: (e, t) => (i.default.updateVerificationFormDescriptionLocal(e, t), Promise.resolve()),
-        verificationForm: m
+        onFieldsSave: (e, t) => (E.default.updateVerificationFormFieldsLocal(e, t), Promise.resolve()),
+        onDescriptionSave: (e, t) => (E.default.updateVerificationFormDescriptionLocal(e, t), Promise.resolve()),
+        verificationForm: d
       })
     })]
   })

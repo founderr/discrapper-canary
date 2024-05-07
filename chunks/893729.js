@@ -4,53 +4,53 @@ s.r(t), s.d(t, {
     return N
   }
 });
-var E = s("735250"),
-  _ = s("470079"),
-  a = s("120356"),
-  n = s.n(a),
-  T = s("442837"),
-  i = s("518738"),
-  u = s("786761"),
-  A = s("3148"),
-  l = s("753206"),
-  I = s("594174"),
-  r = s("5192"),
-  o = s("792125"),
-  L = s("981631"),
-  d = s("689938"),
-  S = s("779165");
+var a = s("735250"),
+  n = s("470079"),
+  i = s("120356"),
+  E = s.n(i),
+  l = s("442837"),
+  _ = s("518738"),
+  r = s("786761"),
+  u = s("3148"),
+  o = s("753206"),
+  T = s("594174"),
+  d = s("5192"),
+  A = s("792125"),
+  I = s("981631"),
+  L = s("689938"),
+  c = s("779165");
 
 function N(e) {
   var t;
   let {
     guildId: s,
-    role: a,
+    role: i,
     theme: N,
-    content: g = d.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
-    className: D
-  } = e, c = (0, T.useStateFromStores)([I.default], () => I.default.getCurrentUser()), G = r.default.useName(s, null, c), O = (0, i.getRoleIconProps)(a), U = _.useMemo(() => (0, u.createMessageRecord)({
-    ...(0, A.default)({
+    content: S = L.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
+    className: g
+  } = e, D = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentUser()), C = d.default.useName(s, null, D), f = (0, _.getRoleIconProps)(i), O = n.useMemo(() => (0, r.createMessageRecord)({
+    ...(0, u.default)({
       channelId: "0",
-      content: g,
+      content: S,
       tts: void 0,
       type: void 0,
       messageReference: void 0,
       allowedMentions: void 0,
-      author: c
+      author: D
     }),
-    state: L.MessageStates.SENT,
+    state: I.MessageStates.SENT,
     id: "0"
-  }), [c, g]), C = {
-    nick: G,
-    colorString: null !== (t = a.colorString) && void 0 !== t ? t : void 0
+  }), [D, S]), G = {
+    nick: C,
+    colorString: null !== (t = i.colorString) && void 0 !== t ? t : void 0
   };
-  return (0, E.jsx)("div", {
-    className: n()((0, o.getThemeClass)(N), S.container, D),
-    children: (0, E.jsx)(l.default, {
+  return (0, a.jsx)("div", {
+    className: E()((0, A.getThemeClass)(N), c.container, g),
+    children: (0, a.jsx)(o.default, {
       hideTimestamp: !0,
-      author: C,
-      roleIcon: O,
-      message: U,
+      author: G,
+      roleIcon: f,
+      message: O,
       isGroupStart: !0,
       disableInteraction: !0
     })

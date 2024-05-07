@@ -1,40 +1,40 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var r = n("707592"),
-  s = n("137158"),
-  i = n("689938"),
-  l = n("915580");
+s.r(t);
+var a = s("735250");
+s("470079");
+var n = s("707592"),
+  i = s("137158"),
+  E = s("689938"),
+  l = s("915580");
 t.default = function(e) {
   let {
     formField: t,
-    index: n,
-    isDragEnabled: o,
-    isDropHovered: c,
-    onDrop: d,
-    onEdit: u,
-    onRemove: f,
-    canRemove: m,
-    actionsLocation: h
+    index: s,
+    isDragEnabled: _,
+    isDropHovered: r,
+    onDrop: u,
+    onEdit: o,
+    onRemove: T,
+    canRemove: d,
+    actionsLocation: A
   } = e, {
-    label: p,
-    placeholder: T
+    label: I,
+    placeholder: L
   } = t;
-  return (0, a.jsx)(s.default, {
+  return (0, a.jsx)(i.default, {
     field: t,
-    index: n,
-    isDragEnabled: o,
-    isDropHovered: c,
-    onDrop: d,
-    onEdit: u,
-    onRemove: f,
-    title: p,
-    canRemove: m,
-    actionsLocation: h,
-    children: (0, a.jsx)(r.TextInputFieldBody, {
+    index: s,
+    isDragEnabled: _,
+    isDropHovered: r,
+    onDrop: u,
+    onEdit: o,
+    onRemove: T,
+    title: I,
+    canRemove: d,
+    actionsLocation: A,
+    children: (0, a.jsx)(n.TextInputFieldBody, {
       className: l.fieldBackground,
-      placeholder: null != T ? T : i.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
+      placeholder: null != L ? L : E.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0
     })
   })

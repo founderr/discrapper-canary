@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  l = n("570140"),
-  i = n("798077");
+  i = n("570140"),
+  l = n("798077");
 
 function r() {
   (0, s.openModalLazy)(async () => {
@@ -20,13 +20,13 @@ function r() {
     })
   }, {
     onCloseCallback: () => {
-      l.default.dispatch({
+      i.default.dispatch({
         type: "CLEAR_AUTHENTICATION_ERRORS"
-      }), l.default.dispatch({
+      }), i.default.dispatch({
         type: "LOGIN_RESET",
         isMultiAccount: !0
       })
     },
-    modalKey: i.SWITCH_ACCOUNTS_MODAL_KEY
+    modalKey: l.SWITCH_ACCOUNTS_MODAL_KEY
   })
 }

@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  l = n("570140"),
-  i = n("809206"),
+  i = n("570140"),
+  l = n("809206"),
   r = n("317770"),
   o = n("18438"),
   u = n("350327"),
@@ -14,7 +14,7 @@ var s = n("481060"),
 let E = e => {
     let {
       imageSrc: t,
-      file: l,
+      file: i,
       guildId: r,
       isTryItOutFlow: E
     } = e;
@@ -23,8 +23,8 @@ let E = e => {
       return
     }
     let h = d.default.getCurrentUser(),
-      _ = null != r ? o.setPendingAvatar : i.setPendingAvatar;
-    if (c.default.canUseAnimatedAvatar(h) || "image/gif" !== l.type) {
+      _ = null != r ? o.setPendingAvatar : l.setPendingAvatar;
+    if (c.default.canUseAnimatedAvatar(h) || "image/gif" !== i.type) {
       _(t);
       return
     }
@@ -44,15 +44,15 @@ let E = e => {
   h = e => {
     let {
       imageSrc: t,
-      guildId: l,
-      isTryItOutFlow: i
+      guildId: i,
+      isTryItOutFlow: l
     } = e;
-    if (i) {
+    if (l) {
       (0, u.setTryItOutBanner)(t);
       return
     }
     let r = d.default.getCurrentUser(),
-      E = null != l ? o.setPendingBanner : u.setPendingBanner;
+      E = null != i ? o.setPendingBanner : u.setPendingBanner;
     if (c.default.canUsePremiumProfileCustomization(r)) {
       E(t);
       return
@@ -72,10 +72,10 @@ let E = e => {
   };
 class _ extends r.default {
   _initialize() {
-    l.default.subscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
+    i.default.subscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
   }
   _terminate() {
-    l.default.unsubscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
+    i.default.unsubscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
   }
   maybeOpenProfilePreviewModal(e) {
     return e.uploadType === f.UploadTypes.AVATAR ? E(e) : e.uploadType === f.UploadTypes.BANNER ? h(e) : void 0

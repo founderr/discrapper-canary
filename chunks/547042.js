@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a, s, l = n("735250"),
-  i = n("470079"),
+var a, s, i = n("735250"),
+  l = n("470079"),
   r = n("442837"),
   o = n("481060"),
   u = n("40851"),
@@ -22,9 +22,9 @@ var a, s, l = n("735250"),
   m = n("981631"),
   S = n("921944"),
   p = n("689938"),
-  I = n("305257");
+  g = n("305257");
 (a = s || (s = {})).BOOSTING = "BOOSTING", a.NITRO = "NITRO", a.BASH_OUT = "BASH_OUT", a.GAME_NIGHT = "GAME_NIGHT";
-let g = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
+let I = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
   T = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
   A = e => {
     let {
@@ -37,20 +37,20 @@ let g = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       ctaText: N,
       dismissText: v,
       description: R,
-      learnMore: L,
-      title: O,
+      learnMore: O,
+      title: L,
       videoPosterUrl: M,
-      videoUrl: P,
-      ctaOnClick: y
+      videoUrl: y,
+      ctaOnClick: P
     } = function(e) {
       switch (e) {
         case "BOOSTING":
           return {
-            analyticsLocation: f.default.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: T, videoUrl: g, ctaText: p.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: p.default.Messages.DISMISS
+            analyticsLocation: f.default.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: T, videoUrl: I, ctaText: p.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: p.default.Messages.DISMISS
           };
         case "NITRO":
           return {
-            analyticsLocation: f.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: T, videoUrl: g, ctaText: p.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: p.default.Messages.DISMISS
+            analyticsLocation: f.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: T, videoUrl: I, ctaText: p.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: p.default.Messages.DISMISS
           };
         case "BASH_OUT":
           return {
@@ -68,61 +68,61 @@ let g = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
     }(a), {
       analyticsLocations: x
     } = (0, E.default)(s);
-    i.useEffect(() => {
+    l.useEffect(() => {
       C.default.track(m.AnalyticEvents.TOOLTIP_VIEWED, {
         type: A
       })
     }, [A]);
     let D = (0, u.useAppContext)() === m.AppContext.POPOUT,
       b = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
-    return (0, l.jsx)(E.AnalyticsLocationProvider, {
+    return (0, i.jsx)(E.AnalyticsLocationProvider, {
       value: x,
-      children: (0, l.jsx)("div", {
-        className: I.wrapper,
-        children: (0, l.jsx)("div", {
-          className: I.container,
-          children: (0, l.jsxs)("div", {
-            className: I.content,
-            children: [(0, l.jsx)(_.default, {
-              className: I.video,
-              src: P,
+      children: (0, i.jsx)("div", {
+        className: g.wrapper,
+        children: (0, i.jsx)("div", {
+          className: g.container,
+          children: (0, i.jsxs)("div", {
+            className: g.content,
+            children: [(0, i.jsx)(_.default, {
+              className: g.video,
+              src: y,
               poster: M,
               width: 224,
               height: 126,
               loop: !0,
               muted: !0,
               autoPlay: !0
-            }), (0, l.jsx)("div", {
-              className: I.header,
-              children: (0, l.jsx)(o.Heading, {
-                className: I.__invalid_headerText,
+            }), (0, i.jsx)("div", {
+              className: g.header,
+              children: (0, i.jsx)(o.Heading, {
+                className: g.__invalid_headerText,
                 variant: "text-sm/bold",
                 color: "always-white",
-                children: O
+                children: L
               })
-            }), (0, l.jsxs)(o.Text, {
-              className: I.subheaderText,
+            }), (0, i.jsxs)(o.Text, {
+              className: g.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
-              children: [R, L ? (0, l.jsxs)(l.Fragment, {
-                children: [" ", (0, l.jsx)(o.Anchor, {
-                  className: I.learnMoreLink,
+              children: [R, O ? (0, i.jsxs)(i.Fragment, {
+                children: [" ", (0, i.jsx)(o.Anchor, {
+                  className: g.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",
                   children: p.default.Messages.LEARN_MORE
                 })]
               }) : null]
-            }), (0, l.jsxs)("div", {
-              className: I.ctaActionWrapper,
-              children: [(0, l.jsx)(o.Button, {
+            }), (0, i.jsxs)("div", {
+              className: g.ctaActionWrapper,
+              children: [(0, i.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 onClick: () => {
                   n(S.ContentDismissActionType.UNKNOWN)
                 },
                 children: v
-              }), (0, l.jsx)(o.Button, {
+              }), (0, i.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,
-                onClick: null != y ? y : () => {
+                onClick: null != P ? P : () => {
                   n(S.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
                     channel: b.isGuildVoice() ? b : void 0,
                     guildId: b.guild_id,

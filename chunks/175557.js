@@ -1,63 +1,63 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return h
+    return A
   }
 });
-var a = n("735250");
-n("470079");
-var r = n("108930"),
-  s = n("86406"),
-  i = n("146068"),
-  l = n("308545"),
-  o = n("397697"),
-  c = n("129871"),
-  d = n("206851"),
-  u = n("246933"),
-  f = n("995414"),
-  m = n("308083");
+var a = s("735250");
+s("470079");
+var n = s("108930"),
+  i = s("86406"),
+  E = s("146068"),
+  l = s("308545"),
+  _ = s("397697"),
+  r = s("129871"),
+  u = s("206851"),
+  o = s("246933"),
+  T = s("995414"),
+  d = s("308083");
 
-function h(e) {
+function A(e) {
   let {
     banner: t,
-    ...n
+    ...s
   } = e;
   switch (t) {
-    case m.ClanBannerKind.NIGHT_SKY:
-      return (0, a.jsx)(o.default, {
-        ...n
+    case d.ClanBannerKind.NIGHT_SKY:
+      return (0, a.jsx)(_.default, {
+        ...s
       });
-    case m.ClanBannerKind.CASTLE:
+    case d.ClanBannerKind.CASTLE:
+      return (0, a.jsx)(n.default, {
+        ...s
+      });
+    case d.ClanBannerKind.WORLD_MAP:
+      return (0, a.jsx)(T.default, {
+        ...s
+      });
+    case d.ClanBannerKind.SEA_FOAM:
       return (0, a.jsx)(r.default, {
-        ...n
+        ...s
       });
-    case m.ClanBannerKind.WORLD_MAP:
-      return (0, a.jsx)(f.default, {
-        ...n
+    case d.ClanBannerKind.WARP_TUNNEL:
+      return (0, a.jsx)(o.default, {
+        ...s
       });
-    case m.ClanBannerKind.SEA_FOAM:
-      return (0, a.jsx)(c.default, {
-        ...n
+    case d.ClanBannerKind.HOUSE:
+      return (0, a.jsx)(E.default, {
+        ...s
       });
-    case m.ClanBannerKind.WARP_TUNNEL:
-      return (0, a.jsx)(u.default, {
-        ...n
-      });
-    case m.ClanBannerKind.HOUSE:
+    case d.ClanBannerKind.HEIGHTMAP:
       return (0, a.jsx)(i.default, {
-        ...n
+        ...s
       });
-    case m.ClanBannerKind.HEIGHTMAP:
-      return (0, a.jsx)(s.default, {
-        ...n
-      });
-    case m.ClanBannerKind.MESH:
+    case d.ClanBannerKind.MESH:
       return (0, a.jsx)(l.default, {
-        ...n
+        ...s
       });
-    case m.ClanBannerKind.SPATTER:
-      return (0, a.jsx)(d.default, {
-        ...n
+    case d.ClanBannerKind.SPATTER:
+      return (0, a.jsx)(u.default, {
+        ...s
       })
   }
   return null

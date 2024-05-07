@@ -1,41 +1,41 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return s
+    return i
   }
 });
-var a = n("735250");
-n("470079");
-var r = n("325767");
+var a = s("735250");
+s("470079");
+var n = s("325767");
 
-function s(e) {
+function i(e) {
   let {
     width: t = 17,
-    height: n = 16,
-    color: s = "currentColor",
-    foreground: i,
+    height: s = 16,
+    color: i = "currentColor",
+    foreground: E,
     ...l
   } = e;
   return (0, a.jsxs)("svg", {
-    ...(0, r.default)(l),
+    ...(0, n.default)(l),
     width: t,
-    height: n,
+    height: s,
     viewBox: "0 0 17 16",
     xmlns: "http://www.w3.org/2000/svg",
     children: [(0, a.jsx)("rect", {
-      className: i,
+      className: E,
       y: "5",
       width: "16",
       height: "2",
       rx: "1",
-      fill: s
+      fill: i
     }), (0, a.jsx)("rect", {
-      className: i,
+      className: E,
       y: "9",
       width: "8",
       height: "2",
       rx: "1",
-      fill: s
+      fill: i
     })]
   })
 }

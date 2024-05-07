@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   useHasUserRepliedInChannel: function() {
-    return i
+    return l
   }
 });
 var a = n("442837"),
   s = n("375954"),
-  l = n("594174");
-let i = e => (0, a.useStateFromStores)([s.default, l.default], () => {
+  i = n("594174");
+let l = e => (0, a.useStateFromStores)([s.default, i.default], () => {
   if (null == e) return !1;
-  let t = l.default.getCurrentUser();
+  let t = i.default.getCurrentUser();
   return null != s.default.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
 })

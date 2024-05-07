@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("143927"),
-  i = n("481060"),
+  i = n("143927"),
+  l = n("481060"),
   r = n("207796"),
   o = n("420212"),
   u = n("689938"),
@@ -11,7 +11,7 @@ var a = n("735250"),
 t.default = function(e) {
   let {
     children: t
-  } = e, n = (0, r.useClanDiscoveryUIStore)(e => e.setMode, l.default), c = s.useCallback(() => {
+  } = e, n = (0, r.useClanDiscoveryUIStore)(e => e.setMode, i.default), c = s.useCallback(() => {
     n(r.ClanDiscoveryMode.DISCOVERY)
   }, [n]);
   return s.useEffect(() => {
@@ -23,15 +23,15 @@ t.default = function(e) {
     className: d.container,
     children: [(0, a.jsx)("div", {
       className: d.saveContainer,
-      children: (0, a.jsx)(i.Button, {
+      children: (0, a.jsx)(l.Button, {
         onClick: c,
-        look: i.ButtonLooks.OUTLINED,
-        color: i.ButtonColors.PRIMARY,
+        look: l.ButtonLooks.OUTLINED,
+        color: l.ButtonColors.PRIMARY,
         children: u.default.Messages.SAVE
       })
     }), (0, a.jsx)("div", {
       className: d.contentWrapper,
-      children: (0, a.jsx)(i.Scroller, {
+      children: (0, a.jsx)(l.Scroller, {
         fade: !0,
         className: d.content,
         children: t

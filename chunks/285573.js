@@ -21,8 +21,8 @@ let E = (0, u.makeChannelSortable)(function(e) {
     selectedChannelId: s,
     position: u,
     disableManageChannels: E,
-    sorting: _,
-    sortingType: S,
+    sorting: S,
+    sortingType: _,
     sortingPosition: I,
     connectChannelDragSource: N,
     connectChannelDropTarget: T,
@@ -42,11 +42,11 @@ let E = (0, u.makeChannelSortable)(function(e) {
     })
   }, [L]);
   if (null == L) return null;
-  let O = (0, h.getChannelItemClassName)(u, I),
-    y = (0, h.isChannelItemDisabled)(L, _, S),
-    D = (0, l.jsx)("div", {
-      className: i()(O, {
-        [g.disabled]: y,
+  let y = (0, h.getChannelItemClassName)(u, I),
+    O = (0, h.isChannelItemDisabled)(L, S, _),
+    b = (0, l.jsx)("div", {
+      className: i()(y, {
+        [g.disabled]: O,
         [g.selected]: x
       }),
       "data-dnd-name": L.name,
@@ -68,6 +68,6 @@ let E = (0, u.makeChannelSortable)(function(e) {
         })]
       })
     });
-  return R && (D = T(N(D))), D
+  return R && (b = T(N(b))), b
 });
 t.default = E

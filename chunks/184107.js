@@ -1,19 +1,19 @@
 "use strict";
 n.r(t);
-var a, s, l, i, r = n("442837"),
+var a, s, i, l, r = n("442837"),
   o = n("570140");
 let u = {};
-class d extends(i = r.default.Store) {
+class d extends(l = r.default.Store) {
   getSkuIdForChannel(e) {
     return u[e]
   }
 }
-l = "ChannelSKUStore", (s = "displayName") in(a = d) ? Object.defineProperty(a, s, {
-  value: l,
+i = "ChannelSKUStore", (s = "displayName") in(a = d) ? Object.defineProperty(a, s, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = l, t.default = new d(o.default, {
+}) : a[s] = i, t.default = new d(o.default, {
   CONNECTION_OPEN: function() {
     u = {}
   },

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("470079"),
-  s = n("246364"),
-  l = n("308083");
+var l = n("470079"),
+  a = n("246364"),
+  s = n("308083");
 
 function i(e) {
   let {
@@ -20,33 +20,33 @@ function i(e) {
     description: d,
     tag: c,
     verificationForm: f
-  } = t, E = a.useMemo(() => null != f && f.formFields.some(e => !(0, s.isTermsFormField)(e)), [f]), h = a.useMemo(() => Array.from(u).filter(e => !l.ALL_TRAITS_SET.has(e) && !l.LANGUAGES_SET.has(e)), [u]), _ = a.useCallback(() => {
+  } = t, h = l.useMemo(() => null != f && f.formFields.some(e => !(0, a.isTermsFormField)(e)), [f]), p = l.useMemo(() => Array.from(u).filter(e => !s.ALL_TRAITS_SET.has(e) && !s.LANGUAGES_SET.has(e)), [u]), m = l.useCallback(() => {
     n(i + 1)
-  }, [i, n]), C = a.useCallback(() => {
+  }, [i, n]), C = l.useCallback(() => {
     n(i - 1)
-  }, [i, n]), m = a.useCallback(e => n(e), [n]), S = a.useMemo(() => {
+  }, [i, n]), g = l.useCallback(e => n(e), [n]), E = l.useMemo(() => {
     switch (i) {
-      case l.ClanSetupSteps.GAMES:
+      case s.ClanSetupSteps.GAMES:
         return 0 === r.size;
-      case l.ClanSetupSteps.PLAYSTYLE:
-        return o === l.ClanPlaystyles.NONE;
-      case l.ClanSetupSteps.INTERESTS:
-        return h.length < 3;
-      case l.ClanSetupSteps.DESCRIPTION:
+      case s.ClanSetupSteps.PLAYSTYLE:
+        return o === s.ClanPlaystyles.NONE;
+      case s.ClanSetupSteps.INTERESTS:
+        return p.length < 3;
+      case s.ClanSetupSteps.DESCRIPTION:
         return 0 === d.length;
-      case l.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
+      case s.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
         return c.length < 2;
-      case l.ClanSetupSteps.MEMBER_APPLICATION:
-        return !E;
+      case s.ClanSetupSteps.MEMBER_APPLICATION:
+        return !h;
       default:
         return !1
     }
-  }, [i, d.length, r.size, E, h.length, o, c.length]), p = 0 === i;
-  return a.useMemo(() => ({
-    onStepClick: m,
-    onNextClick: _,
+  }, [i, d.length, r.size, h, p.length, o, c.length]), S = 0 === i;
+  return l.useMemo(() => ({
+    onStepClick: g,
+    onNextClick: m,
     onBackClick: C,
-    isNextDisabled: S,
-    isBackDisabled: p
-  }), [p, S, C, _, m])
+    isNextDisabled: E,
+    isBackDisabled: S
+  }), [S, E, C, m, g])
 }

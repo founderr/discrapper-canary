@@ -1,96 +1,96 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   default: function() {
-    return h
+    return T
   }
-}), A("47120");
-var a = A("735250"),
-  l = A("470079"),
-  s = A("120356"),
-  n = A.n(s),
-  r = A("481060"),
-  i = A("813197"),
-  o = A("54264"),
-  d = A("185403"),
-  u = A("740727"),
-  c = A("689938"),
-  f = A("542112");
-let g = "custom-image",
-  C = l.forwardRef(function(e, t) {
+}), t("47120");
+var a = t("735250"),
+  l = t("470079"),
+  s = t("120356"),
+  n = t.n(s),
+  r = t("481060"),
+  o = t("813197"),
+  i = t("54264"),
+  d = t("185403"),
+  u = t("740727"),
+  c = t("689938"),
+  C = t("542112");
+let f = "custom-image",
+  g = l.forwardRef(function(e, A) {
     let {
-      selectedImageName: A,
+      selectedImageName: t,
       onChange: l,
       disabled: s = !1,
-      name: i,
-      alt: o,
+      name: o,
+      alt: i,
       data: d
-    } = e, u = i === A, c = (0, r.useRadioItem)({
+    } = e, u = o === t, c = (0, r.useRadioItem)({
       isSelected: u,
-      label: o
-    }), g = s ? void 0 : () => {
-      l(d, i)
+      label: i
+    }), f = s ? void 0 : () => {
+      l(d, o)
     };
     return (0, a.jsx)(r.Clickable, {
-      ref: t,
-      className: n()(f.radioOption, {
-        [f.selected]: u,
-        [f.disabled]: s
+      ref: A,
+      className: n()(C.radioOption, {
+        [C.selected]: u,
+        [C.disabled]: s
       }),
-      onClick: g,
+      onClick: f,
       "aria-disabled": s,
       ...c,
       children: (0, a.jsx)("img", {
         src: d,
-        alt: o,
-        className: f.radioOptionImage
+        alt: i,
+        className: C.radioOptionImage
       })
     })
   });
 
-function h(e) {
+function T(e) {
   let {
-    presetImages: t,
-    image: A,
+    presetImages: A,
+    image: t,
     imageName: s,
-    savedImageName: h,
-    onChange: m,
-    uploadButtonLabel: T = c.default.Messages.UPLOAD_IMAGE,
-    radioGroupAriaLabel: p = c.default.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
-    disabled: U = !1
-  } = e, v = s === g, [I, E] = l.useState(v ? A : null), [x, N] = l.useState(null), D = l.useRef(null), q = l.useRef(null);
+    savedImageName: T,
+    onChange: U,
+    uploadButtonLabel: h = c.default.Messages.UPLOAD_IMAGE,
+    radioGroupAriaLabel: m = c.default.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
+    disabled: I = !1
+  } = e, v = s === f, [p, E] = l.useState(v ? t : null), [q, N] = l.useState(null), R = l.useRef(null), L = l.useRef(null);
   l.useEffect(() => {
-    h !== g && (E(null), N(null))
-  }, [h]);
-  let L = null != x ? c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({
-      filename: x
+    T !== f && (E(null), N(null))
+  }, [T]);
+  let O = null != q ? c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({
+      filename: q
     }) : c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE,
-    O = (0, r.useRadioGroup)({
+    x = (0, r.useRadioGroup)({
       orientation: "horizontal",
-      isDisabled: U
+      isDisabled: I
     }),
-    R = () => {
+    D = () => {
       var e;
-      return null === (e = D.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+      return null === (e = R.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
     },
     P = () => {
-      s === g && m(t[0].data, t[0].name), E(null), N(null)
+      s === f && U(A[0].data, A[0].name), E(null), N(null)
     };
   return l.useEffect(() => {
-    if (v && null != x) {
-      var e, t;
-      null === (t = q.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()
+    if (v && null != q) {
+      var e, A;
+      null === (A = L.current) || void 0 === A || null === (e = A.ref) || void 0 === e || e.focus()
     }
-  }, [v, x]), (0, a.jsxs)("div", {
-    className: f.imageSelectionContainer,
+  }, [v, q]), (0, a.jsxs)("div", {
+    className: C.imageSelectionContainer,
     children: [(0, a.jsx)(r.FocusRing, {
       within: !0,
       children: (0, a.jsxs)("div", {
-        className: n()(f.uploadButton, {
-          [f.disabled]: U,
-          [f.hidden]: null != I
+        className: n()(C.uploadButton, {
+          [C.disabled]: I,
+          [C.hidden]: null != p
         }),
-        "aria-disabled": U,
-        children: [(0, a.jsx)(o.default, {
+        "aria-disabled": I,
+        children: [(0, a.jsx)(i.default, {
           width: 16,
           height: 16,
           color: "currentColor",
@@ -99,30 +99,30 @@ function h(e) {
           variant: "text-xxs/normal",
           color: "text-muted",
           "aria-hidden": !0,
-          children: T
-        }), (0, a.jsx)(i.default, {
-          ref: D,
+          children: h
+        }), (0, a.jsx)(o.default, {
+          ref: R,
           tabIndex: 0,
-          onChange: (e, t) => {
-            null != t && (N(t.name), E(e), m(e, g))
+          onChange: (e, A) => {
+            null != A && (N(A.name), E(e), U(e, f))
           },
-          "aria-label": T
+          "aria-label": h
         })]
       })
-    }), null != I && (0, a.jsxs)("div", {
-      className: f.customImageActionContainer,
+    }), null != p && (0, a.jsxs)("div", {
+      className: C.customImageActionContainer,
       children: [(0, a.jsx)(r.Tooltip, {
         text: c.default.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_IMAGE_TOOLTIP,
         hideOnClick: !0,
         children: e => (0, a.jsx)(r.Clickable, {
           ...e,
-          className: f.customImageAction,
-          onClick: R,
+          className: C.customImageAction,
+          onClick: D,
           "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_CUSTOM_IMAGE_ARIA_LABEL.format({
-            filename: x
+            filename: q
           }),
           children: (0, a.jsx)(d.default, {
-            className: f.editIcon
+            className: C.editIcon
           })
         })
       }), (0, a.jsx)(r.Tooltip, {
@@ -130,32 +130,32 @@ function h(e) {
         hideOnClick: !0,
         children: e => (0, a.jsx)(r.Clickable, {
           ...e,
-          className: f.customImageAction,
+          className: C.customImageAction,
           onClick: P,
           "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({
-            filename: x
+            filename: q
           }),
           children: (0, a.jsx)(u.default, {
-            className: f.deleteIcon
+            className: C.deleteIcon
           })
         })
       })]
     }), (0, a.jsxs)("div", {
-      "aria-label": p,
-      ...O,
-      className: f.radioGroup,
-      children: [null != I && (0, a.jsx)(C, {
-        ref: q,
+      "aria-label": m,
+      ...x,
+      className: C.radioGroup,
+      children: [null != p && (0, a.jsx)(g, {
+        ref: L,
         selectedImageName: s,
-        onChange: m,
-        disabled: U,
-        name: g,
-        alt: L,
-        data: I
-      }), t.map(e => (0, a.jsx)(C, {
+        onChange: U,
+        disabled: I,
+        name: f,
+        alt: O,
+        data: p
+      }), A.map(e => (0, a.jsx)(g, {
         selectedImageName: s,
-        onChange: m,
-        disabled: U,
+        onChange: U,
+        disabled: I,
         ...e
       }, e.name))]
     })]

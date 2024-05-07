@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   useDetectableGameSupplementalData: function() {
-    return f
+    return T
   }
-}), n("653041"), n("47120");
-var a = n("470079"),
-  r = n("392711"),
-  s = n.n(r),
-  i = n("442837"),
-  l = n("846519"),
-  o = n("224706"),
-  c = n("669764");
+}), s("653041"), s("47120");
+var a = s("470079"),
+  n = s("392711"),
+  i = s.n(n),
+  E = s("442837"),
+  l = s("846519"),
+  _ = s("224706"),
+  r = s("669764");
 
-function d(e, t, n) {
+function u(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = s, e
 }
-let u = new class e {
+let o = new class e {
   request(e) {
     !(this._pending.has(e) || this._fetched.has(e)) && (this._pending.add(e), this._flushHandler.delay(!1))
   }
@@ -28,27 +28,27 @@ let u = new class e {
     let e = [];
     this._pending.forEach(t => {
       this._fetched.add(t), e.push(t)
-    }), s().chunk(e, 20).forEach(e => {
-      o.default.getDetectableGamesSupplemental(e)
+    }), i().chunk(e, 20).forEach(e => {
+      _.default.getDetectableGamesSupplemental(e)
     })
   }
   constructor() {
-    d(this, "_fetched", new Set), d(this, "_pending", new Set), d(this, "_flushHandler", new l.DelayedCall(0, () => this._flush()))
+    u(this, "_fetched", new Set), u(this, "_pending", new Set), u(this, "_flushHandler", new l.DelayedCall(0, () => this._flush()))
   }
 };
 
-function f(e, t) {
+function T(e, t) {
   a.useEffect(() => {
-    u.request(e)
+    o.request(e)
   }, [e]);
-  let n = a.useMemo(() => null != t ? {
+  let s = a.useMemo(() => null != t ? {
     width: t.coverImageWidth,
     height: t.coverImageHeight
   } : void 0, [t]);
-  return (0, i.useStateFromStoresObject)([c.default], () => ({
-    isFetching: c.default.isFetching(e),
-    localizedName: c.default.getLocalizedName(e),
-    themes: c.default.getThemes(e),
-    coverImageUrl: c.default.getCoverImageUrl(e, n)
+  return (0, E.useStateFromStoresObject)([r.default], () => ({
+    isFetching: r.default.isFetching(e),
+    localizedName: r.default.getLocalizedName(e),
+    themes: r.default.getThemes(e),
+    coverImageUrl: r.default.getCoverImageUrl(e, s)
   }))
 }

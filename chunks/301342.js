@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   NonChannelCategory: function() {
-    return O
+    return y
   },
   ReadonlyCategoryChannel: function() {
-    return b
-  },
-  VoiceChannelCategory: function() {
     return D
   },
+  VoiceChannelCategory: function() {
+    return b
+  },
   VoiceChannelCategoryButton: function() {
-    return y
+    return O
   }
 });
 var l = n("735250"),
@@ -29,8 +29,8 @@ var l = n("735250"),
   C = n("9156"),
   g = n("514342"),
   E = n("696202"),
-  _ = n("605403"),
-  S = n("908773"),
+  S = n("605403"),
+  _ = n("908773"),
   I = n("632184"),
   N = n("151827"),
   T = n("203818"),
@@ -51,15 +51,15 @@ let M = a.memo(function(e) {
       position: T,
       sortingPosition: A,
       hideIcon: M,
-      children: O
+      children: y
     } = e,
-    y = (0, o.useStateFromStores)([C.default], () => C.default.isChannelMuted(s.getGuildId(), s.id)),
-    D = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
-    b = (0, o.useStateFromStores)([m.default], () => m.default.can(L.Permissions.MANAGE_CHANNELS, s));
+    O = (0, o.useStateFromStores)([C.default], () => C.default.isChannelMuted(s.getGuildId(), s.id)),
+    b = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
+    D = (0, o.useStateFromStores)([m.default], () => m.default.can(L.Permissions.MANAGE_CHANNELS, s));
   t = null != A ? T > A ? x.containerDragAfter : x.containerDragBefore : x.containerDefault;
   let j = a.useCallback(() => {
-      D ? (0, d.categoryExpand)(s.id) : (0, d.categoryCollapse)(s.id)
-    }, [s.id, D]),
+      b ? (0, d.categoryExpand)(s.id) : (0, d.categoryCollapse)(s.id)
+    }, [s.id, b]),
     P = a.useCallback(e => {
       if ("null" !== s.id) {
         let t = p.default.getGuild(s.getGuildId());
@@ -75,7 +75,7 @@ let M = a.memo(function(e) {
         })
       }
     }, [s]),
-    G = a.useCallback(() => {
+    U = a.useCallback(() => {
       let e = s.type === L.ChannelTypes.GUILD_CATEGORY ? null : s.type,
         t = s.getGuildId();
       null != t && (0, u.openModalLazy)(async () => {
@@ -91,17 +91,17 @@ let M = a.memo(function(e) {
       })
     }, [s]),
     {
-      role: U,
+      role: G,
       tabIndex: w,
-      ...F
+      ...B
     } = (0, r.useListItem)(s.id),
-    B = a.useRef(null),
+    F = a.useRef(null),
     V = a.useRef(null),
     H = (0, l.jsxs)("li", {
       className: t,
       "data-dnd-name": s.name,
       children: [(0, l.jsx)(u.FocusRing, {
-        focusTarget: B,
+        focusTarget: F,
         ringTarget: V,
         offset: {
           left: 4,
@@ -110,25 +110,25 @@ let M = a.memo(function(e) {
         children: (0, l.jsxs)("div", {
           ref: V,
           className: i()(x.iconVisibility, x.wrapper, {
-            [x.collapsed]: D,
-            [x.muted]: y,
+            [x.collapsed]: b,
+            [x.muted]: O,
             [x.clickable]: !0
           }),
           onContextMenu: P,
           children: [(0, l.jsxs)(u.Clickable, {
-            innerRef: B,
+            innerRef: F,
             className: x.mainContent,
             tabIndex: w,
-            ...F,
+            ...B,
             onClick: j,
             "aria-label": v.default.Messages.CATEGORY_A11Y_LABEL.format({
               categoryName: s.name
             }),
-            "aria-expanded": !D,
+            "aria-expanded": !b,
             focusProps: {
               enabled: !1
             },
-            children: [M ? null : (0, l.jsx)(_.default, {
+            children: [M ? null : (0, l.jsx)(S.default, {
               className: x.icon
             }), (0, l.jsx)(N.default, {
               className: x.name,
@@ -139,7 +139,7 @@ let M = a.memo(function(e) {
           }), (0, l.jsx)("div", {
             onClick: R,
             className: x.children,
-            children: b && !I ? (0, l.jsx)(u.Tooltip, {
+            children: D && !I ? (0, l.jsx)(u.Tooltip, {
               text: v.default.Messages.CREATE_CHANNEL,
               children: e => {
                 let {
@@ -151,7 +151,7 @@ let M = a.memo(function(e) {
                   look: u.Button.Looks.BLANK,
                   size: u.Button.Sizes.NONE,
                   className: i()(x.addButton, x.forceVisible),
-                  onClick: G,
+                  onClick: U,
                   onMouseEnter: t,
                   onMouseLeave: n,
                   tabIndex: w,
@@ -163,7 +163,7 @@ let M = a.memo(function(e) {
                       left: -4
                     }
                   },
-                  children: (0, l.jsx)(S.default, {
+                  children: (0, l.jsx)(_.default, {
                     width: 18,
                     height: 18,
                     className: x.addButtonIcon
@@ -173,12 +173,12 @@ let M = a.memo(function(e) {
             }) : null
           })]
         })
-      }), O]
+      }), y]
     });
   return null != E && null != f ? E(f(H)) : H
 });
 t.default = (0, f.makeChannelSortable)(M);
-let O = a.memo(function(e) {
+let y = a.memo(function(e) {
     let {
       name: t,
       onDismiss: n,
@@ -210,7 +210,7 @@ let O = a.memo(function(e) {
       })
     })
   }),
-  y = a.memo(function(e) {
+  O = a.memo(function(e) {
     let {
       category: t
     } = e, n = (0, o.useStateFromStores)([T.default], () => T.default.isVoiceCategoryCollapsed(t.guild.id)), s = a.useCallback(() => {
@@ -240,7 +240,7 @@ let O = a.memo(function(e) {
       })]
     })
   }),
-  D = a.memo(function(e) {
+  b = a.memo(function(e) {
     let {
       category: t,
       channel: n
@@ -262,7 +262,7 @@ let O = a.memo(function(e) {
       }
     })
   }),
-  b = a.memo(function(e) {
+  D = a.memo(function(e) {
     let {
       channel: t
     } = e;

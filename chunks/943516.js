@@ -1,89 +1,89 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   WarningIcon: function() {
-    return I
+    return p
   },
   default: function() {
-    return x
+    return q
   },
   getInitialNewRoleParams: function() {
-    return U
+    return I
   }
 });
-var a = A("735250");
-A("470079");
-var l = A("512722"),
-  s = A.n(l),
-  n = A("866442"),
-  r = A("399606"),
-  i = A("481060"),
-  o = A("430824"),
-  d = A("682864"),
-  u = A("465670"),
-  c = A("877410"),
-  f = A("740727"),
-  g = A("610064"),
-  C = A("759231"),
-  h = A("470209"),
-  m = A("981631"),
-  T = A("689938"),
-  p = A("443695");
+var a = t("735250");
+t("470079");
+var l = t("512722"),
+  s = t.n(l),
+  n = t("866442"),
+  r = t("399606"),
+  o = t("481060"),
+  i = t("430824"),
+  d = t("682864"),
+  u = t("465670"),
+  c = t("877410"),
+  C = t("740727"),
+  f = t("610064"),
+  g = t("759231"),
+  T = t("470209"),
+  U = t("981631"),
+  h = t("689938"),
+  m = t("443695");
 
-function U() {
+function I() {
   return {
     name: "",
-    color: m.DEFAULT_ROLE_COLOR
+    color: U.DEFAULT_ROLE_COLOR
   }
 }
 
 function v(e) {
-  let t, {
-    onRemove: A,
+  let A, {
+    onRemove: t,
     role: l
   } = e;
-  return t = null != l ? (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(i.HiddenVisually, {
-      children: T.default.Messages.GUILD_PRODUCT_SETTINGS_ROLE_COLOR_ARIA.format({
+  return A = null != l ? (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(o.HiddenVisually, {
+      children: h.default.Messages.GUILD_PRODUCT_SETTINGS_ROLE_COLOR_ARIA.format({
         color: (0, n.int2hex)(l.color)
       })
     }), (0, a.jsx)("div", {
-      className: p.attachedRoleColor,
+      className: m.attachedRoleColor,
       style: {
         backgroundColor: (0, n.int2hex)(l.color)
       }
     }), (0, a.jsx)(d.default, {
       size: 8,
       horizontal: !0
-    }), (0, a.jsx)(i.Text, {
+    }), (0, a.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "text-normal",
       children: l.name
-    }), null != A && (0, a.jsxs)(a.Fragment, {
+    }), null != t && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(d.default, {
         size: 12,
         horizontal: !0
-      }), (0, a.jsx)(i.Clickable, {
-        "aria-label": T.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ATTACHED_ROLE_ARIA,
-        onClick: A,
-        className: p.attachedRoleClose,
+      }), (0, a.jsx)(o.Clickable, {
+        "aria-label": h.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ATTACHED_ROLE_ARIA,
+        onClick: t,
+        className: m.attachedRoleClose,
         children: (0, a.jsx)(u.default, {
           width: 16,
           height: 16,
-          className: p.attachedRoleCloseIcon
+          className: m.attachedRoleCloseIcon
         })
       })]
     })]
-  }) : (0, a.jsx)(i.Spinner, {
-    type: i.Spinner.Type.PULSING_ELLIPSIS
+  }) : (0, a.jsx)(o.Spinner, {
+    type: o.Spinner.Type.PULSING_ELLIPSIS
   }), (0, a.jsx)("div", {
-    className: p.attachedRoleContainer,
-    children: t
+    className: m.attachedRoleContainer,
+    children: A
   })
 }
 
-function I() {
-  return (0, a.jsx)(C.default, {
-    className: p.warningIcon,
+function p() {
+  return (0, a.jsx)(g.default, {
+    className: m.warningIcon,
     width: 16,
     height: 16
   })
@@ -91,23 +91,23 @@ function I() {
 
 function E(e) {
   let {
-    roleName: t
+    roleName: A
   } = e;
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(i.Text, {
+    children: [(0, a.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "text-muted",
-      children: T.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_BODY.format({
-        roleName: t,
-        emphasisHook: e => (0, a.jsx)(i.Text, {
+      children: h.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_BODY.format({
+        roleName: A,
+        emphasisHook: e => (0, a.jsx)(o.Text, {
           tag: "span",
           variant: "text-md/semibold",
           color: "text-normal",
           children: e
         })
       })
-    }), (0, a.jsxs)(i.Heading, {
-      className: p.detachWarningHeading,
+    }), (0, a.jsxs)(o.Heading, {
+      className: m.detachWarningHeading,
       variant: "text-md/medium",
       color: "text-normal",
       children: [(0, a.jsx)(c.default, {
@@ -116,137 +116,137 @@ function E(e) {
       }), (0, a.jsx)(d.default, {
         horizontal: !0,
         size: 8
-      }), T.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_1_TITLE]
-    }), (0, a.jsx)(i.Text, {
+      }), h.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_1_TITLE]
+    }), (0, a.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "text-muted",
-      children: T.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_1_DETAIL
-    }), (0, a.jsxs)(i.Heading, {
-      className: p.detachWarningHeading,
+      children: h.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_1_DETAIL
+    }), (0, a.jsxs)(o.Heading, {
+      className: m.detachWarningHeading,
       variant: "text-md/medium",
       color: "text-normal",
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(C.default, {
         height: 18,
         width: 18
       }), (0, a.jsx)(d.default, {
         horizontal: !0,
         size: 8
-      }), T.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_2_TITLE]
-    }), (0, a.jsx)(i.Text, {
+      }), h.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_2_TITLE]
+    }), (0, a.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "text-muted",
-      children: T.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_2_DETAIL
+      children: h.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_2_DETAIL
     })]
   })
 }
 
-function x(e) {
+function q(e) {
   let {
-    newRoleParams: t,
+    newRoleParams: A,
     setNewRoleParams: l,
     guildId: n,
     productId: u,
     listingRoleId: c,
-    error: f
-  } = e, C = (0, r.useStateFromStores)([o.default], () => null != c ? o.default.getRole(n, c) : void 0);
-  return null === t ? (0, a.jsxs)(i.FormItem, {
+    error: C
+  } = e, g = (0, r.useStateFromStores)([i.default], () => null != c ? i.default.getRole(n, c) : void 0);
+  return null === A ? (0, a.jsxs)(o.FormItem, {
     title: (0, a.jsxs)("div", {
-      className: p.warningTitle,
-      children: [(0, a.jsx)(I, {}), (0, a.jsx)(d.default, {
+      className: m.warningTitle,
+      children: [(0, a.jsx)(p, {}), (0, a.jsx)(d.default, {
         horizontal: !0,
         size: 4
-      }), T.default.Messages.GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_HEADER]
+      }), h.default.Messages.GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_HEADER]
     }),
     tag: "label",
-    error: f,
-    titleClassName: p.roleHeader,
-    children: [(0, a.jsx)(i.Text, {
+    error: C,
+    titleClassName: m.roleHeader,
+    children: [(0, a.jsx)(o.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
-      children: T.default.Messages.GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_DESCRIPTION
+      children: h.default.Messages.GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_DESCRIPTION
     }), (0, a.jsx)(d.default, {
       size: 8
     }), (0, a.jsxs)("div", {
-      className: p.reattachRoleRow,
+      className: m.reattachRoleRow,
       children: [(0, a.jsx)(v, {
-        role: C,
+        role: g,
         onRemove: void 0
       }), (0, a.jsx)(d.default, {
         horizontal: !0,
         size: 8
-      }), (0, a.jsxs)(i.Button, {
-        innerClassName: p.restoreDetachedRoleButtonInner,
-        color: i.Button.Colors.PRIMARY,
+      }), (0, a.jsxs)(o.Button, {
+        innerClassName: m.restoreDetachedRoleButtonInner,
+        color: o.Button.Colors.PRIMARY,
         onClick: () => {
           l(void 0)
         },
-        children: [(0, a.jsx)(i.Text, {
+        children: [(0, a.jsx)(o.Text, {
           variant: "text-md/normal",
           color: "none",
-          children: T.default.Messages.GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_UNDO_CTA
+          children: h.default.Messages.GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_UNDO_CTA
         }), (0, a.jsx)(d.default, {
           horizontal: !0,
           size: 8
-        }), (0, a.jsx)(g.default, {
+        }), (0, a.jsx)(f.default, {
           width: 16,
           height: 16
         })]
       })]
     })]
-  }) : null != c ? (0, a.jsxs)(i.FormItem, {
-    title: T.default.Messages.GUILD_PRODUCT_SETTINGS_ATTACHED_ROLE_HEADER,
+  }) : null != c ? (0, a.jsxs)(o.FormItem, {
+    title: h.default.Messages.GUILD_PRODUCT_SETTINGS_ATTACHED_ROLE_HEADER,
     tag: "label",
-    error: f,
-    titleClassName: p.roleHeader,
-    children: [(0, a.jsx)(i.Text, {
+    error: C,
+    titleClassName: m.roleHeader,
+    children: [(0, a.jsx)(o.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
-      children: T.default.Messages.GUILD_PRODUCT_SETTINGS_ATTACHED_ROLE_DESCRIPTION
+      children: h.default.Messages.GUILD_PRODUCT_SETTINGS_ATTACHED_ROLE_DESCRIPTION
     }), (0, a.jsx)(d.default, {
       size: 8
     }), (0, a.jsx)(v, {
-      role: C,
+      role: g,
       onRemove: () => {
-        s()(null != u, "productId cannot be null"), s()(null != C, "no role attached"), ! function(e) {
+        s()(null != u, "productId cannot be null"), s()(null != g, "no role attached"), ! function(e) {
           let {
-            onConfirm: t,
+            onConfirm: A,
             roleName: l
           } = e;
-          (0, i.openModalLazy)(async () => {
+          (0, o.openModalLazy)(async () => {
             let {
               default: e
-            } = await Promise.resolve().then(A.bind(A, "776045"));
-            return A => (0, a.jsx)(e, {
-              title: T.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_TITLE,
+            } = await Promise.resolve().then(t.bind(t, "776045"));
+            return t => (0, a.jsx)(e, {
+              title: h.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_TITLE,
               body: (0, a.jsx)(E, {
                 roleName: l
               }),
-              cta: T.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_REMOVE_CTA,
-              closeLabel: T.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_REMOVE_CLOSE_LABEL,
-              onConfirm: t,
-              ...A
+              cta: h.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_REMOVE_CTA,
+              closeLabel: h.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_REMOVE_CLOSE_LABEL,
+              onConfirm: A,
+              ...t
             })
           })
         }({
-          roleName: C.name,
+          roleName: g.name,
           onConfirm: () => l(null)
         })
       }
     })]
-  }) : (s()(null != t, "newRoleParams cannot be null at this point"), (0, a.jsxs)(i.FormItem, {
+  }) : (s()(null != A, "newRoleParams cannot be null at this point"), (0, a.jsxs)(o.FormItem, {
     required: !0,
-    title: T.default.Messages.GUILD_PRODUCT_SETTINGS_ADD_ROLE_HEADER,
+    title: h.default.Messages.GUILD_PRODUCT_SETTINGS_ADD_ROLE_HEADER,
     tag: "label",
-    error: f,
-    titleClassName: p.roleHeader,
-    children: [(0, a.jsx)(i.Text, {
+    error: C,
+    titleClassName: m.roleHeader,
+    children: [(0, a.jsx)(o.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
-      children: T.default.Messages.GUILD_PRODUCT_SETTINGS_ADD_ROLE_DESCRIPTION
+      children: h.default.Messages.GUILD_PRODUCT_SETTINGS_ADD_ROLE_DESCRIPTION
     }), (0, a.jsx)(d.default, {
       size: 8
-    }), (0, a.jsx)(h.default, {
-      newRoleParams: t,
+    }), (0, a.jsx)(T.default, {
+      newRoleParams: A,
       setNewRoleParams: l
     })]
   }))

@@ -1,98 +1,98 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return d
+    return u
   }
 });
-var a = n("735250"),
-  r = n("470079"),
-  s = n("481060"),
-  i = n("703685"),
-  l = n("689938"),
-  o = n("109267");
+var a = s("735250"),
+  n = s("470079"),
+  i = s("481060"),
+  E = s("703685"),
+  l = s("689938"),
+  _ = s("109267");
 
-function c(e) {
+function r(e) {
   let {
     showSecondaryColor: t,
-    palette: n,
-    onPrimaryColorChange: c,
-    onSecondaryColorChange: d
-  } = e, u = r.useRef(null);
-  return (0, s.useFocusLock)(u), (0, a.jsxs)("div", {
-    className: o.popoutContainer,
-    children: [(0, a.jsx)(s.Text, {
+    palette: s,
+    onPrimaryColorChange: r,
+    onSecondaryColorChange: u
+  } = e, o = n.useRef(null);
+  return (0, i.useFocusLock)(o), (0, a.jsxs)("div", {
+    className: _.popoutContainer,
+    children: [(0, a.jsx)(i.Text, {
       variant: "text-xs/semibold",
       color: "header-secondary",
-      className: o.customColorsHeader,
+      className: _.customColorsHeader,
       children: l.default.Messages.CLAN_PALETTE_PICKER_CUSTOM_COLORS
     }), (0, a.jsxs)("div", {
-      ref: u,
-      className: o.colorPickersContainer,
+      ref: o,
+      className: _.colorPickersContainer,
       children: [(0, a.jsxs)("div", {
-        className: o.colorColumn,
+        className: _.colorColumn,
         children: [(0, a.jsx)("div", {
-          className: o.colorSwatch,
+          className: _.colorSwatch,
           style: {
-            backgroundColor: n.primary
+            backgroundColor: s.primary
           }
-        }), (0, a.jsx)(s.Text, {
+        }), (0, a.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
           children: l.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
-        }), (0, a.jsx)(i.CustomColorPicker, {
-          className: o.colorPicker,
-          value: n.primary,
+        }), (0, a.jsx)(E.CustomColorPicker, {
+          className: _.colorPicker,
+          value: s.primary,
           eagerUpdate: !0,
           wrapperComponentType: "div",
           showEyeDropper: !0,
-          onChange: c
+          onChange: r
         })]
       }), t && (0, a.jsxs)("div", {
-        className: o.colorColumn,
+        className: _.colorColumn,
         children: [(0, a.jsx)("div", {
-          className: o.colorSwatch,
+          className: _.colorSwatch,
           style: {
-            backgroundColor: n.secondary
+            backgroundColor: s.secondary
           }
-        }), (0, a.jsx)(s.Text, {
+        }), (0, a.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
           children: l.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
-        }), (0, a.jsx)(i.CustomColorPicker, {
-          className: o.colorPicker,
-          value: n.secondary,
+        }), (0, a.jsx)(E.CustomColorPicker, {
+          className: _.colorPicker,
+          value: s.secondary,
           eagerUpdate: !0,
           wrapperComponentType: "div",
           showEyeDropper: !0,
-          onChange: d
+          onChange: u
         })]
       })]
     })]
   })
 }
 
-function d(e) {
+function u(e) {
   let {
     shouldShow: t,
-    showSecondaryColor: n,
-    onRequestClose: r,
-    children: i,
+    showSecondaryColor: s,
+    onRequestClose: n,
+    children: E,
     palette: l,
-    onPrimaryColorChange: o,
-    onSecondaryColorChange: d
+    onPrimaryColorChange: _,
+    onSecondaryColorChange: u
   } = e;
-  return (0, a.jsx)(s.Popout, {
-    renderPopout: () => (0, a.jsx)(c, {
-      showSecondaryColor: n,
+  return (0, a.jsx)(i.Popout, {
+    renderPopout: () => (0, a.jsx)(r, {
+      showSecondaryColor: s,
       palette: l,
-      onPrimaryColorChange: o,
-      onSecondaryColorChange: d
+      onPrimaryColorChange: _,
+      onSecondaryColorChange: u
     }),
     position: "left",
     shouldShow: t,
-    onRequestClose: r,
-    animation: s.Popout.Animation.TRANSLATE,
+    onRequestClose: n,
+    animation: i.Popout.Animation.TRANSLATE,
     animationPosition: "right",
-    children: i
+    children: E
   })
 }

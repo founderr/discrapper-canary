@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("266067"),
   o = n("613828"),
   u = n("990547"),
@@ -21,26 +21,26 @@ var a = n("735250"),
   m = n("918854"),
   S = n("279240"),
   p = n("765717"),
-  I = n("358221"),
-  g = n("823748"),
+  g = n("358221"),
+  I = n("823748"),
   T = n("626421"),
   A = n("118379"),
   N = n("652515"),
   v = n("544978"),
   R = n("194729"),
-  L = n("668940"),
-  O = n("372900"),
+  O = n("668940"),
+  L = n("372900"),
   M = n("6039"),
-  P = n("637853"),
-  y = n("326145"),
+  y = n("637853"),
+  P = n("326145"),
   x = n("269675"),
   D = n("242601"),
   b = n("416568"),
   U = n("613609"),
   j = n("160404"),
   G = n("225675"),
-  w = n("745052"),
-  k = n("285865"),
+  k = n("745052"),
+  w = n("285865"),
   F = n("659971"),
   B = n("720734"),
   H = n("840780"),
@@ -60,8 +60,8 @@ var a = n("735250"),
   en = n("823379"),
   ea = n("709054"),
   es = n("792125"),
-  el = n("409292"),
-  ei = n("316173"),
+  ei = n("409292"),
+  el = n("316173"),
   er = n("256638"),
   eo = n("663701"),
   eu = n("410575"),
@@ -88,13 +88,13 @@ let em = () => (0, a.jsx)("div", {
     name: "GuildMemberApplicationReview",
     renderLoader: em
   }),
-  eI = (0, d.makeLazy)({
+  eg = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("51373")]).then(n.bind(n, "231588")),
     webpackId: "231588",
     name: "GuildHomePage",
     renderLoader: em
   }),
-  eg = (0, d.makeLazy)({
+  eI = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("85552"), n.e("16600")]).then(n.bind(n, "545918")),
     webpackId: "545918",
     name: "MemberSafetyPage",
@@ -120,8 +120,8 @@ let em = () => (0, a.jsx)("div", {
       return X.default.getChannel(e)
     }), {
       guildId: s,
-      channelId: l,
-      messageId: i
+      channelId: i,
+      messageId: l
     } = t.params, r = (0, f.useStateFromStores)([$.default], () => $.default.getGuild(s)), o = (0, f.useStateFromStores)([J.default], () => null == s ? null : J.default.getSelfMember(s)), u = (0, f.useStateFromStores)([j.default], () => {
       if (null == s) return;
       let e = j.default.getData(s);
@@ -134,7 +134,7 @@ let em = () => (0, a.jsx)("div", {
           return
       }
     }), d = (0, N.isEligibleForSubscriptionsInGuildShop)(s, "channel_renderer");
-    if (null != s && null != l && (0, eE.isStaticChannelRoute)(l)) switch (l) {
+    if (null != s && null != i && (0, eE.isStaticChannelRoute)(i)) switch (i) {
       case eE.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
         return d ? (0, a.jsx)(eS, {
           guildId: s,
@@ -145,7 +145,7 @@ let em = () => (0, a.jsx)("div", {
       case eE.StaticChannelRoute.GUILD_SHOP:
         return (0, a.jsx)(eS, {
           guildId: s,
-          productId: i,
+          productId: l,
           initialTab: u
         });
       case eE.StaticChannelRoute.MEMBER_APPLICATIONS:
@@ -153,7 +153,7 @@ let em = () => (0, a.jsx)("div", {
           guildId: s
         });
       case eE.StaticChannelRoute.GUILD_HOME:
-        return (0, a.jsx)(eI, {
+        return (0, a.jsx)(eg, {
           guildId: s
         });
       case eE.StaticChannelRoute.CHANNEL_BROWSER:
@@ -171,24 +171,24 @@ let em = () => (0, a.jsx)("div", {
           selectedSection: eh.GuildOnboardingTab.CUSTOMIZE
         });
       case eE.StaticChannelRoute.MEMBER_SAFETY:
-        return (0, a.jsx)(eg, {
+        return (0, a.jsx)(eI, {
           guildId: s
         });
       default:
-        (0, en.assertNever)(l)
+        (0, en.assertNever)(i)
     }
-    if ((0, P.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(y.default, {
+    if ((0, y.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(P.default, {
       guildId: s,
-      channelId: l
+      channelId: i
     });
     if ((null == n ? void 0 : n.type) === ef.ChannelTypes.GUILD_STORE) {
       let e = ea.default.cast(t.params.messageId);
-      return (0, a.jsx)(el.default, {
+      return (0, a.jsx)(ei.default, {
         channel: n,
         inputSkuId: e
       }, n.id)
     }
-    return (0, a.jsx)(g.default, {})
+    return (0, a.jsx)(I.default, {})
   },
   ev = s.memo(function() {
     let {
@@ -197,7 +197,7 @@ let em = () => (0, a.jsx)("div", {
     } = (0, q.default)(), n = (0, f.useStateFromStores)([ee.default], () => null != t ? t : ee.default.getChannelId(e));
     return function() {
       return window.location.pathname.startsWith(ef.Routes.GUILD_DISCOVERY)
-    }() ? (0, a.jsx)(L.default, {}) : null != e ? (0, a.jsx)(D.default, {
+    }() ? (0, a.jsx)(O.default, {}) : null != e ? (0, a.jsx)(D.default, {
       selectedChannelId: n,
       guildId: e
     }, e) : (0, a.jsx)(eo.default, {})
@@ -215,10 +215,10 @@ function eR(e) {
     guildId: t
   })
 }
-let eL = e => (0, a.jsx)(eN, {
+let eO = e => (0, a.jsx)(eN, {
     ...e
   }),
-  eO = e => {
+  eL = e => {
     let t = null != e && e.length > 0 && e.startsWith("?") ? e.split("?")[1] : null;
     return (0, a.jsx)(R.default, {
       searchRoute: t
@@ -233,7 +233,7 @@ let eL = e => (0, a.jsx)(eN, {
       inviteCode: t.params.inviteCode
     }) : null
   },
-  eP = e => {
+  ey = e => {
     let {
       match: t
     } = e;
@@ -242,7 +242,7 @@ let eL = e => (0, a.jsx)(eN, {
       inviteCode: t.params.inviteCode
     }) : null
   },
-  ey = () => (0, a.jsx)(ed.default, {}),
+  eP = () => (0, a.jsx)(ed.default, {}),
   ex = () => (0, a.jsx)(ec.default, {}),
   eD = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -258,9 +258,9 @@ let eL = e => (0, a.jsx)(eN, {
   }),
   eU = () => (0, a.jsx)(m.default, {}),
   ej = () => (0, a.jsx)(K.default, {}),
-  eG = () => (0, a.jsx)(w.default, {}),
-  ew = () => (0, a.jsx)(W.default, {}),
-  ek = e => {
+  eG = () => (0, a.jsx)(k.default, {}),
+  ek = () => (0, a.jsx)(W.default, {}),
+  ew = e => {
     let {
       match: t
     } = e;
@@ -306,17 +306,17 @@ function eF(e) {
     hideSidebar: s
   } = e;
   (0, _.useNullExperiment)(!0);
-  let l = "app view user trigger debugging";
+  let i = "app view user trigger debugging";
   h.UserTriggerAAExperiment.useExperiment({
-    location: l
+    location: i
   }, {
     autoTrackExposure: !1
   }), h.UserTriggerAAExperiment.trackExposure({
-    location: l
+    location: i
   });
-  let r = (0, f.useStateFromStores)([I.default], () => I.default.isFullscreenInContext());
+  let r = (0, f.useStateFromStores)([g.default], () => g.default.isFullscreenInContext());
   return s ? null : (0, a.jsxs)("div", {
-    className: i()(eC.sidebar, (0, es.getThemeClass)(n), {
+    className: l()(eC.sidebar, (0, es.getThemeClass)(n), {
       [eC.hasNotice]: t,
       [eC.fullWidth]: c.isMobile,
       [eC.hidden]: r
@@ -336,7 +336,7 @@ function eF(e) {
         section: ef.AnalyticsSections.ACCOUNT_PANEL,
         children: (0, a.jsx)(B.default, {})
       })]
-    }), (0, a.jsx)(ei.default, {})]
+    }), (0, a.jsx)(el.default, {})]
   })
 }
 
@@ -344,13 +344,13 @@ function eB() {
   var e;
   let t = (0, f.useStateFromStores)([et.default], () => et.default.hasNotice()),
     n = (0, f.useStateFromStores)([Z.default], () => Z.default.darkSidebar ? ef.ThemeTypes.DARK : void 0),
-    l = function() {
+    i = function() {
       let [e, t] = s.useState(() => window.location.pathname.startsWith(ef.Routes.GUILD_MEMBER_VERIFICATION("")));
       return s.useEffect(() => Q.default.addRouteChangeListener(e => {
         t(e.pathname.startsWith(ef.Routes.GUILD_MEMBER_VERIFICATION("")))
       }), []), e
     }(),
-    i = function() {
+    l = function() {
       let [e, t] = s.useState(() => window.location.pathname.startsWith(ef.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB("")));
       return s.useEffect(() => Q.default.addRouteChangeListener(e => {
         t(e.pathname.startsWith(ef.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB("")))
@@ -369,14 +369,14 @@ function eB() {
     h = (0, f.useStateFromStores)([F.default], () => F.default.getIsOpen()),
     _ = (0, o.useRouteMatch)([ef.Routes.CHANNEL(ef.ME, ":channelId"), ef.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")]),
     m = (null == _ ? void 0 : null === (e = _.params) || void 0 === e ? void 0 : e.channelId) === eE.StaticChannelRoute.GUILD_ONBOARDING,
-    S = s.useCallback(() => k.default.openSidebar(), []);
+    S = s.useCallback(() => w.default.openSidebar(), []);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsxs)("div", {
       className: eC.container,
       children: [h && !E && (0, a.jsx)(b.default, {
         className: eC.guilds,
         themeOverride: n
-      }), (0, a.jsx)(O.default.Provider, {
+      }), (0, a.jsx)(L.default.Provider, {
         value: (null == _ ? void 0 : _.params.guildId) === ef.ME ? void 0 : null == _ ? void 0 : _.params.guildId,
         children: (0, a.jsxs)("div", {
           className: eC.base,
@@ -385,7 +385,7 @@ function eB() {
             children: [(0, a.jsx)(T.default, {}), (0, a.jsx)(eF, {
               hasNotice: t,
               sidebarTheme: n,
-              hideSidebar: l || i || d || E || m || !h
+              hideSidebar: i || l || d || E || m || !h
             }), (0, a.jsx)(C.default.Provider, {
               value: S,
               children: (0, a.jsxs)(o.Switch, {
@@ -417,7 +417,7 @@ function eB() {
                   impressionName: u.ImpressionNames.ACTIVITIES
                 }), (0, a.jsx)(p.default, {
                   path: ef.Routes.APPLICATION_LIBRARY,
-                  render: ey,
+                  render: eP,
                   impressionName: u.ImpressionNames.APPLICATION_LIBRARY,
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
@@ -443,7 +443,7 @@ function eB() {
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: ef.Routes.FAMILY_CENTER,
-                  render: ew,
+                  render: ek,
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: ef.Routes.ME,
@@ -453,7 +453,7 @@ function eB() {
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: [ef.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), ef.Routes.CHANNEL(ef.ME, ":channelId"), ef.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
-                  render: eL,
+                  render: eO,
                   impressionName: u.ImpressionNames.GUILD_CHANNEL,
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
@@ -462,7 +462,7 @@ function eB() {
                     let {
                       location: t
                     } = e;
-                    return eO(t.search)
+                    return eL(t.search)
                   },
                   impressionName: u.ImpressionNames.GUILD_DISCOVERY,
                   disableTrack: !0
@@ -473,7 +473,7 @@ function eB() {
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: ef.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"),
-                  render: eP,
+                  render: ey,
                   impressionName: u.ImpressionNames.HUB_EMAIL_SIGNUP,
                   impressionProperties: e => {
                     let {
@@ -486,7 +486,7 @@ function eB() {
                 }), (0, a.jsx)(p.default, {
                   path: ef.Routes.FEATURE(":feature"),
                   exact: !0,
-                  render: ek,
+                  render: ew,
                   disableTrack: !0
                 })]
               })

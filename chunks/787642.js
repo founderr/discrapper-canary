@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("481060"),
-  i = n("212093"),
+  i = n("481060"),
+  l = n("212093"),
   r = n("703656"),
   o = n("769654"),
   u = n("430824"),
@@ -27,13 +27,13 @@ function m(e, t, n) {
       className: C.icon,
       children: (0, a.jsx)(e, {
         className: C.__invalid_iconInner,
-        color: l.tokens.colors.WHITE.css
+        color: i.tokens.colors.WHITE.css
       })
     }) : (0, a.jsx)("img", {
       className: C.icon,
       alt: "",
       src: e
-    }), (0, a.jsx)(l.Text, {
+    }), (0, a.jsx)(i.Text, {
       className: C.text,
       variant: "text-md/medium",
       children: t
@@ -53,7 +53,7 @@ function S() {
   return (0, a.jsxs)(s.Fragment, {
     children: [(0, a.jsx)("header", {
       className: C.header,
-      children: (0, a.jsx)(l.FormTitle, {
+      children: (0, a.jsx)(i.FormTitle, {
         tag: "h2",
         className: C.title,
         children: _.default.Messages.ADD_FRIEND_MAKE_FRIENDS
@@ -67,7 +67,7 @@ function S() {
       }), e.name, () => {
         t(e.id)
       })), m(d.default, _.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
-        (0, i.clearSearch)(), c.default.track(h.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.transitionTo)(h.Routes.GUILD_DISCOVERY)
+        (0, l.clearSearch)(), c.default.track(h.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.transitionTo)(h.Routes.GUILD_DISCOVERY)
       })]
     })]
   })

@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("442837"),
-  l = n("481060"),
-  i = n("239091"),
+  i = n("481060"),
+  l = n("239091"),
   r = n("299206"),
   o = n("726521"),
   u = n("430824"),
@@ -33,22 +33,22 @@ function _(e) {
     label: h.default.Messages.COPY_ID_GUILD,
     shiftId: n,
     onSuccess: C
-  }), p = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), I = (0, s.useStateFromStores)([d.default], () => d.default.can(E.Permissions.ADMINISTRATOR, p)), {
-    canSeeInAppReportingButtons: g
+  }), p = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), g = (0, s.useStateFromStores)([d.default], () => d.default.can(E.Permissions.ADMINISTRATOR, p)), {
+    canSeeInAppReportingButtons: I
   } = f.DiscoveryInAppReportingExperiment.useExperiment({
     location: "0e35b9_1"
   }, {
     autoTrackExposure: !1
   }), T = () => {
-    (0, i.closeContextMenu)(), null == C || C()
+    (0, l.closeContextMenu)(), null == C || C()
   };
-  return (0, a.jsxs)(l.Menu, {
+  return (0, a.jsxs)(i.Menu, {
     onSelect: _,
     navId: "guild-discovery-context-menu",
     "aria-label": null != m ? m : h.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
-    onClose: i.closeContextMenu,
-    children: [(0, a.jsx)(l.MenuGroup, {
-      children: !I && g ? (0, a.jsx)(l.MenuItem, {
+    onClose: l.closeContextMenu,
+    children: [(0, a.jsx)(i.MenuGroup, {
+      children: !g && I ? (0, a.jsx)(i.MenuItem, {
         id: "report-guild-discovery-listing",
         label: h.default.Messages.REPORT_SERVER_NO_NAME,
         action: () => {
@@ -57,7 +57,7 @@ function _(e) {
         icon: c.default,
         color: "danger"
       }) : null
-    }), (0, a.jsx)(l.MenuGroup, {
+    }), (0, a.jsx)(i.MenuGroup, {
       children: S
     })]
   })
@@ -67,12 +67,12 @@ let C = e => {
     guild: t,
     children: n,
     onRequestOpen: s,
-    onRequestClose: i
+    onRequestClose: l
   } = e;
-  return (0, a.jsx)(l.Popout, {
+  return (0, a.jsx)(i.Popout, {
     onRequestOpen: s,
-    onRequestClose: i,
-    animation: l.Popout.Animation.NONE,
+    onRequestClose: l,
+    animation: i.Popout.Animation.NONE,
     position: "bottom",
     spacing: 4,
     align: "right",

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CloseButton: function() {
-    return W
+    return K
   },
   LinkButton: function() {
     return Z
@@ -23,8 +23,8 @@ var l = n("735250"),
   C = n("420660"),
   g = n("201895"),
   E = n("43267"),
-  _ = n("933557"),
-  S = n("853856"),
+  S = n("933557"),
+  _ = n("853856"),
   I = n("93687"),
   N = n("785232"),
   T = n("878857"),
@@ -34,29 +34,29 @@ var l = n("735250"),
   x = n("306680"),
   R = n("111583"),
   M = n("9156"),
-  O = n("594174"),
-  y = n("467679"),
-  D = n("514342"),
-  b = n("28718"),
+  y = n("594174"),
+  O = n("467679"),
+  b = n("514342"),
+  D = n("28718"),
   j = n("733880"),
   P = n("465670"),
-  G = n("887208"),
-  U = n("709054"),
+  U = n("887208"),
+  G = n("709054"),
   w = n("998502"),
-  F = n("788307"),
-  B = n("960670"),
+  B = n("788307"),
+  F = n("960670"),
   V = n("981631"),
   H = n("689938"),
   k = n("437063");
 let Y = w.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
-  K = {
+  W = {
     offset: {
       top: 2,
       bottom: 2,
       right: 4
     }
   },
-  W = e => (0, l.jsx)(h.Clickable, {
+  K = e => (0, l.jsx)(h.Clickable, {
     className: k.closeButton,
     ...e,
     focusProps: {
@@ -71,7 +71,7 @@ let Y = w.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
       className: k.closeIcon
     })
   }),
-  z = () => (0, l.jsx)(G.default, {
+  z = () => (0, l.jsx)(U.default, {
     className: k.favoriteIcon
   });
 class Z extends a.Component {
@@ -100,7 +100,7 @@ class Z extends a.Component {
       role: m,
       focusProps: {
         within: !0,
-        ...K
+        ...W
       },
       "aria-posinset": C,
       "aria-setsize": g,
@@ -117,7 +117,7 @@ class Z extends a.Component {
           },
           className: k.link,
           ...E,
-          children: [(0, l.jsx)(b.default, {
+          children: [(0, l.jsx)(D.default, {
             selected: t,
             muted: !1,
             avatar: (0, l.jsx)(n, {
@@ -142,18 +142,18 @@ function X(e) {
     applicationStream: L,
     isTyping: v,
     status: R,
-    isMobile: O,
+    isMobile: y,
     "aria-posinset": P,
-    "aria-setsize": G
-  } = e, [U, w] = a.useState(!1), Z = a.useRef(null), X = a.useRef(null), {
-    avatarSrc: Q,
-    avatarDecorationSrc: q,
+    "aria-setsize": U
+  } = e, [G, w] = a.useState(!1), Z = a.useRef(null), X = a.useRef(null), {
+    avatarSrc: q,
+    avatarDecorationSrc: Q,
     eventHandlers: J
   } = (0, A.default)({
     user: c,
     size: h.AvatarSizes.SIZE_32,
-    animateOnHover: !(r || U)
-  }), $ = (0, f.useStateFromStores)([M.default], () => M.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, _.default)(t), en = (0, f.useStateFromStores)([S.default], () => S.default.isFavorite(t.id)), el = () => {
+    animateOnHover: !(r || G)
+  }), $ = (0, f.useStateFromStores)([M.default], () => M.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, S.default)(t), en = (0, f.useStateFromStores)([_.default], () => _.default.isFavorite(t.id)), el = () => {
     w(!0)
   }, ea = () => {
     w(!1)
@@ -204,7 +204,7 @@ function X(e) {
       name
     }), a = H.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
       name
-    })), (0, h.openModal)(e => (0, l.jsx)(B.default, {
+    })), (0, h.openModal)(e => (0, l.jsx)(F.default, {
       header: n,
       body: a,
       onSubmit: es,
@@ -224,11 +224,11 @@ function X(e) {
       children: H.default.Messages.MEMBERS_HEADER.format({
         members: t.recipients.length + 1
       })
-    }) : null != I ? (0, l.jsx)(F.default, {
+    }) : null != I ? (0, l.jsx)(B.default, {
       ...e,
       activities: I,
       applicationStream: L,
-      animate: U,
+      animate: G,
       hideTooltip: !0,
       user: c
     }) : null
@@ -253,10 +253,10 @@ function X(e) {
     return !c.isSystemUser() && (e = (0, C.default)(I) ? V.StatusTypes.STREAMING : R), (0, l.jsx)(Y, {
       ...J,
       size: h.AvatarSizes.SIZE_32,
-      src: Q,
-      avatarDecoration: q,
+      src: q,
+      avatarDecoration: Q,
       status: e,
-      isMobile: O,
+      isMobile: y,
       isTyping: v,
       className: k.__invalid_avatar,
       "aria-label": c.username,
@@ -274,7 +274,7 @@ function X(e) {
         className: k.channel,
         role: n,
         focusProps: {
-          ...K,
+          ...W,
           focusTarget: Z,
           ringTarget: X
         },
@@ -283,7 +283,7 @@ function X(e) {
         onMouseLeave: ea,
         onMouseDown: ei,
         onContextMenu: eu,
-        "aria-setsize": G,
+        "aria-setsize": U,
         "aria-posinset": P,
         children: (0, l.jsxs)(h.Interactive, {
           className: i()(k.interactive, {
@@ -303,22 +303,22 @@ function X(e) {
               unread: ee
             }),
             ...a,
-            children: (0, l.jsx)(b.default, {
+            children: (0, l.jsx)(D.default, {
               avatar: ef(),
               selected: r,
               highlighted: ee,
               muted: null != $ && $,
               subText: ec(),
-              name: (0, l.jsx)(D.default, {
+              name: (0, l.jsx)(b.default, {
                 children: et
               }),
-              decorators: t.isSystemDM() ? (0, l.jsx)(y.default, {
+              decorators: t.isSystemDM() ? (0, l.jsx)(O.default, {
                 className: k.decorator,
-                type: y.default.Types.SYSTEM_DM,
+                type: O.default.Types.SYSTEM_DM,
                 verified: !0
               }) : null
             })
-          }), en ? (0, l.jsx)(z, {}) : null, !ep && (0, l.jsx)(W, {
+          }), en ? (0, l.jsx)(z, {}) : null, !ep && (0, l.jsx)(K, {
             "aria-label": eh ? H.default.Messages.LEAVE_GROUP_DM : H.default.Messages.CLOSE_DM,
             onClick: eh ? ed : es,
             onMouseDown: er
@@ -333,7 +333,7 @@ t.default = e => {
     channel: t,
     selected: n,
     ...a
-  } = e, s = (0, f.useStateFromStores)([O.default], () => O.default.getUser(t.getRecipientId())), {
+  } = e, s = (0, f.useStateFromStores)([y.default], () => y.default.getUser(t.getRecipientId())), {
     isStatusIndicatorEnabled: i,
     isTypingIndicatorEnabled: r,
     isFacepileEnabled: o
@@ -355,10 +355,10 @@ t.default = e => {
       applicationStream: null != u ? L.default.getAnyStreamForUser(u) : null,
       isMobile: null != u && v.default.isMobileOnline(u)
     }
-  }, [u, t, i]), c = (0, f.useStateFromStores)([O.default, R.default], () => {
-    if (t.isMultiUserDM()) return !!r && U.default.keys(R.default.getTypingUsers(t.id)).some(e => {
+  }, [u, t, i]), c = (0, f.useStateFromStores)([y.default, R.default], () => {
+    if (t.isMultiUserDM()) return !!r && G.default.keys(R.default.getTypingUsers(t.id)).some(e => {
       var t;
-      return e !== (null === (t = O.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
+      return e !== (null === (t = y.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });
     if (null != s) return R.default.isTyping(t.id, t.getRecipientId());
     return !1

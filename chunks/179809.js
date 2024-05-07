@@ -20,8 +20,8 @@ var l = n("735250"),
   C = n("199540"),
   g = n("40153"),
   E = n("252686"),
-  _ = n("682662"),
-  S = n("662146"),
+  S = n("682662"),
+  _ = n("662146"),
   I = n("689938"),
   N = n("799958"),
   T = n("263");
@@ -39,28 +39,28 @@ function x(e) {
     mentionCount: x = 0,
     unread: R = !1,
     defaultFolderName: M,
-    useCircleMask: O = !1,
-    draggable: y = !1,
-    sorting: D = !1,
-    onDragStart: b,
+    useCircleMask: y = !1,
+    draggable: O = !1,
+    sorting: b = !1,
+    onDragStart: D,
     onDragEnd: j,
     onExpandCollapse: P,
-    onContextMenu: G,
-    renderChildNode: U,
+    onContextMenu: U,
+    renderChildNode: G,
     folderIconContent: w
   } = e, {
-    id: F,
-    name: B,
+    id: B,
+    name: F,
     children: V
-  } = t, [H, k] = a.useState(!1), [Y, K] = a.useState(!1), W = H || Y;
+  } = t, [H, k] = a.useState(!1), [Y, W] = a.useState(!1), K = H || Y;
   a.useEffect(() => {
-    D && k(!1)
-  }, [D]);
+    b && k(!1)
+  }, [b]);
   let [{
     dragging: z
   }, Z] = (0, r.useDrag)({
     type: m.GuildsNodeType.FOLDER,
-    item: () => (null == b || b(), {
+    item: () => (null == D || D(), {
       type: m.GuildsNodeType.FOLDER,
       nodeId: t.id
     }),
@@ -71,10 +71,10 @@ function x(e) {
       dragging: e.isDragging()
     })
   }), X = a.useCallback(e => {
-    K(e)
-  }, []), Q = a.useCallback(e => {
+    W(e)
+  }, []), q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && P()
-  }, [P, d]), q = null != B && "" !== B ? B : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!z && d, {
+  }, [P, d]), Q = null != F && "" !== F ? F : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(B)), $ = "folder-items-".concat(B), ee = V.length * (L + v), et = (0, o.useTransition)(!z && d, {
     from: {
       height: 0
     },
@@ -87,43 +87,43 @@ function x(e) {
     config: {
       duration: A
     }
-  }), en = a.useCallback(e => null == n ? void 0 : n(F, e), [n, F]), el = (0, l.jsxs)(_.ListItem, {
+  }), en = a.useCallback(e => null == n ? void 0 : n(B, e), [n, B]), el = (0, l.jsxs)(S.ListItem, {
     children: [(0, l.jsx)(h.default, {
       disabled: z || d,
       hovered: H,
       selected: s,
       unread: R,
       className: T.pill
-    }), (0, l.jsx)(S.default, {
-      text: q,
-      disabled: D,
+    }), (0, l.jsx)(_.default, {
+      text: Q,
+      disabled: b,
       selected: s,
       disableWrapper: !0,
       children: (0, l.jsx)("div", {
-        ref: y ? Z : void 0,
+        ref: O ? Z : void 0,
         className: i()({
           [T.wobble]: !z && Y && !d
         }),
-        "data-dnd-name": q,
+        "data-dnd-name": Q,
         children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(C.default, {
           folderNode: t,
           expanded: d,
-          forceCircular: O,
-          sorting: D,
+          forceCircular: y,
+          sorting: b,
           mediaState: p,
           mentionCount: x,
-          tooltipName: q,
+          tooltipName: Q,
           folderGroupId: $,
           onClick: P,
-          onContextMenu: G,
+          onContextMenu: U,
           onHoverChange: k,
-          onKeyDown: Q,
+          onKeyDown: q,
           treeItemProps: J,
           folderIconContent: w
         })
       })
-    }), y ? (0, l.jsx)(g.default, {
-      name: q,
+    }), O ? (0, l.jsx)(g.default, {
+      name: Q,
       targetNode: t,
       onDragOverChanged: X
     }) : null]
@@ -134,7 +134,7 @@ function x(e) {
     children: [!z && (0, l.jsx)("span", {
       className: i()(N.expandedFolderBackground, {
         [N.collapsed]: !d,
-        [N.hover]: W
+        [N.hover]: K
       })
     }), el, et((e, t, n) => {
       let {
@@ -147,10 +147,10 @@ function x(e) {
         },
         className: N.__invalid_expandedGuilds,
         role: "group",
-        children: V.map(U)
+        children: V.map(G)
       }, a)
-    }), y && d ? (0, l.jsx)(g.FolderEndDropTarget, {
-      name: q,
+    }), O && d ? (0, l.jsx)(g.FolderEndDropTarget, {
+      name: Q,
       targetNode: t
     }) : null]
   })

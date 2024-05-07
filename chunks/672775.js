@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("735250");
+var l = n("735250");
 n("470079");
-var s = n("546735"),
-  l = n("754961"),
+var a = n("546735"),
+  s = n("754961"),
   i = n("156610");
 
 function r(e) {
@@ -21,32 +21,32 @@ function r(e) {
     onStepClick: d,
     onNextClick: c,
     onBackClick: f,
-    isNextDisabled: E,
-    isBackDisabled: h
-  } = (0, s.useClanSetupModalNavigation)({
+    isNextDisabled: h,
+    isBackDisabled: p
+  } = (0, a.useClanSetupModalNavigation)({
     progress: n,
     updateCurrentStep: r
   }), {
-    currentStep: _,
+    currentStep: m,
     furthestStep: C,
-    brandPrimaryColor: m
+    brandPrimaryColor: g
   } = n;
-  return (0, a.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: i.navigation,
-    children: [(0, a.jsx)(l.ClanSetupProgress, {
+    children: [(0, l.jsx)(s.ClanSetupProgress, {
       animationStyle: o,
       className: u,
       steps: t,
-      currentStepIndex: _,
+      currentStepIndex: m,
       furthestStepIndex: C,
       onStepClick: d,
-      stepFillColor: m
-    }), (0, a.jsx)(l.ClanSetupProgressButtons, {
-      isBackDisabled: h,
-      isNextDisabled: E,
+      stepFillColor: g
+    }), (0, l.jsx)(s.ClanSetupProgressButtons, {
+      isBackDisabled: p,
+      isNextDisabled: h,
       onNextClick: c,
       onBackClick: f,
-      nextButtonBackgroundColor: m,
+      nextButtonBackgroundColor: g,
       nextButtonClassName: u,
       nextButtonAnimationStyle: o
     })]

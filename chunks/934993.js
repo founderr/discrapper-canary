@@ -2,13 +2,13 @@
 n.r(t), n("47120");
 var a = n("570140"),
   s = n("996106"),
-  l = n("452426"),
-  i = n("186901"),
+  i = n("452426"),
+  l = n("186901"),
   r = n("981631");
 t.default = {
   [r.RPCCommands.SET_CONFIG]: {
-    scope: i.RPC_AUTHENTICATED_SCOPE,
-    validation: e => (0, l.default)(e).required().keys({
+    scope: l.RPC_AUTHENTICATED_SCOPE,
+    validation: e => (0, i.default)(e).required().keys({
       use_interactive_pip: e.boolean()
     }),
     handler(e) {
@@ -18,7 +18,7 @@ t.default = {
           use_interactive_pip: n
         }
       } = e;
-      if (t.transport !== i.TransportTypes.POST_MESSAGE) throw new s.default({
+      if (t.transport !== l.TransportTypes.POST_MESSAGE) throw new s.default({
         errorCode: r.RPCErrors.INVALID_COMMAND
       }, 'command not available from "'.concat(t.transport, " transport"));
       if (null == t.application.id) throw new s.default({

@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchPremiumMarketingContentWithUserOffer: function() {
-    return i
+    return l
   }
 });
 var a = n("544891"),
   s = n("960048"),
-  l = n("981631");
-async function i(e) {
+  i = n("981631");
+async function l(e) {
   let {
     userTrialOffer: t,
     userDiscount: n,
-    userDiscountOffer: i
+    userDiscountOffer: l
   } = e;
   try {
     let e = await a.HTTP.post({
-      url: l.Endpoints.PREMIUM_MARKETING,
+      url: i.Endpoints.PREMIUM_MARKETING,
       body: {
         user_trial_offer: t,
         user_discount: n,
-        user_discount_offer: i
+        user_discount_offer: l
       }
     });
     if (e.ok) return e.body;

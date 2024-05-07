@@ -15,8 +15,8 @@ var l, a = n("735250"),
   C = n("199902"),
   g = n("19780"),
   E = n("306680"),
-  _ = n("944486"),
-  S = n("594174"),
+  S = n("944486"),
+  _ = n("594174"),
   I = n("451478"),
   N = n("880080"),
   T = n("26290"),
@@ -27,7 +27,7 @@ var l, a = n("735250"),
   R = n("981631"),
   M = n("565710");
 
-function O(e, t, n) {
+function y(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -35,27 +35,27 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let y = {
+let O = {
   friction: 28,
   tension: 600
 };
 
-function D(e) {
+function b(e) {
   switch (e) {
     case "height":
     case "opacity":
       return {
-        duration: 150, ...y
+        duration: 150, ...O
       };
     case "scale":
       return {
-        ...y
+        ...O
       };
     default:
       throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)))
   }
 }
-class b extends(l = s.PureComponent) {
+class D extends(l = s.PureComponent) {
   componentWillEnter(e) {
     let {
       controller: t
@@ -65,7 +65,7 @@ class b extends(l = s.PureComponent) {
       height: 1,
       opacity: 1,
       scale: 1,
-      config: D
+      config: b
     }).start().then(() => this.setState({
       animating: !1
     }))
@@ -79,7 +79,7 @@ class b extends(l = s.PureComponent) {
       scale: 1,
       opacity: 1,
       height: 1,
-      config: D
+      config: b
     }).start().then(e)
   }
   componentWillLeave(e) {
@@ -93,7 +93,7 @@ class b extends(l = s.PureComponent) {
       height: 0,
       opacity: 0,
       scale: 0,
-      config: D
+      config: b
     }).start().then(e))
   }
   componentWillUnmount() {
@@ -116,7 +116,7 @@ class b extends(l = s.PureComponent) {
   getChannelIcon() {
     let {
       channel: e
-    } = this.props, t = e.type === R.ChannelTypes.DM ? S.default.getUser(e.getRecipientId()) : null;
+    } = this.props, t = e.type === R.ChannelTypes.DM ? _.default.getUser(e.getRecipientId()) : null;
     return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, f.getChannelIconURL)(e)
   }
   render() {
@@ -187,19 +187,19 @@ class b extends(l = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), O(this, "state", {
+    super(...e), y(this, "state", {
       hovered: !1,
       animating: !0,
       controller: new i.Controller({
         scale: 0,
         height: 0,
         opacity: 0,
-        config: D
+        config: b
       })
-    }), O(this, "handleContextMenu", e => {
+    }), y(this, "handleContextMenu", e => {
       let {
         channel: t
-      } = this.props, l = t.type === R.ChannelTypes.DM ? S.default.getUser(t.getRecipientId()) : null;
+      } = this.props, l = t.type === R.ChannelTypes.DM ? _.default.getUser(t.getRecipientId()) : null;
       null != l ? (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -222,7 +222,7 @@ class b extends(l = s.PureComponent) {
     })
   }
 }
-O(b, "defaultProps", {
+y(D, "defaultProps", {
   badge: 0,
   audio: !1,
   video: !1,
@@ -233,7 +233,7 @@ O(b, "defaultProps", {
     s = (0, o.useStateFromStores)([g.default], () => g.default.getChannelId(), []),
     i = (0, o.useStateFromStores)([c.default], () => null != s ? c.default.getMode(s) : R.ChannelModes.VOICE, [s]),
     r = (0, o.useStateFromStores)([C.default], () => C.default.getAllApplicationStreamsForChannel(n).length > 0),
-    u = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(), []),
+    u = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(), []),
     d = (0, o.useStateFromStores)([E.default], () => E.default.getMentionCount(n), [n]),
     {
       isFacepileEnabled: f
@@ -243,16 +243,16 @@ O(b, "defaultProps", {
       autoTrackExposure: !1
     }),
     m = s === n,
-    S = !1,
+    _ = !1,
     I = !1;
-  return m && (S = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
+  return m && (_ = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(D, {
     ...e,
     ref: t,
     channelName: l,
     unread: d > 0,
     selected: u === n,
     badge: d,
-    audio: S,
+    audio: _,
     video: I,
     stream: r,
     isCurrentUserInThisDMCall: m,

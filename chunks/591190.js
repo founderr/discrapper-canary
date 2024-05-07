@@ -3,24 +3,24 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("120356"),
-  l = n.n(s),
-  i = n("132374");
+  i = n.n(s),
+  l = n("132374");
 let r = () => (0, a.jsx)("div", {
-    className: i.spacer
+    className: l.spacer
   }),
   o = () => (0, a.jsx)("div", {
-    className: i.category
+    className: l.category
   }),
   u = e => {
     let {
       width: t
     } = e;
     return (0, a.jsxs)("div", {
-      className: i.channel,
+      className: l.channel,
       children: [(0, a.jsx)("div", {
-        className: i.channelIcon
+        className: l.channelIcon
       }), (0, a.jsx)("div", {
-        className: i.channelName,
+        className: l.channelName,
         style: {
           width: "".concat(t, "px")
         }
@@ -32,8 +32,8 @@ t.default = e => {
     withBannerPadding: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: l()(i.container, {
-      [i.bannerPadding]: t
+    className: i()(l.container, {
+      [l.bannerPadding]: t
     }),
     children: [(0, a.jsx)(o, {}), (0, a.jsx)(u, {
       width: 100

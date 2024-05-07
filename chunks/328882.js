@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useShouldShowNewOfferBadgeForAprilMarketingMoment: function() {
-    return i
+    return a
   }
 });
-var a = n("524437"),
+var i = n("524437"),
   r = n("605236");
 let s = (0, n("818083").createExperiment)({
   kind: "user",
@@ -22,11 +22,11 @@ let s = (0, n("818083").createExperiment)({
   }]
 });
 
-function i(e) {
+function a(e) {
   let t = s.useExperiment({
       location: e
     }).enabled,
-    n = (0, r.useIsDismissibleContentDismissed)(a.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE);
+    n = (0, r.useIsDismissibleContentDismissed)(i.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE);
   return t && !n
 }
 t.default = s

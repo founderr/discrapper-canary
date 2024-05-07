@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("91192"),
   o = n("286379"),
   u = n("481060"),
@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("922409"),
   S = n("727813"),
   p = n("355350"),
-  I = n("307947"),
-  g = n("125855"),
+  g = n("307947"),
+  I = n("125855"),
   T = n("687683"),
   A = n("981631"),
   N = n("689938"),
@@ -32,23 +32,23 @@ function R() {
   let e = s.useRef(null),
     t = (0, S.default)(),
     n = (0, p.useSpamMessageRequestCount)(),
-    l = (0, _.useListHasSingleSpamMessageRequest)(),
+    i = (0, _.useListHasSingleSpamMessageRequest)(),
     R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
-    L = (0, c.default)("message-requests-spam-list"),
+    O = (0, c.default)("message-requests-spam-list"),
     {
-      channelId: O
+      channelId: L
     } = (0, m.useMessageRequestSidebarState)(),
     M = s.useCallback(() => {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: P
+      rejectAll: y
     } = (0, C.useMessageRequestActions)({
       onError: M
     }),
-    y = s.useCallback(() => {
-      P(t.map(e => e.channel.id))
-    }, [t, P]);
+    P = s.useCallback(() => {
+      y(t.map(e => e.channel.id))
+    }, [t, y]);
   s.useEffect(() => {
     h.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
@@ -61,17 +61,17 @@ function R() {
       let {
         row: r
       } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(I.default, {
         index: r,
-        className: i()({
-          [v.selected]: null != O && O === d,
-          [v.siblingSelected]: null != O && O === u
+        className: l()({
+          [v.selected]: null != L && L === d,
+          [v.siblingSelected]: null != L && L === u
         }),
         channel: o.channel,
         user: o.user,
-        hasSingleMessageRequest: l
+        hasSingleMessageRequest: i
       }, d)
-    }, [t, l, O]),
+    }, [t, i, L]),
     D = s.useCallback(() => (0, a.jsxs)(E.default, {
       className: v.sectionTitle,
       children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
@@ -84,7 +84,7 @@ function R() {
           tag: "span",
           children: "•"
         }), (0, a.jsx)(u.Button, {
-          onClick: y,
+          onClick: P,
           look: u.ButtonLooks.LINK,
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
@@ -93,21 +93,21 @@ function R() {
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, y, R]);
-  return 0 === t.length ? (0, a.jsx)(I.default, {
+    }, "message-requests-spam-title"), [n, P, R]);
+  return 0 === t.length ? (0, a.jsx)(g.default, {
     section: T.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
-    navigator: L,
+    navigator: O,
     children: (0, a.jsx)(r.ListNavigatorContainer, {
       children: n => {
         let {
           ref: s,
-          role: l,
-          ...i
+          role: i,
+          ...l
         } = n;
         return (0, a.jsx)(u.List, {
           className: v.list,
-          innerRole: l,
+          innerRole: i,
           innerAriaLabel: N.default.Messages.MESSAGE_REQUESTS,
           ref: t => {
             var n;
@@ -122,7 +122,7 @@ function R() {
           sections: [t.length],
           chunkSize: 30,
           fade: !0,
-          ...i
+          ...l
         }, "message-requests-spam-list")
       }
     })

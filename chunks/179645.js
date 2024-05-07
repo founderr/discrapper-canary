@@ -1,9 +1,9 @@
 "use strict";
 n.r(t);
 var a, s = n("442837"),
-  l = n("570140");
+  i = n("570140");
 
-function i(e, t, n) {
+function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -26,7 +26,7 @@ class o extends(a = s.default.PersistedStore) {
     }
   }
 }
-i(o, "displayName", "NewUserStore"), i(o, "persistKey", "nuf"), t.default = new o(l.default, {
+l(o, "displayName", "NewUserStore"), l(o, "persistKey", "nuf"), t.default = new o(i.default, {
   NUF_NEW_USER: function(e) {
     let {
       newUserType: t

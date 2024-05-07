@@ -1,39 +1,39 @@
 "use strict";
-let l;
+let a;
 n.r(t);
-var a, s, i, r, o = n("442837"),
+var s, i, l, r, o = n("442837"),
   u = n("570140"),
   d = n("900849");
 let c = null,
   f = !1,
-  h = !1;
-class p extends(r = o.default.Store) {
+  E = !1;
+class h extends(r = o.default.Store) {
   getRecommendedGuilds() {
     return c
   }
   getLoadId() {
-    return l
+    return a
   }
   isFetching() {
     return f
   }
   failed() {
-    return h
+    return E
   }
 }
-i = "GuildRecommendationsStore", (s = "displayName") in(a = p) ? Object.defineProperty(a, s, {
-  value: i,
+l = "GuildRecommendationsStore", (i = "displayName") in(s = h) ? Object.defineProperty(s, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = i, t.default = new p(u.default, {
+}) : s[i] = l, t.default = new h(u.default, {
   GUILD_RECOMMENDATION_FETCH: function() {
     f = !0
   },
   GUILD_RECOMMENDATION_FETCH_SUCCESS: function(e) {
-    c = e.recommendedGuilds.map(d.makeDiscoverableGuild), l = e.loadId, f = !1
+    c = e.recommendedGuilds.map(d.makeDiscoverableGuild), a = e.loadId, f = !1
   },
   GUILD_RECOMMENDATION_FETCH_FAILURE: function() {
-    h = !0, f = !1
+    E = !0, f = !1
   }
 })

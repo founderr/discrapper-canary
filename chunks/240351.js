@@ -3,15 +3,15 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  l = n("858719"),
-  i = n("448448");
+  i = n("858719"),
+  l = n("448448");
 t.default = e => {
   let {
     header: t,
     displayType: n
-  } = e, r = (0, l.useActionTotalsForDisplayType)(n);
+  } = e, r = (0, i.useActionTotalsForDisplayType)(n);
   return (0, a.jsxs)("div", {
-    className: i.counter,
+    className: l.counter,
     children: [(0, a.jsx)(s.Heading, {
       variant: "heading-xxl/medium",
       color: r > 0 ? "text-brand" : "text-muted",

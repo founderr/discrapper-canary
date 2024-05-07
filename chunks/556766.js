@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("392711"),
-  i = n.n(l),
+  i = n("392711"),
+  l = n.n(i),
   r = n("207561"),
   o = n("718017"),
   u = n("442837"),
@@ -17,11 +17,11 @@ var a = n("735250"),
   m = n("340895"),
   S = n("557177"),
   p = n("871465");
-let I = {
+let g = {
     transform: "scale(0.7)",
     opacity: 0
   },
-  g = {
+  I = {
     transform: "scale(1)",
     opacity: 1
   };
@@ -34,34 +34,34 @@ t.default = () => {
       return e !== n.id
     })),
     n = (0, u.useStateFromStores)([m.default], () => m.default.hasIncomingCalls()),
-    l = (0, u.useStateFromStores)([h.default], () => h.default.isSoundDisabled("call_ringing")),
+    i = (0, u.useStateFromStores)([h.default], () => h.default.isSoundDisabled("call_ringing")),
     T = f.default.useIsRingtoneEligible(),
     A = f.default.useIsRingtoneDisabled(),
     N = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
     v = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
     R = s.useRef(!1),
-    L = (0, r.useStableMemo)(() => {
+    O = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
-      return T && !A ? (0, S.createSound)(c.default.ringtone, e) : v === p.Soundpacks.CLASSIC ? (0, S.createSound)(500 !== i().random(1, 1e3) ? "call_ringing" : i().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, S.createSoundForPack)("call_ringing", v)
+      return T && !A ? (0, S.createSound)(c.default.ringtone, e) : v === p.Soundpacks.CLASSIC ? (0, S.createSound)(500 !== l().random(1, 1e3) ? "call_ringing" : l().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, S.createSoundForPack)("call_ringing", v)
     }, [v, A, T]);
   return s.useEffect(() => () => {
-    L.stop()
-  }, [L]), s.useEffect(() => {
-    if (N || l) {
-      R.current && (L.stop(), R.current = !1);
+    O.stop()
+  }, [O]), s.useEffect(() => {
+    if (N || i) {
+      R.current && (O.stop(), R.current = !1);
       return
     }
-    n && !R.current ? (L.loop(), R.current = !0) : !n && R.current && (L.stop(), R.current = !1)
-  }, [l, N, n, L]), (0, o.useTransition)(t, {
+    n && !R.current ? (O.loop(), R.current = !0) : !n && R.current && (O.stop(), R.current = !1)
+  }, [i, N, n, O]), (0, o.useTransition)(t, {
     keys: e => {
       var t;
       return null === (t = e.channel) || void 0 === t ? void 0 : t.id
     },
     enter: {
-      from: I,
-      to: g
+      from: g,
+      to: I
     },
-    leave: I,
+    leave: g,
     config: {
       mass: 1,
       tension: 500,
