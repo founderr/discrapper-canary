@@ -1,22 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   getProgressStepAnalyticsName: function() {
-    return I
+    return T
   },
   trackClanAdminInviteClicked: function() {
-    return h
+    return A
   },
   trackClanAdminInviteViewed: function() {
-    return S
+    return h
   },
   trackClanApplyToJoinViewed: function() {
     return u
   },
   trackClanDiscoveryUserNuxClicked: function() {
-    return f
+    return S
   },
   trackClanDiscoveryUserNuxViewed: function() {
-    return T
+    return f
+  },
+  trackClanDiscoveryViewed: function() {
+    return I
   },
   trackClanProfileViewed: function() {
     return l
@@ -105,7 +108,17 @@ function E(e, t) {
   })
 }
 
-function I(e) {
+function I(e, t, n) {
+  a.default.track(o.AnalyticEvents.CLAN_DISCOVERY_VIEWED, {
+    guild_ids: e,
+    section: t,
+    application_ids: n.games,
+    playstyle: n.playstyle,
+    traits: n.traits
+  })
+}
+
+function T(e) {
   switch (e) {
     case s.ClanSetupSteps.GAMES:
       return "games";
@@ -128,15 +141,15 @@ function I(e) {
   }
 }
 
-function T() {
+function f() {
   a.default.track(o.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_VIEWED)
 }
 
-function f() {
+function S() {
   a.default.track(o.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_CLICKED)
 }
 
-function S(e) {
+function h(e) {
   let {
     location: t
   } = e;
@@ -145,7 +158,7 @@ function S(e) {
   })
 }
 
-function h(e) {
+function A(e) {
   let {
     guildId: t,
     location: n
