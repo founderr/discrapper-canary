@@ -39,7 +39,9 @@ function h(e) {
     className: S.body,
     children: [(0, i.jsx)(d.default, {
       user: t,
-      onOpenProfile: () => m(!1),
+      onOpenProfile: () => m({
+        autoFocusNote: !1
+      }),
       guildId: null == A ? void 0 : A.id,
       usernameIcon: t.hasAvatarForGuild(null == A ? void 0 : A.id) && (0, i.jsx)(c.default, {
         user: t,
@@ -55,12 +57,17 @@ function h(e) {
           userId: t.id
         }), O && !C && (0, i.jsx)(u.default, {
           user: t,
-          onOpenProfile: () => m(!0)
+          onOpenProfile: () => m({
+            autoFocusNote: !0
+          })
         })]
       })
-    }), (0, i.jsx)(f.default, {
+    }), t.id !== n.id && (0, i.jsx)(f.default, {
       user: t,
-      onClose: p
+      onOpenProfile: e => m({
+        section: e,
+        autoFocusNote: !1
+      })
     }), O && (0, i.jsx)(I.default, {
       user: t,
       bio: null == h ? void 0 : h.bio,
@@ -75,7 +82,9 @@ function h(e) {
       user: t,
       currentUser: n,
       guild: A,
-      onOpenProfile: () => m(!1)
+      onOpenProfile: () => m({
+        autoFocusNote: !1
+      })
     })]
   })
 }

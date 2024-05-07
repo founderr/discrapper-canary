@@ -1,9 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
-  SmallMutualFriendsAndGuilds: function() {
-    return R
-  }
-}), n("47120");
+n.r(t), n("47120");
 var i, r, a = n("735250"),
   s = n("470079"),
   o = n("120356"),
@@ -67,7 +63,7 @@ let R = s.memo(function(e) {
       var e;
       G((null === (e = y.current) || void 0 === e ? void 0 : e.clientHeight) > 19), U(!0)
     }
-  }, []), B = s.useCallback(e => () => {
+  }, []), k = s.useCallback(e => () => {
     (0, m.openUserProfileModal)({
       userId: t.id,
       sourceAnalyticsLocations: h,
@@ -82,14 +78,14 @@ let R = s.memo(function(e) {
   s.useEffect(() => {
     w()
   }, [w, D]);
-  let k = L.length > 0,
+  let B = L.length > 0,
     V = v.length > 0;
   return (0, a.jsxs)("div", {
     className: l()(O.compactItemContainer, !P && O.hideElement),
     ref: y,
-    children: [k && (() => {
+    children: [B && (() => {
       let e = (0, a.jsxs)(d.Clickable, {
-        onClick: B(N.UserProfileSections.MUTUAL_FRIENDS),
+        onClick: k(N.UserProfileSections.MUTUAL_FRIENDS),
         className: l()(O.avatarAndTextContainer, O.__invalid_friendsContainer),
         children: [(0, a.jsx)("div", {
           className: O.__invalid_avatars,
@@ -112,12 +108,12 @@ let R = s.memo(function(e) {
         color: d.TooltipColors.NESTED,
         children: e
       }) : e
-    })(), k && V && (0, a.jsx)("div", {
+    })(), B && V && (0, a.jsx)("div", {
       "aria-hidden": "true",
       className: O.dotSpacer
     }), V && (() => {
       let e = (0, a.jsxs)(d.Clickable, {
-        onClick: B(N.UserProfileSections.MUTUAL_GUILDS),
+        onClick: k(N.UserProfileSections.MUTUAL_GUILDS),
         className: l()(O.avatarAndTextContainer, O.serverContainer),
         children: [!b && (0, a.jsx)("div", {
           className: O.__invalid_avatars,
