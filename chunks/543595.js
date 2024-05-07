@@ -363,6 +363,18 @@ class z extends(r = o.PureComponent) {
       children: a
     })
   }
+  renderGuildDetails(e) {
+    let {
+      activityGuild: t,
+      showGuildDetails: n
+    } = this.props;
+    return n && null != t ? (0, s.jsx)("div", {
+      className: (0, p.default)(e) || (0, m.default)(e) ? F.detailsWrap : F.details,
+      children: x.default.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({
+        guildName: t.name
+      })
+    }) : null
+  }
   renderTimePlayed(e) {
     let {
       activityGuild: t
@@ -451,24 +463,25 @@ class z extends(r = o.PureComponent) {
       T = this.renderDetails(o),
       f = this.renderState(o, r),
       S = this.renderTimePlayed(o),
-      h = null != n ? n() : null,
-      A = this.renderTimeBar(o),
-      m = ![e, I, T, f, S, A, h].some(e => null != e);
+      h = this.renderGuildDetails(o),
+      A = null != n ? n() : null,
+      m = this.renderTimeBar(o),
+      p = ![e, I, T, f, S, m, A].some(e => null != e);
     return (0, s.jsxs)("div", {
       className: u()(this.getTypeClass("activity"), i),
-      children: [this.renderHeader(m), (0, s.jsx)("div", {
+      children: [this.renderHeader(p), (0, s.jsx)("div", {
         className: u()(E ? F.bodyAlignCenter : F.bodyNormal, a && !l && !c && F.wrap),
         children: (0, s.jsxs)("div", {
           className: F.activityDetails,
           children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, s.jsxs)(P.default.Child, {
             className: u()((0, M.getClass)(F, "content", E ? "GameImage" : null != e ? "Images" : "NoImages", t)),
-            children: [I, T, f, S, l || c ? null : A, _ ? h : null]
+            children: [I, T, f, S, h, l || c ? null : m, _ ? A : null]
           }), d ? (0, s.jsx)("div", {
             className: F.actions,
-            children: h
+            children: A
           }) : null]
         })
-      }), l ? A : null, l || c ? h : null, (0, s.jsx)(K, {
+      }), l ? m : null, l || c ? A : null, (0, s.jsx)(K, {
         activity: o
       })]
     })

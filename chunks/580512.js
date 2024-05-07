@@ -71,6 +71,7 @@ function E(e) {
       }), null == I || I()
     },
     actionColor: c.buttonColor,
-    hideHeader: !0
+    hideHeader: !0,
+    showGuildDetails: !0
   })
 }

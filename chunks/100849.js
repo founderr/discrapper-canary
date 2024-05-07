@@ -44,6 +44,7 @@ function v(e) {
       source: U,
       className: I.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
+      showGuildDetails: s === c.Types.SIMPLIFIED_PROFILE,
       activity: x,
       actionColor: I.actionColor,
       analyticsParams: h,
@@ -68,6 +69,7 @@ function v(e) {
       source: U,
       className: I.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
+      showGuildDetails: s === c.Types.SIMPLIFIED_PROFILE,
       actionColor: I.actionColor,
       analyticsParams: h,
       onAction: () => {
