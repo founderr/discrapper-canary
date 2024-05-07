@@ -486,9 +486,9 @@ function $(e, t, n, i) {
       allowEmptySections: n.allowEmptySections,
       contextState: a,
       userState: o,
-      applicationStates: l,
+      applicationStates: n.allowApplicationState ? l : new Map,
       sortOptions: n.sortOptions
-    }), [i, t.text, t.builtIns, r, n.scoreMethod, n.allowEmptySections, n.sortOptions, a, o, l, u])
+    }), [i, t.text, t.builtIns, r, n.scoreMethod, n.allowEmptySections, n.sortOptions, n.allowApplicationState, a, o, l, u])
   }(e, n, i), u = (0, O.useTopCommands)({
     channel: e,
     guild: t
