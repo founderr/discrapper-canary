@@ -49,11 +49,11 @@ function O(e) {
   return (!l || !a) && S.default.getMentionCount(e) > 0
 }
 
-function b(e) {
+function D(e) {
   return !I.default.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? p.default.getMutableParticipants(e.id, m.StageChannelParticipantNamedIndex.SPEAKER).length > 0 : N.default.getVoiceStatesForChannel(e).length > 0)
 }
 
-function D(e) {
+function b(e) {
   var t, n, l;
   let {
     guildChannels: a
@@ -90,12 +90,12 @@ function D(e) {
     }
   let L = null,
     x = null,
-    D = null !== (l = null == p ? void 0 : p.getChannelRecords()) && void 0 !== l ? l : [];
+    b = null !== (l = null == p ? void 0 : p.getChannelRecords()) && void 0 !== l ? l : [];
   c && N > 0 ? L = {
     mode: "mentions",
     mentionCount: N,
     targetChannelId: o
-  } : !h && d().some(D, b) ? L = {
+  } : !h && d().some(b, D) ? L = {
     mode: "voice-channels",
     mentionCount: 0,
     targetChannelId: null
@@ -119,7 +119,7 @@ function D(e) {
     bottomBar: P && null != L ? L : v
   }, !0
 }
-let j = d().throttle(D, 200);
+let j = d().throttle(b, 200);
 
 function P(e) {
   let {
@@ -181,7 +181,7 @@ o = "ChannelListUnreadsStore", (r = "displayName") in(i = F) ? Object.defineProp
       guildId: t,
       channelIds: n
     } = e, l = E.default.getGuild(t);
-    return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && null != n && !d().isEqual(M[t], n) && (M[t] = n, D(t))
+    return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && null != n && !d().isEqual(M[t], n) && (M[t] = n, b(t))
   },
   BULK_ACK: function(e) {
     let {

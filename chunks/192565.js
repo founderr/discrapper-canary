@@ -51,10 +51,10 @@ function N(e) {
     r.default.getDetectableGames()
   }, []);
   let O = a.useCallback(e => o.updateClanSetup(t, e), [t]),
-    b = a.useCallback(e => O({
+    D = a.useCallback(e => O({
       gameApplicationIds: e
     }), [O]),
-    D = a.useCallback(e => O({
+    b = a.useCallback(e => O({
       playstyle: e
     }), [O]),
     j = a.useCallback(e => O({
@@ -78,7 +78,7 @@ function N(e) {
             return (0, l.jsx)(f.default, {
               title: _.default.Messages.CLAN_SETUP_GAMES_TITLE,
               description: _.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-              handleUpdate: b,
+              handleUpdate: D,
               gameApplicationIds: A,
               requiredGameId: T,
               error: null == N ? void 0 : N.gameApplicationIds
@@ -87,7 +87,7 @@ function N(e) {
             return (0, l.jsx)(m.default, {
               title: _.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
               description: _.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
-              handleUpdate: D,
+              handleUpdate: b,
               playstyle: L,
               error: null == N ? void 0 : N.playstyle
             });

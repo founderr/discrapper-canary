@@ -37,9 +37,9 @@ function L(e) {
     if (null == n) return !1;
     let l = g.default.extractTimestamp(n);
     return null != e && e > l
-  }), b = a.useCallback(() => {
+  }), D = a.useCallback(() => {
     (0, h.transitionTo)(_.Routes.CHANNEL(t.id, v ? I.StaticChannelRoute.CUSTOMIZE_COMMUNITY : I.StaticChannelRoute.CHANNEL_BROWSER))
-  }, [t.id, v]), D = a.useCallback(e => {
+  }, [t.id, v]), b = a.useCallback(e => {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -61,8 +61,8 @@ function L(e) {
     }),
     text: v ? T.default.Messages.CHANNELS_AND_ROLES : T.default.Messages.CHANNEL_BROWSER_TITLE,
     selected: L,
-    onClick: b,
-    onContextMenu: D,
+    onClick: D,
+    onContextMenu: b,
     trailing: j
   })
 }

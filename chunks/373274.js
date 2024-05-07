@@ -35,8 +35,8 @@ var l, a = n("735250"),
   M = n("984933"),
   y = n("914010"),
   O = n("153124"),
-  b = n("540126"),
-  D = n("734307"),
+  D = n("540126"),
+  b = n("734307"),
   j = n("854444"),
   P = n("688265"),
   U = n("896053"),
@@ -140,7 +140,7 @@ class eo extends(l = s.PureComponent) {
         section: l,
         row: a
       } = n;
-      if (l < b.SECTION_INDEX_UNCATEGORIZED_CHANNELS || e.isPlaceholderRow(l, a)) return !1;
+      if (l < D.SECTION_INDEX_UNCATEGORIZED_CHANNELS || e.isPlaceholderRow(l, a)) return !1;
       let s = e.getChannelFromSectionRow(l, a);
       if (null == s) return !1;
       let {
@@ -411,7 +411,7 @@ class eo extends(l = s.PureComponent) {
         selectedVoiceChannelId: s,
         selectedGuildId: i
       } = this.props, r = en.HEIGHT_CHANNEL;
-      if (e === b.SECTION_INDEX_COMMUNITY) {
+      if (e === D.SECTION_INDEX_COMMUNITY) {
         let e = n.getCommunitySection();
         return e.isEmpty() ? 0 : e.getRow(t) === et.ChannelListCommunityRow.GUILD_PREMIUM_PROGRESS_BAR ? e.getRows().length > 1 ? E.PROGRESS_BAR_CONTAINER_HEIGHT_WITH_MARGIN : E.PROGRESS_BAR_CONTAINER_HEIGHT : r
       }
@@ -497,7 +497,7 @@ class eo extends(l = s.PureComponent) {
         optInEnabled: p,
         withGuildIcon: m
       } = this.props;
-      if (t === b.SECTION_INDEX_COMMUNITY) {
+      if (t === D.SECTION_INDEX_COMMUNITY) {
         let e = d.getCommunitySection(),
           t = e.getRow(n);
         if (null == t) return null;
@@ -568,7 +568,7 @@ class eo extends(l = s.PureComponent) {
       let {
         category: g,
         channel: I
-      } = C, N = g instanceof b.ChannelListFavoritesCategory, T = I.record, A = "".concat(t).concat(I.id);
+      } = C, N = g instanceof D.ChannelListFavoritesCategory, T = I.record, A = "".concat(t).concat(I.id);
       switch (T.type) {
         case el.ChannelTypes.GUILD_ANNOUNCEMENT:
         case el.ChannelTypes.GUILD_TEXT:
@@ -681,8 +681,8 @@ class eo extends(l = s.PureComponent) {
       let {
         guildChannels: s
       } = this.props;
-      if (e !== b.SECTION_INDEX_COMMUNITY) {
-        if (null == t) return e === b.SECTION_INDEX_FAVORITES ? "favorites-header" : e === s.recentsSectionNumber ? "recents-header" : e === s.voiceChannelsSectionNumber ? "voice-channels" : e === b.SECTION_INDEX_UNCATEGORIZED_CHANNELS ? "uncategorized-header" : null === (a = s.getNamedCategoryFromSection(e)) || void 0 === a ? void 0 : a.id;
+      if (e !== D.SECTION_INDEX_COMMUNITY) {
+        if (null == t) return e === D.SECTION_INDEX_FAVORITES ? "favorites-header" : e === s.recentsSectionNumber ? "recents-header" : e === s.voiceChannelsSectionNumber ? "voice-channels" : e === D.SECTION_INDEX_UNCATEGORIZED_CHANNELS ? "uncategorized-header" : null === (a = s.getNamedCategoryFromSection(e)) || void 0 === a ? void 0 : a.id;
         if (!s.isPlaceholderRow(e, t)) return null === (l = s.getChannelFromSectionRow(e, t)) || void 0 === l ? void 0 : null === (n = l.channel) || void 0 === n ? void 0 : n.id
       }
     }), er(this, "testShouldSkipTutorial", () => {
@@ -784,7 +784,7 @@ function ec(e) {
   let t = (0, U.default)(e.guild),
     n = (0, P.default)(e.guild),
     l = r().uniq(n.concat(t)),
-    s = (0, u.useStateFromStoresObject)([D.default], () => D.default.getGuild(e.guildId, l));
+    s = (0, u.useStateFromStoresObject)([b.default], () => b.default.getGuild(e.guildId, l));
   return (0, a.jsx)(eu, {
     ...e,
     ...s

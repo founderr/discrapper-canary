@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return x
   },
   Header: function() {
-    return b
+    return D
   },
   Link: function() {
-    return D
+    return b
   },
   User: function() {
     return y
@@ -514,7 +514,7 @@ class O extends s.Component {
     })
   }
 }
-class b extends s.Component {
+class D extends s.Component {
   render() {
     return (0, a.jsx)("div", {
       className: A.__invalid_resultDefault,
@@ -528,7 +528,7 @@ class b extends s.Component {
     })
   }
 }
-class D extends s.Component {
+class b extends s.Component {
   renderContent() {
     let e, t;
     let {

@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return w
   },
   getChannelItemClassName: function() {
-    return D
+    return b
   },
   isChannelItemDisabled: function() {
-    return b
+    return D
   }
 });
 var l, a, s, i, r = n("735250"),
@@ -42,11 +42,11 @@ var l, a, s, i, r = n("735250"),
   y = n("689938"),
   O = n("809164");
 
-function b(e, t, n) {
+function D(e, t, n) {
   return null != t && !!t && !(0, R.areTypesInSameSection)(n, e.type)
 }
 
-function D(e, t) {
+function b(e, t) {
   return null == t ? O.containerDefault : e > t ? O.containerDragAfter : O.containerDragBefore
 }
 
@@ -216,7 +216,7 @@ class w extends(i = o.PureComponent) {
       position: e,
       sortingPosition: t
     } = this.props;
-    return D(e, t)
+    return b(e, t)
   }
   isDisabled() {
     let {
@@ -224,7 +224,7 @@ class w extends(i = o.PureComponent) {
       sorting: t,
       sortingType: n
     } = this.props;
-    return b(e, t, n)
+    return D(e, t, n)
   }
 }
 s = {

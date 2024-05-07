@@ -29,8 +29,8 @@ var l = n("735250"),
   M = n("730417"),
   y = n("524347"),
   O = n("853197"),
-  b = n("616360"),
-  D = n("858064"),
+  D = n("616360"),
+  b = n("858064"),
   j = n("594190"),
   P = n("569545"),
   U = n("102172"),
@@ -160,7 +160,7 @@ class ey extends a.PureComponent {
       position: "top",
       align: "center",
       onRequestClose: a,
-      renderPopout: () => (0, l.jsx)(D.default, {
+      renderPopout: () => (0, l.jsx)(b.default, {
         partnerGame: t,
         tooltipAction: e,
         onClose: a
@@ -170,7 +170,7 @@ class ey extends a.PureComponent {
           "aria-label": ev.default.Messages.DROPS_ENABLED,
           tooltipText: n ? null : ev.default.Messages.DROPS_ENABLED,
           onClick: this.handleClickDropsButton,
-          icon: b.default
+          icon: D.default
         })]
       })
     })
@@ -491,7 +491,7 @@ t.default = (0, E.default)(function(e) {
     if (null != p && null != p.id) return p.id;
     if (null != i && null != i.id) return i.id;
     if (null != N) return N.applicationId
-  }()) && void 0 !== t ? t : ""]), R = (0, u.useStateFromStores)([q.default], () => (0, G.default)(q.default) && (0, e_.isWindows)()), O = (0, u.useStateFromStores)([J.default], () => null != s ? J.default.findActivity(s, e => e.type === eT.ActivityTypes.PLAYING) : null), b = null != h && h.ownerId === s && h.state !== eT.ApplicationStreamStates.ENDED, D = (0, u.useStateFromStores)([et.default], () => et.default.getBroadcast()), P = (0, L.default)() && null != i, w = (0, u.useStateFromStores)([en.default, $.default], () => null != c ? (0, x.computeChannelName)(c, en.default, $.default) : void 0), B = (0, H.default)(null == r ? void 0 : r.id, s);
+  }()) && void 0 !== t ? t : ""]), R = (0, u.useStateFromStores)([q.default], () => (0, G.default)(q.default) && (0, e_.isWindows)()), O = (0, u.useStateFromStores)([J.default], () => null != s ? J.default.findActivity(s, e => e.type === eT.ActivityTypes.PLAYING) : null), D = null != h && h.ownerId === s && h.state !== eT.ApplicationStreamStates.ENDED, b = (0, u.useStateFromStores)([et.default], () => et.default.getBroadcast()), P = (0, L.default)() && null != i, w = (0, u.useStateFromStores)([en.default, $.default], () => null != c ? (0, x.computeChannelName)(c, en.default, $.default) : void 0), B = (0, H.default)(null == r ? void 0 : r.id, s);
   return (0, l.jsx)(ey, {
     ...a,
     guildId: n,
@@ -505,13 +505,13 @@ t.default = (0, E.default)(function(e) {
     runningGame: i,
     application: v,
     useReducedMotion: m,
-    isStreaming: b,
+    isStreaming: D,
     channel: c,
     canStream: A,
     dropsTooltipAction: C,
     stream: h,
     streamMetadata: p,
-    broadcast: D,
+    broadcast: b,
     canStartBroadcast: P,
     channelName: w,
     guildForConnectedChannel: f,

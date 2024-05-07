@@ -26,8 +26,8 @@ var l, a, s, i = n("735250"),
   M = n("151827"),
   y = n("515753"),
   O = n("981631"),
-  b = n("689938"),
-  D = n("9982");
+  D = n("689938"),
+  b = n("9982");
 
 function j(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ let P = r.memo(function() {
     width: "184",
     height: "428",
     viewBox: "0 0 184 428",
-    className: D.empty,
+    className: b.empty,
     children: [(0, i.jsx)("rect", {
       x: 40,
       y: 6,
@@ -234,14 +234,14 @@ class U extends(a = r.Component) {
           children: l => (0, i.jsx)(h.List, {
             fade: !0,
             innerRole: s,
-            innerAriaLabel: b.default.Messages.DIRECT_MESSAGES,
+            innerAriaLabel: D.default.Messages.DIRECT_MESSAGES,
             innerTag: "ul",
             ref: e => {
               var t;
               this._list = e, this.props.listRef.current = e, a.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
             },
             onScroll: this.handleScroll,
-            className: D.scroller,
+            className: b.scroller,
             sectionHeight: this.getSectionHeight,
             paddingTop: t,
             paddingBottom: 8,
@@ -334,15 +334,15 @@ class U extends(a = r.Component) {
         showDMHeader: n
       } = this.props;
       return 0 !== t && n ? (0, i.jsxs)(M.default, {
-        className: D.privateChannelsHeaderContainer,
+        className: b.privateChannelsHeaderContainer,
         children: [(0, i.jsx)("span", {
-          className: D.headerText,
-          children: b.default.Messages.DIRECT_MESSAGES
+          className: b.headerText,
+          children: D.default.Messages.DIRECT_MESSAGES
         }), (0, i.jsx)(S.default, {
-          tooltip: b.default.Messages.CREATE_DM,
+          tooltip: D.default.Messages.CREATE_DM,
           tooltipPosition: "top",
           popoutAlign: "left",
-          iconClassName: D.privateChannelRecipientsInviteButtonIcon,
+          iconClassName: b.privateChannelRecipientsInviteButtonIcon,
           icon: R.default,
           subscribeToGlobalHotkey: !0
         })]

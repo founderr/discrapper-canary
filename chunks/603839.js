@@ -54,7 +54,7 @@ function v(e) {
       errors: null === (n = m.default.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
       submitting: null === (l = m.default.getStateForGuild(t)) || void 0 === l ? void 0 : l.submitting
     }
-  }), y = a.useMemo(() => (0, I.getClanSetupProgressSteps)(R), [R]), [O, b] = a.useState(!1), [D, j] = a.useState(window.innerWidth), [P, U] = a.useState(1), [G, w] = a.useState(!0), B = (0, C.useFullScreenModalAnimationStyle)(), F = (0, o.useSpring)({
+  }), y = a.useMemo(() => (0, I.getClanSetupProgressSteps)(R), [R]), [O, D] = a.useState(!1), [b, j] = a.useState(window.innerWidth), [P, U] = a.useState(1), [G, w] = a.useState(!0), B = (0, C.useFullScreenModalAnimationStyle)(), F = (0, o.useSpring)({
     from: {
       opacity: 0,
       transform: "translateY(40px)"
@@ -73,7 +73,7 @@ function v(e) {
     onRest: () => w(1 === P),
     immediate: v
   }), H = (0, o.useSpring)({
-    transform: "translateX(".concat(1 === P ? 0 : -1 * D / 2 + 190, "px)"),
+    transform: "translateX(".concat(1 === P ? 0 : -1 * b / 2 + 190, "px)"),
     config: L,
     immediate: v
   }), k = (0, o.useTransition)(0 === P, {
@@ -187,9 +187,9 @@ function v(e) {
         children: (0, l.jsx)(S.default, {
           guildId: t,
           signed: O,
-          setSigned: G ? void 0 : b,
+          setSigned: G ? void 0 : D,
           sidebarWidth: 380,
-          windowWidth: D,
+          windowWidth: b,
           transition: k,
           brandPrimaryColor: x.brandPrimaryColor
         })

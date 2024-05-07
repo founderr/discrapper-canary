@@ -44,7 +44,7 @@ let E = (0, u.makeChannelSortable)(function(e) {
   if (null == L) return null;
   let y = (0, h.getChannelItemClassName)(u, I),
     O = (0, h.isChannelItemDisabled)(L, S, _),
-    b = (0, l.jsx)("div", {
+    D = (0, l.jsx)("div", {
       className: i()(y, {
         [g.disabled]: O,
         [g.selected]: x
@@ -68,6 +68,6 @@ let E = (0, u.makeChannelSortable)(function(e) {
         })]
       })
     });
-  return R && (b = T(N(b))), b
+  return R && (D = T(N(D))), D
 });
 t.default = E

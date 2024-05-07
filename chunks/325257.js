@@ -29,8 +29,8 @@ var l = n("735250"),
   M = n("674552"),
   y = n("981631"),
   O = n("689938"),
-  b = n("263");
-let D = {
+  D = n("263");
+let b = {
   analyticsSource: {
     page: y.AnalyticsPages.GUILD_CHANNEL,
     section: y.AnalyticsSections.CHANNEL_LIST,
@@ -104,11 +104,11 @@ t.default = a.memo(function(e) {
   let em = a.useCallback(() => {
       if (null != F) {
         (0, C.transitionTo)(F, {
-          state: D
+          state: b
         });
         return
       }(0, g.transitionToGuild)($, {
-        state: D
+        state: b
       })
     }, [$, F]),
     eC = a.useCallback(() => {
@@ -173,10 +173,10 @@ t.default = a.memo(function(e) {
     }) : (0, l.jsx)("div", {
       ref: X ? es : void 0,
       "data-dnd-name": V.toString(),
-      className: i()(b.blobContainer, {
-        [b.sorting]: q,
-        [b.wobble]: ef,
-        [b.selected]: ef || k
+      className: i()(D.blobContainer, {
+        [D.sorting]: q,
+        [D.wobble]: ef,
+        [D.selected]: ef || k
       }),
       children: (0, l.jsx)(c.BlobMask, {
         selected: ef || k || eu,
@@ -192,7 +192,7 @@ t.default = a.memo(function(e) {
       hovered: !ea && eu,
       selected: !ea && k,
       unread: !ea && Y,
-      className: b.pill
+      className: D.pill
     }), (0, l.jsx)(v.default, {
       guild: V,
       disabled: q,

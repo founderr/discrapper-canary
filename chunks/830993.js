@@ -90,8 +90,8 @@ function L(e) {
       members: x,
       activity: e.presenceActivity
     })),
-    b = [...O, ...y];
-  return 0 === b.length ? null : (0, l.jsxs)(i.Scroller, {
+    D = [...O, ...y];
+  return 0 === D.length ? null : (0, l.jsxs)(i.Scroller, {
     className: A.container,
     children: [(0, l.jsx)(v, {
       channel: f,
@@ -99,7 +99,7 @@ function L(e) {
       voiceStatesCount: null !== (c = null == g ? void 0 : g.length) && void 0 !== c ? c : 0
     }), (0, l.jsx)("div", {
       className: A.headerDivider
-    }), b.map((e, t) => {
+    }), D.map((e, t) => {
       let {
         members: n,
         activity: a

@@ -33,8 +33,8 @@ t.default = a.forwardRef(function(e, t) {
     align: M = "center",
     art: y,
     isPremiumEarlyAccess: O = !1,
-    maxWidth: b = 280
-  } = e, D = L ? r.Button.Sizes.LARGE : r.Button.Sizes.MAX, [j, P] = a.useState(!1), {
+    maxWidth: D = 280
+  } = e, b = L ? r.Button.Sizes.LARGE : r.Button.Sizes.MAX, [j, P] = a.useState(!1), {
     ref: U,
     width: G
   } = (0, o.default)();
@@ -47,8 +47,8 @@ t.default = a.forwardRef(function(e, t) {
   return a.useEffect(() => {
     var e, t;
     let n = (null !== (t = null === (e = U.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-    !j && n > b && P(!0)
-  }, [j, G, U, b]), a.useEffect(() => {
+    !j && n > D && P(!0)
+  }, [j, G, U, D]), a.useEffect(() => {
     (0, u.requestMarkDismissibleContentAsShown)(x)
   }, [x]), (0, l.jsx)("div", {
     className: N,
@@ -93,7 +93,7 @@ t.default = a.forwardRef(function(e, t) {
         children: null != _ ? (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(r.Button, {
             className: p.button,
-            size: D,
+            size: b,
             onClick: e => {
               null == I || I(e), _(e), w(f.ContentDismissActionType.PRIMARY)
             },
@@ -102,7 +102,7 @@ t.default = a.forwardRef(function(e, t) {
             children: null != E ? E : h.default.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }), (0, l.jsx)(r.Button, {
             className: p.button,
-            size: D,
+            size: b,
             onClick: e => {
               null == I || I(e), w(f.ContentDismissActionType.DISMISS)
             },

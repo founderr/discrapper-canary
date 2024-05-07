@@ -45,13 +45,13 @@ function M() {
     }),
     y = (0, c.default)() && null != n,
     O = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
-    b = (0, a.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams());
+    D = (0, a.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams());
   if (!y && !O) return null;
   if (d.default.trackExposure({
       location: "broadcast_button_rtc_panel"
     }), !M) return null;
-  let D = [];
-  y && D.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
+  let b = [];
+  y && b.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
   let j = () => {
       o.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
         game_id: null == n ? void 0 : n.id
@@ -59,7 +59,7 @@ function M() {
     },
     P = () => {
       if (y) {
-        let l = b.find(e => e.ownerId === t);
+        let l = D.find(e => e.ownerId === t);
         null == l ? (0, p.openBroadcastingPrivacySettingsModal)(R.default.Messages.START_BROADCASTING, R.default.Messages.START_BROADCASTING_CTA, () => {
           (0, r.createBroadcastChannelOrStartStream)({
             pid: null == n ? void 0 : n.pid,
@@ -83,7 +83,7 @@ function M() {
       markAsDismissed: e
     });
   return (0, l.jsx)(m.default, {
-    contentTypes: D,
+    contentTypes: b,
     bypassAutoDismiss: !0,
     children: e => {
       let {

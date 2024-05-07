@@ -35,7 +35,7 @@ var a = n("120356"),
   y = n("647086"),
   O = n("809164");
 
-function b(e, t, n) {
+function D(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -43,7 +43,7 @@ function b(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class D extends L.default {
+class b extends L.default {
   componentWillUnmount() {
     this.resetTextChannelPopoutTimers()
   }
@@ -126,10 +126,10 @@ class D extends L.default {
     return C ? c(f(R)) : R
   }
   constructor(...e) {
-    super(...e), b(this, "state", {
+    super(...e), D(this, "state", {
       shouldShowThreadsPopout: !1,
       shouldShowActivities: !1
-    }), b(this, "enterTimer", 0), b(this, "exitTimer", 0), b(this, "handleMouseEnter", () => {
+    }), D(this, "enterTimer", 0), D(this, "exitTimer", 0), D(this, "handleMouseEnter", () => {
       (this.props.canShowThreadPreviewForUser || null != this.props.embeddedApps) && (this.resetTextChannelPopoutTimers(), this.enterTimer = setTimeout(() => {
         null != this.props.embeddedApps && this.props.embeddedApps.length > 0 ? this.setState({
           shouldShowActivities: !0
@@ -137,7 +137,7 @@ class D extends L.default {
           shouldShowThreadsPopout: !0
         })
       }, 200))
-    }), b(this, "handleMouseLeave", () => {
+    }), D(this, "handleMouseLeave", () => {
       this.resetTextChannelPopoutTimers(), this.exitTimer = setTimeout(() => {
         this.state.shouldShowActivities && this.setState({
           shouldShowActivities: !1
@@ -145,23 +145,23 @@ class D extends L.default {
           shouldShowThreadsPopout: !1
         })
       }, 250)
-    }), b(this, "handleThreadsPopoutClose", () => {
+    }), D(this, "handleThreadsPopoutClose", () => {
       this.resetTextChannelPopoutTimers(), this.setState({
         shouldShowThreadsPopout: !1
       })
-    }), b(this, "handleActivitiesPopoutClose", () => {
+    }), D(this, "handleActivitiesPopoutClose", () => {
       this.resetTextChannelPopoutTimers(), this.setState({
         shouldShowActivities: !1
       })
-    }), b(this, "handleClosePopout", () => {
+    }), D(this, "handleClosePopout", () => {
       this.state.shouldShowActivities && this.handleActivitiesPopoutClose(), this.state.shouldShowThreadsPopout && this.handleThreadsPopoutClose()
-    }), b(this, "handleMouseDown", () => {
+    }), D(this, "handleMouseDown", () => {
       this.handleActivitiesPopoutClose(), this.handleThreadsPopoutClose();
       let {
         channel: e
       } = this.props, t = e.getGuildId();
       o.default.preload(null != t ? t : M.ME, e.id)
-    }), b(this, "renderPopout", e => {
+    }), D(this, "renderPopout", e => {
       let {
         channel: t,
         sorting: n,
@@ -176,7 +176,7 @@ class D extends L.default {
         ...e,
         channel: this.props.channel
       })
-    }), b(this, "handleContextMenu", e => {
+    }), D(this, "handleContextMenu", e => {
       let {
         channel: t
       } = this.props;
@@ -222,7 +222,7 @@ class D extends L.default {
     })
   }
 }
-let j = (0, d.makeChannelSortable)(D);
+let j = (0, d.makeChannelSortable)(b);
 
 function P(e) {
   let {
@@ -251,7 +251,7 @@ function P(e) {
   } = (0, m.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), O = (0, i.useStateFromStores)([T.default], () => {
     let e = T.default.getCurrentUser();
     return null != e && (!t.isNSFW() || e.nsfwAllowed)
-  }, [t]), b = (0, c.useIsActivitiesInTextEnabled)(t.id, !1, "webGuildTextChannel"), D = (0, v.default)({
+  }, [t]), D = (0, c.useIsActivitiesInTextEnabled)(t.id, !1, "webGuildTextChannel"), b = (0, v.default)({
     channel: t,
     isChannelCollapsed: !1,
     isChannelSelected: o,
@@ -259,7 +259,7 @@ function P(e) {
     needSubscriptionToAccess: L,
     isNewChannel: A,
     muted: r,
-    enableActivities: b,
+    enableActivities: D,
     resolvedUnreadSetting: p
   }), P = (0, f.default)(t);
   return (0, l.jsx)(j, {
@@ -273,10 +273,10 @@ function P(e) {
     isNewChannel: A && e.canBeNewChannel,
     isFavoriteSuggestion: s && !R,
     canShowThreadPreviewForUser: O,
-    channelInfo: D,
+    channelInfo: b,
     embeddedApps: P,
     resolvedUnreadSetting: p,
-    hasChannelInfo: null != D,
-    enableActivities: b
+    hasChannelInfo: null != b,
+    enableActivities: D
   })
 }

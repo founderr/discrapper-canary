@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return y
   },
   ReadonlyCategoryChannel: function() {
-    return D
+    return b
   },
   VoiceChannelCategory: function() {
-    return b
+    return D
   },
   VoiceChannelCategoryButton: function() {
     return O
@@ -54,12 +54,12 @@ let M = a.memo(function(e) {
       children: y
     } = e,
     O = (0, o.useStateFromStores)([C.default], () => C.default.isChannelMuted(s.getGuildId(), s.id)),
-    b = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
-    D = (0, o.useStateFromStores)([m.default], () => m.default.can(L.Permissions.MANAGE_CHANNELS, s));
+    D = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
+    b = (0, o.useStateFromStores)([m.default], () => m.default.can(L.Permissions.MANAGE_CHANNELS, s));
   t = null != A ? T > A ? x.containerDragAfter : x.containerDragBefore : x.containerDefault;
   let j = a.useCallback(() => {
-      b ? (0, d.categoryExpand)(s.id) : (0, d.categoryCollapse)(s.id)
-    }, [s.id, b]),
+      D ? (0, d.categoryExpand)(s.id) : (0, d.categoryCollapse)(s.id)
+    }, [s.id, D]),
     P = a.useCallback(e => {
       if ("null" !== s.id) {
         let t = p.default.getGuild(s.getGuildId());
@@ -110,7 +110,7 @@ let M = a.memo(function(e) {
         children: (0, l.jsxs)("div", {
           ref: V,
           className: i()(x.iconVisibility, x.wrapper, {
-            [x.collapsed]: b,
+            [x.collapsed]: D,
             [x.muted]: O,
             [x.clickable]: !0
           }),
@@ -124,7 +124,7 @@ let M = a.memo(function(e) {
             "aria-label": v.default.Messages.CATEGORY_A11Y_LABEL.format({
               categoryName: s.name
             }),
-            "aria-expanded": !b,
+            "aria-expanded": !D,
             focusProps: {
               enabled: !1
             },
@@ -139,7 +139,7 @@ let M = a.memo(function(e) {
           }), (0, l.jsx)("div", {
             onClick: R,
             className: x.children,
-            children: D && !I ? (0, l.jsx)(u.Tooltip, {
+            children: b && !I ? (0, l.jsx)(u.Tooltip, {
               text: v.default.Messages.CREATE_CHANNEL,
               children: e => {
                 let {
@@ -240,7 +240,7 @@ let y = a.memo(function(e) {
       })]
     })
   }),
-  b = a.memo(function(e) {
+  D = a.memo(function(e) {
     let {
       category: t,
       channel: n
@@ -262,7 +262,7 @@ let y = a.memo(function(e) {
       }
     })
   }),
-  D = a.memo(function(e) {
+  b = a.memo(function(e) {
     let {
       channel: t
     } = e;

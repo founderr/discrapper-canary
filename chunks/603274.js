@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return b
   }
 }), n("47120"), n("390547"), n("653041");
 var l = n("735250");
@@ -69,8 +69,8 @@ function O() {
       for (let t of i) e += c.default.getParticipantCount(t, f.StageChannelParticipantNamedIndex.AUDIENCE);
       return e
     }),
-    b = (0, o.useStateFromStoresArray)([h.default], () => h.default.getAllApplicationStreams().filter(e => a.includes(e.channelId)).map(e => e.ownerId), [a]),
-    D = (0, o.useStateFromStoresArray)([d.default], () => {
+    D = (0, o.useStateFromStoresArray)([h.default], () => h.default.getAllApplicationStreams().filter(e => a.includes(e.channelId)).map(e => e.ownerId), [a]),
+    b = (0, o.useStateFromStoresArray)([d.default], () => {
       let e = d.default.getEmbeddedActivitiesByChannel(),
         t = [];
       for (let s of a) {
@@ -79,9 +79,9 @@ function O() {
       }
       return t
     }, [a]),
-    j = (0, o.useStateFromStoresArray)([m.default], () => D.map(e => m.default.getUser(e)), [D]),
-    P = (0, o.useStateFromStoresArray)([m.default], () => b.map(e => m.default.getUser(e)), [b]),
-    U = y(S.default, x.filter(e => !b.includes(e.id) && !D.includes(e.id)));
+    j = (0, o.useStateFromStoresArray)([m.default], () => b.map(e => m.default.getUser(e)), [b]),
+    P = (0, o.useStateFromStoresArray)([m.default], () => D.map(e => m.default.getUser(e)), [D]),
+    U = y(S.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
   let G = (e = M, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
       children: [(0, l.jsx)(_.default, {
@@ -103,14 +103,14 @@ function O() {
         })]
       })]
     })),
-    w = y(I.default, P.filter(e => null != e && !D.includes(e.id))),
+    w = y(I.default, P.filter(e => null != e && !b.includes(e.id))),
     B = y(E.default, j);
   return (0, l.jsxs)(l.Fragment, {
     children: [G, U, w, B]
   })
 }
 
-function b() {
+function D() {
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: s()(R.row, R.rowGuildName),
@@ -122,7 +122,7 @@ function b() {
   })
 }
 
-function D(e) {
+function b(e) {
   let {
     "aria-label": t = !1,
     onShow: n,
@@ -132,7 +132,7 @@ function D(e) {
     hideOnClick: !0,
     spacing: 20,
     position: "right",
-    text: (0, l.jsx)(b, {}),
+    text: (0, l.jsx)(D, {}),
     "aria-label": t,
     tooltipClassName: M.listItemTooltip,
     onTooltipShow: n,

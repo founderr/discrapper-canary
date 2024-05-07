@@ -59,7 +59,7 @@ function y(e) {
 }
 let O = 1e3 / 60;
 
-function b() {
+function D() {
   let e = [g.KeybindGroup.MESSAGE, g.KeybindGroup.NAVIGATION, g.KeybindGroup.VOICE_AND_VIDEO, g.KeybindGroup.CHAT, g.KeybindGroup.MISCELLANEOUS];
   return (0, s.jsx)("div", {
     className: v.keyboardShortcutList,
@@ -104,7 +104,7 @@ function b() {
     })
   })
 }
-class D extends i.PureComponent {
+class b extends i.PureComponent {
   componentDidMount() {
     this.lastInputedKeys = [], I.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), I.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
       capture: !0
@@ -167,7 +167,7 @@ class D extends i.PureComponent {
         ref: this.scrollerRef,
         fade: !0,
         children: (0, s.jsx)(C.HeadingLevel, {
-          children: (0, s.jsx)(b, {})
+          children: (0, s.jsx)(D, {})
         })
       })]
     })
@@ -336,7 +336,7 @@ function P(e) {
       component: "div",
       children: l ? (0, s.jsx)(T.default, {
         onClose: n
-      }, "raging-demo") : (0, s.jsx)(D, {
+      }, "raging-demo") : (0, s.jsx)(b, {
         content: r,
         keyboardModeEnabled: u,
         activateRagingDemon: function() {

@@ -85,22 +85,22 @@ t.default = e => {
   if (null == C) return null;
   let y = null != C.guild ? new d.default(C.guild) : null,
     O = null != C.channel ? (0, u.createChannelRecordFromInvite)(C.channel) : null,
-    b = null != C.target_application ? new o.default(C.target_application) : null,
-    D = T || null == C.inviter ? null : new c.default(C.inviter),
-    j = !(null != C.approximate_member_count && C.approximate_member_count > 100 || null != y && y.hasFeature(E.GuildFeatures.COMMUNITY)) && null != D,
+    D = null != C.target_application ? new o.default(C.target_application) : null,
+    b = T || null == C.inviter ? null : new c.default(C.inviter),
+    j = !(null != C.approximate_member_count && C.approximate_member_count > 100 || null != y && y.hasFeature(E.GuildFeatures.COMMUNITY)) && null != b,
     P = null,
     U = !1;
-  if (null != y) P = null == D ? I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : I.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
-    username: g.default.getFormattedName(D)
+  if (null != y) P = null == b ? I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : I.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
+    username: g.default.getFormattedName(b)
   }), C.target_type === _.InviteTargetTypes.STREAM && null != C.target_user && (P = I.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
     username: g.default.getFormattedName(C.target_user)
-  })), C.target_type === _.InviteTargetTypes.EMBEDDED_APPLICATION && null != C.target_application && (P = null != D ? I.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
-    username: g.default.getFormattedName(D)
-  }) : I.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY), j && null == b && (n = (0, l.jsx)(m.GuildIcon, {
+  })), C.target_type === _.InviteTargetTypes.EMBEDDED_APPLICATION && null != C.target_application && (P = null != b ? I.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
+    username: g.default.getFormattedName(b)
+  }) : I.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY), j && null == D && (n = (0, l.jsx)(m.GuildIcon, {
     className: N.icon,
     guild: y,
     size: m.GuildIcon.Sizes.SMALL
-  })), a = y.name, null != b && (a = b.name, h = (0, l.jsxs)("div", {
+  })), a = y.name, null != D && (a = D.name, h = (0, l.jsxs)("div", {
     children: [(0, l.jsx)(m.SubTitle, {
       className: N.appIn,
       children: I.default.Messages.EMBEDDED_ACTIVITIES_INVITE_IN
@@ -119,16 +119,16 @@ t.default = e => {
     })]
   }));
   else if (null != O) {
-    if (null == D) throw Error("no inviter in group DM invite");
-    let e = g.default.getFormattedName(D);
+    if (null == b) throw Error("no inviter in group DM invite");
+    let e = g.default.getFormattedName(b);
     null != O.name && "" !== O.name ? (P = I.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
       username: e
     }), a = O.name, null != O.icon && (n = (0, l.jsx)(m.ChannelIcon, {
       channel: O,
       size: i.AvatarSizes.SIZE_32
     }))) : (P = I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM, a = e)
-  } else if (null != D) {
-    let e = g.default.getFormattedName(D, !0);
+  } else if (null != b) {
+    let e = g.default.getFormattedName(b, !0);
     a = I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({
       username: e
     }), U = !0, h = null != L ? null : (0, l.jsx)(m.SubTitle, {
@@ -143,9 +143,9 @@ t.default = e => {
   return (0, l.jsxs)("div", {
     className: N.container,
     children: [(0, l.jsx)(A, {
-      application: b,
+      application: D,
       guild: y,
-      user: j ? D : null,
+      user: j ? b : null,
       compact: U
     }), null != L ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(m.SubTitle, {
@@ -164,7 +164,7 @@ t.default = e => {
           tooltipPosition: "left"
         }) : null, n, a]
       })]
-    }), h, null != b || U || (null == C ? void 0 : null === (t = C.guild) || void 0 === t ? void 0 : t.id) === S.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, l.jsx)(m.ActivityCount, {
+    }), h, null != D || U || (null == C ? void 0 : null === (t = C.guild) || void 0 === t ? void 0 : t.id) === S.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, l.jsx)(m.ActivityCount, {
       className: N.activityCount,
       online: C.approximate_presence_count,
       total: C.approximate_member_count,

@@ -23,8 +23,8 @@ var a = s("442837"),
   _ = s("228168"),
   T = s("182294"),
   x = s("231338"),
-  N = s("100651");
-let A = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
+  A = s("100651");
+let N = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
 function U(e) {
   let {
@@ -56,21 +56,21 @@ function U(e) {
       profileType: _.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null
     }), (0, l.jsx)("div", {
-      className: N.inner,
+      className: A.inner,
       children: (0, l.jsxs)("div", {
         ...M,
-        children: [(0, l.jsx)(A, {
+        children: [(0, l.jsx)(N, {
           src: R,
           avatarDecoration: P,
           size: T.AvatarSizes.SIZE_120,
-          className: N.avatar,
+          className: A.avatar,
           status: j,
           statusBackdropColor: (0, n.getStatusBackdropColor)(h),
           "aria-label": t.username,
           isMobile: y,
           statusTooltip: !0
         }), (0, l.jsxs)("div", {
-          className: N.buttons,
+          className: A.buttons,
           children: [p && (0, l.jsx)(v.default, {
             user: t,
             onClose: C

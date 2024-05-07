@@ -36,8 +36,8 @@ var l = n("735250"),
   M = n("9156"),
   y = n("594174"),
   O = n("467679"),
-  b = n("514342"),
-  D = n("28718"),
+  D = n("514342"),
+  b = n("28718"),
   j = n("733880"),
   P = n("465670"),
   U = n("887208"),
@@ -117,7 +117,7 @@ class Z extends a.Component {
           },
           className: k.link,
           ...E,
-          children: [(0, l.jsx)(D.default, {
+          children: [(0, l.jsx)(b.default, {
             selected: t,
             muted: !1,
             avatar: (0, l.jsx)(n, {
@@ -303,13 +303,13 @@ function X(e) {
               unread: ee
             }),
             ...a,
-            children: (0, l.jsx)(D.default, {
+            children: (0, l.jsx)(b.default, {
               avatar: ef(),
               selected: r,
               highlighted: ee,
               muted: null != $ && $,
               subText: ec(),
-              name: (0, l.jsx)(b.default, {
+              name: (0, l.jsx)(D.default, {
                 children: et
               }),
               decorators: t.isSystemDM() ? (0, l.jsx)(O.default, {

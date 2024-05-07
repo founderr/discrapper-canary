@@ -25,8 +25,8 @@ var l, a, s, i, r = n("392711"),
   M = n("831506"),
   y = n("731290"),
   O = n("430824"),
-  b = n("496675"),
-  D = n("158776"),
+  D = n("496675"),
+  b = n("158776"),
   j = n("699516"),
   P = n("800599"),
   U = n("594174"),
@@ -48,7 +48,7 @@ function Z() {
 }
 
 function X(e) {
-  return D.default.findActivity(e, e => e.type !== B.ActivityTypes.CUSTOM_STATUS)
+  return b.default.findActivity(e, e => e.type !== B.ActivityTypes.CUSTOM_STATUS)
 }
 
 function q(e) {
@@ -81,7 +81,7 @@ function $(e) {
 
 function ee(e) {
   let t = G.default.getVoiceStateForUser(e);
-  return (null == t ? void 0 : t.channelId) != null && b.default.canWithPartialContext(B.Permissions.VIEW_CHANNEL, {
+  return (null == t ? void 0 : t.channelId) != null && D.default.canWithPartialContext(B.Permissions.VIEW_CHANNEL, {
     channelId: t.channelId
   }) ? t.channelId : null
 }
@@ -135,27 +135,27 @@ function en(e, t, n) {
           isActivitiesEnabledForCurrentPlatform: t,
           ChannelStore: x.default,
           VoiceStateStore: G.default,
-          PermissionStore: b.default,
+          PermissionStore: D.default,
           GuildStore: O.default
         }) !== f.EmbeddedActivityJoinability.CAN_JOIN) continue
     } else if (null == C) continue;
     if (!N.shouldShowActivity(r) || null == d || j.has(d.id)) continue;
     let g = null != r ? $(r) : null;
     (null == g || g.id !== d.id) && (r = null);
-    let D = [];
-    D = null != r && null != r.party && null != r.party.id ? Array.from(null !== (i = M.default.getParty(r.party.id)) && void 0 !== i ? i : []).reduce((e, t) => {
+    let b = [];
+    b = null != r && null != r.party && null != r.party.id ? Array.from(null !== (i = M.default.getParty(r.party.id)) && void 0 !== i ? i : []).reduce((e, t) => {
       let n = U.default.getUser(t);
       return null != n && e.push(n), e
     }, []) : t.filter(e => {
       let t = X(e.id),
         n = null != t ? $(t) : null;
       return null != n && n.id === d.id
-    }), (D = o().orderBy(D, [et], ["desc"])).length !== t.length && (_ = !0), j.add(d.id), R.push({
+    }), (b = o().orderBy(b, [et], ["desc"])).length !== t.length && (_ = !0), j.add(d.id), R.push({
       game: d,
       activity: r,
       activityUser: e,
       startedPlayingTime: C,
-      playingMembers: D
+      playingMembers: b
     })
   }
   let F = 1 === g.length,
@@ -188,7 +188,7 @@ function en(e, t, n) {
     isSpotifyActivity: P,
     priorityMembers: g.map(e => ({
       user: e,
-      status: D.default.getStatus(e.id)
+      status: b.default.getStatus(e.id)
     })),
     partiedMembers: t,
     showPlayingMembers: _,
@@ -237,7 +237,7 @@ function es() {
 }
 class ei extends(l = u.default.Store) {
   initialize() {
-    this.syncWith([U.default, E.default, D.default, M.default, G.default, v.default, j.default, R.default, P.default], es), this.waitFor(_.default, O.default, E.default, U.default, P.default)
+    this.syncWith([U.default, E.default, b.default, M.default, G.default, v.default, j.default, R.default, P.default], es), this.waitFor(_.default, O.default, E.default, U.default, P.default)
   }
   get currentActivityParties() {
     return H

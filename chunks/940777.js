@@ -33,8 +33,8 @@ var l = n("735250"),
   M = n("603274"),
   y = n("981631"),
   O = n("689938"),
-  b = n("240993");
-let D = {
+  D = n("240993");
+let b = {
   analyticsSource: {
     page: y.AnalyticsPages.GUILD_CHANNEL,
     section: y.AnalyticsSections.CHANNEL_LIST,
@@ -103,7 +103,7 @@ function j() {
       selected: F,
       hovered: j,
       unread: H && !U,
-      className: b.pill
+      className: D.pill
     }), (0, l.jsx)(M.default, {
       onShow: W,
       children: (0, l.jsx)(R.FavoriteAddedTooltip, {
@@ -119,7 +119,7 @@ function j() {
             }),
             to: {
               pathname: y.Routes.CHANNEL(y.FAVORITES, w),
-              state: D
+              state: b
             },
             selected: F || j,
             onMouseEnter: () => P(!0),
@@ -138,11 +138,11 @@ function j() {
               })
             },
             children: (0, l.jsx)("div", {
-              className: i()(b.ring, {
-                [b.ringActive]: t
+              className: i()(D.ring, {
+                [D.ringActive]: t
               }),
               children: (0, l.jsx)(I.default, {
-                className: b.favoriteIcon,
+                className: D.favoriteIcon,
                 width: 20,
                 height: 20
               })

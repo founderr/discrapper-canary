@@ -33,8 +33,8 @@ var l = n("735250"),
   M = n("880080"),
   y = n("26290"),
   O = n("15434"),
-  b = n("780570"),
-  D = n("557177"),
+  D = n("780570"),
+  b = n("557177"),
   j = n("278464"),
   P = n("682662"),
   U = n("662146"),
@@ -64,7 +64,7 @@ function Y(e) {
     badge: f,
     link: p,
     showProgressBadge: m
-  } = e, S = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [I, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, b] = a.useState(0), [j, B] = a.useState(!1), {
+  } = e, S = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [I, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, D] = a.useState(0), [j, B] = a.useState(!1), {
     canViewBroadcasts: Y
   } = h.default.useExperiment({
     location: "home_button_no_track"
@@ -74,7 +74,7 @@ function Y(e) {
   (0, C.useTrackNewBroadcastDetected)();
   let z = (0, s.useTreeItem)("home"),
     Z = () => {
-      v(null), b(0), clearTimeout(L)
+      v(null), D(0), clearTimeout(L)
     };
   if (null == n) return null;
   let X = V.default.Messages.DIRECT_MESSAGES;
@@ -99,10 +99,10 @@ function Y(e) {
         onMouseEnter: () => N(!0),
         onMouseLeave: () => N(!1),
         onClick: () => {
-          if (!__OVERLAY__ && (null != L && clearTimeout(L), v(setTimeout(Z, 500)), b(x + 1), 15 === x)) {
+          if (!__OVERLAY__ && (null != L && clearTimeout(L), v(setTimeout(Z, 500)), D(x + 1), 15 === x)) {
             Z();
             let e = !r.Storage.get(w.DISCODO_STORAGE_KEY);
-            r.Storage.set(w.DISCODO_STORAGE_KEY, e), e && r.Storage.set(F.CUSTOM_NOTIFICATION_SOUNDS_DISCODO_STORAGE_KEY, !0), e ? (0, D.playSound)("discodo") : (0, D.playSound)("user_leave"), A(!0), setTimeout(() => {
+            r.Storage.set(w.DISCODO_STORAGE_KEY, e), e && r.Storage.set(F.CUSTOM_NOTIFICATION_SOUNDS_DISCODO_STORAGE_KEY, !0), e ? (0, b.playSound)("discodo") : (0, b.playSound)("user_leave"), A(!0), setTimeout(() => {
               A(!1)
             }, 1e3)
           }
@@ -178,8 +178,8 @@ function W() {
         {
           total: t,
           progress: n
-        } = b.getCombinedProgress(e),
-        l = b.calculateProgressPercentage(n, t);
+        } = D.getCombinedProgress(e),
+        l = D.calculateProgressPercentage(n, t);
       return l > 0 && l < 100
     }),
     n = (0, i.useStateFromStores)([p.default], () => p.default.getUserIdsToValidate()),

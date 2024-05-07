@@ -48,7 +48,7 @@ function N(e) {
         };
       return a.forEach(e => s(e, !0)), a.forEach(e => s(e, !1)), l
     }, [t, n, e])
-  }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), M = (0, C.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [O, b] = a.useState(void 0), D = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
+  }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), M = (0, C.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [O, D] = a.useState(void 0), b = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
     analyticsLocations: j
   } = (0, o.default)(r.default.SOUNDBOARD_WHEEL), P = a.useCallback(e => {
     (0, m.playSound)(e, n.id, j), x()
@@ -66,13 +66,13 @@ function N(e) {
     properties: {
       source: v,
       guild_id: t,
-      media_session_id: D
+      media_session_id: b
     }
   }, {
     disableTrack: !L
   });
   let U = a.useCallback(e => {
-      y.current = e, b(null == e ? void 0 : e.soundId)
+      y.current = e, D(null == e ? void 0 : e.soundId)
     }, []),
     G = a.useCallback(e => {
       if (null == e) {

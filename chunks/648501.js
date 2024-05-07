@@ -39,8 +39,8 @@ function R(e) {
     isChannelCollapsed: M,
     voiceStates: y,
     enableConnectedUserLimit: O,
-    enableActivities: b,
-    isSubscriptionGated: D,
+    enableActivities: D,
+    isSubscriptionGated: b,
     needSubscriptionToAccess: j,
     isNewChannel: P,
     muted: U,
@@ -57,7 +57,7 @@ function R(e) {
   if ((0, S.default)(w)) return (0, l.jsx)(T.default, {
     mentionsCount: w
   });
-  if ((0, u.showPremiumChannelIconButton)(D)) return (0, l.jsx)(u.default, {
+  if ((0, u.showPremiumChannelIconButton)(b)) return (0, l.jsx)(u.default, {
     locked: j
   });
   if (P) return (0, l.jsx)(C.TextBadge, {
@@ -85,7 +85,7 @@ function R(e) {
   }) : M && (0, g.hasStream)(y) && K ? (0, l.jsx)(C.TextBadge, {
     text: v.default.Messages.LIVE,
     color: s.default.unsafe_rawColors.RED_400.css
-  }) : null != b && b && (0, E.showChannelItemEmbeddedActivities)(B) ? (0, l.jsx)(I.default, {
+  }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(B) ? (0, l.jsx)(I.default, {
     embeddedApps: B,
     muted: U
   }) : null

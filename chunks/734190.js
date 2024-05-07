@@ -55,7 +55,7 @@ t.default = a.memo(function(e) {
     isSelectedVoice: R,
     isLast: y,
     withGuildIcon: O
-  } = e, b = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), D = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
+  } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
     unread: j,
     mentionCount: P
   } = (0, o.useStateFromStoresObject)([m.default], () => ({
@@ -76,7 +76,7 @@ t.default = a.memo(function(e) {
         channel: a
       })
     })
-  }, [t.id]), F = null == b ? 0 : b.length, {
+  }, [t.id]), F = null == D ? 0 : D.length, {
     role: V,
     ...H
   } = (0, r.useListItem)(t.id), k = a.useRef(null), Y = P > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
@@ -137,7 +137,7 @@ t.default = a.memo(function(e) {
               className: x.children,
               children: [F > 0 && t.userLimit > 0 ? (0, l.jsx)(_.default, {
                 userCount: F,
-                video: D,
+                video: b,
                 channel: t
               }) : null, (0, S.default)(P) ? (0, l.jsx)(I.default, {
                 mentionsCount: P
@@ -150,7 +150,7 @@ t.default = a.memo(function(e) {
       channel: t,
       collapsed: !R,
       collapsedMax: 6,
-      voiceStates: b,
+      voiceStates: D,
       location: T.AnalyticsLocations.GUILD_CHANNEL_LIST
     })]
   })

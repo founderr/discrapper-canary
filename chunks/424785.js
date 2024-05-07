@@ -34,8 +34,8 @@ var a = n("120356"),
   M = n("306680"),
   y = n("9156"),
   O = n("979651"),
-  b = n("514342"),
-  D = n("974029"),
+  D = n("514342"),
+  b = n("974029"),
   j = n("934415"),
   P = n("98597"),
   U = n("648501"),
@@ -251,7 +251,7 @@ class W extends P.default {
             onMouseLeave: i,
             onFocus: u,
             onBlur: d,
-            children: (0, l.jsx)(D.default, {
+            children: (0, l.jsx)(b.default, {
               width: 16,
               height: 16,
               className: H.actionIcon
@@ -267,7 +267,7 @@ class W extends P.default {
     }), Y(this, "renderSubtitle", () => {
       var e;
       let t = null === (e = this.props.stageInstance) || void 0 === e ? void 0 : e.topic;
-      return null == t ? null : (0, l.jsx)(b.default, {
+      return null == t ? null : (0, l.jsx)(D.default, {
         children: t
       })
     })
@@ -300,7 +300,7 @@ function z(e) {
   }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), p = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, S.useStageParticipantsCount)(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E
-  } = (0, m.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), b = (0, U.default)({
+  } = (0, m.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), D = (0, U.default)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: r,
@@ -308,7 +308,7 @@ function z(e) {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E,
     enableConnectedUserLimit: O || n.userLimit > 0 && n.userLimit < B.MAX_STAGE_VOICE_USER_LIMIT
-  }), D = e.connected && null == b;
+  }), b = e.connected && null == D;
   return (0, l.jsx)(K, {
     categoryCollapsed: f,
     connectAction: h,
@@ -320,8 +320,8 @@ function z(e) {
     ...c,
     ...e,
     isFavoriteSuggestion: s && !v,
-    forceShowButtons: D,
-    channelInfo: b,
+    forceShowButtons: b,
+    channelInfo: D,
     resolvedUnreadSetting: d
   })
 }

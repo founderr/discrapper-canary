@@ -80,8 +80,8 @@ function O(e) {
     R = (0, r.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForGuild(e)),
     O = (0, d.useIsActivitiesInTextEnabled)(null === (t = R[0]) || void 0 === t ? void 0 : t.channelId, !1, "GuildMediaState"),
     {
-      guildHasVoice: b,
-      guildHasVideo: D,
+      guildHasVoice: D,
+      guildHasVideo: b,
       selectedVoiceChannelHasVideo: j
     } = (0, r.useStateFromStoresObject)([A.default, E.default, I.default, _.default, N.default], () => {
       var t;
@@ -144,7 +144,7 @@ function O(e) {
         return !1
       })(),
       U = c.default.getEmbeddedActivitiesForGuild(e).length > 0;
-    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = M, S = v, _ = U) : (u = b, d = null != a, f = T, g = D, S = x, _ = y), {
+    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = M, S = v, _ = U) : (u = D, d = null != a, f = T, g = b, S = x, _ = y), {
       audio: u,
       video: g,
       screenshare: S,
@@ -154,5 +154,5 @@ function O(e) {
       gaming: i,
       isCurrentUserConnected: o || A
     }
-  }, [P, R, i, a, e, O, n, D, b, j])
+  }, [P, R, i, a, e, O, n, b, D, j])
 }

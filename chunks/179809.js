@@ -41,8 +41,8 @@ function x(e) {
     defaultFolderName: M,
     useCircleMask: y = !1,
     draggable: O = !1,
-    sorting: b = !1,
-    onDragStart: D,
+    sorting: D = !1,
+    onDragStart: b,
     onDragEnd: j,
     onExpandCollapse: P,
     onContextMenu: U,
@@ -54,13 +54,13 @@ function x(e) {
     children: V
   } = t, [H, k] = a.useState(!1), [Y, W] = a.useState(!1), K = H || Y;
   a.useEffect(() => {
-    b && k(!1)
-  }, [b]);
+    D && k(!1)
+  }, [D]);
   let [{
     dragging: z
   }, Z] = (0, r.useDrag)({
     type: m.GuildsNodeType.FOLDER,
-    item: () => (null == D || D(), {
+    item: () => (null == b || b(), {
       type: m.GuildsNodeType.FOLDER,
       nodeId: t.id
     }),
@@ -96,7 +96,7 @@ function x(e) {
       className: T.pill
     }), (0, l.jsx)(_.default, {
       text: Q,
-      disabled: b,
+      disabled: D,
       selected: s,
       disableWrapper: !0,
       children: (0, l.jsx)("div", {
@@ -109,7 +109,7 @@ function x(e) {
           folderNode: t,
           expanded: d,
           forceCircular: y,
-          sorting: b,
+          sorting: D,
           mediaState: p,
           mentionCount: x,
           tooltipName: Q,

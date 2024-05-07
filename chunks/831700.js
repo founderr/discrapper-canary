@@ -34,8 +34,8 @@ var a = n("120356"),
   M = n("695346"),
   y = n("592125"),
   O = n("430824"),
-  b = n("607744"),
-  D = n("496675"),
+  D = n("607744"),
+  b = n("496675"),
   j = n("306680"),
   P = n("9156"),
   U = n("979651"),
@@ -389,15 +389,15 @@ function J(e) {
   } = e, d = (0, i.useStateFromStoresObject)([j.default], () => ({
     unread: j.default.hasUnread(n.id),
     mentionCount: j.default.getMentionCount(n.id)
-  })), c = (0, i.useStateFromStores)([P.default], () => P.default.resolveUnreadSetting(n)), f = (0, i.useStateFromStoresObject)([y.default, b.default, D.default], () => {
+  })), c = (0, i.useStateFromStores)([P.default], () => P.default.resolveUnreadSetting(n)), f = (0, i.useStateFromStoresObject)([y.default, D.default, b.default], () => {
     let e = y.default.getChannel(n.parent_id),
-      l = b.default.getCheck(n.guild_id);
+      l = D.default.getCheck(n.guild_id);
     return {
-      canManageChannel: D.default.can(W.Permissions.MANAGE_CHANNELS, n),
-      canReorderChannel: !0 !== a && (t.id === K.FAVORITES_RAW_GUILD_ID || (null != e ? D.default.can(W.Permissions.MANAGE_CHANNELS, e) : D.default.can(W.Permissions.MANAGE_CHANNELS, t))),
-      canMoveMembers: D.default.can(W.Permissions.MOVE_MEMBERS, n),
-      locked: !D.default.can(W.Permissions.CONNECT, n),
-      bypassLimit: D.default.can(W.Permissions.MOVE_MEMBERS, n),
+      canManageChannel: b.default.can(W.Permissions.MANAGE_CHANNELS, n),
+      canReorderChannel: !0 !== a && (t.id === K.FAVORITES_RAW_GUILD_ID || (null != e ? b.default.can(W.Permissions.MANAGE_CHANNELS, e) : b.default.can(W.Permissions.MANAGE_CHANNELS, t))),
+      canMoveMembers: b.default.can(W.Permissions.MOVE_MEMBERS, n),
+      locked: !b.default.can(W.Permissions.CONNECT, n),
+      bypassLimit: b.default.can(W.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
   }), p = (0, i.useStateFromStores)([U.default], () => U.default.hasVideo(n.id)), m = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
