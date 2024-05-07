@@ -15,6 +15,9 @@ n.r(t), n.d(t, {
   POLL_CREATION_MODAL_KEY: function() {
     return s
   },
+  POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: function() {
+    return c
+  },
   PollDurations: function() {
     return i
   },
@@ -28,5 +31,6 @@ let s = "POLL_CREATION_MODAL_KEY",
   l = 10,
   u = 300,
   d = 55,
-  _ = 3;
+  _ = 3,
+  c = 50;
 (r = i || (i = {}))[r.ONE_HOUR = 1] = "ONE_HOUR", r[r.FOUR_HOURS = 4] = "FOUR_HOURS", r[r.EIGHT_HOURS = 8] = "EIGHT_HOURS", r[r.ONE_DAY = 24] = "ONE_DAY", r[r.THREE_DAYS = 72] = "THREE_DAYS", r[r.SEVEN_DAYS = 168] = "SEVEN_DAYS", a.ExpressionPickerViewType.GIF, a.ExpressionPickerViewType.EMOJI
