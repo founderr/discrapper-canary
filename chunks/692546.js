@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return T
   }
 }), n("47120");
 var i, a = n("470079"),
@@ -67,14 +67,14 @@ function O(e, t) {
       return t
     })
   }), function() {
-    if (!T) p.default.requireModule("discord_overlay2").setClickZoneCallback((e, t, n) => {
+    if (!C) p.default.requireModule("discord_overlay2").setClickZoneCallback((e, t, n) => {
       let i = y.get(e);
       null != i && (!S && (E.x = t, E.y = n), i.instance.click())
-    }), T = !0
+    }), C = !0
   }()))
 }
-let T = !1;
-class C extends(i = a.PureComponent) {
+let C = !1;
+class T extends(i = a.PureComponent) {
   componentDidMount() {
     this.props.observe ? this.observeZone() : this.updateZone()
   }
@@ -121,7 +121,7 @@ class C extends(i = a.PureComponent) {
     })
   }
 }
-m(C, "defaultProps", {
+m(T, "defaultProps", {
   observe: !0,
   observeInterval: 1e3
 })

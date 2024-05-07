@@ -46,14 +46,14 @@ let b = (e, t) => t ? y.default.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format
     return a.useMemo(() => null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => 3 !== e.length && n.id !== t.id ? e.concat(n) : e, []), [t, n])
   };
 
-function G(e) {
+function F(e) {
   g.default.track(D.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
     location_page: null != e.guild_id ? D.AnalyticsPages.GUILD_CHANNEL : D.AnalyticsPages.DM_CHANNEL,
     location_section: D.AnalyticsSections.STICKER_POPOUT
   }), (0, m.navigateToPremiumMarketingPage)()
 }
 
-function F(e) {
+function G(e) {
   let {
     sticker: t,
     description: n
@@ -170,7 +170,7 @@ let k = e => {
       q = "Custom Sticker Popout";
     L ? t = B ? W ? y.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (W ? t = y.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = y.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, Q = !0, q = "Custom Sticker Popout (Upsell)") : z ? (t = y.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, Q = !0, q = "Custom Sticker Popout (Upsell)") : (t = y.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
       openPremiumSettings: () => {
-        G(l), m()
+        F(l), m()
       }
     }), q = "Custom Sticker Popout (Soft Upsell)");
     let X = !Q && !B && z && L;
@@ -194,7 +194,7 @@ let k = e => {
         };
         return (0, s.jsxs)("div", {
           className: j.emojiSection,
-          children: [(0, s.jsx)(F, {
+          children: [(0, s.jsx)(G, {
             description: t,
             sticker: n
           }), Q && (0, s.jsx)(p.default, {
@@ -299,11 +299,11 @@ function H(e) {
   } = e;
   return (0, s.jsx)(_.MessagePopoutContent, {
     className: U.popoutContent,
-    children: (0, s.jsx)(F, {
+    children: (0, s.jsx)(G, {
       sticker: a,
       description: y.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
         openPremiumSettings: () => {
-          n(), G(t)
+          n(), F(t)
         }
       })
     })

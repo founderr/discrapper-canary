@@ -78,9 +78,9 @@ t.default = e => {
     toggleExpanded: b
   } = e, {
     ref: B,
-    height: G
+    height: F
   } = (0, E.default)(), {
-    ref: F,
+    ref: G,
     width: k,
     scrollWidth: w
   } = (0, E.default)(), H = (0, d.useStateFromStores)([m.default], () => m.default.getState().theme), V = (0, d.useStateFromStores)([_.default], () => _.default.useReducedMotion), Y = a.useMemo(() => (0, C.isAssetAnimated)(u.config.assets.hero), [u]), K = a.useRef(null), W = (0, v.isQuestCardInGiftInventory)(c), z = c === S.QuestContent.QUESTS_EMBED, Q = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, q = (0, N.useQuestFormattedDate)(u.config.expiresAt, {
@@ -110,7 +110,7 @@ t.default = e => {
     }),
     "aria-label": O.default.Messages.EXPAND,
     style: {
-      height: W ? G : void 0
+      height: W ? F : void 0
     },
     children: [(0, s.jsx)(D, {
       style: {
@@ -220,7 +220,7 @@ t.default = e => {
                 text: u.config.messages.questName,
                 shouldShow: null != k && null != w && k < w,
                 children: e => (0, s.jsx)(f.Heading, {
-                  ref: F,
+                  ref: G,
                   variant: "lg" === I ? "heading-xxl/bold" : "sm" === I ? "heading-xl/bold" : "heading-lg/bold",
                   className: x.heading,
                   ...e,

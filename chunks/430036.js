@@ -23,8 +23,8 @@ var i = n("735250"),
   v = n("655687"),
   y = n("823748"),
   O = n("25007"),
-  T = n("199649"),
-  C = n("1397"),
+  C = n("199649"),
+  T = n("1397"),
   N = n("541716"),
   I = n("752305"),
   _ = n("974251"),
@@ -123,10 +123,10 @@ class ei extends a.Component {
         focused: a
       })
     });
-    return e.isPrivate() ? (0, i.jsx)(T.default, {
+    return e.isPrivate() ? (0, i.jsx)(C.default, {
       channel: e,
       children: d
-    }, e.id) : (0, i.jsx)(C.default, {
+    }, e.id) : (0, i.jsx)(T.default, {
       channel: e,
       children: d
     }, e.id)

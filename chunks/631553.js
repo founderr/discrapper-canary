@@ -23,8 +23,8 @@ var a = n("735250"),
   v = n("425493"),
   y = n("951483"),
   O = n("714338"),
-  T = n("185666"),
-  C = n("100527"),
+  C = n("185666"),
+  T = n("100527"),
   N = n("906732"),
   I = n("770471"),
   _ = n("757454"),
@@ -146,7 +146,7 @@ class ep extends l.Component {
     S.default.deactivateAllRegions()
   }
   componentDidMount() {
-    S.default.startSession(), L.default.initialize(), T.default.initialize(), M.default.initialize()
+    S.default.startSession(), L.default.initialize(), C.default.initialize(), M.default.initialize()
   }
   componentDidUpdate(e) {
     let {
@@ -234,7 +234,7 @@ class ep extends l.Component {
     window.addEventListener("keydown", this.onKeyDownGlobal, !0), window.addEventListener("keyup", this.onKeyUpGlobal, !0)
   }
   componentWillUnmount() {
-    window.removeEventListener("resize", this.handleWindowResize), window.removeEventListener("keydown", this.onKeyDownGlobal, !0), window.removeEventListener("keyup", this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener("contextmenu", eu, !1), L.default.terminate(), T.default.terminate(), M.default.terminate()
+    window.removeEventListener("resize", this.handleWindowResize), window.removeEventListener("keydown", this.onKeyDownGlobal, !0), window.removeEventListener("keyup", this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener("contextmenu", eu, !1), L.default.terminate(), C.default.terminate(), M.default.terminate()
   }
   renderInvalidSizeMessage() {
     return (0, a.jsx)(W.default, {
@@ -336,7 +336,7 @@ function eg() {
     autoTrackExposure: !1
   }), m = (0, _.default)() && null != c, E = (0, p.useStateFromStores)([D.default], () => null != D.default.getCurrentUserActiveStream()), {
     analyticsLocations: S
-  } = (0, N.default)(C.default.OVERLAY), {
+  } = (0, N.default)(T.default.OVERLAY), {
     showKeybindIndicators: v,
     dismissKeybindNotification: y
   } = (0, Q.useGetKeybindNotification)();

@@ -23,8 +23,8 @@ var i = n("735250"),
   v = n("944486"),
   y = n("125015"),
   O = n("389320"),
-  T = n("465670"),
-  C = n("548343"),
+  C = n("465670"),
+  T = n("548343"),
   N = n("339983"),
   I = n("823779"),
   _ = n("118717"),
@@ -84,7 +84,7 @@ class D extends a.Component {
     return p && !n ? (0, i.jsxs)(A.default.Bar, {
       className: L.opacityHeader,
       children: [(0, i.jsx)(x.default, {}), (0, i.jsx)(f.default.Icon, {
-        icon: T.default,
+        icon: C.default,
         onClick: this.handleCloseOpacitySettings,
         tooltip: R.default.Messages.CLOSE
       })]
@@ -99,7 +99,7 @@ class D extends a.Component {
           channelId: a.id,
           toolbar: this.renderWidgetButtons(),
           transparent: !0,
-          children: [u || n || c ? null : (0, i.jsx)(C.default, {
+          children: [u || n || c ? null : (0, i.jsx)(T.default, {
             className: s()(L.dragIcon, t),
             width: 20,
             height: 20

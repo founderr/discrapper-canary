@@ -43,7 +43,7 @@ let E = p.OverlayWidgetTypes.DEFAULT,
       }
     })
   };
-class T extends(i = r.PureComponent) {
+class C extends(i = r.PureComponent) {
   render() {
     let {
       disableScroll: e,
@@ -70,13 +70,13 @@ class T extends(i = r.PureComponent) {
 }
 s = {
   disableScroll: !1
-}, (l = "defaultProps") in(a = T) ? Object.defineProperty(a, l, {
+}, (l = "defaultProps") in(a = C) ? Object.defineProperty(a, l, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : a[l] = s;
-let C = e => {
+let T = e => {
     let {
       type: t = E,
       width: n,
@@ -118,13 +118,13 @@ let C = e => {
       })
     })
   };
-C.Background = e => {
+T.Background = e => {
   let {
     children: t,
     opacityOverride: n
   } = e;
   if (null == t) return null;
-  let i = [O, T, N];
+  let i = [O, C, N];
   return (0, o.jsx)(v.Consumer, {
     children: e => {
       let {
@@ -145,7 +145,7 @@ C.Background = e => {
       }
     }
   })
-}, C.Body = T, C.Content = N, C.Icon = e => {
+}, T.Body = C, T.Content = N, T.Icon = e => {
   let {
     icon: t,
     label: n,
@@ -188,4 +188,4 @@ C.Background = e => {
       })
     }
   })
-}, C.Bar = O, t.default = C
+}, T.Bar = O, t.default = T

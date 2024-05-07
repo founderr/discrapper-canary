@@ -117,9 +117,9 @@ let L = ["TOP_LEFT", "TOP_RIGHT"],
   j = ["#61D5B2"],
   b = n("303893"),
   B = n("808392"),
-  G = [b, B];
+  F = [b, B];
 
-function F() {
+function G() {
   return n.e("60005").then(n.t.bind(n, "931152", 19)).then(e => {
     let {
       default: t
@@ -255,7 +255,7 @@ function k(e) {
   }, [g, C, _, u]), (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)(c.SpriteCanvas, {
       ref: N,
-      sprites: G,
+      sprites: F,
       colors: j,
       spriteWidth: 45,
       spriteHeight: 45
@@ -276,7 +276,7 @@ function k(e) {
         sceneSegments: x,
         onScenePlay: R,
         onSceneComplete: v,
-        importData: F,
+        importData: G,
         pauseWhileUnfocused: !1
       })
     })]
@@ -355,7 +355,7 @@ function w(e) {
       (null == t ? void 0 : t.id.startsWith(U)) && b()
     }, [b]);
   o.useEffect(() => f(B));
-  let G = (0, r.jsx)(m.Clickable, {
+  let F = (0, r.jsx)(m.Clickable, {
     className: O.iconWrapper,
     innerRef: S,
     onClick: i,
@@ -365,7 +365,7 @@ function w(e) {
     })
   });
   return (0, r.jsxs)(g.default, {
-    iconNode: G,
+    iconNode: F,
     timestamp: n.timestamp,
     compact: s,
     children: [(0, r.jsx)("div", {

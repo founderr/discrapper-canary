@@ -19,8 +19,8 @@ var i = n("735250"),
   v = n("547881"),
   y = n("70956"),
   O = n("960048"),
-  T = n("792125"),
-  C = n("145597"),
+  C = n("792125"),
+  T = n("145597"),
   N = n("692546"),
   I = n("987650"),
   _ = n("981631"),
@@ -38,8 +38,8 @@ function R(e, t, n) {
 let L = 10 * y.default.Millis.SECOND;
 
 function M() {
-  let e = (0, C.getPID)(),
-    t = (0, C.getRPCAuthToken)();
+  let e = (0, T.getPID)(),
+    t = (0, T.getRPCAuthToken)();
   (0, p.send)({
     type: _.OverlayEventTypes.DISPATCH,
     pid: e,
@@ -75,7 +75,7 @@ class D extends a.PureComponent {
     return null == a ? null : (0, i.jsx)(N.default, {
       observe: !1,
       children: (0, i.jsxs)(f.Clickable, {
-        className: s()((0, T.getThemeClass)(_.ThemeTypes.DARK), x.container),
+        className: s()((0, C.getThemeClass)(_.ThemeTypes.DARK), x.container),
         onClick: e => e.stopPropagation(),
         children: [(0, i.jsx)(E.default, {
           expand: !0,
@@ -150,11 +150,11 @@ class j extends a.PureComponent {
       error: e,
       info: t
     });
-    let i = (0, C.getPID)(),
-      a = (0, C.getRPCAuthToken)();
+    let i = (0, T.getPID)(),
+      a = (0, T.getRPCAuthToken)();
     (0, p.send)({
       type: _.OverlayEventTypes.DISPATCH,
-      pid: (0, C.getPID)(),
+      pid: (0, T.getPID)(),
       token: a,
       payloads: [{
         type: "OVERLAY_CRASHED",

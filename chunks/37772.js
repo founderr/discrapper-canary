@@ -36,7 +36,7 @@ var s = n("735250"),
   b = n("468381"),
   B = n("913144");
 
-function G(e) {
+function F(e) {
   let {
     className: t,
     count: n,
@@ -70,7 +70,7 @@ t.default = a.memo(function e(t) {
     message: I,
     compact: h = !1,
     className: b,
-    onContextMenu: F,
+    onContextMenu: G,
     onClick: k,
     disableInteraction: w = !1,
     hasThread: H,
@@ -96,7 +96,7 @@ t.default = a.memo(function e(t) {
     message: K.message,
     channel: W,
     hasThread: !1
-  }) : (T.default.isBlocked(I.author.id) ? a = j.default.Messages.BLOCKED_MESSAGE_COUNT : (0, C.isSpam)(I) && V && (a = j.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a) ? (0, s.jsx)(G, {
+  }) : (T.default.isBlocked(I.author.id) ? a = j.default.Messages.BLOCKED_MESSAGE_COUNT : (0, C.isSpam)(I) && V && (a = j.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a) ? (0, s.jsx)(F, {
     className: b,
     compact: h,
     count: 1,
@@ -140,7 +140,7 @@ t.default = a.memo(function e(t) {
     childrenExecutedCommand: (0, P.default)(I, l, h),
     childrenMessageContent: (0, x.default)(t, ee),
     childrenSystemMessage: (0, D.default)(t),
-    onContextMenu: F,
+    onContextMenu: G,
     onClick: k,
     hasThread: !1 !== H && null != es && I.hasFlag(U.MessageFlags.HAS_THREAD),
     hasReply: I.type === U.MessageTypes.REPLY,

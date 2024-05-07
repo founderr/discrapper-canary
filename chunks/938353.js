@@ -44,8 +44,8 @@ var s, a = n("735250"),
   j = n("628238"),
   b = n("454585"),
   B = n("768494"),
-  G = n("976853"),
-  F = n("346013"),
+  F = n("976853"),
+  G = n("346013"),
   k = n("977683"),
   w = n("128435"),
   H = n("98278"),
@@ -99,7 +99,7 @@ var s, a = n("735250"),
   eb = n("899857"),
   eB = n("680674");
 
-function eG(e, t, n) {
+function eF(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -108,7 +108,7 @@ function eG(e, t, n) {
   }) : e[t] = n, e
 }
 
-function eF() {
+function eG() {
   return (0, a.jsxs)("div", {
     className: eb.nitroFileSizeUpsell,
     children: [(0, a.jsx)("img", {
@@ -209,7 +209,7 @@ class eK extends(s = l.Component) {
   }
   renderSocialProofingFileSizeNitroUpsell(e) {
     let t = e.attachments.some(e => e.size > eU.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE);
-    return (0, eh.shouldShowNitroUpsell)("attachment") && t ? (0, a.jsx)(eF, {}) : null
+    return (0, eh.shouldShowNitroUpsell)("attachment") && t ? (0, a.jsx)(eG, {}) : null
   }
   renderCodedLinks(e) {
     return 0 === e.codedLinks.length ? null : e.codedLinks.map(t => {
@@ -568,7 +568,7 @@ class eK extends(s = l.Component) {
     })
   }
   renderMediaPostEmbeds(e) {
-    return e.embeds.flatMap(t => t.type !== ey.MessageEmbedTypes.POST_PREVIEW || null == t.url ? [] : (0, a.jsx)(F.default, {
+    return e.embeds.flatMap(t => t.type !== ey.MessageEmbedTypes.POST_PREVIEW || null == t.url ? [] : (0, a.jsx)(G.default, {
       embedUrl: t.url,
       message: e,
       channel: this.props.channel
@@ -624,11 +624,11 @@ class eK extends(s = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), eG(this, "state", {
+    super(...e), eF(this, "state", {
       showSuppressModal: !1,
       showRemoveAttachmentModal: !1,
       attachmentToDelete: null
-    }), eG(this, "getAcceptInviteContext", e => {
+    }), eF(this, "getAcceptInviteContext", e => {
       let {
         channel: t,
         message: n
@@ -640,7 +640,7 @@ class eK extends(s = l.Component) {
         location_channel_type: t.type,
         location_message_id: n.id
       }
-    }), eG(this, "renderEmbed", (e, t, n, s) => {
+    }), eF(this, "renderEmbed", (e, t, n, s) => {
       let {
         gifAutoPlay: l,
         inlineEmbedMedia: i,
@@ -664,16 +664,16 @@ class eK extends(s = l.Component) {
           ...t
         })
       }, e.id)
-    }), eG(this, "renderEmbedTitle", (e, t) => e.type === ey.MessageEmbedTypes.RICH ? b.default.parseEmbedTitle(t, !0, {
+    }), eF(this, "renderEmbedTitle", (e, t) => e.type === ey.MessageEmbedTypes.RICH ? b.default.parseEmbedTitle(t, !0, {
       channelId: this.props.channel.id
-    }) : t), eG(this, "renderEmbedDescription", (e, t, n) => e.type === ey.MessageEmbedTypes.RICH ? b.default.parse(t, !0, {
+    }) : t), eF(this, "renderEmbedDescription", (e, t, n) => e.type === ey.MessageEmbedTypes.RICH ? b.default.parse(t, !0, {
       channelId: this.props.channel.id,
       allowLinks: !0,
       allowEmojiLinks: !0,
       allowList: this.props.showListsAndHeaders,
       allowHeading: !n && this.props.showListsAndHeaders,
       previewLinkTarget: this.props.showMaskedLinks
-    }) : t), eG(this, "handleEmbedSuppressed", e => {
+    }) : t), eF(this, "handleEmbedSuppressed", e => {
       let {
         channel: t,
         message: n
@@ -681,7 +681,7 @@ class eK extends(s = l.Component) {
       e.shiftKey ? E.default.suppressEmbeds(t.id, n.id) : this.setState({
         showSuppressModal: !0
       })
-    }), eG(this, "handleRemoveAttachment", e => {
+    }), eF(this, "handleRemoveAttachment", e => {
       let t = e.originalItem;
       this.setState({
         showRemoveAttachmentModal: !0,
@@ -717,7 +717,7 @@ function eW(e) {
     communicationDisabled: N,
     isActiveChannelOrUnarchivableThread: S,
     isAutomodQuarantined: h
-  }), D = (0, j.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()), P = (0, G.default)(null == n ? void 0 : n.id), y = (0, k.default)(s), b = (0, A.useShouldRedactExplicitContent)(n.id, s.author.id), B = (0, g.useShouldRenderReportFalsePositiveButton)(s.id);
+  }), D = (0, j.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()), P = (0, F.default)(null == n ? void 0 : n.id), y = (0, k.default)(s), b = (0, A.useShouldRedactExplicitContent)(n.id, s.author.id), B = (0, g.useShouldRenderReportFalsePositiveButton)(s.id);
   return (0, a.jsx)(eK, {
     canSuppressEmbeds: C,
     canDeleteAttachments: M,
@@ -741,7 +741,7 @@ function eW(e) {
     shouldRenderCtaButton: B
   })
 }
-eG(eK, "defaultProps", {
+eF(eK, "defaultProps", {
   renderEmbeds: !0,
   compact: !1
 });
@@ -756,7 +756,7 @@ let ez = e => {
     disableReactionCreates: o = !0,
     disableReactionUpdates: u = !0,
     ...d
-  } = e, c = Z.InlineAttachmentMedia.useSetting(), f = Z.InlineEmbedMedia.useSetting(), E = Z.RenderEmbeds.useSetting(), _ = Z.GifAutoPlay.useSetting(), m = (0, j.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, G.default)(null == s ? void 0 : s.id), I = (0, A.useShouldRedactExplicitContent)(s.id, n.author.id), p = (0, g.useShouldRenderReportFalsePositiveButton)(n.id), h = (0, k.default)(n);
+  } = e, c = Z.InlineAttachmentMedia.useSetting(), f = Z.InlineEmbedMedia.useSetting(), E = Z.RenderEmbeds.useSetting(), _ = Z.GifAutoPlay.useSetting(), m = (0, j.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, F.default)(null == s ? void 0 : s.id), I = (0, A.useShouldRedactExplicitContent)(s.id, n.author.id), p = (0, g.useShouldRenderReportFalsePositiveButton)(n.id), h = (0, k.default)(n);
   return (0, a.jsx)(eK, {
     ...d,
     message: n,

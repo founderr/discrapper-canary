@@ -23,8 +23,8 @@ var i = n("735250"),
   v = n("594174"),
   y = n("979651"),
   O = n("362446"),
-  T = n("285952"),
-  C = n("389320"),
+  C = n("285952"),
+  T = n("389320"),
   N = n("242315"),
   I = n("381238"),
   _ = n("357727"),
@@ -118,7 +118,7 @@ class w extends a.PureComponent {
               })
             })
           })
-        }), (0, i.jsxs)(T.default, {
+        }), (0, i.jsxs)(C.default, {
           grow: 0,
           children: [(0, i.jsx)(R.default, {
             tooltipText: p ? D.default.Messages.UNMUTE : D.default.Messages.MUTE,
@@ -133,7 +133,7 @@ class w extends a.PureComponent {
           }), null == a && (0, i.jsx)(R.default, {
             tooltipText: D.default.Messages.DISCONNECT_SELF,
             onClick: this.handleDisconnect,
-            icon: C.default
+            icon: T.default
           })]
         })]
       })

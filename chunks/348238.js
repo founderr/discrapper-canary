@@ -40,10 +40,10 @@ n.r(t), n.d(t, {
     return U
   },
   useFocusInside: function() {
-    return F
+    return G
   },
   useHoveredMessage: function() {
-    return G
+    return F
   }
 }), n("789020"), n("47120");
 var s = n("735250"),
@@ -219,7 +219,7 @@ function B(e, t) {
   }, [s, n])
 }
 
-function G(e, t, n) {
+function F(e, t, n) {
   let s = "".concat(e, ":").concat(t),
     l = a.useRef(n),
     [i, r] = a.useState(n);
@@ -238,7 +238,7 @@ function G(e, t, n) {
   }
 }
 
-function F(e, t) {
+function G(e, t) {
   let [n, s] = a.useState(!1), [l, i] = a.useState(!1), r = a.useCallback(t => {
     var n, a;
     let l = null !== (a = null === (n = (0, m.eventOwnerDocument)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;

@@ -11,8 +11,8 @@ var i, a, l, s, o, r, d, u, c = n("512722"),
   v = n("158979"),
   y = n("181912"),
   O = n("194295"),
-  T = n("998033"),
-  C = n("181364"),
+  C = n("998033"),
+  T = n("181364"),
   N = n("24313"),
   I = n("435064"),
   _ = n("668761"),
@@ -143,7 +143,7 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
           return (0, A.default)(e);
         case W.OverlayNudgeTypes.NEWS:
         default:
-          return (0, C.default)(e)
+          return (0, T.default)(e)
       }
     }(t);
     null != n && et(n, {
@@ -196,7 +196,7 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
     }
     if ((!V.default.isInstanceUILocked() || V.default.isPinned(H.OverlayWidgets.TEXT)) && a === b.default.getChannelId() || V.default.getTextChatNotificationMode() === H.OverlayNotificationTextChatTypes.DISABLED || P.default.disableNotifications || !(0, B.shouldNotify)(l, a)) return !1;
     let r = !M.default.isSoundDisabled(w.MESSAGE_SOUND);
-    et((0, T.default)(s, l, o, r), {
+    et((0, C.default)(s, l, o, r), {
       type: 1,
       channelId: s.id,
       messageType: l.type

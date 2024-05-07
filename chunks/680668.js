@@ -43,8 +43,8 @@ function p(e) {
     j = null != y,
     b = null != y && y.isGuildVocal(),
     B = null != y && y.isGuildStageVoice(),
-    G = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, a.GuildInviteFlags.IS_GUEST_INVITE),
-    F = null !== (p = null == g ? void 0 : g.hasFeature(m.GuildFeatures.HUB)) && void 0 !== p && p;
+    F = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, a.GuildInviteFlags.IS_GUEST_INVITE),
+    G = null !== (p = null == g ? void 0 : g.hasFeature(m.GuildFeatures.HUB)) && void 0 !== p && p;
   if (null == g) {
     if (null == M.guild) return (0, s.jsx)(_.default, {});
     g = f.fromInviteGuild(M.guild);
@@ -55,8 +55,8 @@ function p(e) {
     w = (0, E.getHeaderTextForInvite)({
       isVoiceChannel: b,
       isOwnInvite: O,
-      isGuest: G,
-      isHubGuild: F,
+      isGuest: F,
+      isHubGuild: G,
       isStage: B,
       isStream: !1
     });
@@ -72,7 +72,7 @@ function p(e) {
         disableBoostClick: !0
       })
     })]
-  }), G && (S = (0, s.jsx)(l.TooltipContainer, {
+  }), F && (S = (0, s.jsx)(l.TooltipContainer, {
     className: I.tooltipContainer,
     text: T.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
     children: (0, s.jsx)(u.default, {

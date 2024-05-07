@@ -39,12 +39,12 @@ function N(e) {
   } = (0, I.useUserProfileThemeContext)(), h = (0, c.default)(t.id, N), {
     avatarSrc: p,
     eventHandlers: R,
-    avatarDecorationSrc: j
+    avatarDecorationSrc: M
   } = (0, f.default)({
     user: t,
     guildId: null == s ? void 0 : s.guildId,
     size: _.AvatarSizes.SIZE_120
-  }), [M, P] = (0, a.useStateFromStoresArray)([u.default], () => {
+  }), [P, j] = (0, a.useStateFromStoresArray)([u.default], () => {
     let e = u.default.isMobileOnline(t.id);
     return (0, o.shouldDisableUserPresenceInChannel)(t, U) ? [T.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [T.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
   });
@@ -60,13 +60,13 @@ function N(e) {
         ...R,
         children: [(0, l.jsx)(A, {
           src: p,
-          avatarDecoration: j,
+          avatarDecoration: M,
           size: _.AvatarSizes.SIZE_120,
           className: x.avatar,
-          status: M,
+          status: P,
           statusBackdropColor: (0, n.getStatusBackdropColor)(C),
           "aria-label": t.username,
-          isMobile: P,
+          isMobile: j,
           statusTooltip: !0
         }), (0, l.jsx)("div", {
           className: x.buttons,

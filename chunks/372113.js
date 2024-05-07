@@ -64,17 +64,17 @@ t.default = e => {
     isFocused: j,
     isQuestExpired: b,
     isExpanded: B,
-    isAnimating: G
-  } = e, F = (null === (t = P.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, k = (null === (n = P.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, w = (0, N.hasQuestCollectibleRewards)(P.config), H = (null === (a = P.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, V = B || G, Y = k && !H && y !== h.QuestContent.QUESTS_EMBED, K = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), W = x(F, k, H, w), z = k ? v.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : v.default.Messages.QUESTS_ACCEPT_TOOLTIP, Q = (0, A.useHandleClaimQuestsReward)({
+    isAnimating: F
+  } = e, G = (null === (t = P.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, k = (null === (n = P.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, w = (0, N.hasQuestCollectibleRewards)(P.config), H = (null === (a = P.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, V = B || F, Y = k && !H && y !== h.QuestContent.QUESTS_EMBED, K = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), W = x(G, k, H, w), z = k ? v.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : v.default.Messages.QUESTS_ACCEPT_TOOLTIP, Q = (0, A.useHandleClaimQuestsReward)({
     quest: P,
     location: y
-  }), q = k && !F, X = (0, i.useStateFromStores)([p.default], () => p.default.isEnrolling(P.id)), Z = () => {
-    if (!k && !F) return (0, T.enrollInQuest)(P.id, {
+  }), q = k && !G, X = (0, i.useStateFromStores)([p.default], () => p.default.isEnrolling(P.id)), Z = () => {
+    if (!k && !G) return (0, T.enrollInQuest)(P.id, {
       questContent: y,
       questContentCTA: m.QuestContentCTA.ACCEPT_QUEST
     });
     Q()
-  }, J = (0, i.useStateFromStores)([c.default], () => c.default.locale), $ = y === h.QuestContent.QUESTS_EMBED, ee = (0, g.isQuestCardInGiftInventory)(y), et = ee && w, en = b && !F, es = (0, s.jsx)(C.default, {
+  }, J = (0, i.useStateFromStores)([c.default], () => c.default.locale), $ = y === h.QuestContent.QUESTS_EMBED, ee = (0, g.isQuestCardInGiftInventory)(y), et = ee && w, en = b && !G, es = (0, s.jsx)(C.default, {
     autoplay: j,
     className: l()(O.gridImg, {
       [O.questRewardGiftInventory]: ee && "lg" === U,
@@ -192,11 +192,11 @@ t.default = e => {
           })
         },
         children: v.default.Messages.QUESTS_LEARN_MORE_V2
-      }), (!b || F) && (0, s.jsx)(o.Tooltip, {
+      }), (!b || G) && (0, s.jsx)(o.Tooltip, {
         text: z,
         tooltipContentClassName: O.ctaTooltipCopy,
-        shouldShow: !H && !F,
-        children: e => F && !K ? (0, s.jsx)(f.default, {
+        shouldShow: !H && !G,
+        children: e => G && !K ? (0, s.jsx)(f.default, {
           ...e,
           wrapperClassName: O.ctaButtonWrapper,
           color: o.ButtonColors.BRAND,
@@ -216,7 +216,7 @@ t.default = e => {
       }, z)]
     }), Y && (0, s.jsx)(S.default, {
       className: O.gridProgressBar,
-      color: F ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
+      color: G ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
       quest: P,
       isInventory: ee
     })]

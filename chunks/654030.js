@@ -35,7 +35,7 @@ var s, a = n("735250"),
   b = n("981631"),
   B = n("701488");
 
-function G(e, t, n) {
+function F(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -43,7 +43,7 @@ function G(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let F = {
+let G = {
   spotify: "Spotify"
 };
 class k extends(s = l.PureComponent) {
@@ -88,9 +88,9 @@ class k extends(s = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), G(this, "state", {
+    super(...e), F(this, "state", {
       sending: !1
-    }), G(this, "handleJoin", () => {
+    }), F(this, "handleJoin", () => {
       let {
         activity: e,
         analyticsLocations: t,
@@ -116,7 +116,7 @@ class k extends(s = l.PureComponent) {
           analyticsLocations: t
         })
       }
-    }), G(this, "handleInvite", async () => {
+    }), F(this, "handleInvite", async () => {
       let {
         activity: e,
         channelId: t
@@ -135,18 +135,18 @@ class k extends(s = l.PureComponent) {
           sending: !1
         })
       }
-    }), G(this, "handleSync", () => {
+    }), F(this, "handleSync", () => {
       let {
         activity: e,
         userId: t
       } = this.props;
       null != e && null != t && d.sync(e, t)
-    }), G(this, "handleDownloadApp", () => {
+    }), F(this, "handleDownloadApp", () => {
       (0, r.openModal)(e => (0, a.jsx)(m.default, {
         source: "Game Invite",
         ...e
       }))
-    }), G(this, "renderUserPopout", (e, t) => {
+    }), F(this, "renderUserPopout", (e, t) => {
       let {
         channelId: n,
         guildId: s,
@@ -162,7 +162,7 @@ class k extends(s = l.PureComponent) {
         messageId: null == l ? void 0 : l.id,
         newAnalyticsLocations: i
       })
-    }), G(this, "renderSpotifyJoinButton", e => {
+    }), F(this, "renderSpotifyJoinButton", e => {
       let {
         channelId: t,
         guildId: n
@@ -173,7 +173,7 @@ class k extends(s = l.PureComponent) {
         source: "Invite Embed",
         ...e
       })
-    }), G(this, "renderCustomButton", e => {
+    }), F(this, "renderCustomButton", e => {
       let {
         application: t
       } = this.props;
@@ -182,7 +182,7 @@ class k extends(s = l.PureComponent) {
         source: b.AnalyticsLocations.MESSAGE_EMBED,
         application: t
       })
-    }), G(this, "renderEmbed", () => {
+    }), F(this, "renderEmbed", () => {
       let e;
       let {
         activity: t,
@@ -205,7 +205,7 @@ class k extends(s = l.PureComponent) {
       if (null != l) e = l.name;
       else if (null != n) {
         let [t] = n.split(":");
-        e = F[t]
+        e = G[t]
       }
       return (0, a.jsx)(D.default, {
         activity: t,
@@ -241,7 +241,7 @@ class k extends(s = l.PureComponent) {
     })
   }
 }
-G(k, "defaultProps", {
+F(k, "defaultProps", {
   isPreview: !1
 }), t.default = i.default.connectStores([p.default, g.default, v.default, R.default, T.default, L.default, A.default, x.default, O.default, M.default], e => {
   let {

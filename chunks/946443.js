@@ -89,9 +89,9 @@ function v(e) {
     E.default.unsubscribe("CONNECTION_OPEN", v)
   }), [v]);
   let B = (0, d.useStateFromStores)([_.default], () => _.default.messageGroupSpacing),
-    G = (0, m.default)("unreads", L);
+    F = (0, m.default)("unreads", L);
   if (0 === U.length) {
-    var F;
+    var G;
     return (0, s.jsxs)("div", {
       className: R.container,
       children: [(0, s.jsx)(S.default, {
@@ -102,7 +102,7 @@ function v(e) {
       }), (0, s.jsx)(N.default, {
         Icon: T.default,
         header: M.default.Messages.UNREADS_EMPTY_STATE_HEADER,
-        tip: (null === (F = o().os) || void 0 === F ? void 0 : F.family) === "OS X" ? M.default.Messages.UNREADS_EMPTY_STATE_TIP_MAC : M.default.Messages.UNREADS_EMPTY_STATE_TIP
+        tip: (null === (G = o().os) || void 0 === G ? void 0 : G.family) === "OS X" ? M.default.Messages.UNREADS_EMPTY_STATE_TIP_MAC : M.default.Messages.UNREADS_EMPTY_STATE_TIP
       })]
     })
   }
@@ -119,7 +119,7 @@ function v(e) {
         onClick: b
       })
     }), (0, s.jsx)(u.ListNavigatorProvider, {
-      navigator: G,
+      navigator: F,
       children: (0, s.jsx)(u.ListNavigatorContainer, {
         children: e => {
           let {

@@ -54,7 +54,7 @@ let E = e => e.stopPropagation(),
     children: t
   });
 (i = a || (a = {})).PRIMARY = "PRIMARY", i.BRAND = "BRAND", i.DANGER = "DANGER";
-class T extends(l = o.PureComponent) {
+class C extends(l = o.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     let {
       expand: n
@@ -265,9 +265,9 @@ class T extends(l = o.PureComponent) {
     }
   }
 }
-m(T, "ColorSchemes", a), m(T, "defaultProps", {
+m(C, "ColorSchemes", a), m(C, "defaultProps", {
   maxBodyLines: void 0,
   colorScheme: "PRIMARY",
   expand: !1,
   disabled: !1
-}), t.default = T
+}), t.default = C

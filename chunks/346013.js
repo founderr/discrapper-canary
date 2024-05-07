@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return G
   }
 }), n("47120");
 var s = n("735250"),
@@ -39,17 +39,17 @@ var s = n("735250"),
   j = n("959517"),
   b = n("689938"),
   B = n("876498"),
-  G = n("527455");
+  F = n("527455");
 
-function F(e) {
+function G(e) {
   var t, n, l;
   let {
     embedUrl: r,
-    message: F,
+    message: G,
     channel: k
-  } = e, w = (0, y.useMediaPostEmbedData)(r, F), {
+  } = e, w = (0, y.useMediaPostEmbedData)(r, G), {
     setPopout: H
-  } = (0, S.default)(F.id, j.DEFAULT_POPOUTS), V = (0, N.useContextMenuMessage)(F, k, H, !0), Y = g.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, q] = a.useState((null == w ? void 0 : w.coverImage) == null), X = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), Z = (0, c.useStateFromStores)([M.default, R.default], () => {
+  } = (0, S.default)(G.id, j.DEFAULT_POPOUTS), V = (0, N.useContextMenuMessage)(G, k, H, !0), Y = g.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, q] = a.useState((null == w ? void 0 : w.coverImage) == null), X = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), Z = (0, c.useStateFromStores)([M.default, R.default], () => {
     var e;
     return M.default.isMember(null == w ? void 0 : w.guildId, null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
   }, [w]), [J, $] = (0, c.useStateFromStoresArray)([M.default], () => {
@@ -82,7 +82,7 @@ function F(e) {
       userId: w.authorId,
       guildId: w.guildId,
       channelId: k.id,
-      messageId: F.id,
+      messageId: G.id,
       roleId: $,
       newAnalyticsLocations: t
     })),
@@ -104,7 +104,7 @@ function F(e) {
       onMouseEnter: es,
       onMouseLeave: ea,
       children: [!Q && (!0 === w.shouldShowBlurredThumbnailImage ? (0, s.jsx)("img", {
-        src: G,
+        src: F,
         alt: b.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         className: i()(B.thumbnail, {
           [B.spoiler]: w.shouldSpoiler

@@ -39,11 +39,11 @@ function v(e) {
     analyticsLocations: D
   } = (0, m.default)(_.default.ACTIVITY_INSTANCE_EMBED), P = (0, r.useAnalyticsContext)(), y = (0, f.default)(), U = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(v)), j = (null == U ? void 0 : null === (t = U.isThread) || void 0 === t ? void 0 : t.call(U)) ? null == U ? void 0 : U.parent_id : v, b = (0, l.useStateFromStores)([I.default], () => I.default.getId()), {
     embeddedActivity: B,
-    currentEmbeddedActivity: G
+    currentEmbeddedActivity: F
   } = (0, l.useStateFromStoresObject)([o.default], () => ({
     embeddedActivity: o.default.getEmbeddedActivitiesForChannel(null != j ? j : "").find(e => e.applicationId === n.id),
     currentEmbeddedActivity: o.default.getCurrentEmbeddedActivity()
-  })), F = (0, l.useStateFromStoresArray)([N.default], () => {
+  })), G = (0, l.useStateFromStoresArray)([N.default], () => {
     var e;
     return Array.from(null !== (e = null == B ? void 0 : B.userIds) && void 0 !== e ? e : []).map(e => N.default.getUser(e)).filter(C.isNotNullish)
   }), k = (0, l.useStateFromStores)([h.default], () => {
@@ -60,7 +60,7 @@ function v(e) {
   }), V = null == B, Y = (0, A.useJoinOrStartButtonState)({
     embeddedActivity: B,
     joinability: H,
-    currentEmbeddedActivity: G,
+    currentEmbeddedActivity: F,
     channel: U
   }), K = async () => {
     L(!0);
@@ -125,7 +125,7 @@ function v(e) {
           }
         }), !V && (0, s.jsx)(S.default, {
           guildId: O,
-          users: F,
+          users: G,
           max: 4,
           size: S.Sizes.SIZE_32
         })]

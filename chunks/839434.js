@@ -22,8 +22,8 @@ var i, a = n("735250"),
   v = n("594190"),
   y = n("569545"),
   O = n("914923"),
-  T = n("165393"),
-  C = n("989941"),
+  C = n("165393"),
+  T = n("989941"),
   N = n("552282"),
   I = n("565799"),
   _ = n("501655"),
@@ -90,10 +90,10 @@ function ed(e) {
     showKeybindIndicators: S
   } = ee.default.useExperiment({
     location: "overlay_voice_widget"
-  }), v = (0, r.useStateFromStores)([V.default], () => V.default.showKeybindIndicators), y = (0, r.useStateFromStores)([L.default], () => L.default.getId()), O = (0, r.useStateFromStores)([b.default], () => b.default.isLocalMute(i.id)), T = (0, r.useStateFromStores)([R.default], () => R.default.getCurrentUserActiveStream()), C = (0, r.useStateFromStoresArray)([R.default], () => null != T ? R.default.getViewerIds(T) : []), N = (0, m.default)({
+  }), v = (0, r.useStateFromStores)([V.default], () => V.default.showKeybindIndicators), y = (0, r.useStateFromStores)([L.default], () => L.default.getId()), O = (0, r.useStateFromStores)([b.default], () => b.default.isLocalMute(i.id)), C = (0, r.useStateFromStores)([R.default], () => R.default.getCurrentUserActiveStream()), T = (0, r.useStateFromStoresArray)([R.default], () => null != C ? R.default.getViewerIds(C) : []), N = (0, m.default)({
     userId: i.id,
     context: p
-  }), I = (0, r.useStateFromStores)([P.default], () => P.default.isPrioritySpeaker(i.id, p)), _ = (0, r.useStateFromStores)([R.default], () => null != R.default.getStreamForUser(i.id, g)), A = l.useMemo(() => null != T && T.ownerId !== i.id && C.includes(i.id), [T, i.id, C]);
+  }), I = (0, r.useStateFromStores)([P.default], () => P.default.isPrioritySpeaker(i.id, p)), _ = (0, r.useStateFromStores)([R.default], () => null != R.default.getStreamForUser(i.id, g)), A = l.useMemo(() => null != C && C.ownerId !== i.id && T.includes(i.id), [C, i.id, T]);
   if (u === ea.OverlayDisplayUsers.ONLY_WHILE_SPEAKING && n && !N) return null;
   let x = i.id === y,
     {
@@ -265,7 +265,7 @@ class eu extends(i = l.PureComponent) {
           children: [(null == d ? void 0 : d.id) != null && d.id === (null == s ? void 0 : s.id) ? (0, a.jsx)(B.default, {
             className: eo.gameIcon,
             game: s
-          }) : (0, a.jsx)(T.default, {
+          }) : (0, a.jsx)(C.default, {
             title: f
           }), (0, a.jsxs)(U.default, {
             direction: U.default.Direction.VERTICAL,
@@ -435,12 +435,12 @@ function ec(e) {
     o = (0, r.useStateFromStores)([R.default], () => R.default.getStreamerActiveStreamMetadata()),
     d = (0, r.useStateFromStores)([v.default, k.default, D.default], () => {
       var e;
-      let t = (0, C.default)(v.default, k.default);
+      let t = (0, T.default)(v.default, k.default);
       return null != t ? null === (e = D.default.getGameByGameData(t)) || void 0 === e ? void 0 : e.id : null
     }),
     u = (0, E.useGetOrFetchApplication)(d),
     c = (0, r.useStateFromStoresObject)([v.default, k.default, R.default, V.default], () => {
-      let e = (0, C.default)(v.default, k.default),
+      let e = (0, T.default)(v.default, k.default),
         t = R.default.getCurrentUserActiveStream();
       return {
         displayUserMode: V.default.getDisplayUserMode(),

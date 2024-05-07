@@ -39,8 +39,8 @@ var s = n("735250"),
   j = n("981631"),
   b = n("689938"),
   B = n("478398"),
-  G = n("483373");
-let F = {
+  F = n("483373");
+let G = {
   offset: {
     left: 4,
     right: -12
@@ -112,7 +112,7 @@ function w(e) {
   })) : (t = "text-danger", w = b.default.Messages.MESSAGE_REMINDERS_OVERDUE.format({
     duration: d().duration(Date.now() - l.dueAt.getTime(), "millisecond").humanize()
   }))), (0, s.jsxs)("div", {
-    className: G.container,
+    className: F.container,
     children: [(0, s.jsxs)("div", {
       className: B.messageHeader,
       children: [(0, s.jsxs)("div", {
@@ -176,16 +176,16 @@ function w(e) {
         })]
       })]
     }), (0, s.jsxs)("div", {
-      className: i()(G.messageContainer, B.unloadedMessage, {
+      className: i()(F.messageContainer, B.unloadedMessage, {
         [B.disabledMessage]: r
       }),
       children: [(0, s.jsx)(A.default, {
         message: f,
         channel: N,
-        className: G.message,
+        className: F.message,
         compact: M.MessageDisplayCompact.getSetting(),
         animateAvatar: !1,
-        focusProps: F,
+        focusProps: G,
         trackAnnouncementViews: !0
       }, f.id), (0, s.jsxs)("div", {
         className: B.actions,

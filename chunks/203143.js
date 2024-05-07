@@ -154,7 +154,7 @@ async function B(e) {
   });
   null != f && await f
 }
-async function G(e) {
+async function F(e) {
   let {
     channelId: t,
     messageId: n
@@ -214,7 +214,7 @@ async function G(e) {
     })
   }
 }
-async function F(e) {
+async function G(e) {
   let {
     channelId: t,
     messageId: n
@@ -237,7 +237,7 @@ async function F(e) {
         editing: !1,
         showResults: null !== (n = null == e ? void 0 : e.showResults) && void 0 !== n && n
       }
-    }), await G({
+    }), await F({
       channelId: t,
       messageId: n
     })
@@ -251,13 +251,13 @@ async function k(e) {
   } = e;
   switch (s) {
     case "submit":
-      await G({
+      await F({
         channelId: t,
         messageId: n
       });
       break;
     case "remove":
-      await F({
+      await G({
         channelId: t,
         messageId: n
       });
@@ -466,7 +466,7 @@ t.default = {
       }), a
     })
   },
-  handlePollSubmitVote: G,
+  handlePollSubmitVote: F,
   handleUpdateVoteEditingState: j,
   handlePollActionTapped: k,
   createPoll: w,

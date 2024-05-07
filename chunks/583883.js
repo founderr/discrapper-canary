@@ -96,7 +96,7 @@ function O(e, t) {
       throw Error("getOrientedCoords: Invalid orientation: ".concat(e))
   }
 }
-class T extends(a = o.Component) {
+class C extends(a = o.Component) {
   shouldComponentUpdate(e, t) {
     return !(0, u.default)(t, this.state) || !(0, u.default)(e, this.props, ["anchor", "size", "minSize", "container"]) || !(0, u.default)(e.anchor, this.props.anchor) || !(0, u.default)(e.size, this.props.size) || !(0, u.default)(e.minSize, this.props.minSize) || !(0, u.default)(e.container, this.props.container)
   }
@@ -148,8 +148,8 @@ class T extends(a = o.Component) {
       left: S,
       bottom: null,
       right: null
-    }, a, l, g, m)), T = u ? (0, c.getAnchorCoordsFromFullCoords)(v) : O("RESIZE_SOUTH_EAST", v);
-    this.setDOMPositions(T), !p && (null != r && r(), this.setState({
+    }, a, l, g, m)), C = u ? (0, c.getAnchorCoordsFromFullCoords)(v) : O("RESIZE_SOUTH_EAST", v);
+    this.setDOMPositions(C), !p && (null != r && r(), this.setState({
       operationStarted: !0
     })), null != d && d(i, "MOVE", this.anchor, this.size)
   }
@@ -455,7 +455,7 @@ class T extends(a = o.Component) {
     }), this.anchor = S(e.anchor), this.size = E(e.size, e.minSize.width, e.minSize.height)
   }
 }
-p(T, "Operations", i), p(T, "defaultProps", {
+p(C, "Operations", i), p(C, "defaultProps", {
   snapOrientation: !0,
   minSize: {
     width: 0,
@@ -472,4 +472,4 @@ p(T, "Operations", i), p(T, "defaultProps", {
   hidden: !1,
   dragAnywhere: !0,
   active: !0
-}), t.default = T
+}), t.default = C

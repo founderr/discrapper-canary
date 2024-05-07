@@ -35,8 +35,8 @@ var s = n("735250"),
   j = n("430824"),
   b = n("496675"),
   B = n("158776"),
-  G = n("944486"),
-  F = n("594174"),
+  F = n("944486"),
+  G = n("594174"),
   k = n("979651"),
   w = n("372662"),
   H = n("113039"),
@@ -138,7 +138,7 @@ let eR = Object.freeze({
       compact: a
     } = e, {
       author: i
-    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([F.default], () => F.default.getUser(t.mentions[0]), [t]), u = em.default.getName(null, r, o), d = (0, eh.useUsernameHook)({
+    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([G.default], () => G.default.getUser(t.mentions[0]), [t]), u = em.default.getName(null, r, o), d = (0, eh.useUsernameHook)({
       user: i,
       channelId: r,
       guildId: n.guild_id,
@@ -171,7 +171,7 @@ let eR = Object.freeze({
       compact: a
     } = e, {
       author: i
-    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([F.default], () => F.default.getUser(t.mentions[0]), [t]), u = (0, eh.useUsernameHook)({
+    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([G.default], () => G.default.getUser(t.mentions[0]), [t]), u = (0, eh.useUsernameHook)({
       user: i,
       channelId: r,
       guildId: n.guild_id,
@@ -272,7 +272,7 @@ let eR = Object.freeze({
     } = e, {
       author: i
     } = t, r = t.getChannelId(), o = a.useCallback(() => {
-      if (G.default.getChannelId() !== r) {
+      if (F.default.getChannelId() !== r) {
         let e = U.default.getChannel(r);
         null != e && (0, M.transitionToGuild)(e.guild_id, e.id)
       }
@@ -442,7 +442,7 @@ let eR = Object.freeze({
       message: t,
       channel: n,
       compact: a
-    } = e, i = (0, l.useStateFromStores)([F.default], () => F.default.getCurrentUser()), r = (0, l.useStateFromStores)([j.default], () => {
+    } = e, i = (0, l.useStateFromStores)([G.default], () => G.default.getCurrentUser()), r = (0, l.useStateFromStores)([j.default], () => {
       var e, t;
       return null !== (t = null === (e = j.default.getGuild(n.getGuildId())) || void 0 === e ? void 0 : e.isOwner(i)) && void 0 !== t && t
     });

@@ -22,7 +22,7 @@ var i, a, l = n("735250"),
   y = n("257445"),
   O = n("949086");
 
-function T(e, t, n) {
+function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,7 +30,7 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(a = i || (i = {})).GENERAL = "GENERAL", a.VOICE = "VOICE", a.DEVELOPER = "DEVELOPER";
-let C = () => [{
+let T = () => [{
     value: S.OverlayAvatarSizes.LARGE,
     name: v.default.Messages.AVATAR_SIZE_OPTION_LARGE
   }, {
@@ -202,7 +202,7 @@ class A extends s.PureComponent {
         className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeAvatarSizeMode,
-          options: C(),
+          options: T(),
           value: e,
           size: r.RadioGroup.Sizes.SMALL
         })
@@ -266,13 +266,13 @@ class A extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), T(this, "state", {
+    super(...e), C(this, "state", {
       selectedSection: "GENERAL"
-    }), T(this, "handleSelectSection", e => {
+    }), C(this, "handleSelectSection", e => {
       this.setState({
         selectedSection: e
       })
-    }), T(this, "handleToggleTextChatNotifications", () => {
+    }), C(this, "handleToggleTextChatNotifications", () => {
       let {
         ENABLED: e,
         DISABLED: t

@@ -27,7 +27,7 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let T = {
+let C = {
   [y.OverlayWidgets.TEXT](e) {
     let {
       dragging: t,
@@ -83,7 +83,7 @@ let T = {
     })
   }
 };
-class C extends a.PureComponent {
+class T extends a.PureComponent {
   componentDidUpdate(e) {
     this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (o.default.track(y.AnalyticEvents.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({
       lastLayoutUpdate: null
@@ -98,7 +98,7 @@ class C extends a.PureComponent {
       state: {
         dragging: l
       }
-    } = this, s = T[e.type];
+    } = this, s = C[e.type];
     if (null == s) throw Error("OverlayLayout: Widget does not exist in WidgetMap");
     return o => s({
       id: e.id,
@@ -136,7 +136,7 @@ class C extends a.PureComponent {
       locked: a,
       isPreviewingInGame: l,
       pinned: r
-    }), T = {
+    }), C = {
       minX: 0,
       minY: 0,
       maxX: n.width,
@@ -146,7 +146,7 @@ class C extends a.PureComponent {
       id: o,
       size: p,
       anchor: g,
-      container: T,
+      container: C,
       minSize: m,
       hidden: !O,
       resizeX: S,
@@ -228,7 +228,7 @@ let N = l.default.connectStores([d.default, u.default], e => {
     isPreviewingInGame: u.default.isPreviewingInGame(),
     isActiveRegion: null != n && n.type === y.OverlayWidgets.TEXT && i.has(y.OverlayActiveRegions.TEXT_WIDGET)
   }
-})(C);
+})(T);
 
 function I(e, t) {
   return (0, i.jsx)(N, {

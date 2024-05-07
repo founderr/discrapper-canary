@@ -103,7 +103,7 @@ function p(e) {
       section: t
     } = e;
     return t === d
-  })) || void 0 === t ? void 0 : t.section) && void 0 !== s ? s : A.UserProfileSections.USER_INFO), j = a.useCallback(e => {
+  })) || void 0 === t ? void 0 : t.section) && void 0 !== s ? s : A.UserProfileSections.USER_INFO), M = a.useCallback(e => {
     E({
       action: "PRESS_SECTION",
       section: e
@@ -118,7 +118,7 @@ function p(e) {
       className: g.tabBar,
       type: "top",
       selectedItem: p,
-      onItemSelect: j,
+      onItemSelect: M,
       children: x.map(e => {
         let {
           section: t,

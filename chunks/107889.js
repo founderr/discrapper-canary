@@ -35,9 +35,9 @@ function R(e) {
     user: t,
     guildId: s,
     channelId: R,
-    messageId: j,
-    roleId: M,
-    friendToken: P,
+    messageId: M,
+    roleId: P,
+    friendToken: j,
     initialSection: y,
     autoFocusNote: O,
     transitionState: L,
@@ -50,8 +50,8 @@ function R(e) {
     userId: t.id,
     guildId: b,
     channelId: R,
-    messageId: j,
-    roleId: M
+    messageId: M,
+    roleId: P
   }), [k, w] = a.useState(b), V = (0, I.default)(t.id), H = (0, I.default)(t.id, b), Y = null == k ? V : H, {
     activity: z,
     customStatusActivity: W
@@ -76,8 +76,8 @@ function R(e) {
       userId: t.id,
       guildId: b,
       channelId: R,
-      messageId: j,
-      roleId: M,
+      messageId: M,
+      roleId: P,
       children: (0, l.jsx)(n.ModalRoot, {
         transitionState: L,
         className: p.root,
@@ -98,7 +98,7 @@ function R(e) {
               onClose: D
             }), (0, l.jsx)(_.default, {
               user: t,
-              friendToken: P
+              friendToken: j
             }), (0, l.jsx)(v.default, {
               type: "overlay",
               user: t,

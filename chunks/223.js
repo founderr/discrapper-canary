@@ -39,8 +39,8 @@ var s = n("735250"),
   j = n("51144"),
   b = n("787374"),
   B = n("981631"),
-  G = n("674563"),
-  F = n("590433"),
+  F = n("674563"),
+  G = n("590433"),
   k = n("959517"),
   w = n("689938"),
   H = n("741035");
@@ -229,7 +229,7 @@ function Q(e) {
       className: H.channelName,
       openChatWithoutConnecting: !0
     })
-  })), [l, X]), eE = (0, F.getFriendlyDurationString)(Number(en)), e_ = null != es, em = Q && null != et && (null == ea || !ea.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
+  })), [l, X]), eE = (0, G.getFriendlyDurationString)(Number(en)), e_ = null != es, em = Q && null != et && (null == ea || !ea.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
   return (0, s.jsx)("div", {
     onMouseEnter: g,
     onMouseLeave: R,
@@ -261,7 +261,7 @@ function Q(e) {
               className: H.username,
               children: w.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(M.default, {
-              type: G.BotTagTypes.SYSTEM_DM,
+              type: F.BotTagTypes.SYSTEM_DM,
               className: H.systemTag
             }), (0, s.jsx)(f.Text, {
               variant: "text-md/normal",

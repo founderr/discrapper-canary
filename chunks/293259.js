@@ -30,9 +30,9 @@ var l = s("735250"),
   h = s("652853"),
   p = s("496206"),
   R = s("228168"),
-  j = s("981631"),
-  M = s("231338"),
-  P = s("689938"),
+  M = s("981631"),
+  P = s("231338"),
+  j = s("689938"),
   y = s("370386");
 let O = r.AvatarSizes.SIZE_120,
   L = T.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
@@ -88,7 +88,7 @@ function F(e) {
         context: {
           location: "User Profile"
         },
-        type: j.RelationshipTypes.BLOCKED
+        type: M.RelationshipTypes.BLOCKED
       })
     } catch (e) {
       $()
@@ -118,7 +118,7 @@ function F(e) {
           avatarDecoration: q,
           size: O,
           className: y.avatar,
-          status: X ? M.StatusTypes.UNKNOWN : G ? M.StatusTypes.STREAMING : Y,
+          status: X ? P.StatusTypes.UNKNOWN : G ? P.StatusTypes.STREAMING : Y,
           statusBackdropColor: (0, r.getStatusBackdropColor)(Z),
           isMobile: H,
           statusTooltip: !0,
@@ -127,7 +127,7 @@ function F(e) {
       }), (0, l.jsxs)("div", {
         className: y.headerTop,
         children: [(null == z ? void 0 : z.profileFetchFailed) && !T.isClyde() ? (0, l.jsx)(r.Tooltip, {
-          text: P.default.Messages.USER_PROFILE_LOAD_ERROR,
+          text: j.default.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
           color: r.TooltipColors.NESTED,
           children: e => (0, l.jsx)(_.default, {
