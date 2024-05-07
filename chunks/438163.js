@@ -35,13 +35,8 @@ function c(e) {
         m(N.current)
       }, 200)
     }, [N, m]), !A) return null;
-  let p = () => f ? h ? (0, i.jsx)(l.ActivityEmoji, {
-      className: _.statusEmojiInline,
-      emoji: T,
-      animate: a,
-      hideTooltip: c
-    }) : (0, i.jsx)(l.ActivityEmoji, {
-      className: _.statusEmojiOnly,
+  let p = () => f ? (0, i.jsx)(l.ActivityEmoji, {
+      className: h ? _.statusEmojiInline : _.statusEmojiOnly,
       emoji: T,
       animate: a,
       hideTooltip: c
@@ -51,21 +46,12 @@ function c(e) {
       className: _.statusText,
       children: S
     }) : null,
-    R = () => {
-      let e = s()({
-        [_.content]: f && !h || E < 2,
-        [_.contentOverflow]: E >= 2
-      });
-      return (0, i.jsxs)("div", {
-        className: e,
-        ref: N,
-        children: [p(), O()]
-      })
-    },
-    C = s()(_.positionStyle, {
-      [_.biteSize]: n === d.UserProfileTypes.BITE_SIZE,
-      [_.fullSize]: n === d.UserProfileTypes.FULL_SIZE
+    R = () => (0, i.jsxs)("div", {
+      className: _.contentOverflow,
+      ref: N,
+      children: [p(), O()]
     }),
+    C = n === d.UserProfileTypes.BITE_SIZE ? _.biteSize : _.fullSize,
     g = s()(_.statusBubbleOuter, {
       [_.statusBubbleShape]: E <= 1 && !h && f || E > 1,
       [_.statusBubbleSingleLineWithTextShape]: 1 === E && h,
@@ -80,24 +66,9 @@ function c(e) {
       [_.statusBubbleWithTextMinWidth]: h,
       [_.statusBubbleCopyStatusCursor]: A
     });
-  if (n === d.UserProfileTypes.FULL_SIZE) return (0, i.jsx)("div", {
-    className: C,
-    children: (0, i.jsx)("div", {
-      className: g,
-      children: (0, i.jsx)("span", {
-        className: L,
-        children: R()
-      })
-    })
-  });
-  let v = s()({
-    [_.statusBubbleEmojiOnlyBottomMargin]: f && !h,
-    [_.statusBubbleMultiLineBottomMargin]: E > 1 && h
-  });
-  return (0, i.jsx)("div", {
-    className: v,
-    children: (0, i.jsx)("div", {
-      className: C,
+  return (0, i.jsxs)("div", {
+    children: [n === d.UserProfileTypes.BITE_SIZE ? (0, i.jsx)("div", {
+      className: s()(_.invisibleContainer, C),
       children: (0, i.jsx)("div", {
         className: g,
         children: (0, i.jsx)("span", {
@@ -105,6 +76,15 @@ function c(e) {
           children: R()
         })
       })
-    })
+    }) : null, (0, i.jsx)("div", {
+      className: s()(_.visibleContainer, C),
+      children: (0, i.jsx)("div", {
+        className: g,
+        children: (0, i.jsx)("span", {
+          className: L,
+          children: R()
+        })
+      })
+    })]
   })
 }
