@@ -14,15 +14,13 @@ var r = n("120356"),
 function l(e) {
   let {
     profileType: t,
-    isHovering: n,
-    children: r
+    children: n
   } = e;
   return (0, i.jsx)("div", {
     className: a()(o.wrapper, {
       [o.biteSize]: t === s.UserProfileTypes.BITE_SIZE,
-      [o.fullSize]: t === s.UserProfileTypes.FULL_SIZE,
-      [o.hovering]: n
+      [o.fullSize]: t === s.UserProfileTypes.FULL_SIZE
     }),
-    children: r
+    children: n
   })
 }

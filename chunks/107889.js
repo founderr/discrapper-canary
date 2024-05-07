@@ -88,7 +88,6 @@ function h(e) {
           ref: z,
           children: [(0, l.jsxs)(E.default, {
             profileType: N.UserProfileTypes.FULL_SIZE,
-            isHovering: W,
             children: [(0, l.jsx)(_.default, {
               user: t,
               guildId: F,

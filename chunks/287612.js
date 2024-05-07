@@ -22,7 +22,7 @@ function I(e) {
     user: t,
     onOpenProfile: n
   } = e, I = (0, l.useMutualFriends)(t), T = (0, u.useMutualGuilds)(t), f = null != I && I.length > 0, S = null != T && T.length > 0, h = f && S ? "text-xs/normal" : "text-sm/normal";
-  return (0, i.jsxs)("div", {
+  return f || S ? (0, i.jsxs)("div", {
     className: E.mutuals,
     children: [f ? (0, i.jsxs)(r.Clickable, {
       className: E.section,
@@ -76,5 +76,5 @@ function I(e) {
         })
       })]
     }) : null]
-  })
+  }) : null
 }

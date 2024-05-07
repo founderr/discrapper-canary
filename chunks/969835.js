@@ -89,7 +89,6 @@ function v(e) {
           profileType: C.UserProfileTypes.BITE_SIZE,
           children: [(0, i.jsxs)(S.default, {
             profileType: C.UserProfileTypes.BITE_SIZE,
-            isHovering: H,
             children: [(0, i.jsx)(A.default, {
               user: t,
               guildId: n,

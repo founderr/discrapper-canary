@@ -33,14 +33,15 @@ async function m(e) {
     channelId: t,
     limit: 1
   });
-  let n = _.default.getLastMessage(t),
-    i = (0, l.default)({
-      ...n,
-      channelId: t,
-      messageReference: void 0,
-      poll: void 0,
-      changelogId: n.changelogId
-    });
+  let n = _.default.getLastMessage(t);
+  if (null == n) return;
+  let i = (0, l.default)({
+    ...n,
+    channelId: t,
+    messageReference: void 0,
+    poll: void 0,
+    changelogId: n.changelogId
+  });
   s.default.receiveMessage(t, {
     ...i,
     state: h.MessageStates.SENT,
