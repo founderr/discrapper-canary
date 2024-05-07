@@ -60,6 +60,7 @@ function _(e) {
           children: (0, i.jsx)(s.Text, {
             variant: h,
             className: d.pronouns,
+            color: "header-primary",
             children: I
           })
         })]

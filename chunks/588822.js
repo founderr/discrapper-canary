@@ -27,6 +27,7 @@ function _(e) {
     children: (0, i.jsx)(o.Text, {
       variant: "text-sm/normal",
       lineClamp: E ? c : void 0,
+      color: "header-primary",
       children: (0, i.jsx)(u.MessagesInteractionContext.Provider, {
         value: {
           disableAnimations: a && !_,
