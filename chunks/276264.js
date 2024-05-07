@@ -46,8 +46,8 @@ t.default = function(e) {
     user: b,
     currentUser: G,
     activities: w,
-    applicationStream: B,
-    status: k,
+    applicationStream: k,
+    status: B,
     shouldAnimateStatus: V = !1,
     isMobile: x,
     premiumSince: F,
@@ -102,7 +102,7 @@ t.default = function(e) {
         textClassName: D.activityText,
         emojiClassName: D.activityEmoji,
         activities: w,
-        applicationStream: B,
+        applicationStream: k,
         animate: el,
         hideEmoji: !t,
         hideTooltip: !0,
@@ -143,7 +143,7 @@ t.default = function(e) {
     }),
     ev = (e, t) => {
       let n = V ? l.AnimatedAvatar : l.Avatar,
-        r = (0, u.default)(w) ? C.StatusTypes.STREAMING : k;
+        r = (0, u.default)(w) ? C.StatusTypes.STREAMING : B;
       return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(n, {
           ...eI,
@@ -177,7 +177,7 @@ t.default = function(e) {
         profileViewedAnalytics: eT
       })]
     }),
-    eM = k === C.StatusTypes.OFFLINE;
+    eM = B === C.StatusTypes.OFFLINE;
   return null == b ? (0, i.jsx)(h.default, {
     avatarSize: l.AvatarSizes.SIZE_32,
     className: D.placeholder
@@ -186,7 +186,7 @@ t.default = function(e) {
       var t, n;
       return (0, i.jsx)(I.default, {
         quest: eh,
-        applicationStream: B,
+        applicationStream: k,
         width: null !== (n = null === (t = eo.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
         ...e,
         closePopout: () => eS(!0)

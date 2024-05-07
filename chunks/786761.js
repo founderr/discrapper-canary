@@ -45,8 +45,8 @@ function N(e) {
     reactions: D,
     interactionData: M
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, y = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], P = null !== (l = e.mention_roles) && void 0 !== l ? l : [], U = null !== (T = e.mention_channels) && void 0 !== T ? T : [], b = e.message_reference, G = new Date(e.timestamp), w = e.type === A.MessageTypes.THREAD_CREATED ? [] : (0, a.default)(e.content);
-  let B = null == (p = e).author ? m : null != p.webhook_id ? new _.default(p.author) : null !== (O = I.default.getUser(p.author.id)) && void 0 !== O ? O : new _.default(p.author),
-    k = null == e ? void 0 : e.gift_info,
+  let k = null == (p = e).author ? m : null != p.webhook_id ? new _.default(p.author) : null !== (O = I.default.getUser(p.author.id)) && void 0 !== O ? O : new _.default(p.author),
+    B = null == e ? void 0 : e.gift_info,
     V = null != e.interaction ? u.default.createFromServer(e.interaction) : null,
     x = e.type === A.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
     F = e.type === A.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
@@ -55,14 +55,14 @@ function N(e) {
     id: e.id,
     channel_id: e.channel_id,
     type: A.MessageTypes.DEFAULT,
-    author: B,
+    author: k,
     timestamp: G,
     isUnsupported: !0
   }) : new d.default({
     ...e,
-    author: B,
+    author: k,
     webhookId: e.webhook_id,
-    blocked: E.default.isBlocked(B.id) || null != x && E.default.isBlocked(x),
+    blocked: E.default.isBlocked(k.id) || null != x && E.default.isBlocked(x),
     timestamp: G,
     editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
     mentionEveryone: e.mention_everyone,
@@ -94,7 +94,7 @@ function N(e) {
     roleSubscriptionData: e.role_subscription_data,
     purchaseNotification: e.purchase_notification,
     poll: null == e.poll ? void 0 : (0, o.default)(e.poll),
-    giftInfo: null == k ? void 0 : k
+    giftInfo: null == B ? void 0 : B
   })
 }
 

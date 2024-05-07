@@ -39,8 +39,8 @@ t.default = function(e) {
     onSubscribeModalClose: b,
     premiumModalAnalyticsLocation: G,
     showIcon: w = !0,
-    disableShine: B,
-    applicationId: k,
+    disableShine: k,
+    applicationId: B,
     giftMessage: V,
     overrideDisabledButtonText: x,
     shinyButtonClassName: F,
@@ -132,7 +132,7 @@ t.default = function(e) {
       onSubscribeModalClose: b,
       analyticsLocations: K,
       premiumModalAnalyticsLocation: G,
-      applicationId: k,
+      applicationId: B,
       giftMessage: V
     })
   };
@@ -201,7 +201,7 @@ t.default = function(e) {
       size: g,
       className: F,
       wrapperClassName: L,
-      pauseAnimation: !j || B,
+      pauseAnimation: !j || k,
       ...H,
       ...e,
       children: [w && (0, i.jsx)(A.default, {

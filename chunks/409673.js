@@ -88,8 +88,8 @@ t.default = r.forwardRef(function(e, t) {
     className: b,
     focused: G,
     forceSecondaryActions: w = !1,
-    interactive: B = !0,
-    enableSecondaryActions: k = !1,
+    interactive: k = !0,
+    enableSecondaryActions: B = !1,
     suppressPlaySound: V,
     onMouseEnter: x,
     onSelectItem: F,
@@ -128,7 +128,7 @@ t.default = r.forwardRef(function(e, t) {
     eu = (0, o.useListItem)(el),
     ed = null != z || null != Z,
     e_ = !(0, R.canUseSoundboardSound)(X, P, U),
-    ec = w || k && !e_;
+    ec = w || B && !e_;
 
   function eE(e) {
     e.stopPropagation(), e.currentTarget.blur(), eo ? (0, N.removeFavoriteSound)(W) : (0, N.addFavoriteSound)(W)
@@ -136,7 +136,7 @@ t.default = r.forwardRef(function(e, t) {
 
   function eI() {
     return (0, i.jsx)(M, {
-      disabled: !B && !w,
+      disabled: !k && !w,
       onClick: eE,
       text: v.default.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
         emojiName: P.emojiName,
@@ -191,11 +191,11 @@ t.default = r.forwardRef(function(e, t) {
       className: s()(b, D.soundButton, {
         [D.playing]: $,
         [D.hoverActiveBackground]: V,
-        [D.soundButtonInteractive]: B,
-        [D.buttonDisabled]: !B && !w,
+        [D.soundButtonInteractive]: k,
+        [D.buttonDisabled]: !k && !w,
         [D.premiumDisabled]: e_ && !w,
-        [D.buttonDisabledSecondaryActionsEnabled]: !B && w,
-        [D.focused]: B && G
+        [D.buttonDisabledSecondaryActionsEnabled]: !k && w,
+        [D.focused]: k && G
       }),
       onClick: function() {
         if (es && !ei && (er.current = Math.min(er.current + .01, .1), Math.random() < er.current && ee(en.x, en.y, void 0, void 0, {
@@ -206,7 +206,7 @@ t.default = r.forwardRef(function(e, t) {
         }
         V || q(H)
       },
-      onContextMenu: k && !e_ ? Q : void 0,
+      onContextMenu: B && !e_ ? Q : void 0,
       children: [(0, i.jsxs)("div", {
         className: D.soundInfo,
         "aria-hidden": !0,
@@ -217,7 +217,7 @@ t.default = r.forwardRef(function(e, t) {
           className: D.emoji
         }), (0, i.jsx)(_.Text, {
           variant: "text-xs/medium",
-          color: B ? "header-primary" : "text-muted",
+          color: k ? "header-primary" : "text-muted",
           className: s()(D.soundName, {
             [D.hasEmoji]: ed
           }),

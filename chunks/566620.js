@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return M
   },
   sendEmbeddedActivityInvite: function() {
-    return B
+    return k
   },
   sendEmbeddedActivityInviteUser: function() {
-    return k
+    return B
   },
   startEmbeddedActivity: function() {
     return D
@@ -298,7 +298,7 @@ async function w(e) {
     }
   }
 }
-async function B(e) {
+async function k(e) {
   let {
     activityChannelId: t,
     invitedChannelId: n,
@@ -310,7 +310,7 @@ async function B(e) {
   }, r);
   null != S.default.getChannel(n) && u.default.sendInvite(n, a.code, r, null)
 }
-async function k(e) {
+async function B(e) {
   let {
     channelId: t,
     applicationId: n,

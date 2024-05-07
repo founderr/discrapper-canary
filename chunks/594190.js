@@ -117,8 +117,8 @@ let b = new S.default("RunningGameStore"),
     }],
     name: f.default.get(P.PlatformTypes.SPOTIFY).name
   }],
-  B = !0,
-  k = new Set,
+  k = !0,
+  B = new Set,
   V = [],
   x = [],
   F = [],
@@ -250,7 +250,7 @@ function eu() {
     if (null == i) return t;
     for (let r of O.default.getLaunchOptions(n.id, n.branchId)) {
       let a = "".concat(n.id, ":").concat(n.branchId);
-      !k.has(a) && (e = !0, k.add(a));
+      !B.has(a) && (e = !0, B.add(a));
       let {
         fullExecutablePath: s
       } = r, o = s.replace(/\\/g, "/").toLowerCase();
@@ -462,7 +462,7 @@ class eE extends(r = c.default.Store) {
     return null !== (n = null === (t = Y.find(t => (0, A.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
   }
   get canShowAdminWarning() {
-    return B
+    return k
   }
   isDetectionEnabled(e) {
     return ea(e)
@@ -481,7 +481,7 @@ o = "RunningGameStore", (s = "displayName") in(a = eE) ? Object.defineProperty(a
     x = e.games
   },
   PERMISSION_CLEAR_PTT_ADMIN_WARNING: function() {
-    B = !1
+    k = !1
   },
   PERMISSION_REQUEST_ELEVATED_PROCESS: function(e) {
     let {

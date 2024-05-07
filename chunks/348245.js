@@ -145,7 +145,7 @@ function b() {
         guildId: n.getGuildId(),
         channelId: n.id,
         messageId: null == e ? void 0 : null === (t = e.params) || void 0 === t ? void 0 : t.message
-      }), k(n.getGuildId(), n.id)
+      }), B(n.getGuildId(), n.id)
     }
   }
 }
@@ -164,7 +164,7 @@ function G() {
       isPreload: e,
       skipLocalFetch: t,
       logFailures: n
-    }) : n && M.log("Skipping fetch because the selected channel is not a text channel"), k(r.getGuildId(), r.id)) : n && M.log("Skipping fetch because channel is null")
+    }) : n && M.log("Skipping fetch because the selected channel is not a text channel"), B(r.getGuildId(), r.id)) : n && M.log("Skipping fetch because channel is null")
   } else n && M.log("Skipping fetch because there is no selected channel")
 }
 
@@ -180,10 +180,10 @@ function w(e) {
     channelId: n,
     messageId: i,
     jumpType: r
-  }), k(t, n)
+  }), B(t, n)
 }
 
-function B(e) {
+function k(e) {
   let {
     guildId: t,
     channelId: n
@@ -194,7 +194,7 @@ function B(e) {
   })
 }
 
-function k(e, t) {
+function B(e, t) {
   let n = S.default.getCurrentSidebarChannelId(t);
   if (null != n) y({
     guildId: e,
@@ -208,7 +208,7 @@ function V() {
     t = p.default.getGuildId();
   if (null == t || null == e) return;
   let n = S.default.getSidebarState(e);
-  (null == n ? void 0 : n.type) !== T.SidebarType.VIEW_CHANNEL && k(t, e)
+  (null == n ? void 0 : n.type) !== T.SidebarType.VIEW_CHANNEL && B(t, e)
 }
 
 function x(e) {
@@ -220,7 +220,7 @@ function x(e) {
   i === g.CURRENT_APP_CONTEXT && (y({
     guildId: t,
     channelId: n
-  }), k(t, n))
+  }), B(t, n))
 }
 
 function F(e) {
@@ -319,7 +319,7 @@ class Z extends _.default {
       APP_STATE_UPDATE: z,
       OVERLAY_INITIALIZE: b,
       CHANNEL_SELECT: w,
-      VOICE_CHANNEL_SELECT: B,
+      VOICE_CHANNEL_SELECT: k,
       THREAD_CREATE: F,
       THREAD_LIST_SYNC: () => G(),
       CHANNEL_CREATE: F,

@@ -48,7 +48,7 @@ function _(e, t, n) {
       className: P,
       style: U,
       ...b
-    } = n, G = a().useRef(null), w = a().useRef(null), [B, k] = a().useState(!1), {
+    } = n, G = a().useRef(null), w = a().useRef(null), [k, B] = a().useState(!1), {
       scrollerRef: V,
       scrollerState: x,
       getScrollerState: F
@@ -101,8 +101,8 @@ function _(e, t, n) {
       ...(0, u.getAnimatedScrollHelpers)(V, F, Q)
     }), [V, F, q, Q, J]);
     let ee = (0, r.useCallback)(e => {
-      X(1), null == G.current ? k(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
-        G.current = null, k(!1)
+      X(1), null == G.current ? B(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
+        G.current = null, B(!1)
       }, 200), null != I && I(e)
     }, [I, X]);
     return (0, i.jsx)("div", {
@@ -111,7 +111,7 @@ function _(e, t, n) {
       className: o()(P, {
         [e]: !0,
         [t]: y,
-        [d.scrolling]: B
+        [d.scrolling]: k
       }),
       style: (0, u.getMergedOrientationStyles)(U),
       ...b,

@@ -34,8 +34,8 @@ var i = n("735250"),
   b = n("445062"),
   G = n("7188"),
   w = n("199902"),
-  B = n("314897"),
-  k = n("131951"),
+  k = n("314897"),
+  B = n("131951"),
   V = n("699516"),
   x = n("594174"),
   F = n("248402"),
@@ -177,11 +177,11 @@ class eo extends r.PureComponent {
       streamId: t,
       participantOnScreen: n,
       isVideoEnabled: r
-    } = this.props, a = (0, p.computeChannelName)(e, x.default, V.default), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === B.default.getId() && r, u = this.renderStreamState(), d = null;
+    } = this.props, a = (0, p.computeChannelName)(e, x.default, V.default), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === k.default.getId() && r, u = this.renderStreamState(), d = null;
     return (null == n ? void 0 : n.type) !== ei.ParticipantTypes.ACTIVITY && (null != u ? d = u : ((null == n ? void 0 : n.type) === ei.ParticipantTypes.USER || (null == n ? void 0 : n.type) === ei.ParticipantTypes.STREAM) && (d = (0, i.jsx)(X.default, {
       paused: this.streamerPaused,
       streamId: t,
-      component: k.default.getVideoComponent(),
+      component: B.default.getVideoComponent(),
       mirror: l,
       children: (0, i.jsx)(j.default, {
         size: c.AvatarSizes.SIZE_80,
@@ -315,10 +315,10 @@ class eo extends r.PureComponent {
     })
   }
 }
-t.default = _.default.connectStores([k.default, A.default, B.default, F.default, H.default, w.default, Y.default], e => {
+t.default = _.default.connectStores([B.default, A.default, k.default, F.default, H.default, w.default, Y.default], e => {
   let {
     channel: t
-  } = e, n = F.default.getSpeaker(t.id), i = A.default.getParticipant(t.id, n), r = d()(k.default.getVideoDevices()).values().first(), a = null == r || r.disabled, s = null != i && i.type !== ei.ParticipantTypes.ACTIVITY && i.type !== ei.ParticipantTypes.HIDDEN_STREAM ? H.default.getStreamId(i.user.id, t.getGuildId(), (0, m.default)(i.type)) : null, o = !a && k.default.isVideoEnabled(), l = (0, R.default)(k.default), u = B.default.getId(), _ = w.default.getCurrentUserActiveStream(), c = (0, S.isBroadcastingInChannel)(t.id);
+  } = e, n = F.default.getSpeaker(t.id), i = A.default.getParticipant(t.id, n), r = d()(B.default.getVideoDevices()).values().first(), a = null == r || r.disabled, s = null != i && i.type !== ei.ParticipantTypes.ACTIVITY && i.type !== ei.ParticipantTypes.HIDDEN_STREAM ? H.default.getStreamId(i.user.id, t.getGuildId(), (0, m.default)(i.type)) : null, o = !a && B.default.isVideoEnabled(), l = (0, R.default)(B.default), u = k.default.getId(), _ = w.default.getCurrentUserActiveStream(), c = (0, S.isBroadcastingInChannel)(t.id);
   return {
     channel: t,
     streamId: s,

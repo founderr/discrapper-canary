@@ -431,7 +431,7 @@ function L(e) {
       isMobile: t,
       isTyping: !1
     })
-  })), B = r.useMemo(() => ({
+  })), k = r.useMemo(() => ({
     fill: U,
     ...O({
       size: S,
@@ -440,7 +440,7 @@ function L(e) {
       isTyping: c
     })
   }), [U, S, g, l, c]), {
-    avatarCutoutX: k,
+    avatarCutoutX: B,
     avatarCutoutY: V,
     avatarCutoutWidth: x,
     avatarCutoutHeight: F,
@@ -451,7 +451,7 @@ function L(e) {
     immediate: !document.hasFocus(),
     config: A,
     from: w,
-    to: B
+    to: k
   }), W = (0, I.getAvatarSize)(S), K = (0, I.getAvatarSpecs)(S), z = K.status * I.TYPING_WIDTH_RATIO, Z = K.status * I.MOBILE_HEIGHT_RATIO, X = null != g ? (K.status * I.TYPING_WIDTH_RATIO - K.status) / 2 : 0, Q = K.size - K.status - X - K.offset, q = K.size - Z - K.offset, J = K.size + Math.ceil(X);
   return (0, i.jsx)(R, {
     ...e,
@@ -476,7 +476,7 @@ function L(e) {
           fill: "white"
         }), (0, i.jsx)(o.animated.rect, {
           color: "black",
-          x: k,
+          x: B,
           y: V,
           width: x,
           height: F,

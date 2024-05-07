@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return y
   },
   captureQuestsException: function() {
-    return k
+    return B
   },
   getContextualEntrypointHeading: function() {
     return P
@@ -52,7 +52,7 @@ n.r(t), n.d(t, {
     return w
   },
   includesTarget: function() {
-    return B
+    return k
   },
   isAssetAnimated: function() {
     return x
@@ -382,11 +382,11 @@ function w(e) {
   return e.rewardsConfig.rewards.some(G)
 }
 
-function B(e, t) {
+function k(e, t) {
   return e.targetedContent.includes(t)
 }
 
-function k(e, t) {
+function B(e, t) {
   o.default.captureException(e, {
     ...t,
     tags: {

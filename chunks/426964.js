@@ -31,26 +31,26 @@ t.default = r.memo(function(e) {
     isLoading: C,
     onClose: g,
     profileViewedAnalytics: L
-  } = e, v = (0, T.useClanInfo)(null !== (n = null == R ? void 0 : R.identityGuildId) && void 0 !== n ? n : null), D = null == R ? void 0 : R.tag, M = (0, h.default)("clan_guild_profile"), y = null == R ? void 0 : R.identityGuildId, P = (0, s.useStateFromStores)([_.default], () => _.default.getId()), U = (0, s.useStateFromStores)([c.default], () => null != y ? c.default.getMember(y, P) : null, [y, P]), b = (0, s.useStateFromStores)([E.default], () => E.default.getUser(P), [P]), G = (null == U ? void 0 : U.joinedAt) != null, w = (0, S.isGuildAdoptedUserClanIdentity)(y, null == b ? void 0 : b.clan), B = null != (0, u.default)(y);
+  } = e, v = (0, T.useClanInfo)(null !== (n = null == R ? void 0 : R.identityGuildId) && void 0 !== n ? n : null), D = null == R ? void 0 : R.tag, M = (0, h.default)("clan_guild_profile"), y = null == R ? void 0 : R.identityGuildId, P = (0, s.useStateFromStores)([_.default], () => _.default.getId()), U = (0, s.useStateFromStores)([c.default], () => null != y ? c.default.getMember(y, P) : null, [y, P]), b = (0, s.useStateFromStores)([E.default], () => E.default.getUser(P), [P]), G = (null == U ? void 0 : U.joinedAt) != null, w = (0, S.isGuildAdoptedUserClanIdentity)(y, null == b ? void 0 : b.clan), k = null != (0, u.default)(y);
   r.useEffect(() => {
     null != y && (0, I.trackClanProfileViewed)({
       guildId: y,
-      hasJoinRequest: B,
+      hasJoinRequest: k,
       ...L,
       location: o.default.CLAN_GUILD_PROFILE
     })
-  }, [y, B, L]);
-  let k = r.useCallback(e => {
+  }, [y, k, L]);
+  let B = r.useCallback(e => {
       null != y && (e.stopPropagation(), e.preventDefault(), null == g || g(), (0, f.openAdoptClanIdentityModal)(y))
     }, [y, g]),
     V = r.useCallback(e => {
-      if (null != v && null != y) e.stopPropagation(), e.preventDefault(), null == g || g(), !B && (0, f.openClanApplyFlow)(y, v, {
+      if (null != v && null != y) e.stopPropagation(), e.preventDefault(), null == g || g(), !k && (0, f.openClanApplyFlow)(y, v, {
         source: null == L ? void 0 : L.source,
         messageId: null == L ? void 0 : L.messageId,
         tagUserId: null == L ? void 0 : L.tagUserId,
         location: o.default.CLAN_GUILD_PROFILE
       })
-    }, [v, y, B, g, L]),
+    }, [v, y, k, g, L]),
     x = r.useCallback(() => {
       null != y && (0, d.transitionTo)(m.Routes.GUILD_MEMBER_VERIFICATION(y))
     }, [y]),
@@ -71,7 +71,7 @@ t.default = r.memo(function(e) {
       switch (!0) {
         case !M:
           return null;
-        case !G && B:
+        case !G && k:
           return (0, i.jsx)(A.default, {
             onClick: x,
             ...H,
@@ -85,7 +85,7 @@ t.default = r.memo(function(e) {
           });
         case G && !w:
           return (0, i.jsx)(A.default, {
-            onClick: k,
+            onClick: B,
             ...H,
             children: N.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
           });
@@ -98,7 +98,7 @@ t.default = r.memo(function(e) {
         default:
           return null
       }
-    }, [H, k, V, x, F, B, w, G, M]),
+    }, [H, B, V, x, F, k, w, G, M]),
     j = r.useMemo(() => ({
       className: p.container,
       onClick: O

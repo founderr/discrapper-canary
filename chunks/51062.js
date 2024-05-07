@@ -44,20 +44,20 @@ function A(e, t, n) {
     hidePersonalInformation: c.default.hidePersonalInformation
   }), [g, L, U]), {
     activeCommand: w,
-    activeCommandOption: B
+    activeCommandOption: k
   } = (0, a.useStateFromStoresObject)([o.default], () => ({
     activeCommand: o.default.getActiveCommand(g.id),
     activeCommandOption: o.default.getActiveOption(g.id)
-  })), k = (0, T.default)({
+  })), B = (0, T.default)({
     navId: "channel-autocomplete",
     scrollerRef: n,
     state: v,
     onFocus: e => F.setSelectedIndex(e)
   }), V = null === (A = e.editorRef.current) || void 0 === A ? void 0 : A.getCurrentWord(), x = {
     ...e,
-    navigator: k,
+    navigator: B,
     activeCommand: w,
-    activeCommandOption: B,
+    activeCommandOption: k,
     canMentionUsers: null !== (O = null === (m = L.users) || void 0 === m ? void 0 : m.allowMentioning) && void 0 !== O && O,
     canMentionEveryone: b,
     canMentionClyde: P,
@@ -66,9 +66,9 @@ function A(e, t, n) {
     emojiIntention: L === l.ChatInputTypes.RULES_INPUT ? h.EmojiIntention.COMMUNITY_CONTENT : h.EmojiIntention.CHAT,
     currentWord: null !== (R = null == V ? void 0 : V.word) && void 0 !== R ? R : "",
     currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
-    optionText: null != B ? (0, s.getString)({
-      [B.name]: null !== (C = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentCommandOptionValue()) && void 0 !== C ? C : []
-    }, B.name) : ""
+    optionText: null != k ? (0, s.getString)({
+      [k.name]: null !== (C = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentCommandOptionValue()) && void 0 !== C ? C : []
+    }, k.name) : ""
   }, [F] = i.useState(() => new I.default(x));
   return i.useEffect(() => {
     F.updateProps(x)
@@ -87,5 +87,5 @@ function A(e, t, n) {
         for (let n of t) n.removeChangeListener(e)
       }
     }
-  }, [F, null === (p = v.query) || void 0 === p ? void 0 : p.typeInfo]), [v, F, k]
+  }, [F, null === (p = v.query) || void 0 === p ? void 0 : p.typeInfo]), [v, F, B]
 }

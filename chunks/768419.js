@@ -37,8 +37,8 @@ function b(e, t, n) {
 }
 let G = S.default.get(U.PlatformTypes.SPOTIFY),
   w = "hm://pusher/v1/connections/",
-  B = 30 * D.default.Millis.SECOND,
   k = 30 * D.default.Millis.SECOND,
+  B = 30 * D.default.Millis.SECOND,
   V = 5 * D.default.Millis.MINUTE,
   x = 5 * D.default.Millis.SECOND,
   F = 1.5 * D.default.Millis.SECOND,
@@ -119,7 +119,7 @@ class eo {
     })))
   }
   handleOpen() {
-    K.info("WS Connected"), this.backoff.succeed(), this.pingInterval.start(B, () => this.ping()), (0, y.getProfile)(this.accountId, this.accessToken), (0, y.getDevices)(this.accountId, this.accessToken)
+    K.info("WS Connected"), this.backoff.succeed(), this.pingInterval.start(k, () => this.ping()), (0, y.getProfile)(this.accountId, this.accessToken), (0, y.getDevices)(this.accountId, this.accessToken)
   }
   handleMessage(e) {
     let {
@@ -284,7 +284,7 @@ function eT(e) {
         checkSoundSharing: !0,
         checkSoundboardSounds: !1
       });
-    t && n && null != i ? (z.start(k, eI, !1), Z.stop()) : Z.start(100, () => z.stop(), !1)
+    t && n && null != i ? (z.start(B, eI, !1), Z.stop()) : Z.start(100, () => z.stop(), !1)
   }
   return !1
 }
@@ -536,7 +536,7 @@ let eA = new eh(T.default, {
         null == e ? ($[t].push(l), _ = !0) : !(0, E.default)(e, l) && (Object.assign(e, l), _ = !0), ed(t, l.id)
       } else $[t] = [l], _ = !0
     }
-    n ? null == en || en.start(k, eI) : (s = null, null == en || en.stop());
+    n ? null == en || en.start(B, eI) : (s = null, null == en || en.stop());
     let c = p.default.getAccount(t, U.PlatformTypes.SPOTIFY);
     if (null == c) return _;
     let I = ee[t],
@@ -648,7 +648,7 @@ let eA = new eh(T.default, {
         sourceId: e,
         sound: n
       } = null == t ? void 0 : t.desktopSettings;
-      null != e && m.default.getObservedAppNameForWindow(e) === G.name && n ? (en = new I.Interval).start(k, eI) : en = null
+      null != e && m.default.getObservedAppNameForWindow(e) === G.name && n ? (en = new I.Interval).start(B, eI) : en = null
     }
   }
 });

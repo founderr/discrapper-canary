@@ -34,8 +34,8 @@ var i = n("735250"),
   b = n("489762"),
   G = n("31543"),
   w = n("814042"),
-  B = n("15350"),
-  k = n("611480"),
+  k = n("15350"),
+  B = n("611480"),
   V = n("981631"),
   x = n("424197");
 let F = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
@@ -85,7 +85,7 @@ let F = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       ed = N.StickerPickerCollapsedSections.useSetting(),
       e_ = r.useMemo(() => new Set(ed), [ed]),
       ec = (0, l.useStateFromStores)([p.default], () => p.default.getCurrentUser()),
-      eE = r.useMemo(() => (0, B.getFilteredStickers)(er, ec, u), [er, ec, u]),
+      eE = r.useMemo(() => (0, k.getFilteredStickers)(er, ec, u), [er, ec, u]),
       eI = (0, v.useFavoriteStickers)(),
       eT = (0, v.useLatestFrecentStickers)(),
       ef = (0, l.useStateFromStoresObject)([D.default], () => D.default.getAllGuildStickers()),
@@ -149,7 +149,7 @@ let F = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         onGridItemSelect: eL,
         store: I.StickerPickerStore,
         setInspectedStickerPosition: I.StickerPickerStore.setInspectedExpressionPosition,
-        gridNavigatorId: k.GRID_NAVIGATOR_ID
+        gridNavigatorId: B.GRID_NAVIGATOR_ID
       });
     r.useEffect(() => I.StickerPickerStore.resetStoreState, []);
     let eU = () => {
@@ -200,7 +200,7 @@ let F = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         children: [(0, i.jsx)("div", {
           ref: ee,
           className: x.listWrapper,
-          id: k.GRID_NAVIGATOR_ID,
+          id: B.GRID_NAVIGATOR_ID,
           ...eM,
           children: null != eu ? (0, i.jsx)(b.default, {
             ref: et,
@@ -229,8 +229,8 @@ let F = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
   });
 t.default = r.forwardRef((e, t) => ((0, v.useFetchStickerPacks)(), (0, i.jsx)("div", {
   className: x.wrapper,
-  id: k.STICKER_PICKER_TAB_PANEL_ID,
-  "aria-labelledby": k.STICKER_PICKER_TAB_ID,
+  id: B.STICKER_PICKER_TAB_PANEL_ID,
+  "aria-labelledby": B.STICKER_PICKER_TAB_ID,
   role: "tabpanel",
   children: e.isLoading ? (0, i.jsx)(d.Spinner, {
     className: x.loadingIndicator

@@ -21,8 +21,8 @@ var a = n("735250"),
   E = n("11352"),
   T = n("213931"),
   m = n("767157"),
-  C = n("112440"),
-  p = n("671105"),
+  p = n("112440"),
+  C = n("671105"),
   N = n("552958"),
   A = n("921944"),
   g = n("871465"),
@@ -31,13 +31,13 @@ var a = n("735250"),
 
 function R(e, t) {
   var n, R;
-  let O = (0, p.useGuildCustomNotificationSound)(e),
-    x = (0, p.useChannelCustomNotificationSound)(e, t),
+  let O = (0, C.useGuildCustomNotificationSound)(e),
+    x = (0, C.useChannelCustomNotificationSound)(e, t),
     U = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()),
     F = (0, i.useStateFromStores)([o.default], () => o.default.isMuted(e), [e]),
     G = I.default.canUseCustomNotificationSounds(U),
-    y = G ? null != x ? x : O : g.Soundpacks.CLASSIC,
-    j = E.CustomNotificationSoundExperiment.useExperiment({
+    j = G ? null != x ? x : O : g.Soundpacks.CLASSIC,
+    y = E.CustomNotificationSoundExperiment.useExperiment({
       location: "guild_context_menu"
     }, {
       autoTrackExposure: !0
@@ -50,17 +50,17 @@ function R(e, t) {
     V = L === s.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE;
   if (u.useEffect(() => () => {
       P && k(A.ContentDismissActionType.TAKE_ACTION)
-    }, [P, k]), !j) return null;
+    }, [P, k]), !y) return null;
   let W = n => {
       if (D(n), !G) {
-        (0, m.default)(n, "contextMenu"), (0, C.default)();
+        (0, m.default)(n, "contextMenu"), (0, p.default)();
         return
       }
-      null != t ? (0, T.updateChannelCustomNotificationSound)(e, t, y, n, "contextMenu") : (0, T.updateGuildCustomNotificationSound)(e, y, n, "contextMenu")
+      null != t ? (0, T.updateChannelCustomNotificationSound)(e, t, j, n, "contextMenu") : (0, T.updateGuildCustomNotificationSound)(e, j, n, "contextMenu")
     },
     w = G ? r.Text : M.default,
     Y = (0, g.getCustomNotificationSoundpackOptions)(),
-    K = null !== (R = null === (n = Y.find(e => e.value === y)) || void 0 === n ? void 0 : n.label) && void 0 !== R ? R : h.default.Messages.SOUNDPACK_DEFAULT_LABEL;
+    K = null !== (R = null === (n = Y.find(e => e.value === j)) || void 0 === n ? void 0 : n.label) && void 0 !== R ? R : h.default.Messages.SOUNDPACK_DEFAULT_LABEL;
   return (0, a.jsx)(r.MenuItem, {
     id: "notification-sounds",
     label: e => {
@@ -98,7 +98,7 @@ function R(e, t) {
         children: [G || e.value === g.Soundpacks.CLASSIC ? (0, a.jsx)(r.MenuRadioItem, {
           id: e.label,
           group: "notification-preset",
-          checked: (null != y ? y : g.Soundpacks.CLASSIC) === e.value,
+          checked: (null != j ? j : g.Soundpacks.CLASSIC) === e.value,
           label: e.label,
           action: () => W(e.value)
         }) : (0, a.jsx)(r.MenuItem, {

@@ -80,8 +80,8 @@ let U = [{
   }],
   G = 1 / 300,
   w = R.default.Millis.DAYS_30,
-  B = (0, a.animated)(p.default),
-  k = (0, a.animated)(O.default),
+  k = (0, a.animated)(p.default),
+  B = (0, a.animated)(O.default),
   V = (0, a.animated)(N.default);
 
 function x(e) {
@@ -118,10 +118,10 @@ function x(e) {
       friction: 24
     }
   }), I = s ? c : 0, T = (0, l.isThemeDark)(null != t ? t : u) ? o.dark[I] : o.light[I];
-  return !n && s ? (0, i.jsx)(V, {}) : s && d ? (0, i.jsx)(k, {
+  return !n && s ? (0, i.jsx)(V, {}) : s && d ? (0, i.jsx)(B, {
     isDark: (0, l.isThemeDark)(u),
     style: E
-  }) : (0, i.jsx)(B, {
+  }) : (0, i.jsx)(k, {
     boxColor: T.box,
     ribbonColor: T.ribbon,
     style: E
@@ -141,7 +141,7 @@ t.default = r.memo(function(e) {
     autoTrackExposure: R
   }), b = [];
   U && R && b.push(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-  let [G, B] = (0, T.useSelectedDismissibleContent)(b), k = null != G, V = (0, g.useDirectMessageRecipient)(n), F = null != V;
+  let [G, k] = (0, T.useSelectedDismissibleContent)(b), B = null != G, V = (0, g.useDirectMessageRecipient)(n), F = null != V;
   if (t) return null;
   let H = () => {
       (0, f.default)({
@@ -166,10 +166,10 @@ t.default = r.memo(function(e) {
       onMouseLeave: () => {
         _(!1)
       },
-      children: [k && (0, i.jsx)(d.default, {
+      children: [B && (0, i.jsx)(d.default, {
         onComplete: () => _(!1),
         onDMCheckItOutClick: H,
-        markAsDismissed: B,
+        markAsDismissed: k,
         isDM: F
       }), (0, i.jsx)(m.default, {
         innerClassName: P.button,
@@ -184,12 +184,12 @@ t.default = r.memo(function(e) {
           className: y.noPointerEvents,
           children: (0, i.jsx)(x, {
             hovered: l,
-            isContentDismissed: !k
+            isContentDismissed: !B
           })
         })
       })]
     });
-  return k ? Y : (0, i.jsx)(u.TooltipContainer, {
+  return B ? Y : (0, i.jsx)(u.TooltipContainer, {
     className: y.container,
     text: (0, d.getSeasonalGiftingBody)(F),
     children: Y

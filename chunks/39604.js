@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return P
   },
   updateClipsLength: function() {
-    return B
+    return k
   },
   updateClipsQuality: function() {
     return w
@@ -49,7 +49,7 @@ n.r(t), n.d(t, {
     return b
   },
   updateViewerClipsEnabled: function() {
-    return k
+    return B
   }
 }), n("47120"), n("653041");
 var i = n("46973"),
@@ -164,7 +164,7 @@ function w(e) {
   })
 }
 
-function B(e) {
+function k(e) {
   s.default.dispatch({
     type: "CLIPS_SETTINGS_UPDATE",
     settings: {
@@ -173,7 +173,7 @@ function B(e) {
   })
 }
 
-function k(e) {
+function B(e) {
   let {
     enabled: t,
     trackAnalytics: n = !1
