@@ -18,6 +18,7 @@ function n(e) {
     className: i.section,
     children: [(0, l.jsx)(a.Heading, {
       variant: "text-xs/semibold",
+      color: "header-secondary",
       children: t
     }), s]
   })

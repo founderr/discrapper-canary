@@ -22,61 +22,44 @@ function T(e) {
   let {
     userId: t,
     guildId: n,
+    textClassName: T
+  } = e, f = (0, r.useStateFromStores)([o.default], () => o.default.locale), S = (0, r.useStateFromStores)([u.default], () => null != n ? u.default.getGuild(n) : null), h = (0, r.useStateFromStores)([l.default], () => null != n ? l.default.getMember(n, t) : null), A = (0, s.getCreatedAtDate)(c.default.extractTimestamp(t), f), m = (0, s.getCreatedAtDate)(null == h ? void 0 : h.joinedAt, f);
+  return null == S || null == h ? (0, i.jsx)(a.Text, {
+    variant: "text-sm/normal",
     className: T,
-    headingClassName: f,
-    textClassName: S,
-    headingVariant: h = "eyebrow"
-  } = e, A = (0, r.useStateFromStores)([o.default], () => o.default.locale), m = (0, r.useStateFromStores)([u.default], () => null != n ? u.default.getGuild(n) : null), N = (0, r.useStateFromStores)([l.default], () => null != n ? l.default.getMember(n, t) : null), p = (0, s.getCreatedAtDate)(c.default.extractTimestamp(t), A), O = (0, s.getCreatedAtDate)(null == N ? void 0 : N.joinedAt, A);
-  return null == m || null == N ? (0, i.jsxs)("div", {
-    className: T,
-    children: [(0, i.jsx)(a.Heading, {
-      variant: h,
-      className: f,
-      children: E.default.Messages.USER_PROFILE_DISCORD_MEMBER_SINCE
-    }), (0, i.jsx)(a.Text, {
-      variant: "text-sm/normal",
-      className: S,
-      children: p
-    })]
+    children: A
   }) : (0, i.jsxs)("div", {
-    className: T,
-    children: [(0, i.jsx)(a.Heading, {
-      variant: h,
-      className: f,
-      children: E.default.Messages.USER_PROFILE_MEMBER_SINCE
+    className: I.memberSinceWrapper,
+    children: [(0, i.jsxs)("div", {
+      className: I.memberSince,
+      children: [(0, i.jsx)(a.Tooltip, {
+        text: E.default.Messages.DISCORD_NAME,
+        color: a.TooltipColors.NESTED,
+        children: e => (0, i.jsx)(_.default, {
+          ...e,
+          className: I.discordIcon
+        })
+      }), (0, i.jsx)(a.Text, {
+        variant: "text-sm/normal",
+        className: T,
+        children: A
+      })]
+    }), (0, i.jsx)("div", {
+      className: I.divider
     }), (0, i.jsxs)("div", {
-      className: I.memberSinceWrapper,
-      children: [(0, i.jsxs)("div", {
-        className: I.memberSince,
-        children: [(0, i.jsx)(a.Tooltip, {
-          text: E.default.Messages.DISCORD_NAME,
-          color: a.TooltipColors.NESTED,
-          children: e => (0, i.jsx)(_.default, {
-            ...e,
-            className: I.discordIcon
-          })
-        }), (0, i.jsx)(a.Text, {
-          variant: "text-sm/normal",
-          className: S,
-          children: p
-        })]
-      }), (0, i.jsx)("div", {
-        className: I.divider
-      }), (0, i.jsxs)("div", {
-        className: I.memberSince,
-        children: [(0, i.jsx)(a.Tooltip, {
-          text: m.name,
-          color: a.TooltipColors.NESTED,
-          children: e => (0, i.jsx)(d.default, {
-            ...e,
-            guild: m,
-            size: d.default.Sizes.SMOL
-          })
-        }), (0, i.jsx)(a.Text, {
-          variant: "text-sm/normal",
-          className: S,
-          children: O
-        })]
+      className: I.memberSince,
+      children: [(0, i.jsx)(a.Tooltip, {
+        text: S.name,
+        color: a.TooltipColors.NESTED,
+        children: e => (0, i.jsx)(d.default, {
+          ...e,
+          guild: S,
+          size: d.default.Sizes.SMOL
+        })
+      }), (0, i.jsx)(a.Text, {
+        variant: "text-sm/normal",
+        className: T,
+        children: m
       })]
     })]
   })
