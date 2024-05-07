@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return A
   },
   ClanDiscoveryUserContainer: function() {
-    return g
+    return T
   }
 });
 var a = n("735250"),
@@ -25,7 +25,7 @@ var a = n("735250"),
   S = n("802001"),
   p = n("981631"),
   I = n("495257");
-let T = e => {
+let g = e => {
   switch (e) {
     case h.ClanDiscoveryGame.GENSHIN:
       return I.genshinUpsellBackgroundImage;
@@ -34,14 +34,14 @@ let T = e => {
   }
 };
 
-function g() {
+function T() {
   let e = (0, h.useClanDiscoveryUIStore)(e => e.game, r.default),
     t = (0, h.useClanDiscoveryUIStore)(e => e.userUpsellScreen, r.default),
     n = (0, h.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, r.default),
     l = s.useCallback(() => {
       f.default.track(p.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_CLICKED), n(h.ClanDiscoveryUserScreens.USER_ONBOARDING)
     }, [n]),
-    u = s.useMemo(() => T(e), [e]),
+    u = s.useMemo(() => g(e), [e]),
     d = s.useMemo(() => {
       switch (e) {
         case h.ClanDiscoveryGame.GENSHIN:
@@ -57,12 +57,12 @@ function g() {
         children: (0, a.jsx)(o.ScrollerThin, {
           className: I.upsellScroller,
           fade: !0,
-          children: (0, a.jsx)("div", {
+          children: (0, a.jsxs)("div", {
             className: i()(u, I.userUpsell),
-            children: (0, a.jsx)(m.default, {
+            children: [(0, a.jsx)(m.ClanDiscoveryUserUpsellBackgroundRings, {}), (0, a.jsx)(m.default, {
               selectedGame: e,
               onClick: l
-            })
+            })]
           })
         })
       });
@@ -89,7 +89,7 @@ function A() {
   s.useEffect(() => {
     (!l || 0 === f.length && l) && t(h.ClanDiscoveryMode.GET_STARTED)
   }, [f.length, l, t]);
-  let C = s.useMemo(() => T(e), [e]);
+  let C = s.useMemo(() => g(e), [e]);
   return 0 === f.length ? null : (0, a.jsx)("div", {
     className: I.container,
     children: (0, a.jsxs)(o.ScrollerThin, {
