@@ -3,8 +3,20 @@ n.r(t), n.d(t, {
   getProgressStepAnalyticsName: function() {
     return I
   },
+  trackClanAdminInviteClicked: function() {
+    return h
+  },
+  trackClanAdminInviteViewed: function() {
+    return S
+  },
   trackClanApplyToJoinViewed: function() {
     return u
+  },
+  trackClanDiscoveryUserNuxClicked: function() {
+    return f
+  },
+  trackClanDiscoveryUserNuxViewed: function() {
+    return T
   },
   trackClanProfileViewed: function() {
     return l
@@ -114,4 +126,32 @@ function I(e) {
     default:
       return e
   }
+}
+
+function T() {
+  a.default.track(o.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_VIEWED)
+}
+
+function f() {
+  a.default.track(o.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_CLICKED)
+}
+
+function S(e) {
+  let {
+    location: t
+  } = e;
+  a.default.track(o.AnalyticEvents.CLAN_ADMIN_INVITE_VIEWED, {
+    location: t
+  })
+}
+
+function h(e) {
+  let {
+    guildId: t,
+    location: n
+  } = e;
+  a.default.track(o.AnalyticEvents.CLAN_ADMIN_INVITE_CLICKED, {
+    guild_id: t,
+    location: n
+  })
 }

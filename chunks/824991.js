@@ -1,70 +1,72 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanUpsellButton: function() {
-    return g
+    return S
   },
   ClanUpsellMessage: function() {
-    return C
+    return E
   },
   ClanUpsellTitle: function() {
-    return m
+    return g
   },
   default: function() {
-    return E
+    return _
   }
 });
 var l = n("735250"),
   a = n("470079"),
   s = n("658252"),
   i = n("481060"),
-  r = n("428695"),
-  o = n("725568"),
-  u = n("603839"),
-  d = n("308083"),
-  c = n("981631"),
-  f = n("921944"),
-  h = n("689938"),
-  p = n("422906");
+  r = n("100527"),
+  o = n("428695"),
+  u = n("725568"),
+  d = n("970606"),
+  c = n("603839"),
+  f = n("308083"),
+  h = n("981631"),
+  p = n("921944"),
+  m = n("689938"),
+  C = n("422906");
 
-function m(e) {
+function g(e) {
   let {
     title: t
   } = e;
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
-      className: p.inviteContainer,
+      className: C.inviteContainer,
       children: [(0, l.jsx)(s.EnvelopeIcon, {
         color: "currentColor",
         height: 12,
         width: 12,
-        className: p.envelope
+        className: C.envelope
       }), (0, l.jsx)(i.Text, {
         variant: "text-xs/bold",
-        className: p.invite,
-        children: h.default.Messages.CLAN_UPSELL_INVITE
+        className: C.invite,
+        children: m.default.Messages.CLAN_UPSELL_INVITE
       })]
     }), (0, l.jsx)(i.Heading, {
       variant: "heading-md/semibold",
       color: "header-primary",
-      className: p.title,
+      className: C.title,
       children: t
     })]
   })
 }
 
-function C(e) {
+function E(e) {
   let {
     defaultGameId: t
   } = e;
   return (0, l.jsx)(i.Text, {
     variant: "text-xs/normal",
     color: "text-muted",
-    className: p.message,
-    children: t === d.GENSHIN_ID ? h.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_MESSAGE : t === d.VALORANT_ID ? h.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_MESSAGE : null
+    className: C.message,
+    children: t === f.GENSHIN_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_MESSAGE : t === f.VALORANT_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_MESSAGE : null
   })
 }
 
-function g(e) {
+function S(e) {
   let {
     onClick: t
   } = e;
@@ -73,49 +75,61 @@ function g(e) {
     look: i.ButtonLooks.FILLED,
     size: i.ButtonSizes.SMALL,
     color: i.ButtonColors.BRAND_NEW,
-    className: p.button,
+    className: C.button,
     onClick: t,
     children: (0, l.jsx)(i.Text, {
       variant: "text-sm/semibold",
       color: "always-white",
-      children: h.default.Messages.CHECK_IT_OUT
+      children: m.default.Messages.CHECK_IT_OUT
     })
   })
 }
 
-function E(e) {
+function _(e) {
   let {
     guild: t,
     markAsDismissed: n,
     defaultGameId: s
-  } = e, i = a.useCallback(() => (0, l.jsx)(C, {
-    defaultGameId: s
-  }), [s]), E = a.useCallback(() => (0, l.jsx)(m, {
-    title: h.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE
-  }), []), S = a.useCallback(() => {
-    n(f.ContentDismissActionType.TAKE_ACTION), (0, o.openFullScreenLayer)(e => {
-      let {
-        closeLayer: n
-      } = e;
-      return (0, l.jsx)(u.default, {
-        onClose: n,
-        guildId: t.id,
-        gameId: s
-      })
-    }, {
-      layerKey: d.CLAN_SETUP_MODAL_LAYER_KEY
+  } = e;
+  a.useEffect(() => {
+    (0, d.trackClanAdminInviteViewed)({
+      location: r.default.GUILD_CHANNEL_LIST
     })
-  }, [s, t.id, n]), _ = a.useCallback(() => (0, l.jsx)(g, {
-    onClick: S
-  }), [S]);
-  return (0, l.jsx)(r.default, {
-    className: p.notice,
+  }, []);
+  let i = a.useCallback(() => (0, l.jsx)(E, {
+      defaultGameId: s
+    }), [s]),
+    _ = a.useCallback(() => (0, l.jsx)(g, {
+      title: m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE
+    }), []),
+    I = a.useCallback(() => {
+      (0, d.trackClanAdminInviteClicked)({
+        guildId: t.id,
+        location: r.default.GUILD_CHANNEL_LIST
+      }), n(p.ContentDismissActionType.TAKE_ACTION), (0, u.openFullScreenLayer)(e => {
+        let {
+          closeLayer: n
+        } = e;
+        return (0, l.jsx)(c.default, {
+          onClose: n,
+          guildId: t.id,
+          gameId: s
+        })
+      }, {
+        layerKey: f.CLAN_SETUP_MODAL_LAYER_KEY
+      })
+    }, [s, t.id, n]),
+    N = a.useCallback(() => (0, l.jsx)(S, {
+      onClick: I
+    }), [I]);
+  return (0, l.jsx)(o.default, {
+    className: C.notice,
     guild: t,
-    onDismissed: () => n(f.ContentDismissActionType.UNKNOWN),
-    title: E,
+    onDismissed: () => n(p.ContentDismissActionType.UNKNOWN),
+    title: _,
     message: i,
-    cta: _,
-    trackingSource: c.ChannelNoticeCtaSources.CLAN_ADMIN_UPSELL,
-    type: c.ChannelNoticeTypes.CLAN_ADMIN_UPSELL
+    cta: N,
+    trackingSource: h.ChannelNoticeCtaSources.CLAN_ADMIN_UPSELL,
+    type: h.ChannelNoticeTypes.CLAN_ADMIN_UPSELL
   })
 }

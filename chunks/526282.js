@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryUserUpsellBackgroundRings: function() {
-    return g
+    return p
   }
 }), n("47120");
 var a = n("735250"),
@@ -10,20 +10,19 @@ var a = n("735250"),
   l = n("442837"),
   r = n("481060"),
   o = n("607070"),
-  u = n("626135"),
+  u = n("970606"),
   d = n("231467"),
   c = n("207796"),
   f = n("436137"),
   E = n("559469"),
-  h = n("981631"),
-  _ = n("689938"),
-  C = n("720395");
-let m = {
+  h = n("689938"),
+  _ = n("720395");
+let C = {
     mass: 1,
     tension: 600,
     friction: 60
   },
-  S = {
+  m = {
     from: {
       transform: "translateY(40px) scale(0.9)",
       opacity: 0
@@ -32,47 +31,47 @@ let m = {
       transform: "translateY(0px) scale(1)",
       opacity: 1
     },
-    config: m
+    config: C
   },
-  p = {
+  S = {
     from: {
       opacity: 0
     },
     to: {
       opacity: 1
     },
-    config: m
+    config: C
   };
 
-function g() {
+function p() {
   let e = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion),
     t = s.useRef(null),
     n = s.useRef(null),
     r = s.useRef(null),
     u = (0, i.useSpring)({
       ref: t,
-      ...p
+      ...S
     }),
     d = (0, i.useSpring)({
       ref: n,
-      ...p
+      ...S
     }),
     c = (0, i.useSpring)({
       ref: r,
-      ...p
+      ...S
     });
   return (0, i.useChain)([t, n, r], [.8, .9, 1]), (0, a.jsx)("div", {
-    className: C.backgroundContainer,
+    className: _.backgroundContainer,
     children: (0, a.jsxs)("div", {
-      className: C.ringsContainer,
+      className: _.ringsContainer,
       children: [(0, a.jsx)(i.animated.div, {
-        className: C.ringOuter,
+        className: _.ringOuter,
         style: e ? void 0 : c
       }), (0, a.jsx)(i.animated.div, {
-        className: C.ringMiddle,
+        className: _.ringMiddle,
         style: e ? void 0 : d
       }), (0, a.jsx)(i.animated.div, {
-        className: C.ringInner,
+        className: _.ringInner,
         style: e ? void 0 : u
       })]
     })
@@ -82,23 +81,23 @@ t.default = s.memo(function(e) {
   let {
     selectedGame: t,
     onClick: n
-  } = e, p = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), g = s.useRef(null), I = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), R = (0, i.useSpring)({
+  } = e, S = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = s.useRef(null), g = s.useRef(null), I = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = (0, i.useSpring)({
+    ref: p,
+    ...m
+  }), R = (0, i.useSpring)({
     ref: g,
-    ...S
+    ...m
   }), O = (0, i.useSpring)({
     ref: I,
-    ...S
+    ...m
   }), L = (0, i.useSpring)({
     ref: T,
-    ...S
+    ...m
   }), M = (0, i.useSpring)({
     ref: A,
-    ...S
+    ...m
   }), y = (0, i.useSpring)({
     ref: N,
-    ...S
-  }), P = (0, i.useSpring)({
-    ref: v,
     from: {
       transform: "translateY(40px)",
       opacity: 0
@@ -107,78 +106,78 @@ t.default = s.memo(function(e) {
       transform: "translateY(0px)",
       opacity: 1
     },
-    config: m
+    config: C
   });
-  (0, i.useChain)([g, I, T, A, N, v], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
-    u.default.track(h.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_VIEWED)
+  (0, i.useChain)([p, g, I, T, A, N], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
+    (0, u.trackClanDiscoveryUserNuxViewed)()
   }, []);
-  let [x, D] = s.useMemo(() => {
+  let [P, x] = s.useMemo(() => {
     switch (t) {
       case c.ClanDiscoveryGame.GENSHIN:
-        return [_.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_TITLE, _.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE];
+        return [h.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_TITLE, h.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE];
       case c.ClanDiscoveryGame.VALORANT:
-        return [_.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_TITLE, _.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE]
+        return [h.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_TITLE, h.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE]
     }
   }, [t]);
   return (0, a.jsxs)("div", {
-    className: C.upsellContainer,
+    className: _.upsellContainer,
     children: [(0, a.jsx)("div", {
-      className: C.cardsContainer,
+      className: _.cardsContainer,
       children: (0, a.jsxs)("div", {
-        className: C.cards,
+        className: _.cards,
         children: [(0, a.jsx)(i.animated.div, {
-          className: C.clanCardOuterContainer,
-          style: p ? void 0 : M,
+          className: _.clanCardOuterContainer,
+          style: S ? void 0 : L,
           children: (0, a.jsx)(d.ClanDiscoveryCardView, {
             clan: E.FAKE_DISCOVERY_UPSELL_CLANS["0"],
-            className: C.clanCardOuterLeft
+            className: _.clanCardOuterLeft
           })
         }), (0, a.jsx)(i.animated.div, {
-          className: C.clanCardInnerContainer,
-          style: p ? void 0 : O,
+          className: _.clanCardInnerContainer,
+          style: S ? void 0 : R,
           children: (0, a.jsx)(d.ClanDiscoveryCardView, {
             clan: E.FAKE_DISCOVERY_UPSELL_CLANS["1"],
-            className: C.clanCardInnerLeft
+            className: _.clanCardInnerLeft
           })
         }), (0, a.jsx)(i.animated.div, {
-          className: C.clanCardCenterContainer,
-          style: p ? void 0 : R,
+          className: _.clanCardCenterContainer,
+          style: S ? void 0 : v,
           children: (0, a.jsx)(d.ClanDiscoveryCardView, {
             clan: E.FAKE_DISCOVERY_UPSELL_CLANS["4"],
-            className: C.clanCardCenter
+            className: _.clanCardCenter
           })
         }), (0, a.jsx)(i.animated.div, {
-          className: C.clanCardInnerContainer,
-          style: p ? void 0 : L,
+          className: _.clanCardInnerContainer,
+          style: S ? void 0 : O,
           children: (0, a.jsx)(d.ClanDiscoveryCardView, {
             clan: E.FAKE_DISCOVERY_UPSELL_CLANS["2"],
-            className: C.clanCardInnerRight
+            className: _.clanCardInnerRight
           })
         }), (0, a.jsx)(i.animated.div, {
-          className: C.clanCardOuterContainer,
-          style: p ? void 0 : y,
+          className: _.clanCardOuterContainer,
+          style: S ? void 0 : M,
           children: (0, a.jsx)(d.ClanDiscoveryCardView, {
             clan: E.FAKE_DISCOVERY_UPSELL_CLANS["3"],
-            className: C.clanCardOuterRight
+            className: _.clanCardOuterRight
           })
         })]
       })
     }), (0, a.jsxs)(i.animated.div, {
-      className: C.upsellDetails,
-      style: p ? void 0 : P,
+      className: _.upsellDetails,
+      style: S ? void 0 : y,
       children: [(0, a.jsx)(r.Heading, {
-        className: C.upsellTitle,
+        className: _.upsellTitle,
         color: "header-primary",
         variant: "heading-xxl/semibold",
-        children: x
+        children: P
       }), (0, a.jsx)(r.Text, {
-        className: C.upsellSubtitle,
+        className: _.upsellSubtitle,
         color: "header-secondary",
         variant: "text-md/medium",
-        children: D
+        children: x
       }), (0, a.jsx)(f.default, {
         onClick: n,
-        children: _.default.Messages.CLAN_DISCOVERY_UPSELL_GET_STARTED
+        children: h.default.Messages.CLAN_DISCOVERY_UPSELL_GET_STARTED
       })]
     })]
   })

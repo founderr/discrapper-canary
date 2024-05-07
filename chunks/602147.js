@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildsBarClanAdminUpsellPopout: function() {
-    return A
+    return v
   },
   GuildsBarFixedFooter: function() {
-    return L
+    return x
   }
 }), n("47120");
 var l = n("735250"),
@@ -15,92 +15,104 @@ var l = n("735250"),
   o = n("481060"),
   u = n("212093"),
   d = n("350810"),
-  c = n("824991"),
-  f = n("243778"),
-  h = n("703656"),
-  p = n("104259"),
-  m = n("603592"),
-  C = n("981631"),
-  g = n("308083"),
-  E = n("731455"),
-  S = n("921944"),
-  _ = n("689938"),
-  I = n("434884");
+  c = n("100527"),
+  f = n("970606"),
+  h = n("824991"),
+  p = n("243778"),
+  m = n("703656"),
+  C = n("104259"),
+  g = n("603592"),
+  E = n("981631"),
+  S = n("308083"),
+  _ = n("731455"),
+  I = n("921944"),
+  N = n("689938"),
+  T = n("434884");
 
-function N() {
-  window.location.pathname.startsWith(C.Routes.GUILD_DISCOVERY) && ((0, u.clearSearch)(), (0, u.selectCategory)(E.DISCOVERY_ALL_CATEGORIES_ID, !0));
-  let e = (0, h.getHistory)().location.search;
-  (0, h.transitionTo)(C.Routes.GUILD_DISCOVERY, {
+function A() {
+  window.location.pathname.startsWith(E.Routes.GUILD_DISCOVERY) && ((0, u.clearSearch)(), (0, u.selectCategory)(_.DISCOVERY_ALL_CATEGORIES_ID, !0));
+  let e = (0, m.getHistory)().location.search;
+  (0, m.transitionTo)(E.Routes.GUILD_DISCOVERY, {
     search: e
   })
 }
-let T = a.forwardRef(function(e, t) {
+let L = a.forwardRef(function(e, t) {
   let {
     selected: n,
     tooltip: a,
     className: s,
     onClick: i
   } = e;
-  return (0, l.jsx)(m.default, {
+  return (0, l.jsx)(g.default, {
     id: "guild-discover-button",
     ref: t,
     className: s,
-    onClick: null != i ? i : N,
+    onClick: null != i ? i : A,
     selected: n,
-    tooltip: null != a ? a : _.default.Messages.GUILD_DISCOVERY_TOOLTIP,
-    icon: p.default
+    tooltip: null != a ? a : N.default.Messages.GUILD_DISCOVERY_TOOLTIP,
+    icon: C.default
   })
 });
 
-function A(e) {
+function v(e) {
   let {
     defaultGameId: t,
     children: n
-  } = e, u = (0, s.useLocation)(), [h, p] = (0, f.useSelectedDismissibleContent)([r.DismissibleContent.GUILD_LIST_CLAN_ADMIN_UPSELL], S.DismissibleContentGroupName.SIDEBAR), m = h !== r.DismissibleContent.GUILD_LIST_CLAN_ADMIN_UPSELL, E = !(0, d.default)() && !m && u.pathname !== C.Routes.GUILD_DISCOVERY, T = a.useMemo(() => {
-    switch (t) {
-      case g.VALORANT_ID:
-        return I.valorantBackgroundImage;
-      case g.GENSHIN_ID:
-        return I.genshinBackgroundImage;
-      default:
-        return
-    }
-  }, [t]), A = a.useCallback(() => {
-    p(S.ContentDismissActionType.TAKE_ACTION), N()
-  }, [p]), L = a.useCallback(e => {
-    e(), p(S.ContentDismissActionType.USER_DISMISS)
-  }, [p]);
+  } = e, u = (0, s.useLocation)(), [m, C] = (0, p.useSelectedDismissibleContent)([r.DismissibleContent.GUILD_LIST_CLAN_ADMIN_UPSELL], I.DismissibleContentGroupName.SIDEBAR), g = m !== r.DismissibleContent.GUILD_LIST_CLAN_ADMIN_UPSELL, _ = !(0, d.default)() && !g && u.pathname !== E.Routes.GUILD_DISCOVERY;
+  a.useEffect(() => {
+    _ && (0, f.trackClanAdminInviteViewed)({
+      location: c.default.GUILDS_LIST
+    })
+  }, [_]);
+  let L = a.useMemo(() => {
+      switch (t) {
+        case S.VALORANT_ID:
+          return T.valorantBackgroundImage;
+        case S.GENSHIN_ID:
+          return T.genshinBackgroundImage;
+        default:
+          return
+      }
+    }, [t]),
+    v = a.useCallback(() => {
+      (0, f.trackClanAdminInviteClicked)({
+        location: c.default.GUILDS_LIST
+      }), C(I.ContentDismissActionType.TAKE_ACTION), A()
+    }, [C]),
+    x = a.useCallback(e => {
+      e(), C(I.ContentDismissActionType.USER_DISMISS)
+    }, [C]);
   return (0, l.jsxs)("div", {
-    className: I.container,
+    className: T.container,
     children: [(0, l.jsx)(o.Popout, {
-      shouldShow: E,
+      shouldShow: _,
       renderPopout: e => {
         let {
           closePopout: n
         } = e;
         return (0, l.jsxs)("div", {
-          className: I.popoutContainer,
+          className: T.popoutContainer,
           children: [(0, l.jsx)("div", {
-            className: T
+            className: L
           }), (0, l.jsx)(o.Clickable, {
-            onClick: () => L(n),
-            className: I.close,
+            onClick: () => x(n),
+            className: T.close,
             children: (0, l.jsx)(i.CloseSmallIcon, {
               width: 16,
               height: 16,
               color: o.tokens.colors.WHITE
             })
           }), (0, l.jsxs)("div", {
-            className: I.popoutContent,
-            children: [(0, l.jsx)(c.ClanUpsellTitle, {
-              title: _.default.Messages.CLAN_GUILD_LIST_ADMIN_UPSELL_TITLE
-            }), (0, l.jsx)(c.ClanUpsellMessage, {
+            className: T.popoutContent,
+            children: [(0, l.jsx)(h.ClanUpsellTitle, {
+              title: N.default.Messages.CLAN_GUILD_LIST_ADMIN_UPSELL_TITLE
+            }), (0, l.jsx)(h.ClanUpsellMessage, {
               defaultGameId: t
-            }), (0, l.jsx)(c.ClanUpsellButton, {
-              onClick: A
+            }), (0, l.jsx)(h.ClanUpsellButton, {
+              onClick: v
             })]
           }), (0, l.jsx)("div", {
-            className: I.popoutCaret
+            className: T.popoutCaret
           })]
         })
       },
@@ -110,21 +122,21 @@ function A(e) {
       spacing: 16,
       children: e => (0, l.jsx)("div", {
         ...e,
-        className: I.popoutAnchor
+        className: T.popoutAnchor
       })
     }), n({
-      onClick: A
+      onClick: v
     })]
   })
 }
 
-function L(e) {
+function x(e) {
   let {
     children: t
   } = e;
   return (0, l.jsx)("div", {
-    className: I.footer,
+    className: T.footer,
     children: t
   })
 }
-t.default = T
+t.default = L

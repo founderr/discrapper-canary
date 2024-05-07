@@ -13,17 +13,17 @@ var a = n("735250"),
   E = n("484957"),
   h = n("481060"),
   _ = n("607070"),
-  C = n("650461"),
-  m = n("603839"),
-  S = n("430824"),
-  p = n("725568"),
-  g = n("626135"),
-  I = n("231467"),
-  T = n("207796"),
-  A = n("316553"),
-  N = n("273254"),
-  v = n("559469"),
-  R = n("981631"),
+  C = n("100527"),
+  m = n("970606"),
+  S = n("650461"),
+  p = n("603839"),
+  g = n("430824"),
+  I = n("725568"),
+  T = n("231467"),
+  A = n("207796"),
+  N = n("316553"),
+  v = n("273254"),
+  R = n("559469"),
   O = n("308083"),
   L = n("689938"),
   M = n("258036"),
@@ -84,20 +84,20 @@ function U(e) {
     selectedGame: r,
     onButtonClick: f,
     buttonText: _
-  } = e, C = (0, T.useClanDiscoveryUIStore)(e => e.setMode, o.default), m = (0, T.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), S = (0, T.useClanDiscoveryUIStore)(e => e.started, o.default), p = s.useMemo(() => {
+  } = e, C = (0, A.useClanDiscoveryUIStore)(e => e.setMode, o.default), m = (0, A.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), S = (0, A.useClanDiscoveryUIStore)(e => e.started, o.default), p = s.useMemo(() => {
     switch (r) {
-      case T.ClanDiscoveryGame.GENSHIN:
+      case A.ClanDiscoveryGame.GENSHIN:
         return L.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_GENSHIN;
-      case T.ClanDiscoveryGame.VALORANT:
+      case A.ClanDiscoveryGame.VALORANT:
         return L.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_VALORANT
     }
   }, [r]), g = s.useMemo(() => i.map(e => ({
     value: e.id,
     label: e.name
   })), [i]), I = s.useCallback(() => {
-    C(T.ClanDiscoveryMode.DISCOVERY)
-  }, [C]), A = s.useCallback(() => {
-    C(T.ClanDiscoveryMode.GET_STARTED), m(T.ClanDiscoveryUserScreens.USER_ONBOARDING)
+    C(A.ClanDiscoveryMode.DISCOVERY)
+  }, [C]), T = s.useCallback(() => {
+    C(A.ClanDiscoveryMode.GET_STARTED), m(A.ClanDiscoveryUserScreens.USER_ONBOARDING)
   }, [C, m]), N = !S, v = i.length > 1;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(h.Heading, {
@@ -143,7 +143,7 @@ function U(e) {
         look: h.ButtonLooks.OUTLINED,
         color: h.ButtonColors.PRIMARY,
         className: M.browseButton,
-        onClick: A,
+        onClick: T,
         children: (0, a.jsx)(h.Text, {
           variant: "text-sm/medium",
           children: L.default.Messages.CLAN_DISCOVERY_UPSELL_BROWSE
@@ -168,23 +168,26 @@ t.default = s.memo(function(e) {
     selectedGame: n
   } = e;
   s.useEffect(() => {
-    g.default.track(R.AnalyticEvents.CLAN_DISCOVERY_ADMIN_INVITE_VIEWED)
+    (0, m.trackClanAdminInviteViewed)({
+      location: C.default.CLAN_DISCOVERY
+    })
   }, []);
   let [i, l] = s.useState(() => {
-    let e = new Set(C.default.getGuildIds());
+    let e = new Set(S.default.getGuildIds());
     for (let n of t)
       if (e.has(n.id)) return n.id;
     return t[0].id
-  }), o = (0, f.useStateFromStores)([S.default], () => S.default.getGuild(i)), u = (0, f.useStateFromStores)([C.default], () => C.default.getStateForGuild(i).progress), d = (0, A.useDiscoveryGameApplicationId)({
+  }), o = (0, f.useStateFromStores)([g.default], () => g.default.getGuild(i)), u = (0, f.useStateFromStores)([S.default], () => S.default.getStateForGuild(i).progress), d = (0, N.useDiscoveryGameApplicationId)({
     selectedGame: n
   }), c = s.useCallback(() => {
-    g.default.track(R.AnalyticEvents.CLAN_DISCOVERY_ADMIN_INVITE_CLICKED, {
-      guild_id: i
-    }), (0, p.openFullScreenLayer)(e => {
+    (0, m.trackClanAdminInviteClicked)({
+      guildId: i,
+      location: C.default.CLAN_DISCOVERY
+    }), (0, I.openFullScreenLayer)(e => {
       let {
         closeLayer: t
       } = e;
-      return (0, a.jsx)(m.default, {
+      return (0, a.jsx)(p.default, {
         onClose: t,
         guildId: i,
         gameId: d
@@ -192,10 +195,10 @@ t.default = s.memo(function(e) {
     }, {
       layerKey: O.CLAN_SETUP_MODAL_LAYER_KEY
     })
-  }, [i, d]), E = (0, f.useStateFromStores)([_.default], () => _.default.useReducedMotion), h = (0, N.useFakeDiscoveryClanForGuild)({
+  }, [i, d]), E = (0, f.useStateFromStores)([_.default], () => _.default.useReducedMotion), h = (0, v.useFakeDiscoveryClanForGuild)({
     guild: o,
     selectedGame: n
-  }), T = (0, r.useSpring)({
+  }), A = (0, r.useSpring)({
     from: {
       opacity: 0
     },
@@ -283,20 +286,20 @@ t.default = s.memo(function(e) {
         className: M.clanCardOuterContainer,
         style: {
           ...y,
-          ...T
+          ...A
         },
-        children: (0, a.jsx)(I.ClanDiscoveryCardView, {
-          clan: v.FAKE_DISCOVERY_UPSELL_CLANS["0"],
+        children: (0, a.jsx)(T.ClanDiscoveryCardView, {
+          clan: R.FAKE_DISCOVERY_UPSELL_CLANS["0"],
           className: M.clanCardOuterLeft
         })
       }), (0, a.jsx)(r.animated.div, {
         className: M.clanCardInnerContainer,
         style: {
           ...P,
-          ...T
+          ...A
         },
-        children: (0, a.jsx)(I.ClanDiscoveryCardView, {
-          clan: v.FAKE_DISCOVERY_UPSELL_CLANS["1"],
+        children: (0, a.jsx)(T.ClanDiscoveryCardView, {
+          clan: R.FAKE_DISCOVERY_UPSELL_CLANS["1"],
           className: M.clanCardInnerLeft
         })
       }), null != h && (0, a.jsx)(r.animated.div, {
@@ -307,7 +310,7 @@ t.default = s.memo(function(e) {
             className: M.clanCardCenterContainer,
             children: (0, a.jsx)(r.animated.div, {
               style: k,
-              children: (0, a.jsx)(I.ClanDiscoveryCardView, {
+              children: (0, a.jsx)(T.ClanDiscoveryCardView, {
                 clan: h,
                 className: M.clanCardCenter
               })
@@ -318,20 +321,20 @@ t.default = s.memo(function(e) {
         className: M.clanCardInnerContainer,
         style: {
           ...b,
-          ...T
+          ...A
         },
-        children: (0, a.jsx)(I.ClanDiscoveryCardView, {
-          clan: v.FAKE_DISCOVERY_UPSELL_CLANS["2"],
+        children: (0, a.jsx)(T.ClanDiscoveryCardView, {
+          clan: R.FAKE_DISCOVERY_UPSELL_CLANS["2"],
           className: M.clanCardInnerRight
         })
       }), (0, a.jsx)(r.animated.div, {
         className: M.clanCardOuterContainer,
         style: {
           ...j,
-          ...T
+          ...A
         },
-        children: (0, a.jsx)(I.ClanDiscoveryCardView, {
-          clan: v.FAKE_DISCOVERY_UPSELL_CLANS["3"],
+        children: (0, a.jsx)(T.ClanDiscoveryCardView, {
+          clan: R.FAKE_DISCOVERY_UPSELL_CLANS["3"],
           className: M.clanCardOuterRight
         })
       })]
