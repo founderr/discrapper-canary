@@ -228,11 +228,11 @@ t.default = e => {
                 })
               }), (0, s.jsx)(f.Text, {
                 variant: "text-xs/normal",
-                children: Q ? O.default.Messages.QUESTS_CLAIM_BY.format({
+                children: Q ? O.default.Messages.QUESTS_CLAIM_BY_DATE.format({
                   expirationDate: X
                 }) : l ? O.default.Messages.QUESTS_EXPIRED_ON.format({
                   expirationDate: q
-                }) : O.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
+                }) : O.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                   expirationDate: q
                 })
               })]

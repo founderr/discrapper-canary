@@ -160,9 +160,9 @@ t.default = function(e) {
               }), (0, a.jsx)(u.Text, {
                 color: "header-secondary",
                 variant: "text-xs/medium",
-                children: el ? b.default.Messages.QUESTS_CLAIM_BY.format({
+                children: el ? b.default.Messages.QUESTS_CLAIM_BY_DATE.format({
                   expirationDate: X
-                }) : b.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
+                }) : b.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                   expirationDate: q
                 })
               })]

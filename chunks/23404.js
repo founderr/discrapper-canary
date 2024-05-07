@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("497505"),
   S = n("918701"),
   p = n("874137"),
-  I = n("611855"),
-  g = n("670638"),
+  g = n("611855"),
+  I = n("670638"),
   T = n("667105"),
   A = n("860151"),
   N = n("981631"),
@@ -47,9 +47,9 @@ function L(e) {
       }), (0, a.jsx)(u.Text, {
         variant: "text-xs/normal",
         color: "header-secondary",
-        children: f ? v.default.Messages.QUESTS_CLAIM_BY.format({
+        children: f ? v.default.Messages.QUESTS_CLAIM_BY_DATE.format({
           expirationDate: l
-        }) : v.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
+        }) : v.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
           expirationDate: s
         })
       })]
@@ -60,7 +60,7 @@ t.default = function(e) {
   var t, n, l;
   let {
     quest: o
-  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [O, M] = s.useState(!1), P = s.useCallback(() => M(!0), []), y = s.useCallback(() => M(!1), []), x = s.useCallback(e => {
+  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [O, M] = s.useState(!1), y = s.useCallback(() => M(!0), []), P = s.useCallback(() => M(!1), []), x = s.useCallback(e => {
     e.stopPropagation()
   }, []), D = s.useCallback(() => {
     (0, h.enrollInQuest)(o.id, {
@@ -82,7 +82,7 @@ t.default = function(e) {
   }, [o]), j = (0, T.useHandleClaimQuestsReward)({
     quest: o,
     location: m.QuestContent.ACTIVITY_PANEL
-  }), G = (0, _.useIsQuestExpired)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  }), G = (0, _.useIsQuestExpired)(o), k = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, w = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
   return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || G || F ? null : (0, a.jsx)(p.QuestContentImpressionTracker, {
     questOrQuests: o,
     questContent: m.QuestContent.ACTIVITY_PANEL,
@@ -93,21 +93,21 @@ t.default = function(e) {
           e.current = t
         },
         className: i()(R.wrapper, {
-          [R.wrapperQuestAccepted]: w
+          [R.wrapperQuestAccepted]: k
         }),
         onClick: x,
         onKeyPress: x,
-        onFocus: P,
-        onMouseEnter: P,
-        onBlur: y,
-        onMouseLeave: y,
+        onFocus: y,
+        onMouseEnter: y,
+        onBlur: P,
+        onMouseLeave: P,
         children: [(0, a.jsxs)("div", {
           className: R.utils,
-          children: [w ? (0, a.jsx)(L, {
+          children: [k ? (0, a.jsx)(L, {
             quest: o
-          }) : (0, a.jsx)(I.default, {
+          }) : (0, a.jsx)(g.default, {
             textOpacity: .5
-          }), (0, a.jsx)(g.QuestsEntryContextMenuPopout, {
+          }), (0, a.jsx)(I.QuestsEntryContextMenuPopout, {
             quest: o,
             questContent: m.QuestContent.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
@@ -120,7 +120,7 @@ t.default = function(e) {
               })
             })
           })]
-        }), !w && (0, a.jsxs)(a.Fragment, {
+        }), !k && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(L, {
             quest: o
           }), (0, a.jsx)(u.Text, {
@@ -131,14 +131,14 @@ t.default = function(e) {
               quest: o
             })
           })]
-        }), w && !k && (0, a.jsx)(A.default, {
+        }), k && !w && (0, a.jsx)(A.default, {
           autoplay: O,
           className: R.rewardTileWithInstructions,
           quest: o,
           questContent: m.QuestContent.ACTIVITY_PANEL
         }), (0, a.jsxs)("div", {
           className: R.ctas,
-          children: [!w && (0, a.jsxs)(a.Fragment, {
+          children: [!k && (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(u.Button, {
               className: R.cta,
               color: u.Button.Colors.PRIMARY,
@@ -155,14 +155,14 @@ t.default = function(e) {
               submitting: c,
               children: v.default.Messages.QUESTS_ACCEPT_QUEST
             })]
-          }), w && !k && (0, a.jsx)(u.Button, {
+          }), k && !w && (0, a.jsx)(u.Button, {
             className: R.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: b,
             size: u.Button.Sizes.SMALL,
             children: v.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
-          }), k && (0, a.jsx)(u.Button, {
+          }), w && (0, a.jsx)(u.Button, {
             className: R.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
