@@ -26397,8 +26397,13 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     color: var(--interactive-normal)
 }
 
-.viewFullBioText_fe72b1:hover {
+.viewFullBioText_fe72b1:hover,
+.viewFullBioText_fe72b1:focus-visible {
     color: var(--interactive-hover)
+}
+
+.viewFullBioText_fe72b1:active {
+    color: var(--interactive-active)
 }
 
 .descriptionClamp__07797 {
