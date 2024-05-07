@@ -25,7 +25,6 @@ function l(e) {
       channelId: l,
       onClose: u
     }), !d && (0, i.jsx)(a.default, {
-      type: "action",
       user: t,
       guildId: n,
       onClose: u

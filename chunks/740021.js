@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return U
   }
 }), s("47120");
 var l = s("735250");
@@ -18,65 +18,70 @@ var a = s("442837"),
   S = s("78675"),
   m = s("438163"),
   I = s("652853"),
-  E = s("30556"),
-  v = s("228168"),
-  _ = s("182294"),
-  T = s("231338"),
-  x = s("100651");
-let N = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
+  E = s("705556"),
+  v = s("30556"),
+  _ = s("228168"),
+  T = s("182294"),
+  x = s("231338"),
+  N = s("100651");
+let A = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
-function A(e) {
+function U(e) {
   let {
     user: t,
     displayProfile: s,
     activity: i,
     customStatusActivity: d,
-    guildId: A,
-    channelId: U,
-    onClose: g
+    guildId: U,
+    channelId: g,
+    onClose: C
   } = e, {
-    theme: C
-  } = (0, I.useUserProfileThemeContext)(), h = (0, c.default)(t.id, A), {
-    avatarSrc: p,
-    eventHandlers: R,
-    avatarDecorationSrc: M
+    theme: h
+  } = (0, I.useUserProfileThemeContext)(), p = (0, c.default)(t.id, U), {
+    avatarSrc: R,
+    eventHandlers: M,
+    avatarDecorationSrc: P
   } = (0, f.default)({
     user: t,
     guildId: null == s ? void 0 : s.guildId,
-    size: _.AvatarSizes.SIZE_120
-  }), [P, j] = (0, a.useStateFromStoresArray)([u.default], () => {
+    size: T.AvatarSizes.SIZE_120
+  }), [j, y] = (0, a.useStateFromStoresArray)([u.default], () => {
     let e = u.default.isMobileOnline(t.id);
-    return (0, o.shouldDisableUserPresenceInChannel)(t, U) ? [T.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [T.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
+    return (0, o.shouldDisableUserPresenceInChannel)(t, g) ? [x.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [x.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
   });
   return (0, l.jsxs)("header", {
     children: [(0, l.jsx)(S.default, {
       user: t,
       displayProfile: s,
-      profileType: v.UserProfileTypes.FULL_SIZE,
+      profileType: _.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null
     }), (0, l.jsx)("div", {
-      className: x.inner,
+      className: N.inner,
       children: (0, l.jsxs)("div", {
-        ...R,
-        children: [(0, l.jsx)(N, {
-          src: p,
-          avatarDecoration: M,
-          size: _.AvatarSizes.SIZE_120,
-          className: x.avatar,
-          status: P,
-          statusBackdropColor: (0, n.getStatusBackdropColor)(C),
+        ...M,
+        children: [(0, l.jsx)(A, {
+          src: R,
+          avatarDecoration: P,
+          size: T.AvatarSizes.SIZE_120,
+          className: N.avatar,
+          status: j,
+          statusBackdropColor: (0, n.getStatusBackdropColor)(h),
           "aria-label": t.username,
-          isMobile: j,
+          isMobile: y,
           statusTooltip: !0
-        }), (0, l.jsx)("div", {
-          className: x.buttons,
-          children: h && (0, l.jsx)(E.default, {
+        }), (0, l.jsxs)("div", {
+          className: N.buttons,
+          children: [p && (0, l.jsx)(v.default, {
             user: t,
-            onClose: g
-          })
+            onClose: C
+          }), !p && (0, l.jsx)(E.default, {
+            user: t,
+            guildId: U,
+            onClose: C
+          })]
         }), (0, l.jsx)(m.UserProfileCustomStatusBubble, {
           statusActivity: d,
-          profileType: v.UserProfileTypes.FULL_SIZE
+          profileType: _.UserProfileTypes.FULL_SIZE
         })]
       })
     })]
