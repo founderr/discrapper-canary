@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return A
   }
 }), s("47120");
 var l = s("735250");
@@ -23,20 +23,20 @@ var a = s("442837"),
   _ = s("182294"),
   T = s("231338"),
   x = s("100651");
-let A = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
+let N = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
-function N(e) {
+function A(e) {
   let {
     user: t,
     displayProfile: s,
     activity: i,
     customStatusActivity: d,
-    guildId: N,
+    guildId: A,
     channelId: U,
     onClose: g
   } = e, {
     theme: C
-  } = (0, I.useUserProfileThemeContext)(), h = (0, c.default)(t.id, N), {
+  } = (0, I.useUserProfileThemeContext)(), h = (0, c.default)(t.id, A), {
     avatarSrc: p,
     eventHandlers: R,
     avatarDecorationSrc: M
@@ -58,7 +58,7 @@ function N(e) {
       className: x.inner,
       children: (0, l.jsxs)("div", {
         ...R,
-        children: [(0, l.jsx)(A, {
+        children: [(0, l.jsx)(N, {
           src: p,
           avatarDecoration: M,
           size: _.AvatarSizes.SIZE_120,

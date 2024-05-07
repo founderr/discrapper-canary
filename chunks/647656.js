@@ -80,13 +80,13 @@ t.default = {
       let {
         assets: p,
         party: I,
-        secrets: T,
-        timestamps: g,
+        secrets: g,
+        timestamps: T,
         buttons: A,
         type: N
       } = _;
-      if ((null == N || N !== E.ActivityTypes.PLAYING && !m) && (_.type = E.ActivityTypes.PLAYING), null != T) {
-        let e = s().values(T).filter(e => !!e);
+      if ((null == N || N !== E.ActivityTypes.PLAYING && !m) && (_.type = E.ActivityTypes.PLAYING), null != g) {
+        let e = s().values(g).filter(e => !!e);
         if (null != I && s().intersection(e, [I.id]).length > 0 && !h.includes(a.application.id)) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot match the party id");
@@ -99,8 +99,8 @@ t.default = {
       }
       if (null != A && (_.metadata = {
           button_urls: A.map(e => e.url)
-        }, _.buttons = A.map(e => e.label)), null != g)
-        for (let e of Object.keys(g)) Date.now().toString().length - g[e].toString().length > 2 && (g[e] = Math.floor(g[e] * o.default.Millis.SECOND));
+        }, _.buttons = A.map(e => e.label)), null != T)
+        for (let e of Object.keys(T)) Date.now().toString().length - T[e].toString().length > 2 && (T[e] = Math.floor(T[e] * o.default.Millis.SECOND));
       if (null == p) n = Promise.resolve([]);
       else {
         if (null == a.application || null == a.application.id) throw Error();

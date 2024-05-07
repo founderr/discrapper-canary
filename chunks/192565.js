@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return T
   }
 });
 var a = n("735250"),
@@ -22,14 +22,14 @@ var a = n("735250"),
   S = n("641037"),
   p = n("308083"),
   I = n("689938"),
-  T = n("156610");
+  g = n("156610");
 
-function g(e) {
+function T(e) {
   let {
     guildId: t
   } = e, {
     progress: n,
-    errors: g
+    errors: T
   } = (0, l.useStateFromStoresObject)([u.default], () => {
     var e;
     let n = u.default.getStateForGuild(t);
@@ -66,11 +66,11 @@ function g(e) {
     steps: U,
     sideMargin: 24,
     verticalMargin: 24,
-    className: T.sequencer,
-    innerClassName: T.sequencer,
-    animatedNodeClassName: T.sequencer,
+    className: g.sequencer,
+    innerClassName: g.sequencer,
+    animatedNodeClassName: g.sequencer,
     children: (0, a.jsx)(i.ScrollerThin, {
-      className: T.scroller,
+      className: g.scroller,
       fade: !0,
       children: (() => {
         switch (M) {
@@ -81,7 +81,7 @@ function g(e) {
               handleUpdate: x,
               gameApplicationIds: N,
               requiredGameId: A,
-              error: null == g ? void 0 : g.gameApplicationIds
+              error: null == T ? void 0 : T.gameApplicationIds
             });
           case p.ClanSetupSteps.PLAYSTYLE:
             return (0, a.jsx)(_.default, {
@@ -89,7 +89,7 @@ function g(e) {
               description: I.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
               handleUpdate: D,
               playstyle: v,
-              error: null == g ? void 0 : g.playstyle
+              error: null == T ? void 0 : T.playstyle
             });
           case p.ClanSetupSteps.UTILITY_TRAITS:
             return (0, a.jsx)(m.default, {
@@ -103,20 +103,20 @@ function g(e) {
             return (0, a.jsx)(E.default, {
               handleUpdate: y,
               interests: R,
-              error: null == g ? void 0 : g.interests
+              error: null == T ? void 0 : T.interests
             });
           case p.ClanSetupSteps.DESCRIPTION:
             return (0, a.jsx)(c.default, {
               handleUpdate: y,
               description: L,
               wildcardDescriptors: n.wildcardDescriptors,
-              errors: g
+              errors: T
             });
           case p.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
             return (0, a.jsx)(C.default, {
               handleUpdate: y,
               tag: O,
-              error: null == g ? void 0 : g.tag,
+              error: null == T ? void 0 : T.tag,
               badge: n.badgeKind,
               primaryColor: n.badgePrimaryColor,
               secondaryColor: n.badgeSecondaryColor,

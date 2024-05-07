@@ -18,9 +18,9 @@ var a = n("735250"),
   S = n("207796"),
   p = n("308083"),
   I = n("689938"),
-  T = n("506254");
+  g = n("506254");
 
-function g(e) {
+function T(e) {
   let {
     icon: t,
     text: n,
@@ -35,27 +35,27 @@ function g(e) {
     position: "bottom",
     "aria-label": s,
     shouldShow: o,
-    tooltipClassName: i()(T.filterTooltip, {
-      [T.filterTooltipAutoWidth]: d
+    tooltipClassName: i()(g.filterTooltip, {
+      [g.filterTooltipAutoWidth]: d
     }),
-    tooltipContentClassName: T.filterTooltipContent,
+    tooltipContentClassName: g.filterTooltipContent,
     children: e => (0, a.jsxs)(E.Button, {
       ...e,
-      className: i()(T.filterPill, {
-        [T.filterPillActive]: o
+      className: i()(g.filterPill, {
+        [g.filterPillActive]: o
       }),
-      innerClassName: T.filterPillContents,
+      innerClassName: g.filterPillContents,
       look: E.ButtonLooks.OUTLINED,
       color: E.ButtonColors.CUSTOM,
       onClick: r,
       children: [t, (0, a.jsxs)("div", {
-        className: T.filterPillText,
+        className: g.filterPillText,
         children: [(0, a.jsx)(E.Text, {
           variant: "text-xs/medium",
           color: "none",
           children: n
         }), (0, a.jsx)(u.ChevronSmallDownIcon, {
-          className: T.chevron,
+          className: g.chevron,
           color: "currentColor"
         })]
       })]
@@ -74,7 +74,7 @@ function A() {
     o = t.slice(0, 2),
     u = t.length - 2,
     c = (0, a.jsxs)("div", {
-      className: T.gamesTooltip,
+      className: g.gamesTooltip,
       children: [o.map(e => (0, a.jsx)(C.default, {
         applicationId: e
       }, e)), u > 0 && (0, a.jsx)(C.default, {
@@ -83,10 +83,10 @@ function A() {
       })]
     }),
     f = (0, a.jsx)(d.GameControllerIcon, {
-      className: T.filterPillIcon,
+      className: g.filterPillIcon,
       color: "currentColor"
     });
-  return (0, a.jsx)(g, {
+  return (0, a.jsx)(T, {
     icon: f,
     text: I.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
       count: t.length
@@ -124,10 +124,10 @@ function N() {
       })]
     }),
     d = (0, a.jsx)(c.ReactionIcon, {
-      className: T.filterPillIcon,
+      className: g.filterPillIcon,
       color: "currentColor"
     });
-  return (0, a.jsx)(g, {
+  return (0, a.jsx)(T, {
     icon: d,
     text: i,
     tooltip: u,
@@ -145,9 +145,9 @@ function v() {
     }, [t]);
   if (null == e) return null;
   let l = (0, a.jsx)("div", {
-      className: T.traitsTooltip,
+      className: g.traitsTooltip,
       children: e.map(e => (0, a.jsx)("div", {
-        className: T.trait,
+        className: g.trait,
         children: (0, a.jsx)(E.Text, {
           variant: "text-xs/medium",
           color: "none",
@@ -156,10 +156,10 @@ function v() {
       }, e))
     }),
     i = (0, a.jsx)(f.TagIcon, {
-      className: T.filterPillIcon,
+      className: g.filterPillIcon,
       color: "currentColor"
     });
-  return (0, a.jsx)(g, {
+  return (0, a.jsx)(T, {
     icon: i,
     text: I.default.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
     tooltip: l,
@@ -173,13 +173,13 @@ function R() {
   let e = (0, S.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     t = (0, o.useStateFromStoresArray)([m.default], () => Object.values(m.default.getGuilds()));
   return (0, h.useAnyClanPrepilotExperimentEnabled)(t, "clan_discovery_add_clan") ? (0, a.jsxs)(E.Clickable, {
-    className: i()(T.buttonPill),
+    className: i()(g.buttonPill),
     onClick: () => e(S.ClanDiscoveryMode.ADMIN_UPSELL),
     children: [(0, a.jsx)(f.TagIcon, {
-      className: T.filterPillIcon,
+      className: g.filterPillIcon,
       color: "currentColor"
     }), (0, a.jsx)("div", {
-      className: T.filterPillText,
+      className: g.filterPillText,
       children: (0, a.jsx)(E.Text, {
         variant: "text-xs/medium",
         color: "none",
@@ -190,15 +190,15 @@ function R() {
 }
 t.default = function() {
   return (0, a.jsxs)("div", {
-    className: T.toolbar,
+    className: g.toolbar,
     children: [(0, a.jsx)("div", {
-      className: T.addClan,
+      className: g.addClan,
       children: (0, a.jsx)(R, {})
     }), (0, a.jsxs)("div", {
-      className: T.preferences,
+      className: g.preferences,
       children: [(0, a.jsx)(A, {}), (0, a.jsx)(N, {}), (0, a.jsx)(v, {})]
     }), (0, a.jsx)("div", {
-      className: T.actions
+      className: g.actions
     })]
   })
 }

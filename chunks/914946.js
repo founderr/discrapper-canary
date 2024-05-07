@@ -69,8 +69,8 @@ var a, s = n("729594"),
   S = n("375954"),
   p = n("158776"),
   I = n("594174"),
-  T = n("979651"),
-  g = n("70956"),
+  g = n("979651"),
+  T = n("70956"),
   A = n("5192"),
   N = n("226951"),
   v = n("996106"),
@@ -86,7 +86,7 @@ let M = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
     return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
   }(),
   y = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(P), "|discordapp.com|discord.com)$")),
-  x = 1 * g.default.Millis.MINUTE,
+  x = 1 * T.default.Millis.MINUTE,
   D = {};
 
 function b(e) {
@@ -113,7 +113,7 @@ function G(e, t) {
   })), Promise.all(n).then(() => {
     var n;
     let s = (!e.isNSFW() || (null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(w) : [],
-      l = Object.values(T.default.getVoiceStatesForChannel(e.id)).map(t => k(a, e.id, t));
+      l = Object.values(g.default.getVoiceStatesForChannel(e.id)).map(t => k(a, e.id, t));
     return {
       id: e.id,
       name: e.name,

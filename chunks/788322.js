@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("879484"),
   p = n("26580"),
   I = n("206887"),
-  T = n("981631"),
-  g = n("689938"),
+  g = n("981631"),
+  T = n("689938"),
   A = n("37807"),
   N = n("129512"),
   v = n("330065");
@@ -54,9 +54,9 @@ t.default = e => {
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
-      case T.ThemeTypes.DARK:
+      case g.ThemeTypes.DARK:
         return N;
-      case T.ThemeTypes.LIGHT:
+      case g.ThemeTypes.LIGHT:
         return v
     }
   }(R), Y = null !== (t = _.default.getGuildIconURL({
@@ -71,11 +71,11 @@ t.default = e => {
       if ((0, c.isAtGuildCapAndNonPremium)()) {
         (0, f.default)({
           analyticsSource: {
-            page: T.AnalyticsPages.GUILD_DISCOVERY
+            page: g.AnalyticsPages.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: T.AnalyticsPages.GUILD_DISCOVERY,
-            section: T.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+            page: g.AnalyticsPages.GUILD_DISCOVERY,
+            section: g.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
           analyticsLocations: B
         });
@@ -180,7 +180,7 @@ t.default = e => {
               children: (0, a.jsx)(r.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
-                children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                   membersOnline: b
                 })
               })
@@ -192,7 +192,7 @@ t.default = e => {
                 children: (0, a.jsx)(r.Text, {
                   variant: "text-xs/normal",
                   color: "header-secondary",
-                  children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                  children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                     count: U
                   })
                 })

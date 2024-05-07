@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("881201"),
   p = n("626135"),
   I = n("51144"),
-  T = n("981631"),
-  g = n("689938"),
+  g = n("981631"),
+  T = n("689938"),
   A = n("424288");
 
 function N(e) {
@@ -52,15 +52,15 @@ function v(e) {
     e.stopPropagation(), _.CustomStatusSetting.updateSetting(void 0)
   };
   return null != t ? (0, a.jsx)("div", {
-    "aria-label": g.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+    "aria-label": T.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
     children: (0, a.jsx)(c.default, {
       className: null != t.emoji ? A.customStatusWithEmoji : A.customStatusItem,
       activity: t,
       emojiClassName: A.customEmoji,
       textClassName: A.customText,
-      placeholderText: g.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+      placeholderText: T.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
       children: (0, a.jsx)(u.Tooltip, {
-        text: g.default.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS,
+        text: T.default.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS,
         children: e => (0, a.jsx)(u.Button, {
           ...e,
           className: A.clearStatusButton,
@@ -77,12 +77,12 @@ function v(e) {
     })
   }) : (0, a.jsxs)("div", {
     className: i()(A.statusItem, A.__invalid_customStatusContentIcon),
-    "aria-label": g.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
+    "aria-label": T.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
     children: [(0, a.jsx)("div", {
       className: A.customEmojiPlaceholder
     }), (0, a.jsx)("div", {
       className: A.status,
-      children: g.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
+      children: T.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
     })]
   })
 }
@@ -93,7 +93,7 @@ function R(e) {
   } = e;
   return (0, a.jsxs)("div", {
     className: i()(A.statusItem, A.statusItemNoPadding, A.__invalid_customStatusContentIcon, A.switchAccountsItem),
-    "aria-label": g.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
+    "aria-label": T.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
     children: [(0, a.jsx)(S.default, {
       width: 18,
       height: 18,
@@ -101,7 +101,7 @@ function R(e) {
       color: t ? o.default.unsafe_rawColors.WHITE_500.css : "currentColor"
     }), (0, a.jsx)("div", {
       className: A.status,
-      children: g.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE
+      children: T.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE
     })]
   })
 }
@@ -113,7 +113,7 @@ let L = e => {
     onSelect: r
   } = e, o = (0, h.useMultiAccountMenuItems)();
   s.useEffect(() => {
-    p.default.track(T.AnalyticEvents.OPEN_POPOUT, {
+    p.default.track(g.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != t,
       location: i.location
@@ -127,7 +127,7 @@ let L = e => {
   return (0, a.jsxs)(u.Menu, {
     navId: "status-picker",
     variant: "fixed",
-    "aria-label": g.default.Messages.SET_STATUS,
+    "aria-label": T.default.Messages.SET_STATUS,
     onClose: l,
     onSelect: r,
     children: [(0, a.jsx)(u.MenuItem, {
@@ -165,7 +165,7 @@ let L = e => {
         } = e;
         return (0, a.jsx)(N, {
           status: u.StatusTypes.DND,
-          description: g.default.Messages.STATUS_DND_HELP,
+          description: T.default.Messages.STATUS_DND_HELP,
           focused: t
         })
       },
@@ -179,7 +179,7 @@ let L = e => {
         } = e;
         return (0, a.jsx)(N, {
           status: u.StatusTypes.INVISIBLE,
-          description: g.default.Messages.STATUS_INVISIBLE_HELPER,
+          description: T.default.Messages.STATUS_INVISIBLE_HELPER,
           focused: t
         })
       },

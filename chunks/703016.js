@@ -18,8 +18,8 @@ var a = n("913527"),
   S = n("292959"),
   p = n("699516"),
   I = n("944486"),
-  T = n("9156"),
-  g = n("594174"),
+  g = n("9156"),
+  T = n("594174"),
   A = n("51144"),
   N = n("196051"),
   v = n("441729"),
@@ -36,7 +36,7 @@ function b(e, t, n, a) {
   let l = C.default.getGuild(n),
     i = e.replace(D, O.default.Messages.SPOILER).replace(/<@!?(\d+)>/g, (e, t) => {
       var a;
-      let s = g.default.getUser(t);
+      let s = T.default.getUser(t);
       if (null == s) return e;
       return null !== (a = _.default.getNick(n, s.id)) && void 0 !== a ? a : A.default.getName(s)
     }).replace(/<@&?(\d+)>/g, (e, t) => {
@@ -44,7 +44,7 @@ function b(e, t, n, a) {
       return null != n && null != n.name ? n.name : O.default.Messages.MESSAGE_TTS_DELETED_ROLE
     }).replace(/<#(\d+)>/g, (e, t) => {
       let n = h.default.getChannel(t);
-      return null == n ? e : (0, r.computeChannelName)(n, g.default, p.default)
+      return null == n ? e : (0, r.computeChannelName)(n, T.default, p.default)
     }).replace(/<a?:(\w+):(\d+)>/g, (e, t) => "".concat(O.default.Messages.EMOJI, " ").concat(t)).replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => "/".concat(t)).replace(/<t:(\d+):([A-Z]|[a-z])>/g, (e, t, n) => {
       let a = o.TIMESTAMP_FORMATS[n],
         l = 1e3 * parseInt(t, 10),
@@ -116,9 +116,9 @@ function B(e) {
   if (d || m.default.isSelfDeaf()) return !1;
   let C = h.default.getChannel(o);
   if (null == C) return !1;
-  let g = I.default.getChannelId(),
-    N = E.default.getCurrentSidebarChannelId(g),
-    v = o === g || o === N,
+  let T = I.default.getChannelId(),
+    N = E.default.getCurrentSidebarChannelId(T),
+    v = o === T || o === N,
     O = c.EnableTTSCommand.getSetting() && u.tts && v,
     P = S.default.getTTSType(),
     y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === L.TTSNotificationTypes.ALL_CHANNELS || P === L.TTSNotificationTypes.SELECTED_CHANNEL && v);
@@ -126,7 +126,7 @@ function B(e) {
     if (M.indexOf(u.id) >= 0) return !1;
     M.unshift(u.id) > 10 && M.pop();
     let e = C.getGuildId();
-    if (null != e && T.default.getMutedChannels(e).has(o)) return !1;
+    if (null != e && g.default.getMutedChannels(e).has(o)) return !1;
     let t = null !== (i = null !== (l = _.default.getNick(e, null === (a = u.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : A.default.getName(u.author)) && void 0 !== i ? i : "",
       n = u.type === L.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
       d = null != n ? null !== (r = _.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : A.default.getName(n) : null;

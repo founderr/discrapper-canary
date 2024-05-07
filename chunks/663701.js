@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("770471"),
   p = n("158631"),
   I = n("143614"),
-  T = n("463119"),
-  g = n("377171"),
+  g = n("463119"),
+  T = n("377171"),
   A = n("243778"),
   N = n("922409"),
   v = n("899740"),
@@ -79,7 +79,7 @@ let ee = e => {
       ...n,
       ...s,
       children: [i.length > 0 && r && (0, a.jsx)(K.TextBadge, {
-        color: g.default.BG_BRAND,
+        color: T.default.BG_BRAND,
         text: (0, a.jsxs)("div", {
           className: $.broadcastingBadge,
           children: [(0, a.jsx)(B.default, {
@@ -209,7 +209,7 @@ let ee = e => {
         } = e;
         return t === c.DismissibleContent.FAMILY_CENTER_NEW_BADGE ? (0, a.jsx)(K.TextBadge, {
           text: J.default.Messages.NEW,
-          color: g.default.BG_BRAND
+          color: T.default.BG_BRAND
         }) : null
       }
     })
@@ -300,7 +300,7 @@ let eo = e => {
         }
       }, "activities") : null, (0, a.jsx)(ea, {
         selected: null == c ? null != s && s.startsWith(X.Routes.MESSAGE_REQUESTS) : c === X.Routes.MESSAGE_REQUESTS
-      }, "message-requests"), (0, a.jsx)(T.CollectiblesShopButton, {
+      }, "message-requests"), (0, a.jsx)(g.CollectiblesShopButton, {
         selected: c === X.Routes.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(X.Routes.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {

@@ -24,7 +24,7 @@ function h(e) {
     sidebarWidth: _,
     windowWidth: C,
     transition: m
-  } = e, S = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = s.useRef(null), I = s.useMemo(() => (C - _) / 2, [_, C]), [T, g, A] = (0, l.useSpring)(() => ({
+  } = e, S = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = s.useRef(null), I = s.useMemo(() => (C - _) / 2, [_, C]), [g, T, A] = (0, l.useSpring)(() => ({
     to: [{
       transform: "translateX(-8px)"
     }, {
@@ -33,12 +33,12 @@ function h(e) {
     loop: !0
   }));
   s.useEffect(() => {
-    n && (A(), g({
+    n && (A(), T({
       to: {
         transform: "translateX(0px)"
       }
     }))
-  }, [g, n, A]);
+  }, [T, n, A]);
   let N = s.useCallback(() => {
       var e;
       null === (e = p.current) || void 0 === e || e.scrollIntoView({
@@ -79,7 +79,7 @@ function h(e) {
       children: (0, a.jsxs)("div", {
         className: E.sidebarRightDecoration,
         children: [(0, a.jsx)(l.animated.div, {
-          style: S ? void 0 : T,
+          style: S ? void 0 : g,
           children: (0, a.jsx)(r.Button, {
             className: E.signButton,
             size: r.Button.Sizes.SMALL,

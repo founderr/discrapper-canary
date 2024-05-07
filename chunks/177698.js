@@ -27,8 +27,8 @@ t.default = (0, d.default)(e => {
     prompt: S,
     disableGuildSelect: p,
     disclosures: I,
-    integrationType: T
-  } = e, g = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(m), A = null != T ? null == o ? void 0 : o.get(T) : void 0, N = null !== (t = null == A ? void 0 : A.application) && void 0 !== t ? t : i.default.getApplication(n);
+    integrationType: g
+  } = e, T = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(m), A = null != g ? null == o ? void 0 : o.get(g) : void 0, N = null !== (t = null == A ? void 0 : A.application) && void 0 !== t ? t : i.default.getApplication(n);
   return new Promise(e => {
     let t = t => {
       let {
@@ -53,11 +53,11 @@ t.default = (0, d.default)(e => {
       channelId: m,
       prompt: S,
       disableGuildSelect: "boolean" == typeof p ? p : "true" === p,
-      integrationType: T
+      integrationType: g
     }), {
-      modalKey: g,
+      modalKey: T,
       onCloseRequest: () => {
-        (0, s.closeModal)(g), e(void 0)
+        (0, s.closeModal)(T), e(void 0)
       }
     }, null != N && (0, l.default)(N, m) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
   })

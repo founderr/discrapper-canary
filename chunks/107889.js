@@ -22,8 +22,8 @@ var l = s("735250"),
   _ = s("301984"),
   T = s("94918"),
   x = s("664794"),
-  A = s("980768"),
-  N = s("806926"),
+  N = s("980768"),
+  A = s("806926"),
   U = s("740021"),
   g = s("228168"),
   C = s("981631"),
@@ -52,7 +52,7 @@ function R(e) {
     channelId: R,
     messageId: M,
     roleId: P
-  }), [k, w] = a.useState(b), V = (0, I.default)(t.id), H = (0, I.default)(t.id, b), Y = null == k ? V : H, {
+  }), [k, w] = a.useState(b), H = (0, I.default)(t.id), V = (0, I.default)(t.id, b), Y = null == k ? H : V, {
     activity: z,
     customStatusActivity: W
   } = (0, i.useStateFromStoresObject)([f.default], () => ({
@@ -88,7 +88,7 @@ function R(e) {
           displayProfile: Y,
           profileType: g.UserProfileTypes.FULL_SIZE,
           ref: Z,
-          children: [(0, l.jsxs)(A.default, {
+          children: [(0, l.jsxs)(N.default, {
             profileType: g.UserProfileTypes.FULL_SIZE,
             isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !K,
             children: [(0, l.jsx)(T.default, {
@@ -109,7 +109,7 @@ function R(e) {
             }), (0, l.jsx)(x.default, {
               user: t,
               guildId: b,
-              viewProfileItem: (null == H ? void 0 : H.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, l.jsx)(n.MenuItem, {
+              viewProfileItem: (null == V ? void 0 : V.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, l.jsx)(n.MenuItem, {
                 id: "view-main-profile",
                 label: h.default.Messages.VIEW_MAIN_PROFILE,
                 subtext: h.default.Messages.AKA_DISPLAY_NAME.format({
@@ -143,7 +143,7 @@ function R(e) {
             activity: z,
             customStatusActivity: W,
             onClose: D
-          }), (0, l.jsx)(N.default, {
+          }), (0, l.jsx)(A.default, {
             user: t,
             displayProfile: Y,
             initialSection: y,

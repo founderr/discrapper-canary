@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("601463"),
   p = n("192565"),
   I = n("641037"),
-  T = n("689938"),
-  g = n("156610");
+  g = n("689938"),
+  T = n("156610");
 let A = {
     mass: 1,
     tension: 300,
@@ -132,33 +132,33 @@ function v(e) {
     }, [n, t, R]);
   return (0, a.jsxs)(o.animated.div, {
     style: w,
-    className: g.modal,
+    className: T.modal,
     children: [(0, a.jsx)(d.Button, {
-      className: g.close,
+      className: T.close,
       look: d.Button.Looks.OUTLINED,
       size: d.Button.Sizes.MEDIUM,
       color: d.Button.Colors.PRIMARY,
       onClick: n,
-      children: T.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
+      children: g.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, a.jsxs)("div", {
-      className: g.content,
+      className: T.content,
       children: [(0, a.jsxs)("div", {
-        className: g.panel,
+        className: T.panel,
         children: [(0, a.jsx)(o.animated.div, {
-          className: g.stepsContainer,
+          className: T.stepsContainer,
           style: k,
           children: (0, a.jsx)(o.animated.div, {
             style: F,
-            className: i()(g.steps, {
-              [g.hidden]: !j
+            className: i()(T.steps, {
+              [T.hidden]: !j
             }),
             children: (0, a.jsx)(p.default, {
               guildId: t
             })
           })
         }), (0, a.jsx)("div", {
-          className: i()(g.navigationContainer, {
-            [g.elevatedNavigationContainer]: !j
+          className: i()(T.navigationContainer, {
+            [T.elevatedNavigationContainer]: !j
           }),
           children: (0, a.jsx)(m.default, {
             steps: M,
@@ -166,20 +166,20 @@ function v(e) {
             updateCurrentStep: Y,
             animationStyle: F,
             animationClassName: i()({
-              [g.hidden]: !j
+              [T.hidden]: !j
             })
           })
         })]
       }), (0, a.jsx)(o.animated.div, {
         style: F,
-        className: i()(g.divider, {
-          [g.hidden]: !j,
-          [g.dividerResponsive]: j
+        className: i()(T.divider, {
+          [T.hidden]: !j,
+          [T.dividerResponsive]: j
         })
       }), (0, a.jsx)(o.animated.div, {
         style: B,
-        className: i()(g.sidebar, {
-          [g.sidebarResponsive]: j
+        className: i()(T.sidebar, {
+          [T.sidebarResponsive]: j
         }),
         children: (0, a.jsx)(S.default, {
           guildId: t,
@@ -192,14 +192,14 @@ function v(e) {
       })]
     }), V((e, t) => t && (0, a.jsxs)(o.animated.div, {
       style: e,
-      className: g.submit,
+      className: T.submit,
       children: [W && (0, a.jsx)(d.Text, {
-        className: g.errorText,
+        className: T.errorText,
         color: "status-danger",
         variant: "text-sm/normal",
-        children: T.default.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
+        children: g.default.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
           backHook: (e, t) => (0, a.jsx)(d.Anchor, {
-            className: g.errorLink,
+            className: T.errorLink,
             onClick: z,
             children: e
           }, t)
@@ -212,7 +212,7 @@ function v(e) {
         size: d.Button.Sizes.MEDIUM,
         color: d.Button.Colors.BRAND,
         onClick: q,
-        children: T.default.Messages.FINISH
+        children: g.default.Messages.FINISH
       })]
     }))]
   })

@@ -23,8 +23,8 @@ var a, s, l = n("470079"),
   S = n("541566"),
   p = n("192513"),
   I = n("255791"),
-  T = n("70956"),
-  g = n("267642"),
+  g = n("70956"),
+  T = n("267642"),
   A = n("981631");
 
 function N(e) {
@@ -48,7 +48,7 @@ function N(e) {
     L = (0, i.useStateFromStores)([m.default], () => m.default.can(A.Permissions.ADMINISTRATOR, e)),
     O = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     M = null != e ? e.premiumSubscriberCount : 0,
-    P = (0, g.getGuildTierFromAppliedBoostCount)(M, n) !== A.BoostedGuildTiers.NONE,
+    P = (0, T.getGuildTierFromAppliedBoostCount)(M, n) !== A.BoostedGuildTiers.NONE,
     y = null != a && Date.now() - a <= 432e5,
     x = !y && !O && L && P,
     D = (0, u.useGuildHasLiveChannelNotice)(n),
@@ -68,7 +68,7 @@ function N(e) {
       let e = -1;
       return x && (e = window.setTimeout(() => {
         null != n && (0, r.fetchAppliedGuildBoostsForGuild)(n)
-      }, 30 * Math.random() * T.default.Millis.SECOND)), () => {
+      }, 30 * Math.random() * g.default.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
     }, [n, x]), v) return 0;

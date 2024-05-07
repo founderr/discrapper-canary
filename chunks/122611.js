@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("919285"),
   p = n("118470"),
   I = n("413307"),
-  T = n("849688"),
-  g = n("374023"),
+  g = n("849688"),
+  T = n("374023"),
   A = n("661599"),
   N = n("923608"),
   v = n("617899"),
@@ -152,11 +152,11 @@ t.default = e => {
         guild: t
       });
     case O.ConnectedChannelNotices.SIGNUP:
-      return (0, a.jsx)(T.default, {
+      return (0, a.jsx)(g.default, {
         guild: t
       })
   }
-  return g.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(D, {
+  return T.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(D, {
     guild: e.guild
   })
 }

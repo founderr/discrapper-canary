@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return T
   }
 }), n("47120");
 var a = n("735250"),
@@ -23,7 +23,7 @@ var a = n("735250"),
   p = n("186901"),
   I = n("656372");
 
-function T(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -31,7 +31,7 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class g extends s.PureComponent {
+class T extends s.PureComponent {
   componentDidMount() {
     u.setHomeLink(S.Routes.APPLICATION_LIBRARY), (0, E.deepLinkRouteIfLanded)(p.RPCDeepLinks.LIBRARY), o.default.wait(() => (0, d.fetchBranches)()), (0, c.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
   }
@@ -67,13 +67,13 @@ class g extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), T(this, "_scrollerRef", s.createRef()), T(this, "_scrollToOnMount", void 0), T(this, "_scrollToPadding", 0), T(this, "state", {
+    super(...e), g(this, "_scrollerRef", s.createRef()), g(this, "_scrollToOnMount", void 0), g(this, "_scrollToPadding", 0), g(this, "state", {
       includeUpdatesInScroller: !1
-    }), T(this, "handleHeightTallerThanHalfViewportChange", e => {
+    }), g(this, "handleHeightTallerThanHalfViewportChange", e => {
       this.setState({
         includeUpdatesInScroller: e
       })
-    }), T(this, "scrollToRow", (e, t) => {
+    }), g(this, "scrollToRow", (e, t) => {
       let n = this._scrollerRef.current;
       null != n ? (e.focus(), n.scrollIntoViewRect({
         start: t,

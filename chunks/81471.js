@@ -18,22 +18,22 @@ var a = n("735250"),
   S = n("768760"),
   p = n("689938"),
   I = n("268559"),
-  T = n("990291");
-let g = s.memo(function(e) {
+  g = n("990291");
+let T = s.memo(function(e) {
   let {
     channel: t
   } = e, {
     loaded: n,
     error: l,
-    message: g
-  } = (0, C.useMessageRequestPreview)(t), A = (0, r.useStateFromStores)([E.default], () => null != g && E.default.isBlocked(g.author.id), [g]), N = (0, r.useStateFromStores)([f.default], () => f.default.can(m.Permissions.MANAGE_MESSAGES, t)), v = c.RenderSpoilers.useSetting(), {
+    message: T
+  } = (0, C.useMessageRequestPreview)(t), A = (0, r.useStateFromStores)([E.default], () => null != T && E.default.isBlocked(T.author.id), [T]), N = (0, r.useStateFromStores)([f.default], () => f.default.can(m.Permissions.MANAGE_MESSAGES, t)), v = c.RenderSpoilers.useSetting(), {
     content: R
-  } = s.useMemo(() => (null == g ? void 0 : g.content) != null && "" !== g.content ? (0, d.default)(g, {
+  } = s.useMemo(() => (null == T ? void 0 : T.content) != null && "" !== T.content ? (0, d.default)(T, {
     formatInline: !0,
     noStyleAndInteraction: !0
   }) : {
     content: null
-  }, [g]), L = null;
+  }, [T]), L = null;
   if (l) L = (0, a.jsx)(o.Text, {
     className: I.messageReplacement,
     variant: "text-sm/normal",
@@ -41,17 +41,17 @@ let g = s.memo(function(e) {
     children: p.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (n) {
-    if (null != g && A) L = (0, a.jsx)(o.Text, {
+    if (null != T && A) L = (0, a.jsx)(o.Text, {
       className: I.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
       children: p.default.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
     });
-    else if (null != g) {
+    else if (null != T) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, _.renderSingleLineMessage)(g, R, A, i()(I.messageContent, T.inlineFormat, T.__invalid_smallFontSize), {
+      } = (0, _.renderSingleLineMessage)(T, R, A, i()(I.messageContent, g.inlineFormat, g.__invalid_smallFontSize), {
         iconClass: I.messageContentIcon,
         iconSize: S.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
@@ -82,4 +82,4 @@ let g = s.memo(function(e) {
     })
   })
 });
-t.default = g
+t.default = T

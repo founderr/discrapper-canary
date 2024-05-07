@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("10473"),
   p = n("702646"),
   I = n("207796"),
-  T = n("543550"),
-  g = n("976757"),
+  g = n("543550"),
+  T = n("976757"),
   A = n("981631"),
   N = n("308083"),
   v = n("689938"),
@@ -38,7 +38,7 @@ function O(e) {
   let {
     limit: t
   } = e, n = (0, I.useClanDiscoveryUIStore)(I.buildSearchCriteriaFromUIState, i()), l = (0, I.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), r = (0, c.useStateFromStores)([S.default], () => S.default.getSearchResult(n), [n]), f = s.useMemo(() => {
-    if ((0, g.isLoadedSearchResult)(r)) {
+    if ((0, T.isLoadedSearchResult)(r)) {
       let e = r.items;
       return null != t ? e.slice(0, t) : e
     }
@@ -68,7 +68,7 @@ function O(e) {
       className: R.topPicksContent,
       children: f.map((e, t) => (0, a.jsx)(_.default, {
         clan: e,
-        affinity: (0, g.getClanDiscoveryAffinity)(e, n),
+        affinity: (0, T.getClanDiscoveryAffinity)(e, n),
         traitsToHighlight: l,
         className: R.card,
         index: t,
@@ -107,9 +107,9 @@ let M = s.memo(function() {
     }, []);
   switch (e) {
     case I.ClanDiscoveryMode.ADMIN_UPSELL:
-      return (0, a.jsx)(T.ClanDiscoveryAdminContainer, {});
+      return (0, a.jsx)(g.ClanDiscoveryAdminContainer, {});
     case I.ClanDiscoveryMode.GET_STARTED:
-      return (0, a.jsx)(T.ClanDiscoveryUserContainer, {});
+      return (0, a.jsx)(g.ClanDiscoveryUserContainer, {});
     case I.ClanDiscoveryMode.DISCOVERY:
     case I.ClanDiscoveryMode.GAMES:
     case I.ClanDiscoveryMode.PLAYSTYLE:

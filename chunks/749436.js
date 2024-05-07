@@ -21,8 +21,8 @@ var a, s = n("735250"),
   S = n("878727"),
   p = n("117496"),
   I = n("150192"),
-  T = n("731455"),
-  g = n("981631"),
+  g = n("731455"),
+  T = n("981631"),
   A = n("689938"),
   N = n("925642");
 
@@ -69,8 +69,8 @@ class O extends(a = l.PureComponent) {
       query: s,
       isHandlingTagSearch: l
     } = this.state, i = this.context;
-    if (null == E.default.getSearchIndex() && f.createAlgoliaIndex(), C.ComponentDispatch.subscribe(g.ComponentActions.GLOBAL_CLIPBOARD_PASTE, this.focusInput), C.ComponentDispatch.subscribe(g.ComponentActions.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
-      let r = n !== T.DISCOVERY_ALL_CATEGORIES_ID ? n : null;
+    if (null == E.default.getSearchIndex() && f.createAlgoliaIndex(), C.ComponentDispatch.subscribe(T.ComponentActions.GLOBAL_CLIPBOARD_PASTE, this.focusInput), C.ComponentDispatch.subscribe(T.ComponentActions.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
+      let r = n !== g.DISCOVERY_ALL_CATEGORIES_ID ? n : null;
       R({
         loadId: e,
         searchId: a,
@@ -94,7 +94,7 @@ class O extends(a = l.PureComponent) {
       searchId: o,
       query: u,
       isHandlingTagSearch: d
-    } = this.state, c = this.context, f = e.isFetchingSearch && !a, E = l !== T.DISCOVERY_ALL_CATEGORIES_ID ? l : null;
+    } = this.state, c = this.context, f = e.isFetchingSearch && !a, E = l !== g.DISCOVERY_ALL_CATEGORIES_ID ? l : null;
     (r || d) && f && (R({
       loadId: n,
       searchId: o,
@@ -112,7 +112,7 @@ class O extends(a = l.PureComponent) {
     })
   }
   componentWillUnmount() {
-    C.ComponentDispatch.unsubscribe(g.ComponentActions.GLOBAL_CLIPBOARD_PASTE, this.focusInput), C.ComponentDispatch.unsubscribe(g.ComponentActions.TEXTAREA_FOCUS, this.focusInput)
+    C.ComponentDispatch.unsubscribe(T.ComponentActions.GLOBAL_CLIPBOARD_PASTE, this.focusInput), C.ComponentDispatch.unsubscribe(T.ComponentActions.TEXTAREA_FOCUS, this.focusInput)
   }
   renderSearchOptions() {
     var e;
@@ -150,7 +150,7 @@ class O extends(a = l.PureComponent) {
         let [n, a] = t;
         return (0, s.jsx)(L, {
           categoryId: n,
-          name: n === T.DISCOVERY_ALL_CATEGORIES_ID ? A.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : I.default.getCategoryName(n),
+          name: n === g.DISCOVERY_ALL_CATEGORIES_ID ? A.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : I.default.getCategoryName(n),
           onCategoryChange: this.handleCategoryChange,
           isSelected: e === n,
           count: a
@@ -231,8 +231,8 @@ class O extends(a = l.PureComponent) {
       } = this.state, {
         loadId: a,
         currentCategoryId: s
-      } = this.props, l = s !== T.DISCOVERY_ALL_CATEGORIES_ID ? s : null;
-      this.canSearch(t) && n && e.charCode === g.KeyboardKeys.ENTER ? (m.trackSearchStarted(a, l), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === g.KeyboardKeys.ENTER && this.setState({
+      } = this.props, l = s !== g.DISCOVERY_ALL_CATEGORIES_ID ? s : null;
+      this.canSearch(t) && n && e.charCode === T.KeyboardKeys.ENTER ? (m.trackSearchStarted(a, l), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === T.KeyboardKeys.ENTER && this.setState({
         isSearching: !1
       })
     }), v(this, "handleQueryChanged", e => {

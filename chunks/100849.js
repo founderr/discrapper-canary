@@ -23,8 +23,8 @@ function v(e) {
   let {
     user: t,
     type: s
-  } = e, v = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), T = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), x = a.useMemo(() => v ? T.find(e => e.type === m.ActivityTypes.PLAYING) : null, [T, v]), A = a.useMemo(() => T.filter(e => e !== x), [x, T]), {
-    analyticsLocations: N,
+  } = e, v = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), T = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), x = a.useMemo(() => v ? T.find(e => e.type === m.ActivityTypes.PLAYING) : null, [T, v]), N = a.useMemo(() => T.filter(e => e !== x), [x, T]), {
+    analyticsLocations: A,
     newestAnalyticsLocation: U
   } = (0, o.default)(), {
     trackUserProfileAction: g,
@@ -57,11 +57,11 @@ function v(e) {
           activityPlatform: null == x ? void 0 : x.platform,
           activitySessionId: null == x ? void 0 : x.session_id,
           applicationId: null == x ? void 0 : x.application_id,
-          analyticsLocations: N,
+          analyticsLocations: A,
           ...C
         })
       }
-    }) : null, A.map(e => (0, l.jsx)(r.default, {
+    }) : null, N.map(e => (0, l.jsx)(r.default, {
       type: s,
       activity: e,
       user: t,
@@ -81,7 +81,7 @@ function v(e) {
           activityPlatform: e.platform,
           activitySessionId: e.session_id,
           applicationId: e.application_id,
-          analyticsLocations: N,
+          analyticsLocations: A,
           ...C
         })
       }

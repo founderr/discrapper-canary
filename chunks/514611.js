@@ -17,8 +17,8 @@ var a, s = n("735250"),
   S = n("900849"),
   p = n("940627"),
   I = n("806519"),
-  T = n("981631"),
-  g = n("689938"),
+  g = n("981631"),
+  T = n("689938"),
   A = n("218290"),
   N = n("129512"),
   v = n("330065"),
@@ -36,9 +36,9 @@ class O extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
     if (t) return R;
     switch (e) {
-      case T.ThemeTypes.DARK:
+      case g.ThemeTypes.DARK:
         return N;
-      case T.ThemeTypes.LIGHT:
+      case g.ThemeTypes.LIGHT:
         return v
     }
   }
@@ -60,7 +60,7 @@ class O extends(a = l.PureComponent) {
       presenceCount: O,
       memberCount: M,
       keywords: P
-    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
+    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(g.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
@@ -184,7 +184,7 @@ class O extends(a = l.PureComponent) {
                   }), (0, s.jsx)(u.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                    children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                       membersOnline: O
                     })
                   })]
@@ -195,7 +195,7 @@ class O extends(a = l.PureComponent) {
                   }), (0, s.jsx)(u.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                    children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                       count: M
                     })
                   })]

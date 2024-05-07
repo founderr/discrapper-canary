@@ -24,7 +24,7 @@ var a = n("735250"),
 function p(e) {
   let {
     user: t
-  } = e, l = (0, f.default)(), p = (0, E.useHasMaxConnections)(), I = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), T = s.useCallback(() => {
+  } = e, l = (0, f.default)(), p = (0, E.useHasMaxConnections)(), I = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), g = s.useCallback(() => {
     i()(void 0 !== I, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -35,7 +35,7 @@ function p(e) {
         otherUser: t
       })
     })
-  }, [I, t]), g = s.useCallback(() => {
+  }, [I, t]), T = s.useCallback(() => {
     i()(void 0 !== I, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -78,12 +78,12 @@ function p(e) {
           icon: d.default,
           className: S.__invalid_actionAccept,
           tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
-          onClick: T
+          onClick: g
         }), (0, a.jsx)(h.default, {
           icon: c.default,
           className: S.__invalid_actionDeny,
           tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
-          onClick: g
+          onClick: T
         })]
       })
     })]

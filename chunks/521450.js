@@ -18,7 +18,7 @@ var a = n("735250"),
   S = n("930441"),
   p = n("689938"),
   I = n("394184"),
-  T = n("949086");
+  g = n("949086");
 t.default = () => {
   let e = h.FamilyCenterEnabled.useSetting(),
     {
@@ -34,7 +34,7 @@ t.default = () => {
       color: "text-muted",
       children: p.default.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
     }), (0, a.jsx)(d.FormSwitch, {
-      className: i()(T.marginTop8, T.marginBottom20),
+      className: i()(g.marginTop8, g.marginBottom20),
       value: e,
       note: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
@@ -70,7 +70,7 @@ t.default = () => {
         })]
       })
     }) : null, (0, a.jsx)(d.FormSwitch, {
-      className: i()(T.marginTop20, T.marginBottom20),
+      className: i()(g.marginTop20, g.marginBottom20),
       value: !!t[S.EmailCategories.FAMILY_CENTER_DIGEST],
       note: p.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
       hideBorder: !0,

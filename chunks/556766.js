@@ -21,7 +21,7 @@ let I = {
     transform: "scale(0.7)",
     opacity: 0
   },
-  T = {
+  g = {
     transform: "scale(1)",
     opacity: 1
   };
@@ -35,15 +35,15 @@ t.default = () => {
     })),
     n = (0, u.useStateFromStores)([m.default], () => m.default.hasIncomingCalls()),
     l = (0, u.useStateFromStores)([h.default], () => h.default.isSoundDisabled("call_ringing")),
-    g = f.default.useIsRingtoneEligible(),
+    T = f.default.useIsRingtoneEligible(),
     A = f.default.useIsRingtoneDisabled(),
     N = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
     v = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
     R = s.useRef(!1),
     L = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
-      return g && !A ? (0, S.createSound)(c.default.ringtone, e) : v === p.Soundpacks.CLASSIC ? (0, S.createSound)(500 !== i().random(1, 1e3) ? "call_ringing" : i().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, S.createSoundForPack)("call_ringing", v)
-    }, [v, A, g]);
+      return T && !A ? (0, S.createSound)(c.default.ringtone, e) : v === p.Soundpacks.CLASSIC ? (0, S.createSound)(500 !== i().random(1, 1e3) ? "call_ringing" : i().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, S.createSoundForPack)("call_ringing", v)
+    }, [v, A, T]);
   return s.useEffect(() => () => {
     L.stop()
   }, [L]), s.useEffect(() => {
@@ -59,7 +59,7 @@ t.default = () => {
     },
     enter: {
       from: I,
-      to: T
+      to: g
     },
     leave: I,
     config: {
