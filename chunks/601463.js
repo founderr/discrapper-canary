@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return C
   }
 }), n("47120");
 var l = n("735250"),
@@ -16,51 +16,67 @@ var l = n("735250"),
   f = n("981631"),
   h = n("689938"),
   p = n("156610");
+let m = {
+  mass: 1,
+  tension: 600,
+  friction: 60,
+  clamp: !0
+};
 
-function m(e) {
+function C(e) {
   let {
     guildId: t,
     signed: n,
-    setSigned: m,
-    sidebarWidth: C,
-    windowWidth: g,
-    transition: E,
-    brandPrimaryColor: S
-  } = e, _ = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = a.useRef(null), N = a.useMemo(() => (g - C) / 2, [C, g]), [T, A, L] = (0, s.useSpring)(() => ({
+    setSigned: C,
+    sidebarWidth: g,
+    windowWidth: E,
+    transition: S,
+    brandPrimaryColor: _
+  } = e, I = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), N = a.useRef(null), T = a.useMemo(() => (E - g) / 2, [g, E]), [A, L, v] = (0, s.useSpring)(() => ({
     to: [{
       transform: "translateX(-8px)"
     }, {
       transform: "translateX(0px)"
     }],
     loop: !0
-  }));
+  })), x = (0, s.useSpring)({
+    from: {
+      opacity: 0
+    },
+    to: {
+      opacity: 1
+    },
+    config: m,
+    delay: 800,
+    immediate: I
+  });
   a.useEffect(() => {
-    n && (L(), A({
+    n && (v(), L({
       to: {
         transform: "translateX(0px)"
       }
     }))
-  }, [A, n, L]);
-  let v = a.useCallback(() => {
+  }, [L, n, v]);
+  let R = a.useCallback(() => {
       var e;
-      null === (e = I.current) || void 0 === e || e.scrollIntoView({
+      null === (e = N.current) || void 0 === e || e.scrollIntoView({
         behavior: "smooth"
-      }), null == m || m(!0)
-    }, [m]),
-    x = () => open(u.default.getArticleURL(f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES));
+      }), null == C || C(!0)
+    }, [C]),
+    M = () => open(u.default.getArticleURL(f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES));
   return (0, l.jsxs)("div", {
     className: p.sidebarContent,
-    children: [E((e, t) => t && (0, l.jsx)(s.animated.div, {
+    children: [S((e, t) => t && (0, l.jsx)(s.animated.div, {
       className: p.sidebarLeftDecorationContainer,
       style: {
         opacity: e.opacity,
         transform: e.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)")),
-        width: N
+        width: T
       },
       children: (0, l.jsxs)("div", {
         className: p.sidebarLeftDecoration,
         style: {
-          width: N
+          width: T
         },
         children: [(0, l.jsx)(r.Heading, {
           variant: "heading-xxl/medium",
@@ -71,37 +87,38 @@ function m(e) {
           children: h.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
         })]
       })
-    })), E((e, t) => t && (0, l.jsx)(s.animated.div, {
+    })), S((e, t) => t && (0, l.jsx)(s.animated.div, {
       className: p.sidebarRightDecorationContainer,
       style: {
         opacity: e.opacity,
         transform: e.opacity.to([0, 1], [-40, 0]).to(e => "translateX(".concat(e, "px)")),
-        width: N
+        width: T
       },
       children: (0, l.jsxs)("div", {
         className: p.sidebarRightDecoration,
         children: [(0, l.jsx)(s.animated.div, {
-          style: _ ? void 0 : T,
+          style: I ? void 0 : A,
           children: (0, l.jsx)(d.default, {
             className: p.signButton,
             size: r.Button.Sizes.SMALL,
-            onClick: v,
-            themeColor: S,
+            onClick: R,
+            themeColor: _,
             children: h.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
           })
         }), (0, l.jsx)(r.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
           children: h.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_AGREEMENT.format({
-            onGuidelinesClick: x
+            onGuidelinesClick: M
           })
         })]
       })
     })), (0, l.jsx)(c.default, {
       guildId: t,
       signed: n,
-      setSigned: m,
-      signRef: I
+      setSigned: C,
+      signRef: N,
+      animatedTextStyle: x
     })]
   })
 }
