@@ -44,12 +44,17 @@ function A(e) {
     E.ComponentDispatch.dispatch(S.ComponentActions.IFRAME_UNMOUNT, {
       id: O
     })
-  }), [O]), E.ComponentDispatch.subscribe(S.ComponentActions.MANUAL_IFRAME_RESIZING, e => {
-    let {
-      resizing: t
-    } = e;
-    v(t)
-  }), L && (M.pointerEvents = "none"), null != t ? (0, i.jsx)("iframe", {
+  }), [O]), r.useEffect(() => {
+    let e = e => {
+      let {
+        resizing: t
+      } = e;
+      v(t)
+    };
+    return E.ComponentDispatch.subscribe(S.ComponentActions.MANUAL_IFRAME_RESIZING, e), () => {
+      E.ComponentDispatch.unsubscribe(S.ComponentActions.MANUAL_IFRAME_RESIZING, e)
+    }
+  }, []), L && (M.pointerEvents = "none"), null != t ? (0, i.jsx)("iframe", {
     style: M,
     allow: "autoplay; encrypted-media",
     referrerPolicy: N,
