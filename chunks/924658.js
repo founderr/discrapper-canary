@@ -283,6 +283,7 @@ e.exports = Object.freeze({
   CLAN_UPSELL_CONTENT: "Want to recruit more people to play games in your server?",
   CLAN_UPSELL_CONTENT_VALORANT: "Want to recruit more people to play Valorant in your server?",
   CLAN_UPSELL_CONTENT_GENSHIN: "Want to recruit more people to play Genshin Impact in your server?",
+  CLAN_GUILD_LIST_ADMIN_UPSELL_TITLE: "Join the first Guilds on Discord",
   CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE: "Your Guilds Invite is ready!",
   CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_MESSAGE: "Recruit new Valorant players to your server based on playstyle and vibe.",
   CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_MESSAGE: "Recruit new Genshin players to your server based on playstyle and vibe.",

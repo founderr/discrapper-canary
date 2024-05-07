@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
-  useGuildsEligibleForClanConversion: function() {
-    return E
+  useClanPrepilotExperimentForGuild: function() {
+    return p
   },
-  useIsGuildEligibleForClanConversion: function() {
+  useGuildsEligibleForClanConversion: function() {
     return h
   }
 }), n("47120");
-var a = n("470079"),
-  s = n("392711"),
-  l = n.n(s),
+var l = n("470079"),
+  a = n("392711"),
+  s = n.n(a),
   i = n("442837"),
   r = n("963202"),
   o = n("430824"),
@@ -22,21 +22,18 @@ function f(e) {
   return !e.hasFeature(d.GuildFeatures.CLAN) && t.can(c.Permissions.ADMINISTRATOR, e) && (0, r.isClanPrepilotExperimentEnabled)(e, "useEligibleGuildsForClans")
 }
 
-function E() {
-  return (0, i.useStateFromStoresArray)([o.default, u.default], () => l()(o.default.getGuilds()).values().filter(e => f(e, [u.default])).value())
+function h() {
+  return (0, i.useStateFromStoresArray)([o.default, u.default], () => s()(o.default.getGuilds()).values().filter(e => f(e, [u.default])).value())
 }
 
-function h(e) {
-  let t = (0, i.useStateFromStores)([u.default], () => f(e, [u.default])),
+function p(e, t) {
+  let n = (0, i.useStateFromStores)([u.default], () => e.find(e => f(e, [u.default]))),
     {
-      enableClanCreation: n,
+      enableClanCreation: a,
       defaultGameId: s
-    } = (0, r.useClanPrepilotExperiment)(e, "useEligibleGuildsForClans");
-  return a.useMemo(() => t ? {
-    enableClanCreation: n,
+    } = (0, r.useClanPrepilotExperiment)(n, t);
+  return l.useMemo(() => ({
+    enableClanCreation: a,
     defaultGameId: s
-  } : {
-    enableClanCreation: !1,
-    defaultGameId: null
-  }, [s, n, t])
+  }), [s, a])
 }

@@ -19,7 +19,7 @@ function c(e, s, t) {
   }) : e[s] = t, e
 }
 let m = (0, i.makeLazy)({
-  createPromise: () => Promise.all([t.e("49237"), t.e("70716"), t.e("40035")]).then(t.bind(t, "336231")),
+  createPromise: () => t.e("5609").then(t.bind(t, "336231")),
   webpackId: "336231"
 });
 class p extends l.PureComponent {
