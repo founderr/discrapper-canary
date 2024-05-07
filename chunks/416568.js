@@ -29,8 +29,8 @@ var l = n("735250"),
   M = n("271383"),
   y = n("430824"),
   O = n("771845"),
-  b = n("358085"),
-  D = n("709054"),
+  D = n("358085"),
+  b = n("709054"),
   j = n("792125"),
   P = n("727258"),
   U = n("605951"),
@@ -62,7 +62,7 @@ function et(e, t, n) {
   }) : e[t] = n, e
 }
 let en = 56,
-  el = (0, b.isWindows)() ? 4 : (0, b.isMac)() ? 0 : 12,
+  el = (0, D.isWindows)() ? 4 : (0, D.isMac)() ? 0 : 12,
   ea = en - 16,
   es = el + 10;
 class ei {
@@ -137,14 +137,14 @@ class ei {
 
 function er(e) {
   let {
-    disableAppDownload: t = b.isPlatformEmbedded,
+    disableAppDownload: t = D.isPlatformEmbedded,
     isOverlay: n = !1,
     className: s,
     themeOverride: r
   } = e, [o] = (0, h.useStateFromStoresArray)([O.default], () => {
     let e = O.default.getGuildsTree();
     return [e, e.version]
-  }), u = (0, h.useStateFromStoresArray)([y.default], () => Object.values(y.default.getGuilds())), f = (0, h.useStateFromStores)([L.default], () => L.default.lurkingGuildIds()), p = a.useMemo(() => n ? [] : f, [f, n]), g = (0, h.useStateFromStoresArray)([y.default, M.default], () => D.default.keys(y.default.getGuilds()).filter(e => M.default.isCurrentUserGuest(e))), E = p.concat(g), et = (0, h.useStateFromStores)([I.default], () => I.default.isFullscreenInContext()), en = (0, h.useStateFromStores)([y.default], () => y.default.getGeoRestrictedGuilds()), [el, ea] = a.useState(!1), es = a.useCallback(() => ea(!0), []), er = a.useCallback(() => ea(!1), []), eo = a.useRef(!1), [eu] = a.useState(() => new m.Timeout), ed = a.useRef(null), ec = a.useRef(null), {
+  }), u = (0, h.useStateFromStoresArray)([y.default], () => Object.values(y.default.getGuilds())), f = (0, h.useStateFromStores)([L.default], () => L.default.lurkingGuildIds()), p = a.useMemo(() => n ? [] : f, [f, n]), g = (0, h.useStateFromStoresArray)([y.default, M.default], () => b.default.keys(y.default.getGuilds()).filter(e => M.default.isCurrentUserGuest(e))), E = p.concat(g), et = (0, h.useStateFromStores)([I.default], () => I.default.isFullscreenInContext()), en = (0, h.useStateFromStores)([y.default], () => y.default.getGeoRestrictedGuilds()), [el, ea] = a.useState(!1), es = a.useCallback(() => ea(!0), []), er = a.useCallback(() => ea(!1), []), eo = a.useRef(!1), [eu] = a.useState(() => new m.Timeout), ed = a.useRef(null), ec = a.useRef(null), {
     ref: ef,
     ...eh
   } = (0, c.useListContainerProps)(), ep = (0, C.useFocusJumpSection)(), [em, eC] = a.useState(!1), [eg] = a.useState(() => new ei(o, eC, () => {
@@ -277,7 +277,9 @@ function er(e) {
           ref: ec,
           isVisible: eg.isItemVisible,
           onJumpTo: eg.handleJumpToGuild,
-          className: ee.unreadMentionsIndicatorBottom,
+          className: i()(ee.unreadMentionsIndicatorBottom, {
+            [ee.unreadMentionsFixedFooter]: !n && eN
+          }),
           barClassName: ee.unreadMentionsBar
         })]
       })
