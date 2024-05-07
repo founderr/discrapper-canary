@@ -15,6 +15,9 @@ n.r(t), n.d(t, {
   getClanInfo: function() {
     return u
   },
+  joinWumpusFeedbackSquad: function() {
+    return h
+  },
   resetClanSetup: function() {
     return _
   },
@@ -180,6 +183,15 @@ async function S(e) {
   try {
     await i.HTTP.post({
       url: s.Endpoints.DISABLE_CLAN(e)
+    })
+  } catch (e) {
+    throw e
+  }
+}
+async function h(e) {
+  try {
+    await i.HTTP.post({
+      url: s.Endpoints.JOIN_WUMPUS_FEEDBACK_SQUAD(e)
     })
   } catch (e) {
     throw e

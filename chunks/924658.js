@@ -498,5 +498,7 @@ e.exports = Object.freeze({
   CLAN_DISCOVERY_UPSELL_GENSHIN_TITLE: "Just a few clicks to find your Genshin clique.",
   CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE: "Answer a few questions to discover Genshin Guilds on Discord based on your interests and playstyle.",
   CLAN_DISCOVERY_UPSELL_GET_STARTED: "Get Started",
+  CLAN_DISCOVERY_UPSELL_JOIN_WFS: "Questions? Head over to the $[Wumpus Feedback Squad](wfsHook) server to ask Discord questions or give feedback!",
+  CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL: "Join Wumpus Feedback Squad server",
   MESSAGE_ACTION_FORWARD: "Forward"
 })

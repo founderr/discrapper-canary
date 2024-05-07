@@ -12,71 +12,73 @@ var a = n("735250"),
   f = n("442837"),
   E = n("484957"),
   h = n("481060"),
-  _ = n("607070"),
-  C = n("100527"),
-  m = n("970606"),
-  S = n("650461"),
-  p = n("603839"),
-  g = n("430824"),
-  I = n("725568"),
-  T = n("231467"),
-  A = n("207796"),
-  N = n("316553"),
-  v = n("273254"),
-  R = n("559469"),
-  O = n("308083"),
-  L = n("689938"),
-  M = n("258036"),
-  y = n("345480"),
-  P = n("236613");
-let x = {
+  _ = n("749210"),
+  C = n("607070"),
+  m = n("100527"),
+  S = n("931240"),
+  p = n("970606"),
+  g = n("650461"),
+  I = n("603839"),
+  T = n("430824"),
+  A = n("725568"),
+  N = n("231467"),
+  v = n("207796"),
+  R = n("316553"),
+  O = n("273254"),
+  L = n("559469"),
+  M = n("308083"),
+  y = n("689938"),
+  P = n("258036"),
+  x = n("345480"),
+  D = n("236613");
+let b = {
   mass: 1,
   tension: 600,
   friction: 60
 };
 
-function D(e) {
+function U(e) {
   let {
     children: t
   } = e;
   return (0, a.jsxs)(r.animated.div, {
-    className: M.clanEnvelope,
+    className: P.clanEnvelope,
     children: [(0, a.jsx)("div", {
-      className: M.clanEnvelopeTop,
+      className: P.clanEnvelopeTop,
       children: (0, a.jsx)("img", {
-        src: P,
+        src: D,
         alt: ""
       })
     }), t, (0, a.jsx)("div", {
-      className: M.clanEnvelopeBottom,
+      className: P.clanEnvelopeBottom,
       children: (0, a.jsx)("img", {
-        src: y,
+        src: x,
         alt: ""
       })
     })]
   })
 }
 
-function b(e) {
+function j(e) {
   let {
     text: t,
     icon: n
   } = e;
   return (0, a.jsxs)("div", {
-    className: M.upsellDetail,
+    className: P.upsellDetail,
     children: [(0, a.jsx)(n, {
       height: 24,
       width: 24,
-      className: M.upsellIcon
+      className: P.upsellIcon
     }), (0, a.jsx)(h.Text, {
-      className: M.upsellDetailText,
+      className: P.upsellDetailText,
       variant: "text-md/medium",
       children: t
     })]
   })
 }
 
-function U(e) {
+function G(e) {
   let {
     selectedGuildId: t,
     setSelectedGuildId: n,
@@ -84,42 +86,42 @@ function U(e) {
     selectedGame: r,
     onButtonClick: f,
     buttonText: _
-  } = e, C = (0, A.useClanDiscoveryUIStore)(e => e.setMode, o.default), m = (0, A.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), S = (0, A.useClanDiscoveryUIStore)(e => e.started, o.default), p = s.useMemo(() => {
+  } = e, C = (0, v.useClanDiscoveryUIStore)(e => e.setMode, o.default), m = (0, v.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), S = (0, v.useClanDiscoveryUIStore)(e => e.started, o.default), p = s.useMemo(() => {
     switch (r) {
-      case A.ClanDiscoveryGame.GENSHIN:
-        return L.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_GENSHIN;
-      case A.ClanDiscoveryGame.VALORANT:
-        return L.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_VALORANT
+      case v.ClanDiscoveryGame.GENSHIN:
+        return y.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_GENSHIN;
+      case v.ClanDiscoveryGame.VALORANT:
+        return y.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_VALORANT
     }
   }, [r]), g = s.useMemo(() => i.map(e => ({
     value: e.id,
     label: e.name
   })), [i]), I = s.useCallback(() => {
-    C(A.ClanDiscoveryMode.DISCOVERY)
+    C(v.ClanDiscoveryMode.DISCOVERY)
   }, [C]), T = s.useCallback(() => {
-    C(A.ClanDiscoveryMode.GET_STARTED), m(A.ClanDiscoveryUserScreens.USER_ONBOARDING)
-  }, [C, m]), N = !S, v = i.length > 1;
+    C(v.ClanDiscoveryMode.GET_STARTED), m(v.ClanDiscoveryUserScreens.USER_ONBOARDING)
+  }, [C, m]), A = !S, N = i.length > 1;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(h.Heading, {
-      className: M.upsellTitle,
+      className: P.upsellTitle,
       variant: "heading-xxl/semibold",
-      children: [L.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_GUILD_INVITE, (0, a.jsx)("br", {}), p]
+      children: [y.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_GUILD_INVITE, (0, a.jsx)("br", {}), p]
     }), (0, a.jsxs)("div", {
-      className: M.upsellDetails,
-      children: [(0, a.jsx)(b, {
+      className: P.upsellDetails,
+      children: [(0, a.jsx)(j, {
         icon: d.CompassIcon,
-        text: L.default.Messages.CLAN_DISCOVERY_UPSELL_VIBES_OR_SKILL
-      }), (0, a.jsx)(b, {
+        text: y.default.Messages.CLAN_DISCOVERY_UPSELL_VIBES_OR_SKILL
+      }), (0, a.jsx)(j, {
         icon: u.CircleCheckIcon,
-        text: L.default.Messages.CLAN_DISCOVERY_UPSELL_APPLICATIONS
-      }), (0, a.jsx)(b, {
+        text: y.default.Messages.CLAN_DISCOVERY_UPSELL_APPLICATIONS
+      }), (0, a.jsx)(j, {
         icon: c.GroupIcon,
-        text: L.default.Messages.CLAN_DISCOVERY_UPSELL_MAX_SIZE
+        text: y.default.Messages.CLAN_DISCOVERY_UPSELL_MAX_SIZE
       })]
     }), (0, a.jsxs)("div", {
-      className: M.upsellButton,
-      children: [v && (0, a.jsx)(h.SearchableSelect, {
-        className: M.upsellSelect,
+      className: P.upsellButton,
+      children: [N && (0, a.jsx)(h.SearchableSelect, {
+        className: P.upsellSelect,
         value: t,
         options: g,
         onChange: n
@@ -127,8 +129,8 @@ function U(e) {
         look: h.ButtonLooks.FILLED,
         size: h.ButtonSizes.MEDIUM,
         color: h.ButtonColors.CUSTOM,
-        className: l()(M.reserveButton, {
-          [M.buttonWithSelect]: v
+        className: l()(P.reserveButton, {
+          [P.buttonWithSelect]: N
         }),
         onClick: f,
         children: (0, a.jsx)(h.Text, {
@@ -136,26 +138,26 @@ function U(e) {
           color: "redesign-button-overlay-text",
           children: _
         })
-      }), v && N && (0, a.jsx)("div", {
-        className: M.spacer,
+      }), N && A && (0, a.jsx)("div", {
+        className: P.spacer,
         children: "\xb7"
-      }), N && (0, a.jsx)(h.Button, {
+      }), A && (0, a.jsx)(h.Button, {
         look: h.ButtonLooks.OUTLINED,
         color: h.ButtonColors.PRIMARY,
-        className: M.browseButton,
+        className: P.browseButton,
         onClick: T,
         children: (0, a.jsx)(h.Text, {
           variant: "text-sm/medium",
-          children: L.default.Messages.CLAN_DISCOVERY_UPSELL_BROWSE
+          children: y.default.Messages.CLAN_DISCOVERY_UPSELL_BROWSE
         })
       })]
     }), S && (0, a.jsx)("div", {
-      className: M.upsellStaticHeader,
+      className: P.upsellStaticHeader,
       children: (0, a.jsx)("div", {
-        className: M.upsellBackButton,
+        className: P.upsellBackButton,
         children: (0, a.jsx)(h.Clickable, {
           onClick: I,
-          "aria-label": L.default.Messages.BACK,
+          "aria-label": y.default.Messages.BACK,
           children: (0, a.jsx)(E.ArrowLargeLeftIcon, {})
         })
       })
@@ -168,37 +170,37 @@ t.default = s.memo(function(e) {
     selectedGame: n
   } = e;
   s.useEffect(() => {
-    (0, m.trackClanAdminInviteViewed)({
-      location: C.default.CLAN_DISCOVERY
+    (0, p.trackClanAdminInviteViewed)({
+      location: m.default.CLAN_DISCOVERY
     })
   }, []);
   let [i, l] = s.useState(() => {
-    let e = new Set(S.default.getGuildIds());
+    let e = new Set(g.default.getGuildIds());
     for (let n of t)
       if (e.has(n.id)) return n.id;
     return t[0].id
-  }), o = (0, f.useStateFromStores)([g.default], () => g.default.getGuild(i)), u = (0, f.useStateFromStores)([S.default], () => S.default.getStateForGuild(i).progress), d = (0, N.useDiscoveryGameApplicationId)({
+  }), o = (0, f.useStateFromStores)([T.default], () => T.default.getGuild(i)), u = (0, f.useStateFromStores)([g.default], () => g.default.getStateForGuild(i).progress), d = (0, R.useDiscoveryGameApplicationId)({
     selectedGame: n
   }), c = s.useCallback(() => {
-    (0, m.trackClanAdminInviteClicked)({
+    (0, p.trackClanAdminInviteClicked)({
       guildId: i,
-      location: C.default.CLAN_DISCOVERY
-    }), (0, I.openFullScreenLayer)(e => {
+      location: m.default.CLAN_DISCOVERY
+    }), (0, A.openFullScreenLayer)(e => {
       let {
         closeLayer: t
       } = e;
-      return (0, a.jsx)(p.default, {
+      return (0, a.jsx)(I.default, {
         onClose: t,
         guildId: i,
         gameId: d
       })
     }, {
-      layerKey: O.CLAN_SETUP_MODAL_LAYER_KEY
+      layerKey: M.CLAN_SETUP_MODAL_LAYER_KEY
     })
-  }, [i, d]), E = (0, f.useStateFromStores)([_.default], () => _.default.useReducedMotion), h = (0, v.useFakeDiscoveryClanForGuild)({
+  }, [i, d]), E = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion), v = (0, O.useFakeDiscoveryClanForGuild)({
     guild: o,
     selectedGame: n
-  }), A = (0, r.useSpring)({
+  }), x = (0, r.useSpring)({
     from: {
       opacity: 0
     },
@@ -209,7 +211,7 @@ t.default = s.memo(function(e) {
     config: {
       duration: 0
     }
-  }), y = (0, r.useSpring)({
+  }), D = (0, r.useSpring)({
     from: E ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     } : {
@@ -218,9 +220,9 @@ t.default = s.memo(function(e) {
     to: {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     },
-    config: x,
+    config: b,
     delay: 400
-  }), P = (0, r.useSpring)({
+  }), j = (0, r.useSpring)({
     from: E ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     } : {
@@ -229,9 +231,9 @@ t.default = s.memo(function(e) {
     to: {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     },
-    config: x,
+    config: b,
     delay: 400
-  }), b = (0, r.useSpring)({
+  }), k = (0, r.useSpring)({
     from: E ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     } : {
@@ -240,9 +242,9 @@ t.default = s.memo(function(e) {
     to: {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     },
-    config: x,
+    config: b,
     delay: 400
-  }), j = (0, r.useSpring)({
+  }), w = (0, r.useSpring)({
     from: E ? {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     } : {
@@ -251,9 +253,9 @@ t.default = s.memo(function(e) {
     to: {
       transform: "translate(0px, 0px) rotate(0deg) scale(1)"
     },
-    config: x,
+    config: b,
     delay: 400
-  }), G = (0, r.useSpring)({
+  }), F = (0, r.useSpring)({
     from: E ? {
       transform: "scale(1)",
       opacity: 0
@@ -265,9 +267,9 @@ t.default = s.memo(function(e) {
       transform: "scale(1)",
       opacity: 1
     },
-    config: x,
+    config: b,
     delay: 200
-  }), k = (0, r.useSpring)({
+  }), B = (0, r.useSpring)({
     from: E ? {
       transform: "translateY(0px)"
     } : {
@@ -276,77 +278,98 @@ t.default = s.memo(function(e) {
     to: {
       transform: "translateY(0px)"
     },
-    config: x,
+    config: b,
     delay: 400
-  }), w = s.useMemo(() => null == u ? L.default.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : L.default.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [u]);
+  }), H = s.useMemo(() => null == u ? y.default.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : y.default.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [u]), V = s.useCallback(e => (0, a.jsx)(h.Text, {
+    tag: "span",
+    variant: "text-xs/medium",
+    color: "text-brand",
+    children: e
+  }), []), Y = s.useCallback(async () => {
+    await (0, S.joinWumpusFeedbackSquad)(i), _.default.transitionToGuildSync("936317138904440892")
+  }, [i]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: M.cardsContainer,
+      className: P.cardsContainer,
       children: [(0, a.jsx)(r.animated.div, {
-        className: M.clanCardOuterContainer,
+        className: P.clanCardOuterContainer,
         style: {
-          ...y,
-          ...A
+          ...D,
+          ...x
         },
-        children: (0, a.jsx)(T.ClanDiscoveryCardView, {
-          clan: R.FAKE_DISCOVERY_UPSELL_CLANS["0"],
-          className: M.clanCardOuterLeft
+        children: (0, a.jsx)(N.ClanDiscoveryCardView, {
+          clan: L.FAKE_DISCOVERY_UPSELL_CLANS["0"],
+          className: P.clanCardOuterLeft
         })
       }), (0, a.jsx)(r.animated.div, {
-        className: M.clanCardInnerContainer,
+        className: P.clanCardInnerContainer,
         style: {
-          ...P,
-          ...A
+          ...j,
+          ...x
         },
-        children: (0, a.jsx)(T.ClanDiscoveryCardView, {
-          clan: R.FAKE_DISCOVERY_UPSELL_CLANS["1"],
-          className: M.clanCardInnerLeft
+        children: (0, a.jsx)(N.ClanDiscoveryCardView, {
+          clan: L.FAKE_DISCOVERY_UPSELL_CLANS["1"],
+          className: P.clanCardInnerLeft
         })
-      }), null != h && (0, a.jsx)(r.animated.div, {
-        className: M.clanEnvelope,
-        style: G,
-        children: (0, a.jsx)(D, {
+      }), null != v && (0, a.jsx)(r.animated.div, {
+        className: P.clanEnvelope,
+        style: F,
+        children: (0, a.jsx)(U, {
           children: (0, a.jsx)("div", {
-            className: M.clanCardCenterContainer,
+            className: P.clanCardCenterContainer,
             children: (0, a.jsx)(r.animated.div, {
-              style: k,
-              children: (0, a.jsx)(T.ClanDiscoveryCardView, {
-                clan: h,
-                className: M.clanCardCenter
+              style: B,
+              children: (0, a.jsx)(N.ClanDiscoveryCardView, {
+                clan: v,
+                className: P.clanCardCenter
               })
             })
           })
         })
       }), (0, a.jsx)(r.animated.div, {
-        className: M.clanCardInnerContainer,
+        className: P.clanCardInnerContainer,
         style: {
-          ...b,
-          ...A
+          ...k,
+          ...x
         },
-        children: (0, a.jsx)(T.ClanDiscoveryCardView, {
-          clan: R.FAKE_DISCOVERY_UPSELL_CLANS["2"],
-          className: M.clanCardInnerRight
+        children: (0, a.jsx)(N.ClanDiscoveryCardView, {
+          clan: L.FAKE_DISCOVERY_UPSELL_CLANS["2"],
+          className: P.clanCardInnerRight
         })
       }), (0, a.jsx)(r.animated.div, {
-        className: M.clanCardOuterContainer,
+        className: P.clanCardOuterContainer,
         style: {
-          ...j,
-          ...A
+          ...w,
+          ...x
         },
-        children: (0, a.jsx)(T.ClanDiscoveryCardView, {
-          clan: R.FAKE_DISCOVERY_UPSELL_CLANS["3"],
-          className: M.clanCardOuterRight
+        children: (0, a.jsx)(N.ClanDiscoveryCardView, {
+          clan: L.FAKE_DISCOVERY_UPSELL_CLANS["3"],
+          className: P.clanCardOuterRight
         })
       })]
     }), (0, a.jsx)("div", {
-      className: M.upsellCtaContainer,
-      children: (0, a.jsx)(U, {
+      className: P.upsellCtaContainer,
+      children: (0, a.jsx)(G, {
         selectedGuildId: i,
         setSelectedGuildId: l,
         eligibleGuilds: t,
         selectedGame: n,
         onButtonClick: c,
-        buttonText: w
+        buttonText: H
+      })
+    }), (0, a.jsx)("div", {
+      className: P.joinWFSContainer,
+      children: (0, a.jsx)(h.Clickable, {
+        className: P.joinWFS,
+        onClick: Y,
+        "aria-label": y.default.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL,
+        children: (0, a.jsx)(h.Text, {
+          variant: "text-xs/normal",
+          color: "text-muted",
+          children: y.default.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS.format({
+            wfsHook: V
+          })
+        })
       })
     })]
   })
