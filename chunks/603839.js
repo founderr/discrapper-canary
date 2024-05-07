@@ -190,7 +190,8 @@ function R(e) {
           setSigned: G ? void 0 : x,
           sidebarWidth: 380,
           windowWidth: D,
-          transition: V
+          transition: V,
+          brandPrimaryColor: L.brandPrimaryColor
         })
       })]
     }), Y((e, t) => t && (0, a.jsxs)(o.animated.div, {
