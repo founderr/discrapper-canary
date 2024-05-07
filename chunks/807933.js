@@ -34,7 +34,8 @@ function f() {
     description: c.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
     handleUpdate: f,
     interests: r,
-    requiredGameId: t
+    requiredGameId: t,
+    hidePreview: !0
   })
 }
 

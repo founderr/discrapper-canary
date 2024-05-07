@@ -61,14 +61,15 @@ t.default = e => {
     handleUpdate: i,
     interests: E,
     requiredGameId: L,
-    optional: c = !1
-  } = e, N = n.useMemo(() => d.default.getAvailableLocales().map(e => ({
+    optional: c = !1,
+    hidePreview: N = !1
+  } = e, S = n.useMemo(() => d.default.getAvailableLocales().map(e => ({
     value: e.value,
     label: e.localizedName
-  })), []), S = n.useMemo(() => Array.from(E), [E]), g = n.useMemo(() => S.filter(e => T.LANGUAGES_SET.has(e)), [S]), D = n.useCallback(e => {
-    let t = S.filter(e => !T.LANGUAGES_SET.has(e));
+  })), []), g = n.useMemo(() => Array.from(E), [E]), D = n.useMemo(() => g.filter(e => T.LANGUAGES_SET.has(e)), [g]), C = n.useCallback(e => {
+    let t = g.filter(e => !T.LANGUAGES_SET.has(e));
     i(new Set([...t, ...e]))
-  }, [i, S]), C = n.useMemo(() => S.filter(e => T.ALL_TRAITS_SET.has(e) || T.LANGUAGES_SET.has(e)), [S]);
+  }, [i, g]), f = n.useMemo(() => g.filter(e => T.ALL_TRAITS_SET.has(e) || T.LANGUAGES_SET.has(e)), [g]);
   return (0, a.jsxs)("div", {
     className: A.slideContent,
     children: [c && (0, a.jsx)(l.Text, {
@@ -116,18 +117,18 @@ t.default = e => {
           className: A.languageSelect,
           children: (0, a.jsx)(l.SearchableSelect, {
             wrapperClassName: A.input,
-            options: N,
-            value: g,
-            onChange: D,
+            options: S,
+            value: D,
+            onChange: C,
             placeholder: d.default.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
             multi: !0
           })
         })]
       }), (0, a.jsx)("div", {
         className: A.fixedWidthSidebar,
-        children: S.length > 0 && (0, a.jsx)(o.default, {
-          traits: S,
-          traitsToHighlight: C
+        children: g.length > 0 && !N && (0, a.jsx)(o.default, {
+          traits: g,
+          traitsToHighlight: f
         })
       })]
     })]

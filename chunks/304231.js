@@ -50,7 +50,8 @@ function p(e) {
           description: C.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
           handleUpdate: R,
           interests: A,
-          requiredGameId: i
+          requiredGameId: i,
+          hidePreview: !0
         })
     }
   }, [t, i, N, f, v, S, R, A]);
