@@ -41,7 +41,7 @@ function I(e) {
       }), (0, i.jsx)(r.Text, {
         className: E.text,
         variant: h,
-        color: "header-primary",
+        color: "interactive-normal",
         children: c.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
           count: I.length
         })
@@ -66,7 +66,7 @@ function I(e) {
       }), (0, i.jsx)(r.Text, {
         className: E.text,
         variant: h,
-        color: "header-primary",
+        color: "interactive-normal",
         children: c.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
           count: T.length
         })
