@@ -38,8 +38,8 @@ var a = n("120356"),
   b = n("496675"),
   j = n("306680"),
   P = n("9156"),
-  U = n("979651"),
-  G = n("974029"),
+  G = n("979651"),
+  U = n("974029"),
   w = n("934415"),
   B = n("98597"),
   F = n("648501"),
@@ -60,7 +60,7 @@ function X(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class q extends B.default {
+class Q extends B.default {
   componentWillUnmount() {
     this.activitiesHideTimeout.stop()
   }
@@ -75,7 +75,7 @@ class q extends B.default {
     let {
       channel: e
     } = this.props;
-    return (0, w.isChannelFull)(e, U.default, O.default)
+    return (0, w.isChannelFull)(e, G.default, O.default)
   }
   getModeClass() {
     let {
@@ -359,7 +359,7 @@ class q extends B.default {
             onMouseLeave: i,
             onFocus: r,
             onBlur: d,
-            children: (0, l.jsx)(G.default, {
+            children: (0, l.jsx)(U.default, {
               width: 16,
               height: 16,
               className: Z.actionIcon
@@ -375,7 +375,7 @@ class q extends B.default {
     })
   }
 }
-let Q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(q));
+let q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(Q));
 
 function J(e) {
   let {
@@ -400,7 +400,7 @@ function J(e) {
       bypassLimit: b.default.can(W.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), p = (0, i.useStateFromStores)([U.default], () => U.default.hasVideo(n.id)), m = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
+  }), p = (0, i.useStateFromStores)([G.default], () => G.default.hasVideo(n.id)), m = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
     isSubscriptionGated: S,
     needSubscriptionToAccess: I
   } = (0, T.default)(n.id), N = (0, _.default)(), L = (0, i.useStateFromStores)([P.default], () => P.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
@@ -420,8 +420,8 @@ function J(e) {
     needSubscriptionToAccess: I,
     enableConnectedUserLimit: !0,
     enableActivities: !0
-  }), G = x && null == O;
-  return (0, l.jsx)(Q, {
+  }), U = x && null == O;
+  return (0, l.jsx)(q, {
     channelName: C,
     embeddedApps: m,
     embeddedActivityType: W.ActivityTypes.PLAYING,
@@ -434,7 +434,7 @@ function J(e) {
     ...e,
     connected: x,
     isFavoriteSuggestion: s && !L,
-    forceShowButtons: G,
+    forceShowButtons: U,
     channelInfo: O,
     enableHangStatus: R,
     allowChannelTopic: M,

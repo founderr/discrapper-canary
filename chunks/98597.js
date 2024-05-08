@@ -145,7 +145,7 @@ function P(e) {
   })
 }
 
-function U(e) {
+function G(e) {
   let {
     channel: t
   } = e, n = () => {
@@ -167,7 +167,7 @@ function U(e) {
   })
 }
 
-function G(e) {
+function U(e) {
   let {
     channel: t
   } = e, n = () => {
@@ -202,12 +202,12 @@ class w extends(i = o.PureComponent) {
     })
   }
   renderRemoveSuggestionButton() {
-    return (0, r.jsx)(U, {
+    return (0, r.jsx)(G, {
       ...this.props
     })
   }
   renderAcceptSuggestionButton() {
-    return (0, r.jsx)(G, {
+    return (0, r.jsx)(U, {
       ...this.props
     })
   }

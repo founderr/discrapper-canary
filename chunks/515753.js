@@ -40,8 +40,8 @@ var l = n("735250"),
   b = n("28718"),
   j = n("733880"),
   P = n("465670"),
-  U = n("887208"),
-  G = n("709054"),
+  G = n("887208"),
+  U = n("709054"),
   w = n("998502"),
   B = n("788307"),
   F = n("960670"),
@@ -71,7 +71,7 @@ let Y = w.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
       className: k.closeIcon
     })
   }),
-  z = () => (0, l.jsx)(U.default, {
+  z = () => (0, l.jsx)(G.default, {
     className: k.favoriteIcon
   });
 class Z extends a.Component {
@@ -144,15 +144,15 @@ function X(e) {
     status: R,
     isMobile: y,
     "aria-posinset": P,
-    "aria-setsize": U
-  } = e, [G, w] = a.useState(!1), Z = a.useRef(null), X = a.useRef(null), {
-    avatarSrc: q,
-    avatarDecorationSrc: Q,
+    "aria-setsize": G
+  } = e, [U, w] = a.useState(!1), Z = a.useRef(null), X = a.useRef(null), {
+    avatarSrc: Q,
+    avatarDecorationSrc: q,
     eventHandlers: J
   } = (0, A.default)({
     user: c,
     size: h.AvatarSizes.SIZE_32,
-    animateOnHover: !(r || G)
+    animateOnHover: !(r || U)
   }), $ = (0, f.useStateFromStores)([M.default], () => M.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, S.default)(t), en = (0, f.useStateFromStores)([_.default], () => _.default.isFavorite(t.id)), el = () => {
     w(!0)
   }, ea = () => {
@@ -228,7 +228,7 @@ function X(e) {
       ...e,
       activities: I,
       applicationStream: L,
-      animate: G,
+      animate: U,
       hideTooltip: !0,
       user: c
     }) : null
@@ -253,8 +253,8 @@ function X(e) {
     return !c.isSystemUser() && (e = (0, C.default)(I) ? V.StatusTypes.STREAMING : R), (0, l.jsx)(Y, {
       ...J,
       size: h.AvatarSizes.SIZE_32,
-      src: q,
-      avatarDecoration: Q,
+      src: Q,
+      avatarDecoration: q,
       status: e,
       isMobile: y,
       isTyping: v,
@@ -283,7 +283,7 @@ function X(e) {
         onMouseLeave: ea,
         onMouseDown: ei,
         onContextMenu: eu,
-        "aria-setsize": U,
+        "aria-setsize": G,
         "aria-posinset": P,
         children: (0, l.jsxs)(h.Interactive, {
           className: i()(k.interactive, {
@@ -356,7 +356,7 @@ t.default = e => {
       isMobile: null != u && v.default.isMobileOnline(u)
     }
   }, [u, t, i]), c = (0, f.useStateFromStores)([y.default, R.default], () => {
-    if (t.isMultiUserDM()) return !!r && G.default.keys(R.default.getTypingUsers(t.id)).some(e => {
+    if (t.isMultiUserDM()) return !!r && U.default.keys(R.default.getTypingUsers(t.id)).some(e => {
       var t;
       return e !== (null === (t = y.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });

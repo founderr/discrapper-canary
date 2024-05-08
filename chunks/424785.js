@@ -38,8 +38,8 @@ var a = n("120356"),
   b = n("974029"),
   j = n("934415"),
   P = n("98597"),
-  U = n("648501"),
-  G = n("473403"),
+  G = n("648501"),
+  U = n("473403"),
   w = n("207055"),
   B = n("981631"),
   F = n("647086"),
@@ -139,7 +139,7 @@ class W extends P.default {
               onContextMenu: o,
               ...u
             } = i;
-            return (0, l.jsxs)(G.default, {
+            return (0, l.jsxs)(U.default, {
               className: H.iconVisibility,
               iconClassName: s()({
                 [k.iconLive]: null != p
@@ -300,7 +300,7 @@ function z(e) {
   }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), p = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, S.useStageParticipantsCount)(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E
-  } = (0, m.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), D = (0, U.default)({
+  } = (0, m.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), D = (0, G.default)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: r,

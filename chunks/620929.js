@@ -34,8 +34,8 @@ function N(e) {
     secondaryColor: s
   } = e;
   return null == t || 0 === t.length ? (0, a.jsx)(C.default, {
-    height: 41,
-    width: 41,
+    height: 42,
+    width: 42,
     className: A.placeholderIcon
   }) : (0, a.jsx)(g.BaseClanTagChiplet, {
     className: A.charterClanTag,

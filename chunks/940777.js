@@ -50,8 +50,8 @@ function j() {
     } = (0, v.useFavoriteAdded)(),
     [j, P] = a.useState(!1),
     {
-      favoriteServerMuted: U,
-      favoriteChannels: G
+      favoriteServerMuted: G,
+      favoriteChannels: U
     } = (0, o.useStateFromStoresObject)([L.default], () => ({
       favoriteChannels: L.default.getFavoriteChannels(),
       favoriteServerMuted: L.default.favoriteServerMuted
@@ -62,7 +62,7 @@ function j() {
     {
       badge: V,
       unread: H
-    } = (0, x.default)(G),
+    } = (0, x.default)(U),
     k = function(e) {
       let t = (0, o.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
         n = null != t && null != e[t],
@@ -93,7 +93,7 @@ function j() {
         isCurrentUserConnected: n,
         activity: m
       })
-    }(G),
+    }(U),
     Y = V > 0 ? (0, m.renderMentionBadge)(V) : null,
     W = a.useCallback(() => {
       s()
@@ -102,7 +102,7 @@ function j() {
     children: [(0, l.jsx)(N.default, {
       selected: F,
       hovered: j,
-      unread: H && !U,
+      unread: H && !G,
       className: D.pill
     }), (0, l.jsx)(M.default, {
       onShow: W,

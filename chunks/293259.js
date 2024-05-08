@@ -22,10 +22,10 @@ var l = s("735250"),
   _ = s("759231"),
   T = s("998502"),
   x = s("785717"),
-  A = s("621853"),
-  N = s("204197"),
-  U = s("735336"),
-  g = s("520978"),
+  N = s("621853"),
+  g = s("204197"),
+  A = s("735336"),
+  U = s("520978"),
   C = s("184325"),
   h = s("652853"),
   p = s("496206"),
@@ -48,7 +48,7 @@ function F(e) {
     isStreaming: G,
     hasProfileEffect: k,
     onClose: w
-  } = e, H = (0, i.useStateFromStores)([E.default], () => E.default.getRelationshipType(T.id)), V = (0, i.useStateFromStores)([I.default], () => I.default.isMobileOnline(T.id)), Y = (0, i.useStateFromStores)([I.default], () => I.default.getStatus(T.id)), z = (0, i.useStateFromStores)([A.default], () => A.default.getUserProfile(T.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === T.id), {
+  } = e, H = (0, i.useStateFromStores)([E.default], () => E.default.getRelationshipType(T.id)), V = (0, i.useStateFromStores)([I.default], () => I.default.isMobileOnline(T.id)), Y = (0, i.useStateFromStores)([I.default], () => I.default.getStatus(T.id)), z = (0, i.useStateFromStores)([N.default], () => N.default.getUserProfile(T.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === T.id), {
     theme: Z
   } = (0, h.useUserProfileThemeContext)(), {
     trackUserProfileAction: K
@@ -56,7 +56,7 @@ function F(e) {
     avatarSrc: J,
     eventHandlers: Q,
     avatarDecorationSrc: q
-  } = (0, N.default)({
+  } = (0, g.default)({
     user: T,
     size: O
   }), X = a.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(T, D), [T, D]);
@@ -103,7 +103,7 @@ function F(e) {
   }
   return (0, l.jsxs)("header", {
     className: B,
-    children: [(0, l.jsx)(U.default, {
+    children: [(0, l.jsx)(A.default, {
       displayProfile: t,
       onClose: $,
       user: T,
@@ -145,7 +145,7 @@ function F(e) {
           onBadgeClick: w
         }), (0, l.jsxs)("div", {
           className: y.relationshipButtons,
-          children: [(0, l.jsx)(g.default, {
+          children: [(0, l.jsx)(U.default, {
             className: y.applicationInstallButton,
             application: null == z ? void 0 : z.application
           }), (0, l.jsx)(p.default, {

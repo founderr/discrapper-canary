@@ -164,7 +164,7 @@ let P = r.memo(function() {
     })]
   })
 });
-class U extends(a = r.Component) {
+class G extends(a = r.Component) {
   static getDerivedStateFromProps(e) {
     let {
       children: t,
@@ -355,7 +355,7 @@ class U extends(a = r.Component) {
     })
   }
 }
-j(U, "defaultProps", {
+j(G, "defaultProps", {
   padding: 8
 });
 t.default = e => {
@@ -410,7 +410,7 @@ t.default = e => {
   });
   return (0, i.jsx)(d.ListNavigatorProvider, {
     navigator: R,
-    children: (0, i.jsx)(U, {
+    children: (0, i.jsx)(G, {
       channels: u,
       privateChannelIds: f,
       listRef: p,

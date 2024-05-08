@@ -126,14 +126,14 @@ t.default = a.memo(function(e) {
     headerClassName: O,
     communityInfoVisible: D,
     hasSubheader: b
-  } = e, j = x.hasFeature(C.GuildFeatures.ANIMATED_BANNER), P = (0, d.default)(x), U = !P && x.hasCommunityInfoSubheader(), G = (0, p.isAnimatedIconHash)(R) && j && !A, [w, B] = a.useState(!1), F = a.useRef(), V = a.useRef(null), H = a.useRef(), k = c.GifAutoPlay.getSetting();
+  } = e, j = x.hasFeature(C.GuildFeatures.ANIMATED_BANNER), P = (0, d.default)(x), G = !P && x.hasCommunityInfoSubheader(), U = (0, p.isAnimatedIconHash)(R) && j && !A, [w, B] = a.useState(!1), F = a.useRef(), V = a.useRef(null), H = a.useRef(), k = c.GifAutoPlay.getSetting();
   a.useEffect(() => {
-    if (G && n && !F.current && k) return B(!0), H.current = setTimeout(() => {
+    if (U && n && !F.current && k) return B(!0), H.current = setTimeout(() => {
       B(!1)
     }, 5e3), () => {
       clearTimeout(H.current)
     }
-  }, [G, n, k]), a.useEffect(() => {
+  }, [U, n, k]), a.useEffect(() => {
     F.current = n
   }, [n]);
   let Y = () => {
@@ -152,7 +152,7 @@ t.default = a.memo(function(e) {
         [S.selected]: null != f && L,
         [S.hasBanner]: Y(),
         [S.bannerVisible]: n,
-        [S.communityInfoVisible]: !P && D || b && U
+        [S.communityInfoVisible]: !P && D || b && G
       }),
       onMouseDown: T,
       onContextMenu: h,
@@ -188,7 +188,7 @@ t.default = a.memo(function(e) {
             className: S.headerChildren,
             children: y
           })]
-        }), U && (0, l.jsx)(I, {
+        }), G && (0, l.jsx)(I, {
           guild: x,
           controller: s,
           hasBanner: null != R,
@@ -200,7 +200,7 @@ t.default = a.memo(function(e) {
         guildBanner: R,
         animate: w
       }) : null]
-    }), G && Y() ? (0, l.jsx)("div", {
+    }), U && Y() ? (0, l.jsx)("div", {
       className: S.animatedBannerHoverLayer,
       onMouseEnter: () => {
         B(!0), clearTimeout(H.current)

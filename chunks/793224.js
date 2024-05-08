@@ -68,7 +68,7 @@ function M() {
         }) : (0, u.startBroadcastForStream)((0, g.encodeStreamKey)(l), null == n ? void 0 : n.pid)
       } else(0, u.stopBroadcast)()
     },
-    U = e => (0, l.jsx)(L.default, {
+    G = e => (0, l.jsx)(L.default, {
       tooltipText: y ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,
       onClick: () => {
         P(), null == e || e(x.ContentDismissActionType.UNKNOWN)
@@ -79,7 +79,7 @@ function M() {
         height: 20
       })
     }),
-    G = e => (0, l.jsx)(f.default, {
+    U = e => (0, l.jsx)(f.default, {
       markAsDismissed: e
     });
   return (0, l.jsx)(m.default, {
@@ -93,10 +93,10 @@ function M() {
       return t === s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP ? (0, l.jsx)(i.Popout, {
         position: "top",
         align: "center",
-        renderPopout: () => G(n),
+        renderPopout: () => U(n),
         shouldShow: !0,
-        children: () => U(n)
-      }) : U()
+        children: () => G(n)
+      }) : G()
     }
   })
 }

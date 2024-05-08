@@ -43,8 +43,8 @@ function R(e) {
     isSubscriptionGated: b,
     needSubscriptionToAccess: j,
     isNewChannel: P,
-    muted: U,
-    resolvedUnreadSetting: G
+    muted: G,
+    resolvedUnreadSetting: U
   } = e, w = (0, a.useStateFromStores)([p.default], () => p.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([m.default], () => m.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, _.default)({
     channel: n,
     locked: F,
@@ -65,14 +65,14 @@ function R(e) {
     color: s.default.unsafe_rawColors.BRAND_260.css,
     className: x.newChannel
   });
-  if (!U && G === L.UnreadSetting.ALL_MESSAGES && n.isForumLikeChannel() && null != Y && Y > 0) return (0, l.jsx)(i.Text, {
+  if (!G && U === L.UnreadSetting.ALL_MESSAGES && n.isForumLikeChannel() && null != Y && Y > 0) return (0, l.jsx)(i.Text, {
     variant: "text-xs/semibold",
     color: "text-brand",
     children: v.default.Messages.CHANNEL_NEW_POSTS_LABEL.format({
       count: (0, C.getBadgeCountString)(Y)
     })
   });
-  if (!U && n.isForumLikeChannel() && null != W && W > 0) return (0, l.jsx)(i.Text, {
+  if (!G && n.isForumLikeChannel() && null != W && W > 0) return (0, l.jsx)(i.Text, {
     variant: "text-xs/semibold",
     color: "text-muted",
     children: (0, C.getBadgeCountString)(W)
@@ -87,6 +87,6 @@ function R(e) {
     color: s.default.unsafe_rawColors.RED_400.css
   }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(B) ? (0, l.jsx)(I.default, {
     embeddedApps: B,
-    muted: U
+    muted: G
   }) : null
 }

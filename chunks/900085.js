@@ -58,7 +58,7 @@ let j = {
       })
     })]
   });
-class U extends(l = s.Component) {
+class G extends(l = s.Component) {
   render() {
     let e = E.default.getGuild(this.props.channel.guild_id);
     return (0, a.jsx)(T.Channel, {
@@ -70,10 +70,10 @@ class U extends(l = s.Component) {
     })
   }
 }
-b(U, "defaultProps", {
+b(G, "defaultProps", {
   unread: !1
 });
-let G = u.default.connectStores([S.default, C.default], e => {
+let U = u.default.connectStores([S.default, C.default], e => {
     let {
       channel: t
     } = e;
@@ -82,7 +82,7 @@ let G = u.default.connectStores([S.default, C.default], e => {
       mentions: S.default.getMentionCount(t.id),
       category: C.default.getChannel(t.parent_id)
     }
-  })(U),
+  })(G),
   w = u.default.connectStores([I.default], e => {
     let {
       channel: t
@@ -91,7 +91,7 @@ let G = u.default.connectStores([S.default, C.default], e => {
     return {
       voiceStates: I.default.getVoiceStates(t.guild_id)[t.id]
     }
-  })(U),
+  })(G),
   B = u.default.connectStores([g.default], e => {
     let {
       guild: t
@@ -451,7 +451,7 @@ class k extends s.PureComponent {
             children: n.record.text
           }, "".concat(n.type, "-").concat(n.record.id));
         case p.AutocompleterResultTypes.TEXT_CHANNEL:
-          return (0, a.jsx)(G, {
+          return (0, a.jsx)(U, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),

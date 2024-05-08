@@ -81,8 +81,8 @@ function O() {
     }, [a]),
     j = (0, o.useStateFromStoresArray)([m.default], () => b.map(e => m.default.getUser(e)), [b]),
     P = (0, o.useStateFromStoresArray)([m.default], () => D.map(e => m.default.getUser(e)), [D]),
-    U = y(S.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
-  let G = (e = M, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
+    G = y(S.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
+  let U = (e = M, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
       children: [(0, l.jsx)(_.default, {
         className: R.activityIcon
@@ -106,7 +106,7 @@ function O() {
     w = y(I.default, P.filter(e => null != e && !b.includes(e.id))),
     B = y(E.default, j);
   return (0, l.jsxs)(l.Fragment, {
-    children: [G, U, w, B]
+    children: [U, G, w, B]
   })
 }
 

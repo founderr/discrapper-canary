@@ -117,11 +117,11 @@ t.default = a.memo(function(e) {
     null == L.current[R] ? L.current[R] = [] : L.current[R][t] = e
   }, [R]), P = a.useCallback((e, t) => {
     x.current = t, _(h * e + t)
-  }, [_]), U = a.useCallback(() => {
+  }, [_]), G = a.useCallback(() => {
     x.current = null, _(null)
-  }, [_]), G = a.useCallback(e => {
-    U(), v.current = e
-  }, [U]), w = a.useCallback((e, t, n) => {
+  }, [_]), U = a.useCallback(e => {
+    G(), v.current = e
+  }, [G]), w = a.useCallback((e, t, n) => {
     if (v.current) {
       O({
         x: 0,
@@ -156,7 +156,7 @@ t.default = a.memo(function(e) {
         y: e.clientY
       };
     if (w(i, s, Math.max(t, n)), v.current) {
-      null != S && U();
+      null != S && G();
       return
     }
     let r = (0, o.extendLineSegment)(s, i, Math.max(t, n));
@@ -169,12 +169,12 @@ t.default = a.memo(function(e) {
         return
       }
     }
-    U()
-  }, 16), [S, w, U, P, R, n, t]), V = a.useCallback(e => {
+    G()
+  }, 16), [S, w, G, P, R, n, t]), V = a.useCallback(e => {
     if (!N) return;
     let t = R + (e.deltaY > 0 ? 1 : -1);
-    t >= 0 && t < b.length && (null != x.current && (b[t].length > x.current ? P(t, x.current) : U()), M(t))
-  }, [N, R, b, P, U]), H = a.useMemo(() => b[R].map((e, a) => {
+    t >= 0 && t < b.length && (null != x.current && (b[t].length > x.current ? P(t, x.current) : G()), M(t))
+  }, [N, R, b, P, G]), H = a.useMemo(() => b[R].map((e, a) => {
     let s = f[a];
     if (null == s) throw Error("Too many items supplied ".concat(T.length, " expected max of ").concat(f.length));
     let i = p(s.x, t, C),
@@ -246,8 +246,8 @@ t.default = a.memo(function(e) {
             strokeWidth: "40.32"
           }), E && (0, l.jsx)("circle", {
             className: d.chatWheelDeadZone,
-            onMouseEnter: () => G(!0),
-            onMouseLeave: () => G(!1),
+            onMouseEnter: () => U(!0),
+            onMouseLeave: () => U(!1),
             cx: 144,
             cy: 144,
             r: 28.8
@@ -259,8 +259,8 @@ t.default = a.memo(function(e) {
           })]
         }), E && (0, l.jsx)("circle", {
           className: d.chatWheelDeadZone,
-          onMouseEnter: () => G(!0),
-          onMouseLeave: () => G(!1),
+          onMouseEnter: () => U(!0),
+          onMouseLeave: () => U(!1),
           cx: 144,
           cy: 144,
           r: 28.8,

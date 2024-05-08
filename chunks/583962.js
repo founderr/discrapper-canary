@@ -75,20 +75,20 @@ t.default = e => {
   } = t, I = (0, _.getGuildTierFromAppliedBoostCount)(d, g), M = (0, _.getNextTier)(I, t.id), O = null == M, D = null != M ? M : I, j = (0, u.useStateFromStores)([T.default], () => {
     var e;
     return null !== (e = T.default.getCountForGuild(g)) && void 0 !== e ? e : 0
-  }), P = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), U = (0, u.useStateFromStores)([E.default], () => E.default.can(v.Permissions.MANAGE_GUILD, t));
+  }), P = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), G = (0, u.useStateFromStores)([E.default], () => E.default.can(v.Permissions.MANAGE_GUILD, t));
   a.useEffect(() => {
     j !== d && (0, N.updateGuildPremiumSubscriptionCount)(g, d)
   }, [g, j, d]);
-  let G = "".concat(Math.min(100, d / (0, _.getAppliedGuildBoostsRequired)(t.id)[D] * 100), "%"),
+  let U = "".concat(Math.min(100, d / (0, _.getAppliedGuildBoostsRequired)(t.id)[D] * 100), "%"),
     {
       current: w
-    } = a.useRef(G),
+    } = a.useRef(U),
     B = {
       from: {
         width: j === d ? w : "0%"
       },
       to: {
-        width: G
+        width: U
       },
       config: b,
       immediate: P
@@ -153,7 +153,7 @@ t.default = e => {
           [R.containerWithMargin]: n
         }),
         onContextMenu: e => {
-          U && (0, f.openContextMenu)(e, e => (0, l.jsx)(y, {
+          G && (0, f.openContextMenu)(e, e => (0, l.jsx)(y, {
             ...e,
             guild: t
           }))

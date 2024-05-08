@@ -59360,7 +59360,6 @@ div:has(>div>.modal__06f49) {
 }
 
 .closeButton__290e3 {
-    z-index: 1;
     position: absolute;
     top: 48px;
     right: 48px

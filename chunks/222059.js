@@ -37,8 +37,8 @@ var l = n("735250"),
   b = n("557177"),
   j = n("278464"),
   P = n("682662"),
-  U = n("662146"),
-  G = n("674552"),
+  G = n("662146"),
+  U = n("674552"),
   w = n("981631"),
   B = n("474936"),
   F = n("871465"),
@@ -81,19 +81,19 @@ function Y(e) {
   T && (X = r.Storage.get(w.DISCODO_STORAGE_KEY) ? V.default.Messages.DISCODO_ENABLED : V.default.Messages.DISCODO_DISABLED), W.length > 0 && h.default.trackExposure({
     location: "home_button"
   });
-  let q = null;
-  !t && m ? q = (0, l.jsx)(u.default, {
+  let Q = null;
+  !t && m ? Q = (0, l.jsx)(u.default, {
     className: H.downloadProgress,
     determineOwnVisibility: !1
-  }) : K && (q = (0, l.jsx)(R.default, {
+  }) : K && (Q = (0, l.jsx)(R.default, {
     className: H.broadcastBadge
   }));
-  let Q = t || I || S,
+  let q = t || I || S,
     J = (0, l.jsx)(o.BlobMask, {
       highlight: K,
-      selected: Q,
-      lowerBadge: f > 0 ? (0, G.renderMentionBadge)(f) : null,
-      upperBadge: q,
+      selected: q,
+      lowerBadge: f > 0 ? (0, U.renderMentionBadge)(f) : null,
+      upperBadge: Q,
       lowerBadgeWidth: (0, y.getBadgeWidthForValue)(f),
       children: (0, l.jsx)(O.default, {
         onMouseEnter: () => N(!0),
@@ -107,7 +107,7 @@ function Y(e) {
             }, 1e3)
           }
         },
-        selected: Q,
+        selected: q,
         ariaLabel: V.default.Messages.DIRECT_MESSAGES,
         ...z,
         to: {
@@ -159,7 +159,7 @@ function Y(e) {
           selected: t,
           hovered: I,
           className: H.pill
-        }), null != $ ? $ : (0, l.jsx)(U.default, {
+        }), null != $ ? $ : (0, l.jsx)(G.default, {
           color: o.Tooltip.Colors.PRIMARY,
           hideOnClick: !0,
           text: X,

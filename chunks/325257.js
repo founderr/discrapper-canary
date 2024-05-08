@@ -52,8 +52,8 @@ function j(e, t) {
 t.default = a.memo(function(e) {
   var t, n, s, h, P;
   let {
-    guildNode: U,
-    setRef: G,
+    guildNode: G,
+    setRef: U,
     onDragStart: w,
     onDragEnd: B,
     route: F,
@@ -66,13 +66,13 @@ t.default = a.memo(function(e) {
     badge: z = 0,
     contextMenu: Z = j,
     draggable: X = !1,
-    sorting: q = !1,
-    preloadOnClick: Q = !0,
+    sorting: Q = !1,
+    preloadOnClick: q = !0,
     guildJoinRequestStatus: J
   } = e, {
     id: $,
     parentId: ee
-  } = U, et = null !== (t = e.upperBadge) && void 0 !== t ? t : K ? (0, M.renderUnavailableBadge)() : null != W ? (0, M.renderMediaBadge)(W) : void 0, en = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
+  } = G, et = null !== (t = e.upperBadge) && void 0 !== t ? t : K ? (0, M.renderUnavailableBadge)() : null != W ? (0, M.renderMediaBadge)(W) : void 0, en = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
   null == en && z > 0 ? en = null !== (s = (0, M.renderMentionBadge)(z)) && void 0 !== s ? s : void 0 : null == en && null != J && (en = null !== (h = (0, M.renderGuildJoinRequestBadge)({
     guildJoinRequestStatus: J
   })) && void 0 !== h ? h : void 0);
@@ -84,8 +84,8 @@ t.default = a.memo(function(e) {
       item: () => (requestAnimationFrame(() => {
         null == w || w()
       }), {
-        type: U.type,
-        nodeId: U.id
+        type: G.type,
+        nodeId: G.id
       }),
       end() {
         null == B || B(), (0, p.saveGuildFolders)(S.default.getCompatibleGuildFolders())
@@ -96,7 +96,7 @@ t.default = a.memo(function(e) {
     }),
     ei = (0, o.useTreeItem)(null != $ ? $ : y.EMPTY_STRING_SNOWFLAKE_ID),
     [er, eo] = a.useState(!1),
-    eu = !q && er,
+    eu = !Q && er,
     [ed, ec] = a.useState(!1),
     [ef, eh] = a.useState(!1),
     [ep] = a.useState(() => new d.DelayedCall(70, () => eh(!0)));
@@ -112,10 +112,10 @@ t.default = a.memo(function(e) {
       })
     }, [$, F]),
     eC = a.useCallback(() => {
-      if (null != F || null == V || K || !Q) return;
+      if (null != F || null == V || K || !q) return;
       let e = (0, m.getChannelIdForGuildTransition)(V.id);
       null != e && f.default.preload(V.id, e)
-    }, [F, V, K, Q]),
+    }, [F, V, K, q]),
     eg = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest($)),
     eE = a.useCallback(e => {
       null != V && !eg && Z(e, V)
@@ -134,8 +134,8 @@ t.default = a.memo(function(e) {
       ep.cancel(), eh(!1)
     }, [ep]),
     eI = a.useCallback(e => {
-      null == G || G($, e)
-    }, [$, G]);
+      null == U || U($, e)
+    }, [$, U]);
   if (null == V) return null;
   let eN = ef || ed ? (0, l.jsx)(A.default, {
       guild: V,
@@ -155,10 +155,10 @@ t.default = a.memo(function(e) {
       name: V.toString(),
       onClick: em,
       onMouseEnter: function() {
-        q || eo(!0)
+        Q || eo(!0)
       },
       onMouseLeave: function() {
-        q || eo(!1)
+        Q || eo(!1)
       },
       onMouseDown: eC,
       onContextMenu: eE,
@@ -174,7 +174,7 @@ t.default = a.memo(function(e) {
       ref: X ? es : void 0,
       "data-dnd-name": V.toString(),
       className: i()(D.blobContainer, {
-        [D.sorting]: q,
+        [D.sorting]: Q,
         [D.wobble]: ef,
         [D.selected]: ef || k
       }),
@@ -195,12 +195,12 @@ t.default = a.memo(function(e) {
       className: D.pill
     }), (0, l.jsx)(v.default, {
       guild: V,
-      disabled: q,
+      disabled: Q,
       isDragging: ea,
       children: eT
     }), X ? (0, l.jsx)(L.default, {
       name: V.name,
-      targetNode: U,
+      targetNode: G,
       onDragOverChanged: e_
     }) : null]
   })

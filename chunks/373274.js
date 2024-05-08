@@ -39,8 +39,8 @@ var l, a = n("735250"),
   b = n("734307"),
   j = n("854444"),
   P = n("688265"),
-  U = n("896053"),
-  G = n("301342"),
+  G = n("896053"),
+  U = n("301342"),
   w = n("906817"),
   B = n("429122"),
   F = n("285573"),
@@ -53,8 +53,8 @@ var l, a = n("735250"),
   z = n("53425"),
   Z = n("424785"),
   X = n("770202"),
-  q = n("79556"),
-  Q = n("428127"),
+  Q = n("79556"),
+  q = n("428127"),
   J = n("950969"),
   $ = n("233657"),
   ee = n("831700"),
@@ -258,14 +258,14 @@ class eo extends(l = s.PureComponent) {
           children: n ? (0, a.jsxs)(s.Fragment, {
             children: [(0, a.jsx)("div", {
               className: ei.positionedContainer,
-              children: (0, a.jsx)(Q.default, {
+              children: (0, a.jsx)(q.default, {
                 position: "top",
                 guildChannels: e,
                 guildChannelsVersion: t,
                 jumpToVoiceChannels: this.jumpToVoiceChannels,
                 jumpToChannel: this.jumpToChannel
               })
-            }), this.renderList(), (0, a.jsx)(Q.default, {
+            }), this.renderList(), (0, a.jsx)(q.default, {
               position: "bottom",
               guildChannels: e,
               guildChannelsVersion: t,
@@ -577,7 +577,7 @@ class eo extends(l = s.PureComponent) {
         case el.ChannelTypes.DM:
         case el.ChannelTypes.GROUP_DM:
           return (0, a.jsxs)(s.Fragment, {
-            children: [(0, a.jsx)(q.default, {
+            children: [(0, a.jsx)(Q.default, {
               channel: T,
               guild: l,
               position: I.position,
@@ -634,12 +634,12 @@ class eo extends(l = s.PureComponent) {
           }, A);
         case el.ChannelTypes.GUILD_CATEGORY:
           if (t !== d.voiceChannelsSectionNumber) return null;
-          return (0, a.jsx)(G.ReadonlyCategoryChannel, {
+          return (0, a.jsx)(U.ReadonlyCategoryChannel, {
             channel: T
           }, "readonly-".concat(T.id));
         case el.ChannelTypes.PUBLIC_THREAD:
         case el.ChannelTypes.PRIVATE_THREAD:
-          return (0, a.jsx)(q.default, {
+          return (0, a.jsx)(Q.default, {
             channel: T,
             guild: l,
             position: I.position,
@@ -781,7 +781,7 @@ function ed(e) {
 }
 
 function ec(e) {
-  let t = (0, U.default)(e.guild),
+  let t = (0, G.default)(e.guild),
     n = (0, P.default)(e.guild),
     l = r().uniq(n.concat(t)),
     s = (0, u.useStateFromStoresObject)([b.default], () => b.default.getGuild(e.guildId, l));

@@ -75,7 +75,7 @@ let M = a.memo(function(e) {
         })
       }
     }, [s]),
-    U = a.useCallback(() => {
+    G = a.useCallback(() => {
       let e = s.type === L.ChannelTypes.GUILD_CATEGORY ? null : s.type,
         t = s.getGuildId();
       null != t && (0, u.openModalLazy)(async () => {
@@ -91,7 +91,7 @@ let M = a.memo(function(e) {
       })
     }, [s]),
     {
-      role: G,
+      role: U,
       tabIndex: w,
       ...B
     } = (0, r.useListItem)(s.id),
@@ -151,7 +151,7 @@ let M = a.memo(function(e) {
                   look: u.Button.Looks.BLANK,
                   size: u.Button.Sizes.NONE,
                   className: i()(x.addButton, x.forceVisible),
-                  onClick: U,
+                  onClick: G,
                   onMouseEnter: t,
                   onMouseLeave: n,
                   tabIndex: w,

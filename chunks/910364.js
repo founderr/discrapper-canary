@@ -22,10 +22,10 @@ var l = s("735250"),
   _ = s("342656"),
   T = s("785717"),
   x = s("221292"),
-  A = s("621853"),
-  N = s("318661"),
-  U = s("706327"),
-  g = s("484404"),
+  N = s("621853"),
+  g = s("318661"),
+  A = s("706327"),
+  U = s("484404"),
   C = s("502762"),
   h = s("62154"),
   p = s("293259"),
@@ -42,10 +42,10 @@ function O(e) {
     section: r,
     setSection: o,
     hasActivity: u
-  } = e, d = (0, i.useStateFromStores)([A.default], () => {
+  } = e, d = (0, i.useStateFromStores)([N.default], () => {
     var e, s;
-    return (null === (s = A.default.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null
-  }), f = (0, U.useMutualFriends)(t), S = (0, i.useStateFromStores)([A.default], () => A.default.getMutualGuilds(t.id)), m = t.bot || s, {
+    return (null === (s = N.default.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null
+  }), f = (0, A.useMutualFriends)(t), S = (0, i.useStateFromStores)([N.default], () => N.default.getMutualGuilds(t.id)), m = t.bot || s, {
     enabled: I
   } = (0, _.useProfileMutualsExperiment)({
     autoTrackExposure: !0,
@@ -104,8 +104,8 @@ function L(e) {
   var t, s;
   let {
     user: _,
-    guildId: A,
-    channelId: U,
+    guildId: N,
+    channelId: A,
     messageId: L,
     roleId: F,
     friendToken: D,
@@ -114,11 +114,11 @@ function L(e) {
     transitionState: G,
     sourceAnalyticsLocations: k = [],
     onClose: w
-  } = e, H = null !== (t = (0, i.useStateFromStores)([v.default], () => v.default.getUser(_.id))) && void 0 !== t ? t : _, V = (0, N.default)(null !== (s = H.id) && void 0 !== s ? s : ""), {
+  } = e, H = null !== (t = (0, i.useStateFromStores)([v.default], () => v.default.getUser(_.id))) && void 0 !== t ? t : _, V = (0, g.default)(null !== (s = H.id) && void 0 !== s ? s : ""), {
     analyticsLocations: Y
   } = (0, f.default)([...k, c.default.PROFILE_MODAL]);
   (0, u.useSubscribeGuildMembers)({
-    [A]: [H.id]
+    [N]: [H.id]
   });
   let z = (0, i.useStateFromStores)([m.default], () => null != m.default.getAnyStreamForUser(H.id)),
     W = (0, i.useStateFromStores)([E.default], () => E.default.findActivity(H.id, e => e.type !== P.ActivityTypes.CUSTOM_STATUS)),
@@ -135,21 +135,21 @@ function L(e) {
         action: "PRESS_SECTION",
         layout: "MODAL",
         userId: H.id,
-        guildId: A,
-        channelId: U,
+        guildId: N,
+        channelId: A,
         messageId: L,
         roleId: F,
         analyticsLocations: Y
       }), K(!0), Q(e)
-    }, [H.id, A, U, L, F, Y]),
+    }, [H.id, N, A, L, F, Y]),
     el = null == V ? void 0 : V.profileEffectId;
   return (0, l.jsx)(f.AnalyticsLocationProvider, {
     value: Y,
     children: (0, l.jsx)(T.UserProfileAnalyticsProvider, {
       layout: "MODAL",
       userId: H.id,
-      guildId: A,
-      channelId: U,
+      guildId: N,
+      channelId: A,
       messageId: L,
       roleId: F,
       children: (0, l.jsx)(r.default, {
@@ -171,12 +171,12 @@ function L(e) {
               friendToken: D,
               onClose: w,
               isStreaming: (0, d.default)(W),
-              guildId: A,
-              channelId: U,
+              guildId: N,
+              channelId: A,
               hasProfileEffect: null != el
             }), (0, l.jsxs)(C.default.Overlay, {
               className: y.overlay,
-              children: [G === n.ModalTransitionState.ENTERED && (0, l.jsx)(g.default, {
+              children: [G === n.ModalTransitionState.ENTERED && (0, l.jsx)(U.default, {
                 onTooltipClose: w
               }), (0, l.jsxs)("div", {
                 className: y.body,
