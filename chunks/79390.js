@@ -163,11 +163,13 @@ function M(e) {
 }
 
 function y(e) {
-  var t, n, i, r;
-  let a = null !== (r = null === (i = e.embeds[0]) || void 0 === i ? void 0 : null === (n = i.fields) || void 0 === n ? void 0 : null === (t = n.find(e => "poll_question_text" === e.rawName)) || void 0 === t ? void 0 : t.rawValue) && void 0 !== r ? r : "",
-    s = (0, o.truncateText)(a, h.POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS);
+  let t = function(e, t) {
+    var n, i, r, a;
+    let s = null !== (a = null === (r = e.embeds[0]) || void 0 === r ? void 0 : null === (i = r.fields) || void 0 === i ? void 0 : null === (n = i.find(e => "poll_question_text" === e.rawName)) || void 0 === n ? void 0 : n.rawValue) && void 0 !== a ? a : "";
+    return null != t ? (0, o.truncateText)(s, t) : s
+  }(e, h.POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS);
   return m.default.Messages.POLL_RESULT_REPLY_TEXT.format({
-    title: s
+    title: t
   })
 }
 
