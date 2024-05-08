@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return g
+    return M
   }
 }), i("47120");
 var s = i("735250"),
@@ -9,49 +9,50 @@ var s = i("735250"),
   a = i("442837"),
   l = i("481060"),
   u = i("58540"),
-  o = i("931240"),
-  d = i("353093"),
-  r = i("314897"),
-  c = i("271383"),
-  S = i("430824"),
-  f = i("496675"),
-  E = i("594174"),
-  N = i("981631"),
-  _ = i("689938");
+  o = i("100527"),
+  d = i("931240"),
+  r = i("353093"),
+  c = i("314897"),
+  S = i("271383"),
+  f = i("430824"),
+  E = i("496675"),
+  N = i("594174"),
+  _ = i("981631"),
+  g = i("689938");
 
-function g(e) {
+function M(e) {
   let {
     guildId: t,
     userId: i,
-    analyticsLocation: g,
-    analyticsLocations: M,
-    context: I,
-    icon: A
-  } = e, h = (0, a.useStateFromStores)([S.default], () => S.default.getGuild(t), [t]), T = (0, a.useStateFromStores)([r.default], () => r.default.getId()), L = (0, a.useStateFromStores)([E.default], () => E.default.getUser(i)), m = (0, a.useStateFromStores)([c.default], () => c.default.isGuestOrLurker(t, i), [t, i]), O = n.useMemo(() => ({
+    analyticsLocation: M,
+    analyticsLocations: I,
+    context: A,
+    icon: h
+  } = e, T = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]), L = (0, a.useStateFromStores)([c.default], () => c.default.getId()), m = (0, a.useStateFromStores)([N.default], () => N.default.getUser(i)), O = (0, a.useStateFromStores)([S.default], () => S.default.isGuestOrLurker(t, i), [t, i]), p = n.useMemo(() => ({
     [t]: [i]
-  }), [t, i]), p = (0, d.isGuildAClan)(h);
-  (0, u.useSubscribeGuildMembers)(O);
-  let G = I === N.AppContext.POPOUT,
-    C = T === i,
-    [b, x] = (0, a.useStateFromStoresArray)([f.default], () => {
-      if (null == h) return [!1, !1];
-      let e = T === i && (f.default.can(N.Permissions.CHANGE_NICKNAME, h) || f.default.can(N.Permissions.MANAGE_NICKNAMES, h));
-      return [e, f.default.canManageUser(N.Permissions.MANAGE_NICKNAMES, i, h)]
-    }, [T, i, h]),
-    U = n.useCallback((e, t) => () => {
-      (0, o.adoptClanIdentity)(e, t)
+  }), [t, i]), G = (0, r.isGuildAClan)(T);
+  (0, u.useSubscribeGuildMembers)(p);
+  let C = A === _.AppContext.POPOUT,
+    b = L === i,
+    [x, U] = (0, a.useStateFromStoresArray)([E.default], () => {
+      if (null == T) return [!1, !1];
+      let e = L === i && (E.default.can(_.Permissions.CHANGE_NICKNAME, T) || E.default.can(_.Permissions.MANAGE_NICKNAMES, T));
+      return [e, E.default.canManageUser(_.Permissions.MANAGE_NICKNAMES, i, T)]
+    }, [L, i, T]),
+    R = n.useCallback((e, t) => () => {
+      (0, d.adoptClanIdentity)(e, t, o.default.CONTEXT_MENU)
     }, []);
-  return null != h && !G && (b || x || C) && null != L && !m && p && L.isStaff() ? (0, s.jsxs)(s.Fragment, {
+  return null != T && !C && (x || U || b) && null != m && !O && G && m.isStaff() ? (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(l.MenuItem, {
       id: "adopt-clan-identity",
-      label: _.default.Messages.CLAN_ADOPT_CLAN_IDENTITY,
-      icon: A,
-      action: U(t, !0)
+      label: g.default.Messages.CLAN_ADOPT_CLAN_IDENTITY,
+      icon: h,
+      action: R(t, !0)
     }), (0, s.jsx)(l.MenuItem, {
       id: "deadopt-clan-identity",
-      label: _.default.Messages.CLAN_CLEAR_CLAN_IDENTITY,
-      icon: A,
-      action: U(null, null)
+      label: g.default.Messages.CLAN_CLEAR_CLAN_IDENTITY,
+      icon: h,
+      action: R(null, null)
     })]
   }) : null
 }

@@ -26,10 +26,11 @@ var a = n("735250"),
   x = n("620929"),
   M = n("284019"),
   R = n("308083"),
-  y = n("689938"),
-  L = n("958631");
+  y = n("981631"),
+  L = n("689938"),
+  O = n("958631");
 
-function O(e) {
+function j(e) {
   var t;
   let {
     guildId: n,
@@ -45,31 +46,31 @@ function O(e) {
     primaryColor: null === (t = s.branding) || void 0 === t ? void 0 : t.primaryColor,
     onSignCharter: i,
     children: (0, a.jsxs)("div", {
-      className: L.scrollContentsContainer,
+      className: O.scrollContentsContainer,
       children: [(0, a.jsx)(v.BaseClanTagChiplet, {
         clanBadge: (0, A.getClanBadgeUrl)(n, s.badge.imageHash, R.ClanTagBadgeSize.SIZE_24),
         clanTag: s.tag,
         textVariant: "heading-lg/semibold",
         badgeSize: R.ClanTagBadgeSize.SIZE_24,
-        className: L.clanTagChiplet
+        className: O.clanTagChiplet
       }), (0, a.jsxs)("div", {
         children: [(0, a.jsx)(h.Heading, {
           variant: "heading-xxl/normal",
           color: "text-muted",
-          className: L.charterHeaderText,
-          children: y.default.Messages.CLAN_SETUP_OVERVIEW_TITLE
+          className: O.charterHeaderText,
+          children: L.default.Messages.CLAN_SETUP_OVERVIEW_TITLE
         }), (0, a.jsx)(h.Heading, {
           variant: "heading-xxl/bold",
           color: "interactive-active",
-          className: L.charterHeaderText,
+          className: O.charterHeaderText,
           children: s.name
         }), (0, a.jsx)("div", {
-          className: L.establishedDate,
+          className: O.establishedDate,
           children: (0, a.jsx)(h.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            className: L.charterHeaderText,
-            children: y.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
+            className: O.charterHeaderText,
+            children: L.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
               date: r
             })
           })
@@ -77,12 +78,12 @@ function O(e) {
       }), (0, a.jsx)(x.CharterScrollGameSection, {
         applicationIds: u,
         playstyle: s.playstyle,
-        className: o()(L.charterBodyText, L.gameSection)
+        className: o()(O.charterBodyText, O.gameSection)
       }), (0, a.jsx)(h.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        className: L.charterBodyText,
-        children: y.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
+        className: O.charterBodyText,
+        children: L.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
       })]
     })
   })
@@ -94,130 +95,130 @@ t.default = function(e) {
     onClose: r,
     onAccept: u,
     ...d
-  } = e, S = (0, C.useUID)(), N = (0, T.useClanInfo)(s), [x, j] = l.useState(!0), [P, D] = l.useState(!1), b = l.useCallback(() => {
+  } = e, S = (0, C.useUID)(), N = (0, T.useClanInfo)(s), [x, P] = l.useState(!0), [D, b] = l.useState(!1), U = l.useCallback(() => {
     u(), r()
   }, [u, r]);
   l.useEffect(() => {
-    null == N && b()
-  }, [N, b]);
-  let U = null == N ? void 0 : null === (t = N.branding) || void 0 === t ? void 0 : t.primaryColor,
-    F = l.useCallback(() => {
-      (0, _.adoptClanIdentity)(s, x), b()
-    }, [s, b, x]),
+    null == N && U()
+  }, [N, U]);
+  let F = null == N ? void 0 : null === (t = N.branding) || void 0 === t ? void 0 : t.primaryColor,
     w = l.useCallback(() => {
-      D(!0)
+      (0, _.adoptClanIdentity)(s, x, y.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL), U()
+    }, [s, U, x]),
+    k = l.useCallback(() => {
+      b(!0)
     }, []),
-    k = (0, f.useStateFromStores)([p.default], () => p.default.getGuild(s)),
-    H = (0, f.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-    B = (0, f.useStateFromStores)([m.default], () => null != H ? m.default.getMember(s, H.id) : null);
-  if (null == k || null == H || null == B || null == N) return null;
-  let G = null != U ? {
-      background: "radial-gradient(circle at top left, ".concat(i()(U).alpha(.3).hex(), " 0%, transparent 50%)")
+    H = (0, f.useStateFromStores)([p.default], () => p.default.getGuild(s)),
+    B = (0, f.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
+    G = (0, f.useStateFromStores)([m.default], () => null != B ? m.default.getMember(s, B.id) : null);
+  if (null == H || null == B || null == G || null == N) return null;
+  let V = null != F ? {
+      background: "radial-gradient(circle at top left, ".concat(i()(F).alpha(.3).hex(), " 0%, transparent 50%)")
     } : void 0,
-    V = (0, A.getClanBadgeUrl)(k.id, N.badge.imageHash, R.ClanTagBadgeSize.SIZE_36);
+    W = (0, A.getClanBadgeUrl)(H.id, N.badge.imageHash, R.ClanTagBadgeSize.SIZE_36);
   return (0, a.jsx)(h.ModalRoot, {
     ...d,
     transitionState: d.transitionState,
     "aria-labelledby": S,
-    className: L.modal,
+    className: O.modal,
     size: h.ModalSize.DYNAMIC,
     children: (0, a.jsxs)(h.ModalContent, {
-      className: L.content,
-      style: G,
+      className: O.content,
+      style: V,
       children: [(0, a.jsxs)("div", {
-        className: L.infoSide,
+        className: O.infoSide,
         children: [(0, a.jsxs)("div", {
-          className: L.titlesContainer,
+          className: O.titlesContainer,
           children: [(0, a.jsxs)("div", {
-            className: L.title,
+            className: O.title,
             children: [(0, a.jsx)(h.Heading, {
               variant: "heading-xxl/medium",
-              children: y.default.Messages.CLAN_JOIN_SUCCESS_TITLE
+              children: L.default.Messages.CLAN_JOIN_SUCCESS_TITLE
             }), (0, a.jsx)(h.Heading, {
               variant: "heading-xxl/bold",
-              children: k.name
+              children: H.name
             })]
           }), (0, a.jsx)(h.Text, {
-            className: L.subtitle,
+            className: O.subtitle,
             variant: "text-md/normal",
-            children: y.default.Messages.CLAN_JOIN_SUCCESS_SUBTITLE
+            children: L.default.Messages.CLAN_JOIN_SUCCESS_SUBTITLE
           })]
         }), (0, a.jsxs)("div", {
-          className: L.previewSection,
+          className: O.previewSection,
           children: [(0, a.jsxs)("div", {
-            className: L.chatPreview,
+            className: O.chatPreview,
             children: [(0, a.jsx)(h.Avatar, {
-              src: H.getAvatarURL(s, 40),
+              src: B.getAvatarURL(s, 40),
               size: h.AvatarSizes.SIZE_40,
               "aria-hidden": !0
             }), (0, a.jsxs)("div", {
-              className: L.previewText,
+              className: O.previewText,
               children: [(0, a.jsxs)("div", {
-                className: L.userName,
+                className: O.userName,
                 children: [(0, a.jsx)(h.NameWithRole, {
-                  className: L.userName,
-                  name: g.default.getName(s, null, H),
-                  color: null !== (n = B.colorString) && void 0 !== n ? n : void 0
+                  className: O.userName,
+                  name: g.default.getName(s, null, B),
+                  color: null !== (n = G.colorString) && void 0 !== n ? n : void 0
                 }), x && (0, a.jsx)(v.BaseClanTagChiplet, {
-                  clanBadge: V,
+                  clanBadge: W,
                   clanTag: N.tag,
                   badgeSize: R.ClanTagBadgeSize.SIZE_12,
                   textVariant: "text-xs/normal"
                 })]
               }), (0, a.jsx)("div", {
-                className: L.fakeMessage,
+                className: O.fakeMessage,
                 style: {
                   width: "80%"
                 }
               }), (0, a.jsx)("div", {
-                className: L.fakeMessage,
+                className: O.fakeMessage,
                 style: {
                   width: "50%"
                 }
               })]
             })]
           }), (0, a.jsx)("div", {
-            className: L.divider
+            className: O.divider
           }), (0, a.jsxs)("div", {
-            className: L.settingSection,
+            className: O.settingSection,
             children: [(0, a.jsxs)("div", {
               children: [(0, a.jsx)(h.Text, {
                 variant: "text-md/normal",
                 color: "header-primary",
-                children: y.default.Messages.CLAN_SUCCESS_USE_TAG_TEXT
+                children: L.default.Messages.CLAN_SUCCESS_USE_TAG_TEXT
               }), (0, a.jsx)(h.Text, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: y.default.Messages.CLAN_SUCCESS_USE_TAG_HELP
+                children: L.default.Messages.CLAN_SUCCESS_USE_TAG_HELP
               })]
             }), (0, a.jsx)(h.Switch, {
-              onChange: () => j(!x),
+              onChange: () => P(!x),
               checked: x
             })]
           })]
         })]
       }), (0, a.jsx)("div", {
-        className: L.scrollMainContainer,
-        children: (0, a.jsx)(O, {
+        className: O.scrollMainContainer,
+        children: (0, a.jsx)(j, {
           guildId: s,
           clanInfo: N,
-          onSignCharter: w
+          onSignCharter: k
         })
       }), (0, a.jsx)(M.default, {
-        onClick: F,
+        onClick: w,
         color: h.Button.Colors.BRAND,
-        themeColor: U,
+        themeColor: F,
         fullWidth: !1,
-        className: o()(L.ctaButton, P ? L.ctaButtonSigned : null),
+        className: o()(O.ctaButton, D ? O.ctaButtonSigned : null),
         children: (0, a.jsxs)("div", {
-          className: L.ctaButtonInner,
+          className: O.ctaButtonInner,
           children: [(0, a.jsx)(h.Text, {
             variant: "text-md/medium",
-            children: y.default.Messages.CLAN_JOIN_SUCCESS_MAIN_CTA
+            children: L.default.Messages.CLAN_JOIN_SUCCESS_MAIN_CTA
           }), (0, a.jsx)(c.ArrowLargeRightIcon, {
             width: 20,
             height: 20,
-            color: null == U ? void 0 : (0, I.getAccessibleTextColor)(U).hex()
+            color: null == F ? void 0 : (0, I.getAccessibleTextColor)(F).hex()
           })]
         })
       })]

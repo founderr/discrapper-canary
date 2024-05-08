@@ -115,7 +115,7 @@ function O(e) {
           confirmButtonColor: o.Button.Colors.BRAND,
           cancelText: p.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL,
           onConfirm: async () => {
-            await (0, S.adoptClanIdentity)(l, !0)
+            await (0, S.adoptClanIdentity)(l, !0, d.default.PROFILE_POPOUT)
           },
           children: (0, a.jsx)(o.Text, {
             variant: "text-sm/normal",

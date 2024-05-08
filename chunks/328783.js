@@ -11,9 +11,10 @@ var a = s("735250"),
   c = s("353093"),
   S = s("891728"),
   E = s("369077"),
-  T = s("689938"),
-  f = s("156312");
-let m = (0, d.uid)();
+  T = s("981631"),
+  f = s("689938"),
+  m = s("156312");
+let _ = (0, d.uid)();
 t.default = n.memo(function() {
   let e = (0, S.useCurrentUserAvailableClans)(),
     t = n.useMemo(() => new Map(e.map(e => [e.id, e])), [e]),
@@ -28,7 +29,7 @@ t.default = n.memo(function() {
         value: t.id
       }), e
     }, []), [e]),
-    _ = n.useCallback(e => {
+    g = n.useCallback(e => {
       var s, n;
       if (null == e) return null;
       let l = t.get(e.value);
@@ -43,33 +44,33 @@ t.default = n.memo(function() {
         guildIconSize: 32
       })
     }, [t]),
-    g = n.useCallback(e => {
+    h = n.useCallback(e => {
       let t = e[0];
       return null == t ? null : (0, a.jsx)(a.Fragment, {
-        children: _(t)
+        children: g(t)
       })
-    }, [_]),
-    h = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0), []),
-    I = n.useCallback(e => e === s, [s]),
-    N = n.useCallback(e => e, []),
-    p = n.useCallback(() => (0, u.adoptClanIdentity)(null, !0), []);
+    }, [g]),
+    I = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, T.AnalyticsLocations.USER_SETTINGS), []),
+    N = n.useCallback(e => e === s, [s]),
+    p = n.useCallback(e => e, []),
+    C = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
   return (0, a.jsxs)(r.default, {
-    title: T.default.Messages.CLANS,
-    titleId: m,
+    title: f.default.Messages.CLANS,
+    titleId: _,
     children: [(0, a.jsx)(i.Text, {
-      className: f.subtitle,
+      className: m.subtitle,
       variant: "text-sm/normal",
-      children: T.default.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN_SUBTITLE
+      children: f.default.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN_SUBTITLE
     }), (0, a.jsx)(i.Select, {
-      className: f.select,
-      optionClassName: f.selectPopout,
-      isSelected: I,
+      className: m.select,
+      optionClassName: m.selectPopout,
+      isSelected: N,
       options: d,
-      select: h,
-      renderOptionValue: g,
-      renderOptionLabel: _,
-      serialize: N,
-      clear: p,
+      select: I,
+      renderOptionValue: h,
+      renderOptionLabel: g,
+      serialize: p,
+      clear: C,
       clearable: null != s
     })]
   })

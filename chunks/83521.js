@@ -16,101 +16,102 @@ var a = t("735250"),
   h = t("594174"),
   m = t("176278"),
   x = t("5192"),
-  v = t("931240"),
-  A = t("353093"),
-  f = t("114487"),
+  A = t("931240"),
+  v = t("353093"),
+  _ = t("114487"),
   C = t("979264"),
-  _ = t("921944"),
-  T = t("689938"),
-  g = t("107468");
+  f = t("981631"),
+  T = t("921944"),
+  g = t("689938"),
+  N = t("107468");
 
 function S(e) {
-  var l, t, S, N, j;
+  var l, t, S, j, L;
   let {
-    guildId: L,
-    transitionState: M,
-    onClose: R
-  } = e, p = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(L), [L]), I = (0, i.useStateFromStores)([h.default], () => h.default.getCurrentUser(), []), D = null == I ? void 0 : I.id, E = (0, i.useStateFromStores)([c.default], () => null == D ? null : c.default.getMember(L, D), [L, D]), k = null !== (S = null == E ? void 0 : E.colorString) && void 0 !== S ? S : void 0, O = x.default.getName(L, null, I), B = null !== (N = null == E ? void 0 : E.highestRoleId) && void 0 !== N ? N : void 0, U = (0, i.useStateFromStores)([u.default], () => null != B ? u.default.getRole(L, B) : void 0, [L, B]), y = (0, r.useRoleIcon)({
-    roleId: null !== (j = null == U ? void 0 : U.id) && void 0 !== j ? j : void 0,
+    guildId: M,
+    transitionState: D,
+    onClose: I
+  } = e, R = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(M), [M]), p = (0, i.useStateFromStores)([h.default], () => h.default.getCurrentUser(), []), E = null == p ? void 0 : p.id, k = (0, i.useStateFromStores)([c.default], () => null == E ? null : c.default.getMember(M, E), [M, E]), O = null !== (S = null == k ? void 0 : k.colorString) && void 0 !== S ? S : void 0, B = x.default.getName(M, null, p), U = null !== (j = null == k ? void 0 : k.highestRoleId) && void 0 !== j ? j : void 0, y = (0, i.useStateFromStores)([u.default], () => null != U ? u.default.getRole(M, U) : void 0, [M, U]), P = (0, r.useRoleIcon)({
+    roleId: null !== (L = null == y ? void 0 : y.id) && void 0 !== L ? L : void 0,
     size: 20,
-    guildId: L
+    guildId: M
   }), w = s.useCallback(async () => {
-    await (0, v.adoptClanIdentity)(L, !0), R(_.ContentDismissActionType.PRIMARY)
-  }, [R, L]), P = s.useCallback(() => {
-    R(_.ContentDismissActionType.DISMISS)
-  }, [R]);
-  if (s.useEffect(() => ((null == p || null == I) && R(_.ContentDismissActionType.AUTO_DISMISS), () => {}), [I, p, L, R]), null == p || null == I) return null;
-  let b = (0, A.getClanBadgeUrl)(p.id, null === (l = p.clan) || void 0 === l ? void 0 : l.badge);
+    await (0, A.adoptClanIdentity)(M, !0, f.AnalyticsLocations.CLAN_ADOPT_IDENTITY_MODAL), I(T.ContentDismissActionType.PRIMARY)
+  }, [I, M]), b = s.useCallback(() => {
+    I(T.ContentDismissActionType.DISMISS)
+  }, [I]);
+  if (s.useEffect(() => ((null == R || null == p) && I(T.ContentDismissActionType.AUTO_DISMISS), () => {}), [p, R, M, I]), null == R || null == p) return null;
+  let F = (0, v.getClanBadgeUrl)(R.id, null === (l = R.clan) || void 0 === l ? void 0 : l.badge);
   return (0, a.jsxs)(o.ModalRoot, {
-    transitionState: M,
+    transitionState: D,
     size: o.ModalSize.SMALL,
     children: [(0, a.jsx)(o.ModalContent, {
       children: (0, a.jsxs)("div", {
-        className: g.mainContainer,
+        className: N.mainContainer,
         children: [(0, a.jsxs)("div", {
-          className: g.infoContainer,
-          children: [(0, a.jsx)(f.default, {
-            guild: p,
+          className: N.infoContainer,
+          children: [(0, a.jsx)(_.default, {
+            guild: R,
             iconSize: 64
           }), (0, a.jsxs)("div", {
-            className: g.headerTextContainer,
+            className: N.headerTextContainer,
             children: [(0, a.jsx)(o.Heading, {
               variant: "heading-lg/semibold",
               color: "header-primary",
-              children: T.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_HEADING.format({
-                guildName: p.name
+              children: g.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_HEADING.format({
+                guildName: R.name
               })
             }), (0, a.jsx)(o.Text, {
               variant: "text-sm/normal",
               color: "text-secondary",
-              children: T.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_DESCRIPTION.format({
-                guildName: p.name
+              children: g.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_DESCRIPTION.format({
+                guildName: R.name
               })
             })]
           })]
         }), (0, a.jsxs)("div", {
-          className: g.skeletonChatContainer,
+          className: N.skeletonChatContainer,
           children: [(0, a.jsx)("div", {
             children: (0, a.jsx)(d.default, {
-              user: I,
+              user: p,
               size: o.AvatarSizes.SIZE_40
             })
           }), (0, a.jsxs)("div", {
-            className: g.chat,
+            className: N.chat,
             children: [(0, a.jsxs)("div", {
-              className: g.chatHeader,
+              className: N.chatHeader,
               children: [(0, a.jsx)(o.Text, {
                 tag: "span",
                 variant: "text-sm/semibold",
                 color: "header-primary",
                 children: (0, a.jsx)(o.NameWithRole, {
-                  name: O,
-                  color: k
+                  name: B,
+                  color: O
                 })
               }), (0, a.jsx)(C.BaseClanTagChiplet, {
-                clanBadge: b,
-                clanTag: null === (t = p.clan) || void 0 === t ? void 0 : t.tag,
-                className: g.chiplet
-              }), null != U && (0, a.jsx)("div", {
-                className: g.roleContainer,
+                clanBadge: F,
+                clanTag: null === (t = R.clan) || void 0 === t ? void 0 : t.tag,
+                className: N.chiplet
+              }), null != y && (0, a.jsx)("div", {
+                className: N.roleContainer,
                 children: (0, a.jsx)(m.default, {
-                  ...y,
+                  ...P,
                   enableTooltip: !1,
-                  name: null == U ? void 0 : U.name
+                  name: null == y ? void 0 : y.name
                 })
               })]
             }), (0, a.jsx)("div", {
-              className: g.skeletonChatBody
+              className: N.skeletonChatBody
             })]
           })]
         }), (0, a.jsxs)("div", {
-          className: g.footerTextContainer,
+          className: N.footerTextContainer,
           children: [(0, a.jsxs)("div", {
-            className: g.footerText,
+            className: N.footerText,
             children: [(0, a.jsx)(o.Text, {
               variant: "text-md/medium",
               color: "text-primary",
-              children: T.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_FEATURE
+              children: g.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_FEATURE
             }), (0, a.jsx)(n.CheckmarkBoldIcon, {
               width: 16,
               height: 16,
@@ -119,7 +120,7 @@ function S(e) {
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
-            children: T.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_FEATURE_CALLOUT
+            children: g.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_FEATURE_CALLOUT
           })]
         })]
       })
@@ -128,12 +129,12 @@ function S(e) {
         onClick: w,
         color: o.Button.Colors.BRAND_NEW,
         look: o.Button.Looks.FILLED,
-        children: T.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA
+        children: g.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA
       }), (0, a.jsx)(o.Button, {
-        onClick: P,
+        onClick: b,
         color: o.Button.Colors.PRIMARY,
         look: o.Button.Looks.LINK,
-        children: T.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL
+        children: g.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL
       })]
     })]
   })
