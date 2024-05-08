@@ -17184,6 +17184,7 @@ e.exports = Object.freeze({
   QUESTS_DISCLOSURE_ACTIVITY: "Activity: Relevant gaming",
   QUESTS_EMBED_INVALID_HEADING: "This was a Quest but...",
   QUESTS_EMBED_INVALID_BODY: "Something went wrong here. Check the Gift Inventory for more available Quests!",
+  QUESTS_EMBED_INVALID_BODY_2: "Something went wrong here. Try refreshing your client, or check the Gift Inventory for available Quests!",
   QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE: "There's an issue tracking your Quest progress.",
   QUESTS_SHARE_QUEST: "Share Quest",
   QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING: "Select {gameTitle} to make progress on your Quest!",
