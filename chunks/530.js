@@ -40,7 +40,10 @@ function _(e) {
         className: d.nickname,
         variant: S,
         children: l.default.getName(n, r, t)
-      })), E]
+      })), (0, i.jsx)("div", {
+        className: d.nicknameIcons,
+        children: E
+      })]
     }), (0, i.jsxs)("div", {
       className: d.tags,
       children: [A((0, i.jsx)(o.default, {
