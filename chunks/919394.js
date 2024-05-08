@@ -13,7 +13,13 @@ var a = n("55000"),
   u = n("169040"),
   d = n("689938");
 let c = (e, t) => ({
-    AvatarImage: e,
+    AvatarImage1: e[0],
+    ...null != e[1] && {
+      AvatarImage2: e[1]
+    },
+    ...null != e[2] && {
+      AvatarImage3: e[2]
+    },
     ...null != t && {
       ApplicationImage: t
     }
@@ -60,15 +66,16 @@ let c = (e, t) => ({
       timestamp: n,
       colors: s,
       description: i,
-      entry: r
-    } = t, c = s.map((e, t) => ({
+      entry: r,
+      numAvatars: c
+    } = t, h = s.map((e, t) => ({
       color: e,
       stop: t
     }));
     e.setSize({
       w: u.imageWidth,
       h: u.imageHeight
-    }, 4), e.drawRoundedGradientRect(c, {
+    }, 4), e.drawRoundedGradientRect(h, {
       x: 0,
       y: u.imageHeight
     }, {
@@ -102,14 +109,15 @@ let c = (e, t) => ({
     }, 8) === l.DrawResultStatus.Failure && e.drawPath(a.ACTIVITY_IMAGE_FALLBACK_PATH, {
       x: u.imagePadding,
       y: u.imagePadding
-    }, !0, 2 + 2 / 3), e.drawRoundedImage("AvatarImage", {
-      x: u.descriptionIndent,
-      y: u.imagePadding
-    }, {
-      w: u.avatarImageSize,
-      h: u.avatarImageSize
-    }, 50, {
-      fillMode: l.FillMode.Cover
+    }, !0, 2 + 2 / 3);
+    (0, o.drawAvatars)({
+      canvas: e,
+      avatarSrcs: ["AvatarImage1", "AvatarImage2", "AvatarImage3"].slice(0, c),
+      position: {
+        x: u.descriptionIndent,
+        y: u.imagePadding
+      },
+      avatarImageSize: u.avatarImageSize
     }), e.setColor("white"), e.setFont({
       size: 16,
       truncate: l.TextTruncationMethod.Wrap
@@ -119,10 +127,10 @@ let c = (e, t) => ({
       h: 32,
       w: u.descriptionMaxWidth
     }, !0);
-    let h = f(r, n);
+    let m = f(r, n);
     (0, o.drawBadges)({
       canvas: e,
-      badges: h,
+      badges: m,
       startPosition: u.descriptionIndent,
       maxWidth: u.descriptionMaxWidth
     })
@@ -131,7 +139,7 @@ let c = (e, t) => ({
     let {
       applicationImageSrc: t,
       entry: n,
-      avatarSrc: a,
+      avatarSrcs: a,
       description: i,
       timestamp: r,
       colors: o,
@@ -143,7 +151,8 @@ let c = (e, t) => ({
         timestamp: r,
         colors: o,
         description: i,
-        entry: n
+        entry: n,
+        numAvatars: a.length
       }),
       exportConfigs: {
         format: l.DiscordCanvasExporterOutputFormats.CloudUpload,

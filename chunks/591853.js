@@ -306,16 +306,21 @@ function eu(e) {
   let {
     channel: t,
     userDescription: n,
-    headerIcons: s,
-    entry: i
-  } = e, r = t.guild_id, o = (0, Y.default)(i), u = l.useMemo(() => o.slice(-3), [o]), d = o[o.length - 1], c = o[o.length - 2];
+    headerIcons: l,
+    entry: s
+  } = e, i = t.guild_id, {
+    displayParticipants: r,
+    participant1: o,
+    participant2: u,
+    numOtherParticipants: d
+  } = (0, Y.default)(s, 3);
   return (0, a.jsxs)("div", {
     className: et.popoutContentHeader,
     children: [(0, a.jsxs)("div", {
       className: et.popoutUserContainer,
       children: [(0, a.jsx)(M.default, {
         maxUsers: 3,
-        users: u,
+        users: r,
         size: _.AvatarSizes.SIZE_24,
         avatarClassName: et.popoutStackedAvatar,
         hideOverflowCount: !0,
@@ -327,9 +332,9 @@ function eu(e) {
         variant: "heading-sm/normal",
         color: "text-secondary",
         children: n.format({
-          user1: G.default.getName(r, t.id, d),
-          user2: G.default.getName(r, t.id, c),
-          countOthers: o.length - 1,
+          user1: G.default.getName(i, t.id, o),
+          user2: G.default.getName(i, t.id, u),
+          countOthers: d,
           nameHook: (e, t) => (0, a.jsx)(_.Text, {
             variant: "text-sm/medium",
             color: "header-primary",
@@ -338,7 +343,7 @@ function eu(e) {
           }, t)
         })
       })]
-    }), s]
+    }), l]
   })
 }
 
