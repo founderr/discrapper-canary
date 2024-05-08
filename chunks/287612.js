@@ -27,19 +27,17 @@ function I(e) {
     children: [f ? (0, i.jsxs)(r.Clickable, {
       className: E.section,
       onClick: () => n(d.UserProfileSections.MUTUAL_FRIENDS),
-      children: [(0, i.jsx)("div", {
-        children: (0, i.jsx)(a.default, {
-          maxUsers: 3,
-          users: I.map(e => {
-            let {
-              user: t
-            } = e;
-            return t
-          }),
-          size: _.AvatarSizes.SIZE_16,
-          hideOverflowCount: !0,
-          disableUsernameTooltip: !0
-        })
+      children: [(0, i.jsx)(a.default, {
+        maxUsers: 3,
+        users: I.map(e => {
+          let {
+            user: t
+          } = e;
+          return t
+        }),
+        size: _.AvatarSizes.SIZE_16,
+        hideOverflowCount: !0,
+        disableUsernameTooltip: !0
       }), (0, i.jsx)(r.Text, {
         className: E.text,
         variant: h,
@@ -54,19 +52,17 @@ function I(e) {
     }) : null, S ? (0, i.jsxs)(r.Clickable, {
       className: E.section,
       onClick: () => n(d.UserProfileSections.MUTUAL_GUILDS),
-      children: [!f && (0, i.jsx)("div", {
-        children: (0, i.jsx)(s.default, {
-          maxGuilds: 3,
-          guilds: T.map(e => {
-            let {
-              guild: t
-            } = e;
-            return t
-          }),
-          size: o.default.Sizes.SMOL,
-          hideOverflowCount: !0,
-          disableGuildNameTooltip: !0
-        })
+      children: [!f && (0, i.jsx)(s.default, {
+        maxGuilds: 3,
+        guilds: T.map(e => {
+          let {
+            guild: t
+          } = e;
+          return t
+        }),
+        size: o.default.Sizes.SMOL,
+        hideOverflowCount: !0,
+        disableGuildNameTooltip: !0
       }), (0, i.jsx)(r.Text, {
         className: E.text,
         variant: h,
