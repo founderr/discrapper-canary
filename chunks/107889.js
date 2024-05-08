@@ -76,12 +76,12 @@ function h(e) {
       channelId: h,
       messageId: p,
       roleId: R,
-      children: (0, l.jsx)(n.ModalRoot, {
+      children: (0, l.jsxs)(n.ModalRoot, {
         transitionState: y,
         className: C.root,
         hideShadow: !0,
         "aria-label": A.default.Messages.USER_PROFILE_MODAL,
-        children: (0, l.jsxs)(I.default, {
+        children: [(0, l.jsxs)(I.default, {
           user: t,
           displayProfile: H,
           profileType: g.UserProfileTypes.FULL_SIZE,
@@ -140,11 +140,11 @@ function h(e) {
             autoFocusNote: j,
             transitionState: y,
             onClose: L
-          }), (null == H ? void 0 : H.profileEffectId) != null && (0, l.jsx)(d.default, {
-            profileEffectId: null == H ? void 0 : H.profileEffectId,
-            isHovering: W
           })]
-        })
+        }), (null == H ? void 0 : H.profileEffectId) != null && (0, l.jsx)(d.default, {
+          profileEffectId: null == H ? void 0 : H.profileEffectId,
+          isHovering: W
+        })]
       })
     })
   })

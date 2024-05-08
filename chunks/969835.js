@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("171368"),
   p = n("958120"),
   O = n("215633"),
-  C = n("23293"),
-  R = n("228168"),
+  R = n("23293"),
+  C = n("228168"),
   g = n("689938");
 
 function L(e) {
@@ -78,17 +78,17 @@ function v(e) {
       messageId: D,
       roleId: M,
       shouldTrackViewOnMount: null == V || null != V.fullProfileLoadedTimestamp,
-      children: (0, i.jsx)(s.Dialog, {
+      children: (0, i.jsxs)(s.Dialog, {
         ref: x,
         "aria-label": t.username,
         onClick: L,
         onContextMenu: L,
-        children: (0, i.jsxs)(f.default, {
+        children: [(0, i.jsxs)(f.default, {
           user: t,
           displayProfile: F,
-          profileType: R.UserProfileTypes.BITE_SIZE,
+          profileType: C.UserProfileTypes.BITE_SIZE,
           children: [(0, i.jsxs)(S.default, {
-            profileType: R.UserProfileTypes.BITE_SIZE,
+            profileType: C.UserProfileTypes.BITE_SIZE,
             children: [(0, i.jsx)(A.default, {
               user: t,
               guildId: n,
@@ -110,7 +110,7 @@ function v(e) {
                 }
               })
             })]
-          }), (0, i.jsx)(C.default, {
+          }), (0, i.jsx)(R.default, {
             user: t,
             displayProfile: F,
             guildId: n,
@@ -130,11 +130,11 @@ function v(e) {
             guildId: n,
             channelId: v,
             onClose: y
-          }), (null == F ? void 0 : F.profileEffectId) != null && (0, i.jsx)(d.default, {
-            profileEffectId: null == F ? void 0 : F.profileEffectId,
-            isHovering: H
           })]
-        })
+        }), (null == F ? void 0 : F.profileEffectId) != null && (0, i.jsx)(d.default, {
+          profileEffectId: null == F ? void 0 : F.profileEffectId,
+          isHovering: H
+        })]
       })
     })
   })
