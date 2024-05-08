@@ -37,16 +37,19 @@ n.r(t), n.d(t, {
     return V
   },
   getQuestsInstructionsToWinReward: function() {
-    return K
+    return z
   },
   getRewardAssetUrl: function() {
     return p
   },
   getRewardCodeQuestReward: function() {
-    return W
+    return K
   },
   getVideoAssetMimeType: function() {
     return Y
+  },
+  hasPlaytimeTaskVariant: function() {
+    return W
   },
   hasQuestCollectibleRewards: function() {
     return w
@@ -302,7 +305,7 @@ let p = e => {
     var t, n;
     let i = j({
         quest: e
-      }) ? W({
+      }) ? K({
         quest: e,
         idx: null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedTier
       }) : null,
@@ -433,6 +436,13 @@ function j(e) {
 
 function W(e) {
   let {
+    quest: t
+  } = e;
+  return t.config.variants.includes(d.QuestVariants.PLAYTIME_TASK)
+}
+
+function K(e) {
+  let {
     quest: t,
     idx: n
   } = e;
@@ -443,7 +453,7 @@ function W(e) {
   return null
 }
 
-function K(e) {
+function z(e) {
   let {
     quest: t,
     useV2Variants: n = !1
