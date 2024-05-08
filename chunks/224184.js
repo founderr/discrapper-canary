@@ -21,7 +21,7 @@ var a = n("735250"),
   T = n("625938"),
   I = n("981631"),
   A = n("689938"),
-  N = n("172767");
+  N = n("8474");
 t.default = e => {
   let {
     hangStatusActivity: t,

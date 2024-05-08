@@ -27,7 +27,7 @@ var a = n("735250"),
   A = n("981631"),
   N = n("65154"),
   v = n("689938"),
-  x = n("61707");
+  x = n("636289");
 let M = o.AvatarSizes.SIZE_80,
   R = o.AvatarSizes.SIZE_40;
 

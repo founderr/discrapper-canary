@@ -44693,6 +44693,14 @@ img.thumbnail__18ece {
     margin-bottom: -2px
 }
 
+.popoutTextPrimary_d83570 {
+    color: var(--content-inventory-overlay-text-primary)
+}
+
+.popoutTextSecondary__579ec {
+    color: var(--content-inventory-overlay-text-secondary)
+}
+
 .listeningTimeline_ec63b6 {
     display: flex;
     flex-direction: row;
@@ -134252,6 +134260,10 @@ div.nagbar_c731ff {
     --chat-swipe-to-reply-gradient-background: hsl(var(--black-500-hsl) / 0.1);
     --coachmark-bg: var(--primary-800);
     --content-inventory-media-seekbar-container: hsl(var(--plum-6-hsl) / 0.24);
+    --content-inventory-overlay-text-primary: hsl(var(--white-500-hsl) / 0.85);
+    --content-inventory-overlay-text-secondary: hsl(var(--white-500-hsl) / 0.7);
+    --content-inventory-overlay-ui-mod: hsl(var(--white-500-hsl) / 0.7);
+    --content-inventory-overlay-ui-mod-bg: hsl(var(--black-500-hsl) / 0.1);
     --context-menu-backdrop-background: hsl(var(--black-500-hsl) / 0.7);
     --control-brand-foreground: var(--brand-360);
     --control-brand-foreground-new: var(--brand-360);
@@ -134570,6 +134582,10 @@ div.nagbar_c731ff {
     --chat-swipe-to-reply-gradient-background: hsl(var(--white-500-hsl) / 0.4);
     --coachmark-bg: var(--white-500);
     --content-inventory-media-seekbar-container: hsl(var(--plum-6-hsl) / 0.24);
+    --content-inventory-overlay-text-primary: hsl(var(--white-500-hsl) / 0.85);
+    --content-inventory-overlay-text-secondary: hsl(var(--white-500-hsl) / 0.7);
+    --content-inventory-overlay-ui-mod: hsl(var(--white-500-hsl) / 0.7);
+    --content-inventory-overlay-ui-mod-bg: hsl(var(--black-500-hsl) / 0.1);
     --context-menu-backdrop-background: hsl(var(--black-500-hsl) / 0.54);
     --control-brand-foreground: var(--brand-500);
     --control-brand-foreground-new: var(--brand-500);
@@ -134888,6 +134904,10 @@ div.nagbar_c731ff {
     --chat-swipe-to-reply-gradient-background: hsl(var(--black-500-hsl) / 0.1);
     --coachmark-bg: var(--plum-19);
     --content-inventory-media-seekbar-container: hsl(var(--plum-6-hsl) / 0.24);
+    --content-inventory-overlay-text-primary: hsl(var(--white-500-hsl) / 0.85);
+    --content-inventory-overlay-text-secondary: hsl(var(--white-500-hsl) / 0.7);
+    --content-inventory-overlay-ui-mod: hsl(var(--white-500-hsl) / 0.7);
+    --content-inventory-overlay-ui-mod-bg: hsl(var(--black-500-hsl) / 0.1);
     --context-menu-backdrop-background: hsl(var(--black-500-hsl) / 0.7);
     --control-brand-foreground: var(--brand-360);
     --control-brand-foreground-new: var(--brand-360);
@@ -135206,6 +135226,10 @@ div.nagbar_c731ff {
     --chat-swipe-to-reply-gradient-background: hsl(var(--black-500-hsl) / 0.1);
     --coachmark-bg: var(--plum-17);
     --content-inventory-media-seekbar-container: hsl(var(--plum-6-hsl) / 0.24);
+    --content-inventory-overlay-text-primary: hsl(var(--white-500-hsl) / 0.85);
+    --content-inventory-overlay-text-secondary: hsl(var(--white-500-hsl) / 0.7);
+    --content-inventory-overlay-ui-mod: hsl(var(--white-500-hsl) / 0.7);
+    --content-inventory-overlay-ui-mod-bg: hsl(var(--black-500-hsl) / 0.1);
     --context-menu-backdrop-background: hsl(var(--black-500-hsl) / 0.7);
     --control-brand-foreground: var(--brand-360);
     --control-brand-foreground-new: var(--brand-360);
