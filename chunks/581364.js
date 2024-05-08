@@ -363,7 +363,8 @@ function V(e) {
     command: i,
     location: r,
     triggerSection: a,
-    queryLength: s
+    queryLength: s,
+    sectionName: o
   } = e;
   (0, _.trackWithMetadata)(A.AnalyticEvents.APPLICATION_COMMAND_SELECTED, {
     command_id: null !== (n = null === (t = i.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : i.id,
@@ -371,6 +372,7 @@ function V(e) {
     location: r,
     section: a,
     query_length: s,
-    command_text_length: i.displayName.length
+    command_text_length: i.displayName.length,
+    section_name: o
   })
 }
