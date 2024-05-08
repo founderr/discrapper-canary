@@ -176,10 +176,12 @@ function h() {
 
 function A(e) {
   let {
-    location: t
+    guildId: t,
+    location: n
   } = e;
   a.default.track(o.AnalyticEvents.CLAN_ADMIN_INVITE_VIEWED, {
-    location: t
+    guild_id: t,
+    location: n
   })
 }
 

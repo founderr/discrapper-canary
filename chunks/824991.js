@@ -93,9 +93,10 @@ function _(e) {
   } = e;
   a.useEffect(() => {
     (0, d.trackClanAdminInviteViewed)({
+      guildId: t.id,
       location: r.default.GUILD_CHANNEL_LIST
     })
-  }, []);
+  }, [t.id]);
   let i = a.useCallback(() => (0, l.jsx)(E, {
       defaultGameId: s
     }), [s]),

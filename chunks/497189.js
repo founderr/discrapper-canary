@@ -168,126 +168,142 @@ t.default = s.memo(function(e) {
   let {
     eligibleGuilds: t,
     selectedGame: n
-  } = e;
-  s.useEffect(() => {
-    (0, p.trackClanAdminInviteViewed)({
-      location: m.default.CLAN_DISCOVERY
-    })
-  }, []);
-  let [i, l] = s.useState(() => {
+  } = e, [i, l] = s.useState(() => {
     let e = new Set(I.default.getGuildIds());
     for (let n of t)
       if (e.has(n.id)) return n.id;
     return t[0].id
-  }), o = (0, f.useStateFromStores)([T.default], () => T.default.getGuild(i)), u = (0, f.useStateFromStores)([I.default], () => I.default.getStateForGuild(i).progress), d = (0, R.useDiscoveryGameApplicationId)({
-    selectedGame: n
-  }), c = s.useCallback(() => {
-    (0, p.trackClanAdminInviteClicked)({
+  });
+  s.useEffect(() => {
+    (0, p.trackClanAdminInviteViewed)({
       guildId: i,
       location: m.default.CLAN_DISCOVERY
-    }), (0, A.openFullScreenLayer)(e => {
-      let {
-        closeLayer: t
-      } = e;
-      return (0, a.jsx)(g.default, {
-        onClose: t,
-        guildId: i,
-        gameId: d
-      })
-    }, {
-      layerKey: M.CLAN_SETUP_MODAL_LAYER_KEY
     })
-  }, [i, d]), E = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion), v = (0, O.useFakeDiscoveryClanForGuild)({
-    guild: o,
-    selectedGame: n
-  }), x = (0, r.useSpring)({
-    from: {
-      opacity: 0
-    },
-    to: {
-      opacity: 1
-    },
-    delay: 300,
-    config: {
-      duration: 0
-    }
-  }), D = (0, r.useSpring)({
-    from: E ? {
-      transform: "translate(0px, 0px) rotate(0deg) scale(1)"
-    } : {
-      transform: "translate(324px, -32px) rotate(8deg) scale(1.25)"
-    },
-    to: {
-      transform: "translate(0px, 0px) rotate(0deg) scale(1)"
-    },
-    config: b,
-    delay: 400
-  }), j = (0, r.useSpring)({
-    from: E ? {
-      transform: "translate(0px, 0px) rotate(0deg) scale(1)"
-    } : {
-      transform: "translate(176px, -16px) rotate(4deg) scale(1.1111)"
-    },
-    to: {
-      transform: "translate(0px, 0px) rotate(0deg) scale(1)"
-    },
-    config: b,
-    delay: 400
-  }), k = (0, r.useSpring)({
-    from: E ? {
-      transform: "translate(0px, 0px) rotate(0deg) scale(1)"
-    } : {
-      transform: "translate(-176px, -16px) rotate(-4deg) scale(1.1111)"
-    },
-    to: {
-      transform: "translate(0px, 0px) rotate(0deg) scale(1)"
-    },
-    config: b,
-    delay: 400
-  }), w = (0, r.useSpring)({
-    from: E ? {
-      transform: "translate(0px, 0px) rotate(0deg) scale(1)"
-    } : {
-      transform: "translate(-324px, -32px) rotate(-8deg) scale(1.25)"
-    },
-    to: {
-      transform: "translate(0px, 0px) rotate(0deg) scale(1)"
-    },
-    config: b,
-    delay: 400
-  }), F = (0, r.useSpring)({
-    from: E ? {
-      transform: "scale(1)",
-      opacity: 0
-    } : {
-      transform: "scale(0.9)",
-      opacity: 0
-    },
-    to: {
-      transform: "scale(1)",
-      opacity: 1
-    },
-    config: b,
-    delay: 200
-  }), B = (0, r.useSpring)({
-    from: E ? {
-      transform: "translateY(0px)"
-    } : {
-      transform: "translateY(240px)"
-    },
-    to: {
-      transform: "translateY(0px)"
-    },
-    config: b,
-    delay: 400
-  }), H = s.useMemo(() => null == u ? y.default.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : y.default.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [u]), V = s.useCallback(e => (0, a.jsx)(h.Text, {
-    tag: "span",
-    variant: "text-xs/medium",
-    color: "text-brand",
-    children: e
-  }), []), Y = s.useCallback(async () => {
-    await (0, S.joinWumpusFeedbackSquad)(i), _.default.transitionToGuildSync("936317138904440892")
   }, [i]);
+  let o = (0, f.useStateFromStores)([T.default], () => T.default.getGuild(i)),
+    u = (0, f.useStateFromStores)([I.default], () => I.default.getStateForGuild(i).progress),
+    d = (0, R.useDiscoveryGameApplicationId)({
+      selectedGame: n
+    }),
+    c = s.useCallback(() => {
+      (0, p.trackClanAdminInviteClicked)({
+        guildId: i,
+        location: m.default.CLAN_DISCOVERY
+      }), (0, A.openFullScreenLayer)(e => {
+        let {
+          closeLayer: t
+        } = e;
+        return (0, a.jsx)(g.default, {
+          onClose: t,
+          guildId: i,
+          gameId: d
+        })
+      }, {
+        layerKey: M.CLAN_SETUP_MODAL_LAYER_KEY
+      })
+    }, [i, d]),
+    E = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion),
+    v = (0, O.useFakeDiscoveryClanForGuild)({
+      guild: o,
+      selectedGame: n
+    }),
+    x = (0, r.useSpring)({
+      from: {
+        opacity: 0
+      },
+      to: {
+        opacity: 1
+      },
+      delay: 300,
+      config: {
+        duration: 0
+      }
+    }),
+    D = (0, r.useSpring)({
+      from: E ? {
+        transform: "translate(0px, 0px) rotate(0deg) scale(1)"
+      } : {
+        transform: "translate(324px, -32px) rotate(8deg) scale(1.25)"
+      },
+      to: {
+        transform: "translate(0px, 0px) rotate(0deg) scale(1)"
+      },
+      config: b,
+      delay: 400
+    }),
+    j = (0, r.useSpring)({
+      from: E ? {
+        transform: "translate(0px, 0px) rotate(0deg) scale(1)"
+      } : {
+        transform: "translate(176px, -16px) rotate(4deg) scale(1.1111)"
+      },
+      to: {
+        transform: "translate(0px, 0px) rotate(0deg) scale(1)"
+      },
+      config: b,
+      delay: 400
+    }),
+    k = (0, r.useSpring)({
+      from: E ? {
+        transform: "translate(0px, 0px) rotate(0deg) scale(1)"
+      } : {
+        transform: "translate(-176px, -16px) rotate(-4deg) scale(1.1111)"
+      },
+      to: {
+        transform: "translate(0px, 0px) rotate(0deg) scale(1)"
+      },
+      config: b,
+      delay: 400
+    }),
+    w = (0, r.useSpring)({
+      from: E ? {
+        transform: "translate(0px, 0px) rotate(0deg) scale(1)"
+      } : {
+        transform: "translate(-324px, -32px) rotate(-8deg) scale(1.25)"
+      },
+      to: {
+        transform: "translate(0px, 0px) rotate(0deg) scale(1)"
+      },
+      config: b,
+      delay: 400
+    }),
+    F = (0, r.useSpring)({
+      from: E ? {
+        transform: "scale(1)",
+        opacity: 0
+      } : {
+        transform: "scale(0.9)",
+        opacity: 0
+      },
+      to: {
+        transform: "scale(1)",
+        opacity: 1
+      },
+      config: b,
+      delay: 200
+    }),
+    B = (0, r.useSpring)({
+      from: E ? {
+        transform: "translateY(0px)"
+      } : {
+        transform: "translateY(240px)"
+      },
+      to: {
+        transform: "translateY(0px)"
+      },
+      config: b,
+      delay: 400
+    }),
+    H = s.useMemo(() => null == u ? y.default.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : y.default.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [u]),
+    V = s.useCallback(e => (0, a.jsx)(h.Text, {
+      tag: "span",
+      variant: "text-xs/medium",
+      color: "text-brand",
+      children: e
+    }), []),
+    Y = s.useCallback(async () => {
+      await (0, S.joinWumpusFeedbackSquad)(i), _.default.transitionToGuildSync("936317138904440892")
+    }, [i]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: P.cardsContainer,
