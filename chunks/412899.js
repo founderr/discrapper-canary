@@ -142,7 +142,7 @@ let x = r.forwardRef(function(e, t) {
       tabIndex: g,
       ...L,
       children: [(0, i.jsxs)(I.Clickable, {
-        className: k.roleRemoveButton,
+        className: s()(f && k.roleRemoveButtonCanRemove, k.roleRemoveButton),
         onClick: f ? p : void 0,
         tabIndex: f ? g : -1,
         focusProps: {

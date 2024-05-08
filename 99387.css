@@ -18326,6 +18326,10 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     position: relative
 }
 
+.roleRemoveButtonCanRemove__3d3fa {
+    cursor: pointer
+}
+
 .roleDot__4756e {
     font-size: 1.34em
 }
