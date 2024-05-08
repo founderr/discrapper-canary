@@ -39,6 +39,7 @@ e.exports = {
   textAreaCustomGift: "textAreaCustomGift__373a0",
   textAreaDisabled: "textAreaDisabled__38376 textArea_a86690",
   textAreaForPostCreation: "textAreaForPostCreation_fe07b8",
+  textAreaForUserProfile: "textAreaForUserProfile__8ffe1",
   textAreaMobileThemed: "textAreaMobileThemed__4e1c3",
   textAreaSlate: "textAreaSlate__8578d",
   textAreaThreadCreation: "textAreaThreadCreation_f5ecc4",

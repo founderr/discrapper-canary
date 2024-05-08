@@ -222,7 +222,8 @@ class b extends r.Component {
       textAreaPaddingClassName: s()(U[h], {
         [M.textAreaWithoutAttachmentButton]: S !== p.ChatInputTypes.NORMAL && S !== p.ChatInputTypes.OVERLAY && S !== p.ChatInputTypes.THREAD_CREATION && S !== p.ChatInputTypes.SIDEBAR,
         [M.textAreaForPostCreation]: S === p.ChatInputTypes.CREATE_FORUM_POST,
-        [M.textAreaCustomGift]: S === p.ChatInputTypes.CUSTOM_GIFT
+        [M.textAreaCustomGift]: S === p.ChatInputTypes.CUSTOM_GIFT,
+        [M.textAreaForUserProfile]: S === p.ChatInputTypes.USER_PROFILE
       }),
       spellcheckEnabled: N,
       useNewSlashCommands: R,
