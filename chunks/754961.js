@@ -60,6 +60,7 @@ function C(e) {
       "aria-label": p.default.Messages.STEP_NUMBER.format({
         number: t
       }),
+      tabIndex: null == n ? -1 : void 0,
       onClick: n,
       className: m.progressStepWrapper,
       children: [E && (0, l.jsx)(c.default, {

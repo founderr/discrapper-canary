@@ -114,88 +114,93 @@ function L(e) {
         onClose: n,
         progress: v
       })
-    }, [n, t, v]);
-  return (0, l.jsxs)(o.animated.div, {
+    }, [n, t, v]),
+    Z = a.useRef(null);
+  return (0, l.jsx)(o.animated.div, {
+    ref: Z,
     style: w,
     className: T.modal,
-    children: [(0, l.jsx)(d.Button, {
-      className: T.close,
-      look: d.Button.Looks.OUTLINED,
-      size: d.Button.Sizes.MEDIUM,
-      color: d.Button.Colors.PRIMARY,
-      onClick: n,
-      children: N.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
-    }), (0, l.jsxs)("div", {
-      className: T.content,
-      children: [(0, l.jsxs)("div", {
-        className: T.panel,
-        children: [(0, l.jsx)(o.animated.div, {
-          style: B,
-          className: i()(T.stepsContainer, {
-            [T.hidden]: !G
-          }),
-          children: (0, l.jsx)(_.default, {
-            guildId: t
-          })
-        }), (0, l.jsx)("div", {
-          className: i()(T.navigationContainer, {
-            [T.elevatedNavigationContainer]: !G
-          }),
-          children: (0, l.jsx)(E.default, {
-            steps: M,
-            progress: v,
-            updateCurrentStep: k,
-            animationStyle: B,
-            animationClassName: i()({
+    children: (0, l.jsxs)(d.FocusRingScope, {
+      containerRef: Z,
+      children: [(0, l.jsx)(d.Button, {
+        className: T.close,
+        look: d.Button.Looks.OUTLINED,
+        size: d.Button.Sizes.MEDIUM,
+        color: d.Button.Colors.PRIMARY,
+        onClick: n,
+        children: N.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
+      }), (0, l.jsxs)("div", {
+        className: T.content,
+        children: [(0, l.jsxs)("div", {
+          className: T.panel,
+          children: [(0, l.jsx)(o.animated.div, {
+            style: B,
+            className: i()(T.stepsContainer, {
               [T.hidden]: !G
+            }),
+            children: (0, l.jsx)(_.default, {
+              guildId: t
             })
+          }), (0, l.jsx)("div", {
+            className: i()(T.navigationContainer, {
+              [T.elevatedNavigationContainer]: !G
+            }),
+            children: (0, l.jsx)(E.default, {
+              steps: M,
+              progress: v,
+              updateCurrentStep: k,
+              animationStyle: B,
+              animationClassName: i()({
+                [T.hidden]: !G
+              })
+            })
+          })]
+        }), (0, l.jsx)(o.animated.div, {
+          style: B,
+          className: i()(T.divider, {
+            [T.hidden]: !G,
+            [T.dividerResponsive]: G
+          })
+        }), (0, l.jsx)(o.animated.div, {
+          style: F,
+          className: i()(T.sidebar, {
+            [T.sidebarResponsive]: G
+          }),
+          children: (0, l.jsx)(S.default, {
+            guildId: t,
+            signed: y,
+            setSigned: G ? void 0 : O,
+            sidebarWidth: 380,
+            windowWidth: D,
+            transition: V,
+            brandPrimaryColor: v.brandPrimaryColor
           })
         })]
-      }), (0, l.jsx)(o.animated.div, {
-        style: B,
-        className: i()(T.divider, {
-          [T.hidden]: !G,
-          [T.dividerResponsive]: G
-        })
-      }), (0, l.jsx)(o.animated.div, {
-        style: F,
-        className: i()(T.sidebar, {
-          [T.sidebarResponsive]: G
-        }),
-        children: (0, l.jsx)(S.default, {
-          guildId: t,
-          signed: y,
-          setSigned: G ? void 0 : O,
-          sidebarWidth: 380,
-          windowWidth: D,
-          transition: V,
-          brandPrimaryColor: v.brandPrimaryColor
-        })
-      })]
-    }), H((e, t) => t && (0, l.jsxs)(o.animated.div, {
-      style: e,
-      className: T.submit,
-      children: [Y && (0, l.jsx)(d.Text, {
-        className: T.errorText,
-        color: "status-danger",
-        variant: "text-sm/normal",
-        children: N.default.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
-          backHook: (e, t) => (0, l.jsx)(d.Anchor, {
-            className: T.errorLink,
-            onClick: K,
-            children: e
-          }, t)
-        })
-      }), (0, l.jsx)(g.default, {
-        themeColor: v.brandPrimaryColor,
-        disabled: !y || Y,
-        submitting: R,
-        look: d.Button.Looks.FILLED,
-        size: d.Button.Sizes.MEDIUM,
-        color: d.Button.Colors.BRAND,
-        onClick: z,
-        children: N.default.Messages.FINISH
-      })]
-    }))]
+      }), H((e, t) => t && (0, l.jsxs)(o.animated.div, {
+        style: e,
+        className: T.submit,
+        children: [Y && (0, l.jsx)(d.Text, {
+          className: T.errorText,
+          color: "status-danger",
+          variant: "text-sm/normal",
+          children: N.default.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
+            backHook: (e, t) => (0, l.jsx)(d.Anchor, {
+              className: T.errorLink,
+              onClick: K,
+              children: e
+            }, t)
+          })
+        }), (0, l.jsx)(g.default, {
+          themeColor: v.brandPrimaryColor,
+          disabled: !y || Y,
+          submitting: R,
+          look: d.Button.Looks.FILLED,
+          size: d.Button.Sizes.MEDIUM,
+          color: d.Button.Colors.BRAND,
+          onClick: z,
+          children: N.default.Messages.FINISH
+        })]
+      }))]
+    })
   })
 }

@@ -54,6 +54,7 @@ let S = r.memo(function(e) {
     } = e;
     return (0, c.default)("base_clan_tag_chiplet") ? (0, i.jsx)(l.Clickable, {
       tag: "span",
+      tabIndex: null == u ? -1 : void 0,
       onClick: u,
       onMouseEnter: d,
       className: s()(f.chipletContainerInner, h && f.chipletContainerInline, null != u && f.clickable, r),

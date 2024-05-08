@@ -157,6 +157,7 @@ t.default = e => {
           className: i()(A.signatureBlock, {
             [A.clickable]: null != r
           }),
+          tabIndex: null == r ? -1 : void 0,
           children: [(0, a.jsx)("div", {
             ref: C
           }), (0, a.jsx)(c.Text, {
