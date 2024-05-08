@@ -41,7 +41,7 @@ var i = n("735250"),
   y = n("981631"),
   P = n("474936"),
   U = n("689938"),
-  b = n("34421");
+  b = n("852994");
 let G = d.AvatarSizes.SIZE_80,
   w = (0, c.getDecorationSizeForAvatarSize)(G);
 

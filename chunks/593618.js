@@ -50,8 +50,8 @@ var i = n("735250"),
   Y = n("456774"),
   j = n("981631"),
   W = n("689938"),
-  K = n("807801"),
-  z = n("630839");
+  K = n("952972"),
+  z = n("81311");
 let Z = (0, x.cssValueToNumber)(_.default.GUILD_TOOLTIP_ICON_SIZE),
   X = (0, x.cssValueToNumber)(_.default.GUILD_TOOLTIP_ICON_SIZE_V_2);
 

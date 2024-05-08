@@ -29,7 +29,7 @@ var E = n("120356"),
   c = n("626135"),
   a = n("981631"),
   I = n("689938"),
-  S = n("497748");
+  S = n("14201");
 let _ = Object.freeze({
   DEFAULT: S.colorDefault,
   NEUTRAL: S.colorNeutral,

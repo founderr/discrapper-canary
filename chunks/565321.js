@@ -7,7 +7,7 @@ var a = s("735250"),
   l = s("484455"),
   _ = s("592286"),
   r = s("689938"),
-  u = s("915580");
+  u = s("17359");
 t.default = function(e) {
   let {
     guildId: t,

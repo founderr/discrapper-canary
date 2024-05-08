@@ -101,7 +101,7 @@ var a = s("735250"),
   eH = s("190378"),
   ew = s("135899"),
   ek = s("689938"),
-  eV = s("354104");
+  eV = s("37869");
 
 function eY(e) {
   return "" !== e.toString() ? e.toString() : ek.default.Messages.SERVER_SETTINGS
