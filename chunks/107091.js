@@ -28,9 +28,9 @@ var l = a("735250"),
   L = a("689938"),
   I = a("777374");
 let N = {
-    xMin: -50,
-    xMax: 50,
-    yMin: -100,
+    xMin: -100,
+    xMax: 100,
+    yMin: -150,
     yMax: 0
   },
   _ = e => {
@@ -53,8 +53,8 @@ function y(e) {
     onPurchaseComplete: y,
     onUse: O,
     onError: k,
-    onReviewPurchase: R,
-    confettiCanvas: A = null
+    onReviewPurchase: A,
+    confettiCanvas: R = null
   } = e, j = (0, r.v4)(), P = s.useRef(null), [B] = t.items, {
     analyticsLocations: D
   } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
@@ -71,7 +71,7 @@ function y(e) {
     onError: e => {
       k(e), G(!0)
     },
-    onReviewPurchase: R,
+    onReviewPurchase: A,
     paymentSource: a,
     skuId: t.skuId,
     analyticsLocations: D
@@ -94,7 +94,7 @@ function y(e) {
         })
       }), (0, l.jsx)(o.Button, {
         onClick: () => {
-          R(), (0, b.default)({
+          A(), (0, b.default)({
             skuId: t.skuId,
             analyticsLocations: D,
             returnRef: P
@@ -151,15 +151,15 @@ function y(e) {
       })]
     })), !W && H && !(null != w) && !M && (0, l.jsx)(h.default, {
       confettiTarget: P.current,
-      customConfettiCanvas: A,
+      customConfettiCanvas: R,
       speedValues: N,
-      numBursts: 3,
-      particlesPerBurst: 50,
+      numBursts: 4,
+      particlesPerBurst: 100,
       offsetXPercentageMax: 100,
       offsetXPercentageMin: 0,
       offsetYPercentageMax: 100,
       offsetYPercentageMin: 0,
-      dragCoefficientValue: 1e-4
+      dragCoefficientValue: 1e-6
     })]
   })
 }

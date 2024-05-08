@@ -28,8 +28,8 @@ var l = a("735250"),
   y = a("300284"),
   O = a("876917"),
   k = a("642619"),
-  R = a("210887"),
-  A = a("594174"),
+  A = a("210887"),
+  R = a("594174"),
   j = a("725808"),
   P = a("465670"),
   B = a("794358"),
@@ -103,7 +103,7 @@ t.default = function(e) {
   } = (0, I.default)({
     isGift: !1,
     activeSubscription: null
-  }), [eu, ec] = s.useState(!1), ed = ei || eu, ef = (0, f.useStateFromStores)([A.default], () => A.default.getCurrentUser()), [em] = t.items, {
+  }), [eu, ec] = s.useState(!1), ed = ei || eu, ef = (0, f.useStateFromStores)([R.default], () => R.default.getCurrentUser()), [em] = t.items, {
     avatarDecorationSrc: eC,
     eventHandlers: ep,
     avatarPlaceholderSrc: eh
@@ -115,9 +115,9 @@ t.default = function(e) {
   }), {
     backgroundColors: eE,
     buttonColors: eg
-  } = (0, G.default)(t.styles), ex = (0, U.getFormattedPriceForCollectiblesProduct)(t, o, !1), eb = (0, U.isPremiumCollectiblesProduct)(t), eS = (0, U.isFreeCollectiblesProduct)(t), [ev, eT, eL] = (0, f.useStateFromStoresArray)([H.default], () => [H.default.getPurchase(t.skuId), H.default.isClaiming === t.skuId, null != H.default.isClaiming && H.default.isClaiming !== t.skuId]), eI = (0, f.useStateFromStores)([R.default], () => (0, C.isThemeDark)(R.default.theme)), eN = (0, U.isProductNew)(t.skuId), {
+  } = (0, G.default)(t.styles), ex = (0, U.getFormattedPriceForCollectiblesProduct)(t, o, !1), eb = (0, U.isPremiumCollectiblesProduct)(t), eS = (0, U.isFreeCollectiblesProduct)(t), [ev, eT, eL] = (0, f.useStateFromStoresArray)([H.default], () => [H.default.getPurchase(t.skuId), H.default.isClaiming === t.skuId, null != H.default.isClaiming && H.default.isClaiming !== t.skuId]), eI = (0, f.useStateFromStores)([A.default], () => (0, C.isThemeDark)(A.default.theme)), eN = (0, U.isProductNew)(t.skuId), {
     hoverVariant: e_
-  } = (0, W.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard"), [ey, eO] = s.useState(!1), ek = s.useRef(null), eR = s.useRef(new i.Environment), [eA, ej] = s.useState(!1), [eP, eB] = s.useState(null), eD = null != ev || eA;
+  } = (0, W.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard"), [ey, eO] = s.useState(!1), ek = s.useRef(null), eA = s.useRef(new i.Environment), [eR, ej] = s.useState(!1), [eP, eB] = s.useState(null), eD = null != ev || eR;
   s.useEffect(() => {
     let {
       current: e
@@ -175,7 +175,7 @@ t.default = function(e) {
       let {
         current: e
       } = en;
-      u()(null != e, "Shakeable is shaken when not mounted"), e.shake(200, 2)
+      u()(null != e, "Shakeable is shaken when not mounted"), e.shake(300, 2)
     }
   }, [eP]);
   let eV = () => eD ? (0, l.jsx)(p.Text, {
@@ -326,7 +326,10 @@ t.default = function(e) {
     } : void 0,
     e$ = null != eg && ey ? {
       boxShadow: "0px 4px 50px 0px " + eg.primary.toHexString()
-    } : {};
+    } : {},
+    eJ = ey && eP ? {
+      boxShadow: "0px 4px 50px 0px " + (eI ? L.default.WHITE : L.default.BLACK)
+    } : e$;
   return (0, l.jsxs)(l.Fragment, {
     children: [ey && (0, l.jsx)("div", {
       className: q.backdrop,
@@ -341,11 +344,11 @@ t.default = function(e) {
           className: n()(q.overflowContainer, {
             [q.lightningCheckout]: ey
           }),
-          style: e$,
+          style: eJ,
           children: [(0, l.jsx)(i.ConfettiCanvas, {
             ref: ek,
             className: q.confettiCanvas,
-            environment: eR.current
+            environment: eA.current
           }), (0, l.jsxs)(p.Clickable, {
             innerRef: er,
             className: n()(q.shopCard, (0, c.match)(e_).with(W.ShopCardHoverAnimationVariant.CONTROL, () => q.shopCardDefaultAnimation).with(W.ShopCardHoverAnimationVariant.TRANSFORMATION, () => q.shopCardTransformationAnimation).otherwise(() => void 0)),
@@ -371,7 +374,7 @@ t.default = function(e) {
                 height: 38,
                 className: q.checkmark
               })
-            }), eY(), eX(), (0, l.jsx)(V.default, {
+            }), eY(), eX(), !ey && (0, l.jsx)(V.default, {
               category: a,
               className: q.limitedTimeBadge,
               display: "card"
