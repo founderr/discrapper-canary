@@ -18,7 +18,7 @@ function c(e) {
     joinRequest: t
   } = e, [s, c] = l.useState(!1), E = (0, i.useStateFromStores)([u.default], () => u.default.getChannel(t.interviewChannelId)), I = l.useCallback(() => {
     (0, n.showToast)((0, n.createToast)(o.default.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE))
-  }, []), T = async () => {
+  }, []), T = l.useCallback(async () => {
     if (null != E) {
       r.default.selectPrivateChannel(E.id);
       return
@@ -33,7 +33,7 @@ function c(e) {
         c(!1)
       }
     }
-  }, f = null == t.interviewChannelId ? o.default.Messages.CLAN_START_INTERVIEW : o.default.Messages.CLAN_JOIN_INTERVIEW;
+  }, [E, t.joinRequestId, I, s]), f = null == t.interviewChannelId ? o.default.Messages.CLAN_START_INTERVIEW : o.default.Messages.CLAN_JOIN_INTERVIEW;
   return (0, a.jsx)(n.Button, {
     color: n.Button.Colors.GREEN,
     submitting: s,

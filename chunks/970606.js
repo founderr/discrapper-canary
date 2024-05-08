@@ -30,6 +30,9 @@ n.r(t), n.d(t, {
   trackClanProfileViewed: function() {
     return l
   },
+  trackClanSendInterviewMessage: function() {
+    return O
+  },
   trackConvertStepViewed: function() {
     return _
   },
@@ -211,5 +214,25 @@ function N(e) {
 function p(e) {
   a.default.track(o.AnalyticEvents.MEMBER_VERIFICATION_APPLICATION_VIEWED, {
     guild_id: e
+  })
+}
+
+function O(e) {
+  var t;
+  let {
+    guildId: n,
+    messageId: s,
+    channelId: l,
+    joinRequestStatus: u,
+    joinRequestUserId: d
+  } = e, _ = i.default.getId(), c = (null === (t = r.default.getMember(n, _)) || void 0 === t ? void 0 : t.joinedAt) != null;
+  a.default.track(o.AnalyticEvents.CLAN_SEND_INTERVIEW_MESSAGE, {
+    guild_id: n,
+    channel_id: l,
+    message_id: s,
+    message_user_id: _,
+    is_member: c,
+    join_request_status: u,
+    join_request_user_id: d
   })
 }
