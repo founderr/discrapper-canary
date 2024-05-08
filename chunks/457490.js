@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
-var l = n("442837"),
-  u = n("914010"),
-  a = n("981631");
+var s = a("442837"),
+  n = a("914010"),
+  i = a("981631");
 
-function i() {
-  return (0, l.useStateFromStores)([u.default], () => u.default.getGuildId()) === a.FAVORITES
+function l() {
+  return (0, s.useStateFromStores)([n.default], () => n.default.getGuildId()) === i.FAVORITES
 }

@@ -4,11 +4,11 @@ i.r(t), i.d(t, {
     return M
   }
 }), i("47120");
-var s = i("735250"),
-  n = i("470079"),
+var n = i("735250"),
+  s = i("470079"),
   a = i("442837"),
-  l = i("481060"),
-  u = i("58540"),
+  u = i("481060"),
+  l = i("58540"),
   o = i("100527"),
   d = i("931240"),
   r = i("353093"),
@@ -28,31 +28,31 @@ function M(e) {
     analyticsLocations: I,
     context: A,
     icon: h
-  } = e, T = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]), L = (0, a.useStateFromStores)([c.default], () => c.default.getId()), m = (0, a.useStateFromStores)([N.default], () => N.default.getUser(i)), O = (0, a.useStateFromStores)([S.default], () => S.default.isGuestOrLurker(t, i), [t, i]), p = n.useMemo(() => ({
+  } = e, T = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]), m = (0, a.useStateFromStores)([c.default], () => c.default.getId()), L = (0, a.useStateFromStores)([N.default], () => N.default.getUser(i)), p = (0, a.useStateFromStores)([S.default], () => S.default.isGuestOrLurker(t, i), [t, i]), O = s.useMemo(() => ({
     [t]: [i]
-  }), [t, i]), G = (0, r.isGuildAClan)(T);
-  (0, u.useSubscribeGuildMembers)(p);
-  let C = A === _.AppContext.POPOUT,
-    b = L === i,
-    [x, U] = (0, a.useStateFromStoresArray)([E.default], () => {
+  }), [t, i]), C = (0, r.isGuildAClan)(T);
+  (0, l.useSubscribeGuildMembers)(O);
+  let G = A === _.AppContext.POPOUT,
+    x = m === i,
+    [b, U] = (0, a.useStateFromStoresArray)([E.default], () => {
       if (null == T) return [!1, !1];
-      let e = L === i && (E.default.can(_.Permissions.CHANGE_NICKNAME, T) || E.default.can(_.Permissions.MANAGE_NICKNAMES, T));
+      let e = m === i && (E.default.can(_.Permissions.CHANGE_NICKNAME, T) || E.default.can(_.Permissions.MANAGE_NICKNAMES, T));
       return [e, E.default.canManageUser(_.Permissions.MANAGE_NICKNAMES, i, T)]
-    }, [L, i, T]),
-    R = n.useCallback((e, t) => () => {
+    }, [m, i, T]),
+    j = s.useCallback((e, t) => () => {
       (0, d.adoptClanIdentity)(e, t, o.default.CONTEXT_MENU)
     }, []);
-  return null != T && !C && (x || U || b) && null != m && !O && G && m.isStaff() ? (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(l.MenuItem, {
+  return null != T && !G && (b || U || x) && null != L && !p && C && L.isStaff() ? (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(u.MenuItem, {
       id: "adopt-clan-identity",
       label: g.default.Messages.CLAN_ADOPT_CLAN_IDENTITY,
       icon: h,
-      action: R(t, !0)
-    }), (0, s.jsx)(l.MenuItem, {
+      action: j(t, !0)
+    }), (0, n.jsx)(u.MenuItem, {
       id: "deadopt-clan-identity",
       label: g.default.Messages.CLAN_CLEAR_CLAN_IDENTITY,
       icon: h,
-      action: R(null, null)
+      action: j(null, null)
     })]
   }) : null
 }

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("442837"),
-  r = n("359119");
+var r = n("442837"),
+  a = n("359119");
 
 function i(e) {
-  return (0, a.useStateFromStores)([r.default], () => r.default.getChannelSafetyWarnings(e), [e]).filter(e => e.type === r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2)
+  return (0, r.useStateFromStores)([a.default], () => a.default.getChannelSafetyWarnings(e), [e]).filter(e => e.type === a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2)
 }

@@ -4,21 +4,21 @@ u.r(t), u.d(t, {
     return o
   }
 });
-var a = u("735250");
+var n = u("735250");
 u("470079");
-var n = u("481060"),
+var a = u("481060"),
   l = u("726521"),
-  s = u("427679"),
-  d = u("795295"),
+  d = u("427679"),
+  s = u("795295"),
   i = u("689938");
 
 function o(e) {
-  let t = s.default.isLive(e.id);
-  return e.isGuildStageVoice() && t ? (0, a.jsx)(n.MenuItem, {
+  let t = d.default.isLive(e.id);
+  return e.isGuildStageVoice() && t ? (0, n.jsx)(a.MenuItem, {
     id: "report-stage",
     label: i.default.Messages.REPORT_MODAL_REPORT_STAGE_MENU_ITEM,
     action: () => (0, l.showReportModalForStageChannel)(e),
-    icon: d.default,
+    icon: s.default,
     color: "danger"
   }) : null
 }

@@ -4,12 +4,12 @@ i.r(t), i.d(t, {
     return g
   }
 });
-var s = i("735250");
+var n = i("735250");
 i("470079");
-var n = i("442837"),
+var s = i("442837"),
   a = i("481060"),
-  l = i("132871"),
-  u = i("147890"),
+  u = i("132871"),
+  l = i("147890"),
   o = i("593128"),
   d = i("434404"),
   r = i("956324"),
@@ -24,49 +24,49 @@ function g(e) {
   function t(t) {
     d.default.open(e.id, t)
   }
-  let i = (0, n.useStateFromStoresArray)([S.default], () => S.default.getChannels(e.id).SELECTABLE, [e]),
+  let i = (0, s.useStateFromStoresArray)([S.default], () => S.default.getChannels(e.id).SELECTABLE, [e]),
     g = (0, r.default)(e);
-  return __OVERLAY__ || !g ? null : (0, s.jsx)(a.MenuItem, {
+  return __OVERLAY__ || !g ? null : (0, n.jsx)(a.MenuItem, {
     id: "guild-settings",
     label: _.default.Messages.SERVER_SETTINGS,
     action: () => t(),
     children: (0, c.getGuildSettingsSections)(e, i).map(i => {
       let {
-        section: n,
+        section: s,
         label: d
       } = i;
       if (null == d) return null;
-      switch (n) {
+      switch (s) {
         case E.GuildSettingsSections.DELETE:
           return null;
         case E.GuildSettingsSections.COMMUNITY:
-          return (0, s.jsx)(a.MenuItem, {
-            id: n,
-            action: () => t(n),
+          return (0, n.jsx)(a.MenuItem, {
+            id: s,
+            action: () => t(s),
             label: _.default.Messages.GUILD_SETTINGS_COMMUNITY
-          }, n);
+          }, s);
         case E.GuildSettingsSections.APP_DIRECTORY:
-          return (0, s.jsx)(a.MenuItem, {
-            id: n,
+          return (0, n.jsx)(a.MenuItem, {
+            id: s,
             action: () => {
-              (0, u.goToAppDirectory)({
+              (0, l.goToAppDirectory)({
                 guildId: e.id,
                 entrypoint: {
-                  name: l.ApplicationDirectoryEntrypointNames.GUILD_CONTEXT_MENU
+                  name: u.ApplicationDirectoryEntrypointNames.GUILD_CONTEXT_MENU
                 }
               })
             },
             label: d
-          }, n);
+          }, s);
         case E.GuildSettingsSections.CLAN:
-          return (0, s.jsx)(a.MenuItem, {
+          return (0, n.jsx)(a.MenuItem, {
             id: "guild-settings",
             label: _.default.Messages.CLAN_SETTINGS,
             action: () => (0, f.openFullScreenLayer)(t => {
               let {
                 closeLayer: i
               } = t;
-              return (0, s.jsx)(o.default, {
+              return (0, n.jsx)(o.default, {
                 onClose: i,
                 guildId: e.id
               })
@@ -75,11 +75,11 @@ function g(e) {
             })
           });
         default:
-          return (0, s.jsx)(a.MenuItem, {
-            id: n,
-            action: () => t(n),
+          return (0, n.jsx)(a.MenuItem, {
+            id: s,
+            action: () => t(s),
             label: d
-          }, n)
+          }, s)
       }
     })
   })

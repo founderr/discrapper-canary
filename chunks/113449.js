@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   withChannelUnreadFlags: function() {
-    return u
+    return o
   },
   withGuildUnreadFlags: function() {
     return s
@@ -19,6 +19,6 @@ function s(e, t) {
 }
 let l = e => i.removeFlags(e, a.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES, a.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS);
 
-function u(e, t) {
+function o(e, t) {
   return i.addFlag(l(e), t)
 }

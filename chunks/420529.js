@@ -10,8 +10,8 @@ var u = n("399606"),
   a = n("481060"),
   i = n("231757"),
   r = n("397639"),
-  d = n("19780"),
-  s = n("979651"),
+  s = n("19780"),
+  d = n("979651"),
   o = n("951206"),
   c = n("446226"),
   f = n("937393"),
@@ -20,12 +20,12 @@ var u = n("399606"),
   C = n("689938");
 
 function N(e) {
-  let t = (0, u.useStateFromStores)([d.default], () => d.default.getChannelId() === e.id),
+  let t = (0, u.useStateFromStores)([s.default], () => s.default.getChannelId() === e.id),
     N = (0, c.default)(),
     h = (null == N ? void 0 : N.channelId) === e.id,
     _ = (0, r.useIsVoiceChannelLocked)(e) && !e.isPrivate(),
-    m = (0, r.default)(e),
-    T = !(0, u.useStateFromStores)([s.default], () => s.default.isInChannel(e.id)) && m || _,
+    T = (0, r.default)(e),
+    m = !(0, u.useStateFromStores)([d.default], () => d.default.isInChannel(e.id)) && T || _,
     v = (0, f.default)();
   if (!h && 0 === v.length) return null;
   let I = t => {
@@ -63,7 +63,7 @@ function N(e) {
         (0, o.handoffRemote)(N)
       },
       icon: (0, E.default)(void 0),
-      disabled: T
+      disabled: m
     }) : v.map(e => (0, l.jsx)(a.MenuItem, {
       id: "transfer-".concat(e.type, "-").concat(e.id),
       label: function(e, t) {
@@ -73,7 +73,7 @@ function N(e) {
       }(e.type, t),
       action: () => I(e),
       icon: (0, E.default)(e.type),
-      disabled: T
+      disabled: m
     }, e.id))
   })
 }

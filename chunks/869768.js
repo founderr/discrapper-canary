@@ -1,15 +1,15 @@
 "use strict";
 u.r(t), u.d(t, {
   useIsConnectedToVoiceChannel: function() {
-    return s
+    return d
   }
 });
-var a = u("442837"),
-  n = u("314897"),
+var n = u("442837"),
+  a = u("314897"),
   l = u("979651");
 
-function s(e) {
+function d(e) {
   return function(e) {
-    return (0, a.useStateFromStores)([l.default, n.default], () => l.default.isInChannel(e, n.default.getId()))
+    return (0, n.useStateFromStores)([l.default, a.default], () => l.default.isInChannel(e, a.default.getId()))
   }(null == e ? void 0 : e.id)
 }

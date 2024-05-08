@@ -1,18 +1,18 @@
 "use strict";
 n.r(t);
-var a = n("392711"),
-  r = n.n(a),
+var r = n("392711"),
+  a = n.n(r),
   i = n("544891"),
   s = n("570140"),
-  u = n("981631");
-let o = ["Spidey Bot", "Captain Hook"];
+  o = n("981631");
+let u = ["Spidey Bot", "Captain Hook"];
 t.default = {
   fetchForGuild(e) {
     s.default.dispatch({
       type: "WEBHOOKS_FETCHING",
       guildId: e
     }), i.HTTP.get({
-      url: u.Endpoints.GUILD_WEBHOOKS(e),
+      url: o.Endpoints.GUILD_WEBHOOKS(e),
       oldFormErrors: !0
     }).then(t => {
       let {
@@ -40,22 +40,22 @@ t.default = {
       guildId: e,
       channelId: t
     }), i.HTTP.get({
-      url: u.Endpoints.CHANNEL_WEBHOOKS(t),
+      url: o.Endpoints.CHANNEL_WEBHOOKS(t),
       oldFormErrors: !0
     }).then(n => {
       let {
-        body: a
+        body: r
       } = n;
       return s.default.dispatch({
         type: "WEBHOOKS_UPDATE",
         guildId: e,
         channelId: t,
-        webhooks: a
+        webhooks: r
       })
     })
   },
-  create: (e, t, n) => (null == n && (n = o[r().random(0, o.length - 1)]), i.HTTP.post({
-    url: u.Endpoints.CHANNEL_WEBHOOKS(t),
+  create: (e, t, n) => (null == n && (n = u[a().random(0, u.length - 1)]), i.HTTP.post({
+    url: o.Endpoints.CHANNEL_WEBHOOKS(t),
     body: {
       name: n
     },
@@ -71,7 +71,7 @@ t.default = {
     }), n
   })),
   delete: (e, t) => i.HTTP.del({
-    url: u.Endpoints.WEBHOOK(t),
+    url: o.Endpoints.WEBHOOK(t),
     oldFormErrors: !0
   }).then(() => {
     s.default.dispatch({
@@ -81,7 +81,7 @@ t.default = {
     })
   }),
   update: (e, t, n) => i.HTTP.patch({
-    url: u.Endpoints.WEBHOOK(t),
+    url: o.Endpoints.WEBHOOK(t),
     body: n,
     oldFormErrors: !0
   }).then(t => {

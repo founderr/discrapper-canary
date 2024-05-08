@@ -27,9 +27,9 @@ var l, i = n("149765"),
   A = n("703656"),
   h = n("359110"),
   p = n("922482"),
-  O = n("427679"),
+  y = n("427679"),
   m = n("488131"),
-  y = n("695346"),
+  O = n("695346"),
   M = n("592125"),
   v = n("430824"),
   D = n("292959"),
@@ -83,7 +83,7 @@ let j = "message1",
   };
 
 function et() {
-  return !!(D.default.getDesktopType() === W.DesktopNotificationTypes.NEVER || L.default.getStatus() === W.StatusTypes.DND || y.FocusMode.getSetting()) || !1
+  return !!(D.default.getDesktopType() === W.DesktopNotificationTypes.NEVER || L.default.getStatus() === W.StatusTypes.DND || O.FocusMode.getSetting()) || !1
 }
 
 function en(e) {
@@ -91,7 +91,7 @@ function en(e) {
 }
 class el extends(l = a.default.Store) {
   initialize() {
-    this.waitFor(P.default, M.default, D.default, v.default, O.default, G.default, R.default, w.default, N.default)
+    this.waitFor(P.default, M.default, D.default, v.default, y.default, G.default, R.default, w.default, N.default)
   }
 }
 X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : {
@@ -144,14 +144,14 @@ X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : 
     if (!g && !N || s.type === W.MessageTypes.CHANGELOG && (null == s.changelog_id || _.default.latestChangelogId() !== s.changelog_id)) return !1;
     let A = !D.default.isSoundDisabled(j),
       p = Y.default.canUseCustomNotificationSounds(E),
-      O = C.CustomNotificationSoundExperiment.getCurrentConfig({
+      y = C.CustomNotificationSoundExperiment.getCurrentConfig({
         location: "NotificationStore"
       }).enabled,
-      m = p && O && A ? null !== (a = (0, S.getChannelCustomNotificationSound)(null !== (i = c.guild_id) && void 0 !== i ? i : W.ZERO_STRING_GUILD_ID, u)) && void 0 !== a ? a : (0, S.getGuildCustomNotificationSound)(c.guild_id) : void 0;
+      m = p && y && A ? null !== (a = (0, S.getChannelCustomNotificationSound)(null !== (i = c.guild_id) && void 0 !== i ? i : W.ZERO_STRING_GUILD_ID, u)) && void 0 !== a ? a : (0, S.getGuildCustomNotificationSound)(c.guild_id) : void 0;
     if (N && (A && B.playSound("message3", .4, void 0, m), !z) || !g) return !1;
-    let y = n("808506").default,
+    let O = n("808506").default,
       v = n("237997").default;
-    if (null != y.getFocusedPID() && v.getTextChatNotificationMode() === W.OverlayNotificationTextChatTypes.ENABLED && !F.default.disableNotifications) return !1;
+    if (null != O.getFocusedPID() && v.getTextChatNotificationMode() === W.OverlayNotificationTextChatTypes.ENABLED && !F.default.disableNotifications) return !1;
     let {
       icon: R,
       title: G,
@@ -248,7 +248,7 @@ X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : 
     if (null == i || null == a || !(!u && null != d)) return;
     let s = v.default.getGuild(a),
       o = M.default.getChannel(i),
-      r = O.default.getStageInstanceByChannel(i);
+      r = y.default.getStageInstanceByChannel(i);
     null != s && null != o && null != r && H.default.showNotification(s.getIconURL(128), o.name, Q.default.Messages.STAGE_SPEAK_INVITE_PUSH_NOTIFICATION.format({
       channelName: (0, T.computeChannelName)(o, P.default, G.default),
       channelTopic: null == r ? void 0 : r.topic

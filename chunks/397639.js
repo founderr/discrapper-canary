@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return o
   },
   useIsVoiceChannelLocked: function() {
-    return s
+    return d
   }
 });
 var l = n("442837"),
@@ -12,10 +12,10 @@ var l = n("442837"),
   a = n("496675"),
   i = n("979651"),
   r = n("934415"),
-  d = n("231338");
+  s = n("231338");
 
-function s(e) {
-  return (0, l.useStateFromStores)([a.default], () => null == e || !a.default.can(d.Permissions.CONNECT, e), [e])
+function d(e) {
+  return (0, l.useStateFromStores)([a.default], () => null == e || !a.default.can(s.Permissions.CONNECT, e), [e])
 }
 
 function o(e) {

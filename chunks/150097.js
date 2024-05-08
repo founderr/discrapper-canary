@@ -38,9 +38,9 @@ var r = n("569471"),
   A = n("885110"),
   h = n("9156"),
   p = n("594174"),
-  O = n("630388"),
+  y = n("630388"),
   m = n("5192"),
-  y = n("352736"),
+  O = n("352736"),
   M = n("51144"),
   v = n("981631"),
   D = n("124368"),
@@ -58,7 +58,7 @@ function U(e, t) {
   var n;
   let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
     i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-  if (null != e.flags && (0, O.hasFlag)(e.flags, v.MessageFlags.SUPPRESS_NOTIFICATIONS)) return !1;
+  if (null != e.flags && (0, y.hasFlag)(e.flags, v.MessageFlags.SUPPRESS_NOTIFICATIONS)) return !1;
   let a = E.default.getChannel(t);
   e.type === v.MessageTypes.THREAD_STARTER_MESSAGE && (a = E.default.getChannel(null == a ? void 0 : a.parent_id));
   let d = p.default.getCurrentUser(),
@@ -143,7 +143,7 @@ function V(e, t, n) {
       !(e.isManaged() && n.bot && r === (0, l.computeChannelName)(e, p.default, I.default)) && (r = "".concat(r, " (").concat((0, l.computeChannelName)(e, p.default, I.default, !0), ")"))
   }
   let c = t.content;
-  if ((0, o.default)(t) && null == (c = y.default.stringify(t, e))) throw new i.default("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", t), Error("failed to stringify system message");
+  if ((0, o.default)(t) && null == (c = O.default.stringify(t, e))) throw new i.default("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", t), Error("failed to stringify system message");
   let _ = null !== (a = t.sticker_items) && void 0 !== a ? a : t.stickers;
   return 0 === (u = null != t.activity && null != t.application ? t.activity.type === v.ActivityActionTypes.JOIN ? w(e, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_JOIN, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN).format({
     user: s,
@@ -170,7 +170,7 @@ function V(e, t, n) {
         return "".concat(e.name, " ").concat(e.value)
       }
     }
-    if ((0, O.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, v.MessageFlags.IS_VOICE_MESSAGE)) return R.default.Messages.VOICE_MESSAGES_SENT_NOTIFICATION;
+    if ((0, y.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, v.MessageFlags.IS_VOICE_MESSAGE)) return R.default.Messages.VOICE_MESSAGES_SENT_NOTIFICATION;
     if (void 0 !== e.attachments && e.attachments.length > 0) {
       let t = e.attachments[0].filename;
       return R.default.Messages.NOTIFICATION_BODY_ATTACHMENT.format({
