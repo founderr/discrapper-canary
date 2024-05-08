@@ -3,11 +3,8 @@ n.r(t), n.d(t, {
   getClanSetupProgressSteps: function() {
     return o
   },
-  getClanSetupSteps: function() {
-    return u
-  },
   submitClanSetup: function() {
-    return d
+    return u
   }
 });
 var l = n("735250");
@@ -51,16 +48,7 @@ function o(e) {
     hasError: (null == e ? void 0 : e.verificationForm) != null
   }]
 }
-
-function u() {
-  return o(void 0).map(e => {
-    let {
-      index: t
-    } = e;
-    return t
-  })
-}
-async function d(e) {
+async function u(e) {
   let {
     guildId: t,
     onClose: i,

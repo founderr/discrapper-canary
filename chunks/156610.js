@@ -23,7 +23,8 @@ e.exports = {
   sidebarRightDecoration: "sidebarRightDecoration__5fc16",
   sidebarRightDecorationContainer: "sidebarRightDecorationContainer__2f92e",
   signButton: "signButton__6f375",
-  steps: "steps_d254c3",
+  step: "step__4b7ad",
   stepsContainer: "stepsContainer__8d5da",
+  stepsTransitionGroup: "stepsTransitionGroup__770f6",
   submit: "submit__9d0ad"
 }
