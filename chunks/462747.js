@@ -92,45 +92,45 @@ function C(e) {
 }
 
 function p(e) {
-  var t;
   let {
-    eventUser: l,
+    eventUser: t,
+    guildId: l,
     onContextMenu: i
-  } = e, u = (0, r.useStateFromStores)([m.default], () => m.default.getUser(l.user_id)), o = null === (t = l.member) || void 0 === t ? void 0 : t.guildId, _ = (0, r.useStateFromStores)([h.default, E.default, v.default], () => l.user_id === v.default.getId() ? h.default.getStatus() : E.default.getStatus(l.user_id, o), [l.user_id, o]);
+  } = e, u = (0, r.useStateFromStores)([m.default], () => m.default.getUser(t.user_id)), o = (0, r.useStateFromStores)([h.default, E.default, v.default], () => t.user_id === v.default.getId() ? h.default.getStatus() : E.default.getStatus(t.user_id, l), [t.user_id, l]);
   return null == u ? null : (0, n.jsx)(s.Popout, {
-    preload: () => (0, c.maybeFetchUserProfileForPopout)(u.id, u.getAvatarURL(o, 80), {
-      guildId: o
+    preload: () => (0, c.maybeFetchUserProfileForPopout)(u.id, u.getAvatarURL(l, 80), {
+      guildId: l
     }),
     renderPopout: e => (0, n.jsx)(f.default, {
       ...e,
       location: "EventDetailRsvpTab",
-      userId: l.user_id,
-      guildId: o
+      userId: t.user_id,
+      guildId: l
     }),
     position: "left",
     spacing: 16,
-    children: (e, t) => {
-      var r, o;
+    children: (e, r) => {
+      var c;
       let {
-        isShown: c
-      } = t;
+        isShown: f
+      } = r;
       return (0, n.jsxs)(s.Clickable, {
         className: a()(x.listRow, x.interactiveRow, {
-          [x.selected]: c
+          [x.selected]: f
         }),
         onContextMenu: e => i(e, u),
         ...e,
         children: [(0, n.jsx)(s.Avatar, {
-          src: u.getAvatarURL(null === (r = l.member) || void 0 === r ? void 0 : r.guildId, 24),
+          src: u.getAvatarURL(l, 24),
           "aria-label": u.username,
           size: s.AvatarSizes.SIZE_24,
           className: x.listAvatar,
-          status: _
+          status: o
         }), (0, n.jsx)(d.default, {
           user: u,
           className: x.listName,
           discriminatorClass: x.listDiscriminator,
-          nick: null === (o = l.member) || void 0 === o ? void 0 : o.nick
+          nick: null === (c = t.member) || void 0 === c ? void 0 : c.nick
         })]
       })
     }
@@ -140,16 +140,18 @@ function p(e) {
 function L(e) {
   let {
     eventUsers: t,
-    usersNotShownCount: l = 0,
-    onContextMenu: i
+    guildId: l,
+    usersNotShownCount: i = 0,
+    onContextMenu: a
   } = e;
   return (0, n.jsxs)(s.ScrollerThin, {
     className: x.listScroller,
     children: [t.map(e => (0, n.jsx)(p, {
+      guildId: l,
       eventUser: e,
-      onContextMenu: i
-    }, e.user_id)), l > 0 && (0, n.jsx)(C, {
-      count: l
+      onContextMenu: a
+    }, e.user_id)), i > 0 && (0, n.jsx)(C, {
+      count: i
     })]
   })
 }
@@ -206,6 +208,7 @@ function M(e) {
   }) : (0, n.jsx)(R, {
     children: (0, n.jsx)(L, {
       eventUsers: a,
+      guildId: t.guild_id,
       onContextMenu: function(e, t) {
         (0, u.openContextMenuLazy)(e, async () => {
           let {

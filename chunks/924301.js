@@ -260,9 +260,7 @@ s = "GuildScheduledEventStore", (a = "displayName") in(r = w) ? Object.definePro
     return L({
       user_id: i,
       guild_scheduled_event_id: r,
-      member: null != d ? d : {
-        guildId: a
-      },
+      member: null != d ? d : void 0,
       guild_scheduled_event_exception_id: s,
       response: o
     }), !0
