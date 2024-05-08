@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("271383"),
   p = n("467679"),
   O = n("263704"),
-  C = n("626135"),
-  R = n("275759"),
+  R = n("626135"),
+  C = n("275759"),
   g = n("107484"),
   L = n("977392"),
   v = n("134433"),
@@ -61,7 +61,7 @@ function w(e) {
       break;
     default:
       t = o
-  } else t = (0, R.getConnectionsCheckText)({
+  } else t = (0, C.getConnectionsCheckText)({
     connectionType: n,
     connectionMetadataField: r,
     operator: a,
@@ -93,7 +93,7 @@ function k(e) {
         T = f.default.get(e),
         S = null == E ? void 0 : E.application,
         h = (null == S ? void 0 : S.bot) != null ? new m.default(S.bot) : null;
-      return R.officialApplicationIds.includes(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : "") ? l = (0, i.jsx)(D.default, {
+      return C.officialApplicationIds.includes(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : "") ? l = (0, i.jsx)(D.default, {
         className: G.botTag,
         color: r,
         size: 16
@@ -149,7 +149,7 @@ function B(e) {
     guildId: _
   } = e;
   r.useEffect(() => {
-    C.default.track(P.AnalyticEvents.PASSPORT_ROLE_POPOUT_VIEWED, {
+    R.default.track(P.AnalyticEvents.PASSPORT_ROLE_POPOUT_VIEWED, {
       other_user_id: o,
       role_id: l,
       ...(0, S.collectChannelAnalyticsMetadataFromId)(d),

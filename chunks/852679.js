@@ -29,15 +29,15 @@ async function I(e) {
     onSubscriptionConfirmation: N,
     inPopout: p,
     applicationId: O
-  } = e, C = p ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, R = l.default.getPremiumTypeSubscription();
-  if (null != R && R.isPurchasedExternally && null != R.paymentGateway) {
+  } = e, R = p ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, C = l.default.getPremiumTypeSubscription();
+  if (null != C && C.isPurchasedExternally && null != C.paymentGateway) {
     null != S && S(), a.default.show({
       title: c.default.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({
-        paymentGatewayName: _.PaymentGatewayToFriendlyName[R.paymentGateway]
+        paymentGatewayName: _.PaymentGatewayToFriendlyName[C.paymentGateway]
       }),
       body: c.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_UPGRADE_TO_PREMIUM_EXTERNAL_ERROR.format({
-        paymentGatewayName: _.PaymentGatewayToFriendlyName[R.paymentGateway],
-        subscriptionManagementLink: (0, d.getExternalSubscriptionMethodUrl)(R.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
+        paymentGatewayName: _.PaymentGatewayToFriendlyName[C.paymentGateway],
+        subscriptionManagementLink: (0, d.getExternalSubscriptionMethodUrl)(C.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
       })
     });
     return
@@ -79,6 +79,6 @@ async function I(e) {
     onCloseRequest: () => {
       (0, r.closeModal)(E), null == h || h(!1)
     },
-    contextKey: C
+    contextKey: R
   })
 }

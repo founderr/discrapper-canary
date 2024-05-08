@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return L
   },
   createGuildSticker: function() {
-    return C
+    return R
   },
   deleteGuildSticker: function() {
     return O
@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return M
   },
   updateGuildSticker: function() {
-    return R
+    return C
   }
 }), n("653041");
 var i = n("392711"),
@@ -112,7 +112,7 @@ let A = async (e, t) => {
   await a.HTTP.del({
     url: f.Endpoints.GUILD_STICKER(e.guild_id, e.id)
   })
-}, C = async (e, t) => {
+}, R = async (e, t) => {
   let n = await a.HTTP.post({
     url: f.Endpoints.GUILD_STICKER_PACKS(e),
     body: t
@@ -125,7 +125,7 @@ let A = async (e, t) => {
       user: E.default.getCurrentUser()
     }
   }), n.body
-}, R = async (e, t, n) => (await a.HTTP.patch({
+}, C = async (e, t, n) => (await a.HTTP.patch({
   url: f.Endpoints.GUILD_STICKER(e, t),
   body: n
 })).body;

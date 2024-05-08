@@ -58,11 +58,11 @@ let h = new d.SecondaryIndexMap(e => {
   p = {},
   O = {};
 
-function C(e) {
+function R(e) {
   h.set(e.id, e), A += 1
 }
 
-function R(e) {
+function C(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   h.delete(e), delete p[e], t && delete O[e], A += 1
 }
@@ -107,14 +107,14 @@ function D(e, t, n) {
 }
 
 function M(e, t) {
-  h.values(f.GUILD_EVENT(e)).forEach(e => R(e.id, t))
+  h.values(f.GUILD_EVENT(e)).forEach(e => C(e.id, t))
 }
 
 function y(e) {
   let {
     guildScheduledEvent: t
   } = e;
-  return C(t), !0
+  return R(t), !0
 }
 
 function P(e) {
@@ -124,7 +124,7 @@ function P(e) {
   if (null == n) return !1;
   let i = n.guild_scheduled_event_exceptions.findIndex(e => e.event_exception_id === t.event_exception_id),
     r = [...n.guild_scheduled_event_exceptions];
-  return i < 0 ? r.push(t) : r[i] = t, C({
+  return i < 0 ? r.push(t) : r[i] = t, R({
     ...n,
     guild_scheduled_event_exceptions: r
   }), !0
@@ -208,13 +208,13 @@ s = "GuildScheduledEventStore", (a = "displayName") in(r = w) ? Object.definePro
     let {
       guilds: t
     } = e;
-    return h.clear(), A = 0, p = {}, O = {}, m.forEach(C), t.forEach(e => e.guild_scheduled_events.forEach(e => C(e))), !0
+    return h.clear(), A = 0, p = {}, O = {}, m.forEach(R), t.forEach(e => e.guild_scheduled_events.forEach(e => R(e))), !0
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    return M(t.id, !1), t.guild_scheduled_events.forEach(e => C(e)), !0
+    return M(t.id, !1), t.guild_scheduled_events.forEach(e => R(e)), !0
   },
   GUILD_DELETE: function(e) {
     let {
@@ -226,7 +226,7 @@ s = "GuildScheduledEventStore", (a = "displayName") in(r = w) ? Object.definePro
     let {
       guildScheduledEvent: t
     } = e;
-    C(t)
+    R(t)
   },
   FETCH_GUILD_EVENTS_FOR_GUILD: function(e) {
     let {
@@ -234,8 +234,8 @@ s = "GuildScheduledEventStore", (a = "displayName") in(r = w) ? Object.definePro
       guildScheduledEvents: n
     } = e, i = h.values(f.GUILD_EVENT(t), !0).map(e => e.id), r = n.map(e => e.id);
     for (let e of (l().difference(i, r).forEach(e => {
-        R(e)
-      }), n)) C(e);
+        C(e)
+      }), n)) R(e);
     return !0
   },
   GUILD_SCHEDULED_EVENT_CREATE: y,
@@ -244,7 +244,7 @@ s = "GuildScheduledEventStore", (a = "displayName") in(r = w) ? Object.definePro
     let {
       guildScheduledEvent: t
     } = e;
-    return R(t.id), !0
+    return C(t.id), !0
   },
   GUILD_SCHEDULED_EVENT_USER_ADD: function(e) {
     var t, n;
@@ -306,7 +306,7 @@ s = "GuildScheduledEventStore", (a = "displayName") in(r = w) ? Object.definePro
     let {
       invite: t
     } = e, n = t.guild_scheduled_event;
-    return null != n && (C(n), !0)
+    return null != n && (R(n), !0)
   },
   GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: P,
   GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: P,
@@ -316,7 +316,7 @@ s = "GuildScheduledEventStore", (a = "displayName") in(r = w) ? Object.definePro
     } = e, n = h.get(t.event_id);
     if (null == n) return !1;
     let i = n.guild_scheduled_event_exceptions.filter(e => e.event_exception_id !== t.event_exception_id);
-    return C({
+    return R({
       ...n,
       guild_scheduled_event_exceptions: i
     }), !0
@@ -325,7 +325,7 @@ s = "GuildScheduledEventStore", (a = "displayName") in(r = w) ? Object.definePro
     let {
       eventId: t
     } = e, n = h.get(t);
-    return null != n && (C({
+    return null != n && (R({
       ...n,
       guild_scheduled_event_exceptions: []
     }), !0)

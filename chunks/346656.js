@@ -95,8 +95,8 @@ class p extends a.PureComponent {
       tabIndex: m,
       iconSrc: p,
       "aria-hidden": O,
-      ...C
-    } = this.props, R = N[l], g = null != I ? _.Clickable : "div";
+      ...R
+    } = this.props, C = N[l], g = null != I ? _.Clickable : "div";
     return (0, r.jsxs)(g, {
       className: o()(S.icon, i, (0, T.getClass)(S, "iconSize", l), {
         [null !== (e = (0, T.getClass)(S, "iconActive", l)) && void 0 !== e ? e : ""]: s,
@@ -105,12 +105,12 @@ class p extends a.PureComponent {
       }),
       "aria-hidden": O,
       style: null == n.icon ? {
-        fontSize: (null !== (t = R[n.acronym.length]) && void 0 !== t ? t : R[R.length - 1]) * d,
+        fontSize: (null !== (t = C[n.acronym.length]) && void 0 !== t ? t : C[C.length - 1]) * d,
         ...u
       } : u,
       onClick: null != f || null == I ? void 0 : I,
       tabIndex: m,
-      ...C,
+      ...R,
       children: [this.renderAcronym(), this.renderBadge()]
     })
   }
@@ -168,14 +168,14 @@ let O = u.default.connectStores([E.default], e => {
 })((0, c.backgroundImagePreloader)(e => (0, r.jsx)(p, {
   ...e
 })));
-class C extends(i = a.PureComponent) {
+class R extends(i = a.PureComponent) {
   render() {
     return (0, r.jsx)(O, {
       ...this.props
     })
   }
 }
-h(C, "Sizes", A), h(C, "defaultProps", {
+h(R, "Sizes", A), h(R, "defaultProps", {
   size: A.LARGE,
   textScale: 1,
   showBadge: !1,
@@ -184,4 +184,4 @@ h(C, "Sizes", A), h(C, "defaultProps", {
   tooltipPosition: "top",
   badgeStrokeColor: d.default.unsafe_rawColors.WHITE_500.css,
   animate: !1
-}), t.default = C
+}), t.default = R

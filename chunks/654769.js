@@ -64,34 +64,34 @@ if (h) {
   }, f(i, "permission", "granted"), f(i, "_id", 0), O = i
 }
 
-function C() {
+function R() {
   return null != O && "granted" === O.permission
 }
 
-function R(e) {
+function C(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
     n = arguments.length > 2 ? arguments[2] : void 0;
   e.includes("message") ? N(e, t, void 0, n) : (0, E.playSound)(e, t)
 }
 
 function g(e) {
-  return d.default.disableNotifications && null == e.overrideStreamerMode || !C() || c.isPlatformEmbedded && !I.default.shouldDisplayNotifications()
+  return d.default.disableNotifications && null == e.overrideStreamerMode || !R() || c.isPlatformEmbedded && !I.default.shouldDisplayNotifications()
 }
 t.default = {
-  hasPermission: C,
+  hasPermission: R,
   requestPermission: function(e) {
     null != O && O.requestPermission(() => {
-      null != e && e(C())
+      null != e && e(R())
     })
   },
   showNotification: function(e, t, n, i, r) {
     var s, o, l, d;
     let E;
     if (g(r)) {
-      null != r.sound && !1 !== r.playSoundIfDisabled && R(r.sound, null !== (o = r.volume) && void 0 !== o ? o : 1, r.soundpack);
+      null != r.sound && !1 !== r.playSoundIfDisabled && C(r.sound, null !== (o = r.volume) && void 0 !== o ? o : 1, r.soundpack);
       return
     }
-    null != r.sound && R(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1, r.soundpack);
+    null != r.sound && C(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1, r.soundpack);
     let f = null !== (d = null == r ? void 0 : r.tag) && void 0 !== d ? d : null;
     (0, c.isLinux)() && (n = a().escape(n));
     let h = {

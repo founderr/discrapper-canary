@@ -103,7 +103,7 @@ t.default = e => {
     for (let e = 0; e < M.CLAN_BRAND_PALETTE_PRESETS.length; e++)
       if (M.CLAN_BRAND_PALETTE_PRESETS[e].primary === A.brandPrimaryColor && M.CLAN_BRAND_PALETTE_PRESETS[e].secondary === A.brandSecondaryColor) return e + 1;
     return m
-  }), [j, V] = n.useState(!1), b = m === B, K = 0 === B, w = n.useMemo(() => {
+  }), [V, j] = n.useState(!1), b = m === B, K = 0 === B, w = n.useMemo(() => {
     if (b) return x;
     if (K) {
       var e, t;
@@ -194,12 +194,12 @@ t.default = e => {
                     secondary: (0, l.int2hex)(e)
                   }))
                 },
-                shouldShow: j,
-                onRequestClose: () => V(!1),
+                shouldShow: V,
+                onRequestClose: () => j(!1),
                 children: e => (0, a.jsx)(S.Clickable, {
                   ...e,
                   onClick: () => {
-                    F(m), V(e => !e)
+                    F(m), j(e => !e)
                   },
                   className: E()(R.brandItemContainer, {
                     [R.brandItemContainerSelected]: B === m

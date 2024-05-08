@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("496675"),
   p = n("158776"),
   O = n("979651"),
-  C = n("6074"),
-  R = n("981631"),
+  R = n("6074"),
+  C = n("981631"),
   g = n("732813");
 let L = "14px";
 
@@ -97,7 +97,7 @@ t.default = e => {
     hideEmoji: h = !1,
     user: M,
     hasQuest: y
-  } = e, P = null != n ? n.find(e => e.type === R.ActivityTypes.CUSTOM_STATUS) : null, U = (0, l.useStateFromStores)([A.default], () => A.default.getId() === (null == M ? void 0 : M.id)), b = (0, l.useStateFromStores)([f.default], () => U ? f.default.getHangStatusActivity() : null != n ? n.find(e => e.type === R.ActivityTypes.HANG_STATUS) : null), G = (0, l.useStateFromStores)([O.default, m.default], () => {
+  } = e, P = null != n ? n.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null, U = (0, l.useStateFromStores)([A.default], () => A.default.getId() === (null == M ? void 0 : M.id)), b = (0, l.useStateFromStores)([f.default], () => U ? f.default.getHangStatusActivity() : null != n ? n.find(e => e.type === C.ActivityTypes.HANG_STATUS) : null), G = (0, l.useStateFromStores)([O.default, m.default], () => {
     var e;
     return null != b && null != M ? m.default.getChannel(null === (e = O.default.getVoiceStateForUser(M.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), {
@@ -107,7 +107,7 @@ t.default = e => {
     location: "ActivityStatus"
   }, {
     autoTrackExposure: !1
-  }), k = (0, E.useColorValue)(R.Color.BRAND_345), B = null, V = w && null != b && N.default.can(R.Permissions.CONNECT, G);
+  }), k = (0, E.useColorValue)(C.Color.BRAND_345), B = null, V = w && null != b && N.default.can(C.Permissions.CONNECT, G);
   V ? B = (0, i.jsx)(S.default, {
     className: u,
     hangStatusActivity: b
@@ -118,7 +118,7 @@ t.default = e => {
     className: u
   }));
   let x = (0, l.useStateFromStores)([p.default], () => null != M ? p.default.getStatus(M.id) : null),
-    F = null !== x && [R.StatusTypes.OFFLINE, R.StatusTypes.INVISIBLE].includes(x),
+    F = null !== x && [C.StatusTypes.OFFLINE, C.StatusTypes.INVISIBLE].includes(x),
     H = null === (t = (0, c.default)(n, r, void 0, V)) || void 0 === t ? void 0 : t.activityText,
     Y = null != H && H.length > 0;
   return F || null == B && !Y ? null : (0, i.jsxs)("div", {
@@ -131,7 +131,7 @@ t.default = e => {
       height: L,
       width: L,
       color: k.hex
-    }), null != n && n.some(e => (0, _.default)(e, V)) ? (0, i.jsx)(C.default, {
+    }), null != n && n.some(e => (0, _.default)(e, V)) ? (0, i.jsx)(R.default, {
       width: 16,
       height: 16,
       className: g.icon

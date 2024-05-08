@@ -25,9 +25,9 @@ function c(e) {
     height: p = 0
   } = (0, u.default)(), {
     ref: O,
-    height: C = 0
-  } = (0, u.default)(), R = (0, o.useSpring)({
-    height: m ? p + C : C,
+    height: R = 0
+  } = (0, u.default)(), C = (0, o.useSpring)({
+    height: m ? p + R : R,
     immediate: f || T,
     config: o.config.stiff,
     onRest: () => A(!0)
@@ -47,7 +47,7 @@ function c(e) {
       className: s()(_.contentExpandContainer, {
         [_.showOverflow]: m && h
       }),
-      style: R,
+      style: C,
       children: [(0, i.jsx)("div", {
         ref: O,
         className: s()(_.header, {

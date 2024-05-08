@@ -398,8 +398,8 @@ class S {
       N = null !== (n = e.isAfter) && void 0 !== n && n,
       p = null !== (i = e.jump) && void 0 !== i ? i : null,
       O = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
-      C = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
-      R = null !== (d = e.cached) && void 0 !== d && d,
+      R = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
+      C = null !== (d = e.cached) && void 0 !== d && d,
       g = r()(A).reverse().map(a.default.getCurrentConfig({
         location: "2ecb25_2"
       }, {
@@ -423,8 +423,8 @@ class S {
       jumpSequenceId: null != p ? L.jumpSequenceId + 1 : L.jumpSequenceId,
       jumpReturnTargetId: null !== (h = null == p ? void 0 : p.returnMessageId) && void 0 !== h ? h : null,
       hasMoreBefore: null == p && N ? L.hasMoreBefore : O,
-      hasMoreAfter: null == p && m ? L.hasMoreAfter : C,
-      cached: R,
+      hasMoreAfter: null == p && m ? L.hasMoreAfter : R,
+      cached: C,
       hasFetched: e.hasFetched,
       error: !1
     })

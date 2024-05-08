@@ -21,9 +21,9 @@ var i = n("735250"),
   N = n("252618"),
   p = n("587061"),
   O = n("392358"),
-  C = n("981631");
+  R = n("981631");
 n("807151");
-let R = new Set([C.Routes.LOGIN, C.Routes.REGISTER]);
+let C = new Set([R.Routes.LOGIN, R.Routes.REGISTER]);
 t.default = r.memo(function(e) {
   let {
     children: t,
@@ -33,7 +33,7 @@ t.default = r.memo(function(e) {
     skipsSettingDefaultPageTitle: a
   });
   let {
-    clientThemesClassName: C,
+    clientThemesClassName: R,
     clientThemesCSS: g
   } = (0, I.default)(), L = r.createElement("style", {
     [I.CLIENT_THEMES_DATA_ATTRIBUTE]: !0
@@ -52,7 +52,7 @@ t.default = r.memo(function(e) {
       } = r.useContext(c.AccessibilityPreferencesContext), {
         fontScale: I,
         fontScaleClass: N,
-        keyboardModeEnabled: C,
+        keyboardModeEnabled: R,
         saturation: g,
         desaturateUserColors: L,
         useForcedColors: v,
@@ -76,7 +76,7 @@ t.default = r.memo(function(e) {
           useForcedColors: a,
           systemForcedColors: s
         }
-      }), M = (0, l.useLocation)(), y = r.useMemo(() => R.has(M.pathname), [M.pathname]);
+      }), M = (0, l.useLocation)(), y = r.useMemo(() => C.has(M.pathname), [M.pathname]);
       (0, p.default)(window, y);
       let P = (0, O.default)(window, __OVERLAY__ || a),
         U = (0, d.useStateFromStores)([T.default], () => T.default.sidebarWidth),
@@ -88,7 +88,7 @@ t.default = r.memo(function(e) {
         className: s()(e, {
           overlay: __OVERLAY__,
           "mouse-mode": P,
-          "keyboard-mode": C,
+          "keyboard-mode": R,
           "reduce-motion": o.enabled,
           "full-motion": !o.enabled,
           "is-mobile": u.isMobile,
@@ -103,7 +103,7 @@ t.default = r.memo(function(e) {
           "has-webkit-scrollbar": G
         }, (0, A.getThemeClass)(n), (0, m.default)(), N)
       })
-    }(C), function() {
+    }(R), function() {
       let [e, t] = r.useState([]);
       return r.useEffect(() => {
         Promise.all(_.fontsToPreload.map(e => n("867444")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {

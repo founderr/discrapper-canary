@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("898463"),
   p = n("981631"),
   O = n("986075"),
-  C = n("819041");
-let R = [];
+  R = n("819041");
+let C = [];
 
 function g(e) {
   let {
@@ -36,7 +36,7 @@ function g(e) {
     let e = T.default.getActiveCommand(t);
     if (null == e) return {
       isApplicationCommand: !1,
-      commandOptions: R,
+      commandOptions: C,
       commandOptionStates: null
     };
     let n = T.default.getOptionStates(t);
@@ -85,7 +85,7 @@ function g(e) {
           return (0, i.jsx)("ul", {
             ref: r,
             ...o,
-            className: s()(O.channelAttachmentArea, C.scrollbarGhost),
+            className: s()(O.channelAttachmentArea, R.scrollbarGhost),
             children: v ? y.map(e => (0, i.jsx)(m.default, {
               channelId: t,
               keyboardModeEnabled: a,

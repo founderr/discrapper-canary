@@ -28,7 +28,7 @@ var i, r, a, s, o = n("512722"),
   p = n("141795"),
   O = n("981631");
 
-function C(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -36,8 +36,8 @@ function C(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = null;
-__OVERLAY__ && (R = n("237997").default), (a = i || (i = {})).OVERLAY_UNLOCKED = "overlay_unlocked", a.OVERLAY_UNLOCKED_PINNED = "overlay_unlocked_pinned", a.OVERLAY_LOCKED_ACTIVATED = "overlay_locked_activated", (s = r || (r = {}))[s.SEND = 0] = "SEND", s[s.EDIT = 1] = "EDIT", s[s.COMMAND = 2] = "COMMAND";
+let C = null;
+__OVERLAY__ && (C = n("237997").default), (a = i || (i = {})).OVERLAY_UNLOCKED = "overlay_unlocked", a.OVERLAY_UNLOCKED_PINNED = "overlay_unlocked_pinned", a.OVERLAY_LOCKED_ACTIVATED = "overlay_locked_activated", (s = r || (r = {}))[s.SEND = 0] = "SEND", s[s.EDIT = 1] = "EDIT", s[s.COMMAND = 2] = "COMMAND";
 let g = e => 0 === e.type,
   L = e => 1 === e.type,
   v = e => g(e) ? e.message.nonce : L(e) ? e.message.messageId : e.message.data.id,
@@ -107,9 +107,9 @@ class M extends m.default {
       });
       return
     }
-    null != R && (R.isInstanceUILocked() ? n = {
+    null != C && (C.isInstanceUILocked() ? n = {
       location: "overlay_locked_activated"
-    } : !R.isInstanceUILocked() && (n = R.isPinned(O.OverlayWidgets.TEXT) ? {
+    } : !C.isInstanceUILocked() && (n = C.isPinned(O.OverlayWidgets.TEXT) ? {
       location: "overlay_unlocked_pinned"
     } : {
       location: "overlay_unlocked"
@@ -218,7 +218,7 @@ class M extends m.default {
     }, this.createResponseHandler(o, t))
   }
   constructor(e = 5) {
-    super(new E.default("MessageQueue")), C(this, "maxSize", void 0), C(this, "requests", void 0), C(this, "analyticsTimeouts", void 0), this.maxSize = e, this.requests = new Map, this.analyticsTimeouts = new Map
+    super(new E.default("MessageQueue")), R(this, "maxSize", void 0), R(this, "requests", void 0), R(this, "analyticsTimeouts", void 0), this.maxSize = e, this.requests = new Map, this.analyticsTimeouts = new Map
   }
 }
 t.default = new M

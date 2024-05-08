@@ -37,13 +37,13 @@ n.r(t), n.d(t, {
     return p
   },
   setPendingAvatarDecoration: function() {
-    return C
+    return R
   },
   setPendingGlobalNameName: function() {
     return O
   },
   setPendingProfileEffectId: function() {
-    return R
+    return C
   }
 });
 var i = n("544891"),
@@ -198,14 +198,14 @@ function O(e) {
   })
 }
 
-function C(e) {
+function R(e) {
   s.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
     avatarDecoration: e
   })
 }
 
-function R(e) {
+function C(e) {
   s.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID",
     profileEffectId: e

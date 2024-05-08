@@ -34,8 +34,8 @@ var i = n("735250"),
   N = n("583046"),
   p = n("897829"),
   O = n("74179"),
-  C = n("896246"),
-  R = n("320317"),
+  R = n("896246"),
+  C = n("320317"),
   g = n("994427"),
   L = n("814076"),
   v = n("712297"),
@@ -91,11 +91,11 @@ function k(e) {
   }), [ec, eE] = (0, g.default)(el), {
     paymentError: eI,
     paymentAuthenticationState: eT
-  } = (0, C.default)(), {
+  } = (0, R.default)(), {
     purchaseError: ef,
     purchaseErrorBlockRef: eS,
     setPurchaseError: eh
-  } = (0, R.default)(), eA = (0, s.useLazyValue)(() => {
+  } = (0, C.default)(), eA = (0, s.useLazyValue)(() => {
     let e = null != f ? f : (0, o.v4)();
     return A.default.addBreadcrumb({
       message: "Checkout session ID: ".concat(e)
@@ -108,7 +108,7 @@ function k(e) {
     selectedPlan: eN,
     setSelectedSkuId: ep,
     setSelectedPlanId: eO
-  } = (0, m.default)(), [eC, eR] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [ev, eD] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, ek] = r.useState(null), [eB, eV] = r.useState(void 0), [ex, eF] = r.useState([]), eH = r.useMemo(() => null == eN || (0, h.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
+  } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [ev, eD] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, ek] = r.useState(null), [eB, eV] = r.useState(void 0), [ex, eF] = r.useState([]), eH = r.useMemo(() => null == eN || (0, h.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
   r.useEffect(() => {
     null == eY.current && null != G && (eY.current = G.planId)
   }, [G]);
@@ -167,8 +167,8 @@ function k(e) {
       purchaseError: ef,
       setPurchaseError: eh,
       purchaseErrorBlockRef: eS,
-      purchaseTokenAuthState: eC,
-      purchaseTokenHash: eR,
+      purchaseTokenAuthState: eR,
+      purchaseTokenHash: eC,
       browserCheckoutState: eg,
       browserCheckoutStateLoadId: eL,
       bodyNode: ev,

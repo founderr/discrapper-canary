@@ -83,7 +83,7 @@ let A = e => {
       isInteracting: n,
       tooltipPosition: a = I.EXPRESSION_TOOLTIP_PROPS.position,
       enableClick: d = !0
-    } = e, [S, A] = r.useState(String(Date.now())), [m, p] = r.useState(!1), [O, C] = r.useState(!1), R = function() {
+    } = e, [S, A] = r.useState(String(Date.now())), [m, p] = r.useState(!1), [O, R] = r.useState(!1), C = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return (0, i.jsx)(u.default, {
         ...e,
@@ -114,7 +114,7 @@ let A = e => {
         },
         onClick: t => {
           var n;
-          p(!1), C(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
+          p(!1), R(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
           m && (c.default.track(T.AnalyticEvents.CLOSE_POPOUT, {
@@ -125,7 +125,7 @@ let A = e => {
         className: s()(h.emojiContainer, {
           [h.emojiContainerClickable]: d
         }),
-        children: R(t)
+        children: C(t)
       })
     });
     return d ? (0, i.jsx)(l.Popout, {
@@ -134,7 +134,7 @@ let A = e => {
       onRequestClose: () => {
         c.default.track(T.AnalyticEvents.CLOSE_POPOUT, {
           nonce: g
-        }), p(!1), C(!1)
+        }), p(!1), R(!1)
       },
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,

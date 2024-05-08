@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   closeAndClearThreadSidebar: function() {
-    return R
+    return C
   },
   closeThreadSidebar: function() {
-    return C
+    return R
   },
   openThreadSidebarForCreating: function() {
     return O
@@ -71,14 +71,14 @@ function O(e, t, n) {
   }, 0)
 }
 
-function C(e, t) {
+function R(e, t) {
   (0, c.transitionTo)(m.Routes.CHANNEL(e, (0, N.isGuildHomeChannel)(t) ? N.StaticChannelRoute.GUILD_HOME : t)), o.default.dispatch({
     type: "SIDEBAR_CLOSE",
     baseChannelId: t
   })
 }
 
-function R(e) {
+function C(e) {
   o.default.dispatch({
     type: "SIDEBAR_CLOSE",
     baseChannelId: e

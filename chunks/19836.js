@@ -45,9 +45,9 @@ function m(e) {
     lastSection: N = !1,
     animateOnHover: p = !1,
     isHovering: O = !1,
-    lineClamp: C
+    lineClamp: R
   } = e, {
-    location: R
+    location: C
   } = (0, l.useAnalyticsContext)(), g = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), L = c.default.canUsePremiumGuildMemberProfile(g);
   return _ || null == r || "" === r ? null : (0, i.jsxs)(I.default, {
     lastSection: N,
@@ -74,7 +74,7 @@ function m(e) {
               return t => (0, i.jsx)(e, {
                 ...t,
                 source: {
-                  ...R,
+                  ...C,
                   object: T.AnalyticsObjects.GUILD_ICON
                 }
               })
@@ -91,7 +91,7 @@ function m(e) {
       userBio: r,
       animateOnHover: p,
       isHovering: O,
-      lineClamp: C
+      lineClamp: R
     })]
   })
 }

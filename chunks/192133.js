@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("138394"),
   p = n("790711"),
   O = n("248345"),
-  C = n("337125"),
-  R = n("19836"),
+  R = n("337125"),
+  C = n("19836"),
   g = n("207570"),
   L = n("77097"),
   v = n("538564"),
@@ -131,7 +131,7 @@ function B(e) {
         children: [(0, i.jsx)(g.default, {
           user: x,
           guildId: null == H ? void 0 : H.id
-        }), (0, i.jsx)(R.default, {
+        }), (0, i.jsx)(C.default, {
           isUsingGuildBio: null !== (n = null == F ? void 0 : F.isUsingGuildMemberBio()) && void 0 !== n && n,
           bio: null == F ? void 0 : F.bio,
           guild: H,
@@ -158,7 +158,7 @@ function B(e) {
           channel: $,
           guildId: null == H ? void 0 : H.id,
           onClick: W
-        }) : null, (0, i.jsx)(C.default, {
+        }) : null, (0, i.jsx)(R.default, {
           user: x,
           guildId: null == H ? void 0 : H.id
         }), (0, i.jsx)(b.default, {

@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return N
   },
   useGetIntegrationIconString: function() {
-    return C
+    return R
   }
 }), n("653041");
 var i, r, a, s, o, l, u = n("544891"),
@@ -85,13 +85,13 @@ let O = e => {
         return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION
     }
   },
-  C = e => {
+  R = e => {
     let t = c.default.get((0, E.useLegacyPlatformType)(e)),
       n = (0, _.default)();
     return null != t && ["twitch", "youtube"].includes(e) ? "url('".concat((0, d.isThemeDark)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
   };
 
-function R(e) {
+function C(e) {
   return {
     userId: e.user_id,
     sourceInviteCode: e.source_invite_code,
@@ -113,7 +113,7 @@ async function g(e, t) {
       }
     });
     if (!Array.isArray(t.body)) return m(n, 0), [];
-    let r = t.body.map(R),
+    let r = t.body.map(C),
       a = [];
     r.forEach(e => {
       let {

@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("403182"),
   p = n("541716"),
   O = n("752305"),
-  C = n("30465"),
-  R = n("140963"),
+  R = n("30465"),
+  C = n("140963"),
   g = n("4484"),
   L = n("925994"),
   v = n("981631"),
@@ -180,7 +180,7 @@ class b extends r.Component {
       fontSize: h,
       useSlate: A,
       spellcheckEnabled: N,
-      useNewSlashCommands: C,
+      useNewSlashCommands: R,
       canOnlyUseTextCommands: L,
       className: D,
       id: y,
@@ -225,7 +225,7 @@ class b extends r.Component {
         [M.textAreaCustomGift]: S === p.ChatInputTypes.CUSTOM_GIFT
       }),
       spellcheckEnabled: N,
-      useNewSlashCommands: C,
+      useNewSlashCommands: R,
       disableAutoFocus: c.isMobile || null !== (n = S.disableAutoFocus) && void 0 !== n && n,
       disableEnterToSubmit: null !== (r = null === (e = S.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== r && r,
       "aria-controls": null !== (a = x.id) && void 0 !== a ? a : void 0,
@@ -243,7 +243,7 @@ class b extends r.Component {
       value: d ? (0, O.toRichValue)("") : u,
       canUseCommands: null === (t = S.commands) || void 0 === t ? void 0 : t.enabled,
       canOnlyUseTextCommands: L
-    }) : (0, i.jsx)(R.default, {
+    }) : (0, i.jsx)(C.default, {
       ref: this.ref,
       ...F,
       value: d ? "" : l
@@ -431,7 +431,7 @@ class b extends r.Component {
           }
         })
       })(o), this.focus(), !0)
-    }), this._unsubscribe = C.channelEditorPopupStore.subscribe(e => {
+    }), this._unsubscribe = R.channelEditorPopupStore.subscribe(e => {
       requestAnimationFrame(() => {
         this.setState({
           popup: e
@@ -440,7 +440,7 @@ class b extends r.Component {
     }), this.state = {
       focused: !1,
       submitting: !1,
-      popup: C.channelEditorPopupStore.getState()
+      popup: R.channelEditorPopupStore.getState()
     }
   }
 }

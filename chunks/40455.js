@@ -98,13 +98,13 @@ class A extends s.default {
     super({
       CACHE_LOADED_LAZY_NO_CACHE: D,
       CACHE_LOADED_LAZY: () => this.loadCache(),
-      CHANNEL_DELETE: C,
+      CHANNEL_DELETE: R,
       CHANNEL_UPDATES: O,
       CONNECTION_OPEN_SUPPLEMENTAL: N,
       GUILD_DELETE: L,
       LOGIN_SUCCESS: v,
       THREAD_DELETE: g,
-      THREAD_UPDATE: R
+      THREAD_UPDATE: C
     })
   }
 }
@@ -129,11 +129,11 @@ function O(e) {
   for (let t of e.channels) p(t)
 }
 
-function C(e) {
+function R(e) {
   A.deleteChannel(e.channel.id)
 }
 
-function R(e) {
+function C(e) {
   p(e.channel)
 }
 

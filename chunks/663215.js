@@ -75,13 +75,13 @@ function m(e, t) {
 function N(e) {
   let {
     filterOutEmptyCurrentGuild: t = !1
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], _ = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), [S, N, p] = (0, r.useStateFromStoresArray)([I.default], () => [I.default.getSounds(), I.default.getFavorites(), I.default.isFetching()]), O = (0, f.useSortedGuildIdsForSoundboard)(e, !1), C = (0, r.useStateFromStoresArray)([o.default], () => {
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], _ = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), [S, N, p] = (0, r.useStateFromStoresArray)([I.default], () => [I.default.getSounds(), I.default.getFavorites(), I.default.isFetching()]), O = (0, f.useSortedGuildIdsForSoundboard)(e, !1), R = (0, r.useStateFromStoresArray)([o.default], () => {
     let e = [];
     return O.forEach(t => {
       let n = o.default.getGuild(t);
       null != n && e.push(n)
     }), e
-  }), R = d.default.canUseSoundboardEverywhere(_), g = (0, r.useStateFromStores)([o.default], () => o.default.getGuild(null == e ? void 0 : e.guild_id)), L = (0, r.useStateFromStores)([l.default], () => {
+  }), C = d.default.canUseSoundboardEverywhere(_), g = (0, r.useStateFromStores)([o.default], () => o.default.getGuild(null == e ? void 0 : e.guild_id)), L = (0, r.useStateFromStores)([l.default], () => {
     let {
       canCreateExpressions: e
     } = (0, a.getManageResourcePermissions)(g);
@@ -142,7 +142,7 @@ function N(e) {
         key: t.id,
         items: o
       })
-    }(e, g, L, S, t), !R && m(e, S), ! function(e, t, n, i) {
+    }(e, g, L, S, t), !C && m(e, S), ! function(e, t, n, i) {
       for (let a of t) {
         var r;
         if (a.id === n) continue;
@@ -156,11 +156,11 @@ function N(e) {
           items: t
         })
       }
-    }(e, C, null == g ? void 0 : g.id, S), R && m(e, S), {
+    }(e, R, null == g ? void 0 : g.id, S), C && m(e, S), {
       categories: e,
       isFetching: p
     })
-  }, [O, S, N, y, M, D, v, g, L, t, R, C, n, p])
+  }, [O, S, N, y, M, D, v, g, L, t, C, R, n, p])
 }
 
 function p(e, t, n) {

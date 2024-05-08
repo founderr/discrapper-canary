@@ -40,10 +40,10 @@ n.r(t), n.d(t, {
     return g
   },
   isSettingsEmpty: function() {
-    return C
+    return R
   },
   isSettingsValid: function() {
-    return R
+    return C
   },
   isWelcomeMessageEmpty: function() {
     return O
@@ -183,13 +183,13 @@ function O(e) {
   return null == e || (null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0
 }
 
-function C(e) {
+function R(e) {
   return null == e || !!O(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0
 }
 
-function R(e) {
+function C(e) {
   var t, n;
-  return null != e && (!!C(e) || (null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < u) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0)
+  return null != e && (!!R(e) || (null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < u) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0)
 }
 
 function g(e) {

@@ -225,9 +225,9 @@ let p = {
     }
   },
   O = (0, E.default)([A, p]),
-  C = (0, E.default)([m, p]),
-  R = l.astParserFor(O),
-  g = l.astParserFor(C),
+  R = (0, E.default)([m, p]),
+  C = l.astParserFor(O),
+  g = l.astParserFor(R),
   L = {
     max: 1 / 0,
     maxAge: 1 * I.default.Millis.MINUTE,
@@ -267,7 +267,7 @@ function M(e, t) {
               0: ""
             },
             type: "paragraph",
-            content: (n ? g : R)(s, !0, {
+            content: (n ? g : C)(s, !0, {
               returnMentionIds: !0,
               disableAutoBlockNewlines: !0,
               guildId: t

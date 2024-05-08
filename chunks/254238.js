@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return A
   },
   fetchDevices: function() {
-    return R
+    return C
   },
   persistSelectedDeviceId: function() {
     return g
@@ -116,7 +116,7 @@ function O(e, t, n, i) {
     }
   }), h("AUDIO_SETTINGS_UPDATE", e))
 }
-async function C() {
+async function R() {
   let e;
   try {
     let t = null != u.default.getRTCConnectionId() ? r.ConsoleHandoffType.TRANSFER_EXISTING_CALL : r.ConsoleHandoffType.CREATE_NEW_CALL;
@@ -133,7 +133,7 @@ async function C() {
   }
   return e
 }
-async function R(e) {
+async function C(e) {
   let t;
   s.default.dispatch({
     type: "GAME_CONSOLE_FETCH_DEVICES_START",
@@ -227,6 +227,6 @@ async function v(e, t, n) {
 }
 async function D(e, t, n) {
   await E.default.maybeShowPTTAlert(e), await A();
-  let i = await C();
+  let i = await R();
   await L(e, t, n, i), (0, T.default)(n.id, e)
 }

@@ -22,7 +22,7 @@ var i = n("512722"),
   p = n("65154"),
   O = n("689938");
 
-function C(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,7 +30,7 @@ function C(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = new u.default("GameConsoleManager");
+let C = new u.default("GameConsoleManager");
 async function g(e) {
   let t = c.default.getChannelId();
   r()(null == t, "Syncing to remote while in voice!"), e.selfMute !== _.default.isSelfMute() && await o.default.toggleSelfMute({
@@ -41,7 +41,7 @@ async function g(e) {
 }
 class L extends l.default {
   constructor(...e) {
-    super(...e), C(this, "rollbackCommandTimeout", new a.Timeout), C(this, "awaitRemoteTimeout", new a.Timeout), C(this, "actions", {
+    super(...e), R(this, "rollbackCommandTimeout", new a.Timeout), R(this, "awaitRemoteTimeout", new a.Timeout), R(this, "actions", {
       WAIT_FOR_REMOTE_SESSION: () => this.handleWaitForRemoteSession(),
       POST_CONNECTION_OPEN: () => this.handleSessionsChanged(),
       SESSIONS_REPLACE: () => this.handleSessionsChanged(),
@@ -51,7 +51,7 @@ class L extends l.default {
       CONSOLE_COMMAND_UPDATE: e => this.handleConsoleCommandUpdate(e),
       PASSIVE_UPDATE_V1: e => this.handleVoiceStateUpdates(e),
       REMOTE_SESSION_DISCONNECT: () => this.handleRemoteSessionDisconnect()
-    }), C(this, "maybeConnect", e => {
+    }), R(this, "maybeConnect", e => {
       let t = function(e) {
         let t = h.default.getAwaitingRemoteSessionInfo();
         return e.find(e => {
@@ -65,7 +65,7 @@ class L extends l.default {
       this.awaitRemoteTimeout.stop(), (0, f.connectToRemote)(t.sessionId);
       let n = I.default.getVoiceStateForSession(d.default.getId(), t.sessionId);
       null != n && g(n)
-    }), C(this, "handleAudioStateToggle", e => {
+    }), R(this, "handleAudioStateToggle", e => {
       let {
         syncRemote: t,
         context: n
@@ -83,7 +83,7 @@ class L extends l.default {
       }), this.rollbackCommandTimeout.start(3e3, () => {
         g(o)
       }))
-    }), C(this, "handleVoiceStateUpdates", e => {
+    }), R(this, "handleVoiceStateUpdates", e => {
       var t;
       let n = null !== (t = e.voiceStates) && void 0 !== t ? t : [],
         i = h.default.getRemoteSessionId();
@@ -103,17 +103,17 @@ class L extends l.default {
         return t === i
       });
       null != r && (this.rollbackCommandTimeout.stop(), g(r))
-    }), C(this, "handleSessionsChanged", () => {
+    }), R(this, "handleSessionsChanged", () => {
       let e = h.default.getRemoteSessionId();
       null != e && null == E.default.getSessionById(e) && (0, f.disconnectRemote)(), null == e && this.maybeConnect(Object.values(E.default.getSessions()))
-    }), C(this, "handleWaitForRemoteSession", () => {
+    }), R(this, "handleWaitForRemoteSession", () => {
       this.awaitRemoteTimeout.start(6e4, () => {
         (0, f.disconnectRemote)(), s.default.show({
           title: O.default.Messages.GAME_CONSOLE_TRANSFER_TIMEOUT_TITLE,
           body: O.default.Messages.GAME_CONSOLE_TRANSFER_TIMEOUT_BODY
         })
       })
-    }), C(this, "handleConsoleCommandUpdate", e => {
+    }), R(this, "handleConsoleCommandUpdate", e => {
       var t;
       let {
         id: n,
@@ -121,7 +121,7 @@ class L extends l.default {
         error: r
       } = e;
       if ("failed" !== i && "n/a" !== i || null == r) return;
-      R.info("Console command Error result:", i, r);
+      C.info("Console command Error result:", i, r);
       let a = h.default.getAwaitingRemoteSessionInfo();
       if ((null == a ? void 0 : a.commandId) !== n) return;
       let s = h.default.getDevice(a.type, null !== (t = a.deviceId) && void 0 !== t ? t : ""),
@@ -136,7 +136,7 @@ class L extends l.default {
         errorCodeMessage: o.errorCodeMessage,
         reconnectPlatformType: o.isAccountLinkError ? a.type : void 0
       }), N.USER_ACTION_REQUIRED_ERROR_CODES.has(r.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(18e4, () => (0, f.disconnectRemote)(), !0) : "failed" === i && (0, f.disconnectRemote)()
-    }), C(this, "handleRemoteSessionDisconnect", () => {
+    }), R(this, "handleRemoteSessionDisconnect", () => {
       this.awaitRemoteTimeout.stop()
     })
   }

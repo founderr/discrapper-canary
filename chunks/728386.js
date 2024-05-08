@@ -37,7 +37,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
   let {
     Component: p,
     events: O,
-    play: C
+    play: R
   } = (0, l.useStickerLottie)();
   return n ? null : (0, i.jsx)("div", {
     className: s()(c.CHAT_INPUT_BUTTON_CLASSNAME, I.buttonContainer),
@@ -48,7 +48,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       }),
       ...O,
       onClick: () => {
-        N(), C()
+        N(), R()
       },
       isActive: m,
       "aria-label": E.default.Messages.STICKER_BUTTON_LABEL,

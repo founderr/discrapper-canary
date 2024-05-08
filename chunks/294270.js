@@ -52,7 +52,7 @@ function O(e) {
   }
 }
 
-function C(e) {
+function R(e) {
   let {
     completingUserId: t,
     waitingUserId: n,
@@ -62,7 +62,7 @@ function C(e) {
     delete m[r], (0, d.clearCompletedHighFive)(t, n, i)
   }), m[r].delay()
 }
-class R extends s.default {
+class C extends s.default {
   _terminate() {
     Object.values(m).forEach(e => e.cancel()), m = {}
   }
@@ -70,7 +70,7 @@ class R extends s.default {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
       VOICE_CHANNEL_EFFECT_SEND: O,
-      HIGH_FIVE_COMPLETE: C
+      HIGH_FIVE_COMPLETE: R
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,
@@ -79,4 +79,4 @@ class R extends s.default {
     }) : t[n] = i
   }
 }
-t.default = new R
+t.default = new C

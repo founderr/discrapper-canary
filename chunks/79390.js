@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return g
   },
   useCanPostPollsInChannel: function() {
-    return C
+    return R
   },
   useCanShowPollsChatInputCoachmarkInGuild: function() {
-    return R
+    return C
   }
 }), n("757143"), n("47120"), n("724458");
 var i = n("392711"),
@@ -79,7 +79,7 @@ function O(e) {
   return !1
 }
 
-function C(e) {
+function R(e) {
   let t = A.ChannelTypesSets.POLLS.has(null == e ? void 0 : e.type),
     n = (0, l.useStateFromStores)([E.default], () => E.default.can(A.Permissions.SEND_MESSAGES, e) && E.default.can(A.Permissions.SEND_POLLS, e)),
     {
@@ -102,7 +102,7 @@ function C(e) {
   return i || r
 }
 
-function R(e) {
+function C(e) {
   let {
     enabled: t
   } = S.CreatePollsGuildCoachmarkExperiment.useExperiment({

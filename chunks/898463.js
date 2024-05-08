@@ -28,8 +28,8 @@ var i = n("735250"),
   N = n("810090"),
   p = n("956664"),
   O = n("709054"),
-  C = n("273031"),
-  R = n("859235"),
+  R = n("273031"),
+  C = n("859235"),
   g = n("689938"),
   L = n("670951");
 let v = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
@@ -44,7 +44,7 @@ function D(e) {
   return (0, i.jsx)(T.ObscuredDisplayContext.Provider, {
     value: !n,
     children: (0, i.jsx)(T.default, {
-      containerStyles: s === R.AttachmentListItemSizes.CLIP ? {
+      containerStyles: s === C.AttachmentListItemSizes.CLIP ? {
         borderBottomLeftRadius: 0,
         borderBottomRightRadius: 0,
         boxShadow: "none"
@@ -74,12 +74,12 @@ function M(e) {
     file: t,
     alt: n,
     spoiler: a,
-    size: o = R.AttachmentListItemSizes.MEDIUM,
+    size: o = C.AttachmentListItemSizes.MEDIUM,
     onMouseEnter: u
   } = e, [d, _] = r.useState(), [c, E] = r.useState({
     width: 0,
     height: 0
-  }), I = o === R.AttachmentListItemSizes.SMALL;
+  }), I = o === C.AttachmentListItemSizes.SMALL;
   r.useEffect(() => {
     if (null == t || !1 === v.includes(t.type)) return;
     let e = URL.createObjectURL(t);
@@ -146,7 +146,7 @@ function y(e) {
     file: t,
     alt: n,
     spoiler: a,
-    size: o = R.AttachmentListItemSizes.MEDIUM,
+    size: o = C.AttachmentListItemSizes.MEDIUM,
     onMouseEnter: l,
     onVideoLoadError: u
   } = e, [d, _] = r.useState(), c = r.useRef(null);
@@ -168,7 +168,7 @@ function y(e) {
         src: d,
         className: s()(L.media, {
           [L.spoiler]: e,
-          [L.sizeClip]: o === R.AttachmentListItemSizes.CLIP
+          [L.sizeClip]: o === C.AttachmentListItemSizes.CLIP
         }),
         onError: u,
         preload: "none",
@@ -182,9 +182,9 @@ function P(e) {
   var t;
   let {
     upload: n,
-    size: a = R.AttachmentListItemSizes.MEDIUM,
+    size: a = C.AttachmentListItemSizes.MEDIUM,
     onMouseEnter: o
-  } = e, [l, u] = r.useState(!1), d = a === R.AttachmentListItemSizes.SMALL;
+  } = e, [l, u] = r.useState(!1), d = a === C.AttachmentListItemSizes.SMALL;
   return n.isImage && n.item.platform === _.UploadPlatform.WEB ? (0, i.jsx)(M, {
     file: n.item.file,
     alt: n.description,
@@ -221,11 +221,11 @@ function U(e) {
     upload: a,
     keyboardModeEnabled: _,
     label: T,
-    size: N = R.AttachmentListItemSizes.MEDIUM,
+    size: N = C.AttachmentListItemSizes.MEDIUM,
     canEdit: p = !0,
     hideFileName: v = !1,
     clip: D
-  } = e, M = null != D, y = (N = M ? R.AttachmentListItemSizes.CLIP : N) === R.AttachmentListItemSizes.SMALL, U = (0, o.useStateFromStores)([I.default], () => {
+  } = e, M = null != D, y = (N = M ? C.AttachmentListItemSizes.CLIP : N) === C.AttachmentListItemSizes.SMALL, U = (0, o.useStateFromStores)([I.default], () => {
     var e;
     return null === (e = I.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
   }), b = e => {
@@ -248,9 +248,9 @@ function U(e) {
       }
     }))
   };
-  return (0, i.jsxs)(R.default, {
+  return (0, i.jsxs)(C.default, {
     actions: (0, i.jsxs)(r.Fragment, {
-      children: [p ? (0, i.jsx)(C.default, {
+      children: [p ? (0, i.jsx)(R.default, {
         className: s()({
           [L.action]: y
         }),
@@ -267,7 +267,7 @@ function U(e) {
             [L.actionBarIcon]: y
           })
         })
-      }) : null, p && !M ? (0, i.jsx)(C.default, {
+      }) : null, p && !M ? (0, i.jsx)(R.default, {
         className: s()({
           [L.action]: y
         }),
@@ -278,7 +278,7 @@ function U(e) {
             [L.actionBarIcon]: y
           })
         })
-      }) : null, (0, i.jsx)(C.default, {
+      }) : null, (0, i.jsx)(R.default, {
         className: s()({
           [L.action]: y
         }),

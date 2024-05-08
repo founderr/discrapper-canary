@@ -43,13 +43,13 @@ let f = e => {
     null == N && (0, l.fetchProfile)(A.id)
   }, [N, A]);
   let O = S !== _.CollectiblesShopMarketingVariants.DEFAULT && (null == A ? void 0 : A.id) !== t.id && !m && !(null != h && h !== n),
-    C = O && (null == A ? void 0 : A.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
-    R = O && null != N && null == N.profileEffectId && (null == p ? void 0 : p.profileEffectId) != null,
-    [g, L] = (0, c.useSelectedDismissibleContent)((C, []), void 0, !0);
+    R = O && (null == A ? void 0 : A.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
+    C = O && null != N && null == N.profileEffectId && (null == p ? void 0 : p.profileEffectId) != null,
+    [g, L] = (0, c.useSelectedDismissibleContent)((R, []), void 0, !0);
   return {
     shouldShow: g === o.DismissibleContent.SHOP_FOR_ALL_USER_POPOUT_UPSELL,
-    canShowAvatarDecorationUpsell: C,
-    canShowProfileEffectUpsell: R,
+    canShowAvatarDecorationUpsell: R,
+    canShowProfileEffectUpsell: C,
     onDismiss: L
   }
 }

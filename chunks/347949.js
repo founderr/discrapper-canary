@@ -34,8 +34,8 @@ var i = n("735250"),
   N = n("659101"),
   p = n("171368"),
   O = n("981631"),
-  C = n("689938"),
-  R = n("361496");
+  R = n("689938"),
+  C = n("361496");
 
 function g(e) {
   let {
@@ -52,9 +52,9 @@ function g(e) {
     size: 40
   });
   return (0, i.jsxs)("div", {
-    className: R.recentGameContainer,
+    className: C.recentGameContainer,
     children: [(0, i.jsx)("div", {
-      className: R.recentGameIcon,
+      className: C.recentGameIcon,
       children: null != h && (0, i.jsx)("img", {
         alt: "",
         "aria-hidden": !0,
@@ -63,9 +63,9 @@ function g(e) {
         height: 40
       })
     }), (0, i.jsxs)("div", {
-      className: R.recentGameDetails,
+      className: C.recentGameDetails,
       children: [(0, i.jsxs)("div", {
-        className: R.recentGameTitleContainer,
+        className: C.recentGameTitleContainer,
         children: [(0, i.jsx)(c.Tooltip, {
           text: a.name,
           color: c.Tooltip.Colors.NESTED,
@@ -73,14 +73,14 @@ function g(e) {
           children: e => (0, i.jsx)("span", {
             ref: u,
             ...e,
-            className: R.recentGameTitle,
+            className: C.recentGameTitle,
             children: a.name
           })
         }), n && (0, i.jsx)(c.Tooltip, {
-          text: C.default.Messages.USER_RECENT_GAMES_YOU_BOTH_PLAY,
+          text: R.default.Messages.USER_RECENT_GAMES_YOU_BOTH_PLAY,
           color: c.Tooltip.Colors.NESTED,
           children: e => (0, i.jsx)("div", {
-            className: R.sharedGameIcon,
+            className: C.sharedGameIcon,
             ...e,
             children: (0, i.jsx)(d.GroupIcon, {
               height: 14,
@@ -94,7 +94,7 @@ function g(e) {
         color: "header-secondary",
         children: s
       }), t.isNew && (0, i.jsxs)("div", {
-        className: R.newIcon,
+        className: C.newIcon,
         children: [(0, i.jsx)(_.NewUserLargeIcon, {
           height: 12,
           width: 12,
@@ -102,7 +102,7 @@ function g(e) {
         }), (0, i.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "status-positive",
-          children: C.default.Messages.NEW_TO_THIS_GAME
+          children: R.default.Messages.NEW_TO_THIS_GAME
         })]
       })]
     })]
@@ -141,7 +141,7 @@ let L = r.memo(function(e) {
     threshold: .25,
     active: !_,
     children: (0, i.jsx)("div", {
-      className: s()(R.recentGames, o),
+      className: s()(C.recentGames, o),
       children: null == n ? void 0 : n.map(e => {
         var n, r, s;
         return (0, i.jsx)(g, {
@@ -175,18 +175,18 @@ function v(e) {
   if (u || null == d || 0 === d.length) return null;
   let I = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)("div", {
-      className: R.headerContainer,
+      className: C.headerContainer,
       children: [(0, i.jsx)(c.Heading, {
-        className: R.header,
+        className: C.header,
         variant: "eyebrow",
-        children: C.default.Messages.RECENT_GAMES
+        children: R.default.Messages.RECENT_GAMES
       }), _ && (0, i.jsx)(c.Clickable, {
-        className: R.viewAll,
+        className: C.viewAll,
         onClick: E,
         children: (0, i.jsx)(c.Heading, {
           variant: "eyebrow",
           color: "text-link",
-          children: C.default.Messages.VIEW_ALL.toUpperCase()
+          children: R.default.Messages.VIEW_ALL.toUpperCase()
         })
       })]
     }), (0, i.jsx)(L, {

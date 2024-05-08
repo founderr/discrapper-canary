@@ -32,18 +32,18 @@ function N(e) {
     p = null != a && f.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < a,
     {
       isLoading: O,
-      suggestedPremiumType: C
+      suggestedPremiumType: R
     } = (0, I.default)({
       autoTrackExposure: !p,
       experiment: E.default,
       location: f.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL
     }),
-    R = !p && C === f.PremiumTypes.TIER_0,
+    C = !p && R === f.PremiumTypes.TIER_0,
     g = (0, o.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
     L = (0, i.jsx)(u.default, {
       icons: h.DEFAULT_FILE_UPLOAD_ICONS
     });
-  t = R ? A.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
+  t = C ? A.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
     premiumPlan: (0, c.getPremiumTypeDisplayName)(f.PremiumTypes.TIER_0),
     premiumMaxSize: A.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED
   }) : A.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
@@ -92,7 +92,7 @@ function N(e) {
       section: S.AnalyticsSections.FILE_UPLOAD_POPOUT
     },
     onClose: n,
-    subscriptionTier: R ? f.PremiumSubscriptionSKUs.TIER_0 : f.PremiumSubscriptionSKUs.TIER_2,
+    subscriptionTier: C ? f.PremiumSubscriptionSKUs.TIER_0 : f.PremiumSubscriptionSKUs.TIER_2,
     isLoading: O,
     ...N
   })

@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("880949"),
   p = n("784222"),
   O = n("149203"),
-  C = n("689938"),
-  R = n("360569");
+  R = n("689938"),
+  C = n("360569");
 
 function g(e) {
   return "animated" in e
@@ -36,7 +36,7 @@ let L = e => {
       inspectedEmoji: t,
       guild: n
     } = e, i = g(t);
-    return null != n && i ? C.default.Messages.EMOJI_FROM_GUILD.format({
+    return null != n && i ? R.default.Messages.EMOJI_FROM_GUILD.format({
       guildName: n.name
     }) : null
   },
@@ -99,26 +99,26 @@ let L = e => {
       }) : G.url;
       t = "" === e ? (0, i.jsx)(s.Text, {
         variant: "text-md/normal",
-        className: R.glyphEmoji,
+        className: C.glyphEmoji,
         children: "surrogates" in G ? G.surrogates : null
       }) : (0, i.jsx)("img", {
         alt: null !== (j = G.allNamesString) && void 0 !== j ? j : "",
         src: e,
-        className: R.emoji
+        className: C.emoji
       })
     } else t = (0, i.jsx)(f.default, {
-      className: R.icon,
-      foreground: R.icon,
+      className: C.icon,
+      foreground: C.icon,
       width: 24,
       height: 24
     });
     let W = null != w ? (0, i.jsx)(N.default, {
-        className: R.__invalid_guildIcon,
+        className: C.__invalid_guildIcon,
         guild: w,
         shouldAnimate: !B && k
       }) : null,
-      K = P && "CREATE_EMOJI" === G.type ? C.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : G.allNamesString,
-      z = P && "CREATE_EMOJI" === G.type ? C.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : L({
+      K = P && "CREATE_EMOJI" === G.type ? R.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : G.allNamesString,
+      z = P && "CREATE_EMOJI" === G.type ? R.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : L({
         inspectedEmoji: G,
         channel: y,
         guildId: D,

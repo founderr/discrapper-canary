@@ -26,7 +26,7 @@ let {
   themes: I,
   modules: A,
   colors: l()(T, (e, t) => ({
-    css: R(t),
+    css: C(t),
     resolve(t) {
       let n = e[t.theme],
         i = n.raw,
@@ -41,12 +41,12 @@ let {
   unsafe_rawColors: l()(f, (e, t) => {
     let n = m[t];
     return {
-      css: R(t),
+      css: C(t),
       resolve: e => p(n, e.saturation)
     }
   }),
   shadows: l()(S, (e, t) => ({
-    css: R(t),
+    css: C(t),
     resolve: t => ({
       boxShadow: e[t.theme].boxShadow,
       filter: e[t.theme].filter,
@@ -87,13 +87,13 @@ function O(e, t, n) {
   return 1 !== t && (a = a.set("hsl.s", a.get("hsl.s") * t)), 1 !== r && (a = a.alpha(a.alpha() * r)), a
 }
 
-function C(e) {
+function R(e) {
   return e.toLowerCase().replace(/_/g, "-")
 }
 
-function R(e, t) {
-  let n = null != t ? C(t) : null,
-    i = C(e);
+function C(e, t) {
+  let n = null != t ? R(t) : null,
+    i = R(e);
   return "var(--".concat([n, i].filter(Boolean).join("-"), ")")
 }
 t.default = N

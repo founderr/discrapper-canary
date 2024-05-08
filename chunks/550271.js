@@ -26,8 +26,8 @@ var r = n("496532"),
   N = n("718572"),
   p = n("496223"),
   O = n("846262"),
-  C = n("926372"),
-  R = n("116175");
+  R = n("926372"),
+  C = n("116175");
 let g = e => {
   let {
     badge: t,
@@ -36,121 +36,121 @@ let g = e => {
     ...L
   } = e;
   switch (t) {
-    case R.ClanBadgeKind.SWORD:
+    case C.ClanBadgeKind.SWORD:
       return (0, i.jsx)(N.ClanBadgeSword, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.WATER_DROP:
+    case C.ClanBadgeKind.WATER_DROP:
       return (0, i.jsx)(O.ClanBadgeWaterDrop, {
         primaryTintColor: n,
         ...L
       });
-    case R.ClanBadgeKind.SKULL:
+    case C.ClanBadgeKind.SKULL:
       return (0, i.jsx)(f.ClanBadgeSkull, {
         primaryTintColor: n,
         ...L
       });
-    case R.ClanBadgeKind.TOADSTOOL:
+    case C.ClanBadgeKind.TOADSTOOL:
       return (0, i.jsx)(p.ClanBadgeToadstool, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.MOON:
+    case C.ClanBadgeKind.MOON:
       return (0, i.jsx)(I.ClanBadgeMoon, {
         primaryTintColor: n,
         ...L
       });
-    case R.ClanBadgeKind.LIGHTNING:
+    case C.ClanBadgeKind.LIGHTNING:
       return (0, i.jsx)(E.ClanBadgeLightning, {
         primaryTintColor: n,
         ...L
       });
-    case R.ClanBadgeKind.LEAF:
+    case C.ClanBadgeKind.LEAF:
       return (0, i.jsx)(c.ClanBadgeLeaf, {
         primaryTintColor: n,
         ...L
       });
-    case R.ClanBadgeKind.HEART:
+    case C.ClanBadgeKind.HEART:
       return (0, i.jsx)(d.ClanBadgeHeart, {
         primaryTintColor: n,
         ...L
       });
-    case R.ClanBadgeKind.FIRE:
+    case C.ClanBadgeKind.FIRE:
       return (0, i.jsx)(s.ClanBadgeFire, {
         primaryTintColor: n,
         ...L
       });
-    case R.ClanBadgeKind.COMPASS:
+    case C.ClanBadgeKind.COMPASS:
       return (0, i.jsx)(r.ClanBadgeCompass, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.CROSSHAIRS:
+    case C.ClanBadgeKind.CROSSHAIRS:
       return (0, i.jsx)(a.ClanBadgeCrosshairs, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.FLOWER:
+    case C.ClanBadgeKind.FLOWER:
       return (0, i.jsx)(o.ClanBadgeFlower, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.FORCE:
+    case C.ClanBadgeKind.FORCE:
       return (0, i.jsx)(l.ClanBadgeForce, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.GEM:
+    case C.ClanBadgeKind.GEM:
       return (0, i.jsx)(u.ClanBadgeGem, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.LAVA:
+    case C.ClanBadgeKind.LAVA:
       return (0, i.jsx)(_.ClanBadgeLava, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.PSYCHIC:
+    case C.ClanBadgeKind.PSYCHIC:
       return (0, i.jsx)(T.ClanBadgePsychic, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.SMOKE:
+    case C.ClanBadgeKind.SMOKE:
       return (0, i.jsx)(S.ClanBadgeSmoke, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.SNOW:
+    case C.ClanBadgeKind.SNOW:
       return (0, i.jsx)(h.ClanBadgeSnow, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.SOUND:
+    case C.ClanBadgeKind.SOUND:
       return (0, i.jsx)(A.ClanBadgeSound, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.SUN:
+    case C.ClanBadgeKind.SUN:
       return (0, i.jsx)(m.ClanBadgeSun, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L
       });
-    case R.ClanBadgeKind.WIND:
-      return (0, i.jsx)(C.ClanBadgeWind, {
+    case C.ClanBadgeKind.WIND:
+      return (0, i.jsx)(R.ClanBadgeWind, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L

@@ -50,13 +50,13 @@ function I(e) {
   r.useEffect(() => {
     N(null)
   }, [S, N]), l()(null != O, "Unknown step for current payment flow.");
-  let C = null !== (u = null == O ? void 0 : null === (t = O.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
-    R = null == O ? void 0 : null === (n = O.options) || void 0 === n ? void 0 : n.bodyClassName,
+  let R = null !== (u = null == O ? void 0 : null === (t = O.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
+    C = null == O ? void 0 : null === (n = O.options) || void 0 === n ? void 0 : n.bodyClassName,
     g = void 0 !== T && T ? E.sliderBodyLarge : null == O ? void 0 : null === (a = O.options) || void 0 === a ? void 0 : a.sliderBodyClassName;
   return (0, i.jsxs)(i.Fragment, {
-    children: [null === (d = null == O ? void 0 : null === (o = O.options) || void 0 === o ? void 0 : o.renderHeader) || void 0 === d || d ? I : null, O.renderStep(f), null == S || C ? null : (0, i.jsxs)(i.Fragment, {
+    children: [null === (d = null == O ? void 0 : null === (o = O.options) || void 0 === o ? void 0 : o.renderHeader) || void 0 === d || d ? I : null, O.renderStep(f), null == S || R ? null : (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(_.ModalContent, {
-        className: s()(E.body, R),
+        className: s()(E.body, C),
         children: (0, i.jsx)(_.Slides, {
           activeSlide: S,
           centered: !1,

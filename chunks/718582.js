@@ -31,8 +31,8 @@ var i = n("470079"),
   N = n("979651"),
   p = n("938475"),
   O = n("823379"),
-  C = n("5192"),
-  R = n("709054"),
+  R = n("5192"),
+  C = n("709054"),
   g = n("456774"),
   L = n("981631"),
   v = n("689938");
@@ -64,14 +64,14 @@ function M(e) {
       });
       return [...e, ...Object.values(E.default.getThreadsForGuild(t)).flatMap(e => Object.keys(e))]
     }, [t]),
-    C = (0, o.useStateFromStoresArray)([d.default], () => d.default.getGuildScheduledEventsForGuild(t).filter(e => (0, d.isGuildScheduledEventActive)(e)).map(e => ({
+    R = (0, o.useStateFromStoresArray)([d.default], () => d.default.getGuildScheduledEventsForGuild(t).filter(e => (0, d.isGuildScheduledEventActive)(e)).map(e => ({
       category: g.CardCategory.EVENT,
       event: e
     })), [t]),
     v = (0, o.useStateFromStores)([h.default, p.default, l.default, N.default, S.default, I.default], () => {
       let n = h.default.getRelationships(),
-        i = R.default.keys(n).filter(e => n[e] === L.RelationshipTypes.BLOCKED),
-        r = C.map(e => {
+        i = C.default.keys(n).filter(e => n[e] === L.RelationshipTypes.BLOCKED),
+        r = R.map(e => {
           let {
             event: t
           } = e;
@@ -122,15 +122,15 @@ function M(e) {
           channelHasVideo: s
         }
       })
-    }, [m, C, e.afkChannelId, t]),
+    }, [m, R, e.afkChannelId, t]),
     D = (0, o.useStateFromStores)([T.default], () => T.default.hasConsented(L.Consents.PERSONALIZATION)),
     M = (0, o.useStateFromStores)([A.default], () => A.default.getUserAffinities());
-  if (0 === v.length && 0 === C.length) return 0 === m.length ? [] : m.slice(0, 2).map(e => ({
+  if (0 === v.length && 0 === R.length) return 0 === m.length ? [] : m.slice(0, 2).map(e => ({
     category: g.CardCategory.EMPTY,
     channelId: e
   }));
   let P = D && M.length > 0,
-    U = [...v, ...C];
+    U = [...v, ...R];
   return _ !== U.length && (a((function(e, t) {
     return (0, r.orderBy)(e, [e => (function(e, t) {
       let n = e => e > 0 ? Math.log(e + 1) : 0,
@@ -183,7 +183,7 @@ function P(e, t, n, i) {
     d = "";
   if (null != i && i.length > 0) {
     let e = 1 === i.length ? i[0] : null,
-      r = C.default.getName(t, n, m.default.getUser(e));
+      r = R.default.getName(t, n, m.default.getUser(e));
     d = null != e ? v.default.Messages.GUILD_POPOUT_ACTIVITY_STREAMER.format({
       username: r
     }) : v.default.Messages.GUILD_POPOUT_ACTIVITY_STREAMERS.format({

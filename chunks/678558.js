@@ -26,8 +26,8 @@ t.default = e => {
     closeLayer: N = () => {},
     pauseAnimation: p = !1,
     applicationId: O,
-    handleSubscribeModalClose: C,
-    withHighlight: R = !1,
+    handleSubscribeModalClose: R,
+    withHighlight: C = !1,
     ...g
   } = e, {
     analyticsLocations: L
@@ -42,7 +42,7 @@ t.default = e => {
       closeLayer: N,
       inPopout: v,
       applicationId: O,
-      handleSubscribeModalClose: C
+      handleSubscribeModalClose: R
     }), M(!1)
   }, b = _.default.getPremiumTypeSubscription(), G = (0, i.jsx)("span", {
     children: null != h ? h : f.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
@@ -69,7 +69,7 @@ t.default = e => {
     size: l.Button.Sizes.SMALL,
     ...g,
     className: s()(g.className, {
-      [S.buttonHighlighted]: R
+      [S.buttonHighlighted]: C
     }),
     submitting: D,
     onClick: U,

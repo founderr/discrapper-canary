@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("672752"),
   p = n("665786"),
   O = n("639740"),
-  C = n("433564"),
-  R = n("697725"),
+  R = n("433564"),
+  C = n("697725"),
   g = n("192091"),
   L = n("507957"),
   v = n("981631"),
@@ -71,7 +71,7 @@ let y = {
     premiumForegroundColor: l.default.unsafe_rawColors.WHITE_400.css
   },
   [E.BadgeCategory.DISCOVERABLE]: {
-    IconComponent: C.default,
+    IconComponent: R.default,
     foregroundDarkColor: l.default.unsafe_rawColors.PRIMARY_500.css,
     foregroundLightColor: l.default.unsafe_rawColors.WHITE_400.css,
     backgroundDarkColor: l.default.unsafe_rawColors.WHITE_400.css,
@@ -91,7 +91,7 @@ function P(e) {
     className: M.tooltipPremiumFooterContainer,
     children: [(0, i.jsxs)("div", {
       className: s()(M.tooltipPremiumFooterSegment, M.tooltipPremiumFooterTierSegment),
-      children: [(0, i.jsx)(R.default, {
+      children: [(0, i.jsx)(C.default, {
         width: 18,
         height: 18,
         className: M.gemIcon
@@ -188,8 +188,8 @@ function b(e) {
       className: N,
       flowerStarClassName: p,
       iconClassName: O,
-      badgeStrokeColor: C,
-      badgeColor: R,
+      badgeStrokeColor: R,
+      badgeColor: C,
       size: g = 16,
       disableBoostClick: L,
       "aria-label": D = !1
@@ -262,8 +262,8 @@ function b(e) {
         ...e,
         className: N,
         flowerStarClassName: p,
-        color: null != n ? n : R,
-        stroke: C,
+        color: null != n ? n : C,
+        stroke: R,
         size: g,
         children: (0, i.jsx)(V, {
           className: O,

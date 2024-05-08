@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return g
   },
   OAuth2AuthorizedSuccess: function() {
-    return C
+    return R
   },
   OAuth2Error: function() {
-    return R
+    return C
   },
   OAuth2ErrorPage: function() {
     return L
@@ -79,7 +79,7 @@ function O(e) {
   })
 }
 
-function C(e) {
+function R(e) {
   let {
     guild: t,
     application: n,
@@ -141,7 +141,7 @@ function C(e) {
   })
 }
 
-function R(e) {
+function C(e) {
   return (0, i.jsx)(p, {
     ...e,
     headerClassName: N.headerFailure
@@ -152,7 +152,7 @@ function g() {
   var e, t;
   let n = (0, l.useLocation)();
   return (0, i.jsx)(h.OAuth2Page, {
-    children: (0, i.jsx)(C, {
+    children: (0, i.jsx)(R, {
       guild: null === (e = n.state) || void 0 === e ? void 0 : e.guild,
       application: null === (t = n.state) || void 0 === t ? void 0 : t.application,
       showsCloseWindowText: !0
@@ -173,7 +173,7 @@ function L(e) {
   let s = null != a ? (0, o.parse)(a.search) : {},
     l = null !== (n = null !== (t = s.error_description) && void 0 !== t ? t : s.error) && void 0 !== n ? n : m.default.Messages.OAUTH2_UNKNOWN_ERROR;
   return (0, i.jsx)(h.OAuth2Page, {
-    children: (0, i.jsx)(R, {
+    children: (0, i.jsx)(C, {
       message: l,
       showsCloseWindowText: !0
     })

@@ -51,13 +51,13 @@ function p() {
   }, h.UserSettingsDelay.AUTOMATED))
 }
 let O = r().debounce(() => {
-    R()
+    C()
   }, 2e3),
-  C = r().debounce(u.remoteAudioSettingsUpdate, 500, {
+  R = r().debounce(u.remoteAudioSettingsUpdate, 500, {
     maxWait: 500
   });
 
-function R() {
+function C() {
   h.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
     let t = !1;
     return (0, f.drainPendingAudioSettings)((n, i, r) => {
@@ -109,7 +109,7 @@ function g(e) {
   } = e;
   if (a === c.default.getId() || !(0, T.shouldReadWriteAudioSettings)()) return;
   let o = d.default.getRemoteSessionId();
-  null != o && C(o, a, r, {
+  null != o && R(o, a, r, {
     muted: E.default.isLocalMute(a, r),
     volume: s
   }), t = r, n = a, i = s, (0, f.updatePendingSettings)(t, n, {
@@ -127,7 +127,7 @@ function L(e) {
       var i, r, a;
       i = t, r = n, a = E.default.isLocalMute(n, t), (0, f.updatePendingSettings)(i, r, {
         muted: a
-      }), O.cancel(), R()
+      }), O.cancel(), C()
     }
   }
 }
@@ -142,7 +142,7 @@ function v(e) {
       var i, r, a;
       i = t, r = n, a = _.default.isLocalSoundboardMuted(n), (0, f.updatePendingSettings)(i, r, {
         soundboardMuted: a
-      }), O.cancel(), R()
+      }), O.cancel(), C()
     }
   }
 }

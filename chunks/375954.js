@@ -18,8 +18,8 @@ var A = n("995774"),
   N = n("630388"),
   p = n("709054"),
   O = n("314897"),
-  C = n("592125"),
-  R = n("796974"),
+  R = n("592125"),
+  C = n("796974"),
   g = n("984933"),
   L = n("271383"),
   v = n("430824"),
@@ -47,7 +47,7 @@ function V() {
     let {
       channelId: t
     } = e;
-    null == C.default.getChannel(t) && _.default.clear(t)
+    null == R.default.getChannel(t) && _.default.clear(t)
   })
 }
 
@@ -86,11 +86,11 @@ function H(e) {
 }
 class Y extends(i = u.default.Store) {
   initialize() {
-    this.waitFor(U.default, C.default, R.default, L.default, m.default, y.default, P.default, v.default, M.default, g.default), this.syncWith([f.default], () => {})
+    this.waitFor(U.default, R.default, C.default, L.default, m.default, y.default, P.default, v.default, M.default, g.default), this.syncWith([f.default], () => {})
   }
   getMessages(e) {
     if (f.default.hasViewingRoles()) {
-      let t = C.default.getChannel(e),
+      let t = R.default.getChannel(e),
         n = null == t ? void 0 : t.getGuildId();
       if (f.default.isViewingRoles(n) && !D.default.can(b.Permissions.VIEW_CHANNEL, t)) return new _.default(e)
     }
@@ -256,7 +256,7 @@ s = "MessageStore", (a = "displayName") in(r = Y) ? Object.defineProperty(r, a, 
       return
     }
     if (!r.ready) return !1;
-    null != n.nonce && n.state !== b.MessageStates.SENDING && G.has(n.nonce) && (r = r.remove(n.nonce), G.delete(n.nonce)), r = r.receiveMessage(n, R.default.isAtBottom(t)), _.default.commit(r)
+    null != n.nonce && n.state !== b.MessageStates.SENDING && G.has(n.nonce) && (r = r.remove(n.nonce), G.delete(n.nonce)), r = r.receiveMessage(n, C.default.isAtBottom(t)), _.default.commit(r)
   },
   MESSAGE_SEND_FAILED: function(e) {
     let {

@@ -31,8 +31,8 @@ var i = n("735250"),
   N = n("998502"),
   p = n("785717"),
   O = n("621853"),
-  C = n("204197"),
-  R = n("735336"),
+  R = n("204197"),
+  C = n("735336"),
   g = n("793397"),
   L = n("184325"),
   v = n("652853"),
@@ -89,7 +89,7 @@ function V(e) {
     disableUserProfileLink: S,
     profileType: N,
     animateOnHover: O,
-    hasProfileEffect: R
+    hasProfileEffect: C
   } = e, {
     theme: L
   } = (0, v.useUserProfileThemeContext)(), k = r.useContext(A.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), x = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), F = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
@@ -102,7 +102,7 @@ function V(e) {
     avatarDecorationSrc: z,
     avatarSrc: Z,
     eventHandlers: X
-  } = (0, C.default)({
+  } = (0, R.default)({
     user: t,
     guildId: E,
     size: G,
@@ -127,7 +127,7 @@ function V(e) {
   })({
     isPremium: x,
     hasBanner: l,
-    hasProfileEffect: R
+    hasProfileEffect: C
   })).with(M.UserProfileTypes.POMELO_POPOUT, () => b.avatarPositionPomelo).with(M.UserProfileTypes.PANEL, () => b.avatarPositionPanel).with(M.UserProfileTypes.BITE_SIZE, () => b.avatarPositionBiteSize).exhaustive();
   return (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)(d.Clickable, {
@@ -186,7 +186,7 @@ function x(e) {
     upsell: E
   } = e;
   return (0, i.jsxs)(i.Fragment, {
-    children: [E, (0, i.jsx)(R.default, {
+    children: [E, (0, i.jsx)(C.default, {
       user: t,
       displayProfile: n,
       onClose: s,

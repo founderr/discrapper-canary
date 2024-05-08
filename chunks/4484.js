@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("230554"),
   p = n("780748"),
   O = n("464581"),
-  C = n("732659"),
-  R = n("86724"),
+  R = n("732659"),
+  C = n("86724"),
   g = n("847302"),
   L = n("657198"),
   v = n("321127"),
@@ -98,7 +98,7 @@ t.default = r.forwardRef(function(e, t) {
     }
     let d = E.getCommandBlock(e);
     if (null != d && d[0].command.id !== (null === (i = u.default.getActiveCommand(y.id)) || void 0 === i ? void 0 : i.id) && I.HistoryUtils.withMergedEntry(e, () => {
-        (0, R.unsetCommand)(e, y.id, null, !0)
+        (0, C.unsetCommand)(e, y.id, null, !0)
       }), l) {
       if (!et && h.EditorUtils.focus(e), "parent" === t) try {
         ef.current = !1, e.onChange()
@@ -156,10 +156,10 @@ t.default = r.forwardRef(function(e, t) {
       ignoreTrailingEmptyNodes: !0
     }), t, e)
   }, [y.id, eN, Z, ep, $]);
-  (0, N.default)(t, eN, y, eO), (0, C.default)(eN, eE, F);
+  (0, N.default)(t, eN, y, eO), (0, R.default)(eN, eE, F);
   let {
-    handleKeyDown: eC,
-    handleKeyUp: eR
+    handleKeyDown: eR,
+    handleKeyUp: eC
   } = (0, p.default)({
     editor: eN,
     channel: y,
@@ -220,8 +220,8 @@ t.default = r.forwardRef(function(e, t) {
         onBlur: Y,
         onClick: ev,
         onPaste: eg,
-        onKeyDown: eC,
-        onKeyUp: eR,
+        onKeyDown: eR,
+        onKeyUp: eC,
         decorateExtra: eM,
         renderExtraElement: ey,
         renderExtraLeaf: eP,

@@ -16,8 +16,8 @@ let S = 0,
   N = new Map,
   p = {},
   O = {},
-  C = {},
-  R = {};
+  R = {},
+  C = {};
 
 function g(e, t) {
   return "".concat(e, ":").concat(t)
@@ -51,7 +51,7 @@ function M(e, t, n) {
   if (null != l) {
     ;
     let n;
-    delete o[t], null != l.channelId && (delete L(p, l.channelId)[t], delete L(O, l.channelId)[t]), null != l.sessionId && delete L(C, t)[l.sessionId];
+    delete o[t], null != l.channelId && (delete L(p, l.channelId)[t], delete L(O, l.channelId)[t]), null != l.sessionId && delete L(R, t)[l.sessionId];
     i = null != e ? e : T.ME, r = t, !(n = D(i)).has(r) || ((n = new Set(n)).delete(r), 0 === n.size ? N.delete(i) : N.set(i, n))
   }
   if (null != u) {
@@ -61,7 +61,7 @@ function M(e, t, n) {
       L(O, u.channelId)[t] = u;
       a = null != e ? e : T.ME, s = t, (n = D(a)).has(s) || ((n = new Set(n)).add(s), N.set(a, n))
     }
-    null != u.sessionId && (L(C, t)[u.sessionId] = u)
+    null != u.sessionId && (L(R, t)[u.sessionId] = u)
   }
   return [!0, u, l]
 }
@@ -121,11 +121,11 @@ class U extends(a = _.default.Store) {
     return null === (t = L(p, e)) || void 0 === t ? void 0 : t[n]
   }
   getVoiceStateForUser(e) {
-    return Object.values(L(C, e))[0]
+    return Object.values(L(R, e))[0]
   }
   getVoiceStateForSession(e, t) {
     var n;
-    return null != t ? null === (n = L(C, e)) || void 0 === n ? void 0 : n[t] : null
+    return null != t ? null === (n = L(R, e)) || void 0 === n ? void 0 : n[t] : null
   }
   getUserVoiceChannelId(e, t) {
     var n;
@@ -141,7 +141,7 @@ class U extends(a = _.default.Store) {
   }
   isCurrentClientInVoiceChannel() {
     var e;
-    return null != r && (null === (e = C[i]) || void 0 === e ? void 0 : e[r]) != null
+    return null != r && (null === (e = R[i]) || void 0 === e ? void 0 : e[r]) != null
   }
   isInChannel(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i;
@@ -154,8 +154,8 @@ class U extends(a = _.default.Store) {
   }
   getVoicePlatformForChannel(e, t) {
     var n, a;
-    let s = null != r && (null === (a = C[i]) || void 0 === a ? void 0 : null === (n = a[r]) || void 0 === n ? void 0 : n.channelId);
-    return t === i && e === s ? f.VoicePlatforms.DESKTOP : R[g(t, e)]
+    let s = null != r && (null === (a = R[i]) || void 0 === a ? void 0 : null === (n = a[r]) || void 0 === n ? void 0 : n.channelId);
+    return t === i && e === s ? f.VoicePlatforms.DESKTOP : C[g(t, e)]
   }
   get userHasBeenMovedVersion() {
     return S
@@ -172,10 +172,10 @@ l = "VoiceStateStore", (o = "displayName") in(s = U) ? Object.defineProperty(s, 
       user: t,
       sessionId: n
     } = e, a = null != i && i !== t.id;
-    return a && (A = {}, p = {}, C = {}, O = {}, N.clear()), i = t.id, r = n, a
+    return a && (A = {}, p = {}, R = {}, O = {}, N.clear()), i = t.id, r = n, a
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function() {
-    A = {}, p = {}, C = {}, O = {}, N.clear()
+    A = {}, p = {}, R = {}, O = {}, N.clear()
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
@@ -183,7 +183,7 @@ l = "VoiceStateStore", (o = "displayName") in(s = U) ? Object.defineProperty(s, 
       user: n,
       sessionId: a
     } = e;
-    for (let [e, n] of(A = {}, p = {}, C = {}, O = {}, Object.entries(t)))
+    for (let [e, n] of(A = {}, p = {}, R = {}, O = {}, Object.entries(t)))
       for (let [t, i] of Object.entries(n)) M(e, t, () => new E.default(i));
     i = n.id, r = a
   },
@@ -235,6 +235,6 @@ l = "VoiceStateStore", (o = "displayName") in(s = U) ? Object.defineProperty(s, 
       channelId: n,
       platform: i
     } = e;
-    R[g(t, n)] = i
+    C[g(t, n)] = i
   }
 })

@@ -22,17 +22,17 @@ let u = r.forwardRef(function(e, t) {
     rowHeight: A,
     sectionHeaderHeight: m,
     sectionFooterHeight: N
-  } = e, p = r.useRef(!1), O = r.useRef(null), C = (0, s.useExpressionPickerStore)(e => e.searchQuery), R = n.useStore(e => e.activeCategoryIndex), g = (0, o.useSynchronizedActiveCategoryIndexForScrollPosition)({
-    activeCategoryIndex: R,
+  } = e, p = r.useRef(!1), O = r.useRef(null), R = (0, s.useExpressionPickerStore)(e => e.searchQuery), C = n.useStore(e => e.activeCategoryIndex), g = (0, o.useSynchronizedActiveCategoryIndexForScrollPosition)({
+    activeCategoryIndex: C,
     isScrolling: p,
     listRef: O,
     onActiveCategoryIndexChange: n.setActiveCategoryIndex,
     scrollOffset: 20,
-    searchQuery: C
+    searchQuery: R
   });
   return (0, o.useSynchronizedScrollPositionForActiveCategoryIndex)({
-    searchQuery: C,
-    activeCategoryIndex: R,
+    searchQuery: R,
+    activeCategoryIndex: C,
     listRef: O
   }), r.useImperativeHandle(t, () => ({
     scrollTo: function() {
@@ -72,7 +72,7 @@ let u = r.forwardRef(function(e, t) {
     }
   }), []), (0, i.jsxs)("div", {
     className: l.wrapper,
-    children: [C.length > 0 && !u && null != f ? f() : (0, i.jsx)(a.default, {
+    children: [R.length > 0 && !u && null != f ? f() : (0, i.jsx)(a.default, {
       role: "none presentation",
       listPadding: d,
       onScroll: g,

@@ -44,8 +44,8 @@ function _(e) {
     itemCount: n
   }), {
     itemCount: O,
-    focusedIndex: C
-  } = N, [R] = i.useState(() => (0, s.throttle)(p, 16));
+    focusedIndex: R
+  } = N, [C] = i.useState(() => (0, s.throttle)(p, 16));
   return i.useEffect(() => {
       p({
         type: r.ListActionType.UPDATE_ITEM_COUNT,
@@ -69,11 +69,11 @@ function _(e) {
         getIndexFromId: N
       } = e, p = i.useRef(n), O = i.useRef(N);
       O.current = N, p.current = n;
-      let C = i.useRef();
+      let R = i.useRef();
       i.useEffect(() => {
-        C.current = A
+        R.current = A
       }, [A]);
-      let [R, g] = i.useState(!1), [L] = i.useState(() => new s.HandlerMemoizer(e => () => {
+      let [C, g] = i.useState(!1), [L] = i.useState(() => new s.HandlerMemoizer(e => () => {
         let t = null != O.current && "string" == typeof e ? O.current(e) : e;
         "number" == typeof t && !(t < 0) && T({
           type: r.ListActionType.SET_FOCUSED_INDEX,
@@ -82,7 +82,7 @@ function _(e) {
       }));
       i.useEffect(() => () => L.clean(), [L]);
       let v = i.useCallback((e, t) => {
-          C.current && E(e, t)
+          R.current && E(e, t)
         }, [E]),
         [D, M] = i.useState(!0);
       i.useEffect(() => {
@@ -101,7 +101,7 @@ function _(e) {
           }), e && v(m(t, n), n)
         }, [m, _, I, T, t, v]),
         P = i.useCallback(e => {
-          if (!C.current) return;
+          if (!R.current) return;
           if (o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
             e.preventDefault(), e.stopPropagation(), y();
             return
@@ -144,11 +144,11 @@ function _(e) {
           }
         }, [m, t, T, _, y, c]),
         U = i.useCallback(() => {
-          R || g(!0)
-        }, [R]),
+          C || g(!0)
+        }, [C]),
         b = i.useCallback(() => {
-          !R && (f ? v(m(t, _), _) : y(!0))
-        }, [m, t, v, f, R, _, y]),
+          !C && (f ? v(m(t, _), _) : y(!0))
+        }, [m, t, v, f, C, _, y]),
         G = i.useCallback(e => {
           !e.currentTarget.contains(e.relatedTarget) && requestAnimationFrame(() => {
             if (null == u(l(m, t, _))) {
@@ -167,11 +167,11 @@ function _(e) {
       }, [b, U, G]);
       let k = i.useCallback(() => ({
           role: "list",
-          tabIndex: R && f ? -1 : 0,
+          tabIndex: C && f ? -1 : 0,
           id: t,
           onKeyDown: P,
           ref: w
-        }), [t, R, P, f]),
+        }), [t, C, P, f]),
         B = i.useCallback(e => {
           let {
             index: n
@@ -193,8 +193,8 @@ function _(e) {
     }({
       navId: t,
       itemCount: O,
-      focusedIndex: C,
-      dispatch: R,
+      focusedIndex: R,
+      dispatch: C,
       onSelect: c,
       setFocus: E,
       getNewFocusIndex: I,

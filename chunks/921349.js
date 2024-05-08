@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("98650"),
   p = n("863840"),
   O = n("86813"),
-  C = n("826026"),
-  R = n("263704"),
+  R = n("826026"),
+  C = n("263704"),
   g = n("441674"),
   L = n("465670"),
   v = n("748585"),
@@ -50,7 +50,7 @@ let U = r.forwardRef(function(e, t) {
     onOpen: S,
     onClose: h,
     placeholder: N = D.default.Messages.SELECT,
-    wrapperClassName: R,
+    wrapperClassName: C,
     className: g,
     isDisabled: U = !1,
     maxVisibleItems: G = 7,
@@ -148,7 +148,7 @@ let U = r.forwardRef(function(e, t) {
   }), eO = r.useMemo(() => {
     var e, t;
     return e = em, null == (t = a) ? [] : (Array.isArray(t) ? t : [t]).map(t => "object" == typeof t && (null == t || "value" in t) ? t : e.find(e => e.value === t)).filter(Boolean)
-  }, [em, a]), eC = r.useMemo(() => eO.map(e => e.value), [eO]), eR = eO[eO.length - 1], eg = (0, p.default)(eR), eL = r.useId(), ev = r.useId(), eD = r.useId(), eM = r.useCallback(e => {
+  }, [em, a]), eR = r.useMemo(() => eO.map(e => e.value), [eO]), eC = eO[eO.length - 1], eg = (0, p.default)(eC), eL = r.useId(), ev = r.useId(), eD = r.useId(), eM = r.useCallback(e => {
     ec !== e && !U && (eE(e), e ? null == S || S() : null == h || h())
   }, [U, h, S, ec]), ey = r.useCallback(e => {
     ec && !e && eM(!1)
@@ -181,7 +181,7 @@ let U = r.forwardRef(function(e, t) {
     }), []),
     ew = (0, u.default)({
       id: ev,
-      defaultFocused: null != eR ? String(eR.value) : void 0,
+      defaultFocused: null != eC ? String(eC.value) : void 0,
       scrollToStart: eb,
       scrollToEnd: eG,
       isEnabled: ec,
@@ -222,8 +222,8 @@ let U = r.forwardRef(function(e, t) {
       e.setFocus(n), e_(null)
     }
   }, [ec, eN]), r.useLayoutEffect(() => {
-    !ec && (I ? eT("") : null != eR && eT(eR.label))
-  }, [I, eR, ec]), r.useLayoutEffect(() => {
+    !ec && (I ? eT("") : null != eC && eT(eC.label))
+  }, [I, eC, ec]), r.useLayoutEffect(() => {
     I && eT("")
   }, [I, eO.length]);
   let eV = r.useCallback(function(e) {
@@ -291,7 +291,7 @@ let U = r.forwardRef(function(e, t) {
           listId: eL,
           maxVisibleItems: G,
           width: el,
-          selectedValues: eC,
+          selectedValues: eR,
           closePopout: t,
           onSelect: eV,
           closeOnSelect: T,
@@ -312,19 +312,19 @@ let U = r.forwardRef(function(e, t) {
         } = e, {
           isShown: a,
           position: o
-        } = t, l = a ? C.default : O.default, {
+        } = t, l = a ? R.default : O.default, {
           ref: u,
           onKeyDown: E
         } = ew.containerProps;
         return (0, i.jsxs)("div", {
           ref: eA,
-          className: s()(R, M.wrapper),
+          className: s()(C, M.wrapper),
           style: {
             "--icons-width": "".concat(ei, "px")
           },
           onBlur: e => {
             var t, n, i;
-            !((null === (t = eA.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (null === (i = eh.current) || void 0 === i ? void 0 : null === (n = i.getScrollerNode()) || void 0 === n ? void 0 : n.contains(e.relatedTarget))) && (!I && null != eR && eT(eR.label), eS(!1), eM(!1), null == $ || $(e))
+            !((null === (t = eA.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (null === (i = eh.current) || void 0 === i ? void 0 : null === (n = i.getScrollerNode()) || void 0 === n ? void 0 : n.contains(e.relatedTarget))) && (!I && null != eC && eT(eC.label), eS(!1), eM(!1), null == $ || $(e))
           },
           children: [(0, i.jsx)(c.FocusRing, {
             ringTarget: eo,
@@ -444,8 +444,8 @@ function b(e) {
     multi: m,
     popoutPosition: p,
     closeOnSelect: O,
-    renderOptionPrefix: C = () => null,
-    renderOptionSuffix: R = () => null
+    renderOptionPrefix: R = () => null,
+    renderOptionSuffix: C = () => null
   } = e, g = r.useRef(null), L = r.useCallback(e => {
     t(e), O && n()
   }, [O, n, t]);
@@ -517,11 +517,11 @@ function b(e) {
             value: r.value,
             label: s,
             onSelect: L,
-            prefix: C(r, {
+            prefix: R(r, {
               inPill: !1,
               inDropdown: !0
             }),
-            suffix: R(r, {
+            suffix: C(r, {
               inPill: !1,
               inDropdown: !0
             })
@@ -640,7 +640,7 @@ function B(e) {
       [M.checked]: t,
       [M.unchecked]: !t
     }),
-    children: t && (0, i.jsx)(R.default, {
+    children: t && (0, i.jsx)(C.default, {
       foreground: M.multiSelectCheck
     })
   }) : t ? (0, i.jsx)(g.default, {

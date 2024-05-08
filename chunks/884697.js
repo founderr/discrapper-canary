@@ -22,13 +22,13 @@ n.r(t), n.d(t, {
     return f
   },
   getProfileEffectsFromCategories: function() {
-    return C
+    return R
   },
   getProfileEffectsFromPurchases: function() {
     return O
   },
   groupProfileEffects: function() {
-    return R
+    return C
   },
   isCollectiblesGiftCode: function() {
     return g
@@ -109,10 +109,10 @@ let _ = e => (null == e ? void 0 : e.premiumType) != null,
     return "".concat(location.protocol).concat(r).concat(l, "?size=").concat(s)
   },
   O = e => S(e, r.CollectiblesItemType.PROFILE_EFFECT),
-  C = e => h(e, r.CollectiblesItemType.PROFILE_EFFECT),
-  R = (e, t) => {
+  R = e => h(e, r.CollectiblesItemType.PROFILE_EFFECT),
+  C = (e, t) => {
     let n = O(t),
-      i = C(e).filter(e => {
+      i = R(e).filter(e => {
         let {
           id: t
         } = e;

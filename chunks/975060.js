@@ -17,14 +17,14 @@ let d = "",
   N = "",
   p = "",
   O = "",
-  C = !1,
-  R = null,
+  R = !1,
+  C = null,
   g = null,
   L = null,
   v = null;
 
 function D() {
-  E = null, d = "", _ = null, c = "", I = !1, T = null, f = "US", S = "", h = "", A = "", m = "", N = "", p = "", O = "", C = !1, R = null, g = null, L = null, v = null
+  E = null, d = "", _ = null, c = "", I = !1, T = null, f = "US", S = "", h = "", A = "", m = "", N = "", p = "", O = "", R = !1, C = null, g = null, L = null, v = null
 }
 
 function M(e) {
@@ -32,14 +32,14 @@ function M(e) {
 }
 
 function y() {
-  R = null
+  C = null
 }
 
 function P(e) {
   let {
     error: t
   } = e;
-  R = t
+  C = t
 }
 class U extends(s = o.default.Store) {
   get stripePaymentMethod() {
@@ -87,10 +87,10 @@ class U extends(s = o.default.Store) {
     }
   }
   get isBillingAddressInfoValid() {
-    return C
+    return R
   }
   get error() {
-    return R
+    return C
   }
 }
 a = "NewPaymentSourceStore", (r = "displayName") in(i = U) ? Object.defineProperty(i, r, {
@@ -125,7 +125,7 @@ a = "NewPaymentSourceStore", (r = "displayName") in(i = U) ? Object.defineProper
       info: t,
       isValid: n
     } = e;
-    null != t.name && "" !== t.name && (S = t.name), f = t.country, S = t.name, A = t.line1, m = t.line2, N = t.city, p = t.postalCode, O = t.state, h = t.email, C = n
+    null != t.name && "" !== t.name && (S = t.name), f = t.country, S = t.name, A = t.line1, m = t.line2, N = t.city, p = t.postalCode, O = t.state, h = t.email, R = n
   },
   BRAINTREE_TOKENIZE_PAYPAL_START: function() {
     d = "", _ = null
@@ -136,7 +136,7 @@ a = "NewPaymentSourceStore", (r = "displayName") in(i = U) ? Object.defineProper
       nonce: n,
       billingAddress: i
     } = e;
-    d = t, _ = n, M(i), C = f.length > 0
+    d = t, _ = n, M(i), R = f.length > 0
   },
   BRAINTREE_TOKENIZE_VENMO_START: function() {
     c = "", _ = null

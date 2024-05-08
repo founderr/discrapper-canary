@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return b
   },
   getApplicationCommandOptionQueryOptions: function() {
-    return R
+    return C
   },
   getApplicationCommandSection: function() {
     return U
@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return P
   },
   getMatchingGroupCommands: function() {
-    return C
+    return R
   },
   hasAccess: function() {
     return D
@@ -219,14 +219,14 @@ function O(e) {
   return A.ID_REGEX.test(e.trim())
 }
 
-function C(e, t, n, i) {
+function R(e, t, n, i) {
   let r = [];
   return l()(e).forEach(e => {
     t.test(e.displayName) && (null == e.predicate || e.predicate(n)) && r.push(e)
   }), r.slice(0, i)
 }
 
-function R(e) {
+function C(e) {
   let t = e.type === d.ApplicationCommandOptionType.STRING,
     n = e.type === d.ApplicationCommandOptionType.CHANNEL,
     i = e.type === d.ApplicationCommandOptionType.USER || e.type === d.ApplicationCommandOptionType.MENTIONABLE,

@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("221888"),
   p = n("933557"),
   O = n("569545"),
-  C = n("74299"),
-  R = n("863908"),
+  R = n("74299"),
+  C = n("863908"),
   g = n("803647"),
   L = n("788983"),
   v = n("703656"),
@@ -105,7 +105,7 @@ class eo extends r.PureComponent {
     } = this.props;
     if (!(0, ei.isStreamParticipant)(e)) return null;
     let n = this.activeStreamForSelectedParticipant;
-    return null == n ? null : (0, R.default)(n, e.user, e.user.id === t, this.streamerPaused)
+    return null == n ? null : (0, C.default)(n, e.user, e.user.id === t, this.streamerPaused)
   }
   isEmptyBroadcast() {
     var e;
@@ -318,7 +318,7 @@ class eo extends r.PureComponent {
 t.default = _.default.connectStores([B.default, A.default, k.default, F.default, H.default, w.default, Y.default], e => {
   let {
     channel: t
-  } = e, n = F.default.getSpeaker(t.id), i = A.default.getParticipant(t.id, n), r = d()(B.default.getVideoDevices()).values().first(), a = null == r || r.disabled, s = null != i && i.type !== ei.ParticipantTypes.ACTIVITY && i.type !== ei.ParticipantTypes.HIDDEN_STREAM ? H.default.getStreamId(i.user.id, t.getGuildId(), (0, m.default)(i.type)) : null, o = !a && B.default.isVideoEnabled(), l = (0, C.default)(B.default), u = k.default.getId(), _ = w.default.getCurrentUserActiveStream(), c = (0, S.isBroadcastingInChannel)(t.id);
+  } = e, n = F.default.getSpeaker(t.id), i = A.default.getParticipant(t.id, n), r = d()(B.default.getVideoDevices()).values().first(), a = null == r || r.disabled, s = null != i && i.type !== ei.ParticipantTypes.ACTIVITY && i.type !== ei.ParticipantTypes.HIDDEN_STREAM ? H.default.getStreamId(i.user.id, t.getGuildId(), (0, m.default)(i.type)) : null, o = !a && B.default.isVideoEnabled(), l = (0, R.default)(B.default), u = k.default.getId(), _ = w.default.getCurrentUserActiveStream(), c = (0, S.isBroadcastingInChannel)(t.id);
   return {
     channel: t,
     streamId: s,

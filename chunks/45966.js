@@ -50,7 +50,7 @@ function O(e) {
   }
 }
 
-function C(e, t) {
+function R(e, t) {
   if (null == A[e]) return;
   let n = {};
   Object.keys(A[e]).forEach(i => {
@@ -64,7 +64,7 @@ function C(e, t) {
     responses: i
   }
 }
-let R = [],
+let C = [],
   g = [],
   L = [];
 class v extends(i = u.default.Store) {
@@ -73,11 +73,11 @@ class v extends(i = u.default.Store) {
   }
   getOnboardingPromptsForOnboarding(e) {
     var t, n;
-    return null !== (n = null === (t = h[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : R
+    return null !== (n = null === (t = h[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : C
   }
   getOnboardingPrompts(e) {
     var t, n;
-    return null !== (n = null === (t = h[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : R
+    return null !== (n = null === (t = h[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : C
   }
   getOnboardingResponses(e) {
     var t, n, i;
@@ -96,7 +96,7 @@ class v extends(i = u.default.Store) {
   getEnabledOnboardingPrompts(e) {
     var t, n;
     let i = h[e];
-    return _.default.isFullServerPreview(e) ? null !== (t = null == i ? void 0 : i.prompts) && void 0 !== t ? t : R : null != i && i.enabled ? null !== (n = i.prompts) && void 0 !== n ? n : R : R
+    return _.default.isFullServerPreview(e) ? null !== (t = null == i ? void 0 : i.prompts) && void 0 !== t ? t : C : null != i && i.enabled ? null !== (n = i.prompts) && void 0 !== n ? n : C : C
   }
   getDefaultChannelIds(e) {
     var t, n;
@@ -175,7 +175,7 @@ s = "GuildOnboardingPromptsStore", (a = "displayName") in(r = v) ? Object.define
       responses: d ? [] : a,
       onboardingPromptsSeen: s,
       onboardingResponsesSeen: o
-    }, !d && C(t, a), m[t] = Date.now()
+    }, !d && R(t, a), m[t] = Date.now()
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function() {
     N = !1
@@ -198,7 +198,7 @@ s = "GuildOnboardingPromptsStore", (a = "displayName") in(r = v) ? Object.define
       prompts_seen: i,
       options_seen: r
     } = e;
-    C(t, n);
+    R(t, n);
     let a = h[t];
     if (null == a) return !1;
     let s = p(a.prompts, i, r);

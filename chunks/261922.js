@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   IMAGE_GIF_RE: function() {
-    return C
+    return R
   },
   default: function() {
     return g
@@ -33,8 +33,8 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let C = /\.gif($|\?|#)/i,
-  R = /\.png($|\?|#)/i;
+let R = /\.gif($|\?|#)/i,
+  C = /\.png($|\?|#)/i;
 (a = i || (i = {})).LOAD = "LOAD", a.PRELOAD = "PRELOAD", a.CLICK = "CLICK";
 class g extends(r = o.Component) {
   static isAnimated(e) {
@@ -43,13 +43,13 @@ class g extends(r = o.Component) {
       original: n,
       animated: i
     } = e;
-    return i || C.test(null != n && "" !== n ? n : t)
+    return i || R.test(null != n && "" !== n ? n : t)
   }
   static isSrcPNG(e) {
     let {
       src: t
     } = e;
-    return R.test(t)
+    return C.test(t)
   }
   componentDidMount() {
     let {
@@ -159,8 +159,8 @@ class g extends(r = o.Component) {
       maxHeight: A,
       onClick: N,
       renderAccessory: O,
-      tabIndex: C,
-      limitResponsiveWidth: R,
+      tabIndex: R,
+      limitResponsiveWidth: C,
       useFullWidth: L,
       placeholder: v,
       placeholderVersion: D
@@ -178,9 +178,9 @@ class g extends(r = o.Component) {
       minWidth: f,
       minHeight: S,
       mediaLayoutType: this.getType(),
-      limitResponsiveWidth: R,
+      limitResponsiveWidth: C,
       useFullWidth: L,
-      tabIndex: C,
+      tabIndex: R,
       width: G,
       height: w,
       src: "",

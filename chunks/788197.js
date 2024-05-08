@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("699516"),
   p = n("626135"),
   O = n("785717"),
-  C = n("621853"),
-  R = n("505737"),
+  R = n("621853"),
+  C = n("505737"),
   g = n("318661"),
   L = n("484404"),
   v = n("502762"),
@@ -59,9 +59,9 @@ function V(e) {
     newAnalyticsLocations: z = []
   } = e, {
     analyticsLocations: Z
-  } = (0, I.default)([...z, E.default.PROFILE_POPOUT]), X = r.useRef(null), Q = (0, g.default)(t.id, n), q = (0, l.default)(X), J = (0, a.useStateFromStores)([C.default], () => {
+  } = (0, I.default)([...z, E.default.PROFILE_POPOUT]), X = r.useRef(null), Q = (0, g.default)(t.id, n), q = (0, l.default)(X), J = (0, a.useStateFromStores)([R.default], () => {
     var e;
-    return null === (e = C.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
+    return null === (e = R.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
   }), $ = (0, a.useStateFromStores)([A.default], () => null != n ? A.default.getGuild(n) : null), ee = (0, a.useStateFromStores)([h.default], () => null != n ? h.default.getMember(n, t.id) : null), et = t.isNonUserBot(), {
     activity: en,
     customStatusActivity: ei,
@@ -91,7 +91,7 @@ function V(e) {
     [n]: [t.id]
   } : {}, [n, t.id]);
   (0, d.useSubscribeGuildMembers)(eu);
-  let ed = (0, R.default)(t.id, n),
+  let ed = (0, C.default)(t.id, n),
     e_ = (0, U.useShouldShowUserPopoutCollectiblesUpsell)({
       popoutUser: t,
       source: y.UserPopoutUpsellSource.USER_POPOUT,

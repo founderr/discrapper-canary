@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
     return es
   },
   ChannelChangeStrings: function() {
-    return V
+    return j
   },
   CommandPermissionChangeStrings: function() {
     return et
@@ -16,10 +16,10 @@ s.r(t), s.d(t, {
     return B
   },
   EmojiChangeStrings: function() {
-    return Z
+    return X
   },
   GuildChangeStrings: function() {
-    return j
+    return V
   },
   GuildScheduledEventChangeStrings: function() {
     return Q
@@ -55,7 +55,7 @@ s.r(t), s.d(t, {
     return q
   },
   StickerChangeStrings: function() {
-    return X
+    return J
   },
   ThreadChangeStrings: function() {
     return ee
@@ -67,7 +67,7 @@ s.r(t), s.d(t, {
     return en
   },
   WebhookChangeStrings: function() {
-    return J
+    return Z
   },
   getChangeTitle: function() {
     return el
@@ -123,7 +123,7 @@ let H = new d.default("AuditLogUtils"),
   F = () => ({
     [p.AuditLogChangeKeys.REASON]: x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
   }),
-  j = () => ({
+  V = () => ({
     [p.AuditLogChangeKeys.NAME]: x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
     [p.AuditLogChangeKeys.DESCRIPTION]: eN(x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR, x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE),
     [p.AuditLogChangeKeys.ICON_HASH]: x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_ICON_HASH_CHANGE,
@@ -175,7 +175,7 @@ let H = new d.default("AuditLogUtils"),
     [p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
     ...F()
   }),
-  V = () => ({
+  j = () => ({
     [p.AuditLogChangeKeys.NAME]: ec(x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE, x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE),
     [p.AuditLogChangeKeys.POSITION]: ec(x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE, x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE),
     [p.AuditLogChangeKeys.TOPIC]: eS(x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE, x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR),
@@ -337,17 +337,17 @@ let H = new d.default("AuditLogUtils"),
     },
     ...F()
   }),
-  J = () => ({
+  Z = () => ({
     [p.AuditLogChangeKeys.CHANNEL_ID]: ec(x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE, x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE),
     [p.AuditLogChangeKeys.NAME]: ec(x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE, x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE),
     [p.AuditLogChangeKeys.AVATAR_HASH]: x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
     [p.AuditLogChangeKeys.REASON]: x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
   }),
-  Z = () => ({
+  X = () => ({
     [p.AuditLogChangeKeys.NAME]: ec(x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE, x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE),
     ...F()
   }),
-  X = () => ({
+  J = () => ({
     [p.AuditLogChangeKeys.NAME]: ec(x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE, x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE),
     [p.AuditLogChangeKeys.TAGS]: ec(x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE, x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE),
     [p.AuditLogChangeKeys.DESCRIPTION]: ec(x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),

@@ -54,7 +54,7 @@ function O() {
     autoTrackExposure: !1
   }).canSeeFrequentlyPlayed
 }
-class C extends(i = l.default.PersistedStore) {
+class R extends(i = l.default.PersistedStore) {
   initialize(e) {
     this.waitFor(c.default, I.default), (null == e ? void 0 : e.recentlyHeardCache) != null && m.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (A = e.playedEventsPendingFlush), this.syncWith([_.default], p)
   }
@@ -77,7 +77,7 @@ class C extends(i = l.default.PersistedStore) {
     return N.frequently
   }
 }
-h(C, "displayName", "SoundboardEventStore"), h(C, "persistKey", "SoundboardEventStore"), t.default = new C(u.default, {
+h(R, "displayName", "SoundboardEventStore"), h(R, "persistKey", "SoundboardEventStore"), t.default = new R(u.default, {
   GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: function(e) {
     let {
       sound: t,

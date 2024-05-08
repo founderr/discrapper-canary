@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   TabBar: function() {
-    return C
+    return R
   }
 }), n("757143"), n("411104"), n("47120");
 var i, r, a, s, o = n("735250"),
@@ -164,7 +164,7 @@ h(O, "defaultProps", {
   look: "grey",
   disableItemStyles: !1
 });
-class C extends(a = l.Component) {
+class R extends(a = l.Component) {
   render() {
     let {
       className: e,
@@ -229,7 +229,7 @@ class C extends(a = l.Component) {
     })
   }
 }
-h(C, "Header", function(e) {
+h(R, "Header", function(e) {
   let {
     className: t,
     onClick: n,
@@ -255,7 +255,7 @@ h(C, "Header", function(e) {
       children: i
     })
   })
-}), h(C, "Item", O), h(C, "Separator", function(e) {
+}), h(R, "Item", O), h(R, "Separator", function(e) {
   let {
     style: t
   } = e;
@@ -263,4 +263,4 @@ h(C, "Header", function(e) {
     className: S.separator,
     style: t
   })
-}), h(C, "Panel", m)
+}), h(R, "Panel", m)

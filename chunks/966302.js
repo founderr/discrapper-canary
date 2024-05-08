@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("189771"),
   p = n("560688"),
   O = n("871499"),
-  C = n("136995"),
-  R = n("25827"),
+  R = n("136995"),
+  C = n("25827"),
   g = n("131951"),
   L = n("594174"),
   v = n("451478"),
@@ -117,7 +117,7 @@ function Y(e) {
         } = e, {
           isShown: u
         } = t;
-        return (0, i.jsx)(R.default, {
+        return (0, i.jsx)(C.default, {
           join: !0,
           enabled: o,
           color: "green",
@@ -134,7 +134,7 @@ function Y(e) {
           }
         })
       }
-    }), (0, i.jsx)(C.default, {
+    }), (0, i.jsx)(R.default, {
       channel: n,
       color: "green",
       centerButton: !0,
@@ -149,9 +149,9 @@ function j(e) {
     y: n,
     x: a,
     channel: c
-  } = e, [f, S] = r.useState(!1), h = (0, I.getChannelIconURL)(c), A = (0, T.default)(c), [m, N] = (0, l.useStateFromStoresArray)([g.default], () => [g.default.supports(G.Features.VIDEO), Object.keys(g.default.getVideoDevices()).length]), p = (0, l.useStateFromStores)([v.default], () => v.default.isFocused()), O = (0, l.useStateFromStores)([P.default], () => P.default.getMode(c.id)), C = r.useCallback(e => {
+  } = e, [f, S] = r.useState(!1), h = (0, I.getChannelIconURL)(c), A = (0, T.default)(c), [m, N] = (0, l.useStateFromStoresArray)([g.default], () => [g.default.supports(G.Features.VIDEO), Object.keys(g.default.getVideoDevices()).length]), p = (0, l.useStateFromStores)([v.default], () => v.default.isFocused()), O = (0, l.useStateFromStores)([P.default], () => P.default.getMode(c.id)), R = r.useCallback(e => {
     null != e.top && null != e.left && _.default.move(e.left, e.top)
-  }, []), R = (0, o.useSpring)({
+  }, []), C = (0, o.useSpring)({
     value: f ? 1 : 0,
     config: {
       ...o.config.stiff,
@@ -197,7 +197,7 @@ function j(e) {
     },
     maxX: window.innerWidth,
     maxY: window.innerHeight,
-    onDragEnd: C,
+    onDragEnd: R,
     dragAnywhere: !0,
     children: (0, i.jsx)(i.Fragment, {
       children: (0, i.jsxs)(o.animated.div, {
@@ -206,9 +206,9 @@ function j(e) {
         }, f ? (0, y.getThemeClass)("dark") : null),
         style: {
           ...t,
-          width: R.value.interpolate([0, 1], [U.width, F.width]),
-          minHeight: R.value.interpolate([0, 1], [U.height, F.height]),
-          translateX: R.value.interpolate([0, 1], [0, -1 * Math.abs(F.width - U.width) / 2])
+          width: C.value.interpolate([0, 1], [U.width, F.width]),
+          minHeight: C.value.interpolate([0, 1], [U.height, F.height]),
+          translateX: C.value.interpolate([0, 1], [0, -1 * Math.abs(F.width - U.width) / 2])
         },
         children: [f ? (0, i.jsx)(H, {
           header: D

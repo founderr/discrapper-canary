@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("240781"),
   p = n("818611"),
   O = n("981631"),
-  C = n("474936"),
-  R = n("689938"),
+  R = n("474936"),
+  C = n("689938"),
   g = n("14543");
 
 function L(e) {
@@ -71,7 +71,7 @@ function L(e) {
       className: g.modalHeader,
       children: [(0, i.jsx)(o.Heading, {
         variant: "heading-lg/semibold",
-        children: R.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+        children: C.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), (0, i.jsx)(o.ModalCloseButton, {
         className: g.modalCloseButton,
         onClick: u
@@ -99,19 +99,19 @@ function L(e) {
       children: [null != U && (!(0, _.isPremiumCollectiblesPurchase)(U) || b) || null === M ? (0, i.jsx)(o.Button, {
         onClick: B,
         disabled: k,
-        children: R.default.Messages.AVATAR_DECORATION_MODAL_APPLY
+        children: C.default.Messages.AVATAR_DECORATION_MODAL_APPLY
       }) : null == U && (b || !(0, _.isPremiumCollectiblesProduct)(P)) ? (0, i.jsx)(o.Button, {
         className: g.modalFooterShopButton,
         onClick: () => V(null == P ? void 0 : P.skuId),
-        children: R.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+        children: C.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
       }) : (0, i.jsx)(T.default, {
-        subscriptionTier: C.PremiumSubscriptionSKUs.TIER_2,
-        buttonText: A.default.isPremium(t) ? R.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : R.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+        subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,
+        buttonText: A.default.isPremium(t) ? C.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : C.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
       }), (0, i.jsx)(o.Button, {
         look: o.Button.Looks.LINK,
         color: o.Button.Colors.PRIMARY,
         onClick: u,
-        children: R.default.Messages.CANCEL
+        children: C.default.Messages.CANCEL
       })]
     })]
   })
@@ -131,10 +131,10 @@ function v(e) {
     analyticsLocations: N
   } = (0, u.default)(n, l.default.EDIT_AVATAR_DECORATION_MODAL), {
     categories: p,
-    purchases: C,
-    isFetchingCategories: R,
+    purchases: R,
+    isFetchingCategories: C,
     isFetchingPurchases: v
-  } = (0, E.default)(), D = R || v && 0 === C.size;
+  } = (0, E.default)(), D = C || v && 0 === R.size;
   return r.useEffect(() => {
     h.default.track(O.AnalyticEvents.OPEN_MODAL, {
       type: "Edit Avatar Decoration Modal",
@@ -158,7 +158,7 @@ function v(e) {
         user: m,
         guild: A,
         categories: p,
-        purchases: C,
+        purchases: R,
         analyticsLocations: N,
         initialSelectedDecoration: I,
         initialSelectedDecorationId: T,

@@ -17,8 +17,8 @@ let E = null,
   N = {},
   p = 0,
   O = null,
-  C = [],
-  R = !1,
+  R = [],
+  C = !1,
   g = 0,
   L = !1,
   v = null,
@@ -72,10 +72,10 @@ class U extends(i = l.default.Store) {
     return A.has(e)
   }
   getEligibleUsers() {
-    return C
+    return R
   }
   getFetchingEligibleUsers() {
-    return R
+    return C
   }
   getNextIndexOfEligibleUsers() {
     return g
@@ -171,17 +171,17 @@ s = "ReferralTrialStore", (a = "displayName") in(r = U) ? Object.defineProperty(
     A.delete(t), m.add(t)
   },
   REFERRALS_FETCH_ELIGIBLE_USER_START: function() {
-    R = !0
+    C = !0
   },
   REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: function(e) {
     let {
       users: t,
       nextIndex: n
     } = e;
-    R = !1, C = t, g = n
+    C = !1, R = t, g = n
   },
   REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function() {
-    R = !1
+    C = !1
   },
   LOAD_MESSAGES_SUCCESS: y,
   MESSAGE_CREATE: function(e) {
@@ -192,6 +192,6 @@ s = "ReferralTrialStore", (a = "displayName") in(r = U) ? Object.defineProperty(
   },
   LOAD_MESSAGES_AROUND_SUCCESS: y,
   LOGOUT: function() {
-    E = null, I = {}, T = [], S = new Set, h = !1, A = new Set, m = new Set, N = {}, p = 0, O = null, C = [], R = !1, g = 0, L = !1, v = null, f = new Map
+    E = null, I = {}, T = [], S = new Set, h = !1, A = new Set, m = new Set, N = {}, p = 0, O = null, R = [], C = !1, g = 0, L = !1, v = null, f = new Map
   }
 })

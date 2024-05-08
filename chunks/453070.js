@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return b
   },
   useHasSendableSticker: function() {
-    return R
+    return C
   },
   useLatestFrecentStickers: function() {
     return y
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return U
   },
   useStickersGrid: function() {
-    return C
+    return R
   }
 }), n("653041"), n("47120"), n("733860");
 var i = n("470079"),
@@ -61,7 +61,7 @@ let p = e => {
     let t = s.AnimateStickers.useSetting();
     return (0, A.shouldAnimateSticker)(t, e)
   },
-  C = e => {
+  R = e => {
     let {
       collapsedStickersCategories: t,
       filteredStickers: n,
@@ -92,9 +92,9 @@ let p = e => {
             p = _.findIndex(e => e.type === h.StickerCategoryTypes.RECENT),
             O = t.length;
           null != r && o === r.id && s && t.length < (0, c.getTotalStickerCountForTier)(r.premiumTier) && O++;
-          let C = Math.ceil(O / e);
-          I[S] = i ? 0 : C;
-          for (let a = 0; a < C; a++) {
+          let R = Math.ceil(O / e);
+          I[S] = i ? 0 : R;
+          for (let a = 0; a < R; a++) {
             let s = a * e,
               o = s + e,
               l = t.slice(s, o).map((e, t) => ({
@@ -132,7 +132,7 @@ let p = e => {
       }
     }, [t, n, r, s, o, d, _])
   },
-  R = e => {
+  C = e => {
     let t = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser());
     return (0, r.useStateFromStores)([S.default], () => {
       for (let n of S.default.getAllStickersIterator())

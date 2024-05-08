@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return h
   },
   default: function() {
-    return R
+    return C
   },
   getCurrentlyShownCounts: function() {
     return O
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return A
   },
   reset: function() {
-    return C
+    return R
   },
   useIsAnyContentShown: function() {
     return p
@@ -100,10 +100,10 @@ let a = new(n("499303")).TaskRunner,
     let e = [...o.getState().currentlyShown].filter(e => !r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e)).length;
     return [o.getState().currentlyShown.size, e]
   },
-  C = () => {
+  R = () => {
     o.setState(s), a.unschedule()
   };
 
-function R(e) {
+function C(e) {
   return o(e)
 }

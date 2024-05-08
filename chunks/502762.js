@@ -51,18 +51,18 @@ let I = (e, t) => {
       isPreview: h
     }), {
       profileThemeStyle: O,
-      profileThemeClassName: C
+      profileThemeClassName: R
     } = (0, u.default)({
       theme: null != f ? f : m,
       primaryColor: N,
       secondaryColor: p
-    }), R = (null == r ? void 0 : r.canEditThemes) || h, g = null !== c && ((null == r ? void 0 : r.banner) != null || void 0 !== c);
+    }), C = (null == r ? void 0 : r.canEditThemes) || h, g = null !== c && ((null == r ? void 0 : r.banner) != null || void 0 !== c);
     return (0, i.jsx)("div", {
-      className: s()(I(a, R), A ? E.showOutOfBoundaryComponents : void 0, C, o),
+      className: s()(I(a, C), A ? E.showOutOfBoundaryComponents : void 0, R, o),
       style: O,
       ref: t,
       children: (0, i.jsx)("div", {
-        className: T(a, R, g),
+        className: T(a, C, g),
         children: (0, i.jsx)(_.UserProfileThemeContextProvider, {
           profileType: a,
           theme: null != f ? f : m,

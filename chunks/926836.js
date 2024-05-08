@@ -94,26 +94,26 @@ function p(e) {
     maxWidth: f,
     maxHeight: p,
     shouldAnimate: O,
-    onClose: C,
-    shouldHideMediaOptions: R = !1,
+    onClose: R,
+    shouldHideMediaOptions: C = !1,
     obscure: g = !1,
     ...L
   } = e, {
     width: v,
     height: D
-  } = (0, c.zoomFit)(s, l), M = o.isMobile && null != C;
+  } = (0, c.zoomFit)(s, l), M = o.isMobile && null != R;
   r.useEffect(() => {
-    if (null != C) return _.ComponentDispatch.subscribe(S.ComponentActions.MEDIA_MODAL_CLOSE, C), () => {
-      _.ComponentDispatch.unsubscribe(S.ComponentActions.MEDIA_MODAL_CLOSE, C)
+    if (null != R) return _.ComponentDispatch.subscribe(S.ComponentActions.MEDIA_MODAL_CLOSE, R), () => {
+      _.ComponentDispatch.unsubscribe(S.ComponentActions.MEDIA_MODAL_CLOSE, R)
     }
-  }, [C]);
-  let y = R ? e => {
+  }, [R]);
+  let y = C ? e => {
     e.stopPropagation(), e.preventDefault()
   } : L.onContextMenu;
   return (0, i.jsxs)("div", {
     className: A.wrapper,
     children: [M ? (0, i.jsx)(m, {
-      onClose: C
+      onClose: R
     }) : null, (0, i.jsx)(N, {
       isObscured: g,
       src: t,
@@ -132,7 +132,7 @@ function p(e) {
         onContextMenu: y,
         ...L
       }, t)
-    }), null != n && !R && T({
+    }), null != n && !C && T({
       href: n,
       target: "_blank",
       rel: "noreferrer noopener",

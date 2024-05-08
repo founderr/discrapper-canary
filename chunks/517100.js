@@ -21,7 +21,7 @@ function O() {
   return m || N || (0, E.isAndroid)() && p
 }
 
-function C() {
+function R() {
   Date.now() - S > T.IDLE_DURATION || O() ? h || l.default.dispatch({
     type: "IDLE",
     idle: !0,
@@ -39,23 +39,23 @@ function C() {
 }!__OVERLAY__ && (E.isPlatformEmbedded && (null === d.default || void 0 === d.default ? void 0 : d.default.remotePowerMonitor) != null ? (! function e() {
   var t;
   let n = t => {
-    S = Math.max(Date.now() - t, S), C(), setTimeout(e, 10 * c.default.Millis.SECOND)
+    S = Math.max(Date.now() - t, S), R(), setTimeout(e, 10 * c.default.Millis.SECOND)
   };
   if ((null === d.default || void 0 === d.default ? void 0 : null === (t = d.default.remotePowerMonitor) || void 0 === t ? void 0 : t.getSystemIdleTimeMs) != null) {
     let e = d.default.remotePowerMonitor.getSystemIdleTimeMs();
     e instanceof Promise ? e.then(n) : n(e)
   }
 }(), d.default.remotePowerMonitor.on("resume", () => {
-  m = !1, R({})
+  m = !1, C({})
 }), d.default.remotePowerMonitor.on("suspend", () => {
-  m = !0, R({}), u.default.disconnect()
+  m = !0, C({}), u.default.disconnect()
 }), d.default.remotePowerMonitor.on("lock-screen", () => {
-  N = !0, R({})
+  N = !0, C({})
 }), d.default.remotePowerMonitor.on("unlock-screen", () => {
-  N = !1, R({})
-})) : setInterval(C, .25 * T.IDLE_DURATION));
+  N = !1, C({})
+})) : setInterval(R, .25 * T.IDLE_DURATION));
 
-function R(e) {
+function C(e) {
   let {
     timestamp: t,
     type: n
@@ -63,7 +63,7 @@ function R(e) {
   return (!i || !(t <= S)) && (S = i ? t : Date.now(), __OVERLAY__ ? l.default.dispatch({
     type: "OVERLAY_SET_NOT_IDLE",
     timestamp: S
-  }) : C(), !1)
+  }) : R(), !1)
 }
 class g extends(s = o.default.Store) {
   isIdle() {
@@ -93,19 +93,19 @@ a = "IdleStore", (r = "displayName") in(i = g) ? Object.defineProperty(i, r, {
       userId: t,
       speakingFlags: n
     } = e;
-    return n !== f.SpeakingFlags.NONE && t === I.default.getId() && R({}), !1
+    return n !== f.SpeakingFlags.NONE && t === I.default.getId() && C({}), !1
   },
   APP_STATE_UPDATE: function(e) {
     let {
       state: t
     } = e;
-    return p = t === T.AppStates.BACKGROUND, S = Date.now(), C(), !1
+    return p = t === T.AppStates.BACKGROUND, S = Date.now(), R(), !1
   },
-  OVERLAY_SET_NOT_IDLE: R,
-  CHANNEL_SELECT: R,
-  VOICE_CHANNEL_SELECT: R,
-  WINDOW_FOCUS: R,
-  OVERLAY_INITIALIZE: R,
-  OVERLAY_SET_INPUT_LOCKED: R,
-  USER_SETTINGS_PROTO_UPDATE: R
+  OVERLAY_SET_NOT_IDLE: C,
+  CHANNEL_SELECT: C,
+  VOICE_CHANNEL_SELECT: C,
+  WINDOW_FOCUS: C,
+  OVERLAY_INITIALIZE: C,
+  OVERLAY_SET_INPUT_LOCKED: C,
+  USER_SETTINGS_PROTO_UPDATE: C
 })

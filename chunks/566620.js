@@ -61,8 +61,8 @@ var i = n("990547"),
   N = n("573261"),
   p = n("867176"),
   O = n("317381"),
-  C = n("844797"),
-  R = n("672181"),
+  R = n("844797"),
+  C = n("672181"),
   g = n("917107"),
   L = n("981631"),
   v = n("674563"),
@@ -81,7 +81,7 @@ function M(e, t, n) {
     channelId: e,
     applicationId: t,
     analyticsLocations: n
-  }), (0, g.default)(e) ? (o.default.selectParticipant(e, t), o.default.updateLayout(e, L.ChannelLayouts.NO_CHAT)) : (0, R.default)(e)
+  }), (0, g.default)(e) ? (o.default.selectParticipant(e, t), o.default.updateLayout(e, L.ChannelLayouts.NO_CHAT)) : (0, C.default)(e)
 }
 async function y(e) {
   var t, n;
@@ -99,7 +99,7 @@ async function y(e) {
     let t = O.default.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === o.applicationId),
       n = v.INSTALL_LESS_APP_IDS.includes(o.applicationId) && !t,
       u = (null == r ? void 0 : r.isPrivate()) && (0, p.isActivitiesInTextEnabled)(r, !t, "EmbeddedActivitiesActionCreators#launchEmbeddedActivity");
-    if ((0, C.isActivityInTextStart)(e, o.applicationId, h.default, S.default) || n || u) {
+    if ((0, R.isActivityInTextStart)(e, o.applicationId, h.default, S.default) || n || u) {
       let t;
       try {
         n && (t = await (0, _.default)(e, o.applicationId))

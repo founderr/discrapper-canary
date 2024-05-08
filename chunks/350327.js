@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return O
   },
   setTryItOutThemeColors: function() {
-    return C
+    return R
   }
 });
 var i = n("544891"),
@@ -163,7 +163,7 @@ function O(e) {
   }), c(_.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
 }
 
-function C(e) {
+function R(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
     themeColors: e

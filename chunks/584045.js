@@ -30,7 +30,7 @@ function S(e) {
     className: m,
     isTryItOut: N = !1,
     lastSection: p
-  } = e, O = (0, u.default)("username"), C = r.useMemo(() => ({
+  } = e, O = (0, u.default)("username"), R = r.useMemo(() => ({
     source: I.AnalyticsSections.PROFILE_POPOUT,
     tagUserId: t.id
   }), [t.id]);
@@ -81,7 +81,7 @@ function S(e) {
       children: (0, i.jsx)(d.default, {
         userId: t.id,
         inline: !1,
-        profileViewedAnalytics: C
+        profileViewedAnalytics: R
       })
     })]
   })

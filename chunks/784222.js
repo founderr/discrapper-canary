@@ -31,8 +31,8 @@ var i, r, a, s, o, l, u = n("470079"),
   N = n("984933"),
   p = n("430824"),
   O = n("914010"),
-  C = n("771845"),
-  R = n("594174"),
+  R = n("771845"),
+  C = n("594174"),
   g = n("176354"),
   L = n("111361"),
   v = n("392552"),
@@ -56,9 +56,9 @@ let G = e => {
   } = e, d = (0, E.useStateFromStores)([T.default], () => T.default.categories), I = (0, E.useStateFromStores)([p.default], () => p.default.getGuild(null == t ? void 0 : t.getGuildId()), [t]), h = null == t ? null : t.getGuildId(), A = (0, E.useStateFromStores)([T.default], () => T.default.getDisambiguatedEmojiContext(h), [h]), G = (0, D.useFavoriteEmojis)(h), w = (0, D.useFrequentlyUsedEmojis)(h), {
     topEmojis: k,
     newlyAddedEmojis: B
-  } = (0, y.default)(h, r), V = (0, E.useStateFromStoresArray)([C.default], () => C.default.getFlattenedGuildIds(), []), {
+  } = (0, y.default)(h, r), V = (0, E.useStateFromStoresArray)([R.default], () => R.default.getFlattenedGuildIds(), []), {
     canCreateExpressions: x
-  } = (0, m.useManageResourcePermissions)(I), F = (0, E.useStateFromStores)([R.default], () => R.default.getCurrentUser()), H = (0, L.isPremium)(F), Y = A.getCustomEmoji(), j = e => {
+  } = (0, m.useManageResourcePermissions)(I), F = (0, E.useStateFromStores)([C.default], () => C.default.getCurrentUser()), H = (0, L.isPremium)(F), Y = A.getCustomEmoji(), j = e => {
     if (e.type === f.EmojiTypes.GUILD) return e.guildId
   }, W = u.useMemo(() => _().groupBy(Y, j), [Y]), {
     enabled: K,
@@ -93,10 +93,10 @@ let G = e => {
             m = s.guild,
             N = O.default.getGuildId(),
             p = s.sectionId === P.EmojiCategoryTypes.TOP_GUILD_EMOJI,
-            C = !p && null != m && N === m.id && S.length < m.getMaxEmojiSlots(),
-            R = p && S.length < A && !K,
+            R = !p && null != m && N === m.id && S.length < m.getMaxEmojiSlots(),
+            C = p && S.length < A && !K,
             L = null != m && p && K && z === v.EmojiPickerUploadTreatment.WITH_TOP_LIST && W[m.id].length < m.getMaxEmojiSlots(),
-            M = i && x && null != m && (C || R || L);
+            M = i && x && null != m && (R || C || L);
           M && L && S.length === A && S.shift();
           let y = K && M && !d,
             U = Math.ceil((M ? S.length + 1 : S.length) / A),

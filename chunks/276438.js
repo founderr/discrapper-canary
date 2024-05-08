@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return D
   },
   sendFeedShownAnalytics: function() {
-    return R
+    return C
   },
   setFeedItemPreference: function() {
     return G
@@ -59,14 +59,14 @@ var i = n("392711"),
   p = n("369701"),
   O = n("981631");
 
-function C(e, t) {
+function R(e, t) {
   return t.map(t => h.default.getItem(e, t)).filter(e => {
     let t = null == e ? null : (0, A.default)(e);
     return null != t && !c.default.isBlocked(t.author.id)
   }).filter(f.isNotNullish).map(e => (0, N.default)(e))
 }
 
-function R(e) {
+function C(e) {
   T.default.track(O.AnalyticEvents.FEED_SHOWN, {
     guild_id: e,
     load_id: h.default.getLoadId(e),
@@ -112,7 +112,7 @@ async function g(e) {
     });
     let m = h.default.getFeedItemSection(t, p.GuildFeedSectionTypes.READ).map(e => e.id),
       N = h.default.getFeedItemSection(t, p.GuildFeedSectionTypes.UNREAD).map(e => e.id),
-      R = h.default.getFeedItemsForGuild(t).filter(e => e.featured).map(e => e.id),
+      C = h.default.getFeedItemsForGuild(t).filter(e => e.featured).map(e => e.id),
       g = Date.now() - c,
       L = (null != E ? E : 0) / h.GUILD_FEED_FETCH_LIMIT;
     ! function(e) {
@@ -128,12 +128,12 @@ async function g(e) {
       T.default.track(O.AnalyticEvents.FEED_LOADED, {
         guild_id: t,
         load_id: h.default.getLoadId(t),
-        unread_feed_item_ids: C(t, a),
-        read_feed_item_ids: C(t, s),
+        unread_feed_item_ids: R(t, a),
+        read_feed_item_ids: R(t, s),
         load_time_millis: n,
         home_session_id: _.default.getHomeSessionId(t),
         start_home_session_id: i,
-        featured_item_ids: C(t, o),
+        featured_item_ids: R(t, o),
         page: r
       })
     }({
@@ -143,7 +143,7 @@ async function g(e) {
       page: L,
       newReadFeedItemIds: r().difference(m, d),
       newUnreadFeedItemIds: r().difference(N, S),
-      newFeaturedItemIds: r().difference(R, A)
+      newFeaturedItemIds: r().difference(C, A)
     }), ! function(e, t) {
       let n = t.results.items.filter(e => e.type === a.GuildFeedItemTypes.FORUM_POST);
       n.length > 0 && u.default.dispatch({

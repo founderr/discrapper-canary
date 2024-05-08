@@ -46,7 +46,7 @@ n.r(t), n.d(t, {
     return et
   },
   getExternalSubscriptionMethodUrl: function() {
-    return eC
+    return eR
   },
   getFormattedPriceForPlan: function() {
     return eI
@@ -112,7 +112,7 @@ n.r(t), n.d(t, {
     return Q
   },
   hasPremiumSubscriptionToDisplay: function() {
-    return eR
+    return eC
   },
   isPremium: function() {
     return v.isPremium
@@ -160,8 +160,8 @@ var c = n("710845"),
   N = n("509545"),
   p = n("78839"),
   O = n("122289"),
-  C = n("55935"),
-  R = n("424218"),
+  R = n("55935"),
+  C = n("424218"),
   g = n("358085"),
   L = n("380684"),
   v = n("111361"),
@@ -519,7 +519,7 @@ function $(e) {
     renewalInvoicePreview: m
   } = e, N = U.SubscriptionPlanInfo[E], p = D.default.formatPriceString(D.default.getDefaultPrice(N.id), N.interval), {
     annualDiscountPercentage: O
-  } = (0, T.getAnnualDiscountsExperimentConfig)("PremiumUtils"), R = ef(c) || null == c.paymentSourceId && !c.isPurchasedExternally && !(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), g = null != I, L = c.status === y.SubscriptionStatusTypes.UNPAID && null !== c.latestInvoice && (null === (n = c.latestInvoice) || void 0 === n ? void 0 : n.status) === y.InvoiceStatusTypes.OPEN, v = R ? y.SubscriptionStatusTypes.CANCELED : L ? y.SubscriptionStatusTypes.UNPAID : c.status, M = null === (a = null !== (r = null == m ? void 0 : m.taxInclusive) && void 0 !== r ? r : null === (i = c.latestInvoice) || void 0 === i ? void 0 : i.taxInclusive) || void 0 === a || a, P = U.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (f ? ea(c.additionalPlans) : 0);
+  } = (0, T.getAnnualDiscountsExperimentConfig)("PremiumUtils"), C = ef(c) || null == c.paymentSourceId && !c.isPurchasedExternally && !(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), g = null != I, L = c.status === y.SubscriptionStatusTypes.UNPAID && null !== c.latestInvoice && (null === (n = c.latestInvoice) || void 0 === n ? void 0 : n.status) === y.InvoiceStatusTypes.OPEN, v = C ? y.SubscriptionStatusTypes.CANCELED : L ? y.SubscriptionStatusTypes.UNPAID : c.status, M = null === (a = null !== (r = null == m ? void 0 : m.taxInclusive) && void 0 !== r ? r : null === (i = c.latestInvoice) || void 0 === i ? void 0 : i.taxInclusive) || void 0 === a || a, P = U.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (f ? ea(c.additionalPlans) : 0);
   switch (E) {
     case U.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
     case U.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
@@ -552,7 +552,7 @@ function $(e) {
           });
         case y.SubscriptionStatusTypes.PAST_DUE:
           return G.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
-            endDate: (0, C.dateFormat)(ed(c).expiresDate, "LL"),
+            endDate: (0, R.dateFormat)(ed(c).expiresDate, "LL"),
             onClick: () => {
               window.open("https://support.discord.com/hc/articles/23082866222871")
             }
@@ -595,7 +595,7 @@ function $(e) {
           });
         case y.SubscriptionStatusTypes.PAST_DUE:
           return G.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
-            endDate: (0, C.dateFormat)(ed(c).expiresDate, "LL"),
+            endDate: (0, R.dateFormat)(ed(c).expiresDate, "LL"),
             onClick: () => {
               window.open("https://support.discord.com/hc/articles/23082866222871")
             }
@@ -654,7 +654,7 @@ function $(e) {
           });
         case y.SubscriptionStatusTypes.PAST_DUE:
           return G.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
-            endDate: (0, C.dateFormat)(ed(c).expiresDate, "LL"),
+            endDate: (0, R.dateFormat)(ed(c).expiresDate, "LL"),
             onClick: () => {
               window.open("https://support.discord.com/hc/articles/23082866222871")
             }
@@ -1153,7 +1153,7 @@ function eO(e) {
   }
 }
 
-function eC(e, t) {
+function eR(e, t) {
   switch (e) {
     case y.PaymentGateways.APPLE_PARTNER:
     case y.PaymentGateways.APPLE:
@@ -1164,7 +1164,7 @@ function eC(e, t) {
   throw Error("Invalid external payment gateway ".concat(e))
 }
 
-function eR(e, t) {
+function eC(e, t) {
   return (0, v.isPremium)(e) || eS(null == t ? void 0 : t.status)
 }
 
@@ -1238,7 +1238,7 @@ function eP(e) {
       useSpace: !0
     },
     n = U.PremiumUserLimits[e].fileSize;
-  return (0, R.formatSize)(n / 1024, {
+  return (0, C.formatSize)(n / 1024, {
     useKibibytes: !0,
     useSpace: t.useSpace
   })
@@ -1348,7 +1348,7 @@ t.default = Object.freeze({
       return (e.isPurchasedViaGoogle && (null === (r = e.metadata) || void 0 === r ? void 0 : r.google_grace_period_expires_date) != null && (t = d()(e.metadata.google_grace_period_expires_date)), e.isPurchasedViaApple && (null === (a = e.metadata) || void 0 === a ? void 0 : a.apple_grace_period_expires_date) != null && (t = d()(e.metadata.apple_grace_period_expires_date)), e.isPurchasedExternally) ? G.default.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL.format({
         endDate: t,
         paymentGatewayName: b.PaymentGatewayToFriendlyName[e.paymentGateway],
-        paymentSourceLink: eC(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")
+        paymentSourceLink: eR(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")
       }) : G.default.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO.format({
         endDate: t,
         price: i
@@ -1359,7 +1359,7 @@ t.default = Object.freeze({
     }) : e.status === y.SubscriptionStatusTypes.ACCOUNT_HOLD ? e.isPurchasedViaGoogle && !(0, g.isAndroid)() ? G.default.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
       endDate: d()(e.currentPeriodStart).add(U.MAX_ACCOUNT_HOLD_DAYS, "days"),
       paymentGatewayName: b.PaymentGatewayToFriendlyName[e.paymentGateway],
-      paymentSourceLink: eC(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")
+      paymentSourceLink: eR(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")
     }) : G.default.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
       endDate: d()(e.currentPeriodStart).add(U.MAX_ACCOUNT_HOLD_DAYS, "days"),
       price: i
@@ -1372,7 +1372,7 @@ t.default = Object.freeze({
     }) : e.isPurchasedExternally ? G.default.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_EXTERNAL.format({
       renewalDate: t.subscriptionPeriodStart,
       paymentGatewayName: b.PaymentGatewayToFriendlyName[e.paymentGateway],
-      subscriptionManagementLink: eC(e.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
+      subscriptionManagementLink: eR(e.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
     }) : n ? G.default.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_WITH_PLAN.format({
       planName: G.default.Messages.PREMIUM,
       renewalDate: t.subscriptionPeriodStart,

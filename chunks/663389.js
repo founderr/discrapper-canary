@@ -17,8 +17,8 @@ let E = c.FormStates.CLOSED,
   N = !1,
   p = !1,
   O = null,
-  C = null,
   R = null,
+  C = null,
   g = [],
   L = null,
   v = null;
@@ -40,11 +40,11 @@ function D(e) {
         claimed: o.isClaimed()
       }
     }
-  }, C = null !== (i = e.onClose) && void 0 !== i ? i : null, R = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null, g = null !== (a = e.analyticsLocations) && void 0 !== a ? a : [], v = null !== (s = e.impressionSource) && void 0 !== s ? s : null
+  }, R = null !== (i = e.onClose) && void 0 !== i ? i : null, C = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null, g = null !== (a = e.analyticsLocations) && void 0 !== a ? a : [], v = null !== (s = e.impressionSource) && void 0 !== s ? s : null
 }
 
 function M() {
-  E = c.FormStates.CLOSED, N = !1, A = null, L = null, m = null, I = null, T = null, f = {}, S = {}, C = null, R = null, g = [], v = null
+  E = c.FormStates.CLOSED, N = !1, A = null, L = null, m = null, I = null, T = null, f = {}, S = {}, R = null, C = null, g = [], v = null
 }
 
 function y() {
@@ -85,14 +85,14 @@ class P extends(s = u.default.Store) {
       errors: h,
       hasChanges: this.hasChanges(),
       openWithoutBackstack: p,
-      analyticsLocation: R,
+      analyticsLocation: C,
       analyticsLocations: g,
       initialSection: L,
       impressionSource: v
     }
   }
   get onClose() {
-    return C
+    return R
   }
 }
 a = "UserSettingsModalStore", (r = "displayName") in(i = P) ? Object.defineProperty(i, r, {
@@ -117,7 +117,7 @@ a = "UserSettingsModalStore", (r = "displayName") in(i = P) ? Object.definePrope
   },
   USER_SETTINGS_MODAL_SET_SECTION: function(e) {
     var t;
-    I = T, T = e.section, R = null, g = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (f[T] = e.subsection)
+    I = T, T = e.section, C = null, g = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (f[T] = e.subsection)
   },
   USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
     let {

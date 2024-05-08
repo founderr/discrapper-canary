@@ -43,8 +43,8 @@ let E = {
       innerRef: h
     } = e, {
       reducedMotion: A
-    } = r.useContext(u.AccessibilityPreferencesContext), m = r.useRef(null), [N, p] = r.useState(!1), O = (0, _.useToken)(l.default.unsafe_rawColors.PRIMARY_400).spring(), C = (0, _.useToken)(l.default.unsafe_rawColors.GREEN_360).spring(), {
-      state: R,
+    } = r.useContext(u.AccessibilityPreferencesContext), m = r.useRef(null), [N, p] = r.useState(!1), O = (0, _.useToken)(l.default.unsafe_rawColors.PRIMARY_400).spring(), R = (0, _.useToken)(l.default.unsafe_rawColors.GREEN_360).spring(), {
+      state: C,
       opacity: g
     } = (0, o.useSpring)({
       config: E,
@@ -65,8 +65,8 @@ let E = {
         onMouseLeave: () => p(!1),
         style: {
           opacity: g,
-          backgroundColor: R.to({
-            output: [O, C]
+          backgroundColor: C.to({
+            output: [O, R]
           })
         },
         children: [(0, i.jsxs)(o.animated.svg, {
@@ -74,7 +74,7 @@ let E = {
           viewBox: "0 0 28 20",
           preserveAspectRatio: "xMinYMid meet",
           style: {
-            left: R.to({
+            left: C.to({
               range: [0, .3, .7, 1],
               output: [-3, 1, 8, 12]
             })
@@ -82,19 +82,19 @@ let E = {
           "aria-hidden": !0,
           children: [(0, i.jsx)(o.animated.rect, {
             fill: "white",
-            x: R.to({
+            x: C.to({
               range: [0, .3, .7, 1],
               output: [4, 0, 0, 4]
             }),
-            y: R.to({
+            y: C.to({
               range: [0, .3, .7, 1],
               output: [0, 1, 1, 0]
             }),
-            height: R.to({
+            height: C.to({
               range: [0, .3, .7, 1],
               output: [20, 18, 18, 20]
             }),
-            width: R.to({
+            width: C.to({
               range: [0, .3, .7, 1],
               output: [20, 28, 28, 20]
             }),
@@ -122,7 +122,7 @@ let E = {
                 })
               })]
             })
-          }(R, O, C, A.enabled)]
+          }(C, O, R, A.enabled)]
         }), (0, i.jsx)("input", {
           id: t,
           type: "checkbox",

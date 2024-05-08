@@ -26,8 +26,8 @@ var i, r, a = n("735250"),
   N = n("15274"),
   p = n("217804"),
   O = n("965638"),
-  C = n("434404"),
-  R = n("962086"),
+  R = n("434404"),
+  C = n("962086"),
   g = n("160404"),
   L = n("41776"),
   v = n("703656"),
@@ -153,9 +153,9 @@ function en(e) {
     othersCount: A
   } = (0, Z.useGetCardUsers)(n, r, t), N = (0, c.useGetOrFetchApplication)(i), {
     needSubscriptionToAccess: p
-  } = (0, m.default)(null != t ? t : void 0), O = (0, u.useStateFromStores)([b.default], () => b.default.isInChannel(t)), C = s.useCallback(() => {
+  } = (0, m.default)(null != t ? t : void 0), O = (0, u.useStateFromStores)([b.default], () => b.default.isInChannel(t)), R = s.useCallback(() => {
     (0, v.transitionToGuild)(r, t)
-  }, [t, r]), R = s.useCallback(() => {
+  }, [t, r]), C = s.useCallback(() => {
     null != T && (T.type === X.ChannelTypes.GUILD_VOICE && !f && E.default.handleVoiceConnect({
       channel: T,
       connected: O,
@@ -178,7 +178,7 @@ function en(e) {
       })]
     }) : null;
   return (0, a.jsxs)(d.ClickableContainer, {
-    onClick: C,
+    onClick: R,
     tag: "div",
     "aria-label": q.default.Messages.GUILD_POPOUT_ACTIVITY_EMBEDDED_ACTIVITY_CARD_ARIA.format({
       users: S,
@@ -201,7 +201,7 @@ function en(e) {
       othersCount: A,
       extraPill: L
     }), (0, a.jsx)(et, {
-      onClick: R,
+      onClick: C,
       inCall: O
     }), "gaming" === _ ? (0, a.jsx)(x.default, {
       width: 12,
@@ -232,9 +232,9 @@ function ei(e) {
     usersToShow: N,
     othersCount: p,
     streamerUsersText: O
-  } = (0, Z.useGetCardUsers)(_, r, o, c), C = s.useCallback(() => {
+  } = (0, Z.useGetCardUsers)(_, r, o, c), R = s.useCallback(() => {
     (0, v.transitionToGuild)(r, o)
-  }, [o, r]), R = s.useCallback(() => {
+  }, [o, r]), C = s.useCallback(() => {
     null != T && (!S && E.default.handleVoiceConnect({
       channel: T,
       connected: h,
@@ -255,7 +255,7 @@ function ei(e) {
     className: J.cardImageIcon
   });
   return (0, a.jsxs)(d.ClickableContainer, {
-    onClick: C,
+    onClick: R,
     tag: "div",
     "aria-label": q.default.Messages.GUILD_POPOUT_ACTIVITY_HANGOUT_CARD_ARIA.format({
       users: A,
@@ -271,7 +271,7 @@ function ei(e) {
       usersToShow: N,
       othersCount: p
     }), (0, a.jsx)(et, {
-      onClick: R,
+      onClick: C,
       inCall: h
     })]
   })
@@ -308,7 +308,7 @@ function er(e) {
       needSubscriptionToAccess: r,
       locked: o
     }), (0, v.transitionToGuild)(n.guild_id, i.id))
-  }, [i, n.entity_type, n.guild_id, n.id, _, o, r]), C = null != T ? (0, a.jsxs)("div", {
+  }, [i, n.entity_type, n.guild_id, n.id, _, o, r]), R = null != T ? (0, a.jsxs)("div", {
     className: J.numberPill,
     children: [(0, a.jsx)(F.default, {
       width: 12,
@@ -344,7 +344,7 @@ function er(e) {
       }) : null,
       usersToShow: c,
       othersCount: I,
-      extraPill: C
+      extraPill: R
     }), (0, a.jsx)(et, {
       onClick: O,
       inCall: _
@@ -494,7 +494,7 @@ function eo(e) {
       isUnverifiedAccount: !P.default.getCheck(t.id).canChat
     }
   }), c = () => {
-    g.default.isFullServerPreview(t.id) && (0, v.transitionTo)(X.Routes.CHANNEL(t.id)), S.default.shouldShowOnboarding(t.id) && (f.default.finishOnboarding(t.id), (0, h.discardOnboardingPromise)(t.id)), (0, R.stopImpersonating)(t.id), C.default.open(t.id, o), o === X.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, A.announceDeleteTemplateChannels)(t.id)
+    g.default.isFullServerPreview(t.id) && (0, v.transitionTo)(X.Routes.CHANNEL(t.id)), S.default.shouldShowOnboarding(t.id) && (f.default.finishOnboarding(t.id), (0, h.discardOnboardingPromise)(t.id)), (0, C.stopImpersonating)(t.id), R.default.open(t.id, o), o === X.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, A.announceDeleteTemplateChannels)(t.id)
   };
   return (0, a.jsxs)("div", {
     className: J.container,
@@ -527,7 +527,7 @@ function eo(e) {
         variant: "text-xs/medium",
         children: q.default.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
           onClick: () => {
-            n(), C.default.open(t.id, X.GuildSettingsSections.INSTANT_INVITES)
+            n(), R.default.open(t.id, X.GuildSettingsSections.INSTANT_INVITES)
           }
         })
       })]

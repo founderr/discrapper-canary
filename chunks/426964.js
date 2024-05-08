@@ -27,11 +27,11 @@ function O(e) {
 t.default = r.memo(function(e) {
   var t, n;
   let {
-    clan: C,
-    isLoading: R,
+    clan: R,
+    isLoading: C,
     onClose: g,
     profileViewedAnalytics: L
-  } = e, v = (0, T.useClanInfo)(null !== (n = null == C ? void 0 : C.identityGuildId) && void 0 !== n ? n : null), D = null == C ? void 0 : C.tag, M = (0, h.default)("clan_guild_profile"), y = null == C ? void 0 : C.identityGuildId, P = (0, s.useStateFromStores)([_.default], () => _.default.getId()), U = (0, s.useStateFromStores)([c.default], () => null != y ? c.default.getMember(y, P) : null, [y, P]), b = (0, s.useStateFromStores)([E.default], () => E.default.getUser(P), [P]), G = (null == U ? void 0 : U.joinedAt) != null, w = (0, S.isGuildAdoptedUserClanIdentity)(y, null == b ? void 0 : b.clan), k = null != (0, u.default)(y);
+  } = e, v = (0, T.useClanInfo)(null !== (n = null == R ? void 0 : R.identityGuildId) && void 0 !== n ? n : null), D = null == R ? void 0 : R.tag, M = (0, h.default)("clan_guild_profile"), y = null == R ? void 0 : R.identityGuildId, P = (0, s.useStateFromStores)([_.default], () => _.default.getId()), U = (0, s.useStateFromStores)([c.default], () => null != y ? c.default.getMember(y, P) : null, [y, P]), b = (0, s.useStateFromStores)([E.default], () => E.default.getUser(P), [P]), G = (null == U ? void 0 : U.joinedAt) != null, w = (0, S.isGuildAdoptedUserClanIdentity)(y, null == b ? void 0 : b.clan), k = null != (0, u.default)(y);
   r.useEffect(() => {
     null != y && (0, I.trackClanProfileViewed)({
       guildId: y,
@@ -103,7 +103,7 @@ t.default = r.memo(function(e) {
       className: p.container,
       onClick: O
     }), []);
-  return null == D || null == v || null == y || R ? (0, i.jsx)("div", {
+  return null == D || null == v || null == y || C ? (0, i.jsx)("div", {
     ...j,
     children: (0, i.jsx)(a.Spinner, {})
   }) : (0, i.jsxs)("div", {

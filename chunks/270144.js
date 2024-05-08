@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return G
   },
   useFetchEntitlementsForGuild: function() {
-    return C
+    return R
   },
   useFetchListingsForApplication: function() {
     return O
@@ -65,7 +65,7 @@ let O = function(e, t) {
       listingsLoaded: i === A.FetchState.FETCHED
     }
   },
-  C = e => {
+  R = e => {
     let {
       guildId: t,
       canFetch: n = !0,
@@ -79,7 +79,7 @@ let O = function(e, t) {
       entitlementsLoaded: r === A.FetchState.FETCHED
     }
   },
-  R = e => {
+  C = e => {
     let {
       applicationId: t,
       canFetch: n = !0,
@@ -168,7 +168,7 @@ function M(e) {
   let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : p.EMPTY_STRING_SNOWFLAKE_ID,
     {
       entitlementsLoaded: i
-    } = C({
+    } = R({
       guildId: n,
       canFetch: (0, s.useStateFromStores)([_.default], () => _.default.can(p.Permissions.ADMINISTRATOR, e))
     }),
@@ -230,11 +230,11 @@ function b(e) {
     listingsLoaded: a
   } = O(t, n), {
     entitlementsLoaded: s
-  } = C({
+  } = R({
     guildId: i
   }), {
     entitlementsLoaded: o
-  } = R({
+  } = C({
     applicationId: t,
     loggedIn: r
   }), u = U(t), {

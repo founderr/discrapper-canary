@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return O
   },
   sendVoiceChannelEffect: function() {
-    return R
+    return C
   },
   sendVoiceChannelSoundboardEffect: function() {
-    return C
+    return R
   }
 });
 var i, r, a = n("392711"),
@@ -61,7 +61,7 @@ function O(e, t, n) {
   }), (0, c.default)([l.default.CHANNEL_CALL], n, t, _.AnalyticsSoundType.ENTRY)
 }
 
-function C(e, t, n, i) {
+function R(e, t, n, i) {
   var r, a;
   let o = d.default.getCustomEmojiById(null !== (r = t.emojiId) && void 0 !== r ? r : ""),
     {
@@ -82,7 +82,7 @@ function C(e, t, n, i) {
     if (l.signal.aborted) return
   }), (0, c.default)(null != i ? i : [], n, t, _.AnalyticsSoundType.DEFAULT)
 }(i = r || (r = {})).EMOJI_PICKER = "emoji_picker", i.EFFECT_BAR = "effect_bar";
-let R = async e => {
+let C = async e => {
   let {
     channel: t,
     emoji: n,

@@ -34,8 +34,8 @@ var i = n("913527"),
   N = n("748770"),
   p = n("725727"),
   O = n("1844"),
-  C = n("474936"),
-  R = n("981631"),
+  R = n("474936"),
+  C = n("981631"),
   g = n("689938");
 
 function L(e) {
@@ -45,17 +45,17 @@ function L(e) {
     premiumSubscription: s,
     mostRecentSubscription: o
   } = e, l = !1, u = !1;
-  if (null != o && o.status === R.SubscriptionStatusTypes.ENDED) {
+  if (null != o && o.status === C.SubscriptionStatusTypes.ENDED) {
     let e = (null === (t = o.metadata) || void 0 === t ? void 0 : t.ended_at) != null ? r()(o.metadata.ended_at) : null,
       i = null === (n = (0, T.getPremiumPlanItem)(o)) || void 0 === n ? void 0 : n.planId,
-      a = null != i && T.default.getPremiumType(i) === C.PremiumTypes.TIER_2;
+      a = null != i && T.default.getPremiumType(i) === R.PremiumTypes.TIER_2;
     u = null != e && a && e.add(10, "days").isAfter(r()())
   }
   if (null != s) {
     let e = null === (i = (0, T.getPremiumPlanItem)(s)) || void 0 === i ? void 0 : i.planId,
-      t = null != e && T.default.getPremiumType(e) === C.PremiumTypes.TIER_2,
+      t = null != e && T.default.getPremiumType(e) === R.PremiumTypes.TIER_2,
       n = c.default.getCurrentUser(),
-      r = (null == s ? void 0 : s.trialId) != null && T.default.isPremiumExactly(n, C.PremiumTypes.TIER_0);
+      r = (null == s ? void 0 : s.trialId) != null && T.default.isPremiumExactly(n, R.PremiumTypes.TIER_0);
     l = t || r
   }
   return !a || l || u
@@ -127,7 +127,7 @@ async function D() {
     });
   if (n || i || !r || !s && !a) return !1;
   if (I.default.shouldFetchOffer() && await f.default.fetchUserTrialOffer(), I.default.hasFetchedOffer() && I.default.hasAnyUnexpiredOffer()) return !1;
-  !E.default.hasFetchedMostRecentPremiumTypeSubscription() && (null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasHadSKU(C.PremiumSubscriptionSKUs.TIER_2)) && await (0, o.fetchMostRecentSubscription)(), !E.default.hasFetchedSubscriptions() && await (0, o.fetchSubscriptions)();
+  !E.default.hasFetchedMostRecentPremiumTypeSubscription() && (null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasHadSKU(R.PremiumSubscriptionSKUs.TIER_2)) && await (0, o.fetchMostRecentSubscription)(), !E.default.hasFetchedSubscriptions() && await (0, o.fetchSubscriptions)();
   let l = E.default.getMostRecentPremiumTypeSubscription();
   return !L({
     experimentEnabled: r,

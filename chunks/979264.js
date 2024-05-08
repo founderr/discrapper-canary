@@ -136,13 +136,13 @@ t.default = r.memo(function(e) {
   } = e, S = (0, o.useStateFromStores)([u.default], () => u.default.getUser(r), [r]), N = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n, {
     tag: p,
     badge: O,
-    guildId: C
+    guildId: R
   } = (0, _.getUserClanData)(N);
-  if (!m(r) || null == C) return null;
-  let R = (0, _.getClanBadgeUrl)(C, O, c);
+  if (!m(r) || null == R) return null;
+  let C = (0, _.getClanBadgeUrl)(R, O, c);
   return E ? (0, i.jsx)(h, {
     clanTag: p,
-    clanBadge: R,
+    clanBadge: C,
     className: s()(f.noTooltip, a),
     textVariant: l,
     textColor: d,
@@ -154,7 +154,7 @@ t.default = r.memo(function(e) {
     profileViewedAnalytics: T,
     children: (0, i.jsx)(h, {
       clanTag: p,
-      clanBadge: R,
+      clanBadge: C,
       className: a,
       textVariant: l,
       textColor: d,

@@ -29,8 +29,8 @@ function O(e) {
   var t, n, a;
   let {
     title: O,
-    type: C,
-    guildBoostProps: R,
+    type: R,
+    guildBoostProps: C,
     analyticsSource: g,
     analyticsLocation: L,
     body: v,
@@ -54,18 +54,18 @@ function O(e) {
     showEnhancedUpsell: K,
     children: z,
     ...Z
-  } = e, X = null != R, Q = (0, I.usePremiumTrialOffer)(), q = (0, E.usePremiumDiscountOffer)(), J = ((null == Q ? void 0 : null === (t = Q.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === H || (0, E.discountOfferHasTier)(q, H)) && !X, {
+  } = e, X = null != C, Q = (0, I.usePremiumTrialOffer)(), q = (0, E.usePremiumDiscountOffer)(), J = ((null == Q ? void 0 : null === (t = Q.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === H || (0, E.discountOfferHasTier)(q, H)) && !X, {
     analyticsLocations: $
   } = (0, u.default)(l.default.PREMIUM_UPSELL_MODAL);
   r.useEffect(() => {
     !Y && (X ? _.default.track(A.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
-      type: "".concat(C, " - Tier ").concat(R.boostedGuildTier),
-      guild_id: R.guild.id,
-      channel_id: R.channelId,
+      type: "".concat(R, " - Tier ").concat(C.boostedGuildTier),
+      guild_id: C.guild.id,
+      channel_id: C.channelId,
       location: L,
       location_stack: $
     }) : _.default.track(A.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: C,
+      type: R,
       source: g,
       location: L,
       location_stack: $,
@@ -99,7 +99,7 @@ function O(e) {
         children: J ? (0, i.jsx)(i.Fragment, {
           children: (0, i.jsx)(T.default, {
             onClose: G,
-            type: C,
+            type: R,
             subscriptionTier: null !== (a = null == Q ? void 0 : null === (n = Q.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : h.PremiumSubscriptionSKUs.TIER_2,
             headingText: O,
             context: D,
@@ -116,7 +116,7 @@ function O(e) {
             variant: "heading-xl/semibold",
             children: O
           }), (0, i.jsx)(S.default, {
-            premiumUpsellType: C
+            premiumUpsellType: R
           }), z, (0, i.jsx)(o.Text, {
             variant: "text-md/normal",
             className: s()(U, N.subHeader),
@@ -145,7 +145,7 @@ function O(e) {
           let e;
           if (X) return (0, i.jsx)(d.default, {
             analyticsLocation: L,
-            guild: R.guild,
+            guild: C.guild,
             onClose: G
           });
           let t = K ? m.default.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;

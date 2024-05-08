@@ -28,8 +28,8 @@ var i = n("512722"),
   N = n("117530"),
   p = n("594174"),
   O = n("403182"),
-  C = n("823379"),
-  R = n("861990"),
+  R = n("823379"),
+  C = n("861990"),
   g = n("555573"),
   L = n("174212"),
   v = n("456007"),
@@ -58,9 +58,9 @@ let w = (e, t) => {
     return t || n ? t : null
   };
 async function V(e) {
-  var t, n, i, s, l, d, _, I, T, f, S, m, p, O, C;
+  var t, n, i, s, l, d, _, I, T, f, S, m, p, O, R;
   let {
-    command: R,
+    command: C,
     optionValues: L,
     context: D,
     commandTargetId: P,
@@ -70,14 +70,14 @@ async function V(e) {
   null == D.autocomplete && a.default.dispatch({
     type: "APPLICATION_COMMAND_USED",
     context: D,
-    command: R,
+    command: C,
     commandOrigin: G
   }), await h.default.unarchiveThreadIfNecessary(D.channel.id);
   let V = [],
     F = [],
     Y = (0, y.getCommandAttachmentDraftType)(G);
-  if (null != R.options)
-    for (let e of R.options) {
+  if (null != C.options)
+    for (let e of C.options) {
       if (e.type === u.ApplicationCommandOptionType.SUB_COMMAND || e.type === u.ApplicationCommandOptionType.SUB_COMMAND_GROUP || !(e.name in L)) continue;
       let t = (null === (i = D.autocomplete) || void 0 === i ? void 0 : i.name) === e.name || void 0,
         n = null;
@@ -183,36 +183,36 @@ async function V(e) {
         focused: t
       })
     }
-  if (null != R.subCommandPath)
-    for (let e = R.subCommandPath.length - 1; e >= 0; e -= 1) {
+  if (null != C.subCommandPath)
+    for (let e = C.subCommandPath.length - 1; e >= 0; e -= 1) {
       let {
         name: t,
         type: n
-      } = R.subCommandPath[e];
+      } = C.subCommandPath[e];
       V = [{
         type: n,
         name: t,
         options: V
       }]
     }
-  if (null != R.execute) return c.default.trackWithMetadata(U.AnalyticEvents.APPLICATION_COMMAND_USED, {
-    command_id: R.id,
-    application_id: R.applicationId,
-    command_type: R.type,
+  if (null != C.execute) return c.default.trackWithMetadata(U.AnalyticEvents.APPLICATION_COMMAND_USED, {
+    command_id: C.id,
+    application_id: C.applicationId,
+    command_type: C.type,
     location: G === M.CommandOrigin.APPLICATION_LAUNCHER ? M.ApplicationCommandTriggerLocations.APP_LAUNCHER : M.ApplicationCommandTriggerLocations.SLASH_UI
-  }), R.execute(V, D);
-  if (R.inputType === M.ApplicationCommandInputType.BUILT_IN || R.inputType === M.ApplicationCommandInputType.BUILT_IN_TEXT || R.inputType === M.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return;
+  }), C.execute(V, D);
+  if (C.inputType === M.ApplicationCommandInputType.BUILT_IN || C.inputType === M.ApplicationCommandInputType.BUILT_IN_TEXT || C.inputType === M.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return;
   let j = {
-    version: R.version,
-    id: null !== (O = null === (t = R.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== O ? O : R.id,
-    guild_id: R.guildId,
-    name: null !== (C = null === (n = R.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== C ? C : R.name,
-    type: R.type,
+    version: C.version,
+    id: null !== (O = null === (t = C.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== O ? O : C.id,
+    guild_id: C.guildId,
+    name: null !== (R = null === (n = C.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== R ? R : C.name,
+    type: C.type,
     options: V,
-    application_command: R.rootCommand
+    application_command: C.rootCommand
   };
-  null != P && (j.target_id = P), null != D.autocomplete ? (0, g.performAutocomplete)(R, D, j) : (o.default.clearAll(D.channel.id, Y), await H({
-    applicationId: R.applicationId,
+  null != P && (j.target_id = P), null != D.autocomplete ? (0, g.performAutocomplete)(C, D, j) : (o.default.clearAll(D.channel.id, Y), await H({
+    applicationId: C.applicationId,
     data: j,
     context: D,
     attachments: F,
@@ -220,14 +220,14 @@ async function V(e) {
     onMessageSuccess: () => {
       x(L)
     },
-    commandDisplayName: R.displayName,
+    commandDisplayName: C.displayName,
     analytics_location: G === M.CommandOrigin.APPLICATION_LAUNCHER ? M.ApplicationCommandTriggerLocations.APP_LAUNCHER : M.ApplicationCommandTriggerLocations.SLASH_UI
   }))
 }
 let x = e => {
     let t = Object.values(e).flatMap(e => e.map(e => "emoji" === e.type ? {
       name: e.name.replaceAll(":", "")
-    } : "customEmoji" === e.type ? I.default.getCustomEmojiById(e.emojiId) : null).filter(C.isNotNullish));
+    } : "customEmoji" === e.type ? I.default.getCustomEmojiById(e.emojiId) : null).filter(R.isNotNullish));
     t.length > 0 && a.default.dispatch({
       type: "EMOJI_TRACK_USAGE",
       emojiUsed: t
@@ -292,7 +292,7 @@ let x = e => {
     s.default.receiveMessage(h, O, !0, {
       applicationId: n
     });
-    let C = (e, t) => {
+    let R = (e, t) => {
         null == t && null != e && s.default.sendClydeError(h, e), a.default.dispatch({
           type: "MESSAGE_SEND_FAILED",
           messageId: O.id,
@@ -300,7 +300,7 @@ let x = e => {
           reason: t
         })
       },
-      R = {
+      C = {
         applicationId: n,
         channelId: h,
         guildId: A,
@@ -310,19 +310,19 @@ let x = e => {
         maxSizeCallback: d,
         analytics_location: E
       };
-    T.addQueued(R.nonce, {
+    T.addQueued(C.nonce, {
       messageId: O.id,
       onCreate: e => {
         null != O.interaction && (O.interaction.id = e)
       },
-      onFailure: (e, t) => C(e, t),
+      onFailure: (e, t) => R(e, t),
       data: {
         interactionType: u.InteractionTypes.APPLICATION_COMMAND,
         channelId: h
       }
-    }), null != o ? W(o, R.nonce, A, d).then(e => {
-      e && Y(R, _)
-    }) : Y(R, _)
+    }), null != o ? W(o, C.nonce, A, d).then(e => {
+      e && Y(C, _)
+    }) : Y(C, _)
   };
 
 function Y(e, t) {
@@ -358,7 +358,7 @@ async function W(e, t, n, i) {
       totalSize: s,
       largestUploadedFileSize: o
     } = await j(e, !1);
-  if (o > Math.max(r, b.DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE) || s > R.MAX_TOTAL_ATTACHMENT_SIZE) return a(o), !1;
+  if (o > Math.max(r, b.DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE) || s > C.MAX_TOTAL_ATTACHMENT_SIZE) return a(o), !1;
   try {
     await (0, _.stageAttachmentFiles)(e)
   } catch {
@@ -369,5 +369,5 @@ async function W(e, t, n, i) {
   return {
     totalSize: s,
     largestUploadedFileSize: o
-  } = await j(e, !0), !e.some(e => e.error === U.AbortCodes.ENTITY_TOO_LARGE) && !(s > R.MAX_TOTAL_ATTACHMENT_SIZE) || (a(o), !1)
+  } = await j(e, !0), !e.some(e => e.error === U.AbortCodes.ENTITY_TOO_LARGE) && !(s > C.MAX_TOTAL_ATTACHMENT_SIZE) || (a(o), !1)
 }

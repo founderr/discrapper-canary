@@ -90,8 +90,8 @@ var h = n("253696"),
   N = n("149203"),
   p = n("981631"),
   O = n("185923"),
-  C = n("957825"),
-  R = n("474936"),
+  R = n("957825"),
+  C = n("474936"),
   g = n("689938");
 let L = function(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null == t ? void 0 : t.getGuildId(),
@@ -280,13 +280,13 @@ let L = function(e, t, n) {
     } = e;
     switch (a) {
       case O.EmojiIntention.REACTION:
-        n = _ ? R.PremiumUpsellTypes.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : R.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
+        n = _ ? C.PremiumUpsellTypes.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : C.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
         break;
       case O.EmojiIntention.STATUS:
-        n = R.PremiumUpsellTypes.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
+        n = C.PremiumUpsellTypes.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
         break;
       default:
-        n = R.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED
+        n = C.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED
     }
     let c = null !== (t = i.uniqueName) && void 0 !== t ? t : i.name;
     o.default.trackWithMetadata(p.AnalyticEvents.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
@@ -312,7 +312,7 @@ let L = function(e, t, n) {
     } = e, r = null !== (t = n.uniqueName) && void 0 !== t ? t : n.name;
     o.default.trackWithMetadata(p.AnalyticEvents.EXPRESSION_FAVORITED, {
       location: i,
-      expression_type: C.ExpressionPickerViewType.EMOJI,
+      expression_type: R.ExpressionPickerViewType.EMOJI,
       expression_id: n.id,
       expression_name: r,
       expression_guild_id: n.guildId,

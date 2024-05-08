@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return h
   },
   CommandPermissionChangeStrings: function() {
-    return V
+    return j
   },
   DEFAULT_FOR_STRINGS_KEY: function() {
     return M
@@ -37,7 +37,7 @@ s.r(t), s.d(t, {
     return x
   },
   ThreadChangeStrings: function() {
-    return j
+    return V
   },
   UserChangeStrings: function() {
     return m
@@ -46,10 +46,10 @@ s.r(t), s.d(t, {
     return y
   },
   getChangeTitle: function() {
-    return X
+    return J
   },
   getSimpleAuditLogChangeDetails: function() {
-    return Z
+    return X
   },
   getSimpleAuditLogTitleContextFromChange: function() {
     return Y
@@ -284,7 +284,7 @@ let G = new u.default("AuditLogUtils"),
     [C.AuditLogChangeKeys.RECURRENCE_RULE]: en(O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE_CLEAR, O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE),
     ...U()
   }),
-  j = () => ({
+  V = () => ({
     [C.AuditLogChangeKeys.NAME]: ea(O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE, O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE),
     [C.AuditLogChangeKeys.ARCHIVED]: {
       true: O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_ARCHIVED,
@@ -302,7 +302,7 @@ let G = new u.default("AuditLogUtils"),
     [C.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: ea(O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
     ...U()
   }),
-  V = e => {
+  j = e => {
     let t = {
       ...U()
     };
@@ -540,8 +540,8 @@ let W = {
 
 function Y(e) {
   let t = w(C.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL, e),
-    s = J(C.AuditLogChangeKeys.ROLES_ADD, e).length > 0,
-    a = J(C.AuditLogChangeKeys.ROLES_REMOVE, e).length > 0;
+    s = Z(C.AuditLogChangeKeys.ROLES_ADD, e).length > 0,
+    a = Z(C.AuditLogChangeKeys.ROLES_REMOVE, e).length > 0;
   switch (!0) {
     case null != t:
       if ((null == t ? void 0 : t.newValue) != null) {
@@ -566,13 +566,13 @@ function Y(e) {
   }
 }
 
-function J(e, t) {
+function Z(e, t) {
   return null != t.changes ? t.changes.filter(t => t.key === e) : []
 }
 
-function Z(e) {
-  let t = J(C.AuditLogChangeKeys.ROLES_ADD, e),
-    s = J(C.AuditLogChangeKeys.ROLES_REMOVE, e),
+function X(e) {
+  let t = Z(C.AuditLogChangeKeys.ROLES_ADD, e),
+    s = Z(C.AuditLogChangeKeys.ROLES_REMOVE, e),
     a = null == t ? void 0 : t.map(e => {
       let {
         newValue: t
@@ -614,7 +614,7 @@ function Z(e) {
   }
 }
 
-function X(e) {
+function J(e) {
   switch (e.action) {
     case C.AuditLogActions.GUILD_UPDATE:
       return O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATE;

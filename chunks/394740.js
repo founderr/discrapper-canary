@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return R
   }
 }), n("47120");
 var i = n("735250"),
@@ -26,12 +26,12 @@ var i = n("735250"),
   p = n("695209"),
   O = n("792028");
 
-function C(e) {
+function R(e) {
   var t;
   let {
     onClose: a,
-    closePopout: C,
-    sound: R,
+    closePopout: R,
+    sound: C,
     channel: g
   } = e, L = (0, d.default)(), [v, D] = r.useState(!1), {
     location: M
@@ -42,8 +42,8 @@ function C(e) {
     analyticsLocations: P
   } = (0, c.default)(_.default.PREMIUM_UPSELL), {
     previewSound: U
-  } = (0, S.default)(R, null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : null), b = (0, h.PreviewButton)({
-    sound: R,
+  } = (0, S.default)(C, null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : null), b = (0, h.PreviewButton)({
+    sound: C,
     previewSound: U,
     tooltipPosition: "left"
   }), G = (0, o.isThemeLight)(L) ? n("537381") : n("341048");
@@ -62,8 +62,8 @@ function C(e) {
   let w = r.useCallback(() => {
     T.default.track(A.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
       location_section: A.AnalyticsSections.SOUNDBOARD_SOUND_PICKER_UPSELL
-    }), (0, E.navigateToPremiumMarketingPage)(), C()
-  }, [C]);
+    }), (0, E.navigateToPremiumMarketingPage)(), R()
+  }, [R]);
   return (0, i.jsxs)("div", {
     className: s()(O.premiumPromo, p.container),
     children: [(0, i.jsx)(l.Clickable, {

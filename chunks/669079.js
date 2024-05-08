@@ -74,8 +74,8 @@ var i, r, a = n("278074"),
 let N = f.default.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
   p = [N, ...["discordapp.com/gifts", "discord.com/gifts"].map(e => f.default.escape(e))].join("|"),
   O = RegExp("(?: |^|https?://)(?:".concat(p, ")/([a-z0-9-]+)"), "gi"),
-  C = [...["discord.com/billing/promotions", "promos.discord.gg"].map(e => f.default.escape(e))].join("|"),
-  R = RegExp("(?: |^|https?://)(?:".concat(C, ")/([a-z0-9-]+)"), "gi"),
+  R = [...["discord.com/billing/promotions", "promos.discord.gg"].map(e => f.default.escape(e))].join("|"),
+  C = RegExp("(?: |^|https?://)(?:".concat(R, ")/([a-z0-9-]+)"), "gi"),
   g = (e, t) => Array(t).fill(void 0).map(() => "[".concat("abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789", "]{").concat(e, "}")).join("-?"),
   L = g(4, 4),
   v = g(4, 6),
@@ -110,7 +110,7 @@ let k = e => (null == e ? void 0 : e.type) === h.MessageTypes.CUSTOM_GIFT && (nu
     if (null == e) return [];
     let n = new Set;
     for (; null != (t = O.exec(e)) && n.size < 3;) n.add(w(t[1]));
-    for (; null != (t = R.exec(e)) && n.size < 3;) n.add(w(t[1]));
+    for (; null != (t = C.exec(e)) && n.size < 3;) n.add(w(t[1]));
     return Array.from(n)
   };
 

@@ -28,11 +28,11 @@ function _(e) {
     secondaryColor: null
   };
   let O = null == E ? void 0 : E.getPreviewThemeColors(I),
-    C = null !== (t = null == O ? void 0 : O[0]) && void 0 !== t ? t : (0, i.hex2int)(N),
-    R = null !== (n = null == O ? void 0 : O[1]) && void 0 !== n ? n : (0, i.hex2int)(p);
+    R = null !== (t = null == O ? void 0 : O[0]) && void 0 !== t ? t : (0, i.hex2int)(N),
+    C = null !== (n = null == O ? void 0 : O[1]) && void 0 !== n ? n : (0, i.hex2int)(p);
   return {
-    theme: h ? S : null !== (_ = (0, u.getProfileTheme)(C)) && void 0 !== _ ? _ : S,
-    primaryColor: C,
-    secondaryColor: R
+    theme: h ? S : null !== (_ = (0, u.getProfileTheme)(R)) && void 0 !== _ ? _ : S,
+    primaryColor: R,
+    secondaryColor: C
   }
 }

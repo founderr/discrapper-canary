@@ -37,10 +37,10 @@ t.default = function(e) {
         null != O && G(null), f.current = !1
       }
     }
-  }, [O, t.id, c, D, S]), j = n.useCallback(async e => {
+  }, [O, t.id, c, D, S]), V = n.useCallback(async e => {
     let t = e.field_type === l.VerificationFormFieldTypes.TERMS ? [e, ...M] : [...M, e];
     await F(t)
-  }, [M, F]), V = n.useCallback(async (e, t) => {
+  }, [M, F]), j = n.useCallback(async (e, t) => {
     if (M[e] === t) return;
     let s = [...M];
     s[e] = t, await F(s)
@@ -66,7 +66,7 @@ t.default = function(e) {
       guildId: t.id,
       onSave: C
     }), !y && !v && (0, a.jsx)(o.default, {
-      addFormField: j,
+      addFormField: V,
       guild: t
     }), h.map(e => (0, A.getFormFieldBuilderComponent)({
       dropHoveredIndex: O,
@@ -76,7 +76,7 @@ t.default = function(e) {
       isDragEnabled: !1,
       submittedGuildJoinRequestsCount: s,
       removeFormField: K,
-      updateFormField: V,
+      updateFormField: j,
       updateFormFieldOrder: b,
       canRemove: !0,
       actionsLocation: S ? "side" : "footer"
@@ -84,7 +84,7 @@ t.default = function(e) {
   });
   return H ? (0, a.jsxs)(a.Fragment, {
     children: [!S && w, !P && (0, a.jsx)(r.default, {
-      addFormField: j,
+      addFormField: V,
       showManualApprovalWarning: !S && !(p > 0),
       guild: t,
       showHeader: !S
@@ -96,12 +96,12 @@ t.default = function(e) {
       isDragEnabled: x,
       submittedGuildJoinRequestsCount: s,
       removeFormField: K,
-      updateFormField: V,
+      updateFormField: j,
       updateFormFieldOrder: b,
       canRemove: !(S && m.length <= 1),
       actionsLocation: S ? "side" : "footer"
     })), P && !v && (0, a.jsx)(d.default, {
-      addFormField: j,
+      addFormField: V,
       guild: t
     })]
   }) : w

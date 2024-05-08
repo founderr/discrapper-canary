@@ -67,15 +67,15 @@ function I(e) {
       clearTimeout(e)
     }
   }, [m]);
-  let C = t === u.ImageReadyStates.READY && Date.now() - A < 200,
-    R = (0, a.useTransition)(h && null != O, C ? c : _),
+  let R = t === u.ImageReadyStates.READY && Date.now() - A < 200,
+    C = (0, a.useTransition)(h && null != O, R ? c : _),
     g = (0, a.useTransition)(h && N, E);
   return (0, i.jsxs)("div", {
     className: d.loadingOverlay,
     style: {
       aspectRatio: n
     },
-    children: [S, R((e, t) => t && (0, i.jsx)(a.animated.img, {
+    children: [S, C((e, t) => t && (0, i.jsx)(a.animated.img, {
       style: {
         ...f,
         ...e

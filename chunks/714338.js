@@ -32,7 +32,7 @@ function O(e, t) {
   }), t(n, i))
 }
 
-function C(e) {
+function R(e) {
   for (let [t, n] of Object.entries(e)) {
     if (null == n) continue;
     let e = m();
@@ -66,10 +66,10 @@ function C(e) {
     c = e
   },
   enable() {
-    !I && (I = !0, this.checkDupes(c), C(c))
+    !I && (I = !0, this.checkDupes(c), R(c))
   },
   enableTemp(e) {
-    E.push(c), c = e, C(e), I = !0
+    E.push(c), c = e, R(e), I = !0
   },
   disableTemp() {
     let e = E.pop();

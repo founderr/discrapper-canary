@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return v
   },
   getInitialEventStartDate: function() {
-    return R
+    return C
   },
   getNextRecurrenceIdInEvent: function() {
     return B
@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return w
   },
   getRecurrenceOptions: function() {
-    return C
+    return R
   },
   getRecurrenceStatus: function() {
     return W
@@ -80,7 +80,7 @@ let E = 365,
   p = [s.RRule.SU.weekday, s.RRule.MO.weekday, s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday, s.RRule.FR.weekday, s.RRule.SA.weekday],
   O = new Set([0, 6]);
 
-function C(e) {
+function R(e) {
   var t;
   let n = e.toDate(),
     i = Math.ceil(n.getDate() / 7),
@@ -121,7 +121,7 @@ function C(e) {
     label: c.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS
   }), a
 }
-let R = () => {
+let C = () => {
     let e = a()().add(1, "hour"),
       t = e.hour();
     return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0)

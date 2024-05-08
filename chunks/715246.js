@@ -23,8 +23,8 @@ var i, r, a = n("735250"),
   N = n("189595"),
   p = n("27268"),
   O = n("259773"),
-  C = n("80618"),
-  R = n("786048"),
+  R = n("80618"),
+  C = n("786048"),
   g = n("897353"),
   L = n("181058"),
   v = n("810090"),
@@ -136,7 +136,7 @@ class F extends(i = s.Component) {
       onClick: i,
       tabIndex: s ? -1 : 0,
       "aria-label": y.default.Messages.PAUSE,
-      children: (0, a.jsx)(R.default, {
+      children: (0, a.jsx)(C.default, {
         className: P.controlIcon
       }, "pause")
     }) : null != t && t === n ? (0, a.jsx)(c.Clickable, {
@@ -192,7 +192,7 @@ class F extends(i = s.Component) {
         ref: this.setDurationRef
       }), (0, a.jsx)("div", {
         className: U.flex,
-        children: (0, a.jsx)(C.default, {
+        children: (0, a.jsx)(R.default, {
           ref: this.setVolumeButtonRef,
           muted: r,
           value: I,
@@ -282,7 +282,7 @@ class Y extends s.Component {
   render() {
     let {
       play: e
-    } = this.state, t = e ? g.default : R.default;
+    } = this.state, t = e ? g.default : C.default;
     return (0, a.jsx)(_.default.div, {
       className: P.playPausePop,
       style: this.getAnimatedStyle(),

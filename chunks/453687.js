@@ -68,20 +68,20 @@ function c(e, t, n) {
     N = !m && (null == n ? void 0 : n.hasTimestamp) !== !1,
     p = l(e, t),
     O = o(e),
-    C = m ? "" : "".concat(d ? O : p, " ").concat(i.MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID);
+    R = m ? "" : "".concat(d ? O : p, " ").concat(i.MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID);
   if (A) {
     let t = s(e);
-    C += " ".concat(t)
+    R += " ".concat(t)
   }
   if (S) {
     let t = _(e);
-    C += " ".concat(t)
+    R += " ".concat(t)
   }
   if (N) {
     let t = u(e);
-    C += " ".concat(i.MESSAGE_PRE_TIMESTAMP_PAUSE_LABEL_SEGMENT_ID, " ").concat(t)
+    R += " ".concat(i.MESSAGE_PRE_TIMESTAMP_PAUSE_LABEL_SEGMENT_ID, " ").concat(t)
   }
-  return C.trim()
+  return R.trim()
 }
 
 function E(e) {

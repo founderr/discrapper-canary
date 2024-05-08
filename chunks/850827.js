@@ -22,8 +22,8 @@ var r = n("120356"),
   N = n("606925"),
   p = n("719216"),
   O = n("429589"),
-  C = n("276149"),
-  R = n("636245"),
+  R = n("276149"),
+  C = n("636245"),
   g = n("697761"),
   L = n("611459"),
   v = n("544671"),
@@ -98,7 +98,7 @@ t.default = (0, d.default)(e => {
       }
       if ((0, c.isStageActivity)(t)) {
         let e = (0, c.unpackStageChannelParty)(t);
-        return null == e ? null : (0, i.jsx)(R.default, {
+        return null == e ? null : (0, i.jsx)(C.default, {
           guildId: e.guildId,
           channelId: e.channelId,
           color: G,
@@ -113,7 +113,7 @@ t.default = (0, d.default)(e => {
         look: w,
         applicationStream: r,
         onAction: B
-      }, "watch-button") : Z && null != X ? (0, i.jsx)(C.default, {
+      }, "watch-button") : Z && null != X ? (0, i.jsx)(R.default, {
         color: G,
         look: w,
         hangStatusChannel: X,

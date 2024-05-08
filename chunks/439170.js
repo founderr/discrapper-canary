@@ -28,9 +28,9 @@ var i, r, a, s = n("392711"),
   N = n("885110"),
   p = n("594174"),
   O = n("981631"),
-  C = n("689938");
+  R = n("689938");
 
-function R(e, t, n) {
+function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -50,11 +50,11 @@ function v(e, t, n, i) {
         type: "GROUP", key: t, id: t, get title() {
           switch (t) {
             case O.StatusTypes.ONLINE:
-              return C.default.Messages.STATUS_ONLINE;
+              return R.default.Messages.STATUS_ONLINE;
             case O.StatusTypes.OFFLINE:
-              return C.default.Messages.STATUS_OFFLINE;
+              return R.default.Messages.STATUS_OFFLINE;
             default:
-              return C.default.Messages.STATUS_UNKNOWN
+              return R.default.Messages.STATUS_UNKNOWN
           }
         }, count: n, index: i
       };
@@ -168,7 +168,7 @@ class y {
     })
   }
   constructor(e, t) {
-    R(this, "guildId", void 0), R(this, "listId", void 0), R(this, "ownerId", void 0), R(this, "rows", []), R(this, "groups", []), R(this, "members", {}), R(this, "version", 0), this.guildId = e, this.listId = t, this.updateOwnerId()
+    C(this, "guildId", void 0), C(this, "listId", void 0), C(this, "ownerId", void 0), C(this, "rows", []), C(this, "groups", []), C(this, "members", {}), C(this, "version", 0), this.guildId = e, this.listId = t, this.updateOwnerId()
   }
 }
 let P = new class e {
@@ -197,7 +197,7 @@ let P = new class e {
     this._guildLists = {}
   }
   constructor() {
-    R(this, "_guildLists", {})
+    C(this, "_guildLists", {})
   }
 };
 
@@ -235,7 +235,7 @@ class k extends(r = _.default.Store) {
     return P.get(e, M(t)).rows
   }
 }
-R(k, "displayName", "ChannelMemberStore"), t.default = new k(c.default, {
+C(k, "displayName", "ChannelMemberStore"), t.default = new k(c.default, {
   CONNECTION_OPEN: U,
   OVERLAY_INITIALIZE: U,
   GUILD_MEMBER_LIST_UPDATE: function(e) {

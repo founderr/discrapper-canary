@@ -24,8 +24,8 @@ function E(e) {
     isBurstReaction: T,
     analyticsObject: f
   } = e, S = a.default.getChannel(s.default.getChannelId()), h = null == S ? void 0 : S.getGuildId(), A = r.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), m = null != S ? r.default.getDisambiguatedEmojiContext(S.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], N = A.slice(0, r.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), p = null != h ? r.default.getGuildEmoji(h) : [], O = Object.values(null !== (t = r.default.getDisambiguatedEmojiContext(null == S ? void 0 : S.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => e += t.length, 0), {
-    topEmojis: C,
-    newlyAddedEmojis: R
+    topEmojis: R,
+    newlyAddedEmojis: C
   } = (0, u.getTopAndNewlyAddedEmojis)({
     guildId: null == S ? void 0 : S.getGuildId(),
     pickerIntention: n
@@ -33,8 +33,8 @@ function E(e) {
     visibleTopEmojis: g,
     visibleNewlyAddedEmojis: L
   } = (0, l.getEmojiHotrail)({
-    topEmojis: C,
-    newlyAddedEmojis: R,
+    topEmojis: R,
+    newlyAddedEmojis: C,
     rowSize: I
   });
   i.default.trackWithMetadata(n === _.EmojiIntention.REACTION ? d.AnalyticEvents.REACTION_PICKER_OPENED : d.AnalyticEvents.EXPRESSION_PICKER_OPENED, {

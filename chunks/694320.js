@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return R
   }
 });
 var i = n("735250"),
@@ -37,13 +37,13 @@ function O() {
   })
 }
 
-function C(e) {
+function R(e) {
   var t;
   let {
     className: n,
     iconOnly: a,
-    remaining: C
-  } = e, R = (0, o.useStateFromStores)([T.default, I.default], () => {
+    remaining: R
+  } = e, C = (0, o.useStateFromStores)([T.default, I.default], () => {
     let e = I.default.getChannel(T.default.getChannelId());
     return (null == e ? void 0 : e.isPrivate()) ? A.AnalyticsPages.DM_CHANNEL : A.AnalyticsPages.GUILD_CHANNEL
   }), {
@@ -53,15 +53,15 @@ function C(e) {
     h.default.track(A.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: "longer messages inline",
       location: {
-        location_page: R,
+        location_page: C,
         location_section: A.AnalyticsSections.CHANNEL_TEXT_AREA
       },
       location_stack: g
     })
-  }, [R, g]), (M || D) && C < 0) ? (0, i.jsx)(E.default, {
+  }, [C, g]), (M || D) && R < 0) ? (0, i.jsx)(E.default, {
     type: m.PremiumUpsellTypes.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
     subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
-    context: C,
+    context: R,
     discountOffer: L,
     trialOffer: v,
     children: N.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({

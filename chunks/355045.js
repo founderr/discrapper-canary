@@ -25,12 +25,12 @@ t.default = function(e) {
     closeLayer: t,
     guild: n,
     onCtaVisibilityChange: a
-  } = e, O = (0, o.useStateFromStores)([c.default], () => c.default.getCurrentUser()), C = (0, o.useStateFromStores)([E.default], () => E.default.boostSlots), {
-    analyticsLocations: R
-  } = (0, d.default)(), g = r.useMemo(() => Object.keys(C).filter(e => {
-    let t = C[e];
+  } = e, O = (0, o.useStateFromStores)([c.default], () => c.default.getCurrentUser()), R = (0, o.useStateFromStores)([E.default], () => E.default.boostSlots), {
+    analyticsLocations: C
+  } = (0, d.default)(), g = r.useMemo(() => Object.keys(R).filter(e => {
+    let t = R[e];
     return null != t.premiumGuildSubscription && t.premiumGuildSubscription.guildId === n.id
-  }), [C, n.id]);
+  }), [R, n.id]);
   return (0, i.jsxs)("div", {
     className: p.guildStatus,
     children: [(0, i.jsx)(I.default, {
@@ -98,7 +98,7 @@ t.default = function(e) {
             initialPlanId: null,
             subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
             isGift: !0,
-            analyticsLocations: R,
+            analyticsLocations: C,
             analyticsObject: {
               page: A.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
               section: A.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
@@ -121,7 +121,7 @@ t.default = function(e) {
           (0, _.default)({
             initialPlanId: null,
             subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
-            analyticsLocations: R,
+            analyticsLocations: C,
             analyticsObject: {
               page: A.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
               section: A.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,

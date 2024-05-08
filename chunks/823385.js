@@ -20,8 +20,8 @@ var r, a = n("392711"),
   N = n("430824"),
   p = n("496675"),
   O = n("306680"),
-  C = n("944486"),
-  R = n("914010"),
+  R = n("944486"),
+  C = n("914010"),
   g = n("9156"),
   L = n("483360"),
   v = n("823379"),
@@ -62,7 +62,7 @@ function W(e) {
   let {
     query: n,
     queryMode: r
-  } = e, a = (0, c.isSplitMessagesTabAndOnMessagesTab)() ? void 0 : null !== (t = R.default.getGuildId()) && void 0 !== t ? t : void 0, s = new Set(["user:".concat(f.default.getId())]);
+  } = e, a = (0, c.isSplitMessagesTabAndOnMessagesTab)() ? void 0 : null !== (t = C.default.getGuildId()) && void 0 !== t ? t : void 0, s = new Set(["user:".concat(f.default.getId())]);
   null != a && s.add("guild:".concat(a)), i = null != i ? i : new d.default(K, U, null != r ? 100 : 5, {
     frecencyBoosters: !0,
     blacklist: s
@@ -80,8 +80,8 @@ function K(e, t) {
     return !0
   }(e = "" === (t = t.trim()).trim() ? function() {
     var e, t;
-    let n = null !== (e = R.default.getGuildId()) && void 0 !== e ? e : void 0,
-      i = null !== (t = C.default.getChannelId()) && void 0 !== t ? t : void 0;
+    let n = null !== (e = C.default.getGuildId()) && void 0 !== e ? e : void 0,
+      i = null !== (t = R.default.getChannelId()) && void 0 !== t ? t : void 0;
     switch (k) {
       case d.AutocompleterResultTypes.USER: {
         let e = f.default.getId();
@@ -107,14 +107,14 @@ function K(e, t) {
       case d.AutocompleterResultTypes.TEXT_CHANNEL:
         return L.default.queryChannels({
           query: "",
-          guildId: R.default.getGuildId(),
+          guildId: C.default.getGuildId(),
           limit: 100,
           fuzzy: !0
         });
       case d.AutocompleterResultTypes.VOICE_CHANNEL:
         return L.default.queryChannels({
           query: "",
-          guildId: R.default.getGuildId(),
+          guildId: C.default.getGuildId(),
           limit: 100,
           fuzzy: !0,
           filter: () => !0,
@@ -157,7 +157,7 @@ function K(e, t) {
   }() : e, F) && (F = e, ! function(e, t) {
     switch (k) {
       case d.AutocompleterResultTypes.USER: {
-        let t = N.default.getGuild(R.default.getGuildId());
+        let t = N.default.getGuild(C.default.getGuildId());
         e.unshift((0, d.createHeaderResult)(null != t ? M.default.Messages.QUICKSWITCHER_QUERYMODE_USERS_IN_GUILD.format({
           name: t.name
         }) : M.default.Messages.QUICKSWITCHER_QUERYMODE_USERS)), B = e;
@@ -247,10 +247,10 @@ let X = new Z(u.default, {
       queryMode: a
     } = e;
     if (null == i) return !1;
-    let s = null !== (t = R.default.getGuildId()) && void 0 !== t ? t : null;
+    let s = null !== (t = C.default.getGuildId()) && void 0 !== t ? t : null;
     if (k !== a) {
       i.setResultTypes(null != a ? [a] : U), i.setLimit(null != a ? 100 : 5);
-      let e = null !== (n = R.default.getGuildId()) && void 0 !== n ? n : void 0;
+      let e = null !== (n = C.default.getGuildId()) && void 0 !== n ? n : void 0;
       a === d.AutocompleterResultTypes.USER && null != e ? i.setOptions({
         userFilters: {
           guild: e,

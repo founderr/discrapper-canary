@@ -42,8 +42,8 @@ let m = {
   },
   p = "",
   O = !1,
-  C = "unset",
-  R = null,
+  R = "unset",
+  C = null,
   g = A.DISCOVERY_ALL_CATEGORIES_ID,
   L = A.DISCOVERY_ALL_CATEGORIES_ID,
   v = null,
@@ -75,13 +75,13 @@ class U extends(r = E.default.Store) {
     this.waitFor(f.default)
   }
   isFetching() {
-    return O || null == R || null == S.default.lastFetched
+    return O || null == C || null == S.default.lastFetched
   }
   isFetchingSearch() {
-    return "fetching" === C
+    return "fetching" === R
   }
   hasSearchError() {
-    return "failed" === C
+    return "failed" === R
   }
   getDiscoverableGuilds() {
     return N
@@ -144,7 +144,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(s = U) ? Object.defineProperty
       offset: r,
       limit: a
     } = e;
-    O = !1, R = Date.now(), M = (0, T.makeAnalyticsID)();
+    O = !1, C = Date.now(), M = (0, T.makeAnalyticsID)();
     let s = c().map(t, P);
     N = {
       ...N,
@@ -188,7 +188,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(s = U) ? Object.defineProperty
       categoryId: t,
       guilds: n
     } = e;
-    O = !1, R = Date.now();
+    O = !1, C = Date.now();
     let i = c().map(n, P);
     N = {
       ...N,
@@ -219,7 +219,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(s = U) ? Object.defineProperty
       query: i,
       categoryId: r
     } = e;
-    d()("search" === n, "This action only supports search it seems"), C = "fetching", N = {
+    d()("search" === n, "This action only supports search it seems"), R = "fetching", N = {
       ...N,
       [n]: {
         ...N[n],
@@ -262,7 +262,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(s = U) ? Object.defineProperty
           }
         }
       }
-    }, p = o, C = "succeeded"
+    }, p = o, R = "succeeded"
   },
   GUILD_DISCOVERY_SEARCH_FETCH_FAILURE: function(e) {
     var t;
@@ -271,7 +271,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(s = U) ? Object.defineProperty
       query: i,
       categoryId: r
     } = e;
-    d()("search" === n, "This action only supports search it seems"), C = "failed", N = {
+    d()("search" === n, "This action only supports search it seems"), R = "failed", N = {
       ...N,
       [n]: {
         ...N[n],

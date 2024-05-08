@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CommandClickable: function() {
-    return R
+    return C
   },
   default: function() {
     return g
@@ -80,7 +80,7 @@ function O(e, t, n, r) {
   })) : a()
 }
 
-function C(e) {
+function R(e) {
   var t;
   let {
     node: n,
@@ -99,14 +99,14 @@ function C(e) {
       hasUseAppCommandsPerm: I.default.can(h.Permissions.USE_APPLICATION_COMMANDS, S)
     }
   }), {
-    command: C
-  } = l.useCommand(S, null !== (t = n.commandKey) && void 0 !== t ? t : ""), R = _.UseLegacyChatInput.useSetting(), g = r.useMemo(() => {
-    if (null == C || null == S || C.name !== n.commandName || R) return !1;
+    command: R
+  } = l.useCommand(S, null !== (t = n.commandKey) && void 0 !== t ? t : ""), C = _.UseLegacyChatInput.useSetting(), g = r.useMemo(() => {
+    if (null == R || null == S || R.name !== n.commandName || C) return !1;
     let e = S.isPrivate();
     if ((0, d.computeIsReadOnlyThread)(S) || !e && !N) return !1;
-    let t = (null == C ? void 0 : C.applicationId) === A.BuiltInSectionId.BUILT_IN;
+    let t = (null == R ? void 0 : R.applicationId) === A.BuiltInSectionId.BUILT_IN;
     return !!e || !!t || !!p || !1
-  }, [S, C, N, p, n.commandName, R]), L = r.useCallback(e => {
+  }, [S, R, N, p, n.commandName, C]), L = r.useCallback(e => {
     null == e || e.stopPropagation(), null != S && null != n.commandName && null != n.commandKey && O(S.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
   }, [S, n.commandKey, n.commandName]);
   return g ? (0, i.jsx)(s.Tooltip, {
@@ -130,7 +130,7 @@ function C(e) {
   })
 }
 
-function R(e) {
+function C(e) {
   let {
     commandId: t,
     commandName: n,
@@ -162,7 +162,7 @@ function R(e) {
 
 function g(e) {
   return {
-    react: (e, t, n) => (0, i.jsx)(C, {
+    react: (e, t, n) => (0, i.jsx)(R, {
       node: e,
       output: t,
       state: n

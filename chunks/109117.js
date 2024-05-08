@@ -41,10 +41,10 @@ async function c() {
         return (null == n ? void 0 : n.storedInformation) != null && 1 === n.storedInformation[e]
       }
 
-      function C(e) {
+      function R(e) {
         return (null == n ? void 0 : n.storedInformation) == null || null == n.storedInformation[e] ? null : n.storedInformation[e]
       }
-      let R = {
+      let C = {
         did_crash: t,
         renderer_crash_reason: null !== (d = null == n ? void 0 : n.rendererCrashReason) && void 0 !== d ? d : null,
         renderer_crash_exit_code: null !== (_ = null == n ? void 0 : n.rendererCrashExitCode) && void 0 !== _ ? _ : null,
@@ -53,8 +53,8 @@ async function c() {
         was_sending_stream: O(i.StoredCrashInformation.IsSendingStream),
         was_receiving_video: O(i.StoredCrashInformation.IsReceivingVideo),
         was_receiving_stream: O(i.StoredCrashInformation.IsReceivingStream),
-        video_media_session_id: C(i.StoredCrashInformation.VideoMediaSessionId),
-        stream_media_session_id: C(i.StoredCrashInformation.StreamMediaSessionId),
+        video_media_session_id: R(i.StoredCrashInformation.VideoMediaSessionId),
+        stream_media_session_id: R(i.StoredCrashInformation.StreamMediaSessionId),
         last_memory_usage_kb: null !== (c = null == n ? void 0 : null === (r = n.lastMemoryInformation) || void 0 === r ? void 0 : r.memoryUsageKB) && void 0 !== c ? c : null,
         last_used_js_heap_size_kb: null !== (E = null == n ? void 0 : null === (a = n.lastMemoryInformation) || void 0 === a ? void 0 : a.usedJSHeapSizeKB) && void 0 !== E ? E : null,
         last_memory_usage_uptime: null !== (I = null == n ? void 0 : null === (s = n.lastMemoryInformation) || void 0 === s ? void 0 : s.uptimeSeconds) && void 0 !== I ? I : null,
@@ -69,7 +69,7 @@ async function c() {
         minidump_relative_crash_address: null,
         minidump_exception_module_version: null,
         minidump_exception_module_code_id: null,
-        ...R
+        ...C
       };
       console.log("AppCrashedFatalReport lastCrash:", n, e);
       let g = null == n ? void 0 : n.minidumpInformation;
@@ -80,7 +80,7 @@ async function c() {
         minidump_relative_crash_address: null !== (m = null == g ? void 0 : g.relativeCrashAddress) && void 0 !== m ? m : null,
         minidump_exception_module_version: null !== (N = null == g ? void 0 : g.exceptionModuleVersion) && void 0 !== N ? N : null,
         minidump_exception_module_code_id: null !== (p = null == g ? void 0 : g.exceptionModuleCodeId) && void 0 !== p ? p : null,
-        ...R
+        ...C
       }
     }(a, s, n);
   o.default.track(u.AnalyticEvents.APP_NATIVE_CRASH, l), r.Storage.set(_, {

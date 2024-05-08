@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("367790"),
   p = n("895924"),
   O = n("581364"),
-  C = n("56801"),
-  R = n("342687"),
+  R = n("56801"),
+  C = n("342687"),
   g = n("826298"),
   L = n("689079"),
   v = n("981631"),
@@ -173,7 +173,7 @@ t.default = r.forwardRef(function(e, t) {
       let a = Y[t.sectionIndex],
         s = a.data[t.sectionRowIndex],
         o = "".concat(a.section.id, ":").concat(null !== (r = null == s ? void 0 : s.id) && void 0 !== r ? r : e);
-      if (null == s || a.section.id !== s.applicationId && a.section.id !== L.BuiltInSectionId.FRECENCY || s.inputType === p.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(R.default, {}, o);
+      if (null == s || a.section.id !== s.applicationId && a.section.id !== L.BuiltInSectionId.FRECENCY || s.inputType === p.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(C.default, {}, o);
       let l = F.find(e => e.id === s.applicationId);
       return (0, i.jsx)(f.default.NewCommand, {
         index: e,
@@ -197,7 +197,7 @@ t.default = r.forwardRef(function(e, t) {
     className: M.outerWrapper,
     innerClassName: M.wrapper,
     onMouseDown: b,
-    children: [(0, i.jsx)(C.default, {
+    children: [(0, i.jsx)(R.default, {
       className: M.rail,
       channel: n,
       sections: F,

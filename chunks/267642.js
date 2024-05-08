@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return V
   },
   getShortenedTierName: function() {
-    return C
+    return R
   },
   getTierName: function() {
     return O
@@ -70,7 +70,7 @@ n.r(t), n.d(t, {
     return D
   },
   minimumRequiredTierForGuildFeature: function() {
-    return R
+    return C
   }
 }), n("411104"), n("47120"), n("724458");
 var i, r, a = n("392711"),
@@ -289,7 +289,7 @@ function O(e) {
   }
 }
 
-function C(e) {
+function R(e) {
   switch (e) {
     case E.BoostedGuildTiers.NONE:
       return T.default.Messages.PREMIUM_GUILD_TIER_0;
@@ -303,7 +303,7 @@ function C(e) {
       throw Error("Not a valid tier type")
   }
 }
-let R = s().memoize(e => (0, I.BoostedGuildFeatures)[E.BoostedGuildTiers.TIER_1].features.includes(e) ? E.BoostedGuildTiers.TIER_1 : (0, I.BoostedGuildFeatures)[E.BoostedGuildTiers.TIER_2].features.includes(e) ? E.BoostedGuildTiers.TIER_2 : (0, I.BoostedGuildFeatures)[E.BoostedGuildTiers.TIER_3].features.includes(e) ? E.BoostedGuildTiers.TIER_3 : null),
+let C = s().memoize(e => (0, I.BoostedGuildFeatures)[E.BoostedGuildTiers.TIER_1].features.includes(e) ? E.BoostedGuildTiers.TIER_1 : (0, I.BoostedGuildFeatures)[E.BoostedGuildTiers.TIER_2].features.includes(e) ? E.BoostedGuildTiers.TIER_2 : (0, I.BoostedGuildFeatures)[E.BoostedGuildTiers.TIER_3].features.includes(e) ? E.BoostedGuildTiers.TIER_3 : null),
   g = e => {
     if (e === E.BoostedGuildTiers.NONE) return E.AnalyticsObjectTypes.NONE;
     if (e === E.BoostedGuildTiers.TIER_1) return E.AnalyticsObjectTypes.TIER_1;

@@ -26,8 +26,8 @@ var i, r, a = n("735250"),
   N = n("587446"),
   p = n("781391"),
   O = n("210887"),
-  C = n("740492"),
-  R = n("301822"),
+  R = n("740492"),
+  C = n("301822"),
   g = n("153124"),
   L = n("626135"),
   v = n("238302"),
@@ -148,7 +148,7 @@ j.Basic = e => {
     delay: n
   } = s.useContext(x), {
     analyticsLocations: i
-  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([O.default, C.default, D.default], () => [O.default.theme, null == D.default.gradientPreset, C.default.useSystemTheme === b.SystemThemeState.ON]), _ = e => {
+  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([O.default, R.default, D.default], () => [O.default.theme, null == D.default.gradientPreset, R.default.useSystemTheme === b.SystemThemeState.ON]), _ = e => {
     (0, v.resetBackgroundGradientPreset)(), F({
       isPersisted: !0,
       analyticsLocations: i,
@@ -194,13 +194,13 @@ j.Basic = e => {
     delay: c
   } = s.useContext(x), {
     analyticsLocations: S
-  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [N, O, C] = (0, d.useStateFromStoresArray)([D.default], () => {
+  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [N, O, R] = (0, d.useStateFromStoresArray)([D.default], () => {
     var e;
     return [D.default.isPreview, D.default.isCoachmark, null === (e = D.default.gradientPreset) || void 0 === e ? void 0 : e.id]
   }), [g, L] = s.useState(!1), [P, G] = s.useState(-1), w = (0, d.useStateFromStores)([I.default], () => I.default.useReducedMotion), V = (null === (i = (0, A.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === U.PremiumSubscriptionSKUs.TIER_2;
   s.useEffect(() => {
-    (P === y.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || C === _.BackgroundGradientPresetId.EASTER_EGG) && L(!0)
-  }, [P, u, C]);
+    (P === y.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || R === _.BackgroundGradientPresetId.EASTER_EGG) && L(!0)
+  }, [P, u, R]);
   let j = (e, t) => {
     if ((0, v.updateBackgroundGradientPreset)(e.id), F({
         isPersisted: !N,
@@ -252,7 +252,7 @@ j.Basic = e => {
         return t !== _.BackgroundGradientPresetId.EASTER_EGG
       }).map((e, t) => (0, a.jsx)(M.GradientThemeSelection, {
         preset: e,
-        isSelected: C === e.id,
+        isSelected: R === e.id,
         onSelect: () => j(e, t),
         disabled: l,
         tabIndex: 0 !== t || l ? void 0 : 0
@@ -270,9 +270,9 @@ j.Basic = e => {
           className: B.easterEggSelection,
           children: [(0, a.jsx)(M.GradientThemeSelection, {
             preset: e,
-            isSelected: C === _.BackgroundGradientPresetId.EASTER_EGG,
+            isSelected: R === _.BackgroundGradientPresetId.EASTER_EGG,
             onSelect: () => j(e)
-          }), (0, a.jsx)(R.default, {
+          }), (0, a.jsx)(C.default, {
             importData: t,
             shouldAnimate: !w,
             className: B.sparkles

@@ -97,7 +97,7 @@ function F(e) {
     }
   })).map(e => e.userId).value()
 }
-class j extends(a = u.default.Store) {
+class V extends(a = u.default.Store) {
   get logs() {
     return S
   }
@@ -153,12 +153,12 @@ class j extends(a = u.default.Store) {
     return H
   }
 }
-E = "GuildSettingsAuditLogStore", (i = "displayName") in(n = j) ? Object.defineProperty(n, i, {
+E = "GuildSettingsAuditLogStore", (i = "displayName") in(n = V) ? Object.defineProperty(n, i, {
   value: E,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[i] = E, t.default = new j(o.default, {
+}) : n[i] = E, t.default = new V(o.default, {
   AUDIT_LOG_FETCH_START: function() {
     R = !0
   },

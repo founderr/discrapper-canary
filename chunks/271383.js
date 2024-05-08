@@ -22,8 +22,8 @@ var i, r, a, s, o, l, u = n("392711"),
   N = n("314897"),
   p = n("592125"),
   O = n("430824"),
-  C = n("372897");
-let R = new I.default("GuildMemberStore"),
+  R = n("372897");
+let C = new I.default("GuildMemberStore"),
   g = {},
   L = {},
   v = {},
@@ -178,7 +178,7 @@ function W(e) {
   } = e, I = g[n];
   if (null == I) return !1;
   let T = O.default.getGuild(n);
-  if (null == T) return R.warn("Guild ".concat(n, " not found during GUILD_MEMBER_UPDATE.")), !1;
+  if (null == T) return C.warn("Guild ".concat(n, " not found during GUILD_MEMBER_UPDATE.")), !1;
   I[i.id] = Y({
     userId: i.id,
     nick: r,
@@ -204,7 +204,7 @@ function K(e, t) {
   let n = g[e];
   if (null == n) return !1;
   let i = O.default.getGuild(e);
-  return null == i ? (R.warn("Guild ".concat(e, " not found during batchUpdateGuildMembers.")), !1) : (t.forEach(t => {
+  return null == i ? (C.warn("Guild ".concat(e, " not found during batchUpdateGuildMembers.")), !1) : (t.forEach(t => {
     var r;
     let a = n[t.user.id];
     n[t.user.id] = Y({
@@ -268,7 +268,7 @@ function X(e) {
   let t = g[e.guildId];
   if (null == t) return !1;
   let n = O.default.getGuild(e.guildId);
-  if (null == n) return R.warn("Guild ".concat(e.guildId, " not found during ").concat(e.type, ".")), !1;
+  if (null == n) return C.warn("Guild ".concat(e.guildId, " not found during ").concat(e.type, ".")), !1;
   for (let i of m.default.keys(t)) {
     let r = t[i];
     (null != r.roles && r.roles.length > 0 || null != r.colorString || null != r.hoistRoleId) && (t[i] = Y({
@@ -294,7 +294,7 @@ function Q(e) {
   } = e, n = g[t];
   if (null == n) return !1;
   let i = O.default.getGuild(t);
-  if (null == i) return R.warn("Guild ".concat(t, " not found during IMPERSONATE_UPDATE.")), !1;
+  if (null == i) return C.warn("Guild ".concat(t, " not found during IMPERSONATE_UPDATE.")), !1;
   let r = N.default.getId(),
     a = n[r];
   n[r] = Y({
@@ -408,7 +408,7 @@ class ee extends(r = c.default.Store) {
       n = g[e];
     if (null == n || null == n[t]) return !1;
     let i = n[t].flags;
-    return null != i && (0, h.hasFlag)(i, C.GuildMemberFlags.IS_GUEST)
+    return null != i && (0, h.hasFlag)(i, R.GuildMemberFlags.IS_GUEST)
   }
   getMemberIds(e) {
     if (null == e) return [];
@@ -584,7 +584,7 @@ l = "GuildMemberStore", (o = "displayName") in(s = ee) ? Object.defineProperty(s
     } = e, r = g[t];
     if (null == r) return !1;
     let a = O.default.getGuild(t);
-    if (null == a) return R.warn("Guild ".concat(t, " not found during GUILD_MEMBER_UPDATE.")), !1;
+    if (null == a) return C.warn("Guild ".concat(t, " not found during GUILD_MEMBER_UPDATE.")), !1;
     let s = r[n];
     if (null == s || !s.roles.includes(i)) return !1;
     s.roles = s.roles.filter(e => e !== i);
@@ -602,7 +602,7 @@ l = "GuildMemberStore", (o = "displayName") in(s = ee) ? Object.defineProperty(s
     } = e, r = g[t];
     if (null == r) return !1;
     let a = O.default.getGuild(t);
-    if (null == a) return R.warn("Guild ".concat(t, " not found during GUILD_MEMBER_UPDATE.")), !1;
+    if (null == a) return C.warn("Guild ".concat(t, " not found during GUILD_MEMBER_UPDATE.")), !1;
     let s = r[n];
     if (null == s || s.roles.includes(i)) return !1;
     s.roles.push(i);
@@ -619,7 +619,7 @@ l = "GuildMemberStore", (o = "displayName") in(s = ee) ? Object.defineProperty(s
     } = e, i = g[n];
     if (null == i) return !1;
     let r = O.default.getGuild(n);
-    if (null == r) return R.warn("Guild ".concat(n, " not found during GUILD_MEMBER_UPDATE.")), !1;
+    if (null == r) return C.warn("Guild ".concat(n, " not found during GUILD_MEMBER_UPDATE.")), !1;
     i[t.user.id] = Y({
       userId: t.user.id,
       nick: t.nick,

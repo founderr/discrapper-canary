@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return C
   }
 }), n("47120");
 var i = n("735250"),
@@ -25,7 +25,7 @@ var i = n("735250"),
   N = n("689938"),
   p = n("310264");
 let O = (e, t) => "".concat(e, ":").concat(t),
-  C = r.forwardRef(function(e, t) {
+  R = r.forwardRef(function(e, t) {
     let n, {
         emoji: r,
         isFavorite: a,
@@ -37,8 +37,8 @@ let O = (e, t) => "".concat(e, ":").concat(t),
         columnIndex: f,
         rowIndex: h,
         size: O,
-        surrogateCodePoint: C,
-        allowAnimatedEmoji: R,
+        surrogateCodePoint: R,
+        allowAnimatedEmoji: C,
         selectedItemClassName: g,
         inNitroLockedSection: L,
         ...v
@@ -78,15 +78,15 @@ let O = (e, t) => "".concat(e, ":").concat(t),
           rowIndex: h,
           emoji: r,
           size: O,
-          surrogateCodePoint: C,
-          allowAnimatedEmoji: R,
+          surrogateCodePoint: R,
+          allowAnimatedEmoji: C,
           isLocked: y
         })
       })
     })
   });
 
-function R(e) {
+function C(e) {
   let {
     descriptor: t,
     emojiItemKey: a,
@@ -97,7 +97,7 @@ function R(e) {
     onSelect: A,
     isScrolling: m,
     isUsingKeyboardNavigation: p,
-    showEmojiFavoriteTooltip: R,
+    showEmojiFavoriteTooltip: C,
     surrogateCodePoint: g,
     selectedItemClassName: L,
     getEmojiItemProps: v,
@@ -148,7 +148,7 @@ function R(e) {
       ...d,
       key: a,
       ref: H
-    }, B !== O(K, c) && (0, i.jsx)(C, {
+    }, B !== O(K, c) && (0, i.jsx)(R, {
       ref: o,
       emoji: Y,
       isFavorite: F.isFavoriteEmojiWithoutFetchingLatest(Y),
@@ -180,7 +180,7 @@ function R(e) {
       inNitroLockedSection: k
     }))
   };
-  return R ? (0, i.jsx)(l.Tooltip, {
+  return C ? (0, i.jsx)(l.Tooltip, {
     text: N.default.Messages.EMOJI_FAVORITE_TOOLTIP.format({
       key: (0, h.isMac)() ? "Opt" : "Alt"
     }),

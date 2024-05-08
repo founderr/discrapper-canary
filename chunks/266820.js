@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return C
   }
 });
 var i = n("668781"),
@@ -25,12 +25,12 @@ var i = n("668781"),
   N = n("451576"),
   p = n("701488"),
   O = n("981631"),
-  C = n("689938");
-async function R(e) {
+  R = n("689938");
+async function C(e) {
   var t;
   let {
     targetApplicationId: n,
-    currentEmbeddedApplication: R,
+    currentEmbeddedApplication: C,
     locationObject: g,
     channelId: L,
     guildId: v,
@@ -52,15 +52,15 @@ async function R(e) {
     PermissionStore: l.default
   }) : f.EmbeddedActivityLaunchability.NO_CHANNEL;
   if (G !== f.EmbeddedActivityLaunchability.CAN_LAUNCH) return G === f.EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, a.showActivitiesInvalidPermissionsAlert)() : G === f.EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && i.default.show({
-    title: C.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
-    body: C.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+    title: R.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
+    body: R.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
     hideActionSheet: !1
   }), !1;
   if (!await (0, I.confirmActivityLaunchChecks)({
       applicationId: U.id,
       application: U,
       channel: b,
-      currentEmbeddedApplication: R,
+      currentEmbeddedApplication: C,
       embeddedActivitiesManager: D,
       user: P
     })) return !1;
@@ -69,7 +69,7 @@ async function R(e) {
   if (w) {
     if (!await (0, h.default)({
         channelId: L,
-        bypassChangeModal: null != R
+        bypassChangeModal: null != C
       })) return !1
   } else if (!(0, _.isActivitiesInTextEnabled)(b, !0, "handleStartEmbeddedActivity") || !k) return !1;
   return E.startEmbeddedActivity(L, U.id, M), (0, m.default)(v, L), (0, A.default)({

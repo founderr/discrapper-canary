@@ -124,7 +124,7 @@ function O(e, t) {
     rating: t
   })
 }
-async function C() {
+async function R() {
   var e;
   let t, n;
   if (!I.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -147,7 +147,7 @@ async function C() {
     receivedAt: Date.now()
   })
 }
-async function R(e) {
+async function C(e) {
   let t, n, {
     useQuickSwitcher: i = !0,
     useChannelAffinities: r = !0
@@ -210,7 +210,7 @@ t.default = {
   setSelectedSummary: N,
   setHighlightedSummary: A,
   fetchSummaries: h,
-  fetchSummariesBulk: R,
+  fetchSummariesBulk: C,
   useChannelSummaries: function(e) {
     let {
       channelIds: t = []
@@ -223,9 +223,9 @@ t.default = {
         t && e();
         async function e() {
           try {
-            await C()
+            await R()
           } catch (e) {}
-          await R(n.split(","))
+          await C(n.split(","))
         }
       }, [n, t])
     }(t), (0, s.useStateFromStoresArray)([I.default], () => I.default.topSummaries(), [])

@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return O
   },
   toCombo: function() {
-    return C
+    return R
   },
   toString: function() {
-    return R
+    return C
   }
 }), n("47120"), n("757143"), n("411104"), n("724458"), n("653041");
 var i = n("921738"),
@@ -145,7 +145,7 @@ function O(e) {
   }, [])
 }
 
-function C(e) {
+function R(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f(),
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.KeyboardDeviceTypes.KEYBOARD_KEY;
   return e.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, o.default.modKey).split("+").map(e => e.trim().replace("plus", "+")).reduce((e, i) => {
@@ -154,7 +154,7 @@ function C(e) {
   }, [])
 }
 
-function R(e) {
+function C(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     i = e.map(e => {
       let [t, n, i] = e;
