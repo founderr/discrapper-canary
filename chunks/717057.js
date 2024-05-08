@@ -64,15 +64,12 @@ function j(e) {
           color: "interactive-active",
           className: O.charterHeaderText,
           children: s.name
-        }), (0, a.jsx)("div", {
+        }), (0, a.jsx)(h.Text, {
+          variant: "text-md/normal",
+          color: "text-muted",
           className: O.establishedDate,
-          children: (0, a.jsx)(h.Text, {
-            variant: "text-md/normal",
-            color: "text-muted",
-            className: O.charterHeaderText,
-            children: L.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
-              date: r
-            })
+          children: L.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
+            date: r
           })
         })]
       }), (0, a.jsx)(x.CharterScrollGameSection, {
