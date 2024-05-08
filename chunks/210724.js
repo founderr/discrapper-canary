@@ -1,9 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
-  QuestBar: function() {
-    return v
-  }
-}), n("47120");
+n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
   i = n("120356"),
@@ -26,70 +22,69 @@ var a = n("735250"),
   T = n("46140"),
   A = n("981631"),
   N = n("905277");
-
-function v(e) {
+t.default = function(e) {
   var t, n, i;
   let {
-    quest: E
-  } = e, v = (0, m.getQuestLogger)({
-    quest: E,
+    overrideQuest: v
+  } = e, R = (0, m.getQuestLogger)({
+    quest: v,
     location: T.QuestsExperimentLocations.QUESTS_BAR
-  }), R = (0, C.useIsEligibleForQuests)({
+  }), O = (0, C.useIsEligibleForQuests)({
     location: T.QuestsExperimentLocations.QUESTS_BAR
-  }), O = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), L = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), M = s.useRef(-1), y = s.useRef(!1), [P, x] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, k] = s.useState(!0), [w, F] = s.useState(240), B = s.useRef(null), H = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, V = s.useRef(H), Y = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, W = (null === (i = E.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, K = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), z = (0, f.useIsQuestExpired)(E), {
-    hasError: q,
-    isLoading: Q
-  } = (0, p.useQuestsAssetsLoadState)(), Z = s.useCallback(() => {
+  }), L = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), M = (0, o.useStateFromStores)([E.default], () => null != v ? v : (0, _.getQuestForTargetedContent)(E.default.quests, h.QuestContent.QUEST_BAR)), y = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), P = s.useRef(-1), x = s.useRef(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, k] = s.useState(!1), [w, F] = s.useState(!0), [B, H] = s.useState(240), V = s.useRef(null), Y = (null == M ? void 0 : null === (t = M.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, W = s.useRef(Y), K = (null == M ? void 0 : null === (n = M.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, z = (null == M ? void 0 : null === (i = M.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, q = (null == M ? void 0 : M.userStatus) != null && (0, _.isDismissed)(null == M ? void 0 : M.userStatus, h.QuestContent.QUEST_BAR), Q = (0, f.useIsQuestExpired)(M), {
+    hasError: Z,
+    isLoading: X
+  } = (0, p.useQuestsAssetsLoadState)(), J = s.useCallback(() => {
     var e, t;
-    F((null !== (t = null === (e = B.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), b(!0)
-  }, []), X = s.useCallback(() => {
-    x(!0)
-  }, []), J = s.useCallback(() => {
-    x(!1), !y.current && !Y && b(!1)
-  }, [Y]), $ = s.useCallback(() => {
-    x(!1), !Y && b(!1), y.current = !1
-  }, [Y]), ee = s.useCallback(function() {
+    H((null !== (t = null === (e = V.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), j(!0)
+  }, []), $ = s.useCallback(() => {
+    b(!0)
+  }, []), ee = s.useCallback(() => {
+    b(!1), !x.current && !K && j(!1)
+  }, [K]), et = s.useCallback(() => {
+    b(!1), !K && j(!1), x.current = !1
+  }, [K]), en = s.useCallback(function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
       {
         withDelay: t = !1
       } = e;
-    t ? M.current = window.setTimeout(Z, 75) : Z()
-  }, [Z]), et = s.useCallback(() => {
-    if (window.clearTimeout(M.current), !Y && !P) !y.current && b(!1)
-  }, [P, Y]), en = s.useCallback(() => {
-    (0, c.trackQuestEvent)({
-      questId: E.id,
+    t ? P.current = window.setTimeout(J, 75) : J()
+  }, [J]), ea = s.useCallback(() => {
+    if (window.clearTimeout(P.current), !K && !D) !x.current && j(!1)
+  }, [D, K]), es = s.useCallback(() => {
+    null != M && (0, c.trackQuestEvent)({
+      questId: M.id,
       event: A.AnalyticEvents.QUEST_HOVER
-    }), y.current = !0, ee({
+    }), x.current = !0, en({
       withDelay: !0
     })
-  }, [ee, E]), ea = s.useCallback(() => {
-    y.current = !1, et()
-  }, [et]);
+  }, [en, M]), ei = s.useCallback(() => {
+    x.current = !1, ea()
+  }, [ea]);
   s.useLayoutEffect(() => {
-    Y && Z()
-  }, [Y, Z]), s.useLayoutEffect(() => {
-    H && !V.current && y.current && Z()
-  }, [H, Z]), s.useLayoutEffect(() => {
-    !Y && H && !V.current && !y.current && b(!1)
-  }, [H, Y]);
-  let es = R && !K && !W && !z && !Q,
-    ei = s.useRef(es);
+    K && J()
+  }, [K, J]), s.useLayoutEffect(() => {
+    Y && !W.current && x.current && J()
+  }, [Y, J]), s.useLayoutEffect(() => {
+    !K && Y && !W.current && !x.current && j(!1)
+  }, [Y, K]);
+  let el = O && !q && !z && null != M && !Q && !X,
+    er = s.useRef(el);
   s.useLayoutEffect(() => {
-    es !== ei.current && k(!1), ei.current = es
-  }, [es]), s.useEffect(() => {
-    V.current = H
-  }, [H]);
+    el !== er.current && F(!1), er.current = el
+  }, [el]), s.useEffect(() => {
+    W.current = Y
+  }, [Y]);
   let {
-    expansionSpring: el
+    expansionSpring: eo
   } = (0, r.useSpring)({
     from: {
-      expansionSpring: D ? 0 : 1
+      expansionSpring: U ? 0 : 1
     },
     to: {
-      expansionSpring: D ? 1 : 0
+      expansionSpring: U ? 1 : 0
     },
-    config: H ? {
+    config: Y ? {
       tension: 900,
       friction: 45,
       clamp: !0
@@ -98,28 +93,7 @@ function v(e) {
       friction: 30,
       clamp: !0
     },
-    immediate: O,
-    onRest: () => {
-      j(!0)
-    },
-    onStart: () => {
-      j(!1)
-    }
-  }), {
-    visibilitySpring: er
-  } = (0, r.useSpring)({
-    from: {
-      visibilitySpring: 0
-    },
-    to: {
-      visibilitySpring: es ? 1 : 0
-    },
-    config: {
-      tension: 250,
-      friction: 10,
-      clamp: !0
-    },
-    immediate: O,
+    immediate: L,
     onRest: () => {
       k(!0)
     },
@@ -127,75 +101,85 @@ function v(e) {
       k(!1)
     }
   }), {
-    primaryVariant: eo
+    visibilitySpring: eu
+  } = (0, r.useSpring)({
+    from: {
+      visibilitySpring: 0
+    },
+    to: {
+      visibilitySpring: el ? 1 : 0
+    },
+    config: {
+      tension: 250,
+      friction: 10,
+      clamp: !0
+    },
+    immediate: L,
+    onRest: () => {
+      F(!0)
+    },
+    onStart: () => {
+      F(!1)
+    }
+  }), {
+    primaryVariant: ed
   } = C.QuestBarExperiment.useExperiment({
     location: T.QuestsExperimentLocations.QUESTS_BAR
   }, {
-    autoTrackExposure: es && !q
+    autoTrackExposure: el && !Z
   });
-  return R && (es || !G || Q) && !q ? (0, a.jsx)(S.QuestContentImpressionTracker, {
-    questOrQuests: E,
+  return O && null != M && (el || !w || X) && !Z ? (0, a.jsx)(S.QuestContentImpressionTracker, {
+    questOrQuests: M,
     questContent: h.QuestContent.QUEST_BAR,
-    overrideVisibility: !L && es,
+    overrideVisibility: !y && el,
     children: () => {
-      let e = eo === C.QuestBarExperimentVariants.V2 ? g.default : I.default;
+      let e = ed === C.QuestBarExperimentVariants.V2 ? g.default : I.default;
       return (0, a.jsx)(r.animated.div, {
-        "aria-hidden": !es,
+        "aria-hidden": !el,
         className: l()(N.wrapper, {
-          [N.wrapperInvisible]: !es,
-          [N.wrapperVisible]: es && G
+          [N.wrapperInvisible]: !el,
+          [N.wrapperVisible]: el && w
         }),
         style: {
-          color: E.config.colors.secondary,
-          height: er.to({
+          color: M.config.colors.secondary,
+          height: eu.to({
             range: [0, 1],
-            output: [0, Y && D ? w : 40]
+            output: [0, K && U ? B : 40]
           })
         },
         children: (0, a.jsx)(r.animated.div, {
-          onMouseLeave: ea,
-          onMouseEnter: en,
-          onFocus: () => ee(),
-          onBlur: et,
+          onMouseLeave: ei,
+          onMouseEnter: es,
+          onFocus: () => en(),
+          onBlur: ea,
           className: l()(N.contentWrapper, {
-            [N.contentWrapperExpanded]: D,
-            [N.contentWrapperAccepted]: H
+            [N.contentWrapperExpanded]: U,
+            [N.contentWrapperAccepted]: Y
           }),
           style: {
-            backgroundImage: H ? "linear-gradient(90deg, ".concat(E.config.colors.primary, ", ").concat(E.config.colors.secondary, ")") : void 0,
-            height: el.to({
+            backgroundImage: Y ? "linear-gradient(90deg, ".concat(M.config.colors.primary, ", ").concat(M.config.colors.secondary, ")") : void 0,
+            height: eo.to({
               range: [0, 1],
-              output: [40, H ? w : eo === C.QuestBarExperimentVariants.V2 ? 270 : 240]
+              output: [40, Y ? B : ed === C.QuestBarExperimentVariants.V2 ? 270 : 240]
             }),
-            transform: er.to({
+            transform: eu.to({
               range: [0, 1],
               output: [100, 0]
             }).to(e => "translateY(".concat(e, "%)"))
           },
           children: (0, a.jsx)(e, {
-            expandedContentRef: B,
-            expansionSpring: el,
-            isExpanded: D,
-            isExpansionAnimationComplete: U,
-            onCtxMenuClosed: J,
-            onCtxMenuOpened: X,
-            onCtxMenuSelection: $,
-            quest: E,
-            useReducedMotion: O
+            expandedContentRef: V,
+            expansionSpring: eo,
+            isExpanded: U,
+            isExpansionAnimationComplete: G,
+            onCtxMenuClosed: ee,
+            onCtxMenuOpened: $,
+            onCtxMenuSelection: et,
+            quest: M,
+            useReducedMotion: L
           })
         })
       })
     }
-  }) : (q ? v.log("Not rendered due to asset error") : !R && v.log("Not rendered due to ineligibility"), null)
-}
-t.default = function(e) {
-  let {
-    overrideQuest: t
-  } = e, n = (0, o.useStateFromStores)([E.default], () => null != t ? t : (0, _.getQuestForTargetedContent)(E.default.quests, h.QuestContent.QUEST_BAR));
-  return null == n ? null : (0, a.jsx)(p.QuestsAssetContextProvider, {
-    sentrySource: T.QuestsExperimentLocations.QUESTS_BAR,
-    children: (0, a.jsx)(v, {
-      quest: n
-    })
-  }, n.id)
+  }) : (Z ? R.log("Not rendered due to asset error") : !O && R.log("Not rendered due to ineligibility"), null)
 }

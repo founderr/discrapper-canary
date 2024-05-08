@@ -337,8 +337,8 @@ function O() {
             className: g.questBarPreview,
             children: (0, a.jsx)(u.QuestsAssetContextProvider, {
               isPreview: !0,
-              children: (0, a.jsx)(d.QuestBar, {
-                quest: t
+              children: (0, a.jsx)(d.default, {
+                overrideQuest: t
               })
             })
           })]
