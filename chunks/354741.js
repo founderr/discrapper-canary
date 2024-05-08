@@ -16,32 +16,32 @@ var l = n("481060"),
   C = n("122074"),
   I = n("314897"),
   m = n("858687"),
-  h = n("461535"),
-  E = n("776568"),
-  N = n("981631"),
-  S = n("689938");
+  E = n("461535"),
+  N = n("776568"),
+  S = n("981631"),
+  h = n("689938");
 t.default = (0, o.default)((0, s.default)(function(e) {
   let {
     channel: t,
     selected: s,
     onSelect: o
-  } = e, d = t.isOwner(I.default.getId()), T = (0, h.default)(t), v = (0, E.default)(t), A = (0, C.default)(N.ZERO_STRING_GUILD_ID, t.id), O = (0, m.default)(t, s), g = (0, c.default)({
+  } = e, d = t.isOwner(I.default.getId()), T = (0, E.default)(t), A = (0, N.default)(t), v = (0, C.useCustomNotificationSoundDMContextMenuItem)(S.ZERO_STRING_GUILD_ID, t.id, "top"), x = (0, m.default)(t, s), O = (0, c.default)({
     id: t.id,
-    label: S.default.Messages.COPY_ID_CHANNEL
-  }), p = (0, r.default)(t), x = (0, f.useAddToFavoritesItem)(t), U = (0, f.useRemoveFromFavoritesItem)(t), G = (0, M.default)(t), F = (0, _.default)(t);
+    label: h.default.Messages.COPY_ID_CHANNEL
+  }), p = (0, r.default)(t), g = (0, f.useAddToFavoritesItem)(t), U = (0, f.useRemoveFromFavoritesItem)(t), G = (0, M.default)(t), D = (0, _.default)(t);
   return null == t || t.isManaged() ? null : (0, a.jsxs)(l.Menu, {
     navId: "gdm-context",
-    "aria-label": S.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    "aria-label": h.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     onClose: i.closeContextMenu,
     onSelect: o,
     children: [(0, a.jsx)(l.MenuGroup, {
       children: T
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [x, G, F]
+      children: [g, G, D]
     }), (0, a.jsxs)(l.MenuGroup, {
       children: [d ? (0, a.jsx)(l.MenuItem, {
         id: "instant-invites",
-        label: S.default.Messages.INSTANT_INVITES,
+        label: h.default.Messages.INSTANT_INVITES,
         action: () => (0, l.openModalLazy)(async () => {
           let {
             default: e
@@ -60,28 +60,28 @@ t.default = (0, o.default)((0, s.default)(function(e) {
             u.default.setIcon(t.id, n), null === (a = e.onClose) || void 0 === a || a.call(e)
           },
           multiple: !1,
-          "aria-label": S.default.Messages.CHANGE_ICON,
+          "aria-label": h.default.Messages.CHANGE_ICON,
           ...e,
           ref: n
         }),
-        label: S.default.Messages.CHANGE_ICON
+        label: h.default.Messages.CHANGE_ICON
       }), null != t.icon ? (0, a.jsx)(l.MenuItem, {
         id: "remove-icon",
-        label: S.default.Messages.REMOVE_ICON,
+        label: h.default.Messages.REMOVE_ICON,
         action: () => u.default.setIcon(t.id, null)
       }) : null]
     }), (0, a.jsx)(l.MenuGroup, {
       children: p
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [v, A]
+      children: [A, v]
     }), (0, a.jsx)(l.MenuGroup, {
-      children: O
+      children: x
     }), (0, a.jsx)(l.MenuGroup, {
       children: U
     }), (0, a.jsx)(l.MenuGroup, {
-      children: g
+      children: O
     })]
   })
 }, {
-  object: N.AnalyticsObjects.CONTEXT_MENU
+  object: S.AnalyticsObjects.CONTEXT_MENU
 }), [d.default.CONTEXT_MENU, d.default.GROUP_DM_MENU])

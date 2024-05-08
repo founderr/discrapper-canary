@@ -54894,6 +54894,13 @@ img.thumbnail__18ece {
     color: #b449b6
 }
 
+.rootContainer_b1d9f3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+}
+
 .headerContainer_d09a13 {
     display: flex;
     flex-direction: row
