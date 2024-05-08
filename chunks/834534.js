@@ -24,8 +24,8 @@ var l = s("735250"),
   x = s("347949"),
   N = s("192591"),
   g = s("351707"),
-  A = s("689938"),
-  U = s("634516");
+  U = s("689938"),
+  A = s("634516");
 
 function C(e) {
   let {
@@ -51,7 +51,7 @@ function C(e) {
   }), D = (0, r.useStateFromStores)([f.default], () => f.default.locale), b = (0, I.default)(t.id);
   return (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: n()(U.scroller, h),
+    className: n()(A.scroller, h),
     children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(E.default, {
       userBio: i.bio,
       setLineClamp: !1
@@ -60,32 +60,32 @@ function C(e) {
       currentUser: s,
       guild: P
     }), (0, l.jsx)(N.default, {
-      title: A.default.Messages.USER_PROFILE_MEMBER_SINCE,
+      title: U.default.Messages.USER_PROFILE_MEMBER_SINCE,
       children: (0, l.jsx)(v.default, {
         userId: t.id,
         guildId: null == i ? void 0 : i.guildId
       })
     }), F && !y && L.length > 0 && (0, l.jsx)(N.default, {
-      title: A.default.Messages.LAST_PLAYED_GAMES,
+      title: U.default.Messages.LAST_PLAYED_GAMES,
       children: (0, l.jsx)(x.UserProfileRecentGames, {
         userId: t.id,
         recentGames: L,
         currentUserApplicationIds: O
       })
     }), b.length > 0 && (0, l.jsx)(N.default, {
-      title: A.default.Messages.CONNECTIONS,
+      title: U.default.Messages.CONNECTIONS,
       children: (0, l.jsx)(T.ConnectedUserAccounts, {
         connectedAccounts: b,
-        className: U.connections,
+        className: A.connections,
         userId: t.id,
         theme: p,
         locale: D
       })
     }), (0, l.jsx)(N.default, {
-      title: A.default.Messages.NOTE,
+      title: U.default.Messages.NOTE,
       children: (0, l.jsx)(u.default, {
         userId: t.id,
-        className: U.note,
+        className: A.note,
         autoFocus: C,
         onUpdate: () => R({
           action: "SET_NOTE"

@@ -10,8 +10,8 @@ var i = r("120356"),
   l = r.n(i),
   n = r("149765"),
   o = r("442837"),
-  s = r("481060"),
-  c = r("933557"),
+  c = r("481060"),
+  s = r("933557"),
   d = r("592125"),
   u = r("430824"),
   h = r("496675"),
@@ -38,7 +38,7 @@ function v(e) {
     className: x.scope,
     children: [n, (0, a.jsx)("div", {
       className: x.scopeInner,
-      children: (0, a.jsx)(s.Text, {
+      children: (0, a.jsx)(c.Text, {
         variant: "text-md/normal",
         children: t
       })
@@ -53,7 +53,7 @@ function j() {
     i = (0, o.useStateFromStores)([u.default], () => u.default.getGuild(t)),
     g = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(r)),
     f = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(i)),
-    j = (0, c.default)(r, !0),
+    j = (0, s.default)(r, !0),
     C = null != r ? (0, y.getChannelPermissionSpecMap)(r, !1, !0) : null,
     w = null != i ? b.default.getGuildPermissionSpecMap(i) : null,
     S = Object.values(null != C ? C : {}).map(e => {
@@ -82,13 +82,13 @@ function j() {
       className: x.panelInner,
       children: [(0, a.jsxs)("section", {
         className: x.section,
-        children: [(0, a.jsx)(s.Heading, {
+        children: [(0, a.jsx)(c.Heading, {
           variant: "heading-md/semibold",
           children: null != j ? "Permissions in ".concat(j) : "No channel selected"
         }), S]
       }), (0, a.jsxs)("section", {
         className: x.section,
-        children: [(0, a.jsx)(s.Heading, {
+        children: [(0, a.jsx)(c.Heading, {
           variant: "heading-md/semibold",
           children: null != i ? "Permissions in ".concat(i.name) : "No guild selected"
         }), T]

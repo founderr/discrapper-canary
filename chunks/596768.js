@@ -9,9 +9,9 @@ var a = r("735250"),
   l = r("120356"),
   n = r.n(l),
   o = r("658722"),
-  s = r.n(o),
-  c = r("913527"),
-  d = r.n(c),
+  c = r.n(o),
+  s = r("913527"),
+  d = r.n(s),
   u = r("442837"),
   h = r("481060"),
   m = r("570140"),
@@ -68,8 +68,8 @@ let L = [{
           exposureType: i,
           excluded: l,
           timestamp: o,
-          location: s,
-          previouslyTracked: c
+          location: c,
+          previouslyTracked: s
         }
       } = e, u = d()(o);
       return (0, a.jsxs)(a.Fragment, {
@@ -123,12 +123,12 @@ let L = [{
           }), (0, a.jsx)(v.Property, {
             name: "Previously tracked",
             children: (0, a.jsx)(v.BooleanPropertyValue, {
-              value: c
+              value: s
             })
           }), (0, a.jsx)(v.Property, {
             name: "Location",
             children: (0, a.jsx)("code", {
-              children: s
+              children: c
             })
           })]
         })]
@@ -137,7 +137,7 @@ let L = [{
   }];
 
 function _() {
-  let [e, t] = i.useState(""), r = i.useRef(null), l = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = i.useMemo(() => l.filter(t => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]), [c, d] = i.useState(void 0), g = o.find(e => e.key === c), {
+  let [e, t] = i.useState(""), r = i.useRef(null), l = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = i.useMemo(() => l.filter(t => 0 === e.length || c()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]), [s, d] = i.useState(void 0), g = o.find(e => e.key === s), {
     TabBar: b,
     renderSelectedTab: y
   } = (0, w.default)({
@@ -184,7 +184,7 @@ function _() {
       children: (0, a.jsx)(C.default, {
         columns: L,
         data: o,
-        selectedRowKey: c,
+        selectedRowKey: s,
         onClickRow: d
       })
     }), null != g && (0, a.jsxs)(j.default, {

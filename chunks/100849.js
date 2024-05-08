@@ -25,9 +25,9 @@ function v(e) {
     type: s
   } = e, v = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), T = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), x = a.useMemo(() => v ? T.find(e => e.type === m.ActivityTypes.PLAYING) : null, [T, v]), N = a.useMemo(() => T.filter(e => e !== x), [x, T]), {
     analyticsLocations: g,
-    newestAnalyticsLocation: A
+    newestAnalyticsLocation: U
   } = (0, o.default)(), {
-    trackUserProfileAction: U,
+    trackUserProfileAction: A,
     ...C
   } = (0, f.useUserProfileAnalyticsContext)(), h = {
     location: {
@@ -41,7 +41,7 @@ function v(e) {
     children: [v ? (0, l.jsx)(r.default, {
       type: s,
       user: t,
-      source: A,
+      source: U,
       className: I.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       showGuildDetails: s === c.Types.SIMPLIFIED_PROFILE,
@@ -49,7 +49,7 @@ function v(e) {
       actionColor: I.actionColor,
       analyticsParams: h,
       onAction: () => {
-        U({
+        A({
           action: "JOIN_ACTIVITY"
         }), (0, S.trackUserProfileActivityJoined)({
           activityType: m.ActivityTypes.STREAMING,
@@ -66,14 +66,14 @@ function v(e) {
       activity: e,
       user: t,
       useStoreStream: !1,
-      source: A,
+      source: U,
       className: I.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       showGuildDetails: s === c.Types.SIMPLIFIED_PROFILE,
       actionColor: I.actionColor,
       analyticsParams: h,
       onAction: () => {
-        U({
+        A({
           action: "JOIN_ACTIVITY"
         }), (0, S.trackUserProfileActivityJoined)({
           activityType: e.type,

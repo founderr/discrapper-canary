@@ -9,8 +9,8 @@ var a = r("735250"),
   l = r("120356"),
   n = r.n(l),
   o = r("990547"),
-  s = r("442837"),
-  c = r("481060"),
+  c = r("442837"),
+  s = r("481060"),
   d = r("347469"),
   u = r("213609"),
   h = r("906467"),
@@ -186,7 +186,7 @@ function z() {
 
 function V() {
   let e = i.useRef(null),
-    t = (0, s.useStateFromStores)([y.default], () => y.default.sidebarWidth),
+    t = (0, c.useStateFromStores)([y.default], () => y.default.sidebarWidth),
     [r, l] = i.useState(null),
     o = i.useCallback(e => (0, b.updateDevToolsSettings)({
       sidebarWidth: e
@@ -212,7 +212,7 @@ function V() {
 }
 
 function W() {
-  let e = (0, s.useStateFromStores)([y.default], () => y.default.displayTools);
+  let e = (0, c.useStateFromStores)([y.default], () => y.default.displayTools);
   return e ? (0, a.jsx)("div", {
     className: n()(H.container, H.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
@@ -221,7 +221,7 @@ function W() {
     })
   }) : (0, a.jsx)("div", {
     className: H.container,
-    children: (0, a.jsx)(c.Clickable, {
+    children: (0, a.jsx)(s.Clickable, {
       onClick: b.toggleDisplayDevTools,
       children: (0, a.jsxs)(f.default, {
         className: n()(U.headerBar, H.mobileHeaderCollapsed),

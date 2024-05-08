@@ -34,18 +34,18 @@ function N(e) {
     canManageRoles: I,
     onAddRole: v,
     onRemoveRole: N
-  } = e, g = (0, r.useStateFromStores)([f.default], () => f.default.getRoles(o.id)), A = a.useMemo(() => Object.values(g).filter(e => c.includes(e.id)).sort((e, t) => {
+  } = e, g = (0, r.useStateFromStores)([f.default], () => f.default.getRoles(o.id)), U = a.useMemo(() => Object.values(g).filter(e => c.includes(e.id)).sort((e, t) => {
     var s, l;
     let a = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== null,
       i = (null === (l = t.tags) || void 0 === l ? void 0 : l.guild_connections) !== null;
     return a && !i ? 1 : !a && i ? -1 : 0
-  }), [g, c]), U = a.useMemo(() => "roles-".concat((0, i.v4)()), []), C = (0, n.default)({
-    id: U,
+  }), [g, c]), A = a.useMemo(() => "roles-".concat((0, i.v4)()), []), C = (0, n.default)({
+    id: A,
     isEnabled: !0,
     scrollToStart: _.NOOP_PROMISE,
     scrollToEnd: _.NOOP_PROMISE,
     wrap: !0
-  }), h = A.map(e => {
+  }), h = U.map(e => {
     var a;
     return (0, l.jsx)(u.MemberRole, {
       className: x.role,
@@ -91,14 +91,14 @@ function g(e) {
     guild: i
   } = e, {
     trackUserProfileAction: n
-  } = (0, I.useUserProfileAnalyticsContext)(), u = (0, r.useStateFromStores)([c.default], () => c.default.getMember(i.id, t.id)), f = null == u ? void 0 : u.roles, E = null == f || 0 === f.length, x = m.getHighestRole(i, s.id), [g] = (0, r.useStateFromStoresArray)([S.default], () => [S.default.can(_.Permissions.MANAGE_ROLES, i), null != i ? S.default.getGuildVersion(i.id) : null]), A = a.useCallback(e => {
+  } = (0, I.useUserProfileAnalyticsContext)(), u = (0, r.useStateFromStores)([c.default], () => c.default.getMember(i.id, t.id)), f = null == u ? void 0 : u.roles, E = null == f || 0 === f.length, x = m.getHighestRole(i, s.id), [g] = (0, r.useStateFromStoresArray)([S.default], () => [S.default.can(_.Permissions.MANAGE_ROLES, i), null != i ? S.default.getGuildVersion(i.id) : null]), U = a.useCallback(e => {
     var s, l;
     n({
       action: "REMOVE_ROLE"
     });
     let a = null !== (l = null == f ? void 0 : f.filter(t => t !== e.id)) && void 0 !== l ? l : [];
     (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) === null ? o.default.unassignGuildRoleConnection(i.id, e.id) : d.default.updateMemberRoles(i.id, t.id, a, [], [e.id])
-  }, [f, i.id, t.id, n]), U = a.useCallback(e => {
+  }, [f, i.id, t.id, n]), A = a.useCallback(e => {
     n({
       action: "ADD_ROLE"
     });
@@ -114,8 +114,8 @@ function g(e) {
       userRoles: null != f ? f : [],
       highestRole: x,
       canManageRoles: g,
-      onAddRole: U,
-      onRemoveRole: A
+      onAddRole: A,
+      onRemoveRole: U
     })
   })
 }

@@ -9,8 +9,8 @@ var a = r("735250"),
   l = r("120356"),
   n = r.n(l),
   o = r("913527"),
-  s = r.n(o),
-  c = r("442837"),
+  c = r.n(o),
+  s = r("442837"),
   d = r("481060"),
   u = r("129861"),
   h = r("594174"),
@@ -85,7 +85,7 @@ let E = [{
           timestamp: i,
           fingerprint: l
         }
-      } = e, o = h.default.getUser(l), c = s()(i);
+      } = e, o = h.default.getUser(l), s = c()(i);
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(g.default, {
           className: n()(S.headerBar, w.subPanelHeaderBar),
@@ -101,8 +101,8 @@ let E = [{
             name: "Timestamp (local)",
             children: (0, a.jsx)("time", {
               dateTime: i.toISOString(),
-              title: (0, f.dateFormat)(c, "LLLL"),
-              children: (0, f.calendarFormat)(c)
+              title: (0, f.dateFormat)(s, "LLLL"),
+              children: (0, f.calendarFormat)(s)
             })
           }), null != o && (0, a.jsx)(x.Property, {
             name: "User",
@@ -161,15 +161,15 @@ let E = [{
 
 function R() {
   let e = i.useRef(null),
-    t = (0, c.useStateFromStores)([b.default], () => b.default.loggedEvents),
+    t = (0, s.useStateFromStores)([b.default], () => b.default.loggedEvents),
     [r, l] = i.useState(Object.keys(_)),
     o = t.filter(e => {
       for (let t of r)
         if (_[t].filter(e)) return !0;
       return !1
     }),
-    [s, u] = i.useState(void 0),
-    h = o.find(e => e.key === s),
+    [c, u] = i.useState(void 0),
+    h = o.find(e => e.key === c),
     {
       TabBar: m,
       renderSelectedTab: g
@@ -213,7 +213,7 @@ function R() {
       children: (0, a.jsx)(v.default, {
         columns: T,
         data: o,
-        selectedRowKey: s,
+        selectedRowKey: c,
         onClickRow: u
       })
     }), null != h && (0, a.jsxs)(k.default, {

@@ -10,8 +10,8 @@ var i = r("346652"),
   l = r("692547"),
   n = r("410030"),
   o = r("68588"),
-  s = r("981631"),
-  c = r("893048");
+  c = r("981631"),
+  s = r("893048");
 let d = {
   base00: l.default.colors.BACKGROUND_SECONDARY.css,
   base03: l.default.colors.TEXT_WARNING.css,
@@ -31,7 +31,7 @@ let h = u(d),
   m = u(d);
 
 function p(e) {
-  return s.TOKEN_REGEX.test(e) ? (0, a.jsx)(o.default, {
+  return c.TOKEN_REGEX.test(e) ? (0, a.jsx)(o.default, {
     type: o.default.Types.TEXT,
     children: () => (0, a.jsx)(a.Fragment, {
       children: e
@@ -44,7 +44,7 @@ function g(e) {
     data: t
   } = e, r = (0, n.default)();
   return (0, a.jsx)("div", {
-    className: c.inspectorWrapper,
+    className: s.inspectorWrapper,
     children: (0, a.jsx)(i.JSONTree, {
       data: t,
       theme: "light" === r ? m : h,

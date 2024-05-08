@@ -24,8 +24,8 @@ var l = s("735250"),
   x = s("221292"),
   N = s("621853"),
   g = s("318661"),
-  A = s("706327"),
-  U = s("484404"),
+  U = s("706327"),
+  A = s("484404"),
   C = s("502762"),
   h = s("62154"),
   p = s("293259"),
@@ -45,7 +45,7 @@ function O(e) {
   } = e, d = (0, i.useStateFromStores)([N.default], () => {
     var e, s;
     return (null === (s = N.default.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null
-  }), f = (0, A.useMutualFriends)(t), S = (0, i.useStateFromStores)([N.default], () => N.default.getMutualGuilds(t.id)), m = t.bot || s, {
+  }), f = (0, U.useMutualFriends)(t), S = (0, i.useStateFromStores)([N.default], () => N.default.getMutualGuilds(t.id)), m = t.bot || s, {
     enabled: I
   } = (0, _.useProfileMutualsExperiment)({
     autoTrackExposure: !0,
@@ -105,7 +105,7 @@ function L(e) {
   let {
     user: _,
     guildId: N,
-    channelId: A,
+    channelId: U,
     messageId: L,
     roleId: F,
     friendToken: D,
@@ -136,12 +136,12 @@ function L(e) {
         layout: "MODAL",
         userId: H.id,
         guildId: N,
-        channelId: A,
+        channelId: U,
         messageId: L,
         roleId: F,
         analyticsLocations: Y
       }), K(!0), Q(e)
-    }, [H.id, N, A, L, F, Y]),
+    }, [H.id, N, U, L, F, Y]),
     el = null == V ? void 0 : V.profileEffectId;
   return (0, l.jsx)(f.AnalyticsLocationProvider, {
     value: Y,
@@ -149,7 +149,7 @@ function L(e) {
       layout: "MODAL",
       userId: H.id,
       guildId: N,
-      channelId: A,
+      channelId: U,
       messageId: L,
       roleId: F,
       children: (0, l.jsx)(r.default, {
@@ -172,11 +172,11 @@ function L(e) {
               onClose: w,
               isStreaming: (0, d.default)(W),
               guildId: N,
-              channelId: A,
+              channelId: U,
               hasProfileEffect: null != el
             }), (0, l.jsxs)(C.default.Overlay, {
               className: y.overlay,
-              children: [G === n.ModalTransitionState.ENTERED && (0, l.jsx)(U.default, {
+              children: [G === n.ModalTransitionState.ENTERED && (0, l.jsx)(A.default, {
                 onTooltipClose: w
               }), (0, l.jsxs)("div", {
                 className: y.body,

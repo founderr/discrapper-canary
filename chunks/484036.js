@@ -9,9 +9,9 @@ var a = r("735250"),
   l = r("120356"),
   n = r.n(l),
   o = r("347469"),
-  s = r("451815");
+  c = r("451815");
 
-function c(e) {
+function s(e) {
   let {
     resizableNode: t,
     minHeight: r,
@@ -25,7 +25,7 @@ function c(e) {
   });
   return (0, a.jsx)("div", {
     onPointerDown: l,
-    className: s.resizeHandle
+    className: c.resizeHandle
   })
 }
 
@@ -38,17 +38,17 @@ function d(e) {
   } = e, d = i.useRef(null), [u, h] = i.useState(l);
   return (0, a.jsxs)("div", {
     ref: d,
-    className: s.container,
+    className: c.container,
     style: {
       minHeight: o,
       height: u
     },
-    children: [(0, a.jsx)(c, {
+    children: [(0, a.jsx)(s, {
       resizableNode: d,
       minHeight: o,
       onResize: h
     }), (0, a.jsx)("div", {
-      className: n()(s.subPanelContent, r),
+      className: n()(c.subPanelContent, r),
       children: t
     })]
   })

@@ -24,8 +24,8 @@ var l = s("735250"),
   x = s("335191"),
   N = s("347949"),
   g = s("988246"),
-  A = s("689938"),
-  U = s("175839");
+  U = s("689938"),
+  A = s("175839");
 
 function C(e) {
   var t;
@@ -49,31 +49,31 @@ function C(e) {
     }
   }, [h]), R) ? (0, l.jsx)(g.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: U.infoScroller,
+    className: A.infoScroller,
     children: [(0, l.jsxs)("div", {
-      className: U.userInfoSection,
+      className: A.userInfoSection,
       children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(o.Heading, {
           variant: "eyebrow",
-          className: U.userInfoSectionHeader,
-          children: A.default.Messages.USER_PROFILE_ABOUT_ME
+          className: A.userInfoSectionHeader,
+          children: U.default.Messages.USER_PROFILE_ABOUT_ME
         }), (0, l.jsx)(v.default, {
-          className: U.userInfoText,
+          className: A.userInfoText,
           userBio: null !== (t = null == i ? void 0 : i.bio) && void 0 !== t ? t : ""
         })]
       }), (0, l.jsxs)("div", {
         children: [(0, l.jsx)(o.Heading, {
           variant: "eyebrow",
-          className: U.userInfoSectionHeader,
-          children: A.default.Messages.USER_PROFILE_MEMBER_SINCE
+          className: A.userInfoSectionHeader,
+          children: U.default.Messages.USER_PROFILE_MEMBER_SINCE
         }), (0, l.jsx)(_.default, {
           userId: s.id,
-          textClassName: U.userInfoText
+          textClassName: A.userInfoText
         })]
       }), y && (0, l.jsx)("div", {
-        className: U.clans,
+        className: A.clans,
         children: (0, l.jsx)("div", {
-          className: U.userInfoText,
+          className: A.userInfoText,
           children: (0, l.jsx)(c.UserProfileClanContainer, {
             userId: s.id
           })
@@ -81,15 +81,15 @@ function C(e) {
       }), j && (0, l.jsx)(N.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
-        containerClassName: n()(U.userInfoText, U.recentGames)
+        containerClassName: n()(A.userInfoText, A.recentGames)
       }), (0, l.jsx)(o.Heading, {
         variant: "eyebrow",
-        className: U.userInfoSectionHeader,
-        children: A.default.Messages.NOTE
+        className: A.userInfoSectionHeader,
+        children: U.default.Messages.NOTE
       }), (0, l.jsx)(u.default, {
         userId: s.id,
         autoFocus: C,
-        className: U.note,
+        className: A.note,
         onUpdate: () => p({
           action: "SET_NOTE"
         })
@@ -99,7 +99,7 @@ function C(e) {
       connectedAccounts: O,
       theme: M,
       locale: P,
-      className: U.userInfoSection,
+      className: A.userInfoSection,
       userId: s.id
     })]
   })

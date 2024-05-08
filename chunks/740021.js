@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return U
   }
 }), s("47120");
 var l = s("735250");
@@ -26,18 +26,18 @@ var a = s("442837"),
   N = s("100651");
 let g = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
-function A(e) {
+function U(e) {
   let {
     user: t,
     displayProfile: s,
     activity: i,
     customStatusActivity: d,
-    guildId: A,
-    channelId: U,
+    guildId: U,
+    channelId: A,
     onClose: C
   } = e, {
     theme: h
-  } = (0, I.useUserProfileThemeContext)(), p = (0, c.default)(t.id, A), {
+  } = (0, I.useUserProfileThemeContext)(), p = (0, c.default)(t.id, U), {
     avatarSrc: R,
     eventHandlers: M,
     avatarDecorationSrc: P
@@ -47,7 +47,7 @@ function A(e) {
     size: T.AvatarSizes.SIZE_120
   }), [j, y] = (0, a.useStateFromStoresArray)([u.default], () => {
     let e = u.default.isMobileOnline(t.id);
-    return (0, o.shouldDisableUserPresenceInChannel)(t, U) ? [x.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [x.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
+    return (0, o.shouldDisableUserPresenceInChannel)(t, A) ? [x.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [x.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
   });
   return (0, l.jsxs)("header", {
     children: [(0, l.jsx)(S.default, {
@@ -76,7 +76,7 @@ function A(e) {
             onClose: C
           }), !p && (0, l.jsx)(E.default, {
             user: t,
-            guildId: A,
+            guildId: U,
             onClose: C
           })]
         }), (0, l.jsx)(m.UserProfileCustomStatusBubble, {

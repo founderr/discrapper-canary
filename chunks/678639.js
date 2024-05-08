@@ -9,8 +9,8 @@ var a = r("735250"),
   l = r("120356"),
   n = r.n(l),
   o = r("442837"),
-  s = r("481060"),
-  c = r("6048"),
+  c = r("481060"),
+  s = r("6048"),
   d = r("548420"),
   u = r("502568"),
   h = r("428530"),
@@ -34,7 +34,7 @@ function x(e) {
     return e(), t.addChangeListener(e), () => {
       t.removeChangeListener(e)
     }
-  }, [t, r]), (0, a.jsx)(s.ScrollerThin, {
+  }, [t, r]), (0, a.jsx)(c.ScrollerThin, {
     className: b.inspectorContainer,
     children: (0, a.jsx)(h.default, {
       data: l
@@ -130,16 +130,16 @@ function C() {
     className: n()(f.panel, b.panel),
     children: [(0, a.jsx)("div", {
       className: b.toolbar,
-      children: (0, a.jsx)(c.default, {
+      children: (0, a.jsx)(s.default, {
         className: b.searchBar,
-        size: c.default.Sizes.SMALL,
+        size: s.default.Sizes.SMALL,
         query: t,
         onChange: r,
         onClear: () => r(""),
         placeholder: "Search stores",
         "aria-label": "Search stores"
       })
-    }), (0, a.jsx)(s.ScrollerThin, {
+    }), (0, a.jsx)(c.ScrollerThin, {
       className: b.tableContainer,
       children: (0, a.jsx)(p.default, {
         columns: k,

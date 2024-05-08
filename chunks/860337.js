@@ -9,8 +9,8 @@ var a = r("735250"),
   l = r("120356"),
   n = r.n(l),
   o = r("481060"),
-  s = r("931240"),
-  c = r("207796"),
+  c = r("931240"),
+  s = r("207796"),
   d = r("696310"),
   u = r("893048");
 
@@ -21,11 +21,11 @@ function h() {
     className: n()(u.panel, d.panel),
     children: [(0, a.jsx)(o.Button, {
       size: o.Button.Sizes.SMALL,
-      onClick: s.resetClanSetup,
+      onClick: c.resetClanSetup,
       children: "Reset Every Clan Setup State"
     }), (0, a.jsx)(o.Button, {
       size: o.Button.Sizes.SMALL,
-      onClick: c.resetClanDiscovery,
+      onClick: s.resetClanDiscovery,
       children: "Reset Clan Discovery State"
     })]
   })

@@ -9,8 +9,8 @@ var a = r("735250"),
   l = r("120356"),
   n = r.n(l),
   o = r("913527"),
-  s = r.n(o),
-  c = r("481060"),
+  c = r.n(o),
+  s = r("481060"),
   d = r("570140"),
   u = r("435274"),
   h = r("4912"),
@@ -54,7 +54,7 @@ function w(e) {
     key: e.name,
     trace: e
   })), [t]);
-  return (0, a.jsx)(c.ScrollerThin, {
+  return (0, a.jsx)(s.ScrollerThin, {
     children: (0, a.jsx)(y.default, {
       columns: C,
       data: r
@@ -68,7 +68,7 @@ let S = [{
     var t;
     let {
       actionLog: r
-    } = e, i = s()(r.createdAt);
+    } = e, i = c()(r.createdAt);
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(f.Properties, {
         className: k.actionProperties,
@@ -83,7 +83,7 @@ let S = [{
           name: "Total Time",
           children: [j(r.totalTime), " ms"]
         })]
-      }), (0, a.jsx)(c.ScrollerThin, {
+      }), (0, a.jsx)(s.ScrollerThin, {
         className: k.inspectorContainer,
         children: (0, a.jsx)(g.default, {
           data: r.action
@@ -124,14 +124,14 @@ function T(e) {
           className: n()(k.errorToolbar, v.toolbar),
           children: (0, a.jsx)("div", {
             className: v.toolbarGroup,
-            children: (0, a.jsx)(c.Button, {
+            children: (0, a.jsx)(s.Button, {
               className: v.toolbarButton,
-              size: c.Button.Sizes.MIN,
+              size: s.Button.Sizes.MIN,
               onClick: () => console.error(t.error),
               children: "Log to Console"
             })
           })
-        }), (0, a.jsx)(c.ScrollerThin, {
+        }), (0, a.jsx)(s.ScrollerThin, {
           className: k.inspectorContainer,
           children: (0, a.jsx)(g.default, {
             data: t.error
@@ -141,7 +141,7 @@ function T(e) {
     }
   }] : S, [t]), {
     TabBar: o,
-    renderSelectedTab: s
+    renderSelectedTab: c
   } = (0, x.default)({
     tabs: l
   }, [l]);
@@ -157,7 +157,7 @@ function T(e) {
       }), (0, a.jsx)(m.default.Title, {
         children: t.name
       })]
-    }), s({
+    }), c({
       actionLog: t
     })]
   })
@@ -199,11 +199,11 @@ function L() {
       actionLog: e
     })), [t]),
     [l, o] = i.useState(),
-    s = t.find(e => e.id === l);
+    c = t.find(e => e.id === l);
   return (0, a.jsxs)("div", {
     ref: e,
     className: n()(v.panel, k.panel),
-    children: [(0, a.jsx)(c.ScrollerThin, {
+    children: [(0, a.jsx)(s.ScrollerThin, {
       className: k.tableContainer,
       children: (0, a.jsx)(y.default, {
         columns: N,
@@ -211,8 +211,8 @@ function L() {
         selectedRowKey: null == l ? void 0 : l.toString(),
         onClickRow: e => o(Number.parseInt(e, 10))
       })
-    }), null != s && (0, a.jsx)(T, {
-      actionLog: s,
+    }), null != c && (0, a.jsx)(T, {
+      actionLog: c,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
     })]
   })

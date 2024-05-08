@@ -9,8 +9,8 @@ var a = r("735250"),
   l = r("120356"),
   n = r.n(l),
   o = r("481060"),
-  s = r("246992"),
-  c = r("893048"),
+  c = r("246992"),
+  s = r("893048"),
   d = r("403466");
 
 function u() {
@@ -46,7 +46,7 @@ function u() {
     })),
     [l, u] = i.useState(t[0].value);
   return (0, a.jsx)(o.ScrollerThin, {
-    className: n()(c.panel),
+    className: n()(s.panel),
     children: (0, a.jsx)("div", {
       className: d.panelInner,
       children: (0, a.jsxs)("section", {
@@ -63,7 +63,7 @@ function u() {
             placeholder: "Trial ID",
             serialize: e => String(e),
             select: e => u(e),
-            popoutLayerContext: s.devToolsLayerContext
+            popoutLayerContext: c.devToolsLayerContext
           }), (0, a.jsx)(o.Button, {
             onClick: () => {
               (0, o.openModalLazy)(e[l])

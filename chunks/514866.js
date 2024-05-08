@@ -10,8 +10,8 @@ var i = r("120356"),
   l = r.n(i),
   n = r("481060"),
   o = r("423932"),
-  s = r("601948"),
-  c = r("523078"),
+  c = r("601948"),
+  s = r("523078"),
   d = r("949086");
 let u = () => {
   Promise.all([r.e("99387"), r.e("52030"), r.e("85281")]).then(r.bind(r, "24031")).then(e => {
@@ -38,18 +38,18 @@ let u = () => {
 function h() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      className: l()(c.buttonsContainer, d.marginBottom20),
-      children: (0, a.jsx)(s.OverridePremiumTypeDropDown, {
+      className: l()(s.buttonsContainer, d.marginBottom20),
+      children: (0, a.jsx)(c.OverridePremiumTypeDropDown, {
         isDevTools: !0
       })
     }), (0, a.jsx)("div", {
-      className: l()(c.buttonsContainer, d.marginBottom20),
+      className: l()(s.buttonsContainer, d.marginBottom20),
       children: (0, a.jsx)(n.Button, {
         onClick: u,
         children: "Launch MFA"
       })
     }), (0, a.jsx)("div", {
-      className: l()(c.buttonsContainer, d.marginBottom20),
+      className: l()(s.buttonsContainer, d.marginBottom20),
       children: (0, a.jsx)(n.Button, {
         onClick: () => (0, o.default)(),
         children: "Launch Vibing Wumpus"

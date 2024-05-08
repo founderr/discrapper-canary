@@ -69,7 +69,7 @@ function j(e) {
     label: R.default.Messages.COPY_ID_GUILD
   }), K = (0, m.default)(t, {
     section: U.AnalyticsSections.GUILD_LIST
-  }), z = (0, E.default)(t.id), W = (0, G.default)(t.id), X = (0, N.default)(t.id), Q = (0, L.default)(t), q = (0, f.useShouldUseNewNotificationSystem)("GuildContextMenu");
+  }), X = (0, E.default)(t.id), z = (0, G.default)(t.id), W = (0, N.default)(t.id), Q = (0, L.default)(t), q = (0, f.useShouldUseNewNotificationSystem)("GuildContextMenu");
 
   function J() {
     (0, u.openModal)(e => (0, s.jsx)(I.GuildLeaveConfirmModalContents, {
@@ -116,7 +116,7 @@ function j(e) {
     }), (0, s.jsx)(u.MenuGroup, {
       children: P
     }), (0, s.jsxs)(u.MenuGroup, {
-      children: [F, q || __OVERLAY__ ? null : D, q && !__OVERLAY__ ? W : null, X, y, z]
+      children: [F, q || __OVERLAY__ ? null : D, q && !__OVERLAY__ ? z : null, W, y, X]
     }), (0, s.jsxs)(u.MenuGroup, {
       children: [d ? null : k, __OVERLAY__ ? null : (0, s.jsx)(u.MenuItem, {
         id: "privacy",
