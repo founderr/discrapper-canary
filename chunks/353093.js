@@ -67,6 +67,7 @@ let u = (e, t) => {
     [i.ClanTagBadgeSize.SIZE_12]: 16,
     [i.ClanTagBadgeSize.SIZE_16]: 16,
     [i.ClanTagBadgeSize.SIZE_24]: 24,
+    [i.ClanTagBadgeSize.SIZE_32]: 32,
     [i.ClanTagBadgeSize.SIZE_36]: 40
   };
 
