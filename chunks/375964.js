@@ -526,6 +526,8 @@ e.exports = Object.freeze({
   APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER_BODY: "Swipe up to see more Activities like {activityName}!",
   APP_LAUNCHER_ONBOARDING_BOTS_BANNER_BODY: "{firstApplicationName}, {secondApplicationName} & more are now in Apps!",
   APP_LAUNCHER_ONBOARDING_APPS_BANNER_BODY: "Swipe up to find games to play with friends!",
+  APP_LAUNCHER_VIEW_MORE_ROW: "View more",
+  APP_LAUNCHER_VIEW_LESS_ROW: "View less",
   READY: "Ready",
   CONNECTING: "Connecting…",
   CONNECTING_PROBLEMS_CTA: "Connection problems? Let us know!",
