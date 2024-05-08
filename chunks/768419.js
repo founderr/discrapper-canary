@@ -648,8 +648,8 @@ let eA = new eh(T.default, {
         sourceId: e,
         sound: n
       } = null == t ? void 0 : t.desktopSettings;
-      null != e && m.default.getObservedAppNameForWindow(e) === G.name && n ? (en = new I.Interval).start(B, eI) : en = null
-    }
+      null != e && m.default.getObservedAppNameForWindow(e) === G.name && n ? (en = new I.Interval).start(B, eI) : (null == en || en.stop(), en = null)
+    } else null == t && (null == en || en.stop(), en = null)
   }
 });
 t.default = eA
