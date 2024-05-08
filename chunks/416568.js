@@ -19,7 +19,7 @@ var l = n("735250"),
   S = n("100527"),
   _ = n("906732"),
   I = n("358221"),
-  N = n("802001"),
+  N = n("963202"),
   T = n("706590"),
   A = n("940777"),
   L = n("41776"),
@@ -33,8 +33,8 @@ var l = n("735250"),
   b = n("709054"),
   j = n("792125"),
   P = n("727258"),
-  U = n("605951"),
-  G = n("474109"),
+  G = n("605951"),
+  U = n("474109"),
   w = n("741616"),
   B = n("187835"),
   F = n("162050"),
@@ -47,8 +47,8 @@ var l = n("735250"),
   z = n("843343"),
   Z = n("654142"),
   X = n("695301"),
-  q = n("836697"),
-  Q = n("921230"),
+  Q = n("836697"),
+  q = n("921230"),
   J = n("981631"),
   $ = n("689938"),
   ee = n("295986");
@@ -182,11 +182,11 @@ function er(e) {
       } = e;
       n !== t && (t = n, eg.scrollToGuild(t, !1))
     })
-  }, [o, eg]), (0, U.default)(eg.scrollToGuild);
+  }, [o, eg]), (0, G.default)(eg.scrollToGuild);
   let {
     enableClanCreation: eN,
     defaultGameId: eT
-  } = (0, N.useClanPrepilotExperimentForGuild)(u, "guilds_bar"), eA = o.getRoots(), eL = (0, T.default)(), ev = (0, x.useSignUpButton)(), ex = en.map(e => (0, l.jsx)(H.default, {
+  } = (0, N.useAnyClanPrepilotExperiment)(u, "guilds_bar"), eA = o.getRoots(), eL = (0, T.default)(), ev = (0, x.useSignUpButton)(), ex = en.map(e => (0, l.jsx)(H.default, {
     id: e.id,
     name: e.name,
     icon: e.icon
@@ -204,7 +204,7 @@ function er(e) {
         ...ep,
         role: "tree",
         className: ee.tree,
-        children: [(0, l.jsx)(G.default, {
+        children: [(0, l.jsx)(U.default, {
           ref: ed,
           isVisible: eg.isItemVisible,
           onJumpTo: eg.handleJumpToGuild,
@@ -219,9 +219,9 @@ function er(e) {
           onScroll: eg.handleScroll,
           children: [(0, l.jsx)(Y.HomeButton, {}), eL ? (0, l.jsx)(A.default, {}) : null, (0, l.jsx)(F.default, {}), (0, l.jsx)(W.default, {
             isOnHubVerificationRoute: eI
-          }), (0, l.jsx)(w.default, {}), ev, E.map(e => (0, l.jsx)(Q.default, {
+          }), (0, l.jsx)(w.default, {}), ev, E.map(e => (0, l.jsx)(q.default, {
             guildId: e
-          }, e)), (0, l.jsx)(q.default, {}), (0, l.jsx)(K.default, {}), (0, l.jsx)("div", {
+          }, e)), (0, l.jsx)(Q.default, {}), (0, l.jsx)(K.default, {}), (0, l.jsx)("div", {
             "aria-label": $.default.Messages.SERVERS,
             children: eA.map(function e(t) {
               switch (t.type) {
@@ -272,7 +272,7 @@ function er(e) {
               })
             }
           })
-        }) : null, (0, l.jsx)(G.default, {
+        }) : null, (0, l.jsx)(U.default, {
           reverse: !0,
           ref: ec,
           isVisible: eg.isItemVisible,

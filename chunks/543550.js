@@ -97,7 +97,7 @@ function N() {
     t = (0, _.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     n = (0, u.useStateFromStoresArray)([E.default], () => Object.values(E.default.getGuilds())),
     i = (0, f.useAnyClanPrepilotExperimentEnabled)(n, "clan_discovery_admin_upsell"),
-    c = (0, p.useGuildsEligibleForClanConversion)();
+    c = (0, p.useGuildsEligibleForClanConversion)("ClanDiscoveryAdminContainer");
   s.useEffect(() => {
     (!i || 0 === c.length && i) && t(_.ClanDiscoveryMode.GET_STARTED)
   }, [c.length, i, t]);
