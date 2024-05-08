@@ -1,48 +1,50 @@
 "use strict";
 n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  i = n("346656"),
-  l = n("689938"),
-  r = n("891054"),
-  o = n("586522");
-t.default = e => {
+var a = n("735250"),
+  s = n("470079"),
+  i = n("481060"),
+  l = n("970606"),
+  r = n("346656"),
+  o = n("689938"),
+  u = n("891054"),
+  d = n("586522");
+t.default = function(e) {
   let {
     onWithdrawApplication: t,
     guild: n = null
-  } = e;
-  return (0, a.jsxs)("div", {
-    className: r.confirmation,
+  } = e, c = null == n ? void 0 : n.id;
+  return s.useEffect(() => {
+    null != c && (0, l.trackMemberVerificationApplicationViewed)(c)
+  }, [c]), (0, a.jsxs)("div", {
+    className: u.confirmation,
     children: [(0, a.jsxs)("div", {
-      className: r.confirmationContent,
-      children: [null !== n ? (0, a.jsx)(i.default, {
-        size: i.default.Sizes.LARGER,
+      className: u.confirmationContent,
+      children: [null !== n ? (0, a.jsx)(r.default, {
+        size: r.default.Sizes.LARGER,
         guild: n,
-        className: r.guildIcon
+        className: u.guildIcon
       }) : (0, a.jsx)("img", {
-        alt: l.default.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_ICON,
-        src: o,
-        className: r.__invalid_verificationStateIcon
-      }), (0, a.jsx)(s.Heading, {
+        alt: o.default.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_ICON,
+        src: d
+      }), (0, a.jsx)(i.Heading, {
         variant: "heading-xl/semibold",
-        className: r.header,
-        children: (null == n ? void 0 : n.name) != null ? l.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE_WITH_GUILD_NAME.format({
+        className: u.header,
+        children: (null == n ? void 0 : n.name) != null ? o.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE_WITH_GUILD_NAME.format({
           guildName: n.name
-        }) : l.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE
-      }), (0, a.jsx)(s.Text, {
+        }) : o.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE
+      }), (0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: l.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_SUBTITLE
+        children: o.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_SUBTITLE
       })]
     }), (0, a.jsx)("div", {
-      className: r.confirmationButtonColumn,
-      children: (0, a.jsx)(s.Button, {
+      className: u.confirmationButtonColumn,
+      children: (0, a.jsx)(i.Button, {
         onClick: t,
-        look: s.Button.Looks.LINK,
-        color: s.Button.Colors.LINK,
-        size: s.Button.Sizes.SMALL,
-        children: l.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION
+        look: i.Button.Looks.LINK,
+        color: i.Button.Colors.LINK,
+        size: i.Button.Sizes.SMALL,
+        children: o.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION
       })
     })]
   })

@@ -39,6 +39,9 @@ n.r(t), n.d(t, {
   trackConvertSuccessModalViewed: function() {
     return E
   },
+  trackMemberVerificationApplicationViewed: function() {
+    return p
+  },
   trackSettingsViewed: function() {
     return c
   }
@@ -202,5 +205,11 @@ function N(e) {
     has_join_request: i,
     affinity: r,
     index: s
+  })
+}
+
+function p(e) {
+  a.default.track(o.AnalyticEvents.MEMBER_VERIFICATION_APPLICATION_VIEWED, {
+    guild_id: e
   })
 }
