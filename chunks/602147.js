@@ -135,9 +135,11 @@ function R(e) {
   let {
     children: t
   } = e;
-  return (0, l.jsx)("div", {
+  return (0, l.jsxs)("div", {
     className: A.footer,
-    children: t
+    children: [(0, l.jsx)("div", {
+      className: A.gradient
+    }), t]
   })
 }
 t.default = v

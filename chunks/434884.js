@@ -5,6 +5,7 @@ e.exports = {
   container: "container__1ac7e",
   footer: "footer_b74401",
   genshinBackgroundImage: "genshinBackgroundImage_b8f439 backgroundImage__65618",
+  gradient: "gradient_b29dbd",
   popoutAnchor: "popoutAnchor_dd74d9",
   popoutCaret: "popoutCaret__22ffc",
   popoutContainer: "popoutContainer_f91849",
