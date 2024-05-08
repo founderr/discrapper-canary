@@ -29,16 +29,17 @@ t.default = n.memo(function() {
       }), e
     }, []), [e]),
     _ = n.useCallback(e => {
-      var s;
+      var s, n;
       if (null == e) return null;
-      let n = t.get(e.value);
-      if (null == n) return null;
-      let l = null === (s = n.clan) || void 0 === s ? void 0 : s.tag;
-      return null == l ? null : (0, a.jsx)(E.UserProfileClanRow, {
-        userClanTag: l,
-        guildId: n.id,
+      let l = t.get(e.value);
+      if (null == l) return null;
+      let i = null === (s = l.clan) || void 0 === s ? void 0 : s.tag;
+      return null == i ? null : (0, a.jsx)(E.UserProfileClanRow, {
+        clanTag: i,
+        clanBadge: null === (n = l.clan) || void 0 === n ? void 0 : n.badge,
+        guildId: l.id,
         guildName: e.label,
-        guildIcon: n.icon,
+        guildIcon: l.icon,
         guildIconSize: 32
       })
     }, [t]),

@@ -44,26 +44,28 @@ let S = r.memo(function(e) {
       clanBadge: n,
       className: r,
       textClassName: a,
-      onClick: o,
-      onMouseEnter: u,
-      textVariant: d = "text-xs/medium",
-      textColor: _ = "text-normal",
-      badgeSize: E = I.ClanTagBadgeSize.SIZE_12,
-      inline: T = !0
+      badgeClassName: o,
+      onClick: u,
+      onMouseEnter: d,
+      textVariant: _ = "text-xs/medium",
+      textColor: E = "text-normal",
+      badgeSize: T = I.ClanTagBadgeSize.SIZE_12,
+      inline: h = !0
     } = e;
     return (0, c.default)("base_clan_tag_chiplet") ? (0, i.jsx)(l.Clickable, {
       tag: "span",
-      onClick: o,
-      onMouseEnter: u,
-      className: s()(f.chipletContainerInner, T && f.chipletContainerInline, null != o && f.clickable, r),
+      onClick: u,
+      onMouseEnter: d,
+      className: s()(f.chipletContainerInner, h && f.chipletContainerInline, null != u && f.clickable, r),
       children: (0, i.jsxs)(l.Text, {
-        variant: d,
-        color: _,
+        variant: _,
+        color: E,
         tag: "span",
         className: s()(f.text, a),
         children: [null != n && "string" == typeof n ? (0, i.jsx)(S, {
           src: n,
-          size: E
+          size: T,
+          className: o
         }) : n, t]
       })
     }) : null

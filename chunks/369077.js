@@ -33,8 +33,8 @@ var u = s("594174"),
 function A(e) {
   let {
     className: t,
-    userClanTag: s,
-    userClanBadge: l,
+    clanTag: s,
+    clanBadge: l,
     onTagClick: r,
     guildId: d,
     guildName: u,
@@ -54,25 +54,28 @@ function A(e) {
   let O = (0, T.getClanBadgeUrl)(d, l, I.ClanTagBadgeSize.SIZE_16);
   return (0, a.jsxs)("div", {
     className: i()(C.container, t),
-    children: [(0, a.jsx)(_.ClanGuildIconSimple, {
-      className: C.icon,
-      guildName: u,
-      guildIconURL: m,
-      iconSize: E
-    }), (0, a.jsxs)("div", {
-      className: C.details,
-      children: [(0, a.jsx)(o.Tooltip, {
-        text: u,
-        color: o.Tooltip.Colors.PRIMARY,
-        shouldShow: p,
-        children: e => (0, a.jsx)("span", {
-          ref: N,
-          ...e,
-          className: C.guildName,
-          children: u
-        })
-      }), null != f && (0, a.jsx)(g.default, {
-        count: f
+    children: [(0, a.jsxs)("div", {
+      className: C.guildPrefixContainer,
+      children: [(0, a.jsx)(_.ClanGuildIconSimple, {
+        guildName: u,
+        guildIconURL: m,
+        iconSize: E,
+        className: C.guildPrefixIcon
+      }), (0, a.jsxs)("div", {
+        className: C.details,
+        children: [(0, a.jsx)(o.Tooltip, {
+          text: u,
+          color: o.Tooltip.Colors.PRIMARY,
+          shouldShow: p,
+          children: e => (0, a.jsx)("span", {
+            ref: N,
+            ...e,
+            className: C.guildName,
+            children: u
+          })
+        }), null != f && (0, a.jsx)(g.default, {
+          count: f
+        })]
       })]
     }), (0, a.jsx)("div", {
       className: C.tagContainer,
@@ -83,7 +86,8 @@ function A(e) {
         onClick: r,
         badgeSize: I.ClanTagBadgeSize.SIZE_16,
         textColor: "interactive-normal",
-        textVariant: "text-sm/medium"
+        textVariant: "text-sm/medium",
+        badgeClassName: C.badge
       })
     })]
   })
@@ -137,8 +141,8 @@ function O(e) {
       children: p.default.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN
     }), (0, a.jsx)(A, {
       className: C.profileContainer,
-      userClanTag: t,
-      userClanBadge: s,
+      clanTag: t,
+      clanBadge: s,
       onTagClick: I,
       guildName: i,
       guildId: l,
