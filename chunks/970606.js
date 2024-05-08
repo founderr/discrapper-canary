@@ -12,6 +12,9 @@ n.r(t), n.d(t, {
   trackClanApplyToJoinViewed: function() {
     return u
   },
+  trackClanDiscoveryCardClicked: function() {
+    return m
+  },
   trackClanDiscoveryUserNuxClicked: function() {
     return S
   },
@@ -166,5 +169,22 @@ function A(e) {
   a.default.track(o.AnalyticEvents.CLAN_ADMIN_INVITE_CLICKED, {
     guild_id: t,
     location: n
+  })
+}
+
+function m(e) {
+  let {
+    guildId: t,
+    isMember: n,
+    hasJoinRequest: i,
+    affinity: r,
+    index: s
+  } = e;
+  a.default.track(o.AnalyticEvents.CLAN_DISCOVERY_CARD_CLICKED, {
+    guild_id: t,
+    is_member: n,
+    has_join_request: i,
+    affinity: r,
+    index: s
   })
 }

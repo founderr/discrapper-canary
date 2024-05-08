@@ -14,16 +14,16 @@ var i = n("735250"),
   o = n("481060"),
   l = n("442837"),
   u = n("835473"),
-  d = n("905362"),
-  _ = n("676327"),
-  c = n("353093"),
-  E = n("114487"),
-  I = n("550271"),
-  T = n("937111"),
-  f = n("703656"),
-  S = n("271383"),
-  h = n("594174"),
-  A = n("626135"),
+  d = n("970606"),
+  _ = n("905362"),
+  c = n("676327"),
+  E = n("353093"),
+  I = n("114487"),
+  T = n("550271"),
+  f = n("937111"),
+  S = n("703656"),
+  h = n("271383"),
+  A = n("594174"),
   m = n("768581"),
   N = n("524989"),
   p = n("981631"),
@@ -39,7 +39,7 @@ function g(e) {
     branding: {
       primaryColor: a
     }
-  } = t, s = n.filter(e => e !== O.EMPTY_WILDCARD).join(", "), l = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), u = (0, _.getAccessibleClanColor)(a, l.hex()), d = r.useRef(null), [c, E] = r.useState(!1);
+  } = t, s = n.filter(e => e !== O.EMPTY_WILDCARD).join(", "), l = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), u = (0, c.getAccessibleClanColor)(a, l.hex()), d = r.useRef(null), [_, E] = r.useState(!1);
   if (r.useEffect(() => {
       let e = d.current;
       null != e && null != e.offsetWidth && null != e.scrollWidth && E(e.offsetWidth < e.scrollWidth)
@@ -56,7 +56,7 @@ function g(e) {
     }), (0, i.jsx)(o.Tooltip, {
       text: s,
       color: o.Tooltip.Colors.PRIMARY,
-      shouldShow: c,
+      shouldShow: _,
       children: e => (0, i.jsx)("span", {
         ...e,
         style: I,
@@ -145,7 +145,7 @@ function D(e) {
     if (null == t) return null;
     if (n.length > 4) {
       let r = n.slice(3).map(e => e.name),
-        a = (0, c.formatSelectionList)(r);
+        a = (0, E.formatSelectionList)(r);
       return (0, i.jsx)(o.Tooltip, {
         text: a,
         position: "bottom",
@@ -209,7 +209,7 @@ function M(e) {
     expanded: l,
     isMember: d,
     traitsToHighlight: _,
-    className: T,
+    className: c,
     showBrandingFooter: f = !1
   } = e, {
     tag: S,
@@ -226,9 +226,9 @@ function M(e) {
     icon: r.icon,
     size: 64,
     canAnimate: !0
-  })) && void 0 !== t ? t : void 0, P = (0, c.getClanBannerUrl)(r.id, p);
+  })) && void 0 !== t ? t : void 0, P = (0, E.getClanBannerUrl)(r.id, p);
   return (0, i.jsxs)("div", {
-    className: s()(C.card, T),
+    className: s()(C.card, c),
     children: [(0, i.jsx)("div", {
       className: C.cardBrandingHeader,
       style: {
@@ -245,7 +245,7 @@ function M(e) {
         className: C.cardContentTitleSection,
         children: [(0, i.jsxs)("div", {
           className: C.cardNameAndTagWrapper,
-          children: [(0, i.jsx)(E.ClanGuildIconSimple, {
+          children: [(0, i.jsx)(I.ClanGuildIconSimple, {
             guildName: r.name,
             guildIconURL: y,
             iconSize: 64,
@@ -259,7 +259,7 @@ function M(e) {
               children: e => (0, i.jsxs)("div", {
                 ...e,
                 className: C.clanTagChiplet,
-                children: [(0, i.jsx)(I.ClanBadge, {
+                children: [(0, i.jsx)(T.ClanBadge, {
                   width: 16,
                   height: 16,
                   badge: h.badgeKind,
@@ -341,32 +341,32 @@ t.default = function(e) {
     affinity: n,
     index: a,
     source: s
-  } = e, u = (0, l.useStateFromStores)([h.default], () => h.default.getCurrentUser()), _ = (0, l.useStateFromStores)([S.default], () => S.default.isMember(t.id, null == u ? void 0 : u.id), [t, u]), c = r.useCallback(() => {
-    let e = null != T.default.getRequest(t.id);
-    if (A.default.track(p.AnalyticEvents.CLAN_DISCOVERY_CARD_CLICKED, {
-        guild_id: t.id,
-        is_member: _,
-        has_join_request: e,
+  } = e, u = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), c = (0, l.useStateFromStores)([h.default], () => h.default.isMember(t.id, null == u ? void 0 : u.id), [t, u]), E = r.useCallback(() => {
+    let e = null != f.default.getRequest(t.id);
+    if ((0, d.trackClanDiscoveryCardClicked)({
+        guildId: t.id,
+        isMember: c,
+        hasJoinRequest: e,
         affinity: n,
         index: a
-      }), _) {
-      (0, f.transitionToGuild)(t.id);
+      }), c) {
+      (0, S.transitionToGuild)(t.id);
       return
     }
     if (e) {
-      (0, f.transitionTo)(p.Routes.GUILD_MEMBER_VERIFICATION(t.id));
+      (0, S.transitionTo)(p.Routes.GUILD_MEMBER_VERIFICATION(t.id));
       return
-    }(0, d.openClanApplyFlow)(t.id, t, {
+    }(0, _.openClanApplyFlow)(t.id, t, {
       source: s,
       location: p.AnalyticsLocations.CLAN_DISCOVERY_CARD
     })
-  }, [t, _, n, a, s]);
+  }, [t, c, n, a, s]);
   return (0, i.jsx)(o.Clickable, {
-    onClick: c,
+    onClick: E,
     className: C.clickableCard,
     children: (0, i.jsx)(M, {
       ...e,
-      isMember: _,
+      isMember: c,
       showBrandingFooter: !0
     })
   })
