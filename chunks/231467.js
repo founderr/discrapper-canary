@@ -226,14 +226,14 @@ function M(e) {
     icon: r.icon,
     size: 64,
     canAnimate: !0
-  })) && void 0 !== t ? t : void 0, P = (0, E.getClanBannerUrl)(r.id, p);
+  })) && void 0 !== t ? t : void 0, P = (0, E.getClanBannerUrl)(r.id, p), U = null == a && null == P ? {
+    background: "linear-gradient(90deg, ".concat(A, ", ").concat(N, ")")
+  } : void 0;
   return (0, i.jsxs)("div", {
     className: s()(R.card, c),
     children: [(0, i.jsx)("div", {
       className: R.cardBrandingHeader,
-      style: {
-        background: "linear-gradient(90deg, ".concat(A, ", ").concat(N, ")")
-      },
+      style: U,
       children: null != a ? a : null != P ? (0, i.jsx)("img", {
         alt: C.default.Messages.CLAN_LOOK_BANNER,
         src: P,

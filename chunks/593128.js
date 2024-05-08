@@ -199,7 +199,7 @@ t.default = e => {
             }
           })
         })
-      }), (0, a.jsx)("div", {
+      }), (0, a.jsx)(r.ScrollerThin, {
         className: A.mainContent,
         children: (() => {
           switch (c) {

@@ -184,6 +184,7 @@ t.default = e => {
         }), (0, a.jsx)(r.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
+          className: I.tagValidationText,
           children: A.default.Messages.CLAN_TAG_VALIDATION_RULES
         }), (0, a.jsxs)("div", {
           style: {
