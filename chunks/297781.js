@@ -280,8 +280,8 @@ function B(e) {
   return a = 0 === t ? {
     defaultTextColor: "text-secondary"
   } : {
-    defaultTextColor: "always-white",
-    defaultIconColor: _.tokens.colors.TEXT_PRIMARY
+    defaultTextColor: "content-inventory-overlay-text-secondary",
+    defaultIconColor: _.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY
   }, (0, s.jsx)(R.Provider, {
     value: {
       location: t,

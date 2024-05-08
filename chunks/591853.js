@@ -308,11 +308,11 @@ function eu(e) {
     userDescription: n,
     headerIcons: l,
     entry: s
-  } = e, i = t.guild_id, {
-    displayParticipants: r,
-    participant1: o,
-    participant2: u,
-    numOtherParticipants: d
+  } = e, r = t.guild_id, {
+    displayParticipants: o,
+    participant1: u,
+    participant2: d,
+    numOtherParticipants: c
   } = (0, Y.default)(s, 3);
   return (0, a.jsxs)("div", {
     className: et.popoutContentHeader,
@@ -320,7 +320,7 @@ function eu(e) {
       className: et.popoutUserContainer,
       children: [(0, a.jsx)(M.default, {
         maxUsers: 3,
-        users: r,
+        users: o,
         size: _.AvatarSizes.SIZE_24,
         avatarClassName: et.popoutStackedAvatar,
         hideOverflowCount: !0,
@@ -330,15 +330,14 @@ function eu(e) {
         horizontal: !0
       }), (0, a.jsx)(_.Heading, {
         variant: "heading-sm/normal",
-        color: "text-secondary",
+        className: et.popoutTextSecondary,
         children: n.format({
-          user1: G.default.getName(i, t.id, o),
-          user2: G.default.getName(i, t.id, u),
-          countOthers: d,
+          user1: G.default.getName(r, t.id, u),
+          user2: G.default.getName(r, t.id, d),
+          countOthers: c,
           nameHook: (e, t) => (0, a.jsx)(_.Text, {
             variant: "text-sm/medium",
-            color: "header-primary",
-            className: et.popoutUsername,
+            className: i()(et.popoutUsername, et.popoutTextPrimary),
             children: e
           }, t)
         })
@@ -374,13 +373,13 @@ function ed(e) {
         horizontal: !0
       }), (0, a.jsxs)("div", {
         children: [(0, a.jsx)(_.Heading, {
-          variant: "heading-md/semibold",
-          color: "header-primary",
+          variant: "heading-md/medium",
+          className: et.popoutTextPrimary,
           lineClamp: 3,
           children: n
         }), null != l ? (0, a.jsx)(_.Text, {
           variant: "text-md/normal",
-          color: "text-secondary",
+          className: et.popoutTextSecondary,
           children: l
         }) : null, (0, a.jsx)(F.default, {
           size: 8
@@ -416,7 +415,7 @@ function ec(e) {
       size: 16
     }), (0, a.jsx)(_.Heading, {
       variant: "heading-md/semibold",
-      color: "header-primary",
+      className: et.popoutTextPrimary,
       lineClamp: 3,
       children: t
     }), (0, a.jsx)(F.default, {
