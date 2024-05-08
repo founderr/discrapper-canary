@@ -21,13 +21,13 @@ var a = n("735250"),
   T = n("314897"),
   I = n("592125"),
   A = n("496675"),
-  v = n("158776"),
-  N = n("246946"),
+  N = n("158776"),
+  v = n("246946"),
   x = n("594174"),
   M = n("979651"),
   R = n("5192"),
-  L = n("51144"),
-  y = n("342656"),
+  y = n("51144"),
+  L = n("342656"),
   O = n("785717"),
   j = n("221292"),
   P = n("621853"),
@@ -61,7 +61,7 @@ t.default = e => {
   var t;
   let {
     channel: n,
-    showCall: s
+    showCallOrActivityPanel: s
   } = e, r = n.recipients[0], [ei, er] = l.useState(!1), eo = l.useRef(0), eu = (0, F.default)(), {
     analyticsLocations: ed
   } = (0, m.default)(h.default.PROFILE_PANEL);
@@ -95,28 +95,28 @@ t.default = e => {
       activity: eT,
       customStatusActivity: eI,
       isApplicationStreaming: eA,
-      isMobile: ev,
-      status: eN,
+      isMobile: eN,
+      status: ev,
       hangStatusActivity: ex
-    } = (0, u.useStateFromStoresObject)([_.default, v.default, A.default], () => {
+    } = (0, u.useStateFromStoresObject)([_.default, N.default, A.default], () => {
       let e = null != _.default.getAnyStreamForUser(ec.id);
       return {
-        activity: v.default.findActivity(ec.id, t => {
+        activity: N.default.findActivity(ec.id, t => {
           let {
             type: n
           } = t;
           return e ? n === ea.ActivityTypes.PLAYING : n !== ea.ActivityTypes.CUSTOM_STATUS && n !== ea.ActivityTypes.HANG_STATUS
         }),
-        customStatusActivity: v.default.findActivity(ec.id, e => {
+        customStatusActivity: N.default.findActivity(ec.id, e => {
           let {
             type: t
           } = e;
           return t === ea.ActivityTypes.CUSTOM_STATUS
         }),
         isApplicationStreaming: e,
-        isMobile: v.default.isMobileOnline(ec.id),
-        status: ef ? null : v.default.getStatus(ec.id),
-        hangStatusActivity: e_ && null != eS && A.default.can(ea.Permissions.CONNECT, eS) ? v.default.findActivity(ec.id, e => {
+        isMobile: N.default.isMobileOnline(ec.id),
+        status: ef ? null : N.default.getStatus(ec.id),
+        hangStatusActivity: e_ && null != eS && A.default.can(ea.Permissions.CONNECT, eS) ? N.default.findActivity(ec.id, e => {
           let {
             type: t
           } = e;
@@ -125,11 +125,11 @@ t.default = e => {
       }
     }),
     eM = null != eT || null != ex || eA,
-    eR = null !== (t = R.default.getNickname(null, n.id, ec)) && void 0 !== t ? t : L.default.getName(ec),
-    eL = (0, u.useStateFromStores)([N.default], () => N.default.hidePersonalInformation),
-    [ey, eO, ej, eP, eD] = (0, u.useStateFromStoresArray)([P.default], () => [P.default.getMutualFriendsCount(ec.id), P.default.getMutualFriends(ec.id), P.default.getMutualGuilds(ec.id), P.default.isFetchingProfile(ec.id), P.default.isFetchingFriends(ec.id)]),
+    eR = null !== (t = R.default.getNickname(null, n.id, ec)) && void 0 !== t ? t : y.default.getName(ec),
+    ey = (0, u.useStateFromStores)([v.default], () => v.default.hidePersonalInformation),
+    [eL, eO, ej, eP, eD] = (0, u.useStateFromStoresArray)([P.default], () => [P.default.getMutualFriendsCount(ec.id), P.default.getMutualFriends(ec.id), P.default.getMutualGuilds(ec.id), P.default.isFetchingProfile(ec.id), P.default.isFetchingFriends(ec.id)]),
     eb = !ec.bot && null != ej && ej.length > 0,
-    eU = !ec.bot && null != ey && ey > 0,
+    eU = !ec.bot && null != eL && eL > 0,
     eF = (0, X.useShouldShowUserPopoutCollectiblesUpsell)({
       popoutUser: ec,
       source: G.UserPopoutUpsellSource.PROFILE_PANEL
@@ -145,13 +145,13 @@ t.default = e => {
   }, [ec]), l.useEffect(() => {
     null != eh && eg && (0, U.trackProfilePanelViewed)({
       displayProfile: eh,
-      isMobile: ev,
+      isMobile: eN,
       loadDurationMs: Date.now() - eo.current,
       activity: eT,
       customStatusActivity: eI,
-      status: eN
+      status: ev
     })
-  }, [eh, ev, eT, eI, eN, eg]);
+  }, [eh, eN, eT, eI, ev, eg]);
   let ek = null == ej ? void 0 : ej.map(e => (0, a.jsx)(ee.default, {
       connection: e,
       user: ec,
@@ -175,7 +175,7 @@ t.default = e => {
     eK = ec.bot || ez,
     {
       enabled: eZ
-    } = (0, y.useProfileMutualsExperiment)({
+    } = (0, L.useProfileMutualsExperiment)({
       autoTrackExposure: !0,
       location: h.default.PROFILE,
       disable: eK
@@ -222,7 +222,7 @@ t.default = e => {
                 animate: ei
               }), (0, a.jsx)(V.default, {}), (0, a.jsx)(Y.default, {
                 bio: null == eh ? void 0 : eh.bio,
-                hidePersonalInformation: eL,
+                hidePersonalInformation: ey,
                 animateOnHover: !0,
                 isHovering: ei
               }), eZ && (0, a.jsx)(k.default, {
@@ -274,11 +274,11 @@ t.default = e => {
                   [es.mutualFriendsDivider]: eb
                 }),
                 header: el.default.Messages.MUTUAL_FRIENDS_COUNT.format({
-                  count: ey
+                  count: eL
                 }),
                 isLoadingHeader: eP,
                 isLoadingContents: eD,
-                loadingContentsCount: ey,
+                loadingContentsCount: eL,
                 onFocus: eG,
                 onHover: eG,
                 itemType: J.ListType.MutualFriendsList,

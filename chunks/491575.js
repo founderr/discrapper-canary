@@ -16,10 +16,9 @@ var a = n("735250"),
   C = n("451478"),
   m = n("585483"),
   S = n("145604"),
-  p = n("556766"),
-  g = n("718813"),
+  p = n("718813"),
   I = n("981631"),
-  T = n("273535");
+  g = n("273535");
 t.default = s.memo(function() {
   let e = s.useRef(null),
     t = s.useCallback(t => {
@@ -37,10 +36,10 @@ t.default = s.memo(function() {
     m.ComponentDispatch.unsubscribe(I.ComponentActions.SHAKE_APP, t)
   }), [t]), (0, E.default)(), (0, a.jsxs)(r.Shakeable, {
     ref: e,
-    className: T.app,
-    children: [(0, a.jsx)(g.default, {
-      className: T.layers,
+    className: g.app,
+    children: [(0, a.jsx)(p.default, {
+      className: g.layers,
       children: (0, a.jsx)(o.default, {})
-    }), (0, a.jsx)(h.default, {}), (0, a.jsx)(u.default, {}), (0, a.jsx)(S.default, {}), (0, a.jsx)(_.default, {}), (0, a.jsx)(r.DnDKeyboardHelpBar, {}), (0, a.jsx)(p.default, {})]
+    }), (0, a.jsx)(h.default, {}), (0, a.jsx)(u.default, {}), (0, a.jsx)(S.default, {}), (0, a.jsx)(_.default, {}), (0, a.jsx)(r.DnDKeyboardHelpBar, {})]
   })
 })

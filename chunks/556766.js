@@ -1,74 +1,79 @@
 "use strict";
 n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  i = n("392711"),
-  l = n.n(i),
-  r = n("207561"),
-  o = n("718017"),
+var i = n("735250"),
+  r = n("470079"),
+  a = n("392711"),
+  s = n.n(a),
+  o = n("207561"),
+  l = n("718017"),
   u = n("442837"),
-  d = n("966302"),
+  d = n("317381"),
+  _ = n("966302"),
   c = n("378364"),
-  f = n("197344"),
-  E = n("474873"),
-  h = n("292959"),
-  _ = n("944486"),
-  C = n("246946"),
-  m = n("340895"),
-  S = n("557177"),
-  p = n("871465");
-let g = {
+  E = n("197344"),
+  I = n("474873"),
+  T = n("292959"),
+  f = n("944486"),
+  S = n("246946"),
+  h = n("340895"),
+  A = n("557177"),
+  m = n("918559"),
+  N = n("871465");
+let p = {
     transform: "scale(0.7)",
     opacity: 0
   },
-  I = {
+  O = {
     transform: "scale(1)",
     opacity: 1
   };
 t.default = () => {
-  let e = (0, u.useStateFromStores)([_.default], () => _.default.getChannelId()),
-    t = (0, u.useStateFromStoresArray)([m.default], () => m.default.getIncomingCalls().filter(t => {
-      let {
-        channel: n
-      } = t;
-      return e !== n.id
-    })),
-    n = (0, u.useStateFromStores)([m.default], () => m.default.hasIncomingCalls()),
-    i = (0, u.useStateFromStores)([h.default], () => h.default.isSoundDisabled("call_ringing")),
-    T = f.default.useIsRingtoneEligible(),
-    A = f.default.useIsRingtoneDisabled(),
-    N = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
-    v = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
-    R = s.useRef(!1),
-    O = (0, r.useStableMemo)(() => {
-      let e = "call_ringing";
-      return T && !A ? (0, S.createSound)(c.default.ringtone, e) : v === p.Soundpacks.CLASSIC ? (0, S.createSound)(500 !== l().random(1, 1e3) ? "call_ringing" : l().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, S.createSoundForPack)("call_ringing", v)
-    }, [v, A, T]);
-  return s.useEffect(() => () => {
-    O.stop()
-  }, [O]), s.useEffect(() => {
-    if (N || i) {
-      R.current && (O.stop(), R.current = !1);
+  let {
+    connectedActivityChannelId: e,
+    activityPanelMode: t
+  } = (0, u.useStateFromStoresObject)([d.default], () => ({
+    connectedActivityChannelId: d.default.getConnectedActivityChannelId(),
+    activityPanelMode: d.default.getActivityPanelMode()
+  })), {
+    currentChannelId: n,
+    selectedVoiceChannelId: a
+  } = (0, u.useStateFromStoresObject)([f.default], () => ({
+    currentChannelId: f.default.getChannelId(),
+    selectedVoiceChannelId: f.default.getVoiceChannelId()
+  })), C = (0, u.useStateFromStoresArray)([h.default], () => h.default.getIncomingCalls().filter(i => {
+    let {
+      channel: r
+    } = i, s = e === r.id && a !== r.id && t === m.ActivityPanelModes.PANEL;
+    return n !== r.id || s
+  })), R = (0, u.useStateFromStores)([h.default], () => h.default.hasIncomingCalls()), g = (0, u.useStateFromStores)([T.default], () => T.default.isSoundDisabled("call_ringing")), L = E.default.useIsRingtoneEligible(), v = E.default.useIsRingtoneDisabled(), D = (0, u.useStateFromStores)([S.default], () => S.default.disableSounds), M = (0, u.useStateFromStores)([I.default], () => I.default.getSoundpack()), y = r.useRef(!1), P = (0, o.useStableMemo)(() => {
+    let e = "call_ringing";
+    return L && !v ? (0, A.createSound)(c.default.ringtone, e) : M === N.Soundpacks.CLASSIC ? (0, A.createSound)(500 !== s().random(1, 1e3) ? "call_ringing" : s().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, A.createSoundForPack)("call_ringing", M)
+  }, [M, v, L]);
+  return r.useEffect(() => () => {
+    P.stop()
+  }, [P]), r.useEffect(() => {
+    if (D || g) {
+      y.current && (P.stop(), y.current = !1);
       return
     }
-    n && !R.current ? (O.loop(), R.current = !0) : !n && R.current && (O.stop(), R.current = !1)
-  }, [i, N, n, O]), (0, o.useTransition)(t, {
+    R && !y.current ? (P.loop(), y.current = !0) : !R && y.current && (P.stop(), y.current = !1)
+  }, [g, D, R, P]), (0, l.useTransition)(C, {
     keys: e => {
       var t;
       return null === (t = e.channel) || void 0 === t ? void 0 : t.id
     },
     enter: {
-      from: g,
-      to: I
+      from: p,
+      to: O
     },
-    leave: g,
+    leave: p,
     config: {
       mass: 1,
       tension: 500,
       friction: 18,
       clamp: !0
     }
-  })((e, t) => (0, a.jsx)(d.default, {
+  })((e, t) => (0, i.jsx)(_.default, {
     ...t,
     animatedStyle: e
   }))
