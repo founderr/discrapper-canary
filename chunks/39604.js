@@ -73,8 +73,8 @@ var i = n("46973"),
   N = n("358085"),
   p = n("557177"),
   O = n("435064"),
-  R = n("61994"),
-  C = n("550351"),
+  C = n("61994"),
+  R = n("550351"),
   g = n("659487"),
   L = n("711644"),
   v = n("259612"),
@@ -228,8 +228,8 @@ function V(e, t) {
 }
 async function x(e) {
   let t = O.default.getSettings().storageLocation,
-    n = (0, C.default)(e),
-    i = "".concat((0, R.default)(n.applicationName.substring(0, 20)), "_").concat(n.id, ".mp4"),
+    n = (0, R.default)(e),
+    i = "".concat((0, C.default)(n.applicationName.substring(0, 20)), "_").concat(n.id, ".mp4"),
     r = o.default.fileManager.join(t, i),
     a = S.default.getMediaEngine(),
     l = JSON.stringify(n),
@@ -312,7 +312,7 @@ async function F(e) {
       let e = null != m ? (0, d.decodeStreamKey)(m).ownerId : void 0;
       return e === f.default.getId() ? D.ClipSaveTypes.STREAMER : null != e ? D.ClipSaveTypes.VIEWER : D.ClipSaveTypes.DECOUPLED
     })(),
-    R = await (async () => {
+    C = await (async () => {
       if (null == m) return;
       let {
         ownerId: e,
@@ -330,9 +330,9 @@ async function F(e) {
     type: "CLIPS_SAVE_CLIP_START",
     clipType: N,
     streamKey: m,
-    thumbnail: R
+    thumbnail: C
   });
-  let C = (0, p.playSound)("clip_save", .5),
+  let R = (0, p.playSound)("clip_save", .5),
     g = performance.now();
   try {
     let e = await x(m);
@@ -341,7 +341,7 @@ async function F(e) {
       clip: e
     })
   } catch (e) {
-    D.ClipsLogger.error("Clip Failed to Save", e), null == C || C.stop(), (0, p.playSound)("clip_error", .5), s.default.dispatch({
+    D.ClipsLogger.error("Clip Failed to Save", e), null == R || R.stop(), (0, p.playSound)("clip_error", .5), s.default.dispatch({
       type: "CLIPS_SAVE_CLIP_ERROR"
     })
   }

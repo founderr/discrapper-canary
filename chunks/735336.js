@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("430824"),
   p = n("944486"),
   O = n("594174"),
-  R = n("451478"),
-  C = n("311715"),
+  C = n("451478"),
+  R = n("311715"),
   g = n("465670"),
   L = n("937482"),
   v = n("466111"),
@@ -174,7 +174,7 @@ function X(e) {
     hasProfileEffect: K = !1
   } = e, X = (0, l.useStateFromStores)([N.default], () => N.default.getGuild(L)), Q = (0, l.useStateFromStores)([A.default], () => A.default.getId()) === _.id && y, q = U.default.isPremiumAtLeast(null == c ? void 0 : c.premiumType, H.PremiumTypes.TIER_2), {
     trackUserProfileAction: J
-  } = (0, b.useUserProfileAnalyticsContext)(), [$, ee] = r.useState(!1), et = (0, l.useStateFromStores)([R.default], () => R.default.isFocused()), en = h.GifAutoPlay.getSetting(), {
+  } = (0, b.useUserProfileAnalyticsContext)(), [$, ee] = r.useState(!1), et = (0, l.useStateFromStores)([C.default], () => C.default.isFocused()), en = h.GifAutoPlay.getSetting(), {
     bannerSrc: ei,
     status: er
   } = (0, w.default)({
@@ -267,7 +267,7 @@ function X(e) {
             color: "white"
           })
         })
-      }) : null, !en && (0, P.isAnimatedImageURL)(ei) && (0, i.jsx)(C.default, {
+      }) : null, !en && (0, P.isAnimatedImageURL)(ei) && (0, i.jsx)(R.default, {
         className: j.gifTag
       })]
     })

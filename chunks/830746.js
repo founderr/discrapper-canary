@@ -18,27 +18,27 @@ var s = n("399606"),
   m = n("456771"),
   S = n("292352"),
   p = n("689938"),
-  g = n("174549");
+  I = n("174549");
 t.default = () => {
   let e = (0, f.useUserForLinkStatus)(S.UserLinkStatus.ACTIVE),
     t = (0, c.useSelectedTeenUser)(),
     n = (0, s.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
-    I = (0, d.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
+    g = (0, d.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
     T = (0, d.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, p.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
     A = (0, d.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, p.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
     N = (0, l.useRedesignIconContext)().enabled;
   return void 0 === n ? null : (0, a.jsxs)("div", {
-    className: g.container,
+    className: I.container,
     children: [(0, a.jsx)("div", {
-      className: g.banner,
+      className: I.banner,
       children: (0, a.jsx)(E.default, {})
     }), (0, a.jsxs)("div", {
-      className: g.featureCards,
+      className: I.featureCards,
       children: [(0, a.jsx)(C.default, {
-        iconClassName: g.chatCheckIcon,
+        iconClassName: I.chatCheckIcon,
         icon: o.default,
         header: p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_HEADER,
-        description: I
+        description: g
       }), (0, a.jsx)(C.default, {
         icon: u.default,
         header: p.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,

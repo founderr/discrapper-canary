@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return I
   },
   getStreakCount: function() {
-    return N
+    return v
   },
   isEntryActive: function() {
     return E
@@ -49,7 +49,7 @@ n.r(t), n.d(t, {
     return C
   },
   isEntryTopGame: function() {
-    return v
+    return N
   }
 });
 var a = n("283398"),
@@ -174,11 +174,11 @@ function A(e) {
   })
 }
 
-function v(e) {
+function N(e) {
   return e.content_type === r.ContentInventoryEntryType.TOP_GAME
 }
 
-function N(e) {
+function v(e) {
   let t = e.traits.find(e => e.type === i.ContentInventoryTraitType.STREAK_DAYS);
   return null == t ? void 0 : t.streak_count_days
 }

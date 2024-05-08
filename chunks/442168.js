@@ -38,11 +38,11 @@ function g(e) {
     inPopout: n
   } = e, {
     reducedMotion: g
-  } = l.useContext(r.AccessibilityPreferencesContext), S = (0, l.useRef)(null), _ = d.useClipsButtonStore.getState().clipsButtonRef, T = (0, c.encodeStreamKey)(t), I = (0, i.useStateFromStores)([o.default], () => o.default.getActiveAnimation()), A = (0, i.useStateFromStoresArray)([o.default], () => o.default.getStreamClipAnimations(T)), v = (0, l.useRef)();
+  } = l.useContext(r.AccessibilityPreferencesContext), S = (0, l.useRef)(null), _ = d.useClipsButtonStore.getState().clipsButtonRef, T = (0, c.encodeStreamKey)(t), I = (0, i.useStateFromStores)([o.default], () => o.default.getActiveAnimation()), A = (0, i.useStateFromStoresArray)([o.default], () => o.default.getStreamClipAnimations(T)), N = (0, l.useRef)();
   l.useEffect(() => () => {
     (0, u.dismissSaveClipAnimation)(T)
   }, [T]);
-  let N = () => {
+  let v = () => {
       var e;
       let t = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
       return null == t || n ? m : {
@@ -54,7 +54,7 @@ function g(e) {
     },
     x = e => {
       let t = null == _ ? void 0 : _.getBoundingClientRect();
-      if (v.current = t, e.timestamp !== I || null == t || n) return m;
+      if (N.current = t, e.timestamp !== I || null == t || n) return m;
       let {
         top: a,
         left: l
@@ -78,15 +78,15 @@ function g(e) {
       },
       config: p
     }),
-    L = (0, l.useRef)(null),
-    y = (0, s.useTransition)(A, {
-      ref: L,
+    y = (0, l.useRef)(null),
+    L = (0, s.useTransition)(A, {
+      ref: y,
       keys: e => e.timestamp,
       from: e => ({
         position: "fixed",
         visibility: "hidden",
         opacity: 1,
-        ...g.enabled ? x(e) : N()
+        ...g.enabled ? x(e) : v()
       }),
       enter: e => [{
         opacity: 1,
@@ -99,9 +99,9 @@ function g(e) {
           height: 0,
           width: 0,
           ...(() => {
-            if (null != v.current) return {
-              top: v.current.top + 12,
-              left: v.current.left + 12
+            if (null != N.current) return {
+              top: N.current.top + 12,
+              left: N.current.left + 12
             }
           })()
         }
@@ -111,7 +111,7 @@ function g(e) {
         null != t.item && null != A.find(e => e.timestamp === t.item.timestamp) && (0, u.dismissSaveClipAnimation)(T, t.item.timestamp)
       }
     });
-  return (0, s.useChain)([M, L], [0, .1], 3e3), (0, a.jsxs)(a.Fragment, {
+  return (0, s.useChain)([M, y], [0, .1], 3e3), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: h.hidden,
       ref: S
@@ -121,7 +121,7 @@ function g(e) {
     })), (0, a.jsx)(f.default, {
       children: (0, a.jsx)("div", {
         className: h.hidden,
-        children: y((e, t, n, l) => (null == t ? void 0 : t.thumbnail) != null && (0, a.jsx)(s.animated.img, {
+        children: L((e, t, n, l) => (null == t ? void 0 : t.thumbnail) != null && (0, a.jsx)(s.animated.img, {
           src: t.thumbnail,
           className: h.movingImage,
           style: e

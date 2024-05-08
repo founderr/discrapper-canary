@@ -1,83 +1,83 @@
 "use strict";
 n.r(t), n("653041");
-var s = n("442837"),
-  a = n("292556"),
-  l = n("695346"),
-  i = n("292959"),
-  r = n("626135"),
-  o = n("378364"),
+var i = n("442837"),
+  r = n("292556"),
+  a = n("695346"),
+  s = n("292959"),
+  o = n("626135"),
+  l = n("378364"),
   u = n("981631"),
-  c = n("689938");
+  d = n("689938");
 
-function d() {
-  return p() && o.default.experiment.getCurrentConfig({
+function _() {
+  return I() && l.default.experiment.getCurrentConfig({
     location: "holiday_events_is_eligible"
   }, {
     autoTrackExposure: !1
   }).enabled
 }
 
-function f() {
+function c() {
   let {
     enabled: e
-  } = o.default.experiment.useExperiment({
+  } = l.default.experiment.useExperiment({
     location: "holiday_events_use_eligible"
   }, {
     autoTrackExposure: !1
   });
-  return p() && e
+  return I() && e
 }
 
-function m() {
-  return null != o.default.ringtone && null != o.default.getRingtoneSettingsLabel
+function E() {
+  return null != l.default.ringtone && null != l.default.getRingtoneSettingsLabel
 }
 
-function p() {
+function I() {
   let e = Date.now();
-  return e >= o.default.startTimeMs && e <= o.default.endTimeMs
+  return e >= l.default.startTimeMs && e <= l.default.endTimeMs
 }
 t.default = {
   subscribe: function(e) {
-    return o.default.experiment.subscribe({
+    return l.default.experiment.subscribe({
       location: "holiday_events_subscribe"
     }, e)
   },
-  isEligible: d,
+  isEligible: _,
   isRingtoneDisabled: function() {
-    return null == o.default.ringtone || i.default.isSoundDisabled(o.default.ringtone)
+    return null == l.default.ringtone || s.default.isSoundDisabled(l.default.ringtone)
   },
   isRingtoneEligible: function() {
-    return d() && m()
+    return _() && E()
   },
   onRingtoneSettingValueChange: function(e) {
-    let t = i.default.getDisabledSounds();
-    if (null == o.default.ringtone) return;
-    let n = t.filter(e => e !== o.default.ringtone);
-    !e && n.push(o.default.ringtone), a.default.setDisabledSounds(n), r.default.track(u.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
+    let t = s.default.getDisabledSounds();
+    if (null == l.default.ringtone) return;
+    let n = t.filter(e => e !== l.default.ringtone);
+    !e && n.push(l.default.ringtone), r.default.setDisabledSounds(n), o.default.track(u.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
       toggled_on: e,
-      sound_name: o.default.ringtone
+      sound_name: l.default.ringtone
     })
   },
-  useIsEligible: f,
+  useIsEligible: c,
   useIsRingtoneDisabled: function() {
-    return (0, s.useStateFromStores)([i.default], () => null == o.default.ringtone || i.default.isSoundDisabled(o.default.ringtone))
+    return (0, i.useStateFromStores)([s.default], () => null == l.default.ringtone || s.default.isSoundDisabled(l.default.ringtone))
   },
   useIsRingtoneEligible: function() {
-    return f() && m()
+    return c() && E()
   },
   useRingtoneSettingDescription: function() {
-    return l.NativePhoneIntegrationEnabled.useSetting() ? void 0 : c.default.Messages.ENABLE_PHONE_INTEGRATION
+    return a.NativePhoneIntegrationEnabled.useSetting() ? void 0 : d.default.Messages.ENABLE_PHONE_INTEGRATION
   },
   useRingtoneSettingValue: function() {
-    let e = (0, s.useStateFromStores)([i.default], () => i.default.getDisabledSounds()),
-      t = l.NativePhoneIntegrationEnabled.useSetting();
-    return null != o.default.ringtone && t && !e.includes(o.default.ringtone)
+    let e = (0, i.useStateFromStores)([s.default], () => s.default.getDisabledSounds()),
+      t = a.NativePhoneIntegrationEnabled.useSetting();
+    return null != l.default.ringtone && t && !e.includes(l.default.ringtone)
   },
   getAppSpinnerSources: function() {
-    return p() ? o.default.appSpinnerSources : null
+    return I() ? l.default.appSpinnerSources : null
   },
   getLoadingTips: function() {
     var e;
-    return p() ? null === (e = o.default.getLoadingTips) || void 0 === e ? void 0 : e.call(o.default) : null
+    return I() ? null === (e = l.default.getLoadingTips) || void 0 === e ? void 0 : e.call(l.default) : null
   }
 }

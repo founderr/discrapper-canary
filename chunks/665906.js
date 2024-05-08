@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return G
   },
   useCanManageThread: function() {
-    return C
+    return R
   },
   useCanStartPrivateThread: function() {
     return m
@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return O
   },
   useHasActiveThreads: function() {
-    return R
+    return C
   },
   useIsActiveChannelOrUnarchivableThread: function() {
     return M
@@ -113,7 +113,7 @@ function O(e) {
   }((0, s.useStateFromStores)([E.default], () => E.default.can(f.Permissions.VIEW_CHANNEL, t), [t]), e, t)
 }
 
-function R(e) {
+function C(e) {
   return (0, s.useStateFromStoresObject)([T.default, E.default], () => {
     let t = T.default.getActiveJoinedThreadsForParent(e.guild_id, e.id),
       n = T.default.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id),
@@ -128,7 +128,7 @@ function R(e) {
   })
 }
 
-function C(e) {
+function R(e) {
   let t = (0, s.useStateFromStores)([c.default], () => c.default.getChannel(null == e ? void 0 : e.parent_id)),
     n = (0, s.useStateFromStores)([E.default], () => null != t && E.default.can(f.Permissions.MANAGE_THREADS, t), [t]),
     i = (0, s.useStateFromStores)([_.default], () => _.default.getId());

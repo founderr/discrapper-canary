@@ -23,9 +23,9 @@ t.default = r.memo(r.forwardRef(function(e, t) {
   } = e, [A, m] = r.useState(!1), N = (0, l.useStateFromStores)([c.default], () => {
     var e, t;
     return A && Object.values(null !== (t = null === (e = c.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
-  }), [p, O, R] = (0, _.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], o.default), C = r.useRef(0), g = r.useCallback(() => {
-    m(!0), clearTimeout(C.current), C.current = setTimeout(() => {
-      m(!1), C.current = 0
+  }), [p, O, C] = (0, _.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], o.default), R = r.useRef(0), g = r.useCallback(() => {
+    m(!0), clearTimeout(R.current), R.current = setTimeout(() => {
+      m(!1), R.current = 0
     }, 2e3)
   }, []);
   (0, I.useComponentAction)({
@@ -61,7 +61,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         "aria-label": S.default.Messages.GIF_BUTTON_LABEL,
         "aria-expanded": y,
         "aria-haspopup": "dialog",
-        "aria-controls": R,
+        "aria-controls": C,
         children: (0, i.jsx)(v, {
           color: "currentColor"
         })

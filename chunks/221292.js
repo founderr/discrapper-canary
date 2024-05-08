@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return p
   },
   trackUserProfileBadgeHovered: function() {
-    return C
+    return R
   },
   trackUserProfileBadgePressed: function() {
     return O
   },
   trackUserProfileRecentGamesViewed: function() {
-    return R
+    return C
   }
 }), n("653041");
 var i = n("367907"),
@@ -182,7 +182,7 @@ let f = e => {
       badge: o
     })
   },
-  R = e => {
+  C = e => {
     let {
       userId: t,
       guildId: n,
@@ -208,7 +208,7 @@ let f = e => {
       profile_shared_applications_ids: d
     })
   },
-  C = e => {
+  R = e => {
     let {
       userId: t,
       guildId: n,

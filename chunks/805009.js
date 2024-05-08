@@ -24,13 +24,13 @@ var a, l = n("735250"),
   T = n("119828"),
   I = n("156338"),
   A = n("794358"),
-  v = n("381238"),
-  N = n("255439"),
+  N = n("381238"),
+  v = n("255439"),
   x = n("374129"),
   M = n("639351"),
   R = n("944581"),
-  L = n("368666"),
-  y = n("630388"),
+  y = n("368666"),
+  L = n("630388"),
   O = n("51144"),
   j = n("981631"),
   P = n("354459"),
@@ -174,8 +174,8 @@ class H extends(a = s.Component) {
       voicePlatform: g,
       hangStatusActivity: S,
       showHangStatus: _,
-      isSelf: v,
-      application: N,
+      isSelf: N,
+      application: v,
       guildId: O,
       channelId: F,
       user: w,
@@ -222,8 +222,8 @@ class H extends(a = s.Component) {
       })
     }, "playstation")), d ? V.push((0, l.jsx)("div", {
       className: r()(U.iconSpacing, U.liveIconSpacing),
-      children: (0, l.jsx)(L.default, {
-        size: L.default.Sizes.SMALL
+      children: (0, l.jsx)(y.default, {
+        size: y.default.Sizes.SMALL
       })
     }, "stream")) : f && V.push((0, l.jsx)(h.TooltipContainer, {
       className: U.iconSpacing,
@@ -232,7 +232,7 @@ class H extends(a = s.Component) {
         className: r()(U.icon, m)
       })
     }, "watch"));
-    let Y = null != N && !(0, y.hasFlag)(N.flags, j.ApplicationFlags.EMBEDDED),
+    let Y = null != v && !(0, L.hasFlag)(v.flags, j.ApplicationFlags.EMBEDDED),
       z = null == S && Y;
     return 0 !== V.length || null != W || _ || z ? (0, l.jsxs)("div", {
       className: U.icons,
@@ -244,7 +244,7 @@ class H extends(a = s.Component) {
         className: U.iconGroup,
         onMouseEnter: () => null == H ? void 0 : H(!0),
         children: z ? (0, l.jsx)(B, {
-          application: N,
+          application: v,
           iconClassName: m,
           guildId: O,
           channelId: F,
@@ -252,7 +252,7 @@ class H extends(a = s.Component) {
         }, "".concat(w.id, "-game")) : (0, l.jsx)(k, {
           hangStatusActivity: S,
           iconClassName: m,
-          isSelf: v
+          isSelf: N
         })
       }) : null]
     }) : null
@@ -398,7 +398,7 @@ function G(e) {
         }),
         color: "currentColor"
       })
-    } else e = (0, l.jsx)(N.default, {
+    } else e = (0, l.jsx)(v.default, {
       className: r()(U.icon, t, {
         [U.iconServer]: s
       }),
@@ -420,7 +420,7 @@ function G(e) {
         }),
         color: "currentColor"
       })
-    } else e = (0, l.jsx)(v.default, {
+    } else e = (0, l.jsx)(N.default, {
       className: r()(U.icon, t, {
         [U.iconServer]: f
       })

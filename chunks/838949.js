@@ -1,88 +1,88 @@
 "use strict";
-n.r(t), n("733860");
-var s = n("735250"),
-  a = n("470079"),
-  l = n("780384"),
-  i = n("481060"),
-  r = n("197344"),
-  o = n("526167"),
-  u = n("281979"),
-  c = n("293716"),
-  d = n("810090"),
-  f = n("981631"),
-  m = n("461113"),
-  p = n("542943"),
-  g = n("423028"),
-  x = n("528512"),
-  h = n("184984"),
-  b = n("646562");
+s.r(t), s("733860");
+var a = s("735250"),
+  n = s("470079"),
+  l = s("780384"),
+  r = s("481060"),
+  i = s("197344"),
+  o = s("526167"),
+  c = s("281979"),
+  u = s("293716"),
+  d = s("810090"),
+  m = s("981631"),
+  p = s("461113"),
+  x = s("542943"),
+  f = s("423028"),
+  h = s("528512"),
+  N = s("184984"),
+  T = s("646562");
 
-function N(e) {
+function j(e) {
   let {
-    movDark: t = u,
-    movLight: n = c,
-    mp4Dark: a = m,
-    mp4Light: l = x,
-    pngDark: i = p,
-    pngLight: r = h,
-    webmDark: d = g,
-    webmLight: N = b
-  } = e, T = (0, o.getChromeVersion)(), v = [(0, s.jsx)("source", {
-    src: a,
-    type: "video/mp4"
-  }, "mp4"), (0, s.jsx)("img", {
-    alt: "",
-    src: i
-  }, "png")], S = [(0, s.jsx)("source", {
-    src: l,
-    type: "video/mp4"
-  }, "mp4"), (0, s.jsx)("img", {
-    alt: "",
-    src: r
-  }, "png")];
-  return (T > 52 || -1 === T) && (v.unshift((0, s.jsx)("source", {
-    src: d,
-    type: "video/webm"
-  }, "webm")), S.unshift((0, s.jsx)("source", {
-    src: N,
-    type: "video/webm"
-  }, "webm"))), (0, o.supportsHEVCAlpha)() && (v.unshift((0, s.jsx)("source", {
-    src: t,
-    type: "video/mp4"
-  }, "hevc")), S.unshift((0, s.jsx)("source", {
+    movDark: t = c,
+    movLight: s = u,
+    mp4Dark: n = p,
+    mp4Light: l = h,
+    pngDark: r = x,
+    pngLight: i = N,
+    webmDark: d = f,
+    webmLight: j = T
+  } = e, g = (0, o.getChromeVersion)(), v = [(0, a.jsx)("source", {
     src: n,
     type: "video/mp4"
+  }, "mp4"), (0, a.jsx)("img", {
+    alt: "",
+    src: r
+  }, "png")], b = [(0, a.jsx)("source", {
+    src: l,
+    type: "video/mp4"
+  }, "mp4"), (0, a.jsx)("img", {
+    alt: "",
+    src: i
+  }, "png")];
+  return (g > 52 || -1 === g) && (v.unshift((0, a.jsx)("source", {
+    src: d,
+    type: "video/webm"
+  }, "webm")), b.unshift((0, a.jsx)("source", {
+    src: j,
+    type: "video/webm"
+  }, "webm"))), (0, o.supportsHEVCAlpha)() && (v.unshift((0, a.jsx)("source", {
+    src: t,
+    type: "video/mp4"
+  }, "hevc")), b.unshift((0, a.jsx)("source", {
+    src: s,
+    type: "video/mp4"
   }, "hevc"))), {
-    [f.ThemeTypes.DARK]: v,
-    [f.ThemeTypes.LIGHT]: S
+    [m.ThemeTypes.DARK]: v,
+    [m.ThemeTypes.LIGHT]: b
   }
 }
-let T = r.default.getAppSpinnerSources(),
-  v = null != T ? N(T) : null,
-  S = N({});
+let g = i.default.getAppSpinnerSources(),
+  v = null != g ? j(g) : null,
+  b = j({});
 t.default = e => {
   var t;
   let {
-    loop: n = !0,
-    autoPlay: r = !0,
+    loop: s = !0,
+    autoPlay: i = !0,
     setRef: o,
-    className: u,
-    onReady: c
+    className: c,
+    onReady: u
   } = e, {
-    theme: m
-  } = (0, i.useThemeContext)(), {
-    reducedMotion: p
-  } = a.useContext(i.AccessibilityPreferencesContext), g = S;
-  null != v && (g = v);
-  let x = null !== (t = g[(0, l.isThemeDark)(m) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT]) && void 0 !== t ? t : g[f.ThemeTypes.DARK];
-  return (0, s.jsx)(d.default, {
+    theme: p
+  } = (0, r.useThemeContext)(), {
+    reducedMotion: x
+  } = n.useContext(r.AccessibilityPreferencesContext), f = b;
+  null != v && (f = v);
+  let h = null !== (t = f[(0, l.isThemeDark)(p) ? m.ThemeTypes.DARK : m.ThemeTypes.LIGHT]) && void 0 !== t ? t : f[m.ThemeTypes.DARK];
+  return (0, a.jsx)(d.default, {
     ref: o,
-    onLoadedData: c,
-    className: u,
-    loop: !p.enabled && n,
-    autoPlay: !p.enabled && r,
+    onLoadedData: u,
+    className: c,
+    loop: !x.enabled && s,
+    autoPlay: !x.enabled && i,
     playsInline: !0,
     "data-testid": "app-spinner",
-    children: x
-  }, m)
+    children: h
+  }, p)
 }

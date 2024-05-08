@@ -46,8 +46,8 @@ var i = n("392711"),
   N = n("914010"),
   p = n("9156"),
   O = n("979651"),
-  R = n("626135"),
-  C = n("70956"),
+  C = n("626135"),
+  R = n("70956"),
   g = n("700785"),
   L = n("546416"),
   v = n("981631"),
@@ -134,7 +134,7 @@ function G(e) {
   var t, n, i, r, a;
   let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  if (R.default.isThrottled(e)) return;
+  if (C.default.isThrottled(e)) return;
   let l = !("location" in s) || s.location !== v.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
     u = "guild_id" in s ? s.guild_id : l ? N.default.getGuildId() : null,
     _ = "channel_id" in s ? s.channel_id : l ? m.default.getChannelId(u) : null,
@@ -148,7 +148,7 @@ function G(e) {
       channel_hidden: !1
     }) : U(c)
   };
-  R.default.track(e, I, {
+  C.default.track(e, I, {
     flush: o
   })
 }
@@ -162,7 +162,7 @@ function w(e) {
   if (null == n) return {
     channel_id: e
   };
-  let i = A.default.getSnapshot(e, 10 * C.default.Millis.SECOND);
+  let i = A.default.getSnapshot(e, 10 * R.default.Millis.SECOND);
   return {
     channel_id: e,
     channel_was_unread: i.unread,

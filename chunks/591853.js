@@ -41,13 +41,13 @@ var u = n("194048"),
   T = n("493683"),
   I = n("475179"),
   A = n("220779"),
-  v = n("201133"),
-  N = n("605236"),
+  N = n("201133"),
+  v = n("605236"),
   x = n("543241"),
   M = n("318374"),
   R = n("359110"),
-  L = n("12168"),
-  y = n("592125"),
+  y = n("12168"),
+  L = n("592125"),
   O = n("430824"),
   j = n("496675"),
   P = n("699516"),
@@ -145,7 +145,7 @@ function er(e) {
     requestId: f
   } = e, m = (0, d.useStateFromStores)([W.default], () => W.default.isChannelReplyMode()), [p, E] = l.useState(null), C = (0, d.useStateFromStores)([j.default], () => j.default.can($.Permissions.SEND_MESSAGES, t)), S = (0, z.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
-  }), [I, x] = l.useState(!1), [M, R] = l.useState(!1), L = "#".concat(t.name), O = G.default.getName(t.guild_id, t.id, n), P = m ? ee.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : ee.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, D = async e => {
+  }), [I, x] = l.useState(!1), [M, R] = l.useState(!1), y = "#".concat(t.name), O = G.default.getName(t.guild_id, t.id, n), P = m ? ee.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : ee.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, D = async e => {
     if (null != e) {
       if (H.default.track($.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: J.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
@@ -153,11 +153,11 @@ function er(e) {
           guild_id: t.guild_id
         }), S) {
         let l;
-        if ((0, N.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), x(!0), R(!1), m) l = t;
+        if ((0, v.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), x(!0), R(!1), m) l = t;
         else {
           var a;
           let e = await T.default.getOrEnsurePrivateChannel(n.id);
-          l = null !== (a = y.default.getChannel(e)) && void 0 !== a ? a : null
+          l = null !== (a = L.default.getChannel(e)) && void 0 !== a ? a : null
         }
         return o()(null != l, "Send channel must be defined"), U({
           reply: ":".concat(e.name, ":"),
@@ -174,10 +174,10 @@ function er(e) {
     }
   }, b = async e => {
     let a;
-    if (S && (0, N.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m) a = t;
+    if (S && (0, v.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m) a = t;
     else {
       let e = await T.default.openPrivateChannel(n.id, !1, !1),
-        t = y.default.getChannel(e);
+        t = L.default.getChannel(e);
       o()(null != t, "DM channel must be defined"), a = t
     }
     let l = a.type === $.ChannelTypes.DM ? J.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT : J.ContentInventoryInteractionTypes.CHANNEL_REACTION_MESSAGE_SENT;
@@ -194,7 +194,7 @@ function er(e) {
       onComplete: l,
       interactionType: r
     } = e, d = await en(s)(a.id);
-    o()(null != d, "Reaction image must be defined"), await (0, v.sendReply)({
+    o()(null != d, "Reaction image must be defined"), await (0, N.sendReply)({
       file: d,
       channel: a,
       altText: i,
@@ -250,7 +250,7 @@ function er(e) {
         })
       }), (0, a.jsx)(A.ReplyInput, {
         placeholder: ee.default.Messages.TEXTAREA_PLACEHOLDER.format({
-          channel: m ? L : "@".concat(O)
+          channel: m ? y : "@".concat(O)
         }),
         onEnter: b,
         setEditorRef: e => E(e),
@@ -290,7 +290,7 @@ let eo = e => {
             emojiName: t.name
           }),
           color: _.Tooltip.Colors.PRIMARY,
-          children: (0, a.jsx)(L.HotBarEmoji, {
+          children: (0, a.jsx)(y.HotBarEmoji, {
             emoji: t,
             isDisabled: !1,
             onClick: () => n(t),
@@ -430,9 +430,9 @@ function ef(e) {
     reactionImageAltText: c,
     generateReactionImage: h,
     isStreaming: g = !1
-  } = e, N = G.default.getName(i.guild_id, i.id, t), [x, M] = l.useState(!1), L = (0, d.useStateFromStores)([O.default], () => O.default.getGuild(s.guild_id)), j = (0, d.useStateFromStoresArray)([b.default], () => b.default.getVoiceStatesForChannel(s), [s]), F = l.useMemo(() => {
+  } = e, v = G.default.getName(i.guild_id, i.id, t), [x, M] = l.useState(!1), y = (0, d.useStateFromStores)([O.default], () => O.default.getGuild(s.guild_id)), j = (0, d.useStateFromStoresArray)([b.default], () => b.default.getVoiceStatesForChannel(s), [s]), F = l.useMemo(() => {
     for (let e of j) {
-      let t = y.default.getDMFromUserId(e.user.id),
+      let t = L.default.getDMFromUserId(e.user.id),
         n = null != t && D.default.isChannelMuted(null, t),
         a = P.default.isBlocked(e.user.id);
       if (n || a) return !0
@@ -440,10 +440,10 @@ function ef(e) {
     return !1
   }, [j]), k = async e => {
     let a = await T.default.openPrivateChannel(t.id, !1, !1),
-      l = y.default.getChannel(a);
+      l = L.default.getChannel(a);
     o()(null != l, "DM channel must be defined");
     let s = await en(h)(l.id);
-    o()(null != s, "Reaction image must be defined"), await (0, v.sendReply)({
+    o()(null != s, "Reaction image must be defined"), await (0, N.sendReply)({
       file: s,
       channel: l,
       altText: c,
@@ -464,13 +464,13 @@ function ef(e) {
       destinationGuildId: s.guild_id
     })
   };
-  return null == L ? null : (0, a.jsxs)("div", {
+  return null == y ? null : (0, a.jsxs)("div", {
     children: [(0, a.jsxs)("div", {
       className: et.voiceChannelPopoutReactorHeader,
       children: [(0, a.jsxs)("div", {
         className: et.voiceChannelPopoutReactorChannel,
         children: [(0, a.jsx)(U.default, {
-          guild: L,
+          guild: y,
           size: U.default.Sizes.SMOL,
           className: et.voiceChannelGuildIcon,
           active: !0
@@ -488,11 +488,11 @@ function ef(e) {
           children: s.name
         })]
       }), (0, a.jsx)(w.default, {
-        guildId: L.id,
+        guildId: y.id,
         users: j,
         max: 3,
         renderUser: (e, t) => (0, a.jsx)(_.Avatar, {
-          src: e.user.getAvatarURL(L.id, 16),
+          src: e.user.getAvatarURL(y.id, 16),
           size: _.AvatarSizes.SIZE_16,
           "aria-label": "avatar",
           className: t
@@ -510,7 +510,7 @@ function ef(e) {
       className: et.voicePopoutDivider
     }), x ? (0, a.jsx)(A.ReplyInput, {
       placeholder: ee.default.Messages.TEXTAREA_PLACEHOLDER.format({
-        channel: "@".concat(N)
+        channel: "@".concat(v)
       }),
       onEnter: k,
       showEmojiButton: !0,

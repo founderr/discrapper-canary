@@ -127,7 +127,7 @@ n.r(t), n.d(t, {
     return N.Dots
   },
   FocusBlock: function() {
-    return C.FocusBlock
+    return R.FocusBlock
   },
   FocusJumpSection: function() {
     return g.FocusJumpSection
@@ -541,7 +541,7 @@ n.r(t), n.d(t, {
     return es.closeModal
   },
   createAdvancedScroller: function() {
-    return eR.createAdvancedScroller
+    return eC.createAdvancedScroller
   },
   createLayer: function() {
     return W.createLayer
@@ -550,7 +550,7 @@ n.r(t), n.d(t, {
     return z.createListScroller
   },
   createManagedReactiveScroller: function() {
-    return eC.createManagedReactiveScroller
+    return eR.createManagedReactiveScroller
   },
   createMasonryListScroller: function() {
     return X.createMasonryListScroller
@@ -598,7 +598,7 @@ n.r(t), n.d(t, {
     return es.hasModalOpenSelector
   },
   isInDndMode: function() {
-    return R.isInDndMode
+    return C.isInDndMode
   },
   isListItemRow: function() {
     return ep.isListItemRow
@@ -628,7 +628,7 @@ n.r(t), n.d(t, {
     return eM.singleSelect
   },
   toggleDndMode: function() {
-    return R.toggleDndMode
+    return C.toggleDndMode
   },
   toggleSelect: function() {
     return eM.toggleSelect
@@ -640,13 +640,13 @@ n.r(t), n.d(t, {
     return es.updateModal
   },
   useDndMode: function() {
-    return R.useDndMode
+    return C.useDndMode
   },
   useDndStore: function() {
-    return R.useDndStore
+    return C.useDndStore
   },
   useFocusBlock: function() {
-    return C.useFocusBlock
+    return R.useFocusBlock
   },
   useFocusJumpSection: function() {
     return g.useFocusJumpSection
@@ -730,8 +730,8 @@ var i = n("680732"),
   N = n("438784"),
   p = n("799151"),
   O = n("206557"),
-  R = n("79320"),
-  C = n("411734"),
+  C = n("79320"),
+  R = n("411734"),
   g = n("287235"),
   L = n("597442"),
   v = n("84735"),
@@ -784,8 +784,8 @@ var i = n("680732"),
   eN = n("109161"),
   ep = n("562701"),
   eO = n("147479"),
-  eR = n("987738"),
-  eC = n("975339"),
+  eC = n("987738"),
+  eR = n("975339"),
   eg = n("84241"),
   eL = n("810412"),
   ev = n("21340"),

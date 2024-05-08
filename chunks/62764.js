@@ -25,13 +25,13 @@ var a = n("735250"),
   T = n("346479"),
   I = n("592125"),
   A = n("808602"),
-  v = n("263704"),
-  N = n("757698"),
+  N = n("263704"),
+  v = n("757698"),
   x = n("934415"),
   M = n("456269"),
   R = n("109590"),
-  L = n("228392"),
-  y = n("981631"),
+  y = n("228392"),
+  L = n("981631"),
   O = n("689938"),
   j = n("836475"),
   P = n("254192");
@@ -80,14 +80,14 @@ function D(e) {
       Y ? T.default.leaveThread(V, "Forum Toolbar") : T.default.joinThread(V, "Forum Toolbar")
     },
     es = () => {
-      (0, L.trackForumPostLinkCopied)({
+      (0, y.trackForumPostLinkCopied)({
         postId: V.id,
         location: {
-          section: y.AnalyticsSections.CHANNEL_HEADER
+          section: L.AnalyticsSections.CHANNEL_HEADER
         }
       }), (0, r.copy)((0, x.getChannelLinkToCopy)(V, Q)), G(!0)
     },
-    ei = Y ? v.default : A.default;
+    ei = Y ? N.default : A.default;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: i()(j.container, {
@@ -164,10 +164,10 @@ function D(e) {
             onClick: es,
             className: j.button,
             innerClassName: j.buttonInner,
-            children: [B ? (0, a.jsx)(v.default, {
+            children: [B ? (0, a.jsx)(N.default, {
               width: 16,
               height: 16
-            }) : (0, a.jsx)(N.default, {
+            }) : (0, a.jsx)(v.default, {
               width: 16,
               height: 16
             }), B ? O.default.Messages.COPIED : null]

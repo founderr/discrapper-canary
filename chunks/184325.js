@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return C
+    return R
   }
 }), n("653041");
 var i, r, a = n("735250");
@@ -27,16 +27,16 @@ var s = n("120356"),
   N = n("981631"),
   p = n("689938"),
   O = n("845713"),
-  R = n("839973");
+  C = n("839973");
 
-function C(e) {
+function R(e) {
   let {
     user: t,
     guildId: n,
     className: i,
     shrinkAtCount: r,
     shrinkToSize: s,
-    isTryItOutFlow: C,
+    isTryItOutFlow: R,
     onBadgeClick: g,
     size: L = 0
   } = e, v = (0, A.default)(t.id, n), {
@@ -54,9 +54,9 @@ function C(e) {
     role: "group",
     children: (0, a.jsx)(c.default, {})
   });
-  C && null == P.find(e => "premium" === e.id) && P.push({
+  R && null == P.find(e => "premium" === e.id) && P.push({
     id: "premium",
-    src: R,
+    src: C,
     description: p.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
       date: new Date
     })

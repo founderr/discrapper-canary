@@ -64,8 +64,8 @@ var i = n("512722"),
   N = n("573261"),
   p = n("26151"),
   O = n("493683"),
-  R = n("475179"),
-  C = n("287734"),
+  C = n("475179"),
+  R = n("287734"),
   g = n("981631"),
   L = n("70722");
 
@@ -112,7 +112,7 @@ function y(e, t) {
     type: "STREAM_WATCH",
     streamKey: r,
     allowMultiple: a
-  }), !a && (null == t || !t.noFocus) && R.default.selectParticipant(e.channelId, r)
+  }), !a && (null == t || !t.noFocus) && C.default.selectParticipant(e.channelId, r)
 }
 
 function P(e, t) {
@@ -245,7 +245,7 @@ function H(e, t) {
   let n = E.default.getId(),
     i = (0, u.decodeStreamKey)(t),
     r = f.default.getVoiceChannelId();
-  null != r && r !== e && C.default.disconnect(), O.default.addRecipient(e, n, void 0, () => {
+  null != r && r !== e && R.default.disconnect(), O.default.addRecipient(e, n, void 0, () => {
     p.default.call(e, !1, !1, null, () => {
       U(i)
     })

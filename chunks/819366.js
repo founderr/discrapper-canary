@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("594174"),
   p = n("797053"),
   O = n("5192"),
-  R = n("51144"),
-  C = n("377668");
+  C = n("51144"),
+  R = n("377668");
 
 function g(e) {
   let {
@@ -70,7 +70,7 @@ function L(e) {
     null != y && (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("70866"), n.e("12435"), n.e("6696")]).then(n.bind(n, "757387"));
+      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("82882"), n.e("12435"), n.e("6696")]).then(n.bind(n, "757387"));
       return t => (0, i.jsx)(e, {
         ...t,
         user: M,
@@ -78,7 +78,7 @@ function L(e) {
         guildId: P
       })
     })
-  }, b = R.default.useName(M), G = (0, l.useStateFromStores)([S.default, h.default, m.default], () => O.default.getNickname(P, a, M)), w = A.default.getGuild(P), k = (0, E.useClydeEnabled)(w, y) && r === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null;
+  }, b = C.default.useName(M), G = (0, l.useStateFromStores)([S.default, h.default, m.default], () => O.default.getNickname(P, a, M)), w = A.default.getGuild(P), k = (0, E.useClydeEnabled)(w, y) && r === R.CLYDE_AI_USER_ID ? R.CLYDE_AI_MENTION_COLOR : null;
   if (null == M) return (0, i.jsx)(g, {
     userId: I,
     className: t,

@@ -69,7 +69,7 @@ function p() {
 let O = {
   pendingUsages: []
 };
-class R extends(i = s.default.PersistedStore) {
+class C extends(i = s.default.PersistedStore) {
   initialize(e) {
     this.waitFor(E.default, c.default), null != e && (e.pendingUsages = e.pendingUsages.filter(e => null != e && I.ID_REGEX.test(e.key)), O = e), this.syncWith([u.default], p)
   }
@@ -100,7 +100,7 @@ class R extends(i = s.default.PersistedStore) {
     return 100
   }
 }
-f(R, "displayName", "FrecencyStore"), f(R, "persistKey", "FrecencyStore"), t.default = new R(o.default, {
+f(C, "displayName", "FrecencyStore"), f(C, "persistKey", "FrecencyStore"), t.default = new C(o.default, {
   CHANNEL_SELECT: N,
   VOICE_CHANNEL_SELECT: N,
   USER_SETTINGS_PROTO_UPDATE: function(e) {

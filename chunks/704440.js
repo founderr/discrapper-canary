@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("689938"),
   p = n("925573"),
   O = n("751599"),
-  R = n("397293"),
-  C = n("352175"),
+  C = n("397293"),
+  R = n("352175"),
   g = n("90351");
 let L = async (e, t, n) => {
   n(!0), await (0, S.createReferralTrial)(e).then(() => {
@@ -54,7 +54,7 @@ let L = async (e, t, n) => {
         className: p.closeButton
       }), (0, i.jsx)("img", {
         alt: "",
-        src: l ? R : C,
+        src: l ? C : R,
         className: p.confirmationImage
       }), (0, i.jsx)(d.Heading, {
         variant: "heading-xl/bold",
@@ -105,7 +105,7 @@ function D(e) {
     channel: n,
     onClose: a,
     isResending: o
-  } = e, [u, _] = r.useState(!1), [S, C] = r.useState(!1), D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
+  } = e, [u, _] = r.useState(!1), [S, R] = r.useState(!1), D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
     analyticsLocations: M
   } = (0, E.default)(c.default.REFERRAL_TRIALS_POPOUT), {
     enabled: y
@@ -126,7 +126,7 @@ function D(e) {
       className: p.generalBodyContainer,
       children: [(0, i.jsx)("img", {
         alt: "",
-        src: y ? R : g,
+        src: y ? C : g,
         className: p.generalBodyImage
       }), (0, i.jsxs)("div", {
         className: p.innerContent,
@@ -168,7 +168,7 @@ function D(e) {
         className: p.generalShareButton,
         submitting: S,
         onClick: () => {
-          o ? L(D, a, C) : (_(!0), I.default.track(m.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+          o ? L(D, a, R) : (_(!0), I.default.track(m.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
             location_stack: M,
             step: A.ReferralTrialsAnalyticSteps.FLOW_STARTED,
             other_user_id: Number(D)

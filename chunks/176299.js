@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("918854"),
   S = n("279240"),
   p = n("765717"),
-  g = n("358221"),
-  I = n("823748"),
+  I = n("358221"),
+  g = n("823748"),
   T = n("626421"),
   A = n("118379"),
   N = n("652515"),
@@ -88,13 +88,13 @@ let em = () => (0, a.jsx)("div", {
     name: "GuildMemberApplicationReview",
     renderLoader: em
   }),
-  eg = (0, d.makeLazy)({
+  eI = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("51373")]).then(n.bind(n, "231588")),
     webpackId: "231588",
     name: "GuildHomePage",
     renderLoader: em
   }),
-  eI = (0, d.makeLazy)({
+  eg = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("85552"), n.e("16600")]).then(n.bind(n, "545918")),
     webpackId: "545918",
     name: "MemberSafetyPage",
@@ -153,7 +153,7 @@ let em = () => (0, a.jsx)("div", {
           guildId: s
         });
       case eE.StaticChannelRoute.GUILD_HOME:
-        return (0, a.jsx)(eg, {
+        return (0, a.jsx)(eI, {
           guildId: s
         });
       case eE.StaticChannelRoute.CHANNEL_BROWSER:
@@ -171,7 +171,7 @@ let em = () => (0, a.jsx)("div", {
           selectedSection: eh.GuildOnboardingTab.CUSTOMIZE
         });
       case eE.StaticChannelRoute.MEMBER_SAFETY:
-        return (0, a.jsx)(eI, {
+        return (0, a.jsx)(eg, {
           guildId: s
         });
       default:
@@ -188,7 +188,7 @@ let em = () => (0, a.jsx)("div", {
         inputSkuId: e
       }, n.id)
     }
-    return (0, a.jsx)(I.default, {})
+    return (0, a.jsx)(g.default, {})
   },
   ev = s.memo(function() {
     let {
@@ -314,7 +314,7 @@ function eF(e) {
   }), h.UserTriggerAAExperiment.trackExposure({
     location: i
   });
-  let r = (0, f.useStateFromStores)([g.default], () => g.default.isFullscreenInContext());
+  let r = (0, f.useStateFromStores)([I.default], () => I.default.isFullscreenInContext());
   return s ? null : (0, a.jsxs)("div", {
     className: l()(eC.sidebar, (0, es.getThemeClass)(n), {
       [eC.hasNotice]: t,

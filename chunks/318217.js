@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-let s = (0, n("818083").createExperiment)({
+let i = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2023-12_2023_eoy_ringtone",
   label: "EOY Ringtone 2023",
@@ -15,4 +15,4 @@ let s = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = s
+t.default = i

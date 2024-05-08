@@ -37,8 +37,8 @@ function f(e, t) {
     p = null != T && null !== (s = null === (i = c.default.getMember(T, S)) || void 0 === i ? void 0 : i.roles) && void 0 !== s ? s : [],
     O = o.default.isViewingRoles(T),
     {
-      computedPermissions: R,
-      hasBaseAccessPermissions: C
+      computedPermissions: C,
+      hasBaseAccessPermissions: R
     } = A(E);
   return {
     context: E,
@@ -46,8 +46,8 @@ function f(e, t) {
     roleIds: p,
     isImpersonating: O,
     commandType: t,
-    computedPermissions: R,
-    hasBaseAccessPermissions: C,
+    computedPermissions: C,
+    hasBaseAccessPermissions: R,
     allowNsfw: h(E, m, f)
   }
 }

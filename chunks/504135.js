@@ -31,8 +31,8 @@ function T(e) {
     isFocused: N,
     menuItemProps: p,
     action: O,
-    onClose: R,
-    onFocus: C,
+    onClose: C,
+    onFocus: R,
     className: g,
     focusedClassName: L,
     subMenuIconClassName: v,
@@ -42,11 +42,11 @@ function T(e) {
     sparkle: P
   } = e, U = r.useContext(u.OnMenuSelectContext), b = r.useRef(null), G = r.useCallback(e => {
     if (null == O) return !1;
-    !(e.shiftKey && D) && !M && R(), e.persist(), null == U || U(), requestAnimationFrame(() => O(e))
-  }, [O, R, U, D, M]);
+    !(e.shiftKey && D) && !M && C(), e.persist(), null == U || U(), requestAnimationFrame(() => O(e))
+  }, [O, C, U, D, M]);
   return r.useEffect(() => {
-    N && ((0, d.ensureItemVisible)(b), null == C || C())
-  }, [N, C]), (0, i.jsxs)(o.Clickable, {
+    N && ((0, d.ensureItemVisible)(b), null == R || R())
+  }, [N, R]), (0, i.jsxs)(o.Clickable, {
     innerRef: b,
     className: s()(I.item, I.labelContainer, E.MENU_ITEM_COLORS[t], g, {
       [I.disabled]: m,

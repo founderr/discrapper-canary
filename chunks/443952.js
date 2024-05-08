@@ -18,8 +18,8 @@ var s = n("45792"),
   m = n("293273"),
   S = n("885110"),
   p = n("451478"),
-  g = n("630388"),
-  I = n("823379"),
+  I = n("630388"),
+  g = n("823379"),
   T = n("591759"),
   A = n("228488"),
   N = n("996106"),
@@ -215,13 +215,13 @@ t.default = {
             }, 1e3)
           };
           i.addEventListener("change", () => {
-            (0, I.isNotNullish)(i.files) && e(i.files[0]), l()
+            (0, g.isNotNullish)(i.files) && e(i.files[0]), l()
           }), i.addEventListener("cancel", () => {
             l()
           }), s.document.body.addEventListener("focus", l, !0), s.document.body.appendChild(i), i.click()
         }(async n => {
           let i = await (0, f.uploadImageAttachment)(a, s, n);
-          (0, I.isNotNullish)(i) && (0, I.isNotNullish)(i.url) && !(i instanceof d.default) ? e({
+          (0, g.isNotNullish)(i) && (0, g.isNotNullish)(i.url) && !(i instanceof d.default) ? e({
             image_url: i.url
           }): t(i)
         }, () => t(Error("Upload canceled")))
@@ -250,7 +250,7 @@ t.default = {
       if (null == s) throw new N.default({
         errorCode: P.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      if (!(0, g.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.ApplicationFlags.EMBEDDED)) throw new N.default({
+      if (!(0, I.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.ApplicationFlags.EMBEDDED)) throw new N.default({
         errorCode: P.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
       let i = (0, O.default)();

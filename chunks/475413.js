@@ -28,7 +28,7 @@ t.default = e => {
   });
   let {
     activeSubscription: p
-  } = (0, r.default)(null == S ? void 0 : S.id), g = (0, i.useSubscriptionsSettings)(m.id), I = null == g ? void 0 : g.description, {
+  } = (0, r.default)(null == S ? void 0 : S.id), I = (0, i.useSubscriptionsSettings)(m.id), g = null == I ? void 0 : I.description, {
     editStateIds: T
   } = l.useEditStateIds(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : null, m.id);
   return (0, a.jsxs)(a.Fragment, {
@@ -36,8 +36,8 @@ t.default = e => {
       title: _.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
         serverName: m.toString()
       }),
-      description: null != I ? I : null,
-      coverImageAsset: null !== (n = null == g ? void 0 : g.cover_image_asset) && void 0 !== n ? n : null,
+      description: null != g ? g : null,
+      coverImageAsset: null !== (n = null == I ? void 0 : I.cover_image_asset) && void 0 !== n ? n : null,
       guild: m,
       children: [null != S ? (0, a.jsx)(u.default, {
         className: C.pendingPlanChangeNotice,

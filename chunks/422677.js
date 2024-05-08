@@ -32,8 +32,8 @@ function I(e) {
   } = e, {
     analyticsLocations: A
   } = (0, o.default)(), {
-    fetched: v,
-    applicationsShelf: N,
+    fetched: N,
+    applicationsShelf: v,
     installedIntegrations: x
   } = (0, E.usePrivateChannelIntegrationState)({
     channelId: t
@@ -50,7 +50,7 @@ function I(e) {
     R = (e, t) => {
       T.has(e.key) && M(t)
     },
-    L = l.useCallback(e => {
+    y = l.useCallback(e => {
       let {
         application: t,
         location: n
@@ -88,7 +88,7 @@ function I(e) {
           })]
         }), (0, a.jsx)("div", {
           className: S.applicationRowContainer,
-          children: v ? N.map(e => {
+          children: N ? v.map(e => {
             if (null != x.find(t => t.application.id === e.id)) return null;
             let n = null != e.description ? (0, u.parseBioReact)(e.description) : null,
               l = h.default.getApplicationIconURL({
@@ -126,7 +126,7 @@ function I(e) {
                         scopes: [C.OAuth2Scopes.APPLICATIONS_COMMANDS],
                         channelId: t,
                         disableGuildSelect: !0,
-                        callback: L
+                        callback: y
                       })
                     },
                     size: i.Button.Sizes.SMALL,

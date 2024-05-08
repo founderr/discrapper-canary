@@ -58,11 +58,11 @@ function O(e) {
     checked: t,
     onClick: n,
     id: a = "burst-reaction-toggle-button"
-  } = e, f = (0, l.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = I.default.getCurrentUser(), R = null == O || (0, S.isPremium)(O) ? [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [C, g] = (0, E.useSelectedDismissibleContent)(R), [L, v] = r.useState(!1), [D, M] = (0, o.useSpring)(() => ({})), y = (0, o.animated)(d.SuperReactionIcon);
+  } = e, f = (0, l.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = I.default.getCurrentUser(), C = null == O || (0, S.isPremium)(O) ? [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [R, g] = (0, E.useSelectedDismissibleContent)(C), [L, v] = r.useState(!1), [D, M] = (0, o.useSpring)(() => ({})), y = (0, o.animated)(d.SuperReactionIcon);
   r.useEffect(() => {
-    let e = C === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+    let e = R === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
     e && (g(h.ContentDismissActionType.DISMISS), setTimeout(() => v(e), 200))
-  }, [C, g]);
+  }, [R, g]);
   let P = L ? A.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? A.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : A.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
     U = L ? A.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
   return (0, i.jsxs)(_.TooltipContainer, {

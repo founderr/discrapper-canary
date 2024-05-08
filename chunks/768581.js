@@ -14,7 +14,7 @@ n.r(t), n.d(t, {
     return A
   },
   getGuildMemberAvatarURL: function() {
-    return R
+    return C
   },
   getGuildMemberAvatarURLSimple: function() {
     return O
@@ -26,7 +26,7 @@ n.r(t), n.d(t, {
     return p
   },
   getUserBannerURL: function() {
-    return C
+    return R
   },
   getVideoFilterAssetURL: function() {
     return w
@@ -141,7 +141,7 @@ function O(e) {
   }))
 }
 
-function R(e) {
+function C(e) {
   let {
     userId: t,
     avatar: n,
@@ -155,7 +155,7 @@ function R(e) {
   })
 }
 
-function C(e) {
+function R(e) {
   let t, {
     id: n,
     banner: i,
@@ -397,15 +397,15 @@ function F(e) {
 t.default = {
   getUserAvatarURL: p,
   getDefaultAvatarURL: m,
-  getGuildMemberAvatarURL: R,
+  getGuildMemberAvatarURL: C,
   getGuildMemberAvatarURLSimple: O,
   getGuildMemberAvatarSource: function(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-      i = R(e, n);
+      i = C(e, n);
     return null != i ? F(i) : t.getAvatarSource(e.guildId, n)
   },
   getGuildMemberBannerURL: L,
-  getUserBannerURL: C,
+  getUserBannerURL: R,
   getAvatarDecorationURL: g,
   hasAnimatedGuildIcon: function(e) {
     return B(null == e ? void 0 : e.icon)

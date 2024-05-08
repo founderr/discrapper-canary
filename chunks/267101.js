@@ -1,7 +1,7 @@
 "use strict";
-r.r(e), r.d(e, {
+u.r(e), u.d(e, {
   useCanManageGuildProduct: function() {
-    return C
+    return P
   },
   useFetchGuildProductListing: function() {
     return E
@@ -15,39 +15,39 @@ r.r(e), r.d(e, {
   useGuildProductsForGuild: function() {
     return _
   }
-}), r("47120");
-var u = r("470079"),
-  n = r("442837");
-r("935369");
-var i = r("38618"),
-  l = r("160404"),
-  o = r("496675"),
-  c = r("914010"),
-  a = r("495437"),
-  d = r("240864"),
-  s = r("981631");
+}), u("47120");
+var r = u("470079"),
+  n = u("442837");
+u("935369");
+var i = u("38618"),
+  l = u("160404"),
+  o = u("496675"),
+  c = u("914010"),
+  a = u("495437"),
+  d = u("240864"),
+  s = u("981631");
 let f = t => {
     let e = (0, n.useStateFromStores)([d.default], () => null != t ? d.default.getGuildProductsForGuildFetchState(t) : d.FetchState.FETCHED, [t]),
-      r = (0, n.useStateFromStores)([i.default], () => i.default.isConnected()),
-      [l, o] = u.useState(!0);
-    return u.useEffect(() => {
-      l && (e === d.FetchState.NOT_FETCHED || e === d.FetchState.FETCHED && d.default.isGuildProductsCacheExpired(t)) && r && a.fetchGuildProductsForGuild(t), o(!r)
-    }, [t, r, e, l]), {
+      u = (0, n.useStateFromStores)([i.default], () => i.default.isConnected()),
+      [l, o] = r.useState(!0);
+    return r.useEffect(() => {
+      l && (e === d.FetchState.NOT_FETCHED || e === d.FetchState.FETCHED && d.default.isGuildProductsCacheExpired(t)) && u && a.fetchGuildProductsForGuild(t), o(!u)
+    }, [t, u, e, l]), {
       listingsLoaded: e === d.FetchState.FETCHED && !l
     }
   },
   E = function(t, e) {
     let {
-      requireCurrentGuild: r
+      requireCurrentGuild: u
     } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
       requireCurrentGuild: !0
     }, l = (0, n.useStateFromStores)([i.default], () => i.default.isConnected()), o = (0, n.useStateFromStores)([c.default], () => c.default.getGuildId());
-    return u.useEffect(() => {
-      let u = d.default.getGuildProductFetchState(e);
-      if ((!r || o === t) && l && u === d.FetchState.NOT_FETCHED) try {
+    return r.useEffect(() => {
+      let r = d.default.getGuildProductFetchState(e);
+      if ((!u || o === t) && l && r === d.FetchState.NOT_FETCHED) try {
         a.fetchGuildProduct(t, e)
       } catch (t) {}
-    }, [t, e, l, o, r]), (0, n.useStateFromStores)([d.default], () => d.default.getGuildProduct(e))
+    }, [t, e, l, o, u]), (0, n.useStateFromStores)([d.default], () => d.default.getGuildProduct(e))
   },
   _ = function(t) {
     let {
@@ -58,4 +58,4 @@ let f = t => {
     }))
   },
   T = t => (0, n.useStateFromStores)([d.default], () => null == t ? void 0 : d.default.getGuildProduct(t)),
-  C = t => (0, n.useStateFromStores)([o.default], () => null != t && o.default.can(s.Permissions.ADMINISTRATOR, t))
+  P = t => (0, n.useStateFromStores)([o.default], () => null != t && o.default.can(s.Permissions.ADMINISTRATOR, t))

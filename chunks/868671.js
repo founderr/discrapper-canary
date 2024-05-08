@@ -33,7 +33,7 @@ function E(e) {
   } = e, [g, S] = a.useState(!1), {
     requestId: _,
     entries: T
-  } = (0, u.default)(E), I = (0, l.useStateFromStores)([o.default], () => o.default.hidden), A = (0, l.useStateFromStores)([i.default], () => i.default.isFocused()), [v, N, x, M] = a.useMemo(() => {
+  } = (0, u.default)(E), I = (0, l.useStateFromStores)([o.default], () => o.default.hidden), A = (0, l.useStateFromStores)([i.default], () => i.default.isFocused()), [N, v, x, M] = a.useMemo(() => {
     let e;
     if (null == T || 0 === T.length || null == _) return [t, n, p];
     let a = g ? T.length : 3,
@@ -69,22 +69,22 @@ function E(e) {
       o = [i, ...t],
       u = [...n, i, ...e];
     return [o, u, Math.random(), e]
-  }, [E, T, g, t, C, _, n, p, I]), R = a.useRef(0), L = a.useRef(T), y = a.useRef(), O = a.useCallback(e => {
+  }, [E, T, g, t, C, _, n, p, I]), R = a.useRef(0), y = a.useRef(T), L = a.useRef(), O = a.useCallback(e => {
     var t;
     let n = Math.floor(e / d.DEFAULT_CONTENT_ROW_HEIGHT),
       a = Math.min(null !== (t = null == M ? void 0 : M.length) && void 0 !== t ? t : 0, n);
     R.current = Math.max(R.current, a)
   }, [M]);
   return a.useEffect(() => {
-    L.current = T
-  }, [T]), a.useEffect(() => (R.current = 0, y.current = Date.now(), () => {
+    y.current = T
+  }, [T]), a.useEffect(() => (R.current = 0, L.current = Date.now(), () => {
     var e, t;
-    if (null == _ || null == y.current || Date.now() - y.current < 3e3) return;
-    let n = null !== (t = null === (e = L.current) || void 0 === e ? void 0 : e.map(e => e.id)) && void 0 !== t ? t : [],
+    if (null == _ || null == L.current || Date.now() - L.current < 3e3) return;
+    let n = null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.map(e => e.id)) && void 0 !== t ? t : [],
       a = n.slice(0, R.current);
     !I && A && r.default.track(h.AnalyticEvents.RANKING_ITEMS_SEEN, {
       request_id: _,
-      first_shown_at: y.current,
+      first_shown_at: L.current,
       item_ids: a,
       surface_type: c.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
       channel_id: E,
@@ -92,8 +92,8 @@ function E(e) {
       all_item_ids: n
     })
   }), [_, E, C, I, A]), {
-    groups: v,
-    rows: N,
+    groups: N,
+    rows: v,
     version: x,
     updateMaxRowSeen: O
   }

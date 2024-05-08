@@ -100,11 +100,11 @@ let f = () => ({
     icon: _.default,
     description: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_VANITY_URL
   }),
-  R = () => ({
+  C = () => ({
     icon: r.default,
     description: T.default.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
   }),
-  C = () => ({
+  R = () => ({
     icon: s.default,
     color: i.default.unsafe_rawColors.PREMIUM_PERK_PINK.css,
     description: T.default.Messages.PREMIUM_GUILD_USER_FEATURE_BOOST_CRYSTAL
@@ -166,5 +166,5 @@ function w() {
 }
 
 function k() {
-  return [C(), g(), R(), L()]
+  return [R(), g(), C(), L()]
 }

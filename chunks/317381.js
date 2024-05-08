@@ -38,8 +38,8 @@ let p = {
     shouldShowNewActivityIndicator: !1
   },
   O = [],
-  R = new Map,
   C = new Map,
+  R = new Map,
   g = new Map,
   L = new Map,
   v = !1,
@@ -75,7 +75,7 @@ function V(e) {
   let N = I.map(e => e.userId),
     p = l.default.getId(),
     O = null === (t = I.find(e => e.userId === p)) || void 0 === t ? void 0 : t.sessionId,
-    v = R.get(o),
+    v = C.get(o),
     D = {
       analyticsActivitySessionId: null != S ? S : "",
       applicationId: o,
@@ -88,10 +88,10 @@ function V(e) {
       userIds: new Set(N),
       participants: I
     };
-  N.some(e => e === p) && null != v && R.set(v.applicationId, {
+  N.some(e => e === p) && null != v && C.set(v.applicationId, {
     ...v,
     ...D
-  }), null != v && a === v.channelId && !N.some(e => e === p) && Array.from(v.userIds).some(e => e === p) ? L.get(a) === o ? L.delete(a) : R.delete(o) : N.some(e => e === p) && (null == v || v.applicationId !== o || v.channelId !== a) && (O === l.default.getSessionId() && null != O || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
+  }), null != v && a === v.channelId && !N.some(e => e === p) && Array.from(v.userIds).some(e => e === p) ? L.get(a) === o ? L.delete(a) : C.delete(o) : N.some(e => e === p) && (null == v || v.applicationId !== o || v.channelId !== a) && (O === l.default.getSessionId() && null != O || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
     channelId: a,
     applicationId: o,
     launchId: _
@@ -100,8 +100,8 @@ function V(e) {
   }));
   let M = (null !== (n = g.get(a)) && void 0 !== n ? n : []).filter(e => e.applicationId !== o),
     y = B(r),
-    P = (null !== (i = C.get(y)) && void 0 !== i ? i : []).filter(e => !(e.applicationId === o && e.channelId === a));
-  N.length > 0 && (M.push(D), P.push(D)), g.set(a, M), C.set(y, P)
+    P = (null !== (i = R.get(y)) && void 0 !== i ? i : []).filter(e => !(e.applicationId === o && e.channelId === a));
+  N.length > 0 && (M.push(D), P.push(D)), g.set(a, M), R.set(y, P)
 }
 
 function x(e) {
@@ -132,12 +132,12 @@ function F(e) {
     applicationId: a,
     launchId: s
   } = e, o = (0, f.default)(a), d = l.default.getSessionId();
-  if (null == o || null == d || (null === (t = R.get(a)) || void 0 === t ? void 0 : t.channelId) === r) return !1;
+  if (null == o || null == d || (null === (t = C.get(a)) || void 0 === t ? void 0 : t.channelId) === r) return !1;
   let E = u.default.getChannel(r),
     I = null == E ? void 0 : E.getGuildId(),
     T = c.default.getCurrentUser();
   if (null == I && !(null !== (n = null == E ? void 0 : E.isPrivate()) && void 0 !== n && n) || null == T) return !1;
-  i = r, R.set(a, {
+  i = r, C.set(a, {
     guildId: I,
     channelId: r,
     applicationId: a,
@@ -171,7 +171,7 @@ class j extends(r = a.default.PersistedStore) {
   }
   getSelfEmbeddedActivityForChannel(e) {
     var t;
-    return null !== (t = Array.from(R.values()).find(t => {
+    return null !== (t = Array.from(C.values()).find(t => {
       let {
         channelId: n
       } = t;
@@ -179,11 +179,11 @@ class j extends(r = a.default.PersistedStore) {
     })) && void 0 !== t ? t : null
   }
   getSelfEmbeddedActivities() {
-    return R
+    return C
   }
   getEmbeddedActivitiesForGuild(e) {
     var t;
-    return null !== (t = C.get(e)) && void 0 !== t ? t : O
+    return null !== (t = R.get(e)) && void 0 !== t ? t : O
   }
   getEmbeddedActivitiesForChannel(e) {
     var t;
@@ -303,7 +303,7 @@ let W = new j(s.default, {
     let {
       guilds: t
     } = e;
-    g.clear(), C.clear(), t.forEach(e => x(e))
+    g.clear(), R.clear(), t.forEach(e => x(e))
   },
   GUILD_CREATE: function(e) {
     let {
@@ -346,8 +346,8 @@ let W = new j(s.default, {
     if (null != n) {
       var i;
       let e = B(n),
-        r = (null !== (i = C.get(e)) && void 0 !== i ? i : []).filter(e => e.channelId !== t.id);
-      C.set(e, r)
+        r = (null !== (i = R.get(e)) && void 0 !== i ? i : []).filter(e => e.channelId !== t.id);
+      R.set(e, r)
     }
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function() {
@@ -380,8 +380,8 @@ let W = new j(s.default, {
   EMBEDDED_ACTIVITY_CLOSE: function(e) {
     let {
       applicationId: t
-    } = e, n = R.get(t);
-    R.delete(t), (null == n ? void 0 : n.channelId) === i && (i = void 0)
+    } = e, n = C.get(t);
+    C.delete(t), (null == n ? void 0 : n.channelId) === i && (i = void 0)
   },
   EMBEDDED_ACTIVITY_UPDATE: function(e) {
     let {
@@ -429,9 +429,9 @@ let W = new j(s.default, {
       activity: n
     } = e;
     if (null == n) return !1;
-    let i = R.get(null !== (t = n.application_id) && void 0 !== t ? t : "");
+    let i = C.get(null !== (t = n.application_id) && void 0 !== t ? t : "");
     if (null == i) return !1;
-    R.set(i.applicationId, {
+    C.set(i.applicationId, {
       ...i
     })
   },
@@ -439,8 +439,8 @@ let W = new j(s.default, {
     let {
       applicationId: t,
       config: n
-    } = e, i = R.get(t);
-    null != i && R.set(i.applicationId, {
+    } = e, i = C.get(t);
+    null != i && C.set(i.applicationId, {
       ...i,
       config: n
     })
@@ -537,12 +537,12 @@ let W = new j(s.default, {
     i && L.set(t, n)
   },
   CONNECTION_INTERRUPTED: function(e) {
-    e.code === m.RPCCloseCodes.CLOSE_ABNORMAL && (i = void 0, R.clear(), v = !1, w = A.ActivityPanelModes.DISCONNECTED)
+    e.code === m.RPCCloseCodes.CLOSE_ABNORMAL && (i = void 0, C.clear(), v = !1, w = A.ActivityPanelModes.DISCONNECTED)
   },
   CHANNEL_CALL_POPOUT_WINDOW_OPEN: function(e) {
     let {
       channel: t
-    } = e, n = Array.from(R.values()).find(e => {
+    } = e, n = Array.from(C.values()).find(e => {
       let {
         channelId: n
       } = e;

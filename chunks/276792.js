@@ -26,8 +26,8 @@ function S(e) {
   let {
     content: S,
     renderModalProps: p,
-    analyticsLocations: g,
-    analyticsLocation: I,
+    analyticsLocations: I,
+    analyticsLocation: g,
     isLightTheme: T
   } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(S.dismissKey)]), {
     onClose: N
@@ -35,9 +35,9 @@ function S(e) {
     (0, o.transitionTo)(h.Routes.APPLICATION_STORE), N()
   } : () => (0, r.default)({
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: g,
+    analyticsLocations: I,
     analyticsObject: {
-      ...I,
+      ...g,
       object: h.AnalyticsObjects.BUTTON_CTA,
       objectType: h.AnalyticsObjectTypes.TIER_2
     },

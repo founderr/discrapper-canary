@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return p
   },
   Status: function() {
-    return C
+    return R
   },
   StatusTypes: function() {
     return _.StatusTypes
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return O
   },
   getStatusSize: function() {
-    return R
+    return C
   },
   getStatusValues: function() {
     return m
@@ -228,18 +228,18 @@ function p(e) {
   }] = (0, o.useSpring)({
     config: I,
     fill: p
-  }, [p]), R = Math.ceil(a * c.MOBILE_HEIGHT_RATIO);
+  }, [p]), C = Math.ceil(a * c.MOBILE_HEIGHT_RATIO);
   return (0, i.jsxs)("svg", {
     width: a,
-    height: R,
-    viewBox: "0 0 ".concat(a, " ").concat(R),
+    height: C,
+    viewBox: "0 0 ".concat(a, " ").concat(C),
     className: s()(E.mask, u),
     style: d,
     children: [N(A, a, f), (0, i.jsx)(o.animated.rect, {
       x: 0,
       y: 0,
       width: a,
-      height: R,
+      height: C,
       fill: O,
       mask: "url(#".concat(f, ")")
     })]
@@ -267,7 +267,7 @@ function O(e, t) {
   }
 }
 
-function R(e, t, n) {
+function C(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
   return t === _.StatusTypes.ONLINE && n && !i ? {
     width: e,
@@ -278,7 +278,7 @@ function R(e, t, n) {
   }
 }
 
-function C(e) {
+function R(e) {
   let {
     status: t,
     isMobile: n = !1,
@@ -291,7 +291,7 @@ function C(e) {
     mask: O(t, u),
     className: s()(E.mask, a),
     style: o,
-    ...R(r, t, u),
+    ...C(r, t, u),
     children: (0, i.jsx)("div", {
       style: {
         backgroundColor: c

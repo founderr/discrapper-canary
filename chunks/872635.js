@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ToolbarButtons: function() {
-    return R
+    return C
   }
 }), n("47120");
 var i = n("735250"),
@@ -26,7 +26,7 @@ var i = n("735250"),
   p = n("447525"),
   O = n("620948");
 
-function R(e) {
+function C(e) {
   var t;
   let {
     editorRef: n,
@@ -36,19 +36,19 @@ function R(e) {
   } = e, l = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor();
   return null == l ? null : (0, i.jsxs)("div", {
     className: O.buttons,
-    children: [(0, i.jsx)(C, {
+    children: [(0, i.jsx)(R, {
       slateEditor: l,
       markdownSyntax: "bold",
       children: (0, i.jsx)(_.default, {
         className: s()(O.icon, a)
       })
-    }), (0, i.jsx)(C, {
+    }), (0, i.jsx)(R, {
       slateEditor: l,
       markdownSyntax: "italics",
       children: (0, i.jsx)(E.default, {
         className: s()(O.icon, a)
       })
-    }), (0, i.jsx)(C, {
+    }), (0, i.jsx)(R, {
       slateEditor: l,
       markdownSyntax: "strikethrough",
       children: (0, i.jsx)(T.default, {
@@ -62,13 +62,13 @@ function R(e) {
       children: (0, i.jsx)(d.default, {
         className: s()(O.icon, a)
       })
-    }), (0, i.jsx)(C, {
+    }), (0, i.jsx)(R, {
       slateEditor: l,
       markdownSyntax: "inlineCode",
       children: (0, i.jsx)(c.default, {
         className: s()(O.icon, a)
       })
-    }), (0, i.jsx)(C, {
+    }), (0, i.jsx)(R, {
       slateEditor: l,
       markdownSyntax: "spoiler",
       children: (0, i.jsx)(I.default, {
@@ -78,7 +78,7 @@ function R(e) {
   })
 }
 
-function C(e) {
+function R(e) {
   let {
     slateEditor: t,
     markdownSyntax: n,
@@ -206,7 +206,7 @@ t.default = r.forwardRef(function(e, t) {
       x: h + (A - h) / 2,
       y: Math.max(m, Math.min(I.y, c.y))
     }
-  }, [s, _, a]), [C, g] = r.useState(0), [v, D] = r.useState(0);
+  }, [s, _, a]), [R, g] = r.useState(0), [v, D] = r.useState(0);
   if (r.useLayoutEffect(() => {
       if (null == m || null == p || null == d.current) return;
       let e = d.current.getBoundingClientRect();
@@ -219,7 +219,7 @@ t.default = r.forwardRef(function(e, t) {
       ref: d,
       className: O.toolbar,
       style: {
-        top: p - C,
+        top: p - R,
         left: m - v
       },
       onMouseDown: e => {
@@ -230,7 +230,7 @@ t.default = r.forwardRef(function(e, t) {
       },
       children: [(0, i.jsx)(L, {
         slateEditor: M
-      }), (0, i.jsx)(R, {
+      }), (0, i.jsx)(C, {
         editorRef: a,
         options: l
       })]

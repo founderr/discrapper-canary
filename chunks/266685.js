@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("569984"),
   S = n("497505"),
   p = n("918701"),
-  g = n("865364"),
-  I = n("340100"),
+  I = n("865364"),
+  g = n("340100"),
   T = n("611855"),
   A = n("644646"),
   N = n("78826"),
@@ -31,7 +31,7 @@ var a = n("735250"),
 let P = s.forwardRef(function(e, t) {
   var n, i;
   let {
-    className: g,
+    className: I,
     isExpanded: P,
     isExpansionAnimationComplete: D,
     onCtxMenuOpen: b,
@@ -67,7 +67,7 @@ let P = s.forwardRef(function(e, t) {
   }, [G.config.colors.primary]);
   return (0, a.jsx)("div", {
     "aria-hidden": !J,
-    className: l()(g, y.contentExpanded, {
+    className: l()(I, y.contentExpanded, {
       [y.contentInteractable]: J
     }),
     children: Q ? (0, a.jsxs)("div", {
@@ -128,7 +128,7 @@ let P = s.forwardRef(function(e, t) {
         color: "always-white",
         variant: "text-xs/normal",
         children: ee
-      }), (0, a.jsx)(I.default, {
+      }), (0, a.jsx)(g.default, {
         quest: G
       }), !et && !q && !V && z && (0, a.jsx)(x, {
         onClick: J ? K : void 0
@@ -228,7 +228,7 @@ function x(e) {
     style: t,
     onClick: n
   } = e;
-  return (0, g.useIsEligibleForQuestBarProgressCTA)({
+  return (0, I.useIsEligibleForQuestBarProgressCTA)({
     location: L.QuestsExperimentLocations.QUESTS_BAR,
     autoTrackExposure: !0
   }) ? (0, a.jsx)(d.Button, {

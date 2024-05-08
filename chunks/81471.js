@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("981631"),
   S = n("768760"),
   p = n("689938"),
-  g = n("268559"),
-  I = n("990291");
+  I = n("268559"),
+  g = n("990291");
 let T = s.memo(function(e) {
   let {
     channel: t
@@ -35,14 +35,14 @@ let T = s.memo(function(e) {
     content: null
   }, [T]), O = null;
   if (i) O = (0, a.jsx)(o.Text, {
-    className: g.messageReplacement,
+    className: I.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
     children: p.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (n) {
     if (null != T && A) O = (0, a.jsx)(o.Text, {
-      className: g.messageReplacement,
+      className: I.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
       children: p.default.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
@@ -51,24 +51,24 @@ let T = s.memo(function(e) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, _.renderSingleLineMessage)(T, R, A, l()(g.messageContent, I.inlineFormat, I.__invalid_smallFontSize), {
-        iconClass: g.messageContentIcon,
+      } = (0, _.renderSingleLineMessage)(T, R, A, l()(I.messageContent, g.inlineFormat, g.__invalid_smallFontSize), {
+        iconClass: I.messageContentIcon,
         iconSize: S.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
       O = null != t ? (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        className: g.messageContent,
+        className: I.messageContent,
         children: t
       }) : (0, a.jsx)(o.Text, {
         tag: "span",
         variant: "text-sm/normal",
         color: "text-muted",
-        className: g.messageReplacement,
+        className: I.messageReplacement,
         children: e
       })
     } else O = (0, a.jsx)(o.Text, {
-      className: g.messageReplacement,
+      className: I.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
       children: p.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
@@ -77,7 +77,7 @@ let T = s.memo(function(e) {
   return (0, a.jsx)(h.ObscuredDisplayContext.Provider, {
     value: (0, u.default)(v, N),
     children: (0, a.jsx)(o.FocusBlock, {
-      className: g.messageFocusBlock,
+      className: I.messageFocusBlock,
       children: O
     })
   })

@@ -35,8 +35,8 @@ function p(e, t, n) {
   }) : e[t] = n, e
 }
 let O = {},
-  R = {},
-  C = !1,
+  C = {},
+  R = !1,
   g = !1,
   L = {
     flags: 0
@@ -103,7 +103,7 @@ function B(e, t) {
         E.hasFlag(t.flags, N.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) ? n.add(e) : n.delete(e)
       }
       Object.keys(i).length > 0 ? k[e] = n : delete k[e]
-    }(e), delete R[e]
+    }(e), delete C[e]
 }
 
 function V(e, t) {
@@ -199,7 +199,7 @@ function z(e) {
 }
 
 function Z(e) {
-  C = E.hasFlag(e.flags, A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS), g = E.hasFlag(e.flags, A.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES), L = e
+  R = E.hasFlag(e.flags, A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS), g = E.hasFlag(e.flags, A.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES), L = e
 }
 
 function X(e) {
@@ -211,7 +211,7 @@ function Q() {
 }
 
 function q() {
-  return C && d.NotificationsExperiment.getCurrentConfig({
+  return R && d.NotificationsExperiment.getCurrentConfig({
     location: "UserGuildSettingsStore"
   }, {
     autoTrackExposure: !1
@@ -221,14 +221,14 @@ class J extends(i = s.default.PersistedStore) {
   initialize(e) {
     if (this.waitFor(S.default, f.default, u.default, _.default), null != e) {
       var t, n;
-      C = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (O = e.userGuildSettings, U = a().mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), a().forEach(O, (e, t) => {
+      R = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (O = e.userGuildSettings, U = a().mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), a().forEach(O, (e, t) => {
         P[t] = X(e)
       }))
     }
   }
   getState() {
     return {
-      useNewNotifications: C
+      useNewNotifications: R
     }
   }
   get mentionOnAllMessages() {
@@ -379,14 +379,14 @@ class J extends(i = s.default.PersistedStore) {
   }
   getGuildFavorites(e) {
     if (u.default.isFullServerPreview(e)) return null;
-    if (null == R[e]) {
+    if (null == C[e]) {
       let t = a().filter(this.getChannelOverrides(e), t => {
         var n, i;
         return E.hasFlag(null !== (i = t.flags) && void 0 !== i ? i : 0, N.ChannelNotificationSettingsFlags.FAVORITED) && (null === (n = T.default.getChannel(t.channel_id)) || void 0 === n ? void 0 : n.guild_id) === e
       });
-      R[e] = t.map(e => e.channel_id)
+      C[e] = t.map(e => e.channel_id)
     }
-    return R[e]
+    return C[e]
   }
   isFavorite(e, t) {
     var n;
@@ -410,7 +410,7 @@ class J extends(i = s.default.PersistedStore) {
     return L
   }
   get useNewNotifications() {
-    return C
+    return R
   }
   getGuildUnreadSetting(e) {
     if (!q()) return m.UnreadSetting.ALL_MESSAGES;

@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return c
+    return o
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("120356"),
-  i = n.n(s),
-  l = n("689938"),
-  r = n("643724"),
-  o = n("296507"),
-  u = n("866402");
+var n = l("735250");
+l("470079");
+var i = l("120356"),
+  a = l.n(i),
+  r = l("689938"),
+  s = l("643724"),
+  u = l("296507"),
+  d = l("866402");
 
-function c(e) {
+function o(e) {
   let {
     className: t,
-    children: n
+    children: l
   } = e;
-  return (0, a.jsxs)("div", {
-    className: i()(r.container, t),
-    children: [(0, a.jsx)("img", {
-      alt: l.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+  return (0, n.jsxs)("div", {
+    className: a()(s.container, t),
+    children: [(0, n.jsx)("img", {
+      alt: r.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+      src: d,
+      className: a()(s.sparkleIcon, s.sparkleBottom)
+    }), l, (0, n.jsx)("img", {
+      alt: r.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
       src: u,
-      className: i()(r.sparkleIcon, r.sparkleBottom)
-    }), n, (0, a.jsx)("img", {
-      alt: l.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-      src: o,
-      className: i()(r.sparkleIcon, r.sparkleTop)
+      className: a()(s.sparkleIcon, s.sparkleTop)
     })]
   })
 }

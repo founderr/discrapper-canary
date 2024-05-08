@@ -31,7 +31,7 @@ function A(e) {
     queryParams: A,
     allowPopups: m = !1,
     referrerPolicy: N = "origin"
-  } = e, p = (0, u.useStateFromStores)([d.default], () => d.default.getWindow(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), O = (0, o.useMemoOne)(() => (0, l.v4)(), [t]), R = r.useRef(null), C = (0, I.default)(R, h, null == p ? window : p), g = {
+  } = e, p = (0, u.useStateFromStores)([d.default], () => d.default.getWindow(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), O = (0, o.useMemoOne)(() => (0, l.v4)(), [t]), C = r.useRef(null), R = (0, I.default)(C, h, null == p ? window : p), g = {
     ...A,
     frame_id: O,
     platform: f.ActivityPlatform.DESKTOP
@@ -60,7 +60,7 @@ function A(e) {
     referrerPolicy: N,
     onLoad: function(e) {
       var n;
-      null == s || s(e.target), R.current = e.target, C(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([_.default.HELLO, g], null != t ? t : "")
+      null == s || s(e.target), C.current = e.target, R(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([_.default.HELLO, g], null != t ? t : "")
     },
     sandbox: (0, T.default)({
       allowPopups: m

@@ -25,13 +25,13 @@ var a = n("735250"),
   T = n("294218"),
   I = n("913663"),
   A = n("268350"),
-  v = n("695346"),
-  N = n("592125"),
+  N = n("695346"),
+  v = n("592125"),
   x = n("703558"),
   M = n("375954"),
   R = n("496675"),
-  L = n("117530"),
-  y = n("153124"),
+  y = n("117530"),
+  L = n("153124"),
   O = n("465670"),
   j = n("663949"),
   P = n("934458"),
@@ -55,7 +55,7 @@ function Z(e) {
     parentChannelId: t,
     parentMessageId: n,
     location: l
-  } = e, s = (0, r.useStateFromStores)([N.default], () => N.default.getChannel(t)), {
+  } = e, s = (0, r.useStateFromStores)([v.default], () => v.default.getChannel(t)), {
     analyticsLocations: i
   } = (0, p.default)(m.default.CREATE_THREAD);
   return null == s ? null : (0, a.jsx)(p.AnalyticsLocationProvider, {
@@ -138,8 +138,8 @@ function q(e) {
       setTextAreaState: a
     }
   }(t, p), T = (0, k.usePrivateThreadMode)(t), {
-    nameError: v,
-    messageError: N,
+    nameError: N,
+    messageError: v,
     submit: M
   } = function(e) {
     let {
@@ -163,7 +163,7 @@ function q(e) {
       messageError: d,
       submit: l.useCallback(async (e, l, s) => {
         var r, o, d;
-        null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = I.default.getStickerPreview(t.id, K.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = L.default.getUploads(t.id, x.DraftType.FirstThreadMessage));
+        null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = I.default.getStickerPreview(t.id, K.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = y.default.getUploads(t.id, x.DraftType.FirstThreadMessage));
         let h = null !== (o = a.name) && void 0 !== o ? o : "",
           m = null == n && 0 === h.length,
           p = "" === e && (null == l || 0 === l.length) && 0 === s.length;
@@ -236,7 +236,7 @@ function q(e) {
                 parentMessageId: n,
                 threadSettings: m,
                 updateThreadSettings: E,
-                error: v
+                error: N
               }), t.type === V.ChannelTypes.GUILD_TEXT ? (0, a.jsx)(X, {
                 startedFromMessage: null != n,
                 threadSettings: m,
@@ -255,7 +255,7 @@ function q(e) {
             textAreaState: g,
             setTextAreaState: S,
             submit: M,
-            error: N
+            error: v
           }), (0, a.jsx)(c.default, {
             channel: t,
             isThreadCreation: !0
@@ -314,7 +314,7 @@ function Q(e) {
     error: r
   } = e, u = null !== (t = s.name) && void 0 !== t ? t : "", c = (0, w.renderError)(r, {
     content: u
-  }), f = (0, k.getDefaultThreadName)(n, l), h = null != l, m = (0, y.useUID)();
+  }), f = (0, k.getDefaultThreadName)(n, l), h = null != l, m = (0, L.useUID)();
   return (0, a.jsx)(o.FormSection, {
     tag: "label",
     htmlFor: m,
@@ -406,7 +406,7 @@ function $(e) {
   let {
     parentChannel: t,
     parentMessageId: n
-  } = e, l = (0, r.useStateFromStores)([M.default], () => null == n ? null : M.default.getMessage(t.id, n)), s = v.MessageDisplayCompact.useSetting();
+  } = e, l = (0, r.useStateFromStores)([M.default], () => null == n ? null : M.default.getMessage(t.id, n)), s = N.MessageDisplayCompact.useSetting();
   return null != l ? (0, a.jsx)(T.default, {
     className: Y.messagePreview,
     message: l,

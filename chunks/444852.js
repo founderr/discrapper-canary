@@ -28,8 +28,8 @@ var i = n("392711"),
   N = n("704806"),
   p = n("626135"),
   O = n("756315"),
-  R = n("569545"),
-  C = n("297733"),
+  C = n("569545"),
+  R = n("297733"),
   g = n("981631"),
   L = n("65154");
 
@@ -120,7 +120,7 @@ class M extends o.default {
             h = this.getGoLiveSource();
           (0, N.getSystemAnalyticsInfo)().then(A => {
             var m, N, O;
-            let R = null;
+            let C = null;
             if (null != A) {
               let {
                 cpu_brand: e,
@@ -129,7 +129,7 @@ class M extends o.default {
                 gpu_brand: i,
                 gpu_memory: r
               } = A;
-              R = {
+              C = {
                 cpu_brand: e,
                 cpu_vendor: t,
                 cpu_memory: n,
@@ -137,7 +137,7 @@ class M extends o.default {
                 gpu_memory: r
               }
             }
-            let C = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != r ? r : 0) + (null != a ? a : 0) + (null != o ? o : 0) + (null != T ? T : 0) + (null != I ? I : 0),
+            let R = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != r ? r : 0) + (null != a ? a : 0) + (null != o ? o : 0) + (null != T ? T : 0) + (null != I ? I : 0),
               v = (null == h ? void 0 : null === (m = h.desktopSource) || void 0 === m ? void 0 : m.sourcePid) != null ? E.default.getGameForPID(h.desktopSource.sourcePid) : null,
               {
                 gameName: D,
@@ -156,7 +156,7 @@ class M extends o.default {
               quartz_frames: o,
               screencapturekit_frames: T,
               go_live_camera_frames: I,
-              total_frames: C,
+              total_frames: R,
               desktop_capturer_type: l,
               media_session_id: f,
               rtc_connection_id: S,
@@ -169,13 +169,13 @@ class M extends o.default {
               share_game_id: M,
               share_game_exe: y,
               share_game_distributor: P,
-              ...R
+              ...C
             })
           })
         })
       }
     }), this.on(l.RTCConnectionEvent.Video, (t, n, i, r, a) => {
-      let s = (0, R.decodeStreamKey)(this._streamKey);
+      let s = (0, C.decodeStreamKey)(this._streamKey);
       s.guildId === t && s.channelId === n && s.ownerId === i && (null != this.getMediaSessionId() && !e && (this._trackVideoStartStats(), e = !0), this._updateVideoStreamId(r, a))
     }), this.on(l.RTCConnectionEvent.VideoSourceQualityChanged, (e, t, n, i, r, a) => {
       s.default.wait(() => s.default.dispatch({
@@ -228,7 +228,7 @@ class M extends o.default {
     }
   }
   _trackVideoStartStats() {
-    let e = this.isOwner ? (0, C.default)() : null;
+    let e = this.isOwner ? (0, R.default)() : null;
     p.default.track(g.AnalyticEvents.VIDEO_STREAM_STARTED, {
       ...this._getStreamAnalyticsProperties(),
       ...e,
@@ -278,7 +278,7 @@ class M extends o.default {
   }
   _getExtraConnectionOptions() {
     return {
-      streamUserId: (0, R.decodeStreamKey)(this._streamKey).ownerId
+      streamUserId: (0, C.decodeStreamKey)(this._streamKey).ownerId
     }
   }
   constructor({
@@ -290,7 +290,7 @@ class M extends o.default {
     isStreamer: o,
     parentMediaSessionId: l
   }) {
-    let u = (0, R.decodeStreamKey)(t),
+    let u = (0, C.decodeStreamKey)(t),
       {
         guildId: d,
         channelId: _
@@ -308,7 +308,7 @@ class M extends o.default {
         guildId: n,
         channelId: i,
         ownerId: r
-      } = (0, R.decodeStreamKey)(this._streamKey);
+      } = (0, C.decodeStreamKey)(this._streamKey);
       s.default.wait(() => s.default.dispatch({
         type: "RTC_CONNECTION_VIDEO",
         guildId: n,

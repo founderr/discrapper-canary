@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("229765"),
   S = n("231467"),
   p = n("480222"),
-  g = n("807933"),
-  I = n("10473"),
+  I = n("807933"),
+  g = n("10473"),
   T = n("702646"),
   A = n("207796"),
   N = n("543550"),
@@ -32,15 +32,15 @@ var a = n("735250"),
   L = n("689938"),
   M = n("548290");
 let y = {
-  [A.ClanDiscoveryMode.PLAYSTYLE]: g.PlayStyleSelector,
-  [A.ClanDiscoveryMode.TRAITS]: g.TraitSelector,
-  [A.ClanDiscoveryMode.GAMES]: g.GameSelector
+  [A.ClanDiscoveryMode.PLAYSTYLE]: I.PlayStyleSelector,
+  [A.ClanDiscoveryMode.TRAITS]: I.TraitSelector,
+  [A.ClanDiscoveryMode.GAMES]: I.GameSelector
 };
 
 function P(e) {
   let {
     limit: t
-  } = e, n = (0, A.useClanDiscoveryUIStore)(A.buildSearchCriteriaFromUIState, l()), i = (0, A.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), r = (0, c.useStateFromStores)([I.default], () => I.default.getSearchResult(n), [n]), f = (0, E.default)(r), h = s.useMemo(() => {
+  } = e, n = (0, A.useClanDiscoveryUIStore)(A.buildSearchCriteriaFromUIState, l()), i = (0, A.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), r = (0, c.useStateFromStores)([g.default], () => g.default.getSearchResult(n), [n]), f = (0, E.default)(r), h = s.useMemo(() => {
     if ((0, v.isLoadedSearchResult)(r)) {
       let e = r.items;
       return null != t ? e.slice(0, t) : e
@@ -187,7 +187,7 @@ t.default = s.memo(function() {
         defaultGameId: u
       } = (0, C.useClanPilotExperiment)("clan_discovery"),
       d = null != r ? r : u,
-      E = (0, c.useStateFromStores)([I.default], () => I.default.hasLoadedStaticClanDiscovery(e));
+      E = (0, c.useStateFromStores)([g.default], () => g.default.hasLoadedStaticClanDiscovery(e));
     s.useEffect(() => {
       !(a.length > 0) && (d === O.VALORANT_ID ? (t(A.ClanDiscoveryGame.VALORANT), n([d])) : d === O.GENSHIN_ID && (t(A.ClanDiscoveryGame.GENSHIN), n([d])))
     }, [t, n, d, a]), s.useEffect(() => {

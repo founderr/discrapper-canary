@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("985002"),
   S = n("858719"),
   p = n("780985"),
-  g = n("880257"),
-  I = n("631885"),
+  I = n("880257"),
+  g = n("631885"),
   T = n("240351"),
   A = n("792258"),
   N = n("657825"),
@@ -57,12 +57,12 @@ function D(e) {
     displayType: t
   } = e, n = s.useCallback(() => {
     (0, o.showToast)((0, o.createToast)(y.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
-  }, []), i = (0, g.default)(), r = (0, S.useActionsForDisplayType)(t), u = (0, S.useActionTotalsForDisplayType)(t), {
+  }, []), i = (0, I.default)(), r = (0, S.useActionsForDisplayType)(t), u = (0, S.useActionTotalsForDisplayType)(t), {
     loadMore: d,
     isMoreLoading: c
   } = (0, m.useFamilyCenterActions)({
     onError: n
-  }), E = L.ACTION_TO_TEXT.get(t), [C, p] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), I = (0, _.useIsEligibleForFamilyCenterVCJoin)({
+  }), E = L.ACTION_TO_TEXT.get(t), [C, p] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), g = (0, _.useIsEligibleForFamilyCenterVCJoin)({
     location: "family_center_activity_section_web"
   }), T = s.useCallback(() => {
     p(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
@@ -91,9 +91,9 @@ function D(e) {
         className: P.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
-        children: E.sectionDescription(null != i && i, I)
+        children: E.sectionDescription(null != i && i, g)
       }) : null]
-    }), [v, E, i, I]);
+    }), [v, E, i, g]);
   if (0 === r.length) return null;
   let M = r.slice(0, C);
   return (0, a.jsxs)("div", {
@@ -124,13 +124,13 @@ function D(e) {
   })
 }
 let b = () => {
-    let e = (0, g.default)(),
-      t = (0, I.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
+    let e = (0, I.default)(),
+      t = (0, g.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       n = (0, C.useAgeSpecificText)(y.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
       }), y.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
       s = (0, h.getActivityWindowTimestampFormatter)(!!e),
-      i = (0, I.useActivityWindowTimeStamp)(s);
+      i = (0, g.useActivityWindowTimeStamp)(s);
     return e && t.length > 1 ? (0, a.jsx)(o.Text, {
       variant: "eyebrow",
       children: i
@@ -167,7 +167,7 @@ let b = () => {
     })
   },
   j = () => {
-    let e = (0, I.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
+    let e = (0, g.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       t = (0, r.useStateFromStores)([E.default], () => E.default.getSelectedTeenId()),
       {
         selectTeenUser: n
@@ -200,7 +200,7 @@ let b = () => {
   G = e => {
     let {
       userId: t
-    } = e, n = (0, g.default)(), s = (0, I.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), i = (0, h.getActivityWindowTimestampFormatter)(!!n), l = (0, I.useActivityWindowTimeStamp)(i);
+    } = e, n = (0, I.default)(), s = (0, g.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), i = (0, h.getActivityWindowTimestampFormatter)(!!n), l = (0, g.useActivityWindowTimeStamp)(i);
     return n && 1 !== s.length ? (0, a.jsx)(j, {}) : (0, a.jsx)(U, {
       userId: t,
       subText: l
@@ -209,7 +209,7 @@ let b = () => {
 t.default = e => {
   let {
     user: t
-  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, S.useHasActionForAnyDisplayType)(), i = (0, h.getEmptyActivityFormatter)(), l = (0, I.useActivityWindowTimeStamp)(i);
+  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, S.useHasActionForAnyDisplayType)(), i = (0, h.getEmptyActivityFormatter)(), l = (0, g.useActivityWindowTimeStamp)(i);
   return (0, a.jsxs)("div", {
     className: P.container,
     children: [(0, a.jsxs)("div", {

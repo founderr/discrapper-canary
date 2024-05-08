@@ -1,71 +1,71 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return T
+    return g
   }
 });
-var s = n("735250"),
-  a = n("470079"),
-  i = n("873546"),
-  l = n("442837"),
-  r = n("481060"),
-  u = n("830064"),
-  o = n("625128"),
-  c = n("362762"),
-  d = n("703656"),
-  f = n("819570"),
-  p = n("981631"),
-  m = n("186901"),
-  g = n("689938"),
-  N = n("132054"),
-  x = n("343407");
-l.default.initialize();
-let b = i.isMobile || i.isTablet,
-  h = "inventory";
+var a = s("735250"),
+  n = s("470079"),
+  l = s("873546"),
+  r = s("442837"),
+  i = s("481060"),
+  u = s("830064"),
+  o = s("625128"),
+  c = s("362762"),
+  d = s("703656"),
+  p = s("819570"),
+  m = s("981631"),
+  f = s("186901"),
+  x = s("689938"),
+  N = s("132054"),
+  h = s("343407");
+r.default.initialize();
+let T = l.isMobile || l.isTablet,
+  A = "inventory";
 
-function T() {
-  let e = (0, l.useStateFromStores)([c.default], () => c.default.getState("quests"));
-  if (a.useEffect(() => {
-      !b && (null == e ? o.default.openNativeAppModal("quests", p.RPCCommands.DEEP_LINK, {
-        type: m.RPCDeepLinks.USER_SETTINGS,
+function g() {
+  let e = (0, r.useStateFromStores)([c.default], () => c.default.getState("quests"));
+  if (n.useEffect(() => {
+      !T && (null == e ? o.default.openNativeAppModal("quests", m.RPCCommands.DEEP_LINK, {
+        type: f.RPCDeepLinks.USER_SETTINGS,
         params: {
-          section: h
+          section: A
         }
-      }) : e === p.NativeAppStates.OPEN_FAIL && (0, d.replaceWith)(p.Routes.SETTINGS(h)))
-    }, [e]), b) return (0, s.jsxs)("div", {
+      }) : e === m.NativeAppStates.OPEN_FAIL && (0, d.replaceWith)(m.Routes.SETTINGS(A)))
+    }, [e]), T) return (0, a.jsxs)("div", {
     className: N.mobileWebContainer,
-    children: [(0, s.jsx)("img", {
-      src: x,
+    children: [(0, a.jsx)("img", {
+      src: h,
       alt: "",
       className: N.mobileWebImage
-    }), (0, s.jsx)(r.Heading, {
+    }), (0, a.jsx)(i.Heading, {
       variant: "display-lg",
       color: "text-brand",
-      children: g.default.Messages.QUESTS_LANDING_PAGE_ERROR_HEADING
-    }), (0, s.jsx)(r.Text, {
+      children: x.default.Messages.QUESTS_LANDING_PAGE_ERROR_HEADING
+    }), (0, a.jsx)(i.Text, {
       variant: "text-md/normal",
       className: N.mobileWebCopy,
-      children: g.default.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY.format()
+      children: x.default.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY.format()
     })]
   });
-  let t = null == e || e === p.NativeAppStates.OPENING || e === p.NativeAppStates.OPEN_FAIL;
-  return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(u.default, {
+  let t = null == e || e === m.NativeAppStates.OPENING || e === m.NativeAppStates.OPEN_FAIL;
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(u.default, {
       className: N.backgroundArtwork,
       preserveAspectRatio: "xMinYMin slice"
-    }), (0, s.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: N.container,
-      children: (0, s.jsx)(f.default, {
-        children: t ? (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(f.Title, {
-            children: g.default.Messages.APP_OPENING
-          }), (0, s.jsx)(f.AuthSpinner, {})]
-        }) : (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(f.Title, {
+      children: (0, a.jsx)(p.default, {
+        children: t ? (0, a.jsxs)(a.Fragment, {
+          children: [(0, a.jsx)(p.Title, {
+            children: x.default.Messages.APP_OPENING
+          }), (0, a.jsx)(p.AuthSpinner, {})]
+        }) : (0, a.jsxs)(a.Fragment, {
+          children: [(0, a.jsx)(p.Title, {
             className: N.appOpenedTitle,
-            children: g.default.Messages.APP_OPENED_TITLE
-          }), (0, s.jsx)(f.SubTitle, {
-            children: g.default.Messages.DEEPLINK_BROWSER_APP_OPENED
+            children: x.default.Messages.APP_OPENED_TITLE
+          }), (0, a.jsx)(p.SubTitle, {
+            children: x.default.Messages.DEEPLINK_BROWSER_APP_OPENED
           })]
         })
       })

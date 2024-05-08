@@ -47,10 +47,10 @@ class p extends i.PureComponent {
     }) : t[n] = a
   }
 }
-let g = () => null;
+let I = () => null;
 _.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default.toggleSelfMute()), C.default.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => r.default.toggleSelfDeaf()), C.default.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
   o.default.open(m.UserSettingsSections.VOICE)
-}), g = l.default.connectStores([f.default, d.default, h.default, u.default, E.default, c.default], () => {
+}), I = l.default.connectStores([f.default, d.default, h.default, u.default, E.default, c.default], () => {
   let e = u.default.getTotalMentionCount(),
     t = u.default.hasAnyUnread(),
     n = E.default.getPendingCount(),
@@ -62,4 +62,4 @@ _.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default
     deafened: d.default.isSelfDeaf(),
     unread: !a && !!(t || e + n > 0)
   }
-})(p)), t.default = g
+})(p)), t.default = I

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return N
   }
 }), n("789020"), n("47120");
 var a = n("735250"),
@@ -45,22 +45,22 @@ function I(e) {
     id: o
   } = t, {
     id: u
-  } = n, m = t.getGuildId(), E = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(m), [m]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, I = null != E && E.hasFeature(S.GuildFeatures.NEWS), v = g && I, {
-    editingMessage: N,
+  } = n, m = t.getGuildId(), E = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(m), [m]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, I = null != E && E.hasFeature(S.GuildFeatures.NEWS), N = g && I, {
+    editingMessage: v,
     editingTextValue: x,
     editingRichValue: M
   } = (0, s.useStateFromStoresObject)([c.default], () => ({
     editingMessage: c.default.getEditingMessage(o),
     editingTextValue: c.default.getEditingTextValue(o),
     editingRichValue: c.default.getEditingRichValue(o)
-  }), [o]), R = (0, s.useStateFromStores)([d.default], () => d.default.getId()), L = l.useCallback((e, n, a) => {
+  }), [o]), R = (0, s.useStateFromStores)([d.default], () => d.default.getId()), y = l.useCallback((e, n, a) => {
     let {
       content: l
-    } = a, s = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null;
-    return v && (o === R || s) && null != N && (0, C.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, l) : i.default.editMessage(e, n, {
+    } = a, s = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != v && null != v.author ? v.author.id : null;
+    return N && (o === R || s) && null != v && (0, C.hasFlag)(v.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, l) : i.default.editMessage(e, n, {
       content: l
     }), Promise.resolve()
-  }, [N, v, R, t]), y = l.useCallback(e => (0, l.createElement)(A, {
+  }, [v, N, R, t]), L = l.useCallback(e => (0, l.createElement)(A, {
     ...e,
     className: _.channelTextArea,
     key: u
@@ -74,9 +74,9 @@ function I(e) {
     onCancel: i.default.endEditMessage,
     onChange: i.default.updateEditMessage,
     onConfirmDelete: r.default.confirmDelete,
-    saveMessage: L,
+    saveMessage: y,
     validateEdit: T,
-    children: y
+    children: L
   }) : null
 }
 
@@ -112,7 +112,7 @@ function A(e) {
   }, s.id)
 }
 
-function v(e, t, n) {
+function N(e, t, n) {
   let {
     message: l,
     channel: s

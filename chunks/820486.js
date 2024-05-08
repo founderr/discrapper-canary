@@ -28,8 +28,8 @@ let _ = {},
   m = !1,
   S = {},
   p = {},
-  g = {},
-  I = {
+  I = {},
+  g = {
     id: null,
     justChanged: !1
   },
@@ -67,13 +67,13 @@ class R extends(a = l.default.DeviceSettingsStore) {
     return m
   }
   get lastDeviceConnected() {
-    return g
+    return I
   }
   get inputDevices() {
     return S
   }
   get lastInputSystemDevice() {
-    return I
+    return g
   }
   get outputDevices() {
     return p
@@ -88,11 +88,11 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
       inputDevices: t,
       outputDevices: n
     } = e, a = {};
-    I.justChanged = !1, t.forEach(e => {
+    g.justChanged = !1, t.forEach(e => {
       if (a[N(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
         var t;
         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-        n !== I.id && (I.justChanged = !0), I.id = n
+        n !== g.id && (g.justChanged = !0), g.id = n
       }
     });
     let s = {};
@@ -112,10 +112,10 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
       u = Object.keys(s),
       d = i().difference(l, r),
       c = i().difference(o, u);
-    return d.length > 0 || c.length > 0 ? g = {} : (i().difference(r, l).forEach(e => {
-      g[e] = v(g[e], e, f.ConnectedDeviceType.INPUT)
+    return d.length > 0 || c.length > 0 ? I = {} : (i().difference(r, l).forEach(e => {
+      I[e] = v(I[e], e, f.ConnectedDeviceType.INPUT)
     }), i().difference(u, o).forEach(e => {
-      g[e] = v(g[e], e, f.ConnectedDeviceType.OUTPUT)
+      I[e] = v(I[e], e, f.ConnectedDeviceType.OUTPUT)
     })), !(i().isEqual(l, r) && i().isEqual(o, u)) && (S = a, p = s, !0)
   },
   CONNECTED_DEVICE_SET: function(e) {
@@ -133,16 +133,16 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
         let t = p[e];
         r.default.wait(() => o.default.setOutputDevice(t, n))
       }
-    }(t, n, a), delete g[t]
+    }(t, n, a), delete I[t]
   },
   CONNECTED_DEVICE_IGNORE: function(e) {
     let {
       displayName: t
     } = e;
-    delete g[t]
+    delete I[t]
   },
   CONNECTED_DEVICE_NEVER_SHOW_MODAL: function() {
-    g = {}, C = {
+    I = {}, C = {
       neverShowModal: !0
     }
   }

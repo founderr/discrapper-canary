@@ -21,13 +21,13 @@ var a = n("735250"),
   T = n("569984"),
   I = n("497505"),
   A = n("918701"),
-  v = n("5881"),
-  N = n("874137"),
+  N = n("5881"),
+  v = n("874137"),
   x = n("340100"),
   M = n("611855"),
   R = n("644646"),
-  L = n("670638"),
-  y = n("667105"),
+  y = n("670638"),
+  L = n("667105"),
   O = n("860151"),
   j = n("46140"),
   P = n("981631"),
@@ -79,10 +79,10 @@ t.default = function(e) {
       questContent: I.QuestContent.QUEST_LIVE_STREAM,
       questContentCTA: g.QuestContentCTA.LEARN_MORE
     }), d.default.open(P.UserSettingsSections.INVENTORY))
-  }, [z]), ee = (0, y.useHandleClaimQuestsReward)({
+  }, [z]), ee = (0, L.useHandleClaimQuestsReward)({
     quest: z,
     location: I.QuestContent.QUEST_LIVE_STREAM
-  }), et = l.useMemo(() => (0, v.getQuestLogger)({
+  }), et = l.useMemo(() => (0, N.getQuestLogger)({
     quest: z,
     location: j.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
   }), [z]), en = (0, _.useIsQuestExpired)(z);
@@ -104,7 +104,7 @@ t.default = function(e) {
     quest: z,
     questContent: I.QuestContent.QUEST_LIVE_STREAM
   });
-  return (0, a.jsx)(N.QuestContentImpressionTracker, {
+  return (0, a.jsx)(v.QuestContentImpressionTracker, {
     questOrQuests: z,
     overrideVisibility: !B,
     questContent: I.QuestContent.QUEST_LIVE_STREAM,
@@ -143,7 +143,7 @@ t.default = function(e) {
                   children: Y ? (0, A.getContextualEntrypointHeading)(z) : b.default.Messages.QUESTS_TITLE.format({
                     questName: z.config.messages.questName
                   })
-                }), (0, a.jsx)(L.QuestsEntryContextMenuPopout, {
+                }), (0, a.jsx)(y.QuestsEntryContextMenuPopout, {
                   questContent: I.QuestContent.QUEST_LIVE_STREAM,
                   quest: z,
                   preventIdle: !0,

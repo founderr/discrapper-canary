@@ -21,8 +21,8 @@ var i = n("481060"),
   N = n("807092"),
   p = n("467798"),
   O = n("703558"),
-  R = n("117530"),
-  C = n("630388"),
+  C = n("117530"),
+  R = n("630388"),
   g = n("226351"),
   L = n("981631"),
   v = n("689938");
@@ -48,7 +48,7 @@ async function D(e) {
     };
   null != y && (w.content = null == y ? void 0 : y.content), null != N.default.getPendingReply(c) && (w.type = L.MessageTypes.REPLY, w.message_reference = P.messageReference, w.allowed_mentions = P.allowedMentions, (0, m.deletePendingReply)(c));
   let [k, B] = (0, p.default)(w.content);
-  k && (w.content = B, w.flags = (0, C.addFlag)(null !== (t = w.flags) && void 0 !== t ? t : 0, L.MessageFlags.SUPPRESS_NOTIFICATIONS));
+  k && (w.content = B, w.flags = (0, R.addFlag)(null !== (t = w.flags) && void 0 !== t ? t : 0, L.MessageFlags.SUPPRESS_NOTIFICATIONS));
   let V = null !== (n = P.nonce) && void 0 !== n ? n : (0, S.createNonce)(),
     x = (0, S.default)({
       channelId: c,
@@ -115,7 +115,7 @@ async function D(e) {
     }, t)) : (0, l.openUploadError)({
       title: v.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
       help: v.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-    }), "" !== w.content && "" === O.default.getDraft(c, M) && a.default.saveDraft(c, w.content, M), 0 === R.default.getUploadCount(c, M) && o.default.setUploads({
+    }), "" !== w.content && "" === O.default.getDraft(c, M) && a.default.saveDraft(c, w.content, M), 0 === C.default.getUploadCount(c, M) && o.default.setUploads({
       channelId: c,
       uploads: D,
       draftType: M

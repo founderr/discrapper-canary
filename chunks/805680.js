@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("315744"),
   p = n("603074"),
   O = n("453070"),
-  R = n("926491"),
-  C = n("457040"),
+  C = n("926491"),
+  R = n("457040"),
   g = n("740492"),
   L = n("153850"),
   v = n("585483"),
@@ -134,7 +134,7 @@ t.default = r.memo(function(e) {
   }), ei = (0, M.useExpressionPickerStore)(e => e.activeView), er = (0, O.useHasSendableSticker)(j), {
     renderWindow: ea,
     windowDispatch: es
-  } = r.useContext(S.default), eo = (0, _.useStateFromStores)([R.default], () => !R.default.hasLoadedStickerPacks), el = (0, N.useSoundmojiExperiment)("expression_picker"), eu = null != Q, ed = (0, c.useIsModalAtTop)(null != Q ? Q : ""), e_ = r.useCallback(e => {
+  } = r.useContext(S.default), eo = (0, _.useStateFromStores)([C.default], () => !C.default.hasLoadedStickerPacks), el = (0, N.useSoundmojiExperiment)("expression_picker"), eu = null != Q, ed = (0, c.useIsModalAtTop)(null != Q ? Q : ""), e_ = r.useCallback(e => {
     var t;
     if (!eu && (0, c.hasAnyModalOpen)() || eu && !(ed && X)) return;
     let {
@@ -252,7 +252,7 @@ t.default = r.memo(function(e) {
                     children: "Sounds"
                   })]
                 })
-              }) : null, ei === y.ExpressionPickerViewType.STICKER && eI ? (0, i.jsx)(C.default, {
+              }) : null, ei === y.ExpressionPickerViewType.STICKER && eI ? (0, i.jsx)(R.default, {
                 isLoading: eo,
                 channel: j,
                 containerWidth: et,

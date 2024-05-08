@@ -31,11 +31,11 @@ function m(e) {
     trackUserProfileAction: m
   } = (0, f.useUserProfileAnalyticsContext)(), N = (0, r.useStateFromStores)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)), p = (0, r.useStateFromStores)([E.default], () => null != t ? E.default.getRelationshipType(t.id) : h.RelationshipTypes.NONE), {
     analyticsLocations: O,
-    newestAnalyticsLocation: R
-  } = (0, d.default)(), C = (0, _.default)({
+    newestAnalyticsLocation: C
+  } = (0, d.default)(), R = (0, _.default)({
     user: t,
     color: "danger",
-    location: R,
+    location: C,
     onAction: () => m({
       action: "REMOVE_FRIEND",
       analyticsLocations: O
@@ -51,7 +51,7 @@ function m(e) {
         onSelect: void 0,
         onClose: t,
         "aria-label": A.default.Messages.FRIEND_ACTIONS_MENU_LABEL,
-        children: C
+        children: R
       })
     },
     children: e => (0, i.jsx)(S.default, {

@@ -27,13 +27,13 @@ var a, l = n("735250"),
   T = n("701362"),
   I = n("224184"),
   A = n("484459"),
-  v = n("103575"),
-  N = n("314897"),
+  N = n("103575"),
+  v = n("314897"),
   x = n("430824"),
   M = n("496675"),
   R = n("979651"),
-  L = n("242315"),
-  y = n("805009"),
+  y = n("242315"),
+  L = n("805009"),
   O = n("981631"),
   j = n("927923"),
   P = n("70722"),
@@ -76,7 +76,7 @@ function w(e) {
     }),
     children: [(0, l.jsx)("div", {
       className: b.audienceIconContainer,
-      children: (0, l.jsx)(L.default, {
+      children: (0, l.jsx)(y.default, {
         className: b.audienceIcon
       })
     }), (0, l.jsx)(u.Text, {
@@ -170,7 +170,7 @@ class k extends(a = s.PureComponent) {
         channelId: t.id,
         guildId: t.guild_id
       };
-      N.default.getId() !== e.id && f.default.selectVoiceChannel(t.id), n ? ((0, _.default)(l), d.default.selectParticipant(l.channelId, (0, g.encodeStreamKey)(l))) : (0, h.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
+      v.default.getId() !== e.id && f.default.selectVoiceChannel(t.id), n ? ((0, _.default)(l), d.default.selectParticipant(l.channelId, (0, g.encodeStreamKey)(l))) : (0, h.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
     }), U(this, "handleJoinVoice", () => {
       let {
         user: e,
@@ -201,7 +201,7 @@ class k extends(a = s.PureComponent) {
         channel: t,
         user: n
       } = this.props, a = t.getGuildId();
-      return (0, l.jsx)(v.default, {
+      return (0, l.jsx)(N.default, {
         location: "VoiceUser",
         userId: n.id,
         guildId: null != a ? a : void 0,
@@ -257,12 +257,12 @@ class k extends(a = s.PureComponent) {
         serverMute: T,
         serverDeaf: I,
         tabIndex: A,
-        embeddedApplication: v,
-        channel: N,
+        embeddedApplication: N,
+        channel: v,
         hangStatusActivity: x,
         showHangStatus: M,
         isSelf: R,
-        application: L
+        application: y
       } = this.props, {
         userPopoutOpen: O,
         isHoveringHangStatus: P
@@ -285,7 +285,7 @@ class k extends(a = s.PureComponent) {
         tabIndex: A,
         otherClientSessionType: n,
         voicePlatform: a,
-        embeddedApplication: v,
+        embeddedApplication: N,
         avatarContainerClass: r()({
           [b.userAvatar]: !0
         }),
@@ -294,12 +294,12 @@ class k extends(a = s.PureComponent) {
         onClick: U ? void 0 : this.handleClickUser,
         onDoubleClick: this.handleWatchStream,
         onContextMenu: this.handleUserContextMenu,
-        guildId: N.guild_id,
+        guildId: v.guild_id,
         hangStatusActivity: x,
         showHangStatus: M,
         isSelf: R,
-        application: L,
-        channelId: N.id
+        application: y,
+        channelId: v.id
       };
       if (t) {
         var w;
@@ -311,7 +311,7 @@ class k extends(a = s.PureComponent) {
               onContextMenu: n,
               ...a
             } = e;
-            return (0, l.jsx)(y.default, {
+            return (0, l.jsx)(L.default, {
               ...F,
               ...a
             })
@@ -324,7 +324,7 @@ class k extends(a = s.PureComponent) {
         shouldShow: s && !O,
         onRequestClose: this.handleHidePreview,
         spacing: 0,
-        children: () => (0, l.jsx)(y.default, {
+        children: () => (0, l.jsx)(L.default, {
           ...F,
           onMouseDown: e.onMouseDown,
           onKeyDown: e.onKeyDown,

@@ -28,7 +28,7 @@ function S(e) {
     children: A,
     disableCopy: m,
     showCopyIcon: N
-  } = e, [p, O] = s.useState(0), [R, C] = s.useState(!1), [g, L] = s.useState(!1);
+  } = e, [p, O] = s.useState(0), [C, R] = s.useState(!1), [g, L] = s.useState(!1);
   if (s.useEffect(() => (i = new u.Timeout, r = new u.Timeout, function() {
       i.stop(), r.stop()
     }), []), !c.SUPPORTS_COPY || m) return (0, a.jsx)(a.Fragment, {
@@ -39,25 +39,25 @@ function S(e) {
     M = null !== (t = v[D]) && void 0 !== t ? t : v[0],
     y = p >= v.length - 1,
     P = y ? d.TooltipColors.RED : d.TooltipColors.GREEN,
-    U = R ? P : d.TooltipColors.PRIMARY,
+    U = C ? P : d.TooltipColors.PRIMARY,
     b = () => {
       i.stop(), L(!1)
     },
     G = e => {
       (0, c.copy)(o), _.default.track(I.AnalyticEvents.TEXT_COPIED, {
         type: S
-      }), "function" == typeof e && e(), !g && O(p + 1), L(!0), C(!0), i.start(1e3, () => L(!1)), r.start(2e3, () => O(0))
+      }), "function" == typeof e && e(), !g && O(p + 1), L(!0), R(!0), i.start(1e3, () => L(!1)), r.start(2e3, () => O(0))
     };
   return (0, a.jsx)(d.Tooltip, {
     delay: 500,
     color: U,
     forceOpen: g,
-    text: R ? (0, a.jsx)(d.Shaker, {
+    text: C ? (0, a.jsx)(d.Shaker, {
       isShaking: y,
       children: M
     }) : h,
     onAnimationRest: (e, t) => {
-      !g && R && t.phase === I.SpringTransitionPhases.LEAVE && C(!1)
+      !g && C && t.phase === I.SpringTransitionPhases.LEAVE && R(!1)
     },
     "aria-label": h,
     children: e => {
@@ -70,7 +70,7 @@ function S(e) {
         ...r,
         className: f.clickTarget,
         onMouseEnter: () => {
-          R ? b() : "function" == typeof i && i()
+          C ? b() : "function" == typeof i && i()
         },
         onClick: () => {
           G(t)

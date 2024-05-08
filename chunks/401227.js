@@ -29,15 +29,15 @@ t.default = function(e) {
     onClick: S,
     "aria-controls": h,
     focusProps: A
-  } = e, [m, N] = r.useState(!1), [p, O] = r.useState(50), R = m || f, C = (0, d.getClass)(E, "emojiButton", R ? "Hovered" : "Normal");
+  } = e, [m, N] = r.useState(!1), [p, O] = r.useState(50), C = m || f, R = (0, d.getClass)(E, "emojiButton", C ? "Hovered" : "Normal");
   let g = (t = p, {
       "--custom-emoji-sprite-size": "".concat(24, "px"),
       "--custom-emoji-sprite-row": Math.floor(t / 20),
       "--custom-emoji-sprite-col": t % 20
     }),
     L = r.useCallback(() => {
-      if (!R) N(!0), O(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(_.EmojiInteractionPoint.EmojiButtonMouseEntered)
-    }, [R, N, O]),
+      if (!C) N(!0), O(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(_.EmojiInteractionPoint.EmojiButtonMouseEntered)
+    }, [C, N, O]),
     v = r.useCallback(() => {
       N(!1)
     }, [N]),
@@ -46,7 +46,7 @@ t.default = function(e) {
     look: l.Button.Looks.BLANK,
     size: l.Button.Sizes.NONE,
     tabIndex: n,
-    className: s()(C, a),
+    className: s()(R, a),
     onMouseEnter: L,
     onMouseOver: L,
     onMouseLeave: v,
@@ -60,7 +60,7 @@ t.default = function(e) {
     children: null != T ? T() : (0, i.jsx)(o.Spring, {
       config: I,
       to: {
-        value: R ? 1 : 0
+        value: C ? 1 : 0
       },
       children: e => {
         let {
@@ -73,9 +73,9 @@ t.default = function(e) {
             transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
           },
           children: [(0, i.jsx)("div", {
-            className: s()(E.sprite, E.spriteColored, R ? E.active : E.inactive)
+            className: s()(E.sprite, E.spriteColored, C ? E.active : E.inactive)
           }), (0, i.jsx)("div", {
-            className: s()(E.sprite, E.spriteGreyscale, R ? E.inactive : E.active)
+            className: s()(E.sprite, E.spriteGreyscale, C ? E.inactive : E.active)
           })]
         })
       }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CenterControlTrayActivityButton: function() {
-    return N
+    return v
   }
 }), n("653041");
 var a = n("735250"),
@@ -25,21 +25,21 @@ var a = n("735250"),
   T = n("301076"),
   I = n("981631"),
   A = n("921944"),
-  v = n("308004");
+  N = n("308004");
 
-function N(e) {
+function v(e) {
   let {
     channel: t
-  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), N = (0, h.useEmbeddedActivityLaunchability)(t.id), x = (0, h.getEmbeddedActivityLaunchabilityLabel)(N), M = N !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
+  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), v = (0, h.useEmbeddedActivityLaunchability)(t.id), x = (0, h.getEmbeddedActivityLaunchabilityLabel)(v), M = v !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
     isHovered: R,
-    setIsHovered: L,
-    onMouseEnter: y,
+    setIsHovered: y,
+    onMouseEnter: L,
     onMouseLeave: O
   } = (0, _.default)(200, 300), j = (0, f.useShowActivityIndicator)(), P = (0, c.default)({
     channelId: t.id
   }), D = !M, b = l.useCallback(e => {
-    "focus" !== e.type && y()
-  }, [y]), U = (0, o.useAnalyticsContext)(), F = (0, u.useAppContext)() === I.AppContext.POPOUT, {
+    "focus" !== e.type && L()
+  }, [L]), U = (0, o.useAnalyticsContext)(), F = (0, u.useAppContext)() === I.AppContext.POPOUT, {
     analyticsLocations: w
   } = (0, g.default)(), k = l.useCallback(() => {
     (0, C.default)({
@@ -65,7 +65,7 @@ function N(e) {
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-          L(!1)
+          y(!1)
         },
         renderPopout: e => {
           let {
@@ -76,7 +76,7 @@ function N(e) {
             ref: s,
             channel: t,
             closePopout: n,
-            onMouseEnter: y,
+            onMouseEnter: L,
             onMouseLeave: O,
             isHovered: R,
             onClick: () => l(A.ContentDismissActionType.UNKNOWN)
@@ -88,7 +88,7 @@ function N(e) {
             "aria-label": x,
             label: D ? void 0 : x,
             isActivityActive: P || R,
-            className: v.controlButton,
+            className: N.controlButton,
             onClick: () => {
               k(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && l(A.ContentDismissActionType.UNKNOWN)
             },

@@ -28,8 +28,8 @@ var i = n("735250"),
   N = n("599250"),
   p = n("466111"),
   O = n("74538"),
-  R = n("960048"),
-  C = n("98278"),
+  C = n("960048"),
+  R = n("98278"),
   g = n("639119"),
   L = n("197115"),
   v = n("823188"),
@@ -193,7 +193,7 @@ function V(e) {
       variant: "heading-md/semibold",
       color: "text-normal",
       children: y.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_TRIAL_DESCRIPTION.format({
-        onClick: C.navigateToPremiumMarketingPage
+        onClick: R.navigateToPremiumMarketingPage
       })
     }), (0, i.jsx)(w, {
       trialOffer: r,
@@ -245,7 +245,7 @@ function F(e) {
     analyticsLocationObject: m,
     trialOffer: N,
     discountOffer: p
-  } = e, C = (0, _.useStateFromStores)([f.default], () => f.default.useReducedMotion), g = (0, T.default)();
+  } = e, R = (0, _.useStateFromStores)([f.default], () => f.default.useReducedMotion), g = (0, T.default)();
   switch (u) {
     case D.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL:
       return (0, i.jsxs)(i.Fragment, {
@@ -440,7 +440,7 @@ function F(e) {
     case D.PremiumUpsellTypes.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
       return (0, i.jsxs)("div", {
         className: s()(P.messageLengthUpsellContainer, {
-          [P.messageLengthUpsellAppearAnimation]: !C
+          [P.messageLengthUpsellAppearAnimation]: !R
         }),
         children: [(0, i.jsx)(I.Text, {
           variant: "text-lg/bold",
@@ -490,7 +490,7 @@ function F(e) {
         children: a
       });
     default:
-      return R.default.captureMessage("Possible mishandling of a PremiumUpsellType: ".concat(u)), (0, i.jsx)(x, {
+      return C.default.captureMessage("Possible mishandling of a PremiumUpsellType: ".concat(u)), (0, i.jsx)(x, {
         headingText: t,
         context: r,
         children: a,

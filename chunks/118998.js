@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   SHARE_EVENT_DETAILS_LINK: function() {
-    return l
+    return n
   }
 });
-let l = e => {
+let n = e => {
   let {
     guildId: t,
-    guildEventId: n
+    guildEventId: l
   } = e;
-  return "https://discord.com/events/".concat(t, "/").concat(n)
+  return "https://discord.com/events/".concat(t, "/").concat(l)
 }

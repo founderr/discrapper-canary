@@ -25,8 +25,8 @@ var i = n("525654"),
   N = n("15274"),
   p = n("924301"),
   O = n("82085"),
-  R = n("264229"),
-  C = n("652898"),
+  C = n("264229"),
+  R = n("652898"),
   g = n("895886"),
   L = n("143816"),
   v = n("703656"),
@@ -158,7 +158,7 @@ t.default = {
     return d.default.isDispatching() ? Promise.resolve().then(() => e(t, n, i)) : (d.default.dispatch({
       type: "INVITE_RESOLVE",
       code: t
-    }), (0, C.default)(t, n, i).then(e => {
+    }), (0, R.default)(t, n, i).then(e => {
       let {
         invite: t,
         code: n,
@@ -319,7 +319,7 @@ t.default = {
       context: s,
       callback: o,
       skipOnboarding: l
-    } = e, _ = (0, R.parseExtraDataFromInviteKey)(a), E = _.baseCode, I = y.default.getSessionId();
+    } = e, _ = (0, C.parseExtraDataFromInviteKey)(a), E = _.baseCode, I = y.default.getSessionId();
     let T = (i = s, r = _, {
         ...i,
         invite_guild_scheduled_event_id: r.guildScheduledEventId
@@ -428,7 +428,7 @@ t.default = {
   openApp(e, t, n, i, a) {
     var u, _;
     let c;
-    let E = null != e ? (0, R.parseExtraDataFromInviteKey)(e) : null,
+    let E = null != e ? (0, C.parseExtraDataFromInviteKey)(e) : null,
       I = null == E ? void 0 : E.baseCode;
     if (d.default.dispatch({
         type: "INVITE_APP_OPENING",

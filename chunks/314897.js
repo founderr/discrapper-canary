@@ -16,8 +16,8 @@ var a, s, o, l, u = n("512722"),
   N = n("710845"),
   p = n("703656"),
   O = n("786213"),
-  R = n("626135"),
-  C = n("449934"),
+  C = n("626135"),
+  R = n("449934"),
   g = n("960048"),
   L = n("117240"),
   v = n("412788"),
@@ -75,7 +75,7 @@ function el() {
 function eu(e) {
   let {
     withGuildExperiments: t
-  } = e, n = {}, i = R.default.getSuperPropertiesBase64();
+  } = e, n = {}, i = C.default.getSuperPropertiesBase64();
   null != i && (n["X-Super-Properties"] = i), null != x && (n["X-Fingerprint"] = x), er = I.HTTP.get({
     url: D.Endpoints.EXPERIMENTS,
     query: {
@@ -171,10 +171,10 @@ class eT extends(a = E.default.Store) {
     return V
   }
   getToken() {
-    return (0, C.getToken)()
+    return (0, R.getToken)()
   }
   isAuthenticated() {
-    return (0, C.isAuthenticated)()
+    return (0, R.isAuthenticated)()
   }
   getFingerprint() {
     return x
@@ -282,7 +282,7 @@ l = "AuthenticationStore", (o = "displayName") in(s = eT) ? Object.definePropert
         eE();
         return
       }
-      R.default.track(D.AnalyticEvents.APP_USER_DEAUTHENTICATED, {
+      C.default.track(D.AnalyticEvents.APP_USER_DEAUTHENTICATED, {
         user_id: T.Storage.get(G)
       }), eI(), setImmediate(() => (0, p.transitionTo)(D.Routes.DEFAULT_LOGGED_OUT))
     }
@@ -392,10 +392,10 @@ l = "AuthenticationStore", (o = "displayName") in(s = eT) ? Object.definePropert
   LOGOUT: eI,
   FINGERPRINT: function(e) {
     let t = e.fingerprint;
-    null == x ? null != t ? (R.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
+    null == x ? null != t ? (C.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
       old_fingerprint: null != F ? (0, c.extractId)(F) : null,
       new_fingerprint: (0, c.extractId)(t)
-    }), x = t, F = t, T.Storage.set(U, x)) : el() : null != t && x !== t && R.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+    }), x = t, F = t, T.Storage.set(U, x)) : el() : null != t && x !== t && C.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
       fingerprint: (0, c.extractId)(x),
       dropped_fingerprint: (0, c.extractId)(t)
     })

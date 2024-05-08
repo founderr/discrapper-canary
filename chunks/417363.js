@@ -16,9 +16,9 @@ var i, r, a, s, o, l = n("392711"),
   N = n("941128"),
   p = n("391690"),
   O = n("981631");
-let R = 1 * S.default.Millis.MINUTE;
+let C = 1 * S.default.Millis.MINUTE;
 (i || (i = {})).DISPATCH_APPLICATION_PROGRESS = "dispatch_application_progress";
-let C = {},
+let R = {},
   g = "file://",
   L = !1,
   v = 0,
@@ -48,7 +48,7 @@ let B = u().throttle(function(e) {
   }, 200),
   V = u().throttle(function(e) {
     let t = Date.now(),
-      n = t - R;
+      n = t - C;
     y = (y = [{
       bytes: e,
       timestamp: t
@@ -67,7 +67,7 @@ let B = u().throttle(function(e) {
   }, 200);
 
 function F(e, t, n) {
-  let i = n(C[t]),
+  let i = n(R[t]),
     r = n(e[t]);
   return null != i && null != r && 0 !== i ? Math.max(r - i, 0) : 0
 }
@@ -76,32 +76,32 @@ class H extends(r = d.default.Store) {
     this.waitFor(I.default)
   }
   getState(e, t) {
-    return C[(0, h.getComboId)(e, t)]
+    return R[(0, h.getComboId)(e, t)]
   }
   isUpToDate(e, t) {
-    let n = C[(0, h.getComboId)(e, t)];
+    let n = R[(0, h.getComboId)(e, t)];
     return null != n && n.type === O.LocalDispatchApplicationStates.UP_TO_DATE
   }
   shouldPatch(e, t) {
-    let n = C[(0, h.getComboId)(e, t)];
+    let n = R[(0, h.getComboId)(e, t)];
     return null != n && !0 === n.shouldPatch
   }
   isInstalled(e, t) {
-    let n = C[(0, h.getComboId)(e, t)];
+    let n = R[(0, h.getComboId)(e, t)];
     return null != n ? n.type !== O.LocalDispatchApplicationStates.UNINSTALLING : p.default.shouldBeInstalled(e, t)
   }
   supportsCloudSync(e, t) {
     null == t && (t = e);
-    let n = C[(0, h.getComboId)(e, t)];
+    let n = R[(0, h.getComboId)(e, t)];
     return null != n && null != n.storage && !!n.storage.sync
   }
   isLaunchable(e, t) {
     if (!(0, m.isSupportedPlatform)()) return !1;
-    let n = C[(0, h.getComboId)(e, t)];
+    let n = R[(0, h.getComboId)(e, t)];
     return null != n && n.type === O.LocalDispatchApplicationStates.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length
   }
   getDefaultLaunchOption(e, t) {
-    let n = C[(0, h.getComboId)(e, t)];
+    let n = R[(0, h.getComboId)(e, t)];
     if (null == n) return null;
     let {
       defaultLaunchOptionId: i,
@@ -110,7 +110,7 @@ class H extends(r = d.default.Store) {
     return null == i || null == r ? null : r[i]
   }
   getLaunchOptions(e, t) {
-    let n = C[(0, h.getComboId)(e, t)];
+    let n = R[(0, h.getComboId)(e, t)];
     return null == n || null == n.launchOptions ? [] : Object.values(n.launchOptions)
   }
   getHistoricalTotalBytesRead() {
@@ -262,7 +262,7 @@ o = "DispatchApplicationStore", (s = "displayName") in(a = H) ? Object.definePro
               }
             }
             throw Error("Invalid Dispatch State. state=".concat(e.state.type))
-          }(i[e][t]), null != C[s]) {
+          }(i[e][t]), null != R[s]) {
           let e = F(n, s, G);
           e > 0 && B(v += e);
           let i = F(n, s, w);
@@ -298,6 +298,6 @@ o = "DispatchApplicationStore", (s = "displayName") in(a = H) ? Object.definePro
             })
           })
         }
-      }!a && "dispatch_application_progress" === E.default.taskID && E.default.clearProgress("dispatch_application_progress"), C = n, b = !0
+      }!a && "dispatch_application_progress" === E.default.taskID && E.default.clearProgress("dispatch_application_progress"), R = n, b = !0
   }
 })

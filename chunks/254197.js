@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("918701"),
   S = n("977156"),
   p = n("685613"),
-  g = n("340100"),
-  I = n("644646"),
+  I = n("340100"),
+  g = n("644646"),
   T = n("78826"),
   A = n("670638"),
   N = n("667105"),
@@ -66,7 +66,7 @@ let L = s.forwardRef(function(e, t) {
         className: O.utils,
         children: [(0, a.jsxs)("div", {
           className: O.questAcceptedContentHeading,
-          children: [(0, a.jsx)(I.default, {
+          children: [(0, a.jsx)(g.default, {
             className: O.questProgressRewardTile,
             learnMoreStyle: "icon",
             quest: b,
@@ -116,7 +116,7 @@ let L = s.forwardRef(function(e, t) {
         color: "always-white",
         variant: "text-xs/normal",
         children: z
-      }), (0, a.jsx)(g.default, {
+      }), (0, a.jsx)(I.default, {
         quest: b
       })]
     }) : (0, a.jsxs)("div", {
@@ -162,7 +162,7 @@ let L = s.forwardRef(function(e, t) {
           })]
         }), (0, a.jsxs)("div", {
           className: O.details,
-          children: [(0, a.jsx)(I.default, {
+          children: [(0, a.jsx)(g.default, {
             className: O.rewardTile,
             learnMoreStyle: "text",
             quest: b,

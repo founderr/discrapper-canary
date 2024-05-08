@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("459273"),
   S = n("242291"),
   p = n("792165"),
-  g = n("603074"),
-  I = n("981631"),
+  I = n("603074"),
+  g = n("981631"),
   T = n("921944"),
   A = n("689938"),
   N = n("594078");
@@ -69,7 +69,7 @@ function v(e) {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(I.default, {
         guildId: b,
         channel: t,
         onClose: n,
@@ -118,7 +118,7 @@ function v(e) {
     !P && D(!x)
   }, [P, x]);
   return (0, m.useComponentAction)({
-    event: I.ComponentActions.TOGGLE_SOUNDBOARD,
+    event: g.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W
   }), (0, a.jsx)(E.AnalyticsLocationProvider, {
     value: k,

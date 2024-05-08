@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("594174"),
   p = n("566620"),
   O = n("317381"),
-  R = n("963614"),
-  C = n("917107"),
+  C = n("963614"),
+  R = n("917107"),
   g = n("208156"),
   L = n("748492"),
   v = n("350064"),
@@ -56,7 +56,7 @@ function w(e) {
     activityParticipant: null != B ? I.default.getParticipant(a.id, B.applicationId) : null,
     selectedParticipant: I.default.getSelectedParticipant(a.id),
     participantsOpen: I.default.getParticipantsOpen(a.id)
-  })), X = H || null != W, Q = (0, C.default)(a.id), q = Q && (null == z ? void 0 : z.type) !== P.ParticipantTypes.ACTIVITY, J = !Q && V === M.ActivityPanelModes.PIP, $ = (!X || X && (q || J) && null == Y) && !j, ee = $ && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
+  })), X = H || null != W, Q = (0, R.default)(a.id), q = Q && (null == z ? void 0 : z.type) !== P.ParticipantTypes.ACTIVITY, J = !Q && V === M.ActivityPanelModes.PIP, $ = (!X || X && (q || J) && null == Y) && !j, ee = $ && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
 
   function et() {
     var e;
@@ -78,7 +78,7 @@ function w(e) {
       })
     }
   }, [null == B ? void 0 : B.applicationId, $]);
-  if (null == B || null == F || null == K && (0, C.default)(a.id) || null == x) return null;
+  if (null == B || null == F || null == K && (0, R.default)(a.id) || null == x) return null;
   let ei = Array.from(B.userIds).map(e => N.default.getUser(e)).filter(e => null != e),
     er = {
       instance_id: null !== (n = null !== (t = B.compositeInstanceId) && void 0 !== t ? t : B.launchId) && void 0 !== n ? n : "",
@@ -151,7 +151,7 @@ function w(e) {
             [U.pipModeTall]: $ && w
           })
         }) : (0, i.jsx)(g.EmbedIFrameWithLoadingBackground, {
-          allowPopups: (0, R.allowPopups)(x),
+          allowPopups: (0, C.allowPopups)(x),
           referrerPolicy: D.APPLICATIONS_WITH_NO_REFFERER.has(B.applicationId) ? "no-referrer" : "origin",
           url: B.url,
           queryParams: er,

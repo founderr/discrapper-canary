@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   default: function() {
-    return C
+    return R
   }
 });
 var i, r, a = n("735250"),
@@ -27,7 +27,7 @@ var i, r, a = n("735250"),
   p = n("981631"),
   O = n("904335");
 
-function R(e) {
+function C(e) {
   let {
     compact: t
   } = e;
@@ -38,14 +38,14 @@ function R(e) {
   })
 }
 
-function C(e) {
+function R(e) {
   let t, {
       author: n,
       message: i,
       userOverride: r,
       compact: o = !1,
       withMentionPrefix: m = !1,
-      showPopout: C = !1,
+      showPopout: R = !1,
       className: g,
       onClick: L,
       onContextMenu: v,
@@ -90,7 +90,7 @@ function C(e) {
         children: G + w
       })
     };
-  t = null != M && null != C ? (0, a.jsx)(_.Popout, {
+  t = null != M && null != R ? (0, a.jsx)(_.Popout, {
     preload: V ? void 0 : function() {
       let e = null != r ? r : i.author;
       return (0, A.maybeFetchUserProfileForPopout)(e.id, null != n.guildMemberAvatar && null != U ? (0, N.getGuildMemberAvatarURLSimple)({
@@ -104,7 +104,7 @@ function C(e) {
       })
     },
     renderPopout: M,
-    shouldShow: C,
+    shouldShow: R,
     position: u.isMobile ? "window_center" : "right",
     onRequestClose: D,
     children: e => {
@@ -140,6 +140,6 @@ function C(e) {
       profileViewedAnalytics: H
     }), null != W ? (0, a.jsx)(a.Fragment, {
       children: W
-    }) : null, null == j || o ? null : j, null != i && (0, S.default)(i) && F && y ? (0, a.jsx)(R, {}) : null]
+    }) : null, null == j || o ? null : j, null != i && (0, S.default)(i) && F && y ? (0, a.jsx)(C, {}) : null]
   })
 }(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"

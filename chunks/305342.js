@@ -25,13 +25,13 @@ var a = n("735250"),
   T = n("934826"),
   I = n("768318"),
   A = n("570533"),
-  v = n("971792"),
-  N = n("629262"),
+  N = n("971792"),
+  v = n("629262"),
   x = n("761966"),
   M = n("893729"),
   R = n("838940"),
-  L = n("882101"),
-  y = n("11705"),
+  y = n("882101"),
+  L = n("11705"),
   O = n("81273"),
   j = n("293810"),
   P = n("981631"),
@@ -119,7 +119,7 @@ let U = e => {
       listingId: t,
       guildId: n,
       className: l
-    } = e, s = (0, v.default)(n, t), [r] = _.useChannelBenefits(t), u = (0, N.default)(r), [d] = _.useIntangibleBenefits(t), c = _.useRole(t, n), [h] = _.useTierEmojiIds(t, n);
+    } = e, s = (0, N.default)(n, t), [r] = _.useChannelBenefits(t), u = (0, v.default)(r), [d] = _.useIntangibleBenefits(t), c = _.useRole(t, n), [h] = _.useTierEmojiIds(t, n);
     return null == s && 0 === u.length && 0 === d.length && 0 === h.size ? null : (0, a.jsxs)("div", {
       className: i()(b.subscriptionPerks, l),
       children: [null != s && (0, a.jsxs)(o.HeadingLevel, {
@@ -183,8 +183,8 @@ t.default = e => {
   } = e, p = (0, S.useSubscriptionListing)(n), {
     openModal: C,
     canOpenModal: A,
-    cannotOpenReason: v,
-    isCheckingTrialEligibility: N
+    cannotOpenReason: N,
+    isCheckingTrialEligibility: v
   } = (0, O.default)(p, s, h, m), M = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
     activeSubscription: R,
     activeSubscriptionListing: U
@@ -216,12 +216,12 @@ t.default = e => {
       className: Q ? void 0 : b.cardContainerWithoutTopIndicator,
       children: [(0, a.jsxs)("div", {
         className: b.tierInfoContainer,
-        children: [J ? (0, a.jsx)(y.GuildRoleSubscriptionCollapsibleCardBasicInfo, {
+        children: [J ? (0, a.jsx)(L.GuildRoleSubscriptionCollapsibleCardBasicInfo, {
           listingId: n,
           isListingPublished: ea,
           expanded: et,
           onToggleExpanded: () => ee(e => !e)
-        }) : (0, a.jsx)(L.GuildRoleSubscriptionCardBasicInfo, {
+        }) : (0, a.jsx)(y.GuildRoleSubscriptionCardBasicInfo, {
           listingId: n,
           isListingPublished: ea
         }), et && (0, a.jsxs)(a.Fragment, {
@@ -234,13 +234,13 @@ t.default = e => {
             disabled: !0,
             children: H ? D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
           }) : (0, a.jsx)(o.Tooltip, {
-            text: A ? null : v,
-            "aria-label": null !== (t = A && v) && void 0 !== t && t,
+            text: A ? null : N,
+            "aria-label": null !== (t = A && N) && void 0 !== t && t,
             children: e => (0, a.jsx)(x.default, {
               ...e,
               fullWidth: !0,
               disabled: !A || M,
-              submitting: N,
+              submitting: v,
               onClick: C,
               onlyShineOnHover: !0,
               children: D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL

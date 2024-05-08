@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("819792"),
   S = n("919285"),
   p = n("118470"),
-  g = n("413307"),
-  I = n("849688"),
+  I = n("413307"),
+  g = n("849688"),
   T = n("374023"),
   A = n("661599"),
   N = n("923608"),
@@ -43,7 +43,7 @@ function D(e) {
   }, {
     enableClanCreation: S,
     defaultGameId: p
-  } = (0, d.useClanPrepilotExperimentForGuild)([n], "ChannelNoticesGuard"), g = (0, i.useStateFromStoresArray)(M.CHANNEL_NOTICE_STORES, () => M.CHANNEL_NOTICES.filter(e => {
+  } = (0, d.useClanPrepilotExperimentForGuild)([n], "ChannelNoticesGuard"), I = (0, i.useStateFromStoresArray)(M.CHANNEL_NOTICE_STORES, () => M.CHANNEL_NOTICES.filter(e => {
     let {
       type: t,
       store: a
@@ -52,7 +52,7 @@ function D(e) {
     return null == a ? void 0 : a.channelNoticePredicate(n, f)
   }).map(e => e.dismissibleContentType));
   return (0, a.jsx)(c.default, {
-    contentTypes: g,
+    contentTypes: I,
     groupName: P.DismissibleContentGroupName.CHANNEL_NOTICES,
     children: e => {
       let {
@@ -120,7 +120,7 @@ t.default = e => {
   } = e;
   switch ((0, L.default)(t)) {
     case L.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(I.default, {
         guild: t
       });
     case L.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
@@ -152,7 +152,7 @@ t.default = e => {
         guild: t
       });
     case L.ConnectedChannelNotices.SIGNUP:
-      return (0, a.jsx)(I.default, {
+      return (0, a.jsx)(g.default, {
         guild: t
       })
   }

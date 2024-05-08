@@ -1,51 +1,51 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return b
+    return E
   }
 });
-var s = n("735250"),
-  a = n("470079"),
-  i = n("593473"),
-  l = n("442837"),
-  r = n("544891"),
-  u = n("536285"),
-  o = n("703656"),
-  d = n("314897"),
-  c = n("285952"),
-  f = n("819570"),
-  p = n("981631"),
-  m = n("689938"),
-  g = n("789312"),
-  h = n("949086");
+var n = s("735250"),
+  a = s("470079"),
+  r = s("593473"),
+  l = s("442837"),
+  i = s("544891"),
+  o = s("536285"),
+  u = s("703656"),
+  c = s("314897"),
+  d = s("285952"),
+  m = s("819570"),
+  p = s("981631"),
+  f = s("689938"),
+  h = s("789312"),
+  x = s("949086");
 
-function x(e, t, n) {
+function N(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = s, e
 }
 l.default.initialize();
-let N = {
+let T = {
   HANDOFF: "handoff",
   DONE: "done",
   FAILED: "failed"
 };
 
-function T() {
+function g() {
   try {
     window.close()
   } catch (e) {}
 }
-class b extends a.PureComponent {
+class E extends a.PureComponent {
   componentDidMount() {
     let {
       stage: e,
       key: t
     } = this.state;
-    e === N.DONE ? T() : d.default.isAuthenticated() ? r.HTTP.post({
+    e === T.DONE ? g() : c.default.isAuthenticated() ? i.HTTP.post({
       url: p.Endpoints.HANDOFF,
       body: {
         key: t
@@ -54,52 +54,52 @@ class b extends a.PureComponent {
     }).then(e => this.handoff(e.body.handoff_token), () => this.handoff()) : this.handoff()
   }
   handoff(e) {
-    u.default.requestRedirect(p.RPCCommands.BROWSER_HANDOFF, {
+    o.default.requestRedirect(p.RPCCommands.BROWSER_HANDOFF, {
       handoffToken: e,
-      fingerprint: d.default.getFingerprint()
+      fingerprint: c.default.getFingerprint()
     }).then(this.done, this.failed)
   }
   renderDone() {
-    return (0, s.jsxs)(f.default, {
-      children: [(0, s.jsx)(f.Image, {
-        src: n("69008"),
-        className: h.marginBottom20
-      }), (0, s.jsx)(f.Title, {
-        className: h.marginBottom8,
-        children: m.default.Messages.BROWSER_HANDOFF_DONE_TITLE
-      }), (0, s.jsx)(f.SubTitle, {
-        className: h.marginBottom40,
-        children: m.default.Messages.BROWSER_HANDOFF_DONE_SAFE_TO_CLOSE
-      }), (0, s.jsx)(f.Button, {
+    return (0, n.jsxs)(m.default, {
+      children: [(0, n.jsx)(m.Image, {
+        src: s("69008"),
+        className: x.marginBottom20
+      }), (0, n.jsx)(m.Title, {
+        className: x.marginBottom8,
+        children: f.default.Messages.BROWSER_HANDOFF_DONE_TITLE
+      }), (0, n.jsx)(m.SubTitle, {
+        className: x.marginBottom40,
+        children: f.default.Messages.BROWSER_HANDOFF_DONE_SAFE_TO_CLOSE
+      }), (0, n.jsx)(m.Button, {
         onClick: this.handleOpenApp,
-        children: m.default.Messages.CONTINUE_TO_WEBAPP
+        children: f.default.Messages.CONTINUE_TO_WEBAPP
       })]
     })
   }
   renderFailed() {
-    return (0, s.jsxs)(f.default, {
-      children: [(0, s.jsx)(f.Image, {
-        src: n("69008"),
-        className: h.marginBottom20
-      }), (0, s.jsx)(f.Title, {
-        className: h.marginBottom8,
-        children: m.default.Messages.BROWSER_HANDOFF_FAILED_TITLE
-      }), (0, s.jsx)(f.SubTitle, {
-        className: h.marginBottom40,
-        children: m.default.Messages.BROWSER_HANDOFF_DONE_SAFE_TO_CLOSE
-      }), (0, s.jsx)(f.Button, {
+    return (0, n.jsxs)(m.default, {
+      children: [(0, n.jsx)(m.Image, {
+        src: s("69008"),
+        className: x.marginBottom20
+      }), (0, n.jsx)(m.Title, {
+        className: x.marginBottom8,
+        children: f.default.Messages.BROWSER_HANDOFF_FAILED_TITLE
+      }), (0, n.jsx)(m.SubTitle, {
+        className: x.marginBottom40,
+        children: f.default.Messages.BROWSER_HANDOFF_DONE_SAFE_TO_CLOSE
+      }), (0, n.jsx)(m.Button, {
         onClick: this.handleOpenApp,
-        children: m.default.Messages.CONTINUE_TO_WEBAPP
+        children: f.default.Messages.CONTINUE_TO_WEBAPP
       })]
     })
   }
   renderHandoff() {
-    return (0, s.jsxs)(f.default, {
-      children: [(0, s.jsx)(f.AuthSpinner, {}), (0, s.jsx)(f.Title, {
-        className: h.marginBottom8,
-        children: m.default.Messages.BROWSER_HANDOFF_AUTHENTICATING_TITLE
-      }), (0, s.jsx)(f.SubTitle, {
-        children: m.default.Messages.BROWSER_HANDOFF_AUTHENTICATING_DESCRIPTION
+    return (0, n.jsxs)(m.default, {
+      children: [(0, n.jsx)(m.AuthSpinner, {}), (0, n.jsx)(m.Title, {
+        className: x.marginBottom8,
+        children: f.default.Messages.BROWSER_HANDOFF_AUTHENTICATING_TITLE
+      }), (0, n.jsx)(m.SubTitle, {
+        children: f.default.Messages.BROWSER_HANDOFF_AUTHENTICATING_DESCRIPTION
       })]
     })
   }
@@ -109,42 +109,42 @@ class b extends a.PureComponent {
       stage: t
     } = this.state;
     switch (t) {
-      case N.DONE:
+      case T.DONE:
         e = this.renderDone();
         break;
-      case N.FAILED:
+      case T.FAILED:
         e = this.renderFailed();
         break;
-      case N.HANDOFF:
+      case T.HANDOFF:
       default:
         e = this.renderHandoff()
     }
-    return (0, s.jsx)(c.default, {
-      justify: c.default.Justify.CENTER,
-      align: c.default.Align.CENTER,
-      className: g.wrapper,
+    return (0, n.jsx)(d.default, {
+      justify: d.default.Justify.CENTER,
+      align: d.default.Align.CENTER,
+      className: h.wrapper,
       children: e
     })
   }
   constructor(e) {
     var t;
-    super(e), x(this, "done", () => {
-      T(), this.setState({
-        stage: N.DONE
+    super(e), N(this, "done", () => {
+      g(), this.setState({
+        stage: T.DONE
       })
-    }), x(this, "failed", () => {
+    }), N(this, "failed", () => {
       this.setState({
-        stage: N.FAILED
-      }), T()
-    }), x(this, "handleOpenApp", () => {
-      (0, o.transitionTo)(p.Routes.ME)
+        stage: T.FAILED
+      }), g()
+    }), N(this, "handleOpenApp", () => {
+      (0, u.transitionTo)(p.Routes.ME)
     });
     let {
-      search: n
-    } = e.location, s = null != n && "" !== n ? (0, i.parse)(n) : {};
+      search: s
+    } = e.location, n = null != s && "" !== s ? (0, r.parse)(s) : {};
     this.state = {
-      key: null !== (t = s.key) && void 0 !== t ? t : "",
-      stage: "true" === s.done ? N.DONE : N.HANDOFF
+      key: null !== (t = n.key) && void 0 !== t ? t : "",
+      stage: "true" === n.done ? T.DONE : T.HANDOFF
     }
   }
 }

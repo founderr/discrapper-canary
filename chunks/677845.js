@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return N
   }
 }), n("653041");
 var a = n("735250"),
@@ -26,17 +26,17 @@ var a = n("735250"),
   I = n("981631"),
   A = n("110817");
 
-function v(e) {
+function N(e) {
   let {
     participants: t,
     onClick: n,
-    onDoubleClick: v,
-    onContextMenu: N,
+    onDoubleClick: N,
+    onContextMenu: v,
     channel: x,
     className: M,
     inCall: R,
-    totalNumberOfParticipants: L,
-    paused: y = !1
+    totalNumberOfParticipants: y,
+    paused: L = !1
   } = e, O = (0, o.useAppContext)() === I.AppContext.POPOUT, j = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(x.guild_id), [x.guild_id]), {
     dismissedActivityEntryPointTileChannel: P
   } = (0, _.useChannelCallVideoGridStore)(), D = (0, i.useStateFromStores)([f.default], () => f.default.getUserParticipantCount(x.id), [x]), b = l.useCallback(() => {
@@ -60,10 +60,10 @@ function v(e) {
       participant: e,
       channel: x,
       className: A.tile,
-      paused: y,
+      paused: L,
       onClick: n,
-      onDoubleClick: v,
-      onContextMenu: N,
+      onDoubleClick: N,
+      onContextMenu: v,
       inCall: R,
       width: t,
       inPopout: O
@@ -72,7 +72,7 @@ function v(e) {
     type: s.ImpressionTypes.VIEW,
     name: s.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
     properties: {
-      total_participants: L,
+      total_participants: y,
       can_invite: U,
       is_afk_channel: F,
       channel_user_limit: x.userLimit

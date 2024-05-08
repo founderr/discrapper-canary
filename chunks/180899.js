@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var a = n("470079"),
-  s = n("512722"),
-  l = n.n(s),
+  l = n("512722"),
+  s = n.n(l),
   i = n("157925"),
   r = n("765305");
 
@@ -14,17 +14,17 @@ function d(e) {
   let {
     stageInstance: t,
     defaultStep: n,
-    error: s,
+    error: l,
     onSave: d
-  } = e, [u, o] = a.useState(n), [c, E] = a.useState(), [f, h] = a.useState(null);
+  } = e, [u, o] = a.useState(n), [c, E] = a.useState(), [_, f] = a.useState(null);
   return a.useEffect(() => {
-    null != s && o(i.StartStageSteps.STAGE_CHANNEL_SETTINGS)
-  }, [s]), {
+    null != l && o(i.StartStageSteps.STAGE_CHANNEL_SETTINGS)
+  }, [l]), {
     modalStep: u,
     setModalStep: o,
-    readySlide: f,
+    readySlide: _,
     handleSlideReady: function(e) {
-      return h(e)
+      return f(e)
     },
     savedOptions: c,
     handleSettingsSave: function(e) {
@@ -35,7 +35,7 @@ function d(e) {
       d(e)
     },
     handleDelayedSave: function() {
-      l()(null != c, "Must have some saved options."), d(c)
+      s()(null != c, "Must have some saved options."), d(c)
     }
   }
 }

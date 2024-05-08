@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("100527"),
   S = n("931240"),
   p = n("970606"),
-  g = n("650461"),
-  I = n("603839"),
+  I = n("650461"),
+  g = n("603839"),
   T = n("430824"),
   A = n("725568"),
   N = n("231467"),
@@ -93,10 +93,10 @@ function G(e) {
       case v.ClanDiscoveryGame.VALORANT:
         return y.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_VALORANT
     }
-  }, [r]), g = s.useMemo(() => i.map(e => ({
+  }, [r]), I = s.useMemo(() => i.map(e => ({
     value: e.id,
     label: e.name
-  })), [i]), I = s.useCallback(() => {
+  })), [i]), g = s.useCallback(() => {
     C(v.ClanDiscoveryMode.DISCOVERY)
   }, [C]), T = s.useCallback(() => {
     C(v.ClanDiscoveryMode.GET_STARTED), m(v.ClanDiscoveryUserScreens.USER_ONBOARDING)
@@ -123,7 +123,7 @@ function G(e) {
       children: [N && (0, a.jsx)(h.SearchableSelect, {
         className: P.upsellSelect,
         value: t,
-        options: g,
+        options: I,
         onChange: n
       }), (0, a.jsx)(h.Button, {
         look: h.ButtonLooks.FILLED,
@@ -156,7 +156,7 @@ function G(e) {
       children: (0, a.jsx)("div", {
         className: P.upsellBackButton,
         children: (0, a.jsx)(h.Clickable, {
-          onClick: I,
+          onClick: g,
           "aria-label": y.default.Messages.BACK,
           children: (0, a.jsx)(E.ArrowLargeLeftIcon, {})
         })
@@ -175,11 +175,11 @@ t.default = s.memo(function(e) {
     })
   }, []);
   let [i, l] = s.useState(() => {
-    let e = new Set(g.default.getGuildIds());
+    let e = new Set(I.default.getGuildIds());
     for (let n of t)
       if (e.has(n.id)) return n.id;
     return t[0].id
-  }), o = (0, f.useStateFromStores)([T.default], () => T.default.getGuild(i)), u = (0, f.useStateFromStores)([g.default], () => g.default.getStateForGuild(i).progress), d = (0, R.useDiscoveryGameApplicationId)({
+  }), o = (0, f.useStateFromStores)([T.default], () => T.default.getGuild(i)), u = (0, f.useStateFromStores)([I.default], () => I.default.getStateForGuild(i).progress), d = (0, R.useDiscoveryGameApplicationId)({
     selectedGame: n
   }), c = s.useCallback(() => {
     (0, p.trackClanAdminInviteClicked)({
@@ -189,7 +189,7 @@ t.default = s.memo(function(e) {
       let {
         closeLayer: t
       } = e;
-      return (0, a.jsx)(I.default, {
+      return (0, a.jsx)(g.default, {
         onClose: t,
         guildId: i,
         gameId: d

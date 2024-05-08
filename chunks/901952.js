@@ -50,7 +50,7 @@ function m(e) {
     newestAnalyticsLocation: o
   } = (0, l.default)(), {
     trackUserProfileAction: c
-  } = (0, f.useUserProfileAnalyticsContext)(), T = (0, a.useStateFromStores)([E.default], () => E.default.getChannel(n)), [m, N] = r.useState(""), [p, O] = r.useState((0, d.toRichValue)(m)), R = r.useRef(!1);
+  } = (0, f.useUserProfileAnalyticsContext)(), T = (0, a.useStateFromStores)([E.default], () => E.default.getChannel(n)), [m, N] = r.useState(""), [p, O] = r.useState((0, d.toRichValue)(m)), C = r.useRef(!1);
   return null == T ? null : (0, i.jsx)(_.default, {
     innerClassName: h.inner,
     editorClassName: h.editor,
@@ -64,12 +64,12 @@ function m(e) {
     onChange: (e, t, n) => {
       t !== m && (N(t), O(n))
     },
-    focused: R.current,
+    focused: C.current,
     onFocus: () => {
-      R.current = !0
+      C.current = !0
     },
     onBlur: () => {
-      R.current = !1
+      C.current = !1
     },
     onSubmit: async e => {
       let {

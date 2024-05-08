@@ -27,7 +27,7 @@ function m(e) {
   var t, n;
   let {
     onDismiss: r
-  } = e, m = (0, s.useStateFromStores)([l.default], () => l.default.useReducedMotion), N = h.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, p = (0, d.usePremiumTrialOffer)(), O = (0, u.usePremiumDiscountOffer)(), R = (null == p ? void 0 : p.subscription_trial) != null || null != O, C = {
+  } = e, m = (0, s.useStateFromStores)([l.default], () => l.default.useReducedMotion), N = h.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, p = (0, d.usePremiumTrialOffer)(), O = (0, u.usePremiumDiscountOffer)(), C = (null == p ? void 0 : p.subscription_trial) != null || null != O, R = {
     object: f.AnalyticsObjects.BUTTON_CTA,
     section: f.AnalyticsSections.SUPER_REACTION_PICKER
   };
@@ -47,7 +47,7 @@ function m(e) {
         className: A.contentFill,
         children: (0, i.jsx)(T.default, {
           className: a()(A.banner, {
-            [A.hasTrialOffer]: R
+            [A.hasTrialOffer]: C
           }),
           src: "https://cdn.discordapp.com/attachments/955557117622886410/1085270553759322153/super-reactions-launch.mp4",
           loop: !0,
@@ -55,11 +55,11 @@ function m(e) {
           muted: !0,
           controls: !0
         })
-      }), R ? (0, i.jsx)(_.default, {
+      }), C ? (0, i.jsx)(_.default, {
         type: S.PremiumUpsellTypes.BURST_REACTION_QUICK_ACTION_UPSELL,
         subscriptionTier: null !== (n = null == p ? void 0 : null === (t = p.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : S.PremiumSubscriptionSKUs.TIER_2,
         headingText: h.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
-        analyticsLocationObject: C,
+        analyticsLocationObject: R,
         discountOffer: O,
         trialOffer: p,
         children: N

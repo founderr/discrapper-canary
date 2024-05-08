@@ -21,8 +21,8 @@ var r = n("266067"),
   N = n("944486"),
   p = n("914010"),
   O = n("70956"),
-  R = n("796798"),
-  C = n("198620"),
+  C = n("796798"),
+  R = n("198620"),
   g = n("981631"),
   L = n("176505"),
   v = n("689938");
@@ -62,9 +62,9 @@ function y(e) {
     return
   }
   let S = c.default.getOrCreate(n);
-  R.AttachmentLinkRefreshExperiment.getCurrentConfig({
+  C.AttachmentLinkRefreshExperiment.getCurrentConfig({
     location: "fetch_messages"
-  }).enabled && S.some(C.messageHasExpiredAttachmentUrl) && (M.log("Found expired attachment link, clearing messages"), c.default.clear(n), S = c.default.getOrCreate(n)), null != S.jumpTargetId && null == r && (S = S.mutate({
+  }).enabled && S.some(R.messageHasExpiredAttachmentUrl) && (M.log("Found expired attachment link, clearing messages"), c.default.clear(n), S = c.default.getOrCreate(n)), null != S.jumpTargetId && null == r && (S = S.mutate({
     jumpTargetId: null,
     jumped: !1,
     jumpType: d.JumpTypes.ANIMATED

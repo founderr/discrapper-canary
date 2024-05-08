@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return p
   },
   setUTMContext: function() {
-    return C
+    return R
   },
   trackNetworkAction: function() {
     return D
@@ -235,13 +235,13 @@ function p(e) {
   }
 }
 let O = () => I.AccessibilityFeatureFlags.NONE,
-  R = (0, r.trackMaker)({
+  C = (0, r.trackMaker)({
     analyticEventConfigs: N,
     dispatcher: a.default,
     TRACK_ACTION_NAME: "TRACK"
   });
 
-function C(e) {
+function R(e) {
   return S = e
 }
 
@@ -323,7 +323,7 @@ t.default = {
         message: "".concat(e)
       }), null != n.throttlePercent && Math.random() > n.throttlePercent) return Promise.resolve();
     let i = g(t);
-    return L(e, i, n.logEventProperties), R(e, i, {
+    return L(e, i, n.logEventProperties), C(e, i, {
       flush: n.flush,
       fingerprint: n.fingerprint
     })

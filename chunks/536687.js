@@ -22,8 +22,8 @@ var a, s, i = n("470079"),
   m = n("496675"),
   S = n("541566"),
   p = n("192513"),
-  g = n("255791"),
-  I = n("70956"),
+  I = n("255791"),
+  g = n("70956"),
   T = n("267642"),
   A = n("981631");
 
@@ -44,7 +44,7 @@ function N(e) {
       isGracePeriodVisible: S.default.isVisible(n)
     })),
     v = (0, l.useStateFromStores)([h.default], () => h.default.isVisible(e)),
-    R = (0, l.useStateFromStores)([g.default], () => g.default.isVisible(e)),
+    R = (0, l.useStateFromStores)([I.default], () => I.default.isVisible(e)),
     O = (0, l.useStateFromStores)([m.default], () => m.default.can(A.Permissions.ADMINISTRATOR, e)),
     L = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     M = null != e ? e.premiumSubscriberCount : 0,
@@ -68,7 +68,7 @@ function N(e) {
       let e = -1;
       return x && (e = window.setTimeout(() => {
         null != n && (0, r.fetchAppliedGuildBoostsForGuild)(n)
-      }, 30 * Math.random() * I.default.Millis.SECOND)), () => {
+      }, 30 * Math.random() * g.default.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
     }, [n, x]), v) return 0;

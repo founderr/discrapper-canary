@@ -21,13 +21,13 @@ var a = n("735250"),
   T = n("923973"),
   I = n("829750"),
   A = n("189771"),
-  v = n("294629"),
-  N = n("793319"),
+  N = n("294629"),
+  v = n("793319"),
   x = n("560688"),
   M = n("390322"),
   R = n("871499"),
-  L = n("386000"),
-  y = n("25827"),
+  y = n("386000"),
+  L = n("25827"),
   O = n("314897"),
   j = n("131951"),
   P = n("496675"),
@@ -137,7 +137,7 @@ function ef(e) {
     canManageGuildEvent: s
   } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([X.default], () => X.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([C.default], () => C.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), {
     suppress: h
-  } = (0, v.default)(t), m = O.default.getId(), [p] = (0, el.default)(t), E = q.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), S = s(c);
+  } = (0, N.default)(t), m = O.default.getId(), [p] = (0, el.default)(t), E = q.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), S = s(c);
   return f ? (E || S) && null != u ? (0, a.jsx)(o.Popout, {
     renderPopout: e => {
       let {
@@ -300,7 +300,7 @@ let ep = l.memo(function(e) {
     suppress: n,
     selfMute: l,
     mute: s
-  } = (0, v.default)(t), u = (0, K.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([p.default], () => null != p.default.getAwaitingRemoteSessionInfo()), {
+  } = (0, N.default)(t), u = (0, K.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([p.default], () => null != p.default.getAwaitingRemoteSessionInfo()), {
     cameraUnavailable: C,
     enabled: g
   } = (0, T.default)(), S = (0, A.default)(t), {
@@ -329,12 +329,12 @@ let ep = l.memo(function(e) {
         } = e, {
           isShown: l
         } = t;
-        return (0, a.jsx)(y.default, {
+        return (0, a.jsx)(L.default, {
           centerButton: !0,
           hasPermission: S,
           enabled: g,
           cameraUnavailable: C,
-          onChange: N.handleToggleVideo,
+          onChange: v.handleToggleVideo,
           onCameraUnavailable: x.default,
           channelLimitReached: R,
           channelLimit: _,
@@ -342,7 +342,7 @@ let ep = l.memo(function(e) {
           onPopoutClick: n
         })
       }
-    }), (0, a.jsx)(N.GoLiveButton, {
+    }), (0, a.jsx)(v.GoLiveButton, {
       channel: t,
       currentUser: O,
       exitFullScreen: () => null,
@@ -381,7 +381,7 @@ let ep = l.memo(function(e) {
           } = e, {
             isShown: r
           } = t;
-          return (0, a.jsx)(L.default, {
+          return (0, a.jsx)(y.default, {
             centerButton: !0,
             onPopoutClick: i,
             selfMute: l,

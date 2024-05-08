@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("481060"),
   S = n("355467"),
   p = n("239091"),
-  g = n("230711"),
-  I = n("255952"),
+  I = n("230711"),
+  g = n("255952"),
   T = n("410575"),
   A = n("941129"),
   N = n("83200"),
@@ -75,8 +75,8 @@ var a = n("735250"),
   em = n("885110"),
   eS = n("246946"),
   ep = n("594174"),
-  eg = n("78839"),
-  eI = n("285952"),
+  eI = n("78839"),
+  eg = n("285952"),
   eT = n("546591"),
   eA = n("86813"),
   eN = n("826026"),
@@ -315,7 +315,7 @@ class eK extends s.PureComponent {
       className: eH.container,
       onMouseEnter: this.handleMouseEnter,
       onMouseLeave: this.handleMouseLeave,
-      children: [this.renderNameZone(), (0, a.jsxs)(eI.default, {
+      children: [this.renderNameZone(), (0, a.jsxs)(eg.default, {
         grow: 0,
         children: [(0, a.jsx)(eQ, {
           selfMute: n,
@@ -464,7 +464,7 @@ class eK extends s.PureComponent {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ek.UserSettingsSections.ACCOUNT,
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = arguments.length > 2 ? arguments[2] : void 0;
-      g.default.open(e, t, n)
+      I.default.open(e, t, n)
     }), eV(this, "handleOpenSettingsContextMenu", e => {
       let {
         currentUser: t
@@ -472,7 +472,7 @@ class eK extends s.PureComponent {
       null != t && (0, p.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("28020"), n.e("15972"), n.e("440"), n.e("6416"), n.e("63438"), n.e("58600"), n.e("33053"), n.e("49146"), n.e("17938"), n.e("65866"), n.e("76540"), n.e("93521"), n.e("5528"), n.e("80603"), n.e("18824"), n.e("74753"), n.e("2535")]).then(n.bind(n, "923422"));
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("28020"), n.e("15972"), n.e("440"), n.e("6416"), n.e("63438"), n.e("58600"), n.e("33053"), n.e("49146"), n.e("17938"), n.e("65866"), n.e("76540"), n.e("93521"), n.e("80603"), n.e("18824"), n.e("5528"), n.e("74753"), n.e("2535")]).then(n.bind(n, "923422"));
         return n => (0, a.jsx)(e, {
           ...n,
           user: t,
@@ -594,7 +594,7 @@ class eK extends s.PureComponent {
           })
         })
       }
-      return (0, a.jsx)(I.default, {
+      return (0, a.jsx)(g.default, {
         onClose: () => {
           this.handleMouseLeave(), null == t || t()
         }
@@ -635,17 +635,17 @@ function ez() {
     {
       mute: C,
       selfMute: p,
-      suppress: g
+      suppress: I
     } = (0, ec.default)(_),
     {
-      selfDeaf: I,
+      selfDeaf: g,
       deaf: T
     } = (0, ed.default)(_),
     O = (0, r.useStateFromStores)([L.default], () => {
       var e;
       return (0, M.probablyHasBuildOverride)() ? null === (e = L.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    y = (0, r.useStateFromStores)([eg.default], () => eg.default.getPremiumTypeSubscription()),
+    y = (0, r.useStateFromStores)([eI.default], () => eI.default.getPremiumTypeSubscription()),
     P = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
     x = (0, r.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
     D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || x || eU.ProcessArgs.isDisallowPopupsSet(),
@@ -682,11 +682,11 @@ function ez() {
     location: eu + " auto off",
     autoTrackExposure: !1
   }), (0, $.useSafetyEducationAATriggerPoint)();
-  let eI = (0, r.useStateFromStores)([es.default], () => es.default.hasHadOtherUserPlaySoundInSession()),
+  let eg = (0, r.useStateFromStores)([es.default], () => es.default.hasHadOtherUserPlaySoundInSession()),
     eT = function() {
       let e = (0, k.useIsDismissibleContentDismissed)(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
         [t, n] = (0, r.useStateFromStoresArray)([Z.default], () => [Z.default.hasFetchedRelevance, Z.default.profileThemesRelevanceExceeded]),
-        [a, i] = (0, r.useStateFromStoresArray)([eg.default], () => [eg.default.hasFetchedMostRecentPremiumTypeSubscription(), eg.default.getMostRecentPremiumTypeSubscription()]),
+        [a, i] = (0, r.useStateFromStoresArray)([eI.default], () => [eI.default.hasFetchedMostRecentPremiumTypeSubscription(), eI.default.getMostRecentPremiumTypeSubscription()]),
         {
           enabled: l
         } = X.default.useExperiment({
@@ -713,7 +713,7 @@ function ez() {
       avatar: [],
       settings: []
     };
-  return !D && (eT && eA.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), i && (eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && q === (null === (t = (0, H.getDrop)(eF.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), J && et && eA.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eI && eA.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), ei && eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), el && eA.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eo && eA.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eK, {
+  return !D && (eT && eA.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), i && (eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && q === (null === (t = (0, H.getDrop)(eF.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), J && et && eA.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eg && eA.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), ei && eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), el && eA.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eo && eA.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eK, {
     currentUser: n,
     customStatusActivity: u,
     dismissibleContents: eA,
@@ -721,7 +721,7 @@ function ez() {
     hidePrivateData: h,
     occluded: D,
     premiumSubscription: y,
-    selfDeaf: I,
+    selfDeaf: g,
     selfMute: p,
     serverDeaf: T,
     serverMute: C,
@@ -732,7 +732,7 @@ function ez() {
     speakingWhileMuted: P,
     status: c,
     streaming: d,
-    suppress: g,
+    suppress: I,
     webBuildOverride: O,
     awaitingRemote: U,
     isEligibleForPomelo: b
@@ -784,19 +784,19 @@ function eQ(e) {
   } = e, C = t || i || n, {
     Component: S,
     play: p,
-    events: g
-  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), I = n || i ? c.MicrophoneDenyIcon : S;
+    events: I
+  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), g = n || i ? c.MicrophoneDenyIcon : S;
   return s.useEffect(() => () => p(), [C, p]), (0, a.jsx)(eO.default, {
     tooltipText: r,
     tooltipColor: o,
     tooltipForceOpen: u,
     onMouseEnter: () => {
-      d(), g.onMouseEnter()
+      d(), I.onMouseEnter()
     },
     onMouseLeave: () => {
-      f(), g.onMouseLeave()
+      f(), I.onMouseLeave()
     },
-    icon: (0, a.jsx)(I, {
+    icon: (0, a.jsx)(g, {
       size: "custom",
       width: 20,
       height: 20,

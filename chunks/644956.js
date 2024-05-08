@@ -26,8 +26,8 @@ var r = n("120356"),
   N = n("271383"),
   p = n("430824"),
   O = n("594174"),
-  R = n("285952"),
-  C = n("797053"),
+  C = n("285952"),
+  R = n("797053"),
   g = n("151827"),
   L = n("689938"),
   v = n("958986"),
@@ -59,7 +59,7 @@ function y(e) {
     inlinePreview: U = !1
   } = e, {
     analyticsLocations: b
-  } = (0, T.default)(I.default.ROLE_MENTION), G = (0, u.useStateFromStores)([E.default], () => E.default.roleStyle), w = null != t && 0 !== t && !U, k = w && "dot" === G, B = e => (0, i.jsxs)(C.default, {
+  } = (0, T.default)(I.default.ROLE_MENTION), G = (0, u.useStateFromStores)([E.default], () => E.default.roleStyle), w = null != t && 0 !== t && !U, k = w && "dot" === G, B = e => (0, i.jsxs)(R.default, {
     className: a()(D.roleMention),
     color: "username" === G && w ? t : null,
     ...e,
@@ -128,7 +128,7 @@ function y(e) {
                     (0, _.openContextMenuLazy)(e, async () => {
                       let {
                         default: e
-                      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("70866"), n.e("12435"), n.e("6696")]).then(n.bind(n, "757387"));
+                      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("82882"), n.e("12435"), n.e("6696")]).then(n.bind(n, "757387"));
                       return n => (0, i.jsx)(e, {
                         ...n,
                         user: r,
@@ -143,7 +143,7 @@ function y(e) {
               }
             }, r.id)
           }).value();
-        return (0, i.jsx)(R.default, {
+        return (0, i.jsx)(C.default, {
           className: D.rolePopout,
           ...e,
           children: (0, i.jsxs)(d.Scroller, {

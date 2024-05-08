@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ALLOWED_SOCIAL_LINKS_DOMAINS: function() {
-    return C
+    return R
   },
   CategoryIcons: function() {
     return d
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return T
   },
   DISCOVERY_COMMUNICATOR_REQUIREMENT: function() {
-    return R
+    return C
   },
   DISCOVERY_PARTICIPATOR_REQUIREMENT: function() {
     return O
@@ -105,9 +105,9 @@ let p = _.default.getLanguages().filter(e => !m.includes(e.code)).map(e => "en-U
     name: _.default.Messages.en
   } : e),
   O = 40,
-  R = 20;
+  C = 20;
 (a = u || (u = {})).GAME_RECOMMENDATIONS = "Game Recommendations", a.SERVER_RECOMMENDATIONS = "Server Recommendations", (s = d || (d = {}))[s.Activity = 0] = "Activity", s[s.Discover = 1] = "Discover", s[s.Education = 2] = "Education", s[s.Music = 3] = "Music", s[s.Science = 4] = "Science", s[s.Stage = 5] = "Stage", s[s.Television = 6] = "Television", s[s.Server = 7] = "Server";
-let C = {
+let R = {
   facebook: {
     presentation: "Facebook",
     baseUrl: "https://facebook.com"

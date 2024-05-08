@@ -26,8 +26,8 @@ var r = n("120356"),
   N = n("998502"),
   p = n("689938"),
   O = n("644918");
-let R = e => N.default.close(e),
-  C = e => N.default.minimize(e),
+let C = e => N.default.close(e),
+  R = e => N.default.minimize(e),
   g = (e, t) => {
     (0, A.isMac)() && !t.altKey ? N.default.fullscreen(e) : N.default.maximize(e)
   },
@@ -46,7 +46,7 @@ let R = e => N.default.close(e),
         children: (0, i.jsx)(c.default, {})
       }), (0, i.jsx)(o.Clickable, {
         className: O.winButtonClose,
-        onClick: () => R(t),
+        onClick: () => C(t),
         "aria-label": p.default.Messages.TITLE_BAR_CLOSE_WINDOW,
         tabIndex: -1,
         children: (0, i.jsx)(E.default, {})
@@ -58,7 +58,7 @@ let R = e => N.default.close(e),
         children: (0, i.jsx)(T.default, {})
       }), (0, i.jsx)(o.Clickable, {
         className: O.winButtonMinMax,
-        onClick: () => C(t),
+        onClick: () => R(t),
         "aria-label": p.default.Messages.TITLE_BAR_MINIMIZE_WINDOW,
         tabIndex: -1,
         children: (0, i.jsx)(S.default, {})
@@ -85,7 +85,7 @@ let R = e => N.default.close(e),
         className: O.macButtons,
         children: [(0, i.jsx)(o.Clickable, {
           className: O.macButtonClose,
-          onClick: () => R(n),
+          onClick: () => C(n),
           "aria-label": p.default.Messages.TITLE_BAR_CLOSE_WINDOW,
           tabIndex: -1,
           children: (0, i.jsx)(I.default, {
@@ -93,7 +93,7 @@ let R = e => N.default.close(e),
           })
         }), (0, i.jsx)(o.Clickable, {
           className: O.macButtonMinimize,
-          onClick: () => C(n),
+          onClick: () => R(n),
           "aria-label": p.default.Messages.TITLE_BAR_MINIMIZE_WINDOW,
           tabIndex: -1,
           children: (0, i.jsx)(h.default, {

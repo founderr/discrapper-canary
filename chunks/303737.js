@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return O
   },
   isEligibleForNewBadge: function() {
-    return R
+    return C
   },
   useChannelWithTemplateFallback: function() {
     return S
@@ -172,6 +172,6 @@ function O(e, t) {
   }
 }
 
-function R(e) {
+function C(e) {
   return (0, c.canManageGuildRoleSubscriptions)(e) && e.hasFeature(I.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, u.isUserEligibleForTierTemplates)() && (0, u.isGuildEligibleForTierTemplates)(e.id)
 }

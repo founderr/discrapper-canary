@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return O
   },
   BOOST_DISCOUNT: function() {
-    return C
+    return R
   },
   CLIENT_THEMES: function() {
-    return R
+    return C
   },
   COLLECTIBLES: function() {
     return p
@@ -124,8 +124,8 @@ let c = new _(i.EntitlementFeatureNames.ANIMATED_EMOJIS),
   N = new _(i.EntitlementFeatureNames.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
   p = new _("collectibles"),
   O = new _("appIcons"),
-  R = new _(i.EntitlementFeatureNames.CLIENT_THEMES),
-  C = new _("boostDiscount"),
+  C = new _(i.EntitlementFeatureNames.CLIENT_THEMES),
+  R = new _("boostDiscount"),
   g = new _("freeBoosts"),
   L = new _(i.EntitlementFeatureNames.STREAM_MID_QUALITY),
   v = new _(i.EntitlementFeatureNames.STREAM_HIGH_QUALITY),
@@ -141,8 +141,8 @@ let b = new _(i.EntitlementFeatureNames.INCREASED_GUILD_LIMIT),
   k = new _("uploadLargeFiles"),
   B = Object.freeze({
     [l.PremiumSubscriptionSKUs.TIER_0]: new o.default(l.PremiumSubscriptionSKUs.TIER_0, [c, E, I, m, U, w, k, O]),
-    [l.PremiumSubscriptionSKUs.TIER_1]: new o.default(l.PremiumSubscriptionSKUs.TIER_1, [c, E, S, h, m, C, L, M, w, k, O]),
-    [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, h, A, m, N, R, C, g, L, v, M, y, P, U, b, G, w, k, O, p, D])
+    [l.PremiumSubscriptionSKUs.TIER_1]: new o.default(l.PremiumSubscriptionSKUs.TIER_1, [c, E, S, h, m, R, L, M, w, k, O]),
+    [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, h, A, m, N, C, R, g, L, v, M, y, P, U, b, G, w, k, O, p, D])
   });
 
 function V(e, t) {

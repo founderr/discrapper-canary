@@ -46,12 +46,12 @@ function c(e) {
       className: _.statusText,
       children: S
     }) : null,
-    R = () => (0, i.jsxs)("div", {
+    C = () => (0, i.jsxs)("div", {
       className: _.contentOverflow,
       ref: N,
       children: [p(), O()]
     }),
-    C = n === d.UserProfileTypes.BITE_SIZE ? _.biteSize : _.fullSize,
+    R = n === d.UserProfileTypes.BITE_SIZE ? _.biteSize : _.fullSize,
     g = s()(_.statusBubbleOuter, {
       [_.statusBubbleShape]: E <= 1 && !h && f || E > 1,
       [_.statusBubbleSingleLineWithTextShape]: 1 === E && h,
@@ -68,21 +68,21 @@ function c(e) {
     });
   return (0, i.jsxs)("div", {
     children: [n === d.UserProfileTypes.BITE_SIZE ? (0, i.jsx)("div", {
-      className: s()(_.invisibleContainer, C),
+      className: s()(_.invisibleContainer, R),
       children: (0, i.jsx)("div", {
         className: g,
         children: (0, i.jsx)("span", {
           className: L,
-          children: R()
+          children: C()
         })
       })
     }) : null, (0, i.jsx)("div", {
-      className: s()(_.visibleContainer, C),
+      className: s()(_.visibleContainer, R),
       children: (0, i.jsx)("div", {
         className: g,
         children: (0, i.jsx)("span", {
           className: L,
-          children: R()
+          children: C()
         })
       })
     })]

@@ -40,8 +40,8 @@ let O = Object.freeze({
     showKeybindIndicators: !0,
     textWidgetOpacity: N.OpacityBounds.LOWER
   }),
-  R = null,
-  C = {},
+  C = null,
+  R = {},
   g = null,
   L = new Set,
   v = !1,
@@ -52,8 +52,8 @@ let O = Object.freeze({
   U = !1;
 
 function b(e) {
-  let t = C[e];
-  return null == t && (t = C[e] = {
+  let t = R[e];
+  return null == t && (t = R[e] = {
     ...O
   }), t
 }
@@ -65,13 +65,13 @@ let G = {
 
 function B() {
   if (!__OVERLAY__) return !1;
-  let e = R === (0, h.getPID)(),
+  let e = C === (0, h.getPID)(),
     t = L.has((0, h.getPID)()) || P.size > 0;
   e && t ? (0, o.focus)(window, !0) : (0, o.focus)(window, !1)
 }
 
 function V() {
-  if (R !== (0, h.getPID)()) return !1;
+  if (C !== (0, h.getPID)()) return !1;
   P.clear()
 }
 
@@ -146,13 +146,13 @@ class F extends(i = r.default.PersistedStore) {
           ...O
         }
       }), __OVERLAY__ && (f.isPlatformEmbedded && S.default.requireModule("discord_overlay2"), L.delete((0, h.getPID)())), null != e) {
-      C = e;
+      R = e;
       let t = _.default.getId();
       null != t && (null == (G = b(t)).textChatNotifications && (G.textChatNotifications = O.textChatNotifications), null == G.textWidgetOpacity && (G.textWidgetOpacity = O.textWidgetOpacity))
     }
   }
   getState() {
-    return C
+    return R
   }
   isUILocked(e) {
     return !L.has(e)
@@ -163,10 +163,10 @@ class F extends(i = r.default.PersistedStore) {
   }
   isInstanceFocused() {
     if (!__OVERLAY__) throw Error("OverlayStore: App instance should never call .isInstanceFocused()");
-    return R === (0, h.getPID)()
+    return C === (0, h.getPID)()
   }
   isFocused(e) {
-    return R === e
+    return C === e
   }
   isPinned(e) {
     let t = I.default.getLayout(h.OVERLAY_LAYOUT_ID);
@@ -206,7 +206,7 @@ class F extends(i = r.default.PersistedStore) {
     return G.disableExternalLinkAlert
   }
   getFocusedPID() {
-    return R
+    return C
   }
   get initialized() {
     return y
@@ -247,10 +247,10 @@ p(F, "displayName", "OverlayStore"), p(F, "persistKey", "OverlayStoreV2"), p(F, 
   }
 }]), t.default = new F(s.default, {
   LOGOUT: function(e) {
-    !e.isSwitchingAccount && (C = {})
+    !e.isSwitchingAccount && (R = {})
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function(e) {
-    e.userId in C && delete C[e.userId]
+    e.userId in R && delete R[e.userId]
   },
   CONNECTION_CLOSED: function() {
     L.clear()
@@ -295,7 +295,7 @@ p(F, "displayName", "OverlayStore"), p(F, "persistKey", "OverlayStoreV2"), p(F, 
     let {
       focusedPID: t
     } = e;
-    R = t
+    C = t
   },
   OVERLAY_READY: function() {
     let e = G.selectedGuildId,
@@ -310,7 +310,7 @@ p(F, "displayName", "OverlayStore"), p(F, "persistKey", "OverlayStoreV2"), p(F, 
     let {
       pid: t
     } = e;
-    R = t, B()
+    C = t, B()
   },
   OVERLAY_SELECT_CHANNEL: function(e) {
     let {
@@ -388,7 +388,7 @@ p(F, "displayName", "OverlayStore"), p(F, "persistKey", "OverlayStoreV2"), p(F, 
     let {
       region: t
     } = e;
-    if (R !== (0, h.getPID)() || P.has(t)) return !1;
+    if (C !== (0, h.getPID)() || P.has(t)) return !1;
     P.add(t)
   },
   OVERLAY_DEACTIVATE_ALL_REGIONS: V,

@@ -54,7 +54,7 @@ let A = l.memo(function(e) {
       })
     })
   }),
-  v = l.memo(function(e) {
+  N = l.memo(function(e) {
     let {
       value: t,
       multiplier: n
@@ -122,7 +122,7 @@ t.default = l.memo(function(e) {
   } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getId()), s = (0, o.useStateFromStores)([m.default], () => m.default.isTyping(t, n), [t, n]), i = (0, o.useStateFromStores)([C.default], () => C.default.isEnabled()), u = (0, o.useStateFromStores)([g.default], () => g.default.isComboing(n, t), [t, n]), {
     ref: f,
     width: p = 0
-  } = (0, d.default)(), E = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, T] = l.useState(!1), N = (0, _.default)(t), x = i && u && s;
+  } = (0, d.default)(), E = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, T] = l.useState(!1), v = (0, _.default)(t), x = i && u && s;
   l.useEffect(() => {
     x && T(!0);
     let e = setTimeout(() => T(x), 1e3);
@@ -135,21 +135,21 @@ t.default = l.memo(function(e) {
       config: r.config.stiff,
       immediate: E
     }),
-    R = l.useMemo(() => null != N ? N : {
+    R = l.useMemo(() => null != v ? v : {
       value: 0,
       multiplier: 1
-    }, [N]),
-    L = l.useRef(R);
+    }, [v]),
+    y = l.useRef(R);
   l.useEffect(() => {
-    (R.multiplier > 1 || R.value > 0) && (L.current = R)
+    (R.multiplier > 1 || R.value > 0) && (y.current = R)
   }, [R]);
   let {
-    multiplier: y,
+    multiplier: L,
     value: O
   } = l.useMemo(() => ({
-    value: x ? R.value : L.current.value,
-    multiplier: x ? R.multiplier : L.current.multiplier
-  }), [x, R, L]);
+    value: x ? R.value : y.current.value,
+    multiplier: x ? R.multiplier : y.current.multiplier
+  }), [x, R, y]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(A, {
       channelId: t,
@@ -158,9 +158,9 @@ t.default = l.memo(function(e) {
       ref: f,
       className: I.combo,
       style: M,
-      children: (0, a.jsx)(v, {
+      children: (0, a.jsx)(N, {
         value: O,
-        multiplier: y
+        multiplier: L
       })
     })]
   })

@@ -40,10 +40,10 @@ n.r(t), n.d(t, {
     return I
   },
   CLIP_NAME_MAX_CHAR_LENGTH: function() {
-    return C
+    return R
   },
   CLIP_NAME_MIN_CHAR_LENGTH: function() {
-    return R
+    return C
   },
   CLIP_NAME_TEMPLATE: function() {
     return y
@@ -108,8 +108,8 @@ let E = "alt+c",
   N = /(Apple M[12].*)/,
   p = .1,
   O = 25,
-  R = 0,
-  C = 200,
+  C = 0,
+  R = 200,
   g = "clips-edit",
   L = "clips-gallery",
   v = 640,

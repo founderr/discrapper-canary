@@ -17,8 +17,8 @@ let h = {},
   N = {},
   p = !1,
   O = !1,
-  R = !1;
-class C extends(o = I.default.Store) {
+  C = !1;
+class R extends(o = I.default.Store) {
   getInvite(e) {
     var t, n;
     let {
@@ -35,17 +35,17 @@ class C extends(o = I.default.Store) {
     return p
   }
   canRevokeFriendInvite() {
-    return null != i && !O && !R
+    return null != i && !O && !C
   }
 }
-s = "InstantInviteStore", (a = "displayName") in(r = C) ? Object.defineProperty(r, a, {
+s = "InstantInviteStore", (a = "displayName") in(r = R) ? Object.defineProperty(r, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new C(T.default, {
+}) : r[a] = s, t.default = new R(T.default, {
   CONNECTION_OPEN: function() {
-    h = {}, A = {}, m = {}, N = {}, i = null, O = !1, R = !1, p = !1
+    h = {}, A = {}, m = {}, N = {}, i = null, O = !1, C = !1, p = !1
   },
   CHANNEL_DELETE: function(e) {
     let {
@@ -55,10 +55,10 @@ s = "InstantInviteStore", (a = "displayName") in(r = C) ? Object.defineProperty(
   },
   FRIEND_INVITE_CREATE_SUCCESS: function(e) {
     var t;
-    N[e.invite.code] = f.default.createFromServer(e.invite), i = null !== (t = u()(_()(E()(Object.values(N), "createdAt")))) && void 0 !== t ? t : null, R = !1
+    N[e.invite.code] = f.default.createFromServer(e.invite), i = null !== (t = u()(_()(E()(Object.values(N), "createdAt")))) && void 0 !== t ? t : null, C = !1
   },
   FRIEND_INVITE_CREATE_FAILURE: function() {
-    R = !1
+    C = !1
   },
   FRIEND_INVITE_REVOKE_SUCCESS: function(e) {
     var t;
@@ -89,7 +89,7 @@ s = "InstantInviteStore", (a = "displayName") in(r = C) ? Object.defineProperty(
     O = !0
   },
   FRIEND_INVITE_CREATE_REQUEST: function() {
-    R = !0
+    C = !0
   },
   FRIEND_INVITES_FETCH_REQUEST: function() {
     p = !0

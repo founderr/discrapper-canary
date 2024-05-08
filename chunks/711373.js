@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return s
   }
-}), n("724458"), n("47120"), n("653041");
-var l = n("470079"),
-  i = n("442837"),
-  a = n("924301"),
-  r = n("765305");
+}), l("724458"), l("47120"), l("653041");
+var n = l("470079"),
+  i = l("442837"),
+  a = l("924301"),
+  r = l("765305");
 
 function s(e, t) {
-  let n = (0, i.useStateFromStoresArray)([a.default], () => Object.values(a.default.getUsersForGuildEvent(e, null)), [e]),
+  let l = (0, i.useStateFromStoresArray)([a.default], () => Object.values(a.default.getUsersForGuildEvent(e, null)), [e]),
     s = (0, i.useStateFromStoresArray)([a.default], () => Object.values(a.default.getUsersForGuildEvent(e, t)), [e, t]);
-  return (0, l.useMemo)(() => {
+  return (0, n.useMemo)(() => {
     let e = s.reduce((e, t) => (e[t.user_id] = t, e), {}),
-      t = n.filter(t => {
-        let n = e[t.user_id];
-        return null == n || n.response === r.GuildScheduledEventUserResponses.INTERESTED
+      t = l.filter(t => {
+        let l = e[t.user_id];
+        return null == l || l.response === r.GuildScheduledEventUserResponses.INTERESTED
       }),
-      l = s.filter(e => e.response === r.GuildScheduledEventUserResponses.INTERESTED),
+      n = s.filter(e => e.response === r.GuildScheduledEventUserResponses.INTERESTED),
       i = new Set,
       a = [],
       u = e => {
         !i.has(e.user_id) && (a.push(e), i.add(e.user_id))
       };
-    return t.forEach(u), l.forEach(u), a
-  }, [n, s])
+    return t.forEach(u), n.forEach(u), a
+  }, [l, s])
 }

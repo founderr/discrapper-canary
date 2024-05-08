@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return o
   },
   EMPTY_WILDCARD: function() {
-    return C
+    return R
   },
   GENSHIN_ID: function() {
     return y
@@ -73,7 +73,7 @@ n.r(t), n.d(t, {
     return f
   },
   MAX_TRAITS_TO_DISPLAY: function() {
-    return R
+    return C
   },
   MAX_WILDCARD_LENGTH: function() {
     return p
@@ -127,9 +127,9 @@ let f = 4,
   N = 24,
   p = 12,
   O = 3,
-  R = 5;
+  C = 5;
 I()("2024-01-01T00:00:00");
-let C = "";
+let R = "";
 (l = i || (i = {}))[l.NONE = 0] = "NONE", l[l.SOCIAL = 1] = "SOCIAL", l[l.CASUAL = 2] = "CASUAL", l[l.COMPETITIVE = 3] = "COMPETITIVE", l[l.CREATIVE = 4] = "CREATIVE", l[l.VERY_HARDCORE = 5] = "VERY_HARDCORE";
 let g = ["cozy", "crunchy", "chaos"],
   L = {

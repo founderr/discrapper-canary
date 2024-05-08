@@ -26,13 +26,13 @@ var l = n("120356"),
   T = n("134483"),
   I = n("809244"),
   A = n("618158"),
-  v = n("496675"),
-  N = n("366695"),
+  N = n("496675"),
+  v = n("366695"),
   x = n("586791"),
   M = n("502568"),
   R = n("792125"),
-  L = n("358221"),
-  y = n("887012"),
+  y = n("358221"),
+  L = n("887012"),
   O = n("613548"),
   j = n("221888"),
   P = n("339340"),
@@ -47,7 +47,7 @@ function H(e) {
   let {
     focusedParticipant: t,
     channel: n
-  } = e, l = (0, u.useAppContext)(), s = (0, i.useStateFromStores)([L.default], () => L.default.getLayout(n.id, l));
+  } = e, l = (0, u.useAppContext)(), s = (0, i.useStateFromStores)([y.default], () => y.default.getLayout(n.id, l));
   return (0, a.jsx)(A.default, {
     children: (0, a.jsx)(j.default, {
       className: w.participants,
@@ -88,14 +88,14 @@ function G(e) {
       focusedParticipant: l,
       channel: s
     } = e,
-    i = (0, y.default)(s, !0),
+    i = (0, L.default)(s, !0),
     o = (0, p.useActiveEvent)(s.id),
     u = null != o ? (0, E.getNextRecurrenceIdInEvent)(o) : null,
     c = null != o;
   if ((null == l ? void 0 : l.type) === D.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(M.default.Divider, {
       className: w.divider
-    }), (0, a.jsx)(N.default, {
+    }), (0, a.jsx)(v.default, {
       game: n,
       className: w.activityIcon
     }), (0, a.jsx)(r.Text, {
@@ -144,14 +144,14 @@ function V(e) {
     exitFullScreen: p
   } = e, {
     focusedParticipant: E
-  } = (0, i.useStateFromStoresObject)([L.default], () => ({
-    focusedParticipant: L.default.getSelectedParticipant(t.id),
-    participantsOpen: L.default.getParticipantsOpen(t.id)
-  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), N = F.default.Messages.VOICE_CHANNEL;
-  t.isDM() ? N = F.default.Messages.DM : t.isGroupDM() && (N = F.default.Messages.GROUP_DM);
-  let y = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
-    j = t.isGuildVoice() && u && null != y && y.length > 0,
-    H = (0, i.useStateFromStores)([v.default], () => v.default.can(b.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
+  } = (0, i.useStateFromStoresObject)([y.default], () => ({
+    focusedParticipant: y.default.getSelectedParticipant(t.id),
+    participantsOpen: y.default.getParticipantsOpen(t.id)
+  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), v = F.default.Messages.VOICE_CHANNEL;
+  t.isDM() ? v = F.default.Messages.DM : t.isGroupDM() && (v = F.default.Messages.GROUP_DM);
+  let L = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
+    j = t.isGuildVoice() && u && null != L && L.length > 0,
+    H = (0, i.useStateFromStores)([N.default], () => N.default.can(b.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
     B = j ? (0, a.jsx)(r.Tooltip, {
       text: F.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
@@ -168,7 +168,7 @@ function V(e) {
           className: s()(w.channelStatus, k.markup, {
             [w.hoverable]: H
           }),
-          children: _.default.parseVoiceChannelStatus(y, !0, {
+          children: _.default.parseVoiceChannelStatus(L, !0, {
             channelId: t.id
           })
         }), H && (0, a.jsx)(x.default, {
@@ -210,7 +210,7 @@ function V(e) {
       children: [null != I ? (0, a.jsx)(M.default.Icon, {
         icon: I,
         disabled: !0,
-        "aria-label": N
+        "aria-label": v
       }) : null, (0, a.jsx)(M.default.Title, {
         children: C
       }), (0, a.jsx)(S.HeaderGuildBreadcrumb, {

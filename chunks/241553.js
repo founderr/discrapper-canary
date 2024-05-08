@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("559629"),
   p = n("965645"),
   O = n("362061"),
-  R = n("70956"),
-  C = n("709054"),
+  C = n("70956"),
+  R = n("709054"),
   g = n("51144"),
   L = n("981631"),
   v = n("921944"),
@@ -79,7 +79,7 @@ let U = [{
     ribbon: "#81C29F"
   }],
   G = 1 / 300,
-  w = R.default.Millis.DAYS_30,
+  w = C.default.Millis.DAYS_30,
   k = (0, a.animated)(p.default),
   B = (0, a.animated)(O.default),
   V = (0, a.animated)(N.default);
@@ -133,14 +133,14 @@ t.default = r.memo(function(e) {
     channel: n
   } = e, {
     analyticsLocations: a
-  } = (0, E.default)(c.default.GIFT_BUTTON), [l, _] = r.useState(!1), N = (0, s.useStateFromStores)([h.default], () => !(null === h.default || void 0 === h.default ? void 0 : h.default.hasLayers())), p = (0, s.useStateFromStores)([A.default], () => A.default.getCurrentUser()), O = null != p ? C.default.age(p.id) : 0, R = !t && N && O >= w, {
+  } = (0, E.default)(c.default.GIFT_BUTTON), [l, _] = r.useState(!1), N = (0, s.useStateFromStores)([h.default], () => !(null === h.default || void 0 === h.default ? void 0 : h.default.hasLayers())), p = (0, s.useStateFromStores)([A.default], () => A.default.getCurrentUser()), O = null != p ? R.default.age(p.id) : 0, C = !t && N && O >= w, {
     enabled: U
   } = S.SeasonalGiftingMarketingExperiment.useExperiment({
     location: "ChannelPremiumGiftButton"
   }, {
-    autoTrackExposure: R
+    autoTrackExposure: C
   }), b = [];
-  U && R && b.push(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
+  U && C && b.push(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
   let [G, k] = (0, T.useSelectedDismissibleContent)(b), B = null != G, V = (0, g.useDirectMessageRecipient)(n), F = null != V;
   if (t) return null;
   let H = () => {

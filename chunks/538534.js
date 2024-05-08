@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   RadioGroup: function() {
-    return R
+    return C
   },
   useRadioGroup: function() {
     return p
@@ -57,7 +57,7 @@ function m(e) {
     radioPosition: m = "left",
     icon: N,
     withTransparentBackground: p
-  } = e, O = null !== (t = a.color) && void 0 !== t ? t : "", R = i || !A, C = (0, r.jsxs)("div", {
+  } = e, O = null !== (t = a.color) && void 0 !== t ? t : "", C = i || !A, R = (0, r.jsxs)("div", {
     className: f,
     children: [i ? (0, r.jsx)(T.default, {
       foreground: S.radioIconForeground
@@ -71,7 +71,7 @@ function m(e) {
     role: "radio",
     "aria-checked": i,
     onClick: n ? void 0 : l,
-    tabIndex: !n && R ? 0 : -1,
+    tabIndex: !n && C ? 0 : -1,
     className: o()(null != a.collapsibleContent ? S.collapsibleItem : S.item, {
       [S.disabled]: n,
       [S.itemFilled]: !p
@@ -85,7 +85,7 @@ function m(e) {
         [S.radioPositionLeft]: "left" === m,
         [S.radioPositionRight]: "right" === m
       }, h),
-      children: ["left" === m ? C : null, (0, r.jsxs)("div", {
+      children: ["left" === m ? R : null, (0, r.jsxs)("div", {
         className: o()(S.info, d),
         children: [(0, r.jsx)(c.Text, {
           variant: "text-md/medium",
@@ -97,7 +97,7 @@ function m(e) {
           variant: "text-sm/normal",
           children: a.desc
         }) : null]
-      }), "right" === m ? C : null]
+      }), "right" === m ? R : null]
     })
   })
 }
@@ -244,7 +244,7 @@ function O(e) {
   }
 }
 
-function R(e) {
+function C(e) {
   let {
     itemInfoClassName: t,
     itemTitleClassName: n,
@@ -289,4 +289,4 @@ function R(e) {
 h(N, "defaultProps", {
   withTransparentBackground: !1,
   radioPosition: "left"
-}), R.Sizes = A
+}), C.Sizes = A

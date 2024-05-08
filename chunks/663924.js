@@ -26,7 +26,7 @@ t.default = r.memo(function(e) {
     channel: n,
     closeOnModalOuterClick: a = !1,
     parentModalKey: O
-  } = e, R = r.useRef(null), C = r.useRef(null), {
+  } = e, C = r.useRef(null), R = r.useRef(null), {
     renderWindow: g,
     windowDispatch: L
   } = r.useContext(c.default), v = null != O, D = (0, u.useIsModalAtTop)(null != O ? O : ""), M = () => {
@@ -40,7 +40,7 @@ t.default = r.memo(function(e) {
     if ((0, o.isElement)(n) && null != n.closest("." + N.CHAT_INPUT_BUTTON_CLASSNAME)) return;
     for (;
       (0, o.isElement)(n);) {
-      if (n === C.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
+      if (n === R.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
       n = n.parentNode
     }
     M();
@@ -51,7 +51,7 @@ t.default = r.memo(function(e) {
   }, []);
   r.useLayoutEffect(() => (g.addEventListener("mousedown", y), g.addEventListener("contextmenu", y), L.subscribe(m.ComponentActions.POPOUT_CLOSE, P), () => {
     g.removeEventListener("mousedown", y), g.removeEventListener("contextmenu", y), L.unsubscribe(m.ComponentActions.POPOUT_CLOSE, P)
-  }), [P, y, g, L]), (0, d.useFocusLock)(R), r.useEffect(() => {
+  }), [P, y, g, L]), (0, d.useFocusLock)(C), r.useEffect(() => {
     (!v && (0, u.hasAnyModalOpen)() || v && !D) && M()
   }, [D, v]);
   let U = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentAppDetail());
@@ -70,12 +70,12 @@ t.default = r.memo(function(e) {
         } = e;
         return (0, i.jsx)("section", {
           className: s()(p.positionContainer),
-          ref: R,
+          ref: C,
           role: "dialog",
           "aria-label": "Application Launcher",
           children: t ? (0, i.jsxs)("div", {
             className: p.drawerSizingWrapper,
-            ref: C,
+            ref: R,
             children: [(0, i.jsx)("div", {
               className: p.resizeHandle
             }), (0, i.jsxs)("div", {

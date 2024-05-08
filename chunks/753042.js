@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return N
   }
 });
 var a = n("735250");
@@ -27,10 +27,10 @@ var l = n("120356"),
   I = n("689938"),
   A = n("867833");
 
-function v(e) {
+function N(e) {
   let {
     member: t
-  } = e, n = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(t.guildId), [t.guildId]), l = (0, h.useUserAccountVerified)(t.userId, t.guildId), v = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId), N = (0, h.useUserAccountAgeDate)(t.userId), x = (0, h.useGuildMemberJoinedAtDate)(t.userId, t.guildId);
+  } = e, n = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(t.guildId), [t.guildId]), l = (0, h.useUserAccountVerified)(t.userId, t.guildId), N = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId), v = (0, h.useUserAccountAgeDate)(t.userId), x = (0, h.useGuildMemberJoinedAtDate)(t.userId, t.guildId);
   return null == n ? null : (0, a.jsx)("div", {
     className: s()(A.__invalid_safetySignalsMainContainer),
     children: (0, a.jsx)(f.FormItem, {
@@ -57,7 +57,7 @@ function v(e) {
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_DANGER_FOREGROUND
           })
-        }), v !== h.UserRulesAgreementLevel.NO_GATE && (0, a.jsx)(_.UserModInfoItem, {
+        }), N !== h.UserRulesAgreementLevel.NO_GATE && (0, a.jsx)(_.UserModInfoItem, {
           icon: (0, a.jsx)(r.BookCheckIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
@@ -68,7 +68,7 @@ function v(e) {
             color: "text-normal",
             children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
           }),
-          description: v === h.UserRulesAgreementLevel.AGREED ? (0, a.jsx)(o.CheckmarkBoldIcon, {
+          description: N === h.UserRulesAgreementLevel.AGREED ? (0, a.jsx)(o.CheckmarkBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_POSITIVE_FOREGROUND
@@ -90,7 +90,7 @@ function v(e) {
           description: (0, a.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: N
+            children: v
           })
         }), (0, a.jsx)(_.UserModInfoItem, {
           icon: (0, a.jsx)(C.GuildIcon, {

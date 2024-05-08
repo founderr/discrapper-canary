@@ -28,13 +28,13 @@ function S(e) {
     children: T
   } = e, {
     selectedSkuId: f
-  } = (0, u.usePaymentContext)(), [S, h] = r.useState(n), [A, m] = r.useState(), [N, p] = r.useState(!1), O = (0, l.shouldShowCustomGiftExperience)(S), R = (0, s.useIsSeasonalGiftingActive)(), {
-    enabled: C
+  } = (0, u.usePaymentContext)(), [S, h] = r.useState(n), [A, m] = r.useState(), [N, p] = r.useState(!1), O = (0, l.shouldShowCustomGiftExperience)(S), C = (0, s.useIsSeasonalGiftingActive)(), {
+    enabled: R
   } = s.default.useExperiment({
     location: "PaymentContextProvider"
   }, {
-    autoTrackExposure: O && R
-  }), [g, L] = r.useState(O ? C && R ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : c : E), [v, D] = r.useState(t && (0, l.getGiftExperience)(S) === l.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? _.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : o), [M, y] = r.useState(void 0), [P, U] = r.useState(void 0), b = (0, l.useGetGiftCode)(f, t), [G, w] = r.useState(!1), [k, B] = r.useState(!1), [V, x] = r.useState(), F = r.useCallback(e => {
+    autoTrackExposure: O && C
+  }), [g, L] = r.useState(O ? R && C ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : c : E), [v, D] = r.useState(t && (0, l.getGiftExperience)(S) === l.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? _.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : o), [M, y] = r.useState(void 0), [P, U] = r.useState(void 0), b = (0, l.useGetGiftCode)(f, t), [G, w] = r.useState(!1), [k, B] = r.useState(!1), [V, x] = r.useState(), F = r.useCallback(e => {
     let {
       onSubscriptionConfirmation: t
     } = e;

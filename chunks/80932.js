@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return N
   },
   favoriteEmoji: function() {
-    return R
+    return C
   },
   fetchEmoji: function() {
     return A
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return h
   },
   unfavoriteEmoji: function() {
-    return C
+    return R
   },
   updateEmoji: function() {
     return p
@@ -126,7 +126,7 @@ function O(e) {
   })
 }
 
-function R(e) {
+function C(e) {
   var t;
   (function(e) {
     null != e && c.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = O(t.emojis), r().size(t.emojis) >= f.MAX_FAVORITES) ? (I.default.show({
@@ -138,7 +138,7 @@ function R(e) {
   })(null !== (t = e.id) && void 0 !== t ? t : e.name)
 }
 
-function C(e) {
+function R(e) {
   var t;
   (function(e) {
     null != e && c.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => {

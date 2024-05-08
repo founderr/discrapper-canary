@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   getNextShownUpcomingEventNoticeType: function() {
     return s
   }
 });
-var l = n("913527"),
-  u = n.n(l),
-  a = n("709054"),
-  d = n("765305");
+var n = l("913527"),
+  u = l.n(n),
+  a = l("709054"),
+  d = l("765305");
 
-function s(e, t, n, l) {
+function s(e, t, l, n) {
   let s = u()(),
     i = new Date(e.scheduled_start_time).getTime(),
     r = {
@@ -19,13 +19,13 @@ function s(e, t, n, l) {
   if (s.isBetween(r.start, r.end)) {
     if (null != t) {
       let e = u()(t),
-        n = e.isBetween(r.start, r.end),
+        l = e.isBetween(r.start, r.end),
         a = e.isBetween(u()(i).subtract(d.ACKED_RECENTLY_WINDOW_DAYS, "days"), i);
-      return n || a && !l ? void 0 : d.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON
+      return l || a && !n ? void 0 : d.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON
     }
     return d.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON
   }
   let o = a.default.extractTimestamp(e.id),
-    c = Math.min((null != n ? n : o) + d.NEW_EVENT_WINDOW_MILLISECONDS, i);
-  if (s.isBetween(o, c) && null == t && !l) return d.UpcomingGuildEventNoticeTypes.NEW_EVENT
+    E = Math.min((null != l ? l : o) + d.NEW_EVENT_WINDOW_MILLISECONDS, i);
+  if (s.isBetween(o, E) && null == t && !n) return d.UpcomingGuildEventNoticeTypes.NEW_EVENT
 }

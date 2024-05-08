@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return p
   },
   UserSettingsActionCreatorsByType: function() {
-    return R
+    return C
   },
   UserSettingsDelay: function() {
     return f.UserSettingsDelay
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return g
   },
   updateUserGuildSettings: function() {
-    return C
+    return R
   }
 }), n("411104"), n("47120"), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817");
 var i = n("512722"),
@@ -280,17 +280,17 @@ class N {
 }
 let p = new N(l.PreloadedUserSettings, f.UserSettingsTypes.PRELOADED_USER_SETTINGS),
   O = new N(o.FrecencyUserSettings, f.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
-  R = {
+  C = {
     [f.UserSettingsTypes.PRELOADED_USER_SETTINGS]: p,
     [f.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: O
   };
 
-function C(e, t, n) {
+function R(e, t, n) {
   return p.updateAsync("guilds", n => (0, T.mutateUserGuildSettingsInternal)(n, e, t), n)
 }
 
 function g(e, t, n, i) {
-  return C(e, e => (0, T.mutateUserChannelSettingsInternal)(e, t, n), i)
+  return R(e, e => (0, T.mutateUserChannelSettingsInternal)(e, t, n), i)
 }
 
 function L(e) {

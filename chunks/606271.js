@@ -21,8 +21,8 @@ var a = n("392711"),
   m = n("594174"),
   S = n("979651"),
   p = n("626135"),
-  g = n("823379"),
-  I = n("358085"),
+  I = n("823379"),
+  g = n("358085"),
   T = n("914946"),
   A = n("238679"),
   N = n("863141"),
@@ -40,7 +40,7 @@ function L(e, t, n) {
 }
 class M {
   loadServer() {
-    for (let e of (I.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
+    for (let e of (g.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
     for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
     for (let [e, t] of Object.entries(this.rpcEventHandlers)) this.rpcServer.setEventHandler(e, t)
   }
@@ -84,7 +84,7 @@ class M {
         }, s = "".concat(t).concat(e.id);
         break;
       default:
-        return (0, g.assertNever)(e)
+        return (0, I.assertNever)(e)
     }
     null != n && this.rpcServer.dispatchToSubscriptions(t, {
       channel_id: n

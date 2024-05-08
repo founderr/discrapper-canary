@@ -104,17 +104,17 @@ function A(e) {
       }), t;
       throw Error("Menu API only allows Items and groups of Items as children. Received ".concat(null !== (r = null !== (i = null == n ? void 0 : n.type) && void 0 !== i ? i : n) && void 0 !== r ? r : typeof n, " (").concat(typeof n, ") instead"))
     }, [])
-  }(A), R = function e(t) {
+  }(A), C = function e(t) {
     return t.reduce((t, n) => n.navigable ? (t.push({
       key: n.key,
       children: "item" === n.type && null != n.children ? e(n.children) : void 0
     }), t) : t, [])
-  }(O), C = r.useRef([]);
-  !l()(C.current, R) && (C.current = R);
+  }(O), R = r.useRef([]);
+  !l()(R.current, C) && (R.current = C);
   let g = null === (t = O.find(e => null != e.key)) || void 0 === t ? void 0 : t.key,
     L = (0, u.useMenuNavigator)({
       navId: n,
-      items: C.current,
+      items: R.current,
       initialFocusPath: I.default.keyboardModeEnabled && null != g ? [g] : [],
       closeMenu: m
     });

@@ -25,13 +25,13 @@ var a = n("735250"),
   T = n("626135"),
   I = n("585483"),
   A = n("403182"),
-  v = n("127654"),
-  N = n("752305"),
+  N = n("127654"),
+  v = n("752305"),
   x = n("951211"),
   M = n("981631"),
   R = n("921944"),
-  L = n("489887"),
-  y = n("689938"),
+  y = n("489887"),
+  L = n("689938"),
   O = n("34382");
 
 function j(e, t, l, s) {
@@ -68,7 +68,7 @@ function D() {
         visibleContent: t
       } = e;
       return t === r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE ? (0, a.jsx)(_.TextBadge, {
-        text: y.default.Messages.NEW,
+        text: L.default.Messages.NEW,
         color: s.default.BUTTON_DANGER_BACKGROUND
       }) : null
     }
@@ -104,7 +104,7 @@ function b(e) {
   }
 
   function H() {
-    T.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), U("/", (0, N.toRichValue)("/"))
+    T.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), U("/", (0, v.toRichValue)("/"))
   }
 
   function B() {
@@ -123,7 +123,7 @@ function b(e) {
         channel: t
       })
     }, {
-      modalKey: L.POLL_CREATION_MODAL_KEY
+      modalKey: y.POLL_CREATION_MODAL_KEY
     })
   }
 
@@ -154,7 +154,7 @@ function b(e) {
       n = "txt",
       a = "",
       l = b.match(P);
-    null != l && (a = l[1], n = l[2], e = l[3], a += l[4]), (0, v.promptToUpload)([(0, A.makeFile)(new Blob([e], {
+    null != l && (a = l[1], n = l[2], e = l[3], a += l[4]), (0, N.promptToUpload)([(0, A.makeFile)(new Blob([e], {
       type: "text/plain"
     }), "message.".concat(n))], t, S), I.ComponentDispatch.dispatchToLastSubscribed(M.ComponentActions.CLEAR_TEXT), "" !== a && I.ComponentDispatch.dispatchToLastSubscribed(M.ComponentActions.INSERT_TEXT, {
       plainText: a
@@ -164,7 +164,7 @@ function b(e) {
     onSelect: p,
     navId: "channel-attach",
     onClose: m,
-    "aria-label": y.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    "aria-label": L.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     className: O.menu,
     children: i.map(function(e) {
       var n;

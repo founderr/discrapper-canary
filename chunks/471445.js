@@ -31,8 +31,8 @@ var i = n("859802"),
   N = n("481479"),
   p = n("160696"),
   O = n("832440"),
-  R = n("634648"),
-  C = n("356842"),
+  C = n("634648"),
+  R = n("356842"),
   g = n("630641"),
   L = n("908434"),
   v = n("74846"),
@@ -139,7 +139,7 @@ function q(e, t) {
     case Z.ChannelTypes.ANNOUNCEMENT_THREAD:
     case Z.ChannelTypes.PUBLIC_THREAD:
       if (e.isNSFW()) return b.default;
-      if (e.isForumPost()) return R.default;
+      if (e.isForumPost()) return C.default;
       else return W.default;
     case Z.ChannelTypes.GUILD_TEXT:
       if (J) {
@@ -182,7 +182,7 @@ function q(e, t) {
     default:
       if (z.StaticChannelIds.has(e.id)) {
         if (e.id === z.StaticChannelId.GUILD_HOME || e.id === z.StaticChannelId.SERVER_GUIDE) {
-          if (et) return C.default;
+          if (et) return R.default;
           return k.default
         }
         if (e.id === z.StaticChannelId.CHANNEL_BROWSER || e.id === z.StaticChannelId.CUSTOMIZE_COMMUNITY) return E.default

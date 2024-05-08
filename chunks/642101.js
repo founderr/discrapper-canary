@@ -26,11 +26,11 @@ let O = {
     loading: 2,
     error: null
   },
-  R = {
+  C = {
     offset: null,
     hasMoreItems: null
   },
-  C = {},
+  R = {},
   g = {},
   L = {},
   v = {},
@@ -148,7 +148,7 @@ function Q(e) {
 }
 class q extends(r = u.default.Store) {
   getLastFetchedMillis(e) {
-    return C[e]
+    return R[e]
   }
   getFeedItemsForGuild(e) {
     return U(e).values()
@@ -182,7 +182,7 @@ class q extends(r = u.default.Store) {
   }
   getPaginationStatus(e) {
     var t;
-    return null !== (t = L[e]) && void 0 !== t ? t : R
+    return null !== (t = L[e]) && void 0 !== t ? t : C
   }
   getIsItemHiding(e, t) {
     var n;
@@ -239,7 +239,7 @@ l = "GuildFeedStore", (o = "displayName") in(s = q) ? Object.defineProperty(s, o
       guildId: s,
       data: o
     } = e;
-    if (C[s] = Date.now(), g[s] = {
+    if (R[s] = Date.now(), g[s] = {
         loading: 2,
         error: null
       }, s in D && D[s].load_id !== o.load_id) return;
@@ -349,8 +349,8 @@ l = "GuildFeedStore", (o = "displayName") in(s = q) ? Object.defineProperty(s, o
     let {
       guild: n
     } = e;
-    if (null == C[n.id]) return !1;
-    for (let e in delete C[n.id], delete D[n.id], null !== (t = y[n.id]) && void 0 !== t ? t : {}) delete M[e];
+    if (null == R[n.id]) return !1;
+    for (let e in delete R[n.id], delete D[n.id], null !== (t = y[n.id]) && void 0 !== t ? t : {}) delete M[e];
     delete y[n.id], delete P[n.id]
   },
   CHANNEL_UPDATES: function(e) {
@@ -361,7 +361,7 @@ l = "GuildFeedStore", (o = "displayName") in(s = q) ? Object.defineProperty(s, o
       if (null == e ? void 0 : e.hasFlag(N.ChannelFlags.GUILD_FEED_REMOVED)) return Q(e)
   },
   LOGOUT: function() {
-    C = {}, D = {}, M = {}, y = {}, P = {}, w = {}, k = {}, B = {}, V = {}
+    R = {}, D = {}, M = {}, y = {}, P = {}, w = {}, k = {}, B = {}, V = {}
   },
   MESSAGE_UPDATE: function(e) {
     let {

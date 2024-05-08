@@ -28,8 +28,8 @@ let f = "default",
   N = null,
   p = null,
   O = {},
-  R = null,
   C = null,
+  R = null,
   g = {},
   L = {
     clipsEnabled: !1,
@@ -86,7 +86,7 @@ class M extends(i = r.default.DeviceSettingsStore) {
     return N === e
   }
   getActiveAnimation() {
-    return C
+    return R
   }
   getStreamClipAnimations(e) {
     var t;
@@ -108,7 +108,7 @@ class M extends(i = r.default.DeviceSettingsStore) {
     return m >= c.MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS
   }
   getLastClipsError() {
-    return R
+    return C
   }
   isClipsEnabledForUser(e) {
     var t, n;
@@ -276,7 +276,7 @@ let y = new M(a.default, {
     if (m += 1, v.hasTakenDecoupledClip = v.hasTakenDecoupledClip || t === c.ClipSaveTypes.DECOUPLED, null != n && null != i) {
       var r;
       let e = Date.now();
-      C = null != C ? C : e, g[n] = [...null !== (r = g[n]) && void 0 !== r ? r : [], {
+      R = null != R ? R : e, g[n] = [...null !== (r = g[n]) && void 0 !== r ? r : [], {
         timestamp: e,
         thumbnail: i
       }]
@@ -290,7 +290,7 @@ let y = new M(a.default, {
       streamKey: t,
       timestamp: n
     } = e;
-    C === n && (C = null), null == n ? g[t] = [] : g[t] = g[t].filter(e => e.timestamp !== n)
+    R === n && (R = null), null == n ? g[t] = [] : g[t] = g[t].filter(e => e.timestamp !== n)
   },
   STREAM_START: function(e) {
     let {
@@ -315,7 +315,7 @@ let y = new M(a.default, {
     let {
       streamKey: t
     } = e;
-    if (C = null, g[t] = [], null == p || (0, l.decodeStreamKey)(t).ownerId !== u.default.getId()) return !1;
+    if (R = null, g[t] = [], null == p || (0, l.decodeStreamKey)(t).ownerId !== u.default.getId()) return !1;
     p = 0 === p.newClipIds.length ? null : {
       ...p,
       ended: !0
@@ -380,7 +380,7 @@ let y = new M(a.default, {
     let {
       applicationName: t
     } = e;
-    if (R = null, !v.clipsSettings.clipsEnabled) return !1;
+    if (C = null, !v.clipsSettings.clipsEnabled) return !1;
     p = {
       applicationName: t,
       newClipIds: [],
@@ -391,7 +391,7 @@ let y = new M(a.default, {
     let {
       errMsg: t
     } = e;
-    R = t
+    C = t
   },
   CLIPS_DISMISS_EDUCATION: function(e) {
     let {
@@ -399,7 +399,7 @@ let y = new M(a.default, {
     } = e;
     switch (t) {
       case c.ClipsUserEducationType.Error:
-        R = null;
+        C = null;
         break;
       case c.ClipsUserEducationType.Disabled:
       case c.ClipsUserEducationType.Enabled:

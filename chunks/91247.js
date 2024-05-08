@@ -123,7 +123,7 @@ function d(e) {
     N = [],
     p = [],
     O = [],
-    R = [];
+    C = [];
   return r.forEach(e => {
     var t;
     if (e.unavailable) return;
@@ -135,7 +135,7 @@ function d(e) {
       guild_scheduled_events: a,
       ...s
     } = e;
-    S.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels), h.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles), A.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis), m.push(r), N.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers), p.push(n), O.push(a), R.push(s, i)
+    S.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels), h.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles), A.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis), m.push(r), N.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers), p.push(n), O.push(a), C.push(s, i)
   }), {
     presences_size: JSON.stringify(null !== (t = null == a ? void 0 : a.friends) && void 0 !== t ? t : []).length,
     users_size: JSON.stringify(T).length,
@@ -155,7 +155,7 @@ function d(e) {
     guild_stickers_size: JSON.stringify(N).length,
     guild_events_size: JSON.stringify(O).length,
     guild_features_size: JSON.stringify(p).length,
-    guild_remaining_data_size: JSON.stringify(R).length,
+    guild_remaining_data_size: JSON.stringify(C).length,
     size_metrics_duration_ms: Date.now() - i
   }
 }

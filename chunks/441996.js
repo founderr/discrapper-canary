@@ -88,13 +88,13 @@ class c extends(a = i.PureComponent) {
       let S = Math.floor(a.width / (m - 3)),
         p = .5 * S;
       E.translate(S - S * f, 0), E.beginPath();
-      let g = -S;
+      let I = -S;
       s.forEach((e, a) => {
         t = {
-          x: g,
+          x: I,
           y: _ * e / h
-        }, 0 === a ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + p, n.y, t.x - p, t.y, t.x, t.y), n = t, g += S
-      }), E.stroke(), E.lineTo(g - S, 0), E.lineTo(0, 0), E.fill(), d && f < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
+        }, 0 === a ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + p, n.y, t.x - p, t.y, t.x, t.y), n = t, I += S
+      }), E.stroke(), E.lineTo(I - S, 0), E.lineTo(0, 0), E.fill(), d && f < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
     })
   }
 }

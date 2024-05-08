@@ -11,11 +11,11 @@ function O() {
   N = m.FormStates.CLOSED, p = {}, _ = null, c = void 0, E = []
 }
 
-function R() {
-  C(), g(), p = {}, N = m.FormStates.OPEN
+function C() {
+  R(), g(), p = {}, N = m.FormStates.OPEN
 }
 
-function C() {
+function R() {
   i = void 0, u = void 0, r = void 0
 }
 
@@ -95,7 +95,7 @@ f = "GuildIdentitySettingsStore", (T = "displayName") in(I = L) ? Object.defineP
   },
   GUILD_IDENTITY_SETTINGS_CLOSE: O,
   GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-    R(), O()
+    C(), O()
   },
   GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
     _ = e.guild, p = {}
@@ -159,10 +159,10 @@ f = "GuildIdentitySettingsStore", (T = "displayName") in(I = L) ? Object.defineP
     } = e;
     d = t
   },
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: C,
+  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: R,
   GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: g,
-  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: R,
-  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: R,
+  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: C,
+  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: C,
   GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function() {
     p = {}
   }

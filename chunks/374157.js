@@ -151,18 +151,18 @@ function* u(e) {
     N = null !== (i = null === (t = S.path) || void 0 === t ? void 0 : t[0]) && void 0 !== i ? i : 0,
     p = null !== (r = null === (n = h.path) || void 0 === n ? void 0 : n[0]) && void 0 !== r ? r : A.length - 1,
     O = I ? N : p,
-    R = I ? p : N;
+    C = I ? p : N;
   for (;;) {
-    let t = A[R],
-      n = null !== (u = R === N ? null === (s = S.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
-      i = null !== (d = R === p ? null === (o = h.path) || void 0 === o ? void 0 : o[1] : null) && void 0 !== d ? d : t.children.length - 1,
+    let t = A[C],
+      n = null !== (u = C === N ? null === (s = S.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
+      i = null !== (d = C === p ? null === (o = h.path) || void 0 === o ? void 0 : o[1] : null) && void 0 !== d ? d : t.children.length - 1,
       r = I ? i : n,
       c = I ? n : i,
       E = r;
     for (;;) {
       let n, i;
       let r = t.children[E],
-        s = [R, E];
+        s = [C, E];
       if (n = a.PathUtils.equals(s, S.path) || a.PathUtils.isAncestor(s, S.path) ? !I && a.EditorUtils.isEnd(e, S, s) ? null : S : a.EditorUtils.start(e, s), i = a.PathUtils.equals(s, h.path) || a.PathUtils.isAncestor(s, h.path) ? I && a.EditorUtils.isStart(e, h, s) ? null : h : a.EditorUtils.end(e, s), null != n && null != i) {
         if (a.TextUtils.isText(r) && 0 === r.text.length) {
           let e = {
@@ -190,7 +190,7 @@ function* u(e) {
       if (E === c) break;
       E += m
     }
-    if (R === O) break;
-    R += m
+    if (C === O) break;
+    C += m
   }
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return R
   }
 }), n("47120");
 var i = n("735250"),
@@ -25,11 +25,11 @@ var i = n("735250"),
   N = n("981631"),
   p = n("689938"),
   O = n("777180"),
-  R = n("795197");
+  C = n("795197");
 
-function C(e) {
+function R(e) {
   var t, n;
-  let a, C, {
+  let a, R, {
       userId: g,
       channelId: L,
       guild: v,
@@ -74,7 +74,7 @@ function C(e) {
   return (Y.length > 0 && (a = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.Heading, {
       variant: "eyebrow",
-      className: R.title,
+      className: C.title,
       children: p.default.Messages.CONNECTIONS
     }), (0, i.jsxs)("div", {
       className: s()(O.connectionsContainer, y),
@@ -105,10 +105,10 @@ function C(e) {
         })]
       })]
     })]
-  })), x.length > 0 && (C = (0, i.jsxs)(i.Fragment, {
+  })), x.length > 0 && (R = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.Heading, {
       variant: "eyebrow",
-      className: R.title,
+      className: C.title,
       children: p.default.Messages.APPS
     }), (0, i.jsx)("div", {
       className: s()(O.connectionsContainer, y),
@@ -117,7 +117,7 @@ function C(e) {
         locale: H
       }, e.application.id))
     })]
-  })), null == a && null == C) ? null : (0, i.jsxs)(A.default, {
-    children: [C, a]
+  })), null == a && null == R) ? null : (0, i.jsxs)(A.default, {
+    children: [R, a]
   })
 }

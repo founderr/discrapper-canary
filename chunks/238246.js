@@ -20,13 +20,13 @@ var a, l = n("735250"),
   T = n("168551"),
   I = n("597952"),
   A = n("628123"),
-  v = n("151851"),
-  N = n("587061"),
+  N = n("151851"),
+  v = n("587061"),
   x = n("392358"),
   M = n("892254"),
   R = n("706454"),
-  L = n("210887"),
-  y = n("740492"),
+  y = n("210887"),
+  L = n("740492"),
   O = n("451478"),
   j = n("153850"),
   P = n("806519"),
@@ -139,7 +139,7 @@ class V extends(a = s.Component) {
       guestWindow: S,
       clientThemesClassName: _,
       contentClassName: T
-    } = this.props, N = (0, D.getPlatform)(), x = r()(p, {
+    } = this.props, v = (0, D.getPlatform)(), x = r()(p, {
       "mouse-mode": o,
       "reduce-motion": c,
       "full-motion": !c,
@@ -166,9 +166,9 @@ class V extends(a = s.Component) {
                       children: (0, l.jsxs)(j.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
                           className: B.popout,
-                          children: [g && null != N ? (0, l.jsx)(v.default, {
+                          children: [g && null != v ? (0, l.jsx)(N.default, {
                             focused: n,
-                            type: N,
+                            type: v,
                             windowKey: i,
                             macOSFrame: !0
                           }) : null, (0, l.jsx)("div", {
@@ -189,7 +189,7 @@ class V extends(a = s.Component) {
   }
   constructor(...e) {
     super(...e), G(this, "rootRef", s.createRef()), G(this, "_cleanupWindowActionCreators", void 0), G(this, "warnPopoutClose", e => {
-      this.props.connectedToEmbeddedActivity && !y.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = H.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, D.isPlatformEmbedded && (0, g.default)(() => {
+      this.props.connectedToEmbeddedActivity && !L.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = H.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, D.isPlatformEmbedded && (0, g.default)(() => {
         w.default.unmountWindow(this.props.windowKey), D.isPlatformEmbedded && U.default.close(this.props.windowKey)
       }))
     }), G(this, "handleBlur", () => {
@@ -216,9 +216,9 @@ let W = s.forwardRef(function(e, t) {
     {
       locale: i,
       theme: r
-    } = (0, c.useStateFromStoresObject)([L.default, R.default], () => ({
+    } = (0, c.useStateFromStoresObject)([y.default, R.default], () => ({
       locale: R.default.locale,
-      theme: L.default.theme
+      theme: y.default.theme
     })),
     o = (0, c.useStateFromStores)([p.default], () => p.default.useForcedColors ? "yes" : "no"),
     {
@@ -238,11 +238,11 @@ let W = s.forwardRef(function(e, t) {
       systemForcedColors: p.default.systemForcedColors,
       useForcedColors: p.default.useForcedColors
     })),
-    v = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
-  (0, N.default)(n, !1);
+    N = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
+  (0, v.default)(n, !1);
   let M = (0, x.default)(n, a),
     {
-      analyticsLocations: y
+      analyticsLocations: L
     } = (0, _.default)(S.default.POPOUT_WINDOW),
     {
       clientThemesClassName: j,
@@ -250,7 +250,7 @@ let W = s.forwardRef(function(e, t) {
     } = (0, T.default)();
   return null == n ? null : (0, l.jsx)(f.DnDProvider, {
     children: (0, l.jsx)(_.AnalyticsLocationProvider, {
-      value: y,
+      value: L,
       children: (0, l.jsx)(V, {
         ref: t,
         ...e,
@@ -266,7 +266,7 @@ let W = s.forwardRef(function(e, t) {
         keyboardModeEnabled: h,
         mouseModeEnabled: M,
         reducedMotionEnabled: m,
-        connectedToEmbeddedActivity: v,
+        connectedToEmbeddedActivity: N,
         fontScaleClass: E,
         saturation: g,
         clientThemesClassName: j,

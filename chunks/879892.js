@@ -29,10 +29,10 @@ async function f(e) {
     onSubscriptionConfirmation: N,
     guild: p,
     handleSubscribeModalClose: O,
-    disablePremiumUpsell: R,
-    inPopout: C,
+    disablePremiumUpsell: C,
+    inPopout: R,
     applicationId: g
-  } = e, L = C ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, v = l.default.getCurrentUser();
+  } = e, L = R ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, v = l.default.getCurrentUser();
   if (null == v) return;
   if (!v.verified) {
     (0, r.openModalLazy)(async () => {
@@ -102,9 +102,9 @@ async function f(e) {
     },
     totalNumberOfSlotsToAssign: null != h ? h : 1,
     onCloseModal: P,
-    disablePremiumUpsell: R,
+    disablePremiumUpsell: C,
     onSubscriptionConfirmation: N,
-    inPopout: C,
+    inPopout: R,
     applicationId: g
   })
 }

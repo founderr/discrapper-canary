@@ -31,7 +31,7 @@ function C(e) {
     analyticsLocation: T,
     className: I,
     ...A
-  } = e, v = null == g ? void 0 : g.getGuildId(), N = null == g ? void 0 : g.id, x = (0, o.useStateFromStores)([f.default], () => null != v ? f.default.getGuild(v) : null, [v]), M = (0, o.useStateFromStores)([d.default], () => d.default.getActiveEventByChannel(N), [N]);
+  } = e, N = null == g ? void 0 : g.getGuildId(), v = null == g ? void 0 : g.id, x = (0, o.useStateFromStores)([f.default], () => null != N ? f.default.getGuild(N) : null, [N]), M = (0, o.useStateFromStores)([d.default], () => d.default.getActiveEventByChannel(v), [v]);
   if (t = x, l = g, !(null != t && null != l && h.default.can(m.Permissions.CREATE_INSTANT_INVITE, l))) return null;
   let R = p.default.Messages.INSTANT_INVITE;
   return null != i ? R = p.default.Messages.INVITE_STREAM_HEADER : null != C && (R = p.default.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, a.jsxs)(a.Fragment, {

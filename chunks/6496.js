@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return p
   },
   getNumActiveThreads: function() {
-    return R
+    return C
   }
 }), n("411104"), n("47120"), n("724458");
 var i = n("683860"),
@@ -71,11 +71,11 @@ function O(e) {
   return Array.from(s).filter(e => o.has(e))
 }
 
-function R(e, t) {
+function C(e, t) {
   return Object.keys(r.default.getThreadsForParent(e, t)).length
 }
 
-function C(e) {
+function R(e) {
   let {
     loaded: t,
     firstMessage: n
@@ -127,11 +127,11 @@ function L(e) {
     forum_post_id: f.id,
     forum_post_first_message_id: c.default.castChannelIdAsMessageId(f.id),
     forum_post_num_reactions: function(e) {
-      let t = C(e);
+      let t = R(e);
       return null == t ? 0 : t.reactions.reduce((e, t) => e + t.count, 0)
     }(f.id),
     forum_post_num_unique_reactions: function(e) {
-      let t = C(e);
+      let t = R(e);
       return null == t ? 0 : t.reactions.length
     }(f.id),
     forum_post_applied_tag_ids: function(e) {
@@ -149,7 +149,7 @@ function L(e) {
     forum_post_is_unread: null === (u = T.default.getReadStateSnapshotAnalytics(f.id)) || void 0 === u ? void 0 : u.hasUnreads,
     forum_post_is_following: a.default.hasJoined(f.id),
     forum_post_attachment_mimetypes: function(e) {
-      let t = C(e);
+      let t = R(e);
       return null == t ? [] : t.attachments.map(e => {
         var t;
         return null !== (t = e.content_type) && void 0 !== t ? t : "unknown"

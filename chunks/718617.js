@@ -38,29 +38,29 @@ function S(e) {
     onClose: T,
     analyticsLocation: I,
     className: A
-  } = e, v = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), N = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, x = (0, o.default)(S);
-  let M = null == (n = N) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
+  } = e, N = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), v = null !== (t = null == N ? void 0 : N.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, x = (0, o.default)(S);
+  let M = null == (n = v) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
     R = (0, c.default)(M),
     {
-      reducedMotion: L
+      reducedMotion: y
     } = l.useContext(r.AccessibilityPreferencesContext),
-    y = l.useCallback(e => {
-      null != v && (0, f.openGuildMemberModViewSidebar)(_, S, v.baseChannelId, {
+    L = l.useCallback(e => {
+      null != N && (0, f.openGuildMemberModViewSidebar)(_, S, N.baseChannelId, {
         modViewPanel: e
       })
-    }, [v, _, S]),
+    }, [N, _, S]),
     O = l.useMemo(() => ({
       [C.KeybindActions.CLOSE_MODAL]: {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
-          if (N === E.ModViewPanel.INFO) return T();
-          return y(E.ModViewPanel.INFO)
+          if (v === E.ModViewPanel.INFO) return T();
+          return L(E.ModViewPanel.INFO)
         }
       }
-    }), [T, N, y]);
+    }), [T, v, L]);
   l.useEffect(() => (u.default.enable(), u.default.enableTemp(O), () => u.default.disableTemp()), [O]);
-  let j = (0, s.useTransition)(N, {
+  let j = (0, s.useTransition)(v, {
     immediate: x !== S,
     value: 0,
     from: {
@@ -93,7 +93,7 @@ function S(e) {
           backfaceVisibility: "hidden",
           width: "100%",
           height: "100%",
-          ...L.enabled ? {
+          ...y.enabled ? {
             opacity: null === (l = e.value) || void 0 === l ? void 0 : l.to(e => 1 - Math.abs(e))
           } : {
             left: null === (i = e.value) || void 0 === i ? void 0 : i.to(g("left", R)),
@@ -106,21 +106,21 @@ function S(e) {
               return (0, a.jsx)(h.default, {
                 userId: S,
                 guildId: _,
-                onNavigate: y,
+                onNavigate: L,
                 className: A
               });
             case E.ModViewPanel.MESSAGE_HISTORY:
               return (0, a.jsx)(m.default, {
                 userId: S,
                 guildId: _,
-                onNavigate: () => y(E.ModViewPanel.INFO),
+                onNavigate: () => L(E.ModViewPanel.INFO),
                 className: A
               });
             case E.ModViewPanel.PERMISSIONS:
               return (0, a.jsx)(p.default, {
                 userId: S,
                 guildId: _,
-                onNavigate: () => y(E.ModViewPanel.INFO),
+                onNavigate: () => L(E.ModViewPanel.INFO),
                 className: A
               });
             default:

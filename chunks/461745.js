@@ -172,8 +172,8 @@ class N extends(r = o.Component) {
       className: h,
       inputProps: A,
       focusAfterReady: N
-    } = this.props, p = null != t && t.length > 0, O = !1, R = [];
-    return null != E && E.length > 0 && ("string" == typeof E[0] ? E.forEach((e, t) => R.push((0, s.jsxs)(d.Anchor, {
+    } = this.props, p = null != t && t.length > 0, O = !1, C = [];
+    return null != E && E.length > 0 && ("string" == typeof E[0] ? E.forEach((e, t) => C.push((0, s.jsxs)(d.Anchor, {
       focusProps: {
         offset: 4
       },
@@ -183,7 +183,7 @@ class N extends(r = o.Component) {
         className: S.close,
         "aria-label": f.default.Messages.REMOVE
       })]
-    }, t))) : (O = !0, E.forEach((e, t) => R.push((0, s.jsxs)(d.Anchor, {
+    }, t))) : (O = !0, E.forEach((e, t) => C.push((0, s.jsxs)(d.Anchor, {
       className: u()(S.tag, S.richTag),
       onClick: this.handleRemoveTag.bind(this, t),
       children: [("MEMBER" === e.type || "USER" === e.type) && null != e.avatar && (0, s.jsx)(d.Avatar, {
@@ -219,7 +219,7 @@ class N extends(r = o.Component) {
           style: {
             maxHeight: l
           },
-          children: [R, (0, s.jsx)("input", {
+          children: [C, (0, s.jsx)("input", {
             className: u()(S.input, {
               [S.richTagInput]: O
             }),

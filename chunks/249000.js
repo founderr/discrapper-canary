@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return h
   }
 }), n("411104"), n("47120");
-var a, s, i, l, r, o = n("735250"),
+var i, r, a, s, o, l = n("735250"),
   u = n("470079"),
   d = n("981631");
 
-function c(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,71 +16,71 @@ function c(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let f = (e, t) => {
+let c = (e, t) => {
   let {
     x: n,
-    y: a
-  } = e, {
-    x: s,
     y: i
+  } = e, {
+    x: r,
+    y: a
   } = t;
-  return Math.pow(n - s, 2) + Math.pow(a - i, 2)
+  return Math.pow(n - r, 2) + Math.pow(i - a, 2)
 };
 
-function E(e, t, n, a, s) {
+function E(e, t, n, i, r) {
   let {
-    top: i,
-    bottom: l,
-    left: r,
-    right: o
+    top: a,
+    bottom: s,
+    left: o,
+    right: l
   } = e;
-  if (null == i && null == l ? (i = 0, l = n - s) : null == i && null != l ? i = n - (l + s) : null != i && (l = n - (i + s)), null == r && null == o ? (r = 0, o = t - a) : null == r && null != o ? r = t - (o + a) : null == o && null != r && (o = t - (r + a)), null == i || null == l || null == r || null == o) throw Error("Logically this can never happen based on our if/else statements");
+  if (null == a && null == s ? (a = 0, s = n - r) : null == a && null != s ? a = n - (s + r) : null != a && (s = n - (a + r)), null == o && null == l ? (o = 0, l = t - i) : null == o && null != l ? o = t - (l + i) : null == l && null != o && (l = t - (o + i)), null == a || null == s || null == o || null == l) throw Error("Logically this can never happen based on our if/else statements");
   return {
-    top: i,
-    left: r,
-    bottom: l,
-    right: o
+    top: a,
+    left: o,
+    bottom: s,
+    right: l
   }
-}(l = a || (a = {}))[l.DISABLED = 0] = "DISABLED", l[l.DEFAULT = 1] = "DEFAULT", l[l.OFFSET = 2] = "OFFSET", (r = s || (s = {})).TOP = "TOP", r.BOTTOM = "BOTTOM", r.RIGHT = "RIGHT", r.LEFT = "LEFT";
+}(s = i || (i = {}))[s.DISABLED = 0] = "DISABLED", s[s.DEFAULT = 1] = "DEFAULT", s[s.OFFSET = 2] = "OFFSET", (o = r || (r = {})).TOP = "TOP", o.BOTTOM = "BOTTOM", o.RIGHT = "RIGHT", o.LEFT = "LEFT";
 
-function h(e) {
+function I(e) {
   return [null == e.bottom ? "TOP" : "BOTTOM", null == e.right ? "LEFT" : "RIGHT"]
 }
 
-function _(e) {
+function T(e) {
   let {
     top: t,
     left: n,
-    bottom: a,
-    right: s
+    bottom: i,
+    right: r
   } = e;
-  return 0 === t || t <= a ? a = null : t = null, 0 === n || n <= s ? s = null : n = null, {
+  return 0 === t || t <= i ? i = null : t = null, 0 === n || n <= r ? r = null : n = null, {
     top: t,
     left: n,
-    bottom: a,
-    right: s
+    bottom: i,
+    right: r
   }
 }
 
-function C(e) {
+function f(e) {
   let {
     top: t,
     left: n,
-    bottom: a,
-    right: s
+    bottom: i,
+    right: r
   } = e;
-  return a < 0 && (t += a, a = 0), t < 0 && (a += t, t = 0), s < 0 && (n += s, s = 0), n < 0 && (s += n, n = 0), {
+  return i < 0 && (t += i, i = 0), t < 0 && (i += t, t = 0), r < 0 && (n += r, r = 0), n < 0 && (r += n, n = 0), {
     top: t,
     left: n,
-    bottom: a,
-    right: s
+    bottom: i,
+    right: r
   }
 }
 
-function m(e) {
+function S(e) {
   return null != e ? "".concat(e, "px") : "auto"
 }
-class S extends(i = u.PureComponent) {
+class h extends(a = u.PureComponent) {
   componentDidMount() {
     this.checkBounds(), this.setDOMPositions(this.position)
   }
@@ -88,17 +88,17 @@ class S extends(i = u.PureComponent) {
     let {
       state: {
         verticalOrientation: n,
-        horizontalOrientation: a,
-        atTopEdge: s
+        horizontalOrientation: i,
+        atTopEdge: r
       },
       props: {
-        maxX: i,
-        maxY: l,
-        onRelocated: r,
-        snapOrientation: o
+        maxX: a,
+        maxY: s,
+        onRelocated: o,
+        snapOrientation: l
       }
     } = this;
-    (e.maxX !== i || e.maxY !== l || e.onRelocated !== r || e.snapOrientation !== o || t.verticalOrientation !== n || t.horizontalOrientation !== a || t.atTopEdge !== s) && this.checkBounds()
+    (e.maxX !== a || e.maxY !== s || e.onRelocated !== o || e.snapOrientation !== l || t.verticalOrientation !== n || t.horizontalOrientation !== i || t.atTopEdge !== r) && this.checkBounds()
   }
   componentWillUnmount() {
     window.removeEventListener("mousemove", this.handleMouseMove), window.removeEventListener("mouseup", this.handleMouseUp)
@@ -107,19 +107,19 @@ class S extends(i = u.PureComponent) {
     let {
       top: t,
       left: n,
-      bottom: a,
-      right: s
+      bottom: i,
+      right: r
     } = e, {
       draggableRef: {
-        current: i
+        current: a
       }
     } = this;
     this.position = {
       top: t,
       left: n,
-      bottom: a,
-      right: s
-    }, null != i && (i.style.top = m(t), i.style.bottom = m(a), i.style.left = m(n), i.style.right = m(s))
+      bottom: i,
+      right: r
+    }, null != a && (a.style.top = S(t), a.style.bottom = S(i), a.style.left = S(n), a.style.right = S(r))
   }
   render() {
     let {
@@ -127,59 +127,59 @@ class S extends(i = u.PureComponent) {
       className: t
     } = this.props, {
       dragging: n,
-      verticalOrientation: a,
-      horizontalOrientation: s,
-      atTopEdge: i
+      verticalOrientation: i,
+      horizontalOrientation: r,
+      atTopEdge: a
     } = this.state, {
-      top: l,
-      left: r,
+      top: s,
+      left: o,
       right: d,
-      bottom: c
+      bottom: _
     } = this.position;
-    return (0, o.jsx)("div", {
+    return (0, l.jsx)("div", {
       ref: this.draggableRef,
       className: t,
       onMouseDown: this.handleMouseDown,
       style: {
         pointerEvents: n ? "none" : "auto",
         position: "absolute",
-        top: l,
-        left: r,
-        bottom: c,
+        top: s,
+        left: o,
+        bottom: _,
         right: d
       },
       children: u.cloneElement(u.Children.only(e), {
-        flipped: "RIGHT" === s,
-        verticalFlipped: "BOTTOM" === a,
+        flipped: "RIGHT" === r,
+        verticalFlipped: "BOTTOM" === i,
         checkBounds: this.checkBounds,
-        atTopEdge: i
+        atTopEdge: a
       })
     })
   }
   constructor(e) {
-    super(e), c(this, "draggableRef", u.createRef()), c(this, "_dragStart", {
+    super(e), _(this, "draggableRef", u.createRef()), _(this, "_dragStart", {
       x: 0,
       y: 0
-    }), c(this, "_offsetX", void 0), c(this, "_offsetY", void 0), c(this, "position", void 0), c(this, "handleMouseDown", e => {
+    }), _(this, "_offsetX", void 0), _(this, "_offsetY", void 0), _(this, "position", void 0), _(this, "handleMouseDown", e => {
       let {
         top: t,
         left: n,
-        bottom: a,
-        right: s
+        bottom: i,
+        right: r
       } = this.position, {
-        dragAnywhere: i,
-        selector: l,
-        maxX: r,
-        maxY: o
+        dragAnywhere: a,
+        selector: s,
+        maxX: o,
+        maxY: l
       } = this.props, {
         target: u
       } = e, {
-        current: c
+        current: _
       } = this.draggableRef;
-      if (null != c && e.button === d.MouseButtons.PRIMARY && (i || null != u && null != l && "" !== l && null != u.closest(l))) {
+      if (null != _ && e.button === d.MouseButtons.PRIMARY && (a || null != u && null != s && "" !== s && null != u.closest(s))) {
         let {
-          x: i,
-          y: l
+          x: a,
+          y: s
         } = function(e) {
           let {
             top: t,
@@ -192,62 +192,62 @@ class S extends(i = u.PureComponent) {
         }(E({
           top: t,
           left: n,
-          bottom: a,
-          right: s
-        }, r, o, c.clientWidth, c.clientHeight));
+          bottom: i,
+          right: r
+        }, o, l, _.clientWidth, _.clientHeight));
         this._dragStart = {
           x: e.clientX,
           y: e.clientY
-        }, this._offsetX = e.clientX - i, this._offsetY = e.clientY - l, window.addEventListener("mousemove", this.handleMouseMove), window.addEventListener("mouseup", this.handleMouseUp)
+        }, this._offsetX = e.clientX - a, this._offsetY = e.clientY - s, window.addEventListener("mousemove", this.handleMouseMove), window.addEventListener("mouseup", this.handleMouseUp)
       }
-    }), c(this, "handleMouseMove", e => {
+    }), _(this, "handleMouseMove", e => {
       e.preventDefault();
       let {
         clientX: t,
         clientY: n
       } = e, {
-        current: a
+        current: i
       } = this.draggableRef, {
-        maxX: s,
-        maxY: i,
-        flipVertical: l,
-        flipHorizontal: r,
-        onDragStart: o,
+        maxX: r,
+        maxY: a,
+        flipVertical: s,
+        flipHorizontal: o,
+        onDragStart: l,
         onDrag: u,
         onFlip: d,
-        snapOrientation: c
+        snapOrientation: _
       } = this.props, {
-        dragging: m,
         dragging: S,
-        verticalOrientation: p,
-        horizontalOrientation: g
-      } = this.state, I = !1;
-      if (null == a || !m && 9 > f(this._dragStart, {
+        dragging: h,
+        verticalOrientation: A,
+        horizontalOrientation: m
+      } = this.state, N = !1;
+      if (null == i || !S && 9 > c(this._dragStart, {
           x: t,
           y: n
         })) return;
-      m = !0;
+      S = !0;
       let {
-        clientWidth: T,
-        clientHeight: A
-      } = a, N = n - this._offsetY, v = C(E({
-        top: N,
+        clientWidth: p,
+        clientHeight: O
+      } = i, C = n - this._offsetY, R = f(E({
+        top: C,
         left: t - this._offsetX
-      }, s, i, T, A));
-      if (c) {
-        let e = h(v = _(v));
-        p = e[0], g = e[1]
-      } else v = {
-        top: v.top,
-        left: v.left
+      }, r, a, p, O));
+      if (_) {
+        let e = I(R = T(R));
+        A = e[0], m = e[1]
+      } else R = {
+        top: R.top,
+        left: R.left
       };
-      2 === r && g !== this.state.horizontalOrientation && (this._offsetX = T - this._offsetX, I = !0), 2 === l && p !== this.state.verticalOrientation && (this._offsetY = A - this._offsetY, I = !0), this.setDOMPositions(v), !S && (null == o || o(v, a)), null == u || u(v, a), I && (null == d || d([p, g])), this.setState({
-        dragging: m,
-        verticalOrientation: p,
-        horizontalOrientation: g,
-        atTopEdge: 0 === v.top
+      2 === o && m !== this.state.horizontalOrientation && (this._offsetX = p - this._offsetX, N = !0), 2 === s && A !== this.state.verticalOrientation && (this._offsetY = O - this._offsetY, N = !0), this.setDOMPositions(R), !h && (null == l || l(R, i)), null == u || u(R, i), N && (null == d || d([A, m])), this.setState({
+        dragging: S,
+        verticalOrientation: A,
+        horizontalOrientation: m,
+        atTopEdge: 0 === R.top
       })
-    }), c(this, "handleMouseUp", () => {
+    }), _(this, "handleMouseUp", () => {
       window.removeEventListener("mousemove", this.handleMouseMove), window.removeEventListener("mouseup", this.handleMouseUp), this.state.dragging && this.setState({
         dragging: !1
       }, () => {
@@ -258,62 +258,62 @@ class S extends(i = u.PureComponent) {
         } = this.draggableRef;
         null != t && null != e && e(this.position, t)
       })
-    }), c(this, "_checkBoundsRAF", null), c(this, "checkBounds", () => {
+    }), _(this, "_checkBoundsRAF", null), _(this, "checkBounds", () => {
       null != this._checkBoundsRAF && cancelAnimationFrame(this._checkBoundsRAF), this._checkBoundsRAF = requestAnimationFrame(this._performCheckBounds)
-    }), c(this, "_performCheckBounds", () => {
+    }), _(this, "_performCheckBounds", () => {
       let e;
       let {
         position: t,
         state: n,
         draggableRef: {
-          current: a
+          current: i
         },
         props: {
-          maxX: s,
-          maxY: i,
-          onRelocated: l,
-          snapOrientation: r
+          maxX: r,
+          maxY: a,
+          onRelocated: s,
+          snapOrientation: o
         }
       } = this, {
-        verticalOrientation: o,
+        verticalOrientation: l,
         horizontalOrientation: u
       } = this.state;
-      if (null == a) return;
+      if (null == i) return;
       let {
         clientHeight: d,
-        clientWidth: c
-      } = a, f = E(t, s, i, c, d);
-      if (f = C(f), r) {
-        let t = h(e = _(f));
-        o = t[0], u = t[1]
+        clientWidth: _
+      } = i, c = E(t, r, a, _, d);
+      if (c = f(c), o) {
+        let t = I(e = T(c));
+        l = t[0], u = t[1]
       } else e = {
-        top: f.top,
-        left: f.left,
+        top: c.top,
+        left: c.left,
         right: null,
         bottom: null
       };
       if (t.left === e.left && t.right === e.right && t.top === e.top && t.bottom === e.bottom) return;
-      null == l || l(e, a), this.setDOMPositions(e);
-      let m = 0 === e.top;
-      (o !== n.verticalOrientation || u !== n.horizontalOrientation || m !== n.atTopEdge) && this.setState({
-        verticalOrientation: o,
+      null == s || s(e, i), this.setDOMPositions(e);
+      let S = 0 === e.top;
+      (l !== n.verticalOrientation || u !== n.horizontalOrientation || S !== n.atTopEdge) && this.setState({
+        verticalOrientation: l,
         horizontalOrientation: u,
-        atTopEdge: m
+        atTopEdge: S
       })
     });
-    let [t, n] = h(e.initialPosition);
+    let [t, n] = I(e.initialPosition);
     this.position = function(e) {
       let {
         top: t,
         left: n,
-        bottom: a,
-        right: s
+        bottom: i,
+        right: r
       } = e;
-      return null == n && null == s && (n = 0), null != n && null != s && (s = null), null == t && null == a && (t = 0), null != t && null != a && (a = null), {
+      return null == n && null == r && (n = 0), null != n && null != r && (r = null), null == t && null == i && (t = 0), null != t && null != i && (i = null), {
         top: t,
         left: n,
-        bottom: a,
-        right: s
+        bottom: i,
+        right: r
       }
     }(e.initialPosition), this.state = {
       dragging: !1,
@@ -323,7 +323,7 @@ class S extends(i = u.PureComponent) {
     }
   }
 }
-c(S, "FlipTypes", a), c(S, "defaultProps", {
+_(h, "FlipTypes", i), _(h, "defaultProps", {
   snapOrientation: !1,
   maxX: 0,
   maxY: 0,

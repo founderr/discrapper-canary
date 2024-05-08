@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("663924"),
   p = n("998698"),
   O = n("271668"),
-  R = n("931981"),
-  C = n("326133"),
+  C = n("931981"),
+  R = n("326133"),
   g = n("570220"),
   L = n("28546"),
   v = n("805680"),
@@ -66,8 +66,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     textValue: eN,
     richValue: ep,
     className: eO,
-    innerClassName: eR,
-    editorClassName: eC,
+    innerClassName: eC,
+    editorClassName: eR,
     id: eg,
     required: eL,
     disabled: ev,
@@ -258,7 +258,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
   }(eY, eP, e9, ey.id), {
     autocompleteRef: tp,
     handleMaybeShowAutocomplete: tO,
-    handleHideAutocomplete: tR
+    handleHideAutocomplete: tC
   } = function() {
     let e = r.useRef(null),
       t = r.useCallback(() => {
@@ -275,7 +275,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       handleHideAutocomplete: n
     }
   }();
-  let tC = (ef = tm, eS = eP, eh = e9, r.useCallback(e => {
+  let tR = (ef = tm, eS = eP, eh = e9, r.useCallback(e => {
     var t, n;
     eS === X.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eh.current) || void 0 === n || n.insertGIF(e) : ef(e.url, void 0, void 0, !0), (0, L.closeExpressionPicker)(), null === (t = eh.current) || void 0 === t || t.focus()
   }, [eh, ef, eS]));
@@ -404,7 +404,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         l = null != o && o.length > 0;
       return s && (null === (r = t.stickers) || void 0 === r ? void 0 : r.autoSuggest) && !l && (null === (a = i.current) || void 0 === a ? void 0 : a.isVisible()) !== !0 && !__OVERLAY__ && null != n
     }(ey, eP, ep, tp),
-    tZ = (0, R.useShouldShowPTONotice)(ey),
+    tZ = (0, C.useShouldShowPTONotice)(ey),
     tX = null != tn || null != ek || tZ,
     tQ = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
   return (0, i.jsx)(g.EventEmitterProvider, {
@@ -437,7 +437,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         }), (0, i.jsxs)("div", {
           ref: te,
           onScroll: tD,
-          className: s()(eR, {
+          className: s()(eC, {
             [el.scrollableContainer]: !0,
             [el.themedBackground]: !e3,
             [el.hasConnectedBar]: tX
@@ -489,7 +489,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
                 onMoveSelection: tb,
                 onSelectionChanged: th,
                 onMaybeShowAutocomplete: tO,
-                onHideAutocomplete: tR,
+                onHideAutocomplete: tC,
                 promptToUpload: ej,
                 fontSize: tT,
                 spellcheckEnabled: tf,
@@ -497,7 +497,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
                 className: s()({
                   [el.textAreaThreadCreation]: eP === X.ChatInputTypes.THREAD_CREATION,
                   [el.profileBioInput]: eP === X.ChatInputTypes.PROFILE_BIO_INPUT
-                }, eC),
+                }, eR),
                 "aria-labelledby": e$
               })
             }), (0, i.jsx)(ee.default, {
@@ -512,7 +512,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           ref: e8,
           channel: ey,
           canOnlyUseTextCommands: tF
-        }), (0, i.jsx)(C.default, {
+        }), (0, i.jsx)(R.default, {
           ref: tp,
           channel: ey,
           canMentionRoles: eK,
@@ -554,7 +554,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       }), tw ? null : (0, i.jsx)(v.default, {
         positionTargetRef: e5,
         type: eP,
-        onSelectGIF: tC,
+        onSelectGIF: tR,
         onSelectEmoji: tg,
         onSelectSticker: tL,
         onSelectSound: tv,

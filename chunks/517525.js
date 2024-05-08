@@ -21,16 +21,16 @@ var a = n("735250"),
   T = n("74538"),
   I = n("557457"),
   A = n("475674"),
-  v = n("981631"),
-  N = n("474936"),
+  N = n("981631"),
+  v = n("474936"),
   x = n("689938"),
   M = n("706119");
 let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
-  L = {
+  y = {
     opacity: 0,
     transform: "translate3d(100%, 0, 0)"
   },
-  y = {
+  L = {
     opacity: 1,
     transform: "translate3d(0%, 0, 0)"
   },
@@ -59,8 +59,8 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         shape: c,
         size: p,
         didTrackUpsellViewed: R,
-        setDidTrackUpsellViewed: L,
-        className: y,
+        setDidTrackUpsellViewed: y,
+        className: L,
         premiumIndicator: O
       } = e,
       j = (0, I.getMaxQuality)(r),
@@ -83,7 +83,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         location: U
       } = (0, h.useAnalyticsContext)(),
       F = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-      w = o && !T.default.isPremium(F, N.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, F),
+      w = o && !T.default.isPremium(F, v.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, F),
       k = l.useCallback(() => {
         w && b && (0, f.openModalLazy)(async () => {
           let {
@@ -96,13 +96,13 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         })
       }, [w, b, U]);
     if (l.useEffect(() => {
-        !R && b && (_.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-          type: N.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
+        !R && b && (_.default.track(N.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+          type: v.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
           location_stack: P
-        }), L(!0))
-      }, [t, s, b, R, L, P]), null == j) return null;
+        }), y(!0))
+      }, [t, s, b, R, y, P]), null == j) return null;
     let H = (0, a.jsx)(f.Tooltip, {
       text: D ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
@@ -125,7 +125,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
     });
     return (0, a.jsx)(g.TextBadge, {
       text: H,
-      className: i()(y, M.qualityIndicatorBadge, {
+      className: i()(L, M.qualityIndicatorBadge, {
         [M.qualityIndicatorBadgePremium]: O
       }),
       color: d.default.unsafe_rawColors.PRIMARY_500.css,
@@ -150,10 +150,10 @@ t.default = e => {
   }, [t]);
   let _ = (0, r.useTransition)(C, {
       enter: {
-        from: E.enabled ? O : L,
-        to: E.enabled ? j : y
+        from: E.enabled ? O : y,
+        to: E.enabled ? j : L
       },
-      leave: E.enabled ? O : L,
+      leave: E.enabled ? O : y,
       config: b
     }),
     T = (0, r.useSpring)({

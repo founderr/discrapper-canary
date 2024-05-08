@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("974042"),
   S = n("451478"),
   p = n("6048"),
-  g = n("390697"),
-  I = n("434184"),
+  I = n("390697"),
+  g = n("434184"),
   T = n("701861"),
   A = n("437314"),
   N = n("696577"),
@@ -38,7 +38,7 @@ t.default = function(e) {
   } = (0, h.default)(E.default.FRIENDS_LIST), {
     rows: x,
     section: D
-  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, g.useIsClearIncomingFriendRequestsEnabled)(), [G, k] = s.useState(() => {
+  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, I.useIsClearIncomingFriendRequestsEnabled)(), [G, k] = s.useState(() => {
     let e = {};
     for (let t of Object.values(M.FriendsSections)) e[t] = "";
     return e
@@ -125,7 +125,7 @@ t.default = function(e) {
         renderRow: function(e) {
           switch (t) {
             case M.FriendsSections.BLOCKED:
-              return (0, a.jsx)(I.default, {
+              return (0, a.jsx)(g.default, {
                 ...e,
                 isFocused: b
               });

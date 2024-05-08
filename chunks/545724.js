@@ -21,10 +21,10 @@ t.default = function(e) {
     isActive: m,
     onOtherHover: S,
     className: p
-  } = e, [g, I] = s.useState(!1), [T, A] = s.useState(!1), N = () => {
-    I(!0), C && !m && !T && (null == S || S())
+  } = e, [I, g] = s.useState(!1), [T, A] = s.useState(!1), N = () => {
+    g(!0), C && !m && !T && (null == S || S())
   }, v = () => {
-    I(!1)
+    g(!1)
   }, R = (e, t) => {
     null != t && (A(!0), (0, d.openContextMenuLazy)(e, async () => {
       let {
@@ -61,7 +61,7 @@ t.default = function(e) {
           opacity: 1
         },
         ...e,
-        children: i(g || m || T)
+        children: i(I || m || T)
       })
     })
   })

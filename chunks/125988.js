@@ -19,15 +19,15 @@ t.default = e => {
     showPending: T = !1,
     showTryItOut: f = !1,
     avatarDecorationOverride: S
-  } = e, [h, A] = i.useState(!1), m = (0, r.useStateFromStores)([a.default], () => a.default.useReducedMotion), N = (0, r.useStateFromStores)([u.default], () => u.default.isFocused()), p = (0, r.useStateFromStores)([o.default], () => null != c && null != n ? o.default.getMember(c, n.id) : null), [O, R] = (0, r.useStateFromStoresArray)([l.default], () => {
+  } = e, [h, A] = i.useState(!1), m = (0, r.useStateFromStores)([a.default], () => a.default.useReducedMotion), N = (0, r.useStateFromStores)([u.default], () => u.default.isFocused()), p = (0, r.useStateFromStores)([o.default], () => null != c && null != n ? o.default.getMember(c, n.id) : null), [O, C] = (0, r.useStateFromStoresArray)([l.default], () => {
     var e;
     return [null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id, l.default.getUser(null == n ? void 0 : n.id)]
-  }), C = null == p ? null == R ? void 0 : R.avatarDecoration : null === p.avatarDecoration ? null : null !== (t = p.avatarDecoration) && void 0 !== t ? t : null == R ? void 0 : R.avatarDecoration, {
+  }), R = null == p ? null == C ? void 0 : C.avatarDecoration : null === p.avatarDecoration ? null : null !== (t = p.avatarDecoration) && void 0 !== t ? t : null == C ? void 0 : C.avatarDecoration, {
     pendingAvatarDecoration: g
   } = (0, s.default)({
     isTryItOut: f,
     guildId: c
-  }), L = N && (h || !m && !I), v = T && void 0 !== g && void 0 !== O && O === (null == n ? void 0 : n.id), D = null != c && null === g, M = v ? D ? null == n ? void 0 : n.avatarDecoration : null != g ? g : C : null != C ? C : null == n ? void 0 : n.avatarDecoration, y = i.useMemo(() => (0, d.getAvatarDecorationURL)({
+  }), L = N && (h || !m && !I), v = T && void 0 !== g && void 0 !== O && O === (null == n ? void 0 : n.id), D = null != c && null === g, M = v ? D ? null == n ? void 0 : n.avatarDecoration : null != g ? g : R : null != R ? R : null == n ? void 0 : n.avatarDecoration, y = i.useMemo(() => (0, d.getAvatarDecorationURL)({
     avatarDecoration: void 0 !== S ? S : M,
     canAnimate: L,
     size: E

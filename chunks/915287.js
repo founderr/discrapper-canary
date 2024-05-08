@@ -37,8 +37,8 @@ function c(e, t, n, a) {
       sectionHeight: N,
       rowHeight: p,
       footerHeight: O = 0,
-      sidebarHeight: R,
-      listHeaderHeight: C = 0,
+      sidebarHeight: C,
+      listHeaderHeight: R = 0,
       renderSection: g,
       renderRow: L,
       renderFooter: v,
@@ -85,8 +85,8 @@ function c(e, t, n, a) {
       sectionHeight: N,
       rowHeight: p,
       footerHeight: O,
-      sidebarHeight: R,
-      listHeaderHeight: C,
+      sidebarHeight: C,
+      listHeaderHeight: R,
       paddingTop: U,
       paddingBottom: b,
       chunkSize: k,
@@ -240,9 +240,9 @@ function c(e, t, n, a) {
       })({
         isSidebarVisible: ei,
         renderSidebar: D,
-        sidebarHeight: R,
+        sidebarHeight: C,
         isListVisible: 0 !== en.length
-      }), [ei, D, R, en.length])]
+      }), [ei, D, C, en.length])]
     })
   })
 }

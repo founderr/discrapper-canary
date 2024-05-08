@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return r
   }
 });
-var l = n("442837"),
-  i = n("241155"),
-  a = n("430824");
+var n = l("442837"),
+  i = l("241155"),
+  a = l("430824");
 
 function r(e, t) {
-  return (0, l.useStateFromStoresObject)([a.default, i.default], () => {
-    let n = a.default.getGuild(e),
-      l = null != n;
-    return null == n && null != t && (n = i.default.getCachedGuildByEventId(t)), {
-      isMember: l,
-      guild: n
+  return (0, n.useStateFromStoresObject)([a.default, i.default], () => {
+    let l = a.default.getGuild(e),
+      n = null != l;
+    return null == l && null != t && (l = i.default.getCachedGuildByEventId(t)), {
+      isMember: n,
+      guild: l
     }
   }, [e, t])
 }

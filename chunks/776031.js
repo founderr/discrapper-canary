@@ -28,8 +28,8 @@ function p(e, t) {
   let {
     preset: p,
     resolution: O,
-    fps: R
-  } = (0, s.useStateFromStoresObject)([I.default], () => I.default.getState()), C = (0, s.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), g = (0, s.useStateFromStores)([S.default], () => S.default.getCurrentUser()), L = (0, s.useStateFromStores)([T.default], () => {
+    fps: C
+  } = (0, s.useStateFromStoresObject)([I.default], () => I.default.getState()), R = (0, s.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), g = (0, s.useStateFromStores)([S.default], () => S.default.getCurrentUser()), L = (0, s.useStateFromStores)([T.default], () => {
     var t;
     return null === (t = T.default.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier
   }), {
@@ -39,7 +39,7 @@ function p(e, t) {
     activated: M
   } = (0, _.usePerksDemo)(a.EntitlementFeatureNames.STREAM_HIGH_QUALITY), y = r.useCallback((e, r, a, s) => {
     if (e) {
-      if (null != C) {
+      if (null != R) {
         let e = {
           qualityOptions: {
             preset: A.ApplicationStreamPresets.PRESET_CUSTOM,
@@ -48,12 +48,12 @@ function p(e, t) {
           },
           context: m.MediaEngineContextTypes.STREAM
         };
-        null != C.desktopSource ? e.desktopSettings = {
-          sourceId: C.desktopSource.id,
+        null != R.desktopSource ? e.desktopSettings = {
+          sourceId: R.desktopSource.id,
           sound: !0
-        } : null != C.cameraSource && (e.cameraSettings = {
-          videoDeviceGuid: C.cameraSource.videoDeviceGuid,
-          audioDeviceGuid: C.cameraSource.audioDeviceGuid
+        } : null != R.cameraSource && (e.cameraSettings = {
+          videoDeviceGuid: R.cameraSource.videoDeviceGuid,
+          audioDeviceGuid: R.cameraSource.audioDeviceGuid
         }), D && (0, E.hqStreamingSetEnabled)(!(0, c.ineligibleQualitySetting)(r, a)), l.default.setGoLiveSource(e)
       }
     } else {
@@ -74,9 +74,9 @@ function p(e, t) {
         contextKey: u === h.AppContext.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT
       })
     }
-  }, [t, v, C, D]);
+  }, [t, v, R, D]);
   if (null == e) return null;
-  let P = p === A.ApplicationStreamPresets.PRESET_DOCUMENTS ? A.ApplicationStreamFPS.FPS_30 : R,
+  let P = p === A.ApplicationStreamPresets.PRESET_DOCUMENTS ? A.ApplicationStreamFPS.FPS_30 : C,
     U = A.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
       let {
         value: t,
@@ -86,7 +86,7 @@ function p(e, t) {
         group: "stream-settings-fps",
         id: "stream-settings-fps-".concat(t),
         label: n,
-        checked: t === R,
+        checked: t === C,
         action: () => y(r, O, t, h.AnalyticsObjectTypes.RESOLUTION)
       }, "stream-settings-fps-".concat(t))
     }),

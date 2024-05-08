@@ -39,7 +39,7 @@ function O() {
   if (i === d.default.locale) return !1;
   i = d.default.locale, p()
 }
-class R extends(r = l.Store) {
+class C extends(r = l.Store) {
   initialize() {
     this.waitFor(d.default, c.default), this.syncWith([d.default], O), i = d.default.locale
   }
@@ -60,12 +60,12 @@ class R extends(r = l.Store) {
     return I.has(e)
   }
 }
-o = "SKUStore", (s = "displayName") in(a = R) ? Object.defineProperty(a, s, {
+o = "SKUStore", (s = "displayName") in(a = C) ? Object.defineProperty(a, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = o, t.default = new R(u.default, {
+}) : a[s] = o, t.default = new C(u.default, {
   STORE_LISTINGS_FETCH_SUCCESS: function(e) {
     let {
       storeListings: t

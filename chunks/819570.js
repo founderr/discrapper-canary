@@ -1,306 +1,306 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   ActivityCount: function() {
     return L
   },
   AuthSpinner: function() {
-    return A
+    return y
   },
   Avatar: function() {
-    return j
+    return I
   },
   Block: function() {
-    return R
-  },
-  Button: function() {
-    return S
-  },
-  ChannelIcon: function() {
     return E
   },
+  Button: function() {
+    return b
+  },
+  ChannelIcon: function() {
+    return A
+  },
   GuildIcon: function() {
-    return I
+    return S
   },
   Image: function() {
     return v
   },
   IncompatibleBrowser: function() {
-    return D
-  },
-  Input: function() {
     return _
   },
-  JoiningAs: function() {
-    return y
-  },
-  SubText: function() {
+  Input: function() {
     return C
   },
+  JoiningAs: function() {
+    return B
+  },
+  SubText: function() {
+    return R
+  },
   SubTitle: function() {
-    return T
+    return g
   },
   Title: function() {
-    return N
+    return j
   }
-}), n("536091");
-var s = n("735250");
-n("470079");
-var a = n("120356"),
-  l = n.n(a),
-  i = n("481060"),
-  r = n("43267"),
-  o = n("285952"),
-  u = n("346656"),
-  c = n("153124"),
-  d = n("838949"),
-  f = n("361207"),
-  m = n("63063"),
-  p = n("792125"),
-  g = n("981631"),
-  x = n("689938"),
-  h = n("252512");
-let b = i.Avatar;
-null == b && (b = () => null);
-let N = e => {
+}), s("536091");
+var a = s("735250");
+s("470079");
+var n = s("120356"),
+  l = s.n(n),
+  r = s("481060"),
+  i = s("43267"),
+  o = s("285952"),
+  c = s("346656"),
+  u = s("153124"),
+  d = s("838949"),
+  m = s("361207"),
+  p = s("63063"),
+  x = s("792125"),
+  f = s("981631"),
+  h = s("689938"),
+  N = s("252512");
+let T = r.Avatar;
+null == T && (T = () => null);
+let j = e => {
     let {
       className: t,
-      id: n,
-      children: a
-    } = e;
-    return (0, s.jsx)(i.Heading, {
-      variant: "heading-xl/semibold",
-      color: "header-primary",
-      className: l()(h.title, t),
-      id: n,
-      children: a
-    })
-  },
-  T = e => {
-    let {
-      className: t,
+      id: s,
       children: n
     } = e;
-    return (0, s.jsx)(i.Text, {
+    return (0, a.jsx)(r.Heading, {
+      variant: "heading-xl/semibold",
+      color: "header-primary",
+      className: l()(N.title, t),
+      id: s,
+      children: n
+    })
+  },
+  g = e => {
+    let {
+      className: t,
+      children: s
+    } = e;
+    return (0, a.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: t,
-      children: n
+      children: s
     })
   },
   v = e => {
     let {
       className: t,
-      src: n
+      src: s
     } = e;
-    return (0, s.jsx)("img", {
+    return (0, a.jsx)("img", {
       alt: "",
-      src: n,
-      className: l()(h.image, t)
+      src: s,
+      className: l()(N.image, t)
+    })
+  },
+  b = e => {
+    let {
+      className: t,
+      ...s
+    } = e, n = s.look === r.Button.Looks.LINK;
+    return (0, a.jsx)(r.Button, {
+      size: n ? r.Button.Sizes.MIN : r.Button.Sizes.LARGE,
+      fullWidth: !n,
+      className: l()(t, {
+        [N.button]: !n,
+        [N.linkButton]: n
+      }),
+      ...s
+    })
+  };
+b.Looks = r.Button.Looks, b.Colors = r.Button.Colors, b.Sizes = r.Button.Sizes;
+let I = e => {
+    let {
+      className: t,
+      src: s,
+      size: n
+    } = e;
+    return (0, a.jsx)(T, {
+      src: s,
+      size: n,
+      className: l()(N.inviteLargeIcon, t),
+      "aria-hidden": !0
     })
   },
   S = e => {
     let {
-      className: t,
-      ...n
-    } = e, a = n.look === i.Button.Looks.LINK;
-    return (0, s.jsx)(i.Button, {
-      size: a ? i.Button.Sizes.MIN : i.Button.Sizes.LARGE,
-      fullWidth: !a,
-      className: l()(t, {
-        [h.button]: !a,
-        [h.linkButton]: a
-      }),
-      ...n
-    })
-  };
-S.Looks = i.Button.Looks, S.Colors = i.Button.Colors, S.Sizes = i.Button.Sizes;
-let j = e => {
-    let {
-      className: t,
-      src: n,
-      size: a
-    } = e;
-    return (0, s.jsx)(b, {
-      src: n,
-      size: a,
-      className: l()(h.inviteLargeIcon, t),
-      "aria-hidden": !0
-    })
-  },
-  I = e => {
-    let {
       guild: t,
-      size: n,
-      animate: a = !1,
+      size: s,
+      animate: n = !1,
       className: l
     } = e;
-    return (0, s.jsx)(u.default, {
+    return (0, a.jsx)(c.default, {
       active: !0,
       guild: t,
-      size: n,
-      animate: a,
+      size: s,
+      animate: n,
       className: l
     })
   };
-I.Sizes = u.default.Sizes;
-let E = e => {
+S.Sizes = c.default.Sizes;
+let A = e => {
   let {
     className: t,
-    channel: n,
-    size: a
+    channel: s,
+    size: n
   } = e;
-  return (0, s.jsx)(b, {
-    src: (0, r.getChannelIconURL)(n),
-    size: a,
-    className: l()(h.inviteIcon, t),
+  return (0, a.jsx)(T, {
+    src: (0, i.getChannelIconURL)(s),
+    size: n,
+    className: l()(N.inviteIcon, t),
     "aria-hidden": !0
   })
 };
-E.Sizes = i.AvatarSizes;
-let _ = e => {
+A.Sizes = r.AvatarSizes;
+let C = e => {
     let {
       label: t,
-      error: n,
-      placeholder: a,
-      value: r,
+      error: s,
+      placeholder: n,
+      value: i,
       className: o,
-      inputClassName: u,
+      inputClassName: c,
       setRef: d,
-      type: f = "text",
-      onChange: m,
-      autoComplete: p,
-      autoFocus: g,
-      maxLength: x,
-      spellCheck: b,
-      name: N,
-      description: T,
+      type: m = "text",
+      onChange: p,
+      autoComplete: x,
+      autoFocus: f,
+      maxLength: h,
+      spellCheck: T,
+      name: j,
+      description: g,
       required: v,
-      onFocus: S,
-      onBlur: j
-    } = e, I = (0, c.useUID)();
-    return (0, s.jsxs)(i.FormItem, {
+      onFocus: b,
+      onBlur: I
+    } = e, S = (0, u.useUID)();
+    return (0, a.jsxs)(r.FormItem, {
       title: t,
-      error: n,
+      error: s,
       className: o,
       required: v,
       tag: "label",
-      htmlFor: I,
-      children: [(0, s.jsx)(i.TextInput, {
-        name: N,
-        type: f,
-        value: r,
+      htmlFor: S,
+      children: [(0, a.jsx)(r.TextInput, {
+        name: j,
+        type: m,
+        value: i,
         inputRef: d,
-        placeholder: a,
-        inputClassName: l()(u, {
-          [h.inputError]: null != n
+        placeholder: n,
+        inputClassName: l()(c, {
+          [N.inputError]: null != s
         }),
         "aria-label": t,
-        onChange: m,
-        autoComplete: p,
-        autoFocus: g,
-        maxLength: x,
-        spellCheck: b,
-        id: I,
-        onFocus: S,
-        onBlur: j
-      }), null != T ? (0, s.jsx)(i.FormText, {
-        type: i.FormText.Types.DESCRIPTION,
-        className: h.description,
-        children: T
+        onChange: p,
+        autoComplete: x,
+        autoFocus: f,
+        maxLength: h,
+        spellCheck: T,
+        id: S,
+        onFocus: b,
+        onBlur: I
+      }), null != g ? (0, a.jsx)(r.FormText, {
+        type: r.FormText.Types.DESCRIPTION,
+        className: N.description,
+        children: g
       }) : null]
+    })
+  },
+  E = e => {
+    let {
+      className: t,
+      children: s
+    } = e;
+    return (0, a.jsx)("div", {
+      className: l()(N.block, t),
+      children: s
     })
   },
   R = e => {
     let {
       className: t,
-      children: n
+      children: s,
+      isProminent: n
     } = e;
-    return (0, s.jsx)("div", {
-      className: l()(h.block, t),
-      children: n
+    return (0, a.jsx)(r.Text, {
+      variant: n ? "text-sm/normal" : "text-xs/normal",
+      className: l()(N.subText, t),
+      children: s
     })
   },
-  C = e => {
-    let {
-      className: t,
-      children: n,
-      isProminent: a
-    } = e;
-    return (0, s.jsx)(i.Text, {
-      variant: a ? "text-sm/normal" : "text-xs/normal",
-      className: l()(h.subText, t),
-      children: n
-    })
-  },
-  A = e => {
+  y = e => {
     let {
       className: t
     } = e;
-    return (0, s.jsx)(o.default, {
+    return (0, a.jsx)(o.default, {
       direction: o.default.Direction.VERTICAL,
       align: o.default.Align.CENTER,
       className: t,
-      children: (0, s.jsx)(d.default, {
-        className: h.spinnerVideo
+      children: (0, a.jsx)(d.default, {
+        className: N.spinnerVideo
       })
     })
   },
   L = e => {
     let t, {
-      online: n,
-      total: a,
-      className: r,
-      flat: u,
-      textClassName: c
+      online: s,
+      total: n,
+      className: i,
+      flat: c,
+      textClassName: u
     } = e;
-    return null == a ? null : (null != n && n > 0 && (t = (0, s.jsxs)("div", {
-      className: l()(h.pill, h.pillOnline, u && h.pillFlat),
-      children: [(0, s.jsx)("i", {
-        className: h.pillIconOnline
-      }), (0, s.jsx)(i.Text, {
+    return null == n ? null : (null != s && s > 0 && (t = (0, a.jsxs)("div", {
+      className: l()(N.pill, N.pillOnline, c && N.pillFlat),
+      children: [(0, a.jsx)("i", {
+        className: N.pillIconOnline
+      }), (0, a.jsx)(r.Text, {
         tag: "span",
-        className: l()(h.pillMessage, c),
+        className: l()(N.pillMessage, u),
         variant: "text-sm/normal",
-        children: x.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
-          membersOnline: n
+        children: h.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+          membersOnline: s
         })
       })]
-    })), (0, s.jsxs)(o.default, {
+    })), (0, a.jsxs)(o.default, {
       justify: o.default.Justify.CENTER,
-      className: r,
-      children: [t, (0, s.jsxs)("div", {
-        className: l()(h.pill, u && h.pillFlat),
-        children: [(0, s.jsx)("i", {
-          className: h.pillIconTotal
-        }), (0, s.jsx)(i.Text, {
+      className: i,
+      children: [t, (0, a.jsxs)("div", {
+        className: l()(N.pill, c && N.pillFlat),
+        children: [(0, a.jsx)("i", {
+          className: N.pillIconTotal
+        }), (0, a.jsx)(r.Text, {
           tag: "span",
-          className: l()(h.pillMessage, c),
+          className: l()(N.pillMessage, u),
           variant: "text-sm/normal",
-          children: x.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-            count: a
+          children: h.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+            count: n
           })
         })]
       })]
     }))
   },
-  y = e => {
+  B = e => {
     let {
       user: t
     } = e;
-    return null == t ? null : (0, s.jsxs)("div", {
-      className: h.joiningAs,
-      children: [(0, s.jsx)(i.Text, {
+    return null == t ? null : (0, a.jsxs)("div", {
+      className: N.joiningAs,
+      children: [(0, a.jsx)(r.Text, {
         tag: "span",
         variant: "text-md/normal",
         color: "header-secondary",
-        children: x.default.Messages.MULTI_ACCOUNT_SERVER_INVITE_JOINING_AS
-      }), (0, s.jsx)(j, {
-        className: h.joiningAsAvatar,
+        children: h.default.Messages.MULTI_ACCOUNT_SERVER_INVITE_JOINING_AS
+      }), (0, a.jsx)(I, {
+        className: N.joiningAsAvatar,
         src: t.getAvatarURL(void 0, 24),
-        size: i.AvatarSizes.SIZE_24,
+        size: r.AvatarSizes.SIZE_24,
         "aria-label": t.username
-      }), (0, s.jsx)(i.Text, {
-        className: h.joiningAsUsername,
+      }), (0, a.jsx)(r.Text, {
+        className: N.joiningAsUsername,
         tag: "span",
         variant: "text-md/semibold",
         color: "header-primary",
@@ -308,21 +308,21 @@ let _ = e => {
       })]
     })
   },
-  D = e => {
+  _ = e => {
     let {
       className: t
     } = e;
-    return (0, s.jsxs)(R, {
+    return (0, a.jsxs)(E, {
       className: t,
-      children: [(0, s.jsx)(S, {
-        onClick: () => window.open((0, f.getCurrentPlatformDownloadURL)()),
-        children: x.default.Messages.NUF_DOWNLOAD_APP_BUTTON_PLATFORM.format({
-          platform: (0, f.getPlatformReadableName)()
+      children: [(0, a.jsx)(b, {
+        onClick: () => window.open((0, m.getCurrentPlatformDownloadURL)()),
+        children: h.default.Messages.NUF_DOWNLOAD_APP_BUTTON_PLATFORM.format({
+          platform: (0, m.getPlatformReadableName)()
         })
-      }), (0, s.jsx)(C, {
-        className: h.downloadButtonSubtext,
-        children: x.default.Messages.INCOMPATIBLE_BROWSER.format({
-          supportedBrowserURL: m.default.getArticleURL(g.HelpdeskArticles.SUPPORTED_BROWSERS)
+      }), (0, a.jsx)(R, {
+        className: N.downloadButtonSubtext,
+        children: h.default.Messages.INCOMPATIBLE_BROWSER.format({
+          supportedBrowserURL: p.default.getArticleURL(f.HelpdeskArticles.SUPPORTED_BROWSERS)
         })
       })]
     })
@@ -330,24 +330,24 @@ let _ = e => {
 t.default = e => {
   let {
     className: t,
-    contentClassName: n,
-    tag: a = "section",
-    onSubmit: i,
-    children: r,
+    contentClassName: s,
+    tag: n = "section",
+    onSubmit: r,
+    children: i,
     expanded: o = !1,
-    theme: u = g.ThemeTypes.DARK,
-    style: c
+    theme: c = f.ThemeTypes.DARK,
+    style: u
   } = e;
-  return (0, s.jsxs)(a, {
-    "data-theme": u,
-    onSubmit: i,
-    style: c,
-    className: l()(o ? h.authBoxExpanded : h.authBox, (0, p.getThemeClass)(u), t),
-    children: [(0, s.jsx)("div", {
-      className: h.discordLogo
-    }), (0, s.jsx)("div", {
-      className: l()(h.centeringWrapper, n),
-      children: r
+  return (0, a.jsxs)(n, {
+    "data-theme": c,
+    onSubmit: r,
+    style: u,
+    className: l()(o ? N.authBoxExpanded : N.authBox, (0, x.getThemeClass)(c), t),
+    children: [(0, a.jsx)("div", {
+      className: N.discordLogo
+    }), (0, a.jsx)("div", {
+      className: l()(N.centeringWrapper, s),
+      children: i
     })]
   })
 }

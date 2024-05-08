@@ -28,8 +28,8 @@ var i = n("735250"),
   N = n("497505"),
   p = n("918701"),
   O = n("114732"),
-  R = n("675654"),
-  C = n("689938"),
+  C = n("675654"),
+  R = n("689938"),
   g = n("694636");
 
 function L() {
@@ -47,7 +47,7 @@ function v(e) {
     reward: _,
     decoration: c,
     onUseNow: E
-  } = e, T = r.useRef(null), [f, S] = r.useState(null), A = r.useRef(new a.Environment), C = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), v = (0, p.getHeroAssetUrl)(s), [M, y] = r.useState("loading");
+  } = e, T = r.useRef(null), [f, S] = r.useState(null), A = r.useRef(new a.Environment), R = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), v = (0, p.getHeroAssetUrl)(s), [M, y] = r.useState("loading");
   r.useEffect(() => {
     var e;
     (null === (e = s.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && (0, m.claimQuestReward)(s.id, N.QuestRewardCodePlatforms.CROSS_PLATFORM, u).then(() => y("claimed")).catch(() => y("error"))
@@ -87,11 +87,11 @@ function v(e) {
           }
         })
       })
-    }), !C && "claimed" === M && (0, i.jsx)(I.default, {
+    }), !R && "claimed" === M && (0, i.jsx)(I.default, {
       confettiTarget: T.current,
       confettiCanvas: f,
-      sprites: R.COMMON_CONFETTI_SPRITES,
-      colors: R.COMMON_CONFETTI_COLORS
+      sprites: C.COMMON_CONFETTI_SPRITES,
+      colors: C.COMMON_CONFETTI_COLORS
     })]
   })
 }
@@ -147,18 +147,18 @@ function D(e) {
           variant: "heading-lg/bold",
           color: "always-white",
           className: g.heading,
-          children: C.default.Messages.QUESTS_REWARD_AVATAR_DECORATION_HEADER
+          children: R.default.Messages.QUESTS_REWARD_AVATAR_DECORATION_HEADER
         }), (0, i.jsx)(l.Text, {
           variant: "text-sm/normal",
           color: "always-white",
           className: g.text,
-          children: C.default.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({
+          children: R.default.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({
             decorationName: r
           })
         }), (0, i.jsx)(l.Button, {
           submitting: u,
           onClick: _,
-          children: C.default.Messages.COLLECTIBLES_USE_NOW
+          children: R.default.Messages.COLLECTIBLES_USE_NOW
         })]
       })
     })]

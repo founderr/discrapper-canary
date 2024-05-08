@@ -1,32 +1,32 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return l
   }
 });
-var a = n("735250");
+var i = n("735250");
 n("470079");
-var l = n("442837"),
-  s = n("481060"),
-  i = n("846027"),
-  r = n("131951");
+var r = n("442837"),
+  a = n("481060"),
+  s = n("846027"),
+  o = n("131951");
 
-function o() {
-  let e = (0, l.useStateFromStores)([r.default], () => Object.values(r.default.getVideoDevices())),
-    t = (0, l.useStateFromStores)([r.default], () => r.default.getVideoDeviceId());
+function l() {
+  let e = (0, r.useStateFromStores)([o.default], () => Object.values(o.default.getVideoDevices())),
+    t = (0, r.useStateFromStores)([o.default], () => o.default.getVideoDeviceId());
   return e.map(e => {
     let {
       id: n,
-      disabled: l,
-      name: r
+      disabled: r,
+      name: o
     } = e;
-    return (0, a.jsx)(s.MenuRadioItem, {
+    return (0, i.jsx)(a.MenuRadioItem, {
       group: "video-devices",
       id: "video-device-".concat(n),
-      disabled: l,
-      label: r,
+      disabled: r,
+      label: o,
       checked: n === t,
-      action: () => i.default.setVideoDevice(n)
+      action: () => s.default.setVideoDevice(n)
     }, "video-device-".concat(n))
   })
 }

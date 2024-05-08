@@ -33,14 +33,14 @@ function O() {
   I.clear(), T.clear(), f = {}, S = {}, h = {}, A = {}, m = {}, N = !1
 }
 
-function R(e) {
+function C(e) {
   let {
     userId: t
   } = e;
   T.add(t)
 }
 
-function C(e) {
+function R(e) {
   let {
     userId: t
   } = e;
@@ -75,7 +75,7 @@ function D(e) {
 }
 
 function M(e) {
-  var t, n, i, r, s, o, l, d, _, E, T, N, p, O, R, C, L;
+  var t, n, i, r, s, o, l, d, _, E, T, N, p, O, C, R, L;
   if (I.delete(e.user.id), null != e.mutual_guilds) {
     let t = {};
     e.mutual_guilds.forEach(e => {
@@ -134,8 +134,8 @@ function M(e) {
       banner: e.guild_member_profile.banner,
       accentColor: e.guild_member_profile.accent_color,
       themeColors: null === (O = e.guild_member_profile) || void 0 === O ? void 0 : O.theme_colors,
-      popoutAnimationParticleType: null === (R = e.guild_member_profile) || void 0 === R ? void 0 : R.popout_animation_particle_type,
-      profileEffectId: null === (L = e.guild_member_profile) || void 0 === L ? void 0 : null === (C = L.profile_effect) || void 0 === C ? void 0 : C.id,
+      popoutAnimationParticleType: null === (C = e.guild_member_profile) || void 0 === C ? void 0 : C.popout_animation_particle_type,
+      profileEffectId: null === (L = e.guild_member_profile) || void 0 === L ? void 0 : null === (R = L.profile_effect) || void 0 === R ? void 0 : R.id,
       bio: e.guild_member_profile.bio,
       pronouns: e.guild_member_profile.pronouns,
       badges: e.guild_badges
@@ -301,9 +301,9 @@ class V extends _.default {
       USER_PROFILE_UPDATE_SUCCESS: b,
       USER_PROFILE_UPDATE_FAILURE: G,
       USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: w,
-      MUTUAL_FRIENDS_FETCH_START: R,
+      MUTUAL_FRIENDS_FETCH_START: C,
       MUTUAL_FRIENDS_FETCH_SUCCESS: L,
-      MUTUAL_FRIENDS_FETCH_FAILURE: C,
+      MUTUAL_FRIENDS_FETCH_FAILURE: R,
       GUILD_JOIN: v,
       GUILD_DELETE: v,
       GUILD_MEMBER_ADD: D,

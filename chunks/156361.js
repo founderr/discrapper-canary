@@ -27,8 +27,8 @@ var i, r = n("735250"),
   N = n("430824"),
   p = n("699516"),
   O = n("594174"),
-  R = n("768581"),
-  C = n("51144"),
+  C = n("768581"),
+  R = n("51144"),
   g = n("508688"),
   L = n("286908"),
   v = n("377087"),
@@ -225,12 +225,12 @@ U(B, "Generic", class e extends k {
         })
       }), (0, r.jsx)(g.AutocompleteRowContentPrimary, {
         children: (0, r.jsx)(g.AutocompleteRowHeading, {
-          children: null != t ? t : C.default.getName(e)
+          children: null != t ? t : R.default.getName(e)
         })
       }), (0, r.jsxs)(g.AutocompleteRowContentSecondary, {
         children: [(0, r.jsx)("span", {
           className: P.__invalid_descriptionUsername,
-          children: C.default.getUserTag(e, {
+          children: R.default.getUserTag(e, {
             mode: "username",
             identifiable: i ? "never" : "always"
           })
@@ -340,7 +340,7 @@ U(B, "Generic", class e extends k {
     } = this.props, i = null != e.id || "" !== e.url ? (0, r.jsx)("img", {
       alt: "",
       className: P.emojiImage,
-      src: null != e.id ? R.default.getEmojiURL({
+      src: null != e.id ? C.default.getEmojiURL({
         id: e.id,
         animated: e.animated,
         size: M.EMOJI_URL_BASE_SIZE

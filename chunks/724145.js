@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("696202"),
   p = n("626135"),
   O = n("74538"),
-  R = n("238302"),
-  C = n("514361"),
+  C = n("238302"),
+  R = n("514361"),
   g = n("572397"),
   L = n("705262"),
   v = n("981631"),
@@ -56,7 +56,7 @@ let U = () => (0, i.jsx)("div", {
       children: [(0, i.jsx)(d.Clickable, {
         className: P.closeCircleButton,
         onClick: () => {
-          null != t && t(D.ContentDismissActionType.DISMISS), n(v.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, R.closeEditor)()
+          null != t && t(D.ContentDismissActionType.DISMISS), n(v.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, C.closeEditor)()
         },
         children: (0, i.jsx)(N.default, {
           className: P.closeCircle
@@ -74,7 +74,7 @@ let U = () => (0, i.jsx)("div", {
       markAsDismissed: s
     } = e, {
       analyticsLocations: o
-    } = (0, f.default)(T.default.CLIENT_THEMES_EDITOR), [c, E] = (0, l.useStateFromStoresArray)([m.default, C.default], () => [C.default.gradientPreset, O.default.isPremium(m.default.getCurrentUser())]), I = (0, S.usePremiumTrialOffer)(), A = (0, O.formatTrialCtaIntervalDuration)({
+    } = (0, f.default)(T.default.CLIENT_THEMES_EDITOR), [c, E] = (0, l.useStateFromStoresArray)([m.default, R.default], () => [R.default.gradientPreset, O.default.isPremium(m.default.getCurrentUser())]), I = (0, S.usePremiumTrialOffer)(), A = (0, O.formatTrialCtaIntervalDuration)({
       intervalType: null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.interval,
       intervalCount: null == I ? void 0 : null === (n = I.subscription_trial) || void 0 === n ? void 0 : n.interval_count
     });
@@ -100,9 +100,9 @@ let U = () => (0, i.jsx)("div", {
     } = e, {
       isPreview: n,
       isCoachmark: a
-    } = (0, l.useStateFromStoresObject)([C.default], () => ({
-      isPreview: C.default.isPreview,
-      isCoachmark: C.default.isCoachmark
+    } = (0, l.useStateFromStoresObject)([R.default], () => ({
+      isPreview: R.default.isPreview,
+      isCoachmark: R.default.isCoachmark
     })), [s, u] = r.useState(!1), _ = (0, g.useTrackClientThemePreviewEvent)(), E = (0, o.match)({
       isPreview: n,
       isCoachmark: a,
@@ -124,7 +124,7 @@ let U = () => (0, i.jsx)("div", {
       }), (0, i.jsx)(d.Button, {
         className: P.footerButton,
         onClick: () => {
-          null != t && t(D.ContentDismissActionType.DISMISS), _(v.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, R.closeEditor)(), !a && c.default.open()
+          null != t && t(D.ContentDismissActionType.DISMISS), _(v.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, C.closeEditor)(), !a && c.default.open()
         },
         color: d.Button.Colors.PRIMARY,
         size: d.Button.Sizes.MEDIUM,
@@ -143,11 +143,11 @@ function k(e) {
     isCoachmark: o,
     isEditorOpen: u,
     shouldEditorAnimate: _
-  } = (0, l.useStateFromStoresObject)([C.default, I.default], () => ({
-    isPreview: C.default.isPreview,
-    isCoachmark: C.default.isCoachmark,
-    isEditorOpen: C.default.isEditorOpen,
-    shouldEditorAnimate: C.default.isCoachmark && !I.default.useReducedMotion
+  } = (0, l.useStateFromStoresObject)([R.default, I.default], () => ({
+    isPreview: R.default.isPreview,
+    isCoachmark: R.default.isCoachmark,
+    isEditorOpen: R.default.isEditorOpen,
+    shouldEditorAnimate: R.default.isCoachmark && !I.default.useReducedMotion
   })), c = (0, g.useTrackClientThemePreviewEvent)();
   r.useEffect(() => c(v.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [c]), r.useEffect(() => {
     a && p.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {

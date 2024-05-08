@@ -124,7 +124,7 @@ function O(e) {
   }
 }
 
-function R(e) {
+function C(e) {
   let {
     children: t,
     size: n,
@@ -140,8 +140,8 @@ function R(e) {
     ariaHidden: N,
     status: p,
     isMobile: O = !1,
-    isTyping: R = !1,
-    avatarDecoration: C,
+    isTyping: C = !1,
+    avatarDecoration: R,
     typingOffset: g,
     specs: L
   } = e, v = {
@@ -210,7 +210,7 @@ function R(e) {
         return c.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_120
     }
     return null
-  }(p, n, O, R), P = null != C && (0, i.jsx)("svg", {
+  }(p, n, O, C), P = null != R && (0, i.jsx)("svg", {
     width: M + g,
     height: M,
     viewBox: "0 0 ".concat(M + g, " ").concat(M),
@@ -226,7 +226,7 @@ function R(e) {
         className: h.avatarStack,
         children: (0, i.jsx)("img", {
           className: h.avatar,
-          src: C,
+          src: R,
           alt: " ",
           "aria-hidden": !0
         })
@@ -259,7 +259,7 @@ function R(e) {
   })
 }
 
-function C(e) {
+function R(e) {
   let {
     src: t,
     isSpeaking: n,
@@ -294,7 +294,7 @@ function g(e) {
     "aria-label": g,
     imageClassName: L
   } = e, v = n !== T.StatusTypes.UNKNOWN ? n : null, D = (0, I.getAvatarSpecs)(r), M = null != v ? Math.ceil((D.status * I.TYPING_WIDTH_RATIO - D.status) / 2) : 0, y = D.size + M, P = (0, d.useStatusFillColor)(v, a);
-  return (0, i.jsx)(R, {
+  return (0, i.jsx)(C, {
     ...e,
     ariaLabel: g,
     ariaHidden: O,
@@ -376,7 +376,7 @@ function g(e) {
           }
           throw Error("getMaskId(): Unsupported type, size: ".concat(t, ", status: ").concat(e, ", isMobile: ").concat(n ? "true" : "false"))
         }(v, r, o, l), ")"),
-        children: (0, i.jsx)(C, {
+        children: (0, i.jsx)(R, {
           src: t,
           isSpeaking: S,
           className: L
@@ -453,7 +453,7 @@ function L(e) {
     from: w,
     to: k
   }), W = (0, I.getAvatarSize)(S), K = (0, I.getAvatarSpecs)(S), z = K.status * I.TYPING_WIDTH_RATIO, Z = K.status * I.MOBILE_HEIGHT_RATIO, X = null != g ? (K.status * I.TYPING_WIDTH_RATIO - K.status) / 2 : 0, Q = K.size - K.status - X - K.offset, q = K.size - Z - K.offset, J = K.size + Math.ceil(X);
-  return (0, i.jsx)(R, {
+  return (0, i.jsx)(C, {
     ...e,
     ariaLabel: y,
     ariaHidden: M,
@@ -490,7 +490,7 @@ function L(e) {
         width: W,
         height: W,
         mask: "url(#".concat(b, ")"),
-        children: (0, i.jsx)(C, {
+        children: (0, i.jsx)(R, {
           src: N,
           isSpeaking: f,
           className: P

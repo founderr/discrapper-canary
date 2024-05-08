@@ -56,18 +56,18 @@ var a, l, s = n("735250"),
   T = n("70956"),
   I = n("719247"),
   A = n("22211"),
-  v = n("561308"),
-  N = n("371991"),
+  N = n("561308"),
+  v = n("371991"),
   x = n("689938"),
   M = n("509058");
 (a = l || (l = {}))[a.CARD = 0] = "CARD", a[a.POPOUT = 1] = "POPOUT";
 let R = i.createContext({});
 
-function L() {
+function y() {
   return i.useContext(R)
 }
 
-function y(e) {
+function L(e) {
   let {
     Icon: t,
     text: n,
@@ -77,7 +77,7 @@ function y(e) {
   } = e, {
     defaultTextColor: r,
     defaultIconColor: o
-  } = L();
+  } = y();
   return (0, s.jsx)(_.Tooltip, {
     text: l,
     shouldShow: i,
@@ -105,8 +105,8 @@ function O(e) {
     channel: n
   } = (0, A.default)(t), {
     location: a
-  } = L();
-  return null == n || 1 === a ? null : (0, s.jsx)(y, {
+  } = y();
+  return null == n || 1 === a ? null : (0, s.jsx)(L, {
     Icon: S.VoiceNormalIcon,
     text: n.name
   })
@@ -119,14 +119,14 @@ function j(e) {
     defaultTextColor: n,
     defaultIconColor: a,
     location: l
-  } = L(), i = 0 === l, r = (0, v.isEntryActive)(t), o = i && r ? _.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
+  } = y(), i = 0 === l, r = (0, N.isEntryActive)(t), o = i && r ? _.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
   return (0, s.jsxs)("div", {
     className: M.badgeContainer,
     children: [(0, s.jsx)(c.GameControllerIcon, {
       width: 12,
       height: 12,
       color: o
-    }), (0, s.jsx)(N.default, {
+    }), (0, s.jsx)(v.default, {
       entry: t,
       textColor: u
     })]
@@ -141,7 +141,7 @@ function P(e) {
     defaultTextColor: a,
     defaultIconColor: l,
     location: i
-  } = L(), r = 0 === i, o = (0, u.useStateFromStores)([I.default], () => I.default.getMatchingActivity(n));
+  } = y(), r = 0 === i, o = (0, u.useStateFromStores)([I.default], () => I.default.getMatchingActivity(n));
   if ((null == o ? void 0 : o.timestamps) == null) return null;
   let d = r ? _.tokens.colors.STATUS_POSITIVE : l,
     c = null === (t = o.timestamps) || void 0 === t ? void 0 : t.start;
@@ -151,7 +151,7 @@ function P(e) {
       width: 12,
       height: 12,
       color: d
-    }), (0, s.jsx)(N.ActiveTimestamp, {
+    }), (0, s.jsx)(v.ActiveTimestamp, {
       entry: null != c ? {
         start: c
       } : n,
@@ -165,8 +165,8 @@ function D(e) {
     entry: t
   } = e, {
     location: n
-  } = L(), a = 0 === n ? _.tokens.colors.STATUS_POSITIVE : void 0;
-  return (0, v.isEntryNew)(t) ? (0, s.jsx)(y, {
+  } = y(), a = 0 === n ? _.tokens.colors.STATUS_POSITIVE : void 0;
+  return (0, N.isEntryNew)(t) ? (0, s.jsx)(L, {
     Icon: f.NewUserLargeIcon,
     text: x.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
     iconColor: a
@@ -178,15 +178,15 @@ function b(e) {
     entry: t
   } = e, {
     location: n
-  } = L();
-  if (!(0, v.isEntryMarathon)(t)) return null;
-  let a = (0, v.isEntryActive)(t),
+  } = y();
+  if (!(0, N.isEntryMarathon)(t)) return null;
+  let a = (0, N.isEntryActive)(t),
     l = 0 === n,
-    i = l || a ? (0, v.getMarathonName)(t) : (0, v.getFullMarathonDescription)(t);
-  return (0, s.jsx)(y, {
+    i = l || a ? (0, N.getMarathonName)(t) : (0, N.getFullMarathonDescription)(t);
+  return (0, s.jsx)(L, {
     Icon: p.TimerIcon,
     text: i,
-    tooltipText: (0, v.getMarathonDurationStr)(t),
+    tooltipText: (0, N.getMarathonDurationStr)(t),
     showTooltip: l && !a
   })
 }
@@ -196,10 +196,10 @@ function U(e) {
     entry: t
   } = e, {
     location: n
-  } = L(), a = (0, v.getResurrectedEntryLastPlayTime)(t);
+  } = y(), a = (0, N.getResurrectedEntryLastPlayTime)(t);
   if (null == a) return null;
-  let l = (0, v.getFullResurrectedBadgeText)(a);
-  return (0, s.jsx)(y, {
+  let l = (0, N.getFullResurrectedBadgeText)(a);
+  return (0, s.jsx)(L, {
     Icon: m.RetryIcon,
     showTooltip: 0 === n,
     tooltipText: l,
@@ -210,8 +210,8 @@ function U(e) {
 function F(e) {
   let {
     entry: t
-  } = e, n = (0, v.getStreakCount)(t);
-  return null == n || n < 2 ? null : (0, s.jsx)(y, {
+  } = e, n = (0, N.getStreakCount)(t);
+  return null == n || n < 2 ? null : (0, s.jsx)(L, {
     Icon: d.FlashIcon,
     text: x.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
       days: n
@@ -224,11 +224,11 @@ function w(e) {
     entry: t
   } = e, {
     location: n
-  } = L(), a = (0, v.getEntryDuration)(t);
+  } = y(), a = (0, N.getEntryDuration)(t);
   if (null == a) return null;
   let l = 1 === n,
     i = l ? x.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : x.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
-  return (0, s.jsx)(y, {
+  return (0, s.jsx)(L, {
     Icon: C.TrophyIcon,
     text: (0, s.jsxs)(s.Fragment, {
       children: [x.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, l ? " — " : ": ", i.format({
@@ -244,14 +244,14 @@ function k(e) {
   } = e, {
     defaultTextColor: n,
     defaultIconColor: a
-  } = L();
+  } = y();
   return (0, s.jsxs)("div", {
     className: M.badgeContainer,
     children: [(0, s.jsx)(g.TvIcon, {
       width: 12,
       height: 12,
       color: a
-    }), (0, s.jsx)(N.default, {
+    }), (0, s.jsx)(v.default, {
       entry: t,
       textColor: n
     })]
@@ -266,7 +266,7 @@ function H(e) {
     seasonNum: a[1],
     episodeNum: a[2]
   }) : null;
-  return (0, s.jsx)(y, {
+  return (0, s.jsx)(L, {
     Icon: E.TopicsIcon,
     text: l
   })

@@ -21,7 +21,7 @@ let A = "lastFrecencySavedTime",
   N = 1 * I.default.Millis.DAY + Math.floor(1 * I.default.Millis.HOUR * Math.random()),
   p = null,
   O = Date.now();
-class R extends o.default {
+class C extends o.default {
   _initialize() {
     T.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
       hasChanges: () => !1,
@@ -63,8 +63,8 @@ class R extends o.default {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      POST_CONNECTION_OPEN: C,
-      CONNECTION_RESUMED: C,
+      POST_CONNECTION_OPEN: R,
+      CONNECTION_RESUMED: R,
       CONNECTION_CLOSED: g
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
@@ -75,7 +75,7 @@ class R extends o.default {
   }
 }
 
-function C() {
+function R() {
   var e;
   O = null !== (e = s.Storage.get(A)) && void 0 !== e ? e : Date.now(), v(!1)
 }
@@ -94,4 +94,4 @@ function v(e) {
   let t = Date.now() - O;
   p = setTimeout(L, Math.max(m, N - t))
 }
-t.default = new R
+t.default = new C

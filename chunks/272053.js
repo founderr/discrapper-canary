@@ -28,8 +28,8 @@ let S = 1 * c.default.Millis.MINUTE,
   N = null,
   p = 0,
   O = null,
-  R = new Set,
-  C = {};
+  C = new Set,
+  R = {};
 
 function g(e, t, n) {
   return o.HTTP.get({
@@ -42,7 +42,7 @@ function g(e, t, n) {
   })
 }
 async function L(e, t) {
-  let n = C[e];
+  let n = R[e];
   if (null != n) return n;
   let {
     body: {
@@ -51,7 +51,7 @@ async function L(e, t) {
   } = await g("/games", {
     id: e
   }, t), r = i[0].name;
-  return C[e] = r, r
+  return R[e] = r, r
 }
 let v = new class e {
   start() {
@@ -102,7 +102,7 @@ let v = new class e {
   }
   async _checkYouTube(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    if (O = null, e.revoked || R.has(e.id)) return null;
+    if (O = null, e.revoked || C.has(e.id)) return null;
     try {
       var n;
       let {
@@ -139,7 +139,7 @@ let v = new class e {
       }
     } catch (n) {
       if (401 === n.status && null == t) return u.default.refreshAccessToken(e.type, e.id).then(t => this._checkYouTube(e, t)).catch(() => null);
-      return 403 === n.status && R.add(e.id), null
+      return 403 === n.status && C.add(e.id), null
     }
   }
   _check() {

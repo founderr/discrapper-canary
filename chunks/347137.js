@@ -17,7 +17,7 @@ var a = n("735250"),
   m = n("731455"),
   S = n("689938"),
   p = n("614563");
-let g = e => {
+let I = e => {
   switch (e) {
     case m.CategoryId.Activity:
       return m.CategoryIcons.Activity;
@@ -40,9 +40,9 @@ t.default = function() {
   } = (0, l.useStateFromStoresObject)([d.default], () => ({
     currentCategoryId: d.default.getCurrentCategoryId(),
     isViewingSearchResults: d.default.getMostRecentQuery().length > 0
-  })), n = (0, l.useStateFromStores)([h.default], () => h.default.getClanDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), I = null == n ? void 0 : n.map(e => ({
+  })), n = (0, l.useStateFromStores)([h.default], () => h.default.getClanDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), g = null == n ? void 0 : n.map(e => ({
     ...e,
-    icon: g(e.categoryId)
+    icon: I(e.categoryId)
   })), T = e => {
     (0, r.selectCategory)(e, !0), u.default.closeSidebar(), t && (0, r.clearSearch)()
   };
@@ -68,7 +68,7 @@ t.default = function() {
       selectedClassName: p.selectedCategoryItem,
       innerClassName: p.itemInner
     }, "clan-discovery-home"), (0, a.jsx)(_.default, {
-      categories: I,
+      categories: g,
       handleCategorySelect: T,
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t

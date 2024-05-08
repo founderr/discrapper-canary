@@ -21,13 +21,13 @@ var a = n("735250"),
   T = n("375954"),
   I = n("496675"),
   A = n("306680"),
-  v = n("62817"),
-  N = n("594174"),
+  N = n("62817"),
+  v = n("594174"),
   x = n("68588"),
   M = n("459273"),
   R = n("255269"),
-  L = n("47481"),
-  y = n("977391"),
+  y = n("47481"),
+  L = n("977391"),
   O = n("73274"),
   j = n("419388"),
   P = n("406534"),
@@ -48,39 +48,39 @@ let F = l.memo(function(e) {
     channelStream: _,
     uploads: T,
     hasUnreads: A,
-    editingMessageId: v,
-    fontSize: N,
+    editingMessageId: N,
+    fontSize: v,
     keyboardModeEnabled: x,
     filterAfterTimestamp: R,
-    showingQuarantineBanner: L,
+    showingQuarantineBanner: y,
     hideSummaries: F = !1
-  } = e, [w, k] = l.useState(!1), H = l.useMemo(() => S ? (0, y.generateMessageSpecs)({
+  } = e, [w, k] = l.useState(!1), H = l.useMemo(() => S ? (0, L.generateMessageSpecs)({
     compact: !0,
     messageGroups: 30,
     groupRange: 4,
     attachments: 8,
-    fontSize: N,
+    fontSize: v,
     groupSpacing: c
-  }) : (0, y.generateMessageSpecs)({
+  }) : (0, L.generateMessageSpecs)({
     compact: !1,
     messageGroups: 26,
     groupRange: 4,
     attachments: 8,
-    fontSize: N,
+    fontSize: v,
     groupSpacing: c
-  }), [S, N, c]), B = (0, j.default)({
+  }), [S, v, c]), B = (0, j.default)({
     messages: E,
     channel: m,
     compact: S,
     hasUnreads: A,
-    focusId: v,
+    focusId: N,
     placeholderHeight: H.totalHeight,
     canLoadMore: null == R,
     handleScrollToBottom: l.useCallback(() => k(!0), [k]),
     handleScrollFromBottom: l.useCallback(() => k(!1), [k])
   }), G = (0, O.default)({
     scrollerRef: B.ref,
-    isEditing: null != v,
+    isEditing: null != N,
     keyboardModeEnabled: x,
     hasMoreAfter: E.hasMoreAfter
   });
@@ -103,7 +103,7 @@ let F = l.memo(function(e) {
       scrollManager: B,
       specs: H,
       filterAfterTimestamp: null != R ? R : V,
-      showingQuarantineBanner: L,
+      showingQuarantineBanner: y,
       hideSummaries: F,
       isAtBottom: w,
       jumpToPresent: () => {
@@ -181,7 +181,7 @@ let F = l.memo(function(e) {
             children: b.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
           }), W, (0, a.jsx)("div", {
             className: i()({
-              [U.scrollerSpacer]: !L,
+              [U.scrollerSpacer]: !y,
               [U.empty]: 0 === E.length && !E.loadingMore,
               [U.emptyForum]: 1 === E.length && !E.loadingMore && m.isForumPost() && (null === (t = E.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(m))
             })
@@ -219,7 +219,7 @@ t.default = l.memo(function(e) {
       canManageMessages: a
     }
   }(t), {
-    messageGroupSpacing: y,
+    messageGroupSpacing: L,
     fontSize: O,
     messageDisplayCompact: j,
     renderSpoilers: P,
@@ -269,7 +269,7 @@ t.default = l.memo(function(e) {
       }, {
         autoTrackExposure: !1
       }),
-      r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(D.UserFlags.SPAMMER)) && void 0 !== n && n,
+      r = null !== (n = null === (t = v.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(D.UserFlags.SPAMMER)) && void 0 !== n && n,
       u = (0, c.useChannelSummariesExperiment)(e),
       d = (0, h.default)("use_topic_dividers_in_chat"),
       f = (0, o.useStateFromStoresArray)([E.default], () => {
@@ -277,7 +277,7 @@ t.default = l.memo(function(e) {
         return u && d && null !== (t = E.default.summaries(e.id)) && void 0 !== t ? t : []
       }, [u, e.id, d]),
       p = (0, o.useStateFromStores)([E.default], () => u ? E.default.selectedSummary(e.id) : null, [u, e.id]),
-      C = l.useMemo(() => (0, L.default)({
+      C = l.useMemo(() => (0, y.default)({
         channel: e,
         messages: a,
         oldestUnreadMessageId: s,
@@ -299,14 +299,14 @@ t.default = l.memo(function(e) {
     value: (0, R.default)(P, d),
     children: (0, a.jsx)(F, {
       ...u,
-      messageGroupSpacing: y,
+      messageGroupSpacing: L,
       showNewMessagesBar: !0,
       channel: t,
       messageDisplayCompact: !r && (i || j),
       messages: U,
       channelStream: w,
       permissionVersion: p,
-      uploads: (0, o.useStateFromStores)([v.default], () => v.default.getFiles(t.id), [t]),
+      uploads: (0, o.useStateFromStores)([N.default], () => N.default.getFiles(t.id), [t]),
       unreadCount: (0, o.useStateFromStores)([A.default], () => A.default.getUnreadCount(t.id), [t]),
       hasUnreads: null != k,
       canChat: M,

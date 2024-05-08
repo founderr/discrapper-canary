@@ -61,13 +61,13 @@ function O(e) {
   return !1
 }
 
-function R(e) {
+function C(e) {
   let {
     guildId: t
   } = e;
   return !!f.has(t) && N(t)
 }
-class C extends(i = l.default.Store) {
+class R extends(i = l.default.Store) {
   initialize() {
     this.waitFor(_.default)
   }
@@ -99,12 +99,12 @@ class C extends(i = l.default.Store) {
     return this.buildRoles(e), null !== (t = A.get(e)) && void 0 !== t && t
   }
 }
-s = "SubscriptionRoleStore", (a = "displayName") in(r = C) ? Object.defineProperty(r, a, {
+s = "SubscriptionRoleStore", (a = "displayName") in(r = R) ? Object.defineProperty(r, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new C(u.default, {
+}) : r[a] = s, t.default = new R(u.default, {
   CONNECTION_OPEN: p,
   LOGOUT: p,
   GUILD_CREATE: O,
@@ -119,9 +119,9 @@ s = "SubscriptionRoleStore", (a = "displayName") in(r = C) ? Object.defineProper
     n.delete(t), m = n
   },
   GUILD_UPDATE: O,
-  GUILD_ROLE_CREATE: R,
-  GUILD_ROLE_UPDATE: R,
-  GUILD_ROLE_DELETE: R,
+  GUILD_ROLE_CREATE: C,
+  GUILD_ROLE_UPDATE: C,
+  GUILD_ROLE_DELETE: C,
   GUILD_MEMBER_UPDATE: function(e) {
     let {
       guildId: t,

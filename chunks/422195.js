@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("926491"),
   p = n("373228"),
   O = n("378233"),
-  R = n("419922"),
-  C = n("981631"),
+  C = n("419922"),
+  R = n("981631"),
   g = n("957825"),
   L = n("689938"),
   v = n("681455");
@@ -101,7 +101,7 @@ let D = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
         }))
       } else if (B) {
         let e = N.default.getStickerPack(G.id);
-        null != e && (V = e.name, x = (0, i.jsx)(R.default, {
+        null != e && (V = e.name, x = (0, i.jsx)(C.default, {
           disableAnimation: !b || S,
           size: M,
           sticker: (0, O.getStickerPackPreviewSticker)(e)
@@ -124,7 +124,7 @@ let D = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
                 [v.firstPartyCategorySelected]: !S && b && B
               }),
               onClick: () => {
-                G.type === p.StickerCategoryTypes.PACK && h.default.track(C.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                G.type === p.StickerCategoryTypes.PACK && h.default.track(R.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                   location: null == E ? void 0 : E.location,
                   tab: g.ExpressionPickerViewType.STICKER,
                   sticker_pack_id: G.id,
@@ -191,7 +191,7 @@ t.default = e => {
     categoryListRef: a,
     firstStandardStickerCategoryOffsetTop: T,
     setShouldRenderShortcut: u
-  }), R = r.useCallback(e => {
+  }), C = r.useCallback(e => {
     var t;
     e(I), null === (t = a.current) || void 0 === t || t.scrollTo(T)
   }, [I, T]);
@@ -210,7 +210,7 @@ t.default = e => {
       className: s()(v.standardStickerShortcut, {
         [v.invisibleShortcut]: !o
       }),
-      onClick: () => R(e),
+      onClick: () => C(e),
       children: (0, i.jsx)(S.default, {
         height: 24,
         width: 24

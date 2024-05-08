@@ -40,8 +40,8 @@ var i = n("392711"),
   N = n("316137"),
   p = n("654123"),
   O = n("660020"),
-  R = n("980084"),
-  C = n("24688"),
+  C = n("980084"),
+  R = n("24688"),
   g = n("200997"),
   L = n("633302"),
   v = n("134432"),
@@ -56,7 +56,7 @@ let b = {
   },
   G = {
     BASIC: [a],
-    PREMIUM: [s, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, R, C, g]
+    PREMIUM: [s, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, C, R, g]
   },
   w = {
     [P.VoiceChannelEffectAnimationType.BASIC]: G.BASIC,

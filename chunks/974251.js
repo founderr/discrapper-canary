@@ -21,13 +21,13 @@ var a = n("735250"),
   T = n("536442"),
   I = n("79390"),
   A = n("628566"),
-  v = n("665906"),
-  N = n("695346"),
+  N = n("665906"),
+  v = n("695346"),
   x = n("433355"),
   M = n("819640"),
   R = n("375954"),
-  L = n("496675"),
-  y = n("885110"),
+  y = n("496675"),
+  L = n("885110"),
   O = n("151785"),
   j = n("627553"),
   P = n("38761"),
@@ -54,7 +54,7 @@ t.default = l.memo(function(e) {
     } = e,
     J = (0, h.useAppContext)(),
     $ = l.useRef(null),
-    ee = (0, r.useStateFromStores)([y.default], () => y.default.getActivities()),
+    ee = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
     et = (0, r.useStateFromStores)([g.default], () => g.default.getSettings().clipsEnabled),
     en = (0, r.useStateFromStores)([g.default], () => g.default.getLastClipsSession()),
     ea = (0, r.useStateFromStoresArray)([g.default], () => g.default.getNewClipIds()),
@@ -73,7 +73,7 @@ t.default = l.memo(function(e) {
     [ed, ec] = l.useState(null),
     ef = (0, C.useEnableClips)() && (et || eu),
     eh = K.isPrivate(),
-    em = (0, r.useStateFromStores)([L.default], () => eh || L.default.can(H.Permissions.ATTACH_FILES, K) && L.default.can(H.Permissions.SEND_MESSAGES, K)),
+    em = (0, r.useStateFromStores)([y.default], () => eh || y.default.can(H.Permissions.ATTACH_FILES, K) && y.default.can(H.Permissions.SEND_MESSAGES, K)),
     ep = (0, f.default)(en);
   (null == ep ? void 0 : ep.newClipIds.length) !== (null == en ? void 0 : en.newClipIds.length) && (null !== (t = null == en ? void 0 : en.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ed && ei && el && !er && !es && !eo && ec("recentClips");
   let eE = (e, t, n) => {
@@ -106,13 +106,13 @@ t.default = l.memo(function(e) {
       D.ComponentDispatch.unsubscribe(H.ComponentActions.UPLOAD_FILE, e)
     }
   });
-  let eS = (0, v.useCanStartPublicThread)(K),
-    e_ = (0, v.useCanStartPrivateThread)(K),
-    eT = !N.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
-    eI = (0, r.useStateFromStores)([L.default, A.default], () => (0, E.canUseApplicationCommands)(L.default, A.default, Q, K)),
+  let eS = (0, N.useCanStartPublicThread)(K),
+    e_ = (0, N.useCanStartPrivateThread)(K),
+    eT = !v.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
+    eI = (0, r.useStateFromStores)([y.default, A.default], () => (0, E.canUseApplicationCommands)(y.default, A.default, Q, K)),
     eA = (0, I.useCanPostPollsInChannel)(null != K ? K : void 0),
-    ev = (0, d.useRedesignIconContext)().enabled,
-    eN = (0, m.useShowActivitiesInOmniButtonMenu)(K.id, "ChannelAttachButton"),
+    eN = (0, d.useRedesignIconContext)().enabled,
+    ev = (0, m.useShowActivitiesInOmniButtonMenu)(K.id, "ChannelAttachButton"),
     ex = null !== (s = null == ea ? void 0 : ea.length) && void 0 !== s ? s : 0,
     eM = (0, k.default)({
       canAttachFiles: em,
@@ -124,16 +124,16 @@ t.default = l.memo(function(e) {
       activities: ee,
       newClipsCount: ex,
       canPostPolls: eA,
-      canLaunchActivities: eN,
+      canLaunchActivities: ev,
       appContext: J
     });
   if (0 === eM.length) return null;
   let eR = ee.some(e => (0, p.default)(e, H.ActivityFlags.SYNC)),
-    eL = ee.some(e => (0, p.default)(e, H.ActivityFlags.JOIN) && !(0, p.default)(e, H.ActivityFlags.EMBEDDED)) || eR;
-  Y = ev ? (0, a.jsx)(u.CirclePlusIcon, {
+    ey = ee.some(e => (0, p.default)(e, H.ActivityFlags.JOIN) && !(0, p.default)(e, H.ActivityFlags.EMBEDDED)) || eR;
+  Y = eN ? (0, a.jsx)(u.CirclePlusIcon, {
     className: W.__invalid_attachButtonIcon,
     colorClass: W.attachButtonPlus
-  }) : eL ? (0, a.jsx)(P.default, {
+  }) : ey ? (0, a.jsx)(P.default, {
     className: W.__invalid_attachButtonIcon,
     foreground: W.attachButtonPlay,
     background: W.attachButtonPlus,
@@ -151,7 +151,7 @@ t.default = l.memo(function(e) {
     width: 24,
     height: 24
   });
-  let ey = (0, a.jsx)(d.Popout, {
+  let eL = (0, a.jsx)(d.Popout, {
     shouldShow: null != ed,
     animation: d.Popout.Animation.NONE,
     align: "recentClips" === ed ? "center" : "left",
@@ -226,7 +226,7 @@ t.default = l.memo(function(e) {
         channel: K,
         isOmniMenuOpen: "attachMenu" === ed,
         openOmniMenu: () => ec("attachMenu"),
-        children: ey
+        children: eL
       })
     })]
   })

@@ -34,8 +34,8 @@ function m(e, t) {
 let N = new c.SecondaryIndexMap(e => [S(e.application_id), ...e.subscription_listings_ids.map(f)], e => e.id),
   p = new c.SecondaryIndexMap(e => [S(e.application_id), h(e.subscription_plans[0].id)], e => e.id),
   O = new c.SecondaryIndexMap(e => [A(e.applicationId, e.isValid(null, T.default), e.guildId), m(e.isValid(null, T.default), e.guildId)], e => e.id),
-  R = {},
-  C = {};
+  C = {},
+  R = {};
 
 function g(e) {
   let t = N.values(S(e));
@@ -51,7 +51,7 @@ function L(e) {
 class v extends(r = _.Store) {
   getSubscriptionGroupListingsForApplicationFetchState(e) {
     var t;
-    return null !== (t = R[e]) && void 0 !== t ? t : 0
+    return null !== (t = C[e]) && void 0 !== t ? t : 0
   }
   getSubscriptionGroupListing(e) {
     return N.get(e)
@@ -71,7 +71,7 @@ class v extends(r = _.Store) {
   }
   getEntitlementsForGuildFetchState(e) {
     var t;
-    return null !== (t = C[e]) && void 0 !== t ? t : 0
+    return null !== (t = R[e]) && void 0 !== t ? t : 0
   }
   getSubscriptionListingForPlan(e) {
     let t = p.values(h(e));
@@ -93,13 +93,13 @@ l = "ApplicationSubscriptionStore", (o = "displayName") in(s = v) ? Object.defin
   writable: !0
 }) : s[o] = l, t.default = new v(E.default, {
   LOGOUT: function() {
-    N.clear(), p.clear(), O.clear(), R = {}, C = {}
+    N.clear(), p.clear(), O.clear(), C = {}, R = {}
   },
   APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: function(e) {
     let {
       applicationId: t
     } = e;
-    R[t] = 1;
+    C[t] = 1;
     let n = g(t);
     if (null != n)
       for (let e of n.subscription_listings_ids) p.delete(e)
@@ -109,26 +109,26 @@ l = "ApplicationSubscriptionStore", (o = "displayName") in(s = v) ? Object.defin
       applicationId: t,
       groupListing: n
     } = e;
-    R[t] = 2, L(n)
+    C[t] = 2, L(n)
   },
   APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function(e) {
     let {
       applicationId: t
     } = e;
-    R[t] = 2
+    C[t] = 2
   },
   APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS(e) {
     let {
       guildId: t
     } = e;
-    C[t] = 1
+    R[t] = 1
   },
   APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS(e) {
     let {
       guildId: t,
       entitlements: n
     } = e;
-    C[t] = 2, n.forEach(e => {
+    R[t] = 2, n.forEach(e => {
       let t = I.default.createFromServer(e);
       O.set(t.id, t)
     })
@@ -137,7 +137,7 @@ l = "ApplicationSubscriptionStore", (o = "displayName") in(s = v) ? Object.defin
     let {
       guildId: t
     } = e;
-    C[t] = 0
+    R[t] = 0
   },
   APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function(e) {
     let {

@@ -123,8 +123,8 @@ let m = a.deserialize(0),
   N = a.combine(...r().values(A.Permissions)),
   p = a.combine(A.Permissions.CREATE_INSTANT_INVITE, A.Permissions.CHANGE_NICKNAME, A.Permissions.VIEW_CHANNEL, A.Permissions.SEND_MESSAGES, A.Permissions.EMBED_LINKS, A.Permissions.ATTACH_FILES, A.Permissions.READ_MESSAGE_HISTORY, A.Permissions.MENTION_EVERYONE, A.Permissions.USE_EXTERNAL_EMOJIS, A.Permissions.USE_EXTERNAL_STICKERS, A.Permissions.ADD_REACTIONS, A.Permissions.CREATE_PUBLIC_THREADS, A.Permissions.CREATE_PRIVATE_THREADS, A.Permissions.SEND_MESSAGES_IN_THREADS, A.Permissions.SEND_POLLS, A.Permissions.CONNECT, A.Permissions.SPEAK, A.Permissions.USE_VAD, A.Permissions.STREAM, A.Permissions.USE_EMBEDDED_ACTIVITIES, A.Permissions.USE_SOUNDBOARD, A.Permissions.REQUEST_TO_SPEAK, A.Permissions.USE_APPLICATION_COMMANDS, A.Permissions.CREATE_GUILD_EXPRESSIONS, A.Permissions.CREATE_EVENTS),
   O = a.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY),
-  R = a.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.SEND_MESSAGES, A.Permissions.CONNECT, A.Permissions.SPEAK, A.Permissions.STREAM, A.Permissions.USE_EMBEDDED_ACTIVITIES, A.Permissions.USE_EXTERNAL_EMOJIS, A.Permissions.USE_EXTERNAL_SOUNDS, A.Permissions.USE_EXTERNAL_STICKERS, A.Permissions.USE_SOUNDBOARD, A.Permissions.USE_VAD),
-  C = a.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY),
+  C = a.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.SEND_MESSAGES, A.Permissions.CONNECT, A.Permissions.SPEAK, A.Permissions.STREAM, A.Permissions.USE_EMBEDDED_ACTIVITIES, A.Permissions.USE_EXTERNAL_EMOJIS, A.Permissions.USE_EXTERNAL_SOUNDS, A.Permissions.USE_EXTERNAL_STICKERS, A.Permissions.USE_SOUNDBOARD, A.Permissions.USE_VAD),
+  R = a.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY),
   g = a.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY, A.Permissions.CHANGE_NICKNAME),
   L = a.combine(A.Permissions.MANAGE_GUILD, A.Permissions.MANAGE_ROLES, A.Permissions.ADMINISTRATOR, A.Permissions.BAN_MEMBERS, A.Permissions.MANAGE_NICKNAMES, A.Permissions.CREATE_GUILD_EXPRESSIONS, A.Permissions.MANAGE_GUILD_EXPRESSIONS, A.Permissions.MANAGE_WEBHOOKS, A.Permissions.VIEW_AUDIT_LOG);
 
@@ -150,7 +150,7 @@ function D(e, t, n, i) {
     let s = i[t.userId];
     null != s && (n = a.remove(n, s.deny), n = a.add(n, s.allow));
     let u = a.has(n, A.Permissions.ADMINISTRATOR);
-    (0, o.hasAutomodQuarantinedProfile)(t) && !u && (n = a.filter(n, g)), (0, l.isMemberCommunicationDisabled)(t) && !u && (n = a.filter(n, C))
+    (0, o.hasAutomodQuarantinedProfile)(t) && !u && (n = a.filter(n, g)), (0, l.isMemberCommunicationDisabled)(t) && !u && (n = a.filter(n, R))
   }
   return n
 }
@@ -177,7 +177,7 @@ function M(e) {
       let t = s[n.roles[e]];
       void 0 !== t && (c = a.add(c, t.permissions))
     }
-  return c = a.has(c, A.Permissions.ADMINISTRATOR) ? N : D(i.id, n, c, r), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (c = a.filter(c, u)), T.default.isCurrentUserGuest(i.id) && (c = a.filter(c, R)), v(c, i, t, o)
+  return c = a.has(c, A.Permissions.ADMINISTRATOR) ? N : D(i.id, n, c, r), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (c = a.filter(c, u)), T.default.isCurrentUserGuest(i.id) && (c = a.filter(c, C)), v(c, i, t, o)
 }
 
 function y(e) {

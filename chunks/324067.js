@@ -53,7 +53,7 @@ function O() {
   S = {}, null != f && p(f)
 }
 
-function R(e) {
+function C(e) {
   let {
     guild: {
       id: t
@@ -62,7 +62,7 @@ function R(e) {
   S[t] = void 0, f === t && p(t)
 }
 
-function C(e) {
+function R(e) {
   let {
     channel: {
       guild_id: t
@@ -115,8 +115,8 @@ s = "GuildCategoryStore", (a = "displayName") in(r = D) ? Object.defineProperty(
   CONNECTION_OPEN: O,
   OVERLAY_INITIALIZE: O,
   CACHE_LOADED_LAZY: O,
-  GUILD_CREATE: R,
-  GUILD_UPDATE: R,
+  GUILD_CREATE: C,
+  GUILD_UPDATE: C,
   GUILD_DELETE: function(e) {
     let {
       guild: {
@@ -125,8 +125,8 @@ s = "GuildCategoryStore", (a = "displayName") in(r = D) ? Object.defineProperty(
     } = e;
     delete S[t]
   },
-  CHANNEL_CREATE: C,
-  CHANNEL_DELETE: C,
+  CHANNEL_CREATE: R,
+  CHANNEL_DELETE: R,
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t

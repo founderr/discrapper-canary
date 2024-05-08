@@ -25,13 +25,13 @@ var a = n("735250"),
   T = n("390322"),
   I = n("616286"),
   A = n("961048"),
-  v = n("179424"),
-  N = n("786915"),
+  N = n("179424"),
+  v = n("786915"),
   x = n("975146"),
   M = n("991617"),
   R = n("606304"),
-  L = n("502568"),
-  y = n("805009"),
+  y = n("502568"),
+  L = n("805009"),
   O = n("368666"),
   j = n("358221"),
   P = n("887012"),
@@ -54,7 +54,7 @@ function H(e) {
       text: w.default.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({
         username: e.user.username
       }),
-      children: l => (0, a.jsx)(y.default, {
+      children: l => (0, a.jsx)(L.default, {
         ...l,
         className: i()(k.speaker, {
           [k.last]: t === s.length - 1
@@ -78,7 +78,7 @@ function B(e) {
     exitFullScreen: o
   } = e, g = n.id, {
     voiceParticipantsHidden: R,
-    selectedParticipant: y,
+    selectedParticipant: L,
     userParticipantCount: w
   } = (0, d.useStateFromStoresObject)([j.default], () => ({
     selectedParticipant: j.default.getSelectedParticipant(g),
@@ -93,9 +93,9 @@ function B(e) {
     allowIdle: K
   } = (0, _.usePreventIdle)("popup"), Z = [];
   if (B) {
-    let e = (null == y ? void 0 : y.type) === U.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(y.id) : void 0,
-      t = (null == y ? void 0 : y.type) === U.ParticipantTypes.ACTIVITY ? y.id : void 0;
-    Z.push((0, a.jsx)(N.default, {
+    let e = (null == L ? void 0 : L.type) === U.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(L.id) : void 0,
+      t = (null == L ? void 0 : L.type) === U.ParticipantTypes.ACTIVITY ? L.id : void 0;
+    Z.push((0, a.jsx)(v.default, {
       className: k.button,
       channel: n,
       applicationId: t,
@@ -110,13 +110,13 @@ function B(e) {
   }, "current-speaker")), Z.push((0, a.jsx)(h.default, {
     className: k.button,
     channelId: g
-  }, "clips-enabled-indicator")), (null == y ? void 0 : y.type) === U.ParticipantTypes.STREAM && (Z.push((0, a.jsx)(S.default, {
+  }, "clips-enabled-indicator")), (null == L ? void 0 : L.type) === U.ParticipantTypes.STREAM && (Z.push((0, a.jsx)(S.default, {
     className: k.button,
-    participant: y
+    participant: L
   }, "warning")), Z.push((0, a.jsx)(p.default, {
     size: O.default.Sizes.LARGE,
     className: k.button,
-    participant: y,
+    participant: L,
     showQuality: !0,
     premiumIndicator: Y
   }, "live-indicator"))), R && Z.push((0, a.jsx)(c.Popout, {
@@ -138,7 +138,7 @@ function B(e) {
         className: k.button
       })
     }
-  }, "call-members-popout")), i && Z.push(null != y ? (0, a.jsx)(v.default, {
+  }, "call-members-popout")), i && Z.push(null != L ? (0, a.jsx)(N.default, {
     className: k.button,
     channelId: g
   }, "deselect-participant") : (0, a.jsx)(M.default, {
@@ -177,7 +177,7 @@ function B(e) {
         className: k.lastButton
       })
     }
-  }, "more-options-popout")), !r && (Z.push((0, a.jsx)(L.default.Divider, {
+  }, "more-options-popout")), !r && (Z.push((0, a.jsx)(y.default.Divider, {
     className: k.divider
   }, "divider")), Z.push((0, a.jsx)(I.ChatButton, {
     channelId: n.id,

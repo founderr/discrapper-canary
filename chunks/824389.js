@@ -1,5 +1,5 @@
 "use strict";
-r.r(e), r.d(e, {
+u.r(e), u.d(e, {
   deleteGuildProductListing: function() {
     return c
   },
@@ -16,20 +16,20 @@ r.r(e), r.d(e, {
     return o
   }
 });
-var u = r("544891"),
-  n = r("881052"),
-  i = r("73346"),
-  l = r("981631");
-let o = async (t, e, r) => {
+var r = u("544891"),
+  n = u("881052"),
+  i = u("73346"),
+  l = u("981631");
+let o = async (t, e, u) => {
   let {
     priceTier: i,
     imageName: o,
     createNewRole: c,
     unlinkRole: a,
     ...d
-  } = r;
+  } = u;
   try {
-    return (await u.HTTP.patch({
+    return (await r.HTTP.patch({
       url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e),
       body: {
         ...d,
@@ -44,7 +44,7 @@ let o = async (t, e, r) => {
   }
 }, c = async (t, e) => {
   try {
-    await u.HTTP.del({
+    await r.HTTP.del({
       url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e)
     })
   } catch (t) {
@@ -69,12 +69,12 @@ let o = async (t, e, r) => {
 }, s = async t => {
   let {
     guildId: e,
-    productId: r,
+    productId: u,
     attachmentId: i
   } = t;
   try {
-    return (await u.HTTP.post({
-      url: l.Endpoints.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(e, r, i)
+    return (await r.HTTP.post({
+      url: l.Endpoints.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(e, u, i)
     })).body
   } catch (t) {
     throw new n.APIError(t)

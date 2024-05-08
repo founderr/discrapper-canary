@@ -20,8 +20,8 @@ var l = n("924826"),
   m = n("502087"),
   S = n("328882"),
   p = n("647265"),
-  g = n("650032"),
-  I = n("104494"),
+  I = n("650032"),
+  g = n("104494"),
   T = n("639119"),
   A = n("655525"),
   N = n("314684"),
@@ -52,7 +52,7 @@ let w = e => {
     Y = (0, C.hasPremiumSubscriptionToDisplay)(H, V),
     W = (0, l.useListItem)("nitro"),
     K = (0, T.usePremiumTrialOffer)(),
-    z = (0, I.usePremiumDiscountOffer)(),
+    z = (0, g.usePremiumDiscountOffer)(),
     q = (0, r.useStateFromStores)([f.default], () => f.default.isLocalizedPromoEnabled) && null == K,
     Q = (0, R.useIsEligibleForBogoPromotion)(),
     Z = (0, M.default)(),
@@ -64,7 +64,7 @@ let w = e => {
     en = s || null != K || null != z || Q || J || Z || null != X || Y,
     {
       enabled: ea
-    } = g.ReferralProgramRecipient.useExperiment({
+    } = I.ReferralProgramRecipient.useExperiment({
       location: k
     }, {
       autoTrackExposure: !1

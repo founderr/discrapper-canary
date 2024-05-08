@@ -1,35 +1,35 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return R
   }
 });
-var l = n("735250");
-n("470079");
-var i = n("442837"),
-  a = n("481060"),
-  r = n("239091"),
-  s = n("749210"),
-  u = n("305325"),
-  d = n("281956"),
-  o = n("889161"),
-  c = n("703656"),
-  f = n("922482"),
-  v = n("984933"),
-  E = n("430824"),
-  h = n("496675"),
-  m = n("626135"),
-  g = n("572004"),
-  _ = n("482241"),
-  I = n("951539"),
-  S = n("894017"),
-  N = n("274311"),
-  x = n("854698"),
-  T = n("118998"),
-  p = n("139712"),
-  C = n("765305"),
-  j = n("981631"),
-  L = n("689938");
+var n = l("735250");
+l("470079");
+var i = l("442837"),
+  a = l("481060"),
+  r = l("239091"),
+  s = l("749210"),
+  u = l("305325"),
+  d = l("281956"),
+  o = l("889161"),
+  c = l("703656"),
+  f = l("922482"),
+  v = l("984933"),
+  E = l("430824"),
+  h = l("496675"),
+  m = l("626135"),
+  _ = l("572004"),
+  g = l("482241"),
+  I = l("951539"),
+  S = l("894017"),
+  x = l("274311"),
+  N = l("854698"),
+  T = l("118998"),
+  j = l("139712"),
+  C = l("765305"),
+  p = l("981631"),
+  L = l("689938");
 
 function R(e) {
   let {
@@ -42,35 +42,35 @@ function R(e) {
   } = e, {
     scheduled_start_time: b,
     id: G,
-    entity_type: U,
-    guild_id: k
+    entity_type: k,
+    guild_id: P
   } = y, {
-    canManageGuildEvent: P
-  } = (0, o.useManageResourcePermissions)(null != R ? R : t), V = P(y), F = (0, I.default)(y), O = (0, N.useIsChannelPublic)(null == R ? void 0 : R.id, y.id), {
+    canManageGuildEvent: U
+  } = (0, o.useManageResourcePermissions)(null != R ? R : t), V = U(y), F = (0, I.default)(y), O = (0, x.useIsChannelPublic)(null == R ? void 0 : R.id, y.id), {
     withinStartWindow: w
-  } = (0, x.getEventTimeData)(b), B = (0, i.useStateFromStores)([h.default], () => (null == R ? !void 0 : !R.isGuildVocal()) || h.default.can(j.Permissions.CONNECT, R), [R]), H = (0, d.useShowMemberVerificationGate)(k), z = (0, S.default)(A, G);
+  } = (0, N.getEventTimeData)(b), B = (0, i.useStateFromStores)([h.default], () => (null == R ? !void 0 : !R.isGuildVocal()) || h.default.can(p.Permissions.CONNECT, R), [R]), H = (0, d.useShowMemberVerificationGate)(P), z = (0, S.default)(A, G);
 
   function X(e) {
-    e.stopPropagation(), (0, p.default)(G, A, k)
+    e.stopPropagation(), (0, j.default)(G, A, P)
   }
   async function Y(e) {
-    e.stopPropagation(), await s.default.joinGuild(k), E.default.addConditionalChangeListener(() => null == E.default.getGuild(k) || (!M && X(e), K(e), !1))
+    e.stopPropagation(), await s.default.joinGuild(P), E.default.addConditionalChangeListener(() => null == E.default.getGuild(P) || (!M && X(e), K(e), !1))
   }
 
   function K(e) {
     e.stopPropagation();
-    let t = v.default.getDefaultChannel(k);
-    (0, a.closeAllModals)(), (0, c.transitionToGuild)(k, null == t ? void 0 : t.id)
+    let t = v.default.getDefaultChannel(P);
+    (0, a.closeAllModals)(), (0, c.transitionToGuild)(P, null == t ? void 0 : t.id)
   }
   return {
     onDeleteClick: V ? function(e) {
-      e.stopPropagation(), V && !M && (0, a.openModal)(e => (0, l.jsx)(a.ConfirmModal, {
+      e.stopPropagation(), V && !M && (0, a.openModal)(e => (0, n.jsx)(a.ConfirmModal, {
         ...e,
         header: L.default.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
         confirmText: L.default.Messages.DELETE,
         cancelText: L.default.Messages.CANCEL,
-        onConfirm: () => _.default.deleteGuildEvent(G, k),
-        children: (0, l.jsx)(a.Text, {
+        onConfirm: () => g.default.deleteGuildEvent(G, P),
+        children: (0, n.jsx)(a.Text, {
           variant: "text-md/normal",
           children: L.default.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY
         })
@@ -80,29 +80,29 @@ function R(e) {
       e.stopPropagation(), null != t && (0, r.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("54668"), n.e("62364")]).then(n.bind(n, "215269"));
-        return n => (0, l.jsx)(e, {
+        } = await Promise.all([l.e("54668"), l.e("62364")]).then(l.bind(l, "215269"));
+        return l => (0, n.jsx)(e, {
           guildEventId: G,
           recurrenceId: A,
           channel: R,
           guild: t,
-          ...n
+          ...l
         })
       })
     },
     onJoinClick: B || H ? function(e) {
       if (e.stopPropagation(), H) {
-        null == D || D(), (0, u.openMemberVerificationModal)(k);
+        null == D || D(), (0, u.openMemberVerificationModal)(P);
         return
-      }(null == R ? void 0 : R.isGuildStageVoice()) ? ((0, f.connectAndOpen)(R), null == D || D()) : (null == R ? void 0 : R.isGuildVoice()) && (_.default.joinVoiceEvent(R.guild_id, R.id), null == D || D())
+      }(null == R ? void 0 : R.isGuildStageVoice()) ? ((0, f.connectAndOpen)(R), null == D || D()) : (null == R ? void 0 : R.isGuildVoice()) && (g.default.joinVoiceEvent(R.guild_id, R.id), null == D || D())
     } : void 0,
     onRsvpClick: X,
     onStartClick: V && w && !(null == z ? void 0 : z.is_canceled) ? function(e) {
       e.stopPropagation(), (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("84722"), n.e("11992")]).then(n.bind(n, "296864"));
-        return t => (0, l.jsx)(e, {
+        } = await Promise.all([l.e("99387"), l.e("84722"), l.e("11992")]).then(l.bind(l, "296864"));
+        return t => (0, n.jsx)(e, {
           ...t,
           event: y,
           onSuccess: D
@@ -113,40 +113,40 @@ function R(e) {
       if (e.stopPropagation(), null != t) {
         if (!F || !O) {
           let e = (0, T.SHARE_EVENT_DETAILS_LINK)({
-            guildId: k,
+            guildId: P,
             guildEventId: G
           });
-          (0, g.copy)(e), m.default.track(j.AnalyticEvents.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
-            guild_id: k,
+          (0, _.copy)(e), m.default.track(p.AnalyticEvents.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
+            guild_id: P,
             guild_scheduled_event_id: G
           });
           return
         }(0, a.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("43643"), n.e("7654"), n.e("96626")]).then(n.bind(n, "560114"));
-          return n => (0, l.jsx)(e, {
-            ...n,
+          } = await Promise.all([l.e("49237"), l.e("99387"), l.e("43643"), l.e("7654"), l.e("96626")]).then(l.bind(l, "560114"));
+          return l => (0, n.jsx)(e, {
+            ...l,
             guild: t,
             channel: R,
             guildScheduledEvent: y,
-            source: j.InstantInviteSources.GUILD_EVENTS
+            source: p.InstantInviteSources.GUILD_EVENTS
           })
         })
       }
     },
-    onEndClick: V && U === C.GuildScheduledEventEntityTypes.EXTERNAL && M ? function(e) {
+    onEndClick: V && k === C.GuildScheduledEventEntityTypes.EXTERNAL && M ? function(e) {
       if (e.stopPropagation(), !V) return;
       let t = () => {
-        _.default.endEvent(G, k), (0, a.closeAllModals)()
+        g.default.endEvent(G, P), (0, a.closeAllModals)()
       };
-      (0, a.openModal)(e => (0, l.jsx)(a.ConfirmModal, {
+      (0, a.openModal)(e => (0, n.jsx)(a.ConfirmModal, {
         ...e,
         header: L.default.Messages.END_EVENT,
         confirmText: L.default.Messages.GUILD_EVENT_END_PROMPT_CONFIRM,
         cancelText: L.default.Messages.CANCEL,
         onConfirm: t,
-        children: (0, l.jsx)(a.Text, {
+        children: (0, n.jsx)(a.Text, {
           variant: "text-md/normal",
           children: L.default.Messages.GUILD_EVENT_EXTERNAL_END_PROMPT_TITLE
         })

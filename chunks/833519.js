@@ -28,13 +28,13 @@ var a = n("735250"),
   T = n("592125"),
   I = n("131951"),
   A = n("451478"),
-  v = n("40300"),
-  N = n("167580"),
+  N = n("40300"),
+  v = n("167580"),
   x = n("368666"),
   M = n("685203"),
   R = n("112560"),
-  L = n("442168"),
-  y = n("822296"),
+  y = n("442168"),
+  L = n("822296"),
   O = n("916771"),
   j = n("792517"),
   P = n("979425"),
@@ -95,7 +95,7 @@ function V(e) {
     selected: n,
     isSelfStream: z.id === V
   });
-  if ((null == q ? void 0 : q.state) === U.ApplicationStreamStates.ENDED) return (0, a.jsx)(y.default, {
+  if ((null == q ? void 0 : q.state) === U.ApplicationStreamStates.ENDED) return (0, a.jsx)(L.default, {
     selected: n,
     stream: q,
     width: D
@@ -118,7 +118,7 @@ function V(e) {
       streamerId: z.id,
       hasScreenMessage: null != ee,
       stream: Y
-    }) : null, (0, a.jsx)(v.default, {
+    }) : null, (0, a.jsx)(N.default, {
       onResize: s,
       wrapperClassName: H.videoWrapper,
       className: H.content,
@@ -131,7 +131,7 @@ function V(e) {
     }, K), null != ee ? (0, a.jsx)(g.default, {
       size: (0, R.getSizeForWidth)(D),
       ...ee
-    }) : null, (0, a.jsx)(L.default, {
+    }) : null, (0, a.jsx)(y.default, {
       stream: Y,
       inPopout: x
     })]
@@ -163,7 +163,7 @@ function V(e) {
           })
         },
         isSmall: et,
-        children: (0, a.jsx)(N.default, {
+        children: (0, a.jsx)(v.default, {
           className: H.addStreamIcon
         })
       }) : null]

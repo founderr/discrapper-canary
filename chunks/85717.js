@@ -19,7 +19,7 @@ var s = n("493683"),
   N = n("158631"),
   p = n("981631");
 let O = [];
-class R extends u.default {
+class C extends u.default {
   handleRunningGamesChange() {
     let e = d.default.getVisibleGame();
     if (null == e) return;
@@ -124,4 +124,4 @@ class R extends u.default {
     }) : t[n] = i
   }
 }
-t.default = new R
+t.default = new C

@@ -63,29 +63,29 @@ async function O(e) {
   throw Error("could not find launchable")
 }
 
-function R(e, t, n) {
+function C(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
   if (e()) {
     t();
     return
   }
   setTimeout(() => {
-    250 * i <= 12e4 ? R(e, t, n, i + 1) : n()
+    250 * i <= 12e4 ? C(e, t, n, i + 1) : n()
   }, 250)
 }
 
-function C(e) {
+function R(e) {
   return f.info("launch", e), new Promise((t, n) => {
     null == E.default.safeParseWithQuery(e.launchTarget) ? n(Error("Failed to parse launch target. ".concat(e.launchTarget))) : (window.open(e.launchTarget), t([]))
   })
 }
 t.default = {
-  waitSubscribed: (e, t) => new Promise((n, i) => R(() => s.default.isSubscribed(e, t), n, i)),
+  waitSubscribed: (e, t) => new Promise((n, i) => C(() => s.default.isSubscribed(e, t), n, i)),
   waitConnected(e) {
-    return new Promise(R.bind(this, () => l.default.isConnected(e)))
+    return new Promise(C.bind(this, () => l.default.isConnected(e)))
   },
   isLaunchable: e => O(N(e)).then(e => null != e).catch(() => !1),
-  launch: e => O(N(e)).then(C),
+  launch: e => O(N(e)).then(R),
   launchDispatchApplication(e, t, n, r, s) {
     let {
       launchOptions: l,
@@ -139,7 +139,7 @@ t.default = {
     if (l.default.isConnected(e)) return Promise.resolve();
     return O({
       id: e
-    }).then(C)
+    }).then(R)
   },
   isProtocolRegistered: e => m().then(t => {
     var n, i;

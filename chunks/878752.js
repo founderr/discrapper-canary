@@ -34,8 +34,8 @@ function A(e) {
   } = e, A = (0, i.useStateFromStores)([h.default], () => {
     let e = h.default.getCurrentUser();
     return s()(null != e, "CenterControlTray: currentUser cannot be undefined"), e
-  }), v = (0, o.default)(), {
-    isSharedCanvasEnabled: N
+  }), N = (0, o.default)(), {
+    isSharedCanvasEnabled: v
   } = d.default.useExperiment({
     guildId: null == t ? void 0 : t.guild_id,
     location: "b7309a_1"
@@ -46,9 +46,9 @@ function A(e) {
   }, {
     autoTrackExposure: !1
   }), M = (0, r.default)(f.default);
-  if (null == t || null != v) return null;
+  if (null == t || null != N) return null;
   let R = (0, c.default)(t),
-    L = m.can({
+    y = m.can({
       permission: T.Permissions.ADD_REACTIONS,
       user: A,
       context: t
@@ -58,12 +58,12 @@ function A(e) {
     children: [R && (0, a.jsx)(S.default, {
       channel: t,
       themeable: l
-    }), L && (0, a.jsx)(g.default, {
+    }), y && (0, a.jsx)(g.default, {
       channel: t
     }), x && M && (0, a.jsx)(p.default, {
       channel: t
-    }), N && n && (0, a.jsx)(E.default, {}), N && n && (0, a.jsx)(C.default, {
+    }), v && n && (0, a.jsx)(E.default, {}), v && n && (0, a.jsx)(C.default, {
       channel: t
-    }), N && n && (0, a.jsx)(_.default, {})]
+    }), v && n && (0, a.jsx)(_.default, {})]
   })
 }

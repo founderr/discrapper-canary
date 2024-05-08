@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("556017"),
   S = n("879484"),
   p = n("26580"),
-  g = n("206887"),
-  I = n("981631"),
+  I = n("206887"),
+  g = n("981631"),
   T = n("689938"),
   A = n("37807"),
   N = n("129512"),
@@ -54,9 +54,9 @@ t.default = e => {
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
-      case I.ThemeTypes.DARK:
+      case g.ThemeTypes.DARK:
         return N;
-      case I.ThemeTypes.LIGHT:
+      case g.ThemeTypes.LIGHT:
         return v
     }
   }(R), Y = null !== (t = _.default.getGuildIconURL({
@@ -71,11 +71,11 @@ t.default = e => {
       if ((0, c.isAtGuildCapAndNonPremium)()) {
         (0, f.default)({
           analyticsSource: {
-            page: I.AnalyticsPages.GUILD_DISCOVERY
+            page: g.AnalyticsPages.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: I.AnalyticsPages.GUILD_DISCOVERY,
-            section: I.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+            page: g.AnalyticsPages.GUILD_DISCOVERY,
+            section: g.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
           analyticsLocations: B
         });
@@ -201,7 +201,7 @@ t.default = e => {
           })]
         }), z ? (0, a.jsx)("div", {
           className: A.actionButtons,
-          children: (0, a.jsx)(g.default, {
+          children: (0, a.jsx)(I.default, {
             guild: i
           })
         }) : null]

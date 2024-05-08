@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("438332"),
   p = n("664437"),
   O = n("806966"),
-  R = n("28546"),
-  C = n("691251"),
+  C = n("28546"),
+  R = n("691251"),
   g = n("98528"),
   L = n("770812"),
   v = n("434404"),
@@ -55,7 +55,7 @@ let ee = (0, k.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
   et = (0, k.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
   en = e => e.stopPropagation(),
   ei = (e, t) => {
-    O.EmojiPickerStore.setInspectedExpressionPosition(e, t, C.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
+    O.EmojiPickerStore.setInspectedExpressionPosition(e, t, R.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
   },
   er = e => {
     let {
@@ -124,7 +124,7 @@ let ee = (0, k.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
         rowIndex: n,
         source: i
       } = e;
-      i !== C.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT && T({
+      i !== R.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT && T({
         type: u.GridActionType.SET_FOCUSED_POSITION,
         x: t,
         y: n
@@ -169,7 +169,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       channel: u,
       guildId: c,
       closePopout: I,
-      emojiSize: C = X.EmojiSize.MEDIUM,
+      emojiSize: R = X.EmojiSize.MEDIUM,
       hasTabWrapper: v = !1,
       includeCreateEmojiButton: k,
       onSelectEmoji: ei,
@@ -189,13 +189,13 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     {
       onFocus: ep,
       onKeyDown: eO,
-      autoFocus: eR = !0,
-      accessory: eC
+      autoFocus: eC = !0,
+      accessory: eR
     } = ef,
     eg = (0, d.useStateFromStores)([U.default], () => null != c ? U.default.getDefaultChannel(c) : null, [c]),
     [eL, ev] = r.useState(null),
     eD = r.useRef(""),
-    eM = (0, R.useExpressionPickerStore)(e => e.searchQuery),
+    eM = (0, C.useExpressionPickerStore)(e => e.searchQuery),
     ey = r.useRef(null),
     eP = r.useRef(null),
     eU = r.useRef(null);
@@ -243,7 +243,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     emojiSearchResults: ez,
     collapsedSections: eQ,
     emojiPaddingHorizontal: ee,
-    emojiSpriteSize: C
+    emojiSpriteSize: R
   }), {
     newlyAddedEmojis: e3
   } = (0, V.default)(eb, l), {
@@ -319,8 +319,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       channelGuildId: eb,
       isBurstReaction: eG
     });
-  ea(ed, eP), es(ed, eK, eU, eR), r.useEffect(() => {
-    !ec && (0, R.setSearchQuery)("")
+  ea(ed, eP), es(ed, eK, eU, eC), r.useEffect(() => {
+    !ec && (0, C.setSearchQuery)("")
   }, [ec]), r.useEffect(() => (G.default.track(Q.AnalyticEvents.OPEN_POPOUT, {
     type: null != eY ? eY : "Emoji Picker",
     guild_id: eb
@@ -363,8 +363,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       },
       searchBarRef: eU,
       onFocus: ep,
-      autoFocus: eR,
-      accessory: eC,
+      autoFocus: eC,
+      accessory: eR,
       headerClassName: eI,
       hasTabWrapper: v,
       diversitySurrogate: eK,
@@ -413,7 +413,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
               diversitySurrogate: eK,
               emojiGrid: e1,
               emojiListRef: eP,
-              emojiSize: C,
+              emojiSize: R,
               getEmojiItemProps: e8,
               getEmojiRowProps: e9,
               gridWidth: eJ,

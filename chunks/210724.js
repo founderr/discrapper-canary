@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("5881"),
   S = n("874137"),
   p = n("78826"),
-  g = n("909389"),
-  I = n("941348"),
+  I = n("909389"),
+  g = n("941348"),
   T = n("46140"),
   A = n("981631"),
   N = n("905277");
@@ -138,7 +138,7 @@ function v(e) {
     questContent: h.QuestContent.QUEST_BAR,
     overrideVisibility: !L && es,
     children: () => {
-      let e = eo === C.QuestBarExperimentVariants.V2 ? I.default : g.default;
+      let e = eo === C.QuestBarExperimentVariants.V2 ? g.default : I.default;
       return (0, a.jsx)(r.animated.div, {
         "aria-hidden": !es,
         className: l()(N.wrapper, {

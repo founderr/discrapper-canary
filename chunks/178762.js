@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_CONTENT_ROW_HEIGHT: function() {
-    return v
+    return N
   },
   getContentRowHeight: function() {
-    return N
+    return v
   }
 }), n("47120");
 var a = n("735250"),
@@ -28,10 +28,10 @@ var a = n("735250"),
   T = n("335326"),
   I = n("268010"),
   A = n("206583");
-let v = 72;
+let N = 72;
 
-function N(e) {
-  return (null == e ? void 0 : e.type) === c.MemberListRowTypes.CONTENT_INVENTORY ? v : 0
+function v(e) {
+  return (null == e ? void 0 : e.type) === c.MemberListRowTypes.CONTENT_INVENTORY ? N : 0
 }
 let x = i().throttle(e => {
     (0, m.trackInteraction)(A.ContentInventoryInteractionTypes.CARD_HOVER, e)
@@ -113,7 +113,7 @@ t.default = l.memo(e => {
     openOnHover: g
   } = (0, h.useMemberListHoverInteractions)({
     location: "MemberListContentRow"
-  }), S = l.useRef(!1), [_, T] = l.useState(!1), [I, v] = l.useState(!1), N = l.useCallback(e => {
+  }), S = l.useRef(!1), [_, T] = l.useState(!1), [I, N] = l.useState(!1), v = l.useCallback(e => {
     E && (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -123,7 +123,7 @@ t.default = l.memo(e => {
         requestId: i.requestId
       })
     })
-  }, [i, E]), L = l.useCallback(() => {
+  }, [i, E]), y = l.useCallback(() => {
     c(String(Date.now()))
   }, []);
   return (0, a.jsx)("div", {
@@ -144,7 +144,7 @@ t.default = l.memo(e => {
         } = e;
         return (0, a.jsx)(R, {
           closePopout: t,
-          updatePopoutPosition: L,
+          updatePopoutPosition: y,
           ...i
         })
       },
@@ -153,7 +153,7 @@ t.default = l.memo(e => {
       positionKey: o,
       onRequestOpen: () => (0, m.trackInteraction)(A.ContentInventoryInteractionTypes.CARD_CLICK, C),
       onRequestClose: () => {
-        T(!1), v(!1)
+        T(!1), N(!1)
       },
       spacing: 8,
       children: (e, t) => {
@@ -162,7 +162,7 @@ t.default = l.memo(e => {
         } = t;
         return (0, a.jsx)(u.Clickable, {
           onClick: () => {
-            g && !_ && T(!0), v(e => !e)
+            g && !_ && T(!0), N(e => !e)
           },
           children: (0, a.jsx)(u.FocusRing, {
             offset: {
@@ -177,7 +177,7 @@ t.default = l.memo(e => {
               onMouseEnter: () => {
                 x(C)
               },
-              onContextMenu: N,
+              onContextMenu: v,
               children: (0, a.jsx)(M, {
                 ...i,
                 selected: n

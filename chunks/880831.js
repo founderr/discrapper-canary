@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   TOAST_LINGER_MS: function() {
-    return L
+    return y
   },
   default: function() {
     return O
@@ -28,14 +28,14 @@ var a = n("735250"),
   T = n("512665"),
   I = n("768581"),
   A = n("70956"),
-  v = n("823379"),
-  N = n("792125"),
+  N = n("823379"),
+  v = n("792125"),
   x = n("981631"),
   M = n("768760"),
   R = n("174740");
-let L = 10 * A.default.Millis.SECOND;
+let y = 10 * A.default.Millis.SECOND;
 
-function y(e) {
+function L(e) {
   var t;
   let {
     message: n
@@ -45,16 +45,16 @@ function y(e) {
       messageId: n.id,
       flash: !0
     }))
-  }, [n.channel_id, n.id]), v = null != n.content && "" !== n.content ? (0, p.default)(n, {
+  }, [n.channel_id, n.id]), N = null != n.content && "" !== n.content ? (0, p.default)(n, {
     isInteracting: c
   }).content : null, {
-    contentPlaceholder: N,
+    contentPlaceholder: v,
     renderedContent: x,
-    icon: L
-  } = (0, T.renderSingleLineMessage)(n, v, s, R.messageContent, {
+    icon: y
+  } = (0, T.renderSingleLineMessage)(n, N, s, R.messageContent, {
     iconClass: R.messageContentIcon,
     iconSize: M.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
-  }), y = (0, C.getMessageStickers)(n), O = y.length > 0 ? y.map(e => (0, a.jsx)(g.default, {
+  }), L = (0, C.getMessageStickers)(n), O = L.length > 0 ? L.map(e => (0, a.jsx)(g.default, {
     className: R.sticker,
     size: 128,
     sticker: e,
@@ -74,8 +74,8 @@ function y(e) {
         [R.mentioned]: n.mentioned
       }),
       children: [null !== (t = null != x ? x : O) && void 0 !== t ? t : (0, a.jsx)("span", {
-        children: N
-      }), null != O ? null : L]
+        children: v
+      }), null != O ? null : y]
     }), (0, a.jsx)("img", {
       alt: "",
       src: (null == r ? void 0 : r.guildMemberAvatar) != null && null != o ? (0, I.getGuildMemberAvatarURLSimple)({
@@ -127,13 +127,13 @@ function O(e) {
     let E = null !== (t = h.current) && void 0 !== t ? t : r;
     return {
       toastsHidden: d,
-      toastMessages: (0, u.useStateFromStoresArray)([S.default], () => E.map(e => S.default.getMessage(n, e)), [n, E]).filter(v.isNotNullish)
+      toastMessages: (0, u.useStateFromStoresArray)([S.default], () => E.map(e => S.default.getMessage(n, e)), [n, E]).filter(N.isNotNullish)
     }
   }({
     channelId: t,
     isFrozen: s,
     count: 3,
-    lingerMs: L
+    lingerMs: y
   }), m = l.useRef({}), [p, E] = l.useState({}), C = l.useCallback((e, t) => {
     null == t ? delete m.current[e] : m.current[e] = t
   }, []);
@@ -186,7 +186,7 @@ function O(e) {
       }
     });
   return (0, a.jsx)("div", {
-    className: i()(n, (0, N.getThemeClass)(x.ThemeTypes.DARK)),
+    className: i()(n, (0, v.getThemeClass)(x.ThemeTypes.DARK)),
     onMouseEnter: () => {
       d(!0)
     },
@@ -197,7 +197,7 @@ function O(e) {
       ref: e => C(t.message.id, null != e ? e.offsetHeight : null),
       className: R.toastWrapper,
       style: e,
-      children: (0, a.jsx)(y, {
+      children: (0, a.jsx)(L, {
         message: t.message
       })
     }))

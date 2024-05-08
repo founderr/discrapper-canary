@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("979516"),
   p = n("671612"),
   O = n("572004"),
-  R = n("900849"),
-  C = n("746878"),
+  C = n("900849"),
+  R = n("746878"),
   g = n("285063"),
   L = n("943362"),
   v = n("551452"),
@@ -91,14 +91,14 @@ let B = {
   inlineCode: {
     react: (e, t, n) => (0, i.jsx)("code", {
       className: "inline",
-      children: (0, C.smartOutput)(e, t, n)
+      children: (0, R.smartOutput)(e, t, n)
     }, n.key)
   },
   codeBlock: {
     react(e, t, r) {
       let a = () => (0, i.jsx)("code", {
         className: s()(G.scrollbarGhostHairline, "hljs"),
-        children: (0, C.smartOutput)(e, t, r)
+        children: (0, R.smartOutput)(e, t, r)
       });
       return (0, i.jsx)("pre", {
         children: (0, i.jsxs)("div", {
@@ -167,14 +167,14 @@ let B = {
             } [t],
             r = I.default.getGuild(e);
           if ((null == r ? void 0 : r.joinedAt) == null) {
-            R.startLurking(e, {}, {
+            C.startLurking(e, {}, {
               channelId: i
             });
             return
           }(0, E.transitionTo)(P.Routes.CHANNEL(e, i))
         }(e.guildId, e.channelId)
       };
-      if (!(0, C.isStaticRouteIconType)(e.channelId)) return null;
+      if (!(0, R.isStaticRouteIconType)(e.channelId)) return null;
       let a = "".concat(e.channelId);
       switch (e.channelId) {
         case U.StaticChannelId.GUILD_HOME:
@@ -250,14 +250,14 @@ let B = {
       let r = I.default.getGuild(e.guildId);
       return (0, i.jsx)(m.default, {
         guild: r,
-        children: (0, C.smartOutput)(e, t, n)
+        children: (0, R.smartOutput)(e, t, n)
       }, n.key)
     }
   },
   channel: {
     react: (e, t, n) => (0, i.jsx)(A.default, {
       iconType: e.iconType,
-      children: (0, C.smartOutput)(e, t, n)
+      children: (0, R.smartOutput)(e, t, n)
     }, n.key)
   },
   message: {

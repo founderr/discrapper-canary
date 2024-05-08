@@ -21,8 +21,8 @@ var i = n("392711"),
   N = n("594199"),
   p = n("97734"),
   O = n("660199"),
-  R = n("364458"),
-  C = n("981631"),
+  C = n("364458"),
+  R = n("981631"),
   g = n("689079"),
   L = n("377668"),
   v = n("689938");
@@ -213,7 +213,7 @@ let b = e => {
         }
         null == a && "@Clyde" === e[0] && (0, o.getClydeEnabled)(G(n), s) && (r = L.CLYDE_AI_USER_ID);
         let u = e[1],
-          _ = null != u && C.ID_REGEX.test(u.trim()),
+          _ = null != u && R.ID_REGEX.test(u.trim()),
           T = _ && n.unknownUserMentionPlaceholder ? "@".concat(v.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
         return {
           userId: r,
@@ -317,7 +317,7 @@ let b = e => {
     spoiler: {
       order: N.default.order,
       requiredFirstCharacters: ["|"],
-      match: e => C.MARKDOWN_SPOILER_REGEXP.exec(e),
+      match: e => R.MARKDOWN_SPOILER_REGEXP.exec(e),
       parse: (e, t, n) => ({
         content: t(e[1], n),
         channelId: n.channelId
@@ -326,7 +326,7 @@ let b = e => {
     staticRouteLink: {
       order: N.default.order,
       requiredFirstCharacters: ["<"],
-      match: e => C.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e),
+      match: e => R.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e),
       parse: (e, t, n) => ({
         content: [{
           type: "text",
@@ -346,11 +346,11 @@ let b = e => {
     list: A.default,
     subtext: m.default
   },
-  k = (0, R.default)([w, p.default]),
+  k = (0, C.default)([w, p.default]),
   B = r().omit(k, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext"]),
   V = r().omit(k, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink", "subtext"]),
   x = r().omit(k, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink", "subtext"]),
-  F = r().omit((0, R.default)([k, {
+  F = r().omit((0, C.default)([k, {
     inlineCode: {
       match(e, t, n) {
         let i = k.codeBlock.match(e, t, n);
@@ -368,7 +368,7 @@ let b = e => {
 function K(e, t) {
   return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim()
 }
-let z = (0, R.default)([{
+let z = (0, C.default)([{
   highlightWord: {
     order: -1,
     match(e, t) {

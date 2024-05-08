@@ -32,7 +32,7 @@ function p(e) {
   }
 }
 
-function g(e) {
+function I(e) {
   return {
     status: h.default.getStatus(e),
     isMobile: h.default.isMobileOnline(e),
@@ -41,7 +41,7 @@ function g(e) {
   }
 }
 
-function I(e) {
+function g(e) {
   let t = [];
   return i()(f.default.memberOf(e)).map(E.default.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
     null != e && t.push(e)
@@ -66,16 +66,16 @@ class A {
         type: e,
         nickname: _.default.getNickname(t),
         ...p(t),
-        ...g(t),
-        ...I(t)
+        ...I(t),
+        ...g(t)
       })),
       t = i().map(d.default.getSuggestions(), e => new T({
         key: e.key,
         type: 99,
         nickname: e.name,
         ...p(e.key),
-        ...g(e.key),
-        ...I(e.key)
+        ...I(e.key),
+        ...g(e.key)
       }));
     return new A(i().concat(e, t))
   }
@@ -160,7 +160,7 @@ function D(e) {
 }
 class b extends(a = l.default.Store) {
   initialize() {
-    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], x), this.syncWith([d.default], x), this.syncWith([C.default], D(p)), this.syncWith([h.default, c.default], D(g)), P()
+    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], x), this.syncWith([d.default], x), this.syncWith([C.default], D(p)), this.syncWith([h.default, c.default], D(I)), P()
   }
   getState() {
     return {

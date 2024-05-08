@@ -28,13 +28,13 @@ var a = n("735250"),
   T = n("906467"),
   I = n("323873"),
   A = n("998951"),
-  v = n("630388"),
-  N = n("709054"),
+  N = n("630388"),
+  v = n("709054"),
   x = n("534091"),
   M = n("901461"),
   R = n("739566"),
-  L = n("233715"),
-  y = n("453687"),
+  y = n("233715"),
+  L = n("453687"),
   O = n("348238"),
   j = n("62072"),
   P = n("38267"),
@@ -74,7 +74,7 @@ function q(e) {
   } = (0, u.useListItem)(null !== (t = e.id) && void 0 !== t ? t : ""), h = (0, d.useStateFromStores)([C.default], () => C.default.getMessageByReference(s)), {
     popouts: m,
     setPopout: p
-  } = (0, P.default)(l.id, W.DEFAULT_POPOUTS), E = (0, R.default)(l), g = (0, y.getMessageAriaLabelledBy)(l), S = (0, y.getMessageAriaDescribedBy)(l);
+  } = (0, P.default)(l.id, W.DEFAULT_POPOUTS), E = (0, R.default)(l), g = (0, L.getMessageAriaLabelledBy)(l), S = (0, L.getMessageAriaDescribedBy)(l);
   return l.type === Y.MessageTypes.THREAD_STARTER_MESSAGE && null != h && h.state === C.ReferencedMessageState.LOADED ? (0, a.jsx)(X, {
     ...e,
     message: h.message,
@@ -119,9 +119,9 @@ function X(e) {
     compact: _ = !1,
     className: T,
     groupId: I
-  } = e, N = r.type === Y.MessageTypes.REPLY ? r.messageReference : void 0, {
+  } = e, v = r.type === Y.MessageTypes.REPLY ? r.messageReference : void 0, {
     onFocus: x,
-    ...L
+    ...y
   } = (0, u.useListItem)(null !== (t = e.id) && void 0 !== t ? t : ""), {
     isFocused: b,
     handleFocus: F,
@@ -130,7 +130,7 @@ function X(e) {
     popouts: B,
     selected: Z,
     setPopout: q
-  } = (0, P.default)(r.id, W.DEFAULT_POPOUTS), X = S.InlineEmbedMedia.useSetting(), Q = S.RenderEmbeds.useSetting(), J = (0, d.useStateFromStores)([C.default], () => C.default.getMessageByReference(N)), $ = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()), {
+  } = (0, P.default)(r.id, W.DEFAULT_POPOUTS), X = S.InlineEmbedMedia.useSetting(), Q = S.RenderEmbeds.useSetting(), J = (0, d.useStateFromStores)([C.default], () => C.default.getMessageByReference(v)), $ = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()), {
     handleMouseEnter: ee,
     handleMouseLeave: et,
     isHovered: en
@@ -145,7 +145,7 @@ function X(e) {
     allowHeading: $,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), eo = (0, j.default)(o, h, ea), eu = (0, R.default)(r), ed = (0, y.getMessageAriaLabelledBy)(r, I), ec = (0, y.getMessageAriaDescribedBy)(r), ef = (0, H.default)(e, ei, !1), eh = l.useCallback(() => (0, g.transitionToGuild)(E, h, o), [E, h, o]), em = (0, m.useRoleIcon)({
+  }), eo = (0, j.default)(o, h, ea), eu = (0, R.default)(r), ed = (0, L.getMessageAriaLabelledBy)(r, I), ec = (0, L.getMessageAriaDescribedBy)(r), ef = (0, H.default)(e, ei, !1), eh = l.useCallback(() => (0, g.transitionToGuild)(E, h, o), [E, h, o]), em = (0, m.useRoleIcon)({
     guildId: E,
     roleId: eu.iconRoleId
   });
@@ -157,14 +157,14 @@ function X(e) {
       "aria-label": z.default.Messages.JUMP,
       children: z.default.Messages.JUMP
     }), (0, a.jsx)(A.default, {
-      ...L,
+      ...y,
       id: s,
       compact: _,
       className: i()(T, {
         [K.message]: !0,
         [K.cozyMessage]: !_,
         [K.mentioned]: r.mentioned,
-        [K.ephemeral]: (0, v.hasFlag)(r.flags, Y.MessageFlags.EPHEMERAL),
+        [K.ephemeral]: (0, N.hasFlag)(r.flags, Y.MessageFlags.EPHEMERAL),
         [K.systemMessage]: (0, M.default)(r),
         [K.groupStart]: r.id === I || r.type === Y.MessageTypes.REPLY,
         [K.selected]: el
@@ -173,12 +173,12 @@ function X(e) {
       onKeyDown: eo,
       onFocus: F,
       onBlur: w,
-      childrenRepliedMessage: (0, G.default)(e, q, B, N, J),
+      childrenRepliedMessage: (0, G.default)(e, q, B, v, J),
       childrenHeader: (0, k.default)({
         messageProps: e,
         setPopout: q,
         messagePopouts: B,
-        replyReference: N,
+        replyReference: v,
         author: eu,
         repliedMessage: J,
         roleIcon: em
@@ -252,24 +252,24 @@ t.default = l.memo(function(e) {
     eT = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled),
     eI = eo || e_ || eT && eE,
     eA = eI || ep,
-    ev = (0, d.useStateFromStores)([_.default], () => g.hasFlag(Y.MessageFlags.HAS_THREAD) && _.default.getChannel(N.default.castMessageIdAsChannelId(g.id))),
-    eN = g.isFirstMessageInForumPost(Z),
+    eN = (0, d.useStateFromStores)([_.default], () => g.hasFlag(Y.MessageFlags.HAS_THREAD) && _.default.getChannel(v.default.castMessageIdAsChannelId(g.id))),
+    ev = g.isFirstMessageInForumPost(Z),
     ex = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = g.editedTimestamp) && void 0 !== n ? n : g.timestamp).valueOf()),
     eM = (0, d.useStateFromStores)([T.default], () => T.default.isDeveloper),
     {
       content: eR,
-      hasSpoilerEmbeds: eL
+      hasSpoilerEmbeds: ey
     } = (0, D.default)(g, {
       hideSimpleEmbedContent: el && es,
       isInteracting: eA,
       formatInline: !1,
-      allowList: eN || ex,
-      allowHeading: eN || ex,
+      allowList: ev || ex,
+      allowHeading: ev || ex,
       allowLinks: !0,
       allowDevLinks: eM,
       previewLinkTarget: !0
     }),
-    ey = (0, j.default)(x, q, eT),
+    eL = (0, j.default)(x, q, eT),
     eO = (0, R.default)(g),
     ej = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(q)),
     eP = function(e) {
@@ -280,8 +280,8 @@ t.default = l.memo(function(e) {
       guildId: Z.guild_id,
       roleId: eO.iconRoleId
     }),
-    eb = (0, y.getMessageAriaLabelledBy)(g, $),
-    eU = (0, y.getMessageAriaDescribedBy)(g),
+    eb = (0, L.getMessageAriaLabelledBy)(g, $),
+    eU = (0, L.getMessageAriaDescribedBy)(g),
     eF = (0, d.useStateFromStores)([h.default], () => h.default.getMessage(x), [x]),
     ew = (0, b.default)({
       message: g,
@@ -308,7 +308,7 @@ t.default = l.memo(function(e) {
           onFocus: eg,
           onBlur: eS,
           onContextMenu: ed,
-          onKeyDown: ey,
+          onKeyDown: eL,
           onClick: ec,
           compact: X,
           contentOnly: ee,
@@ -316,7 +316,7 @@ t.default = l.memo(function(e) {
             [K.message]: !0,
             [K.cozyMessage]: !X,
             [K.mentioned]: g.mentioned,
-            [K.ephemeral]: (0, v.hasFlag)(g.flags, Y.MessageFlags.EPHEMERAL),
+            [K.ephemeral]: (0, N.hasFlag)(g.flags, Y.MessageFlags.EPHEMERAL),
             [K.systemMessage]: (0, M.default)(g),
             [K.groupStart]: !ee && (eH || g.type === Y.MessageTypes.REPLY),
             [K.selected]: eI,
@@ -338,7 +338,7 @@ t.default = l.memo(function(e) {
           }),
           childrenAccessories: (0, U.default)({
             channelMessageProps: e,
-            hasSpoilerEmbeds: eL,
+            hasSpoilerEmbeds: ey,
             handleContextMenu: ed,
             isInteracting: eA,
             isAutomodBlockedMessage: ek
@@ -353,14 +353,14 @@ t.default = l.memo(function(e) {
           childrenMessageContent: s,
           onMouseMove: ef,
           onMouseLeave: eh,
-          hasThread: !ee && g.hasFlag(Y.MessageFlags.HAS_THREAD) && null != ev,
+          hasThread: !ee && g.hasFlag(Y.MessageFlags.HAS_THREAD) && null != eN,
           isSystemMessage: (0, M.default)(g),
           hasReply: g.type === Y.MessageTypes.REPLY,
           messageRef: ew
         })
       })
     });
-  return null != eP ? (0, a.jsx)(L.default, {
+  return null != eP ? (0, a.jsx)(y.default, {
     flashKey: eP,
     className: i()({
       [K.backgroundFlash]: !0,
