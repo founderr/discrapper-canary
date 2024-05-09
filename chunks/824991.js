@@ -54,15 +54,12 @@ function g(e) {
   })
 }
 
-function E(e) {
-  let {
-    defaultGameId: t
-  } = e;
+function E() {
   return (0, l.jsx)(i.Text, {
     variant: "text-xs/normal",
     color: "text-muted",
     className: C.message,
-    children: t === f.GENSHIN_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_MESSAGE : t === f.VALORANT_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_MESSAGE : null
+    children: m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
   })
 }
 
@@ -97,13 +94,12 @@ function _(e) {
       location: r.default.GUILD_CHANNEL_LIST
     })
   }, [t.id]);
-  let i = a.useCallback(() => (0, l.jsx)(E, {
-      defaultGameId: s
-    }), [s]),
-    _ = a.useCallback(() => (0, l.jsx)(g, {
-      title: m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE
-    }), []),
-    I = a.useCallback(() => {
+  let i = s === f.GENSHIN_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : s === f.VALORANT_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+    _ = a.useCallback(() => (0, l.jsx)(E, {}), []),
+    I = a.useCallback(() => (0, l.jsx)(g, {
+      title: i
+    }), [i]),
+    N = a.useCallback(() => {
       (0, d.trackClanAdminInviteClicked)({
         guildId: t.id,
         location: r.default.GUILD_CHANNEL_LIST
@@ -120,16 +116,16 @@ function _(e) {
         layerKey: f.CLAN_SETUP_MODAL_LAYER_KEY
       })
     }, [s, t.id, n]),
-    N = a.useCallback(() => (0, l.jsx)(S, {
-      onClick: I
-    }), [I]);
+    T = a.useCallback(() => (0, l.jsx)(S, {
+      onClick: N
+    }), [N]);
   return (0, l.jsx)(o.default, {
     className: C.notice,
     guild: t,
     onDismissed: () => n(p.ContentDismissActionType.UNKNOWN),
-    title: _,
-    message: i,
-    cta: N,
+    title: I,
+    message: _,
+    cta: T,
     trackingSource: h.ChannelNoticeCtaSources.CLAN_ADMIN_UPSELL,
     type: h.ChannelNoticeTypes.CLAN_ADMIN_UPSELL
   })

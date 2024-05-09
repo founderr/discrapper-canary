@@ -82,21 +82,22 @@ function x(e) {
     }, [E]),
     y = a.useCallback(e => {
       e(), E(N.ContentDismissActionType.USER_DISMISS)
-    }, [E]);
+    }, [E]),
+    O = t === _.GENSHIN_ID ? T.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : t === _.VALORANT_ID ? T.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : T.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE;
   return (0, l.jsxs)("div", {
     className: A.container,
     children: [(0, l.jsx)(o.Popout, {
       shouldShow: x,
       renderPopout: e => {
         let {
-          closePopout: n
+          closePopout: t
         } = e;
         return (0, l.jsxs)("div", {
           className: A.popoutContainer,
           children: [(0, l.jsx)("div", {
             className: R
           }), (0, l.jsx)(o.Clickable, {
-            onClick: () => y(n),
+            onClick: () => y(t),
             className: A.close,
             children: (0, l.jsx)(i.CloseSmallIcon, {
               width: 16,
@@ -106,10 +107,8 @@ function x(e) {
           }), (0, l.jsxs)("div", {
             className: A.popoutContent,
             children: [(0, l.jsx)(h.ClanUpsellTitle, {
-              title: T.default.Messages.CLAN_GUILD_LIST_ADMIN_UPSELL_TITLE
-            }), (0, l.jsx)(h.ClanUpsellMessage, {
-              defaultGameId: t
-            }), (0, l.jsx)(h.ClanUpsellButton, {
+              title: O
+            }), (0, l.jsx)(h.ClanUpsellMessage, {}), (0, l.jsx)(h.ClanUpsellButton, {
               onClick: M
             })]
           }), (0, l.jsx)("div", {

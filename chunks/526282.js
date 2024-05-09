@@ -114,9 +114,9 @@ t.default = s.memo(function(e) {
   let [P, x] = s.useMemo(() => {
     switch (t) {
       case c.ClanDiscoveryGame.GENSHIN:
-        return [h.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_TITLE, h.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE];
+        return [h.default.Messages.CLAN_DISCOVERY_UPSELL_TITLE, h.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE];
       case c.ClanDiscoveryGame.VALORANT:
-        return [h.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_TITLE, h.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE]
+        return [h.default.Messages.CLAN_DISCOVERY_UPSELL_TITLE, h.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE]
     }
   }, [t]);
   return (0, a.jsxs)("div", {
@@ -177,7 +177,7 @@ t.default = s.memo(function(e) {
         children: x
       }), (0, a.jsx)(f.default, {
         onClick: n,
-        children: h.default.Messages.CLAN_DISCOVERY_UPSELL_GET_STARTED
+        children: h.default.Messages.CHECK_IT_OUT
       })]
     })]
   })
