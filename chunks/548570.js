@@ -407,11 +407,12 @@ class W extends y.default {
   resetSocketOnError(e) {
     let {
       action: t,
-      error: n
+      error: n,
+      metricAction: i
     } = e;
     B.error("resetSocketOnError during ".concat(t, ": ").concat(n.message), n.stack), S.default.increment({
       name: l.MetricEvents.SOCKET_CRASHED,
-      tags: ["action:".concat(t)]
+      tags: ["action:".concat(null != i ? i : t)]
     }, !0), !1 !== e.sentry && R.default.captureException(n, {
       tags: {
         socketCrashedAction: t
@@ -421,8 +422,8 @@ class W extends y.default {
       error_stack: n.stack,
       action: t
     }), this._cleanup(e => e.close()), this._reset(!0, 1e3, "Resetting socket due to error."), this.dispatcher.clear(), this.connectionState = C.default.WILL_RECONNECT, this.dispatchExceptionBackoff.cancel();
-    let i = e.clearCache || this.dispatchExceptionBackoff._fails > 0;
-    0 === this.dispatchExceptionBackoff._fails ? (B.verbose("Triggering fast reconnect"), this.dispatchExceptionBackoff.fail(() => {}), setTimeout(() => this._connect(), 0)) : this.dispatchExceptionBackoff.fail(() => this._connect()), i && (this.didForceClearGuildHashes = !0, _.default.dispatch({
+    let r = e.clearCache || this.dispatchExceptionBackoff._fails > 0;
+    0 === this.dispatchExceptionBackoff._fails ? (B.verbose("Triggering fast reconnect"), this.dispatchExceptionBackoff.fail(() => {}), setTimeout(() => this._connect(), 0)) : this.dispatchExceptionBackoff.fail(() => this._connect()), r && (this.didForceClearGuildHashes = !0, _.default.dispatch({
       type: "CLEAR_CACHES",
       reason: "Socket reset during ".concat(t)
     })), clearTimeout(this.dispatchSuccessTimer), this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * H)

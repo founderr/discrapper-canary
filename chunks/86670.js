@@ -20,7 +20,7 @@ async function a(e) {
   }
 }
 
-function s(e, t) {
+function s(e, t, n) {
   try {
     return t()
   } catch (t) {
@@ -29,12 +29,13 @@ function s(e, t) {
       args: {
         error: t,
         action: "tryLoadOrResetCacheGateway (".concat(e, ")"),
+        metricAction: "tryLoadOrResetCacheGateway (".concat(null != n ? n : e, ")"),
         clearCache: !0
       }
     }), null
   }
 }
-async function o(e, t) {
+async function o(e, t, n) {
   try {
     return await t()
   } catch (t) {
@@ -43,6 +44,7 @@ async function o(e, t) {
       args: {
         error: t,
         action: "tryLoadOrResetCacheGatewayAsync (".concat(e, ")"),
+        metricAction: "tryLoadOrResetCacheGatewayAsync (".concat(null != n ? n : e, ")"),
         clearCache: !0
       }
     }), null

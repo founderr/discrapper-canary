@@ -92,7 +92,7 @@ function W(e, t, n) {
   let i = c.default.database();
   if (null == i) return;
   L.verbose("hydrating guild (guild: ".concat(e, ", trace: ").concat(n, ")"));
-  let r = (0, E.tryLoadOrResetCacheGateway)("ensureGuildLoaded(".concat(e, ")"), () => I.default.getSync(i, e));
+  let r = (0, E.tryLoadOrResetCacheGateway)("ensureGuildLoaded(".concat(e, ")"), () => I.default.getSync(i, e), "ensureGuildLoaded");
   if (null == r) {
     k.add(e), T.default.restored(e), L.log("load returned null; early returning (guild: ".concat(e, ", database: ").concat(i, ")"));
     return
