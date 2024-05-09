@@ -104,6 +104,8 @@ e.exports = {
   detailsWrap: "detailsWrap_a126c3 textRow_c835f1",
   ellipsis: "ellipsis__46552",
   gameIcon: "gameIcon_f19d1f",
+  guildDetails: "guildDetails_ac7c68",
+  guildIcon: "guildIcon__65d1b",
   headerContainer: "headerContainer_b7a30f",
   headerText: "headerText_c0138d",
   headerTextEmptyBody: "headerTextEmptyBody_a1a477 headerText_c0138d",
@@ -132,5 +134,6 @@ e.exports = {
   twitchBackgroundImage: "twitchBackgroundImage__1ab7c",
   twitchImageContainer: "twitchImageContainer_d7492b",
   twitchImageOverlay: "twitchImageOverlay_ba608d",
+  voiceChannelInfo: "voiceChannelInfo__78368",
   wrap: "wrap_f7e533"
 }

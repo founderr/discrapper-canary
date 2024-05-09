@@ -72,6 +72,6 @@ function E(e) {
     },
     actionColor: c.buttonColor,
     hideHeader: !0,
-    showGuildDetails: !0
+    showChannelDetails: !0
   })
 }

@@ -70,7 +70,7 @@ t.default = function(e) {
     useStoreStream: a = !0,
     showActions: l = !0,
     hideHeader: d = !1,
-    showGuildDetails: _ = !1,
+    showChannelDetails: _ = !1,
     analyticsParams: v,
     ...U
   } = e, b = (0, o.useStateFromStores)([C.default, p.default], () => {
@@ -104,7 +104,8 @@ t.default = function(e) {
     hideHeader: d,
     activityGuild: null != V ? V : x,
     showReactions: j,
-    showGuildDetails: _,
+    showChannelDetails: _,
+    channel: b,
     renderActions: l ? () => (0, i.jsxs)("div", {
       className: s()(j && y.actionsWrapper),
       children: [(0, i.jsx)(P, {
