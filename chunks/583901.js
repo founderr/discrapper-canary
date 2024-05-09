@@ -47,8 +47,9 @@ function m(e) {
     onSelect: s,
     isSelected: o = !1,
     tabIndex: l,
-    children: u
-  } = e, d = (0, _.useRadioItem)({
+    children: u,
+    showBadge: d
+  } = e, c = (0, _.useRadioItem)({
     label: t,
     isSelected: o
   });
@@ -58,15 +59,17 @@ function m(e) {
       className: h.themeSelectionContainer,
       children: [(0, i.jsx)(_.Clickable, {
         ...e,
-        ...d,
-        tabIndex: null != l ? l : d.tabIndex,
+        ...c,
+        tabIndex: null != l ? l : c.tabIndex,
         className: a()(h.themeSelection, {
           [h.selected]: o
         }, n),
         style: r,
         onClick: o ? f.NOOP : s,
         children: u
-      }), o && (0, i.jsx)(A, {})]
+      }), o && (0, i.jsx)(A, {}), !o && d && (0, i.jsx)("div", {
+        className: h.redCircle
+      })]
     })
   })
 }
@@ -113,23 +116,25 @@ function p(e) {
     isSelected: n,
     disabled: r,
     tabIndex: s,
-    onSelect: o
+    onSelect: o,
+    showBadge: l
   } = e, {
-    colors: l,
-    angle: u,
-    theme: _
-  } = t, c = (0, I.getLinearGradientForBackgroundGradient)({
-    colors: l,
-    angle: u
+    colors: u,
+    angle: _,
+    theme: c
+  } = t, E = (0, I.getLinearGradientForBackgroundGradient)({
+    colors: u,
+    angle: _
   });
   return (0, i.jsx)(m, {
     onSelect: r ? void 0 : o,
     isSelected: n,
     name: t.getName(),
-    className: a()([r ? h.disabled : null, (0, d.isThemeDark)(_) ? h.darkOverlay : h.lightOverlay]),
+    className: a()([r ? h.disabled : null, (0, d.isThemeDark)(c) ? h.darkOverlay : h.lightOverlay]),
     style: {
-      background: "var(--bg-overlay), ".concat(c)
+      background: "var(--bg-overlay), ".concat(E)
     },
-    tabIndex: s
+    tabIndex: s,
+    showBadge: l
   })
 }

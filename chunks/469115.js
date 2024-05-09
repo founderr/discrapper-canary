@@ -1,10 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   BACKGROUND_GRADIENT_PRESETS: function() {
-    return _
+    return c
   },
   BACKGROUND_GRADIENT_PRESETS_MAP: function() {
-    return c
+    return E
+  },
+  CLIENT_THEME_DC_MAP: function() {
+    return I
   }
 }), n("47120");
 var i, r, a = n("392711"),
@@ -352,7 +355,21 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_SEPIA,
     midpointPercentage: 50
   }],
-  _ = [...u, ...d, {
+  _ = {
+    id: s.BackgroundGradientPresetId.BLURPLE_TWILIGHT,
+    theme: o.ThemeTypes.DARK,
+    colors: [{
+      token: o.Color.BG_GRADIENT_BLURPLE_TWILIGHT_1,
+      stop: 11.18
+    }, {
+      token: o.Color.BG_GRADIENT_BLURPLE_TWILIGHT_2,
+      stop: 64.54
+    }],
+    angle: 47.61,
+    getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT,
+    midpointPercentage: 50
+  },
+  c = [...u, ...d, _, {
     id: s.BackgroundGradientPresetId.EASTER_EGG,
     theme: o.ThemeTypes.LIGHT,
     colors: [{
@@ -367,4 +384,7 @@ let u = [{
     midpointPercentage: 50
   }];
 [...d, ...u], (r = i || (i = {}))[r.DARK = 0] = "DARK", r[r.LIGHT = 1] = "LIGHT", r[r.SYSTEM = 2] = "SYSTEM", o.ThemeTypes.DARK, o.ThemeTypes.LIGHT, o.ThemeTypes.DARKER, o.ThemeTypes.LIGHT, o.ThemeTypes.MIDNIGHT, () => l.default.Messages.THEME_MIDNIGHT;
-let c = (0, a.keyBy)(_, "id")
+let E = (0, a.keyBy)(c, "id"),
+  I = new Map([
+    [s.BackgroundGradientPresetId.BLURPLE_TWILIGHT, s.DismissibleContent.BRAND_REFRESH_CLIENT_THEME_BADGE]
+  ])

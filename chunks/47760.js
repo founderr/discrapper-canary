@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
   getLinearGradientForBackgroundGradient: function() {
     return a
   }
-}), n("47120");
+}), n("47120"), n("524437");
 var i = n("44315");
 n("469115");
 var r = n("231338");
