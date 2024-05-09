@@ -19,7 +19,8 @@ let d = {
   dailyCapPeriodStart: null,
   dismissibleContentSeenDuringSession: new Set,
   dailyCapOverridden: !1,
-  renderedAtTimestamps: new Map
+  renderedAtTimestamps: new Map,
+  lastDCDismissed: null
 };
 class _ extends(i = r.default.PersistedStore) {
   initialize(e) {
@@ -27,13 +28,16 @@ class _ extends(i = r.default.PersistedStore) {
       var t;
       d.numberOfDCsShownToday = null !== (t = e.numberOfDCsShownToday) && void 0 !== t ? t : 0, d.dailyCapPeriodStart = e.dailyCapPeriodStart, d.dailyCapOverridden = e.dailyCapOverridden
     }
-    d.dismissibleContentSeenDuringSession = new Set
+    d.dismissibleContentSeenDuringSession = new Set, d.lastDCDismissed = null
   }
   getState() {
     return d
   }
   get dailyCapOverridden() {
     return d.dailyCapOverridden
+  }
+  get lastDCDismissed() {
+    return d.lastDCDismissed
   }
   getRenderedAtTimestamp(e) {
     return d.renderedAtTimestamps.get(e)
@@ -82,9 +86,9 @@ u(_, "displayName", "DismissibleContentFrameworkStore"), u(_, "persistKey", "Dis
     let {
       dismissibleContent: t
     } = e;
-    d.renderedAtTimestamps.delete(t)
+    d.lastDCDismissed = t, d.renderedAtTimestamps.delete(t)
   },
   DCF_RESET: function() {
-    d.dailyCapPeriodStart = null, d.numberOfDCsShownToday = 0, d.dismissibleContentSeenDuringSession = new Set
+    d.dailyCapPeriodStart = null, d.numberOfDCsShownToday = 0, d.dismissibleContentSeenDuringSession = new Set, d.lastDCDismissed = null
   }
 })

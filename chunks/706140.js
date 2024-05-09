@@ -39,11 +39,12 @@ function E(e, t, n) {
       }, e)
     }
   }, [f, t, I, h, n]);
-  let A = i.useCallback(e => {
+  let A = i.useCallback((e, n) => {
     null != f && (0, d.markDismissibleContentAsDismissed)(f, {
       dismissAction: e,
       groupName: t,
-      guildId: I
+      guildId: I,
+      forceTrack: n
     })
   }, [f, t, I]);
   return [S && null != f ? f : null, A]
