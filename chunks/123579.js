@@ -224,7 +224,8 @@ t.default = e => {
                 bio: null == eh ? void 0 : eh.bio,
                 hidePersonalInformation: ey,
                 animateOnHover: !0,
-                isHovering: ei
+                isHovering: ei,
+                userId: ec.id
               }), eZ && (0, a.jsx)(k.default, {
                 className: es.profileMutuals,
                 user: ec
@@ -232,7 +233,7 @@ t.default = e => {
                 children: [(0, a.jsx)(K.default, {
                   userId: r
                 }), (0, a.jsx)(V.default, {})]
-              }), (0, a.jsx)(Z.default, {
+              }), !ec.isSystemUser() && (0, a.jsx)(Z.default, {
                 user: ec,
                 setNote: !1
               })]
