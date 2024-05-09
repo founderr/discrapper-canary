@@ -163,28 +163,42 @@ async function S(e) {
   })
 }
 async function h(e, t) {
-  var n, r, a, s;
-  return await i.HTTP.patch({
-    url: l.Endpoints.CLAN_SETTINGS(e),
-    body: {
-      tag: t.tag,
-      description: t.description,
-      play_style: t.playstyle,
-      search_terms: Array.from(null !== (r = t.interests) && void 0 !== r ? r : new Set),
-      game_application_ids: Array.from(null !== (a = t.gameApplicationIds) && void 0 !== a ? a : new Set),
-      verification_form: {
-        form_fields: null !== (s = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== s ? s : []
-      },
-      badge: t.badgeKind,
-      badge_color_primary: t.badgePrimaryColor,
-      badge_color_secondary: t.badgeSecondaryColor,
-      banner: t.banner,
-      brand_color_primary: t.brandPrimaryColor,
-      brand_color_secondary: t.brandSecondaryColor,
-      wildcard_descriptors: t.wildcardDescriptors,
-      badge_image: t.badgeImage
-    }
-  })
+  r.default.dispatch({
+    type: "CLAN_SETTINGS_SUBMIT",
+    guildId: e
+  });
+  try {
+    var n, s, o, u;
+    let a = await i.HTTP.patch({
+      url: l.Endpoints.CLAN_SETTINGS(e),
+      body: {
+        tag: t.tag,
+        description: t.description,
+        play_style: t.playstyle,
+        search_terms: Array.from(null !== (s = t.interests) && void 0 !== s ? s : new Set),
+        game_application_ids: Array.from(null !== (o = t.gameApplicationIds) && void 0 !== o ? o : new Set),
+        verification_form: {
+          form_fields: null !== (u = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== u ? u : []
+        },
+        badge: t.badgeKind,
+        badge_color_primary: t.badgePrimaryColor,
+        badge_color_secondary: t.badgeSecondaryColor,
+        banner: t.banner,
+        brand_color_primary: t.brandPrimaryColor,
+        brand_color_secondary: t.brandSecondaryColor,
+        wildcard_descriptors: t.wildcardDescriptors,
+        badge_image: t.badgeImage
+      }
+    });
+    return r.default.dispatch({
+      type: "CLAN_SETTINGS_SUBMIT_SUCCESS"
+    }), a.body
+  } catch (e) {
+    throw r.default.dispatch({
+      type: "CLAN_SETTINGS_SUBMIT_ERROR",
+      error: new a.default(e)
+    }), e
+  }
 }
 async function A(e) {
   try {

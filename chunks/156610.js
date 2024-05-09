@@ -5,6 +5,7 @@ e.exports = {
   divider: "divider_ef3200",
   dividerResponsive: "dividerResponsive__989b4",
   elevatedNavigationContainer: "elevatedNavigationContainer_f689e2",
+  errorIcon: "errorIcon__11e5e",
   errorLink: "errorLink_e96e0d",
   errorText: "errorText_e99eec",
   hidden: "hidden__7c65d",
@@ -26,5 +27,7 @@ e.exports = {
   step: "step__4b7ad",
   stepsContainer: "stepsContainer__8d5da",
   stepsTransitionGroup: "stepsTransitionGroup__770f6",
-  submit: "submit__9d0ad"
+  submit: "submit__9d0ad",
+  tooltip: "tooltip__54b01",
+  tooltipContents: "tooltipContents__93e3b"
 }
