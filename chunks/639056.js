@@ -47,7 +47,7 @@ function h(e) {
         children: _.default.Messages.PREMIUM_SUBSCRIPTION_CREDIT.format({
           planName: h
         })
-      }), t.hasFreePremium() ? null : (0, a.jsx)(d.Heading, {
+      }), t.hasFreePremium() || null != i && i.isPurchasedExternally ? null : (0, a.jsx)(d.Heading, {
         className: g.rowApplied,
         variant: "heading-sm/semibold",
         color: "header-secondary",
