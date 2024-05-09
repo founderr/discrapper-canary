@@ -27,7 +27,6 @@ function u(e) {
   });
   return r ? (0, i.jsx)(o.TooltipContainer, {
     text: n,
-    color: o.TooltipColors.NESTED,
     "aria-label": _["aria-label"],
     children: (0, i.jsx)(s.Button, {
       className: a()(l.compactButton, u),

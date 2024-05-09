@@ -22,16 +22,16 @@ var l = s("735250"),
   _ = s("759231"),
   T = s("998502"),
   x = s("785717"),
-  N = s("621853"),
-  g = s("204197"),
-  U = s("735336"),
-  A = s("520978"),
+  U = s("621853"),
+  A = s("204197"),
+  g = s("735336"),
+  N = s("520978"),
   C = s("184325"),
   h = s("652853"),
-  p = s("496206"),
-  R = s("228168"),
-  M = s("981631"),
-  P = s("231338"),
+  R = s("496206"),
+  p = s("228168"),
+  P = s("981631"),
+  M = s("231338"),
   j = s("689938"),
   y = s("370386");
 let O = r.AvatarSizes.SIZE_120,
@@ -48,7 +48,7 @@ function F(e) {
     isStreaming: G,
     hasProfileEffect: k,
     onClose: w
-  } = e, H = (0, i.useStateFromStores)([E.default], () => E.default.getRelationshipType(T.id)), V = (0, i.useStateFromStores)([I.default], () => I.default.isMobileOnline(T.id)), Y = (0, i.useStateFromStores)([I.default], () => I.default.getStatus(T.id)), z = (0, i.useStateFromStores)([N.default], () => N.default.getUserProfile(T.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === T.id), {
+  } = e, Y = (0, i.useStateFromStores)([E.default], () => E.default.getRelationshipType(T.id)), H = (0, i.useStateFromStores)([I.default], () => I.default.isMobileOnline(T.id)), V = (0, i.useStateFromStores)([I.default], () => I.default.getStatus(T.id)), z = (0, i.useStateFromStores)([U.default], () => U.default.getUserProfile(T.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === T.id), {
     theme: Z
   } = (0, h.useUserProfileThemeContext)(), {
     trackUserProfileAction: K
@@ -56,7 +56,7 @@ function F(e) {
     avatarSrc: J,
     eventHandlers: Q,
     avatarDecorationSrc: q
-  } = (0, g.default)({
+  } = (0, A.default)({
     user: T,
     size: O
   }), X = a.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(T, D), [T, D]);
@@ -88,7 +88,7 @@ function F(e) {
         context: {
           location: "User Profile"
         },
-        type: M.RelationshipTypes.BLOCKED
+        type: P.RelationshipTypes.BLOCKED
       })
     } catch (e) {
       $()
@@ -103,11 +103,11 @@ function F(e) {
   }
   return (0, l.jsxs)("header", {
     className: B,
-    children: [(0, l.jsx)(U.default, {
+    children: [(0, l.jsx)(g.default, {
       displayProfile: t,
       onClose: $,
       user: T,
-      profileType: R.UserProfileTypes.MODAL,
+      profileType: p.UserProfileTypes.MODAL,
       hasProfileEffect: k
     }), (0, l.jsxs)("div", {
       className: y.header,
@@ -118,9 +118,9 @@ function F(e) {
           avatarDecoration: q,
           size: O,
           className: y.avatar,
-          status: X ? P.StatusTypes.UNKNOWN : G ? P.StatusTypes.STREAMING : Y,
+          status: X ? M.StatusTypes.UNKNOWN : G ? M.StatusTypes.STREAMING : V,
           statusBackdropColor: (0, r.getStatusBackdropColor)(Z),
-          isMobile: V,
+          isMobile: H,
           statusTooltip: !0,
           "aria-label": T.username
         })
@@ -129,7 +129,6 @@ function F(e) {
         children: [(null == z ? void 0 : z.profileFetchFailed) && !T.isClyde() ? (0, l.jsx)(r.Tooltip, {
           text: j.default.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
-          color: r.TooltipColors.NESTED,
           children: e => (0, l.jsx)(_.default, {
             ...e,
             className: y.warningCircleIcon,
@@ -145,13 +144,13 @@ function F(e) {
           onBadgeClick: w
         }), (0, l.jsxs)("div", {
           className: y.relationshipButtons,
-          children: [(0, l.jsx)(A.default, {
+          children: [(0, l.jsx)(N.default, {
             className: y.applicationInstallButton,
             application: null == z ? void 0 : z.application
-          }), (0, l.jsx)(p.default, {
+          }), (0, l.jsx)(R.default, {
             user: T,
             isCurrentUser: W,
-            relationshipType: H,
+            relationshipType: Y,
             onAddFriend: function() {
               try {
                 K({
@@ -191,7 +190,7 @@ function F(e) {
                 } = await s.e("29136").then(s.bind(s, "193646"));
                 return t => (0, l.jsx)(e, {
                   ...t,
-                  relationshipType: H,
+                  relationshipType: Y,
                   onRemoveFriend: ee,
                   onBlock: es,
                   onReport: el,

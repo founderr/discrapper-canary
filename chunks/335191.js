@@ -105,7 +105,6 @@ function C(e) {
       className: R.connectedAccount,
       children: [(0, i.jsx)(u.Tooltip, {
         text: null == G ? void 0 : G.name,
-        color: u.TooltipColors.NESTED,
         children: e => (0, i.jsx)("img", {
           ...e,
           alt: O.default.Messages.IMG_ALT_LOGO.format({
@@ -123,7 +122,6 @@ function C(e) {
             children: [(0, i.jsx)(u.Tooltip, {
               overflowOnly: !0,
               text: S.name,
-              color: u.TooltipColors.NESTED,
               children: e => (0, i.jsx)(u.Text, {
                 ...e,
                 variant: "text-md/semibold",

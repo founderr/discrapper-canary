@@ -69,7 +69,8 @@ function T(e) {
       disableUserProfileLink: T,
       hasBanner: (null == n ? void 0 : n.banner) != null,
       hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
-      profileType: _.UserProfileTypes.BITE_SIZE
+      profileType: _.UserProfileTypes.BITE_SIZE,
+      statusTooltipDelay: _.USER_PROFILE_TOOLTIP_DELAY
     }), (0, i.jsx)(u.UserProfileCustomStatusBubble, {
       statusActivity: m,
       profileType: _.UserProfileTypes.BITE_SIZE

@@ -72,7 +72,6 @@ function C(e) {
         position: "top",
         text: e.description,
         spacing: 12,
-        color: l.TooltipColors.NESTED,
         children: t => (0, a.jsx)(l.Anchor, {
           ...t,
           onClick: n => {

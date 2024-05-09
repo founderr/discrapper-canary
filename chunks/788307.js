@@ -35,21 +35,23 @@ function v(e) {
     emoji: t,
     className: n,
     animate: r = !0,
-    hideTooltip: a
-  } = e, o = h.AnimateEmoji.useSetting(), l = null != t.id ? ":".concat(t.name, ":") : I.default.translateSurrogatesToInlineEmoji(t.name), _ = {
+    hideTooltip: a,
+    tooltipDelay: o
+  } = e, l = h.AnimateEmoji.useSetting(), _ = null != t.id ? ":".concat(t.name, ":") : I.default.translateSurrogatesToInlineEmoji(t.name), c = {
     className: s()(g.emoji, n),
     emojiId: t.id,
     emojiName: t.name,
     autoplay: !0,
-    animated: !!(t.animated && o && r)
+    animated: !!(t.animated && l && r)
   };
   return a ? (0, i.jsx)(d.default, {
-    ..._
+    ...c
   }) : (0, i.jsx)(u.Tooltip, {
-    text: l,
+    text: _,
+    delay: o,
     children: e => (0, i.jsx)(d.default, {
       ...e,
-      ..._
+      ...c
     })
   })
 }

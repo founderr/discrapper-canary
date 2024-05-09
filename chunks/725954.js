@@ -46,7 +46,6 @@ function I(e) {
       })]
     }), (null == s ? void 0 : s.pronouns) != null && (null == s ? void 0 : s.pronouns) !== "" && (0, l.jsx)(r.Tooltip, {
       text: S.default.Messages.USER_PROFILE_PRONOUNS,
-      color: r.TooltipColors.NESTED,
       children: e => (0, l.jsx)(r.Text, {
         ...e,
         variant: "text-sm/normal",

@@ -22,19 +22,20 @@ function T(e) {
   let {
     userId: t,
     guildId: n,
-    textClassName: T
-  } = e, f = (0, r.useStateFromStores)([o.default], () => o.default.locale), S = (0, r.useStateFromStores)([u.default], () => null != n ? u.default.getGuild(n) : null), h = (0, r.useStateFromStores)([l.default], () => null != n ? l.default.getMember(n, t) : null), A = (0, s.getCreatedAtDate)(c.default.extractTimestamp(t), f), m = (0, s.getCreatedAtDate)(null == h ? void 0 : h.joinedAt, f);
-  return null == S || null == h ? (0, i.jsx)(a.Text, {
+    textClassName: T,
+    tooltipDelay: f
+  } = e, S = (0, r.useStateFromStores)([o.default], () => o.default.locale), h = (0, r.useStateFromStores)([u.default], () => null != n ? u.default.getGuild(n) : null), A = (0, r.useStateFromStores)([l.default], () => null != n ? l.default.getMember(n, t) : null), m = (0, s.getCreatedAtDate)(c.default.extractTimestamp(t), S), N = (0, s.getCreatedAtDate)(null == A ? void 0 : A.joinedAt, S);
+  return null == h || null == A ? (0, i.jsx)(a.Text, {
     variant: "text-sm/normal",
     className: T,
-    children: A
+    children: m
   }) : (0, i.jsxs)("div", {
     className: I.memberSinceWrapper,
     children: [(0, i.jsxs)("div", {
       className: I.memberSince,
       children: [(0, i.jsx)(a.Tooltip, {
         text: E.default.Messages.DISCORD_NAME,
-        color: a.TooltipColors.NESTED,
+        delay: f,
         children: e => (0, i.jsx)(_.default, {
           ...e,
           className: I.discordIcon
@@ -42,24 +43,24 @@ function T(e) {
       }), (0, i.jsx)(a.Text, {
         variant: "text-sm/normal",
         className: T,
-        children: A
+        children: m
       })]
     }), (0, i.jsx)("div", {
       className: I.divider
     }), (0, i.jsxs)("div", {
       className: I.memberSince,
       children: [(0, i.jsx)(a.Tooltip, {
-        text: S.name,
-        color: a.TooltipColors.NESTED,
+        text: h.name,
+        delay: f,
         children: e => (0, i.jsx)(d.default, {
           ...e,
-          guild: S,
+          guild: h,
           size: d.default.Sizes.SMOL
         })
       }), (0, i.jsx)(a.Text, {
         variant: "text-sm/normal",
         className: T,
-        children: m
+        children: N
       })]
     })]
   })

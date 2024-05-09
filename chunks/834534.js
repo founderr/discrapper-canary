@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return C
+    return h
   }
 });
 var l = s("735250"),
@@ -22,72 +22,74 @@ var l = s("735250"),
   _ = s("652853"),
   T = s("335191"),
   x = s("347949"),
-  N = s("192591"),
-  g = s("351707"),
-  U = s("689938"),
-  A = s("634516");
+  U = s("192591"),
+  A = s("351707"),
+  g = s("228168"),
+  N = s("689938"),
+  C = s("634516");
 
-function C(e) {
+function h(e) {
   let {
     user: t,
     currentUser: s,
     displayProfile: i,
-    autoFocusNote: C,
-    className: h
+    autoFocusNote: h,
+    className: R
   } = e, {
     theme: p
   } = (0, _.useUserProfileThemeContext)(), {
-    trackUserProfileAction: R
-  } = (0, m.useUserProfileAnalyticsContext)(), M = null == i ? void 0 : i.guildId, P = (0, r.useStateFromStores)([S.default], () => null != M ? S.default.getGuild(M) : null), {
-    recentGames: j,
-    isFetching: y,
-    currentUserApplicationIds: O
-  } = (0, c.useUserRecentGames)(t.id), L = a.useMemo(() => {
+    trackUserProfileAction: P
+  } = (0, m.useUserProfileAnalyticsContext)(), M = null == i ? void 0 : i.guildId, j = (0, r.useStateFromStores)([S.default], () => null != M ? S.default.getGuild(M) : null), {
+    recentGames: y,
+    isFetching: O,
+    currentUserApplicationIds: L
+  } = (0, c.useUserRecentGames)(t.id), F = a.useMemo(() => {
     var e;
-    return null !== (e = null == j ? void 0 : j.slice(0, 6)) && void 0 !== e ? e : []
-  }, [j]), F = (0, d.useIsUserRecentGamesEnabled)({
+    return null !== (e = null == y ? void 0 : y.slice(0, 6)) && void 0 !== e ? e : []
+  }, [y]), D = (0, d.useIsUserRecentGamesEnabled)({
     location: "SimplifiedUserProfileModalInfo",
     userId: t.id
-  }), D = (0, r.useStateFromStores)([f.default], () => f.default.locale), b = (0, I.default)(t.id);
+  }), b = (0, r.useStateFromStores)([f.default], () => f.default.locale), B = (0, I.default)(t.id);
   return (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: n()(A.scroller, h),
+    className: n()(C.scroller, R),
     children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(E.default, {
       userBio: i.bio,
       setLineClamp: !1
-    }), null != P && (0, l.jsx)(g.default, {
+    }), null != j && (0, l.jsx)(A.default, {
       user: t,
       currentUser: s,
-      guild: P
-    }), (0, l.jsx)(N.default, {
-      title: U.default.Messages.USER_PROFILE_MEMBER_SINCE,
+      guild: j
+    }), (0, l.jsx)(U.default, {
+      title: N.default.Messages.USER_PROFILE_MEMBER_SINCE,
       children: (0, l.jsx)(v.default, {
         userId: t.id,
-        guildId: null == i ? void 0 : i.guildId
+        guildId: null == i ? void 0 : i.guildId,
+        tooltipDelay: g.USER_PROFILE_TOOLTIP_DELAY
       })
-    }), F && !y && L.length > 0 && (0, l.jsx)(N.default, {
-      title: U.default.Messages.LAST_PLAYED_GAMES,
+    }), D && !O && F.length > 0 && (0, l.jsx)(U.default, {
+      title: N.default.Messages.LAST_PLAYED_GAMES,
       children: (0, l.jsx)(x.UserProfileRecentGames, {
         userId: t.id,
-        recentGames: L,
-        currentUserApplicationIds: O
+        recentGames: F,
+        currentUserApplicationIds: L
       })
-    }), b.length > 0 && (0, l.jsx)(N.default, {
-      title: U.default.Messages.CONNECTIONS,
+    }), B.length > 0 && (0, l.jsx)(U.default, {
+      title: N.default.Messages.CONNECTIONS,
       children: (0, l.jsx)(T.ConnectedUserAccounts, {
-        connectedAccounts: b,
-        className: A.connections,
+        connectedAccounts: B,
+        className: C.connections,
         userId: t.id,
         theme: p,
-        locale: D
+        locale: b
       })
-    }), (0, l.jsx)(N.default, {
-      title: U.default.Messages.NOTE,
+    }), (0, l.jsx)(U.default, {
+      title: N.default.Messages.NOTE,
       children: (0, l.jsx)(u.default, {
         userId: t.id,
-        className: A.note,
-        autoFocus: C,
-        onUpdate: () => R({
+        className: C.note,
+        autoFocus: h,
+        onUpdate: () => P({
           action: "SET_NOTE"
         })
       })

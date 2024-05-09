@@ -57,7 +57,6 @@ function B(e) {
     children: [(null == o ? void 0 : o.profileFetchFailed) && (!t.isClyde() || c) && (0, i.jsx)(d.Tooltip, {
       text: U.default.Messages.USER_PROFILE_LOAD_ERROR,
       spacing: 16,
-      color: d.TooltipColors.NESTED,
       children: e => (0, i.jsx)(S.default, {
         ...e,
         className: b.warningCircleIcon,
@@ -89,71 +88,73 @@ function V(e) {
     disableUserProfileLink: S,
     profileType: N,
     animateOnHover: O,
-    hasProfileEffect: C
+    hasProfileEffect: C,
+    statusTooltipDelay: L
   } = e, {
-    theme: L
-  } = (0, v.useUserProfileThemeContext)(), B = r.useContext(A.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), x = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), F = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
-    analyticsLocations: H
+    theme: B
+  } = (0, v.useUserProfileThemeContext)(), V = r.useContext(A.AnalyticsContext), x = t.isNonUserBot() && !t.isClyde(), F = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), H = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
+    analyticsLocations: Y
   } = (0, _.default)(), {
-    trackUserProfileAction: Y,
-    messageId: j,
-    roleId: W
-  } = (0, p.useUserProfileAnalyticsContext)(), K = S || t.isClyde(), {
-    avatarDecorationSrc: z,
-    avatarSrc: Z,
-    eventHandlers: X
+    trackUserProfileAction: j,
+    messageId: W,
+    roleId: K
+  } = (0, p.useUserProfileAnalyticsContext)(), z = S || t.isClyde(), {
+    avatarDecorationSrc: Z,
+    avatarSrc: X,
+    eventHandlers: Q
   } = (0, R.default)({
     user: t,
     guildId: E,
     size: G,
     animateOnHover: O
-  }), Q = (0, i.jsx)("div", {
+  }), q = (0, i.jsx)("div", {
     className: b.avatarHoverTarget,
-    ...X,
+    ...Q,
     children: (0, i.jsx)(k, {
-      src: null != a ? a : Z,
-      avatarDecoration: z,
+      src: null != a ? a : X,
+      avatarDecoration: Z,
       size: G,
       "aria-label": t.username,
-      status: F ? y.StatusTypes.UNKNOWN : u,
-      statusBackdropColor: x && !F ? (0, d.getStatusBackdropColor)(L) : void 0,
+      status: H ? y.StatusTypes.UNKNOWN : u,
+      statusBackdropColor: F && !H ? (0, d.getStatusBackdropColor)(B) : void 0,
       isMobile: c,
-      statusTooltip: !0
+      statusTooltip: !0,
+      statusTooltipDelay: L
     })
-  }), q = (0, o.match)(N).with(M.UserProfileTypes.POPOUT, () => (0, g.buildGetPremiumUserBannerStyles)({
+  }), J = (0, o.match)(N).with(M.UserProfileTypes.POPOUT, () => (0, g.buildGetPremiumUserBannerStyles)({
     premiumUserWithBanner: b.avatarPositionPremiumBanner,
     premiumUserWithoutBanner: b.avatarPositionPremiumNoBanner,
     default: b.avatarPositionNormal
   })({
-    isPremium: x,
+    isPremium: F,
     hasBanner: l,
     hasProfileEffect: C
   })).with(M.UserProfileTypes.POMELO_POPOUT, () => b.avatarPositionPomelo).with(M.UserProfileTypes.PANEL, () => b.avatarPositionPanel).with(M.UserProfileTypes.BITE_SIZE, () => b.avatarPositionBiteSize).exhaustive();
   return (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)(d.Clickable, {
       className: s()({
-        [b.clickable]: !K,
-        [b.avatarWrapperNonUserBot]: V,
-        [b.avatarWrapperNormal]: !V
-      }, q),
-      onClick: V || K ? void 0 : function() {
-        Y({
+        [b.clickable]: !z,
+        [b.avatarWrapperNonUserBot]: x,
+        [b.avatarWrapperNormal]: !x
+      }, J),
+      onClick: x || z ? void 0 : function() {
+        j({
           action: "PRESS_VIEW_PROFILE"
         }), (0, D.openUserProfileModal)({
           userId: t.id,
           guildId: E,
           channelId: T,
-          messageId: j,
-          roleId: W,
-          sourceAnalyticsLocations: H,
-          analyticsLocation: B.location
+          messageId: W,
+          roleId: K,
+          sourceAnalyticsLocations: Y,
+          analyticsLocation: V.location
         }), null == f || f()
       },
-      children: [Q, !K && function() {
-        let e = null != z,
+      children: [q, !z && function() {
+        let e = null != Z,
           t = e ? w : (0, d.getAvatarSize)(G);
         return (0, i.jsx)(h.default, {
-          mask: null == u || u === y.StatusTypes.UNKNOWN || F ? h.default.Masks.AVATAR_DEFAULT : (0, o.match)([e, c]).with([!0, !0], () => h.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => h.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => h.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => h.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
+          mask: null == u || u === y.StatusTypes.UNKNOWN || H ? h.default.Masks.AVATAR_DEFAULT : (0, o.match)([e, c]).with([!0, !0], () => h.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => h.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => h.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => h.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
           className: e ? b.avatarDecorationHint : b.avatarHint,
           style: e ? {
             borderRadius: .4 * t
