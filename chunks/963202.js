@@ -63,15 +63,15 @@ function l(e) {
     valorantConfig: i,
     genshinConfig: r
   } = e;
-  return null !== (n = null !== (t = i.defaultGameId) && void 0 !== t ? t : r.defaultGameId) && void 0 !== n ? n : null
+  return null !== (n = null !== (t = r.defaultGameId) && void 0 !== t ? t : i.defaultGameId) && void 0 !== n ? n : null
 }
 
 function u(e) {
-  return (null == e ? void 0 : e.hasFeature(a.GuildFeatures.CLAN_PILOT_VALORANT)) === !0
+  return (null == e ? void 0 : e.hasFeature(a.GuildFeatures.CLAN_PILOT_VALORANT)) === !0 && (null == e ? void 0 : e.hasFeature(a.GuildFeatures.CLAN)) === !1
 }
 
 function d(e) {
-  return (null == e ? void 0 : e.hasFeature(a.GuildFeatures.CLAN_PILOT_GENSHIN)) === !0
+  return (null == e ? void 0 : e.hasFeature(a.GuildFeatures.CLAN_PILOT_GENSHIN)) === !0 && (null == e ? void 0 : e.hasFeature(a.GuildFeatures.CLAN)) === !1
 }
 
 function _(e, t) {
@@ -107,8 +107,41 @@ function _(e, t) {
 }
 
 function c(e, t) {
-  let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-  return _([e], t, n)
+  let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+    i = s.useExperiment({
+      location: t
+    }, {
+      autoTrackExposure: n
+    });
+  return function(e) {
+    let {
+      guild: t,
+      valorantConfig: n,
+      genshinConfig: i
+    } = e;
+    if (null == t) return {
+      defaultGameId: null,
+      enableClanCreation: !1
+    };
+    let r = d(t),
+      a = u(t),
+      s = r && i.enableClanCreation;
+    return {
+      enableClanCreation: a && n.enableClanCreation || s,
+      defaultGameId: l({
+        genshinConfig: i,
+        valorantConfig: n
+      })
+    }
+  }({
+    guild: e,
+    valorantConfig: i,
+    genshinConfig: o.useExperiment({
+      location: t
+    }, {
+      autoTrackExposure: n
+    })
+  })
 }
 
 function E(e, t) {

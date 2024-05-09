@@ -19,9 +19,9 @@ var l, a = n("735250"),
   C = n("592125"),
   g = n("888369"),
   E = n("430824"),
-  S = n("306680"),
-  _ = n("944486"),
-  I = n("938475"),
+  _ = n("306680"),
+  I = n("944486"),
+  S = n("938475"),
   N = n("387204"),
   T = n("107828"),
   A = n("153124"),
@@ -58,7 +58,7 @@ let j = {
       })
     })]
   });
-class U extends(l = s.Component) {
+class G extends(l = s.Component) {
   render() {
     let e = E.default.getGuild(this.props.channel.guild_id);
     return (0, a.jsx)(T.Channel, {
@@ -70,29 +70,29 @@ class U extends(l = s.Component) {
     })
   }
 }
-b(U, "defaultProps", {
+b(G, "defaultProps", {
   unread: !1
 });
-let G = u.default.connectStores([S.default, C.default], e => {
+let U = u.default.connectStores([_.default, C.default], e => {
     let {
       channel: t
     } = e;
     return {
-      unread: S.default.hasUnread(t.id),
-      mentions: S.default.getMentionCount(t.id),
+      unread: _.default.hasUnread(t.id),
+      mentions: _.default.getMentionCount(t.id),
       category: C.default.getChannel(t.parent_id)
     }
-  })(U),
-  w = u.default.connectStores([I.default], e => {
+  })(G),
+  w = u.default.connectStores([S.default], e => {
     let {
       channel: t
     } = e;
     if (null == t.guild_id) throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
     return {
-      voiceStates: I.default.getVoiceStates(t.guild_id)[t.id]
+      voiceStates: S.default.getVoiceStates(t.guild_id)[t.id]
     }
-  })(U),
-  B = u.default.connectStores([g.default], e => {
+  })(G),
+  F = u.default.connectStores([g.default], e => {
     let {
       guild: t
     } = e;
@@ -100,24 +100,24 @@ let G = u.default.connectStores([S.default, C.default], e => {
       unread: g.default.hasUnread(t.id)
     }
   })(T.Guild),
-  F = u.default.connectStores([S.default], e => {
+  B = u.default.connectStores([_.default], e => {
     let {
       channel: t
     } = e;
     return {
-      mentions: S.default.getMentionCount(t.id)
+      mentions: _.default.getMentionCount(t.id)
     }
   })(T.GroupDM),
-  V = u.default.connectStores([C.default, S.default], e => {
+  H = u.default.connectStores([C.default, _.default], e => {
     let {
       user: t
     } = e, n = C.default.getDMFromUserId(t.id);
     return {
-      mentions: null != n ? S.default.getMentionCount(n) : 0
+      mentions: null != n ? _.default.getMentionCount(n) : 0
     }
   })(T.User);
 
-function H(e, t, n) {
+function V(e, t, n) {
   return (0, a.jsx)(d.Tooltip, {
     text: n,
     children: e => (0, a.jsx)("span", {
@@ -224,10 +224,10 @@ class k extends s.PureComponent {
       }),
       type: N.default.Types.INLINE,
       children: O.default.Messages.QUICKSWITCHER_PROTIP.format({
-        userSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.USER, O.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-        textChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.TEXT_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-        voiceChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.VOICE_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-        guildSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.GUILD, O.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+        userSymbolHook: (e, t) => V(t, p.AutocompleterQuerySymbols.USER, O.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+        textChannelSymbolHook: (e, t) => V(t, p.AutocompleterQuerySymbols.TEXT_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+        voiceChannelSymbolHook: (e, t) => V(t, p.AutocompleterQuerySymbols.VOICE_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+        guildSymbolHook: (e, t) => V(t, p.AutocompleterQuerySymbols.GUILD, O.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
         helpdeskArticle: v.default.getArticleURL(y.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL)
       })
     })
@@ -284,7 +284,7 @@ class k extends s.PureComponent {
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("52332"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
+            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("70716"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("72317"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
             return n => (0, a.jsx)(e, {
               ...n,
               guild: t.record,
@@ -371,7 +371,7 @@ class k extends s.PureComponent {
             return n => (0, a.jsx)(e, {
               ...n,
               channel: t.record,
-              selected: _.default.getChannelId() === t.record.id,
+              selected: I.default.getChannelId() === t.record.id,
               onSelect: x.hide
             })
           });
@@ -451,7 +451,7 @@ class k extends s.PureComponent {
             children: n.record.text
           }, "".concat(n.type, "-").concat(n.record.id));
         case p.AutocompleterResultTypes.TEXT_CHANNEL:
-          return (0, a.jsx)(G, {
+          return (0, a.jsx)(U, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),
@@ -473,7 +473,7 @@ class k extends s.PureComponent {
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
         case p.AutocompleterResultTypes.GUILD:
-          return (0, a.jsx)(B, {
+          return (0, a.jsx)(F, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),
@@ -484,7 +484,7 @@ class k extends s.PureComponent {
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
         case p.AutocompleterResultTypes.USER:
-          return (0, a.jsx)(V, {
+          return (0, a.jsx)(H, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),
@@ -496,7 +496,7 @@ class k extends s.PureComponent {
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
         case p.AutocompleterResultTypes.GROUP_DM:
-          return (0, a.jsx)(F, {
+          return (0, a.jsx)(B, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanUpsellButton: function() {
-    return S
-  },
-  ClanUpsellMessage: function() {
     return E
   },
-  ClanUpsellTitle: function() {
+  ClanUpsellMessage: function() {
     return g
+  },
+  ClanUpsellTitle: function() {
+    return C
   },
   default: function() {
     return _
@@ -19,51 +19,50 @@ var l = n("735250"),
   i = n("481060"),
   r = n("100527"),
   o = n("428695"),
-  u = n("725568"),
+  u = n("703656"),
   d = n("970606"),
-  c = n("603839"),
-  f = n("308083"),
-  h = n("981631"),
-  p = n("921944"),
-  m = n("689938"),
-  C = n("207030");
+  c = n("308083"),
+  f = n("981631"),
+  h = n("921944"),
+  p = n("689938"),
+  m = n("207030");
 
-function g(e) {
+function C(e) {
   let {
     title: t
   } = e;
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
-      className: C.inviteContainer,
+      className: m.inviteContainer,
       children: [(0, l.jsx)(s.EnvelopeIcon, {
         color: "currentColor",
         height: 12,
         width: 12,
-        className: C.envelope
+        className: m.envelope
       }), (0, l.jsx)(i.Text, {
         variant: "text-xs/bold",
-        className: C.invite,
-        children: m.default.Messages.CLAN_UPSELL_INVITE
+        className: m.invite,
+        children: p.default.Messages.CLAN_UPSELL_INVITE
       })]
     }), (0, l.jsx)(i.Heading, {
       variant: "heading-md/semibold",
       color: "header-primary",
-      className: C.title,
+      className: m.title,
       children: t
     })]
   })
 }
 
-function E() {
+function g() {
   return (0, l.jsx)(i.Text, {
     variant: "text-xs/normal",
     color: "text-muted",
-    className: C.message,
-    children: m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
+    className: m.message,
+    children: p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
   })
 }
 
-function S(e) {
+function E(e) {
   let {
     onClick: t
   } = e;
@@ -72,12 +71,12 @@ function S(e) {
     look: i.ButtonLooks.FILLED,
     size: i.ButtonSizes.SMALL,
     color: i.ButtonColors.BRAND_NEW,
-    className: C.button,
+    className: m.button,
     onClick: t,
     children: (0, l.jsx)(i.Text, {
       variant: "text-sm/semibold",
       color: "always-white",
-      children: m.default.Messages.CHECK_IT_OUT
+      children: p.default.Messages.CHECK_IT_OUT
     })
   })
 }
@@ -94,39 +93,28 @@ function _(e) {
       location: r.default.GUILD_CHANNEL_LIST
     })
   }, [t.id]);
-  let i = s === f.GENSHIN_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : s === f.VALORANT_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
-    _ = a.useCallback(() => (0, l.jsx)(E, {}), []),
-    I = a.useCallback(() => (0, l.jsx)(g, {
+  let i = s === c.GENSHIN_ID ? p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : s === c.VALORANT_ID ? p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+    _ = a.useCallback(() => (0, l.jsx)(g, {}), []),
+    I = a.useCallback(() => (0, l.jsx)(C, {
       title: i
     }), [i]),
-    N = a.useCallback(() => {
+    S = a.useCallback(() => {
       (0, d.trackClanAdminInviteClicked)({
         guildId: t.id,
         location: r.default.GUILD_CHANNEL_LIST
-      }), n(p.ContentDismissActionType.TAKE_ACTION), (0, u.openFullScreenLayer)(e => {
-        let {
-          closeLayer: n
-        } = e;
-        return (0, l.jsx)(c.default, {
-          onClose: n,
-          guildId: t.id,
-          gameId: s
-        })
-      }, {
-        layerKey: f.CLAN_SETUP_MODAL_LAYER_KEY
-      })
-    }, [s, t.id, n]),
-    T = a.useCallback(() => (0, l.jsx)(S, {
-      onClick: N
-    }), [N]);
+      }), n(h.ContentDismissActionType.TAKE_ACTION), (0, u.transitionTo)(f.Routes.GUILD_DISCOVERY)
+    }, [t.id, n]),
+    N = a.useCallback(() => (0, l.jsx)(E, {
+      onClick: S
+    }), [S]);
   return (0, l.jsx)(o.default, {
-    className: C.notice,
+    className: m.notice,
     guild: t,
-    onDismissed: () => n(p.ContentDismissActionType.UNKNOWN),
+    onDismissed: () => n(h.ContentDismissActionType.UNKNOWN),
     title: I,
     message: _,
-    cta: T,
-    trackingSource: h.ChannelNoticeCtaSources.CLAN_ADMIN_UPSELL,
-    type: h.ChannelNoticeTypes.CLAN_ADMIN_UPSELL
+    cta: N,
+    trackingSource: f.ChannelNoticeCtaSources.CLAN_ADMIN_UPSELL,
+    type: f.ChannelNoticeTypes.CLAN_ADMIN_UPSELL
   })
 }
