@@ -97,9 +97,9 @@ async function y(e) {
       embeddedActivity: o
     });
     let t = O.default.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === o.applicationId),
-      n = v.INSTALL_LESS_APP_IDS.includes(o.applicationId) && !t,
+      n = v.INSTALL_LESS_APP_IDS.includes(o.applicationId),
       u = (null == r ? void 0 : r.isPrivate()) && (0, p.isActivitiesInTextEnabled)(r, !t, "EmbeddedActivitiesActionCreators#launchEmbeddedActivity");
-    if ((0, R.isActivityInTextStart)(e, o.applicationId, h.default, S.default) || n || u) {
+    if (!t && ((0, R.isActivityInTextStart)(e, o.applicationId, h.default, S.default) || n || u)) {
       let t;
       try {
         n && (t = await (0, _.default)(e, o.applicationId))
