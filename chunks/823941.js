@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return N
   },
   default: function() {
-    return y
+    return O
   }
 });
 var l = a("735250"),
@@ -20,17 +20,17 @@ var l = a("735250"),
   m = a("68972"),
   C = a("754347"),
   p = a("74538"),
-  h = a("884697"),
-  E = a("624377"),
+  E = a("884697"),
+  h = a("624377"),
   g = a("141011"),
   x = a("813083"),
   b = a("67938"),
-  S = a("372654"),
-  v = a("215023"),
-  T = a("474936"),
-  L = a("689938"),
+  T = a("372654"),
+  S = a("215023"),
+  L = a("474936"),
+  v = a("689938"),
   I = a("402739");
-let N = (0, h.getLogoSize)(96),
+let N = (0, E.getLogoSize)(96),
   _ = e => {
     let {
       category: t
@@ -40,13 +40,13 @@ let N = (0, h.getLogoSize)(96),
     return p.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
       children: t.summary
     }) : (0, l.jsx)(l.Fragment, {
-      children: L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
+      children: v.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
         getPremium: e => (0, l.jsx)(u.Clickable, {
           innerRef: r,
           className: I.getPremiumHook,
           onClick: () => {
             (0, d.default)({
-              subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: L.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: a,
               returnRef: r
             })
@@ -63,7 +63,7 @@ let N = (0, h.getLogoSize)(96),
     })
   };
 
-function y(e) {
+function O(e) {
   var t, a;
   let {
     category: s,
@@ -71,14 +71,14 @@ function y(e) {
     hideLimitedTimeBadge: o = !1
   } = e, {
     backgroundColors: c
-  } = (0, E.default)(s.styles), d = !!(null === (t = v.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
+  } = (0, h.default)(s.styles), d = !!(null === (t = S.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
   return s.skuId === i.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(b.ShyBanner, {
     category: s
   }) : (0, l.jsxs)(g.default, {
     asset: s.banner,
     className: n()(I.shopBanner, r),
     style: null != c ? {
-      background: "".concat((0, S.getBackgroundGradient)(c), " border-box border-box"),
+      background: "".concat((0, T.getBackgroundGradient)(c), " border-box border-box"),
       outlineColor: c.border.toHslString()
     } : void 0,
     children: [(0, l.jsxs)("div", {
@@ -90,12 +90,12 @@ function y(e) {
       })]
     }), (0, l.jsx)("img", {
       className: I.categoryLogo,
-      src: (0, h.getCollectiblesAssetURL)(s.logo, {
+      src: (0, E.getCollectiblesAssetURL)(s.logo, {
         size: N
       }),
       alt: s.name,
       style: {
-        maxWidth: null === (a = v.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
+        maxWidth: null === (a = S.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
       }
     }), (0, l.jsx)(u.Text, {
       className: n()(I.summary, {

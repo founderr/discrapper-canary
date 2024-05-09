@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   useProductDetailsDeepLinking: function() {
-    return h
+    return E
   },
   useProductDetailsLinkableRoute: function() {
     return C
@@ -58,15 +58,15 @@ let d = "".concat("#").concat("itemSkuId", "="),
     }
     return () => {}
   },
-  h = e => {
+  E = e => {
     let {
       categories: t,
       isFetchingCategories: a,
       isLayer: u,
       initialItemCardRef: d
-    } = e, m = l.useRef(null), C = (0, s.useLocation)(), h = C.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : C.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
-      analyticsLocations: E
-    } = (0, i.default)(h);
+    } = e, m = l.useRef(null), C = (0, s.useLocation)(), E = C.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : C.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
+      analyticsLocations: h
+    } = (0, i.default)(E);
     l.useEffect(() => {
       if (u) return;
       let e = f.exec(C.hash);
@@ -85,8 +85,8 @@ let d = "".concat("#").concat("itemSkuId", "="),
             let l = p({
               categories: t,
               productSkuId: e,
-              analyticsLocations: E,
-              analyticsSource: h,
+              analyticsLocations: h,
+              analyticsSource: E,
               initialItemCardRef: d
             });
             a.push(l)
@@ -95,5 +95,5 @@ let d = "".concat("#").concat("itemSkuId", "="),
           a.forEach(e => e())
         }
       }
-    }, [u, E, h, t, a, g, d])
+    }, [u, h, E, t, a, g, d])
   }

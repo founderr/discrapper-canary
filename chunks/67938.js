@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   ShyBanner: function() {
-    return E
+    return h
   }
 });
 var l = a("735250");
@@ -18,9 +18,9 @@ var s = a("120356"),
   m = a("26213"),
   C = a("249174"),
   p = a("767247"),
-  h = a("621881");
+  E = a("621881");
 
-function E(e) {
+function h(e) {
   let {
     category: t
   } = e, a = (0, n.useStateFromStores)([o.default], () => o.default.useReducedMotion);
@@ -53,7 +53,7 @@ function E(e) {
       className: c.attributionLogos,
       "aria-label": "Valorant x Discord",
       children: [(0, l.jsx)("img", {
-        src: h,
+        src: E,
         alt: "",
         "aria-hidden": !0
       }), (0, l.jsx)(i.Text, {

@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return L
+    return I
   },
   useLightningCheckoutEligibility: function() {
-    return T
+    return v
   }
 }), a("47120");
 var l = a("735250"),
@@ -20,11 +20,12 @@ var l = a("735250"),
   m = a("63063"),
   C = a("937615"),
   p = a("563132"),
-  h = a("409813"),
-  E = a("333867"),
+  E = a("409813"),
+  h = a("333867"),
   g = a("74179"),
   x = a("981631"),
-  b = a("255094");
+  b = a("689938"),
+  T = a("255094");
 let S = e => {
     let {
       children: t,
@@ -43,7 +44,7 @@ let S = e => {
       children: t
     })
   },
-  v = e => {
+  L = e => {
     let {
       children: t,
       className: a,
@@ -60,7 +61,7 @@ let S = e => {
     })
   };
 
-function T() {
+function v() {
   let {
     defaultPaymentSource: e
   } = (0, g.default)({
@@ -72,48 +73,48 @@ function T() {
   }
 }
 
-function L(e) {
+function I(e) {
   let {
     onPurchaseComplete: t,
     onError: a,
     onReviewPurchase: r,
     paymentSource: g,
-    loadId: T,
-    skuId: L,
-    isGift: I = !1,
-    analyticsLocations: N
+    loadId: v,
+    skuId: I,
+    isGift: N = !1,
+    analyticsLocations: _
   } = e, {
-    step: _,
+    step: O,
     setStep: y,
-    paymentError: O,
+    paymentError: R,
     paymentAuthenticationState: k,
     application: A,
-    skuPricePreviewsById: R
-  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = R[L], F = null != D ? D[g.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : null;
+    skuPricePreviewsById: j
+  } = (0, p.usePaymentContext)(), [P, B] = s.useState(!1), M = s.useRef(null), D = j[I], F = null != D ? D[g.id] : null, w = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : null;
   s.useEffect(() => {
-    _ !== h.Step.REVIEW && y(h.Step.REVIEW)
+    O !== E.Step.REVIEW && y(E.Step.REVIEW)
   }), s.useEffect(() => {
-    k === f.PaymentAuthenticationState.ERROR && a(O)
-  }, [a, O, k]);
-  let w = async () => {
+    k === f.PaymentAuthenticationState.ERROR && a(R)
+  }, [a, R, k]);
+  let H = async () => {
     n()(null != F, "skuPricePreview can't be null"), n()(null != A, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(A.id, L, {
+      await (0, o.purchaseSKU)(A.id, I, {
         expectedAmount: F.amount,
         expectedCurrency: F.currency,
-        isGift: I,
+        isGift: N,
         paymentSource: g,
-        loadId: T
-      }), P(!1), t()
+        loadId: v
+      }), B(!1), t()
     } catch (t) {
       let e = t instanceof c.BillingError ? t : new c.BillingError(t);
       e.code !== d.ErrorCodes.CONFIRMATION_REQUIRED && e.code !== d.ErrorCodes.AUTHENTICATION_REQUIRED && a(t)
     }
-  }, H = s.useCallback(e => {
-    e === h.Step.CONFIRM && (P(!1), t()), y(e)
+  }, U = s.useCallback(e => {
+    e === E.Step.CONFIRM && (B(!1), t()), y(e)
   }, [y, t]);
-  return (0, f.usePaymentStepForAuthentication)(_, k, H), (0, l.jsxs)("div", {
-    className: b.reviewContainer,
+  return (0, f.usePaymentStepForAuthentication)(O, k, U), (0, l.jsxs)("div", {
+    className: T.reviewContainer,
     children: [(0, l.jsx)(i.FormSection, {
       children: (0, l.jsx)(i.FormItem, {
         children: (0, l.jsx)(u.default, {
@@ -126,33 +127,32 @@ function L(e) {
         })
       })
     }), (0, l.jsx)("div", {
-      className: b.legalTerms,
-      children: (0, l.jsxs)("p", {
-        children: ["Non-refundable. By clicking, you are agreeing to our", " ", (0, l.jsx)(i.Anchor, {
-          href: m.default.getArticleURL(x.HelpdeskArticles.PAID_TERMS),
-          children: "Paid Services Terms."
-        })]
+      className: T.legalTerms,
+      children: (0, l.jsx)("p", {
+        children: b.default.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
+          paidURL: m.default.getArticleURL(x.HelpdeskArticles.PAID_TERMS)
+        })
       })
     }), (0, l.jsx)(S, {
-      className: b.buyButton,
-      submitting: j,
+      className: T.buyButton,
+      submitting: P,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
-        P(!0), await w()
+        B(!0), await H()
       },
-      children: null !== M ? "Pay " + M : (0, l.jsx)(i.Spinner, {
+      children: null !== w ? "Pay " + w : (0, l.jsx)(i.Spinner, {
         type: i.Spinner.Type.PULSING_ELLIPSIS
       })
-    }), !j && (0, l.jsx)(v, {
-      className: b.reviewButton,
+    }), !P && (0, l.jsx)(L, {
+      className: T.reviewButton,
       onClick: () => {
-        r(), (0, E.default)({
-          skuId: L,
-          analyticsLocations: N,
-          returnRef: B
+        r(), (0, h.default)({
+          skuId: I,
+          analyticsLocations: _,
+          returnRef: M
         })
       },
-      children: "Review Purchase"
+      children: b.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
     })]
   })
 }

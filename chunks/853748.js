@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   CollectiblesCountdown: function() {
-    return h
+    return E
   }
 }), a("653041");
 var l = a("735250"),
@@ -41,7 +41,7 @@ function p(e) {
     })
   })
 }
-let h = s.memo(function(e) {
+let E = s.memo(function(e) {
   let {
     unpublishedAt: t,
     isVisible: a,

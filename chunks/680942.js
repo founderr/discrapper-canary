@@ -62,15 +62,15 @@ t.default = e => {
     product: t,
     returnRef: a,
     onSuccess: p,
-    tooltipDelay: h,
-    isGiftEasterEggEnabled: E,
+    tooltipDelay: E,
+    isGiftEasterEggEnabled: h,
     disableCustomColor: g = !1
   } = e, {
     analyticsLocations: x
-  } = (0, i.default)(), b = s.useRef(null), S = (0, n.default)(b), v = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
+  } = (0, i.default)(), b = s.useRef(null), T = (0, n.default)(b), S = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
   return (0, l.jsx)(r.Tooltip, {
     text: f.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: h,
+    delay: E,
     children: e => (0, l.jsx)(r.Button, {
       ...e,
       buttonRef: b,
@@ -91,10 +91,10 @@ t.default = e => {
           } : void 0
         })
       },
-      children: E ? (0, l.jsx)(o.SeasonalGiftIcon, {
-        hovered: S,
+      children: h ? (0, l.jsx)(o.SeasonalGiftIcon, {
+        hovered: T,
         isContentDismissed: !0,
-        themeOverride: v,
+        themeOverride: S,
         boxColors: C
       }) : (0, l.jsx)(c.default, {
         width: 24,
