@@ -60,11 +60,11 @@ t.default = e => {
     reportType: n,
     history: G,
     onSelectChild: w,
-    onModalClose: k,
-    multiSelect: B,
+    onModalClose: B,
+    multiSelect: k,
     reportId: V,
     textInput: x
-  } = e, F = U(t, "checkbox"), H = U(t, "text_line_resource"), Y = b(t, "external_link"), j = b(t, "free_text"), W = b(t, "dropdown"), [K, z] = r.useState(!1), [Z, X] = r.useState(""), [Q, q] = r.useState(() => ({})), [J, $] = r.useState(() => ({})), [ee, et] = r.useState((0, o.areRequiredElementsUnfilled)(j, W, F, x, B)), en = function(e, t) {
+  } = e, F = U(t, "checkbox"), H = U(t, "text_line_resource"), Y = b(t, "external_link"), j = b(t, "free_text"), W = b(t, "dropdown"), [K, z] = r.useState(!1), [Z, X] = r.useState(""), [Q, q] = r.useState(() => ({})), [J, $] = r.useState(() => ({})), [ee, et] = r.useState((0, o.areRequiredElementsUnfilled)(j, W, F, x, k)), en = function(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
       i = {
         ...J
@@ -85,8 +85,8 @@ t.default = e => {
     })
   }, [t, w, F, Q, J, j, W]);
   r.useEffect(() => {
-    null != B && q(B), null != x && $(x)
-  }, [B, x]);
+    null != k && q(k), null != x && $(x)
+  }, [k, x]);
   let er = e => {
       if (e === M.AbortCodes.INVALID_FORM_BODY) X(y.default.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
       else X(y.default.Messages.MOBILE_REPORTS_SUBMIT_FAILED)
@@ -193,7 +193,7 @@ t.default = e => {
         switch (e.type) {
           case "done":
           case "cancel":
-            k();
+            B();
             break;
           case "next":
             ei(["", e.target]);
@@ -206,7 +206,7 @@ t.default = e => {
       canNavigateBack: G.length > 0
     }), (0, i.jsx)(a.ModalCloseButton, {
       className: P.closeButton,
-      onClick: k
+      onClick: B
     })]
   })
 }

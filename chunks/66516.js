@@ -31,9 +31,9 @@ var a = s("735250"),
   R = s("594496"),
   M = s("856768"),
   v = s("981631"),
-  L = s("689938");
+  D = s("689938");
 
-function D() {
+function L() {
   N.default.track(v.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
     location_page: v.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS,
     location_object: v.AnalyticsObjects.BADGE
@@ -100,15 +100,15 @@ function j(e) {
       pendingBio: F,
       pendingPronouns: G,
       pendingNickname: y,
-      activityName: L.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
+      activityName: D.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
       activityCharacter: f.FakeActivityCharacter.PHIBI,
-      openPremiumSettings: D
+      openPremiumSettings: L
     };
   return (0, a.jsxs)(T.AnalyticsLocationProvider, {
     value: s,
     children: [(0, a.jsx)(o.Text, {
       variant: "text-sm/normal",
-      children: L.default.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({
+      children: D.default.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({
         helpCenterLink: p.default.getArticleURL(v.HelpdeskArticles.GUILD_PROFILES)
       })
     }), null != t ? (0, a.jsxs)(a.Fragment, {
@@ -118,7 +118,7 @@ function j(e) {
           null != e && (0, A.setCurrentGuild)(e)
         }
       }), (0, a.jsx)(_.default, {
-        previewTitle: L.default.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
+        previewTitle: D.default.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
           guildName: null == t ? void 0 : t.name
         }),
         profilePreview: (0, a.jsx)(m.default, {

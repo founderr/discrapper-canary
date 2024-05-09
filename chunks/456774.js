@@ -39,8 +39,8 @@ var i, r, a = n("735250"),
   b = n("979651"),
   G = n("366695"),
   w = n("940627"),
-  k = n("705600"),
-  B = n("305878"),
+  B = n("705600"),
+  k = n("305878"),
   V = n("119828"),
   x = n("737688"),
   F = n("242315"),
@@ -329,7 +329,7 @@ function er(e) {
     className: J.cardContainer,
     children: [(0, a.jsx)("div", {
       className: l()(J.cardImage, J.cardImageIconContainer),
-      children: (0, a.jsx)(B.default, {
+      children: (0, a.jsx)(k.default, {
         width: 24,
         height: 24,
         className: J.cardImageIcon
@@ -348,7 +348,7 @@ function er(e) {
     }), (0, a.jsx)(et, {
       onClick: O,
       inCall: _
-    }), (0, a.jsx)(B.default, {
+    }), (0, a.jsx)(k.default, {
       width: 12,
       height: 12,
       className: l()(J.cardIcon, J.cardTypeIcon)
@@ -500,7 +500,7 @@ function eo(e) {
     className: J.container,
     children: [(0, a.jsxs)("div", {
       className: J.header,
-      children: [i ? (0, a.jsx)(k.default, {
+      children: [i ? (0, a.jsx)(B.default, {
         guild: t,
         size: 16,
         className: J.rowIconV2

@@ -41,8 +41,8 @@ var i = n("735250"),
   b = n("242315"),
   G = n("944581"),
   w = n("632184"),
-  k = n("170039"),
-  B = n("761374"),
+  B = n("170039"),
+  k = n("761374"),
   V = n("602623"),
   x = n("624138"),
   F = n("510601"),
@@ -121,7 +121,7 @@ function J(e) {
   }), y = (0, u.useStateFromStoresArray)([R.default], () => R.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), P = (0, F.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), x = (0, u.useStateFromStoresArray)([L.default, C.default], () => S.filter(e => L.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != C.default.getDetectableGame(null == e ? void 0 : e.application_id)))), H = Q(U.default, x, d), Y = P ? x.map(e => e.id) : [], W = (0, u.useStateFromStoresArray)([E.default], () => E.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), z = (0, u.useStateFromStoresArray)([D.default], () => W.map(e => D.default.getUser(e)), [W]), Z = (0, u.useStateFromStoresArray)([D.default], () => y.map(e => D.default.getUser(e)), [y]), X = Q(w.default, S.filter(e => !y.includes(e.id) && !W.includes(e.id) && !Y.includes(e.id)), d);
   let J = (t = d, n = h, a = A, 0 === n.length ? null : (0, i.jsxs)("div", {
       className: K.row,
-      children: [(0, i.jsx)(k.default, {
+      children: [(0, i.jsx)(B.default, {
         className: K.activityIcon
       }), (0, i.jsx)(V.default, {
         guildId: t,
@@ -140,7 +140,7 @@ function J(e) {
         })]
       })]
     })),
-    $ = Q(B.default, Z.filter(e => null != e && !W.includes(e.id)), d),
+    $ = Q(k.default, Z.filter(e => null != e && !W.includes(e.id)), d),
     ee = Q(G.default, z, d),
     {
       isMuted: et,

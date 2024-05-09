@@ -11,8 +11,8 @@ var l = s("120356"),
   n = s("481060"),
   r = s("906732"),
   u = s("171368"),
-  d = s("768581"),
-  o = s("981631"),
+  o = s("768581"),
+  d = s("981631"),
   c = s("689938"),
   E = s("683107");
 
@@ -24,7 +24,7 @@ function I(e) {
   } = e, {
     discriminator: I,
     username: T
-  } = t, f = d.default.getUserAvatarURL(t), {
+  } = t, f = o.default.getUserAvatarURL(t), {
     analyticsLocations: R
   } = (0, r.default)();
   return (0, a.jsxs)("div", {
@@ -51,8 +51,8 @@ function I(e) {
           guildId: s,
           sourceAnalyticsLocations: R,
           analyticsLocation: {
-            section: o.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-            object: o.AnalyticsObjects.JOIN_REQUEST
+            section: d.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+            object: d.AnalyticsObjects.JOIN_REQUEST
           }
         })
       },

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return V
   },
   UserPopoutBadgeList: function() {
-    return k
+    return B
   },
   default: function() {
     return x
@@ -45,7 +45,7 @@ var i = n("735250"),
 let G = d.AvatarSizes.SIZE_80,
   w = (0, c.getDecorationSizeForAvatarSize)(G);
 
-function k(e) {
+function B(e) {
   let {
     user: t,
     guildId: n,
@@ -73,7 +73,7 @@ function k(e) {
     })]
   })
 }
-let B = N.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
+let k = N.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
 
 function V(e) {
   let {
@@ -92,7 +92,7 @@ function V(e) {
     hasProfileEffect: C
   } = e, {
     theme: L
-  } = (0, v.useUserProfileThemeContext)(), k = r.useContext(A.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), x = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), F = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
+  } = (0, v.useUserProfileThemeContext)(), B = r.useContext(A.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), x = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), F = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
     analyticsLocations: H
   } = (0, _.default)(), {
     trackUserProfileAction: Y,
@@ -110,7 +110,7 @@ function V(e) {
   }), Q = (0, i.jsx)("div", {
     className: b.avatarHoverTarget,
     ...X,
-    children: (0, i.jsx)(B, {
+    children: (0, i.jsx)(k, {
       src: null != a ? a : Z,
       avatarDecoration: z,
       size: G,
@@ -146,7 +146,7 @@ function V(e) {
           messageId: j,
           roleId: W,
           sourceAnalyticsLocations: H,
-          analyticsLocation: k.location
+          analyticsLocation: B.location
         }), null == f || f()
       },
       children: [Q, !K && function() {
@@ -211,7 +211,7 @@ function x(e) {
       hasBanner: (null == n ? void 0 : n.banner) != null,
       hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
       profileType: M.UserProfileTypes.POPOUT
-    }), (0, i.jsx)(k, {
+    }), (0, i.jsx)(B, {
       user: t,
       guildId: r,
       onClick: s

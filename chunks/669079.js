@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   findGiftCodes: function() {
-    return B
+    return k
   },
   firstLibraryApplicationForGiftCode: function() {
     return z
@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return H
   },
   isGiftCodeEmbed: function() {
-    return k
+    return B
   },
   makeComboId: function() {
     return b
@@ -104,8 +104,8 @@ function G(e) {
 function w(e) {
   return e.replace(/[^A-Za-z0-9]/g, "")
 }
-let k = e => (null == e ? void 0 : e.type) === h.MessageTypes.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === h.MessageEmbedTypes.GIFT,
-  B = e => {
+let B = e => (null == e ? void 0 : e.type) === h.MessageTypes.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === h.MessageEmbedTypes.GIFT,
+  k = e => {
     let t;
     if (null == e) return [];
     let n = new Set;

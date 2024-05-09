@@ -177,12 +177,12 @@ let w = {
     BILLING_HISTORY: "https://support.apple.com/HT201266",
     SUBSCRIPTION_MANAGEMENT: "https://support.apple.com/HT202039"
   },
-  k = {
+  B = {
     SUBSCRIPTION_MANAGEMENT: "https://play.google.com/store/account/subscriptions",
     PAYMENT_SOURCE_MANAGEMENT: "https://play.google.com/store/paymentmethods",
     BILLING_HISTORY: "https://play.google.com/store/account/orderhistory"
   },
-  B = new c.default("PremiumUtils.tsx"),
+  k = new c.default("PremiumUtils.tsx"),
   V = {
     [U.SubscriptionPlans.NONE_MONTH]: [U.SubscriptionPlans.NONE_YEAR, U.SubscriptionPlans.PREMIUM_YEAR_TIER_2, U.SubscriptionPlans.PREMIUM_MONTH_TIER_2, U.SubscriptionPlans.PREMIUM_YEAR_TIER_1, U.SubscriptionPlans.PREMIUM_MONTH_TIER_1],
     [U.SubscriptionPlans.NONE_YEAR]: [U.SubscriptionPlans.PREMIUM_YEAR_TIER_2, U.SubscriptionPlans.PREMIUM_MONTH_TIER_2, U.SubscriptionPlans.PREMIUM_YEAR_TIER_1, U.SubscriptionPlans.PREMIUM_MONTH_TIER_1],
@@ -232,7 +232,7 @@ function H(e) {
         paymentSourceId: t,
         purchaseType: n
       });
-      return (0 === r.length && B.warn("No prices found for planId: ".concat(e, ", paymentSourceId: ").concat(t, ", purchaseType: ").concat(n)), null != i) ? r.find(e => e.currency === i) : r[0]
+      return (0 === r.length && k.warn("No prices found for planId: ".concat(e, ", paymentSourceId: ").concat(t, ", purchaseType: ").concat(n)), null != i) ? r.find(e => e.currency === i) : r[0]
     }(e, {
       paymentSourceId: r,
       purchaseType: i,
@@ -285,13 +285,13 @@ function Y(e) {
     }
     if (null == n.prices) throw Error("No prices returned for ".concat(e, ", is your user in the experiment?"));
     let i = n.prices[t];
-    if (null == i) throw B.info("Purchase types: ".concat(JSON.stringify(Object.keys(n.prices)))), Error("No prices returned for purchase type ".concat(t, " for plan ").concat(e));
+    if (null == i) throw k.info("Purchase types: ".concat(JSON.stringify(Object.keys(n.prices)))), Error("No prices returned for purchase type ".concat(t, " for plan ").concat(e));
     return i
   }(e, n);
   if (null != t) {
     let r = i.paymentSourcePrices[t];
     if (null == r) {
-      B.info("Payment sources IDs: ".concat(JSON.stringify(Object.keys(i.paymentSourcePrices)))), B.info("prices: ".concat(r));
+      k.info("Payment sources IDs: ".concat(JSON.stringify(Object.keys(i.paymentSourcePrices)))), k.info("prices: ".concat(r));
       let a = Error("Missing prices for payment source on subscription plan");
       (0, O.captureBillingException)(a, {
         extra: {
@@ -305,7 +305,7 @@ function Y(e) {
     } else if (0 !== r.length) return r
   }
   if (null == i.countryPrices.prices) {
-    B.info("countryPrices: ".concat(JSON.stringify(i.countryPrices)));
+    k.info("countryPrices: ".concat(JSON.stringify(i.countryPrices)));
     let t = Error("Missing prices for country");
     throw (0, O.captureBillingException)(t, {
       tags: {
@@ -637,10 +637,10 @@ function $(e) {
             num: P
           });
         case y.SubscriptionStatusTypes.PAUSE_PENDING:
-          let k = null != c.pauseEndsAt ? d()(c.pauseEndsAt).diff(c.currentPeriodEnd, "days") : null;
-          return null != k ? G.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING.format({
+          let B = null != c.pauseEndsAt ? d()(c.pauseEndsAt).diff(c.currentPeriodEnd, "days") : null;
+          return null != B ? G.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING.format({
             pauseDate: c.currentPeriodEnd,
-            pauseDuration: k
+            pauseDuration: B
           }) : G.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING_NO_DURATION.format({
             pauseDate: c.currentPeriodEnd
           });
@@ -1159,7 +1159,7 @@ function eR(e, t) {
     case y.PaymentGateways.APPLE:
       return w[t];
     case y.PaymentGateways.GOOGLE:
-      return k[t]
+      return B[t]
   }
   throw Error("Invalid external payment gateway ".concat(e))
 }

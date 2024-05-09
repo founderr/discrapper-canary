@@ -54,8 +54,8 @@ var i, r, a = n("735250"),
   b = n("489863"),
   G = n("228763"),
   w = n("422559"),
-  k = n("713938"),
-  B = n("166148"),
+  B = n("713938"),
+  k = n("166148"),
   V = n("807989"),
   x = n("260430"),
   F = n("668185"),
@@ -168,7 +168,7 @@ function et(e) {
   s.useEffect(() => {
     D.default.isAuthenticated() && !eR && h.default.getExperiments()
   }, [eR]);
-  let [eC, eg] = s.useState(null), [eL, ev] = s.useState(null), [eD, eM] = s.useState(null), [ey, eP] = s.useState(!1), eU = null == eC ? void 0 : eC.guilds, [eb, eG] = s.useState(null != el ? el : null), [ew, ek] = s.useState(null != eu ? eu : null), [eB, eV] = s.useState(y.NONE), ex = s.useMemo(() => (null == eC ? void 0 : eC.user) != null ? new v.default(eC.user) : null, [null == eC ? void 0 : eC.user]), eF = s.useMemo(() => null == eU ? void 0 : eU.find(e => e.id === eb), [eU, eb]), [eH, eY] = s.useState(null), ej = s.useMemo(() => {
+  let [eC, eg] = s.useState(null), [eL, ev] = s.useState(null), [eD, eM] = s.useState(null), [ey, eP] = s.useState(!1), eU = null == eC ? void 0 : eC.guilds, [eb, eG] = s.useState(null != el ? el : null), [ew, eB] = s.useState(null != eu ? eu : null), [ek, eV] = s.useState(y.NONE), ex = s.useMemo(() => (null == eC ? void 0 : eC.user) != null ? new v.default(eC.user) : null, [null == eC ? void 0 : eC.user]), eF = s.useMemo(() => null == eU ? void 0 : eU.find(e => e.id === eb), [eU, eb]), [eH, eY] = s.useState(null), ej = s.useMemo(() => {
     var e;
     return eO && null == eN && null == ed && (null !== (e = null == es ? void 0 : es.length) && void 0 !== e ? e : 0) === 0 && null == $
   }, [eN, eO, null == es ? void 0 : es.length, $, ed]), [eW, eK] = s.useState(null);
@@ -185,7 +185,7 @@ function et(e) {
     } = s.useMemo(() => {
       let e = ej ? null == ez ? void 0 : ez.scopes : es,
         t = (0, U.filterScopes)(null != e ? e : []),
-        n = k.OrderedAccountScopes.filter(e => t.includes(e));
+        n = B.OrderedAccountScopes.filter(e => t.includes(e));
       return {
         requestedScopes: t,
         accountScopes: n
@@ -260,7 +260,7 @@ function et(e) {
           state: en,
           nonce: ei,
           integrationType: eH,
-          permissions: c.remove(eQ, eB),
+          permissions: c.remove(eQ, ek),
           guildId: eH === _.ApplicationIntegrationType.GUILD_INSTALL && null != eb ? eb : void 0,
           channelId: eH === _.ApplicationIntegrationType.GUILD_INSTALL && null != ew ? ew : void 0
         });
@@ -285,7 +285,7 @@ function et(e) {
         let e = t.body;
         (null == e ? void 0 : e.message) != null && "" !== e.message ? eM(Error(e.message)) : eM(e), ev(1), eP(!1)
       }
-    }, [eh, eE, eS, null == eC ? void 0 : eC.application, eF, eA, W, eZ, J, $, ee, et, en, ei, eQ, eB, eb, eH, ew, eJ]),
+    }, [eh, eE, eS, null == eC ? void 0 : eC.application, eF, eA, W, eZ, J, $, ee, et, en, ei, eQ, ek, eb, eH, ew, eJ]),
     e3 = s.useRef(!1),
     e4 = s.useCallback(async () => {
       if (!D.default.isAuthenticated()) {
@@ -307,7 +307,7 @@ function et(e) {
               nonce: ei,
               integrationType: null != eH ? eH : void 0
             });
-            eg((0, G.convertOAuth2Authorization)(e)), er === B.OAuth2Prompts.NONE && e.authorized && !e0 && e2(!0), (0, A.trackWithMetadata)(Z.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
+            eg((0, G.convertOAuth2Authorization)(e)), er === k.OAuth2Prompts.NONE && e.authorized && !e0 && e2(!0), (0, A.trackWithMetadata)(Z.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
               application_id: e.application.id
             })
           } catch (n) {
@@ -345,8 +345,8 @@ function et(e) {
       }
     }, [eN, e6, eW, eO, ej, ed, eL, eR]), s.useEffect(() => {
       if (null == eH || null != eC || null != eD) return;
-      eH === _.ApplicationIntegrationType.USER_INSTALL && (eG(null), ek(null));
-      let e = eZ.filter(e => !k.ValidScopes.includes(e));
+      eH === _.ApplicationIntegrationType.USER_INSTALL && (eG(null), eB(null));
+      let e = eZ.filter(e => !B.ValidScopes.includes(e));
       0 === eZ.length ? eM(Error("No scopes were provided.")) : e.length > 0 ? eM(Error("Invalid scope: ".concat(e[0]))) : (0, w.containsDisallowedPermission)(eQ) ? eM(Error("Invalid permission(s) provided.")) : e4()
     }, [e0, e4, eZ, eQ, eH, eC, eD]), eD instanceof Error) return {
     body: (0, a.jsx)(K.OAuth2Error, {
@@ -400,7 +400,7 @@ function et(e) {
           error: (null !== (i = te[Z.OAuth2Scopes.WEBHOOK_INCOMING]) && void 0 !== i ? i : [])[0],
           selectedChannelId: ew,
           selectedGuildId: eb,
-          onChannelChange: ek
+          onChannelChange: eB
         }) : null]
       }), eZ.includes(Z.OAuth2Scopes.BOT) && !c.equals(eQ, y.NONE) && (f = 2), e6.length > 1 && (T = 0), e7 = ti && null == eF || tn && null == ew;
       break;
@@ -411,7 +411,7 @@ function et(e) {
       l = (0, a.jsx)(F.default, {
         application: eC.application,
         permissions: eQ,
-        deniedPermissions: eB,
+        deniedPermissions: ek,
         onPermissionsChange: (e, t) => {
           eV(n => e ? c.remove(n, t) : c.add(n, t))
         },

@@ -27,8 +27,8 @@ var a = s("735250"),
   R = s("474333"),
   M = s("499150"),
   v = s("709054"),
-  L = s("706454"),
-  D = s("210887"),
+  D = s("706454"),
+  L = s("210887"),
   P = s("418632"),
   j = s("730820"),
   b = s("888256"),
@@ -300,10 +300,10 @@ t.default = () => {
     }),
     t = (0, d.useStateFromStores)([C.default], () => C.default.getBackupCodes()),
     s = (0, d.useStateFromStores)([A.default], () => A.default.hidePersonalInformation),
-    n = (0, d.useStateFromStores)([D.default], () => D.default.theme),
+    n = (0, d.useStateFromStores)([L.default], () => L.default.theme),
     l = (0, h.useIsEligibleForPomelo)(),
     i = (0, g.useForceMigration)(),
-    r = (0, d.useStateFromStores)([L.default], () => L.default.locale);
+    r = (0, d.useStateFromStores)([D.default], () => D.default.locale);
   return (0, a.jsx)(H, {
     theme: n,
     currentUser: e,

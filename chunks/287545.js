@@ -42,7 +42,7 @@ var i = n("512722"),
   G = n("981631"),
   w = n("689938");
 
-function k(e, t, n) {
+function B(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -50,7 +50,7 @@ function k(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let B = {},
+let k = {},
   V = {};
 
 function x(e) {
@@ -80,7 +80,7 @@ async function F(e) {
     T = await (0, E.default)();
   V[n] = e => {
     var t, a, o;
-    B[n] = e, m.default.track(G.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
+    k[n] = e, m.default.track(G.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
       channel_id: r.id,
       guild_id: r.getGuildId(),
       media_session_id: e.mediaSessionIds[0],
@@ -121,7 +121,7 @@ async function H(e) {
     applicationId: r,
     locationId: a,
     instanceId: o
-  } = e, l = B[r], u = f.default.getChannel(i), d = C.default.getEmbeddedActivityDurationMs(i, r), _ = A.default.getCurrentUser(), c = null == u ? void 0 : u.getGuildId(), I = T.default.getSessionId();
+  } = e, l = k[r], u = f.default.getChannel(i), d = C.default.getEmbeddedActivityDurationMs(i, r), _ = A.default.getCurrentUser(), c = null == u ? void 0 : u.getGuildId(), I = T.default.getSessionId();
   if (null != a && null != o && null != I && await s.HTTP.post({
       url: G.Endpoints.ACTIVITY_LEAVE(r, a, o),
       body: {
@@ -161,7 +161,7 @@ async function H(e) {
     activity_user_session_id: l.activityUserSessionId,
     raw_thermal_state: p,
     duration_ms: d
-  }), delete V[r], delete B[r]
+  }), delete V[r], delete k[r]
 }
 
 function Y(e) {
@@ -206,7 +206,7 @@ function K(e) {
     mediaSessionId: t
   } = e;
   if (null == t) return;
-  for (let e in B) B[e].mediaSessionIds.push(t);
+  for (let e in k) k[e].mediaSessionIds.push(t);
   let n = S.default.getChannelId();
   if (null != n) {
     let e = C.default.getSelfEmbeddedActivityForChannel(n),
@@ -214,7 +214,7 @@ function K(e) {
       s = null == e ? void 0 : e.launchId,
       o = (0, M.default)(e);
     if (null != i && null != t && null != o && null != s) {
-      let e = B[i],
+      let e = k[i],
         n = V[i];
       r()(null == e || null == n, "an active session and awaiting session both exist"), null == n || n({
         activitySessionId: o,
@@ -248,7 +248,7 @@ function X(e) {
 }
 
 function Q(e) {
-  return B[e]
+  return k[e]
 }
 class q extends u.default {
   _initialize() {
@@ -258,7 +258,7 @@ class q extends u.default {
     h.default.removeChangeListener(this.handleSelectedChannelUpdate), o.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), o.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", F), o.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", H), o.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE", Y), o.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE_V2", j), o.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), o.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), o.default.unsubscribe("MEDIA_SESSION_JOINED", K), o.default.unsubscribe("CALL_DELETE", z), o.default.unsubscribe("RTC_CONNECTION_STATE", Z)
   }
   constructor(...e) {
-    super(...e), k(this, "handleSelectedChannelUpdate", () => {
+    super(...e), B(this, "handleSelectedChannelUpdate", () => {
       let e = h.default.getVoiceChannelId();
       for (let {
           channelId: t,
@@ -275,7 +275,7 @@ class q extends u.default {
           e.userIds.has(n) && null == C.default.getSelfEmbeddedActivityForChannel(e.channelId) && (0, R.disconnectEmbeddedActivity)(e.channelId, e.applicationId)
         })
       }
-    }), k(this, "handleActivityLaunchFail", e => {
+    }), B(this, "handleActivityLaunchFail", e => {
       let {
         error: t,
         applicationId: n
@@ -305,7 +305,7 @@ class q extends u.default {
           i = w.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE
       }
       this.showLaunchErrorModal(i)
-    }), k(this, "superHandleRPCDisconnect", e => {
+    }), B(this, "superHandleRPCDisconnect", e => {
       let {
         reason: t,
         application: n
@@ -321,7 +321,7 @@ class q extends u.default {
         });
         t.code !== G.RPCCloseCodes.CLOSE_NORMAL && this.showErrorModal(t, i)
       }
-    }), k(this, "handleDeferredOpen", async e => {
+    }), B(this, "handleDeferredOpen", async e => {
       var t, n, i;
       let r;
       let {

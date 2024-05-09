@@ -238,7 +238,7 @@ function w(e) {
   p = !0
 }
 
-function k(e) {
+function B(e) {
   let {
     user: t
   } = e;
@@ -246,12 +246,12 @@ function k(e) {
   f[t.id].lastFetched = 0
 }
 
-function B() {
+function k() {
   I.clear(), f = {}, S = {}
 }
 class V extends _.default {
   initialize() {
-    this.waitFor(c.default), this.syncWith([s.default], B)
+    this.waitFor(c.default), this.syncWith([s.default], k)
   }
   isFetchingProfile(e) {
     return I.has(e)
@@ -308,8 +308,8 @@ class V extends _.default {
       GUILD_DELETE: v,
       GUILD_MEMBER_ADD: D,
       GUILD_MEMBER_REMOVE: D,
-      GUILD_MEMBER_UPDATE: k,
-      USER_UPDATE: k,
+      GUILD_MEMBER_UPDATE: B,
+      USER_UPDATE: B,
       LOGOUT: O
     }), E(this, "loadCache", () => {
       let e = this.readSnapshot(V.LATEST_SNAPSHOT_VERSION);

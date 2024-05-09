@@ -40,7 +40,7 @@ function v(e, t, s) {
   }) : e[t] = s, e
 }
 
-function L(e) {
+function D(e) {
   let {
     code: {
       code: t,
@@ -71,7 +71,7 @@ function L(e) {
     })
   })
 }
-class D extends n.PureComponent {
+class L extends n.PureComponent {
   maskPhoneNumber(e) {
     return null == e ? "" : "".concat("*".repeat(e.length - 4)).concat(e.slice(-4))
   }
@@ -155,7 +155,7 @@ class D extends n.PureComponent {
           children: x.default.Messages.TWO_FA_DOWNLOAD_CODES
         })
       });
-      let n = e => e.map(e => (0, a.jsx)(L, {
+      let n = e => e.map(e => (0, a.jsx)(D, {
         code: e
       }, e.code));
       e = (0, a.jsxs)(o.FormSection, {
@@ -344,7 +344,7 @@ function P(e) {
     togglingSMS: _.default.togglingSMS,
     hasTOTPEnabled: m.default.hasTOTPEnabled()
   }));
-  return (0, a.jsx)(D, {
+  return (0, a.jsx)(L, {
     currentUser: t,
     ...s,
     ...e

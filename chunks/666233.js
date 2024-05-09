@@ -7,8 +7,8 @@ var l = s("442837"),
   n = s("318010"),
   r = s("246364"),
   u = s("489813"),
-  d = s("186078"),
-  o = s("73880"),
+  o = s("186078"),
+  d = s("73880"),
   c = s("196345"),
   E = s("707592"),
   I = s("689938");
@@ -34,11 +34,11 @@ t.default = function(e) {
             formField: e
           }, t);
         case r.VerificationFormFieldTypes.PARAGRAPH:
-          return (0, a.jsx)(o.DisabledParagraphFormField, {
+          return (0, a.jsx)(d.DisabledParagraphFormField, {
             formField: e
           }, t);
         case r.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-          return (0, a.jsx)(d.DisabledMultipleChoiceFormField, {
+          return (0, a.jsx)(o.DisabledMultipleChoiceFormField, {
             formField: e
           }, t)
       }

@@ -32,9 +32,9 @@ var i, r, a = n("735250"),
 let b = (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
   G = (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
   w = 2 * G + (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * b,
-  k = () => Promise.resolve();
+  B = () => Promise.resolve();
 
-function B(e) {
+function k(e) {
   let {
     isFocused: t,
     isHidden: n,
@@ -139,8 +139,8 @@ t.default = s.memo(function(e) {
       }, [a]), E = (0, u.default)({
         id: "expression-suggestions-stickers",
         isEnabled: !0,
-        scrollToStart: k,
-        scrollToEnd: k,
+        scrollToStart: B,
+        scrollToEnd: B,
         orientation: d.Orientations.HORIZONTAL,
         setFocus: c,
         useVirtualFocus: !0
@@ -246,7 +246,7 @@ t.default = s.memo(function(e) {
                     sticker: n,
                     sendability: i
                   } = e;
-                  return (0, a.jsx)(B, {
+                  return (0, a.jsx)(k, {
                     isFocused: V === "".concat(t),
                     isHidden: eu,
                     sendability: i,

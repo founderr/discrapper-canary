@@ -83,20 +83,20 @@ t.default = function(e) {
     location: "UserActivityContainer"
   }, {
     autoTrackExposure: !1
-  }), w = (0, o.useStateFromStores)([N.default], () => a ? N.default.getAnyStreamForUser(n.id) : null), k = G && R.default.can(D.Permissions.CONNECT, b), B = (null == t ? void 0 : t.type) === D.ActivityTypes.HANG_STATUS && k ? b : null, V = (0, o.useStateFromStores)([O.default, C.default, p.default], () => {
+  }), w = (0, o.useStateFromStores)([N.default], () => a ? N.default.getAnyStreamForUser(n.id) : null), B = G && R.default.can(D.Permissions.CONNECT, b), k = (null == t ? void 0 : t.type) === D.ActivityTypes.HANG_STATUS && B ? b : null, V = (0, o.useStateFromStores)([O.default, C.default, p.default], () => {
     var e, i;
-    return (0, u.default)(t, D.ActivityFlags.EMBEDDED) ? O.default.getGuild(null === (e = p.default.getChannel(null === (i = C.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != B ? O.default.getGuild(B.getGuildId()) : null
+    return (0, u.default)(t, D.ActivityFlags.EMBEDDED) ? O.default.getGuild(null === (e = p.default.getChannel(null === (i = C.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? O.default.getGuild(k.getGuildId()) : null
   }), x = (0, o.useStateFromStores)([O.default], () => null != w ? O.default.getGuild(w.guildId) : null), F = (0, o.useStateFromStores)([c.default], () => {
     if (null != t) return null != t.application_id ? c.default.getApplication(t.application_id) : c.default.getApplicationByName(t.name);
     return null
   }), H = (0, E.default)(), Y = (0, h.default)(n), j = H && null != t && Y;
   return (r.useEffect(() => {
-    (null == t ? void 0 : t.type) === D.ActivityTypes.HANG_STATUS && k && L.default.track(D.AnalyticEvents.VIEW_HANG_STATUS, {
+    (null == t ? void 0 : t.type) === D.ActivityTypes.HANG_STATUS && B && L.default.track(D.AnalyticEvents.VIEW_HANG_STATUS, {
       source: "UserProfilePopout",
-      guild_id: null == B ? void 0 : B.guild_id,
-      channel_id: null == B ? void 0 : B.id
+      guild_id: null == k ? void 0 : k.guild_id,
+      channel_id: null == k ? void 0 : k.id
     })
-  }, [null == t ? void 0 : t.type, k, B]), (null == t ? void 0 : t.type) !== D.ActivityTypes.HANG_STATUS || k) ? (0, i.jsx)(g.default, {
+  }, [null == t ? void 0 : t.type, B, k]), (null == t ? void 0 : t.type) !== D.ActivityTypes.HANG_STATUS || B) ? (0, i.jsx)(g.default, {
     ...U,
     activity: t,
     user: n,

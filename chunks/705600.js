@@ -201,7 +201,7 @@ function b(e) {
     b = (0, o.useStateFromStores)([f.default], () => f.default.theme),
     G = (0, I.getGuildTraits)(a),
     w = (0, E.getBadgeCategory)(G),
-    k = r.useCallback(e => {
+    B = r.useCallback(e => {
       G.premium && P && !L && (e.stopPropagation(), e.preventDefault(), (0, T.openGuildBoostingMarketingModal)({
         guildId: a.id,
         location: {
@@ -212,8 +212,8 @@ function b(e) {
     }, [G.premium, P, L, a.id]);
   if (w === E.BadgeCategory.NONE) return null;
   if (w === E.BadgeCategory.CLAN) {
-    var B;
-    let e = (0, _.getClanBadgeUrl)(a.id, null === (B = a.clan) || void 0 === B ? void 0 : B.badge, g);
+    var k;
+    let e = (0, _.getClanBadgeUrl)(a.id, null === (k = a.clan) || void 0 === k ? void 0 : k.badge, g);
     return (0, i.jsx)(d.Tooltip, {
       color: l,
       position: A,
@@ -225,7 +225,7 @@ function b(e) {
       tooltipContentClassName: M.tooltipRemovePadding,
       children: t => (0, i.jsx)(d.Clickable, {
         ...t,
-        onClick: k,
+        onClick: B,
         className: s()(M.clanBadgeContainer, N),
         children: (0, i.jsx)(c.ClanTagBadge, {
           src: e,
@@ -257,7 +257,7 @@ function b(e) {
     }),
     tooltipContentClassName: M.tooltipRemovePadding,
     children: e => (0, i.jsx)(d.Clickable, {
-      onClick: k,
+      onClick: B,
       children: (0, i.jsx)(m.default, {
         ...e,
         className: N,

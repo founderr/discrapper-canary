@@ -7,8 +7,8 @@ var l = s("120356"),
   n = s("924826"),
   r = s("442837"),
   u = s("481060"),
-  d = s("209613"),
-  o = s("430824"),
+  o = s("209613"),
+  d = s("430824"),
   c = s("263704"),
   E = s("855981"),
   I = s("55543"),
@@ -66,11 +66,11 @@ t.default = function(e) {
     guildId: c,
     onScroll: E,
     listRef: I
-  } = e, C = (0, r.useStateFromStores)([o.default], () => o.default.getGuild(c), [c]), x = (0, r.useStateFromStores)([f.default], () => f.default.isFetching()), p = x ? [l.length + 25] : [l.length], g = (0, _.useSelectedGuildJoinRequest)({
+  } = e, C = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(c), [c]), p = (0, r.useStateFromStores)([f.default], () => f.default.isFetching()), x = p ? [l.length + 25] : [l.length], g = (0, _.useSelectedGuildJoinRequest)({
     guildId: c
-  }), j = null !== (t = (0, S.useSubmittedGuildJoinRequestTotal)({
+  }), P = null !== (t = (0, S.useSubmittedGuildJoinRequestTotal)({
     guildId: c
-  })) && void 0 !== t ? t : 0, P = (0, d.default)("guild-join-requests"), v = e => {
+  })) && void 0 !== t ? t : 0, j = (0, o.default)("guild-join-requests"), v = e => {
     let {
       row: t
     } = e, n = l[t];
@@ -85,8 +85,8 @@ t.default = function(e) {
       applicationStatus: s
     }, "".concat(n.userId, "-").concat(n.applicationStatus, "-").concat(t))
   };
-  return x || 0 !== l.length ? (0, a.jsxs)(a.Fragment, {
-    children: [0 !== j && s === R.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsx)(u.Text, {
+  return p || 0 !== l.length ? (0, a.jsxs)(a.Fragment, {
+    children: [0 !== P && s === R.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsx)(u.Text, {
       className: A.title,
       variant: "text-xs/semibold",
       color: "header-secondary",
@@ -108,9 +108,9 @@ t.default = function(e) {
           default:
             return ""
         }
-      })(s, j).toUpperCase()
+      })(s, P).toUpperCase()
     }), (0, a.jsx)(n.ListNavigatorProvider, {
-      navigator: P,
+      navigator: j,
       children: (0, a.jsx)(n.ListNavigatorContainer, {
         children: e => {
           let {
@@ -131,7 +131,7 @@ t.default = function(e) {
             rowHeight: 64,
             renderSection: M,
             renderRow: v,
-            sections: p,
+            sections: x,
             onScroll: E,
             fade: !0,
             ...l

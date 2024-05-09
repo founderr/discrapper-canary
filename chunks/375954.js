@@ -31,9 +31,9 @@ var A = n("995774"),
   b = n("981631");
 let G = new Set,
   w = new E.default("MessageStore"),
-  k = !1;
+  B = !1;
 
-function B() {
+function k() {
   _.default.forEach(e => {
     _.default.commit(e.mutate({
       ready: !1,
@@ -142,7 +142,7 @@ class Y extends(i = u.default.Store) {
     return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
   }
   hasCurrentUserSentMessageSinceAppStart() {
-    return k
+    return B
   }
 }
 s = "MessageStore", (a = "displayName") in(r = Y) ? Object.defineProperty(r, a, {
@@ -163,8 +163,8 @@ s = "MessageStore", (a = "displayName") in(r = Y) ? Object.defineProperty(r, a, 
       }
     }
   },
-  CONNECTION_OPEN: B,
-  OVERLAY_INITIALIZE: B,
+  CONNECTION_OPEN: k,
+  OVERLAY_INITIALIZE: k,
   CACHE_LOADED: function(e) {
     for (let [t, n] of p.default.entries(e.messages)) {
       let e = _.default.getOrCreate(t).addCachedMessages(n, !0);
@@ -405,6 +405,6 @@ s = "MessageStore", (a = "displayName") in(r = Y) ? Object.defineProperty(r, a, 
     let {
       message: t
     } = e, n = U.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (k = !0)
+    null != t && null != t.author && null != n && t.author.id === n.id && (B = !0)
   }
 })

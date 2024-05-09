@@ -27,8 +27,8 @@ var a = s("735250"),
   R = s("86813"),
   M = s("41542"),
   v = s("26290"),
-  L = s("171246"),
-  D = s("41959"),
+  D = s("171246"),
+  L = s("41959"),
   P = s("650919"),
   j = s("981631"),
   b = s("689938"),
@@ -164,7 +164,7 @@ t.default = e => {
       subscribedSinceDate: z,
       currentPeriodEndDate: Q,
       currentPeriodEndLabel: q
-    } = h, Z = (0, L.isApplicationUserSubscription)(l.sku_flags), X = (0, L.isApplicationGuildSubscription)(l.sku_flags), J = l.soft_deleted || null == N || (!X || null == u) && !Z, $ = () => V || Y ? (0, a.jsx)(v.TextBadge, {
+    } = h, Z = (0, D.isApplicationUserSubscription)(l.sku_flags), X = (0, D.isApplicationGuildSubscription)(l.sku_flags), J = l.soft_deleted || null == N || (!X || null == u) && !Z, $ = () => V || Y ? (0, a.jsx)(v.TextBadge, {
       text: b.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CANCELED
     }) : W ? (0, a.jsx)(c.Tooltip, {
       text: b.default.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
@@ -206,8 +206,8 @@ t.default = e => {
           handleStopPropagation: s
         } = e;
         return (0, a.jsxs)(a.Fragment, {
-          children: [null != N && (0, a.jsx)(D.default, {
-            size: D.ApplicationIconSize.SMALL,
+          children: [null != N && (0, a.jsx)(L.default, {
+            size: L.ApplicationIconSize.SMALL,
             className: U.applicationIcon,
             application: N,
             asset: null != l.image_asset ? (0, f.transformStoreAssetFromServer)(l.image_asset) : null

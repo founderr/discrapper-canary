@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return G
   },
   CLAN_BRAND_PALETTE_PRESETS: function() {
-    return B
+    return k
   },
   CLAN_BRAND_PALETTE_PRESETS_BY_NAME: function() {
     return F
@@ -82,7 +82,7 @@ n.r(t), n.d(t, {
     return L
   },
   SUGGESTED_TRAITS_SET: function() {
-    return k
+    return B
   },
   VALORANT_ID: function() {
     return M
@@ -191,9 +191,9 @@ let M = "700136079562375258",
   b = ["Beginner Friendly", "PUGs", "LGBTQIA+", "Parent Friendly", "Work-life Balance", "Streamers"],
   G = new Set([...P, ...U, ...b]),
   w = new Set(T.default.getAvailableLocales().map(e => e.value)),
-  k = new Set(["anime", "fanart", "venting", "movie nights", "gacha games", "skincare", "microwaved food", "board games", "sci-fi books", "sleeping", "brunch pics", "pet pictures", "recipes", "speedrunning", "eating on mic", "k-pop", "deafened", "programming", "study buddies", "DnD", "lore dumping", "sleepy cats", "podcasts", "houseplants", "knitting", "tech", "keyboards", "desk setups", "bad movies", "hiking", "lo-fi chilling", "watch together", "listen alongs", "late night tacos", "drip", "trading", "travel", "cups", "coffee", "F1"]);
+  B = new Set(["anime", "fanart", "venting", "movie nights", "gacha games", "skincare", "microwaved food", "board games", "sci-fi books", "sleeping", "brunch pics", "pet pictures", "recipes", "speedrunning", "eating on mic", "k-pop", "deafened", "programming", "study buddies", "DnD", "lore dumping", "sleepy cats", "podcasts", "houseplants", "knitting", "tech", "keyboards", "desk setups", "bad movies", "hiking", "lo-fi chilling", "watch together", "listen alongs", "late night tacos", "drip", "trading", "travel", "cups", "coffee", "F1"]);
 (d = a || (a = {}))[d.NIGHT_SKY = 0] = "NIGHT_SKY", d[d.CASTLE = 1] = "CASTLE", d[d.WORLD_MAP = 2] = "WORLD_MAP", d[d.SEA_FOAM = 3] = "SEA_FOAM", d[d.WARP_TUNNEL = 4] = "WARP_TUNNEL", d[d.HOUSE = 5] = "HOUSE", d[d.HEIGHTMAP = 6] = "HEIGHTMAP", d[d.MESH = 7] = "MESH", d[d.SPATTER = 8] = "SPATTER", (_ = s || (s = {})).BOULDER = "boulder", _.CASCADE = "cascade", _.THUNDER = "thunder", _.SOUL = "soul", _.MARSH = "marsh", _.VOLCANO = "volcano", _.EARTH = "earth", _.ZEPHYR = "zephyr";
-let B = [{
+let k = [{
     name: "boulder",
     primary: "#8c8d8d",
     secondary: "#d0d0d1"
@@ -226,15 +226,15 @@ let B = [{
     primary: "#4892d5",
     secondary: "#78b6f0"
   }],
-  V = B[0].primary,
-  x = B[0].secondary,
-  F = Object.fromEntries(B.map(e => [e.name, {
+  V = k[0].primary,
+  x = k[0].secondary,
+  F = Object.fromEntries(k.map(e => [e.name, {
     primary: e.primary,
     secondary: e.secondary
   }]));
 
 function H() {
-  return B[Math.floor(Math.random() * B.length)]
+  return k[Math.floor(Math.random() * k.length)]
 }
 
 function Y(e) {

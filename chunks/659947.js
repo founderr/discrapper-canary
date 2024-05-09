@@ -135,7 +135,7 @@ function x(e) {
     visible: !0,
     autocompleterResultTypes: h,
     autocompleterBeforeCreateSearchContext: I
-  }), L = function(e) {
+  }), D = function(e) {
     let t = "" !== e,
       s = (0, l.useStateFromStoresArray)([u.default, d.default, S.default], () => {
         let e = S.default.getGuildId();
@@ -149,7 +149,7 @@ function x(e) {
       }, [t]);
     return t ? null : s
   }(R), {
-    focusedIndex: D,
+    focusedIndex: L,
     setFocusedIndex: P
   } = function(e) {
     let [t, s] = n.useState(0), a = n.useRef(e);
@@ -162,18 +162,18 @@ function x(e) {
     let {
       current: e
     } = g;
-    !(null == e || e.isItemVisible(0, D, !0)) && e.scrollToIndex({
+    !(null == e || e.isItemVisible(0, L, !0)) && e.scrollToIndex({
       section: 0,
-      row: D
+      row: L
     })
-  }, [D]);
-  let j = null != L ? L.length : v.length,
+  }, [L]);
+  let j = null != D ? D.length : v.length,
     b = (() => {
-      if (null != L) {
+      if (null != D) {
         var e;
-        return null === (e = L[D]) || void 0 === e ? void 0 : e.id
+        return null === (e = D[L]) || void 0 === e ? void 0 : e.id
       }
-      let t = v[D];
+      let t = v[L];
       if ((null == t ? void 0 : t.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
     })();
   return (0, a.jsx)("div", {
@@ -197,18 +197,18 @@ function x(e) {
                 break;
               case "enter": {
                 let e = (() => {
-                  if (null != L) return L[D];
-                  let e = v[D];
+                  if (null != D) return D[L];
+                  let e = v[L];
                   if ((null == e ? void 0 : e.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
                 })();
                 null == e ? r(void 0) : r(e.id), s();
                 break
               }
               case "arrowup":
-                0 === D ? P(j - 1) : P(D - 1);
+                0 === L ? P(j - 1) : P(L - 1);
                 break;
               case "arrowdown":
-                D >= j - 1 ? P(0) : P(D + 1)
+                L >= j - 1 ? P(0) : P(L + 1)
             }
           },
           placeholder: m.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
@@ -229,7 +229,7 @@ function x(e) {
           let {
             row: t
           } = e, n = (() => {
-            if (null != L) return L[t];
+            if (null != D) return D[t];
             let e = v[t];
             if ((null == e ? void 0 : e.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
           })();
@@ -240,7 +240,7 @@ function x(e) {
             id: n.id,
             channel: n,
             category: l,
-            focused: D === t,
+            focused: L === t,
             onMouseEnter: () => N.current && P(t),
             onClick: () => {
               r(n.id), s()
