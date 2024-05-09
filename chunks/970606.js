@@ -15,6 +15,9 @@ n.r(t), n.d(t, {
   trackClanApplicationNavigation: function() {
     return R
   },
+  trackClanApplicationViewed: function() {
+    return C
+  },
   trackClanApplyToJoinViewed: function() {
     return u
   },
@@ -252,5 +255,19 @@ function R(e) {
     guild_id: t,
     source: n,
     tab: i
+  })
+}
+
+function C(e) {
+  let {
+    guildId: t,
+    applicationUserId: n,
+    applicationStatus: r
+  } = e;
+  a.default.track(o.AnalyticEvents.CLAN_APPLICATION_VIEWED, {
+    guild_id: t,
+    viewing_user_id: i.default.getId(),
+    application_user_id: n,
+    application_status: r
   })
 }
