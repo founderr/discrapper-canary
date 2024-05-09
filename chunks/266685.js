@@ -53,7 +53,8 @@ let P = s.forwardRef(function(e, t) {
       ctaContent: h.QuestContentCTA.OPEN_GAME_LINK
     })
   }, [G]), z = G.config.variants.includes(L.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)(G) > 0, [G]), Q = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Z = (null === (i = G.userStatus) || void 0 === i ? void 0 : i.completedAt) != null, X = s.useMemo(() => (0, p.hasQuestCollectibleRewards)(G.config), [G.config]), J = P && D, $ = (0, p.getQuestBarHeroAssetUrl)(G), ee = (0, p.getQuestsInstructionsToWinReward)({
-    quest: G
+    quest: G,
+    location: L.QuestsExperimentLocations.QUESTS_BAR
   }), et = (0, E.isWeb)(), en = s.useMemo(() => {
     let e = (0, u.getContrastingColor)(G.config.colors.primary, {
       base: "#ffffff",

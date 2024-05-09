@@ -52,6 +52,7 @@ let L = s.forwardRef(function(e, t) {
     autoTrackExposure: !1
   }), V = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (null === (i = b.userStatus) || void 0 === i ? void 0 : i.completedAt) != null, W = M && y, K = (0, m.getQuestBarHeroAssetUrl)(b), z = (0, m.getQuestsInstructionsToWinReward)({
     quest: b,
+    location: v.QuestsExperimentLocations.QUESTS_BAR,
     useV2Variants: H === S.QuestBarExperimentVariants.V2
   });
   return (0, a.jsx)("div", {

@@ -170,7 +170,8 @@ t.default = function(e) {
           }), ea && !el && !Y && (0, a.jsx)(O.default, {
             autoplay: F,
             quest: z,
-            questContent: I.QuestContent.QUEST_LIVE_STREAM
+            questContent: I.QuestContent.QUEST_LIVE_STREAM,
+            questExperimentLocation: j.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
           }), (0, a.jsxs)("div", {
             className: U.ctas,
             children: [!ea && (0, a.jsxs)(a.Fragment, {

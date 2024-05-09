@@ -1,28 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   useDismissNewQuestBadge: function() {
-    return m
+    return O
   },
   useExpiredQuestsMap: function() {
-    return f
-  },
-  useIsQuestExpired: function() {
-    return S
-  },
-  useQuestCollectibles: function() {
-    return p
-  },
-  useQuestFormattedDate: function() {
     return h
   },
+  useIsQuestExpired: function() {
+    return A
+  },
+  useQuestCollectibles: function() {
+    return C
+  },
+  useQuestFormattedDate: function() {
+    return m
+  },
   useQuestFromActivities: function() {
+    return R
+  },
+  useQuestInstructionTitle: function() {
     return N
   },
   useQuests: function() {
-    return T
+    return S
   },
   useQuestsForSettingsBadge: function() {
-    return A
+    return p
   }
 }), n("47120"), n("653041");
 var i = n("470079"),
@@ -34,11 +37,13 @@ var i = n("470079"),
   u = n("569984"),
   d = n("497505"),
   _ = n("918701"),
-  c = n("977156"),
-  E = n("31055"),
-  I = n("46140");
+  c = n("242755"),
+  E = n("977156"),
+  I = n("31055"),
+  T = n("46140"),
+  f = n("689938");
 
-function T() {
+function S() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
       fetchPolicy: "cache-only"
     },
@@ -51,8 +56,8 @@ function T() {
       isFetchingCurrentQuests: u.default.isFetchingCurrentQuests,
       lastFetchedCurrentQuests: u.default.lastFetchedCurrentQuests
     })),
-    d = (0, c.getIsEligibleForQuests)({
-      location: I.QuestsExperimentLocations.USE_QUESTS
+    d = (0, E.getIsEligibleForQuests)({
+      location: T.QuestsExperimentLocations.USE_QUESTS
     });
   return i.useEffect(() => {
     if ("cache-only" !== e.fetchPolicy)("cache-and-network" === e.fetchPolicy || "cache-or-network" === e.fetchPolicy && 0 === o) && d && !t && !s && (n(!0), (0, l.fetchCurrentQuests)())
@@ -62,11 +67,11 @@ function T() {
   }
 }
 
-function f() {
+function h() {
   let {
     quests: e,
     isFetchingCurrentQuests: t
-  } = T({
+  } = S({
     fetchPolicy: "cache-only"
   }), [n, a] = i.useState(() => new Map(e.map(e => [e.id, (0, _.isQuestExpired)(e)])));
   return i.useEffect(() => {
@@ -89,15 +94,15 @@ function f() {
   }, [e, t]), n
 }
 
-function S(e) {
-  let t = f();
+function A(e) {
+  let t = h();
   return i.useMemo(() => {
     var n;
     return null != e && null !== (n = t.get(e.id)) && void 0 !== n && n
   }, [e, t])
 }
 
-function h(e) {
+function m(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
       dateStyle: "short"
     },
@@ -105,13 +110,24 @@ function h(e) {
   return i.useMemo(() => null == e ? "" : new Date(e).toLocaleDateString(n, t), [e, t, n])
 }
 
-function A() {
+function N(e, t) {
+  return ((0, c.useIsEligibleForQuestPlaytime)({
+    location: t
+  }) && (0, _.hasPlaytimeTaskVariant)({
+    quest: e
+  }) ? f.default.Messages.QUESTS_PLAY_TASK : f.default.Messages.QUESTS_STREAM_TASK).format({
+    minutes: e.config.streamDurationRequirementMinutes,
+    gameTitle: e.config.messages.gameTitle
+  })
+}
+
+function p() {
   let {
     quests: e,
     isFetchingCurrentQuests: t
-  } = T({
+  } = S({
     fetchPolicy: "cache-or-network"
-  }), n = f();
+  }), n = h();
   return i.useMemo(() => {
     let i = [];
     if (t || 0 === e.length) return i;
@@ -133,23 +149,23 @@ function A() {
   }, [e, n, t])
 }
 
-function m() {
-  let e = A();
+function O() {
+  let e = p();
   i.useEffect(() => {
     for (let t of e)(0, l.dismissQuestContent)(t.id, d.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE)
   }, [e])
 }
 
-function N(e) {
-  let t = (0, E.useIsEligibleForMembersListQuestEntrypoint)({
-      location: I.QuestsExperimentLocations.MEMBERS_LIST
+function R(e) {
+  let t = (0, I.useIsEligibleForMembersListQuestEntrypoint)({
+      location: T.QuestsExperimentLocations.MEMBERS_LIST
     }),
     n = (0, a.useStateFromStores)([u.default], () => t ? u.default.quests : null),
     r = i.useMemo(() => (0, _.getQuestsFromActivities)(n, e), [e, n]);
-  return S(r) ? null : r
+  return A(r) ? null : r
 }
 
-function p(e) {
+function C(e) {
   var t;
   let n = (0, _.hasQuestCollectibleRewards)(e),
     {

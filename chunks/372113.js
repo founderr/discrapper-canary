@@ -24,13 +24,14 @@ var a = n("120356"),
   A = n("667105"),
   g = n("87894"),
   M = n("2660"),
-  R = n("981631"),
-  v = n("689938"),
-  O = n("780320");
-let x = (e, t, n, s) => n ? s ? v.default.Messages.COLLECTIBLES_USE_NOW : v.default.Messages.QUESTS_SEE_CODE : e || t ? v.default.Messages.QUESTS_CLAIM_REWARD : v.default.Messages.QUESTS_ACCEPT,
-  L = (e, t, n) => (0, g.isQuestCardInGiftInventory)(e) && !n && "lg" === t ? "text-lg/medium" : "lg" === t ? "text-md/medium" : "sm" === t ? "text-sm/medium" : "text-xs/medium";
+  R = n("46140"),
+  v = n("981631"),
+  O = n("689938"),
+  x = n("780320");
+let L = (e, t, n, s) => n ? s ? O.default.Messages.COLLECTIBLES_USE_NOW : O.default.Messages.QUESTS_SEE_CODE : e || t ? O.default.Messages.QUESTS_CLAIM_REWARD : O.default.Messages.QUESTS_ACCEPT,
+  D = (e, t, n) => (0, g.isQuestCardInGiftInventory)(e) && !n && "lg" === t ? "text-lg/medium" : "lg" === t ? "text-md/medium" : "sm" === t ? "text-sm/medium" : "text-xs/medium";
 
-function D(e) {
+function P(e) {
   let {
     containerSize: t,
     onClick: n,
@@ -39,7 +40,7 @@ function D(e) {
   } = e;
   return "xs" === t ? (0, s.jsx)(o.Clickable, {
     tabIndex: l,
-    className: O.learnMoreLink,
+    className: x.learnMoreLink,
     tag: "span",
     onClick: n,
     children: (0, s.jsx)(o.Text, {
@@ -49,7 +50,7 @@ function D(e) {
     })
   }) : (0, s.jsx)(o.Button, {
     tabIndex: l,
-    wrapperClassName: O.ctaButtonWrapper,
+    wrapperClassName: x.ctaButtonWrapper,
     color: o.ButtonColors.PRIMARY,
     onClick: n,
     children: a
@@ -58,75 +59,72 @@ function D(e) {
 t.default = e => {
   var t, n, a;
   let {
-    quest: P,
-    location: y,
-    size: U,
-    isFocused: j,
-    isQuestExpired: b,
-    isExpanded: B,
-    isAnimating: F
-  } = e, G = (null === (t = P.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, k = (null === (n = P.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, w = (0, N.hasQuestCollectibleRewards)(P.config), H = (null === (a = P.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, V = B || F, Y = k && !H && y !== h.QuestContent.QUESTS_EMBED, K = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), W = x(G, k, H, w), z = k ? v.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : v.default.Messages.QUESTS_ACCEPT_TOOLTIP, Q = (0, A.useHandleClaimQuestsReward)({
-    quest: P,
-    location: y
-  }), q = k && !G, X = (0, i.useStateFromStores)([p.default], () => p.default.isEnrolling(P.id)), Z = () => {
-    if (!k && !G) return (0, T.enrollInQuest)(P.id, {
-      questContent: y,
+    quest: y,
+    location: U,
+    size: j,
+    isFocused: b,
+    isQuestExpired: B,
+    isExpanded: F,
+    isAnimating: G
+  } = e, k = (null === (t = y.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, w = (null === (n = y.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, H = (0, N.hasQuestCollectibleRewards)(y.config), V = (null === (a = y.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, Y = F || G, K = (0, I.useQuestInstructionTitle)(y, R.QuestsExperimentLocations.QUESTS_CARD), W = w && !V && U !== h.QuestContent.QUESTS_EMBED, z = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), Q = L(k, w, V, H), q = w ? O.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : O.default.Messages.QUESTS_ACCEPT_TOOLTIP, X = (0, A.useHandleClaimQuestsReward)({
+    quest: y,
+    location: U
+  }), Z = w && !k, J = (0, i.useStateFromStores)([p.default], () => p.default.isEnrolling(y.id)), $ = () => {
+    if (!w && !k) return (0, T.enrollInQuest)(y.id, {
+      questContent: U,
       questContentCTA: m.QuestContentCTA.ACCEPT_QUEST
     });
-    Q()
-  }, J = (0, i.useStateFromStores)([c.default], () => c.default.locale), $ = y === h.QuestContent.QUESTS_EMBED, ee = (0, g.isQuestCardInGiftInventory)(y), et = ee && w, en = b && !G, es = (0, s.jsx)(C.default, {
-    autoplay: j,
-    className: l()(O.gridImg, {
-      [O.questRewardGiftInventory]: ee && "lg" === U,
-      [O.questRewardEmbed]: $ && "lg" === U,
-      [O.questRewardEmbedSm]: "sm" === U,
-      [O.questRewardEmbedXs]: "xs" === U
+    X()
+  }, ee = (0, i.useStateFromStores)([c.default], () => c.default.locale), et = U === h.QuestContent.QUESTS_EMBED, en = (0, g.isQuestCardInGiftInventory)(U), es = en && H, ea = B && !k, el = (0, s.jsx)(C.default, {
+    autoplay: b,
+    className: l()(x.gridImg, {
+      [x.questRewardGiftInventory]: en && "lg" === j,
+      [x.questRewardEmbed]: et && "lg" === j,
+      [x.questRewardEmbedSm]: "sm" === j,
+      [x.questRewardEmbedXs]: "xs" === j
     }),
-    learnMoreStyle: ee ? null : "text",
-    quest: P,
-    questContent: y
+    learnMoreStyle: en ? null : "text",
+    quest: y,
+    questContent: U
   });
   return (0, s.jsxs)("div", {
-    className: l()(O.outerContainer, {
-      [O.outerContainerSm]: "sm" === U,
-      [O.outerContainerXs]: "xs" === U,
-      [O.outerContainerNoProgress]: !Y
+    className: l()(x.outerContainer, {
+      [x.outerContainerSm]: "sm" === j,
+      [x.outerContainerXs]: "xs" === j,
+      [x.outerContainerNoProgress]: !W
     }),
     style: {
-      visibility: V ? "visible" : "hidden"
+      visibility: Y ? "visible" : "hidden"
     },
-    "aria-hidden": !V,
+    "aria-hidden": !Y,
     children: [(0, s.jsx)(o.Tooltip, {
-      text: en ? v.default.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
-      tooltipContentClassName: O.rewardTileExpirationTooltip,
-      shouldShow: en,
+      text: ea ? O.default.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
+      tooltipContentClassName: x.rewardTileExpirationTooltip,
+      shouldShow: ea,
       children: e => (0, s.jsxs)("div", {
-        className: O.rewardTileWrapper,
+        className: x.rewardTileWrapper,
         ...e,
-        children: [b && (0, s.jsx)("div", {
-          className: O.rewardTileExpired,
+        children: [B && (0, s.jsx)("div", {
+          className: x.rewardTileExpired,
           children: (0, s.jsx)(r.CircleExclamationPointIcon, {
             color: o.tokens.colors.WHITE
           })
-        }), et ? (0, s.jsx)(M.default, {
-          questConfig: P.config,
-          fallback: es,
-          isFocused: j
-        }) : es]
+        }), es ? (0, s.jsx)(M.default, {
+          questConfig: y.config,
+          fallback: el,
+          isFocused: b
+        }) : el]
       })
     }), (0, s.jsxs)("div", {
-      className: l()(O.gridText, O.taskDetails),
+      className: l()(x.gridText, x.taskDetails),
       children: [(0, s.jsx)(o.Text, {
-        variant: L(y, U, k),
-        className: O.taskInstructions,
-        children: b ? v.default.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({
-          questName: P.config.messages.questName
-        }) : v.default.Messages.QUESTS_STREAM_TASK.format({
-          minutes: P.config.streamDurationRequirementMinutes,
-          gameTitle: P.config.messages.gameTitle
-        })
+        variant: D(U, j, w),
+        className: x.taskInstructions,
+        children: B ? O.default.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({
+          questName: y.config.messages.questName
+        }) : K
       }), (0, s.jsx)(o.Text, {
-        variant: "lg" === U ? "text-sm/medium" : "text-xs/medium",
+        variant: "lg" === j ? "text-sm/medium" : "text-xs/medium",
         color: "text-muted",
         children: function(e) {
           var t, n, s, a, l, i;
@@ -147,17 +145,17 @@ t.default = e => {
                 idx: null === (a = r.userStatus) || void 0 === a ? void 0 : a.claimedTier
               }) : null,
               t = null !== (l = null == e ? void 0 : e.messages.nameWithArticle) && void 0 !== l ? l : null;
-            return null != t ? v.default.Messages.QUEST_REWARD_COMPLETED_CLAIMED.format({
+            return null != t ? O.default.Messages.QUEST_REWARD_COMPLETED_CLAIMED.format({
               reward: t,
               date: f
-            }) : v.default.Messages.QUEST_REWARD_COMPLETED.format({
+            }) : O.default.Messages.QUEST_REWARD_COMPLETED.format({
               reward: r.config.messages.rewardNameWithArticle,
               date: f
             })
           }
-          if (d) return m ? v.default.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
+          if (d) return m ? O.default.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
             date: f
-          }) : v.default.Messages.QUEST_REWARD_COMPLETED.format({
+          }) : O.default.Messages.QUEST_REWARD_COMPLETED.format({
             reward: r.config.messages.rewardNameWithArticle,
             date: f
           });
@@ -165,60 +163,60 @@ t.default = e => {
             quest: r,
             idx: 0
           }) : null;
-          return u ? v.default.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
+          return u ? O.default.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
             reward: null !== (i = null == T ? void 0 : T.messages.nameWithArticle) && void 0 !== i ? i : r.config.messages.rewardNameWithArticle
-          }) : null != T && null != T.approximateCount ? v.default.Messages.QUEST_REWARD_TIERED.format({
+          }) : null != T && null != T.approximateCount ? O.default.Messages.QUEST_REWARD_TIERED.format({
             maxReward: T.messages.nameWithArticle,
             maxRewardCount: (0, _.humanizeValue)(T.approximateCount, o),
-            helpCenterLink: E.default.getArticleURL(R.HelpdeskArticles.QUESTS_LEARN_MORE)
-          }) : v.default.Messages.QUEST_REWARD.format({
+            helpCenterLink: E.default.getArticleURL(v.HelpdeskArticles.QUESTS_LEARN_MORE)
+          }) : O.default.Messages.QUEST_REWARD.format({
             reward: r.config.messages.rewardNameWithArticle
           })
         }({
-          quest: P,
-          locale: J,
-          isQuestExpired: b
+          quest: y,
+          locale: ee,
+          isQuestExpired: B
         })
       })]
     }), (0, s.jsxs)("div", {
-      className: l()(O.ctaButtonContainer, O.gridCtaButtons),
-      children: [!ee && (0, s.jsx)(D, {
-        containerSize: U,
+      className: l()(x.ctaButtonContainer, x.gridCtaButtons),
+      children: [!en && (0, s.jsx)(P, {
+        containerSize: j,
         onClick: () => {
-          u.default.open(R.UserSettingsSections.INVENTORY), (0, m.trackQuestContentClicked)({
-            questId: P.id,
-            questContent: y,
+          u.default.open(v.UserSettingsSections.INVENTORY), (0, m.trackQuestContentClicked)({
+            questId: y.id,
+            questContent: U,
             questContentCTA: m.QuestContentCTA.LEARN_MORE
           })
         },
-        children: v.default.Messages.QUESTS_LEARN_MORE_V2
-      }), (!b || G) && (0, s.jsx)(o.Tooltip, {
-        text: z,
-        tooltipContentClassName: O.ctaTooltipCopy,
-        shouldShow: !H && !G,
-        children: e => G && !K ? (0, s.jsx)(f.default, {
+        children: O.default.Messages.QUESTS_LEARN_MORE_V2
+      }), (!B || k) && (0, s.jsx)(o.Tooltip, {
+        text: q,
+        tooltipContentClassName: x.ctaTooltipCopy,
+        shouldShow: !V && !k,
+        children: e => k && !z ? (0, s.jsx)(f.default, {
           ...e,
-          wrapperClassName: O.ctaButtonWrapper,
+          wrapperClassName: x.ctaButtonWrapper,
           color: o.ButtonColors.BRAND,
-          disabled: q,
-          submitting: X,
-          onClick: Z,
-          children: W
+          disabled: Z,
+          submitting: J,
+          onClick: $,
+          children: Q
         }) : (0, s.jsx)(o.Button, {
           ...e,
-          wrapperClassName: O.ctaButtonWrapper,
+          wrapperClassName: x.ctaButtonWrapper,
           color: o.ButtonColors.BRAND,
-          disabled: q,
-          submitting: X,
-          onClick: Z,
-          children: W
+          disabled: Z,
+          submitting: J,
+          onClick: $,
+          children: Q
         })
-      }, z)]
-    }), Y && (0, s.jsx)(S.default, {
-      className: O.gridProgressBar,
-      color: G ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
-      quest: P,
-      isInventory: ee
+      }, q)]
+    }), W && (0, s.jsx)(S.default, {
+      className: x.gridProgressBar,
+      color: k ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
+      quest: y,
+      isInventory: en
     })]
   })
 }
