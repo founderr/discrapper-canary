@@ -487,8 +487,9 @@ function $(e, t, n, i) {
       contextState: a,
       userState: o,
       applicationStates: n.allowApplicationState ? l : new Map,
-      sortOptions: n.sortOptions
-    }), [i, t.text, t.builtIns, r, n.scoreMethod, n.allowEmptySections, n.sortOptions, n.allowApplicationState, a, o, l, u])
+      sortOptions: n.sortOptions,
+      singleApplicationId: n.applicationId
+    }), [i, t.text, t.builtIns, r, n.scoreMethod, n.allowEmptySections, n.sortOptions, n.allowApplicationState, n.applicationId, a, o, l, u])
   }(e, n, i), u = (0, O.useTopCommands)({
     channel: e,
     guild: t
@@ -536,74 +537,74 @@ let ee = Object.freeze({
 });
 
 function et(e) {
+  var t, n, i, r, a, s;
   let {
-    permissionContext: t,
-    contextState: n,
-    userState: i,
-    applicationStates: r,
-    text: a,
-    builtIns: s = g.BuiltInCommandFilter.ALLOW,
-    allowApplicationCommands: o = !0,
-    singleApplicationId: u,
-    allowEmptySections: d = !1,
-    scoreMethod: _ = g.ScoreMethod.NONE,
-    sortOptions: c = ee
+    permissionContext: o,
+    contextState: u,
+    userState: d,
+    applicationStates: _,
+    text: c,
+    builtIns: E = g.BuiltInCommandFilter.ALLOW,
+    allowApplicationCommands: T = !0,
+    singleApplicationId: f,
+    allowEmptySections: h = !1,
+    scoreMethod: m = g.ScoreMethod.NONE,
+    sortOptions: N = ee
   } = e, {
-    commandType: E
-  } = t, T = null == a ? void 0 : a.toLowerCase(), f = null == T ? void 0 : T.split(" "), h = s === g.BuiltInCommandFilter.ONLY_TEXT, m = s !== g.BuiltInCommandFilter.DENY ? (0, p.getBuiltInCommands)(E, !0, h) : [], N = [], O = {
-    permissionContext: t,
-    query: T,
-    splitQuery: f,
-    allowEmptySections: d,
-    scoreMethod: _
+    commandType: O
+  } = o, C = null == c ? void 0 : c.toLowerCase(), L = null == C ? void 0 : C.split(" "), v = E === g.BuiltInCommandFilter.ONLY_TEXT, D = E !== g.BuiltInCommandFilter.DENY ? (0, p.getBuiltInCommands)(O, !0, v) : [], M = [], P = {
+    permissionContext: o,
+    query: C,
+    splitQuery: L,
+    allowEmptySections: h,
+    scoreMethod: m
   };
-  if (o) {
-    var C, L, v, D, M;
-    let e = null !== (v = null === (C = n.result) || void 0 === C ? void 0 : C.sections) && void 0 !== v ? v : {},
-      t = null !== (D = null === (L = i.result) || void 0 === L ? void 0 : L.sections) && void 0 !== D ? D : {},
-      a = new Set;
+  if (T) {
+    let e = null !== (r = null === (n = u.result) || void 0 === n ? void 0 : n.sections) && void 0 !== r ? r : {},
+      t = null !== (a = null === (i = d.result) || void 0 === i ? void 0 : i.sections) && void 0 !== a ? a : {},
+      o = new Set;
     for (let t in e) {
       let n = e[t];
-      (null == u || n.descriptor.id === u) && a.add(t)
+      (null == f || n.descriptor.id === f) && o.add(t)
     }
     for (let e in t) {
       let n = t[e];
-      (null == u || n.descriptor.id === u) && a.add(e)
+      (null == f || n.descriptor.id === f) && o.add(e)
     }
-    let s = new Map;
-    for (let [e, t] of r)
-      if (null == u || e === u) {
-        let e = null === (M = t.result) || void 0 === M ? void 0 : M.sections;
+    let c = new Map;
+    for (let [e, t] of _)
+      if (null == f || e === f) {
+        let e = null === (s = t.result) || void 0 === s ? void 0 : s.sections;
         if (null != e)
-          for (let t of Object.keys(e)) a.add(t), s.set(t, e[t])
-      } for (let n of Array.from(a)) {
+          for (let t of Object.keys(e)) o.add(t), c.set(t, e[t])
+      } for (let n of Array.from(o)) {
       let i, r;
       let a = e[n],
-        o = t[n],
-        u = s.get(n);
-      if (null != a && null != o) {
-        for (let e in i = o.descriptor, r = [], o.commands) {
-          let t = o.commands[e];
+        s = t[n],
+        o = c.get(n);
+      if (null != a && null != s) {
+        for (let e in i = s.descriptor, r = [], s.commands) {
+          let t = s.commands[e];
           r.push(t)
         }
         for (let e in a.commands)
-          if (!(e in o.commands)) {
+          if (!(e in s.commands)) {
             let t = a.commands[e];
             r.push(t)
           }
-      } else null != a ? (i = a.descriptor, r = Object.values(a.commands)) : null != o ? (i = o.descriptor, r = Object.values(o.commands)) : null != u && (i = u.descriptor, r = Object.values(u.commands));
+      } else null != a ? (i = a.descriptor, r = Object.values(a.commands)) : null != s ? (i = s.descriptor, r = Object.values(s.commands)) : null != o && (i = o.descriptor, r = Object.values(o.commands));
       l()(null != i, "Failed to select application descriptor"), l()(null != r, "Failed to select list of application commands");
-      let d = en(i, r, O);
-      null != d && N.push(d)
+      let u = en(i, r, P);
+      null != u && M.push(u)
     }
-    c.applications.useFrecency && S.FrecencyUserSettingsActionCreators.loadIfNecessary(), N.sort((e, t) => {
-      if (c.applications.useScore && _ === g.ScoreMethod.APPLICATION_ONLY) {
+    N.applications.useFrecency && S.FrecencyUserSettingsActionCreators.loadIfNecessary(), M.sort((e, t) => {
+      if (N.applications.useScore && m === g.ScoreMethod.APPLICATION_ONLY) {
         var n, i, r, a;
         let s = null !== (r = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== r ? r : Number.MAX_VALUE,
           o = null !== (a = null === (i = t.data[0]) || void 0 === i ? void 0 : i.score) && void 0 !== a ? a : Number.MAX_VALUE;
         if (s !== o) return s - o
       }
-      if (c.applications.useFrecency) {
+      if (N.applications.useFrecency) {
         let n = I.default.getScoreWithoutLoadingLatest(e.section.id),
           i = I.default.getScoreWithoutLoadingLatest(t.section.id);
         if (n !== i) return i - n
@@ -611,43 +612,43 @@ function et(e) {
       return el(e.section.name, t.section.name)
     })
   }
-  if (m.length > 0 || !0 === d) {
-    let e = en(p.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN], m, O);
-    null != e && N.push(e)
+  if (D.length > 0 || !0 === h) {
+    let e = en(p.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN], D, P);
+    null != e && M.push(e)
   }
-  let P = N.flatMap(e => e.data.map(t => ({
+  let U = M.flatMap(e => e.data.map(t => ({
     ...t,
     section: e.section
   })));
-  if (_ === g.ScoreMethod.COMMAND_ONLY || _ === g.ScoreMethod.COMMAND_OR_APPLICATION) {
-    let e = t.context,
-      n = A.default.getGuild(t.context.guild_id);
-    c.commands.useFrecency && S.FrecencyUserSettingsActionCreators.loadIfNecessary(), P.sort((t, i) => {
-      if (c.commands.useScore) {
+  if (m === g.ScoreMethod.COMMAND_ONLY || m === g.ScoreMethod.COMMAND_OR_APPLICATION) {
+    let e = o.context,
+      t = A.default.getGuild(o.context.guild_id);
+    N.commands.useFrecency && S.FrecencyUserSettingsActionCreators.loadIfNecessary(), U.sort((n, i) => {
+      if (N.commands.useScore) {
         var r, a;
-        let e = null !== (r = t.score) && void 0 !== r ? r : 0,
-          n = null !== (a = i.score) && void 0 !== a ? a : 0;
-        if (e !== n) return e - n
+        let e = null !== (r = n.score) && void 0 !== r ? r : 0,
+          t = null !== (a = i.score) && void 0 !== a ? a : 0;
+        if (e !== t) return e - t
       }
-      if (c.commands.useFrecency) {
+      if (N.commands.useFrecency) {
         let r = R.default.getScoreWithoutLoadingLatest({
             channel: e,
-            guild: n
-          }, t),
+            guild: t
+          }, n),
           a = R.default.getScoreWithoutLoadingLatest({
             channel: e,
-            guild: n
+            guild: t
           }, i);
         if (r !== a) return a - r
       }
-      return el(t.displayName, i.displayName)
+      return el(n.displayName, i.displayName)
     })
   }
   return {
-    commands: P,
-    descriptors: N.map(e => e.section),
-    sectionedCommands: N,
-    loading: (null == n ? void 0 : n.fetchState.fetching) === !0 || (null == i ? void 0 : i.fetchState.fetching) === !0
+    commands: U,
+    descriptors: M.map(e => e.section),
+    sectionedCommands: M,
+    loading: (null == u ? void 0 : u.fetchState.fetching) === !0 || (null == d ? void 0 : d.fetchState.fetching) === !0 || null != f && (null === (t = _.get(f)) || void 0 === t ? void 0 : t.fetchState.fetching) === !0
   }
 }
 
