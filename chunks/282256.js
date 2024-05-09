@@ -12,21 +12,22 @@ t.default = l.memo(function(e) {
   let {
     children: t,
     isOverlay: n,
-    ...s
-  } = e, c = l.useRef(null), [f, h] = l.useState({
+    contextGuildId: s,
+    ...c
+  } = e, f = l.useRef(null), [h, m] = l.useState({
     maskImage: "none"
-  }), m = l.useCallback(() => {
+  }), p = l.useCallback(() => {
     var e, t;
     if (n) {
-      h({
+      m({
         maskImage: "none"
       });
       return
     }
-    let a = null === (e = p.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
-      l = null === (t = c.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+    let a = null === (e = E.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
+      l = null === (t = f.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
     if (null == a || null == l) {
-      h({
+      m({
         maskImage: "none"
       });
       return
@@ -34,35 +35,36 @@ t.default = l.memo(function(e) {
     let s = l.right - a.right,
       i = l.width - s;
     if (i > l.width) {
-      h({
+      m({
         maskImage: "none"
       });
       return
     }
-    h({
+    m({
       maskImage: "linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) ".concat(i, "px)")
     })
-  }, []), p = (0, o.useResizeObserver)(m), E = (0, u.useShouldDisplayClanTag)(s.userId);
+  }, []), E = (0, o.useResizeObserver)(p), C = (0, u.useShouldDisplayClanTag)(c.userId, s);
   l.useEffect(() => {
-    null != p.current && m()
-  }, [E]);
-  let C = (0, r.useIsVisible)(m);
+    null != E.current && p()
+  }, [C]);
+  let g = (0, r.useIsVisible)(p);
   return (0, a.jsxs)("div", {
     className: i()(d.container, n && d.isOverlayContainer),
-    ref: p,
+    ref: E,
     children: [(0, a.jsx)("div", {
       className: d.usernameContainer,
       children: t
     }), (0, a.jsx)("div", {
       className: d.chipletParent,
-      ref: C,
+      ref: g,
       children: (0, a.jsx)("span", {
-        className: i()(d.chipletContainer, !E && n && d.noPadding),
-        ref: c,
-        style: f,
+        className: i()(d.chipletContainer, !C && n && d.noPadding),
+        ref: f,
+        style: h,
         children: (0, a.jsx)(u.default, {
-          ...s,
-          className: i()(s.className, n && d.isOverlayTag)
+          ...c,
+          contextGuildId: s,
+          className: i()(c.className, n && d.isOverlayTag)
         })
       })
     })]

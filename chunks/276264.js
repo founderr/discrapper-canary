@@ -172,6 +172,7 @@ t.default = function(e) {
       }), (0, i.jsx)(d.default, {
         clan: null == b ? void 0 : b.clan,
         userId: null == b ? void 0 : b.id,
+        contextGuildId: Y,
         disableTooltip: !0,
         className: D.clanTag,
         profileViewedAnalytics: eT

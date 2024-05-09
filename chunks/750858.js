@@ -83,6 +83,7 @@ function C(e) {
         children: [G + w, (0, a.jsx)(T.default, {
           clan: n.clan,
           userId: i.author.id,
+          contextGuildId: U,
           className: O.clanTagChiplet,
           profileViewedAnalytics: H
         })]
@@ -136,6 +137,7 @@ function C(e) {
     }) : null, t, !o && (0, a.jsx)(T.default, {
       clan: n.clan,
       userId: i.author.id,
+      contextGuildId: U,
       className: O.clanTagChiplet,
       profileViewedAnalytics: H
     }), null != W ? (0, a.jsx)(a.Fragment, {

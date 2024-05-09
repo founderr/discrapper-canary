@@ -127,8 +127,9 @@ class H extends(a = s.Component) {
       mute: i,
       serverMute: o,
       isGuest: u,
-      isOverlay: d
-    } = this.props, c = (0, l.jsxs)("div", {
+      isOverlay: d,
+      guildId: c
+    } = this.props, f = (0, l.jsxs)("div", {
       className: r()(s, {
         [U.username]: !0,
         [U.usernameSpeaking]: !i && !o && a
@@ -137,9 +138,10 @@ class H extends(a = s.Component) {
         className: U.guestSuffix,
         children: ["\xa0", b.default.Messages.GUEST_NAME_SUFFIX]
       }) : ""]
-    }), f = {
+    }), h = {
       clan: t.clan,
       userId: t.id,
+      contextGuildId: c,
       isOverlay: d,
       disableTooltip: !0,
       className: r()(U.clanTag, d && U.isOverlay),
@@ -150,8 +152,8 @@ class H extends(a = s.Component) {
     };
     return !n || d ? (0, l.jsx)(l.Fragment, {
       children: (0, l.jsx)(C.default, {
-        ...f,
-        children: c
+        ...h,
+        children: f
       })
     }) : null
   }
