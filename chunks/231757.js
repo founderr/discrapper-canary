@@ -18,7 +18,8 @@ function _(e) {
   let {
     platformType: t,
     location: _,
-    overrideUrl: c
+    overrideUrl: c,
+    successRedirect: E
   } = e;
   if (t === d.PlatformTypes.LEAGUE_OF_LEGENDS && (t = d.PlatformTypes.RIOT_GAMES), t === d.PlatformTypes.CRUNCHYROLL) {
     a.showModal([null != _ ? _ : "unknown"]);
@@ -50,12 +51,14 @@ function _(e) {
       href: c,
       onConfirm: () => {
         (0, u.openProviderAuthorize)(t, {
-          location: _
+          location: _,
+          successRedirect: E
         }, c)
       }
     });
     return
   }(0, u.openProviderAuthorize)(t, {
-    location: _
+    location: _,
+    successRedirect: E
   })
 }

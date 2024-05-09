@@ -26082,15 +26082,15 @@ html.disable-forced-colors * {
 
 .emailVerificationModal_a12ecf .title_de0f4f {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     margin-top: 100px;
     color: var(--header-primary)
 }
 
 .emailVerificationModal_a12ecf .body_fe5b0e {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     text-align: center;
     color: var(--header-secondary)
 }
