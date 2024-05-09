@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return N
   }
 }), n("47120");
 var i = n("735250"),
@@ -9,71 +9,91 @@ var i = n("735250"),
   a = n("442837"),
   s = n("481060"),
   o = n("570140"),
-  l = n("587446"),
-  u = n("996073"),
-  d = n("153124"),
-  _ = n("327943"),
-  c = n("401460"),
-  E = n("441319"),
-  I = n("526761"),
-  T = n("689938"),
-  f = n("587092");
+  l = n("605236"),
+  u = n("837741"),
+  d = n("587446"),
+  _ = n("996073"),
+  c = n("153124"),
+  E = n("327943"),
+  I = n("997945"),
+  T = n("401460"),
+  f = n("441319"),
+  S = n("921944"),
+  h = n("526761"),
+  A = n("689938"),
+  m = n("587092");
 
-function S(e) {
+function N(e) {
   let {
     className: t,
     disabled: n,
-    renderCTAButtons: S
-  } = e, [h, A] = (0, a.useStateFromStoresArray)([_.default], () => [_.default.getCurrentDesktopIcon(), _.default.isEditorOpen]), m = r.useRef(null);
-  (0, u.default)(m, I.AppearanceScrollPositions.CUSTOM_APP_ICONS);
-  let N = (0, d.useUID)(),
-    p = (0, s.useRadioGroup)({
+    renderCTAButtons: N
+  } = e, [p, O] = (0, a.useStateFromStoresArray)([E.default], () => [E.default.getCurrentDesktopIcon(), E.default.isEditorOpen]), R = r.useRef(null);
+  (0, _.default)(R, h.AppearanceScrollPositions.CUSTOM_APP_ICONS);
+  let C = (0, c.useUID)(),
+    g = (0, s.useRadioGroup)({
       orientation: "horizontal",
-      labelledBy: N
+      labelledBy: C
     }),
-    O = e => {
+    L = e => {
       o.default.dispatch({
         type: "APP_ICON_UPDATED",
         id: e
+      });
+      let t = I.NewAppIconsDCMap.get(e);
+      null != t && (0, l.markDismissibleContentAsDismissed)(t, {
+        dismissAction: S.ContentDismissActionType.TAKE_ACTION
       })
+    },
+    {
+      enabled: v
+    } = (0, u.useBrandRefreshPerksExperiment)({
+      location: "AppIconSelectionGroup"
+    }),
+    D = (e, t) => t === I.PremiumAppIconIds.BLURPLE_TWILIGHT ? v && !e : !0 !== e,
+    M = e => {
+      let t = I.NewAppIconsDCMap.get(e);
+      return null != t && !(0, l.isDismissibleContentDismissed)(t)
     };
   return (0, i.jsx)("div", {
-    ref: m,
+    ref: R,
     children: (0, i.jsx)("div", {
-      ...p,
-      className: f.__invalid_container,
+      ...g,
+      className: m.__invalid_container,
       children: (0, i.jsxs)("div", {
         className: t,
         children: [(0, i.jsxs)("div", {
-          className: f.header,
+          className: m.header,
           children: [(0, i.jsxs)("div", {
-            className: f.headings,
-            children: [A ? null : (0, i.jsxs)("div", {
-              className: f.title,
+            className: m.headings,
+            children: [O ? null : (0, i.jsxs)("div", {
+              className: m.title,
               children: [(0, i.jsx)(s.Heading, {
                 variant: "text-md/medium",
-                children: T.default.Messages.APP_ICON_SETTINGS_TITLE
-              }), (0, i.jsx)(l.default, {
-                className: f.premiumIcon
+                children: A.default.Messages.APP_ICON_SETTINGS_TITLE
+              }), (0, i.jsx)(d.default, {
+                className: m.premiumIcon
               })]
             }), (0, i.jsx)(s.Heading, {
               variant: "text-sm/normal",
-              children: T.default.Messages.APP_ICON_SETTINGS_DESCRIPTION
+              children: A.default.Messages.APP_ICON_SETTINGS_DESCRIPTION
             })]
-          }), null == S ? void 0 : S()]
+          }), null == N ? void 0 : N()]
         }), (0, i.jsx)("div", {
-          className: f.presets,
-          children: E.ICONS.filter(e => {
+          className: m.presets,
+          children: f.ICONS.filter(e => {
             let {
-              isHidden: t
+              isHidden: t,
+              id: n
             } = e;
-            return !0 !== t
-          }).map((e, t) => (0, i.jsx)(c.default, {
+            return D(t, n)
+          }).map((e, t) => (0, i.jsx)(T.default, {
             icon: e,
-            isSelected: h === e.id,
-            onSelect: e => O(e),
+            isSelected: p === e.id,
+            onSelect: e => L(e),
             disabled: n,
-            tabIndex: 0 !== t || n ? void 0 : 0
+            tabIndex: 0 !== t || n ? void 0 : 0,
+            isNew: M(e.id)
           }, e.id))
         })]
       })

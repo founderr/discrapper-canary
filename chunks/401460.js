@@ -31,20 +31,23 @@ function A(e) {
     onSelect: a,
     isSelected: o = !1,
     tabIndex: l,
-    children: c
-  } = e, [T, S] = r.useState(E.ICONS_BY_ID[t].name), A = t === _.PremiumAppIconIds.PIRATE, m = (0, u.useRadioItem)({
-    label: T,
+    children: c,
+    isNew: T = !1
+  } = e, [S, A] = r.useState(E.ICONS_BY_ID[t].name), m = t === _.PremiumAppIconIds.PIRATE, N = (0, u.useRadioItem)({
+    label: S,
     isSelected: o
   });
   return (0, i.jsx)(u.Tooltip, {
-    text: T,
-    onTooltipShow: () => A && S(h()),
+    text: S,
+    onTooltipShow: () => m && A(h()),
     children: e => (0, i.jsxs)("div", {
       className: f.appIconSelectionContainer,
-      children: [(0, i.jsx)(u.Clickable, {
+      children: [!o && T && (0, i.jsx)("div", {
+        className: f.newBadgeCircle
+      }), (0, i.jsx)(u.Clickable, {
         ...e,
-        ...m,
-        tabIndex: null != l ? l : m.tabIndex,
+        ...N,
+        tabIndex: null != l ? l : N.tabIndex,
         className: s()(f.appIconSelection, {
           [f.selected]: o
         }, n),
@@ -61,7 +64,8 @@ function m(e) {
     isSelected: n,
     disabled: r,
     tabIndex: a,
-    onSelect: s
+    onSelect: s,
+    isNew: o
   } = e;
   return (0, i.jsx)(A, {
     onSelect: r ? void 0 : s,
@@ -69,6 +73,7 @@ function m(e) {
     id: t.id,
     className: r ? f.disabled : void 0,
     tabIndex: a,
+    isNew: o,
     children: (0, i.jsx)(c.default, {
       id: t.id,
       width: E.CUSTOM_BASE_SIZE
