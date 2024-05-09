@@ -15,9 +15,8 @@ var a = s("735250"),
   f = s("474936"),
   m = s("689938"),
   _ = s("449221"),
-  g = s("786792"),
-  h = s("329213");
-let I = e => {
+  g = s("786792");
+let h = e => {
     let {
       artSrc: t
     } = e;
@@ -47,66 +46,13 @@ let I = e => {
       })]
     })
   },
-  N = () => (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
-      className: _.artContainer,
-      "aria-hidden": !0,
-      role: "presentation",
-      children: (0, a.jsx)("img", {
-        src: s("162813"),
-        className: i()([_.art, _.artJan2024]),
-        alt: " ",
-        width: "143"
-      })
-    }), (0, a.jsxs)("div", {
-      className: _.mainColumn,
-      children: [(0, a.jsx)(o.Heading, {
-        variant: "heading-lg/bold",
-        color: "always-white",
-        className: _.title,
-        children: m.default.Messages.COLLECTIBLES_SFA_TITLE
-      }), (0, a.jsx)(o.Text, {
-        className: _.__invalid_textBody,
-        variant: "text-sm/normal",
-        color: "always-white",
-        children: m.default.Messages.COLLECTIBLES_SFA_BANNER_DESCRIPTION
-      })]
-    })]
-  }),
-  p = () => (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
-      className: _.artContainer,
-      "aria-hidden": !0,
-      role: "presentation",
-      children: (0, a.jsx)("img", {
-        src: s("43563"),
-        className: _.art,
-        alt: " "
-      })
-    }), (0, a.jsxs)("div", {
-      className: _.mainColumn,
-      children: [(0, a.jsx)(o.Heading, {
-        variant: "heading-lg/extrabold",
-        color: "always-white",
-        className: _.title,
-        children: m.default.Messages.COLLECTIBLES_SHY_PROFILE_UPSELL_BANNER_TITLE
-      }), (0, a.jsx)(o.Text, {
-        className: _.__invalid_textBody,
-        variant: "text-sm/normal",
-        color: "always-white",
-        children: m.default.Messages.COLLECTIBLES_SHY_PROFILE_UPSELL_BANNER_SUBTITLE
-      })]
-    })]
-  }),
-  C = e => {
+  I = e => {
     let {
       variation: t
     } = e;
-    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(N, {})).with(E.CollectiblesShopMarketingVariants.SPRINGTOONS, () => (0, a.jsx)(I, {
-      artSrc: s("861636")
-    })).with(E.CollectiblesShopMarketingVariants.SHY, () => (0, a.jsx)(p, {})).with(E.CollectiblesShopMarketingVariants.GALAXY, () => (0, a.jsx)(I, {
+    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.GALAXY, () => (0, a.jsx)(h, {
       artSrc: s("161594")
-    })).otherwise(() => (0, a.jsx)(I, {
+    })).otherwise(() => (0, a.jsx)(h, {
       artSrc: s("353437")
     }))
   };
@@ -123,9 +69,9 @@ t.default = () => {
     ref: t,
     className: i()(_.container),
     style: {
-      backgroundImage: "url(".concat(s === E.CollectiblesShopMarketingVariants.SHY ? h : g, ")")
+      backgroundImage: "url(".concat(g, ")")
     },
-    children: [(0, a.jsx)(C, {
+    children: [(0, a.jsx)(I, {
       variation: s
     }), (0, a.jsx)(o.Button, {
       onClick: () => {
