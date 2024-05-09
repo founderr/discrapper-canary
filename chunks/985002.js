@@ -14,7 +14,7 @@ function o(e) {
   let {
     onError: t,
     onSuccess: n
-  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, m] = a.useState(!1), [S, p] = a.useState(!1), [I, g] = a.useState(!1), [T, A] = a.useState(!1), N = o || d || f || h || S || T, v = a.useCallback(async e => {
+  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, m] = a.useState(!1), [S, p] = a.useState(!1), [g, I] = a.useState(!1), [T, A] = a.useState(!1), N = o || d || f || h || S || T, v = a.useCallback(async e => {
     if (!N) {
       u(!0);
       try {
@@ -38,7 +38,7 @@ function o(e) {
         c(!1)
       }
     }
-  }, [N, t, n]), O = a.useCallback(async e => {
+  }, [N, t, n]), L = a.useCallback(async e => {
     if (!N) {
       E(!0);
       try {
@@ -50,7 +50,7 @@ function o(e) {
         E(!1)
       }
     }
-  }, [N, t, n]), L = a.useCallback(async e => {
+  }, [N, t, n]), O = a.useCallback(async e => {
     if (!N) {
       _(!0);
       try {
@@ -75,18 +75,18 @@ function o(e) {
       }
     }
   }, [C, t, n]), y = a.useCallback(async e => {
-    if (!I) {
-      g(!0);
+    if (!g) {
+      I(!0);
       try {
         await i.default.fetchTeenActivity(e), null == n || n()
       } catch (n) {
         let e = new s.APIError(n);
         null == t || t(e)
       } finally {
-        g(!1)
+        I(!1)
       }
     }
-  }, [I, t, n]), P = a.useCallback(async (e, a) => {
+  }, [g, t, n]), P = a.useCallback(async (e, a) => {
     if (!S) {
       p(!0);
       try {
@@ -102,8 +102,8 @@ function o(e) {
   return {
     acceptLinkRequest: v,
     declineLinkRequest: R,
-    disconnectLinkRequest: O,
-    cancelLinkRequest: L,
+    disconnectLinkRequest: L,
+    cancelLinkRequest: O,
     selectTeenUser: y,
     getLinkCode: M,
     requestLink: P,
@@ -129,7 +129,7 @@ function o(e) {
     isDisconnectLoading: f,
     isCancelLoading: h,
     isGetLinkCodeLoading: C,
-    isSelectTeenUserLoading: I,
+    isSelectTeenUserLoading: g,
     isRequestingLink: S,
     isMoreLoading: T
   }

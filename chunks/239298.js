@@ -1,22 +1,22 @@
 "use strict";
-a.r(e), a.d(e, {
+t.r(L), t.d(L, {
   ClickableLink: function() {
-    return l
+    return i
   }
 });
-var C = a("735250");
-a("470079");
-var t = a("613828"),
-  s = a("481060");
+var a = t("735250");
+t("470079");
+var C = t("613828"),
+  s = t("481060");
 
-function l(L) {
+function i(e) {
   let {
-    children: e,
-    ...a
-  } = L;
-  return (0, C.jsx)(s.Clickable, {
-    tag: t.Link,
-    ...a,
-    children: e
+    children: L,
+    ...t
+  } = e;
+  return (0, a.jsx)(s.Clickable, {
+    tag: C.Link,
+    ...t,
+    children: L
   })
 }

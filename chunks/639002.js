@@ -1,50 +1,50 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return u
+    return d
   }
 });
-var i = l("735250");
-l("470079");
-var a = l("481060"),
-  n = l("782568"),
-  s = l("626135"),
-  r = l("132871"),
-  c = l("981631"),
-  o = l("689938"),
-  d = l("247412");
+var l = a("735250");
+a("470079");
+var n = a("481060"),
+  s = a("782568"),
+  i = a("626135"),
+  r = a("132871"),
+  c = a("981631"),
+  u = a("689938"),
+  o = a("247412");
 
-function u(e) {
+function d(e) {
   let {
     guildId: t
   } = e;
-  return (0, i.jsxs)("div", {
-    className: d.container,
-    children: [(0, i.jsx)("img", {
-      className: d.image,
-      src: l("731914"),
+  return (0, l.jsxs)("div", {
+    className: o.container,
+    children: [(0, l.jsx)("img", {
+      className: o.image,
+      src: a("731914"),
       alt: ""
-    }), (0, i.jsxs)("div", {
-      className: d.content,
-      children: [(0, i.jsx)(a.Heading, {
+    }), (0, l.jsxs)("div", {
+      className: o.content,
+      children: [(0, l.jsx)(n.Heading, {
         variant: "heading-md/extrabold",
-        children: o.default.Messages.APP_DIRECTORY_MUSIC_FOOTER_HEADER
-      }), (0, i.jsx)(a.Text, {
+        children: u.default.Messages.APP_DIRECTORY_MUSIC_FOOTER_HEADER
+      }), (0, l.jsx)(n.Text, {
         variant: "text-sm/medium",
-        children: o.default.Messages.APP_DIRECTORY_MUSIC_FOOTER_CONTENT
+        children: u.default.Messages.APP_DIRECTORY_MUSIC_FOOTER_CONTENT
       })]
-    }), (0, i.jsx)(a.Button, {
-      size: a.Button.Sizes.SMALL,
+    }), (0, l.jsx)(n.Button, {
+      size: n.Button.Sizes.SMALL,
       onClick: function() {
-        s.default.track(c.AnalyticEvents.APP_DIRECTORY_CTA_CLICKED, {
+        i.default.track(c.AnalyticEvents.APP_DIRECTORY_CTA_CLICKED, {
           cta: "submit_music_app",
           current_page: r.ApplicationDirectoryViews.SEARCH,
           guild_id: t
-        }), (0, n.default)("https://dis.gd/music-search-page-inclusion")
+        }), (0, s.default)("https://dis.gd/music-search-page-inclusion")
       },
-      color: a.Button.Colors.TRANSPARENT,
-      className: d.button,
-      children: o.default.Messages.APP_DIRECTORY_MUSIC_FOOTER_CTA
+      color: n.Button.Colors.TRANSPARENT,
+      className: o.button,
+      children: u.default.Messages.APP_DIRECTORY_MUSIC_FOOTER_CTA
     })]
   })
 }

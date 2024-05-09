@@ -18,9 +18,9 @@ var l, a, s = n("735250"),
   C = n("481060"),
   g = n("612226"),
   E = n("951483"),
-  S = n("714338"),
-  _ = n("607070"),
-  I = n("585483"),
+  _ = n("714338"),
+  I = n("607070"),
+  S = n("585483"),
   N = n("557177"),
   T = n("264549"),
   A = n("981631"),
@@ -106,14 +106,14 @@ function D() {
 }
 class b extends i.PureComponent {
   componentDidMount() {
-    this.lastInputedKeys = [], I.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), I.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
+    this.lastInputedKeys = [], S.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), S.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
       capture: !0
     }), window.addEventListener("keyup", this.handleKeyUp, {
       capture: !0
     })
   }
   componentWillUnmount() {
-    I.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), I.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener("keydown", this.handleKeyDown, {
+    S.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), S.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener("keydown", this.handleKeyDown, {
       capture: !0
     }), window.removeEventListener("keyup", this.handleKeyUp, {
       capture: !0
@@ -324,7 +324,7 @@ function P(e) {
   let {
     transitionState: t,
     onClose: n
-  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([_.default], () => _.default.keyboardModeEnabled);
+  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([I.default], () => I.default.keyboardModeEnabled);
   return (0, s.jsx)(C.ModalRoot, {
     className: o()(v.noBackground, {
       [v.noShadow]: l
@@ -340,7 +340,7 @@ function P(e) {
         content: r,
         keyboardModeEnabled: u,
         activateRagingDemon: function() {
-          S.default.disable(), a(!0)
+          _.default.disable(), a(!0)
         }
       }, "modal")
     })

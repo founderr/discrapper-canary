@@ -17,8 +17,8 @@ var a = n("570140"),
   m = n("199902"),
   S = n("131951"),
   p = n("246946"),
-  I = n("808506"),
-  g = n("237997"),
+  g = n("808506"),
+  I = n("237997"),
   T = n("626135"),
   A = n("554174"),
   N = n("981631"),
@@ -92,8 +92,8 @@ let R = {
   },
   [N.GlobalKeybindActions.TOGGLE_OVERLAY]: {
     onTrigger() {
-      let e = I.default.enabled;
-      i.default.setEnabled(!e, I.default.legacyEnabled)
+      let e = g.default.enabled;
+      i.default.setEnabled(!e, g.default.legacyEnabled)
     },
     keyEvents: {
       keyup: !0,
@@ -103,7 +103,7 @@ let R = {
   [N.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK]: {
     onTrigger(e) {
       let t = (0, A.default)();
-      null != t && (e ? i.default.setUILocked(!g.default.isUILocked(t), t) : i.default.setInputLocked(!I.default.isInputLocked(t), t))
+      null != t && (e ? i.default.setUILocked(!I.default.isUILocked(t), t) : i.default.setInputLocked(!g.default.isInputLocked(t), t))
     },
     keyEvents: {
       keyup: !0,
@@ -112,9 +112,9 @@ let R = {
   },
   [N.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
     onTrigger() {
-      let e = I.default.getFocusedPID(),
+      let e = g.default.getFocusedPID(),
         t = null != e;
-      null != e && t && g.default.isPinned(N.OverlayWidgets.TEXT) && I.default.isReady(e) && I.default.isInputLocked(e) && i.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
+      null != e && t && I.default.isPinned(N.OverlayWidgets.TEXT) && g.default.isReady(e) && g.default.isInputLocked(e) && i.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
     },
     keyEvents: {
       keyup: !0,
@@ -163,7 +163,7 @@ let R = {
     onTrigger: () => {
       if (!(0, _.canSelectedVoiceChannelUseSoundboard)()) return;
       let e = (0, A.default)();
-      null != e && (g.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
+      null != e && (I.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
     },
     keyEvents: {
       keyup: !0,
@@ -221,7 +221,7 @@ let R = {
     }
   }
 };
-class O extends u.default {
+class L extends u.default {
   _initialize() {
     a.default.wait(() => a.default.dispatch({
       type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS",
@@ -230,4 +230,4 @@ class O extends u.default {
   }
   _terminate() {}
 }
-t.default = new O
+t.default = new L

@@ -1,19 +1,19 @@
 "use strict";
 n.r(e), n.d(e, {
   WrenchIcon: function() {
-    return l
+    return o
   }
 });
 var r = n("735250");
 n("470079");
 var i = n("692547"),
   c = n("331595");
-let l = t => {
+let o = t => {
   let {
     width: e = 24,
     height: n = 24,
-    color: l = i.default.colors.INTERACTIVE_NORMAL,
-    colorClass: o = "",
+    color: o = i.default.colors.INTERACTIVE_NORMAL,
+    colorClass: l = "",
     ...a
   } = t;
   return (0, r.jsx)("svg", {
@@ -24,9 +24,9 @@ let l = t => {
     fill: "none",
     viewBox: "0 0 24 24",
     children: (0, r.jsx)("path", {
-      fill: "string" == typeof l ? l : l.css,
+      fill: "string" == typeof o ? o : o.css,
       d: "M7.8 15.77c.7.43 1.2 1.14 1.2 1.96V21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3.27c0-.82.5-1.53 1.2-1.96a8.06 8.06 0 0 0 .12-13.63c-.6-.39-1.32.09-1.32.8v5.98a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V2.94c0-.71-.72-1.19-1.32-.8a8.06 8.06 0 0 0 .12 13.63Z",
-      className: o
+      className: l
     })
   })
 }

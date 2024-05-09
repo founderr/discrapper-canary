@@ -17,9 +17,9 @@ var a = n("848246"),
   C = n("114064"),
   g = n("937579"),
   E = n("485731"),
-  S = n("841174"),
-  _ = n("11352"),
-  I = n("981631");
+  _ = n("841174"),
+  I = n("11352"),
+  S = n("981631");
 
 function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -96,14 +96,14 @@ class T extends r.default {
     }, {
       autoTrackExposure: !1
     });
-    if (!n || !l || e.state !== I.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
+    if (!n || !l || e.state !== S.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
     let s = d.default.getChannel(e.channelId);
     if (null == s || !(null === (t = C.default.getPerksDemos()) || void 0 === t ? void 0 : t[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY])) return;
     let r = C.default.getActivated()[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY];
     r && i.default.dispatch({
       type: "PREMIUM_PERKS_DEMO_COMPLETE",
       perkType: a.EntitlementFeatureNames.STREAM_HIGH_QUALITY
-    }), r && E.usePerksDemosUIStore.getState().hqStreamingDidEnable && (0, S.default)(s.guild_id)
+    }), r && E.usePerksDemosUIStore.getState().hqStreamingDidEnable && (0, _.default)(s.guild_id)
   }
   constructor(...e) {
     super(...e), N(this, "_premiumPaymentModalCloseResolve", null), N(this, "_premiumPaymentModalCloseReject", null), N(this, "_maybeFetchPremiumOffer", async () => {
@@ -116,7 +116,7 @@ class T extends r.default {
         type: "PREMIUM_MARKETING_DATA_READY"
       })
     }), N(this, "_trackCustomNotificationSoundsExposure", () => {
-      _.CustomNotificationSoundExperiment.trackExposure({
+      I.CustomNotificationSoundExperiment.trackExposure({
         location: "PremiumManager"
       })
     }), N(this, "_handlePremiumPaymentModalOpen", e => {

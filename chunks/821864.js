@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return c
   },
   resetPermissions: function() {
-    return T
+    return f
   },
   updateApplicationCommandPermissions: function() {
-    return S
+    return T
   }
 });
 var r = n("544891"),
@@ -91,13 +91,13 @@ function c(e) {
   })
 }
 
-function T(e) {
+function f(e) {
   a.default.dispatch({
     commandId: e,
     type: "INTEGRATION_PERMISSION_SETTINGS_RESET"
   })
 }
-async function S(e) {
+async function T(e) {
   let {
     applicationId: t,
     commandId: n,

@@ -81,16 +81,16 @@ t.default = s.memo(function(e) {
   let {
     selectedGame: t,
     onClick: n
-  } = e, S = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = s.useRef(null), I = s.useRef(null), g = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = (0, i.useSpring)({
+  } = e, S = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = s.useRef(null), g = s.useRef(null), I = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = (0, i.useSpring)({
     ref: p,
     ...m
   }), R = (0, i.useSpring)({
-    ref: I,
-    ...m
-  }), O = (0, i.useSpring)({
     ref: g,
     ...m
   }), L = (0, i.useSpring)({
+    ref: I,
+    ...m
+  }), O = (0, i.useSpring)({
     ref: T,
     ...m
   }), M = (0, i.useSpring)({
@@ -108,7 +108,7 @@ t.default = s.memo(function(e) {
     },
     config: C
   });
-  (0, i.useChain)([p, I, g, T, A, N], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
+  (0, i.useChain)([p, g, I, T, A, N], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
     (0, u.trackClanDiscoveryUserNuxViewed)()
   }, []);
   let [P, x] = s.useMemo(() => {
@@ -127,7 +127,7 @@ t.default = s.memo(function(e) {
         className: _.cards,
         children: [(0, a.jsx)(i.animated.div, {
           className: _.clanCardOuterContainer,
-          style: S ? void 0 : L,
+          style: S ? void 0 : O,
           children: (0, a.jsx)(d.ClanDiscoveryCardView, {
             clan: E.FAKE_DISCOVERY_UPSELL_CLANS["0"],
             className: _.clanCardOuterLeft
@@ -148,7 +148,7 @@ t.default = s.memo(function(e) {
           })
         }), (0, a.jsx)(i.animated.div, {
           className: _.clanCardInnerContainer,
-          style: S ? void 0 : O,
+          style: S ? void 0 : L,
           children: (0, a.jsx)(d.ClanDiscoveryCardView, {
             clan: E.FAKE_DISCOVERY_UPSELL_CLANS["2"],
             className: _.clanCardInnerRight

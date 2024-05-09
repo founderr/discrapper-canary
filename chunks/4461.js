@@ -1,28 +1,28 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   useInstallApplication: function() {
-    return n
+    return s
   }
 });
-var i = l("470079"),
-  a = l("135431");
+var l = a("470079"),
+  n = a("135431");
 
-function n(e, t) {
-  let l = i.useMemo(() => null != e && (0, a.canInstallApplication)({
+function s(e, t) {
+  let a = l.useMemo(() => null != e && (0, n.canInstallApplication)({
     customInstallUrl: e.custom_install_url,
     installParams: e.install_params,
     integrationTypesConfig: e.integration_types_config
   }), [e]);
   return {
-    canInstall: l,
-    install: i.useCallback(l => {
-      null != e && (0, a.installApplication)({
+    canInstall: a,
+    install: l.useCallback(a => {
+      null != e && (0, n.installApplication)({
         applicationId: e.id,
         customInstallUrl: e.custom_install_url,
         installParams: e.install_params,
         integrationTypesConfig: e.integration_types_config,
         guildId: null != t ? t : void 0,
-        source: l
+        source: a
       })
     }, [e, t])
   }

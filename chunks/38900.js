@@ -4,17 +4,17 @@ var l = a("735250");
 a("470079");
 var s = a("120356"),
   r = a.n(s),
-  i = a("425734"),
-  n = a("897246"),
+  n = a("425734"),
+  i = a("897246"),
   o = a("269674"),
   u = a("211371");
 let c = () => 4 * Math.random() + 8,
   d = [c(), c(), c()];
 t.default = () => (0, l.jsx)(l.Fragment, {
   children: d.map(e => (0, l.jsxs)("div", {
-    className: i.cardsContainer,
+    className: n.cardsContainer,
     children: [(0, l.jsx)("div", {
-      className: r()(u.skeleton, n.shopBanner),
+      className: r()(u.skeleton, i.shopBanner),
       children: (0, l.jsx)("div", {
         className: u.bannerBody
       })

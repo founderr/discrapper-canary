@@ -25,9 +25,9 @@ function E() {
   var e;
   let t = (0, f.useUID)(),
     [n, E] = (0, a.useStateFromStoresArray)([d.default, o.default], () => [o.default.getChannel(d.default.getVoiceChannelId()), d.default.getCurrentlySelectedChannelId(null)]),
-    S = (0, a.useStateFromStores)([u.default], () => null != n ? u.default.getMentionCount(n.id) : 0),
-    _ = (0, a.useStateFromStores)([c.default], () => c.default.getUser(null == n ? void 0 : n.ownerId)),
-    I = null !== (e = p.default.getGlobalName(_)) && void 0 !== e ? e : p.default.getUserTag(_),
+    _ = (0, a.useStateFromStores)([u.default], () => null != n ? u.default.getMentionCount(n.id) : 0),
+    I = (0, a.useStateFromStores)([c.default], () => c.default.getUser(null == n ? void 0 : n.ownerId)),
+    S = null !== (e = p.default.getGlobalName(I)) && void 0 !== e ? e : p.default.getUserTag(I),
     {
       canViewBroadcasts: N
     } = r.default.useExperiment({
@@ -43,15 +43,15 @@ function E() {
       T && null != n && i.default.selectPrivateChannel(n.id)
     },
     icon: h.default,
-    tooltip: null != I ? g.default.Messages.BROADCASTING_CHANNEL_NAME.format({
-      name: I
+    tooltip: null != S ? g.default.Messages.BROADCASTING_CHANNEL_NAME.format({
+      name: S
     }) : void 0,
     selected: A,
     upperBadge: (0, l.jsx)(s.Avatar, {
       size: s.AvatarSizes.SIZE_16,
-      src: null == _ ? void 0 : _.getAvatarURL(null, 16),
-      "aria-label": I
+      src: null == I ? void 0 : I.getAvatarURL(null, 16),
+      "aria-label": S
     }),
-    lowerBadge: S > 0 ? (0, C.renderMentionBadge)(S) : null
+    lowerBadge: _ > 0 ? (0, C.renderMentionBadge)(_) : null
   }) : null
 }

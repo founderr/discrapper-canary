@@ -1,29 +1,29 @@
 "use strict";
-a.r(e), a.d(e, {
+t.r(L), t.d(L, {
   BirthdayActivitiesRouteGuard: function() {
-    return H
+    return r
   }
 });
-var C = a("735250"),
-  t = a("613828"),
-  s = a("442837"),
-  l = a("594174"),
-  i = a("348600"),
-  n = a("981631");
+var a = t("735250"),
+  C = t("613828"),
+  s = t("442837"),
+  i = t("594174"),
+  l = t("348600"),
+  n = t("981631");
 
-function H(L) {
+function r(e) {
   let {
-    children: e
-  } = L, a = (0, s.useStateFromStores)([l.default], () => l.default.getCurrentUser()), {
-    enabled: H
-  } = i.BirthdayActivitiesExperiment.useExperiment({
+    children: L
+  } = e, t = (0, s.useStateFromStores)([i.default], () => i.default.getCurrentUser()), {
+    enabled: r
+  } = l.BirthdayActivitiesExperiment.useExperiment({
     location: "1f3236_1"
   }, {
     autoTrackExposure: !0
   });
-  return null == a ? null : H ? (0, C.jsx)(C.Fragment, {
-    children: e
-  }) : (0, C.jsx)(t.Redirect, {
+  return null == t ? null : r ? (0, a.jsx)(a.Fragment, {
+    children: L
+  }) : (0, a.jsx)(C.Redirect, {
     to: n.Routes.ME
   })
 }

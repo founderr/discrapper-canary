@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return E
   },
   goToMemberSafetyDashboard: function() {
-    return h
+    return g
   },
   initializeMemberSafetyStore: function() {
     return d
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return S
   },
   updateSearchState: function() {
-    return g
+    return h
   }
 });
 var r = n("570140"),
@@ -52,7 +52,7 @@ function S(e, t) {
     pagination: i
   })
 }
-async function g(e, t) {
+async function h(e, t) {
   await r.default.dispatch({
     type: "MEMBER_SAFETY_SEARCH_STATE_UPDATE",
     guildId: e,
@@ -60,7 +60,7 @@ async function g(e, t) {
   })
 }
 
-function h(e) {
+function g(e) {
   let t = (0, o.canAccessMemberSafetyPage)(e),
     n = s.default.getGuild(e);
   return !!t && null != n && (n.hasFeature(a.GuildFeatures.COMMUNITY) || n.hasFeature(a.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, l.transitionTo)(a.Routes.CHANNEL(e, c.StaticChannelRoute.MEMBER_SAFETY)), !0) : (i.default.open(n.id, a.GuildSettingsSections.MEMBERS), !0))

@@ -20,15 +20,15 @@ var a, s = n("735250"),
   m = n("785547"),
   S = n("490983"),
   p = n("799777"),
-  I = n("285952"),
-  g = n("366695"),
+  g = n("285952"),
+  I = n("366695"),
   T = n("366966"),
   A = n("151011"),
   N = n("880008"),
   v = n("466111"),
   R = n("931003"),
-  O = n("626135"),
-  L = n("780570"),
+  L = n("626135"),
+  O = n("780570"),
   M = n("624138"),
   y = n("645818"),
   P = n("981631"),
@@ -73,11 +73,11 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     sort: !0,
     cellClassName: D.nameCell,
     bodyCellClassName: D.nameBodyCell,
-    render: e => (0, s.jsxs)(I.default, {
-      align: I.default.Align.CENTER,
-      children: [(0, s.jsx)(g.default, {
+    render: e => (0, s.jsxs)(g.default, {
+      align: g.default.Align.CENTER,
+      children: [(0, s.jsx)(I.default, {
         game: e.application,
-        size: g.default.Sizes.SMALL,
+        size: I.default.Sizes.SMALL,
         className: D.gameIcon
       }), (0, s.jsxs)("div", {
         className: D.nameCellInfo,
@@ -101,8 +101,8 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: D.textCell,
     render(e) {
       let t = e.libraryApplication.getDistributor();
-      return (0, s.jsx)(I.default, {
-        align: I.default.Align.CENTER,
+      return (0, s.jsx)(g.default, {
+        align: g.default.Align.CENTER,
         children: null != t ? P.DistributorNames[t] : x.default.Messages.GAME_LIBRARY_NOT_APPLICABLE
       })
     }
@@ -117,8 +117,8 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
       return t = e.isRunning ? x.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? x.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(T.default, {
         end: e.lastPlayed,
         location: T.default.Locations.GAME_LIBRARY_LAST_PLAYED
-      }) : x.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(I.default, {
-        align: I.default.Align.CENTER,
+      }) : x.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(g.default, {
+        align: g.default.Align.CENTER,
         className: r()({
           [D.lastPlayedCellNew]: e.isNew
         }),
@@ -152,7 +152,7 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
             }),
             libraryApplication: e.libraryApplication
           })]
-        }), (0, L.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(m.default, {
+        }), (0, O.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(m.default, {
           analyticsListSort: (a = t.sortKey, l = t.sortDirection, "".concat(G[a], " ").concat(l === P.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
           analyticsListIndex: n,
           source: P.AnalyticsLocations.APPLICATION_LIBRARY,
@@ -272,7 +272,7 @@ class B extends(a = i.PureComponent) {
       }
       e.num_applications_total++
     }
-    O.default.track(P.AnalyticEvents.LIBRARY_VIEWED, {
+    L.default.track(P.AnalyticEvents.LIBRARY_VIEWED, {
       ...e,
       load_id: t.loadId
     })
@@ -292,10 +292,10 @@ class B extends(a = i.PureComponent) {
       className: a ? D.emptyStateSmall : D.emptyStateLarge,
       children: [(0, s.jsx)("div", {
         className: D.emptyWumpus
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(g.default, {
         grow: 0,
         shrink: a ? 1 : 0,
-        direction: I.default.Direction.VERTICAL,
+        direction: g.default.Direction.VERTICAL,
         children: (0, s.jsxs)("div", {
           className: D.emptyStateText,
           children: [(0, s.jsx)("div", {
@@ -396,7 +396,7 @@ class B extends(a = i.PureComponent) {
 }
 
 function H(e) {
-  let t = i.useContext(O.AnalyticsContext),
+  let t = i.useContext(L.AnalyticsContext),
     n = (0, o.useLocation)(),
     {
       applicationViewItems: a,

@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("696202"),
   S = n("881201"),
   p = n("626135"),
-  I = n("51144"),
-  g = n("981631"),
+  g = n("51144"),
+  I = n("981631"),
   T = n("689938"),
   A = n("921665");
 
@@ -37,7 +37,7 @@ function N(e) {
       color: s ? "currentColor" : void 0
     }), (0, a.jsx)("div", {
       className: A.status,
-      children: (0, I.humanizeStatus)(t)
+      children: (0, g.humanizeStatus)(t)
     }), null != n && (0, a.jsx)("div", {
       className: A.description,
       children: n
@@ -105,7 +105,7 @@ function R(e) {
     })]
   })
 }
-let O = e => {
+let L = e => {
   let {
     customStatus: t,
     onClose: i,
@@ -113,7 +113,7 @@ let O = e => {
     onSelect: r
   } = e, o = (0, h.useMultiAccountMenuItems)();
   s.useEffect(() => {
-    p.default.track(g.AnalyticEvents.OPEN_POPOUT, {
+    p.default.track(I.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != t,
       location: l.location
@@ -219,7 +219,7 @@ let O = e => {
 t.default = (0, d.default)(e => {
   let t = (0, r.useStateFromStores)([C.default], () => C.default.getCustomStatusActivity()),
     n = _.StatusSetting.useSetting();
-  return (0, a.jsx)(O, {
+  return (0, a.jsx)(L, {
     ...e,
     customStatus: t,
     status: n

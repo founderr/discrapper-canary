@@ -20,15 +20,15 @@ var l = n("924826"),
   m = n("502087"),
   S = n("328882"),
   p = n("647265"),
-  I = n("650032"),
-  g = n("104494"),
+  g = n("650032"),
+  I = n("104494"),
   T = n("639119"),
   A = n("655525"),
   N = n("314684"),
   v = n("52188"),
   R = n("248042"),
-  O = n("924540"),
-  L = n("649765"),
+  L = n("924540"),
+  O = n("649765"),
   M = n("565626"),
   y = n("701910"),
   P = n("886654"),
@@ -52,7 +52,7 @@ let w = e => {
     Y = (0, C.hasPremiumSubscriptionToDisplay)(H, V),
     W = (0, l.useListItem)("nitro"),
     K = (0, T.usePremiumTrialOffer)(),
-    z = (0, g.usePremiumDiscountOffer)(),
+    z = (0, I.usePremiumDiscountOffer)(),
     q = (0, r.useStateFromStores)([f.default], () => f.default.isLocalizedPromoEnabled) && null == K,
     Q = (0, R.useIsEligibleForBogoPromotion)(),
     Z = (0, M.default)(),
@@ -64,7 +64,7 @@ let w = e => {
     en = s || null != K || null != z || Q || J || Z || null != X || Y,
     {
       enabled: ea
-    } = I.ReferralProgramRecipient.useExperiment({
+    } = g.ReferralProgramRecipient.useExperiment({
       location: k
     }, {
       autoTrackExposure: !1
@@ -85,18 +85,18 @@ let w = e => {
     })
   }), a = 1) : null != X ? (n = (0, i.jsx)(y.default, {
     copy: X
-  }), a = 2) : Z ? (n = (0, i.jsx)(y.default, {}), a = 3) : null != z ? (n = (0, i.jsx)(O.PremiumDiscountOfferTabBadge, {
+  }), a = 2) : Z ? (n = (0, i.jsx)(y.default, {}), a = 3) : null != z ? (n = (0, i.jsx)(L.PremiumDiscountOfferTabBadge, {
     userDiscount: z,
     isTabSelected: s,
     includesAmountOff: !1
-  }), a = 4) : null == K || es ? $ ? (n = (0, i.jsx)(L.default, {
+  }), a = 4) : null == K || es ? $ ? (n = (0, i.jsx)(O.default, {
     isSelected: s,
     onSelect: () => (0, d.markDismissibleContentAsDismissed)(o.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
       dismissAction: U.ContentDismissActionType.TAKE_ACTION
     })
   }), a = 7) : q && (n = (0, i.jsx)(v.LocalizedPricingBadgeIcon, {
     entryPoint: v.BadgeEntryPoint.PrivateMessages
-  }), !s && (t = G.localizeBadge), a = 6) : (n = (0, i.jsx)(O.PremiumTrialOfferTabBadge, {
+  }), !s && (t = G.localizeBadge), a = 6) : (n = (0, i.jsx)(L.PremiumTrialOfferTabBadge, {
     trialOffer: K,
     isTabSelected: s
   }), a = 5);
@@ -117,7 +117,7 @@ let w = e => {
     className: t,
     children: n
   });
-  return $ ? (0, i.jsx)(L.ReferralProgramCoachtipLinkButton, {
+  return $ ? (0, i.jsx)(O.ReferralProgramCoachtipLinkButton, {
     children: el
   }) : el
 }

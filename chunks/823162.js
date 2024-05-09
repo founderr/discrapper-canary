@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return l
   },
   fetchUserCountryCode: function() {
-    return T
+    return f
   },
   markAsMessageRequest: function() {
     return d
@@ -69,6 +69,6 @@ function c(e) {
   })
 }
 
-function T() {
+function f() {
   i.default.getLocationMetadata()
 }

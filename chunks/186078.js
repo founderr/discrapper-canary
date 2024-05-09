@@ -1,75 +1,75 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   DisabledMultipleChoiceFormField: function() {
-    return T
+    return f
   },
   MultipleChoiceFieldBody: function() {
-    return o
+    return u
   },
   MultipleChoiceFormField: function() {
-    return d
+    return m
   }
 });
-var a = s("735250"),
-  n = s("470079"),
-  i = s("120356"),
-  E = s.n(i),
-  l = s("481060"),
-  _ = s("489813"),
-  r = s("707592"),
-  u = s("303765");
+var a = n("735250"),
+  r = n("470079"),
+  s = n("120356"),
+  i = n.n(s),
+  l = n("481060"),
+  o = n("489813"),
+  c = n("707592"),
+  d = n("303765");
 
-function o(e) {
+function u(e) {
   let {
     disabled: t,
-    field: s,
-    value: i,
-    radioItemClassName: _,
-    radioItemIconClassName: r,
-    onChange: o
+    field: n,
+    value: s,
+    radioItemClassName: o,
+    radioItemIconClassName: c,
+    onChange: u
   } = e, {
-    choices: T
-  } = s, d = n.useMemo(() => T.map((e, t) => ({
+    choices: f
+  } = n, m = r.useMemo(() => f.map((e, t) => ({
     name: e,
     value: t,
-    radioItemIconClassName: E()(u.multipleChoiceIcon, r)
-  })), [T, r]);
+    radioItemIconClassName: i()(d.multipleChoiceIcon, c)
+  })), [f, c]);
   return (0, a.jsx)(l.RadioGroup, {
     disabled: t,
-    options: d,
-    value: i,
-    onChange: o,
-    radioItemClassName: _,
+    options: m,
+    value: s,
+    onChange: u,
+    radioItemClassName: o,
     withTransparentBackground: !0
   })
 }
 
-function T(e) {
+function f(e) {
   let {
     formField: t
-  } = e, s = null != t.response ? t.choices[t.response] : "";
-  return (0, a.jsx)(_.QuestionRenderer, {
+  } = e, n = null != t.response ? t.choices[t.response] : "";
+  return (0, a.jsx)(o.QuestionRenderer, {
     title: t.label,
-    children: (0, a.jsx)(r.TextInputFieldBody, {
-      className: u.fieldBackground,
-      value: s,
+    children: (0, a.jsx)(c.TextInputFieldBody, {
+      className: d.fieldBackground,
+      value: n,
       disabled: !0
     })
   })
 }
 
-function d(e) {
+function m(e) {
   let {
     formField: t,
-    onChange: s
+    onChange: n
   } = e;
-  return (0, a.jsx)(_.QuestionRenderer, {
+  return (0, a.jsx)(o.QuestionRenderer, {
     title: t.label,
-    children: (0, a.jsx)(o, {
-      radioItemClassName: u.fieldBackground,
+    children: (0, a.jsx)(u, {
+      radioItemClassName: d.fieldBackground,
       field: t,
       value: t.response,
-      onChange: s
+      onChange: n
     })
   })
 }

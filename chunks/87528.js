@@ -1,105 +1,105 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return C
+    return x
   }
-}), l("47120"), l("724458"), l("653041");
-var i = l("735250"),
-  a = l("470079"),
-  n = l("912370"),
-  s = l("477690"),
-  r = l("153124"),
-  c = l("626135"),
-  o = l("463571"),
-  d = l("744142"),
-  u = l("132871"),
-  p = l("147890"),
-  _ = l("216547"),
-  m = l("57716"),
-  f = l("981631"),
-  h = l("806318");
+}), i("47120"), i("724458"), i("653041");
+var n = i("735250"),
+  a = i("470079"),
+  l = i("912370"),
+  s = i("477690"),
+  r = i("153124"),
+  o = i("626135"),
+  c = i("463571"),
+  d = i("744142"),
+  u = i("132871"),
+  h = i("147890"),
+  p = i("216547"),
+  f = i("57716"),
+  m = i("981631"),
+  C = i("806318");
 
-function C(e) {
+function x(e) {
   let {
     collection: t,
     collection: {
-      id: l,
-      title: C,
-      application_directory_collection_items: g
+      id: i,
+      title: x,
+      application_directory_collection_items: _
     }
-  } = e, [I, A] = a.useState(300), [E, v] = a.useState(4), x = parseFloat(s.default.COLLECTION_LIST_CARD_GAP), R = (0, u.useApplicationDirectoryHistory)(e => e.guildId), T = (0, m.default)({
+  } = e, [g, I] = a.useState(300), [v, A] = a.useState(4), E = parseFloat(s.default.COLLECTION_LIST_CARD_GAP), N = (0, u.useApplicationDirectoryHistory)(e => e.guildId), T = (0, f.default)({
     collection: t
   });
   a.useEffect(() => {
     function e() {
       var e;
       let t = null === (e = T.current) || void 0 === e ? void 0 : e.offsetWidth,
-        l = 1;
-      return null == t ? 300 : (t >= 500 && (l = 2), t >= 700 && (l = 3), t >= 1e3 && (l = 4), v(l), (t - (l - 1) * x) / l)
+        i = 1;
+      return null == t ? 300 : (t >= 500 && (i = 2), t >= 700 && (i = 3), t >= 1e3 && (i = 4), A(i), (t - (i - 1) * E) / i)
     }
     let t = T.current;
     if (null == t) return;
-    let l = new ResizeObserver(() => {
-      A(e())
+    let i = new ResizeObserver(() => {
+      I(e())
     });
-    return A(e()), l.observe(t), () => {
-      l.disconnect()
+    return I(e()), i.observe(t), () => {
+      i.disconnect()
     }
-  }, [x, T]);
-  let N = (0, r.useUID)();
-  return (0, i.jsx)("div", {
+  }, [E, T]);
+  let R = (0, r.useUID)();
+  return (0, n.jsx)("div", {
     ref: T,
-    children: (0, i.jsx)(_.default, {
-      header: C,
-      headerId: N,
-      tileWidth: I,
-      tileMargin: x,
+    children: (0, n.jsx)(p.default, {
+      header: x,
+      headerId: R,
+      tileWidth: g,
+      tileMargin: E,
       onScroll: e => {
         let {
           tileIndex: t
-        } = e, i = g.slice(t, t + E).reduce((e, t) => {
+        } = e, n = _.slice(t, t + v).reduce((e, t) => {
           let {
-            type: l,
-            application: i
+            type: i,
+            application: n
           } = t;
-          return l === n.ApplicationDirectoryCollectionItemType.APPLICATION && null != i && e.push(i.id), e
+          return i === l.ApplicationDirectoryCollectionItemType.APPLICATION && null != n && e.push(n.id), e
         }, []);
-        c.default.track(f.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
-          collection_id: l,
+        o.default.track(m.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
+          collection_id: i,
           offset: t,
-          results: i,
-          guild_id: R
+          results: n,
+          guild_id: N
         })
       },
-      children: (0, i.jsx)("ul", {
-        "aria-labelledby": N,
-        className: h.itemsContainer,
-        children: g.map(e => {
+      children: (0, n.jsx)("ul", {
+        "aria-labelledby": R,
+        className: C.itemsContainer,
+        children: _.map(e => {
           let {
             id: t,
             type: a,
             application: s
           } = e;
-          if (a === n.ApplicationDirectoryCollectionItemType.APPLICATION && null != s) return (0, i.jsx)("li", {
+          if (a === l.ApplicationDirectoryCollectionItemType.APPLICATION && null != s) return (0, n.jsx)("li", {
             style: {
-              width: I
+              width: g
             },
-            className: h.itemContainer,
-            children: (0, i.jsx)(o.default, {
-              className: h.seoAnchor,
-              href: f.Routes.APPLICATION_DIRECTORY_PROFILE(s.id),
-              children: (0, i.jsx)(d.default, {
+            className: C.itemContainer,
+            children: (0, n.jsx)(c.default, {
+              className: C.seoAnchor,
+              href: m.Routes.APPLICATION_DIRECTORY_PROFILE(s.id),
+              children: (0, n.jsx)(d.default, {
                 application: s,
                 onClick: e => {
                   let {
                     mutualGuilds: t
                   } = e;
-                  c.default.track(f.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
-                    collection_id: l,
+                  o.default.track(m.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                    collection_id: i,
                     application_id: s.id,
-                    guild_id: R,
+                    guild_id: N,
                     shown_mutual_guilds_count: t.length
-                  }), (0, p.goToApplication)({
+                  }), (0, h.goToApplication)({
                     applicationId: s.id
                   })
                 },

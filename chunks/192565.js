@@ -4,44 +4,44 @@ n.r(t), n.d(t, {
     return M
   }
 });
-var l = n("735250"),
-  a = n("470079"),
-  s = n("685626"),
-  i = n("442837"),
+var a = n("735250"),
+  s = n("470079"),
+  i = n("685626"),
+  l = n("442837"),
   r = n("481060"),
   o = n("224706"),
   u = n("607070"),
   d = n("931240"),
   c = n("650461"),
   f = n("94963"),
-  h = n("745628"),
-  p = n("950279"),
-  m = n("796918"),
+  E = n("745628"),
+  h = n("950279"),
+  _ = n("796918"),
   C = n("513532"),
-  g = n("741595"),
-  E = n("974842"),
-  S = n("359380"),
-  _ = n("308083"),
+  m = n("741595"),
+  S = n("974842"),
+  p = n("359380"),
+  g = n("308083"),
   I = n("689938"),
-  N = n("590190");
-let T = {
+  T = n("590190");
+let A = {
     mass: 1,
     tension: 300,
     friction: 60,
     clamp: !0
   },
-  A = {
+  N = {
     mass: 1,
     tension: 600,
     friction: 60,
     clamp: !0
   };
 
-function L(e) {
+function v(e) {
   let {
     progress: t,
     errors: n
-  } = (0, i.useStateFromStoresObject)([c.default], () => {
+  } = (0, l.useStateFromStoresObject)([c.default], () => {
     var t;
     let n = c.default.getStateForGuild(e);
     return {
@@ -52,147 +52,147 @@ function L(e) {
   return {
     progress: t,
     errors: n,
-    handleClanUpdate: a.useCallback(t => d.updateClanSetup(e, t), [e])
+    handleClanUpdate: s.useCallback(t => d.updateClanSetup(e, t), [e])
   }
 }
-let v = {
-  [_.ClanSetupSteps.GAMES]: function(e) {
+let R = {
+  [g.ClanSetupSteps.GAMES]: function(e) {
     let {
       guildId: t
     } = e;
-    a.useEffect(() => {
+    s.useEffect(() => {
       o.default.getDetectableGames()
     }, []);
     let {
       progress: n,
-      errors: s,
-      handleClanUpdate: i
-    } = L(t);
-    return (0, l.jsx)(p.default, {
+      errors: i,
+      handleClanUpdate: l
+    } = v(t);
+    return (0, a.jsx)(h.default, {
       title: I.default.Messages.CLAN_SETUP_GAMES_TITLE,
       description: I.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-      handleUpdate: e => i({
+      handleUpdate: e => l({
         gameApplicationIds: e
       }),
       gameApplicationIds: n.gameApplicationIds,
       requiredGameId: n.requiredGameId,
-      error: null == s ? void 0 : s.gameApplicationIds
+      error: null == i ? void 0 : i.gameApplicationIds
     })
   },
-  [_.ClanSetupSteps.PLAYSTYLE]: function(e) {
+  [g.ClanSetupSteps.PLAYSTYLE]: function(e) {
     let {
       guildId: t
     } = e, {
       progress: n,
-      errors: a,
-      handleClanUpdate: s
-    } = L(t);
-    return (0, l.jsx)(g.default, {
+      errors: s,
+      handleClanUpdate: i
+    } = v(t);
+    return (0, a.jsx)(m.default, {
       title: I.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
       description: I.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
-      handleUpdate: e => s({
+      handleUpdate: e => i({
         playstyle: e
       }),
       playstyle: n.playstyle,
-      error: null == a ? void 0 : a.playstyle
+      error: null == s ? void 0 : s.playstyle
     })
   },
-  [_.ClanSetupSteps.UTILITY_TRAITS]: function(e) {
+  [g.ClanSetupSteps.UTILITY_TRAITS]: function(e) {
     let {
       guildId: t
     } = e, {
       progress: n,
-      handleClanUpdate: a
-    } = L(t);
-    return (0, l.jsx)(S.default, {
+      handleClanUpdate: s
+    } = v(t);
+    return (0, a.jsx)(p.default, {
       title: I.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
       description: I.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
-      handleUpdate: e => a({
+      handleUpdate: e => s({
         interests: e
       }),
       requiredGameId: n.requiredGameId,
       interests: n.interests
     })
   },
-  [_.ClanSetupSteps.INTERESTS]: function(e) {
+  [g.ClanSetupSteps.INTERESTS]: function(e) {
     let {
       guildId: t
     } = e, {
       progress: n,
-      errors: a,
-      handleClanUpdate: s
-    } = L(t);
-    return (0, l.jsx)(m.default, {
-      handleUpdate: s,
+      errors: s,
+      handleClanUpdate: i
+    } = v(t);
+    return (0, a.jsx)(_.default, {
+      handleUpdate: i,
       interests: n.interests,
-      error: null == a ? void 0 : a.interests
+      error: null == s ? void 0 : s.interests
     })
   },
-  [_.ClanSetupSteps.DESCRIPTION]: function(e) {
+  [g.ClanSetupSteps.DESCRIPTION]: function(e) {
     let {
       guildId: t
     } = e, {
       progress: n,
-      errors: a,
-      handleClanUpdate: s
-    } = L(t);
-    return (0, l.jsx)(h.default, {
-      handleUpdate: s,
+      errors: s,
+      handleClanUpdate: i
+    } = v(t);
+    return (0, a.jsx)(E.default, {
+      handleUpdate: i,
       description: n.description,
       wildcardDescriptors: n.wildcardDescriptors,
-      errors: a
+      errors: s
     })
   },
-  [_.ClanSetupSteps.CUSTOMIZE_TAG_BADGE]: function(e) {
+  [g.ClanSetupSteps.CUSTOMIZE_TAG_BADGE]: function(e) {
     let {
       guildId: t
     } = e, {
       progress: n,
-      errors: a,
-      handleClanUpdate: s
-    } = L(t);
-    return (0, l.jsx)(E.default, {
-      handleUpdate: s,
+      errors: s,
+      handleClanUpdate: i
+    } = v(t);
+    return (0, a.jsx)(S.default, {
+      handleUpdate: i,
       tag: n.tag,
-      error: null == a ? void 0 : a.tag,
+      error: null == s ? void 0 : s.tag,
       badge: n.badgeKind,
       primaryColor: n.badgePrimaryColor,
       secondaryColor: n.badgeSecondaryColor,
       furthestStep: n.furthestStep
     })
   },
-  [_.ClanSetupSteps.CUSTOMIZE_BANNER]: function(e) {
+  [g.ClanSetupSteps.CUSTOMIZE_BANNER]: function(e) {
     let {
       guildId: t
     } = e, {
       progress: n,
-      handleClanUpdate: a
-    } = L(t);
-    return (0, l.jsx)(f.default, {
-      handleUpdate: a,
+      handleClanUpdate: s
+    } = v(t);
+    return (0, a.jsx)(f.default, {
+      handleUpdate: s,
       progress: n,
       guildId: t
     })
   },
-  [_.ClanSetupSteps.MEMBER_APPLICATION]: function(e) {
+  [g.ClanSetupSteps.MEMBER_APPLICATION]: function(e) {
     let {
       guildId: t
     } = e;
-    return (0, l.jsx)(C.default, {
+    return (0, a.jsx)(C.default, {
       guildId: t
     })
   }
 };
 
-function x(e) {
+function L(e) {
   var t, n, o, d;
   let {
     item: c,
     state: f,
-    direction: h,
-    cleanUp: p
-  } = e, m = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion);
-  let C = (0, s.useSpring)((t = f, n = h, o = p, d = m, t === r.TransitionStates.MOUNTED ? {
+    direction: E,
+    cleanUp: h
+  } = e, _ = (0, l.useStateFromStores)([u.default], () => u.default.useReducedMotion);
+  let C = (0, i.useSpring)((t = f, n = E, o = h, d = _, t === r.TransitionStates.MOUNTED ? {
       from: {
         opacity: 0,
         transform: "translateY(40px) translateX(0px)"
@@ -201,7 +201,7 @@ function x(e) {
         opacity: 1,
         transform: "translateY(0px) translateX(0px)"
       },
-      config: T,
+      config: A,
       delay: 500,
       immediate: d
     } : t === r.TransitionStates.ENTERED ? {
@@ -213,7 +213,7 @@ function x(e) {
         opacity: 1,
         transform: "translateY(0px) translateX(0px)"
       },
-      config: A,
+      config: N,
       delay: 500,
       immediate: d
     } : {
@@ -225,57 +225,57 @@ function x(e) {
         opacity: 0,
         transform: "translateY(0px) translateX(".concat(-1 === n ? 40 : -40, "px))")
       },
-      config: A,
+      config: N,
       immediate: d,
       onRest: () => {
         o()
       }
     })),
-    g = a.useMemo(() => v[c.currentStep], [c.currentStep]);
-  return (0, l.jsx)(s.animated.div, {
+    m = s.useMemo(() => R[c.currentStep], [c.currentStep]);
+  return (0, a.jsx)(i.animated.div, {
     style: C,
-    className: N.step,
-    children: (0, l.jsx)(r.ScrollerThin, {
-      className: N.scroller,
-      children: (0, l.jsx)(g, {
+    className: T.step,
+    children: (0, a.jsx)(r.ScrollerThin, {
+      className: T.scroller,
+      children: (0, a.jsx)(m, {
         guildId: c.guildId
       })
     })
   })
 }
 
-function R(e) {
+function O(e) {
   return e.currentStep.toString()
 }
 
 function M(e) {
   let {
     guildId: t
-  } = e, n = (0, i.useStateFromStores)([c.default], () => {
-    var e, n, l;
-    return null !== (l = null === (n = c.default.getStateForGuild(t)) || void 0 === n ? void 0 : null === (e = n.progress) || void 0 === e ? void 0 : e.currentStep) && void 0 !== l ? l : c.DEFAULT_CLAN_PROGRESS.currentStep
-  }), s = a.useRef(n - 1);
-  a.useEffect(() => {
-    s.current = n
+  } = e, n = (0, l.useStateFromStores)([c.default], () => {
+    var e, n, a;
+    return null !== (a = null === (n = c.default.getStateForGuild(t)) || void 0 === n ? void 0 : null === (e = n.progress) || void 0 === e ? void 0 : e.currentStep) && void 0 !== a ? a : c.DEFAULT_CLAN_PROGRESS.currentStep
+  }), i = s.useRef(n - 1);
+  s.useEffect(() => {
+    i.current = n
   }, [n]);
-  let o = a.useMemo(() => [{
-      previousStep: s,
+  let o = s.useMemo(() => [{
+      previousStep: i,
       currentStep: n,
       guildId: t
     }], [n, t]),
-    u = a.useMemo(() => null == s.current || n === s.current ? 0 : s.current < n ? 1 : -1, [n]),
-    d = a.useCallback((e, t, n, a) => (0, l.jsx)(x, {
+    u = s.useMemo(() => null == i.current || n === i.current ? 0 : i.current < n ? 1 : -1, [n]),
+    d = s.useCallback((e, t, n, s) => (0, a.jsx)(L, {
       item: t,
       direction: u,
       state: n,
-      cleanUp: a
+      cleanUp: s
     }, e), [u]);
-  return (0, l.jsx)("div", {
-    className: N.stepsTransitionGroup,
-    children: (0, l.jsx)(r.TransitionGroup, {
+  return (0, a.jsx)("div", {
+    className: T.stepsTransitionGroup,
+    children: (0, a.jsx)(r.TransitionGroup, {
       items: o,
       renderItem: d,
-      getItemKey: R
+      getItemKey: O
     })
   })
 }

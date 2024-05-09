@@ -11,7 +11,7 @@ var r, i = n("442837"),
   f = n("825829"),
   S = n("981631");
 
-function g(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -19,7 +19,7 @@ function g(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let h = {},
+let g = {},
   E = 0,
   _ = {},
   p = {},
@@ -31,11 +31,11 @@ let h = {},
         messageData: e,
         errorMessage: (0, d.getAutomodErrorMessage)(e, t)
       };
-    h[n] = r, E++
+    g[n] = r, E++
   },
-  m = e => h[e],
+  m = e => g[e],
   I = e => {
-    null != h[e] && delete h[e], E++
+    null != g[e] && delete g[e], E++
   };
 
 function T(e) {
@@ -65,13 +65,13 @@ function R(e) {
     }, l);
   return null != s && p[i] !== s && (p[i] = s, !0)
 }
-class M extends(r = i.default.PersistedStore) {
+class v extends(r = i.default.PersistedStore) {
   initialize(e) {
-    this.waitFor(a.default), null != e && (h = e.automodFailedMessages, _ = e.mentionRaidDetectionByGuild)
+    this.waitFor(a.default), null != e && (g = e.automodFailedMessages, _ = e.mentionRaidDetectionByGuild)
   }
   getState() {
     return {
-      automodFailedMessages: h,
+      automodFailedMessages: g,
       mentionRaidDetectionByGuild: _,
       lastIncidentAlertMessage: p
     }
@@ -92,9 +92,9 @@ class M extends(r = i.default.PersistedStore) {
     return null !== (t = p[e]) && void 0 !== t ? t : null
   }
 }
-g(M, "displayName", "GuildAutomodMessageStore"), g(M, "persistKey", "GuildAutomodMessages"), t.default = new M(l.default, {
+h(v, "displayName", "GuildAutomodMessageStore"), h(v, "persistKey", "GuildAutomodMessages"), t.default = new v(l.default, {
   CONNECTION_OPEN: function(e) {
-    return h = {}, E++, !0
+    return g = {}, E++, !0
   },
   LOAD_MESSAGES_SUCCESS: R,
   LOCAL_MESSAGES_LOADED: R,

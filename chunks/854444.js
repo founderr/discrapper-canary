@@ -25,12 +25,12 @@ var i = n("470079"),
   I = n("496675"),
   f = n("306680"),
   O = n("944486"),
-  p = n("9156"),
-  N = n("823379"),
+  N = n("9156"),
+  p = n("823379"),
   R = n("540126"),
   L = n("647086"),
   D = n("231338");
-let h = [u.default, s.default, r.default, E.default, c.default, A.default, C.default, S.default, I.default, f.default, O.default, p.default];
+let h = [u.default, s.default, r.default, E.default, c.default, A.default, C.default, S.default, I.default, f.default, O.default, N.default];
 
 function g() {
   let [e, t] = i.useState(() => b());
@@ -42,7 +42,7 @@ function g() {
 
 function b() {
   let e = s.default.getFavoriteChannels(),
-    t = p.default.isGuildCollapsed(L.FAVORITES_RAW_GUILD_ID),
+    t = N.default.isGuildCollapsed(L.FAVORITES_RAW_GUILD_ID),
     n = O.default.getChannelId(),
     i = C.default.getChannel(n),
     o = O.default.getVoiceChannelId(),
@@ -72,8 +72,8 @@ function b() {
         A = null !== (d = r || c || !u ? E.default.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : E.default.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) && void 0 !== d ? d : {},
         C = (0, R.computeThreadIds)(n, A, i, o, t),
         S = T.default.isCollapsed(n.id),
-        O = p.default.isChannelMuted(n.guild_id, n.id),
-        N = {
+        O = N.default.isChannelMuted(n.guild_id, n.id),
+        p = {
           id: n.id,
           record: n,
           category: a,
@@ -85,8 +85,8 @@ function b() {
           isFirstVoiceChannel: !1,
           subtitle: (0, R.computeSubtitle)(n, S, !1)
         };
-      return r || c || f.default.getMentionCount(n.id) > 0 ? N : t && O || u && (O || s || (0, _.isVoiceChannel)(n.type) || (0, _.isGuildReadableType)(n.type) && !1 === f.default.hasUnread(n.id)) ? null : N
-    }).filter(N.isNotNullish).sortBy(e => {
+      return r || c || f.default.getMentionCount(n.id) > 0 ? p : t && O || u && (O || s || (0, _.isVoiceChannel)(n.type) || (0, _.isGuildReadableType)(n.type) && !1 === f.default.hasUnread(n.id)) ? null : p
+    }).filter(p.isNotNullish).sortBy(e => {
       let {
         record: t
       } = e;
@@ -111,7 +111,7 @@ function b() {
       let {
         id: n,
         order: i
-      } = e, o = s.default.getCategoryRecord(n), l = null !== (t = r[n]) && void 0 !== t ? t : [], a = p.default.isChannelMuted(L.FAVORITES_RAW_GUILD_ID, n), u = A.default.isCollapsed(n), d = null;
+      } = e, o = s.default.getCategoryRecord(n), l = null !== (t = r[n]) && void 0 !== t ? t : [], a = N.default.isChannelMuted(L.FAVORITES_RAW_GUILD_ID, n), u = A.default.isCollapsed(n), d = null;
       return {
         isMuted: a,
         isCollapsed: u,

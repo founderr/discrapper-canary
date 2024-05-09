@@ -18,15 +18,15 @@ var s = n("45792"),
   m = n("293273"),
   S = n("885110"),
   p = n("451478"),
-  I = n("630388"),
-  g = n("823379"),
+  g = n("630388"),
+  I = n("823379"),
   T = n("591759"),
   A = n("228488"),
   N = n("996106"),
   v = n("914946"),
   R = n("452426"),
-  O = n("561205"),
-  L = n("600027"),
+  L = n("561205"),
+  O = n("600027"),
   M = n("852926"),
   y = n("186901"),
   P = n("981631");
@@ -163,7 +163,7 @@ t.default = {
       } = e, {
         channel: s,
         guild: l
-      } = (0, L.validateOpenInviteDialog)(), r = _.default.getWindow(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+      } = (0, O.validateOpenInviteDialog)(), r = _.default.getWindow(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
       (null == r ? void 0 : r.closed) && (r = null);
       let o = null != r ? P.AppContext.POPOUT : P.AppContext.APP;
       (0, A.exitFullScreen)({}, null == r ? void 0 : r.document), (0, i.openModalLazy)(async () => {
@@ -195,7 +195,7 @@ t.default = {
       if (null == a) throw new N.default({
         errorCode: P.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      let s = null === (t = (0, O.default)()) || void 0 === t ? void 0 : t.id;
+      let s = null === (t = (0, L.default)()) || void 0 === t ? void 0 : t.id;
       if (null == s) throw new N.default({
         errorCode: P.RPCErrors.UNKNOWN_ERROR
       }, "Unable to find selected channel");
@@ -215,13 +215,13 @@ t.default = {
             }, 1e3)
           };
           i.addEventListener("change", () => {
-            (0, g.isNotNullish)(i.files) && e(i.files[0]), l()
+            (0, I.isNotNullish)(i.files) && e(i.files[0]), l()
           }), i.addEventListener("cancel", () => {
             l()
           }), s.document.body.addEventListener("focus", l, !0), s.document.body.appendChild(i), i.click()
         }(async n => {
           let i = await (0, f.uploadImageAttachment)(a, s, n);
-          (0, g.isNotNullish)(i) && (0, g.isNotNullish)(i.url) && !(i instanceof d.default) ? e({
+          (0, I.isNotNullish)(i) && (0, I.isNotNullish)(i.url) && !(i instanceof d.default) ? e({
             image_url: i.url
           }): t(i)
         }, () => t(Error("Upload canceled")))
@@ -250,10 +250,10 @@ t.default = {
       if (null == s) throw new N.default({
         errorCode: P.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      if (!(0, I.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.ApplicationFlags.EMBEDDED)) throw new N.default({
+      if (!(0, g.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.ApplicationFlags.EMBEDDED)) throw new N.default({
         errorCode: P.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
-      let i = (0, O.default)();
+      let i = (0, L.default)();
       if (null == i) throw new N.default({
         errorCode: P.RPCErrors.INVALID_COMMAND
       }, "No channel found");

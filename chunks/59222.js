@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MAX_GUILDS_PER_PAGE: function() {
-    return g
+    return I
   }
 }), n("47120");
 var a = n("735250"),
@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("650394"),
   S = n("731455"),
   p = n("689938"),
-  I = n("369802");
-let g = 12,
+  g = n("369802");
+let I = 12,
   T = () => {
     let e = (0, c.getHistory)().location.search;
     return null != e && e.length > 0 && e.startsWith("?") ? r.parse(e) : {}
@@ -38,12 +38,12 @@ let g = 12,
       onClick: s
     });
     return (0, a.jsxs)("div", {
-      className: I.emptyContainer,
+      className: g.emptyContainer,
       children: [(0, a.jsx)("div", {
-        className: I.emptyImage
+        className: g.emptyImage
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: I.emptyHeader,
+        className: g.emptyHeader,
         children: l
       }), (0, a.jsx)(u.Text, {
         variant: "text-md/normal",
@@ -53,13 +53,13 @@ let g = 12,
     })
   },
   N = () => (0, a.jsxs)("div", {
-    className: I.emptyContainer,
+    className: g.emptyContainer,
     children: [(0, a.jsx)("div", {
-      className: I.errorImage
+      className: g.errorImage
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: I.emptyHeader,
+      className: g.emptyHeader,
       children: p.default.Messages.GUILD_DISCOVERY_SEARCH_ERROR
     })]
   });
@@ -72,8 +72,8 @@ t.default = e => {
     availableLanguages: c,
     isFetchingSearch: v,
     scroller: R,
-    loadingGuildId: O,
-    theme: L,
+    loadingGuildId: L,
+    theme: O,
     currentCategoryId: M,
     currentCategoryName: y,
     onViewGuild: P,
@@ -105,7 +105,7 @@ t.default = e => {
     let {
       offset: e,
       tag: t
-    } = T(), n = null != e ? Math.floor(parseInt(e, 10) / g) + 1 : 1;
+    } = T(), n = null != e ? Math.floor(parseInt(e, 10) / I) + 1 : 1;
     V(!!t), 1 === n && F(!0)
   }, [i]);
   let z = M === S.DISCOVERY_ALL_CATEGORIES_ID ? p.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
@@ -117,21 +117,21 @@ t.default = e => {
     category: y
   });
   return (0, a.jsxs)("div", {
-    className: I.container,
+    className: g.container,
     children: [(0, a.jsxs)("div", {
-      className: I.searchHeader,
+      className: g.searchHeader,
       children: [(0, a.jsx)(u.Clickable, {
         onClick: () => {
           d.clearSearch(), h.trackSearchClosed(t)
         },
-        className: I.arrow,
+        className: g.arrow,
         "aria-label": p.default.Messages.BACK,
         children: (0, a.jsx)(E.default, {
           direction: E.default.Directions.LEFT
         })
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: I.header,
+        className: g.header,
         children: z
       })]
     }), (0, a.jsx)(C.default, {
@@ -149,16 +149,16 @@ t.default = e => {
       categoryId: M,
       categoryName: y,
       onClick: () => {
-        d.selectCategory(S.DISCOVERY_ALL_CATEGORIES_ID), W(0, g, !0)
+        d.selectCategory(S.DISCOVERY_ALL_CATEGORIES_ID), W(0, I, !0)
       }
     }) : (0, a.jsx)("div", {
-      className: I.results,
+      className: g.results,
       children: (0, a.jsx)(_.default, {
-        pageSize: g,
+        pageSize: I,
         totalCount: k,
         resetCurrentPage: w,
         onPageChange: e => {
-          W((e - 1) * g, g), K()
+          W((e - 1) * I, I), K()
         },
         children: e => {
           let {
@@ -169,10 +169,10 @@ t.default = e => {
             children: [(0, a.jsx)(m.default, {
               guilds: j,
               loading: G,
-              loadingPlaceholderCount: g,
+              loadingPlaceholderCount: I,
               onViewGuild: P,
-              loadingGuildId: O,
-              theme: L,
+              loadingGuildId: L,
+              theme: O,
               analyticsContext: h.AnalyticsContexts.SEARCH,
               onGuildCardSeen: x,
               onTagClick: b

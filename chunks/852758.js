@@ -27,8 +27,8 @@ var a = n("735250"),
   m = n("23434"),
   S = n("610001"),
   p = n("78415"),
-  I = n("1964"),
-  g = n("981631"),
+  g = n("1964"),
+  I = n("981631"),
   T = n("815660"),
   A = n("689938");
 let N = "Email Verification",
@@ -41,7 +41,7 @@ function R() {
   } = (0, l.useStateFromStoresObject)([m.default, C.default], () => ({
     action: m.default.getAction(),
     theme: C.default.theme
-  })), R = I.default.getVerificationTypes(e), [O, L] = s.useState(0), M = (0, f.default)(R);
+  })), R = g.default.getVerificationTypes(e), [L, O] = s.useState(0), M = (0, f.default)(R);
   (0, h.default)({
     type: i.ImpressionTypes.MODAL,
     name: i.ImpressionNames.USER_ACTION_REQUIRED,
@@ -80,7 +80,7 @@ function R() {
   return s.useEffect(() => (E.default.disable(), () => {
     E.default.enable()
   }), []), s.useEffect(() => {
-    (null == M ? void 0 : M[0]) === g.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === g.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
+    (null == M ? void 0 : M[0]) === I.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === I.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(n.bind(n, "468026"));
@@ -97,21 +97,21 @@ function R() {
     })
   }, [R, M]), (0, a.jsx)(S.default, {
     types: R,
-    captchaKey: O,
+    captchaKey: L,
     onCaptchaVerify: e => {
       r.HTTP.post({
-        url: g.Endpoints.CAPTCHA,
+        url: I.Endpoints.CAPTCHA,
         body: {
           captcha_key: e
         },
         oldFormErrors: !0
       }).then(d.popLayer, () => {
-        L(e => e + 1)
+        O(e => e + 1)
       })
     },
     theme: t,
     onClick: e => {
-      e === g.VerificationTypes.EMAIL_OR_PHONE || e === g.VerificationTypes.EMAIL || e === g.VerificationTypes.REVERIFY_EMAIL ? y() : P()
+      e === I.VerificationTypes.EMAIL_OR_PHONE || e === I.VerificationTypes.EMAIL || e === I.VerificationTypes.REVERIFY_EMAIL ? y() : P()
     },
     onLogout: () => {
       (0, o.openModalLazy)(async () => {

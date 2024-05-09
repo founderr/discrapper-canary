@@ -31,7 +31,7 @@ function _(e) {
       type: h
     })
   }, []);
-  let I = () => {
+  let g = () => {
     let e = "temporary";
     C && (e = "permanent", l.default.updatedUnsyncedSettings({
       disableActivityHardwareAccelerationPrompt: !0
@@ -51,7 +51,7 @@ function _(e) {
         variant: "text-lg/normal",
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE
       }), (0, a.jsx)(i.ModalCloseButton, {
-        onClick: I,
+        onClick: g,
         className: E.closeButton
       })]
     }), (0, a.jsx)(i.ModalContent, {
@@ -77,7 +77,7 @@ function _(e) {
         })
       }), (0, a.jsx)(i.Button, {
         color: i.Button.Colors.PRIMARY,
-        onClick: I,
+        onClick: g,
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_NO_THANKS
       }), (0, a.jsx)(i.Button, {
         color: i.Button.Colors.BRAND,

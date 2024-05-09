@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return c
+    return o
   }
 });
 var i = l("735250");
@@ -11,7 +11,7 @@ var a = l("120356"),
   s = l("481060"),
   r = l("66585");
 
-function c(e) {
+function o(e) {
   let {
     supportedLanguages: t
   } = e;

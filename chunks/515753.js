@@ -23,9 +23,9 @@ var l = n("735250"),
   C = n("420660"),
   g = n("201895"),
   E = n("43267"),
-  S = n("933557"),
-  _ = n("853856"),
-  I = n("93687"),
+  _ = n("933557"),
+  I = n("853856"),
+  S = n("93687"),
   N = n("785232"),
   T = n("878857"),
   A = n("204197"),
@@ -40,13 +40,13 @@ var l = n("735250"),
   b = n("28718"),
   j = n("733880"),
   P = n("465670"),
-  U = n("887208"),
-  G = n("709054"),
+  G = n("887208"),
+  U = n("709054"),
   w = n("998502"),
-  B = n("788307"),
-  F = n("960670"),
-  V = n("981631"),
-  H = n("689938"),
+  F = n("788307"),
+  B = n("960670"),
+  H = n("981631"),
+  V = n("689938"),
   k = n("577245");
 let Y = w.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
   K = {
@@ -71,7 +71,7 @@ let Y = w.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
       className: k.closeIcon
     })
   }),
-  z = () => (0, l.jsx)(U.default, {
+  z = () => (0, l.jsx)(G.default, {
     className: k.favoriteIcon
   });
 class Z extends a.Component {
@@ -138,22 +138,22 @@ function X(e) {
     isGDMFacepileEnabled: s,
     selected: r = !1,
     user: c,
-    activities: I,
+    activities: S,
     applicationStream: L,
     isTyping: v,
     status: R,
     isMobile: y,
     "aria-posinset": P,
-    "aria-setsize": U
-  } = e, [G, w] = a.useState(!1), Z = a.useRef(null), X = a.useRef(null), {
+    "aria-setsize": G
+  } = e, [U, w] = a.useState(!1), Z = a.useRef(null), X = a.useRef(null), {
     avatarSrc: Q,
     avatarDecorationSrc: q,
     eventHandlers: J
   } = (0, A.default)({
     user: c,
     size: h.AvatarSizes.SIZE_32,
-    animateOnHover: !(r || G)
-  }), $ = (0, f.useStateFromStores)([M.default], () => M.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, S.default)(t), en = (0, f.useStateFromStores)([_.default], () => _.default.isFavorite(t.id)), el = () => {
+    animateOnHover: !(r || U)
+  }), $ = (0, f.useStateFromStores)([M.default], () => M.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, _.default)(t), en = (0, f.useStateFromStores)([I.default], () => I.default.isFavorite(t.id)), el = () => {
     w(!0)
   }, ea = () => {
     w(!1)
@@ -161,7 +161,7 @@ function X(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     null != e && (e.preventDefault(), e.stopPropagation()), p.default.closePrivateChannel(t.id, r, n)
   }, ei = () => {
-    p.default.preload(V.ME, t.id)
+    p.default.preload(H.ME, t.id)
   }, er = e => {
     e.stopPropagation()
   }, eo = e => {
@@ -194,17 +194,17 @@ function X(e) {
     })
   }, ed = e => {
     e.preventDefault(), e.stopPropagation();
-    let n = H.default.Messages.LEAVE_GROUP_DM_TITLE.format({
+    let n = V.default.Messages.LEAVE_GROUP_DM_TITLE.format({
         name
       }),
-      a = H.default.Messages.LEAVE_GROUP_DM_BODY.format({
+      a = V.default.Messages.LEAVE_GROUP_DM_BODY.format({
         name
       });
-    t.isManaged() && (n = H.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
+    t.isManaged() && (n = V.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
       name
-    }), a = H.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
+    }), a = V.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
       name
-    })), (0, h.openModal)(e => (0, l.jsx)(F.default, {
+    })), (0, h.openModal)(e => (0, l.jsx)(B.default, {
       header: n,
       body: a,
       onSubmit: es,
@@ -218,17 +218,17 @@ function X(e) {
     };
     return t.isSystemDM() ? (0, l.jsx)("div", {
       className: k.subtext,
-      children: H.default.Messages.SYSTEM_DM_ACTIVITY_TEXT
+      children: V.default.Messages.SYSTEM_DM_ACTIVITY_TEXT
     }) : t.isMultiUserDM() ? (0, l.jsx)("div", {
       className: k.subtext,
-      children: H.default.Messages.MEMBERS_HEADER.format({
+      children: V.default.Messages.MEMBERS_HEADER.format({
         members: t.recipients.length + 1
       })
-    }) : null != I ? (0, l.jsx)(B.default, {
+    }) : null != S ? (0, l.jsx)(F.default, {
       ...e,
-      activities: I,
+      activities: S,
       applicationStream: L,
-      animate: G,
+      animate: U,
       hideTooltip: !0,
       user: c
     }) : null
@@ -245,12 +245,12 @@ function X(e) {
       "aria-hidden": !0,
       className: k.__invalid_avatar,
       size: h.AvatarSizes.SIZE_32,
-      status: v ? V.StatusTypes.ONLINE : R,
+      status: v ? H.StatusTypes.ONLINE : R,
       isTyping: v
     });
     o()(null != c, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
     let e = null;
-    return !c.isSystemUser() && (e = (0, C.default)(I) ? V.StatusTypes.STREAMING : R), (0, l.jsx)(Y, {
+    return !c.isSystemUser() && (e = (0, C.default)(S) ? H.StatusTypes.STREAMING : R), (0, l.jsx)(Y, {
       ...J,
       size: h.AvatarSizes.SIZE_32,
       src: Q,
@@ -283,7 +283,7 @@ function X(e) {
         onMouseLeave: ea,
         onMouseDown: ei,
         onContextMenu: eu,
-        "aria-setsize": U,
+        "aria-setsize": G,
         "aria-posinset": P,
         children: (0, l.jsxs)(h.Interactive, {
           className: i()(k.interactive, {
@@ -296,7 +296,7 @@ function X(e) {
           selected: r,
           children: [(0, l.jsx)(u.Link, {
             innerRef: Z,
-            to: V.Routes.CHANNEL(V.ME, t.id),
+            to: H.Routes.CHANNEL(H.ME, t.id),
             className: k.link,
             "aria-label": (0, g.default)({
               channel: t,
@@ -319,7 +319,7 @@ function X(e) {
               }) : null
             })
           }), en ? (0, l.jsx)(z, {}) : null, !ep && (0, l.jsx)(W, {
-            "aria-label": eh ? H.default.Messages.LEAVE_GROUP_DM : H.default.Messages.CLOSE_DM,
+            "aria-label": eh ? V.default.Messages.LEAVE_GROUP_DM : V.default.Messages.CLOSE_DM,
             onClick: eh ? ed : es,
             onMouseDown: er
           })]
@@ -337,7 +337,7 @@ t.default = e => {
     isStatusIndicatorEnabled: i,
     isTypingIndicatorEnabled: r,
     isFacepileEnabled: o
-  } = I.default.useExperiment({
+  } = S.default.useExperiment({
     location: "private_channel"
   }, {
     autoTrackExposure: !0
@@ -346,7 +346,7 @@ t.default = e => {
     if (t.isMultiUserDM()) {
       if (i) {
         let n = v.default.getState().statuses;
-        t.recipients.some(e => n[e] === V.StatusTypes.ONLINE) && (e = V.StatusTypes.ONLINE)
+        t.recipients.some(e => n[e] === H.StatusTypes.ONLINE) && (e = H.StatusTypes.ONLINE)
       }
     } else null != u && (e = v.default.getStatus(u));
     return {
@@ -356,7 +356,7 @@ t.default = e => {
       isMobile: null != u && v.default.isMobileOnline(u)
     }
   }, [u, t, i]), c = (0, f.useStateFromStores)([y.default, R.default], () => {
-    if (t.isMultiUserDM()) return !!r && G.default.keys(R.default.getTypingUsers(t.id)).some(e => {
+    if (t.isMultiUserDM()) return !!r && U.default.keys(R.default.getTypingUsers(t.id)).some(e => {
       var t;
       return e !== (null === (t = y.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });
@@ -367,7 +367,7 @@ t.default = e => {
     channel: t,
     selected: n,
     isTyping: c,
-    status: d.status === V.StatusTypes.ONLINE ? V.StatusTypes.ONLINE : void 0,
+    status: d.status === H.StatusTypes.ONLINE ? H.StatusTypes.ONLINE : void 0,
     isGDMFacepileEnabled: o,
     ...a
   }) : (0, l.jsx)(X, {

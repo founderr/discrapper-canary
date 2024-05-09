@@ -1,7 +1,7 @@
 "use strict";
 n.r(t);
-var l = n("818083");
-t.default = (0, l.createExperiment)({
+var u = n("818083");
+t.default = (0, u.createExperiment)({
   kind: "guild",
   id: "2021-11_hub_events",
   label: "Hub Events",

@@ -1,17 +1,17 @@
 "use strict";
 n.r(t);
-var l = n("481060"),
-  u = n("40851"),
+var u = n("481060"),
+  l = n("40851"),
   i = n("334877"),
   r = n("981631");
-let s = "guild-event-modal";
+let d = "guild-event-modal";
 t.default = () => {
-  let e = (0, u.useAppContext)() === r.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
+  let e = (0, l.useAppContext)() === r.AppContext.POPOUT ? u.POPOUT_MODAL_CONTEXT : u.DEFAULT_MODAL_CONTEXT;
   return {
-    modalKey: s,
+    modalKey: d,
     contextKey: e,
     onCloseRequest: () => {
-      i.useGuildEventModalStore.getState().canCloseModal && (0, l.closeModal)(s, e)
+      i.useGuildEventModalStore.getState().canCloseModal && (0, u.closeModal)(d, e)
     }
   }
 }

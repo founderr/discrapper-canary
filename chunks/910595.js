@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return _
   }
 });
 var l = n("735250"),
@@ -21,12 +21,12 @@ var l = n("735250"),
   g = n("490897"),
   E = n("689938");
 
-function S(e) {
+function _(e) {
   let {
     guild: t,
     selected: n
   } = e, {
-    showBadge: S
+    showBadge: _
   } = r.GuildHomeBadgeExperiment.useExperiment({
     location: "487e85_1"
   }, {
@@ -37,18 +37,18 @@ function S(e) {
       location: "487e85_2"
     })
   }, []);
-  let _ = (0, u.useCanSeeOnboardingHome)(t.id),
-    I = (0, s.useStateFromStores)([c.default], () => c.default.hasUnread(t.id, g.ReadStateTypes.GUILD_HOME) && S, [t.id, S]);
+  let I = (0, u.useCanSeeOnboardingHome)(t.id),
+    S = (0, s.useStateFromStores)([c.default], () => c.default.hasUnread(t.id, g.ReadStateTypes.GUILD_HOME) && _, [t.id, _]);
   return (0, l.jsx)(p.BasicChannelRow, {
     id: "home-tab-".concat(t.id),
-    renderIcon: e => _ ? (0, l.jsx)(h.default, {
+    renderIcon: e => I ? (0, l.jsx)(h.default, {
       className: e
     }) : (0, l.jsx)(f.default, {
       className: e
     }),
-    text: _ ? E.default.Messages.SERVER_GUIDE : E.default.Messages.GUILD_HOME,
+    text: I ? E.default.Messages.SERVER_GUIDE : E.default.Messages.GUILD_HOME,
     selected: n,
-    showUnread: I,
+    showUnread: S,
     onMouseDown: function() {
       i.default.preload(t.id, C.StaticChannelRoute.GUILD_HOME)
     },

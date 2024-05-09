@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("922409"),
   S = n("727813"),
   p = n("355350"),
-  I = n("307947"),
-  g = n("125855"),
+  g = n("307947"),
+  I = n("125855"),
   T = n("687683"),
   A = n("981631"),
   N = n("689938"),
@@ -34,9 +34,9 @@ function R() {
     n = (0, p.useSpamMessageRequestCount)(),
     i = (0, _.useListHasSingleSpamMessageRequest)(),
     R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
-    O = (0, c.default)("message-requests-spam-list"),
+    L = (0, c.default)("message-requests-spam-list"),
     {
-      channelId: L
+      channelId: O
     } = (0, m.useMessageRequestSidebarState)(),
     M = s.useCallback(() => {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
@@ -61,17 +61,17 @@ function R() {
       let {
         row: r
       } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(I.default, {
         index: r,
         className: l()({
-          [v.selected]: null != L && L === d,
-          [v.siblingSelected]: null != L && L === u
+          [v.selected]: null != O && O === d,
+          [v.siblingSelected]: null != O && O === u
         }),
         channel: o.channel,
         user: o.user,
         hasSingleMessageRequest: i
       }, d)
-    }, [t, i, L]),
+    }, [t, i, O]),
     D = s.useCallback(() => (0, a.jsxs)(E.default, {
       className: v.sectionTitle,
       children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
@@ -94,10 +94,10 @@ function R() {
         })]
       }) : null]
     }, "message-requests-spam-title"), [n, P, R]);
-  return 0 === t.length ? (0, a.jsx)(I.default, {
+  return 0 === t.length ? (0, a.jsx)(g.default, {
     section: T.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
-    navigator: O,
+    navigator: L,
     children: (0, a.jsx)(r.ListNavigatorContainer, {
       children: n => {
         let {

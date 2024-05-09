@@ -4,24 +4,24 @@ var r = n("735250");
 n("470079");
 var i = n("960259"),
   c = n("277758"),
-  l = n("325767");
+  o = n("325767");
 e.default = (0, i.replaceIcon)(function(t) {
   let {
     width: e = 24,
     height: n = 24,
     color: i = "currentColor",
     className: c,
-    foreground: o,
+    foreground: l,
     ...a
   } = t;
   return (0, r.jsx)("svg", {
-    ...(0, l.default)(a),
+    ...(0, o.default)(a),
     className: c,
     width: e,
     height: n,
     viewBox: "0 0 24 24",
     children: (0, r.jsx)("path", {
-      className: o,
+      className: l,
       fill: i,
       fillRule: "evenodd",
       clipRule: "evenodd",

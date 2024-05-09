@@ -1,43 +1,43 @@
 "use strict";
-l.r(t), l("47120");
-var i, a, n = l("735250"),
-  s = l("470079"),
-  r = l("120356"),
-  c = l.n(r),
-  o = l("699581"),
-  d = l("374470"),
-  u = l("481060"),
-  p = l("112724"),
-  _ = l("996753"),
-  m = l("514331");
+t.r(L), t("47120");
+var a, C, s = t("735250"),
+  i = t("470079"),
+  l = t("120356"),
+  n = t.n(l),
+  r = t("699581"),
+  H = t("374470"),
+  d = t("481060"),
+  V = t("112724"),
+  c = t("996753"),
+  o = t("514331");
 
-function f(e, t, l) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: l,
+function M(e, L, t) {
+  return L in e ? Object.defineProperty(e, L, {
+    value: t,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = l, e
-}(a = i || (i = {}))[a.LEFT = 0] = "LEFT", a[a.RIGHT = 1] = "RIGHT";
-let h = e => {
+  }) : e[L] = t, e
+}(C = a || (a = {}))[C.LEFT = 0] = "LEFT", C[C.RIGHT = 1] = "RIGHT";
+let u = e => {
   let {
-    onClick: t,
-    className: l,
-    direction: i
+    onClick: L,
+    className: t,
+    direction: a
   } = e;
-  return (0, n.jsx)(u.Clickable, {
+  return (0, s.jsx)(d.Clickable, {
     "aria-hidden": !0,
-    className: c()(m.scrollerButton, l),
-    onClick: t,
-    children: (0, n.jsx)(_.default, {
-      className: m.scrollerButtonArrow,
-      direction: i
+    className: n()(o.scrollerButton, t),
+    onClick: L,
+    children: (0, s.jsx)(c.default, {
+      className: o.scrollerButtonArrow,
+      direction: a
     })
   })
 };
-class C extends s.Component {
-  static getDerivedStateFromProps(e, t) {
-    return t.prevWidth !== e.width ? {
+class E extends i.Component {
+  static getDerivedStateFromProps(e, L) {
+    return L.prevWidth !== e.width ? {
       tileIndex: 0,
       prevWidth: e.width,
       lastArrowDirection: 0
@@ -47,44 +47,44 @@ class C extends s.Component {
     let {
       width: e
     } = this.props, {
-      scrollerWidth: t
+      scrollerWidth: L
     } = this.state;
-    return Math.max(Math.floor(t - e), 0)
+    return Math.max(Math.floor(L - e), 0)
   }
   getSideOffset() {
     let {
       tileWidth: e,
-      tileMargin: t
-    } = this.props, l = this.getMaxOffset(), i = e + t;
-    return l - Math.floor(l / i) * i
+      tileMargin: L
+    } = this.props, t = this.getMaxOffset(), a = e + L;
+    return t - Math.floor(t / a) * a
   }
   getMaxIndex() {
     let {
       tileWidth: e,
-      tileMargin: t
+      tileMargin: L
     } = this.props;
-    return Math.round(this.getMaxOffset() / (e + t))
+    return Math.round(this.getMaxOffset() / (e + L))
   }
-  getOffset(e, t) {
+  getOffset(e, L) {
     let {
-      tileWidth: l,
-      tileMargin: i
+      tileWidth: t,
+      tileMargin: a
     } = this.props;
-    return Math.min(e * (l + i) + (1 === t ? this.getSideOffset() : 0), this.getMaxOffset())
+    return Math.min(e * (t + a) + (1 === L ? this.getSideOffset() : 0), this.getMaxOffset())
   }
   componentDidMount() {
     this.setScrollerWidth()
   }
-  componentDidUpdate(e, t) {
-    if (t.tileIndex !== this.state.tileIndex || t.lastArrowDirection !== this.state.lastArrowDirection) {
-      var l, i, a;
+  componentDidUpdate(e, L) {
+    if (L.tileIndex !== this.state.tileIndex || L.lastArrowDirection !== this.state.lastArrowDirection) {
+      var t, a, C;
       let {
         tileIndex: e
-      } = this.state, t = this.getOffset(this.state.tileIndex, this.state.lastArrowDirection);
-      null === (l = this.advancedScrollerRef.current) || void 0 === l || l.scrollTo({
-        to: t,
+      } = this.state, L = this.getOffset(this.state.tileIndex, this.state.lastArrowDirection);
+      null === (t = this.advancedScrollerRef.current) || void 0 === t || t.scrollTo({
+        to: L,
         animate: !0
-      }), null === (i = (a = this.props).onScroll) || void 0 === i || i.call(a, {
+      }), null === (a = (C = this.props).onScroll) || void 0 === a || a.call(C, {
         tileIndex: e
       })
     }
@@ -93,51 +93,51 @@ class C extends s.Component {
   render() {
     let {
       tileIndex: e,
-      lastArrowDirection: t
+      lastArrowDirection: L
     } = this.state, {
-      header: l,
-      headerId: i,
-      subHeader: a,
-      headerContainerClassName: s,
-      scrollContainerClassName: r
-    } = this.props, o = this.getMaxOffset();
-    return (0, n.jsxs)("div", {
-      children: [(0, n.jsxs)("div", {
-        className: c()(m.headerContainer, s),
-        children: [(0, n.jsxs)("div", {
-          children: [(0, n.jsx)(u.Heading, {
-            id: i,
+      header: t,
+      headerId: a,
+      subHeader: C,
+      headerContainerClassName: i,
+      scrollContainerClassName: l
+    } = this.props, r = this.getMaxOffset();
+    return (0, s.jsxs)("div", {
+      children: [(0, s.jsxs)("div", {
+        className: n()(o.headerContainer, i),
+        children: [(0, s.jsxs)("div", {
+          children: [(0, s.jsx)(d.Heading, {
+            id: a,
             variant: "heading-lg/semibold",
-            children: l
-          }), null == a ? null : (0, n.jsx)(u.Text, {
+            children: t
+          }), null == C ? null : (0, s.jsx)(d.Text, {
             variant: "text-sm/medium",
-            className: m.subheader,
-            children: a
+            className: o.subheader,
+            children: C
           })]
-        }), o > 0 ? (0, n.jsxs)("div", {
-          className: m.arrowsContainer,
-          children: [(0, n.jsx)(h, {
-            direction: _.default.Directions.LEFT,
+        }), r > 0 ? (0, s.jsxs)("div", {
+          className: o.arrowsContainer,
+          children: [(0, s.jsx)(u, {
+            direction: c.default.Directions.LEFT,
             onClick: this.prev,
-            className: c()(m.arrowLeft, {
-              [m.arrowDisabled]: 0 === e && 0 === t
+            className: n()(o.arrowLeft, {
+              [o.arrowDisabled]: 0 === e && 0 === L
             })
-          }), (0, n.jsx)(h, {
-            direction: _.default.Directions.RIGHT,
+          }), (0, s.jsx)(u, {
+            direction: c.default.Directions.RIGHT,
             onClick: this.next,
-            className: c()(m.arrowRight, {
-              [m.arrowDisabled]: e === this.getMaxIndex() && 1 === t
+            className: n()(o.arrowRight, {
+              [o.arrowDisabled]: e === this.getMaxIndex() && 1 === L
             })
           })]
         }) : null]
-      }), (0, n.jsx)("div", {
-        className: c()(m.scrollerContainer, r),
-        children: (0, n.jsx)(u.AdvancedScrollerNone, {
+      }), (0, s.jsx)("div", {
+        className: n()(o.scrollerContainer, l),
+        children: (0, s.jsx)(d.AdvancedScrollerNone, {
           ref: this.advancedScrollerRef,
           orientation: "horizontal",
-          className: m.scroller,
-          children: (0, n.jsx)("div", {
-            className: m.scroller,
+          className: o.scroller,
+          children: (0, s.jsx)("div", {
+            className: o.scroller,
             ref: e => {
               this.tileScrollerRef.current = e, this.setScrollerWidth()
             },
@@ -148,22 +148,22 @@ class C extends s.Component {
     })
   }
   constructor(...e) {
-    super(...e), f(this, "state", {
+    super(...e), M(this, "state", {
       tileIndex: 0,
       prevWidth: this.props.width,
       lastArrowDirection: 0,
       scrollerWidth: 0
-    }), f(this, "advancedScrollerRef", s.createRef()), f(this, "tileScrollerRef", s.createRef()), f(this, "setScrollerWidth", () => {
-      let e = (0, o.findDOMNode)(this.tileScrollerRef.current);
-      (0, d.isElement)(e, HTMLElement) && e.offsetWidth !== this.state.scrollerWidth && this.setState({
+    }), M(this, "advancedScrollerRef", i.createRef()), M(this, "tileScrollerRef", i.createRef()), M(this, "setScrollerWidth", () => {
+      let e = (0, r.findDOMNode)(this.tileScrollerRef.current);
+      (0, H.isElement)(e, HTMLElement) && e.offsetWidth !== this.state.scrollerWidth && this.setState({
         scrollerWidth: e.offsetWidth
       })
-    }), f(this, "prev", () => {
+    }), M(this, "prev", () => {
       this.setState({
         tileIndex: Math.max(this.state.tileIndex - 1, 0),
         lastArrowDirection: 0
       })
-    }), f(this, "next", () => {
+    }), M(this, "next", () => {
       this.setState({
         tileIndex: Math.min(this.state.tileIndex + 1, this.getMaxIndex()),
         lastArrowDirection: 1
@@ -171,4 +171,4 @@ class C extends s.Component {
     })
   }
 }
-t.default = (0, p.default)(C)
+L.default = (0, V.default)(E)

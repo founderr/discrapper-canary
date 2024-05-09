@@ -1,32 +1,32 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return c
+    return o
   }
 });
-var i = l("735250");
+var n = l("735250");
 l("470079");
-var a = l("120356"),
-  n = l.n(a),
-  s = l("481060"),
-  r = l("149318");
+var i = l("120356"),
+  r = l.n(i),
+  a = l("481060"),
+  s = l("149318");
 
-function c(e) {
+function o(e) {
   let {
     loading: t,
     children: l
   } = e;
-  return (0, i.jsxs)("div", {
-    className: r.container,
-    children: [t ? (0, i.jsx)("div", {
-      className: r.spinnerContainer,
-      children: (0, i.jsx)(s.Spinner, {
-        className: r.spinner,
-        type: s.Spinner.Type.SPINNING_CIRCLE
+  return (0, n.jsxs)("div", {
+    className: s.container,
+    children: [t ? (0, n.jsx)("div", {
+      className: s.spinnerContainer,
+      children: (0, n.jsx)(a.Spinner, {
+        className: s.spinner,
+        type: a.Spinner.Type.SPINNING_CIRCLE
       })
-    }) : null, (0, i.jsx)("div", {
-      className: n()({
-        [r.loading]: t
+    }) : null, (0, n.jsx)("div", {
+      className: r()({
+        [s.loading]: t
       }),
       children: l
     })]

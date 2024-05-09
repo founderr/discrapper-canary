@@ -17,15 +17,15 @@ var a = n("735250"),
   m = n("209613"),
   S = n("325708"),
   p = n("320149"),
-  I = n("252618"),
-  g = n("605236"),
+  g = n("252618"),
+  I = n("605236"),
   T = n("243778"),
   A = n("984370"),
   N = n("797614"),
   v = n("359110"),
   R = n("6025"),
-  O = n("897473"),
-  L = n("108427"),
+  L = n("897473"),
+  O = n("108427"),
   M = n("970731"),
   y = n("210887"),
   P = n("433355"),
@@ -156,7 +156,7 @@ function es(e) {
     pageWidth: t,
     onSidebarResize: n
   } = e, s = (0, u.useStateFromStores)([P.default], () => P.default.getSidebarState(P.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), i = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(null == s ? void 0 : s.channelId));
-  if (null == s || s.type !== O.SidebarType.VIEW_MESSAGE_REQUEST || null == i || !i.isPrivate()) return null;
+  if (null == s || s.type !== L.SidebarType.VIEW_MESSAGE_REQUEST || null == i || !i.isPrivate()) return null;
   let l = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
   return (0, a.jsx)(S.default, {
     sidebarType: S.ChatSidebarType.MessageRequestSidebar,
@@ -188,7 +188,7 @@ let ei = function(e) {
       n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       i = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion);
     return s.useEffect(() => {
-      (0, g.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+      (0, I.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
     }, []), (0, a.jsx)(T.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
@@ -237,7 +237,7 @@ let eo = (0, h.default)(function(e) {
     width: t
   } = e, n = (0, Y.useMessageRequestsCount)();
   s.useEffect(() => {
-    f.setHomeLink(X.Routes.MESSAGE_REQUESTS), (0, L.trackAppUIViewed)("message-requests"), j.default.track(X.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
+    f.setHomeLink(X.Routes.MESSAGE_REQUESTS), (0, O.trackAppUIViewed)("message-requests"), j.default.track(X.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
       num_message_requests: n
     }), N.default.increment({
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
@@ -248,7 +248,7 @@ let eo = (0, h.default)(function(e) {
     [d, E] = s.useState(!1),
     h = (0, u.useStateFromStores)([P.default], () => {
       let e = P.default.getSidebarState(P.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
-      return null != e && e.type === O.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
+      return null != e && e.type === L.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
     }),
     _ = null == h ? void 0 : h.channelId,
     C = null != h,
@@ -257,8 +257,8 @@ let eo = (0, h.default)(function(e) {
   s.useEffect(() => {
     null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(P.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
-  let [p, g] = s.useState(Z.MessageRequestSections.REQUESTS);
-  return (0, I.usePageTitle)({
+  let [p, I] = s.useState(Z.MessageRequestSections.REQUESTS);
+  return (0, g.usePageTitle)({
     location: ee.default.Messages.MESSAGE_REQUESTS
   }), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
@@ -281,7 +281,7 @@ let eo = (0, h.default)(function(e) {
           selectedItem: p,
           type: "top-pill",
           onItemSelect: e => {
-            g(e)
+            I(e)
           },
           className: et.__invalid_tabBar,
           children: [(0, a.jsx)(c.TabBar.Item, {

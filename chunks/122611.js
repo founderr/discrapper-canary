@@ -17,15 +17,15 @@ var a = n("735250"),
   m = n("704631"),
   S = n("819792"),
   p = n("919285"),
-  I = n("118470"),
-  g = n("413307"),
+  g = n("118470"),
+  I = n("413307"),
   T = n("849688"),
   A = n("374023"),
   N = n("661599"),
   v = n("923608"),
   R = n("617899"),
-  O = n("8521"),
-  L = n("760326"),
+  L = n("8521"),
+  O = n("760326"),
   M = n("536687"),
   y = n("652785"),
   P = n("981631"),
@@ -42,8 +42,8 @@ function b(e) {
   } = e, [E, C] = s.useState(null !== (t = r.Storage.get(y.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), S = e => {
     r.Storage.set(y.LAST_HIDDEN_CHANNEL_NOTICE, e), C(e)
   }, p = (0, c.useIsGuildEligibleForClanConversion)(n.id, "ChannelNoticesGuard"), {
-    defaultGameId: I
-  } = (0, o.useClanPrepilotExperiment)(n, "ChannelNoticesGuard_2"), g = (0, i.useStateFromStoresArray)(y.CHANNEL_NOTICE_STORES, () => y.CHANNEL_NOTICES.filter(e => {
+    defaultGameId: g
+  } = (0, o.useClanPrepilotExperiment)(n, "ChannelNoticesGuard_2"), I = (0, i.useStateFromStoresArray)(y.CHANNEL_NOTICE_STORES, () => y.CHANNEL_NOTICES.filter(e => {
     let {
       type: t,
       store: a
@@ -52,7 +52,7 @@ function b(e) {
     return null == a ? void 0 : a.channelNoticePredicate(n, E)
   }).map(e => e.dismissibleContentType));
   return (0, a.jsx)(f.default, {
-    contentTypes: g,
+    contentTypes: I,
     groupName: x.DismissibleContentGroupName.CHANNEL_NOTICES,
     children: e => {
       let {
@@ -78,7 +78,7 @@ function b(e) {
               markAsDismissed: i
             });
           case l.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER:
-            return (0, a.jsx)(L.default, {
+            return (0, a.jsx)(O.default, {
               guild: n,
               markAsDismissed: i
             });
@@ -101,7 +101,7 @@ function b(e) {
             return (0, a.jsx)(u.default, {
               guild: n,
               markAsDismissed: i,
-              defaultGameId: I
+              defaultGameId: g
             });
           default:
             return null
@@ -120,7 +120,7 @@ t.default = e => {
   } = e;
   switch ((0, M.default)(t)) {
     case M.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(I.default, {
         guild: t
       });
     case M.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
@@ -128,7 +128,7 @@ t.default = e => {
         guild: t
       });
     case M.ConnectedChannelNotices.MAX_MEMBER_COUNT:
-      return (0, a.jsx)(O.default, {
+      return (0, a.jsx)(L.default, {
         guild: t
       });
     case M.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
@@ -144,7 +144,7 @@ t.default = e => {
         guild: t
       });
     case M.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
-      return (0, a.jsx)(I.default, {
+      return (0, a.jsx)(g.default, {
         guild: t
       });
     case M.ConnectedChannelNotices.HUB_STUDY_ROOM:

@@ -1,29 +1,29 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return A
+    return D
   }
-}), a("47120");
-var s = a("735250"),
-  d = a("470079"),
-  l = a("120356"),
-  n = a.n(l),
-  i = a("831209"),
-  o = a("481060"),
-  r = a("367907"),
-  u = a("177862"),
-  c = a("465670"),
-  _ = a("630641"),
-  E = a("981631"),
-  I = a("689938"),
-  D = a("818823");
+}), n("47120");
+var a = n("735250"),
+  i = n("470079"),
+  d = n("120356"),
+  l = n.n(d),
+  s = n("831209"),
+  o = n("481060"),
+  r = n("367907"),
+  u = n("177862"),
+  c = n("465670"),
+  _ = n("630641"),
+  E = n("981631"),
+  I = n("689938"),
+  A = n("818823");
 
-function A(e) {
+function D(e) {
   let {
     guildId: t,
-    transitionState: a,
-    onClose: l
-  } = e, [A, N] = d.useState([]), [T, h] = d.useState(), R = [{
+    transitionState: n,
+    onClose: d
+  } = e, [D, N] = i.useState([]), [R, T] = i.useState(), f = [{
     text: I.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_DM_SPAM,
     value: u.RaidLockdownFeedbackType.DM_SPAM
   }, {
@@ -43,86 +43,86 @@ function A(e) {
     value: u.RaidLockdownFeedbackType.OTHER
   }];
 
-  function L(e) {
-    A.includes(e) ? N(t => t.filter(t => t !== e)) : N(t => [...t, e])
+  function h(e) {
+    D.includes(e) ? N(t => t.filter(t => t !== e)) : N(t => [...t, e])
   }
-  return null == t ? (l(), null) : (0, s.jsxs)(o.ModalRoot, {
-    transitionState: a,
+  return null == t ? (d(), null) : (0, a.jsxs)(o.ModalRoot, {
+    transitionState: n,
     size: o.ModalSize.MEDIUM,
-    children: [(0, s.jsx)(o.ModalHeader, {
+    children: [(0, a.jsx)(o.ModalHeader, {
       separator: !0,
-      children: (0, s.jsxs)("div", {
-        className: D.headerContainer,
-        children: [(0, s.jsxs)("div", {
-          className: D.headerText,
-          children: [(0, s.jsx)(_.default, {
-            color: i.default.INTERACTIVE_NORMAL,
+      children: (0, a.jsxs)("div", {
+        className: A.headerContainer,
+        children: [(0, a.jsxs)("div", {
+          className: A.headerText,
+          children: [(0, a.jsx)(_.default, {
+            color: s.default.INTERACTIVE_NORMAL,
             width: 16,
             height: 16
-          }), (0, s.jsx)(o.Heading, {
+          }), (0, a.jsx)(o.Heading, {
             color: "header-primary",
             variant: "heading-md/semibold",
             children: I.default.Messages.GUILD_SERVER_LOCKDOWN_FEEDBACK_DESCRIPTION
           })]
-        }), (0, s.jsx)(o.Clickable, {
-          onClick: l,
-          children: (0, s.jsx)(c.default, {
-            className: D.closeIcon,
+        }), (0, a.jsx)(o.Clickable, {
+          onClick: d,
+          children: (0, a.jsx)(c.default, {
+            className: A.closeIcon,
             width: 16,
             height: 16
           })
         })]
       })
-    }), (0, s.jsx)(o.ModalContent, {
-      children: (0, s.jsx)("div", {
-        className: D.options,
-        children: R.map(e => {
+    }), (0, a.jsx)(o.ModalContent, {
+      children: (0, a.jsx)("div", {
+        className: A.options,
+        children: f.map(e => {
           let {
             text: t,
-            value: a
+            value: n
           } = e;
-          return (0, s.jsxs)("div", {
-            className: n()(D.optionContainer, {
-              [D.optionContainerOther]: a === u.RaidLockdownFeedbackType.OTHER
+          return (0, a.jsxs)("div", {
+            className: l()(A.optionContainer, {
+              [A.optionContainerOther]: n === u.RaidLockdownFeedbackType.OTHER
             }),
-            children: [(0, s.jsxs)(o.Clickable, {
-              className: D.optionText,
-              onClick: () => L(a),
-              children: [(0, s.jsx)("div", {
-                children: (0, s.jsx)(o.Checkbox, {
+            children: [(0, a.jsxs)(o.Clickable, {
+              className: A.optionText,
+              onClick: () => h(n),
+              children: [(0, a.jsx)("div", {
+                children: (0, a.jsx)(o.Checkbox, {
                   type: o.Checkbox.Types.INVERTED,
                   size: 20,
-                  value: A.includes(a),
-                  onChange: () => L(a)
+                  value: D.includes(n),
+                  onChange: () => h(n)
                 })
-              }), (0, s.jsx)(o.Text, {
+              }), (0, a.jsx)(o.Text, {
                 variant: "text-md/medium",
-                color: A.includes(a) ? "interactive-active" : "interactive-normal",
+                color: D.includes(n) ? "interactive-active" : "interactive-normal",
                 children: t
               })]
-            }), a === u.RaidLockdownFeedbackType.OTHER && A.includes(u.RaidLockdownFeedbackType.OTHER) && (0, s.jsx)("div", {
-              className: D.textboxContainer,
-              children: (0, s.jsx)(o.TextArea, {
-                className: D.serverLockdownReasonText,
+            }), n === u.RaidLockdownFeedbackType.OTHER && D.includes(u.RaidLockdownFeedbackType.OTHER) && (0, a.jsx)("div", {
+              className: A.textboxContainer,
+              children: (0, a.jsx)(o.TextArea, {
+                className: A.serverLockdownReasonText,
                 placeholder: I.default.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_MODAL_OTHER_REASON_PLACEHOLDER,
-                onChange: e => h(e),
-                value: T,
+                onChange: e => T(e),
+                value: R,
                 rows: 2,
                 autoFocus: !0,
                 flex: !0
               })
             })]
-          }, a)
+          }, n)
         })
       })
-    }), (0, s.jsx)(o.ModalFooter, {
-      children: (0, s.jsx)(o.Button, {
+    }), (0, a.jsx)(o.ModalFooter, {
+      children: (0, a.jsx)(o.Button, {
         onClick: function() {
           (0, r.trackWithMetadata)(E.AnalyticEvents.GUILD_RAID_LOCKDOWN_FEEDBACK, {
-            raid_lockdown_feedback_type: A,
-            raid_lockdown_feedback_other_reason: T,
+            raid_lockdown_feedback_type: D,
+            raid_lockdown_feedback_other_reason: R,
             guild_id: t
-          }), l()
+          }), d()
         },
         color: o.Button.Colors.BRAND_NEW,
         look: o.Button.Looks.FILLED,

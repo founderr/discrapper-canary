@@ -1,14 +1,14 @@
 "use strict";
-t.r(A), t.d(A, {
+A.r(t), A.d(t, {
   createCloudUploader: function() {
     return l
   }
 });
-var a = t("680287");
+var a = A("680287");
 
 function l(e) {
-  let A = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "POST";
-  return new a.default(e, A, {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "POST";
+  return new a.default(e, t, {
     raiseEndpointErrors: !0
   })
 }

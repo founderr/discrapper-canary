@@ -1,44 +1,44 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   isAutomaticApprovalFormField: function() {
     return l
   },
   isManualApprovalFormField: function() {
-    return _
+    return o
   },
   isValidFormResponse: function() {
-    return E
+    return i
   }
 });
-var a = s("823379"),
-  n = s("246364"),
-  i = s("592286");
-let E = e => {
+var a = n("823379"),
+  r = n("246364"),
+  s = n("592286");
+let i = e => {
   let {
     required: t,
-    response: s,
-    field_type: i
+    response: n,
+    field_type: s
   } = e;
   if (!t) return !0;
-  if (null == s) return !1;
-  switch (i) {
-    case n.VerificationFormFieldTypes.TERMS:
-    case n.VerificationFormFieldTypes.VERIFICATION:
-      return !!s;
-    case n.VerificationFormFieldTypes.TEXT_INPUT:
-    case n.VerificationFormFieldTypes.PARAGRAPH:
-      return "string" == typeof s && "" !== s.trim();
-    case n.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-      return "number" == typeof s;
+  if (null == n) return !1;
+  switch (s) {
+    case r.VerificationFormFieldTypes.TERMS:
+    case r.VerificationFormFieldTypes.VERIFICATION:
+      return !!n;
+    case r.VerificationFormFieldTypes.TEXT_INPUT:
+    case r.VerificationFormFieldTypes.PARAGRAPH:
+      return "string" == typeof n && "" !== n.trim();
+    case r.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+      return "number" == typeof n;
     default:
-      return (0, a.assertNever)(i)
+      return (0, a.assertNever)(s)
   }
 };
 
 function l(e) {
-  return i.AUTOMATIC_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
+  return s.AUTOMATIC_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
 }
 
-function _(e) {
-  return i.MANUAL_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
+function o(e) {
+  return s.MANUAL_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
 }

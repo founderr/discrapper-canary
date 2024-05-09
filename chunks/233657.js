@@ -26,12 +26,12 @@ function E(e) {
     guild: t,
     selected: E
   } = e, {
-    hasUnread: S,
-    mentionCount: _
+    hasUnread: _,
+    mentionCount: I
   } = (0, a.useStateFromStoresObject)([d.default], () => ({
     hasUnread: d.default.hasUnread(t.id, m.ReadStateTypes.GUILD_EVENT),
     mentionCount: d.default.getMentionCount(t.id, m.ReadStateTypes.GUILD_EVENT)
-  }), [t.id]), I = (0, a.useStateFromStores)([c.default], () => c.default.isMuteScheduledEventsEnabled(t.id));
+  }), [t.id]), S = (0, a.useStateFromStores)([c.default], () => c.default.isMuteScheduledEventsEnabled(t.id));
   async function N() {
     await (0, i.openModalLazy)(async () => {
       let {
@@ -66,11 +66,11 @@ function E(e) {
         })
       })
     },
-    showUnread: S && !I,
-    trailing: !I && _ > 0 ? (0, l.jsx)(h.NumberBadge, {
+    showUnread: _ && !S,
+    trailing: !S && I > 0 ? (0, l.jsx)(h.NumberBadge, {
       className: g.numberBadge,
       disableColor: !0,
-      count: _
+      count: I
     }) : null
   })
 }

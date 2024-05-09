@@ -20,9 +20,9 @@ var l = n("735250"),
   C = n("823379"),
   g = n("355363"),
   E = n("737592"),
-  S = n("561788"),
-  _ = n("135724"),
-  I = n("543432"),
+  _ = n("561788"),
+  I = n("135724"),
+  S = n("543432"),
   N = n("981631"),
   T = n("689938"),
   A = n("254193");
@@ -34,8 +34,8 @@ function L(e) {
     guild: h,
     onAction: m,
     voiceStates: g,
-    isChannelSelected: S,
-    shouldShowSettingNudge: _
+    isChannelSelected: _,
+    shouldShowSettingNudge: I
   } = e;
   ! function(e, t) {
     let n = a.useMemo(() => {
@@ -51,9 +51,9 @@ function L(e) {
     }, [e, t]);
     (0, r.useSubscribeGuildMembers)(n)
   }(f, g);
-  let I = (0, o.default)(f),
+  let S = (0, o.default)(f),
     L = new Map;
-  I.forEach(e => {
+  S.forEach(e => {
     L.set(e.application.id, e)
   });
   let x = null !== (t = null == g ? void 0 : g.filter(C.isNotNullish)) && void 0 !== t ? t : [],
@@ -95,7 +95,7 @@ function L(e) {
     className: A.container,
     children: [(0, l.jsx)(v, {
       channel: f,
-      isChannelSelected: S,
+      isChannelSelected: _,
       voiceStatesCount: null !== (c = null == g ? void 0 : g.length) && void 0 !== c ? c : 0
     }), (0, l.jsx)("div", {
       className: A.headerDivider
@@ -111,7 +111,7 @@ function L(e) {
         members: n,
         onAction: m
       }, t)
-    }), _ && (0, l.jsxs)(l.Fragment, {
+    }), I && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: A.headerDivider
       }), (0, l.jsx)("div", {
@@ -151,13 +151,13 @@ function v(e) {
   }), u = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id));
   return null == (0, c.getChannelIconComponent)(t, u) ? null : (0, l.jsxs)("div", {
     className: A.popoutHeaderContainer,
-    children: [(0, l.jsx)(S.default, {
+    children: [(0, l.jsx)(_.default, {
       channel: t
-    }), o ? (0, l.jsx)(_.default, {
+    }), o ? (0, l.jsx)(I.default, {
       userCount: a,
       video: r,
       channel: t
-    }) : (0, l.jsx)(I.default, {
+    }) : (0, l.jsx)(S.default, {
       userCount: a
     })]
   })

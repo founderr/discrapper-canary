@@ -21,11 +21,11 @@ t.default = e => {
   s.useEffect(() => {
     null != n && l.default.resolveInvite(n, "Hub").finally(() => p(!1))
   }, [n]);
-  let I = (0, i.useStateFromStores)([u.default], () => null != n ? u.default.getInvite(n) : null),
-    g = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(t));
+  let g = (0, i.useStateFromStores)([u.default], () => null != n ? u.default.getInvite(n) : null),
+    I = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(t));
   s.useEffect(() => {
-    null != g && (0, r.transitionTo)(E.Routes.CHANNEL(t))
-  }, [g, t]);
+    null != I && (0, r.transitionTo)(E.Routes.CHANNEL(t))
+  }, [I, t]);
   let T = s.useCallback(e => {
       m(t => Math.max(t, e))
     }, []),
@@ -43,7 +43,7 @@ t.default = e => {
       }), (0, a.jsx)("div", {
         className: _.contentWrapper,
         children: !S && (0, a.jsx)(f.HubEmailConnectionModalView, {
-          invite: I
+          invite: g
         })
       })]
     })

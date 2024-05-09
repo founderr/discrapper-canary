@@ -18,14 +18,14 @@ var s = n("570140"),
   S = n("981631"),
   p = n("65154");
 
-function I() {
+function g() {
   var e;
   let t = a;
   if (null == t || !E.default.isOpen(t)) return !1;
   s.default.wait(() => i.close(t)), null === (e = h.default.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), a = null
 }
 
-function g() {
+function I() {
   let e = h.default.getChannelId(),
     t = a === e;
   return function() {
@@ -42,7 +42,7 @@ function g() {
     if (!(a || n)) return !0;
     let s = c.default.hasLayers();
     return !(s && c.default.getLayers().includes(S.Layers.RTC_DEBUG)) && (!!s || e === t || !1)
-  }() ? I() : (!t && I(), null != e && function(e) {
+  }() ? g() : (!t && g(), null != e && function(e) {
     var t;
     let n = d.default.getChannel(e);
     if (null == n || E.default.isOpen(e)) return !1;
@@ -53,10 +53,10 @@ function g() {
 }
 class T extends l.default {
   _initialize() {
-    _.default.addChangeListener(g), C.default.addChangeListener(g), h.default.addChangeListener(g), m.default.addChangeListener(g), c.default.addChangeListener(g), u.default.addChangeListener(g), o.default.addChangeListener(g), f.default.addChangeListener(g), r.default.addChangeListener(g)
+    _.default.addChangeListener(I), C.default.addChangeListener(I), h.default.addChangeListener(I), m.default.addChangeListener(I), c.default.addChangeListener(I), u.default.addChangeListener(I), o.default.addChangeListener(I), f.default.addChangeListener(I), r.default.addChangeListener(I)
   }
   _terminate() {
-    _.default.removeChangeListener(g), C.default.removeChangeListener(g), h.default.removeChangeListener(g), m.default.removeChangeListener(g), c.default.removeChangeListener(g), u.default.removeChangeListener(g), o.default.removeChangeListener(g), f.default.removeChangeListener(g), r.default.removeChangeListener(g)
+    _.default.removeChangeListener(I), C.default.removeChangeListener(I), h.default.removeChangeListener(I), m.default.removeChangeListener(I), c.default.removeChangeListener(I), u.default.removeChangeListener(I), o.default.removeChangeListener(I), f.default.removeChangeListener(I), r.default.removeChangeListener(I)
   }
 }
 t.default = new T

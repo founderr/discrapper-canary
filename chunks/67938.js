@@ -8,29 +8,29 @@ var l = a("735250");
 a("470079");
 var s = a("120356"),
   r = a.n(s),
-  i = a("442837"),
-  n = a("481060"),
+  n = a("442837"),
+  i = a("481060"),
   o = a("607070"),
   u = a("68972"),
   c = a("149961"),
   d = a("338231"),
   f = a("383416"),
-  m = a("26213"),
-  C = a("249174"),
+  C = a("26213"),
+  m = a("249174"),
   p = a("767247"),
   E = a("621881");
 
 function h(e) {
   let {
     category: t
-  } = e, a = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+  } = e, a = (0, n.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   return (0, l.jsxs)("div", {
     className: r()(c.banner, c.shyBanner),
     "aria-label": t.name,
     children: [(0, l.jsxs)("div", {
       className: c.noOverflow,
       children: [(0, l.jsx)("img", {
-        src: a ? C : m,
+        src: a ? m : C,
         className: c.shyGrid,
         alt: t.name,
         "aria-hidden": !0
@@ -56,7 +56,7 @@ function h(e) {
         src: E,
         alt: "",
         "aria-hidden": !0
-      }), (0, l.jsx)(n.Text, {
+      }), (0, l.jsx)(i.Text, {
         variant: "heading-sm/extrabold",
         tag: "div",
         children: "|"
@@ -64,7 +64,7 @@ function h(e) {
         height: 22,
         "aria-hidden": !0
       })]
-    }), (0, l.jsx)(n.Text, {
+    }), (0, l.jsx)(i.Text, {
       className: c.summary,
       variant: "text-md/normal",
       children: t.summary

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return d
   },
   getRoleSubscriptionPurchaseSystemMessageContentMobile: function() {
-    return T
+    return f
   },
   getRoleSubscriptionPurchaseSystemMessageEventProperties: function() {
     return I
@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return l
   },
   isEligibleForRoleSubscriptionPurchaseSystemMessageSettings: function() {
-    return S
+    return T
   },
   trackRoleSubscriptionPurchaseMessageTierClick: function() {
-    return f
+    return S
   }
 });
 var r = n("367907"),
@@ -106,7 +106,7 @@ function c(e) {
   }
 }
 
-function T(e) {
+function f(e) {
   let t, {
       username: n,
       usernameOnClickHandler: r = o.NOOP,
@@ -118,29 +118,29 @@ function T(e) {
       guild: l,
       totalMonthsSubscribed: d,
       showWithDuration: c,
-      isRenewal: T
+      isRenewal: f
     } = E(i, s),
-    S = {
+    T = {
       guildName: null == l ? void 0 : l.name,
       tierName: null == s ? void 0 : s.tier_name,
       username: n,
       usernameOnClick: r,
       roleSubscriptionOnClick: a
     };
-  return t = c ? T ? u.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION_MOBILE.astFormat({
-    ...S,
+  return t = c ? f ? u.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION_MOBILE.astFormat({
+    ...T,
     months: d
   }) : u.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION_MOBILE.astFormat({
-    ...S,
+    ...T,
     months: d
-  }) : T ? u.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_MOBILE.astFormat(S) : u.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_MOBILE.astFormat(S)
+  }) : f ? u.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_MOBILE.astFormat(T) : u.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_MOBILE.astFormat(T)
 }
 
-function S(e) {
+function T(e) {
   return (0, a.isCreatorMonetizationEnabledGuild)(e)
 }
 
-function f(e, t, n, a) {
+function S(e, t, n, a) {
   var i;
   r.default.trackWithMetadata(o.AnalyticEvents.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, {
     guild_id: e,

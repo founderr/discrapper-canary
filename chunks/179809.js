@@ -20,9 +20,9 @@ var l = n("735250"),
   C = n("199540"),
   g = n("40153"),
   E = n("252686"),
-  S = n("682662"),
-  _ = n("662146"),
-  I = n("689938"),
+  _ = n("682662"),
+  I = n("662146"),
+  S = n("689938"),
   N = n("538962"),
   T = n("634165");
 let A = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
@@ -45,14 +45,14 @@ function x(e) {
     onDragStart: b,
     onDragEnd: j,
     onExpandCollapse: P,
-    onContextMenu: U,
-    renderChildNode: G,
+    onContextMenu: G,
+    renderChildNode: U,
     folderIconContent: w
   } = e, {
-    id: B,
-    name: F,
-    children: V
-  } = t, [H, k] = a.useState(!1), [Y, K] = a.useState(!1), W = H || Y;
+    id: F,
+    name: B,
+    children: H
+  } = t, [V, k] = a.useState(!1), [Y, K] = a.useState(!1), W = V || Y;
   a.useEffect(() => {
     D && k(!1)
   }, [D]);
@@ -74,7 +74,7 @@ function x(e) {
     K(e)
   }, []), Q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && P()
-  }, [P, d]), q = null != F && "" !== F ? F : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(B)), $ = "folder-items-".concat(B), ee = V.length * (L + v), et = (0, o.useTransition)(!z && d, {
+  }, [P, d]), q = null != B && "" !== B ? B : null != M && "" !== M ? M : S.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = H.length * (L + v), et = (0, o.useTransition)(!z && d, {
     from: {
       height: 0
     },
@@ -87,14 +87,14 @@ function x(e) {
     config: {
       duration: A
     }
-  }), en = a.useCallback(e => null == n ? void 0 : n(B, e), [n, B]), el = (0, l.jsxs)(S.ListItem, {
+  }), en = a.useCallback(e => null == n ? void 0 : n(F, e), [n, F]), el = (0, l.jsxs)(_.ListItem, {
     children: [(0, l.jsx)(h.default, {
       disabled: z || d,
-      hovered: H,
+      hovered: V,
       selected: s,
       unread: R,
       className: T.pill
-    }), (0, l.jsx)(_.default, {
+    }), (0, l.jsx)(I.default, {
       text: q,
       disabled: D,
       selected: s,
@@ -115,7 +115,7 @@ function x(e) {
           tooltipName: q,
           folderGroupId: $,
           onClick: P,
-          onContextMenu: U,
+          onContextMenu: G,
           onHoverChange: k,
           onKeyDown: Q,
           treeItemProps: J,
@@ -147,7 +147,7 @@ function x(e) {
         },
         className: N.__invalid_expandedGuilds,
         role: "group",
-        children: V.map(G)
+        children: H.map(U)
       }, a)
     }), O && d ? (0, l.jsx)(g.FolderEndDropTarget, {
       name: q,

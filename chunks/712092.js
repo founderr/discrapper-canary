@@ -1,24 +1,24 @@
 "use strict";
-a.r(e), a.d(e, {
+t.r(L), t.d(L, {
   markSectionAcknowledged: function() {
-    return t
+    return C
   },
   markSectionOpened: function() {
     return s
   }
 });
-var C = a("570140");
+var a = t("570140");
 
-function t(L) {
-  C.default.dispatch({
+function C(e) {
+  a.default.dispatch({
     type: "ACTIVITIES_WHATS_NEW_ACKNOWLEDGE_SECTION",
-    section: L
+    section: e
   })
 }
 
-function s(L) {
-  C.default.dispatch({
+function s(e) {
+  a.default.dispatch({
     type: "ACTIVITIES_WHATS_NEW_MARK_OPENED_SECTION",
-    section: L
+    section: e
   })
 }

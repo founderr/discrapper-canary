@@ -1,37 +1,37 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return r
   }
 });
-var i = l("735250");
-l("470079");
-var a = l("481060"),
-  n = l("689938"),
-  s = l("733650");
+var l = a("735250");
+a("470079");
+var n = a("481060"),
+  s = a("689938"),
+  i = a("733650");
 
 function r(e) {
   let {} = e;
-  return (0, i.jsxs)("div", {
-    className: s.container,
-    children: [(0, i.jsxs)("div", {
-      className: s.content,
-      children: [(0, i.jsx)(a.Text, {
+  return (0, l.jsxs)("div", {
+    className: i.container,
+    children: [(0, l.jsxs)("div", {
+      className: i.content,
+      children: [(0, l.jsx)(n.Text, {
         variant: "text-sm/semibold",
-        className: s.title,
-        children: n.default.Messages.APP_DIRECTORY_MUSIC_BANNER_TITLE
-      }), (0, i.jsx)(a.Heading, {
+        className: i.title,
+        children: s.default.Messages.APP_DIRECTORY_MUSIC_BANNER_TITLE
+      }), (0, l.jsx)(n.Heading, {
         variant: "heading-xxl/medium",
-        children: n.default.Messages.APP_DIRECTORY_MUSIC_BANNER_HEADER
-      }), (0, i.jsx)(a.Text, {
+        children: s.default.Messages.APP_DIRECTORY_MUSIC_BANNER_HEADER
+      }), (0, l.jsx)(n.Text, {
         variant: "text-md/normal",
-        children: n.default.Messages.APP_DIRECTORY_MUSIC_BANNER_CONTENT
+        children: s.default.Messages.APP_DIRECTORY_MUSIC_BANNER_CONTENT
       })]
-    }), (0, i.jsx)("div", {
-      className: s.imageContainer,
-      children: (0, i.jsx)("img", {
-        className: s.image,
-        src: l("723067"),
+    }), (0, l.jsx)("div", {
+      className: i.imageContainer,
+      children: (0, l.jsx)("img", {
+        className: i.image,
+        src: a("723067"),
         alt: ""
       })
     })]

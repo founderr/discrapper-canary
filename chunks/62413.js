@@ -1,64 +1,64 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return g
+    return _
   }
-}), l("411104");
-var i = l("735250"),
-  a = l("470079"),
-  n = l("120356"),
-  s = l.n(n),
-  r = l("873199"),
-  c = l("442837"),
-  o = l("857192"),
-  d = l("674588"),
-  u = l("368862"),
-  p = l("927356"),
-  _ = l("125909"),
-  m = l("185156"),
-  f = l("87528"),
-  h = l("57348"),
-  C = l("164217");
+}), i("411104");
+var n = i("735250"),
+  a = i("470079"),
+  l = i("120356"),
+  s = i.n(l),
+  r = i("873199"),
+  o = i("442837"),
+  c = i("857192"),
+  d = i("674588"),
+  u = i("368862"),
+  h = i("927356"),
+  p = i("125909"),
+  f = i("185156"),
+  m = i("87528"),
+  C = i("57348"),
+  x = i("164217");
 
-function g() {
-  let e = (0, c.useStateFromStores)([o.default], () => o.default.appDirectoryIncludesInactiveCollections),
-    t = (0, c.useStateFromStores)([u.default], () => u.default.getFetchState({
+function _() {
+  let e = (0, o.useStateFromStores)([c.default], () => c.default.appDirectoryIncludesInactiveCollections),
+    t = (0, o.useStateFromStores)([u.default], () => u.default.getFetchState({
       includesInactive: e
     })),
-    l = (0, c.useStateFromStores)([u.default], () => u.default.getCollections({
+    i = (0, o.useStateFromStores)([u.default], () => u.default.getCollections({
       includesInactive: e
     }));
   return (a.useEffect(() => {
     d.getCollections({
       includesInactive: e
     })
-  }, [e]), t === u.FetchState.ERROR) ? (0, i.jsx)(p.default, {}) : (0, i.jsx)(_.default, {
+  }, [e]), t === u.FetchState.ERROR) ? (0, n.jsx)(h.default, {}) : (0, n.jsx)(p.default, {
     loading: t === u.FetchState.FETCHING,
-    children: null == l ? void 0 : l.map((e, t) => {
+    children: null == i ? void 0 : i.map((e, t) => {
       let a;
-      let n = t > 0 && l[t - 1].type !== r.ApplicationDirectoryCollectionType.GALLERY;
+      let l = t > 0 && i[t - 1].type !== r.ApplicationDirectoryCollectionType.GALLERY;
       switch (e.type) {
         case r.ApplicationDirectoryCollectionType.LIST:
-          a = (0, i.jsx)(f.default, {
+          a = (0, n.jsx)(m.default, {
             collection: e
           });
           break;
         case r.ApplicationDirectoryCollectionType.LIST_WITH_IMAGE:
-          a = (0, i.jsx)(h.default, {
+          a = (0, n.jsx)(C.default, {
             collection: e
           });
           break;
         case r.ApplicationDirectoryCollectionType.GALLERY:
-          a = (0, i.jsx)(m.default, {
+          a = (0, n.jsx)(f.default, {
             collection: e
           });
           break;
         default:
           return null
       }
-      return (0, i.jsx)("div", {
+      return (0, n.jsx)("div", {
         className: s()({
-          [C.topMargin]: n
+          [x.topMargin]: l
         }),
         children: a
       }, e.id)

@@ -1,49 +1,49 @@
 "use strict";
-t.r(A), t.d(A, {
+A.r(t), A.d(t, {
   IconVariant: function() {
     return a
   },
   default: function() {
     return c
   }
-}), t("47120");
-var a, l, s = t("735250"),
-  n = t("470079"),
-  r = t("481060"),
-  o = t("682864"),
-  i = t("759231"),
-  d = t("689938"),
-  u = t("164153");
+}), A("47120");
+var a, l, s = A("735250"),
+  n = A("470079"),
+  r = A("481060"),
+  i = A("682864"),
+  o = A("759231"),
+  d = A("689938"),
+  u = A("164153");
 (l = a || (a = {})).DANGER = "danger", l.WARNING = "warning";
 
 function c(e) {
   let {
-    transitionState: A,
-    onClose: t,
+    transitionState: t,
+    onClose: A,
     title: a,
     body: l,
     cta: c,
-    closeLabel: C,
-    onConfirm: f,
-    iconVariant: g = "warning"
-  } = e, [T, U] = n.useState(!1), h = async () => {
-    U(!0);
+    closeLabel: f,
+    onConfirm: g,
+    iconVariant: C = "warning"
+  } = e, [h, m] = n.useState(!1), T = async () => {
+    m(!0);
     try {
-      await f(), t()
+      await g(), A()
     } finally {
-      U(!1)
+      m(!1)
     }
-  }, m = null != a ? a : d.default.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
+  }, p = null != a ? a : d.default.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
   return (0, s.jsxs)(r.ModalRoot, {
     className: u.__invalid_container,
     size: r.ModalSize.DYNAMIC,
-    transitionState: A,
-    "aria-label": m,
+    transitionState: t,
+    "aria-label": p,
     children: [(0, s.jsxs)(r.ModalContent, {
       className: u.content,
       children: [(0, s.jsxs)("div", {
         className: u.header,
-        children: [(0, s.jsx)(i.default, {
+        children: [(0, s.jsx)(o.default, {
           width: 20,
           height: 20,
           className: function(e) {
@@ -53,16 +53,16 @@ function c(e) {
               case "warning":
                 return u.warningIcon
             }
-          }(g)
-        }), (0, s.jsx)(o.default, {
+          }(C)
+        }), (0, s.jsx)(i.default, {
           size: 8,
           horizontal: !0
         }), (0, s.jsx)(r.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
-          children: m
+          children: p
         })]
-      }), (0, s.jsx)(o.default, {
+      }), (0, s.jsx)(i.default, {
         size: 12
       }), (0, s.jsx)(r.Text, {
         variant: "text-md/normal",
@@ -73,17 +73,17 @@ function c(e) {
     }), (0, s.jsxs)(r.ModalFooter, {
       children: [(0, s.jsx)(r.Button, {
         color: r.Button.Colors.BRAND,
-        onClick: h,
-        submitting: T,
+        onClick: T,
+        submitting: h,
         children: c
-      }), (0, s.jsx)(o.default, {
+      }), (0, s.jsx)(i.default, {
         size: 12,
         horizontal: !0
-      }), null != C && (0, s.jsx)(r.Button, {
+      }), null != f && (0, s.jsx)(r.Button, {
         color: r.Button.Colors.PRIMARY,
         look: r.Button.Looks.OUTLINED,
-        onClick: t,
-        children: C
+        onClick: A,
+        children: f
       })]
     })]
   })

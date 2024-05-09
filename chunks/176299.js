@@ -21,15 +21,15 @@ var a = n("735250"),
   m = n("918854"),
   S = n("279240"),
   p = n("765717"),
-  I = n("358221"),
-  g = n("823748"),
+  g = n("358221"),
+  I = n("823748"),
   T = n("626421"),
   A = n("118379"),
   N = n("652515"),
   v = n("544978"),
   R = n("194729"),
-  O = n("668940"),
-  L = n("372900"),
+  L = n("668940"),
+  O = n("372900"),
   M = n("6039"),
   y = n("637853"),
   P = n("326145"),
@@ -88,13 +88,13 @@ let em = () => (0, a.jsx)("div", {
     name: "GuildMemberApplicationReview",
     renderLoader: em
   }),
-  eI = (0, d.makeLazy)({
+  eg = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("51373")]).then(n.bind(n, "231588")),
     webpackId: "231588",
     name: "GuildHomePage",
     renderLoader: em
   }),
-  eg = (0, d.makeLazy)({
+  eI = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("85552"), n.e("16600")]).then(n.bind(n, "545918")),
     webpackId: "545918",
     name: "MemberSafetyPage",
@@ -153,7 +153,7 @@ let em = () => (0, a.jsx)("div", {
           guildId: s
         });
       case eE.StaticChannelRoute.GUILD_HOME:
-        return (0, a.jsx)(eI, {
+        return (0, a.jsx)(eg, {
           guildId: s
         });
       case eE.StaticChannelRoute.CHANNEL_BROWSER:
@@ -171,7 +171,7 @@ let em = () => (0, a.jsx)("div", {
           selectedSection: eh.GuildOnboardingTab.CUSTOMIZE
         });
       case eE.StaticChannelRoute.MEMBER_SAFETY:
-        return (0, a.jsx)(eg, {
+        return (0, a.jsx)(eI, {
           guildId: s
         });
       default:
@@ -188,7 +188,7 @@ let em = () => (0, a.jsx)("div", {
         inputSkuId: e
       }, n.id)
     }
-    return (0, a.jsx)(g.default, {})
+    return (0, a.jsx)(I.default, {})
   },
   ev = s.memo(function() {
     let {
@@ -197,7 +197,7 @@ let em = () => (0, a.jsx)("div", {
     } = (0, q.default)(), n = (0, f.useStateFromStores)([ee.default], () => null != t ? t : ee.default.getChannelId(e));
     return function() {
       return window.location.pathname.startsWith(ef.Routes.GUILD_DISCOVERY)
-    }() ? (0, a.jsx)(O.default, {}) : null != e ? (0, a.jsx)(D.default, {
+    }() ? (0, a.jsx)(L.default, {}) : null != e ? (0, a.jsx)(D.default, {
       selectedChannelId: n,
       guildId: e
     }, e) : (0, a.jsx)(eo.default, {})
@@ -215,10 +215,10 @@ function eR(e) {
     guildId: t
   })
 }
-let eO = e => (0, a.jsx)(eN, {
+let eL = e => (0, a.jsx)(eN, {
     ...e
   }),
-  eL = e => {
+  eO = e => {
     let t = null != e && e.length > 0 && e.startsWith("?") ? e.split("?")[1] : null;
     return (0, a.jsx)(R.default, {
       searchRoute: t
@@ -314,7 +314,7 @@ function eF(e) {
   }), h.UserTriggerAAExperiment.trackExposure({
     location: i
   });
-  let r = (0, f.useStateFromStores)([I.default], () => I.default.isFullscreenInContext());
+  let r = (0, f.useStateFromStores)([g.default], () => g.default.isFullscreenInContext());
   return s ? null : (0, a.jsxs)("div", {
     className: l()(eC.sidebar, (0, es.getThemeClass)(n), {
       [eC.hasNotice]: t,
@@ -376,7 +376,7 @@ function eB() {
       children: [h && !E && (0, a.jsx)(b.default, {
         className: eC.guilds,
         themeOverride: n
-      }), (0, a.jsx)(L.default.Provider, {
+      }), (0, a.jsx)(O.default.Provider, {
         value: (null == _ ? void 0 : _.params.guildId) === ef.ME ? void 0 : null == _ ? void 0 : _.params.guildId,
         children: (0, a.jsxs)("div", {
           className: eC.base,
@@ -453,7 +453,7 @@ function eB() {
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: [ef.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), ef.Routes.CHANNEL(ef.ME, ":channelId"), ef.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
-                  render: eO,
+                  render: eL,
                   impressionName: u.ImpressionNames.GUILD_CHANNEL,
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
@@ -462,7 +462,7 @@ function eB() {
                     let {
                       location: t
                     } = e;
-                    return eL(t.search)
+                    return eO(t.search)
                   },
                   impressionName: u.ImpressionNames.GUILD_DISCOVERY,
                   disableTrack: !0

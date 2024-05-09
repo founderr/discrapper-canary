@@ -1,19 +1,19 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return n
+    return r
   }
 });
-var i = l("735250");
+var n = l("735250");
 l("470079");
-var a = l("481060");
+var i = l("481060");
 
-function n(e) {
+function r(e) {
   let {
     children: t,
     ...l
   } = e;
-  return (0, i.jsx)(a.Anchor, {
+  return (0, n.jsx)(i.Anchor, {
     ...l,
     onClick: e => e.preventDefault(),
     useDefaultUnderlineStyles: !1,

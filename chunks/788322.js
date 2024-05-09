@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("556017"),
   S = n("879484"),
   p = n("26580"),
-  I = n("206887"),
-  g = n("981631"),
+  g = n("206887"),
+  I = n("981631"),
   T = n("689938"),
   A = n("283434"),
   N = n("129512"),
@@ -35,8 +35,8 @@ t.default = e => {
   let {
     guild: i,
     theme: R,
-    onView: O,
-    onTagClick: L
+    onView: L,
+    onTagClick: O
   } = e, {
     id: M,
     discoverySplash: y,
@@ -54,9 +54,9 @@ t.default = e => {
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
-      case g.ThemeTypes.DARK:
+      case I.ThemeTypes.DARK:
         return N;
-      case g.ThemeTypes.LIGHT:
+      case I.ThemeTypes.LIGHT:
         return v
     }
   }(R), Y = null !== (t = _.default.getGuildIconURL({
@@ -71,11 +71,11 @@ t.default = e => {
       if ((0, c.isAtGuildCapAndNonPremium)()) {
         (0, f.default)({
           analyticsSource: {
-            page: g.AnalyticsPages.GUILD_DISCOVERY
+            page: I.AnalyticsPages.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: g.AnalyticsPages.GUILD_DISCOVERY,
-            section: g.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+            page: I.AnalyticsPages.GUILD_DISCOVERY,
+            section: I.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
           analyticsLocations: B
         });
@@ -83,7 +83,7 @@ t.default = e => {
       }
       F(!0);
       try {
-        null != O && await O(i.id)
+        null != L && await L(i.id)
       } finally {
         F(!1)
       }
@@ -167,10 +167,10 @@ t.default = e => {
             className: A.description,
             variant: "text-sm/normal",
             children: D
-          }), K && null != j && null != L && (0, a.jsx)(p.DiscoveryTags, {
+          }), K && null != j && null != O && (0, a.jsx)(p.DiscoveryTags, {
             guildId: i.id,
             discoveryTagStyle: p.DiscoveryTagStyle.ALT,
-            onTagClick: e => L(e, i.id),
+            onTagClick: e => O(e, i.id),
             tags: j,
             section: C.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
@@ -201,7 +201,7 @@ t.default = e => {
           })]
         }), z ? (0, a.jsx)("div", {
           className: A.actionButtons,
-          children: (0, a.jsx)(I.default, {
+          children: (0, a.jsx)(g.default, {
             guild: i
           })
         }) : null]

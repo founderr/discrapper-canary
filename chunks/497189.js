@@ -17,15 +17,15 @@ var a = n("735250"),
   m = n("100527"),
   S = n("931240"),
   p = n("970606"),
-  I = n("650461"),
-  g = n("603839"),
+  g = n("650461"),
+  I = n("603839"),
   T = n("430824"),
   A = n("725568"),
   N = n("231467"),
   v = n("207796"),
   R = n("316553"),
-  O = n("273254"),
-  L = n("559469"),
+  L = n("273254"),
+  O = n("559469"),
   M = n("308083"),
   y = n("689938"),
   P = n("18712"),
@@ -93,10 +93,10 @@ function G(e) {
       case v.ClanDiscoveryGame.VALORANT:
         return y.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_VALORANT
     }
-  }, [r]), I = s.useMemo(() => i.map(e => ({
+  }, [r]), g = s.useMemo(() => i.map(e => ({
     value: e.id,
     label: e.name
-  })), [i]), g = s.useCallback(() => {
+  })), [i]), I = s.useCallback(() => {
     C(v.ClanDiscoveryMode.DISCOVERY)
   }, [C]), T = s.useCallback(() => {
     C(v.ClanDiscoveryMode.GET_STARTED), m(v.ClanDiscoveryUserScreens.USER_ONBOARDING)
@@ -123,7 +123,7 @@ function G(e) {
       children: [N && (0, a.jsx)(h.SearchableSelect, {
         className: P.upsellSelect,
         value: t,
-        options: I,
+        options: g,
         onChange: n
       }), (0, a.jsx)(h.Button, {
         look: h.ButtonLooks.FILLED,
@@ -156,7 +156,7 @@ function G(e) {
       children: (0, a.jsx)("div", {
         className: P.upsellBackButton,
         children: (0, a.jsx)(h.Clickable, {
-          onClick: g,
+          onClick: I,
           "aria-label": y.default.Messages.BACK,
           children: (0, a.jsx)(E.ArrowLargeLeftIcon, {})
         })
@@ -169,7 +169,7 @@ t.default = s.memo(function(e) {
     eligibleGuilds: t,
     selectedGame: n
   } = e, [i, l] = s.useState(() => {
-    let e = new Set(I.default.getGuildIds());
+    let e = new Set(g.default.getGuildIds());
     for (let n of t)
       if (e.has(n.id)) return n.id;
     return t[0].id
@@ -181,7 +181,7 @@ t.default = s.memo(function(e) {
     })
   }, [i]);
   let o = (0, f.useStateFromStores)([T.default], () => T.default.getGuild(i)),
-    u = (0, f.useStateFromStores)([I.default], () => I.default.getStateForGuild(i).progress),
+    u = (0, f.useStateFromStores)([g.default], () => g.default.getStateForGuild(i).progress),
     d = (0, R.useDiscoveryGameApplicationId)({
       selectedGame: n
     }),
@@ -193,7 +193,7 @@ t.default = s.memo(function(e) {
         let {
           closeLayer: t
         } = e;
-        return (0, a.jsx)(g.default, {
+        return (0, a.jsx)(I.default, {
           onClose: t,
           guildId: i,
           gameId: d
@@ -203,7 +203,7 @@ t.default = s.memo(function(e) {
       })
     }, [i, d]),
     E = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion),
-    v = (0, O.useFakeDiscoveryClanForGuild)({
+    v = (0, L.useFakeDiscoveryClanForGuild)({
       guild: o,
       selectedGame: n
     }),
@@ -314,7 +314,7 @@ t.default = s.memo(function(e) {
           ...x
         },
         children: (0, a.jsx)(N.ClanDiscoveryCardView, {
-          clan: L.FAKE_DISCOVERY_UPSELL_CLANS["0"],
+          clan: O.FAKE_DISCOVERY_UPSELL_CLANS["0"],
           className: P.clanCardOuterLeft
         })
       }), (0, a.jsx)(r.animated.div, {
@@ -324,7 +324,7 @@ t.default = s.memo(function(e) {
           ...x
         },
         children: (0, a.jsx)(N.ClanDiscoveryCardView, {
-          clan: L.FAKE_DISCOVERY_UPSELL_CLANS["1"],
+          clan: O.FAKE_DISCOVERY_UPSELL_CLANS["1"],
           className: P.clanCardInnerLeft
         })
       }), null != v && (0, a.jsx)(r.animated.div, {
@@ -349,7 +349,7 @@ t.default = s.memo(function(e) {
           ...x
         },
         children: (0, a.jsx)(N.ClanDiscoveryCardView, {
-          clan: L.FAKE_DISCOVERY_UPSELL_CLANS["2"],
+          clan: O.FAKE_DISCOVERY_UPSELL_CLANS["2"],
           className: P.clanCardInnerRight
         })
       }), (0, a.jsx)(r.animated.div, {
@@ -359,7 +359,7 @@ t.default = s.memo(function(e) {
           ...x
         },
         children: (0, a.jsx)(N.ClanDiscoveryCardView, {
-          clan: L.FAKE_DISCOVERY_UPSELL_CLANS["3"],
+          clan: O.FAKE_DISCOVERY_UPSELL_CLANS["3"],
           className: P.clanCardOuterRight
         })
       })]

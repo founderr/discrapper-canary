@@ -33,8 +33,8 @@ function _(e) {
     label: h.default.Messages.COPY_ID_GUILD,
     shiftId: n,
     onSuccess: C
-  }), p = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), I = (0, s.useStateFromStores)([d.default], () => d.default.can(E.Permissions.ADMINISTRATOR, p)), {
-    canSeeInAppReportingButtons: g
+  }), p = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), g = (0, s.useStateFromStores)([d.default], () => d.default.can(E.Permissions.ADMINISTRATOR, p)), {
+    canSeeInAppReportingButtons: I
   } = f.DiscoveryInAppReportingExperiment.useExperiment({
     location: "0e35b9_1"
   }, {
@@ -48,7 +48,7 @@ function _(e) {
     "aria-label": null != m ? m : h.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onClose: l.closeContextMenu,
     children: [(0, a.jsx)(i.MenuGroup, {
-      children: !I && g ? (0, a.jsx)(i.MenuItem, {
+      children: !g && I ? (0, a.jsx)(i.MenuItem, {
         id: "report-guild-discovery-listing",
         label: h.default.Messages.REPORT_SERVER_NO_NAME,
         action: () => {

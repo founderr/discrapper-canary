@@ -15,9 +15,9 @@ var l, a = n("735250"),
   C = n("199902"),
   g = n("19780"),
   E = n("306680"),
-  S = n("944486"),
-  _ = n("594174"),
-  I = n("451478"),
+  _ = n("944486"),
+  I = n("594174"),
+  S = n("451478"),
   N = n("880080"),
   T = n("26290"),
   A = n("15434"),
@@ -61,7 +61,7 @@ class b extends(l = s.PureComponent) {
       controller: t
     } = this.state;
     e(), t.update({
-      immediate: !I.default.isFocused(),
+      immediate: !S.default.isFocused(),
       height: 1,
       opacity: 1,
       scale: 1,
@@ -89,7 +89,7 @@ class b extends(l = s.PureComponent) {
     this.setState({
       animating: !0
     }, () => t.update({
-      immediate: !I.default.isFocused(),
+      immediate: !S.default.isFocused(),
       height: 0,
       opacity: 0,
       scale: 0,
@@ -116,7 +116,7 @@ class b extends(l = s.PureComponent) {
   getChannelIcon() {
     let {
       channel: e
-    } = this.props, t = e.type === R.ChannelTypes.DM ? _.default.getUser(e.getRecipientId()) : null;
+    } = this.props, t = e.type === R.ChannelTypes.DM ? I.default.getUser(e.getRecipientId()) : null;
     return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, f.getChannelIconURL)(e)
   }
   render() {
@@ -199,7 +199,7 @@ class b extends(l = s.PureComponent) {
     }), y(this, "handleContextMenu", e => {
       let {
         channel: t
-      } = this.props, l = t.type === R.ChannelTypes.DM ? _.default.getUser(t.getRecipientId()) : null;
+      } = this.props, l = t.type === R.ChannelTypes.DM ? I.default.getUser(t.getRecipientId()) : null;
       null != l ? (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -233,7 +233,7 @@ y(b, "defaultProps", {
     s = (0, o.useStateFromStores)([g.default], () => g.default.getChannelId(), []),
     i = (0, o.useStateFromStores)([c.default], () => null != s ? c.default.getMode(s) : R.ChannelModes.VOICE, [s]),
     r = (0, o.useStateFromStores)([C.default], () => C.default.getAllApplicationStreamsForChannel(n).length > 0),
-    u = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(), []),
+    u = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(), []),
     d = (0, o.useStateFromStores)([E.default], () => E.default.getMentionCount(n), [n]),
     {
       isFacepileEnabled: f
@@ -243,17 +243,17 @@ y(b, "defaultProps", {
       autoTrackExposure: !1
     }),
     m = s === n,
-    _ = !1,
-    I = !1;
-  return m && (_ = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
+    I = !1,
+    S = !1;
+  return m && (I = i === R.ChannelModes.VOICE, S = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
     ...e,
     ref: t,
     channelName: l,
     unread: d > 0,
     selected: u === n,
     badge: d,
-    audio: _,
-    video: I,
+    audio: I,
+    video: S,
     stream: r,
     isCurrentUserInThisDMCall: m,
     isGDMFacepileEnabled: f

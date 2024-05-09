@@ -1,19 +1,19 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return A
+    return h
   }
 });
-var a = s("735250");
-s("470079");
-var n = s("249849"),
-  i = s("907561"),
-  E = s("689938"),
-  l = s("12008");
-let _ = ["#01007f", "#0000b0", "#0000e1", "#2d3dee", "#5470e9", "#a091eb", "#cc99ff"],
-  r = ["#a7e4e4", "#ffffff"],
-  u = [.01, .03, .055, .1, .19, .25, .35],
-  o = [{
+var a = n("735250");
+n("470079");
+var r = n("249849"),
+  s = n("907561"),
+  i = n("689938"),
+  l = n("12008");
+let o = ["#01007f", "#0000b0", "#0000e1", "#2d3dee", "#5470e9", "#a091eb", "#cc99ff"],
+  c = ["#a7e4e4", "#ffffff"],
+  d = [.01, .03, .055, .1, .19, .25, .35],
+  u = [{
     base: 8,
     tint: 1
   }, {
@@ -35,8 +35,8 @@ let _ = ["#01007f", "#0000b0", "#0000e1", "#2d3dee", "#5470e9", "#a091eb", "#cc9
     base: 6,
     tint: 1
   }],
-  T = [.55, 1],
-  d = [{
+  f = [.55, 1],
+  m = [{
     base: 8,
     tint: 1
   }, {
@@ -44,42 +44,42 @@ let _ = ["#01007f", "#0000b0", "#0000e1", "#2d3dee", "#5470e9", "#a091eb", "#cc9
     tint: 1
   }];
 
-function A(e) {
+function h(e) {
   let {
     width: t,
-    height: s,
-    primaryTintColor: A,
-    secondaryTintColor: I,
-    ...L
+    height: n,
+    primaryTintColor: h,
+    secondaryTintColor: p,
+    ...E
   } = e, {
-    primaryColorsTransformed: c,
-    secondaryColorsTransformed: N
-  } = (0, n.getTransformedBadgeColors)({
-    primaryBaseColors: _,
-    primaryTintColor: A,
-    primaryTintLuminances: u,
-    primaryLuminanceWeights: o,
-    secondaryBaseColors: r,
-    secondaryTintColor: I,
-    secondaryTintLuminances: T,
-    secondaryLuminanceWeights: d
+    primaryColorsTransformed: T,
+    secondaryColorsTransformed: C
+  } = (0, r.getTransformedBadgeColors)({
+    primaryBaseColors: o,
+    primaryTintColor: h,
+    primaryTintLuminances: d,
+    primaryLuminanceWeights: u,
+    secondaryBaseColors: c,
+    secondaryTintColor: p,
+    secondaryTintLuminances: f,
+    secondaryLuminanceWeights: m
   }), {
-    styleContent: S,
-    containerId: g
-  } = (0, i.useClanBannerStyleInjection)(c, N);
+    styleContent: x,
+    containerId: _
+  } = (0, s.useClanBannerStyleInjection)(T, C);
   return (0, a.jsxs)("svg", {
-    ...L,
-    "aria-label": E.default.Messages.CLAN_LOOK_BANNER,
+    ...E,
+    "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
-    height: s,
-    viewBox: "0 0 ".concat(i.CLAN_BANNER_WIDTH, " ").concat(i.CLAN_BANNER_HEIGHT),
+    height: n,
+    viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
     children: [(0, a.jsx)("defs", {
       children: (0, a.jsx)("style", {
-        children: S
+        children: x
       })
     }), (0, a.jsx)("use", {
       href: "".concat(l, "#wrapper-layer"),
-      id: g
+      id: _
     })]
   })
 }

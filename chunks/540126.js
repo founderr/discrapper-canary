@@ -4,19 +4,19 @@ n.r(t), n.d(t, {
     return en
   },
   MAX_NEW_CHANNELS_TO_SHOW: function() {
-    return z
-  },
-  SECTION_INDEX_COMMUNITY: function() {
     return W
   },
+  SECTION_INDEX_COMMUNITY: function() {
+    return z
+  },
   SECTION_INDEX_FAVORITES: function() {
-    return Z
+    return X
   },
   SECTION_INDEX_FIRST_NAMED_CATEGORY: function() {
-    return K
+    return Z
   },
   SECTION_INDEX_UNCATEGORIZED_CHANNELS: function() {
-    return X
+    return K
   },
   computeSubtitle: function() {
     return eC
@@ -76,12 +76,12 @@ function Y(e, t, n) {
   }) : e[t] = n, e
 }
 let k = "placeholder-channel-id",
-  z = 2;
+  W = 2;
 (s = i || (i = {}))[s.CannotShow = 1] = "CannotShow", s[s.DoNotShow = 2] = "DoNotShow", s[s.WouldShowIfUncollapsed = 3] = "WouldShowIfUncollapsed", s[s.Show = 4] = "Show";
-let W = 0,
-  Z = 1,
-  X = 3,
-  K = 4,
+let z = 0,
+  X = 1,
+  K = 3,
+  Z = 4,
   J = new Set([String(x.ChannelListCommunityRow.GUILD_DIRECTORY)]);
 class q {
   getGuild(e, t) {
@@ -153,22 +153,22 @@ class Q {
   }
   getCategoryFromSection(e) {
     switch (e) {
-      case W:
+      case z:
         throw Error("Invalid section. Use getCommunitySection instead");
-      case Z:
-        return this.favoritesCategory;
       case X:
+        return this.favoritesCategory;
+      case K:
         return this.noParentCategory;
       case this.recentsSectionNumber:
         return this.recentsCategory;
       case this.voiceChannelsSectionNumber:
         return this.voiceChannelsCategory;
       default:
-        return this.getSortedNamedCategories()[e - K]
+        return this.getSortedNamedCategories()[e - Z]
     }
   }
   getNamedCategoryFromSection(e) {
-    return e -= K, a()(e >= 0 && e < this.getSortedNamedCategories().length, "invalid section index ".concat(e)), this.getSortedNamedCategories()[e]
+    return e -= Z, a()(e >= 0 && e < this.getSortedNamedCategories().length, "invalid section index ".concat(e)), this.getSortedNamedCategories()[e]
   }
   getCommunitySection() {
     return this.communitySection
@@ -183,7 +183,7 @@ class Q {
     }
   }
   isPlaceholderRow(e, t) {
-    return a()(e > W, "Invalid section"), e !== this.recentsSectionNumber && this.getRows()[e][t] === k
+    return a()(e > z, "Invalid section"), e !== this.recentsSectionNumber && this.getRows()[e][t] === k
   }
   getFirstVoiceChannel(e) {
     if (void 0 === this.firstVoiceChannel) {
@@ -202,7 +202,7 @@ class Q {
         return null != e && eE.has(e)
       }(e)) return [{
       row: this.getCommunitySection().getRows().indexOf(e),
-      section: W
+      section: z
     }];
     let t = [],
       n = T.default.getChannel(e);
@@ -211,7 +211,7 @@ class Q {
     if (i && (n = T.default.getChannel(n.parent_id)), null == n) return t;
     let s = this.favoritesCategory.getShownChannelIds().indexOf(n.id);
     s >= 0 && t.push({
-      section: Z,
+      section: X,
       row: s
     });
     let l = this.recentsCategory.getShownChannelIds().indexOf(n.id);
@@ -219,10 +219,10 @@ class Q {
         section: this.recentsSectionNumber,
         row: l
       }), n.type === H.ChannelTypes.GUILD_CATEGORY) return [{
-      section: d().findIndex(this.getSortedNamedCategories(), e => e.id === (null == n ? void 0 : n.id)) + K
+      section: d().findIndex(this.getSortedNamedCategories(), e => e.id === (null == n ? void 0 : n.id)) + Z
     }];
     let a = this.getCategory(n),
-      r = a instanceof ee ? X : this.getSortedNamedCategories().indexOf(a) + K,
+      r = a instanceof ee ? K : this.getSortedNamedCategories().indexOf(a) + Z,
       o = a.getShownChannelIds().indexOf(n.id);
     if (r >= 0 && o >= 0) {
       let s = i ? a.channels[n.id].threadIds.indexOf(e) : 0;
@@ -336,7 +336,7 @@ class Q {
       }
     }
     for (let e in this.categories = {}, h) this.categories[e] = new et(this, r[e], h[e], g);
-    this.recentsSectionNumber = 2, this.favoritesSectionNumber = Z, this.noParentCategory = new ee(this, o, g), this.favoritesCategory = new en(this, g), this.recentsCategory = (0, v.isRecentlyActiveChannelsEnabled)() ? new ei(this, s, g) : new es(this, u, g), this.voiceChannelsCategory = new el(this, c, r, g), this.communitySection = new ea(t, f.length > 0), a()(!("null" in this.categories), "somehow a null got into categories"), this.voiceChannelsSectionNumber = K + d().size(this.categories)
+    this.recentsSectionNumber = 2, this.favoritesSectionNumber = X, this.noParentCategory = new ee(this, o, g), this.favoritesCategory = new en(this, g), this.recentsCategory = (0, v.isRecentlyActiveChannelsEnabled)() ? new ei(this, s, g) : new es(this, u, g), this.voiceChannelsCategory = new el(this, c, r, g), this.communitySection = new ea(t, f.length > 0), a()(!("null" in this.categories), "somehow a null got into categories"), this.voiceChannelsSectionNumber = Z + d().size(this.categories)
   }
 }
 class $ {
@@ -796,7 +796,7 @@ function ev(e, t) {
     if (R.default.getMentionCount(t) > 0) return !0;
   if (null != n && (n.id === e.id || n.isThread() && n.parent_id === e.id)) return true;
   let s = _.default.getNewChannelIds(e.category.guild.id);
-  if (s.size > z);
+  if (s.size > W);
   else if (s.has(e.id)) return !0;
   return !1
 }
@@ -810,7 +810,7 @@ function eI(e, t, n) {
   if (null != i && !(0, p.isInMainTabsExperiment)() && (i.id === t.id || i.isThread() && i.parent_id === t.id) || R.default.getMentionCount(t.id) > 0) return !0;
   let l = _.default.getNewChannelIds(e.id),
     a = Array.from(l).sort((e, t) => V.default.compare(t, e));
-  if (l.has(t.id) && a.indexOf(t.id) < z) return !0;
+  if (l.has(t.id) && a.indexOf(t.id) < W) return !0;
   for (let e in s[t.id])
     if (R.default.getMentionCount(e) > 0 || R.default.hasUnread(e) || R.default.hasRecentlyVisitedAndRead(e)) return !0;
   return !(e.mutedChannelIds.has(t.id) || null != t.parent_id && e.mutedChannelIds.has(t.parent_id)) && (!!R.default.hasRecentlyVisitedAndRead(t.id) || !1)

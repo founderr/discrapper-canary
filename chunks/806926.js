@@ -22,8 +22,8 @@ function S(e) {
     displayProfile: s,
     initialSection: S,
     autoFocusNote: m,
-    transitionState: I,
-    onClose: E
+    transitionState: E,
+    onClose: I
   } = e, v = (0, a.default)(s);
   return (0, l.jsxs)("div", {
     className: f.container,
@@ -42,19 +42,19 @@ function S(e) {
         children: (0, l.jsx)(i.default, {
           badges: v,
           className: f.badgeList,
-          onClose: E
+          onClose: I
         })
       })]
     }), (0, l.jsxs)(o.default.Overlay, {
       className: f.overlay,
-      children: [I === c.ModalTransitionState.ENTERED && (0, l.jsx)(n.default, {
-        onTooltipClose: E
+      children: [E === c.ModalTransitionState.ENTERED && (0, l.jsx)(n.default, {
+        onTooltipClose: I
       }), (0, l.jsx)(d.default, {
         user: t,
         displayProfile: s,
         initialSection: S,
         autoFocusNote: m,
-        onClose: E
+        onClose: I
       })]
     })]
   })

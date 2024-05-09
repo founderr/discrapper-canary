@@ -18,7 +18,7 @@ t.default = a.memo(function(e) {
   let {
     guildNode: t,
     lowerBadge: n
-  } = e, g = t.id, E = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(g)), S = (0, i.useCurrentUserGuildBadgeStatus)(g), _ = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), I = (0, s.useStateFromStores)([u.default], () => u.default.isUnavailable(g)), N = (0, o.default)(e => e.guildId), T = (0, p.default)(g), {
+  } = e, g = t.id, E = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(g)), _ = (0, i.useCurrentUserGuildBadgeStatus)(g), I = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), S = (0, s.useStateFromStores)([u.default], () => u.default.isUnavailable(g)), N = (0, o.default)(e => e.guildId), T = (0, p.default)(g), {
     badge: A,
     unread: L
   } = (0, s.useStateFromStoresObject)([d.default], () => ({
@@ -35,13 +35,13 @@ t.default = a.memo(function(e) {
   return (0, l.jsx)(m.default, {
     ...e,
     guild: E,
-    unavailable: I,
-    animatable: _,
+    unavailable: S,
+    animatable: I,
     selected: N === g,
     badge: A,
     lowerBadge: x,
     unread: L,
     mediaState: T,
-    guildJoinRequestStatus: S
+    guildJoinRequestStatus: _
   })
 })

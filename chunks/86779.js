@@ -75,7 +75,7 @@ t.default = () => {
         L()
       })
     }, [n, x, p, a, M]), null == a) return null;
-  let b = (() => {
+  let y = (() => {
     if (null == p) return (0, i.jsxs)(i.Fragment, {
       children: [g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1, (0, i.jsx)("br", {}), g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2]
     });
@@ -87,13 +87,13 @@ t.default = () => {
     children: (0, i.jsx)(f.Text, {
       color: "interactive-normal",
       variant: "text-sm/semibold",
-      children: b
+      children: y
     })
   }) : (0, i.jsxs)("div", {
     className: I.container,
     children: [(0, i.jsx)(f.Text, {
       variant: "text-sm/semibold",
-      children: b
+      children: y
     }), (0, i.jsx)(f.Button, {
       look: f.Button.Looks.INVERTED,
       color: f.Button.Colors.BRAND_NEW,

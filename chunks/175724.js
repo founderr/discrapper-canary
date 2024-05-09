@@ -22,8 +22,8 @@ var i = n("374470"),
   I = n("323873"),
   f = n("375954"),
   O = n("306680"),
-  p = n("944486"),
-  N = n("914010"),
+  N = n("944486"),
+  p = n("914010"),
   R = n("574254"),
   L = n("451478"),
   D = n("585483"),
@@ -43,8 +43,8 @@ let g = {
     if (D.ComponentDispatch.hasSubscribers(h.ComponentActions.CLOSE_GIF_PICKER)) return D.ComponentDispatch.dispatch(h.ComponentActions.CLOSE_GIF_PICKER), !1;
     if (D.ComponentDispatch.hasSubscribers(h.ComponentActions.MODAL_CLOSE)) return D.ComponentDispatch.dispatch(h.ComponentActions.MODAL_CLOSE), !1;
     if (D.ComponentDispatch.hasSubscribers(h.ComponentActions.SEARCH_RESULTS_CLOSE)) return D.ComponentDispatch.dispatch(h.ComponentActions.SEARCH_RESULTS_CLOSE), !1;
-    let t = N.default.getGuildId(),
-      n = p.default.getChannelId(t),
+    let t = p.default.getGuildId(),
+      n = N.default.getChannelId(t),
       l = T.default.getChannel(n),
       a = C.default.getSection(n, null == l ? void 0 : l.isDM()) === h.ChannelSections.SIDEBAR_CHAT ? C.default.getSidebarState(n) : null,
       d = (null == a ? void 0 : a.type) === c.SidebarType.VIEW_THREAD || (null == a ? void 0 : a.type) === c.SidebarType.VIEW_CHANNEL ? a.channelId : null;

@@ -25,15 +25,15 @@ var a, s, i = n("735250"),
   m = n("427679"),
   S = n("448206"),
   p = n("496675"),
-  I = n("938475"),
-  g = n("808602"),
+  g = n("938475"),
+  I = n("808602"),
   T = n("305878"),
   A = n("263704"),
   N = n("465670"),
   v = n("242315"),
   R = n("393112"),
-  O = n("170039"),
-  L = n("602623"),
+  L = n("170039"),
+  O = n("602623"),
   M = n("626135"),
   y = n("823379"),
   P = n("15274"),
@@ -122,7 +122,7 @@ function q(e) {
   let {
     guildEvent: t,
     channel: n
-  } = e, a = (0, r.useStateFromStoresArray)([I.default], () => I.default.getVoiceStatesForChannel(n).map(e => {
+  } = e, a = (0, r.useStateFromStoresArray)([g.default], () => g.default.getVoiceStatesForChannel(n).map(e => {
     let {
       user: t
     } = e;
@@ -170,7 +170,7 @@ function Q(e) {
       width: 16,
       height: 16,
       className: K.buttonIcon
-    }) : (0, i.jsx)(g.default, {
+    }) : (0, i.jsx)(I.default, {
       width: 16,
       height: 16,
       className: K.buttonIcon
@@ -340,7 +340,7 @@ function ee(e) {
       height: 14,
       className: K.stageIcon
     }),
-    locationIcon: (0, i.jsx)(O.default, {
+    locationIcon: (0, i.jsx)(L.default, {
       width: 16,
       height: 16,
       className: K.stageIcon
@@ -376,11 +376,11 @@ function et(e) {
   return null == s ? null : (0, i.jsxs)(i.Fragment, {
     children: [u.length > 0 ? (0, i.jsxs)("div", {
       className: K.textBlock,
-      children: [(0, i.jsx)(L.default, {
+      children: [(0, i.jsx)(O.default, {
         guildId: s,
         users: u,
         showUserPopout: !0,
-        size: L.Sizes.SIZE_16
+        size: O.Sizes.SIZE_16
       }), (0, i.jsx)(o.Text, {
         color: "header-secondary",
         variant: "text-xs/normal",

@@ -1,7 +1,7 @@
 "use strict";
-var i, a;
-l.r(t), l.d(t, {
+var n, a;
+i.r(t), i.d(t, {
   ApplicationDirectoryCollectionType: function() {
-    return i
+    return n
   }
-}), l("47120"), (a = i || (i = {}))[a.LIST = 1] = "LIST", a[a.LIST_WITH_IMAGE = 2] = "LIST_WITH_IMAGE", a[a.GALLERY = 3] = "GALLERY"
+}), i("47120"), (a = n || (n = {}))[a.LIST = 1] = "LIST", a[a.LIST_WITH_IMAGE = 2] = "LIST_WITH_IMAGE", a[a.GALLERY = 3] = "GALLERY"

@@ -29,9 +29,9 @@ var l = n("735250"),
   C = n("9156"),
   g = n("514342"),
   E = n("696202"),
-  S = n("605403"),
-  _ = n("908773"),
-  I = n("632184"),
+  _ = n("605403"),
+  I = n("908773"),
+  S = n("632184"),
   N = n("151827"),
   T = n("203818"),
   A = n("438144"),
@@ -47,7 +47,7 @@ let M = a.memo(function(e) {
       channel: s,
       connectChannelDragSource: f,
       connectChannelDropTarget: E,
-      disableManageChannels: I,
+      disableManageChannels: S,
       position: T,
       sortingPosition: A,
       hideIcon: M,
@@ -75,7 +75,7 @@ let M = a.memo(function(e) {
         })
       }
     }, [s]),
-    U = a.useCallback(() => {
+    G = a.useCallback(() => {
       let e = s.type === L.ChannelTypes.GUILD_CATEGORY ? null : s.type,
         t = s.getGuildId();
       null != t && (0, u.openModalLazy)(async () => {
@@ -91,24 +91,24 @@ let M = a.memo(function(e) {
       })
     }, [s]),
     {
-      role: G,
+      role: U,
       tabIndex: w,
-      ...B
+      ...F
     } = (0, r.useListItem)(s.id),
-    F = a.useRef(null),
-    V = a.useRef(null),
-    H = (0, l.jsxs)("li", {
+    B = a.useRef(null),
+    H = a.useRef(null),
+    V = (0, l.jsxs)("li", {
       className: t,
       "data-dnd-name": s.name,
       children: [(0, l.jsx)(u.FocusRing, {
-        focusTarget: F,
-        ringTarget: V,
+        focusTarget: B,
+        ringTarget: H,
         offset: {
           left: 4,
           right: 4
         },
         children: (0, l.jsxs)("div", {
-          ref: V,
+          ref: H,
           className: i()(x.iconVisibility, x.wrapper, {
             [x.collapsed]: D,
             [x.muted]: O,
@@ -116,10 +116,10 @@ let M = a.memo(function(e) {
           }),
           onContextMenu: P,
           children: [(0, l.jsxs)(u.Clickable, {
-            innerRef: F,
+            innerRef: B,
             className: x.mainContent,
             tabIndex: w,
-            ...B,
+            ...F,
             onClick: j,
             "aria-label": v.default.Messages.CATEGORY_A11Y_LABEL.format({
               categoryName: s.name
@@ -128,7 +128,7 @@ let M = a.memo(function(e) {
             focusProps: {
               enabled: !1
             },
-            children: [M ? null : (0, l.jsx)(S.default, {
+            children: [M ? null : (0, l.jsx)(_.default, {
               className: x.icon
             }), (0, l.jsx)(N.default, {
               className: x.name,
@@ -139,7 +139,7 @@ let M = a.memo(function(e) {
           }), (0, l.jsx)("div", {
             onClick: R,
             className: x.children,
-            children: b && !I ? (0, l.jsx)(u.Tooltip, {
+            children: b && !S ? (0, l.jsx)(u.Tooltip, {
               text: v.default.Messages.CREATE_CHANNEL,
               children: e => {
                 let {
@@ -151,7 +151,7 @@ let M = a.memo(function(e) {
                   look: u.Button.Looks.BLANK,
                   size: u.Button.Sizes.NONE,
                   className: i()(x.addButton, x.forceVisible),
-                  onClick: U,
+                  onClick: G,
                   onMouseEnter: t,
                   onMouseLeave: n,
                   tabIndex: w,
@@ -163,7 +163,7 @@ let M = a.memo(function(e) {
                       left: -4
                     }
                   },
-                  children: (0, l.jsx)(_.default, {
+                  children: (0, l.jsx)(I.default, {
                     width: 18,
                     height: 18,
                     className: x.addButtonIcon
@@ -175,7 +175,7 @@ let M = a.memo(function(e) {
         })
       }), y]
     });
-  return null != E && null != f ? E(f(H)) : H
+  return null != E && null != f ? E(f(V)) : V
 });
 t.default = (0, f.makeChannelSortable)(M);
 let y = a.memo(function(e) {
@@ -219,7 +219,7 @@ let y = a.memo(function(e) {
     return n ? (0, l.jsxs)(u.Clickable, {
       className: x.voiceChannelsButton,
       onClick: s,
-      children: [(0, l.jsx)(I.default, {
+      children: [(0, l.jsx)(S.default, {
         className: x.voiceChannelsToggleIcon,
         width: 16,
         height: 16
@@ -230,7 +230,7 @@ let y = a.memo(function(e) {
     }) : (0, l.jsxs)(u.Clickable, {
       className: x.voiceChannelsButton,
       onClick: s,
-      children: [(0, l.jsx)(I.default, {
+      children: [(0, l.jsx)(S.default, {
         className: x.voiceChannelsToggleIcon,
         width: 16,
         height: 16

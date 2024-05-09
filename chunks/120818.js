@@ -29,16 +29,16 @@ function g(e, t) {
 let E = a.memo(function(e) {
   let {
     guild: t
-  } = e, n = (0, i.useStateFromStores)([u.default], () => u.default.getNewMemberActions(t.id), [t.id]), E = (0, i.useStateFromStores)([d.default], () => d.default.getCompletedActions(t.id)), S = a.useMemo(() => {
+  } = e, n = (0, i.useStateFromStores)([u.default], () => u.default.getNewMemberActions(t.id), [t.id]), E = (0, i.useStateFromStores)([d.default], () => d.default.getCompletedActions(t.id)), _ = a.useMemo(() => {
     if (null == n || null == E) return 0;
     let e = 0;
     return n.forEach(t => {
       null != E[t.channelId] && e++
     }), e
-  }, [E, n]), _ = null == n ? 0 : n.length, I = (0, s.useListItem)("progress-bar-".concat(t.id));
+  }, [E, n]), I = null == n ? 0 : n.length, S = (0, s.useListItem)("progress-bar-".concat(t.id));
   return (0, l.jsxs)("li", {
     children: [(0, l.jsxs)(r.Clickable, {
-      ...I,
+      ...S,
       role: "button",
       focusProps: {
         offset: {
@@ -62,8 +62,8 @@ let E = a.memo(function(e) {
             className: C.rightText,
             children: m.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
               numberHook: g,
-              total: _.toString(),
-              completed: S.toString()
+              total: I.toString(),
+              completed: _.toString()
             })
           }), (0, l.jsx)(f.default, {
             className: C.arrow,
@@ -75,7 +75,7 @@ let E = a.memo(function(e) {
       }), (0, l.jsx)(r.Progress, {
         className: C.progressBar,
         foregroundGradientColor: [(0, o.getColor)(h.Color.GREEN_300), (0, o.getColor)(h.Color.GREEN_230)],
-        percent: S / _ * 100 + 3,
+        percent: _ / I * 100 + 3,
         animate: !0
       })]
     }), (0, l.jsx)("div", {

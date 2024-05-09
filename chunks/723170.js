@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return M
   },
   useThreadNotificationSetting: function() {
-    return i
+    return S
   }
 }), a("789020");
 var s = a("442837"),
@@ -27,6 +27,6 @@ function M(e) {
   return s === u.UserNotificationSettings.NO_MESSAGES ? r.ThreadMemberFlags.NO_MESSAGES : s === u.UserNotificationSettings.ONLY_MENTIONS ? r.ThreadMemberFlags.ONLY_MENTIONS : r.ThreadMemberFlags.ALL_MESSAGES
 }
 
-function i(e) {
+function S(e) {
   return (0, s.useStateFromStores)([_.default, E.default, n.default], () => M(e), [e])
 }

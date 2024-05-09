@@ -24,14 +24,14 @@ var a = n("735250"),
   m = n("304231"),
   S = n("526282"),
   p = n("802001"),
-  I = n("981631"),
-  g = n("424023");
+  g = n("981631"),
+  I = n("424023");
 let T = (e, t) => {
   switch (e) {
     case _.ClanDiscoveryGame.GENSHIN:
-      return t === I.ThemeTypes.DARK ? g.genshinUpsellBackgroundImageDark : g.genshinUpsellBackgroundImageLight;
+      return t === g.ThemeTypes.DARK ? I.genshinUpsellBackgroundImageDark : I.genshinUpsellBackgroundImageLight;
     case _.ClanDiscoveryGame.VALORANT:
-      return t === I.ThemeTypes.DARK ? g.valorantUpsellBackgroundImageDark : g.valorantUpsellBackgroundImageLight
+      return t === g.ThemeTypes.DARK ? I.valorantUpsellBackgroundImageDark : I.valorantUpsellBackgroundImageLight
   }
 };
 
@@ -47,24 +47,24 @@ function A() {
     E = s.useMemo(() => {
       switch (e) {
         case _.ClanDiscoveryGame.GENSHIN:
-          return u === I.ThemeTypes.DARK ? g.genshinOnboardingBackgroundImageDark : g.genshinOnboardingBackgroundImageLight;
+          return u === g.ThemeTypes.DARK ? I.genshinOnboardingBackgroundImageDark : I.genshinOnboardingBackgroundImageLight;
         case _.ClanDiscoveryGame.VALORANT:
-          return u === I.ThemeTypes.DARK ? g.valorantOnboardingBackgroundImageDark : g.valorantOnboardingBackgroundImageLight
+          return u === g.ThemeTypes.DARK ? I.valorantOnboardingBackgroundImageDark : I.valorantOnboardingBackgroundImageLight
       }
     }, [e, u]);
   switch (t) {
     case _.ClanDiscoveryUserScreens.USER_UPSELL:
       return (0, a.jsx)("div", {
-        className: g.container,
+        className: I.container,
         children: (0, a.jsx)(o.ScrollerThin, {
-          className: g.upsellScroller,
+          className: I.upsellScroller,
           fade: !0,
           children: (0, a.jsxs)("div", {
-            className: l()(f, g.userUpsell),
+            className: l()(f, I.userUpsell),
             children: [(0, a.jsx)("div", {
-              className: g.backgroundImageBlur
+              className: I.backgroundImageBlur
             }), (0, a.jsxs)("div", {
-              className: g.backgroundImageContent,
+              className: I.backgroundImageContent,
               children: [(0, a.jsx)(S.ClanDiscoveryUserUpsellBackgroundRings, {}), (0, a.jsx)(S.default, {
                 selectedGame: e,
                 onClick: i
@@ -75,13 +75,13 @@ function A() {
       });
     case _.ClanDiscoveryUserScreens.USER_ONBOARDING:
       return (0, a.jsx)("div", {
-        className: g.container,
+        className: I.container,
         children: (0, a.jsxs)("div", {
-          className: l()(E, g.userOnboarding),
+          className: l()(E, I.userOnboarding),
           children: [(0, a.jsx)("div", {
-            className: g.backgroundImageBlur
+            className: I.backgroundImageBlur
           }), (0, a.jsx)("div", {
-            className: g.backgroundImageContent,
+            className: I.backgroundImageContent,
             children: (0, a.jsx)(m.default, {
               selectedGame: e,
               setScreen: n
@@ -104,16 +104,16 @@ function N() {
   let m = (0, d.default)(),
     S = s.useMemo(() => T(e, m), [e, m]);
   return 0 === c.length ? null : (0, a.jsx)("div", {
-    className: g.container,
+    className: I.container,
     children: (0, a.jsxs)(o.ScrollerThin, {
-      className: g.upsellScroller,
+      className: I.upsellScroller,
       fade: !0,
       children: [(0, a.jsxs)("div", {
-        className: l()(S, g.adminUpsell),
+        className: l()(S, I.adminUpsell),
         children: [(0, a.jsx)("div", {
-          className: g.backgroundImageBlur
+          className: I.backgroundImageBlur
         }), (0, a.jsx)("div", {
-          className: g.backgroundImageContent,
+          className: I.backgroundImageContent,
           children: (0, a.jsx)(C.default, {
             selectedGame: e,
             eligibleGuilds: c

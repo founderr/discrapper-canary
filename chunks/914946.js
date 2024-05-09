@@ -68,15 +68,15 @@ var a, s = n("729594"),
   m = n("131951"),
   S = n("375954"),
   p = n("158776"),
-  I = n("594174"),
-  g = n("979651"),
+  g = n("594174"),
+  I = n("979651"),
   T = n("70956"),
   A = n("5192"),
   N = n("226951"),
   v = n("996106"),
   R = n("863141"),
-  O = n("186901"),
-  L = n("981631");
+  L = n("186901"),
+  O = n("981631");
 let M = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
   y = function() {
     let e = M.split(":")[0];
@@ -105,15 +105,15 @@ function j(e) {
 function G(e, t) {
   let n = [],
     a = e.getGuildId();
-  return ![L.ChannelTypes.GUILD_CATEGORY, ...(0, E.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
+  return ![O.ChannelTypes.GUILD_CATEGORY, ...(0, E.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
     S.default.whenReady(e.id, () => t()), o.default.fetchMessages({
       channelId: e.id,
-      limit: L.MAX_MESSAGES_PER_CHANNEL
+      limit: O.MAX_MESSAGES_PER_CHANNEL
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = (!e.isNSFW() || (null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(k) : [],
-      i = Object.values(g.default.getVoiceStatesForChannel(e.id)).map(t => w(a, e.id, t));
+    let s = (!e.isNSFW() || (null === (n = g.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(k) : [],
+      i = Object.values(I.default.getVoiceStatesForChannel(e.id)).map(t => w(a, e.id, t));
     return {
       id: e.id,
       name: e.name,
@@ -165,7 +165,7 @@ function w(e, t, n) {
     selfDeaf: l,
     suppress: r,
     userId: o
-  } = n, u = I.default.getUser(o);
+  } = n, u = g.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
     nick: A.default.getName(e, t, u),
@@ -184,7 +184,7 @@ function w(e, t, n) {
 }
 
 function F(e, t, n) {
-  let a = I.default.getUser(t);
+  let a = g.default.getUser(t);
   return {
     type: e,
     user: null != a ? (0, R.default)(a) : null,
@@ -210,14 +210,14 @@ function B(e) {
 
 function H(e, t, n) {
   let a = C.default.getGuild(e.getGuildId());
-  return (null != a ? a.getApplicationId() : e.getApplicationId()) === t || n.indexOf(L.OAuth2Scopes.MESSAGES_READ) > -1
+  return (null != a ? a.getApplicationId() : e.getApplicationId()) === t || n.indexOf(O.OAuth2Scopes.MESSAGES_READ) > -1
 }
 
 function V(e) {
   switch (e) {
-    case L.RTCConnectionStates.RTC_CONNECTED:
-    case L.RTCConnectionStates.RTC_CONNECTING:
-    case L.RTCConnectionStates.RTC_DISCONNECTED:
+    case O.RTCConnectionStates.RTC_CONNECTED:
+    case O.RTCConnectionStates.RTC_CONNECTING:
+    case O.RTCConnectionStates.RTC_DISCONNECTED:
       return e.replace(/^RTC_/, "VOICE_");
     default:
       return e
@@ -232,17 +232,17 @@ function Y(e) {
       party: s
     } = e,
     i = 0;
-  return (n && (i |= L.ActivityFlags.INSTANCE), (null == a ? void 0 : a.join) != null && (i |= L.ActivityFlags.JOIN), t) ? (i |= L.ActivityFlags.EMBEDDED, i |= L.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === L.ActivityPartyPrivacy.PUBLIC || r.Storage.get("ACTIVITIES_FORCE_PUBLIC")) && (f.AllowActivityPartyPrivacyFriends.getSetting() && (i |= L.ActivityFlags.PARTY_PRIVACY_FRIENDS), f.AllowActivityPartyPrivacyVoiceChannel.getSetting() && (i |= L.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)), i)
+  return (n && (i |= O.ActivityFlags.INSTANCE), (null == a ? void 0 : a.join) != null && (i |= O.ActivityFlags.JOIN), t) ? (i |= O.ActivityFlags.EMBEDDED, i |= O.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === O.ActivityPartyPrivacy.PUBLIC || r.Storage.get("ACTIVITIES_FORCE_PUBLIC")) && (f.AllowActivityPartyPrivacyFriends.getSetting() && (i |= O.ActivityFlags.PARTY_PRIVACY_FRIENDS), f.AllowActivityPartyPrivacyVoiceChannel.getSetting() && (i |= O.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)), i)
 }
 
 function W(e, t, n) {
-  if (e === L.ActivityActionTypes.JOIN) return null != t && null != t.id && null != n.join;
+  if (e === O.ActivityActionTypes.JOIN) return null != t && null != t.id && null != n.join;
   return !1
 }
 
 function K(e, t, n) {
   return i.HTTP.get({
-    url: L.Endpoints.APPLICATION_RPC(t),
+    url: O.Endpoints.APPLICATION_RPC(t),
     oldFormErrors: !0,
     retries: 3
   }).then(a => {
@@ -257,13 +257,13 @@ function K(e, t, n) {
       }
     } = a;
     if ("string" == typeof n) {
-      if (e.transport === O.TransportTypes.POST_MESSAGE) {
+      if (e.transport === L.TransportTypes.POST_MESSAGE) {
         let e = (0, u.default)(t);
         if (null == e || !j(n, [e])) throw new v.default({
-          closeCode: L.RPCCloseCodes.INVALID_ORIGIN
+          closeCode: O.RPCCloseCodes.INVALID_ORIGIN
         }, "Invalid Origin")
       } else if (!j(n, s)) throw new v.default({
-        closeCode: L.RPCCloseCodes.INVALID_ORIGIN
+        closeCode: O.RPCCloseCodes.INVALID_ORIGIN
       }, "Invalid Origin")
     }
     e.application = {
@@ -275,7 +275,7 @@ function K(e, t, n) {
     }
   }, () => {
     throw new v.default({
-      closeCode: L.RPCCloseCodes.INVALID_CLIENTID
+      closeCode: O.RPCCloseCodes.INVALID_CLIENTID
     }, "Invalid Client ID")
   })
 }
@@ -285,7 +285,7 @@ async function z(e, t) {
 }
 
 function q(e, t) {
-  null == t && (e.authorization.scopes = [O.RPC_LOCAL_SCOPE])
+  null == t && (e.authorization.scopes = [L.RPC_LOCAL_SCOPE])
 }
 
 function Q(e) {
@@ -339,14 +339,14 @@ function Z(e, t) {
 }
 
 function X(e) {
-  if (e !== O.TransportTypes.POST_MESSAGE) throw new v.default({
-    errorCode: L.RPCErrors.INVALID_COMMAND
+  if (e !== L.TransportTypes.POST_MESSAGE) throw new v.default({
+    errorCode: O.RPCErrors.INVALID_COMMAND
   }, 'command not available from "'.concat(e, " transport"))
 }
 
 function J(e) {
   if (null == e.id) throw new v.default({
-    errorCode: L.RPCErrors.INVALID_COMMAND
+    errorCode: O.RPCErrors.INVALID_COMMAND
   }, "Invalid application");
   return e.id
 }

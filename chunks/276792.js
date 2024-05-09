@@ -26,25 +26,25 @@ function S(e) {
   let {
     content: S,
     renderModalProps: p,
-    analyticsLocations: I,
-    analyticsLocation: g,
+    analyticsLocations: g,
+    analyticsLocation: I,
     isLightTheme: T
   } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(S.dismissKey)]), {
     onClose: N
-  } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === i.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === i.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === i.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", L = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === i.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, o.transitionTo)(h.Routes.APPLICATION_STORE), N()
   } : () => (0, r.default)({
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: I,
+    analyticsLocations: g,
     analyticsObject: {
-      ...g,
+      ...I,
       object: h.AnalyticsObjects.BUTTON_CTA,
       objectType: h.AnalyticsObjectTypes.TIER_2
     },
     onClose: e => {
       e && N()
     }
-  }), L = "" !== S.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
+  }), O = "" !== S.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
     className: C.termsApplyAnchor,
     href: c.default.getArticleURL(S.helpArticleId),
     children: (0, a.jsx)(l.Heading, {
@@ -71,7 +71,7 @@ function S(e) {
     header: S.header,
     modalTopExtra: P,
     subHeader: S.subheader,
-    subHeaderExtra: L,
+    subHeaderExtra: O,
     heroArt: M,
     featureCards: S.featureCards.map(e => ({
       header: e.header,
@@ -93,7 +93,7 @@ function S(e) {
             cta_type: R,
             seconds_open: Math.round((Date.now() - e) / 1e3),
             target: A
-          }), O()
+          }), L()
         },
         children: [(0, a.jsx)("img", {
           alt: "",

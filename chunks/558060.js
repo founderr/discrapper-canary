@@ -8,15 +8,15 @@ var l = a("735250");
 a("470079");
 var s = a("120356"),
   r = a.n(s),
-  i = a("399606"),
-  n = a("663002"),
+  n = a("399606"),
+  i = a("663002"),
   o = a("481060"),
   u = a("210887"),
   c = a("594174"),
   d = a("466111"),
   f = a("74538"),
-  m = a("884697"),
-  C = a("409116"),
+  C = a("884697"),
+  m = a("409116"),
   p = a("981631"),
   E = a("689938"),
   h = a("577687");
@@ -29,26 +29,26 @@ function g(e) {
     disableTooltipPointerEvents: g,
     alwaysWhiteText: x = !0,
     nitroWheelColor: b
-  } = e, T = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser()), S = (0, i.useStateFromStores)([u.default], () => (0, n.isThemeDark)(u.default.theme)), L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
+  } = e, T = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), v = (0, n.useStateFromStores)([u.default], () => (0, i.isThemeDark)(u.default.theme)), L = (0, C.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
   if (null == L) return null;
   if (L.amount <= 0) return (0, l.jsx)("div", {
     className: r()(h.priceTagsContainer, a),
-    children: (0, l.jsx)(C.default, {
+    children: (0, l.jsx)(m.default, {
       alwaysWhiteText: x,
       price: L,
       className: s
     })
   });
-  let v = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
+  let S = (0, C.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
     I = !f.default.canUseCollectibles(T);
   return (0, l.jsxs)("div", {
     className: r()(h.priceTagsContainer, a),
-    children: [(0, l.jsx)(C.default, {
+    children: [(0, l.jsx)(m.default, {
       alwaysWhiteText: x,
       price: L,
       className: r()([s, I ? void 0 : h.strikedPrice])
-    }), null != v && (0, l.jsx)(C.default, {
-      price: v,
+    }), null != S && (0, l.jsx)(m.default, {
+      price: S,
       alwaysWhiteText: x,
       renderPrice: I ? e => E.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
         price: e
@@ -68,7 +68,7 @@ function g(e) {
             className: r()(h.premiumIcon, {
               [h.fullPrice]: I
             }),
-            color: null != b ? b : x || S ? "white" : "black"
+            color: null != b ? b : x || v ? "white" : "black"
           })
         }
       })

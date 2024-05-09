@@ -17,28 +17,28 @@ var a = n("735250"),
   m = n("497505"),
   S = n("918701"),
   p = n("874137"),
-  I = n("611855"),
-  g = n("670638"),
+  g = n("611855"),
+  I = n("670638"),
   T = n("667105"),
   A = n("860151"),
   N = n("46140"),
   v = n("981631"),
   R = n("689938"),
-  O = n("758895");
+  L = n("758895");
 
-function L(e) {
+function O(e) {
   var t;
   let {
     quest: n
   } = e, s = (0, _.useQuestFormattedDate)(n.config.expiresAt), i = (0, _.useQuestFormattedDate)(n.config.rewardCodeExpiresAt), l = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), d = (0, o.isThemeDark)(l) ? v.ThemeTypes.DARK : v.ThemeTypes.LIGHT, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, a.jsxs)("div", {
-    className: O.heading,
+    className: L.heading,
     children: [(0, a.jsx)("img", {
-      className: O.headingGameTile,
+      className: L.headingGameTile,
       alt: "",
       src: (0, S.getGameTileAssetUrl)(n, d)
     }), (0, a.jsxs)("div", {
-      className: O.headingCopy,
+      className: L.headingCopy,
       children: [(0, a.jsx)(u.Heading, {
         variant: "heading-md/semibold",
         color: "header-primary",
@@ -93,8 +93,8 @@ t.default = function(e) {
         ref: t => {
           e.current = t
         },
-        className: l()(O.wrapper, {
-          [O.wrapperQuestAccepted]: w
+        className: l()(L.wrapper, {
+          [L.wrapperQuestAccepted]: w
         }),
         onClick: D,
         onKeyPress: D,
@@ -103,12 +103,12 @@ t.default = function(e) {
         onBlur: x,
         onMouseLeave: x,
         children: [(0, a.jsxs)("div", {
-          className: O.utils,
-          children: [w ? (0, a.jsx)(L, {
+          className: L.utils,
+          children: [w ? (0, a.jsx)(O, {
             quest: o
-          }) : (0, a.jsx)(I.default, {
+          }) : (0, a.jsx)(g.default, {
             textOpacity: .5
-          }), (0, a.jsx)(g.QuestsEntryContextMenuPopout, {
+          }), (0, a.jsx)(I.QuestsEntryContextMenuPopout, {
             quest: o,
             questContent: m.QuestContent.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
@@ -117,15 +117,15 @@ t.default = function(e) {
               ...e,
               "aria-label": R.default.Messages.ACTIONS,
               children: (0, a.jsx)(f.default, {
-                className: O.submenuIcon
+                className: L.submenuIcon
               })
             })
           })]
         }), !w && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(L, {
+          children: [(0, a.jsx)(O, {
             quest: o
           }), (0, a.jsx)(u.Text, {
-            className: O.instructions,
+            className: L.instructions,
             variant: "text-sm/normal",
             color: "text-normal",
             children: (0, S.getQuestsInstructionsToWinReward)({
@@ -135,22 +135,22 @@ t.default = function(e) {
           })]
         }), w && !F && (0, a.jsx)(A.default, {
           autoplay: M,
-          className: O.rewardTileWithInstructions,
+          className: L.rewardTileWithInstructions,
           quest: o,
           questContent: m.QuestContent.ACTIVITY_PANEL,
           questExperimentLocation: N.QuestsExperimentLocations.ACTIVITY_PANEL
         }), (0, a.jsxs)("div", {
-          className: O.ctas,
+          className: L.ctas,
           children: [!w && (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(u.Button, {
-              className: O.cta,
+              className: L.cta,
               color: u.Button.Colors.PRIMARY,
               fullWidth: !0,
               size: u.Button.Sizes.SMALL,
               onClick: j,
               children: R.default.Messages.QUESTS_LEARN_MORE_V2
             }), (0, a.jsx)(u.Button, {
-              className: O.cta,
+              className: L.cta,
               color: u.Button.Colors.BRAND,
               fullWidth: !0,
               onClick: b,
@@ -159,14 +159,14 @@ t.default = function(e) {
               children: R.default.Messages.QUESTS_ACCEPT_QUEST
             })]
           }), w && !F && (0, a.jsx)(u.Button, {
-            className: O.cta,
+            className: L.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: U,
             size: u.Button.Sizes.SMALL,
             children: R.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
           }), F && (0, a.jsx)(u.Button, {
-            className: O.cta,
+            className: L.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: G,

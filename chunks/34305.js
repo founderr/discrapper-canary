@@ -205,7 +205,7 @@ class p extends s.PureComponent {
     })
   }
 }
-class I extends s.PureComponent {
+class g extends s.PureComponent {
   componentDidMount() {
     (0, r.fetchMetadata)(this.props.installationPaths.map(e => {
       let {
@@ -268,4 +268,4 @@ t.default = i.default.connectStores([o.default], () => ({
   installationPaths: o.default.installationPaths,
   installationPathsMetadata: o.default.installationPathsMetadata,
   defaultInstallationPath: o.default.defaultInstallationPath
-}))(I)
+}))(g)

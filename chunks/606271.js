@@ -21,16 +21,16 @@ var a = n("392711"),
   m = n("594174"),
   S = n("979651"),
   p = n("626135"),
-  I = n("823379"),
-  g = n("358085"),
+  g = n("823379"),
+  I = n("358085"),
   T = n("914946"),
   A = n("238679"),
   N = n("863141"),
   v = n("981631"),
   R = n("701488"),
-  O = n("65154");
+  L = n("65154");
 
-function L(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -40,7 +40,7 @@ function L(e, t, n) {
 }
 class M {
   loadServer() {
-    for (let e of (g.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
+    for (let e of (I.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
     for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
     for (let [e, t] of Object.entries(this.rpcEventHandlers)) this.rpcServer.setEventHandler(e, t)
   }
@@ -84,7 +84,7 @@ class M {
         }, s = "".concat(t).concat(e.id);
         break;
       default:
-        return (0, I.assertNever)(e)
+        return (0, g.assertNever)(e)
     }
     null != n && this.rpcServer.dispatchToSubscriptions(t, {
       channel_id: n
@@ -96,7 +96,7 @@ class M {
   handleSpeaking(e) {
     if (0 === this.rpcServer.subscriptions.length) return;
     let t = 0 !== e.speakingFlags ? v.RPCEvents.SPEAKING_START : v.RPCEvents.SPEAKING_STOP;
-    if (e.context === O.MediaEngineContextTypes.DEFAULT) {
+    if (e.context === L.MediaEngineContextTypes.DEFAULT) {
       let n = _.default.getVoiceChannelId();
       if (null != n) {
         let a = o.default.getChannel(n);
@@ -325,6 +325,6 @@ class M {
     })
   }
   constructor(e) {
-    L(this, "rpcServer", void 0), L(this, "transports", void 0), L(this, "rpcCommandHandlers", void 0), L(this, "rpcEventHandlers", void 0), L(this, "stores", void 0), L(this, "registerTransportsForEmbeddedPlatform", void 0), this.rpcServer = e.server, this.transports = e.transports, this.rpcCommandHandlers = e.commands, this.rpcEventHandlers = e.events, this.stores = e.stores, this.registerTransportsForEmbeddedPlatform = e.registerTransportsForEmbeddedPlatform
+    O(this, "rpcServer", void 0), O(this, "transports", void 0), O(this, "rpcCommandHandlers", void 0), O(this, "rpcEventHandlers", void 0), O(this, "stores", void 0), O(this, "registerTransportsForEmbeddedPlatform", void 0), this.rpcServer = e.server, this.transports = e.transports, this.rpcCommandHandlers = e.commands, this.rpcEventHandlers = e.events, this.stores = e.stores, this.registerTransportsForEmbeddedPlatform = e.registerTransportsForEmbeddedPlatform
   }
 }

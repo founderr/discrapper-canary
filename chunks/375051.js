@@ -1,7 +1,7 @@
 "use strict";
-var i, a;
-l.r(t), l.d(t, {
+var l, n;
+a.r(t), a.d(t, {
   ApplicationDirectorySearchType: function() {
-    return i
+    return l
   }
-}), (a = i || (i = {}))[a.SEARCH_RESULTS = 1] = "SEARCH_RESULTS", a[a.MUSIC = 2] = "MUSIC"
+}), (n = l || (l = {}))[n.SEARCH_RESULTS = 1] = "SEARCH_RESULTS", n[n.MUSIC = 2] = "MUSIC"

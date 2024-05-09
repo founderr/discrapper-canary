@@ -16,16 +16,16 @@ var l = s("735250"),
   f = s("761174"),
   S = s("706454"),
   m = s("246946"),
-  I = s("785717"),
-  E = s("648067"),
+  E = s("785717"),
+  I = s("648067"),
   v = s("588822"),
   _ = s("81334"),
-  T = s("652853"),
-  x = s("335191"),
-  U = s("347949"),
-  A = s("988246"),
-  g = s("689938"),
-  N = s("921152");
+  g = s("652853"),
+  A = s("335191"),
+  T = s("347949"),
+  x = s("988246"),
+  N = s("689938"),
+  U = s("921152");
 
 function C(e) {
   var t;
@@ -35,71 +35,71 @@ function C(e) {
     autoFocusNote: C = !1,
     scrollToConnections: h = !1
   } = e, {
-    trackUserProfileAction: R
-  } = (0, I.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
-    theme: P
-  } = (0, T.useUserProfileThemeContext)(), M = (0, r.useStateFromStores)([S.default], () => S.default.locale), j = (0, f.useIsUserRecentGamesEnabled)({
+    trackUserProfileAction: p
+  } = (0, E.useUserProfileAnalyticsContext)(), R = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
+    theme: M
+  } = (0, g.useUserProfileThemeContext)(), P = (0, r.useStateFromStores)([S.default], () => S.default.locale), j = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
-  }), y = (0, d.default)("user_profile"), O = (0, E.default)(s.id), L = a.useRef(null);
+  }), L = (0, d.default)("user_profile"), y = (0, I.default)(s.id), O = a.useRef(null);
   return (a.useLayoutEffect(() => {
     if (h) {
       var e;
-      null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
+      null == O || null === (e = O.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [h]), p) ? (0, l.jsx)(A.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
+  }, [h]), R) ? (0, l.jsx)(x.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: N.infoScroller,
+    className: U.infoScroller,
     children: [(0, l.jsxs)("div", {
-      className: N.userInfoSection,
+      className: U.userInfoSection,
       children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(o.Heading, {
           variant: "eyebrow",
-          className: N.userInfoSectionHeader,
-          children: g.default.Messages.USER_PROFILE_ABOUT_ME
+          className: U.userInfoSectionHeader,
+          children: N.default.Messages.USER_PROFILE_ABOUT_ME
         }), (0, l.jsx)(v.default, {
-          className: N.userInfoText,
+          className: U.userInfoText,
           userBio: null !== (t = null == i ? void 0 : i.bio) && void 0 !== t ? t : ""
         })]
       }), (0, l.jsxs)("div", {
         children: [(0, l.jsx)(o.Heading, {
           variant: "eyebrow",
-          className: N.userInfoSectionHeader,
-          children: g.default.Messages.USER_PROFILE_MEMBER_SINCE
+          className: U.userInfoSectionHeader,
+          children: N.default.Messages.USER_PROFILE_MEMBER_SINCE
         }), (0, l.jsx)(_.default, {
           userId: s.id,
-          textClassName: N.userInfoText
+          textClassName: U.userInfoText
         })]
-      }), y && (0, l.jsx)("div", {
-        className: N.clans,
+      }), L && (0, l.jsx)("div", {
+        className: U.clans,
         children: (0, l.jsx)("div", {
-          className: N.userInfoText,
+          className: U.userInfoText,
           children: (0, l.jsx)(c.UserProfileClanContainer, {
             userId: s.id
           })
         })
-      }), j && (0, l.jsx)(U.UserProfileRecentGamesContainer, {
+      }), j && (0, l.jsx)(T.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
-        containerClassName: n()(N.userInfoText, N.recentGames)
+        containerClassName: n()(U.userInfoText, U.recentGames)
       }), (0, l.jsx)(o.Heading, {
         variant: "eyebrow",
-        className: N.userInfoSectionHeader,
-        children: g.default.Messages.NOTE
+        className: U.userInfoSectionHeader,
+        children: N.default.Messages.NOTE
       }), (0, l.jsx)(u.default, {
         userId: s.id,
         autoFocus: C,
-        className: N.note,
-        onUpdate: () => R({
+        className: U.note,
+        onUpdate: () => p({
           action: "SET_NOTE"
         })
       })]
-    }), (0, l.jsx)(x.ConnectedUserAccounts, {
-      ref: L,
-      connectedAccounts: O,
-      theme: P,
-      locale: M,
-      className: N.userInfoSection,
+    }), (0, l.jsx)(A.ConnectedUserAccounts, {
+      ref: O,
+      connectedAccounts: y,
+      theme: M,
+      locale: P,
+      className: U.userInfoSection,
       userId: s.id
     })]
   })

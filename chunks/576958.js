@@ -10,8 +10,8 @@ var a = l("481060"),
   n = l("463571"),
   s = l("744142"),
   r = l("981631"),
-  c = l("689938"),
-  o = l("914120");
+  o = l("689938"),
+  c = l("914120");
 
 function d(e) {
   let {
@@ -26,7 +26,7 @@ function d(e) {
   return (0, i.jsxs)("div", {
     className: l,
     children: [null != d ? (0, i.jsxs)("div", {
-      className: o.header,
+      className: c.header,
       children: [(0, i.jsx)(a.Heading, {
         variant: "heading-lg/semibold",
         children: d
@@ -34,10 +34,10 @@ function d(e) {
         look: a.Button.Looks.LINK,
         color: a.Button.Colors.LINK,
         onClick: m,
-        children: c.default.Messages.APP_DIRECTORY_LISTING_VIEW_ALL_BUTTON
+        children: o.default.Messages.APP_DIRECTORY_LISTING_VIEW_ALL_BUTTON
       }) : null]
     }) : null, (0, i.jsx)("ul", {
-      className: o.list,
+      className: c.list,
       children: t.map(e => (0, i.jsx)(n.default, {
         href: r.Routes.APPLICATION_DIRECTORY_PROFILE(e.id),
         children: (0, i.jsx)(u, {

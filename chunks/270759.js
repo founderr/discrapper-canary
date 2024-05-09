@@ -17,15 +17,15 @@ var a = n("735250"),
   m = n("518311"),
   S = n("199104"),
   p = n("108427"),
-  I = n("210887"),
-  g = n("974042"),
+  g = n("210887"),
+  I = n("974042"),
   T = n("153124"),
   A = n("988951"),
   N = n("26290"),
   v = n("792125"),
   R = n("666286"),
-  O = n("596957"),
-  L = n("981631"),
+  L = n("596957"),
+  O = n("981631"),
   M = n("723359"),
   y = n("689938"),
   P = n("915128");
@@ -47,18 +47,18 @@ t.default = function(e) {
       type: "AGE_GATE_MODAL_OPEN",
       source: M.AgeGateSource.DEEP_LINK_PROMPT
     }).then(() => {
-      i.replace(L.Routes.ME)
+      i.replace(O.Routes.ME)
     })
   }, [i, n]), s.useEffect(() => {
-    f.setHomeLink(L.Routes.FRIENDS), (0, p.trackAppUIViewed)("friends")
+    f.setHomeLink(O.Routes.FRIENDS), (0, p.trackAppUIViewed)("friends")
   }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
   }, [t]);
-  let m = (0, u.useStateFromStores)([I.default], () => I.default.theme),
+  let m = (0, u.useStateFromStores)([g.default], () => g.default.theme),
     {
       section: D,
       pendingCount: b
-    } = (0, u.useStateFromStoresObject)([g.default], () => g.default.getState()),
+    } = (0, u.useStateFromStoresObject)([I.default], () => I.default.getState()),
     U = (0, u.useStateFromStoresObject)([_.default], () => _.default.getSuggestionCount()),
     j = (0, T.useUID)(),
     G = (0, T.useUID)();
@@ -88,15 +88,15 @@ t.default = function(e) {
         },
         className: P.tabBar,
         children: [(0, a.jsx)(d.TabBar.Item, {
-          id: L.FriendsSections.ONLINE,
+          id: O.FriendsSections.ONLINE,
           className: P.item,
           children: y.default.Messages.FRIENDS_SECTION_ONLINE
         }), (0, a.jsx)(d.TabBar.Item, {
-          id: L.FriendsSections.ALL,
+          id: O.FriendsSections.ALL,
           className: P.item,
           children: y.default.Messages.FRIENDS_SECTION_ALL
         }), (0, a.jsxs)(d.TabBar.Item, {
-          id: L.FriendsSections.PENDING,
+          id: O.FriendsSections.PENDING,
           className: P.item,
           "aria-label": y.default.Messages.FRIENDS_SECTION_PENDING,
           children: [y.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, a.jsx)(N.NumberBadge, {
@@ -107,7 +107,7 @@ t.default = function(e) {
             }
           }) : null]
         }), U > 0 ? (0, a.jsxs)(d.TabBar.Item, {
-          id: L.FriendsSections.SUGGESTIONS,
+          id: O.FriendsSections.SUGGESTIONS,
           className: P.item,
           "aria-label": y.default.Messages.FRIENDS_SECTION_SUGGESTIONS,
           children: [y.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(N.NumberBadge, {
@@ -118,13 +118,13 @@ t.default = function(e) {
             }
           })]
         }) : null, (0, a.jsx)(d.TabBar.Item, {
-          id: L.FriendsSections.BLOCKED,
+          id: O.FriendsSections.BLOCKED,
           className: P.item,
           children: y.default.Messages.BLOCKED
         }), (0, a.jsx)(d.TabBar.Item, {
           "aria-label": y.default.Messages.FRIENDS_SECTION_ADD_FRIEND,
           className: l()(P.item, P.addFriend),
-          id: L.FriendsSections.ADD_FRIEND,
+          id: O.FriendsSections.ADD_FRIEND,
           children: (0, a.jsx)("span", {
             children: y.default.Messages.FRIENDS_SECTION_ADD_FRIEND
           })
@@ -136,7 +136,7 @@ t.default = function(e) {
         id: D,
         className: P.peopleColumn,
         "aria-labelledby": G,
-        children: D === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(R.default, {}) : (0, a.jsx)(O.default, {
+        children: D === O.FriendsSections.ADD_FRIEND ? (0, a.jsx)(R.default, {}) : (0, a.jsx)(L.default, {
           titleId: G,
           sectionFilter: D
         })

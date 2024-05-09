@@ -23,17 +23,17 @@ var l = n("735250"),
   C = n("703656"),
   g = n("104259"),
   E = n("603592"),
-  S = n("981631"),
-  _ = n("308083"),
-  I = n("731455"),
+  _ = n("981631"),
+  I = n("308083"),
+  S = n("731455"),
   N = n("921944"),
   T = n("689938"),
   A = n("427122");
 
 function L() {
-  window.location.pathname.startsWith(S.Routes.GUILD_DISCOVERY) && ((0, u.clearSearch)(), (0, u.selectCategory)(I.DISCOVERY_ALL_CATEGORIES_ID, !0));
+  window.location.pathname.startsWith(_.Routes.GUILD_DISCOVERY) && ((0, u.clearSearch)(), (0, u.selectCategory)(S.DISCOVERY_ALL_CATEGORIES_ID, !0));
   let e = (0, C.getHistory)().location.search;
-  (0, C.transitionTo)(S.Routes.GUILD_DISCOVERY, {
+  (0, C.transitionTo)(_.Routes.GUILD_DISCOVERY, {
     search: e
   })
 }
@@ -59,7 +59,7 @@ function x(e) {
   let {
     defaultGameId: t,
     children: n
-  } = e, u = (0, p.useGuildsEligibleForClanConversion)("GuildsBarClanAdminUpsellPopout"), C = (0, s.useLocation)(), [g, E] = (0, m.useSelectedDismissibleContent)([r.DismissibleContent.GUILD_LIST_CLAN_ADMIN_UPSELL], N.DismissibleContentGroupName.SIDEBAR), I = g !== r.DismissibleContent.GUILD_LIST_CLAN_ADMIN_UPSELL, v = (0, d.default)(), x = u.length > 0 && !v && !I && C.pathname !== S.Routes.GUILD_DISCOVERY;
+  } = e, u = (0, p.useGuildsEligibleForClanConversion)("GuildsBarClanAdminUpsellPopout"), C = (0, s.useLocation)(), [g, E] = (0, m.useSelectedDismissibleContent)([r.DismissibleContent.GUILD_LIST_CLAN_ADMIN_UPSELL], N.DismissibleContentGroupName.SIDEBAR), S = g !== r.DismissibleContent.GUILD_LIST_CLAN_ADMIN_UPSELL, v = (0, d.default)(), x = u.length > 0 && !v && !S && C.pathname !== _.Routes.GUILD_DISCOVERY;
   a.useEffect(() => {
     x && (0, f.trackClanAdminInviteViewed)({
       location: c.default.GUILDS_LIST
@@ -67,9 +67,9 @@ function x(e) {
   }, [x]);
   let R = a.useMemo(() => {
       switch (t) {
-        case _.VALORANT_ID:
+        case I.VALORANT_ID:
           return A.valorantBackgroundImage;
-        case _.GENSHIN_ID:
+        case I.GENSHIN_ID:
           return A.genshinBackgroundImage;
         default:
           return
@@ -83,7 +83,7 @@ function x(e) {
     y = a.useCallback(e => {
       e(), E(N.ContentDismissActionType.USER_DISMISS)
     }, [E]),
-    O = t === _.GENSHIN_ID ? T.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : t === _.VALORANT_ID ? T.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : T.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE;
+    O = t === I.GENSHIN_ID ? T.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : t === I.VALORANT_ID ? T.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : T.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE;
   return (0, l.jsxs)("div", {
     className: A.container,
     children: [(0, l.jsx)(o.Popout, {

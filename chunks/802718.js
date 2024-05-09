@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useSignUpButton: function() {
-    return I
+    return S
   }
 });
 var l = n("735250"),
@@ -20,22 +20,22 @@ var l = n("735250"),
   C = n("678513"),
   g = n("981631"),
   E = n("689938"),
-  S = n("211005");
+  _ = n("211005");
 
-function _(e) {
+function I(e) {
   let {
     target: t
   } = e, o = (0, s.useTreeItem)("fakedoor"), C = a.useCallback(() => {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("22862"), n.e("81847")]).then(n.bind(n, "646202"));
+      } = await Promise.all([n.e("99387"), n.e("22862"), n.e("88870")]).then(n.bind(n, "646202"));
       return n => (0, l.jsx)(e, {
         ...n,
         target: t
       })
     })
-  }, [t]), _ = a.useCallback(e => {
+  }, [t]), I = a.useCallback(e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -45,12 +45,12 @@ function _(e) {
         signupTarget: t
       })
     })
-  }, [t]), I = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), N = (0, l.jsxs)("div", {
-    className: S.tooltipContainer,
+  }, [t]), S = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), N = (0, l.jsxs)("div", {
+    className: _.tooltipContainer,
     children: [(0, l.jsx)("div", {
-      className: S.tooltipBackground,
+      className: _.tooltipBackground,
       style: {
-        background: I
+        background: S
       }
     }), (0, l.jsx)(r.Heading, {
       variant: "heading-sm/medium",
@@ -65,8 +65,8 @@ function _(e) {
       theme: g.ThemeTypes.DARK,
       children: (0, l.jsx)(h.default, {
         text: N,
-        tooltipClass: S.tooltip,
-        tooltipContentClass: S.tooltipContent,
+        tooltipClass: _.tooltip,
+        tooltipContentClass: _.tooltipContent,
         children: (0, l.jsx)(r.ThemeContextProvider, {
           theme: T,
           children: (0, l.jsx)(r.BlobMask, {
@@ -77,7 +77,7 @@ function _(e) {
             children: (0, l.jsx)(m.default, {
               ...o,
               onClick: C,
-              onContextMenu: _,
+              onContextMenu: I,
               children: (0, l.jsx)(i.BellIcon, {
                 color: c.default.TEXT_NORMAL
               })
@@ -87,7 +87,7 @@ function _(e) {
       })
     }), (0, l.jsx)("div", {
       style: {
-        background: I,
+        background: S,
         width: 0,
         height: 0
       }
@@ -95,9 +95,9 @@ function _(e) {
   })
 }
 
-function I() {
+function S() {
   let e = (0, o.useStateFromStores)([C.default], () => C.default.getActiveUserSignUp());
-  return null == e ? null : (0, l.jsx)(_, {
+  return null == e ? null : (0, l.jsx)(I, {
     target: e
   })
 }

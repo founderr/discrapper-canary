@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return v
   }
 }), n("47120"), n("724458"), n("653041");
 var r = n("735250"),
@@ -15,8 +15,8 @@ var r = n("735250"),
   d = n("481060"),
   f = n("271383"),
   S = n("430824"),
-  g = n("594174"),
-  h = n("700785"),
+  h = n("594174"),
+  g = n("700785"),
   E = n("709054"),
   _ = n("962086"),
   p = n("160404"),
@@ -35,40 +35,40 @@ function R(e) {
   })
 }
 
-function M(e) {
+function v(e) {
   let {
     guildId: t
-  } = e, n = (0, c.useStateFromStores)([g.default], () => g.default.getCurrentUser()), l = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t)), o = (0, c.useStateFromStores)([S.default], () => S.default.getRoles(t)), {
-    impersonateType: M,
-    viewingRoles: N
+  } = e, n = (0, c.useStateFromStores)([h.default], () => h.default.getCurrentUser()), l = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t)), o = (0, c.useStateFromStores)([S.default], () => S.default.getRoles(t)), {
+    impersonateType: v,
+    viewingRoles: M
   } = (0, c.useStateFromStoresObject)([p.default], () => ({
     impersonateType: p.default.getImpersonateType(t),
     viewingRoles: p.default.getViewingRoles(t)
-  })), v = M === C.ImpersonateType.SERVER_SHOP, O = (0, c.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [b, x] = (0, d.useMultiSelect)(null == N ? [] : E.default.keys(N)), L = i.useRef(l);
+  })), N = v === C.ImpersonateType.SERVER_SHOP, O = (0, c.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [b, x] = (0, d.useMultiSelect)(null == M ? [] : E.default.keys(M)), A = i.useRef(l);
   i.useEffect(() => {
     let e = {},
-      t = L.current;
-    if (null != t && null != M) {
+      t = A.current;
+    if (null != t && null != v) {
       for (let t of b) {
         let n = o[t];
         null != n && (e[t] = n)
       }(0, _.updateImpersonating)(t.id, {
-        type: M,
+        type: v,
         roles: e
       })
     }
-  }, [b, M, o]);
-  let A = null != l && null != n && null != O ? u()(o).filter(e => -1 !== O.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
+  }, [b, v, o]);
+  let L = null != l && null != n && null != O ? u()(o).filter(e => -1 !== O.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
     P = i.useMemo(() => null != l && null != n ? Object.values(o).filter(e => e.id !== l.id).filter(e => {
       var t;
-      return !v || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null
-    }).filter(e => (null == A ? void 0 : A.id) === e.id || h.isRoleHigher(l, n.id, A, e)) : [], [l, n, v, A, o]);
+      return !N || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null
+    }).filter(e => (null == L ? void 0 : L.id) === e.id || g.isRoleHigher(l, n.id, L, e)) : [], [l, n, N, L, o]);
   if (null == n || null == l || null == O) return null;
   let D = {};
   return (O.roles.forEach(e => {
     let t = o[e];
     null != t && (D[t.id] = t)
-  }), a.has(h.computePermissionsForRoles({
+  }), a.has(g.computePermissionsForRoles({
     forceRoles: D,
     context: l
   }), a.combine(m.Permissions.MANAGE_GUILD, m.Permissions.MANAGE_ROLES)) || l.isOwner(n.id)) ? (0, r.jsx)("div", {

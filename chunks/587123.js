@@ -1,15 +1,15 @@
 "use strict";
-t.r(A), t.d(A, {
+A.r(t), A.d(t, {
   GuildProductAttachmentManagerContextProvider: function() {
-    return o
+    return i
   },
   useGuildProductAttachmentManagerContext: function() {
     return r
   }
-}), t("411104");
-var a = t("735250"),
-  l = t("470079"),
-  s = t("828762");
+}), A("411104");
+var a = A("735250"),
+  l = A("470079"),
+  s = A("828762");
 let n = l.createContext(void 0);
 
 function r() {
@@ -18,14 +18,14 @@ function r() {
   return e
 }
 
-function o(e) {
+function i(e) {
   let {
-    children: A,
-    guildId: t,
+    children: t,
+    guildId: A,
     ...l
-  } = e, r = (0, s.default)(t, l);
+  } = e, r = (0, s.default)(A, l);
   return (0, a.jsx)(n.Provider, {
     value: r,
-    children: A
+    children: t
   })
 }

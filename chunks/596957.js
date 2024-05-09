@@ -17,15 +17,15 @@ var a = n("735250"),
   m = n("974042"),
   S = n("451478"),
   p = n("6048"),
-  I = n("390697"),
-  g = n("434184"),
+  g = n("390697"),
+  I = n("434184"),
   T = n("701861"),
   A = n("437314"),
   N = n("696577"),
   v = n("163417"),
   R = n("492347"),
-  O = n("42575"),
-  L = n("617015"),
+  L = n("42575"),
+  O = n("617015"),
   M = n("981631"),
   y = n("689938"),
   P = n("739426");
@@ -38,7 +38,7 @@ t.default = function(e) {
   } = (0, h.default)(E.default.FRIENDS_LIST), {
     rows: x,
     section: D
-  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, I.useIsClearIncomingFriendRequestsEnabled)(), [G, k] = s.useState(() => {
+  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, g.useIsClearIncomingFriendRequestsEnabled)(), [G, k] = s.useState(() => {
     let e = {};
     for (let t of Object.values(M.FriendsSections)) e[t] = "";
     return e
@@ -64,7 +64,7 @@ t.default = function(e) {
   });
   let H = 0 === B.length && "" !== G[t],
     V = B.filter(e => e.type === M.RelationshipTypes.PENDING_INCOMING).length,
-    Y = t === M.FriendsSections.PENDING && V > 0 && j && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
+    Y = t === M.FriendsSections.PENDING && V > 0 && j && V >= O.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
   return (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: i,
     children: (0, a.jsxs)(c.default, {
@@ -125,7 +125,7 @@ t.default = function(e) {
         renderRow: function(e) {
           switch (t) {
             case M.FriendsSections.BLOCKED:
-              return (0, a.jsx)(g.default, {
+              return (0, a.jsx)(I.default, {
                 ...e,
                 isFocused: b
               });
@@ -135,7 +135,7 @@ t.default = function(e) {
                 isFocused: b
               });
             case M.FriendsSections.SUGGESTIONS:
-              return (0, a.jsx)(O.default, {
+              return (0, a.jsx)(L.default, {
                 ...e,
                 isFocused: b
               });

@@ -20,25 +20,25 @@ async function m(e) {
   let {
     userId: S,
     section: p,
-    guildId: I = h.ME,
-    channelId: g,
+    guildId: g = h.ME,
+    channelId: I,
     friendToken: T,
     autoFocusNote: A,
     analyticsLocation: N
   } = e, v = c.default.getUser(S);
   if (null == v) return;
   let R = E.default.getUserProfile(S),
-    O = u.default.getPrimaryActivity(S),
-    L = u.default.getStatus(S),
+    L = u.default.getPrimaryActivity(S),
+    O = u.default.getStatus(S),
     M = u.default.isMobileOnline(S),
     {
       party: y,
       assets: P,
       application_id: x
-    } = null != O ? O : {},
+    } = null != L ? L : {},
     D = null != x ? o.default.getApplication(x) : null,
     b = M ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
-    U = L === h.StatusTypes.ONLINE ? b : L;
+    U = O === h.StatusTypes.ONLINE ? b : O;
   C = await (0, s.openModalLazy)(async () => {
     let {
       default: e
@@ -48,25 +48,25 @@ async function m(e) {
       location: "handleOpenUserProfileModal",
       user: v,
       autoFocusNote: A,
-      guildId: I,
+      guildId: g,
       friendToken: T,
       initialSection: p,
-      channelId: g
+      channelId: I
     })
   }), f.default.track(h.AnalyticEvents.OPEN_MODAL, {
     type: "Profile Modal",
-    guild_id: I !== h.ME ? I : null,
-    channel_id: g,
+    guild_id: g !== h.ME ? g : null,
+    channel_id: I,
     other_user_id: S,
-    application_id: null !== (i = null == O ? void 0 : O.application_id) && void 0 !== i ? i : null,
-    application_name: null == O ? void 0 : O.name,
+    application_id: null !== (i = null == L ? void 0 : L.application_id) && void 0 !== i ? i : null,
+    application_name: null == L ? void 0 : L.name,
     sku_id: null !== (l = null == D ? void 0 : D.primarySkuId) && void 0 !== l ? l : null,
     is_friend: d.default.isFriend(S),
     has_images: !!(null !== (m = null == P ? void 0 : P.large_image) && void 0 !== m ? m : null == P ? void 0 : P.small_image),
     party_max: null == y ? void 0 : null === (t = y.size) || void 0 === t ? void 0 : t[1],
     party_id: null == y ? void 0 : y.id,
     party_platform: (0, _.isSpotifyParty)(null == y ? void 0 : y.id) ? h.PlatformTypes.SPOTIFY : null,
-    game_platform: (0, r.default)(O),
+    game_platform: (0, r.default)(L),
     profile_user_status: U,
     profile_has_nitro_customization: (null == R ? void 0 : R.banner) != null,
     profile_has_profile_effect: (null == R ? void 0 : R.profileEffectId) != null,

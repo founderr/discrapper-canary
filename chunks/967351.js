@@ -32,7 +32,7 @@ function S(e) {
   return new Promise((t, n) => {
     "string" == typeof e && (e = E.net.createConnection(e)), e.pause(), e.on("readable", () => {
       try {
-        I(e)
+        g(e)
       } catch (t) {
         e.end(p(_.CLOSE, {
           code: 1003,
@@ -66,7 +66,7 @@ function p(e, t) {
   return i.writeInt32LE(e, 0), i.writeInt32LE(s, 4), i.write(t, 8, s), (n = i).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength)
 }
 
-function I(e) {
+function g(e) {
   let t = e.read(8);
   if (null == t) return;
   let n = a.Buffer.from(t),
@@ -93,9 +93,9 @@ function I(e) {
     case _.CLOSE:
       e.end(), e.destroy()
   }
-  I(e)
+  g(e)
 }
-class g extends d.default {
+class I extends d.default {
   send(e) {
     h.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(p(_.FRAME, e))
   }
@@ -119,7 +119,7 @@ class T extends s.EventEmitter {
   handleConnection(e) {
     C(e, !1), e.pause(), e.on("readable", () => {
       try {
-        I(e)
+        g(e)
       } catch (t) {
         e.end(p(_.CLOSE, {
           code: f.RPCCloseCodes.CLOSE_UNSUPPORTED,
@@ -131,7 +131,7 @@ class T extends s.EventEmitter {
       let a = t.client_id,
         s = +t.v;
       try {
-        n = new g(e, s, "json")
+        n = new I(e, s, "json")
       } catch (t) {
         e.end(p(_.CLOSE, {
           code: t.code,

@@ -16,10 +16,10 @@ var l = n("735250"),
   C = n("98597"),
   g = n("473403"),
   E = n("981631"),
-  S = n("490897"),
-  _ = n("513285");
+  _ = n("490897"),
+  I = n("513285");
 
-function I(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -44,11 +44,11 @@ class T extends C.default {
       canReorderChannel: r
     } = this.props, o = (0, l.jsx)("li", {
       className: i()(this.getClassName(), {
-        [_.disabled]: this.isDisabled()
+        [I.disabled]: this.isDisabled()
       }),
       "data-dnd-name": e.name,
       children: (0, l.jsxs)(g.default, {
-        className: _.iconVisibility,
+        className: I.iconVisibility,
         channel: e,
         selected: t,
         onClick: this.handleClick,
@@ -58,14 +58,14 @@ class T extends C.default {
         "aria-label": (0, c.default)({
           channel: e
         }),
-        resolvedUnreadSetting: S.UnreadSetting.ONLY_MENTIONS,
+        resolvedUnreadSetting: _.UnreadSetting.ONLY_MENTIONS,
         children: [this.renderInviteButton(), this.renderEditButton()]
       })
     });
     return r ? n(a(o)) : o
   }
   constructor(...e) {
-    super(...e), I(this, "handleContextMenu", e => {
+    super(...e), S(this, "handleContextMenu", e => {
       let {
         channel: t
       } = this.props, a = p.default.getGuild(t.getGuildId());
@@ -79,7 +79,7 @@ class T extends C.default {
           guild: a
         })
       })
-    }), I(this, "handleClick", e => {
+    }), S(this, "handleClick", e => {
       ! function(e) {
         let t = e.getGuildId();
         if (null == t) throw Error("TextChannel, transitionTo: Channel does not have a guildId");

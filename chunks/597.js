@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchDirectoryEntries: function() {
-    return a
+    return s
   }
 });
-var l = n("954955"),
-  u = n.n(l),
+var u = n("954955"),
+  l = n.n(u),
   i = n("544891"),
   r = n("570140"),
-  s = n("486527"),
-  d = n("981631");
-let a = u()(async e => {
+  d = n("486527"),
+  a = n("981631");
+let s = l()(async e => {
   try {
     r.default.dispatch({
       type: "EVENT_DIRECTORY_FETCH_START"
     });
     let t = await i.HTTP.get({
-      url: d.Endpoints.DIRECTORY_CHANNEL_ENTRIES(e),
+      url: a.Endpoints.DIRECTORY_CHANNEL_ENTRIES(e),
       query: {
-        type: s.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT
+        type: d.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT
       }
     });
     r.default.dispatch({

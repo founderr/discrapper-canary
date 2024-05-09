@@ -10,8 +10,8 @@ var a = l("120356"),
   n = l.n(a),
   s = l("377171"),
   r = l("26290"),
-  c = l("689938"),
-  o = l("308580");
+  o = l("689938"),
+  c = l("308580");
 
 function d(e) {
   let {
@@ -20,8 +20,8 @@ function d(e) {
   } = e;
   return (0, i.jsx)(r.TextBadge, {
     ...l,
-    text: c.default.Messages.APP_DIRECTORY_PARTNER,
+    text: o.default.Messages.APP_DIRECTORY_PARTNER,
     color: s.default.BACKGROUND_TERTIARY,
-    className: n()(t, o.partnerBadge)
+    className: n()(t, c.partnerBadge)
   })
 }

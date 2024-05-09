@@ -1,26 +1,26 @@
 "use strict";
-t.r(A), t("47120");
-var a, l = t("735250"),
-  s = t("470079"),
-  n = t("120356"),
-  r = t.n(n),
-  o = t("748780"),
-  i = t("481060"),
-  d = t("100803");
+n.r(t), n("47120");
+var r, s = n("735250"),
+  o = n("470079"),
+  i = n("120356"),
+  a = n.n(i),
+  l = n("748780"),
+  u = n("481060"),
+  d = n("100803");
 
-function u(e, A, t) {
-  return A in e ? Object.defineProperty(e, A, {
-    value: t,
+function c(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[A] = t, e
+  }) : e[t] = n, e
 }
-let c = {
+let h = {
   friction: 7,
   tension: 60
 };
-class C extends(a = s.Component) {
+class f extends(r = o.Component) {
   componentWillAppear(e) {
     this.animateTo(1).start(e)
   }
@@ -29,13 +29,13 @@ class C extends(a = s.Component) {
   }
   componentWillLeave(e) {
     let {
-      reducedMotion: A
+      reducedMotion: t
     } = this.context;
-    A.enabled ? this.animateTo(0).start(e) : o.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
+    t.enabled ? this.animateTo(0).start(e) : l.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
   }
   animateTo(e) {
-    return o.default.spring(this.animation, {
-      ...c,
+    return l.default.spring(this.animation, {
+      ...h,
       toValue: e
     })
   }
@@ -43,7 +43,7 @@ class C extends(a = s.Component) {
     let {
       reducedMotion: e
     } = this.context;
-    return o.default.accelerate({
+    return l.default.accelerate({
       opacity: this.animation,
       transform: e.enabled ? void 0 : [{
         translateY: this.animation.interpolate({
@@ -56,16 +56,16 @@ class C extends(a = s.Component) {
   render() {
     let {
       className: e,
-      children: A
+      children: t
     } = this.props;
-    return (0, l.jsx)(o.default.div, {
-      className: r()(e, d.slider),
+    return (0, s.jsx)(l.default.div, {
+      className: a()(e, d.slider),
       style: this.getAnimatedStyle(),
-      children: A
+      children: t
     })
   }
   constructor(...e) {
-    super(...e), u(this, "animation", new o.default.Value(0))
+    super(...e), c(this, "animation", new l.default.Value(0))
   }
 }
-u(C, "contextType", i.AccessibilityPreferencesContext), A.default = C
+c(f, "contextType", u.AccessibilityPreferencesContext), t.default = f

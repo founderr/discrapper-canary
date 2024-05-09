@@ -1,288 +1,288 @@
 "use strict";
 n.r(t), n.d(t, {
   CustomColorButton: function() {
-    return j
+    return I
   },
   CustomColorPicker: function() {
-    return O
+    return N
   },
   DefaultColorButton: function() {
-    return C
+    return g
   },
   default: function() {
-    return E
+    return v
   }
 }), n("47120");
-var r = n("735250"),
-  s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
-  a = n("924826"),
+var a = n("735250"),
+  r = n("470079"),
+  s = n("120356"),
+  i = n.n(s),
+  l = n("924826"),
   o = n("866442"),
   c = n("481060"),
-  u = n("408886"),
-  d = n("44315"),
-  p = n("671862"),
-  h = n("263704"),
-  g = n("214623"),
-  f = n("502568"),
-  v = n("981631"),
-  m = n("689938"),
-  x = n("894545");
-let D = () => Promise.resolve();
+  d = n("408886"),
+  u = n("44315"),
+  f = n("671862"),
+  m = n("263704"),
+  h = n("214623"),
+  p = n("502568"),
+  E = n("981631"),
+  T = n("689938"),
+  C = n("894545");
+let x = () => Promise.resolve();
 
-function b(e) {
+function _(e) {
   let {
     color: t,
     isDefault: n = !1,
-    isCustom: s = !1,
-    isSelected: i = !1,
-    disabled: u = !1,
-    style: p = {},
-    onClick: f,
-    "aria-label": m
-  } = e, D = (0, a.useListItem)("color-".concat(t)), b = null != t ? (0, o.int2hex)(t) : p.backgroundColor, C = !1;
-  return s && !i ? C = !0 : (s || i) && (C = (0, o.getDarkness)(t) > .1), (0, r.jsx)(c.FocusRing, {
+    isCustom: r = !1,
+    isSelected: s = !1,
+    disabled: d = !1,
+    style: f = {},
+    onClick: p,
+    "aria-label": T
+  } = e, x = (0, l.useListItem)("color-".concat(t)), _ = null != t ? (0, o.int2hex)(t) : f.backgroundColor, g = !1;
+  return r && !s ? g = !0 : (r || s) && (g = (0, o.getDarkness)(t) > .1), (0, a.jsx)(c.FocusRing, {
     offset: -2,
-    children: (0, r.jsxs)("button", {
+    children: (0, a.jsxs)("button", {
       type: "button",
-      className: l()(x.colorPickerSwatch, {
-        [x.disabled]: u,
-        [x.default]: n,
-        [x.custom]: s,
-        [x.noColor]: null == t
+      className: i()(C.colorPickerSwatch, {
+        [C.disabled]: d,
+        [C.default]: n,
+        [C.custom]: r,
+        [C.noColor]: null == t
       }),
-      disabled: u,
-      onClick: () => null == f ? void 0 : f(t),
+      disabled: d,
+      onClick: () => null == p ? void 0 : p(t),
       style: {
-        ...p,
-        backgroundColor: b
+        ...f,
+        backgroundColor: _
       },
-      "aria-label": null != m ? m : b,
-      ...D,
-      children: [s ? (0, r.jsx)(g.default, {
-        className: x.colorPickerDropper,
-        foreground: x.colorPickerDropperFg,
+      "aria-label": null != T ? T : _,
+      ...x,
+      children: [r ? (0, a.jsx)(h.default, {
+        className: C.colorPickerDropper,
+        foreground: C.colorPickerDropperFg,
         width: 14,
         height: 14,
-        color: (0, d.getColor)(C ? v.Color.WHITE_500 : v.Color.BLACK_500)
+        color: (0, u.getColor)(g ? E.Color.WHITE_500 : E.Color.BLACK_500)
       }) : null, function() {
         let e = 16,
           t = 16;
-        if ((s || n) && (e = 32, t = 24), i) return (0, r.jsx)(h.default, {
+        if ((r || n) && (e = 32, t = 24), s) return (0, a.jsx)(m.default, {
           width: e,
           height: t,
-          color: (0, d.getColor)(C ? v.Color.WHITE_500 : v.Color.BLACK_500)
+          color: (0, u.getColor)(g ? E.Color.WHITE_500 : E.Color.BLACK_500)
         })
       }()]
     })
   })
 }
-class C extends s.PureComponent {
+class g extends r.PureComponent {
   render() {
     let {
       color: e,
       onChange: t,
       value: n,
-      disabled: s
+      disabled: r
     } = this.props;
-    return (0, r.jsx)(b, {
+    return (0, a.jsx)(_, {
       isDefault: !0,
       color: e,
       isSelected: e === n || 0 === n,
       onClick: t,
-      disabled: s
+      disabled: r
     })
   }
 }
-class j extends s.PureComponent {
+class I extends r.PureComponent {
   render() {
     let {
       customColor: e,
       value: t,
       disabled: n,
-      "aria-label": s
+      "aria-label": r
     } = this.props;
-    return (0, r.jsx)(b, {
+    return (0, a.jsx)(_, {
       isCustom: !0,
       color: e,
       isSelected: t === e,
       disabled: n,
-      "aria-label": s
+      "aria-label": r
     })
   }
 }
-let O = s.memo(function(e) {
+let N = r.memo(function(e) {
   let {
     value: t,
     eagerUpdate: n = !1,
-    onChange: i,
-    onClose: a,
-    suggestedColors: d,
-    middle: h,
-    footer: v,
-    showEyeDropper: D,
-    wrapperComponentType: b,
-    className: C
-  } = e, j = (0, u.default)(), O = function(e) {
+    onChange: s,
+    onClose: l,
+    suggestedColors: u,
+    middle: m,
+    footer: E,
+    showEyeDropper: x,
+    wrapperComponentType: _,
+    className: g
+  } = e, I = (0, d.default)(), N = function(e) {
     if (null == e) return null;
     if ("string" == typeof e) return (0, o.isValidHex)(e) ? (0, o.hex2int)(e) : null;
     return e
-  }(t), E = null != O ? O : 0, L = (0, o.int2hex)(E), w = (0, o.int2hslRaw)(E), [N, _] = s.useState({
-    current: E,
+  }(t), v = null != N ? N : 0, A = (0, o.int2hex)(v), S = (0, o.int2hslRaw)(v), [L, y] = r.useState({
+    current: v,
     pending: {
-      hex: L,
-      hsl: w
+      hex: A,
+      hsl: S
     },
-    input: L
+    input: A
   });
-  s.useEffect(() => {
-    if (null == O || O === N.current) return;
-    let e = (0, o.int2hex)(O),
-      t = (0, o.int2hslRaw)(O);
-    _({
-      current: O,
+  r.useEffect(() => {
+    if (null == N || N === L.current) return;
+    let e = (0, o.int2hex)(N),
+      t = (0, o.int2hslRaw)(N);
+    y({
+      current: N,
       pending: {
         hex: e,
         hsl: t
       },
       input: e
     })
-  }, [O, N]), s.useEffect(() => a, [a]);
-  let k = e => {
+  }, [N, L]), r.useEffect(() => l, [l]);
+  let R = e => {
       let t = "#" === e[0] ? e : "#".concat(e);
       if (!(0, o.isValidHex)(t)) {
-        _(e => ({
+        y(e => ({
           ...e,
           input: t
         }));
         return
       }
       let n = (0, o.hex2int)(t),
-        r = (0, o.int2hslRaw)(n);
-      _({
+        a = (0, o.int2hslRaw)(n);
+      y({
         current: n,
         pending: {
           hex: t,
-          hsl: r
+          hsl: a
         },
         input: t
-      }), i(n)
+      }), s(n)
     },
-    y = async () => {
-      if (null != j) try {
+    b = async () => {
+      if (null != I) try {
         let {
           sRGBHex: e
-        } = await j.open();
-        k(e)
+        } = await I.open();
+        R(e)
       } catch {}
-    }, P = s.useCallback(e => {
-      _(t => ({
+    }, M = r.useCallback(e => {
+      y(t => ({
         ...t,
         pending: e,
         input: e.hex
-      })), n && i((0, o.hex2int)(e.hex))
-    }, [n, i]), A = e => {
-      i((0, o.hex2int)(e))
-    }, T = (0, r.jsxs)(r.Fragment, {
-      children: [(0, r.jsx)(p.default, {
-        onChange: P,
+      })), n && s((0, o.hex2int)(e.hex))
+    }, [n, s]), j = e => {
+      s((0, o.hex2int)(e))
+    }, O = (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(f.default, {
+        onChange: M,
         onChangeComplete: e => {
           let {
             hex: t
           } = e;
-          return A(t)
+          return j(t)
         },
-        color: N.pending.hsl
-      }), h, (0, r.jsxs)("div", {
-        className: x.customColorPickerInputContainer,
-        children: [D && null != j && (0, r.jsx)(f.Icon, {
-          onClick: y,
-          tooltip: m.default.Messages.PICK_A_COLOR_FROM_THE_PAGE,
+        color: L.pending.hsl
+      }), m, (0, a.jsxs)("div", {
+        className: C.customColorPickerInputContainer,
+        children: [x && null != I && (0, a.jsx)(p.Icon, {
+          onClick: b,
+          tooltip: T.default.Messages.PICK_A_COLOR_FROM_THE_PAGE,
           tooltipPosition: "top",
-          className: x.customColorPickerEyeDropper,
-          icon: g.default
-        }), (0, r.jsx)(c.TextInput, {
-          className: x.customColorPickerInput,
-          value: N.input,
-          onChange: k,
+          className: C.customColorPickerEyeDropper,
+          icon: h.default
+        }), (0, a.jsx)(c.TextInput, {
+          className: C.customColorPickerInput,
+          value: L.input,
+          onChange: R,
           maxLength: 7
         })]
-      }), null != d && d.length > 0 && (0, r.jsx)("div", {
-        className: x.suggestedColors,
-        children: d.map((e, t) => (0, r.jsx)(c.Clickable, {
+      }), null != u && u.length > 0 && (0, a.jsx)("div", {
+        className: C.suggestedColors,
+        children: u.map((e, t) => (0, a.jsx)(c.Clickable, {
           "aria-label": "",
           style: {
             backgroundColor: e
           },
-          className: x.suggestedColor,
-          onClick: () => k(e)
+          className: C.suggestedColor,
+          onClick: () => R(e)
         }, "".concat(e, "-").concat(t)))
-      }), v]
-    }), R = null != b ? b : c.Dialog;
-  return (0, r.jsx)(R, {
-    "aria-label": m.default.Messages.PICK_A_COLOR,
-    className: l()(x.customColorPicker, C),
-    children: T
+      }), E]
+    }), D = null != _ ? _ : c.Dialog;
+  return (0, a.jsx)(D, {
+    "aria-label": T.default.Messages.PICK_A_COLOR,
+    className: i()(C.customColorPicker, g),
+    children: O
   })
 });
 
-function E(e) {
+function v(e) {
   let {
     className: t,
     defaultColor: n,
-    customColor: s,
-    colors: i,
+    customColor: r,
+    colors: s,
     value: o,
     disabled: c,
-    onChange: u,
-    renderDefaultButton: d,
-    renderCustomButton: p,
-    colorContainerClassName: h
-  } = e, g = e => (0, r.jsx)("div", {
-    className: x.colorPickerRow,
-    children: e.map(e => (0, r.jsx)(b, {
+    onChange: d,
+    renderDefaultButton: u,
+    renderCustomButton: f,
+    colorContainerClassName: m
+  } = e, h = e => (0, a.jsx)("div", {
+    className: C.colorPickerRow,
+    children: e.map(e => (0, a.jsx)(_, {
       color: e,
       isSelected: e === o,
-      onClick: u,
+      onClick: d,
       disabled: c
     }, e))
-  }), f = i.slice(0, i.length / 2), v = i.slice(i.length / 2, i.length), m = (0, a.default)({
+  }), p = s.slice(0, s.length / 2), E = s.slice(s.length / 2, s.length), T = (0, l.default)({
     id: "color-picker",
     isEnabled: !0,
-    scrollToStart: D,
-    scrollToEnd: D
+    scrollToStart: x,
+    scrollToEnd: x
   });
-  return (0, r.jsx)(a.ListNavigatorProvider, {
-    navigator: m,
-    children: (0, r.jsx)(a.ListNavigatorContainer, {
+  return (0, a.jsx)(l.ListNavigatorProvider, {
+    navigator: T,
+    children: (0, a.jsx)(l.ListNavigatorContainer, {
       children: e => {
         let {
-          ref: i,
-          ...a
+          ref: s,
+          ...l
         } = e;
-        return (0, r.jsxs)("div", {
-          className: l()(x.container, t),
-          ref: i,
-          ...a,
-          children: [(0, r.jsx)("div", {
-            className: l()(x.defaultContainer, h),
-            children: d({
+        return (0, a.jsxs)("div", {
+          className: i()(C.container, t),
+          ref: s,
+          ...l,
+          children: [(0, a.jsx)("div", {
+            className: i()(C.defaultContainer, m),
+            children: u({
               value: o,
               color: n,
-              onChange: u,
+              onChange: d,
               disabled: c
             })
-          }), (0, r.jsx)("div", {
-            className: l()(x.customContainer, h),
-            children: p({
+          }), (0, a.jsx)("div", {
+            className: i()(C.customContainer, m),
+            children: f({
               value: o,
-              customColor: s,
+              customColor: r,
               disabled: c
             })
-          }), (0, r.jsxs)("div", {
-            className: x.__invalid_presets,
-            children: [g(f), g(v)]
+          }), (0, a.jsxs)("div", {
+            className: C.__invalid_presets,
+            children: [h(p), h(E)]
           })]
         })
       }

@@ -1,30 +1,30 @@
 "use strict";
-t.r(A), t.d(A, {
+A.r(t), A.d(t, {
   default: function() {
     return v
   }
-}), t("47120");
-var a = t("735250"),
-  l = t("470079"),
-  s = t("120356"),
-  n = t.n(s),
-  r = t("153832"),
-  o = t("481060"),
-  i = t("752305"),
-  d = t("893718"),
-  u = t("131704"),
-  c = t("703558"),
-  C = t("981631"),
-  f = t("689938"),
-  g = t("713695"),
-  T = t("709944");
-let U = (0, r.v4)(),
-  h = (0, u.createChannelRecord)({
+}), A("47120");
+var a = A("735250"),
+  l = A("470079"),
+  s = A("120356"),
+  n = A.n(s),
+  r = A("153832"),
+  i = A("481060"),
+  o = A("752305"),
+  d = A("893718"),
+  u = A("131704"),
+  c = A("703558"),
+  f = A("981631"),
+  g = A("689938"),
+  C = A("713695"),
+  h = A("709944");
+let m = (0, r.v4)(),
+  T = (0, u.createChannelRecord)({
     id: "1",
-    type: C.ChannelTypes.DM
+    type: f.ChannelTypes.DM
   });
 
-function m() {
+function p() {
   return new Promise(e => {
     e({
       shouldClear: !1,
@@ -33,39 +33,39 @@ function m() {
   })
 }
 
-function I(e) {
-  var A;
+function U(e) {
+  var t;
   let {
-    hasError: t,
+    hasError: A,
     maxLength: l,
     text: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: n()(T.maxLength, {
-      [T.errorOverflow]: t
+    className: n()(h.maxLength, {
+      [h.errorOverflow]: A
     }),
     "aria-hidden": "true",
-    children: [null !== (A = null == s ? void 0 : s.length) && void 0 !== A ? A : 0, " ", null != l && "/ ".concat(l)]
+    children: [null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, " ", null != l && "/ ".concat(l)]
   })
 }
 
 function v(e) {
-  var A;
+  var t;
   let {
-    "aria-labelledby": t,
+    "aria-labelledby": A,
     className: s,
     id: r,
     autoFocus: u,
-    maxLength: C,
-    onChange: T,
+    maxLength: f,
+    onChange: h,
     onSubmit: v,
-    showCharacterCount: p = !1,
+    showCharacterCount: I = !1,
     placeholder: E,
-    required: q,
+    required: x,
     value: N,
-    enableThemedBackground: R = !1,
-    parentModalKey: L
-  } = e, O = (0, o.useFormContext)(), [x, D] = l.useState(() => (0, i.toRichValue)(N)), P = l.useRef(!0 === u), V = null != t ? t : null == O ? void 0 : O.titleId, j = null !== (A = null == O ? void 0 : O.errorId) && void 0 !== A ? A : U, S = l.useMemo(() => ({
+    enableThemedBackground: D = !1,
+    parentModalKey: q
+  } = e, L = (0, i.useFormContext)(), [O, R] = l.useState(() => (0, o.toRichValue)(N)), P = l.useRef(!0 === u), V = null != A ? A : null == L ? void 0 : L.titleId, j = null !== (t = null == L ? void 0 : L.errorId) && void 0 !== t ? t : m, b = l.useMemo(() => ({
     analyticsName: "simple",
     autocomplete: {
       alwaysUseLayer: !0,
@@ -89,18 +89,18 @@ function v(e) {
   return (0, a.jsxs)(d.default, {
     "aria-describedby": j,
     "aria-labelledby": V,
-    innerClassName: n()(s, g.textArea),
+    innerClassName: n()(s, C.textArea),
     id: r,
-    maxCharacterCount: C,
-    onChange: function(e, A, t) {
-      T(A), D(t)
+    maxCharacterCount: f,
+    onChange: function(e, t, A) {
+      h(t), R(A)
     },
     placeholder: E,
-    required: q,
-    channel: h,
+    required: x,
+    channel: T,
     textValue: N,
-    richValue: x,
-    type: S,
+    richValue: O,
+    type: b,
     onBlur: () => {
       P.current = !1
     },
@@ -108,18 +108,18 @@ function v(e) {
       P.current = !0
     },
     focused: P.current,
-    onSubmit: null != v ? v : m,
-    disableThemedBackground: !R,
-    parentModalKey: L,
+    onSubmit: null != v ? v : p,
+    disableThemedBackground: !D,
+    parentModalKey: q,
     emojiPickerCloseOnModalOuterClick: !0,
-    children: [!0 === p && (0, a.jsx)(I, {
-      hasError: null != O.error || null != C && N.length > C,
+    children: [!0 === I && (0, a.jsx)(U, {
+      hasError: null != L.error || null != f && N.length > f,
       text: N,
-      maxLength: C
-    }), null != C && (0, a.jsx)(o.HiddenVisually, {
-      id: U,
-      children: f.default.Messages.MAXIMUM_LENGTH.format({
-        maxLength: C
+      maxLength: f
+    }), null != f && (0, a.jsx)(i.HiddenVisually, {
+      id: m,
+      children: g.default.Messages.MAXIMUM_LENGTH.format({
+        maxLength: f
       })
     })]
   })

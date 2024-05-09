@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("459273"),
   S = n("242291"),
   p = n("792165"),
-  I = n("603074"),
-  g = n("981631"),
+  g = n("603074"),
+  I = n("981631"),
   T = n("921944"),
   A = n("689938"),
   N = n("726271");
@@ -33,11 +33,11 @@ function v(e) {
     iconClassName: i,
     className: v,
     innerClassName: R,
-    ...O
+    ...L
   } = e, {
-    mute: L,
+    mute: O,
     suppress: M
-  } = (0, _.default)(t), y = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), P = L || M || y, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+  } = (0, _.default)(t), y = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), P = O || M || y, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: P
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: k
@@ -69,7 +69,7 @@ function v(e) {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(I.default, {
+      return (0, a.jsx)(g.default, {
         guildId: b,
         channel: t,
         onClose: n,
@@ -97,16 +97,16 @@ function v(e) {
         },
         onMouseEnter: t => {
           var n, a;
-          null === (n = O.onMouseEnter) || void 0 === n || n.call(O, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), H()
+          null === (n = L.onMouseEnter) || void 0 === n || n.call(L, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), H()
         },
         onMouseLeave: t => {
           var n, a;
-          null === (n = O.onMouseLeave) || void 0 === n || n.call(O, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
+          null === (n = L.onMouseLeave) || void 0 === n || n.call(L, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
         },
         onContextMenu: w,
         fullWidth: !0,
         size: d.Button.Sizes.SMALL,
-        ...O,
+        ...L,
         children: (0, a.jsx)(F, {
           className: i,
           size: "sm",
@@ -118,13 +118,13 @@ function v(e) {
     !P && D(!x)
   }, [P, x]);
   return (0, m.useComponentAction)({
-    event: g.ComponentActions.TOGGLE_SOUNDBOARD,
+    event: I.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W
   }), (0, a.jsx)(E.AnalyticsLocationProvider, {
     value: k,
     children: (0, a.jsx)(d.Tooltip, {
       text: function() {
-        if (L) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+        if (O) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
         if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
         if (y) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
         return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD

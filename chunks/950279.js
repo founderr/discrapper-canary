@@ -1,103 +1,103 @@
 "use strict";
-s.r(t), s("47120");
-var a = s("735250"),
-  n = s("470079"),
-  i = s("442837"),
-  E = s("481060"),
-  l = s("32966"),
-  _ = s("314897"),
-  r = s("77498"),
-  u = s("364083"),
-  o = s("92373"),
-  T = s("308083"),
-  d = s("689938"),
-  A = s("661926");
+n.r(t), n("47120");
+var a = n("735250"),
+  r = n("470079"),
+  s = n("442837"),
+  i = n("481060"),
+  l = n("32966"),
+  o = n("314897"),
+  c = n("77498"),
+  d = n("364083"),
+  u = n("92373"),
+  f = n("308083"),
+  m = n("689938"),
+  h = n("661926");
 t.default = e => {
   let {
     title: t,
-    description: s,
-    handleUpdate: I,
-    gameApplicationIds: L,
-    error: c,
-    requiredGameId: N
-  } = e, S = (0, i.useStateFromStores)([_.default], () => _.default.getId()), {
-    recentGames: g
-  } = (0, l.useUserRecentGames)(S), {
-    options: D,
-    matchSorterOptions: C
-  } = (0, u.useClanSetupGameSelectableSearch)();
-  n.useEffect(() => {
-    null != N && !L.has(N) && D.length > 0 && O(N)
-  }, [D.length, N]);
-  let f = e => {
-      if (!L.has(e) || e === N) return;
-      let t = new Set(L);
-      t.delete(e), I(t)
+    description: n,
+    handleUpdate: p,
+    gameApplicationIds: E,
+    error: T,
+    requiredGameId: C
+  } = e, x = (0, s.useStateFromStores)([o.default], () => o.default.getId()), {
+    recentGames: _
+  } = (0, l.useUserRecentGames)(x), {
+    options: g,
+    matchSorterOptions: I
+  } = (0, d.useClanSetupGameSelectableSearch)();
+  r.useEffect(() => {
+    null != C && !E.has(C) && g.length > 0 && v(C)
+  }, [g.length, C]);
+  let N = e => {
+      if (!E.has(e) || e === C) return;
+      let t = new Set(E);
+      t.delete(e), p(t)
     },
-    O = e => {
-      if (L.size === T.MAX_NUM_SELECTED_GAMES || L.has(e) || null == r.default.getGameById(e)) return;
-      let t = new Set(L);
-      t.add(e), I(t)
+    v = e => {
+      if (E.size === f.MAX_NUM_SELECTED_GAMES || E.has(e) || null == c.default.getGameById(e)) return;
+      let t = new Set(E);
+      t.add(e), p(t)
     };
   return (0, a.jsxs)("div", {
-    className: A.slideContent,
-    children: [(0, a.jsx)(E.Heading, {
+    className: h.slideContent,
+    children: [(0, a.jsx)(i.Heading, {
       variant: "heading-xxl/medium",
-      className: A.title,
+      className: h.title,
       children: t
-    }), (0, a.jsx)(E.Text, {
+    }), (0, a.jsx)(i.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: A.subtitle,
-      children: s
+      className: h.subtitle,
+      children: n
     }), (0, a.jsx)("div", {
-      className: A.inputContainer,
-      children: (0, a.jsx)(E.SearchableSelect, {
-        wrapperClassName: A.input,
-        options: D,
+      className: h.inputContainer,
+      children: (0, a.jsx)(i.SearchableSelect, {
+        wrapperClassName: h.input,
+        options: g,
         value: "",
-        placeholder: d.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-        onChange: O,
-        isDisabled: L.size === T.MAX_NUM_SELECTED_GAMES,
-        matchSorterOptions: C
+        placeholder: m.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
+        onChange: v,
+        isDisabled: E.size === f.MAX_NUM_SELECTED_GAMES,
+        matchSorterOptions: I
       })
     }), (0, a.jsxs)("div", {
-      className: A.contentWithMinHeight,
-      children: [null != c && (0, a.jsx)(E.Text, {
+      className: h.contentWithMinHeight,
+      children: [null != T && (0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "status-danger",
-        className: A.errorText,
-        children: c
-      }), L.size > 0 && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(E.Text, {
+        className: h.errorText,
+        children: T
+      }), E.size > 0 && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          className: A.contentLabel,
-          children: d.default.Messages.CLAN_SETUP_SELECTED_GAMES
+          className: h.contentLabel,
+          children: m.default.Messages.CLAN_SETUP_SELECTED_GAMES
         }), (0, a.jsx)("div", {
-          className: A.selectedSection,
-          children: Array.from(L).map(e => (0, a.jsx)(o.default, {
+          className: h.selectedSection,
+          children: Array.from(E).map(e => (0, a.jsx)(u.default, {
             applicationId: e,
-            onClick: e !== N ? f : void 0,
-            imageContainerClassName: e !== N ? A.clickableGame : A.defaultGame,
+            onClick: e !== C ? N : void 0,
+            imageContainerClassName: e !== C ? h.clickableGame : h.defaultGame,
             selected: !0,
-            locked: e === N
+            locked: e === C
           }, e))
         }), (0, a.jsx)("div", {
-          className: A.divider
+          className: h.divider
         })]
-      }), null != g && g.length > 0 && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(E.Text, {
+      }), null != _ && _.length > 0 && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          className: A.contentLabel,
-          children: d.default.Messages.RECENT_GAMES
+          className: h.contentLabel,
+          children: m.default.Messages.RECENT_GAMES
         }), (0, a.jsx)("div", {
-          className: A.selectedSection,
-          children: g.map(e => (0, a.jsx)(o.default, {
+          className: h.selectedSection,
+          children: _.map(e => (0, a.jsx)(u.default, {
             applicationId: e.applicationId,
-            onClick: O,
-            imageContainerClassName: A.clickableGame
+            onClick: v,
+            imageContainerClassName: h.clickableGame
           }, e.applicationId))
         })]
       })]

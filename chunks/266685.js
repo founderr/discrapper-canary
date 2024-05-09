@@ -17,21 +17,21 @@ var a = n("735250"),
   m = n("569984"),
   S = n("497505"),
   p = n("918701"),
-  I = n("865364"),
-  g = n("340100"),
+  g = n("865364"),
+  I = n("340100"),
   T = n("611855"),
   A = n("644646"),
   N = n("78826"),
   v = n("670638"),
   R = n("667105"),
-  O = n("341907"),
-  L = n("46140"),
+  L = n("341907"),
+  O = n("46140"),
   M = n("689938"),
   y = n("96268");
 let P = s.forwardRef(function(e, t) {
   var n, i;
   let {
-    className: I,
+    className: g,
     isExpanded: P,
     isExpansionAnimationComplete: D,
     onCtxMenuOpen: b,
@@ -48,13 +48,13 @@ let P = s.forwardRef(function(e, t) {
     quest: G,
     location: S.QuestContent.QUEST_BAR
   }), K = s.useCallback(() => {
-    (0, O.openGameLink)(G, {
+    (0, L.openGameLink)(G, {
       content: S.QuestContent.QUEST_BAR,
       ctaContent: h.QuestContentCTA.OPEN_GAME_LINK
     })
-  }, [G]), z = G.config.variants.includes(L.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)(G) > 0, [G]), Q = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Z = (null === (i = G.userStatus) || void 0 === i ? void 0 : i.completedAt) != null, X = s.useMemo(() => (0, p.hasQuestCollectibleRewards)(G.config), [G.config]), J = P && D, $ = (0, p.getQuestBarHeroAssetUrl)(G), ee = (0, p.getQuestsInstructionsToWinReward)({
+  }, [G]), z = G.config.variants.includes(O.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)(G) > 0, [G]), Q = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Z = (null === (i = G.userStatus) || void 0 === i ? void 0 : i.completedAt) != null, X = s.useMemo(() => (0, p.hasQuestCollectibleRewards)(G.config), [G.config]), J = P && D, $ = (0, p.getQuestBarHeroAssetUrl)(G), ee = (0, p.getQuestsInstructionsToWinReward)({
     quest: G,
-    location: L.QuestsExperimentLocations.QUESTS_BAR
+    location: O.QuestsExperimentLocations.QUESTS_BAR
   }), et = (0, E.isWeb)(), en = s.useMemo(() => {
     let e = (0, u.getContrastingColor)(G.config.colors.primary, {
       base: "#ffffff",
@@ -68,7 +68,7 @@ let P = s.forwardRef(function(e, t) {
   }, [G.config.colors.primary]);
   return (0, a.jsx)("div", {
     "aria-hidden": !J,
-    className: l()(I, y.contentExpanded, {
+    className: l()(g, y.contentExpanded, {
       [y.contentInteractable]: J
     }),
     children: Q ? (0, a.jsxs)("div", {
@@ -129,7 +129,7 @@ let P = s.forwardRef(function(e, t) {
         color: "always-white",
         variant: "text-xs/normal",
         children: ee
-      }), (0, a.jsx)(g.default, {
+      }), (0, a.jsx)(I.default, {
         quest: G
       }), !et && !q && !V && z && (0, a.jsx)(x, {
         onClick: J ? K : void 0
@@ -229,8 +229,8 @@ function x(e) {
     style: t,
     onClick: n
   } = e;
-  return (0, I.useIsEligibleForQuestBarProgressCTA)({
-    location: L.QuestsExperimentLocations.QUESTS_BAR,
+  return (0, g.useIsEligibleForQuestBarProgressCTA)({
+    location: O.QuestsExperimentLocations.QUESTS_BAR,
     autoTrackExposure: !0
   }) ? (0, a.jsx)(d.Button, {
     className: y.cta,

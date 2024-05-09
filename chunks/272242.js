@@ -4,4 +4,4 @@ n.r(t), n.d(t, {
   ApplicationDirectoryProfileSections: function() {
     return i
   }
-}), (r = i || (i = {})).GENERAL = "GENERAL", r.IMAGES = "IMAGES", r.PREMIUM = "PREMIUM", r.PRIVACY = "PRIVACY"
+}), (r = i || (i = {})).GENERAL = "general", r.IMAGES = "images", r.PREMIUM = "premium", r.PRIVACY = "privacy"

@@ -1,31 +1,31 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   getNextShownUpcomingEventNoticeType: function() {
-    return s
+    return d
   }
 });
-var n = l("913527"),
-  u = l.n(n),
-  a = l("709054"),
-  d = l("765305");
+var u = n("913527"),
+  l = n.n(u),
+  i = n("709054"),
+  r = n("765305");
 
-function s(e, t, l, n) {
-  let s = u()(),
-    i = new Date(e.scheduled_start_time).getTime(),
-    r = {
-      start: i - d.EVENT_STARTING_SOON_WINDOW_MILLISECONDS,
-      end: i
+function d(e, t, n, u) {
+  let d = l()(),
+    a = new Date(e.scheduled_start_time).getTime(),
+    s = {
+      start: a - r.EVENT_STARTING_SOON_WINDOW_MILLISECONDS,
+      end: a
     };
-  if (s.isBetween(r.start, r.end)) {
+  if (d.isBetween(s.start, s.end)) {
     if (null != t) {
-      let e = u()(t),
-        l = e.isBetween(r.start, r.end),
-        a = e.isBetween(u()(i).subtract(d.ACKED_RECENTLY_WINDOW_DAYS, "days"), i);
-      return l || a && !n ? void 0 : d.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON
+      let e = l()(t),
+        n = e.isBetween(s.start, s.end),
+        i = e.isBetween(l()(a).subtract(r.ACKED_RECENTLY_WINDOW_DAYS, "days"), a);
+      return n || i && !u ? void 0 : r.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON
     }
-    return d.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON
+    return r.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON
   }
-  let o = a.default.extractTimestamp(e.id),
-    E = Math.min((null != l ? l : o) + d.NEW_EVENT_WINDOW_MILLISECONDS, i);
-  if (s.isBetween(o, E) && null == t && !n) return d.UpcomingGuildEventNoticeTypes.NEW_EVENT
+  let E = i.default.extractTimestamp(e.id),
+    o = Math.min((null != n ? n : E) + r.NEW_EVENT_WINDOW_MILLISECONDS, a);
+  if (d.isBetween(E, o) && null == t && !u) return r.UpcomingGuildEventNoticeTypes.NEW_EVENT
 }

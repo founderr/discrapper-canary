@@ -21,15 +21,15 @@ var a = n("735250"),
   m = n("481060"),
   S = n("355467"),
   p = n("239091"),
-  I = n("230711"),
-  g = n("255952"),
+  g = n("230711"),
+  I = n("255952"),
   T = n("410575"),
   A = n("941129"),
   N = n("83200"),
   v = n("634894"),
   R = n("586902"),
-  O = n("1585"),
-  L = n("304761"),
+  L = n("1585"),
+  O = n("304761"),
   M = n("865427"),
   y = n("571250"),
   P = n("628581"),
@@ -75,15 +75,15 @@ var a = n("735250"),
   em = n("885110"),
   eS = n("246946"),
   ep = n("594174"),
-  eI = n("78839"),
-  eg = n("285952"),
+  eg = n("78839"),
+  eI = n("285952"),
   eT = n("546591"),
   eA = n("86813"),
   eN = n("826026"),
   ev = n("937482"),
   eR = n("87888"),
-  eO = n("976401"),
-  eL = n("333454"),
+  eL = n("976401"),
+  eO = n("333454"),
   eM = n("864441"),
   ey = n("26290"),
   eP = n("626135"),
@@ -168,7 +168,7 @@ class eK extends s.PureComponent {
         })
       }), (0, a.jsx)("div", {
         className: eH.panelSubtextContainer,
-        children: (0, a.jsx)(eL.default, {
+        children: (0, a.jsx)(eO.default, {
           children: null != e ? e : s
         })
       })]
@@ -231,7 +231,7 @@ class eK extends s.PureComponent {
     if (null == n) return null;
     let o = (0, ex.getAvatarDecorationURL)({
       avatarDecoration: n.avatarDecoration,
-      size: (0, O.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
+      size: (0, L.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
     });
     return (0, a.jsx)(T.default, {
       object: ek.AnalyticsObjects.AVATAR,
@@ -262,7 +262,7 @@ class eK extends s.PureComponent {
             className: l()(eH.nameTag, {
               [eH.canCopy]: eD.SUPPORTS_COPY
             }),
-            children: r ? (0, a.jsx)(eO.default, {
+            children: r ? (0, a.jsx)(eL.default, {
               tooltipText: null,
               icon: d.isShown ? eA.default : eN.default,
               role: "switch",
@@ -315,7 +315,7 @@ class eK extends s.PureComponent {
       className: eH.container,
       onMouseEnter: this.handleMouseEnter,
       onMouseLeave: this.handleMouseLeave,
-      children: [this.renderNameZone(), (0, a.jsxs)(eg.default, {
+      children: [this.renderNameZone(), (0, a.jsxs)(eI.default, {
         grow: 0,
         children: [(0, a.jsx)(eQ, {
           selfMute: n,
@@ -464,7 +464,7 @@ class eK extends s.PureComponent {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ek.UserSettingsSections.ACCOUNT,
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = arguments.length > 2 ? arguments[2] : void 0;
-      I.default.open(e, t, n)
+      g.default.open(e, t, n)
     }), eV(this, "handleOpenSettingsContextMenu", e => {
       let {
         currentUser: t
@@ -594,7 +594,7 @@ class eK extends s.PureComponent {
           })
         })
       }
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(I.default, {
         onClose: () => {
           this.handleMouseLeave(), null == t || t()
         }
@@ -635,17 +635,17 @@ function ez() {
     {
       mute: C,
       selfMute: p,
-      suppress: I
+      suppress: g
     } = (0, ec.default)(_),
     {
-      selfDeaf: g,
+      selfDeaf: I,
       deaf: T
     } = (0, ed.default)(_),
-    O = (0, r.useStateFromStores)([L.default], () => {
+    L = (0, r.useStateFromStores)([O.default], () => {
       var e;
-      return (0, M.probablyHasBuildOverride)() ? null === (e = L.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, M.probablyHasBuildOverride)() ? null === (e = O.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    y = (0, r.useStateFromStores)([eI.default], () => eI.default.getPremiumTypeSubscription()),
+    y = (0, r.useStateFromStores)([eg.default], () => eg.default.getPremiumTypeSubscription()),
     P = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
     x = (0, r.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
     D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || x || eU.ProcessArgs.isDisallowPopupsSet(),
@@ -682,11 +682,11 @@ function ez() {
     location: eu + " auto off",
     autoTrackExposure: !1
   }), (0, $.useSafetyEducationAATriggerPoint)();
-  let eg = (0, r.useStateFromStores)([es.default], () => es.default.hasHadOtherUserPlaySoundInSession()),
+  let eI = (0, r.useStateFromStores)([es.default], () => es.default.hasHadOtherUserPlaySoundInSession()),
     eT = function() {
       let e = (0, k.useIsDismissibleContentDismissed)(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
         [t, n] = (0, r.useStateFromStoresArray)([Z.default], () => [Z.default.hasFetchedRelevance, Z.default.profileThemesRelevanceExceeded]),
-        [a, i] = (0, r.useStateFromStoresArray)([eI.default], () => [eI.default.hasFetchedMostRecentPremiumTypeSubscription(), eI.default.getMostRecentPremiumTypeSubscription()]),
+        [a, i] = (0, r.useStateFromStoresArray)([eg.default], () => [eg.default.hasFetchedMostRecentPremiumTypeSubscription(), eg.default.getMostRecentPremiumTypeSubscription()]),
         {
           enabled: l
         } = X.default.useExperiment({
@@ -713,7 +713,7 @@ function ez() {
       avatar: [],
       settings: []
     };
-  return !D && (eT && eA.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), i && (eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && q === (null === (t = (0, H.getDrop)(eF.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), J && et && eA.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eg && eA.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), ei && eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), el && eA.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eo && eA.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eK, {
+  return !D && (eT && eA.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), i && (eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && q === (null === (t = (0, H.getDrop)(eF.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), J && et && eA.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eI && eA.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), ei && eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), el && eA.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eo && eA.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eK, {
     currentUser: n,
     customStatusActivity: u,
     dismissibleContents: eA,
@@ -721,7 +721,7 @@ function ez() {
     hidePrivateData: h,
     occluded: D,
     premiumSubscription: y,
-    selfDeaf: g,
+    selfDeaf: I,
     selfMute: p,
     serverDeaf: T,
     serverMute: C,
@@ -732,8 +732,8 @@ function ez() {
     speakingWhileMuted: P,
     status: c,
     streaming: d,
-    suppress: I,
-    webBuildOverride: O,
+    suppress: g,
+    webBuildOverride: L,
     awaitingRemote: U,
     isEligibleForPomelo: b
   })
@@ -755,7 +755,7 @@ function eq(e) {
     color: U.default.STATUS_DANGER,
     className: eH.hasBuildOverride,
     "aria-hidden": !0
-  })), (0, a.jsx)(eO.default, {
+  })), (0, a.jsx)(eL.default, {
     tooltipText: null != t ? eB.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
       webBuildOverride: t.id
     }) : eB.default.Messages.USER_SETTINGS,
@@ -784,19 +784,19 @@ function eQ(e) {
   } = e, C = t || i || n, {
     Component: S,
     play: p,
-    events: I
-  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), g = n || i ? c.MicrophoneDenyIcon : S;
-  return s.useEffect(() => () => p(), [C, p]), (0, a.jsx)(eO.default, {
+    events: g
+  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), I = n || i ? c.MicrophoneDenyIcon : S;
+  return s.useEffect(() => () => p(), [C, p]), (0, a.jsx)(eL.default, {
     tooltipText: r,
     tooltipColor: o,
     tooltipForceOpen: u,
     onMouseEnter: () => {
-      d(), I.onMouseEnter()
+      d(), g.onMouseEnter()
     },
     onMouseLeave: () => {
-      f(), I.onMouseLeave()
+      f(), g.onMouseLeave()
     },
-    icon: (0, a.jsx)(g, {
+    icon: (0, a.jsx)(I, {
       size: "custom",
       width: 20,
       height: 20,
@@ -827,7 +827,7 @@ function eZ(e) {
       onMouseLeave: _
     }
   } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = n ? d.HeadphonesDenyIcon : c;
-  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eO.default, {
+  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eL.default, {
     tooltipText: (0, y.default)(t, n, i),
     onMouseEnter: E,
     onMouseLeave: _,

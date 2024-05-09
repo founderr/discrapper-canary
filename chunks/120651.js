@@ -1,21 +1,21 @@
 "use strict";
-t.r(A), t.d(A, {
+A.r(t), A.d(t, {
   default: function() {
     return s
   }
 });
-var a = t("735250");
-t("470079");
-var l = t("952265");
+var a = A("735250");
+A("470079");
+var l = A("952265");
 
 function s(e) {
   (0, l.openModalLazy)(async () => {
     let {
-      default: A
-    } = await Promise.resolve().then(t.bind(t, "776045"));
-    return t => (0, a.jsx)(A, {
+      default: t
+    } = await Promise.resolve().then(A.bind(A, "776045"));
+    return A => (0, a.jsx)(t, {
       ...e,
-      ...t
+      ...A
     })
   })
 }

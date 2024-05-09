@@ -1,141 +1,141 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return S
+    return R
   }
-}), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
-var s = n("735250"),
-  i = n("470079"),
-  l = n("468194"),
-  r = n("442837"),
-  a = n("477690"),
-  u = n("481060"),
-  o = n("887706"),
-  c = n("34674"),
-  d = n("817460"),
-  f = n("703656"),
-  p = n("351402"),
-  I = n("937615"),
-  h = n("73346"),
-  m = n("270144"),
-  C = n("359610"),
-  _ = n("245561"),
-  g = n("696906"),
-  v = n("981631"),
-  A = n("689938"),
-  R = n("527023");
-let x = (0, l.cssValueToNumber)(a.default.APPLICATION_SUBSCRIPTION_CARD_LISTING_IMAGE_SIZE),
-  T = "start_application_subscription",
-  N = e => {
+}), l("315314"), l("610138"), l("216116"), l("78328"), l("815648"), l("47120");
+var n = l("735250"),
+  a = l("470079"),
+  s = l("468194"),
+  i = l("442837"),
+  r = l("477690"),
+  o = l("481060"),
+  d = l("887706"),
+  u = l("34674"),
+  c = l("817460"),
+  f = l("703656"),
+  m = l("351402"),
+  I = l("937615"),
+  T = l("73346"),
+  N = l("270144"),
+  E = l("359610"),
+  S = l("245561"),
+  g = l("696906"),
+  p = l("981631"),
+  h = l("689938"),
+  _ = l("527023");
+let O = (0, s.cssValueToNumber)(r.default.APPLICATION_SUBSCRIPTION_CARD_LISTING_IMAGE_SIZE),
+  A = "start_application_subscription",
+  C = e => {
     let {
       listing: t
-    } = e, n = t.image_asset;
-    if (null == n) return null;
-    let i = (0, h.getAssetURL)(t.application_id, n, x);
-    return (0, s.jsx)("div", {
-      children: (0, s.jsx)("img", {
-        src: i,
+    } = e, l = t.image_asset;
+    if (null == l) return null;
+    let a = (0, T.getAssetURL)(t.application_id, l, O);
+    return (0, n.jsx)("div", {
+      children: (0, n.jsx)("img", {
+        src: a,
         alt: "",
-        className: R.listingImage
+        className: _.listingImage
       })
     })
   },
-  E = e => {
+  x = e => {
     let {
       children: t
     } = e;
-    return (0, s.jsx)(u.Button, {
-      look: u.Button.Looks.OUTLINED,
-      color: u.Button.Colors.PRIMARY,
+    return (0, n.jsx)(o.Button, {
+      look: o.Button.Looks.OUTLINED,
+      color: o.Button.Colors.PRIMARY,
       disabled: !0,
-      size: u.Button.Sizes.SMALL,
+      size: o.Button.Sizes.SMALL,
       children: t
     })
   };
 
-function S(e) {
+function R(e) {
   let {
     listing: t,
-    groupListingId: n,
-    guildId: l,
-    analyticsLocation: a,
-    onComplete: h,
-    forcesTransitionToGuild: x
-  } = e, S = (0, r.useStateFromStores)([p.default], () => p.default.isSyncing), {
-    activeSubscription: P,
-    activeSubscriptionListing: L
-  } = (0, m.useActiveSubscriptionListingForApplication)(t.application_id, l), {
-    openModal: j,
-    canOpenModal: O,
-    cannotOpenReason: b
+    groupListingId: l,
+    guildId: s,
+    analyticsLocation: r,
+    onComplete: T,
+    forcesTransitionToGuild: O
+  } = e, R = (0, i.useStateFromStores)([m.default], () => m.default.isSyncing), {
+    activeSubscription: M,
+    activeSubscriptionListing: v
+  } = (0, N.useActiveSubscriptionListingForApplication)(t.application_id, s), {
+    openModal: L,
+    canOpenModal: j,
+    cannotOpenReason: P
   } = (0, g.default)({
     listing: t,
-    guildId: l,
-    groupListingId: n,
+    guildId: s,
+    groupListingId: l,
     showBenefitsFirst: !1,
-    analyticsLocation: a,
-    onComplete: h,
-    forcesTransitionToGuild: x
-  }), w = t.subscription_plans[0], M = 0 === w.price, y = (null == L ? void 0 : L.id) === t.id, B = (0, o.default)(), U = B && !O || S, V = () => {
-    B ? j() : (0, c.redirectToLogin)({
-      [T]: "true"
+    analyticsLocation: r,
+    onComplete: T,
+    forcesTransitionToGuild: O
+  }), b = t.subscription_plans[0], D = 0 === b.price, y = (null == v ? void 0 : v.id) === t.id, G = (0, d.default)(), B = G && !j || R, H = () => {
+    G ? L() : (0, u.redirectToLogin)({
+      [A]: "true"
     })
   };
-  return i.useEffect(() => {
+  return a.useEffect(() => {
     let e = new URL(location.href);
-    if (B && !U && "true" === e.searchParams.get(T)) {
-      e.searchParams.delete(T);
+    if (G && !B && "true" === e.searchParams.get(A)) {
+      e.searchParams.delete(A);
       let t = e.pathname + e.search;
-      (0, f.replaceWith)(t), j()
+      (0, f.replaceWith)(t), L()
     }
-  }, [B, j, U]), (0, s.jsxs)("div", {
-    className: R.container,
-    children: [(0, s.jsxs)("div", {
-      className: R.cardHeader,
-      children: [(0, s.jsx)(N, {
+  }, [G, L, B]), (0, n.jsxs)("div", {
+    className: _.container,
+    children: [(0, n.jsxs)("div", {
+      className: _.cardHeader,
+      children: [(0, n.jsx)(C, {
         listing: t
-      }), (0, s.jsx)(u.Text, {
+      }), (0, n.jsx)(o.Text, {
         variant: "text-lg/medium",
         color: "interactive-active",
         children: t.name
-      }), (0, s.jsxs)("div", {
-        className: R.priceAndButtonContainer,
-        children: [(0, s.jsx)(u.Text, {
+      }), (0, n.jsxs)("div", {
+        className: _.priceAndButtonContainer,
+        children: [(0, n.jsx)(o.Text, {
           variant: "text-md/normal",
           color: "interactive-normal",
-          children: M ? A.default.Messages.APPLICATION_SUBSCRIPTION_FREE : A.default.Messages.APPLICATION_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
-            amount: (0, I.formatPrice)(w.price, w.currency),
-            period: (0, d.formatPlanInterval)(w)
+          children: D ? h.default.Messages.APPLICATION_SUBSCRIPTION_FREE : h.default.Messages.APPLICATION_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
+            amount: (0, I.formatPrice)(b.price, b.currency),
+            period: (0, c.formatPlanInterval)(b)
           })
         }), (() => {
           var e;
-          if (y) return (0, s.jsx)(E, {
-            children: (null == P ? void 0 : P.status) === v.SubscriptionStatusTypes.CANCELED ? A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
+          if (y) return (0, n.jsx)(x, {
+            children: (null == M ? void 0 : M.status) === p.SubscriptionStatusTypes.CANCELED ? h.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : h.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
           });
-          if (M) return null == L ? (0, s.jsx)(E, {
-            children: A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
+          if (D) return null == v ? (0, n.jsx)(x, {
+            children: h.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
           }) : null;
-          return (0, s.jsx)(u.Tooltip, {
-            tooltipClassName: R.subscribeButtonTooltip,
-            text: O || !B ? null : b,
-            "aria-label": null !== (e = !O && b) && void 0 !== e && e,
-            children: e => (0, s.jsx)(C.default, {
+          return (0, n.jsx)(o.Tooltip, {
+            tooltipClassName: _.subscribeButtonTooltip,
+            text: j || !G ? null : P,
+            "aria-label": null !== (e = !j && P) && void 0 !== e && e,
+            children: e => (0, n.jsx)(E.default, {
               ...e,
-              disabled: U,
+              disabled: B,
               submitting: !1,
-              onClick: V,
-              children: A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
+              onClick: H,
+              children: h.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
             })
           })
         })()]
       })]
-    }), (0, s.jsx)("div", {
-      className: R.benefitsContainer,
-      children: (0, s.jsx)(_.SubscriptionListingBenefits, {
+    }), (0, n.jsx)("div", {
+      className: _.benefitsContainer,
+      children: (0, n.jsx)(S.SubscriptionListingBenefits, {
         applicationId: t.application_id,
         storeListingBenefits: t.store_listing_benefits,
         skuBenefits: t.sku_benefits.benefits,
-        className: R.benefit
+        className: _.benefit
       })
     })]
   })

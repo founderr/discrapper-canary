@@ -21,15 +21,15 @@ var a = n("735250"),
   m = n("367907"),
   S = n("770471"),
   p = n("158631"),
-  I = n("143614"),
-  g = n("463119"),
+  g = n("143614"),
+  I = n("463119"),
   T = n("377171"),
   A = n("243778"),
   N = n("922409"),
   v = n("899740"),
   R = n("28476"),
-  O = n("880257"),
-  L = n("631885"),
+  L = n("880257"),
+  O = n("631885"),
   M = n("457396"),
   y = n("51596"),
   P = n("905423"),
@@ -59,7 +59,7 @@ let ee = e => {
     let {
       selected: t,
       ...n
-    } = e, s = (0, o.useListItem)("friends"), i = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), l = (0, I.default)(), {
+    } = e, s = (0, o.useListItem)("friends"), i = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), l = (0, g.default)(), {
       canViewBroadcasts: r
     } = S.default.useExperiment({
       location: "friends_tab_no_track"
@@ -161,7 +161,7 @@ let ee = e => {
   es = e => {
     let {
       selected: t
-    } = e, n = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, i = (0, o.useListItem)("family-center"), l = b.FamilyCenterEnabled.useSetting(), r = (0, O.default)(), [u, d] = s.useState(!0);
+    } = e, n = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, i = (0, o.useListItem)("family-center"), l = b.FamilyCenterEnabled.useSetting(), r = (0, L.default)(), [u, d] = s.useState(!0);
     return l && r ? (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: X.Routes.FAMILY_CENTER,
@@ -183,7 +183,7 @@ let ee = e => {
   ei = e => {
     let {
       isParentHovered: t
-    } = e, s = (0, L.usePendingRequestCount)();
+    } = e, s = (0, O.usePendingRequestCount)();
     return t ? (0, a.jsx)(q.CloseButton, {
       onClick: () => {
         (0, f.openModalLazy)(async () => {
@@ -300,7 +300,7 @@ let eo = e => {
         }
       }, "activities") : null, (0, a.jsx)(ea, {
         selected: null == c ? null != s && s.startsWith(X.Routes.MESSAGE_REQUESTS) : c === X.Routes.MESSAGE_REQUESTS
-      }, "message-requests"), (0, a.jsx)(g.CollectiblesShopButton, {
+      }, "message-requests"), (0, a.jsx)(I.CollectiblesShopButton, {
         selected: c === X.Routes.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(X.Routes.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {

@@ -16,18 +16,18 @@ var l = s("735250"),
   f = s("785717"),
   S = s("221292"),
   m = s("981631"),
-  I = s("886140"),
-  E = s("305944");
+  E = s("886140"),
+  I = s("305944");
 
 function v(e) {
   let {
     user: t,
     type: s
-  } = e, v = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), T = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), x = a.useMemo(() => v ? T.find(e => e.type === m.ActivityTypes.PLAYING) : null, [T, v]), U = a.useMemo(() => T.filter(e => e !== x), [x, T]), {
-    analyticsLocations: A,
-    newestAnalyticsLocation: g
+  } = e, v = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), g = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), A = a.useMemo(() => v ? g.find(e => e.type === m.ActivityTypes.PLAYING) : null, [g, v]), T = a.useMemo(() => g.filter(e => e !== A), [A, g]), {
+    analyticsLocations: x,
+    newestAnalyticsLocation: N
   } = (0, o.default)(), {
-    trackUserProfileAction: N,
+    trackUserProfileAction: U,
     ...C
   } = (0, f.useUserProfileAnalyticsContext)(), h = {
     location: {
@@ -36,44 +36,44 @@ function v(e) {
     }
   };
   return (0, l.jsxs)(n.ScrollerThin, {
-    className: E.listScroller,
+    className: I.listScroller,
     fade: !0,
     children: [v ? (0, l.jsx)(r.default, {
       type: s,
       user: t,
-      source: g,
-      className: I.userProfileActivity,
+      source: N,
+      className: E.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       showChannelDetails: s === c.Types.SIMPLIFIED_PROFILE,
-      activity: x,
-      actionColor: I.actionColor,
+      activity: A,
+      actionColor: E.actionColor,
       analyticsParams: h,
       onAction: () => {
-        N({
+        U({
           action: "JOIN_ACTIVITY"
         }), (0, S.trackUserProfileActivityJoined)({
           activityType: m.ActivityTypes.STREAMING,
-          activityName: null == x ? void 0 : x.name,
-          activityPlatform: null == x ? void 0 : x.platform,
-          activitySessionId: null == x ? void 0 : x.session_id,
-          applicationId: null == x ? void 0 : x.application_id,
-          analyticsLocations: A,
+          activityName: null == A ? void 0 : A.name,
+          activityPlatform: null == A ? void 0 : A.platform,
+          activitySessionId: null == A ? void 0 : A.session_id,
+          applicationId: null == A ? void 0 : A.application_id,
+          analyticsLocations: x,
           ...C
         })
       }
-    }) : null, U.map(e => (0, l.jsx)(r.default, {
+    }) : null, T.map(e => (0, l.jsx)(r.default, {
       type: s,
       activity: e,
       user: t,
       useStoreStream: !1,
-      source: g,
-      className: I.userProfileActivity,
+      source: N,
+      className: E.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       showChannelDetails: s === c.Types.SIMPLIFIED_PROFILE,
-      actionColor: I.actionColor,
+      actionColor: E.actionColor,
       analyticsParams: h,
       onAction: () => {
-        N({
+        U({
           action: "JOIN_ACTIVITY"
         }), (0, S.trackUserProfileActivityJoined)({
           activityType: e.type,
@@ -81,7 +81,7 @@ function v(e) {
           activityPlatform: e.platform,
           activitySessionId: e.session_id,
           applicationId: e.application_id,
-          analyticsLocations: A,
+          analyticsLocations: x,
           ...C
         })
       }

@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return p
   },
   getCustomConfettiDisplayOptions: function() {
-    return g
+    return I
   }
 }), n("627341");
 var a, s, i, l, r = n("278074"),
@@ -63,7 +63,7 @@ let S = {
     labelColor: "rgba(15, 25, 35, 1)",
     iconSrc: C
   })).otherwise(() => null),
-  I = {
+  g = {
     SHY: {
       confettiAssetSrc: E,
       style: {
@@ -72,4 +72,4 @@ let S = {
       }
     }
   },
-  g = e => (0, r.match)(e).with("1220513977683935373", () => I.SHY).with("1220432647453409384", () => I.SHY).with("1220432697718083614", () => I.SHY).otherwise(() => null)
+  I = e => (0, r.match)(e).with("1220513977683935373", () => g.SHY).with("1220432647453409384", () => g.SHY).with("1220432697718083614", () => g.SHY).otherwise(() => null)

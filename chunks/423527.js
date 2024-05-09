@@ -31,8 +31,8 @@ var s, a = n("735250"),
   v = n("473855"),
   M = n("726745"),
   x = n("929809"),
-  b = n("541692"),
-  y = n("986197"),
+  y = n("541692"),
+  b = n("986197"),
   U = n("135200"),
   D = n("219496"),
   P = n("794099"),
@@ -438,7 +438,7 @@ class eo extends(s = i.PureComponent) {
         hasCopyAboveButton: x
       }
     } = this.props, {
-      subText: b,
+      subText: y,
       consentText: D
     } = this.renderConsentComponents(), P = this.renderErrorMessage(), G = (0, a.jsx)(h.Tooltip, {
       text: !u && T ? en.default.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
@@ -455,7 +455,7 @@ class eo extends(s = i.PureComponent) {
     }), j = async () => {
       this.setState({
         usernameFocused: !0
-      }), I && r.length > 0 && !U.default.wasRegistrationSuggestionFetched(r) && await y.default.fetchSuggestionsRegistration(r)
+      }), I && r.length > 0 && !U.default.wasRegistrationSuggestionFetched(r) && await b.default.fetchSuggestionsRegistration(r)
     }, F = null != e ? (0, a.jsx)(i.Fragment, {
       children: e()
     }, "custom-header") : (0, a.jsx)(H.Title, {
@@ -552,7 +552,7 @@ class eo extends(s = i.PureComponent) {
         error: null != _ ? _ : el(v),
         value: d,
         required: !0
-      }), x && b, (0, a.jsx)(R.default, {}), G, P, D, !x && b, $.CONFERENCE_MODE_ENABLED ? null : (0, a.jsx)(H.Button, {
+      }), x && y, (0, a.jsx)(R.default, {}), G, P, D, !x && y, $.CONFERENCE_MODE_ENABLED ? null : (0, a.jsx)(H.Button, {
         look: A ? H.Button.Looks.FILLED : H.Button.Looks.LINK,
         color: A ? H.Button.Colors.PRIMARY : H.Button.Colors.LINK,
         onClick: this.handleGotoLogin,
@@ -717,13 +717,13 @@ class eo extends(s = i.PureComponent) {
 }
 
 function eu(e) {
-  let t = (0, c.useStateFromStoresObject)([B.default, F.default, g.default, b.default, M.default], () => ({
+  let t = (0, c.useStateFromStoresObject)([B.default, F.default, g.default, y.default, M.default], () => ({
       consentRequired: B.default.getAuthenticationConsentRequired(),
       registering: F.default.getRegisterStatus() === J.RegistrationStates.REGISTERING,
       apiErrors: F.default.getErrors(),
       authenticated: F.default.isAuthenticated(),
       isUnderage: g.default.isUnderageAnonymous(),
-      country: b.default.getCountryCode(),
+      country: y.default.getCountryCode(),
       hasLoggedInAccounts: M.default.getHasLoggedInAccounts()
     })),
     n = (0, P.useUURegistrationExperiment)(),

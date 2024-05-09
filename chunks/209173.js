@@ -1,7 +1,7 @@
 "use strict";
-var i, a;
-l.r(t), l.d(t, {
+var l, n;
+a.r(t), a.d(t, {
   ApplicationDirectorySearchResultType: function() {
-    return i
+    return l
   }
-}), (a = i || (i = {}))[a.APPLICATION = 1] = "APPLICATION", a[a.ACTIVITY_APPLICATION = 2] = "ACTIVITY_APPLICATION", a[a.CONNECTION = 3] = "CONNECTION"
+}), (n = l || (l = {}))[n.APPLICATION = 1] = "APPLICATION", n[n.ACTIVITY_APPLICATION = 2] = "ACTIVITY_APPLICATION", n[n.CONNECTION = 3] = "CONNECTION"

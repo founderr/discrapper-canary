@@ -1,41 +1,41 @@
 "use strict";
-s.r(t);
-var a = s("735250");
-s("470079");
-var n = s("120356"),
-  i = s.n(n),
-  E = s("186078"),
-  l = s("137158"),
-  _ = s("17359");
+n.r(t);
+var a = n("735250");
+n("470079");
+var r = n("120356"),
+  s = n.n(r),
+  i = n("186078"),
+  l = n("137158"),
+  o = n("17359");
 t.default = function(e) {
   let {
     formField: t,
-    index: s,
-    isDragEnabled: n,
-    isDropHovered: r,
-    onDrop: u,
-    onEdit: o,
-    onRemove: T,
-    canRemove: d,
-    actionsLocation: A
+    index: n,
+    isDragEnabled: r,
+    isDropHovered: c,
+    onDrop: d,
+    onEdit: u,
+    onRemove: f,
+    canRemove: m,
+    actionsLocation: h
   } = e, {
-    label: I
+    label: p
   } = t;
   return (0, a.jsx)(l.default, {
     field: t,
-    index: s,
-    isDragEnabled: n,
-    isDropHovered: r,
-    onDrop: u,
-    onEdit: o,
-    onRemove: T,
-    title: I,
-    canRemove: d,
-    actionsLocation: A,
-    children: (0, a.jsx)(E.MultipleChoiceFieldBody, {
+    index: n,
+    isDragEnabled: r,
+    isDropHovered: c,
+    onDrop: d,
+    onEdit: u,
+    onRemove: f,
+    title: p,
+    canRemove: m,
+    actionsLocation: h,
+    children: (0, a.jsx)(i.MultipleChoiceFieldBody, {
       field: t,
       value: void 0,
-      radioItemClassName: i()(_.fieldBackground, _.multipleChoiceFixedTextColor),
+      radioItemClassName: s()(o.fieldBackground, o.multipleChoiceFixedTextColor),
       disabled: !1
     })
   })

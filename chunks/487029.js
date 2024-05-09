@@ -20,9 +20,9 @@ var l = n("735250"),
   C = n("174470"),
   g = n("549771"),
   E = n("964398"),
-  S = n("409673"),
-  _ = n("710111"),
-  I = n("599046");
+  _ = n("409673"),
+  I = n("710111"),
+  S = n("599046");
 
 function N(e) {
   let {
@@ -38,7 +38,7 @@ function N(e) {
     let [t, n] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getSounds(), p.default.getFavorites()]);
     return a.useMemo(() => {
       let l = [],
-        a = [...e, _.DEFAULT_SOUND_GUILD_ID],
+        a = [...e, I.DEFAULT_SOUND_GUILD_ID],
         s = (e, a) => {
           var s, i;
           for (let r of null !== (i = null === (s = t.get(e)) || void 0 === s ? void 0 : s.sort((e, t) => f.default.compare(e.soundId, t.soundId))) && void 0 !== i ? i : []) {
@@ -71,25 +71,25 @@ function N(e) {
   }, {
     disableTrack: !L
   });
-  let U = a.useCallback(e => {
+  let G = a.useCallback(e => {
       y.current = e, D(null == e ? void 0 : e.soundId)
     }, []),
-    G = a.useCallback(e => {
+    U = a.useCallback(e => {
       if (null == e) {
-        U(null);
+        G(null);
         return
       }
       let t = R[e];
-      null != t && U(t)
-    }, [U, R]),
+      null != t && G(t)
+    }, [G, R]),
     w = a.useCallback(e => {
       if (null == e) return;
       let t = R[e];
       null != t && P(t)
     }, [R, P]),
-    B = a.useMemo(() => R.map(e => (0, l.jsx)(S.default, {
+    F = a.useMemo(() => R.map(e => (0, l.jsx)(_.default, {
       interactive: L,
-      className: I.soundButton,
+      className: S.soundButton,
       sound: e,
       focused: O === e.soundId,
       channel: n
@@ -103,10 +103,10 @@ function N(e) {
       itemHeight: 52,
       showDeadZoneIndicator: !A,
       activeItem: O,
-      onItemSelect: G,
+      onItemSelect: U,
       onItemAction: w,
       interactive: L,
-      children: B
+      children: F
     })
   })
 }

@@ -26,9 +26,9 @@ t.default = (0, d.default)(e => {
     channelId: m,
     prompt: S,
     disableGuildSelect: p,
-    disclosures: I,
-    integrationType: g
-  } = e, T = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(m), A = null != g ? null == o ? void 0 : o.get(g) : void 0, N = null !== (t = null == A ? void 0 : A.application) && void 0 !== t ? t : l.default.getApplication(n);
+    disclosures: g,
+    integrationType: I
+  } = e, T = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(m), A = null != I ? null == o ? void 0 : o.get(I) : void 0, N = null !== (t = null == A ? void 0 : A.application) && void 0 !== t ? t : l.default.getApplication(n);
   return new Promise(e => {
     let t = t => {
       let {
@@ -41,7 +41,7 @@ t.default = (0, d.default)(e => {
       authorizations: o,
       clientId: n,
       scopes: null != u ? u : [],
-      disclosures: null != I ? I : [],
+      disclosures: null != g ? g : [],
       callback: t,
       responseType: c,
       redirectUri: f,
@@ -53,7 +53,7 @@ t.default = (0, d.default)(e => {
       channelId: m,
       prompt: S,
       disableGuildSelect: "boolean" == typeof p ? p : "true" === p,
-      integrationType: g
+      integrationType: I
     }), {
       modalKey: T,
       onCloseRequest: () => {

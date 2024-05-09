@@ -13,13 +13,13 @@ n.r(t), n.d(t, {
     return R
   },
   useGroupListingsForGuild: function() {
-    return h
+    return g
   },
   usePublishSubscriptionListing: function() {
     return m
   },
   useSubscriptionListing: function() {
-    return g
+    return h
   },
   useSubscriptionListingsForGroup: function() {
     return S
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return E
   },
   useSubscriptionTrial: function() {
-    return M
+    return v
   },
   useSubscriptionsSettings: function() {
     return I
@@ -82,8 +82,8 @@ let d = [],
       return i
     }, [e, t, n])
   },
-  g = e => (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getSubscriptionListing(e) : null),
-  h = e => {
+  h = e => (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getSubscriptionListing(e) : null),
+  g = e => {
     let t = (0, o.useGroupListingsFetchContext)("useGroupListingsForGuild");
     return (0, i.useStateFromStores)([a.default], () => null != e && t ? a.default.getSubscriptionGroupListingsForGuild(e) : d)
   },
@@ -204,4 +204,4 @@ let d = [],
       error: n
     }
   },
-  M = e => (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getSubscriptionTrial(e) : null)
+  v = e => (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getSubscriptionTrial(e) : null)

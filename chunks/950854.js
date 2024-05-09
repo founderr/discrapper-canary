@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return o
+    return c
   }
 });
 var i = l("735250");
@@ -10,14 +10,14 @@ var a = l("120356"),
   n = l.n(a),
   s = l("481060"),
   r = l("689938"),
-  c = l("383814");
+  o = l("383814");
 
-function o(e) {
+function c(e) {
   let {
     className: t,
     onClick: l,
     imageSrc: a,
-    iconSrc: o,
+    iconSrc: c,
     header: d,
     headerClassName: u,
     subheaderVariant: p = "text-sm/normal",
@@ -25,33 +25,33 @@ function o(e) {
     children: m,
     animatesOnHover: f,
     ...h
-  } = e, C = null != a, g = (0, i.jsxs)(i.Fragment, {
-    children: [C && (0, i.jsx)("div", {
-      className: c.imageContainer,
+  } = e, I = null != a, g = (0, i.jsxs)(i.Fragment, {
+    children: [I && (0, i.jsx)("div", {
+      className: o.imageContainer,
       children: (0, i.jsx)("img", {
         alt: "",
-        className: c.image,
+        className: o.image,
         src: a
       })
     }), (0, i.jsxs)("div", {
-      className: c.textContainer,
+      className: o.textContainer,
       children: [(0, i.jsxs)("div", {
-        className: n()(c.topRowContainer),
-        children: [null != o && (0, i.jsx)("img", {
-          className: c.icon,
+        className: n()(o.topRowContainer),
+        children: [null != c && (0, i.jsx)("img", {
+          className: o.icon,
           alt: "",
           "aria-hidden": !0,
-          src: o,
+          src: c,
           width: 48,
           height: 48
         }), (0, i.jsxs)("div", {
-          className: c.headerContainer,
+          className: o.headerContainer,
           children: [(0, i.jsx)(s.Heading, {
             variant: "heading-md/medium",
             className: u,
             children: d
           }), null != _ && (0, i.jsx)(s.Text, {
-            className: c.subheader,
+            className: o.subheader,
             color: "header-secondary",
             variant: p,
             children: _
@@ -59,8 +59,8 @@ function o(e) {
         })]
       }), m]
     })]
-  }), I = n()(t, c.container, {
-    [c.hasImage]: C
+  }), v = n()(t, o.container, {
+    [o.hasImage]: I
   });
   return null != l ? (0, i.jsx)(s.ClickableContainer, {
     tag: "article",
@@ -68,15 +68,15 @@ function o(e) {
       name: d
     }),
     onClick: l,
-    className: n()(I, c.clickable, {
-      [c.animatesOnHoverContainer]: f
+    className: n()(v, o.clickable, {
+      [o.animatesOnHoverContainer]: f
     }),
     focusProps: {
       offset: 4
     },
     children: g
   }) : (0, i.jsx)("article", {
-    className: I,
+    className: v,
     ...h,
     children: g
   })

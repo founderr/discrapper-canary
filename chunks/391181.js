@@ -19,8 +19,8 @@ var i = n("120356"),
   d = n("757698"),
   f = n("621113"),
   S = n("937615"),
-  g = n("942833"),
-  h = n("48691"),
+  h = n("942833"),
+  g = n("48691"),
   E = n("231338"),
   _ = n("689938"),
   p = n("367871");
@@ -36,8 +36,8 @@ function C(e) {
     onEditProduct: a,
     onUnpublishProduct: f,
     onDeleteProduct: S,
-    onCopyLink: g,
-    onTestDownload: h,
+    onCopyLink: h,
+    onTestDownload: g,
     onReportProduct: E,
     closePopout: C,
     onSelect: m
@@ -58,12 +58,12 @@ function C(e) {
           id: "guild-product-copy-link",
           label: _.default.Messages.GUILD_PRODUCT_COPY_LINK,
           icon: d.default,
-          action: g
+          action: h
         }), l && (0, r.jsx)(s.MenuItem, {
           id: "guild-product-test-download",
           label: _.default.Messages.GUILD_PRODUCT_TEST_DOWNLOAD,
           icon: c.default,
-          action: h
+          action: g
         })]
       }), (0, r.jsxs)(s.MenuGroup, {
         children: [n && (0, r.jsx)(s.MenuItem, {
@@ -100,8 +100,8 @@ function m(e) {
     showReportProduct: c,
     onEditProduct: d,
     onUnpublishProduct: S,
-    onDeleteProduct: g,
-    onCopyProductLink: h,
+    onDeleteProduct: h,
+    onCopyProductLink: g,
     onTestDownload: E,
     onReportProduct: m
   } = e;
@@ -126,8 +126,8 @@ function m(e) {
         showDeleteProduct: a,
         onEditProduct: d,
         onUnpublishProduct: S,
-        onDeleteProduct: g,
-        onCopyLink: h,
+        onDeleteProduct: h,
+        onCopyLink: g,
         onTestDownload: E,
         onReportProduct: m
       }),
@@ -163,7 +163,7 @@ function I(e) {
     onCopyProductLink: f,
     onTestDownload: I,
     disabled: T = !1
-  } = e, R = (0, u.useListingThumbnailUrl)(t, 600), M = null !== t.price_tier ? (0, S.formatPrice)(t.price_tier, E.CurrencyCodes.USD) : void 0, N = (0, g.useProductType)(t);
+  } = e, R = (0, u.useListingThumbnailUrl)(t, 600), v = null !== t.price_tier ? (0, S.formatPrice)(t.price_tier, E.CurrencyCodes.USD) : void 0, M = (0, h.useProductType)(t);
   return (0, r.jsxs)(s.ClickableContainer, {
     tag: "article",
     className: l()(p.productCardClickable, p.productCard, {
@@ -213,19 +213,19 @@ function I(e) {
           children: [(0, r.jsx)(s.Text, {
             variant: "text-md/normal",
             color: "header-secondary",
-            children: M
-          }), null != N ? (0, r.jsxs)(r.Fragment, {
+            children: v
+          }), null != M ? (0, r.jsxs)(r.Fragment, {
             children: [(0, r.jsx)("div", {
               className: p.dotSeparator
             }), (0, r.jsx)(s.Text, {
               variant: "text-md/normal",
               color: "header-secondary",
-              children: N
+              children: M
             })]
           }) : null]
         }), (0, r.jsx)(a.default, {
           size: 16
-        }), t.published ? (0, r.jsx)(h.PublishedBadge, {}) : (0, r.jsx)(h.DraftBadge, {})]
+        }), t.published ? (0, r.jsx)(g.PublishedBadge, {}) : (0, r.jsx)(g.DraftBadge, {})]
       }), !T && (0, r.jsx)(m, {
         product: t,
         guildId: n,

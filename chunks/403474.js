@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   DEFAULT_PREVIEW_ROLE: function() {
-    return a
+    return E
   }
 });
-let a = {
+let E = {
   id: "0",
   name: "",
   mentionable: !1,

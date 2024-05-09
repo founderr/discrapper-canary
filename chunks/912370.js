@@ -1,7 +1,7 @@
 "use strict";
-var i, a;
-l.r(t), l.d(t, {
+var n, a;
+i.r(t), i.d(t, {
   ApplicationDirectoryCollectionItemType: function() {
-    return i
+    return n
   }
-}), l("47120"), (a = i || (i = {}))[a.APPLICATION = 1] = "APPLICATION", a[a.LINK = 2] = "LINK"
+}), i("47120"), (a = n || (n = {}))[a.APPLICATION = 1] = "APPLICATION", a[a.LINK = 2] = "LINK"

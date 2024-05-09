@@ -21,15 +21,15 @@ var a = n("735250"),
   m = n("801077"),
   S = n("626135"),
   p = n("70956"),
-  I = n("225559"),
-  g = n("910436"),
+  g = n("225559"),
+  I = n("910436"),
   T = n("203028"),
   A = n("358924"),
   N = n("292140"),
   v = n("525296"),
   R = n("981631"),
-  O = n("674563"),
-  L = n("689938"),
+  L = n("674563"),
+  O = n("689938"),
   M = n("676563");
 let y = 15 * p.default.Millis.MINUTE,
   P = (0, v.default)(function(e) {
@@ -41,7 +41,7 @@ let y = 15 * p.default.Millis.MINUTE,
     } = e, r = (0, a.jsx)(T.default, {
       party: t,
       onUserContextMenu: n
-    }), u = (0, a.jsx)(g.default, {
+    }), u = (0, a.jsx)(I.default, {
       party: t,
       onChannelContextMenu: i,
       quest: l
@@ -50,10 +50,10 @@ let y = 15 * p.default.Millis.MINUTE,
       applicationStreams: f,
       currentActivities: E,
       voiceChannels: h
-    } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, I = s.useCallback(() => {
+    } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, g = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
-        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === O.ApplicationTypes.GAME
+        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.ApplicationTypes.GAME
       }).map(e => e.game.name);
       S.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
         num_users: _,
@@ -62,7 +62,7 @@ let y = 15 * p.default.Millis.MINUTE,
         in_voice_channel: p,
         games_detected: e
       })
-    }, [_, C, m, p, E]), v = o()(I, y);
+    }, [_, C, m, p, E]), v = o()(g, y);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -108,7 +108,7 @@ function D() {
     fetching: _.default.getFetching(),
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
-  s.useEffect(() => (c.default.wait(() => I.mount()), () => c.default.wait(() => I.unmount())), [null == l ? void 0 : l.id]), s.useEffect(() => {
+  s.useEffect(() => (c.default.wait(() => g.mount()), () => c.default.wait(() => g.unmount())), [null == l ? void 0 : l.id]), s.useEffect(() => {
     n && !i && x()
   }, [n, i]);
   let o = s.useMemo(() => {
@@ -139,12 +139,12 @@ function D() {
     children: [(0, a.jsx)(d.Heading, {
       variant: "heading-md/semibold",
       className: M.emptyHeader,
-      children: L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
+      children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
     }), (0, a.jsx)(d.Text, {
       color: "none",
       className: M.emptyText,
       variant: "text-sm/normal",
-      children: L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
+      children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
     })]
   }), (0, a.jsx)(a.Fragment, {
     children: f

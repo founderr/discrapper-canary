@@ -10,8 +10,8 @@ var a = l("120356"),
   n = l.n(a),
   s = l("481060"),
   r = l("410030"),
-  c = l("134432"),
-  o = l("601964"),
+  o = l("134432"),
+  c = l("601964"),
   d = l("940627"),
   u = l("346656"),
   p = l("964309"),
@@ -19,55 +19,55 @@ var a = l("120356"),
   m = l("768581"),
   f = l("981631"),
   h = l("689938"),
-  C = l("713710"),
+  I = l("713710"),
   g = l("129512"),
-  I = l("330065");
+  v = l("330065");
 
 function A(e) {
   let {
     guild: t,
     className: l,
     onClick: a
-  } = e, A = (0, r.default)(), E = new o.default({
+  } = e, A = (0, r.default)(), E = new c.default({
     name: t.name,
     icon: t.icon
-  }), v = m.default.getGuildDiscoverySplashURL({
+  }), C = m.default.getGuildDiscoverySplashURL({
     id: t.id,
     splash: t.discovery_splash,
-    size: 192 * (0, c.getDevicePixelRatio)()
-  }), x = null != v ? v : function(e) {
+    size: 192 * (0, o.getDevicePixelRatio)()
+  }), R = null != C ? C : function(e) {
     switch (e) {
       case f.ThemeTypes.DARK:
         return g;
       case f.ThemeTypes.LIGHT:
-        return I
+        return v
     }
-  }(A), R = m.default.getGuildIconURL({
+  }(A), x = m.default.getGuildIconURL({
     id: t.id,
     icon: t.icon,
     size: 50
   });
   return (0, i.jsxs)(s.Clickable, {
-    className: n()(C.card, l),
+    className: n()(I.card, l),
     onClick: a,
     "aria-label": h.default.Messages.APP_DIRECTORY_JOIN_SERVER_LABEL,
     children: [(0, i.jsxs)("div", {
-      className: C.cardHeader,
+      className: I.cardHeader,
       children: [(0, i.jsx)("img", {
-        src: x,
+        src: R,
         alt: "",
-        className: C.splashImage
+        className: I.splashImage
       }), (0, i.jsx)("div", {
-        className: C.guildIcon,
+        className: I.guildIcon,
         children: (0, i.jsx)(_.default, {
           mask: _.default.Masks.AVATAR_DEFAULT,
           width: 58,
           height: 58,
           children: (0, i.jsx)("div", {
-            className: C.iconMask,
+            className: I.iconMask,
             children: (0, i.jsx)(u.default, {
-              className: C.__invalid_icon,
-              iconSrc: R,
+              className: I.__invalid_icon,
+              iconSrc: x,
               guild: E,
               size: u.default.Sizes.LARGE
             })
@@ -75,30 +75,30 @@ function A(e) {
         })
       })]
     }), (0, i.jsxs)("div", {
-      className: C.cardDetails,
+      className: I.cardDetails,
       children: [(0, i.jsxs)("div", {
-        className: C.guildNameWrapper,
+        className: I.guildNameWrapper,
         children: [(0, i.jsx)(d.default, {
-          className: C.guildBadge,
+          className: I.guildBadge,
           guild: t,
           tooltipColor: s.Tooltip.Colors.PRIMARY
         }), (0, i.jsx)(s.Heading, {
           variant: "heading-md/semibold",
-          className: C.guildName,
+          className: I.guildName,
           children: t.name
         })]
       }), (0, i.jsx)(s.Text, {
-        className: C.guildDescription,
+        className: I.guildDescription,
         variant: "text-sm/normal",
         color: "header-secondary",
         lineClamp: 2,
         children: t.description
       }), (0, i.jsx)("div", {
-        className: C.memberInfo,
+        className: I.memberInfo,
         children: (0, i.jsxs)("div", {
-          className: C.memberCountWrapper,
+          className: I.memberCountWrapper,
           children: [(0, i.jsx)(p.default, {
-            className: C.memberCountIcon,
+            className: I.memberCountIcon,
             width: "16",
             height: "16"
           }), (0, i.jsx)(s.Text, {

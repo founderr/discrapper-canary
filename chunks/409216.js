@@ -18,7 +18,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class g extends(r = l.PureComponent) {
+class h extends(r = l.PureComponent) {
   renderUsers() {
     let {
       users: e,
@@ -77,7 +77,7 @@ class g extends(r = l.PureComponent) {
     })
   }
 }
-S(g, "defaultProps", {
+S(h, "defaultProps", {
   max: 10,
   renderMoreUsers: function(e, t, n) {
     return (0, i.jsx)("div", {
@@ -86,4 +86,4 @@ S(g, "defaultProps", {
     }, n)
   },
   size: u.AvatarSizes.SIZE_24
-}), t.default = g
+}), t.default = h

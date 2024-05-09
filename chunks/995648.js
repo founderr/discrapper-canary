@@ -1,62 +1,62 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var s = n("735250");
-n("470079");
-var i = n("120356"),
-  l = n.n(i),
-  r = n("481060"),
-  a = n("422559"),
-  u = n("263704"),
-  o = n("465670"),
-  c = n("897269");
+var n = l("735250");
+l("470079");
+var a = l("120356"),
+  s = l.n(a),
+  i = l("481060"),
+  r = l("422559"),
+  o = l("263704"),
+  d = l("465670"),
+  u = l("897269");
 
-function d(e) {
+function c(e) {
   let {
     grantedPermissions: t,
-    disabledPermissions: n,
-    grantedPermissionsHeader: i,
-    disabledPermissionsHeader: d,
+    disabledPermissions: l,
+    grantedPermissionsHeader: a,
+    disabledPermissionsHeader: c,
     className: f
   } = e;
-  return (0, s.jsxs)("div", {
-    className: l()(c.list, f),
-    children: [null != t && t.length > 0 ? (0, s.jsxs)(s.Fragment, {
-      children: [null != i ? (0, s.jsx)(r.FormTitle, {
-        className: c.permissionHeader,
-        children: i
-      }) : null, (0, s.jsx)("div", {
-        className: c.container,
-        children: t.map(e => (0, s.jsxs)("div", {
-          className: c.permission,
-          children: [(0, s.jsx)(u.default, {
+  return (0, n.jsxs)("div", {
+    className: s()(u.list, f),
+    children: [null != t && t.length > 0 ? (0, n.jsxs)(n.Fragment, {
+      children: [null != a ? (0, n.jsx)(i.FormTitle, {
+        className: u.permissionHeader,
+        children: a
+      }) : null, (0, n.jsx)("div", {
+        className: u.container,
+        children: t.map(e => (0, n.jsxs)("div", {
+          className: u.permission,
+          children: [(0, n.jsx)(o.default, {
             width: 16,
             height: 16,
-            className: c.check
-          }), (0, s.jsx)(r.Text, {
+            className: u.check
+          }), (0, n.jsx)(i.Text, {
             variant: "text-sm/normal",
-            children: (0, a.getPermissionName)(e)
+            children: (0, r.getPermissionName)(e)
           })]
         }, e.toString()))
       })]
-    }) : null, null != n && n.length > 0 ? (0, s.jsxs)(s.Fragment, {
-      children: [null != d ? (0, s.jsx)(r.FormTitle, {
-        className: c.permissionHeader,
-        children: d
-      }) : null, (0, s.jsx)("div", {
-        className: c.container,
-        children: n.map(e => (0, s.jsxs)("div", {
-          className: c.permission,
-          children: [(0, s.jsx)(o.default, {
+    }) : null, null != l && l.length > 0 ? (0, n.jsxs)(n.Fragment, {
+      children: [null != c ? (0, n.jsx)(i.FormTitle, {
+        className: u.permissionHeader,
+        children: c
+      }) : null, (0, n.jsx)("div", {
+        className: u.container,
+        children: l.map(e => (0, n.jsxs)("div", {
+          className: u.permission,
+          children: [(0, n.jsx)(d.default, {
             width: 16,
             height: 16,
-            className: c.cross
-          }), (0, s.jsx)(r.Text, {
+            className: u.cross
+          }), (0, n.jsx)(i.Text, {
             variant: "text-sm/normal",
-            children: (0, a.getPermissionName)(e)
+            children: (0, r.getPermissionName)(e)
           })]
         }, e.toString()))
       })]

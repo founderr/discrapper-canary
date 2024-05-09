@@ -21,7 +21,7 @@ let _ = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
   m = null,
   S = null,
   p = !1;
-async function I() {
+async function g() {
   if (p) return;
   p = !0, (0, E.setSessionExtendingEnabled)(!0), f.default.addBreadcrumb({
     message: "Start Analytics Heartbeat"
@@ -34,14 +34,14 @@ async function I() {
     message: "Received invalid Date.now() when generating a heartbeat. Date.now() = ".concat(t, ", timeUntilNextHeartbeat = ").concat(n, ", latestHeartbeatEventTimestamp = ").concat(e)
   }), e > t && (n = 0), f.default.addBreadcrumb({
     message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(n / 1e3, " seconds. Scheduling Heartbeat")
-  }), g(!1), m = setTimeout(() => {
+  }), I(!1), m = setTimeout(() => {
     T(), C = setInterval(() => {
       T()
     }, 15 * d.default.Millis.MINUTE)
   }, Math.max(n, 0))
 }
 
-function g() {
+function I() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   null != m && (clearTimeout(m), m = null), null != C && (clearInterval(C), C = null), null != S && e && (f.default.addBreadcrumb({
     message: "Heartbeat correctly scheduled. Clearing 10s check timeout"
@@ -56,7 +56,7 @@ async function T() {
     return
   }
   if (!p) {
-    f.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), g();
+    f.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), I();
     return
   }
   f.default.addBreadcrumb({
@@ -84,25 +84,25 @@ let A = null,
 
 function v() {
   if (N || null != A && A !== h.RTCConnectionStates.DISCONNECTED && A !== h.RTCConnectionStates.RTC_DISCONNECTED) try {
-    I()
+    g()
   } catch (e) {
     f.default.captureException(e)
   } else !p || (p = !1, f.default.addBreadcrumb({
     message: "Stopping Analytics Heartbeat"
-  }), (0, E.setSessionExtendingEnabled)(!1), g(), (0, i.drainClickstream)())
+  }), (0, E.setSessionExtendingEnabled)(!1), I(), (0, i.drainClickstream)())
 }
 
 function R() {
   f.default.addBreadcrumb({
     message: "Initializing SessionHeartbeatScheduler"
-  }), o.default.addChangeListener(L), s.default.subscribe("WINDOW_FOCUS", M), s.default.subscribe("APP_STATE_UPDATE", y), s.default.subscribe("LOGIN_SUCCESS", O), v()
-}
-
-function O() {
-  T()
+  }), o.default.addChangeListener(O), s.default.subscribe("WINDOW_FOCUS", M), s.default.subscribe("APP_STATE_UPDATE", y), s.default.subscribe("LOGIN_SUCCESS", L), v()
 }
 
 function L() {
+  T()
+}
+
+function O() {
   let e = o.default.getState();
   A !== e && (A = e, v())
 }

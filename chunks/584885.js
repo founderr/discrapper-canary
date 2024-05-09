@@ -30,8 +30,8 @@ t.default = e => {
     guildsData: m,
     analyticsContext: S,
     theme: p,
-    onViewGuild: I,
-    fetchGuilds: g,
+    onViewGuild: g,
+    fetchGuilds: I,
     onGuildCardSeen: T,
     currentCategoryId: A,
     loadId: N,
@@ -39,11 +39,11 @@ t.default = e => {
     showMoreCards: R = !1
   } = e;
   s.useEffect(() => {
-    l.default.wait(() => g())
+    l.default.wait(() => I())
   }, [A]);
-  let O = (0, c.default)(R ? _ : h),
+  let L = (0, c.default)(R ? _ : h),
     {
-      analyticsLocations: L
+      analyticsLocations: O
     } = (0, r.default)();
   if (null == m) return null;
   let {
@@ -60,18 +60,18 @@ t.default = e => {
         page: f.AnalyticsPages.GUILD_DISCOVERY,
         section: f.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
       },
-      analyticsLocations: L
+      analyticsLocations: O
     });
     else {
       let t = M.findIndex(t => t.id === e);
-      await I(e, t, S, N)
+      await g(e, t, S, N)
     }
   };
   if (y || null == M) {
     let e = [];
-    for (let t = 0; t < O; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
+    for (let t = 0; t < L; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = M.slice(0, O).map(e => (0, a.jsx)(d.default, {
+  } else t = M.slice(0, L).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
     onView: x,

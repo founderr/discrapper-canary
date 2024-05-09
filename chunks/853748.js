@@ -7,15 +7,15 @@ a.r(t), a.d(t, {
 var l = a("735250"),
   s = a("470079"),
   r = a("120356"),
-  i = a.n(r),
-  n = a("685626"),
+  n = a.n(r),
+  i = a("685626"),
   o = a("873546"),
   u = a("399606"),
   c = a("481060"),
   d = a("774078"),
   f = a("607070"),
-  m = a("689938"),
-  C = a("549622");
+  C = a("689938"),
+  m = a("549622");
 
 function p(e) {
   let {
@@ -24,20 +24,20 @@ function p(e) {
     days: a,
     hours: s,
     minutes: r,
-    seconds: i
-  } = (0, d.default)(t), n = function(e, t, a, l) {
+    seconds: n
+  } = (0, d.default)(t), i = function(e, t, a, l) {
     let s = (e, t) => "".concat(e.toString().padStart(2, "0")).concat(t),
       r = [];
-    return e > 0 && r.push(s(e, m.default.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || r.length > 0) && r.push(s(t, m.default.Messages.COUNTDOWN_UNITS_HOURS)), (a > 0 || r.length > 0) && r.push(s(a, m.default.Messages.COUNTDOWN_UNITS_MINUTES)), r.push(s(l, m.default.Messages.COUNTDOWN_UNITS_SECONDS)), r.join(":")
-  }(a, s, r, i);
+    return e > 0 && r.push(s(e, C.default.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || r.length > 0) && r.push(s(t, C.default.Messages.COUNTDOWN_UNITS_HOURS)), (a > 0 || r.length > 0) && r.push(s(a, C.default.Messages.COUNTDOWN_UNITS_MINUTES)), r.push(s(l, C.default.Messages.COUNTDOWN_UNITS_SECONDS)), r.join(":")
+  }(a, s, r, n);
   return (0, l.jsx)(c.Text, {
     variant: "heading-md/medium",
-    className: C.countdown,
+    className: m.countdown,
     tag: "div",
     children: (0, l.jsx)("div", {
       role: "timer",
       "aria-relevant": "all",
-      children: n
+      children: i
     })
   })
 }
@@ -47,7 +47,7 @@ let E = s.memo(function(e) {
     isVisible: a,
     displayOptions: s,
     isFullScreen: r
-  } = e, d = (0, u.useStateFromStores)([f.default], () => f.default.useReducedMotion), m = (0, n.useSpring)({
+  } = e, d = (0, u.useStateFromStores)([f.default], () => f.default.useReducedMotion), C = (0, i.useSpring)({
     transform: "translateX(-50%) ".concat(a ? "translateY(-100%)" : "translateY(0%)"),
     opacity: a ? 1 : 0,
     config: {
@@ -56,27 +56,27 @@ let E = s.memo(function(e) {
     },
     immediate: d
   });
-  return (0, l.jsxs)(n.animated.div, {
-    className: i()([C.countDownWrapper, r && C.fullScreenWrapper, o.isMobile && C.mobileWrapper]),
+  return (0, l.jsxs)(i.animated.div, {
+    className: n()([m.countDownWrapper, r && m.fullScreenWrapper, o.isMobile && m.mobileWrapper]),
     role: "status",
     style: {
       backgroundColor: s.backgroundColor,
       boxShadow: s.boxShadow,
       color: s.labelColor,
-      ...m
+      ...C
     },
     children: [null != s.iconSrc && (0, l.jsx)("img", {
       src: s.iconSrc,
-      className: C.countdownIcon,
+      className: m.countdownIcon,
       alt: "",
       "aria-hidden": !0
     }), (0, l.jsx)(c.Heading, {
       variant: "heading-md/medium",
-      className: C.countdownLabel,
+      className: m.countdownLabel,
       children: s.label()
     }), (0, l.jsx)(c.Heading, {
       variant: "heading-md/medium",
-      className: C.countdown,
+      className: m.countdown,
       children: "—"
     }), (0, l.jsx)(p, {
       endDate: t

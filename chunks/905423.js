@@ -1,12 +1,12 @@
 "use strict";
 n.r(t);
 var i = n("266067"),
-  r = n("652874"),
-  a = n("981631");
+  a = n("652874"),
+  l = n("981631");
 
-function l(e) {
+function r(e) {
   let t = (0, i.matchPath)(null != e ? e : "", {
-    path: a.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")
+    path: l.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")
   });
   if (null != t) {
     let {
@@ -14,12 +14,12 @@ function l(e) {
       channelId: n
     } = t.params;
     return {
-      guildId: e === a.ME ? null : e,
+      guildId: e === l.ME ? null : e,
       channelId: null != n ? n : null
     }
   }
   let n = (0, i.matchPath)(null != e ? e : "", {
-    path: a.Routes.GUILD_BOOSTING_MARKETING(":guildId")
+    path: l.Routes.GUILD_BOOSTING_MARKETING(":guildId")
   });
   return null != n ? {
     guildId: n.params.guildId,
@@ -29,7 +29,7 @@ function l(e) {
     channelId: null
   }
 }
-t.default = (0, r.default)(e => ({
+t.default = (0, a.default)(e => ({
   path: null,
   basePath: "/",
   guildId: null,
@@ -38,7 +38,7 @@ t.default = (0, r.default)(e => ({
     let {
       guildId: n,
       channelId: i
-    } = l(t);
+    } = r(t);
     e({
       path: t,
       guildId: n,
@@ -49,7 +49,7 @@ t.default = (0, r.default)(e => ({
     let {
       guildId: n,
       channelId: i
-    } = l(t);
+    } = r(t);
     e({
       path: null,
       guildId: n,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   addFavoriteCategory: function() {
-    return f
+    return S
   },
   addFavoriteChannel: function() {
     return c
@@ -10,16 +10,16 @@ n.r(t), n.d(t, {
     return I
   },
   removeFavoriteChannel: function() {
-    return T
+    return f
   },
   setFavoriteChannelNickname: function() {
-    return S
+    return T
   },
   toggleFavoriteServerMuted: function() {
-    return p
+    return N
   },
   updateFavoriteChannelParent: function() {
-    return N
+    return p
   },
   updateFavoriteChannels: function() {
     return _
@@ -67,7 +67,7 @@ function c(e, t) {
   }, a.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
-function T(e) {
+function f(e) {
   let t = u.default.getFavorite(e);
   null != t && a.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
     if (delete n.favoriteChannels[e], t.type === r.FavoriteChannelType.CATEGORY)
@@ -76,13 +76,13 @@ function T(e) {
   }, a.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function S(e, t) {
+function T(e, t) {
   u.default.isFavorite(e) && a.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
     n.favoriteChannels[e].nickname = null != t ? t : ""
   }, a.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function f(e) {
+function S(e) {
   let t = o.default.fromTimestamp(Date.now());
   a.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
     n.favoriteChannels[t] = r.FavoriteChannel.create({
@@ -95,7 +95,7 @@ function f(e) {
 }
 
 function I(e) {
-  T(e)
+  f(e)
 }
 
 function _(e) {
@@ -108,13 +108,13 @@ function _(e) {
   }, a.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
-function N(e, t) {
+function p(e, t) {
   a.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
     n.favoriteChannels[e].parentId = null != t ? t : "0"
   }, a.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
-function p() {
+function N() {
   a.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
     e.muted = !e.muted
   }, a.UserSettingsDelay.INFREQUENT_USER_ACTION)

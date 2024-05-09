@@ -1,53 +1,53 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return o
   }
 });
-var a = s("735250");
+var E = s("735250");
 s("470079");
-var n = s("481060"),
-  i = s("201895"),
-  E = s("471445"),
-  l = s("908434"),
-  _ = s("823379"),
-  r = s("303737"),
-  u = s("293810"),
-  o = s("689938"),
-  T = s("262129");
+var _ = s("481060"),
+  a = s("201895"),
+  n = s("471445"),
+  T = s("908434"),
+  i = s("823379"),
+  u = s("303737"),
+  A = s("293810"),
+  l = s("689938"),
+  I = s("262129");
 
-function d(e) {
+function r(e) {
   let {
     channelId: t
-  } = e, s = (0, r.useChannelWithTemplateFallback)(t);
-  if (null == s) return (0, a.jsx)(a.Fragment, {
-    children: "[".concat(o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, "]")
+  } = e, s = (0, u.useChannelWithTemplateFallback)(t);
+  if (null == s) return (0, E.jsx)(E.Fragment, {
+    children: "[".concat(l.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, "]")
   });
-  let _ = s.isMediaChannel() ? l.default : (0, E.getSimpleChannelIconComponent)(s.type);
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(n.HiddenVisually, {
-      children: (0, i.default)({
+  let i = s.isMediaChannel() ? T.default : (0, n.getSimpleChannelIconComponent)(s.type);
+  return (0, E.jsxs)(E.Fragment, {
+    children: [(0, E.jsx)(_.HiddenVisually, {
+      children: (0, a.default)({
         channel: s
       })
-    }), (0, a.jsxs)("div", {
+    }), (0, E.jsxs)("div", {
       "aria-hidden": !0,
-      children: [null != _ && (0, a.jsx)(_, {
-        className: T.icon,
+      children: [null != i && (0, E.jsx)(i, {
+        className: I.icon,
         "aria-hidden": !0
       }), s.name]
     })]
   })
 }
 
-function A(e) {
+function o(e) {
   switch (e.ref_type) {
-    case u.GuildRoleSubscriptionBenefitTypes.CHANNEL:
-      return (0, a.jsx)(d, {
+    case A.GuildRoleSubscriptionBenefitTypes.CHANNEL:
+      return (0, E.jsx)(r, {
         channelId: e.ref_id
       });
-    case u.GuildRoleSubscriptionBenefitTypes.INTANGIBLE:
+    case A.GuildRoleSubscriptionBenefitTypes.INTANGIBLE:
       return e.name;
     default:
-      (0, _.assertNever)(e)
+      (0, i.assertNever)(e)
   }
 }

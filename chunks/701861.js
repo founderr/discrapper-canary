@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("51144"),
   S = n("321488"),
   p = n("417183"),
-  I = n("825682"),
-  g = n("170245"),
+  g = n("825682"),
+  I = n("170245"),
   T = n("981631"),
   A = n("65154"),
   N = n("689938"),
@@ -33,7 +33,7 @@ function R(e, t, n) {
   }) : e[t] = n, e
 }
 
-function O(e) {
+function L(e) {
   let {
     user: t,
     onSelect: n
@@ -83,7 +83,7 @@ function O(e) {
     })]
   })
 }
-class L extends s.PureComponent {
+class O extends s.PureComponent {
   componentWillLeave(e) {
     null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e)
   }
@@ -110,11 +110,11 @@ class L extends s.PureComponent {
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, a.jsxs)("div", {
         className: v.listItemContents,
-        children: [(0, a.jsx)(g.default, {
+        children: [(0, a.jsx)(I.default, {
           user: e,
           status: i,
           isMobile: l,
-          subText: (0, a.jsx)(I.default, {
+          subText: (0, a.jsx)(g.default, {
             hovered: t,
             activities: n,
             applicationStream: s,
@@ -154,7 +154,7 @@ class L extends s.PureComponent {
       let {
         user: t
       } = this.props;
-      (0, d.openContextMenu)(e, e => (0, a.jsx)(O, {
+      (0, d.openContextMenu)(e, e => (0, a.jsx)(L, {
         ...e,
         user: t
       }), {
@@ -169,4 +169,4 @@ class L extends s.PureComponent {
     })
   }
 }
-t.default = L
+t.default = O

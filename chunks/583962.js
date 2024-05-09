@@ -23,9 +23,9 @@ var l = n("735250"),
   C = n("906732"),
   g = n("434404"),
   E = n("496675"),
-  S = n("259580"),
-  _ = n("267642"),
-  I = n("624138"),
+  _ = n("259580"),
+  I = n("267642"),
+  S = n("624138"),
   N = n("667815"),
   T = n("531572"),
   A = n("26323"),
@@ -33,7 +33,7 @@ var l = n("735250"),
   v = n("981631"),
   x = n("689938"),
   R = n("310767");
-let M = (0, I.cssValueToNumber)(d.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let M = (0, S.cssValueToNumber)(d.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
   y = e => {
     let {
       guild: t,
@@ -72,29 +72,29 @@ t.default = e => {
   } = (0, C.default)(p.default.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
     premiumSubscriberCount: d,
     id: g
-  } = t, I = (0, _.getGuildTierFromAppliedBoostCount)(d, g), M = (0, _.getNextTier)(I, t.id), O = null == M, D = null != M ? M : I, j = (0, u.useStateFromStores)([T.default], () => {
+  } = t, S = (0, I.getGuildTierFromAppliedBoostCount)(d, g), M = (0, I.getNextTier)(S, t.id), O = null == M, D = null != M ? M : S, j = (0, u.useStateFromStores)([T.default], () => {
     var e;
     return null !== (e = T.default.getCountForGuild(g)) && void 0 !== e ? e : 0
-  }), P = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), U = (0, u.useStateFromStores)([E.default], () => E.default.can(v.Permissions.MANAGE_GUILD, t));
+  }), P = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), G = (0, u.useStateFromStores)([E.default], () => E.default.can(v.Permissions.MANAGE_GUILD, t));
   a.useEffect(() => {
     j !== d && (0, N.updateGuildPremiumSubscriptionCount)(g, d)
   }, [g, j, d]);
-  let G = "".concat(Math.min(100, d / (0, _.getAppliedGuildBoostsRequired)(t.id)[D] * 100), "%"),
+  let U = "".concat(Math.min(100, d / (0, I.getAppliedGuildBoostsRequired)(t.id)[D] * 100), "%"),
     {
       current: w
-    } = a.useRef(G),
-    B = {
+    } = a.useRef(U),
+    F = {
       from: {
         width: j === d ? w : "0%"
       },
       to: {
-        width: G
+        width: U
       },
       config: b,
       immediate: P
     },
-    [F, V] = (0, r.useSpring)(() => B),
-    H = () => {
+    [B, H] = (0, r.useSpring)(() => F),
+    V = () => {
       (0, m.trackWithMetadata)(v.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
           section: v.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
@@ -114,20 +114,20 @@ t.default = e => {
       })
     },
     k = x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({
-      levelName: (0, _.getShortenedTierName)(D)
+      levelName: (0, I.getShortenedTierName)(D)
     }),
     Y = x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
       numBoosts: d,
-      numTotal: (0, _.getAppliedGuildBoostsRequired)(t.id)[D]
+      numTotal: (0, I.getAppliedGuildBoostsRequired)(t.id)[D]
     });
-  O && (k = (0, _.getShortenedTierName)(D), Y = x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
+  O && (k = (0, I.getShortenedTierName)(D), Y = x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
     numBoosts: d
   }));
   let K = (0, o.useListItem)("boosts-".concat(t.id));
   return (0, l.jsx)("li", {
     children: (0, l.jsx)(c.Tooltip, {
       text: O ? x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({
-        levelName: (0, _.getTierName)(D)
+        levelName: (0, I.getTierName)(D)
       }),
       color: c.Tooltip.Colors.BLACK,
       position: "top",
@@ -144,16 +144,16 @@ t.default = e => {
             right: 4
           }
         },
-        onClick: H,
+        onClick: V,
         onMouseEnter: () => {
           var t;
-          null === (t = e.onMouseEnter) || void 0 === t || t.call(e), V(B)
+          null === (t = e.onMouseEnter) || void 0 === t || t.call(e), H(F)
         },
         className: i()(R.container, {
           [R.containerWithMargin]: n
         }),
         onContextMenu: e => {
-          U && (0, f.openContextMenu)(e, e => (0, l.jsx)(y, {
+          G && (0, f.openContextMenu)(e, e => (0, l.jsx)(y, {
             ...e,
             guild: t
           }))
@@ -176,11 +176,11 @@ t.default = e => {
               color: "interactive-normal",
               variant: "text-xs/normal",
               children: Y
-            }), (0, l.jsx)(S.default, {
+            }), (0, l.jsx)(_.default, {
               className: R.count,
               height: 16,
               width: 16,
-              direction: S.default.Directions.RIGHT
+              direction: _.default.Directions.RIGHT
             })]
           })]
         }), (0, l.jsxs)("div", {
@@ -189,7 +189,7 @@ t.default = e => {
           }),
           children: [(0, l.jsx)(r.animated.div, {
             className: R.progressBar,
-            style: F
+            style: B
           }), O ? (0, l.jsx)("span", {
             "aria-label": x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_TADA_ICON_ALT_TEXT,
             role: "img",

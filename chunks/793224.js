@@ -21,9 +21,9 @@ var a = n("442837"),
   C = n("594190"),
   g = n("569545"),
   E = n("989941"),
-  S = n("199902"),
-  _ = n("314897"),
-  I = n("944486"),
+  _ = n("199902"),
+  I = n("314897"),
+  S = n("944486"),
   N = n("885110"),
   T = n("449224"),
   A = n("436088"),
@@ -33,8 +33,8 @@ var a = n("442837"),
   R = n("689938");
 
 function M() {
-  let e = (0, a.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
-    t = (0, a.useStateFromStores)([_.default], () => _.default.getId()),
+  let e = (0, a.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
+    t = (0, a.useStateFromStores)([I.default], () => I.default.getId()),
     n = (0, a.useStateFromStores)([C.default, T.default], () => (0, E.default)(C.default, T.default)),
     {
       canBroadcast: M
@@ -45,7 +45,7 @@ function M() {
     }),
     y = (0, c.default)() && null != n,
     O = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
-    D = (0, a.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams());
+    D = (0, a.useStateFromStoresArray)([_.default], () => _.default.getAllActiveStreams());
   if (!y && !O) return null;
   if (d.default.trackExposure({
       location: "broadcast_button_rtc_panel"
@@ -68,7 +68,7 @@ function M() {
         }) : (0, u.startBroadcastForStream)((0, g.encodeStreamKey)(l), null == n ? void 0 : n.pid)
       } else(0, u.stopBroadcast)()
     },
-    U = e => (0, l.jsx)(L.default, {
+    G = e => (0, l.jsx)(L.default, {
       tooltipText: y ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,
       onClick: () => {
         P(), null == e || e(x.ContentDismissActionType.UNKNOWN)
@@ -79,7 +79,7 @@ function M() {
         height: 20
       })
     }),
-    G = e => (0, l.jsx)(f.default, {
+    U = e => (0, l.jsx)(f.default, {
       markAsDismissed: e
     });
   return (0, l.jsx)(m.default, {
@@ -93,10 +93,10 @@ function M() {
       return t === s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP ? (0, l.jsx)(i.Popout, {
         position: "top",
         align: "center",
-        renderPopout: () => G(n),
+        renderPopout: () => U(n),
         shouldShow: !0,
-        children: () => U(n)
-      }) : U()
+        children: () => G(n)
+      }) : G()
     }
   })
 }

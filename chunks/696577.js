@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return g
   }
 });
 var a = n("735250"),
@@ -22,12 +22,12 @@ var a = n("735250"),
   S = n("689938"),
   p = n("615808");
 
-function I(e) {
+function g(e) {
   let {
     user: t,
     type: n,
-    status: I,
-    isFocused: g
+    status: g,
+    isFocused: I
   } = e, T = s.useContext(E.AnalyticsContext), {
     analyticsLocations: A
   } = (0, r.default)(), N = e => {
@@ -41,9 +41,9 @@ function I(e) {
         location: "Friends"
       }
     })
-  }, R = I === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : I, O = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
+  }, R = g === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : g, L = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, a.jsx)(_.default, {
-    isFocused: g,
+    isFocused: I,
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
       userId: t.id,
@@ -86,7 +86,7 @@ function I(e) {
           hovered: e,
           showAccountIdentifier: !0,
           status: R,
-          subText: O,
+          subText: L,
           className: p.userInfo
         }), (0, a.jsx)("div", {
           className: p.actions,

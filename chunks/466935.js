@@ -24,7 +24,7 @@ function E(e) {
   let {
     guild: t,
     selected: n
-  } = e, E = (0, s.useStateFromStores)([o.default], () => o.default.getSubmittedGuildJoinRequestTotal(t.id)), S = null != E ? E : 0;
+  } = e, E = (0, s.useStateFromStores)([o.default], () => o.default.getSubmittedGuildJoinRequestTotal(t.id)), _ = null != E ? E : 0;
   return a.useEffect(() => {
     null == E && r.default.fetchGuildJoinRequests({
       guildId: t.id,
@@ -47,8 +47,8 @@ function E(e) {
         tab: C.StaticChannelRoute.MEMBER_APPLICATIONS
       }), (0, c.transitionTo)(m.Routes.CHANNEL(t.id, C.StaticChannelRoute.MEMBER_APPLICATIONS))
     },
-    trailing: S > 0 ? (0, l.jsx)(h.NumberBadge, {
-      count: S
+    trailing: _ > 0 ? (0, l.jsx)(h.NumberBadge, {
+      count: _
     }) : null
   })
 }

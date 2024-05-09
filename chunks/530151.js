@@ -17,15 +17,15 @@ var a = n("735250"),
   m = n("730749"),
   S = n("112724"),
   p = n("812206"),
-  I = n("44315"),
-  g = n("210887"),
+  g = n("44315"),
+  I = n("210887"),
   T = n("283595"),
   A = n("417363"),
   N = n("941128"),
   v = n("451478"),
   R = n("285952"),
-  O = n("366695"),
-  L = n("366966"),
+  L = n("366695"),
+  O = n("366966"),
   M = n("151011"),
   y = n("774832"),
   P = n("465670"),
@@ -106,24 +106,24 @@ function W(e, t) {
 }
 let K = {
   [k.LocalDispatchApplicationStates.INSTALLING]: {
-    [L.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+    [O.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
       percent: e,
       progress: t,
       total: n
     }),
-    [L.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+    [O.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [L.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+    [O.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [L.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+    [O.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
       percent: e,
       progress: t,
       total: n,
@@ -131,24 +131,24 @@ let K = {
     })
   },
   [k.LocalDispatchApplicationStates.UPDATING]: {
-    [L.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
+    [O.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
       percent: e,
       progress: t,
       total: n
     }),
-    [L.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
+    [O.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [L.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
+    [O.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [L.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
+    [O.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
       percent: e,
       progress: t,
       total: n,
@@ -156,24 +156,24 @@ let K = {
     })
   },
   [k.LocalDispatchApplicationStates.REPAIRING]: {
-    [L.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+    [O.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
       percent: e,
       progress: t,
       total: n
     }),
-    [L.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+    [O.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [L.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+    [O.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [L.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+    [O.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
       percent: e,
       progress: t,
       total: n,
@@ -188,7 +188,7 @@ function z(e, t, n, a, s) {
     {
       unit: r,
       time: o
-    } = (0, L.getTimeAndUnit)(null != e ? e / 60 : null, l);
+    } = (0, O.getTimeAndUnit)(null != e ? e / 60 : null, l);
   if (null != i && null != r) {
     let e = i[r];
     return null != e ? e(n, a, s, o) : null
@@ -279,8 +279,8 @@ class Z extends s.PureComponent {
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
-        foregroundColor: (0, I.getColor)(n),
-        foregroundGradientColor: null != s ? [(0, I.getColor)(s[0]), (0, I.getColor)(s[1])] : void 0,
+        foregroundColor: (0, g.getColor)(n),
+        foregroundGradientColor: null != s ? [(0, g.getColor)(s[0]), (0, g.getColor)(s[1])] : void 0,
         animate: this.isFocused
       }), (0, a.jsx)("div", {
         className: F.progressCellText,
@@ -503,10 +503,10 @@ let X = () => (0, a.jsx)(Y, {
     cellClassName: F.nameCell,
     render: e => (0, a.jsxs)(R.default, {
       align: R.default.Align.CENTER,
-      children: [(0, a.jsx)(O.default, {
+      children: [(0, a.jsx)(L.default, {
         game: e.application,
         className: F.__invalid_gameIcon,
-        size: O.default.Sizes.SMALL
+        size: L.default.Sizes.SMALL
       }), (0, a.jsx)("div", {
         className: F.nameCellText,
         children: e.application.name
@@ -649,12 +649,12 @@ function ea(e, t, n, a) {
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, g.default, v.default], () => {
+t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, I.default, v.default], () => {
   let e = ea(N.default.activeItems, !1, p.default, A.default);
   return {
     applications: [...e, ...ea(N.default.finishedItems, !0, p.default, A.default)],
     paused: N.default.paused,
     isFocused: v.default.isFocused(),
-    theme: g.default.theme
+    theme: I.default.theme
   }
 })((0, m.default)(en)))
