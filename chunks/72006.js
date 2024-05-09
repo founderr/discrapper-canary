@@ -31,13 +31,13 @@ n.r(t), n.d(t, {
     return U
   },
   setCollapsedEndSelection: function() {
-    return j
+    return w
   },
   setCollapsedSelection: function() {
     return D
   },
   setCollapsedStartSelection: function() {
-    return w
+    return j
   },
   setToEndSelection: function() {
     return y
@@ -52,26 +52,26 @@ n.r(t), n.d(t, {
     return N
   }
 }), n("47120"), n("653041");
-var r = n("16464"),
-  i = n("713512"),
+var r = n("371917"),
+  i = n("421520"),
   l = n.n(i),
-  s = n("294006"),
+  s = n("563751"),
   o = n.n(s),
-  u = n("601310"),
+  u = n("608382"),
   a = n.n(u),
-  c = n("597605"),
+  c = n("722661"),
   d = n.n(c),
-  f = n("83550"),
+  f = n("225389"),
   S = n.n(f),
-  g = n("65492"),
+  g = n("71716"),
   h = n.n(g),
-  E = n("405141"),
+  E = n("869045"),
   _ = n.n(E),
-  p = n("960973"),
+  p = n("110599"),
   C = n.n(p),
-  m = n("93874"),
+  m = n("801539"),
   I = n.n(m),
-  T = n("295985"),
+  T = n("887868"),
   R = n.n(T);
 
 function M(e, t, n, i) {
@@ -195,11 +195,11 @@ function D(e, t) {
   return n = (n = n.set("focusOffset", e)).set("anchorOffset", e), r.EditorState.forceSelection(t, n)
 }
 
-function j(e) {
+function w(e) {
   return D(e.getCurrentContent().getFirstBlock().getText().length, e)
 }
 
-function w(e) {
+function j(e) {
   return D(0, e)
 }
 

@@ -13,7 +13,7 @@ var a = s("735250"),
   d = s("490529"),
   u = s("981631"),
   c = s("689938"),
-  S = s("215744");
+  S = s("46488");
 let E = {
     [u.HypeSquadHouses.HOUSE_1]: S.membershipDialogHouse1,
     [u.HypeSquadHouses.HOUSE_2]: S.membershipDialogHouse2,

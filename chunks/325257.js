@@ -4,7 +4,7 @@ var l = n("735250"),
   a = n("470079"),
   s = n("120356"),
   i = n.n(s),
-  r = n("942389"),
+  r = n("176617"),
   o = n("924826"),
   u = n("399606"),
   d = n("846519"),
@@ -29,7 +29,7 @@ var l = n("735250"),
   M = n("674552"),
   y = n("981631"),
   O = n("689938"),
-  D = n("263");
+  D = n("634165");
 let b = {
   analyticsSource: {
     page: y.AnalyticsPages.GUILD_CHANNEL,
@@ -42,7 +42,7 @@ function j(e, t) {
   (0, h.openContextMenuLazy)(e, async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("58227"), n.e("85093"), n.e("85552"), n.e("43502"), n.e("52332"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("52332"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
     return n => (0, l.jsx)(e, {
       ...n,
       guild: t
@@ -52,8 +52,8 @@ function j(e, t) {
 t.default = a.memo(function(e) {
   var t, n, s, h, P;
   let {
-    guildNode: G,
-    setRef: U,
+    guildNode: U,
+    setRef: G,
     onDragStart: w,
     onDragEnd: B,
     route: F,
@@ -61,8 +61,8 @@ t.default = a.memo(function(e) {
     animatable: H,
     selected: k = !1,
     unread: Y = !1,
-    mediaState: W,
-    unavailable: K = !1,
+    mediaState: K,
+    unavailable: W = !1,
     badge: z = 0,
     contextMenu: Z = j,
     draggable: X = !1,
@@ -72,7 +72,7 @@ t.default = a.memo(function(e) {
   } = e, {
     id: $,
     parentId: ee
-  } = G, et = null !== (t = e.upperBadge) && void 0 !== t ? t : K ? (0, M.renderUnavailableBadge)() : null != W ? (0, M.renderMediaBadge)(W) : void 0, en = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
+  } = U, et = null !== (t = e.upperBadge) && void 0 !== t ? t : W ? (0, M.renderUnavailableBadge)() : null != K ? (0, M.renderMediaBadge)(K) : void 0, en = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
   null == en && z > 0 ? en = null !== (s = (0, M.renderMentionBadge)(z)) && void 0 !== s ? s : void 0 : null == en && null != J && (en = null !== (h = (0, M.renderGuildJoinRequestBadge)({
     guildJoinRequestStatus: J
   })) && void 0 !== h ? h : void 0);
@@ -84,8 +84,8 @@ t.default = a.memo(function(e) {
       item: () => (requestAnimationFrame(() => {
         null == w || w()
       }), {
-        type: G.type,
-        nodeId: G.id
+        type: U.type,
+        nodeId: U.id
       }),
       end() {
         null == B || B(), (0, p.saveGuildFolders)(S.default.getCompatibleGuildFolders())
@@ -112,10 +112,10 @@ t.default = a.memo(function(e) {
       })
     }, [$, F]),
     eC = a.useCallback(() => {
-      if (null != F || null == V || K || !q) return;
+      if (null != F || null == V || W || !q) return;
       let e = (0, m.getChannelIdForGuildTransition)(V.id);
       null != e && f.default.preload(V.id, e)
-    }, [F, V, K, q]),
+    }, [F, V, W, q]),
     eg = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest($)),
     eE = a.useCallback(e => {
       null != V && !eg && Z(e, V)
@@ -134,8 +134,8 @@ t.default = a.memo(function(e) {
       ep.cancel(), eh(!1)
     }, [ep]),
     eI = a.useCallback(e => {
-      null == U || U($, e)
-    }, [$, U]);
+      null == G || G($, e)
+    }, [$, G]);
   if (null == V) return null;
   let eN = ef || ed ? (0, l.jsx)(A.default, {
       guild: V,
@@ -200,7 +200,7 @@ t.default = a.memo(function(e) {
       children: eT
     }), X ? (0, l.jsx)(L.default, {
       name: V.name,
-      targetNode: G,
+      targetNode: U,
       onDragOverChanged: e_
     }) : null]
   })

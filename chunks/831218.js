@@ -27,7 +27,7 @@ var l, a, s, i = n("735250"),
   y = n("515753"),
   O = n("981631"),
   D = n("689938"),
-  b = n("9982");
+  b = n("181235");
 
 function j(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -164,7 +164,7 @@ let P = r.memo(function() {
     })]
   })
 });
-class G extends(a = r.Component) {
+class U extends(a = r.Component) {
   static getDerivedStateFromProps(e) {
     let {
       children: t,
@@ -355,7 +355,7 @@ class G extends(a = r.Component) {
     })
   }
 }
-j(G, "defaultProps", {
+j(U, "defaultProps", {
   padding: 8
 });
 t.default = e => {
@@ -410,7 +410,7 @@ t.default = e => {
   });
   return (0, i.jsx)(d.ListNavigatorProvider, {
     navigator: R,
-    children: (0, i.jsx)(G, {
+    children: (0, i.jsx)(U, {
       channels: u,
       privateChannelIds: f,
       listRef: p,

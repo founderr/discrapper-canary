@@ -12,7 +12,7 @@ var a = s("735250"),
   S = s("285952"),
   E = s("418632"),
   T = s("689938"),
-  f = s("245524");
+  f = s("70983");
 class m extends n.Component {
   renderNotice() {
     let {

@@ -39,8 +39,8 @@ var l, a = n("735250"),
   b = n("734307"),
   j = n("854444"),
   P = n("688265"),
-  G = n("896053"),
-  U = n("301342"),
+  U = n("896053"),
+  G = n("301342"),
   w = n("906817"),
   B = n("429122"),
   F = n("285573"),
@@ -48,8 +48,8 @@ var l, a = n("735250"),
   H = n("910595"),
   k = n("466935"),
   Y = n("120818"),
-  W = n("61642"),
-  K = n("848442"),
+  K = n("61642"),
+  W = n("848442"),
   z = n("53425"),
   Z = n("424785"),
   X = n("770202"),
@@ -63,7 +63,7 @@ var l, a = n("735250"),
   el = n("981631"),
   ea = n("176505"),
   es = n("689938"),
-  ei = n("75912");
+  ei = n("333960");
 
 function er(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -524,12 +524,12 @@ class eo extends(l = s.PureComponent) {
               selected: r === et.ChannelListCommunityRow.GUILD_SCHEDULED_EVENTS
             }, et.ChannelListCommunityRow.GUILD_SCHEDULED_EVENTS);
           case et.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
-            return (0, a.jsx)(W.default, {
+            return (0, a.jsx)(K.default, {
               guild: l,
               selected: r === ea.StaticChannelRoute.ROLE_SUBSCRIPTIONS
             }, et.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS);
           case et.ChannelListCommunityRow.GUILD_SHOP:
-            return (0, a.jsx)(K.default, {
+            return (0, a.jsx)(W.default, {
               guild: l,
               selected: r === ea.StaticChannelRoute.GUILD_SHOP
             }, et.ChannelListCommunityRow.GUILD_SHOP);
@@ -634,7 +634,7 @@ class eo extends(l = s.PureComponent) {
           }, A);
         case el.ChannelTypes.GUILD_CATEGORY:
           if (t !== d.voiceChannelsSectionNumber) return null;
-          return (0, a.jsx)(U.ReadonlyCategoryChannel, {
+          return (0, a.jsx)(G.ReadonlyCategoryChannel, {
             channel: T
           }, "readonly-".concat(T.id));
         case el.ChannelTypes.PUBLIC_THREAD:
@@ -781,7 +781,7 @@ function ed(e) {
 }
 
 function ec(e) {
-  let t = (0, G.default)(e.guild),
+  let t = (0, U.default)(e.guild),
     n = (0, P.default)(e.guild),
     l = r().uniq(n.concat(t)),
     s = (0, u.useStateFromStoresObject)([b.default], () => b.default.getGuild(e.guildId, l));

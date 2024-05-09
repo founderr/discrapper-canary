@@ -4,8 +4,8 @@ var i = n("735250"),
   r = n("470079"),
   a = n("120356"),
   s = n.n(a),
-  o = n("781964"),
-  l = n("26673");
+  o = n("335607"),
+  l = n("961047");
 let u = {
     VERTICAL: l.vertical,
     HORIZONTAL: o.horizontal,

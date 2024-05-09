@@ -33,8 +33,8 @@ var l = n("735250"),
   b = n("709054"),
   j = n("792125"),
   P = n("727258"),
-  G = n("605951"),
-  U = n("474109"),
+  U = n("605951"),
+  G = n("474109"),
   w = n("741616"),
   B = n("187835"),
   F = n("162050"),
@@ -42,8 +42,8 @@ var l = n("735250"),
   H = n("193154"),
   k = n("602147"),
   Y = n("222059"),
-  W = n("751277"),
-  K = n("65721"),
+  K = n("751277"),
+  W = n("65721"),
   z = n("843343"),
   Z = n("654142"),
   X = n("695301"),
@@ -51,7 +51,7 @@ var l = n("735250"),
   q = n("921230"),
   J = n("981631"),
   $ = n("689938"),
-  ee = n("295986");
+  ee = n("31836");
 
 function et(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -182,7 +182,7 @@ function er(e) {
       } = e;
       n !== t && (t = n, eg.scrollToGuild(t, !1))
     })
-  }, [o, eg]), (0, G.default)(eg.scrollToGuild);
+  }, [o, eg]), (0, U.default)(eg.scrollToGuild);
   let {
     enableClanCreation: eN,
     defaultGameId: eT
@@ -204,7 +204,7 @@ function er(e) {
         ...ep,
         role: "tree",
         className: ee.tree,
-        children: [(0, l.jsx)(U.default, {
+        children: [(0, l.jsx)(G.default, {
           ref: ed,
           isVisible: eg.isItemVisible,
           onJumpTo: eg.handleJumpToGuild,
@@ -217,11 +217,11 @@ function er(e) {
           }),
           ref: eg.scrollerRef,
           onScroll: eg.handleScroll,
-          children: [(0, l.jsx)(Y.HomeButton, {}), eL ? (0, l.jsx)(A.default, {}) : null, (0, l.jsx)(F.default, {}), (0, l.jsx)(W.default, {
+          children: [(0, l.jsx)(Y.HomeButton, {}), eL ? (0, l.jsx)(A.default, {}) : null, (0, l.jsx)(F.default, {}), (0, l.jsx)(K.default, {
             isOnHubVerificationRoute: eI
           }), (0, l.jsx)(w.default, {}), ev, E.map(e => (0, l.jsx)(q.default, {
             guildId: e
-          }, e)), (0, l.jsx)(Q.default, {}), (0, l.jsx)(K.default, {}), (0, l.jsx)("div", {
+          }, e)), (0, l.jsx)(Q.default, {}), (0, l.jsx)(W.default, {}), (0, l.jsx)("div", {
             "aria-label": $.default.Messages.SERVERS,
             children: eA.map(function e(t) {
               switch (t.type) {
@@ -255,7 +255,7 @@ function er(e) {
             ref: eg.guildDiscoveryRef,
             selected: e_
           }), (0, l.jsx)(z.default, {}), t ? null : (0, l.jsxs)(l.Fragment, {
-            children: [(0, l.jsx)(K.default, {}), (0, l.jsx)(B.default, {})]
+            children: [(0, l.jsx)(W.default, {}), (0, l.jsx)(B.default, {})]
           })]
         }), !n && eN ? (0, l.jsx)(k.GuildsBarFixedFooter, {
           children: (0, l.jsx)(k.GuildsBarClanAdminUpsellPopout, {
@@ -272,7 +272,7 @@ function er(e) {
               })
             }
           })
-        }) : null, (0, l.jsx)(U.default, {
+        }) : null, (0, l.jsx)(G.default, {
           reverse: !0,
           ref: ec,
           isVisible: eg.isItemVisible,

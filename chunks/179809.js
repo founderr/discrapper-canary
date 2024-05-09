@@ -8,8 +8,8 @@ var l = n("735250"),
   a = n("470079"),
   s = n("120356"),
   i = n.n(s),
-  r = n("942389"),
-  o = n("718017"),
+  r = n("176617"),
+  o = n("685626"),
   u = n("924826"),
   d = n("477690"),
   c = n("153867"),
@@ -23,8 +23,8 @@ var l = n("735250"),
   S = n("682662"),
   _ = n("662146"),
   I = n("689938"),
-  N = n("799958"),
-  T = n("263");
+  N = n("538962"),
+  T = n("634165");
 let A = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
   L = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_SIZE),
   v = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_MARGIN);
@@ -45,14 +45,14 @@ function x(e) {
     onDragStart: b,
     onDragEnd: j,
     onExpandCollapse: P,
-    onContextMenu: G,
-    renderChildNode: U,
+    onContextMenu: U,
+    renderChildNode: G,
     folderIconContent: w
   } = e, {
     id: B,
     name: F,
     children: V
-  } = t, [H, k] = a.useState(!1), [Y, W] = a.useState(!1), K = H || Y;
+  } = t, [H, k] = a.useState(!1), [Y, K] = a.useState(!1), W = H || Y;
   a.useEffect(() => {
     D && k(!1)
   }, [D]);
@@ -71,7 +71,7 @@ function x(e) {
       dragging: e.isDragging()
     })
   }), X = a.useCallback(e => {
-    W(e)
+    K(e)
   }, []), Q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && P()
   }, [P, d]), q = null != F && "" !== F ? F : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(B)), $ = "folder-items-".concat(B), ee = V.length * (L + v), et = (0, o.useTransition)(!z && d, {
@@ -115,7 +115,7 @@ function x(e) {
           tooltipName: q,
           folderGroupId: $,
           onClick: P,
-          onContextMenu: G,
+          onContextMenu: U,
           onHoverChange: k,
           onKeyDown: Q,
           treeItemProps: J,
@@ -134,7 +134,7 @@ function x(e) {
     children: [!z && (0, l.jsx)("span", {
       className: i()(N.expandedFolderBackground, {
         [N.collapsed]: !d,
-        [N.hover]: K
+        [N.hover]: W
       })
     }), el, et((e, t, n) => {
       let {
@@ -147,7 +147,7 @@ function x(e) {
         },
         className: N.__invalid_expandedGuilds,
         role: "group",
-        children: V.map(U)
+        children: V.map(G)
       }, a)
     }), O && d ? (0, l.jsx)(g.FolderEndDropTarget, {
       name: q,

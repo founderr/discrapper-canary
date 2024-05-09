@@ -35,10 +35,10 @@ var l = n("735250"),
   O = n("981631"),
   D = n("474936"),
   b = n("689938"),
-  j = n("85407"),
-  P = n("949086");
+  j = n("379189"),
+  P = n("611273");
 
-function G() {
+function U() {
   let {
     analyticsLocations: e,
     sourceAnalyticsLocations: t
@@ -78,7 +78,7 @@ function G() {
   })
 }
 
-function U(e) {
+function G(e) {
   let {
     className: t
   } = e;
@@ -111,7 +111,7 @@ function w(e) {
       transitionState: t,
       children: (0, l.jsxs)(o.ModalContent, {
         className: j.errorContent,
-        children: [(0, l.jsx)(U, {
+        children: [(0, l.jsx)(G, {
           className: j.errorImage
         }), (0, l.jsx)(o.Heading, {
           id: n,
@@ -164,7 +164,7 @@ function B(e) {
   let {
     guild: L,
     channel: D,
-    inviter: U,
+    inviter: G,
     target_application: B
   } = p, F = null != p.stage_instance, V = null == p.guild && null == p.channel && null != p.inviter;
   if (null != B) t = null == L ? void 0 : L.name, n = m.default.createFromServer(B).getCoverImageURL(1024);
@@ -172,7 +172,7 @@ function B(e) {
     id: L.id,
     splash: L.splash
   });
-  else if ((null == (t = D.name) || "" === t) && null != U && (t = U.username), null == t) throw Error("no name for group DM invite");
+  else if ((null == (t = D.name) || "" === t) && null != G && (t = G.username), null == t) throw Error("no name for group DM invite");
   let H = (0, h.isAtGuildCapAndNonPremium)(),
     k = F ? b.default.Messages.INSTANT_INVITE_ACCEPT_STAGE : b.default.Messages.INVITE_MODAL_BUTTON.format({
       guildName: t
@@ -208,7 +208,7 @@ function B(e) {
                 guild: L
               })
             }) : null, (0, l.jsxs)("div", {
-              children: [H ? (0, l.jsx)(G, {}) : null, null == B ? (0, l.jsx)(o.Tooltip, {
+              children: [H ? (0, l.jsx)(U, {}) : null, null == B ? (0, l.jsx)(o.Tooltip, {
                 text: H ? b.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                 position: "bottom",
                 children: e => {

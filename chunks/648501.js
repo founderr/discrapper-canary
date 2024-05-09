@@ -29,7 +29,7 @@ var a = n("442837"),
   A = n("981631"),
   L = n("490897"),
   v = n("689938"),
-  x = n("91534");
+  x = n("658609");
 
 function R(e) {
   var t;
@@ -43,14 +43,14 @@ function R(e) {
     isSubscriptionGated: b,
     needSubscriptionToAccess: j,
     isNewChannel: P,
-    muted: G,
-    resolvedUnreadSetting: U
+    muted: U,
+    resolvedUnreadSetting: G
   } = e, w = (0, a.useStateFromStores)([p.default], () => p.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([m.default], () => m.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, _.default)({
     channel: n,
     locked: F,
     video: V || H,
     selected: R
-  }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getNewThreadCount(n.guild_id, n.id)), W = (0, o.useUnreadThreadsCountForParent)(n.guild_id, n.id), K = (0, a.useStateFromStores)([f.default], () => {
+  }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getNewThreadCount(n.guild_id, n.id)), K = (0, o.useUnreadThreadsCountForParent)(n.guild_id, n.id), W = (0, a.useStateFromStores)([f.default], () => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(A.GuildFeatures.COMMUNITY)) && void 0 !== t && t
   });
@@ -65,28 +65,28 @@ function R(e) {
     color: s.default.unsafe_rawColors.BRAND_260.css,
     className: x.newChannel
   });
-  if (!G && U === L.UnreadSetting.ALL_MESSAGES && n.isForumLikeChannel() && null != Y && Y > 0) return (0, l.jsx)(i.Text, {
+  if (!U && G === L.UnreadSetting.ALL_MESSAGES && n.isForumLikeChannel() && null != Y && Y > 0) return (0, l.jsx)(i.Text, {
     variant: "text-xs/semibold",
     color: "text-brand",
     children: v.default.Messages.CHANNEL_NEW_POSTS_LABEL.format({
       count: (0, C.getBadgeCountString)(Y)
     })
   });
-  if (!G && n.isForumLikeChannel() && null != W && W > 0) return (0, l.jsx)(i.Text, {
+  if (!U && n.isForumLikeChannel() && null != K && K > 0) return (0, l.jsx)(i.Text, {
     variant: "text-xs/semibold",
     color: "text-muted",
-    children: (0, C.getBadgeCountString)(W)
+    children: (0, C.getBadgeCountString)(K)
   });
   let z = null !== (t = null == y ? void 0 : y.length) && void 0 !== t ? t : 0;
   return null != O && O && k ? (0, l.jsx)(N.default, {
     userCount: z,
     video: V || H,
     channel: n
-  }) : M && (0, g.hasStream)(y) && K ? (0, l.jsx)(C.TextBadge, {
+  }) : M && (0, g.hasStream)(y) && W ? (0, l.jsx)(C.TextBadge, {
     text: v.default.Messages.LIVE,
     color: s.default.unsafe_rawColors.RED_400.css
   }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(B) ? (0, l.jsx)(I.default, {
     embeddedApps: B,
-    muted: G
+    muted: U
   }) : null
 }

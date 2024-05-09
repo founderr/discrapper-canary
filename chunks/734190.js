@@ -23,9 +23,9 @@ var l = n("735250"),
   T = n("981631"),
   A = n("124368"),
   L = n("689938"),
-  v = n("809164"),
-  x = n("784545"),
-  R = n("349078");
+  v = n("513285"),
+  x = n("628462"),
+  R = n("52645");
 
 function M(e) {
   let {
@@ -61,7 +61,7 @@ t.default = a.memo(function(e) {
   } = (0, o.useStateFromStoresObject)([m.default], () => ({
     unread: m.default.hasUnread(t.id),
     mentionCount: m.default.getMentionCount(t.id)
-  })), G = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), U = a.useCallback(e => {
+  })), U = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), G = a.useCallback(e => {
     (0, h.openThreadSidebarForViewing)(t, !e.shiftKey, A.OpenThreadAnalyticsLocations.CHANNEL_LIST)
   }, [t]), w = a.useCallback(() => {
     d.default.preload(t.guild_id, t.id)
@@ -110,19 +110,19 @@ t.default = a.memo(function(e) {
       children: (0, l.jsxs)("div", {
         className: i()(v.iconVisibility, x.wrapper, x.typeThread, {
           [x.modeSelected]: s,
-          [x.modeMuted]: !s && G,
-          [x.modeUnreadImportant]: !G && !s && j,
+          [x.modeMuted]: !s && U,
+          [x.modeUnreadImportant]: !U && !s && j,
           [x.withGuildIcon]: O
         }),
         onMouseDown: w,
         onContextMenu: B,
-        children: [!j || G || s ? null : (0, l.jsx)("div", {
+        children: [!j || U || s ? null : (0, l.jsx)("div", {
           className: i()(x.unread, x.unreadImportant)
         }), (0, l.jsx)(u.Clickable, {
           ...H,
           innerRef: k,
           className: x.link,
-          onClick: U,
+          onClick: G,
           "aria-label": Y,
           focusProps: {
             enabled: !1

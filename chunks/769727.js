@@ -8,7 +8,7 @@ var a = n("735250"),
   s = n("470079"),
   i = n("348327"),
   l = n.n(i),
-  r = n("718017"),
+  r = n("685626"),
   o = n("143927"),
   u = n("71970"),
   d = n("481060"),
@@ -30,7 +30,7 @@ var a = n("735250"),
   R = n("981631"),
   O = n("308083"),
   L = n("689938"),
-  M = n("548290");
+  M = n("93118");
 let y = {
   [A.ClanDiscoveryMode.PLAYSTYLE]: I.PlayStyleSelector,
   [A.ClanDiscoveryMode.TRAITS]: I.TraitSelector,
