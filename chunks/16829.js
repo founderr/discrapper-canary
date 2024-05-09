@@ -182,7 +182,7 @@ function p(e) {
   })
 }
 
-function v(e) {
+function y(e) {
   let {
     sourceInviteCode: t,
     joinSourceType: s,
@@ -287,7 +287,7 @@ t.default = n.memo(function(e) {
     inviterUser: null != L ? L : null,
     guildId: E,
     joinSourceType: S,
-    children: e => (0, a.jsx)(v, {
+    children: e => (0, a.jsx)(y, {
       sourceInviteCode: N,
       joinSourceType: S,
       integrationType: g,

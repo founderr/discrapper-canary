@@ -33,9 +33,9 @@ t.default = e => {
     for (let e = 0; e < T.CLAN_BADGE_PALETTE_PRESETS.length; e++)
       if (T.CLAN_BADGE_PALETTE_PRESETS[e].primary === i && T.CLAN_BADGE_PALETTE_PRESETS[e].secondary === g) return e;
     return S
-  }), [p, v] = n.useState(!1), y = S === h ? U : T.CLAN_BADGE_PALETTE_PRESETS[h];
+  }), [p, y] = n.useState(!1), v = S === h ? U : T.CLAN_BADGE_PALETTE_PRESETS[h];
   return n.useEffect(() => {
-    if (G === s && y.primary === i && y.secondary === g) return;
+    if (G === s && v.primary === i && v.secondary === g) return;
     let e = document.querySelector("#".concat(c));
     if (null != e) {
       let s = new XMLSerializer().serializeToString(e),
@@ -54,16 +54,16 @@ t.default = e => {
       }, i.src = n
     }
     let a = f === d.ClanSetupSteps.CUSTOMIZE_TAG_BADGE ? {
-      brandPrimaryColor: y.primary,
-      brandSecondaryColor: y.secondary
+      brandPrimaryColor: v.primary,
+      brandSecondaryColor: v.secondary
     } : {};
     t({
       badgeKind: G,
-      badgePrimaryColor: y.primary,
-      badgeSecondaryColor: y.secondary,
+      badgePrimaryColor: v.primary,
+      badgeSecondaryColor: v.secondary,
       ...a
     })
-  }, [t, G, y.primary, y.secondary, f, s, i, g]), (0, a.jsxs)("div", {
+  }, [t, G, v.primary, v.secondary, f, s, i, g]), (0, a.jsxs)("div", {
     className: L.slideContent,
     children: [(0, a.jsx)(r.Heading, {
       variant: "heading-xxl/medium",
@@ -136,11 +136,11 @@ t.default = e => {
                 }))
               },
               shouldShow: p,
-              onRequestClose: () => v(!1),
+              onRequestClose: () => y(!1),
               children: e => (0, a.jsx)(r.Clickable, {
                 ...e,
                 onClick: () => {
-                  m(S), v(e => !e)
+                  m(S), y(e => !e)
                 },
                 className: E()(I.badgeAssetContainer, {
                   [I.badgeAssetContainerSelected]: S === h
@@ -178,8 +178,8 @@ t.default = e => {
             badge: G,
             width: 40,
             height: 40,
-            primaryTintColor: y.primary,
-            secondaryTintColor: y.secondary
+            primaryTintColor: v.primary,
+            secondaryTintColor: v.secondary
           })
         }), (0, a.jsx)(r.Text, {
           variant: "text-xs/medium",
@@ -195,8 +195,8 @@ t.default = e => {
             badge: G,
             width: 64,
             height: 64,
-            primaryTintColor: y.primary,
-            secondaryTintColor: y.secondary
+            primaryTintColor: v.primary,
+            secondaryTintColor: v.secondary
           }), (0, a.jsx)("canvas", {
             ref: O,
             id: "png-render-canvas"

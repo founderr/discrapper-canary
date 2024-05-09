@@ -25,8 +25,8 @@ let c = [L.Permissions.KICK_MEMBERS, L.Permissions.BAN_MEMBERS, L.Permissions.AD
   h = !1,
   m = !0,
   p = !1,
-  v = null,
-  y = L.AuditLogActions.ALL,
+  y = null,
+  v = L.AuditLogActions.ALL,
   P = null,
   x = {},
   H = 0;
@@ -138,13 +138,13 @@ class V extends(a = u.default.Store) {
     return D
   }
   get userIdFilter() {
-    return v
+    return y
   }
   get targetIdFilter() {
     return P
   }
   get actionFilter() {
-    return y
+    return v
   }
   get deletedTargets() {
     return x
@@ -197,13 +197,13 @@ E = "GuildSettingsAuditLogStore", (i = "displayName") in(n = V) ? Object.defineP
     let {
       action: t
     } = e;
-    y = t
+    v = t
   },
   AUDIT_LOG_FILTER_BY_USER: function(e) {
     let {
       userId: t
     } = e;
-    v = t
+    y = t
   },
   AUDIT_LOG_FILTER_BY_TARGET: function(e) {
     let {
@@ -222,6 +222,6 @@ E = "GuildSettingsAuditLogStore", (i = "displayName") in(n = V) ? Object.defineP
     })
   },
   GUILD_SETTINGS_CLOSE: function() {
-    S = [], D = [], y = L.AuditLogActions.ALL, v = null, P = null, x = {}, H = 0, U = !0, g = [], C = [], f = [], O = [], G = []
+    S = [], D = [], v = L.AuditLogActions.ALL, y = null, P = null, x = {}, H = 0, U = !0, g = [], C = [], f = [], O = [], G = []
   }
 })

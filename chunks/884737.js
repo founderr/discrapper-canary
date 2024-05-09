@@ -22,7 +22,7 @@ s.r(t), s.d(t, {
     return H
   },
   InviteChangeStrings: function() {
-    return v
+    return y
   },
   NotRenderedChanges: function() {
     return b
@@ -43,7 +43,7 @@ s.r(t), s.d(t, {
     return m
   },
   WebhookChangeStrings: function() {
-    return y
+    return v
   },
   getChangeTitle: function() {
     return J
@@ -207,7 +207,7 @@ let G = new u.default("AuditLogUtils"),
     [C.AuditLogChangeKeys.UNICODE_EMOJI]: O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
     ...U()
   }),
-  v = () => ({
+  y = () => ({
     [C.AuditLogChangeKeys.CODE]: O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
     [C.AuditLogChangeKeys.CHANNEL_ID]: O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
     [C.AuditLogChangeKeys.MAX_USES]: {
@@ -224,7 +224,7 @@ let G = new u.default("AuditLogUtils"),
     },
     ...U()
   }),
-  y = () => ({
+  v = () => ({
     [C.AuditLogChangeKeys.CHANNEL_ID]: ea(O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE, O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE),
     [C.AuditLogChangeKeys.NAME]: ea(O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE, O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE),
     [C.AuditLogChangeKeys.AVATAR_HASH]: O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,

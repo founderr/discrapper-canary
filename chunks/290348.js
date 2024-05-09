@@ -25,7 +25,7 @@ s.r(t), s.d(t, {
     return Z
   },
   useImage: function() {
-    return v
+    return y
   },
   useIntangibleBenefits: function() {
     return j
@@ -43,7 +43,7 @@ s.r(t), s.d(t, {
     return x
   },
   useRoleIcon: function() {
-    return y
+    return v
   },
   useSubscriptionPlan: function() {
     return X
@@ -130,14 +130,14 @@ function p(e) {
   return U(e, "description", t)
 }
 
-function v(e, t) {
+function y(e, t) {
   let s = R(e, e => {
     if ((null == e ? void 0 : e.image_asset) != null) return (0, d.getAssetURL)(e.application_id, e.image_asset, t)
   });
   return U(e, "image", s)
 }
 
-function y(e, t) {
+function v(e, t) {
   let s = (0, g.default)(t, e);
   return U(e, "roleIcon", a.useMemo(() => {
     var e, t;

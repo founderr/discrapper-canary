@@ -23,11 +23,11 @@ function v(e) {
   let {
     user: t,
     type: s
-  } = e, v = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), T = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), x = a.useMemo(() => v ? T.find(e => e.type === m.ActivityTypes.PLAYING) : null, [T, v]), N = a.useMemo(() => T.filter(e => e !== x), [x, T]), {
-    analyticsLocations: g,
-    newestAnalyticsLocation: U
+  } = e, v = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), T = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), x = a.useMemo(() => v ? T.find(e => e.type === m.ActivityTypes.PLAYING) : null, [T, v]), U = a.useMemo(() => T.filter(e => e !== x), [x, T]), {
+    analyticsLocations: A,
+    newestAnalyticsLocation: g
   } = (0, o.default)(), {
-    trackUserProfileAction: A,
+    trackUserProfileAction: N,
     ...C
   } = (0, f.useUserProfileAnalyticsContext)(), h = {
     location: {
@@ -41,7 +41,7 @@ function v(e) {
     children: [v ? (0, l.jsx)(r.default, {
       type: s,
       user: t,
-      source: U,
+      source: g,
       className: I.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       showGuildDetails: s === c.Types.SIMPLIFIED_PROFILE,
@@ -49,7 +49,7 @@ function v(e) {
       actionColor: I.actionColor,
       analyticsParams: h,
       onAction: () => {
-        A({
+        N({
           action: "JOIN_ACTIVITY"
         }), (0, S.trackUserProfileActivityJoined)({
           activityType: m.ActivityTypes.STREAMING,
@@ -57,23 +57,23 @@ function v(e) {
           activityPlatform: null == x ? void 0 : x.platform,
           activitySessionId: null == x ? void 0 : x.session_id,
           applicationId: null == x ? void 0 : x.application_id,
-          analyticsLocations: g,
+          analyticsLocations: A,
           ...C
         })
       }
-    }) : null, N.map(e => (0, l.jsx)(r.default, {
+    }) : null, U.map(e => (0, l.jsx)(r.default, {
       type: s,
       activity: e,
       user: t,
       useStoreStream: !1,
-      source: U,
+      source: g,
       className: I.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       showGuildDetails: s === c.Types.SIMPLIFIED_PROFILE,
       actionColor: I.actionColor,
       analyticsParams: h,
       onAction: () => {
-        A({
+        N({
           action: "JOIN_ACTIVITY"
         }), (0, S.trackUserProfileActivityJoined)({
           activityType: e.type,
@@ -81,7 +81,7 @@ function v(e) {
           activityPlatform: e.platform,
           activitySessionId: e.session_id,
           applicationId: e.application_id,
-          analyticsLocations: g,
+          analyticsLocations: A,
           ...C
         })
       }
