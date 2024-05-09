@@ -18,8 +18,8 @@ var a = r("735250"),
   p = r("55935"),
   g = r("428530"),
   f = r("257785"),
-  b = r("484036"),
-  y = r("681619"),
+  y = r("484036"),
+  b = r("681619"),
   x = r("621060"),
   k = r("585864"),
   v = r("277513");
@@ -47,7 +47,7 @@ let C = [{
   }
 }];
 
-function w(e) {
+function S(e) {
   let {
     actionLog: t
   } = e, r = i.useMemo(() => t.traces.map(e => ({
@@ -55,13 +55,13 @@ function w(e) {
     trace: e
   })), [t]);
   return (0, a.jsx)(s.ScrollerThin, {
-    children: (0, a.jsx)(y.default, {
+    children: (0, a.jsx)(b.default, {
       columns: C,
       data: r
     })
   })
 }
-let S = [{
+let w = [{
   id: "action",
   name: "Action",
   render(e) {
@@ -98,7 +98,7 @@ let S = [{
     let {
       actionLog: t
     } = e;
-    return (0, a.jsx)(w, {
+    return (0, a.jsx)(S, {
       actionLog: t
     })
   }
@@ -108,7 +108,7 @@ function T(e) {
   let {
     actionLog: t,
     initialHeight: r
-  } = e, l = i.useMemo(() => t.error ? [...S, {
+  } = e, l = i.useMemo(() => t.error ? [...w, {
     id: "error",
     name: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.default, {
@@ -139,13 +139,13 @@ function T(e) {
         })]
       })
     }
-  }] : S, [t]), {
+  }] : w, [t]), {
     TabBar: o,
     renderSelectedTab: c
   } = (0, x.default)({
     tabs: l
   }, [l]);
-  return (0, a.jsxs)(b.default, {
+  return (0, a.jsxs)(y.default, {
     className: k.subPanel,
     minHeight: 100,
     initialHeight: r,
@@ -205,7 +205,7 @@ function L() {
     className: n()(v.panel, k.panel),
     children: [(0, a.jsx)(s.ScrollerThin, {
       className: k.tableContainer,
-      children: (0, a.jsx)(y.default, {
+      children: (0, a.jsx)(b.default, {
         columns: N,
         data: r,
         selectedRowKey: null == l ? void 0 : l.toString(),

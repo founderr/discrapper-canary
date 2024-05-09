@@ -7,8 +7,8 @@ a.r(t), a.d(t, {
 var l = a("735250"),
   s = a("470079"),
   r = a("153832"),
-  n = a("979554"),
-  i = a("399606"),
+  i = a("979554"),
+  n = a("399606"),
   o = a("481060"),
   u = a("37234"),
   c = a("607070"),
@@ -53,13 +53,13 @@ function O(e) {
     onPurchaseComplete: O,
     onUse: y,
     onError: R,
-    onReviewPurchase: k,
-    confettiCanvas: A = null
+    onReviewPurchase: A,
+    confettiCanvas: k = null
   } = e, j = (0, r.v4)(), P = s.useRef(null), [B] = t.items, {
     analyticsLocations: M
   } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
     buttonColors: D
-  } = (0, C.default)(t.styles), F = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), w = (0, L.getCustomConfettiDisplayOptions)(t.skuId), [H, U] = s.useState(!1), [W, G] = s.useState(!1), V = null != D ? {
+  } = (0, C.default)(t.styles), F = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), w = (0, L.getCustomConfettiDisplayOptions)(t.skuId), [H, U] = s.useState(!1), [W, G] = s.useState(!1), V = null != D ? {
     background: (0, p.getBackgroundGradient)(D, 90),
     color: D.text.toHslString()
   } : void 0, z = (0, h.default)({
@@ -71,7 +71,7 @@ function O(e) {
     onError: e => {
       R(e), G(!0)
     },
-    onReviewPurchase: k,
+    onReviewPurchase: A,
     paymentSource: a,
     skuId: t.skuId,
     analyticsLocations: M
@@ -94,7 +94,7 @@ function O(e) {
         })
       }), (0, l.jsx)(o.Button, {
         onClick: () => {
-          k(), (0, b.default)({
+          A(), (0, b.default)({
             skuId: t.skuId,
             analyticsLocations: M,
             returnRef: P
@@ -120,13 +120,13 @@ function O(e) {
       }), (0, l.jsx)(_, {
         style: V,
         onClick: () => {
-          if (y(), (0, u.popLayer)(), z(), (null == B ? void 0 : B.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
+          if (y(), (0, u.popLayer)(), z(), (null == B ? void 0 : B.type) === i.CollectiblesItemType.AVATAR_DECORATION) {
             (0, m.openAvatarDecorationModal)({
               initialSelectedDecoration: B,
               analyticsLocations: M
             });
             return
-          }(null == B ? void 0 : B.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
+          }(null == B ? void 0 : B.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
             initialSelectedEffectId: B.id,
             analyticsLocations: M
           })
@@ -153,7 +153,7 @@ function O(e) {
       })]
     })), !W && H && !(null != w) && !F && (0, l.jsx)(E.default, {
       confettiTarget: P.current,
-      customConfettiCanvas: A,
+      customConfettiCanvas: k,
       speedValues: N,
       numBursts: 4,
       particlesPerBurst: 100,

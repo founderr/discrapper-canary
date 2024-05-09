@@ -10,8 +10,8 @@ a.r(t), a.d(t, {
 var l = a("470079"),
   s = a("266067"),
   r = a("442837"),
-  n = a("100527"),
-  i = a("906732"),
+  i = a("100527"),
+  n = a("906732"),
   o = a("328347"),
   u = a("237031"),
   c = a("981631");
@@ -37,8 +37,8 @@ let d = "".concat("#").concat("itemSkuId", "="),
     for (let e of t.values()) {
       let t = e.products.find(e => e.skuId === a);
       if (null != t) {
-        var n;
-        null === (n = r.current) || void 0 === n || n.scrollIntoView({
+        var i;
+        null === (i = r.current) || void 0 === i || i.scrollIntoView({
           behavior: "smooth",
           block: "center",
           inline: "center"
@@ -64,9 +64,9 @@ let d = "".concat("#").concat("itemSkuId", "="),
       isFetchingCategories: a,
       isLayer: u,
       initialItemCardRef: d
-    } = e, m = l.useRef(null), C = (0, s.useLocation)(), E = C.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : C.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
+    } = e, m = l.useRef(null), C = (0, s.useLocation)(), E = C.pathname === c.Routes.COLLECTIBLES_SHOP ? i.default.HOME_PAGE_SHOP_TAB : C.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? i.default.COLLECTIBLES_SHOP_FULLSCREEN : i.default.COLLECTIBLES_SHOP, {
       analyticsLocations: h
-    } = (0, i.default)(E);
+    } = (0, n.default)(E);
     l.useEffect(() => {
       if (u) return;
       let e = f.exec(C.hash);

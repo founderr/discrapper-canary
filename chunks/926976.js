@@ -18,18 +18,18 @@ var a = r("735250"),
   p = r("740727"),
   g = r("502568"),
   f = r("55935"),
-  b = r("120816"),
-  y = r("31336"),
+  y = r("120816"),
+  b = r("31336"),
   x = r("257785"),
   k = r("484036"),
   v = r("681619"),
   j = r("621060"),
   C = r("689938"),
-  w = r("457501"),
-  S = r("277513");
+  S = r("457501"),
+  w = r("277513");
 let T = [{
   key: "event",
-  cellClassName: w.eventColumn,
+  cellClassName: S.eventColumn,
   render(e) {
     let {
       event: t
@@ -38,7 +38,7 @@ let T = [{
   }
 }, {
   key: "location",
-  cellClassName: w.locationColumn,
+  cellClassName: S.locationColumn,
   render(e) {
     let {
       properties: t
@@ -52,7 +52,7 @@ function N(e) {
     children: t
   } = e;
   return (0, a.jsx)(d.ScrollerThin, {
-    className: w.customPropertiesContainer,
+    className: S.customPropertiesContainer,
     children: (0, a.jsx)("dl", {
       children: t
     })
@@ -66,10 +66,10 @@ function L(e) {
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("dt", {
-      className: w.customPropertiesName,
+      className: S.customPropertiesName,
       children: t
     }), (0, a.jsx)("dd", {
-      className: w.customPropertiesValue,
+      className: S.customPropertiesValue,
       children: r
     })]
   })
@@ -88,7 +88,7 @@ let E = [{
       } = e, o = h.default.getUser(l), s = c()(i);
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(g.default, {
-          className: n()(S.headerBar, w.subPanelHeaderBar),
+          className: n()(w.headerBar, S.subPanelHeaderBar),
           children: [(0, a.jsx)(g.default.Icon, {
             icon: m.default,
             tooltip: t
@@ -96,7 +96,7 @@ let E = [{
             children: t
           })]
         }), (0, a.jsxs)(x.Properties, {
-          className: w.commonProperties,
+          className: S.commonProperties,
           children: [(0, a.jsx)(x.Property, {
             name: "Timestamp (local)",
             children: (0, a.jsx)("time", {
@@ -123,7 +123,7 @@ let E = [{
               children: null != r ? (0, a.jsx)("code", {
                 children: JSON.stringify(r)
               }) : (0, a.jsx)("code", {
-                className: w.emptyProperty,
+                className: S.emptyProperty,
                 children: "null"
               })
             }, t)
@@ -161,7 +161,7 @@ let E = [{
 
 function R() {
   let e = i.useRef(null),
-    t = (0, s.useStateFromStores)([b.default], () => b.default.loggedEvents),
+    t = (0, s.useStateFromStores)([y.default], () => y.default.loggedEvents),
     [r, l] = i.useState(Object.keys(_)),
     o = t.filter(e => {
       for (let t of r)
@@ -178,14 +178,14 @@ function R() {
     }, []);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: n()(S.panel, w.panel),
+    className: n()(w.panel, S.panel),
     children: [(0, a.jsxs)("div", {
-      className: w.toolbar,
+      className: S.toolbar,
       children: [(0, a.jsx)(d.Button, {
-        className: w.toolbarButton,
+        className: S.toolbarButton,
         look: d.Button.Looks.BLANK,
         size: d.Button.Sizes.ICON,
-        onClick: y.clearAnalyticsLog,
+        onClick: b.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
           title: C.default.Messages.CLEAR,
           children: (0, a.jsx)(p.default, {
@@ -193,13 +193,13 @@ function R() {
           })
         })
       }), (0, a.jsx)("div", {
-        className: w.toolbarDivider
+        className: S.toolbarDivider
       }), (0, a.jsx)("div", {
-        className: w.filters,
+        className: S.filters,
         children: Object.entries(_).map(e => {
           let [t, i] = e;
           return (0, a.jsx)(d.Clickable, {
-            className: n()(w.filter, r.includes(t) && w.activeFilter),
+            className: n()(S.filter, r.includes(t) && S.activeFilter),
             onClick: () => {
               var e;
               return e = t, void l(t => t.includes(e) ? t.filter(t => t !== e) : [...t, e])
@@ -209,7 +209,7 @@ function R() {
         })
       })]
     }), (0, a.jsx)(d.ScrollerThin, {
-      className: w.tableContainer,
+      className: S.tableContainer,
       children: (0, a.jsx)(v.default, {
         columns: T,
         data: o,
@@ -217,7 +217,7 @@ function R() {
         onClickRow: u
       })
     }), null != h && (0, a.jsxs)(k.default, {
-      className: w.subPanel,
+      className: S.subPanel,
       minHeight: 100,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
       children: [(0, a.jsx)(m, {}), g({

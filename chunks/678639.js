@@ -18,9 +18,9 @@ var a = r("735250"),
   p = r("681619"),
   g = r("621060"),
   f = r("277513"),
-  b = r("672822");
+  y = r("672822");
 
-function y(e, t) {
+function b(e, t) {
   return e.store.getName().localeCompare(t.store.getName())
 }
 
@@ -35,7 +35,7 @@ function x(e) {
       t.removeChangeListener(e)
     }
   }, [t, r]), (0, a.jsx)(c.ScrollerThin, {
-    className: b.inspectorContainer,
+    className: y.inspectorContainer,
     children: (0, a.jsx)(h.default, {
       data: l
     })
@@ -43,7 +43,7 @@ function x(e) {
 }
 let k = [{
     key: "name",
-    cellClassName: b.__invalid_eventColumn,
+    cellClassName: y.__invalid_eventColumn,
     render(e) {
       let {
         store: t
@@ -59,7 +59,7 @@ let k = [{
         store: t
       } = e;
       return null == t.__getLocalVars ? (0, a.jsxs)("div", {
-        className: b.inspectorContainer,
+        className: y.inspectorContainer,
         children: ["Store is missing ", (0, a.jsx)("code", {
           children: "__getLocalVars"
         }), " method."]
@@ -93,11 +93,11 @@ function j(e) {
     tabs: v
   }, []);
   return (0, a.jsxs)(m.default, {
-    className: b.subPanel,
+    className: y.subPanel,
     minHeight: 100,
     initialHeight: r,
     children: [(0, a.jsx)(i, {}), (0, a.jsxs)(u.default, {
-      className: n()(f.headerBar, b.subPanelHeaderBar),
+      className: n()(f.headerBar, y.subPanelHeaderBar),
       children: [(0, a.jsx)(u.default.Icon, {
         icon: d.default,
         tooltip: t.getName()
@@ -117,7 +117,7 @@ function C() {
     d = i.useMemo(() => l.map(e => ({
       key: e._dispatchToken,
       store: e
-    })).sort(y), [l]).filter(e => (function(e, t) {
+    })).sort(b), [l]).filter(e => (function(e, t) {
       let {
         store: r
       } = e;
@@ -127,11 +127,11 @@ function C() {
     m = l.find(e => e._dispatchToken === u);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: n()(f.panel, b.panel),
+    className: n()(f.panel, y.panel),
     children: [(0, a.jsx)("div", {
-      className: b.toolbar,
+      className: y.toolbar,
       children: (0, a.jsx)(s.default, {
-        className: b.searchBar,
+        className: y.searchBar,
         size: s.default.Sizes.SMALL,
         query: t,
         onChange: r,
@@ -140,7 +140,7 @@ function C() {
         "aria-label": "Search stores"
       })
     }), (0, a.jsx)(c.ScrollerThin, {
-      className: b.tableContainer,
+      className: y.tableContainer,
       children: (0, a.jsx)(p.default, {
         columns: k,
         data: d,

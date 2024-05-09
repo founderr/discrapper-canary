@@ -3,8 +3,8 @@ a.r(t), a("47120"), a("627341");
 var l = a("735250"),
   s = a("470079"),
   r = a("120356"),
-  n = a.n(r),
-  i = a("278074"),
+  i = a.n(r),
+  n = a("278074"),
   o = a("979554"),
   u = a("399606"),
   c = a("692547"),
@@ -28,8 +28,8 @@ var l = a("735250"),
   O = a("466111"),
   y = a("26290"),
   R = a("998502"),
-  k = a("335131"),
-  A = a("1870"),
+  A = a("335131"),
+  k = a("1870"),
   j = a("884697"),
   P = a("266386"),
   B = a("664018"),
@@ -70,7 +70,7 @@ let z = R.default.getEnableHardwareAcceleration() ? f.AnimatedAvatar : f.Avatar,
       color: f.ButtonColors.BRAND,
       look: f.Button.Looks.FILLED,
       size: f.ButtonSizes.ICON,
-      className: n()(V.previewButton, t),
+      className: i()(V.previewButton, t),
       innerClassName: V.previewButtonInner,
       "aria-label": G.default.Messages.PREVIEW,
       ...a,
@@ -92,15 +92,15 @@ t.default = function(e) {
   } = (0, E.default)(p.default.COLLECTIBLES_SHOP_CARD), q = s.useRef(null), $ = (0, C.default)(q), [J, ee] = s.useState(!1), et = $ || J, ea = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [el] = t.items, {
     avatarDecorationSrc: es,
     eventHandlers: er,
-    avatarPlaceholderSrc: en
+    avatarPlaceholderSrc: ei
   } = (0, g.default)({
     user: ea,
     avatarDecorationOverride: (null == el ? void 0 : el.type) === o.CollectiblesItemType.AVATAR_DECORATION ? el : void 0,
     size: Y,
     animateOnHover: !et
   }), {
-    backgroundColors: ei
-  } = (0, M.default)(t.styles), eo = (0, j.getFormattedPriceForCollectiblesProduct)(t, _, !1), eu = (0, j.isPremiumCollectiblesProduct)(t), ec = (0, j.isFreeCollectiblesProduct)(t), [ed, ef, em] = (0, u.useStateFromStoresArray)([A.default], () => [A.default.getPurchase(t.skuId), A.default.isClaiming === t.skuId, null != A.default.isClaiming && A.default.isClaiming !== t.skuId]), eC = (0, u.useStateFromStores)([v.default], () => (0, d.isThemeDark)(v.default.theme)), ep = (0, j.isProductNew)(t.skuId), {
+    backgroundColors: en
+  } = (0, M.default)(t.styles), eo = (0, j.getFormattedPriceForCollectiblesProduct)(t, _, !1), eu = (0, j.isPremiumCollectiblesProduct)(t), ec = (0, j.isFreeCollectiblesProduct)(t), [ed, ef, em] = (0, u.useStateFromStoresArray)([k.default], () => [k.default.getPurchase(t.skuId), k.default.isClaiming === t.skuId, null != k.default.isClaiming && k.default.isClaiming !== t.skuId]), eC = (0, u.useStateFromStores)([v.default], () => (0, d.isThemeDark)(v.default.theme)), ep = (0, j.isProductNew)(t.skuId), {
     hoverVariant: eE
   } = (0, B.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard"), eh = (0, P.useCollectiblesHoverPreviewExperiment)("CollectiblesShopTallCard");
   s.useEffect(() => {
@@ -184,7 +184,7 @@ t.default = function(e) {
         submittingStartedLabel: G.default.Messages.COLLECTIBLES_COLLECTING,
         submittingFinishedLabel: G.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
         onClick: async () => {
-          await (0, k.claimPremiumCollectiblesProduct)(t.skuId), (0, U.default)({
+          await (0, A.claimPremiumCollectiblesProduct)(t.skuId), (0, U.default)({
             product: t,
             analyticsLocations: Q
           })
@@ -216,10 +216,10 @@ t.default = function(e) {
   return (0, l.jsx)(f.FocusRing, {
     children: (0, l.jsxs)(f.Clickable, {
       innerRef: q,
-      className: n()(V.shopCard, (0, i.match)(eE).with(B.ShopCardHoverAnimationVariant.CONTROL, () => V.shopCardDefaultAnimation).with(B.ShopCardHoverAnimationVariant.TRANSFORMATION, () => V.shopCardTransformationAnimation).otherwise(() => void 0)),
+      className: i()(V.shopCard, (0, n.match)(eE).with(B.ShopCardHoverAnimationVariant.CONTROL, () => V.shopCardDefaultAnimation).with(B.ShopCardHoverAnimationVariant.TRANSFORMATION, () => V.shopCardTransformationAnimation).otherwise(() => void 0)),
       onBlur: () => ee(!1),
       onClick: eS,
-      style: null != ei ? {
+      style: null != en ? {
         backgroundColor: eC ? "var(--background-floating)" : "var(--background-secondary)",
         borderColor: "var(--chat-border)",
         boxShadow: et ? eO : "none"
@@ -249,9 +249,9 @@ t.default = function(e) {
         children: (0, l.jsx)(z, {
           ...er,
           avatarDecoration: es,
-          src: eh && et ? null == ea ? void 0 : ea.getAvatarURL(void 0, 152, !0) : en,
+          src: eh && et ? null == ea ? void 0 : ea.getAvatarURL(void 0, 152, !0) : ei,
           imageClassName: eh && et ? V.fadeInAvatarImg : void 0,
-          className: n()(V.avatar, {
+          className: i()(V.avatar, {
             [V.avatarPurchased]: null != ed
           }),
           size: K,
@@ -265,11 +265,11 @@ t.default = function(e) {
           className: V.checkmark
         })
       }) : null, (0, l.jsxs)("div", {
-        className: n()(V.cardText, {
+        className: i()(V.cardText, {
           [V.cardTextBlur]: (null == el ? void 0 : el.type) === o.CollectiblesItemType.PROFILE_EFFECT
         }),
         children: [(0, l.jsx)("div", {
-          className: n()(V.cardBackground, eC ? V.darkCardBackground : V.lightCardBackground, (null == el ? void 0 : el.type) === o.CollectiblesItemType.PROFILE_EFFECT ? V.cardLowOpacity : null)
+          className: i()(V.cardBackground, eC ? V.darkCardBackground : V.lightCardBackground, (null == el ? void 0 : el.type) === o.CollectiblesItemType.PROFILE_EFFECT ? V.cardLowOpacity : null)
         }), (0, l.jsx)(f.Text, {
           variant: "text-lg/bold",
           className: V.productName,

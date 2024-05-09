@@ -32,15 +32,15 @@ let g = e => {
       background: h,
       icon: g,
       onClick: f,
-      onContextMenu: b,
-      tooltip: y = null,
+      onContextMenu: y,
+      tooltip: b = null,
       tooltipColor: x,
       tooltipPosition: k = "bottom",
       tooltipDisabled: v,
       hideOnClick: j = !0,
       role: C,
-      "aria-label": w,
-      "aria-hidden": S,
+      "aria-label": S,
+      "aria-hidden": w,
       "aria-checked": T,
       "aria-expanded": N,
       "aria-haspopup": L
@@ -53,16 +53,16 @@ let g = e => {
       foreground: null != u ? u : void 0,
       background: null != h ? h : void 0,
       color: d
-    }), _ = w;
-    return null == _ && "string" == typeof y && (_ = y), (0, a.jsx)(s.Tooltip, {
-      text: y,
+    }), _ = S;
+    return null == _ && "string" == typeof b && (_ = b), (0, a.jsx)(s.Tooltip, {
+      text: b,
       color: x,
       position: k,
       hideOnClick: j,
       shouldShow: !v,
       children: e => {
         let {
-          onMouseEnter: y,
+          onMouseEnter: b,
           onMouseLeave: x,
           onFocus: k,
           onBlur: v
@@ -78,8 +78,8 @@ let g = e => {
             foreground: null != u ? u : void 0,
             background: null != h ? h : void 0,
             color: d,
-            "aria-hidden": S,
-            onMouseEnter: y,
+            "aria-hidden": w,
+            onMouseEnter: b,
             onMouseLeave: x,
             onFocus: k,
             onBlur: v
@@ -87,8 +87,8 @@ let g = e => {
         }) : (0, a.jsxs)(s.Clickable, {
           tag: "div",
           onClick: o ? void 0 : f,
-          onContextMenu: o ? void 0 : b,
-          onMouseEnter: y,
+          onContextMenu: o ? void 0 : y,
+          onMouseEnter: b,
           onMouseLeave: x,
           onFocus: k,
           onBlur: v,
@@ -99,7 +99,7 @@ let g = e => {
           }),
           role: C,
           "aria-label": _,
-          "aria-hidden": S,
+          "aria-hidden": w,
           "aria-checked": T,
           "aria-haspopup": L,
           "aria-expanded": N,
@@ -122,7 +122,7 @@ let g = e => {
       className: n()(p.divider, t)
     })
   },
-  b = e => {
+  y = e => {
     let {
       className: t,
       innerClassName: r,
@@ -132,8 +132,8 @@ let g = e => {
       onDoubleClick: m,
       "aria-label": g,
       "aria-labelledby": f,
-      role: b,
-      scrollable: y,
+      role: y,
+      scrollable: b,
       transparent: x = !1
     } = e, k = i.useRef(null), v = i.useContext(d.default);
     return (0, a.jsx)("section", {
@@ -144,7 +144,7 @@ let g = e => {
       }),
       "aria-label": g,
       "aria-labelledby": f,
-      role: b,
+      role: y,
       ref: k,
       children: (0, a.jsxs)(s.FocusRingScope, {
         containerRef: k,
@@ -152,7 +152,7 @@ let g = e => {
           className: p.upperContainer,
           children: [(0, a.jsxs)("div", {
             className: n()(p.children, r, {
-              [p.scrollable]: y
+              [p.scrollable]: b
             }),
             onDoubleClick: m,
             children: [c.isMobile && null != v ? (0, a.jsx)(o.HamburgerButton, {
@@ -167,7 +167,7 @@ let g = e => {
       })
     })
   };
-b.Icon = g, b.Title = e => {
+y.Icon = g, y.Title = e => {
   let {
     className: t,
     wrapperClassName: r,
@@ -197,7 +197,7 @@ b.Icon = g, b.Title = e => {
     onContextMenu: l,
     children: h
   })
-}, b.Divider = f, b.Caret = function(e) {
+}, y.Divider = f, y.Caret = function(e) {
   let {
     direction: t = "right"
   } = e;
@@ -206,4 +206,4 @@ b.Icon = g, b.Title = e => {
   }) : (0, a.jsx)(u.default, {
     className: p.caret
   })
-}, t.default = b
+}, t.default = y

@@ -19,8 +19,8 @@ var i = r("120356"),
   p = r("914010"),
   g = r("263704"),
   f = r("465670"),
-  b = r("233608"),
-  y = r("71080"),
+  y = r("233608"),
+  b = r("71080"),
   x = r("677189"),
   k = r("277513");
 
@@ -54,9 +54,9 @@ function j() {
     g = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(r)),
     f = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(i)),
     j = (0, s.default)(r, !0),
-    C = null != r ? (0, y.getChannelPermissionSpecMap)(r, !1, !0) : null,
-    w = null != i ? b.default.getGuildPermissionSpecMap(i) : null,
-    S = Object.values(null != C ? C : {}).map(e => {
+    C = null != r ? (0, b.getChannelPermissionSpecMap)(r, !1, !0) : null,
+    S = null != i ? y.default.getGuildPermissionSpecMap(i) : null,
+    w = Object.values(null != C ? C : {}).map(e => {
       let {
         title: t,
         flag: r
@@ -66,7 +66,7 @@ function j() {
         can: i
       }, t)
     }),
-    T = Object.values(null != w ? w : {}).map(e => {
+    T = Object.values(null != S ? S : {}).map(e => {
       let {
         title: t,
         flag: r
@@ -85,7 +85,7 @@ function j() {
         children: [(0, a.jsx)(c.Heading, {
           variant: "heading-md/semibold",
           children: null != j ? "Permissions in ".concat(j) : "No channel selected"
-        }), S]
+        }), w]
       }), (0, a.jsxs)("section", {
         className: x.section,
         children: [(0, a.jsx)(c.Heading, {

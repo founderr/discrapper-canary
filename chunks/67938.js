@@ -8,8 +8,8 @@ var l = a("735250");
 a("470079");
 var s = a("120356"),
   r = a.n(s),
-  n = a("442837"),
-  i = a("481060"),
+  i = a("442837"),
+  n = a("481060"),
   o = a("607070"),
   u = a("68972"),
   c = a("149961"),
@@ -23,7 +23,7 @@ var s = a("120356"),
 function h(e) {
   let {
     category: t
-  } = e, a = (0, n.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+  } = e, a = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   return (0, l.jsxs)("div", {
     className: r()(c.banner, c.shyBanner),
     "aria-label": t.name,
@@ -56,7 +56,7 @@ function h(e) {
         src: E,
         alt: "",
         "aria-hidden": !0
-      }), (0, l.jsx)(i.Text, {
+      }), (0, l.jsx)(n.Text, {
         variant: "heading-sm/extrabold",
         tag: "div",
         children: "|"
@@ -64,7 +64,7 @@ function h(e) {
         height: 22,
         "aria-hidden": !0
       })]
-    }), (0, l.jsx)(i.Text, {
+    }), (0, l.jsx)(n.Text, {
       className: c.summary,
       variant: "text-md/normal",
       children: t.summary

@@ -18,15 +18,15 @@ var a = r("735250"),
   p = r("6048"),
   g = r("825185"),
   f = r("740727"),
-  b = r("502568"),
-  y = r("55935"),
+  y = r("502568"),
+  b = r("55935"),
   x = r("120816"),
   k = r("31336"),
   v = r("257785"),
   j = r("484036"),
   C = r("681619"),
-  w = r("621060"),
-  S = r("689938"),
+  S = r("621060"),
+  w = r("689938"),
   T = r("457501"),
   N = r("277513");
 let L = [{
@@ -73,12 +73,12 @@ let L = [{
         }
       } = e, u = d()(o);
       return (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsxs)(b.default, {
+        children: [(0, a.jsxs)(y.default, {
           className: n()(N.headerBar, T.subPanelHeaderBar),
-          children: [(0, a.jsx)(b.default.Icon, {
+          children: [(0, a.jsx)(y.default.Icon, {
             icon: g.default,
             tooltip: t
-          }), (0, a.jsx)(b.default.Title, {
+          }), (0, a.jsx)(y.default.Title, {
             children: t
           })]
         }), (0, a.jsxs)(v.Properties, {
@@ -87,8 +87,8 @@ let L = [{
             name: "Timestamp (local)",
             children: (0, a.jsx)("time", {
               dateTime: o.toISOString(),
-              title: (0, y.dateFormat)(u, "LLLL"),
-              children: (0, y.calendarFormat)(u)
+              title: (0, b.dateFormat)(u, "LLLL"),
+              children: (0, b.calendarFormat)(u)
             })
           }), "guild" === r.type && (0, a.jsx)(v.Property, {
             name: "Guild ID",
@@ -138,9 +138,9 @@ let L = [{
 
 function _() {
   let [e, t] = i.useState(""), r = i.useRef(null), l = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = i.useMemo(() => l.filter(t => 0 === e.length || c()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]), [s, d] = i.useState(void 0), g = o.find(e => e.key === s), {
-    TabBar: b,
-    renderSelectedTab: y
-  } = (0, w.default)({
+    TabBar: y,
+    renderSelectedTab: b
+  } = (0, S.default)({
     tabs: E
   }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), _ = i.useCallback(e => {
     m.default.dispatch({
@@ -167,9 +167,9 @@ function _() {
         size: h.Button.Sizes.ICON,
         onClick: k.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
-          title: S.default.Messages.CLEAR,
+          title: w.default.Messages.CLEAR,
           children: (0, a.jsx)(f.default, {
-            "aria-label": S.default.Messages.CLEAR
+            "aria-label": w.default.Messages.CLEAR
           })
         })
       }), (0, a.jsx)(p.default, {
@@ -191,7 +191,7 @@ function _() {
       className: T.subPanel,
       minHeight: 100,
       initialHeight: null != r.current ? r.current.clientHeight / 2 : 300,
-      children: [(0, a.jsx)(b, {}), y({
+      children: [(0, a.jsx)(y, {}), b({
         loggedTrigger: g
       })]
     })]
