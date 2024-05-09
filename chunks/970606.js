@@ -12,6 +12,9 @@ n.r(t), n.d(t, {
   trackClanAdoptIdentity: function() {
     return d
   },
+  trackClanApplicationNavigation: function() {
+    return R
+  },
   trackClanApplyToJoinViewed: function() {
     return u
   },
@@ -236,5 +239,18 @@ function O(e) {
     is_member: c,
     join_request_status: u,
     join_request_user_id: d
+  })
+}
+
+function R(e) {
+  let {
+    guildId: t,
+    source: n,
+    tab: i
+  } = e;
+  a.default.track(o.AnalyticEvents.CLAN_APPLICATION_NAVIGATION, {
+    guild_id: t,
+    source: n,
+    tab: i
   })
 }
