@@ -38,8 +38,8 @@ var a = n("120356"),
   b = n("496675"),
   j = n("306680"),
   P = n("9156"),
-  G = n("979651"),
-  U = n("974029"),
+  U = n("979651"),
+  G = n("974029"),
   w = n("934415"),
   B = n("98597"),
   F = n("648501"),
@@ -47,10 +47,10 @@ var a = n("120356"),
   H = n("830993"),
   k = n("653577"),
   Y = n("207055"),
-  W = n("981631"),
-  K = n("647086"),
+  K = n("981631"),
+  W = n("647086"),
   z = n("689938"),
-  Z = n("809164");
+  Z = n("513285");
 
 function X(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -75,7 +75,7 @@ class Q extends B.default {
     let {
       channel: e
     } = this.props;
-    return (0, w.isChannelFull)(e, G.default, O.default)
+    return (0, w.isChannelFull)(e, U.default, O.default)
   }
   getModeClass() {
     let {
@@ -122,7 +122,7 @@ class Q extends B.default {
       voiceStates: t,
       withGuildIcon: a,
       tabIndex: s,
-      location: W.AnalyticsLocations.GUILD_CHANNEL_LIST
+      location: K.AnalyticsLocations.GUILD_CHANNEL_LIST
     })
   }
   renderChannelInfo() {
@@ -359,7 +359,7 @@ class Q extends B.default {
             onMouseLeave: i,
             onFocus: r,
             onBlur: d,
-            children: (0, l.jsx)(U.default, {
+            children: (0, l.jsx)(G.default, {
               width: 16,
               height: 16,
               className: Z.actionIcon
@@ -393,14 +393,14 @@ function J(e) {
     let e = y.default.getChannel(n.parent_id),
       l = D.default.getCheck(n.guild_id);
     return {
-      canManageChannel: b.default.can(W.Permissions.MANAGE_CHANNELS, n),
-      canReorderChannel: !0 !== a && (t.id === K.FAVORITES_RAW_GUILD_ID || (null != e ? b.default.can(W.Permissions.MANAGE_CHANNELS, e) : b.default.can(W.Permissions.MANAGE_CHANNELS, t))),
-      canMoveMembers: b.default.can(W.Permissions.MOVE_MEMBERS, n),
-      locked: !b.default.can(W.Permissions.CONNECT, n),
-      bypassLimit: b.default.can(W.Permissions.MOVE_MEMBERS, n),
+      canManageChannel: b.default.can(K.Permissions.MANAGE_CHANNELS, n),
+      canReorderChannel: !0 !== a && (t.id === W.FAVORITES_RAW_GUILD_ID || (null != e ? b.default.can(K.Permissions.MANAGE_CHANNELS, e) : b.default.can(K.Permissions.MANAGE_CHANNELS, t))),
+      canMoveMembers: b.default.can(K.Permissions.MOVE_MEMBERS, n),
+      locked: !b.default.can(K.Permissions.CONNECT, n),
+      bypassLimit: b.default.can(K.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), p = (0, i.useStateFromStores)([G.default], () => G.default.hasVideo(n.id)), m = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
+  }), p = (0, i.useStateFromStores)([U.default], () => U.default.hasVideo(n.id)), m = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
     isSubscriptionGated: S,
     needSubscriptionToAccess: I
   } = (0, T.default)(n.id), N = (0, _.default)(), L = (0, i.useStateFromStores)([P.default], () => P.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
@@ -420,11 +420,11 @@ function J(e) {
     needSubscriptionToAccess: I,
     enableConnectedUserLimit: !0,
     enableActivities: !0
-  }), U = x && null == O;
+  }), G = x && null == O;
   return (0, l.jsx)(q, {
     channelName: C,
     embeddedApps: m,
-    embeddedActivityType: W.ActivityTypes.PLAYING,
+    embeddedActivityType: K.ActivityTypes.PLAYING,
     video: p,
     hasActiveEvent: null != E,
     isSubscriptionGated: S,
@@ -434,7 +434,7 @@ function J(e) {
     ...e,
     connected: x,
     isFavoriteSuggestion: s && !L,
-    forceShowButtons: U,
+    forceShowButtons: G,
     channelInfo: O,
     enableHangStatus: R,
     allowChannelTopic: M,

@@ -5,7 +5,7 @@ var l = a("735250"),
   s = a("481060"),
   i = a("263704"),
   d = a("689938"),
-  r = a("983525");
+  r = a("126435");
 t.default = n.memo(function() {
   return (0, l.jsxs)("div", {
     className: r.container,

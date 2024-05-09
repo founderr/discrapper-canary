@@ -67,7 +67,7 @@ var s = a("735250"),
   eu = a("981631"),
   ed = a("124368"),
   ec = a("689938"),
-  em = a("396057");
+  em = a("993772");
 
 function eh(e) {
   let {
@@ -597,7 +597,7 @@ function eS(e) {
       ...e0
     } = eQ.containerProps,
     e1 = R.default.getSidebarState(t.id),
-    e4 = null != e1 && (0, R.isViewChannelSidebar)(e1);
+    e2 = null != e1 && (0, R.isViewChannelSidebar)(e1);
   return (0, s.jsx)("div", {
     className: em.container,
     ref: el,
@@ -608,7 +608,7 @@ function eS(e) {
           draftType: L.DraftType.FirstThreadMessage,
           className: em.uploadArea,
           style: {
-            right: e4 && (null == a ? void 0 : a.isThreadSidebarFloating) ? a.threadSidebarWidth : 0
+            right: e2 && (null == a ? void 0 : a.isThreadSidebarFloating) ? a.threadSidebarWidth : 0
           }
         }), (0, s.jsx)(eM, {
           channel: t

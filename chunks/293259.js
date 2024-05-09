@@ -33,7 +33,7 @@ var l = s("735250"),
   P = s("981631"),
   M = s("231338"),
   j = s("689938"),
-  y = s("370386");
+  y = s("155614");
 let O = r.AvatarSizes.SIZE_120,
   L = T.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 

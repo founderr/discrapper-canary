@@ -100,7 +100,7 @@ var a = s("654861"),
   I = s("236413"),
   L = s("45966"),
   c = s("563534"),
-  N = s("776617"),
+  N = s("987707"),
   S = s("427679"),
   g = s("926491"),
   D = s("387667"),
@@ -114,8 +114,8 @@ var a = s("654861"),
   h = s("971130"),
   m = s("709054"),
   p = s("981631"),
-  y = s("176505"),
-  v = s("273504"),
+  v = s("176505"),
+  y = s("273504"),
   P = s("765305"),
   x = s("689938");
 let H = new d.default("AuditLogUtils"),
@@ -843,7 +843,7 @@ function el(e) {
       return x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_BLOCK_MESSAGE;
     case p.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL:
       var a;
-      if ((null === (a = e.options) || void 0 === a ? void 0 : a.auto_moderation_rule_trigger_type) === v.AutomodTriggerType.USER_PROFILE.toString()) return x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAGGED_USER_PROFILE;
+      if ((null === (a = e.options) || void 0 === a ? void 0 : a.auto_moderation_rule_trigger_type) === y.AutomodTriggerType.USER_PROFILE.toString()) return x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAGGED_USER_PROFILE;
       return x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAG_TO_CHANNEL_MESSAGE;
     case p.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
       return x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_USER_COMMUNICATION_DISABLED_MESSAGE;
@@ -903,11 +903,11 @@ function el(e) {
 
 function e_(e) {
   switch (e) {
-    case y.ChannelFlags.GUILD_FEED_REMOVED:
+    case v.ChannelFlags.GUILD_FEED_REMOVED:
       return x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_REMOVE_CHANNEL;
-    case y.ChannelFlags.ACTIVE_CHANNELS_REMOVED:
+    case v.ChannelFlags.ACTIVE_CHANNELS_REMOVED:
       return x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_REMOVE_CHANNEL;
-    case y.ChannelFlags.PINNED:
+    case v.ChannelFlags.PINNED:
       return x.default.Messages.PINNED_POST
   }
   return null
@@ -915,11 +915,11 @@ function e_(e) {
 
 function er(e) {
   switch (e) {
-    case y.ChannelFlags.GUILD_FEED_REMOVED:
+    case v.ChannelFlags.GUILD_FEED_REMOVED:
       return x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_UNREMOVE_CHANNEL;
-    case y.ChannelFlags.ACTIVE_CHANNELS_REMOVED:
+    case v.ChannelFlags.ACTIVE_CHANNELS_REMOVED:
       return x.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_UNREMOVE_CHANNEL;
-    case y.ChannelFlags.PINNED:
+    case v.ChannelFlags.PINNED:
       return x.default.Messages.UNPINNED_POST
   }
   return null
@@ -1197,8 +1197,8 @@ function eo(e, t) {
                       i = U.removeFlag(s, a),
                       E = [],
                       l = [];
-                    for (let e in y.ChannelFlags) {
-                      let t = y.ChannelFlags[e];
+                    for (let e in v.ChannelFlags) {
+                      let t = v.ChannelFlags[e];
                       U.hasFlag(n, t) && E.push(t), U.hasFlag(i, t) && l.push(t)
                     }
                     return {

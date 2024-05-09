@@ -28,7 +28,7 @@ var a = n("735250"),
   N = n("871118"),
   v = n("981631"),
   x = n("689938"),
-  M = n("969386");
+  M = n("526755");
 class R extends l.PureComponent {
   componentDidMount() {
     let {

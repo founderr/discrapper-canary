@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   HomeButton: function() {
-    return W
+    return K
   }
 }), n("47120");
 var l = n("735250"),
@@ -37,13 +37,13 @@ var l = n("735250"),
   b = n("557177"),
   j = n("278464"),
   P = n("682662"),
-  G = n("662146"),
-  U = n("674552"),
+  U = n("662146"),
+  G = n("674552"),
   w = n("981631"),
   B = n("474936"),
   F = n("871465"),
   V = n("689938"),
-  H = n("586899");
+  H = n("471155");
 let k = {
   origin: {
     x: -16,
@@ -70,7 +70,7 @@ function Y(e) {
     location: "home_button_no_track"
   }, {
     autoTrackExposure: !1
-  }), W = (0, g.default)(), K = W.length > 0 && Y;
+  }), K = (0, g.default)(), W = K.length > 0 && Y;
   (0, C.useTrackNewBroadcastDetected)();
   let z = (0, s.useTreeItem)("home"),
     Z = () => {
@@ -78,21 +78,21 @@ function Y(e) {
     };
   if (null == n) return null;
   let X = V.default.Messages.DIRECT_MESSAGES;
-  T && (X = r.Storage.get(w.DISCODO_STORAGE_KEY) ? V.default.Messages.DISCODO_ENABLED : V.default.Messages.DISCODO_DISABLED), W.length > 0 && h.default.trackExposure({
+  T && (X = r.Storage.get(w.DISCODO_STORAGE_KEY) ? V.default.Messages.DISCODO_ENABLED : V.default.Messages.DISCODO_DISABLED), K.length > 0 && h.default.trackExposure({
     location: "home_button"
   });
   let Q = null;
   !t && m ? Q = (0, l.jsx)(u.default, {
     className: H.downloadProgress,
     determineOwnVisibility: !1
-  }) : K && (Q = (0, l.jsx)(R.default, {
+  }) : W && (Q = (0, l.jsx)(R.default, {
     className: H.broadcastBadge
   }));
   let q = t || I || S,
     J = (0, l.jsx)(o.BlobMask, {
-      highlight: K,
+      highlight: W,
       selected: q,
-      lowerBadge: f > 0 ? (0, U.renderMentionBadge)(f) : null,
+      lowerBadge: f > 0 ? (0, G.renderMentionBadge)(f) : null,
       upperBadge: Q,
       lowerBadgeWidth: (0, y.getBadgeWidthForValue)(f),
       children: (0, l.jsx)(O.default, {
@@ -123,7 +123,7 @@ function Y(e) {
         children: (0, l.jsx)(c.default, {})
       })
     }),
-    $ = K ? (0, l.jsx)(o.Popout, {
+    $ = W ? (0, l.jsx)(o.Popout, {
       position: "right",
       renderPopout: e => {
         let {
@@ -159,7 +159,7 @@ function Y(e) {
           selected: t,
           hovered: I,
           className: H.pill
-        }), null != $ ? $ : (0, l.jsx)(G.default, {
+        }), null != $ ? $ : (0, l.jsx)(U.default, {
           color: o.Tooltip.Colors.PRIMARY,
           hideOnClick: !0,
           text: X,
@@ -171,7 +171,7 @@ function Y(e) {
   })
 }
 
-function W() {
+function K() {
   let e = (0, j.useIsHomeSelected)(),
     t = (0, i.useStateFromStores)([x.default, v.default], () => {
       let e = (0, u.getDispatchApplicationStates)(x.default.activeItems, v.default),

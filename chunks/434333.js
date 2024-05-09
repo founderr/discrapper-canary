@@ -14,7 +14,7 @@ var i = n("735250"),
   o = n("1561"),
   l = n("465670"),
   u = n("759231"),
-  d = n("771402");
+  d = n("835023");
 let _ = {
     RED: d.backgroundRed,
     BACKGROUND_TERTIARY: d.backgroundTertiary,

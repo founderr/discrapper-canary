@@ -31,7 +31,7 @@ var i = n("735250"),
   L = n("507957"),
   v = n("981631"),
   D = n("689938"),
-  M = n("187885");
+  M = n("530393");
 let y = {
   [E.BadgeCategory.STAFF]: {
     IconComponent: g.default,

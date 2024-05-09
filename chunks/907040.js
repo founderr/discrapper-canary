@@ -50,7 +50,7 @@ var i = n("735250"),
   Q = n("981631"),
   q = n("921944"),
   J = n("185923"),
-  $ = n("488192");
+  $ = n("773390");
 let ee = (0, B.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
   et = (0, B.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
   en = e => e.stopPropagation(),

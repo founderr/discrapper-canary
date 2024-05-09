@@ -143,8 +143,8 @@ function O(e) {
         }
         return !1
       })(),
-      G = c.default.getEmbeddedActivitiesForGuild(e).length > 0;
-    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = M, S = v, _ = G) : (u = D, d = null != a, f = T, g = b, S = x, _ = y), {
+      U = c.default.getEmbeddedActivitiesForGuild(e).length > 0;
+    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = M, S = v, _ = U) : (u = D, d = null != a, f = T, g = b, S = x, _ = y), {
       audio: u,
       video: g,
       screenshare: S,

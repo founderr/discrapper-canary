@@ -13,7 +13,7 @@ var a = n("735250"),
   h = n("5192"),
   m = n("501655"),
   p = n("689938"),
-  E = n("987445");
+  E = n("266152");
 let C = (e, t) => h.default.getName(e.getGuildId(), e.id, t.user);
 t.default = function(e) {
   var t, n;

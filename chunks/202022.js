@@ -84,7 +84,7 @@ var n = s("990547"),
   eO = s("981631"),
   ex = s("46140"),
   eR = s("689938"),
-  eM = s("631719");
+  eM = s("442691");
 let ev = eI.default;
 
 function eD(e) {
@@ -248,7 +248,7 @@ function eD(e) {
     predicate: () => p.default.settingsVisible,
     icon: (0, a.jsx)("img", {
       alt: "",
-      src: s("348621"),
+      src: s("542156"),
       className: eM.poggermodeIcon
     })
   }, {

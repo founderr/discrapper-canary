@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ViewingRolesSettingsNotice: function() {
-    return j
+    return w
   },
   default: function() {
     return D
@@ -35,7 +35,7 @@ var i = n("120356"),
   O = n("302463"),
   b = n("293810"),
   x = n("689938"),
-  L = n("604222");
+  L = n("794491");
 
 function A(e) {
   let {
@@ -91,8 +91,8 @@ function D() {
           return x.default.Messages.VIEWING_AS_ROLES_BACK
       }
     }(i),
-    j = i === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? x.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : x.default.Messages.VIEWING_AS_ROLES_SELECT,
-    w = t === v.StaticChannelRoute.GUILD_ONBOARDING,
+    w = i === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? x.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : x.default.Messages.VIEWING_AS_ROLES_SELECT,
+    j = t === v.StaticChannelRoute.GUILD_ONBOARDING,
     G = t => {
       let {
         backToSettings: n
@@ -113,7 +113,7 @@ function D() {
         direction: _.default.Directions.LEFT,
         className: L.backArrow
       }), D]
-    }), w && l ? (0, r.jsx)("div", {
+    }), j && l ? (0, r.jsx)("div", {
       className: L.noticeContents,
       children: (0, r.jsx)("div", {
         className: L.noticeText,
@@ -139,7 +139,7 @@ function D() {
           } = e;
           return (0, r.jsxs)(A, {
             onClick: t,
-            children: [j, (0, r.jsx)(p.default, {
+            children: [w, (0, r.jsx)(p.default, {
               width: 16,
               height: 16,
               direction: p.default.Directions.DOWN,
@@ -175,7 +175,7 @@ function D() {
   })
 }
 
-function j(e) {
+function w(e) {
   let {
     guildId: t
   } = e;

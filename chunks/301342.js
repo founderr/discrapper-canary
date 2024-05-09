@@ -37,7 +37,7 @@ var l = n("735250"),
   A = n("438144"),
   L = n("981631"),
   v = n("689938"),
-  x = n("644477");
+  x = n("781838");
 
 function R(e) {
   e.stopPropagation()
@@ -75,7 +75,7 @@ let M = a.memo(function(e) {
         })
       }
     }, [s]),
-    G = a.useCallback(() => {
+    U = a.useCallback(() => {
       let e = s.type === L.ChannelTypes.GUILD_CATEGORY ? null : s.type,
         t = s.getGuildId();
       null != t && (0, u.openModalLazy)(async () => {
@@ -91,7 +91,7 @@ let M = a.memo(function(e) {
       })
     }, [s]),
     {
-      role: U,
+      role: G,
       tabIndex: w,
       ...B
     } = (0, r.useListItem)(s.id),
@@ -151,7 +151,7 @@ let M = a.memo(function(e) {
                   look: u.Button.Looks.BLANK,
                   size: u.Button.Sizes.NONE,
                   className: i()(x.addButton, x.forceVisible),
-                  onClick: G,
+                  onClick: U,
                   onMouseEnter: t,
                   onMouseLeave: n,
                   tabIndex: w,

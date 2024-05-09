@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return h
   },
   getActiveAgoTimestamp: function() {
-    return y
+    return v
   },
   getFirstRouteFor: function() {
     return R
@@ -131,7 +131,7 @@ function p(e) {
   return null == E ? 0 : 0 === E.length ? i.index + 2 - n : E[E.length - 1].index + 2 - n
 }
 
-function y(e) {
+function v(e) {
   var t;
   return G.default.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
     timeAgo: l()(g.default.extractTimestamp(null !== (t = S.default.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow()

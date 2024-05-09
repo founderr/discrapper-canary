@@ -28,7 +28,7 @@ var l = n("735250"),
   I = n("731455"),
   N = n("921944"),
   T = n("689938"),
-  A = n("434884");
+  A = n("427122");
 
 function L() {
   window.location.pathname.startsWith(S.Routes.GUILD_DISCOVERY) && ((0, u.clearSearch)(), (0, u.selectCategory)(I.DISCOVERY_ALL_CATEGORIES_ID, !0));

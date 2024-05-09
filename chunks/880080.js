@@ -8,8 +8,8 @@ var i = n("735250");
 n("470079");
 var r = n("120356"),
   a = n.n(r),
-  s = n("718017"),
-  o = n("667904");
+  s = n("685626"),
+  o = n("771941");
 let l = Object.freeze({
     tension: 400,
     friction: 30

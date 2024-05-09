@@ -8,7 +8,7 @@ var a = s("735250"),
   u = s("292937"),
   o = s("692437"),
   d = s("689938"),
-  c = s("153314");
+  c = s("190322");
 t.default = n.forwardRef(function(e, t) {
   let {
     currentPageIndex: s,

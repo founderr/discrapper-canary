@@ -23,7 +23,7 @@ var a = s("442837"),
   _ = s("228168"),
   T = s("182294"),
   x = s("231338"),
-  U = s("100651");
+  U = s("566483");
 let A = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
 function g(e) {

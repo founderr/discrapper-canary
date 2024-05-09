@@ -14,7 +14,7 @@ var n = t("735250"),
   d = t("69580"),
   u = t("285952"),
   N = t("689938"),
-  h = t("357331");
+  h = t("112109");
 let x = new c.default("TwoWayLinkDiscordConsentWeb");
 
 function m(e) {

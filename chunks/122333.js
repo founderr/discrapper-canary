@@ -94,7 +94,7 @@ class M extends r.default {
         a = await (0, i.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("42483"), n.e("22458")]).then(n.bind(n, "599219"));
+          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("42483"), n.e("22458")]).then(n.bind(n, "599219"));
           return n => (0, s.jsx)(e, {
             ...n,
             onSlideChange: t

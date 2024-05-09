@@ -25,7 +25,7 @@ var r = t("512722"),
   N = t("981631"),
   x = t("921944"),
   A = t("20281"),
-  R = t("830071");
+  R = t("106423");
 let j = [N.GuildFeatures.CREATOR_MONETIZABLE, N.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL];
 
 function D(e) {

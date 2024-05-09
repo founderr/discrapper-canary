@@ -21,7 +21,7 @@ var n, i, l = s("735250"),
   h = s("285952"),
   M = s("74538"),
   T = s("689938"),
-  _ = s("652847");
+  _ = s("625699");
 async function g(t, e, s, n) {
   await (0, m.uncancelGuildBoostSlot)(s), await (0, I.updateSubscription)(t, {
     items: (0, M.getItemsFromNewAdditionalPlans)(t, e)

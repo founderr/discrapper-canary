@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CardDetails: function() {
-    return c
+    return u
   }
 });
 var i = n("735250");
@@ -13,17 +13,17 @@ var r = n("789978"),
   o = n("330711"),
   d = n("878106");
 
-function c(e) {
+function u(e) {
   let {
     benefits: t,
     description: n,
-    imgSrc: c,
-    title: u,
+    imgSrc: u,
+    title: c,
     onClose: f,
-    tag: m,
-    FallbackIcon: p
-  } = e, h = null != c ? {
-    "--custom-background-url": "url(".concat(c.toString(), ")")
+    tag: p,
+    FallbackIcon: h
+  } = e, m = null != u ? {
+    "--custom-background-url": "url(".concat(u.toString(), ")")
   } : void 0;
   return (0, i.jsxs)("div", {
     className: d.container,
@@ -31,11 +31,11 @@ function c(e) {
       className: d.header,
       children: [(0, i.jsx)("div", {
         className: d.headerBackground,
-        style: h
+        style: m
       }), (0, i.jsxs)("div", {
         className: d.headerTop,
         children: [(0, i.jsx)("div", {
-          children: m
+          children: p
         }), (0, i.jsx)(r.FocusRing, {
           children: (0, i.jsx)("button", {
             onClick: f,
@@ -50,10 +50,10 @@ function c(e) {
         })]
       }), (0, i.jsx)("div", {
         className: d.headerImage,
-        children: null != c ? (0, i.jsx)("img", {
-          src: c.toString(),
+        children: null != u ? (0, i.jsx)("img", {
+          src: u.toString(),
           alt: ""
-        }) : (0, i.jsx)(p, {
+        }) : (0, i.jsx)(h, {
           color: "var(--text-muted)",
           height: 96,
           width: 96
@@ -67,7 +67,7 @@ function c(e) {
           color: "header-primary",
           tag: "div",
           variant: "heading-xl/semibold",
-          children: u
+          children: c
         }), (null != n && "" !== n || null != t) && (0, i.jsxs)("div", {
           className: d.details,
           children: [(0, i.jsx)(s.Text, {

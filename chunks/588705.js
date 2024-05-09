@@ -23,7 +23,7 @@ var l = n("735250"),
   S = n("888592"),
   _ = n("245335"),
   I = n("689938"),
-  N = n("754613");
+  N = n("493918");
 let T = () => (0, l.jsxs)(a.Fragment, {
     children: [(0, l.jsx)(m.Avatar, {
       src: null,
@@ -89,7 +89,7 @@ t.default = e => {
     b = T || null == C.inviter ? null : new c.default(C.inviter),
     j = !(null != C.approximate_member_count && C.approximate_member_count > 100 || null != y && y.hasFeature(E.GuildFeatures.COMMUNITY)) && null != b,
     P = null,
-    G = !1;
+    U = !1;
   if (null != y) P = null == b ? I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : I.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
     username: g.default.getFormattedName(b)
   }), C.target_type === _.InviteTargetTypes.STREAM && null != C.target_user && (P = I.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
@@ -131,7 +131,7 @@ t.default = e => {
     let e = g.default.getFormattedName(b, !0);
     a = I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({
       username: e
-    }), G = !0, h = null != L ? null : (0, l.jsx)(m.SubTitle, {
+    }), U = !0, h = null != L ? null : (0, l.jsx)(m.SubTitle, {
       className: N.directInviteSubTitle,
       children: x ? I.default.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION_REGISTER.format({
         username: e
@@ -146,7 +146,7 @@ t.default = e => {
       application: D,
       guild: y,
       user: j ? b : null,
-      compact: G
+      compact: U
     }), null != L ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(m.SubTitle, {
         children: I.default.Messages.INVITE_MODAL_ERROR_TITLE
@@ -164,7 +164,7 @@ t.default = e => {
           tooltipPosition: "left"
         }) : null, n, a]
       })]
-    }), h, null != D || G || (null == C ? void 0 : null === (t = C.guild) || void 0 === t ? void 0 : t.id) === S.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, l.jsx)(m.ActivityCount, {
+    }), h, null != D || U || (null == C ? void 0 : null === (t = C.guild) || void 0 === t ? void 0 : t.id) === S.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, l.jsx)(m.ActivityCount, {
       className: N.activityCount,
       online: C.approximate_presence_count,
       total: C.approximate_member_count,

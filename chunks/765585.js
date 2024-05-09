@@ -11,7 +11,7 @@ var l = n("735250"),
   c = n("466111"),
   f = n("921944"),
   h = n("689938"),
-  p = n("291618");
+  p = n("255372");
 t.default = a.forwardRef(function(e, t) {
   let {
     body: n,
@@ -35,8 +35,8 @@ t.default = a.forwardRef(function(e, t) {
     isPremiumEarlyAccess: O = !1,
     maxWidth: D = 280
   } = e, b = L ? r.Button.Sizes.LARGE : r.Button.Sizes.MAX, [j, P] = a.useState(!1), {
-    ref: G,
-    width: U
+    ref: U,
+    width: G
   } = (0, o.default)();
 
   function w(e) {
@@ -46,9 +46,9 @@ t.default = a.forwardRef(function(e, t) {
   }
   return a.useEffect(() => {
     var e, t;
-    let n = (null !== (t = null === (e = G.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
+    let n = (null !== (t = null === (e = U.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
     !j && n > D && P(!0)
-  }, [j, U, G, D]), a.useEffect(() => {
+  }, [j, G, U, D]), a.useEffect(() => {
     (0, u.requestMarkDismissibleContentAsShown)(x)
   }, [x]), (0, l.jsx)("div", {
     className: N,
@@ -88,7 +88,7 @@ t.default = a.forwardRef(function(e, t) {
           children: n
         }) : n]
       }), (0, l.jsx)("div", {
-        ref: G,
+        ref: U,
         className: j || !L ? p.buttonContainerVertical : p.buttonContainerHorizontal,
         children: null != _ ? (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(r.Button, {

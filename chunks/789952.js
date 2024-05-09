@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return s
   }
 }), n("411104"), n("47120");
-var i = n("207470");
+var i = n("519953");
 let r = !1;
 {
   i.ReactEditor.toSlateRange = (e, t, n) => {

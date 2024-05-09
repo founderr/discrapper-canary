@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   SubscriptionCard: function() {
-    return m
+    return p
   },
   SubscriptionCardBenefit: function() {
-    return p
+    return h
   }
 });
 var i = n("735250");
@@ -15,41 +15,41 @@ var r = n("557533"),
   a = n("368072"),
   o = n("777207"),
   d = n("752843"),
-  c = n("330711"),
-  u = n("173459"),
-  f = n("113600");
+  u = n("330711"),
+  c = n("513478"),
+  f = n("863885");
 
-function m(e) {
+function p(e) {
   let {
     description: t,
     imgSrc: n,
     PurchaseButton: r,
-    onPurchase: m,
-    subscriptionType: p,
-    title: h,
+    onPurchase: p,
+    subscriptionType: h,
+    title: m,
     onDetails: S,
     benefitItems: v,
     benefitsSummary: g
   } = e;
   return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
-      className: l()(u.container, f.hoverCard),
+      className: l()(c.container, f.hoverCard),
       tabIndex: 0,
       onClick: () => {
-        null != S ? S() : null != m && m()
+        null != S ? S() : null != p && p()
       },
       children: [(0, i.jsxs)("div", {
-        className: u.card,
-        children: [null != p && (0, i.jsx)(d.SubscriptionTag, {
-          type: p
+        className: c.card,
+        children: [null != h && (0, i.jsx)(d.SubscriptionTag, {
+          type: h
         }), (0, i.jsxs)("div", {
-          className: u.body,
+          className: c.body,
           children: [(0, i.jsx)(o.Text, {
             tag: "div",
             variant: "heading-lg/semibold",
-            children: h
+            children: m
           }), (0, i.jsx)("div", {
-            className: u.image,
+            className: c.image,
             children: null != n ? (0, i.jsx)("img", {
               src: n.toString(),
               alt: ""
@@ -59,41 +59,41 @@ function m(e) {
               width: 48
             })
           }), null != r && (0, i.jsx)(r, {
-            className: u.purchaseBtn,
+            className: c.purchaseBtn,
             onClick: e => {
-              e.stopPropagation(), null == m || m()
+              e.stopPropagation(), null == p || p()
             }
           }), null != t && "" !== t && (0, i.jsx)(o.Text, {
-            className: u.description,
+            className: c.description,
             color: "text-normal",
             variant: "text-sm/medium",
             children: t
           })]
         })]
       }), null != g && (0, i.jsx)("div", {
-        className: u.benefitsSummary,
+        className: c.benefitsSummary,
         children: (0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/medium",
-          children: c.default.Messages.Storefront.BENEFITS_SUMMARY.format({
+          children: u.default.Messages.Storefront.BENEFITS_SUMMARY.format({
             count: g
           })
         })
       }), null != v && (0, i.jsx)("div", {
-        className: u.benefits,
+        className: c.benefits,
         children: (0, i.jsx)("div", {
-          className: u.benefitsContainer,
+          className: c.benefitsContainer,
           children: (0, i.jsxs)("div", {
-            className: u.benefitsList,
+            className: c.benefitsList,
             children: [(0, i.jsx)(o.Text, {
               color: "header-secondary",
               variant: "eyebrow",
-              children: c.default.Messages.Storefront.BENEFITS_TITLE
+              children: u.default.Messages.Storefront.BENEFITS_TITLE
             }), v.length > 3 ? (0, i.jsxs)(i.Fragment, {
               children: [v.slice(0, 3), (0, i.jsx)(o.Text, {
                 variant: "text-md/semibold",
                 color: "text-secondary",
-                children: c.default.Messages.Storefront.MORE_BENEFITS.format({
+                children: u.default.Messages.Storefront.MORE_BENEFITS.format({
                   count: v.length - 3
                 })
               })]
@@ -105,16 +105,16 @@ function m(e) {
   })
 }
 
-function p(e) {
+function h(e) {
   let {
     icon: t,
     name: n,
     description: r
   } = e;
   return (0, i.jsxs)("div", {
-    className: u.cardBenefit,
+    className: c.cardBenefit,
     children: [(0, i.jsx)("div", {
-      className: u.cardBenefitIcon,
+      className: c.cardBenefitIcon,
       children: t
     }), (0, i.jsxs)("div", {
       children: [(0, i.jsx)(o.Text, {

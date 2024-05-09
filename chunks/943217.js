@@ -13,7 +13,7 @@ var r = n("278074"),
   l = n("793397"),
   u = n("228168"),
   d = n("419061"),
-  _ = n("587886");
+  _ = n("678444");
 let c = {
   [u.UserProfileTypes.POPOUT]: a.AvatarSizes.SIZE_80,
   [u.UserProfileTypes.MODAL]: a.AvatarSizes.SIZE_120,

@@ -18,7 +18,7 @@ var l = s("442837"),
   f = s("981631"),
   m = s("611480"),
   N = s("689938"),
-  g = s("979267");
+  g = s("205616");
 let h = {
     page: f.AnalyticsPages.GUILD_SETTINGS,
     section: f.AnalyticsSections.GUILD_SETTINGS_STICKERS,

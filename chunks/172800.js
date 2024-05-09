@@ -19,7 +19,7 @@ var i = n("735250"),
   A = n("149203"),
   m = n("981631"),
   N = n("689938"),
-  p = n("310264");
+  p = n("687901");
 t.default = e => {
   let {
     emojiDescriptors: t,

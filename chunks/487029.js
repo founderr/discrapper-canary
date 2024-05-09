@@ -22,7 +22,7 @@ var l = n("735250"),
   E = n("964398"),
   S = n("409673"),
   _ = n("710111"),
-  I = n("171458");
+  I = n("599046");
 
 function N(e) {
   let {
@@ -71,17 +71,17 @@ function N(e) {
   }, {
     disableTrack: !L
   });
-  let G = a.useCallback(e => {
+  let U = a.useCallback(e => {
       y.current = e, D(null == e ? void 0 : e.soundId)
     }, []),
-    U = a.useCallback(e => {
+    G = a.useCallback(e => {
       if (null == e) {
-        G(null);
+        U(null);
         return
       }
       let t = R[e];
-      null != t && G(t)
-    }, [G, R]),
+      null != t && U(t)
+    }, [U, R]),
     w = a.useCallback(e => {
       if (null == e) return;
       let t = R[e];
@@ -103,7 +103,7 @@ function N(e) {
       itemHeight: 52,
       showDeadZoneIndicator: !A,
       activeItem: O,
-      onItemSelect: U,
+      onItemSelect: G,
       onItemAction: w,
       interactive: L,
       children: B

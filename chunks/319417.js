@@ -7,7 +7,7 @@ var i = n("735250"),
   o = n("147915"),
   l = n("620448"),
   u = n("689938"),
-  d = n("370495");
+  d = n("156986");
 t.default = r.memo(function(e) {
   let {
     onClick: t,

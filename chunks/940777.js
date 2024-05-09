@@ -33,7 +33,7 @@ var l = n("735250"),
   M = n("603274"),
   y = n("981631"),
   O = n("689938"),
-  D = n("240993");
+  D = n("561349");
 let b = {
   analyticsSource: {
     page: y.AnalyticsPages.GUILD_CHANNEL,
@@ -50,8 +50,8 @@ function j() {
     } = (0, v.useFavoriteAdded)(),
     [j, P] = a.useState(!1),
     {
-      favoriteServerMuted: G,
-      favoriteChannels: U
+      favoriteServerMuted: U,
+      favoriteChannels: G
     } = (0, o.useStateFromStoresObject)([L.default], () => ({
       favoriteChannels: L.default.getFavoriteChannels(),
       favoriteServerMuted: L.default.favoriteServerMuted
@@ -62,7 +62,7 @@ function j() {
     {
       badge: V,
       unread: H
-    } = (0, x.default)(U),
+    } = (0, x.default)(G),
     k = function(e) {
       let t = (0, o.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
         n = null != t && null != e[t],
@@ -93,19 +93,19 @@ function j() {
         isCurrentUserConnected: n,
         activity: m
       })
-    }(U),
+    }(G),
     Y = V > 0 ? (0, m.renderMentionBadge)(V) : null,
-    W = a.useCallback(() => {
+    K = a.useCallback(() => {
       s()
     }, [s]);
   return (0, l.jsxs)(h.ListItem, {
     children: [(0, l.jsx)(N.default, {
       selected: F,
       hovered: j,
-      unread: H && !G,
+      unread: H && !U,
       className: D.pill
     }), (0, l.jsx)(M.default, {
-      onShow: W,
+      onShow: K,
       children: (0, l.jsx)(R.FavoriteAddedTooltip, {
         children: (0, l.jsx)(u.BlobMask, {
           selected: F || j,

@@ -22,7 +22,7 @@ var s = n("120356"),
   m = n("981631"),
   S = n("332325"),
   p = n("689938"),
-  I = n("352653");
+  I = n("668202");
 
 function g(e) {
   (0, o.default)(S.GameSettingsTab.CLIPS), (0, _.dismissClipsUserEducation)(e)

@@ -21,7 +21,7 @@ var a = n("735250"),
   c = n("443487"),
   f = n("43205"),
   h = n("689938"),
-  m = n("288564");
+  m = n("571425");
 let p = [d.TopGameBadge],
   E = [s.AggregateRange.WEEK];
 

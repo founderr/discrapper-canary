@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CloseButton: function() {
-    return K
+    return W
   },
   LinkButton: function() {
     return Z
@@ -40,23 +40,23 @@ var l = n("735250"),
   b = n("28718"),
   j = n("733880"),
   P = n("465670"),
-  G = n("887208"),
-  U = n("709054"),
+  U = n("887208"),
+  G = n("709054"),
   w = n("998502"),
   B = n("788307"),
   F = n("960670"),
   V = n("981631"),
   H = n("689938"),
-  k = n("437063");
+  k = n("577245");
 let Y = w.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
-  W = {
+  K = {
     offset: {
       top: 2,
       bottom: 2,
       right: 4
     }
   },
-  K = e => (0, l.jsx)(h.Clickable, {
+  W = e => (0, l.jsx)(h.Clickable, {
     className: k.closeButton,
     ...e,
     focusProps: {
@@ -71,7 +71,7 @@ let Y = w.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
       className: k.closeIcon
     })
   }),
-  z = () => (0, l.jsx)(G.default, {
+  z = () => (0, l.jsx)(U.default, {
     className: k.favoriteIcon
   });
 class Z extends a.Component {
@@ -100,7 +100,7 @@ class Z extends a.Component {
       role: m,
       focusProps: {
         within: !0,
-        ...W
+        ...K
       },
       "aria-posinset": C,
       "aria-setsize": g,
@@ -144,15 +144,15 @@ function X(e) {
     status: R,
     isMobile: y,
     "aria-posinset": P,
-    "aria-setsize": G
-  } = e, [U, w] = a.useState(!1), Z = a.useRef(null), X = a.useRef(null), {
+    "aria-setsize": U
+  } = e, [G, w] = a.useState(!1), Z = a.useRef(null), X = a.useRef(null), {
     avatarSrc: Q,
     avatarDecorationSrc: q,
     eventHandlers: J
   } = (0, A.default)({
     user: c,
     size: h.AvatarSizes.SIZE_32,
-    animateOnHover: !(r || U)
+    animateOnHover: !(r || G)
   }), $ = (0, f.useStateFromStores)([M.default], () => M.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, S.default)(t), en = (0, f.useStateFromStores)([_.default], () => _.default.isFavorite(t.id)), el = () => {
     w(!0)
   }, ea = () => {
@@ -228,7 +228,7 @@ function X(e) {
       ...e,
       activities: I,
       applicationStream: L,
-      animate: U,
+      animate: G,
       hideTooltip: !0,
       user: c
     }) : null
@@ -274,7 +274,7 @@ function X(e) {
         className: k.channel,
         role: n,
         focusProps: {
-          ...W,
+          ...K,
           focusTarget: Z,
           ringTarget: X
         },
@@ -283,7 +283,7 @@ function X(e) {
         onMouseLeave: ea,
         onMouseDown: ei,
         onContextMenu: eu,
-        "aria-setsize": G,
+        "aria-setsize": U,
         "aria-posinset": P,
         children: (0, l.jsxs)(h.Interactive, {
           className: i()(k.interactive, {
@@ -318,7 +318,7 @@ function X(e) {
                 verified: !0
               }) : null
             })
-          }), en ? (0, l.jsx)(z, {}) : null, !ep && (0, l.jsx)(K, {
+          }), en ? (0, l.jsx)(z, {}) : null, !ep && (0, l.jsx)(W, {
             "aria-label": eh ? H.default.Messages.LEAVE_GROUP_DM : H.default.Messages.CLOSE_DM,
             onClick: eh ? ed : es,
             onMouseDown: er
@@ -356,7 +356,7 @@ t.default = e => {
       isMobile: null != u && v.default.isMobileOnline(u)
     }
   }, [u, t, i]), c = (0, f.useStateFromStores)([y.default, R.default], () => {
-    if (t.isMultiUserDM()) return !!r && U.default.keys(R.default.getTypingUsers(t.id)).some(e => {
+    if (t.isMultiUserDM()) return !!r && G.default.keys(R.default.getTypingUsers(t.id)).some(e => {
       var t;
       return e !== (null === (t = y.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });

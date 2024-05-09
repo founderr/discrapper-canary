@@ -9,15 +9,15 @@ var i, r, l = n("735250"),
   a = n("442837"),
   o = n("481060"),
   d = n("241159"),
-  c = n("496929"),
-  u = n("558381"),
+  u = n("496929"),
+  c = n("558381"),
   f = n("728345"),
-  m = n("812206"),
-  p = n("886176"),
-  h = n("238"),
+  p = n("812206"),
+  h = n("886176"),
+  m = n("238"),
   S = n("507608"),
   v = n("689938"),
-  g = n("503744");
+  g = n("135143");
 
 function x(e) {
   let {
@@ -26,13 +26,13 @@ function x(e) {
     appId: i,
     guildId: r,
     subscriptionGroupListing: x
-  } = e, T = (0, a.useStateFromStores)([m.default], () => m.default.getApplication(i)), [C, E] = s.useState(() => m.default.isFetchingApplication(i) ? {
+  } = e, T = (0, a.useStateFromStores)([p.default], () => p.default.getApplication(i)), [C, E] = s.useState(() => p.default.isFetchingApplication(i) ? {
     status: 1
   } : {
     status: 0
-  }), j = s.useRef(null), [N, _] = s.useState(!0), I = () => {
+  }), I = s.useRef(null), [j, _] = s.useState(!0), N = () => {
     var e;
-    (null === (e = j.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? _(!1) : _(!0)
+    (null === (e = I.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? _(!1) : _(!0)
   };
   s.useEffect(() => {
     0 === C.status && (E({
@@ -48,11 +48,11 @@ function x(e) {
       })
     }))
   }, [i, C.status]);
-  let L = (0, a.useStateFromStores)([h.default], () => h.default.getStoreLayout(i), [i]);
+  let L = (0, a.useStateFromStores)([m.default], () => m.default.getStoreLayout(i), [i]);
   if (s.useEffect(() => {
-      (0, d.fetchStoreDirectoryLayout)(i), (0, u.fetchAllStoreListingsForApplication)(i)
+      (0, d.fetchStoreDirectoryLayout)(i), (0, c.fetchAllStoreListingsForApplication)(i)
     }, [i]), s.useEffect(() => {
-      (0, c.fetchUserEntitlementsForApplication)(i, !1)
+      (0, u.fetchUserEntitlementsForApplication)(i, !1)
     }, [i]), null == T) return null;
   let R = v.default.Messages.STOREFRONT_TITLE.format({
     appName: T.name
@@ -66,7 +66,7 @@ function x(e) {
       className: g.modalHeader,
       children: [(0, l.jsxs)("div", {
         className: g.modalTitle,
-        children: [(0, l.jsx)(p.default, {}), (0, l.jsx)(o.Heading, {
+        children: [(0, l.jsx)(h.default, {}), (0, l.jsx)(o.Heading, {
           variant: "heading-md/semibold",
           children: R
         })]
@@ -76,9 +76,9 @@ function x(e) {
       })]
     }), (0, l.jsx)(o.ModalContent, {
       scrollerRef: e => {
-        null != e && (j.current = e, I())
+        null != e && (I.current = e, N())
       },
-      onScroll: I,
+      onScroll: N,
       children: (0, l.jsx)(S.default, {
         app: T,
         subscriptionGroupListing: x,
@@ -87,7 +87,7 @@ function x(e) {
       })
     }), (0, l.jsx)("div", {
       className: g.containerScrollGradient,
-      "data-shown": N
+      "data-shown": j
     })]
   })
 }(r = i || (i = {}))[r.NONE = 0] = "NONE", r[r.FETCHING = 1] = "FETCHING", r[r.FETCHED = 2] = "FETCHED", r[r.ERROR = 3] = "ERROR"

@@ -54,7 +54,7 @@ var a = n("735250"),
   X = n("981631"),
   Q = n("354459"),
   J = n("689938"),
-  $ = n("566097");
+  $ = n("807136");
 let ee = "HasBeenInStageChannel",
   et = (e, t) => () => {
     let n = e.getGuildId();

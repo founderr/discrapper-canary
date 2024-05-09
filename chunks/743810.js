@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   MENTION_NEXT: function() {
-    return I
+    return S
   },
   MENTION_PREV: function() {
-    return S
+    return I
   },
   UNREAD_NEXT: function() {
     return A
@@ -16,15 +16,15 @@ n.r(t), n.d(t, {
 var i = n("350483"),
   o = n("220444"),
   l = n("905423"),
-  u = n("131704"),
-  a = n("592125"),
+  a = n("131704"),
+  u = n("592125"),
   s = n("306680"),
   d = n("9156"),
   r = n("981631"),
   E = n("490897");
 let c = (e, t) => {
-    let n = a.default.getChannel(t);
-    return null != n && ((0, u.isPrivate)(n.type) ? !!s.default.getMentionCount(t) : (!d.default.isChannelMuted(e, t) || s.default.getMentionCount(t) > 0) && (0, o.getHasImportantUnread)(n))
+    let n = u.default.getChannel(t);
+    return null != n && ((0, a.isPrivate)(n.type) ? !!s.default.getMentionCount(t) : (!d.default.isChannelMuted(e, t) || s.default.getMentionCount(t) > 0) && (0, o.getHasImportantUnread)(n))
   },
   _ = (e, t) => {
     if (t === E.ReadStateTypes.GUILD_EVENT) return !d.default.isMuteScheduledEventsEnabled(e) && s.default.hasUnread(e, t);
@@ -57,7 +57,7 @@ let c = (e, t) => {
     }
   },
   T = (e, t) => s.default.getMentionCount(t) > 0,
-  I = {
+  S = {
     binds: ["mod+shift+alt+down"],
     comboKeysBindGlobal: !0,
     action: () => ((0, i.default)(1, {
@@ -65,7 +65,7 @@ let c = (e, t) => {
       withVoiceChannels: !0
     }), !1)
   },
-  S = {
+  I = {
     binds: ["mod+shift+alt+up"],
     comboKeysBindGlobal: !0,
     action: () => ((0, i.default)(-1, {

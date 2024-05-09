@@ -15,7 +15,7 @@ n.r(t), n.d(t, {
 }), n("627341");
 var i = n("278074"),
   r = n("228168"),
-  a = n("851641");
+  a = n("214572");
 let s = e => t => {
     if (t.hasBanner || t.hasProfileEffect) return e.premiumUserWithBanner;
     if (t.isPremium) {

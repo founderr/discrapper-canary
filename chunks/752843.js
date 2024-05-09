@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   SubscriptionTag: function() {
-    return c
+    return u
   },
   Tag: function() {
-    return u
+    return c
   }
 });
 var i = n("735250");
@@ -13,17 +13,17 @@ var r = n("628028"),
   l = n("220427"),
   s = n("777207"),
   a = n("330711"),
-  o = n("494910");
+  o = n("305967");
 let d = {
   width: 12,
   height: 12
 };
 
-function c(e) {
+function u(e) {
   let {
     type: t
   } = e;
-  return (0, i.jsx)(u, {
+  return (0, i.jsx)(c, {
     icon: "user" === t ? (0, i.jsx)(l.UserIcon, {
       ...d,
       color: "var(--text-positive)"
@@ -35,7 +35,7 @@ function c(e) {
   })
 }
 
-function u(e) {
+function c(e) {
   let {
     icon: t,
     text: n

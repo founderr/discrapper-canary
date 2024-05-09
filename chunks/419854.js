@@ -15,7 +15,7 @@ var r = s("120356"),
   T = s("474936"),
   I = s("981631"),
   R = s("689938"),
-  f = s("209498");
+  f = s("500810");
 t.default = function(e) {
   let {
     isFullscreen: t

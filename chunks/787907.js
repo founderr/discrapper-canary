@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
 var s = n("735250"),
   l = n("470079"),
   a = n("435935"),
-  i = n("521624");
+  i = n("870074");
 class r extends l.PureComponent {
   render() {
     return (0, s.jsxs)(a.Flex, {

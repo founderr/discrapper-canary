@@ -40,7 +40,7 @@ var l, a, s, i, r = n("735250"),
   R = n("281029"),
   M = n("981631"),
   y = n("689938"),
-  O = n("809164");
+  O = n("513285");
 
 function D(e, t, n) {
   return null != t && !!t && !(0, R.areTypesInSameSection)(n, e.type)
@@ -145,7 +145,7 @@ function P(e) {
   })
 }
 
-function G(e) {
+function U(e) {
   let {
     channel: t
   } = e, n = () => {
@@ -167,7 +167,7 @@ function G(e) {
   })
 }
 
-function U(e) {
+function G(e) {
   let {
     channel: t
   } = e, n = () => {
@@ -202,12 +202,12 @@ class w extends(i = o.PureComponent) {
     })
   }
   renderRemoveSuggestionButton() {
-    return (0, r.jsx)(G, {
+    return (0, r.jsx)(U, {
       ...this.props
     })
   }
   renderAcceptSuggestionButton() {
-    return (0, r.jsx)(U, {
+    return (0, r.jsx)(G, {
       ...this.props
     })
   }

@@ -10,7 +10,7 @@ var l = a("819570"),
   n = a("837748"),
   E = a("306453"),
   r = a("58346"),
-  _ = a("723667");
+  _ = a("423767");
 let u = {
   [r.InternalTemplateCodes.CLASSROOM]: a("320440"),
   [r.InternalTemplateCodes.LOCAL_COMMUNITIES]: a("526916"),

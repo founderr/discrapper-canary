@@ -14,7 +14,7 @@ var i = n("735250"),
   I = n("921944"),
   T = n("526761"),
   f = n("689938"),
-  S = n("962657");
+  S = n("157542");
 let h = s.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
   A = e => {
     (0, u.markDismissibleContentAsDismissed)(h, {

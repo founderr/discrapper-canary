@@ -5,7 +5,7 @@ var a = n("735250"),
   i = n("120356"),
   l = n.n(i),
   r = n("481060"),
-  o = n("442970");
+  o = n("108913");
 t.default = s.memo(function(e) {
   let {
     onClick: t,

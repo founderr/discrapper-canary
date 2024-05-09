@@ -44,7 +44,7 @@ var l = s("735250"),
   w = s("257017"),
   U = s("981631"),
   H = s("689938"),
-  B = s("654923");
+  B = s("513243");
 let G = o.default.connectStores([C.default, x.default], () => {
   let e = x.default.getChannel();
   return {

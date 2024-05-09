@@ -25,7 +25,7 @@ var a = n("735250"),
   S = n("526282"),
   p = n("802001"),
   I = n("981631"),
-  g = n("495257");
+  g = n("424023");
 let T = (e, t) => {
   switch (e) {
     case _.ClanDiscoveryGame.GENSHIN:

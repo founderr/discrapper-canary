@@ -25,8 +25,8 @@ var a = s("735250"),
   G = s("116175"),
   M = s("308083"),
   U = s("689938"),
-  R = s("868878"),
-  h = s("418571");
+  R = s("106832"),
+  h = s("661926");
 let m = M.CLAN_BRAND_PALETTE_PRESETS.length + 1,
   p = [{
     name: "Night Sky",
@@ -65,7 +65,7 @@ let m = M.CLAN_BRAND_PALETTE_PRESETS.length + 1,
     bannerKind: M.ClanBannerKind.SPATTER,
     icon: d.PaintbrushThickIcon
   }],
-  y = e => {
+  v = e => {
     let {
       name: t,
       primaryColor: s,
@@ -95,7 +95,7 @@ t.default = e => {
     handleUpdate: d,
     progress: A,
     guildId: I
-  } = e, L = (0, N.useStateFromStores)([C.default], () => C.default.getGuild(I)), c = null !== (t = (0, N.useStateFromStores)([D.default], () => D.default.getMemberCount(I))) && void 0 !== t ? t : 0, [v, P] = n.useState(A.banner), [x, H] = n.useState({
+  } = e, L = (0, N.useStateFromStores)([C.default], () => C.default.getGuild(I)), c = null !== (t = (0, N.useStateFromStores)([D.default], () => D.default.getMemberCount(I))) && void 0 !== t ? t : 0, [y, P] = n.useState(A.banner), [x, H] = n.useState({
     primary: null !== (s = A.brandPrimaryColor) && void 0 !== s ? s : M.CLAN_BRAND_PRIMARY_DEFAULT,
     secondary: null !== (i = A.brandSecondaryColor) && void 0 !== i ? i : M.CLAN_BRAND_SECONDARY_DEFAULT
   }), [B, F] = n.useState(() => {
@@ -121,11 +121,11 @@ t.default = e => {
   }, [x, K, b, A.badgePrimaryColor, A.badgeSecondaryColor, B]);
   return n.useEffect(() => {
     d({
-      banner: v,
+      banner: y,
       brandPrimaryColor: w.primary,
       brandSecondaryColor: w.secondary
     })
-  }, [d, v, w.primary, w.secondary]), (0, a.jsxs)("div", {
+  }, [d, y, w.primary, w.secondary]), (0, a.jsxs)("div", {
     className: h.slideContent,
     children: [(0, a.jsx)(S.Heading, {
       variant: "heading-xxl/medium",
@@ -161,7 +161,7 @@ t.default = e => {
                 className: E()(R.brandItemContainer, {
                   [R.brandItemContainerSelected]: 0 === B
                 }),
-                children: (0, a.jsx)(y, {
+                children: (0, a.jsx)(v, {
                   name: U.default.Messages.CLAN_LOOK_PRESET_BADGE,
                   primaryColor: A.badgePrimaryColor,
                   secondaryColor: A.badgeSecondaryColor
@@ -174,7 +174,7 @@ t.default = e => {
                 className: E()(R.brandItemContainer, {
                   [R.brandItemContainerSelected]: B === t + 1
                 }),
-                children: (0, a.jsx)(y, {
+                children: (0, a.jsx)(v, {
                   name: e.name,
                   primaryColor: e.primary,
                   secondaryColor: e.secondary
@@ -204,7 +204,7 @@ t.default = e => {
                   className: E()(R.brandItemContainer, {
                     [R.brandItemContainerSelected]: B === m
                   }),
-                  children: (0, a.jsx)(y, {
+                  children: (0, a.jsx)(v, {
                     name: U.default.Messages.CLAN_LOOK_PRESET_CUSTOM,
                     isCustom: !0
                   })
@@ -225,7 +225,7 @@ t.default = e => {
                   P(e.bannerKind)
                 },
                 className: E()(R.bannerItemContainer, {
-                  [R.bannerItemContainerSelected]: e.bannerKind === v
+                  [R.bannerItemContainerSelected]: e.bannerKind === y
                 }),
                 children: [(0, a.jsx)(e.icon, {
                   width: 24,
@@ -244,7 +244,7 @@ t.default = e => {
         className: R.clanCardWrapper,
         children: (0, a.jsx)(g.ClanDiscoveryCardView, {
           bannerComponent: (0, a.jsx)(f.default, {
-            banner: v,
+            banner: y,
             primaryTintColor: w.primary,
             secondaryTintColor: w.secondary,
             className: R.clanBannerPreview
@@ -257,7 +257,7 @@ t.default = e => {
             memberCount: c,
             games: Array.from(A.gameApplicationIds),
             traits: Array.from(A.interests),
-            banner: v,
+            banner: y,
             badge: {
               badgeKind: A.badgeKind,
               primaryColor: null !== (r = A.badgePrimaryColor) && void 0 !== r ? r : M.CLAN_BRAND_PRIMARY_DEFAULT,

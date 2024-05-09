@@ -54,7 +54,7 @@ var i, r, a = n("735250"),
   X = n("981631"),
   Q = n("765305"),
   q = n("689938"),
-  J = n("569779");
+  J = n("303820");
 (i = r || (r = {})).HANGOUT = "hangout", i.EMBEDDED_ACTIVITY = "embedded-activity", i.EVENT = "event", i.GAMING = "gaming", i.EMPTY = "empty";
 
 function $(e) {

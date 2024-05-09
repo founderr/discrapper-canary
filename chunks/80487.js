@@ -7,7 +7,7 @@ var l = s("481060"),
   n = s("669405"),
   r = s("246364"),
   u = s("689938"),
-  o = s("846777");
+  o = s("697201");
 t.default = function(e) {
   let {
     pendingGuildJoinRequestsTotal: t,

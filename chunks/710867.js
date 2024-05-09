@@ -3,7 +3,7 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("293335"),
-  a = n("808654");
+  a = n("935689");
 t.default = e => {
   let {
     profileEffectConfig: t,

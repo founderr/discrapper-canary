@@ -33,8 +33,8 @@ var l = n("735250"),
   b = n("858064"),
   j = n("594190"),
   P = n("569545"),
-  G = n("102172"),
-  U = n("74299"),
+  U = n("102172"),
+  G = n("74299"),
   w = n("914923"),
   B = n("165393"),
   F = n("989941"),
@@ -42,8 +42,8 @@ var l = n("735250"),
   H = n("231664"),
   k = n("759198"),
   Y = n("131704"),
-  W = n("199902"),
-  K = n("314897"),
+  K = n("199902"),
+  W = n("314897"),
   z = n("592125"),
   Z = n("984933"),
   X = n("430824"),
@@ -78,7 +78,7 @@ var l = n("735250"),
   eA = n("918559"),
   eL = n("702512"),
   ev = n("689938"),
-  ex = n("699045");
+  ex = n("497727");
 
 function eR(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -483,15 +483,15 @@ t.default = (0, E.default)(function(e) {
   let {
     guildId: n,
     ...a
-  } = e, s = (0, u.useStateFromStores)([K.default], () => K.default.getId()), i = (0, u.useStateFromStores)([j.default, el.default], () => (0, F.default)(j.default, el.default)), r = (0, u.useStateFromStores)([ee.default, z.default], () => z.default.getChannel(ee.default.getVoiceChannelId())), o = (0, u.useStateFromStores)([I.default], () => I.default.getConnectedActivityChannelId()), c = (0, u.useStateFromStores)([z.default], () => z.default.getChannel(o)), f = (0, u.useStateFromStores)([X.default], () => X.default.getGuild(null == c ? void 0 : c.guild_id)), [h, p] = (0, u.useStateFromStoresArray)([W.default], () => [W.default.getCurrentUserActiveStream(), W.default.getStreamerActiveStreamMetadata()]), m = (0, u.useStateFromStores)([S.default], () => S.default.useReducedMotion), C = (0, u.useStateFromStores)([y.default], () => y.default.getActivityPanelTooltipAction()), {
+  } = e, s = (0, u.useStateFromStores)([W.default], () => W.default.getId()), i = (0, u.useStateFromStores)([j.default, el.default], () => (0, F.default)(j.default, el.default)), r = (0, u.useStateFromStores)([ee.default, z.default], () => z.default.getChannel(ee.default.getVoiceChannelId())), o = (0, u.useStateFromStores)([I.default], () => I.default.getConnectedActivityChannelId()), c = (0, u.useStateFromStores)([z.default], () => z.default.getChannel(o)), f = (0, u.useStateFromStores)([X.default], () => X.default.getGuild(null == c ? void 0 : c.guild_id)), [h, p] = (0, u.useStateFromStoresArray)([K.default], () => [K.default.getCurrentUserActiveStream(), K.default.getStreamerActiveStreamMetadata()]), m = (0, u.useStateFromStores)([S.default], () => S.default.useReducedMotion), C = (0, u.useStateFromStores)([y.default], () => y.default.getActivityPanelTooltipAction()), {
     partnerGame: g,
     dropsActivityPanelExperienceBlocked: E,
     showDropsSparkles: _
-  } = (0, M.useActivityPanelDrop)(eL.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), N = (0, u.useStateFromStores)([I.default], () => null != c ? I.default.getSelfEmbeddedActivityForChannel(c.id) : null), A = (0, u.useStateFromStores)([X.default, q.default, Z.default], () => null != r ? G.canStreamInChannel(r, X.default, q.default, !1) : null != n && G.getStreamEligibleChannels(Z.default.getChannels(n), X.default, q.default).length > 0), [v] = (0, T.default)([null !== (t = function() {
+  } = (0, M.useActivityPanelDrop)(eL.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), N = (0, u.useStateFromStores)([I.default], () => null != c ? I.default.getSelfEmbeddedActivityForChannel(c.id) : null), A = (0, u.useStateFromStores)([X.default, q.default, Z.default], () => null != r ? U.canStreamInChannel(r, X.default, q.default, !1) : null != n && U.getStreamEligibleChannels(Z.default.getChannels(n), X.default, q.default).length > 0), [v] = (0, T.default)([null !== (t = function() {
     if (null != p && null != p.id) return p.id;
     if (null != i && null != i.id) return i.id;
     if (null != N) return N.applicationId
-  }()) && void 0 !== t ? t : ""]), R = (0, u.useStateFromStores)([Q.default], () => (0, U.default)(Q.default) && (0, e_.isWindows)()), O = (0, u.useStateFromStores)([J.default], () => null != s ? J.default.findActivity(s, e => e.type === eT.ActivityTypes.PLAYING) : null), D = null != h && h.ownerId === s && h.state !== eT.ApplicationStreamStates.ENDED, b = (0, u.useStateFromStores)([et.default], () => et.default.getBroadcast()), P = (0, L.default)() && null != i, w = (0, u.useStateFromStores)([en.default, $.default], () => null != c ? (0, x.computeChannelName)(c, en.default, $.default) : void 0), B = (0, H.default)(null == r ? void 0 : r.id, s);
+  }()) && void 0 !== t ? t : ""]), R = (0, u.useStateFromStores)([Q.default], () => (0, G.default)(Q.default) && (0, e_.isWindows)()), O = (0, u.useStateFromStores)([J.default], () => null != s ? J.default.findActivity(s, e => e.type === eT.ActivityTypes.PLAYING) : null), D = null != h && h.ownerId === s && h.state !== eT.ApplicationStreamStates.ENDED, b = (0, u.useStateFromStores)([et.default], () => et.default.getBroadcast()), P = (0, L.default)() && null != i, w = (0, u.useStateFromStores)([en.default, $.default], () => null != c ? (0, x.computeChannelName)(c, en.default, $.default) : void 0), B = (0, H.default)(null == r ? void 0 : r.id, s);
   return (0, l.jsx)(ey, {
     ...a,
     guildId: n,

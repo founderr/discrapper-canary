@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return s
   },
   getChannelVideoLimit: function() {
     return o
@@ -12,7 +12,7 @@ var i = n("442837"),
   a = n("938475"),
   l = n("981631");
 
-function u(e) {
+function s(e) {
   return (0, i.useStateFromStoresObject)([a.default, r.default], () => {
     let t = a.default.countVoiceStatesForChannel(e.id),
       n = r.default.getGuild(e.getGuildId());

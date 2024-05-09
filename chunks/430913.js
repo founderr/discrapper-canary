@@ -22,7 +22,7 @@ var i = l("735250"),
   g = l("290247"),
   I = l("981631"),
   A = l("689938"),
-  E = l("574901");
+  E = l("789539");
 let v = A.default.getAvailableLocales();
 
 function x(e) {

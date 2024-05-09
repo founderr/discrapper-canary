@@ -3,35 +3,35 @@ n.r(t);
 var i, r, l, s, a = n("442837"),
   o = n("570140"),
   d = n("55563"),
-  c = n("551428");
-let u = {},
+  u = n("551428");
+let c = {},
   f = {
     subscriptions: [],
     otps: []
   };
-class m extends(s = a.default.Store) {
+class p extends(s = a.default.Store) {
   initialize() {
-    this.waitFor(d.default, c.default)
+    this.waitFor(d.default, u.default)
   }
   hasStorefront(e) {
-    return !!u[e]
+    return !!c[e]
   }
   getStoreLayout(e) {
     var t;
-    return null !== (t = u[e]) && void 0 !== t ? t : f
+    return null !== (t = c[e]) && void 0 !== t ? t : f
   }
 }
-l = "ApplicationStoreDirectoryStore", (r = "displayName") in(i = m) ? Object.defineProperty(i, r, {
+l = "ApplicationStoreDirectoryStore", (r = "displayName") in(i = p) ? Object.defineProperty(i, r, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = l, t.default = new m(o.default, {
+}) : i[r] = l, t.default = new p(o.default, {
   APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: function(e) {
     let {
       applicationId: t,
       listings: n
     } = e;
-    u[t] = n
+    c[t] = n
   }
 })

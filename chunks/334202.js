@@ -1,6 +1,2 @@
 "use strict";
-e.exports = {
-  art: "art__3e095",
-  body: "body__1fbfe",
-  title: "title__79b03"
-}
+e.exports = t.p + "5fb483ee7ff69e5649ee.png"

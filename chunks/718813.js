@@ -22,7 +22,7 @@ var a, s = n("735250"),
   p = n("585483"),
   I = n("792125"),
   g = n("981631"),
-  T = n("435140");
+  T = n("529542");
 
 function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function A(e, t, n) {
   }) : e[t] = n, e
 }
 let N = (0, _.makeLazy)({
-    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("28020"), n.e("15972"), n.e("440"), n.e("6416"), n.e("63438"), n.e("58600"), n.e("33053"), n.e("49146"), n.e("17938"), n.e("65866"), n.e("76540"), n.e("93521"), n.e("80603"), n.e("18824"), n.e("5528"), n.e("74753"), n.e("79618")]).then(n.bind(n, "989804")),
+    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("40326"), n.e("23357"), n.e("28020"), n.e("15972"), n.e("440"), n.e("6416"), n.e("63438"), n.e("58600"), n.e("33053"), n.e("49146"), n.e("17938"), n.e("76540"), n.e("65866"), n.e("93521"), n.e("80603"), n.e("18824"), n.e("5528"), n.e("74753"), n.e("79618")]).then(n.bind(n, "989804")),
     webpackId: "989804",
     name: "UserSettings"
   }),
@@ -48,7 +48,7 @@ let N = (0, _.makeLazy)({
     name: "CollectiblesShop"
   }),
   O = (0, _.makeLazy)({
-    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("58227"), n.e("85093"), n.e("85552"), n.e("43502")]).then(n.bind(n, "994763")),
+    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502")]).then(n.bind(n, "994763")),
     webpackId: "994763",
     name: "GuildSettings"
   }),

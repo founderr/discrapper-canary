@@ -13,7 +13,7 @@ var n = a("735250"),
   o = a("981631"),
   d = a("531578"),
   u = a("689938"),
-  f = a("674768");
+  f = a("258167");
 let m = [{
   className: f.emojiThumbsUp,
   rating: d.FeedbackRating.GOOD,

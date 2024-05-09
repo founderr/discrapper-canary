@@ -34,7 +34,7 @@ var i, r, a = n("735250"),
   D = n("626135"),
   M = n("238302"),
   y = n("514361"),
-  P = n("583901"),
+  P = n("110577"),
   U = n("469115"),
   b = n("981631"),
   G = n("921944"),
@@ -43,7 +43,7 @@ var i, r, a = n("735250"),
   k = n("526761"),
   V = n("231338"),
   x = n("689938"),
-  F = n("662826");
+  F = n("737679");
 (r = i || (i = {})).EDITOR = "EDITOR", r.SETTINGS = "SETTINGS";
 let H = Object.freeze({
     EDITOR: k.UserSettingsDelay.SLOW_USER_ACTION,

@@ -23,7 +23,7 @@ var i = n("735250"),
   f = n("142550"),
   S = n("981631"),
   h = n("689938"),
-  A = n("181406");
+  A = n("370577");
 let m = (0, I.createChannelRecord)({
     id: "1",
     type: S.ChannelTypes.DM

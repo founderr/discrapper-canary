@@ -32,7 +32,7 @@ function I(e) {
     {
       let {
         registerLocale: t
-      } = n("217379");
+      } = n("578807");
       t(e, i)
     }
   })

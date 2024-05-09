@@ -12,7 +12,7 @@ var a = s("735250"),
   S = s("63063"),
   E = s("981631"),
   T = s("689938"),
-  f = s("825972");
+  f = s("413127");
 
 function m(e) {
   u.RecentGamesEnabled.updateSetting(e), e && r.default.fetchUserRecentGames(c.default.getId()), !e && (0, o.trackDisableRecentGamesSetting)()

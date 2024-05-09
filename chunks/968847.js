@@ -128,7 +128,7 @@ function P(e) {
   return !!(null != n && n.hasFeature(L.GuildFeatures.COMMUNITY)) && j(t)
 }
 
-function G(e) {
+function U(e) {
   let {
     id: t
   } = e, n = g.default.getChannel(t);
@@ -137,7 +137,7 @@ function G(e) {
   return !!(null != l && l.hasFeature(L.GuildFeatures.COMMUNITY)) && j(n.guild_id)
 }
 
-function U(e) {
+function G(e) {
   let {
     channel: t
   } = e, n = g.default.getChannel(t.id);
@@ -199,7 +199,7 @@ o = "ChannelListUnreadsStore", (r = "displayName") in(i = F) ? Object.defineProp
     }), n
   },
   CHANNEL_ACK: w,
-  CHANNEL_DELETE: U,
+  CHANNEL_DELETE: G,
   CHANNEL_LOCAL_ACK: w,
   MESSAGE_ACK: w,
   MESSAGE_CREATE: w,
@@ -210,12 +210,12 @@ o = "ChannelListUnreadsStore", (r = "displayName") in(i = F) ? Object.defineProp
     return !!(null != e.channels && null != t && t.hasFeature(L.GuildFeatures.COMMUNITY)) && j(e.guildId)
   },
   RESORT_THREADS: w,
-  THREAD_CREATE: U,
-  THREAD_DELETE: U,
+  THREAD_CREATE: G,
+  THREAD_DELETE: G,
   THREAD_LIST_SYNC: P,
-  THREAD_MEMBER_UPDATE: G,
-  THREAD_MEMBERS_UPDATE: G,
-  THREAD_UPDATE: U,
+  THREAD_MEMBER_UPDATE: U,
+  THREAD_MEMBERS_UPDATE: U,
+  THREAD_UPDATE: G,
   BULK_CLEAR_RECENTS: P,
   CATEGORY_COLLAPSE_ALL: P,
   CATEGORY_EXPAND_ALL: P,

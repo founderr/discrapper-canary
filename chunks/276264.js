@@ -30,7 +30,7 @@ var i = n("735250"),
   g = n("674563"),
   L = n("524484"),
   v = n("689938"),
-  D = n("495929");
+  D = n("895294");
 let M = (0, p.cssValueToNumber)(o.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.default = function(e) {
   var t;

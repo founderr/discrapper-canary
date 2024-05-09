@@ -32,7 +32,7 @@ var l, a = n("735250"),
   M = n("670512"),
   y = n("981631"),
   O = n("689938"),
-  D = n("469979");
+  D = n("216921");
 
 function b(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -58,7 +58,7 @@ let j = {
       })
     })]
   });
-class G extends(l = s.Component) {
+class U extends(l = s.Component) {
   render() {
     let e = E.default.getGuild(this.props.channel.guild_id);
     return (0, a.jsx)(T.Channel, {
@@ -70,10 +70,10 @@ class G extends(l = s.Component) {
     })
   }
 }
-b(G, "defaultProps", {
+b(U, "defaultProps", {
   unread: !1
 });
-let U = u.default.connectStores([S.default, C.default], e => {
+let G = u.default.connectStores([S.default, C.default], e => {
     let {
       channel: t
     } = e;
@@ -82,7 +82,7 @@ let U = u.default.connectStores([S.default, C.default], e => {
       mentions: S.default.getMentionCount(t.id),
       category: C.default.getChannel(t.parent_id)
     }
-  })(G),
+  })(U),
   w = u.default.connectStores([I.default], e => {
     let {
       channel: t
@@ -91,7 +91,7 @@ let U = u.default.connectStores([S.default, C.default], e => {
     return {
       voiceStates: I.default.getVoiceStates(t.guild_id)[t.id]
     }
-  })(G),
+  })(U),
   B = u.default.connectStores([g.default], e => {
     let {
       guild: t
@@ -284,7 +284,7 @@ class k extends s.PureComponent {
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("58227"), n.e("85093"), n.e("85552"), n.e("43502"), n.e("52332"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
+            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("52332"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
             return n => (0, a.jsx)(e, {
               ...n,
               guild: t.record,
@@ -451,7 +451,7 @@ class k extends s.PureComponent {
             children: n.record.text
           }, "".concat(n.type, "-").concat(n.record.id));
         case p.AutocompleterResultTypes.TEXT_CHANNEL:
-          return (0, a.jsx)(U, {
+          return (0, a.jsx)(G, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),

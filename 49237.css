@@ -12319,6 +12319,23 @@ html.decorate-links .lowSaturationUnderline_a62e4d {
     text-decoration: underline
 }
 
+.guildIcon__65d1b {
+    border-radius: var(--radius-xs)
+}
+
+.guildDetails_ac7c68 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px
+}
+
+.voiceChannelInfo__78368 {
+    display: flex;
+    align-items: center;
+    gap: 2px
+}
+
 .activityActivityFeed__402fc .name__0ac4b {
     display: none
 }

@@ -22,7 +22,7 @@ var a = s("735250"),
   C = s("527379"),
   f = s("327999"),
   O = s("689938"),
-  G = s("230559");
+  G = s("673330");
 let M = n.memo(function() {
     return (0, a.jsx)(_.Tooltip, {
       text: O.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN_TOOLTIP,
@@ -182,7 +182,7 @@ function p(e) {
   })
 }
 
-function y(e) {
+function v(e) {
   let {
     sourceInviteCode: t,
     joinSourceType: s,
@@ -287,7 +287,7 @@ t.default = n.memo(function(e) {
     inviterUser: null != L ? L : null,
     guildId: E,
     joinSourceType: S,
-    children: e => (0, a.jsx)(y, {
+    children: e => (0, a.jsx)(v, {
       sourceInviteCode: N,
       joinSourceType: S,
       integrationType: g,

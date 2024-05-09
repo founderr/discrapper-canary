@@ -12,8 +12,8 @@ var a = s("735250"),
   T = s("116175"),
   d = s("308083"),
   A = s("689938"),
-  I = s("765731"),
-  L = s("418571");
+  I = s("410453"),
+  L = s("661926");
 let c = "clan-badge-render",
   N = [T.ClanBadgeKind.SWORD, T.ClanBadgeKind.WATER_DROP, T.ClanBadgeKind.SKULL, T.ClanBadgeKind.TOADSTOOL, T.ClanBadgeKind.MOON, T.ClanBadgeKind.LIGHTNING, T.ClanBadgeKind.LEAF, T.ClanBadgeKind.HEART, T.ClanBadgeKind.FIRE, T.ClanBadgeKind.COMPASS, T.ClanBadgeKind.CROSSHAIRS, T.ClanBadgeKind.FLOWER, T.ClanBadgeKind.FORCE, T.ClanBadgeKind.GEM, T.ClanBadgeKind.LAVA, T.ClanBadgeKind.PSYCHIC, T.ClanBadgeKind.SMOKE, T.ClanBadgeKind.SNOW, T.ClanBadgeKind.SOUND, T.ClanBadgeKind.SUN, T.ClanBadgeKind.WIND],
   S = T.CLAN_BADGE_PALETTE_PRESETS.length;
@@ -33,9 +33,9 @@ t.default = e => {
     for (let e = 0; e < T.CLAN_BADGE_PALETTE_PRESETS.length; e++)
       if (T.CLAN_BADGE_PALETTE_PRESETS[e].primary === i && T.CLAN_BADGE_PALETTE_PRESETS[e].secondary === g) return e;
     return S
-  }), [p, y] = n.useState(!1), v = S === h ? U : T.CLAN_BADGE_PALETTE_PRESETS[h];
+  }), [p, v] = n.useState(!1), y = S === h ? U : T.CLAN_BADGE_PALETTE_PRESETS[h];
   return n.useEffect(() => {
-    if (G === s && v.primary === i && v.secondary === g) return;
+    if (G === s && y.primary === i && y.secondary === g) return;
     let e = document.querySelector("#".concat(c));
     if (null != e) {
       let s = new XMLSerializer().serializeToString(e),
@@ -54,16 +54,16 @@ t.default = e => {
       }, i.src = n
     }
     let a = f === d.ClanSetupSteps.CUSTOMIZE_TAG_BADGE ? {
-      brandPrimaryColor: v.primary,
-      brandSecondaryColor: v.secondary
+      brandPrimaryColor: y.primary,
+      brandSecondaryColor: y.secondary
     } : {};
     t({
       badgeKind: G,
-      badgePrimaryColor: v.primary,
-      badgeSecondaryColor: v.secondary,
+      badgePrimaryColor: y.primary,
+      badgeSecondaryColor: y.secondary,
       ...a
     })
-  }, [t, G, v.primary, v.secondary, f, s, i, g]), (0, a.jsxs)("div", {
+  }, [t, G, y.primary, y.secondary, f, s, i, g]), (0, a.jsxs)("div", {
     className: L.slideContent,
     children: [(0, a.jsx)(r.Heading, {
       variant: "heading-xxl/medium",
@@ -136,11 +136,11 @@ t.default = e => {
                 }))
               },
               shouldShow: p,
-              onRequestClose: () => y(!1),
+              onRequestClose: () => v(!1),
               children: e => (0, a.jsx)(r.Clickable, {
                 ...e,
                 onClick: () => {
-                  m(S), y(e => !e)
+                  m(S), v(e => !e)
                 },
                 className: E()(I.badgeAssetContainer, {
                   [I.badgeAssetContainerSelected]: S === h
@@ -178,8 +178,8 @@ t.default = e => {
             badge: G,
             width: 40,
             height: 40,
-            primaryTintColor: v.primary,
-            secondaryTintColor: v.secondary
+            primaryTintColor: y.primary,
+            secondaryTintColor: y.secondary
           })
         }), (0, a.jsx)(r.Text, {
           variant: "text-xs/medium",
@@ -195,8 +195,8 @@ t.default = e => {
             badge: G,
             width: 64,
             height: 64,
-            primaryTintColor: v.primary,
-            secondaryTintColor: v.secondary
+            primaryTintColor: y.primary,
+            secondaryTintColor: y.secondary
           }), (0, a.jsx)("canvas", {
             ref: O,
             id: "png-render-canvas"

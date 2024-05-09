@@ -2,7 +2,7 @@
 s.r(t), s("47120");
 var a = s("735250"),
   l = s("470079"),
-  n = s("718017"),
+  n = s("685626"),
   i = s("442837"),
   r = s("481060"),
   o = s("224706"),
@@ -25,7 +25,7 @@ var a = s("735250"),
   L = s("359380"),
   O = s("308083"),
   A = s("689938"),
-  p = s("413932");
+  p = s("943303");
 let M = e => [{
     section: d.SectionTypes.HEADER,
     label: A.default.Messages.CLAN_SETTINGS_BASIC_INFO

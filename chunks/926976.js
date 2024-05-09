@@ -25,8 +25,8 @@ var a = r("735250"),
   v = r("681619"),
   j = r("621060"),
   C = r("689938"),
-  w = r("478860"),
-  S = r("893048");
+  w = r("457501"),
+  S = r("277513");
 let T = [{
   key: "event",
   cellClassName: w.eventColumn,

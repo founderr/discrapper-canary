@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ProductCard: function() {
-    return u
+    return c
   }
 });
 var i = n("735250");
@@ -11,25 +11,25 @@ var r = n("557533"),
   s = n("789978"),
   a = n("790472"),
   o = n("777207"),
-  d = n("651550"),
-  c = n("113600");
+  d = n("145626"),
+  u = n("863885");
 
-function u(e) {
+function c(e) {
   let {
     title: t,
     description: n,
     headerImage: r,
-    onDetails: u,
+    onDetails: c,
     onPurchase: f,
-    PurchaseButton: m,
-    availabilityLabel: p
+    PurchaseButton: p,
+    availabilityLabel: h
   } = e;
   return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
-      className: l()(d.wrapper, c.hoverCard),
+      className: l()(d.wrapper, u.hoverCard),
       tabIndex: 0,
       onClick: () => {
-        null != u ? u() : null != f && f()
+        null != c ? c() : null != f && f()
       },
       children: [(0, i.jsx)("div", {
         className: d.cardHeaderImg,
@@ -53,13 +53,13 @@ function u(e) {
           variant: "text-sm/normal",
           children: n
         })]
-      }), null != m && (0, i.jsxs)("div", {
+      }), null != p && (0, i.jsxs)("div", {
         className: d.footer,
         children: [(0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/normal",
-          children: p
-        }), (0, i.jsx)(m, {
+          children: h
+        }), (0, i.jsx)(p, {
           onClick: e => {
             e.stopPropagation(), null == f || f()
           }

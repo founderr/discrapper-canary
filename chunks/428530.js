@@ -11,7 +11,7 @@ var i = r("346652"),
   n = r("410030"),
   o = r("68588"),
   c = r("981631"),
-  s = r("893048");
+  s = r("277513");
 let d = {
   base00: l.default.colors.BACKGROUND_SECONDARY.css,
   base03: l.default.colors.TEXT_WARNING.css,
