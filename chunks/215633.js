@@ -22,6 +22,7 @@ function l(e) {
     className: o.footer,
     children: [d && (0, i.jsx)(s.default, {
       user: t,
+      guildId: n,
       channelId: l,
       onClose: u
     }), !d && (0, i.jsx)(a.default, {

@@ -15,7 +15,7 @@ var i = n("735250"),
   _ = n("893718"),
   c = n("957730"),
   E = n("592125"),
-  I = n("51144"),
+  I = n("5192"),
   T = n("838440"),
   f = n("785717"),
   S = n("689938"),
@@ -44,45 +44,46 @@ let A = async e => {
 function m(e) {
   let {
     user: t,
-    channelId: n,
-    onClose: s
+    guildId: n,
+    channelId: s,
+    onClose: o
   } = e, {
-    newestAnalyticsLocation: o
+    newestAnalyticsLocation: c
   } = (0, l.default)(), {
-    trackUserProfileAction: c
-  } = (0, f.useUserProfileAnalyticsContext)(), T = (0, a.useStateFromStores)([E.default], () => E.default.getChannel(n)), [m, N] = r.useState(""), [p, O] = r.useState((0, d.toRichValue)(m)), R = r.useRef(!1);
-  return null == T ? null : (0, i.jsx)(_.default, {
+    trackUserProfileAction: T
+  } = (0, f.useUserProfileAnalyticsContext)(), m = (0, a.useStateFromStores)([E.default], () => E.default.getChannel(s)), [N, p] = r.useState(""), [O, R] = r.useState((0, d.toRichValue)(N)), C = r.useRef(!1);
+  return null == m ? null : (0, i.jsx)(_.default, {
     innerClassName: h.inner,
     editorClassName: h.editor,
     type: u.ChatInputTypes.USER_PROFILE,
     placeholder: S.default.Messages.QUICK_DM_USER.format({
-      name: I.default.getName(t)
+      name: I.default.getName(n, s, t)
     }),
-    channel: T,
-    textValue: m,
-    richValue: p,
+    channel: m,
+    textValue: N,
+    richValue: O,
     onChange: (e, t, n) => {
-      t !== m && (N(t), O(n))
+      t !== N && (p(t), R(n))
     },
-    focused: R.current,
+    focused: C.current,
     onFocus: () => {
-      R.current = !0
+      C.current = !0
     },
     onBlur: () => {
-      R.current = !1
+      C.current = !1
     },
     onSubmit: async e => {
       let {
         value: n
       } = e;
       try {
-        return c({
+        return T({
           action: "SEND_DIRECT_MESSAGE"
         }), await A({
           userId: t.id,
           content: n.trim(),
-          location: o
-        }), null == s || s(), {
+          location: c
+        }), null == o || o(), {
           shouldClear: !0,
           shouldRefocus: !1
         }
