@@ -43,7 +43,7 @@ function N(e) {
           var s, i;
           for (let r of null !== (i = null === (s = t.get(e)) || void 0 === s ? void 0 : s.sort((e, t) => f.default.compare(e.soundId, t.soundId))) && void 0 !== i ? i : []) {
             let e = n.has(r.soundId);
-            (e && a || !e && !a) && l.push(r)
+            (e && a || !e && !a) && r.available && l.push(r)
           }
         };
       return a.forEach(e => s(e, !0)), a.forEach(e => s(e, !1)), l
