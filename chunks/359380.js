@@ -64,7 +64,7 @@ t.default = e => {
     optional: c = !1,
     hidePreview: N = !1
   } = e, S = n.useMemo(() => d.default.getAvailableLocales().map(e => ({
-    value: e.value,
+    value: e.localizedName,
     label: e.localizedName
   })), []), g = n.useMemo(() => Array.from(E), [E]), D = n.useMemo(() => g.filter(e => T.LANGUAGES_SET.has(e)), [g]), C = n.useCallback(e => {
     let t = g.filter(e => !T.LANGUAGES_SET.has(e));
