@@ -63,7 +63,7 @@ function T() {
     path: _.Routes.APPLICATION_DIRECTORY_SEARCH,
     exact: !0
   }), a = (0, o.matchPath)(n, {
-    path: [_.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId"), _.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section")],
+    path: [_.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId"), _.Routes.APPLICATION_DIRECTORY_PROFILE_SECTION(":applicationId", ":section")],
     exact: !0
   }), {
     applicationId: s,
