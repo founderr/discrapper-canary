@@ -19849,6 +19849,7 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 }
 
 .nicknameIcons__1b2d1 {
+    display: flex;
     align-self: flex-start;
     padding-top: 4px
 }
