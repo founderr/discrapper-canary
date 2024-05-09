@@ -302,10 +302,10 @@ class L extends E.default {
     })
   }
   setCameraBitRate(e, t, n) {
-    null != n || null != t ? this.videoQualityManager.setQuality({
+    null != n || null != t ? this.videoQualityManager.setQualityOverwrite({
       bitrateMin: null != n && n > 0 ? n : t,
       bitrateMax: t
-    }) : this.videoQualityManager.setQuality({}), !this.hasDesktopSource() && this.conn.setTransportOptions({
+    }) : this.videoQualityManager.setQualityOverwrite({}), !this.hasDesktopSource() && this.conn.setTransportOptions({
       encodingVideoBitRate: e,
       encodingVideoMinBitRate: n,
       encodingVideoMaxBitRate: t
@@ -476,7 +476,7 @@ class L extends E.default {
         framerate: n
       },
       a = this.videoQualityManager.getQuality();
-    (!T.VideoQuality.equals(r, a.capture) || a.bitrateMax !== i) && (this.videoQualityManager.setQuality({
+    (!T.VideoQuality.equals(r, a.capture) || a.bitrateMax !== i) && (this.videoQualityManager.setGoliveQuality({
       capture: r,
       bitrateMax: i
     }), this.videoStreamParameters.length > 0 && (this.videoStreamParameters[0].maxResolution = {
