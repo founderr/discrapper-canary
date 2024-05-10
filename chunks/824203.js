@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
   useIsMessageInteractionForcedEphemeral: function() {
     return u
   },
-  useShouldShowUserAppBetaBar: function() {
+  useShouldShowUserAppBetaNoticeForCommand: function() {
     return d
   }
 });
