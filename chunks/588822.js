@@ -29,23 +29,31 @@ function f(e) {
     textColor: A,
     userId: m
   } = e, N = r.useMemo(() => null != t ? (0, u.parseBioReact)(t) : null, [t]);
-  return null == t && null == m ? null : ((0, l.default)(m) && (N = (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)("span", {
-      children: I.default.Messages.SYSTEM_DM_CHANGELOG_BIO
-    }), (0, i.jsx)("br", {}), (0, i.jsx)("br", {}), (0, i.jsx)(o.Anchor, {
-      onClick: () => {
-        _.default.track(c.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-          cta_type: "profile_bio",
-          target: E.CHANGELOG_URL
+  if (null == t && null == m) return null;
+  if ((0, l.default)(m)) {
+    let e = () => {
+      _.default.track(c.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+        cta_type: "profile_bio",
+        target: E.CHANGELOG_URL
+      })
+    };
+    N = (0, i.jsxs)(i.Fragment, {
+      children: [(0, i.jsx)("span", {
+        children: I.default.Messages.SYSTEM_DM_CHANGELOG_BIO
+      }), (0, i.jsx)("br", {}), (0, i.jsx)("br", {}), (0, i.jsx)("span", {
+        children: I.default.Messages.SYSTEM_DM_CHANGELOG_BIO_WITH_CTA.format({
+          blogHook: (t, n) => (0, i.jsx)(o.Anchor, {
+            onClick: e,
+            target: "_blank",
+            rel: "noreferrer noopener",
+            href: E.CHANGELOG_URL,
+            children: t
+          }, n)
         })
-      },
-      title: I.default.Messages.SYSTEM_DM_CHANGELOG_BIO_CTA,
-      target: "_blank",
-      rel: "noreferrer noopener",
-      href: E.CHANGELOG_URL,
-      children: I.default.Messages.SYSTEM_DM_CHANGELOG_BIO_CTA
-    })]
-  })), (0, i.jsx)("div", {
+      })]
+    })
+  }
+  return (0, i.jsx)("div", {
     className: s()(n, T.markup),
     children: (0, i.jsx)(o.Text, {
       variant: "text-sm/normal",
@@ -59,5 +67,5 @@ function f(e) {
         children: N
       })
     })
-  }))
+  })
 }
