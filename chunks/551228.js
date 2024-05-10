@@ -1,30 +1,32 @@
 "use strict";
 n.r(t), n.d(t, {
   useListenedSessionData: function() {
-    return p
+    return C
   }
 }), n("47120");
 var a = n("735250"),
   l = n("470079"),
-  s = n("442837"),
-  i = n("276852"),
-  r = n("594174"),
-  o = n("719247"),
-  u = n("297781"),
-  d = n("443487"),
-  c = n("43205"),
-  f = n("689938"),
-  h = n("571425");
-let m = [u.ListenTimestampBadge];
+  s = n("512722"),
+  i = n.n(s),
+  r = n("442837"),
+  o = n("276852"),
+  u = n("594174"),
+  d = n("719247"),
+  c = n("297781"),
+  f = n("443487"),
+  h = n("43205"),
+  m = n("689938"),
+  p = n("571425");
+let E = [c.ListenTimestampBadge];
 
-function p(e) {
-  var t, n, a, l, u, d, c;
-  let f = (0, s.useStateFromStores)([o.default], () => o.default.getMatchingActivity(e)),
-    h = (0, s.useStateFromStores)([r.default], () => r.default.getUser(e.author_id));
+function C(e) {
+  var t, n, a, l, s, i, c;
+  let f = (0, r.useStateFromStores)([d.default], () => d.default.getMatchingActivity(e)),
+    h = (0, r.useStateFromStores)([u.default], () => u.default.getUser(e.author_id));
   if (null == f || null == h) return {};
   let m = e.extra.entries[0],
-    p = null !== (l = null !== (a = (0, i.default)(f)) && void 0 !== a ? a : null === (t = f.assets) || void 0 === t ? void 0 : t.small_image) && void 0 !== l ? l : m.media.image_url,
-    E = null !== (d = null !== (u = f.state) && void 0 !== u ? u : null === (n = m.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== d ? d : m.media.title,
+    p = null !== (l = null !== (a = (0, o.default)(f)) && void 0 !== a ? a : null === (t = f.assets) || void 0 === t ? void 0 : t.small_image) && void 0 !== l ? l : m.media.image_url,
+    E = null !== (i = null !== (s = f.state) && void 0 !== s ? s : null === (n = m.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : m.media.title,
     C = null !== (c = f.details) && void 0 !== c ? c : m.media.title;
   return {
     activity: f,
@@ -42,32 +44,32 @@ t.default = l.memo(function(e) {
     selected: l
   } = e, {
     activity: s,
-    artist: i,
-    imageUrl: r
-  } = p(t);
-  return null == s ? null : (0, a.jsxs)(d.Card, {
+    artist: r,
+    imageUrl: o
+  } = C(t);
+  return i()(null != s, "There must be a matching live Activity for LISTENED_SESSION"), (0, a.jsxs)(f.Card, {
     selected: l,
-    children: [(0, a.jsxs)(d.CardInfoSection, {
-      children: [(0, a.jsx)(d.CardParticipants, {
+    children: [(0, a.jsxs)(f.CardInfoSection, {
+      children: [(0, a.jsx)(f.CardParticipants, {
         entry: t,
         channelId: n.id,
         guildId: n.guild_id
-      }), (0, a.jsx)(d.CardTitle, {
+      }), (0, a.jsx)(f.CardTitle, {
         children: function(e) {
-          return f.default.Messages.MEMBER_LIST_CONTENT_FEED_LISTENING_TO_MEDIA.format({
+          return m.default.Messages.MEMBER_LIST_CONTENT_FEED_LISTENING_TO_MEDIA.format({
             media: e
           })
-        }(i)
-      }), (0, a.jsx)(u.BadgesContainer, {
-        location: u.BadgeLocation.CARD,
-        children: m.map((e, n) => (0, a.jsx)(e, {
+        }(r)
+      }), (0, a.jsx)(c.BadgesContainer, {
+        location: c.BadgeLocation.CARD,
+        children: E.map((e, n) => (0, a.jsx)(e, {
           entry: t
         }, n))
       })]
-    }), (0, a.jsx)(c.ContentImage, {
-      src: r,
+    }), (0, a.jsx)(h.ContentImage, {
+      src: o,
       size: 48,
-      className: h.thumbnail
+      className: p.thumbnail
     })]
   })
 })
