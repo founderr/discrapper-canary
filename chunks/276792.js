@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("524437"),
-  i = n("740111"),
-  l = n("481060"),
+  l = n("740111"),
+  i = n("481060"),
   r = n("963249"),
   o = n("703656"),
   u = n("976644"),
@@ -26,28 +26,28 @@ function S(e) {
   let {
     content: S,
     renderModalProps: p,
-    analyticsLocations: g,
-    analyticsLocation: I,
+    analyticsLocations: I,
+    analyticsLocation: g,
     isLightTheme: T
   } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(S.dismissKey)]), {
     onClose: N
-  } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === i.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", L = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === i.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", L = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, o.transitionTo)(h.Routes.APPLICATION_STORE), N()
   } : () => (0, r.default)({
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: g,
+    analyticsLocations: I,
     analyticsObject: {
-      ...I,
+      ...g,
       object: h.AnalyticsObjects.BUTTON_CTA,
       objectType: h.AnalyticsObjectTypes.TIER_2
     },
     onClose: e => {
       e && N()
     }
-  }), O = "" !== S.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
+  }), O = "" !== S.helpArticleId ? () => (0, a.jsx)(i.Anchor, {
     className: C.termsApplyAnchor,
     href: c.default.getArticleURL(S.helpArticleId),
-    children: (0, a.jsx)(l.Heading, {
+    children: (0, a.jsx)(i.Heading, {
       variant: "heading-md/normal",
       className: C.termsApplyBodyText,
       children: _.default.Messages.BOGO_TERMS_APPLY
@@ -85,8 +85,8 @@ function S(e) {
       return (0, a.jsxs)(u.default, {
         className: C.buttonWide,
         innerClassName: C.innerButton,
-        color: l.Button.Colors.GREEN,
-        size: l.Button.Sizes.SMALL,
+        color: i.Button.Colors.GREEN,
+        size: i.Button.Sizes.SMALL,
         onClick: () => {
           d.default.track(h.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
             change_log_id: A,

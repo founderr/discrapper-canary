@@ -19,12 +19,12 @@ function O() {
   null != i && null != r && (window.open("".concat(i, "&key=").concat(r)), S.default.focus(null, !0))
 }
 
-function R() {
+function C() {
   r = null, p.stop(), N = !1, c.Storage.set(m, N)
 }
 
-function C() {
-  R()
+function R() {
+  C()
 }
 class g extends(u = _.default.Store) {
   initialize() {
@@ -62,12 +62,12 @@ l = "BrowserHandoffStore", (o = "displayName") in(s = g) ? Object.defineProperty
     if (null == t || null == n) return !1;
     N = !0, p.start(i, () => (0, T.handoffEnd)())
   },
-  BROWSER_HANDOFF_UNAVAILABLE: R,
+  BROWSER_HANDOFF_UNAVAILABLE: C,
   BROWSER_HANDOFF_SET_USER: function(e) {
     a = new f.default(e.user)
   },
-  LOGIN: C,
-  LOGIN_SUCCESS: C,
-  LOGOUT: C,
-  REGISTER: C
+  LOGIN: R,
+  LOGIN_SUCCESS: R,
+  LOGOUT: R,
+  REGISTER: R
 })

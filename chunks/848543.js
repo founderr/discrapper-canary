@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("399606"),
   o = n("524437"),
   u = n("923462"),
@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("459273"),
   S = n("242291"),
   p = n("792165"),
-  g = n("603074"),
-  I = n("981631"),
+  I = n("603074"),
+  g = n("981631"),
   T = n("921944"),
   A = n("689938"),
   N = n("726271");
@@ -30,7 +30,7 @@ var a = n("735250"),
 function v(e) {
   let {
     channel: t,
-    iconClassName: i,
+    iconClassName: l,
     className: v,
     innerClassName: R,
     ...L
@@ -69,7 +69,7 @@ function v(e) {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(I.default, {
         guildId: b,
         channel: t,
         onClose: n,
@@ -84,7 +84,7 @@ function v(e) {
       children: (0, a.jsx)(d.Button, {
         ...e,
         ...t,
-        className: l()(v, {
+        className: i()(v, {
           [N.buttonActive]: x,
           [N.disabled]: P
         }),
@@ -108,7 +108,7 @@ function v(e) {
         size: d.Button.Sizes.SMALL,
         ...L,
         children: (0, a.jsx)(F, {
-          className: i,
+          className: l,
           size: "sm",
           color: x ? "white" : d.tokens.colors.INTERACTIVE_ACTIVE
         })
@@ -118,7 +118,7 @@ function v(e) {
     !P && D(!x)
   }, [P, x]);
   return (0, m.useComponentAction)({
-    event: I.ComponentActions.TOGGLE_SOUNDBOARD,
+    event: g.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W
   }), (0, a.jsx)(E.AnalyticsLocationProvider, {
     value: k,

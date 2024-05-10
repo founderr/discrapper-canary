@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("613828"),
-  l = n("442837"),
+  l = n("613828"),
+  i = n("442837"),
   r = n("493683"),
   o = n("112724"),
   u = n("108427"),
@@ -32,7 +32,7 @@ class m extends s.Component {
       root: !0,
       children: (0, a.jsx)("div", {
         className: _.applicationStore,
-        children: (0, a.jsx)(i.Route, {
+        children: (0, a.jsx)(l.Route, {
           path: "*",
           render: this.renderApplicationListing
         })
@@ -52,19 +52,19 @@ class m extends s.Component {
       } = e, {
         channel: n,
         skuId: s,
-        width: i
+        width: l
       } = this.props;
       return (0, a.jsx)(f.default, {
         channel: n,
         inputSkuId: s,
         fetchStoreListing: this.fetchStoreListing,
         location: t,
-        pageSize: (0, E.getPageSize)(i)
+        pageSize: (0, E.getPageSize)(l)
       })
     })
   }
 }
-t.default = (0, o.default)(l.default.connectStores([d.default], e => {
+t.default = (0, o.default)(i.default.connectStores([d.default], e => {
   let {
     channel: t,
     inputSkuId: n

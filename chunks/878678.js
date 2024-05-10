@@ -33,11 +33,11 @@ function _(e) {
       confirmButtonColor: p = o.Button.Colors.RED,
       focusCancel: O = !1
     } = e,
-    R = r.useRef(null);
+    C = r.useRef(null);
   return r.useEffect(() => {
     !O && setTimeout(() => {
       var e;
-      return null === (e = R.current) || void 0 === e ? void 0 : e.focus()
+      return null === (e = C.current) || void 0 === e ? void 0 : e.focus()
     }, 0)
   }, [O]), r.useLayoutEffect(() => () => null == h ? void 0 : h()), null != E && (t = (0, i.jsx)(o.Button, {
     type: "button",
@@ -50,7 +50,7 @@ function _(e) {
     autoFocus: O,
     children: E
   })), null != c && (n = (0, i.jsx)(o.Button, {
-    buttonRef: R,
+    buttonRef: C,
     type: "submit",
     color: p,
     submitting: N,

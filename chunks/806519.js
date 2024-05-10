@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   MaskLibrary: function() {
-    return R
+    return C
   }
 });
 var i, r, a = n("735250"),
@@ -266,8 +266,8 @@ function O(e) {
   })
 }
 O.Masks = r, t.default = O;
-let R = s.memo(function() {
-  var e, t, n, i, r, s, o, l, c, O, R, C, g, L, v, D, M, y, P, U, b, G;
+let C = s.memo(function() {
+  var e, t, n, i, r, s, o, l, c, O, C, R, g, L, v, D, M, y, P, U, b, G;
   return (0, a.jsxs)("svg", {
     viewBox: "0 0 1 1",
     style: {
@@ -556,8 +556,8 @@ let R = s.memo(function() {
         cy: .5,
         r: .25
       })]
-    })), (R = "svg-mask-status-streaming", (0, a.jsxs)("mask", {
-      id: R,
+    })), (C = "svg-mask-status-streaming", (0, a.jsxs)("mask", {
+      id: C,
       maskContentUnits: "objectBoundingBox",
       viewBox: "0 0 1 1",
       children: [(0, a.jsx)("circle", {
@@ -569,8 +569,8 @@ let R = s.memo(function() {
         fill: "black",
         points: "".concat(.35, ",").concat(.25, " ").concat(.78301275, ",").concat(.5, " ").concat(.35, ",").concat(.75)
       })]
-    })), (C = "svg-mask-status-typing", (0, a.jsx)("mask", {
-      id: C,
+    })), (R = "svg-mask-status-typing", (0, a.jsx)("mask", {
+      id: R,
       maskContentUnits: "objectBoundingBox",
       viewBox: "0 0 1 1",
       children: (0, a.jsx)("rect", {

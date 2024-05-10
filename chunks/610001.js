@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var a, s = n("735250"),
-  i = n("470079"),
-  l = n("120356"),
-  r = n.n(l),
+  l = n("470079"),
+  i = n("120356"),
+  r = n.n(i),
   o = n("873546"),
   u = n("481060"),
   d = n("1964"),
@@ -24,7 +24,7 @@ function S(e, t, n) {
   }) : e[t] = n, e
 }
 let p = c.default.getArticleURL(h.HelpdeskArticles.VERIFICATION_FAQ);
-class g extends(a = i.PureComponent) {
+class I extends(a = l.PureComponent) {
   renderFields() {
     let {
       types: e,
@@ -103,8 +103,8 @@ class g extends(a = i.PureComponent) {
     })
   }
 }
-S(g, "defaultProps", {
+S(I, "defaultProps", {
   types: [h.VerificationTypes.CAPTCHA],
   onCaptchaVerify: h.NOOP,
   onLogout: h.NOOP
-}), t.default = g
+}), t.default = I

@@ -28,9 +28,9 @@ let S = {},
   N = {},
   p = new Set,
   O = () => M.emitChange(),
-  R = o().debounce(O, 150);
+  C = o().debounce(O, 150);
 
-function C(e) {
+function R(e) {
   let t = A[e];
   null != t && !t.closed && (S[e] = {
     x: t.screenX,
@@ -43,9 +43,9 @@ function C(e) {
 
 function g(e) {
   let t = A[e];
-  null != t && (!t.closed && C(e), t.close(), ! function(e) {
+  null != t && (!t.closed && R(e), t.close(), ! function(e) {
     let t = A[e];
-    a()(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", O), t.removeEventListener("blur", O), t.removeEventListener("resize", R);
+    a()(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", O), t.removeEventListener("blur", O), t.removeEventListener("resize", C);
     let n = m[e];
     a()(null != n, "Window root was null while unmounting"), n.unmount(), delete A[e], delete h[e], delete N[e], delete m[e]
   }(e), M.emitChange())
@@ -68,7 +68,7 @@ function L(e) {
           return
         }
         let i = t.document;
-        (0, I.subscribeDocumentToFullScreenChange)(i, O), t.addEventListener("focus", O), t.addEventListener("blur", O), t.addEventListener("resize", R), ! function(e, t) {
+        (0, I.subscribeDocumentToFullScreenChange)(i, O), t.addEventListener("focus", O), t.addEventListener("blur", O), t.addEventListener("resize", C), ! function(e, t) {
           let n = t.document,
             i = document.querySelectorAll('link[rel="stylesheet"]'),
             r = "".concat(window.location.protocol, "//").concat(window.location.host);
@@ -176,7 +176,7 @@ let M = new D(d.default, {
     let {
       key: t
     } = e, n = A[t];
-    null != n && !n.closed && (C(t), n.close())
+    null != n && !n.closed && (R(t), n.close())
   },
   POPOUT_WINDOW_SET_ALWAYS_ON_TOP: function(e) {
     let {

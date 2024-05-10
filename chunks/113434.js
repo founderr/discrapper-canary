@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
     return A
   },
   useQuestCollectibles: function() {
-    return C
+    return R
   },
   useQuestFormattedDate: function() {
     return m
   },
   useQuestFromActivities: function() {
-    return R
+    return C
   },
   useQuestInstructionTitle: function() {
     return N
@@ -156,7 +156,7 @@ function O() {
   }, [e])
 }
 
-function R(e) {
+function C(e) {
   let t = (0, I.useIsEligibleForMembersListQuestEntrypoint)({
       location: T.QuestsExperimentLocations.MEMBERS_LIST
     }),
@@ -165,7 +165,7 @@ function R(e) {
   return A(r) ? null : r
 }
 
-function C(e) {
+function R(e) {
   var t;
   let n = (0, _.hasQuestCollectibleRewards)(e),
     {

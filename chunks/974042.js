@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("653041");
 var a, s = n("392711"),
-  i = n.n(s),
-  l = n("442837"),
+  l = n.n(s),
+  i = n("442837"),
   r = n("570140"),
   o = n("194359"),
   u = n("81825"),
@@ -32,7 +32,7 @@ function p(e) {
   }
 }
 
-function g(e) {
+function I(e) {
   return {
     status: h.default.getStatus(e),
     isMobile: h.default.isMobileOnline(e),
@@ -41,9 +41,9 @@ function g(e) {
   }
 }
 
-function I(e) {
+function g(e) {
   let t = [];
-  return i()(f.default.memberOf(e)).map(E.default.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
+  return l()(f.default.memberOf(e)).map(E.default.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
     null != e && t.push(e)
   }), {
     mutualGuildsLength: t.length,
@@ -61,23 +61,23 @@ class T extends u.default {
 }
 class A {
   reset() {
-    let e = i().map(_.default.getRelationships(), (e, t) => new T({
+    let e = l().map(_.default.getRelationships(), (e, t) => new T({
         key: t,
         type: e,
         nickname: _.default.getNickname(t),
         ...p(t),
-        ...g(t),
-        ...I(t)
+        ...I(t),
+        ...g(t)
       })),
-      t = i().map(d.default.getSuggestions(), e => new T({
+      t = l().map(d.default.getSuggestions(), e => new T({
         key: e.key,
         type: 99,
         nickname: e.name,
         ...p(e.key),
-        ...g(e.key),
-        ...I(e.key)
+        ...I(e.key),
+        ...g(e.key)
       }));
-    return new A(i().concat(e, t))
+    return new A(l().concat(e, t))
   }
   clone() {
     return new A(this._rows)
@@ -92,7 +92,7 @@ class A {
     return t
   }
   filter(e, t) {
-    return i()(this._rows).filter(e => {
+    return l()(this._rows).filter(e => {
       if (null == e.user) return !1;
       if (null != t && "" !== t) {
         let n = t.toLowerCase();
@@ -158,9 +158,9 @@ function D(e) {
     return !O && !!L.update(e) && (L = L.clone(), !0)
   }
 }
-class b extends(a = l.default.Store) {
+class b extends(a = i.default.Store) {
   initialize() {
-    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], x), this.syncWith([d.default], x), this.syncWith([C.default], D(p)), this.syncWith([h.default, c.default], D(g)), P()
+    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], x), this.syncWith([d.default], x), this.syncWith([C.default], D(p)), this.syncWith([h.default, c.default], D(I)), P()
   }
   getState() {
     return {

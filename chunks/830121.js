@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DEVLINK_REGEX: function() {
-    return C
+    return R
   },
   default: function() {
     return V
@@ -36,8 +36,8 @@ let f = /^\/([a-zA-Z0-9-]+)$/,
   N = /^\/activities\/([0-9-]+)\/?$/,
   p = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
   O = /^\/channels\/([0-9]+)\/shop$/,
-  R = /^\/quests\/([0-9-]+)\/?$/,
-  C = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
+  C = /^\/quests\/([0-9-]+)\/?$/,
+  R = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
   g = G(window.GLOBAL_ENV.INVITE_HOST),
   L = G(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
   v = G(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(T.PRIMARY_DOMAIN)),
@@ -106,7 +106,7 @@ function V(e) {
   let t = new Set,
     n = [],
     i = (e = e.replace(b, (e, t, n, i) => null == n ? "".concat(t, "http://").concat(i) : e)).match(E.default.URL_REGEX),
-    r = e.match(C);
+    r = e.match(R);
   if (null == (i = (null != i ? i : []).concat(null != r ? r : [])) || 0 === i.length) return [];
   for (let e of i) {
     if (n.length >= 10) break;
@@ -157,10 +157,10 @@ function V(e) {
     }
     let T = null == s ? void 0 : s.match(p);
     null != T && o(I.CodedLinkType.GUILD_PRODUCT, "".concat(T[1], "-").concat(T[2]));
-    let R = null == s ? void 0 : s.match(O);
-    null != R && o(I.CodedLinkType.SERVER_SHOP, R[1]);
-    let C = x(e);
-    null != C && o(I.CodedLinkType.QUESTS_EMBED, C)
+    let C = null == s ? void 0 : s.match(O);
+    null != C && o(I.CodedLinkType.SERVER_SHOP, C[1]);
+    let R = x(e);
+    null != R && o(I.CodedLinkType.QUESTS_EMBED, R)
   }
   return n
 }
@@ -168,7 +168,7 @@ function V(e) {
 function x(e) {
   var t, n;
   let i = k(e),
-    r = null == i ? void 0 : null === (t = i.primaryHostRemainingPath) || void 0 === t ? void 0 : t.match(R);
+    r = null == i ? void 0 : null === (t = i.primaryHostRemainingPath) || void 0 === t ? void 0 : t.match(C);
   return null !== (n = null == r ? void 0 : r[1]) && void 0 !== n ? n : null
 }
 

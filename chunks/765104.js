@@ -12,8 +12,8 @@ var o, l, u, d, _, c, E = n("392711"),
   N = n("592125"),
   p = n("430824"),
   O = n("306680"),
-  R = n("944486"),
-  C = n("9156"),
+  C = n("944486"),
+  R = n("9156"),
   g = n("594174"),
   L = n("70956"),
   v = n("709054"),
@@ -44,7 +44,7 @@ class x extends(l = T.default.PersistedStore) {
   }
   initialize(e) {
     var t;
-    i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(N.default, g.default, R.default, p.default, A.default), this.syncWith([m.default], V)
+    i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(N.default, g.default, C.default, p.default, A.default), this.syncWith([m.default], V)
   }
   allSummaries() {
     return y
@@ -110,7 +110,7 @@ class x extends(l = T.default.PersistedStore) {
     } = e, a = [];
     return t && (a = a.concat(B)), n && (a = a.concat(b.map(e => e.channel_id))), i && (a = a.filter(e => {
       let t = N.default.getChannel(e);
-      return null != t && !C.default.isChannelMuted(t.guild_id, e) && O.default.hasUnread(e)
+      return null != t && !R.default.isChannelMuted(t.guild_id, e) && O.default.hasUnread(e)
     })), (a = a.filter(e => {
       let t = N.default.getChannel(e);
       return (0, S.canSeeChannelSummaries)(t, !1, !1)
@@ -217,7 +217,7 @@ let F = new x(f.default, {
     }
   },
   UPDATE_VISIBLE_MESSAGES(e) {
-    let t = R.default.getChannelId();
+    let t = C.default.getChannelId();
     if (null != t) {
       if (null != r && r.channelId === t && null != r.summaryId) {
         let e = y[r.channelId];

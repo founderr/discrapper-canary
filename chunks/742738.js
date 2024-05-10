@@ -18,7 +18,7 @@ var i, r, a, s, o = n("348327"),
   p = n("981631");
 let O = null;
 
-function R() {
+function C() {
   let e = function() {
     var e, t, n, i, r, a, s;
     let o = I.default.getVoiceChannelId();
@@ -30,18 +30,18 @@ function R() {
     let d = c.default.getGuild(u.getGuildId());
     if (null == d || !d.hasFeature(p.GuildFeatures.DISCOVERABLE)) return null;
     let E = (0, h.packStageChannelPartyId)(u, l),
-      R = (null == O ? void 0 : null === (e = O.party) || void 0 === e ? void 0 : e.id) === E ? O : null,
-      C = f.default.getMutableParticipants(u.id, S.StageChannelParticipantNamedIndex.SPEAKER),
-      g = C.filter(e => e.type === S.StageChannelParticipantTypes.STREAM).length,
-      L = C.length - g,
+      C = (null == O ? void 0 : null === (e = O.party) || void 0 === e ? void 0 : e.id) === E ? O : null,
+      R = f.default.getMutableParticipants(u.id, S.StageChannelParticipantNamedIndex.SPEAKER),
+      g = R.filter(e => e.type === S.StageChannelParticipantTypes.STREAM).length,
+      L = R.length - g,
       v = f.default.getParticipantCount(o) - g,
-      D = (null == R ? void 0 : null === (t = R.party) || void 0 === t ? void 0 : t.size) != null ? R.party.size[1] : 0;
+      D = (null == C ? void 0 : null === (t = C.party) || void 0 === t ? void 0 : t.size) != null ? C.party.size[1] : 0;
     return {
       application_id: N.STAGE_APPLICATION_ID,
       name: null !== (r = null !== (i = l.topic) && void 0 !== i ? i : u.topic) && void 0 !== r ? r : u.name,
       type: (0, m.getStageHasMedia)(u.id) ? p.ActivityTypes.WATCHING : p.ActivityTypes.LISTENING,
       timestamps: {
-        start: null !== (a = null == R ? void 0 : null === (n = R.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== a ? a : new Date().getTime()
+        start: null !== (a = null == C ? void 0 : null === (n = C.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== a ? a : new Date().getTime()
       },
       assets: {
         small_image: null !== (s = d.icon) && void 0 !== s ? s : void 0,
@@ -55,7 +55,7 @@ function R() {
   }();
   return !l()(e, O) && (O = e, !0)
 }
-class C extends(s = u.default.Store) {
+class R extends(s = u.default.Store) {
   initialize() {
     this.waitFor(_.default, I.default, A.default, E.default)
   }
@@ -63,23 +63,23 @@ class C extends(s = u.default.Store) {
     return O
   }
 }
-a = "StageChannelSelfRichPresenceStore", (r = "displayName") in(i = C) ? Object.defineProperty(i, r, {
+a = "StageChannelSelfRichPresenceStore", (r = "displayName") in(i = R) ? Object.defineProperty(i, r, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = a, t.default = new C(d.default, {
-  CONNECTION_OPEN: R,
-  STAGE_INSTANCE_CREATE: R,
-  STAGE_INSTANCE_UPDATE: R,
-  STAGE_INSTANCE_DELETE: R,
-  VOICE_CHANNEL_SELECT: R,
+}) : i[r] = a, t.default = new R(d.default, {
+  CONNECTION_OPEN: C,
+  STAGE_INSTANCE_CREATE: C,
+  STAGE_INSTANCE_UPDATE: C,
+  STAGE_INSTANCE_DELETE: C,
+  VOICE_CHANNEL_SELECT: C,
   RTC_CONNECTION_STATE: function(e) {
     var t, n, i;
     let {
       state: r
     } = e, a = null !== (i = null == O ? void 0 : null === (n = O.party) || void 0 === n ? void 0 : null === (t = n.size) || void 0 === t ? void 0 : t[1]) && void 0 !== i ? i : 0;
-    return r === p.RTCConnectionStates.RTC_CONNECTED && !(a > 0) && R()
+    return r === p.RTCConnectionStates.RTC_CONNECTED && !(a > 0) && C()
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
@@ -87,6 +87,6 @@ a = "StageChannelSelfRichPresenceStore", (r = "displayName") in(i = C) ? Object.
     } = e;
     if (null == O) return;
     let n = (0, h.unpackStageChannelParty)(O);
-    null != n && null != t.find(e => e.channelId === n.channelId) && R()
+    null != n && null != t.find(e => e.channelId === n.channelId) && C()
   }
 })

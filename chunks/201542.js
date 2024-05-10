@@ -35,7 +35,7 @@ function O(e) {
   })
 }
 t.default = r.memo(function(e) {
-  var t, n, a, _, R, C;
+  var t, n, a, _, C, R;
   let g, {
       src: L,
       volume: v = 1,
@@ -125,8 +125,8 @@ t.default = r.memo(function(e) {
     }(), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [t, n, a]), _ = L, R = W, C = K, r.useEffect(() => {
-    if (R) return T.ComponentDispatch.dispatch(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
+  }, [t, n, a]), _ = L, C = W, R = K, r.useEffect(() => {
+    if (C) return T.ComponentDispatch.dispatch(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
       src: _
     }), T.ComponentDispatch.subscribe(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
       T.ComponentDispatch.unsubscribe(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
@@ -136,9 +136,9 @@ t.default = r.memo(function(e) {
       let {
         src: t
       } = e;
-      _ !== t && C(!1)
+      _ !== t && R(!1)
     }
-  }, [_, R, C]);
+  }, [_, C, R]);
   let eI = W ? E.default : I.default,
     eT = W ? m.default.Messages.PAUSE : m.default.Messages.PLAY;
   g = "Safari" === platform.name ? (0, i.jsx)(r.Suspense, {

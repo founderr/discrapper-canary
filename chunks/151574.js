@@ -19,8 +19,8 @@ var i, r, a = n("735250"),
   N = n("378233"),
   p = n("419922"),
   O = n("490095"),
-  R = n("652136"),
-  C = n("695346"),
+  C = n("652136"),
+  R = n("695346"),
   g = n("465670"),
   L = n("806519"),
   v = n("626135"),
@@ -188,7 +188,7 @@ t.default = s.memo(function(e) {
           }), t === h.StickerSendability.SENDABLE) G(!0), o(e, m.StickerSelectLocation.EXPRESSION_SUGGESTIONS), ee.cancel(), j("");
         else if ((0, N.isStandardSticker)(e)) {
           let t = A.default.getStickerPack(e.pack_id);
-          null != t && (0, R.default)({
+          null != t && (0, C.default)({
             stickerPack: t,
             analyticsLocations: J
           })
@@ -288,7 +288,7 @@ t.default = s.memo(function(e) {
                   location: {
                     section: y.AnalyticsSections.EXPRESSION_PICKER
                   }
-                }), C.ExpressionSuggestionsEnabled.updateSetting(!1)
+                }), R.ExpressionSuggestionsEnabled.updateSetting(!1)
               },
               children: (0, a.jsx)(E.Tooltip, {
                 text: P.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_DISABLE,

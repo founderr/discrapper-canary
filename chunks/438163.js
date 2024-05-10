@@ -51,8 +51,8 @@ function c(e) {
       ref: m,
       children: [N(), p()]
     }),
-    R = n === d.UserProfileTypes.BITE_SIZE ? _.biteSize : _.fullSize,
-    C = s()(_.statusBubbleOuter, {
+    C = n === d.UserProfileTypes.BITE_SIZE ? _.biteSize : _.fullSize,
+    R = s()(_.statusBubbleOuter, {
       [_.statusBubbleShape]: c <= 1 && !S && T || c > 1,
       [_.statusBubbleSingleLineWithTextShape]: 1 === c && S,
       [_.biteSize]: n === d.UserProfileTypes.BITE_SIZE,
@@ -68,18 +68,18 @@ function c(e) {
     });
   return (0, i.jsxs)("div", {
     children: [n === d.UserProfileTypes.BITE_SIZE ? (0, i.jsx)("div", {
-      className: s()(_.invisibleContainer, R),
+      className: s()(_.invisibleContainer, C),
       children: (0, i.jsx)("div", {
-        className: C,
+        className: R,
         children: (0, i.jsx)("span", {
           className: g,
           children: O()
         })
       })
     }) : null, (0, i.jsx)("div", {
-      className: s()(_.visibleContainer, R),
+      className: s()(_.visibleContainer, C),
       children: (0, i.jsx)("div", {
-        className: C,
+        className: R,
         children: (0, i.jsx)("span", {
           className: g,
           children: O()

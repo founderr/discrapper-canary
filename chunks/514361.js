@@ -31,10 +31,10 @@ function O() {
   m = !0
 }
 
-function R() {
+function C() {
   N && (i = void 0), p = !1, m = !1
 }
-let C = () => {
+let R = () => {
     N = !T.default.canUseClientThemes(I.default.getCurrentUser())
   },
   g = () => {
@@ -44,7 +44,7 @@ let C = () => {
   };
 class L extends(a = s.default.PersistedStore) {
   initialize(e) {
-    null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? h.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(I.default, _.default, E.default, d.default), this.syncWith([I.default], C), this.syncWith([d.default], g)
+    null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? h.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(I.default, _.default, E.default, d.default), this.syncWith([I.default], R), this.syncWith([d.default], g)
   }
   getState() {
     return N ? {} : {
@@ -105,7 +105,7 @@ A(L, "displayName", "ClientThemesBackgroundStore"), A(L, "persistKey", "ClientTh
     })()
   },
   CLIENT_THEMES_EDITOR_CLOSE: e => {
-    R()
+    C()
   },
   RESET_PREVIEW_CLIENT_THEME: e => {
     i = void 0
@@ -122,6 +122,6 @@ A(L, "displayName", "ClientThemesBackgroundStore"), A(L, "persistKey", "ClientTh
     }())
   },
   LOGOUT: e => {
-    R()
+    C()
   }
 })

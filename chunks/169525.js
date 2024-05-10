@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return N
   },
   getObscuredAlt: function() {
-    return R
+    return C
   },
   useShouldObscure: function() {
     return O
@@ -102,4 +102,4 @@ function O(e) {
   } = e, i = (0, s.useStateFromStores)([I.default], () => null != t && I.default.can(S.Permissions.MANAGE_MESSAGES, t)), r = c.RenderSpoilers.useSetting(), a = (0, u.useShouldRedactExplicitContentForForum)();
   return p(n, !(0, f.default)(r, i), a)
 }
-let R = e => (0, a.match)(e).with("explicit_content", () => h.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => h.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
+let C = e => (0, a.match)(e).with("explicit_content", () => h.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => h.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)

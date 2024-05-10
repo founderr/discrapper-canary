@@ -78,8 +78,8 @@ var a, s, o, l = n("348327"),
   N = n("525769");
 let p = "deviceProperties",
   O = "referralProperties",
-  R = {},
   C = {},
+  R = {},
   g = window.DiscordNative;
 if (null != g) {
   let e;
@@ -189,7 +189,7 @@ function P() {
 }
 
 function U(e) {
-  return null != R[e] && R[e] > Date.now()
+  return null != C[e] && C[e] > Date.now()
 }
 if (null == i) try {
   ;
@@ -244,7 +244,7 @@ b(function() {
   let i = {},
     r = window.GLOBAL_ENV.RELEASE_CHANNEL;
   r && (i.release_channel = r.split("-")[0]);
-  let a = parseInt((n = "292226", "292226"), 10);
+  let a = parseInt((n = "292302", "292302"), 10);
   !isNaN(a) && (i.client_build_number = a);
   let s = null == g ? void 0 : null === (e = (t = g.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
   return !isNaN(s) && (i.native_build_number = s), i.client_event_source = function() {
@@ -271,11 +271,11 @@ let G = e => {
         if (U(t)) return Promise.resolve();
         if ("number" == typeof o.throttlePercent && Math.random() > o.throttlePercent) return Promise.resolve();
         if (o.deduplicate) {
-          let e = C[t];
+          let e = R[t];
           if (u()(e, s)) return Promise.resolve();
-          C[t] = s
+          R[t] = s
         }
-        R[t] = Date.now() + o.throttlePeriod
+        C[t] = Date.now() + o.throttlePeriod
       } else if ("throttlePercent" in o) {
         if (Math.random() > o.throttlePercent) return Promise.resolve()
       } else _()(!1, "Unsupported analytics event config: ".concat(o))

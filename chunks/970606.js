@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return d
   },
   trackClanApplicationNavigation: function() {
-    return R
+    return C
   },
   trackClanApplicationViewed: function() {
-    return C
+    return R
   },
   trackClanApplyToJoinViewed: function() {
     return u
@@ -245,7 +245,7 @@ function O(e) {
   })
 }
 
-function R(e) {
+function C(e) {
   let {
     guildId: t,
     source: n,
@@ -258,7 +258,7 @@ function R(e) {
   })
 }
 
-function C(e) {
+function R(e) {
   let {
     guildId: t,
     applicationUserId: n,

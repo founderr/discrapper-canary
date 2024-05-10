@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a.RPCCommands
   },
   joiEnum: function() {
-    return i
+    return l
   },
   joiReqObj: function() {
     return s
@@ -16,6 +16,6 @@ function s(e) {
   return e.required().unknown(!0)
 }
 
-function i(e) {
+function l(e) {
   return Object.values(e)
 }

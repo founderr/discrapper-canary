@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ReactionPickerButton: function() {
-    return R
+    return C
   },
   ReplyInput: function() {
     return p
@@ -77,11 +77,11 @@ function p(e) {
     className: I
   } = e, [T, S] = r.useState(""), [h, N] = r.useState((0, _.toRichValue)("")), p = () => {
     S(""), N((0, _.toRichValue)(""))
-  }, O = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT, R = r.useRef(null);
+  }, O = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT, C = r.useRef(null);
   return o && (O.emojis = {
     button: !0
   }), (0, i.jsx)(c.default, {
-    ref: R,
+    ref: C,
     placeholder: t,
     className: s()(A.replyInput, I),
     showRemainingCharsAfterCount: -1,
@@ -113,8 +113,8 @@ function p(e) {
     emojiPickerCloseOnModalOuterClick: !0,
     disabled: !1,
     autoCompletePosition: (() => {
-      if (null == R.current) return "top";
-      let e = R.current.getBoundingClientRect(),
+      if (null == C.current) return "top";
+      let e = C.current.getBoundingClientRect(),
         t = window.innerHeight;
       return e.top < t / 2 ? "bottom" : "top"
     })(),
@@ -135,7 +135,7 @@ let O = (e, t) => {
       }
     }, [e, t])
   },
-  R = e => {
+  C = e => {
     let {
       onSelectEmoji: t,
       onClick: n
@@ -186,7 +186,7 @@ t.default = e => {
   return O(() => c(!1), E), (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)("div", {
       className: A.reactions,
-      children: [u && (0, i.jsx)(R, {
+      children: [u && (0, i.jsx)(C, {
         onSelectEmoji: e => {
           null != e && t({
             interactionType: f.AtomicReactorInteractionTypes.ReactSubmit,

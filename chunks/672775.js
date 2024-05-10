@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("546735"),
-  i = n("754961"),
-  l = n("590190");
+  l = n("754961"),
+  i = n("590190");
 
 function r(e) {
   let {
@@ -32,8 +32,8 @@ function r(e) {
     brandPrimaryColor: m
   } = n;
   return (0, a.jsxs)("div", {
-    className: l.navigation,
-    children: [(0, a.jsx)(i.ClanSetupProgress, {
+    className: i.navigation,
+    children: [(0, a.jsx)(l.ClanSetupProgress, {
       animationStyle: o,
       className: u,
       steps: t,
@@ -41,7 +41,7 @@ function r(e) {
       furthestStepIndex: C,
       onStepClick: d,
       stepFillColor: m
-    }), (0, a.jsx)(i.ClanSetupProgressButtons, {
+    }), (0, a.jsx)(l.ClanSetupProgressButtons, {
       isBackDisabled: h,
       isNextDisabled: E,
       onNextClick: c,

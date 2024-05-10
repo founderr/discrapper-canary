@@ -71,12 +71,12 @@ let h = e => {
     O = r.useCallback(() => {
       p.dispatch(f.ComponentActions.POPOUT_SHOW)
     }, [p]),
-    R = r.useCallback(() => {
+    C = r.useCallback(() => {
       p.dispatch(f.ComponentActions.POPOUT_HIDE)
     }, [p]);
   return (0, i.jsx)(I.AppReferencePositionLayer, {
     onMount: O,
-    onUnmount: R,
+    onUnmount: C,
     targetRef: m,
     overrideTargetRect: c,
     position: null != E ? E : "right",

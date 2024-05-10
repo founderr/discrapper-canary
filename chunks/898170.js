@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("724458");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("392711"),
   o = n.n(r),
   u = n("442837"),
@@ -39,10 +39,10 @@ function m(e) {
   var t;
   let {
     animationClassName: n,
-    className: i,
+    className: l,
     quest: r,
     useReducedMotion: o
-  } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), m = s.useRef(null), [S, p] = s.useState(!1), g = s.useMemo(() => {
+  } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), m = s.useRef(null), [S, p] = s.useState(!1), I = s.useMemo(() => {
     if (null == r) return null;
     let e = (0, f.hexToRgb)(r.config.colors.primary),
       t = {
@@ -52,7 +52,7 @@ function m(e) {
       },
       n = h.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
     return C(r.id, n)
-  }, [r]), I = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !o && _;
+  }, [r]), g = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !o && _;
   s.useEffect(() => {
     var e, t, n, a;
     _ ? T && (null === (a = m.current) || void 0 === a || null === (n = a.animation) || void 0 === n || n.play()) : null === (t = m.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
@@ -60,19 +60,19 @@ function m(e) {
   let A = s.useCallback(() => {
     p(!0)
   }, []);
-  return null == g || I ? (0, a.jsx)("div", {
+  return null == I || g ? (0, a.jsx)("div", {
     className: E.backgroundFallback,
     style: {
       backgroundImage: "linear-gradient(90deg, ".concat(r.config.colors.primary, ", ").concat(r.config.colors.secondary, ")")
     }
   }) : (0, a.jsx)("div", {
-    className: l()(E.lottieAnimationBackgroundWrapper, i),
+    className: i()(E.lottieAnimationBackgroundWrapper, l),
     children: (0, a.jsx)(c.default, {
       ref: m,
       onComplete: A,
-      importData: () => g,
+      importData: () => I,
       shouldAnimate: !S && T,
-      className: l()(E.lottieAnimation, E.lottieAnimationBackground, n),
+      className: i()(E.lottieAnimation, E.lottieAnimationBackground, n),
       loop: 0,
       rendererSettings: {
         preserveAspectRatio: "none"

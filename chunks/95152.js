@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return C
   }
 }), n("47120"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648");
 var i = n("735250"),
@@ -251,7 +251,7 @@ class O extends r.Component {
   }
 }
 
-function R(e) {
+function C(e) {
   let t = (0, _.default)();
   return e.upload.item.platform !== u.UploadPlatform.WEB ? null : (0, i.jsx)(O, {
     ...e,

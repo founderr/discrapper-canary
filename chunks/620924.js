@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("913527");
 var a = n("442837"),
   s = n("91159"),
-  i = n("306680"),
-  l = n("709054"),
+  l = n("306680"),
+  i = n("709054"),
   r = n("868807");
 
 function o(e) {
@@ -18,9 +18,9 @@ function o(e) {
         message: n,
         loaded: a
       } = e;
-      return a && null != n ? l.default.extractTimestamp(n.id) : null != t ? l.default.extractTimestamp(t) : null
+      return a && null != n ? i.default.extractTimestamp(n.id) : null != t ? i.default.extractTimestamp(t) : null
     }({
-      lastMessageId: (0, a.useStateFromStores)([i.default], () => i.default.lastMessageId(e.id)),
+      lastMessageId: (0, a.useStateFromStores)([l.default], () => l.default.lastMessageId(e.id)),
       ...t
     });
   return null == n ? "" : (0, s.getTimestampString)(n)

@@ -36,23 +36,23 @@ t.default = function(e) {
     setConfettiCount: N,
     setShouldFireConfetti: p,
     tier: O,
-    tierMarkerAnimationPosition: R
-  } = e, C = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), {
+    tierMarkerAnimationPosition: C
+  } = e, R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), {
     analyticsLocations: g
-  } = (0, d.default)(), L = f.AppliedGuildBoostsRequiredForBoostedGuildTier[O] - r.premiumSubscriberCount, v = O <= R || m, D = v && O <= r.premiumTier, M = v && O < r.premiumTier, y = v && O === r.premiumTier, {
+  } = (0, d.default)(), L = f.AppliedGuildBoostsRequiredForBoostedGuildTier[O] - r.premiumSubscriberCount, v = O <= C || m, D = v && O <= r.premiumTier, M = v && O < r.premiumTier, y = v && O === r.premiumTier, {
     scaleFactor: P
   } = (0, s.useSpring)({
     from: {
       scaleFactor: 0
     },
     to: {
-      scaleFactor: R >= O || m && R + 1 === O || m && -1 === R && O === f.BoostedGuildTiers.NONE ? 1 : 0
+      scaleFactor: C >= O || m && C + 1 === O || m && -1 === C && O === f.BoostedGuildTiers.NONE ? 1 : 0
     },
     config: {
       tension: 360,
       friction: 12
     },
-    immediate: C
+    immediate: R
   }), U = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(s.animated.div, {
       className: h.progressBarMarkerIndicator,

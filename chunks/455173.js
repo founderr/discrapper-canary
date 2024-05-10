@@ -1,16 +1,16 @@
 "use strict";
 n.r(t);
-var a, s, i, l, r = n("442837"),
+var a, s, l, i, r = n("442837"),
   o = n("570140"),
   u = n("292556"),
   d = n("812206");
-class c extends(l = r.default.Store) {}
-i = "UserAchievementStore", (s = "displayName") in(a = c) ? Object.defineProperty(a, s, {
-  value: i,
+class c extends(i = r.default.Store) {}
+l = "UserAchievementStore", (s = "displayName") in(a = c) ? Object.defineProperty(a, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = i;
+}) : a[s] = l;
 new c(o.default, {
   USER_ACHIEVEMENT_UPDATE: function(e) {
     let {

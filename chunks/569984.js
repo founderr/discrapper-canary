@@ -7,9 +7,9 @@ var I, T, f, S, h = n("887003"),
   N = n("497505"),
   p = n("918701"),
   O = n("5881"),
-  R = n("46140");
+  C = n("46140");
 
-function C() {
+function R() {
   i = !1, r = new Map, a = 0, s = new Set, o = new Set, l = new Set, u = new Set, d = new Set, _ = new Map, c = new Map, E = new Map
 }
 
@@ -48,7 +48,7 @@ function v(e, t) {
     }
   })
 }
-C();
+R();
 
 function D(e) {
   null != E.get(e) && (E = new Map(E)).delete(e)
@@ -108,7 +108,7 @@ S = "QuestsStore", (f = "displayName") in(T = P) ? Object.defineProperty(T, f, {
   writable: !0
 }) : T[f] = S, t.default = new P(m.default, {
   LOGOUT: function() {
-    C()
+    R()
   },
   QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
     a = Date.now(), i = !0
@@ -118,7 +118,7 @@ S = "QuestsStore", (f = "displayName") in(T = P) ? Object.defineProperty(T, f, {
       quests: t
     } = e;
     for (let e of (i = !1, r = new Map, t)) r.set(e.id, e), e.targetedContent.includes(N.QuestContent.QUEST_BAR) && (0, O.getQuestLogger)({
-      location: R.QuestsExperimentLocations.QUESTS_STORE
+      location: C.QuestsExperimentLocations.QUESTS_STORE
     }).log("Delivered ".concat(e.config.messages.questName, " (").concat(e.id, ")"))
   },
   QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function() {

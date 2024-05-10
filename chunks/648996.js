@@ -32,10 +32,10 @@ function O(e) {
     className: a,
     inputClassName: o,
     onSend: O
-  } = e, R = r.useRef(null), C = (0, u.useStateFromStores)([S.default], () => S.default.isBlocked(t.id)), g = r.useCallback(e => {
+  } = e, C = r.useRef(null), R = (0, u.useStateFromStores)([S.default], () => S.default.isBlocked(t.id)), g = r.useCallback(e => {
     if ("Enter" === e.key) {
-      e.preventDefault(), l()(null != R.current, "Keypress on Input when not mounted");
-      let n = R.current.value.trim();
+      e.preventDefault(), l()(null != C.current, "Keypress on Input when not mounted");
+      let n = C.current.value.trim();
       return (0, A.applyChatRestrictions)({
         type: I.ChatInputTypes.NORMAL,
         content: n,
@@ -51,17 +51,17 @@ function O(e) {
       }), !0
     }
     e.which === m.KeyboardKeys.SPACE && e.stopPropagation()
-  }, [t, O]), L = C ? N.default.Messages.QUICK_DM_BLOCKED : N.default.Messages.QUICK_DM_USER.format({
+  }, [t, O]), L = R ? N.default.Messages.QUICK_DM_BLOCKED : N.default.Messages.QUICK_DM_USER.format({
     name: h.default.getName(t)
   });
   return (0, i.jsx)(d.TextInput, {
     className: a,
     inputClassName: s()(o, p.input),
-    inputRef: R,
+    inputRef: C,
     autoFocus: n,
     placeholder: L,
     "aria-label": L,
     onKeyPress: g,
-    disabled: C
+    disabled: R
   })
 }

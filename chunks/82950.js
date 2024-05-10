@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  i = n("392711"),
-  l = n.n(i),
+  l = n("392711"),
+  i = n.n(l),
   r = n("481060"),
   o = n("367907"),
   u = n("465670"),
@@ -13,20 +13,20 @@ var a = n("735250"),
   E = n("981631"),
   h = n("689938"),
   _ = n("361114");
-let C = l().debounce(o.default.trackWithMetadata, 500),
+let C = i().debounce(o.default.trackWithMetadata, 500),
   m = e => {
     let {
       guild: t,
       title: n,
-      message: i,
-      image: l,
+      message: l,
+      image: i,
       type: c,
       imageMarginX: f,
       imageMarginTop: m,
       trackingSource: S,
       undismissable: p,
-      onDismissed: g,
-      onClick: I,
+      onDismissed: I,
+      onClick: g,
       cta: T,
       ctaColor: A
     } = e;
@@ -45,7 +45,7 @@ let C = l().debounce(o.default.trackWithMetadata, 500),
           source: S,
           guild_id: t.id,
           notice_type: c
-        }), null == I || I()
+        }), null == g || g()
       },
       fullWidth: !0,
       color: A,
@@ -58,7 +58,7 @@ let C = l().debounce(o.default.trackWithMetadata, 500),
         onClick: () => {
           o.default.trackWithMetadata(E.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: c
-          }), null == g || g()
+          }), null == I || I()
         },
         className: _.close,
         "aria-label": h.default.Messages.DISMISS,
@@ -74,7 +74,7 @@ let C = l().debounce(o.default.trackWithMetadata, 500),
         },
         children: (0, a.jsx)("img", {
           className: _.image,
-          src: l,
+          src: i,
           alt: ""
         })
       }), (0, a.jsxs)("div", {
@@ -85,7 +85,7 @@ let C = l().debounce(o.default.trackWithMetadata, 500),
           children: n
         }) : null, (0, a.jsx)(r.Text, {
           variant: "text-sm/normal",
-          children: i
+          children: l
         }), N]
       })]
     })

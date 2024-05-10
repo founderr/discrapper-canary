@@ -25,8 +25,8 @@ let u = r.memo(r.forwardRef((e, t) => {
     listHeaderHeight: N,
     stickyHeaders: p = !1,
     className: O,
-    hideScrollbar: R = !1,
-    fade: C = !1,
+    hideScrollbar: C = !1,
+    fade: R = !1,
     initialScrollTop: g = 0,
     role: L = "list"
   } = e, [v, D] = r.useState(-1), [M, y] = r.useState(-1), P = r.useRef(null), U = r.useRef(0), b = r.useRef(-1);
@@ -273,9 +273,9 @@ let u = r.memo(r.forwardRef((e, t) => {
     }
   }, [Z, u]), Q = r.useMemo(() => ({
     height: H
-  }), [H]), q = R ? o.AdvancedScrollerNone : o.AdvancedScrollerThin;
+  }), [H]), q = C ? o.AdvancedScrollerNone : o.AdvancedScrollerThin;
   return (0, i.jsxs)(q, {
-    fade: C,
+    fade: R,
     className: s()(l.scroller, O),
     ref: P,
     onScroll: K,

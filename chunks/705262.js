@@ -26,8 +26,8 @@ var i, r, a = n("735250"),
   N = n("639119"),
   p = n("165583"),
   O = n("587446"),
-  R = n("781391"),
-  C = n("210887"),
+  C = n("781391"),
+  R = n("210887"),
   g = n("740492"),
   L = n("301822"),
   v = n("153124"),
@@ -151,7 +151,7 @@ z.Basic = e => {
     delay: n
   } = s.useContext(Y), {
     analyticsLocations: i
-  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([C.default, g.default, y.default], () => [C.default.theme, null == y.default.gradientPreset, g.default.useSystemTheme === B.SystemThemeState.ON]), _ = e => {
+  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([R.default, g.default, y.default], () => [R.default.theme, null == y.default.gradientPreset, g.default.useSystemTheme === B.SystemThemeState.ON]), _ = e => {
     (0, M.resetBackgroundGradientPreset)(), j({
       isPersisted: !0,
       analyticsLocations: i,
@@ -197,7 +197,7 @@ z.Basic = e => {
     delay: c
   } = s.useContext(Y), {
     analyticsLocations: S
-  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [O, C, g] = (0, d.useStateFromStoresArray)([y.default], () => {
+  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [O, R, g] = (0, d.useStateFromStoresArray)([y.default], () => {
     var e;
     return [y.default.isPreview, y.default.isCoachmark, null === (e = y.default.gradientPreset) || void 0 === e ? void 0 : e.id]
   }), [v, D] = s.useState(!1), [b, k] = s.useState(-1), V = (0, d.useStateFromStores)([I.default], () => I.default.useReducedMotion), {
@@ -221,7 +221,7 @@ z.Basic = e => {
     if (null != n && !(0, h.isDismissibleContentDismissed)(n) && (0, h.markDismissibleContentAsDismissed)(n, {
         dismissAction: G.ContentDismissActionType.TAKE_ACTION
       }), O) {
-      (0, R.setUseSystemTheme)(B.SystemThemeState.OFF);
+      (0, C.setUseSystemTheme)(B.SystemThemeState.OFF);
       return
     }
     if ((0, E.saveClientTheme)({
@@ -250,11 +250,11 @@ z.Basic = e => {
         children: [(0, a.jsx)(W, {
           type: u,
           isPreview: O,
-          isCoachmark: C
+          isCoachmark: R
         }), (0, a.jsx)(K, {
           type: u,
           isPreview: O,
-          isCoachmark: C
+          isCoachmark: R
         })]
       }), null == o ? void 0 : o()]
     }), (0, a.jsxs)("div", {

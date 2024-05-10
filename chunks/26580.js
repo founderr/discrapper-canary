@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("481060"),
   o = n("393238"),
   u = n("626135"),
@@ -22,11 +22,11 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       text: t,
       onClick: n,
       className: s,
-      hide: i
+      hide: l
     } = e;
     return (0, a.jsx)("li", {
-      className: l()(c.tag, s, {
-        [c.hide]: i
+      className: i()(c.tag, s, {
+        [c.hide]: l
       }),
       children: (0, a.jsx)(r.Clickable, {
         className: c.tagText,
@@ -41,19 +41,19 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
     let {
       tags: t,
       onTagClick: n,
-      guildId: i,
-      section: l
+      guildId: l,
+      section: i
     } = e;
     return s.useEffect(() => {
       u.default.track(d.AnalyticEvents.OPEN_POPOUT, {
         type: "Discovery Tags Overflow",
-        guild_id: i,
+        guild_id: l,
         location: {
           page: d.AnalyticsPages.GUILD_DISCOVERY,
-          section: l
+          section: i
         }
       })
-    }, [i, l]), (0, a.jsx)(r.Dialog, {
+    }, [l, i]), (0, a.jsx)(r.Dialog, {
       className: c.overflowTagsPopout,
       children: (0, a.jsx)("ul", {
         children: t.map(e => (0, a.jsx)(E, {
@@ -92,7 +92,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
     let {
       tags: t,
       onTagClick: n,
-      className: i,
+      className: l,
       discoveryTagStyle: r = C.DEFAULT,
       hideOverflow: u = !1,
       guildId: d,
@@ -100,32 +100,32 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
     } = e, {
       ref: m,
       width: S
-    } = (0, o.default)(), [p, g] = s.useState(null), I = t.filter(e => !f.includes(e.toLowerCase()));
+    } = (0, o.default)(), [p, I] = s.useState(null), g = t.filter(e => !f.includes(e.toLowerCase()));
     return s.useLayoutEffect(() => {
       if (null == m.current || null == S || 0 === S) return;
       let e = 0,
         t = 0,
         n = S - 40 - 4;
-      for (let a = 0; a < I.length && (t += m.current.children[a].clientWidth + 4, a === I.length - 1 ? !(t > n + 40) : !(t > n)); a++) {
+      for (let a = 0; a < g.length && (t += m.current.children[a].clientWidth + 4, a === g.length - 1 ? !(t > n + 40) : !(t > n)); a++) {
         ;
         e++
       }
-      g(t => e <= I.length ? e : t)
-    }, [S, m, I]), (0, a.jsxs)("ul", {
+      I(t => e <= g.length ? e : t)
+    }, [S, m, g]), (0, a.jsxs)("ul", {
       ref: m,
-      className: l()(c.tagContainer, i, {
+      className: i()(c.tagContainer, l, {
         [c.invisible]: null == p
       }),
-      children: [I.map((e, t) => (0, a.jsx)(E, {
+      children: [g.map((e, t) => (0, a.jsx)(E, {
         className: r,
         onClick: () => n(e),
         hide: null != p && t >= p,
         text: e
-      }, e)), !u && null != p && p < I.length && (0, a.jsx)(_, {
+      }, e)), !u && null != p && p < g.length && (0, a.jsx)(_, {
         className: r,
         onTagClick: n,
-        tags: I.slice(p),
-        count: I.length - p,
+        tags: g.slice(p),
+        count: g.length - p,
         guildId: d,
         section: h
       })]

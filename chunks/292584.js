@@ -24,7 +24,7 @@ let h = new Set,
     return null != e.viewers && (t = 2), [p.BROADCASTS_BY_USER_ID(e.userId), p.BROADCASTS_BY_CHANNEL_ID(e.channelId), p.BROADCASTS_BY_VALIDITY(t)]
   }, e => e.channelId);
 
-function R(e, t, n) {
+function C(e, t, n) {
   if (I.default.getId() === e) return !1;
   if (null == t) {
     let t = O.get(e);
@@ -34,7 +34,7 @@ function R(e, t, n) {
   O.set(e, i)
 }
 
-function C(e) {
+function R(e) {
   return null != e ? {
     type: S.BroadcastSourceType.GUILD,
     guildId: e
@@ -75,7 +75,7 @@ l = "BroadcastingStore", (o = "displayName") in(s = g) ? Object.defineProperty(s
         broadcast: n,
         guildId: i
       } = e;
-      R(t.id, n, C(i))
+      C(t.id, n, R(i))
     })
   },
   PRESENCES_REPLACE: function(e) {
@@ -88,7 +88,7 @@ l = "BroadcastingStore", (o = "displayName") in(s = g) ? Object.defineProperty(s
         broadcast: n,
         guildId: i
       } = e;
-      R(t.id, n, C(i))
+      C(t.id, n, R(i))
     })
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
@@ -102,7 +102,7 @@ l = "BroadcastingStore", (o = "displayName") in(s = g) ? Object.defineProperty(s
         broadcast: n,
         guildId: i
       } = e;
-      R(t.id, n, C(i))
+      C(t.id, n, R(i))
     }), n.forEach(e => {
       let {
         presences: t,
@@ -113,7 +113,7 @@ l = "BroadcastingStore", (o = "displayName") in(s = g) ? Object.defineProperty(s
           user: t,
           broadcast: i
         } = e;
-        R(t.id, i, C(n))
+        C(t.id, i, R(n))
       })
     })
   },

@@ -28,12 +28,12 @@ function N(e) {
     className: t,
     disabled: n,
     renderCTAButtons: N
-  } = e, [p, O] = (0, a.useStateFromStoresArray)([E.default], () => [E.default.getCurrentDesktopIcon(), E.default.isEditorOpen]), R = r.useRef(null);
-  (0, _.default)(R, h.AppearanceScrollPositions.CUSTOM_APP_ICONS);
-  let C = (0, c.useUID)(),
+  } = e, [p, O] = (0, a.useStateFromStoresArray)([E.default], () => [E.default.getCurrentDesktopIcon(), E.default.isEditorOpen]), C = r.useRef(null);
+  (0, _.default)(C, h.AppearanceScrollPositions.CUSTOM_APP_ICONS);
+  let R = (0, c.useUID)(),
     g = (0, s.useRadioGroup)({
       orientation: "horizontal",
-      labelledBy: C
+      labelledBy: R
     }),
     L = e => {
       o.default.dispatch({
@@ -56,7 +56,7 @@ function N(e) {
       return null != t && !(0, l.isDismissibleContentDismissed)(t)
     };
   return (0, i.jsx)("div", {
-    ref: R,
+    ref: C,
     children: (0, i.jsx)("div", {
       ...g,
       className: m.__invalid_container,

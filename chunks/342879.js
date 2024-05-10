@@ -71,7 +71,7 @@ function O(e) {
   } = e;
   if (null != t)(0, l.isEligibleForListenedMediaInventory)("ContentInventoryManager.handleSpotifyNewTrack") && (0, u.postTrackToContentInventory)(t, n)
 }
-class R extends r.default {
+class C extends r.default {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
@@ -90,4 +90,4 @@ class R extends r.default {
     }) : t[n] = i
   }
 }
-t.default = new R
+t.default = new C

@@ -25,8 +25,8 @@ var i = n("990547"),
   N = n("430824"),
   p = n("944486"),
   O = n("914010"),
-  R = n("594174"),
-  C = n("626135"),
+  C = n("594174"),
+  R = n("626135"),
   g = n("700785"),
   L = n("74538"),
   v = n("573261"),
@@ -64,7 +64,7 @@ async function G(e) {
       lurkLocation: c
     } = u,
     E = null !== (t = u.lurker) && void 0 !== t && t,
-    T = R.default.getCurrentUser();
+    T = C.default.getCurrentUser();
   if (null !== (i = null == T ? void 0 : T.hasFlag(M.UserFlags.QUARANTINED)) && void 0 !== i && i) return (0, I.default)(), new Promise((e, t) => t(Error()));
   s.default.wait(() => s.default.dispatch({
     type: "GUILD_JOIN",
@@ -115,7 +115,7 @@ async function G(e) {
     return r
   } catch (t) {
     if ((null === (r = t.body) || void 0 === r ? void 0 : r.code) === M.AbortCodes.TOO_MANY_USER_GUILDS) {
-      let e = R.default.getCurrentUser();
+      let e = C.default.getCurrentUser();
       L.default.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? P(M.MAX_USER_GUILDS_PREMIUM) : P(M.MAX_USER_GUILDS)
     }
     throw (null === (o = t.body) || void 0 === o ? void 0 : o.code) === M.AbortCodes.GUILD_AT_CAPACITY && b(), E && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === M.AbortCodes.UNKNOWN_GUILD && U(e), t
@@ -360,7 +360,7 @@ t.default = {
     })
   },
   createGuildFolderLocal(e, t) {
-    C.default.track(M.AnalyticEvents.GUILD_FOLDER_CREATED), s.default.dispatch({
+    R.default.track(M.AnalyticEvents.GUILD_FOLDER_CREATED), s.default.dispatch({
       type: "GUILD_FOLDER_CREATE_LOCAL",
       sourceIds: e,
       name: t
@@ -382,7 +382,7 @@ t.default = {
   },
   toggleGuildFolderExpand(e) {
     let t = A.default.isFolderExpanded(e);
-    C.default.track(M.AnalyticEvents.GUILD_FOLDER_CLICKED, {
+    R.default.track(M.AnalyticEvents.GUILD_FOLDER_CLICKED, {
       source: "sidebar",
       action: t ? "collapsed" : "expanded"
     }), s.default.dispatch({

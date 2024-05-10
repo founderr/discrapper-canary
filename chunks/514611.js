@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var a, s = n("735250"),
-  i = n("470079"),
-  l = n("120356"),
-  r = n.n(l),
+  l = n("470079"),
+  i = n("120356"),
+  r = n.n(i),
   o = n("622535"),
   u = n("481060"),
   d = n("239091"),
@@ -16,8 +16,8 @@ var a, s = n("735250"),
   m = n("768581"),
   S = n("900849"),
   p = n("940627"),
-  g = n("806519"),
-  I = n("981631"),
+  I = n("806519"),
+  g = n("981631"),
   T = n("689938"),
   A = n("785518"),
   N = n("129512"),
@@ -32,13 +32,13 @@ function L(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class O extends(a = i.PureComponent) {
+class O extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
     if (t) return R;
     switch (e) {
-      case I.ThemeTypes.DARK:
+      case g.ThemeTypes.DARK:
         return N;
-      case I.ThemeTypes.LIGHT:
+      case g.ThemeTypes.LIGHT:
         return v
     }
   }
@@ -48,9 +48,9 @@ class O extends(a = i.PureComponent) {
       guild: t,
       className: n,
       theme: a,
-      onTagClick: i
+      onTagClick: l
     } = this.props, {
-      loaded: l,
+      loaded: i,
       hasBeenSeen: d,
       isVisible: N,
       submitting: v
@@ -60,7 +60,7 @@ class O extends(a = i.PureComponent) {
       presenceCount: O,
       memberCount: M,
       keywords: y
-    } = t, P = null === (e = t.features) || void 0 === e ? void 0 : e.has(I.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
+    } = t, P = null === (e = t.features) || void 0 === e ? void 0 : e.has(g.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
@@ -99,8 +99,8 @@ class O extends(a = i.PureComponent) {
         threshold: .55,
         children: (0, s.jsxs)("div", {
           className: r()(n, {
-            [A.loaded]: l,
-            [A.loading]: !l
+            [A.loaded]: i,
+            [A.loading]: !i
           }),
           children: [v ? (0, s.jsx)(u.Spinner, {
             type: u.Spinner.Type.PULSING_ELLIPSIS,
@@ -133,14 +133,14 @@ class O extends(a = i.PureComponent) {
                 })
               }) : null, (0, s.jsx)("div", {
                 className: A.guildIcon,
-                children: (0, s.jsx)(g.default, {
-                  mask: g.default.Masks.SQUIRCLE,
+                children: (0, s.jsx)(I.default, {
+                  mask: I.default.Masks.SQUIRCLE,
                   width: 48,
                   height: 48,
                   children: (0, s.jsx)("div", {
                     className: A.iconMask,
-                    children: (0, s.jsx)(g.default, {
-                      mask: g.default.Masks.SQUIRCLE,
+                    children: (0, s.jsx)(I.default, {
+                      mask: I.default.Masks.SQUIRCLE,
                       width: 40,
                       height: 40,
                       children: (0, s.jsx)("img", {
@@ -170,9 +170,9 @@ class O extends(a = i.PureComponent) {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: L
-              }), U && null != y && null != i && (0, s.jsx)(E.DiscoveryTags, {
+              }), U && null != y && null != l && (0, s.jsx)(E.DiscoveryTags, {
                 tags: y,
-                onTagClick: e => i(e, t.id),
+                onTagClick: e => l(e, t.id),
                 guildId: t.id,
                 section: S.AnalyticsContexts.POPULAR
               }), (0, s.jsxs)("div", {

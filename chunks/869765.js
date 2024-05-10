@@ -131,14 +131,14 @@ function O(e) {
   return p(t, e => N(e))
 }
 
-function R(e) {
+function C(e) {
   let {
     messages: t
   } = e;
   return p(t, e => p(e, e => N(e)))
 }
 
-function C(e) {
+function R(e) {
   return m.deleteChannelCache(e.channel.id)
 }
 
@@ -186,8 +186,8 @@ f(D, "displayName", "ReferencedMessageStore"), t.default = new D(u.default, {
   LOCAL_MESSAGES_LOADED: O,
   LOAD_MESSAGES_SUCCESS: O,
   LOAD_MESSAGES_AROUND_SUCCESS: O,
-  SEARCH_FINISH: R,
-  MOD_VIEW_SEARCH_FINISH: R,
+  SEARCH_FINISH: C,
+  MOD_VIEW_SEARCH_FINISH: C,
   GUILD_FEED_FETCH_SUCCESS: function(e) {
     let {
       data: t
@@ -261,8 +261,8 @@ f(D, "displayName", "ReferencedMessageStore"), t.default = new D(u.default, {
       message: t
     })
   },
-  CHANNEL_DELETE: C,
-  THREAD_DELETE: C,
+  CHANNEL_DELETE: R,
+  THREAD_DELETE: R,
   GUILD_DELETE: function() {
     if (0 === m.retainWhere(e => null != E.default.getChannel(e))) return !1
   },

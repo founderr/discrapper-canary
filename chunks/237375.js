@@ -105,10 +105,10 @@ function S(e) {
     }, [d, u]),
     O = null != d ? null == h ? void 0 : h[d] : null;
   o = null != O && (null === (t = O.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = O.lastValidationResult.error) && void 0 !== n ? n : "" : null;
-  let R = S && null != m ? (0, _.getIconComponent)(m) : null;
+  let C = S && null != m ? (0, _.getIconComponent)(m) : null;
   return (0, i.jsxs)("div", {
     className: s()(I.wrapper, N ? null : I.disabled),
-    children: [null != R ? (0, i.jsx)(R, {
+    children: [null != C ? (0, i.jsx)(C, {
       className: I.image,
       channel: E,
       section: m,

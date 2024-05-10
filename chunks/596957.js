@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("442837"),
   o = n("481060"),
   u = n("758059"),
@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("974042"),
   S = n("451478"),
   p = n("6048"),
-  g = n("390697"),
-  I = n("434184"),
+  I = n("390697"),
+  g = n("434184"),
   T = n("701861"),
   A = n("437314"),
   N = n("696577"),
@@ -34,11 +34,11 @@ t.default = function(e) {
     sectionFilter: t,
     titleId: n
   } = e, {
-    analyticsLocations: i
+    analyticsLocations: l
   } = (0, h.default)(E.default.FRIENDS_LIST), {
     rows: x,
     section: D
-  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, g.useIsClearIncomingFriendRequestsEnabled)(), [G, k] = s.useState(() => {
+  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, I.useIsClearIncomingFriendRequestsEnabled)(), [G, k] = s.useState(() => {
     let e = {};
     for (let t of Object.values(M.FriendsSections)) e[t] = "";
     return e
@@ -66,11 +66,11 @@ t.default = function(e) {
     V = B.filter(e => e.type === M.RelationshipTypes.PENDING_INCOMING).length,
     Y = t === M.FriendsSections.PENDING && V > 0 && j && V >= O.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
   return (0, a.jsx)(h.AnalyticsLocationProvider, {
-    value: i,
+    value: l,
     children: (0, a.jsxs)(c.default, {
       section: M.AnalyticsSections.FRIENDS_LIST,
       children: [(0, a.jsx)(p.default, {
-        className: l()(P.searchBar, H ? P.searchEmptyState : null),
+        className: i()(P.searchBar, H ? P.searchEmptyState : null),
         query: G[t],
         onChange: w,
         onClear: F,
@@ -125,7 +125,7 @@ t.default = function(e) {
         renderRow: function(e) {
           switch (t) {
             case M.FriendsSections.BLOCKED:
-              return (0, a.jsx)(I.default, {
+              return (0, a.jsx)(g.default, {
                 ...e,
                 isFocused: b
               });

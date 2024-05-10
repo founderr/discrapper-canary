@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("98650"),
   p = n("863840"),
   O = n("86813"),
-  R = n("826026"),
-  C = n("263704"),
+  C = n("826026"),
+  R = n("263704"),
   g = n("441674"),
   L = n("465670"),
   v = n("748585"),
@@ -50,7 +50,7 @@ let U = r.forwardRef(function(e, t) {
     onOpen: S,
     onClose: h,
     placeholder: N = D.default.Messages.SELECT,
-    wrapperClassName: C,
+    wrapperClassName: R,
     className: g,
     isDisabled: U = !1,
     maxVisibleItems: G = 7,
@@ -146,10 +146,10 @@ let U = r.forwardRef(function(e, t) {
     active: eE,
     loadableOptions: n,
     debounceTime: H
-  }), eR = r.useMemo(() => {
+  }), eC = r.useMemo(() => {
     var e, t;
     return e = eN, null == (t = a) ? [] : (Array.isArray(t) ? t : [t]).map(t => "object" == typeof t && (null == t || "value" in t) ? t : e.find(e => e.value === t)).filter(Boolean)
-  }, [eN, a]), eC = r.useMemo(() => eR.map(e => e.value), [eR]), eg = eR[eR.length - 1], eL = (0, p.default)(eg), ev = r.useId(), eD = r.useId(), eM = r.useId(), ey = r.useCallback(e => {
+  }, [eN, a]), eR = r.useMemo(() => eC.map(e => e.value), [eC]), eg = eC[eC.length - 1], eL = (0, p.default)(eg), ev = r.useId(), eD = r.useId(), eM = r.useId(), ey = r.useCallback(e => {
     eE !== e && !U && (eI(e), e ? null == S || S() : null == h || h())
   }, [U, h, S, eE]), eP = r.useCallback(e => {
     eE && !e && ey(!1)
@@ -226,7 +226,7 @@ let U = r.forwardRef(function(e, t) {
     !eE && (I ? ef("") : null != eg && ef(eg.label))
   }, [I, eg, eE]), r.useLayoutEffect(() => {
     I && ef("")
-  }, [I, eR.length]);
+  }, [I, eC.length]);
   let ex = r.useCallback(function(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (null == e) {
@@ -292,7 +292,7 @@ let U = r.forwardRef(function(e, t) {
           listId: ev,
           maxVisibleItems: G,
           width: eu,
-          selectedValues: eC,
+          selectedValues: eR,
           closePopout: t,
           onSelect: ex,
           closeOnSelect: T,
@@ -313,13 +313,13 @@ let U = r.forwardRef(function(e, t) {
         } = e, {
           isShown: a,
           position: o
-        } = t, l = a ? R.default : O.default, {
+        } = t, l = a ? C.default : O.default, {
           ref: u,
           onKeyDown: E
         } = eB.containerProps;
         return (0, i.jsxs)("div", {
           ref: em,
-          className: s()(C, M.wrapper),
+          className: s()(R, M.wrapper),
           style: {
             "--icons-width": "".concat(er, "px")
           },
@@ -354,7 +354,7 @@ let U = r.forwardRef(function(e, t) {
                 }),
                 children: (0, i.jsx)(ej, {
                   query: eT,
-                  selectedOptions: eR,
+                  selectedOptions: eC,
                   loading: ep,
                   renderOptionPrefix: W,
                   renderOptionSuffix: K,
@@ -399,7 +399,7 @@ let U = r.forwardRef(function(e, t) {
               [M.iconsContainer]: !J
             }),
             ref: ei,
-            children: [d && (null != eT && "" !== eT || eR.length > 0) ? (0, i.jsx)(_.Clickable, {
+            children: [d && (null != eT && "" !== eT || eC.length > 0) ? (0, i.jsx)(_.Clickable, {
               "aria-label": D.default.Messages.CLEAR,
               "aria-controls": eM,
               onClick: eF,
@@ -445,8 +445,8 @@ function b(e) {
     multi: m,
     popoutPosition: p,
     closeOnSelect: O,
-    renderOptionPrefix: R = () => null,
-    renderOptionSuffix: C = () => null
+    renderOptionPrefix: C = () => null,
+    renderOptionSuffix: R = () => null
   } = e, g = r.useRef(null), L = r.useCallback(e => {
     t(e), O && n()
   }, [O, n, t]);
@@ -518,11 +518,11 @@ function b(e) {
             value: r.value,
             label: s,
             onSelect: L,
-            prefix: R(r, {
+            prefix: C(r, {
               inPill: !1,
               inDropdown: !0
             }),
-            suffix: C(r, {
+            suffix: R(r, {
               inPill: !1,
               inDropdown: !0
             })
@@ -641,7 +641,7 @@ function k(e) {
       [M.checked]: t,
       [M.unchecked]: !t
     }),
-    children: t && (0, i.jsx)(C.default, {
+    children: t && (0, i.jsx)(R.default, {
       foreground: M.multiSelectCheck
     })
   }) : t ? (0, i.jsx)(g.default, {

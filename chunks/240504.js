@@ -1,9 +1,9 @@
 "use strict";
 n.r(t);
 var a, s = n("442837"),
-  i = n("570140");
+  l = n("570140");
 
-function l(e, t, n) {
+function i(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -37,7 +37,7 @@ class f extends(a = s.default.PersistedStore) {
     return d
   }
 }
-l(f, "displayName", "PerksRelevanceStore"), l(f, "persistKey", "PerksRelevanceStore"), t.default = new f(i.default, {
+i(f, "displayName", "PerksRelevanceStore"), i(f, "persistKey", "PerksRelevanceStore"), t.default = new f(l.default, {
   BILLING_PERKS_RELEVANCE_FETCH_START: function() {
     c.hasFetchedRelevance = !0
   },

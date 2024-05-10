@@ -25,7 +25,7 @@ t.default = function(e) {
     analyticsLocation: t,
     guild: n,
     onClose: O
-  } = e, [R, C] = r.useState(!0), g = r.useRef(!1), L = (0, a.useLazyValue)(() => Date.now()), {
+  } = e, [C, R] = r.useState(!0), g = r.useRef(!1), L = (0, a.useLazyValue)(() => Date.now()), {
     analyticsLocations: v
   } = (0, u.default)(), D = r.useCallback(() => {
     O(), d.default.track(m.AnalyticEvents.MODAL_DISMISSED, {
@@ -83,7 +83,7 @@ t.default = function(e) {
           }), (0, i.jsx)(c.default, {
             guild: n,
             closeLayer: D,
-            onCtaVisibilityChange: C
+            onCtaVisibilityChange: R
           }), (0, i.jsx)(T.default, {
             guild: n
           }), (0, i.jsx)(f.default, {
@@ -112,7 +112,7 @@ t.default = function(e) {
       })]
     }), (0, i.jsx)(I.default, {
       guild: n,
-      isVisible: !R,
+      isVisible: !C,
       closeLayer: D
     })]
   })

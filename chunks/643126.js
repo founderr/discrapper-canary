@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("512722"),
   o = n.n(r),
   u = n("481060"),
@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("63063"),
   S = n("976401"),
   p = n("333454"),
-  g = n("864441"),
-  I = n("981631"),
+  I = n("864441"),
+  g = n("981631"),
   T = n("689938"),
   A = n("685054");
 
@@ -44,7 +44,7 @@ class R extends s.PureComponent {
   }
   renderTitle() {
     return (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(g.default, {
+      children: [(0, a.jsx)(I.default, {
         children: this.isHost() ? T.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
           count: this.props.party.length
         }) : T.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
@@ -67,7 +67,7 @@ class R extends s.PureComponent {
     return this.isHost() ? (0, a.jsx)(S.default, {
       tooltipText: T.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
       onClick: () => {
-        window.open(m.default.getArticleURL(I.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
+        window.open(m.default.getArticleURL(g.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
       },
       icon: C.default
     }) : null
@@ -95,10 +95,10 @@ class R extends s.PureComponent {
       let n;
       if (null == e) return null;
       let {
-        host: i,
+        host: l,
         onUserContextMenu: r
       } = this.props;
-      return n = (null == i ? void 0 : i.id) === e.id ? T.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : T.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, a.jsx)(u.Popout, {
+      return n = (null == l ? void 0 : l.id) === e.id ? T.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : T.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, a.jsx)(u.Popout, {
         preload: () => (0, c.maybeFetchUserProfileForPopout)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => (o()(null != e, ""), (0, a.jsx)(f.default, {
           ...t,
@@ -108,7 +108,7 @@ class R extends s.PureComponent {
         })),
         position: "top",
         align: "center",
-        children: i => (0, a.jsx)(u.Tooltip, {
+        children: l => (0, a.jsx)(u.Tooltip, {
           text: n,
           children: n => {
             let {
@@ -116,11 +116,11 @@ class R extends s.PureComponent {
               onMouseLeave: o
             } = n;
             return (0, s.createElement)(u.Avatar, {
-              ...i,
+              ...l,
               key: e.id,
               src: e.getAvatarURL(void 0, 24),
               size: u.AvatarSizes.SIZE_24,
-              className: l()(A.avatar, t),
+              className: i()(A.avatar, t),
               "aria-label": e.username,
               onMouseEnter: a,
               onMouseLeave: o,
@@ -138,7 +138,7 @@ class R extends s.PureComponent {
         children: n => (0, a.jsx)(u.Tooltip, {
           text: T.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
           children: s => (0, a.jsx)("div", {
-            className: l()(A.overflow, t),
+            className: i()(A.overflow, t),
             ...s,
             ...n,
             children: e

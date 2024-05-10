@@ -26,8 +26,8 @@ t.default = e => {
     emojiSize: n,
     onSelect: a,
     onInspect: O,
-    surrogateCodePoint: R,
-    getEmojiItemProps: C,
+    surrogateCodePoint: C,
+    getEmojiItemProps: R,
     getEmojiRowProps: g,
     isScrolling: L,
     isUsingKeyboardNavigation: v,
@@ -77,7 +77,7 @@ t.default = e => {
               tabIndex: E,
               onFocus: T,
               ...f
-            } = null !== (e = C(l, D)) && void 0 !== e ? e : {};
+            } = null !== (e = R(l, D)) && void 0 !== e ? e : {};
             return (0, r.createElement)("li", {
               ...f,
               key: t
@@ -121,13 +121,13 @@ t.default = e => {
             isInspected: o,
             isScrolling: L,
             isUsingKeyboardNavigation: v,
-            surrogateCodePoint: R,
+            surrogateCodePoint: C,
             allowAnimatedEmoji: M,
             selectedItemClassName: b,
             onSelect: a,
             onInspect: O,
             channelGuildId: P,
-            getEmojiItemProps: C,
+            getEmojiItemProps: R,
             isMediumSize: K,
             isLargeSize: W,
             pulseItemKey: H,

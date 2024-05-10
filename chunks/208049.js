@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   addFavoriteSound: function() {
-    return C
+    return R
   },
   deleteSound: function() {
-    return R
+    return C
   },
   maybeFetchSoundboardSounds: function() {
     return N
@@ -129,14 +129,14 @@ async function O(e) {
   });
   return (0, _.soundboardSoundFromAPI)(l.body, t)
 }
-async function R(e, t) {
+async function C(e, t) {
   await a.HTTP.del({
     url: I.Endpoints.GUILD_SOUNDBOARD_SOUND(e, t),
     oldFormErrors: !0
   })
 }
 
-function C(e) {
+function R(e) {
   u.FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", t => r().size(t.soundIds) >= T.MAX_FAVORITES ? (o.default.show({
     title: f.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
     body: f.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Modals: function() {
-    return R
+    return C
   },
   useModalContext: function() {
     return p
@@ -91,7 +91,7 @@ function p() {
 }
 let O = [];
 
-function R() {
+function C() {
   let e = p(),
     t = (0, T.useModalsStore)(t => void 0 !== t[e] ? t[e] : O),
     n = r.useRef();

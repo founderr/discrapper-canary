@@ -3,23 +3,23 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("960259"),
-  i = n("255418"),
-  l = n("325767");
+  l = n("255418"),
+  i = n("325767");
 t.default = (0, s.replaceIcon)(function(e) {
   let {
     width: t = 20,
     height: n = 16,
     color: s = "currentColor",
-    className: i,
+    className: l,
     foreground: r,
     ...o
   } = e;
   return (0, a.jsx)("svg", {
-    className: i,
+    className: l,
     width: t,
     height: n,
     viewBox: "0 0 20 16",
-    ...(0, l.default)(o),
+    ...(0, i.default)(o),
     children: (0, a.jsxs)("g", {
       fill: "none",
       fillRule: "evenodd",
@@ -33,6 +33,6 @@ t.default = (0, s.replaceIcon)(function(e) {
       })]
     })
   })
-}, i.XNeutralIcon, void 0, {
+}, l.XNeutralIcon, void 0, {
   size: 16
 })

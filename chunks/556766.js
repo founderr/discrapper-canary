@@ -40,12 +40,12 @@ t.default = () => {
   } = (0, u.useStateFromStoresObject)([f.default], () => ({
     currentChannelId: f.default.getChannelId(),
     selectedVoiceChannelId: f.default.getVoiceChannelId()
-  })), R = (0, u.useStateFromStoresArray)([h.default], () => h.default.getIncomingCalls().filter(i => {
+  })), C = (0, u.useStateFromStoresArray)([h.default], () => h.default.getIncomingCalls().filter(i => {
     let {
       channel: r
     } = i, s = e === r.id && a !== r.id && t === m.ActivityPanelModes.PANEL;
     return n !== r.id || s
-  })), C = (0, u.useStateFromStores)([h.default], () => h.default.hasIncomingCalls()), g = (0, u.useStateFromStores)([T.default], () => T.default.isSoundDisabled("call_ringing")), L = E.default.useIsRingtoneEligible(), v = E.default.useIsRingtoneDisabled(), D = (0, u.useStateFromStores)([S.default], () => S.default.disableSounds), M = (0, u.useStateFromStores)([I.default], () => I.default.getSoundpack()), y = r.useRef(!1), P = (0, o.useStableMemo)(() => {
+  })), R = (0, u.useStateFromStores)([h.default], () => h.default.hasIncomingCalls()), g = (0, u.useStateFromStores)([T.default], () => T.default.isSoundDisabled("call_ringing")), L = E.default.useIsRingtoneEligible(), v = E.default.useIsRingtoneDisabled(), D = (0, u.useStateFromStores)([S.default], () => S.default.disableSounds), M = (0, u.useStateFromStores)([I.default], () => I.default.getSoundpack()), y = r.useRef(!1), P = (0, o.useStableMemo)(() => {
     let e = "call_ringing";
     return L && !v ? (0, A.createSound)(c.default.ringtone, e) : M === N.Soundpacks.CLASSIC ? (0, A.createSound)(500 !== s().random(1, 1e3) ? "call_ringing" : s().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, A.createSoundForPack)("call_ringing", M)
   }, [M, v, L]);
@@ -56,8 +56,8 @@ t.default = () => {
       y.current && (P.stop(), y.current = !1);
       return
     }
-    C && !y.current ? (P.loop(), y.current = !0) : !C && y.current && (P.stop(), y.current = !1)
-  }, [g, D, C, P]), (0, l.useTransition)(R, {
+    R && !y.current ? (P.loop(), y.current = !0) : !R && y.current && (P.stop(), y.current = !1)
+  }, [g, D, R, P]), (0, l.useTransition)(C, {
     keys: e => {
       var t;
       return null === (t = e.channel) || void 0 === t ? void 0 : t.id

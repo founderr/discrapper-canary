@@ -21,8 +21,8 @@ var i = n("278074"),
   N = n("539573"),
   p = n("826581"),
   O = n("409059"),
-  R = n("264229"),
-  C = n("366980"),
+  C = n("264229"),
+  R = n("366980"),
   g = n("287925"),
   L = n("779832"),
   v = n("459618"),
@@ -92,7 +92,7 @@ function eS(e) {
     location: r,
     suggested: a = null,
     overrideProperties: s = {}
-  } = e, o = (0, R.parseExtraDataFromInviteKey)(t), l = W.default.getChannel(n);
+  } = e, o = (0, C.parseExtraDataFromInviteKey)(t), l = W.default.getChannel(n);
   if (null != l) {
     let e = null;
     l.isMultiUserDM() ? e = eu.LoggingInviteTypes.GDM_INVITE : !l.isPrivate() && (e = eu.LoggingInviteTypes.SERVER_INVITE);
@@ -539,7 +539,7 @@ let eh = {
       }
     },
     sendInvite: (e, t, n, i) => eA._sendMessage(e, {
-      content: (0, C.default)(t),
+      content: (0, R.default)(t),
       tts: !1,
       validNonShortcutEmojis: [],
       invalidEmojis: []
@@ -624,14 +624,14 @@ let eh = {
           location: h,
           suggestedInvite: A,
           stickerIds: m,
-          messageReference: R,
-          allowedMentions: C,
+          messageReference: C,
+          allowedMentions: R,
           poll: g
         } = n,
         L = null !== (i = n.flags) && void 0 !== i ? i : 0,
         [P, k] = (0, x.default)(l);
       if (P && (l = k, L = (0, ei.addFlag)(L, eu.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == S && null == m && null == g) return Promise.resolve();
-      let F = null != R ? eu.MessageTypes.REPLY : eu.MessageTypes.DEFAULT,
+      let F = null != C ? eu.MessageTypes.REPLY : eu.MessageTypes.DEFAULT,
         H = null !== (a = n.nonce) && void 0 !== a ? a : (0, M.createNonce)();
       if (!1 !== n.eagerDispatch) {
         let t = (0, M.default)({
@@ -639,8 +639,8 @@ let eh = {
           content: l,
           tts: E,
           type: F,
-          messageReference: R,
-          allowedMentions: C,
+          messageReference: C,
+          allowedMentions: R,
           flags: 0 !== L ? L : void 0,
           nonce: H,
           poll: (0, G.createPollServerDataFromCreateRequest)(g)
@@ -662,8 +662,8 @@ let eh = {
           content: l,
           nonce: H,
           tts: E,
-          message_reference: R,
-          allowed_mentions: C,
+          message_reference: C,
+          allowed_mentions: R,
           flags: L
         }
       };

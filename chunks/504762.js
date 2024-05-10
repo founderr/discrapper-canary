@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  i = n("682864"),
-  l = n("689938"),
+  l = n("682864"),
+  i = n("689938"),
   r = n("201953"),
   o = n("217110");
 
@@ -19,19 +19,19 @@ function u() {
       className: r.content,
       children: [(0, a.jsx)("img", {
         src: o,
-        alt: l.default.Messages.CREATOR_MONETIZATION_NOTICE_ILLO_A11Y_LABEL
-      }), (0, a.jsx)(i.default, {
+        alt: i.default.Messages.CREATOR_MONETIZATION_NOTICE_ILLO_A11Y_LABEL
+      }), (0, a.jsx)(l.default, {
         size: 12
       }), (0, a.jsx)(s.Heading, {
         className: r.header,
         variant: "heading-lg/semibold",
-        children: l.default.Messages.CREATOR_MONETIZATION_DISABLED_NOTICE_TITLE
-      }), (0, a.jsx)(i.default, {
+        children: i.default.Messages.CREATOR_MONETIZATION_DISABLED_NOTICE_TITLE
+      }), (0, a.jsx)(l.default, {
         size: 8
       }), (0, a.jsx)(s.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: l.default.Messages.CREATOR_MONETIZATION_DISABLED_NOTICE_DESCRIPTION
+        children: i.default.Messages.CREATOR_MONETIZATION_DISABLED_NOTICE_DESCRIPTION
       })]
     })
   })

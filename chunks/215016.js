@@ -36,8 +36,8 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = [_.default.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, _.default.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
-  C = 1220,
+let C = [_.default.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, _.default.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
+  R = 1220,
   g = Array.from({
     length: 16
   }).map((e, t) => ({
@@ -173,7 +173,7 @@ class P extends r.PureComponent {
       imagePool: i
     } = this.props;
     this.state = {
-      color: null == n ? l().sample(R) : n,
+      color: null == n ? l().sample(C) : n,
       loaded: !1
     }, !y(t) && (this._image = i.getElement(), this._image.onload = () => this.setState({
       loaded: !0
@@ -301,7 +301,7 @@ class U extends r.PureComponent {
         scrollTop: n,
         scrollHeight: i
       } = t.getScrollerState();
-      i - n <= C && (e !== this.prevResultQuery && (0, E.fetchSuggestions)(e), this.prevResultQuery = e)
+      i - n <= R && (e !== this.prevResultQuery && (0, E.fetchSuggestions)(e), this.prevResultQuery = e)
     }), O(this, "renderItem", (e, t, n, r) => {
       if (e > 0) return null;
       let {

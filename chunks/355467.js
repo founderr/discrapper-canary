@@ -127,10 +127,10 @@ n.r(t), n.d(t, {
     return eA
   },
   resetPaymentIntentId: function() {
-    return eR
+    return eC
   },
   resetSubscriptionStore: function() {
-    return eC
+    return eR
   },
   resubscribeToSubscription: function() {
     return ed
@@ -231,7 +231,7 @@ async function O(e, t) {
     }), e
   }
 }
-async function R(e) {
+async function C(e) {
   let {
     stripe_payment_intent_client_secret: t
   } = (await s.HTTP.get({
@@ -240,7 +240,7 @@ async function R(e) {
   })).body;
   return t
 }
-async function C(e) {
+async function R(e) {
   let {
     stripe_payment_intent_client_secret: t,
     stripe_payment_intent_payment_method_id: n
@@ -1033,7 +1033,7 @@ async function et(e, t) {
   let {
     clientSecret: i,
     paymentMethodId: r
-  } = await C(e);
+  } = await R(e);
   if (null == n) throw M("Stripe cannot be null on a redirect.");
   if (h.REDIRECTED_PAYMENT_SOURCES.has(t.type)) {
     let e = await em(t.type);
@@ -1068,7 +1068,7 @@ async function ei(e) {
   let t = await S.getStripe();
   if (null == t) throw M("Stripe has not loaded.");
   if (null == e) throw M("payment intent id cannot be null.");
-  let n = await R(e),
+  let n = await C(e),
     {
       paymentIntent: i,
       error: r
@@ -1425,13 +1425,13 @@ async function eO() {
   }
 }
 
-function eR() {
+function eC() {
   o.default.dispatch({
     type: "RESET_PAYMENT_ID"
   })
 }
 
-function eC() {
+function eR() {
   o.default.dispatch({
     type: "BILLING_SUBSCRIPTION_RESET"
   })

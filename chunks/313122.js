@@ -33,8 +33,8 @@ function m(e, t, n) {
 let N = 12 * _.default.Millis.HOUR,
   p = 1 * _.default.Millis.MINUTE,
   O = 1 * _.default.Millis.SECOND,
-  R = 5 * _.default.Millis.SECOND,
-  C = 1 * _.default.Millis.SECOND,
+  C = 5 * _.default.Millis.SECOND,
+  R = 1 * _.default.Millis.SECOND,
   g = _.default.Millis.DAY,
   L = 30 * _.default.Millis.MINUTE,
   v = e => (0, s.encodeStreamKey)({
@@ -196,7 +196,7 @@ class U extends i.default {
             (0, c.optimisticallyUpdateQuestProgress)(t), this.lastOptimisticallyUpdatedProgressMap.set(e, Date.now())
           }
         }
-      }, C))
+      }, R))
     }), m(this, "terminateOptimisticProgressUpdateInterval", e => {
       window.clearInterval(this.optimisticProgressUpdateIntervalIds.get(e)), this.optimisticProgressUpdateIntervalIds.delete(e), this.lastOptimisticallyUpdatedProgressMap.delete(e)
     }), m(this, "handleEnrollmentSuccess", e => {
@@ -251,7 +251,7 @@ class U extends i.default {
         Date.now() - this.questsLastFetchAttemptedAt > g && (this.questsLastFetchAttemptedAt = Date.now(), this.maybeFetchCurrentQuests())
       }, L), this.questsInitialFetchTimerId = window.setTimeout(() => {
         0 === E.default.lastFetchedCurrentQuests && this.maybeFetchCurrentQuests()
-      }, Math.floor(Math.random() * R))
+      }, Math.floor(Math.random() * C))
     }), m(this, "handleSendHeartbeatSuccess", e => {
       let {
         streamKey: t,

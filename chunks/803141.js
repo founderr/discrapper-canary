@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("695346"),
   s = n("581883"),
-  i = n("412788"),
-  l = n("592204"),
+  l = n("412788"),
+  i = n("592204"),
   r = n("932941"),
   o = n("363072"),
   u = n("526761");
@@ -28,14 +28,14 @@ function f() {
 }
 
 function E() {
-  if (!(0, l.isEligibleForKeywordFiltering)({
+  if (!(0, i.isEligibleForKeywordFiltering)({
       location: "connection_open"
     })) return !1;
   f()
 }
 
 function h() {
-  if (!(0, l.isEligibleForKeywordFiltering)({
+  if (!(0, i.isEligibleForKeywordFiltering)({
       location: "overlay_initialize"
     })) return !1;
   f()
@@ -46,12 +46,12 @@ function _(e) {
     local: t,
     settings: n
   } = e;
-  if (!t || n.type !== u.UserSettingsTypes.PRELOADED_USER_SETTINGS || !(0, l.isEligibleForKeywordFiltering)({
+  if (!t || n.type !== u.UserSettingsTypes.PRELOADED_USER_SETTINGS || !(0, i.isEligibleForKeywordFiltering)({
       location: "user_settings_proto_update"
     })) return !1;
   c.clear(), f()
 }
-class C extends i.default {
+class C extends l.default {
   initialize() {
     this.waitFor(s.default)
   }

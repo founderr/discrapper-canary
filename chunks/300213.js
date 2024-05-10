@@ -6,15 +6,15 @@ n.r(t), n.d(t, {
 });
 var a = n("442837"),
   s = n("427679"),
-  i = n("517334"),
-  l = n("592125"),
+  l = n("517334"),
+  i = n("592125"),
   r = n("151864"),
   o = n("554747");
 
 function u(e) {
   var t;
-  let n = (0, i.default)(e),
-    u = l.default.getChannel(null === (t = n[0]) || void 0 === t ? void 0 : t.id),
+  let n = (0, l.default)(e),
+    u = i.default.getChannel(null === (t = n[0]) || void 0 === t ? void 0 : t.id),
     d = (0, a.useStateFromStores)([s.default], () => s.default.getStageInstanceByChannel(null == u ? void 0 : u.id), [u]),
     c = (0, o.useGuildActiveEvent)(e),
     {

@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return u
   },
   PoggermodeAchievementId: function() {
-    return i
+    return l
   },
   PoggermodeAchievementRarity: function() {
-    return l
+    return i
   },
   getAchievementStyles: function() {
     return c
@@ -16,9 +16,9 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a, s, i, l, r = n("641033"),
+var a, s, l, i, r = n("641033"),
   o = n("689938");
-(a = i || (i = {}))[a.ENABLE_POGGERMODE = 0] = "ENABLE_POGGERMODE", a[a.DISABLE_POGGERMODE = 1] = "DISABLE_POGGERMODE", a[a.PING_SOMEONE = 2] = "PING_SOMEONE", a[a.PING_ME = 3] = "PING_ME", a[a.COMBO_MULTI_LEVEL_1 = 4] = "COMBO_MULTI_LEVEL_1", a[a.COMBO_MULTI_LEVEL_2 = 5] = "COMBO_MULTI_LEVEL_2", a[a.COMBO_MULTI_LEVEL_3 = 6] = "COMBO_MULTI_LEVEL_3", a[a.COMBO_MULTI_LEVEL_4 = 7] = "COMBO_MULTI_LEVEL_4", a[a.TOTAL_SCORE_LEVEL_1 = 8] = "TOTAL_SCORE_LEVEL_1", a[a.TOTAL_SCORE_LEVEL_2 = 9] = "TOTAL_SCORE_LEVEL_2", a[a.TOTAL_SCORE_LEVEL_3 = 10] = "TOTAL_SCORE_LEVEL_3", a[a.TOTAL_SCORE_LEVEL_4 = 11] = "TOTAL_SCORE_LEVEL_4", a[a.TOTAL_SCORE_LEVEL_5 = 12] = "TOTAL_SCORE_LEVEL_5", a[a.VISITOR_100 = 13] = "VISITOR_100", a[a.CUSTOMIZE_CONFETTI = 14] = "CUSTOMIZE_CONFETTI", a[a.MORE = 15] = "MORE", a[a.COMBO_VALUE_LEVEL_1 = 16] = "COMBO_VALUE_LEVEL_1", a[a.COMBO_VALUE_LEVEL_2 = 17] = "COMBO_VALUE_LEVEL_2", a[a.COMBO_VALUE_LEVEL_3 = 18] = "COMBO_VALUE_LEVEL_3", a[a.COMBO_VALUE_LEVEL_4 = 19] = "COMBO_VALUE_LEVEL_4", (s = l || (l = {}))[s.COMMON = 0] = "COMMON", s[s.UNCOMMON = 1] = "UNCOMMON", s[s.RARE = 2] = "RARE", s[s.EPIC = 3] = "EPIC", s[s.LEGENDARY = 4] = "LEGENDARY";
+(a = l || (l = {}))[a.ENABLE_POGGERMODE = 0] = "ENABLE_POGGERMODE", a[a.DISABLE_POGGERMODE = 1] = "DISABLE_POGGERMODE", a[a.PING_SOMEONE = 2] = "PING_SOMEONE", a[a.PING_ME = 3] = "PING_ME", a[a.COMBO_MULTI_LEVEL_1 = 4] = "COMBO_MULTI_LEVEL_1", a[a.COMBO_MULTI_LEVEL_2 = 5] = "COMBO_MULTI_LEVEL_2", a[a.COMBO_MULTI_LEVEL_3 = 6] = "COMBO_MULTI_LEVEL_3", a[a.COMBO_MULTI_LEVEL_4 = 7] = "COMBO_MULTI_LEVEL_4", a[a.TOTAL_SCORE_LEVEL_1 = 8] = "TOTAL_SCORE_LEVEL_1", a[a.TOTAL_SCORE_LEVEL_2 = 9] = "TOTAL_SCORE_LEVEL_2", a[a.TOTAL_SCORE_LEVEL_3 = 10] = "TOTAL_SCORE_LEVEL_3", a[a.TOTAL_SCORE_LEVEL_4 = 11] = "TOTAL_SCORE_LEVEL_4", a[a.TOTAL_SCORE_LEVEL_5 = 12] = "TOTAL_SCORE_LEVEL_5", a[a.VISITOR_100 = 13] = "VISITOR_100", a[a.CUSTOMIZE_CONFETTI = 14] = "CUSTOMIZE_CONFETTI", a[a.MORE = 15] = "MORE", a[a.COMBO_VALUE_LEVEL_1 = 16] = "COMBO_VALUE_LEVEL_1", a[a.COMBO_VALUE_LEVEL_2 = 17] = "COMBO_VALUE_LEVEL_2", a[a.COMBO_VALUE_LEVEL_3 = 18] = "COMBO_VALUE_LEVEL_3", a[a.COMBO_VALUE_LEVEL_4 = 19] = "COMBO_VALUE_LEVEL_4", (s = i || (i = {}))[s.COMMON = 0] = "COMMON", s[s.UNCOMMON = 1] = "UNCOMMON", s[s.RARE = 2] = "RARE", s[s.EPIC = 3] = "EPIC", s[s.LEGENDARY = 4] = "LEGENDARY";
 let u = {
   0: {
     id: 0,

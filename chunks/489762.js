@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("594174"),
   p = n("695464"),
   O = n("497309"),
-  R = n("898140"),
-  C = n("626135"),
+  C = n("898140"),
+  R = n("626135"),
   g = n("624138"),
   L = n("191177"),
   v = n("285651"),
@@ -104,7 +104,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         };
         if (null != l && !(0, v.isSendableSticker)(l, i, n)) {
           let e = D.default.getStickerPack(r);
-          null != e && (C.default.track(B.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
+          null != e && (R.default.track(B.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
             sticker_id: l.id,
             sticker_pack_id: r,
             location: d,
@@ -174,7 +174,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       let {
         isStickerPack: n = !0
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, i = new Set(t), r = t.has(e);
-      r ? i.delete(e) : i.add(e), C.default.track(B.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+      r ? i.delete(e) : i.add(e), R.default.track(B.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
         location: null == v ? void 0 : v.location,
         tab: k.ExpressionPickerViewType.STICKER,
         collapsed: !r,
@@ -207,7 +207,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
               categoryName: n.name
             }),
-            icon: (0, i.jsx)(R.default, {
+            icon: (0, i.jsx)(C.default, {
               height: 16,
               width: 16
             }),
@@ -314,8 +314,8 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       rowCount: m,
       rowCountBySection: N,
       stickersCategories: O,
-      stickersGrid: R,
-      channel: C
+      stickersGrid: C,
+      channel: R
     } = e, g = r.useRef(!1), L = r.useRef(null), [v, M] = I.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
       analyticsLocations: y
     } = (0, c.default)(_.default.STICKER_PICKER), P = (0, T.useExpressionPickerStore)(e => e.searchQuery), U = (0, s.useStateFromStores)([D.default], () => D.default.getPremiumPacks()), {
@@ -329,7 +329,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       collapsedStickersCategories: n,
       gridWidth: o,
       stickersCategories: O,
-      stickersGrid: R,
+      stickersGrid: C,
       isScrolling: g,
       isUsingKeyboardNavigation: h,
       onSelectSticker: A,
@@ -339,7 +339,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       inspectedStickerPosition: M,
       filteredStickers: l,
       ownedStickerPacks: r.useMemo(() => new Set(U.map(e => e.id)), [U]),
-      channel: C
+      channel: R
     }), W = (0, S.useSynchronizedActiveCategoryIndexForScrollPosition)({
       activeCategoryIndex: v,
       isScrolling: g,
@@ -415,7 +415,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           stickyHeaders: !0,
           ref: L
         }), (0, i.jsx)(b.default, {
-          stickersGrid: R
+          stickersGrid: C
         })]
       })
     })

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("392711"),
   o = n("685626"),
   u = n("442837"),
@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("35313"),
   S = n("284019"),
   p = n("672775"),
-  g = n("601463"),
-  I = n("192565"),
+  I = n("601463"),
+  g = n("192565"),
   T = n("641037"),
   A = n("689938"),
   N = n("590190");
@@ -37,7 +37,7 @@ function R(e) {
   let {
     guildId: t,
     onClose: n,
-    gameId: i
+    gameId: l
   } = e, R = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
     progress: L,
     errors: O,
@@ -98,10 +98,10 @@ function R(e) {
     let e = (0, E.getResizeObserver)((0, r.debounce)(() => b(window.innerWidth), 250));
     return (0, E.watch)(e, document.body), () => (0, E.unwatch)(e, document.body)
   }, [U, G]), s.useEffect(() => {
-    null != i && (0, h.updateClanSetup)(t, {
-      requiredGameId: i
+    null != l && (0, h.updateClanSetup)(t, {
+      requiredGameId: l
     })
-  }, [i, t]);
+  }, [l, t]);
   let W = s.useMemo(() => null != O && Object.values(O).some(e => null != e), [O]),
     K = s.useMemo(() => null != O && Object.values(O).length > 0 ? (0, T.getClanSetupProgressSteps)(O).find(e => e.hasError) : null, [O]),
     z = s.useCallback(() => {
@@ -158,14 +158,14 @@ function R(e) {
           className: N.panel,
           children: [(0, a.jsx)(o.animated.div, {
             style: F,
-            className: l()(N.stepsContainer, {
+            className: i()(N.stepsContainer, {
               [N.hidden]: !G
             }),
-            children: (0, a.jsx)(I.default, {
+            children: (0, a.jsx)(g.default, {
               guildId: t
             })
           }), (0, a.jsx)("div", {
-            className: l()(N.navigationContainer, {
+            className: i()(N.navigationContainer, {
               [N.elevatedNavigationContainer]: !G
             }),
             children: (0, a.jsx)(p.default, {
@@ -173,23 +173,23 @@ function R(e) {
               progress: L,
               updateCurrentStep: Y,
               animationStyle: F,
-              animationClassName: l()({
+              animationClassName: i()({
                 [N.hidden]: !G
               })
             })
           })]
         }), (0, a.jsx)(o.animated.div, {
           style: F,
-          className: l()(N.divider, {
+          className: i()(N.divider, {
             [N.hidden]: !G,
             [N.dividerResponsive]: G
           })
         }), (0, a.jsx)(o.animated.div, {
           style: B,
-          className: l()(N.sidebar, {
+          className: i()(N.sidebar, {
             [N.sidebarResponsive]: G
           }),
-          children: (0, a.jsx)(g.default, {
+          children: (0, a.jsx)(I.default, {
             guildId: t,
             signed: P,
             setSigned: G ? void 0 : x,

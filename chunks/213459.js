@@ -31,8 +31,8 @@ var i, r, a, s = n("470079"),
   N = n("626135"),
   p = n("254711"),
   O = n("700089"),
-  R = n("654455"),
-  C = n("963456"),
+  C = n("654455"),
+  R = n("963456"),
   g = n("367790"),
   L = n("895924"),
   v = n("581364"),
@@ -172,17 +172,17 @@ class Z extends(i = d.default.Store) {
     n.allowFetch && (l && ei(e) && (N.default.track(P.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH, {
       miss: null == i.result,
       size: Object.keys(X.indices).length
-    }), er(i) && (null != e.guild_id ? (0, C.requestApplicationCommandIndex)({
+    }), er(i) && (null != e.guild_id ? (0, R.requestApplicationCommandIndex)({
       type: "guild",
       guildId: e.guild_id
-    }) : (0, C.requestApplicationCommandIndex)({
+    }) : (0, R.requestApplicationCommandIndex)({
       type: "channel",
       channelId: e.id
     }), u = !0)), (0, v.isUserInUserAppExperiment)({
       location: "query"
-    }) && er(r) && ((0, C.requestApplicationCommandIndex)({
+    }) && er(r) && ((0, R.requestApplicationCommandIndex)({
       type: "user"
-    }), u = !0), er(a) && null != n.applicationId && ((0, C.requestApplicationCommandIndex)({
+    }), u = !0), er(a) && null != n.applicationId && ((0, R.requestApplicationCommandIndex)({
       type: "application",
       applicationId: n.applicationId
     }), u = !0));
@@ -247,7 +247,7 @@ let X = new Z(_.default, {
           fetching: !0,
           abort: e
         }
-      }, !0), (null == r || r) && (0, C.fetchApplicationCommandIndex)(n, i, e)
+      }, !0), (null == r || r) && (0, R.fetchApplicationCommandIndex)(n, i, e)
     }
   },
   APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: function(e) {
@@ -426,10 +426,10 @@ function Q(e, t, n) {
     i && null != e && (n && t && ei(e) && (N.default.track(P.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH, {
       miss: null == a.result,
       size: Object.keys(X.indices).length
-    }), er(a) && (null != e.guild_id ? (0, C.requestApplicationCommandIndex)({
+    }), er(a) && (null != e.guild_id ? (0, R.requestApplicationCommandIndex)({
       type: "guild",
       guildId: e.guild_id
-    }) : (0, C.requestApplicationCommandIndex)({
+    }) : (0, R.requestApplicationCommandIndex)({
       type: "channel",
       channelId: e.id
     }))), r(!1))
@@ -445,7 +445,7 @@ function q(e, t) {
     n && null != e && (t && (N.default.track(P.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH, {
       miss: null == r.result,
       size: Object.keys(X.indices).length
-    }), er(r) && (0, C.requestApplicationCommandIndex)({
+    }), er(r) && (0, R.requestApplicationCommandIndex)({
       type: "guild",
       guildId: e
     })), i(!1))
@@ -457,7 +457,7 @@ function J(e, t) {
     location: "useUserIndexState"
   });
   return s.useEffect(() => {
-    n && (t && er(r) && e && a && (0, C.requestApplicationCommandIndex)({
+    n && (t && er(r) && e && a && (0, R.requestApplicationCommandIndex)({
       type: "user"
     }), i(!1))
   }, [r, t, e, a, n]), r
@@ -506,8 +506,8 @@ function $(e, t, n, i) {
         guild: t
       },
       s = a.filter(e => u.includes(e.id)).sort((e, t) => {
-        let i = R.default.getScoreWithoutLoadingLatest(n, e);
-        return R.default.getScoreWithoutLoadingLatest(n, t) - i
+        let i = C.default.getScoreWithoutLoadingLatest(n, e);
+        return C.default.getScoreWithoutLoadingLatest(n, t) - i
       }).splice(0, y.DISCOVERY_COMMANDS_FRECENCY_LIMIT);
     return 0 === s.length ? {
       descriptors: r,
@@ -552,9 +552,9 @@ function et(e) {
     sortOptions: N = ee
   } = e, {
     commandType: O
-  } = o, C = null == c ? void 0 : c.toLowerCase(), L = null == C ? void 0 : C.split(" "), v = E === g.BuiltInCommandFilter.ONLY_TEXT, D = E !== g.BuiltInCommandFilter.DENY ? (0, p.getBuiltInCommands)(O, !0, v) : [], M = [], P = {
+  } = o, R = null == c ? void 0 : c.toLowerCase(), L = null == R ? void 0 : R.split(" "), v = E === g.BuiltInCommandFilter.ONLY_TEXT, D = E !== g.BuiltInCommandFilter.DENY ? (0, p.getBuiltInCommands)(O, !0, v) : [], M = [], P = {
     permissionContext: o,
-    query: C,
+    query: R,
     splitQuery: L,
     allowEmptySections: h,
     scoreMethod: m
@@ -631,11 +631,11 @@ function et(e) {
         if (e !== t) return e - t
       }
       if (N.commands.useFrecency) {
-        let r = R.default.getScoreWithoutLoadingLatest({
+        let r = C.default.getScoreWithoutLoadingLatest({
             channel: e,
             guild: t
           }, n),
-          a = R.default.getScoreWithoutLoadingLatest({
+          a = C.default.getScoreWithoutLoadingLatest({
             channel: e,
             guild: t
           }, i);

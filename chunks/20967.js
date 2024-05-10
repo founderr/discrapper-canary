@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a, s, i = n("735250");
+var a, s, l = n("735250");
 n("470079");
-var l = n("990547"),
+var i = n("990547"),
   r = n("481060"),
   o = n("213609"),
   u = n("689938"),
@@ -21,24 +21,24 @@ let f = e => {
     errorType: t
   } = e;
   return (0, o.default)({
-    type: l.ImpressionTypes.PAGE,
-    name: l.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
+    type: i.ImpressionTypes.PAGE,
+    name: i.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
     properties: {
       error_page_type: t
     }
-  }), (0, i.jsx)("div", {
+  }), (0, l.jsx)("div", {
     className: d.errorPageContainer,
-    children: (0, i.jsxs)("div", {
+    children: (0, l.jsxs)("div", {
       className: d.errorPageContent,
-      children: [(0, i.jsx)("img", {
+      children: [(0, l.jsx)("img", {
         src: c,
         alt: "",
         className: d.errorPageIllo
-      }), (0, i.jsx)(r.Heading, {
+      }), (0, l.jsx)(r.Heading, {
         variant: "heading-xl/extrabold",
         className: d.errorPageTitle,
         children: "guild_not_eligible" === t ? u.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_GUILD_NOT_ELIGIBLE_TITLE : u.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_NOT_GUILD_MEMBER_TITLE
-      }), (0, i.jsx)(r.Text, {
+      }), (0, l.jsx)(r.Text, {
         variant: "text-md/normal",
         className: d.errorPagSubtitle,
         children: "guild_not_eligible" === t ? u.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_GUILD_NOT_ELIGIBLE_SUBTITLE : u.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_NOT_GUILD_MEMBER_SUBTITLE

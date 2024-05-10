@@ -52,8 +52,8 @@ N();
 function O() {
   (0, d.clearObject)(I), (0, d.clearObject)(T), f.clear(), S.clear(), (0, d.clearObject)(h), (0, d.clearObject)(A), N()
 }
-let R = [E.SubscriptionIntervalTypes.DAY, E.SubscriptionIntervalTypes.MONTH, E.SubscriptionIntervalTypes.YEAR];
-class C extends(i = o.default.Store) {
+let C = [E.SubscriptionIntervalTypes.DAY, E.SubscriptionIntervalTypes.MONTH, E.SubscriptionIntervalTypes.YEAR];
+class R extends(i = o.default.Store) {
   getPlanIdsForSkus(e) {
     let t = [];
     for (let i of e) {
@@ -62,7 +62,7 @@ class C extends(i = o.default.Store) {
       e.sort((e, t) => {
         let n = I[e],
           i = I[t];
-        return R.indexOf(n.interval) - R.indexOf(i.interval) || n.intervalCount - i.intervalCount
+        return C.indexOf(n.interval) - C.indexOf(i.interval) || n.intervalCount - i.intervalCount
       }), t.push(...e)
     }
     return t
@@ -116,12 +116,12 @@ class C extends(i = o.default.Store) {
     return t.every(t => this.hasPaymentSourceForSKUId(e, t))
   }
 }
-s = "SubscriptionPlanStore", (a = "displayName") in(r = C) ? Object.defineProperty(r, a, {
+s = "SubscriptionPlanStore", (a = "displayName") in(r = R) ? Object.defineProperty(r, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new C(l.default, {
+}) : r[a] = s, t.default = new R(l.default, {
   SUBSCRIPTION_PLANS_FETCH: function(e) {
     let {
       skuId: t

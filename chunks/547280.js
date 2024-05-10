@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var a = n("570140"),
   s = n("605236"),
-  i = n("626135"),
-  l = n("445507"),
+  l = n("626135"),
+  i = n("445507"),
   r = n("981631"),
   o = n("921944");
 
@@ -21,12 +21,12 @@ function u(e) {
     data: u,
     completed: d
   } = e;
-  null != u.selectedOptionKey && (!(0, s.isDismissibleContentDismissed)(n) && i.default.track(r.AnalyticEvents.SIGNUP_COMPLETED, {
+  null != u.selectedOptionKey && (!(0, s.isDismissibleContentDismissed)(n) && l.default.track(r.AnalyticEvents.SIGNUP_COMPLETED, {
     target_key: t,
     selected_option_key: u.selectedOptionKey,
     email: u.email,
     guild_id: u.guildId,
-    metadata: (0, l.extractMetadata)(u),
+    metadata: (0, i.extractMetadata)(u),
     completed: d
   }), (0, s.markDismissibleContentAsDismissed)(n, {
     dismissAction: o.ContentDismissActionType.PRIMARY,

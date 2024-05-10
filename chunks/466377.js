@@ -41,12 +41,12 @@ var i, r, a = n("735250"),
   N = n("602091"),
   p = n("231338"),
   O = n("689938"),
-  R = n("721790");
+  C = n("721790");
 (i = r || (r = {})).SMALL = "small", i.MEDIUM = "medium", i.LARGE = "large", i.DYNAMIC = "dynamic";
-let C = Object.freeze({
-  small: R.small,
-  medium: R.medium,
-  large: R.large,
+let R = Object.freeze({
+  small: C.small,
+  medium: C.medium,
+  large: C.large,
   dynamic: null
 });
 
@@ -81,16 +81,16 @@ function g(e) {
   return (0, a.jsx)(N.ModalContentContext.Provider, {
     value: U,
     children: (0, a.jsx)(I.Dialog, {
-      className: R.focusLock,
+      className: C.focusLock,
       role: o,
       returnRef: A,
       impressionType: d.ImpressionTypes.MODAL,
       "aria-labelledby": D ? void 0 : U.headerId,
       ...m,
       children: (0, a.jsx)(u.animated.div, {
-        className: l()(E, R.root, C[r], {
-          [R.fullscreenOnMobile]: f,
-          [R.rootWithShadow]: !S
+        className: l()(E, C.root, R[r], {
+          [C.fullscreenOnMobile]: f,
+          [C.rootWithShadow]: !S
         }),
         ref: v,
         style: L,
@@ -116,8 +116,8 @@ function L(e) {
     justify: null !== (n = e.justify) && void 0 !== n ? n : A.default.Justify.START,
     align: null !== (i = e.align) && void 0 !== i ? i : A.default.Align.CENTER,
     wrap: null !== (r = e.wrap) && void 0 !== r ? r : A.default.Wrap.NO_WRAP,
-    className: l()(R.header, e.className, {
-      [R.separator]: null === (o = e.separator) || void 0 === o || o
+    className: l()(C.header, e.className, {
+      [C.separator]: null === (o = e.separator) || void 0 === o || o
     }),
     id: d ? void 0 : u,
     children: e.children
@@ -142,7 +142,7 @@ function v(e) {
     }
   }(r);
   return (0, a.jsx)(o, {
-    className: l()(R.content, t),
+    className: l()(C.content, t),
     ref: i,
     ...s,
     children: (0, a.jsx)(f.HeadingLevel, {
@@ -160,8 +160,8 @@ function D(e) {
     justify: null !== (n = e.justify) && void 0 !== n ? n : A.default.Justify.START,
     align: null !== (i = e.align) && void 0 !== i ? i : A.default.Align.STRETCH,
     wrap: null !== (r = e.wrap) && void 0 !== r ? r : A.default.Wrap.NO_WRAP,
-    className: l()(R.footer, e.className, {
-      [R.footerSeparator]: null === (s = e.separator) || void 0 === s || s
+    className: l()(C.footer, e.className, {
+      [C.footerSeparator]: null === (s = e.separator) || void 0 === s || s
     }),
     children: (0, a.jsx)(f.HeadingLevel, {
       children: e.children
@@ -177,16 +177,16 @@ function M(e) {
     size: E.Button.Sizes.NONE,
     onClick: e.onClick,
     innerClassName: l()({
-      [R.closeWithCircleBackground]: e.withCircleBackground
+      [C.closeWithCircleBackground]: e.withCircleBackground
     }),
     className: l()(e.className, {
-      [R.hideOnFullscreen]: e.hideOnFullscreen,
-      [R.close]: !e.withCircleBackground
+      [C.hideOnFullscreen]: e.hideOnFullscreen,
+      [C.close]: !e.withCircleBackground
     }),
     children: (0, a.jsx)(m.default, {
       width: 24,
       height: 24,
-      className: R.closeIcon
+      className: C.closeIcon
     })
   })
 }

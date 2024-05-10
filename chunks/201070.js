@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return b
   },
   useMembersSearchRecordStore: function() {
-    return R
+    return C
   }
 }), n("47120"), n("411104");
 var i, r, a, s, o = n("348327"),
@@ -48,29 +48,29 @@ function O(e) {
     elasticSearchCursor: null
   }
 }(a = i || (i = {}))[a.FAILED = 0] = "FAILED", a[a.UNFETCHED = 1] = "UNFETCHED", a[a.PENDING = 2] = "PENDING", a[a.SUCCEEDED = 3] = "SUCCEEDED", a[a.STILL_INDEXING = 4] = "STILL_INDEXING";
-let R = (0, d.default)(e => ({}));
+let C = (0, d.default)(e => ({}));
 
-function C(e, t) {
-  let n = R.getState()[e];
+function R(e, t) {
+  let n = C.getState()[e];
   return null == n && (n = O(1)), n = {
     ...n,
     ...t
-  }, R.setState(t => ({
+  }, C.setState(t => ({
     ...t,
     [e]: n
   })), n
 }
 
 function g(e) {
-  return R.getState()[e]
+  return C.getState()[e]
 }
 
 function L(e) {
   let t = g(e);
-  return null == t && C(e, t = O(1)), t
+  return null == t && R(e, t = O(1)), t
 }
 async function v(e) {
-  await (0, c.sleep)(200), null != g(e) && C(e, {
+  await (0, c.sleep)(200), null != g(e) && R(e, {
     requestState: 3,
     abortController: null,
     lastUpdated: Date.now()
@@ -79,7 +79,7 @@ async function v(e) {
 
 function D(e) {
   var t;
-  t = p(e), R.setState(e => {
+  t = p(e), C.setState(e => {
     let n = {
       ...e
     };
@@ -160,7 +160,7 @@ async function P(e) {
           (0, I.assertNever)(u)
       }
     }(e, c, d);
-  let R = (r = function(e) {
+  let C = (r = function(e) {
       var t, n;
       let i = {},
         r = {},
@@ -249,14 +249,14 @@ async function P(e) {
   if (function(e, t) {
       let n = L(e);
       return l()(n.query, t)
-    }(_, R) && (0, u.isEqual)(E, c.cursor)) return;
+    }(_, C) && (0, u.isEqual)(E, c.cursor)) return;
   let M = function(e, t, n, i, r) {
     let a = g(e);
     if ((null == a ? void 0 : a.requestState) === 2) {
       var s;
       null === (s = a.abortController) || void 0 === s || s.abort()
     }
-    return C(e, {
+    return R(e, {
       requestState: 2,
       abortController: new AbortController,
       lastUpdated: Date.now(),
@@ -265,7 +265,7 @@ async function P(e) {
       previousPagination: i,
       sort: r
     })
-  }(_, R, E, d, D);
+  }(_, C, E, d, D);
   try {
     if (N.info("Making member search request", {
         query: M.query,
@@ -277,7 +277,7 @@ async function P(e) {
   } catch (e) {
     ;
     if (-1 === e.code) return;
-    null != g(s = _) && C(s, {
+    null != g(s = _) && R(s, {
       requestState: 0,
       abortController: null,
       lastUpdated: Date.now()
@@ -288,14 +288,14 @@ async function P(e) {
 }
 
 function U(e) {
-  return R(t => {
+  return C(t => {
     var n;
     return (null === (n = t[p(e)]) || void 0 === n ? void 0 : n.requestState) === 2
   })
 }
 
 function b(e) {
-  return R(t => {
+  return C(t => {
     var n;
     return (null === (n = t[p(e)]) || void 0 === n ? void 0 : n.requestState) === 4
   })
@@ -335,7 +335,7 @@ class G extends E.default {
     let {
       guildId: t
     } = e;
-    C(p(t), {
+    R(p(t), {
       requestState: 4,
       abortController: null,
       lastUpdated: Date.now()

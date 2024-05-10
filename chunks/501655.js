@@ -36,7 +36,7 @@ function O(e, t, n) {
   }) : e[t] = n, e
 }
 
-function R(e) {
+function C(e) {
   var t;
   let {
     speaker: n,
@@ -50,7 +50,7 @@ function R(e) {
   return "".concat(n ? "\0" : "\x01").concat("STREAM" === u ? "\0" : "\x01").concat(d).concat(_).concat(c).concat(s).concat((0, l.default)(a, r))
 }
 
-function C(e) {
+function R(e) {
   let {
     user: t,
     voiceState: n
@@ -100,9 +100,9 @@ class v {
         rtsState: (0, m.getAudienceRequestToSpeakState)(s)
       };
     a.push(O);
-    let R = null !== (i = d.default.getStreamForUser(e, this.guildId)) && void 0 !== i ? i : d.default.getActiveStreamForUser(e, this.guildId);
-    if (null != R && R.channelId === this.channelId) {
-      let e = (0, u.encodeStreamKey)(R);
+    let C = null !== (i = d.default.getStreamForUser(e, this.guildId)) && void 0 !== i ? i : d.default.getActiveStreamForUser(e, this.guildId);
+    if (null != C && C.channelId === this.channelId) {
+      let e = (0, u.encodeStreamKey)(C);
       r = {
         ..._,
         id: e,
@@ -148,6 +148,6 @@ class v {
   }
   constructor(e) {
     var t;
-    O(this, "channelId", void 0), O(this, "guildId", void 0), O(this, "participants", {}), O(this, "_participantsIndex", new o.SecondaryIndexMap(L, R)), O(this, "_requestToSpeakIndex", new o.SecondaryIndexMap(() => [], C)), this.channelId = e, this.guildId = null === (t = _.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
+    O(this, "channelId", void 0), O(this, "guildId", void 0), O(this, "participants", {}), O(this, "_participantsIndex", new o.SecondaryIndexMap(L, C)), O(this, "_requestToSpeakIndex", new o.SecondaryIndexMap(() => [], R)), this.channelId = e, this.guildId = null === (t = _.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
   }
 }

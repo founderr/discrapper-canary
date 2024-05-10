@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
 var a, s = n("108131"),
-  i = n.n(s),
-  l = n("442837"),
+  l = n.n(s),
+  i = n("442837"),
   r = n("570140"),
   o = n("70956");
 
@@ -19,9 +19,9 @@ let d = {},
     status: "unloaded"
   },
   f = {};
-class E extends(a = l.default.Store) {
+class E extends(a = i.default.Store) {
   getSearchResult(e) {
-    let t = f[i().v3(JSON.stringify(e))];
+    let t = f[l().v3(JSON.stringify(e))];
     return null == t || t.loadedAt < Date.now() - o.default.Millis.HOUR ? c : t
   }
   hasLoadedStaticClanDiscovery(e) {

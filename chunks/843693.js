@@ -101,7 +101,7 @@ s = "PoggermodeStore", (a = "displayName") in(r = O) ? Object.defineProperty(r, 
   configurable: !0,
   writable: !0
 }) : r[a] = s;
-let R = new O(d.default, {
+let C = new O(d.default, {
   POGGERMODE_UPDATE_COMBO: function(e) {
     let {
       type: t,
@@ -129,11 +129,11 @@ let R = new O(d.default, {
               ...t,
               value: 0,
               multiplier: 1
-            }), R.emitChange())
+            }), C.emitChange())
           } else e({
             ...t,
             value: t.value - 1
-          }), R.emitChange()
+          }), C.emitChange()
         }
       }))
     }(n)
@@ -173,4 +173,4 @@ let R = new O(d.default, {
     return !1
   }
 });
-t.default = R
+t.default = C

@@ -45,7 +45,7 @@ let A = {
     leading: !0,
     trailing: !0
   }),
-  R = {
+  C = {
     stores: [u.default, l.default],
     showEmpty: !0,
     matches(e, t, n, i, r) {
@@ -139,4 +139,4 @@ let A = {
       }
     }
   };
-t.default = R
+t.default = C

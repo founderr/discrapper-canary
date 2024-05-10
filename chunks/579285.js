@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return R
   }
 }), n("47120");
 var i = n("735250"),
@@ -25,7 +25,7 @@ var i = n("735250"),
   N = n("981631"),
   p = n("689938"),
   O = n("384878");
-let R = (0, E.default)(function(e) {
+let C = (0, E.default)(function(e) {
   let {
     user: t,
     currentUser: n,
@@ -36,8 +36,8 @@ let R = (0, E.default)(function(e) {
     canManageRoles: T,
     width: S,
     onAddRole: A,
-    onRemoveRole: R,
-    onOpenProfile: C
+    onRemoveRole: C,
+    onOpenProfile: R
   } = e;
   s()(null != S, "Unexpected null width");
   let g = r.useRef({}),
@@ -88,7 +88,7 @@ let R = (0, E.default)(function(e) {
         className: O.role,
         role: e,
         canRemove: T ? h.isRoleHigher(a, n.id, I, e) : (null === (r = e.tags) || void 0 === r ? void 0 : r.guild_connections) === null && t.id === n.id,
-        onRemove: () => R(e),
+        onRemove: () => C(e),
         ref: t => L(e.id, t),
         guildId: a.id,
         disableBorderColor: !0
@@ -110,7 +110,7 @@ let R = (0, E.default)(function(e) {
           ref: t,
           ...n,
           children: [w, null != v && 0 !== P && (0, i.jsx)(d.Clickable, {
-            onClick: C,
+            onClick: R,
             className: O.showMoreButton,
             children: (0, i.jsx)(d.Text, {
               variant: "text-xs/medium",
@@ -129,7 +129,7 @@ let R = (0, E.default)(function(e) {
   })
 });
 
-function C(e) {
+function R(e) {
   let {
     user: t,
     currentUser: n,
@@ -151,7 +151,7 @@ function C(e) {
     let n = null != d ? d : []; - 1 === n.indexOf(e) && (n = n.concat([e])), I.default.updateMemberRoles(a.id, t.id, n, [e], [])
   }, [d, a.id, t.id, o]);
   return c && !f ? null : (0, i.jsx)("div", {
-    children: (0, i.jsx)(R, {
+    children: (0, i.jsx)(C, {
       user: t,
       currentUser: n,
       guild: a,

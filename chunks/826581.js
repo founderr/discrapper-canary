@@ -45,15 +45,15 @@ function p(e) {
   return t.push(N.GUILD_JOIN_REQUESTS_BY_ID(e.joinRequestId)), t.push(N.GUILD_JOIN_REQUESTS_BY_STATUS(e.guildId, e.applicationStatus)), t
 }
 let O = new l.SecondaryIndexMap(p, e => "".concat(e.joinRequestId)),
-  R = new l.SecondaryIndexMap(p, e => "".concat(e.joinRequestId)),
-  C = new l.SecondaryIndexMap(p, e => "".concat(e.actionedAt));
+  C = new l.SecondaryIndexMap(p, e => "".concat(e.joinRequestId)),
+  R = new l.SecondaryIndexMap(p, e => "".concat(e.actionedAt));
 
 function g(e) {
   return O.get(e)
 }
 
 function L(e) {
-  P[e.joinRequestId] = e, O.set(e.joinRequestId, e), (0, c.isSubmittedApplicationStatus)(e.applicationStatus) && (C.delete(e.joinRequestId), R.set(e.joinRequestId, e)), (0, c.isActionedApplicationStatus)(e.applicationStatus) && (R.delete(e.joinRequestId), C.set(e.joinRequestId, e))
+  P[e.joinRequestId] = e, O.set(e.joinRequestId, e), (0, c.isSubmittedApplicationStatus)(e.applicationStatus) && (R.delete(e.joinRequestId), C.set(e.joinRequestId, e)), (0, c.isActionedApplicationStatus)(e.applicationStatus) && (C.delete(e.joinRequestId), R.set(e.joinRequestId, e))
 }
 
 function v(e) {
@@ -76,7 +76,7 @@ class U extends(i = o.default.Store) {
   }
   getRequests(e, t) {
     let n = N.GUILD_JOIN_REQUESTS_BY_STATUS(e, t);
-    return (0, c.isActionedApplicationStatus)(t) ? C.values(n) : (0, c.isSubmittedApplicationStatus)(t) ? R.values(n) : O.values(n)
+    return (0, c.isActionedApplicationStatus)(t) ? R.values(n) : (0, c.isSubmittedApplicationStatus)(t) ? C.values(n) : O.values(n)
   }
   getSubmittedGuildJoinRequestTotal(e) {
     return f[e]
@@ -156,7 +156,7 @@ s = "GuildJoinRequestStoreV2", (a = "displayName") in(r = U) ? Object.defineProp
     let a = (t = i, O.get(t));
     if (null != a) {
       ;
-      A(r, null, a.applicationStatus), n = i, delete P[n], O.delete(n), R.delete(n), C.delete(n)
+      A(r, null, a.applicationStatus), n = i, delete P[n], O.delete(n), C.delete(n), R.delete(n)
     }
   },
   GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function(e) {
@@ -175,7 +175,7 @@ s = "GuildJoinRequestStoreV2", (a = "displayName") in(r = U) ? Object.defineProp
     if (i === M[n]) return;
     M[n] = i;
     let r = null !== (t = D[n]) && void 0 !== t ? t : E.GuildJoinRequestApplicationStatuses.SUBMITTED;
-    "REVIEW_APPLICATION" !== r && ((0, c.isActionedApplicationStatus)(r) && C.clear(), (0, c.isSubmittedApplicationStatus)(r) && R.clear())
+    "REVIEW_APPLICATION" !== r && ((0, c.isActionedApplicationStatus)(r) && R.clear(), (0, c.isSubmittedApplicationStatus)(r) && C.clear())
   },
   GUILD_JOIN_REQUESTS_SET_SELECTED: function(e) {
     let {

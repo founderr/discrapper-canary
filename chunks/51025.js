@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return A
   },
   moveUp: function() {
-    return C
+    return R
   },
   pause: function() {
-    return R
+    return C
   },
   removeFinished: function() {
     return L
@@ -166,11 +166,11 @@ function O() {
   E.default.resume()
 }
 
-function R() {
+function C() {
   E.default.pause()
 }
 
-function C(e, t) {
+function R(e, t) {
   r.default.dispatch({
     type: "DISPATCH_APPLICATION_MOVE_UP",
     applicationId: e,

@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("171368"),
   p = n("958120"),
   O = n("215633"),
-  R = n("23293"),
-  C = n("228168"),
+  C = n("23293"),
+  R = n("228168"),
   g = n("689938");
 
 function L(e) {
@@ -86,9 +86,9 @@ function v(e) {
         children: [(0, i.jsxs)(f.default, {
           user: t,
           displayProfile: F,
-          profileType: C.UserProfileTypes.BITE_SIZE,
+          profileType: R.UserProfileTypes.BITE_SIZE,
           children: [(0, i.jsxs)(S.default, {
-            profileType: C.UserProfileTypes.BITE_SIZE,
+            profileType: R.UserProfileTypes.BITE_SIZE,
             children: [(0, i.jsx)(A.default, {
               user: t,
               guildId: n,
@@ -110,7 +110,7 @@ function v(e) {
                 }
               })
             })]
-          }), (0, i.jsx)(R.default, {
+          }), (0, i.jsx)(C.default, {
             user: t,
             displayProfile: F,
             guildId: n,

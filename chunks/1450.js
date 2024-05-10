@@ -26,8 +26,8 @@ t.default = e => {
     className: t,
     guildId: n,
     channel: a,
-    shouldTrackUpsellViewed: R,
-    setTrackedUpsellViewed: C
+    shouldTrackUpsellViewed: C,
+    setTrackedUpsellViewed: R
   } = e, {
     location: g
   } = (0, u.useAnalyticsContext)(), {
@@ -36,14 +36,14 @@ t.default = e => {
     canManageAllExpressions: D
   } = (0, T.useManageResourcePermissions)(v), M = null != v && 0 === (0, A.getTotalStickerCountForTier)(v.premiumTier) && !v.hasFeature(m.GuildFeatures.MORE_STICKERS);
   return (r.useEffect(() => {
-    D && M && R && ((0, d.trackWithMetadata)(m.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+    D && M && C && ((0, d.trackWithMetadata)(m.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
       location: g,
       guild_id: null == v ? void 0 : v.id,
       channel_id: null == a ? void 0 : a.id,
       type: "Expression Picker Inline Sticker Upsell",
       location_stack: L
-    }), C(!0))
-  }, [M, v, a, g, R, C, L, D]), null != v && D) ? M ? (0, i.jsxs)("div", {
+    }), R(!0))
+  }, [M, v, a, g, C, R, L, D]), null != v && D) ? M ? (0, i.jsxs)("div", {
     className: s()(O.upsell, t),
     children: [(0, i.jsx)(S.default, {
       className: O.icon,

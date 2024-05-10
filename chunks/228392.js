@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return L
   },
   trackForumMorePostsLoaded: function() {
-    return R
+    return C
   },
   trackForumNewPostCleared: function() {
     return N
@@ -40,7 +40,7 @@ n.r(t), n.d(t, {
     return D
   },
   trackForumPostClicked: function() {
-    return C
+    return R
   },
   trackForumPostCreated: function() {
     return p
@@ -259,7 +259,7 @@ function O(e) {
   })
 }
 
-function R(e) {
+function C(e) {
   let {
     guildId: t,
     channelId: n,
@@ -284,7 +284,7 @@ function R(e) {
   })
 }
 
-function C(e) {
+function R(e) {
   let {
     guildId: t,
     channelId: n,

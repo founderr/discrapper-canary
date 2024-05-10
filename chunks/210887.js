@@ -29,8 +29,8 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = null !== (r = (0, I.default)()) && void 0 !== r ? r : N.ThemeTypes.DARK,
-  C = null,
+let C = null !== (r = (0, I.default)()) && void 0 !== r ? r : N.ThemeTypes.DARK,
+  R = null,
   g = !1;
 
 function L() {
@@ -41,7 +41,7 @@ function L() {
     let n = null === (e = S.default.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
     if (null != n) return n;
     let r = null === (t = A.default.settings.appearance) || void 0 === t ? void 0 : t.theme;
-    if (null == r) return R;
+    if (null == r) return C;
     if (!E.DesktopVisualRefreshExperiment.getCurrentConfig({
         location: "ThemeStore"
       }).enabled) return r === o.Theme.LIGHT ? N.ThemeTypes.LIGHT : N.ThemeTypes.DARK;
@@ -70,11 +70,11 @@ function D() {
 
 function M() {
   let e = L();
-  return e !== R && (R = e, !0)
+  return e !== C && (C = e, !0)
 }
 class y extends(a = s.default.PersistedStore) {
   initialize(e) {
-    (null == e ? void 0 : e.theme) != null && (R = e.theme), this.waitFor(h.default, S.default, A.default, _.default)
+    (null == e ? void 0 : e.theme) != null && (C = e.theme), this.waitFor(h.default, S.default, A.default, _.default)
   }
   getState() {
     return {
@@ -88,13 +88,13 @@ class y extends(a = s.default.PersistedStore) {
     return L()
   }
   get systemTheme() {
-    return C
+    return R
   }
   get systemPrefersColorScheme() {
     return i
   }
   get isSystemThemeAvailable() {
-    return null !== C
+    return null !== R
   }
 }
 O(y, "displayName", "ThemeStore"), O(y, "persistKey", "ThemeStore"), O(y, "migrations", [e => {
@@ -107,7 +107,7 @@ O(y, "displayName", "ThemeStore"), O(y, "persistKey", "ThemeStore"), O(y, "migra
   CACHE_LOADED: v,
   CONNECTION_OPEN: v,
   LOGOUT: function(e) {
-    return !e.isSwitchingAccount && R !== N.ThemeTypes.DARK && (R = N.ThemeTypes.DARK, function() {
+    return !e.isSwitchingAccount && C !== N.ThemeTypes.DARK && (C = N.ThemeTypes.DARK, function() {
       !__OVERLAY__ && f.isPlatformEmbedded && T.default.setApplicationBackgroundColor((0, u.isThemeDark)(L()) ? l.default.unsafe_rawColors.PRIMARY_700.resolve({
         saturation: _.default.saturation
       }).hsl() : l.default.unsafe_rawColors.WHITE_500.resolve({
@@ -124,11 +124,11 @@ O(y, "displayName", "ThemeStore"), O(y, "persistKey", "ThemeStore"), O(y, "migra
     let {
       presetId: i
     } = e;
-    R = null != i && null !== (n = null === (t = p.BACKGROUND_GRADIENT_PRESETS_MAP[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : L();
+    C = null != i && null !== (n = null === (t = p.BACKGROUND_GRADIENT_PRESETS_MAP[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : L();
     let r = null != i;
     return g !== r ? (g = r, !0) : function() {
       let e = L();
-      return !(0, c.areThemesEqualForGradientThemes)(R, e) && (R = e, !0)
+      return !(0, c.areThemesEqualForGradientThemes)(C, e) && (C = e, !0)
     }()
   },
   RESET_PREVIEW_CLIENT_THEME: v,
@@ -136,7 +136,7 @@ O(y, "displayName", "ThemeStore"), O(y, "persistKey", "ThemeStore"), O(y, "migra
     let {
       systemTheme: t
     } = e;
-    return C = t, M()
+    return R = t, M()
   },
   ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function(e) {
     return i = e.systemPrefersColorScheme, M()

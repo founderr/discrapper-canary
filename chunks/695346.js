@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return eL
   },
   ActivityRestrictedGuilds: function() {
-    return eC
+    return eR
   },
   AfkTimeout: function() {
     return z
@@ -166,7 +166,7 @@ n.r(t), n.d(t, {
     return F
   },
   ShowCommandSuggestions: function() {
-    return C
+    return R
   },
   ShowCurrentGame: function() {
     return ee
@@ -199,7 +199,7 @@ n.r(t), n.d(t, {
     return S
   },
   ViewImageDescriptions: function() {
-    return R
+    return C
   },
   ViewNsfwCommands: function() {
     return X
@@ -270,13 +270,13 @@ let h = (0, o.defineProtoSetting)("notifications", "quietMode", e => {
   N = (0, o.defineProtoSetting)("textAndImages", "emojiPickerCollapsedSections", e => null != e ? e : m, e => e),
   p = (0, o.defineProtoSetting)("textAndImages", "stickerPickerCollapsedSections", e => null != e ? e : m, e => e),
   O = (0, o.defineProtoSetting)("textAndImages", "soundboardPickerCollapsedSections", e => null != e ? e : m, e => e),
-  R = (0, o.defineProtoSetting)("textAndImages", "viewImageDescriptions", e => {
+  C = (0, o.defineProtoSetting)("textAndImages", "viewImageDescriptions", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => a.BoolValue.create({
     value: e
   })),
-  C = (0, o.defineProtoSetting)("textAndImages", "showCommandSuggestions", e => {
+  R = (0, o.defineProtoSetting)("textAndImages", "showCommandSuggestions", e => {
     var t;
     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
   }, e => a.BoolValue.create({
@@ -561,8 +561,8 @@ let eA = (0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("appea
     var e;
     return null === (e = l.default.getOverride("animateStickers")) || void 0 === e ? void 0 : e.value
   })),
-  eR = [],
-  eC = (0, o.defineProtoSetting)("privacy", "activityRestrictedGuildIds", e => null != e ? e : eR, e => e),
+  eC = [],
+  eR = (0, o.defineProtoSetting)("privacy", "activityRestrictedGuildIds", e => null != e ? e : eC, e => e),
   eg = [],
   eL = (0, o.defineProtoSetting)("privacy", "activityJoiningRestrictedGuildIds", e => null != e ? e : eg, e => e),
   ev = (0, o.defineProtoSetting)("privacy", "defaultGuildsActivityRestricted", e => e === r.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS, e => !0 === e ? r.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS : r.GuildActivityStatusRestrictionDefault.OFF),

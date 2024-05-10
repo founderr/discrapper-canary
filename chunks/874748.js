@@ -51,7 +51,7 @@ function c(e) {
       } = e;
       return null != t && null != n && t >= n
     }(u.thumbnail) && !A,
-    R = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (i = u.thumbnail) || void 0 === i ? void 0 : null === (n = i.filename) || void 0 === n ? void 0 : n.startsWith(d.SPOILER_ATTACHMENT_PREFIX));
+    C = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (i = u.thumbnail) || void 0 === i ? void 0 : null === (n = i.filename) || void 0 === n ? void 0 : n.startsWith(d.SPOILER_ATTACHMENT_PREFIX));
   return {
     title: null !== (r = u.title) && void 0 !== r ? r : "",
     subtitle: u.description,
@@ -71,7 +71,7 @@ function c(e) {
     avatarUrl: p,
     shouldShowBlurredThumbnailImage: A,
     shouldContainMediaWithBackground: O,
-    shouldSpoiler: R,
+    shouldSpoiler: C,
     obscureAwaitingScan: !1,
     flags: u.flags,
     contentScanVersion: u.content_scan_version

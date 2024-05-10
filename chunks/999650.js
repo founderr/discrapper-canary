@@ -33,11 +33,11 @@ var i, r, a = n("658722"),
   p = n("981631"),
   O = n("689938");
 
-function R() {
+function C() {
   return new Set(d().months().map(e => e.toLowerCase()))
 }
 
-function C() {
+function R() {
   return new Set(d().weekdays().map(e => e.toLowerCase()))
 }
 
@@ -90,7 +90,7 @@ function w(e, t) {
   let n, i;
   let r = e.getFullMatch().trim().toLowerCase(),
     a = M()[r];
-  return null != a ? [n, i] = a() : R().has(r) ? [n, i] = D(r, "MMMM", "month") : C().has(r) ? [n, i] = D(r, "dddd", "day") : g().has(r) ? [n, i] = D(r, "YYYY", "year") : [n, i] = D(r, p.SEARCH_DATE_FORMAT, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
+  return null != a ? [n, i] = a() : C().has(r) ? [n, i] = D(r, "MMMM", "month") : R().has(r) ? [n, i] = D(r, "dddd", "day") : g().has(r) ? [n, i] = D(r, "YYYY", "year") : [n, i] = D(r, p.SEARCH_DATE_FORMAT, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
 }
 
 function B(e) {
@@ -126,7 +126,7 @@ function k(e) {
 }
 
 function V() {
-  return [...Array.from(R()), ...Array.from(C()), ...Array.from(g()), ...Object.keys(M())]
+  return [...Array.from(C()), ...Array.from(R()), ...Array.from(g()), ...Object.keys(M())]
 }
 
 function x() {

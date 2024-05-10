@@ -29,8 +29,8 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = e => e.stopPropagation();
-class C extends r.PureComponent {
+let C = e => e.stopPropagation();
+class R extends r.PureComponent {
   componentDidMount() {
     d.initializeSearch(), document.addEventListener("keydown", this.backToFrontPage), "" !== this.props.query && this.search(this.props.query, A.GIFPickerResultTypes.SEARCH)
   }
@@ -133,7 +133,7 @@ class C extends r.PureComponent {
       role: "tabpanel",
       "aria-labelledby": m.GIF_PICKER_TAB_ID,
       className: s()(p.container, e),
-      onClick: R,
+      onClick: C,
       ref: t,
       children: [(0, i.jsx)("div", {
         className: p.header,
@@ -198,7 +198,7 @@ t.default = r.forwardRef((e, t) => {
     resultItems: c.default.getResultItems(),
     suggestions: c.default.getSuggestions()
   })), l = (0, _.useExpressionPickerStore)(e => e.searchQuery), u = (0, f.useSortedFavoriteGIFs)();
-  return (0, i.jsx)(C, {
+  return (0, i.jsx)(R, {
     ...e,
     forwardedRef: t,
     query: null != l && "" !== l ? l : n,

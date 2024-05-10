@@ -28,8 +28,8 @@ var i = n("735250"),
   N = n("377617"),
   p = n("84017"),
   O = n("748500"),
-  R = n("836879"),
-  C = n("191741"),
+  C = n("836879"),
+  R = n("191741"),
   g = n("768581"),
   L = n("55935"),
   v = n("823379"),
@@ -90,8 +90,8 @@ function w(e, t, n, r, a) {
   else if (e.type === y.MessageTypes.CHANNEL_PINNED_MESSAGE) s = P.default.Messages.MESSAGE_PINNED;
   else if (c) {
     if (f) {
-      var A, C;
-      o = null == e ? void 0 : null === (C = e.poll) || void 0 === C ? void 0 : null === (A = C.question) || void 0 === A ? void 0 : A.text
+      var A, R;
+      o = null == e ? void 0 : null === (R = e.poll) || void 0 === R ? void 0 : null === (A = R.question) || void 0 === A ? void 0 : A.text
     } else h ? s = (0, S.getPollResultsReplyPreview)(e) : E ? s = P.default.Messages.REPLY_QUOTE_STICKER : I ? s = P.default.Messages.REPLY_QUOTE_COMMAND : T ? s = P.default.Messages.REPLY_QUOTE_VOICE_MESSAGE : (s = P.default.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, l = (0, i.jsx)(p.default, {
       className: d,
       width: _,
@@ -102,7 +102,7 @@ function w(e, t, n, r, a) {
     content: t,
     className: r
   });
-  return E ? l = (0, i.jsx)(R.default, {
+  return E ? l = (0, i.jsx)(C.default, {
     className: d,
     width: _,
     height: _
@@ -159,7 +159,7 @@ function B(e) {
     if (r.message.type === y.MessageTypes.USER_JOIN || r.message.type === y.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE || r.message.type === y.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT || r.message.type === y.MessageTypes.GUILD_GAMING_STATS_PROMPT) return (0, i.jsx)(G, {
       className: U.userJoinSystemMessageIcon
     });
-    if (r.message.type === y.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.jsx)(C.default, {
+    if (r.message.type === y.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.jsx)(R.default, {
       className: U.ticketIcon
     });
     let S = () => {
@@ -263,13 +263,13 @@ function B(e) {
       default:
         (0, v.assertNever)(n)
     }
-  }(e), R = r.useMemo(() => e.compact ? (0, f.default)((0, L.dateFormat)(l()(), "LT")) : null, [e.compact]);
+  }(e), C = r.useMemo(() => e.compact ? (0, f.default)((0, L.dateFormat)(l()(), "LT")) : null, [e.compact]);
   return null != n && null != a && (t = P.default.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
     author: null == a ? void 0 : a.nick,
     repliedAuthor: null == n ? void 0 : n.nick
   })), (0, i.jsxs)("div", {
     id: (0, I.getMessageReplyId)(o),
-    className: s()(U.repliedMessage, R),
+    className: s()(U.repliedMessage, C),
     "aria-label": t,
     children: [N, p, O]
   })

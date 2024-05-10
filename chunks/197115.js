@@ -22,12 +22,12 @@ var r = n("120356"),
   N = n("474936"),
   p = n("981631"),
   O = n("689938"),
-  R = n("928069");
+  C = n("928069");
 t.default = function(e) {
   let {
     isGift: t,
     subscriptionTier: r,
-    onClick: C,
+    onClick: R,
     size: g,
     className: L,
     trialId: v,
@@ -52,7 +52,7 @@ t.default = function(e) {
       (0, c.transitionTo)(p.Routes.LOGIN);
       return
     }
-    if (null == C || C(e), (null == W ? void 0 : W.status) === p.SubscriptionStatusTypes.ACCOUNT_HOLD) {
+    if (null == R || R(e), (null == W ? void 0 : W.status) === p.SubscriptionStatusTypes.ACCOUNT_HOLD) {
       (0, d.trackPremiumSettingsPaneOpened)(), l.default.open(p.UserSettingsSections.PREMIUM), null == b || b(!1);
       return
     }! function(e) {
@@ -139,28 +139,28 @@ t.default = function(e) {
   if (D) return (0, i.jsxs)(o.Button, {
     size: g,
     className: L,
-    innerClassName: R.premiumSubscribeButton,
+    innerClassName: C.premiumSubscribeButton,
     look: o.Button.Looks.INVERTED,
     onClick: z,
     ...H,
     children: [w && (0, i.jsx)(A.default, {
-      className: R.premiumIcon
+      className: C.premiumIcon
     }), (0, i.jsx)("span", {
-      className: a()(R.buttonText, y),
+      className: a()(C.buttonText, y),
       children: null != M ? M : O.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT
     })]
   });
   if (t) return (0, i.jsxs)(o.Button, {
     size: g,
     className: L,
-    innerClassName: R.giftButton,
+    innerClassName: C.giftButton,
     color: o.Button.Colors.PRIMARY,
     onClick: z,
     ...H,
     children: [(0, i.jsx)(h.default, {
-      className: R.giftIcon
+      className: C.giftIcon
     }), (0, i.jsx)("span", {
-      className: a()(R.buttonText, y),
+      className: a()(C.buttonText, y),
       children: null != M ? M : O.default.Messages.PREMIUM_GIFTING_BUTTON
     })]
   });
@@ -196,7 +196,7 @@ t.default = function(e) {
     return (0, i.jsxs)(S.default, {
       disabled: J,
       onClick: z,
-      innerClassName: R.premiumSubscribeButton,
+      innerClassName: C.premiumSubscribeButton,
       color: r === N.PremiumSubscriptionSKUs.TIER_1 ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
       size: g,
       className: F,
@@ -205,9 +205,9 @@ t.default = function(e) {
       ...H,
       ...e,
       children: [w && (0, i.jsx)(A.default, {
-        className: a()(R.premiumIcon, P)
+        className: a()(C.premiumIcon, P)
       }), (0, i.jsx)("span", {
-        className: a()(R.buttonText, y),
+        className: a()(C.buttonText, y),
         children: null !== (n = null !== (t = null == $ ? void 0 : $.disabledButtonText) && void 0 !== t ? t : M) && void 0 !== n ? n : Z
       })]
     })

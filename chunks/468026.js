@@ -24,8 +24,8 @@ t.default = e => {
     onClose: N,
     onConfirm: p,
     onConfirmSecondary: O,
-    title: R,
-    transitionState: C,
+    title: C,
+    transitionState: R,
     titleClassName: g
   } = e;
   return null != T && "" !== T && (t = (0, i.jsx)(s.Button, {
@@ -55,9 +55,9 @@ t.default = e => {
       children: A
     })
   })), (0, i.jsx)(u.ModalRoot, {
-    transitionState: C,
+    transitionState: R,
     className: a()(f, E.container),
-    "aria-label": R,
+    "aria-label": C,
     children: (0, i.jsxs)("form", {
       onSubmit: e => {
         null != e && e.preventDefault(), null == N || N(), null == p || p()
@@ -69,10 +69,10 @@ t.default = e => {
           direction: _.default.Direction.VERTICAL,
           justify: _.default.Justify.CENTER,
           className: E.content,
-          children: [null != R && (0, i.jsx)(l.FormTitle, {
+          children: [null != C && (0, i.jsx)(l.FormTitle, {
             tag: "h2",
             className: a()(E.title, g),
-            children: R
+            children: C
           }), null != I && (0, i.jsx)(d.Text, {
             variant: "text-md/normal",
             className: E.body,

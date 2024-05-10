@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("470079"),
   s = n("442837"),
-  i = n("524437"),
-  l = n("243778"),
+  l = n("524437"),
+  i = n("243778"),
   r = n("594174"),
   o = n("51144"),
   u = n("410154"),
@@ -17,13 +17,13 @@ t.default = () => {
     n = (0, d.useShopNewBadgeCoachtipEdition)(E),
     h = a.useMemo(() => {
       if ((0, o.ageEligibleForPremiumUpsell)(e)) {
-        if (n === c.ShopCoachtipEditions.GALAXY) return [i.DismissibleContent.COLLECTIBLES_SHOP_GALAXY_COACHTIP];
-        if (n === c.ShopCoachtipEditions.LOFI_VIBES) return [i.DismissibleContent.COLLECTIBLES_SHOP_LOFI_VIBES_COACHTIP];
-        else if (t) return [i.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]
+        if (n === c.ShopCoachtipEditions.GALAXY) return [l.DismissibleContent.COLLECTIBLES_SHOP_GALAXY_COACHTIP];
+        if (n === c.ShopCoachtipEditions.LOFI_VIBES) return [l.DismissibleContent.COLLECTIBLES_SHOP_LOFI_VIBES_COACHTIP];
+        else if (t) return [l.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]
       }
       return []
     }, [e, n, t]),
-    [_, C] = (0, l.useSelectedDismissibleContent)(h, void 0, !0),
+    [_, C] = (0, i.useSelectedDismissibleContent)(h, void 0, !0),
     m = null != _ ? c.CollectiblesDCToDisplayOptions[_] : null;
   return {
     collectiblesShopTabNewBadgeDisplayOptions: m,

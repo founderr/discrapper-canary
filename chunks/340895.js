@@ -20,9 +20,9 @@ let f = "IncomingCallStore",
   N = new Set,
   p = 0,
   O = 0,
-  R = !1;
+  C = !1;
 
-function C(e) {
+function R(e) {
   if (null == e || null == m.get(e)) return !1;
   m.delete(e), (N = new Set(N)).delete(e)
 }
@@ -43,7 +43,7 @@ function g(e) {
     }), (N = new Set(N)).add(t)
   } else {
     if (!N.has(t) || i) return !1;
-    C(t)
+    R(t)
   }
 }! function() {
   let e = l.Storage.get(f);
@@ -55,23 +55,23 @@ function g(e) {
 }();
 
 function L() {
-  R = I.default.getStatus() === T.StatusTypes.DND || d.FocusMode.getSetting()
+  C = I.default.getStatus() === T.StatusTypes.DND || d.FocusMode.getSetting()
 }
 class v extends(i = o.default.Store) {
   initialize() {
     this.waitFor(E.default, I.default), this.syncWith([I.default], L), this.syncWith([_.default], L)
   }
   getIncomingCalls() {
-    return R ? A : Array.from(m.values())
+    return C ? A : Array.from(m.values())
   }
   getIncomingCallChannelIds() {
-    return R ? h : N
+    return C ? h : N
   }
   getFirstIncomingCallId() {
-    return R ? null : N.values().next().value
+    return C ? null : N.values().next().value
   }
   hasIncomingCalls() {
-    return !R && N.size > 0
+    return !C && N.size > 0
   }
 }
 s = "IncomingCallStore", (a = "displayName") in(r = v) ? Object.defineProperty(r, a, {
@@ -86,13 +86,13 @@ s = "IncomingCallStore", (a = "displayName") in(r = v) ? Object.defineProperty(r
     let {
       channelId: t
     } = e;
-    return C(t)
+    return R(t)
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return C(t)
+    return R(t)
   },
   INCOMING_CALL_MOVE: function(e) {
     let {
@@ -108,6 +108,6 @@ s = "IncomingCallStore", (a = "displayName") in(r = v) ? Object.defineProperty(r
     let {
       channel: t
     } = e;
-    return C(t.id)
+    return R(t.id)
   }
 })

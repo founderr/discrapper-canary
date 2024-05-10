@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("392711"),
   s = n.n(a),
-  i = n("902704"),
-  l = n("812206"),
+  l = n("902704"),
+  i = n("812206"),
   r = n("594190"),
   o = n("199902"),
   u = n("592125"),
@@ -17,8 +17,8 @@ var a = n("392711"),
   m = n("238679"),
   S = n("452426"),
   p = n("295424"),
-  g = n("863141"),
-  I = n("186901"),
+  I = n("863141"),
+  g = n("186901"),
   T = n("981631");
 let A = e => (0, S.default)(e).required().keys({
   channel_id: e.string().required()
@@ -72,24 +72,24 @@ let L = {
         var n;
         let {
           prevState: a,
-          dispatch: i
-        } = e, l = d.default.getGuild(t);
-        if (null == l) return;
+          dispatch: l
+        } = e, i = d.default.getGuild(t);
+        if (null == i) return;
         let r = {
           guild: {
-            id: l.id,
-            name: l.name,
-            icon_url: null !== (n = l.getIconURL(128)) && void 0 !== n ? n : null
+            id: i.id,
+            name: i.name,
+            icon_url: null !== (n = i.getIconURL(128)) && void 0 !== n ? n : null
           },
           online: 0
         };
-        return !s().isEqual(a, r) && i(r), r
+        return !s().isEqual(a, r) && l(r), r
       }
     }
   },
   [T.RPCEvents.VOICE_STATE_CREATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ]
     },
     validation: e => (0, S.default)(e).required().keys({
       channel_id: e.string().required()
@@ -107,22 +107,22 @@ let L = {
         let {
           prevState: n,
           dispatch: a
-        } = e, i = u.default.getChannel(t);
-        if (null == i) return;
-        let l = i.getGuildId(),
-          r = Object.values(h.default.getVoiceStatesForChannel(i.id));
+        } = e, l = u.default.getChannel(t);
+        if (null == l) return;
+        let i = l.getGuildId(),
+          r = Object.values(h.default.getVoiceStatesForChannel(l.id));
         return n && s().differenceBy(r, n, e => {
           let {
             userId: t
           } = e;
           return t
-        }).forEach(e => a((0, C.transformVoiceState)(l, i.id, e))), r
+        }).forEach(e => a((0, C.transformVoiceState)(i, l.id, e))), r
       }
     }
   },
   [T.RPCEvents.VOICE_STATE_DELETE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ]
     },
     validation: e => (0, S.default)(e).required().keys({
       channel_id: e.string().required()
@@ -140,22 +140,22 @@ let L = {
         let {
           prevState: n,
           dispatch: a
-        } = e, i = u.default.getChannel(t);
-        if (null == i) return;
-        let l = i.getGuildId(),
-          r = Object.values(h.default.getVoiceStatesForChannel(i.id));
+        } = e, l = u.default.getChannel(t);
+        if (null == l) return;
+        let i = l.getGuildId(),
+          r = Object.values(h.default.getVoiceStatesForChannel(l.id));
         return s().differenceBy(n, r, e => {
           let {
             userId: t
           } = e;
           return t
-        }).forEach(e => a((0, C.transformVoiceState)(l, i.id, e))), r
+        }).forEach(e => a((0, C.transformVoiceState)(i, l.id, e))), r
       }
     }
   },
   [T.RPCEvents.VOICE_STATE_UPDATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ]
     },
     validation: e => (0, S.default)(e).required().keys({
       channel_id: e.string().required()
@@ -173,17 +173,17 @@ let L = {
         let {
           prevState: n,
           dispatch: a
-        } = e, i = u.default.getChannel(t);
-        if (null == i) return;
-        let l = i.getGuildId(),
-          r = Object.values(h.default.getVoiceStatesForChannel(i.id)).map(e => (0, C.transformVoiceState)(l, i.id, e));
+        } = e, l = u.default.getChannel(t);
+        if (null == l) return;
+        let i = l.getGuildId(),
+          r = Object.values(h.default.getVoiceStatesForChannel(l.id)).map(e => (0, C.transformVoiceState)(i, l.id, e));
         return s().differenceWith(r, n, s().isEqual).forEach(e => a(e)), r
       }
     }
   },
   [T.RPCEvents.VOICE_CONNECTION_STATUS]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ]
     },
     handler: () => e => {
       let {
@@ -216,14 +216,14 @@ let L = {
   },
   [T.RPCEvents.SPEAKING_START]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ, I.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
     validation: v,
     handler: R
   },
   [T.RPCEvents.SPEAKING_STOP]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ, I.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
     validation: v,
     handler: R
@@ -238,62 +238,62 @@ let L = {
   },
   [T.RPCEvents.GAME_JOIN]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, I.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [T.RPCEvents.GAME_SPECTATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, I.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [T.RPCEvents.ACTIVITY_JOIN]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, I.RPC_AUTHENTICATED_SCOPE, I.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, g.RPC_AUTHENTICATED_SCOPE, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [T.RPCEvents.ACTIVITY_JOIN_REQUEST]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, I.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [T.RPCEvents.ACTIVITY_SPECTATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, I.RPC_AUTHENTICATED_SCOPE, I.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, g.RPC_AUTHENTICATED_SCOPE, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [T.RPCEvents.ACTIVITY_INVITE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, I.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [T.RPCEvents.ACTIVITY_PIP_MODE_UPDATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, I.RPC_AUTHENTICATED_SCOPE, I.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, g.RPC_AUTHENTICATED_SCOPE, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [T.RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, I.RPC_AUTHENTICATED_SCOPE, I.RPC_LOCAL_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, g.RPC_AUTHENTICATED_SCOPE, g.RPC_LOCAL_SCOPE]
     },
     handler() {}
   },
   [T.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: m.activityInstanceConnectedParticipantsUpdateEvent,
   [T.RPCEvents.THERMAL_STATE_UPDATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [I.RPC_AUTHENTICATED_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_AUTHENTICATED_SCOPE]
     },
     handler() {}
   },
   [T.RPCEvents.ORIENTATION_UPDATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [I.RPC_AUTHENTICATED_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_AUTHENTICATED_SCOPE]
     },
     handler() {}
   },
@@ -303,7 +303,7 @@ let L = {
   },
   [T.RPCEvents.NOTIFICATION_CREATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ALL]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_NOTIFICATIONS_READ]
+      [g.RPC_SCOPE_CONFIG.ALL]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_NOTIFICATIONS_READ]
     },
     handler() {}
   },
@@ -313,7 +313,7 @@ let L = {
   },
   [T.RPCEvents.CURRENT_USER_UPDATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [I.RPC_LOCAL_SCOPE, T.OAuth2Scopes.IDENTIFY]
+      [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_LOCAL_SCOPE, T.OAuth2Scopes.IDENTIFY]
     },
     handler: () => e => {
       let {
@@ -322,47 +322,47 @@ let L = {
       } = e, a = {
         currentUser: E.default.getCurrentUser()
       };
-      return null != a.currentUser && (null == t || !(0, i.default)(a, t)) && n((0, g.default)(a.currentUser)), a
+      return null != a.currentUser && (null == t || !(0, l.default)(a, t)) && n((0, I.default)(a.currentUser)), a
     }
   },
   [T.RPCEvents.ENTITLEMENT_CREATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [I.RPC_LOCAL_SCOPE, I.RPC_AUTHENTICATED_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_LOCAL_SCOPE, g.RPC_AUTHENTICATED_SCOPE]
     },
     handler() {}
   },
   [T.RPCEvents.ENTITLEMENT_DELETE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ANY]: [I.RPC_LOCAL_SCOPE, I.RPC_AUTHENTICATED_SCOPE]
+      [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_LOCAL_SCOPE, g.RPC_AUTHENTICATED_SCOPE]
     },
     handler() {}
   },
   [T.RPCEvents.USER_ACHIEVEMENT_UPDATE]: {
-    scope: I.RPC_LOCAL_SCOPE,
+    scope: g.RPC_LOCAL_SCOPE,
     handler() {}
   },
   [T.RPCEvents.SCREENSHARE_STATE_UPDATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ALL]: [I.RPC_LOCAL_SCOPE, T.OAuth2Scopes.RPC_SCREENSHARE_READ]
+      [g.RPC_SCOPE_CONFIG.ALL]: [g.RPC_LOCAL_SCOPE, T.OAuth2Scopes.RPC_SCREENSHARE_READ]
     },
     handler: () => e => {
       var t, n;
       let {
         prevState: a,
-        dispatch: i
-      } = e, u = o.default.getStreamerActiveStreamMetadata(), d = (null == u ? void 0 : u.pid) != null ? r.default.getGameForPID(u.pid) : null, c = (null == d ? void 0 : d.id) != null ? l.default.getApplication(d.id) : null, f = null != c ? (0, p.default)(c) : null, E = null == u ? void 0 : u.sourceName, h = {
+        dispatch: l
+      } = e, u = o.default.getStreamerActiveStreamMetadata(), d = (null == u ? void 0 : u.pid) != null ? r.default.getGameForPID(u.pid) : null, c = (null == d ? void 0 : d.id) != null ? i.default.getApplication(d.id) : null, f = null != c ? (0, p.default)(c) : null, E = null == u ? void 0 : u.sourceName, h = {
         active: null != u,
         pid: null !== (t = null == u ? void 0 : u.pid) && void 0 !== t ? t : null,
         application: (n = null != f, n) ? {
           name: E
         } : null
       };
-      return !s().isEqual(h, a) && i(h), h
+      return !s().isEqual(h, a) && l(h), h
     }
   },
   [T.RPCEvents.VIDEO_STATE_UPDATE]: {
     scope: {
-      [I.RPC_SCOPE_CONFIG.ALL]: [I.RPC_LOCAL_SCOPE, T.OAuth2Scopes.RPC_VIDEO_READ]
+      [g.RPC_SCOPE_CONFIG.ALL]: [g.RPC_LOCAL_SCOPE, T.OAuth2Scopes.RPC_VIDEO_READ]
     },
     handler: () => e => {
       let {

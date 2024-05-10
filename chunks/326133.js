@@ -21,17 +21,17 @@ var i = n("735250"),
 t.default = r.forwardRef(function(e, t) {
   var n, a, N, p, O;
   let {
-    channel: R,
-    type: C,
+    channel: C,
+    type: R,
     editorHeight: g,
     onVisibilityChange: L
   } = e, v = (0, E.useUID)(), D = (0, l.useStateFromStores)([_.default], () => {
     var e;
-    return null !== (e = _.default.getGuild(R.guild_id)) && void 0 !== e ? e : null
-  }, [R.guild_id]), M = r.useRef(), [y, P, U] = (0, A.default)({
+    return null !== (e = _.default.getGuild(C.guild_id)) && void 0 !== e ? e : null
+  }, [C.guild_id]), M = r.useRef(), [y, P, U] = (0, A.default)({
     ...e,
     guild: D
-  }, t, M), b = (null === (n = C.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? T.default : I.default, G = (0, c.getAutocompleteRowId)(y.selectedIndex);
+  }, t, M), b = (null === (n = R.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? T.default : I.default, G = (0, c.getAutocompleteRowId)(y.selectedIndex);
   (0, d.useChannelEditorPopup)(v, y.isVisible, G), f.default.trackExposure({
     location: "6e9811_1"
   });
@@ -43,7 +43,7 @@ t.default = r.forwardRef(function(e, t) {
     autoTrackExposure: !1
   }), B = (0, h.useChannelAutocompleteLayerPosition)({
     editorHeight: g,
-    type: C,
+    type: R,
     state: y,
     isInPopoutExperiment: w
   }), k = r.useMemo(() => null == B ? "" : String(Date.now()), [null == B ? void 0 : B.top, null == B ? void 0 : B.left, null == B ? void 0 : B.bottom, null == B ? void 0 : B.right]);
@@ -53,7 +53,7 @@ t.default = r.forwardRef(function(e, t) {
   let V = null !== (a = y.query.typeInfo.renderResults({
     results: y.query.results,
     selectedIndex: y.selectedIndex,
-    channel: R,
+    channel: C,
     guild: D,
     query: y.query.queryText,
     options: y.query.options,
@@ -67,7 +67,7 @@ t.default = r.forwardRef(function(e, t) {
       [m.bottom]: null == B && "bottom" === e.position
     },
     F = 490;
-  null != B && (F = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (p = y.query) || void 0 === p ? void 0 : p.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
+  null != B && (F = (null === (N = R.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (p = y.query) || void 0 === p ? void 0 : p.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
   let H = (0, i.jsx)(c.default, {
     id: v,
     className: s()(m.autocomplete, x),

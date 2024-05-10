@@ -143,11 +143,11 @@ t.default = r.memo(function(e) {
     profileViewedAnalytics: f
   } = e, S = (0, o.useStateFromStores)([_.default], () => _.default.getUser(r), [r]), A = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n, {
     tag: O,
-    badge: R,
-    guildId: C
+    badge: C,
+    guildId: R
   } = (0, E.getUserClanData)(A);
-  if (!p(r, a) || null == C) return null;
-  let g = (0, E.getClanBadgeUrl)(C, R, c);
+  if (!p(r, a) || null == R) return null;
+  let g = (0, E.getClanBadgeUrl)(R, C, c);
   return I ? (0, i.jsx)(m, {
     clanTag: O,
     clanBadge: g,

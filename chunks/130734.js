@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var a, s, i, l, r = n("442837"),
+var a, s, l, i, r = n("442837"),
   o = n("433517"),
   u = n("570140");
 let d = "hasSeenGuildTemplatePromotionTooltip",
@@ -16,7 +16,7 @@ function E(e) {
     [t]: !1
   }
 }
-class h extends(l = r.default.Store) {
+class h extends(i = r.default.Store) {
   shouldShowGuildTemplateDirtyTooltip(e) {
     var t;
     return null !== (t = c[e]) && void 0 !== t && t
@@ -25,12 +25,12 @@ class h extends(l = r.default.Store) {
     return !f
   }
 }
-i = "GuildTemplateTooltipStore", (s = "displayName") in(a = h) ? Object.defineProperty(a, s, {
-  value: i,
+l = "GuildTemplateTooltipStore", (s = "displayName") in(a = h) ? Object.defineProperty(a, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = i, t.default = new h(u.default, {
+}) : a[s] = l, t.default = new h(u.default, {
   GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH: function(e) {
     let {
       guildTemplate: t

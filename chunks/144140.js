@@ -18,8 +18,8 @@ let N = new Set,
   p = {},
   O = {};
 
-function R(e, t) {
-  E.ALL_CHANNEL_TYPES.has(e.type) && C(function(e) {
+function C(e, t) {
+  E.ALL_CHANNEL_TYPES.has(e.type) && R(function(e) {
     if (!(e.id in p)) {
       var t;
       p[e.id] = {
@@ -34,7 +34,7 @@ function R(e, t) {
   }(e), t)
 }
 
-function C(e, t) {
+function R(e, t) {
   var n;
   let i = (null !== (n = O[e.parentId]) && void 0 !== n ? n : 0) + 1;
   O[e.parentId] = i, t(e)
@@ -46,7 +46,7 @@ function g(e) {
 }
 
 function L(e) {
-  R(e, t => {
+  C(e, t => {
     var n;
     null != e.messageCount && (t.count = e.messageCount);
     let i = null !== (n = t.mostRecentRawMessage) && void 0 !== n ? n : t.mostRecentMessage;
@@ -153,7 +153,7 @@ s = "ThreadMessageStore", (a = "displayName") in(r = P) ? Object.defineProperty(
     } = e;
     t.forEach(L), null == n || n.forEach(e => {
       let t = f.default.getChannel(e.channel_id);
-      null != t && e.type !== m.MessageTypes.THREAD_STARTER_MESSAGE && R(t, t => {
+      null != t && e.type !== m.MessageTypes.THREAD_STARTER_MESSAGE && C(t, t => {
         t.mostRecentRawMessage = e, t.mostRecentMessage = null
       })
     })
@@ -187,7 +187,7 @@ s = "ThreadMessageStore", (a = "displayName") in(r = P) ? Object.defineProperty(
     if (null == a || !E.THREAD_CHANNEL_TYPES.has(a.type) || ! function(e, t) {
         return !(t.type === m.MessageTypes.THREAD_STARTER_MESSAGE || e.isForumPost() && t.id === h.default.castChannelIdAsMessageId(e.id)) && !0
       }(a, t)) return !1;
-    R(a, e => {
+    C(a, e => {
       e.count = Math.min(e.count + 1, A.MAX_THREAD_MESSAGE_COUNT), e.mostRecentRawMessage = t, e.mostRecentMessage = null
     })
   },
@@ -197,7 +197,7 @@ s = "ThreadMessageStore", (a = "displayName") in(r = P) ? Object.defineProperty(
       message: n
     } = e, i = p[n.channel_id], r = null !== (t = null == i ? void 0 : i.mostRecentRawMessage) && void 0 !== t ? t : null == i ? void 0 : i.mostRecentMessage;
     if (null == i || null == r || r.id !== n.id) return !1;
-    C(i, e => {
+    R(i, e => {
       null != e.mostRecentMessage && (e.mostRecentMessage = (0, c.updateMessageRecord)(e.mostRecentMessage, n)), null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, c.updateServerMessage)(e.mostRecentRawMessage, n))
     })
   },
@@ -209,7 +209,7 @@ s = "ThreadMessageStore", (a = "displayName") in(r = P) ? Object.defineProperty(
     if (null == i) return !1;
     let r = h.default.castChannelIdAsMessageId(n) !== t,
       a = !N.has(t);
-    C(i, e => {
+    R(i, e => {
       var n;
       let i = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
       null != i && i.id === t && (e.mostRecentMessage = null, e.mostRecentRawMessage = null), e.count = r && a ? Math.max(e.count - 1, 0) : e.count, N.add(t)
@@ -226,7 +226,7 @@ s = "ThreadMessageStore", (a = "displayName") in(r = P) ? Object.defineProperty(
         i = !N.has(e);
       return t && i
     }).length;
-    r > 0 && C(i, e => {
+    r > 0 && R(i, e => {
       var n;
       let i = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
       null != i && t.includes(i.id) && (e.mostRecentMessage = null, e.mostRecentRawMessage = null), e.count -= r, t.forEach(e => N.add(e))
@@ -238,7 +238,7 @@ s = "ThreadMessageStore", (a = "displayName") in(r = P) ? Object.defineProperty(
     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
     let n = f.default.getChannel(e.channelId);
     if (null == n || !E.THREAD_CHANNEL_TYPES.has(n.type)) return t;
-    R(n, t => {
+    C(n, t => {
       if (0 === e.messages.length) t.mostRecentRawMessage = null, t.mostRecentMessage = null, t.count = 0;
       else {
         var n;

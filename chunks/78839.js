@@ -21,9 +21,9 @@ let T = null,
   N = !1,
   p = null,
   O = !1,
-  R = new u.default("SubscriptionStore");
+  C = new u.default("SubscriptionStore");
 
-function C(e) {
+function R(e) {
   let {
     activeSubscriptions: t,
     record: n
@@ -57,7 +57,7 @@ function D(e, t) {
     if (!v(r)) {
       if (!N) {
         let e = c.default.getId();
-        R.log("user id mismatch between logged in user and SubscriptionStore user"), (0, E.captureBillingMessage)("user id mismatch between logged in user and SubscriptionStore user", {
+        C.log("user id mismatch between logged in user and SubscriptionStore user"), (0, E.captureBillingMessage)("user id mismatch between logged in user and SubscriptionStore user", {
           extra: {
             authUserId: e,
             subscriptionId: r.id,
@@ -129,7 +129,7 @@ s = "SubscriptionStore", (a = "displayName") in(r = M) ? Object.defineProperty(r
     } = e, n = {}, i = {}, r = [], a = [], s = c.default.getId();
     t.forEach(e => {
       if (e.user_id !== s && !N) {
-        R.log("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.captureBillingMessage)("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
+        C.log("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.captureBillingMessage)("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
           extra: {
             authUserId: s,
             subscriptionId: e.id,
@@ -152,10 +152,10 @@ s = "SubscriptionStore", (a = "displayName") in(r = M) ? Object.defineProperty(r
     }, L(n) && (f = {
       ...f,
       [n.id]: n
-    }), null != h && n.type === I.SubscriptionTypes.GUILD && (h = C({
+    }), null != h && n.type === I.SubscriptionTypes.GUILD && (h = R({
       activeSubscriptions: h,
       record: n
-    })), null != A && n.type === I.SubscriptionTypes.APPLICATION && (h = C({
+    })), null != A && n.type === I.SubscriptionTypes.APPLICATION && (h = R({
       activeSubscriptions: A,
       record: n
     }))
@@ -167,7 +167,7 @@ s = "SubscriptionStore", (a = "displayName") in(r = M) ? Object.defineProperty(r
     if (m = !0, null != t) {
       let e = c.default.getId();
       if (t.user_id !== e && !N) {
-        R.log("[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.captureBillingMessage)("[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
+        C.log("[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.captureBillingMessage)("[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
           extra: {
             authUserId: e,
             subscriptionId: t.id,
@@ -186,7 +186,7 @@ s = "SubscriptionStore", (a = "displayName") in(r = M) ? Object.defineProperty(r
     if (O = !0, null != t) {
       let e = c.default.getId();
       if (t.user_id !== e && !N) {
-        R.log("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.captureBillingMessage)("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
+        C.log("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.captureBillingMessage)("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
           extra: {
             authUserId: e,
             subscriptionId: t.id,

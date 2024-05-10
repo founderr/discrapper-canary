@@ -45,8 +45,8 @@ function N(e) {
     isUsingGuildBio: N,
     lastSection: p = !1,
     animateOnHover: O = !1,
-    isHovering: R = !1,
-    lineClamp: C,
+    isHovering: C = !1,
+    lineClamp: R,
     userId: g
   } = e, {
     location: L
@@ -92,8 +92,8 @@ function N(e) {
     }), (0, i.jsx)(I.default, {
       userBio: r,
       animateOnHover: O,
-      isHovering: R,
-      lineClamp: C,
+      isHovering: C,
+      lineClamp: R,
       userId: g
     })]
   })

@@ -2,7 +2,7 @@
 let i, r;
 n.r(t), n.d(t, {
   encryptAndStoreTokens: function() {
-    return C
+    return R
   },
   getToken: function() {
     return m
@@ -14,7 +14,7 @@ n.r(t), n.d(t, {
     return A
   },
   removeToken: function() {
-    return R
+    return C
   },
   setToken: function() {
     return N
@@ -92,10 +92,10 @@ function m(e) {
 
 function N(e, t) {
   if (null == e) {
-    R(t);
+    C(t);
     return
   }
-  i = e, null != t && (c[t] = e), _ ? C() : (r = i, E = c, f())
+  i = e, null != t && (c[t] = e), _ ? R() : (r = i, E = c, f())
 }
 
 function p() {
@@ -106,12 +106,12 @@ function O() {
   I && (I = !1, f())
 }
 
-function R(e) {
+function C(e) {
   let t = i;
   return null != e && (t = c[e], delete c[e], delete E[e]), t === i && (i = null, r = null), f(), null != t
 }
 
-function C() {
+function R() {
   (null == u ? void 0 : u.isEncryptionAvailable()) ? (null != i && (r = h(i)), E = l(Object.entries(c).map(e => {
     let [t, n] = e;
     return [t, h(n)]

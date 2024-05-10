@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
-var a, s, i = n("735250");
+var a, s, l = n("735250");
 n("470079");
-var l = n("756647"),
+var i = n("756647"),
   r = n("481060"),
   o = n("570140"),
   u = n("355467"),
@@ -16,8 +16,8 @@ var l = n("756647"),
   m = n("594174"),
   S = n("626135"),
   p = n("585483"),
-  g = n("591759"),
-  I = n("998502"),
+  I = n("591759"),
+  g = n("998502"),
   T = n("996106"),
   A = n("186901"),
   N = n("981631");
@@ -27,7 +27,7 @@ function v(e, t) {
     invite_code: null,
     has_auth_token: null,
     is_backgrounded: null,
-    fingerprint: (0, l.extractId)(e),
+    fingerprint: (0, i.extractId)(e),
     link_type: t
   })
 }(a = s || (s = {})).SETTINGS = "settings", a.CHANGELOG = "changelog", a.LIBRARY = "library", a.STORE = "store", a.INVITE = "invite", a.CHANNEL = "channel", a.GUILD_SETTINGS = "guild_settings", t.default = {
@@ -70,11 +70,11 @@ function v(e, t) {
       if (null == a) throw new T.default({
         errorCode: N.RPCErrors.INVALID_GUILD_TEMPLATE
       }, "Invalid guild template id: ".concat(t));
-      return I.default.focus(), (0, r.openModalLazy)(async () => {
+      return g.default.focus(), (0, r.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("10778"), n.e("90424")]).then(n.bind(n, "766775"));
-        return t => (0, i.jsx)(e, {
+        return t => (0, l.jsx)(e, {
           ...t,
           guildTemplate: a
         })
@@ -98,14 +98,14 @@ function v(e, t) {
             let {
               giftCode: s
             } = a;
-            I.default.focus(), S.default.track(N.AnalyticEvents.OPEN_MODAL, {
+            g.default.focus(), S.default.track(N.AnalyticEvents.OPEN_MODAL, {
               type: "gift_accept",
               location: N.DIRECT_ANALYTICS_LOCATION
             }), (0, r.openModalLazy)(async () => {
               let {
                 default: e
               } = await Promise.all([n.e("99387"), n.e("8016"), n.e("92446")]).then(n.bind(n, "409858"));
-              return n => (0, i.jsx)(e, {
+              return n => (0, l.jsx)(e, {
                 code: t,
                 ...n
               })
@@ -128,12 +128,12 @@ function v(e, t) {
           params: n
         }
       } = e;
-      switch (I.default.focus(), t) {
+      switch (g.default.focus(), t) {
         case A.RPCDeepLinks.USER_SETTINGS:
           null != n && ((0, _.replaceWith)(N.Routes.SETTINGS(n.section, n.subsection)), v(n.fingerprint, "settings"));
           break;
         case A.RPCDeepLinks.CHANGELOG:
-          null != n && ((0, _.replaceWith)(g.default.formatPathWithQuery(N.Routes.CHANGELOGS(n.date), n.query)), v(n.fingerprint, "changelog"));
+          null != n && ((0, _.replaceWith)(I.default.formatPathWithQuery(N.Routes.CHANGELOGS(n.date), n.query)), v(n.fingerprint, "changelog"));
           break;
         case A.RPCDeepLinks.LIBRARY:
           (0, _.replaceWith)(N.Routes.APPLICATION_LIBRARY), null != n && v(n.fingerprint, "library");
@@ -167,7 +167,7 @@ function v(e, t) {
           fingerprint: n
         }
       } = e;
-      I.default.focus(null, !0), (0, d.handoffEnd)(t, n)
+      g.default.focus(null, !0), (0, d.handoffEnd)(t, n)
     }
   },
   [N.RPCCommands.CONNECTIONS_CALLBACK]: {

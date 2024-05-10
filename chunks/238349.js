@@ -21,8 +21,8 @@ var r, a, s, o, l = n("392711"),
   N = n("882252");
 let p = [],
   O = null,
-  R = null,
-  C = new Set,
+  C = null,
+  R = new Set,
   g = d.ThreadSortOrder.LATEST_ACTIVITY,
   L = 0,
   v = [],
@@ -48,7 +48,7 @@ function w(e) {
 }
 
 function B() {
-  v = [], i = null, R = null, C = new Set, g = d.ThreadSortOrder.LATEST_ACTIVITY, L = 0, M = [], y = u().chain(p), P = u().chain(p), b.clear(), U.clear()
+  v = [], i = null, C = null, R = new Set, g = d.ThreadSortOrder.LATEST_ACTIVITY, L = 0, M = [], y = u().chain(p), P = u().chain(p), b.clear(), U.clear()
 }
 
 function k() {
@@ -72,7 +72,7 @@ function V(e) {
 
 function x(e) {
   var t;
-  let n = f.default.getChannel(R);
+  let n = f.default.getChannel(C);
   if (null == n) return;
   (null == e ? void 0 : e.refreshThreadIds) && (M = Object.values(E.default.getThreadsForParent(n.guild_id, n.id)).map(e => {
     let {
@@ -81,7 +81,7 @@ function x(e) {
     return t
   }), L = 0, D = !0), 0 !== U.size && (M = M.filter(e => !U.has(e)), U.clear()), 0 !== b.size && (M = Array.from(new Set([...M, ...b])), b.clear()), ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && (P = u().chain(M).sort(w(d.ThreadSortOrder.LATEST_ACTIVITY)), y = u().chain(M).sort(w(d.ThreadSortOrder.CREATION_DATE)));
   let r = (g === d.ThreadSortOrder.LATEST_ACTIVITY ? P : y).value();
-  let a = (v = 0 === C.size ? r : r.filter((t = C, function(e) {
+  let a = (v = 0 === R.size ? r : r.filter((t = R, function(e) {
     var n;
     let i = null === (n = f.default.getChannel(e)) || void 0 === n ? void 0 : n.appliedTags;
     return null != i && 0 !== i.length && i.some(e => t.has(e))
@@ -102,10 +102,10 @@ class F extends(r = _.default.Store) {
     return D
   }
   getThreadIds(e, t, n) {
-    let i = e !== R,
-      r = !(0, A.areSetsEqual)(n, C),
+    let i = e !== C,
+      r = !(0, A.areSetsEqual)(n, R),
       a = t !== g;
-    return R = e, C = n, g = t, i ? x({
+    return C = e, R = n, g = t, i ? x({
       refreshThreadIds: !0
     }) : a ? x({
       sortThreadIds: !0
@@ -136,7 +136,7 @@ o = "ForumActivePostStore", (s = "displayName") in(a = F) ? Object.definePropert
     let {
       channel: t
     } = e;
-    if (null == t.parent_id || t.parent_id !== R) return !1;
+    if (null == t.parent_id || t.parent_id !== C) return !1;
     B()
   },
   THREAD_LIST_SYNC: function(e) {
@@ -144,7 +144,7 @@ o = "ForumActivePostStore", (s = "displayName") in(a = F) ? Object.definePropert
     let {
       guildId: n
     } = e;
-    if (null == R || n !== (null === (t = f.default.getChannel(R)) || void 0 === t ? void 0 : t.guild_id)) return !1;
+    if (null == C || n !== (null === (t = f.default.getChannel(C)) || void 0 === t ? void 0 : t.guild_id)) return !1;
     x({
       refreshThreadIds: !0
     })
@@ -154,14 +154,14 @@ o = "ForumActivePostStore", (s = "displayName") in(a = F) ? Object.definePropert
       channel: t,
       isNewlyCreated: n
     } = e;
-    if (null == t.parent_id || t.parent_id !== R || !n) return !1;
+    if (null == t.parent_id || t.parent_id !== C || !n) return !1;
     t.ownerId !== T.default.getId() ? L++ : O = t.id
   },
   THREAD_UPDATE: function(e) {
     let {
       channel: t
     } = e;
-    if (null == t.parent_id || t.parent_id !== R) return !1;
+    if (null == t.parent_id || t.parent_id !== C) return !1;
     let n = (0, N.isForumPostPinned)(t.id),
       i = b.has(t.id);
     if (n && !i) b.add(t.id), x({
@@ -178,7 +178,7 @@ o = "ForumActivePostStore", (s = "displayName") in(a = F) ? Object.definePropert
     let {
       channel: t
     } = e;
-    if (null == t.parent_id || t.parent_id !== R) return !1;
+    if (null == t.parent_id || t.parent_id !== C) return !1;
     U.add(t.id), x({
       sortThreadIds: !0
     })
@@ -187,7 +187,7 @@ o = "ForumActivePostStore", (s = "displayName") in(a = F) ? Object.definePropert
     let {
       channelId: t
     } = e;
-    if (null == t || t !== R) return !1;
+    if (null == t || t !== C) return !1;
     x({
       refreshThreadIds: !0
     })
@@ -196,7 +196,7 @@ o = "ForumActivePostStore", (s = "displayName") in(a = F) ? Object.definePropert
     let {
       channelId: t
     } = e;
-    if (null == t || t !== R) return !1;
+    if (null == t || t !== C) return !1;
     D = !1
   }
 })

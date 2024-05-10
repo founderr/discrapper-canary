@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getApplicationStoreListingLocation: function() {
-    return C
+    return R
   },
   getAssetURL: function() {
     return g
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return P
   },
   getStoreListingLocation: function() {
-    return R
+    return C
   },
   httpGetWithCountryCodeQuery: function() {
     return L
@@ -51,7 +51,7 @@ var i = n("392711"),
 l().shim();
 let O = !u.isMobile && !u.isTablet && -1 !== (0, f.getChromeVersion)();
 
-function R(e, t) {
+function C(e, t) {
   let {
     analyticsSource: n,
     analyticsProperties: i,
@@ -70,7 +70,7 @@ function R(e, t) {
   }
 }
 
-function C(e, t) {
+function R(e, t) {
   let {
     analyticsSource: n,
     analyticsProperties: i,

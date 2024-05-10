@@ -46,12 +46,12 @@ function O(e) {
       emoji_id: null != s ? s : null
     }
   });
-  let R = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(n)),
-    C = (0, a.useStateFromStores)([f.default], () => null != n && f.default.getUserSubscriptionRoles(n).size > 0),
-    g = C ? m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION : m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({
-      serverName: null == R ? void 0 : R.name
+  let C = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(n)),
+    R = (0, a.useStateFromStores)([f.default], () => null != n && f.default.getUserSubscriptionRoles(n).size > 0),
+    g = R ? m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION : m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({
+      serverName: null == C ? void 0 : C.name
     }),
-    L = C ? m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
+    L = R ? m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : m.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
   return (0, i.jsxs)("div", {
     className: N.container,
     children: [(0, i.jsx)("div", {

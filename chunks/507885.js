@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("47120");
 var a, s = n("442837"),
-  i = n("570140"),
-  l = n("701488");
+  l = n("570140"),
+  i = n("701488");
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -13,7 +13,7 @@ function r(e, t, n) {
   }) : e[t] = n, e
 }
 let o = new Set,
-  u = new Set([l.WhatsNewSection.DISCORD_TURNS_8]);
+  u = new Set([i.WhatsNewSection.DISCORD_TURNS_8]);
 class d extends(a = s.default.PersistedStore) {
   initialize(e) {
     null != e && (Array.isArray(e.acknowledged) && (o = new Set(e.acknowledged)), Array.isArray(e.opened) && (u = new Set(e.opened)))
@@ -37,7 +37,7 @@ class d extends(a = s.default.PersistedStore) {
     return o.has(e)
   }
 }
-r(d, "displayName", "ActivitiesWhatsNewStore"), r(d, "persistKey", "ActivitiesWhatsNewStore"), t.default = new d(i.default, {
+r(d, "displayName", "ActivitiesWhatsNewStore"), r(d, "persistKey", "ActivitiesWhatsNewStore"), t.default = new d(l.default, {
   ACTIVITIES_WHATS_NEW_ACKNOWLEDGE_SECTION: function(e) {
     let {
       section: t

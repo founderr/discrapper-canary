@@ -17,8 +17,8 @@ var i, r, a, s, o = n("348327"),
   N = n("581883"),
   p = n("199902"),
   O = n("272053"),
-  R = n("77498"),
-  C = n("981631"),
+  C = n("77498"),
+  R = n("981631"),
   g = n("689938");
 let L = [],
   v = {};
@@ -31,7 +31,7 @@ function D() {
   e.push(...n);
   let i = O.default.getStream();
   null != i && e.push({
-    type: C.ActivityTypes.STREAMING,
+    type: R.ActivityTypes.STREAMING,
     ...i
   });
   let r = new Set,
@@ -46,10 +46,10 @@ function D() {
     if (a.has(i)) return;
     let r = null === (n = I.default.getApplication(i)) || void 0 === n ? void 0 : n.name;
     e.push({
-      type: C.ActivityTypes.PLAYING,
+      type: R.ActivityTypes.PLAYING,
       name: null != r ? r : g.default.Messages.EMBEDDED_ACTIVITIES_LAUNCHING_ACTIVITY,
       application_id: i,
-      flags: C.ActivityFlags.EMBEDDED
+      flags: R.ActivityFlags.EMBEDDED
     })
   });
   let s = f.default.getVisibleGame(),
@@ -59,9 +59,9 @@ function D() {
   if (null != s && null != s.name && !(o || u && !(null != _))) {
     var c, N;
     e.push({
-      type: C.ActivityTypes.PLAYING,
+      type: R.ActivityTypes.PLAYING,
       name: s.name,
-      application_id: null !== (N = s.id) && void 0 !== N ? N : null === (c = R.default.getGameByName(s.name)) || void 0 === c ? void 0 : c.id,
+      application_id: null !== (N = s.id) && void 0 !== N ? N : null === (c = C.default.getGameByName(s.name)) || void 0 === c ? void 0 : c.id,
       timestamps: {
         start: s.start
       }
@@ -69,14 +69,14 @@ function D() {
   }
   let D = A.default.getActivity();
   null != D && e.push({
-    type: C.ActivityTypes.LISTENING,
+    type: R.ActivityTypes.LISTENING,
     ...D
   });
   let M = S.default.getCurrentHangStatus();
   if (null != M) {
     let t = S.default.getCustomHangStatus();
     e.push({
-      type: C.ActivityTypes.HANG_STATUS,
+      type: R.ActivityTypes.HANG_STATUS,
       name: "Hang Status",
       state: M,
       details: null == t ? void 0 : t.status,
@@ -86,7 +86,7 @@ function D() {
 }
 class M extends(i = _.default.Store) {
   initialize() {
-    this.waitFor(f.default, E.default, O.default, p.default, A.default, N.default, S.default, R.default), this.syncWith([h.default, S.default], () => D())
+    this.waitFor(f.default, E.default, O.default, p.default, A.default, N.default, S.default, C.default), this.syncWith([h.default, S.default], () => D())
   }
   getActivities() {
     return L
@@ -98,7 +98,7 @@ class M extends(i = _.default.Store) {
     return this.findActivity(t => t.application_id === e)
   }
   getCustomStatusActivity() {
-    return this.findActivity(e => e.type === C.ActivityTypes.CUSTOM_STATUS)
+    return this.findActivity(e => e.type === R.ActivityTypes.CUSTOM_STATUS)
   }
   findActivity(e) {
     return L.find(e)

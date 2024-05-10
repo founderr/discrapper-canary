@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  i = n("194359"),
-  l = n("906732"),
+  l = n("194359"),
+  i = n("906732"),
   r = n("388380"),
   o = n("171368"),
   u = n("263704"),
@@ -26,10 +26,10 @@ function S(e) {
     nickname: n,
     status: S,
     isFocused: p
-  } = e, g = s.useContext(c.AnalyticsContext), {
-    analyticsLocations: I
-  } = (0, l.default)(), T = e => {
-    null == e || e.stopPropagation(), i.default.addRelationship({
+  } = e, I = s.useContext(c.AnalyticsContext), {
+    analyticsLocations: g
+  } = (0, i.default)(), T = e => {
+    null == e || e.stopPropagation(), l.default.addRelationship({
       userId: t.id,
       context: {
         location: "Friends"
@@ -46,8 +46,8 @@ function S(e) {
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: I,
-      analyticsLocation: g.location
+      sourceAnalyticsLocations: g,
+      analyticsLocation: I.location
     }),
     children: e => {
       let s = (0, a.jsxs)(a.Fragment, {

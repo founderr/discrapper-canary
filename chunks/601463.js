@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("685626"),
-  l = n("442837"),
+  l = n("685626"),
+  i = n("442837"),
   r = n("481060"),
   o = n("607070"),
   u = n("63063"),
@@ -31,15 +31,15 @@ function C(e) {
     sidebarWidth: m,
     windowWidth: S,
     transition: p,
-    brandPrimaryColor: g
-  } = e, I = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = s.useRef(null), A = s.useMemo(() => (S - m) / 2, [m, S]), [N, v, R] = (0, i.useSpring)(() => ({
+    brandPrimaryColor: I
+  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = s.useRef(null), A = s.useMemo(() => (S - m) / 2, [m, S]), [N, v, R] = (0, l.useSpring)(() => ({
     to: [{
       transform: "translateX(-8px)"
     }, {
       transform: "translateX(0px)"
     }],
     loop: !0
-  })), L = (0, i.useSpring)({
+  })), L = (0, l.useSpring)({
     from: {
       opacity: 0
     },
@@ -48,7 +48,7 @@ function C(e) {
     },
     config: _,
     delay: 800,
-    immediate: I
+    immediate: g
   });
   s.useEffect(() => {
     n && (R(), v({
@@ -66,7 +66,7 @@ function C(e) {
     M = () => open(u.default.getArticleURL(f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES));
   return (0, a.jsxs)("div", {
     className: h.sidebarContent,
-    children: [p((e, t) => t && (0, a.jsx)(i.animated.div, {
+    children: [p((e, t) => t && (0, a.jsx)(l.animated.div, {
       className: h.sidebarLeftDecorationContainer,
       style: {
         opacity: e.opacity,
@@ -87,7 +87,7 @@ function C(e) {
           children: E.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
         })]
       })
-    })), p((e, t) => t && (0, a.jsx)(i.animated.div, {
+    })), p((e, t) => t && (0, a.jsx)(l.animated.div, {
       className: h.sidebarRightDecorationContainer,
       style: {
         opacity: e.opacity,
@@ -96,13 +96,13 @@ function C(e) {
       },
       children: (0, a.jsxs)("div", {
         className: h.sidebarRightDecoration,
-        children: [(0, a.jsx)(i.animated.div, {
-          style: I ? void 0 : N,
+        children: [(0, a.jsx)(l.animated.div, {
+          style: g ? void 0 : N,
           children: (0, a.jsx)(d.default, {
             className: h.signButton,
             size: r.Button.Sizes.SMALL,
             onClick: O,
-            themeColor: g,
+            themeColor: I,
             children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
           })
         }), (0, a.jsx)(r.Text, {

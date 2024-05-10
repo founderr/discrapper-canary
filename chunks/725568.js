@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return p
   },
   closeFullScreenLayer: function() {
-    return R
+    return C
   },
   openFullScreenLayer: function() {
     return O
@@ -49,7 +49,7 @@ function A(e) {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
-          R(e)
+          C(e)
         }
       }
     }
@@ -63,7 +63,7 @@ function A(e) {
         className: f.drag
       }), t.render({
         transitionState: null != t ? t.transitionState : 3,
-        closeLayer: () => R(t.key)
+        closeLayer: () => C(t.key)
       })]
     })
   })
@@ -126,7 +126,7 @@ function O(e) {
   })), r
 }
 
-function R(e) {
+function C(e) {
   h.setState(t => ({
     fullScreenLayers: t.fullScreenLayers.filter(t => t.key !== e)
   }))

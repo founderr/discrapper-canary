@@ -17,8 +17,8 @@ var r, a, s, o, l = n("392711"),
   N = n("19780"),
   p = n("699516"),
   O = n("944486"),
-  R = n("914010"),
-  C = n("981631");
+  C = n("914010"),
+  R = n("981631");
 let g = new c.default(e => {
   for (let t in e) null == m.default.getGuild(t) && !h.default.isUnavailable(t) && delete e[t];
   _.default.dispatch({
@@ -31,7 +31,7 @@ function L(e, t) {
   let n = {};
   g.forEach(r => {
     var a;
-    r !== R.default.getGuildId() && r !== N.default.getGuildId() && r !== (null === (a = S.default.getChannel(O.default.getChannelId())) || void 0 === a ? void 0 : a.getGuildId()) && (null == i || i.guildId !== r) && (g.clearWithoutFlushing(r, e), t && (n[r] = g.get(r)))
+    r !== C.default.getGuildId() && r !== N.default.getGuildId() && r !== (null === (a = S.default.getChannel(O.default.getChannelId())) || void 0 === a ? void 0 : a.getGuildId()) && (null == i || i.guildId !== r) && (g.clearWithoutFlushing(r, e), t && (n[r] = g.get(r)))
   }), !u().isEmpty(n) && _.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_FLUSH",
     subscriptions: n
@@ -39,7 +39,7 @@ function L(e, t) {
 }
 
 function v(e, t) {
-  return g.subscribeToGuild(e), null != t && f.default.getSection(t) === C.ChannelSections.MEMBERS && D(e, t, c.DEFAULT_RANGES)
+  return g.subscribeToGuild(e), null != t && f.default.getSection(t) === R.ChannelSections.MEMBERS && D(e, t, c.DEFAULT_RANGES)
 }
 
 function D(e, t, n) {
@@ -47,7 +47,7 @@ function D(e, t, n) {
   let i = S.default.getChannel(t);
   if (null == i) return !1;
   let r = i.getGuildId();
-  return (r !== e && e === C.FAVORITES && g.subscribeToGuild(r), null != i && i.isThread()) ? i.type === C.ChannelTypes.ANNOUNCEMENT_THREAD ? g.subscribeChannel(r, i.parent_id, n) : !!i.isActiveThread() && g.subscribeThreadMemberList(r, t, O.default.getChannelId()) : g.subscribeChannel(r, t, n)
+  return (r !== e && e === R.FAVORITES && g.subscribeToGuild(r), null != i && i.isThread()) ? i.type === R.ChannelTypes.ANNOUNCEMENT_THREAD ? g.subscribeChannel(r, i.parent_id, n) : !!i.isActiveThread() && g.subscribeThreadMemberList(r, t, O.default.getChannelId()) : g.subscribeChannel(r, t, n)
 }
 
 function M(e) {
@@ -55,7 +55,7 @@ function M(e) {
     type: t
   } = e;
   "CONNECTION_OPEN" === t && L(!0, !1);
-  let n = R.default.getGuildId();
+  let n = C.default.getGuildId();
   null != n && v(n, O.default.getChannelId(n));
   let i = {};
   g.forEach(e => {
@@ -75,7 +75,7 @@ function y(e) {
 }
 
 function P() {
-  return v(R.default.getGuildId(), O.default.getChannelId())
+  return v(C.default.getGuildId(), O.default.getChannelId())
 }
 
 function U() {
@@ -98,7 +98,7 @@ function U() {
 }
 class b extends(r = d.default.Store) {
   initialize() {
-    this.waitFor(S.default, m.default, R.default, O.default, N.default, I.default, f.default), this.syncWith([E.default], U), this.syncWith([f.default], P)
+    this.waitFor(S.default, m.default, C.default, O.default, N.default, I.default, f.default), this.syncWith([E.default], U), this.syncWith([f.default], P)
   }
   getSubscribedThreadIds() {
     return g.getSubscribedThreadIds()
@@ -144,7 +144,7 @@ o = "GuildSubscriptionsStore", (s = "displayName") in(a = b) ? Object.defineProp
     let {
       guild: t
     } = e;
-    t.id === R.default.getGuildId() && P()
+    t.id === C.default.getGuildId() && P()
   },
   GUILD_DELETE: function(e) {
     let {

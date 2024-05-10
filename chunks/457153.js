@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("120356"),
-  i = n.n(s),
-  l = n("685626"),
+  l = n.n(s),
+  i = n("685626"),
   r = n("481060"),
   o = n("497505"),
   u = n("685613"),
@@ -20,12 +20,12 @@ t.default = function(e) {
     expansionSpring: m,
     isExpanded: S,
     isExpansionAnimationComplete: p,
-    quest: g,
-    useReducedMotion: I
-  } = e, T = (null === (t = g.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, A = (null !== (_ = null === (s = g.userStatus) || void 0 === s ? void 0 : s.streamProgressSeconds) && void 0 !== _ ? _ : 0) > 0;
-  return (0, a.jsxs)(l.animated.div, {
+    quest: I,
+    useReducedMotion: g
+  } = e, T = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, A = (null !== (_ = null === (s = I.userStatus) || void 0 === s ? void 0 : s.streamProgressSeconds) && void 0 !== _ ? _ : 0) > 0;
+  return (0, a.jsxs)(i.animated.div, {
     "aria-hidden": S && p,
-    className: i()(C, h.contentCollapsed, {
+    className: l()(C, h.contentCollapsed, {
       [h.contentCollapsedExpanded]: S,
       [h.contentCollapsedAccepted]: T
     }),
@@ -38,20 +38,20 @@ t.default = function(e) {
     children: [(0, a.jsx)(f.QuestBarBackgroundAnimation, {
       className: h.background,
       animationClassName: h.backgroundAnimation,
-      quest: g,
-      useReducedMotion: I
+      quest: I,
+      useReducedMotion: g
     }), (0, a.jsx)("div", {
       className: h.contentCollapsedWrapper,
       children: T ? (0, a.jsxs)("div", {
         className: h.questProgressWrapper,
         children: [(0, a.jsx)(c.default, {
           className: h.questProgressRewardTile,
-          quest: g,
+          quest: I,
           questContent: o.QuestContent.QUEST_BAR,
           autoplay: !1
         }), A ? (0, a.jsx)(d.default, {
           className: h.questProgressBar,
-          quest: g
+          quest: I
         }) : (0, a.jsx)(r.Text, {
           className: h.questProgressHint,
           color: "always-white",
@@ -66,7 +66,7 @@ t.default = function(e) {
           src: n("896145")
         }), (0, a.jsx)(u.default, {
           className: h.partnerBranding,
-          quest: g,
+          quest: I,
           withGameTile: !1
         }), (0, a.jsx)(r.Text, {
           color: "always-white",

@@ -77,7 +77,7 @@ function N(e) {
       mentionUsers: y,
       mentionRoles: P
     }),
-    attachments: R(e),
+    attachments: C(e),
     embeds: g(e),
     components: (0, s.transformComponents)(null !== (N = e.components) && void 0 !== N ? N : [], {
       includeEmojiSrc: !1
@@ -86,7 +86,7 @@ function N(e) {
     giftCodes: (0, f.isGiftCodeEmbed)(e) ? (0, f.findGiftCodes)(null == e ? void 0 : e.embeds[0].url) : (0, f.findGiftCodes)(e.content),
     content: H,
     referralTrialOfferId: F,
-    call: C(e.call, G),
+    call: R(e.call, G),
     reactions: L(null != D ? D : e.reactions, e.poll),
     interaction: V,
     interactionData: null != M ? M : e.interaction_data,
@@ -115,7 +115,7 @@ function O(e, t) {
     interactionData: e.interactionData
   });
   let n = e;
-  if (null != t.call && (n = n.set("call", C(t.call, e.timestamp))), null != t.attachments && (n = n.set("attachments", R(t))), null != t.content && "" !== t.content && (n = n.set("content", t.content)), null != t.embeds && (n = n.set("embeds", g(t))), t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)), null != n.webhookId && null != t.author && (n = n.set("author", new _.default(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)), null != t.components && (n = n.set("components", (0, s.transformComponents)(t.components, {
+  if (null != t.call && (n = n.set("call", R(t.call, e.timestamp))), null != t.attachments && (n = n.set("attachments", C(t))), null != t.content && "" !== t.content && (n = n.set("content", t.content)), null != t.embeds && (n = n.set("embeds", g(t))), t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)), null != n.webhookId && null != t.author && (n = n.set("author", new _.default(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)), null != t.components && (n = n.set("components", (0, s.transformComponents)(t.components, {
       includeEmojiSrc: !1
     }))), null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)), null != t.reactions) {
     var i;
@@ -124,14 +124,14 @@ function O(e, t) {
   return null != t.poll && (n = n.set("poll", (0, o.default)(t.poll))), n
 }
 
-function R(e) {
+function C(e) {
   return null == e.attachments ? [] : e.attachments.map(e => ({
     ...e,
     spoiler: e.filename.startsWith(h.SPOILER_ATTACHMENT_PREFIX)
   }))
 }
 
-function C(e, t) {
+function R(e, t) {
   if (null != e) {
     let n = null != e.ended_timestamp ? r()(new Date(e.ended_timestamp)) : null,
       i = null != n ? r().duration(n.diff(t)) : null;

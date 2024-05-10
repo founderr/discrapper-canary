@@ -47,8 +47,8 @@ function p(e, t) {
   return null == i ? n : t(i)
 }
 let O = "SearchStore",
-  R = !1,
-  C = {},
+  C = !1,
+  R = {},
   g = null;
 
 function L(e) {
@@ -58,9 +58,9 @@ function L(e) {
     query: i
   } = e;
   if ("string" != typeof i || "" === (i = i.trim())) return;
-  let r = C[n] = null !== (t = C[n]) && void 0 !== t ? t : [],
+  let r = R[n] = null !== (t = R[n]) && void 0 !== t ? t : [],
     a = r.indexOf(i); - 1 !== a ? (r.splice(a, 1), r.unshift(i)) : null != r[0] && "" !== r[0] && i.startsWith(r[0]) ? r[0] = i : a < 0 && r.unshift(i), r.length > 5 && r.splice(5, r.length), _.Storage.set(O, {
-    history: C
+    history: R
   })
 }
 
@@ -84,9 +84,9 @@ class M extends(r = d.default.Store) {
       var t;
       Object.keys(t = e.history).forEach(e => {
         Array.isArray(t[e]) && (t[e] = t[e].filter(e => "string" == typeof e && e.trim())), (!Array.isArray(t[e]) || 0 === t[e].length) && delete t[e]
-      }), C = t
+      }), R = t
     }
-    R = !!_.Storage.get("tokenized")
+    C = !!_.Storage.get("tokenized")
   }
   isOpen() {
     return A
@@ -102,7 +102,7 @@ class M extends(r = d.default.Store) {
     return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e))
   }
   isTokenized() {
-    return R
+    return C
   }
   getSearchType(e) {
     return p(null != e ? e : g, e => e.searchType)
@@ -142,7 +142,7 @@ class M extends(r = d.default.Store) {
     return p(e, e => e.editorState)
   }
   getHistory(e) {
-    return C[e]
+    return R[e]
   }
   getOffset(e) {
     var t;
@@ -290,8 +290,8 @@ o = "SearchStore", (s = "displayName") in(a = M) ? Object.defineProperty(a, s, {
     let {
       searchId: t
     } = e;
-    null == t ? (_.Storage.remove(O), C = {}) : (delete C[t], _.Storage.set(O, {
-      history: C
+    null == t ? (_.Storage.remove(O), R = {}) : (delete R[t], _.Storage.set(O, {
+      history: R
     }))
   },
   SEARCH_REMOVE_HISTORY: function(e) {
@@ -299,13 +299,13 @@ o = "SearchStore", (s = "displayName") in(a = M) ? Object.defineProperty(a, s, {
       searchId: t,
       query: n
     } = e;
-    null != C[t] && (C[t] = C[t].filter(e => e !== n), _.Storage.set(O, {
-      history: C
+    null != R[t] && (R[t] = R[t].filter(e => e !== n), _.Storage.set(O, {
+      history: R
     }))
   },
   SEARCH_ADD_HISTORY: L,
   LOGOUT: function() {
-    _.Storage.remove(O), C = {}
+    _.Storage.remove(O), R = {}
   },
   CONNECTION_OPEN: function() {
     Object.keys(h).forEach(e => {

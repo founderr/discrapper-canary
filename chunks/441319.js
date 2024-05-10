@@ -31,107 +31,107 @@ var i = n("392711"),
   N = n("405571"),
   p = n("730886"),
   O = n("473974"),
-  R = n("563856"),
-  C = n("997945"),
+  C = n("563856"),
+  R = n("997945"),
   g = n("689938");
 let L = 60,
   v = [{
-    id: C.FreemiumAppIconIds.DEFAULT,
+    id: R.FreemiumAppIconIds.DEFAULT,
     iconSource: s,
     name: g.default.Messages.APP_ICON_DEFAULT,
     isPremium: !1
   }].concat([{
-    id: C.PremiumAppIconIds.BRAND_DARK,
+    id: R.PremiumAppIconIds.BRAND_DARK,
     iconSource: d,
     name: g.default.Messages.APP_ICON_BRAND_DARK,
     isPremium: !0
   }, {
-    id: C.PremiumAppIconIds.MANGA,
+    id: R.PremiumAppIconIds.MANGA,
     iconSource: h,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_MANGA
   }, {
-    id: C.PremiumAppIconIds.MATTE_DARK,
+    id: R.PremiumAppIconIds.MATTE_DARK,
     iconSource: A,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_MATTE_DARK
   }, {
-    id: C.PremiumAppIconIds.MATTE_LIGHT,
+    id: R.PremiumAppIconIds.MATTE_LIGHT,
     iconSource: m,
     name: g.default.Messages.APP_ICON_MATTE_LIGHT,
     isPremium: !0
   }, {
-    id: C.PremiumAppIconIds.PASTEL,
+    id: R.PremiumAppIconIds.PASTEL,
     iconSource: N,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_PASTEL
   }, {
-    id: C.PremiumAppIconIds.PIRATE,
+    id: R.PremiumAppIconIds.PIRATE,
     iconSource: p,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_PIRATE
   }, {
-    id: C.PremiumAppIconIds.CAMO,
+    id: R.PremiumAppIconIds.CAMO,
     iconSource: _,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_CAMO
   }, {
-    id: C.PremiumAppIconIds.SUNSET,
+    id: R.PremiumAppIconIds.SUNSET,
     iconSource: O,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_SUNSET
   }, {
-    id: C.PremiumAppIconIds.GALAXY,
+    id: R.PremiumAppIconIds.GALAXY,
     iconSource: T,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_GALAXY
   }, {
-    id: C.PremiumAppIconIds.Y2K,
-    iconSource: R,
+    id: R.PremiumAppIconIds.Y2K,
+    iconSource: C,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_Y2K
   }, {
-    id: C.PremiumAppIconIds.CHERRY_BLOSSOM,
+    id: R.PremiumAppIconIds.CHERRY_BLOSSOM,
     iconSource: c,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_CHERRY_BLOSSOM
   }, {
-    id: C.PremiumAppIconIds.BEANIE,
+    id: R.PremiumAppIconIds.BEANIE,
     iconSource: o,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_BEANIE
   }, {
-    id: C.PremiumAppIconIds.GAMING,
+    id: R.PremiumAppIconIds.GAMING,
     iconSource: f,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_GAMING
   }, {
-    id: C.PremiumAppIconIds.CIRCUIT,
+    id: R.PremiumAppIconIds.CIRCUIT,
     iconSource: E,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_CIRCUIT
   }, {
-    id: C.PremiumAppIconIds.HOLO_WAVES,
+    id: R.PremiumAppIconIds.HOLO_WAVES,
     iconSource: S,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_HOLO_WAVES
   }, {
-    id: C.PremiumAppIconIds.BLUSH,
+    id: R.PremiumAppIconIds.BLUSH,
     iconSource: u,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_BLUSH
   }, {
-    id: C.PremiumAppIconIds.ANGRY,
+    id: R.PremiumAppIconIds.ANGRY,
     iconSource: a,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_ANGRY
   }, {
-    id: C.PremiumAppIconIds.CONTROLLER,
+    id: R.PremiumAppIconIds.CONTROLLER,
     iconSource: I,
     isPremium: !0,
     name: g.default.Messages.APP_ICON_CONTROLLER
   }, {
-    id: C.PremiumAppIconIds.BLURPLE_TWILIGHT,
+    id: R.PremiumAppIconIds.BLURPLE_TWILIGHT,
     iconSource: l,
     isPremium: !0,
     name: g.default.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT

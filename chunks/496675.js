@@ -17,8 +17,8 @@ var i, r, a, s, o = n("392711"),
   N = n("386438"),
   p = n("700785"),
   O = n("592125"),
-  R = n("683301"),
-  C = n("271383"),
+  C = n("683301"),
+  R = n("271383"),
   g = n("430824"),
   L = n("594174"),
   v = n("981631"),
@@ -50,7 +50,7 @@ function G(e) {
   let r = O.default.getChannel(e);
   if (null == r) return p.NONE;
   let a = r.getGuildId(),
-    s = null != a && (I.default.isLurking(a) || (null === (t = C.default.getMember(a, i.id)) || void 0 === t ? void 0 : t.isPending));
+    s = null != a && (I.default.isLurking(a) || (null === (t = R.default.getMember(a, i.id)) || void 0 === t ? void 0 : t.isPending));
   return !r.isScheduledForDeletion() && !s && l().isEmpty(r.permissionOverwrites) && null != a ? b(a) : p.computePermissions({
     user: i,
     context: r,
@@ -161,7 +161,7 @@ function z(e, t, n, i) {
 }
 class Z extends(i = d.default.Store) {
   initialize() {
-    this.waitFor(L.default, g.default, O.default, C.default, R.default, f.default, T.default, E.default)
+    this.waitFor(L.default, g.default, O.default, R.default, C.default, f.default, T.default, E.default)
   }
   getChannelPermissions(e) {
     return h.THREAD_CHANNEL_TYPES.has(e.type) ? G(e.id) : w(e.id)

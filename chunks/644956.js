@@ -26,8 +26,8 @@ var r = n("120356"),
   N = n("271383"),
   p = n("430824"),
   O = n("594174"),
-  R = n("285952"),
-  C = n("797053"),
+  C = n("285952"),
+  R = n("797053"),
   g = n("151827"),
   L = n("689938"),
   v = n("743090"),
@@ -59,7 +59,7 @@ function y(e) {
     inlinePreview: U = !1
   } = e, {
     analyticsLocations: b
-  } = (0, T.default)(I.default.ROLE_MENTION), G = (0, u.useStateFromStores)([E.default], () => E.default.roleStyle), w = null != t && 0 !== t && !U, B = w && "dot" === G, k = e => (0, i.jsxs)(C.default, {
+  } = (0, T.default)(I.default.ROLE_MENTION), G = (0, u.useStateFromStores)([E.default], () => E.default.roleStyle), w = null != t && 0 !== t && !U, B = w && "dot" === G, k = e => (0, i.jsxs)(R.default, {
     className: a()(D.roleMention),
     color: "username" === G && w ? t : null,
     ...e,
@@ -143,7 +143,7 @@ function y(e) {
               }
             }, r.id)
           }).value();
-        return (0, i.jsx)(R.default, {
+        return (0, i.jsx)(C.default, {
           className: D.rolePopout,
           ...e,
           children: (0, i.jsxs)(d.Scroller, {

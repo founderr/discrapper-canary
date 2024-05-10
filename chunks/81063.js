@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchAssetIds: function() {
-    return C
+    return R
   },
   getAssetFromImageURL: function() {
     return A
@@ -130,7 +130,7 @@ function O(e, t) {
   return n === e.length
 }
 
-function R(e, t, n, i) {
+function C(e, t, n, i) {
   let r = !1;
   for (let a = 0; a < e.length; a++) {
     let s = e[a];
@@ -147,7 +147,7 @@ function R(e, t, n, i) {
   }
   return r
 }
-async function C(e, t) {
+async function R(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
   s.default.dispatch({
     type: "APPLICATION_ASSETS_FETCH",
@@ -158,7 +158,7 @@ async function C(e, t) {
   return (r.length > 0 && await p(e, r), O(t, i)) ? (s.default.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
     applicationId: e
-  }), i) : R(t, i, await N(e), n) ? h(e).then(() => C(e, t, n - 1)) : (s.default.dispatch({
+  }), i) : C(t, i, await N(e), n) ? h(e).then(() => R(e, t, n - 1)) : (s.default.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
     applicationId: e
   }), i)
@@ -168,5 +168,5 @@ function g(e, t) {
   let n = [];
   if (O(t, n)) return n;
   let i = o.default.getApplicationAssets(e);
-  return null == i ? n : (R(t, n, i), n)
+  return null == i ? n : (C(t, n, i), n)
 }

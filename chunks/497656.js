@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   useActiveEventOrStageInstanceChannel: function() {
-    return l
+    return i
   }
 });
 var a = n("517334"),
   s = n("592125"),
-  i = n("554747");
+  l = n("554747");
 
-function l(e) {
+function i(e) {
   var t;
-  let n = (0, i.useFirstActiveEventChannel)(e),
-    l = (0, a.default)(e),
-    r = s.default.getChannel(null === (t = l[0]) || void 0 === t ? void 0 : t.id);
+  let n = (0, l.useFirstActiveEventChannel)(e),
+    i = (0, a.default)(e),
+    r = s.default.getChannel(null === (t = i[0]) || void 0 === t ? void 0 : t.id);
   return null != n ? n : r
 }

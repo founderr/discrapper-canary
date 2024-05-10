@@ -20,10 +20,10 @@ var i, r, a, s, o, l, u, d, _ = n("512722"),
 let N = window.DiscordNative,
   p = ["jpg", "jpeg", "png"],
   O = null,
-  R = null,
   C = null,
+  R = null,
   g = {};
-null != N && (O = N.remoteApp.getVersion().split(".").map(e => parseInt(e)), C = null === (i = (r = N.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r), R = null === (a = (s = N.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s));
+null != N && (O = N.remoteApp.getVersion().split(".").map(e => parseInt(e)), R = null === (i = (r = N.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r), C = null === (a = (s = N.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s));
 let L = new Set(["discord_erlpack", "discord_game_utils", "discord_rpc", "discord_spellcheck", "discord_utils", "discord_voice"]),
   v = !1;
 async function D(e) {
@@ -185,10 +185,10 @@ function y(e) {
     return O
   },
   get buildNumber() {
-    return R
+    return C
   },
   get moduleVersions() {
-    return C
+    return R
   },
   copy(e) {
     S.isPlatformEmbedded && N.clipboard.copy(e)

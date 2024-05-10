@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("74538"),
   p = n("327943"),
   O = n("539873"),
-  R = n("981631"),
-  C = n("921944"),
+  C = n("981631"),
+  R = n("921944"),
   g = n("474936"),
   L = n("689938"),
   v = n("819074");
@@ -53,7 +53,7 @@ let D = () => {
     let {
       markAsDismissed: t
     } = e, n = () => {
-      null == t || t(C.ContentDismissActionType.DISMISS), D()
+      null == t || t(R.ContentDismissActionType.DISMISS), D()
     };
     return (0, i.jsxs)("div", {
       className: v.editorHeader,
@@ -84,7 +84,7 @@ let D = () => {
       children: [r && (0, i.jsx)(M, {}), (0, i.jsx)(l.Button, {
         className: v.footerButton,
         onClick: () => {
-          null == n || n(C.ContentDismissActionType.DISMISS), D(), !t && d.default.open()
+          null == n || n(R.ContentDismissActionType.DISMISS), D(), !t && d.default.open()
         },
         color: l.Button.Colors.PRIMARY,
         size: l.Button.Sizes.MEDIUM,
@@ -109,12 +109,12 @@ function U(e) {
     shouldEditorAnimate: t && !c.default.useReducedMotion
   }));
   r.useEffect(() => {
-    d && m.default.track(R.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    d && m.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: g.PremiumUpsellTypes.APP_ICON_UPSELL,
       location_stack: a
     })
   }, [d, a]);
-  let S = (0, _.default)(null, d ? D : R.NOOP);
+  let S = (0, _.default)(null, d ? D : C.NOOP);
   return (r.useEffect(() => {
     if (d && !T) return D
   }, [d, T]), null == u) ? null : (0, i.jsx)(I.AnalyticsLocationProvider, {

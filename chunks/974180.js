@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   MESSAGE_SOUND: function() {
-    return j
+    return X
   },
   MESSAGE_SOUND_VOLUME: function() {
-    return q
+    return j
   }
 }), n("653041");
 var l, i = n("149765"),
@@ -28,10 +28,10 @@ var l, i = n("149765"),
   h = n("359110"),
   p = n("922482"),
   y = n("427679"),
-  m = n("488131"),
-  O = n("695346"),
-  M = n("592125"),
-  v = n("430824"),
+  O = n("488131"),
+  m = n("695346"),
+  v = n("592125"),
+  M = n("430824"),
   D = n("292959"),
   R = n("496675"),
   G = n("699516"),
@@ -51,7 +51,7 @@ var l, i = n("149765"),
   J = n("765305"),
   Q = n("689938");
 
-function X(e, t, n) {
+function q(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -59,8 +59,8 @@ function X(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let j = "message1",
-  q = .4,
+let X = "message1",
+  j = .4,
   K = "discord_dismissed_notification_shown",
   z = document.hasFocus(),
   Z = null,
@@ -78,12 +78,12 @@ let j = "message1",
       null != t && (delete this._channels[e], t.forEach(e => e.close()))
     }
     constructor() {
-      X(this, "_channels", {})
+      q(this, "_channels", {})
     }
   };
 
 function et() {
-  return !!(D.default.getDesktopType() === W.DesktopNotificationTypes.NEVER || L.default.getStatus() === W.StatusTypes.DND || O.FocusMode.getSetting()) || !1
+  return !!(D.default.getDesktopType() === W.DesktopNotificationTypes.NEVER || L.default.getStatus() === W.StatusTypes.DND || m.FocusMode.getSetting()) || !1
 }
 
 function en(e) {
@@ -91,10 +91,10 @@ function en(e) {
 }
 class el extends(l = a.default.Store) {
   initialize() {
-    this.waitFor(P.default, M.default, D.default, v.default, y.default, G.default, R.default, w.default, N.default)
+    this.waitFor(P.default, v.default, D.default, M.default, y.default, G.default, R.default, w.default, N.default)
   }
 }
-X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : {
+q(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : {
   NOTIFICATIONS_SET_PERMISSION_STATE: function(e) {
     let {
       enabled: t
@@ -103,8 +103,8 @@ X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : 
       notif_type: "NOTIFICATIONS_SET_PERMISSION_STATE"
     }, {
       omitViewTracking: !0,
-      sound: j,
-      volume: q,
+      sound: X,
+      volume: j,
       tag: "hello",
       onClick: () => {
         window.focus()
@@ -135,23 +135,23 @@ X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : 
       optimistic: r
     } = e;
     if (r) return !1;
-    let c = M.default.getChannel(u),
+    let c = v.default.getChannel(u),
       T = P.default.getUser(null === (t = s.author) || void 0 === t ? void 0 : t.id),
       E = P.default.getCurrentUser();
     if (null == c || null == T || c.isBroadcastChannel()) return !1;
     let g = (0, k.shouldNotify)(s, u, !z),
       N = D.default.getNotifyMessagesInSelectedChannel() && (0, k.shouldNotifyForSelectedChannel)(s, u);
     if (!g && !N || s.type === W.MessageTypes.CHANGELOG && (null == s.changelog_id || _.default.latestChangelogId() !== s.changelog_id)) return !1;
-    let A = !D.default.isSoundDisabled(j),
+    let A = !D.default.isSoundDisabled(X),
       p = Y.default.canUseCustomNotificationSounds(E),
       y = C.CustomNotificationSoundExperiment.getCurrentConfig({
         location: "NotificationStore"
       }).enabled,
-      m = p && y && A ? null !== (a = (0, S.getChannelCustomNotificationSound)(null !== (i = c.guild_id) && void 0 !== i ? i : W.ZERO_STRING_GUILD_ID, u)) && void 0 !== a ? a : (0, S.getGuildCustomNotificationSound)(c.guild_id) : void 0;
-    if (N && (A && B.playSound("message3", .4, void 0, m), !z) || !g) return !1;
-    let O = n("808506").default,
-      v = n("237997").default;
-    if (null != O.getFocusedPID() && v.getTextChatNotificationMode() === W.OverlayNotificationTextChatTypes.ENABLED && !F.default.disableNotifications) return !1;
+      O = p && y && A ? null !== (a = (0, S.getChannelCustomNotificationSound)(null !== (i = c.guild_id) && void 0 !== i ? i : W.ZERO_STRING_GUILD_ID, u)) && void 0 !== a ? a : (0, S.getGuildCustomNotificationSound)(c.guild_id) : void 0;
+    if (N && (A && B.playSound("message3", .4, void 0, O), !z) || !g) return !1;
+    let m = n("808506").default,
+      M = n("237997").default;
+    if (null != m.getFocusedPID() && M.getTextChatNotificationMode() === W.OverlayNotificationTextChatTypes.ENABLED && !F.default.disableNotifications) return !1;
     let {
       icon: R,
       title: G,
@@ -164,7 +164,7 @@ X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : 
         icon: R,
         title: G,
         body: U
-      }), (0, I.trackMessageNotificationTimestamps)(s, c.guild_id), D.default.getDesktopType() === W.DesktopNotificationTypes.NEVER) return A && B.playSound(j, q, void 0, m), !1;
+      }), (0, I.trackMessageNotificationTimestamps)(s, c.guild_id), D.default.getDesktopType() === W.DesktopNotificationTypes.NEVER) return A && B.playSound(X, j, void 0, O), !1;
     let L = H.default.showNotification(R, G, U, {
       notif_type: "MESSAGE_CREATE",
       notif_user_id: null === (l = s.author) || void 0 === l ? void 0 : l.id,
@@ -176,9 +176,9 @@ X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : 
     }, {
       omitViewTracking: !0,
       tag: s.id,
-      sound: A ? j : void 0,
-      soundpack: m,
-      volume: q,
+      sound: A ? X : void 0,
+      soundpack: O,
+      volume: j,
       onClick() {
         (0, h.transitionToChannel)(c.id), (c.type === W.ChannelTypes.GUILD_VOICE || c.type === W.ChannelTypes.GUILD_STAGE_VOICE) && o.default.updateChatOpen(c.id, !0), f.default.clickedNotification()
       }
@@ -246,8 +246,8 @@ X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : 
       requestToSpeakTimestamp: d
     } = l;
     if (null == i || null == a || !(!u && null != d)) return;
-    let s = v.default.getGuild(a),
-      o = M.default.getChannel(i),
+    let s = M.default.getGuild(a),
+      o = v.default.getChannel(i),
       r = y.default.getStageInstanceByChannel(i);
     null != s && null != o && null != r && H.default.showNotification(s.getIconURL(128), o.name, Q.default.Messages.STAGE_SPEAK_INVITE_PUSH_NOTIFICATION.format({
       channelName: (0, T.computeChannelName)(o, P.default, G.default),
@@ -262,8 +262,8 @@ X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : 
     } = e;
     if (et() || !t.send_start_notification || en(t.channel_id)) return !1;
     let n = P.default.getCurrentUser(),
-      l = v.default.getGuild(t.guild_id),
-      a = M.default.getChannel(t.channel_id),
+      l = M.default.getGuild(t.guild_id),
+      a = v.default.getChannel(t.channel_id),
       u = P.default.getUser(t.host_id);
     if (null == n || null == a || null == l || null == u || !(0, k.shouldNotifyBase)(n, u, a) || !R.default.can(i.combine(W.Permissions.CONNECT, W.Permissions.VIEW_CHANNEL), a)) return !1;
     H.default.showNotification(l.getIconURL(128), Q.default.Messages.STAGE_START_PUSH_NOTIFICATION_TITLE.format({
@@ -291,8 +291,8 @@ X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : 
       let t = e.channel_id;
       if (null == t || en(t)) return !1;
       let n = P.default.getCurrentUser(),
-        l = v.default.getGuild(e.guild_id),
-        a = M.default.getChannel(e.channel_id),
+        l = M.default.getGuild(e.guild_id),
+        a = v.default.getChannel(e.channel_id),
         u = P.default.getUser(e.host_id);
       if (null == n || null == a || null == l || null == u || !R.default.can(i.combine(W.Permissions.CONNECT, W.Permissions.VIEW_CHANNEL), a)) return !1;
       H.default.showNotification(l.getIconURL(128), Q.default.Messages.GUILD_SCHEDULED_EVENT_STAGE_START_TITLE.format({
@@ -312,7 +312,7 @@ X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : 
     }(t) : t.entity_type === J.GuildScheduledEventEntityTypes.EXTERNAL && ! function(e) {
       if (et()) return !1;
       let t = P.default.getCurrentUser(),
-        n = v.default.getGuild(e.guild_id);
+        n = M.default.getGuild(e.guild_id);
       if (null == t || null == n) return !1;
       H.default.showNotification(n.getIconURL(128), Q.default.Messages.GUILD_SCHEDULED_EVENT_STAGE_START_TITLE.format({
         guildName: n.name
@@ -337,14 +337,14 @@ X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : 
       isNewlyCreated: l
     } = e;
     if (et()) return !1;
-    let i = M.default.getChannel(n.parent_id);
+    let i = v.default.getChannel(n.parent_id);
     if (null == i || !W.ChannelTypesSets.GUILD_THREADS_ONLY.has(i.type) || !l || !(0, k.shouldNotifyForForumThreadCreation)(n, i, !z)) return !1;
     let {
       author: a,
       user: u
     } = (0, E.getForumPostAuthor)(n);
     if (null == u) return !1;
-    let d = v.default.getGuild(i.guild_id);
+    let d = M.default.getGuild(i.guild_id);
     if (null == d) return !1;
     let s = Q.default.Messages.FORUM_CHANNEL_THREAD_CREATED_PUSH_TITLE_MOBILE.format({
         channelName: i.name,
@@ -360,7 +360,7 @@ X(el, "displayName", "NotificationStore"), new el(d.default, __OVERLAY__ ? {} : 
       notif_user_id: u.id
     }, {
       onClick() {
-        (0, m.openThreadSidebarForViewing)(n)
+        (0, O.openThreadSidebarForViewing)(n)
       }
     })
   },

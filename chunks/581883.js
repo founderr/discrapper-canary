@@ -56,7 +56,7 @@ function O(e) {
   null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), e.editInfo = (0, T.createEmptyEditInfo)()
 }
 
-function R(e) {
+function C(e) {
   let {
     settings: {
       proto: t,
@@ -71,7 +71,7 @@ function R(e) {
   r && O(o), i ? (o.proto = (0, I.mergeTopLevelFields)(o.ProtoClass, o.proto, t), a()("string" != typeof o.proto, "UserSettingsProto cannot be a string")) : (o.proto = t, a()("string" != typeof o.proto, "UserSettingsProto cannot be a string"), o.editInfo.loaded = !0, o.editInfo.loading = !1)
 }
 
-function C(e) {
+function R(e) {
   null != e && o().forEach(A, (t, n) => {
     var i, r;
     let s = e[Number(n)];
@@ -88,7 +88,7 @@ function C(e) {
 }
 class g extends(i = l.default.PersistedStore) {
   initialize(e) {
-    C(e)
+    R(e)
   }
   getState() {
     return this.computeState()
@@ -151,10 +151,10 @@ f(g, "displayName", "UserSettingsProtoStore"), f(g, "persistKey", "UserSettingsP
     let {
       userSettings: t
     } = e;
-    C(t)
+    R(t)
   },
-  USER_SETTINGS_PROTO_UPDATE: R,
-  USER_SETTINGS_PROTO_ENQUEUE_UPDATE: R,
+  USER_SETTINGS_PROTO_UPDATE: C,
+  USER_SETTINGS_PROTO_ENQUEUE_UPDATE: C,
   USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: function(e) {
     let {
       settings: {

@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("789020"), n("411104");
 var a = n("392711"),
   s = n.n(a),
-  i = n("570140"),
-  l = n("626135"),
+  l = n("570140"),
+  i = n("626135"),
   r = n("81063"),
   o = n("70956"),
   u = n("996106"),
@@ -67,7 +67,7 @@ t.default = {
       if (null == c && f.TransportTypes.IPC === a.transport) throw new u.default({
         errorCode: E.RPCErrors.INVALID_COMMAND
       }, "nonzero pid required");
-      if (null == _) return i.default.dispatch({
+      if (null == _) return l.default.dispatch({
         type: "LOCAL_ACTIVITY_UPDATE",
         socketId: a.id,
         pid: c,
@@ -79,15 +79,15 @@ t.default = {
       S > 0 && (_.flags = S), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
       let {
         assets: p,
-        party: g,
-        secrets: I,
+        party: I,
+        secrets: g,
         timestamps: T,
         buttons: A,
         type: N
       } = _;
-      if ((null == N || N !== E.ActivityTypes.PLAYING && !m) && (_.type = E.ActivityTypes.PLAYING), null != I) {
-        let e = s().values(I).filter(e => !!e);
-        if (null != g && s().intersection(e, [g.id]).length > 0 && !h.includes(a.application.id)) throw new u.default({
+      if ((null == N || N !== E.ActivityTypes.PLAYING && !m) && (_.type = E.ActivityTypes.PLAYING), null != g) {
+        let e = s().values(g).filter(e => !!e);
+        if (null != I && s().intersection(e, [I.id]).length > 0 && !h.includes(a.application.id)) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot match the party id");
         if (s().uniq(e).length < e.length) throw new u.default({
@@ -110,7 +110,7 @@ t.default = {
         var t, n;
         let [s, r] = e;
         if (null != p && (null != s ? p.large_image = s : delete p.large_image, null != r ? p.small_image = r : delete p.small_image), !C()) return;
-        i.default.dispatch({
+        l.default.dispatch({
           type: "LOCAL_ACTIVITY_UPDATE",
           socketId: a.id,
           pid: c,
@@ -126,7 +126,7 @@ t.default = {
           details: null !== (t = _.details) && void 0 !== t ? t : "",
           state: null !== (n = _.state) && void 0 !== n ? n : ""
         };
-        return null != o && (d.has_match_secret = !!o.match, d.has_join_secret = !!o.join), null != p && (d.has_images = !!(p.large_image || p.small_image)), null != u && (d.party_max = null != u.size ? u.size[1] : void 0, d.party_id = u.id), l.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, d), _
+        return null != o && (d.has_match_secret = !!o.match, d.has_join_secret = !!o.join), null != p && (d.has_images = !!(p.large_image || p.small_image)), null != u && (d.party_max = null != u.size ? u.size[1] : void 0, d.party_id = u.id), i.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, d), _
       })
     }
   }

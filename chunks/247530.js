@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  i = n("287734"),
-  l = n("872810"),
+  l = n("287734"),
+  i = n("872810"),
   r = n("51144"),
   o = n("689938");
 
@@ -24,7 +24,7 @@ function u(e) {
     return (0, a.jsx)(s.MenuItem, {
       id: "spectate-".concat(t.ownerId),
       action: () => {
-        i.default.selectVoiceChannel(t.channelId), (0, l.watchStreamAndTransitionToStream)(t)
+        l.default.selectVoiceChannel(t.channelId), (0, i.watchStreamAndTransitionToStream)(t)
       },
       label: o.default.Messages.WATCH_USER_STREAM.format({
         streamerName: r.default.getName(n)

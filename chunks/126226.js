@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EMPTY_RESULTS: function() {
-    return C
+    return R
   }
 });
 var i = n("735250");
@@ -26,8 +26,8 @@ var r = n("693789"),
   N = n("665692"),
   p = n("689079"),
   O = n("689938"),
-  R = n("442630");
-let C = {
+  C = n("442630");
+let R = {
   results: {
     entries: []
   }
@@ -48,7 +48,7 @@ let L = {
   stores: [c.default, u.default, f.default],
   matches: (e, t, n, i, r) => r.commands !== m.CommandMode.DISABLED && null == c.default.getActiveCommand(e.id) && (i || r.commands !== m.CommandMode.OLD_BUILT_INS),
   queryResults(e, t, n, i, r) {
-    if (0 === n.length && i.commands !== m.CommandMode.OLD_BUILT_INS) return C;
+    if (0 === n.length && i.commands !== m.CommandMode.OLD_BUILT_INS) return R;
     if (i.commands === m.CommandMode.OLD_BUILT_INS) {
       let i = (0, l.getBuiltInCommands)(s.ApplicationCommandType.CHAT, !1, !1),
         r = RegExp("^".concat(h.default.escape(n)), "i"),
@@ -57,7 +57,7 @@ let L = {
           guild: t
         }, m.MAX_COMMAND_AUTOCOMPLETE_RESULTS),
         o = l.BUILT_IN_SECTIONS[p.BuiltInSectionId.BUILT_IN];
-      return 0 === a.length ? C : {
+      return 0 === a.length ? R : {
         results: {
           entries: a.map(e => ({
             command: e,
@@ -79,14 +79,14 @@ let L = {
         scoreMethod: _.ScoreMethod.COMMAND_OR_APPLICATION,
         allowFetch: r
       });
-    if (null == o) return C;
+    if (null == o) return R;
     let c = o;
     if (a.hasSpaceTerminator) {
       let e = a.text.trim(),
         t = e + " ";
       c = c.filter(n => n.name === e || n.name.startsWith(t))
     }
-    return 0 === c.length ? C : {
+    return 0 === c.length ? R : {
       results: {
         entries: c.slice(0, m.MAX_COMMAND_AUTOCOMPLETE_RESULTS).map(e => ({
           command: e,
@@ -132,7 +132,7 @@ let L = {
         }
       },
       key: "commands",
-      headerClassName: _ ? R.legacyInputCommandHeader : null,
+      headerClassName: _ ? C.legacyInputCommandHeader : null,
       headerTrailingContent: _ ? (0, i.jsx)(r.Button, {
         type: "button",
         look: r.Button.Looks.LINK,

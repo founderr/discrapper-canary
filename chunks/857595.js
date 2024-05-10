@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return S
   },
   setAlwaysShowLinkDecorations: function() {
-    return R
+    return C
   },
   setFontSize: function() {
     return d
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return m
   },
   setRoleStyle: function() {
-    return C
+    return R
   },
   setSaturation: function() {
     return A
@@ -178,14 +178,14 @@ function O(e) {
   })
 }
 
-function R(e) {
+function C(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS",
     alwaysShowLinkDecorations: e
   })
 }
 
-function C(e) {
+function R(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_ROLE_STYLE",
     roleStyle: e

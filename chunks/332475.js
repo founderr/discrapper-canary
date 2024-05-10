@@ -46,7 +46,7 @@ class p extends(i = a.PureComponent) {
       maxWidth: m = E,
       maxHeight: N = A,
       minWidth: p,
-      minHeight: C,
+      minHeight: R,
       mediaLayoutType: g,
       limitResponsiveWidth: L = !0,
       accessory: v,
@@ -66,7 +66,7 @@ class p extends(i = a.PureComponent) {
         maxWidth: m,
         maxHeight: N,
         minWidth: p,
-        minHeight: C
+        minHeight: R
       }),
       k = 0 !== B.width ? B.width / B.height : 1;
     "" !== a && i !== f.ImageReadyStates.ERROR ? e = y({
@@ -84,7 +84,7 @@ class p extends(i = a.PureComponent) {
       aspectRatio: k,
       placeholder: s,
       placeholderVersion: l,
-      placeholderStyle: R(B, g),
+      placeholderStyle: C(B, g),
       children: e
     });
     let V = null != P ? P() : null;
@@ -159,7 +159,7 @@ function O(e) {
           };
         case T.MediaLayoutType.RESPONSIVE:
           return {
-            ...C(e), display: "flex"
+            ...R(e), display: "flex"
           };
         default:
           return e
@@ -187,27 +187,27 @@ N(p, "defaultProps", {
       className: null != a ? a : void 0,
       alt: null != i ? i : S.default.Messages.IMAGE,
       src: t,
-      style: R(n, s)
+      style: C(n, s)
     })
   },
   minWidth: 0,
   minHeight: 0
 });
 
-function R(e, t) {
+function C(e, t) {
   switch (t) {
     case T.MediaLayoutType.MOSAIC:
       return {
         display: "block", objectFit: "cover", minWidth: "100%", minHeight: "100%", maxWidth: 1 === (0, E.default)() ? "calc(100% + 1px)" : "100%"
       };
     case T.MediaLayoutType.RESPONSIVE:
-      return C(e);
+      return R(e);
     default:
       return e
   }
 }
 
-function C(e) {
+function R(e) {
   let {
     width: t,
     height: n

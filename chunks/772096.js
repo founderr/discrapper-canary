@@ -75,8 +75,8 @@ t.default = {
     let [i, a, s, o] = e, c = () => ({
       type: _.AST_KEY.TEXT,
       content: i
-    }), E = I(s), T = I(a), O = I(null != o ? o : ""), R = E.whitespaceSanitized, C = T.fullySanitized, g = O.fullySanitized, L = C.trim();
-    if (0 === R.trim().length || 0 === L.length) return c();
+    }), E = I(s), T = I(a), O = I(null != o ? o : ""), C = E.whitespaceSanitized, R = T.fullySanitized, g = O.fullySanitized, L = R.trim();
+    if (0 === C.trim().length || 0 === L.length) return c();
     let v = p(l().unescapeUrl(s)),
       D = (0, u.default)(a).length > 0 || (0, u.default)(o).length > 0;
     if (null == v || D) return c();
@@ -88,7 +88,7 @@ t.default = {
       y = n.allowEmojiLinks ? S : f,
       P = [...y, ...h],
       U = [...A, ...m],
-      b = N(t(C, M), P, [_.AST_KEY.EMOJI]),
+      b = N(t(R, M), P, [_.AST_KEY.EMOJI]),
       G = N(t(g, M), U);
     if (null == b || null == G || 0 === (function e(t) {
         let n = "";

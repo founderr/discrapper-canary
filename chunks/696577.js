@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return I
   }
 });
 var a = n("735250"),
   s = n("470079"),
-  i = n("692547"),
-  l = n("194359"),
+  l = n("692547"),
+  i = n("194359"),
   r = n("906732"),
   o = n("171368"),
   u = n("594174"),
@@ -22,28 +22,28 @@ var a = n("735250"),
   S = n("689938"),
   p = n("615808");
 
-function g(e) {
+function I(e) {
   let {
     user: t,
     type: n,
-    status: g,
-    isFocused: I
+    status: I,
+    isFocused: g
   } = e, T = s.useContext(E.AnalyticsContext), {
     analyticsLocations: A
   } = (0, r.default)(), N = e => {
-    e.stopPropagation(), l.default.cancelFriendRequest(t.id, {
+    e.stopPropagation(), i.default.cancelFriendRequest(t.id, {
       location: "Friends"
     })
   }, v = e => {
-    e.stopPropagation(), l.default.addRelationship({
+    e.stopPropagation(), i.default.addRelationship({
       userId: t.id,
       context: {
         location: "Friends"
       }
     })
-  }, R = g === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : g, L = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
+  }, R = I === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : I, L = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, a.jsx)(_.default, {
-    isFocused: I,
+    isFocused: g,
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
       userId: t.id,
@@ -52,11 +52,11 @@ function g(e) {
     }),
     children: e => {
       var s;
-      let l = n === m.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
+      let i = n === m.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
         children: [(null === (s = u.default.getCurrentUser()) || void 0 === s ? void 0 : s.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, a.jsx)("div", {
           className: p.staffIndicator,
           children: (0, a.jsx)(f.TextBadge, {
-            color: i.default.unsafe_rawColors.BRAND_500.css,
+            color: l.default.unsafe_rawColors.BRAND_500.css,
             text: S.default.Messages.STAFF_BADGE_TOOLTIP
           })
         }), (0, a.jsx)(h.default, {
@@ -90,7 +90,7 @@ function g(e) {
           className: p.userInfo
         }), (0, a.jsx)("div", {
           className: p.actions,
-          children: l
+          children: i
         })]
       })
     }

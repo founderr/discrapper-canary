@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return L
   },
   transformUser: function() {
-    return C
+    return R
   },
   users: function() {
     return m
@@ -49,11 +49,11 @@ function O(e, t, n) {
   return r && N++, r
 }
 
-function R(e, t) {
+function C(e, t) {
   return !r()(e.clan, t.clan) && (null == e.clan || null != t.clan) && (e.clan = (0, S.ensureUserClanData)(t.clan), m[e.id] = e, !0)
 }
 
-function C(e) {
+function R(e) {
   let t = e.mfa_enabled;
   null != t && (e.mfaEnabled = t, delete e.mfa_enabled);
   let n = (0, d.getPremiumTypeFromRawValue)(e.premium_type);
@@ -85,7 +85,7 @@ function L(e) {
   if (null == i) void 0 !== (t = (i = new _.default(e)).premiumType) && a && (i.premiumType = v((0, d.isStaffEnv)(i), i.premiumType));
   else if (n) {
     var s;
-    let n = C(e);
+    let n = R(e);
     void 0 !== (t = null !== (s = n.premium_type) && void 0 !== s ? s : n.premiumType) && a && (0, d.isStaffEnvRawData)(n) && (n = function(e) {
       var t;
       let n = null !== (t = e.premium_type) && void 0 !== t ? t : e.premiumType,
@@ -147,7 +147,7 @@ function y(e) {
   }), i.forEach(e => {
     e.members.forEach(t => {
       let n = m[t.user.id];
-      null != n && (O(n, e.id, t.avatar), R(n, t.user))
+      null != n && (O(n, e.id, t.avatar), C(n, t.user))
     })
   }), null != m[I.default.getId()] && (m[p] = new _.default({
     id: p,
@@ -166,7 +166,7 @@ function P(e) {
   t.forEach(e => {
     e.members.forEach(t => {
       let n = m[t.user.id];
-      null != n && (O(n, e.id, t.avatar), R(n, t.user))
+      null != n && (O(n, e.id, t.avatar), C(n, t.user))
     })
   }), null == n || n.forEach(e => {
     var t;
@@ -396,7 +396,7 @@ function er(e) {
       var n;
       let t = null === (n = e.item.member) || void 0 === n ? void 0 : n.user;
       if (null == t) continue;
-      R(m[t.id], t)
+      C(m[t.id], t)
     } return !1
 }
 
@@ -573,14 +573,14 @@ function eO(e) {
   return t.reduce((e, t) => L(t) || e, !1)
 }
 
-function eR(e) {
+function eC(e) {
   let {
     users: t
   } = e;
   return t.reduce((e, t) => L(t) || e, !1)
 }
 
-function eC(e) {
+function eR(e) {
   let {
     familyCenterTeenActivity: t
   } = e;
@@ -722,9 +722,9 @@ class ev extends T.default {
       PRIVATE_CHANNEL_INTEGRATION_UPDATE: eN,
       FAMILY_CENTER_INITIAL_LOAD: ep,
       FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eO,
-      FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eC,
+      FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eR,
       FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eg,
-      FAMILY_CENTER_REQUEST_LINK_SUCCESS: eR,
+      FAMILY_CENTER_REQUEST_LINK_SUCCESS: eC,
       MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eL
     })
   }

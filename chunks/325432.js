@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   addInstallLocation: function() {
-    return i
+    return l
   },
   fetchMetadata: function() {
     return o
   },
   removeInstallLocation: function() {
-    return l
+    return i
   },
   updateInstallLocation: function() {
     return r
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
 var a = n("570140"),
   s = n("830168");
 
-function i(e) {
+function l(e) {
   s.default.queryDirectory(e, (t, n) => {
     null == t && null != n && a.default.dispatch({
       type: "INSTALLATION_LOCATION_ADD",
@@ -26,7 +26,7 @@ function i(e) {
   })
 }
 
-function l(e) {
+function i(e) {
   a.default.dispatch({
     type: "INSTALLATION_LOCATION_REMOVE",
     path: e
@@ -49,8 +49,8 @@ function r(e, t) {
 function o(e) {
   let t = {},
     n = 0;
-  for (let i of e) null != i && "string" == typeof i && s.default.queryDirectory(i, (s, l) => {
-    ++n, null == s && null != l && (t[i] = l), n === e.length && a.default.dispatch({
+  for (let l of e) null != l && "string" == typeof l && s.default.queryDirectory(l, (s, i) => {
+    ++n, null == s && null != i && (t[l] = i), n === e.length && a.default.dispatch({
       type: "INSTALLATION_LOCATION_FETCH_METADATA",
       metadataPayload: t
     })

@@ -44,8 +44,8 @@ function d(e) {
     columnCounts: n
   }), {
     columnCounts: O,
-    focusedX: R,
-    focusedY: C
+    focusedX: C,
+    focusedY: R
   } = N, [g] = i.useState(() => (0, s.throttle)(p, 16));
   return i.useEffect(() => {
       p({
@@ -71,7 +71,7 @@ function d(e) {
       m.current = S;
       let N = u(l(t, d, _)),
         [p, O] = i.useState(!1),
-        [R, C] = i.useState(!1),
+        [C, R] = i.useState(!1),
         [g, L] = i.useState(!1),
         [v] = i.useState(() => new s.HandlerMemoizer(e => {
           let [t, n] = e.split(",").map(Number);
@@ -92,7 +92,7 @@ function d(e) {
           let i = l(t, e, n);
           (null != E ? E(e, n, i) : Promise.resolve()).then(() => {
             let e = u(i);
-            null != e ? (D(e), C(!1)) : requestAnimationFrame(() => C(!0))
+            null != e ? (D(e), R(!1)) : requestAnimationFrame(() => R(!0))
           })
         }, [t, E, D]),
         y = i.useCallback(function() {
@@ -126,8 +126,8 @@ function d(e) {
         m.current && null == e && U(!0)
       }, []);
       i.useEffect(() => {
-        p && R && null != N && (D(N), C(!1))
-      }, [R, N]), i.useEffect(() => {
+        p && C && null != N && (D(N), R(!1))
+      }, [C, N]), i.useEffect(() => {
         p && (!g && M(d, _), L(!1))
       }, [d, _]);
       let G = i.useCallback(e => {
@@ -219,8 +219,8 @@ function d(e) {
     }({
       navId: t,
       columnCounts: O,
-      focusedX: R,
-      focusedY: C,
+      focusedX: C,
+      focusedY: R,
       dispatch: g,
       onSelect: c,
       prepareFocus: E,

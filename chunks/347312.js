@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return C
   }
 }), n("642549"), n("47120");
 var i = n("735250"),
@@ -58,15 +58,15 @@ function O(e, t, n, i) {
   return 1 === r ? [t, !1] : [(0, _.interpolateColor)(e, t, r), !0]
 }
 
-function R(e) {
+function C(e) {
   let {
     className: t,
     waveform: n,
     currentTime: a,
     duration: _,
     played: h,
-    playing: R,
-    onDrag: C,
+    playing: C,
+    onDrag: R,
     onDragStart: g,
     onDragEnd: L
   } = e, {
@@ -104,7 +104,7 @@ function R(e) {
         }
       }(null != n ? n : [], i)) && void 0 !== e ? e : A
     }, [n, i])
-  }(n, D), U = r.useRef(h), b = r.useRef(R), G = r.useRef(null), w = window.devicePixelRatio, {
+  }(n, D), U = r.useRef(h), b = r.useRef(C), G = r.useRef(null), w = window.devicePixelRatio, {
     lastBackgroundFillColor: B,
     backgroundFillColor: k,
     lastActiveFillColor: V,
@@ -129,7 +129,7 @@ function R(e) {
       lastInactiveFillColor: I,
       inactiveFillColor: T
     }
-  }(h, R);
+  }(h, C);
   r.useEffect(() => {
     let e = m({
       showAll: !h,
@@ -163,7 +163,7 @@ function R(e) {
         a = y.current;
       if (null == i || null == r || null == a) return;
       let s = !1;
-      (U.current !== h || b.current !== R) && (U.current = h, b.current = R, G.current = n), null != G.current && n > G.current + 200 && (G.current = null);
+      (U.current !== h || b.current !== C) && (U.current = h, b.current = C, G.current = n), null != G.current && n > G.current + 200 && (G.current = null);
       let o = i.height / w;
       r.clearRect(0, 0, i.width, i.height), r.beginPath();
       let [l, u] = O(B, k, n, G.current);
@@ -197,10 +197,10 @@ function R(e) {
     }), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [v, w, P, D, a, _, h, R, B, k, V, x, F, H]);
+  }, [v, w, P, D, a, _, h, C, B, k, V, x, F, H]);
   let [, Y] = (0, d.default)({
     ref: v,
-    onDrag: C,
+    onDrag: R,
     onDragStart: g,
     onDragEnd: L
   });

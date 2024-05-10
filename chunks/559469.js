@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   FAKE_DISCOVERY_UPSELL_CLANS: function() {
-    return l
+    return i
   }
 });
 var a = n("116175"),
   s = n("308083");
 
-function i(e) {
+function l(e) {
   let {
     id: t,
     preset: n,
-    banner: i
+    banner: l
   } = e;
   return {
     id: t,
@@ -22,7 +22,7 @@ function i(e) {
     playstyle: s.ClanPlaystyles.CASUAL,
     tag: "",
     traits: [],
-    banner: i,
+    banner: l,
     badge: {
       badgeKind: a.ClanBadgeKind.SWORD,
       primaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].primary,
@@ -35,23 +35,23 @@ function i(e) {
     wildcardDescriptors: []
   }
 }
-let l = [i({
+let i = [l({
   id: "1",
   preset: s.ClanBrandPresets.ZEPHYR,
   banner: s.ClanBannerKind.WORLD_MAP
-}), i({
+}), l({
   id: "2",
   preset: s.ClanBrandPresets.THUNDER,
   banner: s.ClanBannerKind.CASTLE
-}), i({
+}), l({
   id: "3",
   preset: s.ClanBrandPresets.MARSH,
   banner: s.ClanBannerKind.SEA_FOAM
-}), i({
+}), l({
   id: "4",
   preset: s.ClanBrandPresets.BOULDER,
   banner: s.ClanBannerKind.NIGHT_SKY
-}), i({
+}), l({
   id: "5",
   preset: s.ClanBrandPresets.SOUL,
   banner: s.ClanBannerKind.SEA_FOAM
