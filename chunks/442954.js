@@ -23,14 +23,6 @@ function u() {
           renderModalProps: t
         })
       },
-      AprilMarketingFallbackModal: async () => {
-        let {
-          default: e
-        } = await Promise.all([r.e("49237"), r.e("99387"), r.e("81539"), r.e("99174")]).then(r.bind(r, "937733"));
-        return t => (0, a.jsx)(e, {
-          renderModalProps: t
-        })
-      },
       PremiumSubscriptionAprilMarketingDecoModal: async () => {
         let {
           default: e

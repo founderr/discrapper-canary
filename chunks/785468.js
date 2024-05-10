@@ -239,7 +239,7 @@ function P(e) {
         }), (0, d.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([l.e("99387"), l.e("45094"), l.e("36494")]).then(l.bind(l, "218613"));
+          } = await Promise.all([l.e("99387"), l.e("90508"), l.e("7590"), l.e("45094"), l.e("76688")]).then(l.bind(l, "218613"));
           return l => (0, a.jsx)(e, {
             ...l,
             channelType: M.ChannelTypes.GUILD_STAGE_VOICE,
