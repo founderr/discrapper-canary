@@ -482,6 +482,7 @@ function F(e) {
     case D.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED:
     case D.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
     case D.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED:
+    case D.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL:
       return (0, i.jsx)(x, {
         trialOffer: N,
         discountOffer: p,
