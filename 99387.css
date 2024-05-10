@@ -83429,6 +83429,7 @@ input::-webkit-inner-spin-button {
 
 .posterText__0b223 {
     align-content: center;
+    align-self: center;
     text-shadow: 2px 2px black
 }
 
