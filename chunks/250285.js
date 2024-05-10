@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("789978"),
   o = n("748780"),
   u = n("91192"),
@@ -15,7 +15,7 @@ t.default = e => {
   let {
     userId: t,
     children: n,
-    isLast: l,
+    isLast: i,
     className: h
   } = e, [_, C] = s.useState(!1), {
     analyticsLocations: m
@@ -43,8 +43,8 @@ t.default = e => {
         style: {
           opacity: 1
         },
-        className: i()(E.rowItem, h, {
-          [E.last]: l,
+        className: l()(E.rowItem, h, {
+          [E.last]: i,
           [E.active]: _
         }),
         onMouseEnter: p,

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("512722"),
   o = n.n(r),
   u = n("481060"),
@@ -51,7 +51,7 @@ function T(e, t) {
 function A() {
   let e = s.createRef(),
     t = s.createRef(),
-    [n, l] = s.useReducer(T, S),
+    [n, i] = s.useReducer(T, S),
     {
       canSend: r,
       hint: c,
@@ -67,7 +67,7 @@ function A() {
       !n.includes("#") && n.startsWith("@") && (n = n.substring(1));
       let a = (0, f.validateDiscordTag)(n);
       if (null != a) {
-        l({
+        i({
           type: "ERROR",
           text: a
         });
@@ -78,14 +78,14 @@ function A() {
         context: {
           location: "Add Friend"
         }
-      }).then(() => l({
+      }).then(() => i({
         type: "SUCCESS",
         text: _.default.Messages.ADD_FRIEND_SUCCESS.format({
           discordTag: n
         })
       }), e => {
         var t;
-        return l({
+        return i({
           type: "ERROR",
           text: (0, f.humanizeAbortCode)(null === (t = e.body) || void 0 === t ? void 0 : t.code, n)
         })
@@ -102,7 +102,7 @@ function A() {
       ringClassName: C.ring,
       children: (0, a.jsxs)("div", {
         ref: t,
-        className: i()(C.addFriendInputWrapper, {
+        className: l()(C.addFriendInputWrapper, {
           [C.success]: A,
           [C.error]: N
         }),
@@ -117,21 +117,21 @@ function A() {
               o()(null != e.current, "Input is handling keypress when not mounted");
               let a = n.indexOf("#"),
                 s = e.current.selectionStart,
-                l = t.key === h.KeyboardEventKey.Backspace || t.key === h.KeyboardEventKey.ArrowRight || t.key === h.KeyboardEventKey.ArrowLeft,
-                i = t.which >= 48 && t.which <= 57;
-              null != s && s > a && /^(.+?#\d{4})$/.test(n) && !l ? t.preventDefault() : null != s && s > a && !i && !l && t.preventDefault()
+                i = t.key === h.KeyboardEventKey.Backspace || t.key === h.KeyboardEventKey.ArrowRight || t.key === h.KeyboardEventKey.ArrowLeft,
+                l = t.which >= 48 && t.which <= 57;
+              null != s && s > a && /^(.+?#\d{4})$/.test(n) && !i ? t.preventDefault() : null != s && s > a && !l && !i && t.preventDefault()
             }
           },
           onChange: e => {
             if (e.length <= 0) {
-              l({
+              i({
                 type: "RESET"
               });
               return
             }
             let t = "",
               [, n] = e.split("#");
-            null != n && (t = e + E.PLACEHOLDER_TAG.slice(null != n ? n.length + 1 : 0)), l({
+            null != n && (t = e + E.PLACEHOLDER_TAG.slice(null != n ? n.length + 1 : 0)), i({
               type: "HINT",
               text: t
             })

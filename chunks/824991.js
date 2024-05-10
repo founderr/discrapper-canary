@@ -110,7 +110,7 @@ function _(e) {
   return (0, l.jsx)(o.default, {
     className: m.notice,
     guild: t,
-    onDismissed: () => n(h.ContentDismissActionType.UNKNOWN),
+    onDismissed: () => n(h.ContentDismissActionType.DISMISS),
     title: I,
     message: _,
     cta: N,

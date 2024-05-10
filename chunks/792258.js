@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("120356"),
-  l = n.n(s),
-  i = n("468194"),
+  i = n.n(s),
+  l = n("468194"),
   r = n("399606"),
   o = n("481060"),
   u = n("940627"),
@@ -25,7 +25,7 @@ t.default = e => {
     S = h[h.length - 1];
   if (null == n.icon && null != _) {
     var p;
-    S = null !== (p = h[(m = (0, i.getAcronym)(_)).length - 1]) && void 0 !== p ? p : h[h.length - 1]
+    S = null !== (p = h[(m = (0, l.getAcronym)(_)).length - 1]) && void 0 !== p ? p : h[h.length - 1]
   }
   return (0, a.jsxs)("div", {
     className: E.container,
@@ -34,7 +34,7 @@ t.default = e => {
         fontSize: S
       },
       children: [null != m ? (0, a.jsx)("div", {
-        className: l()(E.childWrapper, E.acronym),
+        className: i()(E.childWrapper, E.acronym),
         "aria-hidden": !0,
         children: m
       }) : null, null != C ? (0, a.jsx)(o.Avatar, {

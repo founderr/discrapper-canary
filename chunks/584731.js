@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("445346"),
   s = n("570140"),
-  l = n("513418"),
-  i = n("710845"),
+  i = n("513418"),
+  l = n("710845"),
   r = n("57132"),
   o = n("592125"),
   u = n("375954"),
@@ -18,7 +18,7 @@ function c(e, t, n) {
   }) : e[t] = n, e
 }
 let f = -1 / 0,
-  E = new i.default("MessagePreviewStore");
+  E = new l.default("MessagePreviewStore");
 class h extends a.Store {
   isLatest(e, t) {
     var n;
@@ -75,9 +75,9 @@ class h extends a.Store {
       a = e.message.channel_id,
       s = e.message.id;
     if (null == a || null == s) return !1;
-    let l = this.data(n);
-    if ((null == l ? void 0 : l.messageId(a)) !== s) return !1;
-    null == l || l.update(e.message)
+    let i = this.data(n);
+    if ((null == i ? void 0 : i.messageId(a)) !== s) return !1;
+    null == i || i.update(e.message)
   }
   handleThreadListSync(e) {
     var t;
@@ -89,7 +89,7 @@ class h extends a.Store {
     let t = o.default.getBasicChannel(e.channelId);
     if (null != t) {
       var n;
-      (0, l.requireSortedDescending)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, this.generation)
+      (0, i.requireSortedDescending)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, this.generation)
     }
   }
   handleLocalMessagesLoaded(e) {
@@ -97,7 +97,7 @@ class h extends a.Store {
     let t = o.default.getBasicChannel(e.channelId);
     if (null != t) {
       var n;
-      (0, l.requireSortedDescending)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, f)
+      (0, i.requireSortedDescending)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, f)
     }
   }
   handleMessagePreviewsLoaded(e) {

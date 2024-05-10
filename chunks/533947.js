@@ -1,7 +1,7 @@
 "use strict";
-let a, s, l;
+let a, s, i;
 n.r(t), n("653041"), n("47120");
-var i, r, o, u, d = n("392711"),
+var l, r, o, u, d = n("392711"),
   c = n.n(d),
   f = n("442837"),
   E = n("570140"),
@@ -38,7 +38,7 @@ function M(e) {
     return n === e
   })
 }
-class y extends(i = f.default.Store) {
+class y extends(l = f.default.Store) {
   initialize() {
     this.waitFor(_.default, C.default, S.default, m.default)
   }
@@ -65,7 +65,7 @@ class y extends(i = f.default.Store) {
       submitting: A === p.FormStates.SUBMITTING,
       webhooks: I,
       editedWebhook: g,
-      section: l,
+      section: i,
       sectionId: R,
       hasChanges: this.hasChanges(),
       isFetching: T,
@@ -87,7 +87,7 @@ let P = new y(E.default, __OVERLAY__ ? {} : {
       section: t
     } = e;
     if (t !== p.ChannelSettingsSections.INTEGRATIONS) return !1;
-    if (l = p.IntegrationSettingsSections.OVERVIEW, null == a) {
+    if (i = p.IntegrationSettingsSections.OVERVIEW, null == a) {
       let e = _.default.getChannel(),
         t = null == e ? void 0 : e.getGuildId();
       null != e && null != t && (h.default.fetchForChannel(t, e.id), T = !0), L()
@@ -98,7 +98,7 @@ let P = new y(E.default, __OVERLAY__ ? {} : {
       section: t,
       sectionId: n
     } = e;
-    l = t, R = n
+    i = t, R = n
   },
   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
     let {
@@ -126,14 +126,14 @@ let P = new y(E.default, __OVERLAY__ ? {} : {
     let {
       guildId: t,
       channelId: n,
-      webhooks: l
+      webhooks: i
     } = e;
-    if (null == a || t !== a.id || null == s || n !== s.id || null == l || A === p.FormStates.SUBMITTING) return !1;
+    if (null == a || t !== a.id || null == s || n !== s.id || null == i || A === p.FormStates.SUBMITTING) return !1;
     T = !1;
     for (let e = I.length - 1; e >= 0; e--) {
       let t = I[e];
       if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
-      let a = l.find(e => {
+      let a = i.find(e => {
         let {
           id: n
         } = e;
@@ -147,7 +147,7 @@ let P = new y(E.default, __OVERLAY__ ? {} : {
         I[e] = n, !v && (null == g ? void 0 : g.id) === n.id && (g = n)
       } else(null == g ? void 0 : g.id) === t.id && (g = null), I.splice(e, 1)
     }
-    for (let e of l) null == I.find(t => {
+    for (let e of i) null == I.find(t => {
       let {
         id: n
       } = t;

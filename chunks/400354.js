@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("709014");
-let i = {
+  i = n("709014");
+let l = {
     deafen: {
       name: "deafen",
       start: 0,
@@ -52,12 +52,12 @@ let i = {
         onMouseLeave: d
       },
       play: o,
-      Component: s.useCallback(e => (0, a.jsx)(l.LottieIcon, {
+      Component: s.useCallback(e => (0, a.jsx)(i.LottieIcon, {
         ...e,
         src: () => n.e("68449").then(n.t.bind(n, "406785", 19)),
         ref: t,
         initialAnimation: r.current,
-        markers: i
+        markers: l
       }), [])
     }
   }

@@ -53,8 +53,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120"), n("653041"), n("411104"), n("757143"), n("392711");
 var a, s = n("729594"),
-  l = n("544891"),
-  i = n("63023"),
+  i = n("544891"),
+  l = n("63023"),
   r = n("433517"),
   o = n("904245"),
   u = n("155268"),
@@ -113,7 +113,7 @@ function G(e, t) {
   })), Promise.all(n).then(() => {
     var n;
     let s = (!e.isNSFW() || (null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(k) : [],
-      l = Object.values(g.default.getVoiceStatesForChannel(e.id)).map(t => w(a, e.id, t));
+      i = Object.values(g.default.getVoiceStatesForChannel(e.id)).map(t => w(a, e.id, t));
     return {
       id: e.id,
       name: e.name,
@@ -124,7 +124,7 @@ function G(e, t) {
       guild_id: a,
       position: e.position,
       messages: s,
-      voice_states: l
+      voice_states: i
     }
   })
 }
@@ -161,8 +161,8 @@ function w(e, t, n) {
   let {
     mute: a,
     deaf: s,
-    selfMute: l,
-    selfDeaf: i,
+    selfMute: i,
+    selfDeaf: l,
     suppress: r,
     userId: o
   } = n, u = I.default.getUser(o);
@@ -175,8 +175,8 @@ function w(e, t, n) {
     voice_state: {
       mute: a,
       deaf: s,
-      self_mute: l,
-      self_deaf: i,
+      self_mute: i,
+      self_deaf: l,
       suppress: r
     },
     user: (0, R.default)(u)
@@ -231,8 +231,8 @@ function Y(e) {
       secrets: a,
       party: s
     } = e,
-    l = 0;
-  return (n && (l |= O.ActivityFlags.INSTANCE), (null == a ? void 0 : a.join) != null && (l |= O.ActivityFlags.JOIN), t) ? (l |= O.ActivityFlags.EMBEDDED, l |= O.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === O.ActivityPartyPrivacy.PUBLIC || r.Storage.get("ACTIVITIES_FORCE_PUBLIC")) && (f.AllowActivityPartyPrivacyFriends.getSetting() && (l |= O.ActivityFlags.PARTY_PRIVACY_FRIENDS), f.AllowActivityPartyPrivacyVoiceChannel.getSetting() && (l |= O.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)), l)
+    i = 0;
+  return (n && (i |= O.ActivityFlags.INSTANCE), (null == a ? void 0 : a.join) != null && (i |= O.ActivityFlags.JOIN), t) ? (i |= O.ActivityFlags.EMBEDDED, i |= O.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === O.ActivityPartyPrivacy.PUBLIC || r.Storage.get("ACTIVITIES_FORCE_PUBLIC")) && (f.AllowActivityPartyPrivacyFriends.getSetting() && (i |= O.ActivityFlags.PARTY_PRIVACY_FRIENDS), f.AllowActivityPartyPrivacyVoiceChannel.getSetting() && (i |= O.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)), i)
 }
 
 function W(e, t, n) {
@@ -241,7 +241,7 @@ function W(e, t, n) {
 }
 
 function K(e, t, n) {
-  return l.HTTP.get({
+  return i.HTTP.get({
     url: O.Endpoints.APPLICATION_RPC(t),
     oldFormErrors: !0,
     retries: 3
@@ -249,8 +249,8 @@ function K(e, t, n) {
     let {
       body: {
         rpc_origins: s,
-        id: l,
-        name: i,
+        id: i,
+        name: l,
         icon: r,
         cover_image: o,
         flags: d
@@ -267,8 +267,8 @@ function K(e, t, n) {
       }, "Invalid Origin")
     }
     e.application = {
-      id: l,
-      name: i,
+      id: i,
+      name: l,
       icon: r,
       coverImage: o,
       flags: d
@@ -281,7 +281,7 @@ function K(e, t, n) {
 }
 async function z(e, t) {
   let n = D[e];
-  null == n && (n = new i.default(t ? 2 : 60, x), D[e] = n), await n.process()
+  null == n && (n = new l.default(t ? 2 : 60, x), D[e] = n), await n.process()
 }
 
 function q(e, t) {

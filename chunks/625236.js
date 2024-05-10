@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("786761"),
   s = n("23750"),
-  l = n("306680"),
-  i = n("709054");
+  i = n("306680"),
+  l = n("709054");
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ class o {
   }
   messageGeneration(e, t) {
     let n = this.messages.get(e);
-    return null == n ? -1 / 0 : n.generation !== t && null != n.message && n.message.id === l.default.lastMessageId(e) ? (this.messages.set(e, {
+    return null == n ? -1 / 0 : n.generation !== t && null != n.message && n.message.id === i.default.lastMessageId(e) ? (this.messages.set(e, {
       ...n,
       generation: t
     }), t) : n.generation
@@ -51,7 +51,7 @@ class o {
     var a;
     let s = this.messages.get(e);
     null != t && function(e, t) {
-      return null == t || i.default.compare(e, t) > 0
+      return null == t || l.default.compare(e, t) > 0
     }(t.id, null == s ? void 0 : null === (a = s.message) || void 0 === a ? void 0 : a.id) && this.put(e, t, n)
   }
   putMany(e, t) {
@@ -61,12 +61,12 @@ class o {
     var t;
     if (null == e.id || null == e.channel_id) return;
     let n = e.channel_id,
-      l = this.messages.get(n);
-    if ((null == l ? void 0 : null === (t = l.message) || void 0 === t ? void 0 : t.id) !== e.id) return;
-    let i = l.message instanceof s.default ? (0, a.updateMessageRecord)(l.message, e) : (0, a.updateServerMessage)(l.message, e);
+      i = this.messages.get(n);
+    if ((null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.id) !== e.id) return;
+    let l = i.message instanceof s.default ? (0, a.updateMessageRecord)(i.message, e) : (0, a.updateServerMessage)(i.message, e);
     this.messages.set(n, {
-      ...l,
-      message: i
+      ...i,
+      message: l
     })
   }
   delete(e) {

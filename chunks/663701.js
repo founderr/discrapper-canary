@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("143927"),
   o = n("924826"),
   u = n("873546"),
@@ -59,7 +59,7 @@ let ee = e => {
     let {
       selected: t,
       ...n
-    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, I.default)(), {
+    } = e, s = (0, o.useListItem)("friends"), i = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), l = (0, I.default)(), {
       canViewBroadcasts: r
     } = S.default.useExperiment({
       location: "friends_tab_no_track"
@@ -71,14 +71,14 @@ let ee = e => {
       text: J.default.Messages.FRIENDS,
       onClick: () => {
         m.default.trackWithMetadata(X.AnalyticEvents.BROADCAST_LIST_VISITED, {
-          num_active_broadcasts: i.length,
+          num_active_broadcasts: l.length,
           friends_tab_clicked: !0,
           is_broadcasting: u
         })
       },
       ...n,
       ...s,
-      children: [i.length > 0 && r && (0, a.jsx)(K.TextBadge, {
+      children: [l.length > 0 && r && (0, a.jsx)(K.TextBadge, {
         color: T.default.BG_BRAND,
         text: (0, a.jsxs)("div", {
           className: $.broadcastingBadge,
@@ -87,11 +87,11 @@ let ee = e => {
           }), (0, a.jsx)(E.Text, {
             variant: "text-xs/semibold",
             color: "always-white",
-            children: i.length.toLocaleString()
+            children: l.length.toLocaleString()
           })]
         })
-      }), l > 0 ? (0, a.jsx)(K.NumberBadge, {
-        count: l
+      }), i > 0 ? (0, a.jsx)(K.NumberBadge, {
+        count: i
       }) : null]
     })
   },
@@ -100,16 +100,16 @@ let ee = e => {
       selected: t,
       hideGameUpdateProgressIndicator: n,
       ...s
-    } = e, l = (0, o.useListItem)("library");
+    } = e, i = (0, o.useListItem)("library");
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: X.Routes.APPLICATION_LIBRARY,
       icon: H.default,
       text: J.default.Messages.LIBRARY,
       ...s,
-      ...l,
+      ...i,
       children: (0, a.jsx)(Z.default, {
-        className: i()($.downloadProgressCircle, {
+        className: l()($.downloadProgressCircle, {
           [$.hideGameUpdateProgressIndicator]: n
         })
       })
@@ -120,18 +120,18 @@ let ee = e => {
       selected: t,
       route: n,
       locationState: s,
-      ...l
+      ...i
     } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([D.default], () => D.default.getState().theme), c = (0, C.useActivitiesWhatsNewCount)();
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: n,
       icon: F.default,
-      iconClassName: i()($.activitiesBirthdayIcon, {
+      iconClassName: l()($.activitiesBirthdayIcon, {
         [$.activitiesBirthdayIconLight]: "light" === u
       }),
       text: J.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_TAB_TITLE,
       locationState: s,
-      ...l,
+      ...i,
       ...r,
       children: c > 0 ? (0, a.jsx)(K.NumberBadge, {
         count: c
@@ -142,16 +142,16 @@ let ee = e => {
     let {
       selected: t
     } = e, n = (0, v.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
-      channelId: l
+      channelId: i
     } = (0, N.useMessageRequestSidebarState)();
     if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
-    let i = null == l ? void 0 : () => h.default.preload(X.ME, l);
+    let l = null == i ? void 0 : () => h.default.preload(X.ME, i);
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: X.Routes.MESSAGE_REQUESTS,
       icon: V.default,
       text: J.default.Messages.MESSAGE_REQUESTS,
-      onClick: i,
+      onClick: l,
       ...s,
       children: n > 0 ? (0, a.jsx)(K.NumberBadge, {
         count: n
@@ -161,8 +161,8 @@ let ee = e => {
   es = e => {
     let {
       selected: t
-    } = e, n = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = b.FamilyCenterEnabled.useSetting(), r = (0, L.default)(), [u, d] = s.useState(!0);
-    return i && r ? (0, a.jsx)(q.LinkButton, {
+    } = e, n = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, i = (0, o.useListItem)("family-center"), l = b.FamilyCenterEnabled.useSetting(), r = (0, L.default)(), [u, d] = s.useState(!0);
+    return l && r ? (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: X.Routes.FAMILY_CENTER,
       icon: Y.default,
@@ -174,13 +174,13 @@ let ee = e => {
         d(!1)
       },
       interactiveClassName: $.familyCenterLinkButton,
-      ...l,
-      children: (0, a.jsx)(el, {
+      ...i,
+      children: (0, a.jsx)(ei, {
         isParentHovered: u
       })
     }) : null
   },
-  el = e => {
+  ei = e => {
     let {
       isParentHovered: t
     } = e, s = (0, O.usePendingRequestCount)();
@@ -214,7 +214,7 @@ let ee = e => {
       }
     })
   },
-  ei = () => (0, y.show)("DM_SEARCH");
+  el = () => (0, y.show)("DM_SEARCH");
 
 function er(e) {
   switch (e) {
@@ -233,7 +233,7 @@ let eo = e => {
     showLibrary: t,
     hasLibraryApplication: n,
     homeLink: s,
-    storeLink: l,
+    storeLink: i,
     premiumTabSelected: o
   } = e, [d, c] = (0, P.default)(e => {
     let {
@@ -256,15 +256,15 @@ let eo = e => {
       position: "right",
       offsetX: -52,
       children: (0, a.jsx)("div", {
-        className: i()($.searchBar, {
+        className: l()($.searchBar, {
           [$.themedHeaderMobile]: u.isMobile
         }),
         children: (0, a.jsx)("button", {
           type: "button",
-          className: i()($.searchBarComponent, {
+          className: l()($.searchBarComponent, {
             [$.themedSearchBarMobile]: u.isMobile
           }),
-          onClick: ei,
+          onClick: el,
           children: J.default.Messages.DM_SEARCH_PLACEHOLDER
         })
       })
@@ -280,7 +280,7 @@ let eo = e => {
         hideGameUpdateProgressIndicator: s === X.Routes.APPLICATION_LIBRARY
       }, "library") : null, (0, a.jsx)(M.NitroTabButton, {
         selected: null == c ? o : c.startsWith(X.Routes.APPLICATION_STORE),
-        route: null == l || location.pathname.startsWith(X.Routes.ACTIVITIES) || location.pathname.startsWith(X.Routes.APPLICATION_STORE) ? X.Routes.APPLICATION_STORE : l,
+        route: null == i || location.pathname.startsWith(X.Routes.ACTIVITIES) || location.pathname.startsWith(X.Routes.APPLICATION_STORE) ? X.Routes.APPLICATION_STORE : i,
         locationState: {
           analyticsSource: {
             page: er(s),
@@ -333,13 +333,13 @@ function eu() {
     } = (0, d.useStateFromStoresObject)([D.default], () => ({
       theme: D.default.theme
     })),
-    l = (0, d.useStateFromStores)([U.default], () => U.default.hasLibraryApplication()),
-    i = (0, d.useStateFromStores)([G.default], () => G.default.getCurrentPath());
+    i = (0, d.useStateFromStores)([U.default], () => U.default.hasLibraryApplication()),
+    l = (0, d.useStateFromStores)([G.default], () => G.default.getCurrentPath());
   return (0, a.jsx)(eo, {
     theme: s,
     showLibrary: n,
-    hasLibraryApplication: l,
-    storeLink: i,
+    hasLibraryApplication: i,
+    storeLink: l,
     homeLink: e,
     premiumTabSelected: t
   })

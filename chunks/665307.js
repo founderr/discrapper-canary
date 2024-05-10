@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("411104"), n("47120");
 var a, s = n("735250"),
-  l = n("470079"),
-  i = n("120356"),
-  r = n.n(i),
+  i = n("470079"),
+  l = n("120356"),
+  r = n.n(l),
   o = n("613828"),
   u = n("442837"),
   d = n("846519"),
@@ -55,13 +55,13 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
       flag: t,
       icon: n,
       item: a,
-      tooltip: l
-    } = e, i = a.libraryApplication.hasFlag(t);
+      tooltip: i
+    } = e, l = a.libraryApplication.hasFlag(t);
     return (0, s.jsx)(f.Tooltip, {
-      text: l,
+      text: i,
       children: e => (0, s.jsx)(n, {
         className: r()(D.settingIcon, {
-          [D.hidden]: !i
+          [D.hidden]: !l
         }),
         ...e
       })
@@ -130,10 +130,10 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     renderHeader: () => null,
     cellClassName: D.actionsCell,
     render(e, t, n) {
-      var a, i;
+      var a, l;
       if (null == t) throw Error("No cell props defined.");
       let o = e.key === t.activeRowKey;
-      return (0, s.jsxs)(l.Fragment, {
+      return (0, s.jsxs)(i.Fragment, {
         children: [(0, s.jsxs)("div", {
           className: D.settingIcons,
           children: [(0, s.jsx)(k, {
@@ -153,7 +153,7 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
             libraryApplication: e.libraryApplication
           })]
         }), (0, O.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(m.default, {
-          analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(G[a], " ").concat(i === P.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
+          analyticsListSort: (a = t.sortKey, l = t.sortDirection, "".concat(G[a], " ").concat(l === P.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
           analyticsListIndex: n,
           source: P.AnalyticsLocations.APPLICATION_LIBRARY,
           libraryApplication: e.libraryApplication,
@@ -178,8 +178,8 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
       item: t,
       activeRowKey: n,
       highlightedApplicationKey: a,
-      onMouseEnter: l,
-      onMouseLeave: i,
+      onMouseEnter: i,
+      onMouseLeave: l,
       onContextMenu: o,
       setRef: u,
       ...d
@@ -192,15 +192,15 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
         [D.rowWrapperDim]: !c && !t.isLaunchable
       }),
       ref: e => u(e, t.key),
-      onMouseEnter: () => l(t),
-      onMouseLeave: i,
+      onMouseEnter: () => i(t),
+      onMouseLeave: l,
       onContextMenu: e => o(e, t),
       children: (0, s.jsx)("div", {
         ...d
       })
     })
   };
-class B extends(a = l.PureComponent) {
+class B extends(a = i.PureComponent) {
   componentDidMount() {
     let {
       fetched: e
@@ -315,26 +315,26 @@ class B extends(a = l.PureComponent) {
       sortDirection: t,
       applicationViewItems: n,
       activeRowKey: a,
-      stickyHeader: i
+      stickyHeader: l
     } = this.props, {
       overflowMenuRowKey: r,
       highlightedApplicationKey: o
     } = this.state;
-    return (0, s.jsxs)(l.Fragment, {
+    return (0, s.jsxs)(i.Fragment, {
       children: [n.length > 0 ? (0, s.jsx)(A.default, {
         columns: w,
         data: n,
         sortData: !1,
         rowComponent: F,
         className: D.table,
-        headerClassName: i ? D.stickyHeader : D.header,
+        headerClassName: l ? D.stickyHeader : D.header,
         headerCellClassName: D.headerCell,
         sortedHeaderCellClassName: D.headerCellSorted,
         bodyCellClassName: D.bodyCell,
         rowClassName: D.row,
         sortKey: e,
         sortDirection: t,
-        stickyHeader: i,
+        stickyHeader: l,
         rowProps: {
           activeRowKey: null != r ? r : a,
           highlightedApplicationKey: o,
@@ -396,11 +396,11 @@ class B extends(a = l.PureComponent) {
 }
 
 function H(e) {
-  let t = l.useContext(L.AnalyticsContext),
+  let t = i.useContext(L.AnalyticsContext),
     n = (0, o.useLocation)(),
     {
       applicationViewItems: a,
-      filterQuery: i,
+      filterQuery: l,
       fetched: r
     } = (0, u.useStateFromStoresObject)([S.default], () => ({
       applicationViewItems: S.default.sortedFilteredLibraryApplicationViewItems,
@@ -423,7 +423,7 @@ function H(e) {
     analyticsContext: t,
     location: n,
     applicationViewItems: a,
-    filterQuery: i,
+    filterQuery: l,
     fetched: r,
     sortKey: d,
     sortDirection: c,

@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("990547"),
-  i = n("442837"),
+  i = n("990547"),
+  l = n("442837"),
   r = n("544891"),
   o = n("481060"),
   u = n("893776"),
@@ -38,13 +38,13 @@ function R() {
   let {
     action: e,
     theme: t
-  } = (0, i.useStateFromStoresObject)([m.default, C.default], () => ({
+  } = (0, l.useStateFromStoresObject)([m.default, C.default], () => ({
     action: m.default.getAction(),
     theme: C.default.theme
   })), R = I.default.getVerificationTypes(e), [L, O] = s.useState(0), M = (0, f.default)(R);
   (0, h.default)({
-    type: l.ImpressionTypes.MODAL,
-    name: l.ImpressionNames.USER_ACTION_REQUIRED,
+    type: i.ImpressionTypes.MODAL,
+    name: i.ImpressionNames.USER_ACTION_REQUIRED,
     properties: {
       verification_type: R[0],
       verification_types: R

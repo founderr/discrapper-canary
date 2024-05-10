@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return Y
   }
 }), n("47120");
-var a, s, l = n("735250"),
-  i = n("470079"),
+var a, s, i = n("735250"),
+  l = n("470079"),
   r = n("120356"),
   o = n.n(r),
   u = n("442837"),
@@ -60,7 +60,7 @@ function Y(e) {
       eventId: null == s ? void 0 : s.id
     })
   }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, L.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, L.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([x.default], () => x.default.can(F.Permissions.CONNECT, a)), Z = (0, M.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
-  i.useEffect(() => {
+  l.useEffect(() => {
     null != X && (0, f.getUser)(X)
   }, [X]);
   let {
@@ -70,16 +70,16 @@ function Y(e) {
     locationIcon: en,
     canListenIn: ea,
     buttonText: es,
-    users: el,
-    overflowUsers: ei,
+    users: ei,
+    overflowUsers: el,
     onClose: er
-  } = i.useMemo(() => (function(e) {
+  } = l.useMemo(() => (function(e) {
     let {
       guildEvent: t,
       stageInstance: n,
       activeChannel: a,
       canConnect: s,
-      myRole: i,
+      myRole: l,
       eventCreator: r,
       speakers: o,
       listenerCount: u,
@@ -93,7 +93,7 @@ function Y(e) {
         noticeType: 3,
         title: "\uD83D\uDCDA☕ ".concat(a.name),
         location: H.default.Messages.HUB_STUDY_ROOM_VOICE_CHANNEL_TOOLTIP,
-        locationIcon: null != e ? (0, l.jsx)(e, {
+        locationIcon: null != e ? (0, i.jsx)(e, {
           width: 16,
           height: 16,
           className: V.locationIcon
@@ -107,11 +107,11 @@ function Y(e) {
     if (null == t || d) {
       if (_) {
         let e = H.default.Messages.STAGE_CHANNEL_JOIN_BUTTON;
-        return (null == i ? void 0 : i.speaker) ? e = H.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != i && (e = H.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
+        return (null == l ? void 0 : l.speaker) ? e = H.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != l && (e = H.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
           noticeType: 0,
           title: n.topic,
           location: a.name,
-          locationIcon: (0, l.jsx)(k.default, {
+          locationIcon: (0, i.jsx)(k.default, {
             width: 16,
             height: 16,
             className: V.locationIcon
@@ -122,13 +122,13 @@ function Y(e) {
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
-          overflowUsers: u < 1 ? null : (0, l.jsxs)("div", {
+          overflowUsers: u < 1 ? null : (0, i.jsxs)("div", {
             className: V.pill,
-            children: [(0, l.jsx)(U.default, {
+            children: [(0, i.jsx)(U.default, {
               width: 12,
               height: 12,
               className: V.pillIcon
-            }), (0, l.jsx)(c.Text, {
+            }), (0, i.jsx)(c.Text, {
               variant: "text-xs/medium",
               color: "header-secondary",
               className: V.pillLabel,
@@ -140,11 +140,11 @@ function Y(e) {
     } else {
       if (t.entity_type === B.GuildScheduledEventEntityTypes.STAGE_INSTANCE && _) {
         let e = H.default.Messages.STAGE_CHANNEL_JOIN_BUTTON;
-        return (null == i ? void 0 : i.speaker) ? e = H.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != i && (e = H.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
+        return (null == l ? void 0 : l.speaker) ? e = H.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != l && (e = H.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
           noticeType: 0,
           title: n.topic,
           location: a.name,
-          locationIcon: (0, l.jsx)(k.default, {
+          locationIcon: (0, i.jsx)(k.default, {
             width: 16,
             height: 16,
             className: V.locationIcon
@@ -155,13 +155,13 @@ function Y(e) {
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
-          overflowUsers: u < 1 ? null : (0, l.jsxs)("div", {
+          overflowUsers: u < 1 ? null : (0, i.jsxs)("div", {
             className: V.pill,
-            children: [(0, l.jsx)(U.default, {
+            children: [(0, i.jsx)(U.default, {
               width: 12,
               height: 12,
               className: V.pillIcon
-            }), (0, l.jsx)(c.Text, {
+            }), (0, i.jsx)(c.Text, {
               variant: "text-xs/medium",
               color: "header-secondary",
               className: V.pillLabel,
@@ -180,7 +180,7 @@ function Y(e) {
           noticeType: 1,
           title: t.name,
           location: (0, p.guildEventDetailsParser)(e, !0),
-          locationIcon: (0, l.jsx)(G.default, {
+          locationIcon: (0, i.jsx)(G.default, {
             width: 16,
             height: 16,
             className: V.locationIcon
@@ -191,13 +191,13 @@ function Y(e) {
             eventId: null == t ? void 0 : t.id
           }),
           users: null == r ? [] : [r],
-          overflowUsers: n < 1 ? null : (0, l.jsxs)("div", {
+          overflowUsers: n < 1 ? null : (0, i.jsxs)("div", {
             className: V.pill,
-            children: [(0, l.jsx)(w.default, {
+            children: [(0, i.jsx)(w.default, {
               width: 12,
               height: 12,
               className: V.pillIcon
-            }), (0, l.jsx)(c.Text, {
+            }), (0, i.jsx)(c.Text, {
               variant: "text-xs/medium",
               color: "header-secondary",
               className: V.pillLabel,
@@ -212,7 +212,7 @@ function Y(e) {
           noticeType: 2,
           title: t.name,
           location: a.name,
-          locationIcon: null != e ? (0, l.jsx)(e, {
+          locationIcon: null != e ? (0, i.jsx)(e, {
             width: 16,
             height: 16,
             className: V.locationIcon
@@ -223,13 +223,13 @@ function Y(e) {
             eventId: null == t ? void 0 : t.id
           }),
           users: null == r ? [] : [r],
-          overflowUsers: n < 1 ? null : (0, l.jsxs)("div", {
+          overflowUsers: n < 1 ? null : (0, i.jsxs)("div", {
             className: V.pill,
-            children: [(0, l.jsx)(w.default, {
+            children: [(0, i.jsx)(w.default, {
               width: 12,
               height: 12,
               className: V.pillIcon
-            }), (0, l.jsx)(c.Text, {
+            }), (0, i.jsx)(c.Text, {
               variant: "text-xs/medium",
               color: "header-secondary",
               className: V.pillLabel,
@@ -255,61 +255,61 @@ function Y(e) {
     isStageNoticeHidden: Y,
     isStudyRoomNotice: n
   }), [s, r, a, Q, Z, J, z, q, W, Y, n]);
-  return null == $ ? null : (0, l.jsxs)("div", {
+  return null == $ ? null : (0, i.jsxs)("div", {
     className: V.container,
-    children: [null != er ? (0, l.jsx)(c.Clickable, {
+    children: [null != er ? (0, i.jsx)(c.Clickable, {
       onClick: er,
       className: V.close,
       "aria-label": H.default.Messages.DISMISS,
-      children: (0, l.jsx)(b.default, {
+      children: (0, i.jsx)(b.default, {
         className: V.closeIcon
       })
-    }) : null, (0, l.jsxs)("div", {
+    }) : null, (0, i.jsxs)("div", {
       className: V.header,
-      children: [(0, l.jsx)(j.default, {
+      children: [(0, i.jsx)(j.default, {
         color: d.default.unsafe_rawColors.GREEN_230.css,
         width: 16,
         height: 16
-      }), (0, l.jsx)(c.Text, {
+      }), (0, i.jsx)(c.Text, {
         variant: "text-xs/semibold",
         color: "text-positive",
         children: H.default.Messages.LIVE
       })]
-    }), (el.length > 0 || null != ei) && (0, l.jsxs)("div", {
+    }), (ei.length > 0 || null != el) && (0, i.jsxs)("div", {
       className: V.participants,
-      children: [el.map(e => (0, l.jsx)(c.Popout, {
+      children: [ei.map(e => (0, i.jsx)(c.Popout, {
         preload: () => (0, y.maybeFetchUserProfileForPopout)(e, {
           guildId: t.id
         }),
-        renderPopout: t => (0, l.jsx)(P.default, {
+        renderPopout: t => (0, i.jsx)(P.default, {
           ...t,
           location: "LiveChannelNotice",
           userId: e.id,
           newAnalyticsLocations: [E.default.AVATAR]
         }),
         position: "right",
-        children: n => (0, l.jsx)(c.Avatar, {
+        children: n => (0, i.jsx)(c.Avatar, {
           ...n,
           src: e.getAvatarURL(t.id, 24),
           "aria-label": e.username,
           size: c.AvatarSizes.SIZE_24,
           className: V.avatar
         })
-      }, e.id)), ei]
-    }), (0, l.jsx)(c.Text, {
+      }, e.id)), el]
+    }), (0, i.jsx)(c.Text, {
       variant: "text-md/medium",
       color: "header-primary",
       className: o()(V.title, V.live),
       children: ee
-    }), (0, l.jsxs)("div", {
+    }), (0, i.jsxs)("div", {
       className: V.locationContainer,
-      children: [en, (0, l.jsx)(c.Text, {
+      children: [en, (0, i.jsx)(c.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         className: V.location,
         children: et
       })]
-    }), ea || 1 === $ ? (0, l.jsx)(c.Button, {
+    }), ea || 1 === $ ? (0, i.jsx)(c.Button, {
       size: c.Button.Sizes.SMALL,
       color: c.Button.Colors.GREEN,
       onClick: () => {

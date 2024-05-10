@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("685626"),
   o = n("143927"),
   u = n("903788"),
@@ -82,7 +82,7 @@ function G(e) {
   let {
     selectedGuildId: t,
     setSelectedGuildId: n,
-    eligibleGuilds: l,
+    eligibleGuilds: i,
     selectedGame: r,
     onButtonClick: f,
     buttonText: _
@@ -93,14 +93,14 @@ function G(e) {
       case v.ClanDiscoveryGame.VALORANT:
         return y.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_VALORANT
     }
-  }, [r]), I = s.useMemo(() => l.map(e => ({
+  }, [r]), I = s.useMemo(() => i.map(e => ({
     value: e.id,
     label: e.name
-  })), [l]), g = s.useCallback(() => {
+  })), [i]), g = s.useCallback(() => {
     C(v.ClanDiscoveryMode.DISCOVERY)
   }, [C]), T = s.useCallback(() => {
     C(v.ClanDiscoveryMode.GET_STARTED), m(v.ClanDiscoveryUserScreens.USER_ONBOARDING)
-  }, [C, m]), A = !S, N = l.length > 1;
+  }, [C, m]), A = !S, N = i.length > 1;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(h.Heading, {
       className: P.upsellTitle,
@@ -129,7 +129,7 @@ function G(e) {
         look: h.ButtonLooks.FILLED,
         size: h.ButtonSizes.MEDIUM,
         color: h.ButtonColors.CUSTOM,
-        className: i()(P.reserveButton, {
+        className: l()(P.reserveButton, {
           [P.buttonWithSelect]: N
         }),
         onClick: f,
@@ -168,7 +168,7 @@ t.default = s.memo(function(e) {
   let {
     eligibleGuilds: t,
     selectedGame: n
-  } = e, [l, i] = s.useState(() => {
+  } = e, [i, l] = s.useState(() => {
     let e = new Set(I.default.getGuildIds());
     for (let n of t)
       if (e.has(n.id)) return n.id;
@@ -176,18 +176,18 @@ t.default = s.memo(function(e) {
   });
   s.useEffect(() => {
     (0, p.trackClanAdminInviteViewed)({
-      guildId: l,
+      guildId: i,
       location: m.default.CLAN_DISCOVERY
     })
-  }, [l]);
-  let o = (0, f.useStateFromStores)([T.default], () => T.default.getGuild(l)),
-    u = (0, f.useStateFromStores)([I.default], () => I.default.getStateForGuild(l).progress),
+  }, [i]);
+  let o = (0, f.useStateFromStores)([T.default], () => T.default.getGuild(i)),
+    u = (0, f.useStateFromStores)([I.default], () => I.default.getStateForGuild(i).progress),
     d = (0, R.useDiscoveryGameApplicationId)({
       selectedGame: n
     }),
     c = s.useCallback(() => {
       (0, p.trackClanAdminInviteClicked)({
-        guildId: l,
+        guildId: i,
         location: m.default.CLAN_DISCOVERY
       }), (0, A.openFullScreenLayer)(e => {
         let {
@@ -195,13 +195,13 @@ t.default = s.memo(function(e) {
         } = e;
         return (0, a.jsx)(g.default, {
           onClose: t,
-          guildId: l,
+          guildId: i,
           gameId: d
         })
       }, {
         layerKey: M.CLAN_SETUP_MODAL_LAYER_KEY
       })
-    }, [l, d]),
+    }, [i, d]),
     E = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion),
     v = (0, L.useFakeDiscoveryClanForGuild)({
       guild: o,
@@ -302,8 +302,8 @@ t.default = s.memo(function(e) {
       children: e
     }), []),
     Y = s.useCallback(async () => {
-      await (0, S.joinWumpusFeedbackSquad)(l), _.default.transitionToGuildSync("936317138904440892")
-    }, [l]);
+      await (0, S.joinWumpusFeedbackSquad)(i), _.default.transitionToGuildSync("936317138904440892")
+    }, [i]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: P.cardsContainer,
@@ -366,8 +366,8 @@ t.default = s.memo(function(e) {
     }), (0, a.jsx)("div", {
       className: P.upsellCtaContainer,
       children: (0, a.jsx)(G, {
-        selectedGuildId: l,
-        setSelectedGuildId: i,
+        selectedGuildId: i,
+        setSelectedGuildId: l,
         eligibleGuilds: t,
         selectedGame: n,
         onButtonClick: c,

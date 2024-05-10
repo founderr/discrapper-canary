@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("442837"),
   o = n("289987"),
   u = n("481060"),
@@ -26,7 +26,7 @@ var a = n("735250"),
   R = n("689938"),
   L = n("263094");
 let O = s.forwardRef(function(e, t) {
-  var n, l;
+  var n, i;
   let {
     className: O,
     isExpanded: M,
@@ -50,14 +50,14 @@ let O = s.forwardRef(function(e, t) {
     location: v.QuestsExperimentLocations.QUESTS_BAR
   }, {
     autoTrackExposure: !1
-  }), V = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (null === (l = b.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, W = M && y, K = (0, m.getQuestBarHeroAssetUrl)(b), z = (0, m.getQuestsInstructionsToWinReward)({
+  }), V = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (null === (i = b.userStatus) || void 0 === i ? void 0 : i.completedAt) != null, W = M && y, K = (0, m.getQuestBarHeroAssetUrl)(b), z = (0, m.getQuestsInstructionsToWinReward)({
     quest: b,
     location: v.QuestsExperimentLocations.QUESTS_BAR,
     useV2Variants: H === S.QuestBarExperimentVariants.V2
   });
   return (0, a.jsx)("div", {
     "aria-hidden": !W,
-    className: i()(O, L.contentExpanded, {
+    className: l()(O, L.contentExpanded, {
       [L.contentInteractable]: W
     }),
     children: V ? (0, a.jsxs)("div", {
@@ -106,7 +106,7 @@ let O = s.forwardRef(function(e, t) {
           })
         })]
       }), Y ? (0, a.jsx)(u.Button, {
-        className: i()(L.cta, L.ctaClaimReward),
+        className: l()(L.cta, L.ctaClaimReward),
         color: u.Button.Colors.CUSTOM,
         fullWidth: !0,
         onClick: B,

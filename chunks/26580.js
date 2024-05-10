@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("481060"),
   o = n("393238"),
   u = n("626135"),
@@ -22,11 +22,11 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       text: t,
       onClick: n,
       className: s,
-      hide: l
+      hide: i
     } = e;
     return (0, a.jsx)("li", {
-      className: i()(c.tag, s, {
-        [c.hide]: l
+      className: l()(c.tag, s, {
+        [c.hide]: i
       }),
       children: (0, a.jsx)(r.Clickable, {
         className: c.tagText,
@@ -41,19 +41,19 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
     let {
       tags: t,
       onTagClick: n,
-      guildId: l,
-      section: i
+      guildId: i,
+      section: l
     } = e;
     return s.useEffect(() => {
       u.default.track(d.AnalyticEvents.OPEN_POPOUT, {
         type: "Discovery Tags Overflow",
-        guild_id: l,
+        guild_id: i,
         location: {
           page: d.AnalyticsPages.GUILD_DISCOVERY,
-          section: i
+          section: l
         }
       })
-    }, [l, i]), (0, a.jsx)(r.Dialog, {
+    }, [i, l]), (0, a.jsx)(r.Dialog, {
       className: c.overflowTagsPopout,
       children: (0, a.jsx)("ul", {
         children: t.map(e => (0, a.jsx)(E, {
@@ -92,7 +92,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
     let {
       tags: t,
       onTagClick: n,
-      className: l,
+      className: i,
       discoveryTagStyle: r = C.DEFAULT,
       hideOverflow: u = !1,
       guildId: d,
@@ -113,7 +113,7 @@ let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       I(t => e <= g.length ? e : t)
     }, [S, m, g]), (0, a.jsxs)("ul", {
       ref: m,
-      className: i()(c.tagContainer, l, {
+      className: l()(c.tagContainer, i, {
         [c.invisible]: null == p
       }),
       children: [g.map((e, t) => (0, a.jsx)(E, {

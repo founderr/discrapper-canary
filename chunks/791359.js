@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("392711"),
-  i = n.n(l),
+  i = n("392711"),
+  l = n.n(i),
   r = n("954955"),
   o = n.n(r),
   u = n("442837"),
@@ -36,15 +36,15 @@ let y = 15 * p.default.Millis.MINUTE,
     let {
       party: t,
       onUserContextMenu: n,
-      onChannelContextMenu: l,
-      quest: i
+      onChannelContextMenu: i,
+      quest: l
     } = e, r = (0, a.jsx)(T.default, {
       party: t,
       onUserContextMenu: n
     }), u = (0, a.jsx)(g.default, {
       party: t,
-      onChannelContextMenu: l,
-      quest: i
+      onChannelContextMenu: i,
+      quest: l
     }), {
       partiedMembers: c,
       applicationStreams: f,
@@ -92,15 +92,15 @@ let y = 15 * p.default.Millis.MINUTE,
       }
     }) : null
   }),
-  x = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
+  x = l().throttle(() => f.fetchUserAffinities(!1), 3e5);
 
 function D() {
   let {
     nowPlayingCards: e,
     loaded: t,
     needsRefresh: n,
-    fetching: l,
-    currentUser: i
+    fetching: i,
+    currentUser: l
   } = (0, u.useStateFromStoresObject)([m.default, _.default, C.default], () => ({
     nowPlayingCards: m.default.nowPlayingCards,
     loaded: m.default.loaded,
@@ -108,9 +108,9 @@ function D() {
     fetching: _.default.getFetching(),
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
-  s.useEffect(() => (c.default.wait(() => I.mount()), () => c.default.wait(() => I.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
-    n && !l && x()
-  }, [n, l]);
+  s.useEffect(() => (c.default.wait(() => I.mount()), () => c.default.wait(() => I.unmount())), [null == l ? void 0 : l.id]), s.useEffect(() => {
+    n && !i && x()
+  }, [n, i]);
   let o = s.useMemo(() => {
       let t = new Map,
         n = new Set;

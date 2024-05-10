@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("120356"),
-  l = n.n(s),
-  i = n("442837"),
+  i = n.n(s),
+  l = n("442837"),
   r = n("481060"),
   o = n("547972"),
   u = n("556296"),
@@ -29,7 +29,7 @@ function g(e) {
 }
 
 function T() {
-  let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(m.GlobalKeybindActions.SAVE_CLIP));
+  let e = (0, l.useStateFromStores)([u.default], () => u.default.getKeybindForAction(m.GlobalKeybindActions.SAVE_CLIP));
   if (null == e) return (0, a.jsx)(a.Fragment, {
     children: p.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
   });
@@ -78,7 +78,7 @@ let A = {
     bodyCopy: () => (0, a.jsx)(T, {}),
     buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
     ctaOnClick: () => g(C.ClipsUserEducationType.Enabled),
-    containerClass: l()(I.container, I.containerEnabled)
+    containerClass: i()(I.container, I.containerEnabled)
   }
 };
 
@@ -87,13 +87,13 @@ function N() {
   let {
     decoupledClipsEnabled: t,
     clipsError: n
-  } = (0, i.useStateFromStoresObject)([h.default], () => ({
+  } = (0, l.useStateFromStoresObject)([h.default], () => ({
     decoupledClipsEnabled: h.default.getSettings().decoupledClipsEnabled,
     clipsError: h.default.getLastClipsError()
   }));
   let s = (e = t, null != n ? C.ClipsUserEducationType.Error : e ? C.ClipsUserEducationType.Enabled : C.ClipsUserEducationType.Disabled),
     {
-      bodyCopy: l,
+      bodyCopy: i,
       buttonCopy: o,
       ctaOnClick: u,
       textColor: c,
@@ -106,7 +106,7 @@ function N() {
     children: [(0, a.jsx)(r.Text, {
       color: c,
       variant: "text-sm/medium",
-      children: l()
+      children: i()
     }), (0, a.jsx)(r.Button, {
       onClick: () => (0, _.dismissClipsUserEducation)(s),
       size: r.Button.Sizes.NONE,

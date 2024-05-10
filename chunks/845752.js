@@ -6,25 +6,25 @@ n.r(t), n.d(t, {
 });
 var a = n("392711"),
   s = n.n(a),
-  l = n("186901"),
-  i = n("981631");
+  i = n("186901"),
+  l = n("981631");
 
 function r(e, t) {
   return {
-    [i.RPCEvents.VOICE_SETTINGS_UPDATE]: {
+    [l.RPCEvents.VOICE_SETTINGS_UPDATE]: {
       scope: {
-        [l.RPC_SCOPE_CONFIG.ANY]: [i.OAuth2Scopes.RPC, i.OAuth2Scopes.RPC_VOICE_READ]
+        [i.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ]
       },
       handler: () => t => {
         let {
           prevState: n,
           dispatch: a
-        } = t, l = e();
-        return !s().isEqual(l, n) && a(l), l
+        } = t, i = e();
+        return !s().isEqual(i, n) && a(i), i
       }
     },
-    [i.RPCEvents.VOICE_SETTINGS_UPDATE_2]: {
-      scope: l.RPC_LOCAL_SCOPE,
+    [l.RPCEvents.VOICE_SETTINGS_UPDATE_2]: {
+      scope: i.RPC_LOCAL_SCOPE,
       handler(e) {
         let {
           socket: n
@@ -32,11 +32,11 @@ function r(e, t) {
         return e => {
           let {
             prevState: a,
-            dispatch: l
+            dispatch: i
           } = e;
           if (null == n.application.id) return a;
-          let i = t(n.application.id);
-          return !s().isEqual(i, a) && l(i), i
+          let l = t(n.application.id);
+          return !s().isEqual(l, a) && i(l), l
         }
       }
     }

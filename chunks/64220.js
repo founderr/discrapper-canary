@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("481060"),
-  i = n("921944"),
+  i = n("481060"),
+  l = n("921944"),
   r = n("689938"),
   o = n("308704");
 
@@ -17,17 +17,17 @@ function u(e) {
   } = e;
   return s.useEffect(() => {
     let e = setTimeout(() => {
-      t(i.ContentDismissActionType.AUTO_DISMISS)
+      t(l.ContentDismissActionType.AUTO_DISMISS)
     }, 8e3);
     return () => {
       clearTimeout(e)
     }
-  }, [t]), (0, a.jsxs)(l.Clickable, {
+  }, [t]), (0, a.jsxs)(i.Clickable, {
     className: o.container,
     onClick: () => {
-      t(i.ContentDismissActionType.USER_DISMISS)
+      t(l.ContentDismissActionType.USER_DISMISS)
     },
-    children: [(0, a.jsx)(l.Text, {
+    children: [(0, a.jsx)(i.Text, {
       variant: "text-sm/medium",
       color: "always-white",
       children: r.default.Messages.PROFILE_LOOKING_GOOD_TOOLTIP_TEXT
@@ -41,7 +41,7 @@ function d(e) {
   let {
     children: t,
     markAsDismissed: n
-  } = e, [i, r] = s.useState(!1);
+  } = e, [l, r] = s.useState(!1);
   return s.useEffect(() => {
     let e = setTimeout(() => {
       r(!0)
@@ -49,10 +49,10 @@ function d(e) {
     return () => {
       clearTimeout(e)
     }
-  }, [r]), (0, a.jsx)(l.Popout, {
+  }, [r]), (0, a.jsx)(i.Popout, {
     position: "top",
     align: "left",
-    shouldShow: i,
+    shouldShow: l,
     renderPopout: () => (0, a.jsx)(u, {
       markAsDismissed: n
     }),

@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var a, s, l, i, r = n("442837"),
+var a, s, i, l, r = n("442837"),
   o = n("433517"),
   u = n("570140"),
   d = n("650774"),
@@ -23,12 +23,12 @@ class _ extends(a = r.default.Store) {
     return !e.hasFeature(E.GuildFeatures.CLAN) && !h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT].has(e.id) && a && e.maxMembers > 0 && e.maxMembers - n <= 1e4
   }
 }
-i = "MaxMemberCountChannelNoticeStore", (l = "displayName") in(s = _) ? Object.defineProperty(s, l, {
-  value: i,
+l = "MaxMemberCountChannelNoticeStore", (i = "displayName") in(s = _) ? Object.defineProperty(s, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new _(u.default, {
+}) : s[i] = l, t.default = new _(u.default, {
   MAX_MEMBER_COUNT_NOTICE_DISMISS: function(e) {
     let t = e.guildId;
     if (!h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT].has(t)) return h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT].add(t), o.Storage.set(E.ChannelNoticeTypes.MAX_MEMBER_COUNT, h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT]), !0

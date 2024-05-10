@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("392711"),
   o = n("685626"),
   u = n("442837"),
@@ -37,7 +37,7 @@ function R(e) {
   let {
     guildId: t,
     onClose: n,
-    gameId: l
+    gameId: i
   } = e, R = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
     progress: L,
     errors: O,
@@ -98,10 +98,10 @@ function R(e) {
     let e = (0, E.getResizeObserver)((0, r.debounce)(() => b(window.innerWidth), 250));
     return (0, E.watch)(e, document.body), () => (0, E.unwatch)(e, document.body)
   }, [U, G]), s.useEffect(() => {
-    null != l && (0, h.updateClanSetup)(t, {
-      requiredGameId: l
+    null != i && (0, h.updateClanSetup)(t, {
+      requiredGameId: i
     })
-  }, [l, t]);
+  }, [i, t]);
   let W = s.useMemo(() => null != O && Object.values(O).some(e => null != e), [O]),
     K = s.useMemo(() => null != O && Object.values(O).length > 0 ? (0, T.getClanSetupProgressSteps)(O).find(e => e.hasError) : null, [O]),
     z = s.useCallback(() => {
@@ -158,14 +158,14 @@ function R(e) {
           className: N.panel,
           children: [(0, a.jsx)(o.animated.div, {
             style: F,
-            className: i()(N.stepsContainer, {
+            className: l()(N.stepsContainer, {
               [N.hidden]: !G
             }),
             children: (0, a.jsx)(g.default, {
               guildId: t
             })
           }), (0, a.jsx)("div", {
-            className: i()(N.navigationContainer, {
+            className: l()(N.navigationContainer, {
               [N.elevatedNavigationContainer]: !G
             }),
             children: (0, a.jsx)(p.default, {
@@ -173,20 +173,20 @@ function R(e) {
               progress: L,
               updateCurrentStep: Y,
               animationStyle: F,
-              animationClassName: i()({
+              animationClassName: l()({
                 [N.hidden]: !G
               })
             })
           })]
         }), (0, a.jsx)(o.animated.div, {
           style: F,
-          className: i()(N.divider, {
+          className: l()(N.divider, {
             [N.hidden]: !G,
             [N.dividerResponsive]: G
           })
         }), (0, a.jsx)(o.animated.div, {
           style: B,
-          className: i()(N.sidebar, {
+          className: l()(N.sidebar, {
             [N.sidebarResponsive]: G
           }),
           children: (0, a.jsx)(I.default, {

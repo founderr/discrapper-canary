@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
 var a, s = n("442837"),
-  l = n("570140"),
-  i = n("914010"),
+  i = n("570140"),
+  l = n("914010"),
   r = n("626135"),
   o = n("981631");
 
@@ -27,7 +27,7 @@ function c(e) {
 }
 class f extends(a = s.default.PersistedStore) {
   initialize(e) {
-    this.waitFor(i.default), null != e && (d = e.lastHighlightsLoadMillis)
+    this.waitFor(l.default), null != e && (d = e.lastHighlightsLoadMillis)
   }
   getState() {
     return {
@@ -35,9 +35,9 @@ class f extends(a = s.default.PersistedStore) {
     }
   }
 }
-u(f, "displayName", "HighlightsTestStore"), u(f, "persistKey", "HighlightsTestStore"), new f(l.default, {
+u(f, "displayName", "HighlightsTestStore"), u(f, "persistKey", "HighlightsTestStore"), new f(i.default, {
   CONNECTION_OPEN: function() {
-    return c(i.default.getGuildId())
+    return c(l.default.getGuildId())
   },
   CHANNEL_SELECT: function(e) {
     let {

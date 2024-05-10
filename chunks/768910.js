@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("392711"),
   s = n.n(a),
-  l = n("710845"),
-  i = n("592125"),
+  i = n("710845"),
+  l = n("592125"),
   r = n("306680"),
   o = n("709054"),
   u = n("287328");
@@ -16,7 +16,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = new l.default("ReadStates");
+let c = new i.default("ReadStates");
 t.default = new class e {
   async getAll(e) {
     let t = performance.now(),
@@ -39,23 +39,23 @@ t.default = new class e {
       var a;
       if (null == this.readStateVersion) return;
       let t = "0",
-        l = "0",
-        r = Object.keys(i.default.getMutablePrivateChannels()),
+        i = "0",
+        r = Object.keys(l.default.getMutablePrivateChannels()),
         d = new Set(r);
-      for (let e of (l = null !== (a = s()(r).sort(o.default.compare).reverse().value()[0]) && void 0 !== a ? a : "0", n)) null != e._lastMessageId && (1 === o.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === o.default.compare(e._lastMessageId, l) && (l = e._lastMessageId));
+      for (let e of (i = null !== (a = s()(r).sort(o.default.compare).reverse().value()[0]) && void 0 !== a ? a : "0", n)) null != e._lastMessageId && (1 === o.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === o.default.compare(e._lastMessageId, i) && (i = e._lastMessageId));
       u.default.nonGuildVersionsTransaction(e).putAll([{
         id: "highest_last_message_id",
         versionString: t
       }, {
         id: "private_channels_version",
-        versionString: l
+        versionString: i
       }, {
         id: "read_state_version",
         version: this.readStateVersion
       }])
     }
-    let l = u.default.readStatesTransaction(e);
-    l.delete(), n.forEach(e => l.put("".concat(e.type, "-").concat(e.channelId), e))
+    let i = u.default.readStatesTransaction(e);
+    i.delete(), n.forEach(e => i.put("".concat(e.type, "-").concat(e.channelId), e))
   }
   constructor() {
     d(this, "readStateVersion", null), d(this, "actions", {

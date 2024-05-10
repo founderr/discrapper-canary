@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("748780"),
   s = n("570140"),
-  l = n("317770"),
-  i = n("716578"),
+  i = n("317770"),
+  l = n("716578"),
   r = n("928518");
 
 function o(e, t, n) {
@@ -14,7 +14,7 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class u extends l.default {
+class u extends i.default {
   _initialize() {
     r.default.addChangeListener(this.handlePopoutWindowChange), s.default.subscribe("WINDOW_FOCUS", this.handleMainWindowFocus)
   }
@@ -24,7 +24,7 @@ class u extends l.default {
   injectWindowAnimationFrame(e) {
     let t = t => e.requestAnimationFrame(t),
       n = t => e.cancelAnimationFrame(t);
-    a.default.inject.RequestAnimationFrame(t), a.default.inject.CancelAnimationFrame(n), i.frameLoop.setRAF(t, n)
+    a.default.inject.RequestAnimationFrame(t), a.default.inject.CancelAnimationFrame(n), l.frameLoop.setRAF(t, n)
   }
   constructor(...e) {
     super(...e), o(this, "handleMainWindowFocus", e => {

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var a, s = n("392711"),
-  l = n.n(s),
-  i = n("442837"),
+  i = n.n(s),
+  l = n("442837"),
   r = n("570140"),
   o = n("846027"),
   u = n("581883"),
@@ -56,7 +56,7 @@ function v(e, t, n) {
     type: f.ConnectedDeviceType.INPUT_AND_OUTPUT
   } : e
 }
-class R extends(a = i.default.DeviceSettingsStore) {
+class R extends(a = l.default.DeviceSettingsStore) {
   initialize(e) {
     this.waitFor(c.default, u.default), C = null != e ? e : _
   }
@@ -106,17 +106,17 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
       S = a, p = s, m = !0;
       return
     }
-    let i = Object.keys(S),
+    let l = Object.keys(S),
       r = Object.keys(a),
       o = Object.keys(p),
       u = Object.keys(s),
-      d = l().difference(i, r),
-      c = l().difference(o, u);
-    return d.length > 0 || c.length > 0 ? I = {} : (l().difference(r, i).forEach(e => {
+      d = i().difference(l, r),
+      c = i().difference(o, u);
+    return d.length > 0 || c.length > 0 ? I = {} : (i().difference(r, l).forEach(e => {
       I[e] = v(I[e], e, f.ConnectedDeviceType.INPUT)
-    }), l().difference(u, o).forEach(e => {
+    }), i().difference(u, o).forEach(e => {
       I[e] = v(I[e], e, f.ConnectedDeviceType.OUTPUT)
-    })), !(l().isEqual(i, r) && l().isEqual(o, u)) && (S = a, p = s, !0)
+    })), !(i().isEqual(l, r) && i().isEqual(o, u)) && (S = a, p = s, !0)
   },
   CONNECTED_DEVICE_SET: function(e) {
     let {

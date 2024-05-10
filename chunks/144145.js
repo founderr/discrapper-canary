@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("653041"), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("442837"),
-  i = n("481060"),
+  i = n("442837"),
+  l = n("481060"),
   r = n("278323"),
   o = n("287734"),
   u = n("230711"),
@@ -34,13 +34,13 @@ function R(e) {
   } = e, n = t.length > 1, R = function(e) {
     let {
       currentActivities: t
-    } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getAccounts().some(e => e.type === d.default.get(A.PlatformTypes.XBOX).type)), s = t.some(e => {
+    } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getAccounts().some(e => e.type === d.default.get(A.PlatformTypes.XBOX).type)), s = t.some(e => {
       let {
         activity: t
       } = e;
       return (0, E.default)(t)
     });
-    return n || !s ? null : (0, a.jsx)(i.MenuItem, {
+    return n || !s ? null : (0, a.jsx)(l.MenuItem, {
       id: "xbox-connect",
       action: () => u.default.open(A.UserSettingsSections.CONNECTIONS),
       label: N.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
@@ -51,7 +51,7 @@ function R(e) {
     let {
       currentActivities: t
     } = e, n = s.useContext(I.AnalyticsContext);
-    return (0, l.useStateFromStoresArray)([h.default, S.default, _.default, p.default, m.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
+    return (0, i.useStateFromStoresArray)([h.default, S.default, _.default, p.default, m.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
       let {
         activity: t,
         game: a
@@ -82,23 +82,23 @@ function R(e) {
       let {
         canJoin: n,
         activity: s,
-        activityUser: l
+        activityUser: i
       } = e;
       if (!n || null == s) return null;
       async function u() {
         if (null == s) return;
         let e = await r.default.sendActivityInviteUser({
           type: A.ActivityActionTypes.JOIN_REQUEST,
-          userId: l.id,
+          userId: i.id,
           activity: s,
           location: A.AnalyticsLocations.PROFILE_POPOUT
         });
         null != e && o.default.selectPrivateChannel(e.id)
       }
-      return (0, a.jsx)(i.MenuItem, {
+      return (0, a.jsx)(l.MenuItem, {
         id: "join-".concat(s.session_id),
         label: t ? N.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN_USER.format({
-          name: l.toString()
+          name: i.toString()
         }) : N.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
         action: u
       })
@@ -106,7 +106,7 @@ function R(e) {
       let {
         activity: n,
         game: s,
-        libraryApplication: l,
+        libraryApplication: i,
         location: r,
         canPlay: o,
         isRunning: u,
@@ -118,10 +118,10 @@ function R(e) {
       }) : d ? N.default.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_LAUNCHING.format({
         name: s.name
       }) : void 0;
-      return (0, a.jsx)(i.MenuItem, {
+      return (0, a.jsx)(l.MenuItem, {
         id: "play-".concat(n.session_id),
         action: function() {
-          (0, T.playApplication)(s.id, l, {
+          (0, T.playApplication)(s.id, i, {
             analyticsParams: {
               location: {
                 ...r,

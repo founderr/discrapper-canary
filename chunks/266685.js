@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("442837"),
   o = n("950104"),
   u = n("780384"),
@@ -29,7 +29,7 @@ var a = n("735250"),
   M = n("689938"),
   y = n("96268");
 let P = s.forwardRef(function(e, t) {
-  var n, l;
+  var n, i;
   let {
     className: I,
     isExpanded: P,
@@ -52,7 +52,7 @@ let P = s.forwardRef(function(e, t) {
       content: S.QuestContent.QUEST_BAR,
       ctaContent: h.QuestContentCTA.OPEN_GAME_LINK
     })
-  }, [G]), z = G.config.variants.includes(O.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)(G) > 0, [G]), Q = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Z = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, X = s.useMemo(() => (0, p.hasQuestCollectibleRewards)(G.config), [G.config]), J = P && D, $ = (0, p.getQuestBarHeroAssetUrl)(G), ee = (0, p.getQuestsInstructionsToWinReward)({
+  }, [G]), z = G.config.variants.includes(O.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)(G) > 0, [G]), Q = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Z = (null === (i = G.userStatus) || void 0 === i ? void 0 : i.completedAt) != null, X = s.useMemo(() => (0, p.hasQuestCollectibleRewards)(G.config), [G.config]), J = P && D, $ = (0, p.getQuestBarHeroAssetUrl)(G), ee = (0, p.getQuestsInstructionsToWinReward)({
     quest: G,
     location: O.QuestsExperimentLocations.QUESTS_BAR
   }), et = (0, E.isWeb)(), en = s.useMemo(() => {
@@ -68,7 +68,7 @@ let P = s.forwardRef(function(e, t) {
   }, [G.config.colors.primary]);
   return (0, a.jsx)("div", {
     "aria-hidden": !J,
-    className: i()(I, y.contentExpanded, {
+    className: l()(I, y.contentExpanded, {
       [y.contentInteractable]: J
     }),
     children: Q ? (0, a.jsxs)("div", {
@@ -117,7 +117,7 @@ let P = s.forwardRef(function(e, t) {
           })
         })]
       }), Z ? (0, a.jsx)(d.Button, {
-        className: i()(y.cta, y.ctaClaimReward),
+        className: l()(y.cta, y.ctaClaimReward),
         style: X ? en : void 0,
         color: d.Button.Colors.CUSTOM,
         fullWidth: !0,

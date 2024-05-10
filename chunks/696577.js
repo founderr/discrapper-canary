@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("692547"),
-  i = n("194359"),
+  i = n("692547"),
+  l = n("194359"),
   r = n("906732"),
   o = n("171368"),
   u = n("594174"),
@@ -31,11 +31,11 @@ function I(e) {
   } = e, T = s.useContext(E.AnalyticsContext), {
     analyticsLocations: A
   } = (0, r.default)(), N = e => {
-    e.stopPropagation(), i.default.cancelFriendRequest(t.id, {
+    e.stopPropagation(), l.default.cancelFriendRequest(t.id, {
       location: "Friends"
     })
   }, v = e => {
-    e.stopPropagation(), i.default.addRelationship({
+    e.stopPropagation(), l.default.addRelationship({
       userId: t.id,
       context: {
         location: "Friends"
@@ -52,11 +52,11 @@ function I(e) {
     }),
     children: e => {
       var s;
-      let i = n === m.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
+      let l = n === m.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
         children: [(null === (s = u.default.getCurrentUser()) || void 0 === s ? void 0 : s.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, a.jsx)("div", {
           className: p.staffIndicator,
           children: (0, a.jsx)(f.TextBadge, {
-            color: l.default.unsafe_rawColors.BRAND_500.css,
+            color: i.default.unsafe_rawColors.BRAND_500.css,
             text: S.default.Messages.STAFF_BADGE_TOOLTIP
           })
         }), (0, a.jsx)(h.default, {
@@ -90,7 +90,7 @@ function I(e) {
           className: p.userInfo
         }), (0, a.jsx)("div", {
           className: p.actions,
-          children: i
+          children: l
         })]
       })
     }

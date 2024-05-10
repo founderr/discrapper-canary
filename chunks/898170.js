@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("724458");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("392711"),
   o = n.n(r),
   u = n("442837"),
@@ -39,7 +39,7 @@ function m(e) {
   var t;
   let {
     animationClassName: n,
-    className: l,
+    className: i,
     quest: r,
     useReducedMotion: o
   } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), m = s.useRef(null), [S, p] = s.useState(!1), I = s.useMemo(() => {
@@ -66,13 +66,13 @@ function m(e) {
       backgroundImage: "linear-gradient(90deg, ".concat(r.config.colors.primary, ", ").concat(r.config.colors.secondary, ")")
     }
   }) : (0, a.jsx)("div", {
-    className: i()(E.lottieAnimationBackgroundWrapper, l),
+    className: l()(E.lottieAnimationBackgroundWrapper, i),
     children: (0, a.jsx)(c.default, {
       ref: m,
       onComplete: A,
       importData: () => I,
       shouldAnimate: !S && T,
-      className: i()(E.lottieAnimation, E.lottieAnimationBackground, n),
+      className: l()(E.lottieAnimation, E.lottieAnimationBackground, n),
       loop: 0,
       rendererSettings: {
         preserveAspectRatio: "none"

@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  l = n("813615"),
-  i = n("812206"),
+  i = n("813615"),
+  l = n("812206"),
   r = n("69580"),
   o = n("358085"),
   u = n("998502"),
@@ -28,7 +28,7 @@ t.default = (0, d.default)(e => {
     disableGuildSelect: p,
     disclosures: I,
     integrationType: g
-  } = e, T = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(m), A = null != g ? null == o ? void 0 : o.get(g) : void 0, N = null !== (t = null == A ? void 0 : A.application) && void 0 !== t ? t : i.default.getApplication(n);
+  } = e, T = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(m), A = null != g ? null == o ? void 0 : o.get(g) : void 0, N = null !== (t = null == A ? void 0 : A.application) && void 0 !== t ? t : l.default.getApplication(n);
   return new Promise(e => {
     let t = t => {
       let {
@@ -59,11 +59,11 @@ t.default = (0, d.default)(e => {
       onCloseRequest: () => {
         (0, s.closeModal)(T), e(void 0)
       }
-    }, null != N && (0, l.default)(N, m) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
+    }, null != N && (0, i.default)(N, m) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
   })
 }, function(e, t) {
   if (o.isPlatformEmbedded) {
-    let n = (0, l.default)(e, t) ? c.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
+    let n = (0, i.default)(e, t) ? c.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
     (0, o.isWindows)() ? u.default.minimize(n): u.default.restore(n), u.default.focus(n)
   }
 })

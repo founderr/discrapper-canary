@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("924826"),
-  i = n("442837"),
+  i = n("924826"),
+  l = n("442837"),
   r = n("481060"),
   o = n("607070"),
   u = n("617015"),
@@ -17,11 +17,11 @@ t.default = function(e) {
     let {
       section: a,
       row: s
-    } = e, l = t[a];
-    if (null == l || null == s) return null;
-    let i = l[s];
-    return null == i ? null : n(i)
-  }, h = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), _ = s.useRef(null), C = s.useCallback(() => new Promise(e => {
+    } = e, i = t[a];
+    if (null == i || null == s) return null;
+    let l = i[s];
+    return null == l ? null : n(l)
+  }, h = (0, l.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), _ = s.useRef(null), C = s.useCallback(() => new Promise(e => {
     let t = _.current;
     if (null == t) return e();
     t.scrollToTop({
@@ -41,16 +41,16 @@ t.default = function(e) {
       padding: 8,
       callback: () => null == t ? void 0 : t.focus()
     })
-  }, []), p = (0, l.default)({
+  }, []), p = (0, i.default)({
     id: "people-list",
     isEnabled: h,
     scrollToStart: C,
     scrollToEnd: m,
     setFocus: S
   });
-  return (0, a.jsx)(l.ListNavigatorProvider, {
+  return (0, a.jsx)(i.ListNavigatorProvider, {
     navigator: p,
-    children: (0, a.jsx)(l.ListNavigatorContainer, {
+    children: (0, a.jsx)(i.ListNavigatorContainer, {
       children: e => {
         let {
           ref: n,

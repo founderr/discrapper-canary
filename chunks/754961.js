@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("685626"),
   o = n("442837"),
   u = n("481060"),
@@ -25,7 +25,7 @@ function C(e) {
   let {
     index: t,
     onClick: n,
-    name: l,
+    name: i,
     isActive: E,
     animate: C,
     fillBackgroundColor: m,
@@ -50,8 +50,8 @@ function C(e) {
   });
   return (0, a.jsx)(u.Tooltip, {
     color: S ? u.Tooltip.Colors.GREY : u.Tooltip.Colors.BRAND,
-    text: S ? N : l,
-    "aria-label": S ? h.default.Messages.CLAN_SUBMIT_ERROR_TITLE : l,
+    text: S ? N : i,
+    "aria-label": S ? h.default.Messages.CLAN_SUBMIT_ERROR_TITLE : i,
     shouldShow: null != n,
     tooltipStyle: g,
     tooltipClassName: _.progressStepTooltip,
@@ -72,7 +72,7 @@ function C(e) {
             ...A,
             ...g
           },
-          className: i()(_.progressStepFill, {
+          className: l()(_.progressStepFill, {
             [_.customProgressStepFill]: T
           })
         })
@@ -86,29 +86,29 @@ function m(e) {
     steps: t,
     currentStepIndex: n,
     furthestStepIndex: s,
-    onStepClick: l,
+    onStepClick: i,
     stepFillColor: o,
     animationStyle: u,
     className: d
   } = e;
   return (0, a.jsx)(r.animated.div, {
     style: u,
-    className: i()(_.progressContainer, d),
+    className: l()(_.progressContainer, d),
     children: t.map(e => {
       let {
         index: t,
-        name: i,
+        name: l,
         hasError: r
       } = e;
       return (0, a.jsx)(C, {
-        name: i,
-        onClick: t <= s ? () => l(t) : void 0,
+        name: l,
+        onClick: t <= s ? () => i(t) : void 0,
         isActive: t <= n,
         hasError: r,
         index: t,
         fillBackgroundColor: o,
         animate: n === t || n + 1 === t
-      }, i)
+      }, l)
     })
   })
 }
@@ -118,14 +118,14 @@ function S(e) {
     className: t,
     isBackDisabled: n,
     isNextDisabled: s,
-    onNextClick: l,
+    onNextClick: i,
     onBackClick: o,
     nextButtonBackgroundColor: d,
     nextButtonClassName: c,
     nextButtonAnimationStyle: f
   } = e;
   return (0, a.jsxs)("div", {
-    className: i()(_.buttonsContainer, t),
+    className: l()(_.buttonsContainer, t),
     children: [(0, a.jsx)(u.Button, {
       look: u.Button.Looks.OUTLINED,
       size: u.Button.Sizes.MEDIUM,
@@ -141,7 +141,7 @@ function S(e) {
         color: u.Button.Colors.BRAND,
         look: u.Button.Looks.FILLED,
         size: u.Button.Sizes.MEDIUM,
-        onClick: l,
+        onClick: i,
         disabled: s,
         children: h.default.Messages.NEXT
       })

@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("512722"),
   o = n.n(r),
   u = n("481060"),
@@ -95,10 +95,10 @@ class R extends s.PureComponent {
       let n;
       if (null == e) return null;
       let {
-        host: l,
+        host: i,
         onUserContextMenu: r
       } = this.props;
-      return n = (null == l ? void 0 : l.id) === e.id ? T.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : T.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, a.jsx)(u.Popout, {
+      return n = (null == i ? void 0 : i.id) === e.id ? T.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : T.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, a.jsx)(u.Popout, {
         preload: () => (0, c.maybeFetchUserProfileForPopout)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => (o()(null != e, ""), (0, a.jsx)(f.default, {
           ...t,
@@ -108,7 +108,7 @@ class R extends s.PureComponent {
         })),
         position: "top",
         align: "center",
-        children: l => (0, a.jsx)(u.Tooltip, {
+        children: i => (0, a.jsx)(u.Tooltip, {
           text: n,
           children: n => {
             let {
@@ -116,11 +116,11 @@ class R extends s.PureComponent {
               onMouseLeave: o
             } = n;
             return (0, s.createElement)(u.Avatar, {
-              ...l,
+              ...i,
               key: e.id,
               src: e.getAvatarURL(void 0, 24),
               size: u.AvatarSizes.SIZE_24,
-              className: i()(A.avatar, t),
+              className: l()(A.avatar, t),
               "aria-label": e.username,
               onMouseEnter: a,
               onMouseLeave: o,
@@ -138,7 +138,7 @@ class R extends s.PureComponent {
         children: n => (0, a.jsx)(u.Tooltip, {
           text: T.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
           children: s => (0, a.jsx)("div", {
-            className: i()(A.overflow, t),
+            className: l()(A.overflow, t),
             ...s,
             ...n,
             children: e

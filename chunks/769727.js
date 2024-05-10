@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("348327"),
-  i = n.n(l),
+  i = n("348327"),
+  l = n.n(i),
   r = n("685626"),
   o = n("143927"),
   u = n("71970"),
@@ -40,7 +40,7 @@ let y = {
 function P(e) {
   let {
     limit: t
-  } = e, n = (0, A.useClanDiscoveryUIStore)(A.buildSearchCriteriaFromUIState, i()), l = (0, A.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), r = (0, c.useStateFromStores)([g.default], () => g.default.getSearchResult(n), [n]), f = (0, E.default)(r), h = (0, A.useClanDiscoveryUIStore)(e => e.game, o.default), C = (0, A.useClanDiscoveryUIStore)(e => e.mode, o.default), m = s.useMemo(() => {
+  } = e, n = (0, A.useClanDiscoveryUIStore)(A.buildSearchCriteriaFromUIState, l()), i = (0, A.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), r = (0, c.useStateFromStores)([g.default], () => g.default.getSearchResult(n), [n]), f = (0, E.default)(r), h = (0, A.useClanDiscoveryUIStore)(e => e.game, o.default), C = (0, A.useClanDiscoveryUIStore)(e => e.mode, o.default), m = s.useMemo(() => {
     if ((0, v.isLoadedSearchResult)(r)) {
       let e = r.items;
       return null != t ? e.slice(0, t) : e
@@ -77,7 +77,7 @@ function P(e) {
       children: m.map((e, t) => (0, a.jsx)(S.default, {
         clan: e,
         affinity: (0, v.getClanDiscoveryAffinity)(e, n),
-        traitsToHighlight: l,
+        traitsToHighlight: i,
         className: M.card,
         index: t,
         source: R.AnalyticsSections.DISCOVER_SEARCH
@@ -89,7 +89,7 @@ let x = s.memo(function() {
   let e = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion),
     t = (0, A.useClanDiscoveryUIStore)(e => e.mode, o.default),
     [, n] = s.useState(0),
-    l = (0, r.useTransition)([t], {
+    i = (0, r.useTransition)([t], {
       key: e => e,
       config: {
         mass: 1,
@@ -108,7 +108,7 @@ let x = s.memo(function() {
       },
       onRest: () => n(e => e + 1)
     }),
-    i = (0, r.useTransition)([t], {
+    l = (0, r.useTransition)([t], {
       key: e => e,
       from: {
         transform: e || t !== A.ClanDiscoveryMode.DISCOVERY ? "translateY(0px)" : "translateY(-40px)",
@@ -161,7 +161,7 @@ let x = s.memo(function() {
         children: [(0, a.jsxs)(d.ScrollerAuto, {
           fade: !0,
           className: M.scroller,
-          children: [i((e, t) => (0, a.jsx)(r.animated.div, {
+          children: [l((e, t) => (0, a.jsx)(r.animated.div, {
             style: e,
             children: (0, a.jsx)(T.default, {})
           }, t)), u((e, t) => (0, a.jsx)(r.animated.div, {
@@ -170,7 +170,7 @@ let x = s.memo(function() {
             children: (0, a.jsx)(P, {})
           }, t))]
         }), (0, a.jsx)("div", {
-          children: l((e, t) => (0, a.jsx)(r.animated.div, {
+          children: i((e, t) => (0, a.jsx)(r.animated.div, {
             style: e,
             children: f(t)
           }, t))
@@ -184,7 +184,7 @@ t.default = s.memo(function() {
       t = (0, A.useClanDiscoveryUIStore)(e => e.setGame, o.default),
       n = (0, A.useClanDiscoveryUIStore)(e => e.setSelectedGames, o.default),
       a = (0, A.useClanDiscoveryUIStore)(e => e.selectedGames, o.default),
-      l = (0, A.useClanDiscoveryUIStore)(A.buildSearchCriteriaFromUIState, i()),
+      i = (0, A.useClanDiscoveryUIStore)(A.buildSearchCriteriaFromUIState, l()),
       r = (0, C.useClanPrepilotExperimentDefaultGameId)("clan_discovery"),
       {
         defaultGameId: u
@@ -196,8 +196,8 @@ t.default = s.memo(function() {
     }, [t, n, d, a]), s.useEffect(() => {
       !E && (0, m.loadStaticClanDiscovery)(e)
     }, [e, E]), s.useEffect(() => {
-      E && (0, m.searchClanDiscovery)(e, l)
-    }, [e, l, E]), s.useEffect(() => {
+      E && (0, m.searchClanDiscovery)(e, i)
+    }, [e, i, E]), s.useEffect(() => {
       f.default.getDetectableGames()
     }, [])
   }(), (0, a.jsx)("main", {

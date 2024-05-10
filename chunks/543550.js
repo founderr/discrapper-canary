@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("143927"),
   o = n("597312"),
   u = n("442837"),
@@ -39,7 +39,7 @@ function A() {
   let e = (0, _.useClanDiscoveryUIStore)(e => e.game, r.default),
     t = (0, _.useClanDiscoveryUIStore)(e => e.userUpsellScreen, r.default),
     n = (0, _.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, r.default),
-    l = s.useCallback(() => {
+    i = s.useCallback(() => {
       (0, c.trackClanDiscoveryUserNuxClicked)(), n(_.ClanDiscoveryUserScreens.USER_ONBOARDING)
     }, [n]),
     u = (0, d.default)(),
@@ -60,14 +60,14 @@ function A() {
           className: g.upsellScroller,
           fade: !0,
           children: (0, a.jsxs)("div", {
-            className: i()(f, g.userUpsell),
+            className: l()(f, g.userUpsell),
             children: [(0, a.jsx)("div", {
               className: g.backgroundImageBlur
             }), (0, a.jsxs)("div", {
               className: g.backgroundImageContent,
               children: [(0, a.jsx)(S.ClanDiscoveryUserUpsellBackgroundRings, {}), (0, a.jsx)(S.default, {
                 selectedGame: e,
-                onClick: l
+                onClick: i
               })]
             })]
           })
@@ -77,7 +77,7 @@ function A() {
       return (0, a.jsx)("div", {
         className: g.container,
         children: (0, a.jsxs)("div", {
-          className: i()(E, g.userOnboarding),
+          className: l()(E, g.userOnboarding),
           children: [(0, a.jsx)("div", {
             className: g.backgroundImageBlur
           }), (0, a.jsx)("div", {
@@ -96,11 +96,11 @@ function N() {
   let e = (0, _.useClanDiscoveryUIStore)(e => e.game, r.default),
     t = (0, _.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     n = (0, u.useStateFromStoresArray)([E.default], () => Object.values(E.default.getGuilds())),
-    l = (0, f.useAnyClanPrepilotExperimentEnabled)(n, "clan_discovery_admin_upsell"),
+    i = (0, f.useAnyClanPrepilotExperimentEnabled)(n, "clan_discovery_admin_upsell"),
     c = (0, p.useGuildsEligibleForClanConversion)("ClanDiscoveryAdminContainer");
   s.useEffect(() => {
-    (!l || 0 === c.length && l) && t(_.ClanDiscoveryMode.GET_STARTED)
-  }, [c.length, l, t]);
+    (!i || 0 === c.length && i) && t(_.ClanDiscoveryMode.GET_STARTED)
+  }, [c.length, i, t]);
   let m = (0, d.default)(),
     S = s.useMemo(() => T(e, m), [e, m]);
   return 0 === c.length ? null : (0, a.jsx)("div", {
@@ -109,7 +109,7 @@ function N() {
       className: g.upsellScroller,
       fade: !0,
       children: [(0, a.jsxs)("div", {
-        className: i()(S, g.adminUpsell),
+        className: l()(S, g.adminUpsell),
         children: [(0, a.jsx)("div", {
           className: g.backgroundImageBlur
         }), (0, a.jsx)("div", {

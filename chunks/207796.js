@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   ClanDiscoveryMode: function() {
-    return i
+    return l
   },
   ClanDiscoveryUserScreens: function() {
     return o
@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var a, s, l, i, r, o, u = n("652874"),
+var a, s, i, l, r, o, u = n("652874"),
   d = n("868888"),
   c = n("433517");
-(a = i || (i = {})).ADMIN_UPSELL = "admin_upsell", a.GET_STARTED = "get_started", a.DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", a.TRAITS = "traits", a.GAMES = "games", (s = r || (r = {})).VALORANT = "valorant", s.GENSHIN = "genshin", (l = o || (o = {})).USER_UPSELL = "user_upsell", l.USER_ONBOARDING = "user_onboarding";
+(a = l || (l = {})).ADMIN_UPSELL = "admin_upsell", a.GET_STARTED = "get_started", a.DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", a.TRAITS = "traits", a.GAMES = "games", (s = r || (r = {})).VALORANT = "valorant", s.GENSHIN = "genshin", (i = o || (o = {})).USER_UPSELL = "user_upsell", i.USER_ONBOARDING = "user_onboarding";
 let f = (0, u.default)((0, d.persist)(e => ({
   mode: "admin_upsell",
   game: "valorant",

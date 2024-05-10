@@ -1,8 +1,8 @@
 "use strict";
 let a;
 n.r(t);
-var s, l = n("442837"),
-  i = n("570140"),
+var s, i = n("442837"),
+  l = n("570140"),
   r = n("133080");
 
 function o(e, t, n) {
@@ -22,7 +22,7 @@ function d(e) {
   } = e;
   null != n && (u = null !== (t = (0, r.getCountryCodeByAlpha2)(n)) && void 0 !== t ? t : (0, r.getDefaultCountryCode)())
 }
-class c extends(s = l.default.DeviceSettingsStore) {
+class c extends(s = i.default.DeviceSettingsStore) {
   initialize(e) {
     null != e && (a = e.selectedCountryCode)
   }
@@ -35,7 +35,7 @@ class c extends(s = l.default.DeviceSettingsStore) {
     return null != a ? a : u
   }
 }
-o(c, "displayName", "PhoneStore"), o(c, "persistKey", "PhoneStore"), t.default = new c(i.default, {
+o(c, "displayName", "PhoneStore"), o(c, "persistKey", "PhoneStore"), t.default = new c(l.default, {
   PHONE_SET_COUNTRY_CODE: function(e) {
     let {
       countryCode: t

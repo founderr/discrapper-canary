@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n("47120");
-var a, s, l = n("470079"),
-  i = n("442837"),
+var a, s, i = n("470079"),
+  l = n("442837"),
   r = n("846027"),
   o = n("230711"),
   u = n("888369"),
@@ -15,7 +15,7 @@ var a, s, l = n("470079"),
   m = n("981631");
 (s = a || (a = {})).DEFAULT = "DEFAULT", s.UNREAD = "UNREAD", s.CONNECTED = "CONNECTED", s.SPEAKING = "SPEAKING", s.MUTED = "MUTED", s.DEAFENED = "DEAFENED";
 let S = (0, _.isMac)() ? null : "DEFAULT";
-class p extends l.PureComponent {
+class p extends i.PureComponent {
   componentDidMount() {
     C.default.setSystemTrayIcon(this.getIcon())
   }
@@ -37,8 +37,8 @@ class p extends l.PureComponent {
         speaking: n,
         connected: a,
         unread: s
-      } = this.props, l = S;
-      return (0, _.isMac)() && !a ? l : (0, _.isLinux)() || !a ? (s && (l = "UNREAD"), l) : l = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED"
+      } = this.props, i = S;
+      return (0, _.isMac)() && !a ? i : (0, _.isLinux)() || !a ? (s && (i = "UNREAD"), i) : i = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED"
     }, n in t ? Object.defineProperty(t, n, {
       value: a,
       enumerable: !0,
@@ -50,7 +50,7 @@ class p extends l.PureComponent {
 let I = () => null;
 _.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default.toggleSelfMute()), C.default.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => r.default.toggleSelfDeaf()), C.default.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
   o.default.open(m.UserSettingsSections.VOICE)
-}), I = i.default.connectStores([f.default, d.default, h.default, u.default, E.default, c.default], () => {
+}), I = l.default.connectStores([f.default, d.default, h.default, u.default, E.default, c.default], () => {
   let e = u.default.getTotalMentionCount(),
     t = u.default.hasAnyUnread(),
     n = E.default.getPendingCount(),
