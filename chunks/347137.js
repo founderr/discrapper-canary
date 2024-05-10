@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  i = n("481060"),
-  l = n("442837"),
+  l = n("481060"),
+  i = n("442837"),
   r = n("212093"),
   o = n("677277"),
   u = n("285865"),
@@ -17,7 +17,7 @@ var a = n("735250"),
   m = n("731455"),
   S = n("689938"),
   p = n("157552");
-let g = e => {
+let I = e => {
   switch (e) {
     case m.CategoryId.Activity:
       return m.CategoryIcons.Activity;
@@ -37,23 +37,23 @@ t.default = function() {
   let {
     currentCategoryId: e,
     isViewingSearchResults: t
-  } = (0, l.useStateFromStoresObject)([d.default], () => ({
+  } = (0, i.useStateFromStoresObject)([d.default], () => ({
     currentCategoryId: d.default.getCurrentCategoryId(),
     isViewingSearchResults: d.default.getMostRecentQuery().length > 0
-  })), n = (0, l.useStateFromStores)([h.default], () => h.default.getClanDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), I = null == n ? void 0 : n.map(e => ({
+  })), n = (0, i.useStateFromStores)([h.default], () => h.default.getClanDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), g = null == n ? void 0 : n.map(e => ({
     ...e,
-    icon: g(e.categoryId)
+    icon: I(e.categoryId)
   })), T = e => {
     (0, r.selectCategory)(e, !0), u.default.closeSidebar(), t && (0, r.clearSearch)()
   };
   return s.useEffect(() => {
     (0, E.maybeFetchGuildDiscoveryCategories)(!1, !0)
-  }, [e]), (0, a.jsxs)(i.Scroller, {
+  }, [e]), (0, a.jsxs)(l.Scroller, {
     children: [(0, a.jsx)(C.DiscoverySidebarHeader, {
       text: S.default.Messages.DISCOVER
     }), (0, a.jsx)(f.default, {
       avatar: (0, a.jsx)(c.default, {}),
-      name: S.default.Messages.HOME,
+      name: S.default.Messages.CLANS,
       focusProps: {
         offset: {
           right: 4,
@@ -68,7 +68,7 @@ t.default = function() {
       selectedClassName: p.selectedCategoryItem,
       innerClassName: p.itemInner
     }, "clan-discovery-home"), (0, a.jsx)(_.default, {
-      categories: I,
+      categories: g,
       handleCategorySelect: T,
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t

@@ -40,7 +40,7 @@ t.default = e => {
     }
   }, [g]);
   return (0, a.jsxs)("div", {
-    className: f.slideContentWithSidebar,
+    className: f.slideContent,
     children: [(0, a.jsx)(l.Heading, {
       variant: "heading-xxl/medium",
       className: f.title,

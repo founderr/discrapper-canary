@@ -102,8 +102,8 @@ function _(e) {
       (0, d.trackClanAdminInviteClicked)({
         guildId: t.id,
         location: r.default.GUILD_CHANNEL_LIST
-      }), n(h.ContentDismissActionType.TAKE_ACTION), (0, u.transitionTo)(f.Routes.GUILD_DISCOVERY)
-    }, [t.id, n]),
+      }), (0, u.transitionTo)(f.Routes.GUILD_DISCOVERY)
+    }, [t.id]),
     N = a.useCallback(() => (0, l.jsx)(E, {
       onClick: S
     }), [S]);

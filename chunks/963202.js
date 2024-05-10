@@ -63,7 +63,7 @@ function l(e) {
     valorantConfig: i,
     genshinConfig: r
   } = e;
-  return null !== (n = null !== (t = r.defaultGameId) && void 0 !== t ? t : i.defaultGameId) && void 0 !== n ? n : null
+  return null !== (n = null !== (t = null == r ? void 0 : r.defaultGameId) && void 0 !== t ? t : null == i ? void 0 : i.defaultGameId) && void 0 !== n ? n : null
 }
 
 function u(e) {
@@ -129,8 +129,8 @@ function c(e, t) {
     return {
       enableClanCreation: a && n.enableClanCreation || s,
       defaultGameId: l({
-        genshinConfig: i,
-        valorantConfig: n
+        genshinConfig: r ? i : void 0,
+        valorantConfig: a ? n : void 0
       })
     }
   }({

@@ -59,7 +59,8 @@ t.default = e => {
         placeholder: m.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
         onChange: v,
         isDisabled: E.size === f.MAX_NUM_SELECTED_GAMES,
-        matchSorterOptions: I
+        matchSorterOptions: I,
+        clearQueryOnSelect: !0
       })
     }), (0, a.jsxs)("div", {
       className: h.contentWithMinHeight,
