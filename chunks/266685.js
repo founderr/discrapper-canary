@@ -182,7 +182,7 @@ let P = s.forwardRef(function(e, t) {
           })]
         }), (0, a.jsx)(d.Button, {
           className: y.cta,
-          style: X ? en : void 0,
+          style: "1232852290197655573" !== G.id ? en : void 0,
           color: d.Button.Colors.CUSTOM,
           fullWidth: !0,
           onClick: J ? Y : void 0,
