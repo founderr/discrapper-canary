@@ -616,7 +616,7 @@ class ey {
   }
   getAckTimestamp() {
     let e, t;
-    if (0 !== this._ackMessageTimestamp) return this._ackMessageTimestamp;
+    if (0 !== this._ackMessageTimestamp && !isNaN(this._ackMessageTimestamp)) return this._ackMessageTimestamp;
     if (this._isThread) return this._ackMessageTimestamp = eG(this.guildId, this.channelId), this._ackMessageId = x.default.fromTimestamp(this._ackMessageTimestamp), this._ackMessageTimestamp;
     if (this.type === es.ReadStateTypes.GUILD_EVENT || this.type === es.ReadStateTypes.GUILD_ONBOARDING_QUESTION) e = z.default.getGuild(this.channelId);
     else if ((0, er.isStaticChannelRoute)(this.channelId)) e = z.default.getGuild(this.guildId);
@@ -627,7 +627,7 @@ class ey {
         e = z.default.getGuild(n)
       }
     }
-    return t = null != e ? ew(e) : x.default.extractTimestamp(this.channelId), this._ackMessageTimestamp = t, t
+    return null != e ? isNaN(t = ew(e)) && (t = x.default.extractTimestamp(this.channelId)) : t = x.default.extractTimestamp(this.channelId), this._ackMessageTimestamp = t, t
   }
   get oldestUnreadTimestamp() {
     return null != this.oldestUnreadMessageId ? x.default.extractTimestamp(this.oldestUnreadMessageId) : 0
@@ -712,16 +712,19 @@ function eG(e, t) {
   let a = Y.default.getChannel(t),
     s = z.default.getGuild(null != e ? e : null == a ? void 0 : a.guild_id),
     o = (null == a ? void 0 : a.isForumPost()) ? 0 : ew(s),
-    l = (null !== (r = null === (n = y.default.joinTimestamp(t)) || void 0 === n ? void 0 : n.getTime()) && void 0 !== r ? r : 0) - 5e3,
-    u = null == a ? void 0 : null === (i = a.threadMetadata) || void 0 === i ? void 0 : i.archiveTimestamp,
-    d = Math.max(l, null != u ? new Date(u).getTime() - 1 : 0);
-  return d <= 0 && (d = x.default.extractTimestamp(t) - 1), isNaN(o) ? d : Math.max(o, d)
+    l = (null !== (r = null === (n = y.default.joinTimestamp(t)) || void 0 === n ? void 0 : n.getTime()) && void 0 !== r ? r : 0) - 5e3;
+  isNaN(l) && (l = -5e3);
+  let u = null == a ? void 0 : null === (i = a.threadMetadata) || void 0 === i ? void 0 : i.archiveTimestamp,
+    d = null != u ? new Date(u).getTime() - 1 : 0;
+  isNaN(d) && (d = 0);
+  let _ = Math.max(l, d);
+  return _ <= 0 && (_ = x.default.extractTimestamp(t) - 1), (isNaN(_) || _ <= 0) && (_ = 0), isNaN(o) ? _ : Math.max(o, _)
 }
 
 function ew(e) {
   if (null != e && null != e.joinedAt) {
-    if (e.joinedAt instanceof Date) return e.joinedAt.getTime();
-    if ("string" == typeof e.joinedAt) return new Date(e.joinedAt).getTime();
+    if (e.joinedAt instanceof Date) isNaN(e.joinedAt.getTime());
+    else if ("string" == typeof e.joinedAt) isNaN(new Date(e.joinedAt).getTime());
     else if ("number" == typeof e.joinedAt && !isNaN(e.joinedAt)) return e.joinedAt
   }
   return Date.now()
