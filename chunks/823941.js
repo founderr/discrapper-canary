@@ -19,25 +19,25 @@ var l = a("735250"),
   f = a("594174"),
   C = a("68972"),
   m = a("754347"),
-  p = a("74538"),
-  E = a("884697"),
+  E = a("74538"),
+  p = a("884697"),
   h = a("624377"),
   g = a("141011"),
   x = a("813083"),
-  b = a("67938"),
-  T = a("372654"),
+  T = a("67938"),
+  L = a("372654"),
   v = a("215023"),
-  L = a("474936"),
+  b = a("474936"),
   S = a("689938"),
   I = a("897246");
-let N = (0, E.getLogoSize)(96),
+let N = (0, p.getLogoSize)(96),
   _ = e => {
     let {
       category: t
     } = e, {
       analyticsLocations: a
     } = (0, c.default)(), r = s.useRef(null), n = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser());
-    return p.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
+    return E.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
       children: t.summary
     }) : (0, l.jsx)(l.Fragment, {
       children: S.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
@@ -46,7 +46,7 @@ let N = (0, E.getLogoSize)(96),
           className: I.getPremiumHook,
           onClick: () => {
             (0, d.default)({
-              subscriptionTier: L.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: b.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: a,
               returnRef: r
             })
@@ -72,13 +72,13 @@ function O(e) {
   } = e, {
     backgroundColors: c
   } = (0, h.default)(s.styles), d = !!(null === (t = v.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
-  return s.skuId === i.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(b.ShyBanner, {
+  return s.skuId === i.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(T.ShyBanner, {
     category: s
   }) : (0, l.jsxs)(g.default, {
     asset: s.banner,
     className: n()(I.shopBanner, r),
     style: null != c ? {
-      background: "".concat((0, T.getBackgroundGradient)(c), " border-box border-box"),
+      background: "".concat((0, L.getBackgroundGradient)(c), " border-box border-box"),
       outlineColor: c.border.toHslString()
     } : void 0,
     children: [(0, l.jsxs)("div", {
@@ -90,7 +90,7 @@ function O(e) {
       })]
     }), (0, l.jsx)("img", {
       className: I.categoryLogo,
-      src: (0, E.getCollectiblesAssetURL)(s.logo, {
+      src: (0, p.getCollectiblesAssetURL)(s.logo, {
         size: N
       }),
       alt: s.name,

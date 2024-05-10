@@ -17,8 +17,8 @@ var s = a("120356"),
   f = a("383416"),
   C = a("26213"),
   m = a("249174"),
-  p = a("767247"),
-  E = a("621881");
+  E = a("767247"),
+  p = a("621881");
 
 function h(e) {
   let {
@@ -45,7 +45,7 @@ function h(e) {
       className: r()(c.shyBannerImage, c.shyBannerLeft),
       alt: ""
     }), (0, l.jsx)("img", {
-      src: p,
+      src: E,
       className: c.shyBannerLogo,
       alt: t.name,
       "aria-hidden": !0
@@ -53,7 +53,7 @@ function h(e) {
       className: c.attributionLogos,
       "aria-label": "Valorant x Discord",
       children: [(0, l.jsx)("img", {
-        src: E,
+        src: p,
         alt: "",
         "aria-hidden": !0
       }), (0, l.jsx)(i.Text, {

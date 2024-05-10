@@ -21,16 +21,16 @@ t.default = e => {
   if (null == t.unpublishedAt) return null;
   let n = (0, f.getDaysRemaining)(t.unpublishedAt);
 
-  function p(e) {
+  function E(e) {
     return (0, r.jsx)(d.TextBadge, {
       disableColor: !0,
       text: e,
       className: i()((0, u.isThemeDark)(s) ? m.badgeDark : m.badgeLight, l)
     })
   }
-  return (0, o.match)([a, n > 1]).with(["card", !0], () => null).with(["banner", !0], () => p(C.default.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
+  return (0, o.match)([a, n > 1]).with(["card", !0], () => null).with(["banner", !0], () => E(C.default.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
     days: n
-  }))).with(["modal", !0], () => p(C.default.Messages.COLLECTIBLES_DAYS_LEFT.format({
+  }))).with(["modal", !0], () => E(C.default.Messages.COLLECTIBLES_DAYS_LEFT.format({
     days: n
-  }))).otherwise(() => p(C.default.Messages.COLLECTIBLES_LAST_DAY))
+  }))).otherwise(() => E(C.default.Messages.COLLECTIBLES_LAST_DAY))
 }

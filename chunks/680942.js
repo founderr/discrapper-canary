@@ -61,19 +61,19 @@ t.default = e => {
   let {
     product: t,
     returnRef: a,
-    onSuccess: p,
-    tooltipDelay: E,
+    onSuccess: E,
+    tooltipDelay: p,
     isGiftEasterEggEnabled: h,
     disableCustomColor: g = !1
   } = e, {
     analyticsLocations: x
-  } = (0, i.default)(), b = s.useRef(null), T = (0, n.default)(b), v = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
+  } = (0, i.default)(), T = s.useRef(null), L = (0, n.default)(T), v = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
   return (0, l.jsx)(r.Tooltip, {
     text: f.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: E,
+    delay: p,
     children: e => (0, l.jsx)(r.Button, {
       ...e,
-      buttonRef: b,
+      buttonRef: T,
       className: C.giftButton,
       color: g ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
@@ -86,13 +86,13 @@ t.default = e => {
           isGift: !0,
           analyticsLocations: x,
           returnRef: a,
-          onClose: null != p ? e => {
-            e && p()
+          onClose: null != E ? e => {
+            e && E()
           } : void 0
         })
       },
       children: h ? (0, l.jsx)(o.SeasonalGiftIcon, {
-        hovered: T,
+        hovered: L,
         isContentDismissed: !0,
         themeOverride: v,
         boxColors: m
