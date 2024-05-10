@@ -71745,6 +71745,15 @@ html .invoiceCancelRow_aa7946 {
     height: 18px
 }
 
+.disclosureIcon__7a60d {
+    background-size: 18px 18px;
+    display: inline-block;
+    width: 18px;
+    margin-right: 5px;
+    height: 18px;
+    color: var(--text-muted)
+}
+
 .infoBox__8b68b {
     margin-top: 16px
 }
@@ -71764,6 +71773,37 @@ html .invoiceCancelRow_aa7946 {
 
 .searchContainer_f00b5b {
     margin-bottom: 16px
+}
+
+.tosPrivacy__6b1ab {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px
+}
+
+.tos_ae0f0d {
+    display: flex;
+    margin-right: 12px
+}
+
+.privacy__11e15 {
+    display: flex
+}
+
+.externalLinkIcon_f905c4 {
+    height: 18px
+}
+
+.divider__9741e {
+    display: flex;
+    width: 1px;
+    height: 100%;
+    margin-right: 12px;
+    background-color: var(--background-modifier-accent)
+}
+
+.link__64337 {
+    color: var(--text-link)
 }
 
 .descriptionWrapper__75cd5 {
