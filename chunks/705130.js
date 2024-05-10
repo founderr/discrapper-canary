@@ -6,6 +6,7 @@ e.exports = {
   content: "content__98536",
   countdown: "countdown__4984a",
   image: "image__7ea68",
+  innerButton: "innerButton__4298b",
   text: "text_d4ca9a",
   title: "title__3b5e7",
   wrapper: "wrapper__57349"

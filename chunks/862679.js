@@ -66,6 +66,7 @@ t.default = l.memo(function(e) {
         children: S
       }), null != h && (0, a.jsx)(r.Button, {
         className: c.button,
+        innerClassName: c.innerButton,
         size: r.Button.Sizes.SMALL,
         onClick: E,
         submitting: p,

@@ -9652,6 +9652,7 @@ e.exports = Object.freeze({
   SYSTEM_DM_URGENT_MESSAGE_MODAL_BODY: "There's an official message from the Discord team that needs your attention.",
   SYSTEM_DM_CHANGELOG_BIO: "The official source for official Discord product updates, new features & patch notes.",
   SYSTEM_DM_CHANGELOG_BIO_CTA: "Read our official changelog",
+  SYSTEM_DM_OPEN_BLOG: "Open Blog",
   BUILD_OVERRIDE: "Build Override",
   BUILD_OVERRIDE_FOR: "Build Override for {releaseChannel}",
   BUILD_OVERRIDE_ID: "Commit Hash",
