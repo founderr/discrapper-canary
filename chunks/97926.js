@@ -87,11 +87,7 @@ t.default = () => {
       questIds: t
     } = e;
     return t.length > 0
-  });
-  n.useEffect(() => {
-    t && (A.current = null, N.current = !1)
-  }, [t]);
-  let R = n.useCallback(e => {
+  }), R = n.useCallback(e => {
     let {
       questIds: t,
       location: s
