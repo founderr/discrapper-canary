@@ -33257,6 +33257,12 @@ html .progress__00e29 {
     margin-right: 12px
 }
 
+.innerButton__4298b {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
 .countdown__4984a {
     color: var(--text-muted);
     margin-right: 16px

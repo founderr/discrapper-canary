@@ -57,7 +57,7 @@ function g(e) {
       },
       durationTimestamp: (0, o.formatActiveTimestamp)({
         start: a
-      }, i)
+      }, n)
     }
   }, [t, i]);
   return null == u ? null : (0, a.jsxs)("div", {

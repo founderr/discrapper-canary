@@ -51,7 +51,7 @@ t.default = r.memo(function(e) {
       },
       className: c.viewFullBio,
       children: (0, i.jsx)(a.Text, {
-        variant: "text-xs/medium",
+        variant: "text-xs/normal",
         className: c.viewFullBioText,
         children: _.default.Messages.USER_PROFILE_VIEW_FULL_BIO
       })
