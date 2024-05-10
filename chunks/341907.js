@@ -17,7 +17,8 @@ var r = n("481060"),
 function l(e) {
   let {
     questId: t,
-    location: a
+    location: a,
+    questContentPosition: s
   } = e;
   (0, r.openModalLazy)(async () => {
     let {
@@ -26,6 +27,7 @@ function l(e) {
     return n => (0, i.jsx)(e, {
       ...n,
       questId: t,
+      questContentPosition: s,
       location: a
     })
   })
@@ -38,7 +40,8 @@ function u(e, t) {
       (0, o.trackQuestContentClicked)({
         questId: e.id,
         questContent: t.content,
-        questContentCTA: t.ctaContent
+        questContentCTA: t.ctaContent,
+        questContentPosition: t.position
       }), (0, a.default)(e.config.getGameLink)
     }
   })

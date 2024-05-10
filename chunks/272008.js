@@ -101,7 +101,8 @@ async function c(e, t) {
   if (null != t.questContentCTA && (0, s.trackQuestContentClicked)({
       questId: e,
       questContent: t.questContent,
-      questContentCTA: t.questContentCTA
+      questContentCTA: t.questContentCTA,
+      questContentPosition: t.questContentPosition
     }), !o.default.isEnrolling(e)) {
     r.default.dispatch({
       type: "QUESTS_ENROLL_BEGIN",

@@ -27,6 +27,7 @@ t.default = function(e) {
     (0, E.trackQuestContentClicked)({
       questId: n.id,
       questContent: e.questContent,
+      questContentPosition: e.questContentPosition,
       questContentCTA: E.QuestContentCTA.REWARD_LEARN_MORE
     }), u.default.open(f.UserSettingsSections.INVENTORY), null === (i = e.onClick) || void 0 === i || i.call(e, t)
   }, [n.id, e]), O = r.useRef(null), C = r.useRef(a);

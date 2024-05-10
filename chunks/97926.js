@@ -1,5 +1,5 @@
 "use strict";
-s.r(t), s("47120");
+s.r(t), s("47120"), s("724458");
 var a = s("735250"),
   n = s("470079"),
   l = s("844099"),
@@ -94,16 +94,18 @@ t.default = () => {
   let R = n.useCallback(e => {
     let {
       questIds: t,
-      location: s
+      location: s,
+      contentPositionOffset: n = 0
     } = e;
     return (0, a.jsx)(a.Fragment, {
-      children: t.map(e => {
-        let t = I.get(e);
-        return null == t ? null : (0, a.jsx)(S.QuestsCard, {
-          quest: t,
+      children: t.map((e, t) => {
+        let l = I.get(e);
+        return null == l ? null : (0, a.jsx)(S.QuestsCard, {
+          quest: l,
           location: s,
-          initiallyExpanded: !x
-        }, t.id)
+          initiallyExpanded: !x,
+          contentPosition: t + n
+        }, l.id)
       })
     })
   }, [x, I]);
@@ -130,24 +132,32 @@ t.default = () => {
       }),
       children: [(0, a.jsx)(i.FormDivider, {
         className: m.divider
-      }), g ? O.map(e => {
+      }), g ? O.map((e, t, s) => {
         let {
-          location: t,
-          questIds: s,
-          title: n
+          location: n,
+          questIds: l,
+          title: r
         } = e;
-        return 0 === s.length ? null : (0, a.jsxs)("section", {
+        if (0 === l.length) return null;
+        let o = 0 === t ? 0 : s.slice(0, t).reduce((e, t) => {
+          let {
+            questIds: s
+          } = t;
+          return e + s.length
+        }, 0);
+        return (0, a.jsxs)("section", {
           className: m.questsListContainer,
           children: [x && (0, a.jsx)(i.Text, {
             variant: "text-xs/semibold",
             color: "header-secondary",
             className: m.sectionHeader,
-            children: n
+            children: r
           }), (0, a.jsx)(R, {
-            questIds: s,
-            location: t
+            questIds: l,
+            location: n,
+            contentPositionOffset: o
           })]
-        }, t)
+        }, n)
       }) : (0, a.jsx)(R, {
         questIds: C,
         location: u.QuestContent.GIFT_INVENTORY_FOR_YOU

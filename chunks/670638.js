@@ -52,6 +52,7 @@ function N(e) {
           (0, E.trackQuestContentClicked)({
             questId: e.quest.id,
             questContent: e.questContent,
+            questContentPosition: e.questContentPosition,
             questContentCTA: E.QuestContentCTA.CONTEXT_MENU_COPY_LINK
           }), (0, f.copy)((0, m.getQuestUrl)(e.quest.id))
         },
@@ -65,6 +66,7 @@ function N(e) {
           (0, E.trackQuestContentClicked)({
             questId: e.quest.id,
             questContent: e.questContent,
+            questContentPosition: e.questContentPosition,
             questContentCTA: E.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
           }), d.default.open(I.UserSettingsSections.INVENTORY)
         }
@@ -75,6 +77,7 @@ function N(e) {
           (0, E.trackQuestContentClicked)({
             questId: e.quest.id,
             questContent: e.questContent,
+            questContentPosition: e.questContentPosition,
             questContentCTA: E.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE
           }), (0, r.openModalLazy)(async () => {
             let {
@@ -94,6 +97,7 @@ function N(e) {
           (0, E.trackQuestContentClicked)({
             questId: e.quest.id,
             questContent: e.questContent,
+            questContentPosition: e.questContentPosition,
             questContentCTA: E.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT
           }), (0, m.isDismissible)(e.questContent) && (0, _.dismissQuestContent)(e.quest.id, e.questContent)
         },
@@ -132,16 +136,18 @@ function S(e) {
     preventIdle: i,
     quest: r,
     questContent: u,
-    ...d
-  } = e, f = a.useCallback(() => {
+    questContentPosition: d,
+    ...f
+  } = e, _ = a.useCallback(() => {
     (0, E.trackQuestContentClicked)({
       questId: r.id,
       questContent: u,
-      questContentCTA: E.QuestContentCTA.OPEN_CONTEXT_MENU
+      questContentCTA: E.QuestContentCTA.OPEN_CONTEXT_MENU,
+      questContentPosition: d
     }), null != n && n()
-  }, [n, r, u]);
+  }, [n, r.id, u, d]);
   return (0, s.jsx)(o.Popout, {
-    onRequestOpen: f,
+    onRequestOpen: _,
     onRequestClose: l,
     renderPopout: e => {
       let {
@@ -149,15 +155,17 @@ function S(e) {
       } = e;
       return i ? (0, s.jsx)(c.default, {
         children: (0, s.jsx)(N, {
-          ...d,
+          ...f,
           quest: r,
           questContent: u,
+          questContentPosition: d,
           onClose: t
         })
       }) : (0, s.jsx)(N, {
-        ...d,
+        ...f,
         quest: r,
         questContent: u,
+        questContentPosition: d,
         onClose: t
       })
     },

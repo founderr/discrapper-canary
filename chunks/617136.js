@@ -45,10 +45,11 @@ function I(e) {
   }
 }
 
-function T(e) {
+function T(e, t) {
   return {
     content_id: e,
-    content_name: c(e)
+    content_name: c(e),
+    content_position: t
   }
 }
 
@@ -81,15 +82,16 @@ function S(e) {
     questId: t,
     questContent: n,
     questContentCTA: i,
-    trackGuildAndChannelMetadata: r = !1
+    questContentPosition: r,
+    trackGuildAndChannelMetadata: a = !1
   } = e;
   f({
     questId: t,
     event: d.AnalyticEvents.QUEST_CONTENT_CLICKED,
     properties: {
-      ...T(n),
+      ...T(n, r),
       cta_name: i
     },
-    trackGuildAndChannelMetadata: r
+    trackGuildAndChannelMetadata: a
   })
 }(i = r || (r = {})).LEARN_MORE = "LEARN_MORE", i.SHOW_REWARD = "SHOW_REWARD", i.CLAIM_REWARD = "CLAIM_REWARD", i.GET_REWARD_CODE = "GET_REWARD_CODE", i.COPY_REWARD_CODE = "COPY_REWARD_CODE", i.ACCEPT_QUEST = "ACCEPT_QUEST", i.COPY_QUEST_URL = "COPY_QUEST_URL", i.TRACK_PROGRESS = "TRACK_PROGRESS", i.OPEN_DISCLOSURE = "OPEN_DISCLOSURE", i.WATCH_STREAM = "WATCH_STREAM", i.REWARD_LEARN_MORE = "REWARD_LEARN_MORE", i.OPEN_GAME_LINK = "OPEN_GAME_LINK", i.OPEN_CONTEXT_MENU = "OPEN_CONTEXT_MENU", i.CONTEXT_MENU_COPY_LINK = "CONTEXT_MENU.COPY_LINK", i.CONTEXT_MENU_HIDE_CONTENT = "CONTEXT_MENU.HIDE_CONTENT", i.CONTEXT_MENU_OPEN_GAME_LINK = "CONTEXT_MENU.OPEN_GAME_LINK", i.CONTEXT_MENU_OPEN_DISCLOSURE = "CONTEXT_MENU.OPEN_DISCLOSURE", i.CONTEXT_MENU_LEARN_MORE = "CONTEXT_MENU.LEARN_MORE", i.EXPAND = "EXPAND", i.COLLAPSE = "COLLAPSE"
