@@ -2,8 +2,8 @@
 n.r(t);
 var i, r, l, s, a = n("442837"),
   o = n("570140"),
-  d = n("55563"),
-  u = n("551428");
+  u = n("55563"),
+  d = n("551428");
 let c = {},
   f = {
     subscriptions: [],
@@ -11,7 +11,7 @@ let c = {},
   };
 class p extends(s = a.default.Store) {
   initialize() {
-    this.waitFor(d.default, u.default)
+    this.waitFor(u.default, d.default)
   }
   hasStorefront(e) {
     return !!c[e]

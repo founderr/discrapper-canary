@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return p
   },
   SubscriptionCardBenefit: function() {
-    return h
+    return m
   }
 });
 var i = n("735250");
@@ -14,8 +14,8 @@ var r = n("557533"),
   s = n("789978"),
   a = n("368072"),
   o = n("777207"),
-  d = n("752843"),
-  u = n("330711"),
+  u = n("752843"),
+  d = n("330711"),
   c = n("513478"),
   f = n("863885");
 
@@ -25,29 +25,29 @@ function p(e) {
     imgSrc: n,
     PurchaseButton: r,
     onPurchase: p,
-    subscriptionType: h,
-    title: m,
-    onDetails: S,
-    benefitItems: v,
-    benefitsSummary: g
+    subscriptionType: m,
+    title: S,
+    onDetails: h,
+    benefitItems: g,
+    benefitsSummary: v
   } = e;
   return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
       className: l()(c.container, f.hoverCard),
       tabIndex: 0,
       onClick: () => {
-        null != S ? S() : null != p && p()
+        null != h ? h() : null != p && p()
       },
       children: [(0, i.jsxs)("div", {
         className: c.card,
-        children: [null != h && (0, i.jsx)(d.SubscriptionTag, {
-          type: h
+        children: [null != m && (0, i.jsx)(u.SubscriptionTag, {
+          type: m
         }), (0, i.jsxs)("div", {
           className: c.body,
           children: [(0, i.jsx)(o.Text, {
             tag: "div",
             variant: "heading-lg/semibold",
-            children: m
+            children: S
           }), (0, i.jsx)("div", {
             className: c.image,
             children: null != n ? (0, i.jsx)("img", {
@@ -70,16 +70,16 @@ function p(e) {
             children: t
           })]
         })]
-      }), null != g && (0, i.jsx)("div", {
+      }), null != v && (0, i.jsx)("div", {
         className: c.benefitsSummary,
         children: (0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/medium",
-          children: u.default.Messages.Storefront.BENEFITS_SUMMARY.format({
-            count: g
+          children: d.default.Messages.Storefront.BENEFITS_SUMMARY.format({
+            count: v
           })
         })
-      }), null != v && (0, i.jsx)("div", {
+      }), null != g && (0, i.jsx)("div", {
         className: c.benefits,
         children: (0, i.jsx)("div", {
           className: c.benefitsContainer,
@@ -88,16 +88,16 @@ function p(e) {
             children: [(0, i.jsx)(o.Text, {
               color: "header-secondary",
               variant: "eyebrow",
-              children: u.default.Messages.Storefront.BENEFITS_TITLE
-            }), v.length > 3 ? (0, i.jsxs)(i.Fragment, {
-              children: [v.slice(0, 3), (0, i.jsx)(o.Text, {
+              children: d.default.Messages.Storefront.BENEFITS_TITLE
+            }), g.length > 3 ? (0, i.jsxs)(i.Fragment, {
+              children: [g.slice(0, 3), (0, i.jsx)(o.Text, {
                 variant: "text-md/semibold",
                 color: "text-secondary",
-                children: u.default.Messages.Storefront.MORE_BENEFITS.format({
-                  count: v.length - 3
+                children: d.default.Messages.Storefront.MORE_BENEFITS.format({
+                  count: g.length - 3
                 })
               })]
-            }) : v]
+            }) : g]
           })
         })
       })]
@@ -105,7 +105,7 @@ function p(e) {
   })
 }
 
-function h(e) {
+function m(e) {
   let {
     icon: t,
     name: n,

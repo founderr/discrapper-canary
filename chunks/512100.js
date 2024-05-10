@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CardDetails: function() {
-    return u
+    return d
   }
 });
 var i = n("735250");
@@ -11,35 +11,35 @@ var r = n("789978"),
   s = n("777207"),
   a = n("541822"),
   o = n("330711"),
-  d = n("878106");
+  u = n("878106");
 
-function u(e) {
+function d(e) {
   let {
     benefits: t,
     description: n,
-    imgSrc: u,
+    imgSrc: d,
     title: c,
     onClose: f,
     tag: p,
-    FallbackIcon: h
-  } = e, m = null != u ? {
-    "--custom-background-url": "url(".concat(u.toString(), ")")
+    FallbackIcon: m
+  } = e, S = null != d ? {
+    "--custom-background-url": "url(".concat(d.toString(), ")")
   } : void 0;
   return (0, i.jsxs)("div", {
-    className: d.container,
+    className: u.container,
     children: [(0, i.jsxs)("div", {
-      className: d.header,
+      className: u.header,
       children: [(0, i.jsx)("div", {
-        className: d.headerBackground,
-        style: m
+        className: u.headerBackground,
+        style: S
       }), (0, i.jsxs)("div", {
-        className: d.headerTop,
+        className: u.headerTop,
         children: [(0, i.jsx)("div", {
           children: p
         }), (0, i.jsx)(r.FocusRing, {
           children: (0, i.jsx)("button", {
             onClick: f,
-            className: d.closeBtn,
+            className: u.closeBtn,
             type: "button",
             children: (0, i.jsx)(l.CloseSmallIcon, {
               height: 24,
@@ -49,27 +49,27 @@ function u(e) {
           })
         })]
       }), (0, i.jsx)("div", {
-        className: d.headerImage,
-        children: null != u ? (0, i.jsx)("img", {
-          src: u.toString(),
+        className: u.headerImage,
+        children: null != d ? (0, i.jsx)("img", {
+          src: d.toString(),
           alt: ""
-        }) : (0, i.jsx)(h, {
+        }) : (0, i.jsx)(m, {
           color: "var(--text-muted)",
           height: 96,
           width: 96
         })
       })]
     }), (0, i.jsxs)(a.default, {
-      className: d.scroll,
+      className: u.scroll,
       children: [(0, i.jsx)("br", {}), (0, i.jsxs)("div", {
-        className: d.scrollContent,
+        className: u.scrollContent,
         children: [(0, i.jsx)(s.Text, {
           color: "header-primary",
           tag: "div",
           variant: "heading-xl/semibold",
           children: c
         }), (null != n && "" !== n || null != t) && (0, i.jsxs)("div", {
-          className: d.details,
+          className: u.details,
           children: [(0, i.jsx)(s.Text, {
             color: "header-primary",
             tag: "div",
@@ -78,10 +78,10 @@ function u(e) {
           }), (0, i.jsx)(s.Text, {
             color: "text-muted",
             variant: "text-md/normal",
-            className: d.description,
+            className: u.description,
             children: n
           }), null != t && (0, i.jsxs)("div", {
-            className: d.benefits,
+            className: u.benefits,
             children: [(0, i.jsx)(s.Text, {
               color: "header-secondary",
               variant: "eyebrow",

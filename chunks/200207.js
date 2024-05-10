@@ -11,8 +11,8 @@ var r = n("557533"),
   s = n("789978"),
   a = n("790472"),
   o = n("777207"),
-  d = n("145626"),
-  u = n("863885");
+  u = n("145626"),
+  d = n("863885");
 
 function c(e) {
   let {
@@ -22,17 +22,17 @@ function c(e) {
     onDetails: c,
     onPurchase: f,
     PurchaseButton: p,
-    availabilityLabel: h
+    availabilityLabel: m
   } = e;
   return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
-      className: l()(d.wrapper, u.hoverCard),
+      className: l()(u.wrapper, d.hoverCard),
       tabIndex: 0,
       onClick: () => {
         null != c ? c() : null != f && f()
       },
       children: [(0, i.jsx)("div", {
-        className: d.cardHeaderImg,
+        className: u.cardHeaderImg,
         style: null != r ? {
           backgroundImage: null != r ? "url(".concat(r.toString(), ")") : void 0
         } : void 0,
@@ -42,23 +42,23 @@ function c(e) {
           width: 80
         })
       }), (0, i.jsxs)("div", {
-        className: d.details,
+        className: u.details,
         children: [(0, i.jsx)(o.Text, {
           color: "header-primary",
           variant: "text-md/semibold",
           children: t
         }), null != n && (0, i.jsx)(o.Text, {
-          className: d.description,
+          className: u.description,
           color: "text-muted",
           variant: "text-sm/normal",
           children: n
         })]
       }), null != p && (0, i.jsxs)("div", {
-        className: d.footer,
+        className: u.footer,
         children: [(0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/normal",
-          children: h
+          children: m
         }), (0, i.jsx)(p, {
           onClick: e => {
             e.stopPropagation(), null == f || f()

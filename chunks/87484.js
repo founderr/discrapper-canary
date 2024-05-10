@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return d
   }
 });
 var i = n("735250");
@@ -11,18 +11,18 @@ var r = n("153832"),
   s = n("976255"),
   a = n("667"),
   o = n("626135"),
-  d = n("981631");
+  u = n("981631");
 
-function u(e) {
+function d(e) {
   let {
     applicationId: t,
-    skuId: u,
+    skuId: d,
     onClose: c,
     onComplete: f,
     analyticsLocations: p,
-    analyticsLocationObject: h,
-    contextKey: m
-  } = e, S = !1, v = (0, r.v4)();
+    analyticsLocationObject: m,
+    contextKey: S
+  } = e, h = !1, g = (0, r.v4)();
   (0, l.openModalLazy)(async () => {
     let {
       default: e
@@ -34,31 +34,31 @@ function u(e) {
       } = n;
       return (0, i.jsx)(e, {
         ...l,
-        loadId: v,
+        loadId: g,
         applicationId: t,
-        skuId: u,
+        skuId: d,
         analyticsLocations: p,
-        analyticsLocationObject: h,
+        analyticsLocationObject: m,
         onClose: e => {
           r(), null == c || c(e)
         },
         onComplete: e => {
-          S = !0, null == f || f(e)
+          h = !0, null == f || f(e)
         }
       })
     }
   }, {
-    contextKey: m,
+    contextKey: S,
     onCloseCallback: () => {
-      !S && o.default.track(d.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-        load_id: v,
-        payment_type: d.PurchaseTypeToAnalyticsPaymentType[d.PurchaseTypes.ONE_TIME],
-        location: h,
+      !h && o.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+        load_id: g,
+        payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
+        location: m,
         is_gift: !1,
         application_id: t,
         location_stack: p
-      }), (0, s.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == c || c(S)
+      }), (0, s.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == c || c(h)
     },
-    onCloseRequest: d.NOOP
+    onCloseRequest: u.NOOP
   })
 }

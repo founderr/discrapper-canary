@@ -8,16 +8,16 @@ var i, r, l = n("735250"),
   s = n("470079"),
   a = n("442837"),
   o = n("481060"),
-  d = n("241159"),
-  u = n("496929"),
+  u = n("241159"),
+  d = n("496929"),
   c = n("558381"),
   f = n("728345"),
   p = n("812206"),
-  h = n("886176"),
-  m = n("238"),
-  S = n("507608"),
-  v = n("689938"),
-  g = n("135143");
+  m = n("886176"),
+  S = n("238"),
+  h = n("507608"),
+  g = n("689938"),
+  v = n("135143");
 
 function x(e) {
   let {
@@ -26,68 +26,68 @@ function x(e) {
     appId: i,
     guildId: r,
     subscriptionGroupListing: x
-  } = e, T = (0, a.useStateFromStores)([p.default], () => p.default.getApplication(i)), [C, E] = s.useState(() => p.default.isFetchingApplication(i) ? {
+  } = e, T = (0, a.useStateFromStores)([p.default], () => p.default.getApplication(i)), [C, I] = s.useState(() => p.default.isFetchingApplication(i) ? {
     status: 1
   } : {
     status: 0
-  }), I = s.useRef(null), [j, _] = s.useState(!0), N = () => {
+  }), E = s.useRef(null), [_, L] = s.useState(!0), j = () => {
     var e;
-    (null === (e = I.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? _(!1) : _(!0)
+    (null === (e = E.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? L(!1) : L(!0)
   };
   s.useEffect(() => {
-    0 === C.status && (E({
+    0 === C.status && (I({
       status: 1
     }), f.default.fetchApplication(i).then(() => {
-      E({
+      I({
         status: 2
       })
     }).catch(e => {
-      E({
+      I({
         status: 3,
         error: e.message
       })
     }))
   }, [i, C.status]);
-  let L = (0, a.useStateFromStores)([m.default], () => m.default.getStoreLayout(i), [i]);
+  let N = (0, a.useStateFromStores)([S.default], () => S.default.getStoreLayout(i), [i]);
   if (s.useEffect(() => {
-      (0, d.fetchStoreDirectoryLayout)(i), (0, c.fetchAllStoreListingsForApplication)(i)
+      (0, u.fetchStoreDirectoryLayout)(i), (0, c.fetchAllStoreListingsForApplication)(i)
     }, [i]), s.useEffect(() => {
-      (0, u.fetchUserEntitlementsForApplication)(i, !1)
+      (0, d.fetchUserEntitlementsForApplication)(i, !1)
     }, [i]), null == T) return null;
-  let R = v.default.Messages.STOREFRONT_TITLE.format({
+  let R = g.default.Messages.STOREFRONT_TITLE.format({
     appName: T.name
   });
   return (0, l.jsxs)(o.ModalRoot, {
     transitionState: n,
     "aria-label": R,
     size: o.ModalSize.DYNAMIC,
-    className: g.modal,
+    className: v.modal,
     children: [(0, l.jsxs)(o.ModalHeader, {
-      className: g.modalHeader,
+      className: v.modalHeader,
       children: [(0, l.jsxs)("div", {
-        className: g.modalTitle,
-        children: [(0, l.jsx)(h.default, {}), (0, l.jsx)(o.Heading, {
+        className: v.modalTitle,
+        children: [(0, l.jsx)(m.default, {}), (0, l.jsx)(o.Heading, {
           variant: "heading-md/semibold",
           children: R
         })]
       }), (0, l.jsx)(o.ModalCloseButton, {
         onClick: t,
-        className: g.modalCloseBtn
+        className: v.modalCloseBtn
       })]
     }), (0, l.jsx)(o.ModalContent, {
       scrollerRef: e => {
-        null != e && (I.current = e, N())
+        null != e && (E.current = e, j())
       },
-      onScroll: N,
-      children: (0, l.jsx)(S.default, {
+      onScroll: j,
+      children: (0, l.jsx)(h.default, {
         app: T,
         subscriptionGroupListing: x,
         guildId: r,
-        storeLayout: L
+        storeLayout: N
       })
     }), (0, l.jsx)("div", {
-      className: g.containerScrollGradient,
-      "data-shown": j
+      className: v.containerScrollGradient,
+      "data-shown": _
     })]
   })
 }(r = i || (i = {}))[r.NONE = 0] = "NONE", r[r.FETCHING = 1] = "FETCHING", r[r.FETCHED = 2] = "FETCHED", r[r.ERROR = 3] = "ERROR"
