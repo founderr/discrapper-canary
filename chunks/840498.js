@@ -20,7 +20,7 @@ n.r(t), n.d(t, {
         }
       } else if ("text" !== t.type) {
         if (n.limit -= 1, n.limit <= 0) return i;
-        Array.isArray(t.content) && (t.content = e(t.content, n))
+        Array.isArray(t.content) && (t.content = e(t.content, n)), "list" === t.type && (t.items = t.items.map(t => e(t, n)))
       }
       return t
     }
@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
         }(r, e(t[a], n));
         return r
       }
-      return (null != t.content && (t.content = e(t.content, t)), null != n && t.type === n.type) ? t.content : t
+      return (null != t.content && (t.content = e(t.content, t)), "list" === t.type && (t.items = t.items.map(t => Array.isArray(t) ? e(t, null) : t)), null != n && t.type === n.type) ? t.content : t
     }
   }
 }), n("653041");
