@@ -58,6 +58,8 @@ let S = l().defaultRules.link,
           }), (0, d.popAllLayers)(), (0, u.closeModal)(f.CHANGELOG_MODAL_KEY), e.preventDefault()
         } : () => {
           n && "function" == typeof n.onLinkClick && n.onLinkClick(r), n.changeLog.track(T.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+            target: r,
+            cta_type: "inline_link",
             ...I.default.getCampaignParams(r)
           })
         }, {

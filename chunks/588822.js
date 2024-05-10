@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return f
   }
 });
 var i = n("735250"),
@@ -12,43 +12,51 @@ var i = n("735250"),
   l = n("580552"),
   u = n("240991"),
   d = n("278297"),
-  _ = n("596401"),
-  c = n("689938"),
-  E = n("946278");
+  _ = n("626135"),
+  c = n("981631"),
+  E = n("596401"),
+  I = n("689938"),
+  T = n("946278");
 
-function I(e) {
+function f(e) {
   let {
     userBio: t,
     className: n,
     animateOnHover: a = !1,
-    isHovering: I = !1,
-    lineClamp: T = 6,
-    setLineClamp: f = !0,
-    textColor: S,
-    userId: h
-  } = e, A = r.useMemo(() => null != t ? (0, u.parseBioReact)(t) : null, [t]);
-  return null == t && null == h ? null : ((0, l.default)(h) && (A = (0, i.jsxs)(i.Fragment, {
+    isHovering: f = !1,
+    lineClamp: S = 6,
+    setLineClamp: h = !0,
+    textColor: A,
+    userId: m
+  } = e, N = r.useMemo(() => null != t ? (0, u.parseBioReact)(t) : null, [t]);
+  return null == t && null == m ? null : ((0, l.default)(m) && (N = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)("span", {
-      children: c.default.Messages.SYSTEM_DM_CHANGELOG_BIO
+      children: I.default.Messages.SYSTEM_DM_CHANGELOG_BIO
     }), (0, i.jsx)("br", {}), (0, i.jsx)("br", {}), (0, i.jsx)(o.Anchor, {
-      title: c.default.Messages.SYSTEM_DM_CHANGELOG_BIO_CTA,
+      onClick: () => {
+        _.default.track(c.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+          cta_type: "profile_bio",
+          target: E.CHANGELOG_URL
+        })
+      },
+      title: I.default.Messages.SYSTEM_DM_CHANGELOG_BIO_CTA,
       target: "_blank",
       rel: "noreferrer noopener",
-      href: _.CHANGELOG_URL,
-      children: c.default.Messages.SYSTEM_DM_CHANGELOG_BIO_CTA
+      href: E.CHANGELOG_URL,
+      children: I.default.Messages.SYSTEM_DM_CHANGELOG_BIO_CTA
     })]
   })), (0, i.jsx)("div", {
-    className: s()(n, E.markup),
+    className: s()(n, T.markup),
     children: (0, i.jsx)(o.Text, {
       variant: "text-sm/normal",
-      lineClamp: f ? T : void 0,
-      color: void 0 !== S ? S : void 0,
+      lineClamp: h ? S : void 0,
+      color: void 0 !== A ? A : void 0,
       children: (0, i.jsx)(d.MessagesInteractionContext.Provider, {
         value: {
-          disableAnimations: a && !I,
+          disableAnimations: a && !f,
           disableInteractions: !1
         },
-        children: A
+        children: N
       })
     })
   }))
