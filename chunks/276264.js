@@ -183,16 +183,13 @@ t.default = function(e) {
     avatarSize: l.AvatarSizes.SIZE_32,
     className: D.placeholder
   }) : (0, i.jsx)(l.Popout, {
-    renderPopout: e => {
-      var t, n;
-      return (0, i.jsx)(I.default, {
-        quest: eh,
-        applicationStream: B,
-        width: null !== (n = null === (t = eo.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
-        ...e,
-        closePopout: () => eS(!0)
-      })
-    },
+    renderPopout: e => (0, i.jsx)(I.default, {
+      quest: eh,
+      memberListItemRef: eo,
+      applicationStream: B,
+      ...e,
+      closePopout: () => eS(!0)
+    }),
     position: "bottom",
     shouldShow: eA,
     nudgeAlignIntoViewport: !1,
