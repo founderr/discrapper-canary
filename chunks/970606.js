@@ -12,11 +12,14 @@ n.r(t), n.d(t, {
   trackClanAdoptIdentity: function() {
     return d
   },
+  trackClanApplicationAction: function() {
+    return R
+  },
   trackClanApplicationNavigation: function() {
     return C
   },
   trackClanApplicationViewed: function() {
-    return R
+    return g
   },
   trackClanApplyToJoinViewed: function() {
     return u
@@ -259,6 +262,20 @@ function C(e) {
 }
 
 function R(e) {
+  let {
+    guildId: t,
+    actionType: n,
+    applicationUserId: r
+  } = e;
+  a.default.track(o.AnalyticEvents.CLAN_APPLICATION_ACTION, {
+    guild_id: t,
+    action_type: n,
+    application_user_id: r,
+    viewing_user_id: i.default.getId()
+  })
+}
+
+function g(e) {
   let {
     guildId: t,
     applicationUserId: n,

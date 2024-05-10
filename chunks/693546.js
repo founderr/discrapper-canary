@@ -81,19 +81,24 @@ let _ = async e => {
   }
 }, T = async function(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.GuildJoinRequestApplicationStatuses.APPROVED,
-    a = arguments.length > 3 ? arguments[3] : void 0,
-    s = await i.HTTP.patch({
-      url: d.Endpoints.GUILD_JOIN_REQUEST(e, t),
-      body: {
-        action: n,
-        rejection_reason: a
-      }
-    });
+    a = arguments.length > 3 ? arguments[3] : void 0;
+  (0, s.trackClanApplicationAction)({
+    guildId: e,
+    actionType: n,
+    applicationUserId: t
+  });
+  let o = await i.HTTP.patch({
+    url: d.Endpoints.GUILD_JOIN_REQUEST(e, t),
+    body: {
+      action: n,
+      rejection_reason: a
+    }
+  });
   r.default.dispatch({
     type: "GUILD_JOIN_REQUEST_UPDATE",
     guildId: e,
-    status: s.body.application_status,
-    request: s.body
+    status: o.body.application_status,
+    request: o.body
   })
 }, f = async (e, t) => {
   let n = await i.HTTP.patch({
