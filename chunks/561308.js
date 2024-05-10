@@ -19,16 +19,16 @@ n.r(t), n.d(t, {
     return S
   },
   getFullMarathonDescription: function() {
-    return R
+    return y
   },
   getFullResurrectedBadgeText: function() {
     return A
   },
   getMarathonDurationStr: function() {
-    return x
+    return M
   },
   getMarathonName: function() {
-    return M
+    return R
   },
   getResurrectedEntryLastPlayTime: function() {
     return I
@@ -50,6 +50,9 @@ n.r(t), n.d(t, {
   },
   isEntryTopGame: function() {
     return N
+  },
+  isValidStreak: function() {
+    return x
   }
 });
 var a = n("283398"),
@@ -184,6 +187,13 @@ function v(e) {
 }
 
 function x(e) {
+  let t = v(e);
+  if (null == t || t < 3) return !1;
+  let n = u.default.extractTimestamp(e.id);
+  return !(Date.now() - n > 48 * o.default.Millis.HOUR) && !0
+}
+
+function M(e) {
   let t = S(e);
   if (null == t) return null;
   let n = Math.round(t / o.default.Seconds.HOUR);
@@ -192,14 +202,14 @@ function x(e) {
   })
 }
 
-function M(e) {
+function R(e) {
   var t;
   let n = null !== (t = S(e)) && void 0 !== t ? t : 0;
   return n > 10 * o.default.Seconds.HOUR ? d.default.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : n > 5 * o.default.Seconds.HOUR ? d.default.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : d.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
 }
 
-function R(e) {
-  let t = x(e),
-    n = M(e);
+function y(e) {
+  let t = M(e),
+    n = R(e);
   return null == t ? n : "".concat(n, " — ").concat(t)
 }

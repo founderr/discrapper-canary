@@ -210,13 +210,19 @@ function U(e) {
 function F(e) {
   let {
     entry: t
-  } = e, n = (0, N.getStreakCount)(t);
-  return null == n || n < 2 ? null : (0, s.jsx)(L, {
+  } = e, {
+    location: n
+  } = y(), a = (0, N.getStreakCount)(t);
+  return (0, N.isValidStreak)(t) ? (0, s.jsx)(L, {
     Icon: d.FlashIcon,
+    showTooltip: 0 === n,
     text: x.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
-      days: n
+      days: a
+    }),
+    tooltipText: x.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_TOOLTIP.format({
+      days: a
     })
-  })
+  }) : null
 }
 
 function w(e) {

@@ -29,21 +29,22 @@ let c = (e, t) => ({
       iconPath: u.GAME_CONTROLLER_ICON_PATH,
       text: t
     }];
-    (0, r.isEntryNew)(e) && n.push({
-      iconPath: u.NEW_GAME_ICON_PATH,
-      text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
-    });
-    let a = (0, r.getStreakCount)(e);
-    null != a && a > 1 && n.push({
-      iconPath: u.FLASH_ICON_PATH,
-      text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
-        days: a
+    if ((0, r.isEntryNew)(e) && n.push({
+        iconPath: u.NEW_GAME_ICON_PATH,
+        text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
+      }), (0, r.isValidStreak)(e)) {
+      let t = (0, r.getStreakCount)(e);
+      n.push({
+        iconPath: u.FLASH_ICON_PATH,
+        text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+          days: t
+        })
       })
-    });
-    let l = (0, r.getResurrectedEntryLastPlayTime)(e);
-    if (null != l && n.push({
+    }
+    let a = (0, r.getResurrectedEntryLastPlayTime)(e);
+    if (null != a && n.push({
         iconPath: u.RESURRECTED_ICON_PATH,
-        text: (0, r.getFullResurrectedBadgeText)(l)
+        text: (0, r.getFullResurrectedBadgeText)(a)
       }), (0, r.isEntryMarathon)(e) && n.push({
         iconPath: u.TIMER_ICON_PATH,
         text: (0, r.isEntryActive)(e) ? (0, r.getMarathonName)(e) : (0, r.getFullMarathonDescription)(e)
