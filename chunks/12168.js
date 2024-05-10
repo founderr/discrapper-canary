@@ -45,9 +45,6 @@ function M(e) {
       onClick: s,
       look: u.Button.Looks.BLANK,
       size: u.Button.Sizes.NONE,
-      focusProps: {
-        enabled: !n
-      },
       children: (0, a.jsx)(o.Spring, {
         config: E.EMOJI_BUTTON_SPRING_CONFIG,
         from: {
