@@ -130,7 +130,7 @@ t.default = function(e) {
       ctaText: U.default.Messages.QUESTS_CLAIM_REWARD,
       handleClickCta: x,
       tileAssetType: "reward"
-    } : Y ? {
+    } : Y && !H ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
       ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_PROGRESS_CTA,
       handleClickCta: ea,
