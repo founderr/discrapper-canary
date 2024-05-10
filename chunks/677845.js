@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return v
   }
 }), n("653041");
 var a = n("735250"),
@@ -26,12 +26,12 @@ var a = n("735250"),
   I = n("981631"),
   A = n("853085");
 
-function N(e) {
+function v(e) {
   let {
     participants: t,
     onClick: n,
-    onDoubleClick: N,
-    onContextMenu: v,
+    onDoubleClick: v,
+    onContextMenu: N,
     channel: x,
     className: M,
     inCall: R,
@@ -62,8 +62,8 @@ function N(e) {
       className: A.tile,
       paused: L,
       onClick: n,
-      onDoubleClick: N,
-      onContextMenu: v,
+      onDoubleClick: v,
+      onContextMenu: N,
       inCall: R,
       width: t,
       inPopout: O

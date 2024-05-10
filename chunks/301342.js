@@ -30,8 +30,8 @@ var l = n("735250"),
   g = n("514342"),
   E = n("696202"),
   _ = n("605403"),
-  I = n("908773"),
-  S = n("632184"),
+  S = n("908773"),
+  I = n("632184"),
   N = n("151827"),
   T = n("203818"),
   A = n("438144"),
@@ -47,7 +47,7 @@ let M = a.memo(function(e) {
       channel: s,
       connectChannelDragSource: f,
       connectChannelDropTarget: E,
-      disableManageChannels: S,
+      disableManageChannels: I,
       position: T,
       sortingPosition: A,
       hideIcon: M,
@@ -139,7 +139,7 @@ let M = a.memo(function(e) {
           }), (0, l.jsx)("div", {
             onClick: R,
             className: x.children,
-            children: b && !S ? (0, l.jsx)(u.Tooltip, {
+            children: b && !I ? (0, l.jsx)(u.Tooltip, {
               text: v.default.Messages.CREATE_CHANNEL,
               children: e => {
                 let {
@@ -163,7 +163,7 @@ let M = a.memo(function(e) {
                       left: -4
                     }
                   },
-                  children: (0, l.jsx)(I.default, {
+                  children: (0, l.jsx)(S.default, {
                     width: 18,
                     height: 18,
                     className: x.addButtonIcon
@@ -219,7 +219,7 @@ let y = a.memo(function(e) {
     return n ? (0, l.jsxs)(u.Clickable, {
       className: x.voiceChannelsButton,
       onClick: s,
-      children: [(0, l.jsx)(S.default, {
+      children: [(0, l.jsx)(I.default, {
         className: x.voiceChannelsToggleIcon,
         width: 16,
         height: 16
@@ -230,7 +230,7 @@ let y = a.memo(function(e) {
     }) : (0, l.jsxs)(u.Clickable, {
       className: x.voiceChannelsButton,
       onClick: s,
-      children: [(0, l.jsx)(S.default, {
+      children: [(0, l.jsx)(I.default, {
         className: x.voiceChannelsToggleIcon,
         width: 16,
         height: 16

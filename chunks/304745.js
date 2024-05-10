@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CenterControlTrayActivityButton: function() {
-    return v
+    return N
   }
 }), n("653041");
 var a = n("735250"),
@@ -25,12 +25,12 @@ var a = n("735250"),
   T = n("301076"),
   I = n("981631"),
   A = n("921944"),
-  N = n("979942");
+  v = n("979942");
 
-function v(e) {
+function N(e) {
   let {
     channel: t
-  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), v = (0, h.useEmbeddedActivityLaunchability)(t.id), x = (0, h.getEmbeddedActivityLaunchabilityLabel)(v), M = v !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
+  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), N = (0, h.useEmbeddedActivityLaunchability)(t.id), x = (0, h.getEmbeddedActivityLaunchabilityLabel)(N), M = N !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
     isHovered: R,
     setIsHovered: y,
     onMouseEnter: L,
@@ -88,7 +88,7 @@ function v(e) {
             "aria-label": x,
             label: D ? void 0 : x,
             isActivityActive: P || R,
-            className: N.controlButton,
+            className: v.controlButton,
             onClick: () => {
               k(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && l(A.ContentDismissActionType.UNKNOWN)
             },

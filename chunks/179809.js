@@ -21,8 +21,8 @@ var l = n("735250"),
   g = n("40153"),
   E = n("252686"),
   _ = n("682662"),
-  I = n("662146"),
-  S = n("689938"),
+  S = n("662146"),
+  I = n("689938"),
   N = n("538962"),
   T = n("634165");
 let A = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
@@ -74,7 +74,7 @@ function x(e) {
     K(e)
   }, []), Q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && P()
-  }, [P, d]), q = null != B && "" !== B ? B : null != M && "" !== M ? M : S.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = H.length * (L + v), et = (0, o.useTransition)(!z && d, {
+  }, [P, d]), q = null != B && "" !== B ? B : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = H.length * (L + v), et = (0, o.useTransition)(!z && d, {
     from: {
       height: 0
     },
@@ -94,7 +94,7 @@ function x(e) {
       selected: s,
       unread: R,
       className: T.pill
-    }), (0, l.jsx)(I.default, {
+    }), (0, l.jsx)(S.default, {
       text: q,
       disabled: D,
       selected: s,

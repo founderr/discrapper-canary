@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("819640"),
   I = n("131951"),
   A = n("699516"),
-  N = n("594174"),
-  v = n("979651"),
+  v = n("594174"),
+  N = n("979651"),
   x = n("125015"),
   M = n("119828"),
   R = n("502568"),
@@ -198,7 +198,7 @@ class w extends l.PureComponent {
 function k(e) {
   let {
     channel: t
-  } = e, n = (0, E.default)(), r = (0, s.useStateFromStores)([h.default], () => h.default.getMode(t.id)), o = (0, s.useStateFromStores)([v.default], () => v.default.isInChannel(t.id)), u = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
+  } = e, n = (0, E.default)(), r = (0, s.useStateFromStores)([h.default], () => h.default.getMode(t.id)), o = (0, s.useStateFromStores)([N.default], () => N.default.isInChannel(t.id)), u = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
     callActive: m,
     callUnavailable: p
   } = (0, s.useStateFromStoresObject)([_.default], () => ({
@@ -210,7 +210,7 @@ function k(e) {
   } = (0, s.useStateFromStoresObject)([A.default], () => ({
     notFriend: t.type === j.ChannelTypes.DM && null != C && !A.default.isFriend(C),
     isBlocked: t.type === j.ChannelTypes.DM && null != C && A.default.isBlocked(C)
-  })), I = (0, s.useStateFromStores)([N.default], () => N.default.getUser(C)), x = (0, d.useAppContext)(), M = [], R = (0, f.default)(t.id), y = (0, s.useStateFromStores)([T.default], () => T.default.hasLayers());
+  })), I = (0, s.useStateFromStores)([v.default], () => v.default.getUser(C)), x = (0, d.useAppContext)(), M = [], R = (0, f.default)(t.id), y = (0, s.useStateFromStores)([T.default], () => T.default.hasLayers());
   R && !y && M.push(i.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP);
   let [L, O] = l.useState(!1);
   return (l.useEffect(() => {

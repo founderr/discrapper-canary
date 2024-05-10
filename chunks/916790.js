@@ -24,10 +24,10 @@ var a = r("735250"),
   k = r("585864"),
   v = r("277513");
 
-function j(e) {
+function C(e) {
   return parseFloat(e.toFixed(3))
 }
-let C = [{
+let j = [{
   key: "store",
   cellClassName: k.actionColumn,
   render(e) {
@@ -43,7 +43,7 @@ let C = [{
     let {
       trace: t
     } = e;
-    return "".concat(j(t.time), " ms")
+    return "".concat(C(t.time), " ms")
   }
 }];
 
@@ -56,7 +56,7 @@ function S(e) {
   })), [t]);
   return (0, a.jsx)(s.ScrollerThin, {
     children: (0, a.jsx)(b.default, {
-      columns: C,
+      columns: j,
       data: r
     })
   })
@@ -81,7 +81,7 @@ let w = [{
           })
         }), (0, a.jsxs)(f.Property, {
           name: "Total Time",
-          children: [j(r.totalTime), " ms"]
+          children: [C(r.totalTime), " ms"]
         })]
       }), (0, a.jsx)(s.ScrollerThin, {
         className: k.inspectorContainer,
@@ -182,7 +182,7 @@ let N = [{
     let {
       actionLog: t
     } = e;
-    return "".concat(j(t.totalTime), " ms")
+    return "".concat(C(t.totalTime), " ms")
   }
 }];
 

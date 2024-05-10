@@ -25,9 +25,9 @@ function _(e) {
   let n = r.default.getMutableGuildStates();
   return e === p.ViewHistoryKeys.SERVER_DISCOVERY_BADGE && !d.default.hasViewed(p.ViewHistoryKeys.SERVER_DISCOVERY_BADGE) || e !== C && e !== g && (null === (t = n[null != e ? e : "null"]) || void 0 === t ? void 0 : t.mentionCount) > 0
 }
-let I = (0, h.cachedFunction)((e, t, n) => ["null", ...t, ...e, g, p.ViewHistoryKeys.E3_SERVER_DISCOVERY_BADGE, C]);
+let S = (0, h.cachedFunction)((e, t, n) => ["null", ...t, ...e, g, p.ViewHistoryKeys.E3_SERVER_DISCOVERY_BADGE, C]);
 t.default = a.forwardRef(function(e, t) {
-  let n = (0, s.useStateFromStoresArray)([u.default, o.default, r.default], () => I(u.default.getGuildFolders(), o.default.getUnreadPrivateChannelIds(), r.default.getStoreChangeSentinel())),
+  let n = (0, s.useStateFromStoresArray)([u.default, o.default, r.default], () => S(u.default.getGuildFolders(), o.default.getUnreadPrivateChannelIds(), r.default.getStoreChangeSentinel())),
     a = (0, s.useStateFromStores)([c.default], () => c.default.isFocused()),
     d = (0, s.useStateFromStores)([i.default], () => i.default.getExpandedFolders());
   return (0, l.jsx)(f.default, {

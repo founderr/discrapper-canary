@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("316553"),
   L = n("273254"),
   O = n("559469"),
-  M = n("308083"),
-  y = n("689938"),
+  y = n("308083"),
+  M = n("689938"),
   P = n("18712"),
   x = n("345480"),
   D = n("236613");
@@ -89,9 +89,9 @@ function G(e) {
   } = e, C = (0, v.useClanDiscoveryUIStore)(e => e.setMode, o.default), m = (0, v.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), S = (0, v.useClanDiscoveryUIStore)(e => e.started, o.default), p = s.useMemo(() => {
     switch (r) {
       case v.ClanDiscoveryGame.GENSHIN:
-        return y.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_GENSHIN;
+        return M.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_GENSHIN;
       case v.ClanDiscoveryGame.VALORANT:
-        return y.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_VALORANT
+        return M.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_VALORANT
     }
   }, [r]), I = s.useMemo(() => l.map(e => ({
     value: e.id,
@@ -105,18 +105,18 @@ function G(e) {
     children: [(0, a.jsxs)(h.Heading, {
       className: P.upsellTitle,
       variant: "heading-xxl/semibold",
-      children: [y.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_GUILD_INVITE, (0, a.jsx)("br", {}), p]
+      children: [M.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_GUILD_INVITE, (0, a.jsx)("br", {}), p]
     }), (0, a.jsxs)("div", {
       className: P.upsellDetails,
       children: [(0, a.jsx)(j, {
         icon: d.CompassIcon,
-        text: y.default.Messages.CLAN_DISCOVERY_UPSELL_VIBES_OR_SKILL
+        text: M.default.Messages.CLAN_DISCOVERY_UPSELL_VIBES_OR_SKILL
       }), (0, a.jsx)(j, {
         icon: u.CircleCheckIcon,
-        text: y.default.Messages.CLAN_DISCOVERY_UPSELL_APPLICATIONS
+        text: M.default.Messages.CLAN_DISCOVERY_UPSELL_APPLICATIONS
       }), (0, a.jsx)(j, {
         icon: c.GroupIcon,
-        text: y.default.Messages.CLAN_DISCOVERY_UPSELL_MAX_SIZE
+        text: M.default.Messages.CLAN_DISCOVERY_UPSELL_MAX_SIZE
       })]
     }), (0, a.jsxs)("div", {
       className: P.upsellButton,
@@ -148,7 +148,7 @@ function G(e) {
         onClick: T,
         children: (0, a.jsx)(h.Text, {
           variant: "text-sm/medium",
-          children: y.default.Messages.CLAN_DISCOVERY_UPSELL_BROWSE
+          children: M.default.Messages.CLAN_DISCOVERY_UPSELL_BROWSE
         })
       })]
     }), S && (0, a.jsx)("div", {
@@ -157,7 +157,7 @@ function G(e) {
         className: P.upsellBackButton,
         children: (0, a.jsx)(h.Clickable, {
           onClick: g,
-          "aria-label": y.default.Messages.BACK,
+          "aria-label": M.default.Messages.BACK,
           children: (0, a.jsx)(E.ArrowLargeLeftIcon, {})
         })
       })
@@ -199,7 +199,7 @@ t.default = s.memo(function(e) {
           gameId: d
         })
       }, {
-        layerKey: M.CLAN_SETUP_MODAL_LAYER_KEY
+        layerKey: y.CLAN_SETUP_MODAL_LAYER_KEY
       })
     }, [l, d]),
     E = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion),
@@ -294,7 +294,7 @@ t.default = s.memo(function(e) {
       config: b,
       delay: 400
     }),
-    H = s.useMemo(() => null == u ? y.default.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : y.default.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [u]),
+    H = s.useMemo(() => null == u ? M.default.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : M.default.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [u]),
     V = s.useCallback(e => (0, a.jsx)(h.Text, {
       tag: "span",
       variant: "text-xs/medium",
@@ -378,11 +378,11 @@ t.default = s.memo(function(e) {
       children: (0, a.jsx)(h.Clickable, {
         className: P.joinWFS,
         onClick: Y,
-        "aria-label": y.default.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL,
+        "aria-label": M.default.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL,
         children: (0, a.jsx)(h.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: y.default.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS.format({
+          children: M.default.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS.format({
             wfsHook: V
           })
         })

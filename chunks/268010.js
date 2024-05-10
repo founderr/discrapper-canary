@@ -39,7 +39,7 @@ t.default = e => {
   } = (0, c.useWatchContentData)(n), {
     primaryColor: T,
     secondaryColor: I
-  } = (0, d.default)(S), A = (0, s.useStateFromStores)([i.default], () => i.default.locale), N = l.useCallback(e => {
+  } = (0, d.default)(S), A = (0, s.useStateFromStores)([i.default], () => i.default.locale), v = l.useCallback(e => {
     if (null != g && null != S) return (0, u.generateWatchContentImage)({
       entry: n,
       mediaImageSrc: S,
@@ -70,7 +70,7 @@ t.default = e => {
         closePopout: C,
         user: g,
         channel: t,
-        generateReactionImage: N,
+        generateReactionImage: v,
         reactionImageAltText: E(n, g),
         entry: n,
         requestId: r

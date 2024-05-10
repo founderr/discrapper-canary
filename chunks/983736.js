@@ -1,44 +1,44 @@
 "use strict";
 n.r(t), n.d(t, {
   isAutomaticApprovalFormField: function() {
-    return l
+    return a
   },
   isManualApprovalFormField: function() {
-    return o
+    return l
   },
   isValidFormResponse: function() {
     return i
   }
 });
-var a = n("823379"),
-  r = n("246364"),
-  s = n("592286");
+var r = n("823379"),
+  s = n("246364"),
+  o = n("592286");
 let i = e => {
   let {
     required: t,
     response: n,
-    field_type: s
+    field_type: o
   } = e;
   if (!t) return !0;
   if (null == n) return !1;
-  switch (s) {
-    case r.VerificationFormFieldTypes.TERMS:
-    case r.VerificationFormFieldTypes.VERIFICATION:
+  switch (o) {
+    case s.VerificationFormFieldTypes.TERMS:
+    case s.VerificationFormFieldTypes.VERIFICATION:
       return !!n;
-    case r.VerificationFormFieldTypes.TEXT_INPUT:
-    case r.VerificationFormFieldTypes.PARAGRAPH:
+    case s.VerificationFormFieldTypes.TEXT_INPUT:
+    case s.VerificationFormFieldTypes.PARAGRAPH:
       return "string" == typeof n && "" !== n.trim();
-    case r.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
       return "number" == typeof n;
     default:
-      return (0, a.assertNever)(s)
+      return (0, r.assertNever)(o)
   }
 };
 
-function l(e) {
-  return s.AUTOMATIC_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
+function a(e) {
+  return o.AUTOMATIC_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
 }
 
-function o(e) {
-  return s.MANUAL_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
+function l(e) {
+  return o.MANUAL_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
 }

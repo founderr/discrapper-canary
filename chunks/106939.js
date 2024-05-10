@@ -33,8 +33,8 @@ var a = n("735250"),
   R = n("26290"),
   L = n("626135"),
   O = n("792125"),
-  M = n("280570"),
-  y = n("914788"),
+  y = n("280570"),
+  M = n("914788"),
   P = n("841409"),
   x = n("652262"),
   D = n("880257"),
@@ -135,7 +135,7 @@ function q() {
   let e = (0, D.default)(),
     t = (0, b.useAcceptedRequestsCount)(),
     n = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
-    l = (0, u.useStateFromStores)([y.default], () => y.default.getIsInitialized()),
+    l = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()),
     r = (0, x.useSelectedTeenId)(),
     {
       selectedTab: f,
@@ -146,7 +146,7 @@ function q() {
     g = null != e,
     T = l && null != S && !g;
   return (s.useEffect(() => {
-    (0, I.trackAppUIViewed)("family-center"), M.default.initialPageLoad(), !n && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+    (0, I.trackAppUIViewed)("family-center"), y.default.initialPageLoad(), !n && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
       dismissAction: B.ContentDismissActionType.AUTO,
       forceTrack: !0
     })
@@ -184,12 +184,12 @@ function q() {
 function Q() {
   let {
     analyticsLocations: e
-  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, D.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([y.default], () => y.default.getIsInitialized()), S = (0, x.useSelectedTeenId)(), v = (0, u.useStateFromStores)([g.default], () => g.default.theme), {
+  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, D.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()), S = (0, x.useSelectedTeenId)(), v = (0, u.useStateFromStores)([g.default], () => g.default.theme), {
     selectedTab: R,
     handleTabChange: O
   } = (0, P.default)(), U = (0, N.useUID)(), j = A.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
   if (s.useEffect(() => {
-      f.setHomeLink(w.Routes.FAMILY_CENTER), (0, I.trackAppUIViewed)("family-center"), !y.default.isLoading() && y.default.canRefetch() && M.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+      f.setHomeLink(w.Routes.FAMILY_CENTER), (0, I.trackAppUIViewed)("family-center"), !M.default.isLoading() && M.default.canRefetch() && y.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
         dismissAction: B.ContentDismissActionType.AUTO,
         forceTrack: !0
       })

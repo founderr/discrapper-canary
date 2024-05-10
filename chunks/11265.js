@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  i = n.n(s),
-  l = n("685626"),
-  o = n("442837"),
-  c = n("481060"),
-  d = n("393238"),
-  u = n("607070"),
-  f = n("689938"),
-  m = n("364267");
+a.r(t), a("47120");
+var n = a("735250"),
+  r = a("470079"),
+  s = a("120356"),
+  i = a.n(s),
+  l = a("685626"),
+  o = a("442837"),
+  c = a("481060"),
+  d = a("393238"),
+  u = a("607070"),
+  f = a("689938"),
+  m = a("364267");
 t.default = r.memo(function(e) {
   let {
     renderHeader: t,
-    children: n,
+    children: a,
     isExpanded: s,
     isStuck: h,
     onExpand: p,
@@ -47,17 +47,17 @@ t.default = r.memo(function(e) {
       _(!1)
     }, 100);
     return () => clearTimeout(e)
-  }, []), (0, a.jsx)(c.Clickable, {
+  }, []), (0, n.jsx)(c.Clickable, {
     className: i()(m.editCard, {
       [m.toggled]: s,
       [m.noBackground]: T
     }),
-    children: (0, a.jsxs)(l.animated.div, {
+    children: (0, n.jsxs)(l.animated.div, {
       className: i()(m.contentExpandContainer, {
         [m.showOverflow]: s && g
       }),
       style: R,
-      children: [(0, a.jsx)(c.Clickable, {
+      children: [(0, n.jsx)(c.Clickable, {
         innerRef: N,
         onClick: h ? void 0 : p,
         className: i()(m.innerHeader, {
@@ -65,9 +65,9 @@ t.default = r.memo(function(e) {
         }),
         "aria-label": f.default.Messages.EXPAND,
         children: t
-      }), (0, a.jsx)("div", {
+      }), (0, n.jsx)("div", {
         ref: A,
-        children: n
+        children: a
       })]
     })
   })

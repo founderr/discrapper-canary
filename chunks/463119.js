@@ -30,7 +30,7 @@ var a = n("735250"),
   R = n("981631"),
   L = n("689938"),
   O = n("858666");
-let M = e => {
+let y = e => {
     let {
       color: t
     } = e;
@@ -40,7 +40,7 @@ let M = e => {
       text: L.default.Messages.NEW
     })
   },
-  y = e => {
+  M = e => {
     let {
       selected: t,
       locationState: n,
@@ -119,7 +119,7 @@ let M = e => {
       allowOverflow: !0,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, a.jsxs)(y, {
+      children: e => (0, a.jsxs)(M, {
         className: null != l.entryPointClassName ? (0, T.getClass)(O, l.entryPointClassName) : void 0,
         selected: t,
         locationState: n,
@@ -133,7 +133,7 @@ let M = e => {
           }),
           alt: "",
           "aria-hidden": !0
-        }), (0, a.jsx)(M, {
+        }), (0, a.jsx)(y, {
           color: l.badgeColor
         })]
       })
@@ -162,11 +162,11 @@ let M = e => {
       delay: 100,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, a.jsx)(y, {
+      children: e => (0, a.jsx)(M, {
         selected: t,
         locationState: n,
         ...e,
-        children: (0, a.jsx)(M, {
+        children: (0, a.jsx)(y, {
           color: l.badgeColor
         })
       })
@@ -193,7 +193,7 @@ let M = e => {
           displayOptions: s
         })
     }
-    return (0, a.jsx)(y, {
+    return (0, a.jsx)(M, {
       selected: t,
       locationState: n
     })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   AudienceEmptyTile: function() {
-    return v
+    return N
   }
 });
 var a = n("735250"),
@@ -48,7 +48,7 @@ let A = l.memo(function(e) {
       }) : null]
     })
   }),
-  N = l.memo(function(e) {
+  v = l.memo(function(e) {
     var t;
     let {
       participant: n,
@@ -84,7 +84,7 @@ let A = l.memo(function(e) {
       })]
     })
   }),
-  v = () => (0, a.jsx)("div", {
+  N = () => (0, a.jsx)("div", {
     className: I.tileBaseContainer
   });
 t.default = l.memo(function(e) {
@@ -139,7 +139,7 @@ t.default = l.memo(function(e) {
       }),
       onContextMenu: _,
       ...e,
-      children: (0, a.jsx)(N, {
+      children: (0, a.jsx)(v, {
         participant: t,
         guildId: C,
         channel: s,

@@ -126,7 +126,7 @@ function C(e, t, n, C) {
     });
     return null != e.current && t.observe(e.current), () => t.disconnect()
   }, [e, A, n]);
-  let N = a.useCallback(() => {
+  let v = a.useCallback(() => {
     let t = d.default.getDrawables(n),
       a = h.useEmojiHoseStore.getState().particles,
       l = t.length > 0 || Object.keys(a).length > 0;
@@ -134,8 +134,8 @@ function C(e, t, n, C) {
   }, [e, A, n]);
   a.useEffect(() => {
     let e = I.current;
-    return d.default.addChangeListener(N), N(), (0, r.maybeFetchColors)(t.getAvatarURL(null, p.AVATAR_COLOR_AVATAR_SIZE)), () => {
-      d.default.removeChangeListener(N), e.stop()
+    return d.default.addChangeListener(v), v(), (0, r.maybeFetchColors)(t.getAvatarURL(null, p.AVATAR_COLOR_AVATAR_SIZE)), () => {
+      d.default.removeChangeListener(v), e.stop()
     }
   })
 }

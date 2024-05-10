@@ -62,16 +62,16 @@ function S(e) {
       guildId: T,
       channelId: I,
       messageId: A,
-      roleId: N
+      roleId: v
     } = (0, f.useUserProfileAnalyticsContext)();
 
-  function v(e) {
+  function N(e) {
     c(), (0, m.openUserProfileModal)({
       userId: e,
       guildId: T,
       channelId: I,
       messageId: A,
-      roleId: N,
+      roleId: v,
       sourceAnalyticsLocations: _,
       analyticsLocation: {
         section: p.AnalyticsSections.USER_PROFILE_MUTUAL_FRIENDS
@@ -106,7 +106,7 @@ function S(e) {
   }) : S.map(e => (0, a.jsx)(g, {
     user: e.user,
     status: e.status,
-    onSelect: v,
+    onSelect: N,
     onContextMenu: x
   }, e.key)), (0, a.jsx)(i.ScrollerThin, {
     className: C.listScroller,

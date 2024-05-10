@@ -20,8 +20,8 @@ var l, a = n("735250"),
   g = n("888369"),
   E = n("430824"),
   _ = n("306680"),
-  I = n("944486"),
-  S = n("938475"),
+  S = n("944486"),
+  I = n("938475"),
   N = n("387204"),
   T = n("107828"),
   A = n("153124"),
@@ -83,13 +83,13 @@ let U = u.default.connectStores([_.default, C.default], e => {
       category: C.default.getChannel(t.parent_id)
     }
   })(G),
-  w = u.default.connectStores([S.default], e => {
+  w = u.default.connectStores([I.default], e => {
     let {
       channel: t
     } = e;
     if (null == t.guild_id) throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
     return {
-      voiceStates: S.default.getVoiceStates(t.guild_id)[t.id]
+      voiceStates: I.default.getVoiceStates(t.guild_id)[t.id]
     }
   })(G),
   F = u.default.connectStores([g.default], e => {
@@ -284,7 +284,7 @@ class k extends s.PureComponent {
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("70716"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("72317"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
+            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("70716"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("62217"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
             return n => (0, a.jsx)(e, {
               ...n,
               guild: t.record,
@@ -371,7 +371,7 @@ class k extends s.PureComponent {
             return n => (0, a.jsx)(e, {
               ...n,
               channel: t.record,
-              selected: I.default.getChannelId() === t.record.id,
+              selected: S.default.getChannelId() === t.record.id,
               onSelect: x.hide
             })
           });

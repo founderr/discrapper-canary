@@ -18,7 +18,7 @@ var l = n("735250"),
   E = n("689938"),
   _ = n("431264");
 
-function I(e) {
+function S(e) {
   var t;
   let {
     guild: n,
@@ -58,7 +58,7 @@ function I(e) {
   })
 }
 
-function S(e) {
+function I(e) {
   let {
     guild: t,
     controller: n,
@@ -188,13 +188,13 @@ t.default = a.memo(function(e) {
             className: _.headerChildren,
             children: y
           })]
-        }), G && (0, l.jsx)(S, {
+        }), G && (0, l.jsx)(I, {
           guild: x,
           controller: s,
           hasBanner: null != R,
           hasSubheader: null != b && b
         })]
-      }), null != R ? (0, l.jsx)(I, {
+      }), null != R ? (0, l.jsx)(S, {
         guild: x,
         controller: s,
         guildBanner: R,

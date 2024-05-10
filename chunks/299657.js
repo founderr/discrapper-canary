@@ -37,7 +37,7 @@ t.default = function(e) {
   } = e, s = (0, R.useBlockedPaymentsConfig)(), {
     sourceAnalyticsLocations: i,
     analyticsLocations: U
-  } = (0, I.default)(T.default.PREMIUM_MARKETING), j = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), y = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), B = (0, h.usePremiumTrialOffer)(), G = (0, M.usePremiumDiscountOffer)(), k = (0, f.useSubscriptionPlansLoaded)(), [H, F] = r.useState(!0), w = r.useRef(0), K = (0, g.isPremiumExactly)(y, v.PremiumTypes.TIER_2), W = (0, O.useLocalizedPromoQuery)(), V = null == W ? void 0 : W.countryCode, Y = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
+  } = (0, I.default)(T.default.PREMIUM_MARKETING), j = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), y = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), G = (0, h.usePremiumTrialOffer)(), B = (0, M.usePremiumDiscountOffer)(), k = (0, f.useSubscriptionPlansLoaded)(), [H, F] = r.useState(!0), w = r.useRef(0), K = (0, g.isPremiumExactly)(y, v.PremiumTypes.TIER_2), W = (0, O.useLocalizedPromoQuery)(), V = null == W ? void 0 : W.countryCode, Y = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
   return (r.useEffect(() => {
     !Y && d.getNitroAffinity()
   }, [Y]), r.useEffect(() => {
@@ -46,8 +46,8 @@ t.default = function(e) {
       await Promise.all([d.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), d.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(V, null, b.RevenueSurfaces.DISCOVERY)]), w.current = Date.now() - e, F(!1)
     })
   }, [V]), r.useEffect(() => {
-    s && (null != B || null != G) && (0, P.acknowledgeUserOffer)(B, G)
-  }, [s, B, G]), r.useEffect(() => {
+    s && (null != G || null != B) && (0, P.acknowledgeUserOffer)(G, B)
+  }, [s, G, B]), r.useEffect(() => {
     !H && p.default.track(b.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
       location_stack: i,
       load_duration_ms: w.current

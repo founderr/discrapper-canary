@@ -21,8 +21,8 @@ var l = n("735250"),
   g = n("355363"),
   E = n("737592"),
   _ = n("561788"),
-  I = n("135724"),
-  S = n("543432"),
+  S = n("135724"),
+  I = n("543432"),
   N = n("981631"),
   T = n("689938"),
   A = n("254193");
@@ -35,7 +35,7 @@ function L(e) {
     onAction: m,
     voiceStates: g,
     isChannelSelected: _,
-    shouldShowSettingNudge: I
+    shouldShowSettingNudge: S
   } = e;
   ! function(e, t) {
     let n = a.useMemo(() => {
@@ -51,9 +51,9 @@ function L(e) {
     }, [e, t]);
     (0, r.useSubscribeGuildMembers)(n)
   }(f, g);
-  let S = (0, o.default)(f),
+  let I = (0, o.default)(f),
     L = new Map;
-  S.forEach(e => {
+  I.forEach(e => {
     L.set(e.application.id, e)
   });
   let x = null !== (t = null == g ? void 0 : g.filter(C.isNotNullish)) && void 0 !== t ? t : [],
@@ -111,7 +111,7 @@ function L(e) {
         members: n,
         onAction: m
       }, t)
-    }), I && (0, l.jsxs)(l.Fragment, {
+    }), S && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: A.headerDivider
       }), (0, l.jsx)("div", {
@@ -153,11 +153,11 @@ function v(e) {
     className: A.popoutHeaderContainer,
     children: [(0, l.jsx)(_.default, {
       channel: t
-    }), o ? (0, l.jsx)(I.default, {
+    }), o ? (0, l.jsx)(S.default, {
       userCount: a,
       video: r,
       channel: t
-    }) : (0, l.jsx)(S.default, {
+    }) : (0, l.jsx)(I.default, {
       userCount: a
     })]
   })

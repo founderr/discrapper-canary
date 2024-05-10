@@ -21,8 +21,8 @@ var l = n("735250"),
   g = n("199902"),
   E = n("592125"),
   _ = n("944486"),
-  I = n("979651"),
-  S = n("898140"),
+  S = n("979651"),
+  I = n("898140"),
   N = n("880080"),
   T = n("15434"),
   A = n("709054"),
@@ -72,7 +72,7 @@ function j() {
           return null != t && null != e[t.channelId]
         }),
         a = (0, o.useStateFromStores)([g.default], () => g.default.getAllApplicationStreams().some(t => null != e[t.channelId])),
-        s = (0, o.useStateFromStores)([I.default], () => n && null != t && I.default.hasVideo(t), [n, t]),
+        s = (0, o.useStateFromStores)([S.default], () => n && null != t && S.default.hasVideo(t), [n, t]),
         i = (0, o.useStateFromStoresArray)([f.default], () => A.default.keys(e).reduce((e, t) => (e.push(...f.default.getEmbeddedActivitiesForChannel(t)), e), [])),
         r = (0, o.useStateFromStores)([f.default], () => Array.from(f.default.getSelfEmbeddedActivities().values()).some(t => {
           let {
@@ -141,7 +141,7 @@ function j() {
               className: i()(D.ring, {
                 [D.ringActive]: t
               }),
-              children: (0, l.jsx)(S.default, {
+              children: (0, l.jsx)(I.default, {
                 className: D.favoriteIcon,
                 width: 20,
                 height: 20

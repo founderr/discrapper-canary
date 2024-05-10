@@ -95,23 +95,23 @@ function _(e) {
   }, [t.id]);
   let i = s === c.GENSHIN_ID ? p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : s === c.VALORANT_ID ? p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
     _ = a.useCallback(() => (0, l.jsx)(g, {}), []),
-    I = a.useCallback(() => (0, l.jsx)(C, {
+    S = a.useCallback(() => (0, l.jsx)(C, {
       title: i
     }), [i]),
-    S = a.useCallback(() => {
+    I = a.useCallback(() => {
       (0, d.trackClanAdminInviteClicked)({
         guildId: t.id,
         location: r.default.GUILD_CHANNEL_LIST
       }), (0, u.transitionTo)(f.Routes.GUILD_DISCOVERY)
     }, [t.id]),
     N = a.useCallback(() => (0, l.jsx)(E, {
-      onClick: S
-    }), [S]);
+      onClick: I
+    }), [I]);
   return (0, l.jsx)(o.default, {
     className: m.notice,
     guild: t,
     onDismissed: () => n(h.ContentDismissActionType.DISMISS),
-    title: I,
+    title: S,
     message: _,
     cta: N,
     trackingSource: f.ChannelNoticeCtaSources.CLAN_ADMIN_UPSELL,

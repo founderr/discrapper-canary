@@ -61,7 +61,7 @@ t.default = function(e) {
   var t, n, l;
   let {
     quest: o
-  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [M, y] = s.useState(!1), P = s.useCallback(() => y(!0), []), x = s.useCallback(() => y(!1), []), D = s.useCallback(e => {
+  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [y, M] = s.useState(!1), P = s.useCallback(() => M(!0), []), x = s.useCallback(() => M(!1), []), D = s.useCallback(e => {
     e.stopPropagation()
   }, []), b = s.useCallback(() => {
     (0, h.enrollInQuest)(o.id, {
@@ -134,7 +134,7 @@ t.default = function(e) {
             })
           })]
         }), w && !F && (0, a.jsx)(A.default, {
-          autoplay: M,
+          autoplay: y,
           className: L.rewardTileWithInstructions,
           quest: o,
           questContent: m.QuestContent.ACTIVITY_PANEL,

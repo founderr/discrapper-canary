@@ -56,8 +56,8 @@ var a, l, s = n("735250"),
   T = n("70956"),
   I = n("719247"),
   A = n("22211"),
-  N = n("561308"),
-  v = n("371991"),
+  v = n("561308"),
+  N = n("371991"),
   x = n("689938"),
   M = n("106940");
 (a = l || (l = {}))[a.CARD = 0] = "CARD", a[a.POPOUT = 1] = "POPOUT";
@@ -119,14 +119,14 @@ function j(e) {
     defaultTextColor: n,
     defaultIconColor: a,
     location: l
-  } = y(), i = 0 === l, r = (0, N.isEntryActive)(t), o = i && r ? _.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
+  } = y(), i = 0 === l, r = (0, v.isEntryActive)(t), o = i && r ? _.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
   return (0, s.jsxs)("div", {
     className: M.badgeContainer,
     children: [(0, s.jsx)(c.GameControllerIcon, {
       width: 12,
       height: 12,
       color: o
-    }), (0, s.jsx)(v.default, {
+    }), (0, s.jsx)(N.default, {
       entry: t,
       textColor: u
     })]
@@ -151,7 +151,7 @@ function P(e) {
       width: 12,
       height: 12,
       color: d
-    }), (0, s.jsx)(v.ActiveTimestamp, {
+    }), (0, s.jsx)(N.ActiveTimestamp, {
       entry: null != c ? {
         start: c
       } : n,
@@ -166,7 +166,7 @@ function D(e) {
   } = e, {
     location: n
   } = y(), a = 0 === n ? _.tokens.colors.STATUS_POSITIVE : void 0;
-  return (0, N.isEntryNew)(t) ? (0, s.jsx)(L, {
+  return (0, v.isEntryNew)(t) ? (0, s.jsx)(L, {
     Icon: f.NewUserLargeIcon,
     text: x.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
     iconColor: a
@@ -179,14 +179,14 @@ function b(e) {
   } = e, {
     location: n
   } = y();
-  if (!(0, N.isEntryMarathon)(t)) return null;
-  let a = (0, N.isEntryActive)(t),
+  if (!(0, v.isEntryMarathon)(t)) return null;
+  let a = (0, v.isEntryActive)(t),
     l = 0 === n,
-    i = l || a ? (0, N.getMarathonName)(t) : (0, N.getFullMarathonDescription)(t);
+    i = l || a ? (0, v.getMarathonName)(t) : (0, v.getFullMarathonDescription)(t);
   return (0, s.jsx)(L, {
     Icon: p.TimerIcon,
     text: i,
-    tooltipText: (0, N.getMarathonDurationStr)(t),
+    tooltipText: (0, v.getMarathonDurationStr)(t),
     showTooltip: l && !a
   })
 }
@@ -196,9 +196,9 @@ function U(e) {
     entry: t
   } = e, {
     location: n
-  } = y(), a = (0, N.getResurrectedEntryLastPlayTime)(t);
+  } = y(), a = (0, v.getResurrectedEntryLastPlayTime)(t);
   if (null == a) return null;
-  let l = (0, N.getFullResurrectedBadgeText)(a);
+  let l = (0, v.getFullResurrectedBadgeText)(a);
   return (0, s.jsx)(L, {
     Icon: m.RetryIcon,
     showTooltip: 0 === n,
@@ -212,8 +212,8 @@ function F(e) {
     entry: t
   } = e, {
     location: n
-  } = y(), a = (0, N.getStreakCount)(t);
-  return (0, N.isValidStreak)(t) ? (0, s.jsx)(L, {
+  } = y(), a = (0, v.getStreakCount)(t);
+  return (0, v.isValidStreak)(t) ? (0, s.jsx)(L, {
     Icon: d.FlashIcon,
     showTooltip: 0 === n,
     text: x.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
@@ -230,7 +230,7 @@ function w(e) {
     entry: t
   } = e, {
     location: n
-  } = y(), a = (0, N.getEntryDuration)(t);
+  } = y(), a = (0, v.getEntryDuration)(t);
   if (null == a) return null;
   let l = 1 === n,
     i = l ? x.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : x.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
@@ -257,7 +257,7 @@ function k(e) {
       width: 12,
       height: 12,
       color: a
-    }), (0, s.jsx)(v.default, {
+    }), (0, s.jsx)(N.default, {
       entry: t,
       textColor: n
     })]

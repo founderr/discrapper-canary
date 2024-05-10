@@ -44,10 +44,10 @@ function c(e) {
     children: e => {
       let {
         onClick: a,
-        ...h
+        ...g
       } = e;
       return (0, r.jsx)(s.Clickable, {
-        ...h,
+        ...g,
         "aria-label": n,
         "aria-disabled": f,
         className: l()(t, o.button, i, u, {

@@ -44,7 +44,7 @@ t.default = e => {
     [D, U] = r.useState(!1),
     j = (0, E.default)("perks-discoverability"),
     y = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion),
-    B = (0, N.useIsPremiumSubscriber)();
+    G = (0, N.useIsPremiumSubscriber)();
   return v === R.TileOrderVariant.DEFAULT ? (t = g.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE, s = g.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD) : (t = g.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD, s = g.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (0, a.jsx)(u.AdvancedScrollerAuto, {
     className: n()(C.allPerksScroller, {
       [C.open]: i,
@@ -78,7 +78,7 @@ t.default = e => {
               variant: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW,
               shopMarketingVariation: j,
               tileOrderVariant: v,
-              isPremiumSubscriber: B,
+              isPremiumSubscriber: G,
               isFullScreen: h
             }),
             cardType: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW
@@ -94,7 +94,7 @@ t.default = e => {
               variant: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW,
               shopMarketingVariation: j,
               tileOrderVariant: v,
-              isPremiumSubscriber: B,
+              isPremiumSubscriber: G,
               isFullScreen: h
             }),
             cardType: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW
@@ -110,7 +110,7 @@ t.default = e => {
               variant: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW,
               shopMarketingVariation: j,
               tileOrderVariant: v,
-              isPremiumSubscriber: B,
+              isPremiumSubscriber: G,
               isFullScreen: h
             }),
             cardType: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW

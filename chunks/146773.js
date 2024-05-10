@@ -22,16 +22,16 @@ var a = n("176617"),
   g = n("496675"),
   E = n("914010"),
   _ = n("281029"),
-  I = n("700785"),
-  S = n("981631");
+  S = n("700785"),
+  I = n("981631");
 let N = "DRAGGABLE_GUILD_CHANNEL";
 
 function T(e, t) {
   var n, l;
   if (null == e || null == t) return null;
-  if (e !== S.FAVORITES) return h.default.getChannel(t);
+  if (e !== I.FAVORITES) return h.default.getChannel(t);
   let a = m.default.getChannels(e),
-    s = null !== (l = null !== (n = a[0, m.GUILD_SELECTABLE_CHANNELS_KEY].find(e => e.channel.id === t)) && void 0 !== n ? n : a[0, m.GUILD_VOCAL_CHANNELS_KEY].find(e => e.channel.id === t)) && void 0 !== l ? l : a[S.ChannelTypes.GUILD_CATEGORY].find(e => e.channel.id === t);
+    s = null !== (l = null !== (n = a[0, m.GUILD_SELECTABLE_CHANNELS_KEY].find(e => e.channel.id === t)) && void 0 !== n ? n : a[0, m.GUILD_VOCAL_CHANNELS_KEY].find(e => e.channel.id === t)) && void 0 !== l ? l : a[I.ChannelTypes.GUILD_CATEGORY].find(e => e.channel.id === t);
   return null == s ? void 0 : s.channel
 }
 
@@ -50,7 +50,7 @@ function A(e) {
       if (null == m) return;
       let N = (0, _.getDnDUpdates)(c, T(a, u.referenceId), u.parentId, f);
       if (0 !== N.length) {
-        if (a === S.FAVORITES) {
+        if (a === I.FAVORITES) {
           (0, d.updateFavoriteChannels)(N);
           return
         }
@@ -60,13 +60,13 @@ function A(e) {
             } = e, n = h.default.getChannel(t);
             if (null == n) return !1;
             let l = h.default.getChannel(n.parent_id);
-            return n.type === S.ChannelTypes.GUILD_CATEGORY || null == l ? g.default.can(S.Permissions.MANAGE_CHANNELS, m) : g.default.can(S.Permissions.MANAGE_CHANNELS, l)
+            return n.type === I.ChannelTypes.GUILD_CATEGORY || null == l ? g.default.can(I.Permissions.MANAGE_CHANNELS, m) : g.default.can(I.Permissions.MANAGE_CHANNELS, l)
           }), c.parent_id !== u.parentId && N.find(e => {
             if (e.id !== c.id) return !1;
             let t = h.default.getChannel(e.parent_id);
-            if (!(null != t && g.default.can(S.Permissions.MANAGE_ROLES, c) && g.default.can(S.Permissions.MANAGE_ROLES, t))) return !0;
-            let l = I.areChannelsLocked(c, t),
-              a = I.areChannelsLocked(c, h.default.getChannel(c.parent_id));
+            if (!(null != t && g.default.can(I.Permissions.MANAGE_ROLES, c) && g.default.can(I.Permissions.MANAGE_ROLES, t))) return !0;
+            let l = S.areChannelsLocked(c, t),
+              a = S.areChannelsLocked(c, h.default.getChannel(c.parent_id));
             return (null == c.parent_id && !l || a && !l) && (n = e), !0
           }), null != n) {
           let e = h.default.getChannel(n.parent_id);
@@ -90,14 +90,14 @@ function A(e) {
       if (null == l) return !1;
       let a = (0, _.getDropData)(h.default.getChannel(n.id), n.position, e.channel, e.position, n.channelList);
       if (null == a) return !1;
-      if (E.default.getGuildId() === S.FAVORITES) return !0;
+      if (E.default.getGuildId() === I.FAVORITES) return !0;
       let s = C.default.getGuild(n.guildId);
       if (null == s) return !1;
       let i = h.default.getChannel(a.parentId),
         r = h.default.getChannel(l.parent_id),
-        o = g.default.can(S.Permissions.MANAGE_CHANNELS, s),
-        u = null != r ? g.default.can(S.Permissions.MANAGE_CHANNELS, r) : o,
-        d = null != i ? g.default.can(S.Permissions.MANAGE_CHANNELS, i) : o;
+        o = g.default.can(I.Permissions.MANAGE_CHANNELS, s),
+        u = null != r ? g.default.can(I.Permissions.MANAGE_CHANNELS, r) : o,
+        d = null != i ? g.default.can(I.Permissions.MANAGE_CHANNELS, i) : o;
       return u && d
     }
   }, (e, t) => {
@@ -120,10 +120,10 @@ function A(e) {
       let {
         channel: t
       } = e;
-      if (E.default.getGuildId() === S.FAVORITES) return !0;
+      if (E.default.getGuildId() === I.FAVORITES) return !0;
       let a = C.default.getGuild(t.getGuildId());
       if (null == a) return !1;
-      if ((0, c.isOptInEnabledForGuild)(a.id) && g.default.can(S.Permissions.MANAGE_CHANNELS, a)) return "true" !== s.Storage.get("doNotShowReorderModal") && (0, i.openModalLazy)(async () => {
+      if ((0, c.isOptInEnabledForGuild)(a.id) && g.default.can(I.Permissions.MANAGE_CHANNELS, a)) return "true" !== s.Storage.get("doNotShowReorderModal") && (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("82560")]).then(n.bind(n, "391312"));
@@ -131,9 +131,9 @@ function A(e) {
           ...t
         })
       }), !1;
-      if (t.type === S.ChannelTypes.GUILD_CATEGORY) return g.default.can(S.Permissions.MANAGE_CHANNELS, a) && !(0, c.isOptInEnabledForGuild)(a.id);
+      if (t.type === I.ChannelTypes.GUILD_CATEGORY) return g.default.can(I.Permissions.MANAGE_CHANNELS, a) && !(0, c.isOptInEnabledForGuild)(a.id);
       let r = h.default.getChannel(t.parent_id);
-      return null != r && g.default.can(S.Permissions.MANAGE_CHANNELS, r) || null == r && g.default.can(S.Permissions.MANAGE_CHANNELS, a)
+      return null != r && g.default.can(I.Permissions.MANAGE_CHANNELS, r) || null == r && g.default.can(I.Permissions.MANAGE_CHANNELS, a)
     },
     beginDrag(e) {
       let {
@@ -155,7 +155,7 @@ function A(e) {
           let {
             channel: t
           } = e;
-          if (t.type === S.ChannelTypes.GUILD_CATEGORY && null != r[t.id] && 0 === r[t.id].length) return i === S.FAVORITES || g.default.can(S.Permissions.MANAGE_CHANNELS, t) && g.default.can(S.Permissions.VIEW_CHANNEL, t);
+          if (t.type === I.ChannelTypes.GUILD_CATEGORY && null != r[t.id] && 0 === r[t.id].length) return i === I.FAVORITES || g.default.can(I.Permissions.MANAGE_CHANNELS, t) && g.default.can(I.Permissions.VIEW_CHANNEL, t);
           return !f.default.isCollapsed(t.parent_id)
         }),
         guildId: l

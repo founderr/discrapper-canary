@@ -22,8 +22,8 @@ var a = n("442837"),
   g = n("968358"),
   E = n("790901"),
   _ = n("714794"),
-  I = n("355363"),
-  S = n("687352"),
+  S = n("355363"),
+  I = n("687352"),
   N = n("135724"),
   T = n("25601"),
   A = n("981631"),
@@ -45,7 +45,7 @@ function R(e) {
     isNewChannel: P,
     muted: G,
     resolvedUnreadSetting: U
-  } = e, w = (0, a.useStateFromStores)([p.default], () => p.default.getMentionCount(n.id)), F = (0, r.default)(n), B = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), H = (0, a.useStateFromStores)([m.default], () => m.default.hasVideo(n.id)), V = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, I.default)({
+  } = e, w = (0, a.useStateFromStores)([p.default], () => p.default.getMentionCount(n.id)), F = (0, r.default)(n), B = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), H = (0, a.useStateFromStores)([m.default], () => m.default.hasVideo(n.id)), V = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, S.default)({
     channel: n,
     locked: B,
     video: H || V,
@@ -85,7 +85,7 @@ function R(e) {
   }) : M && (0, g.hasStream)(y) && W ? (0, l.jsx)(C.TextBadge, {
     text: v.default.Messages.LIVE,
     color: s.default.unsafe_rawColors.RED_400.css
-  }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(F) ? (0, l.jsx)(S.default, {
+  }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(F) ? (0, l.jsx)(I.default, {
     embeddedApps: F,
     muted: G
   }) : null

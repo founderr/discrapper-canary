@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return h
   }
 });
-var a = n("735250");
-n("470079");
-var r = n("249849"),
-  s = n("907561"),
-  i = n("689938"),
-  l = n("924936");
+var n = a("735250");
+a("470079");
+var r = a("249849"),
+  s = a("907561"),
+  i = a("689938"),
+  l = a("924936");
 let o = ["#1e349e", "#4d61de", "#7887e2", "#92a6e4"],
   c = ["#fc6e4e"],
   d = [.05, .15, .26, .4],
@@ -35,7 +35,7 @@ let o = ["#1e349e", "#4d61de", "#7887e2", "#92a6e4"],
 function h(e) {
   let {
     width: t,
-    height: n,
+    height: a,
     primaryTintColor: h,
     secondaryTintColor: p,
     ...E
@@ -55,17 +55,17 @@ function h(e) {
     styleContent: x,
     containerId: _
   } = (0, s.useClanBannerStyleInjection)(T, C);
-  return (0, a.jsxs)("svg", {
+  return (0, n.jsxs)("svg", {
     ...E,
     "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
-    height: n,
+    height: a,
     viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
-    children: [(0, a.jsx)("defs", {
-      children: (0, a.jsx)("style", {
+    children: [(0, n.jsx)("defs", {
+      children: (0, n.jsx)("style", {
         children: x
       })
-    }), (0, a.jsx)("use", {
+    }), (0, n.jsx)("use", {
       href: "".concat(l, "#wrapper-layer"),
       id: _
     })]

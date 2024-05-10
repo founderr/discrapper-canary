@@ -14,8 +14,8 @@ var l, a, s, i = n("735250"),
   g = n("453542"),
   E = n("762914"),
   _ = n("702321"),
-  I = n("518311"),
-  S = n("355298"),
+  S = n("518311"),
+  I = n("355298"),
   N = n("869404"),
   T = n("333984"),
   A = n("210887"),
@@ -341,7 +341,7 @@ class U extends(a = r.Component) {
         children: [(0, i.jsx)("span", {
           className: j.headerText,
           children: b.default.Messages.DIRECT_MESSAGES
-        }), (0, i.jsx)(I.default, {
+        }), (0, i.jsx)(S.default, {
           tooltip: b.default.Messages.CREATE_DM,
           tooltipPosition: "top",
           popoutAlign: "left",
@@ -367,9 +367,9 @@ t.default = e => {
     theme: n,
     children: l,
     showDMHeader: a
-  } = e, s = r.Children.count(l), o = L.default.getMutablePrivateChannels(), u = (0, N.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([x.default, S.default, T.default], () => {
+  } = e, s = r.Children.count(l), o = L.default.getMutablePrivateChannels(), u = (0, N.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([x.default, I.default, T.default], () => {
     let e = x.default.getPrivateChannelIds(),
-      t = (0, N.filterOutMessageRequestsAndSpamById)(e, [S.default, T.default]);
+      t = (0, N.filterOutMessageRequestsAndSpamById)(e, [I.default, T.default]);
     return (0, E.filterBroadcastingGDMs)(t)
   }, []), h = (0, c.useStateFromStoresObject)([m.default, A.default, L.default], () => ({
     theme: A.default.darkSidebar ? D.ThemeTypes.DARK : n,
@@ -403,8 +403,8 @@ t.default = e => {
         requestAnimationFrame(() => setTimeout(e, 100))
       }
     })
-  }), []), I = (0, R.useUID)(), v = (0, d.default)({
-    id: "private-channels-".concat(I),
+  }), []), S = (0, R.useUID)(), v = (0, d.default)({
+    id: "private-channels-".concat(S),
     isEnabled: h.keyboardModeEnabled,
     scrollToStart: g,
     scrollToEnd: _,

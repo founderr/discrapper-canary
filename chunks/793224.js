@@ -22,8 +22,8 @@ var a = n("442837"),
   g = n("569545"),
   E = n("989941"),
   _ = n("199902"),
-  I = n("314897"),
-  S = n("944486"),
+  S = n("314897"),
+  I = n("944486"),
   N = n("885110"),
   T = n("449224"),
   A = n("436088"),
@@ -33,8 +33,8 @@ var a = n("442837"),
   R = n("689938");
 
 function M() {
-  let e = (0, a.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
-    t = (0, a.useStateFromStores)([I.default], () => I.default.getId()),
+  let e = (0, a.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
+    t = (0, a.useStateFromStores)([S.default], () => S.default.getId()),
     n = (0, a.useStateFromStores)([C.default, T.default], () => (0, E.default)(C.default, T.default)),
     {
       canBroadcast: M

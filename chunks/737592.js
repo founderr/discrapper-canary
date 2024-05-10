@@ -19,7 +19,7 @@ var a = n("120356"),
   E = n("754231"),
   _ = n("24285");
 
-function I(e) {
+function S(e) {
   let {
     guildId: t,
     member: n,
@@ -41,7 +41,7 @@ function I(e) {
   })
 }
 
-function S(e) {
+function I(e) {
   let {
     members: t,
     guildId: n
@@ -51,7 +51,7 @@ function S(e) {
     guildId: n,
     users: t,
     max: 6,
-    renderUser: (e, t, a) => (0, l.jsx)(I, {
+    renderUser: (e, t, a) => (0, l.jsx)(S, {
       guildId: n,
       member: e,
       className: t
@@ -77,13 +77,13 @@ t.default = e => {
     if (m) return p.default.getUser(C[0])
   });
   if (null == g) return null;
-  let I = m || (0, u.default)(n),
+  let S = m || (0, u.default)(n),
     N = (0, f.isVoiceChannel)(t.type);
   return (0, l.jsxs)("div", {
     className: _.activity,
     children: [(0, l.jsx)("div", {
       className: _.channelActivityContainer,
-      children: I ? (0, l.jsx)(E.default, {
+      children: S ? (0, l.jsx)(E.default, {
         activity: n,
         embeddedApp: s,
         user: g,
@@ -98,7 +98,7 @@ t.default = e => {
         user: g,
         guildId: t.getGuildId(),
         channelId: t.id,
-        renderHeaderAccessory: null != a ? () => (0, l.jsx)(S, {
+        renderHeaderAccessory: null != a ? () => (0, l.jsx)(I, {
           guildId: t.guild_id,
           members: a
         }) : void 0,

@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   DEFAULT_MINIMUM_SIZE: function() {
     return c
   },
@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a, r, s, i, l = n("442837"),
-  o = n("570140");
+var n, r, s, i, l = a("442837"),
+  o = a("570140");
 let c = 1e3,
   d = 200,
   u = {},
@@ -29,12 +29,12 @@ class m extends(i = l.default.Store) {
     return u[e]
   }
 }
-s = "DiscoverGuildChecklistStore", (r = "displayName") in(a = m) ? Object.defineProperty(a, r, {
+s = "DiscoverGuildChecklistStore", (r = "displayName") in(n = m) ? Object.defineProperty(n, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[r] = s, t.default = new m(o.default, {
+}) : n[r] = s, t.default = new m(o.default, {
   DISCOVER_CHECKLIST_FETCH_START: function(e) {
     f = !0
   },
@@ -44,26 +44,26 @@ s = "DiscoverGuildChecklistStore", (r = "displayName") in(a = m) ? Object.define
   DISCOVER_CHECKLIST_FETCH_SUCCESS: function(e) {
     var t;
     let {
-      checklist: n,
-      guildId: a
+      checklist: a,
+      guildId: n
     } = e;
-    f = !1, u[a] = {
-      guildId: n.guild_id,
-      safeEnvironment: n.safe_environment,
-      healthy: n.healthy,
-      healthScorePending: n.health_score_pending,
-      nsfwProperties: n.nsfw_properties,
-      size: n.size,
-      protected: n.protected,
-      sufficient: n.sufficient,
-      sufficientWithoutGracePeriod: n.sufficient_without_grace_period,
-      gracePeriodEndDate: null != n.grace_period_end_date ? new Date(n.grace_period_end_date) : null,
-      retentionHealthy: n.retention_healthy,
-      engagementHealthy: n.engagement_healthy,
-      minimumGuildSize: null != n.minimum_size ? n.minimum_size : c,
-      healthScore: n.health_score,
-      minimumGuildAge: null !== (t = n.minimum_age) && void 0 !== t ? t : 0,
-      age: n.age
+    f = !1, u[n] = {
+      guildId: a.guild_id,
+      safeEnvironment: a.safe_environment,
+      healthy: a.healthy,
+      healthScorePending: a.health_score_pending,
+      nsfwProperties: a.nsfw_properties,
+      size: a.size,
+      protected: a.protected,
+      sufficient: a.sufficient,
+      sufficientWithoutGracePeriod: a.sufficient_without_grace_period,
+      gracePeriodEndDate: null != a.grace_period_end_date ? new Date(a.grace_period_end_date) : null,
+      retentionHealthy: a.retention_healthy,
+      engagementHealthy: a.engagement_healthy,
+      minimumGuildSize: null != a.minimum_size ? a.minimum_size : c,
+      healthScore: a.health_score,
+      minimumGuildAge: null !== (t = a.minimum_age) && void 0 !== t ? t : 0,
+      age: a.age
     }
   }
 })

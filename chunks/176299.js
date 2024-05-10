@@ -30,8 +30,8 @@ var a = n("735250"),
   R = n("194729"),
   L = n("668940"),
   O = n("372900"),
-  M = n("6039"),
-  y = n("637853"),
+  y = n("6039"),
+  M = n("637853"),
   P = n("326145"),
   x = n("269675"),
   D = n("242601"),
@@ -177,7 +177,7 @@ let em = () => (0, a.jsx)("div", {
       default:
         (0, en.assertNever)(l)
     }
-    if ((0, y.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(P.default, {
+    if ((0, M.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(P.default, {
       guildId: s,
       channelId: l
     });
@@ -224,16 +224,16 @@ let eL = e => (0, a.jsx)(eN, {
       searchRoute: t
     })
   },
-  eM = e => {
+  ey = e => {
     let {
       match: t
     } = e;
-    return null != t.params.guildId ? (0, a.jsx)(M.default, {
+    return null != t.params.guildId ? (0, a.jsx)(y.default, {
       guildId: t.params.guildId,
       inviteCode: t.params.inviteCode
     }) : null
   },
-  ey = e => {
+  eM = e => {
     let {
       match: t
     } = e;
@@ -468,12 +468,12 @@ function eB() {
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: ef.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"),
-                  render: eM,
+                  render: ey,
                   impressionName: u.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: ef.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"),
-                  render: ey,
+                  render: eM,
                   impressionName: u.ImpressionNames.HUB_EMAIL_SIGNUP,
                   impressionProperties: e => {
                     let {

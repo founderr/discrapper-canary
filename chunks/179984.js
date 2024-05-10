@@ -50,7 +50,7 @@ let j = e => {
       children: L.default.Messages.MOST_POPULAR
     })
   }),
-  B = e => {
+  G = e => {
     let t, {
         premiumType: s
       } = e,
@@ -63,7 +63,7 @@ let j = e => {
       alt: i
     })
   },
-  G = e => {
+  B = e => {
     let {
       label: t,
       column1: s,
@@ -172,10 +172,10 @@ t.default = e => {
       variant: "heading-lg/extrabold",
       children: L.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
     }),
-    column1: (0, a.jsx)(B, {
+    column1: (0, a.jsx)(G, {
       premiumType: h.PremiumTypes.TIER_0
     }),
-    column2: (0, a.jsx)(B, {
+    column2: (0, a.jsx)(G, {
       premiumType: h.PremiumTypes.TIER_2
     })
   };
@@ -260,7 +260,7 @@ t.default = e => {
         }), (0, a.jsxs)("table", {
           className: x.table,
           children: [(0, a.jsx)("thead", {
-            children: (0, a.jsx)(G, {
+            children: (0, a.jsx)(B, {
               ...el
             })
           }), (0, a.jsx)("tbody", {

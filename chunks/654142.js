@@ -21,8 +21,8 @@ t.default = a.memo(function(e) {
     id: g,
     name: E,
     color: _,
-    children: I
-  } = t, S = I.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(g)), A = function(e) {
+    children: S
+  } = t, I = S.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(g)), A = function(e) {
     let t = e.children.map(e => {
         let t = e.id,
           n = c.default.getGuild(t);
@@ -36,8 +36,8 @@ t.default = a.memo(function(e) {
     mentionCount: v,
     unread: x
   } = (0, s.useStateFromStoresObject)([d.default], () => ({
-    mentionCount: S.map(e => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
-    unread: S.some(e => d.default.hasUnread(e))
+    mentionCount: I.map(e => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
+    unread: I.some(e => d.default.hasUnread(e))
   })), R = a.useCallback(() => {
     r.default.toggleGuildFolderExpand(g)
   }, [g]), M = a.useCallback(e => {
@@ -58,7 +58,7 @@ t.default = a.memo(function(e) {
     ...C,
     folderNode: t,
     expanded: T,
-    selected: null != N && S.includes(N),
+    selected: null != N && I.includes(N),
     mentionCount: v,
     unread: x,
     mediaState: L,

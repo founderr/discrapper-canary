@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   FolderEndDropTarget: function() {
-    return S
+    return I
   },
   PlaceholderDropTarget: function() {
     return N
@@ -78,7 +78,7 @@ function _(e) {
   })
 }
 
-function I(e) {
+function S(e) {
   let {
     name: t,
     targetNode: n,
@@ -112,7 +112,7 @@ function I(e) {
   })
 }
 
-function S(e) {
+function I(e) {
   let {
     name: t,
     targetNode: n
@@ -168,7 +168,7 @@ t.default = a.memo(function(e) {
       name: t,
       targetNode: n,
       below: s
-    }), r ? (0, l.jsx)(I, {
+    }), r ? (0, l.jsx)(S, {
       name: t,
       targetNode: n,
       onDragOverChanged: i

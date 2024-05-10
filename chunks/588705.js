@@ -21,8 +21,8 @@ var l = n("735250"),
   g = n("51144"),
   E = n("981631"),
   _ = n("888592"),
-  I = n("245335"),
-  S = n("689938"),
+  S = n("245335"),
+  I = n("689938"),
   N = n("493918");
 let T = () => (0, l.jsxs)(a.Fragment, {
     children: [(0, l.jsx)(m.Avatar, {
@@ -30,10 +30,10 @@ let T = () => (0, l.jsxs)(a.Fragment, {
       size: i.AvatarSizes.DEPRECATED_SIZE_100,
       className: N.avatar
     }), (0, l.jsx)(m.SubTitle, {
-      children: S.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN
+      children: I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN
     }), (0, l.jsx)(m.Title, {
       className: N.inviteResolvingGuildName,
-      children: S.default.Messages.LOADING
+      children: I.default.Messages.LOADING
     })]
   }),
   A = e => {
@@ -90,20 +90,20 @@ t.default = e => {
     j = !(null != C.approximate_member_count && C.approximate_member_count > 100 || null != y && y.hasFeature(E.GuildFeatures.COMMUNITY)) && null != b,
     P = null,
     G = !1;
-  if (null != y) P = null == b ? S.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : S.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
+  if (null != y) P = null == b ? I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : I.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
     username: g.default.getFormattedName(b)
-  }), C.target_type === I.InviteTargetTypes.STREAM && null != C.target_user && (P = S.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
+  }), C.target_type === S.InviteTargetTypes.STREAM && null != C.target_user && (P = I.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
     username: g.default.getFormattedName(C.target_user)
-  })), C.target_type === I.InviteTargetTypes.EMBEDDED_APPLICATION && null != C.target_application && (P = null != b ? S.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
+  })), C.target_type === S.InviteTargetTypes.EMBEDDED_APPLICATION && null != C.target_application && (P = null != b ? I.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
     username: g.default.getFormattedName(b)
-  }) : S.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY), j && null == D && (n = (0, l.jsx)(m.GuildIcon, {
+  }) : I.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY), j && null == D && (n = (0, l.jsx)(m.GuildIcon, {
     className: N.icon,
     guild: y,
     size: m.GuildIcon.Sizes.SMALL
   })), a = y.name, null != D && (a = D.name, h = (0, l.jsxs)("div", {
     children: [(0, l.jsx)(m.SubTitle, {
       className: N.appIn,
-      children: S.default.Messages.EMBEDDED_ACTIVITIES_INVITE_IN
+      children: I.default.Messages.EMBEDDED_ACTIVITIES_INVITE_IN
     }), (0, l.jsxs)("div", {
       className: N.guildContainer,
       children: [(0, l.jsx)(m.GuildIcon, {
@@ -121,21 +121,21 @@ t.default = e => {
   else if (null != O) {
     if (null == b) throw Error("no inviter in group DM invite");
     let e = g.default.getFormattedName(b);
-    null != O.name && "" !== O.name ? (P = S.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
+    null != O.name && "" !== O.name ? (P = I.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
       username: e
     }), a = O.name, null != O.icon && (n = (0, l.jsx)(m.ChannelIcon, {
       channel: O,
       size: i.AvatarSizes.SIZE_32
-    }))) : (P = S.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM, a = e)
+    }))) : (P = I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM, a = e)
   } else if (null != b) {
     let e = g.default.getFormattedName(b, !0);
-    a = S.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({
+    a = I.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({
       username: e
     }), G = !0, h = null != L ? null : (0, l.jsx)(m.SubTitle, {
       className: N.directInviteSubTitle,
-      children: x ? S.default.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION_REGISTER.format({
+      children: x ? I.default.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION_REGISTER.format({
         username: e
-      }) : S.default.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION.format({
+      }) : I.default.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION.format({
         username: e
       })
     })
@@ -149,7 +149,7 @@ t.default = e => {
       compact: G
     }), null != L ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(m.SubTitle, {
-        children: S.default.Messages.INVITE_MODAL_ERROR_TITLE
+        children: I.default.Messages.INVITE_MODAL_ERROR_TITLE
       }), (0, l.jsx)(m.Title, {
         children: L
       })]

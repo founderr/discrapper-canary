@@ -1,149 +1,149 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return L
+    return h
   }
-}), a("47120");
-var s = a("735250"),
-  d = a("470079"),
-  l = a("831209"),
-  n = a("442837"),
-  i = a("481060"),
-  o = a("688465"),
-  r = a("430824"),
-  u = a("630641"),
-  c = a("626135"),
-  _ = a("369994"),
-  E = a("162157"),
-  I = a("533244"),
-  D = a("487419"),
-  A = a("821312"),
-  N = a("676770"),
-  T = a("981631"),
-  h = a("689938"),
-  R = a("824149");
+}), n("47120");
+var a = n("735250"),
+  i = n("470079"),
+  d = n("831209"),
+  l = n("442837"),
+  s = n("481060"),
+  o = n("688465"),
+  r = n("430824"),
+  u = n("630641"),
+  c = n("626135"),
+  _ = n("369994"),
+  E = n("162157"),
+  I = n("533244"),
+  A = n("487419"),
+  D = n("821312"),
+  N = n("676770"),
+  R = n("981631"),
+  T = n("689938"),
+  f = n("824149");
 
-function L(e) {
+function h(e) {
   let {
     guildId: t,
-    transitionState: a,
-    onClose: L,
-    analyticsData: C
-  } = e, x = (0, n.useStateFromStores)([r.default], () => r.default.getGuild(t), [t]), S = !!(null == x ? void 0 : x.hasFeature(T.GuildFeatures.INVITES_DISABLED)), [M] = d.useState(!1), [f, O] = d.useState(N.DEFAULT_LOCKDOWN_DURATION), g = (0, n.useStateFromStores)([D.default], () => D.default.getGuildIncident(t)), p = (0, E.useCanEnableRaidAlerts)(x), v = (0, I.hasInvitesDisabled)(g) || S, m = (0, I.hasDMsDisabled)(g), [k, G] = d.useState(v), [j, b] = d.useState(m), [F, y] = d.useState(!1), B = k !== v || j !== m || F, U = S && !p;
-  if (null == x) return L(), null;
+    transitionState: n,
+    onClose: h,
+    analyticsData: L
+  } = e, C = (0, l.useStateFromStores)([r.default], () => r.default.getGuild(t), [t]), M = !!(null == C ? void 0 : C.hasFeature(R.GuildFeatures.INVITES_DISABLED)), [S] = i.useState(!1), [x, m] = i.useState(N.DEFAULT_LOCKDOWN_DURATION), g = (0, l.useStateFromStores)([A.default], () => A.default.getGuildIncident(t)), O = (0, E.useCanEnableRaidAlerts)(C), v = (0, I.hasInvitesDisabled)(g) || M, p = (0, I.hasDMsDisabled)(g), [G, k] = i.useState(v), [b, j] = i.useState(p), [F, B] = i.useState(!1), y = G !== v || b !== p || F, U = M && !O;
+  if (null == C) return h(), null;
 
   function w() {
-    G(e => !e)
+    k(e => !e)
   }
-  return (0, s.jsxs)(i.ModalRoot, {
-    transitionState: a,
-    size: i.ModalSize.MEDIUM,
-    children: [(0, s.jsx)(i.ModalHeader, {
+  return (0, a.jsxs)(s.ModalRoot, {
+    transitionState: n,
+    size: s.ModalSize.MEDIUM,
+    children: [(0, a.jsx)(s.ModalHeader, {
       separator: !0,
-      children: (0, s.jsxs)("div", {
-        className: R.headerContainer,
-        children: [(0, s.jsx)(u.default, {
-          color: l.default.INTERACTIVE_NORMAL,
+      children: (0, a.jsxs)("div", {
+        className: f.headerContainer,
+        children: [(0, a.jsx)(u.default, {
+          color: d.default.INTERACTIVE_NORMAL,
           width: 16,
           height: 16
-        }), (0, s.jsx)(i.Heading, {
+        }), (0, a.jsx)(s.Heading, {
           color: "header-primary",
           variant: "heading-md/semibold",
-          children: h.default.Messages.GUILD_SERVER_LOCKDOWN_TITLE
-        }), (0, s.jsx)(o.default, {})]
+          children: T.default.Messages.GUILD_SERVER_LOCKDOWN_TITLE
+        }), (0, a.jsx)(o.default, {})]
       })
-    }), (0, s.jsx)(i.ModalContent, {
-      children: (0, s.jsxs)("div", {
-        className: R.mainContainer,
-        children: [(0, s.jsx)(i.Select, {
-          placeholder: h.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_PLACEHOLDER,
+    }), (0, a.jsx)(s.ModalContent, {
+      children: (0, a.jsxs)("div", {
+        className: f.mainContainer,
+        children: [(0, a.jsx)(s.Select, {
+          placeholder: T.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_PLACEHOLDER,
           options: (0, N.getTimeframes)(),
           select: e => {
-            O(e), y(!0)
+            m(e), B(!0)
           },
-          isSelected: e => e === f,
+          isSelected: e => e === x,
           serialize: e => String(e)
-        }), (0, s.jsxs)("div", {
-          className: R.pauseContainer,
-          children: [(0, s.jsxs)("div", {
-            className: R.pauseText,
-            children: [(0, s.jsx)(i.Text, {
+        }), (0, a.jsxs)("div", {
+          className: f.pauseContainer,
+          children: [(0, a.jsxs)("div", {
+            className: f.pauseText,
+            children: [(0, a.jsx)(s.Text, {
               variant: "text-md/semibold",
               color: "header-primary",
-              children: h.default.Messages.DISABLE_INVITES
-            }), (0, s.jsx)(i.Text, {
+              children: T.default.Messages.DISABLE_INVITES
+            }), (0, a.jsx)(s.Text, {
               variant: "text-sm/normal",
               color: "text-muted",
-              children: h.default.Messages.GUILD_INVITE_DISABLE_ACTION_SHEET_DESCRIPTION
+              children: T.default.Messages.GUILD_INVITE_DISABLE_ACTION_SHEET_DESCRIPTION
             })]
-          }), (0, s.jsx)(i.Tooltip, {
-            text: h.default.Messages.INVITES_PERMANENTLY_DISABLED_TIP,
-            shouldShow: S,
-            children: e => (0, s.jsx)("div", {
+          }), (0, a.jsx)(s.Tooltip, {
+            text: T.default.Messages.INVITES_PERMANENTLY_DISABLED_TIP,
+            shouldShow: M,
+            children: e => (0, a.jsx)("div", {
               ...e,
-              children: (0, s.jsx)(i.Switch, {
-                className: R.toggle,
+              children: (0, a.jsx)(s.Switch, {
+                className: f.toggle,
                 onChange: w,
-                checked: k,
+                checked: G,
                 disabled: U
               })
             })
           })]
-        }), (0, s.jsxs)("div", {
-          className: R.pauseContainer,
-          children: [(0, s.jsxs)("div", {
-            className: R.pauseText,
-            children: [(0, s.jsx)(i.Text, {
+        }), (0, a.jsxs)("div", {
+          className: f.pauseContainer,
+          children: [(0, a.jsxs)("div", {
+            className: f.pauseText,
+            children: [(0, a.jsx)(s.Text, {
               variant: "text-md/semibold",
               color: "header-primary",
-              children: h.default.Messages.DISABLE_DMS
-            }), (0, s.jsx)(i.Text, {
+              children: T.default.Messages.DISABLE_DMS
+            }), (0, a.jsx)(s.Text, {
               variant: "text-sm/normal",
               color: "text-muted",
-              children: h.default.Messages.GUILD_DMS_DISABLE_ACTION_SHEET_DESCRIPTION
+              children: T.default.Messages.GUILD_DMS_DISABLE_ACTION_SHEET_DESCRIPTION
             })]
-          }), (0, s.jsx)(i.Switch, {
-            className: R.toggle,
+          }), (0, a.jsx)(s.Switch, {
+            className: f.toggle,
             onChange: function() {
-              b(e => !e)
+              j(e => !e)
             },
-            checked: j
+            checked: b
           })]
         })]
       })
-    }), (0, s.jsxs)(i.ModalFooter, {
-      children: [(0, s.jsx)(i.Button, {
+    }), (0, a.jsxs)(s.ModalFooter, {
+      children: [(0, a.jsx)(s.Button, {
         onClick: () => {
-          (v || m) && !k && !j ? ((0, _.setGuildIncidentActions)(x.id, !1, !1), (0, i.openModalLazy)(() => Promise.resolve(e => (0, s.jsx)(A.default, {
+          (v || p) && !G && !b ? ((0, _.setGuildIncidentActions)(C.id, !1, !1), (0, s.openModalLazy)(() => Promise.resolve(e => (0, a.jsx)(D.default, {
             ...e,
             guildId: t
-          })))) : (0, _.setGuildIncidentActions)(x.id, k, j, f);
+          })))) : (0, _.setGuildIncidentActions)(C.id, G, b, x);
           let {
             source: e,
-            alertType: a,
-            messageId: d
-          } = C;
-          c.default.track(T.AnalyticEvents.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
+            alertType: n,
+            messageId: i
+          } = L;
+          c.default.track(R.AnalyticEvents.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
             guild_id: t,
             source: e,
-            raid_alert_id: d,
-            raid_alert_type: a,
-            intervention_type_enabled: (0, I.getEnabledInterventions)(k, j),
-            intervention_type_disabled: (0, I.getDisabledInterventions)(k, j),
-            duration: 60 * f
-          }), L()
+            raid_alert_id: i,
+            raid_alert_type: n,
+            intervention_type_enabled: (0, I.getEnabledInterventions)(G, b),
+            intervention_type_disabled: (0, I.getDisabledInterventions)(G, b),
+            duration: 60 * x
+          }), h()
         },
-        color: i.Button.Colors.BRAND_NEW,
-        look: i.Button.Looks.FILLED,
-        submitting: M,
-        disabled: !B,
-        children: h.default.Messages.GUILD_SERVER_LOCKDOWN_MODAL_CTA
-      }), (0, s.jsx)(i.Button, {
-        onClick: L,
-        color: i.Button.Colors.PRIMARY,
-        look: i.Button.Looks.LINK,
-        disabled: M,
-        children: h.default.Messages.CANCEL
+        color: s.Button.Colors.BRAND_NEW,
+        look: s.Button.Looks.FILLED,
+        submitting: S,
+        disabled: !y,
+        children: T.default.Messages.GUILD_SERVER_LOCKDOWN_MODAL_CTA
+      }), (0, a.jsx)(s.Button, {
+        onClick: h,
+        color: s.Button.Colors.PRIMARY,
+        look: s.Button.Looks.LINK,
+        disabled: S,
+        children: T.default.Messages.CANCEL
       })]
     })]
   })

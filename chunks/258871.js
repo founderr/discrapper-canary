@@ -17,7 +17,7 @@ var l = n("735250"),
   g = n("688438"),
   E = n("981631"),
   _ = n("689938");
-let I = [{
+let S = [{
   key: "EVENTS",
   renderIcon: e => (0, l.jsx)(f.default, {
     className: e
@@ -103,7 +103,7 @@ t.default = e => {
     numEvents: i.length
   }), [i.length]), p = (0, g.useHubUnreadCount)(n);
   return (0, l.jsx)(l.Fragment, {
-    children: I.map(e => {
+    children: S.map(e => {
       let {
         key: a,
         getName: s,

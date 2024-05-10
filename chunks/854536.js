@@ -1,7 +1,7 @@
 "use strict";
-s.r(S);
-var e = s("818083");
-S.default = (0, e.createExperiment)({
+e.r(s);
+var S = e("818083");
+s.default = (0, S.createExperiment)({
   kind: "guild",
   id: "2024-01_voice_call_backgrounds_mobile",
   label: "Custom backgrounds for mobile voice calls",

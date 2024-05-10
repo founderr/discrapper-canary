@@ -17,8 +17,8 @@ var l = n("735250"),
   g = n("769654"),
   E = n("271383"),
   _ = n("771845"),
-  I = n("880080"),
-  S = n("26290"),
+  S = n("880080"),
+  I = n("26290"),
   N = n("15434"),
   T = n("727258"),
   A = n("249792"),
@@ -42,7 +42,7 @@ function j(e, t) {
   (0, h.openContextMenuLazy)(e, async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("70716"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("72317"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("70716"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("62217"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
     return n => (0, l.jsx)(e, {
       ...n,
       guild: t
@@ -76,7 +76,7 @@ t.default = a.memo(function(e) {
   null == en && z > 0 ? en = null !== (s = (0, M.renderMentionBadge)(z)) && void 0 !== s ? s : void 0 : null == en && null != J && (en = null !== (h = (0, M.renderGuildJoinRequestBadge)({
     guildJoinRequestStatus: J
   })) && void 0 !== h ? h : void 0);
-  let el = null !== (P = e.lowerBadgeWidth) && void 0 !== P ? P : (0, S.getBadgeWidthForValue)(z),
+  let el = null !== (P = e.lowerBadgeWidth) && void 0 !== P ? P : (0, I.getBadgeWidthForValue)(z),
     [{
       dragging: ea
     }, es] = (0, r.useDrag)({
@@ -126,14 +126,14 @@ t.default = a.memo(function(e) {
         null === (t = document.querySelector("[aria-owns=folder-items-".concat(ee, "]"))) || void 0 === t || t.focus()
       }
     }, [ee]),
-    eI = a.useCallback(e => {
+    eS = a.useCallback(e => {
       if (e) {
         ep.delay();
         return
       }
       ep.cancel(), eh(!1)
     }, [ep]),
-    eS = a.useCallback(e => {
+    eI = a.useCallback(e => {
       null == U || U($, e)
     }, [$, U]);
   if (null == H) return null;
@@ -187,8 +187,8 @@ t.default = a.memo(function(e) {
       })
     });
   return (0, l.jsxs)(R.ListItem, {
-    ref: eS,
-    children: [(0, l.jsx)(I.default, {
+    ref: eI,
+    children: [(0, l.jsx)(S.default, {
       hovered: !ea && eu,
       selected: !ea && k,
       unread: !ea && Y,
@@ -201,7 +201,7 @@ t.default = a.memo(function(e) {
     }), X ? (0, l.jsx)(L.default, {
       name: H.name,
       targetNode: G,
-      onDragOverChanged: eI
+      onDragOverChanged: eS
     }) : null]
   })
 })

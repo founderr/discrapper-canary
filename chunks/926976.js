@@ -23,8 +23,8 @@ var a = r("735250"),
   x = r("257785"),
   k = r("484036"),
   v = r("681619"),
-  j = r("621060"),
-  C = r("689938"),
+  C = r("621060"),
+  j = r("689938"),
   S = r("457501"),
   w = r("277513");
 let T = [{
@@ -173,7 +173,7 @@ function R() {
     {
       TabBar: m,
       renderSelectedTab: g
-    } = (0, j.default)({
+    } = (0, C.default)({
       tabs: E
     }, []);
   return (0, a.jsxs)("div", {
@@ -187,9 +187,9 @@ function R() {
         size: d.Button.Sizes.ICON,
         onClick: b.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
-          title: C.default.Messages.CLEAR,
+          title: j.default.Messages.CLEAR,
           children: (0, a.jsx)(p.default, {
-            "aria-label": C.default.Messages.CLEAR
+            "aria-label": j.default.Messages.CLEAR
           })
         })
       }), (0, a.jsx)("div", {

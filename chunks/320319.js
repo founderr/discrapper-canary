@@ -41,10 +41,10 @@ let x = {
       forceShadow: m,
       cardType: g,
       confettiCanvas: C
-    } = e, D = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), [U, j] = r.useState(!1), [y, B] = r.useState(!1), G = (0, f.useFreeBoostUserTenureReward)(), k = (0, f.useShouldShowConfettiAndGlow)(), [H, F] = r.useState(!1), [w, K] = r.useState(t === N.PerksDiscoverabilityCardTypes.FREE_BOOST && k && (null == G ? void 0 : G.nitroTenureStatus) === P.NitroRewardStatus.REDEEMABLE);
+    } = e, D = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), [U, j] = r.useState(!1), [y, G] = r.useState(!1), B = (0, f.useFreeBoostUserTenureReward)(), k = (0, f.useShouldShowConfettiAndGlow)(), [H, F] = r.useState(!1), [w, K] = r.useState(t === N.PerksDiscoverabilityCardTypes.FREE_BOOST && k && (null == B ? void 0 : B.nitroTenureStatus) === P.NitroRewardStatus.REDEEMABLE);
     r.useEffect(() => {
-      t === N.PerksDiscoverabilityCardTypes.FREE_BOOST && k && (null == G ? void 0 : G.nitroTenureStatus) === P.NitroRewardStatus.REDEEMABLE && K(!0)
-    }, [k, t, G]);
+      t === N.PerksDiscoverabilityCardTypes.FREE_BOOST && k && (null == B ? void 0 : B.nitroTenureStatus) === P.NitroRewardStatus.REDEEMABLE && K(!0)
+    }, [k, t, B]);
     let W = r.useCallback(() => {
         F(!0)
       }, []),
@@ -65,7 +65,7 @@ let x = {
       R.default.track(O.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
         card_type: (0, l.snakeCase)(t),
         is_tenure_reward: t === N.PerksDiscoverabilityCardTypes.FREE_BOOST,
-        reward_status: null == G ? void 0 : G.nitroTenureStatus
+        reward_status: null == B ? void 0 : B.nitroTenureStatus
       })
     }, 800), ee = r.useRef(null);
     e = {
@@ -74,21 +74,21 @@ let x = {
     };
     let et = z !== i || null == i || y || i === d.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI;
     return (r.useEffect(() => {
-      D && U && (B(!0), R.default.track(O.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+      D && U && (G(!0), R.default.track(O.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
         card_type: t
       }), null != i && X(M.ContentDismissActionType.TAKE_ACTION))
     }, [D, U, i, t, X]), (0, E.default)({
       type: o.ImpressionTypes.VIEW,
       name: o.ImpressionNames.PREMIUM_MARKETING_TENURE_REWARD_CARD,
       properties: {
-        user_tenure_reward_id: null == G ? void 0 : G.tenureRewardStatusId,
-        tenure_reward_id: null == G ? void 0 : G.tenureRewardSkuId,
+        user_tenure_reward_id: null == B ? void 0 : B.tenureRewardStatusId,
+        tenure_reward_id: null == B ? void 0 : B.tenureRewardSkuId,
         reward_type: P.NitroRewardType.SERVER_BOOST,
-        redeemable_at: null == G ? void 0 : G.redeemableAt,
-        reward_status: null == G ? void 0 : G.nitroTenureStatus
+        redeemable_at: null == B ? void 0 : B.redeemableAt,
+        reward_status: null == B ? void 0 : B.nitroTenureStatus
       }
     }, {
-      disableTrack: t !== N.PerksDiscoverabilityCardTypes.FREE_BOOST || null == G
+      disableTrack: t !== N.PerksDiscoverabilityCardTypes.FREE_BOOST || null == B
     }), s) ? t === N.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
       className: n()(L.flipCardContainer, {
         [L.forceShadow]: m
@@ -155,7 +155,7 @@ let x = {
           [L.reducedMotion]: D
         }),
         onTransitionEnd: e => {
-          U && "transform" === e.propertyName && e.target.classList.contains(L.flipCard) && (B(!0), R.default.track(O.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+          U && "transform" === e.propertyName && e.target.classList.contains(L.flipCard) && (G(!0), R.default.track(O.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
             card_type: t
           }), null != i && X(M.ContentDismissActionType.TAKE_ACTION))
         },

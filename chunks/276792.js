@@ -52,19 +52,19 @@ function S(e) {
       className: C.termsApplyBodyText,
       children: _.default.Messages.BOGO_TERMS_APPLY
     })
-  }) : void 0, M = {
+  }) : void 0, y = {
     type: "video",
     src: T ? S.heroArtVideoLinkLightTheme : S.videoLink
   };
-  ("" !== S.heroArtImageLinkDarkTheme || "" !== S.heroArtImageLinkLightTheme) && (M = {
+  ("" !== S.heroArtImageLinkDarkTheme || "" !== S.heroArtImageLinkLightTheme) && (y = {
     type: "image",
     src: T ? S.heroArtImageLinkLightTheme : S.heroArtImageLinkDarkTheme
   });
-  let y = T ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
+  let M = T ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
     P = "" !== S.modalTopPill ? () => (0, a.jsx)(f.PremiumPillWithSparkles, {
       text: S.modalTopPill,
       className: C.modalTopPill,
-      colorOptions: y
+      colorOptions: M
     }) : void 0;
   return {
     renderModalProps: p,
@@ -72,7 +72,7 @@ function S(e) {
     modalTopExtra: P,
     subHeader: S.subheader,
     subHeaderExtra: O,
-    heroArt: M,
+    heroArt: y,
     featureCards: S.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,

@@ -21,9 +21,9 @@ var l = n("735250"),
   g = n("823379"),
   E = n("51144"),
   _ = n("686429");
-let I = p.Sizes.SIZE_24;
+let S = p.Sizes.SIZE_24;
 
-function S(e) {
+function I(e) {
   var t, n;
   let {
     activity: s,
@@ -174,7 +174,7 @@ function v(e) {
     className: _.flexColumn,
     children: [(0, l.jsxs)("div", {
       className: _.flexRow,
-      children: [(0, l.jsx)(S, {
+      children: [(0, l.jsx)(I, {
         activity: t,
         user: s,
         embeddedApp: n,
@@ -195,7 +195,7 @@ function v(e) {
           className: _.usersSummary,
           guildId: i.guild_id,
           users: v,
-          size: I,
+          size: S,
           max: 7,
           renderUser: e => {
             var t;
@@ -206,7 +206,7 @@ function v(e) {
               text: a,
               position: "bottom",
               children: (0, l.jsx)("img", {
-                src: e.getAvatarURL(i.guild_id, I),
+                src: e.getAvatarURL(i.guild_id, S),
                 alt: a,
                 className: _.avatar
               }, e.id)

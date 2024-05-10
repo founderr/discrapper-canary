@@ -1,107 +1,107 @@
 "use strict";
-s.r(t), s.d(t, {
+a.r(t), a.d(t, {
   DECO_SKU_ID: function() {
-    return _
+    return C
   },
   default: function() {
-    return A
+    return N
   }
 });
-var a = s("735250");
-s("470079");
-var i = s("990547"),
-  l = s("442837"),
-  n = s("481060"),
-  r = s("37234"),
-  o = s("100527"),
-  d = s("906732"),
-  u = s("213609"),
-  c = s("204418"),
-  f = s("1585"),
-  p = s("223143"),
-  h = s("300284"),
-  m = s("158776"),
-  I = s("594174"),
-  E = s("153124"),
-  S = s("741245"),
-  g = s("474936"),
-  C = s("689938"),
-  T = s("461268");
-let _ = "1225876188074082374";
+var s = a("735250");
+a("470079");
+var o = a("990547"),
+  r = a("442837"),
+  l = a("481060"),
+  d = a("37234"),
+  i = a("100527"),
+  n = a("906732"),
+  u = a("213609"),
+  c = a("204418"),
+  _ = a("1585"),
+  m = a("223143"),
+  I = a("300284"),
+  M = a("158776"),
+  p = a("594174"),
+  A = a("153124"),
+  f = a("741245"),
+  v = a("474936"),
+  D = a("689938"),
+  x = a("461268");
+let C = "1225876188074082374";
 
-function v(e) {
+function E(e) {
   let {
     user: t,
-    deco: s
-  } = e, i = (0, l.useStateFromStores)([m.default], () => m.default.getStatus(t.id));
-  return (0, a.jsxs)("div", {
-    className: T.avatarBackground,
-    children: [(0, a.jsx)(c.default, {
+    deco: a
+  } = e, o = (0, r.useStateFromStores)([M.default], () => M.default.getStatus(t.id));
+  return (0, s.jsxs)("div", {
+    className: x.avatarBackground,
+    children: [(0, s.jsx)(c.default, {
       user: t,
       guildId: void 0,
-      avatarDecorationOverride: s,
-      status: i,
-      className: T.avatar
-    }), (0, a.jsx)("div", {
-      className: T.rect
-    }), (0, a.jsx)("div", {
-      className: T.rect
-    }), (0, a.jsx)("div", {
-      className: T.bottomOverlay
+      avatarDecorationOverride: a,
+      status: o,
+      className: x.avatar
+    }), (0, s.jsx)("div", {
+      className: x.rect
+    }), (0, s.jsx)("div", {
+      className: x.rect
+    }), (0, s.jsx)("div", {
+      className: x.bottomOverlay
     })]
   })
 }
 
-function A(e) {
+function N(e) {
   var t;
   let {
-    transitionState: s,
+    transitionState: a,
     onClose: c
-  } = e, m = (0, E.useUID)(), {
-    theme: A
-  } = (0, n.useThemeContext)(), M = (0, l.useStateFromStores)([I.default], () => I.default.getCurrentUser()), {
-    purchases: R
-  } = (0, p.useFetchPurchases)(), x = null === (t = R.get(_)) || void 0 === t ? void 0 : t.items, N = void 0 !== x ? x[0] : void 0, {
-    analyticsLocations: O
-  } = (0, d.default)(o.default.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL), y = (0, h.default)({
-    analyticsLocations: O
+  } = e, M = (0, A.useUID)(), {
+    theme: N
+  } = (0, l.useThemeContext)(), R = (0, r.useStateFromStores)([p.default], () => p.default.getCurrentUser()), {
+    purchases: T
+  } = (0, m.useFetchPurchases)(), h = null === (t = T.get(C)) || void 0 === t ? void 0 : t.items, O = void 0 !== h ? h[0] : void 0, {
+    analyticsLocations: L
+  } = (0, n.default)(i.default.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL), S = (0, I.default)({
+    analyticsLocations: L
   });
   return (0, u.default)({
-    type: i.ImpressionTypes.MODAL,
-    name: i.ImpressionNames.APRIL_PREMIUM_MARKETING_DECO_CLAIMED_MODAL,
+    type: o.ImpressionTypes.MODAL,
+    name: o.ImpressionNames.APRIL_PREMIUM_MARKETING_DECO_CLAIMED_MODAL,
     properties: {
-      location_stack: O
+      location_stack: L
     }
-  }), (0, a.jsxs)(n.ModalRoot, {
-    transitionState: s,
-    "aria-labelledby": m,
-    className: T.container,
-    children: [void 0 !== M && (0, a.jsx)(v, {
-      user: M,
-      deco: N
-    }), (0, a.jsxs)(n.ModalContent, {
-      className: T.content,
-      children: [(0, a.jsx)(S.default, {
-        theme: A,
-        premiumType: g.PremiumTypes.TIER_2,
-        type: S.default.Types.PREMIUM_ACTIVATED
-      }), (0, a.jsx)(n.Text, {
+  }), (0, s.jsxs)(l.ModalRoot, {
+    transitionState: a,
+    "aria-labelledby": M,
+    className: x.container,
+    children: [void 0 !== R && (0, s.jsx)(E, {
+      user: R,
+      deco: O
+    }), (0, s.jsxs)(l.ModalContent, {
+      className: x.content,
+      children: [(0, s.jsx)(f.default, {
+        theme: N,
+        premiumType: v.PremiumTypes.TIER_2,
+        type: f.default.Types.PREMIUM_ACTIVATED
+      }), (0, s.jsx)(l.Text, {
         variant: "text-md/medium",
         color: "text-normal",
-        className: T.bodyText,
-        children: C.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_CLAIM_DECO_MODAL_BODY.format()
+        className: x.bodyText,
+        children: D.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_CLAIM_DECO_MODAL_BODY.format()
       })]
-    }), (0, a.jsx)(n.ModalFooter, {
-      children: (0, a.jsx)(n.Button, {
-        look: n.Button.Looks.FILLED,
-        color: n.Button.Colors.BRAND,
+    }), (0, s.jsx)(l.ModalFooter, {
+      children: (0, s.jsx)(l.Button, {
+        look: l.Button.Looks.FILLED,
+        color: l.Button.Colors.BRAND,
         onClick: () => {
-          c(), (0, r.popLayer)(), y(), (0, f.openAvatarDecorationModal)({
-            initialSelectedDecoration: N,
-            analyticsLocations: O
+          c(), (0, d.popLayer)(), S(), (0, _.openAvatarDecorationModal)({
+            initialSelectedDecoration: O,
+            analyticsLocations: L
           })
         },
-        children: C.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+        children: D.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       })
     })]
   })

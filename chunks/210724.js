@@ -36,7 +36,7 @@ function v(e) {
     location: T.QuestsExperimentLocations.QUESTS_BAR
   }), R = (0, C.useIsEligibleForQuests)({
     location: T.QuestsExperimentLocations.QUESTS_BAR
-  }), L = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), M = s.useRef(-1), y = s.useRef(!1), [P, x] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, k] = s.useState(!0), [w, F] = s.useState(240), B = s.useRef(null), H = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, V = s.useRef(H), Y = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, W = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, K = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), z = (0, f.useIsQuestExpired)(E), {
+  }), L = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), y = s.useRef(-1), M = s.useRef(!1), [P, x] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, k] = s.useState(!0), [w, F] = s.useState(240), B = s.useRef(null), H = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, V = s.useRef(H), Y = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, W = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, K = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), z = (0, f.useIsQuestExpired)(E), {
     hasError: q,
     isLoading: Q
   } = (0, p.useQuestsAssetsLoadState)(), Z = s.useCallback(() => {
@@ -45,33 +45,33 @@ function v(e) {
   }, []), X = s.useCallback(() => {
     x(!0)
   }, []), J = s.useCallback(() => {
-    x(!1), !y.current && !Y && b(!1)
+    x(!1), !M.current && !Y && b(!1)
   }, [Y]), $ = s.useCallback(() => {
-    x(!1), !Y && b(!1), y.current = !1
+    x(!1), !Y && b(!1), M.current = !1
   }, [Y]), ee = s.useCallback(function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
       {
         withDelay: t = !1
       } = e;
-    t ? M.current = window.setTimeout(Z, 75) : Z()
+    t ? y.current = window.setTimeout(Z, 75) : Z()
   }, [Z]), et = s.useCallback(() => {
-    if (window.clearTimeout(M.current), !Y && !P) !y.current && b(!1)
+    if (window.clearTimeout(y.current), !Y && !P) !M.current && b(!1)
   }, [P, Y]), en = s.useCallback(() => {
     (0, c.trackQuestEvent)({
       questId: E.id,
       event: A.AnalyticEvents.QUEST_HOVER
-    }), y.current = !0, ee({
+    }), M.current = !0, ee({
       withDelay: !0
     })
   }, [ee, E]), ea = s.useCallback(() => {
-    y.current = !1, et()
+    M.current = !1, et()
   }, [et]);
   s.useLayoutEffect(() => {
     Y && Z()
   }, [Y, Z]), s.useLayoutEffect(() => {
-    H && !V.current && y.current && Z()
+    H && !V.current && M.current && Z()
   }, [H, Z]), s.useLayoutEffect(() => {
-    !Y && H && !V.current && !y.current && b(!1)
+    !Y && H && !V.current && !M.current && b(!1)
   }, [H, Y]);
   let es = R && !K && !W && !z && !Q,
     el = s.useRef(es);

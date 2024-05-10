@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("251625"),
   I = n("823379"),
   A = n("981631"),
-  N = n("228168"),
-  v = n("689938"),
+  v = n("228168"),
+  N = n("689938"),
   x = n("356228");
 
 function M(e, t, n) {
@@ -83,7 +83,7 @@ class R {
         }).filter(I.isNotNullish)]
       }).value()
     })), M(this, "renderMoreAvatars", () => (0, a.jsx)(o.TooltipContainer, {
-      text: v.default.Messages.AKA_MORE_AVATARS_OVERFLOW,
+      text: N.default.Messages.AKA_MORE_AVATARS_OVERFLOW,
       position: "bottom",
       children: (0, a.jsx)(o.Clickable, {
         className: x.moreAvatars,
@@ -97,7 +97,7 @@ class R {
         userId: this.userId,
         channelId: this.channelId,
         sourceAnalyticsLocations: this.analyticsLocations,
-        section: N.UserProfileSections.MUTUAL_GUILDS,
+        section: v.UserProfileSections.MUTUAL_GUILDS,
         analyticsLocation: {
           section: A.AnalyticsSections.CHANNEL_HEADER
         }
@@ -138,7 +138,7 @@ function y(e) {
   }) : (0, a.jsxs)(d.AnalyticsLocationProvider, {
     value: f,
     children: [(0, a.jsx)(S.Divider, {}), (0, a.jsx)(g.TextBadge, {
-      text: v.default.Messages.AKA,
+      text: N.default.Messages.AKA,
       disableColor: !0,
       className: x.akaBadge
     }), s.length > 0 ? (0, a.jsx)(_.default, {

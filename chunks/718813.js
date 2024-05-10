@@ -58,8 +58,8 @@ let N = (0, _.makeLazy)({
     [g.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(L, {}),
     [g.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(R, {})
   },
-  M = "SHOWN",
-  y = "HIDDEN",
+  y = "SHOWN",
+  M = "HIDDEN",
   P = {
     friction: 10,
     tension: 100
@@ -82,8 +82,8 @@ class D extends(a = l.PureComponent) {
       mode: n
     } = e;
     if (t !== n) {
-      if (t === M && n === y) return this.animateIn();
-      if (t === y && n === M) return this.animateUnder()
+      if (t === y && n === M) return this.animateIn();
+      if (t === M && n === y) return this.animateUnder()
     }
   }
   componentWillEnter(e) {
@@ -157,13 +157,13 @@ class D extends(a = l.PureComponent) {
       children: n,
       baseLayer: a,
       ...l
-    } = this.props, i = e || t === y ? this.getAnimatedStyle() : null, u = (0, s.jsx)(o.default.div, {
+    } = this.props, i = e || t === M ? this.getAnimatedStyle() : null, u = (0, s.jsx)(o.default.div, {
       ref: e => this.containerRef.current = null != e ? e.refs.node : void 0,
-      "aria-hidden": t === y,
+      "aria-hidden": t === M,
       className: r()(T.layer, {
         [T.baseLayer]: a,
         [T.animating]: e,
-        "stop-animations": t === y
+        "stop-animations": t === M
       }),
       style: i,
       ...l,
@@ -194,7 +194,7 @@ class D extends(a = l.PureComponent) {
     super(e), A(this, "containerRef", l.createRef());
     let t = 1,
       n = 1;
-    e.mode === y && (t = .93, n = 0), this.state = {
+    e.mode === M && (t = .93, n = 0), this.state = {
       animating: !1,
       scale: new o.default.Value(t),
       opacity: new o.default.Value(n),
@@ -221,7 +221,7 @@ class b extends l.PureComponent {
       length: a
     } = t, l = [];
     return l.push((0, s.jsx)(D, {
-      mode: 0 !== a || n ? y : M,
+      mode: 0 !== a || n ? M : y,
       baseLayer: !0,
       children: e
     }, "layer-base")), t.forEach((e, t) => l.push(this.renderComponent(e, t, a))), l
@@ -229,7 +229,7 @@ class b extends l.PureComponent {
   renderComponent(e, t, n) {
     let a;
     return a = "string" == typeof e ? O[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(D, {
-      mode: t === n - 1 ? M : y,
+      mode: t === n - 1 ? y : M,
       children: [(0, s.jsx)(x, {}), a]
     }, "layer-".concat(t))
   }

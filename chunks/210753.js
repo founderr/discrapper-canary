@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useDetectableGameSupplementalData: function() {
     return f
   }
-}), n("653041"), n("47120");
-var a = n("470079"),
-  r = n("392711"),
-  s = n.n(r),
-  i = n("442837"),
-  l = n("846519"),
-  o = n("224706"),
-  c = n("669764");
+}), a("653041"), a("47120");
+var n = a("470079"),
+  r = a("392711"),
+  s = a.n(r),
+  i = a("442837"),
+  l = a("846519"),
+  o = a("224706"),
+  c = a("669764");
 
-function d(e, t, n) {
+function d(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
 let u = new class e {
   request(e) {
@@ -38,10 +38,10 @@ let u = new class e {
 };
 
 function f(e, t) {
-  a.useEffect(() => {
+  n.useEffect(() => {
     u.request(e)
   }, [e]);
-  let n = a.useMemo(() => null != t ? {
+  let a = n.useMemo(() => null != t ? {
     width: t.coverImageWidth,
     height: t.coverImageHeight
   } : void 0, [t]);
@@ -49,6 +49,6 @@ function f(e, t) {
     isFetching: c.default.isFetching(e),
     localizedName: c.default.getLocalizedName(e),
     themes: c.default.getThemes(e),
-    coverImageUrl: c.default.getCoverImageUrl(e, n)
+    coverImageUrl: c.default.getCoverImageUrl(e, a)
   }))
 }

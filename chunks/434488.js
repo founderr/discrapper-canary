@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("944581"),
   I = n("36113"),
   A = n("626135"),
-  N = n("792125"),
-  v = n("607187"),
+  v = n("792125"),
+  N = n("607187"),
   x = n("981631"),
   M = n("701488"),
   R = n("689938"),
@@ -96,7 +96,7 @@ function j(e) {
             onClick: () => {
               null == t || t(), f()
             },
-            children: (0, a.jsx)(v.default, {
+            children: (0, a.jsx)(N.default, {
               className: y.root,
               children: (0, a.jsx)("div", {
                 className: y.iconContainer,
@@ -110,7 +110,7 @@ function j(e) {
         }
       }), (0, a.jsx)(u.Clickable, {
         onClick: l,
-        className: i()((0, N.getThemeClass)(x.ThemeTypes.DARK), y.shelfButtonCloseButton),
+        className: i()((0, v.getThemeClass)(x.ThemeTypes.DARK), y.shelfButtonCloseButton),
         children: (0, a.jsx)(S.default, {
           width: 24,
           height: 24,
@@ -141,7 +141,7 @@ function P(e) {
     } = (0, p.default)(m.default.VC_TILE_ACTIVITY_INVITE);
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: c,
-    children: (0, a.jsxs)(v.default, {
+    children: (0, a.jsxs)(N.default, {
       className: y.root,
       children: [r > 400 ? (0, a.jsx)("img", {
         src: L,
@@ -249,7 +249,7 @@ function b(e) {
     } = (0, p.default)(m.default.VC_TILE_ACTIVITY_SUGGESTION);
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: h,
-    children: (0, a.jsxs)(v.default, {
+    children: (0, a.jsxs)(N.default, {
       className: y.root,
       children: [o > 480 ? (0, a.jsx)("img", {
         className: y.art,

@@ -1,63 +1,63 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return h
   }
 });
-var a = n("735250");
-n("470079");
-var r = n("108930"),
-  s = n("86406"),
-  i = n("146068"),
-  l = n("308545"),
-  o = n("397697"),
-  c = n("129871"),
-  d = n("206851"),
-  u = n("246933"),
-  f = n("995414"),
-  m = n("308083");
+var n = a("735250");
+a("470079");
+var r = a("108930"),
+  s = a("86406"),
+  i = a("146068"),
+  l = a("308545"),
+  o = a("397697"),
+  c = a("129871"),
+  d = a("206851"),
+  u = a("246933"),
+  f = a("995414"),
+  m = a("308083");
 
 function h(e) {
   let {
     banner: t,
-    ...n
+    ...a
   } = e;
   switch (t) {
     case m.ClanBannerKind.NIGHT_SKY:
-      return (0, a.jsx)(o.default, {
-        ...n
+      return (0, n.jsx)(o.default, {
+        ...a
       });
     case m.ClanBannerKind.CASTLE:
-      return (0, a.jsx)(r.default, {
-        ...n
+      return (0, n.jsx)(r.default, {
+        ...a
       });
     case m.ClanBannerKind.WORLD_MAP:
-      return (0, a.jsx)(f.default, {
-        ...n
+      return (0, n.jsx)(f.default, {
+        ...a
       });
     case m.ClanBannerKind.SEA_FOAM:
-      return (0, a.jsx)(c.default, {
-        ...n
+      return (0, n.jsx)(c.default, {
+        ...a
       });
     case m.ClanBannerKind.WARP_TUNNEL:
-      return (0, a.jsx)(u.default, {
-        ...n
+      return (0, n.jsx)(u.default, {
+        ...a
       });
     case m.ClanBannerKind.HOUSE:
-      return (0, a.jsx)(i.default, {
-        ...n
+      return (0, n.jsx)(i.default, {
+        ...a
       });
     case m.ClanBannerKind.HEIGHTMAP:
-      return (0, a.jsx)(s.default, {
-        ...n
+      return (0, n.jsx)(s.default, {
+        ...a
       });
     case m.ClanBannerKind.MESH:
-      return (0, a.jsx)(l.default, {
-        ...n
+      return (0, n.jsx)(l.default, {
+        ...a
       });
     case m.ClanBannerKind.SPATTER:
-      return (0, a.jsx)(d.default, {
-        ...n
+      return (0, n.jsx)(d.default, {
+        ...a
       })
   }
   return null

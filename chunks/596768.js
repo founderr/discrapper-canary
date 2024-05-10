@@ -23,8 +23,8 @@ var a = r("735250"),
   x = r("120816"),
   k = r("31336"),
   v = r("257785"),
-  j = r("484036"),
-  C = r("681619"),
+  C = r("484036"),
+  j = r("681619"),
   S = r("621060"),
   w = r("689938"),
   T = r("457501"),
@@ -181,13 +181,13 @@ function _() {
       })]
     }), (0, a.jsx)(h.ScrollerThin, {
       className: T.tableContainer,
-      children: (0, a.jsx)(C.default, {
+      children: (0, a.jsx)(j.default, {
         columns: L,
         data: o,
         selectedRowKey: s,
         onClickRow: d
       })
-    }), null != g && (0, a.jsxs)(j.default, {
+    }), null != g && (0, a.jsxs)(C.default, {
       className: T.subPanel,
       minHeight: 100,
       initialHeight: null != r.current ? r.current.clientHeight / 2 : 300,

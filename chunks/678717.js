@@ -24,8 +24,8 @@ var a = r("735250"),
   k = r("432877");
 r("381996");
 var v = r("392750"),
-  j = r("926976"),
-  C = r("592197"),
+  C = r("926976"),
+  j = r("592197"),
   S = r("860337"),
   w = r("789654"),
   T = r("691867"),
@@ -36,8 +36,8 @@ var v = r("392750"),
   R = r("702904"),
   I = r("248526"),
   D = r("958328"),
-  A = r("514866"),
-  O = r("678639"),
+  O = r("514866"),
+  A = r("678639"),
   P = r("351930"),
   B = r("771751"),
   M = r("596768"),
@@ -70,7 +70,7 @@ function V() {
       let e = [{
         id: "analytics",
         name: "Analytics",
-        render: () => (0, a.jsx)(j.default, {})
+        render: () => (0, a.jsx)(C.default, {})
       }, {
         id: "triggers",
         name: "Triggers",
@@ -78,7 +78,7 @@ function V() {
       }, {
         id: "stores",
         name: "Stores",
-        render: () => (0, a.jsx)(O.default, {})
+        render: () => (0, a.jsx)(A.default, {})
       }, {
         id: "dispatcher",
         name: "Dispatcher",
@@ -87,7 +87,7 @@ function V() {
       return m.default.isDeveloper && (e.push({
         id: "quick_actions",
         name: "Quick Actions",
-        render: () => (0, a.jsx)(A.default, {})
+        render: () => (0, a.jsx)(O.default, {})
       }), e.push({
         id: "perks_demos",
         name: "Perks Demos",
@@ -143,7 +143,7 @@ function V() {
       }), e.push({
         id: "billing",
         name: "Billing",
-        render: () => (0, a.jsx)(C.default, {})
+        render: () => (0, a.jsx)(j.default, {})
       }), e.push({
         id: "content_inventory",
         name: "Content Inventory",

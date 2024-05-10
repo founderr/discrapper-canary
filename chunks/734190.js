@@ -17,8 +17,8 @@ var l = n("735250"),
   g = n("938475"),
   E = n("514342"),
   _ = n("714794"),
-  I = n("135724"),
-  S = n("25601"),
+  S = n("135724"),
+  I = n("25601"),
   N = n("207055"),
   T = n("981631"),
   A = n("124368"),
@@ -135,11 +135,11 @@ t.default = a.memo(function(e) {
               children: t.name
             }), (0, l.jsxs)("div", {
               className: x.children,
-              children: [B > 0 && t.userLimit > 0 ? (0, l.jsx)(I.default, {
+              children: [B > 0 && t.userLimit > 0 ? (0, l.jsx)(S.default, {
                 userCount: B,
                 video: b,
                 channel: t
-              }) : null, (0, _.default)(P) ? (0, l.jsx)(S.default, {
+              }) : null, (0, _.default)(P) ? (0, l.jsx)(I.default, {
                 mentionsCount: P
               }) : null]
             })]

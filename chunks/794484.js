@@ -87,8 +87,8 @@ t.default = e => {
       tileOrderVariant: x,
       isPremiumSubscriber: j
     }),
-    B = y.some(e => null != e.pillText),
-    [G, k] = r.useState(null),
+    G = y.some(e => null != e.pillText),
+    [B, k] = r.useState(null),
     H = r.useRef(new l.Environment);
   return (0, a.jsxs)(a.Fragment, {
     children: [(null == U ? void 0 : null === (t = U.freeBoost) || void 0 === t ? void 0 : t.name) === T.PerksDiscoverabilityCardTypes.FREE_BOOST && (0, a.jsx)(l.ConfettiCanvas, {
@@ -113,7 +113,7 @@ t.default = e => {
           [S.subtitle]: null == p || N,
           [S.subtitleWithButton]: null != p && !N,
           [S.fullWidth]: v || N,
-          [S.moreSubtitleMargin]: B,
+          [S.moreSubtitleMargin]: G,
           [S.leftAlignSubtitle]: N,
           [S.centerAlignSubtitle]: !N
         }),
@@ -127,7 +127,7 @@ t.default = e => {
           [S.cardContainerNarrowWidth]: !C
         }),
         children: y.map((e, t) => (0, a.jsx)(f.default, {
-          confettiCanvas: e.name === T.PerksDiscoverabilityCardTypes.FREE_BOOST ? G : void 0,
+          confettiCanvas: e.name === T.PerksDiscoverabilityCardTypes.FREE_BOOST ? B : void 0,
           ...e,
           forceShadow: A
         }, "".concat(e.name, "_").concat(t)))

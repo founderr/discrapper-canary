@@ -24,8 +24,8 @@ var a, l = n("735250"),
   T = n("119828"),
   I = n("156338"),
   A = n("794358"),
-  N = n("381238"),
-  v = n("779863"),
+  v = n("381238"),
+  N = n("779863"),
   x = n("374129"),
   M = n("639351"),
   R = n("944581"),
@@ -176,8 +176,8 @@ class H extends(a = s.Component) {
       voicePlatform: g,
       hangStatusActivity: S,
       showHangStatus: _,
-      isSelf: N,
-      application: v,
+      isSelf: v,
+      application: N,
       guildId: O,
       channelId: F,
       user: w,
@@ -234,7 +234,7 @@ class H extends(a = s.Component) {
         className: r()(U.icon, m)
       })
     }, "watch"));
-    let Y = null != v && !(0, L.hasFlag)(v.flags, j.ApplicationFlags.EMBEDDED),
+    let Y = null != N && !(0, L.hasFlag)(N.flags, j.ApplicationFlags.EMBEDDED),
       z = null == S && Y;
     return 0 !== V.length || null != W || _ || z ? (0, l.jsxs)("div", {
       className: U.icons,
@@ -246,7 +246,7 @@ class H extends(a = s.Component) {
         className: U.iconGroup,
         onMouseEnter: () => null == H ? void 0 : H(!0),
         children: z ? (0, l.jsx)(B, {
-          application: v,
+          application: N,
           iconClassName: m,
           guildId: O,
           channelId: F,
@@ -254,7 +254,7 @@ class H extends(a = s.Component) {
         }, "".concat(w.id, "-game")) : (0, l.jsx)(k, {
           hangStatusActivity: S,
           iconClassName: m,
-          isSelf: N
+          isSelf: v
         })
       }) : null]
     }) : null
@@ -400,7 +400,7 @@ function G(e) {
         }),
         color: "currentColor"
       })
-    } else e = (0, l.jsx)(v.default, {
+    } else e = (0, l.jsx)(N.default, {
       className: r()(U.icon, t, {
         [U.iconServer]: s
       }),
@@ -422,7 +422,7 @@ function G(e) {
         }),
         color: "currentColor"
       })
-    } else e = (0, l.jsx)(N.default, {
+    } else e = (0, l.jsx)(v.default, {
       className: r()(U.icon, t, {
         [U.iconServer]: f
       })

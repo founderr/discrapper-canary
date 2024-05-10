@@ -22,8 +22,8 @@ var a = n("120356"),
   g = n("242315"),
   E = n("944581"),
   _ = n("632184"),
-  I = n("170039"),
-  S = n("761374"),
+  S = n("170039"),
+  I = n("761374"),
   N = n("602623"),
   T = n("823379"),
   A = n("709054"),
@@ -84,7 +84,7 @@ function O() {
     G = y(_.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
   let U = (e = M, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
-      children: [(0, l.jsx)(I.default, {
+      children: [(0, l.jsx)(S.default, {
         className: R.activityIcon
       }), (0, l.jsx)(N.default, {
         guildId: void 0,
@@ -103,7 +103,7 @@ function O() {
         })]
       })]
     })),
-    w = y(S.default, P.filter(e => null != e && !b.includes(e.id))),
+    w = y(I.default, P.filter(e => null != e && !b.includes(e.id))),
     F = y(E.default, j);
   return (0, l.jsxs)(l.Fragment, {
     children: [U, G, w, F]

@@ -23,9 +23,9 @@ var a = r("735250"),
   x = r("6048"),
   k = r("465670"),
   v = r("246992"),
-  j = r("277513");
+  C = r("277513");
 
-function C(e, t) {
+function j(e, t) {
   return !t && (t = e.slice(0)), Object.freeze(Object.defineProperties(e, {
     raw: {
       value: Object.freeze(t)
@@ -34,14 +34,14 @@ function C(e, t) {
 }
 
 function S() {
-  let e = C(["\n    import {defineColorTokens, themedToken} from '../tools/define';\n\n    const semanticTokenValues = {\n      ", "\n    };\n\n    export const semanticTokens = defineColorTokens(() => semanticTokenValues);\n    export type SemanticTokenValue = typeof semanticTokenValues;\n  "]);
+  let e = j(["\n    import {defineColorTokens, themedToken} from '../tools/define';\n\n    const semanticTokenValues = {\n      ", "\n    };\n\n    export const semanticTokens = defineColorTokens(() => semanticTokenValues);\n    export type SemanticTokenValue = typeof semanticTokenValues;\n  "]);
   return S = function() {
     return e
   }, e
 }
 
 function w() {
-  let e = C(["\n      export const rawPalette = {\n        ", "\n      } as const;\n    "]);
+  let e = j(["\n      export const rawPalette = {\n        ", "\n      } as const;\n    "]);
   return w = function() {
     return e
   }, e
@@ -116,7 +116,7 @@ function D() {
       semanticTokens: N
     }),
     [p, f] = i.useState(""),
-    [C, T] = i.useState({}),
+    [j, T] = i.useState({}),
     [E, _] = i.useState({}),
     R = i.useMemo(() => Object.keys(t).reduce((e, t) => [...e, {
       value: t,
@@ -132,7 +132,7 @@ function D() {
         semanticTokens: o
       })
     }, [r, t, l]),
-    A = i.useMemo(() => {
+    O = i.useMemo(() => {
       let a = Object.keys(r).map(t => {
           let {
             color: a,
@@ -157,9 +157,9 @@ function D() {
           }(r), o = d().kebabCase(e);
           return ["--".concat(o, "-hsl: ").concat(a, " calc(var(--saturation-factor, 1) * ").concat(i, "%) ").concat(l, "% !important;"), "--".concat(o, ": hsl(var(--").concat(o, "-hsl)) !important;")]
         });
-      return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(C).filter(e => C[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(E).filter(e => E[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(i.join("\n"), "\n      }\n    ")
-    }, [e, r, t, C, E]),
-    O = i.useCallback(e => {
+      return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(j).filter(e => j[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(E).filter(e => E[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(i.join("\n"), "\n      }\n    ")
+    }, [e, r, t, j, E]),
+    A = i.useCallback(e => {
       let t = "",
         r = "",
         a = !1;
@@ -201,19 +201,19 @@ function D() {
       })
     }, [r, l]);
   return (0, a.jsxs)("div", {
-    className: j.panel,
+    className: C.panel,
     style: {
       display: "flex",
       flexDirection: "column"
     },
     children: [(0, a.jsxs)("div", {
-      className: j.toolbar,
+      className: C.toolbar,
       style: {
         flex: "0 0 34px",
         padding: "0 4px"
       },
       children: [(0, a.jsxs)("div", {
-        className: j.toolbarGroup,
+        className: C.toolbarGroup,
         children: [(0, a.jsx)(y.Button, {
           onClick: o,
           disabled: !h,
@@ -226,11 +226,11 @@ function D() {
           children: "Redo"
         })]
       }), (0, a.jsx)("div", {
-        className: j.toolbarDivider
+        className: C.toolbarDivider
       }), (0, a.jsxs)("div", {
-        className: j.toolbarGroup,
+        className: C.toolbarGroup,
         children: [(0, a.jsx)("span", {
-          className: j.toolbarGroupLabel,
+          className: C.toolbarGroupLabel,
           children: "Raw"
         }), (0, a.jsx)(y.Button, {
           size: y.Button.Sizes.MIN,
@@ -248,23 +248,23 @@ function D() {
           children: "Export"
         })]
       }), (0, a.jsx)("div", {
-        className: j.toolbarDivider
+        className: C.toolbarDivider
       }), (0, a.jsxs)("div", {
-        className: j.toolbarGroup,
+        className: C.toolbarGroup,
         children: [(0, a.jsx)("span", {
-          className: j.toolbarGroupLabel,
+          className: C.toolbarGroupLabel,
           children: "Semantic"
         }), (0, a.jsx)(y.Button, {
           size: y.Button.Sizes.MIN,
           onClick: () => {
-            navigator.clipboard.writeText(O(r))
+            navigator.clipboard.writeText(A(r))
           },
           children: "Export"
         })]
       }), (0, a.jsx)("div", {
-        className: j.toolbarDivider
+        className: C.toolbarDivider
       }), (0, a.jsx)("div", {
-        className: j.toolbarGroup,
+        className: C.toolbarGroup,
         children: (0, a.jsx)(y.Button, {
           size: y.Button.Sizes.MIN,
           type: "reset",
@@ -278,9 +278,9 @@ function D() {
           children: "Reset all"
         })
       }), (0, a.jsx)("div", {
-        className: j.toolbarDivider
+        className: C.toolbarDivider
       }), (0, a.jsxs)("div", {
-        className: j.toolbarGroup,
+        className: C.toolbarGroup,
         style: {
           flexGrow: 1
         },
@@ -324,7 +324,7 @@ function D() {
                 }))
               },
               children: (0, a.jsx)(y.Checkbox, {
-                value: C[t],
+                value: j[t],
                 onChange: () => {
                   T(e => ({
                     ...e,
@@ -379,7 +379,7 @@ function D() {
     }), (0, a.jsx)(u.Helmet, {
       children: (0, a.jsx)("style", {
         id: "devtools-color-overrides",
-        children: A
+        children: O
       })
     })]
   })

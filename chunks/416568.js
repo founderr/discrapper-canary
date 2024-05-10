@@ -17,8 +17,8 @@ var l = n("735250"),
   g = n("925549"),
   E = n("209613"),
   _ = n("100527"),
-  I = n("906732"),
-  S = n("358221"),
+  S = n("906732"),
+  I = n("358221"),
   N = n("963202"),
   T = n("706590"),
   A = n("940777"),
@@ -144,7 +144,7 @@ function er(e) {
   } = e, [o] = (0, h.useStateFromStoresArray)([O.default], () => {
     let e = O.default.getGuildsTree();
     return [e, e.version]
-  }), u = (0, h.useStateFromStoresArray)([y.default], () => Object.values(y.default.getGuilds())), f = (0, h.useStateFromStores)([L.default], () => L.default.lurkingGuildIds()), p = a.useMemo(() => n ? [] : f, [f, n]), g = (0, h.useStateFromStoresArray)([y.default, M.default], () => b.default.keys(y.default.getGuilds()).filter(e => M.default.isCurrentUserGuest(e))), E = p.concat(g), et = (0, h.useStateFromStores)([S.default], () => S.default.isFullscreenInContext()), en = (0, h.useStateFromStores)([y.default], () => y.default.getGeoRestrictedGuilds()), [el, ea] = a.useState(!1), es = a.useCallback(() => ea(!0), []), er = a.useCallback(() => ea(!1), []), eo = a.useRef(!1), [eu] = a.useState(() => new m.Timeout), ed = a.useRef(null), ec = a.useRef(null), {
+  }), u = (0, h.useStateFromStoresArray)([y.default], () => Object.values(y.default.getGuilds())), f = (0, h.useStateFromStores)([L.default], () => L.default.lurkingGuildIds()), p = a.useMemo(() => n ? [] : f, [f, n]), g = (0, h.useStateFromStoresArray)([y.default, M.default], () => b.default.keys(y.default.getGuilds()).filter(e => M.default.isCurrentUserGuest(e))), E = p.concat(g), et = (0, h.useStateFromStores)([I.default], () => I.default.isFullscreenInContext()), en = (0, h.useStateFromStores)([y.default], () => y.default.getGeoRestrictedGuilds()), [el, ea] = a.useState(!1), es = a.useCallback(() => ea(!0), []), er = a.useCallback(() => ea(!1), []), eo = a.useRef(!1), [eu] = a.useState(() => new m.Timeout), ed = a.useRef(null), ec = a.useRef(null), {
     ref: ef,
     ...eh
   } = (0, c.useListContainerProps)(), ep = (0, C.useFocusJumpSection)(), [em, eC] = a.useState(!1), [eg] = a.useState(() => new ei(o, eC, () => {
@@ -152,13 +152,13 @@ function er(e) {
     null === (e = ed.current) || void 0 === e || e.calculateState(), null === (t = ec.current) || void 0 === t || t.calculateState()
   })), {
     analyticsLocations: eE
-  } = (0, I.default)(_.default.GUILDS_LIST), {
+  } = (0, S.default)(_.default.GUILDS_LIST), {
     pathname: e_
-  } = (0, d.useLocation)(), eI = e_.startsWith(J.Routes.GUILD_DISCOVERY), eS = e_.startsWith(J.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
+  } = (0, d.useLocation)(), eS = e_.startsWith(J.Routes.GUILD_DISCOVERY), eI = e_.startsWith(J.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
   a.useLayoutEffect(() => {
     if (!eo.current) {
       if (0 !== o.size) {
-        if (eI) eg.scrollToGuild(null, !1);
+        if (eS) eg.scrollToGuild(null, !1);
         else {
           let {
             scrollTop: e
@@ -191,7 +191,7 @@ function er(e) {
     name: e.name,
     icon: e.icon
   }, e.id));
-  return (0, l.jsx)(I.AnalyticsLocationProvider, {
+  return (0, l.jsx)(S.AnalyticsLocationProvider, {
     value: eE,
     children: (0, l.jsx)("nav", {
       className: i()(ee.wrapper, s, (0, j.getThemeClass)(r), {
@@ -218,7 +218,7 @@ function er(e) {
           ref: eg.scrollerRef,
           onScroll: eg.handleScroll,
           children: [(0, l.jsx)(Y.HomeButton, {}), eL ? (0, l.jsx)(A.default, {}) : null, (0, l.jsx)(B.default, {}), (0, l.jsx)(K.default, {
-            isOnHubVerificationRoute: eS
+            isOnHubVerificationRoute: eI
           }), (0, l.jsx)(w.default, {}), ev, E.map(e => (0, l.jsx)(q.default, {
             guildId: e
           }, e)), (0, l.jsx)(Q.default, {}), (0, l.jsx)(W.default, {}), (0, l.jsx)("div", {
@@ -253,7 +253,7 @@ function er(e) {
             lastTargetNode: eA[eA.length - 1]
           }), n || eN ? null : (0, l.jsx)(k.default, {
             ref: eg.guildDiscoveryRef,
-            selected: eI
+            selected: eS
           }), (0, l.jsx)(z.default, {}), t ? null : (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(W.default, {}), (0, l.jsx)(F.default, {})]
           })]
@@ -266,7 +266,7 @@ function er(e) {
               } = e;
               return (0, l.jsx)(k.default, {
                 ref: eg.guildDiscoveryRef,
-                selected: eI,
+                selected: eS,
                 className: ee.fixedDiscoveryIcon,
                 onClick: t
               })

@@ -34,8 +34,8 @@ var a = s("735250"),
   U = s("551428"),
   j = s("695103"),
   y = s("451478"),
-  B = s("378720"),
-  G = s("285952"),
+  G = s("378720"),
+  B = s("285952"),
   k = s("760397"),
   H = s("757698"),
   F = s("466111"),
@@ -276,7 +276,7 @@ class eE extends r.PureComponent {
     } = t;
     if (null == i) throw Error("Rendering ApplicationStoreListing without description");
     return (0, a.jsxs)(r.Fragment, {
-      children: [(0, a.jsx)(B.default, {
+      children: [(0, a.jsx)(G.default, {
         tag: "h1",
         children: ed.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
           name: s.name
@@ -371,9 +371,9 @@ class eE extends r.PureComponent {
       isAuthenticated: n
     } = this.props;
     if (null == e || null == t || null == s || s.isSlimDirectoryVersion()) return (0, a.jsxs)(r.Fragment, {
-      children: [this.renderHeader(e, t), (0, a.jsx)(G.default, {
-        align: G.default.Align.CENTER,
-        justify: G.default.Justify.CENTER,
+      children: [this.renderHeader(e, t), (0, a.jsx)(B.default, {
+        align: B.default.Align.CENTER,
+        justify: B.default.Justify.CENTER,
         children: (0, a.jsx)(d.Spinner, {
           className: ec.spinner
         })
@@ -576,9 +576,9 @@ class eE extends r.PureComponent {
         sku: s,
         pageSize: r
       } = this.props;
-      return null == e || null == s || null == t || t.isSlimDirectoryVersion() ? (0, a.jsx)(G.default, {
-        align: G.default.Align.CENTER,
-        justify: G.default.Justify.CENTER,
+      return null == e || null == s || null == t || t.isSlimDirectoryVersion() ? (0, a.jsx)(B.default, {
+        align: B.default.Align.CENTER,
+        justify: B.default.Justify.CENTER,
         children: (0, a.jsx)(d.Spinner, {})
       }) : r === el.PageSizes.SMALL ? this.renderSmall(e, t, s) : this.renderLarge(e, t, s)
     })

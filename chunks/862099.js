@@ -34,8 +34,8 @@ var a, s, l = n("735250"),
   R = n("393112"),
   L = n("170039"),
   O = n("602623"),
-  M = n("626135"),
-  y = n("823379"),
+  y = n("626135"),
+  M = n("823379"),
   P = n("15274"),
   x = n("924301"),
   D = n("504160"),
@@ -158,7 +158,7 @@ function Q(e) {
     className: K.joinButton,
     innerClassName: K.rsvpButton,
     onClick: function() {
-      (0, H.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, D.hideUpcomingEventNotice)(t.id), 1e3)), M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
+      (0, H.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, D.hideUpcomingEventNotice)(t.id), 1e3)), y.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
         guild_id: t.guild_id,
         notice_type: n
       })
@@ -196,7 +196,7 @@ function Z(e) {
     date: h
   });
   return i.useEffect(() => {
-    M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+    y.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
       notice_type: a,
       guild_id: n.guild_id
     })
@@ -217,7 +217,7 @@ function Z(e) {
         })
       }), (0, l.jsx)(o.Clickable, {
         onClick: () => {
-          M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
+          y.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: a,
             guild_id: n.guild_id
           }), (0, D.hideUpcomingEventNotice)(n.id)
@@ -371,7 +371,7 @@ function et(e) {
       f = W.default.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
       break;
     default:
-      (0, y.assertNever)(a)
+      (0, M.assertNever)(a)
   }
   return null == s ? null : (0, l.jsxs)(l.Fragment, {
     children: [u.length > 0 ? (0, l.jsxs)("div", {

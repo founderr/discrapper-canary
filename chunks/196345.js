@@ -1,47 +1,47 @@
 "use strict";
 n.r(t), n.d(t, {
   DisabledTermsRequirementFormField: function() {
-    return h
-  },
-  TermsFieldBody: function() {
-    return f
-  },
-  TermsFieldCheckbox: function() {
     return m
   },
+  TermsFieldBody: function() {
+    return h
+  },
+  TermsFieldCheckbox: function() {
+    return f
+  },
   TermsFormField: function() {
-    return p
+    return E
   }
 }), n("47120");
-var a = n("735250");
+var r = n("735250");
 n("470079");
-var r = n("120356"),
-  s = n.n(r),
+var s = n("120356"),
+  o = n.n(s),
   i = n("481060"),
-  l = n("454585"),
-  o = n("814550"),
-  c = n("489813"),
+  a = n("454585"),
+  l = n("814550"),
+  u = n("489813"),
   d = n("689938"),
-  u = n("303765");
+  c = n("303765");
 
-function f(e) {
+function h(e) {
   let {
     terms: t,
     channelId: n,
-    className: r
+    className: s
   } = e;
-  return (0, a.jsx)("div", {
-    className: s()(u.termsFieldBody, r),
-    children: t.map((e, t) => (0, a.jsxs)("div", {
-      className: u.termsRow,
-      children: [(0, a.jsx)(i.Text, {
+  return (0, r.jsx)("div", {
+    className: o()(c.termsFieldBody, s),
+    children: t.map((e, t) => (0, r.jsxs)("div", {
+      className: c.termsRow,
+      children: [(0, r.jsx)(i.Text, {
         variant: "text-md/normal",
         color: "text-muted",
         children: "".concat(t + 1, ".")
-      }), (0, a.jsx)(i.Text, {
+      }), (0, r.jsx)(i.Text, {
         variant: "text-md/normal",
-        className: u.termsRowContent,
-        children: l.default.parseGuildVerificationFormRule(e, !0, {
+        className: c.termsRowContent,
+        children: a.default.parseGuildVerificationFormRule(e, !0, {
           channelId: n
         })
       })]
@@ -49,53 +49,53 @@ function f(e) {
   })
 }
 
-function m(e) {
+function f(e) {
   let {
     onChange: t,
     checked: n,
-    disabled: r
+    disabled: s
   } = e;
-  return (0, a.jsx)(i.Checkbox, {
+  return (0, r.jsx)(i.Checkbox, {
     size: 20,
     type: i.Checkbox.Types.INVERTED,
     value: n,
     onChange: t,
-    disabled: r,
+    disabled: s,
     style: {
       borderWidth: 2
     },
-    className: u.checkbox,
-    children: (0, a.jsx)(i.Text, {
+    className: c.checkbox,
+    children: (0, r.jsx)(i.Text, {
       variant: "text-sm/normal",
       children: d.default.Messages.MEMBER_VERIFICATION_READ_RULES
     })
   })
 }
 
-function h(e) {
+function m(e) {
   let {
     formField: t
   } = e;
-  return (0, a.jsx)(c.RequirementRenderer, {
-    icon: o.default,
+  return (0, r.jsx)(u.RequirementRenderer, {
+    icon: l.default,
     text: d.default.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
     meetsRequirement: !!t.response
   })
 }
-let p = e => {
+let E = e => {
   let {
     channelId: t,
     formField: n,
-    onChange: r
+    onChange: s
   } = e;
-  return (0, a.jsxs)(c.QuestionRenderer, {
+  return (0, r.jsxs)(u.QuestionRenderer, {
     title: d.default.Messages.SERVER_DISCOVERY_AGREE_TO_RULES,
-    children: [(0, a.jsx)(f, {
-      className: u.fieldBackground,
+    children: [(0, r.jsx)(h, {
+      className: c.fieldBackground,
       terms: n.values,
       channelId: t
-    }), (0, a.jsx)(m, {
-      onChange: r,
+    }), (0, r.jsx)(f, {
+      onChange: s,
       checked: n.response
     })]
   })

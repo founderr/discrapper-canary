@@ -47,10 +47,10 @@ t.default = e => {
     } = (0, r.default)();
   if (null == m) return null;
   let {
-    guilds: M,
-    loading: y
-  } = m, P = null == M || 0 === M.length;
-  if (!y && P) return null;
+    guilds: y,
+    loading: M
+  } = m, P = null == y || 0 === y.length;
+  if (!M && P) return null;
   let x = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
@@ -63,15 +63,15 @@ t.default = e => {
       analyticsLocations: O
     });
     else {
-      let t = M.findIndex(t => t.id === e);
+      let t = y.findIndex(t => t.id === e);
       await I(e, t, S, N)
     }
   };
-  if (y || null == M) {
+  if (M || null == y) {
     let e = [];
     for (let t = 0; t < L; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = M.slice(0, L).map(e => (0, a.jsx)(d.default, {
+  } else t = y.slice(0, L).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
     onView: x,

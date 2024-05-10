@@ -94,9 +94,9 @@ function S(e) {
     user: I
   } = (0, c.useListenedSessionData)(s), {
     primaryColor: A,
-    secondaryColor: N
+    secondaryColor: v
   } = (0, d.default)(_), {
-    streamPreviewUrl: v,
+    streamPreviewUrl: N,
     channel: x
   } = (0, r.default)(s), M = l.useCallback(e => {
     var t;
@@ -114,10 +114,10 @@ function S(e) {
       timestamp: (0, o.formatActiveTimestamp)(null != a ? {
         start: a
       } : s, Date.now()),
-      colors: [A, N],
+      colors: [A, v],
       channelId: e
     })
-  }, [p, S, n, s, _, A, N, T, I]);
+  }, [p, S, n, s, _, A, v, T, I]);
   if (null == p) return null;
   let R = (0, a.jsx)(f.PopoutContent, {
     thumbnailSrc: _,
@@ -142,7 +142,7 @@ function S(e) {
         entry: s,
         requestId: i,
         voiceChannel: x,
-        isStreaming: null != v
+        isStreaming: null != N
       }) : (0, a.jsx)(f.PopoutReactor, {
         closePopout: h,
         user: I,

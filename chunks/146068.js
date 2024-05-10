@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return h
   }
 });
-var a = n("735250");
-n("470079");
-var r = n("249849"),
-  s = n("907561"),
-  i = n("689938"),
-  l = n("585025");
+var n = a("735250");
+a("470079");
+var r = a("249849"),
+  s = a("907561"),
+  i = a("689938"),
+  l = a("585025");
 let o = ["#0fa3dd", "#a7e4e4", "#a2ccdd"],
   c = ["#0b3215", "#a6b51a", "#35748a", "#65a88f", "#621c12", "#f96748", "#ffbbbb"],
   d = [.25, .9, .9],
@@ -50,7 +50,7 @@ let o = ["#0fa3dd", "#a7e4e4", "#a2ccdd"],
 function h(e) {
   let {
     width: t,
-    height: n,
+    height: a,
     primaryTintColor: h,
     secondaryTintColor: p,
     ...E
@@ -70,37 +70,37 @@ function h(e) {
     styleContent: x,
     containerId: _
   } = (0, s.useClanBannerStyleInjection)(T, C);
-  return (0, a.jsxs)("svg", {
+  return (0, n.jsxs)("svg", {
     ...E,
     "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
-    height: n,
+    height: a,
     viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
-    children: [(0, a.jsxs)("defs", {
-      children: [(0, a.jsx)("defs", {
-        children: (0, a.jsxs)("linearGradient", {
+    children: [(0, n.jsxs)("defs", {
+      children: [(0, n.jsx)("defs", {
+        children: (0, n.jsxs)("linearGradient", {
           id: "sky-gradient",
           x1: "0",
           x2: "1",
           y1: "0",
           y2: "1",
-          children: [(0, a.jsx)("stop", {
+          children: [(0, n.jsx)("stop", {
             stopColor: T[2],
             offset: "0%"
-          }), (0, a.jsx)("stop", {
+          }), (0, n.jsx)("stop", {
             stopColor: T[0],
             offset: "100%"
           })]
         })
-      }), (0, a.jsx)("style", {
+      }), (0, n.jsx)("style", {
         children: x
       })]
-    }), (0, a.jsx)("use", {
+    }), (0, n.jsx)("use", {
       href: "".concat(l, "#sky"),
       style: {
         fill: "url(#sky-gradient)"
       }
-    }), (0, a.jsx)("use", {
+    }), (0, n.jsx)("use", {
       href: "".concat(l, "#wrapper-layer"),
       id: _
     })]

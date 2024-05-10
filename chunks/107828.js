@@ -38,8 +38,8 @@ var l, a = n("735250"),
   g = n("366695"),
   E = n("346656"),
   _ = n("409216"),
-  I = n("136033"),
-  S = n("757698"),
+  S = n("136033"),
+  I = n("757698"),
   N = n("630641"),
   T = n("689938"),
   A = n("259285");
@@ -535,10 +535,10 @@ class b extends s.Component {
       link: n,
       children: l
     } = this.props, s = (0, c.tryParseChannelPath)(n.path);
-    return null == s || void 0 === s.messageId ? (e = T.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, a.jsx)(S.default, {
+    return null == s || void 0 === s.messageId ? (e = T.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, a.jsx)(I.default, {
       width: 16,
       height: 16
-    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(I.default, {
+    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(S.default, {
       width: 16,
       height: 16
     })) : (e = T.default.Messages.QUICKSWITCHER_LINK_NO_ACCESS, t = (0, a.jsx)(N.default, {

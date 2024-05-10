@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return N
   }
 }), n("47120"), n("653041");
 var a = n("735250"),
@@ -26,7 +26,7 @@ var a = n("735250"),
   I = n("689938"),
   A = n("830858");
 
-function N(e) {
+function v(e) {
   let {
     onClose: t,
     channel: n
@@ -40,16 +40,16 @@ function N(e) {
   })
 }
 
-function v(e) {
+function N(e) {
   let {
     channel: t,
     showLeftDivider: n = !1,
     ...g
-  } = e, v = (0, m.default)(), x = (0, s.useStateFromStores)([h.default], () => {
+  } = e, N = (0, m.default)(), x = (0, s.useStateFromStores)([h.default], () => {
     var e, t;
-    return null === (e = h.default.getSessionById(null !== (t = null == v ? void 0 : v.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
+    return null === (e = h.default.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
   }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, y] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), L = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), O = (0, p.default)(), j = O.filter(e => e.twoWayLink), [P, D] = l.useState(!1);
-  if (null == v && 0 === O.length || t.isBroadcastChannel()) return null;
+  if (null == N && 0 === O.length || t.isBroadcastChannel()) return null;
   let b = _.ChannelModes.VOICE !== R && [_.ChannelLayouts.NO_CHAT, _.ChannelLayouts.FULL_SCREEN].includes(y) ? "top" : "bottom",
     U = [];
   return j.length > 0 && U.push(i.DismissibleContent.DONUT_DESKTOP_NUX), (0, a.jsx)(u.default, {
@@ -80,7 +80,7 @@ function v(e) {
                   s(T.ContentDismissActionType.UNKNOWN), D(!0)
                 },
                 gameConsoleAccounts: j
-              }) : (0, a.jsx)(N, {
+              }) : (0, a.jsx)(v, {
                 onClose: () => {
                   n()
                 },

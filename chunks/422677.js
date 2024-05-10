@@ -32,8 +32,8 @@ function I(e) {
   } = e, {
     analyticsLocations: A
   } = (0, o.default)(), {
-    fetched: N,
-    applicationsShelf: v,
+    fetched: v,
+    applicationsShelf: N,
     installedIntegrations: x
   } = (0, E.usePrivateChannelIntegrationState)({
     channelId: t
@@ -88,7 +88,7 @@ function I(e) {
           })]
         }), (0, a.jsx)("div", {
           className: S.applicationRowContainer,
-          children: N ? v.map(e => {
+          children: v ? N.map(e => {
             if (null != x.find(t => t.application.id === e.id)) return null;
             let n = null != e.description ? (0, u.parseBioReact)(e.description) : null,
               l = h.default.getApplicationIconURL({

@@ -24,8 +24,8 @@ var a, l = n("735250"),
   T = n("194359"),
   I = n("425493"),
   A = n("461745"),
-  N = n("40851"),
-  v = n("367907"),
+  v = n("40851"),
+  N = n("367907"),
   x = n("762914"),
   M = n("43267"),
   R = n("933557"),
@@ -153,7 +153,7 @@ class ed extends(a = s.PureComponent) {
       channel: e
     } = this.props;
     p.default.wait(() => _.default.open(null == e ? void 0 : e.id));
-    let t = (0, v.collectChannelAnalyticsMetadata)(e);
+    let t = (0, N.collectChannelAnalyticsMetadata)(e);
     null != e ? e.isDM() ? Y.default.track($.AnalyticEvents.OPEN_POPOUT, {
       ...t,
       type: "Add Friends to DM",
@@ -649,7 +649,7 @@ class ed extends(a = s.PureComponent) {
     })
   }
 }
-el(ed, "contextType", N.default);
+el(ed, "contextType", v.default);
 let ec = h.default.connectStores([D.default, P.default, w.default], e => {
   let t, {
     channel: n

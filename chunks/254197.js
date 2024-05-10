@@ -29,8 +29,8 @@ let O = s.forwardRef(function(e, t) {
   var n, l;
   let {
     className: O,
-    isExpanded: M,
-    isExpansionAnimationComplete: y,
+    isExpanded: y,
+    isExpansionAnimationComplete: M,
     onCtxMenuOpen: P,
     onCtxMenuClose: x,
     onCtxMenuSelect: D,
@@ -50,7 +50,7 @@ let O = s.forwardRef(function(e, t) {
     location: v.QuestsExperimentLocations.QUESTS_BAR
   }, {
     autoTrackExposure: !1
-  }), V = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (null === (l = b.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, W = M && y, K = (0, m.getQuestBarHeroAssetUrl)(b), z = (0, m.getQuestsInstructionsToWinReward)({
+  }), V = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (null === (l = b.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, W = y && M, K = (0, m.getQuestBarHeroAssetUrl)(b), z = (0, m.getQuestsInstructionsToWinReward)({
     quest: b,
     location: v.QuestsExperimentLocations.QUESTS_BAR,
     useV2Variants: H === S.QuestBarExperimentVariants.V2

@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("367907"),
   I = n("555573"),
   A = n("456007"),
-  N = n("10718"),
-  v = n("895924"),
+  v = n("10718"),
+  N = n("895924"),
   x = n("581364"),
   M = n("667204"),
   R = n("541716"),
@@ -75,8 +75,8 @@ var a = n("735250"),
   eT = n("979956"),
   eI = n("655687"),
   eA = n("25007"),
-  eN = n("199649"),
-  ev = n("1397"),
+  ev = n("199649"),
+  eN = n("1397"),
   ex = n("981631"),
   eM = n("689938"),
   eR = n("19340");
@@ -146,11 +146,11 @@ class eP extends l.PureComponent {
     } = (0, x.extractInteractionDataProps)(e.interactionData), {
       command: l,
       application: s
-    } = N.getCachedCommand(t, n);
+    } = v.getCachedCommand(t, n);
     if (null != l) {
       var i, r;
       let e = null != s ? {
-        type: v.ApplicationCommandSectionType.APPLICATION,
+        type: N.ApplicationCommandSectionType.APPLICATION,
         id: s.id,
         icon: null !== (r = null == s ? void 0 : null === (i = s.bot) || void 0 === i ? void 0 : i.username) && void 0 !== r ? r : s.icon,
         name: s.name,
@@ -160,7 +160,7 @@ class eP extends l.PureComponent {
         channelId: t.id,
         command: l,
         section: e,
-        location: v.ApplicationCommandTriggerLocations.RECALL,
+        location: N.ApplicationCommandTriggerLocations.RECALL,
         initialValues: (0, A.getInitialValuesFromInteractionOptions)(l, null != a ? a : [])
       })
     }
@@ -330,7 +330,7 @@ class eP extends l.PureComponent {
         chatInputType: d
       } = this.props, c = !1;
       if (null != l) {
-        if (l.inputType === v.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return eE.ComponentDispatch.dispatch(ex.ComponentActions.SHAKE_APP, {
+        if (l.inputType === N.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return eE.ComponentDispatch.dispatch(ex.ComponentActions.SHAKE_APP, {
           duration: 200,
           intensity: 2
         }), Promise.resolve({
@@ -345,7 +345,7 @@ class eP extends l.PureComponent {
             channel: o
           }
         });
-        if (l.inputType !== v.ApplicationCommandInputType.BUILT_IN_TEXT) return Promise.resolve({
+        if (l.inputType !== N.ApplicationCommandInputType.BUILT_IN_TEXT) return Promise.resolve({
           shouldClear: !0,
           shouldRefocus: !0
         });
@@ -474,9 +474,9 @@ class eD extends l.PureComponent {
     } = this.props, {
       textAreaFocused: I,
       textAreaHighlighted: A
-    } = this.state, N = u === R.ChatInputTypes.SIDEBAR;
-    t = N && n.type === ex.ChannelTypes.GUILD_VOICE ? eM.default.Messages.TEXT_IN_VOICE_A11Y_LABEL : N && n.type === ex.ChannelTypes.GUILD_STAGE_VOICE ? eM.default.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.ChannelTypesSets.THREADS.has(n.type) ? eM.default.Messages.THREAD_A11Y_LABEL : eM.default.Messages.CHANNEL_A11Y_LABEL;
-    let v = (0, a.jsx)(en.default, {
+    } = this.state, v = u === R.ChatInputTypes.SIDEBAR;
+    t = v && n.type === ex.ChannelTypes.GUILD_VOICE ? eM.default.Messages.TEXT_IN_VOICE_A11Y_LABEL : v && n.type === ex.ChannelTypes.GUILD_STAGE_VOICE ? eM.default.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.ChannelTypesSets.THREADS.has(n.type) ? eM.default.Messages.THREAD_A11Y_LABEL : eM.default.Messages.CHANNEL_A11Y_LABEL;
+    let N = (0, a.jsx)(en.default, {
       tutorialId: "writing-messages",
       position: "left",
       offsetX: 75,
@@ -513,7 +513,7 @@ class eD extends l.PureComponent {
             event: ex.ComponentActions.OPEN_EXPRESSION_PICKER,
             handler: this.handleOpenExpressionPicker
           }), (0, a.jsxs)(ej, {
-            isSidebar: N,
+            isSidebar: v,
             className: eR.chatContent,
             "aria-label": t.format({
               channelName: n.name
@@ -524,7 +524,7 @@ class eD extends l.PureComponent {
             children: [(0, a.jsx)(eA.default, {
               channel: n,
               guild: l,
-              narrow: N
+              narrow: v
             }), (0, a.jsxs)(d.HeadingLevel, {
               component: (0, a.jsx)(d.HiddenVisually, {
                 children: (0, a.jsx)(d.H, {
@@ -538,7 +538,7 @@ class eD extends l.PureComponent {
                 forceCozy: _,
                 filterAfterTimestamp: m,
                 showingQuarantineBanner: h
-              }), null == n.guild_id || N ? null : (0, a.jsx)(V.default, {
+              }), null == n.guild_id || v ? null : (0, a.jsx)(V.default, {
                 guildId: n.guild_id,
                 channel: n
               }), _ ? null : null !== (e = this.renderMessageBanner({
@@ -553,16 +553,16 @@ class eD extends l.PureComponent {
                 className: eR.form,
                 children: [S && (0, a.jsx)(X.default, {
                   channelId: n.id
-                }), n.isPrivate() ? (0, a.jsx)(eN.default, {
+                }), n.isPrivate() ? (0, a.jsx)(ev.default, {
                   channel: n,
-                  children: v
-                }) : (0, a.jsx)(ev.default, {
+                  children: N
+                }) : (0, a.jsx)(eN.default, {
                   channel: n,
-                  children: v
+                  children: N
                 }), (0, a.jsx)(E.default, {
                   channel: n,
                   poggermodeEnabled: S
-                }), !N && (0, a.jsx)(b.default, {})]
+                }), !v && (0, a.jsx)(b.default, {})]
               }), (0, a.jsx)(eh.ChatLayerContainer, {})]
             })]
           })]

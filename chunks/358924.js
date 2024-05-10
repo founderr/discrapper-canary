@@ -24,8 +24,8 @@ var a, s, l = n("735250"),
   R = n("933557"),
   L = n("102172"),
   O = n("871118"),
-  M = n("849171"),
-  y = n("314897"),
+  y = n("849171"),
+  M = n("314897"),
   P = n("592125"),
   x = n("594174"),
   D = n("368874"),
@@ -491,7 +491,7 @@ es.Header = ea, es.Body = e => {
       return d(t)
     })
   }, [f]);
-  let h = (0, u.useStateFromStoresArray)([x.default, y.default], () => Array.from(s).map(e => y.default.getId() === e ? null : x.default.getUser(e)).filter(V.isNotNullish)),
+  let h = (0, u.useStateFromStoresArray)([x.default, M.default], () => Array.from(s).map(e => M.default.getId() === e ? null : x.default.getUser(e)).filter(V.isNotNullish)),
     C = (0, E.useAnalyticsContext)(),
     {
       analyticsLocations: m
@@ -534,7 +534,7 @@ es.Header = ea, es.Body = e => {
         className: q.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {
         className: q.embeddedActivityImageOverlay,
-        children: [(0, l.jsx)(M.Avatars, {
+        children: [(0, l.jsx)(y.Avatars, {
           users: h,
           guildId: a,
           channelId: n.id
