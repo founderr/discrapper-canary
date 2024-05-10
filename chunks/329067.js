@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return I
+    return _
   },
   useLightningCheckoutEligibility: function() {
-    return S
+    return N
   }
 }), a("47120");
 var l = a("735250"),
@@ -16,17 +16,19 @@ var l = a("735250"),
   u = a("244526"),
   c = a("881052"),
   d = a("128069"),
-  f = a("176919"),
-  C = a("63063"),
-  m = a("937615"),
-  p = a("598"),
-  E = a("409813"),
-  h = a("333867"),
-  g = a("74179"),
-  x = a("981631"),
-  b = a("689938"),
-  T = a("834042");
-let v = e => {
+  f = a("906732"),
+  C = a("176919"),
+  m = a("626135"),
+  E = a("63063"),
+  p = a("937615"),
+  h = a("598"),
+  g = a("409813"),
+  x = a("333867"),
+  T = a("74179"),
+  L = a("981631"),
+  v = a("689938"),
+  b = a("834042");
+let S = e => {
     let {
       children: t,
       style: a,
@@ -44,7 +46,7 @@ let v = e => {
       children: t
     })
   },
-  L = e => {
+  I = e => {
     let {
       children: t,
       className: a,
@@ -61,64 +63,75 @@ let v = e => {
     })
   };
 
-function S() {
+function N() {
   let {
     defaultPaymentSource: e
-  } = (0, g.default)({
+  } = (0, T.default)({
     isGift: !1,
     activeSubscription: null
   });
   return {
-    userIsEligible: null !== e && !x.REDIRECTED_PAYMENT_SOURCES.has(e.type)
+    userIsEligible: null !== e && !L.REDIRECTED_PAYMENT_SOURCES.has(e.type)
   }
 }
 
-function I(e) {
+function _(e) {
   let {
     onPurchaseComplete: t,
     onError: a,
     onReviewPurchase: r,
-    paymentSource: g,
-    loadId: S,
-    skuId: I,
-    isGift: N = !1,
-    analyticsLocations: _
+    paymentSource: T,
+    loadId: N,
+    skuId: _,
+    isGift: O = !1,
+    baseAnalyticsData: y
   } = e, {
-    step: O,
-    setStep: y,
-    paymentError: R,
-    paymentAuthenticationState: A,
-    application: j,
-    skuPricePreviewsById: k
-  } = (0, p.usePaymentContext)(), [P, B] = s.useState(!1), M = s.useRef(null), D = k[I], F = null != D ? D[g.id] : null, w = null != F ? (0, m.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : null;
+    step: A,
+    setStep: R,
+    paymentError: k,
+    paymentAuthenticationState: j,
+    application: P,
+    skuPricePreviewsById: B
+  } = (0, h.usePaymentContext)(), {
+    analyticsLocations: M
+  } = (0, f.default)(), [D, F] = s.useState(!1), w = s.useRef(null), H = B[_], U = null != H ? H[T.id] : null, W = null != U ? (0, p.formatPrice)(null == U ? void 0 : U.amount, null == U ? void 0 : U.currency) : null, G = s.useMemo(() => ({
+    ...y,
+    load_id: N,
+    payment_type: L.PurchaseTypeToAnalyticsPaymentType[L.PurchaseTypes.ONE_TIME],
+    price: null == U ? void 0 : U.amount,
+    currency: null == U ? void 0 : U.currency
+  }), [y, U, N]);
   s.useEffect(() => {
-    O !== E.Step.REVIEW && y(E.Step.REVIEW)
+    A !== g.Step.REVIEW && R(g.Step.REVIEW)
   }), s.useEffect(() => {
-    A === f.PaymentAuthenticationState.ERROR && a(R)
-  }, [a, R, A]);
-  let H = async () => {
-    n()(null != F, "skuPricePreview can't be null"), n()(null != j, "application can't be null");
+    j === C.PaymentAuthenticationState.ERROR && a(k)
+  }, [a, k, j]);
+  let V = async () => {
+    await m.default.track(L.AnalyticEvents.PAYMENT_FLOW_COMPLETED, G), n()(null != U, "skuPricePreview can't be null"), n()(null != P, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(j.id, I, {
-        expectedAmount: F.amount,
-        expectedCurrency: F.currency,
-        isGift: N,
-        paymentSource: g,
-        loadId: S
-      }), B(!1), t()
+      await (0, o.purchaseSKU)(P.id, _, {
+        expectedAmount: U.amount,
+        expectedCurrency: U.currency,
+        isGift: O,
+        paymentSource: T,
+        loadId: N
+      }), F(!1), t()
     } catch (t) {
       let e = t instanceof c.BillingError ? t : new c.BillingError(t);
       e.code !== d.ErrorCodes.CONFIRMATION_REQUIRED && e.code !== d.ErrorCodes.AUTHENTICATION_REQUIRED && a(t)
     }
-  }, U = s.useCallback(e => {
-    e === E.Step.CONFIRM && (B(!1), t()), y(e)
-  }, [y, t]);
-  return (0, f.usePaymentStepForAuthentication)(O, A, U), (0, l.jsxs)("div", {
-    className: T.reviewContainer,
+  }, z = s.useCallback(e => {
+    m.default.track(L.AnalyticEvents.PAYMENT_FLOW_STEP, {
+      ...G,
+      to_step: e
+    }), e === g.Step.CONFIRM && (F(!1), t()), R(e)
+  }, [G, R, t]);
+  return (0, C.usePaymentStepForAuthentication)(A, j, z), (0, l.jsxs)("div", {
+    className: b.reviewContainer,
     children: [(0, l.jsx)(i.FormSection, {
       children: (0, l.jsx)(i.FormItem, {
         children: (0, l.jsx)(u.default, {
-          paymentSource: g,
+          paymentSource: T,
           isDefault: !0,
           showSubtext: !1,
           showPaymentSourceIcon: !1,
@@ -127,32 +140,32 @@ function I(e) {
         })
       })
     }), (0, l.jsx)("div", {
-      className: T.legalTerms,
+      className: b.legalTerms,
       children: (0, l.jsx)("p", {
-        children: b.default.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
-          paidURL: C.default.getArticleURL(x.HelpdeskArticles.PAID_TERMS)
+        children: v.default.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
+          paidURL: E.default.getArticleURL(L.HelpdeskArticles.PAID_TERMS)
         })
       })
-    }), (0, l.jsx)(v, {
-      className: T.buyButton,
-      submitting: P,
+    }), (0, l.jsx)(S, {
+      className: b.buyButton,
+      submitting: D,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
-        B(!0), await H()
+        F(!0), await V()
       },
-      children: null !== w ? "Pay " + w : (0, l.jsx)(i.Spinner, {
+      children: null !== W ? "Pay " + W : (0, l.jsx)(i.Spinner, {
         type: i.Spinner.Type.PULSING_ELLIPSIS
       })
-    }), !P && (0, l.jsx)(L, {
-      className: T.reviewButton,
+    }), !D && (0, l.jsx)(I, {
+      className: b.reviewButton,
       onClick: () => {
-        r(), (0, h.default)({
-          skuId: I,
-          analyticsLocations: _,
-          returnRef: M
+        r(), (0, x.default)({
+          skuId: _,
+          analyticsLocations: M,
+          returnRef: w
         })
       },
-      children: b.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
+      children: v.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
     })]
   })
 }

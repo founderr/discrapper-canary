@@ -16,15 +16,15 @@ var l = a("735250"),
   f = a("906732"),
   C = a("1585"),
   m = a("624377"),
-  p = a("372654"),
-  E = a("715627"),
+  E = a("372654"),
+  p = a("715627"),
   h = a("300284"),
   g = a("642619"),
   x = a("598"),
-  b = a("333867"),
-  T = a("329067"),
+  T = a("333867"),
+  L = a("329067"),
   v = a("981631"),
-  L = a("302800"),
+  b = a("302800"),
   S = a("689938"),
   I = a("894775");
 let N = {
@@ -52,34 +52,49 @@ function O(e) {
     paymentSource: a,
     onPurchaseComplete: O,
     onUse: y,
-    onError: R,
-    onReviewPurchase: A,
-    confettiCanvas: j = null
-  } = e, k = (0, r.v4)(), P = s.useRef(null), [B] = t.items, {
-    analyticsLocations: M
-  } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
-    buttonColors: D
-  } = (0, m.default)(t.styles), F = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), w = (0, L.getCustomConfettiDisplayOptions)(t.skuId), [H, U] = s.useState(!1), [W, G] = s.useState(!1), V = null != D ? {
-    background: (0, p.getBackgroundGradient)(D, 90),
-    color: D.text.toHslString()
-  } : void 0, z = (0, h.default)({
-    analyticsLocations: M
-  }), K = {
-    onPurchaseComplete: () => {
-      U(!0), O()
-    },
-    onError: e => {
-      R(e), G(!0)
-    },
-    onReviewPurchase: A,
-    paymentSource: a,
-    skuId: t.skuId,
-    analyticsLocations: M
-  };
+    onError: A,
+    onReviewPurchase: R,
+    loadId: k,
+    baseAnalyticsData: j,
+    confettiCanvas: P = null
+  } = e;
+  k = null != k ? k : (0, r.v4)();
+  let B = s.useRef(null),
+    [M] = t.items,
+    {
+      analyticsLocations: D
+    } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD, d.default.COLLECTIBLES_LIGHTNING_CHECKOUT),
+    {
+      buttonColors: F
+    } = (0, m.default)(t.styles),
+    w = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion),
+    H = (0, b.getCustomConfettiDisplayOptions)(t.skuId),
+    [U, W] = s.useState(!1),
+    [G, V] = s.useState(!1),
+    z = null != F ? {
+      background: (0, E.getBackgroundGradient)(F, 90),
+      color: F.text.toHslString()
+    } : void 0,
+    K = (0, h.default)({
+      analyticsLocations: D
+    }),
+    Y = {
+      onPurchaseComplete: () => {
+        W(!0), O()
+      },
+      onError: e => {
+        A(e), V(!0)
+      },
+      onReviewPurchase: R,
+      paymentSource: a,
+      skuId: t.skuId,
+      loadId: k,
+      baseAnalyticsData: j
+    };
   return (0, l.jsxs)("div", {
-    ref: P,
+    ref: B,
     className: I.container,
-    children: [W && (0, l.jsxs)("div", {
+    children: [G && (0, l.jsxs)("div", {
       className: I.cardDetails,
       children: [(0, l.jsx)(o.Text, {
         variant: "text-lg/bold",
@@ -94,15 +109,15 @@ function O(e) {
         })
       }), (0, l.jsx)(o.Button, {
         onClick: () => {
-          A(), (0, b.default)({
+          R(), (0, T.default)({
             skuId: t.skuId,
-            analyticsLocations: M,
-            returnRef: P
+            analyticsLocations: D,
+            returnRef: B
           })
         },
         children: S.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
       })]
-    }), !W && (H ? (0, l.jsxs)("div", {
+    }), !G && (U ? (0, l.jsxs)("div", {
       className: I.cardDetails,
       children: [(0, l.jsx)(o.Text, {
         variant: "text-lg/bold",
@@ -118,17 +133,17 @@ function O(e) {
           children: S.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
         })
       }), (0, l.jsx)(_, {
-        style: V,
+        style: z,
         onClick: () => {
-          if (y(), (0, u.popLayer)(), z(), (null == B ? void 0 : B.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
+          if (y(), (0, u.popLayer)(), K(), (null == M ? void 0 : M.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
             (0, C.openAvatarDecorationModal)({
-              initialSelectedDecoration: B,
-              analyticsLocations: M
+              initialSelectedDecoration: M,
+              analyticsLocations: D
             });
             return
-          }(null == B ? void 0 : B.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
-            initialSelectedEffectId: B.id,
-            analyticsLocations: M
+          }(null == M ? void 0 : M.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
+            initialSelectedEffectId: M.id,
+            analyticsLocations: D
           })
         },
         children: S.default.Messages.COLLECTIBLES_USE_NOW
@@ -147,13 +162,13 @@ function O(e) {
         isGift: !1,
         activeSubscription: null,
         purchaseType: v.PurchaseTypes.ONE_TIME,
-        children: (0, l.jsx)(T.default, {
-          ...K
+        children: (0, l.jsx)(L.default, {
+          ...Y
         })
       })]
-    })), !W && H && !(null != w) && !F && (0, l.jsx)(E.default, {
-      confettiTarget: P.current,
-      customConfettiCanvas: j,
+    })), !G && U && !(null != H) && !w && (0, l.jsx)(p.default, {
+      confettiTarget: B.current,
+      customConfettiCanvas: P,
       speedValues: N,
       numBursts: 4,
       particlesPerBurst: 100,
