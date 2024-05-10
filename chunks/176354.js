@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
   getEmojiUrl: function() {
     return O
   }
-}), n("47120"), n("757143"), n("724458"), n("653041");
+}), n("47120"), n("757143");
 var i = n("738774"),
   r = n("906411"),
   a = n("889564"),
@@ -140,15 +140,16 @@ t.default = {
       categoryEmojis: t,
       channel: n,
       intention: i
-    } = e, r = t.reduce((e, t) => {
-      let r = m({
-        emoji: t,
+    } = e, r = !1, a = 0;
+    for (let e of t) {
+      let t = m({
+        emoji: e,
         channel: n,
         intention: i
       });
-      return (r === I.EmojiDisabledReasons.PREMIUM_LOCKED || r === I.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE) && e.push(r), e
-    }, []);
-    return r.some(e => e === I.EmojiDisabledReasons.PREMIUM_LOCKED) && r.length === t.length
+      t === I.EmojiDisabledReasons.PREMIUM_LOCKED ? (r = !0, a++) : t === I.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE && a++
+    }
+    return r && a === t.length
   },
   isEmojiFilteredOrLocked(e) {
     let {

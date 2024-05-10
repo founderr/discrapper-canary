@@ -51,45 +51,44 @@ function j(e) {
     category: l,
     handleCategorySelect: d,
     isWindowFocused: _,
-    useReducedMotion: E,
-    isNitroLocked: I
-  } = e, T = (0, u.useListItem)("expression-guild-".concat(n)), f = l.type === L.EmojiCategoryTypes.GUILD ? null : l.id, h = t === n, A = l.type === L.EmojiCategoryTypes.GUILD ? l.guild : null, {
-    enabled: N
+    useReducedMotion: E
+  } = e, I = (0, u.useListItem)("expression-guild-".concat(n)), T = l.type === L.EmojiCategoryTypes.GUILD ? null : l.id, f = t === n, h = l.type === L.EmojiCategoryTypes.GUILD ? l.guild : null, {
+    enabled: A
   } = p.default.useExperiment({
     location: "Emoji Picker Category List"
   }, {
-    autoTrackExposure: I
-  }), g = (0, i.jsxs)(c.Clickable, {
-    ...T,
-    "aria-label": (0, O.getAriaIdForEmojiCategory)(l, A),
+    autoTrackExposure: l.isNitroLocked
+  }), N = A && l.isNitroLocked, g = (0, i.jsxs)(c.Clickable, {
+    ...I,
+    "aria-label": (0, O.getAriaIdForEmojiCategory)(l, h),
     className: s()({
-      [y.categoryItemGuildCategory]: null != A,
-      [y.categoryItemDefaultCategory]: null == A,
-      [y.categoryItemDefaultCategorySelected]: null == A && h,
+      [y.categoryItemGuildCategory]: null != h,
+      [y.categoryItemDefaultCategory]: null == h,
+      [y.categoryItemDefaultCategorySelected]: null == h && f,
       [y.categoryItemRecentEmoji]: l.type === L.EmojiCategoryTypes.RECENT
     }),
     onClick: () => {
-      null != A && m.default.track(v.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+      null != h && m.default.track(v.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
         location: null == a ? void 0 : a.location,
         tab: D.ExpressionPickerViewType.EMOJI,
-        guild_id: A.id
+        guild_id: h.id
       }), d(n)
     },
-    children: [null != A ? (0, i.jsx)(R.default, {
-      guild: A,
-      isSelected: h,
+    children: [null != h ? (0, i.jsx)(R.default, {
+      guild: h,
+      isSelected: f,
       shouldAnimate: !E && _,
-      isLocked: N && I
-    }) : null, null == A && null != f ? (0, i.jsx)(C.default, {
-      categoryId: f,
+      isLocked: N
+    }) : null, null == h && null != T ? (0, i.jsx)(C.default, {
+      categoryId: T,
       className: y.categoryIcon,
       height: b,
       width: b
     }) : null]
   }), M = o[n + 1], P = null != M && l.type === L.EmojiCategoryTypes.GUILD && M.type !== L.EmojiCategoryTypes.GUILD;
-  return null != A ? (0, i.jsxs)(r.Fragment, {
+  return null != h ? (0, i.jsxs)(r.Fragment, {
     children: [(0, i.jsx)(S.default, {
-      guild: A,
+      guild: h,
       includeActivity: !1,
       children: (0, i.jsx)("div", {
         children: g
@@ -109,11 +108,9 @@ t.default = e => {
   } = e, _ = T.EmojiPickerStore.useStore(e => e.activeCategoryIndex), S = (0, g.useCategorySelectHandler)({
     sectionDescriptors: a,
     emojiListRef: n
-  }), m = (0, E.useAnalyticsContext)(), N = (0, O.useEmojiCategories)(o, u), p = r.useRef(null), C = (0, d.useStateFromStores)([h.default], () => h.default.isFocused()), R = (0, d.useStateFromStores)([I.default], () => I.default.useReducedMotion, []), v = (0, O.useCategoryNitroLockedStates)(o, u, N), D = r.useMemo(() => l().memoize((e, t) => {
+  }), m = (0, E.useAnalyticsContext)(), N = (0, O.useEmojiCategories)(o, u), p = r.useRef(null), C = (0, d.useStateFromStores)([h.default], () => h.default.isFocused()), R = (0, d.useStateFromStores)([I.default], () => I.default.useReducedMotion, []), v = r.useMemo(() => l().memoize((e, t) => {
     let n = N[t];
-    if (null == n) return;
-    let r = v[t];
-    return (0, i.jsx)(j, {
+    if (null != n) return (0, i.jsx)(j, {
       activeIndex: _,
       analyticsContext: m,
       categories: N,
@@ -121,10 +118,9 @@ t.default = e => {
       categoryIndex: t,
       handleCategorySelect: S,
       isWindowFocused: C,
-      useReducedMotion: R,
-      isNitroLocked: r
+      useReducedMotion: R
     }, t)
-  }), [_, m, N, S, C, R, v]), P = r.useMemo(() => [8, 8, 0, 8], []), w = r.useCallback((e, t) => {
+  }), [_, m, N, S, C, R]), D = r.useMemo(() => [8, 8, 0, 8], []), P = r.useCallback((e, t) => {
     let n = N[t];
     if (n.type === L.EmojiCategoryTypes.RECENT) return x;
     if (n.type === L.EmojiCategoryTypes.GUILD) {
@@ -133,10 +129,10 @@ t.default = e => {
     }
     return Y
   }, [N]), {
-    nonUnicodeCategoryCount: W,
-    firstUnicodeCategoryIndex: K,
-    firstUnicodeCategoryOffsetTop: z,
-    rowCountBySection: Z
+    nonUnicodeCategoryCount: w,
+    firstUnicodeCategoryIndex: W,
+    firstUnicodeCategoryOffsetTop: K,
+    rowCountBySection: z
   } = r.useMemo(() => {
     let e = 0,
       t = 0,
@@ -152,62 +148,62 @@ t.default = e => {
       firstUnicodeCategoryOffsetTop: r,
       rowCountBySection: [e, n, i]
     }
-  }, [N]), [X, Q] = r.useState(!0);
+  }, [N]), [Z, X] = r.useState(!0);
   r.useLayoutEffect(() => {
-    Q(W >= 7)
-  }, [W]);
-  let q = r.useCallback(e => {
+    X(w >= 7)
+  }, [w]);
+  let Q = r.useCallback(e => {
       var t;
       let n = null === (t = p.current) || void 0 === t ? void 0 : t.getListDimensions();
-      if (null != n) e + n.height - k >= z ? Q(!1) : Q(!0)
-    }, [z]),
-    J = r.useCallback(e => {
+      if (null != n) e + n.height - k >= K ? X(!1) : X(!0)
+    }, [K]),
+    q = r.useCallback(e => {
       var t;
-      e(K), null === (t = p.current) || void 0 === t || t.scrollTo(z)
-    }, [z, K]),
-    $ = r.useCallback((e, t) => {
+      e(W), null === (t = p.current) || void 0 === t || t.scrollTo(K)
+    }, [K, W]),
+    J = r.useCallback((e, t) => {
       let n = N[e];
       if (null == n) return 0;
-      let i = X ? B : 0;
+      let i = Z ? B : 0;
       if (n.type === L.EmojiCategoryTypes.RECENT) return t ? 0 : G;
       if (n.type === L.EmojiCategoryTypes.GUILD) {
         let n = N[e + 1];
         return null != n && n.type !== L.EmojiCategoryTypes.GUILD ? t ? k + -2 * V + U + i : U : t ? i : U
       }
       return t ? U + i : 2 * U
-    }, [N, X]),
-    ee = r.useMemo(() => function(e, t) {
+    }, [N, Z]),
+    $ = r.useMemo(() => function(e, t) {
       return (0, i.jsx)(r.Fragment, {
         children: t
       }, e)
     }, []),
-    et = X ? "shortcut" : "hiddenshortcut";
+    ee = Z ? "shortcut" : "hiddenshortcut";
   return (0, i.jsx)(f.default, {
     categoryListRef: p,
     expressionsListRef: n,
     className: t,
     store: T.EmojiPickerStore,
     categories: N,
-    listPadding: P,
-    onScroll: q,
-    renderCategoryListItem: D,
-    renderSection: ee,
+    listPadding: D,
+    onScroll: Q,
+    renderCategoryListItem: v,
+    renderSection: $,
     rowCount: N.length,
-    categoryHeight: w,
-    getScrollOffsetForIndex: $,
-    rowCountBySection: Z,
-    children: e => W >= 7 && (0, i.jsx)(c.Clickable, {
-      "aria-hidden": !X,
+    categoryHeight: P,
+    getScrollOffsetForIndex: J,
+    rowCountBySection: z,
+    children: e => w >= 7 && (0, i.jsx)(c.Clickable, {
+      "aria-hidden": !Z,
       "aria-label": M.default.Messages.EMOJI_PICKER_SCROLL_TO_UNICODE_A11Y_LABEL,
       className: s()(y.unicodeShortcut, {
-        [y.unicodeShortcutInvisible]: !X
+        [y.unicodeShortcutInvisible]: !Z
       }),
-      tabIndex: X ? 0 : -1,
-      onClick: () => J(e),
+      tabIndex: Z ? 0 : -1,
+      onClick: () => q(e),
       children: (0, i.jsx)(A.default, {
         height: b,
         width: b
       })
-    }, et)
+    }, ee)
   })
 }
