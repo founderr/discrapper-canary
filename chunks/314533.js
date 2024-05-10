@@ -3,21 +3,21 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  i = n("570140"),
-  l = n("317770");
+  l = n("570140"),
+  i = n("317770");
 let r = "CONNECTIONS_GRID_MODAL_KEY";
-class o extends l.default {
+class o extends i.default {
   _initialize() {
-    i.default.subscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow), i.default.subscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide)
+    l.default.subscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow), l.default.subscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide)
   }
   _terminate() {
-    i.default.unsubscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow), i.default.unsubscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide)
+    l.default.unsubscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow), l.default.unsubscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide)
   }
   handleShow(e) {
     let {
       onComplete: t,
-      excludedPlatformTypes: i,
-      integrations: l,
+      excludedPlatformTypes: l,
+      integrations: i,
       onCompleteApplication: o
     } = e;
     !(0, s.hasModalOpen)(r) && (0, s.openModalLazy)(async () => {
@@ -26,8 +26,8 @@ class o extends l.default {
       } = await Promise.all([n.e("99387"), n.e("28538")]).then(n.bind(n, "51299"));
       return n => (0, a.jsx)(e, {
         onComplete: t,
-        excludedPlatformTypes: i,
-        integrations: l,
+        excludedPlatformTypes: l,
+        integrations: i,
         onCompleteApplication: o,
         ...n
       })

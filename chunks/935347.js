@@ -2,8 +2,8 @@
 n.r(t), n("653041");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("392711"),
   o = n.n(r),
   u = n("748780"),
@@ -51,31 +51,31 @@ class P extends s.PureComponent {
       ready: n,
       hide: a,
       problems: s,
-      opacity: i
+      opacity: l
     } = this.state, {
-      connected: l,
+      connected: i,
       soundpack: r,
       reducedMotion: o
-    } = this.props, d = l && n && !a && !s;
-    if (e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== l || d) {
-      if (l && null != this.videoRef) {
+    } = this.props, d = i && n && !a && !s;
+    if (e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== i || d) {
+      if (i && null != this.videoRef) {
         let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * A.default.Millis.SECOND), 600);
         clearTimeout(this._noProblemsTimeout), c.Storage.get(L.DISCODO_STORAGE_KEY) && this._connectedSound.play(), o ? this.setState({
           problems: !1,
-          hide: l
+          hide: i
         }) : this._noProblemsTimeout = setTimeout(() => {
           this.setState({
             problems: !1,
-            hide: l
+            hide: i
           })
         }, e)
       } else this.setState({
         problems: !1,
-        hide: l
+        hide: i
       })
     } else t.hide !== a ? (a ? this.clearProblemsTimeout() : this.setProblemsTimeout(), this.setState({
       shouldRender: !0
-    }), u.default.timing(i, {
+    }), u.default.timing(l, {
       toValue: a ? 0 : 1,
       duration: 200
     }).start(() => this.setState({
@@ -121,7 +121,7 @@ class P extends s.PureComponent {
             })]
           })]
         }), (0, a.jsxs)("div", {
-          className: l()(M.problems, {
+          className: i()(M.problems, {
             [M.slideIn]: this.state.problems
           }),
           children: [(0, a.jsx)("div", {
@@ -251,12 +251,12 @@ t.default = d.default.connectStores([_.default, p.default, m.default, h.default]
     isTryingToConnect: t,
     connected: n,
     incident: s,
-    soundpack: i,
-    reducedMotion: l
+    soundpack: l,
+    reducedMotion: i
   } = e;
   return t ? (0, a.jsx)(P, {
-    reducedMotion: l,
-    soundpack: i,
+    reducedMotion: i,
+    soundpack: l,
     connected: n,
     incident: s
   }) : null

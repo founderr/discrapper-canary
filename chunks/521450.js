@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("613828"),
   o = n("435935"),
   u = n("442837"),
@@ -34,7 +34,7 @@ t.default = () => {
       color: "text-muted",
       children: p.default.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
     }), (0, a.jsx)(d.FormSwitch, {
-      className: l()(g.marginTop8, g.marginBottom20),
+      className: i()(g.marginTop8, g.marginBottom20),
       value: e,
       note: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
@@ -70,7 +70,7 @@ t.default = () => {
         })]
       })
     }) : null, (0, a.jsx)(d.FormSwitch, {
-      className: l()(g.marginTop20, g.marginBottom20),
+      className: i()(g.marginTop20, g.marginBottom20),
       value: !!t[S.EmailCategories.FAMILY_CENTER_DIGEST],
       note: p.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
       hideBorder: !0,

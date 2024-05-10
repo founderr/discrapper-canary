@@ -16,11 +16,11 @@ n.r(t), n.d(t, {
 var a = n("570140");
 n("893776"), n("703656");
 var s = n("626135"),
-  i = n("723359"),
-  l = n("981631");
+  l = n("723359"),
+  i = n("981631");
 
 function r(e) {
-  s.default.track(l.AnalyticEvents.OPEN_MODAL, {
+  s.default.track(i.AnalyticEvents.OPEN_MODAL, {
     type: "Enter Your Birthday",
     source: {
       section: e
@@ -34,9 +34,9 @@ function r(e) {
 function o(e) {
   a.default.wait(() => a.default.dispatch({
     type: "AGE_GATE_MODAL_CLOSE"
-  })), void 0 !== e && s.default.track(l.AnalyticEvents.AGE_GATE_ACTION, {
+  })), void 0 !== e && s.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
     source: e,
-    action: i.AgeGateAnalyticAction.AGE_GATE_CLOSE
+    action: l.AgeGateAnalyticAction.AGE_GATE_CLOSE
   })
 }
 
@@ -45,9 +45,9 @@ function u(e) {
     a.default.dispatch({
       type: "AGE_GATE_SUCCESS_MODAL_OPEN"
     })
-  }), s.default.track(l.AnalyticEvents.AGE_GATE_ACTION, {
+  }), s.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
     source: e,
-    action: i.AgeGateAnalyticAction.AGE_GATE_SUCCESS
+    action: l.AgeGateAnalyticAction.AGE_GATE_SUCCESS
   })
 }
 
@@ -57,8 +57,8 @@ function d(e, t) {
       type: "AGE_GATE_FAILURE_MODAL_OPEN",
       underageMessage: t
     })
-  }), s.default.track(l.AnalyticEvents.AGE_GATE_ACTION, {
+  }), s.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
     source: e,
-    action: i.AgeGateAnalyticAction.AGE_GATE_FAILURE
+    action: l.AgeGateAnalyticAction.AGE_GATE_FAILURE
   })
 }

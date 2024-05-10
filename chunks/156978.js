@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  i = n("122611"),
-  l = n("658434");
+  l = n("122611"),
+  i = n("658434");
 
 function r(e) {
   let {
@@ -18,9 +18,9 @@ function r(e) {
     let e = r.current;
     null != e && n(e.childNodes.length > 0)
   }), (0, a.jsx)("div", {
-    className: l.container,
+    className: i.container,
     ref: r,
-    children: (0, a.jsx)(i.default, {
+    children: (0, a.jsx)(l.default, {
       guild: t
     })
   })

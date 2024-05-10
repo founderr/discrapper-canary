@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
 var a = n("699516"),
   s = n("453542");
 
-function i() {
+function l() {
   return {
     num_friends: a.default.getFriendCount(),
     num_outgoing_requests: a.default.getOutgoingCount(),

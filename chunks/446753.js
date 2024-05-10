@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("120356"),
-  i = n.n(s),
-  l = n("481060"),
+  l = n.n(s),
+  i = n("481060"),
   r = n("258339");
 
 function o(e) {
@@ -21,10 +21,10 @@ function o(e) {
     onClick: d,
     ...c
   } = e;
-  return null != d ? (0, a.jsx)(l.Clickable, {
+  return null != d ? (0, a.jsx)(i.Clickable, {
     onClick: d,
     tabIndex: null != d ? 0 : -1,
-    className: i()(o, {
+    className: l()(o, {
       [r.outer]: !n,
       [r.inset]: n,
       [r.padded]: t,
@@ -34,7 +34,7 @@ function o(e) {
     ...c,
     children: u
   }) : (0, a.jsx)("div", {
-    className: i()(o, {
+    className: l()(o, {
       [r.outer]: !n,
       [r.inset]: n,
       [r.padded]: t,

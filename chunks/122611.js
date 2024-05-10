@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("442837"),
-  l = n("524437"),
+  l = n("442837"),
+  i = n("524437"),
   r = n("433517"),
   o = n("963202"),
   u = n("824991"),
@@ -43,7 +43,7 @@ function b(e) {
     r.Storage.set(y.LAST_HIDDEN_CHANNEL_NOTICE, e), C(e)
   }, p = (0, c.useIsGuildEligibleForClanConversion)(n.id, "ChannelNoticesGuard"), {
     defaultGameId: I
-  } = (0, o.useClanPrepilotExperiment)(n, "ChannelNoticesGuard_2"), g = (0, i.useStateFromStoresArray)(y.CHANNEL_NOTICE_STORES, () => y.CHANNEL_NOTICES.filter(e => {
+  } = (0, o.useClanPrepilotExperiment)(n, "ChannelNoticesGuard_2"), g = (0, l.useStateFromStoresArray)(y.CHANNEL_NOTICE_STORES, () => y.CHANNEL_NOTICES.filter(e => {
     let {
       type: t,
       store: a
@@ -58,49 +58,49 @@ function b(e) {
       let {
         visibleContent: t,
         markAsDismissed: s
-      } = e, i = () => {
+      } = e, l = () => {
         S(Date.now()), s(x.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
-          case l.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
+          case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
             return (0, a.jsx)(m.default, {
               guild: n,
-              markAsDismissed: i
+              markAsDismissed: l
             });
-          case l.DismissibleContent.CHANNEL_NOTICE_INVITE:
+          case i.DismissibleContent.CHANNEL_NOTICE_INVITE:
             return (0, a.jsx)(R.default, {
               guild: n,
-              markAsDismissed: i
+              markAsDismissed: l
             });
-          case l.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
+          case i.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
             return (0, a.jsx)(_.default, {
               guild: n,
-              markAsDismissed: i
+              markAsDismissed: l
             });
-          case l.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER:
+          case i.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER:
             return (0, a.jsx)(O.default, {
               guild: n,
-              markAsDismissed: i
+              markAsDismissed: l
             });
-          case l.DismissibleContent.CHANNEL_NOTICE_GUILD_BANNER:
+          case i.DismissibleContent.CHANNEL_NOTICE_GUILD_BANNER:
             return (0, a.jsx)(h.default, {
               guild: n,
-              markAsDismissed: i
+              markAsDismissed: l
             });
-          case l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE:
+          case i.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE:
             return (0, a.jsx)(v.default, {
               guild: n,
-              markAsDismissed: i
+              markAsDismissed: l
             });
-          case l.DismissibleContent.LINKED_ROLE_ADMIN_GUILD:
+          case i.DismissibleContent.LINKED_ROLE_ADMIN_GUILD:
             return (0, a.jsx)(d.default, {
               guild: n,
               markAsDismissed: () => s(x.ContentDismissActionType.UNKNOWN)
             });
-          case l.DismissibleContent.CHANNEL_LIST_CLAN_ADMIN_UPSELL:
+          case i.DismissibleContent.CHANNEL_LIST_CLAN_ADMIN_UPSELL:
             return (0, a.jsx)(u.default, {
               guild: n,
-              markAsDismissed: i,
+              markAsDismissed: l,
               defaultGameId: I
             });
           default:

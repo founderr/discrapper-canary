@@ -2,8 +2,8 @@
 let a;
 n.r(t);
 var s = n("570140"),
-  i = n("519938"),
-  l = n("317770"),
+  l = n("519938"),
+  i = n("317770"),
   r = n("317381"),
   o = n("928518"),
   u = n("199902"),
@@ -22,7 +22,7 @@ function I() {
   var e;
   let t = a;
   if (null == t || !E.default.isOpen(t)) return !1;
-  s.default.wait(() => i.close(t)), null === (e = h.default.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), a = null
+  s.default.wait(() => l.close(t)), null === (e = h.default.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), a = null
 }
 
 function g() {
@@ -46,12 +46,12 @@ function g() {
     var t;
     let n = d.default.getChannel(e);
     if (null == n || E.default.isOpen(e)) return !1;
-    s.default.wait(() => i.open(n.id, S.PictureInPictureComponents.VIDEO, {
+    s.default.wait(() => l.open(n.id, S.PictureInPictureComponents.VIDEO, {
       channel: n
     })), null === (t = h.default.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), a = e
   }(e))
 }
-class T extends l.default {
+class T extends i.default {
   _initialize() {
     _.default.addChangeListener(g), C.default.addChangeListener(g), h.default.addChangeListener(g), m.default.addChangeListener(g), c.default.addChangeListener(g), u.default.addChangeListener(g), o.default.addChangeListener(g), f.default.addChangeListener(g), r.default.addChangeListener(g)
   }

@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var a, s = n("735250"),
-  i = n("470079"),
-  l = n("392711"),
-  r = n.n(l),
+  l = n("470079"),
+  i = n("392711"),
+  r = n.n(i),
   o = n("302221"),
   u = n("311448");
 
@@ -15,14 +15,14 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class c extends(a = i.PureComponent) {
+class c extends(a = l.PureComponent) {
   onDataUpdate(e, t) {
     let {
       maxValue: n,
       data: a,
       animate: s
-    } = this.props, i = null == e || e.data !== t.data && !r().isEqual(e.data, t.data);
-    if (i && (this.dataChangedAt = performance.now(), this.maxValue = null != n ? n : Math.max(...a)), i || null == e || !e.animate && s || e.color !== this.props.color) {
+    } = this.props, l = null == e || e.data !== t.data && !r().isEqual(e.data, t.data);
+    if (l && (this.dataChangedAt = performance.now(), this.maxValue = null != n ? n : Math.max(...a)), l || null == e || !e.animate && s || e.color !== this.props.color) {
       let e = o.hexToRgb(this.props.color);
       this.fillColor = "rgba(".concat(e.r, ", ").concat(e.g, ", ").concat(e.b, ", 0.5)"), window.cancelAnimationFrame(this.animationFrameRequestId), this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation)
     }
@@ -53,24 +53,24 @@ class c extends(a = i.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), d(this, "dataChangedAt", void 0), d(this, "fillColor", void 0), d(this, "maxValue", void 0), d(this, "canvas", i.createRef()), d(this, "animationFrameRequestId", void 0), d(this, "updateAnimation", e => {
+    super(...e), d(this, "dataChangedAt", void 0), d(this, "fillColor", void 0), d(this, "maxValue", void 0), d(this, "canvas", l.createRef()), d(this, "animationFrameRequestId", void 0), d(this, "updateAnimation", e => {
       let t, n;
       let a = this.canvas.current;
       if (null == a) return;
       let {
         data: s,
-        updateInterval: i,
-        color: l,
+        updateInterval: l,
+        color: i,
         numUpdatesToShow: r,
         lineWidth: u,
         animate: d,
         gradientStopColor: c
       } = this.props;
       if (s.length < 2) return;
-      let f = Math.max(Math.min((e - this.dataChangedAt) / i, 1), 0),
+      let f = Math.max(Math.min((e - this.dataChangedAt) / l, 1), 0),
         E = a.getContext("2d"),
         h = this.maxValue;
-      E.strokeStyle = l, E.lineWidth = u;
+      E.strokeStyle = i, E.lineWidth = u;
       let _ = a.height - E.lineWidth,
         C = E.createLinearGradient(0, 0, 0, _);
       if (null != c) C.addColorStop(0, c);
@@ -79,7 +79,7 @@ class c extends(a = i.PureComponent) {
           r: e,
           g: t,
           b: n
-        } = o.hexToRgb(l);
+        } = o.hexToRgb(i);
         C.addColorStop(0, "rgba(".concat(e, ", ").concat(t, ", ").concat(n, ", 0)"))
       }
       C.addColorStop(1, this.fillColor), E.fillStyle = C;

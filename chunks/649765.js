@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("780384"),
   o = n("481060"),
   u = n("410030"),
@@ -19,7 +19,7 @@ var a = n("735250"),
 let _ = e => {
   let {
     children: t
-  } = e, n = (0, u.default)(), s = (0, r.isThemeLight)(n) ? f.default : c.default, i = (0, a.jsxs)("div", {
+  } = e, n = (0, u.default)(), s = (0, r.isThemeLight)(n) ? f.default : c.default, l = (0, a.jsxs)("div", {
     className: h.coachTipContainer,
     children: [(0, a.jsx)("div", {
       className: h.iconContainer,
@@ -42,7 +42,7 @@ let _ = e => {
     })]
   });
   return (0, a.jsx)(o.Tooltip, {
-    text: i,
+    text: l,
     position: "right",
     "aria-label": E.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
     tooltipClassName: h.marketingBadgeTooltip,
@@ -66,13 +66,13 @@ t.default = e => {
       className: h.newBadge,
       children: E.default.Messages.NEW
     }), (0, a.jsx)("span", {
-      className: l()(h.star, h.starLeft),
+      className: i()(h.star, h.starLeft),
       children: (0, a.jsx)(d.default, {
         width: 8,
         height: 8
       })
     }), (0, a.jsx)("span", {
-      className: l()(h.star, h.starRight),
+      className: i()(h.star, h.starRight),
       children: (0, a.jsx)(d.default, {
         width: 13,
         height: 13

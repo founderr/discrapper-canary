@@ -3,8 +3,8 @@ n.r(t), n("47120");
 var a = n("735250");
 n("470079");
 var s = n("524437"),
-  i = n("481060"),
-  l = n("570140"),
+  l = n("481060"),
+  i = n("570140"),
   r = n("317770"),
   o = n("605236"),
   u = n("594174"),
@@ -32,10 +32,10 @@ function T(e, t, n) {
 let A = "PremiumServerDriveAnnouncementModal";
 class N extends r.default {
   _initialize() {
-    l.default.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), l.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
+    i.default.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), i.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
   _terminate() {
-    l.default.unsubscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), l.default.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
+    i.default.unsubscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), i.default.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
   constructor(...e) {
     super(...e), T(this, "maybeOpenServerDriveAnnouncementModal", (e, t) => {
@@ -43,7 +43,7 @@ class N extends r.default {
         content: e,
         isPreview: t
       });
-      return null != s && ((0, i.closeModal)(A), (0, i.openModalLazy)(async () => {
+      return null != s && ((0, l.closeModal)(A), (0, l.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.resolve().then(n.bind(n, "318199"));
@@ -72,7 +72,7 @@ class N extends r.default {
       } : {}
     }), T(this, "mayShowAnnouncementModal", async () => {
       if (await (0, p.maybeFetchActiveBogoPromotion)(), !f.ProcessArgs.isDisallowPopupsSet()) {
-        if (!(0, i.hasAnyModalOpen)() && h.default.getCurrentConfig({
+        if (!(0, l.hasAnyModalOpen)() && h.default.getCurrentConfig({
             location: "OfferAnnouncementManager"
           }).enabled) {
           let e = u.default.getCurrentUser();
@@ -81,7 +81,7 @@ class N extends r.default {
           if (null == t) {
             _.default.getCurrentConfig({
               location: "OfferAnnouncementManager"
-            }).enabled && !(0, o.isDismissibleContentDismissed)(s.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_MODAL) && (0, i.openModalLazy)(async () => {
+            }).enabled && !(0, o.isDismissibleContentDismissed)(s.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_MODAL) && (0, l.openModalLazy)(async () => {
               let {
                 default: e
               } = await Promise.all([n.e("99387"), n.e("54749")]).then(n.bind(n, "937733"));
@@ -94,12 +94,12 @@ class N extends r.default {
           for (let e of t)
             if (this.maybeOpenServerDriveAnnouncementModal(e, !1)) break
         }
-        if (!(0, i.hasAnyModalOpen)() && !h.default.getCurrentConfig({
+        if (!(0, l.hasAnyModalOpen)() && !h.default.getCurrentConfig({
             location: "OfferAnnouncementManager"
           }).enabled && _.default.getCurrentConfig({
             location: "OfferAnnouncementManager"
           }).enabled && !(0, o.isDismissibleContentDismissed)(s.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_MODAL)) {
-          (0, i.openModalLazy)(async () => {
+          (0, l.openModalLazy)(async () => {
             let {
               default: e
             } = await Promise.all([n.e("99387"), n.e("54749")]).then(n.bind(n, "937733"));
@@ -108,7 +108,7 @@ class N extends r.default {
             })
           });
           return
-        }!(0, i.hasAnyModalOpen)() && await (0, p.isEligibleForBOGOAnnouncementModal)() && (0, i.openModalLazy)(async () => {
+        }!(0, l.hasAnyModalOpen)() && await (0, p.isEligibleForBOGOAnnouncementModal)() && (0, l.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("28614")]).then(n.bind(n, "868508"));

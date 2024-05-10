@@ -49,7 +49,7 @@ function A(e) {
           },
           {
             default: t
-          } = await Promise.all([n.e("99387"), n.e("89582")]).then(n.bind(n, "664452"));
+          } = await Promise.all([n.e("99387"), n.e("61536")]).then(n.bind(n, "664452"));
         return n => (0, s.jsx)(t, {
           ...n,
           guildId: O.id,

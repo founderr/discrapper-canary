@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("481060"),
   o = n("570140"),
   u = n("150063"),
@@ -54,7 +54,7 @@ class T extends s.PureComponent {
         currentRoute: S.Routes.APPLICATION_LIBRARY,
         renderToolbar: this.renderToolbar
       }), e ? null : t, (0, a.jsxs)(r.AdvancedScrollerAuto, {
-        className: l()(I.container, I.scroller),
+        className: i()(I.container, I.scroller),
         ref: this._scrollerRef,
         children: [e ? t : null, (0, a.jsx)(f.default, {
           section: S.AnalyticsSections.LIBRARY_APPLICATION_LIST,

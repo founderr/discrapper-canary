@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("120356"),
-  i = n.n(s),
-  l = n("685626"),
+  l = n.n(s),
+  i = n("685626"),
   r = n("481060"),
   o = n("497505"),
   u = n("685613"),
@@ -23,9 +23,9 @@ t.default = function(e) {
     quest: p,
     useReducedMotion: I
   } = e, g = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = (null !== (s = null === (n = p.userStatus) || void 0 === n ? void 0 : n.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
-  return (0, a.jsxs)(l.animated.div, {
+  return (0, a.jsxs)(i.animated.div, {
     "aria-hidden": m && S,
-    className: i()(_, h.contentCollapsed, {
+    className: l()(_, h.contentCollapsed, {
       [h.contentCollapsedExpanded]: m,
       [h.contentCollapsedAccepted]: g
     }),

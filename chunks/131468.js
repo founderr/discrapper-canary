@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("570140"),
   s = n("317770"),
-  i = n("314897"),
-  l = n("131951");
+  l = n("314897"),
+  i = n("131951");
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ class o extends s.default {
     super(...e), r(this, "_playSound", function(e) {
       arguments.length > 1 && void 0 !== arguments[1] && arguments[1], arguments.length > 2 && arguments[2], arguments.length > 3 && arguments[3]
     }), r(this, "_stopAndClearSounds", () => {}), r(this, "_handleToggleSelfDeafened", () => {
-      l.default.isDeaf() && this._stopAndClearSounds()
+      i.default.isDeaf() && this._stopAndClearSounds()
     }), r(this, "_handleSoundboardSoundReceived", e => {
       let {
         soundId: t,
@@ -36,12 +36,12 @@ class o extends s.default {
         userId: a,
         channelId: s
       } = e;
-      if (null != t && a !== i.default.getId()) return this._playSound(t, n, a, s)
+      if (null != t && a !== l.default.getId()) return this._playSound(t, n, a, s)
     }), r(this, "_handleSoundboardSoundPlayLocally", e => {
       let {
         sound: t,
         channelId: n
-      } = e, a = i.default.getId();
+      } = e, a = l.default.getId();
       return this._playSound(t.soundId, t.volume, a, n)
     }), r(this, "_handleVoiceChannelSelect", () => {
       this._stopAndClearSounds()

@@ -2,17 +2,17 @@
 n.r(t), n("47120");
 var a = n("120960"),
   s = n("996106"),
-  i = n("452426"),
-  l = n("186901"),
+  l = n("452426"),
+  i = n("186901"),
   r = n("981631"),
   o = n("65154");
 t.default = {
   [r.RPCCommands.SET_CERTIFIED_DEVICES]: {
     scope: {
-      [l.RPC_SCOPE_CONFIG.ANY]: [r.OAuth2Scopes.RPC, l.RPC_LOCAL_SCOPE]
+      [i.RPC_SCOPE_CONFIG.ANY]: [r.OAuth2Scopes.RPC, i.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, i.default)(e).required().keys({
-      devices: e.array().items((0, i.default)(e).keys({
+    validation: e => (0, l.default)(e).required().keys({
+      devices: e.array().items((0, l.default)(e).keys({
         type: e.string().required().valid([o.DeviceTypes.AUDIO_INPUT, o.DeviceTypes.AUDIO_OUTPUT, o.DeviceTypes.VIDEO_INPUT]),
         id: e.string().required().min(1),
         vendor: e.object().required().keys({

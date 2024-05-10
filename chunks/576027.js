@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("688707"),
   s = n("894959"),
-  i = n("624714"),
-  l = n("906228"),
+  l = n("624714"),
+  i = n("906228"),
   r = n("491327"),
   o = n("934993"),
   u = n("793839"),
@@ -27,8 +27,8 @@ var a = n("688707"),
   A = n("543815");
 let N = {
   ...a.default,
-  ...i.default,
   ...l.default,
+  ...i.default,
   ...r.default,
   ...o.default,
   ...u.default,

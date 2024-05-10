@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("399606"),
   o = n("524437"),
   u = n("923462"),
@@ -30,7 +30,7 @@ var a = n("735250"),
 function v(e) {
   let {
     channel: t,
-    iconClassName: i,
+    iconClassName: l,
     className: v,
     innerClassName: R,
     ...L
@@ -84,7 +84,7 @@ function v(e) {
       children: (0, a.jsx)(d.Button, {
         ...e,
         ...t,
-        className: l()(v, {
+        className: i()(v, {
           [N.buttonActive]: x,
           [N.disabled]: P
         }),
@@ -108,7 +108,7 @@ function v(e) {
         size: d.Button.Sizes.SMALL,
         ...L,
         children: (0, a.jsx)(F, {
-          className: i,
+          className: l,
           size: "sm",
           color: x ? "white" : d.tokens.colors.INTERACTIVE_ACTIVE
         })

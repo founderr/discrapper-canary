@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var a, s, i, l, r = n("442837"),
+var a, s, l, i, r = n("442837"),
   o = n("570140");
 let u = {},
   d = null;
@@ -8,7 +8,7 @@ let u = {},
 function c() {
   u = {}, d = null
 }
-class f extends(l = r.default.Store) {
+class f extends(i = r.default.Store) {
   getEmailSettings() {
     return {
       categories: u,
@@ -16,12 +16,12 @@ class f extends(l = r.default.Store) {
     }
   }
 }
-i = "EmailSettingsStore", (s = "displayName") in(a = f) ? Object.defineProperty(a, s, {
-  value: i,
+l = "EmailSettingsStore", (s = "displayName") in(a = f) ? Object.defineProperty(a, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = i, t.default = new f(o.default, {
+}) : a[s] = l, t.default = new f(o.default, {
   CONNECTION_OPEN: c,
   LOGOUT: c,
   EMAIL_SETTINGS_FETCH_SUCCESS: function(e) {

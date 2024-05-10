@@ -3,8 +3,8 @@ let a;
 n.r(t), n("47120");
 var s = n("735250");
 n("470079");
-var i = n("481060"),
-  l = n("570140"),
+var l = n("481060"),
+  i = n("570140"),
   r = n("317770"),
   o = n("622822"),
   u = n("391650"),
@@ -28,20 +28,20 @@ var i = n("481060"),
   L = n("630724");
 
 function O() {
-  null != a && (0, i.closeModal)(a)
+  null != a && (0, l.closeModal)(a)
 }
 class M extends r.default {
   _initialize() {
-    l.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.default.subscribe("LOGOUT", O)
+    i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("LOGOUT", O)
   }
   _terminate() {
-    l.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.default.unsubscribe("LOGOUT", O)
+    i.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.unsubscribe("LOGOUT", O)
   }
   handleConnectionOpen() {
     var e;
-    let t, l = T.default.getType();
-    if (null == l) return;
-    switch (l) {
+    let t, i = T.default.getType();
+    if (null == i) return;
+    switch (i) {
       case A.NewUserTypes.INVITE_UNCLAIMED:
         f.default.flowStart(L.FlowType.INVITE, L.RegistrationSteps.NUF_STARTED);
         break;
@@ -53,7 +53,7 @@ class M extends r.default {
     }
     let r = !1,
       O = m.default.getGuildId();
-    if (l === A.NewUserTypes.INVITE_UNCLAIMED) {
+    if (i === A.NewUserTypes.INVITE_UNCLAIMED) {
       let e = C.default.getGuild(O);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
@@ -91,7 +91,7 @@ class M extends r.default {
               p.assertNever(e)
           }
         };
-        a = await (0, i.openModalLazy)(async () => {
+        a = await (0, l.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("42483"), n.e("22458")]).then(n.bind(n, "599219"));
@@ -126,7 +126,7 @@ class M extends r.default {
       }
     }, {
       key: "Guild Welcome Modal",
-      open: e => (0, i.openModalLazy)(async () => {
+      open: e => (0, l.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("77578")]).then(n.bind(n, "184782"));

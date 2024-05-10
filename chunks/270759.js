@@ -2,8 +2,8 @@
 n.r(t), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("757143");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("613828"),
   o = n("873546"),
   u = n("442837"),
@@ -41,15 +41,15 @@ function x() {
 t.default = function(e) {
   let {
     initialSection: t
-  } = e, n = (0, r.useLocation)(), i = (0, r.useHistory)();
+  } = e, n = (0, r.useLocation)(), l = (0, r.useHistory)();
   s.useEffect(() => {
     "true" === new URLSearchParams(n.search).get("confirm-age") && c.default.dispatch({
       type: "AGE_GATE_MODAL_OPEN",
       source: M.AgeGateSource.DEEP_LINK_PROMPT
     }).then(() => {
-      i.replace(O.Routes.ME)
+      l.replace(O.Routes.ME)
     })
-  }, [i, n]), s.useEffect(() => {
+  }, [l, n]), s.useEffect(() => {
     f.setHomeLink(O.Routes.FRIENDS), (0, p.trackAppUIViewed)("friends")
   }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
@@ -123,7 +123,7 @@ t.default = function(e) {
           children: y.default.Messages.BLOCKED
         }), (0, a.jsx)(d.TabBar.Item, {
           "aria-label": y.default.Messages.FRIENDS_SECTION_ADD_FRIEND,
-          className: l()(P.item, P.addFriend),
+          className: i()(P.item, P.addFriend),
           id: O.FriendsSections.ADD_FRIEND,
           children: (0, a.jsx)("span", {
             children: y.default.Messages.FRIENDS_SECTION_ADD_FRIEND
