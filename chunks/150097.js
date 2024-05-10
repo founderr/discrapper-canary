@@ -39,31 +39,31 @@ var r = n("569471"),
   h = n("9156"),
   p = n("594174"),
   y = n("630388"),
-  m = n("5192"),
-  O = n("352736"),
-  M = n("51144"),
-  v = n("981631"),
+  O = n("5192"),
+  m = n("352736"),
+  v = n("51144"),
+  M = n("981631"),
   D = n("124368"),
   R = n("689938");
 
 function G(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-  if (t.hasFlag(v.UserFlags.SPAMMER) || n.isManaged()) return !1;
+  if (t.hasFlag(M.UserFlags.SPAMMER) || n.isManaged()) return !1;
   let u = n.getGuildId();
-  return !(null != u && a.default.isLurking(u) || t.id === e.id || I.default.isBlocked(t.id) || !l && A.default.getStatus() === v.StatusTypes.DND || c.FocusMode.getSetting() || !i && h.default.allowNoMessages(n)) && !0
+  return !(null != u && a.default.isLurking(u) || t.id === e.id || I.default.isBlocked(t.id) || !l && A.default.getStatus() === M.StatusTypes.DND || c.FocusMode.getSetting() || !i && h.default.allowNoMessages(n)) && !0
 }
 
 function U(e, t) {
   var n;
   let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
     i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-  if (null != e.flags && (0, y.hasFlag)(e.flags, v.MessageFlags.SUPPRESS_NOTIFICATIONS)) return !1;
+  if (null != e.flags && (0, y.hasFlag)(e.flags, M.MessageFlags.SUPPRESS_NOTIFICATIONS)) return !1;
   let a = E.default.getChannel(t);
-  e.type === v.MessageTypes.THREAD_STARTER_MESSAGE && (a = E.default.getChannel(null == a ? void 0 : a.parent_id));
+  e.type === M.MessageTypes.THREAD_STARTER_MESSAGE && (a = E.default.getChannel(null == a ? void 0 : a.parent_id));
   let d = p.default.getCurrentUser(),
     o = p.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
-  if (null == a || null == d || null == o || a.type === v.ChannelTypes.GROUP_DM && e.type === v.MessageTypes.RECIPIENT_REMOVE || !G(d, o, a, i) || u.default.isMessageRequest(t)) return !1;
+  if (null == a || null == d || null == o || a.type === M.ChannelTypes.GROUP_DM && e.type === M.MessageTypes.RECIPIENT_REMOVE || !G(d, o, a, i) || u.default.isMessageRequest(t)) return !1;
   if (!l) {
     let e = C.default.getChannelId(S.default.getGuildId());
     if (e === a.id || T.default.getCurrentSidebarChannelId(e) === a.id) return !1
@@ -96,10 +96,10 @@ function L(e, t) {
   var n;
   if (C.default.getChannelId(S.default.getGuildId()) !== t) return !1;
   let l = E.default.getChannel(t);
-  e.type === v.MessageTypes.THREAD_STARTER_MESSAGE && (l = E.default.getChannel(null == l ? void 0 : l.parent_id));
+  e.type === M.MessageTypes.THREAD_STARTER_MESSAGE && (l = E.default.getChannel(null == l ? void 0 : l.parent_id));
   let i = p.default.getCurrentUser(),
     a = p.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
-  return !(null == l || null == i || null == a || l.isManaged() || a.hasFlag(v.UserFlags.SPAMMER) || I.default.isBlocked(a.id) || a.id === i.id || A.default.getStatus() === v.StatusTypes.DND || c.FocusMode.getSetting() || h.default.allowNoMessages(l)) && !0
+  return !(null == l || null == i || null == a || l.isManaged() || a.hasFlag(M.UserFlags.SPAMMER) || I.default.isBlocked(a.id) || a.id === i.id || A.default.getStatus() === M.StatusTypes.DND || c.FocusMode.getSetting() || h.default.allowNoMessages(l)) && !0
 }
 
 function F(e, t) {
@@ -113,53 +113,65 @@ let P = (e, t, n) => "".concat(e, " (").concat((0, l.computeChannelName)(t, p.de
 
 function w(e, t, n, l) {
   switch (e.type) {
-    case v.ChannelTypes.GUILD_ANNOUNCEMENT:
-    case v.ChannelTypes.GUILD_TEXT:
+    case M.ChannelTypes.GUILD_ANNOUNCEMENT:
+    case M.ChannelTypes.GUILD_TEXT:
       return t;
-    case v.ChannelTypes.GROUP_DM:
+    case M.ChannelTypes.GROUP_DM:
       return n;
-    case v.ChannelTypes.DM:
+    case M.ChannelTypes.DM:
     default:
       return l
   }
 }
 
 function V(e, t, n) {
-  var a;
-  let u;
-  let s = m.default.getName(e.getGuildId(), e.id, n),
-    r = s;
+  var a, u, s, r, f;
+  let c;
+  let _ = O.default.getName(e.getGuildId(), e.id, n),
+    T = _;
   switch (e.type) {
-    case v.ChannelTypes.GUILD_ANNOUNCEMENT:
-    case v.ChannelTypes.GUILD_TEXT:
-    case v.ChannelTypes.GUILD_VOICE:
-    case v.ChannelTypes.ANNOUNCEMENT_THREAD:
-    case v.ChannelTypes.PUBLIC_THREAD:
-    case v.ChannelTypes.PRIVATE_THREAD:
-      let f = E.default.getChannel(e.parent_id);
-      t.type === v.MessageTypes.THREAD_STARTER_MESSAGE && null != f ? r = P(r, f, E.default.getChannel(f.parent_id)) : (0, o.default)(t) ? null != g.default.getGuild(e.getGuildId()) && (r = P(r, e, f)) : r = P(r, e, f);
+    case M.ChannelTypes.GUILD_ANNOUNCEMENT:
+    case M.ChannelTypes.GUILD_TEXT:
+    case M.ChannelTypes.GUILD_VOICE:
+    case M.ChannelTypes.ANNOUNCEMENT_THREAD:
+    case M.ChannelTypes.PUBLIC_THREAD:
+    case M.ChannelTypes.PRIVATE_THREAD:
+      let N = E.default.getChannel(e.parent_id);
+      t.type === M.MessageTypes.THREAD_STARTER_MESSAGE && null != N ? T = P(T, N, E.default.getChannel(N.parent_id)) : (0, o.default)(t) ? null != g.default.getGuild(e.getGuildId()) && (T = P(T, e, N)) : T = P(T, e, N);
       break;
-    case v.ChannelTypes.GROUP_DM:
-      !(e.isManaged() && n.bot && r === (0, l.computeChannelName)(e, p.default, I.default)) && (r = "".concat(r, " (").concat((0, l.computeChannelName)(e, p.default, I.default, !0), ")"))
+    case M.ChannelTypes.GROUP_DM:
+      !(e.isManaged() && n.bot && T === (0, l.computeChannelName)(e, p.default, I.default)) && (T = "".concat(T, " (").concat((0, l.computeChannelName)(e, p.default, I.default, !0), ")"))
   }
-  let c = t.content;
-  if ((0, o.default)(t) && null == (c = O.default.stringify(t, e))) throw new i.default("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", t), Error("failed to stringify system message");
-  let _ = null !== (a = t.sticker_items) && void 0 !== a ? a : t.stickers;
-  return 0 === (u = null != t.activity && null != t.application ? t.activity.type === v.ActivityActionTypes.JOIN ? w(e, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_JOIN, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN).format({
-    user: s,
+  let C = t.content;
+  if ((0, o.default)(t) && null == (C = m.default.stringify(t, e))) throw new i.default("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", t), Error("failed to stringify system message");
+  let S = null !== (a = t.sticker_items) && void 0 !== a ? a : t.stickers;
+  if (null != t.activity && null != t.application) c = t.activity.type === M.ActivityActionTypes.JOIN ? w(e, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_JOIN, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN).format({
+    user: _,
     game: t.application.name
-  }) : t.activity.type === v.ActivityActionTypes.JOIN_REQUEST ? w(e, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST).format({
-    user: s,
+  }) : t.activity.type === M.ActivityActionTypes.JOIN_REQUEST ? w(e, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST).format({
+    user: _,
     game: t.application.name
-  }) : "" : null != t.activity && t.activity.type === v.ActivityActionTypes.LISTEN ? w(e, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_LISTEN, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_LISTEN, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_LISTEN).format({
-    user: s
-  }) : null != _ && _.length > 0 ? R.default.Messages.STICKER_NOTIFICATION_BODY.format({
-    stickerName: _[0].name
-  }) : t.type === v.MessageTypes.PREMIUM_REFERRAL ? R.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY_SHORT.format({
-    username: M.default.getName(n)
-  }) : null != t.poll ? R.default.Messages.POLL_SENT_NOTIFICATION.format({
+  }) : "";
+  else if (null != t.activity && t.activity.type === M.ActivityActionTypes.LISTEN) c = w(e, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_LISTEN, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_LISTEN, R.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_LISTEN).format({
+    user: _
+  });
+  else if (null != S && S.length > 0) c = R.default.Messages.STICKER_NOTIFICATION_BODY.format({
+    stickerName: S[0].name
+  });
+  else if (t.type === M.MessageTypes.PREMIUM_REFERRAL) c = R.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY_SHORT.format({
+    username: v.default.getName(n)
+  });
+  else if (null != t.poll) c = R.default.Messages.POLL_SENT_NOTIFICATION.format({
     question: t.poll.question.text
-  }) : d.default.unparse(c, e.id, !0)).length && (u = function(e) {
+  });
+  else if (t.type === M.MessageTypes.POLL_RESULT) {
+    let e = null === (r = t.embeds) || void 0 === r ? void 0 : null === (s = r[0]) || void 0 === s ? void 0 : null === (u = s.fields) || void 0 === u ? void 0 : u.find(e => "poll_question_text" === e.name),
+      n = null !== (f = null == e ? void 0 : e.value) && void 0 !== f ? f : "";
+    c = R.default.Messages.POLL_RESULTS_NOTIFICATION.format({
+      question: n
+    })
+  } else c = d.default.unparse(C, e.id, !0);
+  return 0 === c.length && (c = function(e) {
     var t;
     if (void 0 !== e.embeds && e.embeds.length > 0) {
       let t = e.embeds[0];
@@ -170,7 +182,7 @@ function V(e, t, n) {
         return "".concat(e.name, " ").concat(e.value)
       }
     }
-    if ((0, y.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, v.MessageFlags.IS_VOICE_MESSAGE)) return R.default.Messages.VOICE_MESSAGES_SENT_NOTIFICATION;
+    if ((0, y.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, M.MessageFlags.IS_VOICE_MESSAGE)) return R.default.Messages.VOICE_MESSAGES_SENT_NOTIFICATION;
     if (void 0 !== e.attachments && e.attachments.length > 0) {
       let t = e.attachments[0].filename;
       return R.default.Messages.NOTIFICATION_BODY_ATTACHMENT.format({
@@ -180,7 +192,7 @@ function V(e, t, n) {
     return ""
   }(t)), {
     icon: n.getAvatarURL(e.guild_id, 128),
-    title: r,
-    body: u
+    title: T,
+    body: c
   }
 }
