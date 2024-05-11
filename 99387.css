@@ -95299,7 +95299,11 @@ div.content_aac020 {
     left: 0;
     height: 100%;
     width: 100%;
-    border-radius: 10px
+    border-radius: 10px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top
 }
 
 .chatPreview__8e939 {
