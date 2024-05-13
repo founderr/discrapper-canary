@@ -58,7 +58,7 @@ t.default = e => {
   return H ? j ? W && null != P && (n = m.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
     tierName: P.name
   })) : n = m.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = m.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, r.useEffect(() => {
-    M && null != y && V && l.default.wait(() => {
+    M && null != y && V && !(I.default.isFetchingForSKU(y) || I.default.isLoadedForSKU(y)) && l.default.wait(() => {
       (0, u.fetchSubscriptionPlansForSKU)(y)
     })
   }, [M, y, V]), {

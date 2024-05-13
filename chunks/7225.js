@@ -26,7 +26,7 @@ function x(e) {
     appId: i,
     guildId: r,
     subscriptionGroupListing: x
-  } = e, T = (0, a.useStateFromStores)([p.default], () => p.default.getApplication(i)), [C, I] = s.useState(() => p.default.isFetchingApplication(i) ? {
+  } = e, T = (0, a.useStateFromStores)([p.default], () => p.default.getApplication(i), [i]), [C, I] = s.useState(() => p.default.isFetchingApplication(i) ? {
     status: 1
   } : {
     status: 0
