@@ -104,11 +104,11 @@ function c(e) {
 
 function E(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+    i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
     r = s.useExperiment({
       location: t
     }, {
-      autoTrackExposure: n
+      autoTrackExposure: i
     });
   return function(e) {
     let {
@@ -131,9 +131,9 @@ function E(e, t) {
     genshinConfig: o.useExperiment({
       location: t
     }, {
-      autoTrackExposure: n
+      autoTrackExposure: i
     }),
-    includeConverted: i
+    includeConverted: n
   })
 }
 
@@ -176,8 +176,9 @@ function I(e, t) {
 }
 
 function T(e, t) {
-  let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-  return E(e, t, n).enableClanCreation
+  let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+    i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
+  return E(e, t, n, i).enableClanCreation
 }
 
 function f(e) {

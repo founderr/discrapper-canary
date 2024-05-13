@@ -10,7 +10,7 @@ var i = n("442837"),
 
 function s(e) {
   let t = (0, i.useStateFromStoresArray)([r.default], () => Object.values(r.default.getGuilds())),
-    n = (0, a.useAnyClanPrepilotExperimentEnabled)(t, e),
+    n = (0, a.useAnyClanPrepilotExperimentEnabled)(t, e, !1),
     {
       clanDiscoveryEnabled: s
     } = (0, a.useClanPilotExperiment)(e);

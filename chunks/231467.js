@@ -337,36 +337,40 @@ function M(e) {
 }
 t.default = function(e) {
   let {
-    clan: t,
-    affinity: n,
-    index: a,
-    source: s
-  } = e, u = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), c = (0, l.useStateFromStores)([h.default], () => h.default.isMember(t.id, null == u ? void 0 : u.id), [t, u]), E = r.useCallback(() => {
-    let e = null != f.default.getRequest(t.id);
+    style: t,
+    ...n
+  } = e, {
+    clan: a,
+    affinity: s,
+    index: u,
+    source: c
+  } = n, E = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), I = (0, l.useStateFromStores)([h.default], () => h.default.isMember(a.id, null == E ? void 0 : E.id), [a, E]), T = r.useCallback(() => {
+    let e = null != f.default.getRequest(a.id);
     if ((0, d.trackClanDiscoveryCardClicked)({
-        guildId: t.id,
-        isMember: c,
+        guildId: a.id,
+        isMember: I,
         hasJoinRequest: e,
-        affinity: n,
-        index: a
-      }), c) {
-      (0, S.transitionToGuild)(t.id);
+        affinity: s,
+        index: u
+      }), I) {
+      (0, S.transitionToGuild)(a.id);
       return
     }
     if (e) {
-      (0, S.transitionTo)(p.Routes.GUILD_MEMBER_VERIFICATION(t.id));
+      (0, S.transitionTo)(p.Routes.GUILD_MEMBER_VERIFICATION(a.id));
       return
-    }(0, _.openClanApplyFlow)(t.id, t, {
-      source: s,
+    }(0, _.openClanApplyFlow)(a.id, a, {
+      source: c,
       location: p.AnalyticsLocations.CLAN_DISCOVERY_CARD
     })
-  }, [t, c, n, a, s]);
+  }, [a, I, s, u, c]);
   return (0, i.jsx)(o.Clickable, {
-    onClick: E,
+    onClick: T,
     className: R.clickableCard,
+    style: t,
     children: (0, i.jsx)(M, {
-      ...e,
-      isMember: c,
+      ...n,
+      isMember: I,
       showBrandingFooter: !0
     })
   })

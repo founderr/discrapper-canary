@@ -10,7 +10,14 @@
           criteria: u
         }
       } = e;
-      let f = (t = i, r = u, t.sort((e, t) => (0, n.getClanDiscoveryAffinity)(t, r) - (0, n.getClanDiscoveryAffinity)(e, r)));
+      let f = (t = i, r = u, t.map(e => ({
+        ...e,
+        affinity: (0, n.getClanDiscoveryAffinity)(e, r)
+      })).sort((e, t) => {
+        var i, o;
+        let u = null !== (i = t.affinity) && void 0 !== i ? i : (0, n.getClanDiscoveryAffinity)(t, r);
+        return u - (null !== (o = e.affinity) && void 0 !== o ? o : (0, n.getClanDiscoveryAffinity)(e, r))
+      }));
       self.postMessage({
         sortedClans: f,
         id: o

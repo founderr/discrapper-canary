@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("143927"),
   o = n("442837"),
   u = n("531057"),
@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("92373"),
   S = n("430824"),
   p = n("207796"),
-  I = n("308083"),
-  g = n("689938"),
+  g = n("308083"),
+  I = n("689938"),
   T = n("683391");
 
 function A(e) {
@@ -26,23 +26,23 @@ function A(e) {
     icon: t,
     text: n,
     ariaLabel: s,
-    tooltip: l,
+    tooltip: i,
     onClick: r,
     isActive: o,
     autoWidth: d = !1
   } = e;
   return (0, a.jsx)(h.Tooltip, {
-    text: l,
+    text: i,
     position: "bottom",
     "aria-label": s,
     shouldShow: o,
-    tooltipClassName: i()(T.filterTooltip, {
+    tooltipClassName: l()(T.filterTooltip, {
       [T.filterTooltipAutoWidth]: d
     }),
     tooltipContentClassName: T.filterTooltipContent,
     children: e => (0, a.jsxs)(h.Button, {
       ...e,
-      className: i()(T.filterPill, {
+      className: l()(T.filterPill, {
         [T.filterPillActive]: o
       }),
       innerClassName: T.filterPillContents,
@@ -70,12 +70,12 @@ function N() {
     n = s.useCallback(() => {
       (0, p.setClanDiscoveryMode)(p.ClanDiscoveryMode.GAMES)
     }, []),
-    l = null !== (e = (0, C.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
-    i = t.slice(0, 2),
+    i = null !== (e = (0, C.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
+    l = t.slice(0, 2),
     o = t.length - 2,
     u = (0, a.jsxs)("div", {
       className: T.gamesTooltip,
-      children: [i.map(e => (0, a.jsx)(m.default, {
+      children: [l.map(e => (0, a.jsx)(m.default, {
         applicationId: e
       }, e)), o > 0 && (0, a.jsx)(m.default, {
         applicationId: t[2],
@@ -88,26 +88,26 @@ function N() {
     });
   return (0, a.jsx)(A, {
     icon: c,
-    text: g.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
+    text: I.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
       count: t.length
     }),
     tooltip: u,
     onClick: n,
     isActive: t.length > 0,
-    ariaLabel: l,
+    ariaLabel: i,
     autoWidth: !0
   })
 }
 
 function v() {
-  let e = s.useMemo(I.getPlaystyleOptions, []),
+  let e = s.useMemo(g.getPlaystyleOptions, []),
     t = (0, p.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
     n = null != t ? e[t] : null,
-    l = null == n ? void 0 : n.title,
-    i = s.useCallback(() => {
+    i = null == n ? void 0 : n.title,
+    l = s.useCallback(() => {
       (0, p.setClanDiscoveryMode)(p.ClanDiscoveryMode.PLAYSTYLE)
     }, []);
-  if (null == n || null == l) return null;
+  if (null == n || null == i) return null;
   let o = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.Heading, {
         variant: "heading-xxl/medium",
@@ -128,11 +128,11 @@ function v() {
     });
   return (0, a.jsx)(A, {
     icon: u,
-    text: l,
+    text: i,
     tooltip: o,
-    onClick: i,
+    onClick: l,
     isActive: null != n,
-    ariaLabel: l
+    ariaLabel: i
   })
 }
 
@@ -153,13 +153,13 @@ function R() {
         })
       }, e))
     }),
-    l = (0, a.jsx)(E.TagIcon, {
+    i = (0, a.jsx)(E.TagIcon, {
       className: T.filterPillIcon,
       color: "currentColor"
     });
   return (0, a.jsx)(A, {
-    icon: l,
-    text: g.default.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
+    icon: i,
+    text: I.default.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
     tooltip: n,
     onClick: t,
     isActive: e.length > 0,
@@ -169,8 +169,8 @@ function R() {
 
 function L() {
   let e = (0, o.useStateFromStoresArray)([S.default], () => Object.values(S.default.getGuilds()));
-  return (0, _.useAnyClanPrepilotExperimentEnabled)(e, "clan_discovery_add_clan") ? (0, a.jsxs)(h.Clickable, {
-    className: i()(T.buttonPill),
+  return (0, _.useAnyClanPrepilotExperimentEnabled)(e, "clan_discovery_add_clan", !1) ? (0, a.jsxs)(h.Clickable, {
+    className: l()(T.buttonPill),
     onClick: () => (0, p.setClanDiscoveryMode)(p.ClanDiscoveryMode.ADMIN_UPSELL),
     children: [(0, a.jsx)(c.PlusSmallIcon, {
       className: T.filterPillIcon,
@@ -180,7 +180,7 @@ function L() {
       children: (0, a.jsx)(h.Text, {
         variant: "text-xs/medium",
         color: "none",
-        children: g.default.Messages.CLAN_DISCOVERY_ADD_CLAN
+        children: I.default.Messages.CLAN_DISCOVERY_ADD_CLAN
       })
     })]
   }) : null

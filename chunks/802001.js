@@ -28,7 +28,7 @@ function c(e) {
     {
       guilds: n,
       enableClanCreation: l
-    } = (0, s.useAnyClanPrepilotExperiment)(t, e);
+    } = (0, s.useAnyClanPrepilotExperiment)(t, e, !1);
   return (0, a.useStateFromStoresArray)([r.default], () => l ? n.filter(e => d(e, [r.default])) : [])
 }
 
