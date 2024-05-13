@@ -125,7 +125,7 @@ function I(e) {
 
 function T(e, t) {
   let n = t.config.applicationId === e;
-  return 1 === t.config.configVersion && t.config.supplementaryApplicationIds.size > 0 && (n = n || t.config.supplementaryApplicationIds.has(e)), n
+  return 1 === t.config.configVersion && null != t.config.supplementaryApplicationIds && t.config.supplementaryApplicationIds.size > 0 && (n = n || t.config.supplementaryApplicationIds.has(e)), n
 }
 
 function f(e, t) {

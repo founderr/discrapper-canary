@@ -9,8 +9,8 @@ var a = r("735250"),
   l = r("120356"),
   n = r.n(l),
   o = r("990547"),
-  c = r("442837"),
-  s = r("481060"),
+  s = r("442837"),
+  c = r("481060"),
   d = r("347469"),
   u = r("213609"),
   h = r("29338"),
@@ -128,6 +128,10 @@ function V() {
         id: "affinity",
         name: "Affinity",
         render: () => (0, a.jsx)(v.default, {})
+      }), m.default.isDeveloper && e.push({
+        id: "content_inventory",
+        name: "Content Inventory",
+        render: () => (0, a.jsx)(h.default, {})
       }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") && (e.push({
         id: "trials",
         name: "Trials",
@@ -144,10 +148,6 @@ function V() {
         id: "billing",
         name: "Billing",
         render: () => (0, a.jsx)(C.default, {})
-      }), e.push({
-        id: "content_inventory",
-        name: "Content Inventory",
-        render: () => (0, a.jsx)(h.default, {})
       })), e
     }, []),
     {
@@ -191,7 +191,7 @@ function V() {
 
 function W() {
   let e = i.useRef(null),
-    t = (0, c.useStateFromStores)([x.default], () => x.default.sidebarWidth),
+    t = (0, s.useStateFromStores)([x.default], () => x.default.sidebarWidth),
     [r, l] = i.useState(null),
     o = i.useCallback(e => (0, b.updateDevToolsSettings)({
       sidebarWidth: e
@@ -217,7 +217,7 @@ function W() {
 }
 
 function Y() {
-  let e = (0, c.useStateFromStores)([x.default], () => x.default.displayTools);
+  let e = (0, s.useStateFromStores)([x.default], () => x.default.displayTools);
   return e ? (0, a.jsx)("div", {
     className: n()(U.container, U.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
@@ -226,7 +226,7 @@ function Y() {
     })
   }) : (0, a.jsx)("div", {
     className: U.container,
-    children: (0, a.jsx)(s.Clickable, {
+    children: (0, a.jsx)(c.Clickable, {
       onClick: b.toggleDisplayDevTools,
       children: (0, a.jsxs)(y.default, {
         className: n()(G.headerBar, U.mobileHeaderCollapsed),
