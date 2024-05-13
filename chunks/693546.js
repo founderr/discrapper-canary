@@ -5,59 +5,62 @@ var i = n("544891"),
   a = n("287734"),
   s = n("970606"),
   o = n("131704"),
-  l = n("246364"),
-  u = n("937111"),
-  d = n("981631");
-let _ = async e => {
+  l = n("826581"),
+  u = n("246364"),
+  d = n("937111"),
+  _ = n("981631");
+let c = async e => {
   let t = await i.HTTP.get({
-      url: d.Endpoints.GUILD_JOIN_REQUEST_BY_ID(e)
+      url: _.Endpoints.GUILD_JOIN_REQUEST_BY_ID(e)
     }),
-    n = (0, u.joinRequestFromServer)(t.body);
+    n = (0, d.joinRequestFromServer)(t.body);
   return r.default.dispatch({
     type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS",
     joinRequest: n
   }), t
-}, c = async e => {
+}, E = async e => {
   let {
     guildId: t,
-    status: n = l.GuildJoinRequestApplicationStatuses.SUBMITTED,
+    status: n = u.GuildJoinRequestApplicationStatuses.SUBMITTED,
     before: a,
     after: s,
-    limit: o = l.MAX_RESULTS_PER_PAGE
+    limit: o = u.MAX_RESULTS_PER_PAGE
   } = e;
-  r.default.dispatch({
-    type: "GUILD_JOIN_REQUESTS_FETCH_START"
-  });
-  try {
-    var _;
-    let e = await i.HTTP.get({
-        url: d.Endpoints.GUILD_JOIN_REQUESTS(t),
-        query: {
-          status: n,
-          limit: o,
-          before: a,
-          after: s
-        }
-      }),
-      l = e.body.total,
-      c = (null !== (_ = e.body.guild_join_requests) && void 0 !== _ ? _ : []).map(u.joinRequestFromServer);
-    return r.default.dispatch({
-      type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
-      status: n,
-      requests: c,
-      total: l,
-      limit: o,
-      guildId: t
-    }), e
-  } catch (e) {
-    throw r.default.dispatch({
-      type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE"
-    }), e
+  if (!(l.default.isFetching() || l.default.hasFetched(t))) {
+    r.default.dispatch({
+      type: "GUILD_JOIN_REQUESTS_FETCH_START"
+    });
+    try {
+      var c;
+      let e = await i.HTTP.get({
+          url: _.Endpoints.GUILD_JOIN_REQUESTS(t),
+          query: {
+            status: n,
+            limit: o,
+            before: a,
+            after: s
+          }
+        }),
+        l = e.body.total,
+        u = (null !== (c = e.body.guild_join_requests) && void 0 !== c ? c : []).map(d.joinRequestFromServer);
+      return r.default.dispatch({
+        type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
+        status: n,
+        requests: u,
+        total: l,
+        limit: o,
+        guildId: t
+      }), e
+    } catch (e) {
+      throw r.default.dispatch({
+        type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE"
+      }), e
+    }
   }
-}, E = async e => {
+}, I = async e => {
   try {
     let t = await i.HTTP.del({
-      url: d.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e)
+      url: _.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e)
     });
     return r.default.dispatch({
       type: "USER_GUILD_JOIN_REQUEST_UPDATE",
@@ -67,10 +70,10 @@ let _ = async e => {
   } catch (e) {
     throw e
   }
-}, I = async (e, t) => {
+}, T = async (e, t) => {
   try {
     return await i.HTTP.post({
-      url: d.Endpoints.GUILD_JOIN_REQUEST_ACK(e, t)
+      url: _.Endpoints.GUILD_JOIN_REQUEST_ACK(e, t)
     })
   } catch (e) {} finally {
     r.default.dispatch({
@@ -79,8 +82,8 @@ let _ = async e => {
       guildId: e
     })
   }
-}, T = async function(e, t) {
-  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.GuildJoinRequestApplicationStatuses.APPROVED,
+}, f = async function(e, t) {
+  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.GuildJoinRequestApplicationStatuses.APPROVED,
     a = arguments.length > 3 ? arguments[3] : void 0;
   (0, s.trackClanApplicationAction)({
     guildId: e,
@@ -88,7 +91,7 @@ let _ = async e => {
     applicationUserId: t
   });
   let o = await i.HTTP.patch({
-    url: d.Endpoints.GUILD_JOIN_REQUEST(e, t),
+    url: _.Endpoints.GUILD_JOIN_REQUEST(e, t),
     body: {
       action: n,
       rejection_reason: a
@@ -100,9 +103,9 @@ let _ = async e => {
     status: o.body.application_status,
     request: o.body
   })
-}, f = async (e, t) => {
+}, S = async (e, t) => {
   let n = await i.HTTP.patch({
-    url: d.Endpoints.GUILD_JOIN_REQUESTS(e),
+    url: _.Endpoints.GUILD_JOIN_REQUESTS(e),
     body: {
       action: t
     }
@@ -112,12 +115,12 @@ let _ = async e => {
     guildId: e,
     action: t
   }), n.body
-}, S = async e => {
+}, h = async e => {
   try {
     let {
       body: t
     } = await i.HTTP.post({
-      url: d.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e)
+      url: _.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e)
     });
     return r.default.dispatch({
       type: "USER_GUILD_JOIN_REQUEST_UPDATE",
@@ -127,18 +130,18 @@ let _ = async e => {
   } catch (e) {
     throw e
   }
-}, h = async () => {
+}, A = async () => {
   let e = await i.HTTP.get({
-    url: d.Endpoints.USER_JOIN_REQUEST_GUILDS
+    url: _.Endpoints.USER_JOIN_REQUEST_GUILDS
   });
   r.default.dispatch({
     type: "USER_JOIN_REQUEST_GUILDS_FETCH",
     guilds: e.body
   })
-}, A = async function(e) {
+}, m = async function(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     n = await i.HTTP.post({
-      url: d.Endpoints.GUILD_JOIN_REQUEST_INTERVIEW(e)
+      url: _.Endpoints.GUILD_JOIN_REQUEST_INTERVIEW(e)
     }),
     s = (0, o.createChannelRecordFromServer)(n.body);
   return r.default.dispatch({
@@ -147,14 +150,14 @@ let _ = async e => {
   }), t && a.default.selectPrivateChannel(s.id), s.id
 };
 t.default = {
-  fetchGuildJoinRequest: _,
-  fetchGuildJoinRequests: c,
-  ackUserGuildJoinRequest: I,
-  removeGuildJoinRequest: E,
-  updateGuildJoinRequest: T,
-  actionAllPendingJoinRequests: f,
-  resetGuildJoinRequest: S,
-  fetchRequestToJoinGuilds: h,
+  fetchGuildJoinRequest: c,
+  fetchGuildJoinRequests: E,
+  ackUserGuildJoinRequest: T,
+  removeGuildJoinRequest: I,
+  updateGuildJoinRequest: f,
+  actionAllPendingJoinRequests: S,
+  resetGuildJoinRequest: h,
+  fetchRequestToJoinGuilds: A,
   setSelectedApplicationTab: (e, t) => {
     r.default.dispatch({
       type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB",
@@ -180,5 +183,5 @@ t.default = {
       request: t
     })
   },
-  createOrEnterJoinRequestInterview: A
+  createOrEnterJoinRequestInterview: m
 }

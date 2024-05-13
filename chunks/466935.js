@@ -26,12 +26,12 @@ function E(e) {
     selected: n
   } = e, E = (0, s.useStateFromStores)([o.default], () => o.default.getSubmittedGuildJoinRequestTotal(t.id)), _ = null != E ? E : 0;
   return a.useEffect(() => {
-    null == E && r.default.fetchGuildJoinRequests({
+    r.default.fetchGuildJoinRequests({
       guildId: t.id,
       status: u.GuildJoinRequestApplicationStatuses.SUBMITTED,
       limit: d.MEMBER_APPLICATION_FETCH_LIMIT
     })
-  }, [t.id, E]), (0, l.jsx)(p.BasicChannelRow, {
+  }, [t.id]), (0, l.jsx)(p.BasicChannelRow, {
     id: "application-review-".concat(t.id),
     renderIcon: e => (0, l.jsx)(f.default, {
       className: e,
