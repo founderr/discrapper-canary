@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_CONTENT_ROW_HEIGHT: function() {
-    return N
+    return x
   },
   getContentRowHeight: function() {
-    return v
+    return M
   }
 }), n("47120");
 var a = n("735250"),
@@ -13,55 +13,57 @@ var a = n("735250"),
   i = n.n(s),
   r = n("924826"),
   o = n("876215"),
-  u = n("481060"),
-  d = n("239091"),
-  c = n("439170"),
-  f = n("594174"),
-  h = n("687694"),
-  m = n("69259"),
-  p = n("91140"),
-  E = n("227172"),
-  C = n("551228"),
-  g = n("678869"),
-  S = n("555672"),
-  _ = n("644548"),
-  T = n("335326"),
-  I = n("268010"),
-  A = n("206583");
-let N = 72;
+  u = n("442837"),
+  d = n("481060"),
+  c = n("239091"),
+  f = n("607070"),
+  h = n("439170"),
+  m = n("594174"),
+  p = n("687694"),
+  E = n("69259"),
+  C = n("91140"),
+  g = n("227172"),
+  S = n("551228"),
+  _ = n("678869"),
+  T = n("555672"),
+  I = n("644548"),
+  A = n("335326"),
+  v = n("268010"),
+  N = n("206583");
+let x = 72;
 
-function v(e) {
-  return (null == e ? void 0 : e.type) === c.MemberListRowTypes.CONTENT_INVENTORY ? N : 0
+function M(e) {
+  return (null == e ? void 0 : e.type) === h.MemberListRowTypes.CONTENT_INVENTORY ? x : 0
 }
-let x = i().throttle(e => {
-    (0, m.trackInteraction)(A.ContentInventoryInteractionTypes.CARD_HOVER, e)
+let R = i().throttle(e => {
+    (0, E.trackInteraction)(N.ContentInventoryInteractionTypes.CARD_HOVER, e)
   }, 5e3, {
     leading: !0,
     trailing: !1
   }),
-  M = e => {
+  y = e => {
     let {
       entry: t,
       ...n
     } = e;
     switch (t.content_type) {
       case o.ContentInventoryEntryType.PLAYED_GAME:
-        return (0, a.jsx)(p.default, {
+        return (0, a.jsx)(C.default, {
           ...n,
           entry: t
         });
       case o.ContentInventoryEntryType.WATCHED_MEDIA:
-        return (0, a.jsx)(T.default, {
+        return (0, a.jsx)(A.default, {
           ...n,
           entry: t
         });
       case o.ContentInventoryEntryType.TOP_GAME:
-        return (0, a.jsx)(S.default, {
+        return (0, a.jsx)(T.default, {
           ...n,
           entry: t
         });
       case o.ContentInventoryEntryType.LISTENED_SESSION:
-        return (0, a.jsx)(C.default, {
+        return (0, a.jsx)(S.default, {
           ...n,
           entry: t
         });
@@ -69,29 +71,29 @@ let x = i().throttle(e => {
         return null
     }
   },
-  R = e => {
+  L = e => {
     let {
       entry: t,
       ...n
     } = e;
     switch (t.content_type) {
       case o.ContentInventoryEntryType.PLAYED_GAME:
-        return (0, a.jsx)(E.default, {
+        return (0, a.jsx)(g.default, {
           ...n,
           entry: t
         });
       case o.ContentInventoryEntryType.WATCHED_MEDIA:
-        return (0, a.jsx)(I.default, {
+        return (0, a.jsx)(v.default, {
           ...n,
           entry: t
         });
       case o.ContentInventoryEntryType.TOP_GAME:
-        return (0, a.jsx)(_.default, {
+        return (0, a.jsx)(I.default, {
           ...n,
           entry: t
         });
       case o.ContentInventoryEntryType.LISTENED_SESSION:
-        return (0, a.jsx)(g.default, {
+        return (0, a.jsx)(_.default, {
           ...n,
           entry: t
         });
@@ -104,67 +106,73 @@ t.default = l.memo(e => {
   let {
     index: s,
     ...i
-  } = e, [o, c] = l.useState("default"), p = (0, r.useListItem)("".concat(s)), E = null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), C = {
+  } = e, [o, h] = l.useState("default"), C = (0, r.useListItem)("".concat(s)), g = null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), S = {
     entry: i.entry,
     channelId: i.channel.id,
     guildId: i.channel.guild_id,
     requestId: i.requestId
   }, {
-    openOnHover: g
-  } = (0, h.useMemberListHoverInteractions)({
+    openOnHover: _
+  } = (0, p.useMemberListHoverInteractions)({
     location: "MemberListContentRow"
-  }), S = l.useRef(!1), [_, T] = l.useState(!1), [I, N] = l.useState(!1), v = l.useCallback(e => {
-    E && (0, d.openContextMenuLazy)(e, async () => {
-      let {
-        default: e
-      } = await n.e("153").then(n.bind(n, "330150"));
-      return () => (0, a.jsx)(e, {
-        entry: i.entry,
-        requestId: i.requestId
+  }), T = l.useRef(!1), [I, A] = l.useState(!1), [v, x] = l.useState(!1), [M, O] = l.useState(!1), j = (0, u.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled);
+  l.useEffect(() => {
+    I && j && O(!0)
+  }, [I, j]);
+  let P = l.useCallback(e => {
+      g && (0, c.openContextMenuLazy)(e, async () => {
+        let {
+          default: e
+        } = await n.e("153").then(n.bind(n, "330150"));
+        return () => (0, a.jsx)(e, {
+          entry: i.entry,
+          requestId: i.requestId
+        })
       })
-    })
-  }, [i, E]), y = l.useCallback(() => {
-    c(String(Date.now()))
-  }, []);
+    }, [i, g]),
+    D = l.useCallback(() => {
+      h(String(Date.now()))
+    }, []),
+    b = () => {
+      T.current = !1, setTimeout(() => {
+        !T.current && (A(!1), O(j))
+      }, 100)
+    };
   return (0, a.jsx)("div", {
     onMouseEnter: () => {
-      S.current = !0, setTimeout(() => {
-        S.current && T(!0), g && (0, m.trackInteraction)(A.ContentInventoryInteractionTypes.CARD_CLICK, C)
+      T.current = !0, setTimeout(() => {
+        T.current && A(!0), _ && (0, E.trackInteraction)(N.ContentInventoryInteractionTypes.CARD_CLICK, S)
       }, 100)
     },
-    onMouseLeave: () => {
-      S.current = !1, setTimeout(() => {
-        !S.current && T(!1)
-      }, 100)
-    },
-    children: (0, a.jsx)(u.Popout, {
+    onMouseLeave: b,
+    children: (0, a.jsx)(d.Popout, {
       renderPopout: e => {
         let {
           closePopout: t
         } = e;
-        return (0, a.jsx)(R, {
+        return (0, a.jsx)(L, {
           closePopout: t,
-          updatePopoutPosition: y,
+          updatePopoutPosition: D,
           ...i
         })
       },
       position: "left",
-      shouldShow: g ? _ : I,
+      shouldShow: _ ? I : v,
       positionKey: o,
-      onRequestOpen: () => (0, m.trackInteraction)(A.ContentInventoryInteractionTypes.CARD_CLICK, C),
+      onRequestOpen: () => (0, E.trackInteraction)(N.ContentInventoryInteractionTypes.CARD_CLICK, S),
       onRequestClose: () => {
-        T(!1), N(!1)
+        M && b(), !_ && (A(!1), x(!1))
       },
       spacing: 8,
       children: (e, t) => {
         let {
           isShown: n
         } = t;
-        return (0, a.jsx)(u.Clickable, {
+        return (0, a.jsx)(d.Clickable, {
           onClick: () => {
-            g && !_ && T(!0), N(e => !e)
+            _ && !I && A(!0), !_ && x(e => !e)
           },
-          children: (0, a.jsx)(u.FocusRing, {
+          children: (0, a.jsx)(d.FocusRing, {
             offset: {
               top: 4,
               bottom: 4,
@@ -173,12 +181,12 @@ t.default = l.memo(e => {
             },
             children: (0, a.jsx)("div", {
               ...e,
-              ...p,
+              ...C,
               onMouseEnter: () => {
-                x(C)
+                R(S)
               },
-              onContextMenu: v,
-              children: (0, a.jsx)(M, {
+              onContextMenu: P,
+              children: (0, a.jsx)(y, {
                 ...i,
                 selected: n
               })
