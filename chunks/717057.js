@@ -210,6 +210,7 @@ t.default = function(e) {
         children: (0, a.jsxs)("div", {
           className: O.ctaButtonInner,
           children: [(0, a.jsx)(h.Text, {
+            color: "none",
             variant: "text-md/medium",
             children: L.default.Messages.CLAN_JOIN_SUCCESS_MAIN_CTA
           }), (0, a.jsx)(c.ArrowLargeRightIcon, {

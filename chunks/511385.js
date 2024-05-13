@@ -119,6 +119,7 @@ a.default = e => {
           (0, S.adoptClanIdentity)(_, M, j.AnalyticsLocations.CLAN_SETUP_MODAL), (0, m.trackConvertSuccessModalConfirm)(_, M), A()
         },
         children: (0, t.jsx)(r.Text, {
+          color: "none",
           variant: "text-md/medium",
           children: N.default.Messages.CLAN_SUCCESS_CTA
         })
