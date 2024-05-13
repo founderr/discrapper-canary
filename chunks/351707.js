@@ -39,25 +39,27 @@ function T(e) {
     let a = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== null,
       i = (null === (l = t.tags) || void 0 === l ? void 0 : l.guild_connections) !== null;
     return a && !i ? 1 : !a && i ? -1 : 0
-  }), [x, c]), U = a.useMemo(() => "roles-".concat((0, i.v4)()), []), C = (0, n.default)({
-    id: U,
+  }), [x, c]), U = E && null != d, C = a.useMemo(() => "roles-".concat((0, i.v4)()), []), h = (0, n.default)({
+    id: C,
     isEnabled: !0,
     scrollToStart: _.NOOP_PROMISE,
     scrollToEnd: _.NOOP_PROMISE,
     wrap: !0
-  }), h = N.map(e => {
+  }), p = N.length, R = 0 === p ? g.default.Messages.ROLE_LIST_EMPTY : g.default.Messages.ROLES_LIST.format({
+    numRoles: p
+  }), M = N.map(e => {
     var a;
     return (0, l.jsx)(u.MemberRole, {
       className: A.role,
       role: e,
       guildId: o.id,
-      canRemove: E ? m.isRoleHigher(o, s.id, S, e) : (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) === null && t.id === s.id,
+      disableBorderColor: !0,
       onRemove: () => T(e),
-      disableBorderColor: !0
+      canRemove: E ? m.isRoleHigher(o, s.id, S, e) : (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) === null && t.id === s.id
     }, e.id)
   });
   return (0, l.jsx)(n.ListNavigatorProvider, {
-    navigator: C,
+    navigator: h,
     children: (0, l.jsx)(n.ListNavigatorContainer, {
       children: e => {
         let {
@@ -66,17 +68,15 @@ function T(e) {
         } = e;
         return (0, l.jsxs)("div", {
           className: A.root,
-          "aria-label": 0 === c.length ? g.default.Messages.ROLE_LIST_EMPTY : g.default.Messages.ROLES_LIST.format({
-            numRoles: c.length
-          }),
+          "aria-label": R,
           ref: t,
           ...s,
-          children: [h, E && null != d && (0, l.jsx)(I.default, {
+          children: [M, U && (0, l.jsx)(I.default, {
             guild: o,
             guildMember: d,
             highestRole: S,
             onAddRole: v,
-            compact: c.length > 0
+            compact: N.length > 0
           })]
         })
       }

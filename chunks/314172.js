@@ -27,8 +27,9 @@ function h(e) {
     guildMember: n,
     highestRole: r,
     onAddRole: h,
-    compact: A = !0
-  } = e, m = (0, s.useStateFromStores)([_.default], () => _.default.roleStyle), N = e => (0, c.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && E.default.isRoleHigher(t, r, e) && -1 === n.roles.indexOf(e.id);
+    compact: A = !0,
+    ...m
+  } = e, N = (0, s.useStateFromStores)([_.default], () => _.default.roleStyle), p = e => (0, c.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && E.default.isRoleHigher(t, r, e) && -1 === n.roles.indexOf(e.id);
   return (0, i.jsx)(l.Popout, {
     position: "bottom",
     align: "center",
@@ -38,14 +39,13 @@ function h(e) {
       } = e;
       return (0, i.jsx)(d.default, {
         guild: t,
-        roleStyle: m,
-        roleFilter: N,
+        roleStyle: N,
+        roleFilter: p,
         onSelect: h,
         onClose: n
       })
     },
     children: e => (0, i.jsx)(T.default, {
-      ...e,
       className: a()(S.button, {
         [S.compact]: A
       }),
@@ -58,7 +58,9 @@ function h(e) {
       color: o.Button.Colors.CUSTOM,
       size: o.Button.Sizes.NONE,
       compact: A,
-      grow: !1
+      grow: !1,
+      ...e,
+      ...m
     })
   })
 }
