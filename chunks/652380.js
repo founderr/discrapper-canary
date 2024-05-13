@@ -93,7 +93,8 @@ let A = {
       logotype: "game_logotype.png"
     },
     inGameQuestConfig: null,
-    variants: []
+    variants: [],
+    supplementaryApplicationIds: new Set
   },
   userStatus: null,
   targetedContent: []
