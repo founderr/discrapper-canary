@@ -34,7 +34,7 @@ function C(e) {
   } = e, [S, _] = a.useState(!1), {
     requestId: T,
     entries: I
-  } = (0, d.default)(C), A = (0, l.useStateFromStores)([u.default], () => u.default.hidden), v = (0, l.useStateFromStores)([r.default], () => r.default.isFocused()), N = (0, l.useStateFromStores)([i.default], () => i.default.getChannel(C)), x = (null == N ? void 0 : N.isForumChannel()) === !1, [M, R, y, L] = a.useMemo(() => {
+  } = (0, d.default)(C), A = (0, l.useStateFromStores)([u.default], () => u.default.hidden), N = (0, l.useStateFromStores)([r.default], () => r.default.isFocused()), v = (0, l.useStateFromStores)([i.default], () => i.default.getChannel(C)), x = (null == v ? void 0 : v.isForumChannel()) === !1, [M, R, y, L] = a.useMemo(() => {
     let e;
     if (null == I || 0 === I.length || null == T || !x) return [t, n, E];
     let a = S ? I.length : 3,
@@ -83,7 +83,7 @@ function C(e) {
     if (null == T || null == P.current || Date.now() - P.current < 3e3) return;
     let n = null !== (t = null === (e = j.current) || void 0 === e ? void 0 : e.map(e => e.id)) && void 0 !== t ? t : [],
       a = n.slice(0, O.current);
-    !A && v && x && o.default.track(m.AnalyticEvents.RANKING_ITEMS_SEEN, {
+    !A && N && x && o.default.track(m.AnalyticEvents.RANKING_ITEMS_SEEN, {
       request_id: T,
       first_shown_at: P.current,
       item_ids: a,
@@ -92,7 +92,7 @@ function C(e) {
       guild_id: g,
       all_item_ids: n
     })
-  }), [T, C, g, A, v, x]), {
+  }), [T, C, g, A, N, x]), {
     groups: M,
     rows: R,
     version: y,

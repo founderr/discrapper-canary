@@ -28,15 +28,15 @@ var a = n("735250"),
   T = n("555672"),
   I = n("644548"),
   A = n("335326"),
-  v = n("268010"),
-  N = n("206583");
+  N = n("268010"),
+  v = n("206583");
 let x = 72;
 
 function M(e) {
   return (null == e ? void 0 : e.type) === h.MemberListRowTypes.CONTENT_INVENTORY ? x : 0
 }
 let R = i().throttle(e => {
-    (0, E.trackInteraction)(N.ContentInventoryInteractionTypes.CARD_HOVER, e)
+    (0, E.trackInteraction)(v.ContentInventoryInteractionTypes.CARD_HOVER, e)
   }, 5e3, {
     leading: !0,
     trailing: !1
@@ -83,7 +83,7 @@ let R = i().throttle(e => {
           entry: t
         });
       case o.ContentInventoryEntryType.WATCHED_MEDIA:
-        return (0, a.jsx)(v.default, {
+        return (0, a.jsx)(N.default, {
           ...n,
           entry: t
         });
@@ -115,7 +115,7 @@ t.default = l.memo(e => {
     openOnHover: _
   } = (0, p.useMemberListHoverInteractions)({
     location: "MemberListContentRow"
-  }), T = l.useRef(!1), [I, A] = l.useState(!1), [v, x] = l.useState(!1), [M, O] = l.useState(!1), j = (0, u.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled);
+  }), T = l.useRef(!1), [I, A] = l.useState(!1), [N, x] = l.useState(!1), [M, O] = l.useState(!1), j = (0, u.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled);
   l.useEffect(() => {
     I && j && O(!0)
   }, [I, j]);
@@ -141,7 +141,7 @@ t.default = l.memo(e => {
   return (0, a.jsx)("div", {
     onMouseEnter: () => {
       T.current = !0, setTimeout(() => {
-        T.current && A(!0), _ && (0, E.trackInteraction)(N.ContentInventoryInteractionTypes.CARD_CLICK, S)
+        T.current && A(!0), _ && (0, E.trackInteraction)(v.ContentInventoryInteractionTypes.CARD_CLICK, S)
       }, 100)
     },
     onMouseLeave: b,
@@ -157,9 +157,9 @@ t.default = l.memo(e => {
         })
       },
       position: "left",
-      shouldShow: _ ? I : v,
+      shouldShow: _ ? I : N,
       positionKey: o,
-      onRequestOpen: () => (0, E.trackInteraction)(N.ContentInventoryInteractionTypes.CARD_CLICK, S),
+      onRequestOpen: () => (0, E.trackInteraction)(v.ContentInventoryInteractionTypes.CARD_CLICK, S),
       onRequestClose: () => {
         M && b(), !_ && (A(!1), x(!1))
       },

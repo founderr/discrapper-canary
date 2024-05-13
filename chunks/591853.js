@@ -41,8 +41,8 @@ var u = n("194048"),
   T = n("493683"),
   I = n("475179"),
   A = n("607070"),
-  v = n("220779"),
-  N = n("201133"),
+  N = n("220779"),
+  v = n("201133"),
   x = n("605236"),
   M = n("543241"),
   R = n("318374"),
@@ -196,7 +196,7 @@ function eo(e) {
       onComplete: l,
       interactionType: r
     } = e, d = await ea(s)(a.id);
-    o()(null != d, "Reaction image must be defined"), await (0, N.sendReply)({
+    o()(null != d, "Reaction image must be defined"), await (0, v.sendReply)({
       file: d,
       channel: a,
       altText: i,
@@ -224,7 +224,7 @@ function eo(e) {
         children: [(0, a.jsx)(eu, {
           channel: t,
           onClickSuggestion: D
-        }), (0, a.jsx)(v.ReactionPickerButton, {
+        }), (0, a.jsx)(N.ReactionPickerButton, {
           onSelectEmoji: D
         })]
       })
@@ -250,7 +250,7 @@ function eo(e) {
             height: 20
           })
         })
-      }), (0, a.jsx)(v.ReplyInput, {
+      }), (0, a.jsx)(N.ReplyInput, {
         placeholder: et.default.Messages.TEXTAREA_PLACEHOLDER.format({
           channel: m ? y : "@".concat(L)
         }),
@@ -453,7 +453,7 @@ function eh(e) {
       l = O.default.getChannel(a);
     o()(null != l, "DM channel must be defined");
     let s = await ea(h)(l.id);
-    o()(null != s, "Reaction image must be defined"), await (0, N.sendReply)({
+    o()(null != s, "Reaction image must be defined"), await (0, v.sendReply)({
       file: s,
       channel: l,
       altText: c,
@@ -518,7 +518,7 @@ function eh(e) {
       })]
     }), (0, a.jsx)("div", {
       className: en.voicePopoutDivider
-    }), x ? (0, a.jsx)(v.ReplyInput, {
+    }), x ? (0, a.jsx)(N.ReplyInput, {
       placeholder: et.default.Messages.TEXTAREA_PLACEHOLDER.format({
         channel: "@".concat(A)
       }),
