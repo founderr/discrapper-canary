@@ -92,27 +92,27 @@ t.default = function(e) {
     onClose: r,
     onAccept: u,
     ...d
-  } = e, S = (0, C.useUID)(), v = (0, T.useClanInfo)(s), [x, P] = l.useState(!0), [D, b] = l.useState(!1), U = l.useCallback(() => {
+  } = e, S = (0, C.useUID)(), v = (0, T.useClanInfo)(s), x = (0, T.useIsFetchingClanInfo)(), [P, D] = l.useState(!0), [b, U] = l.useState(!1), F = l.useCallback(() => {
     u(), r()
   }, [u, r]);
   l.useEffect(() => {
-    null == v && U()
-  }, [v, U]);
-  let F = null == v ? void 0 : null === (t = v.branding) || void 0 === t ? void 0 : t.primaryColor,
-    w = l.useCallback(() => {
-      (0, _.adoptClanIdentity)(s, x, y.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL), U()
-    }, [s, U, x]),
+    null == v && !x && F()
+  }, [v, F, x]);
+  let w = null == v ? void 0 : null === (t = v.branding) || void 0 === t ? void 0 : t.primaryColor,
     k = l.useCallback(() => {
-      b(!0)
+      (0, _.adoptClanIdentity)(s, P, y.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL), F()
+    }, [s, F, P]),
+    H = l.useCallback(() => {
+      U(!0)
     }, []),
-    H = (0, f.useStateFromStores)([p.default], () => p.default.getGuild(s)),
-    B = (0, f.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-    G = (0, f.useStateFromStores)([m.default], () => null != B ? m.default.getMember(s, B.id) : null);
-  if (null == H || null == B || null == G || null == v) return null;
-  let V = null != F ? {
-      background: "radial-gradient(circle at top left, ".concat(i()(F).alpha(.3).hex(), " 0%, transparent 50%)")
+    B = (0, f.useStateFromStores)([p.default], () => p.default.getGuild(s)),
+    G = (0, f.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
+    V = (0, f.useStateFromStores)([m.default], () => null != G ? m.default.getMember(s, G.id) : null);
+  if (null == B || null == G || null == V || null == v) return null;
+  let W = null != w ? {
+      background: "radial-gradient(circle at top left, ".concat(i()(w).alpha(.3).hex(), " 0%, transparent 50%)")
     } : void 0,
-    W = (0, A.getClanBadgeUrl)(H.id, v.badge.imageHash, R.ClanTagBadgeSize.SIZE_36);
+    Y = (0, A.getClanBadgeUrl)(B.id, v.badge.imageHash, R.ClanTagBadgeSize.SIZE_36);
   return (0, a.jsx)(h.ModalRoot, {
     ...d,
     transitionState: d.transitionState,
@@ -121,7 +121,7 @@ t.default = function(e) {
     size: h.ModalSize.DYNAMIC,
     children: (0, a.jsxs)(h.ModalContent, {
       className: O.content,
-      style: V,
+      style: W,
       children: [(0, a.jsxs)("div", {
         className: O.infoSide,
         children: [(0, a.jsxs)("div", {
@@ -133,7 +133,7 @@ t.default = function(e) {
               children: L.default.Messages.CLAN_JOIN_SUCCESS_TITLE
             }), (0, a.jsx)(h.Heading, {
               variant: "heading-xxl/bold",
-              children: H.name
+              children: B.name
             })]
           }), (0, a.jsx)(h.Text, {
             className: O.subtitle,
@@ -145,7 +145,7 @@ t.default = function(e) {
           children: [(0, a.jsxs)("div", {
             className: O.chatPreview,
             children: [(0, a.jsx)(h.Avatar, {
-              src: B.getAvatarURL(s, 40),
+              src: G.getAvatarURL(s, 40),
               size: h.AvatarSizes.SIZE_40,
               "aria-hidden": !0
             }), (0, a.jsxs)("div", {
@@ -154,10 +154,10 @@ t.default = function(e) {
                 className: O.userName,
                 children: [(0, a.jsx)(h.NameWithRole, {
                   className: O.userName,
-                  name: g.default.getName(s, null, B),
-                  color: null !== (n = G.colorString) && void 0 !== n ? n : void 0
-                }), x && (0, a.jsx)(N.BaseClanTagChiplet, {
-                  clanBadge: W,
+                  name: g.default.getName(s, null, G),
+                  color: null !== (n = V.colorString) && void 0 !== n ? n : void 0
+                }), P && (0, a.jsx)(N.BaseClanTagChiplet, {
+                  clanBadge: Y,
                   clanTag: v.tag,
                   badgeSize: R.ClanTagBadgeSize.SIZE_12,
                   textVariant: "text-xs/normal"
@@ -189,8 +189,8 @@ t.default = function(e) {
                 children: L.default.Messages.CLAN_SUCCESS_USE_TAG_HELP
               })]
             }), (0, a.jsx)(h.Switch, {
-              onChange: () => P(!x),
-              checked: x
+              onChange: () => D(!P),
+              checked: P
             })]
           })]
         })]
@@ -199,14 +199,14 @@ t.default = function(e) {
         children: (0, a.jsx)(j, {
           guildId: s,
           clanInfo: v,
-          onSignCharter: k
+          onSignCharter: H
         })
       }), (0, a.jsx)(M.default, {
-        onClick: w,
+        onClick: k,
         color: h.Button.Colors.BRAND,
-        themeColor: F,
+        themeColor: w,
         fullWidth: !1,
-        className: o()(O.ctaButton, D ? O.ctaButtonSigned : null),
+        className: o()(O.ctaButton, b ? O.ctaButtonSigned : null),
         children: (0, a.jsxs)("div", {
           className: O.ctaButtonInner,
           children: [(0, a.jsx)(h.Text, {
@@ -216,7 +216,7 @@ t.default = function(e) {
           }), (0, a.jsx)(c.ArrowLargeRightIcon, {
             width: 20,
             height: 20,
-            color: null == F ? void 0 : (0, I.getAccessibleTextColor)(F).hex()
+            color: null == w ? void 0 : (0, I.getAccessibleTextColor)(w).hex()
           })]
         })
       })]
