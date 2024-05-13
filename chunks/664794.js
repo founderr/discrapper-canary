@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
 var i = n("735250");
@@ -10,55 +10,48 @@ var r = n("442837"),
   a = n("481060"),
   s = n("100527"),
   o = n("906732"),
-  l = n("858488"),
-  u = n("389052"),
-  d = n("622724"),
-  _ = n("314897"),
-  c = n("808268"),
-  E = n("785717"),
-  I = n("537387"),
-  T = n("689938");
+  l = n("389052"),
+  u = n("622724"),
+  d = n("314897"),
+  _ = n("808268"),
+  c = n("785717"),
+  E = n("537387"),
+  I = n("689938");
 
-function f(e) {
+function T(e) {
   let {
     user: t,
     guildId: n,
-    viewProfileItem: f
-  } = e, S = (0, r.useStateFromStores)([_.default], () => _.default.getId() === t.id), {
-    trackUserProfileAction: h
-  } = (0, E.useUserProfileAnalyticsContext)(), {
-    analyticsLocations: A,
-    newestAnalyticsLocation: m
-  } = (0, o.default)(s.default.USER_PROFILE_OVERFLOW_MENU), N = (0, l.default)({
-    user: t,
-    onAction: () => h({
-      action: "PRESS_SET_FRIEND_NICKNAME",
-      analyticsLocations: A
-    })
-  }), p = (0, u.default)({
+    viewProfileItem: T
+  } = e, f = (0, r.useStateFromStores)([d.default], () => d.default.getId() === t.id), {
+    trackUserProfileAction: S
+  } = (0, c.useUserProfileAnalyticsContext)(), {
+    analyticsLocations: h,
+    newestAnalyticsLocation: A
+  } = (0, o.default)(s.default.USER_PROFILE_OVERFLOW_MENU), m = (0, l.default)({
     user: t,
     color: "danger",
-    location: m,
-    onBlock: () => h({
+    location: A,
+    onBlock: () => S({
       action: "BLOCK",
-      analyticsLocations: A
+      analyticsLocations: h
     }),
-    onUnblock: () => h({
+    onUnblock: () => S({
       action: "UNBLOCK",
-      analyticsLocations: A
+      analyticsLocations: h
     })
-  }), O = (0, d.default)({
+  }), N = (0, u.default)({
     user: t,
     guildId: n,
     color: "danger",
-    location: m,
-    onAction: () => h({
+    location: A,
+    onAction: () => S({
       action: "REPORT",
-      analyticsLocations: A
+      analyticsLocations: h
     })
   });
-  return S ? null : (0, i.jsx)(o.AnalyticsLocationProvider, {
-    value: A,
+  return f ? null : (0, i.jsx)(o.AnalyticsLocationProvider, {
+    value: h,
     children: (0, i.jsx)(a.Popout, {
       renderPopout: e => {
         let {
@@ -68,17 +61,17 @@ function f(e) {
           navId: "user-profile-overflow-menu",
           onSelect: void 0,
           onClose: t,
-          "aria-label": T.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
-          children: [(0, i.jsxs)(a.MenuGroup, {
-            children: [f, N]
+          "aria-label": I.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
+          children: [(0, i.jsx)(a.MenuGroup, {
+            children: T
           }), (0, i.jsxs)(a.MenuGroup, {
-            children: [p, O]
+            children: [m, N]
           })]
         })
       },
-      children: e => (0, i.jsx)(I.default, {
-        text: T.default.Messages.MORE,
-        icon: c.default,
+      children: e => (0, i.jsx)(E.default, {
+        text: I.default.Messages.MORE,
+        icon: _.default,
         ...e
       })
     })

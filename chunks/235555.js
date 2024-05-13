@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("392711"),
-  i = n.n(l),
+  i = n("392711"),
+  l = n.n(i),
   r = n("442837"),
   o = n("239091"),
   u = n("476669"),
@@ -51,7 +51,7 @@ class p extends s.PureComponent {
       (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("64409")]).then(n.bind(n, "881351"));
+        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("64409")]).then(n.bind(n, "881351"));
         return n => (0, a.jsx)(e, {
           ...n,
           user: t
@@ -75,14 +75,14 @@ t.default = r.default.connectStores([c.default, h.default, E.default, f.default]
   let n = c.default.getSyncingWith(),
     a = c.default.getActivity(),
     s = h.default.getCurrentUser(),
-    l = [];
+    i = [];
   if (null != n ? (e = h.default.getUser(n.userId), t = n.partyId) : null != a && null != a.party && null != a.party.id && (e = s, t = a.party.id), null != t) {
     var r;
-    l = i()(Array.from(null !== (r = f.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(C.isNotNullish).orderBy([t => null == e || e.id === t.id, e => E.default.isFriend(e.id)], ["desc", "desc"]).value()
+    i = l()(Array.from(null !== (r = f.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(C.isNotNullish).orderBy([t => null == e || e.id === t.id, e => E.default.isFriend(e.id)], ["desc", "desc"]).value()
   }
   return {
     currentUser: s,
     host: e,
-    party: l
+    party: i
   }
 })(p)
