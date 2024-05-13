@@ -41,8 +41,8 @@ var u = n("194048"),
   T = n("493683"),
   I = n("475179"),
   A = n("220779"),
-  v = n("201133"),
-  N = n("605236"),
+  N = n("201133"),
+  v = n("605236"),
   x = n("543241"),
   M = n("318374"),
   R = n("359110"),
@@ -100,16 +100,17 @@ function el(e) {
   let {
     children: t,
     backgroundImgSrc: n,
-    style: l = {}
+    className: l,
+    style: s = {}
   } = e, {
-    primaryColor: s,
-    secondaryColor: r
+    primaryColor: r,
+    secondaryColor: o
   } = (0, Z.default)(n);
   return (0, a.jsx)("div", {
-    className: i()(et.hero, "theme-".concat($.ThemeTypes.DARK)),
+    className: i()(et.hero, "theme-".concat($.ThemeTypes.DARK), l),
     style: {
-      background: "linear-gradient(45deg, ".concat(s, ", ").concat(r, ")"),
-      ...l
+      background: "linear-gradient(45deg, ".concat(r, ", ").concat(o, ")"),
+      ...s
     },
     children: t
   })
@@ -153,7 +154,7 @@ function er(e) {
           guild_id: t.guild_id
         }), S) {
         let l;
-        if ((0, N.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), x(!0), R(!1), m) l = t;
+        if ((0, v.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), x(!0), R(!1), m) l = t;
         else {
           var a;
           let e = await T.default.getOrEnsurePrivateChannel(n.id);
@@ -174,7 +175,7 @@ function er(e) {
     }
   }, b = async e => {
     let a;
-    if (S && (0, N.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m) a = t;
+    if (S && (0, v.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m) a = t;
     else {
       let e = await T.default.openPrivateChannel(n.id, !1, !1),
         t = L.default.getChannel(e);
@@ -194,7 +195,7 @@ function er(e) {
       onComplete: l,
       interactionType: r
     } = e, d = await en(s)(a.id);
-    o()(null != d, "Reaction image must be defined"), await (0, v.sendReply)({
+    o()(null != d, "Reaction image must be defined"), await (0, N.sendReply)({
       file: d,
       channel: a,
       altText: i,
@@ -397,9 +398,7 @@ function ec(e) {
     ...s
   } = e;
   return (0, a.jsxs)(el, {
-    style: {
-      background: "linear-gradient(45deg, #24282B, #1A2020)"
-    },
+    className: et.streamingPopoutHero,
     children: [(0, a.jsx)(eu, {
       ...s,
       headerIcons: (0, a.jsx)(k.default, {
@@ -434,7 +433,7 @@ function ef(e) {
     reactionImageAltText: c,
     generateReactionImage: h,
     isStreaming: g = !1
-  } = e, N = G.default.getName(i.guild_id, i.id, t), [x, M] = l.useState(!1), y = (0, d.useStateFromStores)([O.default], () => O.default.getGuild(s.guild_id)), j = (0, d.useStateFromStoresArray)([b.default], () => b.default.getVoiceStatesForChannel(s), [s]), F = l.useMemo(() => {
+  } = e, v = G.default.getName(i.guild_id, i.id, t), [x, M] = l.useState(!1), y = (0, d.useStateFromStores)([O.default], () => O.default.getGuild(s.guild_id)), j = (0, d.useStateFromStoresArray)([b.default], () => b.default.getVoiceStatesForChannel(s), [s]), F = l.useMemo(() => {
     for (let e of j) {
       let t = L.default.getDMFromUserId(e.user.id),
         n = null != t && D.default.isChannelMuted(null, t),
@@ -447,7 +446,7 @@ function ef(e) {
       l = L.default.getChannel(a);
     o()(null != l, "DM channel must be defined");
     let s = await en(h)(l.id);
-    o()(null != s, "Reaction image must be defined"), await (0, v.sendReply)({
+    o()(null != s, "Reaction image must be defined"), await (0, N.sendReply)({
       file: s,
       channel: l,
       altText: c,
@@ -514,7 +513,7 @@ function ef(e) {
       className: et.voicePopoutDivider
     }), x ? (0, a.jsx)(A.ReplyInput, {
       placeholder: ee.default.Messages.TEXTAREA_PLACEHOLDER.format({
-        channel: "@".concat(N)
+        channel: "@".concat(v)
       }),
       onEnter: k,
       showEmojiButton: !0,
