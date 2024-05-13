@@ -89,7 +89,7 @@ t.default = r.memo(function(e) {
             color: s.Button.Colors.PRIMARY,
             size: s.Button.Sizes.SMALL,
             fullWidth: !0,
-            children: C.default.Messages.CLAN_USER_APPLY_TO_WAITLIST
+            children: C.default.Messages.JOIN_WAITLIST
           });
         case !U && B:
           return (0, i.jsx)(s.Button, {
