@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildProductListingPopout: function() {
-    return I
+    return m
   },
   default: function() {
-    return m
+    return I
   }
 });
 var r = n("735250");
@@ -19,9 +19,9 @@ var i = n("120356"),
   d = n("757698"),
   f = n("621113"),
   S = n("937615"),
-  g = n("942833"),
-  E = n("48691"),
-  h = n("231338"),
+  h = n("942833"),
+  g = n("48691"),
+  E = n("231338"),
   _ = n("689938"),
   p = n("367871");
 
@@ -36,11 +36,11 @@ function C(e) {
     onEditProduct: a,
     onUnpublishProduct: f,
     onDeleteProduct: S,
-    onCopyLink: g,
-    onTestDownload: E,
-    onReportProduct: h,
+    onCopyLink: h,
+    onTestDownload: g,
+    onReportProduct: E,
     closePopout: C,
-    onSelect: I
+    onSelect: m
   } = e;
   return (0, r.jsx)("div", {
     className: p.menuContainer,
@@ -48,7 +48,7 @@ function C(e) {
       navId: "guild-product-context",
       onClose: C,
       "aria-label": _.default.Messages.GUILD_PRODUCTS_ACTION_MENU_LABEL,
-      onSelect: I,
+      onSelect: m,
       children: [(0, r.jsxs)(s.MenuGroup, {
         children: [t && (0, r.jsx)(s.MenuItem, {
           id: "guild-product-edit",
@@ -58,12 +58,12 @@ function C(e) {
           id: "guild-product-copy-link",
           label: _.default.Messages.GUILD_PRODUCT_COPY_LINK,
           icon: d.default,
-          action: g
+          action: h
         }), l && (0, r.jsx)(s.MenuItem, {
           id: "guild-product-test-download",
           label: _.default.Messages.GUILD_PRODUCT_TEST_DOWNLOAD,
           icon: c.default,
-          action: E
+          action: g
         })]
       }), (0, r.jsxs)(s.MenuGroup, {
         children: [n && (0, r.jsx)(s.MenuItem, {
@@ -81,14 +81,14 @@ function C(e) {
           id: "guild-product-report",
           label: _.default.Messages.GUILD_PRODUCT_REPORT,
           color: "danger",
-          action: h
+          action: E
         })
       })]
     })
   })
 }
 
-function I(e) {
+function m(e) {
   let {
     product: t,
     guildId: n,
@@ -100,10 +100,10 @@ function I(e) {
     showReportProduct: c,
     onEditProduct: d,
     onUnpublishProduct: S,
-    onDeleteProduct: g,
-    onCopyProductLink: E,
-    onTestDownload: h,
-    onReportProduct: I
+    onDeleteProduct: h,
+    onCopyProductLink: g,
+    onTestDownload: E,
+    onReportProduct: m
   } = e;
   return (0, r.jsx)("div", {
     onClick: e => {
@@ -126,10 +126,10 @@ function I(e) {
         showDeleteProduct: a,
         onEditProduct: d,
         onUnpublishProduct: S,
-        onDeleteProduct: g,
-        onCopyLink: E,
-        onTestDownload: h,
-        onReportProduct: I
+        onDeleteProduct: h,
+        onCopyLink: g,
+        onTestDownload: E,
+        onReportProduct: m
       }),
       children: (e, n) => {
         let {
@@ -153,7 +153,7 @@ function I(e) {
   })
 }
 
-function m(e) {
+function I(e) {
   let {
     product: t,
     guildId: n,
@@ -161,9 +161,9 @@ function m(e) {
     onUnpublishProduct: c,
     onDeleteProduct: d,
     onCopyProductLink: f,
-    onTestDownload: m,
+    onTestDownload: I,
     disabled: T = !1
-  } = e, R = (0, u.useListingThumbnailUrl)(t, 600), M = null !== t.price_tier ? (0, S.formatPrice)(t.price_tier, h.CurrencyCodes.USD) : void 0, N = (0, g.useProductType)(t);
+  } = e, R = (0, u.useListingThumbnailUrl)(t, 600), v = null !== t.price_tier ? (0, S.formatPrice)(t.price_tier, E.CurrencyCodes.USD) : void 0, M = (0, h.useProductType)(t);
   return (0, r.jsxs)(s.ClickableContainer, {
     tag: "article",
     className: l()(p.productCardClickable, p.productCard, {
@@ -186,7 +186,7 @@ function m(e) {
         onUnpublishProduct: c,
         onDeleteProduct: d,
         onCopyLink: f,
-        onTestDownload: m,
+        onTestDownload: I,
         onReportProduct: () => {}
       })))
     },
@@ -213,20 +213,20 @@ function m(e) {
           children: [(0, r.jsx)(s.Text, {
             variant: "text-md/normal",
             color: "header-secondary",
-            children: M
-          }), null != N ? (0, r.jsxs)(r.Fragment, {
+            children: v
+          }), null != M ? (0, r.jsxs)(r.Fragment, {
             children: [(0, r.jsx)("div", {
               className: p.dotSeparator
             }), (0, r.jsx)(s.Text, {
               variant: "text-md/normal",
               color: "header-secondary",
-              children: N
+              children: M
             })]
           }) : null]
         }), (0, r.jsx)(a.default, {
           size: 16
-        }), t.published ? (0, r.jsx)(E.PublishedBadge, {}) : (0, r.jsx)(E.DraftBadge, {})]
-      }), !T && (0, r.jsx)(I, {
+        }), t.published ? (0, r.jsx)(g.PublishedBadge, {}) : (0, r.jsx)(g.DraftBadge, {})]
+      }), !T && (0, r.jsx)(m, {
         product: t,
         guildId: n,
         showEditProduct: !0,
@@ -239,7 +239,7 @@ function m(e) {
         onUnpublishProduct: c,
         onDeleteProduct: d,
         onCopyProductLink: f,
-        onTestDownload: m,
+        onTestDownload: I,
         onReportProduct: () => {}
       })]
     })]

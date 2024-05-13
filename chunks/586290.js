@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return N
+    return h
   }
 }), l("724458"), l("47120");
 var a = l("735250"),
@@ -18,10 +18,10 @@ var a = l("735250"),
   S = l("176940"),
   E = l("689938"),
   _ = l("378873"),
-  C = l("555066"),
-  g = l("611273");
+  N = l("555066"),
+  C = l("611273");
 
-function N(e) {
+function h(e) {
   let {
     selectedSource: t,
     onChangeVideoDeviceSource: l,
@@ -29,21 +29,21 @@ function N(e) {
   } = e;
   i()(null != t, "Camera capture device cannot be null");
   let r = (0, S.default)(),
-    N = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
-    [h, A] = n.useState(function(e, t, l) {
+    h = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
+    [g, p] = n.useState(function(e, t, l) {
       if (null != t && null != l) {
         let a = t.find(t => t.id === e);
         if (null == a) return;
         let n = u().reduce(l, (e, t) => (0, o.stringSimilarity)(a.name, t.name) > (0, o.stringSimilarity)(a.name, e.name) ? t : e);
         if (null != n) return n.id
       }
-    }(t.id, r, N));
-  return null != h && s(h), (0, a.jsx)(n.Fragment, {
+    }(t.id, r, h));
+  return null != g && s(g), (0, a.jsx)(n.Fragment, {
     children: (0, a.jsxs)(c.FormItem, {
       title: "Capture Device",
-      className: C.modalContent,
+      className: N.modalContent,
       children: [(0, a.jsx)(c.FormItem, {
-        className: g.marginTop8,
+        className: C.marginTop8,
         children: (0, a.jsxs)(m.default, {
           children: [(0, a.jsx)("span", {
             className: _.ellipsisText,
@@ -57,15 +57,15 @@ function N(e) {
           })]
         })
       }), (0, a.jsx)(c.FormItem, {
-        className: g.marginTop8,
+        className: C.marginTop8,
         title: E.default.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
         children: (0, a.jsx)(c.SingleSelect, {
-          value: h,
-          className: g.__invalid_marginaTop8,
+          value: g,
+          className: C.__invalid_marginaTop8,
           onChange: e => {
-            A(e), s(e)
+            p(e), s(e)
           },
-          options: u().map(N, e => {
+          options: u().map(h, e => {
             let {
               id: t,
               name: l

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return v
   }
 }), n("47120"), n("724458"), n("653041");
 var r = n("735250"),
@@ -15,14 +15,14 @@ var r = n("735250"),
   d = n("481060"),
   f = n("271383"),
   S = n("430824"),
-  g = n("594174"),
-  E = n("700785"),
-  h = n("709054"),
+  h = n("594174"),
+  g = n("700785"),
+  E = n("709054"),
   _ = n("962086"),
   p = n("160404"),
   C = n("225675"),
-  I = n("981631"),
-  m = n("689938"),
+  m = n("981631"),
+  I = n("689938"),
   T = n("717404");
 
 function R(e) {
@@ -35,48 +35,48 @@ function R(e) {
   })
 }
 
-function M(e) {
+function v(e) {
   let {
     guildId: t
-  } = e, n = (0, c.useStateFromStores)([g.default], () => g.default.getCurrentUser()), l = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t)), o = (0, c.useStateFromStores)([S.default], () => S.default.getRoles(t)), {
-    impersonateType: M,
-    viewingRoles: N
+  } = e, n = (0, c.useStateFromStores)([h.default], () => h.default.getCurrentUser()), l = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t)), o = (0, c.useStateFromStores)([S.default], () => S.default.getRoles(t)), {
+    impersonateType: v,
+    viewingRoles: M
   } = (0, c.useStateFromStoresObject)([p.default], () => ({
     impersonateType: p.default.getImpersonateType(t),
     viewingRoles: p.default.getViewingRoles(t)
-  })), v = M === C.ImpersonateType.SERVER_SHOP, O = (0, c.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [A, L] = (0, d.useMultiSelect)(null == N ? [] : h.default.keys(N)), b = i.useRef(l);
+  })), N = v === C.ImpersonateType.SERVER_SHOP, O = (0, c.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [b, x] = (0, d.useMultiSelect)(null == M ? [] : E.default.keys(M)), A = i.useRef(l);
   i.useEffect(() => {
     let e = {},
-      t = b.current;
-    if (null != t && null != M) {
-      for (let t of A) {
+      t = A.current;
+    if (null != t && null != v) {
+      for (let t of b) {
         let n = o[t];
         null != n && (e[t] = n)
       }(0, _.updateImpersonating)(t.id, {
-        type: M,
+        type: v,
         roles: e
       })
     }
-  }, [A, M, o]);
-  let x = null != l && null != n && null != O ? u()(o).filter(e => -1 !== O.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
+  }, [b, v, o]);
+  let L = null != l && null != n && null != O ? u()(o).filter(e => -1 !== O.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
     P = i.useMemo(() => null != l && null != n ? Object.values(o).filter(e => e.id !== l.id).filter(e => {
       var t;
-      return !v || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null
-    }).filter(e => (null == x ? void 0 : x.id) === e.id || E.isRoleHigher(l, n.id, x, e)) : [], [l, n, v, x, o]);
+      return !N || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null
+    }).filter(e => (null == L ? void 0 : L.id) === e.id || g.isRoleHigher(l, n.id, L, e)) : [], [l, n, N, L, o]);
   if (null == n || null == l || null == O) return null;
-  let w = {};
+  let D = {};
   return (O.roles.forEach(e => {
     let t = o[e];
-    null != t && (w[t.id] = t)
-  }), a.has(E.computePermissionsForRoles({
-    forceRoles: w,
+    null != t && (D[t.id] = t)
+  }), a.has(g.computePermissionsForRoles({
+    forceRoles: D,
     context: l
-  }), a.combine(I.Permissions.MANAGE_GUILD, I.Permissions.MANAGE_ROLES)) || l.isOwner(n.id)) ? (0, r.jsx)("div", {
+  }), a.combine(m.Permissions.MANAGE_GUILD, m.Permissions.MANAGE_ROLES)) || l.isOwner(n.id)) ? (0, r.jsx)("div", {
     className: T.container,
     children: (0, r.jsx)(d.Combobox, {
-      placeholder: m.default.Messages.SEARCH_ROLES,
-      value: A,
-      onChange: L,
+      placeholder: I.default.Messages.SEARCH_ROLES,
+      value: b,
+      onChange: x,
       autoFocus: !0,
       children: e => {
         let t = P.reduce((t, n) => (s()(e.toLowerCase(), n.name.toLowerCase()) && t.push((0, r.jsxs)(d.ComboboxItem, {
@@ -99,6 +99,6 @@ function M(e) {
     })
   }) : (0, r.jsx)(d.Text, {
     variant: "text-md/medium",
-    children: m.default.Messages.VIEW_AS_ROLES_NO_ACCESS
+    children: I.default.Messages.VIEW_AS_ROLES_NO_ACCESS
   })
 }

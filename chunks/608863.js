@@ -1,26 +1,26 @@
 "use strict";
-e.r(s), e.d(s, {
+n.r(t), n.d(t, {
   HamburgerButton: function() {
-    return t
+    return o
   }
 });
-var S = e("735250");
-e("470079");
-var i = e("557533"),
-  n = e.n(i),
-  _ = e("864533");
-let t = E => {
+var r = n("735250");
+n("470079");
+var i = n("557533"),
+  l = n.n(i),
+  s = n("864533");
+let o = e => {
   let {
-    open: s = !1,
-    className: e,
+    open: t = !1,
+    className: n,
     ...i
-  } = E;
-  return (0, S.jsxs)("button", {
+  } = e;
+  return (0, r.jsxs)("button", {
     type: "button",
-    className: n()(_.btnHamburger, {
-      [_.btnHamburgerOpen]: s
-    }, e),
+    className: l()(s.btnHamburger, {
+      [s.btnHamburgerOpen]: t
+    }, n),
     ...i,
-    children: [(0, S.jsx)("span", {}), (0, S.jsx)("span", {}), (0, S.jsx)("span", {}), (0, S.jsx)("span", {}), (0, S.jsx)("span", {}), (0, S.jsx)("span", {})]
+    children: [(0, r.jsx)("span", {}), (0, r.jsx)("span", {}), (0, r.jsx)("span", {}), (0, r.jsx)("span", {}), (0, r.jsx)("span", {}), (0, r.jsx)("span", {})]
   })
 }

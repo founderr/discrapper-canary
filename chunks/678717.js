@@ -24,8 +24,8 @@ var a = r("735250"),
   k = r("432877");
 r("381996");
 var v = r("392750"),
-  C = r("926976"),
-  j = r("592197"),
+  j = r("926976"),
+  C = r("592197"),
   S = r("860337"),
   w = r("789654"),
   T = r("691867"),
@@ -70,7 +70,7 @@ function V() {
       let e = [{
         id: "analytics",
         name: "Analytics",
-        render: () => (0, a.jsx)(C.default, {})
+        render: () => (0, a.jsx)(j.default, {})
       }, {
         id: "triggers",
         name: "Triggers",
@@ -143,7 +143,7 @@ function V() {
       }), e.push({
         id: "billing",
         name: "Billing",
-        render: () => (0, a.jsx)(j.default, {})
+        render: () => (0, a.jsx)(C.default, {})
       }), e.push({
         id: "content_inventory",
         name: "Content Inventory",

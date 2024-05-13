@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return N
+    return h
   }
 }), l("47120");
 var a = l("735250"),
@@ -18,68 +18,68 @@ var a = l("735250"),
   S = l("626135"),
   E = l("981631"),
   _ = l("689938"),
-  C = l("492626");
-let g = async () => {
+  N = l("492626");
+let C = async () => {
   let {
     default: e
   } = await l.e("21812").then(l.t.bind(l, "741855", 19));
   return e
 };
 
-function N(e) {
+function h(e) {
   let {
     selectedGuildId: t,
     selectedChannelId: l,
     glow: s,
-    playIntroTransition: N,
-    onUnlocked: h
-  } = e, [A, I] = n.useState(!1), x = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
-    hqStreamingState: p
-  } = (0, c.usePerksDemo)(r.EntitlementFeatureNames.STREAM_HIGH_QUALITY), T = n.useCallback(() => {
-    (0, f.hqStreamingUnlockAnimationPlayed)(!0), h()
-  }, [h]);
+    playIntroTransition: h,
+    onUnlocked: g
+  } = e, [p, A] = n.useState(!1), x = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
+    hqStreamingState: I
+  } = (0, c.usePerksDemo)(r.EntitlementFeatureNames.STREAM_HIGH_QUALITY), R = n.useCallback(() => {
+    (0, f.hqStreamingUnlockAnimationPlayed)(!0), g()
+  }, [g]);
   return n.useEffect(() => {
-    if (p.hqStreamingUnlockAnimationPlayed) return;
+    if (I.hqStreamingUnlockAnimationPlayed) return;
     let e = setTimeout(() => {
-      I(!0)
+      A(!0)
     }, 1150);
     return () => {
-      clearTimeout(e), I(!1)
+      clearTimeout(e), A(!1)
     }
-  }, [T, p, x]), n.useEffect(() => {
-    if (p.hqStreamingUnlockAnimationPlayed) return;
+  }, [R, I, x]), n.useEffect(() => {
+    if (I.hqStreamingUnlockAnimationPlayed) return;
     if (x) {
-      T();
+      R();
       return
     }
     let e = setTimeout(() => {
-      T()
+      R()
     }, 250);
     return () => {
       clearTimeout(e)
     }
-  }, [h, T, , p, x]), n.useEffect(() => {
+  }, [g, R, , I, x]), n.useEffect(() => {
     S.default.track(E.AnalyticEvents.PERK_DEMO_OFFER_VIEWED, {
       guild_id: t,
       channel_id: l,
       perk_type: r.EntitlementFeatureNames.STREAM_HIGH_QUALITY
     })
   }, []), (0, a.jsx)("div", {
-    className: i()(C.container, {
-      [C.gradientGlow]: s
+    className: i()(N.container, {
+      [N.gradientGlow]: s
     }),
     children: (0, a.jsxs)("div", {
-      className: C.content,
+      className: N.content,
       children: [(0, a.jsx)(m.default, {
-        importData: g,
+        importData: C,
         shouldAnimate: !x,
         pauseAtFrame: 90,
-        className: i()(C.animation, {
-          [C.animationEndState]: A || !N || x
+        className: i()(N.animation, {
+          [N.animationEndState]: p || !h || x
         }),
         loop: !1
       }), (0, a.jsx)("div", {
-        className: C.message,
+        className: N.message,
         children: (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
           children: _.default.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_INITIAL_UPSELL
