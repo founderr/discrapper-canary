@@ -128,10 +128,6 @@ function V() {
         id: "affinity",
         name: "Affinity",
         render: () => (0, a.jsx)(v.default, {})
-      }), m.default.isDeveloper && e.push({
-        id: "content_inventory",
-        name: "Content Inventory",
-        render: () => (0, a.jsx)(h.default, {})
       }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") && (e.push({
         id: "trials",
         name: "Trials",
@@ -148,6 +144,10 @@ function V() {
         id: "billing",
         name: "Billing",
         render: () => (0, a.jsx)(C.default, {})
+      }), e.push({
+        id: "content_inventory",
+        name: "Content Inventory",
+        render: () => (0, a.jsx)(h.default, {})
       })), e
     }, []),
     {
