@@ -70,11 +70,11 @@ t.default = e => {
     embeddedApp: s,
     onAction: r
   } = e, m = null != s, C = m ? Array.from(s.embeddedActivity.userIds) : [], g = (0, i.useStateFromStores)([p.default, h.default], () => {
+    if (m) return p.default.getUser(C[0]);
     if (null != a) {
-      var e, t, l, s;
-      return a.length <= 0 ? null : m ? null !== (t = null === (e = a.find(e => e.voiceState.sessionId === (null == n ? void 0 : n.session_id))) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : p.default.getUser(C[0]) : null !== (s = null === (l = a.find(e => e.user.id !== h.default.getId())) || void 0 === l ? void 0 : l.user) && void 0 !== s ? s : a[0].user
+      var e, t;
+      return a.length <= 0 ? null : null !== (t = null === (e = a.find(e => e.user.id !== h.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : a[0].user
     }
-    if (m) return p.default.getUser(C[0])
   });
   if (null == g) return null;
   let S = m || (0, u.default)(n),
@@ -109,6 +109,7 @@ t.default = e => {
       children: (0, l.jsx)(d.default, {
         type: o.UserActivityTypes.VOICE_CHANNEL,
         activity: n,
+        embeddedActivity: null == s ? void 0 : s.embeddedActivity,
         user: g,
         guildId: t.getGuildId(),
         channelId: t.id,
