@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 }), n("47120");
 var a = n("735250"),
@@ -23,7 +23,7 @@ var a = n("735250"),
   N = n("689938"),
   _ = n("269939");
 
-function T(e) {
+function I(e) {
   let {
     onClick: t
   } = e;
@@ -35,7 +35,7 @@ function T(e) {
   })
 }
 
-function I(e) {
+function T(e) {
   let {
     setTab: t,
     badgeState: n,
@@ -43,16 +43,16 @@ function I(e) {
   } = e, {
     initialized: E,
     items: N,
-    loading: I,
+    loading: T,
     loadMore: C
-  } = (0, d.useDesktopNotificationCenterItemsLoader)(), A = (0, s.useStateFromStores)([r.default], () => r.default.localItems), v = l.useMemo(() => [...[...N, ...A].sort((e, t) => -1 * p.default.compare(e.id, t.id))], [N, A]), M = N.length > 0 ? N[0] : null, R = f.NotificationCenterAckedBeforeId.useSetting(), x = l.useMemo(() => {
-    if (null != M && 0 >= p.default.compare(M.id, R)) return !1;
+  } = (0, d.useDesktopNotificationCenterItemsLoader)(), A = (0, s.useStateFromStores)([r.default], () => r.default.localItems), v = l.useMemo(() => [...[...N, ...A].sort((e, t) => -1 * p.default.compare(e.id, t.id))], [N, A]), x = N.length > 0 ? N[0] : null, R = f.NotificationCenterAckedBeforeId.useSetting(), M = l.useMemo(() => {
+    if (null != x && 0 >= p.default.compare(x.id, R)) return !1;
     for (let e of v) {
       if (0 >= p.default.compare(e.id, R)) break;
       if (!(0, u.isRemoteAcked)(e, R)) return !0
     }
     return !1
-  }, [M, R, v]);
+  }, [x, R, v]);
   return (0, a.jsxs)("div", {
     className: _.container,
     children: [(0, a.jsx)(g.default, {
@@ -60,9 +60,9 @@ function I(e) {
       setTab: t,
       badgeState: n,
       closePopout: h,
-      children: x ? (0, a.jsx)(T, {
+      children: M ? (0, a.jsx)(I, {
         onClick: () => {
-          null != M && (f.NotificationCenterAckedBeforeId.updateSetting(M.id), m.default.track(S.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
+          null != x && (f.NotificationCenterAckedBeforeId.updateSetting(x.id), m.default.track(S.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
             action_type: o.NotificationCenterActionTypes.MARK_ALL_READ
           }))
         }
@@ -70,7 +70,7 @@ function I(e) {
     }), (0, a.jsx)(c.default, {
       initialized: E,
       items: v,
-      loading: I,
+      loading: T,
       loadMore: C
     })]
   })

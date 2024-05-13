@@ -18,12 +18,12 @@ var a = n("735250"),
   S = n("263704"),
   N = n("568570"),
   _ = n("617379"),
-  T = n("324081"),
-  I = n("305248"),
+  I = n("324081"),
+  T = n("305248"),
   C = n("520116"),
   A = n("981631"),
   v = n("689938"),
-  M = n("623122");
+  x = n("623122");
 let R = l.memo(function(e) {
   let {
     channel: t,
@@ -61,13 +61,13 @@ let R = l.memo(function(e) {
   return (0, a.jsx)(r.animated.div, {
     ref: s,
     style: h,
-    children: (0, a.jsx)(x, {
+    children: (0, a.jsx)(M, {
       ...e
     })
   })
 });
 t.default = R;
-let x = l.memo(function(e) {
+let M = l.memo(function(e) {
   let {
     channel: t,
     onJump: n,
@@ -88,9 +88,9 @@ let x = l.memo(function(e) {
     (0, E.transitionTo)(A.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : l)), n(e)
   };
   return (0, a.jsx)("div", {
-    className: M.channel,
+    className: x.channel,
     children: (0, a.jsx)(u.HeadingLevel, {
-      component: (0, a.jsxs)(T.default, {
+      component: (0, a.jsxs)(I.default, {
         channel: r,
         gotoChannel: h,
         mentionCount: t.mentionCount,
@@ -100,7 +100,7 @@ let x = l.memo(function(e) {
           channel: r
         }), (0, a.jsx)(L, {
           ...e
-        }), "nsfw" === t.type ? null : (0, a.jsx)(O, {
+        }), "nsfw" === t.type ? null : (0, a.jsx)(b, {
           ...e
         })]
       }),
@@ -108,7 +108,7 @@ let x = l.memo(function(e) {
         channel: t,
         channelRecord: r,
         gotoChannel: h
-      }) : "forum" === t.type ? (0, a.jsx)(I.default, {
+      }) : "forum" === t.type ? (0, a.jsx)(T.default, {
         channel: t,
         channelRecord: r,
         deleteChannel: s
@@ -125,7 +125,7 @@ function L(e) {
     getNumUnreadChannels: s
   } = e, i = (0, h.default)() && null != t.guildId;
   return (0, a.jsx)(p.default, {
-    className: M.markReadButton,
+    className: x.markReadButton,
     tooltip: i ? v.default.Messages.MARK_GUILD_AS_READ : v.default.Messages.MARK_AS_READ,
     color: p.CircleIconButtonColors.TERTIARY,
     icon: i ? (0, a.jsx)(N.default, {
@@ -146,7 +146,7 @@ function L(e) {
   })
 }
 
-function O(e) {
+function b(e) {
   let {
     channel: t,
     toggle: n,
@@ -165,8 +165,8 @@ function O(e) {
     text: v.default.Messages.COLLAPSE,
     children: e => (0, a.jsx)(u.Clickable, {
       ...e,
-      className: i()(M.collapseButton, {
-        [M.collapsed]: t.collapsed
+      className: i()(x.collapseButton, {
+        [x.collapsed]: t.collapsed
       }),
       onClick: s,
       children: (0, a.jsx)(g.default, {

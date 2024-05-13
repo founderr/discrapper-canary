@@ -26,7 +26,7 @@ function N(e) {
     onOpen: t,
     onClose: n,
     className: N
-  } = e, _ = (0, o.useInDesktopNotificationCenterExperiment)(), T = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), I = l.useRef(null), C = (0, s.useStateFromStores)([u.default], () => !!_ && (null == T ? void 0 : T.id) != null && u.default.getMentionCount(T.id, p.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
+  } = e, _ = (0, o.useInDesktopNotificationCenterExperiment)(), I = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), T = l.useRef(null), C = (0, s.useStateFromStores)([u.default], () => !!_ && (null == I ? void 0 : I.id) != null && u.default.getMentionCount(I.id, p.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
     enabled: A
   } = r.default.useExperiment({
     location: "RecentsButton"
@@ -42,10 +42,10 @@ function N(e) {
     popoutPosition: "bottom",
     popoutAlign: "right",
     children: (e, t, n) => (0, a.jsxs)("div", {
-      ref: I,
+      ref: T,
       className: S.recentsIcon,
       children: [A && (0, a.jsx)(m.default, {
-        inboxIconRef: I,
+        inboxIconRef: T,
         recentsPopoutShown: t
       }), (0, a.jsx)(f.Icon, {
         ...n,

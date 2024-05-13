@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = n("735250");
@@ -24,23 +24,23 @@ var l = n("120356"),
   N = n("689938"),
   _ = n("659047");
 
-function T(e) {
-  return (0, m.useInDesktopNotificationCenterExperiment)() ? (0, a.jsx)(I, {
+function I(e) {
+  return (0, m.useInDesktopNotificationCenterExperiment)() ? (0, a.jsx)(T, {
     ...e
   }) : (0, a.jsx)(C, {
     ...e
   })
 }
 
-function I(e) {
+function T(e) {
   let {
     tab: t,
     setTab: n,
     children: l,
     badgeState: m,
-    closePopout: T
+    closePopout: I
   } = e, {
-    showReminders: I
+    showReminders: T
   } = h.default.useExperiment({
     location: "RecentsHeader"
   }, {
@@ -61,7 +61,7 @@ function I(e) {
         variant: "text-lg/semibold",
         children: N.default.Messages.INBOX
       }), (0, a.jsx)(S.default, {
-        closePopout: T
+        closePopout: I
       })]
     }), (0, a.jsxs)("div", {
       className: s()(_.expandedTabSection),
@@ -102,7 +102,7 @@ function I(e) {
             color: d.default.STATUS_DANGER,
             className: s()(_.iconBadge)
           }) : null]
-        }) : null, I ? (0, a.jsxs)(o.TabBar.Item, {
+        }) : null, T ? (0, a.jsxs)(o.TabBar.Item, {
           "aria-label": "todos",
           id: r.InboxTab.TODOS,
           className: s()(_.tab, _.expanded, {

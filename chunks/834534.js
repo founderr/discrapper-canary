@@ -20,12 +20,12 @@ var l = s("735250"),
   I = s("588822"),
   v = s("81334"),
   _ = s("652853"),
-  g = s("335191"),
-  A = s("347949"),
-  T = s("192591"),
+  T = s("335191"),
+  g = s("347949"),
+  A = s("192591"),
   x = s("351707"),
-  N = s("228168"),
-  U = s("689938"),
+  U = s("228168"),
+  N = s("689938"),
   C = s("363175");
 
 function h(e) {
@@ -60,31 +60,31 @@ function h(e) {
       user: t,
       currentUser: s,
       guild: j
-    }), (0, l.jsx)(T.default, {
-      title: U.default.Messages.USER_PROFILE_MEMBER_SINCE,
+    }), (0, l.jsx)(A.default, {
+      title: N.default.Messages.USER_PROFILE_MEMBER_SINCE,
       children: (0, l.jsx)(v.default, {
         userId: t.id,
         guildId: null == i ? void 0 : i.guildId,
-        tooltipDelay: N.USER_PROFILE_TOOLTIP_DELAY
+        tooltipDelay: U.USER_PROFILE_TOOLTIP_DELAY
       })
-    }), D && !y && F.length > 0 && (0, l.jsx)(T.default, {
-      title: U.default.Messages.LAST_PLAYED_GAMES,
-      children: (0, l.jsx)(A.UserProfileRecentGames, {
+    }), D && !y && F.length > 0 && (0, l.jsx)(A.default, {
+      title: N.default.Messages.LAST_PLAYED_GAMES,
+      children: (0, l.jsx)(g.UserProfileRecentGames, {
         userId: t.id,
         recentGames: F,
         currentUserApplicationIds: O
       })
-    }), B.length > 0 && (0, l.jsx)(T.default, {
-      title: U.default.Messages.CONNECTIONS,
-      children: (0, l.jsx)(g.ConnectedUserAccounts, {
+    }), B.length > 0 && (0, l.jsx)(A.default, {
+      title: N.default.Messages.CONNECTIONS,
+      children: (0, l.jsx)(T.ConnectedUserAccounts, {
         connectedAccounts: B,
         className: C.connections,
         userId: t.id,
         theme: R,
         locale: b
       })
-    }), (0, l.jsx)(T.default, {
-      title: U.default.Messages.NOTE,
+    }), (0, l.jsx)(A.default, {
+      title: N.default.Messages.NOTE,
       children: (0, l.jsx)(u.default, {
         userId: t.id,
         className: C.note,

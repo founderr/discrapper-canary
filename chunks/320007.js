@@ -26,25 +26,25 @@ function N(e) {
     canShowReminder: t = !1,
     className: N
   } = e, _ = (0, E.default)(u.default), {
-    showClipsHeaderEntrypoint: T
+    showClipsHeaderEntrypoint: I
   } = f.ClipsExperiment.useExperiment({
     location: "ClipsButton"
   }, {
     autoTrackExposure: !1
   }), {
-    hasClips: I,
+    hasClips: T,
     hasNewClips: C,
     lastClipsSession: A,
     remindersEnabled: v,
-    hasAnyClipAnimations: M
+    hasAnyClipAnimations: x
   } = (0, s.useStateFromStoresObject)([h.default], () => ({
     hasClips: h.default.hasClips(),
     hasNewClips: h.default.getNewClipIds().length > 0,
     lastClipsSession: h.default.getLastClipsSession(),
     remindersEnabled: h.default.getSettings().remindersEnabled,
     hasAnyClipAnimations: h.default.hasAnyClipAnimations()
-  })), R = null != A && A.newClipIds.length > 0, x = (0, m.useClipsButtonStore)(e => e.clipsButtonRef), L = (0, m.useClipsButtonStore)(e => e.setClipsButtonRef), O = (0, s.useStateFromStores)([o.default], () => o.default.hasLayers()), {
-    preventIdle: b,
+  })), R = null != A && A.newClipIds.length > 0, M = (0, m.useClipsButtonStore)(e => e.clipsButtonRef), L = (0, m.useClipsButtonStore)(e => e.setClipsButtonRef), b = (0, s.useStateFromStores)([o.default], () => o.default.hasLayers()), {
+    preventIdle: O,
     allowIdle: y
   } = (0, r.usePreventIdle)("animation");
 
@@ -60,9 +60,9 @@ function N(e) {
       modalKey: g.CLIPS_GALLERY_MODAL_KEY
     })
   }
-  return (l.useEffect(() => (M ? b() : y(), () => y()), [M, b, y]), T && _ && I) ? (0, a.jsxs)(a.Fragment, {
-    children: [null != x && t && v && R && !(0, i.hasAnyModalOpen)() && !O && (0, a.jsx)(p.default, {
-      clipIconRef: x,
+  return (l.useEffect(() => (x ? O() : y(), () => y()), [x, O, y]), I && _ && T) ? (0, a.jsxs)(a.Fragment, {
+    children: [null != M && t && v && R && !(0, i.hasAnyModalOpen)() && !b && (0, a.jsx)(p.default, {
+      clipIconRef: M,
       lastClipsSession: A,
       onOpenClipsGallery: j
     }), (0, a.jsx)("div", {

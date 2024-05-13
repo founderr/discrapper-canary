@@ -27,13 +27,13 @@ function _(e) {
     setTab: t,
     badgeState: s,
     closePopout: _
-  } = e, I = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), C = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [A, v] = l.useMemo(() => i().partition(I, e => {
+  } = e, T = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), C = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [A, v] = l.useMemo(() => i().partition(T, e => {
     var t;
     return (null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1e3 < e.ttl
-  }), [I, C]);
+  }), [T, C]);
   return (l.useEffect(() => {
     (0, h.clearUnseenInvites)()
-  }), 0 === I.length) ? (0, a.jsxs)("div", {
+  }), 0 === T.length) ? (0, a.jsxs)("div", {
     className: N.container,
     children: [(0, a.jsx)(p.default, {
       tab: o.InboxTab.GAME_INVITES,
@@ -81,7 +81,7 @@ function _(e) {
       children: (0, a.jsxs)("div", {
         className: N.invitesContainer,
         children: [A.length > 0 && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(T, {
+          children: [(0, a.jsx)(I, {
             title: S.default.Messages.GAME_INVITES_RECENT_HEADER
           }), (0, a.jsx)(a.Fragment, {
             children: A.map(e => (0, a.jsx)(g.default, {
@@ -90,7 +90,7 @@ function _(e) {
             }, e.invite_id))
           })]
         }), v.length > 0 && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(T, {
+          children: [(0, a.jsx)(I, {
             title: S.default.Messages.GAME_INVITES_EXPIRED_HEADER
           }), (0, a.jsx)(a.Fragment, {
             children: v.map(e => (0, a.jsx)(g.default, {
@@ -104,7 +104,7 @@ function _(e) {
   })
 }
 
-function T(e) {
+function I(e) {
   let {
     title: t
   } = e;

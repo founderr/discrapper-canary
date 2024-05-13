@@ -23,8 +23,8 @@ var l = n("120356"),
   S = n("2093"),
   N = n("346656"),
   _ = n("153124"),
-  T = n("689938"),
-  I = n("595497");
+  I = n("689938"),
+  T = n("595497");
 let C = {
   top: 8,
   bottom: 8,
@@ -44,7 +44,7 @@ function A(e) {
   return (0, a.jsx)(o.FocusRing, {
     offset: C,
     children: (0, a.jsxs)("div", {
-      className: I.channelHeader,
+      className: T.channelHeader,
       ...d,
       tabIndex: 0,
       "data-recents-channel": t.id,
@@ -54,7 +54,7 @@ function A(e) {
       children: [(0, a.jsx)(v, {
         channel: t,
         gotoChannel: l
-      }), (0, a.jsx)(x, {
+      }), (0, a.jsx)(M, {
         channel: t,
         gotoChannel: l,
         mentionCount: s
@@ -68,7 +68,7 @@ function v(e) {
     channel: t,
     gotoChannel: n
   } = e;
-  return t.isPrivate() ? (0, a.jsx)(M, {
+  return t.isPrivate() ? (0, a.jsx)(x, {
     channel: t,
     gotoChannel: n
   }) : (0, a.jsx)(R, {
@@ -77,7 +77,7 @@ function v(e) {
   })
 }
 
-function M(e) {
+function x(e) {
   let {
     channel: t,
     gotoChannel: n
@@ -86,7 +86,7 @@ function M(e) {
     onClick: n,
     tabIndex: -1,
     children: (0, a.jsx)("img", {
-      className: I.dmIcon,
+      className: T.dmIcon,
       src: s,
       alt: "",
       "aria-hidden": !0
@@ -101,7 +101,7 @@ function R(e) {
   } = e, l = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id));
   return null == l ? null : (0, a.jsx)(N.default, {
     "aria-hidden": !0,
-    className: I.guildIcon,
+    className: T.guildIcon,
     guild: l,
     size: N.default.Sizes.MEDIUM,
     active: !0,
@@ -110,44 +110,44 @@ function R(e) {
   })
 }
 
-function x(e) {
+function M(e) {
   let {
     channel: t,
     gotoChannel: n,
     mentionCount: l
-  } = e, i = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id)), u = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(t.parent_id)), d = (0, f.getChannelIconComponent)(t, i), h = (0, c.default)(t, !1), p = null == u ? null == i ? void 0 : i.name : "".concat(null == i ? void 0 : i.name, " › ").concat(u.name), g = t.isMultiUserDM() ? T.default.Messages.MEMBERS_HEADER.format({
+  } = e, i = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id)), u = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(t.parent_id)), d = (0, f.getChannelIconComponent)(t, i), h = (0, c.default)(t, !1), p = null == u ? null == i ? void 0 : i.name : "".concat(null == i ? void 0 : i.name, " › ").concat(u.name), g = t.isMultiUserDM() ? I.default.Messages.MEMBERS_HEADER.format({
     members: t.recipients.length + 1
   }) : t.isPrivate() ? (0, a.jsx)(L, {
     channel: t
   }) : (0, a.jsx)(o.Clickable, {
-    className: s()(I.subtext, I.guildName),
+    className: s()(T.subtext, T.guildName),
     onClick: n,
     children: p
   });
   return (0, a.jsxs)("div", {
-    className: I.channelNameSection,
+    className: T.channelNameSection,
     children: [(0, a.jsx)(o.Heading, {
       variant: "heading-md/semibold",
-      className: I.channelNameHeader,
+      className: T.channelNameHeader,
       children: (0, a.jsxs)(o.Clickable, {
-        className: I.channelName,
+        className: T.channelName,
         onClick: n,
         children: [t.isThread() || t.isGroupDM() || null == d ? null : (0, a.jsx)(d, {
-          className: t.isForumLikeChannel() ? I.forumIcon : void 0,
+          className: t.isForumLikeChannel() ? T.forumIcon : void 0,
           width: 18,
           height: 18
         }), (0, a.jsx)("span", {
-          className: I.channelNameSpan,
+          className: T.channelNameSpan,
           children: h
         }), null != l && l > 0 ? (0, a.jsx)(S.default, {
           value: l,
-          className: I.badge
+          className: T.badge
         }) : null]
       })
     }), (0, a.jsx)(o.Text, {
       color: "header-secondary",
       variant: "text-xs/normal",
-      className: I.subtextContainer,
+      className: T.subtextContainer,
       children: g
     })]
   })
@@ -169,8 +169,8 @@ function L(e) {
     }
   });
   return null == l ? null : (0, a.jsx)(u.default, {
-    className: I.activityStatus,
-    emojiClassName: I.activityEmoji,
+    className: T.activityStatus,
+    emojiClassName: T.activityEmoji,
     activities: l,
     applicationStream: s,
     hideTooltip: !0,

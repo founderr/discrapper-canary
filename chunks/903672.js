@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return b
+    return O
   }
 });
 var a = n("735250"),
@@ -22,14 +22,14 @@ var a = n("735250"),
   S = n("36082"),
   N = n("465670"),
   _ = n("455199"),
-  T = n("655354"),
-  I = n("999671"),
+  I = n("655354"),
+  T = n("999671"),
   C = n("324081"),
   A = n("240126"),
   v = n("791914"),
-  M = n("981631"),
+  x = n("981631"),
   R = n("689938"),
-  x = n("705332");
+  M = n("705332");
 let L = {
   offset: {
     left: 4,
@@ -37,15 +37,15 @@ let L = {
   }
 };
 
-function O(e, t, n) {
+function b(e, t, n) {
   let a = t ? _.default.guildFilter : null,
     l = t ? _.default.roleFilter : null,
     s = t ? _.default.everyoneFilter : null,
     i = null;
-  null != e && null != a && (i = a === M.RecentMentionsFilters.ALL_SERVERS ? null : e.getGuildId()), r.default.fetchRecentMentions(n, M.MAX_MENTIONS_PER_FETCH, i, l, s)
+  null != e && null != a && (i = a === x.RecentMentionsFilters.ALL_SERVERS ? null : e.getGuildId()), r.default.fetchRecentMentions(n, x.MAX_MENTIONS_PER_FETCH, i, l, s)
 }
 
-function b(e) {
+function O(e) {
   let {
     setTab: t,
     onJump: n,
@@ -55,7 +55,7 @@ function b(e) {
     messages: g,
     hasMore: S,
     loading: N,
-    guildFilter: T,
+    guildFilter: I,
     roleFilter: C,
     everyoneFilter: A
   } = (0, s.useStateFromStoresObject)([_.default], () => ({
@@ -65,31 +65,31 @@ function b(e) {
     guildFilter: _.default.guildFilter,
     roleFilter: _.default.roleFilter,
     everyoneFilter: _.default.everyoneFilter
-  })), L = (0, u.default)(T), b = (0, u.default)(C), y = (0, u.default)(A);
+  })), L = (0, u.default)(I), O = (0, u.default)(C), y = (0, u.default)(A);
   l.useEffect(() => {
     if (!_.default.hasLoadedEver) {
-      O(m, !0);
+      b(m, !0);
       return
-    }(null != L && T !== L || null != b && C !== b || null != y && A !== y) && O(m, !0)
-  }, [L, T, b, C, y, A, m, !0]);
+    }(null != L && I !== L || null != O && C !== O || null != y && A !== y) && b(m, !0)
+  }, [L, I, O, C, y, A, m, !0]);
   l.useEffect(() => {
     d.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "mentions"
-    }).enabled && (null == g ? void 0 : g.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), O(m, !0))
+    }).enabled && (null == g ? void 0 : g.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), b(m, !0))
   }, []), l.useEffect(() => () => {
-    r.default.truncateMentions(M.MAX_MENTIONS_PER_FETCH)
+    r.default.truncateMentions(x.MAX_MENTIONS_PER_FETCH)
   }, []);
-  let F = l.useCallback(() => (0, a.jsx)(v.default, {
+  let D = l.useCallback(() => (0, a.jsx)(v.default, {
     tab: i.InboxTab.MENTIONS,
     setTab: t,
     badgeState: f,
     closePopout: h,
-    children: (0, a.jsx)(I.default, {})
+    children: (0, a.jsx)(T.default, {})
   }), [!0, t, f, h]);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsx)(o.default, {
-      className: x.recentMentionsPopout,
-      scrollerClassName: x.scroller,
+      className: M.recentMentionsPopout,
+      scrollerClassName: M.scroller,
       onFetch: () => null,
       onJump: n,
       onCloseMessage: function(e) {
@@ -101,11 +101,11 @@ function b(e) {
       hasMore: S,
       analyticsName: "Recent Mentions",
       loadMore: function() {
-        O(m, !0, null != g && g.length > 0 ? g[g.length - 1].id : null)
+        b(m, !0, null != g && g.length > 0 ? g[g.length - 1].id : null)
       },
       canCloseAllMessages: !0,
-      renderHeader: F,
-      renderEmptyState: D,
+      renderHeader: D,
+      renderEmptyState: F,
       renderMessage: j,
       "aria-label": R.default.Messages.RECENT_MENTIONS,
       listName: "recents"
@@ -114,21 +114,21 @@ function b(e) {
 }
 
 function y(e, t) {
-  return [(0, a.jsx)(F, {
+  return [(0, a.jsx)(D, {
     message: e,
     gotoMessage: t
   }, e.id)]
 }
 
 function j(e, t) {
-  return [(0, a.jsx)(F, {
+  return [(0, a.jsx)(D, {
     message: e,
     gotoMessage: t,
     dismissible: !0
   }, e.id)]
 }
 
-function F(e) {
+function D(e) {
   let {
     message: t,
     gotoMessage: n,
@@ -140,12 +140,12 @@ function F(e) {
   let i = m.default.didAgree(s.getGuildId()),
     o = !!s.isNSFW() && !i;
   return (0, a.jsxs)("div", {
-    className: x.container,
+    className: M.container,
     children: [(0, a.jsx)(C.default, {
       channel: s,
       gotoChannel: n,
       children: null != l ? (0, a.jsx)(g.default, {
-        className: x.closeButton,
+        className: M.closeButton,
         tooltip: R.default.Messages.CLOSE,
         color: g.CircleIconButtonColors.TERTIARY,
         icon: (0, a.jsx)(N.default, {
@@ -155,14 +155,14 @@ function F(e) {
         onClick: () => r.default.deleteRecentMention(t.id)
       }) : null
     }), (0, a.jsxs)("div", {
-      className: x.messageContainer,
-      children: [(0, a.jsx)(T.default, {
-        className: x.jumpButton,
+      className: M.messageContainer,
+      children: [(0, a.jsx)(I.default, {
+        className: M.jumpButton,
         onJump: n
       }), (0, a.jsx)(f.default, {
         message: t,
         channel: s,
-        className: x.message,
+        className: M.message,
         hideAccessories: o,
         compact: h.MessageDisplayCompact.getSetting(),
         animateAvatar: !1,
@@ -173,7 +173,7 @@ function F(e) {
   })
 }
 
-function D(e) {
+function F(e) {
   return (0, a.jsx)(A.default, {
     Icon: S.default,
     header: R.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ForYouItems: function() {
-    return F
+    return D
   }
 });
 var a = n("735250"),
@@ -22,17 +22,17 @@ var a = n("735250"),
   S = n("497089"),
   N = n("178480"),
   _ = n("418316"),
-  T = n("526146"),
-  I = n("400565"),
+  I = n("526146"),
+  T = n("400565"),
   C = n("148789"),
   A = n("11825"),
   v = n("981631"),
-  M = n("689938"),
+  x = n("689938"),
   R = n("202001"),
-  x = n("756688"),
+  M = n("756688"),
   L = n("886765");
 
-function O(e) {
+function b(e) {
   var t, n, l;
   let {
     item: r
@@ -54,7 +54,7 @@ function O(e) {
   })
 }
 
-function b(e) {
+function O(e) {
   let {
     item: {
       callout: t
@@ -75,8 +75,8 @@ function b(e) {
 function y(e) {
   let {
     item: t
-  } = e, n = L, l = M.default.Messages.NOTIFICATION_CENTER_TODO;
-  return t.completed && (n = x, l = M.default.Messages.NOTIFICATION_CENTER_DONE), (0, a.jsxs)("div", {
+  } = e, n = L, l = x.default.Messages.NOTIFICATION_CENTER_TODO;
+  return t.completed && (n = M, l = x.default.Messages.NOTIFICATION_CENTER_DONE), (0, a.jsxs)("div", {
     className: R.lifecycleContainer,
     children: [(0, a.jsx)("img", {
       className: R.checkbox,
@@ -97,7 +97,7 @@ let j = l.memo(function(e) {
       ackedBeforeId: c
     } = e, {
       analyticsLocations: f
-    } = (0, r.default)(), h = (0, T.useNotificationCenterItemAcked)(i, c), M = l.useCallback(async () => {
+    } = (0, r.default)(), h = (0, I.useNotificationCenterItemAcked)(i, c), x = l.useCallback(async () => {
       if (!h && (0, g.markNotificationCenterItemAcked)(i), null != i.item_enum && i.item_enum === S.ItemEnum.FIND_FRIENDS) {
         (0, s.openModalLazy)(async () => {
           let {
@@ -137,8 +137,8 @@ let j = l.memo(function(e) {
           acked: h
         })
       }
-    }, [i, h, f]), x = null;
-    i.type === S.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != i.other_user && (x = (0, a.jsx)(C.default, {
+    }, [i, h, f]), M = null;
+    i.type === S.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != i.other_user && (M = (0, a.jsx)(C.default, {
       userId: i.other_user.id
     }));
     let L = null != i.local_id,
@@ -151,10 +151,10 @@ let j = l.memo(function(e) {
           offset: 4
         },
         "aria-label": j,
-        onClick: M,
+        onClick: x,
         children: [h ? null : (0, a.jsx)("div", {
           className: R.unread
-        }), (0, a.jsx)(I.ForYouItemImage, {
+        }), (0, a.jsx)(T.ForYouItemImage, {
           item: i
         }), (0, a.jsxs)("div", {
           className: R.body,
@@ -164,22 +164,22 @@ let j = l.memo(function(e) {
             variant: "text-md/normal",
             color: h ? "text-muted" : "text-normal",
             children: "string" != typeof j ? j : u.default.parse(j)
-          }), (null === (t = i.message) || void 0 === t ? void 0 : t.content) != null ? (0, a.jsx)(O, {
+          }), (null === (t = i.message) || void 0 === t ? void 0 : t.content) != null ? (0, a.jsx)(b, {
             item: i
-          }) : null, null != i.callout ? (0, a.jsx)(b, {
+          }) : null, null != i.callout ? (0, a.jsx)(O, {
             item: i
           }) : null, (0, a.jsx)(s.Text, {
             variant: "text-xs/medium",
             color: h ? "text-muted" : "header-secondary",
             children: (0, N.getRelativeTimestamp)(m.default.extractTimestamp(i.id))
-          }), x]
+          }), M]
         })]
       }), L ? null : (0, a.jsx)(A.MoreButton, {
         item: i
       })]
     })
   }),
-  F = l.memo(function(e) {
+  D = l.memo(function(e) {
     let {
       items: t
     } = e, n = c.NotificationCenterAckedBeforeId.useSetting();
