@@ -98,6 +98,7 @@ function v(e) {
               user: t
             }), (0, i.jsx)(m.default, {
               user: t,
+              profileType: R.UserProfileTypes.BITE_SIZE,
               guildId: n,
               viewProfileItem: (0, i.jsx)(s.MenuItem, {
                 id: "view-profile",

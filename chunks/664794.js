@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return f
   }
 });
 var i = n("735250");
@@ -16,42 +16,48 @@ var r = n("442837"),
   _ = n("808268"),
   c = n("785717"),
   E = n("537387"),
-  I = n("689938");
+  I = n("228168"),
+  T = n("689938");
 
-function T(e) {
+function f(e) {
   let {
     user: t,
-    guildId: n,
-    viewProfileItem: T
-  } = e, f = (0, r.useStateFromStores)([d.default], () => d.default.getId() === t.id), {
-    trackUserProfileAction: S
+    profileType: n,
+    guildId: f,
+    viewProfileItem: S
+  } = e, h = (0, r.useStateFromStores)([d.default], () => d.default.getId() === t.id), {
+    trackUserProfileAction: A
   } = (0, c.useUserProfileAnalyticsContext)(), {
-    analyticsLocations: h,
-    newestAnalyticsLocation: A
-  } = (0, o.default)(s.default.USER_PROFILE_OVERFLOW_MENU), m = (0, l.default)({
+    analyticsLocations: m,
+    newestAnalyticsLocation: N
+  } = (0, o.default)(s.default.USER_PROFILE_OVERFLOW_MENU), p = (0, l.default)({
     user: t,
     color: "danger",
-    location: A,
-    onBlock: () => S({
+    location: N,
+    onBlock: () => A({
       action: "BLOCK",
-      analyticsLocations: h
+      analyticsLocations: m
     }),
-    onUnblock: () => S({
+    onUnblock: () => A({
       action: "UNBLOCK",
-      analyticsLocations: h
+      analyticsLocations: m
     })
-  }), N = (0, u.default)({
+  }), O = (0, u.default)({
     user: t,
-    guildId: n,
+    guildId: f,
     color: "danger",
-    location: A,
-    onAction: () => S({
+    location: N,
+    onAction: () => A({
       action: "REPORT",
-      analyticsLocations: h
+      analyticsLocations: m
     })
   });
-  return f ? null : (0, i.jsx)(o.AnalyticsLocationProvider, {
-    value: h,
+  if (h && n !== I.UserProfileTypes.FULL_SIZE) return null;
+  let C = () => h ? null : (0, i.jsxs)(a.MenuGroup, {
+    children: [p, O]
+  });
+  return (0, i.jsx)(o.AnalyticsLocationProvider, {
+    value: m,
     children: (0, i.jsx)(a.Popout, {
       renderPopout: e => {
         let {
@@ -61,16 +67,14 @@ function T(e) {
           navId: "user-profile-overflow-menu",
           onSelect: void 0,
           onClose: t,
-          "aria-label": I.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
+          "aria-label": T.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
           children: [(0, i.jsx)(a.MenuGroup, {
-            children: T
-          }), (0, i.jsxs)(a.MenuGroup, {
-            children: [m, N]
-          })]
+            children: S
+          }), C()]
         })
       },
       children: e => (0, i.jsx)(E.default, {
-        text: I.default.Messages.MORE,
+        text: T.default.Messages.MORE,
         icon: _.default,
         ...e
       })

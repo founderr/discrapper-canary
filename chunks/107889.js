@@ -20,12 +20,12 @@ var l = s("735250"),
   I = s("544989"),
   v = s("301984"),
   _ = s("94918"),
-  g = s("664794"),
-  A = s("806926"),
-  T = s("740021"),
+  T = s("664794"),
+  g = s("806926"),
+  A = s("740021"),
   x = s("228168"),
-  N = s("981631"),
-  U = s("689938"),
+  U = s("981631"),
+  N = s("689938"),
   C = s("61007");
 
 function h(e) {
@@ -41,7 +41,7 @@ function h(e) {
     transitionState: L,
     sourceAnalyticsLocations: y = [],
     onClose: O
-  } = e, F = s === N.ME ? void 0 : s, {
+  } = e, F = s === U.ME ? void 0 : s, {
     analyticsLocations: D
   } = (0, u.default)([...y, o.default.SIMPLIFIED_PROFILE_MODAL]), b = (0, S.useTrackUserProfileAction)({
     layout: "SIMPLIFIED_MODAL",
@@ -58,13 +58,13 @@ function h(e) {
       let {
         type: t
       } = e;
-      return t !== N.ActivityTypes.CUSTOM_STATUS
+      return t !== U.ActivityTypes.CUSTOM_STATUS
     }),
     customStatusActivity: c.default.findActivity(t.id, e => {
       let {
         type: t
       } = e;
-      return t === N.ActivityTypes.CUSTOM_STATUS
+      return t === U.ActivityTypes.CUSTOM_STATUS
     })
   })), z = a.createRef(), W = (0, r.default)(z);
   return (0, l.jsx)(u.AnalyticsLocationProvider, {
@@ -80,7 +80,7 @@ function h(e) {
         transitionState: L,
         className: C.root,
         hideShadow: !0,
-        "aria-label": U.default.Messages.USER_PROFILE_MODAL,
+        "aria-label": N.default.Messages.USER_PROFILE_MODAL,
         children: [(0, l.jsxs)(E.default, {
           user: t,
           displayProfile: Y,
@@ -96,13 +96,14 @@ function h(e) {
             }), (0, l.jsx)(v.default, {
               user: t,
               friendToken: M
-            }), (0, l.jsx)(g.default, {
+            }), (0, l.jsx)(T.default, {
               user: t,
+              profileType: x.UserProfileTypes.FULL_SIZE,
               guildId: F,
               viewProfileItem: (null == w ? void 0 : w.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, l.jsx)(n.MenuItem, {
                 id: "view-main-profile",
-                label: U.default.Messages.VIEW_MAIN_PROFILE,
-                subtext: U.default.Messages.AKA_DISPLAY_NAME.format({
+                label: N.default.Messages.VIEW_MAIN_PROFILE,
+                subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
                   displayName: f.default.getName(void 0, void 0, t)
                 }),
                 action: () => {
@@ -113,8 +114,8 @@ function h(e) {
                 }
               }) : (0, l.jsx)(n.MenuItem, {
                 id: "view-server-profile",
-                label: U.default.Messages.VIEW_SERVER_PROFILE,
-                subtext: U.default.Messages.AKA_DISPLAY_NAME.format({
+                label: N.default.Messages.VIEW_SERVER_PROFILE,
+                subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
                   displayName: f.default.getName(F, h, t)
                 }),
                 action: () => {
@@ -125,7 +126,7 @@ function h(e) {
                 }
               })
             })]
-          }), (0, l.jsx)(T.default, {
+          }), (0, l.jsx)(A.default, {
             user: t,
             displayProfile: Y,
             guildId: F,
@@ -133,7 +134,7 @@ function h(e) {
             activity: H,
             customStatusActivity: V,
             onClose: O
-          }), (0, l.jsx)(A.default, {
+          }), (0, l.jsx)(g.default, {
             user: t,
             displayProfile: Y,
             initialSection: P,
