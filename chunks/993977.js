@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("442837"),
-  i = n("481060"),
+  i = n("442837"),
+  l = n("481060"),
   r = n("58642"),
   o = n("695346"),
   u = n("490983"),
@@ -22,7 +22,7 @@ var a = n("735250"),
   S = n("689938"),
   p = n("365326");
 
-function I(e) {
+function g(e) {
   let {
     applicationViewItems: t,
     restoreApplication: n
@@ -42,7 +42,7 @@ function I(e) {
           className: p.applicationSubText,
           children: m.DistributorNames[t]
         }) : null]
-      }), (0, a.jsx)(i.Clickable, {
+      }), (0, a.jsx)(l.Clickable, {
         className: p.restoreButton,
         onClick: () => n(e.libraryApplication),
         children: (0, a.jsx)(c.default, {
@@ -51,15 +51,15 @@ function I(e) {
       })]
     }, e.key)
   });
-  return (0, a.jsxs)(i.FormSection, {
+  return (0, a.jsxs)(l.FormSection, {
     className: p.hiddenLibraryApplications,
-    children: [(0, a.jsx)(i.FormTitle, {
+    children: [(0, a.jsx)(l.FormTitle, {
       className: p.hiddenLibraryApplicationsTitle,
       children: S.default.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
     }), s]
   })
 }
-class g extends s.PureComponent {
+class I extends s.PureComponent {
   handleToggleShortcutDesktop(e) {
     o.InstallShortcutDesktop.updateSetting(e)
   }
@@ -81,18 +81,18 @@ class g extends s.PureComponent {
     return (0, a.jsxs)("div", {
       className: p.body,
       children: [(0, h.isSupportedPlatform)() ? (0, a.jsxs)(s.Fragment, {
-        children: [(0, a.jsx)(i.FormSwitch, {
+        children: [(0, a.jsx)(l.FormSwitch, {
           value: t,
           onChange: this.handleToggleShortcutDesktop,
           note: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
           children: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
-        }), (0, a.jsx)(i.FormSwitch, {
+        }), (0, a.jsx)(l.FormSwitch, {
           value: n,
           onChange: this.handleToggleShortcutStartMenu,
           note: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
           children: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
         }), (0, a.jsx)(C.default, {})]
-      }) : null, (0, a.jsx)(I, {
+      }) : null, (0, a.jsx)(g, {
         restoreApplication: this.handleRestoreHiddenLibraryApplication,
         applicationViewItems: e
       })]
@@ -102,7 +102,7 @@ class g extends s.PureComponent {
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(_.default, {
         currentRoute: m.Routes.APPLICATION_LIBRARY_SETTINGS
-      }), (0, a.jsx)(i.ScrollerAuto, {
+      }), (0, a.jsx)(l.ScrollerAuto, {
         className: p.scroller,
         children: this.renderBody()
       })]
@@ -126,9 +126,9 @@ function T() {
   let e = {
     installShortcutDesktop: o.InstallShortcutDesktop.useSetting(),
     installShortcutStartMenu: o.InstallShortcutStartMenu.useSetting(),
-    hiddenLibraryApplicationViewItems: (0, l.useStateFromStores)([u.default], () => u.default.hiddenLibraryApplicationViewItems)
+    hiddenLibraryApplicationViewItems: (0, i.useStateFromStores)([u.default], () => u.default.hiddenLibraryApplicationViewItems)
   };
-  return (0, a.jsx)(g, {
+  return (0, a.jsx)(I, {
     ...e
   })
 }

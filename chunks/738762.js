@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("481060"),
-  i = n("493683"),
+  i = n("481060"),
+  l = n("493683"),
   r = n("367907"),
   o = n("205129"),
   u = n("626135"),
@@ -29,10 +29,10 @@ function f(e) {
     }),
     _ = 1 === f.length && 1 === n.length,
     C = n.length - f.length > 0;
-  return (_ || t) && !C && 0 !== h.length ? (0, a.jsx)(l.MenuItem, {
+  return (_ || t) && !C && 0 !== h.length ? (0, a.jsx)(i.MenuItem, {
     id: "message",
     action: function() {
-      i.default.openPrivateChannel(h).then(t => r.default.trackWithMetadata(d.AnalyticEvents.ACTIVITY_FEED_DM_VISITED, {
+      l.default.openPrivateChannel(h).then(t => r.default.trackWithMetadata(d.AnalyticEvents.ACTIVITY_FEED_DM_VISITED, {
         source: {
           ...E.location,
           object: d.AnalyticsObjects.LIST_ITEM

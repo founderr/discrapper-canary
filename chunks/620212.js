@@ -5,14 +5,14 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("592125"),
-  o = n("944486"),
-  l = n("585483"),
+  l = n("944486"),
+  o = n("585483"),
   a = n("981631");
 let u = {
   binds: ["mod+shift+u"],
   comboKeysBindGlobal: !0,
   action() {
-    let e = i.default.getChannel(o.default.getChannelId());
-    return null != e && !e.isManaged() && l.ComponentDispatch.dispatch(a.ComponentActions.UPLOAD_FILE), !1
+    let e = i.default.getChannel(l.default.getChannelId());
+    return null != e && !e.isManaged() && o.ComponentDispatch.dispatch(a.ComponentActions.UPLOAD_FILE), !1
   }
 }

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("392711"),
-  i = n.n(l),
+  i = n("392711"),
+  l = n.n(i),
   r = n("954955"),
   o = n.n(r),
   u = n("442837"),
@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("801077"),
   S = n("626135"),
   p = n("70956"),
-  I = n("225559"),
-  g = n("910436"),
+  g = n("225559"),
+  I = n("910436"),
   T = n("203028"),
   A = n("358924"),
   N = n("292140"),
@@ -36,21 +36,21 @@ let y = 15 * p.default.Millis.MINUTE,
     let {
       party: t,
       onUserContextMenu: n,
-      onChannelContextMenu: l,
-      quest: i
+      onChannelContextMenu: i,
+      quest: l
     } = e, r = (0, a.jsx)(T.default, {
       party: t,
       onUserContextMenu: n
-    }), u = (0, a.jsx)(g.default, {
+    }), u = (0, a.jsx)(I.default, {
       party: t,
-      onChannelContextMenu: l,
-      quest: i
+      onChannelContextMenu: i,
+      quest: l
     }), {
       partiedMembers: c,
       applicationStreams: f,
       currentActivities: E,
       voiceChannels: h
-    } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, I = s.useCallback(() => {
+    } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, g = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.ApplicationTypes.GAME
@@ -62,7 +62,7 @@ let y = 15 * p.default.Millis.MINUTE,
         in_voice_channel: p,
         games_detected: e
       })
-    }, [_, C, m, p, E]), v = o()(I, y);
+    }, [_, C, m, p, E]), v = o()(g, y);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -92,15 +92,15 @@ let y = 15 * p.default.Millis.MINUTE,
       }
     }) : null
   }),
-  x = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
+  x = l().throttle(() => f.fetchUserAffinities(!1), 3e5);
 
 function D() {
   let {
     nowPlayingCards: e,
     loaded: t,
     needsRefresh: n,
-    fetching: l,
-    currentUser: i
+    fetching: i,
+    currentUser: l
   } = (0, u.useStateFromStoresObject)([m.default, _.default, C.default], () => ({
     nowPlayingCards: m.default.nowPlayingCards,
     loaded: m.default.loaded,
@@ -108,9 +108,9 @@ function D() {
     fetching: _.default.getFetching(),
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
-  s.useEffect(() => (c.default.wait(() => I.mount()), () => c.default.wait(() => I.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
-    n && !l && x()
-  }, [n, l]);
+  s.useEffect(() => (c.default.wait(() => g.mount()), () => c.default.wait(() => g.unmount())), [null == l ? void 0 : l.id]), s.useEffect(() => {
+    n && !i && x()
+  }, [n, i]);
   let o = s.useMemo(() => {
       let t = new Map,
         n = new Set;

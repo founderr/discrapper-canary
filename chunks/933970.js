@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("120356"),
-  l = n.n(s),
-  i = n("481060"),
+  i = n.n(s),
+  l = n("481060"),
   r = n("629806");
 
 function o(e) {
@@ -20,13 +20,13 @@ function o(e) {
   } = e, u = e => {
     e.preventDefault(), e.stopPropagation(), s(e)
   };
-  return (0, a.jsx)(i.Tooltip, {
+  return (0, a.jsx)(l.Tooltip, {
     text: n,
-    children: e => (0, a.jsx)(i.Clickable, {
+    children: e => (0, a.jsx)(l.Clickable, {
       ...e,
       "aria-label": n,
       onClick: u,
-      className: l()(r.actionButton, o),
+      className: i()(r.actionButton, o),
       children: (0, a.jsx)(t, {
         className: r.icon
       })

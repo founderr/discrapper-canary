@@ -13,9 +13,9 @@ var s = n("735250"),
   u = n("812206"),
   d = n("55563"),
   c = n("73346"),
-  f = n("689938");
+  E = n("689938");
 
-function E(e, t, n) {
+function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -29,7 +29,7 @@ let _ = {
   Colors: o.default.Colors,
   Looks: o.default.Looks
 };
-class m extends a.PureComponent {
+class T extends a.PureComponent {
   render() {
     let {
       skus: e,
@@ -48,7 +48,7 @@ class m extends a.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), E(this, "renderContextMenu", () => {
+    super(...e), f(this, "renderContextMenu", () => {
       let {
         skus: e,
         onSKUSelect: t,
@@ -57,7 +57,7 @@ class m extends a.PureComponent {
       return (0, s.jsx)(i.Menu, {
         onSelect: n,
         navId: "test-skus",
-        "aria-label": f.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+        "aria-label": E.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
         onClose: r.closeContextMenu,
         children: e.map(e => (0, s.jsx)(i.MenuItem, {
           id: "".concat(e.id),
@@ -67,9 +67,9 @@ class m extends a.PureComponent {
           }
         }, "".concat(e.id)))
       })
-    }), E(this, "handleContextMenu", e => {
+    }), f(this, "handleContextMenu", e => {
       e.stopPropagation(), r.openContextMenu(e, this.renderContextMenu)
-    }), E(this, "handleClick", () => {
+    }), f(this, "handleClick", () => {
       let {
         onSKUSelect: e,
         primarySKU: t
@@ -87,4 +87,4 @@ t.default = l.default.connectStores([d.default, u.default], e => {
     skus: (null !== (t = d.default.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) => null != s && e.id === s.id ? -1 : null != s && t.id === s.id ? 1 : e.name >= t.name ? -1 : 1),
     primarySKU: s
   }
-})(m)
+})(T)

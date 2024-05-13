@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("434404"),
-  l = n("970731"),
-  i = n("981631"),
+  i = n("970731"),
+  l = n("981631"),
   r = n("689938"),
   o = n("410646"),
   u = n("687351");
@@ -18,7 +18,7 @@ function d(e) {
     guild: t,
     markAsDismissed: n
   } = e;
-  return (0, a.jsx)(l.default, {
+  return (0, a.jsx)(i.default, {
     header: r.default.Messages.DISCOVERY_LANDING_PAGE_UPSELL_TITLE,
     content: r.default.Messages.DISCOVERY_LANDING_PAGE_UPSELL_DESCRIPTION,
     asset: (0, a.jsx)("div", {
@@ -31,7 +31,7 @@ function d(e) {
     buttonCTA: r.default.Messages.DISCOVERY_LANDING_PAGE_UPSELL_BUTTON_ACCEPT,
     onClick: e => {
       var n;
-      n = t, s.default.open(n.id, i.GuildSettingsSections.DISCOVERY_LANDING_PAGE)
+      n = t, s.default.open(n.id, l.GuildSettingsSections.DISCOVERY_LANDING_PAGE)
     },
     secondaryButtonCTA: r.default.Messages.DISCOVERY_LANDING_PAGE_UPSELL_BUTTON_DISMISS,
     onSecondaryClick: () => {},

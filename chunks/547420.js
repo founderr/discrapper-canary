@@ -11,11 +11,11 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("857595"),
-  o = n("607070"),
-  l = n("981631");
+  l = n("607070"),
+  o = n("981631");
 
 function a(e) {
-  return l.Accessibility.ZOOM_SCALES[Math.max(0, Math.min(l.Accessibility.ZOOM_SCALES.indexOf(o.default.zoom) + e, l.Accessibility.ZOOM_SCALES.length - 1))]
+  return o.Accessibility.ZOOM_SCALES[Math.max(0, Math.min(o.Accessibility.ZOOM_SCALES.indexOf(l.default.zoom) + e, o.Accessibility.ZOOM_SCALES.length - 1))]
 }
 let u = {
     binds: ["mod+plus"],
@@ -30,7 +30,7 @@ let u = {
   d = {
     binds: ["mod+0"],
     comboKeysBindGlobal: !0,
-    action: () => ((0, i.setZoom)(l.Accessibility.ZOOM_DEFAULT), !1)
+    action: () => ((0, i.setZoom)(o.Accessibility.ZOOM_DEFAULT), !1)
   };
 t.default = {
   ZOOM_IN: u,

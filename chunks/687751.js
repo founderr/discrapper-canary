@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  l = n("570140"),
-  i = n("317770"),
+  i = n("570140"),
+  l = n("317770"),
   r = n("592125"),
   o = n("944486"),
   u = n("914010"),
@@ -21,12 +21,12 @@ function C(e, t) {
   let a = d.default.getCurrentUser();
   (null === (n = r.default.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != a && null == a.nsfwAllowed && (0, c.openAgeGateModal)(h.AgeGateSource.NSFW_CHANNEL)
 }
-class m extends i.default {
+class m extends l.default {
   _initialize() {
-    l.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.default.subscribe("CHANNEL_SELECT", this.handleChannelSelect), l.default.subscribe("AGE_GATE_MODAL_OPEN", this.handleAgeGateModalOpen), l.default.subscribe("AGE_GATE_MODAL_CLOSE", this.handleAgeGateModalClose), l.default.subscribe("AGE_GATE_SUCCESS_MODAL_OPEN", this.handleAgeGateSuccess), l.default.subscribe("AGE_GATE_FAILURE_MODAL_OPEN", this.handleAgeGateFailure)
+    i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("CHANNEL_SELECT", this.handleChannelSelect), i.default.subscribe("AGE_GATE_MODAL_OPEN", this.handleAgeGateModalOpen), i.default.subscribe("AGE_GATE_MODAL_CLOSE", this.handleAgeGateModalClose), i.default.subscribe("AGE_GATE_SUCCESS_MODAL_OPEN", this.handleAgeGateSuccess), i.default.subscribe("AGE_GATE_FAILURE_MODAL_OPEN", this.handleAgeGateFailure)
   }
   _terminate() {
-    l.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.default.unsubscribe("CHANNEL_SELECT", this.handleChannelSelect), l.default.unsubscribe("AGE_GATE_MODAL_OPEN", this.handleAgeGateModalOpen), l.default.unsubscribe("AGE_GATE_MODAL_CLOSE", this.handleAgeGateModalClose), l.default.unsubscribe("AGE_GATE_SUCCESS_MODAL_OPEN", this.handleAgeGateSuccess), l.default.unsubscribe("AGE_GATE_FAILURE_MODAL_OPEN", this.handleAgeGateFailure)
+    i.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.unsubscribe("CHANNEL_SELECT", this.handleChannelSelect), i.default.unsubscribe("AGE_GATE_MODAL_OPEN", this.handleAgeGateModalOpen), i.default.unsubscribe("AGE_GATE_MODAL_CLOSE", this.handleAgeGateModalClose), i.default.unsubscribe("AGE_GATE_SUCCESS_MODAL_OPEN", this.handleAgeGateSuccess), i.default.unsubscribe("AGE_GATE_FAILURE_MODAL_OPEN", this.handleAgeGateFailure)
   }
   handleChannelSelect(e) {
     let {

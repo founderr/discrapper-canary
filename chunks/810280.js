@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("990547"),
-  l = n("481060"),
-  i = n("230711"),
+  i = n("481060"),
+  l = n("230711"),
   r = n("465670"),
   o = n("960359"),
   u = n("730417"),
@@ -38,7 +38,7 @@ function _(e) {
     body: m,
     imgSrc: S,
     imgStyle: p
-  } = h(_.drop, _.config.streamLengthRequirement), I = () => {
+  } = h(_.drop, _.config.streamLengthRequirement), g = () => {
     t(c.ContentDismissActionType.DISMISS)
   };
   return (0, a.jsxs)("div", {
@@ -47,45 +47,45 @@ function _(e) {
       src: S,
       alt: "",
       className: p
-    }), (0, a.jsx)(l.Clickable, {
+    }), (0, a.jsx)(i.Clickable, {
       className: E.__invalid_buttonClose,
       "aria-label": f.default.Messages.CLOSE,
-      onClick: I,
+      onClick: g,
       children: (0, a.jsx)(r.default, {
         width: 16,
         height: 16,
         className: E.closeIcon
       })
-    }), (0, a.jsx)(l.Heading, {
+    }), (0, a.jsx)(i.Heading, {
       className: E.title,
       variant: "heading-md/extrabold",
       children: C
-    }), (0, a.jsx)(l.Text, {
+    }), (0, a.jsx)(i.Text, {
       variant: "text-sm/medium",
       className: E.subTitle,
       children: m
-    }), _.config.autoEnrollment ? (0, a.jsx)(l.Button, {
-      look: l.Button.Looks.INVERTED,
+    }), _.config.autoEnrollment ? (0, a.jsx)(i.Button, {
+      look: i.Button.Looks.INVERTED,
       fullWidth: !0,
       onClick: () => {
-        i.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
+        l.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
       },
       children: f.default.Messages.LEARN_MORE
-    }) : (0, a.jsx)(l.Button, {
+    }) : (0, a.jsx)(i.Button, {
       innerClassName: E.button,
-      look: l.Button.Looks.INVERTED,
+      look: i.Button.Looks.INVERTED,
       fullWidth: !0,
       onClick: () => {
-        (0, o.enrollDropsUser)(_.drop.dropsQuestId), i.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
+        (0, o.enrollDropsUser)(_.drop.dropsQuestId), l.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
       },
       children: f.default.Messages.DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA
-    }), (0, a.jsx)(l.Button, {
+    }), (0, a.jsx)(i.Button, {
       className: E.linkButtonContainer,
       innerClassName: E.linkButton,
-      onClick: I,
-      look: l.Button.Looks.LINK,
+      onClick: g,
+      look: i.Button.Looks.LINK,
       fullWidth: !0,
-      color: l.Button.Colors.WHITE,
+      color: i.Button.Colors.WHITE,
       children: f.default.Messages.NOT_NOW
     }), (0, a.jsx)("div", {
       className: E.pointer

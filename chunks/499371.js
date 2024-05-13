@@ -1,52 +1,52 @@
 "use strict";
 n.r(t);
-var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+var a = n("735250"),
+  l = n("470079"),
+  s = n("120356"),
+  i = n.n(s),
   r = n("481060"),
   o = n("285952"),
   u = n("659511"),
   d = n("611273");
-class c extends a.PureComponent {
+class c extends l.PureComponent {
   render() {
     let {
       title: e,
       description: t,
       agreement: n,
-      disagreement: a,
-      onAgree: l,
+      disagreement: l,
+      onAgree: s,
       onDisagree: c,
       imageClassName: f
     } = this.props;
-    return (0, s.jsxs)(o.default, {
+    return (0, a.jsxs)(o.default, {
       className: u.gatedContent,
       justify: o.default.Justify.CENTER,
       align: o.default.Align.CENTER,
       direction: o.default.Direction.VERTICAL,
-      children: [(0, s.jsx)("div", {
+      children: [(0, a.jsx)("div", {
         className: i()(u.image, f)
-      }), (0, s.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: i()(u.title, d.marginBottom8),
         children: e
-      }), (0, s.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: i()(u.description, d.marginBottom20),
         children: t
-      }), (0, s.jsxs)(o.default, {
+      }), (0, a.jsxs)(o.default, {
         justify: o.default.Justify.CENTER,
         align: o.default.Align.CENTER,
         grow: 0,
-        children: [null != a ? (0, s.jsx)(r.Button, {
+        children: [null != l ? (0, a.jsx)(r.Button, {
           className: u.action,
           size: r.ButtonSizes.LARGE,
           color: r.ButtonColors.PRIMARY,
           onClick: c,
-          children: a
-        }) : null, null != n ? (0, s.jsx)(r.Button, {
+          children: l
+        }) : null, null != n ? (0, a.jsx)(r.Button, {
           className: u.action,
           color: r.Button.Colors.RED,
           size: r.ButtonSizes.LARGE,
-          onClick: l,
+          onClick: s,
           children: n
         }) : null]
       })]

@@ -5,22 +5,22 @@ var s, a, l, i, r = n("442837"),
   u = n("592125"),
   d = n("757266"),
   c = n("375954");
-let f = null;
-class E extends(i = r.default.Store) {
+let E = null;
+class f extends(i = r.default.Store) {
   initialize() {
     this.waitFor(u.default, d.default, c.default)
   }
   getApps() {
-    return f
+    return E
   }
 }
-l = "AuthorizedAppsStore", (a = "displayName") in(s = E) ? Object.defineProperty(s, a, {
+l = "AuthorizedAppsStore", (a = "displayName") in(s = f) ? Object.defineProperty(s, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new E(o.default, {
+}) : s[a] = l, t.default = new f(o.default, {
   USER_AUTHORIZED_APPS_UPDATE: function(e) {
-    f = e.apps
+    E = e.apps
   }
 })

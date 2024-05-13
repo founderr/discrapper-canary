@@ -21,12 +21,12 @@ function c(e) {
     className: c,
     intervalCount: d = 1,
     isPrepaidPaymentSource: p = !1
-  } = e, f = (0, o.formatPrice)(t, n), C = null;
-  return r === i.SubscriptionIntervalTypes.YEAR ? C = l.default.Messages.BILLING_PRICE_PER_YEAR_BOLD.format({
+  } = e, f = (0, o.formatPrice)(t, n), y = null;
+  return r === i.SubscriptionIntervalTypes.YEAR ? y = l.default.Messages.BILLING_PRICE_PER_YEAR_BOLD.format({
     price: f
-  }) : r === i.SubscriptionIntervalTypes.MONTH && 1 === d ? C = l.default.Messages.BILLING_PRICE_PER_MONTH_BOLD.format({
+  }) : r === i.SubscriptionIntervalTypes.MONTH && 1 === d ? y = l.default.Messages.BILLING_PRICE_PER_MONTH_BOLD.format({
     price: f
-  }) : r === i.SubscriptionIntervalTypes.MONTH && d > 1 && (C = l.default.Messages.BILLING_PRICE_PER_MULTI_MONTHS_BOLD.format({
+  }) : r === i.SubscriptionIntervalTypes.MONTH && d > 1 && (y = l.default.Messages.BILLING_PRICE_PER_MULTI_MONTHS_BOLD.format({
     price: f,
     intervalCount: d
   })), (0, a.jsx)("div", {
@@ -34,6 +34,6 @@ function c(e) {
     "data-testid": "PricePerInterval-".concat(n),
     children: null == r || p ? (0, a.jsx)("strong", {
       children: f
-    }) : C
+    }) : y
   })
 }

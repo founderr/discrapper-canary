@@ -5,8 +5,8 @@ l.r(t), l.d(t, {
   }
 });
 var a = l("735250"),
-  u = l("470079"),
-  n = l("481060"),
+  n = l("470079"),
+  u = l("481060"),
   d = l("906732"),
   s = l("702557"),
   r = l("171368"),
@@ -27,10 +27,10 @@ function M(e) {
   } = t, {
     loading: _,
     note: g
-  } = (0, s.default)(S), I = !_ && null != g && g.length > 0, R = M === c.AppContext.POPOUT, C = u.useContext(f.AnalyticsContext), {
+  } = (0, s.default)(S), I = !_ && null != g && g.length > 0, C = M === c.AppContext.POPOUT, R = n.useContext(f.AnalyticsContext), {
     analyticsLocations: A
   } = (0, d.default)();
-  return S === i.default.getId() || o.default.hidePersonalInformation || R ? null : (0, a.jsx)(n.MenuItem, {
+  return S === i.default.getId() || o.default.hidePersonalInformation || C ? null : (0, a.jsx)(u.MenuItem, {
     id: "note",
     label: _ ? m.default.Messages.LOADING_NOTE : I ? m.default.Messages.EDIT_NOTE : m.default.Messages.ADD_NOTE,
     action: () => {
@@ -40,7 +40,7 @@ function M(e) {
         guildId: l,
         autoFocusNote: !0,
         sourceAnalyticsLocations: A,
-        analyticsLocation: C.location
+        analyticsLocation: R.location
       })
     }
   })

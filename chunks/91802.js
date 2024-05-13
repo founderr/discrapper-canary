@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   useLocalizedPromoQuery: function() {
-    return l
+    return s
   }
 });
 var r = n("442837"),
   i = n("351402");
 
-function l() {
+function s() {
   let {
     localizedPricingPromo: e,
     hasError: t

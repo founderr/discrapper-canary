@@ -5,11 +5,11 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("607070"),
-  o = n("585483"),
-  l = n("981631");
+  l = n("585483"),
+  o = n("981631");
 let a = {
   binds: ["return"],
   action() {
-    if (!i.default.keyboardModeEnabled && o.ComponentDispatch.hasSubscribers(l.ComponentActions.MODAL_SUBMIT)) return o.ComponentDispatch.dispatch(l.ComponentActions.MODAL_SUBMIT), !1
+    if (!i.default.keyboardModeEnabled && l.ComponentDispatch.hasSubscribers(o.ComponentActions.MODAL_SUBMIT)) return l.ComponentDispatch.dispatch(o.ComponentActions.MODAL_SUBMIT), !1
   }
 }

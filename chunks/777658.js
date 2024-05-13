@@ -5,8 +5,8 @@ l.r(t), l.d(t, {
   }
 }), l("47120");
 var a = l("735250"),
-  u = l("470079"),
-  n = l("442837"),
+  n = l("470079"),
+  u = l("442837"),
   d = l("481060"),
   s = l("194359"),
   r = l("699516"),
@@ -20,12 +20,12 @@ function f(e) {
       username: f,
       bot: c
     } = e,
-    E = (0, n.useStateFromStores)([i.default], () => {
+    E = (0, u.useStateFromStores)([i.default], () => {
       var e;
       return (null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === l
     }, [l]),
-    [m, M] = (0, n.useStateFromStoresArray)([r.default], () => [r.default.isFriend(l), r.default.isBlocked(l)], [l]),
-    [S, _] = u.useState(!1);
+    [m, M] = (0, u.useStateFromStoresArray)([r.default], () => [r.default.isFriend(l), r.default.isBlocked(l)], [l]),
+    [S, _] = n.useState(!1);
   return c || E ? null : m ? (0, a.jsx)(d.MenuItem, {
     id: "remove-friend",
     label: o.default.Messages.REMOVE_FRIEND,

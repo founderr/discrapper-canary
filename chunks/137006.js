@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   RPCCommandSchemas: function() {
-    return l
+    return i
   }
 }), n("47120");
 var a = n("103964"),
   s = n("231338");
-let l = {
+let i = {
     [a.RPCCommand.INITIATE_IMAGE_UPLOAD]: {
       request: void 0,
       response: e => e.object({
@@ -47,13 +47,13 @@ let l = {
     [a.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
       request: void 0,
       response: e => e.object({
-        participants: e.array().items(i(e).keys({
+        participants: e.array().items(l(e).keys({
           nickname: e.string().description("Server nickname. Not unique.")
         }).required()).required()
       }).required()
     }
   },
-  i = e => e.object({
+  l = e => e.object({
     id: e.string().required().description("User ID"),
     username: e.string().required(),
     global_name: e.string().allow(null).description("Global Discord name. Not unique."),

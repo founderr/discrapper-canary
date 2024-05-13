@@ -19,8 +19,8 @@ var a = l("735250"),
   E = l("594190"),
   _ = l("695346"),
   N = l("494620"),
-  C = l("592125"),
-  h = l("650774"),
+  h = l("592125"),
+  C = l("650774"),
   g = l("430824"),
   p = l("131951"),
   A = l("944486"),
@@ -141,9 +141,9 @@ function X(e) {
 function $(e) {
   let {
     guildId: t
-  } = e, l = (0, r.useStateFromStores)([h.default], () => {
+  } = e, l = (0, r.useStateFromStores)([C.default], () => {
     var e;
-    return null !== (e = h.default.getMemberCount(t)) && void 0 !== e ? e : 0
+    return null !== (e = C.default.getMemberCount(t)) && void 0 !== e ? e : 0
   }), s = _.NotifyFriendsOnGoLive.useSetting(), o = n.useCallback((e, t) => {
     _.NotifyFriendsOnGoLive.updateSetting(t), j.default.track(K.AnalyticEvents.NOTIFY_STREAM_SETTING_UPDATE, {
       value: t
@@ -194,7 +194,7 @@ function et(e) {
     sourceChanged: d,
     selectedGuildId: E,
     targetGuildPremiumTier: _,
-    selectSource: h,
+    selectSource: C,
     selectGuild: g,
     sound: I,
     onClose: R,
@@ -207,7 +207,7 @@ function et(e) {
     onChangeGuild: D,
     onChangeSound: G,
     isAnimationDone: V
-  } = e, H = (0, r.useStateFromStores)([A.default, C.default], () => C.default.getChannel(A.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([U.default], () => U.default.GPUDriversOutdated), q = (0, r.useStateFromStores)([U.default], () => U.default.problematicGPUDriver), et = (0, r.useStateFromStores)([x.default], () => x.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+  } = e, H = (0, r.useStateFromStores)([A.default, h.default], () => h.default.getChannel(A.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([U.default], () => U.default.GPUDriversOutdated), q = (0, r.useStateFromStores)([U.default], () => U.default.problematicGPUDriver), et = (0, r.useStateFromStores)([x.default], () => x.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !el
   }), en = (0, k.default)();
   null != t && t.id.startsWith("screen") && !p.default.supportsScreenSoundshare() && (en = Y.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
@@ -226,7 +226,7 @@ function et(e) {
       onChangeAudioDevice: j
     }) : (0, a.jsxs)("div", {
       children: [(0, a.jsx)(Z, {
-        selectSource: h,
+        selectSource: C,
         sourceChanged: d,
         onChangeSource: O,
         selectedSource: t

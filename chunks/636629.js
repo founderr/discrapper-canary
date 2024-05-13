@@ -25,13 +25,13 @@ t.default = e => {
   } = e, l = (0, r.useDropsExperiment)(a);
   if (null == l) return null;
   let {
-    bodyText: f,
-    articleUrl: E
+    bodyText: E,
+    articleUrl: f
   } = c(l.drop, l.config.streamLengthRequirement);
   return (0, s.jsxs)(i.default, {
     className: d.colorGuildBlue,
-    children: [f, (0, s.jsx)(i.NoticeButtonAnchor, {
-      href: E,
+    children: [E, (0, s.jsx)(i.NoticeButtonAnchor, {
+      href: f,
       target: "_blank",
       onClick: () => {
         n(o.ContentDismissActionType.PRIMARY)

@@ -5,11 +5,11 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("475468"),
-  o = n("914010"),
-  l = n("585483"),
+  l = n("914010"),
+  o = n("585483"),
   a = n("981631");
 let u = {
   binds: ["mod+shift+t"],
   comboKeysBindGlobal: !0,
-  action: () => (null != o.default.getGuildId() && (0, i.transitionToChannel)(a.ME), l.ComponentDispatch.safeDispatch(a.ComponentActions.TOGGLE_DM_CREATE), !1)
+  action: () => (null != l.default.getGuildId() && (0, i.transitionToChannel)(a.ME), o.ComponentDispatch.safeDispatch(a.ComponentActions.TOGGLE_DM_CREATE), !1)
 }

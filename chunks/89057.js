@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   BlockedPaymentsContentModal: function() {
-    return h
+    return S
   },
   BlockedPaymentsContentSettings: function() {
     return E
   },
   BlockedPaymentsWarning: function() {
-    return S
+    return h
   }
 });
 var a = n("735250");
@@ -22,8 +22,8 @@ var r = n("120356"),
   d = n("759231"),
   p = n("63063"),
   f = n("211242"),
-  C = n("981631"),
-  y = n("689938"),
+  y = n("981631"),
+  C = n("689938"),
   P = n("60986"),
   _ = n("51125"),
   A = n("47268");
@@ -37,16 +37,16 @@ function m(e) {
     children: [(0, a.jsx)(l.Heading, {
       className: P.header,
       variant: "heading-xl/semibold",
-      children: y.default.Messages.REGION_BLOCKED_PAYMENTS_HEADER
+      children: C.default.Messages.REGION_BLOCKED_PAYMENTS_HEADER
     }), (0, a.jsxs)(l.Text, {
       className: P.description,
       variant: "text-md/normal",
       color: "header-secondary",
       children: [(0, a.jsx)("p", {
-        children: y.default.Messages.REGION_BLOCKED_PAYMENTS_BODY
+        children: C.default.Messages.REGION_BLOCKED_PAYMENTS_BODY
       }), (0, a.jsx)("p", {
-        children: y.default.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
-          helpdeskArticle: p.default.getArticleURL(C.HelpdeskArticles.BLOCKED_PAYMENTS)
+        children: C.default.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
+          helpdeskArticle: p.default.getArticleURL(y.HelpdeskArticles.BLOCKED_PAYMENTS)
         })
       })]
     }), (0, a.jsx)("img", {
@@ -63,7 +63,7 @@ function E() {
   })
 }
 
-function h(e) {
+function S(e) {
   let {
     onClose: t
   } = e;
@@ -83,7 +83,7 @@ function h(e) {
   })
 }
 
-function S(e) {
+function h(e) {
   let {
     className: t
   } = e;
@@ -95,8 +95,8 @@ function S(e) {
       color: o.default.unsafe_rawColors.YELLOW_300.css
     }), (0, a.jsx)(l.Text, {
       variant: "text-sm/normal",
-      children: y.default.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
-        helpdeskArticle: p.default.getArticleURL(C.HelpdeskArticles.BLOCKED_PAYMENTS)
+      children: C.default.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
+        helpdeskArticle: p.default.getArticleURL(y.HelpdeskArticles.BLOCKED_PAYMENTS)
       })
     })]
   }) : null

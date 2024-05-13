@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   useMultiAccountMenuItems: function() {
-    return g
+    return I
   }
 }), n("653041");
 var a = n("735250");
 n("470079");
 var s = n("442837"),
-  l = n("481060"),
-  i = n("44315"),
+  i = n("481060"),
+  l = n("44315"),
   r = n("598077"),
   o = n("246946"),
   u = n("594174"),
@@ -22,15 +22,15 @@ var s = n("442837"),
   m = n("383832"),
   S = n("981631"),
   p = n("689938"),
-  I = n("368110");
+  g = n("368110");
 
-function g() {
+function I() {
   let e = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()),
     t = (0, s.useStateFromStores)([o.default], () => o.default.hidePersonalInformation),
     {
       multiAccountUsers: n
     } = (0, C.useMultiAccountUsers)(),
-    g = t => {
+    I = t => {
       t !== (null == e ? void 0 : e.id) && (f.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
         location: {
           section: S.AnalyticsSections.PROFILE_POPOUT
@@ -42,55 +42,55 @@ function g() {
         o = s.id === (null == e ? void 0 : e.id),
         u = n.tokenStatus === _.MultiAccountTokenStatus.INVALID,
         f = t ? null : "#".concat(s.discriminator);
-      return (0, a.jsx)(l.MenuItem, {
+      return (0, a.jsx)(i.MenuItem, {
         id: s.id,
-        focusedClassName: I.focused,
+        focusedClassName: g.focused,
         label: e => {
           let {
             isFocused: r
           } = e;
           return (0, a.jsxs)("div", {
-            className: I.userMenuItem,
-            children: [(0, a.jsx)(l.Avatar, {
+            className: g.userMenuItem,
+            children: [(0, a.jsx)(i.Avatar, {
               src: s.getAvatarURL(void 0, 40),
-              size: l.AvatarSizes.SIZE_24,
+              size: i.AvatarSizes.SIZE_24,
               "aria-label": n.username
             }), (0, a.jsxs)("div", {
-              className: I.userMenuUsername,
-              children: [(0, a.jsx)(l.Text, {
-                className: I.userMenuText,
+              className: g.userMenuUsername,
+              children: [(0, a.jsx)(i.Text, {
+                className: g.userMenuText,
                 variant: "text-sm/normal",
                 children: E.default.getUserTag(s, {
                   mode: "username",
                   identifiable: t ? "never" : "always"
                 })
-              }), !s.isPomelo() && (0, a.jsx)(l.Text, {
-                className: I.userMenuDiscriminator,
+              }), !s.isPomelo() && (0, a.jsx)(i.Text, {
+                className: g.userMenuDiscriminator,
                 variant: "text-sm/normal",
                 children: f
               })]
             }), o && (0, a.jsx)(d.default, {
-              color: (0, i.getColor)(r ? S.Color.WHITE_500 : S.Color.BRAND_500),
-              backgroundColor: (0, i.getColor)(r ? S.Color.BRAND_500 : S.Color.WHITE_500),
+              color: (0, l.getColor)(r ? S.Color.WHITE_500 : S.Color.BRAND_500),
+              backgroundColor: (0, l.getColor)(r ? S.Color.BRAND_500 : S.Color.WHITE_500),
               width: 18,
               height: 18,
-              className: I.activeIcon
+              className: g.activeIcon
             }), u && (0, a.jsx)(c.default, {
-              color: (0, i.getColor)(S.Color.RED_400),
-              backgroundColor: (0, i.getColor)(S.Color.WHITE_500),
+              color: (0, l.getColor)(S.Color.RED_400),
+              backgroundColor: (0, l.getColor)(S.Color.WHITE_500),
               width: 15,
               height: 15,
-              className: I.activeIcon
+              className: g.activeIcon
             })]
           })
         },
         action: () => {
-          u ? (0, m.default)() : g(s.id)
+          u ? (0, m.default)() : I(s.id)
         }
       }, s.id)
     });
   return T.push((0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(l.MenuSeparator, {}), (0, a.jsx)(l.MenuItem, {
+    children: [(0, a.jsx)(i.MenuSeparator, {}), (0, a.jsx)(i.MenuItem, {
       id: "manage-accounts",
       label: p.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
       action: m.default

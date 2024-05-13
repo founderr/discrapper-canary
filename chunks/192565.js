@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("685626"),
-  i = n("442837"),
+  i = n("685626"),
+  l = n("442837"),
   r = n("481060"),
   o = n("224706"),
   u = n("607070"),
@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("741595"),
   S = n("974842"),
   p = n("359380"),
-  I = n("308083"),
-  g = n("689938"),
+  g = n("308083"),
+  I = n("689938"),
   T = n("590190");
 let A = {
     mass: 1,
@@ -41,7 +41,7 @@ function v(e) {
   let {
     progress: t,
     errors: n
-  } = (0, i.useStateFromStoresObject)([c.default], () => {
+  } = (0, l.useStateFromStoresObject)([c.default], () => {
     var t;
     let n = c.default.getStateForGuild(e);
     return {
@@ -56,7 +56,7 @@ function v(e) {
   }
 }
 let R = {
-  [I.ClanSetupSteps.GAMES]: function(e) {
+  [g.ClanSetupSteps.GAMES]: function(e) {
     let {
       guildId: t
     } = e;
@@ -65,39 +65,39 @@ let R = {
     }, []);
     let {
       progress: n,
-      errors: l,
-      handleClanUpdate: i
+      errors: i,
+      handleClanUpdate: l
     } = v(t);
     return (0, a.jsx)(h.default, {
-      title: g.default.Messages.CLAN_SETUP_GAMES_TITLE,
-      description: g.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-      handleUpdate: e => i({
+      title: I.default.Messages.CLAN_SETUP_GAMES_TITLE,
+      description: I.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
+      handleUpdate: e => l({
         gameApplicationIds: e
       }),
       gameApplicationIds: n.gameApplicationIds,
       requiredGameId: n.requiredGameId,
-      error: null == l ? void 0 : l.gameApplicationIds
+      error: null == i ? void 0 : i.gameApplicationIds
     })
   },
-  [I.ClanSetupSteps.PLAYSTYLE]: function(e) {
+  [g.ClanSetupSteps.PLAYSTYLE]: function(e) {
     let {
       guildId: t
     } = e, {
       progress: n,
       errors: s,
-      handleClanUpdate: l
+      handleClanUpdate: i
     } = v(t);
     return (0, a.jsx)(m.default, {
-      title: g.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
-      description: g.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
-      handleUpdate: e => l({
+      title: I.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
+      description: I.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
+      handleUpdate: e => i({
         playstyle: e
       }),
       playstyle: n.playstyle,
       error: null == s ? void 0 : s.playstyle
     })
   },
-  [I.ClanSetupSteps.UTILITY_TRAITS]: function(e) {
+  [g.ClanSetupSteps.UTILITY_TRAITS]: function(e) {
     let {
       guildId: t
     } = e, {
@@ -105,8 +105,8 @@ let R = {
       handleClanUpdate: s
     } = v(t);
     return (0, a.jsx)(p.default, {
-      title: g.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
-      description: g.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
+      title: I.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
+      description: I.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
       handleUpdate: e => s({
         interests: e
       }),
@@ -114,45 +114,45 @@ let R = {
       interests: n.interests
     })
   },
-  [I.ClanSetupSteps.INTERESTS]: function(e) {
+  [g.ClanSetupSteps.INTERESTS]: function(e) {
     let {
       guildId: t
     } = e, {
       progress: n,
       errors: s,
-      handleClanUpdate: l
+      handleClanUpdate: i
     } = v(t);
     return (0, a.jsx)(_.default, {
-      handleUpdate: l,
+      handleUpdate: i,
       interests: n.interests,
       error: null == s ? void 0 : s.interests
     })
   },
-  [I.ClanSetupSteps.DESCRIPTION]: function(e) {
+  [g.ClanSetupSteps.DESCRIPTION]: function(e) {
     let {
       guildId: t
     } = e, {
       progress: n,
       errors: s,
-      handleClanUpdate: l
+      handleClanUpdate: i
     } = v(t);
     return (0, a.jsx)(E.default, {
-      handleUpdate: l,
+      handleUpdate: i,
       description: n.description,
       wildcardDescriptors: n.wildcardDescriptors,
       errors: s
     })
   },
-  [I.ClanSetupSteps.CUSTOMIZE_TAG_BADGE]: function(e) {
+  [g.ClanSetupSteps.CUSTOMIZE_TAG_BADGE]: function(e) {
     let {
       guildId: t
     } = e, {
       progress: n,
       errors: s,
-      handleClanUpdate: l
+      handleClanUpdate: i
     } = v(t);
     return (0, a.jsx)(S.default, {
-      handleUpdate: l,
+      handleUpdate: i,
       tag: n.tag,
       error: null == s ? void 0 : s.tag,
       badge: n.badgeKind,
@@ -161,7 +161,7 @@ let R = {
       furthestStep: n.furthestStep
     })
   },
-  [I.ClanSetupSteps.CUSTOMIZE_BANNER]: function(e) {
+  [g.ClanSetupSteps.CUSTOMIZE_BANNER]: function(e) {
     let {
       guildId: t
     } = e, {
@@ -174,7 +174,7 @@ let R = {
       guildId: t
     })
   },
-  [I.ClanSetupSteps.MEMBER_APPLICATION]: function(e) {
+  [g.ClanSetupSteps.MEMBER_APPLICATION]: function(e) {
     let {
       guildId: t
     } = e;
@@ -191,8 +191,8 @@ function L(e) {
     state: f,
     direction: E,
     cleanUp: h
-  } = e, _ = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion);
-  let C = (0, l.useSpring)((t = f, n = E, o = h, d = _, t === r.TransitionStates.MOUNTED ? {
+  } = e, _ = (0, l.useStateFromStores)([u.default], () => u.default.useReducedMotion);
+  let C = (0, i.useSpring)((t = f, n = E, o = h, d = _, t === r.TransitionStates.MOUNTED ? {
       from: {
         opacity: 0,
         transform: "translateY(40px) translateX(0px)"
@@ -232,7 +232,7 @@ function L(e) {
       }
     })),
     m = s.useMemo(() => R[c.currentStep], [c.currentStep]);
-  return (0, a.jsx)(l.animated.div, {
+  return (0, a.jsx)(i.animated.div, {
     style: C,
     className: T.step,
     children: (0, a.jsx)(r.ScrollerThin, {
@@ -251,19 +251,19 @@ function O(e) {
 function M(e) {
   let {
     guildId: t
-  } = e, n = (0, i.useStateFromStores)([c.default], () => {
+  } = e, n = (0, l.useStateFromStores)([c.default], () => {
     var e, n, a;
     return null !== (a = null === (n = c.default.getStateForGuild(t)) || void 0 === n ? void 0 : null === (e = n.progress) || void 0 === e ? void 0 : e.currentStep) && void 0 !== a ? a : c.DEFAULT_CLAN_PROGRESS.currentStep
-  }), l = s.useRef(n - 1);
+  }), i = s.useRef(n - 1);
   s.useEffect(() => {
-    l.current = n
+    i.current = n
   }, [n]);
   let o = s.useMemo(() => [{
-      previousStep: l,
+      previousStep: i,
       currentStep: n,
       guildId: t
     }], [n, t]),
-    u = s.useMemo(() => null == l.current || n === l.current ? 0 : l.current < n ? 1 : -1, [n]),
+    u = s.useMemo(() => null == i.current || n === i.current ? 0 : i.current < n ? 1 : -1, [n]),
     d = s.useCallback((e, t, n, s) => (0, a.jsx)(L, {
       item: t,
       direction: u,

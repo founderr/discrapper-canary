@@ -1,7 +1,7 @@
 "use strict";
 let a, s;
 n.r(t), n("47120");
-var l, i, r, o, u = n("392711"),
+var i, l, r, o, u = n("392711"),
   d = n.n(u),
   c = n("442837"),
   f = n("433517"),
@@ -12,8 +12,8 @@ var l, i, r, o, u = n("392711"),
   m = n("981631"),
   S = n("71080");
 let p = new Set,
-  I = m.FormStates.CLOSED,
-  g = !1,
+  g = m.FormStates.CLOSED,
+  I = !1,
   T = null,
   A = null,
   N = null,
@@ -33,14 +33,14 @@ function M(e) {
 function y() {
   if (N = _.default.getChannel(), v = _.default.getCategory(), null == N) return !1;
   let e = N.getGuildId();
-  A = T = M(N), null == T[R] && (R = e), s = null != v, a = h.areChannelsLocked(N, v), L = null, g = !1, I = m.FormStates.CLOSED, p.clear()
+  A = T = M(N), null == T[R] && (R = e), s = null != v, a = h.areChannelsLocked(N, v), L = null, I = !1, g = m.FormStates.CLOSED, p.clear()
 }
-class P extends(l = c.default.Store) {
+class P extends(i = c.default.Store) {
   initialize() {
     this.waitFor(_.default, C.default)
   }
   hasChanges() {
-    return g
+    return I
   }
   showNotice() {
     return this.hasChanges()
@@ -58,7 +58,7 @@ class P extends(l = c.default.Store) {
     return R
   }
   get formState() {
-    return I
+    return g
   }
   get isLockable() {
     return s
@@ -76,12 +76,12 @@ class P extends(l = c.default.Store) {
     return O
   }
 }
-o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = P) ? Object.defineProperty(i, r, {
+o = "ChannelSettingsPermissionsStore", (r = "displayName") in(l = P) ? Object.defineProperty(l, r, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = o, t.default = new P(E.default, {
+}) : l[r] = o, t.default = new P(E.default, {
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
     let {
       section: t
@@ -95,16 +95,16 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = P) ? Object.de
       id: t,
       allow: n,
       deny: s
-    } = e, l = null == T ? void 0 : T[t];
-    if (null == l || null == N) return !1;
-    l = {
-      ...l,
+    } = e, i = null == T ? void 0 : T[t];
+    if (null == i || null == N) return !1;
+    i = {
+      ...i,
       allow: n,
       deny: s
     }, T = {
       ...T,
-      [t]: l
-    }, p.add(t), I = m.FormStates.OPEN, g = !d().isEqual(T, A), a = h.areChannelsLocked(N, v)
+      [t]: i
+    }, p.add(t), g = m.FormStates.OPEN, I = !d().isEqual(T, A), a = h.areChannelsLocked(N, v)
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {
     let {
@@ -117,7 +117,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = P) ? Object.de
     }
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    I = m.FormStates.CLOSED, T = null, A = null, N = null, v = null, g = !1, p.clear(), R = null, L = null
+    g = m.FormStates.CLOSED, T = null, A = null, N = null, v = null, I = !1, p.clear(), R = null, L = null
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -142,13 +142,13 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = P) ? Object.de
     return n
   },
   CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function() {
-    I = m.FormStates.SUBMITTING
+    g = m.FormStates.SUBMITTING
   },
   CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function(e) {
     let {
       silent: t
     } = e;
-    t ? I = m.FormStates.OPEN : (I = m.FormStates.CLOSED, y())
+    t ? g = m.FormStates.OPEN : (g = m.FormStates.CLOSED, y())
   },
   CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function(e) {
     let {

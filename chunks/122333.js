@@ -3,8 +3,8 @@ let a;
 n.r(t), n("47120");
 var s = n("735250");
 n("470079");
-var l = n("481060"),
-  i = n("570140"),
+var i = n("481060"),
+  l = n("570140"),
   r = n("317770"),
   o = n("622822"),
   u = n("391650"),
@@ -18,8 +18,8 @@ var l = n("481060"),
   m = n("914010"),
   S = n("594174"),
   p = n("823379"),
-  I = n("358085"),
-  g = n("929809"),
+  g = n("358085"),
+  I = n("929809"),
   T = n("179645"),
   A = n("701476"),
   N = n("785997"),
@@ -28,20 +28,20 @@ var l = n("481060"),
   L = n("630724");
 
 function O() {
-  null != a && (0, l.closeModal)(a)
+  null != a && (0, i.closeModal)(a)
 }
 class M extends r.default {
   _initialize() {
-    i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("LOGOUT", O)
+    l.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.default.subscribe("LOGOUT", O)
   }
   _terminate() {
-    i.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.unsubscribe("LOGOUT", O)
+    l.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.default.unsubscribe("LOGOUT", O)
   }
   handleConnectionOpen() {
     var e;
-    let t, i = T.default.getType();
-    if (null == i) return;
-    switch (i) {
+    let t, l = T.default.getType();
+    if (null == l) return;
+    switch (l) {
       case A.NewUserTypes.INVITE_UNCLAIMED:
         f.default.flowStart(L.FlowType.INVITE, L.RegistrationSteps.NUF_STARTED);
         break;
@@ -53,11 +53,11 @@ class M extends r.default {
     }
     let r = !1,
       O = m.default.getGuildId();
-    if (i === A.NewUserTypes.INVITE_UNCLAIMED) {
+    if (l === A.NewUserTypes.INVITE_UNCLAIMED) {
       let e = C.default.getGuild(O);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
-    let M = () => 0 === _.default.totalGuilds && !I.isPlatformEmbedded,
+    let M = () => 0 === _.default.totalGuilds && !g.isPlatformEmbedded,
       y = o.userNeedsAgeGate();
     e = [{
       key: "Unified NUF Modal",
@@ -91,7 +91,7 @@ class M extends r.default {
               p.assertNever(e)
           }
         };
-        a = await (0, l.openModalLazy)(async () => {
+        a = await (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("42483"), n.e("22458")]).then(n.bind(n, "599219"));
@@ -112,7 +112,7 @@ class M extends r.default {
       predicate: () => y && !M() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
-      open: e => u.openClaimAccountModal(I.isPlatformEmbedded, e),
+      open: e => u.openClaimAccountModal(g.isPlatformEmbedded, e),
       predicate: () => {
         var e;
         return !r && null != S.default.getCurrentUser() && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
@@ -126,7 +126,7 @@ class M extends r.default {
       }
     }, {
       key: "Guild Welcome Modal",
-      open: e => (0, l.openModalLazy)(async () => {
+      open: e => (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("77578")]).then(n.bind(n, "184782"));
@@ -139,7 +139,7 @@ class M extends r.default {
       }),
       predicate: () => null != O && null != h.default.get(O) && h.default.get(O) !== h.NO_WELCOME_SCREEN
     }], t = () => {
-      g.setNewUserFlowCompleted(), f.default.flowStep(L.FlowType.ANY, L.RegistrationSteps.NUF_COMPLETE, !0)
+      I.setNewUserFlowCompleted(), f.default.flowStep(L.FlowType.ANY, L.RegistrationSteps.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {
       let n = t;
       t = () => {

@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("653041");
 var a, s = n("442837"),
-  l = n("570140"),
-  i = n("381496"),
+  i = n("570140"),
+  l = n("381496"),
   r = n("430824");
 
 function o(e, t, n) {
@@ -39,9 +39,9 @@ class c extends(a = s.default.PersistedStore) {
     return 0 !== u.lastFetched
   }
 }
-o(c, "displayName", "GuildAffinitiesStore"), o(c, "persistKey", "GuildAffinitiesStore"), t.default = new c(l.default, {
+o(c, "displayName", "GuildAffinitiesStore"), o(c, "persistKey", "GuildAffinitiesStore"), t.default = new c(i.default, {
   CONNECTION_OPEN: function() {
-    return Date.now() - u.lastFetched > 864e5 && (0, i.fetchGuildAffinities)(), !1
+    return Date.now() - u.lastFetched > 864e5 && (0, l.fetchGuildAffinities)(), !1
   },
   LOAD_GUILD_AFFINITIES_SUCCESS: function(e) {
     let {

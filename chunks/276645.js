@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  l = n("970731"),
-  i = n("689938"),
+  i = n("970731"),
+  l = n("689938"),
   r = n("874676");
 
 function o(e) {
@@ -16,17 +16,17 @@ function o(e) {
     guildId: t,
     markAsDismissed: o
   } = e;
-  return (0, a.jsx)(l.default, {
+  return (0, a.jsx)(i.default, {
     className: r.container,
     asset: (0, a.jsx)("img", {
       className: r.image,
       src: n("297806"),
       alt: ""
     }),
-    header: i.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_TITLE,
+    header: l.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_TITLE,
     headerClassName: r.header,
-    content: i.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_DESCRIPTION,
-    buttonCTA: i.default.Messages.CHECK_IT_OUT,
+    content: l.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_DESCRIPTION,
+    buttonCTA: l.default.Messages.CHECK_IT_OUT,
     buttonProps: {
       color: s.ButtonColors.WHITE,
       innerClassName: r.primaryButton
@@ -42,7 +42,7 @@ function o(e) {
         })
       })
     },
-    secondaryButtonCTA: i.default.Messages.MAYBE_LATER,
+    secondaryButtonCTA: l.default.Messages.MAYBE_LATER,
     secondaryButtonProps: {
       look: s.ButtonLooks.LINK,
       color: s.ButtonColors.WHITE

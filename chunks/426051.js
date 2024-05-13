@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("286379"),
-  i = n("481060"),
+  i = n("286379"),
+  l = n("481060"),
   r = n("797614"),
   o = n("359110"),
   u = n("6025"),
@@ -25,12 +25,12 @@ function m(e) {
     user: n,
     channel: m
   } = e, S = (0, c.useListHasSingleSpamMessageRequest)(), p = s.useCallback(() => {
-    (0, i.showToast)((0, i.createToast)(_.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
-      name: l.MetricEvents.SPAM_MESSAGE_REQUEST_ERROR_VIEW
+    (0, l.showToast)((0, l.createToast)(_.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, l.ToastType.FAILURE)), r.default.increment({
+      name: i.MetricEvents.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
-  }, []), I = s.useCallback(() => {
-    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), g = s.useCallback(() => {
+    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+  }, []), I = s.useCallback(() => {
     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), S && (0, o.transitionToChannel)(m.id)
   }, [m.id, S]), {
     acceptMessageRequest: T,
@@ -39,8 +39,8 @@ function m(e) {
     isOptimisticAccepted: v
   } = (0, f.useMessageRequestActions)({
     user: n,
-    onAcceptSuccess: g,
-    onRejectSuccess: I,
+    onAcceptSuccess: I,
+    onRejectSuccess: g,
     onError: p
   }), R = A || N, L = R || v;
   return (0, a.jsxs)("div", {
@@ -51,10 +51,10 @@ function m(e) {
       active: t
     }), (0, a.jsxs)("div", {
       className: C.actions,
-      children: [(0, a.jsx)(i.Button, {
+      children: [(0, a.jsx)(l.Button, {
         className: C.button,
-        color: i.ButtonColors.PRIMARY,
-        size: i.Button.Sizes.SMALL,
+        color: l.ButtonColors.PRIMARY,
+        size: l.Button.Sizes.SMALL,
         onClick: e => {
           T(m.id), e.stopPropagation()
         },
@@ -64,7 +64,7 @@ function m(e) {
       }), (0, a.jsx)(h.default, {
         className: C.button,
         channel: m,
-        buttonSize: i.Button.Sizes.SMALL
+        buttonSize: l.Button.Sizes.SMALL
       })]
     })]
   })

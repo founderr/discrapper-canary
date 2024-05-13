@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   BROWSER_DEVTOOLS: function() {
-    return o
+    return l
   }
 });
 var i = n("358085");
-let o = {
+let l = {
   binds: ["mod+alt+i"],
   comboKeysBindGlobal: !0,
   action(e) {

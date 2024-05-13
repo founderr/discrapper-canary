@@ -2,8 +2,8 @@
 n.r(t), n("653041");
 var a = n("735250"),
   s = n("470079"),
-  l = n("481060"),
-  i = n("570140"),
+  i = n("481060"),
+  l = n("570140"),
   r = n("906732"),
   o = n("451603"),
   u = n("885714"),
@@ -30,8 +30,8 @@ t.default = e => {
     guildsData: m,
     analyticsContext: S,
     theme: p,
-    onViewGuild: I,
-    fetchGuilds: g,
+    onViewGuild: g,
+    fetchGuilds: I,
     onGuildCardSeen: T,
     currentCategoryId: A,
     loadId: N,
@@ -39,7 +39,7 @@ t.default = e => {
     showMoreCards: R = !1
   } = e;
   s.useEffect(() => {
-    i.default.wait(() => g())
+    l.default.wait(() => I())
   }, [A]);
   let L = (0, c.default)(R ? _ : h),
     {
@@ -64,7 +64,7 @@ t.default = e => {
     });
     else {
       let t = M.findIndex(t => t.id === e);
-      await I(e, t, S, N)
+      await g(e, t, S, N)
     }
   };
   if (y || null == M) {
@@ -81,13 +81,13 @@ t.default = e => {
   }, e.id));
   return (0, a.jsx)("section", {
     className: E.guildListSection,
-    children: (0, a.jsxs)(l.HeadingLevel, {
-      component: (0, a.jsx)(l.Heading, {
+    children: (0, a.jsxs)(i.HeadingLevel, {
+      component: (0, a.jsx)(i.Heading, {
         className: E.__invalid_title,
         variant: "heading-lg/semibold",
         children: n
       }),
-      children: [null != C && (0, a.jsx)(l.Text, {
+      children: [null != C && (0, a.jsx)(i.Text, {
         className: E.subtitle,
         variant: "text-sm/normal",
         color: "header-secondary",

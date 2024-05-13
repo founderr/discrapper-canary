@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DraftBadge: function() {
-    return h
+    return _
   },
   PublishedBadge: function() {
     return S
@@ -10,34 +10,34 @@ n.r(t), n.d(t, {
 var r = n("735250");
 n("470079");
 var i = n("481060"),
-  l = n("44315"),
-  s = n("377171"),
-  o = n("586791"),
-  u = n("127384"),
+  s = n("44315"),
+  l = n("377171"),
+  u = n("586791"),
+  o = n("127384"),
   a = n("981631"),
-  c = n("689938"),
-  d = n("842104");
+  d = n("689938"),
+  c = n("842104");
 
 function f(e) {
   let {
     label: t,
-    backgroundColor: n = s.default.BUTTON_SECONDARY_BACKGROUND,
-    icon: l,
-    iconColor: o
+    backgroundColor: n = l.default.BUTTON_SECONDARY_BACKGROUND,
+    icon: s,
+    iconColor: u
   } = e;
   return (0, r.jsxs)("div", {
-    className: d.badge,
+    className: c.badge,
     style: {
       backgroundColor: n
     },
     children: [(0, r.jsx)(i.Text, {
       variant: "text-sm/normal",
       color: "always-white",
-      className: d.__invalid_badgeText,
+      className: c.__invalid_badgeText,
       children: t
-    }), (0, r.jsx)(l, {
-      className: d.badgeIcon,
-      color: null != o ? o : "currentColor",
+    }), (0, r.jsx)(s, {
+      className: c.badgeIcon,
+      color: null != u ? u : "currentColor",
       "aria-hidden": !0
     })]
   })
@@ -45,16 +45,16 @@ function f(e) {
 
 function S() {
   return (0, r.jsx)(f, {
-    label: c.default.Messages.GUILD_PRODUCT_STATUS_BADGE_PUBLISHED,
+    label: d.default.Messages.GUILD_PRODUCT_STATUS_BADGE_PUBLISHED,
     backgroundColor: "#207B8D",
-    icon: u.default
+    icon: o.default
   })
 }
 
-function h() {
+function _() {
   return (0, r.jsx)(f, {
-    label: c.default.Messages.GUILD_PRODUCT_STATUS_BADGE_DRAFT,
-    icon: o.default,
-    iconColor: (0, l.getColor)(a.Color.PRIMARY_330)
+    label: d.default.Messages.GUILD_PRODUCT_STATUS_BADGE_DRAFT,
+    icon: u.default,
+    iconColor: (0, s.getColor)(a.Color.PRIMARY_330)
   })
 }

@@ -6,7 +6,7 @@ l.r(t), l.d(t, {
 });
 let a = (0, l("818083").createExperiment)({
   kind: "user",
-  id: "2024-04_premium_emoji_picker_upsell_copy",
+  id: "2024-04_premium_hd_streaming_upsell_copy",
   label: "Premium HD Streaming Upsell New Copy",
   defaultConfig: {
     showNewRoadblockCopy: !1,

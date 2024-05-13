@@ -17,8 +17,8 @@ var a, n, s = l("735250"),
   E = l("872810"),
   _ = l("410575"),
   N = l("812206"),
-  C = l("594190"),
-  h = l("751571"),
+  h = l("594190"),
+  C = l("751571"),
   g = l("120522"),
   p = l("933843"),
   A = l("485731"),
@@ -62,7 +62,7 @@ function Y(e) {
     resolution: el,
     fps: ea,
     soundshareEnabled: en
-  } = (0, c.useStateFromStoresObject)([x.default], () => x.default.getState()), es = (0, c.useStateFromStores)([v.default, I.default], () => I.default.getChannel(v.default.getVoiceChannelId())), ei = (0, c.useStateFromStores)([C.default, M.default], () => (0, b.isWindows)() ? (0, k.default)(C.default, M.default) : null), er = (0, c.useStateFromStores)([L.default], () => {
+  } = (0, c.useStateFromStoresObject)([x.default], () => x.default.getState()), es = (0, c.useStateFromStores)([v.default, I.default], () => I.default.getChannel(v.default.getVoiceChannelId())), ei = (0, c.useStateFromStores)([h.default, M.default], () => (0, b.isWindows)() ? (0, k.default)(h.default, M.default) : null), er = (0, c.useStateFromStores)([L.default], () => {
     let e = L.default.getCurrentUser();
     return u()(null != e, "GoLiveModal: user cannot be undefined"), e
   }), eu = null !== (t = null == es ? void 0 : es.getGuildId()) && void 0 !== t ? t : J, eo = (0, c.useStateFromStores)([R.default], () => {
@@ -71,11 +71,11 @@ function Y(e) {
   }), [ed, ec] = null !== (a = (0, G.default)(et, er, eo)) && void 0 !== a ? a : [B.ApplicationStreamResolutions.RESOLUTION_720, B.ApplicationStreamFPS.FPS_30];
   et !== B.ApplicationStreamPresets.PRESET_CUSTOM && (el = ed, ea = ec), !(0, U.default)(et, el, ea, er, eo) && (el = ed, ea = ec);
   let ef = (0, j.useUID)();
-  let [em, eS] = i.useState((Y = q, Q = Z, Y ? 0 : Q ? 1 : 2)), [eE, e_] = i.useState(null), [eN, eC] = i.useState(!1), [eh, eg] = i.useState(null), [ep, eA] = i.useState(null), [ex, eI] = i.useState(null), [eR, eT] = i.useState(et), [ev, eL] = i.useState(el), [eM, eO] = i.useState(ea), [ej, eD] = i.useState(en), [eb, eP] = i.useState(null != J ? J : null), eU = null !== (n = null == es ? void 0 : es.id) && void 0 !== n ? n : eh;
+  let [em, eS] = i.useState((Y = q, Q = Z, Y ? 0 : Q ? 1 : 2)), [eE, e_] = i.useState(null), [eN, eh] = i.useState(!1), [eC, eg] = i.useState(null), [ep, eA] = i.useState(null), [ex, eI] = i.useState(null), [eR, eT] = i.useState(et), [ev, eL] = i.useState(el), [eM, eO] = i.useState(ea), [ej, eD] = i.useState(en), [eb, eP] = i.useState(null != J ? J : null), eU = null !== (n = null == es ? void 0 : es.id) && void 0 !== n ? n : eC;
   async function eG() {
     var e, t, l;
     u()(null != ei || null != ep, "got nothing to stream");
-    let a = null !== (e = null == es ? void 0 : es.id) && void 0 !== e ? e : eh;
+    let a = null !== (e = null == es ? void 0 : es.id) && void 0 !== e ? e : eC;
     u()(null != a, "Received null target channel ID");
     let n = I.default.getChannel(a),
       s = null !== (t = null == n ? void 0 : n.getGuildId()) && void 0 !== t ? t : J;
@@ -83,7 +83,7 @@ function Y(e) {
     let i = !0;
     (0, p.shouldActivatePerkDemo)(d.EntitlementFeatureNames.STREAM_HIGH_QUALITY) && (i = await (0, g.activatePerkDemo)(d.EntitlementFeatureNames.STREAM_HIGH_QUALITY), (0, A.hqStreamingSetEnabled)(!(0, p.ineligibleQualitySetting)(ev, eM)), D.default.track(H.AnalyticEvents.PERK_DEMO_OFFER_ACCEPTED, {
       guild_id: s,
-      channel_id: null !== (l = null == es ? void 0 : es.id) && void 0 !== l ? l : eh,
+      channel_id: null !== (l = null == es ? void 0 : es.id) && void 0 !== l ? l : eC,
       perk_type: d.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
       resolution: ev,
       max_fps: eM
@@ -97,7 +97,7 @@ function Y(e) {
       frameRate: c,
       soundshareEnabled: ej
     });
-    let f = (0, V.default)(ei, ep, C.default.getRunningGames()),
+    let f = (0, V.default)(ei, ep, h.default.getRunningGames()),
       _ = !(0, b.isWindows)() || null == f || (null == ep ? void 0 : ep.id.startsWith("camera:")) || null == f ? null : f.pid;
     (0, E.startStream)(s, a, {
       pid: _,
@@ -106,7 +106,7 @@ function Y(e) {
       audioSourceId: ex,
       sound: ej
     }), (async () => {
-      !await h.default.hasPermission(W.NativePermissionTypes.SCREEN_RECORDING, {
+      !await C.default.hasPermission(W.NativePermissionTypes.SCREEN_RECORDING, {
         showAuthorizationError: !1
       }) && m.default.show({
         title: K.default.Messages.WARNING_SCREEN_RECORDING_PERMISSION_TITLE,
@@ -119,7 +119,7 @@ function Y(e) {
     eG(), $()
   }
   i.useEffect(() => {
-    let e = (0, b.isWindows)() ? (0, k.default)(C.default, M.default) : null,
+    let e = (0, b.isWindows)() ? (0, k.default)(h.default, M.default) : null,
       t = (null == e ? void 0 : e.id) != null ? N.default.getApplication(e.id) : null;
     D.default.track(H.AnalyticEvents.OPEN_MODAL, {
       type: "Go Live Modal",
@@ -140,7 +140,7 @@ function Y(e) {
   }, [er, eo, eM, ev, eR]);
   async function ey(e) {
     if (e.preventDefault(), 1 === em) return eS(2);
-    let t = (0, V.default)(ei, ep, C.default.getRunningGames()),
+    let t = (0, V.default)(ei, ep, h.default.getRunningGames()),
       a = P.default.supportsFeature(H.NativeFeatures.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated);
     if ((0, b.isMac)() && null != ep) {
       let e = await T.default.getMediaEngine().getDesktopSources(),
@@ -180,7 +180,7 @@ function Y(e) {
     }() : ek()
   }
   let eF = i.useCallback(e => {
-      eA(e), null != e && (eS(2), eC(!0))
+      eA(e), null != e && (eS(2), eh(!0))
     }, []),
     eV = i.useCallback(e => {
       eP(e), eS(Z ? 1 : 2)
@@ -245,7 +245,7 @@ function Y(e) {
         children: (0, s.jsx)("div", {
           className: z.modalSize,
           children: (0, s.jsx)(w.default, {
-            selectedChannelId: null !== (r = null == es ? void 0 : es.id) && void 0 !== r ? r : eh,
+            selectedChannelId: null !== (r = null == es ? void 0 : es.id) && void 0 !== r ? r : eC,
             selectedPreset: eR,
             selectedResolution: ev,
             selectedSource: ep,

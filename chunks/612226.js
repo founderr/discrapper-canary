@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return F
   }
 }), n("411104");
-var i, o, l = n("186070"),
+var i, l, o = n("186070"),
   a = n("185514"),
   u = n("395878"),
   s = n("321697"),
@@ -29,8 +29,8 @@ var i, o, l = n("186070"),
   C = n("138976"),
   T = n("296805"),
   S = n("561716"),
-  I = n("239748"),
-  f = n("337482"),
+  f = n("239748"),
+  I = n("337482"),
   O = n("679080"),
   N = n("777019"),
   p = n("523147"),
@@ -87,7 +87,7 @@ function w() {
     if (null == t) throw Error("getBindsFor(...): No bind for ".concat(t));
     return t.binds[0]
   })
-}(o = i || (i = {})).NAVIGATION = "NAVIGATION", o.CHAT = "CHAT", o.VOICE_AND_VIDEO = "VOICE_AND_VIDEO", o.MISCELLANEOUS = "MISCELLANEOUS", o.MESSAGE = "MESSAGE", o.DND = "DND";
+}(l = i || (i = {})).NAVIGATION = "NAVIGATION", l.CHAT = "CHAT", l.VOICE_AND_VIDEO = "VOICE_AND_VIDEO", l.MISCELLANEOUS = "MISCELLANEOUS", l.MESSAGE = "MESSAGE", l.DND = "DND";
 let W = {
   [B.KeybindActions.SERVER_NEXT]: L.SERVER_NEXT,
   [B.KeybindActions.SERVER_PREV]: L.SERVER_PREV,
@@ -115,8 +115,8 @@ let W = {
   [B.KeybindActions.TOGGLE_DEAFEN]: g.TOGGLE_DEAFEN,
   [B.KeybindActions.TOGGLE_CATEGORY_COLLAPSED]: b.TOGGLE_CATEGORY_COLLAPSED,
   [B.KeybindActions.SEARCH_SOUNDBOARD]: p.default,
-  [B.KeybindActions.SCROLL_UP]: f.SCROLL_UP,
-  [B.KeybindActions.SCROLL_DOWN]: f.SCROLL_DOWN,
+  [B.KeybindActions.SCROLL_UP]: I.SCROLL_UP,
+  [B.KeybindActions.SCROLL_DOWN]: I.SCROLL_DOWN,
   [B.KeybindActions.QUICKSWITCHER_SHOW]: S.QUICKSWITCHER_SHOW,
   [B.KeybindActions.CREATE_DM_GROUP]: u.CREATE_DM_GROUP,
   [B.KeybindActions.SEARCH_EMOJIS]: O.SEARCH_EMOJIS,
@@ -126,9 +126,9 @@ let W = {
   [B.KeybindActions.JUMP_TO_FIRST_UNREAD]: C.JUMP_TO_FIRST_UNREAD,
   [B.KeybindActions.CREATE_GUILD]: s.CREATE_GUILD,
   [B.KeybindActions.UPLOAD_FILE]: K.UPLOAD_FILE,
-  [B.KeybindActions.RETURN_TO_AUDIO_CHANNEL]: I.RETURN_TO_AUDIO_CHANNEL,
-  [B.KeybindActions.CALL_ACCEPT]: l.CALL_ACCEPT,
-  [B.KeybindActions.CALL_START]: l.CALL_START,
+  [B.KeybindActions.RETURN_TO_AUDIO_CHANNEL]: f.RETURN_TO_AUDIO_CHANNEL,
+  [B.KeybindActions.CALL_ACCEPT]: o.CALL_ACCEPT,
+  [B.KeybindActions.CALL_START]: o.CALL_START,
   [B.KeybindActions.FOCUS_SEARCH]: r.FOCUS_SEARCH,
   [B.KeybindActions.JUMP_TO_CURRENT_CALL]: E.JUMP_TO_CURRENT_CALL,
   [B.KeybindActions.ZOOM_IN]: v.ZOOM_IN,

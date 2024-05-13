@@ -17,11 +17,11 @@ var a = n("481060"),
 function c(e) {
   let t, {
       compact: c,
-      isOwner: f,
-      channel: E
+      isOwner: E,
+      channel: f
     } = e,
     _ = () => {
-      let e = i.default.getGuild(E.getGuildId());
+      let e = i.default.getGuild(f.getGuildId());
       null != e && ((0, a.openModalLazy)(async () => {
         let {
           default: t
@@ -29,31 +29,31 @@ function c(e) {
         return n => (0, s.jsx)(t, {
           ...n,
           guild: e,
-          channel: E,
+          channel: f,
           source: o.InstantInviteSources.INVITE_SYSTEM_MESSAGE
         })
       }), (0, l.trackGuildInviteNotificationAction)())
     },
-    m = (e, t) => (0, s.jsx)(a.Anchor, {
+    T = (e, t) => (0, s.jsx)(a.Anchor, {
       className: d.inviteLink,
       onClick: _,
       children: e
     }, t);
   return t = c ? (0, s.jsx)("div", {
     className: d.inviteContent,
-    children: f ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({
-      inviteHook: m
+    children: E ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({
+      inviteHook: T
     }) : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_COMPACT.format({
-      inviteHook: m
+      inviteHook: T
     })
   }) : (0, s.jsxs)("div", {
     className: d.content,
     children: [(0, s.jsx)("div", {
       className: d.inviteHeader,
-      children: f ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS
+      children: E ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS
     }), (0, s.jsx)("div", {
       className: d.inviteContent,
-      children: f ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
+      children: E ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
     }), (0, s.jsx)(a.Button, {
       onClick: _,
       size: a.Button.Sizes.SMALL,

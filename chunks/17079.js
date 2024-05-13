@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchPriceTiers: function() {
-    return l
+    return s
   }
 });
 var r = n("570140"),
   i = n("155414");
-async function l(e, t) {
+async function s(e, t) {
   r.default.dispatch({
     type: "CREATOR_MONETIZATION_PRICE_TIERS_FETCH",
     guildId: e,

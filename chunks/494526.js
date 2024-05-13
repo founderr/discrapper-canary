@@ -18,8 +18,8 @@ var s, a, i, r, l = n("735250"),
   p = n("365007"),
   T = n("277390"),
   A = n("819570"),
-  I = n("585483"),
-  S = n("358085"),
+  S = n("585483"),
+  I = n("358085"),
   N = n("172517"),
   R = n("51144"),
   C = n("998502"),
@@ -29,8 +29,8 @@ var s, a, i, r, l = n("735250"),
   M = n("531690"),
   x = n("611273");
 (i = s || (s = {}))[i.INITIALIZING = 0] = "INITIALIZING", i[i.PENDING_REMOTE_INIT = 1] = "PENDING_REMOTE_INIT", i[i.PENDING_FINISH = 2] = "PENDING_FINISH", i[i.PENDING_TICKET = 3] = "PENDING_TICKET", i[i.PENDING_LOGIN = 4] = "PENDING_LOGIN", i[i.FINISH = 5] = "FINISH", (r = a || (a = {}))[r.QR_CODE = 0] = "QR_CODE", r[r.CONFIRM = 1] = "CONFIRM";
-let y = n("515695"),
-  b = new m.default("LoginQRSocket");
+let b = n("515695"),
+  y = new m.default("LoginQRSocket");
 
 function U(e) {
   let {
@@ -38,8 +38,8 @@ function U(e) {
   } = e, [n, s] = o.useState(!1);
   return o.useEffect(() => {
     let e = new Image;
-    e.src = y, e.onload = () => s(!0), e.onerror = () => s(!0)
-  }, [y]), o.useEffect(() => {
+    e.src = b, e.onload = () => s(!0), e.onerror = () => s(!0)
+  }, [b]), o.useEffect(() => {
     n && f.AccessibilityAnnouncer.announce(v.default.Messages.LOGIN_WITH_QR_LOADING_FINISHED_LABEL)
   }, [n]), (0, l.jsx)("div", {
     className: M.qrCodeContainer,
@@ -51,7 +51,7 @@ function U(e) {
       }), (0, l.jsx)("div", {
         className: M.qrCodeOverlay,
         children: (0, l.jsx)("img", {
-          src: y,
+          src: b,
           alt: ""
         })
       })]
@@ -81,7 +81,7 @@ let D = e => {
 };
 async function P(e) {
   e.abort("Starting non-conditional mediation");
-  let t = S.isPlatformEmbedded && C.default.supportsFeature(O.NativeFeatures.WEBAUTHN) ? C.default.webAuthnAuthenticate : async e => {
+  let t = I.isPlatformEmbedded && C.default.supportsFeature(O.NativeFeatures.WEBAUTHN) ? C.default.webAuthnAuthenticate : async e => {
     let t = JSON.parse(e);
     return JSON.stringify(await (0, u.get)((0, u.parseRequestOptionsFromJSON)(t)))
   }, {
@@ -180,7 +180,7 @@ function w(e) {
     h.current = o.useCallback(() => {
       r({
         step: 0
-      }), c ? n(e => e + 1) : (b.info("document is not visible, will defer reconnection when document becomes visible."), a(!0))
+      }), c ? n(e => e + 1) : (y.info("document is not visible, will defer reconnection when document becomes visible."), a(!0))
     }, [c]);
     let E = o.useCallback(() => {
         (function(e) {
@@ -192,19 +192,19 @@ function w(e) {
         })(h)()
       }, [h]),
       g = o.useCallback(() => {
-        b.error("Could not complete QR code login, trying to restart with a new QR code."), r({
+        y.error("Could not complete QR code login, trying to restart with a new QR code."), r({
           step: 0
         }), !f.pending && f.fail(E)
       }, [E, f]);
     return o.useEffect(() => {
-      c && s && 0 === i.step && (b.info("reconnecting, now that document is visible"), a(!1), n(e => e + 1))
+      c && s && 0 === i.step && (y.info("reconnecting, now that document is visible"), a(!1), n(e => e + 1))
     }, [i, c, s, a]), o.useEffect(() => {
       let t = Date.now(),
         n = () => "".concat(Date.now() - t, "ms"),
         s = "wss:".concat(window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT, "/?v=2"),
         a = new WebSocket(s);
-      b.info("[0ms] connecting to ".concat(s));
-      let i = e => b.info("[".concat(n(), "] ").concat(e)),
+      y.info("[0ms] connecting to ".concat(s));
+      let i = e => y.info("[".concat(n(), "] ").concat(e)),
         l = null,
         o = null,
         d = null,
@@ -235,7 +235,7 @@ function w(e) {
             return
           }
           case "pending_remote_init": {
-            f.succeed(), I.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE);
+            f.succeed(), S.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE);
             let e = await (0, N.publicKeyFingerprint)(_());
             if (e !== s.fingerprint) throw Error("bad fingerprint ".concat(e, " !== ").concat(s.fingerprint));
             i("handshake complete awaiting remote auth."), r({
@@ -253,7 +253,7 @@ function w(e) {
             return
           }
           case "pending_ticket": {
-            I.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake started, awaiting ticket/cancel.");
+            S.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake started, awaiting ticket/cancel.");
             let e = s.encrypted_user_payload;
             r({
               step: 3,
@@ -262,7 +262,7 @@ function w(e) {
             return
           }
           case "pending_finish": {
-            I.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake started, awaiting finish/cancel.");
+            S.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake started, awaiting finish/cancel.");
             let e = s.encrypted_user_payload;
             r({
               step: 2,
@@ -271,7 +271,7 @@ function w(e) {
             return
           }
           case "finish": {
-            I.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake finished.");
+            S.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake finished.");
             let t = s.encrypted_token;
             r({
               step: 5

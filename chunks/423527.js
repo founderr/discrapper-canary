@@ -21,8 +21,8 @@ var s, a = n("735250"),
   p = n("213609"),
   T = n("882037"),
   A = n("201207"),
-  I = n("481230"),
-  S = n("853268"),
+  S = n("481230"),
+  I = n("853268"),
   N = n("639946"),
   R = n("616952"),
   C = n("792766"),
@@ -31,8 +31,8 @@ var s, a = n("735250"),
   v = n("473855"),
   M = n("726745"),
   x = n("929809"),
-  y = n("541692"),
-  b = n("986197"),
+  b = n("541692"),
+  y = n("986197"),
   U = n("135200"),
   D = n("219496"),
   P = n("794099"),
@@ -173,7 +173,7 @@ class eo extends(s = i.PureComponent) {
     } = this.props, f = null != r ? r.code : null, h = null != o ? o.skuId : null, E = T.usePromoEmailConsentStore.getState(), g = (0, z.isNullOrEmpty)(d) ? null : t === d, _ = $.CONFERENCE_MODE_ENABLED ? await (0, O.formatUsername)(t) : t, m = $.CONFERENCE_MODE_ENABLED ? await (0, O.formatUsername)(n) : n;
     Y.ComponentDispatch.dispatch(J.ComponentActions.WAVE_EMPHASIZE);
     try {
-      c || null == r ? await (0, I.registerFull)({
+      c || null == r ? await (0, S.registerFull)({
         email: e,
         username: _,
         globalName: m,
@@ -185,7 +185,7 @@ class eo extends(s = i.PureComponent) {
         giftCodeSKUId: h,
         birthday: i,
         promoEmailConsent: E.required ? E : null
-      }) : await (0, I.default)({
+      }) : await (0, S.default)({
         consent: a,
         invite: f,
         giftCodeSKUId: h,
@@ -207,7 +207,7 @@ class eo extends(s = i.PureComponent) {
         hasProminentCopy: s
       }
     } = this.props, i = null, r = null;
-    return t ? r = (0, a.jsx)(S.default, {
+    return t ? r = (0, a.jsx)(I.default, {
       value: e,
       onChange: e => this.setState({
         consent: e
@@ -423,9 +423,9 @@ class eo extends(s = i.PureComponent) {
       consentRequired: T,
       isMobileWebInviteRegistration: A,
       uniqueUsernameRegistrationConfig: {
-        suggestions: I
+        suggestions: S
       },
-      authBoxClassName: S,
+      authBoxClassName: I,
       apiErrors: {
         email: N,
         username: C,
@@ -438,7 +438,7 @@ class eo extends(s = i.PureComponent) {
         hasCopyAboveButton: x
       }
     } = this.props, {
-      subText: y,
+      subText: b,
       consentText: D
     } = this.renderConsentComponents(), P = this.renderErrorMessage(), G = (0, a.jsx)(h.Tooltip, {
       text: !u && T ? en.default.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
@@ -455,7 +455,7 @@ class eo extends(s = i.PureComponent) {
     }), j = async () => {
       this.setState({
         usernameFocused: !0
-      }), I && r.length > 0 && !U.default.wasRegistrationSuggestionFetched(r) && await b.default.fetchSuggestionsRegistration(r)
+      }), S && r.length > 0 && !U.default.wasRegistrationSuggestionFetched(r) && await y.default.fetchSuggestionsRegistration(r)
     }, F = null != e ? (0, a.jsx)(i.Fragment, {
       children: e()
     }, "custom-header") : (0, a.jsx)(H.Title, {
@@ -552,7 +552,7 @@ class eo extends(s = i.PureComponent) {
         error: null != _ ? _ : el(v),
         value: d,
         required: !0
-      }), x && y, (0, a.jsx)(R.default, {}), G, P, D, !x && y, $.CONFERENCE_MODE_ENABLED ? null : (0, a.jsx)(H.Button, {
+      }), x && b, (0, a.jsx)(R.default, {}), G, P, D, !x && b, $.CONFERENCE_MODE_ENABLED ? null : (0, a.jsx)(H.Button, {
         look: A ? H.Button.Looks.FILLED : H.Button.Looks.LINK,
         color: A ? H.Button.Colors.PRIMARY : H.Button.Colors.LINK,
         onClick: this.handleGotoLogin,
@@ -563,7 +563,7 @@ class eo extends(s = i.PureComponent) {
     return t ? (0, a.jsx)(Q.default, {
       onSubmit: this.handleSubmit,
       tag: "form",
-      className: l()(S, es.horizontalAuthBox),
+      className: l()(I, es.horizontalAuthBox),
       children: () => [F, (0, a.jsxs)("div", {
         className: es.flex,
         children: [(0, a.jsx)(H.Title, {
@@ -574,7 +574,7 @@ class eo extends(s = i.PureComponent) {
     }) : (0, a.jsxs)(H.default, {
       onSubmit: this.handleSubmit,
       tag: "form",
-      className: S,
+      className: I,
       children: [M && !A ? (0, a.jsx)(H.Button, {
         onClick: this.handleGotoLogin,
         look: H.Button.Looks.LINK,
@@ -717,13 +717,13 @@ class eo extends(s = i.PureComponent) {
 }
 
 function eu(e) {
-  let t = (0, c.useStateFromStoresObject)([B.default, F.default, g.default, y.default, M.default], () => ({
+  let t = (0, c.useStateFromStoresObject)([B.default, F.default, g.default, b.default, M.default], () => ({
       consentRequired: B.default.getAuthenticationConsentRequired(),
       registering: F.default.getRegisterStatus() === J.RegistrationStates.REGISTERING,
       apiErrors: F.default.getErrors(),
       authenticated: F.default.isAuthenticated(),
       isUnderage: g.default.isUnderageAnonymous(),
-      country: y.default.getCountryCode(),
+      country: b.default.getCountryCode(),
       hasLoggedInAccounts: M.default.getHasLoggedInAccounts()
     })),
     n = (0, P.useUURegistrationExperiment)(),

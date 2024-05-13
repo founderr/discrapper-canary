@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   SERVER_NEXT: function() {
-    return o
+    return l
   },
   SERVER_PREV: function() {
-    return l
+    return o
   }
 });
 var i = n("452913");
-let o = {
+let l = {
     binds: ["mod+alt+down", "mod+shift+]", "ctrl+tab"],
     comboKeysBindGlobal: !0,
     action: e => (e.preventDefault(), e.stopPropagation(), (0, i.default)(), !1)
   },
-  l = {
+  o = {
     binds: ["mod+alt+up", "mod+shift+[", "ctrl+shift+tab"],
     comboKeysBindGlobal: !0,
     action: e => (e.preventDefault(), e.stopPropagation(), (0, i.default)(-1), !1)

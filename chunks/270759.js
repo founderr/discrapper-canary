@@ -2,8 +2,8 @@
 n.r(t), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("757143");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("613828"),
   o = n("873546"),
   u = n("442837"),
@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("518311"),
   S = n("199104"),
   p = n("108427"),
-  I = n("210887"),
-  g = n("974042"),
+  g = n("210887"),
+  I = n("974042"),
   T = n("153124"),
   A = n("988951"),
   N = n("26290"),
@@ -41,24 +41,24 @@ function x() {
 t.default = function(e) {
   let {
     initialSection: t
-  } = e, n = (0, r.useLocation)(), l = (0, r.useHistory)();
+  } = e, n = (0, r.useLocation)(), i = (0, r.useHistory)();
   s.useEffect(() => {
     "true" === new URLSearchParams(n.search).get("confirm-age") && c.default.dispatch({
       type: "AGE_GATE_MODAL_OPEN",
       source: M.AgeGateSource.DEEP_LINK_PROMPT
     }).then(() => {
-      l.replace(O.Routes.ME)
+      i.replace(O.Routes.ME)
     })
-  }, [l, n]), s.useEffect(() => {
+  }, [i, n]), s.useEffect(() => {
     f.setHomeLink(O.Routes.FRIENDS), (0, p.trackAppUIViewed)("friends")
   }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
   }, [t]);
-  let m = (0, u.useStateFromStores)([I.default], () => I.default.theme),
+  let m = (0, u.useStateFromStores)([g.default], () => g.default.theme),
     {
       section: D,
       pendingCount: b
-    } = (0, u.useStateFromStoresObject)([g.default], () => g.default.getState()),
+    } = (0, u.useStateFromStoresObject)([I.default], () => I.default.getState()),
     U = (0, u.useStateFromStoresObject)([_.default], () => _.default.getSuggestionCount()),
     j = (0, T.useUID)(),
     G = (0, T.useUID)();
@@ -123,7 +123,7 @@ t.default = function(e) {
           children: y.default.Messages.BLOCKED
         }), (0, a.jsx)(d.TabBar.Item, {
           "aria-label": y.default.Messages.FRIENDS_SECTION_ADD_FRIEND,
-          className: i()(P.item, P.addFriend),
+          className: l()(P.item, P.addFriend),
           id: O.FriendsSections.ADD_FRIEND,
           children: (0, a.jsx)("span", {
             children: y.default.Messages.FRIENDS_SECTION_ADD_FRIEND

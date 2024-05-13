@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n("47120");
-var i, s = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  l = n.n(a),
+var r, i = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  a = n.n(l),
   u = n("481060"),
   o = n("37234"),
   d = n("230711"),
   c = n("981631"),
-  f = n("689938"),
-  _ = n("662090");
+  _ = n("689938"),
+  f = n("662090");
 
-function E(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -19,27 +19,27 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class S extends(i = r.Component) {
+class E extends(r = s.Component) {
   render() {
-    return (0, s.jsxs)("div", {
-      className: _.streamerModeEnabled,
-      children: [(0, s.jsx)("div", {
-        className: _.streamerModeEnabledImage
-      }), (0, s.jsx)(u.Clickable, {
-        className: l()(_.streamerModeEnabledBtn, {
-          [_.disabled]: this.props.disableButton
+    return (0, i.jsxs)("div", {
+      className: f.streamerModeEnabled,
+      children: [(0, i.jsx)("div", {
+        className: f.streamerModeEnabledImage
+      }), (0, i.jsx)(u.Clickable, {
+        className: a()(f.streamerModeEnabledBtn, {
+          [f.disabled]: this.props.disableButton
         }),
         onClick: this.handleClick,
-        children: f.default.Messages.STREAMER_MODE_ENABLED
+        children: _.default.Messages.STREAMER_MODE_ENABLED
       })]
     })
   }
   constructor(...e) {
-    super(...e), E(this, "handleClick", () => {
+    super(...e), p(this, "handleClick", () => {
       !this.props.disableButton && ((0, o.pushLayer)(c.Layers.USER_SETTINGS), d.default.setSection(c.UserSettingsSections.STREAMER_MODE))
     })
   }
 }
-E(S, "defaultProps", {
+p(E, "defaultProps", {
   disableButton: !1
-}), t.default = S
+}), t.default = E

@@ -1,85 +1,85 @@
 "use strict";
 n.r(t);
-var r = n("570140"),
-  a = n("434404"),
-  i = n("821864"),
-  s = n("308063");
+var a = n("570140"),
+  s = n("434404"),
+  r = n("821864"),
+  i = n("308063");
 t.default = {
   init() {
-    r.default.dispatch({
+    a.default.dispatch({
       type: "INTEGRATION_SETTINGS_INIT"
     })
   },
   setSection(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    r.default.dispatch({
+    a.default.dispatch({
       type: "INTEGRATION_SETTINGS_SET_SECTION",
       section: e,
       sectionId: t
     })
   },
   startEditingCommandPermissions(e) {
-    r.default.dispatch({
+    a.default.dispatch({
       type: "INTEGRATION_SETTINGS_START_EDITING_COMMAND",
       commandId: e
     })
   },
   stopEditingCommandPermissions(e) {
-    r.default.dispatch({
+    a.default.dispatch({
       type: "INTEGRATION_SETTINGS_STOP_EDITING_COMMAND",
       commandId: e
     })
   },
   startEditingIntegration(e) {
-    r.default.dispatch({
+    a.default.dispatch({
       type: "INTEGRATION_SETTINGS_START_EDITING_INTEGRATION",
       integrationId: e
     })
   },
   stopEditingIntegration() {
-    r.default.dispatch({
+    a.default.dispatch({
       type: "INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION"
     })
   },
   updateIntegration(e) {
-    r.default.dispatch({
+    a.default.dispatch({
       type: "INTEGRATION_SETTINGS_UPDATE_INTEGRATION",
       settings: e
     })
   },
   startEditingWebhook(e) {
-    r.default.dispatch({
+    a.default.dispatch({
       type: "INTEGRATION_SETTINGS_START_EDITING_WEBHOOK",
       webhookId: e
     })
   },
   stopEditingWebhook() {
-    r.default.dispatch({
+    a.default.dispatch({
       type: "INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK"
     })
   },
   updateWebhook(e) {
-    r.default.dispatch({
+    a.default.dispatch({
       type: "INTEGRATION_SETTINGS_UPDATE_WEBHOOK",
       settings: e
     })
   },
   async saveApplicationPermissions(e, t, n) {
     try {
-      r.default.dispatch({
+      a.default.dispatch({
         type: "INTEGRATION_SETTINGS_SUBMITTING"
-      }), await i.updateApplicationCommandPermissions({
+      }), await r.updateApplicationCommandPermissions({
         applicationId: e,
         commandId: e,
         defaultEveryoneValue: !0,
         defaultEverywhereValue: !0,
         guildId: t,
         permissions: n
-      }), r.default.dispatch({
+      }), a.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_SUCCESS"
       })
     } catch (e) {
-      r.default.dispatch({
+      a.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_FAILURE",
         errors: e.body
       })
@@ -87,13 +87,13 @@ t.default = {
   },
   async saveIntegration(e, t) {
     try {
-      r.default.dispatch({
+      a.default.dispatch({
         type: "INTEGRATION_SETTINGS_SUBMITTING"
-      }), await a.default.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons), r.default.dispatch({
+      }), await s.default.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons), a.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_SUCCESS"
       })
     } catch (e) {
-      r.default.dispatch({
+      a.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_FAILURE",
         errors: e.body
       })
@@ -101,13 +101,13 @@ t.default = {
   },
   async saveWebhook(e, t) {
     try {
-      r.default.dispatch({
+      a.default.dispatch({
         type: "INTEGRATION_SETTINGS_SUBMITTING"
-      }), await s.default.update(e, t.id, t), r.default.dispatch({
+      }), await i.default.update(e, t.id, t), a.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_SUCCESS"
       })
     } catch (e) {
-      r.default.dispatch({
+      a.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_FAILURE",
         errors: e.body
       })

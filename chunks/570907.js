@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var s = n("106351"),
-  a = n("131704"),
-  l = n("23750"),
+var a = n("106351"),
+  l = n("131704"),
+  s = n("23750"),
   i = n("598077"),
   r = n("592125"),
   o = n("375954"),
@@ -16,32 +16,32 @@ var s = n("106351"),
 function c(e) {
   var t, n, c;
   let f = o.default.getMessage(e.channelId, e.messageId),
-    E = u.default.getUser(e.authorId),
-    _ = r.default.getChannel(e.channelId),
-    m = null != E ? E : new i.default({
+    h = u.default.getUser(e.authorId),
+    E = r.default.getChannel(e.channelId),
+    m = null != h ? h : new i.default({
       id: e.authorId,
       username: e.authorSummary
     }),
-    T = new l.default({
+    p = new s.default({
       id: e.messageId,
       channel_id: e.channelId,
       author: m,
       content: e.messageSummary
     }),
-    I = null == e.guildId ? new a.DMChannelRecord({
+    g = null == e.guildId ? new l.DMChannelRecord({
       id: e.channelId,
-      type: s.ChannelTypes.DM,
+      type: a.ChannelTypes.DM,
       name: null !== (t = e.channelSummary) && void 0 !== t ? t : "",
       guild_id: d.EMPTY_STRING_SNOWFLAKE_ID,
       recipients: [null !== (n = e.authorId) && void 0 !== n ? n : d.EMPTY_STRING_SNOWFLAKE_ID]
-    }) : new a.GuildTextualChannelRecord({
+    }) : new l.GuildTextualChannelRecord({
       id: e.channelId,
-      type: null == e.guildId ? s.ChannelTypes.DM : s.ChannelTypes.GUILD_TEXT,
+      type: null == e.guildId ? a.ChannelTypes.DM : a.ChannelTypes.GUILD_TEXT,
       name: null !== (c = e.channelSummary) && void 0 !== c ? c : "",
       guild_id: e.guildId
     });
   return {
-    channel: null != _ ? _ : I,
-    message: null != f ? f : T
+    channel: null != E ? E : g,
+    message: null != f ? f : p
   }
 }

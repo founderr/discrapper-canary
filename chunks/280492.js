@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   TOGGLE_DEAFEN: function() {
-    return l
+    return o
   },
   TOGGLE_MUTE: function() {
-    return o
+    return l
   }
 });
 var i = n("846027");
-let o = {
+let l = {
     binds: ["mod+shift+m"],
     comboKeysBindGlobal: !0,
     action: () => (i.default.toggleSelfMute({
       usedKeybind: !0
     }), !1)
   },
-  l = {
+  o = {
     binds: ["mod+shift+d"],
     comboKeysBindGlobal: !0,
     action: () => (i.default.toggleSelfDeaf(), !1)

@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   FOCUS_SEARCH: function() {
-    return l
+    return o
   }
 });
 var i = n("585483"),
-  o = n("981631");
-let l = {
+  l = n("981631");
+let o = {
   binds: ["mod+f"],
   comboKeysBindGlobal: !0,
   action(e) {
-    e.preventDefault(), e.stopPropagation(), i.ComponentDispatch.dispatch(o.ComponentActions.FOCUS_SEARCH, {
+    e.preventDefault(), e.stopPropagation(), i.ComponentDispatch.dispatch(l.ComponentActions.FOCUS_SEARCH, {
       prefillCurrentChannel: !0
     })
   }

@@ -5,16 +5,16 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("904245"),
-  o = n("306680"),
-  l = n("944486");
+  l = n("306680"),
+  o = n("944486");
 let a = {
   binds: ["shift+pageup"],
   comboKeysBindGlobal: !0,
   action() {
-    let e = l.default.getChannelId();
+    let e = o.default.getChannelId();
     if (null != e) {
-      let t = o.default.ackMessageId(e);
-      null != t && o.default.getOldestUnreadTimestamp(e) > 0 && i.default.jumpToMessage({
+      let t = l.default.ackMessageId(e);
+      null != t && l.default.getOldestUnreadTimestamp(e) > 0 && i.default.jumpToMessage({
         channelId: e,
         messageId: t,
         offset: 1,

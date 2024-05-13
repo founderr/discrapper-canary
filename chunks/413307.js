@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("949389"),
-  i = n("82950"),
+  i = n("949389"),
+  l = n("82950"),
   r = n("434404"),
   o = n("981631"),
   u = n("689938"),
@@ -12,9 +12,9 @@ t.default = e => {
   let {
     guild: t
   } = e, n = s.useCallback(() => {
-    (0, l.hideEnablePublicGuildUpsellNotice)(t.id)
+    (0, i.hideEnablePublicGuildUpsellNotice)(t.id)
   }, [t.id]);
-  return (0, a.jsx)(i.default, {
+  return (0, a.jsx)(l.default, {
     guild: t,
     onDismissed: n,
     onClick: () => r.default.open(t.id, o.GuildSettingsSections.COMMUNITY),

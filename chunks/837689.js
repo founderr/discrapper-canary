@@ -3,8 +3,8 @@ n.r(t), n("47120");
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  l = n("570140"),
-  i = n("317770"),
+  i = n("570140"),
+  l = n("317770"),
   r = n("594174"),
   o = n("295226"),
   u = n("74538"),
@@ -26,26 +26,26 @@ function S(e, t, n) {
   }) : e[t] = n, e
 }
 let p = "PremiumServerDriveAnnouncementModal";
-class I extends i.default {
+class g extends l.default {
   _initialize() {
-    l.default.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), l.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
+    i.default.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), i.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
   _terminate() {
-    l.default.unsubscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), l.default.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
+    i.default.unsubscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), i.default.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
   constructor(...e) {
     super(...e), S(this, "maybeOpenServerDriveAnnouncementModal", (e, t) => {
-      let l = (0, C.extractAnnouncementModalContent)({
+      let i = (0, C.extractAnnouncementModalContent)({
         content: e,
         isPreview: t
       });
-      return null != l && ((0, s.closeModal)(p), (0, s.openModalLazy)(async () => {
+      return null != i && ((0, s.closeModal)(p), (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.resolve().then(n.bind(n, "318199"));
         return t => (0, a.jsx)(e, {
           renderModalProps: t,
-          properties: l
+          properties: i
         })
       }, {
         modalKey: p
@@ -85,4 +85,4 @@ class I extends i.default {
     })
   }
 }
-t.default = new I
+t.default = new g

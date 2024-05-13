@@ -1,12 +1,12 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return C
+    return R
   }
 }), l("653041"), l("47120");
 var a = l("735250"),
-  u = l("470079"),
-  n = l("442837"),
+  n = l("470079"),
+  u = l("442837"),
   d = l("481060"),
   s = l("493683"),
   r = l("447543"),
@@ -22,29 +22,29 @@ var a = l("735250"),
   g = l("981631"),
   I = l("689938");
 
-function R(e, t) {
+function C(e, t) {
   s.default.ensurePrivateChannel(e).then(e => {
     null != f.default.getChannel(e) && i.default.sendInvite(e, t, "context_menu", null)
   })
 }
 
-function C(e) {
+function R(e) {
   let {
     user: t,
     guildId: l,
     onAction: s
-  } = e, i = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser(), []), f = (0, n.useStateFromStoresArray)([S.default, E.default, m.default], () => {
+  } = e, i = (0, u.useStateFromStores)([_.default], () => _.default.getCurrentUser(), []), f = (0, u.useStateFromStoresArray)([S.default, E.default, m.default], () => {
     let e = S.default.getFlattenedGuildIds(),
       t = [];
     return e.forEach(e => {
       let a = E.default.getGuild(e);
       null != a && (0, o.canViewInviteModal)(m.default, a) && a.id !== l && t.push(a)
     }), t
-  }, [l]), [C, A] = u.useState({});
+  }, [l]), [R, A] = n.useState({});
   return (null == i ? void 0 : i.id) === t.id || t.bot || 0 === f.length || M.default.isBlocked(t.id) ? null : (0, a.jsx)(d.MenuItem, {
     id: "invite-to-server",
     label: I.default.Messages.INVITE_TO_SERVER,
-    children: f.map(e => C[e.id] ? (0, a.jsx)(d.MenuItem, {
+    children: f.map(e => R[e.id] ? (0, a.jsx)(d.MenuItem, {
       id: e.id,
       disabled: !0,
       label: I.default.Messages.INVITE_SENT
@@ -56,16 +56,16 @@ function C(e) {
           let l = c.default.getDefaultChannel(e.id, !0, g.Permissions.CREATE_INSTANT_INVITE);
           if (null != l) {
             if (A({
-                ...C,
+                ...R,
                 [e.id]: !0
               }), !m.default.can(g.Permissions.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode) {
-              R(t, e.vanityURLCode);
+              C(t, e.vanityURLCode);
               return
             }
             r.default.createInvite(l.id, {
               max_uses: 1,
               unique: !0
-            }, "User Invite Context Menu").then(e => R(t, e.code))
+            }, "User Invite Context Menu").then(e => C(t, e.code))
           }
         }(e, t.id)
       }

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("374470"),
-  o = n("475179"),
-  l = n("904245"),
+  l = n("475179"),
+  o = n("904245"),
   a = n("45114"),
   u = n("40851"),
   s = n("358221"),
@@ -19,8 +19,8 @@ var i = n("374470"),
   C = n("433355"),
   T = n("592125"),
   S = n("703558"),
-  I = n("323873"),
-  f = n("375954"),
+  f = n("323873"),
+  I = n("375954"),
   O = n("306680"),
   N = n("944486"),
   p = n("914010"),
@@ -45,20 +45,20 @@ let g = {
     if (D.ComponentDispatch.hasSubscribers(h.ComponentActions.SEARCH_RESULTS_CLOSE)) return D.ComponentDispatch.dispatch(h.ComponentActions.SEARCH_RESULTS_CLOSE), !1;
     let t = p.default.getGuildId(),
       n = N.default.getChannelId(t),
-      l = T.default.getChannel(n),
-      a = C.default.getSection(n, null == l ? void 0 : l.isDM()) === h.ChannelSections.SIDEBAR_CHAT ? C.default.getSidebarState(n) : null,
+      o = T.default.getChannel(n),
+      a = C.default.getSection(n, null == o ? void 0 : o.isDM()) === h.ChannelSections.SIDEBAR_CHAT ? C.default.getSidebarState(n) : null,
       d = (null == a ? void 0 : a.type) === c.SidebarType.VIEW_THREAD || (null == a ? void 0 : a.type) === c.SidebarType.VIEW_CHANNEL ? a.channelId : null;
     if (!1 === b(n) || !1 === b(d)) return !1;
     if (null != n && (null == a ? void 0 : a.type) === c.SidebarType.CREATE_THREAD) return E.default.closeChannelSidebar(n), !1;
     let r = G(n),
       _ = G(d);
-    return null == n || r || _ || null == a ? null != n && !r && s.default.getChatOpen(n) ? (o.default.updateChatOpen(n, !1), !1) : (D.ComponentDispatch.dispatch(h.ComponentActions.SCROLLTO_PRESENT), !1) : (E.default.closeChannelSidebar(n), !1)
+    return null == n || r || _ || null == a ? null != n && !r && s.default.getChatOpen(n) ? (l.default.updateChatOpen(n, !1), !1) : (D.ComponentDispatch.dispatch(h.ComponentActions.SCROLLTO_PRESENT), !1) : (E.default.closeChannelSidebar(n), !1)
   }
 };
 
 function b(e) {
   if (null != e) {
-    if (I.default.isEditingAny(e)) return l.default.endEditMessage(e), !1;
+    if (f.default.isEditingAny(e)) return o.default.endEditMessage(e), !1;
     if (null != r.default.getPendingReply(e)) return (0, d.deletePendingReply)(e), !1;
     if (null != _.default.getStickerPreview(e, S.DraftType.ChannelMessage)) return (0, A.clearStickerPreview)(e, S.DraftType.ChannelMessage), !1
   }
@@ -67,5 +67,5 @@ function b(e) {
 function G(e) {
   if (null == e) return !1;
   let t = !1;
-  return f.default.getMessages(e).hasMoreAfter && (l.default.jumpToPresent(e, h.MAX_MESSAGES_PER_CHANNEL), t = !0), O.default.hasUnread(e) && ((0, a.ack)(e), t = !0), (0, a.localAck)(e), t
+  return I.default.getMessages(e).hasMoreAfter && (o.default.jumpToPresent(e, h.MAX_MESSAGES_PER_CHANNEL), t = !0), O.default.hasUnread(e) && ((0, a.ack)(e), t = !0), (0, a.localAck)(e), t
 }

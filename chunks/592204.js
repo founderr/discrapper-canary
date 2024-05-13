@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   isEligibleForKeywordFiltering: function() {
-    return l
+    return i
   },
   useIsEligibleForKeywordFiltering: function() {
     return s
@@ -34,7 +34,7 @@ function s(e) {
   }).enabled
 }
 
-function l(e) {
+function i(e) {
   let {
     location: t
   } = e;

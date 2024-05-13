@@ -3,18 +3,18 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("960259"),
-  l = n("685651"),
-  i = n("325767");
+  i = n("685651"),
+  l = n("325767");
 t.default = (0, s.replaceIcon)(function(e) {
   let {
     width: t = 24,
     height: n = 24,
     color: s = "currentColor",
-    foreground: l,
+    foreground: i,
     ...r
   } = e;
   return (0, a.jsxs)("svg", {
-    ...(0, i.default)(r),
+    ...(0, l.default)(r),
     width: t,
     height: n,
     viewBox: "0 0 48 48",
@@ -41,9 +41,9 @@ t.default = (0, s.replaceIcon)(function(e) {
     }), (0, a.jsx)("path", {
       d: "M42 8.54L39.46 6L6 39.46L8.54 42L16.92 33.64L19.38 31.16L22.7 27.84L29.98 20.56L42 8.54Z",
       fill: s,
-      className: l
+      className: i
     })]
   })
-}, l.WaveformSlashIcon, void 0, {
+}, i.WaveformSlashIcon, void 0, {
   size: 24
 })

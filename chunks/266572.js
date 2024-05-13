@@ -3,8 +3,8 @@ n.r(t), n("47120");
 var a = n("735250");
 n("470079");
 var s = n("544891"),
-  l = n("846519"),
-  i = n("481060"),
+  i = n("846519"),
+  l = n("481060"),
   r = n("496929"),
   o = n("115130"),
   u = n("812206"),
@@ -43,13 +43,13 @@ t.default = {
           if (!e) throw new _.default({
             errorCode: m.RPCErrors.INVALID_ENTITLEMENT
           }, "User does not have entitlement.")
-        }), (0, l.timeoutPromise)(S).then(() => {
+        }), (0, i.timeoutPromise)(S).then(() => {
           throw new _.default({
             errorCode: m.RPCErrors.INVALID_ENTITLEMENT
           }, "Timed out fetching entitlement.")
         })])
       } catch (e) {
-        throw e.code === m.RPCErrors.INVALID_ENTITLEMENT && (h.default.focus(null, !0), (0, i.openModalLazy)(async () => {
+        throw e.code === m.RPCErrors.INVALID_ENTITLEMENT && (h.default.focus(null, !0), (0, l.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("48748")]).then(n.bind(n, "52004"));
@@ -66,14 +66,14 @@ t.default = {
     handler(e) {
       let {
         socket: t
-      } = e, l = t.application.id;
-      if (null == l) throw new _.default({
+      } = e, i = t.application.id;
+      if (null == i) throw new _.default({
         errorCode: m.RPCErrors.INVALID_COMMAND
       }, "No application.");
       return s.HTTP.post({
-        url: m.Endpoints.ENTITLEMENT_TICKET(l),
+        url: m.Endpoints.ENTITLEMENT_TICKET(i),
         body: {
-          test_mode: f.default.inTestModeForApplication(l) || o.default.inDevModeForApplication(l)
+          test_mode: f.default.inTestModeForApplication(i) || o.default.inDevModeForApplication(i)
         },
         retries: 3,
         oldFormErrors: !0
@@ -83,13 +83,13 @@ t.default = {
         } = e;
         return t
       }).catch(e => {
-        throw h.default.focus(null, !0), (0, i.openModalLazy)(async () => {
+        throw h.default.focus(null, !0), (0, l.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("48748")]).then(n.bind(n, "52004"));
           return t => (0, a.jsx)(e, {
             ...t,
-            applicationId: l
+            applicationId: i
           })
         }), e
       })

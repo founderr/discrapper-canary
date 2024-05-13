@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("442837"),
-  i = n("846519"),
+  i = n("442837"),
+  l = n("846519"),
   r = n("481060"),
   o = n("293245"),
   u = n("863969"),
@@ -83,26 +83,26 @@ class m extends s.PureComponent {
       className: n
     } = this.props, s = null == e ? {
       type: E.CloudSyncStateTypes.DONE
-    } : e, l = this.getIsRecentlySynced(), i = {};
-    (_.has(s.type) || l) && (i.gradientConfig = {
+    } : e, i = this.getIsRecentlySynced(), l = {};
+    (_.has(s.type) || i) && (l.gradientConfig = {
       id: t.id,
       startColor: "rgba(199, 208, 240, 1)",
       stopColor: "rgba(114, 137, 218, 1)",
-      stop: this.getStop(s, l)
+      stop: this.getStop(s, i)
     });
-    let o = l ? d.default : C[s.type];
+    let o = i ? d.default : C[s.type];
     return (0, a.jsx)(r.Tooltip, {
-      text: this.getTooltip(s, l),
+      text: this.getTooltip(s, i),
       children: e => (0, a.jsx)(o, {
         className: n,
-        ...i,
+        ...l,
         ...e
       })
     })
   }
   constructor(...e) {
     var t, n, a;
-    super(...e), t = this, n = "_doneTimer", a = new i.Timeout, n in t ? Object.defineProperty(t, n, {
+    super(...e), t = this, n = "_doneTimer", a = new l.Timeout, n in t ? Object.defineProperty(t, n, {
       value: a,
       enumerable: !0,
       configurable: !0,
@@ -110,7 +110,7 @@ class m extends s.PureComponent {
     }) : t[n] = a
   }
 }
-t.default = l.default.connectStores([o.default], e => {
+t.default = i.default.connectStores([o.default], e => {
   let {
     libraryApplication: t
   } = e;

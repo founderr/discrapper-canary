@@ -2,10 +2,10 @@
 n.r(t);
 var a = n("442837"),
   s = n("430824"),
-  l = n("914010"),
-  i = n("771845");
+  i = n("914010"),
+  l = n("771845");
 t.default = () => {
-  let e = (0, a.useStateFromStores)([i.default], () => i.default.getFlattenedGuildIds()),
-    t = (0, a.useStateFromStores)([l.default], () => l.default.getGuildId());
+  let e = (0, a.useStateFromStores)([l.default], () => l.default.getFlattenedGuildIds()),
+    t = (0, a.useStateFromStores)([i.default], () => i.default.getGuildId());
   return (0, a.useStateFromStores)([s.default], () => s.default.getGuild(null != t ? t : e[0]))
 }

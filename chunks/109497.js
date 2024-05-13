@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("653041");
 var a, s = n("442837"),
-  l = n("570140"),
-  i = n("695346"),
+  i = n("570140"),
+  l = n("695346"),
   r = n("885110"),
   o = n("70956"),
   u = n("981631");
@@ -35,14 +35,14 @@ class h extends(a = s.default.PersistedStore) {
   }
   getTemp() {
     return {
-      x: i.StatusExpiresAtSetting.getSetting()
+      x: l.StatusExpiresAtSetting.getSetting()
     }
   }
 }
-d(h, "displayName", "HabitualDNDStore"), d(h, "persistKey", "habitualDND"), new h(l.default, {
+d(h, "displayName", "HabitualDNDStore"), d(h, "persistKey", "habitualDND"), new h(i.default, {
   POST_CONNECTION_OPEN: function() {
-    r.default.getStatus() === u.StatusTypes.DND && "0" === i.StatusExpiresAtSetting.getSetting() ? (c.push(Date.now()), c = c.filter(e => e > Date.now() - 5 * o.default.Millis.DAY), E() && setTimeout(() => {
-      l.default.dispatch({
+    r.default.getStatus() === u.StatusTypes.DND && "0" === l.StatusExpiresAtSetting.getSetting() ? (c.push(Date.now()), c = c.filter(e => e > Date.now() - 5 * o.default.Millis.DAY), E() && setTimeout(() => {
+      i.default.dispatch({
         type: "HABITUAL_DND_CLEAR"
       })
     }, 15 * o.default.Millis.SECOND)) : c = []

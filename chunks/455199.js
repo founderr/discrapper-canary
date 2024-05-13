@@ -1,74 +1,74 @@
 "use strict";
 n.r(t), n("733860"), n("653041");
-var s, a, l, i, r = n("392711"),
+var a, l, s, i, r = n("392711"),
   o = n.n(r),
   u = n("442837"),
   d = n("433517"),
   c = n("379649"),
   f = n("570140"),
-  E = n("786761"),
-  _ = n("572804"),
+  h = n("786761"),
+  E = n("572804"),
   m = n("901461"),
-  T = n("23750"),
-  I = n("314897"),
-  p = n("592125"),
-  h = n("375954"),
-  N = n("306680"),
-  S = n("699516"),
-  C = n("914010"),
-  A = n("9156"),
-  g = n("594174"),
-  M = n("981631");
-let R = "recentMentionFilterSettings",
-  v = [],
-  O = {},
-  x = !1,
-  L = !0,
-  D = d.Storage.get(R, {
-    guildFilter: M.RecentMentionsFilters.ALL_SERVERS,
+  p = n("23750"),
+  g = n("314897"),
+  S = n("592125"),
+  N = n("375954"),
+  _ = n("306680"),
+  T = n("699516"),
+  I = n("914010"),
+  C = n("9156"),
+  A = n("594174"),
+  v = n("981631");
+let M = "recentMentionFilterSettings",
+  R = [],
+  x = {},
+  L = !1,
+  O = !0,
+  b = d.Storage.get(M, {
+    guildFilter: v.RecentMentionsFilters.ALL_SERVERS,
     everyoneFilter: !0,
     roleFilter: !0
   }),
-  P = !1,
-  y = 0,
-  U = !1,
-  j = !1;
+  y = !1,
+  j = 0,
+  F = !1,
+  D = !1;
 
-function b(e) {
-  if (e instanceof T.default) return e;
-  let t = h.default.getMessage(e.channel_id, e.id);
-  return null != t ? t : (0, E.createMessageRecord)(e)
+function U(e) {
+  if (e instanceof p.default) return e;
+  let t = N.default.getMessage(e.channel_id, e.id);
+  return null != t ? t : (0, h.createMessageRecord)(e)
 }
 
-function B(e) {
+function P(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
   if ((0, m.default)(e)) return null;
   null == n && (n = e.channel_id);
-  let s = p.default.getChannel(n);
-  if (null == s || s.type === M.ChannelTypes.DM || D.guildFilter === M.RecentMentionsFilters.THIS_SERVER && s.getGuildId() !== C.default.getGuildId()) return null;
-  let a = null === (t = e.author) || void 0 === t ? void 0 : t.id,
-    l = I.default.getId();
-  if (null != a && S.default.isBlocked(a) || a === l) return null;
-  e = b(e);
-  let i = !D.everyoneFilter,
-    r = !D.roleFilter;
-  return (0, _.default)({
+  let a = S.default.getChannel(n);
+  if (null == a || a.type === v.ChannelTypes.DM || b.guildFilter === v.RecentMentionsFilters.THIS_SERVER && a.getGuildId() !== I.default.getGuildId()) return null;
+  let l = null === (t = e.author) || void 0 === t ? void 0 : t.id,
+    s = g.default.getId();
+  if (null != l && T.default.isBlocked(l) || l === s) return null;
+  e = U(e);
+  let i = !b.everyoneFilter,
+    r = !b.roleFilter;
+  return (0, E.default)({
     message: e,
-    userId: l,
+    userId: s,
     suppressEveryone: i,
     suppressRoles: r
-  }) ? (j && N.default.ackMessageId(s.id) !== e.id && (0, _.default)({
+  }) ? (D && _.default.ackMessageId(a.id) !== e.id && (0, E.default)({
     message: e,
-    userId: l,
-    suppressEveryone: A.default.isSuppressEveryoneEnabled(s.getGuildId()),
-    suppressRoles: A.default.isSuppressRolesEnabled(s.getGuildId())
-  }) && (j = !1), e) : null
+    userId: s,
+    suppressEveryone: C.default.isSuppressEveryoneEnabled(a.getGuildId()),
+    suppressRoles: C.default.isSuppressRolesEnabled(a.getGuildId())
+  }) && (D = !1), e) : null
 }
 
-function F(e) {
-  if (null == O[e]) return !1;
-  delete O[e], v = o().filter(v, t => {
+function k(e) {
+  if (null == x[e]) return !1;
+  delete x[e], R = o().filter(R, t => {
     let {
       id: n
     } = t;
@@ -76,179 +76,179 @@ function F(e) {
   })
 }
 
-function G(e) {
+function w(e) {
   let {
     id: t
   } = e;
-  return F(t)
+  return k(t)
 }
 
-function k(e) {
+function G(e) {
   let t = {
-    ...D
+    ...b
   };
-  D = o().defaults(o().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), D), d.Storage.set(R, D);
-  let n = (e, n) => t[e] !== D[e] && D[e] === n,
-    s = n("guildFilter", M.RecentMentionsFilters.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
-  O = {};
-  let a = [];
-  s && v.forEach(e => {
-    let t = B(e);
-    null != t && (a.push(t), O[t.id] = !0)
-  }), 0 === (v = a).length && (P = !1)
+  b = o().defaults(o().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), b), d.Storage.set(M, b);
+  let n = (e, n) => t[e] !== b[e] && b[e] === n,
+    a = n("guildFilter", v.RecentMentionsFilters.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
+  x = {};
+  let l = [];
+  a && R.forEach(e => {
+    let t = P(e);
+    null != t && (l.push(t), x[t.id] = !0)
+  }), 0 === (R = l).length && (y = !1)
 }
 
-function w() {
-  v = [], O = {}, P = !1, j = !1
+function B() {
+  R = [], x = {}, y = !1, D = !1
 }
 
 function H() {
-  v = v.filter(e => !S.default.isBlocked(e.author.id))
+  R = R.filter(e => !T.default.isBlocked(e.author.id))
 }
 
 function V(e) {
   let {
     channel: t
   } = e;
-  v = o().filter(v, e => e.channel_id !== t.id || (delete O[e.id], !1))
+  R = o().filter(R, e => e.channel_id !== t.id || (delete x[e.id], !1))
 }
-class Y extends(s = u.default.Store) {
+class Y extends(a = u.default.Store) {
   initialize() {
-    this.waitFor(g.default, p.default, h.default, N.default)
+    this.waitFor(A.default, S.default, N.default, _.default)
   }
   isOpen() {
-    return U
+    return F
   }
   get hasLoadedEver() {
-    return P
-  }
-  get lastLoaded() {
     return y
   }
-  getMentions() {
-    return P || v.length > 0 ? v : null
-  }
-  hasMention(e) {
-    return O[e]
-  }
-  get loading() {
-    return x
-  }
-  get hasMore() {
-    return L
-  }
-  get guildFilter() {
-    return D.guildFilter
-  }
-  get everyoneFilter() {
-    return D.everyoneFilter
-  }
-  get roleFilter() {
-    return D.roleFilter
-  }
-  get mentionsAreStale() {
+  get lastLoaded() {
     return j
   }
+  getMentions() {
+    return y || R.length > 0 ? R : null
+  }
+  hasMention(e) {
+    return x[e]
+  }
+  get loading() {
+    return L
+  }
+  get hasMore() {
+    return O
+  }
+  get guildFilter() {
+    return b.guildFilter
+  }
+  get everyoneFilter() {
+    return b.everyoneFilter
+  }
+  get roleFilter() {
+    return b.roleFilter
+  }
+  get mentionsAreStale() {
+    return D
+  }
 }
-i = "RecentMentionsStore", (l = "displayName") in(a = Y) ? Object.defineProperty(a, l, {
+i = "RecentMentionsStore", (s = "displayName") in(l = Y) ? Object.defineProperty(l, s, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new Y(f.default, {
+}) : l[s] = i, t.default = new Y(f.default, {
   LOAD_RECENT_MENTIONS: function(e) {
     let {
       guildId: t
     } = e;
-    x = !0, null == t && D.guildFilter === M.RecentMentionsFilters.THIS_SERVER && k({
-      guildFilter: M.RecentMentionsFilters.ALL_SERVERS
+    L = !0, null == t && b.guildFilter === v.RecentMentionsFilters.THIS_SERVER && G({
+      guildFilter: v.RecentMentionsFilters.ALL_SERVERS
     })
   },
   LOAD_RECENT_MENTIONS_SUCCESS: function(e) {
     let {
       hasMoreAfter: t,
       messages: n,
-      isAfter: s
-    } = e, a = o().map(n, b);
-    s ? v = v.concat(a) : (v = a, O = {}), o().forEach(a, e => {
-      O[e.id] = !0
-    }), x = !1, L = t, y = (0, c.now)(), P = !0
+      isAfter: a
+    } = e, l = o().map(n, U);
+    a ? R = R.concat(l) : (R = l, x = {}), o().forEach(l, e => {
+      x[e.id] = !0
+    }), L = !1, O = t, j = (0, c.now)(), y = !0
   },
   LOAD_RECENT_MENTIONS_FAILURE: function() {
-    x = !1
+    L = !1
   },
-  SET_RECENT_MENTIONS_FILTER: k,
+  SET_RECENT_MENTIONS_FILTER: G,
   CLEAR_MENTIONS: function(e) {
-    w()
+    B()
   },
   TRUNCATE_MENTIONS: function(e) {
     let {
       size: t
     } = e;
-    for (let e = t; e < v.length; ++e) delete O[v[e].id];
-    let n = v.length;
-    n > (v = v.slice(0, t)).length && (L = !0)
+    for (let e = t; e < R.length; ++e) delete x[R[e].id];
+    let n = R.length;
+    n > (R = R.slice(0, t)).length && (O = !0)
   },
   CHANNEL_SELECT: function() {
-    if (D.guildFilter !== M.RecentMentionsFilters.THIS_SERVER) return !1;
-    P = !1
+    if (b.guildFilter !== v.RecentMentionsFilters.THIS_SERVER) return !1;
+    y = !1
   },
-  CONNECTION_OPEN: w,
+  CONNECTION_OPEN: B,
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    v = o().filter(v, e => {
-      let n = p.default.getChannel(e.channel_id);
-      return null != n && n.getGuildId() !== t.id || (delete O[e.id], !1)
+    R = o().filter(R, e => {
+      let n = S.default.getChannel(e.channel_id);
+      return null != n && n.getGuildId() !== t.id || (delete x[e.id], !1)
     })
   },
   MESSAGE_CREATE: function(e) {
     let {
       channelId: t,
       message: n
-    } = e, s = g.default.getCurrentUser();
-    if (null == s || !(0, _.isRawMessageMentioned)({
+    } = e, a = A.default.getCurrentUser();
+    if (null == a || !(0, E.isRawMessageMentioned)({
         rawMessage: n,
-        userId: s.id,
+        userId: a.id,
         suppressRoles: !1,
         suppressEveryone: !1
       })) return !1;
-    let a = B(n, t);
-    if (null == a) return !1;
-    (v = v.slice()).unshift(a), O[a.id] = !0
+    let l = P(n, t);
+    if (null == l) return !1;
+    (R = R.slice()).unshift(l), x[l.id] = !0
   },
   MESSAGE_UPDATE: function(e) {
     let t = e.message.id;
-    if (null == O[String(t)]) return !1;
-    let n = o().findIndex(v, e => {
+    if (null == x[String(t)]) return !1;
+    let n = o().findIndex(R, e => {
         let {
           id: n
         } = e;
         return n === t
       }),
-      s = (v = v.slice())[n];
-    null != s && (v[n] = (0, E.updateMessageRecord)(s, e.message))
+      a = (R = R.slice())[n];
+    null != a && (R[n] = (0, h.updateMessageRecord)(a, e.message))
   },
-  MESSAGE_DELETE: G,
-  RECENT_MENTION_DELETE: G,
+  MESSAGE_DELETE: w,
+  RECENT_MENTION_DELETE: w,
   MESSAGE_DELETE_BULK: function(e) {
     let {
       ids: t
     } = e;
-    o().forEach(t, F)
+    o().forEach(t, k)
   },
   CHANNEL_DELETE: V,
   THREAD_DELETE: V,
   RELATIONSHIP_ADD: H,
   RELATIONSHIP_REMOVE: H,
   MENTION_MODAL_OPEN: function() {
-    U = !0
+    F = !0
   },
   MENTION_MODAL_CLOSE: function() {
-    U = !1
+    F = !1
   },
   SET_RECENT_MENTIONS_STALE: function(e) {
-    j = !0
+    D = !0
   }
 })

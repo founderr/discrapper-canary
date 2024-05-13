@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("442837"),
   o = n("481060"),
   u = n("570140"),
@@ -22,7 +22,7 @@ var a = n("735250"),
   S = n("689938"),
   p = n("803844");
 
-function I(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,7 +30,7 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class g extends s.Component {
+class I extends s.Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown)
   }
@@ -52,8 +52,8 @@ class g extends s.Component {
       activeRowKey: n
     } = this.props, a = t.findIndex(e => e.key === n), s = 0;
     a >= 0 && (s = (a + e) % t.length) < 0 && (s = t.length - 1);
-    let l = t[s];
-    d.updateActiveRowKey(null != l ? l.key : null, !0)
+    let i = t[s];
+    d.updateActiveRowKey(null != i ? i.key : null, !0)
   }
   render() {
     let {
@@ -62,7 +62,7 @@ class g extends s.Component {
       focused: t
     } = this.state;
     return (0, a.jsx)("div", {
-      className: i()({
+      className: l()({
         [p.libraryFilter]: !0,
         [p.focused]: t
       }),
@@ -87,24 +87,24 @@ class g extends s.Component {
     })
   }
   constructor(...e) {
-    super(...e), I(this, "searchBarRef", null), I(this, "state", {
+    super(...e), g(this, "searchBarRef", null), g(this, "state", {
       focused: !1
-    }), I(this, "setRef", e => {
+    }), g(this, "setRef", e => {
       this.searchBarRef = e
-    }), I(this, "handleKeyDown", e => {
+    }), g(this, "handleKeyDown", e => {
       var t;
       let {
         activeRowKey: n,
         hasModalOpen: a,
         applicationViewItems: s
       } = this.props, {
-        searchBarRef: l
+        searchBarRef: i
       } = this;
-      if (a || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
-      let i = null === (t = (0, _.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-      if (!(i !== l.inputRef.current && (0, _.isInputLikeElement)(i))) switch (e.which) {
+      if (a || e.ctrlKey || e.altKey || e.metaKey || null == i) return;
+      let l = null === (t = (0, _.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+      if (!(l !== i.inputRef.current && (0, _.isInputLikeElement)(l))) switch (e.which) {
         case m.KeyboardKeys.ESCAPE:
-          e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
+          e.target !== i.inputRef.current ? this.reset() : null != i.inputRef.current && i.blur();
           break;
         case m.KeyboardKeys.ENTER:
           if (null != n) {
@@ -129,7 +129,7 @@ class g extends s.Component {
           e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === m.KeyboardKeys.ARROW_DOWN ? 1 : -1);
           break;
         default:
-          null != l.inputRef.current && e.target !== l.inputRef.current && l.focus()
+          null != i.inputRef.current && e.target !== i.inputRef.current && i.focus()
       }
     })
   }
@@ -138,7 +138,7 @@ class g extends s.Component {
 function T() {
   let e = (0, r.useStateFromStores)([c.default], () => c.default.hasLayers()),
     t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-  return (0, a.jsx)(g, {
+  return (0, a.jsx)(I, {
     activeRowKey: (0, r.useStateFromStores)([E.default], () => E.default.activeRowKey),
     hasModalOpen: t || e,
     filterQuery: (0, r.useStateFromStores)([f.default], () => f.default.applicationFilterQuery),

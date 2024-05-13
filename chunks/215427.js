@@ -5,37 +5,37 @@ var s, a, l, i, r = n("442837"),
   u = n("570140"),
   d = n("205355");
 let c = "MaintenanceStore",
-  f = null,
   E = null,
+  f = null,
   _ = null;
-class m extends(i = r.default.Store) {
+class T extends(i = r.default.Store) {
   initialize() {
     _ = o.Storage.get(c)
   }
   getIncident() {
-    return f
+    return E
   }
   getScheduledMaintenance() {
-    return null != E && E.id !== _ ? E : null
+    return null != f && f.id !== _ ? f : null
   }
 }
-l = "MaintenanceStore", (a = "displayName") in(s = m) ? Object.defineProperty(s, a, {
+l = "MaintenanceStore", (a = "displayName") in(s = T) ? Object.defineProperty(s, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new m(u.default, {
+}) : s[a] = l, t.default = new T(u.default, {
   CONNECTION_OPEN: function() {
-    f = null, d.default.checkScheduledMaintenances()
+    E = null, d.default.checkScheduledMaintenances()
   },
   STATUS_PAGE_INCIDENT: function(e) {
-    f = e.incident
+    E = e.incident
   },
   STATUS_PAGE_SCHEDULED_MAINTENANCE: function(e) {
-    E = e.maintenance
+    f = e.maintenance
   },
   STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: function() {
-    if (null == E) return !1;
-    _ = E.id, o.Storage.set(c, _)
+    if (null == f) return !1;
+    _ = f.id, o.Storage.set(c, _)
   }
 })

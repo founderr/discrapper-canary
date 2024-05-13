@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("392711"),
   s = n.n(a),
-  l = n("996106"),
-  i = n("981631");
+  i = n("996106"),
+  l = n("981631");
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -28,8 +28,8 @@ class o {
         id: null,
         name: null,
         icon: null
-      }, null == t || t > i.RPC_VERSION || t < 1) throw new l.default({
-      closeCode: i.RPCCloseCodes.INVALID_VERSION
+      }, null == t || t > l.RPC_VERSION || t < 1) throw new i.default({
+      closeCode: l.RPCCloseCodes.INVALID_VERSION
     }, "Invalid Version: ".concat(t))
   }
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return m
   }
 });
 var s = n("735250"),
@@ -13,56 +13,56 @@ var s = n("735250"),
   u = n("314897"),
   d = n("592125"),
   c = n("699516"),
-  f = n("197409"),
-  E = n("51144"),
+  E = n("197409"),
+  f = n("51144"),
   _ = n("981631"),
-  m = n("689938"),
-  T = n("798719");
+  T = n("689938"),
+  I = n("798719");
 
-function I(e) {
+function m(e) {
   var t;
   let {
     invite: n,
-    getAcceptInviteContext: I
-  } = e, p = (0, l.useStateFromStores)([u.default], () => u.default.getId()), h = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === p, N = n.state === _.InviteStates.ACCEPTING, S = (0, l.useStateFromStores)([c.default], () => {
+    getAcceptInviteContext: m
+  } = e, N = (0, l.useStateFromStores)([u.default], () => u.default.getId()), p = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === N, S = n.state === _.InviteStates.ACCEPTING, C = (0, l.useStateFromStores)([c.default], () => {
     var e;
     return null != n.inviter && c.default.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id)
-  }), C = a.useCallback(() => {
+  }), A = a.useCallback(() => {
     null != n.inviter && null != d.default.getDMFromUserId(n.inviter.id) && i.default.openPrivateChannel([n.inviter.id])
-  }, [n.inviter]), A = a.useCallback(() => {
-    let e = I("Invite Button Embed");
+  }, [n.inviter]), h = a.useCallback(() => {
+    let e = m("Invite Button Embed");
     r.default.acceptInviteAndTransitionToInviteChannel({
       inviteKey: n.code,
       context: e
     })
-  }, [n.code, I]);
+  }, [n.code, m]);
   if (null == n.inviter) return null;
-  let g = S ? C : A,
-    M = m.default.Messages.INVITE_BUTTON_ADD_FRIEND,
-    R = f.default.Button.Colors.GREEN;
-  S ? (M = m.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, R = f.default.Button.Colors.PRIMARY) : h && (M = m.default.Messages.INVITE_BUTTON_ADD_FRIEND, R = f.default.Button.Colors.PRIMARY);
-  let v = h ? m.default.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : m.default.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
-    O = null != n.inviter ? "".concat(n.inviter.username) : "",
-    x = null != n.inviter ? E.default.getUserTag(n.inviter) : "";
-  return (0, s.jsxs)(f.default, {
-    children: [(0, s.jsx)(f.default.Header, {
-      text: v
-    }), (0, s.jsxs)(f.default.Body, {
+  let g = C ? A : h,
+    M = T.default.Messages.INVITE_BUTTON_ADD_FRIEND,
+    O = E.default.Button.Colors.GREEN;
+  C ? (M = T.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, O = E.default.Button.Colors.PRIMARY) : p && (M = T.default.Messages.INVITE_BUTTON_ADD_FRIEND, O = E.default.Button.Colors.PRIMARY);
+  let R = p ? T.default.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : T.default.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
+    v = null != n.inviter ? "".concat(n.inviter.username) : "",
+    L = null != n.inviter ? f.default.getUserTag(n.inviter) : "";
+  return (0, s.jsxs)(E.default, {
+    children: [(0, s.jsx)(E.default.Header, {
+      text: R
+    }), (0, s.jsxs)(E.default.Body, {
       children: [(0, s.jsxs)("div", {
-        className: T.headerLine,
-        children: [(0, s.jsx)(f.default.Icon, {
+        className: I.headerLine,
+        children: [(0, s.jsx)(E.default.Icon, {
           user: new o.default(n.inviter),
-          onClick: S ? g : void 0
-        }), (0, s.jsx)(f.default.Info, {
-          title: O,
-          onClick: S ? g : void 0,
-          children: x
+          onClick: C ? g : void 0
+        }), (0, s.jsx)(E.default.Info, {
+          title: v,
+          onClick: C ? g : void 0,
+          children: L
         })]
-      }), (0, s.jsx)(f.default.Button, {
+      }), (0, s.jsx)(E.default.Button, {
         onClick: g,
-        submitting: N,
-        isDisabled: h,
-        color: R,
+        submitting: S,
+        isDisabled: p,
+        color: O,
         children: M
       })]
     })]

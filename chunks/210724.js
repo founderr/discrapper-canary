@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("685626"),
   o = n("442837"),
   u = n("607070"),
@@ -21,14 +21,14 @@ var a = n("735250"),
   m = n("5881"),
   S = n("874137"),
   p = n("78826"),
-  I = n("909389"),
-  g = n("941348"),
+  g = n("909389"),
+  I = n("941348"),
   T = n("46140"),
   A = n("981631"),
   N = n("837955");
 
 function v(e) {
-  var t, n, l;
+  var t, n, i;
   let {
     quest: E
   } = e, v = (0, m.getQuestLogger)({
@@ -36,7 +36,7 @@ function v(e) {
     location: T.QuestsExperimentLocations.QUESTS_BAR
   }), R = (0, C.useIsEligibleForQuests)({
     location: T.QuestsExperimentLocations.QUESTS_BAR
-  }), L = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), M = s.useRef(-1), y = s.useRef(!1), [P, x] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, k] = s.useState(!0), [w, F] = s.useState(240), B = s.useRef(null), H = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, V = s.useRef(H), Y = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, W = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, K = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), z = (0, f.useIsQuestExpired)(E), {
+  }), L = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), M = s.useRef(-1), y = s.useRef(!1), [P, x] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, k] = s.useState(!0), [w, F] = s.useState(240), B = s.useRef(null), H = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, V = s.useRef(H), Y = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, W = (null === (i = E.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, K = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), z = (0, f.useIsQuestExpired)(E), {
     hasError: q,
     isLoading: Q
   } = (0, p.useQuestsAssetsLoadState)(), Z = s.useCallback(() => {
@@ -74,14 +74,14 @@ function v(e) {
     !Y && H && !V.current && !y.current && b(!1)
   }, [H, Y]);
   let es = R && !K && !W && !z && !Q,
-    el = s.useRef(es);
+    ei = s.useRef(es);
   s.useLayoutEffect(() => {
-    es !== el.current && k(!1), el.current = es
+    es !== ei.current && k(!1), ei.current = es
   }, [es]), s.useEffect(() => {
     V.current = H
   }, [H]);
   let {
-    expansionSpring: ei
+    expansionSpring: el
   } = (0, r.useSpring)({
     to: {
       expansionSpring: D ? 1 : 0
@@ -135,10 +135,10 @@ function v(e) {
     questContent: h.QuestContent.QUEST_BAR,
     overrideVisibility: !O && es,
     children: () => {
-      let e = eo === C.QuestBarExperimentVariants.V2 ? g.default : I.default;
+      let e = eo === C.QuestBarExperimentVariants.V2 ? I.default : g.default;
       return (0, a.jsx)(r.animated.div, {
         "aria-hidden": !es,
-        className: i()(N.wrapper, {
+        className: l()(N.wrapper, {
           [N.wrapperInvisible]: !es,
           [N.wrapperVisible]: es && G
         }),
@@ -154,13 +154,13 @@ function v(e) {
           onMouseEnter: en,
           onFocus: () => ee(),
           onBlur: et,
-          className: i()(N.contentWrapper, {
+          className: l()(N.contentWrapper, {
             [N.contentWrapperExpanded]: D,
             [N.contentWrapperAccepted]: H
           }),
           style: {
             backgroundImage: H ? "linear-gradient(90deg, ".concat(E.config.colors.primary, ", ").concat(E.config.colors.secondary, ")") : void 0,
-            height: ei.to({
+            height: el.to({
               range: [0, 1],
               output: [40, H ? w : eo === C.QuestBarExperimentVariants.V2 ? 270 : 240]
             }),
@@ -171,7 +171,7 @@ function v(e) {
           },
           children: (0, a.jsx)(e, {
             expandedContentRef: B,
-            expansionSpring: ei,
+            expansionSpring: el,
             isExpanded: D,
             isExpansionAnimationComplete: U,
             onCtxMenuClosed: J,

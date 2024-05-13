@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("653041");
 var a = n("846519"),
   s = n("570140"),
-  l = n("317770"),
-  i = n("220082"),
+  i = n("317770"),
+  l = n("220082"),
   r = n("594174"),
   o = n("125268"),
   u = n("813900");
@@ -16,7 +16,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class c extends l.default {
+class c extends i.default {
   _initialize() {
     !__OVERLAY__ && (s.default.subscribe("SHARED_CANVAS_DRAW_LINE_POINT", this._handleDrawLinePoint), s.default.subscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleVoiceChannelEffectReceived))
   }
@@ -29,14 +29,14 @@ class c extends l.default {
       lineId: n,
       points: a,
       userId: s,
-      streamerId: l,
+      streamerId: i,
       emojiHose: d
     } = e;
-    if (null != l && s !== (null === (t = r.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) {
+    if (null != i && s !== (null === (t = r.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) {
       if (null != a && null != n) {
         let e = r.default.getUser(s);
-        null != e && (0, i.maybeFetchColors)(e.getAvatarURL(null, u.AVATAR_COLOR_AVATAR_SIZE)), (0, o.updateLinePoints)(n, s, l, a)
-      } else null != d && (d.lastUpdatedAt = Date.now(), (0, o.updateEmojiHose)(d, s, l))
+        null != e && (0, l.maybeFetchColors)(e.getAvatarURL(null, u.AVATAR_COLOR_AVATAR_SIZE)), (0, o.updateLinePoints)(n, s, i, a)
+      } else null != d && (d.lastUpdatedAt = Date.now(), (0, o.updateEmojiHose)(d, s, i))
     }
   }
   constructor(...e) {

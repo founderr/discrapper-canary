@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 });
 var a = n("524437"),
   s = n("823385"),
-  l = n("327689"),
-  i = n("421176"),
+  i = n("327689"),
+  l = n("421176"),
   r = n("989695"),
   o = n("456065"),
   u = n("683743"),
@@ -22,11 +22,11 @@ var a = n("524437"),
 let f = "lastHiddenChannelNotice",
   E = [{
     type: c.ChannelNoticeTypes.GUILD_BOOSTING,
-    store: i.default,
+    store: l.default,
     dismissibleContentType: a.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION
   }, {
     type: c.ChannelNoticeTypes.GUILD_BANNER,
-    store: l.default,
+    store: i.default,
     dismissibleContentType: a.DismissibleContent.CHANNEL_NOTICE_GUILD_BANNER
   }, {
     type: c.ChannelNoticeTypes.INVITE,

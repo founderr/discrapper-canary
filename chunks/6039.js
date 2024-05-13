@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("442837"),
-  i = n("481060"),
+  i = n("442837"),
+  l = n("481060"),
   r = n("703656"),
   o = n("430824"),
   u = n("612744"),
@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("523924"),
   S = n("390500"),
   p = n("200305"),
-  I = n("981631"),
-  g = n("756286"),
+  g = n("981631"),
+  I = n("756286"),
   T = n("689938"),
   A = n("531862");
 t.default = e => {
@@ -27,15 +27,15 @@ t.default = e => {
   let {
     guildId: v,
     inviteCode: R
-  } = e, [L, O] = s.useState(g.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), y = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), P = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+  } = e, [L, O] = s.useState(I.WaveStates.INITIAL), M = (0, i.useStateFromStores)([h.default], () => h.default.get(v)), y = (0, i.useStateFromStores)([C.default], () => C.default.getRequest(v)), P = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
     hasFetchedRequestToJoinGuilds: x,
     guildPreviewDisabled: D
-  } = (0, l.useStateFromStoresObject)([C.default], () => ({
+  } = (0, i.useStateFromStoresObject)([C.default], () => ({
     hasFetchedRequestToJoinGuilds: C.default.hasFetchedRequestToJoinGuilds,
     guildPreviewDisabled: C.default.getJoinRequestGuild(v)
   }));
   s.useEffect(() => {
-    null != P && (0, r.transitionTo)(I.Routes.CHANNEL(v))
+    null != P && (0, r.transitionTo)(g.Routes.CHANNEL(v))
   }, [P, v]), s.useEffect(() => {
     !x && f.default.fetchRequestToJoinGuilds()
   }, [x]);
@@ -50,16 +50,16 @@ t.default = e => {
   let G = (n = T.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
       name: null == D ? void 0 : D.toString()
     }), N = () => {
-      O(Math.max(L, g.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(I.Routes.ME)
+      O(Math.max(L, I.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(g.Routes.ME)
     }, () => {
-      (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
+      (0, l.openModal)(e => (0, a.jsx)(l.ConfirmModal, {
         header: T.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
         cancelText: T.default.Messages.NEVERMIND,
         onConfirm: N,
         confirmText: T.default.Messages.YES_TEXT,
-        confirmButtonColor: i.Button.Colors.RED,
+        confirmButtonColor: l.Button.Colors.RED,
         ...e,
-        children: (0, a.jsx)(i.Text, {
+        children: (0, a.jsx)(l.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
           children: n

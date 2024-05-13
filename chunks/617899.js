@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("481060"),
-  i = n("904245"),
+  i = n("481060"),
+  l = n("904245"),
   r = n("944486"),
   o = n("82950"),
   u = n("981631"),
@@ -39,7 +39,7 @@ class h extends s.PureComponent {
       let {
         guild: e
       } = this.props;
-      (0, l.openModalLazy)(async () => {
+      (0, i.openModalLazy)(async () => {
         let {
           default: t
         } = await Promise.all([n.e("99387"), n.e("7654")]).then(n.bind(n, "560114"));
@@ -51,7 +51,7 @@ class h extends s.PureComponent {
       })
     }), E(this, "handleClose", () => {
       let e = r.default.getChannelId();
-      this.props.markAsDismissed(d.ContentDismissActionType.UNKNOWN), null != e && i.default.sendBotMessage(e, c.default.Messages.HOW_TO_INVITE_OTHERS.format({
+      this.props.markAsDismissed(d.ContentDismissActionType.UNKNOWN), null != e && l.default.sendBotMessage(e, c.default.Messages.HOW_TO_INVITE_OTHERS.format({
         invitePeople: c.default.Messages.INVITE_PEOPLE
       }))
     })

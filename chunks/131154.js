@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
-    return o
+    return u
   }
 });
-var l = n("735250");
-n("470079");
-var a = n("120356"),
-  s = n.n(a),
-  i = n("481060"),
-  u = n("357727"),
-  r = n("689938"),
-  d = n("931428");
+var l = t("735250");
+t("470079");
+var a = t("120356"),
+  i = t.n(a),
+  s = t("481060"),
+  r = t("357727"),
+  c = t("689938"),
+  d = t("931428");
 
-function o(e) {
+function u(e) {
   let {
-    guild: t,
-    speakers: n,
+    guild: n,
+    speakers: t,
     speakerCount: a,
-    className: o
-  } = e, I = n.slice(0, 5), c = I.map(e => {
-    var n, a;
+    className: u
+  } = e, o = t.slice(0, 5), v = o.map(e => {
+    var t, a;
     return (0, l.jsxs)("div", {
       className: d.speakerContainer,
-      children: [(0, l.jsx)(i.Avatar, {
-        src: null == e ? void 0 : null === (n = e.user) || void 0 === n ? void 0 : n.getAvatarURL(t.id, 20),
-        size: i.AvatarSizes.SIZE_20,
+      children: [(0, l.jsx)(s.Avatar, {
+        src: null == e ? void 0 : null === (t = e.user) || void 0 === t ? void 0 : t.getAvatarURL(n.id, 20),
+        size: s.AvatarSizes.SIZE_20,
         className: d.avatar,
         "aria-label": "".concat(null == e ? void 0 : e.userNick, "-avatar")
       }), (0, l.jsx)("div", {
         className: d.textInGridContainer,
-        children: (0, l.jsx)(i.Text, {
+        children: (0, l.jsx)(s.Text, {
           color: "header-secondary",
           variant: "text-sm/normal",
           className: d.textInGrid,
@@ -38,22 +38,22 @@ function o(e) {
         })
       })]
     }, null == e ? void 0 : null === (a = e.user) || void 0 === a ? void 0 : a.id)
-  }), E = a - I.length;
+  }), h = a - o.length;
   return (0, l.jsxs)("div", {
-    className: s()(d.grid, o),
-    children: [c, E > 0 && (0, l.jsxs)("div", {
+    className: i()(d.grid, u),
+    children: [v, h > 0 && (0, l.jsxs)("div", {
       className: d.speakerContainer,
       children: [(0, l.jsx)("div", {
         className: d.iconMicrophone,
-        children: (0, l.jsx)(u.default, {
+        children: (0, l.jsx)(r.default, {
           height: 12
         })
-      }), (0, l.jsx)(i.Text, {
+      }), (0, l.jsx)(s.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
         className: d.textInGrid,
-        children: r.default.Messages.STAGE_DISCOVERY_LIVE_STAGE_TILE_SPEAKER_SUMMARY_OVERFLOW.format({
-          count: E
+        children: c.default.Messages.STAGE_DISCOVERY_LIVE_STAGE_TILE_SPEAKER_SUMMARY_OVERFLOW.format({
+          count: h
         })
       })]
     })]

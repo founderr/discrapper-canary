@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("685626"),
   o = n("143927"),
   u = n("903788"),
@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("100527"),
   S = n("931240"),
   p = n("970606"),
-  I = n("650461"),
-  g = n("603839"),
+  g = n("650461"),
+  I = n("603839"),
   T = n("430824"),
   A = n("725568"),
   N = n("231467"),
@@ -82,7 +82,7 @@ function G(e) {
   let {
     selectedGuildId: t,
     setSelectedGuildId: n,
-    eligibleGuilds: l,
+    eligibleGuilds: i,
     selectedGame: r,
     onButtonClick: f,
     buttonText: _,
@@ -94,14 +94,14 @@ function G(e) {
       case v.ClanDiscoveryGame.VALORANT:
         return y.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_VALORANT
     }
-  }, [r]), I = s.useMemo(() => l.map(e => ({
+  }, [r]), g = s.useMemo(() => i.map(e => ({
     value: e.id,
     label: e.name
-  })), [l]), g = s.useCallback(() => {
+  })), [i]), I = s.useCallback(() => {
     (0, v.setClanDiscoveryMode)(v.ClanDiscoveryMode.DISCOVERY)
   }, []), T = s.useCallback(() => {
     (0, v.setClanDiscoveryMode)(v.ClanDiscoveryMode.GET_STARTED), m(v.ClanDiscoveryUserScreens.USER_ONBOARDING)
-  }, [m]), A = !S, N = l.length > 1;
+  }, [m]), A = !S, N = i.length > 1;
   return (0, a.jsxs)(a.Fragment, {
     children: [C ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.Heading, {
@@ -137,13 +137,13 @@ function G(e) {
       children: [N && (0, a.jsx)(h.SearchableSelect, {
         className: P.upsellSelect,
         value: t,
-        options: I,
+        options: g,
         onChange: n
       }), !C && (0, a.jsx)(h.Button, {
         look: h.ButtonLooks.FILLED,
         size: h.ButtonSizes.MEDIUM,
         color: h.ButtonColors.CUSTOM,
-        className: i()(P.reserveButton, {
+        className: l()(P.reserveButton, {
           [P.buttonWithSelect]: N
         }),
         onClick: f,
@@ -170,7 +170,7 @@ function G(e) {
       children: (0, a.jsx)("div", {
         className: P.upsellBackButton,
         children: (0, a.jsx)(h.Clickable, {
-          onClick: g,
+          onClick: I,
           "aria-label": y.default.Messages.BACK,
           children: (0, a.jsx)(E.ArrowLargeLeftIcon, {})
         })
@@ -182,33 +182,33 @@ t.default = s.memo(function(e) {
   let {
     eligibleGuilds: t,
     eligibleGuildsIncludingConverted: n,
-    selectedGame: l
-  } = e, i = 0 === t.length, [o, u] = s.useState(() => {
-    let e = new Set(I.default.getGuildIds());
+    selectedGame: i
+  } = e, l = 0 === t.length, [o, u] = s.useState(() => {
+    let e = new Set(g.default.getGuildIds());
     for (let n of t)
       if (e.has(n.id)) return n.id;
-    return i ? n[0].id : t[0].id
+    return l ? n[0].id : t[0].id
   });
   s.useEffect(() => {
-    !i && (0, p.trackClanAdminInviteViewed)({
+    !l && (0, p.trackClanAdminInviteViewed)({
       guildId: o,
       location: m.default.CLAN_DISCOVERY
     })
-  }, [i, o]);
+  }, [l, o]);
   let d = (0, f.useStateFromStores)([T.default], () => T.default.getGuild(o)),
-    c = (0, f.useStateFromStores)([I.default], () => null != o ? I.default.getStateForGuild(o).progress : null),
+    c = (0, f.useStateFromStores)([g.default], () => null != o ? g.default.getStateForGuild(o).progress : null),
     E = (0, R.useDiscoveryGameApplicationId)({
-      selectedGame: l
+      selectedGame: i
     }),
     v = s.useCallback(() => {
-      !i && ((0, p.trackClanAdminInviteClicked)({
+      !l && ((0, p.trackClanAdminInviteClicked)({
         guildId: o,
         location: m.default.CLAN_DISCOVERY
       }), (0, A.openFullScreenLayer)(e => {
         let {
           closeLayer: t
         } = e;
-        return (0, a.jsx)(g.default, {
+        return (0, a.jsx)(I.default, {
           onClose: t,
           guildId: o,
           gameId: E
@@ -216,11 +216,11 @@ t.default = s.memo(function(e) {
       }, {
         layerKey: M.CLAN_SETUP_MODAL_LAYER_KEY
       }))
-    }, [i, o, E]),
+    }, [l, o, E]),
     x = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion),
     D = (0, L.useFakeDiscoveryClanForGuild)({
       guild: d,
-      selectedGame: l
+      selectedGame: i
     }),
     j = (0, r.useSpring)({
       from: {
@@ -384,10 +384,10 @@ t.default = s.memo(function(e) {
         selectedGuildId: o,
         setSelectedGuildId: u,
         eligibleGuilds: t,
-        selectedGame: l,
+        selectedGame: i,
         onButtonClick: v,
         buttonText: Y,
-        hasCompletedUpsell: i
+        hasCompletedUpsell: l
       })
     }), (0, a.jsx)("div", {
       className: P.joinWFSContainer,

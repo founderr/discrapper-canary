@@ -19,8 +19,8 @@ var a = l("735250"),
   E = l("569984"),
   _ = l("918701"),
   N = l("977156"),
-  C = l("433811"),
-  h = l("131951"),
+  h = l("433811"),
+  C = l("131951"),
   g = l("449224"),
   p = l("285952"),
   A = l("643095"),
@@ -35,8 +35,8 @@ var a = l("735250"),
   j = l("689938"),
   D = l("578168");
 async function b() {
-  let e = h.default.getVideoDevices(),
-    t = (0, d.default)(h.default.getMediaEngine(), [u.DesktopSources.WINDOW, u.DesktopSources.SCREEN], {
+  let e = C.default.getVideoDevices(),
+    t = (0, d.default)(C.default.getMediaEngine(), [u.DesktopSources.WINDOW, u.DesktopSources.SCREEN], {
       width: 176,
       height: 99
     }),
@@ -104,7 +104,7 @@ function G(e) {
     enableGoLiveCaptureCard: s
   } = I.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = h.default.supports(O.Features.GO_LIVE_HARDWARE), [d, m] = n.useState(null), [g, x] = n.useState(null), [T, P] = n.useState(null), G = null != T && T.length > 0, [k, w] = n.useState(u.DesktopSources.WINDOW), [y, F] = n.useState(!1), V = n.useRef(null), B = n.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
+  }), r = C.default.supports(O.Features.GO_LIVE_HARDWARE), [d, m] = n.useState(null), [g, x] = n.useState(null), [T, P] = n.useState(null), G = null != T && T.length > 0, [k, w] = n.useState(u.DesktopSources.WINDOW), [y, F] = n.useState(!1), V = n.useRef(null), B = n.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
     let a = (0, N.useIsEligibleForQuests)({
       location: M.QuestsExperimentLocations.STREAM_SOURCE_SELECT
     });
@@ -231,7 +231,7 @@ function G(e) {
       ref: z,
       className: D.sourceScroller,
       onScroll: q,
-      children: [k === u.DesktopSources.WINDOW && null != W && (0, a.jsx)(C.default, {
+      children: [k === u.DesktopSources.WINDOW && null != W && (0, a.jsx)(h.default, {
         quest: W.quest
       }), (0, a.jsx)(A.default, {
         layout: A.default.Layout.WRAP,

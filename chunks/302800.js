@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
     return s
   },
   getCountdownDisplayOptions: function() {
-    return I
+    return g
   },
   getCustomConfettiDisplayOptions: function() {
     return T
   }
 }), n("627341");
-var a, s, l, i, r = n("278074"),
+var a, s, i, l, r = n("278074"),
   o = n("180650"),
   u = n("524437"),
   d = n("689938"),
@@ -28,7 +28,7 @@ var a, s, l, i, r = n("278074"),
   C = n("782984"),
   m = n("186077"),
   S = n("376477");
-(l = a || (a = {}))[l.NONE = 0] = "NONE", l[l.TOOLTIP = 1] = "TOOLTIP", l[l.COACHTIP = 2] = "COACHTIP", (i = s || (s = {})).NONE = "NONE", i.SHY = "SHY", i.LOFI_VIBES = "LOFI_VIBES", i.GALAXY = "GALAXY", i.RETRO_AND_PIRATES = "RETRO_AND_PIRATES";
+(i = a || (a = {}))[i.NONE = 0] = "NONE", i[i.TOOLTIP = 1] = "TOOLTIP", i[i.COACHTIP = 2] = "COACHTIP", (l = s || (s = {})).NONE = "NONE", l.SHY = "SHY", l.LOFI_VIBES = "LOFI_VIBES", l.GALAXY = "GALAXY", l.RETRO_AND_PIRATES = "RETRO_AND_PIRATES";
 let p = {
     [u.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
       type: 2,
@@ -64,14 +64,14 @@ let p = {
       assetIds: ["a_89155faed81b205d59fbbefa4316952d", "a_9cc1c1426ea5478aac7be6cdefdbc568", "a_f11c214394044d001d81c983dcab354f", "a_798a5bcbb11067e4d9ab339e51d2a16c"]
     }
   },
-  I = e => (0, r.match)(e).with(o.CollectiblesCategorySkuId.SHY, () => ({
+  g = e => (0, r.match)(e).with(o.CollectiblesCategorySkuId.SHY, () => ({
     label: () => d.default.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
     backgroundColor: "rgba(255, 70, 85, 1)",
     boxShadow: "0 0 12px 0 rgba(255, 70, 85, 0.5)",
     labelColor: "rgba(15, 25, 35, 1)",
     iconSrc: m
   })).otherwise(() => null),
-  g = {
+  I = {
     SHY: {
       confettiAssetSrc: h,
       style: {
@@ -80,4 +80,4 @@ let p = {
       }
     }
   },
-  T = e => (0, r.match)(e).with("1220513977683935373", () => g.SHY).with("1220432647453409384", () => g.SHY).with("1220432697718083614", () => g.SHY).otherwise(() => null)
+  T = e => (0, r.match)(e).with("1220513977683935373", () => I.SHY).with("1220432647453409384", () => I.SHY).with("1220432697718083614", () => I.SHY).otherwise(() => null)

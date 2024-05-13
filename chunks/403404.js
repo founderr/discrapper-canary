@@ -18,12 +18,12 @@ function o(e) {
     locationObject: u,
     openInPopout: d,
     initialSelectedApplicationId: c,
-    initialSlide: f = i.ActivityShelfSlides.DIRECTORY,
-    enableSelectedTextChannelInvite: E = !1,
+    initialSlide: E = i.ActivityShelfSlides.DIRECTORY,
+    enableSelectedTextChannelInvite: f = !1,
     analyticsLocations: _
   } = e;
   d && (0, l.default)(r.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-  let m = d ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+  let T = d ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
   return (0, a.openModalLazy)(async () => {
     let {
       default: e
@@ -33,13 +33,13 @@ function o(e) {
       channel: t,
       guildId: o,
       locationObject: u,
-      initialSlide: f,
+      initialSlide: E,
       initialSelectedApplicationId: c,
-      enableSelectedTextChannelInvite: E,
+      enableSelectedTextChannelInvite: f,
       analyticsLocations: _
     })
   }, {
     modalKey: i.ACTIVITY_SHELF_WEB_MODAL_KEY,
-    contextKey: m
+    contextKey: T
   })
 }

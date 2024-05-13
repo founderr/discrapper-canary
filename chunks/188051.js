@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   VIBE_WITH_WUMPUS: function() {
-    return l
+    return o
   }
 });
 var i = n("481060"),
-  o = n("423932");
-let l = {
+  l = n("423932");
+let o = {
   binds: ["mod+alt+shift+w"],
   comboKeysBindGlobal: !0,
-  action: () => ((0, o.default)(i.closeAllModals), !1)
+  action: () => ((0, l.default)(i.closeAllModals), !1)
 }

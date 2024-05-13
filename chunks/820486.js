@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var a, s = n("392711"),
-  l = n.n(s),
-  i = n("442837"),
+  i = n.n(s),
+  l = n("442837"),
   r = n("570140"),
   o = n("846027"),
   u = n("581883"),
@@ -28,8 +28,8 @@ let _ = {},
   m = !1,
   S = {},
   p = {},
-  I = {},
-  g = {
+  g = {},
+  I = {
     id: null,
     justChanged: !1
   },
@@ -56,7 +56,7 @@ function v(e, t, n) {
     type: f.ConnectedDeviceType.INPUT_AND_OUTPUT
   } : e
 }
-class R extends(a = i.default.DeviceSettingsStore) {
+class R extends(a = l.default.DeviceSettingsStore) {
   initialize(e) {
     this.waitFor(c.default, u.default), C = null != e ? e : _
   }
@@ -67,13 +67,13 @@ class R extends(a = i.default.DeviceSettingsStore) {
     return m
   }
   get lastDeviceConnected() {
-    return I
+    return g
   }
   get inputDevices() {
     return S
   }
   get lastInputSystemDevice() {
-    return g
+    return I
   }
   get outputDevices() {
     return p
@@ -88,11 +88,11 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
       inputDevices: t,
       outputDevices: n
     } = e, a = {};
-    g.justChanged = !1, t.forEach(e => {
+    I.justChanged = !1, t.forEach(e => {
       if (a[N(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
         var t;
         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-        n !== g.id && (g.justChanged = !0), g.id = n
+        n !== I.id && (I.justChanged = !0), I.id = n
       }
     });
     let s = {};
@@ -106,17 +106,17 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
       S = a, p = s, m = !0;
       return
     }
-    let i = Object.keys(S),
+    let l = Object.keys(S),
       r = Object.keys(a),
       o = Object.keys(p),
       u = Object.keys(s),
-      d = l().difference(i, r),
-      c = l().difference(o, u);
-    return d.length > 0 || c.length > 0 ? I = {} : (l().difference(r, i).forEach(e => {
-      I[e] = v(I[e], e, f.ConnectedDeviceType.INPUT)
-    }), l().difference(u, o).forEach(e => {
-      I[e] = v(I[e], e, f.ConnectedDeviceType.OUTPUT)
-    })), !(l().isEqual(i, r) && l().isEqual(o, u)) && (S = a, p = s, !0)
+      d = i().difference(l, r),
+      c = i().difference(o, u);
+    return d.length > 0 || c.length > 0 ? g = {} : (i().difference(r, l).forEach(e => {
+      g[e] = v(g[e], e, f.ConnectedDeviceType.INPUT)
+    }), i().difference(u, o).forEach(e => {
+      g[e] = v(g[e], e, f.ConnectedDeviceType.OUTPUT)
+    })), !(i().isEqual(l, r) && i().isEqual(o, u)) && (S = a, p = s, !0)
   },
   CONNECTED_DEVICE_SET: function(e) {
     let {
@@ -133,16 +133,16 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
         let t = p[e];
         r.default.wait(() => o.default.setOutputDevice(t, n))
       }
-    }(t, n, a), delete I[t]
+    }(t, n, a), delete g[t]
   },
   CONNECTED_DEVICE_IGNORE: function(e) {
     let {
       displayName: t
     } = e;
-    delete I[t]
+    delete g[t]
   },
   CONNECTED_DEVICE_NEVER_SHOW_MODAL: function() {
-    I = {}, C = {
+    g = {}, C = {
       neverShowModal: !0
     }
   }

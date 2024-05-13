@@ -6,8 +6,8 @@ l.r(t), l.d(t, {
 });
 var a = l("735250");
 l("470079");
-var u = l("442837"),
-  n = l("481060"),
+var n = l("442837"),
+  u = l("481060"),
   d = l("430824"),
   s = l("594174"),
   r = l("979651"),
@@ -23,23 +23,23 @@ function M(e) {
   let l = (0, E.default)(),
     M = null == l ? void 0 : l.id,
     S = null == l ? void 0 : l.guild_id,
-    _ = (0, u.useStateFromStores)([d.default], () => d.default.getGuild(S), [S]),
-    g = (0, u.useStateFromStores)([r.default], () => null != M ? r.default.getVoiceStateForChannel(M, e.id) : null, [M, e.id]),
+    _ = (0, n.useStateFromStores)([d.default], () => d.default.getGuild(S), [S]),
+    g = (0, n.useStateFromStores)([r.default], () => null != M ? r.default.getVoiceStateForChannel(M, e.id) : null, [M, e.id]),
     I = (null === (t = s.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.id,
-    R = (0, c.default)(),
-    C = (0, u.useStateFromStores)([f.default], () => f.default.getPermissionsForUser(e.id, M), [M, e.id]),
+    C = (0, c.default)(),
+    R = (0, n.useStateFromStores)([f.default], () => f.default.getPermissionsForUser(e.id, M), [M, e.id]),
     A = (0, o.useCanModerateRequestToSpeak)(M);
-  if (null == l || null == _ || null == g || C.speaker) return null;
-  let T = () => {
+  if (null == l || null == _ || null == g || R.speaker) return null;
+  let N = () => {
     I ? (0, i.audienceAckRequestToSpeak)(l, !1) : (0, i.inviteUserToStage)(l, e.id)
   };
-  return A ? (0, a.jsx)(n.MenuItem, {
+  return A ? (0, a.jsx)(u.MenuItem, {
     id: "invite-speaker",
     label: I ? m.default.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : m.default.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
-    action: T
-  }) : R && I ? (0, a.jsx)(n.MenuItem, {
+    action: N
+  }) : C && I ? (0, a.jsx)(u.MenuItem, {
     id: "invite-speaker",
     label: m.default.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER,
-    action: T
+    action: N
   }) : null
 }
