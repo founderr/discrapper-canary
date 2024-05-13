@@ -1,100 +1,101 @@
 "use strict";
 n.r(t), n.d(t, {
   CONTENT_FEED_SECTION: function() {
-    return p
+    return E
   },
   useInjectContentInventoryFeed: function() {
-    return E
+    return C
   }
 }), n("47120"), n("724458");
 var a = n("470079"),
   l = n("442837"),
   s = n("439170"),
-  i = n("451478"),
-  r = n("626135"),
-  o = n("146282"),
-  u = n("590026"),
-  d = n("178762"),
-  c = n("206583"),
-  f = n("809017"),
-  h = n("981631"),
-  m = n("689938");
-let p = 0;
+  i = n("592125"),
+  r = n("451478"),
+  o = n("626135"),
+  u = n("146282"),
+  d = n("590026"),
+  c = n("178762"),
+  f = n("206583"),
+  h = n("809017"),
+  m = n("981631"),
+  p = n("689938");
+let E = 0;
 
-function E(e) {
+function C(e) {
   let {
     memberStoreProps: {
       groups: t,
       rows: n,
-      version: p
+      version: E
     },
-    channelId: E,
-    guildId: C
-  } = e, [g, S] = a.useState(!1), {
-    requestId: _,
-    entries: T
-  } = (0, u.default)(E), I = (0, l.useStateFromStores)([o.default], () => o.default.hidden), A = (0, l.useStateFromStores)([i.default], () => i.default.isFocused()), [N, v, x, M] = a.useMemo(() => {
+    channelId: C,
+    guildId: g
+  } = e, [S, _] = a.useState(!1), {
+    requestId: T,
+    entries: I
+  } = (0, d.default)(C), A = (0, l.useStateFromStores)([u.default], () => u.default.hidden), v = (0, l.useStateFromStores)([r.default], () => r.default.isFocused()), N = (0, l.useStateFromStores)([i.default], () => i.default.getChannel(C)), x = (null == N ? void 0 : N.isForumChannel()) === !1, [M, R, y, L] = a.useMemo(() => {
     let e;
-    if (null == T || 0 === T.length || null == _) return [t, n, p];
-    let a = g ? T.length : 3,
-      l = T.slice(0, a);
-    e = I ? [{
+    if (null == I || 0 === I.length || null == T || !x) return [t, n, E];
+    let a = S ? I.length : 3,
+      l = I.slice(0, a);
+    e = A ? [{
       type: s.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY
     }] : l.map(e => ({
       type: s.MemberListRowTypes.CONTENT_INVENTORY,
       entry: e,
-      requestId: _
+      requestId: T
     }));
     let i = {
-        id: f.MEMBER_LIST_CONTENT_GROUP_ID,
+        id: h.MEMBER_LIST_CONTENT_GROUP_ID,
         type: s.MemberListRowTypes.CONTENT_INVENTORY_GROUP,
-        key: f.MEMBER_LIST_CONTENT_GROUP_ID,
+        key: h.MEMBER_LIST_CONTENT_GROUP_ID,
         count: e.length,
         index: n.length,
-        title: m.default.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
+        title: p.default.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
         onToggleExpand: () => {
-          S(e => {
+          _(e => {
             let t = !e;
-            return r.default.track(h.AnalyticEvents.MEMBERLIST_CONTENT_FEED_TOGGLED, {
-              channel_id: E,
-              guild_id: C,
+            return o.default.track(m.AnalyticEvents.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+              channel_id: C,
+              guild_id: g,
               expanded: t
             }), t
           })
         },
-        expanded: g,
-        expandedCount: T.length,
-        feedHeight: e.map(d.getContentRowHeight).reduce((e, t) => e + t, 0)
+        expanded: S,
+        expandedCount: I.length,
+        feedHeight: e.map(c.getContentRowHeight).reduce((e, t) => e + t, 0)
       },
-      o = [i, ...t],
+      r = [i, ...t],
       u = [...n, i, ...e];
-    return [o, u, Math.random(), e]
-  }, [E, T, g, t, C, _, n, p, I]), R = a.useRef(0), y = a.useRef(T), L = a.useRef(), O = a.useCallback(e => {
+    return [r, u, Math.random(), e]
+  }, [C, I, S, t, g, T, n, E, A, x]), O = a.useRef(0), j = a.useRef(I), P = a.useRef(), D = a.useCallback(e => {
     var t;
-    let n = Math.floor(e / d.DEFAULT_CONTENT_ROW_HEIGHT),
-      a = Math.min(null !== (t = null == M ? void 0 : M.length) && void 0 !== t ? t : 0, n);
-    R.current = Math.max(R.current, a)
-  }, [M]);
+    let n = Math.floor(e / c.DEFAULT_CONTENT_ROW_HEIGHT),
+      a = Math.min(null !== (t = null == L ? void 0 : L.length) && void 0 !== t ? t : 0, n);
+    O.current = Math.max(O.current, a)
+  }, [L]);
   return a.useEffect(() => {
-    y.current = T
-  }, [T]), a.useEffect(() => (R.current = 0, L.current = Date.now(), () => {
+    j.current = I
+  }, [I]), a.useEffect(() => (O.current = 0, P.current = Date.now(), () => {
     var e, t;
-    if (null == _ || null == L.current || Date.now() - L.current < 3e3) return;
-    let n = null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.map(e => e.id)) && void 0 !== t ? t : [],
-      a = n.slice(0, R.current);
-    !I && A && r.default.track(h.AnalyticEvents.RANKING_ITEMS_SEEN, {
-      request_id: _,
-      first_shown_at: L.current,
+    if (null == T || null == P.current || Date.now() - P.current < 3e3) return;
+    let n = null !== (t = null === (e = j.current) || void 0 === e ? void 0 : e.map(e => e.id)) && void 0 !== t ? t : [],
+      a = n.slice(0, O.current);
+    !A && v && x && o.default.track(m.AnalyticEvents.RANKING_ITEMS_SEEN, {
+      request_id: T,
+      first_shown_at: P.current,
       item_ids: a,
-      surface_type: c.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
-      channel_id: E,
-      guild_id: C,
+      surface_type: f.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
+      channel_id: C,
+      guild_id: g,
       all_item_ids: n
     })
-  }), [_, E, C, I, A]), {
-    groups: N,
-    rows: v,
-    version: x,
-    updateMaxRowSeen: O
+  }), [T, C, g, A, v, x]), {
+    groups: M,
+    rows: R,
+    version: y,
+    updateMaxRowSeen: D
   }
 }
