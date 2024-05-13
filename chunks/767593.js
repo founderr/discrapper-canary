@@ -4,16 +4,17 @@ var r = n("735250"),
   i = n("470079"),
   s = n("481060"),
   o = n("442837"),
-  a = n("863249"),
-  l = n("944163"),
+  a = n("963202"),
+  l = n("863249"),
+  d = n("944163"),
   u = n("983736"),
-  d = n("200305"),
-  c = n("594174"),
-  f = n("153124"),
-  h = n("231467"),
-  m = n("981631"),
-  p = n("689938"),
-  E = n("209423");
+  c = n("200305"),
+  f = n("594174"),
+  h = n("153124"),
+  m = n("231467"),
+  p = n("981631"),
+  E = n("689938"),
+  _ = n("209423");
 
 function x(e) {
   let {
@@ -22,16 +23,16 @@ function x(e) {
     updateFormState: i
   } = e;
   return (0, r.jsxs)("div", {
-    className: E.verificationForm,
+    className: _.verificationForm,
     children: [(0, r.jsx)(s.Heading, {
       variant: "heading-xxl/normal",
       color: "header-primary",
-      children: p.default.Messages.CLAN_DISCOVERY_PROFILE_TITLE
+      children: E.default.Messages.CLAN_DISCOVERY_PROFILE_TITLE
     }), (0, r.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      children: p.default.Messages.CLAN_DISCOVERY_PROFILE_SUBTITLE
-    }), (0, r.jsx)(d.MemberVerificationFormRenderer, {
+      children: E.default.Messages.CLAN_DISCOVERY_PROFILE_SUBTITLE
+    }), (0, r.jsx)(c.MemberVerificationFormRenderer, {
       guildId: t,
       formState: n,
       updateFormState: i
@@ -41,65 +42,72 @@ function x(e) {
 t.default = function(e) {
   var t, n;
   let {
-    clan: d,
-    transitionState: _,
-    onClose: v
-  } = e, N = (0, f.useUID)(), R = (0, o.useStateFromStores)([l.default], () => l.default.get(d.id)), [F, T] = i.useState(null !== (n = null == R ? void 0 : R.formFields) && void 0 !== n ? n : []), I = (0, o.useStateFromStores)([c.default], () => c.default.getCurrentUser()), C = null == I ? void 0 : I.verified, g = null == I ? void 0 : I.isPhoneVerified();
+    clan: c,
+    transitionState: v,
+    onClose: N
+  } = e, T = (0, h.useUID)(), I = (0, o.useStateFromStores)([d.default], () => d.default.get(c.id)), [R, F] = i.useState(null !== (n = null == I ? void 0 : I.formFields) && void 0 !== n ? n : []), C = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser()), g = null == C ? void 0 : C.verified, P = null == C ? void 0 : C.isPhoneVerified(), {
+    enableApplication: j
+  } = (0, a.useClanPrePilotApplicationExperiment)("discovery");
   i.useEffect(() => {
-    a.default.fetchVerificationForm(d.id)
-  }, [d.id]), i.useEffect(() => {
-    null != R && T(R.formFields)
-  }, [R]);
-  let j = i.useCallback(async e => {
-      await a.default.submitVerificationForm(d.id, e)
-    }, [d.id]),
-    P = i.useCallback(async () => {
-      await j({
-        ...null != R ? R : l.NO_MEMBER_VERIFICATION_FORM,
-        formFields: F
-      }), v()
-    }, [j, v, R, F]),
-    O = !((null == R ? void 0 : null === (t = R.guild) || void 0 === t ? void 0 : t.verification_level) === m.VerificationLevels.VERY_HIGH ? g : C || g) || F.some(e => !(0, u.isValidFormResponse)(e));
+    l.default.fetchVerificationForm(c.id)
+  }, [c.id]), i.useEffect(() => {
+    null != I && F(I.formFields)
+  }, [I]);
+  let O = i.useCallback(async e => {
+      await l.default.submitVerificationForm(c.id, e)
+    }, [c.id]),
+    A = i.useCallback(async () => {
+      await O({
+        ...null != I ? I : d.NO_MEMBER_VERIFICATION_FORM,
+        formFields: R
+      }), N()
+    }, [O, N, I, R]),
+    y = !((null == I ? void 0 : null === (t = I.guild) || void 0 === t ? void 0 : t.verification_level) === p.VerificationLevels.VERY_HIGH ? P : g || P) || R.some(e => !(0, u.isValidFormResponse)(e));
   return (0, r.jsxs)(s.ModalRoot, {
-    transitionState: _,
-    "aria-labelledby": N,
+    transitionState: v,
+    "aria-labelledby": T,
     size: s.ModalSize.DYNAMIC,
-    className: E.container,
+    className: _.container,
     hideShadow: !0,
     children: [(0, r.jsxs)("div", {
-      className: E.body,
+      className: _.body,
       children: [(0, r.jsx)("div", {
-        className: E.applicationContainer,
+        className: _.applicationContainer,
         children: (0, r.jsx)(s.ScrollerNone, {
           fade: !0,
-          className: E.scroller,
+          className: _.scroller,
           children: (0, r.jsx)(x, {
-            guildId: d.id,
-            formState: F,
-            updateFormState: T
+            guildId: c.id,
+            formState: R,
+            updateFormState: F
           })
         })
       }), (0, r.jsx)("div", {
-        className: E.verticalRule
+        className: _.verticalRule
       }), (0, r.jsxs)("div", {
-        className: E.clanContainer,
-        children: [(0, r.jsx)(h.ClanDiscoveryCardView, {
-          clan: d,
-          className: E.card
-        }), (0, r.jsx)(s.Button, {
-          type: "submit",
-          onClick: P,
-          disabled: O,
-          children: p.default.Messages.APPLY
+        className: _.clanContainer,
+        children: [(0, r.jsx)(m.ClanDiscoveryCardView, {
+          clan: c,
+          className: _.card
+        }), (0, r.jsx)(s.Tooltip, {
+          text: E.default.Messages.CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP,
+          shouldShow: !j,
+          children: e => (0, r.jsx)(s.Button, {
+            ...e,
+            type: "submit",
+            onClick: A,
+            disabled: y || !j,
+            children: E.default.Messages.APPLY
+          })
         })]
       })]
     }), (0, r.jsx)("div", {
-      className: E.closeButtonContainer,
+      className: _.closeButtonContainer,
       children: (0, r.jsx)(s.Button, {
-        onClick: v,
+        onClick: N,
         look: s.ButtonLooks.OUTLINED,
         color: s.ButtonColors.PRIMARY,
-        children: p.default.Messages.CLOSE
+        children: E.default.Messages.CLOSE
       })
     })]
   })
