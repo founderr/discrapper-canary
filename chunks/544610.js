@@ -17,13 +17,13 @@ var l, s, i, r, o = n("392711"),
 let T = !1,
   I = "",
   A = 0,
-  v = [],
-  N = !1,
+  N = [],
+  v = !1,
   x = new Set,
   M = null;
 
 function R() {
-  I = "", A = 0, v = [], x = new Set, T = !1, M = null
+  I = "", A = 0, N = [], x = new Set, T = !1, M = null
 }
 
 function y(e) {
@@ -33,7 +33,7 @@ function y(e) {
 function L() {
   if (!T) return !1;
   let e = E.default.getChannel(M);
-  if (0 === I.trim().length) return null != a && a.clearQuery(), v = function(e) {
+  if (0 === I.trim().length) return null != a && a.clearQuery(), N = function(e) {
     let t = g.default.getFriendIDs();
     return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
       let n = S.default.getUser(t);
@@ -66,8 +66,8 @@ function L() {
 
 function O() {
   if (!T) return !1;
-  let e = N;
-  return (N = u().some(g.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
+  let e = v;
+  return (v = u().some(g.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
 }
 
 function j(e, t) {
@@ -78,7 +78,7 @@ function P(e) {
   let {
     results: t
   } = e;
-  T && "" !== I && (v = t.map(e => {
+  T && "" !== I && (N = t.map(e => {
     let {
       id: t
     } = e;
@@ -110,10 +110,10 @@ class w extends(l = d.default.Store) {
     this.waitFor(S.default, E.default, g.default), this.syncWith([S.default, E.default], L), this.syncWith([g.default], O)
   }
   getResults() {
-    return v
+    return N
   }
   hasFriends() {
-    return N
+    return v
   }
   getSelectedUsers() {
     return x
@@ -126,8 +126,8 @@ class w extends(l = d.default.Store) {
       query: I,
       selectedRow: A,
       selectedUsers: x,
-      results: v,
-      hasFriends: N
+      results: N,
+      hasFriends: v
     }
   }
 }

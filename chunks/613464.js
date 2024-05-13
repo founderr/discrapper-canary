@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return v
   }
 }), n("47120");
 var a = n("735250"),
@@ -25,14 +25,14 @@ var a = n("735250"),
   T = n("718617"),
   I = n("327250"),
   A = n("228168"),
-  v = n("30262");
+  N = n("30262");
 
-function N(e) {
+function v(e) {
   let {
     userId: t,
     guildId: n,
     onClose: s,
-    className: N,
+    className: v,
     infoPanelClassName: x,
     style: M
   } = e, R = (0, _.useCanAccessGuildMemberModView)(n), y = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), L = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [O, j] = l.useState(null == y || null == L), P = (0, d.default)(L), D = l.useRef(null), {
@@ -60,7 +60,7 @@ function N(e) {
       await Promise.all(e), j(!1)
     })()
   }, [n, t]), R) ? O || null == y || null == L ? (0, a.jsx)("div", {
-    className: i()(v.sidebarContianer, v.loadingContainer, N),
+    className: i()(N.sidebarContianer, N.loadingContainer, v),
     style: M,
     children: (0, a.jsx)(o.Spinner, {
       animated: !0,
@@ -69,16 +69,16 @@ function N(e) {
   }) : (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: b,
     children: (0, a.jsx)("div", {
-      className: i()(v.sidebarContianer, N),
+      className: i()(N.sidebarContianer, v),
       style: M,
       children: (0, a.jsx)(C.default, {
         user: y,
         displayProfile: U,
         profileType: A.UserProfileTypes.MODAL,
         forceShowPremium: !0,
-        className: i()(v.profileThemedContainer),
+        className: i()(N.profileThemedContainer),
         children: (0, a.jsxs)("div", {
-          className: i()(v.innerContainer),
+          className: i()(N.innerContainer),
           children: [(0, a.jsx)(I.default, {
             userId: t,
             guildId: n,

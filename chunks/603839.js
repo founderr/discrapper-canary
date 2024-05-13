@@ -41,7 +41,7 @@ function R(e) {
   } = e, R = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
     progress: L,
     errors: O,
-    submitting: y
+    submitting: M
   } = (0, u.useStateFromStoresObject)([C.default], () => {
     var e, n, a, s;
     return {
@@ -49,7 +49,7 @@ function R(e) {
       errors: null === (n = C.default.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
       submitting: null === (a = C.default.getStateForGuild(t)) || void 0 === a ? void 0 : a.submitting
     }
-  }), M = s.useMemo(() => (0, T.getClanSetupProgressSteps)(O), [O]), [P, x] = s.useState(!1), [D, b] = s.useState(window.innerWidth), [U, j] = s.useState(1), [G, k] = s.useState(!0), w = (0, m.useFullScreenModalAnimationStyle)(), F = (0, o.useSpring)({
+  }), y = s.useMemo(() => (0, T.getClanSetupProgressSteps)(O), [O]), [P, x] = s.useState(!1), [D, b] = s.useState(window.innerWidth), [U, j] = s.useState(1), [G, k] = s.useState(!0), w = (0, m.useFullScreenModalAnimationStyle)(), F = (0, o.useSpring)({
     opacity: U,
     config: v,
     onStart: () => k(!0),
@@ -82,7 +82,7 @@ function R(e) {
     config: v,
     immediate: R
   }), Y = s.useCallback(e => {
-    if (e === M.length) j(0), (0, _.trackConvertStepViewed)(t, "signature");
+    if (e === y.length) j(0), (0, _.trackConvertStepViewed)(t, "signature");
     else if (0 === U) j(1);
     else {
       var n;
@@ -91,7 +91,7 @@ function R(e) {
         furthestStep: Math.max(null !== (n = L.furthestStep) && void 0 !== n ? n : 0, e)
       })
     }
-  }, [U, t, L.furthestStep, M.length]);
+  }, [U, t, L.furthestStep, y.length]);
   s.useEffect(() => {
     (0, _.trackConvertStepViewed)(t, (0, _.getProgressStepAnalyticsName)(L.currentStep))
   }, [t, L.currentStep]), s.useEffect(() => {
@@ -169,7 +169,7 @@ function R(e) {
               [N.elevatedNavigationContainer]: !G
             }),
             children: (0, a.jsx)(p.default, {
-              steps: M,
+              steps: y,
               progress: L,
               updateCurrentStep: Y,
               animationStyle: F,
@@ -213,7 +213,7 @@ function R(e) {
             ...e,
             themeColor: L.brandPrimaryColor,
             disabled: !P || W,
-            submitting: y,
+            submitting: M,
             look: d.Button.Looks.FILLED,
             size: d.Button.Sizes.MEDIUM,
             color: d.Button.Colors.BRAND,

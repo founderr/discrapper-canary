@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return L
   },
   getFullResurrectedBadgeText: function() {
-    return v
+    return N
   },
   getMarathonDurationStr: function() {
     return R
@@ -49,7 +49,7 @@ n.r(t), n.d(t, {
     return g
   },
   isEntryTopGame: function() {
-    return N
+    return v
   },
   isValidStreak: function() {
     return M
@@ -168,7 +168,7 @@ function A(e) {
   return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0
 }
 
-function v(e) {
+function N(e) {
   let {
     months: t = 0,
     weeks: n = 0,
@@ -184,7 +184,7 @@ function v(e) {
   })
 }
 
-function N(e) {
+function v(e) {
   return e.content_type === r.ContentInventoryEntryType.TOP_GAME
 }
 

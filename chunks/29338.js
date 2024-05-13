@@ -9,8 +9,8 @@ var a = r("735250"),
   l = r("120356"),
   n = r.n(l),
   o = r("392711"),
-  c = r.n(o),
-  s = r("876215"),
+  s = r.n(o),
+  c = r("876215"),
   d = r("442837"),
   u = r("481060"),
   h = r("570140"),
@@ -28,7 +28,7 @@ let b = [{
     } = e;
     return (0, a.jsx)(u.Text, {
       variant: "text-md/semibold",
-      children: s.ContentInventoryEntryType[t]
+      children: c.ContentInventoryEntryType[t]
     })
   }
 }, {
@@ -83,7 +83,7 @@ function k() {
   var e;
   let t = (0, d.useStateFromStores)([p.default], () => p.default.getFeed(g.ContentInventoryFeedKey.GLOBAL_FEED)),
     r = function(e) {
-      let t = c().groupBy(e, e => e.content_type);
+      let t = s().groupBy(e, e => e.content_type);
       return Object.keys(t).map(e => {
         let r = t[e];
         return {
@@ -94,7 +94,7 @@ function k() {
       })
     }(null == t ? void 0 : null === (e = t.entries) || void 0 === e ? void 0 : e.map(e => e.content)),
     [l, o] = i.useState(void 0),
-    s = null != l && l === t;
+    c = null != l && l === t;
   return (0, a.jsx)("div", {
     className: n()(y.panel),
     children: (0, a.jsxs)(u.ScrollerThin, {
@@ -107,7 +107,7 @@ function k() {
               type: "CONTENT_INVENTORY_MANUAL_REFRESH"
             })
           },
-          submitting: s,
+          submitting: c,
           children: "Refresh"
         })
       }), r.length > 0 && (0, a.jsx)(m.default, {

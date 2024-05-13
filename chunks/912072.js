@@ -9,8 +9,8 @@ var a = r("735250"),
   l = r("120356"),
   n = r.n(l),
   o = r("442837"),
-  c = r("481060"),
-  s = r("98357"),
+  s = r("481060"),
+  c = r("98357"),
   d = r("432877"),
   u = r("717544"),
   h = r("277513");
@@ -22,9 +22,9 @@ function m(e) {
     let [t, r, {
       label: i
     }] = e;
-    return (0, a.jsx)(c.FormSwitch, {
+    return (0, a.jsx)(s.FormSwitch, {
       value: r,
-      onChange: e => (0, s.toggle)(t, e),
+      onChange: e => (0, c.toggle)(t, e),
       hideBorder: !0,
       className: u.switch,
       children: i

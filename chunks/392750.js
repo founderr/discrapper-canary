@@ -10,12 +10,12 @@ var i = r("442837"),
   l = r("481060"),
   n = r("800599"),
   o = r("594174"),
-  c = r("681619"),
-  s = r("128386"),
+  s = r("681619"),
+  c = r("128386"),
   d = r("277513");
 let u = [{
   key: "user",
-  cellClassName: s.userCell,
+  cellClassName: c.userCell,
   render(e) {
     var t;
     let {
@@ -26,7 +26,7 @@ let u = [{
   }
 }, {
   key: "affinity",
-  cellClassName: s.affinityCell,
+  cellClassName: c.affinityCell,
   render(e) {
     let {
       affinity: t
@@ -48,10 +48,10 @@ function h() {
     }
   }));
   return 0 === e.length ? null : (0, a.jsx)(l.ScrollerThin, {
-    children: (0, a.jsx)(c.default, {
+    children: (0, a.jsx)(s.default, {
       className: d.panel,
       columns: u,
-      rowClassName: s.row,
+      rowClassName: c.row,
       data: e
     })
   })

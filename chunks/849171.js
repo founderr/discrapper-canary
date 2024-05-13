@@ -27,8 +27,8 @@ var i = n("120356"),
   T = n("100527"),
   I = n("906732"),
   A = n("835473"),
-  v = n("314897"),
-  N = n("594174"),
+  N = n("314897"),
+  v = n("594174"),
   x = n("602623"),
   M = n("823379"),
   R = n("5192"),
@@ -75,10 +75,10 @@ function P(e) {
     width: g
   } = e;
   let _ = (a = g) > 400 ? 2 : a > 300 ? 1 : 0;
-  let [T] = (l = g) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], A = (0, o.useStateFromStoresArray)([N.default, v.default], () => Array.from(i).map(e => (0, h.isActivityParticipantCurrentUserCurrentSession)(e, v.default) ? null : N.default.getUser(e.userId)).filter(M.isNotNullish)), x = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(C.id).find(e => e.applicationId === p.id)), {
+  let [T] = (l = g) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], A = (0, o.useStateFromStoresArray)([v.default, N.default], () => Array.from(i).map(e => (0, h.isActivityParticipantCurrentUserCurrentSession)(e, N.default) ? null : v.default.getUser(e.userId)).filter(M.isNotNullish)), x = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(C.id).find(e => e.applicationId === p.id)), {
     analyticsLocations: O
   } = (0, I.default)(), P = (0, d.useAnalyticsContext)(), D = R.default.getName(C.getGuildId(), C.id, null == A ? void 0 : A[0]), b = (0, m.useEmbeddedActivityJoinability)({
-    userId: null === (t = N.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
+    userId: null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
     channelId: C.id,
     application: p
   }) === m.EmbeddedActivityJoinability.CAN_JOIN, U = null !== (n = C.getGuildId()) && void 0 !== n ? n : void 0;

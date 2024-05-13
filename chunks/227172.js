@@ -27,8 +27,8 @@ t.default = e => {
     primaryColor: T,
     secondaryColor: I
   } = (0, f.default)(S), A = (0, s.useStateFromStores)([i.default], () => i.default.locale), {
-    streamPreviewUrl: v,
-    channel: N
+    streamPreviewUrl: N,
+    channel: v
   } = (0, o.default)(n), {
     displayParticipants: x,
     participant1: M,
@@ -59,7 +59,7 @@ t.default = e => {
         entry: n
       }, t))
     }),
-    j = null == v ? (0, a.jsx)(p.PopoutContent, {
+    j = null == N ? (0, a.jsx)(p.PopoutContent, {
       thumbnailSrc: S,
       channel: t,
       userDescription: (0, u.isEntryActive)(n) ? E.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : E.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
@@ -68,7 +68,7 @@ t.default = e => {
       entry: n
     }) : (0, a.jsx)(p.StreamingPopoutContent, {
       channel: t,
-      streamPreviewSrc: v,
+      streamPreviewSrc: N,
       title: n.extra.game_name,
       badges: O,
       userDescription: E.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
@@ -76,7 +76,7 @@ t.default = e => {
     });
   return (0, a.jsxs)(p.Popout, {
     children: [j, (0, a.jsx)(p.PopoutInteractionsContainer, {
-      children: null != N ? (0, a.jsx)(p.VoiceChannelPopoutReactor, {
+      children: null != v ? (0, a.jsx)(p.VoiceChannelPopoutReactor, {
         closePopout: g,
         user: _,
         channel: t,
@@ -84,8 +84,8 @@ t.default = e => {
         reactionImageAltText: (0, c.getContentAltText)(n, _),
         entry: n,
         requestId: C,
-        voiceChannel: N,
-        isStreaming: null != v
+        voiceChannel: v,
+        isStreaming: null != N
       }) : (0, a.jsx)(p.PopoutReactor, {
         closePopout: g,
         user: _,

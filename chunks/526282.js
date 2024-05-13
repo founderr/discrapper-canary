@@ -93,10 +93,10 @@ t.default = s.memo(function(e) {
   }), O = (0, l.useSpring)({
     ref: T,
     ...m
-  }), y = (0, l.useSpring)({
+  }), M = (0, l.useSpring)({
     ref: A,
     ...m
-  }), M = (0, l.useSpring)({
+  }), y = (0, l.useSpring)({
     ref: N,
     from: {
       transform: "translateY(40px)",
@@ -155,7 +155,7 @@ t.default = s.memo(function(e) {
           })
         }), (0, a.jsx)(l.animated.div, {
           className: _.clanCardOuterContainer,
-          style: S ? void 0 : y,
+          style: S ? void 0 : M,
           children: (0, a.jsx)(d.ClanDiscoveryCardView, {
             clan: E.FAKE_DISCOVERY_UPSELL_CLANS["3"],
             className: _.clanCardOuterRight
@@ -164,7 +164,7 @@ t.default = s.memo(function(e) {
       })
     }), (0, a.jsxs)(l.animated.div, {
       className: _.upsellDetails,
-      style: S ? void 0 : M,
+      style: S ? void 0 : y,
       children: [(0, a.jsx)(r.Heading, {
         className: _.upsellTitle,
         color: "header-primary",

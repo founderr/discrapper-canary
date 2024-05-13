@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("346479"),
   I = n("592125"),
   A = n("808602"),
-  v = n("263704"),
-  N = n("757698"),
+  N = n("263704"),
+  v = n("757698"),
   x = n("934415"),
   M = n("456269"),
   R = n("109590"),
@@ -87,7 +87,7 @@ function D(e) {
         }
       }), (0, r.copy)((0, x.getChannelLinkToCopy)(V, Q)), G(!0)
     },
-    ei = Y ? v.default : A.default;
+    ei = Y ? N.default : A.default;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: i()(j.container, {
@@ -164,10 +164,10 @@ function D(e) {
             onClick: es,
             className: j.button,
             innerClassName: j.buttonInner,
-            children: [B ? (0, a.jsx)(v.default, {
+            children: [B ? (0, a.jsx)(N.default, {
               width: 16,
               height: 16
-            }) : (0, a.jsx)(N.default, {
+            }) : (0, a.jsx)(v.default, {
               width: 16,
               height: 16
             }), B ? O.default.Messages.COPIED : null]

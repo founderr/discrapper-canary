@@ -9,8 +9,8 @@ var a = r("735250"),
   l = r("120356"),
   n = r.n(l),
   o = r("481060"),
-  c = r("151011"),
-  s = r("277513");
+  s = r("151011"),
+  c = r("277513");
 
 function d(e) {
   let {
@@ -28,15 +28,15 @@ function d(e) {
     }),
     ...e
   })), [t]);
-  return (0, a.jsx)(c.default, {
+  return (0, a.jsx)(s.default, {
     ...m,
     columns: p,
     rowComponent: null != r ? r : e => {
       let {
         item: t,
         children: r
-      } = e, i = n()(s.tableRow, {
-        [s.selectedTableRow]: t.key === h
+      } = e, i = n()(c.tableRow, {
+        [c.selectedTableRow]: t.key === h
       });
       return null != u ? (0, a.jsx)(o.Clickable, {
         className: i,
@@ -47,7 +47,7 @@ function d(e) {
         children: r
       })
     },
-    headerClassName: n()(s.tableHeader, l),
+    headerClassName: n()(c.tableHeader, l),
     stickyHeader: null == d || d
   })
 }

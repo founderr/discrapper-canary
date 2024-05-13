@@ -30,8 +30,8 @@ var a = n("735250"),
   R = n("243778"),
   L = n("492162"),
   O = n("818634"),
-  y = n("596557"),
-  M = n("817520"),
+  M = n("596557"),
+  y = n("817520"),
   P = n("999309"),
   x = n("408987"),
   D = n("130734"),
@@ -484,13 +484,13 @@ function ep(e) {
   s.useEffect(() => {
     n !== es && ea(!z)
   }, [n, es, z]);
-  let [er, ec] = (0, N.default)(e => [eu.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(ed.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), ef = (0, I.default)(d), eE = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eh = (0, o.useStateFromStores)([Z.default], () => Z.default.hasLayers()), e_ = (0, o.useStateFromStores)([B.default], () => B.default.shouldShow(eC)), em = g && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !et.ProcessArgs.isDisallowPopupsSet(), ep = (0, o.useStateFromStores)([q.default], () => q.default.getMemberCount(n)), eI = g && null != ep && ep >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !et.ProcessArgs.isDisallowPopupsSet(), eg = R && null != d && (d.hasFeature(eo.GuildFeatures.COMMUNITY) || null != ep && ep > 50), eT = (0, P.default)(n), eA = (0, A.useLowerMemberCountRequirements)(n), eN = (null == d ? void 0 : d.hasFeature(eo.GuildFeatures.HUB)) === !0, ev = g && (null == d ? void 0 : d.hasFeature(eo.GuildFeatures.DISCOVERABLE)) === !0, eR = (0, p.useBlockedPaymentsConfig)(), eL = (g || (null == d ? void 0 : d.premiumTier) === eo.BoostedGuildTiers.NONE) && !et.ProcessArgs.isDisallowPopupsSet() && !eR, eO = (0, o.useStateFromStores)([D.default, Z.default], () => null != d && null != k && g && !Z.default.hasLayers() && D.default.shouldShowGuildTemplateDirtyTooltip(n)), ey = (0, o.useStateFromStores)([Y.default], () => Y.default.getChannel(r)), {
-    isPopoutOpen: eM
+  let [er, ec] = (0, N.default)(e => [eu.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(ed.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), ef = (0, I.default)(d), eE = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eh = (0, o.useStateFromStores)([Z.default], () => Z.default.hasLayers()), e_ = (0, o.useStateFromStores)([B.default], () => B.default.shouldShow(eC)), em = g && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !et.ProcessArgs.isDisallowPopupsSet(), ep = (0, o.useStateFromStores)([q.default], () => q.default.getMemberCount(n)), eI = g && null != ep && ep >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !et.ProcessArgs.isDisallowPopupsSet(), eg = R && null != d && (d.hasFeature(eo.GuildFeatures.COMMUNITY) || null != ep && ep > 50), eT = (0, P.default)(n), eA = (0, A.useLowerMemberCountRequirements)(n), eN = (null == d ? void 0 : d.hasFeature(eo.GuildFeatures.HUB)) === !0, ev = g && (null == d ? void 0 : d.hasFeature(eo.GuildFeatures.DISCOVERABLE)) === !0, eR = (0, p.useBlockedPaymentsConfig)(), eL = (g || (null == d ? void 0 : d.premiumTier) === eo.BoostedGuildTiers.NONE) && !et.ProcessArgs.isDisallowPopupsSet() && !eR, eO = (0, o.useStateFromStores)([D.default, Z.default], () => null != d && null != k && g && !Z.default.hasLayers() && D.default.shouldShowGuildTemplateDirtyTooltip(n)), eM = (0, o.useStateFromStores)([Y.default], () => Y.default.getChannel(r)), {
+    isPopoutOpen: ey
   } = (0, O.useGuildHeaderPopoutStore)(), eP = null !== (t = null == d ? void 0 : d.hasFeature(eo.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ex = (0, o.useStateFromStores)([w.default], () => !i().isEmpty(w.default.getThreadsForGuild(n))), eD = ee.default.isNewUser(k), eb = en && !eD, eU = (0, T.default)(k);
-  (0, y.default)(d);
+  (0, M.default)(d);
   let ej = (0, v.useIsDismissibleContentDismissed)(u.DismissibleContent.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
     eG = (0, j.default)(n),
-    ek = (0, M.default)(n),
+    ek = (0, y.default)(n),
     ew = G.CustomNotificationSoundExperiment.useExperiment({
       location: "GuildSidebar"
     }, {
@@ -502,7 +502,7 @@ function ep(e) {
     guild: d,
     scrollToChannel: E,
     selectedChannelId: l ? null : r,
-    selectedChannel: ey,
+    selectedChannel: eM,
     selectedVoiceChannelId: h,
     voiceStates: f,
     isUnavailable: U,
@@ -524,7 +524,7 @@ function ep(e) {
     showGuildSoundboardPermissionUpsell: eg,
     showMediaChannelUpsell: eG,
     showTierTemplatesUpsell: ek,
-    isHeaderPopoutOpen: eM,
+    isHeaderPopoutOpen: ey,
     enableStudyGroup: H,
     isGuildHeaderDismissibleTooltipShown: ec,
     canShowCoachMarkAtBottom: en,

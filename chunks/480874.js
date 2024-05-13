@@ -38,17 +38,17 @@ function R() {
     {
       channelId: O
     } = (0, m.useMessageRequestSidebarState)(),
-    y = s.useCallback(() => {
+    M = s.useCallback(() => {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: M
+      rejectAll: y
     } = (0, C.useMessageRequestActions)({
-      onError: y
+      onError: M
     }),
     P = s.useCallback(() => {
-      M(t.map(e => e.channel.id))
-    }, [t, M]);
+      y(t.map(e => e.channel.id))
+    }, [t, y]);
   s.useEffect(() => {
     h.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n

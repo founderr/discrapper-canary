@@ -30,8 +30,8 @@ var a = n("735250"),
   R = n("77498"),
   L = n("271383"),
   O = n("430824"),
-  y = n("131951"),
-  M = n("375954"),
+  M = n("131951"),
+  y = n("375954"),
   P = n("19780"),
   x = n("944486"),
   D = n("914010"),
@@ -73,7 +73,7 @@ class K extends s.PureComponent {
       videoEnabled: p,
       isScreenSharing: T,
       runningGame: L,
-      runningGamePid: y,
+      runningGamePid: M,
       selectedChannelId: x,
       selectedGuildId: j,
       connected: G,
@@ -170,9 +170,9 @@ class K extends s.PureComponent {
             game_detection_enabled: (0, m.isDetectionEnabled)(L),
             executable_path: u
           })
-        }, 1e4), null != L.name && null != y && R.default.shouldReport(L.name)) {
+        }, 1e4), null != L.name && null != M && R.default.shouldReport(L.name)) {
         let e = L.name;
-        i.default.identifyGame(y, e).then(e => i.default.reportUnverifiedGame(e)).catch(e => new _.default("AutoAnalytics").error("Cannot identify game", e))
+        i.default.identifyGame(M, e).then(e => i.default.reportUnverifiedGame(e)).catch(e => new _.default("AutoAnalytics").error("Cannot identify game", e))
       }
     }
     if ((e.videoEnabled !== p || e.isScreenSharing !== T) && null != s) {
@@ -213,7 +213,7 @@ class K extends s.PureComponent {
         n = v.default.getChannel(t),
         s = O.default.getGuild(null == n ? void 0 : n.getGuildId());
       if (null != t && null != n && null != s && s.publicUpdatesChannelId === t) {
-        let e = M.default.getMessages(t),
+        let e = y.default.getMessages(t),
           l = e.toArray().reverse().find(e => {
             var t;
             return (0, B.hasFlag)(e.flags, Y.MessageFlags.IS_CROSSPOST) && (null === (t = e.messageReference) || void 0 === t ? void 0 : t.guild_id) === "667560445975986187"
@@ -263,7 +263,7 @@ function z() {
   let [e, t] = (0, l.useStateFromStoresArray)([x.default], () => [x.default.getVoiceChannelId(), x.default.getChannelId()], []), n = (0, l.useStateFromStores)([v.default], () => v.default.getChannel(t), [t]), s = (0, l.useStateFromStores)([h.default], () => (null == n ? void 0 : n.id) != null && h.default.getChatOpen(n.id), [n]), i = null == n ? void 0 : n.nsfw, r = (0, l.useStateFromStores)([v.default], () => v.default.getChannel(e), [e]), u = (0, l.useStateFromStores)([D.default], () => D.default.getGuildId(), []), d = (0, l.useStateFromStores)([O.default], () => O.default.getGuild(u), [u]), c = (0, l.useStateFromStores)([j.default], () => j.default.getCurrentUser(), []), f = (0, l.useStateFromStores)([L.default], () => {
     var e, t;
     return null != c && null != u && null !== (t = null === (e = L.default.getMember(u, c.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t
-  }, [c, u]), E = (0, l.useStateFromStores)([k.default], () => k.default.getState().section, []), _ = (0, l.useStateFromStores)([G.default], () => G.default.getHomeLink(), []), C = (0, l.useStateFromStores)([S.default], () => S.default.isConnected(), []), [I, g] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.isVideoEnabled(), y.default.isScreenSharing()], []), A = (0, l.useStateFromStores)([b.default], () => b.default.getPrimaryActivity(), []), N = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentGameForAnalytics(), []), R = (0, p.default)(u), M = (0, l.useStateFromStores)([T.default], () => T.default.getMessageRequestsCount(), []), P = {
+  }, [c, u]), E = (0, l.useStateFromStores)([k.default], () => k.default.getState().section, []), _ = (0, l.useStateFromStores)([G.default], () => G.default.getHomeLink(), []), C = (0, l.useStateFromStores)([S.default], () => S.default.isConnected(), []), [I, g] = (0, l.useStateFromStoresArray)([M.default], () => [M.default.isVideoEnabled(), M.default.isScreenSharing()], []), A = (0, l.useStateFromStores)([b.default], () => b.default.getPrimaryActivity(), []), N = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentGameForAnalytics(), []), R = (0, p.default)(u), y = (0, l.useStateFromStores)([T.default], () => T.default.getMessageRequestsCount(), []), P = {
     selectedChannelId: t,
     isNSFWChannel: i,
     selectedGuildId: u,
@@ -286,7 +286,7 @@ function z() {
     isMemberPending: f,
     postableChannelCount: R,
     isTextInVoice: s,
-    numMessageRequests: M
+    numMessageRequests: y
   };
   return (0, a.jsx)(K, {
     ...P

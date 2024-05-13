@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return M
   }
 });
 var a = n("735250"),
@@ -248,7 +248,7 @@ function O(e) {
   return e.currentStep.toString()
 }
 
-function y(e) {
+function M(e) {
   let {
     guildId: t
   } = e, n = (0, i.useStateFromStores)([c.default], () => {

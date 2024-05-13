@@ -4,10 +4,10 @@ r.r(t), r.d(t, {
     return d
   },
   Properties: function() {
-    return c
+    return s
   },
   Property: function() {
-    return s
+    return c
   }
 });
 var a = r("735250");
@@ -17,7 +17,7 @@ var i = r("120356"),
   n = r("481060"),
   o = r("277513");
 
-function c(e) {
+function s(e) {
   let {
     className: t,
     children: r
@@ -28,7 +28,7 @@ function c(e) {
   })
 }
 
-function s(e) {
+function c(e) {
   let {
     name: t,
     children: r

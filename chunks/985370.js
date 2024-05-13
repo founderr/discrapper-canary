@@ -24,10 +24,10 @@ t.default = e => {
     onMouseLeave: g,
     cancelTimers: S
   } = (0, d.default)(200, 300), [_, T] = l.useState(!1), I = (0, r.useStateFromStores)([f.default], () => f.default.effectCooldownEndTime), A = l.useMemo(() => null != I ? (I.getTime() - Date.now()) / 1e3 : 0, [I]), {
-    seconds: v
-  } = (0, u.default)(null != I ? I : new Date), N = v > 0, x = l.useCallback(e => {
-    if ("focus" !== e.type) !_ && !N && C()
-  }, [_, N, C]), M = l.useCallback(() => {
+    seconds: N
+  } = (0, u.default)(null != I ? I : new Date), v = N > 0, x = l.useCallback(e => {
+    if ("focus" !== e.type) !_ && !v && C()
+  }, [_, v, C]), M = l.useCallback(() => {
     !_ && g()
   }, [g, _]), R = l.useCallback((e, t) => {
     S(), T(!_), (!s || _) && (null == t || t(e))
@@ -62,7 +62,7 @@ t.default = e => {
       return (0, a.jsx)(c.default, {
         isCenterButton: !0,
         totalCooldownSeconds: A,
-        remainingCooldownSeconds: v,
+        remainingCooldownSeconds: N,
         className: i()(p.controlButton, n),
         onKeyDown: e => {
           var t, n;

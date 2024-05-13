@@ -9,11 +9,11 @@ var a = r("735250"),
   l = r("442837"),
   n = r("481060"),
   o = r("581612"),
-  c = r("91311"),
-  s = r("987113");
+  s = r("91311"),
+  c = r("987113");
 
 function d() {
-  let e = (0, l.useStateFromStores)([c.default], () => c.default.allWithDescriptions(), [], l.statesWillNeverBeEqual),
+  let e = (0, l.useStateFromStores)([s.default], () => s.default.allWithDescriptions(), [], l.statesWillNeverBeEqual),
     t = i.useMemo(() => e.map(e => {
       let [t, r, i] = e;
       return (0, a.jsx)(n.FormItem, {
@@ -27,14 +27,14 @@ function d() {
       }, t)
     }), [e]);
   return (0, a.jsxs)("div", {
-    className: s.container,
+    className: c.container,
     children: [(0, a.jsx)(n.Button, {
       onClick: o.clearAll,
-      className: s.button,
+      className: c.button,
       fullWidth: !0,
       children: "Clear all"
     }), (0, a.jsx)("div", {
-      className: s.rowsContainer,
+      className: c.rowsContainer,
       children: t
     })]
   })

@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("5192"),
   I = n("776767"),
   A = n("689938"),
-  v = n("923555"),
-  N = n("501877"),
+  N = n("923555"),
+  v = n("501877"),
   x = n("806338");
 
 function M(e) {
@@ -48,7 +48,7 @@ function M(e) {
       } = e;
       return (0, a.jsx)(d.Clickable, {
         tag: "span",
-        className: v.username,
+        className: N.username,
         onClick: M(x),
         onMouseEnter: s,
         onMouseLeave: r,
@@ -58,18 +58,18 @@ function M(e) {
           children: ["@", (0, a.jsx)(d.NameWithRole, {
             name: T.default.getName(n.guildId, null, t.user),
             color: null !== (l = null == x ? void 0 : x.colorString) && void 0 !== l ? l : void 0,
-            className: i()(v.__invalid_memberNameText)
+            className: i()(N.__invalid_memberNameText)
           })]
         })
       })
     }
   }), [M, t.user, n.guildId, x])();
   return (0, a.jsxs)("div", {
-    className: i()(N.modInfoItem, v.auditLogItem),
+    className: i()(v.modInfoItem, N.auditLogItem),
     children: [(0, a.jsxs)("div", {
-      className: v.auditLogItemTitleContainer,
+      className: N.auditLogItemTitleContainer,
       children: [(0, a.jsxs)("div", {
-        className: v.auditLogItemTitle,
+        className: N.auditLogItemTitle,
         children: [null != c && (0, a.jsx)(d.Text, {
           variant: "text-sm/semibold",
           color: "header-primary",
@@ -80,7 +80,7 @@ function M(e) {
           children: ["(", "string" == typeof E ? E : o()(E).fromNow(), ")"]
         })]
       }), (0, a.jsx)("div", {
-        className: v.auditLogItemDate,
+        className: N.auditLogItemDate,
         children: (0, a.jsx)(d.Text, {
           variant: "text-sm/medium",
           color: "header-primary",
@@ -88,9 +88,9 @@ function M(e) {
         })
       })]
     }), null != S && (0, a.jsx)("div", {
-      className: v.auditLogSecondaryContainer,
+      className: N.auditLogSecondaryContainer,
       children: (0, a.jsxs)("div", {
-        className: v.auditLogReason,
+        className: N.auditLogReason,
         children: [R, (0, a.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
@@ -99,9 +99,9 @@ function M(e) {
         })]
       })
     }), null == S && null != _ && (0, a.jsx)("div", {
-      className: v.auditLogSecondaryContainer,
+      className: N.auditLogSecondaryContainer,
       children: (0, a.jsxs)("div", {
-        className: v.auditLogSecondary,
+        className: N.auditLogSecondary,
         children: [R, (0, a.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
@@ -110,9 +110,9 @@ function M(e) {
         })]
       })
     }), null == S && null == _ && (0, a.jsx)("div", {
-      className: v.auditLogSecondaryContainer,
+      className: N.auditLogSecondaryContainer,
       children: (0, a.jsx)("div", {
-        className: v.auditLogSecondary,
+        className: N.auditLogSecondary,
         children: (0, a.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
@@ -121,7 +121,7 @@ function M(e) {
             log: t,
             guild: s,
             onContentClick: () => {},
-            className: v.auditLogExpandedChangeDetails
+            className: N.auditLogExpandedChangeDetails
           })
         })
       })

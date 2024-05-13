@@ -1,8 +1,8 @@
 "use strict";
 r.r(t), r("47120");
 var a, i, l, n, o = r("153832"),
-  c = r("756647"),
-  s = r("442837"),
+  s = r("756647"),
+  c = r("442837"),
   d = r("570140"),
   u = r("314897"),
   h = r("906467");
@@ -10,7 +10,7 @@ let m = 0,
   p = [],
   g = [],
   f = !1;
-class y extends(a = s.default.Store) {
+class y extends(a = c.default.Store) {
   initialize() {
     this.waitFor(h.default)
   }
@@ -42,7 +42,7 @@ n = "AnalyticsLogStore", (l = "displayName") in(i = y) ? Object.defineProperty(i
         key: (m++).toString(),
         event: t,
         properties: r,
-        fingerprint: null != (i = a) ? (0, c.extractId)(i) : u.default.getId(),
+        fingerprint: null != (i = a) ? (0, s.extractId)(i) : u.default.getId(),
         timestamp: new Date
       }]).length > 500 && p.shift()
     }

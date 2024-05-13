@@ -9,8 +9,8 @@ var a = r("735250"),
   l = r("848246"),
   n = r("442837"),
   o = r("481060"),
-  c = r("570140"),
-  s = r("485731"),
+  s = r("570140"),
+  c = r("485731"),
   d = r("594174"),
   u = r("246992"),
   h = r("416495");
@@ -60,13 +60,13 @@ function g() {
         popoutLayerContext: u.devToolsLayerContext
       })
     }), (0, a.jsx)(o.Button, {
-      onClick: () => void(c.default.dispatch({
+      onClick: () => void(s.default.dispatch({
         type: "PREMIUM_PERKS_DEMO_OVERRIDE",
         perkType: l.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
         user: e,
         available: t,
         activateSuccess: g
-      }), (0, s.hqStreamingSetEnabled)(!1), (0, s.hqStreamingPopoutDismissed)(!1), (0, s.hqStreamingFrameAnimationPlayed)(!1), (0, s.hqStreamingUnlockAnimationPlayed)(!1)),
+      }), (0, c.hqStreamingSetEnabled)(!1), (0, c.hqStreamingPopoutDismissed)(!1), (0, c.hqStreamingFrameAnimationPlayed)(!1), (0, c.hqStreamingUnlockAnimationPlayed)(!1)),
       children: "Update"
     })]
   })

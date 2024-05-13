@@ -38,8 +38,8 @@ t.default = e => {
     onView: L,
     onTagClick: O
   } = e, {
-    id: y,
-    discoverySplash: M,
+    id: M,
+    discoverySplash: y,
     icon: P,
     name: x,
     description: D,
@@ -49,8 +49,8 @@ t.default = e => {
   } = l, [G, k] = s.useState(!1), [w, F] = s.useState(!1), {
     analyticsLocations: B
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
-    id: y,
-    splash: M,
+    id: M,
+    splash: y,
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
@@ -60,7 +60,7 @@ t.default = e => {
         return v
     }
   }(R), Y = null !== (t = _.default.getGuildIconURL({
-    id: y,
+    id: M,
     icon: P,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {

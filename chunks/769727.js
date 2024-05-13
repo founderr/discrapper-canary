@@ -30,8 +30,8 @@ var a = n("735250"),
   R = n("981631"),
   L = n("308083"),
   O = n("689938"),
-  y = n("93118");
-let M = {
+  M = n("93118");
+let y = {
   [A.ClanDiscoveryMode.PLAYSTYLE]: I.PlayStyleSelector,
   [A.ClanDiscoveryMode.TRAITS]: I.TraitSelector,
   [A.ClanDiscoveryMode.GAMES]: I.GameSelector
@@ -53,11 +53,11 @@ function P(e) {
   let p = O.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
     I = O.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE;
   return C === A.ClanDiscoveryMode.ADMIN_UPSELL && (I = O.default.Messages.CLAN_DISCOVERY_PREPILOT_SUBTITLE, h === A.ClanDiscoveryGame.VALORANT ? p = O.default.Messages.CLAN_DISCOVERY_VALORANT_TITLE : h === A.ClanDiscoveryGame.GENSHIN && (p = O.default.Messages.CLAN_DISCOVERY_GENSHIN_TITLE)), (0, a.jsxs)("div", {
-    className: y.topPicks,
+    className: M.topPicks,
     children: [(0, a.jsxs)("div", {
-      className: y.topPicksHeader,
+      className: M.topPicksHeader,
       children: [(0, a.jsxs)("div", {
-        className: y.topPicksTitle,
+        className: M.topPicksTitle,
         children: [(0, a.jsx)(u.TrophyIcon, {
           color: "currentColor"
         }), (0, a.jsx)(d.Heading, {
@@ -66,19 +66,19 @@ function P(e) {
           children: p
         })]
       }), (0, a.jsx)("div", {
-        className: y.topPicksSpacer
+        className: M.topPicksSpacer
       }), (0, a.jsx)(d.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         children: I
       })]
     }), (0, a.jsx)("div", {
-      className: y.topPicksContent,
+      className: M.topPicksContent,
       children: m.map((e, t) => (0, a.jsx)(S.default, {
         clan: e,
         affinity: (0, v.getClanDiscoveryAffinity)(e, n),
         traitsToHighlight: l,
-        className: y.card,
+        className: M.card,
         index: t,
         source: R.AnalyticsSections.DISCOVER_SEARCH
       }, e.id))
@@ -143,7 +143,7 @@ let x = s.memo(function() {
       delay: 500
     }),
     f = s.useCallback(e => {
-      let t = M[e];
+      let t = y[e];
       return null == t ? null : (0, a.jsx)(p.default, {
         children: (0, a.jsx)(t, {})
       })
@@ -160,12 +160,12 @@ let x = s.memo(function() {
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(d.ScrollerAuto, {
           fade: !0,
-          className: y.scroller,
+          className: M.scroller,
           children: [i((e, t) => (0, a.jsx)(r.animated.div, {
             style: e,
             children: (0, a.jsx)(T.default, {})
           }, t)), u((e, t) => (0, a.jsx)(r.animated.div, {
-            className: y.content,
+            className: M.content,
             style: e,
             children: (0, a.jsx)(P, {})
           }, t))]
@@ -201,7 +201,7 @@ t.default = s.memo(function() {
       f.default.getDetectableGames()
     }, [])
   }(), (0, a.jsx)("main", {
-    className: y.container,
+    className: M.container,
     children: (0, a.jsx)(x, {})
   })
 })

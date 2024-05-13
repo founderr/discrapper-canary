@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return M
   }
 }), n("47120");
 var a = n("392711"),
@@ -38,7 +38,7 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class y {
+class M {
   loadServer() {
     for (let e of (g.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
     for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);

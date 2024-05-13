@@ -39,8 +39,8 @@ let g = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       description: R,
       learnMore: L,
       title: O,
-      videoPosterUrl: y,
-      videoUrl: M,
+      videoPosterUrl: M,
+      videoUrl: y,
       ctaOnClick: P
     } = function(e) {
       switch (e) {
@@ -85,8 +85,8 @@ let g = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
             className: I.content,
             children: [(0, l.jsx)(_.default, {
               className: I.video,
-              src: M,
-              poster: y,
+              src: y,
+              poster: M,
               width: 224,
               height: 126,
               loop: !0,

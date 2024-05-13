@@ -27,7 +27,7 @@ function C(e) {
     messagesCount: g,
     linksCount: S,
     mediaCount: _
-  } = (0, f.useServerActivityCountsForUser)(t, n), T = new Intl.NumberFormat(p.default.getLocale()).format(g), I = new Intl.NumberFormat(p.default.getLocale()).format(S), A = new Intl.NumberFormat(p.default.getLocale()).format(_), v = l.useCallback(async e => {
+  } = (0, f.useServerActivityCountsForUser)(t, n), T = new Intl.NumberFormat(p.default.getLocale()).format(g), I = new Intl.NumberFormat(p.default.getLocale()).format(S), A = new Intl.NumberFormat(p.default.getLocale()).format(_), N = l.useCallback(async e => {
     if (null == C) return;
     let a = (0, f.getSearchQueryForUser)(t, e);
     await (0, c.openGuildMemberModViewSidebar)(n, t, C.baseChannelId, {
@@ -57,7 +57,7 @@ function C(e) {
           color: "interactive-normal",
           children: T
         }),
-        onNavigate: g > 0 ? () => v(f.SearchKeyType.MESSAGES) : void 0
+        onNavigate: g > 0 ? () => N(f.SearchKeyType.MESSAGES) : void 0
       }), (0, a.jsx)(h.UserModInfoItem, {
         icon: (0, a.jsx)(r.LinkIcon, {
           width: h.USER_MOD_ICON_SIZE_PX,
@@ -76,7 +76,7 @@ function C(e) {
           color: "interactive-normal",
           children: I
         }),
-        onNavigate: S > 0 ? () => v(f.SearchKeyType.LINKS) : void 0
+        onNavigate: S > 0 ? () => N(f.SearchKeyType.LINKS) : void 0
       }), (0, a.jsx)(h.UserModInfoItem, {
         icon: (0, a.jsx)(i.ImagesIcon, {
           width: h.USER_MOD_ICON_SIZE_PX,
@@ -95,7 +95,7 @@ function C(e) {
           color: "interactive-normal",
           children: A
         }),
-        onNavigate: _ > 0 ? () => v(f.SearchKeyType.MEDIA) : void 0
+        onNavigate: _ > 0 ? () => N(f.SearchKeyType.MEDIA) : void 0
       })]
     })
   })

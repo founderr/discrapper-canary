@@ -30,8 +30,8 @@ var a = n("735250"),
   R = n("28476"),
   L = n("880257"),
   O = n("631885"),
-  y = n("457396"),
-  M = n("51596"),
+  M = n("457396"),
+  y = n("51596"),
   P = n("905423"),
   x = n("155409"),
   D = n("210887"),
@@ -214,7 +214,7 @@ let ee = e => {
       }
     })
   },
-  ei = () => (0, M.show)("DM_SEARCH");
+  ei = () => (0, y.show)("DM_SEARCH");
 
 function er(e) {
   switch (e) {
@@ -278,7 +278,7 @@ let eo = e => {
       }, "friends"), n && t ? (0, a.jsx)(et, {
         selected: null == c ? null != s && s.startsWith(X.Routes.APPLICATION_LIBRARY) : c.startsWith(X.Routes.APPLICATION_LIBRARY),
         hideGameUpdateProgressIndicator: s === X.Routes.APPLICATION_LIBRARY
-      }, "library") : null, (0, a.jsx)(y.NitroTabButton, {
+      }, "library") : null, (0, a.jsx)(M.NitroTabButton, {
         selected: null == c ? o : c.startsWith(X.Routes.APPLICATION_STORE),
         route: null == l || location.pathname.startsWith(X.Routes.ACTIVITIES) || location.pathname.startsWith(X.Routes.APPLICATION_STORE) ? X.Routes.APPLICATION_STORE : l,
         locationState: {

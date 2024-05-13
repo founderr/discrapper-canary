@@ -30,8 +30,8 @@ t.default = i.memo(function(e) {
     signHintButtonText: _,
     signHintHelperText: T,
     signHintPosition: I = "left"
-  } = e, A = i.useRef(null), [v, N] = i.useState(!1), x = i.useCallback(e => {
-    e.preventDefault(), e.stopPropagation(), null == l || l(), N(!0)
+  } = e, A = i.useRef(null), [N, v] = i.useState(!1), x = i.useCallback(e => {
+    e.preventDefault(), e.stopPropagation(), null == l || l(), v(!0)
   }, [l]), [M, R] = i.useState(!1), [y, L] = i.useState(!1), O = i.useRef(null), j = i.useCallback(e => {
     e && (O.current = setTimeout(() => {
       L(!0)
@@ -49,7 +49,7 @@ t.default = i.memo(function(e) {
     opacity: 0,
     top: -24,
     onRest: () => {
-      v && R(!0)
+      N && R(!0)
     }
   }));
   i.useEffect(() => {
@@ -65,11 +65,11 @@ t.default = i.memo(function(e) {
       opacity: 1,
       top: -24
     });
-    y && v && k({
+    y && N && k({
       opacity: 0,
       top: 0
     })
-  }, [y, v, I]), i.useEffect(() => () => {
+  }, [y, N, I]), i.useEffect(() => () => {
     null != O.current && clearTimeout(O.current)
   }, []);
   let H = o()(S.signHintAnimationContainer, M && S.noDisplay, "left" === I ? S.signTextLeft : S.signTextRight),
@@ -140,7 +140,7 @@ t.default = i.memo(function(e) {
           variant: "text-md/normal",
           color: "none",
           children: "x"
-        }), v ? (0, s.jsx)(c.Text, {
+        }), N ? (0, s.jsx)(c.Text, {
           variant: "text-lg/normal",
           color: "header-primary",
           className: S.signatureText,

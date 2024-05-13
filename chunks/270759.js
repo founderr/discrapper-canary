@@ -26,15 +26,15 @@ var a = n("735250"),
   R = n("666286"),
   L = n("596957"),
   O = n("981631"),
-  y = n("723359"),
-  M = n("689938"),
+  M = n("723359"),
+  y = n("689938"),
   P = n("915128");
 
 function x() {
   return (0, a.jsxs)("div", {
     className: P.inviteToolbar,
     children: [(0, a.jsx)(m.default, {
-      tooltip: M.default.Messages.NEW_GROUP_DM
+      tooltip: y.default.Messages.NEW_GROUP_DM
     }), (0, a.jsx)(C.default.Divider, {})]
   })
 }
@@ -45,7 +45,7 @@ t.default = function(e) {
   s.useEffect(() => {
     "true" === new URLSearchParams(n.search).get("confirm-age") && c.default.dispatch({
       type: "AGE_GATE_MODAL_OPEN",
-      source: y.AgeGateSource.DEEP_LINK_PROMPT
+      source: M.AgeGateSource.DEEP_LINK_PROMPT
     }).then(() => {
       l.replace(O.Routes.ME)
     })
@@ -64,9 +64,9 @@ t.default = function(e) {
     G = (0, T.useUID)();
   return (0, a.jsxs)("main", {
     className: P.container,
-    "aria-label": M.default.Messages.FRIENDS,
+    "aria-label": y.default.Messages.FRIENDS,
     children: [(0, a.jsx)(h.AppPageTitle, {
-      location: M.default.Messages.FRIENDS
+      location: y.default.Messages.FRIENDS
     }), (0, a.jsxs)(C.default, {
       className: (0, v.getThemeClass)(m),
       toolbar: (0, a.jsx)(x, {}),
@@ -78,9 +78,9 @@ t.default = function(e) {
         "aria-hidden": !0
       }), (0, a.jsx)(C.default.Title, {
         id: j,
-        children: M.default.Messages.FRIENDS
+        children: y.default.Messages.FRIENDS
       }), (0, a.jsx)(C.default.Divider, {}), (0, a.jsxs)(d.TabBar, {
-        "aria-label": M.default.Messages.FRIENDS,
+        "aria-label": y.default.Messages.FRIENDS,
         selectedItem: D,
         type: "top-pill",
         onItemSelect: e => {
@@ -90,16 +90,16 @@ t.default = function(e) {
         children: [(0, a.jsx)(d.TabBar.Item, {
           id: O.FriendsSections.ONLINE,
           className: P.item,
-          children: M.default.Messages.FRIENDS_SECTION_ONLINE
+          children: y.default.Messages.FRIENDS_SECTION_ONLINE
         }), (0, a.jsx)(d.TabBar.Item, {
           id: O.FriendsSections.ALL,
           className: P.item,
-          children: M.default.Messages.FRIENDS_SECTION_ALL
+          children: y.default.Messages.FRIENDS_SECTION_ALL
         }), (0, a.jsxs)(d.TabBar.Item, {
           id: O.FriendsSections.PENDING,
           className: P.item,
-          "aria-label": M.default.Messages.FRIENDS_SECTION_PENDING,
-          children: [M.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, a.jsx)(N.NumberBadge, {
+          "aria-label": y.default.Messages.FRIENDS_SECTION_PENDING,
+          children: [y.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, a.jsx)(N.NumberBadge, {
             count: b,
             className: P.badge,
             style: {
@@ -109,8 +109,8 @@ t.default = function(e) {
         }), U > 0 ? (0, a.jsxs)(d.TabBar.Item, {
           id: O.FriendsSections.SUGGESTIONS,
           className: P.item,
-          "aria-label": M.default.Messages.FRIENDS_SECTION_SUGGESTIONS,
-          children: [M.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(N.NumberBadge, {
+          "aria-label": y.default.Messages.FRIENDS_SECTION_SUGGESTIONS,
+          children: [y.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(N.NumberBadge, {
             count: U,
             className: P.badge,
             style: {
@@ -120,13 +120,13 @@ t.default = function(e) {
         }) : null, (0, a.jsx)(d.TabBar.Item, {
           id: O.FriendsSections.BLOCKED,
           className: P.item,
-          children: M.default.Messages.BLOCKED
+          children: y.default.Messages.BLOCKED
         }), (0, a.jsx)(d.TabBar.Item, {
-          "aria-label": M.default.Messages.FRIENDS_SECTION_ADD_FRIEND,
+          "aria-label": y.default.Messages.FRIENDS_SECTION_ADD_FRIEND,
           className: i()(P.item, P.addFriend),
           id: O.FriendsSections.ADD_FRIEND,
           children: (0, a.jsx)("span", {
-            children: M.default.Messages.FRIENDS_SECTION_ADD_FRIEND
+            children: y.default.Messages.FRIENDS_SECTION_ADD_FRIEND
           })
         })]
       })]

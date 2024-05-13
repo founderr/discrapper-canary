@@ -30,7 +30,7 @@ var l = n("481060"),
 function O() {
   null != a && (0, l.closeModal)(a)
 }
-class y extends r.default {
+class M extends r.default {
   _initialize() {
     i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("LOGOUT", O)
   }
@@ -57,8 +57,8 @@ class y extends r.default {
       let e = C.default.getGuild(O);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
-    let y = () => 0 === _.default.totalGuilds && !I.isPlatformEmbedded,
-      M = o.userNeedsAgeGate();
+    let M = () => 0 === _.default.totalGuilds && !I.isPlatformEmbedded,
+      y = o.userNeedsAgeGate();
     e = [{
       key: "Unified NUF Modal",
       open: async function e(e) {
@@ -105,11 +105,11 @@ class y extends r.default {
           modalKey: a
         })
       },
-      predicate: () => y() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => M() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "New User Age Gate",
       open: u.openNewUserAgeGateModal,
-      predicate: () => M && !y() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => y && !M() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
       open: e => u.openClaimAccountModal(I.isPlatformEmbedded, e),
@@ -148,4 +148,4 @@ class y extends r.default {
     }), t()
   }
 }
-t.default = new y
+t.default = new M

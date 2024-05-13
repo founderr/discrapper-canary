@@ -100,7 +100,7 @@ function T(e) {
   }, [t, T]);
   if (null == h) return null;
   let A = null == T ? void 0 : T.colorString,
-    v = p.default.getName(t, n, h);
+    N = p.default.getName(t, n, h);
   return (0, a.jsxs)("div", {
     className: C.userSection,
     children: [(0, a.jsx)(_, {
@@ -109,7 +109,7 @@ function T(e) {
     }), (0, a.jsx)(o.NameWithRole, {
       color: null != A ? A : void 0,
       roleName: I,
-      name: v,
+      name: N,
       className: C.userName
     }), S > 0 ? (0, a.jsx)("div", {
       className: C.additionalParticipantBadge,

@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("626135"),
   I = n("348600"),
   A = n("566620"),
-  v = n("480906"),
-  N = n("127255"),
+  N = n("480906"),
+  v = n("127255"),
   x = n("5200"),
   M = n("558317"),
   R = n("403404"),
@@ -53,7 +53,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
       location: "8009ca_3"
     }), {
       enableDeathByAiMiniShelfBanner: G
-    } = v.ExperimentDeathByAiMiniShelfBanner.useExperiment({
+    } = N.ExperimentDeathByAiMiniShelfBanner.useExperiment({
       location: "ActivitiesMiniShelf"
     }, {
       autoTrackExposure: !0
@@ -79,7 +79,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
       X = K === L.AppContext.POPOUT,
       Q = (0, c.useAnalyticsContext)(),
       J = function(e, t) {
-        return (0, N.default)({
+        return (0, v.default)({
           guildId: e,
           channel: t
         }).slice(0, 5)

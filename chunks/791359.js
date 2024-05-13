@@ -30,8 +30,8 @@ var a = n("735250"),
   R = n("981631"),
   L = n("674563"),
   O = n("689938"),
-  y = n("676563");
-let M = 15 * p.default.Millis.MINUTE,
+  M = n("676563");
+let y = 15 * p.default.Millis.MINUTE,
   P = (0, v.default)(function(e) {
     let {
       party: t,
@@ -62,7 +62,7 @@ let M = 15 * p.default.Millis.MINUTE,
         in_voice_channel: p,
         games_detected: e
       })
-    }, [_, C, m, p, E]), v = o()(I, M);
+    }, [_, C, m, p, E]), v = o()(I, y);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -83,7 +83,7 @@ let M = 15 * p.default.Millis.MINUTE,
           ...e,
           onMouseEnter: v,
           "aria-haspopup": "menu",
-          className: y.itemCard,
+          className: M.itemCard,
           active: n,
           children: (0, a.jsxs)("div", {
             children: [r, u]
@@ -135,21 +135,21 @@ function D() {
       quest: o.get(t.id)
     }, t.id)
   }) : (0, a.jsxs)("div", {
-    className: y.emptyCard,
+    className: M.emptyCard,
     children: [(0, a.jsx)(d.Heading, {
       variant: "heading-md/semibold",
-      className: y.emptyHeader,
+      className: M.emptyHeader,
       children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
     }), (0, a.jsx)(d.Text, {
       color: "none",
-      className: y.emptyText,
+      className: M.emptyText,
       variant: "text-sm/normal",
       children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
     })]
   }), (0, a.jsx)(a.Fragment, {
     children: f
   })) : (0, a.jsx)("div", {
-    className: y.emptyCard,
+    className: M.emptyCard,
     children: (0, a.jsx)(d.Spinner, {})
   })
 }

@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("480294"),
   L = n("683301"),
   O = n("430824"),
-  y = n("230307"),
-  M = n("502568"),
+  M = n("230307"),
+  y = n("502568"),
   P = n("900849"),
   x = n("879484"),
   D = n("117496"),
@@ -303,7 +303,7 @@ class q extends s.PureComponent {
         className: i()(Y.dragRegion, Y.pageHeaderDrag, {
           [Y.searchPageDrag]: d
         })
-      }), c.isMobile && (0, a.jsx)(M.default, {
+      }), c.isMobile && (0, a.jsx)(y.default, {
         children: (0, a.jsx)(s.Fragment, {})
       }), (0, a.jsx)(E.AdvancedScrollerAuto, {
         className: Y.scroller,
@@ -439,14 +439,14 @@ class q extends s.PureComponent {
     })
   }
 }
-let Q = f.default.connectStores([v.default, N.default, y.default, R.default, L.default, U.default, O.default], () => {
+let Q = f.default.connectStores([v.default, N.default, M.default, R.default, L.default, U.default, O.default], () => {
   var e;
   let t = B.LANGUAGE_OPTIONS,
     n = N.default.locale,
     a = null !== (e = o().find(t, {
       code: n
     })) && void 0 !== e ? e : t[0],
-    s = Object.keys(y.default.applicationStatistics),
+    s = Object.keys(M.default.applicationStatistics),
     l = R.default.hasConsented(H.Consents.PERSONALIZATION) && s.length > 0,
     i = L.default.getCurrentCategoryId(),
     r = L.default.getCurrentHomepageCategoryId();

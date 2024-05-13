@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("626135"),
   I = n("585483"),
   A = n("403182"),
-  v = n("127654"),
-  N = n("752305"),
+  N = n("127654"),
+  v = n("752305"),
   x = n("951211"),
   M = n("981631"),
   R = n("921944"),
@@ -104,7 +104,7 @@ function b(e) {
   }
 
   function H() {
-    T.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), U("/", (0, N.toRichValue)("/"))
+    T.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), U("/", (0, v.toRichValue)("/"))
   }
 
   function B() {
@@ -154,7 +154,7 @@ function b(e) {
       n = "txt",
       a = "",
       l = b.match(P);
-    null != l && (a = l[1], n = l[2], e = l[3], a += l[4]), (0, v.promptToUpload)([(0, A.makeFile)(new Blob([e], {
+    null != l && (a = l[1], n = l[2], e = l[3], a += l[4]), (0, N.promptToUpload)([(0, A.makeFile)(new Blob([e], {
       type: "text/plain"
     }), "message.".concat(n))], t, S), I.ComponentDispatch.dispatchToLastSubscribed(M.ComponentActions.CLEAR_TEXT), "" !== a && I.ComponentDispatch.dispatchToLastSubscribed(M.ComponentActions.INSERT_TEXT, {
       plainText: a
