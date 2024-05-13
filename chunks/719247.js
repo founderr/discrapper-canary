@@ -34,24 +34,26 @@ function T(e) {
     n = new Set;
   for (let a of e) {
     let e = function(e) {
-        return (0, m.isEntryExpired)(e) ? null : (0, m.isEntryActive)(e) && e.author_type === i.ContentInventoryAuthorType.USER ? c.default.getActivities(e.author_id).find(t => {
-          if (t.type === p.ActivityTypes.PLAYING && (0, h.isGamingLikeEntry)(e)) return function(e, t) {
-            let n = e.extra;
-            return null != n && ("application_id" in t && t.application_id === n.application_id || "game_name" in n && t.name === n.game_name)
-          }(e, t);
-          if (t.type === p.ActivityTypes.LISTENING && e.content_type === r.ContentInventoryEntryType.LISTENED_SESSION) {
-            var n, a, l, s, i;
-            return n = e, a = t, (null === (s = n.extra.entries[0]) || void 0 === s ? void 0 : null === (l = s.media) || void 0 === l ? void 0 : l.provider) === o.ContentInventoryListenedMediaProvider.SPOTIFY && (0, E.isSpotifyParty)(null === (i = a.party) || void 0 === i ? void 0 : i.id)
-          }
-          return !1
-        }) : void 0
-      }(a.content),
-      l = _(a.content);
-    n.add(l), void 0 !== e && e !== S.get(l) && (t.add(l), S.set(l, e))
+      return (0, m.isEntryExpired)(e) ? null : (0, m.isEntryActive)(e) && e.author_type === i.ContentInventoryAuthorType.USER ? c.default.getActivities(e.author_id).find(t => {
+        if (t.type === p.ActivityTypes.PLAYING && (0, h.isGamingLikeEntry)(e)) return function(e, t) {
+          let n = e.extra;
+          return null != n && ("application_id" in t && t.application_id === n.application_id || "game_name" in n && t.name === n.game_name)
+        }(e, t);
+        if (t.type === p.ActivityTypes.LISTENING && e.content_type === r.ContentInventoryEntryType.LISTENED_SESSION) {
+          var n, a, l, s, i;
+          return n = e, a = t, (null === (s = n.extra.entries[0]) || void 0 === s ? void 0 : null === (l = s.media) || void 0 === l ? void 0 : l.provider) === o.ContentInventoryListenedMediaProvider.SPOTIFY && (0, E.isSpotifyParty)(null === (i = a.party) || void 0 === i ? void 0 : i.id)
+        }
+        return !1
+      }) : void 0
+    }(a.content);
+    if (void 0 !== e) {
+      let l = _(a.content);
+      n.add(l), e !== S.get(l) && (t.add(l), S.set(l, e))
+    }
   }
   return {
     updatedKeys: t,
-    visitedKeys: n
+    matchedKeys: n
   }
 }
 
@@ -63,7 +65,7 @@ function I() {
   for (let t of f.default.getFeeds().values()) {
     let {
       updatedKeys: l,
-      visitedKeys: s
+      matchedKeys: s
     } = T(n.size > 0 ? t.entries.filter(e => !n.has(_(e.content))) : t.entries);
     for (let e of l) n.add(e);
     for (let e of s) a.add(e);

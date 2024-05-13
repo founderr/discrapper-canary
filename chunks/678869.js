@@ -49,11 +49,12 @@ function g(e) {
       end: a
     } = null !== (e = t.timestamps) && void 0 !== e ? e : {};
     if (null == n || null == a) return {};
-    let l = a - n,
-      s = i - n;
+    let l = Math.min(a, i),
+      s = a - n,
+      r = l - n;
     return {
       seekBarStyles: {
-        width: "".concat(Math.floor(s / l * 100), "%")
+        width: "".concat(Math.floor(r / s * 100), "%")
       },
       durationTimestamp: (0, o.formatActiveTimestamp)({
         start: a

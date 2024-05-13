@@ -75,10 +75,13 @@ let c = e => {
       days: Math.floor(a / o.default.Seconds.DAY)
     }
   },
-  f = (e, t) => c({
-    start: "id" in e ? u.default.extractTimestamp(e.id) : e.start,
-    now: t
-  }),
+  f = (e, t) => {
+    let n = "id" in e ? u.default.extractTimestamp(e.id) : e.start;
+    return c({
+      start: n,
+      now: "end" in e && null != e.end ? Math.min(e.end, t) : t
+    })
+  },
   h = (e, t) => {
     let {
       seconds: n,
