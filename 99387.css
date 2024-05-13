@@ -46011,6 +46011,11 @@ img.thumbnail__18ece {
     margin-bottom: 24px
 }
 
+.upsellSubtitle__944fa {
+    max-width: 400px;
+    margin-bottom: 24px
+}
+
 .upsellDetails_dbe31a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
