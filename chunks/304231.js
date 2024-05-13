@@ -78,13 +78,13 @@ t.default = s.memo(function(e) {
   let {
     selectedGame: t,
     setScreen: n
-  } = e, o = s.useRef(null), d = s.useRef(null), c = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [E, _] = s.useState(0), [I, g] = s.useState(0), T = (0, h.useClanDiscoveryUIStore)(e => e.setMode, i.default), A = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, i.default), N = s.useCallback(e => {
+  } = e, o = s.useRef(null), d = s.useRef(null), c = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [E, _] = s.useState(0), [I, g] = s.useState(0), T = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, i.default), A = (0, h.useClanDiscoveryUIStore)(e => e.previousMode, i.default), N = s.useCallback(e => {
     _(e), I < e && g(e)
   }, [I]), v = s.useCallback(() => {
-    0 === E ? n(h.ClanDiscoveryUserScreens.USER_UPSELL) : N(E - 1)
-  }, [E, n, N]), R = s.useCallback(() => {
-    2 === E ? T(h.ClanDiscoveryMode.DISCOVERY) : N(E + 1)
-  }, [T, E, N]), L = s.useMemo(() => 1 === E && null == A, [A, E]), O = s.useMemo(() => [{
+    0 === E ? (n(h.ClanDiscoveryUserScreens.USER_UPSELL), (0, h.setClanDiscoveryMode)(A)) : N(E - 1)
+  }, [E, A, n, N]), R = s.useCallback(() => {
+    2 === E ? (0, h.setClanDiscoveryMode)(h.ClanDiscoveryMode.DISCOVERY) : N(E + 1)
+  }, [E, N]), L = s.useMemo(() => 1 === E && null == T, [T, E]), O = s.useMemo(() => [{
     index: 0,
     name: C.default.Messages.CLAN_SETUP_GAMES_STEP
   }, {
@@ -93,7 +93,7 @@ t.default = s.memo(function(e) {
   }, {
     index: 2,
     name: C.default.Messages.CLAN_SETUP_UTILITY_TRAITS_STEP
-  }], []), y = (0, l.useSpring)({
+  }], []), M = (0, l.useSpring)({
     ref: o,
     from: {
       opacity: 0
@@ -102,7 +102,7 @@ t.default = s.memo(function(e) {
       opacity: 1
     },
     config: S
-  }), M = (0, l.useSpring)({
+  }), y = (0, l.useSpring)({
     ref: d,
     from: {
       opacity: 0,
@@ -116,10 +116,10 @@ t.default = s.memo(function(e) {
   });
   return (0, l.useChain)([o, d], [0, .2]), (0, a.jsxs)(l.animated.div, {
     className: m.container,
-    style: y,
+    style: M,
     children: [(0, a.jsx)(l.animated.div, {
       className: m.sequencer,
-      style: M,
+      style: y,
       children: (0, a.jsx)(p, {
         currentStep: E,
         selectedGame: t

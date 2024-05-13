@@ -67,35 +67,34 @@ function A(e) {
 function N() {
   var e;
   let t = (0, p.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
-    n = (0, p.useClanDiscoveryUIStore)(e => e.setMode, r.default),
-    l = s.useCallback(() => {
-      n(p.ClanDiscoveryMode.GAMES)
-    }, [n]),
-    i = null !== (e = (0, C.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
-    o = t.slice(0, 2),
-    u = t.length - 2,
-    c = (0, a.jsxs)("div", {
+    n = s.useCallback(() => {
+      (0, p.setClanDiscoveryMode)(p.ClanDiscoveryMode.GAMES)
+    }, []),
+    l = null !== (e = (0, C.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
+    i = t.slice(0, 2),
+    o = t.length - 2,
+    u = (0, a.jsxs)("div", {
       className: T.gamesTooltip,
-      children: [o.map(e => (0, a.jsx)(m.default, {
+      children: [i.map(e => (0, a.jsx)(m.default, {
         applicationId: e
-      }, e)), u > 0 && (0, a.jsx)(m.default, {
+      }, e)), o > 0 && (0, a.jsx)(m.default, {
         applicationId: t[2],
-        remainingGame: u
+        remainingGame: o
       })]
     }),
-    f = (0, a.jsx)(d.GameControllerIcon, {
+    c = (0, a.jsx)(d.GameControllerIcon, {
       className: T.filterPillIcon,
       color: "currentColor"
     });
   return (0, a.jsx)(A, {
-    icon: f,
+    icon: c,
     text: g.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
       count: t.length
     }),
-    tooltip: c,
-    onClick: l,
+    tooltip: u,
+    onClick: n,
     isActive: t.length > 0,
-    ariaLabel: i,
+    ariaLabel: l,
     autoWidth: !0
   })
 }
@@ -103,49 +102,47 @@ function N() {
 function v() {
   let e = s.useMemo(I.getPlaystyleOptions, []),
     t = (0, p.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
-    n = (0, p.useClanDiscoveryUIStore)(e => e.setMode, r.default),
-    l = null != t ? e[t] : null,
-    i = null == l ? void 0 : l.title,
-    o = s.useCallback(() => {
-      n(p.ClanDiscoveryMode.PLAYSTYLE)
-    }, [n]);
-  if (null == l || null == i) return null;
-  let u = (0, a.jsxs)(a.Fragment, {
+    n = null != t ? e[t] : null,
+    l = null == n ? void 0 : n.title,
+    i = s.useCallback(() => {
+      (0, p.setClanDiscoveryMode)(p.ClanDiscoveryMode.PLAYSTYLE)
+    }, []);
+  if (null == n || null == l) return null;
+  let o = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.Heading, {
         variant: "heading-xxl/medium",
-        children: l.emoji
+        children: n.emoji
       }), (0, a.jsxs)("div", {
         children: [(0, a.jsx)(h.Heading, {
           variant: "heading-md/medium",
-          children: l.title
+          children: n.title
         }), (0, a.jsx)(h.Text, {
           variant: "text-xs/normal",
-          children: l.subtitle
+          children: n.subtitle
         })]
       })]
     }),
-    d = (0, a.jsx)(f.ReactionIcon, {
+    u = (0, a.jsx)(f.ReactionIcon, {
       className: T.filterPillIcon,
       color: "currentColor"
     });
   return (0, a.jsx)(A, {
-    icon: d,
-    text: i,
-    tooltip: u,
-    onClick: o,
-    isActive: null != l,
-    ariaLabel: i
+    icon: u,
+    text: l,
+    tooltip: o,
+    onClick: i,
+    isActive: null != n,
+    ariaLabel: l
   })
 }
 
 function R() {
   let e = (0, p.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
-    t = (0, p.useClanDiscoveryUIStore)(e => e.setMode, r.default),
-    n = s.useCallback(() => {
-      t(p.ClanDiscoveryMode.TRAITS)
-    }, [t]);
+    t = s.useCallback(() => {
+      (0, p.setClanDiscoveryMode)(p.ClanDiscoveryMode.TRAITS)
+    }, []);
   if (null == e) return null;
-  let l = (0, a.jsx)("div", {
+  let n = (0, a.jsx)("div", {
       className: T.traitsTooltip,
       children: e.map(e => (0, a.jsx)("div", {
         className: T.trait,
@@ -156,26 +153,25 @@ function R() {
         })
       }, e))
     }),
-    i = (0, a.jsx)(E.TagIcon, {
+    l = (0, a.jsx)(E.TagIcon, {
       className: T.filterPillIcon,
       color: "currentColor"
     });
   return (0, a.jsx)(A, {
-    icon: i,
+    icon: l,
     text: g.default.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
-    tooltip: l,
-    onClick: n,
+    tooltip: n,
+    onClick: t,
     isActive: e.length > 0,
     ariaLabel: e.join(", ")
   })
 }
 
 function L() {
-  let e = (0, p.useClanDiscoveryUIStore)(e => e.setMode, r.default),
-    t = (0, o.useStateFromStoresArray)([S.default], () => Object.values(S.default.getGuilds()));
-  return (0, _.useAnyClanPrepilotExperimentEnabled)(t, "clan_discovery_add_clan") ? (0, a.jsxs)(h.Clickable, {
+  let e = (0, o.useStateFromStoresArray)([S.default], () => Object.values(S.default.getGuilds()));
+  return (0, _.useAnyClanPrepilotExperimentEnabled)(e, "clan_discovery_add_clan") ? (0, a.jsxs)(h.Clickable, {
     className: i()(T.buttonPill),
-    onClick: () => e(p.ClanDiscoveryMode.ADMIN_UPSELL),
+    onClick: () => (0, p.setClanDiscoveryMode)(p.ClanDiscoveryMode.ADMIN_UPSELL),
     children: [(0, a.jsx)(c.PlusSmallIcon, {
       className: T.filterPillIcon,
       color: "currentColor"

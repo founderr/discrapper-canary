@@ -1,57 +1,59 @@
 "use strict";
 a.r(t), a.d(t, {
   addGuildCategory: function() {
-    return x
-  },
-  deleteGuildCategory: function() {
     return _
   },
-  fetchMetadataForGuild: function() {
-    return c
+  deleteGuildCategory: function() {
+    return g
   },
-  fetchSlugForGuild: function() {
+  fetchMetadataForGuild: function() {
     return d
   },
+  fetchSlugForGuild: function() {
+    return u
+  },
   maybeFetchGuildDiscoveryCategories: function() {
-    return o
+    return c
   },
   saveGuildMetadata: function() {
-    return C
+    return x
   },
   updateGuildDiscoveryMetadataAbout: function() {
-    return p
-  },
-  updateGuildDiscoveryMetadataIsPublished: function() {
-    return h
-  },
-  updateGuildDiscoveryMetadataReasonsToJoin: function() {
     return E
   },
-  updateGuildDiscoveryMetadataSocialLinks: function() {
+  updateGuildDiscoveryMetadataIsPublished: function() {
+    return p
+  },
+  updateGuildDiscoveryMetadataReasonsToJoin: function() {
     return T
   },
+  updateGuildDiscoveryMetadataSocialLinks: function() {
+    return C
+  },
   updateGuildEmojiDiscoverabilityEnabled: function() {
-    return m
+    return h
   },
   updateGuildKeywords: function() {
-    return f
+    return m
   },
   updateGuildPrimaryCategory: function() {
-    return u
+    return f
   }
 });
 var n = a("544891"),
   r = a("570140"),
   s = a("706454"),
-  i = a("150192"),
-  l = a("981631");
-async function o() {
+  i = a("683301"),
+  l = a("150192"),
+  o = a("981631");
+async function c() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    a = s.default.locale;
-  if (a === i.default.getFetchedLocale()) return;
-  let o = await n.HTTP.get({
-    url: l.Endpoints.GUILD_DISCOVERY_CATEGORIES,
+    a = s.default.locale,
+    c = t && !i.default.getIsReady();
+  if (a === l.default.getFetchedLocale() && !c) return;
+  let d = await n.HTTP.get({
+    url: o.Endpoints.GUILD_DISCOVERY_CATEGORIES,
     query: {
       locale: a,
       primary_only: e
@@ -60,33 +62,33 @@ async function o() {
   });
   r.default.dispatch({
     type: "GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS",
-    categories: o.body,
+    categories: d.body,
     locale: a,
     forClanDiscovery: t
   })
 }
-async function c(e) {
+async function d(e) {
   try {
     let {
       primary_category_id: t,
       category_ids: a,
       keywords: s,
       emoji_discoverability_enabled: i,
-      partner_actioned_timestamp: o,
+      partner_actioned_timestamp: l,
       partner_application_timestamp: c,
       is_published: d,
       reasons_to_join: u,
       social_links: f,
       about: m
     } = (await n.HTTP.get({
-      url: l.Endpoints.GUILD_DISCOVERY_METADATA(e),
+      url: o.Endpoints.GUILD_DISCOVERY_METADATA(e),
       oldFormErrors: !0
     })).body, h = {
       primaryCategoryId: t,
       secondaryCategoryIds: a,
       keywords: s,
       emojiDiscoverabilityEnabled: i,
-      partnerActionedTimestamp: o,
+      partnerActionedTimestamp: l,
       partnerApplicationTimestamp: c,
       isPublished: d,
       reasonsToJoin: u,
@@ -104,10 +106,10 @@ async function c(e) {
     })
   }
 }
-async function d(e) {
+async function u(e) {
   try {
     let t = (await n.HTTP.get({
-      url: l.Endpoints.GUILD_DISCOVERY_SLUG(e)
+      url: o.Endpoints.GUILD_DISCOVERY_SLUG(e)
     })).body.slug;
     r.default.dispatch({
       type: "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS",
@@ -121,7 +123,7 @@ async function d(e) {
   }
 }
 
-function u(e, t) {
+function f(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -129,7 +131,7 @@ function u(e, t) {
   })
 }
 
-function f(e, t) {
+function m(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -137,7 +139,7 @@ function f(e, t) {
   })
 }
 
-function m(e, t) {
+function h(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -145,7 +147,7 @@ function m(e, t) {
   })
 }
 
-function h(e, t) {
+function p(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -153,7 +155,7 @@ function h(e, t) {
   })
 }
 
-function p(e, t) {
+function E(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -161,7 +163,7 @@ function p(e, t) {
   })
 }
 
-function E(e, t) {
+function T(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -169,20 +171,20 @@ function E(e, t) {
   })
 }
 
-function T(e, t) {
+function C(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
     socialLinks: t
   })
 }
-async function C(e) {
+async function x(e) {
   let {
     guildId: t,
     primaryCategoryId: a,
     keywords: s,
     emojiDiscoverabilityEnabled: i,
-    partnerActionedTimestamp: o,
+    partnerActionedTimestamp: l,
     partnerApplicationTimestamp: c,
     isPublished: d,
     reasonsToJoin: u,
@@ -202,11 +204,11 @@ async function C(e) {
       social_links: g,
       about: I
     } = (await n.HTTP.patch({
-      url: l.Endpoints.GUILD_DISCOVERY_METADATA(t),
+      url: o.Endpoints.GUILD_DISCOVERY_METADATA(t),
       body: {
         primary_category_id: a,
         emoji_discoverability_enabled: i,
-        partner_actioned_timestamp: o,
+        partner_actioned_timestamp: l,
         partner_application_timestamp: c,
         keywords: s,
         is_published: d,
@@ -241,9 +243,9 @@ async function C(e) {
   }
 }
 
-function x(e, t) {
+function _(e, t) {
   n.HTTP.put({
-    url: l.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
+    url: o.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
     oldFormErrors: !0
   }).then(() => {
     r.default.dispatch({
@@ -260,9 +262,9 @@ function x(e, t) {
   })
 }
 
-function _(e, t) {
+function g(e, t) {
   n.HTTP.del({
-    url: l.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
+    url: o.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
     oldFormErrors: !0
   }).then(() => {
     r.default.dispatch({

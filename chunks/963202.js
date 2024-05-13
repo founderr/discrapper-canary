@@ -93,16 +93,19 @@ function d(e) {
 }
 
 function _(e) {
-  return (null == e ? void 0 : e.hasFeature(a.GuildFeatures.CLAN_PILOT_VALORANT)) === !0 && (null == e ? void 0 : e.hasFeature(a.GuildFeatures.CLAN)) === !1
+  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  return null != e && e.hasFeature(a.GuildFeatures.CLAN_PILOT_VALORANT) && (t || !e.hasFeature(a.GuildFeatures.CLAN))
 }
 
 function c(e) {
-  return (null == e ? void 0 : e.hasFeature(a.GuildFeatures.CLAN_PILOT_GENSHIN)) === !0 && (null == e ? void 0 : e.hasFeature(a.GuildFeatures.CLAN)) === !1
+  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  return null != e && e.hasFeature(a.GuildFeatures.CLAN_PILOT_GENSHIN) && (t || !e.hasFeature(a.GuildFeatures.CLAN))
 }
 
 function E(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    i = s.useExperiment({
+    i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+    r = s.useExperiment({
       location: t
     }, {
       autoTrackExposure: n
@@ -111,11 +114,12 @@ function E(e, t) {
     let {
       guilds: t,
       valorantConfig: n,
-      genshinConfig: i
-    } = e, r = t.filter(c), a = r.length > 0 && i.enableClanCreation, s = t.filter(_), o = s.length > 0 && n.enableClanCreation, l = [];
-    return a && r.forEach(e => l.push(e)), o && s.forEach(e => l.push(e)), {
-      guilds: l,
-      enableClanCreation: o || a,
+      genshinConfig: i,
+      includeConverted: r = !1
+    } = e, a = t.filter(e => c(e, r)), s = a.length > 0 && i.enableClanCreation, o = t.filter(e => _(e, r)), l = o.length > 0 && n.enableClanCreation, u = [];
+    return s && a.forEach(e => u.push(e)), l && o.forEach(e => u.push(e)), {
+      guilds: u,
+      enableClanCreation: l || s,
       defaultGameId: d({
         valorantConfig: n,
         genshinConfig: i
@@ -123,12 +127,13 @@ function E(e, t) {
     }
   }({
     guilds: e,
-    valorantConfig: i,
+    valorantConfig: r,
     genshinConfig: o.useExperiment({
       location: t
     }, {
       autoTrackExposure: n
-    })
+    }),
+    includeConverted: i
   })
 }
 

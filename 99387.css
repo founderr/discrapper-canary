@@ -43239,6 +43239,10 @@ img.thumbnail__18ece {
     color: var(--content-inventory-overlay-text-secondary)
 }
 
+.streamingPopoutHero__03808 {
+    gap: 0
+}
+
 .listeningTimeline_ec63b6 {
     display: flex;
     flex-direction: row;

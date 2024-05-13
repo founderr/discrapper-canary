@@ -1,10 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
-  useGuildsEligibleForClanConversion: function() {
+  isEligibleGuildForClanConversion: function() {
     return d
   },
-  useIsGuildEligibleForClanConversion: function() {
+  useGuildsEligibleForClanConversion: function() {
     return c
+  },
+  useIsGuildEligibleForClanConversion: function() {
+    return f
   }
 }), n("47120");
 var l = n("470079"),
@@ -16,18 +19,20 @@ var l = n("470079"),
   u = n("231338");
 
 function d(e) {
+  let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default];
+  return !e.hasFeature(o.GuildFeatures.CLAN) && t.can(u.Permissions.ADMINISTRATOR, e)
+}
+
+function c(e) {
   let t = (0, a.useStateFromStoresArray)([i.default], () => Object.values(i.default.getGuilds())),
     {
       guilds: n,
       enableClanCreation: l
     } = (0, s.useAnyClanPrepilotExperiment)(t, e);
-  return (0, a.useStateFromStoresArray)([r.default], () => l ? n.filter(e => (function(e) {
-    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default];
-    return !e.hasFeature(o.GuildFeatures.CLAN) && t.can(u.Permissions.ADMINISTRATOR, e)
-  })(e, [r.default])) : [])
+  return (0, a.useStateFromStoresArray)([r.default], () => l ? n.filter(e => d(e, [r.default])) : [])
 }
 
-function c(e, t) {
-  let n = d(t);
+function f(e, t) {
+  let n = c(t);
   return l.useMemo(() => new Set(n.map(e => e.id)), [n]).has(e)
 }

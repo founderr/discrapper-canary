@@ -30,5 +30,6 @@ e.exports = {
   upsellIcon: "upsellIcon__05e46",
   upsellSelect: "upsellSelect_e29580",
   upsellStaticHeader: "upsellStaticHeader__04b50",
+  upsellSubtitle: "upsellSubtitle__944fa",
   upsellTitle: "upsellTitle__75ee7"
 }
