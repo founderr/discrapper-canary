@@ -16,26 +16,26 @@ var n = a("735250"),
   E = a("661926");
 let T = "clan-badge-render",
   C = [f.ClanBadgeKind.SWORD, f.ClanBadgeKind.WATER_DROP, f.ClanBadgeKind.SKULL, f.ClanBadgeKind.TOADSTOOL, f.ClanBadgeKind.MOON, f.ClanBadgeKind.LIGHTNING, f.ClanBadgeKind.LEAF, f.ClanBadgeKind.HEART, f.ClanBadgeKind.FIRE, f.ClanBadgeKind.COMPASS, f.ClanBadgeKind.CROSSHAIRS, f.ClanBadgeKind.FLOWER, f.ClanBadgeKind.FORCE, f.ClanBadgeKind.GEM, f.ClanBadgeKind.LAVA, f.ClanBadgeKind.PSYCHIC, f.ClanBadgeKind.SMOKE, f.ClanBadgeKind.SNOW, f.ClanBadgeKind.SOUND, f.ClanBadgeKind.SUN, f.ClanBadgeKind.WIND],
-  x = f.CLAN_BADGE_PALETTE_PRESETS.length;
+  _ = f.CLAN_BADGE_PALETTE_PRESETS.length;
 t.default = e => {
   let {
     handleUpdate: t,
     badge: a,
     primaryColor: s,
-    secondaryColor: _,
+    secondaryColor: x,
     tag: g,
     error: I,
     furthestStep: N
   } = e, v = r.useRef(null), [A, S] = r.useState(a), [L, y] = r.useState({
     primary: null != s ? s : f.CLAN_BADGE_PRIMARY_DEFAULT,
-    secondary: null != _ ? _ : f.CLAN_BADGE_SECONDARY_DEFAULT
+    secondary: null != x ? x : f.CLAN_BADGE_SECONDARY_DEFAULT
   }), [R, b] = r.useState(() => {
     for (let e = 0; e < f.CLAN_BADGE_PALETTE_PRESETS.length; e++)
-      if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === s && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === _) return e;
-    return x
-  }), [M, j] = r.useState(!1), O = x === R ? L : f.CLAN_BADGE_PALETTE_PRESETS[R];
+      if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === s && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === x) return e;
+    return _
+  }), [M, j] = r.useState(!1), O = _ === R ? L : f.CLAN_BADGE_PALETTE_PRESETS[R];
   return r.useEffect(() => {
-    if (A === a && O.primary === s && O.secondary === _) return;
+    if (A === a && O.primary === s && O.secondary === x) return;
     let e = document.querySelector("#".concat(T));
     if (null != e) {
       let a = new XMLSerializer().serializeToString(e),
@@ -63,7 +63,7 @@ t.default = e => {
       badgeSecondaryColor: O.secondary,
       ...n
     })
-  }, [t, A, O.primary, O.secondary, N, a, s, _]), (0, n.jsxs)("div", {
+  }, [t, A, O.primary, O.secondary, N, a, s, x]), (0, n.jsxs)("div", {
     className: E.slideContent,
     children: [(0, n.jsx)(c.Heading, {
       variant: "heading-xxl/medium",
@@ -140,10 +140,10 @@ t.default = e => {
               children: e => (0, n.jsx)(c.Clickable, {
                 ...e,
                 onClick: () => {
-                  b(x), j(e => !e)
+                  b(_), j(e => !e)
                 },
                 className: i()(p.badgeAssetContainer, {
-                  [p.badgeAssetContainerSelected]: x === R
+                  [p.badgeAssetContainerSelected]: _ === R
                 }),
                 children: (0, n.jsx)(o.EyeDropperIcon, {
                   width: 20,

@@ -7,7 +7,7 @@ t.default = e => {
   let {
     width: t = 86,
     height: n = 86,
-    ...i
+    ...l
   } = e;
   return (0, a.jsxs)("svg", {
     width: t,
@@ -16,7 +16,7 @@ t.default = e => {
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
     ...(0, s.default)({
-      ...i
+      ...l
     }),
     children: [(0, a.jsx)("ellipse", {
       cx: "43.0747",

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("872810"),
   s = n("594190"),
-  i = n("199902"),
-  l = n("592125"),
+  l = n("199902"),
+  i = n("592125"),
   r = n("430824"),
   o = n("131951"),
   u = n("496675"),
@@ -19,11 +19,11 @@ var a = n("872810"),
 
 function _() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  if (!(0, E.default)(o.default) || null != i.default.getCurrentUserActiveStream()) return !1;
+  if (!(0, E.default)(o.default) || null != l.default.getCurrentUserActiveStream()) return !1;
   let t = (0, h.default)(s.default, c.default);
   if (null == t || t.isLauncher && !e) return !1;
   let n = d.default.getVoiceChannelId(),
-    _ = l.default.getChannel(n);
+    _ = i.default.getChannel(n);
   if (null == _) return !1;
   let C = _.getGuildId();
   return !!(0, f.canStreamInChannel)(_, r.default, u.default, !1) && ((0, a.startStream)(C, _.id, {

@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("5881"),
   M = n("874137"),
   R = n("340100"),
-  y = n("611855"),
-  L = n("644646"),
+  L = n("611855"),
+  y = n("644646"),
   O = n("670638"),
   j = n("667105"),
   P = n("860151"),
@@ -120,7 +120,7 @@ t.default = function(e) {
       isQuestBarShowing: ec,
       isCurrentUserCallParticipant: J
     }), eu || ei || ec || !J) return null;
-  let ef = (0, a.jsx)(L.default, {
+  let ef = (0, a.jsx)(y.default, {
     className: w.rewardTile,
     autoplay: k,
     quest: Z,
@@ -142,7 +142,7 @@ t.default = function(e) {
         onMouseLeave: G,
         children: [!er && (0, a.jsxs)("div", {
           className: w.rewardTileWrapper,
-          children: [ef, (0, a.jsx)(y.default, {
+          children: [ef, (0, a.jsx)(L.default, {
             bgOpacity: .32,
             className: w.promotedTag
           })]

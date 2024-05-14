@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("392711"),
   o = n("685626"),
   u = n("442837"),
@@ -37,11 +37,11 @@ function R(e) {
   let {
     guildId: t,
     onClose: n,
-    gameId: i
+    gameId: l
   } = e, R = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
     progress: L,
     errors: O,
-    submitting: y
+    submitting: M
   } = (0, u.useStateFromStoresObject)([C.default], () => {
     var e, n, a, s;
     return {
@@ -49,13 +49,13 @@ function R(e) {
       errors: null === (n = C.default.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
       submitting: null === (a = C.default.getStateForGuild(t)) || void 0 === a ? void 0 : a.submitting
     }
-  }), M = s.useMemo(() => (0, T.getClanSetupProgressSteps)(O), [O]), [P, x] = s.useState(!1), [D, b] = s.useState(window.innerWidth), [U, j] = s.useState(1), [G, k] = s.useState(!0), w = (0, m.useFullScreenModalAnimationStyle)(), F = (0, o.useSpring)({
+  }), y = s.useMemo(() => (0, T.getClanSetupProgressSteps)(O), [O]), [P, x] = s.useState(!1), [D, b] = s.useState(window.innerWidth), [U, j] = s.useState(1), [G, k] = s.useState(!0), w = (0, m.useFullScreenModalAnimationStyle)(), B = (0, o.useSpring)({
     opacity: U,
     config: v,
     onStart: () => k(!0),
     onRest: () => k(1 === U),
     immediate: R
-  }), B = (0, o.useSpring)({
+  }), F = (0, o.useSpring)({
     transform: "translateX(".concat(1 === U ? 0 : -1 * D / 2 + 190, "px)"),
     config: v,
     immediate: R
@@ -82,7 +82,7 @@ function R(e) {
     config: v,
     immediate: R
   }), Y = s.useCallback(e => {
-    if (e === M.length) j(0), (0, _.trackConvertStepViewed)(t, "signature");
+    if (e === y.length) j(0), (0, _.trackConvertStepViewed)(t, "signature");
     else if (0 === U) j(1);
     else {
       var n;
@@ -91,17 +91,17 @@ function R(e) {
         furthestStep: Math.max(null !== (n = L.furthestStep) && void 0 !== n ? n : 0, e)
       })
     }
-  }, [U, t, L.furthestStep, M.length]);
+  }, [U, t, L.furthestStep, y.length]);
   s.useEffect(() => {
     (0, _.trackConvertStepViewed)(t, (0, _.getProgressStepAnalyticsName)(L.currentStep))
   }, [t, L.currentStep]), s.useEffect(() => {
     let e = (0, E.getResizeObserver)((0, r.debounce)(() => b(window.innerWidth), 250));
     return (0, E.watch)(e, document.body), () => (0, E.unwatch)(e, document.body)
   }, [U, G]), s.useEffect(() => {
-    null != i && (0, h.updateClanSetup)(t, {
-      requiredGameId: i
+    null != l && (0, h.updateClanSetup)(t, {
+      requiredGameId: l
     })
-  }, [i, t]);
+  }, [l, t]);
   let W = s.useMemo(() => null != O && Object.values(O).some(e => null != e), [O]),
     K = s.useMemo(() => null != O && Object.values(O).length > 0 ? (0, T.getClanSetupProgressSteps)(O).find(e => e.hasError) : null, [O]),
     z = s.useCallback(() => {
@@ -157,36 +157,36 @@ function R(e) {
         children: [(0, a.jsxs)("div", {
           className: N.panel,
           children: [(0, a.jsx)(o.animated.div, {
-            style: F,
-            className: l()(N.stepsContainer, {
+            style: B,
+            className: i()(N.stepsContainer, {
               [N.hidden]: !G
             }),
             children: (0, a.jsx)(I.default, {
               guildId: t
             })
           }), (0, a.jsx)("div", {
-            className: l()(N.navigationContainer, {
+            className: i()(N.navigationContainer, {
               [N.elevatedNavigationContainer]: !G
             }),
             children: (0, a.jsx)(p.default, {
-              steps: M,
+              steps: y,
               progress: L,
               updateCurrentStep: Y,
-              animationStyle: F,
-              animationClassName: l()({
+              animationStyle: B,
+              animationClassName: i()({
                 [N.hidden]: !G
               })
             })
           })]
         }), (0, a.jsx)(o.animated.div, {
-          style: F,
-          className: l()(N.divider, {
+          style: B,
+          className: i()(N.divider, {
             [N.hidden]: !G,
             [N.dividerResponsive]: G
           })
         }), (0, a.jsx)(o.animated.div, {
-          style: B,
-          className: l()(N.sidebar, {
+          style: F,
+          className: i()(N.sidebar, {
             [N.sidebarResponsive]: G
           }),
           children: (0, a.jsx)(g.default, {
@@ -213,7 +213,7 @@ function R(e) {
             ...e,
             themeColor: L.brandPrimaryColor,
             disabled: !P || W,
-            submitting: y,
+            submitting: M,
             look: d.Button.Looks.FILLED,
             size: d.Button.Sizes.MEDIUM,
             color: d.Button.Colors.BRAND,

@@ -17,7 +17,7 @@ var a = s("735250"),
   _ = s("899457"),
   g = s("975266");
 
-function h(e, t, s) {
+function I(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -25,8 +25,8 @@ function h(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let I = ["svg", "png", "gif", "webp"],
-  N = [...I, "jpg", "jpeg"],
+let h = ["svg", "png", "gif", "webp"],
+  N = [...h, "jpg", "jpeg"],
   p = Array.from(new Set([...N, "gif", "mp4", "webm"]));
 
 function C() {
@@ -102,7 +102,7 @@ let A = {
 
 function O() {
   var e;
-  let [t, s] = n.useState(A), [l, h] = n.useState(_.UserState.UNENROLLED), [O, x] = n.useState(t.config.variants);
+  let [t, s] = n.useState(A), [l, I] = n.useState(_.UserState.UNENROLLED), [O, x] = n.useState(t.config.variants);
 
   function R(e, a) {
     s({
@@ -190,7 +190,7 @@ function O() {
         title: "Logotype",
         assetKey: "logotype",
         onFileChange: R,
-        filters: I,
+        filters: h,
         initialValue: t.config.assets.logotype
       }), (0, a.jsx)(T.default, {
         title: "Quest Bar Hero Asset",
@@ -252,7 +252,7 @@ function O() {
         })]
       }), (0, a.jsx)(_.default, {
         onChange: function(e) {
-          switch (h(e), e) {
+          switch (I(e), e) {
             case _.UserState.UNENROLLED:
               s({
                 ...t,
@@ -390,10 +390,10 @@ class x extends n.Component {
     }) : (0, a.jsx)(O, {}, t)
   }
   constructor(...e) {
-    super(...e), h(this, "state", {
+    super(...e), I(this, "state", {
       error: null,
       renderKey: 0
-    }), h(this, "handleResetState", () => {
+    }), I(this, "handleResetState", () => {
       this.setState(e => ({
         error: null,
         renderKey: e.renderKey + 1

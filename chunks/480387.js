@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 });
 var a = n("213919"),
   s = n("544891"),
-  i = n("570140"),
-  l = n("893776"),
+  l = n("570140"),
+  i = n("893776"),
   r = n("710845"),
   o = n("314897"),
   u = n("726745"),
@@ -24,19 +24,19 @@ function f() {
   let e = o.default.getId();
   u.default.getUsers().forEach(async t => {
     let n, {
-        id: l
+        id: i
       } = t,
-      r = a.getToken(l);
+      r = a.getToken(i);
     if (null == r || "" === r) {
-      i.default.dispatch({
+      l.default.dispatch({
         type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE",
-        userId: l
+        userId: i
       });
       return
     }
-    i.default.dispatch({
+    l.default.dispatch({
       type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST",
-      userId: l
+      userId: i
     });
     try {
       n = await s.HTTP.get({
@@ -48,18 +48,18 @@ function f() {
       })
     } catch (t) {
       let e = (null == t ? void 0 : t.status) === 401 || (null == t ? void 0 : t.status) === 403;
-      i.default.dispatch({
+      l.default.dispatch({
         type: e ? "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE" : "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS",
-        userId: l
+        userId: i
       });
       return
     }
-    i.default.dispatch({
-      type: e === l ? "CURRENT_USER_UPDATE" : "USER_UPDATE",
+    l.default.dispatch({
+      type: e === i ? "CURRENT_USER_UPDATE" : "USER_UPDATE",
       user: n.body
-    }), i.default.dispatch({
+    }), l.default.dispatch({
       type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS",
-      userId: l
+      userId: i
     })
   })
 }
@@ -69,14 +69,14 @@ function E(e, t) {
     switchSynchronously: t
   });
   let n = a.getToken(e);
-  return null == n ? (c.log("Switching accounts failed because there was no token"), i.default.dispatch({
+  return null == n ? (c.log("Switching accounts failed because there was no token"), l.default.dispatch({
     type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE",
     userId: e
-  }), Promise.resolve()) : l.default.switchAccountToken(n, t)
+  }), Promise.resolve()) : i.default.switchAccountToken(n, t)
 }
 
 function h(e) {
-  i.default.dispatch({
+  l.default.dispatch({
     type: "MULTI_ACCOUNT_REMOVE_ACCOUNT",
     userId: e
   })

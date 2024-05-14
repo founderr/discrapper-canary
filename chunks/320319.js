@@ -41,7 +41,7 @@ let x = {
       forceShadow: m,
       cardType: g,
       confettiCanvas: C
-    } = e, D = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), [U, j] = r.useState(!1), [y, G] = r.useState(!1), B = (0, f.useFreeBoostUserTenureReward)(), k = (0, f.useShouldShowConfettiAndGlow)(), [H, F] = r.useState(!1), [w, K] = r.useState(t === N.PerksDiscoverabilityCardTypes.FREE_BOOST && k && (null == B ? void 0 : B.nitroTenureStatus) === P.NitroRewardStatus.REDEEMABLE);
+    } = e, D = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), [U, j] = r.useState(!1), [G, y] = r.useState(!1), B = (0, f.useFreeBoostUserTenureReward)(), k = (0, f.useShouldShowConfettiAndGlow)(), [H, F] = r.useState(!1), [w, K] = r.useState(t === N.PerksDiscoverabilityCardTypes.FREE_BOOST && k && (null == B ? void 0 : B.nitroTenureStatus) === P.NitroRewardStatus.REDEEMABLE);
     r.useEffect(() => {
       t === N.PerksDiscoverabilityCardTypes.FREE_BOOST && k && (null == B ? void 0 : B.nitroTenureStatus) === P.NitroRewardStatus.REDEEMABLE && K(!0)
     }, [k, t, B]);
@@ -72,9 +72,9 @@ let x = {
       onMouseEnter: $,
       ...e
     };
-    let et = z !== i || null == i || y || i === d.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI;
+    let et = z !== i || null == i || G || i === d.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI;
     return (r.useEffect(() => {
-      D && U && (G(!0), R.default.track(O.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+      D && U && (y(!0), R.default.track(O.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
         card_type: t
       }), null != i && X(M.ContentDismissActionType.TAKE_ACTION))
     }, [D, U, i, t, X]), (0, E.default)({
@@ -151,11 +151,11 @@ let x = {
         onClick: () => j(!0),
         className: n()(L.flipCard, L.clickable, {
           [L.flipped]: U,
-          [L.partialFlipCard]: !y && !U,
+          [L.partialFlipCard]: !G && !U,
           [L.reducedMotion]: D
         }),
         onTransitionEnd: e => {
-          U && "transform" === e.propertyName && e.target.classList.contains(L.flipCard) && (G(!0), R.default.track(O.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+          U && "transform" === e.propertyName && e.target.classList.contains(L.flipCard) && (y(!0), R.default.track(O.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
             card_type: t
           }), null != i && X(M.ContentDismissActionType.TAKE_ACTION))
         },

@@ -20,13 +20,13 @@ var a = s("735250"),
   m = s("853872"),
   _ = s("78839"),
   g = s("783739"),
-  h = s("981631"),
-  I = s("220439");
+  I = s("981631"),
+  h = s("220439");
 
 function N() {
   n.useEffect(() => {
     d.default.wait(() => {
-      u.fetchSubscriptions(), u.fetchPaymentSources(), (0, c.fetchGuildBoostSlots)(), (0, S.fetchPremiumSubscriptionPlans)(null, null, h.RevenueSurfaces.DISCOVERY), (0, c.fetchAppliedGuildBoostsForUser)(!0)
+      u.fetchSubscriptions(), u.fetchPaymentSources(), (0, c.fetchGuildBoostSlots)(), (0, S.fetchPremiumSubscriptionPlans)(null, null, I.RevenueSurfaces.DISCOVERY), (0, c.fetchAppliedGuildBoostsForUser)(!0)
     })
   }, []);
   let {
@@ -37,17 +37,17 @@ function N() {
     premiumSubscription: _.default.getPremiumTypeSubscription()
   })), s = (0, E.useSubscriptionPlansLoaded)(), l = (0, r.useStateFromStores)([m.default], () => m.default.hasFetchedPaymentSources), N = (0, r.useStateFromStores)([f.default], () => f.default.isFetchingCurrentUserAppliedBoosts);
   return ((0, T.useFetchEntitlementsForTenureReward)(), e && s && l && !N) ? (0, a.jsxs)("div", {
-    className: I.container,
+    className: h.container,
     children: [(0, a.jsx)("div", {
-      className: I.background
+      className: h.background
     }), (0, a.jsx)("div", {
-      className: I.content,
+      className: h.content,
       children: (0, a.jsx)(g.default, {
         premiumSubscription: t
       })
     })]
   }) : (0, a.jsx)("div", {
-    className: i()(I.container, I.loading),
+    className: i()(h.container, h.loading),
     children: (0, a.jsx)(o.Spinner, {})
   })
 }

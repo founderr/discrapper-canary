@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("773603");
 var a = n("735250"),
   s = n("470079"),
-  i = n("442837"),
-  l = n("447543"),
+  l = n("442837"),
+  i = n("447543"),
   r = n("703656"),
   o = n("430824"),
   u = n("701190"),
@@ -19,10 +19,10 @@ t.default = e => {
     inviteCode: n
   } = e, [C, m] = s.useState(h.WaveStates.INITIAL), [S, p] = s.useState(null != n);
   s.useEffect(() => {
-    null != n && l.default.resolveInvite(n, "Hub").finally(() => p(!1))
+    null != n && i.default.resolveInvite(n, "Hub").finally(() => p(!1))
   }, [n]);
-  let g = (0, i.useStateFromStores)([u.default], () => null != n ? u.default.getInvite(n) : null),
-    I = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(t));
+  let g = (0, l.useStateFromStores)([u.default], () => null != n ? u.default.getInvite(n) : null),
+    I = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(t));
   s.useEffect(() => {
     null != I && (0, r.transitionTo)(E.Routes.CHANNEL(t))
   }, [I, t]);

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var l = n("735250");
@@ -28,14 +28,14 @@ function h(e, t) {
   })
 }
 
-function p(e) {
+function m(e) {
   let {
     guildNode: t
-  } = e, n = t.id, s = (0, a.useStateFromStores)([r.default], () => r.default.getRequest(n)), p = (0, a.useStateFromStores)([r.default], () => r.default.getJoinRequestGuild(n), [n]), m = (0, a.useStateFromStores)([u.default], () => u.default.isFocused()), C = (0, a.useStateFromStores)([o.default], () => o.default.getGuildId());
-  return null == p ? null : (0, l.jsx)(d.default, {
+  } = e, n = t.id, s = (0, a.useStateFromStores)([r.default], () => r.default.getRequest(n)), m = (0, a.useStateFromStores)([r.default], () => r.default.getJoinRequestGuild(n), [n]), p = (0, a.useStateFromStores)([u.default], () => u.default.isFocused()), C = (0, a.useStateFromStores)([o.default], () => o.default.getGuildId());
+  return null == m ? null : (0, l.jsx)(d.default, {
     guildNode: t,
-    guild: p,
-    animatable: m,
+    guild: m,
+    animatable: p,
     draggable: !1,
     selected: n === C,
     preloadOnClick: !1,

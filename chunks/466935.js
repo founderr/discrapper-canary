@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("703656"),
   f = n("669405"),
   h = n("26290"),
-  p = n("434479"),
-  m = n("981631"),
+  m = n("434479"),
+  p = n("981631"),
   C = n("176505"),
   g = n("689938");
 
@@ -31,7 +31,7 @@ function E(e) {
       status: u.GuildJoinRequestApplicationStatuses.SUBMITTED,
       limit: d.MEMBER_APPLICATION_FETCH_LIMIT
     })
-  }, [t.id]), (0, l.jsx)(p.BasicChannelRow, {
+  }, [t.id]), (0, l.jsx)(m.BasicChannelRow, {
     id: "application-review-".concat(t.id),
     renderIcon: e => (0, l.jsx)(f.default, {
       className: e,
@@ -43,9 +43,9 @@ function E(e) {
     onClick: () => {
       (0, i.trackClanApplicationNavigation)({
         guildId: t.id,
-        source: m.AnalyticsSections.CHANNEL_LIST,
+        source: p.AnalyticsSections.CHANNEL_LIST,
         tab: C.StaticChannelRoute.MEMBER_APPLICATIONS
-      }), (0, c.transitionTo)(m.Routes.CHANNEL(t.id, C.StaticChannelRoute.MEMBER_APPLICATIONS))
+      }), (0, c.transitionTo)(p.Routes.CHANNEL(t.id, C.StaticChannelRoute.MEMBER_APPLICATIONS))
     },
     trailing: _ > 0 ? (0, l.jsx)(h.NumberBadge, {
       count: _

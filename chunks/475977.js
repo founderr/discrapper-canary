@@ -16,7 +16,7 @@ var a = s("735250"),
   m = s("689938"),
   _ = s("449221"),
   g = s("786792");
-let h = e => {
+let I = e => {
     let {
       artSrc: t
     } = e;
@@ -46,13 +46,13 @@ let h = e => {
       })]
     })
   },
-  I = e => {
+  h = e => {
     let {
       variation: t
     } = e;
-    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.GALAXY, () => (0, a.jsx)(h, {
+    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.GALAXY, () => (0, a.jsx)(I, {
       artSrc: s("161594")
-    })).otherwise(() => (0, a.jsx)(h, {
+    })).otherwise(() => (0, a.jsx)(I, {
       artSrc: s("353437")
     }))
   };
@@ -71,7 +71,7 @@ t.default = () => {
     style: {
       backgroundImage: "url(".concat(g, ")")
     },
-    children: [(0, a.jsx)(I, {
+    children: [(0, a.jsx)(h, {
       variation: s
     }), (0, a.jsx)(o.Button, {
       onClick: () => {

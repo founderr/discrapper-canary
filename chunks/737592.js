@@ -12,14 +12,14 @@ var a = n("120356"),
   c = n("952164"),
   f = n("131704"),
   h = n("314897"),
-  p = n("594174"),
-  m = n("409216"),
+  m = n("594174"),
+  p = n("409216"),
   C = n("768581"),
   g = n("51144"),
   E = n("754231"),
   _ = n("24285");
 
-function I(e) {
+function S(e) {
   let {
     guildId: t,
     member: n,
@@ -41,17 +41,17 @@ function I(e) {
   })
 }
 
-function S(e) {
+function I(e) {
   let {
     members: t,
     guildId: n
   } = e;
-  return (0, l.jsx)(m.default, {
+  return (0, l.jsx)(p.default, {
     className: _.partyMembers,
     guildId: n,
     users: t,
     max: 6,
-    renderUser: (e, t, a) => (0, l.jsx)(I, {
+    renderUser: (e, t, a) => (0, l.jsx)(S, {
       guildId: n,
       member: e,
       className: t
@@ -69,21 +69,21 @@ t.default = e => {
     members: a,
     embeddedApp: s,
     onAction: r
-  } = e, m = null != s, C = m ? Array.from(s.embeddedActivity.userIds) : [], g = (0, i.useStateFromStores)([p.default, h.default], () => {
-    if (m) return p.default.getUser(C[0]);
+  } = e, p = null != s, C = p ? Array.from(s.embeddedActivity.userIds) : [], g = (0, i.useStateFromStores)([m.default, h.default], () => {
+    if (p) return m.default.getUser(C[0]);
     if (null != a) {
       var e, t;
       return a.length <= 0 ? null : null !== (t = null === (e = a.find(e => e.user.id !== h.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : a[0].user
     }
   });
   if (null == g) return null;
-  let I = m || (0, u.default)(n),
+  let S = p || (0, u.default)(n),
     N = (0, f.isVoiceChannel)(t.type);
   return (0, l.jsxs)("div", {
     className: _.activity,
     children: [(0, l.jsx)("div", {
       className: _.channelActivityContainer,
-      children: I ? (0, l.jsx)(E.default, {
+      children: S ? (0, l.jsx)(E.default, {
         activity: n,
         embeddedApp: s,
         user: g,
@@ -98,11 +98,11 @@ t.default = e => {
         user: g,
         guildId: t.getGuildId(),
         channelId: t.id,
-        renderHeaderAccessory: null != a ? () => (0, l.jsx)(S, {
+        renderHeaderAccessory: null != a ? () => (0, l.jsx)(I, {
           guildId: t.guild_id,
           members: a
         }) : void 0,
-        isEmbedded: m
+        isEmbedded: p
       })
     }), (0, l.jsx)("div", {
       className: _.activityActionsContainer,
@@ -115,7 +115,7 @@ t.default = e => {
         channelId: t.id,
         color: _.button,
         onAction: r,
-        isEmbedded: m
+        isEmbedded: p
       })
     })]
   })

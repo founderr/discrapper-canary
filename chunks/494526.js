@@ -24,13 +24,13 @@ var s, a, i, r, l = n("735250"),
   R = n("51144"),
   C = n("998502"),
   O = n("981631"),
-  L = n("231338"),
-  v = n("689938"),
+  v = n("231338"),
+  L = n("689938"),
   M = n("531690"),
-  x = n("611273");
+  b = n("611273");
 (i = s || (s = {}))[i.INITIALIZING = 0] = "INITIALIZING", i[i.PENDING_REMOTE_INIT = 1] = "PENDING_REMOTE_INIT", i[i.PENDING_FINISH = 2] = "PENDING_FINISH", i[i.PENDING_TICKET = 3] = "PENDING_TICKET", i[i.PENDING_LOGIN = 4] = "PENDING_LOGIN", i[i.FINISH = 5] = "FINISH", (r = a || (a = {}))[r.QR_CODE = 0] = "QR_CODE", r[r.CONFIRM = 1] = "CONFIRM";
-let y = n("515695"),
-  b = new m.default("LoginQRSocket");
+let x = n("515695"),
+  y = new m.default("LoginQRSocket");
 
 function U(e) {
   let {
@@ -38,9 +38,9 @@ function U(e) {
   } = e, [n, s] = o.useState(!1);
   return o.useEffect(() => {
     let e = new Image;
-    e.src = y, e.onload = () => s(!0), e.onerror = () => s(!0)
-  }, [y]), o.useEffect(() => {
-    n && f.AccessibilityAnnouncer.announce(v.default.Messages.LOGIN_WITH_QR_LOADING_FINISHED_LABEL)
+    e.src = x, e.onload = () => s(!0), e.onerror = () => s(!0)
+  }, [x]), o.useEffect(() => {
+    n && f.AccessibilityAnnouncer.announce(L.default.Messages.LOGIN_WITH_QR_LOADING_FINISHED_LABEL)
   }, [n]), (0, l.jsx)("div", {
     className: M.qrCodeContainer,
     children: "" !== t && n ? (0, l.jsxs)(l.Fragment, {
@@ -51,13 +51,13 @@ function U(e) {
       }), (0, l.jsx)("div", {
         className: M.qrCodeOverlay,
         children: (0, l.jsx)("img", {
-          src: y,
+          src: x,
           alt: ""
         })
       })]
     }) : (0, l.jsx)("div", {
       className: M.qrCodeOverlay,
-      "aria-label": v.default.Messages.LOGIN_WITH_QR_LOADING_LABEL,
+      "aria-label": L.default.Messages.LOGIN_WITH_QR_LOADING_LABEL,
       "aria-busy": !0,
       children: (0, l.jsx)(f.Spinner, {
         className: M.qrCode,
@@ -112,18 +112,18 @@ function G(e) {
         children: [(0, l.jsx)(U, {
           text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : ""
         }), (0, l.jsx)(A.Title, {
-          className: x.marginBottom8,
-          children: v.default.Messages.LOGIN_WITH_QR
+          className: b.marginBottom8,
+          children: L.default.Messages.LOGIN_WITH_QR
         }), null != s ? (0, l.jsx)(D, {
           children: s
         }) : (0, l.jsx)(A.SubTitle, {
-          children: v.default.Messages.LOGIN_WITH_QR_DESCRIPTION.format()
+          children: L.default.Messages.LOGIN_WITH_QR_DESCRIPTION.format()
         }), a && (0, l.jsx)(f.Button, {
           size: f.ButtonSizes.XLARGE,
           look: f.ButtonLooks.LINK,
           color: f.ButtonColors.LINK,
           onClick: () => P(i),
-          children: v.default.Messages.SIGN_IN_WITH_PASSKEY
+          children: L.default.Messages.SIGN_IN_WITH_PASSKEY
         })]
       });
     case 3:
@@ -137,12 +137,12 @@ function G(e) {
           user: e,
           size: f.AvatarSizes.SIZE_120,
           isMobile: !0,
-          status: L.StatusTypes.ONLINE
+          status: v.StatusTypes.ONLINE
         }), (0, l.jsx)(A.Title, {
-          className: x.marginBottom8,
-          children: v.default.Messages.CONFIRM_QR_CHECK_YOUR_PHONE
+          className: b.marginBottom8,
+          children: L.default.Messages.CONFIRM_QR_CHECK_YOUR_PHONE
         }), (0, l.jsx)(A.SubTitle, {
-          children: v.default.Messages.LOGIN_AS.format({
+          children: L.default.Messages.LOGIN_AS.format({
             username: "".concat(R.default.getUserTag(e))
           })
         }), (0, l.jsx)(f.Button, {
@@ -151,7 +151,7 @@ function G(e) {
           size: f.Button.Sizes.MIN,
           onClick: n,
           className: M.startOverButton,
-          children: v.default.Messages.QR_CODE_LOGIN_START_OVER
+          children: L.default.Messages.QR_CODE_LOGIN_START_OVER
         })]
       })
     }
@@ -180,7 +180,7 @@ function w(e) {
     h.current = o.useCallback(() => {
       r({
         step: 0
-      }), c ? n(e => e + 1) : (b.info("document is not visible, will defer reconnection when document becomes visible."), a(!0))
+      }), c ? n(e => e + 1) : (y.info("document is not visible, will defer reconnection when document becomes visible."), a(!0))
     }, [c]);
     let E = o.useCallback(() => {
         (function(e) {
@@ -192,19 +192,19 @@ function w(e) {
         })(h)()
       }, [h]),
       g = o.useCallback(() => {
-        b.error("Could not complete QR code login, trying to restart with a new QR code."), r({
+        y.error("Could not complete QR code login, trying to restart with a new QR code."), r({
           step: 0
         }), !f.pending && f.fail(E)
       }, [E, f]);
     return o.useEffect(() => {
-      c && s && 0 === i.step && (b.info("reconnecting, now that document is visible"), a(!1), n(e => e + 1))
+      c && s && 0 === i.step && (y.info("reconnecting, now that document is visible"), a(!1), n(e => e + 1))
     }, [i, c, s, a]), o.useEffect(() => {
       let t = Date.now(),
         n = () => "".concat(Date.now() - t, "ms"),
         s = "wss:".concat(window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT, "/?v=2"),
         a = new WebSocket(s);
-      b.info("[0ms] connecting to ".concat(s));
-      let i = e => b.info("[".concat(n(), "] ").concat(e)),
+      y.info("[0ms] connecting to ".concat(s));
+      let i = e => y.info("[".concat(n(), "] ").concat(e)),
         l = null,
         o = null,
         d = null,

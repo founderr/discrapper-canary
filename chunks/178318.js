@@ -1,9 +1,9 @@
 "use strict";
 let a, s;
 n.r(t), n("47120"), n("610138"), n("216116"), n("78328"), n("815648"), n("653041"), n("411104");
-var i = n("836560"),
-  l = n("392711"),
-  r = n.n(l),
+var l = n("836560"),
+  i = n("392711"),
+  r = n.n(i),
   o = n("729594"),
   u = n("570140"),
   d = n("710845"),
@@ -57,7 +57,7 @@ function R() {
 function L(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
     s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-    i = null != v(e.headers).origin ? {
+    l = null != v(e.headers).origin ? {
       "Access-Control-Allow-Origin": v(e.headers).origin,
       "Access-Control-Allow-Credentials": "true",
       "Access-Control-Allow-Methods": "POST, GET, PUT, PATCH, DELETE",
@@ -65,7 +65,7 @@ function L(e, t, n) {
     } : {};
   n = n ? JSON.stringify(n) : "", a = 200 === a && 0 === n.length ? 204 : a, t.setHeader("Content-Length", p.byteLength(n).toString()), t.setHeader("Content-Type", "application/json"), t.writeHead(a, {
     ...s,
-    ...i
+    ...l
   }), t.end(n)
 }
 
@@ -76,7 +76,7 @@ function O(e, t, n, a) {
     message: a
   }, n)
 }
-class y extends _.default {
+class M extends _.default {
   send(e) {
     (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY && e.evt !== S.RPCEvents.OVERLAY) && A.info("Socket Emit: ".concat(this.id), (0, h.default)(e)), null != a && "etf" === this.encoding ? this._socket.send(a.pack(e), {
       binary: !0
@@ -95,7 +95,7 @@ class y extends _.default {
     this._socket = e
   }
 }
-class M extends _.default {
+class y extends _.default {
   send(e) {
     (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
   }
@@ -109,7 +109,7 @@ class M extends _.default {
     this._sendCallback = e, this._closeCallback = t
   }
 }
-class P extends i.EventEmitter {
+class P extends l.EventEmitter {
   handleRequest(e, t) {
     let [n, a] = v(e.url).split("?"), s = v(e.method);
     if ("/rpc" === n && "OPTIONS" === s) {
@@ -118,10 +118,10 @@ class P extends i.EventEmitter {
       });
       return
     }
-    let i = "POST" === s;
-    if ("/rpc" === n && ("GET" === s || i)) {
+    let l = "POST" === s;
+    if ("/rpc" === n && ("GET" === s || l)) {
       let n = new URLSearchParams(a),
-        s = i ? v(e.headers)["content-type"].split("/")[1] : "json",
+        s = l ? v(e.headers)["content-type"].split("/")[1] : "json",
         r = function() {
           var e;
           let {
@@ -130,8 +130,8 @@ class P extends i.EventEmitter {
           } = o.parse(null !== (e = n.get("callback")) && void 0 !== e ? e : "");
           a === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", T), t.writeHead(301), t.end()
         },
-        u = new M(i ? L.bind(null, e, t) : r, i ? O.bind(null, e, t, 400) : r, Number(n.get("v")), s);
-      if (i)(0, C.validateSocketClient)(u, v(e.headers).origin, n.get("client_id")).then(() => {
+        u = new y(l ? L.bind(null, e, t) : r, l ? O.bind(null, e, t, 400) : r, Number(n.get("v")), s);
+      if (l)(0, C.validateSocketClient)(u, v(e.headers).origin, n.get("client_id")).then(() => {
         let n = "";
         e.on("data", e => n += e), e.on("error", () => O(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(u, n))
       }).catch(e => {
@@ -142,8 +142,8 @@ class P extends i.EventEmitter {
         return u.close(t, n)
       });
       else {
-        var l;
-        u.authorization.scopes = [m.RPC_PRIVATE_LIMITED_SCOPE], this.handleMessage(u, decodeURIComponent(null !== (l = n.get("payload")) && void 0 !== l ? l : ""))
+        var i;
+        u.authorization.scopes = [m.RPC_PRIVATE_LIMITED_SCOPE], this.handleMessage(u, decodeURIComponent(null !== (i = n.get("payload")) && void 0 !== i ? i : ""))
       }
       return
     }
@@ -153,16 +153,16 @@ class P extends i.EventEmitter {
     var t, n;
     let a;
     let s = new URLSearchParams(v(e.upgradeReq).url.split("?")[1]),
-      i = null !== (t = v(e.upgradeReq).headers.origin) && void 0 !== t ? t : "";
+      l = null !== (t = v(e.upgradeReq).headers.origin) && void 0 !== t ? t : "";
     try {
-      a = new y(e, Number(s.get("v")), null !== (n = s.get("encoding")) && void 0 !== n ? n : "json")
+      a = new M(e, Number(s.get("v")), null !== (n = s.get("encoding")) && void 0 !== n ? n : "json")
     } catch (t) {
       e.close(t.code, t.message);
       return
     }
     A.info("Socket Opened: ".concat(a.id)), e.on("error", e => A.error("WS Error: ".concat(e.message))), e.on("close", (e, t) => {
       A.info("Socket Closed: ".concat(a.id, ", code ").concat(e, ", message ").concat(t)), r().remove(N, e => e === a), this.emit("disconnect", a)
-    }), (0, C.validateSocketClient)(a, i, s.get("client_id")).then(() => {
+    }), (0, C.validateSocketClient)(a, l, s.get("client_id")).then(() => {
       N.push(a), e.on("message", e => this.handleMessage(a, e)), this.emit("connect", a)
     }).catch(e => {
       let {

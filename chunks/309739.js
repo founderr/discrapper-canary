@@ -88,7 +88,7 @@ function g() {
   })
 }
 
-function h() {
+function I() {
   return (0, a.jsxs)(n.FormSection, {
     className: m.marginBottom40,
     children: [(0, a.jsxs)(n.FormTitle, {
@@ -111,7 +111,7 @@ function h() {
   })
 }
 
-function I() {
+function h() {
   return (0, a.jsx)(n.FormSection, {
     className: m.marginBottom40,
     children: (0, a.jsx)(n.FormNotice, {
@@ -139,6 +139,6 @@ function N(e) {
     className: t,
     tag: n.FormTitleTags.H1,
     title: s ? T.default.Messages.ACTIVITY_PRIVACY : null,
-    children: [(0, a.jsx)(_, {}), (0, a.jsx)(g, {}), i && (0, a.jsx)(h, {}), (0, a.jsx)(I, {})]
+    children: [(0, a.jsx)(_, {}), (0, a.jsx)(g, {}), i && (0, a.jsx)(I, {}), (0, a.jsx)(h, {})]
   })
 }

@@ -15,26 +15,26 @@ var l = n("735250"),
   c = n("703656"),
   f = n("594174"),
   h = n("366695"),
-  p = n("436088"),
-  m = n("51144"),
+  m = n("436088"),
+  p = n("51144"),
   C = n("158631"),
   g = n("143614"),
   E = n("787740"),
   _ = n("981631"),
-  I = n("689938"),
-  S = n("637861");
+  S = n("689938"),
+  I = n("637861");
 
 function N(e) {
   var t;
   let {
     userId: n,
     applicationId: a
-  } = e, i = (0, s.useStateFromStores)([f.default], () => f.default.getUser(n)), o = null !== (t = m.default.getGlobalName(i)) && void 0 !== t ? t : m.default.getUserTag(i), u = (0, d.useGetOrFetchApplication)(a);
+  } = e, i = (0, s.useStateFromStores)([f.default], () => f.default.getUser(n)), o = null !== (t = p.default.getGlobalName(i)) && void 0 !== t ? t : p.default.getUserTag(i), u = (0, d.useGetOrFetchApplication)(a);
   return null == i ? null : (0, l.jsxs)("div", {
-    className: S.broadcast,
+    className: I.broadcast,
     children: [(0, l.jsxs)("div", {
       children: [(0, l.jsxs)("div", {
-        className: S.inline,
+        className: I.inline,
         children: [(0, l.jsx)(r.Avatar, {
           size: r.AvatarSizes.SIZE_16,
           src: i.getAvatarURL(null, 16),
@@ -46,9 +46,9 @@ function N(e) {
       }), (0, l.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        children: (null == u ? void 0 : u.name) != null ? I.default.Messages.STREAMING.format({
+        children: (null == u ? void 0 : u.name) != null ? S.default.Messages.STREAMING.format({
           name: u.name
-        }) : I.default.Messages.STREAMING_A_GAME
+        }) : S.default.Messages.STREAMING_A_GAME
       })]
     }), (0, l.jsx)(h.default, {
       game: u
@@ -67,34 +67,34 @@ function T(e) {
       is_broadcasting: d
     })
   }, [n.length, s.length, d]), (0, l.jsxs)("div", {
-    className: S.container,
+    className: I.container,
     children: [(0, l.jsxs)("div", {
-      className: S.header,
+      className: I.header,
       children: [(0, l.jsxs)("div", {
-        className: S.inline,
-        children: [(0, l.jsx)(p.default, {
+        className: I.inline,
+        children: [(0, l.jsx)(m.default, {
           color: i.default.colors.HEADER_PRIMARY.css,
           height: 16,
           width: 16
         }), (0, l.jsx)(r.Heading, {
           variant: "heading-md/semibold",
           color: "header-primary",
-          children: I.default.Messages.LIVE_BROADCASTS
+          children: S.default.Messages.LIVE_BROADCASTS
         })]
       }), (0, l.jsx)(E.default, {})]
     }), s.map((e, t) => (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(N, {
         ...e
       }, e.userId), t !== s.length - 1 && (0, l.jsx)("hr", {
-        className: S.separator
+        className: I.separator
       })]
     })), f > 0 && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("hr", {
-        className: S.separator
+        className: I.separator
       }), (0, l.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        children: I.default.Messages.MORE_OPEN_BROADCASTS.format({
+        children: S.default.Messages.MORE_OPEN_BROADCASTS.format({
           count: f
         })
       })]
@@ -106,8 +106,8 @@ function T(e) {
           is_broadcasting: d
         }), t()
       },
-      className: S.button,
-      children: I.default.Messages.VIEW_OPEN_BROADCASTS
+      className: I.button,
+      children: S.default.Messages.VIEW_OPEN_BROADCASTS
     })]
   })
 }

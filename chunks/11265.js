@@ -20,7 +20,7 @@ t.default = r.memo(function(e) {
     onExpand: p,
     disableAnimation: E,
     disableBackground: T
-  } = e, C = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [x, _] = r.useState(!0), [g, I] = r.useState(!1), {
+  } = e, C = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [_, x] = r.useState(!0), [g, I] = r.useState(!1), {
     ref: N,
     height: v = 0
   } = (0, d.default)(), {
@@ -28,7 +28,7 @@ t.default = r.memo(function(e) {
     height: S = 0
   } = (0, d.default)(), [L, y] = r.useState(s), R = (0, l.useSpring)({
     height: L ? S + v : v,
-    immediate: x || C || E,
+    immediate: _ || C || E,
     config: {
       ...l.config.stiff,
       clamp: !0
@@ -44,7 +44,7 @@ t.default = r.memo(function(e) {
     I(!1), y(s)
   }, [s]), r.useLayoutEffect(() => {
     let e = setTimeout(() => {
-      _(!1)
+      x(!1)
     }, 100);
     return () => clearTimeout(e)
   }, []), (0, n.jsx)(c.Clickable, {

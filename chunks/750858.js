@@ -61,8 +61,8 @@ function R(e) {
     G = m ? "@" : "",
     {
       nick: w,
-      colorString: B,
-      colorRoleName: k
+      colorString: k,
+      colorRoleName: B
     } = n,
     V = null != i.messageReference && null != i.webhookId,
     x = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
@@ -74,8 +74,8 @@ function R(e) {
     }), [i.id, i.author.id]),
     Y = {
       className: O.username,
-      style: "username" === x && null != B ? {
-        color: B
+      style: "username" === x && null != k ? {
+        color: k
       } : void 0,
       onClick: L,
       onContextMenu: v,
@@ -131,8 +131,8 @@ function R(e) {
     children: [null != j && o ? (0, a.jsxs)(a.Fragment, {
       children: [" ", j, " "]
     }) : null, "dot" === x ? (0, a.jsx)(_.RoleDot, {
-      color: B,
-      name: k,
+      color: k,
+      name: B,
       className: O.roleDot
     }) : null, t, !o && (0, a.jsx)(T.default, {
       clan: n.clan,

@@ -33,8 +33,8 @@ var a = s("735250"),
   D = s("635921"),
   U = s("803687"),
   j = s("177839"),
-  y = s("794484"),
-  G = s("392521"),
+  G = s("794484"),
+  y = s("392521"),
   B = s("349803"),
   k = s("179984"),
   H = s("409100"),
@@ -98,23 +98,23 @@ let J = e => {
         [Y.whatsNewSectionBackground]: !r,
         [Y.whatsNewSection]: r
       }),
-      children: [(0, a.jsx)(y.default, {
+      children: [(0, a.jsx)(G.default, {
         headerClassname: r ? Y.stackedHeader : void 0,
         variant: F.PerksDiscoverabilityCardSection.WHATS_NEW,
         isFullScreen: t
-      }), (0, a.jsx)(y.default, {
+      }), (0, a.jsx)(G.default, {
         headerClassname: r ? Y.stackedHeader : void 0,
         isFullScreen: t,
         showAllPerksButton: t ? (0, a.jsx)(K.default, {
           setIsAllPerksVisible: l,
           previousComponent: F.NitroLandingPages.MARKETING
         }) : void 0
-      }), i && !r ? (0, a.jsx)(G.default, {
+      }), i && !r ? (0, a.jsx)(y.default, {
         className: Y.pdSparklesTop,
-        variant: G.SparkleVariants.TOP
-      }) : null, i && !r ? (0, a.jsx)(G.default, {
+        variant: y.SparkleVariants.TOP
+      }) : null, i && !r ? (0, a.jsx)(y.default, {
         className: Y.pdSparklesBottom,
-        variant: G.SparkleVariants.BOTTOM
+        variant: y.SparkleVariants.BOTTOM
       }) : null]
     }) : null
   };
@@ -125,7 +125,7 @@ t.default = e => {
     entrypoint: i
   } = e, E = (0, N.useMarketingOptimizationExperiment)({
     autoTrackExposure: !0
-  }), x = r.useRef(null), [b, j] = r.useState(!1), [y, G] = r.useState(!1), [K, X] = r.useState(!1), et = !b && !y || E, [es, ea] = r.useState(!1), er = (0, l.useStateFromStores)([R.default], () => R.default.getPremiumTypeSubscription()), [ei, en] = r.useState(E ? W.PremiumTypes.TIER_2 : void 0), el = null != er ? (0, m.getPremiumPlanItem)(er) : null, eo = null != el ? m.default.getSkuIdForPlan(el.planId) : null, eu = null !== eo && eo !== W.PremiumSubscriptionSKUs.TIER_2 ? W.PremiumSubscriptionSKUs.TIER_2 : null, ed = (0, p.useLocalizedPromoQuery)(), ec = (0, u.isThemeLight)((0, _.default)()), e_ = null != ed, [eE, eT] = r.useState(!1), eI = (0, g.usePremiumDiscountOffer)(), eR = (0, C.usePremiumTrialOffer)(), ef = null == eR ? void 0 : null === (t = eR.subscription_trial) || void 0 === t ? void 0 : t.sku_id, eS = (0, A.useIsInPremiumOfferExperience)(), em = (0, h.useIsEligibleForBogoPromotion)(), {
+  }), x = r.useRef(null), [b, j] = r.useState(!1), [G, y] = r.useState(!1), [K, X] = r.useState(!1), et = !b && !G || E, [es, ea] = r.useState(!1), er = (0, l.useStateFromStores)([R.default], () => R.default.getPremiumTypeSubscription()), [ei, en] = r.useState(E ? W.PremiumTypes.TIER_2 : void 0), el = null != er ? (0, m.getPremiumPlanItem)(er) : null, eo = null != el ? m.default.getSkuIdForPlan(el.planId) : null, eu = null !== eo && eo !== W.PremiumSubscriptionSKUs.TIER_2 ? W.PremiumSubscriptionSKUs.TIER_2 : null, ed = (0, p.useLocalizedPromoQuery)(), ec = (0, u.isThemeLight)((0, _.default)()), e_ = null != ed, [eE, eT] = r.useState(!1), eI = (0, g.usePremiumDiscountOffer)(), eR = (0, C.usePremiumTrialOffer)(), ef = null == eR ? void 0 : null === (t = eR.subscription_trial) || void 0 === t ? void 0 : t.sku_id, eS = (0, A.useIsInPremiumOfferExperience)(), em = (0, h.useIsEligibleForBogoPromotion)(), {
     analyticsLocations: eA
   } = (0, I.default)(T.default.PREMIUM_MARKETING), eN = "PremiumMarketingHome";
   (0, c.useTriggerDebuggingAA)({
@@ -196,7 +196,7 @@ t.default = e => {
         }), s && e_ && (0, a.jsx)(O.default, {
           localizedPricingPromo: ed
         }), (0, a.jsx)(o.VisibilitySensor, {
-          onChange: e => G(e),
+          onChange: e => y(e),
           threshold: .1,
           active: !0,
           children: (0, a.jsx)(L.default, {

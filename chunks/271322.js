@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("960259"),
-  i = n("594158"),
-  l = n("886364"),
+  l = n("594158"),
+  i = n("886364"),
   r = n("325767");
 
 function o(e) {
@@ -15,11 +15,11 @@ t.default = (0, s.replaceIcon)(function(e) {
     width: t = 24,
     height: n = 24,
     color: s = "currentColor",
-    foreground: i,
+    foreground: l,
     gradientConfig: u,
     ...d
   } = e, c = null;
-  return null != u && (c = (0, a.jsx)(l.default, {
+  return null != u && (c = (0, a.jsx)(i.default, {
     ...u,
     color: s,
     id: o(u.id)
@@ -35,10 +35,10 @@ t.default = (0, s.replaceIcon)(function(e) {
       fill: "none"
     }), (0, a.jsx)("path", {
       fill: null != u ? "url(#".concat(o(u.id), ")") : s,
-      className: i,
+      className: l,
       d: "M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
     })]
   })
-}, i.UploadIcon, void 0, {
+}, l.UploadIcon, void 0, {
   size: 24
 })

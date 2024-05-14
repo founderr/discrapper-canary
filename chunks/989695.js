@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var a, s, i, l, r = n("442837"),
+var a, s, l, i, r = n("442837"),
   o = n("524437"),
   u = n("570140"),
   d = n("150340"),
@@ -9,7 +9,7 @@ var a, s, i, l, r = n("442837"),
 function f() {
   return !0
 }
-class E extends(l = r.default.Store) {
+class E extends(i = r.default.Store) {
   initialize() {
     this.waitFor(c.default), this.syncWith([c.default], f)
   }
@@ -17,9 +17,9 @@ class E extends(l = r.default.Store) {
     return (0, d.shouldShowGuildOnboardingUpsell)(e.id, o.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
   }
 }
-i = "GuildOnboardingUpsellNoticeStore", (s = "displayName") in(a = E) ? Object.defineProperty(a, s, {
-  value: i,
+l = "GuildOnboardingUpsellNoticeStore", (s = "displayName") in(a = E) ? Object.defineProperty(a, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = i, t.default = new E(u.default)
+}) : a[s] = l, t.default = new E(u.default)

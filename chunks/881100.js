@@ -37,8 +37,8 @@ var a = s("399606"),
   D = s("603076"),
   U = s("472656"),
   j = s("912429"),
-  y = s("772969"),
-  G = s("926262");
+  G = s("772969"),
+  y = s("926262");
 let B = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
   k = e => {
     let {
@@ -150,7 +150,7 @@ let B = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
       streaming: {
         title: _.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
         description: _.default.Messages.PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
-        imageSource: y,
+        imageSource: G,
         imageClassName: t.streamingImage
       },
       superReactions: {
@@ -166,7 +166,7 @@ let B = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
         description: _.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({
           premiumMaxSize: H
         }),
-        imageSource: G,
+        imageSource: y,
         imageClassName: t.uploadImage
       },
       videoBackground: {

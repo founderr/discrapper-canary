@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   hideEnablePublicGuildUpsellNotice: function() {
-    return i
+    return l
   },
   hideMaxMemberCountChannelNotice: function() {
-    return l
+    return i
   },
   hidePremiumGuildGracePeriodNotice: function() {
     return s
@@ -19,14 +19,14 @@ function s(e) {
   })
 }
 
-function i(e) {
+function l(e) {
   a.default.dispatch({
     type: "PUBLIC_UPSELL_NOTICE_DISMISS",
     guildId: e
   })
 }
 
-function l(e) {
+function i(e) {
   a.default.dispatch({
     type: "MAX_MEMBER_COUNT_NOTICE_DISMISS",
     guildId: e

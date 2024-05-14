@@ -60,9 +60,9 @@ function _(e) {
   v > 0 && R.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: v
   })), N > 0 && R.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
-  let y = (0, i.useStateFromStores)([p.default], () => p.default.getFocusedLayout()),
-    L = v > 0 ? v : N,
-    O = L > 0;
+  let L = (0, i.useStateFromStores)([p.default], () => p.default.getFocusedLayout()),
+    y = v > 0 ? v : N,
+    O = y > 0;
   return (0, a.jsxs)("div", {
     className: S.wrapper,
     children: [(0, a.jsx)(d.CenterControlButton, {
@@ -71,13 +71,13 @@ function _(e) {
       label: M,
       "aria-label": R.join(", "),
       tooltipPosition: "top",
-      iconComponent: y === E.FocusedActivityLayouts.NO_CHAT ? o.ChevronLargeUpIcon : r.ChevronLargeDownIcon,
+      iconComponent: L === E.FocusedActivityLayouts.NO_CHAT ? o.ChevronLargeUpIcon : r.ChevronLargeDownIcon,
       themeable: !0,
       className: n,
       ..._
     }), O ? (0, a.jsx)(u.default, {
       hasMentions: v > 0,
-      truncatedCount: L > 99 ? "99+" : L,
+      truncatedCount: y > 99 ? "99+" : y,
       className: S.badge
     }) : null]
   })

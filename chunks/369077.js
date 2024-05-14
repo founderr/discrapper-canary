@@ -24,8 +24,8 @@ var u = s("594174"),
   m = s("438365"),
   _ = s("114487"),
   g = s("219039"),
-  h = s("979264"),
-  I = s("308083"),
+  I = s("979264"),
+  h = s("308083"),
   N = s("981631"),
   p = s("689938"),
   C = s("407020");
@@ -51,7 +51,7 @@ function A(e) {
     let e = N.current;
     null != e && null != e.offsetWidth && null != e.scrollWidth && A(e.offsetWidth < e.scrollWidth)
   }, []);
-  let O = (0, T.getClanBadgeUrl)(d, l, I.ClanTagBadgeSize.SIZE_16);
+  let O = (0, T.getClanBadgeUrl)(d, l, h.ClanTagBadgeSize.SIZE_16);
   return (0, a.jsxs)("div", {
     className: i()(C.container, t),
     children: [(0, a.jsxs)("div", {
@@ -79,12 +79,12 @@ function A(e) {
       })]
     }), (0, a.jsx)("div", {
       className: C.tagContainer,
-      children: (0, a.jsx)(h.BaseClanTagChiplet, {
+      children: (0, a.jsx)(I.BaseClanTagChiplet, {
         className: C.tag,
         clanTag: s,
         clanBadge: O,
         onClick: r,
-        badgeSize: I.ClanTagBadgeSize.SIZE_16,
+        badgeSize: h.ClanTagBadgeSize.SIZE_16,
         textColor: "interactive-normal",
         textVariant: "text-sm/medium",
         badgeClassName: C.badge
@@ -102,11 +102,11 @@ function O(e) {
     guildIcon: c,
     clan: m,
     userId: _
-  } = e, g = (0, f.useCurrentUserAvailableClanIds)(), h = (0, r.useStateFromStores)([u.default], () => {
+  } = e, g = (0, f.useCurrentUserAvailableClanIds)(), I = (0, r.useStateFromStores)([u.default], () => {
     var e;
     return (0, T.getUserClanData)(null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
-  }), I = n.useMemo(() => {
-    if (l !== h) {
+  }), h = n.useMemo(() => {
+    if (l !== I) {
       if (g.has(l)) return () => {
         (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
           ...e,
@@ -133,7 +133,7 @@ function O(e) {
         })
       }
     }
-  }, [g, m, h, l, i, _]);
+  }, [g, m, I, l, i, _]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Heading, {
       className: C.header,
@@ -143,7 +143,7 @@ function O(e) {
       className: C.profileContainer,
       clanTag: t,
       clanBadge: s,
-      onTagClick: I,
+      onTagClick: h,
       guildName: i,
       guildId: l,
       guildIcon: c,

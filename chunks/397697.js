@@ -64,8 +64,8 @@ function h(e) {
     secondaryTintLuminances: f,
     secondaryLuminanceWeights: m
   }), {
-    styleContent: x,
-    containerId: _
+    styleContent: _,
+    containerId: x
   } = (0, s.useClanBannerStyleInjection)(T, C);
   return (0, n.jsxs)("svg", {
     ...E,
@@ -75,11 +75,11 @@ function h(e) {
     viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
     children: [(0, n.jsx)("defs", {
       children: (0, n.jsx)("style", {
-        children: x
+        children: _
       })
     }), (0, n.jsx)("use", {
       href: "".concat(l, "#wrapper-layer"),
-      id: _
+      id: x
     })]
   })
 }

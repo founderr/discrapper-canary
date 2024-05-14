@@ -20,9 +20,9 @@ t.default = e => {
     gameApplicationIds: E,
     error: T,
     requiredGameId: C
-  } = e, x = (0, s.useStateFromStores)([o.default], () => o.default.getId()), {
-    recentGames: _
-  } = (0, l.useUserRecentGames)(x), {
+  } = e, _ = (0, s.useStateFromStores)([o.default], () => o.default.getId()), {
+    recentGames: x
+  } = (0, l.useUserRecentGames)(_), {
     options: g,
     matchSorterOptions: I
   } = (0, d.useClanSetupGameSelectableSearch)();
@@ -87,7 +87,7 @@ t.default = e => {
         }), (0, n.jsx)("div", {
           className: h.divider
         })]
-      }), null != _ && _.length > 0 && (0, n.jsxs)(n.Fragment, {
+      }), null != x && x.length > 0 && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
@@ -95,7 +95,7 @@ t.default = e => {
           children: m.default.Messages.RECENT_GAMES
         }), (0, n.jsx)("div", {
           className: h.selectedSection,
-          children: _.map(e => (0, n.jsx)(u.default, {
+          children: x.map(e => (0, n.jsx)(u.default, {
             applicationId: e.applicationId,
             onClick: v,
             imageContainerClassName: h.clickableGame

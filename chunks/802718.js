@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useSignUpButton: function() {
-    return S
+    return I
   }
 });
 var l = n("735250"),
@@ -15,14 +15,14 @@ var l = n("735250"),
   c = n("377171"),
   f = n("682662"),
   h = n("662146"),
-  p = n("26290"),
-  m = n("15434"),
+  m = n("26290"),
+  p = n("15434"),
   C = n("678513"),
   g = n("981631"),
   E = n("689938"),
   _ = n("211005");
 
-function I(e) {
+function S(e) {
   let {
     target: t
   } = e, o = (0, s.useTreeItem)("fakedoor"), C = a.useCallback(() => {
@@ -35,7 +35,7 @@ function I(e) {
         target: t
       })
     })
-  }, [t]), I = a.useCallback(e => {
+  }, [t]), S = a.useCallback(e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -45,12 +45,12 @@ function I(e) {
         signupTarget: t
       })
     })
-  }, [t]), S = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), N = (0, l.jsxs)("div", {
+  }, [t]), I = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), N = (0, l.jsxs)("div", {
     className: _.tooltipContainer,
     children: [(0, l.jsx)("div", {
       className: _.tooltipBackground,
       style: {
-        background: S
+        background: I
       }
     }), (0, l.jsx)(r.Heading, {
       variant: "heading-sm/medium",
@@ -70,14 +70,14 @@ function I(e) {
         children: (0, l.jsx)(r.ThemeContextProvider, {
           theme: T,
           children: (0, l.jsx)(r.BlobMask, {
-            lowerBadge: (0, l.jsx)(p.NumberBadge, {
+            lowerBadge: (0, l.jsx)(m.NumberBadge, {
               count: 1,
               color: c.default.BG_BRAND
             }),
-            children: (0, l.jsx)(m.default, {
+            children: (0, l.jsx)(p.default, {
               ...o,
               onClick: C,
-              onContextMenu: I,
+              onContextMenu: S,
               children: (0, l.jsx)(i.BellIcon, {
                 color: c.default.TEXT_NORMAL
               })
@@ -87,7 +87,7 @@ function I(e) {
       })
     }), (0, l.jsx)("div", {
       style: {
-        background: S,
+        background: I,
         width: 0,
         height: 0
       }
@@ -95,9 +95,9 @@ function I(e) {
   })
 }
 
-function S() {
+function I() {
   let e = (0, o.useStateFromStores)([C.default], () => C.default.getActiveUserSignUp());
-  return null == e ? null : (0, l.jsx)(I, {
+  return null == e ? null : (0, l.jsx)(S, {
     target: e
   })
 }

@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   SettingsCircleIcon: function() {
-    return l
+    return i
   }
 });
 var a = n("735250");
 n("470079");
 var s = n("692547"),
-  i = n("331595");
-let l = e => {
+  l = n("331595");
+let i = e => {
   let {
     width: t = 24,
     height: n = 24,
-    secondaryColor: l = s.default.colors.STATUS_DANGER,
+    secondaryColor: i = s.default.colors.STATUS_DANGER,
     secondaryColorClass: r = "",
     color: o = s.default.colors.INTERACTIVE_NORMAL,
     colorClass: u = "",
     ...d
   } = e;
   return (0, a.jsxs)("svg", {
-    ...(0, i.default)(d),
+    ...(0, l.default)(d),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: n,
@@ -29,7 +29,7 @@ let l = e => {
       cx: "19",
       cy: "19",
       r: "5",
-      fill: "string" == typeof l ? l : l.css,
+      fill: "string" == typeof i ? i : i.css,
       className: r
     }), (0, a.jsx)("path", {
       fill: "string" == typeof o ? o : o.css,

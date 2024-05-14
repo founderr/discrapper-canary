@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("357727"),
   M = n("158010"),
   R = n("170039"),
-  y = n("502568"),
-  L = n("626135"),
+  L = n("502568"),
+  y = n("626135"),
   O = n("792125"),
   j = n("431328"),
   P = n("501655"),
@@ -120,7 +120,7 @@ function Y(e) {
     toggleRequestToSpeakSidebar: f,
     showRequestToSpeakSidebar: m
   } = e, p = (0, h.default)(c), g = (0, r.useStateFromStores)([U.default], () => U.default.getStageInstanceByChannel(c.id)), S = (0, j.useActualStageSpeakerCount)(c.id), _ = (0, j.useStageParticipantsCount)(c.id, P.StageChannelParticipantNamedIndex.AUDIENCE), T = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(c.guild_id), [c.guild_id]), I = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, D = (null == T ? void 0 : T.isCommunity()) ? I < H.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == T ? void 0 : T.premiumTier) !== H.BoostedGuildTiers.TIER_3 && I <= H.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, F = (0, k.default)(c), w = (0, r.useStateFromStores)([N.default], () => N.default.can(b.MODERATE_STAGE_CHANNEL_PERMISSIONS, c)), Y = () => {
-    d.default.updateStageVideoLimitBoostUpsellDismissed(c.id, !0), L.default.track(H.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
+    d.default.updateStageVideoLimitBoostUpsellDismissed(c.id, !0), y.default.track(H.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
       guild_id: c.guild_id,
       type: B.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
       is_moderator: w,
@@ -128,14 +128,14 @@ function Y(e) {
     })
   };
   l.useEffect(() => {
-    F && L.default.track(H.AnalyticEvents.BOOSTING_UPSELL_VIEWED, {
+    F && y.default.track(H.AnalyticEvents.BOOSTING_UPSELL_VIEWED, {
       guild_id: c.guild_id,
       type: B.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
       is_moderator: w,
       listener_count: S + _
     })
   }, [F]);
-  let K = (0, a.jsxs)(y.default, {
+  let K = (0, a.jsxs)(L.default, {
     toolbar: (0, a.jsx)(W, {
       inPopout: s,
       toggleRequestToSpeakSidebar: f,
@@ -145,19 +145,19 @@ function Y(e) {
     onDoubleClick: C.handleDoubleClick,
     transparent: !0,
     className: i()((0, O.getThemeClass)(H.ThemeTypes.DARK), V.participants),
-    children: [(0, a.jsx)(y.default.Icon, {
+    children: [(0, a.jsx)(L.default.Icon, {
       icon: R.default,
       disabled: !0,
       "aria-label": G.default.Messages.STAGE_CHANNEL,
       className: V.icon,
       color: null != g ? o.default.unsafe_rawColors.GREEN_360.css : void 0
-    }), (0, a.jsx)(y.default.Title, {
+    }), (0, a.jsx)(L.default.Title, {
       className: V.channelName,
       wrapperClassName: V.channelNameWrapper,
       children: null !== (n = null == g ? void 0 : g.topic) && void 0 !== n ? n : p
-    }), (0, a.jsx)(y.default.Divider, {
+    }), (0, a.jsx)(L.default.Divider, {
       className: V.divider
-    }), (0, a.jsxs)(y.default.Title, {
+    }), (0, a.jsxs)(L.default.Title, {
       children: [(0, a.jsx)(x.default, {
         width: 16,
         height: 16
@@ -212,7 +212,7 @@ function Y(e) {
                 location: {
                   section: H.AnalyticsSections.STAGE_VIDEO_LIMIT
                 }
-              }), L.default.track(H.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
+              }), y.default.track(H.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
                 guild_id: c.guild_id,
                 type: B.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
                 is_moderator: w,

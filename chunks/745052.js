@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("924826"),
   o = n("286379"),
   u = n("442837"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("6025"),
   L = n("897473"),
   O = n("108427"),
-  y = n("970731"),
-  M = n("210887"),
+  M = n("970731"),
+  y = n("210887"),
   P = n("433355"),
   x = n("592125"),
   D = n("819640"),
@@ -37,8 +37,8 @@ var a = n("735250"),
   G = n("792125"),
   k = n("647090"),
   w = n("385956"),
-  F = n("610697"),
-  B = n("26373"),
+  B = n("610697"),
+  F = n("26373"),
   H = n("486622"),
   V = n("922409"),
   Y = n("899740"),
@@ -59,7 +59,7 @@ function ea() {
   let e = s.useRef(null),
     t = (0, Y.useMessageRequestsCount)(),
     n = (0, W.default)(),
-    i = (0, B.useListHasSingleMessageRequest)(),
+    l = (0, F.useListHasSingleMessageRequest)(),
     u = (0, _.useIsRejectAllMessageRequestsEnabled)(),
     d = s.useCallback(() => {
       (0, c.showToast)((0, c.createToast)(ee.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE))
@@ -83,15 +83,15 @@ function ea() {
       } = e, o = n[r], u = null === (s = n[r + 1]) || void 0 === s ? void 0 : null === (t = s.channel) || void 0 === t ? void 0 : t.id, d = o.channel.id;
       return (0, a.jsx)(q.default, {
         index: r,
-        className: l()({
+        className: i()({
           [et.selected]: null != h && h === d,
           [et.siblingSelected]: null != h && h === u
         }),
         channel: o.channel,
         user: o.user,
-        hasSingleMessageRequest: i
+        hasSingleMessageRequest: l
       }, d)
-    }, [i, n, h]),
+    }, [l, n, h]),
     p = s.useCallback(() => (0, a.jsxs)(U.default, {
       className: et.sectionTitle,
       children: [t > 0 ? ee.default.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
@@ -124,12 +124,12 @@ function ea() {
       children: t => {
         let {
           ref: s,
-          role: i,
-          ...l
+          role: l,
+          ...i
         } = t;
         return (0, a.jsx)(c.List, {
           className: et.list,
-          innerRole: i,
+          innerRole: l,
           innerAriaLabel: ee.default.Messages.MESSAGE_REQUESTS,
           ref: t => {
             var n;
@@ -144,7 +144,7 @@ function ea() {
           sections: [n.length],
           chunkSize: 30,
           fade: !0,
-          ...l
+          ...i
         }, "message-requests-list")
       }
     })
@@ -155,51 +155,51 @@ function es(e) {
   let {
     pageWidth: t,
     onSidebarResize: n
-  } = e, s = (0, u.useStateFromStores)([P.default], () => P.default.getSidebarState(P.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), i = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(null == s ? void 0 : s.channelId));
-  if (null == s || s.type !== L.SidebarType.VIEW_MESSAGE_REQUEST || null == i || !i.isPrivate()) return null;
-  let l = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
+  } = e, s = (0, u.useStateFromStores)([P.default], () => P.default.getSidebarState(P.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(null == s ? void 0 : s.channelId));
+  if (null == s || s.type !== L.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+  let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
   return (0, a.jsx)(S.default, {
     sidebarType: S.ChatSidebarType.MessageRequestSidebar,
-    maxWidth: l,
+    maxWidth: i,
     onWidthChange: n,
     children: (0, a.jsx)(p.default, {
-      channel: i,
+      channel: l,
       baseChannelId: P.MESSAGE_REQUESTS_BASE_CHANNEL_ID
     })
   })
 }
-let ei = function(e) {
+let el = function(e) {
     let {
       markAsDismissed: t
     } = e;
-    return (0, a.jsx)(y.default, {
+    return (0, a.jsx)(M.default, {
       header: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
       content: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT_TEENS,
       buttonCTA: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
       className: et.messageRequestCoachmark,
       onClick: () => t(J.ContentDismissActionType.UNKNOWN),
       markAsDismissed: t,
-      caretPosition: y.CaretPosition.TOP_CENTER,
+      caretPosition: M.CaretPosition.TOP_CENTER,
       headerClassName: et.__invalid_header
     })
   },
-  el = e => {
-    let t = (0, F.default)(),
+  ei = e => {
+    let t = (0, B.default)(),
       n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
-      i = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion);
+      l = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion);
     return s.useEffect(() => {
       (0, I.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
     }, []), (0, a.jsx)(T.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
         let {
-          visibleContent: l,
+          visibleContent: i,
           markAsDismissed: r
         } = s;
-        if (l === d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK) return (0, a.jsx)(c.Popout, {
-          renderPopout: () => t ? (0, a.jsx)(ei, {
+        if (i === d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK) return (0, a.jsx)(c.Popout, {
+          renderPopout: () => t ? (0, a.jsx)(el, {
             markAsDismissed: r
-          }) : (0, a.jsx)(y.default, {
+          }) : (0, a.jsx)(M.default, {
             header: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
             content: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT,
             buttonCTA: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONFIRM,
@@ -211,12 +211,12 @@ let ei = function(e) {
               })
             },
             markAsDismissed: r,
-            caretPosition: y.CaretPosition.TOP_CENTER,
+            caretPosition: M.CaretPosition.TOP_CENTER,
             headerClassName: et.__invalid_header
           }),
           position: "bottom",
           align: "center",
-          animation: i ? c.Popout.Animation.NONE : c.Popout.Animation.TRANSLATE,
+          animation: l ? c.Popout.Animation.NONE : c.Popout.Animation.TRANSLATE,
           shouldShow: !n(),
           spacing: 16,
           children: () => e.children
@@ -243,7 +243,7 @@ let eo = (0, h.default)(function(e) {
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let i = (0, u.useStateFromStores)([M.default], () => M.default.theme),
+  let l = (0, u.useStateFromStores)([y.default], () => y.default.theme),
     r = (0, K.useSpamMessageRequestCount)(),
     [d, E] = s.useState(!1),
     h = (0, u.useStateFromStores)([P.default], () => {
@@ -262,17 +262,17 @@ let eo = (0, h.default)(function(e) {
     location: ee.default.Messages.MESSAGE_REQUESTS
   }), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: l()(en.chat, et.container, {
+      className: i()(en.chat, et.container, {
         [en.threadSidebarOpen]: C,
         [en.threadSidebarFloating]: C && d
       }),
       children: [(0, a.jsxs)(A.default, {
-        className: (0, G.getThemeClass)(i),
+        className: (0, G.getThemeClass)(l),
         toolbar: !0,
         children: [(0, a.jsx)(A.default.Icon, {
           icon: b.default,
           "aria-hidden": !0
-        }), (0, a.jsx)(el, {
+        }), (0, a.jsx)(ei, {
           children: (0, a.jsx)(A.default.Title, {
             children: ee.default.Messages.MESSAGE_REQUESTS
           })

@@ -2,8 +2,8 @@
 n.r(t), n("653041");
 var a = n("735250"),
   s = n("470079"),
-  i = n("481060"),
-  l = n("570140"),
+  l = n("481060"),
+  i = n("570140"),
   r = n("906732"),
   o = n("451603"),
   u = n("885714"),
@@ -39,7 +39,7 @@ t.default = e => {
     showMoreCards: R = !1
   } = e;
   s.useEffect(() => {
-    l.default.wait(() => I())
+    i.default.wait(() => I())
   }, [A]);
   let L = (0, c.default)(R ? _ : h),
     {
@@ -47,10 +47,10 @@ t.default = e => {
     } = (0, r.default)();
   if (null == m) return null;
   let {
-    guilds: y,
-    loading: M
-  } = m, P = null == y || 0 === y.length;
-  if (!M && P) return null;
+    guilds: M,
+    loading: y
+  } = m, P = null == M || 0 === M.length;
+  if (!y && P) return null;
   let x = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
@@ -63,15 +63,15 @@ t.default = e => {
       analyticsLocations: O
     });
     else {
-      let t = y.findIndex(t => t.id === e);
+      let t = M.findIndex(t => t.id === e);
       await g(e, t, S, N)
     }
   };
-  if (M || null == y) {
+  if (y || null == M) {
     let e = [];
     for (let t = 0; t < L; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = y.slice(0, L).map(e => (0, a.jsx)(d.default, {
+  } else t = M.slice(0, L).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
     onView: x,
@@ -81,13 +81,13 @@ t.default = e => {
   }, e.id));
   return (0, a.jsx)("section", {
     className: E.guildListSection,
-    children: (0, a.jsxs)(i.HeadingLevel, {
-      component: (0, a.jsx)(i.Heading, {
+    children: (0, a.jsxs)(l.HeadingLevel, {
+      component: (0, a.jsx)(l.Heading, {
         className: E.__invalid_title,
         variant: "heading-lg/semibold",
         children: n
       }),
-      children: [null != C && (0, a.jsx)(i.Text, {
+      children: [null != C && (0, a.jsx)(l.Text, {
         className: E.subtitle,
         variant: "text-sm/normal",
         color: "header-secondary",

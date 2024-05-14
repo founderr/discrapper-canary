@@ -42,8 +42,8 @@ function O(e) {
     transitionState: b,
     onClose: G,
     onSubscribeClick: w,
-    onSecondaryClick: B,
-    secondaryCTA: k,
+    onSecondaryClick: k,
+    secondaryCTA: B,
     subscribeButtonText: V,
     showNewBadge: x = !1,
     enableArtBoxShadow: F = !0,
@@ -132,15 +132,15 @@ function O(e) {
         className: s()(N.primaryActions, {
           [N.enhancedPrimaryActions]: K
         }),
-        children: [null != k ? (0, i.jsx)(o.Button, {
+        children: [null != B ? (0, i.jsx)(o.Button, {
           className: s()(N.secondaryAction, {
             [N.enhancedSecondaryAction]: K
           }),
-          onClick: B,
+          onClick: k,
           size: o.Button.Sizes.SMALL,
           color: K ? o.Button.Colors.CUSTOM : o.Button.Colors.PRIMARY,
           look: o.Button.Looks.LINK,
-          children: k
+          children: B
         }) : null, (() => {
           let e;
           if (X) return (0, i.jsx)(d.default, {

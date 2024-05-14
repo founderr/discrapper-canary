@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return B
   }
 }), n("411104");
 var l = n("735250"),
@@ -15,14 +15,14 @@ var l = n("735250"),
   c = n("906732"),
   f = n("792766"),
   h = n("451603"),
-  p = n("885714"),
-  m = n("973616"),
+  m = n("885714"),
+  p = n("973616"),
   C = n("594174"),
   g = n("285952"),
   E = n("672752"),
   _ = n("153124"),
-  I = n("819570"),
-  S = n("757698"),
+  S = n("819570"),
+  I = n("757698"),
   N = n("466111"),
   T = n("855981"),
   A = n("55543"),
@@ -52,7 +52,7 @@ function G() {
       location_stack: t
     })
   }, [t]), (0, l.jsxs)(o.Clickable, {
-    onClick: () => (0, p.default)({
+    onClick: () => (0, m.default)({
       analyticsSource: {
         page: O.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL
       },
@@ -87,7 +87,7 @@ function U(e) {
     className: i()(j.iconContainer, t),
     children: [(0, l.jsx)(T.default, {
       className: j.iconSparklePlus
-    }), (0, l.jsx)(S.default, {
+    }), (0, l.jsx)(I.default, {
       className: j.iconLink,
       width: 40,
       height: 40
@@ -121,10 +121,10 @@ function w(e) {
         }), (0, l.jsx)("div", {
           className: j.errorBody,
           children: b.default.Messages.INVITE_MODAL_ERROR_INVALID_BODY
-        }), (0, l.jsx)(I.Button, {
-          size: I.Button.Sizes.LARGE,
+        }), (0, l.jsx)(S.Button, {
+          size: S.Button.Sizes.LARGE,
           onClick: () => M.default.close(),
-          color: I.Button.Colors.BRAND,
+          color: S.Button.Colors.BRAND,
           children: b.default.Messages.INVITE_MODAL_ERROR_BUTTON_TEXT
         })]
       })
@@ -132,7 +132,7 @@ function w(e) {
   })
 }
 
-function F(e) {
+function B(e) {
   let t, n, {
     transitionState: s
   } = e;
@@ -141,9 +141,9 @@ function F(e) {
     return null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
   });
   let {
-    invite: p,
+    invite: m,
     error: E,
-    submitting: S
+    submitting: I
   } = (0, r.useStateFromStoresObject)([y.default], () => y.default.getProps());
   a.useEffect(() => {
     !__OVERLAY__ && x.isPlatformEmbedded && ((0, x.isWindows)() ? R.default.minimize() : R.default.restore(), R.default.focus())
@@ -152,29 +152,29 @@ function F(e) {
     {
       analyticsLocations: T
     } = (0, c.default)(d.default.INVITE_MODAL);
-  if (null == p) return null;
-  if (p.state === O.InviteStates.EXPIRED || p.state === O.InviteStates.BANNED || p.state === O.InviteStates.ERROR) return (0, l.jsx)(w, {
+  if (null == m) return null;
+  if (m.state === O.InviteStates.EXPIRED || m.state === O.InviteStates.BANNED || m.state === O.InviteStates.ERROR) return (0, l.jsx)(w, {
     transitionState: s
   });
-  if (null == p.channel) return null;
+  if (null == m.channel) return null;
 
   function A() {
-    null != p && M.default.acceptInvite(p)
+    null != m && M.default.acceptInvite(m)
   }
   let {
     guild: L,
     channel: D,
     inviter: U,
-    target_application: F
-  } = p, B = null != p.stage_instance, H = null == p.guild && null == p.channel && null != p.inviter;
-  if (null != F) t = null == L ? void 0 : L.name, n = m.default.createFromServer(F).getCoverImageURL(1024);
+    target_application: B
+  } = m, F = null != m.stage_instance, H = null == m.guild && null == m.channel && null != m.inviter;
+  if (null != B) t = null == L ? void 0 : L.name, n = p.default.createFromServer(B).getCoverImageURL(1024);
   else if (null != L) t = L.name, n = v.default.getGuildSplashURL({
     id: L.id,
     splash: L.splash
   });
   else if ((null == (t = D.name) || "" === t) && null != U && (t = U.username), null == t) throw Error("no name for group DM invite");
   let V = (0, h.isAtGuildCapAndNonPremium)(),
-    k = B ? b.default.Messages.INSTANT_INVITE_ACCEPT_STAGE : b.default.Messages.INVITE_MODAL_BUTTON.format({
+    k = F ? b.default.Messages.INSTANT_INVITE_ACCEPT_STAGE : b.default.Messages.INVITE_MODAL_BUTTON.format({
       guildName: t
     });
   return H && (k = b.default.Messages.ACCEPT_INVITE_MODAL_BUTTON), (0, l.jsx)(c.AnalyticsLocationProvider, {
@@ -196,19 +196,19 @@ function F(e) {
               id: N,
               className: P.marginBottom20,
               children: (0, l.jsx)(u.default, {
-                invite: p,
+                invite: m,
                 disableUser: null != L,
                 error: E
               })
-            }), B && null != L ? (0, l.jsx)("div", {
+            }), F && null != L ? (0, l.jsx)("div", {
               className: i()(P.marginBottom20, j.stage),
               children: (0, l.jsx)(f.default, {
                 isCard: !0,
-                stageInstance: p.stage_instance,
+                stageInstance: m.stage_instance,
                 guild: L
               })
             }) : null, (0, l.jsxs)("div", {
-              children: [V ? (0, l.jsx)(G, {}) : null, null == F ? (0, l.jsx)(o.Tooltip, {
+              children: [V ? (0, l.jsx)(G, {}) : null, null == B ? (0, l.jsx)(o.Tooltip, {
                 text: V ? b.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                 position: "bottom",
                 children: e => {
@@ -216,12 +216,12 @@ function F(e) {
                     onMouseEnter: t,
                     onMouseLeave: n
                   } = e;
-                  return (0, l.jsx)(I.Button, {
-                    size: I.Button.Sizes.LARGE,
+                  return (0, l.jsx)(S.Button, {
+                    size: S.Button.Sizes.LARGE,
                     onClick: A,
-                    submitting: S,
+                    submitting: I,
                     disabled: V,
-                    color: B ? I.Button.Colors.GREEN : I.Button.Colors.BRAND,
+                    color: F ? S.Button.Colors.GREEN : S.Button.Colors.BRAND,
                     onMouseEnter: t,
                     onMouseLeave: n,
                     children: V ? b.default.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : k
@@ -229,28 +229,28 @@ function F(e) {
                 }
               }) : (0, l.jsxs)("div", {
                 className: j.buttonGroup,
-                children: [(0, l.jsx)(I.Button, {
-                  size: I.Button.Sizes.LARGE,
+                children: [(0, l.jsx)(S.Button, {
+                  size: S.Button.Sizes.LARGE,
                   onClick: A,
-                  submitting: S,
+                  submitting: I,
                   children: b.default.Messages.PLAY
-                }), (0, l.jsx)(I.Button, {
-                  color: I.Button.Colors.PRIMARY,
-                  size: I.Button.Sizes.LARGE,
+                }), (0, l.jsx)(S.Button, {
+                  color: S.Button.Colors.PRIMARY,
+                  size: S.Button.Sizes.LARGE,
                   onClick: A,
-                  submitting: S,
+                  submitting: I,
                   children: b.default.Messages.SPECTATE
                 })]
               }), (0, l.jsx)(g.default, {
                 justify: g.default.Justify.CENTER,
                 className: P.marginTop8,
-                children: (0, l.jsx)(I.Button, {
-                  look: I.Button.Looks.LINK,
+                children: (0, l.jsx)(S.Button, {
+                  look: S.Button.Looks.LINK,
                   className: j.noThanksButton,
                   onClick: function() {
                     M.default.close()
                   },
-                  color: I.Button.Colors.TRANSPARENT,
+                  color: S.Button.Colors.TRANSPARENT,
                   children: b.default.Messages.INIVTE_MODAL_NO_THANKS
                 })
               })]

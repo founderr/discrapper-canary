@@ -14,14 +14,14 @@ var l, a = n("735250"),
   c = n("215569"),
   f = n("481060"),
   h = n("812206"),
-  p = n("703656"),
-  m = n("417363"),
+  m = n("703656"),
+  p = n("417363"),
   C = n("941128"),
   g = n("366966"),
   E = n("943461"),
   _ = n("780570"),
-  I = n("353042"),
-  S = n("981631"),
+  S = n("353042"),
+  I = n("981631"),
   N = n("689938"),
   T = n("151067");
 
@@ -34,7 +34,7 @@ function A(e, t, n) {
   }) : e[t] = n, e
 }
 let L = {
-  [S.LocalDispatchApplicationStates.INSTALLING]: {
+  [I.LocalDispatchApplicationStates.INSTALLING]: {
     [g.TimeUnits.NONE]: (e, t) => N.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
       name: e
     }),
@@ -51,7 +51,7 @@ let L = {
       timeRemaining: t
     })
   },
-  [S.LocalDispatchApplicationStates.UPDATING]: {
+  [I.LocalDispatchApplicationStates.UPDATING]: {
     [g.TimeUnits.NONE]: (e, t) => N.default.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({
       name: e
     }),
@@ -68,7 +68,7 @@ let L = {
       timeRemaining: t
     })
   },
-  [S.LocalDispatchApplicationStates.REPAIRING]: {
+  [I.LocalDispatchApplicationStates.REPAIRING]: {
     [g.TimeUnits.NONE]: (e, t) => N.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
       name: e
     }),
@@ -92,10 +92,10 @@ class v extends s.PureComponent {
       state: e,
       isPaused: t
     } = this.props;
-    if (e.type === S.LocalDispatchApplicationStates.UPDATING || e.type === S.LocalDispatchApplicationStates.REPAIRING || e.type === S.LocalDispatchApplicationStates.INSTALLING) {
+    if (e.type === I.LocalDispatchApplicationStates.UPDATING || e.type === I.LocalDispatchApplicationStates.REPAIRING || e.type === I.LocalDispatchApplicationStates.INSTALLING) {
       if (t) return N.default.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
-      if (e.stage === S.DispatchApplicationStages.PATCHING || e.stage === S.DispatchApplicationStages.REPAIRING) return (0, a.jsx)(I.default, {
-        getHistoricalTotalBytes: m.default.getHistoricalTotalBytesWritten,
+      if (e.stage === I.DispatchApplicationStages.PATCHING || e.stage === I.DispatchApplicationStages.REPAIRING) return (0, a.jsx)(S.default, {
+        getHistoricalTotalBytes: p.default.getHistoricalTotalBytesWritten,
         updateInterval: 5e3,
         children: this.renderProgressBody
       })
@@ -200,7 +200,7 @@ class x extends(l = s.PureComponent) {
       let {
         onClick: t
       } = this.props;
-      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, p.transitionTo)(S.Routes.APPLICATION_LIBRARY)
+      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.transitionTo)(I.Routes.APPLICATION_LIBRARY)
     })
   }
 }
@@ -217,9 +217,9 @@ function R(e, t) {
     return null != s && e.push(s), e
   }, [])
 }
-t.default = u.default.connectStores([C.default, m.default, h.default], () => {
+t.default = u.default.connectStores([C.default, p.default, h.default], () => {
   let e = C.default.activeItems,
-    t = R(e, m.default),
+    t = R(e, p.default),
     {
       total: n,
       progress: l

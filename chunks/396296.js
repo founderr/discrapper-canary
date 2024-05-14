@@ -17,9 +17,9 @@ t.default = {
   init() {
     r.default.subscribe("PURCHASE_CONFIRMATION_MODAL_OPEN", e => {
       if (f(), c = e.context, d = e.entitlements, l = e.resolve, a = e.reject, u.CURRENT_APP_CONTEXT === e.context) {
-        var t, r, h, p;
+        var t, r, h, m;
         let l;
-        t = e.context, r = e.applicationId, h = e.skuId, p = e.analyticsSource, l = null, (0, i.openModalLazy)(async () => {
+        t = e.context, r = e.applicationId, h = e.skuId, m = e.analyticsSource, l = null, (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("20177"), n.e("41887")]).then(n.bind(n, "359012"));
@@ -36,7 +36,7 @@ t.default = {
               },
               applicationId: r,
               skuId: h,
-              analyticsSource: p,
+              analyticsSource: m,
               isIAP: t === u.AppContext.OVERLAY
             })
           }

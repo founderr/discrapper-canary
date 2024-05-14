@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("74538"),
   _ = s("283029"),
   g = s("357956"),
-  h = s("275909"),
-  I = s("981631"),
+  I = s("275909"),
+  h = s("981631"),
   N = s("735825"),
   p = s("689938"),
   C = s("657390");
@@ -35,7 +35,7 @@ function A(e) {
     className: C.unappliedGuildBoostSlot,
     children: [(0, a.jsxs)("div", {
       className: C.unappliedGuildBoostSlotContentPrimary,
-      children: [(0, a.jsx)(h.default, {
+      children: [(0, a.jsx)(I.default, {
         className: C.unappliedGuildBoostSlotIcon,
         hasCooldown: t.isOnCooldown(),
         isCanceled: c,
@@ -102,7 +102,7 @@ t.default = function(e) {
   let t, l;
   let {
     guildBoostSlots: g
-  } = e, h = (0, r.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), R = (null == h ? void 0 : h.isPausedOrPausePending) === !0, M = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), v = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), D = (0, S.useFreeBoostTenureRewardEntitlement)(), {
+  } = e, I = (0, r.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), R = (null == I ? void 0 : I.isPausedOrPausePending) === !0, M = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), v = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), D = (0, S.useFreeBoostTenureRewardEntitlement)(), {
     appliedGuildBoostSlots: L,
     unappliedGuildBoostSlots: P,
     numActiveGuildBoostSlots: j,
@@ -120,7 +120,7 @@ t.default = function(e) {
       numActiveGuildBoostSlots: s,
       hasCooldownBoosts: a
     }
-  }, [g]), U = null != h ? (0, u.getNumIncludedAndTenureRewardPremiumGuildSubscriptionSlots)(h, D) : 0, y = Math.max(0, U - L.length), B = j > U, F = U === g.length, G = F ? y : 1, k = n.useMemo(() => {
+  }, [g]), U = null != I ? (0, u.getNumIncludedAndTenureRewardPremiumGuildSubscriptionSlots)(I, D) : 0, y = Math.max(0, U - L.length), B = j > U, F = U === g.length, G = F ? y : 1, k = n.useMemo(() => {
     let e = [];
     for (let t = 0; t < G; t++) e.push((0, a.jsx)(_.default, {
       className: C.headerBoostGem,
@@ -201,7 +201,7 @@ t.default = function(e) {
                   return s => (0, a.jsx)(t, {
                     ...s,
                     guildBoostSlots: [e],
-                    locationSection: I.AnalyticsSections.SETTINGS_PREMIUM
+                    locationSection: h.AnalyticsSections.SETTINGS_PREMIUM
                   })
                 })
               } : void 0,
@@ -216,7 +216,7 @@ t.default = function(e) {
           isCancellable: B,
           onCancel: O,
           onUncancel: x,
-          premiumSubscription: h,
+          premiumSubscription: I,
           useReducedMotion: M
         }, e.id))
       })]

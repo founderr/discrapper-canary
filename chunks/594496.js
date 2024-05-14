@@ -21,8 +21,8 @@ var n = s("512722"),
   m = s("906364"),
   _ = s("621853"),
   g = s("271383"),
-  h = s("594174"),
-  I = s("466111"),
+  I = s("594174"),
+  h = s("466111"),
   N = s("74538"),
   p = s("51144"),
   C = s("18438"),
@@ -37,8 +37,8 @@ function D(e) {
   var t, s, n, D;
   let {
     guild: L
-  } = e, P = (0, i.useStateFromStores)([h.default], () => {
-    let e = h.default.getCurrentUser();
+  } = e, P = (0, i.useStateFromStores)([I.default], () => {
+    let e = I.default.getCurrentUser();
     return l()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
   }), {
     pendingAvatar: j,
@@ -105,7 +105,7 @@ function D(e) {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [M.default.Messages.USER_SETTINGS_AVATAR, (0, a.jsx)(r.Tooltip, {
             text: M.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-            children: e => (0, a.jsx)(I.default, {
+            children: e => (0, a.jsx)(h.default, {
               ...e,
               className: v.nitroWheel
             })
@@ -120,7 +120,7 @@ function D(e) {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [M.default.Messages.USER_SETTINGS_AVATAR_DECORATION, (0, a.jsx)(r.Tooltip, {
             text: M.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-            children: e => (0, a.jsx)(I.default, {
+            children: e => (0, a.jsx)(h.default, {
               ...e,
               className: v.nitroWheel
             })
@@ -132,7 +132,7 @@ function D(e) {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [M.default.Messages.USER_SETTINGS_PROFILE_EFFECT, (0, a.jsx)(r.Tooltip, {
             text: M.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-            children: e => (0, a.jsx)(I.default, {
+            children: e => (0, a.jsx)(h.default, {
               ...e,
               className: v.nitroWheel
             })
@@ -160,7 +160,7 @@ function D(e) {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [M.default.Messages.USER_PROFILE_ABOUT_ME, (0, a.jsx)(r.Tooltip, {
             text: M.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-            children: e => (0, a.jsx)(I.default, {
+            children: e => (0, a.jsx)(h.default, {
               ...e,
               className: v.nitroWheel
             })

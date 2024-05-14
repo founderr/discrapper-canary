@@ -22,8 +22,8 @@ function T(e) {
     transitionState: m,
     onSuccess: _,
     onClose: g,
-    requirementsUpdated: h,
-    noSkip: I = !1
+    requirementsUpdated: I,
+    noSkip: h = !1
   } = e, [N, p] = n.useState(""), [C, A] = n.useState(""), [O, x] = n.useState(""), [R, M] = n.useState(null), [v, D] = n.useState(null), L = (0, l.useStateFromStores)([o.default], () => o.default.getErrors()), P = (0, l.useStateFromStores)([o.default], () => o.default.getFormState()), j = n.useRef(null);
   async function b(e) {
     e.preventDefault(), (0, r.clearErrors)();
@@ -58,8 +58,8 @@ function T(e) {
         color: "header-secondary",
         variant: "text-md/normal",
         className: E.subtitle,
-        children: h ? S.default.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : S.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
-      }), !0 !== I && (0, a.jsx)(i.ModalCloseButton, {
+        children: I ? S.default.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : S.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
+      }), !0 !== h && (0, a.jsx)(i.ModalCloseButton, {
         onClick: g,
         className: E.modalCloseButton
       })]
@@ -102,7 +102,7 @@ function T(e) {
           size: i.Button.Sizes.MEDIUM,
           submitting: P === c.FormStates.SUBMITTING,
           children: S.default.Messages.DONE
-        }), !0 !== I && (0, a.jsx)(i.Button, {
+        }), !0 !== h && (0, a.jsx)(i.Button, {
           className: E.cancel,
           look: i.Button.Looks.LINK,
           color: i.Button.Colors.PRIMARY,

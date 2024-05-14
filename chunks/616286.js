@@ -99,10 +99,10 @@ function I(e) {
         mentionCount: n
       }
     }(n),
-    y = l.useCallback(() => {
+    L = l.useCallback(() => {
       null == c || c(), !v && h && (null == E || E()), u.default.updateChatOpen(n, !v)
     }, [n, v, c, h, E]),
-    L = l.useCallback(e => {
+    y = l.useCallback(e => {
       let {
         className: t
       } = e;
@@ -138,10 +138,10 @@ function I(e) {
     mentionCount: R
   })), M > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(C.default, {
     buttonRef: N,
-    onClick: y,
+    onClick: L,
     label: t,
     "aria-label": b.join(", "),
-    iconComponent: L,
+    iconComponent: y,
     tooltipPosition: "bottom",
     wrapperClassName: i()(s, null != r && {
       [r]: x

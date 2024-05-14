@@ -38,8 +38,8 @@ var i = n("735250"),
   b = n("981631"),
   G = n("65154"),
   w = n("689938"),
-  B = n("152435"),
-  k = n("661781");
+  k = n("152435"),
+  B = n("661781");
 let V = {
     width: 232,
     height: 315
@@ -66,9 +66,9 @@ function H(e) {
       }).catch(b.NOOP)
     }
   }, [s, a]), (0, i.jsxs)("div", {
-    className: B.previewRoot,
+    className: k.previewRoot,
     children: [(0, i.jsx)(u.Spinner, {}), (0, i.jsx)("div", {
-      className: B.preview,
+      className: k.preview,
       children: (0, i.jsx)(n, {
         disabled: !1,
         deviceId: a,
@@ -76,7 +76,7 @@ function H(e) {
         height: F.height
       })
     }), (0, i.jsx)("div", {
-      className: B.previewChannelHeader,
+      className: k.previewChannelHeader,
       children: t
     })]
   })
@@ -92,11 +92,11 @@ function Y(e) {
     enabled: o
   } = (0, m.default)(), l = (0, N.default)(n);
   return (0, i.jsxs)("div", {
-    className: B.actions,
+    className: k.actions,
     children: [(0, i.jsx)(O.CenterControlButton, {
       iconComponent: D.default,
       color: "red",
-      className: B.actionButton,
+      className: k.actionButton,
       label: w.default.Messages.DISMISS,
       onClick: () => d.default.stopRinging(n.id)
     }), t && (0, i.jsx)(u.Popout, {
@@ -126,7 +126,7 @@ function Y(e) {
           cameraUnavailable: a,
           channel: n,
           onPopoutClick: r > 1 ? s : null,
-          className: B.actionButton,
+          className: k.actionButton,
           popoutOpen: u,
           onCameraUnavailable: p.default,
           onChange: () => {
@@ -138,7 +138,7 @@ function Y(e) {
       channel: n,
       color: "green",
       centerButton: !0,
-      className: s()(B.actionButton, B.last)
+      className: s()(k.actionButton, k.last)
     })]
   })
 }
@@ -167,21 +167,21 @@ function j(e) {
   let L = O === b.ChannelModes.VIDEO && m && N > 0,
     D = (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(M.default, {
-        className: B.icon,
+        className: k.icon,
         ringing: p,
         src: null != h ? h : "",
         ringingType: M.default.RingingType.INCOMING,
         size: f ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
       }), (0, i.jsxs)("div", {
-        className: B.titleGroup,
+        className: k.titleGroup,
         children: [(0, i.jsx)(u.Text, {
-          className: B.title,
+          className: k.title,
           color: "header-primary",
           variant: f ? "text-md/semibold" : "text-lg/semibold",
           children: A
         }), (0, i.jsx)(u.Text, {
           color: "header-secondary",
-          className: B.subtitle,
+          className: k.subtitle,
           variant: f ? "text-sm/normal" : "text-md/normal",
           children: O === b.ChannelModes.VOICE ? w.default.Messages.INCOMING_CALL_ELLIPSIS : w.default.Messages.INCOMING_VIDEO_CALL_ELLIPSIS
         })]
@@ -189,8 +189,8 @@ function j(e) {
     }),
     U = L ? V : x;
   return (0, i.jsx)(E.default, {
-    className: B.wrapper,
-    selector: ".".concat(B.root),
+    className: k.wrapper,
+    selector: ".".concat(k.root),
     initialPosition: {
       left: a,
       top: n
@@ -201,8 +201,8 @@ function j(e) {
     dragAnywhere: !0,
     children: (0, i.jsx)(i.Fragment, {
       children: (0, i.jsxs)(o.animated.div, {
-        className: s()(B.root, k.elevationHigh, {
-          [B.previewCamera]: f
+        className: s()(k.root, B.elevationHigh, {
+          [k.previewCamera]: f
         }, f ? (0, y.getThemeClass)("dark") : null),
         style: {
           ...t,
@@ -213,7 +213,7 @@ function j(e) {
         children: [f ? (0, i.jsx)(H, {
           header: D
         }) : (0, i.jsx)("div", {
-          className: B.mainChannelInfo,
+          className: k.mainChannelInfo,
           children: D
         }), (0, i.jsx)(Y, {
           canVideo: L,
@@ -224,7 +224,7 @@ function j(e) {
           fullWidth: !0,
           look: u.Button.Looks.LINK,
           color: u.Button.Colors.PRIMARY,
-          className: B.previewButton,
+          className: k.previewButton,
           onClick: () => S(!0),
           children: w.default.Messages.INCOMING_CALL_PREVIEW_CAMERA
         }) : null]

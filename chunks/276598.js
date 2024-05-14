@@ -48,9 +48,9 @@ function v(e) {
   } = e, v = (0, m.default)(), x = (0, s.useStateFromStores)([h.default], () => {
     var e, t;
     return null === (e = h.default.getSessionById(null !== (t = null == v ? void 0 : v.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
-  }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, y] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), L = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), O = (0, p.default)(), j = O.filter(e => e.twoWayLink), [P, D] = l.useState(!1);
+  }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, L] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), y = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), O = (0, p.default)(), j = O.filter(e => e.twoWayLink), [P, D] = l.useState(!1);
   if (null == v && 0 === O.length || t.isBroadcastChannel()) return null;
-  let b = _.ChannelModes.VOICE !== R && [_.ChannelLayouts.NO_CHAT, _.ChannelLayouts.FULL_SCREEN].includes(y) ? "top" : "bottom",
+  let b = _.ChannelModes.VOICE !== R && [_.ChannelLayouts.NO_CHAT, _.ChannelLayouts.FULL_SCREEN].includes(L) ? "top" : "bottom",
     U = [];
   return j.length > 0 && U.push(i.DismissibleContent.DONUT_DESKTOP_NUX), (0, a.jsx)(u.default, {
     contentTypes: U,
@@ -65,9 +65,9 @@ function v(e) {
         }) : null, (0, a.jsx)(r.Popout, {
           position: b,
           spacing: o ? 16 : void 0,
-          positionKey: "".concat(R, ":").concat(y),
+          positionKey: "".concat(R, ":").concat(L),
           onRequestClose: () => D(!1),
-          shouldShow: (o || P) && !M && !L,
+          shouldShow: (o || P) && !M && !y,
           renderPopout: e => {
             let {
               closePopout: n

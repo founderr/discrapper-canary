@@ -84,8 +84,8 @@ var i, r, a = n("735250"),
   b = n("259580"),
   G = n("386103"),
   w = n("465670"),
-  B = n("839523"),
-  k = n("626135"),
+  k = n("839523"),
+  B = n("626135"),
   V = n("823379"),
   x = n("589530"),
   F = n("709054"),
@@ -411,7 +411,7 @@ function eo(e) {
     return null !== (e = p.default.summaries(r.id)) && void 0 !== e ? e : []
   }, [r]), P = (0, A.default)(y);
   s.useEffect(() => {
-    !d().isEqual(P, y) && k.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+    !d().isEqual(P, y) && B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: y.length,
       message_counts: y.map(e => e.count),
       start_message_ids: y.map(e => e.startId),
@@ -449,7 +449,7 @@ function eo(e) {
     }, [Z, X]),
     [q, J] = s.useState(!1),
     $ = s.useCallback(() => {
-      k.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+      B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !q,
         num_summaries: y.length,
         message_counts: y.map(e => e.count),
@@ -471,7 +471,7 @@ function eo(e) {
           u.addAutomaticAnchorCallback(Q, !1)
         }, 100)
       };
-      u.removeAutomaticAnchorCallback(Q), u.addScrollCompleteCallback(i), k.default.track(H.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+      u.removeAutomaticAnchorCallback(Q), u.addScrollCompleteCallback(i), B.default.track(H.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: r.guild_id,
@@ -502,7 +502,7 @@ function eo(e) {
   }, [v, q]);
   let en = s.useCallback(e => {
     var t;
-    !((0, _.isElement)(e.target) && (null === (t = R.current) || void 0 === t ? void 0 : t.contains(e.target))) && (q && k.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    !((0, _.isElement)(e.target) && (null === (t = R.current) || void 0 === t ? void 0 : t.contains(e.target))) && (q && B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: y.length,
       message_counts: y.map(e => e.count),
@@ -560,7 +560,7 @@ function eo(e) {
             [z.newTopicsBarTextUnselected]: !q,
             [z.newTopicsBarTextSelected]: q
           }),
-          children: [(0, a.jsx)(B.default, {
+          children: [(0, a.jsx)(k.default, {
             className: z.newTopicsBarIcon,
             width: 16,
             height: 16
@@ -595,7 +595,7 @@ function eo(e) {
         className: z.topicsDropdownHeading,
         children: [(0, a.jsxs)("div", {
           className: z.topicsDropdownHeadingText,
-          children: [(0, a.jsx)(B.default, {
+          children: [(0, a.jsx)(k.default, {
             className: z.topicsPillHeadingIcon,
             width: 18,
             height: 20
@@ -642,7 +642,7 @@ function eu(e) {
     return null !== (e = p.default.summaries(r.id)) && void 0 !== e ? e : []
   }, [r]), D = (0, A.default)(v);
   s.useEffect(() => {
-    !d().isEqual(D, v) && k.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+    !d().isEqual(D, v) && B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: v.length,
       message_counts: v.map(e => e.count),
       start_message_ids: v.map(e => e.startId),
@@ -682,7 +682,7 @@ function eu(e) {
     }, [F, Y]),
     [Z, X] = s.useState(!1),
     Q = s.useCallback(() => {
-      k.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+      B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !Z,
         num_summaries: v.length,
         message_counts: v.map(e => e.count),
@@ -704,7 +704,7 @@ function eu(e) {
           o.addAutomaticAnchorCallback(W, !1)
         }, 100)
       };
-      o.removeAutomaticAnchorCallback(W), o.addScrollCompleteCallback(i), k.default.track(H.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+      o.removeAutomaticAnchorCallback(W), o.addScrollCompleteCallback(i), B.default.track(H.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: r.guild_id,
@@ -741,7 +741,7 @@ function eu(e) {
   }, [C, Z]);
   let et = s.useCallback(e => {
     var t;
-    !((0, _.isElement)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && k.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    !((0, _.isElement)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: v.length,
       message_counts: v.map(e => e.count),
@@ -783,7 +783,7 @@ function eu(e) {
             [z.topicsPillTextUnselected]: !Z,
             [z.topicsPillTextSelected]: Z
           }),
-          children: [(0, a.jsx)(B.default, {
+          children: [(0, a.jsx)(k.default, {
             className: z.topicsPillSummaryIcon,
             width: 16,
             height: 16
@@ -830,7 +830,7 @@ function eu(e) {
         className: z.topicsDropdownHeading,
         children: [(0, a.jsxs)("div", {
           className: z.topicsDropdownHeadingText,
-          children: [(0, a.jsx)(B.default, {
+          children: [(0, a.jsx)(k.default, {
             className: z.topicsPillHeadingIcon,
             width: 18,
             height: 20

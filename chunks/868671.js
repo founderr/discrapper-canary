@@ -34,7 +34,7 @@ function C(e) {
   } = e, [S, _] = a.useState(!1), {
     requestId: T,
     entries: I
-  } = (0, d.default)(C), A = (0, l.useStateFromStores)([u.default], () => u.default.hidden), N = (0, l.useStateFromStores)([r.default], () => r.default.isFocused()), v = (0, l.useStateFromStores)([i.default], () => i.default.getChannel(C)), x = (null == v ? void 0 : v.isForumChannel()) === !1, [M, R, y, L] = a.useMemo(() => {
+  } = (0, d.default)(C), A = (0, l.useStateFromStores)([u.default], () => u.default.hidden), N = (0, l.useStateFromStores)([r.default], () => r.default.isFocused()), v = (0, l.useStateFromStores)([i.default], () => i.default.getChannel(C)), x = (null == v ? void 0 : v.isForumChannel()) === !1, [M, R, L, y] = a.useMemo(() => {
     let e;
     if (null == I || 0 === I.length || null == T || !x) return [t, n, E];
     let a = S ? I.length : 3,
@@ -73,9 +73,9 @@ function C(e) {
   }, [C, I, S, t, g, T, n, E, A, x]), O = a.useRef(0), j = a.useRef(I), P = a.useRef(), D = a.useCallback(e => {
     var t;
     let n = Math.floor(e / c.DEFAULT_CONTENT_ROW_HEIGHT),
-      a = Math.min(null !== (t = null == L ? void 0 : L.length) && void 0 !== t ? t : 0, n);
+      a = Math.min(null !== (t = null == y ? void 0 : y.length) && void 0 !== t ? t : 0, n);
     O.current = Math.max(O.current, a)
-  }, [L]);
+  }, [y]);
   return a.useEffect(() => {
     j.current = I
   }, [I]), a.useEffect(() => (O.current = 0, P.current = Date.now(), () => {
@@ -95,7 +95,7 @@ function C(e) {
   }), [T, C, g, A, N, x]), {
     groups: M,
     rows: R,
-    version: y,
+    version: L,
     updateMaxRowSeen: D
   }
 }

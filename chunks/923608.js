@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  i = n("524437"),
-  l = n("605236"),
+  l = n("524437"),
+  i = n("605236"),
   r = n("150340"),
   o = n("434404"),
   u = n("626135"),
@@ -17,21 +17,21 @@ t.default = e => {
     markAsDismissed: n
   } = e;
   s.useEffect(() => {
-    (0, l.requestMarkDismissibleContentAsShown)(i.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
+    (0, i.requestMarkDismissibleContentAsShown)(l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
   }, []);
   let h = s.useCallback(() => {
       o.default.open(t.id, c.GuildSettingsSections.ONBOARDING), u.default.track(c.AnalyticEvents.UPSELL_CLICKED, {
-        type: i.DismissibleContent[i.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
+        type: l.DismissibleContent[l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
         action: "primary"
-      }), (0, l.markDismissibleContentAsDismissed)(i.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE, {
+      }), (0, i.markDismissibleContentAsDismissed)(l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE, {
         dismissAction: f.ContentDismissActionType.PRIMARY
-      }), (0, r.dismissedGuildOnboardingUpsell)(t.id, i.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
+      }), (0, r.dismissedGuildOnboardingUpsell)(t.id, l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
     }, [t.id]),
     _ = s.useCallback(() => {
       u.default.track(c.AnalyticEvents.UPSELL_CLICKED, {
-        type: i.DismissibleContent[i.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
+        type: l.DismissibleContent[l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
         action: "dismiss"
-      }), n(f.ContentDismissActionType.UNKNOWN), (0, r.dismissedGuildOnboardingUpsell)(t.id, i.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
+      }), n(f.ContentDismissActionType.UNKNOWN), (0, r.dismissedGuildOnboardingUpsell)(t.id, l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
     }, [t.id, n]);
   return (0, a.jsx)(d.default, {
     guild: t,

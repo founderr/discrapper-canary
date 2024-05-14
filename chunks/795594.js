@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("384275"),
   _ = s("230711"),
   g = s("497321"),
-  h = s("468026"),
-  I = s("566620"),
+  I = s("468026"),
+  h = s("566620"),
   N = s("317381"),
   p = s("979200"),
   C = s("713938"),
@@ -96,7 +96,7 @@ let V = e => {
             applicationName: s.name
           })
         })]
-      })), (0, f.openModal)(t => (0, a.jsx)(h.default, {
+      })), (0, f.openModal)(t => (0, a.jsx)(I.default, {
         title: F.default.Messages.DEAUTHORIZE_APP,
         body: e,
         confirmText: F.default.Messages.DEAUTHORIZE,
@@ -241,7 +241,7 @@ t.default = () => {
       } = e;
       m.default.delete(t);
       let a = l.get(s.id);
-      null != a && (0, I.stopEmbeddedActivity)({
+      null != a && (0, h.stopEmbeddedActivity)({
         channelId: a.channelId,
         applicationId: s.id
       })

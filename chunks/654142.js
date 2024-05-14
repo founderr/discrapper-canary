@@ -11,8 +11,8 @@ var l = n("735250"),
   c = n("430824"),
   f = n("823379"),
   h = n("179809"),
-  p = n("652376"),
-  m = n("981631");
+  m = n("652376"),
+  p = n("981631");
 t.default = a.memo(function(e) {
   let {
     folderNode: t,
@@ -21,23 +21,23 @@ t.default = a.memo(function(e) {
     id: g,
     name: E,
     color: _,
-    children: I
-  } = t, S = I.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(g)), A = function(e) {
+    children: S
+  } = t, I = S.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(g)), A = function(e) {
     let t = e.children.map(e => {
         let t = e.id,
           n = c.default.getGuild(t);
         return null != n ? n.name : null
       }).filter(f.isNotNullish),
-      n = 2 * m.MAX_GUILD_FOLDER_NAME_LENGTH,
+      n = 2 * p.MAX_GUILD_FOLDER_NAME_LENGTH,
       l = [];
     for (let e of t)(e.length < n || 0 === l.length) && (l.push(e), n -= e.length);
     return "".concat(l.join(", ")).concat(l.length < t.length ? ", ..." : "")
-  }(t), L = (0, p.default)(t), {
+  }(t), L = (0, m.default)(t), {
     mentionCount: v,
     unread: x
   } = (0, s.useStateFromStoresObject)([d.default], () => ({
-    mentionCount: S.map(e => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
-    unread: S.some(e => d.default.hasUnread(e))
+    mentionCount: I.map(e => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
+    unread: I.some(e => d.default.hasUnread(e))
   })), R = a.useCallback(() => {
     r.default.toggleGuildFolderExpand(g)
   }, [g]), M = a.useCallback(e => {
@@ -58,7 +58,7 @@ t.default = a.memo(function(e) {
     ...C,
     folderNode: t,
     expanded: T,
-    selected: null != N && S.includes(N),
+    selected: null != N && I.includes(N),
     mentionCount: v,
     unread: x,
     mediaState: L,

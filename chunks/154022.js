@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("786761"),
   _ = s("3148"),
   g = s("739566"),
-  h = s("753206"),
-  I = s("440849"),
+  I = s("753206"),
+  h = s("440849"),
   N = s("196051"),
   p = s("441729"),
   C = s("285952"),
@@ -104,7 +104,7 @@ function K() {
         })]
       }), (0, a.jsx)("div", {
         className: B.previewMessage,
-        children: (0, a.jsx)(h.default, {
+        children: (0, a.jsx)(I.default, {
           compact: e,
           author: {
             ...(0, g.getMessageAuthor)(t),
@@ -302,13 +302,13 @@ function J() {
     }), (0, a.jsx)(u.FormSwitch, {
       className: F.marginBottom40,
       value: e,
-      note: null != o ? (0, I.default)(o) : void 0,
+      note: null != o ? (0, h.default)(o) : void 0,
       onChange: v.GifAutoPlay.updateSetting,
       children: y.default.Messages.GIF_AUTO_PLAY_LABEL
     }), (0, a.jsx)(u.FormSwitch, {
       className: i()(F.marginTop8, F.marginBottom20),
       value: t,
-      note: null != c ? (0, I.default)(c) : void 0,
+      note: null != c ? (0, h.default)(c) : void 0,
       onChange: v.AnimateEmoji.updateSetting,
       children: y.default.Messages.ANIMATE_EMOJI
     })]
@@ -327,7 +327,7 @@ function $() {
     children: [(0, a.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
       className: F.marginBottom8,
-      children: null != t ? (0, I.default)(t) : y.default.Messages.STICKERS_AUTO_PLAY_HELP
+      children: null != t ? (0, h.default)(t) : y.default.Messages.STICKERS_AUTO_PLAY_HELP
     }), (0, a.jsx)(u.RadioGroup, {
       options: [{
         name: y.default.Messages.STICKERS_ALWAYS_ANIMATE,

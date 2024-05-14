@@ -21,8 +21,8 @@ function u(e) {
     hideOnClick: c = !0,
     shouldShow: f,
     forceOpen: h,
-    selected: p = !1,
-    tooltipClass: m,
+    selected: m = !1,
+    tooltipClass: p,
     tooltipContentClass: C
   } = e;
   return (0, l.jsx)(r.Tooltip, {
@@ -34,13 +34,13 @@ function u(e) {
     position: "right",
     color: s,
     "aria-label": !1,
-    tooltipClassName: i()(o.listItemTooltip, m),
+    tooltipClassName: i()(o.listItemTooltip, p),
     tooltipContentClassName: C,
     children: e => u ? a.cloneElement(a.Children.only(t), {
       ...e
     }) : (0, l.jsx)("div", {
       className: i()(o.listItemWrapper, {
-        [o.selected]: p
+        [o.selected]: m
       }),
       ...e,
       children: t

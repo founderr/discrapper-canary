@@ -11,14 +11,14 @@ var l = n("735250"),
   c = n("481060"),
   f = n("493683"),
   h = n("239091"),
-  p = n("153867"),
-  m = n("35225"),
+  m = n("153867"),
+  p = n("35225"),
   C = n("703656"),
   g = n("769654"),
   E = n("271383"),
   _ = n("771845"),
-  I = n("880080"),
-  S = n("26290"),
+  S = n("880080"),
+  I = n("26290"),
   N = n("15434"),
   T = n("727258"),
   A = n("249792"),
@@ -55,8 +55,8 @@ t.default = a.memo(function(e) {
     guildNode: G,
     setRef: U,
     onDragStart: w,
-    onDragEnd: F,
-    route: B,
+    onDragEnd: B,
+    route: F,
     guild: H,
     animatable: V,
     selected: k = !1,
@@ -76,7 +76,7 @@ t.default = a.memo(function(e) {
   null == en && z > 0 ? en = null !== (s = (0, M.renderMentionBadge)(z)) && void 0 !== s ? s : void 0 : null == en && null != J && (en = null !== (h = (0, M.renderGuildJoinRequestBadge)({
     guildJoinRequestStatus: J
   })) && void 0 !== h ? h : void 0);
-  let el = null !== (P = e.lowerBadgeWidth) && void 0 !== P ? P : (0, S.getBadgeWidthForValue)(z),
+  let el = null !== (P = e.lowerBadgeWidth) && void 0 !== P ? P : (0, I.getBadgeWidthForValue)(z),
     [{
       dragging: ea
     }, es] = (0, r.useDrag)({
@@ -88,7 +88,7 @@ t.default = a.memo(function(e) {
         nodeId: G.id
       }),
       end() {
-        null == F || F(), (0, p.saveGuildFolders)(_.default.getCompatibleGuildFolders())
+        null == B || B(), (0, m.saveGuildFolders)(_.default.getCompatibleGuildFolders())
       },
       collect: e => ({
         dragging: e.isDragging()
@@ -99,23 +99,23 @@ t.default = a.memo(function(e) {
     eu = !Q && er,
     [ed, ec] = a.useState(!1),
     [ef, eh] = a.useState(!1),
-    [ep] = a.useState(() => new d.DelayedCall(70, () => eh(!0)));
-  a.useEffect(() => () => ep.cancel(), [ep]);
-  let em = a.useCallback(() => {
-      if (null != B) {
-        (0, C.transitionTo)(B, {
+    [em] = a.useState(() => new d.DelayedCall(70, () => eh(!0)));
+  a.useEffect(() => () => em.cancel(), [em]);
+  let ep = a.useCallback(() => {
+      if (null != F) {
+        (0, C.transitionTo)(F, {
           state: b
         });
         return
       }(0, g.transitionToGuild)($, {
         state: b
       })
-    }, [$, B]),
+    }, [$, F]),
     eC = a.useCallback(() => {
-      if (null != B || null == H || W || !q) return;
-      let e = (0, m.getChannelIdForGuildTransition)(H.id);
+      if (null != F || null == H || W || !q) return;
+      let e = (0, p.getChannelIdForGuildTransition)(H.id);
       null != e && f.default.preload(H.id, e)
-    }, [B, H, W, q]),
+    }, [F, H, W, q]),
     eg = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest($)),
     eE = a.useCallback(e => {
       null != H && !eg && Z(e, H)
@@ -126,14 +126,14 @@ t.default = a.memo(function(e) {
         null === (t = document.querySelector("[aria-owns=folder-items-".concat(ee, "]"))) || void 0 === t || t.focus()
       }
     }, [ee]),
-    eI = a.useCallback(e => {
+    eS = a.useCallback(e => {
       if (e) {
-        ep.delay();
+        em.delay();
         return
       }
-      ep.cancel(), eh(!1)
-    }, [ep]),
-    eS = a.useCallback(e => {
+      em.cancel(), eh(!1)
+    }, [em]),
+    eI = a.useCallback(e => {
       null == U || U($, e)
     }, [$, U]);
   if (null == H) return null;
@@ -153,7 +153,7 @@ t.default = a.memo(function(e) {
         mentions: z
       }),
       name: H.toString(),
-      onClick: em,
+      onClick: ep,
       onMouseEnter: function() {
         Q || eo(!0)
       },
@@ -187,8 +187,8 @@ t.default = a.memo(function(e) {
       })
     });
   return (0, l.jsxs)(R.ListItem, {
-    ref: eS,
-    children: [(0, l.jsx)(I.default, {
+    ref: eI,
+    children: [(0, l.jsx)(S.default, {
       hovered: !ea && eu,
       selected: !ea && k,
       unread: !ea && Y,
@@ -201,7 +201,7 @@ t.default = a.memo(function(e) {
     }), X ? (0, l.jsx)(L.default, {
       name: H.name,
       targetNode: G,
-      onDragOverChanged: eI
+      onDragOverChanged: eS
     }) : null]
   })
 })

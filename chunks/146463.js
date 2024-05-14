@@ -22,7 +22,7 @@ var l = s("120356"),
   A = s("858347");
 let M = () => null;
 
-function h(e) {
+function C(e) {
   let {
     status: t
   } = e, s = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE, l = m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY;
@@ -66,7 +66,7 @@ t.default = function(e) {
     guildId: c,
     onScroll: E,
     listRef: I
-  } = e, C = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(c), [c]), p = (0, r.useStateFromStores)([f.default], () => f.default.isFetching()), x = p ? [l.length + 25] : [l.length], g = (0, _.useSelectedGuildJoinRequest)({
+  } = e, h = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(c), [c]), p = (0, r.useStateFromStores)([f.default], () => f.default.isFetching()), x = p ? [l.length + 25] : [l.length], g = (0, _.useSelectedGuildJoinRequest)({
     guildId: c
   }), P = null !== (t = (0, S.useSubmittedGuildJoinRequestTotal)({
     guildId: c
@@ -79,7 +79,7 @@ t.default = function(e) {
         [A.selected]: g === n,
         [A.siblingSelected]: g === l[t - 1]
       }),
-      guild: C,
+      guild: h,
       guildJoinRequest: n,
       onClick: () => T.default.setSelectedGuildJoinRequest(c, n),
       applicationStatus: s
@@ -139,7 +139,7 @@ t.default = function(e) {
         }
       })
     })]
-  }) : (0, a.jsx)(h, {
+  }) : (0, a.jsx)(C, {
     status: s
   })
 }

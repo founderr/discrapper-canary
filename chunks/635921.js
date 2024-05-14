@@ -97,8 +97,8 @@ t.default = e => {
     autoTrackExposure: !1
   }), {
     analyticsLocations: D
-  } = (0, u.default)(o.default.PREMIUM_MARKETING_HERO_CTA), U = (0, T.useHasActiveTrial)(), j = (0, E.useIsInPremiumOfferExperience)(), y = (0, m.useIsEligibleForBogoPromotion)(), {
-    marketingEnabled: G
+  } = (0, u.default)(o.default.PREMIUM_MARKETING_HERO_CTA), U = (0, T.useHasActiveTrial)(), j = (0, E.useIsInPremiumOfferExperience)(), G = (0, m.useIsEligibleForBogoPromotion)(), {
+    marketingEnabled: y
   } = c.default.useExperiment({
     location: h
   }, {
@@ -116,7 +116,7 @@ t.default = e => {
       autoTrackExposure: !1
     }),
     F = C === P.PremiumMarketingEntrypoints.ApplicationStoreHome && null != k && H,
-    w = G && B.length > 0,
+    w = y && B.length > 0,
     K = (0, I.useIsMarketingPageHeroHeaderV2Enabled)({
       location: h
     });
@@ -147,7 +147,7 @@ t.default = e => {
             textColor: b ? "text-primary" : "always-white",
             smallerText: !t || b
           })
-        }) : !b && (0, a.jsx)(v, {}), y ? (0, a.jsx)("div", {
+        }) : !b && (0, a.jsx)(v, {}), G ? (0, a.jsx)("div", {
           className: M.buttonContainer,
           children: (0, a.jsx)(g.default, {
             className: M.button,

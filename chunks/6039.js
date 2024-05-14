@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("442837"),
-  l = n("481060"),
+  l = n("442837"),
+  i = n("481060"),
   r = n("703656"),
   o = n("430824"),
   u = n("612744"),
@@ -27,10 +27,10 @@ t.default = e => {
   let {
     guildId: v,
     inviteCode: R
-  } = e, [L, O] = s.useState(I.WaveStates.INITIAL), y = (0, i.useStateFromStores)([h.default], () => h.default.get(v)), M = (0, i.useStateFromStores)([C.default], () => C.default.getRequest(v)), P = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+  } = e, [L, O] = s.useState(I.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), y = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), P = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
     hasFetchedRequestToJoinGuilds: x,
     guildPreviewDisabled: D
-  } = (0, i.useStateFromStoresObject)([C.default], () => ({
+  } = (0, l.useStateFromStoresObject)([C.default], () => ({
     hasFetchedRequestToJoinGuilds: C.default.hasFetchedRequestToJoinGuilds,
     guildPreviewDisabled: C.default.getJoinRequestGuild(v)
   }));
@@ -52,23 +52,23 @@ t.default = e => {
     }), N = () => {
       O(Math.max(L, I.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(g.Routes.ME)
     }, () => {
-      (0, l.openModal)(e => (0, a.jsx)(l.ConfirmModal, {
+      (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
         header: T.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
         cancelText: T.default.Messages.NEVERMIND,
         onConfirm: N,
         confirmText: T.default.Messages.YES_TEXT,
-        confirmButtonColor: l.Button.Colors.RED,
+        confirmButtonColor: i.Button.Colors.RED,
         ...e,
-        children: (0, a.jsx)(l.Text, {
+        children: (0, a.jsx)(i.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
           children: n
         })
       }))
     }),
-    k = (null == y ? void 0 : null === (t = y.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
-      id: y.guild.id,
-      splash: y.guild.splash
+    k = (null == M ? void 0 : null === (t = M.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
+      id: M.guild.id,
+      splash: M.guild.splash
     }) : (0, d.getArtForPath)();
   return (0, a.jsx)("div", {
     className: A.page,
@@ -83,7 +83,7 @@ t.default = e => {
       }), (0, a.jsx)("div", {
         className: A.contentWrapper,
         children: (() => {
-          switch (null == M ? void 0 : M.applicationStatus) {
+          switch (null == y ? void 0 : y.applicationStatus) {
             case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
               return (0, a.jsx)(S.default, {
                 onWithdrawApplication: G,
@@ -95,7 +95,7 @@ t.default = e => {
                 onReapply: j,
                 confirmText: T.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
                 onWithdrawApplication: G,
-                rejectionReason: null == M ? void 0 : M.rejectionReason,
+                rejectionReason: null == y ? void 0 : y.rejectionReason,
                 guild: D
               });
             default:

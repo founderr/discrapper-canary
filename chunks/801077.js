@@ -7,14 +7,14 @@ var l, a, s, i, r = n("392711"),
   c = n("782769"),
   f = n("527805"),
   h = n("841784"),
-  p = n("503438"),
-  m = n("802856"),
+  m = n("503438"),
+  p = n("802856"),
   C = n("420660"),
   g = n("728345"),
   E = n("812206"),
   _ = n("710845"),
-  I = n("38618"),
-  S = n("656063"),
+  S = n("38618"),
+  I = n("656063"),
   N = n("761282"),
   T = n("789407"),
   A = n("630186"),
@@ -32,8 +32,8 @@ var l, a, s, i, r = n("392711"),
   G = n("594174"),
   U = n("979651"),
   w = n("823379"),
-  F = n("981631");
-let B = !1,
+  B = n("981631");
+let F = !1,
   H = !1,
   V = [],
   k = [],
@@ -44,11 +44,11 @@ let B = !1,
 
 function Z() {
   let e = j.default.getFriendIDs();
-  return R.default.hasConsented(F.Consents.PERSONALIZATION) ? new Set([...P.default.getUserAffinitiesUserIds(), ...e]) : new Set(e)
+  return R.default.hasConsented(B.Consents.PERSONALIZATION) ? new Set([...P.default.getUserAffinitiesUserIds(), ...e]) : new Set(e)
 }
 
 function X(e) {
-  return b.default.findActivity(e, e => e.type !== F.ActivityTypes.CUSTOM_STATUS)
+  return b.default.findActivity(e, e => e.type !== B.ActivityTypes.CUSTOM_STATUS)
 }
 
 function Q(e) {
@@ -74,14 +74,14 @@ function J(e) {
 }
 
 function $(e) {
-  if ((0, p.default)(e)) return T.SpotifyApplication;
+  if ((0, m.default)(e)) return T.SpotifyApplication;
   let t = null != e.application_id ? E.default.getApplication(e.application_id) : null;
-  return null != t ? t : (0, m.default)(e) ? Q(e.name) : (0, C.default)(e) && null != e.url ? q(e.url) : (null != e.application_id && J(e.application_id), t)
+  return null != t ? t : (0, p.default)(e) ? Q(e.name) : (0, C.default)(e) && null != e.url ? q(e.url) : (null != e.application_id && J(e.application_id), t)
 }
 
 function ee(e) {
   let t = U.default.getVoiceStateForUser(e);
-  return (null == t ? void 0 : t.channelId) != null && D.default.canWithPartialContext(F.Permissions.VIEW_CHANNEL, {
+  return (null == t ? void 0 : t.channelId) != null && D.default.canWithPartialContext(B.Permissions.VIEW_CHANNEL, {
     channelId: t.channelId
   }) ? t.channelId : null
 }
@@ -93,26 +93,26 @@ function et(e) {
 function en(e, t, n) {
   var l, a, s, i, r, u;
   let d;
-  let p = G.default.getCurrentUser(),
-    m = null !== (l = null == p ? void 0 : p.nsfwAllowed) && void 0 !== l && l,
+  let m = G.default.getCurrentUser(),
+    p = null !== (l = null == m ? void 0 : m.nsfwAllowed) && void 0 !== l && l,
     C = t.map(e => e.id),
     g = t.filter(t => e.has(t.id)),
-    I = !1,
+    S = !1,
     R = [],
     j = new Set,
     P = !1,
-    F = [];
+    B = [];
   for (let e of t) {
     let n = v.default.getAnyStreamForUser(e.id),
       l = x.default.getChannel(null == n ? void 0 : n.channelId);
-    if ((null == l ? void 0 : l.isNSFW()) && (!m || !y.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
+    if ((null == l ? void 0 : l.isNSFW()) && (!p || !y.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
     let r = X(e.id);
-    if (null != n && F.push({
+    if (null != n && B.push({
         stream: n,
         streamUser: e,
         activity: r
       }), null == r) continue;
-    let u = (0, S.default)(r);
+    let u = (0, I.default)(r);
     if (null == u) continue;
     P = u === T.SPOTIFY_APPLICATION_ID;
     let d = function(e) {
@@ -131,7 +131,7 @@ function en(e, t, n) {
           userId: e.id,
           application: d,
           channelId: null === (s = U.default.getVoiceStateForUser(e.id)) || void 0 === s ? void 0 : s.channelId,
-          currentUser: p,
+          currentUser: m,
           isActivitiesEnabledForCurrentPlatform: t,
           ChannelStore: x.default,
           VoiceStateStore: U.default,
@@ -150,7 +150,7 @@ function en(e, t, n) {
       let t = X(e.id),
         n = null != t ? $(t) : null;
       return null != n && n.id === d.id
-    }), (b = o().orderBy(b, [et], ["desc"])).length !== t.length && (I = !0), j.add(d.id), R.push({
+    }), (b = o().orderBy(b, [et], ["desc"])).length !== t.length && (S = !0), j.add(d.id), R.push({
       game: d,
       activity: r,
       activityUser: e,
@@ -158,7 +158,7 @@ function en(e, t, n) {
       playingMembers: b
     })
   }
-  let B = 1 === g.length,
+  let F = 1 === g.length,
     H = [],
     V = new Set,
     k = new Set;
@@ -167,7 +167,7 @@ function en(e, t, n) {
       l = x.default.getChannel(n),
       a = null != l ? l.getGuildId() : null,
       s = O.default.getGuild(a);
-    if (k.has(a) && V.has(n) || null == l || null == s || l.id === s.afkChannelId) null == l && (d = null, B = !0);
+    if (k.has(a) && V.has(n) || null == l || null == s || l.id === s.afkChannelId) null == l && (d = null, F = !0);
     else {
       let e = o()(U.default.getVoiceStatesForChannel(l.id)).map(e => {
         let {
@@ -175,7 +175,7 @@ function en(e, t, n) {
         } = e;
         return G.default.getUser(t)
       }).filter(w.isNotNullish).orderBy([et], ["desc"]).value();
-      e.filter(e => !C.includes(e.id)).forEach(e => t.push(e)), B ? !k.has(a) && (d = null) : (d = s, B = !0), k.add(a), V.add(n), H.push({
+      e.filter(e => !C.includes(e.id)).forEach(e => t.push(e)), F ? !k.has(a) && (d = null) : (d = s, F = !0), k.add(a), V.add(n), H.push({
         channel: l,
         guild: s,
         members: e
@@ -191,18 +191,18 @@ function en(e, t, n) {
       status: b.default.getStatus(e.id)
     })),
     partiedMembers: t,
-    showPlayingMembers: I,
+    showPlayingMembers: S,
     guildContext: d,
     currentActivities: (r = R, u = e => {
       var t;
       return null !== (t = e.startedPlayingTime) && void 0 !== t ? t : 0
     }, o()(r).orderBy([u, e => e.game.name], ["desc", "asc"])).value(),
-    applicationStreams: F
+    applicationStreams: B
   }
 }
 
 function el() {
-  return B && I.default.isConnected()
+  return F && S.default.isConnected()
 }
 let ea = o().throttle(() => {
   ! function() {
@@ -221,7 +221,7 @@ let ea = o().throttle(() => {
         l = X(e.id);
       return null != n ? "".concat("channel-", "-").concat(n) : (null == l ? void 0 : null === (t = l.party) || void 0 === t ? void 0 : t.id) != null ? "".concat("party-", "-").concat(l.party.id) : "".concat("user-", "-").concat(e.id)
     }))).values().orderBy([e => e.partiedMembers.length > 1, e => e.applicationStreams.length > 0, e => e.voiceChannels.length > 0, e => e.currentActivities.length > 0, e => e.isSpotifyActivity, e => e.priorityMembers.map(e => e.user.username.toLowerCase()).join(" ")], ["desc", "desc", "desc", "desc", "asc", "asc"]).value().filter(e => e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0)).map(e => ({
-      type: F.ActivityCardTypes.USER,
+      type: B.ActivityCardTypes.USER,
       party: e
     })), ! function() {
       if (W.size > 0) {
@@ -237,7 +237,7 @@ function es() {
 }
 class ei extends(l = u.default.Store) {
   initialize() {
-    this.syncWith([G.default, E.default, b.default, M.default, U.default, v.default, j.default, R.default, P.default], es), this.waitFor(I.default, O.default, E.default, G.default, P.default)
+    this.syncWith([G.default, E.default, b.default, M.default, U.default, v.default, j.default, R.default, P.default], es), this.waitFor(S.default, O.default, E.default, G.default, P.default)
   }
   get currentActivityParties() {
     return V
@@ -246,7 +246,7 @@ class ei extends(l = u.default.Store) {
     return k
   }
   get isMounted() {
-    return B
+    return F
   }
   get loaded() {
     return H
@@ -260,13 +260,13 @@ i = "NowPlayingViewStore", (s = "displayName") in(a = ei) ? Object.definePropert
 }) : a[s] = i;
 let er = new ei(d.default, {
   LOGOUT: function() {
-    B = !1, V = [], k = [], W.clear()
+    F = !1, V = [], k = [], W.clear()
   },
   NOW_PLAYING_MOUNTED: function() {
-    B = !0, ea()
+    F = !0, ea()
   },
   NOW_PLAYING_UNMOUNTED: function() {
-    B = !1
+    F = !1
   }
 });
 t.default = er

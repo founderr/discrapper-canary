@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return C
   }
 });
 var a = s("735250");
@@ -26,12 +26,12 @@ var l = s("913527"),
   A = s("689938"),
   M = s("859663");
 
-function h(e) {
+function C(e) {
   var t;
   let {
     guildJoinRequest: l,
-    guild: h,
-    guildJoinRequestUser: C
+    guild: C,
+    guildJoinRequestUser: h
   } = e, {
     createdAt: p,
     actionedAt: x,
@@ -40,8 +40,8 @@ function h(e) {
   } = l, {
     approveRequest: j,
     rejectRequest: v,
-    submitting: O
-  } = (0, N.useJoinRequestButtonActions)(g, P), G = null === (t = l.actionedByUser) || void 0 === t ? void 0 : t.id, L = (0, n.useStateFromStores)([E.default], () => E.default.getUser(G)), D = (0, n.useStateFromStores)([c.default], () => null != G ? c.default.getMember(g, G) : null, [G, g]), b = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING, F = (0, a.jsx)(f.default, {
+    submitting: G
+  } = (0, N.useJoinRequestButtonActions)(g, P), O = null === (t = l.actionedByUser) || void 0 === t ? void 0 : t.id, L = (0, n.useStateFromStores)([E.default], () => E.default.getUser(O)), D = (0, n.useStateFromStores)([c.default], () => null != O ? c.default.getMember(g, O) : null, [O, g]), b = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING, F = (0, a.jsx)(f.default, {
     width: 24,
     height: 24,
     className: M.icon
@@ -104,13 +104,13 @@ function h(e) {
           className: M.buttons,
           children: [(0, a.jsx)(u.Button, {
             color: u.Button.Colors.GREEN,
-            submitting: O,
+            submitting: G,
             onClick: j,
             children: A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
           }), (0, a.jsx)(u.Button, {
             color: u.Button.Colors.RED,
             onClick: v,
-            disabled: O,
+            disabled: G,
             children: A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
           })]
         }), (0, a.jsx)(u.Clickable, {
@@ -121,8 +121,8 @@ function h(e) {
               } = await s.e("84259").then(s.bind(s, "597409"));
               return t => (0, a.jsx)(e, {
                 ...t,
-                guild: h,
-                user: C
+                guild: C,
+                user: h
               })
             })
           },

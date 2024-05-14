@@ -12,14 +12,14 @@ var a = n("848246"),
   c = n("594174"),
   f = n("295226"),
   h = n("74538"),
-  p = n("736871"),
-  m = n("351742"),
+  m = n("736871"),
+  p = n("351742"),
   C = n("114064"),
   g = n("937579"),
   E = n("485731"),
   _ = n("841174"),
-  I = n("11352"),
-  S = n("981631");
+  S = n("11352"),
+  I = n("981631");
 
 function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -85,18 +85,18 @@ class T extends r.default {
     var t;
     let {
       inPerksDemosExperiment: n
-    } = p.default.getCurrentConfig({
+    } = m.default.getCurrentConfig({
       location: "PremiumManager"
     }, {
       autoTrackExposure: !1
     }), {
       enabled: l
-    } = m.default.getCurrentConfig({
+    } = p.default.getCurrentConfig({
       location: "PremiumManager"
     }, {
       autoTrackExposure: !1
     });
-    if (!n || !l || e.state !== S.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
+    if (!n || !l || e.state !== I.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
     let s = d.default.getChannel(e.channelId);
     if (null == s || !(null === (t = C.default.getPerksDemos()) || void 0 === t ? void 0 : t[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY])) return;
     let r = C.default.getActivated()[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY];
@@ -116,7 +116,7 @@ class T extends r.default {
         type: "PREMIUM_MARKETING_DATA_READY"
       })
     }), N(this, "_trackCustomNotificationSoundsExposure", () => {
-      I.CustomNotificationSoundExperiment.trackExposure({
+      S.CustomNotificationSoundExperiment.trackExposure({
         location: "PremiumManager"
       })
     }), N(this, "_handlePremiumPaymentModalOpen", e => {

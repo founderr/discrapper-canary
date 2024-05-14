@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   FolderEndDropTarget: function() {
-    return S
+    return I
   },
   PlaceholderDropTarget: function() {
     return N
@@ -18,8 +18,8 @@ var l = n("735250"),
   c = n("626135"),
   f = n("727258"),
   h = n("662146"),
-  p = n("981631"),
-  m = n("689938"),
+  m = n("981631"),
+  p = n("689938"),
   C = n("990237");
 
 function g(e) {
@@ -45,7 +45,7 @@ function E(e, t) {
       let {
         nodeId: a
       } = e;
-      l && t.type !== f.GuildsNodeType.FOLDER && c.default.track(p.AnalyticEvents.GUILD_FOLDER_CREATED), d.default.moveById(a, t.id, n, l)
+      l && t.type !== f.GuildsNodeType.FOLDER && c.default.track(m.AnalyticEvents.GUILD_FOLDER_CREATED), d.default.moveById(a, t.id, n, l)
     },
     collect: e => ({
       canDrop: e.canDrop(),
@@ -63,22 +63,22 @@ function _(e) {
   } = e, o = a.useMemo(() => E([f.GuildsNodeType.GUILD, f.GuildsNodeType.FOLDER], n, r, s), [n, r, s]), [{
     canDrop: d,
     isOver: c
-  }, h] = (0, u.useDrop)(o), p = g([
+  }, h] = (0, u.useDrop)(o), m = g([
     [d, C.autoPointerEvents],
     [c, C.dragOver]
   ]);
   return (0, l.jsx)("div", {
     ref: e => {
-      p.current = e, h(e)
+      m.current = e, h(e)
     },
-    "data-dnd-name": m.default.Messages.DND_DROP_ABOVE.format({
+    "data-dnd-name": p.default.Messages.DND_DROP_ABOVE.format({
       itemName: t
     }),
     className: i()(C.target)
   })
 }
 
-function I(e) {
+function S(e) {
   let {
     name: t,
     targetNode: n,
@@ -104,7 +104,7 @@ function I(e) {
       ref: e => {
         c.current = e, d(e)
       },
-      "data-dnd-name": m.default.Messages.DND_DROP_COMBINE.format({
+      "data-dnd-name": p.default.Messages.DND_DROP_COMBINE.format({
         itemName: t
       }),
       className: i()(C.centerTarget, {})
@@ -112,7 +112,7 @@ function I(e) {
   })
 }
 
-function S(e) {
+function I(e) {
   let {
     name: t,
     targetNode: n
@@ -168,7 +168,7 @@ t.default = a.memo(function(e) {
       name: t,
       targetNode: n,
       below: s
-    }), r ? (0, l.jsx)(I, {
+    }), r ? (0, l.jsx)(S, {
       name: t,
       targetNode: n,
       onDragOverChanged: i

@@ -28,16 +28,16 @@ function m(e) {
     isDragEnabled: E,
     submittedGuildJoinRequestsCount: T,
     removeFormField: C,
-    updateFormField: x,
-    updateFormFieldOrder: _,
+    updateFormField: _,
+    updateFormFieldOrder: x,
     canRemove: g,
     actionsLocation: I
   } = e, N = async () => {
     await C(h)
   }, v = async e => {
-    await x(h, e)
+    await _(h, e)
   }, A = async (e, t, a) => {
-    await _(e, t, a)
+    await x(e, t, a)
   }, S = (0, r.uniqueId)(), L = t === h, y = {
     key: S,
     index: h,

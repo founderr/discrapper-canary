@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
 var a = n("735250");
 n("470079");
 var s = n("151827"),
-  i = n("836519");
+  l = n("836519");
 
-function l(e) {
+function i(e) {
   let {
     title: t,
     id: n
   } = e;
   return (0, a.jsx)(s.default, {
-    className: i.title,
+    className: l.title,
     id: n,
     children: t
   })

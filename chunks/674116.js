@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("358085"),
   _ = s("894939"),
   g = s("321499"),
-  h = s("710808"),
-  I = s("625205"),
+  I = s("710808"),
+  h = s("625205"),
   N = s("325808"),
   p = s("823087"),
   C = s("546997"),
@@ -87,7 +87,7 @@ function y() {
   }, [H, w]), (0, a.jsxs)(o.FormSection, {
     tag: o.FormTitleTags.H1,
     title: L.default.Messages.VOICE_SETTINGS,
-    children: [(0, a.jsx)(I.default, {}), (0, a.jsx)(R.default, {}), (0, a.jsx)(p.default, {}), (0, a.jsx)(o.FormText, {
+    children: [(0, a.jsx)(h.default, {}), (0, a.jsx)(R.default, {}), (0, a.jsx)(p.default, {}), (0, a.jsx)(o.FormText, {
       className: P.marginBottom20,
       type: o.FormText.Types.DESCRIPTION,
       children: L.default.Messages.FORM_HELP_VOICE_VIDEO_TROUBLESHOOTING_GUIDE.format({
@@ -180,7 +180,7 @@ function y() {
             children: L.default.Messages.DISPLAY_SILENCE_WARNING
           })
         })]
-      }), V && (0, a.jsx)(h.default, {}), (0, a.jsx)(o.FormItem, {
+      }), V && (0, a.jsx)(I.default, {}), (0, a.jsx)(o.FormItem, {
         children: (0, a.jsx)(o.Button, {
           look: o.Button.Looks.OUTLINED,
           color: o.Button.Colors.RED,

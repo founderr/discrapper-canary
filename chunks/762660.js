@@ -56,7 +56,7 @@ function A(e) {
     guildJoinRequest: r,
     className: A,
     onClick: M
-  } = e, [h, C] = l.useState(null), {
+  } = e, [C, h] = l.useState(null), {
     user: p,
     createdAt: x
   } = r;
@@ -69,18 +69,18 @@ function A(e) {
         guildId: s,
         userId: a
       } = e;
-      if (null == h) {
-        C(t);
+      if (null == C) {
+        h(t);
         try {
           await R.default.updateGuildJoinRequest(s, a, t)
         } catch (e) {
-          (0, o.showToast)((0, o.createToast)(S.default.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE)), C(null)
+          (0, o.showToast)((0, o.createToast)(S.default.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE)), h(null)
         }
       }
-    }, [h]),
-    O = async () => {
+    }, [C]),
+    G = async () => {
       await v(r, _.GuildJoinRequestApplicationStatuses.APPROVED)
-    }, G = async () => {
+    }, O = async () => {
       await v(r, _.GuildJoinRequestApplicationStatuses.REJECTED)
     };
   return (0, a.jsxs)(o.Clickable, {
@@ -105,17 +105,17 @@ function A(e) {
       })]
     }), j && (0, a.jsx)(m, {
       icon: E.default,
-      onClick: O,
-      submitting: h === _.GuildJoinRequestApplicationStatuses.APPROVED,
-      disabled: null != h && h !== _.GuildJoinRequestApplicationStatuses.APPROVED
+      onClick: G,
+      submitting: C === _.GuildJoinRequestApplicationStatuses.APPROVED,
+      disabled: null != C && C !== _.GuildJoinRequestApplicationStatuses.APPROVED
     }), j && (0, a.jsx)(m, {
       icon: I.default,
-      onClick: G,
-      submitting: h === _.GuildJoinRequestApplicationStatuses.REJECTED,
-      disabled: null != h && h !== _.GuildJoinRequestApplicationStatuses.REJECTED
+      onClick: O,
+      submitting: C === _.GuildJoinRequestApplicationStatuses.REJECTED,
+      disabled: null != C && C !== _.GuildJoinRequestApplicationStatuses.REJECTED
     }), (0, a.jsx)(o.Clickable, {
       className: n()(N.overflowMenuContainer, {
-        [N.disabled]: null != h
+        [N.disabled]: null != C
       }),
       onClick: e => {
         (0, d.openContextMenuLazy)(e, async () => {

@@ -36,8 +36,8 @@ var n = s("399606"),
   D = s("926433"),
   U = s("302036"),
   j = s("994554"),
-  y = s("704565"),
-  G = s("393305"),
+  G = s("704565"),
+  y = s("393305"),
   B = s("338879"),
   k = s("203302"),
   H = s("766491"),
@@ -116,7 +116,7 @@ t.default = () => {
           analyticsLocations: e
         })
       },
-      perkImage: y
+      perkImage: G
     },
     clips: ei ? {
       name: "clips",
@@ -228,7 +228,7 @@ t.default = () => {
       description: v.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
       descriptionCta: v.default.Messages.TAKE_ME_THERE,
       onCtaClick: eE,
-      perkImage: G
+      perkImage: y
     },
     remixing: ei ? {
       name: "remixing",

@@ -20,8 +20,8 @@ var n = a("735250"),
   E = a("931468"),
   T = a("449226"),
   C = a("689938"),
-  x = a("212723"),
-  _ = a("5288");
+  _ = a("212723"),
+  x = a("5288");
 
 function g(e) {
   let {
@@ -67,9 +67,9 @@ function g(e) {
     })
   };
   return (0, n.jsxs)("div", {
-    className: x.itemWrapper,
+    className: _.itemWrapper,
     children: [(0, n.jsxs)("div", {
-      className: x.itemContent,
+      className: _.itemContent,
       children: [(0, n.jsx)(o.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
@@ -79,11 +79,11 @@ function g(e) {
         color: "header-secondary",
         children: C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
       }), !s && (0, n.jsx)("div", {
-        className: _.pillRow,
+        className: x.pillRow,
         children: l && (0, n.jsxs)(o.Text, {
           color: "interactive-normal",
           variant: "text-xs/medium",
-          className: x.valuePill,
+          className: _.valuePill,
           children: [(0, n.jsx)(E.default, {
             width: 16,
             height: 16
@@ -91,7 +91,7 @@ function g(e) {
         })
       })]
     }), (0, n.jsx)("div", {
-      className: _.previewAndEnable,
+      className: x.previewAndEnable,
       children: s || u || !i ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(o.Clickable, {
           onMouseDown: m,
@@ -100,12 +100,12 @@ function g(e) {
             m(e), I()
           },
           children: (0, n.jsx)(o.Tooltip, {
-            tooltipContentClassName: _.__invalid_tooltip,
+            tooltipContentClassName: x.__invalid_tooltip,
             text: C.default.Messages.PREVIEW,
             children: e => (0, n.jsx)(p.default, {
               height: 24,
               width: 24,
-              className: _.previewIcon,
+              className: x.previewIcon,
               ...e
             })
           })
@@ -156,9 +156,9 @@ function v(e) {
     disableAnimation: p,
     disableBackground: !M,
     children: (0, n.jsx)("div", {
-      className: i()(x.itemBodyContainer, {
-        [x.noPadding]: !M,
-        [_.rulesScreeningItemsNoBorder]: !M
+      className: i()(_.itemBodyContainer, {
+        [_.noPadding]: !M,
+        [x.rulesScreeningItemsNoBorder]: !M
       }),
       children: null != R && (0, n.jsx)(h.default, {
         guild: o,

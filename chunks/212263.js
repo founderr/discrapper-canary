@@ -36,9 +36,9 @@ t.default = e => {
     emojiDescriptor: b,
     pickerIntention: G,
     analyticsLocation: w
-  } = e, B = (0, u.default)(), [k, V] = r.useState(!1), x = () => {
+  } = e, k = (0, u.default)(), [B, V] = r.useState(!1), x = () => {
     (0, O.trackPremiumSettingsPaneOpened)(U), (0, E.navigateToPremiumMarketingPage)(), y()
-  }, F = (0, o.isThemeLight)(B) ? n("537381") : n("341048"), H = (0, S.usePremiumTrialOffer)(), Y = (0, f.usePremiumDiscountOffer)(), j = null != H || null != Y, {
+  }, F = (0, o.isThemeLight)(k) ? n("537381") : n("341048"), H = (0, S.usePremiumTrialOffer)(), Y = (0, f.usePremiumDiscountOffer)(), j = null != H || null != Y, {
     isLoading: W,
     suggestedPremiumType: K
   } = (0, T.default)({
@@ -106,7 +106,7 @@ t.default = e => {
         })]
       }), !j && (0, i.jsx)(A.default, {
         subscriptionTier: Q ? L.PremiumSubscriptionSKUs.TIER_0 : L.PremiumSubscriptionSKUs.TIER_2,
-        submitting: k,
+        submitting: B,
         premiumModalAnalyticsLocation: {
           section: R.AnalyticsSections.EMOJI_PICKER_POPOUT,
           object: R.AnalyticsObjects.BUTTON_CTA

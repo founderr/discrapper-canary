@@ -30,8 +30,8 @@ function T(e) {
     guildId: m,
     className: _,
     disabled: g = !1,
-    isTryItOutFlow: h = !1,
-    forcedDivider: I,
+    isTryItOutFlow: I = !1,
+    forcedDivider: h,
     withHighlight: N = !1
   } = e, p = N ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
@@ -39,7 +39,7 @@ function T(e) {
     title: T,
     errors: s,
     disabled: g,
-    forcedDivider: I,
+    forcedDivider: h,
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,
       children: [(0, a.jsx)(p, {
@@ -47,7 +47,7 @@ function T(e) {
           [S.buttonHighlighted]: N
         }),
         size: i.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, m, h, h ? E : void 0),
+        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, m, I, I ? E : void 0),
         children: null != f ? f : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
       }), t && (0, a.jsx)(i.Button, {
         className: S.removeButton,

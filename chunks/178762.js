@@ -41,7 +41,7 @@ let R = i().throttle(e => {
     leading: !0,
     trailing: !1
   }),
-  y = e => {
+  L = e => {
     let {
       entry: t,
       ...n
@@ -71,7 +71,7 @@ let R = i().throttle(e => {
         return null
     }
   },
-  L = e => {
+  y = e => {
     let {
       entry: t,
       ...n
@@ -150,7 +150,7 @@ t.default = l.memo(e => {
         let {
           closePopout: t
         } = e;
-        return (0, a.jsx)(L, {
+        return (0, a.jsx)(y, {
           closePopout: t,
           updatePopoutPosition: D,
           ...i
@@ -186,7 +186,7 @@ t.default = l.memo(e => {
                 R(S)
               },
               onContextMenu: P,
-              children: (0, a.jsx)(y, {
+              children: (0, a.jsx)(L, {
                 ...i,
                 selected: n
               })

@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("411104"), n("47120");
 var a, s = n("735250"),
-  i = n("470079"),
-  l = n("120356"),
-  r = n.n(l),
+  l = n("470079"),
+  i = n("120356"),
+  r = n.n(i),
   o = n("613828"),
   u = n("442837"),
   d = n("846519"),
@@ -29,8 +29,8 @@ var a, s = n("735250"),
   R = n("931003"),
   L = n("626135"),
   O = n("780570"),
-  y = n("624138"),
-  M = n("645818"),
+  M = n("624138"),
+  y = n("645818"),
   P = n("981631"),
   x = n("689938"),
   D = n("638920");
@@ -43,8 +43,8 @@ function b(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let U = (0, y.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
-  j = (0, y.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
+  j = (0, M.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
   G = Object.freeze({
     [P.GameTableListKeys.PLATFORM]: "Platform",
     [P.GameTableListKeys.LAST_PLAYED]: "Last Played",
@@ -55,13 +55,13 @@ let U = (0, y.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
       flag: t,
       icon: n,
       item: a,
-      tooltip: i
-    } = e, l = a.libraryApplication.hasFlag(t);
+      tooltip: l
+    } = e, i = a.libraryApplication.hasFlag(t);
     return (0, s.jsx)(f.Tooltip, {
-      text: i,
+      text: l,
       children: e => (0, s.jsx)(n, {
         className: r()(D.settingIcon, {
-          [D.hidden]: !l
+          [D.hidden]: !i
         }),
         ...e
       })
@@ -130,10 +130,10 @@ let U = (0, y.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     renderHeader: () => null,
     cellClassName: D.actionsCell,
     render(e, t, n) {
-      var a, l;
+      var a, i;
       if (null == t) throw Error("No cell props defined.");
       let o = e.key === t.activeRowKey;
-      return (0, s.jsxs)(i.Fragment, {
+      return (0, s.jsxs)(l.Fragment, {
         children: [(0, s.jsxs)("div", {
           className: D.settingIcons,
           children: [(0, s.jsx)(k, {
@@ -146,14 +146,14 @@ let U = (0, y.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
             item: e,
             icon: R.default,
             tooltip: x.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
-          }), (0, s.jsx)(M.default, {
+          }), (0, s.jsx)(y.default, {
             className: r()(D.settingIcon, {
               [D.hidden]: !e.supportsCloudSync
             }),
             libraryApplication: e.libraryApplication
           })]
         }), (0, O.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(m.default, {
-          analyticsListSort: (a = t.sortKey, l = t.sortDirection, "".concat(G[a], " ").concat(l === P.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
+          analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(G[a], " ").concat(i === P.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
           analyticsListIndex: n,
           source: P.AnalyticsLocations.APPLICATION_LIBRARY,
           libraryApplication: e.libraryApplication,
@@ -173,13 +173,13 @@ let U = (0, y.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
       })
     }
   }],
-  F = e => {
+  B = e => {
     let {
       item: t,
       activeRowKey: n,
       highlightedApplicationKey: a,
-      onMouseEnter: i,
-      onMouseLeave: l,
+      onMouseEnter: l,
+      onMouseLeave: i,
       onContextMenu: o,
       setRef: u,
       ...d
@@ -192,15 +192,15 @@ let U = (0, y.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
         [D.rowWrapperDim]: !c && !t.isLaunchable
       }),
       ref: e => u(e, t.key),
-      onMouseEnter: () => i(t),
-      onMouseLeave: l,
+      onMouseEnter: () => l(t),
+      onMouseLeave: i,
       onContextMenu: e => o(e, t),
       children: (0, s.jsx)("div", {
         ...d
       })
     })
   };
-class B extends(a = i.PureComponent) {
+class F extends(a = l.PureComponent) {
   componentDidMount() {
     let {
       fetched: e
@@ -315,26 +315,26 @@ class B extends(a = i.PureComponent) {
       sortDirection: t,
       applicationViewItems: n,
       activeRowKey: a,
-      stickyHeader: l
+      stickyHeader: i
     } = this.props, {
       overflowMenuRowKey: r,
       highlightedApplicationKey: o
     } = this.state;
-    return (0, s.jsxs)(i.Fragment, {
+    return (0, s.jsxs)(l.Fragment, {
       children: [n.length > 0 ? (0, s.jsx)(A.default, {
         columns: w,
         data: n,
         sortData: !1,
-        rowComponent: F,
+        rowComponent: B,
         className: D.table,
-        headerClassName: l ? D.stickyHeader : D.header,
+        headerClassName: i ? D.stickyHeader : D.header,
         headerCellClassName: D.headerCell,
         sortedHeaderCellClassName: D.headerCellSorted,
         bodyCellClassName: D.bodyCell,
         rowClassName: D.row,
         sortKey: e,
         sortDirection: t,
-        stickyHeader: l,
+        stickyHeader: i,
         rowProps: {
           activeRowKey: null != r ? r : a,
           highlightedApplicationKey: o,
@@ -396,11 +396,11 @@ class B extends(a = i.PureComponent) {
 }
 
 function H(e) {
-  let t = i.useContext(L.AnalyticsContext),
+  let t = l.useContext(L.AnalyticsContext),
     n = (0, o.useLocation)(),
     {
       applicationViewItems: a,
-      filterQuery: l,
+      filterQuery: i,
       fetched: r
     } = (0, u.useStateFromStoresObject)([S.default], () => ({
       applicationViewItems: S.default.sortedFilteredLibraryApplicationViewItems,
@@ -418,12 +418,12 @@ function H(e) {
       activeRowKey: p.default.activeRowKey,
       isNavigatingByKeyboard: p.default.isNavigatingByKeyboard
     }));
-  return (0, s.jsx)(B, {
+  return (0, s.jsx)(F, {
     ...e,
     analyticsContext: t,
     location: n,
     applicationViewItems: a,
-    filterQuery: l,
+    filterQuery: i,
     fetched: r,
     sortKey: d,
     sortDirection: c,
@@ -431,6 +431,6 @@ function H(e) {
     isNavigatingByKeyboard: E
   })
 }
-b(B, "defaultProps", {
+b(F, "defaultProps", {
   stickyHeader: !1
 })

@@ -14,14 +14,14 @@ var l, a = n("735250"),
   c = n("239091"),
   f = n("134616"),
   h = n("714338"),
-  p = n("212819"),
-  m = n("14429"),
+  m = n("212819"),
+  p = n("14429"),
   C = n("592125"),
   g = n("888369"),
   E = n("430824"),
   _ = n("306680"),
-  I = n("944486"),
-  S = n("938475"),
+  S = n("944486"),
+  I = n("938475"),
   N = n("387204"),
   T = n("107828"),
   A = n("153124"),
@@ -83,16 +83,16 @@ let U = u.default.connectStores([_.default, C.default], e => {
       category: C.default.getChannel(t.parent_id)
     }
   })(G),
-  w = u.default.connectStores([S.default], e => {
+  w = u.default.connectStores([I.default], e => {
     let {
       channel: t
     } = e;
     if (null == t.guild_id) throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
     return {
-      voiceStates: S.default.getVoiceStates(t.guild_id)[t.id]
+      voiceStates: I.default.getVoiceStates(t.guild_id)[t.id]
     }
   })(G),
-  F = u.default.connectStores([g.default], e => {
+  B = u.default.connectStores([g.default], e => {
     let {
       guild: t
     } = e;
@@ -100,7 +100,7 @@ let U = u.default.connectStores([_.default, C.default], e => {
       unread: g.default.hasUnread(t.id)
     }
   })(T.Guild),
-  B = u.default.connectStores([_.default], e => {
+  F = u.default.connectStores([_.default], e => {
     let {
       channel: t
     } = e;
@@ -224,10 +224,10 @@ class k extends s.PureComponent {
       }),
       type: N.default.Types.INLINE,
       children: O.default.Messages.QUICKSWITCHER_PROTIP.format({
-        userSymbolHook: (e, t) => V(t, p.AutocompleterQuerySymbols.USER, O.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-        textChannelSymbolHook: (e, t) => V(t, p.AutocompleterQuerySymbols.TEXT_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-        voiceChannelSymbolHook: (e, t) => V(t, p.AutocompleterQuerySymbols.VOICE_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-        guildSymbolHook: (e, t) => V(t, p.AutocompleterQuerySymbols.GUILD, O.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+        userSymbolHook: (e, t) => V(t, m.AutocompleterQuerySymbols.USER, O.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+        textChannelSymbolHook: (e, t) => V(t, m.AutocompleterQuerySymbols.TEXT_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+        voiceChannelSymbolHook: (e, t) => V(t, m.AutocompleterQuerySymbols.VOICE_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+        guildSymbolHook: (e, t) => V(t, m.AutocompleterQuerySymbols.GUILD, O.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
         helpdeskArticle: v.default.getArticleURL(y.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL)
       })
     })
@@ -276,11 +276,11 @@ class k extends s.PureComponent {
     }), b(this, "focusResult", e => {
       !this.state.mouseFocusDisabled && (0, x.selectResult)(this.props.results.indexOf(e))
     }), b(this, "selectResult", e => {
-      (0, x.switchToResult)(e, this.props.queryMode === p.AutocompleterResultTypes.TEXT_CHANNEL)
+      (0, x.switchToResult)(e, this.props.queryMode === m.AutocompleterResultTypes.TEXT_CHANNEL)
     }), b(this, "handleContextMenu", e => {
       let t = this.props.results[this.props.selectedIndex];
       switch (t.type) {
-        case p.AutocompleterResultTypes.GUILD:
+        case m.AutocompleterResultTypes.GUILD:
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
@@ -292,8 +292,8 @@ class k extends s.PureComponent {
               hideSettings: !0
             })
           });
-        case p.AutocompleterResultTypes.TEXT_CHANNEL:
-        case p.AutocompleterResultTypes.VOICE_CHANNEL:
+        case m.AutocompleterResultTypes.TEXT_CHANNEL:
+        case m.AutocompleterResultTypes.VOICE_CHANNEL:
           let l = t.record,
             s = E.default.getGuild(l.getGuildId());
           if (null == s) return;
@@ -363,7 +363,7 @@ class k extends s.PureComponent {
               })
           }
           break;
-        case p.AutocompleterResultTypes.GROUP_DM:
+        case m.AutocompleterResultTypes.GROUP_DM:
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
@@ -371,11 +371,11 @@ class k extends s.PureComponent {
             return n => (0, a.jsx)(e, {
               ...n,
               channel: t.record,
-              selected: I.default.getChannelId() === t.record.id,
+              selected: S.default.getChannelId() === t.record.id,
               onSelect: x.hide
             })
           });
-        case p.AutocompleterResultTypes.USER:
+        case m.AutocompleterResultTypes.USER:
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
@@ -416,18 +416,18 @@ class k extends s.PureComponent {
           return
         }
         case "arrowup":
-          s = (0, p.findNextSelectedResult)(p.FindResultDirections.UP, s, l);
+          s = (0, m.findNextSelectedResult)(m.FindResultDirections.UP, s, l);
           break;
         case "arrowdown":
-          s = (0, p.findNextSelectedResult)(p.FindResultDirections.DOWN, s, l);
+          s = (0, m.findNextSelectedResult)(m.FindResultDirections.DOWN, s, l);
           break;
         case "n":
           if (!e.ctrlKey) return;
-          s = (0, p.findNextSelectedResult)(p.FindResultDirections.DOWN, s, l);
+          s = (0, m.findNextSelectedResult)(m.FindResultDirections.DOWN, s, l);
           break;
         case "p":
           if (!e.ctrlKey) return;
-          s = (0, p.findNextSelectedResult)(p.FindResultDirections.UP, s, l);
+          s = (0, m.findNextSelectedResult)(m.FindResultDirections.UP, s, l);
           break;
         default:
           return
@@ -440,17 +440,17 @@ class k extends s.PureComponent {
         selectedIndex: l
       } = this.props, {
         showScores: s
-      } = m.default.getCurrentConfig({
+      } = p.default.getCurrentConfig({
         location: "62f4be_1"
       }, {
         autoTrackExposure: !1
       });
       switch (n.type) {
-        case p.AutocompleterResultTypes.HEADER:
+        case m.AutocompleterResultTypes.HEADER:
           return (0, a.jsx)(T.Header, {
             children: n.record.text
           }, "".concat(n.type, "-").concat(n.record.id));
-        case p.AutocompleterResultTypes.TEXT_CHANNEL:
+        case m.AutocompleterResultTypes.TEXT_CHANNEL:
           return (0, a.jsx)(U, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
@@ -461,7 +461,7 @@ class k extends s.PureComponent {
             channel: n.record,
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case p.AutocompleterResultTypes.VOICE_CHANNEL:
+        case m.AutocompleterResultTypes.VOICE_CHANNEL:
           return (0, a.jsx)(w, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
@@ -472,8 +472,8 @@ class k extends s.PureComponent {
             channel: n.record,
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case p.AutocompleterResultTypes.GUILD:
-          return (0, a.jsx)(F, {
+        case m.AutocompleterResultTypes.GUILD:
+          return (0, a.jsx)(B, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),
@@ -483,7 +483,7 @@ class k extends s.PureComponent {
             guild: n.record,
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case p.AutocompleterResultTypes.USER:
+        case m.AutocompleterResultTypes.USER:
           return (0, a.jsx)(H, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
@@ -495,8 +495,8 @@ class k extends s.PureComponent {
             comparator: n.comparator,
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case p.AutocompleterResultTypes.GROUP_DM:
-          return (0, a.jsx)(B, {
+        case m.AutocompleterResultTypes.GROUP_DM:
+          return (0, a.jsx)(F, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),
@@ -506,7 +506,7 @@ class k extends s.PureComponent {
             channel: n.record,
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case p.AutocompleterResultTypes.APPLICATION:
+        case m.AutocompleterResultTypes.APPLICATION:
           return (0, a.jsx)(T.Application, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
@@ -515,7 +515,7 @@ class k extends s.PureComponent {
             onFocus: this.focusNode,
             application: n.record
           }, "".concat(n.type, "-").concat(n.record.id));
-        case p.AutocompleterResultTypes.LINK:
+        case m.AutocompleterResultTypes.LINK:
           return (0, a.jsx)(T.Link, {
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),

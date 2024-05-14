@@ -93,7 +93,7 @@ function w(e, t) {
   return null != a ? [n, i] = a() : C().has(r) ? [n, i] = D(r, "MMMM", "month") : R().has(r) ? [n, i] = D(r, "dddd", "day") : g().has(r) ? [n, i] = D(r, "YYYY", "year") : [n, i] = D(r, p.SEARCH_DATE_FORMAT, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
 }
 
-function B(e) {
+function k(e) {
   let t = e.getMatch(1),
     n = f.default.getGuildId(),
     i = c.default.getChannels(n)[c.GUILD_SELECTABLE_CHANNELS_KEY].concat(c.default.getChannels(n)[c.GUILD_VOCAL_CHANNELS_KEY]),
@@ -110,7 +110,7 @@ function B(e) {
   return null != a && (e.setData("channel", a), !0)
 }
 
-function k(e) {
+function B(e) {
   let t = {
     [O.default.Messages.SEARCH_ANSWER_HAS_LINK]: "link",
     [O.default.Messages.SEARCH_ANSWER_HAS_EMBED]: "embed",
@@ -255,7 +255,7 @@ function Z() {
       [p.SearchTokenTypes.ANSWER_HAS]: {
         regex: RegExp("(?:\\s*-?(".concat(n.map(e => m.default.escape(e)).join("|"), "))"), "i"),
         follows: [p.SearchTokenTypes.FILTER_HAS],
-        validator: k,
+        validator: B,
         componentType: "ANSWER",
         queryKey: "has"
       },
@@ -371,7 +371,7 @@ function Z() {
         mutable: !0,
         follows: [p.SearchTokenTypes.FILTER_IN],
         componentType: "ANSWER",
-        validator: B,
+        validator: k,
         queryKey: "channel_id"
       },
       [p.SearchTokenTypes.FILTER_PINNED]: {

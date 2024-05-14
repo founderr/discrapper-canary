@@ -15,14 +15,14 @@ var l = n("735250"),
   c = n("19780"),
   f = n("709054"),
   h = n("208049"),
-  p = n("763296"),
-  m = n("242291"),
+  m = n("763296"),
+  p = n("242291"),
   C = n("174470"),
   g = n("549771"),
   E = n("964398"),
   _ = n("409673"),
-  I = n("710111"),
-  S = n("599046");
+  S = n("710111"),
+  I = n("599046");
 
 function N(e) {
   let {
@@ -35,10 +35,10 @@ function N(e) {
     analyticsSource: v,
     onClose: x
   } = e, R = function(e) {
-    let [t, n] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getSounds(), p.default.getFavorites()]);
+    let [t, n] = (0, i.useStateFromStoresArray)([m.default], () => [m.default.getSounds(), m.default.getFavorites()]);
     return a.useMemo(() => {
       let l = [],
-        a = [...e, I.DEFAULT_SOUND_GUILD_ID],
+        a = [...e, S.DEFAULT_SOUND_GUILD_ID],
         s = (e, a) => {
           var s, i;
           for (let r of null !== (i = null === (s = t.get(e)) || void 0 === s ? void 0 : s.sort((e, t) => f.default.compare(e.soundId, t.soundId))) && void 0 !== i ? i : []) {
@@ -51,7 +51,7 @@ function N(e) {
   }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), M = (0, C.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [O, D] = a.useState(void 0), b = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
     analyticsLocations: j
   } = (0, o.default)(r.default.SOUNDBOARD_WHEEL), P = a.useCallback(e => {
-    (0, m.playSound)(e, n.id, j), x()
+    (0, p.playSound)(e, n.id, j), x()
   }, [j, n.id, x]);
   a.useEffect(() => {
     h.maybeFetchSoundboardSounds(), d.FrecencyUserSettingsActionCreators.loadIfNecessary()
@@ -87,9 +87,9 @@ function N(e) {
       let t = R[e];
       null != t && P(t)
     }, [R, P]),
-    F = a.useMemo(() => R.map(e => (0, l.jsx)(_.default, {
+    B = a.useMemo(() => R.map(e => (0, l.jsx)(_.default, {
       interactive: L,
-      className: S.soundButton,
+      className: I.soundButton,
       sound: e,
       focused: O === e.soundId,
       channel: n
@@ -106,7 +106,7 @@ function N(e) {
       onItemSelect: U,
       onItemAction: w,
       interactive: L,
-      children: F
+      children: B
     })
   })
 }

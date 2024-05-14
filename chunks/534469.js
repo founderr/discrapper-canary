@@ -33,8 +33,8 @@ var a = n("735250"),
   x = n("534091"),
   M = n("901461"),
   R = n("739566"),
-  y = n("233715"),
-  L = n("453687"),
+  L = n("233715"),
+  y = n("453687"),
   O = n("348238"),
   j = n("62072"),
   P = n("38267"),
@@ -74,7 +74,7 @@ function q(e) {
   } = (0, u.useListItem)(null !== (t = e.id) && void 0 !== t ? t : ""), h = (0, d.useStateFromStores)([C.default], () => C.default.getMessageByReference(s)), {
     popouts: m,
     setPopout: p
-  } = (0, P.default)(l.id, W.DEFAULT_POPOUTS), E = (0, R.default)(l), g = (0, L.getMessageAriaLabelledBy)(l), S = (0, L.getMessageAriaDescribedBy)(l);
+  } = (0, P.default)(l.id, W.DEFAULT_POPOUTS), E = (0, R.default)(l), g = (0, y.getMessageAriaLabelledBy)(l), S = (0, y.getMessageAriaDescribedBy)(l);
   return l.type === Y.MessageTypes.THREAD_STARTER_MESSAGE && null != h && h.state === C.ReferencedMessageState.LOADED ? (0, a.jsx)(X, {
     ...e,
     message: h.message,
@@ -121,7 +121,7 @@ function X(e) {
     groupId: I
   } = e, v = r.type === Y.MessageTypes.REPLY ? r.messageReference : void 0, {
     onFocus: x,
-    ...y
+    ...L
   } = (0, u.useListItem)(null !== (t = e.id) && void 0 !== t ? t : ""), {
     isFocused: b,
     handleFocus: F,
@@ -145,7 +145,7 @@ function X(e) {
     allowHeading: $,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), eo = (0, j.default)(o, h, ea), eu = (0, R.default)(r), ed = (0, L.getMessageAriaLabelledBy)(r, I), ec = (0, L.getMessageAriaDescribedBy)(r), ef = (0, H.default)(e, ei, !1), eh = l.useCallback(() => (0, g.transitionToGuild)(E, h, o), [E, h, o]), em = (0, m.useRoleIcon)({
+  }), eo = (0, j.default)(o, h, ea), eu = (0, R.default)(r), ed = (0, y.getMessageAriaLabelledBy)(r, I), ec = (0, y.getMessageAriaDescribedBy)(r), ef = (0, H.default)(e, ei, !1), eh = l.useCallback(() => (0, g.transitionToGuild)(E, h, o), [E, h, o]), em = (0, m.useRoleIcon)({
     guildId: E,
     roleId: eu.iconRoleId
   });
@@ -157,7 +157,7 @@ function X(e) {
       "aria-label": z.default.Messages.JUMP,
       children: z.default.Messages.JUMP
     }), (0, a.jsx)(A.default, {
-      ...y,
+      ...L,
       id: s,
       compact: _,
       className: i()(T, {
@@ -258,7 +258,7 @@ t.default = l.memo(function(e) {
     eM = (0, d.useStateFromStores)([T.default], () => T.default.isDeveloper),
     {
       content: eR,
-      hasSpoilerEmbeds: ey
+      hasSpoilerEmbeds: eL
     } = (0, D.default)(g, {
       hideSimpleEmbedContent: el && es,
       isInteracting: eA,
@@ -269,7 +269,7 @@ t.default = l.memo(function(e) {
       allowDevLinks: eM,
       previewLinkTarget: !0
     }),
-    eL = (0, j.default)(x, q, eT),
+    ey = (0, j.default)(x, q, eT),
     eO = (0, R.default)(g),
     ej = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(q)),
     eP = function(e) {
@@ -280,8 +280,8 @@ t.default = l.memo(function(e) {
       guildId: Z.guild_id,
       roleId: eO.iconRoleId
     }),
-    eb = (0, L.getMessageAriaLabelledBy)(g, $),
-    eU = (0, L.getMessageAriaDescribedBy)(g),
+    eb = (0, y.getMessageAriaLabelledBy)(g, $),
+    eU = (0, y.getMessageAriaDescribedBy)(g),
     eF = (0, d.useStateFromStores)([h.default], () => h.default.getMessage(x), [x]),
     ew = (0, b.default)({
       message: g,
@@ -308,7 +308,7 @@ t.default = l.memo(function(e) {
           onFocus: eg,
           onBlur: eS,
           onContextMenu: ed,
-          onKeyDown: eL,
+          onKeyDown: ey,
           onClick: ec,
           compact: X,
           contentOnly: ee,
@@ -338,7 +338,7 @@ t.default = l.memo(function(e) {
           }),
           childrenAccessories: (0, U.default)({
             channelMessageProps: e,
-            hasSpoilerEmbeds: ey,
+            hasSpoilerEmbeds: eL,
             handleContextMenu: ed,
             isInteracting: eA,
             isAutomodBlockedMessage: ek
@@ -360,7 +360,7 @@ t.default = l.memo(function(e) {
         })
       })
     });
-  return null != eP ? (0, a.jsx)(y.default, {
+  return null != eP ? (0, a.jsx)(L.default, {
     flashKey: eP,
     className: i()({
       [K.backgroundFlash]: !0,

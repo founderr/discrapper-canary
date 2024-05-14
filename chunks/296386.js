@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   addGuildCategory: function() {
-    return _
+    return x
   },
   deleteGuildCategory: function() {
     return g
@@ -16,7 +16,7 @@ a.r(t), a.d(t, {
     return c
   },
   saveGuildMetadata: function() {
-    return x
+    return _
   },
   updateGuildDiscoveryMetadataAbout: function() {
     return E
@@ -178,7 +178,7 @@ function C(e, t) {
     socialLinks: t
   })
 }
-async function x(e) {
+async function _(e) {
   let {
     guildId: t,
     primaryCategoryId: a,
@@ -199,8 +199,8 @@ async function x(e) {
       emoji_discoverability_enabled: E,
       partner_actioned_timestamp: T,
       partner_application_timestamp: C,
-      is_published: x,
-      reasons_to_join: _,
+      is_published: _,
+      reasons_to_join: x,
       social_links: g,
       about: I
     } = (await n.HTTP.patch({
@@ -228,8 +228,8 @@ async function x(e) {
         emojiDiscoverabilityEnabled: E,
         partnerActionedTimestamp: T,
         partnerApplicationTimestamp: C,
-        isPublished: x,
-        reasonsToJoin: _,
+        isPublished: _,
+        reasonsToJoin: x,
         socialLinks: g,
         about: I
       }
@@ -243,7 +243,7 @@ async function x(e) {
   }
 }
 
-function _(e, t) {
+function x(e, t) {
   n.HTTP.put({
     url: o.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
     oldFormErrors: !0

@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("526761"),
   _ = s("65154"),
   g = s("689938"),
-  h = s("611273");
-let I = s("651714"),
+  I = s("611273");
+let h = s("651714"),
   N = s("297166");
 
 function p() {
@@ -31,7 +31,7 @@ function p() {
     experimentalEncoders: c.default.getExperimentalEncoders()
   }));
   return "stable" !== E.default.releaseChannel && c.default.isExperimentalEncodersSupported() ? (0, a.jsx)(d.FormSwitch, {
-    className: i()(h.marginTop8, h.marginBottom20),
+    className: i()(I.marginTop8, I.marginBottom20),
     value: e,
     onChange: e => u.default.setExperimentalEncoders(e),
     disabled: !1,
@@ -53,13 +53,13 @@ function C() {
     E = n.useRef(null);
   return (0, f.default)(E, m.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.FormSection, {
-      className: h.marginBottom20,
+      className: I.marginBottom20,
       title: g.default.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
       children: (0, a.jsx)(d.FormNotice, {
-        className: h.marginBottom20,
+        className: I.marginBottom20,
         type: d.FormNoticeTypes.PRIMARY,
         imageData: {
-          src: (0, o.isThemeLight)(e) ? I : N,
+          src: (0, o.isThemeLight)(e) ? h : N,
           width: 70,
           height: 40
         },
@@ -67,10 +67,10 @@ function C() {
         body: g.default.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
       })
     }), l && (0, a.jsxs)(d.FormSection, {
-      className: h.marginBottom20,
+      className: I.marginBottom20,
       title: g.default.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
       children: [(0, a.jsx)(d.FormSwitch, {
-        className: i()(h.marginTop8, h.marginBottom20),
+        className: i()(I.marginTop8, I.marginBottom20),
         value: t,
         onChange: e => u.default.setOpenH264(e),
         disabled: !1,
@@ -82,7 +82,7 @@ function C() {
         },
         ref: E
       }), (0, a.jsx)(d.FormSwitch, {
-        className: i()(h.marginTop8, h.marginBottom20),
+        className: i()(I.marginTop8, I.marginBottom20),
         value: s,
         onChange: e => u.default.setHardwareH264(e),
         note: g.default.Messages.FORM_HELP_HARDWARE_H264,

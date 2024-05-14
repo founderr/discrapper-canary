@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("296533"),
   _ = s("901750"),
   g = s("112863"),
-  h = s("701157"),
-  I = s("912152"),
+  I = s("701157"),
+  h = s("912152"),
   N = s("615603"),
   p = s("474936"),
   C = s("388095");
@@ -38,7 +38,7 @@ function A(e) {
       hasAppliedGuildBoosts: L,
       isUserPremiumTier2: x,
       subscriptionIsPausedOrPausePending: j
-    }), (0, a.jsx)(I.default, {
+    }), (0, a.jsx)(h.default, {
       hasAppliedGuildBoosts: L,
       isUserPremiumTier2: x,
       hasGuildAffinitiesOrInGuild: v,
@@ -51,7 +51,7 @@ function A(e) {
       premiumSubscription: t
     }), (0, a.jsx)(N.default, {
       guildBoostSlots: A
-    }), (0, a.jsx)(h.default, {
+    }), (0, a.jsx)(I.default, {
       hasAppliedGuildBoosts: L,
       subscriptionIsPausedOrPausePending: j
     }), (0, a.jsx)(d.default, {

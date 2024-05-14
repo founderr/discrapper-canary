@@ -20,20 +20,20 @@ var a = s("735250"),
   m = s("80487"),
   A = s("146463"),
   M = s("981631"),
-  h = s("689938"),
-  C = s("134040");
+  C = s("689938"),
+  h = s("134040");
 
 function p(e) {
   let {
     guild: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: C.setupHeader,
+    className: h.setupHeader,
     children: [(0, a.jsxs)("div", {
-      className: C.previewContainer,
+      className: h.previewContainer,
       children: [(0, a.jsx)(n.Heading, {
         variant: "heading-lg/bold",
-        children: h.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP
+        children: C.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP
       }), (0, a.jsxs)(n.Button, {
         color: n.Button.Colors.TRANSPARENT,
         onClick: () => {
@@ -49,15 +49,15 @@ function p(e) {
           })
         },
         size: n.ButtonSizes.SMALL,
-        "aria-label": h.default.Messages.MEMBER_VERIFICATION_PREVIEW_APPLICATION,
-        innerClassName: C.previewButton,
-        children: [(0, a.jsx)(d.default, {}), h.default.Messages.MEMBER_VERIFICATION_PREVIEW_APPLICATION]
+        "aria-label": C.default.Messages.MEMBER_VERIFICATION_PREVIEW_APPLICATION,
+        innerClassName: h.previewButton,
+        children: [(0, a.jsx)(d.default, {}), C.default.Messages.MEMBER_VERIFICATION_PREVIEW_APPLICATION]
       })]
     }), (0, a.jsx)(n.Text, {
-      className: C.description,
+      className: h.description,
       variant: "text-sm/medium",
       color: "header-secondary",
-      children: h.default.Messages.CLAN_APPLICATION_SETUP_HEADER.format({
+      children: C.default.Messages.CLAN_APPLICATION_SETUP_HEADER.format({
         guildName: t.name
       })
     })]
@@ -74,10 +74,10 @@ function x(e) {
     guildId: d
   }), v = (0, f.useSelectedGuildJoinRequest)({
     guildId: d
-  }), O = null !== (t = (0, S.useSubmittedGuildJoinRequestTotal)({
+  }), G = null !== (t = (0, S.useSubmittedGuildJoinRequestTotal)({
     guildId: d
   })) && void 0 !== t ? t : 0, {
-    guildJoinRequests: G
+    guildJoinRequests: O
   } = (0, _.useSortedMemberApplications)({
     guildId: d,
     applicationStatus: "REVIEW_APPLICATION" === g ? E.GuildJoinRequestApplicationStatuses.SUBMITTED : g,
@@ -86,18 +86,18 @@ function x(e) {
     fetchNextPage: L
   } = (0, I.usePaginatedMemberApplications)({
     guildId: d,
-    guildJoinRequests: G
+    guildJoinRequests: O
   }), D = l.useRef(!1);
   !D.current && (D.current = !0, L(j, "REVIEW_APPLICATION" === g ? E.GuildJoinRequestApplicationStatuses.SUBMITTED : g));
   let b = l.useRef(!1);
   l.useEffect(() => {
     b.current = !0
   }, [j, g]), l.useEffect(() => {
-    if (b.current && 0 !== G.length && "REVIEW_APPLICATION" !== g) {
+    if (b.current && 0 !== O.length && "REVIEW_APPLICATION" !== g) {
       var e;
-      b.current = !1, c.default.setSelectedGuildJoinRequest(d, G[0]), null === (e = x.current) || void 0 === e || e.scrollToTop()
+      b.current = !1, c.default.setSelectedGuildJoinRequest(d, O[0]), null === (e = x.current) || void 0 === e || e.scrollToTop()
     }
-  }, [d, G, v, g]);
+  }, [d, O, v, g]);
   let F = l.useCallback(async e => {
       if ("REVIEW_APPLICATION" !== g) j !== e && (c.default.setSelectedSortOrder(d, e), await L(e, g))
     }, [g, j, d, L]),
@@ -120,13 +120,13 @@ function x(e) {
     children: [(0, a.jsx)(m.default, {
       currentTab: g,
       onTabItemSelect: B,
-      pendingGuildJoinRequestsTotal: O,
+      pendingGuildJoinRequestsTotal: G,
       showSetupTab: J
     }), (0, a.jsx)("div", {
-      className: C.content,
+      className: h.content,
       children: "REVIEW_APPLICATION" === g ? null != U ? (0, a.jsx)(n.ScrollerThin, {
         children: (0, a.jsxs)("div", {
-          className: C.scrollerContent,
+          className: h.scrollerContent,
           children: [(0, a.jsx)(p, {
             guild: U
           }), (0, a.jsx)(u.default, {
@@ -136,20 +136,20 @@ function x(e) {
         })
       }) : null : (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("div", {
-          className: C.listControls,
+          className: h.listControls,
           children: (0, a.jsx)(N.default, {
-            className: C.sortSelect,
+            className: h.sortSelect,
             sortOrder: j,
             onSortChange: F
           })
         }), (0, a.jsx)(n.Text, {
-          className: C.description,
+          className: h.description,
           variant: "text-xs/normal",
           color: "header-secondary",
-          children: h.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_LIST_DESCRIPTION
+          children: C.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_LIST_DESCRIPTION
         }), (0, a.jsx)(A.default, {
           applicationStatus: g,
-          guildJoinRequests: G,
+          guildJoinRequests: O,
           guildId: d,
           onScroll: V,
           listRef: x

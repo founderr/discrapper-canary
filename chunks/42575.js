@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  i = n("194359"),
-  l = n("906732"),
+  l = n("194359"),
+  i = n("906732"),
   r = n("388380"),
   o = n("171368"),
   u = n("263704"),
@@ -28,8 +28,8 @@ function S(e) {
     isFocused: p
   } = e, g = s.useContext(c.AnalyticsContext), {
     analyticsLocations: I
-  } = (0, l.default)(), T = e => {
-    null == e || e.stopPropagation(), i.default.addRelationship({
+  } = (0, i.default)(), T = e => {
+    null == e || e.stopPropagation(), l.default.addRelationship({
       userId: t.id,
       context: {
         location: "Friends"

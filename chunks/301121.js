@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("809206"),
   _ = s("230711"),
   g = s("651530"),
-  h = s("163268"),
-  I = s("294602"),
+  I = s("163268"),
+  h = s("294602"),
   N = s("592204"),
   p = s("712950"),
   C = s("610697"),
@@ -160,7 +160,7 @@ function et() {
       explicitContentGuilds: s,
       explicitContentFriendDm: n,
       explicitContentNonFriendDm: l
-    } = (0, I.useExplicitContentSettingOrDefault)(),
+    } = (0, h.useExplicitContentSettingOrDefault)(),
     i = (0, H.useScrollToSetting)(W.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS),
     r = [{
       value: S.ExplicitContentRedaction.BLUR,
@@ -199,7 +199,7 @@ function et() {
         children: (0, a.jsx)(E.SingleSelect, {
           options: r,
           value: n,
-          onChange: e => (0, h.updateExplicitContentSetting)({
+          onChange: e => (0, I.updateExplicitContentSetting)({
             explicitContentFriendDm: e
           })
         })
@@ -210,7 +210,7 @@ function et() {
         children: (0, a.jsx)(E.SingleSelect, {
           options: r,
           value: l,
-          onChange: e => (0, h.updateExplicitContentSetting)({
+          onChange: e => (0, I.updateExplicitContentSetting)({
             explicitContentNonFriendDm: e
           })
         })
@@ -221,7 +221,7 @@ function et() {
         children: (0, a.jsx)(E.SingleSelect, {
           options: o,
           value: s,
-          onChange: e => (0, h.updateExplicitContentSetting)({
+          onChange: e => (0, I.updateExplicitContentSetting)({
             explicitContentGuilds: e
           })
         })

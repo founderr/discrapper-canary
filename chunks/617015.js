@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL: function() {
-    return l
+    return i
   },
   PEOPLE_LIST_ITEM_HEIGHT: function() {
     return s
@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return a
   },
   STATUS_HEADER_HEIGHT: function() {
-    return i
+    return l
   }
 });
 let a = 64,
   s = 62,
-  i = 24,
-  l = 5
+  l = 24,
+  i = 5

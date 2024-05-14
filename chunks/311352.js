@@ -12,14 +12,14 @@ var a = n("399606"),
   c = n("529653"),
   f = n("976401"),
   h = n("13140"),
-  p = n("924557"),
-  m = n("435064"),
+  m = n("924557"),
+  p = n("435064"),
   C = n("39604"),
   g = n("981631"),
   E = n("689938"),
   _ = n("473533");
 
-function I(e) {
+function S(e) {
   (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
@@ -30,7 +30,7 @@ function I(e) {
   })
 }
 
-function S() {
+function I() {
   (0, C.saveClip)()
 }
 let N = e => {
@@ -92,13 +92,13 @@ let N = e => {
 };
 t.default = () => {
   let e = (0, a.useStateFromStores)([u.default], () => u.default.hasLayers()),
-    t = (0, p.useEnableClips)(),
+    t = (0, m.useEnableClips)(),
     {
       clipsEnabled: n,
       isAtMaxSavingClipsOperations: s
-    } = (0, a.useStateFromStoresObject)([m.default], () => ({
-      clipsEnabled: m.default.getSettings().clipsEnabled,
-      isAtMaxSavingClipsOperations: m.default.getIsAtMaxSaveClipOperations()
+    } = (0, a.useStateFromStoresObject)([p.default], () => ({
+      clipsEnabled: p.default.getSettings().clipsEnabled,
+      isAtMaxSavingClipsOperations: p.default.getIsAtMaxSaveClipOperations()
     })),
     i = (0, a.useStateFromStores)([d.default], () => d.default.getKeybindForAction(g.GlobalKeybindActions.SAVE_CLIP));
   if (!(t && n) || null == i || e) return null;
@@ -110,8 +110,8 @@ t.default = () => {
       tooltipText: null != i ? E.default.Messages.CLIPS_SAVE_CLIP_TOOLTIP.format({
         hotkey: h.toString(null == i ? void 0 : i.shortcut, !0)
       }) : E.default.Messages.CLIPS_EDIT_SAVE_CLIP,
-      onClick: S,
-      onContextMenu: I,
+      onClick: I,
+      onContextMenu: S,
       icon: c.default
     })
   })

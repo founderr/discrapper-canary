@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("653041");
 var a = n("768433"),
   s = n("710845"),
-  i = n("38618"),
-  l = n("131704"),
+  l = n("38618"),
+  i = n("131704"),
   r = n("314897"),
   o = n("592125"),
   u = n("430824"),
@@ -30,16 +30,16 @@ t.default = new class e {
     let t = performance.now(),
       [n, a] = await Promise.all([f.default.basicChannels(e).getKvEntries(), f.default.syncedBasicChannels(e).getKvEntries()]),
       s = performance.now() - t,
-      [i, l] = function(e) {
+      [l, i] = function(e) {
         let t = [],
           n = [];
         for (let [a, s] of e)(s ? t : n).push(a);
         return [t, n]
       }(a),
-      r = new Set(i);
-    return this.synced = r, _.verbose("loaded in ".concat(s, "ms (guilds: ").concat(n.length, ", synced: ").concat(r.size, " unsynced: ").concat(l.length, ")")), {
+      r = new Set(l);
+    return this.synced = r, _.verbose("loaded in ".concat(s, "ms (guilds: ").concat(n.length, ", synced: ").concat(r.size, " unsynced: ").concat(i.length, ")")), {
       all: n,
-      stale: l,
+      stale: i,
       channels: n.filter(e => {
         let [t, n] = e;
         return r.has(t)
@@ -56,29 +56,29 @@ t.default = new class e {
     for (let n of e.channels.filter(e => null != e.guild_id)) C(o.default.getBasicChannel(n.id), n) && this.unsync(n.guild_id, t)
   }
   handleBackgroundSync(e, t) {
-    for (let i of e.guilds) switch (i.data_mode) {
+    for (let l of e.guilds) switch (l.data_mode) {
       case "unavailable":
         break;
       case "partial":
         var n, a, s;
-        let e = e => (0, l.createChannelRecordFromServer)(e, i.id);
-        this.onGuildUpdate(i.id, null !== (a = null === (n = i.partial_updates.channels) || void 0 === n ? void 0 : n.map(e)) && void 0 !== a ? a : [], null !== (s = i.partial_updates.deleted_channel_ids) && void 0 !== s ? s : [], t);
+        let e = e => (0, i.createChannelRecordFromServer)(e, l.id);
+        this.onGuildUpdate(l.id, null !== (a = null === (n = l.partial_updates.channels) || void 0 === n ? void 0 : n.map(e)) && void 0 !== a ? a : [], null !== (s = l.partial_updates.deleted_channel_ids) && void 0 !== s ? s : [], t);
         break;
       default:
-        this.onGuildSync(i.id, t)
+        this.onGuildSync(l.id, t)
     }
   }
   handleConnectionOpen(e, t) {
     for (let n of e.guilds) this.handleOneGuildCreate(n, t)
   }
   async handlePostConnectionOpen() {
-    let e = i.default.lastTimeConnectedChanged(),
+    let e = l.default.lastTimeConnectedChanged(),
       t = f.default.database();
     if (null == this.synced || null == t || !(0, a.isCacheEnabled)()) return;
     let n = u.default.getGuildIds(),
       s = n.filter(e => !this.synced.has(e));
     for (let a of (_.verbose("scheduling basic_channel optimstic writes (guilds: ".concat(s.length, ")")), n)) {
-      if (null == this.synced || t !== f.default.database() || e !== i.default.lastTimeConnectedChanged()) break;
+      if (null == this.synced || t !== f.default.database() || e !== l.default.lastTimeConnectedChanged()) break;
       if (!this.synced.has(a)) {
         _.verbose("optimstically writing basic_channels (guild: ".concat(a, ")"));
         try {

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return h
   },
   getKeyForSectionFooter: function() {
-    return p
+    return m
   }
 });
 var l = n("735250"),
@@ -50,7 +50,7 @@ function h(e) {
   }) ? d.HEIGHT_CHANNEL + f : f
 }
 
-function p(e, t, n) {
+function m(e, t, n) {
   if (e === t.voiceChannelsSectionNumber) return "voice-channels-button";
   let {
     hasDivider: l,
@@ -65,35 +65,35 @@ t.default = a.memo(function(e) {
     guildChannelsVersion: u,
     voiceStates: d,
     guildId: h,
-    selectedChannelId: p,
-    selectedVoiceChannelId: m,
+    selectedChannelId: m,
+    selectedVoiceChannelId: p,
     optInEnabled: C
   } = e, {
     hasDivider: g,
     canHaveVoiceSummary: E
-  } = a.useMemo(() => (0, o.getSectionFooterConfig)(n, C, t), [n, C, t, u]), _ = a.useMemo(() => t === r.SECTION_INDEX_COMMUNITY ? null : n.getCategoryFromSection(t), [n, t, u]), I = a.useMemo(() => null != _ && _.isCollapsed ? (0, i.computeSummarizedVoiceUsers)({
+  } = a.useMemo(() => (0, o.getSectionFooterConfig)(n, C, t), [n, C, t, u]), _ = a.useMemo(() => t === r.SECTION_INDEX_COMMUNITY ? null : n.getCategoryFromSection(t), [n, t, u]), S = a.useMemo(() => null != _ && _.isCollapsed ? (0, i.computeSummarizedVoiceUsers)({
     channels: _.getChannelRecords(),
-    selectedChannelId: p,
-    selectedVoiceChannelId: m,
+    selectedChannelId: m,
+    selectedVoiceChannelId: p,
     voiceStates: d
-  }) : [], [_, p, m, d]);
+  }) : [], [_, m, p, d]);
   if (t === n.voiceChannelsSectionNumber) return (0, l.jsx)(f, {
     guildChannels: n,
     guildChannelsVersion: u
   });
-  let S = g ? (0, l.jsx)("div", {
+  let I = g ? (0, l.jsx)("div", {
     className: c.sectionDivider
   }) : null;
-  return E && 0 !== I.length ? (0, l.jsxs)(l.Fragment, {
+  return E && 0 !== S.length ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: c.voiceUserSummary,
       children: (0, l.jsx)(s.default, {
         renderIcon: !0,
-        users: I,
+        users: S,
         max: 8,
         showUserPopout: !0,
         guildId: h
       })
-    }), S]
-  }) : S
+    }), I]
+  }) : I
 })

@@ -21,8 +21,8 @@ t.default = function(e) {
     selected: E,
     locked: T = !1,
     remainingGame: C = 0
-  } = e, x = (0, c.useToken)(c.tokens.colors.WHITE), {
-    isFetching: _,
+  } = e, _ = (0, c.useToken)(c.tokens.colors.WHITE), {
+    isFetching: x,
     coverImageUrl: g
   } = (0, u.useDetectableGameSupplementalData)(t, {
     coverImageHeight: 336,
@@ -32,7 +32,7 @@ t.default = function(e) {
     return null !== (a = null === (e = f.default.getGameById(t)) || void 0 === e ? void 0 : e.name) && void 0 !== a ? a : ""
   }), N = r.useCallback(() => {
     null == s || s(t)
-  }, [t, s]), v = r.useMemo(() => _ ? null : null == g ? (0, n.jsx)("div", {
+  }, [t, s]), v = r.useMemo(() => x ? null : null == g ? (0, n.jsx)("div", {
     className: p.gameUnknownImage,
     children: (0, n.jsx)(l.UnknownGameIcon, {
       height: 32,
@@ -42,16 +42,16 @@ t.default = function(e) {
     className: p.gameImage,
     alt: I,
     src: g
-  }), [g, _, I]);
+  }), [g, x, I]);
   return (0, n.jsxs)("div", {
     className: p.selectedGame,
     children: [(0, n.jsxs)(c.Clickable, {
       onClick: N,
-      className: i()(a, _ ? p.gameImageLoading : void 0, p.gameImageBackground),
+      className: i()(a, x ? p.gameImageLoading : void 0, p.gameImageBackground),
       children: [E && (0, n.jsx)("div", {
         className: p.checkBackground,
         children: (0, n.jsx)(m.default, {
-          backgroundColor: x.hex(),
+          backgroundColor: _.hex(),
           className: i()(p.selectedGameCheck, {
             [p.selectedGameCheckLocked]: T
           })

@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
-var a, s, i = n("735250");
+var a, s, l = n("735250");
 n("470079");
-var l = n("756647"),
+var i = n("756647"),
   r = n("481060"),
   o = n("570140"),
   u = n("355467"),
@@ -27,7 +27,7 @@ function v(e, t) {
     invite_code: null,
     has_auth_token: null,
     is_backgrounded: null,
-    fingerprint: (0, l.extractId)(e),
+    fingerprint: (0, i.extractId)(e),
     link_type: t
   })
 }(a = s || (s = {})).SETTINGS = "settings", a.CHANGELOG = "changelog", a.LIBRARY = "library", a.STORE = "store", a.INVITE = "invite", a.CHANNEL = "channel", a.GUILD_SETTINGS = "guild_settings", t.default = {
@@ -74,7 +74,7 @@ function v(e, t) {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("10778"), n.e("90424")]).then(n.bind(n, "766775"));
-        return t => (0, i.jsx)(e, {
+        return t => (0, l.jsx)(e, {
           ...t,
           guildTemplate: a
         })
@@ -105,7 +105,7 @@ function v(e, t) {
               let {
                 default: e
               } = await Promise.all([n.e("99387"), n.e("92446")]).then(n.bind(n, "409858"));
-              return n => (0, i.jsx)(e, {
+              return n => (0, l.jsx)(e, {
                 code: t,
                 ...n
               })

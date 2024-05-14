@@ -16,14 +16,14 @@ var a = n("442837"),
   c = n("601070"),
   f = n("430824"),
   h = n("496675"),
-  p = n("306680"),
-  m = n("979651"),
+  m = n("306680"),
+  p = n("979651"),
   C = n("26290"),
   g = n("968358"),
   E = n("790901"),
   _ = n("714794"),
-  I = n("355363"),
-  S = n("687352"),
+  S = n("355363"),
+  I = n("687352"),
   N = n("135724"),
   T = n("25601"),
   A = n("981631"),
@@ -45,9 +45,9 @@ function R(e) {
     isNewChannel: P,
     muted: G,
     resolvedUnreadSetting: U
-  } = e, w = (0, a.useStateFromStores)([p.default], () => p.default.getMentionCount(n.id)), F = (0, r.default)(n), B = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), H = (0, a.useStateFromStores)([m.default], () => m.default.hasVideo(n.id)), V = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, I.default)({
+  } = e, w = (0, a.useStateFromStores)([m.default], () => m.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), H = (0, a.useStateFromStores)([p.default], () => p.default.hasVideo(n.id)), V = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, S.default)({
     channel: n,
-    locked: B,
+    locked: F,
     video: H || V,
     selected: R
   }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getNewThreadCount(n.guild_id, n.id)), K = (0, o.useUnreadThreadsCountForParent)(n.guild_id, n.id), W = (0, a.useStateFromStores)([f.default], () => {
@@ -85,8 +85,8 @@ function R(e) {
   }) : M && (0, g.hasStream)(y) && W ? (0, l.jsx)(C.TextBadge, {
     text: v.default.Messages.LIVE,
     color: s.default.unsafe_rawColors.RED_400.css
-  }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(F) ? (0, l.jsx)(S.default, {
-    embeddedApps: F,
+  }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(B) ? (0, l.jsx)(I.default, {
+    embeddedApps: B,
     muted: G
   }) : null
 }

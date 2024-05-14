@@ -33,8 +33,8 @@ var a = s("735250"),
   D = s("55563"),
   U = s("551428"),
   j = s("695103"),
-  y = s("451478"),
-  G = s("378720"),
+  G = s("451478"),
+  y = s("378720"),
   B = s("285952"),
   k = s("760397"),
   H = s("757698"),
@@ -276,7 +276,7 @@ class eE extends r.PureComponent {
     } = t;
     if (null == i) throw Error("Rendering ApplicationStoreListing without description");
     return (0, a.jsxs)(r.Fragment, {
-      children: [(0, a.jsx)(G.default, {
+      children: [(0, a.jsx)(y.default, {
         tag: "h1",
         children: ed.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
           name: s.name
@@ -584,7 +584,7 @@ class eE extends r.PureComponent {
     })
   }
 }
-t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.default, O.default, y.default, U.default, D.default, j.default, A.default, N.default, x.default, h.default, b.default], e => {
+t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.default, O.default, G.default, U.default, D.default, j.default, A.default, N.default, x.default, h.default, b.default], e => {
   let t, s, a, {
     inputSkuId: r,
     applicationId: i,
@@ -607,7 +607,7 @@ t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.
     didFetchEntitlements: null != i && b.default.applicationIdsFetched.has(i),
     shouldFetchStatistics: l && null != i && x.default.shouldFetchStatisticsForApplication(i),
     sku: s,
-    isFocused: y.default.isFocused(),
+    isFocused: G.default.isFocused(),
     storeListing: U.default.getStoreListing({
       storeListingId: n,
       skuId: t,

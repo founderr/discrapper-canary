@@ -38,8 +38,8 @@ var i = n("525654"),
   b = n("271383"),
   G = n("430824"),
   w = n("607744"),
-  B = n("341165"),
-  k = n("496675"),
+  k = n("341165"),
+  B = n("496675"),
   V = n("594174"),
   x = n("626135"),
   F = n("70956"),
@@ -84,7 +84,7 @@ function ee(e) {
     if ((null == n ? void 0 : n.targetType) === X.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE) return z.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
     if ((null == n ? void 0 : n.targetType) == null && !M.GUILD_VOCAL_CHANNEL_TYPES.has(t.type) && ((0, S.canSeeGuildHome)(e) || (0, m.canSeeOnboardingHome)(e))) return z.StaticChannelRoute.GUILD_HOME;
     let a = P.default.getChannel(t.id);
-    return k.default.can(K.Permissions.VIEW_CHANNEL, a) ? t.id : null !== (r = null === (i = U.default.getDefaultChannel(e, !0, K.Permissions.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
+    return B.default.can(K.Permissions.VIEW_CHANNEL, a) ? t.id : null !== (r = null === (i = U.default.getDefaultChannel(e, !0, K.Permissions.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
   }(t, i, r), {
     targetUserId: u,
     targetType: d,
@@ -210,7 +210,7 @@ t.default = {
     }
   },
   async mobileCreateInvite(e, t) {
-    let n = B.default.getInvite(e.id);
+    let n = k.default.getInvite(e.id);
     if (null != n && !n.isExpired()) return n.code;
     let i = {
         max_age: F.default.Seconds.DAY
@@ -221,7 +221,7 @@ t.default = {
     return null == r ? void 0 : r.code
   },
   async getAllFriendInvites(e) {
-    if (await new Promise(e => d.default.wait(() => e(null))), B.default.getFriendInvitesFetching()) return null != J ? J.then(e => e.body) : Promise.reject(Error("Invalid friend invite fetch request"));
+    if (await new Promise(e => d.default.wait(() => e(null))), k.default.getFriendInvitesFetching()) return null != J ? J.then(e => e.body) : Promise.reject(Error("Invalid friend invite fetch request"));
     J = u.HTTP.get({
       url: K.Endpoints.FRIEND_INVITES,
       context: {

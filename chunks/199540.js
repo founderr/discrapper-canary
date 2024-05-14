@@ -15,14 +15,14 @@ var l = n("735250"),
   c = n("481060"),
   f = n("430824"),
   h = n("346656"),
-  p = n("286908"),
-  m = n("26290"),
+  m = n("286908"),
+  p = n("26290"),
   C = n("624138"),
   g = n("674552"),
   E = n("981631"),
   _ = n("689938"),
-  I = n("538962");
-let S = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
+  S = n("538962");
+let I = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
   N = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_SIZE);
 
 function T(e) {
@@ -31,13 +31,13 @@ function T(e) {
     animate: n
   } = e, a = (0, u.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
   return null == a ? (0, l.jsx)("div", {
-    className: I.guildIconUnavailable,
+    className: S.guildIconUnavailable,
     children: "!"
   }) : (0, l.jsx)(h.default, {
     guild: a,
     animate: n,
     size: h.default.Sizes.SMOL,
-    className: I.guildIcon,
+    className: S.guildIcon,
     tabIndex: -1
   })
 }
@@ -54,13 +54,13 @@ function A(e) {
     } = s,
     f = null != d ? d : E.DEFAULT_FOLDER_COLOR,
     h = c.map(e => e.id),
-    [m, C] = a.useState(!1),
+    [p, C] = a.useState(!1),
     [g, _] = a.useState(u),
     A = u ? 0 : -N,
     L = (0, r.useSpring)({
       transform: "translate3d(0, ".concat(A, "px, 0)"),
       config: {
-        duration: S
+        duration: I
       },
       onStart() {
         C(!0), _(u)
@@ -69,18 +69,18 @@ function A(e) {
         C(!1), _(u)
       }
     }),
-    v = m ? L : void 0;
-  return (m || g) && (t = (0, l.jsx)(r.animated.div, {
+    v = p ? L : void 0;
+  return (p || g) && (t = (0, l.jsx)(r.animated.div, {
     style: v,
-    className: I.expandedFolderIconWrapper,
-    children: (0, l.jsx)(p.default, {
+    className: S.expandedFolderIconWrapper,
+    children: (0, l.jsx)(m.default, {
       style: {
         color: (0, o.int2hex)(f)
       }
     })
-  })), (m || !g) && (n = (0, l.jsx)(r.animated.div, {
+  })), (p || !g) && (n = (0, l.jsx)(r.animated.div, {
     style: v,
-    className: I.closedFolderIconWrapper,
+    className: S.closedFolderIconWrapper,
     children: h.slice(0, 4).map(e => (0, l.jsx)(T, {
       guildId: e,
       animate: i
@@ -90,7 +90,7 @@ function A(e) {
     style: u ? void 0 : {
       backgroundColor: (0, o.int2rgba)(f, .4)
     },
-    className: I.folderIconWrapper,
+    className: S.folderIconWrapper,
     children: [t, n]
   })
 }
@@ -106,10 +106,10 @@ function L(e) {
     tooltipName: d,
     folderGroupId: f,
     folderIconContent: h,
-    onClick: p,
+    onClick: m,
     onContextMenu: C,
     onHoverChange: E,
-    onKeyDown: S,
+    onKeyDown: I,
     treeItemProps: {
       onFocus: N,
       ...T
@@ -123,16 +123,16 @@ function L(e) {
     selected: !n,
     upperBadge: M,
     lowerBadge: y,
-    lowerBadgeWidth: (0, m.getBadgeWidthForValue)(u),
+    lowerBadgeWidth: (0, p.getBadgeWidthForValue)(u),
     children: (0, l.jsx)(c.Clickable, {
-      className: i()(I.folder, {
-        [I.hover]: L
+      className: i()(S.folder, {
+        [S.hover]: L
       }),
-      onClick: p,
+      onClick: m,
       onContextMenu: C,
       onMouseEnter: x,
       onMouseLeave: R,
-      onKeyDown: S,
+      onKeyDown: I,
       onFocus: N,
       "aria-label": _.default.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({
         folderName: d,
@@ -146,7 +146,7 @@ function L(e) {
       ...T,
       role: "treeitem",
       children: null != h ? (0, l.jsx)("div", {
-        className: I.expandedFolderIconWrapper,
+        className: S.expandedFolderIconWrapper,
         children: h
       }) : (0, l.jsx)(A, {
         folderNode: t,

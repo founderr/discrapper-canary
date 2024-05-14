@@ -42,7 +42,7 @@ let j = e => {
       colorOptions: t ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
     })
   },
-  y = () => (0, a.jsx)("div", {
+  G = () => (0, a.jsx)("div", {
     className: x.mostPopularPill,
     children: (0, a.jsx)(u.Heading, {
       className: x.mostPopularText,
@@ -50,7 +50,7 @@ let j = e => {
       children: L.default.Messages.MOST_POPULAR
     })
   }),
-  G = e => {
+  y = e => {
     let t, {
         premiumType: s
       } = e,
@@ -172,10 +172,10 @@ t.default = e => {
       variant: "heading-lg/extrabold",
       children: L.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
     }),
-    column1: (0, a.jsx)(G, {
+    column1: (0, a.jsx)(y, {
       premiumType: h.PremiumTypes.TIER_0
     }),
-    column2: (0, a.jsx)(G, {
+    column2: (0, a.jsx)(y, {
       premiumType: h.PremiumTypes.TIER_2
     })
   };
@@ -233,7 +233,7 @@ t.default = e => {
     colorOptions: J === h.PremiumSubscriptionSKUs.TIER_0 ? z ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : z ? Q ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
   }) : en ? (0, a.jsx)(j, {
     isLightTheme: z
-  }) : (0, a.jsx)(y, {});
+  }) : (0, a.jsx)(G, {});
   let eo = J === h.PremiumSubscriptionSKUs.TIER_0 || q === h.PremiumTypes.TIER_0 || H === h.PremiumTypes.TIER_0;
   return (0, a.jsx)(E.AnalyticsLocationProvider, {
     value: F,

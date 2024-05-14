@@ -29,8 +29,8 @@ let M = !1,
   b = [],
   G = !1,
   w = !0,
-  B = Object.freeze([]),
-  k = [];
+  k = Object.freeze([]),
+  B = [];
 
 function V(e) {
   return (0, N.shouldShareApplicationActivity)(e, R.default)
@@ -67,9 +67,9 @@ function F() {
     n = w || y === D.StatusTypes.INVISIBLE ? [] : g.default.getActivities().filter(x);
   !d()(b, n) && (b = n, t = !0);
   let i = v.default.getRemoteActivities();
-  if (B !== i && (B = i, t = !0), t) {
+  if (k !== i && (k = i, t = !0), t) {
     let e = b.find(e => e.type === D.ActivityTypes.CUSTOM_STATUS);
-    k = b.filter(e => e.type !== D.ActivityTypes.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...c()(B).filter(e => e.type !== D.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : c().uniqBy(B, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+    B = b.filter(e => e.type !== D.ActivityTypes.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...c()(k).filter(e => e.type !== D.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : c().uniqBy(k, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
   }
 }
 
@@ -78,7 +78,7 @@ function H() {
 }
 
 function Y() {
-  w = !1, P = D.StatusTypes.UNKNOWN, F(), L.default.setCurrentUserOnConnectionOpen(y, k)
+  w = !1, P = D.StatusTypes.UNKNOWN, F(), L.default.setCurrentUserOnConnectionOpen(y, B)
 }
 class j extends(a = E.default.Store) {
   initialize() {
@@ -98,11 +98,11 @@ class j extends(a = E.default.Store) {
   }
   getActivities() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? k : b
+    return e ? B : b
   }
   getPrimaryActivity() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? k[0] : b[0]
+    return e ? B[0] : b[0]
   }
   getApplicationActivity(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];

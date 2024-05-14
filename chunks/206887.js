@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("481060"),
   o = n("808268"),
   u = n("404975"),
@@ -13,9 +13,9 @@ var a = n("735250"),
 t.default = function(e) {
   let {
     guild: t
-  } = e, [n, i] = s.useState(!1), E = s.useCallback(() => i(!0), [i]), h = s.useCallback(() => i(!0), [i]);
+  } = e, [n, l] = s.useState(!1), E = s.useCallback(() => l(!0), [l]), h = s.useCallback(() => l(!0), [l]);
   return (0, a.jsx)("div", {
-    className: l()(f.actionButtonsContainer, {
+    className: i()(f.actionButtonsContainer, {
       [f.forceButtonsShow]: n
     }),
     children: (0, a.jsx)(u.default, {
@@ -34,11 +34,11 @@ t.default = function(e) {
             children: e => {
               let {
                 onClick: s,
-                ...i
+                ...l
               } = e;
               return (0, a.jsx)(u.Button, {
                 ...n,
-                ...i,
+                ...l,
                 onClick: e => {
                   e.stopPropagation(), null == s || s(), t(e)
                 },

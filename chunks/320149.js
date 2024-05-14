@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  i = n("442837"),
-  l = n("481060"),
+  l = n("442837"),
+  i = n("481060"),
   r = n("541716"),
   o = n("910611"),
   u = n("355298"),
@@ -30,14 +30,14 @@ function N(e) {
   let {
     channel: t,
     baseChannelId: n
-  } = e, N = (0, p.default)(t), v = (0, c.useListHasSingleMessageRequest)(), R = (0, c.useListHasSingleSpamMessageRequest)(), L = (0, i.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), O = (0, i.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), y = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), M = s.useCallback(() => {
+  } = e, N = (0, p.default)(t), v = (0, c.useListHasSingleMessageRequest)(), R = (0, c.useListHasSingleSpamMessageRequest)(), L = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), O = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), M = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), y = s.useCallback(() => {
     _.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), L && v && (0, h.transitionToChannel)(t.id), O && R && (0, h.transitionToChannel)(t.id)
   }, [t.id, O, R, L, v]), P = s.useCallback(() => {
-    (0, l.showToast)((0, l.createToast)(I.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
+    (0, i.showToast)((0, i.createToast)(I.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), {
     markAsNotSpam: x
   } = (0, f.useMessageRequestActions)({
-    onAcceptSuccess: M,
+    onAcceptSuccess: y,
     onError: P
   });
   if (null == t || !t.isDM()) return null;
@@ -57,14 +57,14 @@ function N(e) {
       })
     }), O && (0, a.jsxs)("div", {
       className: A.hamBanner,
-      children: [(0, a.jsx)(l.Text, {
+      children: [(0, a.jsx)(i.Text, {
         className: A.__invalid_hamBannerText,
         variant: "text-sm/normal",
         children: I.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
-      }), (0, a.jsx)(l.Button, {
+      }), (0, a.jsx)(i.Button, {
         className: A.hamBannerButton,
-        size: l.ButtonSizes.SMALL,
-        onClick: () => x(t, y),
+        size: i.ButtonSizes.SMALL,
+        onClick: () => x(t, M),
         children: I.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
       })]
     }), (0, a.jsx)("div", {

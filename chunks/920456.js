@@ -2,12 +2,12 @@
 n.r(t);
 var a = n("544891"),
   s = n("314897"),
-  i = n("981631");
+  l = n("981631");
 t.default = {
   setUserAchievement(e, t, n) {
-    let l = s.default.getId();
+    let i = s.default.getId();
     return a.HTTP.put({
-      url: i.Endpoints.USER_ACHIEVEMENTS_FOR_USER(l, e, t),
+      url: l.Endpoints.USER_ACHIEVEMENTS_FOR_USER(i, e, t),
       body: {
         percent_complete: n
       },
@@ -15,7 +15,7 @@ t.default = {
     })
   },
   fetchForApplication: e => a.HTTP.get({
-    url: i.Endpoints.USER_ACHIEVEMENTS(e),
+    url: l.Endpoints.USER_ACHIEVEMENTS(e),
     retries: 1,
     oldFormErrors: !0
   }).then(e => {

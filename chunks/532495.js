@@ -21,8 +21,8 @@ var n = s("512722"),
   m = s("349177"),
   _ = s("872736"),
   g = s("134795"),
-  h = s("610966"),
-  I = s("513901"),
+  I = s("610966"),
+  h = s("513901"),
   N = s("451392"),
   p = s("906364"),
   C = s("676934"),
@@ -104,7 +104,7 @@ function j() {
     }, "avatar"), (0, a.jsx)(T.default, {
       user: B,
       sectionTitle: L.default.Messages.USER_SETTINGS_AVATAR_DECORATION
-    }, "decoration"), (0, a.jsx)(I.default, {
+    }, "decoration"), (0, a.jsx)(h.default, {
       user: B,
       sectionTitle: L.default.Messages.USER_SETTINGS_PROFILE_EFFECT
     }, "effect"), Q ? (0, a.jsxs)(a.Fragment, {
@@ -120,7 +120,7 @@ function j() {
         onThemeColorsChange: A.setPendingThemeColors,
         forcedDivider: !0
       })]
-    }) : (0, a.jsx)(h.default, {
+    }) : (0, a.jsx)(I.default, {
       user: B,
       savedUserColor: null == F ? void 0 : F.accentColor,
       pendingColor: Y,

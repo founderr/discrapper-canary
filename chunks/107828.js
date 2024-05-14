@@ -32,14 +32,14 @@ var l, a = n("735250"),
   c = n("754688"),
   f = n("430824"),
   h = n("699516"),
-  p = n("594174"),
-  m = n("51144"),
+  m = n("594174"),
+  p = n("51144"),
   C = n("2093"),
   g = n("366695"),
   E = n("346656"),
   _ = n("409216"),
-  I = n("136033"),
-  S = n("757698"),
+  S = n("136033"),
+  I = n("757698"),
   N = n("630641"),
   T = n("689938"),
   A = n("259285");
@@ -223,12 +223,12 @@ class R extends(l = s.Component) {
       value: n
     })), null != l && (t = (0, a.jsx)("span", {
       className: A.note,
-      children: (0, o.computeChannelName)(l, p.default, h.default)
+      children: (0, o.computeChannelName)(l, m.default, h.default)
     })), (0, a.jsxs)("div", {
       className: A.name,
       children: [(0, a.jsx)("span", {
         className: A.match,
-        children: (0, o.computeChannelName)(s, p.default, h.default)
+        children: (0, o.computeChannelName)(s, m.default, h.default)
       }), e, this.renderVoiceStates(), t]
     })
   }
@@ -270,7 +270,7 @@ class R extends(l = s.Component) {
     var e;
     let {
       channel: t
-    } = this.props, n = null === (e = f.default.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name, l = (0, o.computeChannelName)(t, p.default, h.default), a = (0, d.default)(t);
+    } = this.props, n = null === (e = f.default.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name, l = (0, o.computeChannelName)(t, m.default, h.default), a = (0, d.default)(t);
     return T.default.Messages.QUICK_SWITCHER_RESULTS_CHANNEL_LABEL.format({
       name: l,
       type: a,
@@ -330,7 +330,7 @@ class M extends s.Component {
       className: A.name,
       children: [(0, a.jsx)("span", {
         className: A.match,
-        children: (0, o.computeChannelName)(n, p.default, h.default)
+        children: (0, o.computeChannelName)(n, m.default, h.default)
       }), e]
     })
   }
@@ -351,7 +351,7 @@ class M extends s.Component {
     let {
       channel: e,
       mentions: t
-    } = this.props, n = (0, o.computeChannelName)(e, p.default, h.default);
+    } = this.props, n = (0, o.computeChannelName)(e, m.default, h.default);
     return null != t && t > 0 ? T.default.Messages.QUICK_SWITCHER_RESULTS_GROUP_DM_UNREAD_LABEL.format({
       name: n,
       mentions: t
@@ -402,7 +402,7 @@ class y extends s.Component {
       user: t,
       comparator: n
     } = this.props, l = h.default.getNickname(t.id);
-    return ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) && (e = null != l ? l : m.default.getName(t)), e
+    return ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) && (e = null != l ? l : p.default.getName(t)), e
   }
   renderName() {
     let e;
@@ -420,7 +420,7 @@ class y extends s.Component {
         children: l
       }), e, (0, a.jsx)("span", {
         className: A.username,
-        children: m.default.getUserTag(t)
+        children: p.default.getUserTag(t)
       })]
     })
   }
@@ -441,7 +441,7 @@ class y extends s.Component {
     let {
       mentions: e,
       user: t
-    } = this.props, n = this.getDisplayNickname(), l = m.default.getUserTag(t);
+    } = this.props, n = this.getDisplayNickname(), l = p.default.getUserTag(t);
     return null != e && e > 0 ? T.default.Messages.QUICK_SWITCHER_RESULTS_USER_UNREAD_LABEL.format({
       name: n,
       id: l,
@@ -535,10 +535,10 @@ class b extends s.Component {
       link: n,
       children: l
     } = this.props, s = (0, c.tryParseChannelPath)(n.path);
-    return null == s || void 0 === s.messageId ? (e = T.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, a.jsx)(S.default, {
+    return null == s || void 0 === s.messageId ? (e = T.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, a.jsx)(I.default, {
       width: 16,
       height: 16
-    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(I.default, {
+    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(S.default, {
       width: 16,
       height: 16
     })) : (e = T.default.Messages.QUICKSWITCHER_LINK_NO_ACCESS, t = (0, a.jsx)(N.default, {

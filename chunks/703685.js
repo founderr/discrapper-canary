@@ -29,9 +29,9 @@ var n = a("735250"),
   E = a("981631"),
   T = a("689938"),
   C = a("894545");
-let x = () => Promise.resolve();
+let _ = () => Promise.resolve();
 
-function _(e) {
+function x(e) {
   let {
     color: t,
     isDefault: a = !1,
@@ -41,7 +41,7 @@ function _(e) {
     style: f = {},
     onClick: p,
     "aria-label": T
-  } = e, x = (0, l.useListItem)("color-".concat(t)), _ = null != t ? (0, o.int2hex)(t) : f.backgroundColor, g = !1;
+  } = e, _ = (0, l.useListItem)("color-".concat(t)), x = null != t ? (0, o.int2hex)(t) : f.backgroundColor, g = !1;
   return r && !s ? g = !0 : (r || s) && (g = (0, o.getDarkness)(t) > .1), (0, n.jsx)(c.FocusRing, {
     offset: -2,
     children: (0, n.jsxs)("button", {
@@ -56,10 +56,10 @@ function _(e) {
       onClick: () => null == p ? void 0 : p(t),
       style: {
         ...f,
-        backgroundColor: _
+        backgroundColor: x
       },
-      "aria-label": null != T ? T : _,
-      ...x,
+      "aria-label": null != T ? T : x,
+      ..._,
       children: [r ? (0, n.jsx)(h.default, {
         className: C.colorPickerDropper,
         foreground: C.colorPickerDropperFg,
@@ -86,7 +86,7 @@ class g extends r.PureComponent {
       value: a,
       disabled: r
     } = this.props;
-    return (0, n.jsx)(_, {
+    return (0, n.jsx)(x, {
       isDefault: !0,
       color: e,
       isSelected: e === a || 0 === a,
@@ -103,7 +103,7 @@ class I extends r.PureComponent {
       disabled: a,
       "aria-label": r
     } = this.props;
-    return (0, n.jsx)(_, {
+    return (0, n.jsx)(x, {
       isCustom: !0,
       color: e,
       isSelected: t === e,
@@ -121,8 +121,8 @@ let N = r.memo(function(e) {
     suggestedColors: u,
     middle: m,
     footer: E,
-    showEyeDropper: x,
-    wrapperComponentType: _,
+    showEyeDropper: _,
+    wrapperComponentType: x,
     className: g
   } = e, I = (0, d.default)(), N = function(e) {
     if (null == e) return null;
@@ -196,7 +196,7 @@ let N = r.memo(function(e) {
         color: L.pending.hsl
       }), m, (0, n.jsxs)("div", {
         className: C.customColorPickerInputContainer,
-        children: [x && null != I && (0, n.jsx)(p.Icon, {
+        children: [_ && null != I && (0, n.jsx)(p.Icon, {
           onClick: b,
           tooltip: T.default.Messages.PICK_A_COLOR_FROM_THE_PAGE,
           tooltipPosition: "top",
@@ -219,7 +219,7 @@ let N = r.memo(function(e) {
           onClick: () => R(e)
         }, "".concat(e, "-").concat(t)))
       }), E]
-    }), D = null != _ ? _ : c.Dialog;
+    }), D = null != x ? x : c.Dialog;
   return (0, n.jsx)(D, {
     "aria-label": T.default.Messages.PICK_A_COLOR,
     className: i()(C.customColorPicker, g),
@@ -241,7 +241,7 @@ function v(e) {
     colorContainerClassName: m
   } = e, h = e => (0, n.jsx)("div", {
     className: C.colorPickerRow,
-    children: e.map(e => (0, n.jsx)(_, {
+    children: e.map(e => (0, n.jsx)(x, {
       color: e,
       isSelected: e === o,
       onClick: d,
@@ -250,8 +250,8 @@ function v(e) {
   }), p = s.slice(0, s.length / 2), E = s.slice(s.length / 2, s.length), T = (0, l.default)({
     id: "color-picker",
     isEnabled: !0,
-    scrollToStart: x,
-    scrollToEnd: x
+    scrollToStart: _,
+    scrollToEnd: _
   });
   return (0, n.jsx)(l.ListNavigatorProvider, {
     navigator: T,

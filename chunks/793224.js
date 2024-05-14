@@ -16,14 +16,14 @@ var a = n("442837"),
   c = n("757454"),
   f = n("286328"),
   h = n("493355"),
-  p = n("134598"),
-  m = n("243778"),
+  m = n("134598"),
+  p = n("243778"),
   C = n("594190"),
   g = n("569545"),
   E = n("989941"),
   _ = n("199902"),
-  I = n("314897"),
-  S = n("944486"),
+  S = n("314897"),
+  I = n("944486"),
   N = n("885110"),
   T = n("449224"),
   A = n("436088"),
@@ -33,8 +33,8 @@ var a = n("442837"),
   R = n("689938");
 
 function M() {
-  let e = (0, a.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
-    t = (0, a.useStateFromStores)([I.default], () => I.default.getId()),
+  let e = (0, a.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
+    t = (0, a.useStateFromStores)([S.default], () => S.default.getId()),
     n = (0, a.useStateFromStores)([C.default, T.default], () => (0, E.default)(C.default, T.default)),
     {
       canBroadcast: M
@@ -60,7 +60,7 @@ function M() {
     P = () => {
       if (y) {
         let l = D.find(e => e.ownerId === t);
-        null == l ? (0, p.openBroadcastingPrivacySettingsModal)(R.default.Messages.START_BROADCASTING, R.default.Messages.START_BROADCASTING_CTA, () => {
+        null == l ? (0, m.openBroadcastingPrivacySettingsModal)(R.default.Messages.START_BROADCASTING, R.default.Messages.START_BROADCASTING_CTA, () => {
           (0, r.createBroadcastChannelOrStartStream)({
             pid: null == n ? void 0 : n.pid,
             channelId: e
@@ -82,7 +82,7 @@ function M() {
     U = e => (0, l.jsx)(f.default, {
       markAsDismissed: e
     });
-  return (0, l.jsx)(m.default, {
+  return (0, l.jsx)(p.default, {
     contentTypes: b,
     bypassAutoDismiss: !0,
     children: e => {

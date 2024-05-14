@@ -18,14 +18,14 @@ var l = n("735250"),
   c = n("481060"),
   f = n("239091"),
   h = n("607070"),
-  p = n("100527"),
-  m = n("367907"),
+  m = n("100527"),
+  p = n("367907"),
   C = n("906732"),
   g = n("434404"),
   E = n("496675"),
   _ = n("259580"),
-  I = n("267642"),
-  S = n("624138"),
+  S = n("267642"),
+  I = n("624138"),
   N = n("667815"),
   T = n("531572"),
   A = n("26323"),
@@ -33,7 +33,7 @@ var l = n("735250"),
   v = n("981631"),
   x = n("689938"),
   R = n("310767");
-let M = (0, S.cssValueToNumber)(d.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let M = (0, I.cssValueToNumber)(d.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
   y = e => {
     let {
       guild: t,
@@ -69,21 +69,21 @@ t.default = e => {
     withMargin: n
   } = e, {
     analyticsLocations: s
-  } = (0, C.default)(p.default.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
+  } = (0, C.default)(m.default.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
     premiumSubscriberCount: d,
     id: g
-  } = t, S = (0, I.getGuildTierFromAppliedBoostCount)(d, g), M = (0, I.getNextTier)(S, t.id), O = null == M, D = null != M ? M : S, j = (0, u.useStateFromStores)([T.default], () => {
+  } = t, I = (0, S.getGuildTierFromAppliedBoostCount)(d, g), M = (0, S.getNextTier)(I, t.id), O = null == M, D = null != M ? M : I, j = (0, u.useStateFromStores)([T.default], () => {
     var e;
     return null !== (e = T.default.getCountForGuild(g)) && void 0 !== e ? e : 0
   }), P = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), G = (0, u.useStateFromStores)([E.default], () => E.default.can(v.Permissions.MANAGE_GUILD, t));
   a.useEffect(() => {
     j !== d && (0, N.updateGuildPremiumSubscriptionCount)(g, d)
   }, [g, j, d]);
-  let U = "".concat(Math.min(100, d / (0, I.getAppliedGuildBoostsRequired)(t.id)[D] * 100), "%"),
+  let U = "".concat(Math.min(100, d / (0, S.getAppliedGuildBoostsRequired)(t.id)[D] * 100), "%"),
     {
       current: w
     } = a.useRef(U),
-    F = {
+    B = {
       from: {
         width: j === d ? w : "0%"
       },
@@ -93,9 +93,9 @@ t.default = e => {
       config: b,
       immediate: P
     },
-    [B, H] = (0, r.useSpring)(() => F),
+    [F, H] = (0, r.useSpring)(() => B),
     V = () => {
-      (0, m.trackWithMetadata)(v.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
+      (0, p.trackWithMetadata)(v.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
           section: v.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
         },
@@ -114,20 +114,20 @@ t.default = e => {
       })
     },
     k = x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({
-      levelName: (0, I.getShortenedTierName)(D)
+      levelName: (0, S.getShortenedTierName)(D)
     }),
     Y = x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
       numBoosts: d,
-      numTotal: (0, I.getAppliedGuildBoostsRequired)(t.id)[D]
+      numTotal: (0, S.getAppliedGuildBoostsRequired)(t.id)[D]
     });
-  O && (k = (0, I.getShortenedTierName)(D), Y = x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
+  O && (k = (0, S.getShortenedTierName)(D), Y = x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
     numBoosts: d
   }));
   let K = (0, o.useListItem)("boosts-".concat(t.id));
   return (0, l.jsx)("li", {
     children: (0, l.jsx)(c.Tooltip, {
       text: O ? x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({
-        levelName: (0, I.getTierName)(D)
+        levelName: (0, S.getTierName)(D)
       }),
       color: c.Tooltip.Colors.BLACK,
       position: "top",
@@ -147,7 +147,7 @@ t.default = e => {
         onClick: V,
         onMouseEnter: () => {
           var t;
-          null === (t = e.onMouseEnter) || void 0 === t || t.call(e), H(F)
+          null === (t = e.onMouseEnter) || void 0 === t || t.call(e), H(B)
         },
         className: i()(R.container, {
           [R.containerWithMargin]: n
@@ -189,7 +189,7 @@ t.default = e => {
           }),
           children: [(0, l.jsx)(r.animated.div, {
             className: R.progressBar,
-            style: B
+            style: F
           }), O ? (0, l.jsx)("span", {
             "aria-label": x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_TADA_ICON_ALT_TEXT,
             role: "img",

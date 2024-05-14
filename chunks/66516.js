@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("962746"),
   _ = s("296810"),
   g = s("621853"),
-  h = s("246946"),
-  I = s("594174"),
+  I = s("246946"),
+  h = s("594174"),
   N = s("626135"),
   p = s("63063"),
   C = s("74538"),
@@ -60,10 +60,10 @@ function j(e) {
     selectedGuild: t
   } = e, {
     analyticsLocations: s
-  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([I.default], () => {
-    let e = I.default.getCurrentUser();
+  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([h.default], () => {
+    let e = h.default.getCurrentUser();
     return i()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
-  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), N = (0, r.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), {
+  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), N = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), {
     pendingAvatar: j,
     pendingAvatarDecoration: b,
     pendingProfileEffectId: U,

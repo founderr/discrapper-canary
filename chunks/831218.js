@@ -8,14 +8,14 @@ var l, a, s, i = n("735250"),
   c = n("442837"),
   f = n("902704"),
   h = n("481060"),
-  p = n("925549"),
-  m = n("607070"),
+  m = n("925549"),
+  p = n("607070"),
   C = n("367907"),
   g = n("453542"),
   E = n("762914"),
   _ = n("702321"),
-  I = n("518311"),
-  S = n("355298"),
+  S = n("518311"),
+  I = n("355298"),
   N = n("869404"),
   T = n("333984"),
   A = n("210887"),
@@ -296,7 +296,7 @@ class U extends(a = r.Component) {
     }), P(this, "handleScroll", u()(() => {
       if (null != this._list) {
         let e = this._list.getScrollerNode();
-        null != e && p.default.updateChannelListScroll(D.ME, e.scrollTop)
+        null != e && m.default.updateChannelListScroll(D.ME, e.scrollTop)
       }
     }, 100)), P(this, "renderDM", (e, t) => {
       let {
@@ -341,7 +341,7 @@ class U extends(a = r.Component) {
         children: [(0, i.jsx)("span", {
           className: j.headerText,
           children: b.default.Messages.DIRECT_MESSAGES
-        }), (0, i.jsx)(I.default, {
+        }), (0, i.jsx)(S.default, {
           tooltip: b.default.Messages.CREATE_DM,
           tooltipPosition: "top",
           popoutAlign: "left",
@@ -367,16 +367,16 @@ t.default = e => {
     theme: n,
     children: l,
     showDMHeader: a
-  } = e, s = r.Children.count(l), o = L.default.getMutablePrivateChannels(), u = (0, N.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([x.default, S.default, T.default], () => {
+  } = e, s = r.Children.count(l), o = L.default.getMutablePrivateChannels(), u = (0, N.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([x.default, I.default, T.default], () => {
     let e = x.default.getPrivateChannelIds(),
-      t = (0, N.filterOutMessageRequestsAndSpamById)(e, [S.default, T.default]);
+      t = (0, N.filterOutMessageRequestsAndSpamById)(e, [I.default, T.default]);
     return (0, E.filterBroadcastingGDMs)(t)
-  }, []), h = (0, c.useStateFromStoresObject)([m.default, A.default, L.default], () => ({
+  }, []), h = (0, c.useStateFromStoresObject)([p.default, A.default, L.default], () => ({
     theme: A.default.darkSidebar ? D.ThemeTypes.DARK : n,
-    keyboardModeEnabled: m.default.keyboardModeEnabled,
+    keyboardModeEnabled: p.default.keyboardModeEnabled,
     version: null != t ? "".concat(t, ":").concat(L.default.getPrivateChannelsVersion()) : L.default.getPrivateChannelsVersion()
-  })), p = r.useRef(null), C = r.useCallback(e => {
-    let t = p.current,
+  })), m = r.useRef(null), C = r.useCallback(e => {
+    let t = m.current,
       n = document.querySelector(e);
     null != t && null != n && t.scrollIntoViewNode({
       node: n,
@@ -390,21 +390,21 @@ t.default = e => {
       }
     })
   }, []), g = r.useCallback(() => new Promise(e => {
-    let t = p.current;
+    let t = m.current;
     if (null == t) return e();
     t.scrollToTop({
       callback: () => requestAnimationFrame(() => e())
     })
   }), []), _ = r.useCallback(() => new Promise(e => {
-    let t = p.current;
+    let t = m.current;
     if (null == t) return e();
     t.scrollToBottom({
       callback() {
         requestAnimationFrame(() => setTimeout(e, 100))
       }
     })
-  }), []), I = (0, R.useUID)(), v = (0, d.default)({
-    id: "private-channels-".concat(I),
+  }), []), S = (0, R.useUID)(), v = (0, d.default)({
+    id: "private-channels-".concat(S),
     isEnabled: h.keyboardModeEnabled,
     scrollToStart: g,
     scrollToEnd: _,
@@ -416,7 +416,7 @@ t.default = e => {
     children: (0, i.jsx)(U, {
       channels: u,
       privateChannelIds: f,
-      listRef: p,
+      listRef: m,
       theme: n,
       version: t,
       ...e,

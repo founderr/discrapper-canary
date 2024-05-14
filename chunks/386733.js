@@ -127,13 +127,13 @@ t.default = e => {
     {
       analyticsLocations: j
     } = (0, c.default)(d.default.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-    y = r.useRef(null),
-    [G, B] = r.useState(!1),
+    G = r.useRef(null),
+    [y, B] = r.useState(!1),
     k = () => {
-      if (null != y.current) {
+      if (null != G.current) {
         let {
           clientWidth: e
-        } = y.current;
+        } = G.current;
         B(e <= 568)
       }
     };
@@ -161,15 +161,15 @@ t.default = e => {
         children: L(b, v > 0, i.length, D)
       }), (0, a.jsxs)("div", {
         className: n()(C.expandedProgressBarButtonContainer, {
-          [C.expandedProgressBarButtonContainerMinLayout]: G && !t,
-          [C.expandedProgressBarButtonContainerLayout]: !G && !t
+          [C.expandedProgressBarButtonContainerMinLayout]: y && !t,
+          [C.expandedProgressBarButtonContainerLayout]: !y && !t
         }),
         children: [!t && !x && (0, a.jsx)(A.default, {
           color: o.ButtonColors.CUSTOM,
           buttonText: g.default.Messages.GIFT_NITRO,
           className: n()(C.expandedProgressBarGiftingCTA, {
-            [C.expandedProgressBarGiftingCTAMinLayout]: G && !t,
-            [C.expandedProgressBarGiftingCTALayout]: !G && !t
+            [C.expandedProgressBarGiftingCTAMinLayout]: y && !t,
+            [C.expandedProgressBarGiftingCTALayout]: !y && !t
           }),
           look: o.ButtonLooks.OUTLINED,
           isGift: !0
@@ -205,7 +205,7 @@ t.default = e => {
   return (0, a.jsx)(c.AnalyticsLocationProvider, {
     value: j,
     children: (0, a.jsx)("div", {
-      ref: y,
+      ref: G,
       className: n()({
         [C.expandedProgressBarContainer]: !t,
         [C.expandedProgressBarContainerSettingsPage]: t,

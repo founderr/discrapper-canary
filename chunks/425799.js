@@ -23,8 +23,8 @@ var a = s("735250"),
 function g() {
   let e = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
     [t, s] = n.useState(!0),
-    [g, h] = n.useState([]),
-    I = n.useRef(null),
+    [g, I] = n.useState([]),
+    h = n.useRef(null),
     [N, p] = n.useState(!1),
     [C, A] = n.useState(!1),
     [O, x] = n.useState(!1),
@@ -111,14 +111,14 @@ function g() {
           color: "always-white",
           children: "Click to upload image"
         }), (0, a.jsx)(d.default, {
-          ref: I,
+          ref: h,
           onChange: e => {
             let t = e.currentTarget.files[0],
               s = new FileReader;
             s.onload = async e => {
               if (null == e.target || "string" != typeof e.target.result) return;
               let s = await (0, T.createLayer)(URL.createObjectURL(t), t, g.length);
-              h(e => [...e, s])
+              I(e => [...e, s])
             }, s.readAsDataURL(t)
           },
           multiple: !1
@@ -148,7 +148,7 @@ function g() {
           color: o.ButtonColors.RED,
           look: o.ButtonLooks.LINK,
           onClick: () => {
-            h(t => t.filter(t => t !== e))
+            I(t => t.filter(t => t !== e))
           },
           children: "Remove"
         })]
@@ -159,7 +159,7 @@ function g() {
         value: e.start,
         className: f.numberInput,
         onChange: e => {
-          h(s => {
+          I(s => {
             let a = [...s],
               n = s[t];
             return n.start = +e.target.value, a[t] = n, a
@@ -172,7 +172,7 @@ function g() {
         value: e.duration,
         className: f.numberInput,
         onChange: e => {
-          h(s => {
+          I(s => {
             let a = [...s],
               n = s[t];
             return n.duration = +e.target.value, a[t] = n, a
@@ -185,7 +185,7 @@ function g() {
         checked: e.loop,
         className: f.checkBox,
         onChange: e => {
-          h(s => {
+          I(s => {
             let a = [...s],
               n = s[t];
             return n.loop = e.target.checked, a[t] = n, a
@@ -199,7 +199,7 @@ function g() {
           value: e.loopDelay,
           className: f.checkBox,
           onChange: e => {
-            h(s => {
+            I(s => {
               let a = [...s],
                 n = s[t];
               return n.loopDelay = +e.target.value, a[t] = n, a
@@ -214,7 +214,7 @@ function g() {
         className: f.checkBox,
         disabled: !0,
         onChange: e => {
-          h(s => {
+          I(s => {
             let a = [...s],
               n = s[t];
             return n.zIndex = +e.target.value, a[t] = n, a
@@ -227,7 +227,7 @@ function g() {
         color: o.ButtonColors.RED,
         look: o.ButtonLooks.LINK,
         onClick: () => {
-          h([])
+          I([])
         },
         children: "Clear Assets"
       }), (0, a.jsx)(o.Button, {

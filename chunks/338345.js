@@ -25,8 +25,8 @@ function _() {
   let {
     enabled: _,
     autoToggle: g,
-    hideInstantInvites: h,
-    hidePersonalInformation: I,
+    hideInstantInvites: I,
+    hidePersonalInformation: h,
     disableSounds: N,
     disableNotifications: p,
     enableContentProtection: C
@@ -75,12 +75,12 @@ function _() {
       className: l()(m.marginTop40, m.marginBottom8),
       children: T.default.Messages.OPTIONS
     }), (0, a.jsx)(r.FormSwitch, {
-      value: I,
+      value: h,
       onChange: e => A("hidePersonalInformation", e),
       note: T.default.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
       children: T.default.Messages.HIDE_PERSONAL_INFORMATION_LABEL
     }), (0, a.jsx)(r.FormSwitch, {
-      value: h,
+      value: I,
       onChange: e => A("hideInstantInvites", e),
       note: T.default.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
       children: T.default.Messages.HIDE_INSTANT_INVITES_LABEL

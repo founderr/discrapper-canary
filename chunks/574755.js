@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("39604"),
   _ = s("703288"),
   g = s("491758"),
-  h = s("183632"),
-  I = s("689938"),
+  I = s("183632"),
+  h = s("689938"),
   N = s("477716"),
   p = s("151501"),
   C = s("611273");
@@ -50,11 +50,11 @@ function A(e) {
       tag: r.FormTitleTags.H1,
       title: s ? (0, a.jsxs)("div", {
         className: N.headerContainer,
-        children: [I.default.Messages.CLIPS, (0, a.jsx)(_.default, {})]
+        children: [h.default.Messages.CLIPS, (0, a.jsx)(_.default, {})]
       }) : null,
       children: R && (0, a.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
-        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(h.default, {})]
+        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(I.default, {})]
       })
     }), R && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
       className: s || R ? C.marginTop20 : t,
@@ -62,21 +62,21 @@ function A(e) {
         hideBorder: !0,
         className: p.formItem,
         value: A,
-        note: I.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
+        note: h.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => m.updateAllowVoiceRecording({
           allowVoiceRecording: e
         }),
-        children: I.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
+        children: h.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
       }), O && v && (0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: p.formItem,
         value: M,
-        note: I.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
+        note: h.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => m.updateViewerClipsEnabled({
           enabled: e,
           trackAnalytics: !0
         }),
-        children: I.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
+        children: h.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
       })]
     })]
   })

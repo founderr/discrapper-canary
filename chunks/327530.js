@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   COLLAPSED_USERS_PER_ROW: function() {
-    return m
+    return p
   },
   HEIGHT_BUFFER: function() {
     return r
@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return h
   },
   SERVER_COMMUNITY_INFO_PADDING: function() {
-    return p
+    return m
   },
   TUTORIAL_INLINE_SPECS: function() {
     return C
@@ -54,8 +54,8 @@ let l = 8,
   c = 32,
   f = 8,
   h = 84,
-  p = 16,
-  m = 5,
+  m = 16,
+  p = 5,
   C = {
     origin: {
       x: -36,

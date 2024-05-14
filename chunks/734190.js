@@ -11,14 +11,14 @@ var l = n("735250"),
   c = n("239091"),
   f = n("569471"),
   h = n("488131"),
-  p = n("592125"),
-  m = n("306680"),
+  m = n("592125"),
+  p = n("306680"),
   C = n("979651"),
   g = n("938475"),
   E = n("514342"),
   _ = n("714794"),
-  I = n("135724"),
-  S = n("25601"),
+  S = n("135724"),
+  I = n("25601"),
   N = n("207055"),
   T = n("981631"),
   A = n("124368"),
@@ -58,15 +58,15 @@ t.default = a.memo(function(e) {
   } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
     unread: j,
     mentionCount: P
-  } = (0, o.useStateFromStoresObject)([m.default], () => ({
-    unread: m.default.hasUnread(t.id),
-    mentionCount: m.default.getMentionCount(t.id)
+  } = (0, o.useStateFromStoresObject)([p.default], () => ({
+    unread: p.default.hasUnread(t.id),
+    mentionCount: p.default.getMentionCount(t.id)
   })), G = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), U = a.useCallback(e => {
     (0, h.openThreadSidebarForViewing)(t, !e.shiftKey, A.OpenThreadAnalyticsLocations.CHANNEL_LIST)
   }, [t]), w = a.useCallback(() => {
     d.default.preload(t.guild_id, t.id)
-  }, [t.guild_id, t.id]), F = a.useCallback(e => {
-    let a = p.default.getChannel(t.id);
+  }, [t.guild_id, t.id]), B = a.useCallback(e => {
+    let a = m.default.getChannel(t.id);
     null != a && (0, c.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -76,7 +76,7 @@ t.default = a.memo(function(e) {
         channel: a
       })
     })
-  }, [t.id]), B = null == D ? 0 : D.length, {
+  }, [t.id]), F = null == D ? 0 : D.length, {
     role: H,
     ...V
   } = (0, r.useListItem)(t.id), k = a.useRef(null), Y = P > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
@@ -115,7 +115,7 @@ t.default = a.memo(function(e) {
           [x.withGuildIcon]: O
         }),
         onMouseDown: w,
-        onContextMenu: F,
+        onContextMenu: B,
         children: [!j || G || s ? null : (0, l.jsx)("div", {
           className: i()(x.unread, x.unreadImportant)
         }), (0, l.jsx)(u.Clickable, {
@@ -135,11 +135,11 @@ t.default = a.memo(function(e) {
               children: t.name
             }), (0, l.jsxs)("div", {
               className: x.children,
-              children: [B > 0 && t.userLimit > 0 ? (0, l.jsx)(I.default, {
-                userCount: B,
+              children: [F > 0 && t.userLimit > 0 ? (0, l.jsx)(S.default, {
+                userCount: F,
                 video: b,
                 channel: t
-              }) : null, (0, _.default)(P) ? (0, l.jsx)(S.default, {
+              }) : null, (0, _.default)(P) ? (0, l.jsx)(I.default, {
                 mentionsCount: P
               }) : null]
             })]

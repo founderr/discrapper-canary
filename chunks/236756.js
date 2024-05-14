@@ -11,14 +11,14 @@ var l = n("735250"),
   c = n("706619"),
   f = n("695346"),
   h = n("131951"),
-  p = n("757206"),
-  m = n("441957"),
+  m = n("757206"),
+  p = n("441957"),
   C = n("630641"),
   g = n("626135"),
   E = n("572004"),
   _ = n("63063"),
-  I = n("476221"),
-  S = n("981631"),
+  S = n("476221"),
+  I = n("981631"),
   N = n("65154"),
   T = n("689938"),
   A = n("743335");
@@ -45,7 +45,7 @@ let L = () => {
 };
 t.default = function(e) {
   (0, a.useEffect)(() => {
-    g.default.track(S.AnalyticEvents.OPEN_POPOUT, {
+    g.default.track(I.AnalyticEvents.OPEN_POPOUT, {
       type: "RTC Connection"
     })
   }, []);
@@ -74,7 +74,7 @@ t.default = function(e) {
           }), (0, l.jsx)("div", {
             className: A.popoutText,
             children: (0, l.jsx)("strong", {
-              children: I.default.getShortHostname(t)
+              children: S.default.getShortHostname(t)
             })
           })]
         }), (0, l.jsx)("div", {
@@ -108,24 +108,24 @@ t.default = function(e) {
     } = e,
     o = f.DeveloperMode.getSetting(),
     E = {
-      [S.RTCConnectionStates.AWAITING_ENDPOINT]: T.default.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
-        url: S.Links.STATUS
+      [I.RTCConnectionStates.AWAITING_ENDPOINT]: T.default.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
+        url: I.Links.STATUS
       }),
-      [S.RTCConnectionStates.CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_CONNECTING,
-      [S.RTCConnectionStates.AUTHENTICATING]: T.default.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
-      [S.RTCConnectionStates.DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
-      [S.RTCConnectionStates.RTC_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
-      [S.RTCConnectionStates.ICE_CHECKING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-        url: _.default.getArticleURL(S.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+      [I.RTCConnectionStates.CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_CONNECTING,
+      [I.RTCConnectionStates.AUTHENTICATING]: T.default.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
+      [I.RTCConnectionStates.DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
+      [I.RTCConnectionStates.RTC_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
+      [I.RTCConnectionStates.ICE_CHECKING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
+        url: _.default.getArticleURL(I.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
       }),
-      [S.RTCConnectionStates.DTLS_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-        url: _.default.getArticleURL(S.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+      [I.RTCConnectionStates.DTLS_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
+        url: _.default.getArticleURL(I.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
       }),
-      [S.RTCConnectionStates.RTC_CONNECTED]: n,
-      [S.RTCConnectionStates.NO_ROUTE]: T.default.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
-        url: _.default.getArticleURL(S.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+      [I.RTCConnectionStates.RTC_CONNECTED]: n,
+      [I.RTCConnectionStates.NO_ROUTE]: T.default.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
+        url: _.default.getArticleURL(I.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
       }),
-      [S.RTCConnectionStates.RTC_DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED
+      [I.RTCConnectionStates.RTC_DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED
     } [i];
   return (0, l.jsx)("div", {
     className: A.container,
@@ -150,7 +150,7 @@ t.default = function(e) {
           children: [(0, l.jsxs)(u.Anchor, {
             className: r()(A.debugButton, A.textWithIcon),
             onClick: t,
-            children: [T.default.Messages.DEBUG, (0, l.jsx)(m.default, {
+            children: [T.default.Messages.DEBUG, (0, l.jsx)(p.default, {
               className: A.__invalid_icon,
               width: 12,
               height: 12
@@ -159,7 +159,7 @@ t.default = function(e) {
             className: r()(A.copyStatsButton, A.textWithIcon),
             onClick: L,
             title: "Copy to clipboard",
-            children: [T.default.Messages.COPY_STATS, (0, l.jsx)(p.default, {
+            children: [T.default.Messages.COPY_STATS, (0, l.jsx)(m.default, {
               className: A.__invalid_icon,
               width: 12,
               height: 12
@@ -167,7 +167,7 @@ t.default = function(e) {
           })]
         }), !o && !__OVERLAY__ && (0, l.jsx)(u.Anchor, {
           className: A.debugButton,
-          href: _.default.getArticleURL(S.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
+          href: _.default.getArticleURL(I.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
           children: T.default.Messages.LEARN_MORE
         })]
       })]

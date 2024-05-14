@@ -21,9 +21,9 @@ var a = s("735250"),
   _ = s("158200");
 
 function g() {}
-let h = [f.AutocompleterResultTypes.VOICE_CHANNEL];
+let I = [f.AutocompleterResultTypes.VOICE_CHANNEL];
 
-function I(e) {
+function h(e) {
   e.setOptions({
     voiceChannelGuildFilter: null
   }), e.setLimit(1 / 0)
@@ -133,8 +133,8 @@ function x(e) {
     queryResults: v
   } = (0, o.default)({
     visible: !0,
-    autocompleterResultTypes: h,
-    autocompleterBeforeCreateSearchContext: I
+    autocompleterResultTypes: I,
+    autocompleterBeforeCreateSearchContext: h
   }), D = function(e) {
     let t = "" !== e,
       s = (0, l.useStateFromStoresArray)([u.default, d.default, S.default], () => {

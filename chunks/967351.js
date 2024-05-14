@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("411104");
 var a = n("413135"),
   s = n("836560"),
-  i = n("392711"),
-  l = n.n(i),
+  l = n("392711"),
+  i = n.n(l),
   r = n("710845"),
   o = n("998502"),
   u = n("901077"),
@@ -54,7 +54,7 @@ function S(e) {
       }, e => {
         throw a(), e
       });
-    return e.write(p(_.PING, l().uniqueId())), s.then(t, n)
+    return e.write(p(_.PING, i().uniqueId())), s.then(t, n)
   })
 }
 
@@ -62,8 +62,8 @@ function p(e, t) {
   var n;
   t = JSON.stringify(t);
   let s = a.Buffer.byteLength(t),
-    i = a.Buffer.alloc(8 + s);
-  return i.writeInt32LE(e, 0), i.writeInt32LE(s, 4), i.write(t, 8, s), (n = i).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength)
+    l = a.Buffer.alloc(8 + s);
+  return l.writeInt32LE(e, 0), l.writeInt32LE(s, 4), l.write(t, 8, s), (n = l).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength)
 }
 
 function g(e) {
@@ -71,24 +71,24 @@ function g(e) {
   if (null == t) return;
   let n = a.Buffer.from(t),
     s = n.readInt32LE(0),
-    i = n.readInt32LE(4);
-  if (!Object.values(_).includes(s) || i < 0) throw Error("protocol error");
-  if (null == (t = e.read(i))) throw Error("data size does not match what was received");
-  let l = JSON.parse((n = a.Buffer.from(t)).toString());
+    l = n.readInt32LE(4);
+  if (!Object.values(_).includes(s) || l < 0) throw Error("protocol error");
+  if (null == (t = e.read(l))) throw Error("data size does not match what was received");
+  let i = JSON.parse((n = a.Buffer.from(t)).toString());
   switch (s) {
     case _.PING:
-      e.emit("ping", l), e.write(p(_.PONG, l));
+      e.emit("ping", i), e.write(p(_.PONG, i));
       break;
     case _.PONG:
-      e.emit("pong", l);
+      e.emit("pong", i);
       break;
     case _.HANDSHAKE:
       if (m(e)) throw Error("already did handshake");
-      C(e, !0), e.emit("handshake", l);
+      C(e, !0), e.emit("handshake", i);
       break;
     case _.FRAME:
       if (!m(e)) throw Error("did not handshake");
-      e.emit("request", l);
+      e.emit("request", i);
       break;
     case _.CLOSE:
       e.end(), e.destroy()
@@ -106,13 +106,13 @@ class I extends d.default {
     })), this.socket.destroy()
   }
   constructor(e, t, n) {
-    var a, s, i;
-    super("ipc", t, n), a = this, i = void 0, (s = "socket") in a ? Object.defineProperty(a, s, {
-      value: i,
+    var a, s, l;
+    super("ipc", t, n), a = this, l = void 0, (s = "socket") in a ? Object.defineProperty(a, s, {
+      value: l,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : a[s] = i, this.socket = e
+    }) : a[s] = l, this.socket = e
   }
 }
 class T extends s.EventEmitter {

@@ -34,7 +34,7 @@ t.default = r.memo(function(e) {
     isLoading: L,
     onClose: v,
     profileViewedAnalytics: D
-  } = e, M = null == n ? void 0 : n.identityGuildId, y = (0, S.useClanInfo)(null != M ? M : null), P = null == n ? void 0 : n.tag, U = (0, N.default)("clan_guild_profile"), b = (0, m.default)("base_clan_tag_chiplet"), G = (0, o.useStateFromStores)([E.default], () => E.default.getId()), w = (0, o.useStateFromStores)([I.default], () => null != M ? I.default.getMember(M, G) : null, [M, G]), B = (0, d.useIsDismissibleContentDismissed)(a.DismissibleContent.CLAN_TAG_WAITLIST), k = (0, o.useStateFromStores)([T.default], () => T.default.getUser(G), [G]), V = (null == w ? void 0 : w.joinedAt) != null, x = (0, A.isGuildAdoptedUserClanIdentity)(M, null == k ? void 0 : k.clan), F = null != (0, _.default)(M);
+  } = e, M = null == n ? void 0 : n.identityGuildId, y = (0, S.useClanInfo)(null != M ? M : null), P = null == n ? void 0 : n.tag, U = (0, N.default)("clan_guild_profile"), b = (0, m.default)("base_clan_tag_chiplet"), G = (0, o.useStateFromStores)([E.default], () => E.default.getId()), w = (0, o.useStateFromStores)([I.default], () => null != M ? I.default.getMember(M, G) : null, [M, G]), k = (0, d.useIsDismissibleContentDismissed)(a.DismissibleContent.CLAN_TAG_WAITLIST), B = (0, o.useStateFromStores)([T.default], () => T.default.getUser(G), [G]), V = (null == w ? void 0 : w.joinedAt) != null, x = (0, A.isGuildAdoptedUserClanIdentity)(M, null == B ? void 0 : B.clan), F = null != (0, _.default)(M);
   r.useEffect(() => {
     null != M && (0, f.trackClanProfileViewed)({
       guildId: M,
@@ -44,14 +44,14 @@ t.default = r.memo(function(e) {
     })
   }, [M, F, D]);
   let H = r.useCallback(() => {
-      !B && ((0, f.trackClanApplyWaitlist)({
+      !k && ((0, f.trackClanApplyWaitlist)({
         originGuildId: null == D ? void 0 : D.guildId,
         tagGuildId: M,
         messageId: null == D ? void 0 : D.messageId,
         tagUserId: null == D ? void 0 : D.tagUserId,
         location: l.default.CLAN_GUILD_PROFILE
       }), (0, s.showToast)((0, s.createToast)(C.default.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, s.ToastType.SUCCESS)))
-    }, [M, B, D]),
+    }, [M, k, D]),
     Y = r.useCallback(e => {
       null != M && (e.stopPropagation(), e.preventDefault(), null == v || v(), (0, h.openAdoptClanIdentityModal)(M))
     }, [M, v]),
@@ -83,7 +83,7 @@ t.default = r.memo(function(e) {
       switch (!0) {
         case !b:
           return null;
-        case !U && !B:
+        case !U && !k:
           return (0, i.jsx)(s.Button, {
             onClick: H,
             color: s.Button.Colors.PRIMARY,
@@ -91,7 +91,7 @@ t.default = r.memo(function(e) {
             fullWidth: !0,
             children: C.default.Messages.JOIN_WAITLIST
           });
-        case !U && B:
+        case !U && k:
           return (0, i.jsx)(s.Button, {
             onClick: H,
             color: s.Button.Colors.PRIMARY,
@@ -127,7 +127,7 @@ t.default = r.memo(function(e) {
         default:
           return null
       }
-    }, [z, Y, j, W, K, F, x, U, B, H, b, V]),
+    }, [z, Y, j, W, K, F, x, U, k, H, b, V]),
     X = r.useMemo(() => ({
       className: R.container,
       onClick: g

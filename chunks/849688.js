@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("25752"),
   o = n("481060"),
   u = n("442837"),
@@ -18,26 +18,26 @@ let m = (0, c.getThemeClass)(h.ThemeTypes.DARK);
 t.default = function(e) {
   let {
     guild: t
-  } = e, i = (0, u.useStateFromStores)([E.default], () => E.default.getActiveGuildSignUp(t.id)), c = s.useCallback(() => {
-    null != i && (0, o.openModalLazy)(async () => {
+  } = e, l = (0, u.useStateFromStores)([E.default], () => E.default.getActiveGuildSignUp(t.id)), c = s.useCallback(() => {
+    null != l && (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("22862")]).then(n.bind(n, "646202"));
       return n => (0, a.jsx)(e, {
         ...n,
-        target: i,
+        target: l,
         guildId: t.id
       })
     })
-  }, [i, t.id]), S = s.useCallback(() => {
-    null != i && (0, f.dismissSignUp)(i.key, i.dismissibleContent)
-  }, [i]);
-  if (null == i) return null;
-  let p = "url(".concat(i.backgroundAssetUrl, ") black top / cover no-repeat");
+  }, [l, t.id]), S = s.useCallback(() => {
+    null != l && (0, f.dismissSignUp)(l.key, l.dismissibleContent)
+  }, [l]);
+  if (null == l) return null;
+  let p = "url(".concat(l.backgroundAssetUrl, ") black top / cover no-repeat");
   return (0, a.jsx)(o.ThemeContextProvider, {
     theme: h.ThemeTypes.DARK,
     children: (0, a.jsx)("div", {
-      className: l()(C.container, m),
+      className: i()(C.container, m),
       children: (0, a.jsxs)("div", {
         className: C.card,
         style: {
@@ -56,7 +56,7 @@ t.default = function(e) {
           })]
         }), (0, a.jsx)(o.Heading, {
           variant: "heading-sm/medium",
-          children: i.noticeHeader
+          children: l.noticeHeader
         }), (0, a.jsx)(o.Button, {
           className: C.button,
           color: "none",

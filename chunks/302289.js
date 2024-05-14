@@ -3,13 +3,13 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  i = n("785681"),
-  l = n("130310"),
+  l = n("785681"),
+  i = n("130310"),
   r = n("689938"),
   o = n("126045"),
   u = n("128216");
 t.default = () => {
-  let e = (0, i.useAgeSpecificText)(r.default.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_TEEN, r.default.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_PARENT);
+  let e = (0, l.useAgeSpecificText)(r.default.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_TEEN, r.default.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_PARENT);
   return (0, a.jsxs)("div", {
     className: o.container,
     children: [(0, a.jsxs)("div", {
@@ -25,7 +25,7 @@ t.default = () => {
         variant: "text-sm/medium",
         color: "text-muted",
         children: e
-      }), (0, a.jsx)(l.default, {})]
+      }), (0, a.jsx)(i.default, {})]
     }), (0, a.jsx)("div", {
       className: o.artContainer,
       children: (0, a.jsx)("img", {

@@ -11,13 +11,13 @@ var l = n("735250"),
   c = n("944486"),
   f = n("305878"),
   h = n("104259"),
-  p = n("782089"),
-  m = n("729285"),
+  m = n("782089"),
+  p = n("729285"),
   C = n("147754"),
   g = n("688438"),
   E = n("981631"),
   _ = n("689938");
-let I = [{
+let S = [{
   key: "EVENTS",
   renderIcon: e => (0, l.jsx)(f.default, {
     className: e
@@ -48,7 +48,7 @@ let I = [{
   handler: (e, t) => (0, d.transitionToGuild)(e.id, t.id)
 }, {
   key: "ADD_SERVERS",
-  renderIcon: e => (0, l.jsx)(m.default, {
+  renderIcon: e => (0, l.jsx)(p.default, {
     className: e
   }),
   getName: () => _.default.Messages.HUB_SIDEBAR_ADD_SERVERS,
@@ -65,7 +65,7 @@ let I = [{
   })
 }, {
   key: "INVITE_MEMBERS",
-  renderIcon: e => (0, l.jsx)(p.default, {
+  renderIcon: e => (0, l.jsx)(m.default, {
     className: e
   }),
   getName: () => _.default.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
@@ -101,9 +101,9 @@ t.default = e => {
     autoTrackExposure: !1
   }), f = (0, s.useStateFromStores)([c.default], () => null != n && c.default.getChannelId() === n.id), h = a.useMemo(() => ({
     numEvents: i.length
-  }), [i.length]), p = (0, g.useHubUnreadCount)(n);
+  }), [i.length]), m = (0, g.useHubUnreadCount)(n);
   return (0, l.jsx)(l.Fragment, {
-    children: I.map(e => {
+    children: S.map(e => {
       let {
         key: a,
         getName: s,
@@ -118,7 +118,7 @@ t.default = e => {
         text: s(h),
         selected: f && "JOIN_SERVERS" === a,
         onClick: null != n ? () => i(t, n) : void 0,
-        trailing: "JOIN_SERVERS" === a && p > 0 ? (0, u.renderMentionBadge)(p) : null
+        trailing: "JOIN_SERVERS" === a && m > 0 ? (0, u.renderMentionBadge)(m) : null
       }, c)
     })
   })

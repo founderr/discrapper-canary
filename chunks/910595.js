@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("306680"),
   f = n("356842"),
   h = n("308570"),
-  p = n("434479"),
-  m = n("981631"),
+  m = n("434479"),
+  p = n("981631"),
   C = n("176505"),
   g = n("490897"),
   E = n("689938");
@@ -37,23 +37,23 @@ function _(e) {
       location: "487e85_2"
     })
   }, []);
-  let I = (0, u.useCanSeeOnboardingHome)(t.id),
-    S = (0, s.useStateFromStores)([c.default], () => c.default.hasUnread(t.id, g.ReadStateTypes.GUILD_HOME) && _, [t.id, _]);
-  return (0, l.jsx)(p.BasicChannelRow, {
+  let S = (0, u.useCanSeeOnboardingHome)(t.id),
+    I = (0, s.useStateFromStores)([c.default], () => c.default.hasUnread(t.id, g.ReadStateTypes.GUILD_HOME) && _, [t.id, _]);
+  return (0, l.jsx)(m.BasicChannelRow, {
     id: "home-tab-".concat(t.id),
-    renderIcon: e => I ? (0, l.jsx)(h.default, {
+    renderIcon: e => S ? (0, l.jsx)(h.default, {
       className: e
     }) : (0, l.jsx)(f.default, {
       className: e
     }),
-    text: I ? E.default.Messages.SERVER_GUIDE : E.default.Messages.GUILD_HOME,
+    text: S ? E.default.Messages.SERVER_GUIDE : E.default.Messages.GUILD_HOME,
     selected: n,
-    showUnread: S,
+    showUnread: I,
     onMouseDown: function() {
       i.default.preload(t.id, C.StaticChannelRoute.GUILD_HOME)
     },
     onClick: function() {
-      (0, o.ackGuildHome)(t.id), (0, d.transitionTo)(m.Routes.CHANNEL(t.id, C.StaticChannelRoute.GUILD_HOME))
+      (0, o.ackGuildHome)(t.id), (0, d.transitionTo)(p.Routes.CHANNEL(t.id, C.StaticChannelRoute.GUILD_HOME))
     }
   })
 }

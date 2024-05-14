@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("584825"),
   _ = s("305342"),
   g = s("333867"),
-  h = s("963249"),
-  I = s("87484"),
+  I = s("963249"),
+  h = s("87484"),
   N = s("197115"),
   p = s("911367"),
   C = s("430824"),
@@ -117,7 +117,7 @@ t.default = function() {
           }],
           onChange: e => m(e)
         }), (0, a.jsx)(r.Button, {
-          onClick: () => (0, h.default)({
+          onClick: () => (0, I.default)({
             subscriptionTier: s,
             analyticsLocations: k
           }),
@@ -291,7 +291,7 @@ t.default = function() {
           value: z,
           onChange: e => Q(e)
         }), (0, a.jsx)(r.Button, {
-          onClick: () => (0, I.default)({
+          onClick: () => (0, h.default)({
             applicationId: W,
             skuId: z,
             analyticsLocations: k

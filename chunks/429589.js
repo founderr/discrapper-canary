@@ -38,8 +38,8 @@ var i = n("735250"),
   b = n("620662"),
   G = n("275920"),
   w = n("513202"),
-  B = n("915863"),
-  k = n("701488"),
+  k = n("915863"),
+  B = n("701488"),
   V = n("981631"),
   x = n("689938");
 
@@ -113,7 +113,7 @@ function F(e) {
         applicationId: et,
         channelId: N.default.getVoiceChannelId(),
         messageId: null,
-        intent: k.ActivityIntent.PLAY,
+        intent: B.ActivityIntent.PLAY,
         embedded: (0, b.default)(t, V.ActivityFlags.EMBEDDED)
       }), (0, G.default)({
         type: V.AnalyticsGameOpenTypes.JOIN,
@@ -159,7 +159,7 @@ function F(e) {
         onMouseEnter: t,
         onMouseLeave: n
       } = e;
-      return (0, i.jsx)(B.default, {
+      return (0, i.jsx)(k.default, {
         onClick: eh,
         onMouseEnter: t,
         onMouseLeave: n,

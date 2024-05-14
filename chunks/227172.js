@@ -33,14 +33,14 @@ t.default = e => {
     displayParticipants: x,
     participant1: M,
     participant2: R,
-    numOtherParticipants: y
-  } = (0, r.default)(n, 3), L = l.useCallback(e => {
+    numOtherParticipants: L
+  } = (0, r.default)(n, 3), y = l.useCallback(e => {
     if (null == S || null == t || null == _) return;
-    let a = y > 0 ? (0, c.formatGroupCanvasDescription)({
+    let a = L > 0 ? (0, c.formatGroupCanvasDescription)({
       entry: n,
       channel: t,
       users: [M, R],
-      countOthers: y
+      countOthers: L
     }) : (0, c.formatCanvasDescription)(n, t, _);
     return (0, d.generateGamingContentImage)({
       entry: n,
@@ -51,7 +51,7 @@ t.default = e => {
       colors: [T, I],
       channelId: e
     })
-  }, [S, t, x, n, A, y, M, R, T, I, _]);
+  }, [S, t, x, n, A, L, M, R, T, I, _]);
   if (null == _) return null;
   let O = (0, a.jsx)(m.BadgesContainer, {
       location: m.BadgeLocation.POPOUT,
@@ -80,7 +80,7 @@ t.default = e => {
         closePopout: g,
         user: _,
         channel: t,
-        generateReactionImage: L,
+        generateReactionImage: y,
         reactionImageAltText: (0, c.getContentAltText)(n, _),
         entry: n,
         requestId: C,
@@ -90,7 +90,7 @@ t.default = e => {
         closePopout: g,
         user: _,
         channel: t,
-        generateReactionImage: L,
+        generateReactionImage: y,
         reactionImageAltText: (0, c.getContentAltText)(n, _),
         entry: n,
         requestId: C

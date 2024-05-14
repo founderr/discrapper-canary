@@ -11,15 +11,15 @@ var l = n("735250"),
   c = n("201895"),
   f = n("703656"),
   h = n("592125"),
-  p = n("430824"),
-  m = n("496675"),
+  m = n("430824"),
+  p = n("496675"),
   C = n("98597"),
   g = n("473403"),
   E = n("981631"),
   _ = n("490897"),
-  I = n("513285");
+  S = n("513285");
 
-function S(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -44,11 +44,11 @@ class T extends C.default {
       canReorderChannel: r
     } = this.props, o = (0, l.jsx)("li", {
       className: i()(this.getClassName(), {
-        [I.disabled]: this.isDisabled()
+        [S.disabled]: this.isDisabled()
       }),
       "data-dnd-name": e.name,
       children: (0, l.jsxs)(g.default, {
-        className: I.iconVisibility,
+        className: S.iconVisibility,
         channel: e,
         selected: t,
         onClick: this.handleClick,
@@ -65,10 +65,10 @@ class T extends C.default {
     return r ? n(a(o)) : o
   }
   constructor(...e) {
-    super(...e), S(this, "handleContextMenu", e => {
+    super(...e), I(this, "handleContextMenu", e => {
       let {
         channel: t
-      } = this.props, a = p.default.getGuild(t.getGuildId());
+      } = this.props, a = m.default.getGuild(t.getGuildId());
       null != a && (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -79,7 +79,7 @@ class T extends C.default {
           guild: a
         })
       })
-    }), S(this, "handleClick", e => {
+    }), I(this, "handleClick", e => {
       ! function(e) {
         let t = e.getGuildId();
         if (null == t) throw Error("TextChannel, transitionTo: Channel does not have a guildId");
@@ -102,11 +102,11 @@ t.default = a.memo(function(e) {
     channel: t,
     guild: n,
     disableSorting: a
-  } = e, s = (0, r.useStateFromStoresObject)([h.default, m.default], () => {
+  } = e, s = (0, r.useStateFromStoresObject)([h.default, p.default], () => {
     let e = h.default.getChannel(t.parent_id);
     return {
-      canManageChannel: m.default.can(E.Permissions.MANAGE_CHANNELS, t),
-      canReorderChannel: !0 !== a && null != e ? m.default.can(E.Permissions.MANAGE_CHANNELS, e) : m.default.can(E.Permissions.MANAGE_CHANNELS, n)
+      canManageChannel: p.default.can(E.Permissions.MANAGE_CHANNELS, t),
+      canReorderChannel: !0 !== a && null != e ? p.default.can(E.Permissions.MANAGE_CHANNELS, e) : p.default.can(E.Permissions.MANAGE_CHANNELS, n)
     }
   });
   return (0, l.jsx)(A, {

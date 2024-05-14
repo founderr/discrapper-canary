@@ -54,7 +54,7 @@ function G(e) {
   return "autocomplete-".concat(e, "-title")
 }
 let w = a.createContext(null);
-class B extends a.PureComponent {
+class k extends a.PureComponent {
   isSelectable() {
     return this.selectable
   }
@@ -121,7 +121,7 @@ class B extends a.PureComponent {
     }
   }
 }
-class k extends(i = a.PureComponent) {
+class B extends(i = a.PureComponent) {
   render() {
     let {
       children: e,
@@ -145,7 +145,7 @@ class k extends(i = a.PureComponent) {
     }) : null
   }
 }
-U(k, "Generic", class e extends B {
+U(B, "Generic", class e extends k {
   renderContent() {
     let {
       text: e,
@@ -161,7 +161,7 @@ U(k, "Generic", class e extends B {
       }) : null]
     })
   }
-}), U(k, "Loading", function(e) {
+}), U(B, "Loading", function(e) {
   let t = a.useMemo(() => u().random(60, 120), []);
   return (0, r.jsx)("div", {
     className: P.base,
@@ -179,7 +179,7 @@ U(k, "Generic", class e extends B {
       })
     })
   })
-}), U(k, "Title", function(e) {
+}), U(B, "Title", function(e) {
   let {
     title: t,
     className: n,
@@ -194,7 +194,7 @@ U(k, "Generic", class e extends B {
       children: [t, i]
     })
   })
-}), U(k, "Divider", class e extends B {
+}), U(B, "Divider", class e extends k {
   renderContent() {
     let {
       className: e
@@ -206,7 +206,7 @@ U(k, "Generic", class e extends B {
   constructor(...e) {
     super(...e), U(this, "layoutClass", P.dividerContainer), U(this, "selectable", !1)
   }
-}), U(k, "User", class e extends B {
+}), U(B, "User", class e extends k {
   renderContent() {
     let {
       user: e,
@@ -241,7 +241,7 @@ U(k, "Generic", class e extends B {
       })]
     })
   }
-}), U(k, "Role", class e extends B {
+}), U(B, "Role", class e extends k {
   renderContent() {
     let {
       role: e,
@@ -268,7 +268,7 @@ U(k, "Generic", class e extends B {
       })]
     })
   }
-}), U(k, "Channel", class e extends B {
+}), U(B, "Channel", class e extends k {
   renderContent() {
     let {
       channel: e,
@@ -288,7 +288,7 @@ U(k, "Generic", class e extends B {
       }) : null]
     })
   }
-}), U(k, "Command", class e extends B {
+}), U(B, "Command", class e extends k {
   renderContent() {
     let {
       command: e
@@ -308,7 +308,7 @@ U(k, "Generic", class e extends B {
       })]
     })
   }
-}), U(k, "NewCommand", class e extends B {
+}), U(B, "NewCommand", class e extends k {
   isSelectable() {
     return this.props.command.inputType !== E.ApplicationCommandInputType.PLACEHOLDER
   }
@@ -331,7 +331,7 @@ U(k, "Generic", class e extends B {
       isSelectable: o
     })
   }
-}), U(k, "Emoji", class e extends B {
+}), U(B, "Emoji", class e extends k {
   renderContent() {
     let {
       emoji: e,
@@ -364,7 +364,7 @@ U(k, "Generic", class e extends B {
   constructor(...e) {
     super(...e), U(this, "layoutClass", o()(P.autocompleteRowVertical, P.autocompleteRowVerticalSmall))
   }
-}), U(k, "GIFIntegration", class e extends B {
+}), U(B, "GIFIntegration", class e extends k {
   renderContent() {
     let {
       width: e,
@@ -381,7 +381,7 @@ U(k, "Generic", class e extends B {
   constructor(...e) {
     super(...e), U(this, "layoutClass", P.autocompleteRowHorizontal)
   }
-}), U(k, "Sticker", class e extends B {
+}), U(B, "Sticker", class e extends k {
   renderContent() {
     var e, t;
     let n;
@@ -413,10 +413,10 @@ U(k, "Generic", class e extends B {
   constructor(...e) {
     super(...e), U(this, "layoutClass", o()(P.autocompleteRowVertical, P.autocompleteRowVerticalSmall))
   }
-}), U(k, "EmojiUpsell", class e extends B {
+}), U(B, "EmojiUpsell", class e extends k {
   renderContent() {
     return (0, r.jsx)(h.default, {
       emojis: this.props.emojis
     })
   }
-}), t.default = k
+}), t.default = B

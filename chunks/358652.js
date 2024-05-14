@@ -7,12 +7,12 @@ var l, a, s, i, r = n("442837"),
   c = n("592125"),
   f = n("306680"),
   h = n("944486"),
-  p = n("55589");
-let m = [];
+  m = n("55589");
+let p = [];
 
 function C() {
-  let e = p.default.getPrivateChannelIds().filter(e => f.default.getMentionCount(e) > 0);
-  return e.length > 20 && (e.length = 20), !(0, d.areArraysShallowlyEqual)(e, m) && (m = e, !0)
+  let e = m.default.getPrivateChannelIds().filter(e => f.default.getMentionCount(e) > 0);
+  return e.length > 20 && (e.length = 20), !(0, d.areArraysShallowlyEqual)(e, p) && (p = e, !0)
 }
 
 function g() {
@@ -27,10 +27,10 @@ function E(e) {
 }
 class _ extends(l = r.default.Store) {
   initialize() {
-    this.waitFor(p.default, c.default, h.default, f.default)
+    this.waitFor(m.default, c.default, h.default, f.default)
   }
   getUnreadPrivateChannelIds() {
-    return m
+    return p
   }
 }
 i = "PrivateChannelReadStateStore", (s = "displayName") in(a = _) ? Object.defineProperty(a, s, {

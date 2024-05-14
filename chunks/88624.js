@@ -16,7 +16,7 @@ var a = s("735250"),
   m = s("981631"),
   _ = s("689938"),
   g = s("459056");
-class h extends n.PureComponent {
+class I extends n.PureComponent {
   renderIntroHeader() {
     let {
       houseMembership: e
@@ -67,4 +67,4 @@ t.default = r.default.connectStores([E.default, S.default], () => {
     isClaimed: e.isClaimed(),
     isVerified: e.verified
   }
-})(h)
+})(I)

@@ -18,14 +18,14 @@ var l = n("735250"),
   c = n("873546"),
   f = n("442837"),
   h = n("481060"),
-  p = n("493683"),
-  m = n("239091"),
+  m = n("493683"),
+  p = n("239091"),
   C = n("420660"),
   g = n("702321"),
   E = n("201895"),
   _ = n("43267"),
-  I = n("933557"),
-  S = n("353093"),
+  S = n("933557"),
+  I = n("353093"),
   N = n("979264"),
   T = n("853856"),
   A = n("93687"),
@@ -43,8 +43,8 @@ var l = n("735250"),
   G = n("28718"),
   U = n("733880"),
   w = n("465670"),
-  F = n("887208"),
-  B = n("709054"),
+  B = n("887208"),
+  F = n("709054"),
   H = n("998502"),
   V = n("788307"),
   k = n("960670"),
@@ -74,7 +74,7 @@ let z = H.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
       className: W.closeIcon
     })
   }),
-  Q = () => (0, l.jsx)(F.default, {
+  Q = () => (0, l.jsx)(B.default, {
     className: W.favoriteIcon
   });
 class q extends a.Component {
@@ -89,8 +89,8 @@ class q extends a.Component {
       children: o,
       locationState: d,
       onClick: f,
-      className: p,
-      role: m,
+      className: m,
+      role: p,
       "aria-posinset": C,
       "aria-setsize": g,
       ...E
@@ -98,9 +98,9 @@ class q extends a.Component {
     return (0, l.jsx)(U.default, {
       className: i()(W.channel, {
         [W.fullWidth]: c.isMobile
-      }, p),
+      }, m),
       onClick: f,
-      role: m,
+      role: p,
       focusProps: {
         within: !0,
         ...Z
@@ -147,24 +147,24 @@ function J(e) {
     status: O,
     isMobile: b,
     "aria-posinset": w,
-    "aria-setsize": F
-  } = e, [B, H] = a.useState(!1), q = a.useRef(null), J = a.useRef(null), {
+    "aria-setsize": B
+  } = e, [F, H] = a.useState(!1), q = a.useRef(null), J = a.useRef(null), {
     avatarSrc: $,
     avatarDecorationSrc: ee,
     eventHandlers: et
   } = (0, x.default)({
     user: c,
     size: h.AvatarSizes.SIZE_32,
-    animateOnHover: !(r || B)
-  }), en = (0, f.useStateFromStores)([D.default], () => D.default.isChannelMuted(t.getGuildId(), t.id)), el = (0, f.useStateFromStores)([y.default], () => y.default.getMentionCount(t.id) > 0), ea = (0, I.default)(t), es = (0, f.useStateFromStores)([T.default], () => T.default.isFavorite(t.id)), ei = () => {
+    animateOnHover: !(r || F)
+  }), en = (0, f.useStateFromStores)([D.default], () => D.default.isChannelMuted(t.getGuildId(), t.id)), el = (0, f.useStateFromStores)([y.default], () => y.default.getMentionCount(t.id) > 0), ea = (0, S.default)(t), es = (0, f.useStateFromStores)([T.default], () => T.default.isFavorite(t.id)), ei = () => {
     H(!0)
   }, er = () => {
     H(!1)
   }, eo = function(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    null != e && (e.preventDefault(), e.stopPropagation()), p.default.closePrivateChannel(t.id, r, n)
+    null != e && (e.preventDefault(), e.stopPropagation()), m.default.closePrivateChannel(t.id, r, n)
   }, eu = () => {
-    p.default.preload(Y.ME, t.id)
+    m.default.preload(Y.ME, t.id)
   }, ed = e => {
     e.stopPropagation()
   }, ec = e => {
@@ -173,7 +173,7 @@ function J(e) {
       null === (t = q.current) || void 0 === t || t.click()
     }
   }, ef = e => {
-    t.isMultiUserDM() ? (0, m.openContextMenuLazy)(e, async () => {
+    t.isMultiUserDM() ? (0, p.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("79695"), n.e("25421")]).then(n.bind(n, "354741"));
@@ -184,7 +184,7 @@ function J(e) {
       })
     }, {
       noBlurEvent: !0
-    }) : (0, m.openContextMenuLazy)(e, async () => {
+    }) : (0, p.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("56826")]).then(n.bind(n, "131404"));
@@ -213,7 +213,7 @@ function J(e) {
       onSubmit: eo,
       ...e
     }))
-  }, ep = () => {
+  }, em = () => {
     let e = {
       className: W.activity,
       textClassName: W.activityText,
@@ -231,11 +231,11 @@ function J(e) {
       ...e,
       activities: A,
       applicationStream: R,
-      animate: B,
+      animate: F,
       hideTooltip: !0,
       user: c
     }) : null
-  }, em = () => {
+  }, ep = () => {
     let e = h.AvatarSizes.SIZE_32;
     if (t.isMultiUserDM()) return t.recipients.length >= 2 && s && null == t.icon ? (0, l.jsx)(L.default, {
       "aria-hidden": !0,
@@ -266,10 +266,10 @@ function J(e) {
       "aria-label": c.username,
       statusTooltip: !0
     })
-  }, eC = t.isMultiUserDM(), eg = t.isSystemDM(), eE = (0, v.systemDMRedesignEnabled)(), e_ = !eC && !eg && t.type === Y.ChannelTypes.DM, eI = null == c ? void 0 : c.clan, eS = (0, S.getClanBadgeUrlFromClan)(eI), eN = e_ && null != eI ? (0, l.jsxs)(l.Fragment, {
+  }, eC = t.isMultiUserDM(), eg = t.isSystemDM(), eE = (0, v.systemDMRedesignEnabled)(), e_ = !eC && !eg && t.type === Y.ChannelTypes.DM, eS = null == c ? void 0 : c.clan, eI = (0, I.getClanBadgeUrlFromClan)(eS), eN = e_ && null != eS ? (0, l.jsxs)(l.Fragment, {
     children: [ea, (0, l.jsx)(N.BaseClanTagChiplet, {
-      clanTag: eI.tag,
-      clanBadge: eS,
+      clanTag: eS.tag,
+      clanBadge: eI,
       inline: !0
     })]
   }) : ea;
@@ -293,7 +293,7 @@ function J(e) {
         onMouseLeave: er,
         onMouseDown: eu,
         onContextMenu: ef,
-        "aria-setsize": F,
+        "aria-setsize": B,
         "aria-posinset": w,
         children: (0, l.jsxs)(h.Interactive, {
           className: i()(W.interactive, {
@@ -314,11 +314,11 @@ function J(e) {
             }),
             ...a,
             children: (0, l.jsx)(G.default, {
-              avatar: em(),
+              avatar: ep(),
               selected: r,
               highlighted: el,
               muted: null != en && en,
-              subText: ep(),
+              subText: em(),
               name: (0, l.jsx)(P.default, {
                 tooltipClassName: W.overflowTooltip,
                 children: eN
@@ -367,7 +367,7 @@ t.default = e => {
       isMobile: null != u && M.default.isMobileOnline(u)
     }
   }, [u, t, i]), c = (0, f.useStateFromStores)([b.default, O.default], () => {
-    if (t.isMultiUserDM()) return !!r && B.default.keys(O.default.getTypingUsers(t.id)).some(e => {
+    if (t.isMultiUserDM()) return !!r && F.default.keys(O.default.getTypingUsers(t.id)).some(e => {
       var t;
       return e !== (null === (t = b.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });

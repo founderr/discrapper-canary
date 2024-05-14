@@ -42,19 +42,19 @@ t.default = function(e) {
     showManualApprovalWarning: s,
     guild: T,
     showHeader: C
-  } = e, x = r.useCallback(e => {
+  } = e, _ = r.useCallback(e => {
     (0, m.openEmptyFormFieldModal)(e, t, T)
-  }, [t, T]), _ = r.useCallback(e => {
+  }, [t, T]), x = r.useCallback(e => {
     s ? (0, l.openModalLazy)(async () => {
       let {
         default: t
       } = await Promise.all([a.e("99387"), a.e("54845")]).then(a.bind(a, "199836"));
       return a => (0, n.jsx)(t, {
         ...a,
-        onSubmit: () => x(e)
+        onSubmit: () => _(e)
       })
-    }) : x(e)
-  }, [s, x]);
+    }) : _(e)
+  }, [s, _]);
   return (0, n.jsxs)("div", {
     className: i()(p.spacingContainer, p.backgroundContainer),
     children: [C && (0, n.jsx)("div", {
@@ -88,19 +88,19 @@ t.default = function(e) {
           addFormField: t,
           icon: u.default,
           text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
-          onClick: () => _(f.VerificationFormFieldTypes.TEXT_INPUT)
+          onClick: () => x(f.VerificationFormFieldTypes.TEXT_INPUT)
         }), (0, n.jsx)(E, {
           formFieldType: f.VerificationFormFieldTypes.PARAGRAPH,
           addFormField: t,
           icon: c.default,
           text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
-          onClick: () => _(f.VerificationFormFieldTypes.PARAGRAPH)
+          onClick: () => x(f.VerificationFormFieldTypes.PARAGRAPH)
         }), (0, n.jsx)(E, {
           formFieldType: f.VerificationFormFieldTypes.MULTIPLE_CHOICE,
           addFormField: t,
           icon: o.default,
           text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_MULTIPLE_CHOICE,
-          onClick: () => _(f.VerificationFormFieldTypes.MULTIPLE_CHOICE)
+          onClick: () => x(f.VerificationFormFieldTypes.MULTIPLE_CHOICE)
         })]
       })]
     })]

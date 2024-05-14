@@ -23,7 +23,7 @@ let S = "mweb_handoff_nonce",
 (a = s || (s = {})).NONCE_MISSING = "nonce_missing", a.NONCE_EXPIRED = "nonce_expired", a.NULL_HANDOFF_TOKEN = "deep_link_failed", a.HANDOFF_EXCHANGE = "handoff_exchange";
 let C = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
   O = new Set(["deep_link_failed"]),
-  L = () => {
+  v = () => {
     c.Storage.remove(S), c.Storage.remove(N)
   };
 t.default = () => {
@@ -40,24 +40,24 @@ t.default = () => {
       fingerprint: s
     })
   }, [s, e]);
-  let [p, v] = r.useState(null), M = r.useCallback(e => {
-    v(e), m.default.track(A.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
+  let [p, L] = r.useState(null), M = r.useCallback(e => {
+    L(e), m.default.track(A.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
       reason: e,
       fingerprint: (0, o.maybeExtractId)(a)
     }, {
       fingerprint: a
     })
-  }, [v, a]), x = c.Storage.get(S);
-  if ("null" === n && null === p && M("deep_link_failed"), null != n && "null" !== n && null == x && null === p && M("nonce_missing"), r.useEffect(() => {
-      if (null != x) {
+  }, [L, a]), b = c.Storage.get(S);
+  if ("null" === n && null === p && M("deep_link_failed"), null != n && "null" !== n && null == b && null === p && M("nonce_missing"), r.useEffect(() => {
+      if (null != b) {
         let e = c.Storage.get(N);
-        (null == e || Date.now() >= e) && (M("nonce_expired"), L())
+        (null == e || Date.now() >= e) && (M("nonce_expired"), v())
       }
-    }, [x, M]), r.useEffect(() => {
-      null != n && "null" !== n && null != x && null == p && d.HTTP.post({
+    }, [b, M]), r.useEffect(() => {
+      null != n && "null" !== n && null != b && null == p && d.HTTP.post({
         url: A.Endpoints.HANDOFF_EXCHANGE,
         body: {
-          key: x,
+          key: b,
           handoff_token: n
         }
       }).then(e => E.default.loginToken(e.body.token, !1)).then(() => {
@@ -72,10 +72,10 @@ t.default = () => {
       }).catch(() => {
         M("handoff_exchange")
       }).finally(() => {
-        L()
+        v()
       })
-    }, [n, x, p, a, M]), null == a) return null;
-  let y = (() => {
+    }, [n, b, p, a, M]), null == a) return null;
+  let x = (() => {
     if (null == p) return (0, i.jsxs)(i.Fragment, {
       children: [g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1, (0, i.jsx)("br", {}), g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2]
     });
@@ -87,13 +87,13 @@ t.default = () => {
     children: (0, i.jsx)(f.Text, {
       color: "interactive-normal",
       variant: "text-sm/semibold",
-      children: y
+      children: x
     })
   }) : (0, i.jsxs)("div", {
     className: I.container,
     children: [(0, i.jsx)(f.Text, {
       variant: "text-sm/semibold",
-      children: y
+      children: x
     }), (0, i.jsx)(f.Button, {
       look: f.Button.Looks.INVERTED,
       color: f.Button.Colors.BRAND_NEW,

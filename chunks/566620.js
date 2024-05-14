@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
     return b
   },
   fetchShelf: function() {
-    return B
+    return k
   },
   launchEmbeddedActivity: function() {
     return y
   },
   sendEmbeddedActivityInvite: function() {
-    return k
+    return B
   },
   sendEmbeddedActivityInviteUser: function() {
     return V
@@ -232,7 +232,7 @@ let w = (e, t, n) => {
   } = n;
   (i === e || null == i && null == e) && t()
 };
-async function B(e) {
+async function k(e) {
   var t, n, r, s;
   let {
     guildId: o,
@@ -300,7 +300,7 @@ async function B(e) {
     }
   }
 }
-async function k(e) {
+async function B(e) {
   let {
     activityChannelId: t,
     invitedChannelId: n,

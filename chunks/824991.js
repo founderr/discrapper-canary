@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return g
   },
   default: function() {
-    return I
+    return S
   }
 });
 var l = n("735250"),
@@ -27,21 +27,21 @@ var l = n("735250"),
   c = n("308083"),
   f = n("981631"),
   h = n("921944"),
-  p = n("689938"),
-  m = n("207030");
+  m = n("689938"),
+  p = n("207030");
 
 function C() {
   return (0, l.jsxs)("div", {
-    className: m.inviteContainer,
+    className: p.inviteContainer,
     children: [(0, l.jsx)(s.EnvelopeIcon, {
       color: "currentColor",
       height: 12,
       width: 12,
-      className: m.envelope
+      className: p.envelope
     }), (0, l.jsx)(i.Text, {
       variant: "text-xs/bold",
-      className: m.invite,
-      children: p.default.Messages.CLAN_UPSELL_INVITE
+      className: p.invite,
+      children: m.default.Messages.CLAN_UPSELL_INVITE
     })]
   })
 }
@@ -54,7 +54,7 @@ function g(e) {
     children: (0, l.jsx)(i.Heading, {
       variant: "heading-md/semibold",
       color: "header-primary",
-      className: m.title,
+      className: p.title,
       children: t
     })
   })
@@ -67,7 +67,7 @@ function E(e) {
   return (0, l.jsx)(i.Text, {
     variant: "text-xs/normal",
     color: "text-muted",
-    className: m.message,
+    className: p.message,
     children: t
   })
 }
@@ -81,17 +81,17 @@ function _(e) {
     look: i.ButtonLooks.FILLED,
     size: i.ButtonSizes.SMALL,
     color: i.ButtonColors.BRAND_NEW,
-    className: m.button,
+    className: p.button,
     onClick: t,
     children: (0, l.jsx)(i.Text, {
       variant: "text-sm/semibold",
       color: "always-white",
-      children: p.default.Messages.CHECK_IT_OUT
+      children: m.default.Messages.CHECK_IT_OUT
     })
   })
 }
 
-function I(e) {
+function S(e) {
   let {
     guild: t,
     markAsDismissed: n,
@@ -103,27 +103,27 @@ function I(e) {
       location: r.default.GUILD_CHANNEL_LIST
     })
   }, [t.id]);
-  let i = s === c.GENSHIN_ID ? p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : s === c.VALORANT_ID ? p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+  let i = s === c.GENSHIN_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : s === c.VALORANT_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
     C = a.useCallback(() => (0, l.jsx)(E, {
-      message: p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
+      message: m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
     }), []),
-    I = a.useCallback(() => (0, l.jsx)(g, {
+    S = a.useCallback(() => (0, l.jsx)(g, {
       title: i
     }), [i]),
-    S = a.useCallback(() => {
+    I = a.useCallback(() => {
       (0, d.trackClanAdminInviteClicked)({
         guildId: t.id,
         location: r.default.GUILD_CHANNEL_LIST
       }), (0, u.transitionTo)(f.Routes.GUILD_DISCOVERY)
     }, [t.id]),
     N = a.useCallback(() => (0, l.jsx)(_, {
-      onClick: S
-    }), [S]);
+      onClick: I
+    }), [I]);
   return (0, l.jsx)(o.default, {
-    className: m.notice,
+    className: p.notice,
     guild: t,
     onDismissed: () => n(h.ContentDismissActionType.DISMISS),
-    title: I,
+    title: S,
     message: C,
     cta: N,
     trackingSource: f.ChannelNoticeCtaSources.CLAN_ADMIN_UPSELL,

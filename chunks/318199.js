@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("578012"),
-  i = n("8853"),
-  l = n("663002"),
+  l = n("8853"),
+  i = n("663002"),
   r = n("2052"),
   o = n("410030"),
   u = n("100527"),
@@ -25,7 +25,7 @@ function _(e) {
   let {
     content: t,
     isPreview: n
-  } = e, a = i.PremiumMarketingComponentProperties.fromBinary((0, s.base64decode)(t));
+  } = e, a = l.PremiumMarketingComponentProperties.fromBinary((0, s.base64decode)(t));
   return "announcementModalVariant1" !== a.properties.oneofKind ? null : !n && (0 === a.properties.announcementModalVariant1.dismissKey.trim().length || (0, c.isDismissibleContentDismissed)(Number(a.properties.announcementModalVariant1.dismissKey))) ? null : (n && (a.properties.announcementModalVariant1.dismissKey = ""), a)
 }
 
@@ -36,13 +36,13 @@ function C(e) {
   } = e, {
     location: s
   } = (0, r.useAnalyticsContext)(), {
-    analyticsLocations: i
-  } = (0, d.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), c = (0, o.default)(), _ = (0, l.isThemeLight)(c);
+    analyticsLocations: l
+  } = (0, d.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), c = (0, o.default)(), _ = (0, i.isThemeLight)(c);
   if ("announcementModalVariant1" === n.properties.oneofKind) {
     let e = (0, E.adaptAnnouncementModalVariant1)({
       content: n.properties.announcementModalVariant1,
       renderModalProps: t,
-      analyticsLocations: i,
+      analyticsLocations: l,
       analyticsLocation: s,
       isLightTheme: _
     });

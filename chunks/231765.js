@@ -16,8 +16,8 @@ var a, n, l, i, r = s("735250"),
   m = s("206895"),
   _ = s("692437"),
   g = s("783539"),
-  h = s("585483"),
-  I = s("557177"),
+  I = s("585483"),
+  h = s("557177"),
   N = s("57562"),
   p = s("955204"),
   C = s("64078"),
@@ -396,7 +396,7 @@ function z(e) {
   let c = e => {
       if (e.enabled && !1 === a.enabled) {
         var t;
-        s(!0), (0, I.playSound)("poggermode_enabled"), h.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
+        s(!0), (0, h.playSound)("poggermode_enabled"), I.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
           duration: 2e3,
           intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : a.shakeIntensity
         })
@@ -411,7 +411,7 @@ function z(e) {
       let l = d(a.screenshakeEnabled, e.screenshakeEnabled, a.enabled, e.enabled);
       if (1 === t && l) {
         var r;
-        h.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
+        I.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
           duration: 1e3,
           intensity: null !== (r = e.shakeIntensity) && void 0 !== r ? r : a.shakeIntensity
         })

@@ -34,9 +34,9 @@ var i = n("278074"),
   b = n("351780"),
   G = n("79390"),
   w = n("643266"),
-  B = n("617136");
+  k = n("617136");
 n("807092");
-var k = n("869765"),
+var B = n("869765"),
   V = n("926491"),
   x = n("467798"),
   F = n("346479"),
@@ -629,8 +629,8 @@ let eh = {
           poll: g
         } = n,
         L = null !== (i = n.flags) && void 0 !== i ? i : 0,
-        [P, k] = (0, x.default)(l);
-      if (P && (l = k, L = (0, ei.addFlag)(L, eu.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == S && null == m && null == g) return Promise.resolve();
+        [P, B] = (0, x.default)(l);
+      if (P && (l = B, L = (0, ei.addFlag)(L, eu.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == S && null == m && null == g) return Promise.resolve();
       let F = null != C ? eu.MessageTypes.REPLY : eu.MessageTypes.DEFAULT,
         H = null !== (a = n.nonce) && void 0 !== a ? a : (0, M.createNonce)();
       if (!1 !== n.eagerDispatch) {
@@ -771,7 +771,7 @@ let eh = {
                 else if (t === T.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
                 else if (t === T.CodedLinkType.GUILD_PRODUCT);
                 else if (t === T.CodedLinkType.SERVER_SHOP);
-                else if (t === T.CodedLinkType.QUESTS_EMBED)(0, B.trackQuestEvent)({
+                else if (t === T.CodedLinkType.QUESTS_EMBED)(0, k.trackQuestEvent)({
                   questId: l,
                   event: eu.AnalyticEvents.QUEST_LINK_SHARED,
                   trackGuildAndChannelMetadata: !0
@@ -872,8 +872,8 @@ let eh = {
       let r = function(e, t) {
           let n = z.default.getMessage(e, t);
           if (null == n || n.type !== eu.MessageTypes.REPLY) return;
-          let i = k.default.getMessageByReference(n.messageReference);
-          if (i.state === k.ReferencedMessageState.LOADED) {
+          let i = B.default.getMessageByReference(n.messageReference);
+          if (i.state === B.ReferencedMessageState.LOADED) {
             if (!n.mentions.includes(i.message.author.id)) return {
               parse: Object.values(eu.AllowedMentionTypes),
               replied_user: !1

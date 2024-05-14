@@ -1,104 +1,104 @@
 "use strict";
 n.r(t), n("47120"), n("724458");
-var a, l, s, i, r = n("392711"),
-  o = n.n(r),
+var i, r, a, s, o = n("392711"),
+  l = n.n(o),
   u = n("442837"),
   d = n("570140"),
-  c = n("872810"),
-  f = n("569545"),
-  h = n("70722");
-let m = {},
-  p = {},
-  E = new Set;
+  _ = n("872810"),
+  c = n("569545"),
+  E = n("70722");
+let I = {},
+  T = {},
+  f = new Set;
 
-function C() {
-  m = {}, p = {}
+function S() {
+  I = {}, T = {}
 }
-class g extends(a = u.default.Store) {
+class h extends(i = u.default.Store) {
   getPreviewURL(e, t, n) {
-    let a = (0, f.encodeStreamKey)({
-        streamType: null != e ? h.StreamTypes.GUILD : h.StreamTypes.CALL,
+    let i = (0, c.encodeStreamKey)({
+        streamType: null != e ? E.StreamTypes.GUILD : E.StreamTypes.CALL,
         guildId: e,
         channelId: t,
         ownerId: n
       }),
-      l = m[a];
-    return null == l || Date.now() > l.expires ? (!E.has(a) && (E.add(a), Promise.resolve().then(() => {
-      (0, c.fetchStreamPreview)(e, t, n)
-    })), null) : l.url
+      r = I[i];
+    return null == r || Date.now() > r.expires ? (!f.has(i) && (f.add(i), Promise.resolve().then(() => {
+      (0, _.fetchStreamPreview)(e, t, n)
+    })), null) : r.url
   }
   getPreviewURLForStreamKey(e) {
     let {
       guildId: t,
       channelId: n,
-      ownerId: a
-    } = (0, f.decodeStreamKey)(e);
-    return this.getPreviewURL(t, n, a)
+      ownerId: i
+    } = (0, c.decodeStreamKey)(e);
+    return this.getPreviewURL(t, n, i)
   }
   getIsPreviewLoading(e, t, n) {
-    let a = (0, f.encodeStreamKey)({
-      streamType: null != e ? h.StreamTypes.GUILD : h.StreamTypes.CALL,
+    let i = (0, c.encodeStreamKey)({
+      streamType: null != e ? E.StreamTypes.GUILD : E.StreamTypes.CALL,
       guildId: e,
       channelId: t,
       ownerId: n
     });
-    return E.has(a)
+    return f.has(i)
   }
 }
-i = "ApplicationStreamPreviewStore", (s = "displayName") in(l = g) ? Object.defineProperty(l, s, {
-  value: i,
+s = "ApplicationStreamPreviewStore", (a = "displayName") in(r = h) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[s] = i, t.default = new g(d.default, {
-  CONNECTION_OPEN: C,
-  LOGOUT: C,
+}) : r[a] = s, t.default = new h(d.default, {
+  CONNECTION_OPEN: S,
+  LOGOUT: S,
   STREAM_PREVIEW_FETCH_START: function(e) {
     var t;
     let {
       streamKey: n
     } = e;
-    p[n] = (null !== (t = p[n]) && void 0 !== t ? t : 0) + 1, E.add(n)
+    T[n] = (null !== (t = T[n]) && void 0 !== t ? t : 0) + 1, f.add(n)
   },
   STREAM_PREVIEW_FETCH_SUCCESS: function(e) {
     let {
       streamKey: t,
       previewURL: n
     } = e;
-    m[t] = {
+    I[t] = {
       url: n,
       expires: Date.now() + 12e4
-    }, p[t] = 0, E.delete(t)
+    }, T[t] = 0, f.delete(t)
   },
   STREAM_PREVIEW_FETCH_FAIL: function(e) {
     let {
       streamKey: t,
       retryAfter: n
     } = e;
-    m[t] = {
+    I[t] = {
       url: null,
-      expires: Date.now() + (null != n ? n : 1e4 * p[t])
-    }, E.delete(t)
+      expires: Date.now() + (null != n ? n : 1e4 * T[t])
+    }, f.delete(t)
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
     } = e;
-    return !(o().isEmpty(m) && o().isEmpty(p)) && t.reduce((e, t) => {
+    return !(l().isEmpty(I) && l().isEmpty(T)) && t.reduce((e, t) => {
       let {
         userId: n,
-        guildId: a,
-        channelId: l,
-        selfStream: s
+        guildId: i,
+        channelId: r,
+        selfStream: a
       } = t;
-      if (s) return e;
-      let i = (0, f.encodeStreamKey)({
-        streamType: null != a ? h.StreamTypes.GUILD : h.StreamTypes.CALL,
-        guildId: a,
-        channelId: l,
+      if (a) return e;
+      let s = (0, c.encodeStreamKey)({
+        streamType: null != i ? E.StreamTypes.GUILD : E.StreamTypes.CALL,
+        guildId: i,
+        channelId: r,
         ownerId: n
       });
-      return delete m[i], delete p[i], !0
+      return delete I[s], delete T[s], !0
     }, !1)
   }
 })

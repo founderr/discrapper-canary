@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("685626"),
-  l = n("143927"),
+  l = n("685626"),
+  i = n("143927"),
   r = n("442837"),
   o = n("481060"),
   u = n("607070"),
@@ -25,15 +25,15 @@ function p(e) {
   let {
     currentStep: t,
     selectedGame: n
-  } = e, i = (0, _.useDiscoveryGameApplicationId)({
+  } = e, l = (0, _.useDiscoveryGameApplicationId)({
     selectedGame: n
-  }), r = (0, h.useClanDiscoveryUIStore)(e => e.selectedGames, l.default), u = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedGames, l.default), f = s.useMemo(() => new Set(r), [r]), S = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, l.default), p = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, l.default), I = (0, h.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default), T = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedTraits, l.default), A = s.useMemo(() => new Set(I), [I]), N = s.useCallback(e => u(Array.from(e)), [u]), v = s.useCallback(e => p(e), [p]), R = s.useCallback(e => T([...e]), [T]), L = s.useCallback(() => {
+  }), r = (0, h.useClanDiscoveryUIStore)(e => e.selectedGames, i.default), u = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedGames, i.default), f = s.useMemo(() => new Set(r), [r]), S = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, i.default), p = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, i.default), I = (0, h.useClanDiscoveryUIStore)(e => e.selectedTraits, i.default), T = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedTraits, i.default), A = s.useMemo(() => new Set(I), [I]), N = s.useCallback(e => u(Array.from(e)), [u]), v = s.useCallback(e => p(e), [p]), R = s.useCallback(e => T([...e]), [T]), L = s.useCallback(() => {
     switch (t) {
       case 0:
         return (0, a.jsx)(d.default, {
           title: C.default.Messages.CLAN_DISCOVERY_GAME_TITLE,
           description: C.default.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
-          requiredGameId: i,
+          requiredGameId: l,
           handleUpdate: N,
           gameApplicationIds: f
         });
@@ -50,11 +50,11 @@ function p(e) {
           description: C.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
           handleUpdate: R,
           interests: A,
-          requiredGameId: i,
+          requiredGameId: l,
           hidePreview: !0
         })
     }
-  }, [t, i, N, f, v, S, R, A]);
+  }, [t, l, N, f, v, S, R, A]);
   return (0, a.jsx)(o.Sequencer, {
     step: t,
     steps: g,
@@ -78,7 +78,7 @@ t.default = s.memo(function(e) {
   let {
     selectedGame: t,
     setScreen: n
-  } = e, o = s.useRef(null), d = s.useRef(null), c = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [E, _] = s.useState(0), [g, I] = s.useState(0), T = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, l.default), A = (0, h.useClanDiscoveryUIStore)(e => e.previousMode, l.default), N = s.useCallback(e => {
+  } = e, o = s.useRef(null), d = s.useRef(null), c = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [E, _] = s.useState(0), [g, I] = s.useState(0), T = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, i.default), A = (0, h.useClanDiscoveryUIStore)(e => e.previousMode, i.default), N = s.useCallback(e => {
     _(e), g < e && I(e)
   }, [g]), v = s.useCallback(() => {
     0 === E ? (n(h.ClanDiscoveryUserScreens.USER_UPSELL), (0, h.setClanDiscoveryMode)(A)) : N(E - 1)
@@ -93,7 +93,7 @@ t.default = s.memo(function(e) {
   }, {
     index: 2,
     name: C.default.Messages.CLAN_SETUP_UTILITY_TRAITS_STEP
-  }], []), y = (0, i.useSpring)({
+  }], []), M = (0, l.useSpring)({
     ref: o,
     from: {
       opacity: 0
@@ -102,7 +102,7 @@ t.default = s.memo(function(e) {
       opacity: 1
     },
     config: S
-  }), M = (0, i.useSpring)({
+  }), y = (0, l.useSpring)({
     ref: d,
     from: {
       opacity: 0,
@@ -114,17 +114,17 @@ t.default = s.memo(function(e) {
     },
     config: S
   });
-  return (0, i.useChain)([o, d], [0, .2]), (0, a.jsxs)(i.animated.div, {
+  return (0, l.useChain)([o, d], [0, .2]), (0, a.jsxs)(l.animated.div, {
     className: m.container,
-    style: y,
-    children: [(0, a.jsx)(i.animated.div, {
+    style: M,
+    children: [(0, a.jsx)(l.animated.div, {
       className: m.sequencer,
-      style: M,
+      style: y,
       children: (0, a.jsx)(p, {
         currentStep: E,
         selectedGame: t
       })
-    }), (0, a.jsxs)(i.animated.div, {
+    }), (0, a.jsxs)(l.animated.div, {
       className: m.footer,
       children: [(0, a.jsx)(f.ClanSetupProgress, {
         currentStepIndex: E,

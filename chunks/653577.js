@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("454585"),
   f = n("514342"),
   h = n("586791"),
-  p = n("626135"),
-  m = n("981631"),
+  m = n("626135"),
+  p = n("981631"),
   C = n("689938"),
   g = n("965752"),
   E = n("946278");
@@ -27,12 +27,12 @@ function _(e) {
     connected: n,
     hovered: s,
     subtitle: _,
-    onClick: I,
-    enableHangStatus: S,
+    onClick: S,
+    enableHangStatus: I,
     allowChannelTopic: N
-  } = e, T = (0, r.useStateFromStores)([d.default], () => d.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, u.default)(t, !0), v = (!S || !!N) && L, x = null != _ && _.length > 0;
+  } = e, T = (0, r.useStateFromStores)([d.default], () => d.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, u.default)(t, !0), v = (!I || !!N) && L, x = null != _ && _.length > 0;
   a.useEffect(() => {
-    A && p.default.track(m.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
+    A && m.default.track(p.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
       guild_id: t.guild_id,
       channel_id: t.id
     })
@@ -42,7 +42,7 @@ function _(e) {
   let M = i()(g.statusDiv, n && v ? g.hoverable : null);
   if (A) return (0, l.jsx)(o.Clickable, {
     className: M,
-    onClick: v ? I : void 0,
+    onClick: v ? S : void 0,
     children: (0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: i()(g.statusText, E.markup),
@@ -55,7 +55,7 @@ function _(e) {
   });
   if (n && v && (!x || s)) return (0, l.jsxs)(o.Clickable, {
     className: M,
-    onClick: I,
+    onClick: S,
     children: [(0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: g.statusText,

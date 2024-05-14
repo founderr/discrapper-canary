@@ -1,27 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   doGuildOnboardingForPostAuthInvite: function() {
-    return l
+    return i
   }
 });
 var a = n("447543"),
   s = n("652898"),
-  i = n("430824");
-async function l(e) {
+  l = n("430824");
+async function i(e) {
   let {
     code: t
-  } = e, l = (await (0, s.default)(t)).invite;
-  if (null == l || null == l.guild) return;
+  } = e, i = (await (0, s.default)(t)).invite;
+  if (null == i || null == i.guild) return;
   if (await
     function() {
       return new Promise(e => {
-        i.default.addConditionalChangeListener(() => !i.default.isLoaded() || (e(), !1))
+        l.default.addConditionalChangeListener(() => !l.default.isLoaded() || (e(), !1))
       })
-    }(), null == i.default.getGuild(l.guild.id)) return;
+    }(), null == l.default.getGuild(i.guild.id)) return;
   let {
     default: r
   } = await Promise.resolve().then(n.bind(n, "17181"));
   await r({
-    guildId: l.guild.id
-  }), a.default.transitionToInvite(l)
+    guildId: i.guild.id
+  }), a.default.transitionToInvite(i)
 }

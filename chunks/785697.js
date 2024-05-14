@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var a = n("442837"),
   s = n("818083"),
-  i = n("496675"),
-  l = n("981631");
+  l = n("496675"),
+  i = n("981631");
 let r = (0, s.createExperiment)({
   kind: "guild",
   id: "2022-11_default_disable_mass_mention",
@@ -38,16 +38,16 @@ function o(e) {
 
 function u(e) {
   var t;
-  let n = (0, a.useStateFromStores)([i.default], () => i.default.can(l.Permissions.MANAGE_GUILD, e)),
+  let n = (0, a.useStateFromStores)([l.default], () => l.default.can(i.Permissions.MANAGE_GUILD, e)),
     {
       enabled: s
     } = r.useExperiment({
-      guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : l.EMPTY_STRING_SNOWFLAKE_ID,
+      guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : i.EMPTY_STRING_SNOWFLAKE_ID,
       location: "dd4beb_3"
     }, {
       autoTrackExposure: !0
     });
   if (null == e) return !1;
-  let o = e.hasFeature(l.GuildFeatures.COMMUNITY);
+  let o = e.hasFeature(i.GuildFeatures.COMMUNITY);
   return n && o && s
 }

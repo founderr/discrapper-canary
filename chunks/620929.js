@@ -92,8 +92,8 @@ t.default = e => {
     playstyle: x,
     interests: M,
     tag: R,
-    badgeKind: y,
-    badgePrimaryColor: L,
+    badgeKind: L,
+    badgePrimaryColor: y,
     badgeSecondaryColor: O
   } = (0, d.useStateFromStoresObject)([m.default], () => {
     var e;
@@ -115,8 +115,8 @@ t.default = e => {
         className: A.overviewSidebarContent,
         children: [(0, a.jsx)(N, {
           tag: R,
-          badge: y,
-          primaryColor: null != L ? L : _.CLAN_BADGE_PRIMARY_DEFAULT,
+          badge: L,
+          primaryColor: null != y ? y : _.CLAN_BADGE_PRIMARY_DEFAULT,
           secondaryColor: null != O ? O : _.CLAN_BADGE_SECONDARY_DEFAULT
         }), (0, a.jsx)(c.Heading, {
           variant: "heading-xl/normal",

@@ -38,8 +38,8 @@ var i = n("735250"),
   b = n("940627"),
   G = n("705600"),
   w = n("305878"),
-  B = n("119828"),
-  k = n("737688"),
+  k = n("119828"),
+  B = n("737688"),
   V = n("242315"),
   x = n("507893"),
   F = n("944581"),
@@ -201,7 +201,7 @@ function en(e) {
     }), (0, i.jsx)(et, {
       onClick: R,
       inCall: O
-    }), I === Z.CardCategory.GAMING ? (0, i.jsx)(k.default, {
+    }), I === Z.CardCategory.GAMING ? (0, i.jsx)(B.default, {
       width: 12,
       height: 12,
       className: s()(J.cardIcon, J.cardTypeIcon)
@@ -243,7 +243,7 @@ function ei(e) {
     width: 24,
     height: 24,
     className: J.cardImageIcon
-  }) : I ? (0, i.jsx)(B.default, {
+  }) : I ? (0, i.jsx)(k.default, {
     width: 24,
     height: 24,
     className: J.cardImageIcon

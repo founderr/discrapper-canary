@@ -11,19 +11,19 @@ var l = n("735250"),
   c = n("319643"),
   f = n("481060"),
   h = n("210887"),
-  p = n("19780"),
-  m = n("72416"),
+  m = n("19780"),
+  p = n("72416"),
   C = n("476221"),
   g = n("236756"),
   E = n("981631"),
   _ = n("854903");
-let I = {
+let S = {
     [E.RTCConnectionQuality.UNKNOWN]: f.Tooltip.Colors.BLACK,
     [E.RTCConnectionQuality.BAD]: f.Tooltip.Colors.RED,
     [E.RTCConnectionQuality.AVERAGE]: f.Tooltip.Colors.YELLOW,
     [E.RTCConnectionQuality.FINE]: f.Tooltip.Colors.GREEN
   },
-  S = {
+  I = {
     [E.ConnectionStatus.CONNECTED]: _.rtcConnectionStatusConnected,
     [E.ConnectionStatus.CONNECTING]: _.rtcConnectionStatusConnecting,
     [E.ConnectionStatus.ERROR]: _.rtcConnectionStatusError
@@ -34,14 +34,14 @@ let I = {
     [E.RTCConnectionQuality.BAD]: _.rtcConnectionQualityBad,
     [E.RTCConnectionQuality.UNKNOWN]: null
   },
-  T = r.default.connectStores([p.default, h.default], () => ({
+  T = r.default.connectStores([m.default, h.default], () => ({
     theme: h.default.theme,
-    connectionState: p.default.getState(),
-    hostname: p.default.getHostname(),
-    averagePing: p.default.getAveragePing(),
-    lastPing: p.default.getLastPing(),
-    outboundLossRate: p.default.getOutboundLossRate(),
-    pings: p.default.getPings()
+    connectionState: m.default.getState(),
+    hostname: m.default.getHostname(),
+    averagePing: m.default.getAveragePing(),
+    lastPing: m.default.getLastPing(),
+    outboundLossRate: m.default.getOutboundLossRate(),
+    pings: m.default.getPings()
   }))(g.default);
 class A extends a.PureComponent {
   renderPopoutTarget(e) {
@@ -67,7 +67,7 @@ class A extends a.PureComponent {
       return (0, l.jsx)(f.Button, {
         look: f.Button.Looks.BLANK,
         size: f.Button.Sizes.NONE,
-        className: i()(e, S[a]),
+        className: i()(e, I[a]),
         onClick: n,
         children: s
       })
@@ -85,7 +85,7 @@ class A extends a.PureComponent {
     } = this.props;
     return s === E.RTCConnectionStates.RTC_CONNECTED && (e = (0, l.jsx)(f.Tooltip, {
       text: t !== E.RTCConnectionQuality.UNKNOWN && null != a ? "".concat(a.toFixed(0), " ms") : null,
-      color: I[t],
+      color: S[t],
       children: e => (0, l.jsx)(L, {
         quality: t,
         smallPing: n,
@@ -120,7 +120,7 @@ function L(e) {
     smallPing: n,
     ...a
   } = e;
-  if (!(0, f.useRedesignIconContext)().enabled) return (0, l.jsx)(m.default, {
+  if (!(0, f.useRedesignIconContext)().enabled) return (0, l.jsx)(p.default, {
     className: i()(_.ping, {
       [_.smallPing]: n
     }),

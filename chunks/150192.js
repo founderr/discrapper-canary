@@ -19,7 +19,7 @@ let p = null,
   E = [],
   T = [],
   C = {};
-class x extends(n = c.default.Store) {
+class _ extends(n = c.default.Store) {
   getPrimaryCategories() {
     return E
   }
@@ -47,12 +47,12 @@ class x extends(n = c.default.Store) {
     return e === f.DISCOVERY_ALL_CATEGORIES_ID ? m.default.Messages.HOME : C[e]
   }
 }
-i = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = x) ? Object.defineProperty(r, s, {
+i = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = _) ? Object.defineProperty(r, s, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = i, t.default = new x(d.default, {
+}) : r[s] = i, t.default = new _(d.default, {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
     let t, {
         categories: a,

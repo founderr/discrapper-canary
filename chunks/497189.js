@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("685626"),
   o = n("143927"),
   u = n("903788"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("207796"),
   L = n("316553"),
   O = n("273254"),
-  y = n("559469"),
-  M = n("308083"),
+  M = n("559469"),
+  y = n("308083"),
   P = n("689938"),
   x = n("18712"),
   D = n("345480"),
@@ -83,7 +83,7 @@ function k(e) {
   let {
     selectedGuildId: t,
     setSelectedGuildId: n,
-    eligibleGuilds: i,
+    eligibleGuilds: l,
     selectedGame: r,
     onButtonClick: f,
     buttonText: _,
@@ -95,16 +95,16 @@ function k(e) {
       case R.ClanDiscoveryGame.VALORANT:
         return P.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_VALORANT
     }
-  }, [r]), I = s.useMemo(() => i.map(e => ({
+  }, [r]), I = s.useMemo(() => l.map(e => ({
     value: e.id,
     label: e.name
-  })), [i]), {
+  })), [l]), {
     enableApplication: T
   } = (0, g.useClanPrePilotApplicationExperiment)("discovery"), A = s.useCallback(() => {
     (0, R.setClanDiscoveryMode)(R.ClanDiscoveryMode.DISCOVERY)
   }, []), N = s.useCallback(() => {
     (0, R.setClanDiscoveryMode)(R.ClanDiscoveryMode.GET_STARTED), m(R.ClanDiscoveryUserScreens.USER_ONBOARDING)
-  }, [m]), v = !S && T, L = i.length > 1;
+  }, [m]), v = !S && T, L = l.length > 1;
   return (0, a.jsxs)(a.Fragment, {
     children: [C ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.Heading, {
@@ -146,7 +146,7 @@ function k(e) {
         look: h.ButtonLooks.FILLED,
         size: h.ButtonSizes.LARGE,
         color: h.ButtonColors.BRAND,
-        className: l()(x.reserveButton, {
+        className: i()(x.reserveButton, {
           [x.buttonWithSelect]: L
         }),
         onClick: f,
@@ -185,26 +185,26 @@ t.default = s.memo(function(e) {
   let {
     eligibleGuilds: t,
     eligibleGuildsIncludingConverted: n,
-    selectedGame: i
-  } = e, l = 0 === t.length, [o, u] = s.useState(() => {
+    selectedGame: l
+  } = e, i = 0 === t.length, [o, u] = s.useState(() => {
     let e = new Set(I.default.getGuildIds());
     for (let n of t)
       if (e.has(n.id)) return n.id;
-    return l ? n[0].id : t[0].id
+    return i ? n[0].id : t[0].id
   });
   s.useEffect(() => {
-    !l && (0, p.trackClanAdminInviteViewed)({
+    !i && (0, p.trackClanAdminInviteViewed)({
       guildId: o,
       location: m.default.CLAN_DISCOVERY
     })
-  }, [l, o]);
+  }, [i, o]);
   let d = (0, f.useStateFromStores)([A.default], () => A.default.getGuild(o)),
     c = (0, f.useStateFromStores)([I.default], () => null != o ? I.default.getStateForGuild(o).progress : null),
     E = (0, L.useDiscoveryGameApplicationId)({
-      selectedGame: i
+      selectedGame: l
     }),
     g = s.useCallback(() => {
-      !l && ((0, p.trackClanAdminInviteClicked)({
+      !i && ((0, p.trackClanAdminInviteClicked)({
         guildId: o,
         location: m.default.CLAN_DISCOVERY
       }), (0, N.openFullScreenLayer)(e => {
@@ -217,13 +217,13 @@ t.default = s.memo(function(e) {
           gameId: E
         })
       }, {
-        layerKey: M.CLAN_SETUP_MODAL_LAYER_KEY
+        layerKey: y.CLAN_SETUP_MODAL_LAYER_KEY
       }))
-    }, [l, o, E]),
+    }, [i, o, E]),
     R = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion),
     D = (0, O.useFakeDiscoveryClanForGuild)({
       guild: d,
-      selectedGame: i
+      selectedGame: l
     }),
     b = (0, r.useSpring)({
       from: {
@@ -261,7 +261,7 @@ t.default = s.memo(function(e) {
       config: U,
       delay: 400
     }),
-    F = (0, r.useSpring)({
+    B = (0, r.useSpring)({
       from: R ? {
         transform: "translate(0px, 0px) rotate(0deg) scale(1)"
       } : {
@@ -273,7 +273,7 @@ t.default = s.memo(function(e) {
       config: U,
       delay: 400
     }),
-    B = (0, r.useSpring)({
+    F = (0, r.useSpring)({
       from: R ? {
         transform: "translate(0px, 0px) rotate(0deg) scale(1)"
       } : {
@@ -332,7 +332,7 @@ t.default = s.memo(function(e) {
           ...b
         },
         children: (0, a.jsx)(v.ClanDiscoveryCardView, {
-          clan: y.FAKE_DISCOVERY_UPSELL_CLANS["0"],
+          clan: M.FAKE_DISCOVERY_UPSELL_CLANS["0"],
           className: x.clanCardOuterLeft
         })
       }), (0, a.jsx)(r.animated.div, {
@@ -342,7 +342,7 @@ t.default = s.memo(function(e) {
           ...b
         },
         children: (0, a.jsx)(v.ClanDiscoveryCardView, {
-          clan: y.FAKE_DISCOVERY_UPSELL_CLANS["1"],
+          clan: M.FAKE_DISCOVERY_UPSELL_CLANS["1"],
           className: x.clanCardInnerLeft
         })
       }), null != D && (0, a.jsx)(r.animated.div, {
@@ -363,21 +363,21 @@ t.default = s.memo(function(e) {
       }), (0, a.jsx)(r.animated.div, {
         className: x.clanCardInnerContainer,
         style: {
-          ...F,
+          ...B,
           ...b
         },
         children: (0, a.jsx)(v.ClanDiscoveryCardView, {
-          clan: y.FAKE_DISCOVERY_UPSELL_CLANS["2"],
+          clan: M.FAKE_DISCOVERY_UPSELL_CLANS["2"],
           className: x.clanCardInnerRight
         })
       }), (0, a.jsx)(r.animated.div, {
         className: x.clanCardOuterContainer,
         style: {
-          ...B,
+          ...F,
           ...b
         },
         children: (0, a.jsx)(v.ClanDiscoveryCardView, {
-          clan: y.FAKE_DISCOVERY_UPSELL_CLANS["3"],
+          clan: M.FAKE_DISCOVERY_UPSELL_CLANS["3"],
           className: x.clanCardOuterRight
         })
       })]
@@ -387,10 +387,10 @@ t.default = s.memo(function(e) {
         selectedGuildId: o,
         setSelectedGuildId: u,
         eligibleGuilds: t,
-        selectedGame: i,
+        selectedGame: l,
         onButtonClick: g,
         buttonText: Y,
-        hasCompletedUpsell: l
+        hasCompletedUpsell: i
       })
     }), (0, a.jsx)("div", {
       className: x.joinWFSContainer,

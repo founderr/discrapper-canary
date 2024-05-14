@@ -31,14 +31,14 @@ t.default = () => {
     fetchPolicy: "cache-and-network"
   }), s = (0, d.useExpiredQuestsMap)(), g = (0, o.useIsEligibleForConcurrentQuests)({
     location: E.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
-  }), h = n.useMemo(() => e.filter(e => {
+  }), I = n.useMemo(() => e.filter(e => {
     var t, a;
     let n = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return !(null !== (a = s.get(e.id)) && void 0 !== a && a) || n
-  }), [e, s]), I = n.useMemo(() => new Map(h.map(e => [e.id, e])), [h]), N = n.useRef(!1), p = n.useRef([]), C = n.useMemo(() => {
-    if (0 === h.length) return [];
+  }), [e, s]), h = n.useMemo(() => new Map(I.map(e => [e.id, e])), [I]), N = n.useRef(!1), p = n.useRef([]), C = n.useMemo(() => {
+    if (0 === I.length) return [];
     if (N.current) return p.current;
-    let e = h.sort((e, t) => {
+    let e = I.sort((e, t) => {
       var s, a, n, l, i, r;
       let o = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
         d = (null === (a = e.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
@@ -61,28 +61,28 @@ t.default = () => {
       if (m) return -1;
       if (_) return 1;
       let g = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
-        h = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
-      if (g && !T && !o && h && !f && !S) return 0;
+        I = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
+      if (g && !T && !o && I && !f && !S) return 0;
       if (g && !T && !o) return -1;
-      if (h && !f && !S) return 1;
-      let I = o && d,
+      if (I && !f && !S) return 1;
+      let h = o && d,
         N = S && E;
-      return I && !N ? 1 : !I && N ? -1 : 0
+      return h && !N ? 1 : !h && N ? -1 : 0
     }).map(e => e.id);
     return N.current = !0, p.current = e, e
-  }, [h]), A = n.useRef(null), O = n.useMemo(() => {
+  }, [I]), A = n.useRef(null), O = n.useMemo(() => {
     if (null != A.current) return A.current;
     let e = g ? [{
       location: u.QuestContent.GIFT_INVENTORY_FOR_YOU,
       title: f.default.Messages.QUESTS_FOR_YOU,
-      questIds: C.filter(e => _(I.get(e)))
+      questIds: C.filter(e => _(h.get(e)))
     }, {
       location: u.QuestContent.GIFT_INVENTORY_OTHER,
       title: f.default.Messages.QUESTS_OTHER,
-      questIds: C.filter(e => !_(I.get(e)))
+      questIds: C.filter(e => !_(h.get(e)))
     }] : [];
     return A.current = e, e
-  }, [g, C, I]), x = O.every(e => {
+  }, [g, C, h]), x = O.every(e => {
     let {
       questIds: t
     } = e;
@@ -99,7 +99,7 @@ t.default = () => {
     } = e;
     return (0, a.jsx)(a.Fragment, {
       children: t.map((e, t) => {
-        let l = I.get(e);
+        let l = h.get(e);
         return null == l ? null : (0, a.jsx)(S.QuestsCard, {
           quest: l,
           location: s,
@@ -108,7 +108,7 @@ t.default = () => {
         }, l.id)
       })
     })
-  }, [x, I]);
+  }, [x, h]);
   return t ? (0, a.jsx)(i.Spinner, {
     className: m.spinner
   }) : 0 === C.length ? null : (0, a.jsx)(i.FormSection, {

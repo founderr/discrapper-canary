@@ -13,10 +13,10 @@ let d = {
   f = {},
   h = new Set;
 
-function p() {
+function m() {
   for (let e in c = null, f) delete f[e]
 }
-class m extends(l = r.default.Store) {
+class p extends(l = r.default.Store) {
   getActiveUserSignUp() {
     return c
   }
@@ -28,12 +28,12 @@ class m extends(l = r.default.Store) {
     return h.has(e)
   }
 }
-i = "SignUpStore", (s = "displayName") in(a = m) ? Object.defineProperty(a, s, {
+i = "SignUpStore", (s = "displayName") in(a = p) ? Object.defineProperty(a, s, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = i, t.default = new m(o.default, {
+}) : a[s] = i, t.default = new p(o.default, {
   ENABLE_USER_SIGN_UP: function(e) {
     let {
       key: t
@@ -51,7 +51,7 @@ i = "SignUpStore", (s = "displayName") in(a = m) ? Object.defineProperty(a, s, {
     let {
       targetKey: t
     } = e;
-    h.add(t), p()
+    h.add(t), m()
   },
-  DISMISS_SIGN_UP: p
+  DISMISS_SIGN_UP: m
 })

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("392711"),
-  l = n.n(i),
+  l = n("392711"),
+  i = n.n(l),
   r = n("442837"),
   o = n("46973"),
   u = n("846519"),
@@ -43,8 +43,8 @@ class g extends s.PureComponent {
       inputVolume: n,
       outputDeviceName: a,
       outputVolume: s,
-      inputMode: i,
-      vadAutoThreshold: l,
+      inputMode: l,
+      vadAutoThreshold: i,
       vadThreshold: r,
       location: o,
       isDeafened: u
@@ -58,8 +58,8 @@ class g extends s.PureComponent {
       input_device_volume: n,
       output_device_name: a,
       output_device_volume: s,
-      input_mode: i,
-      input_sensitivity_is_automatic: l,
+      input_mode: l,
+      input_sensitivity_is_automatic: i,
       input_sensitivity_threshold: Math.round(r),
       location: o
     })
@@ -99,8 +99,8 @@ class g extends s.PureComponent {
       title: t,
       description: n,
       notchBackground: s,
-      buttonTest: i,
-      buttonStop: l,
+      buttonTest: l,
+      buttonStop: i,
       buttonClassName: r,
       buttonColor: o,
       isDeafened: u
@@ -135,7 +135,7 @@ class g extends s.PureComponent {
               size: d.Button.Sizes.SMALL,
               className: r,
               color: o,
-              children: c ? l : i
+              children: c ? i : l
             })
           }
         }), (0, a.jsx)(h.default, {
@@ -179,7 +179,7 @@ class g extends s.PureComponent {
 t.default = r.default.connectStores([E.default, f.default], () => {
   let e = f.default.getInputDeviceId(),
     t = f.default.getInputDevices(),
-    n = l().find(t, t => {
+    n = i().find(t, t => {
       let {
         id: n
       } = t;
@@ -187,7 +187,7 @@ t.default = r.default.connectStores([E.default, f.default], () => {
     }),
     a = f.default.getOutputDeviceId(),
     s = f.default.getOutputDevices(),
-    i = l().find(s, e => {
+    l = i().find(s, e => {
       let {
         id: t
       } = e;
@@ -203,6 +203,6 @@ t.default = r.default.connectStores([E.default, f.default], () => {
     isDeafened: f.default.isSelfDeaf(),
     vadAutoThreshold: r.autoThreshold,
     inputDeviceName: null != n ? n.name : "",
-    outputDeviceName: null != i ? i.name : ""
+    outputDeviceName: null != l ? l.name : ""
   }
 })(g)

@@ -44,13 +44,13 @@ t.default = n.memo(function() {
         guildIconSize: 32
       })
     }, [t]),
-    h = n.useCallback(e => {
+    I = n.useCallback(e => {
       let t = e[0];
       return null == t ? null : (0, a.jsx)(a.Fragment, {
         children: g(t)
       })
     }, [g]),
-    I = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, T.AnalyticsLocations.USER_SETTINGS), []),
+    h = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, T.AnalyticsLocations.USER_SETTINGS), []),
     N = n.useCallback(e => e === s, [s]),
     p = n.useCallback(e => e, []),
     C = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
@@ -66,8 +66,8 @@ t.default = n.memo(function() {
       optionClassName: m.selectPopout,
       isSelected: N,
       options: d,
-      select: I,
-      renderOptionValue: h,
+      select: h,
+      renderOptionValue: I,
       renderOptionLabel: g,
       serialize: p,
       clear: C,

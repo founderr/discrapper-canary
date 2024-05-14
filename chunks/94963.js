@@ -16,8 +16,8 @@ var n = a("735250"),
   E = a("254147"),
   T = a("640024"),
   C = a("442837"),
-  x = a("481060"),
-  _ = a("231467"),
+  _ = a("481060"),
+  x = a("231467"),
   g = a("650774"),
   I = a("430824"),
   N = a("175557"),
@@ -81,7 +81,7 @@ let b = S.CLAN_BRAND_PALETTE_PRESETS.length + 1,
         style: {
           background: "linear-gradient(-45deg, ".concat(r, " 50%, ").concat(a, " 50% )")
         }
-      }), (0, n.jsx)(x.Text, {
+      }), (0, n.jsx)(_.Text, {
         variant: "text-sm/medium",
         color: "interactive-normal",
         className: y.noWrap,
@@ -127,11 +127,11 @@ t.default = e => {
     })
   }, [m, O, V.primary, V.secondary]), (0, n.jsxs)("div", {
     className: R.slideContent,
-    children: [(0, n.jsx)(x.Heading, {
+    children: [(0, n.jsx)(_.Heading, {
       variant: "heading-xxl/medium",
       className: R.title,
       children: L.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_TITLE
-    }), (0, n.jsx)(x.Text, {
+    }), (0, n.jsx)(_.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: R.subtitle,
@@ -144,13 +144,13 @@ t.default = e => {
           className: y.colorsContainer,
           children: [(0, n.jsxs)("div", {
             className: y.colorPickerContainer,
-            children: [(0, n.jsx)(x.Text, {
+            children: [(0, n.jsx)(_.Text, {
               variant: "text-xs/semibold",
               color: "text-muted",
               children: L.default.Messages.CLAN_LOOK_BRAND_COLOR
             }), (0, n.jsxs)("div", {
               className: y.colorPickerGrid,
-              children: [(0, n.jsx)(x.Clickable, {
+              children: [(0, n.jsx)(_.Clickable, {
                 onClick: () => {
                   var e, t;
                   B(0), F({
@@ -166,7 +166,7 @@ t.default = e => {
                   primaryColor: h.badgePrimaryColor,
                   secondaryColor: h.badgeSecondaryColor
                 })
-              }), S.CLAN_BRAND_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(x.Clickable, {
+              }), S.CLAN_BRAND_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(_.Clickable, {
                 "aria-label": e.name,
                 onClick: () => {
                   B(t + 1), F(S.CLAN_BRAND_PALETTE_PRESETS[t])
@@ -196,7 +196,7 @@ t.default = e => {
                 },
                 shouldShow: G,
                 onRequestClose: () => U(!1),
-                children: e => (0, n.jsx)(x.Clickable, {
+                children: e => (0, n.jsx)(_.Clickable, {
                   ...e,
                   onClick: () => {
                     B(b), U(e => !e)
@@ -213,13 +213,13 @@ t.default = e => {
             })]
           }), (0, n.jsxs)("div", {
             className: y.bannerPickerContainer,
-            children: [(0, n.jsx)(x.Text, {
+            children: [(0, n.jsx)(_.Text, {
               variant: "text-xs/semibold",
               color: "text-muted",
               children: L.default.Messages.CLAN_LOOK_BANNER
             }), (0, n.jsx)("div", {
               className: y.bannerPickerGrid,
-              children: M.map((e, t) => (0, n.jsxs)(x.Clickable, {
+              children: M.map((e, t) => (0, n.jsxs)(_.Clickable, {
                 "aria-label": e.name,
                 onClick: () => {
                   D(e.bannerKind)
@@ -230,7 +230,7 @@ t.default = e => {
                 children: [(0, n.jsx)(e.icon, {
                   width: 24,
                   height: 24
-                }), (0, n.jsx)(x.Text, {
+                }), (0, n.jsx)(_.Text, {
                   variant: "text-sm/medium",
                   color: "interactive-normal",
                   className: y.noWrap,
@@ -242,7 +242,7 @@ t.default = e => {
         })
       }), (0, n.jsx)("div", {
         className: y.clanCardWrapper,
-        children: (0, n.jsx)(_.ClanDiscoveryCardView, {
+        children: (0, n.jsx)(x.ClanDiscoveryCardView, {
           bannerComponent: (0, n.jsx)(N.default, {
             banner: O,
             primaryTintColor: V.primary,

@@ -27,12 +27,12 @@ var s, a = n("735250"),
   R = n("616952"),
   C = n("792766"),
   O = n("692483"),
-  L = n("100159"),
-  v = n("473855"),
+  v = n("100159"),
+  L = n("473855"),
   M = n("726745"),
-  x = n("929809"),
-  y = n("541692"),
-  b = n("986197"),
+  b = n("929809"),
+  x = n("541692"),
+  y = n("986197"),
   U = n("135200"),
   D = n("219496"),
   P = n("794099"),
@@ -43,8 +43,8 @@ var s, a = n("735250"),
   B = n("480294"),
   k = n("896797"),
   H = n("819570"),
-  V = n("292937"),
-  W = n("626135"),
+  W = n("292937"),
+  V = n("626135"),
   Y = n("585483"),
   K = n("70956"),
   z = n("624138"),
@@ -103,10 +103,10 @@ class eo extends(s = i.PureComponent) {
       giftCodeSKU: e,
       invite: t
     } = this.props;
-    W.default.track(J.AnalyticEvents.REGISTER_VIEWED, {
+    V.default.track(J.AnalyticEvents.REGISTER_VIEWED, {
       location: null != t ? "Invite Register Page" : "Non-Invite Register Page",
       registration_source: this.registrationSource,
-      ...null != e ? (0, L.default)(e, !1, !1) : {}
+      ...null != e ? (0, v.default)(e, !1, !1) : {}
     }, {
       flush: !0
     }), null == this.props.consentRequired && E.default.getLocationMetadata(), (0, j.trackAppUIViewed)("register")
@@ -143,7 +143,7 @@ class eo extends(s = i.PureComponent) {
       this.setState({
         isRateLimited: !1
       })
-    }))), s && !e.authenticated && ((0, x.setNewUser)(ee.NewUserTypes.ORGANIC_REGISTERED), this.redirectIfAuthenticated());
+    }))), s && !e.authenticated && ((0, b.setNewUser)(ee.NewUserTypes.ORGANIC_REGISTERED), this.redirectIfAuthenticated());
     let o = X.RegistrationSteps.FULL;
     a || this.hasError("date_of_birth") ? o = X.RegistrationSteps.AGE_GATE : null != i && (null != i.guild || null != i.channel) && (o = X.RegistrationSteps.INVITE), r(o)
   }
@@ -430,15 +430,15 @@ class eo extends(s = i.PureComponent) {
         email: N,
         username: C,
         global_name: O,
-        password: L,
-        date_of_birth: v
+        password: v,
+        date_of_birth: L
       } = {},
       hasLoggedInAccounts: M,
       registrationCopyExperimentConfig: {
-        hasCopyAboveButton: x
+        hasCopyAboveButton: b
       }
     } = this.props, {
-      subText: y,
+      subText: x,
       consentText: D
     } = this.renderConsentComponents(), P = this.renderErrorMessage(), G = (0, a.jsx)(h.Tooltip, {
       text: !u && T ? en.default.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
@@ -455,7 +455,7 @@ class eo extends(s = i.PureComponent) {
     }), j = async () => {
       this.setState({
         usernameFocused: !0
-      }), I && r.length > 0 && !U.default.wasRegistrationSuggestionFetched(r) && await b.default.fetchSuggestionsRegistration(r)
+      }), I && r.length > 0 && !U.default.wasRegistrationSuggestionFetched(r) && await y.default.fetchSuggestionsRegistration(r)
     }, F = null != e ? (0, a.jsx)(i.Fragment, {
       children: e()
     }, "custom-header") : (0, a.jsx)(H.Title, {
@@ -537,7 +537,7 @@ class eo extends(s = i.PureComponent) {
           password: e,
           passwordClientError: 0 === e.length ? en.default.Messages.REQUIRED : null
         }),
-        error: null != g ? g : el(L),
+        error: null != g ? g : el(v),
         type: "password",
         setRef: e => {
           this.passwordRef = e
@@ -549,10 +549,10 @@ class eo extends(s = i.PureComponent) {
         name: "date_of_birth",
         onChange: this.handleBirthdayChange,
         ref: this.dateOfBirthRef,
-        error: null != _ ? _ : el(v),
+        error: null != _ ? _ : el(L),
         value: d,
         required: !0
-      }), x && y, (0, a.jsx)(R.default, {}), G, P, D, !x && y, $.CONFERENCE_MODE_ENABLED ? null : (0, a.jsx)(H.Button, {
+      }), b && x, (0, a.jsx)(R.default, {}), G, P, D, !b && x, $.CONFERENCE_MODE_ENABLED ? null : (0, a.jsx)(H.Button, {
         look: A ? H.Button.Looks.FILLED : H.Button.Looks.LINK,
         color: A ? H.Button.Colors.PRIMARY : H.Button.Colors.LINK,
         onClick: this.handleGotoLogin,
@@ -582,7 +582,7 @@ class eo extends(s = i.PureComponent) {
         className: es.goBackButton,
         children: (0, a.jsxs)("div", {
           className: es.content,
-          children: [(0, a.jsx)(V.default, {
+          children: [(0, a.jsx)(W.default, {
             width: 16,
             height: 16,
             className: es.caret
@@ -605,7 +605,7 @@ class eo extends(s = i.PureComponent) {
       giftCode: s,
       guildTemplate: i
     } = this.props, r = null != n && null == n.guild && null == n.channel && null != n.inviter;
-    return null == n || r || t ? null != i ? this.renderFull(() => (0, a.jsx)(v.default, {
+    return null == n || r || t ? null != i ? this.renderFull(() => (0, a.jsx)(L.default, {
       guildTemplate: i
     }), !0) : null != s ? this.renderFull(() => (0, a.jsx)(q.default, {
       giftCode: s
@@ -717,13 +717,13 @@ class eo extends(s = i.PureComponent) {
 }
 
 function eu(e) {
-  let t = (0, c.useStateFromStoresObject)([B.default, F.default, g.default, y.default, M.default], () => ({
+  let t = (0, c.useStateFromStoresObject)([B.default, F.default, g.default, x.default, M.default], () => ({
       consentRequired: B.default.getAuthenticationConsentRequired(),
       registering: F.default.getRegisterStatus() === J.RegistrationStates.REGISTERING,
       apiErrors: F.default.getErrors(),
       authenticated: F.default.isAuthenticated(),
       isUnderage: g.default.isUnderageAnonymous(),
-      country: y.default.getCountryCode(),
+      country: x.default.getCountryCode(),
       hasLoggedInAccounts: M.default.getHasLoggedInAccounts()
     })),
     n = (0, P.useUURegistrationExperiment)(),

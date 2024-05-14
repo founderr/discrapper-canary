@@ -40,7 +40,7 @@ function g() {
       onChange: l,
       onClear: () => l("")
     }), i.length > 0 ? i.map(t => {
-      let s = t.experiment.type === f.ExperimentTypes.GUILD ? I : h;
+      let s = t.experiment.type === f.ExperimentTypes.GUILD ? h : I;
       return (0, a.jsx)(s, {
         experiment: t.experiment,
         experimentId: t.id,
@@ -56,22 +56,22 @@ function g() {
   })
 }
 
-function h(e) {
+function I(e) {
   var t;
   let {
     experiment: s,
     experimentId: l,
     overrideDescriptor: c
-  } = e, [S, E] = n.useState(null != c), [T, g] = n.useState(!1), h = n.useCallback(() => {
+  } = e, [S, E] = n.useState(null != c), [T, g] = n.useState(!1), I = n.useCallback(() => {
     E(e => !e)
-  }, []), I = (0, r.useStateFromStores)([u.default], () => u.default.getUserExperimentDescriptor(l)), N = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedUserExperiment(l)), p = (0, r.useStateFromStores)([u.default], () => i().sortBy(u.default.getRecentExposures(f.ExperimentTypes.USER, l), e => {
+  }, []), h = (0, r.useStateFromStores)([u.default], () => u.default.getUserExperimentDescriptor(l)), N = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedUserExperiment(l)), p = (0, r.useStateFromStores)([u.default], () => i().sortBy(u.default.getRecentExposures(f.ExperimentTypes.USER, l), e => {
     let [t, s] = e;
     return -s
   }).map(e => {
     let [t, s] = e;
     return "".concat(new Date(s).toLocaleString(), " (").concat(t, ")")
   })), C = (0, a.jsx)(o.Clickable, {
-    onClick: h,
+    onClick: I,
     children: (0, a.jsxs)(o.FormTitle, {
       tag: o.FormTitleTags.H3,
       className: m.title,
@@ -114,7 +114,7 @@ function h(e) {
         className: m.description,
         children: [(0, a.jsxs)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
-          children: ["Current assigned to bucket ", null !== (t = null == I ? void 0 : I.bucket) && void 0 !== t ? t : f.ExperimentBuckets.NOT_ELIGIBLE]
+          children: ["Current assigned to bucket ", null !== (t = null == h ? void 0 : h.bucket) && void 0 !== t ? t : f.ExperimentBuckets.NOT_ELIGIBLE]
         }), null == N ? (0, a.jsx)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
           children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -163,14 +163,14 @@ function h(e) {
   })
 }
 
-function I(e) {
+function h(e) {
   let {
     experiment: t,
     experimentId: s,
     overrideDescriptor: l
-  } = e, [S, E] = n.useState(null != l), [T, g] = n.useState(!1), h = n.useCallback(() => {
+  } = e, [S, E] = n.useState(null != l), [T, g] = n.useState(!1), I = n.useCallback(() => {
     E(e => !e)
-  }, []), I = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedGuildExperiment(s)), N = (0, r.useStateFromStores)([u.default], () => i().sortBy(u.default.getRecentExposures(f.ExperimentTypes.GUILD, s), e => {
+  }, []), h = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedGuildExperiment(s)), N = (0, r.useStateFromStores)([u.default], () => i().sortBy(u.default.getRecentExposures(f.ExperimentTypes.GUILD, s), e => {
     let [t, s] = e;
     return -s
   }).map(e => {
@@ -188,7 +188,7 @@ function I(e) {
     }
     return [a, i()(t).keys().map(Number).sort().map(e => "".concat(t[e], " guilds in bucket ").concat(e)).join(", ")]
   }), A = (0, a.jsx)(o.Clickable, {
-    onClick: h,
+    onClick: I,
     children: (0, a.jsxs)(o.FormTitle, {
       tag: o.FormTitleTags.H3,
       className: m.title,
@@ -232,7 +232,7 @@ function I(e) {
         children: [(0, a.jsxs)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
           children: ["Current Assignments: ", C]
-        }), null == I ? (0, a.jsx)(o.FormText, {
+        }), null == h ? (0, a.jsx)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
           children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
         }) : null]
@@ -252,7 +252,7 @@ function I(e) {
         }), (0, a.jsx)(o.Text, {
           variant: "code",
           className: m.pre,
-          children: null == I ? "None" : JSON.stringify(I, void 0, 2)
+          children: null == h ? "None" : JSON.stringify(h, void 0, 2)
         }), (0, a.jsx)(o.FormTitle, {
           tag: "h5",
           className: m.debugTitle,

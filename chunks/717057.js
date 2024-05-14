@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("620929"),
   M = n("284019"),
   R = n("308083"),
-  y = n("981631"),
-  L = n("689938"),
+  L = n("981631"),
+  y = n("689938"),
   O = n("946984");
 
 function j(e) {
@@ -58,7 +58,7 @@ function j(e) {
           variant: "heading-xxl/normal",
           color: "text-muted",
           className: O.charterHeaderText,
-          children: L.default.Messages.CLAN_SETUP_OVERVIEW_TITLE
+          children: y.default.Messages.CLAN_SETUP_OVERVIEW_TITLE
         }), (0, a.jsx)(h.Heading, {
           variant: "heading-xxl/bold",
           color: "interactive-active",
@@ -68,7 +68,7 @@ function j(e) {
           variant: "text-md/normal",
           color: "text-muted",
           className: O.establishedDate,
-          children: L.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
+          children: y.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
             date: r
           })
         })]
@@ -80,7 +80,7 @@ function j(e) {
         variant: "text-sm/normal",
         color: "text-muted",
         className: O.charterBodyText,
-        children: L.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
+        children: y.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
       })]
     })
   })
@@ -100,7 +100,7 @@ t.default = function(e) {
   }, [N, F, x]);
   let w = null == N ? void 0 : null === (t = N.branding) || void 0 === t ? void 0 : t.primaryColor,
     k = l.useCallback(() => {
-      P && (0, _.adoptClanIdentity)(s, P, y.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL), F()
+      P && (0, _.adoptClanIdentity)(s, P, L.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL), F()
     }, [s, F, P]),
     H = l.useCallback(() => {
       U(!0)
@@ -130,7 +130,7 @@ t.default = function(e) {
             className: O.title,
             children: [(0, a.jsx)(h.Heading, {
               variant: "heading-xxl/medium",
-              children: L.default.Messages.CLAN_JOIN_SUCCESS_TITLE
+              children: y.default.Messages.CLAN_JOIN_SUCCESS_TITLE
             }), (0, a.jsx)(h.Heading, {
               variant: "heading-xxl/bold",
               children: B.name
@@ -138,7 +138,7 @@ t.default = function(e) {
           }), (0, a.jsx)(h.Text, {
             className: O.subtitle,
             variant: "text-md/normal",
-            children: L.default.Messages.CLAN_JOIN_SUCCESS_SUBTITLE
+            children: y.default.Messages.CLAN_JOIN_SUCCESS_SUBTITLE
           })]
         }), (0, a.jsxs)("div", {
           className: O.previewSection,
@@ -182,11 +182,11 @@ t.default = function(e) {
               children: [(0, a.jsx)(h.Text, {
                 variant: "text-md/normal",
                 color: "header-primary",
-                children: L.default.Messages.CLAN_SUCCESS_USE_TAG_TEXT
+                children: y.default.Messages.CLAN_SUCCESS_USE_TAG_TEXT
               }), (0, a.jsx)(h.Text, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: L.default.Messages.CLAN_SUCCESS_USE_TAG_HELP
+                children: y.default.Messages.CLAN_SUCCESS_USE_TAG_HELP
               })]
             }), (0, a.jsx)(h.Switch, {
               onChange: () => D(!P),
@@ -212,7 +212,7 @@ t.default = function(e) {
           children: [(0, a.jsx)(h.Text, {
             color: "none",
             variant: "text-md/medium",
-            children: L.default.Messages.CLAN_JOIN_SUCCESS_MAIN_CTA
+            children: y.default.Messages.CLAN_JOIN_SUCCESS_MAIN_CTA
           }), (0, a.jsx)(c.ArrowLargeRightIcon, {
             width: 20,
             height: 20,

@@ -47,9 +47,9 @@ function T(e) {
     assetNames: S
   }), [x, M] = i.useState(!1), R = i.useCallback(() => {
     M(!0)
-  }, [M]), y = i.useCallback(() => {
+  }, [M]), L = i.useCallback(() => {
     M(!1)
-  }, [M]), L = i.useMemo(() => (0, s.jsx)("div", {
+  }, [M]), y = i.useMemo(() => (0, s.jsx)("div", {
     className: g.overlayBadge,
     children: (0, s.jsx)("div", {
       className: g.badgeContainer,
@@ -95,9 +95,9 @@ function T(e) {
     look: d.Button.Looks.BLANK,
     size: d.Button.Sizes.NONE,
     onFocus: R,
-    onBlur: y,
+    onBlur: L,
     onMouseEnter: R,
-    onMouseLeave: y,
+    onMouseLeave: L,
     innerClassName: g.activityItemButtonInnerClass,
     children: (0, s.jsx)(u.Spring, {
       config: _,
@@ -125,7 +125,7 @@ function T(e) {
               applicationName: a.application.name,
               imageClassName: g.activitySuggestionImage,
               imageNotFoundClassName: g.brokenImageIconWrapper
-            }), L, O]
+            }), y, O]
           })
         })
       }

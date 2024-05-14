@@ -3,28 +3,28 @@ n.r(t), n("47120");
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  i = n("570140"),
-  l = n("317770"),
+  l = n("570140"),
+  i = n("317770"),
   r = n("314897"),
   o = n("592125"),
   u = n("797258"),
   d = n("590415"),
   c = n("981631");
 let f = "STAGE_INVITED_TO_SPEAK_MODAL";
-class E extends l.default {
+class E extends i.default {
   _initialize() {
-    i.default.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
+    l.default.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
   _terminate() {
-    i.default.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
+    l.default.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
   constructor(...e) {
-    var t, i, l;
-    super(...e), t = this, i = "handleVoiceStateUpdates", l = e => {
+    var t, l, i;
+    super(...e), t = this, l = "handleVoiceStateUpdates", i = e => {
       var t;
       let {
-        voiceStates: i
-      } = e, l = r.default.getId(), E = null === (t = u.default.getSession()) || void 0 === t ? void 0 : t.sessionId, h = i.find(e => e.userId === l && e.sessionId === E);
+        voiceStates: l
+      } = e, i = r.default.getId(), E = null === (t = u.default.getSession()) || void 0 === t ? void 0 : t.sessionId, h = l.find(e => e.userId === i && e.sessionId === E);
       if (null == h) return;
       let _ = h.channelId;
       if (null == _) {
@@ -49,12 +49,12 @@ class E extends l.default {
           onCloseRequest: c.NOOP_NULL
         })
       }
-    }, i in t ? Object.defineProperty(t, i, {
-      value: l,
+    }, l in t ? Object.defineProperty(t, l, {
+      value: i,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[i] = l
+    }) : t[l] = i
   }
 }
 t.default = new E

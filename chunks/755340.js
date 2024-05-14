@@ -20,15 +20,15 @@ t.default = function(e) {
     submittedGuildJoinRequestsCount: a,
     onFormFieldUpdate: T,
     hideVerificationLevelField: C,
-    isClanContext: x,
-    formDescription: _,
+    isClanContext: _,
+    formDescription: x,
     onFieldsSave: g,
     onDescriptionSave: I
-  } = e, N = r.useRef(!1), [v, A] = r.useState(null), [S, L] = r.useState(e.formFields), y = r.useRef(e.formFields), R = r.useMemo(() => S.filter(o.isAutomaticApprovalFormField), [S]), b = r.useMemo(() => S.filter(o.isManualApprovalFormField), [S]), M = b.length, j = r.useMemo(() => S.length === p.MAX_FORM_ELEMENTS, [S]), O = r.useMemo(() => S.some(l.isTermsFormField), [S]), D = r.useMemo(() => S.some(e => !(0, l.isTermsFormField)(e)), [S]), P = M > 1, F = (0, i.useIsMemberVerificationManualApproval)(t.id) || x, w = r.useCallback(() => {
+  } = e, N = r.useRef(!1), [v, A] = r.useState(null), [S, L] = r.useState(e.formFields), y = r.useRef(e.formFields), R = r.useMemo(() => S.filter(o.isAutomaticApprovalFormField), [S]), b = r.useMemo(() => S.filter(o.isManualApprovalFormField), [S]), M = b.length, j = r.useMemo(() => S.length === p.MAX_FORM_ELEMENTS, [S]), O = r.useMemo(() => S.some(l.isTermsFormField), [S]), D = r.useMemo(() => S.some(e => !(0, l.isTermsFormField)(e)), [S]), P = M > 1, F = (0, i.useIsMemberVerificationManualApproval)(t.id) || _, w = r.useCallback(() => {
     (0, s.showToast)((0, s.createToast)(E.default.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE))
   }, []), B = r.useCallback(async e => {
     if (!N.current) {
-      N.current = !0, x && (e = e.filter(e => e.field_type !== l.VerificationFormFieldTypes.TERMS));
+      N.current = !0, _ && (e = e.filter(e => e.field_type !== l.VerificationFormFieldTypes.TERMS));
       try {
         await g(t.id, e), T(), L(e), y.current = e
       } catch (e) {
@@ -37,7 +37,7 @@ t.default = function(e) {
         null != v && A(null), N.current = !1
       }
     }
-  }, [v, t.id, T, g, x]), G = r.useCallback(async e => {
+  }, [v, t.id, T, g, _]), G = r.useCallback(async e => {
     let t = e.field_type === l.VerificationFormFieldTypes.TERMS ? [e, ...S] : [...S, e];
     await B(t)
   }, [S, B]), U = r.useCallback(async (e, t) => {
@@ -62,7 +62,7 @@ t.default = function(e) {
     children: [!C && (0, n.jsx)(f.default, {
       guild: t
     }), (0, n.jsx)(d.default, {
-      formDescription: _,
+      formDescription: x,
       guildId: t.id,
       onSave: I
     }), !O && !j && (0, n.jsx)(u.default, {
@@ -79,15 +79,15 @@ t.default = function(e) {
       updateFormField: U,
       updateFormFieldOrder: H,
       canRemove: !0,
-      actionsLocation: x ? "side" : "footer"
+      actionsLocation: _ ? "side" : "footer"
     }))]
   });
   return F ? (0, n.jsxs)(n.Fragment, {
-    children: [!x && V, !D && (0, n.jsx)(c.default, {
+    children: [!_ && V, !D && (0, n.jsx)(c.default, {
       addFormField: G,
-      showManualApprovalWarning: !x && !(M > 0),
+      showManualApprovalWarning: !_ && !(M > 0),
       guild: t,
-      showHeader: !x
+      showHeader: !_
     }), b.map(e => (0, h.getFormFieldBuilderComponent)({
       dropHoveredIndex: v,
       formField: e,
@@ -98,8 +98,8 @@ t.default = function(e) {
       removeFormField: k,
       updateFormField: U,
       updateFormFieldOrder: H,
-      canRemove: !(x && b.length <= 1),
-      actionsLocation: x ? "side" : "footer"
+      canRemove: !(_ && b.length <= 1),
+      actionsLocation: _ ? "side" : "footer"
     })), D && !j && (0, n.jsx)(m.default, {
       addFormField: G,
       guild: t

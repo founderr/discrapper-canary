@@ -78,7 +78,7 @@ t.default = e => {
   let D = (0, R.usePerksDiscoverabilityStrings)(v),
     U = (0, T.default)(),
     j = (0, R.useIsPremiumSubscriber)(),
-    y = (0, R.getFilteredPerksDiscoverabilityCards)({
+    G = (0, R.getFilteredPerksDiscoverabilityCards)({
       perksCards: U,
       variant: i,
       shopMarketingVariation: h,
@@ -87,7 +87,7 @@ t.default = e => {
       tileOrderVariant: x,
       isPremiumSubscriber: j
     }),
-    G = y.some(e => null != e.pillText),
+    y = G.some(e => null != e.pillText),
     [B, k] = r.useState(null),
     H = r.useRef(new l.Environment);
   return (0, a.jsxs)(a.Fragment, {
@@ -113,7 +113,7 @@ t.default = e => {
           [S.subtitle]: null == p || N,
           [S.subtitleWithButton]: null != p && !N,
           [S.fullWidth]: v || N,
-          [S.moreSubtitleMargin]: G,
+          [S.moreSubtitleMargin]: y,
           [S.leftAlignSubtitle]: N,
           [S.centerAlignSubtitle]: !N
         }),
@@ -126,7 +126,7 @@ t.default = e => {
           [S.cardContainer]: C,
           [S.cardContainerNarrowWidth]: !C
         }),
-        children: y.map((e, t) => (0, a.jsx)(f.default, {
+        children: G.map((e, t) => (0, a.jsx)(f.default, {
           confettiCanvas: e.name === T.PerksDiscoverabilityCardTypes.FREE_BOOST ? B : void 0,
           ...e,
           forceShadow: A

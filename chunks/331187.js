@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  i = n("703656"),
-  l = n("970731"),
+  l = n("703656"),
+  i = n("970731"),
   r = n("626135"),
   o = n("63063"),
   u = n("973005"),
@@ -19,7 +19,7 @@ t.default = e => {
     r.default.track(d.AnalyticEvents.DM_SAFETY_COACHMARK_ACTION, {
       action: u.DMSafetyCoachmarkActions.VIEW
     })
-  }, []), (0, a.jsx)(l.default, {
+  }, []), (0, a.jsx)(i.default, {
     header: f.default.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_HEADER_V2,
     content: f.default.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_CONTENT_V2.format({
       helpdeskArticle: o.default.getArticleURL(d.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
@@ -33,12 +33,12 @@ t.default = e => {
       })
     },
     onSecondaryClick: () => {
-      (0, i.transitionTo)(d.Routes.SETTINGS("privacy-and-safety")), r.default.track(d.AnalyticEvents.DM_SAFETY_COACHMARK_ACTION, {
+      (0, l.transitionTo)(d.Routes.SETTINGS("privacy-and-safety")), r.default.track(d.AnalyticEvents.DM_SAFETY_COACHMARK_ACTION, {
         action: u.DMSafetyCoachmarkActions.CHANGE_SETTING
       })
     },
     markAsDismissed: t,
-    caretPosition: l.CaretPosition.BOTTOM_CENTER,
+    caretPosition: i.CaretPosition.BOTTOM_CENTER,
     headerClassName: E.__invalid_header
   })
 }

@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("470079"),
   s = n("166516"),
-  i = n.n(s),
-  l = n("525654"),
-  r = n.n(l),
+  l = n.n(s),
+  i = n("525654"),
+  r = n.n(i),
   o = n("442837"),
   u = n("888369"),
   d = n("292959"),
@@ -23,7 +23,7 @@ let S = new Set(["Blink", "Gecko", "WebKit"]),
   p = C.NOOP;
 if (E.isPlatformEmbedded) p = e => h.default.setBadge(e);
 else if (S.has(r().layout)) {
-  let e = new(i())({
+  let e = new(l())({
     animation: "none"
   });
   p = t => {

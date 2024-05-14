@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("524437"),
-  i = n("481060"),
-  l = n("570140"),
+  l = n("481060"),
+  i = n("570140"),
   r = n("317770"),
   o = n("605236"),
   u = n("650774"),
@@ -17,17 +17,17 @@ let _ = e => {
   var t;
   let n = d.default.getGuild(e),
     a = !!(null == n ? void 0 : n.hasFeature(E.GuildFeatures.COMMUNITY)),
-    i = c.default.can(E.Permissions.MANAGE_CHANNELS, n),
-    l = (0, o.isDismissibleContentDismissed)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL),
+    l = c.default.can(E.Permissions.MANAGE_CHANNELS, n),
+    i = (0, o.isDismissibleContentDismissed)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL),
     r = null !== (t = u.default.getMemberCount(e)) && void 0 !== t ? t : 0;
-  return a && i && !l && r >= 200
+  return a && l && !i && r >= 200
 };
 class C extends r.default {
   _initialize() {
-    l.default.subscribe("CHANNEL_SELECT", this.handleChannelSelect)
+    i.default.subscribe("CHANNEL_SELECT", this.handleChannelSelect)
   }
   _terminate() {
-    l.default.unsubscribe("CHANNEL_SELECT", this.handleChannelSelect)
+    i.default.unsubscribe("CHANNEL_SELECT", this.handleChannelSelect)
   }
   handleChannelSelect(e) {
     let {
@@ -35,20 +35,20 @@ class C extends r.default {
     } = e;
     if (null == t || !_(t)) return;
     (0, f.trackForumUpsellModalViewed)(), (0, o.requestMarkDismissibleContentAsShown)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL);
-    let l = function() {
+    let i = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.ContentDismissActionType.DISMISS;
       (0, o.markDismissibleContentAsDismissed)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL, {
         dismissAction: e
       })
     };
-    (0, i.openModalLazy)(async () => {
+    (0, l.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("18417")]).then(n.bind(n, "740696"));
       return n => (0, a.jsx)(e, {
         ...n,
         onClose: e => {
-          l(e), n.onClose()
+          i(e), n.onClose()
         },
         guildId: t,
         shouldUpsellCreation: !0

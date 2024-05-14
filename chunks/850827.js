@@ -42,14 +42,14 @@ t.default = (0, d.default)(e => {
     channelId: b,
     source: G,
     color: w = u.Button.Colors.WHITE,
-    look: B = u.Button.Looks.OUTLINED,
-    type: k,
+    look: k = u.Button.Looks.OUTLINED,
+    type: B,
     onAction: V,
     isEmbedded: x = !1
   } = e, F = (0, m.default)(), H = (0, l.useStateFromStores)([I.default], () => {
     let e = I.default.getCurrentUser();
     return o()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
-  }), Y = k === S.Types.PROFILE || k === S.Types.PROFILE_V2 || k === S.Types.SIMPLIFIED_PROFILE, j = k === S.Types.STREAM_PREVIEW || null != s, W = k === S.Types.SIMPLIFIED_PROFILE || k === S.Types.BITE_SIZE_POPOUT, K = (0, h.default)(t), z = Y ? f.default.Align.END : f.default.Align.STRETCH, Z = K || j ? f.default.Direction.HORIZONTAL : f.default.Direction.VERTICAL, X = (null == t ? void 0 : t.type) === y.ActivityTypes.HANG_STATUS, Q = (0, l.useStateFromStores)([T.default, E.default], () => {
+  }), Y = B === S.Types.PROFILE || B === S.Types.PROFILE_V2 || B === S.Types.SIMPLIFIED_PROFILE, j = B === S.Types.STREAM_PREVIEW || null != s, W = B === S.Types.SIMPLIFIED_PROFILE || B === S.Types.BITE_SIZE_POPOUT, K = (0, h.default)(t), z = Y ? f.default.Align.END : f.default.Align.STRETCH, Z = K || j ? f.default.Direction.HORIZONTAL : f.default.Direction.VERTICAL, X = (null == t ? void 0 : t.type) === y.ActivityTypes.HANG_STATUS, Q = (0, l.useStateFromStores)([T.default, E.default], () => {
     var e;
     return X ? E.default.getChannel(null === (e = T.default.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), q = Z === f.default.Direction.VERTICAL;
@@ -62,12 +62,12 @@ t.default = (0, d.default)(e => {
     children: (() => {
       if ((0, A.default)(t)) return (0, i.jsx)(N.default, {
         platform: _.default.get(y.PlatformTypes.XBOX),
-        look: B,
+        look: k,
         color: w,
         onAction: V
       }, "ConnectPlatformActivityButton");
       if ((null == t ? void 0 : t.platform) === y.ActivityGamePlatforms.PS4 || (null == t ? void 0 : t.platform) === y.ActivityGamePlatforms.PS5) return (0, i.jsx)(N.default, {
-        look: B,
+        look: k,
         color: w,
         platform: _.default.get(y.PlatformTypes.PLAYSTATION),
         onAction: V
@@ -79,7 +79,7 @@ t.default = (0, d.default)(e => {
             guildId: U,
             channelId: b,
             source: G,
-            look: B,
+            look: k,
             color: w,
             onAction: V
           }, "spotify-activity-sync-button"),
@@ -87,7 +87,7 @@ t.default = (0, d.default)(e => {
             activity: t,
             user: r,
             source: G,
-            look: B,
+            look: k,
             color: w,
             onAction: V
           }, "spotify-activity-play-button");
@@ -103,7 +103,7 @@ t.default = (0, d.default)(e => {
           guildId: e.guildId,
           channelId: e.channelId,
           color: w,
-          look: B,
+          look: k,
           isProfile: Y,
           onAction: V
         }, e.channelId)
@@ -111,19 +111,19 @@ t.default = (0, d.default)(e => {
       return j ? (0, i.jsx)(M.default, {
         isCurrentUser: H.id === r.id,
         color: w,
-        look: B,
+        look: k,
         applicationStream: s,
         onAction: V
       }, "watch-button") : X && null != Q ? (0, i.jsx)(C.default, {
         color: w,
-        look: B,
+        look: k,
         hangStatusChannel: Q,
         onAction: V
       }, "hang-status-button") : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(D.default, {
           activity: t,
           color: w,
-          look: B,
+          look: k,
           onAction: V
         }, "watch-button"), (0, i.jsx)(O.default, {
           activity: t,
@@ -132,19 +132,19 @@ t.default = (0, d.default)(e => {
           user: r,
           isCurrentUser: H.id === r.id,
           color: w,
-          look: B,
+          look: k,
           isEmbedded: x,
           onAction: V
         }, "join-activity-button"), (0, i.jsx)(g.default, {
           activity: t,
           user: r,
           color: w,
-          look: B,
+          look: k,
           onAction: V
         }, "notify-button"), (0, i.jsx)(p.default, {
           user: r,
           color: w,
-          look: B,
+          look: k,
           activity: t,
           onAction: V
         }, "custom-activity-button")]

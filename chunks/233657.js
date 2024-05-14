@@ -16,8 +16,8 @@ var a = n("442837"),
   c = n("9156"),
   f = n("305878"),
   h = n("26290"),
-  p = n("434479"),
-  m = n("490897"),
+  m = n("434479"),
+  p = n("490897"),
   C = n("689938"),
   g = n("628462");
 
@@ -27,11 +27,11 @@ function E(e) {
     selected: E
   } = e, {
     hasUnread: _,
-    mentionCount: I
+    mentionCount: S
   } = (0, a.useStateFromStoresObject)([d.default], () => ({
-    hasUnread: d.default.hasUnread(t.id, m.ReadStateTypes.GUILD_EVENT),
-    mentionCount: d.default.getMentionCount(t.id, m.ReadStateTypes.GUILD_EVENT)
-  }), [t.id]), S = (0, a.useStateFromStores)([c.default], () => c.default.isMuteScheduledEventsEnabled(t.id));
+    hasUnread: d.default.hasUnread(t.id, p.ReadStateTypes.GUILD_EVENT),
+    mentionCount: d.default.getMentionCount(t.id, p.ReadStateTypes.GUILD_EVENT)
+  }), [t.id]), I = (0, a.useStateFromStores)([c.default], () => c.default.isMuteScheduledEventsEnabled(t.id));
   async function N() {
     await (0, i.openModalLazy)(async () => {
       let {
@@ -47,7 +47,7 @@ function E(e) {
     A = T.length > 0 ? C.default.Messages.GUILD_EVENTS_PLURAL.format({
       number: T.length
     }) : C.default.Messages.GUILD_EVENTS;
-  return (0, l.jsx)(p.BasicChannelRow, {
+  return (0, l.jsx)(m.BasicChannelRow, {
     id: "upcoming-events-".concat(t.id),
     renderIcon: e => (0, l.jsx)(f.default, {
       className: e
@@ -66,11 +66,11 @@ function E(e) {
         })
       })
     },
-    showUnread: _ && !S,
-    trailing: !S && I > 0 ? (0, l.jsx)(h.NumberBadge, {
+    showUnread: _ && !I,
+    trailing: !I && S > 0 ? (0, l.jsx)(h.NumberBadge, {
       className: g.numberBadge,
       disableColor: !0,
-      count: I
+      count: S
     }) : null
   })
 }

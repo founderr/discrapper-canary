@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  i = n("481060"),
-  l = n("359110"),
+  l = n("481060"),
+  i = n("359110"),
   r = n("6025"),
   o = n("433355"),
   u = n("26373"),
@@ -22,11 +22,11 @@ function h(e) {
     user: n,
     channel: h
   } = e, _ = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
-    (0, i.showToast)((0, i.createToast)(f.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
+    (0, l.showToast)((0, l.createToast)(f.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
   }, []), m = s.useCallback(() => {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), S = s.useCallback(() => {
-    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, l.transitionToChannel)(h.id)
+    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, i.transitionToChannel)(h.id)
   }, [h.id, _]), {
     acceptMessageRequest: p,
     rejectMessageRequest: g,
@@ -49,20 +49,20 @@ function h(e) {
       active: t
     }), (0, a.jsxs)("div", {
       className: E.actions,
-      children: [(0, a.jsx)(i.Button, {
+      children: [(0, a.jsx)(l.Button, {
         className: E.button,
-        color: i.ButtonColors.PRIMARY,
-        size: i.Button.Sizes.SMALL,
+        color: l.ButtonColors.PRIMARY,
+        size: l.Button.Sizes.SMALL,
         onClick: e => {
           e.stopPropagation(), g(h.id)
         },
         disabled: R,
         submitting: T || v,
         children: f.default.Messages.MESSAGE_REQUEST_IGNORE
-      }), (0, a.jsx)(i.Button, {
+      }), (0, a.jsx)(l.Button, {
         className: E.button,
-        color: i.ButtonColors.BRAND,
-        size: i.Button.Sizes.SMALL,
+        color: l.ButtonColors.BRAND,
+        size: l.Button.Sizes.SMALL,
         onClick: e => {
           e.stopPropagation(), p(h.id)
         },
