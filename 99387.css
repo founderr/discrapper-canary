@@ -19996,7 +19996,14 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 
 .button__7b26d {
     width: 16px;
-    height: 16px
+    height: 16px;
+    opacity: 0;
+    transition: opacity var(--custom-button-transition-duration)ease
+}
+
+.button__7b26d.visible__95288,
+.button__7b26d:focus-visible {
+    opacity: 1
 }
 
 .color_df1d13 {
@@ -89093,8 +89100,8 @@ input::-webkit-inner-spin-button {
 
 .bodyText_fa331b {
     color: var(--interactive-normal);
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: 500;
     margin-bottom: 16px
 }
@@ -89141,8 +89148,8 @@ input::-webkit-inner-spin-button {
 }
 
 .trialCheckboxLabel__7d1e0 {
-    font-size: .875rem;
-    line-height: 1.125rem
+    font-size: 14px;
+    line-height: 18px
 }
 
 .loader_acb69b {
