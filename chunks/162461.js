@@ -3,8 +3,11 @@ n.r(t), n.d(t, {
   isEligibleForContentInventoryV1: function() {
     return s
   },
+  isEligibleForImpressionCapping: function() {
+    return o
+  },
   isEligibleForListenedMediaInventory: function() {
-    return d
+    return _
   }
 });
 var i = n("818083");
@@ -27,6 +30,13 @@ let r = (0, i.createExperiment)({
       config: {
         enabled: !0
       }
+    }, {
+      id: 3,
+      label: "Noteworthy",
+      config: {
+        enabled: !0,
+        impressionCappingEnabled: !0
+      }
     }]
   }),
   a = (0, i.createExperiment)({
@@ -42,11 +52,11 @@ let r = (0, i.createExperiment)({
   });
 
 function s(e) {
-  l.getCurrentConfig({
+  u.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !0
-  }), o.getCurrentConfig({
+  }), l.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !0
@@ -63,6 +73,17 @@ function s(e) {
   }, {
     autoTrackExposure: !0
   }), t
+}
+
+function o(e) {
+  let {
+    impressionCappingEnabled: t
+  } = r.getCurrentConfig({
+    location: e
+  }, {
+    autoTrackExposure: !0
+  });
+  return !0 === t
 }(0, i.createExperiment)({
   kind: "user",
   id: "2024-03_content_inventory_surface_holdout",
@@ -70,7 +91,7 @@ function s(e) {
   defaultConfig: {},
   treatments: []
 });
-let o = (0, i.createExperiment)({
+let l = (0, i.createExperiment)({
     kind: "user",
     id: "2024-03_holdout_bug_main_wrong_way",
     label: "Holdout Bug Experiment Wrong Way (pls ignore)",
@@ -81,7 +102,7 @@ let o = (0, i.createExperiment)({
       config: {}
     }]
   }),
-  l = (0, i.createExperiment)({
+  u = (0, i.createExperiment)({
     kind: "user",
     id: "2024-03_holdout_bug_main_right_way",
     label: "Holdout Bug Experiment Right Way (pls ignore)",
@@ -92,7 +113,7 @@ let o = (0, i.createExperiment)({
       config: {}
     }]
   }),
-  u = (0, i.createExperiment)({
+  d = (0, i.createExperiment)({
     kind: "user",
     id: "2024-04_content_inventory_listened_media",
     label: "Content Inventory: LISTENED_MEDIA",
@@ -108,10 +129,10 @@ let o = (0, i.createExperiment)({
     }]
   });
 
-function d(e) {
+function _(e) {
   let {
     enabled: t
-  } = u.getCurrentConfig({
+  } = d.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !0
