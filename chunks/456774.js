@@ -38,8 +38,8 @@ var i = n("735250"),
   b = n("940627"),
   G = n("705600"),
   w = n("305878"),
-  k = n("119828"),
-  B = n("737688"),
+  B = n("119828"),
+  k = n("737688"),
   V = n("242315"),
   x = n("507893"),
   F = n("944581"),
@@ -201,7 +201,7 @@ function en(e) {
     }), (0, i.jsx)(et, {
       onClick: R,
       inCall: O
-    }), I === Z.CardCategory.GAMING ? (0, i.jsx)(B.default, {
+    }), I === Z.CardCategory.GAMING ? (0, i.jsx)(k.default, {
       width: 12,
       height: 12,
       className: s()(J.cardIcon, J.cardTypeIcon)
@@ -243,7 +243,7 @@ function ei(e) {
     width: 24,
     height: 24,
     className: J.cardImageIcon
-  }) : I ? (0, i.jsx)(k.default, {
+  }) : I ? (0, i.jsx)(B.default, {
     width: 24,
     height: 24,
     className: J.cardImageIcon
@@ -403,7 +403,7 @@ function es(e) {
   } = e, s = (0, W.useCanShowNewGuildTooltipActivityEmptyState)(), o = a === Z.GuildPeekCardTypes.WHO, u = (0, K.useGuildPopoutCards)(t), d = r.useMemo(() => u.map(e => {
     if (o && e.category !== Z.CardCategory.EMPTY) {
       let n = null;
-      return e.category === Z.CardCategory.EMBEDDED_ACTIVITY ? n = e.embeddedActivity.channelId : e.category === Z.CardCategory.HANGOUT || e.category === Z.CardCategory.GAMING ? n = e.channelId : e.category === Z.CardCategory.EVENT && (n = e.event.channel_id), (0, i.jsx)(z.default, {
+      return e.category === Z.CardCategory.EMBEDDED_ACTIVITY ? n = e.embeddedActivities[0].channelId : e.category === Z.CardCategory.HANGOUT || e.category === Z.CardCategory.GAMING ? n = e.channelId : e.category === Z.CardCategory.EVENT && (n = e.event.channel_id), (0, i.jsx)(z.default, {
         cardData: e,
         guildId: t.id
       }, "".concat(e.category, "-").concat(n))
@@ -420,7 +420,7 @@ function es(e) {
         channelId: n,
         applicationId: r,
         userIds: a
-      } = e.embeddedActivity;
+      } = e.embeddedActivities[0];
       return (0, i.jsx)(en, {
         channelId: n,
         applicationId: r,
@@ -428,17 +428,17 @@ function es(e) {
         guildId: t.id,
         streamersCount: e.streamersCount,
         cardType: Z.CardCategory.EMBEDDED_ACTIVITY
-      }, "".concat(e.category, "-").concat(e.embeddedActivity.channelId))
+      }, "".concat(e.category, "-").concat(e.embeddedActivities[0].channelId))
     } else if (e.category === Z.CardCategory.GAMING) {
       let {
         channelId: n,
-        game: r,
+        games: r,
         voiceStates: a,
         streamersCount: s
       } = e;
       return (0, i.jsx)(en, {
         channelId: n,
-        applicationId: r.application_id,
+        applicationId: r[0].application_id,
         userIds: a.map(e => {
           let {
             user: t
