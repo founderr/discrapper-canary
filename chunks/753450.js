@@ -35,10 +35,10 @@ var i = l("735250"),
   N = l("581364"),
   T = l("395661"),
   P = l("970321"),
-  j = l("220082"),
-  S = l("252618"),
-  O = l("299206"),
-  L = l("422559"),
+  S = l("220082"),
+  j = l("252618"),
+  L = l("299206"),
+  O = l("422559"),
   y = l("270144"),
   D = l("864843"),
   M = l("703656"),
@@ -105,7 +105,7 @@ function eP(e) {
     } = e,
     E = (0, en.useApplicationDirectoryHistory)(e => e.guildId),
     x = (0, X.default)(),
-    j = (0, m.useStateFromStores)([Q.default], () => Q.default.getFetchState({
+    S = (0, m.useStateFromStores)([Q.default], () => Q.default.getFetchState({
       applicationId: f,
       guildId: E
     }) === Q.FetchState.FETCHING),
@@ -129,7 +129,7 @@ function eP(e) {
     }),
     eT = a.useMemo(() => null == G ? void 0 : G.slice(0, 3), [G]),
     eP = (0, m.useStateFromStores)([J.default], () => J.default.getApplicationFetchState(f)),
-    [eO, ey] = a.useState(void 0),
+    [eL, ey] = a.useState(void 0),
     eD = a.useCallback(e => {
       if (null != f) {
         if (e === em.ApplicationDirectoryProfileSections.GENERAL) {
@@ -149,7 +149,7 @@ function eP(e) {
       application: eB
     }),
     eU = (0, m.useStateFromStores)([B.default], () => B.default.getSessionId());
-  (0, S.usePageTitle)({
+  (0, j.usePageTitle)({
     location: null == eB ? void 0 : eB.name
   });
   let ek = a.useCallback(async () => {
@@ -180,14 +180,17 @@ function eP(e) {
     }
   }, [x, ek, eU, eB]);
   let eG = a.useCallback(() => {
-    var e;
-    null != (null == eB ? void 0 : null === (e = eB.guild) || void 0 === e ? void 0 : e.id) && (x ? ek() : (0, ee.redirectToLogin)({
-      [eR]: "true"
-    }))
-  }, [eB, x, ek]);
+      var e;
+      null != (null == eB ? void 0 : null === (e = eB.guild) || void 0 === e ? void 0 : e.id) && (x ? ek() : (0, ee.redirectToLogin)({
+        [eR]: "true"
+      }))
+    }, [eB, x, ek]),
+    eH = a.useCallback(() => {
+      (0, es.replaceAppDirectoryURLWith)("".concat(ef.Routes.APPLICATION_DIRECTORY_PROFILE(f)).concat(location.search))
+    }, [f]);
   a.useEffect(() => {
-    null != f && h === em.ApplicationDirectoryProfileSections.GENERAL && (0, es.replaceAppDirectoryURLWith)("".concat(ef.Routes.APPLICATION_DIRECTORY_PROFILE(f)).concat(location.search))
-  }, [f, h]), a.useEffect(() => {
+    h === em.ApplicationDirectoryProfileSections.GENERAL && eH()
+  }, [eH, h]), a.useEffect(() => {
     null != f && K.getApplication(f)
   }, [f]), a.useEffect(() => {
     if ((null == eB ? void 0 : eB.directory_entry) != null) {
@@ -200,48 +203,48 @@ function eP(e) {
       }))) : ey(void 0)
     }
   }, [eB]);
-  let eH = V.default.getApplicationIconURL({
+  let eY = V.default.getApplicationIconURL({
       id: null !== (r = null == eB ? void 0 : eB.id) && void 0 !== r ? r : "-1",
       icon: null == eB ? void 0 : eB.icon,
       size: eC
     }),
-    eY = (0, O.default)({
+    eV = (0, L.default)({
       id: null !== (c = null == eB ? void 0 : eB.id) && void 0 !== c ? c : "",
       label: eI.default.Messages.COPY_ID_APPLICATION
     }),
     {
-      canInstall: eV,
-      install: eW
+      canInstall: eW,
+      install: eZ
     } = (0, $.useInstallApplication)(eB, E),
-    eZ = null === (t = (0, en.getPreviousView)()) || void 0 === t ? void 0 : t.type;
+    ez = null === (t = (0, en.getPreviousView)()) || void 0 === t ? void 0 : t.type;
   a.useEffect(() => {
     (null == eB ? void 0 : eB.id) != null && Y.default.track(ef.AnalyticEvents.APP_DIRECTORY_PAGE_VIEWED, {
       current_page: "product",
-      previous_page: eZ,
+      previous_page: ez,
       application_id: eB.id,
       guild_id: E,
       shown_mutual_guilds_count: ew.length
     })
   }, [null == eB ? void 0 : eB.id, E, ew]);
-  let ez = a.useMemo(() => {
+  let eK = a.useMemo(() => {
       var e;
       let t = null == eB ? void 0 : null === (e = eB.install_params) || void 0 === e ? void 0 : e.permissions;
-      if (null != t) return L.OrderedPermissions.filter(e => p.has(p.deserialize(t), e))
+      if (null != t) return O.OrderedPermissions.filter(e => p.has(p.deserialize(t), e))
     }, [null == eB ? void 0 : null === (n = eB.install_params) || void 0 === n ? void 0 : n.permissions]),
-    eK = a.useCallback(e => {
+    eJ = a.useCallback(e => {
       eD(e), (null == eB ? void 0 : eB.id) != null && Y.default.track(ef.AnalyticEvents.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
         application_id: eB.id,
         guild_id: E,
         tab_name: e
       })
     }, [null == eB ? void 0 : eB.id, E, eD]),
-    eJ = a.useMemo(() => {
+    eQ = a.useMemo(() => {
       var e, t, l;
-      return null !== (l = (null !== (t = null == eB ? void 0 : null === (e = eB.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== t ? t : []).map(ej).filter(Z.isNotNullish)) && void 0 !== l ? l : []
+      return null !== (l = (null !== (t = null == eB ? void 0 : null === (e = eB.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== t ? t : []).map(eS).filter(Z.isNotNullish)) && void 0 !== l ? l : []
     }, [eB]),
-    eQ = a.useCallback((e, t) => {
+    eX = a.useCallback((e, t) => {
       if (e.type === ef.CarouselMediaTypes.IMG) {
-        let t = eJ.filter(e => e.type === ef.CarouselMediaTypes.IMG),
+        let t = eQ.filter(e => e.type === ef.CarouselMediaTypes.IMG),
           a = t.findIndex(t => t === e);
         if (a < 0) return;
         let n = t.map(e => ({
@@ -266,8 +269,8 @@ function eP(e) {
           }
         })
       }
-    }, [eJ]),
-    eX = a.useCallback(e => {
+    }, [eQ]),
+    eq = a.useCallback(e => {
       (null == eB ? void 0 : eB.id) != null && Y.default.track(ef.AnalyticEvents.APP_DIRECTORY_CATEGORY_CLICKED, {
         current_page: "product",
         category: e.name,
@@ -284,7 +287,7 @@ function eP(e) {
       guildId: E
     })
   }, [f, E]);
-  let eq = a.useCallback(e => {
+  let e$ = a.useCallback(e => {
       let {
         application: t,
         mutualGuilds: l
@@ -300,14 +303,14 @@ function eP(e) {
         applicationId: t.id
       })
     }, [null == eB ? void 0 : eB.id, eu, E]),
-    e$ = a.useCallback(() => {
+    e0 = a.useCallback(() => {
       null != eB && (0, R.default)(function(e, t) {
         let l = "https://".concat(ef.SUPPORT_DOMAIN, "/hc/").concat(e.toLowerCase(), "/requests/new"),
           i = new URLSearchParams;
         return i.append("tf_12275088515223", "field_value_dc_category_report_an_app_bot"), i.append("tf_12276208289431", "field_value_dc_reported_action_app_directory"), i.append("tf_12094971213335", t.id), i.append("ticket_form_id", "12275528604823"), i.append("tf_subject", "App Directory Report ".concat(t.name, " ").concat(t.id)), "".concat(l, "?").concat(i.toString())
       }(eb, eB))
     }, [eb, eB]),
-    e0 = a.useCallback(e => (0, i.jsxs)(I.Menu, {
+    e1 = a.useCallback(e => (0, i.jsxs)(I.Menu, {
       navId: "application-directory-profile",
       "aria-label": eI.default.Messages.APP_DIRECTORY_PROFILE_UTILITIES_A11Y_LABEL,
       onClose: e,
@@ -317,30 +320,30 @@ function eP(e) {
           id: "report",
           label: eI.default.Messages.REPORT_APP,
           color: "danger",
-          action: e$
+          action: e0
         })
-      }), null != eY ? (0, i.jsx)(I.MenuGroup, {
-        children: eY
+      }), null != eV ? (0, i.jsx)(I.MenuGroup, {
+        children: eV
       }) : null]
-    }), [eY, e$]),
-    [e1, e2] = (0, C.default)(!1, 1e3),
-    e4 = a.useCallback(() => {
+    }), [eV, e0]),
+    [e2, e4] = (0, C.default)(!1, 1e3),
+    e5 = a.useCallback(() => {
       null != eB && (Y.default.track(ef.AnalyticEvents.APP_SHARE_BUTTON_CLICKED, {
         source: "product_page",
         application_id: eB.id,
         guild_id: E
-      }), (0, W.copy)(eN(eB.id)), e2(!0))
-    }, [eB, e2, E]);
+      }), (0, W.copy)(eN(eB.id)), e4(!0))
+    }, [eB, e4, E]);
   a.useEffect(() => {
     let e = new URL(location.href);
     if (x && "true" === e.searchParams.get(ex)) {
       e.searchParams.delete(ex);
       let t = e.pathname + e.search;
-      (0, M.replaceWith)(t), eW("product_page")
+      (0, M.replaceWith)(t), eZ("product_page")
     }
-  }, [x, eW]);
-  let e5 = a.useCallback(() => {
-      null != eB && (x ? eW("product_page") : (Y.default.track(ef.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
+  }, [x, eZ]);
+  let e3 = a.useCallback(() => {
+      null != eB && (x ? eZ("product_page") : (Y.default.track(ef.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
         application_id: f,
         guild_id: E,
         auth_type: null != eB.custom_install_url ? "custom_url" : "in_app",
@@ -349,31 +352,31 @@ function eP(e) {
       }), (0, ee.redirectToLogin)({
         [ex]: "true"
       })))
-    }, [eB, x, eW, f, E]),
+    }, [eB, x, eZ, f, E]),
     {
-      applicationSubscriptionListingsShown: e3
+      applicationSubscriptionListingsShown: e6
     } = (0, y.default)({
       applicationId: null == eB ? void 0 : eB.id,
       groupListingId: null == eB ? void 0 : eB.primary_sku_id,
       guildId: E
     }),
-    e6 = (null == eB ? void 0 : eB.id) === eh.MIDJOURNEY_BOT_ID,
-    [e7, e9] = a.useState(!1),
-    [e8, te] = a.useState(!1),
-    [tt, tl] = a.useState(!0),
-    ti = e => {
-      null != e && e9(e.scrollHeight > e.clientHeight)
+    e7 = (null == eB ? void 0 : eB.id) === eh.MIDJOURNEY_BOT_ID,
+    [e9, e8] = a.useState(!1),
+    [te, tt] = a.useState(!1),
+    [tl, ti] = a.useState(!0),
+    ta = e => {
+      null != e && e8(e.scrollHeight > e.clientHeight)
     },
-    ta = null != ez && ez.length > 0,
-    tn = (null == eB ? void 0 : eB.flags) != null,
+    tn = null != eK && eK.length > 0,
+    ts = (null == eB ? void 0 : eB.flags) != null,
     {
-      enabled: ts
+      enabled: tr
     } = T.appStorefrontExperiment.useExperiment({
       location: "ApplicationDirectoryProfile"
     }),
-    tr = (0, P.useAppStorefrontAvailable)(null !== (d = null == eB ? void 0 : eB.id) && void 0 !== d ? d : ""),
-    to = ts && tr,
-    tc = a.useMemo(() => {
+    to = (0, P.useAppStorefrontAvailable)(null !== (d = null == eB ? void 0 : eB.id) && void 0 !== d ? d : ""),
+    tc = tr && to,
+    td = a.useMemo(() => {
       let e = [],
         t = !0;
       switch (h) {
@@ -386,10 +389,10 @@ function eP(e) {
               variant: "heading-md/semibold",
               children: eI.default.Messages.APP_DIRECTORY_PROFILE_DESCRIPTION_HEADING
             }), (0, i.jsx)("div", {
-              ref: ti,
+              ref: ta,
               className: s()({
-                [eg.descriptionClamp]: !e8,
-                [eg.descriptionClampSafari]: !e8 && "Safari" === o().name
+                [eg.descriptionClamp]: !te,
+                [eg.descriptionClampSafari]: !te && "Safari" === o().name
               }),
               children: (0, i.jsx)(U.default, {
                 className: eg.detailedDescription,
@@ -400,10 +403,10 @@ function eP(e) {
                 },
                 children: n
               })
-            }), (e7 || e8) && (0, i.jsx)(eS, {
-              isViewAll: e8,
+            }), (e9 || te) && (0, i.jsx)(ej, {
+              isViewAll: te,
               onToggle: () => {
-                te(e => !e)
+                tt(e => !e)
               }
             })]
           })), t = !1) : (null == eB ? void 0 : null === (a = eB.directory_entry) || void 0 === a ? void 0 : a.short_description) !== void 0 ? e.push((0, i.jsxs)(i.Fragment, {
@@ -417,19 +420,20 @@ function eP(e) {
           })) : (null == eB ? void 0 : eB.description) != null && e.push((0, i.jsx)(b.default, {
             className: eg.description,
             userBio: eB.description
-          })), null != eO && eO.length > 0 && (e.push((0, i.jsxs)(i.Fragment, {
+          })), null != eL && eL.length > 0 && (e.push((0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(I.Heading, {
               className: eg.sectionHeader,
               variant: "heading-md/semibold",
               children: eI.default.Messages.APP_DIRECTORY_PROFILE_COMMANDS_HEADING
             }), (0, i.jsx)(ec.default, {
               className: eg.commandList,
-              commands: eO
+              commands: eL
             })]
           })), t = !0);
           break
         }
         case em.ApplicationDirectoryProfileSections.IMAGES: {
+          if (0 === eQ.length) break;
           let t = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)("img", {
               className: eg.errorImage,
@@ -441,20 +445,20 @@ function eP(e) {
               children: eI.default.Messages.ERRORS_IMAGE_NOT_FOUND
             })]
           });
-          eJ.forEach((e, t) => {
+          eQ.forEach((e, t) => {
             null != eB ? e.alt = eI.default.Messages.APP_DIRECTORY_PROFILE_IMAGE_CAROUSEL_ALT.format({
               index: t + 1,
-              totalImages: eJ.length,
+              totalImages: eQ.length,
               name: eB.name
             }) : e.alt = eI.default.Messages.APP_DIRECTORY_PROFILE_IMAGE_DEFAULT_ALT
           }), e.push((0, i.jsx)(A.default, {
             className: eg.carousel,
             themedPagination: !0,
-            items: eJ,
+            items: eQ,
             autoplayInterval: 8e3,
             paused: !eM,
             videoAutoPlay: !0,
-            onCurrentItemClick: eQ,
+            onCurrentItemClick: eX,
             errorComponent: t,
             onImageLoad: e => {
               let {
@@ -471,7 +475,7 @@ function eP(e) {
           break
         }
         case em.ApplicationDirectoryProfileSections.PREMIUM:
-          e3 && (null == eB ? void 0 : eB.primary_sku_id) != null && e.push((0, i.jsx)(D.default, {
+          e6 && (null == eB ? void 0 : eB.primary_sku_id) != null && e.push((0, i.jsx)(D.default, {
             applicationId: eB.id,
             applicationPrimarySkuId: null == eB ? void 0 : eB.primary_sku_id,
             analyticsLocation: ef.AnalyticsLocations.APP_DIRECTORY_PROFILE,
@@ -479,17 +483,17 @@ function eP(e) {
           }));
           break;
         case em.ApplicationDirectoryProfileSections.PRIVACY:
-          ta && e.push((0, i.jsxs)(i.Fragment, {
+          tn && e.push((0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(I.Heading, {
               className: eg.sectionHeader,
               variant: "heading-md/semibold",
               children: eI.default.Messages.APP_DIRECTORY_PROFILE_REQUIRED_PERMISSIONS_HEADING
             }), (0, i.jsx)(g.default, {
               className: eg.commandList,
-              grantedPermissions: ez,
+              grantedPermissions: eK,
               grantedPermissionsHeader: eI.default.Messages.APP_DIRECTORY_PROFILE_REQUIRED_PERMISSIONS_SUB_HEADING
             })]
-          })), tn && e.push((0, i.jsxs)(i.Fragment, {
+          })), ts && e.push((0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(I.Heading, {
               className: eg.sectionHeader,
               variant: "heading-md/semibold",
@@ -497,32 +501,29 @@ function eP(e) {
             }), (0, i.jsx)(ed.default, {
               application: eB
             })]
-          }));
-          break;
-        default:
-          (0, Z.assertNever)(h)
+          }))
       }
-      return tl(t), e.map((e, t) => (0, i.jsx)("div", {
+      return ti(t), 0 === e.length && h !== em.ApplicationDirectoryProfileSections.GENERAL && null != eB && eH(), e.map((e, t) => (0, i.jsx)("div", {
         className: eg.section,
         children: e
       }, t))
-    }, [eB, e3, eJ, eO, ez, eQ, eM, h, e8, e7, ta, tn]),
-    td = a.useMemo(() => {
+    }, [h, eH, eB, eL, te, e9, eQ, eM, eX, e6, tn, ts, eK]),
+    tu = a.useMemo(() => {
       let e = [{
         sectionName: em.ApplicationDirectoryProfileSections.GENERAL,
         sectionText: eI.default.Messages.APP_DIRECTORY_PROFILE_TAB_GENERAL
       }];
-      return eJ.length > 0 && e.push({
+      return eQ.length > 0 && e.push({
         sectionName: em.ApplicationDirectoryProfileSections.IMAGES,
         sectionText: eI.default.Messages.APP_DIRECTORY_PROFILE_TAB_IMAGES
-      }), e3 && !to && e.push({
+      }), e6 && !tc && e.push({
         sectionName: em.ApplicationDirectoryProfileSections.PREMIUM,
         sectionText: eI.default.Messages.APP_DIRECTORY_PROFILE_TAB_PREMIUM
-      }), (ta || tn) && e.push({
+      }), (tn || ts) && e.push({
         sectionName: em.ApplicationDirectoryProfileSections.PRIVACY,
         sectionText: eI.default.Messages.APP_DIRECTORY_PROFILE_TAB_PRIVACY
       }), e
-    }, [eJ.length, e3, ta, tn, to]);
+    }, [eQ.length, e6, tn, ts, tc]);
   return _ = null == eB ? null == eP || eP === J.FetchState.FETCHING ? (0, i.jsx)(ei.default, {
     loading: eP === J.FetchState.FETCHING
   }) : (0, i.jsx)("div", {
@@ -540,9 +541,9 @@ function eP(e) {
     })
   }) : (0, i.jsxs)(ei.default, {
     loading: eP === J.FetchState.FETCHING,
-    children: [(0, i.jsx)(eL, {
+    children: [(0, i.jsx)(eO, {
       app: eB,
-      iconSrc: eH
+      iconSrc: eY
     }), (0, i.jsxs)("div", {
       className: eg.__invalid_page,
       children: [(0, i.jsxs)("div", {
@@ -553,7 +554,7 @@ function eP(e) {
             className: eg.headerIcon,
             alt: "",
             "aria-hidden": !0,
-            src: eH,
+            src: eY,
             width: eC,
             height: eC
           }), (0, i.jsx)(el.default, {
@@ -572,7 +573,7 @@ function eP(e) {
                 className: eg.name,
                 variant: "heading-xxl/semibold",
                 children: eB.name
-              }), e3 && (0, i.jsx)(I.Tooltip, {
+              }), e6 && (0, i.jsx)(I.Tooltip, {
                 tooltipClassName: eg.premiumIconTooltip,
                 text: eI.default.Messages.APPLICATION_DIRECTORY_PROFILE_TOOLTIP_PREMIUM,
                 children: e => (0, i.jsx)("img", {
@@ -581,29 +582,29 @@ function eP(e) {
                   className: eg.premiumIcon,
                   src: l("744050")
                 })
-              }), e6 && (0, i.jsx)(ea.default, {
+              }), e7 && (0, i.jsx)(ea.default, {
                 className: eg.partnerBadge
               })]
             }), (0, i.jsxs)("div", {
               className: eg.buttons,
-              children: [to && (0, i.jsx)(eo.ApplicationDirectoryStoreBtn, {
+              children: [tc && (0, i.jsx)(eo.ApplicationDirectoryStoreBtn, {
                 appId: eB.id,
                 guildId: null != E ? E : void 0
               }), (0, i.jsx)(I.Button, {
-                onClick: e4,
+                onClick: e5,
                 color: I.Button.Colors.PRIMARY,
-                children: e1 ? eI.default.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : eI.default.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
+                children: e2 ? eI.default.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : eI.default.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
               }), (0, i.jsx)(I.Button, {
                 color: I.Button.Colors.BRAND,
-                onClick: e5,
-                disabled: !eV,
+                onClick: e3,
+                disabled: !eW,
                 children: eI.default.Messages.APPLICATION_ADD_BUTTON
               }), (0, i.jsx)(I.Popout, {
                 renderPopout: e => {
                   let {
                     closePopout: t
                   } = e;
-                  return e0(t)
+                  return e1(t)
                 },
                 position: "left",
                 align: "top",
@@ -621,16 +622,16 @@ function eP(e) {
             })]
           }), (0, i.jsx)(e_.default, {
             activeSection: h,
-            setSection: eK,
-            shownSections: td
+            setSection: eJ,
+            shownSections: tu
           })]
         })]
       }), (0, i.jsxs)("div", {
         className: eg.contentContainer,
         children: [(0, i.jsxs)("div", {
           className: eg.content,
-          children: [tc, null != eT && eT.length > 0 ? (0, i.jsxs)(i.Fragment, {
-            children: [tt && (0, i.jsx)("div", {
+          children: [td, null != eT && eT.length > 0 ? (0, i.jsxs)(i.Fragment, {
+            children: [tl && (0, i.jsx)("div", {
               className: eg.separator
             }), (0, i.jsxs)("div", {
               className: eg.section,
@@ -639,10 +640,10 @@ function eP(e) {
                 variant: "eyebrow",
                 children: eI.default.Messages.APP_DIRECTORY_PROFILE_RELATED_APPS_HEADING
               }), (0, i.jsx)(ei.default, {
-                loading: j,
+                loading: S,
                 children: (0, i.jsx)(et.default, {
                   applications: eT,
-                  onViewOne: eq
+                  onViewOne: e$
                 })
               })]
             })]
@@ -651,7 +652,7 @@ function eP(e) {
           className: eg.sidebar,
           application: eB,
           guildId: E,
-          onViewCategory: eX,
+          onViewCategory: eq,
           onClickGuildWidget: eG
         })]
       })]
@@ -661,7 +662,7 @@ function eP(e) {
   })
 }
 
-function ej(e) {
+function eS(e) {
   switch (e.type) {
     case E.ApplicationDirectoryEntryCarouselItemType.MEDIA_PROXY:
       var t;
@@ -678,7 +679,7 @@ function ej(e) {
   }
   return console.warn("Unsupported carousel item", e), null
 }
-let eS = e => {
+let ej = e => {
     let t, {
       onToggle: l,
       isViewAll: a
@@ -699,7 +700,7 @@ let eS = e => {
       }), (0, i.jsx)(k.default, {
         className: eg.showMoreButtonIcon
       })]
-    }), (0, i.jsx)(eO, {
+    }), (0, i.jsx)(eL, {
       children: (0, i.jsx)(I.Button, {
         look: I.Button.Looks.BLANK,
         color: I.Button.Colors.TRANSPARENT,
@@ -711,7 +712,7 @@ let eS = e => {
       })
     })
   },
-  eO = e => {
+  eL = e => {
     let {
       className: t,
       contentClassName: l,
@@ -732,11 +733,11 @@ let eS = e => {
     })
   };
 
-function eL(e) {
+function eO(e) {
   let {
     app: t,
     iconSrc: l
-  } = e, n = (0, j.default)(l, f.default.unsafe_rawColors.PRIMARY_800.css), {
+  } = e, n = (0, S.default)(l, f.default.unsafe_rawColors.PRIMARY_800.css), {
     bot: s
   } = t, r = (0, m.useStateFromStores)([x.default], () => x.default.useReducedMotion), o = a.useMemo(() => {
     let e = {
