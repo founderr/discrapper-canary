@@ -1,5 +1,8 @@
 "use strict";
 n.r(t), n.d(t, {
+  openDisclosureModal: function() {
+    return d
+  },
   openGameLink: function() {
     return u
   },
@@ -44,5 +47,23 @@ function u(e, t) {
         questContentPosition: t.position
       }), (0, a.default)(e.config.getGameLink)
     }
+  })
+}
+
+function d(e, t) {
+  (0, o.trackQuestContentClicked)({
+    questId: e.id,
+    questContent: t.content,
+    questContentPosition: t.position,
+    questContentCTA: t.ctaContent
+  }), (0, r.openModalLazy)(async () => {
+    let {
+      default: r
+    } = await Promise.all([n.e("99387"), n.e("4266")]).then(n.bind(n, "316210"));
+    return n => (0, i.jsx)(r, {
+      ...n,
+      questContent: t.content,
+      questConfig: e.config
+    })
   })
 }

@@ -109,7 +109,7 @@ t.default = function(e) {
       }), (0, d.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("59286")]).then(n.bind(n, "316210"));
+        } = await Promise.all([n.e("99387"), n.e("4266")]).then(n.bind(n, "316210"));
         return t => (0, i.jsx)(e, {
           ...t,
           questContent: g.QuestContent.MEMBERS_LIST,
