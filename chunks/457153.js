@@ -11,25 +11,26 @@ var a = n("735250"),
   c = n("685613"),
   f = n("78826"),
   E = n("898170"),
-  h = n("95985"),
-  _ = n("743294"),
-  C = n("689938"),
-  m = n("481900");
+  h = n("759853"),
+  _ = n("95985"),
+  C = n("743294"),
+  m = n("689938"),
+  p = n("481900");
 t.default = function(e) {
   var t;
   let {
     className: l,
     expansionSpring: S,
-    isExpanded: p,
-    isExpansionAnimationComplete: g,
-    quest: I,
-    useReducedMotion: T
-  } = e, A = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, N = s.useMemo(() => (0, d.isAssetAnimated)(I.config.assets.questBarHero), [I]), v = (0, d.getQuestBarHeroAssetUrl)(I);
+    isExpanded: g,
+    isExpansionAnimationComplete: I,
+    quest: T,
+    useReducedMotion: A
+  } = e, N = s.useRef(null), v = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, R = s.useMemo(() => (0, d.isAssetAnimated)(T.config.assets.questBarHero), [T]), O = (0, d.getQuestBarHeroAssetUrl)(T);
   return (0, a.jsxs)(r.animated.div, {
-    "aria-hidden": p && g,
-    className: i()(l, m.contentCollapsed, {
-      [m.contentCollapsedExpanded]: p,
-      [m.contentCollapsedAccepted]: A
+    "aria-hidden": g && I,
+    className: i()(l, p.contentCollapsed, {
+      [p.contentCollapsedExpanded]: g,
+      [p.contentCollapsedAccepted]: v
     }),
     style: {
       opacity: S.to({
@@ -38,15 +39,15 @@ t.default = function(e) {
       })
     },
     children: [(0, a.jsxs)("div", {
-      className: m.heroAssetWrapper,
+      className: p.heroAssetWrapper,
       children: [(0, a.jsx)("div", {
-        className: m.heroAssetDarken
+        className: p.heroAssetDarken
       }), (0, a.jsx)("div", {
-        className: m.heroAssetTint,
+        className: p.heroAssetTint,
         style: {
-          backgroundColor: I.config.colors.primary
+          backgroundColor: T.config.colors.primary
         }
-      }), N ? (0, a.jsx)(f.QuestsAsset, {
+      }), R ? (0, a.jsx)(f.QuestsAsset, {
         id: "QuestBarV2ContentExpanded_heroAnimated",
         children: e => (0, a.jsx)(u.default, {
           ref: e,
@@ -54,11 +55,11 @@ t.default = function(e) {
           loop: !0,
           muted: !0,
           playsInline: !0,
-          className: m.heroAsset,
+          className: p.heroAsset,
           controls: !1,
           children: (0, a.jsx)("source", {
-            src: v,
-            type: (0, d.getVideoAssetMimeType)(v)
+            src: O,
+            type: (0, d.getVideoAssetMimeType)(O)
           })
         })
       }) : (0, a.jsx)(f.QuestsAsset, {
@@ -66,40 +67,44 @@ t.default = function(e) {
         children: e => (0, a.jsx)("img", {
           ref: e,
           alt: "",
-          className: m.heroAsset,
-          src: v
+          className: p.heroAsset,
+          src: O
         })
       })]
-    }), A ? (0, a.jsx)("div", {
-      className: m.postEnrollmentBackground,
+    }), v ? (0, a.jsx)("div", {
+      className: p.postEnrollmentBackground,
       style: {
-        backgroundImage: "linear-gradient(90deg, ".concat(_.QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT, ", ").concat(_.QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT, ")")
+        backgroundImage: "linear-gradient(90deg, ".concat(C.QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT, ", ").concat(C.QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT, ")")
       }
     }) : (0, a.jsx)(E.QuestBarBackgroundAnimation, {
-      className: m.background,
-      animationClassName: m.backgroundAnimation,
-      quest: I,
-      useReducedMotion: T
+      className: p.background,
+      animationClassName: p.backgroundAnimation,
+      quest: T,
+      useReducedMotion: A
+    }), (0, a.jsx)(h.default, {
+      progressBarRef: N,
+      quest: T
     }), (0, a.jsx)("div", {
-      className: m.contentCollapsedWrapper,
-      children: A ? (0, a.jsx)(h.default, {
-        quest: I,
+      className: p.contentCollapsedWrapper,
+      children: v ? (0, a.jsx)(_.default, {
+        quest: T,
+        progressBarRef: N,
         isExpanded: !1
       }) : (0, a.jsxs)("div", {
-        className: m.preEnrollmentWrapper,
+        className: p.preEnrollmentWrapper,
         children: [(0, a.jsx)("img", {
           alt: "",
-          className: m.wreathIcon,
+          className: p.wreathIcon,
           src: n("896145")
         }), (0, a.jsx)(c.default, {
-          className: m.partnerBranding,
-          quest: I,
+          className: p.partnerBranding,
+          quest: T,
           withGameTile: !1
         }), (0, a.jsx)(o.Text, {
           color: "always-white",
           variant: "text-xs/medium",
-          className: m.questAvailable,
-          children: C.default.Messages.QUEST_AVAILABLE
+          className: p.questAvailable,
+          children: m.default.Messages.QUEST_AVAILABLE
         })]
       })
     })]

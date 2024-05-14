@@ -13,18 +13,20 @@ var a = n("735250"),
 t.default = e => {
   let {
     quest: t,
-    isExpanded: n
-  } = e, E = s.useMemo(() => (0, r.calculatePercentComplete)(t), [t]), h = E > 0 ? c.HAS_PROGRESS_COLORS : c.NO_PROGRESS_COLORS, _ = (0, d.useQuestBarTitle)(t), C = (0, d.useQuestBarSubtitle)(t, n);
+    progressBarRef: n,
+    isExpanded: E
+  } = e, h = s.useMemo(() => (0, r.calculatePercentComplete)(t), [t]), _ = h > 0 ? c.HAS_PROGRESS_COLORS : c.NO_PROGRESS_COLORS, C = (0, d.useQuestBarTitle)(t), m = (0, d.useQuestBarSubtitle)(t, E);
   return (0, a.jsxs)("div", {
     className: f.questProgressWrapper,
     children: [(0, a.jsx)(u.default, {
-      percentComplete: E,
+      percentComplete: h,
       size: 42,
       strokeWidth: 3,
-      progressBarBackgroundTop: h.backgroundTop,
-      progressBarBackgroundBottom: h.backgroundBottom,
-      progressBarForeground: h.foreground,
-      glowColor: h.glow,
+      progressBarBackgroundTop: _.backgroundTop,
+      progressBarBackgroundBottom: _.backgroundBottom,
+      progressBarForeground: _.foreground,
+      glowColor: _.glow,
+      progressBarRef: n,
       children: (0, a.jsx)(o.default, {
         className: f.questProgressRewardTile,
         quest: t,
@@ -36,12 +38,12 @@ t.default = e => {
         className: f.questProgressHint,
         color: "header-primary",
         variant: "text-sm/semibold",
-        children: _
+        children: C
       }), (0, a.jsx)(l.Text, {
         className: f.questProgressHint,
         color: "text-muted",
         variant: "text-xs/normal",
-        children: C
+        children: m
       })]
     })]
   })
