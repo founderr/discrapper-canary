@@ -122,6 +122,7 @@ function v(e) {
             currentUser: B,
             displayProfile: F,
             guild: k,
+            isHovering: H,
             onOpenProfile: Y,
             channelId: v,
             onClose: y
