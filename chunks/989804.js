@@ -4,8 +4,8 @@ var l = a("735250"),
   s = a("470079"),
   n = a("442837"),
   o = a("37234"),
-  u = a("230711"),
-  i = a("410575"),
+  i = a("230711"),
+  u = a("410575"),
   r = a("503089"),
   d = a("110924"),
   c = a("100527"),
@@ -17,7 +17,7 @@ var l = a("735250"),
   _ = a("113434"),
   m = a("663389"),
   b = a("210887"),
-  h = a("361695"),
+  h = a("394644"),
   k = a("981631"),
   T = a("689938");
 let y = s.forwardRef(function() {
@@ -81,15 +81,15 @@ let y = s.forwardRef(function() {
       locationStack: P
     })
   }, [a, v, y, x, A, P]);
-  let I = (0, h.default)(),
+  let I = (0, h.useDefaultUserSettingsSections)(),
     j = (0, E.useIsEligibleForPomelo)(),
     L = (0, _.useQuestsForSettingsBadge)(),
     N = s.useCallback(e => {
-      u.default.setSection(e)
+      i.default.setSection(e)
     }, []);
   return (0, l.jsx)(S.AnalyticsLocationProvider, {
     value: F,
-    children: (0, l.jsx)(i.default, {
+    children: (0, l.jsx)(u.default, {
       root: !0,
       page: k.AnalyticsPages.USER_SETTINGS,
       children: (0, l.jsx)(r.default, {
