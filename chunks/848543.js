@@ -36,8 +36,8 @@ function v(e) {
     ...L
   } = e, {
     mute: O,
-    suppress: M
-  } = (0, _.default)(t), y = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), P = O || M || y, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+    suppress: y
+  } = (0, _.default)(t), M = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), P = O || y || M, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: P
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: k
@@ -125,8 +125,8 @@ function v(e) {
     children: (0, a.jsx)(d.Tooltip, {
       text: function() {
         if (O) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (y) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        if (y) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
         return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => Y(e)

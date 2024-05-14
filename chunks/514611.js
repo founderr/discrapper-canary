@@ -58,8 +58,8 @@ class O extends(a = i.PureComponent) {
       name: R,
       description: L,
       presenceCount: O,
-      memberCount: M,
-      keywords: y
+      memberCount: y,
+      keywords: M
     } = t, P = null === (e = t.features) || void 0 === e ? void 0 : e.has(I.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
@@ -170,8 +170,8 @@ class O extends(a = i.PureComponent) {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: L
-              }), U && null != y && null != i && (0, s.jsx)(E.DiscoveryTags, {
-                tags: y,
+              }), U && null != M && null != i && (0, s.jsx)(E.DiscoveryTags, {
+                tags: M,
                 onTagClick: e => i(e, t.id),
                 guildId: t.id,
                 section: S.AnalyticsContexts.POPULAR
@@ -188,7 +188,7 @@ class O extends(a = i.PureComponent) {
                       membersOnline: O
                     })
                   })]
-                }), null != M && (0, s.jsxs)("div", {
+                }), null != y && (0, s.jsxs)("div", {
                   className: A.memberCount,
                   children: [(0, s.jsx)("div", {
                     className: A.dotOffline
@@ -196,7 +196,7 @@ class O extends(a = i.PureComponent) {
                     variant: "text-xs/normal",
                     color: "header-secondary",
                     children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-                      count: M
+                      count: y
                     })
                   })]
                 })]

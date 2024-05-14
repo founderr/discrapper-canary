@@ -1,16 +1,16 @@
 "use strict";
-a.r(t);
-var l = a("735250"),
-  s = a("470079"),
-  r = a("481060"),
-  n = a("727637"),
-  i = a("906732"),
-  o = a("241553"),
-  u = a("333867"),
-  c = a("559629"),
-  d = a("231338"),
-  f = a("689938"),
-  C = a("46309");
+l.r(t);
+var a = l("735250"),
+  s = l("470079"),
+  r = l("481060"),
+  n = l("727637"),
+  i = l("906732"),
+  o = l("241553"),
+  u = l("333867"),
+  c = l("559629"),
+  d = l("231338"),
+  f = l("689938"),
+  C = l("46309");
 let m = {
   dark: [{
     box: "#FFF19E",
@@ -60,22 +60,22 @@ let m = {
 t.default = e => {
   let {
     product: t,
-    returnRef: a,
-    onSuccess: E,
-    tooltipDelay: p,
-    isGiftEasterEggEnabled: h,
-    disableCustomColor: g = !1
+    returnRef: l,
+    onSuccess: p,
+    tooltipDelay: E,
+    isGiftEasterEggEnabled: g,
+    disableCustomColor: h = !1
   } = e, {
-    analyticsLocations: x
-  } = (0, i.default)(), T = s.useRef(null), L = (0, n.default)(T), v = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
-  return (0, l.jsx)(r.Tooltip, {
+    analyticsLocations: b
+  } = (0, i.default)(), x = s.useRef(null), T = (0, n.default)(x), L = h ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
+  return (0, a.jsx)(r.Tooltip, {
     text: f.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: p,
-    children: e => (0, l.jsx)(r.Button, {
+    delay: E,
+    children: e => (0, a.jsx)(r.Button, {
       ...e,
-      buttonRef: T,
+      buttonRef: x,
       className: C.giftButton,
-      color: g ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
+      color: h ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
       size: r.ButtonSizes.ICON,
       innerClassName: C.giftButtonInner,
@@ -84,19 +84,19 @@ t.default = e => {
         e.stopPropagation(), (0, u.default)({
           skuId: t.skuId,
           isGift: !0,
-          analyticsLocations: x,
-          returnRef: a,
-          onClose: null != E ? e => {
-            e && E()
+          analyticsLocations: b,
+          returnRef: l,
+          onClose: null != p ? e => {
+            e && p()
           } : void 0
         })
       },
-      children: h ? (0, l.jsx)(o.SeasonalGiftIcon, {
-        hovered: L,
+      children: g ? (0, a.jsx)(o.SeasonalGiftIcon, {
+        hovered: T,
         isContentDismissed: !0,
-        themeOverride: v,
+        themeOverride: L,
         boxColors: m
-      }) : (0, l.jsx)(c.default, {
+      }) : (0, a.jsx)(c.default, {
         width: 24,
         height: 24
       })

@@ -30,8 +30,8 @@ var a = n("735250"),
   R = n("785717"),
   L = n("221292"),
   O = n("318661"),
-  M = n("502762"),
-  y = n("192133"),
+  y = n("502762"),
+  M = n("192133"),
   P = n("138394"),
   x = n("131640"),
   D = n("695346"),
@@ -281,7 +281,7 @@ function $(e) {
         className: Q.popoutContainer,
         children: (0, a.jsx)("div", {
           ref: ea,
-          children: (0, a.jsxs)(M.default, {
+          children: (0, a.jsxs)(y.default, {
             className: Q.themeContainer,
             user: t,
             displayProfile: B,
@@ -296,8 +296,8 @@ function $(e) {
               disableUserProfileLink: __OVERLAY__,
               isHovering: es,
               showPremiumBadgeUpsell: !1
-            }), (0, a.jsxs)(M.default.Overlay, {
-              children: [(0, a.jsx)(y.default, {
+            }), (0, a.jsxs)(y.default.Overlay, {
+              children: [(0, a.jsx)(M.default, {
                 activity: V,
                 customStatusActivity: $,
                 displayProfile: B,

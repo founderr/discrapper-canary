@@ -93,7 +93,7 @@ t.default = s.memo(function(e) {
   }, {
     index: 2,
     name: C.default.Messages.CLAN_SETUP_UTILITY_TRAITS_STEP
-  }], []), M = (0, i.useSpring)({
+  }], []), y = (0, i.useSpring)({
     ref: o,
     from: {
       opacity: 0
@@ -102,7 +102,7 @@ t.default = s.memo(function(e) {
       opacity: 1
     },
     config: S
-  }), y = (0, i.useSpring)({
+  }), M = (0, i.useSpring)({
     ref: d,
     from: {
       opacity: 0,
@@ -116,10 +116,10 @@ t.default = s.memo(function(e) {
   });
   return (0, i.useChain)([o, d], [0, .2]), (0, a.jsxs)(i.animated.div, {
     className: m.container,
-    style: M,
+    style: y,
     children: [(0, a.jsx)(i.animated.div, {
       className: m.sequencer,
-      style: y,
+      style: M,
       children: (0, a.jsx)(p, {
         currentStep: E,
         selectedGame: t

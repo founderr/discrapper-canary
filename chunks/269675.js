@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return y
   }
 });
 var a = n("735250"),
@@ -33,7 +33,7 @@ var a = n("735250"),
 function O(e) {
   let {
     guildId: t
-  } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), O = (0, l.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), y = (0, p.default)(t), P = (0, l.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), x = (0, S.useGroupListingsFetchContext)(), {
+  } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), O = (0, l.useStateFromStores)([h.default], () => h.default.isConnected()), y = (0, f.default)(t), M = (0, p.default)(t), P = (0, l.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), x = (0, S.useGroupListingsFetchContext)(), {
     shouldHideGuildPurchaseEntryPoints: D,
     restrictionsLoading: b
   } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !x || P || b;
@@ -41,7 +41,7 @@ function O(e) {
     subsection: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == n ? void 0 : n.name
   }), (0, u.default)(i.isMobile ? "role-subscriptions-overview" : void 0);
-  let j = O && (null == n || !(M || y) || D && !b);
+  let j = O && (null == n || !(y || M) || D && !b);
   if (s.useEffect(() => {
       o.fetchSubscriptions()
     }, []), s.useEffect(() => {
@@ -67,7 +67,7 @@ function O(e) {
       id: N.OVERVIEW_NOTICE_ROOT
     }), (0, a.jsx)("div", {
       className: L.content,
-      children: M ? (0, a.jsx)(r.ScrollerNone, {
+      children: y ? (0, a.jsx)(r.ScrollerNone, {
         className: L.scroller,
         children: (0, a.jsx)("div", {
           className: L.scrollerContent,
@@ -80,7 +80,7 @@ function O(e) {
   })
 }
 
-function M(e) {
+function y(e) {
   let {
     guildId: t
   } = e;

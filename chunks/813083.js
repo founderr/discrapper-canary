@@ -1,36 +1,36 @@
 "use strict";
-a.r(t), a("627341");
-var l, s, r = a("735250");
-a("470079");
-var n = a("120356"),
-  i = a.n(n),
-  o = a("278074"),
-  u = a("780384"),
-  c = a("410030"),
-  d = a("26290"),
-  f = a("884697"),
-  C = a("689938"),
-  m = a("360960");
-(s = l || (l = {})).BANNER = "banner", s.MODAL = "modal", s.CARD = "card";
+l.r(t), l("627341");
+var a, s, r = l("735250");
+l("470079");
+var n = l("120356"),
+  i = l.n(n),
+  o = l("278074"),
+  u = l("780384"),
+  c = l("410030"),
+  d = l("26290"),
+  f = l("884697"),
+  C = l("689938"),
+  m = l("360960");
+(s = a || (a = {})).BANNER = "banner", s.MODAL = "modal", s.CARD = "card";
 t.default = e => {
   let {
     category: t,
-    display: a,
-    className: l
+    display: l,
+    className: a
   } = e, s = (0, c.default)();
   if (null == t.unpublishedAt) return null;
   let n = (0, f.getDaysRemaining)(t.unpublishedAt);
 
-  function E(e) {
+  function p(e) {
     return (0, r.jsx)(d.TextBadge, {
       disableColor: !0,
       text: e,
-      className: i()((0, u.isThemeDark)(s) ? m.badgeDark : m.badgeLight, l)
+      className: i()((0, u.isThemeDark)(s) ? m.badgeDark : m.badgeLight, a)
     })
   }
-  return (0, o.match)([a, n > 1]).with(["card", !0], () => null).with(["banner", !0], () => E(C.default.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
+  return (0, o.match)([l, n > 1]).with(["card", !0], () => null).with(["banner", !0], () => p(C.default.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
     days: n
-  }))).with(["modal", !0], () => E(C.default.Messages.COLLECTIBLES_DAYS_LEFT.format({
+  }))).with(["modal", !0], () => p(C.default.Messages.COLLECTIBLES_DAYS_LEFT.format({
     days: n
-  }))).otherwise(() => E(C.default.Messages.COLLECTIBLES_LAST_DAY))
+  }))).otherwise(() => p(C.default.Messages.COLLECTIBLES_LAST_DAY))
 }

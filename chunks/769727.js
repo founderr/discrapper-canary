@@ -28,8 +28,8 @@ var a, s, i = n("735250"),
   R = n("10473"),
   L = n("702646"),
   O = n("207796"),
-  M = n("543550"),
-  y = n("976757"),
+  y = n("543550"),
+  M = n("976757"),
   P = n("981631"),
   x = n("308083"),
   D = n("689938"),
@@ -50,8 +50,8 @@ function j(e) {
       n = v / e,
       a = v / t;
     return a > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e
-  }, [v]), M = l.useMemo(() => {
-    if ((0, y.isLoadedSearchResult)(r)) {
+  }, [v]), y = l.useMemo(() => {
+    if ((0, M.isLoadedSearchResult)(r)) {
       let e = r.items;
       return null != t ? e.slice(0, t) : e
     }
@@ -69,7 +69,7 @@ function j(e) {
       return
     }
     U({
-      height: F.current.getBoundingClientRect().y + 400 + 16 + 32
+      height: F.current.getBoundingClientRect().y + 400 + 16 + 40
     }), 0 === N.current && (G({
       opacity: 1
     }), N.current = 1)
@@ -78,7 +78,7 @@ function j(e) {
     trailing: !0
   }), F = (0, m.useResizeObserver)(k);
   l.useEffect(() => {
-    if (null != r && !!(0, y.isLoadedSearchResult)(r))(!(null != h && (0, y.isLoadedSearchResult)(h)) || !(h.loadedAt >= r.loadedAt)) && (k(), (0, g.trackClanDiscoveryViewed)(r.items.map(e => e.id), "top_picks", a))
+    if (null != r && !!(0, M.isLoadedSearchResult)(r))(!(null != h && (0, M.isLoadedSearchResult)(h)) || !(h.loadedAt >= r.loadedAt)) && (k(), (0, g.trackClanDiscoveryViewed)(r.items.map(e => e.id), "top_picks", a))
   }, [a, r, h, k]), l.useEffect(() => {
     if (T !== p && T !== O.ClanDiscoveryMode.DISCOVERY)(T === O.ClanDiscoveryMode.ADMIN_UPSELL || null == T) && p === O.ClanDiscoveryMode.DISCOVERY && (k(), I.current = setTimeout(() => {
       k()
@@ -86,24 +86,24 @@ function j(e) {
   }, [T, p]), l.useEffect(() => () => {
     null != I.current && clearTimeout(I.current)
   }, []);
-  let B = l.useMemo(() => null == M ? [] : p === O.ClanDiscoveryMode.ADMIN_UPSELL ? [{
+  let B = l.useMemo(() => null == y ? [] : p === O.ClanDiscoveryMode.ADMIN_UPSELL ? [{
     section: "other_guilds",
-    items: M,
+    items: y,
     sectionHeight: 24,
     header: _ === O.ClanDiscoveryGame.VALORANT ? D.default.Messages.CLAN_DISCOVERY_VALORANT_TITLE : D.default.Messages.CLAN_DISCOVERY_GENSHIN_TITLE,
     subtitle: D.default.Messages.CLAN_DISCOVERY_PREPILOT_SUBTITLE
   }] : [{
     section: "top_picks",
-    items: M.slice(0, L),
+    items: y.slice(0, L),
     sectionHeight: 24,
     header: D.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
     subtitle: D.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
   }, {
     section: "other_guilds",
-    items: M.slice(L),
+    items: y.slice(L),
     sectionHeight: 24
-  }], [M, p, L, _]);
-  return null == M ? null : (0, i.jsx)(i.Fragment, {
+  }], [y, p, L, _]);
+  return null == y ? null : (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)("div", {
       className: b.topPicks,
       children: [(0, i.jsx)(u.animated.div, {
@@ -124,7 +124,7 @@ function j(e) {
         sectionGutter: 16,
         itemGutter: 16,
         paddingHorizontal: 32,
-        paddingVertical: 32,
+        paddingVertical: 40,
         removeEdgeItemGutters: !0,
         renderItem: (e, t, n, l) => {
           var r;
@@ -133,7 +133,7 @@ function j(e) {
           } = B[e], u = o[t];
           return (0, i.jsx)(A.default, {
             clan: u,
-            affinity: null !== (r = u.affininty) && void 0 !== r ? r : (0, y.getClanDiscoveryAffinity)(u, a),
+            affinity: null !== (r = u.affininty) && void 0 !== r ? r : (0, M.getClanDiscoveryAffinity)(u, a),
             traitsToHighlight: s,
             className: b.card,
             style: n,
@@ -258,9 +258,9 @@ let G = l.memo(function(e) {
   }, []);
   switch (a) {
     case O.ClanDiscoveryMode.ADMIN_UPSELL:
-      return (0, i.jsx)(M.ClanDiscoveryAdminContainer, {});
+      return (0, i.jsx)(y.ClanDiscoveryAdminContainer, {});
     case O.ClanDiscoveryMode.GET_STARTED:
-      return (0, i.jsx)(M.ClanDiscoveryUserContainer, {});
+      return (0, i.jsx)(y.ClanDiscoveryUserContainer, {});
     case O.ClanDiscoveryMode.DISCOVERY:
     case O.ClanDiscoveryMode.GAMES:
     case O.ClanDiscoveryMode.PLAYSTYLE:
