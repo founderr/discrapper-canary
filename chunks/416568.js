@@ -17,8 +17,8 @@ var l = n("735250"),
   g = n("925549"),
   E = n("209613"),
   _ = n("100527"),
-  S = n("906732"),
-  I = n("358221"),
+  I = n("906732"),
+  S = n("358221"),
   N = n("963202"),
   T = n("706590"),
   A = n("940777"),
@@ -69,20 +69,22 @@ class ei {
   setGuildsTree(e) {
     this.guildsTree = e
   }
-  constructor(e, t, n) {
-    et(this, "guildsTree", void 0), et(this, "setScrolling", void 0), et(this, "onScroll", void 0), et(this, "scrollerRef", void 0), et(this, "guildDiscoveryRef", void 0), et(this, "nodeRefs", void 0), et(this, "timeout", void 0), et(this, "isScrolling", void 0), et(this, "scrollToGuild", void 0), et(this, "handleJumpToGuild", void 0), et(this, "scrollTo", void 0), et(this, "isItemVisible", void 0), et(this, "handleScroll", void 0), et(this, "_handleScroll", void 0), et(this, "setNodeRef", void 0), this.guildsTree = e, this.setScrolling = t, this.onScroll = n, this.scrollerRef = a.createRef(), this.guildDiscoveryRef = a.createRef(), this.nodeRefs = {}, this.timeout = new m.Timeout, this.isScrolling = !1, this.scrollToGuild = (e, t) => {
+  constructor(e, t, n, l) {
+    et(this, "guildsTree", void 0), et(this, "setScrolling", void 0), et(this, "onScroll", void 0), et(this, "scrollToDiscovery", void 0), et(this, "scrollerRef", void 0), et(this, "guildDiscoveryRef", void 0), et(this, "nodeRefs", void 0), et(this, "timeout", void 0), et(this, "isScrolling", void 0), et(this, "scrollToGuild", void 0), et(this, "handleJumpToGuild", void 0), et(this, "scrollTo", void 0), et(this, "isItemVisible", void 0), et(this, "handleScroll", void 0), et(this, "_handleScroll", void 0), et(this, "setNodeRef", void 0), this.guildsTree = e, this.setScrolling = t, this.onScroll = n, this.scrollToDiscovery = l, this.scrollerRef = a.createRef(), this.guildDiscoveryRef = a.createRef(), this.nodeRefs = {}, this.timeout = new m.Timeout, this.isScrolling = !1, this.scrollToGuild = (e, t) => {
       let n = this.scrollerRef.current;
       if (null == n) return;
       if (null == e && window.location.pathname.startsWith(J.Routes.GUILD_DISCOVERY) || e === J.ViewHistoryKeys.SERVER_DISCOVERY_BADGE || e === J.ViewHistoryKeys.E3_SERVER_DISCOVERY_BADGE) {
-        let e = (0, u.findDOMNode)(this.guildDiscoveryRef.current);
-        (0, f.isElement)(e, HTMLElement) ? n.scrollIntoViewNode({
-          node: e,
-          animate: t,
-          padding: 8
-        }): n.scrollTo({
-          to: 0,
-          animate: t
-        });
+        if (this.scrollToDiscovery) {
+          let e = (0, u.findDOMNode)(this.guildDiscoveryRef.current);
+          (0, f.isElement)(e, HTMLElement) ? n.scrollIntoViewNode({
+            node: e,
+            animate: t,
+            padding: 8
+          }): n.scrollTo({
+            to: 0,
+            animate: t
+          })
+        }
         return
       }
       if (null == e) {
@@ -144,26 +146,29 @@ function er(e) {
   } = e, [o] = (0, h.useStateFromStoresArray)([O.default], () => {
     let e = O.default.getGuildsTree();
     return [e, e.version]
-  }), u = (0, h.useStateFromStoresArray)([y.default], () => Object.values(y.default.getGuilds())), f = (0, h.useStateFromStores)([L.default], () => L.default.lurkingGuildIds()), p = a.useMemo(() => n ? [] : f, [f, n]), g = (0, h.useStateFromStoresArray)([y.default, M.default], () => b.default.keys(y.default.getGuilds()).filter(e => M.default.isCurrentUserGuest(e))), E = p.concat(g), et = (0, h.useStateFromStores)([I.default], () => I.default.isFullscreenInContext()), en = (0, h.useStateFromStores)([y.default], () => y.default.getGeoRestrictedGuilds()), [el, ea] = a.useState(!1), es = a.useCallback(() => ea(!0), []), er = a.useCallback(() => ea(!1), []), eo = a.useRef(!1), [eu] = a.useState(() => new m.Timeout), ed = a.useRef(null), ec = a.useRef(null), {
-    ref: ef,
-    ...eh
-  } = (0, c.useListContainerProps)(), ep = (0, C.useFocusJumpSection)(), [em, eC] = a.useState(!1), [eg] = a.useState(() => new ei(o, eC, () => {
+  }), u = (0, h.useStateFromStoresArray)([y.default], () => Object.values(y.default.getGuilds())), f = (0, h.useStateFromStores)([L.default], () => L.default.lurkingGuildIds()), p = a.useMemo(() => n ? [] : f, [f, n]), g = (0, h.useStateFromStoresArray)([y.default, M.default], () => b.default.keys(y.default.getGuilds()).filter(e => M.default.isCurrentUserGuest(e))), E = p.concat(g), et = (0, h.useStateFromStores)([S.default], () => S.default.isFullscreenInContext()), en = (0, h.useStateFromStores)([y.default], () => y.default.getGeoRestrictedGuilds()), [el, ea] = a.useState(!1), es = a.useCallback(() => ea(!0), []), er = a.useCallback(() => ea(!1), []), eo = a.useRef(!1), [eu] = a.useState(() => new m.Timeout), ed = a.useRef(null), ec = a.useRef(null), {
+    enableClanCreation: ef,
+    defaultGameId: eh
+  } = (0, N.useAnyClanPrepilotExperiment)(u, "guilds_bar"), ep = !ef, {
+    ref: em,
+    ...eC
+  } = (0, c.useListContainerProps)(), eg = (0, C.useFocusJumpSection)(), [eE, e_] = a.useState(!1), eI = a.useMemo(() => new ei(o, e_, () => {
     var e, t;
     null === (e = ed.current) || void 0 === e || e.calculateState(), null === (t = ec.current) || void 0 === t || t.calculateState()
-  })), {
-    analyticsLocations: eE
-  } = (0, S.default)(_.default.GUILDS_LIST), {
-    pathname: e_
-  } = (0, d.useLocation)(), eS = e_.startsWith(J.Routes.GUILD_DISCOVERY), eI = e_.startsWith(J.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
+  }, ep), [o, ep]), {
+    analyticsLocations: eS
+  } = (0, I.default)(_.default.GUILDS_LIST), {
+    pathname: eN
+  } = (0, d.useLocation)(), eT = eN.startsWith(J.Routes.GUILD_DISCOVERY), eA = eN.startsWith(J.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
   a.useLayoutEffect(() => {
     if (!eo.current) {
       if (0 !== o.size) {
-        if (eS) eg.scrollToGuild(null, !1);
+        if (eT) eI.scrollToGuild(null, !1);
         else {
           let {
             scrollTop: e
           } = R.default.getGuildListDimensions();
-          eg.scrollTo({
+          eI.scrollTo({
             to: e,
             animate: !1
           })
@@ -172,63 +177,63 @@ function er(e) {
       }
     }
   }, []), a.useEffect(() => {
-    if (eg.setGuildsTree(o), eo.current || 0 === o.size) return;
+    if (eI.setGuildsTree(o), eo.current || 0 === o.size) return;
     let e = v.default.getState().guildId;
-    eg.scrollToGuild(e, !1);
+    eI.scrollToGuild(e, !1);
     let t = null;
     return v.default.subscribe(e => {
       let {
         guildId: n
       } = e;
-      n !== t && (t = n, eg.scrollToGuild(t, !1))
+      n !== t && (t = n, eI.scrollToGuild(t, !1))
     })
-  }, [o, eg]), (0, G.default)(eg.scrollToGuild);
-  let {
-    enableClanCreation: eN,
-    defaultGameId: eT
-  } = (0, N.useAnyClanPrepilotExperiment)(u, "guilds_bar"), eA = o.getRoots(), eL = (0, T.default)(), ev = (0, x.useSignUpButton)(), ex = en.map(e => (0, l.jsx)(V.default, {
-    id: e.id,
-    name: e.name,
-    icon: e.icon
-  }, e.id));
-  return (0, l.jsx)(S.AnalyticsLocationProvider, {
-    value: eE,
+  }, [o, eI]), (0, G.default)(eI.scrollToGuild);
+  let eL = o.getRoots(),
+    ev = (0, T.default)(),
+    ex = (0, x.useSignUpButton)(),
+    eR = en.map(e => (0, l.jsx)(V.default, {
+      id: e.id,
+      name: e.name,
+      icon: e.icon
+    }, e.id));
+  return (0, l.jsx)(I.AnalyticsLocationProvider, {
+    value: eS,
     children: (0, l.jsx)("nav", {
       className: i()(ee.wrapper, s, (0, j.getThemeClass)(r), {
         [ee.hidden]: et
       }),
       "aria-label": $.default.Messages.GUILDS_BAR_A11Y_LABEL,
       children: (0, l.jsxs)("ul", {
-        ref: ef,
-        ...eh,
-        ...ep,
+        ref: em,
+        ...eC,
+        ...eg,
         role: "tree",
         className: ee.tree,
         children: [(0, l.jsx)(U.default, {
           ref: ed,
-          isVisible: eg.isItemVisible,
-          onJumpTo: eg.handleJumpToGuild,
+          isVisible: eI.isItemVisible,
+          onJumpTo: eI.handleJumpToGuild,
           className: ee.unreadMentionsIndicatorTop,
           barClassName: ee.unreadMentionsBar
         }), (0, l.jsxs)(C.AdvancedScrollerNone, {
           className: i()({
             [ee.scroller]: !0,
-            [ee.scrolling]: em
+            [ee.scrolling]: eE
           }),
-          ref: eg.scrollerRef,
-          onScroll: eg.handleScroll,
-          children: [(0, l.jsx)(Y.HomeButton, {}), eL ? (0, l.jsx)(A.default, {}) : null, (0, l.jsx)(B.default, {}), (0, l.jsx)(K.default, {
-            isOnHubVerificationRoute: eI
-          }), (0, l.jsx)(w.default, {}), ev, E.map(e => (0, l.jsx)(q.default, {
+          ref: eI.scrollerRef,
+          onScroll: eI.handleScroll,
+          children: [(0, l.jsx)(Y.HomeButton, {}), ev ? (0, l.jsx)(A.default, {}) : null, (0, l.jsx)(B.default, {}), (0, l.jsx)(K.default, {
+            isOnHubVerificationRoute: eA
+          }), (0, l.jsx)(w.default, {}), ex, E.map(e => (0, l.jsx)(q.default, {
             guildId: e
           }, e)), (0, l.jsx)(Q.default, {}), (0, l.jsx)(W.default, {}), (0, l.jsx)("div", {
             "aria-label": $.default.Messages.SERVERS,
-            children: eA.map(function e(t) {
+            children: eL.map(function e(t) {
               switch (t.type) {
                 case P.GuildsNodeType.FOLDER:
                   return (0, l.jsx)(Z.default, {
                     folderNode: t,
-                    setNodeRef: eg.setNodeRef,
+                    setNodeRef: eI.setNodeRef,
                     draggable: !0,
                     sorting: el,
                     onDragStart: es,
@@ -238,7 +243,7 @@ function er(e) {
                 case P.GuildsNodeType.GUILD:
                   return (0, l.jsx)(X.default, {
                     guildNode: t,
-                    setRef: eg.setNodeRef,
+                    setRef: eI.setNodeRef,
                     draggable: !0,
                     sorting: el,
                     onDragStart: es,
@@ -248,25 +253,25 @@ function er(e) {
                   return null
               }
             })
-          }), ex, n ? null : (0, l.jsx)(H.default, {
+          }), eR, n ? null : (0, l.jsx)(H.default, {
             disableTooltip: p.length > 0,
-            lastTargetNode: eA[eA.length - 1]
-          }), n || eN ? null : (0, l.jsx)(k.default, {
-            ref: eg.guildDiscoveryRef,
-            selected: eS
+            lastTargetNode: eL[eL.length - 1]
+          }), n || ef ? null : (0, l.jsx)(k.default, {
+            ref: eI.guildDiscoveryRef,
+            selected: eT
           }), (0, l.jsx)(z.default, {}), t ? null : (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(W.default, {}), (0, l.jsx)(F.default, {})]
           })]
-        }), !n && eN ? (0, l.jsx)(k.GuildsBarFixedFooter, {
+        }), !n && ef ? (0, l.jsx)(k.GuildsBarFixedFooter, {
           children: (0, l.jsx)(k.GuildsBarClanAdminUpsellPopout, {
-            defaultGameId: eT,
+            defaultGameId: eh,
             children: e => {
               let {
                 onClick: t
               } = e;
               return (0, l.jsx)(k.default, {
-                ref: eg.guildDiscoveryRef,
-                selected: eS,
+                ref: eI.guildDiscoveryRef,
+                selected: eT,
                 className: ee.fixedDiscoveryIcon,
                 onClick: t
               })
@@ -275,10 +280,10 @@ function er(e) {
         }) : null, (0, l.jsx)(U.default, {
           reverse: !0,
           ref: ec,
-          isVisible: eg.isItemVisible,
-          onJumpTo: eg.handleJumpToGuild,
+          isVisible: eI.isItemVisible,
+          onJumpTo: eI.handleJumpToGuild,
           className: i()(ee.unreadMentionsIndicatorBottom, {
-            [ee.unreadMentionsFixedFooter]: !n && eN
+            [ee.unreadMentionsFixedFooter]: !n && ef
           }),
           barClassName: ee.unreadMentionsBar
         })]
