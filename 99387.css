@@ -53107,7 +53107,12 @@ div:has(>div>.modal__06f49) {
     right: 0;
     -webkit-mask-image: linear-gradient(to top, #000 0, rgba(0, 0, 0, 0)100%);
     mask-image: linear-gradient(to top, #000 0, rgba(0, 0, 0, 0)100%);
-    background: var(--bg-overlay-app-frame, var(--background-tertiary))
+    background: var(--bg-overlay-app-frame, var(--background-tertiary));
+    transition: opacity.2s ease
+}
+
+.gradientHidden__0cdc2 {
+    opacity: 0
 }
 
 .backgroundImage__6b7c7 {
