@@ -80,3 +80,4 @@ function l() {
   });
   return e
 }
+t.default = a

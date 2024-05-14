@@ -192,7 +192,8 @@ function D(e) {
 let M = e => t => [g.ActivityTypes.PLAYING, g.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId);
 
 function y(e, t, n, i) {
-  let s = (0, o.useStateFromStoresArray)([T.default, A.default, m.default], () => {
+  let s;
+  let l = (0, o.useStateFromStoresArray)([T.default, A.default, m.default], () => {
       let t = T.default.hasConsented(g.Consents.PERSONALIZATION),
         n = A.default.getUserAffinities(),
         i = a()(e).map(e => m.default.getUser(e)).filter(O.isNotNullish).value();
@@ -201,23 +202,30 @@ function y(e, t, n, i) {
         return null !== (n = null === (t = A.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
       }], ["desc"]) : i
     }),
-    l = s.slice(0, 7),
-    u = Math.max(0, s.length - l.length),
-    d = "";
+    u = l.slice(0, 7),
+    d = Math.max(0, l.length - u.length);
   if (null != i && i.length > 0) {
-    let e = 1 === i.length ? i[0] : null,
-      r = C.default.getName(t, n, m.default.getUser(e));
-    d = null != e ? L.default.Messages.GUILD_POPOUT_ACTIVITY_STREAMER.format({
-      username: r
-    }) : L.default.Messages.GUILD_POPOUT_ACTIVITY_STREAMERS.format({
-      streamerCount: i.length
+    let e = C.default.getName(t, n, m.default.getUser(i[0]));
+    s = 1 === i.length ? L.default.Messages.GUILD_POPOUT_ACTIVITY_STREAMER.format({
+      username: e
+    }) : L.default.Messages.GUILD_POPOUT_USERS_STREAMING.format({
+      username: e,
+      count: i.length - 1
+    })
+  } else {
+    let e = C.default.getName(t, n, m.default.getUser(u[0].id));
+    s = 1 === u.length ? L.default.Messages.GUILD_POPOUT_USER_IN_VOICE.format({
+      username: e
+    }) : L.default.Messages.GUILD_POPOUT_USERS_IN_VOICE.format({
+      username: e,
+      count: u.length - 1
     })
   }
   return {
-    totalUsers: s.length,
-    usersToShow: l,
-    othersCount: u,
-    streamerUsersText: d
+    totalUsers: l.length,
+    usersToShow: u,
+    othersCount: d,
+    usersText: s
   }
 }
 
