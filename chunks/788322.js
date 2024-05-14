@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("768581"),
   C = n("900849"),
   m = n("556017"),
-  S = n("879484"),
-  p = n("26580"),
+  p = n("879484"),
+  S = n("26580"),
   g = n("206887"),
   I = n("981631"),
   T = n("689938"),
@@ -89,12 +89,12 @@ t.default = e => {
       }
     }
   };
-  s.useEffect(() => S.DiscoveryTagsExperiment.trackExposure({
+  s.useEffect(() => p.DiscoveryTagsExperiment.trackExposure({
     location: "4302e4_1"
   }));
   let {
     shouldDisplayTags: K
-  } = S.DiscoveryTagsExperiment.useExperiment({
+  } = p.DiscoveryTagsExperiment.useExperiment({
     location: "4302e4_2"
   }, {
     autoTrackExposure: !1
@@ -167,9 +167,9 @@ t.default = e => {
             className: A.description,
             variant: "text-sm/normal",
             children: D
-          }), K && null != j && null != L && (0, a.jsx)(p.DiscoveryTags, {
+          }), K && null != j && null != L && (0, a.jsx)(S.DiscoveryTags, {
             guildId: l.id,
-            discoveryTagStyle: p.DiscoveryTagStyle.ALT,
+            discoveryTagStyle: S.DiscoveryTagStyle.ALT,
             onTagClick: e => L(e, l.id),
             tags: j,
             section: C.AnalyticsContexts.SEARCH

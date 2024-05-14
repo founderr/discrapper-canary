@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("796918"),
   C = n("513532"),
   m = n("741595"),
-  S = n("974842"),
-  p = n("359380"),
+  p = n("974842"),
+  S = n("359380"),
   g = n("308083"),
   I = n("689938"),
   T = n("590190");
@@ -104,7 +104,7 @@ let R = {
       progress: n,
       handleClanUpdate: s
     } = v(t);
-    return (0, a.jsx)(p.default, {
+    return (0, a.jsx)(S.default, {
       title: I.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
       description: I.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
       handleUpdate: e => s({
@@ -151,7 +151,7 @@ let R = {
       errors: s,
       handleClanUpdate: l
     } = v(t);
-    return (0, a.jsx)(S.default, {
+    return (0, a.jsx)(p.default, {
       handleUpdate: l,
       tag: n.tag,
       error: null == s ? void 0 : s.tag,

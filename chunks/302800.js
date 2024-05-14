@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CollectiblesDCToDisplayOptions: function() {
-    return p
+    return S
   },
   CollectiblesMarketingVariant: function() {
     return a
@@ -27,14 +27,14 @@ var a, s, l, i, r = n("278074"),
   _ = n("848359"),
   C = n("782984"),
   m = n("186077"),
-  S = n("376477");
+  p = n("376477");
 (l = a || (a = {}))[l.NONE = 0] = "NONE", l[l.TOOLTIP = 1] = "TOOLTIP", l[l.COACHTIP = 2] = "COACHTIP", (i = s || (s = {})).NONE = "NONE", i.SHY = "SHY", i.LOFI_VIBES = "LOFI_VIBES", i.GALAXY = "GALAXY", i.RETRO_AND_PIRATES = "RETRO_AND_PIRATES";
-let p = {
+let S = {
     [u.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
       type: 2,
       title: () => d.default.Messages.COLLECTIBLES_SHY_COACHTIP_TITLE,
       body: () => d.default.Messages.COLLECTIBLES_SHY_COACHTIP_DESCRIPTION,
-      imageSrc: S,
+      imageSrc: p,
       assetIds: ["a_98555e40cc6802bd3a4fed906af1d992", "a_09de63526a45be1ddac70e84718ee04a", "a_904b1989077c91fca1168d39bfcaa0a4"],
       entrypointDecorationAssets: {
         srcDark: f,

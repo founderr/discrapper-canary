@@ -26,7 +26,7 @@ function C(e) {
   } = e, {
     priorityMembers: C,
     guildContext: m
-  } = t, S = C[0], p = function(e) {
+  } = t, p = C[0], S = function(e) {
     let {
       priorityMembers: t,
       partiedMembers: n
@@ -61,7 +61,7 @@ function C(e) {
       partiedMembers: d,
       voiceChannels: C,
       currentActivities: m
-    } = e, S = s.length, p = d.length - S, g = m[0], I = null == g ? void 0 : g.activity, T = null == g ? void 0 : g.startedPlayingTime, A = {
+    } = e, p = s.length, S = d.length - p, g = m[0], I = null == g ? void 0 : g.activity, T = null == g ? void 0 : g.startedPlayingTime, A = {
       name: null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : ""
     };
     if ((0, i.default)(I) && null != I) return {
@@ -72,7 +72,7 @@ function C(e) {
       }),
       icon: null
     };
-    if (S + p === 1 && null != g) {
+    if (p + S === 1 && null != g) {
       let {
         game: e
       } = g;
@@ -182,11 +182,11 @@ function C(e) {
     }
   }(t);
   return (0, a.jsx)(f.default.Header, {
-    priorityUser: S,
+    priorityUser: p,
     guildId: null == m ? void 0 : m.id,
-    title: p,
+    title: S,
     subtitle: g,
     icon: I,
-    onContextMenu: e => s(e, S.user)
+    onContextMenu: e => s(e, p.user)
   })
 }

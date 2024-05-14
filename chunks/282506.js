@@ -15,8 +15,8 @@ var s = n("570140"),
   _ = n("944486"),
   C = n("914010"),
   m = n("979651"),
-  S = n("981631"),
-  p = n("65154");
+  p = n("981631"),
+  S = n("65154");
 
 function g() {
   var e;
@@ -31,7 +31,7 @@ function I() {
   return function() {
     let e = h.default.getChannelId(),
       t = _.default.getChannelId();
-    if (!f.default.supports(p.Features.VIDEO) || o.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT)) return !0;
+    if (!f.default.supports(S.Features.VIDEO) || o.default.getWindowOpen(p.PopoutWindowKeys.CHANNEL_CALL_POPOUT)) return !0;
     let n = u.default.getAllActiveStreams().length > 0,
       a = null != e && Object.values(m.default.getVideoVoiceStatesForChannel(e)).some(e => {
         let {
@@ -41,12 +41,12 @@ function I() {
       });
     if (!(a || n)) return !0;
     let s = c.default.hasLayers();
-    return !(s && c.default.getLayers().includes(S.Layers.RTC_DEBUG)) && (!!s || e === t || !1)
+    return !(s && c.default.getLayers().includes(p.Layers.RTC_DEBUG)) && (!!s || e === t || !1)
   }() ? g() : (!t && g(), null != e && function(e) {
     var t;
     let n = d.default.getChannel(e);
     if (null == n || E.default.isOpen(e)) return !1;
-    s.default.wait(() => l.open(n.id, S.PictureInPictureComponents.VIDEO, {
+    s.default.wait(() => l.open(n.id, p.PictureInPictureComponents.VIDEO, {
       channel: n
     })), null === (t = h.default.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), a = e
   }(e))

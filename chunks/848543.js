@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("294629"),
   C = n("131951"),
   m = n("459273"),
-  S = n("242291"),
-  p = n("792165"),
+  p = n("242291"),
+  S = n("792165"),
   g = n("603074"),
   I = n("981631"),
   T = n("921944"),
@@ -37,7 +37,7 @@ function v(e) {
   } = e, {
     mute: L,
     suppress: M
-  } = (0, _.default)(t), y = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), P = L || M || y, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+  } = (0, _.default)(t), y = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), P = L || M || y, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, p.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: P
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: k
@@ -73,7 +73,7 @@ function v(e) {
         guildId: b,
         channel: t,
         onClose: n,
-        gridNotice: j === o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(p.CustomCallSoundUpsell, {
+        gridNotice: j === o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(S.CustomCallSoundUpsell, {
           onClose: n,
           markAsDismissed: G
         }),

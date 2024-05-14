@@ -23,8 +23,8 @@ var a, s, l = n("735250"),
   _ = n("501655"),
   C = n("192079"),
   m = n("427679"),
-  S = n("448206"),
-  p = n("496675"),
+  p = n("448206"),
+  S = n("496675"),
   g = n("938475"),
   I = n("808602"),
   T = n("305878"),
@@ -359,7 +359,7 @@ function et(e) {
     channel: t,
     speakers: n,
     voiceType: a
-  } = e, s = t.getGuildId(), u = i.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([p.default], () => p.default.can(Y.Permissions.CONNECT, t)), c = (0, S.default)(t.id), f = W.default.Messages.JOIN;
+  } = e, s = t.getGuildId(), u = i.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([S.default], () => S.default.can(Y.Permissions.CONNECT, t)), c = (0, p.default)(t.id), f = W.default.Messages.JOIN;
   switch (a) {
     case 1:
       f = W.default.Messages.JOIN;

@@ -24,8 +24,8 @@ function C(e) {
     key: n,
     isFocused: C
   } = e, m = s.useContext(u.AnalyticsContext), {
-    analyticsLocations: S
-  } = (0, i.default)(), p = e => {
+    analyticsLocations: p
+  } = (0, i.default)(), S = e => {
     e.stopPropagation(), l.default.unblockUser(t.id, {
       location: "Friends"
     })
@@ -34,7 +34,7 @@ function C(e) {
     isFocused: C,
     onClick: () => (0, r.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: S,
+      sourceAnalyticsLocations: p,
       analyticsLocation: m.location
     }),
     user: t,
@@ -49,7 +49,7 @@ function C(e) {
         icon: o.default,
         actionType: d.default.ActionTypes.DENY,
         tooltip: h.default.Messages.UNBLOCK,
-        onClick: p,
+        onClick: S,
         shouldHighlight: e
       })]
     })

@@ -16,8 +16,8 @@ var l = n("481060"),
   _ = n("486472"),
   C = n("430824"),
   m = n("914010"),
-  S = n("594174"),
-  p = n("823379"),
+  p = n("594174"),
+  S = n("823379"),
   g = n("358085"),
   I = n("929809"),
   T = n("179645"),
@@ -88,7 +88,7 @@ class M extends r.default {
             case null:
               break;
             default:
-              p.assertNever(e)
+              S.assertNever(e)
           }
         };
         a = await (0, l.openModalLazy)(async () => {
@@ -115,14 +115,14 @@ class M extends r.default {
       open: e => u.openClaimAccountModal(g.isPlatformEmbedded, e),
       predicate: () => {
         var e;
-        return !r && null != S.default.getCurrentUser() && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
+        return !r && null != p.default.getCurrentUser() && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
       }
     }, {
       key: "Verification Gate with Claim Account",
       open: e => (0, d.openMemberVerificationModal)(L, null != e ? e : void 0),
       predicate: () => {
         var e;
-        return r && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED
+        return r && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED
       }
     }, {
       key: "Guild Welcome Modal",

@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("246364"),
   C = n("937111"),
   m = n("523924"),
-  S = n("390500"),
-  p = n("200305"),
+  p = n("390500"),
+  S = n("200305"),
   g = n("981631"),
   I = n("756286"),
   T = n("689938"),
@@ -85,7 +85,7 @@ t.default = e => {
         children: (() => {
           switch (null == y ? void 0 : y.applicationStatus) {
             case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
-              return (0, a.jsx)(S.default, {
+              return (0, a.jsx)(p.default, {
                 onWithdrawApplication: G,
                 guild: D
               });
@@ -99,7 +99,7 @@ t.default = e => {
                 guild: D
               });
             default:
-              return (0, a.jsx)(p.default, {
+              return (0, a.jsx)(S.default, {
                 guildId: v,
                 inviteCode: R,
                 onComplete: U

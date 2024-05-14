@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return p
   }
 });
 var a = n("735250"),
@@ -20,12 +20,12 @@ var a = n("735250"),
   C = n("689938"),
   m = n("860030");
 
-function S(e) {
+function p(e) {
   let {
     user: t,
     nickname: n,
-    status: S,
-    isFocused: p
+    status: p,
+    isFocused: S
   } = e, g = s.useContext(c.AnalyticsContext), {
     analyticsLocations: I
   } = (0, i.default)(), T = e => {
@@ -40,9 +40,9 @@ function S(e) {
     })
   }, A = e => {
     null == e || e.stopPropagation(), r.default.ignore(t.id)
-  }, N = S === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : S;
+  }, N = p === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : p;
   return (0, a.jsx)(E.default, {
-    isFocused: p,
+    isFocused: S,
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
       userId: t.id,

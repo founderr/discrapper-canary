@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return p
   }
 });
 var a = n("735250"),
@@ -43,7 +43,7 @@ function m(e, t, n) {
   }, t)
 }
 
-function S() {
+function p() {
   let e = Object.values(u.default.getGuilds()).filter(e => e.hasFeature(h.GuildFeatures.HUB)),
     t = e => {
       c.default.track(h.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {

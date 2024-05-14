@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("5967"),
   C = n("346329"),
   m = n("981631"),
-  S = n("689938"),
-  p = n("803844");
+  p = n("689938"),
+  S = n("803844");
 
 function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -63,11 +63,11 @@ class I extends s.Component {
     } = this.state;
     return (0, a.jsx)("div", {
       className: i()({
-        [p.libraryFilter]: !0,
-        [p.focused]: t
+        [S.libraryFilter]: !0,
+        [S.focused]: t
       }),
       children: (0, a.jsx)(h.default, {
-        className: p.searchBar,
+        className: S.searchBar,
         ref: this.setRef,
         onChange: d.updateLibraryFilter,
         onFocus: () => this.setState({
@@ -82,7 +82,7 @@ class I extends s.Component {
         },
         maxLength: 100,
         query: e,
-        placeholder: S.default.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
+        placeholder: p.default.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
       })
     })
   }

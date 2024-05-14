@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("5560"),
   C = n("451478"),
   m = n("585483"),
-  S = n("145604"),
-  p = n("718813"),
+  p = n("145604"),
+  S = n("718813"),
   g = n("981631"),
   I = n("796163");
 t.default = s.memo(function() {
@@ -37,9 +37,9 @@ t.default = s.memo(function() {
   }), [t]), (0, E.default)(), (0, a.jsxs)(r.Shakeable, {
     ref: e,
     className: I.app,
-    children: [(0, a.jsx)(p.default, {
+    children: [(0, a.jsx)(S.default, {
       className: I.layers,
       children: (0, a.jsx)(o.default, {})
-    }), (0, a.jsx)(h.default, {}), (0, a.jsx)(u.default, {}), (0, a.jsx)(S.default, {}), (0, a.jsx)(_.default, {}), (0, a.jsx)(r.DnDKeyboardHelpBar, {})]
+    }), (0, a.jsx)(h.default, {}), (0, a.jsx)(u.default, {}), (0, a.jsx)(p.default, {}), (0, a.jsx)(_.default, {}), (0, a.jsx)(r.DnDKeyboardHelpBar, {})]
   })
 })

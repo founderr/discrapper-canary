@@ -10,8 +10,8 @@ var a, s, l, i, r, o = n("442837"),
   _ = n("454175"),
   C = n("619914"),
   m = n("581883"),
-  S = n("70956"),
-  p = n("780570"),
+  p = n("70956"),
+  S = n("780570"),
   g = n("314897"),
   I = n("77498"),
   T = n("283595"),
@@ -19,8 +19,8 @@ var a, s, l, i, r, o = n("442837"),
   N = n("944486"),
   v = n("981631");
 let R = "ActivityTrackingStore",
-  O = 30 * S.default.Millis.MINUTE,
-  L = 5 * S.default.Millis.MINUTE,
+  O = 30 * p.default.Millis.MINUTE,
+  L = 5 * p.default.Millis.MINUTE,
   M = null !== (a = u.Storage.get(R)) && void 0 !== a ? a : {},
   y = {},
   P = !1;
@@ -37,7 +37,7 @@ function D(e) {
     n = Date.now(),
     a = null != e.updatedAt ? n - e.updatedAt : 0;
   a > O + L && (a = 0);
-  let s = (0, p.shouldShareApplicationActivity)(e.applicationId, T.default),
+  let s = (0, S.shouldShareApplicationActivity)(e.applicationId, T.default),
     l = N.default.getVoiceChannelId(),
     i = g.default.getSessionId(),
     r = A.default.getMediaSessionId();

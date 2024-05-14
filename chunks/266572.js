@@ -16,7 +16,7 @@ var s = n("544891"),
   _ = n("996106"),
   C = n("186901"),
   m = n("981631");
-let S = 10 * E.default.Millis.SECOND;
+let p = 10 * E.default.Millis.SECOND;
 t.default = {
   [m.RPCCommands.VALIDATE_APPLICATION]: {
     scope: C.RPC_LOCAL_SCOPE,
@@ -43,7 +43,7 @@ t.default = {
           if (!e) throw new _.default({
             errorCode: m.RPCErrors.INVALID_ENTITLEMENT
           }, "User does not have entitlement.")
-        }), (0, l.timeoutPromise)(S).then(() => {
+        }), (0, l.timeoutPromise)(p).then(() => {
           throw new _.default({
             errorCode: m.RPCErrors.INVALID_ENTITLEMENT
           }, "Timed out fetching entitlement.")

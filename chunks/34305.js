@@ -16,7 +16,7 @@ var a = n("735250"),
   C = n("341972"),
   m = n("611273");
 
-function S(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,7 +24,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends s.PureComponent {
+class S extends s.PureComponent {
   renderDiskUsageCircle() {
     let {
       metadata: e
@@ -153,10 +153,10 @@ class p extends s.PureComponent {
     return this.props.editingPath === this.props.path ? this.renderEditing() : this.renderViewing()
   }
   constructor(...e) {
-    super(...e), S(this, "state", {
+    super(...e), p(this, "state", {
       label: void 0,
       isDefault: null
-    }), S(this, "handleStartEditing", () => {
+    }), p(this, "handleStartEditing", () => {
       let {
         path: e,
         label: t,
@@ -167,7 +167,7 @@ class p extends s.PureComponent {
         label: t,
         isDefault: n
       })
-    }), S(this, "handleStopEditing", () => {
+    }), p(this, "handleStopEditing", () => {
       let {
         onToggleEditing: e
       } = this.props;
@@ -175,7 +175,7 @@ class p extends s.PureComponent {
         label: void 0,
         isDefault: null
       })
-    }), S(this, "handleRemoveLocation", () => {
+    }), p(this, "handleRemoveLocation", () => {
       (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
         ...e,
         header: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
@@ -189,16 +189,16 @@ class p extends s.PureComponent {
           children: _.default.Messages.USER_SETTINGS_GAMES_REMOVE_LOCATION_BODY
         })
       }))
-    }), S(this, "handleSaveChanges", () => {
+    }), p(this, "handleSaveChanges", () => {
       (0, r.updateInstallLocation)(this.props.path, {
         label: null != this.state.label ? this.state.label : this.props.label,
         isDefault: null != this.state.isDefault ? this.state.isDefault : this.props.isDefault
       }), this.handleStopEditing()
-    }), S(this, "handleLabelChange", e => {
+    }), p(this, "handleLabelChange", e => {
       this.setState({
         label: e
       })
-    }), S(this, "handleToggleDefault", () => {
+    }), p(this, "handleToggleDefault", () => {
       this.setState({
         isDefault: !this.state.isDefault
       })
@@ -230,7 +230,7 @@ class g extends s.PureComponent {
           path: l,
           label: i
         } = e;
-        return (0, a.jsx)(p, {
+        return (0, a.jsx)(S, {
           path: l,
           label: i,
           metadata: t[l],
@@ -251,13 +251,13 @@ class g extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), S(this, "state", {
+    super(...e), p(this, "state", {
       editingPath: null
-    }), S(this, "handleAddInstallationLocation", () => {
+    }), p(this, "handleAddInstallationLocation", () => {
       h.default.showOpenDialog(["openDirectory"]).then(e => {
         null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0] && (0, r.addInstallLocation)(e[0])
       })
-    }), S(this, "handleToggleEditing", e => {
+    }), p(this, "handleToggleEditing", e => {
       this.setState({
         editingPath: e
       })

@@ -17,8 +17,8 @@ var a, s, l = n("735250"),
   _ = n("15274"),
   C = n("924301"),
   m = n("504160"),
-  S = n("151864"),
-  p = n("725436"),
+  p = n("151864"),
+  S = n("725436"),
   g = n("497656"),
   I = n("554747"),
   T = n("230900"),
@@ -52,11 +52,11 @@ function Y(e) {
   } = e, a = (0, g.useActiveEventOrStageInstanceChannel)(t.id), s = (0, I.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: Y,
     isEventNoticeHidden: W
-  } = (0, u.useStateFromStoresObject)([S.default], () => ({
-    isStageNoticeHidden: S.default.isLiveChannelNoticeHidden({
+  } = (0, u.useStateFromStoresObject)([p.default], () => ({
+    isStageNoticeHidden: p.default.isLiveChannelNoticeHidden({
       stageId: null == r ? void 0 : r.id
     }),
-    isEventNoticeHidden: S.default.isLiveChannelNoticeHidden({
+    isEventNoticeHidden: p.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
   }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([x.default], () => x.default.can(B.Permissions.CONNECT, a)), Z = (0, M.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
@@ -86,7 +86,7 @@ function Y(e) {
       isEventNoticeHidden: d,
       isStageNoticeHidden: f,
       isStudyRoomNotice: E
-    } = e, _ = null != n && null != a && !f, S = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
+    } = e, _ = null != n && null != a && !f, p = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
     if (E && null != a) {
       let e = (0, h.getChannelIconComponent)(a);
       return {
@@ -175,11 +175,11 @@ function Y(e) {
         if (null == e) return {
           noticeType: null
         };
-        let n = C.default.getUserCount(t.id, S);
+        let n = C.default.getUserCount(t.id, p);
         return {
           noticeType: 1,
           title: t.name,
-          location: (0, p.guildEventDetailsParser)(e, !0),
+          location: (0, S.guildEventDetailsParser)(e, !0),
           locationIcon: (0, l.jsx)(G.default, {
             width: 16,
             height: 16,
@@ -207,7 +207,7 @@ function Y(e) {
         }
       } else if (t.entity_type === F.GuildScheduledEventEntityTypes.VOICE && null != a) {
         let e = (0, h.getChannelIconComponent)(a),
-          n = C.default.getUserCount(t.id, S);
+          n = C.default.getUserCount(t.id, p);
         return {
           noticeType: 2,
           title: t.name,

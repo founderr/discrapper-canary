@@ -15,12 +15,12 @@ var a = n("392711"),
   _ = n("996106"),
   C = n("914946"),
   m = n("238679"),
-  S = n("452426"),
-  p = n("295424"),
+  p = n("452426"),
+  S = n("295424"),
   g = n("863141"),
   I = n("186901"),
   T = n("981631");
-let A = e => (0, S.default)(e).required().keys({
+let A = e => (0, p.default)(e).required().keys({
   channel_id: e.string().required()
 });
 
@@ -39,7 +39,7 @@ function N(e) {
     errorCode: T.RPCErrors.INVALID_CHANNEL
   }, "Invalid nsfw channel id: ".concat(s.id))
 }
-let v = e => (0, S.default)(e).keys({
+let v = e => (0, p.default)(e).keys({
   channel_id: e.string().allow(null)
 });
 
@@ -56,7 +56,7 @@ function R(e) {
 let O = {
   [T.RPCEvents.GUILD_STATUS]: {
     scope: T.OAuth2Scopes.RPC,
-    validation: e => (0, S.default)(e).required().keys({
+    validation: e => (0, p.default)(e).required().keys({
       guild_id: e.string().required()
     }),
     handler(e) {
@@ -91,7 +91,7 @@ let O = {
     scope: {
       [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ]
     },
-    validation: e => (0, S.default)(e).required().keys({
+    validation: e => (0, p.default)(e).required().keys({
       channel_id: e.string().required()
     }),
     handler(e) {
@@ -124,7 +124,7 @@ let O = {
     scope: {
       [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ]
     },
-    validation: e => (0, S.default)(e).required().keys({
+    validation: e => (0, p.default)(e).required().keys({
       channel_id: e.string().required()
     }),
     handler(e) {
@@ -157,7 +157,7 @@ let O = {
     scope: {
       [I.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VOICE_READ]
     },
-    validation: e => (0, S.default)(e).required().keys({
+    validation: e => (0, p.default)(e).required().keys({
       channel_id: e.string().required()
     }),
     handler(e) {
@@ -350,7 +350,7 @@ let O = {
       let {
         prevState: a,
         dispatch: l
-      } = e, u = o.default.getStreamerActiveStreamMetadata(), d = (null == u ? void 0 : u.pid) != null ? r.default.getGameForPID(u.pid) : null, c = (null == d ? void 0 : d.id) != null ? i.default.getApplication(d.id) : null, f = null != c ? (0, p.default)(c) : null, E = null == u ? void 0 : u.sourceName, h = {
+      } = e, u = o.default.getStreamerActiveStreamMetadata(), d = (null == u ? void 0 : u.pid) != null ? r.default.getGameForPID(u.pid) : null, c = (null == d ? void 0 : d.id) != null ? i.default.getApplication(d.id) : null, f = null != c ? (0, S.default)(c) : null, E = null == u ? void 0 : u.sourceName, h = {
         active: null != u,
         pid: null !== (t = null == u ? void 0 : u.pid) && void 0 !== t ? t : null,
         application: (n = null != f, n) ? {

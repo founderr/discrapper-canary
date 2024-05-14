@@ -17,9 +17,9 @@ t.default = e => {
   let {
     guildId: t,
     inviteCode: n
-  } = e, [C, m] = s.useState(h.WaveStates.INITIAL), [S, p] = s.useState(null != n);
+  } = e, [C, m] = s.useState(h.WaveStates.INITIAL), [p, S] = s.useState(null != n);
   s.useEffect(() => {
-    null != n && i.default.resolveInvite(n, "Hub").finally(() => p(!1))
+    null != n && i.default.resolveInvite(n, "Hub").finally(() => S(!1))
   }, [n]);
   let g = (0, l.useStateFromStores)([u.default], () => null != n ? u.default.getInvite(n) : null),
     I = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(t));
@@ -42,7 +42,7 @@ t.default = e => {
         className: _.dragRegion
       }), (0, a.jsx)("div", {
         className: _.contentWrapper,
-        children: !S && (0, a.jsx)(f.HubEmailConnectionModalView, {
+        children: !p && (0, a.jsx)(f.HubEmailConnectionModalView, {
           invite: g
         })
       })]

@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("889010"),
   C = n("488905"),
   m = n("731455"),
-  S = n("689938"),
-  p = n("157552");
+  p = n("689938"),
+  S = n("157552");
 let g = e => {
   switch (e) {
     case m.CategoryId.Activity:
@@ -50,10 +50,10 @@ t.default = function() {
     (0, E.maybeFetchGuildDiscoveryCategories)(!1, !0)
   }, [e]), (0, a.jsxs)(l.Scroller, {
     children: [(0, a.jsx)(C.DiscoverySidebarHeader, {
-      text: S.default.Messages.DISCOVER
+      text: p.default.Messages.DISCOVER
     }), (0, a.jsx)(f.default, {
       avatar: (0, a.jsx)(c.default, {}),
-      name: S.default.Messages.CLANS,
+      name: p.default.Messages.CLANS,
       focusProps: {
         offset: {
           right: 4,
@@ -64,9 +64,9 @@ t.default = function() {
       onClick: () => T(m.CategoryId.Clans),
       wrapContent: !0,
       selected: e === m.CategoryId.Clans,
-      className: p.categoryItem,
-      selectedClassName: p.selectedCategoryItem,
-      innerClassName: p.itemInner
+      className: S.categoryItem,
+      selectedClassName: S.selectedCategoryItem,
+      innerClassName: S.itemInner
     }, "clan-discovery-home"), (0, a.jsx)(_.default, {
       categories: I,
       handleCategorySelect: T,

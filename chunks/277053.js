@@ -10,8 +10,8 @@ var l, i, r, o, u = n("392711"),
   _ = n("388610"),
   C = n("592125"),
   m = n("981631"),
-  S = n("71080");
-let p = new Set,
+  p = n("71080");
+let S = new Set,
   g = m.FormStates.CLOSED,
   I = !1,
   T = null,
@@ -20,7 +20,7 @@ let p = new Set,
   v = null,
   R = null,
   O = null,
-  L = f.Storage.get(S.ADVANCED_MODE_ON_KEY) || !1;
+  L = f.Storage.get(p.ADVANCED_MODE_ON_KEY) || !1;
 
 function M(e) {
   let t = e.getGuildId(),
@@ -33,7 +33,7 @@ function M(e) {
 function y() {
   if (N = _.default.getChannel(), v = _.default.getCategory(), null == N) return !1;
   let e = N.getGuildId();
-  A = T = M(N), null == T[R] && (R = e), s = null != v, a = h.areChannelsLocked(N, v), O = null, I = !1, g = m.FormStates.CLOSED, p.clear()
+  A = T = M(N), null == T[R] && (R = e), s = null != v, a = h.areChannelsLocked(N, v), O = null, I = !1, g = m.FormStates.CLOSED, S.clear()
 }
 class P extends(l = c.default.Store) {
   initialize() {
@@ -49,7 +49,7 @@ class P extends(l = c.default.Store) {
     return null == T ? void 0 : T[e]
   }
   get editedPermissionIds() {
-    return Array.from(p)
+    return Array.from(S)
   }
   get permissionOverwrites() {
     return T
@@ -104,7 +104,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = P) ? Object.de
     }, T = {
       ...T,
       [t]: l
-    }, p.add(t), g = m.FormStates.OPEN, I = !d().isEqual(T, A), a = h.areChannelsLocked(N, v)
+    }, S.add(t), g = m.FormStates.OPEN, I = !d().isEqual(T, A), a = h.areChannelsLocked(N, v)
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {
     let {
@@ -117,7 +117,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = P) ? Object.de
     }
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    g = m.FormStates.CLOSED, T = null, A = null, N = null, v = null, I = !1, p.clear(), R = null, O = null
+    g = m.FormStates.CLOSED, T = null, A = null, N = null, v = null, I = !1, S.clear(), R = null, O = null
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -132,7 +132,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = P) ? Object.de
       if (null == t) return !1;
       A = M(N);
       let n = {};
-      return p.forEach(e => {
+      return S.forEach(e => {
         null != T && (n[e] = T[e])
       }), null == n[t] && null == N.permissionOverwrites[t] && (n[t] = h.makeEveryoneOverwrite(t)), null == (T = {
         ...N.permissionOverwrites,
@@ -154,6 +154,6 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = P) ? Object.de
     let {
       advancedMode: t
     } = e;
-    L = t, f.Storage.set(S.ADVANCED_MODE_ON_KEY, t)
+    L = t, f.Storage.set(p.ADVANCED_MODE_ON_KEY, t)
   }
 })

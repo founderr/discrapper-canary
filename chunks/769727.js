@@ -17,8 +17,8 @@ var a, s, l = n("735250"),
   _ = n("638730"),
   C = n("607070"),
   m = n("970606"),
-  S = n("231467"),
-  p = n("931515"),
+  p = n("231467"),
+  S = n("931515"),
   g = n("480222"),
   I = n("807933"),
   T = n("702646"),
@@ -43,7 +43,7 @@ function y(e) {
     clans: s,
     searchResult: c,
     searchCriteria: f
-  } = (0, p.useClanDiscoveryList)(t), C = (0, A.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), g = (0, E.default)(c), I = (0, A.useClanDiscoveryUIStore)(e => e.mode, o.default), T = i.useRef(null), N = (0, E.default)(I), M = i.useRef(0), y = Math.min(null != n ? n : 1024, 2e3), P = i.useMemo(() => {
+  } = (0, S.useClanDiscoveryList)(t), C = (0, A.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), g = (0, E.default)(c), I = (0, A.useClanDiscoveryUIStore)(e => e.mode, o.default), T = i.useRef(null), N = (0, E.default)(I), M = i.useRef(0), y = Math.min(null != n ? n : 1024, 2e3), P = i.useMemo(() => {
     let e = y / 256,
       t = y / 376,
       n = y / e,
@@ -101,7 +101,7 @@ function y(e) {
       let {
         items: i
       } = w[e], r = i[t];
-      return (0, l.jsx)(S.default, {
+      return (0, l.jsx)(p.default, {
         clan: r,
         affinity: null !== (s = r.affininty) && void 0 !== s ? s : (0, v.getClanDiscoveryAffinity)(r, f),
         traitsToHighlight: C,
@@ -281,7 +281,7 @@ let P = i.memo(function(e) {
   }
 });
 t.default = i.memo(function() {
-  (0, p.useAutoFetchClanDiscoveryResults)();
+  (0, S.useAutoFetchClanDiscoveryResults)();
   let {
     ref: e,
     width: t

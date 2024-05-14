@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("800599"),
   C = n("594174"),
   m = n("801077"),
-  S = n("626135"),
-  p = n("70956"),
+  p = n("626135"),
+  S = n("70956"),
   g = n("225559"),
   I = n("910436"),
   T = n("203028"),
@@ -31,7 +31,7 @@ var a = n("735250"),
   O = n("674563"),
   L = n("689938"),
   M = n("676563");
-let y = 15 * p.default.Millis.MINUTE,
+let y = 15 * S.default.Millis.MINUTE,
   P = (0, v.default)(function(e) {
     let {
       party: t,
@@ -50,19 +50,19 @@ let y = 15 * p.default.Millis.MINUTE,
       applicationStreams: f,
       currentActivities: E,
       voiceChannels: h
-    } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, g = s.useCallback(() => {
+    } = t, _ = c.length, C = f.length, m = E.length, S = h.length > 0, g = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === O.ApplicationTypes.GAME
       }).map(e => e.game.name);
-      S.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
+      p.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
         num_users: _,
         num_streams: C,
         num_activities: m,
-        in_voice_channel: p,
+        in_voice_channel: S,
         games_detected: e
       })
-    }, [_, C, m, p, E]), v = o()(g, y);
+    }, [_, C, m, S, E]), v = o()(g, y);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {

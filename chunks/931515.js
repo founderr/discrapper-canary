@@ -31,7 +31,7 @@ function _() {
       defaultGameId: C
     } = (0, u.useClanPilotExperiment)("clan_discovery"),
     m = null != _ ? _ : C,
-    S = function(e) {
+    p = function(e) {
       let t = (0, r.useStateFromStores)([c.default], () => c.default.hasLoadedStaticClanDiscovery(e));
       return a.useEffect(() => {
         !t && (0, d.loadStaticClanDiscovery)(e)
@@ -40,8 +40,8 @@ function _() {
   a.useEffect(() => {
     !(s.length > 0) && (m === h.VALORANT_ID ? (t(f.ClanDiscoveryGame.VALORANT), n([m])) : m === h.GENSHIN_ID && (t(f.ClanDiscoveryGame.GENSHIN), n([m])))
   }, [t, n, m, s]), a.useEffect(() => {
-    S && (0, d.searchClanDiscovery)(e, E)
-  }, [e, E, S]), a.useEffect(() => {
+    p && (0, d.searchClanDiscovery)(e, E)
+  }, [e, E, p]), a.useEffect(() => {
     o.default.getDetectableGames()
   }, [])
 }

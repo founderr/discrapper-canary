@@ -18,8 +18,8 @@ var a, s = n("735250"),
   _ = n("663993"),
   C = n("210887"),
   m = n("819640"),
-  S = n("725568"),
-  p = n("585483"),
+  p = n("725568"),
+  S = n("585483"),
   g = n("792125"),
   I = n("981631"),
   T = n("529542");
@@ -120,14 +120,14 @@ class D extends(a = l.PureComponent) {
       opacity: t,
       scale: n
     } = this.state;
-    p.ComponentDispatch.dispatch(I.ComponentActions.LAYER_POP_START), o.default.parallel([o.default.spring(t, {
+    S.ComponentDispatch.dispatch(I.ComponentActions.LAYER_POP_START), o.default.parallel([o.default.spring(t, {
       toValue: 0,
       ...P
     }), o.default.spring(n, {
       toValue: 1.1,
       ...P
     })]).start(() => {
-      e(), p.ComponentDispatch.dispatch(I.ComponentActions.LAYER_POP_COMPLETE)
+      e(), S.ComponentDispatch.dispatch(I.ComponentActions.LAYER_POP_COMPLETE)
     })
   }
   animateUnder() {
@@ -207,10 +207,10 @@ A(D, "defaultProps", {
 }), A(D, "contextType", c.AccessibilityPreferencesContext);
 class b extends l.PureComponent {
   componentDidMount() {
-    p.ComponentDispatch.subscribe(I.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
+    S.ComponentDispatch.subscribe(I.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
   }
   componentWillUnmount() {
-    p.ComponentDispatch.unsubscribe(I.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
+    S.ComponentDispatch.unsubscribe(I.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
   }
   renderLayers() {
     let {
@@ -252,7 +252,7 @@ class b extends l.PureComponent {
 function U(e) {
   let t = (0, u.useStateFromStores)([C.default], () => C.default.darkSidebar) ? I.ThemeTypes.DARK : void 0,
     n = (0, u.useStateFromStores)([m.default], () => m.default.getLayers()),
-    a = (0, S.useFullScreenLayerStore)(e => e.fullScreenLayers.length > 0);
+    a = (0, p.useFullScreenLayerStore)(e => e.fullScreenLayers.length > 0);
   return (0, s.jsx)(b, {
     ...e,
     sidebarTheme: t,

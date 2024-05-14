@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("434404"),
   C = n("567458"),
   m = n("782959"),
-  S = n("276645"),
-  p = n("970731"),
+  p = n("276645"),
+  S = n("970731"),
   g = n("626135"),
   I = n("267642"),
   T = n("981631"),
@@ -98,7 +98,7 @@ t.default = s.memo(function(e) {
       switch (w) {
         case l.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(S.default, {
+            renderPopout: (0, a.jsx)(p.default, {
               guildId: s.id,
               markAsDismissed: B
             }),
@@ -106,7 +106,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(p.default, {
+            renderPopout: (0, a.jsx)(S.default, {
               onComponentMount: N,
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
@@ -125,7 +125,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(p.default, {
+            renderPopout: (0, a.jsx)(S.default, {
               onComponentMount: N,
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
@@ -173,7 +173,7 @@ t.default = s.memo(function(e) {
             }),
             t = (0, I.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : R.default.Messages.LEARN_MORE;
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(p.default, {
+            renderPopout: (0, a.jsx)(S.default, {
               onComponentMount: G,
               header: R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
@@ -199,7 +199,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(p.default, {
+            renderPopout: (0, a.jsx)(S.default, {
               className: O.tooltipOverrideColor,
               header: R.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
               content: R.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
@@ -211,7 +211,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.GUILD_HEADER_SOUNDBOARD_PERMISSION:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(p.default, {
+            renderPopout: (0, a.jsx)(S.default, {
               header: R.default.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
               content: R.default.Messages.SOUNDBOARD_TOOLTIP_BODY,
               buttonCTA: R.default.Messages.CHECK_IT_OUT,

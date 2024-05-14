@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("532835"),
   C = n("290297"),
   m = n("918854"),
-  S = n("279240"),
-  p = n("765717"),
+  p = n("279240"),
+  S = n("765717"),
   g = n("358221"),
   I = n("823748"),
   T = n("626421"),
@@ -76,13 +76,13 @@ let em = () => (0, a.jsx)("div", {
     className: eC.loader,
     children: (0, a.jsx)(E.Spinner, {})
   }),
-  eS = (0, d.makeLazy)({
+  ep = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("68614")]).then(n.bind(n, "650788")),
     webpackId: "650788",
     name: "GuildShopPage",
     renderLoader: em
   }),
-  ep = (0, d.makeLazy)({
+  eS = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("44798")]).then(n.bind(n, "998420")),
     webpackId: "998420",
     name: "GuildMemberApplicationReview",
@@ -136,20 +136,20 @@ let em = () => (0, a.jsx)("div", {
     }), d = (0, N.isEligibleForSubscriptionsInGuildShop)(s, "channel_renderer");
     if (null != s && null != l && (0, eE.isStaticChannelRoute)(l)) switch (l) {
       case eE.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
-        return d ? (0, a.jsx)(eS, {
+        return d ? (0, a.jsx)(ep, {
           guildId: s,
           initialTab: v.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
         }) : (0, a.jsx)(x.default, {
           guildId: s
         });
       case eE.StaticChannelRoute.GUILD_SHOP:
-        return (0, a.jsx)(eS, {
+        return (0, a.jsx)(ep, {
           guildId: s,
           productId: i,
           initialTab: u
         });
       case eE.StaticChannelRoute.MEMBER_APPLICATIONS:
-        return (0, a.jsx)(ep, {
+        return (0, a.jsx)(eS, {
           guildId: s
         });
       case eE.StaticChannelRoute.GUILD_HOME:
@@ -253,7 +253,7 @@ let eO = e => (0, a.jsx)(eN, {
       })
     }
   },
-  eb = e => (0, a.jsx)(S.default, {
+  eb = e => (0, a.jsx)(p.default, {
     ...e
   }),
   eU = () => (0, a.jsx)(m.default, {}),
@@ -369,7 +369,7 @@ function eF() {
     h = (0, f.useStateFromStores)([B.default], () => B.default.getIsOpen()),
     _ = (0, o.useRouteMatch)([ef.Routes.CHANNEL(ef.ME, ":channelId"), ef.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")]),
     m = (null == _ ? void 0 : null === (e = _.params) || void 0 === e ? void 0 : e.channelId) === eE.StaticChannelRoute.GUILD_ONBOARDING,
-    S = s.useCallback(() => w.default.openSidebar(), []);
+    p = s.useCallback(() => w.default.openSidebar(), []);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsxs)("div", {
       className: eC.container,
@@ -387,19 +387,19 @@ function eF() {
               sidebarTheme: n,
               hideSidebar: l || i || d || E || m || !h
             }), (0, a.jsx)(C.default.Provider, {
-              value: S,
+              value: p,
               children: (0, a.jsxs)(o.Switch, {
-                children: [(0, a.jsx)(p.default, {
+                children: [(0, a.jsx)(S.default, {
                   path: ef.Routes.ACTIVITY,
                   disableTrack: !0,
                   children: (0, a.jsx)(o.Redirect, {
                     to: ef.Routes.ME
                   })
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.ACTIVITIES_HAPPENING_NOW,
                   render: eU,
                   impressionName: u.ImpressionNames.ACTIVITIES
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.ACTIVITY_DETAILS(":applicationId"),
                   render: eb,
                   impressionName: u.ImpressionNames.ACTIVITY_DETAILS,
@@ -411,52 +411,52 @@ function eF() {
                       application_id: t.params.applicationId
                     }
                   }
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.ACTIVITIES,
                   render: eU,
                   impressionName: u.ImpressionNames.ACTIVITIES
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.APPLICATION_LIBRARY,
                   render: eP,
                   impressionName: u.ImpressionNames.APPLICATION_LIBRARY,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.APPLICATION_STORE,
                   render: ex,
                   impressionName: u.ImpressionNames.APPLICATION_STORE,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.COLLECTIBLES_SHOP_FULLSCREEN,
                   render: eD(!0),
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.COLLECTIBLES_SHOP,
                   render: eD(!1),
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
                   render: eD(!1),
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.MESSAGE_REQUESTS,
                   render: eG,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.FAMILY_CENTER,
                   render: ek,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.ME,
                   exact: !0,
                   render: ej,
                   impressionName: u.ImpressionNames.FRIENDS,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: [ef.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), ef.Routes.CHANNEL(ef.ME, ":channelId"), ef.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
                   render: eO,
                   impressionName: u.ImpressionNames.GUILD_CHANNEL,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.GUILD_DISCOVERY,
                   render: e => {
                     let {
@@ -466,12 +466,12 @@ function eF() {
                   },
                   impressionName: u.ImpressionNames.GUILD_DISCOVERY,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"),
                   render: eM,
                   impressionName: u.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"),
                   render: ey,
                   impressionName: u.ImpressionNames.HUB_EMAIL_SIGNUP,
@@ -483,7 +483,7 @@ function eF() {
                       has_invite: void 0 !== t.params.inviteCode
                     }
                   }
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(S.default, {
                   path: ef.Routes.FEATURE(":feature"),
                   exact: !0,
                   render: ew,

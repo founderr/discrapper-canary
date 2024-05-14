@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("512384"),
   C = n("484459"),
   m = n("103575"),
-  S = n("314897"),
-  p = n("131951"),
+  p = n("314897"),
+  S = n("131951"),
   g = n("836946"),
   I = n("381238"),
   T = n("779863"),
@@ -91,9 +91,9 @@ function x(e) {
     nick: u,
     mute: d,
     deaf: c,
-    serverMute: S,
+    serverMute: p,
     serverDeaf: g
-  } = e, I = (0, r.useStateFromStores)([p.default], () => p.default.isLocalMute(o.id)), T = (0, h.default)({
+  } = e, I = (0, r.useStateFromStores)([S.default], () => S.default.isLocalMute(o.id)), T = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
   }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), x = null != u ? u : v.default.getName(o), {
@@ -116,7 +116,7 @@ function x(e) {
   }({
     serverDeaf: g,
     deaf: c,
-    serverMute: S,
+    serverMute: p,
     mute: d,
     localMute: I
   })) && void 0 !== s ? s : {}, j = null != U ? O.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
@@ -210,7 +210,7 @@ function D(e) {
       height: 16
     }),
     focusProps: M
-  }), E = (0, r.useStateFromStores)([S.default], () => S.default.getId(), []), [h, _] = function(e, t) {
+  }), E = (0, r.useStateFromStores)([p.default], () => p.default.getId(), []), [h, _] = function(e, t) {
     let n = [];
     for (let a of e) {
       if (a.user.id !== t) {

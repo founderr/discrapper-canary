@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("272008"),
   C = n("113434"),
   m = n("569984"),
-  S = n("497505"),
-  p = n("918701"),
+  p = n("497505"),
+  S = n("918701"),
   g = n("865364"),
   I = n("340100"),
   T = n("611855"),
@@ -39,20 +39,20 @@ let P = s.forwardRef(function(e, t) {
     onCtxMenuSelect: j,
     quest: G,
     useReducedMotion: k
-  } = e, w = (0, r.useStateFromStores)([m.default], () => m.default.isEnrolling(G.id), [G]), B = (0, C.useQuestFormattedDate)(G.config.expiresAt), F = (0, C.useQuestFormattedDate)(G.config.rewardCodeExpiresAt), H = s.useMemo(() => (0, p.isAssetAnimated)(G.config.assets.questBarHero), [G]), V = (0, R.useHasLaunchedGame)(G.config.applicationId), Y = s.useCallback(() => {
+  } = e, w = (0, r.useStateFromStores)([m.default], () => m.default.isEnrolling(G.id), [G]), B = (0, C.useQuestFormattedDate)(G.config.expiresAt), F = (0, C.useQuestFormattedDate)(G.config.rewardCodeExpiresAt), H = s.useMemo(() => (0, S.isAssetAnimated)(G.config.assets.questBarHero), [G]), V = (0, R.useHasLaunchedGame)(G.config.applicationId), Y = s.useCallback(() => {
     (0, _.enrollInQuest)(G.id, {
-      questContent: S.QuestContent.QUEST_BAR,
+      questContent: p.QuestContent.QUEST_BAR,
       questContentCTA: h.QuestContentCTA.ACCEPT_QUEST
     })
   }, [G]), W = (0, R.useHandleClaimQuestsReward)({
     quest: G,
-    location: S.QuestContent.QUEST_BAR
+    location: p.QuestContent.QUEST_BAR
   }), K = s.useCallback(() => {
     (0, O.openGameLink)(G, {
-      content: S.QuestContent.QUEST_BAR,
+      content: p.QuestContent.QUEST_BAR,
       ctaContent: h.QuestContentCTA.OPEN_GAME_LINK
     })
-  }, [G]), z = G.config.variants.includes(L.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)(G) > 0, [G]), Q = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Z = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, X = s.useMemo(() => (0, p.hasQuestCollectibleRewards)(G.config), [G.config]), J = P && D, $ = (0, p.getQuestBarHeroAssetUrl)(G), ee = (0, p.getQuestsInstructionsToWinReward)({
+  }, [G]), z = G.config.variants.includes(L.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, S.calculatePercentComplete)(G) > 0, [G]), Q = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Z = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, X = s.useMemo(() => (0, S.hasQuestCollectibleRewards)(G.config), [G.config]), J = P && D, $ = (0, S.getQuestBarHeroAssetUrl)(G), ee = (0, S.getQuestsInstructionsToWinReward)({
     quest: G,
     location: L.QuestsExperimentLocations.QUESTS_BAR
   }), et = (0, E.isWeb)(), en = s.useMemo(() => {
@@ -82,12 +82,12 @@ let P = s.forwardRef(function(e, t) {
             className: y.questProgressRewardTile,
             learnMoreStyle: "icon",
             quest: G,
-            questContent: S.QuestContent.QUEST_BAR
+            questContent: p.QuestContent.QUEST_BAR
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsx)(d.Heading, {
               color: "always-white",
               variant: "heading-sm/semibold",
-              children: (0, p.getContextualEntrypointHeading)(G)
+              children: (0, S.getContextualEntrypointHeading)(G)
             }), (0, a.jsx)(d.Text, {
               className: y.questAcceptedContentCopySubheading,
               color: "always-white",
@@ -103,7 +103,7 @@ let P = s.forwardRef(function(e, t) {
           onOpen: b,
           onClose: U,
           onSelect: j,
-          questContent: S.QuestContent.QUEST_BAR,
+          questContent: p.QuestContent.QUEST_BAR,
           quest: G,
           shouldShowDisclosure: !1,
           showShareLink: !0,
@@ -147,7 +147,7 @@ let P = s.forwardRef(function(e, t) {
             onOpen: b,
             onClose: U,
             onSelect: j,
-            questContent: S.QuestContent.QUEST_BAR,
+            questContent: p.QuestContent.QUEST_BAR,
             quest: G,
             shouldShowDisclosure: !0,
             showShareLink: !0,
@@ -166,7 +166,7 @@ let P = s.forwardRef(function(e, t) {
             className: y.rewardTile,
             learnMoreStyle: "text",
             quest: G,
-            questContent: S.QuestContent.QUEST_BAR
+            questContent: p.QuestContent.QUEST_BAR
           }), (0, a.jsx)(d.Heading, {
             className: y.title,
             color: "always-white",
@@ -207,7 +207,7 @@ let P = s.forwardRef(function(e, t) {
             controls: !1,
             children: (0, a.jsx)("source", {
               src: $,
-              type: (0, p.getVideoAssetMimeType)($)
+              type: (0, S.getVideoAssetMimeType)($)
             })
           })
         }) : (0, a.jsx)(N.QuestsAsset, {

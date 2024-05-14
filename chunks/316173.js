@@ -24,7 +24,7 @@ t.default = () => {
   let m = () => {
       o.Storage.set(C, !0), n(!0)
     },
-    S = () => (0, a.jsx)(u.Clickable, {
+    p = () => (0, a.jsx)(u.Clickable, {
       onClick: m,
       className: _.closeButton,
       "aria-label": h.default.Messages.DISMISS,
@@ -36,13 +36,13 @@ t.default = () => {
     className: i()(_.devBanner, _.buildOverride),
     children: [(0, a.jsx)(E.default, {
       className: _.icon
-    }), h.default.Messages.BUILD_OVERRIDE, (0, a.jsx)(S, {})]
+    }), h.default.Messages.BUILD_OVERRIDE, (0, a.jsx)(p, {})]
   }) : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsxs)("div", {
     className: i()(_.devBanner, _.staging),
     children: [(0, a.jsx)(E.default, {
       className: _.icon
     }), h.default.Messages.DEV_NOTICE_STAGING.format({
-      buildNumber: "293327"
-    }), (0, a.jsx)(S, {})]
+      buildNumber: "293388"
+    }), (0, a.jsx)(p, {})]
   }) : null
 }

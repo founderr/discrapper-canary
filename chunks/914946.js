@@ -66,8 +66,8 @@ var a, s = n("729594"),
   _ = n("592125"),
   C = n("430824"),
   m = n("131951"),
-  S = n("375954"),
-  p = n("158776"),
+  p = n("375954"),
+  S = n("158776"),
   g = n("594174"),
   I = n("979651"),
   T = n("70956"),
@@ -106,13 +106,13 @@ function G(e, t) {
   let n = [],
     a = e.getGuildId();
   return ![L.ChannelTypes.GUILD_CATEGORY, ...(0, E.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
-    S.default.whenReady(e.id, () => t()), o.default.fetchMessages({
+    p.default.whenReady(e.id, () => t()), o.default.fetchMessages({
       channelId: e.id,
       limit: L.MAX_MESSAGES_PER_CHANNEL
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = (!e.isNSFW() || (null === (n = g.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(k) : [],
+    let s = (!e.isNSFW() || (null === (n = g.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? p.default.getMessages(e.id).toArray().map(k) : [],
       l = Object.values(I.default.getVoiceStatesForChannel(e.id)).map(t => w(a, e.id, t));
     return {
       id: e.id,
@@ -189,8 +189,8 @@ function B(e, t, n) {
     type: e,
     user: null != a ? (0, R.default)(a) : null,
     presence: {
-      status: p.default.getStatus(t),
-      activity: null != n ? p.default.getApplicationActivity(t, n) : p.default.getPrimaryActivity(t)
+      status: S.default.getStatus(t),
+      activity: null != n ? S.default.getApplicationActivity(t, n) : S.default.getPrimaryActivity(t)
     }
   }
 }

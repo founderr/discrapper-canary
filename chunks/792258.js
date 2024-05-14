@@ -22,16 +22,16 @@ t.default = e => {
     _ = n.toString(),
     C = n.getIconURL(40, !0),
     m = null,
-    S = h[h.length - 1];
+    p = h[h.length - 1];
   if (null == n.icon && null != _) {
-    var p;
-    S = null !== (p = h[(m = (0, i.getAcronym)(_)).length - 1]) && void 0 !== p ? p : h[h.length - 1]
+    var S;
+    p = null !== (S = h[(m = (0, i.getAcronym)(_)).length - 1]) && void 0 !== S ? S : h[h.length - 1]
   }
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsxs)("div", {
       style: {
-        fontSize: S
+        fontSize: p
       },
       children: [null != m ? (0, a.jsx)("div", {
         className: l()(E.childWrapper, E.acronym),

@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("259756"),
   C = n("785681"),
   m = n("985002"),
-  S = n("858719"),
-  p = n("780985"),
+  p = n("858719"),
+  S = n("780985"),
   g = n("880257"),
   I = n("631885"),
   T = n("240351"),
@@ -57,15 +57,15 @@ function D(e) {
     displayType: t
   } = e, n = s.useCallback(() => {
     (0, o.showToast)((0, o.createToast)(y.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
-  }, []), l = (0, g.default)(), r = (0, S.useActionsForDisplayType)(t), u = (0, S.useActionTotalsForDisplayType)(t), {
+  }, []), l = (0, g.default)(), r = (0, p.useActionsForDisplayType)(t), u = (0, p.useActionTotalsForDisplayType)(t), {
     loadMore: d,
     isMoreLoading: c
   } = (0, m.useFamilyCenterActions)({
     onError: n
-  }), E = L.ACTION_TO_TEXT.get(t), [C, p] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), I = (0, _.useIsEligibleForFamilyCenterVCJoin)({
+  }), E = L.ACTION_TO_TEXT.get(t), [C, S] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), I = (0, _.useIsEligibleForFamilyCenterVCJoin)({
     location: "family_center_activity_section_web"
   }), T = s.useCallback(() => {
-    p(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
+    S(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i()(E, "No text for action type");
   let v = E.sectionHeader(u),
@@ -148,7 +148,7 @@ let b = () => {
       userId: t,
       subText: n,
       avatarSize: s = o.AvatarSizes.SIZE_40
-    } = e, l = (0, p.useTeenUserForId)(t);
+    } = e, l = (0, S.useTeenUserForId)(t);
     return void 0 === l ? null : (0, a.jsxs)("div", {
       className: P.accountRow,
       children: [(0, a.jsx)(v.FamilyCenterAvatar, {
@@ -209,7 +209,7 @@ let b = () => {
 t.default = e => {
   let {
     user: t
-  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, S.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, I.useActivityWindowTimeStamp)(l);
+  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, p.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, I.useActivityWindowTimeStamp)(l);
   return (0, a.jsxs)("div", {
     className: P.container,
     children: [(0, a.jsxs)("div", {

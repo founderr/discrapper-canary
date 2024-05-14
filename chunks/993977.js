@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("957657"),
   C = n("34305"),
   m = n("981631"),
-  S = n("689938"),
-  p = n("365326");
+  p = n("689938"),
+  S = n("365326");
 
 function g(e) {
   let {
@@ -31,31 +31,31 @@ function g(e) {
   let s = t.map(e => {
     let t = e.libraryApplication.getDistributor();
     return (0, a.jsxs)("div", {
-      className: p.hiddenLibraryApplication,
+      className: S.hiddenLibraryApplication,
       children: [(0, a.jsxs)(d.default, {
         direction: d.default.Direction.VERTICAL,
-        className: p.hiddenLibraryApplicationContent,
+        className: S.hiddenLibraryApplicationContent,
         children: [(0, a.jsx)("div", {
-          className: p.applicationName,
+          className: S.applicationName,
           children: e.libraryApplication.getBranchedName(e.application)
         }), null != t ? (0, a.jsx)("div", {
-          className: p.applicationSubText,
+          className: S.applicationSubText,
           children: m.DistributorNames[t]
         }) : null]
       }), (0, a.jsx)(i.Clickable, {
-        className: p.restoreButton,
+        className: S.restoreButton,
         onClick: () => n(e.libraryApplication),
         children: (0, a.jsx)(c.default, {
-          className: p.restoreIcon
+          className: S.restoreIcon
         })
       })]
     }, e.key)
   });
   return (0, a.jsxs)(i.FormSection, {
-    className: p.hiddenLibraryApplications,
+    className: S.hiddenLibraryApplications,
     children: [(0, a.jsx)(i.FormTitle, {
-      className: p.hiddenLibraryApplicationsTitle,
-      children: S.default.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
+      className: S.hiddenLibraryApplicationsTitle,
+      children: p.default.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
     }), s]
   })
 }
@@ -79,18 +79,18 @@ class I extends s.PureComponent {
       installShortcutStartMenu: n
     } = this.props;
     return (0, a.jsxs)("div", {
-      className: p.body,
+      className: S.body,
       children: [(0, h.isSupportedPlatform)() ? (0, a.jsxs)(s.Fragment, {
         children: [(0, a.jsx)(i.FormSwitch, {
           value: t,
           onChange: this.handleToggleShortcutDesktop,
-          note: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
-          children: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
+          note: p.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
+          children: p.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
         }), (0, a.jsx)(i.FormSwitch, {
           value: n,
           onChange: this.handleToggleShortcutStartMenu,
-          note: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
-          children: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
+          note: p.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
+          children: p.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
         }), (0, a.jsx)(C.default, {})]
       }) : null, (0, a.jsx)(g, {
         restoreApplication: this.handleRestoreHiddenLibraryApplication,
@@ -103,7 +103,7 @@ class I extends s.PureComponent {
       children: [(0, a.jsx)(_.default, {
         currentRoute: m.Routes.APPLICATION_LIBRARY_SETTINGS
       }), (0, a.jsx)(i.ScrollerAuto, {
-        className: p.scroller,
+        className: S.scroller,
         children: this.renderBody()
       })]
     })

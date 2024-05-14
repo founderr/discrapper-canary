@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("100527"),
   C = n("906732"),
   m = n("821982"),
-  S = n("377171"),
-  p = n("633302"),
+  p = n("377171"),
+  S = n("633302"),
   g = n("126900"),
   I = n("26290"),
   T = n("153066"),
@@ -36,7 +36,7 @@ let M = e => {
     } = e;
     return (0, a.jsx)(I.TextBadge, {
       className: L.newBadge,
-      color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
+      color: null != t ? t : p.default.STATUS_DANGER_BACKGROUND,
       text: O.default.Messages.NEW
     })
   },
@@ -146,7 +146,7 @@ let M = e => {
       displayOptions: l
     } = e, i = s.useMemo(() => {
       var e;
-      let t = null != l.emojiName ? null === (e = p.default.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
+      let t = null != l.emojiName ? null === (e = S.default.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
       return (0, a.jsxs)(d.Text, {
         variant: "text-sm/medium",
         className: L.marketingBadgeTooltipContent,

@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("51025"),
   C = n("785547"),
   m = n("730749"),
-  S = n("112724"),
-  p = n("812206"),
+  p = n("112724"),
+  S = n("812206"),
   g = n("44315"),
   I = n("210887"),
   T = n("283595"),
@@ -649,10 +649,10 @@ function ea(e, t, n, a) {
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, I.default, v.default], () => {
-  let e = ea(N.default.activeItems, !1, p.default, A.default);
+t.default = (0, p.default)(u.default.connectStores([S.default, A.default, N.default, I.default, v.default], () => {
+  let e = ea(N.default.activeItems, !1, S.default, A.default);
   return {
-    applications: [...e, ...ea(N.default.finishedItems, !0, p.default, A.default)],
+    applications: [...e, ...ea(N.default.finishedItems, !0, S.default, A.default)],
     paused: N.default.paused,
     isFocused: v.default.isFocused(),
     theme: I.default.theme

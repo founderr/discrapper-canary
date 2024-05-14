@@ -22,15 +22,15 @@ var a = n("735250"),
   _ = n("497189"),
   C = n("304231"),
   m = n("526282"),
-  S = n("878241"),
-  p = n("981631"),
+  p = n("878241"),
+  S = n("981631"),
   g = n("424023");
 let I = (e, t) => {
   switch (e) {
     case h.ClanDiscoveryGame.GENSHIN:
-      return t === p.ThemeTypes.DARK ? g.genshinUpsellBackgroundImageDark : g.genshinUpsellBackgroundImageLight;
+      return t === S.ThemeTypes.DARK ? g.genshinUpsellBackgroundImageDark : g.genshinUpsellBackgroundImageLight;
     case h.ClanDiscoveryGame.VALORANT:
-      return t === p.ThemeTypes.DARK ? g.valorantUpsellBackgroundImageDark : g.valorantUpsellBackgroundImageLight
+      return t === S.ThemeTypes.DARK ? g.valorantUpsellBackgroundImageDark : g.valorantUpsellBackgroundImageLight
   }
 };
 
@@ -48,9 +48,9 @@ function T() {
     _ = s.useMemo(() => {
       switch (e) {
         case h.ClanDiscoveryGame.GENSHIN:
-          return u === p.ThemeTypes.DARK ? g.genshinOnboardingBackgroundImageDark : g.genshinOnboardingBackgroundImageLight;
+          return u === S.ThemeTypes.DARK ? g.genshinOnboardingBackgroundImageDark : g.genshinOnboardingBackgroundImageLight;
         case h.ClanDiscoveryGame.VALORANT:
-          return u === p.ThemeTypes.DARK ? g.valorantOnboardingBackgroundImageDark : g.valorantOnboardingBackgroundImageLight
+          return u === S.ThemeTypes.DARK ? g.valorantOnboardingBackgroundImageDark : g.valorantOnboardingBackgroundImageLight
       }
     }, [e, u]);
   switch (t) {
@@ -95,9 +95,9 @@ function T() {
 
 function A() {
   let e = (0, h.useClanDiscoveryUIStore)(e => e.game, r.default),
-    t = (0, S.useGuildsEligibleForClan)("ClanDiscoveryAdminContainer", !0),
+    t = (0, p.useGuildsEligibleForClan)("ClanDiscoveryAdminContainer", !0),
     n = t.length > 0,
-    l = s.useMemo(() => t.filter(e => !e.hasFeature(p.GuildFeatures.CLAN)), [t]),
+    l = s.useMemo(() => t.filter(e => !e.hasFeature(S.GuildFeatures.CLAN)), [t]),
     {
       ref: c,
       width: f

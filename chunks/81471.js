@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("512665"),
   C = n("868807"),
   m = n("981631"),
-  S = n("768760"),
-  p = n("689938"),
+  p = n("768760"),
+  S = n("689938"),
   g = n("164602"),
   I = n("946278");
 let T = s.memo(function(e) {
@@ -38,14 +38,14 @@ let T = s.memo(function(e) {
     className: g.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
-    children: p.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
+    children: S.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (n) {
     if (null != T && A) O = (0, a.jsx)(o.Text, {
       className: g.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: p.default.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
+      children: S.default.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
     });
     else if (null != T) {
       let {
@@ -53,7 +53,7 @@ let T = s.memo(function(e) {
         renderedContent: t
       } = (0, _.renderSingleLineMessage)(T, R, A, i()(g.messageContent, I.inlineFormat, I.__invalid_smallFontSize), {
         iconClass: g.messageContentIcon,
-        iconSize: S.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+        iconSize: p.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
       O = null != t ? (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
@@ -71,7 +71,7 @@ let T = s.memo(function(e) {
       className: g.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: p.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
+      children: S.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
   } else O = null;
   return (0, a.jsx)(h.ObscuredDisplayContext.Provider, {

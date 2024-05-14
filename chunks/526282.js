@@ -19,12 +19,12 @@ var a = n("735250"),
   _ = n("559469"),
   C = n("689938"),
   m = n("531612");
-let S = {
+let p = {
     mass: 1,
     tension: 600,
     friction: 60
   },
-  p = {
+  S = {
     from: {
       transform: "translateY(40px) scale(0.9)",
       opacity: 0
@@ -33,7 +33,7 @@ let S = {
       transform: "translateY(0px) scale(1)",
       opacity: 1
     },
-    config: S
+    config: p
   },
   g = {
     from: {
@@ -42,7 +42,7 @@ let S = {
     to: {
       opacity: 1
     },
-    config: S
+    config: p
   };
 
 function I() {
@@ -87,19 +87,19 @@ t.default = s.memo(function(e) {
     selectedGame: t
   }), L = (0, _.useFakeDiscoveryUpsellClans)(O), M = (0, l.useSpring)({
     ref: I,
-    ...p
+    ...S
   }), y = (0, l.useSpring)({
     ref: T,
-    ...p
+    ...S
   }), P = (0, l.useSpring)({
     ref: A,
-    ...p
+    ...S
   }), x = (0, l.useSpring)({
     ref: N,
-    ...p
+    ...S
   }), D = (0, l.useSpring)({
     ref: v,
-    ...p
+    ...S
   }), b = (0, l.useSpring)({
     ref: R,
     from: {
@@ -110,7 +110,7 @@ t.default = s.memo(function(e) {
       transform: "translateY(0px)",
       opacity: 1
     },
-    config: S
+    config: p
   });
   (0, l.useChain)([I, T, A, N, v, R], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
     (0, d.trackClanUserInviteViewed)({

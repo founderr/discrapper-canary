@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("348600"),
   C = n("257968"),
   m = n("367907"),
-  S = n("770471"),
-  p = n("158631"),
+  p = n("770471"),
+  S = n("158631"),
   g = n("143614"),
   I = n("463119"),
   T = n("377171"),
@@ -61,9 +61,9 @@ let ee = e => {
       ...n
     } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, g.default)(), {
       canViewBroadcasts: r
-    } = S.default.useExperiment({
+    } = p.default.useExperiment({
       location: "friends_tab_no_track"
-    }), u = (0, p.default)();
+    }), u = (0, S.default)();
     return (0, a.jsxs)(q.LinkButton, {
       selected: t,
       route: X.Routes.FRIENDS,

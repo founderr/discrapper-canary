@@ -18,8 +18,8 @@ var i = n("924826"),
   _ = n("626135"),
   C = n("74538"),
   m = n("502087"),
-  S = n("647265"),
-  p = n("650032"),
+  p = n("647265"),
+  S = n("650032"),
   g = n("104494"),
   I = n("639119"),
   T = n("655525"),
@@ -61,13 +61,13 @@ let G = e => {
     $ = s || null != Y || null != W || z || q || null != Q || H,
     {
       enabled: ee
-    } = p.ReferralProgramRecipient.useExperiment({
+    } = S.ReferralProgramRecipient.useExperiment({
       location: j
     }, {
       autoTrackExposure: !1
     }),
     et = ee && (null == Y ? void 0 : Y.trial_id) === P.PREMIUM_TIER_2_REFERRAL_TRIAL_ID,
-    en = (0, S.usePremiumMarketingTabDisplayTimingExperiment)({
+    en = (0, p.usePremiumMarketingTabDisplayTimingExperiment)({
       location: "NitroTabButton",
       showTabForOtherReasons: $
     });

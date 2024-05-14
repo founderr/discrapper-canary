@@ -14,8 +14,8 @@ var a, s = n("735250"),
   _ = n("134432"),
   C = n("695346"),
   m = n("768581"),
-  S = n("900849"),
-  p = n("940627"),
+  p = n("900849"),
+  S = n("940627"),
   g = n("806519"),
   I = n("981631"),
   T = n("689938"),
@@ -156,7 +156,7 @@ class L extends(a = l.PureComponent) {
               className: A.guildInfo,
               children: [(0, s.jsxs)("div", {
                 className: A.title,
-                children: [(0, s.jsx)(p.default, {
+                children: [(0, s.jsx)(S.default, {
                   className: A.guildBadge,
                   guild: t,
                   tooltipColor: u.Tooltip.Colors.PRIMARY
@@ -174,7 +174,7 @@ class L extends(a = l.PureComponent) {
                 tags: y,
                 onTagClick: e => l(e, t.id),
                 guildId: t.id,
-                section: S.AnalyticsContexts.POPULAR
+                section: p.AnalyticsContexts.POPULAR
               }), (0, s.jsxs)("div", {
                 className: A.memberInfo,
                 children: [null != L && (0, s.jsxs)("div", {

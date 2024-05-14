@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("465670"),
   C = n("87888"),
   m = n("63063"),
-  S = n("976401"),
-  p = n("333454"),
+  p = n("976401"),
+  S = n("333454"),
   g = n("864441"),
   I = n("981631"),
   T = n("689938"),
@@ -48,7 +48,7 @@ class R extends s.PureComponent {
         children: this.isHost() ? T.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
           count: this.props.party.length
         }) : T.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
-      }), (0, a.jsx)(p.default, {
+      }), (0, a.jsx)(S.default, {
         children: T.default.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
       })]
     })
@@ -57,14 +57,14 @@ class R extends s.PureComponent {
     let {
       onStopListening: e
     } = this.props;
-    return this.isHost() ? null : (0, a.jsx)(S.default, {
+    return this.isHost() ? null : (0, a.jsx)(p.default, {
       tooltipText: T.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
       onClick: e,
       icon: _.default
     })
   }
   renderHelpIcon() {
-    return this.isHost() ? (0, a.jsx)(S.default, {
+    return this.isHost() ? (0, a.jsx)(p.default, {
       tooltipText: T.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
       onClick: () => {
         window.open(m.default.getArticleURL(I.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")

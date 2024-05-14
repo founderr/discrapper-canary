@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("5254"),
   C = n("984370"),
   m = n("518311"),
-  S = n("199104"),
-  p = n("108427"),
+  p = n("199104"),
+  S = n("108427"),
   g = n("210887"),
   I = n("974042"),
   T = n("153124"),
@@ -50,7 +50,7 @@ t.default = function(e) {
       l.replace(L.Routes.ME)
     })
   }, [l, n]), s.useEffect(() => {
-    f.setHomeLink(L.Routes.FRIENDS), (0, p.trackAppUIViewed)("friends")
+    f.setHomeLink(L.Routes.FRIENDS), (0, S.trackAppUIViewed)("friends")
   }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
   }, [t]);
@@ -142,7 +142,7 @@ t.default = function(e) {
         })
       }), (0, a.jsx)("div", {
         className: P.nowPlayingColumn,
-        children: (0, a.jsx)(S.default, {})
+        children: (0, a.jsx)(p.default, {})
       })]
     })]
   })

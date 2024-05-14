@@ -33,7 +33,7 @@ t.default = function(e) {
     t.scrollToBottom({
       callback: () => requestAnimationFrame(() => e())
     })
-  }), []), S = s.useCallback(e => {
+  }), []), p = s.useCallback(e => {
     let t = document.querySelector(e),
       n = _.current;
     null != t && null != n && n.scrollIntoViewNode({
@@ -41,15 +41,15 @@ t.default = function(e) {
       padding: 8,
       callback: () => null == t ? void 0 : t.focus()
     })
-  }, []), p = (0, l.default)({
+  }, []), S = (0, l.default)({
     id: "people-list",
     isEnabled: h,
     scrollToStart: C,
     scrollToEnd: m,
-    setFocus: S
+    setFocus: p
   });
   return (0, a.jsx)(l.ListNavigatorProvider, {
-    navigator: p,
+    navigator: S,
     children: (0, a.jsx)(l.ListNavigatorContainer, {
       children: e => {
         let {

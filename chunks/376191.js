@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return S
   }
 });
 var a = n("735250");
@@ -20,14 +20,14 @@ var s = n("442837"),
   _ = n("81471"),
   C = n("689938"),
   m = n("326486");
-let S = E.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+let p = E.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
-function p(e) {
+function S(e) {
   var t;
   let {
     channel: n,
     otherUser: E,
-    active: p
+    active: S
   } = e, g = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), I = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), T = (0, h.useMessageRequestRelativeTimestampText)(n), {
     avatarDecorationSrc: A
   } = (0, u.default)({
@@ -36,9 +36,9 @@ function p(e) {
     animateOnHover: !0
   });
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(S, {
+    children: [(0, a.jsx)(p, {
       className: m.avatar,
-      src: (0, d.getChannelIconURL)(n, 40, !g && p),
+      src: (0, d.getChannelIconURL)(n, 40, !g && S),
       avatarDecoration: A,
       size: l.AvatarSizes.SIZE_40,
       "aria-label": null !== (t = null == E ? void 0 : E.username) && void 0 !== t ? t : C.default.Messages.UNKNOWN_USER

@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("26290"),
   C = n("810090"),
   m = n("626135"),
-  S = n("565216"),
-  p = n("981631"),
+  p = n("565216"),
+  S = n("981631"),
   g = n("921944"),
   I = n("627583");
 let T = e => {
@@ -100,10 +100,10 @@ function N(e) {
   }, [G, w, F, V, W]), s.useEffect(() => () => {
     if ("video" === l.type || "embed" === l.type) {
       let [e, t] = J();
-      m.default.track(p.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
+      m.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
         change_log_id: y,
         seconds_played: Math.round(e / 1e3)
-      }), m.default.track(p.AnalyticEvents.CHANGE_LOG_VIDEO_UNMUTE, {
+      }), m.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_UNMUTE, {
         change_log_id: y,
         seconds_unmuted: Math.round(t / 1e3)
       })
@@ -111,10 +111,10 @@ function N(e) {
   }, [y, l]), s.useEffect(() => {
     null != T && (0, d.requestMarkDismissibleContentAsShown)(T);
     let e = Date.now();
-    return m.default.track(p.AnalyticEvents.CHANGE_LOG_OPENED, {
+    return m.default.track(S.AnalyticEvents.CHANGE_LOG_OPENED, {
       change_log_id: y
     }), () => {
-      m.default.track(p.AnalyticEvents.CHANGE_LOG_CLOSED, {
+      m.default.track(S.AnalyticEvents.CHANGE_LOG_CLOSED, {
         change_log_id: y,
         seconds_open: Math.round((Date.now() - e) / 1e3)
       }), null != T && (0, d.markDismissibleContentAsDismissed)(T, {
@@ -128,7 +128,7 @@ function N(e) {
     children: [(0, a.jsx)(o.ModalCloseButton, {
       className: I.closeButton,
       onClick: x
-    }), (0, a.jsx)(S.default, {
+    }), (0, a.jsx)(p.default, {
       className: I.splash
     }), null == N ? void 0 : N(), (0, a.jsxs)(o.ModalContent, {
       className: I.content,
@@ -146,7 +146,7 @@ function N(e) {
         src: l.src,
         poster: l.poster,
         onPlay: e => {
-          m.default.track(p.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+          m.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
             change_log_id: y
           }), k(Date.now()), Y(!0), K(e.currentTarget.muted)
         },
@@ -173,7 +173,7 @@ function N(e) {
         renderImageComponent: c.renderImageComponent,
         renderLinkComponent: c.renderMaskedLinkComponent,
         onPlay: () => {
-          m.default.track(p.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+          m.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
             change_log_id: y
           })
         }

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   },
   ClanSetupProgressButtons: function() {
-    return S
+    return p
   }
 });
 var a = n("735250"),
@@ -29,14 +29,14 @@ function C(e) {
     isActive: E,
     animate: C,
     fillBackgroundColor: m,
-    hasError: S
-  } = e, p = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), g = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY), I = s.useMemo(() => (0, f.getClanPrimaryButtonStyles)(m, g.hex()), [m, g]), T = null != I, A = (0, r.useSpring)({
+    hasError: p
+  } = e, S = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), g = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY), I = s.useMemo(() => (0, f.getClanPrimaryButtonStyles)(m, g.hex()), [m, g]), T = null != I, A = (0, r.useSpring)({
     transform: E ? "translateX(0%)" : "translateX(-100%)",
     config: {
       ...r.config.stiff,
       clamp: !0
     },
-    immediate: p || !C
+    immediate: S || !C
   }), N = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(u.Text, {
       variant: "text-sm/medium",
@@ -49,13 +49,13 @@ function C(e) {
     })]
   });
   return (0, a.jsx)(u.Tooltip, {
-    color: S ? u.Tooltip.Colors.GREY : u.Tooltip.Colors.BRAND,
-    text: S ? N : l,
-    "aria-label": S ? h.default.Messages.CLAN_SUBMIT_ERROR_TITLE : l,
+    color: p ? u.Tooltip.Colors.GREY : u.Tooltip.Colors.BRAND,
+    text: p ? N : l,
+    "aria-label": p ? h.default.Messages.CLAN_SUBMIT_ERROR_TITLE : l,
     shouldShow: null != n,
     tooltipStyle: I,
     tooltipClassName: i()(_.progressStepTooltip, {
-      [_.progressStepTooltipCustomColors]: !S && null != I
+      [_.progressStepTooltipCustomColors]: !p && null != I
     }),
     children: e => (0, a.jsxs)(u.Clickable, {
       ...e,
@@ -65,7 +65,7 @@ function C(e) {
       tabIndex: null == n ? -1 : void 0,
       onClick: n,
       className: _.progressStepWrapper,
-      children: [S && (0, a.jsx)(c.default, {
+      children: [p && (0, a.jsx)(c.default, {
         className: _.errorIcon
       }), (0, a.jsx)("div", {
         className: _.progressStep,
@@ -115,7 +115,7 @@ function m(e) {
   })
 }
 
-function S(e) {
+function p(e) {
   let {
     className: t,
     isBackDisabled: n,

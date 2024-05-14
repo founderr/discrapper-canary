@@ -20,8 +20,8 @@ var a = n("735250"),
 function _(e) {
   let {
     transitionState: t
-  } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.getAction()), [C, m] = s.useState(!1), S = (0, c.useUID)();
-  async function p() {
+  } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.getAction()), [C, m] = s.useState(!1), p = (0, c.useUID)();
+  async function S() {
     return m(!0), _ === f.UserRequiredActions.AGREEMENTS && m(await (0, o.acceptAgreements)()), null
   }
   return (0, u.default)({
@@ -31,10 +31,10 @@ function _(e) {
       required_action: _
     }
   }, {}, []), (0, a.jsxs)(r.ModalRoot, {
-    "aria-labelledby": S,
+    "aria-labelledby": p,
     transitionState: t,
     children: [(0, a.jsx)("div", {
-      id: S
+      id: p
     }), (0, a.jsx)(r.ModalHeader, {
       separator: !1,
       children: (0, a.jsx)(r.Heading, {
@@ -79,7 +79,7 @@ function _(e) {
     }), (0, a.jsx)(r.ModalFooter, {
       children: (0, a.jsx)(r.Button, {
         submitting: C,
-        onClick: p,
+        onClick: S,
         color: r.Button.Colors.GREEN,
         children: E.default.Messages.AGREE
       })

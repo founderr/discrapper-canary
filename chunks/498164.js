@@ -14,8 +14,8 @@ var i = n("756647"),
   _ = n("703656"),
   C = n("314897"),
   m = n("594174"),
-  S = n("626135"),
-  p = n("585483"),
+  p = n("626135"),
+  S = n("585483"),
   g = n("591759"),
   I = n("998502"),
   T = n("996106"),
@@ -23,7 +23,7 @@ var i = n("756647"),
   N = n("981631");
 
 function v(e, t) {
-  null != e && S.default.track(N.AnalyticEvents.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
+  null != e && p.default.track(N.AnalyticEvents.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
     invite_code: null,
     has_auth_token: null,
     is_backgrounded: null,
@@ -98,7 +98,7 @@ function v(e, t) {
             let {
               giftCode: s
             } = a;
-            I.default.focus(), S.default.track(N.AnalyticEvents.OPEN_MODAL, {
+            I.default.focus(), p.default.track(N.AnalyticEvents.OPEN_MODAL, {
               type: "gift_accept",
               location: N.DIRECT_ANALYTICS_LOCATION
             }), (0, r.openModalLazy)(async () => {
@@ -188,7 +188,7 @@ function v(e, t) {
           state: s
         })
       } catch (e) {
-        throw p.ComponentDispatch.dispatch(N.ComponentActions.CONNECTIONS_CALLBACK_ERROR), e
+        throw S.ComponentDispatch.dispatch(N.ComponentActions.CONNECTIONS_CALLBACK_ERROR), e
       }
     }
   },

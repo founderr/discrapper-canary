@@ -19,10 +19,10 @@ t.default = function(e) {
     onClick: _,
     isFocused: C,
     isActive: m,
-    onOtherHover: S,
-    className: p
+    onOtherHover: p,
+    className: S
   } = e, [g, I] = s.useState(!1), [T, A] = s.useState(!1), N = () => {
-    I(!0), C && !m && !T && (null == S || S())
+    I(!0), C && !m && !T && (null == p || p())
   }, v = () => {
     I(!1)
   }, R = (e, t) => {
@@ -48,7 +48,7 @@ t.default = function(e) {
         right: -8
       },
       children: (0, a.jsx)(r.default.div, {
-        className: i()(f.messageRequestItem, p, {
+        className: i()(f.messageRequestItem, S, {
           [f.active]: m || T,
           [f.firstItem]: 0 === t
         }),

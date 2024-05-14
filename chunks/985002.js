@@ -14,7 +14,7 @@ function o(e) {
   let {
     onError: t,
     onSuccess: n
-  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, m] = a.useState(!1), [S, p] = a.useState(!1), [g, I] = a.useState(!1), [T, A] = a.useState(!1), N = o || d || f || h || S || T, v = a.useCallback(async e => {
+  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, m] = a.useState(!1), [p, S] = a.useState(!1), [g, I] = a.useState(!1), [T, A] = a.useState(!1), N = o || d || f || h || p || T, v = a.useCallback(async e => {
     if (!N) {
       u(!0);
       try {
@@ -87,18 +87,18 @@ function o(e) {
       }
     }
   }, [g, t, n]), P = a.useCallback(async (e, a) => {
-    if (!S) {
-      p(!0);
+    if (!p) {
+      S(!0);
       try {
         await l.default.requestLink(e, a), null == n || n()
       } catch (n) {
         let e = new s.APIError(n);
         null == t || t(e)
       } finally {
-        p(!1)
+        S(!1)
       }
     }
-  }, [S, t, n]);
+  }, [p, t, n]);
   return {
     acceptLinkRequest: v,
     declineLinkRequest: R,
@@ -130,7 +130,7 @@ function o(e) {
     isCancelLoading: h,
     isGetLinkCodeLoading: C,
     isSelectTeenUserLoading: g,
-    isRequestingLink: S,
+    isRequestingLink: p,
     isMoreLoading: T
   }
 }

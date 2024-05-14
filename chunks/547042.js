@@ -20,8 +20,8 @@ var a, s, l = n("735250"),
   _ = n("810090"),
   C = n("626135"),
   m = n("981631"),
-  S = n("921944"),
-  p = n("689938"),
+  p = n("921944"),
+  S = n("689938"),
   g = n("336141");
 (a = s || (s = {})).BOOSTING = "BOOSTING", a.NITRO = "NITRO", a.BASH_OUT = "BASH_OUT", a.GAME_NIGHT = "GAME_NIGHT";
 let I = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
@@ -46,19 +46,19 @@ let I = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       switch (e) {
         case "BOOSTING":
           return {
-            analyticsLocation: f.default.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: T, videoUrl: I, ctaText: p.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: p.default.Messages.DISMISS
+            analyticsLocation: f.default.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: S.default.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: S.default.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: T, videoUrl: I, ctaText: S.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: S.default.Messages.DISMISS
           };
         case "NITRO":
           return {
-            analyticsLocation: f.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: T, videoUrl: I, ctaText: p.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: p.default.Messages.DISMISS
+            analyticsLocation: f.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: S.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: S.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: T, videoUrl: I, ctaText: S.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: S.default.Messages.DISMISS
           };
         case "BASH_OUT":
           return {
-            analyticsLocation: f.default.ACTIVITY_COACH_MARK_BASH_OUT, analyticsType: "embedded_activity_bash_out_tutorial", description: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_BASH_OUT_DESCRIPTION, learnMore: !1, title: p.default.Messages.EMBEDDED_ACTIVITIES_AVAILABLE_NOW, videoPosterUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1037963592227635230/bash_out.jpg", videoUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1037967755955146762/bash_out.mp4", ctaText: p.default.Messages.PLAY, dismissText: p.default.Messages.DISMISS
+            analyticsLocation: f.default.ACTIVITY_COACH_MARK_BASH_OUT, analyticsType: "embedded_activity_bash_out_tutorial", description: S.default.Messages.EMBEDDED_ACTIVITY_NOTICE_BASH_OUT_DESCRIPTION, learnMore: !1, title: S.default.Messages.EMBEDDED_ACTIVITIES_AVAILABLE_NOW, videoPosterUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1037963592227635230/bash_out.jpg", videoUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1037967755955146762/bash_out.mp4", ctaText: S.default.Messages.PLAY, dismissText: S.default.Messages.DISMISS
           };
         case "GAME_NIGHT":
           return {
-            analyticsLocation: f.default.ACTIVITIES_COACH_MARK_GAME_NIGHT, analyticsType: "embedded_activity_game_night_tutorial", description: p.default.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT_BODY, learnMore: !1, title: p.default.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT_HEADING, videoPosterUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1093287297950175272/game_night_desktop.jpg", videoUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1093286971708813382/game_night_desktop.mp4", ctaText: p.default.Messages.PLAY_NOW, dismissText: p.default.Messages.MAYBE_LATER
+            analyticsLocation: f.default.ACTIVITIES_COACH_MARK_GAME_NIGHT, analyticsType: "embedded_activity_game_night_tutorial", description: S.default.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT_BODY, learnMore: !1, title: S.default.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT_HEADING, videoPosterUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1093287297950175272/game_night_desktop.jpg", videoUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1093286971708813382/game_night_desktop.mp4", ctaText: S.default.Messages.PLAY_NOW, dismissText: S.default.Messages.MAYBE_LATER
           };
         default:
           return {
@@ -108,7 +108,7 @@ let I = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 children: [" ", (0, l.jsx)(o.Anchor, {
                   className: g.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",
-                  children: p.default.Messages.LEARN_MORE
+                  children: S.default.Messages.LEARN_MORE
                 })]
               }) : null]
             }), (0, l.jsxs)("div", {
@@ -116,14 +116,14 @@ let I = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               children: [(0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 onClick: () => {
-                  n(S.ContentDismissActionType.UNKNOWN)
+                  n(p.ContentDismissActionType.UNKNOWN)
                 },
                 children: v
               }), (0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,
                 onClick: null != P ? P : () => {
-                  n(S.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
+                  n(p.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
                     channel: b.isGuildVoice() ? b : void 0,
                     guildId: b.guild_id,
                     locationObject: {

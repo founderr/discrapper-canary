@@ -16,8 +16,8 @@ var s = n("481060"),
   _ = n("641015"),
   C = n("22382"),
   m = n("747071"),
-  S = n("49230"),
-  p = n("981631"),
+  p = n("49230"),
+  S = n("981631"),
   g = n("65154");
 
 function I(e, t, n) {
@@ -55,7 +55,7 @@ class T extends f.default {
           soundVolume: (0, m.default)(n),
           reportSoundStartedPlaying: () => (0, E.reportSoundStartedPlaying)(e, a)
         };
-        u.default.supports(g.Features.SAMPLE_PLAYBACK) ? await (0, S.playDesktopSound)(s) : await (0, S.playWebSound)(s, t.playingSoundsWeb)
+        u.default.supports(g.Features.SAMPLE_PLAYBACK) ? await (0, p.playDesktopSound)(s) : await (0, p.playWebSound)(s, t.playingSoundsWeb)
       } finally {
         (0, E.reportSoundFinishedPlaying)(e, a)
       }
@@ -64,7 +64,7 @@ class T extends f.default {
     }), I(this, "_handleOpenEducationModal", (e, t) => {
       if (null == e) return;
       let l = o.default.getChannel(t),
-        u = c.default.getKeybindForAction(p.GlobalKeybindActions.SOUNDBOARD_HOLD);
+        u = c.default.getKeybindForAction(S.GlobalKeybindActions.SOUNDBOARD_HOLD);
       null != l && (0, _.default)(l) && null != u && r.default.hasHotspot(i.HotspotLocations.SOUNDBOARD_WHEEL_EDUCATION_MODAL) && (0, s.openModalLazy)(async () => {
         let {
           default: t

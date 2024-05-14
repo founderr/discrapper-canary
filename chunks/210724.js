@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("918701"),
   C = n("977156"),
   m = n("5881"),
-  S = n("874137"),
-  p = n("78826"),
+  p = n("874137"),
+  S = n("78826"),
   g = n("448018"),
   I = n("46140"),
   T = n("981631"),
@@ -38,7 +38,7 @@ function N(e) {
   }), R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), L = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, M = s.useRef(L), y = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, P = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, x = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), D = (0, f.useIsQuestExpired)(E), {
     hasError: b,
     isLoading: U
-  } = (0, p.useQuestsAssetsLoadState)(), j = v && !x && !P && !D && !U, G = s.useRef(j), {
+  } = (0, S.useQuestsAssetsLoadState)(), j = v && !x && !P && !D && !U, G = s.useRef(j), {
     primaryVariant: k,
     progressVariant: w
   } = C.QuestBarExperiment.useExperiment({
@@ -127,7 +127,7 @@ function N(e) {
       Z(!1)
     }
   });
-  return v && (j || !Q || U) && !b ? (0, a.jsx)(S.QuestContentImpressionTracker, {
+  return v && (j || !Q || U) && !b ? (0, a.jsx)(p.QuestContentImpressionTracker, {
     questOrQuests: E,
     questContent: B.trackingCtx.content,
     overrideVisibility: !O && j,
@@ -187,7 +187,7 @@ t.default = function(e) {
   let {
     overrideQuest: t
   } = e, n = (0, o.useStateFromStores)([E.default], () => null != t ? t : (0, _.getQuestForTargetedContent)(E.default.quests, h.QuestContent.QUEST_BAR));
-  return null == n ? null : (0, a.jsx)(p.QuestsAssetContextProvider, {
+  return null == n ? null : (0, a.jsx)(S.QuestsAssetContextProvider, {
     sentrySource: I.QuestsExperimentLocations.QUESTS_BAR,
     children: (0, a.jsx)(N, {
       quest: n

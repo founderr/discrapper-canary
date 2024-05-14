@@ -16,8 +16,8 @@ var s = n("45792"),
   _ = n("928518"),
   C = n("592125"),
   m = n("293273"),
-  S = n("885110"),
-  p = n("451478"),
+  p = n("885110"),
+  S = n("451478"),
   g = n("630388"),
   I = n("823379"),
   T = n("591759"),
@@ -36,7 +36,7 @@ async function x(e, t, n, a) {
   if (null == l || null == l.secrets || !(0, v.validateActivityInvite)(a, l.party, l.secrets)) throw new N.default({
     errorCode: P.RPCErrors.NO_ELIGIBLE_ACTIVITY
   }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
-  let o = (0, E.default)(l, S.default);
+  let o = (0, E.default)(l, p.default);
   if (o) {
     let {
       lock: t
@@ -202,7 +202,7 @@ t.default = {
       return new Promise((e, t) => {
         ! function(e, t) {
           var n;
-          let a = p.default.getLastFocusedWindowId(),
+          let a = S.default.getLastFocusedWindowId(),
             s = null == a ? null : null === (n = (0, c.getAppWindowContextValue)(a)) || void 0 === n ? void 0 : n.renderWindow;
           if (null == s) throw new N.default({
             errorCode: P.RPCErrors.UNKNOWN_ERROR

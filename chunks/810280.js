@@ -36,17 +36,17 @@ function _(e) {
   let {
     header: C,
     body: m,
-    imgSrc: S,
-    imgStyle: p
+    imgSrc: p,
+    imgStyle: S
   } = h(_.drop, _.config.streamLengthRequirement), g = () => {
     t(c.ContentDismissActionType.DISMISS)
   };
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)("img", {
-      src: S,
+      src: p,
       alt: "",
-      className: p
+      className: S
     }), (0, a.jsx)(l.Clickable, {
       className: E.__invalid_buttonClose,
       "aria-label": f.default.Messages.CLOSE,

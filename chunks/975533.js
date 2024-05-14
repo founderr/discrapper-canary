@@ -15,8 +15,8 @@ var a = n("570140"),
   _ = n("641015"),
   C = n("183584"),
   m = n("199902"),
-  S = n("131951"),
-  p = n("246946"),
+  p = n("131951"),
+  S = n("246946"),
   g = n("808506"),
   I = n("237997"),
   T = n("626135"),
@@ -34,7 +34,7 @@ let R = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK]: {
     onTrigger(e, t) {
-      S.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
+      p.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, p.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
     },
     keyEvents: {
       keyup: !0,
@@ -44,7 +44,7 @@ let R = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: {
     onTrigger(e) {
-      S.default.getMode() === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), v.MediaEngineContextTypes.DEFAULT))
+      p.default.getMode() === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, p.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), v.MediaEngineContextTypes.DEFAULT))
     },
     keyEvents: {
       keyup: !0,
@@ -54,7 +54,7 @@ let R = {
   },
   [N.GlobalKeybindActions.PUSH_TO_MUTE]: {
     onTrigger(e) {
-      if (S.default.getMode() === N.InputModes.VOICE_ACTIVITY) !S.default.isSelfDeaf() && (R[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
+      if (p.default.getMode() === N.InputModes.VOICE_ACTIVITY) !p.default.isSelfDeaf() && (R[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
     },
     keyEvents: {
       keyup: !0,
@@ -82,7 +82,7 @@ let R = {
   },
   [N.GlobalKeybindActions.TOGGLE_VOICE_MODE]: {
     onTrigger() {
-      let e = S.default.getMode() === N.InputModes.PUSH_TO_TALK ? N.InputModes.VOICE_ACTIVITY : N.InputModes.PUSH_TO_TALK;
+      let e = p.default.getMode() === N.InputModes.PUSH_TO_TALK ? N.InputModes.VOICE_ACTIVITY : N.InputModes.PUSH_TO_TALK;
       s.default.setMode(e)
     },
     keyEvents: {
@@ -134,7 +134,7 @@ let R = {
   },
   [N.GlobalKeybindActions.TOGGLE_STREAMER_MODE]: {
     onTrigger() {
-      o.default.setEnabled(!p.default.enabled)
+      o.default.setEnabled(!S.default.enabled)
     },
     keyEvents: {
       keyup: !0,

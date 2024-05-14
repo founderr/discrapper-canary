@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("834743"),
   C = n("862099"),
   m = n("704631"),
-  S = n("819792"),
-  p = n("919285"),
+  p = n("819792"),
+  S = n("919285"),
   g = n("118470"),
   I = n("413307"),
   T = n("849688"),
@@ -39,16 +39,16 @@ function b(e) {
   var t;
   let {
     guild: n
-  } = e, [E, C] = s.useState(null !== (t = r.Storage.get(y.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), S = e => {
+  } = e, [E, C] = s.useState(null !== (t = r.Storage.get(y.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), p = e => {
     r.Storage.set(y.LAST_HIDDEN_CHANNEL_NOTICE, e), C(e)
-  }, p = (0, c.useIsGuildEligibleForClan)(n.id, "ChannelNoticesGuard"), {
+  }, S = (0, c.useIsGuildEligibleForClan)(n.id, "ChannelNoticesGuard"), {
     defaultGameId: g
   } = (0, o.useClanPrepilotExperiment)(n, "ChannelNoticesGuard_2"), I = (0, l.useStateFromStoresArray)(y.CHANNEL_NOTICE_STORES, () => y.CHANNEL_NOTICES.filter(e => {
     let {
       type: t,
       store: a
     } = e;
-    if (t === P.ChannelNoticeTypes.CLAN_ADMIN_UPSELL) return p;
+    if (t === P.ChannelNoticeTypes.CLAN_ADMIN_UPSELL) return S;
     return null == a ? void 0 : a.channelNoticePredicate(n, E)
   }).map(e => e.dismissibleContentType));
   return (0, a.jsx)(f.default, {
@@ -59,7 +59,7 @@ function b(e) {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        S(Date.now()), s(x.ContentDismissActionType.UNKNOWN)
+        p(Date.now()), s(x.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
@@ -140,7 +140,7 @@ t.default = e => {
         guild: t
       });
     case M.ConnectedChannelNotices.COMMANDS_MIGRATION:
-      return (0, a.jsx)(p.default, {
+      return (0, a.jsx)(S.default, {
         guild: t
       });
     case M.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
@@ -148,7 +148,7 @@ t.default = e => {
         guild: t
       });
     case M.ConnectedChannelNotices.HUB_STUDY_ROOM:
-      return (0, a.jsx)(S.default, {
+      return (0, a.jsx)(p.default, {
         guild: t
       });
     case M.ConnectedChannelNotices.SIGNUP:

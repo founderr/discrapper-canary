@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("212093"),
   C = n("827837"),
   m = n("785570"),
-  S = n("963202"),
-  p = n("252618"),
+  p = n("963202"),
+  S = n("252618"),
   g = n("440190"),
   I = n("5955"),
   T = n("703656"),
@@ -297,7 +297,7 @@ class Q extends s.PureComponent {
     });
     return (0, a.jsxs)("div", {
       className: W.pageWrapper,
-      children: [(0, a.jsx)(p.AppPageTitle, {
+      children: [(0, a.jsx)(S.AppPageTitle, {
         subsection: d ? l : void 0,
         location: _
       }), (0, a.jsx)("div", {
@@ -493,7 +493,7 @@ t.default = function(e) {
     searchRoute: t
   } = e, n = (0, F.useGuildsEligibleForClan)("guild_discovery", !0).length > 0, {
     clanDiscoveryEnabled: s
-  } = (0, S.useClanPilotExperiment)("guild_discovery"), l = (0, f.useStateFromStores)([O.default], () => O.default.getCurrentCategoryId()), i = (0, f.useStateFromStores)([O.default], () => O.default.getIsReady());
+  } = (0, p.useClanPilotExperiment)("guild_discovery"), l = (0, f.useStateFromStores)([O.default], () => O.default.getCurrentCategoryId()), i = (0, f.useStateFromStores)([O.default], () => O.default.getIsReady());
   return (n || s) && (!i || l === H.CategoryId.Clans) ? (0, a.jsx)(j.default, {}) : (0, a.jsx)(X, {
     searchRoute: t
   })

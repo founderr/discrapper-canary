@@ -75,10 +75,10 @@ t.default = {
       }), Promise.resolve(_);
       _.name = a.application.name, _.application_id = a.application.id;
       let m = a.transport === f.TransportTypes.POST_MESSAGE,
-        S = (0, d.computeActivityFlags)(_, m);
-      S > 0 && (_.flags = S), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
+        p = (0, d.computeActivityFlags)(_, m);
+      p > 0 && (_.flags = p), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
       let {
-        assets: p,
+        assets: S,
         party: g,
         secrets: I,
         timestamps: T,
@@ -101,15 +101,15 @@ t.default = {
           button_urls: A.map(e => e.url)
         }, _.buttons = A.map(e => e.label)), null != T)
         for (let e of Object.keys(T)) Date.now().toString().length - T[e].toString().length > 2 && (T[e] = Math.floor(T[e] * o.default.Millis.SECOND));
-      if (null == p) n = Promise.resolve([]);
+      if (null == S) n = Promise.resolve([]);
       else {
         if (null == a.application || null == a.application.id) throw Error();
-        n = (0, r.fetchAssetIds)(a.application.id, [p.large_image, p.small_image])
+        n = (0, r.fetchAssetIds)(a.application.id, [S.large_image, S.small_image])
       }
       return n.then(e => {
         var t, n;
         let [s, r] = e;
-        if (null != p && (null != s ? p.large_image = s : delete p.large_image, null != r ? p.small_image = r : delete p.small_image), !C()) return;
+        if (null != S && (null != s ? S.large_image = s : delete S.large_image, null != r ? S.small_image = r : delete S.small_image), !C()) return;
         l.default.dispatch({
           type: "LOCAL_ACTIVITY_UPDATE",
           socketId: a.id,
@@ -126,7 +126,7 @@ t.default = {
           details: null !== (t = _.details) && void 0 !== t ? t : "",
           state: null !== (n = _.state) && void 0 !== n ? n : ""
         };
-        return null != o && (d.has_match_secret = !!o.match, d.has_join_secret = !!o.join), null != p && (d.has_images = !!(p.large_image || p.small_image)), null != u && (d.party_max = null != u.size ? u.size[1] : void 0, d.party_id = u.id), i.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, d), _
+        return null != o && (d.has_match_secret = !!o.match, d.has_join_secret = !!o.join), null != S && (d.has_images = !!(S.large_image || S.small_image)), null != u && (d.party_max = null != u.size ? u.size[1] : void 0, d.party_id = u.id), i.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, d), _
       })
     }
   }

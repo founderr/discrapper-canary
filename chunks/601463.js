@@ -29,10 +29,10 @@ function C(e) {
     signed: n,
     setSigned: C,
     sidebarWidth: m,
-    windowWidth: S,
-    transition: p,
+    windowWidth: p,
+    transition: S,
     brandPrimaryColor: g
-  } = e, I = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = s.useRef(null), A = s.useMemo(() => (S - m) / 2, [m, S]), [N, v, R] = (0, l.useSpring)(() => ({
+  } = e, I = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = s.useRef(null), A = s.useMemo(() => (p - m) / 2, [m, p]), [N, v, R] = (0, l.useSpring)(() => ({
     to: [{
       transform: "translateX(-8px)"
     }, {
@@ -66,7 +66,7 @@ function C(e) {
     M = () => open(u.default.getArticleURL(f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES));
   return (0, a.jsxs)("div", {
     className: h.sidebarContent,
-    children: [p((e, t) => t && (0, a.jsx)(l.animated.div, {
+    children: [S((e, t) => t && (0, a.jsx)(l.animated.div, {
       className: h.sidebarLeftDecorationContainer,
       style: {
         opacity: e.opacity,
@@ -87,7 +87,7 @@ function C(e) {
           children: E.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
         })]
       })
-    })), p((e, t) => t && (0, a.jsx)(l.animated.div, {
+    })), S((e, t) => t && (0, a.jsx)(l.animated.div, {
       className: h.sidebarRightDecorationContainer,
       style: {
         opacity: e.opacity,

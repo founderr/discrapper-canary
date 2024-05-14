@@ -28,8 +28,8 @@ t.default = e => {
     title: n,
     subtitle: C,
     guildsData: m,
-    analyticsContext: S,
-    theme: p,
+    analyticsContext: p,
+    theme: S,
     onViewGuild: g,
     fetchGuilds: I,
     onGuildCardSeen: T,
@@ -64,7 +64,7 @@ t.default = e => {
     });
     else {
       let t = M.findIndex(t => t.id === e);
-      await g(e, t, S, N)
+      await g(e, t, p, N)
     }
   };
   if (y || null == M) {
@@ -75,7 +75,7 @@ t.default = e => {
     className: E.__invalid_guildCard,
     guild: e,
     onView: x,
-    theme: p,
+    theme: S,
     onGuildCardSeen: T,
     onTagClick: v
   }, e.id));

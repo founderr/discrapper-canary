@@ -24,7 +24,7 @@ function i(e) {
     n(i + 1)
   }, [i, n]), C = a.useCallback(() => {
     n(i - 1)
-  }, [i, n]), m = a.useCallback(e => n(e), [n]), S = a.useMemo(() => {
+  }, [i, n]), m = a.useCallback(e => n(e), [n]), p = a.useMemo(() => {
     switch (i) {
       case l.ClanSetupSteps.GAMES:
         return 0 === r.size;
@@ -41,12 +41,12 @@ function i(e) {
       default:
         return !1
     }
-  }, [i, d.length, r.size, E, h.length, o, c.length]), p = 0 === i;
+  }, [i, d.length, r.size, E, h.length, o, c.length]), S = 0 === i;
   return a.useMemo(() => ({
     onStepClick: m,
     onNextClick: _,
     onBackClick: C,
-    isNextDisabled: S,
-    isBackDisabled: p
-  }), [p, S, C, _, m])
+    isNextDisabled: p,
+    isBackDisabled: S
+  }), [S, p, C, _, m])
 }

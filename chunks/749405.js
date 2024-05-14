@@ -25,10 +25,10 @@ function h(e) {
     (0, l.showToast)((0, l.createToast)(f.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
   }, []), m = s.useCallback(() => {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
-  }, []), S = s.useCallback(() => {
+  }, []), p = s.useCallback(() => {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, i.transitionToChannel)(h.id)
   }, [h.id, _]), {
-    acceptMessageRequest: p,
+    acceptMessageRequest: S,
     rejectMessageRequest: g,
     isAcceptLoading: I,
     isRejectLoading: T,
@@ -37,7 +37,7 @@ function h(e) {
     isOptimisticRejected: v
   } = (0, d.useMessageRequestActions)({
     user: n,
-    onAcceptSuccess: S,
+    onAcceptSuccess: p,
     onRejectSuccess: m,
     onError: C
   }), R = I || T || A || N || v;
@@ -64,7 +64,7 @@ function h(e) {
         color: l.ButtonColors.BRAND,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), p(h.id)
+          e.stopPropagation(), S(h.id)
         },
         disabled: R,
         submitting: I || A || N,

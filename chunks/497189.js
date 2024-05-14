@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("749210"),
   C = n("607070"),
   m = n("100527"),
-  S = n("931240"),
-  p = n("970606"),
+  p = n("931240"),
+  S = n("970606"),
   g = n("963202"),
   I = n("650461"),
   T = n("603839"),
@@ -87,16 +87,16 @@ function k(e) {
     onButtonClick: r,
     buttonText: f,
     hasCompletedUpsell: _
-  } = e, C = (0, R.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), m = (0, R.useClanDiscoveryUIStore)(e => e.started, o.default), S = s.useMemo(() => l.map(e => ({
+  } = e, C = (0, R.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), m = (0, R.useClanDiscoveryUIStore)(e => e.started, o.default), p = s.useMemo(() => l.map(e => ({
     value: e.id,
     label: e.name
   })), [l]), {
-    enableApplication: p
+    enableApplication: S
   } = (0, g.useClanPrePilotApplicationExperiment)("discovery"), I = s.useCallback(() => {
     (0, R.setClanDiscoveryMode)(R.ClanDiscoveryMode.DISCOVERY)
   }, []), T = s.useCallback(() => {
     (0, R.setClanDiscoveryMode)(R.ClanDiscoveryMode.GET_STARTED), C(R.ClanDiscoveryUserScreens.USER_ONBOARDING)
-  }, [C]), A = !m && p, N = l.length > 1;
+  }, [C]), A = !m && S, N = l.length > 1;
   return (0, a.jsxs)(a.Fragment, {
     children: [_ ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.Heading, {
@@ -132,7 +132,7 @@ function k(e) {
       children: [N && (0, a.jsx)(h.SearchableSelect, {
         className: x.upsellSelect,
         value: t,
-        options: S,
+        options: p,
         onChange: n
       }), !_ && (0, a.jsx)(h.Button, {
         look: h.ButtonLooks.FILLED,
@@ -185,7 +185,7 @@ t.default = s.memo(function(e) {
     return i ? n[0].id : t[0].id
   });
   s.useEffect(() => {
-    !i && (0, p.trackClanAdminInviteViewed)({
+    !i && (0, S.trackClanAdminInviteViewed)({
       guildId: o,
       location: m.default.CLAN_DISCOVERY
     })
@@ -196,7 +196,7 @@ t.default = s.memo(function(e) {
       selectedGame: l
     }),
     g = s.useCallback(() => {
-      !i && ((0, p.trackClanAdminInviteClicked)({
+      !i && ((0, S.trackClanAdminInviteClicked)({
         guildId: o,
         location: m.default.CLAN_DISCOVERY
       }), (0, N.openFullScreenLayer)(e => {
@@ -313,7 +313,7 @@ t.default = s.memo(function(e) {
       children: e
     }), []),
     z = s.useCallback(async () => {
-      await (0, S.joinWumpusFeedbackSquad)(o), _.default.transitionToGuildSync("936317138904440892")
+      await (0, p.joinWumpusFeedbackSquad)(o), _.default.transitionToGuildSync("936317138904440892")
     }, [o]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {

@@ -15,8 +15,8 @@ var a = n("913527"),
   _ = n("271383"),
   C = n("430824"),
   m = n("131951"),
-  S = n("292959"),
-  p = n("699516"),
+  p = n("292959"),
+  S = n("699516"),
   g = n("944486"),
   I = n("9156"),
   T = n("594174"),
@@ -44,7 +44,7 @@ function b(e, t, n, a) {
       return null != n && null != n.name ? n.name : L.default.Messages.MESSAGE_TTS_DELETED_ROLE
     }).replace(/<#(\d+)>/g, (e, t) => {
       let n = h.default.getChannel(t);
-      return null == n ? e : (0, r.computeChannelName)(n, T.default, p.default)
+      return null == n ? e : (0, r.computeChannelName)(n, T.default, S.default)
     }).replace(/<a?:(\w+):(\d+)>/g, (e, t) => "".concat(L.default.Messages.EMOJI, " ").concat(t)).replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => "/".concat(t)).replace(/<t:(\d+):([A-Z]|[a-z])>/g, (e, t, n) => {
       let a = o.TIMESTAMP_FORMATS[n],
         l = 1e3 * parseInt(t, 10),
@@ -120,9 +120,9 @@ function F(e) {
     N = E.default.getCurrentSidebarChannelId(T),
     v = o === T || o === N,
     L = c.EnableTTSCommand.getSetting() && u.tts && v,
-    y = S.default.getTTSType(),
+    y = p.default.getTTSType(),
     P = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (y === O.TTSNotificationTypes.ALL_CHANNELS || y === O.TTSNotificationTypes.SELECTED_CHANNEL && v);
-  if ((L || P) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !p.default.isBlocked(u.author.id))) {
+  if ((L || P) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !S.default.isBlocked(u.author.id))) {
     if (M.indexOf(u.id) >= 0) return !1;
     M.unshift(u.id) > 10 && M.pop();
     let e = C.getGuildId();

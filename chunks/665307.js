@@ -18,8 +18,8 @@ var a, s = n("735250"),
   _ = n("287259"),
   C = n("404133"),
   m = n("785547"),
-  S = n("490983"),
-  p = n("799777"),
+  p = n("490983"),
+  S = n("799777"),
   g = n("285952"),
   I = n("366695"),
   T = n("366966"),
@@ -402,21 +402,21 @@ function H(e) {
       applicationViewItems: a,
       filterQuery: i,
       fetched: r
-    } = (0, u.useStateFromStoresObject)([S.default], () => ({
-      applicationViewItems: S.default.sortedFilteredLibraryApplicationViewItems,
-      filterQuery: S.default.applicationFilterQuery,
-      fetched: S.default.hasFetchedApplications
+    } = (0, u.useStateFromStoresObject)([p.default], () => ({
+      applicationViewItems: p.default.sortedFilteredLibraryApplicationViewItems,
+      filterQuery: p.default.applicationFilterQuery,
+      fetched: p.default.hasFetchedApplications
     })),
     {
       sortKey: d,
       sortDirection: c,
       activeRowKey: f,
       isNavigatingByKeyboard: E
-    } = (0, u.useStateFromStoresObject)([p.default], () => ({
-      sortKey: p.default.sortKey,
-      sortDirection: p.default.sortDirection,
-      activeRowKey: p.default.activeRowKey,
-      isNavigatingByKeyboard: p.default.isNavigatingByKeyboard
+    } = (0, u.useStateFromStoresObject)([S.default], () => ({
+      sortKey: S.default.sortKey,
+      sortDirection: S.default.sortDirection,
+      activeRowKey: S.default.activeRowKey,
+      isNavigatingByKeyboard: S.default.isNavigatingByKeyboard
     }));
   return (0, s.jsx)(F, {
     ...e,

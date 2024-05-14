@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("183126"),
   C = n("607070"),
   m = n("209613"),
-  S = n("325708"),
-  p = n("320149"),
+  p = n("325708"),
+  S = n("320149"),
   g = n("252618"),
   I = n("605236"),
   T = n("243778"),
@@ -76,7 +76,7 @@ function ea() {
     C = s.useCallback(() => {
       f(n.map(e => e.channel.id))
     }, [n, f]),
-    S = s.useCallback(e => {
+    p = s.useCallback(e => {
       var t, s;
       let {
         row: r
@@ -92,7 +92,7 @@ function ea() {
         hasSingleMessageRequest: l
       }, d)
     }, [l, n, h]),
-    p = s.useCallback(() => (0, a.jsxs)(U.default, {
+    S = s.useCallback(() => (0, a.jsxs)(U.default, {
       className: et.sectionTitle,
       children: [t > 0 ? ee.default.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
         count: t
@@ -139,8 +139,8 @@ function ea() {
           paddingBottom: 24,
           sectionHeight: Z.LIST_SECTION_HEIGHT,
           rowHeight: Z.LIST_ROW_HEIGHT,
-          renderSection: p,
-          renderRow: S,
+          renderSection: S,
+          renderRow: p,
           sections: [n.length],
           chunkSize: 30,
           fade: !0,
@@ -158,11 +158,11 @@ function es(e) {
   } = e, s = (0, u.useStateFromStores)([P.default], () => P.default.getSidebarState(P.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(null == s ? void 0 : s.channelId));
   if (null == s || s.type !== O.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
-  return (0, a.jsx)(S.default, {
-    sidebarType: S.ChatSidebarType.MessageRequestSidebar,
+  return (0, a.jsx)(p.default, {
+    sidebarType: p.ChatSidebarType.MessageRequestSidebar,
     maxWidth: i,
     onWidthChange: n,
-    children: (0, a.jsx)(p.default, {
+    children: (0, a.jsx)(S.default, {
       channel: l,
       baseChannelId: P.MESSAGE_REQUESTS_BASE_CHANNEL_ID
     })
@@ -253,11 +253,11 @@ let eo = (0, h.default)(function(e) {
     _ = null == h ? void 0 : h.channelId,
     C = null != h,
     m = (0, w.useIsEitherTypeOfMessageRequest)(_),
-    S = (0, k.useHasUserRepliedInChannel)(_);
+    p = (0, k.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(P.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
-  }, [_, S, C, m]);
-  let [p, I] = s.useState(Z.MessageRequestSections.REQUESTS);
+    null != _ && !m && p && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(P.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+  }, [_, p, C, m]);
+  let [S, I] = s.useState(Z.MessageRequestSections.REQUESTS);
   return (0, g.usePageTitle)({
     location: ee.default.Messages.MESSAGE_REQUESTS
   }), (0, a.jsxs)(a.Fragment, {
@@ -278,7 +278,7 @@ let eo = (0, h.default)(function(e) {
           })
         }), (0, a.jsx)(A.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
           "aria-label": ee.default.Messages.MESSAGE_REQUESTS,
-          selectedItem: p,
+          selectedItem: S,
           type: "top-pill",
           onItemSelect: e => {
             I(e)
@@ -299,7 +299,7 @@ let eo = (0, h.default)(function(e) {
       }), (0, a.jsx)("div", {
         className: en.content,
         children: (0, a.jsx)(er, {
-          section: p
+          section: S
         })
       })]
     }), C && (0, a.jsx)(es, {

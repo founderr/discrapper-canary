@@ -24,15 +24,15 @@ function m(e) {
     active: t,
     user: n,
     channel: m
-  } = e, S = (0, c.useListHasSingleSpamMessageRequest)(), p = s.useCallback(() => {
+  } = e, p = (0, c.useListHasSingleSpamMessageRequest)(), S = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(_.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
       name: l.MetricEvents.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
   }, []), g = s.useCallback(() => {
     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), I = s.useCallback(() => {
-    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), S && (0, o.transitionToChannel)(m.id)
-  }, [m.id, S]), {
+    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), p && (0, o.transitionToChannel)(m.id)
+  }, [m.id, p]), {
     acceptMessageRequest: T,
     isAcceptLoading: A,
     isUserProfileLoading: N,
@@ -41,7 +41,7 @@ function m(e) {
     user: n,
     onAcceptSuccess: I,
     onRejectSuccess: g,
-    onError: p
+    onError: S
   }), R = A || N, O = R || v;
   return (0, a.jsxs)("div", {
     className: C.container,

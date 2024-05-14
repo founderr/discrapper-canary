@@ -16,7 +16,7 @@ var a = n("735250"),
   C = n("823379"),
   m = n("689938");
 
-function S(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,7 +24,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends s.PureComponent {
+class S extends s.PureComponent {
   hasParty(e) {
     return e.length > 1
   }
@@ -47,7 +47,7 @@ class p extends s.PureComponent {
     }) : null
   }
   constructor(...e) {
-    super(...e), S(this, "handleUserContextMenu", (e, t) => {
+    super(...e), p(this, "handleUserContextMenu", (e, t) => {
       (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -57,7 +57,7 @@ class p extends s.PureComponent {
           user: t
         })
       })
-    }), S(this, "renderOverflowPopout", () => {
+    }), p(this, "renderOverflowPopout", () => {
       let {
         party: e
       } = this.props;
@@ -85,4 +85,4 @@ t.default = r.default.connectStores([c.default, h.default, E.default, f.default]
     host: e,
     party: l
   }
-})(p)
+})(S)

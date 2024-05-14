@@ -25,8 +25,8 @@ var a = n("735250"),
   _ = n("144114"),
   C = n("210887"),
   m = n("23434"),
-  S = n("610001"),
-  p = n("78415"),
+  p = n("610001"),
+  S = n("78415"),
   g = n("1964"),
   I = n("981631"),
   T = n("815660"),
@@ -60,7 +60,7 @@ function R() {
         })
       }, {
         modalKey: N,
-        Layer: p.default
+        Layer: S.default
       })
     },
     P = () => {
@@ -74,7 +74,7 @@ function R() {
         })
       }, {
         modalKey: T.PHONE_VERIFICATION_MODAL_KEY,
-        Layer: p.default
+        Layer: S.default
       })
     };
   return s.useEffect(() => (E.default.disable(), () => {
@@ -92,10 +92,10 @@ function R() {
       })
     }, {
       modalKey: v,
-      Layer: p.default,
+      Layer: S.default,
       onCloseCallback: y
     })
-  }, [R, M]), (0, a.jsx)(S.default, {
+  }, [R, M]), (0, a.jsx)(p.default, {
     types: R,
     captchaKey: O,
     onCaptchaVerify: e => {
@@ -131,7 +131,7 @@ function R() {
           })
         })
       }, {
-        Layer: p.default
+        Layer: S.default
       })
     }
   })

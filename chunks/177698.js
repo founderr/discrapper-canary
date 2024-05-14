@@ -23,13 +23,13 @@ t.default = (0, c.default)(e => {
     codeChallenge: _,
     codeChallengeMethod: C,
     state: m,
-    guildId: S,
-    channelId: p,
+    guildId: p,
+    channelId: S,
     prompt: g,
     disableGuildSelect: I,
     disclosures: T,
     integrationType: A
-  } = e, N = "OAuth2Authorize_".concat(n, "_").concat(S, "_").concat(p), v = null != A ? null == o ? void 0 : o.get(A) : void 0, R = null !== (t = null == v ? void 0 : v.application) && void 0 !== t ? t : i.default.getApplication(n);
+  } = e, N = "OAuth2Authorize_".concat(n, "_").concat(p, "_").concat(S), v = null != A ? null == o ? void 0 : o.get(A) : void 0, R = null !== (t = null == v ? void 0 : v.application) && void 0 !== t ? t : i.default.getApplication(n);
   return new Promise((e, t) => {
     let i = n => {
       let {
@@ -52,8 +52,8 @@ t.default = (0, c.default)(e => {
       codeChallengeMethod: C,
       state: m,
       permissions: c,
-      guildId: S,
-      channelId: p,
+      guildId: p,
+      channelId: S,
       prompt: g,
       disableGuildSelect: "boolean" == typeof I ? I : "true" === I,
       integrationType: A
@@ -64,7 +64,7 @@ t.default = (0, c.default)(e => {
           errorCode: f.RPCErrors.OAUTH2_ERROR
         }, "User cancelled authorization"))
       }
-    }, null != R && (0, l.default)(R, p) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
+    }, null != R && (0, l.default)(R, S) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
   })
 }, function(e, t) {
   if (o.isPlatformEmbedded) {

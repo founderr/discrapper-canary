@@ -19,18 +19,18 @@ t.default = e => {
   var t, n;
   let {
     guild: m
-  } = e, S = (0, l.useGroupListingsForGuild)(m.id)[0];
+  } = e, p = (0, l.useGroupListingsForGuild)(m.id)[0];
   (0, o.default)({
     guildId: m.id,
-    groupListingId: null == S ? void 0 : S.id,
+    groupListingId: null == p ? void 0 : p.id,
     location: h.AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB,
-    relevantSubscriptionListingIds: null == S ? void 0 : S.subscription_listings_ids
+    relevantSubscriptionListingIds: null == p ? void 0 : p.subscription_listings_ids
   });
   let {
-    activeSubscription: p
-  } = (0, r.default)(null == S ? void 0 : S.id), g = (0, l.useSubscriptionsSettings)(m.id), I = null == g ? void 0 : g.description, {
+    activeSubscription: S
+  } = (0, r.default)(null == p ? void 0 : p.id), g = (0, l.useSubscriptionsSettings)(m.id), I = null == g ? void 0 : g.description, {
     editStateIds: T
-  } = i.useEditStateIds(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : null, m.id);
+  } = i.useEditStateIds(null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : null, m.id);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(E.default, {
       title: _.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
@@ -39,12 +39,12 @@ t.default = e => {
       description: null != I ? I : null,
       coverImageAsset: null !== (n = null == g ? void 0 : g.cover_image_asset) && void 0 !== n ? n : null,
       guild: m,
-      children: [null != S ? (0, a.jsx)(u.default, {
+      children: [null != p ? (0, a.jsx)(u.default, {
         className: C.pendingPlanChangeNotice,
-        groupListingId: S.id,
-        subscription: p
+        groupListingId: p.id,
+        subscription: S
       }) : null, (0, a.jsx)(d.default, {
-        subscription: p
+        subscription: S
       })]
     }), (0, a.jsx)(s.HeadingLevel, {
       children: (0, a.jsx)(c.default, {
@@ -53,7 +53,7 @@ t.default = e => {
           var t;
           return (0, a.jsx)(f.default, {
             guildId: m.id,
-            groupListingId: null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : "",
+            groupListingId: null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : "",
             listingId: e,
             analyticsLocation: h.AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB
           }, e)

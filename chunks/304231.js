@@ -15,19 +15,19 @@ var a = n("735250"),
   _ = n("316553"),
   C = n("689938"),
   m = n("297344");
-let S = {
+let p = {
   mass: 1,
   tension: 600,
   friction: 60
 };
 
-function p(e) {
+function S(e) {
   let {
     currentStep: t,
     selectedGame: n
   } = e, l = (0, _.useDiscoveryGameApplicationId)({
     selectedGame: n
-  }), r = (0, h.useClanDiscoveryUIStore)(e => e.selectedGames, i.default), u = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedGames, i.default), f = s.useMemo(() => new Set(r), [r]), S = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, i.default), p = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, i.default), I = (0, h.useClanDiscoveryUIStore)(e => e.selectedTraits, i.default), T = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedTraits, i.default), A = s.useMemo(() => new Set(I), [I]), N = s.useCallback(e => u(Array.from(e)), [u]), v = s.useCallback(e => p(e), [p]), R = s.useCallback(e => T([...e]), [T]), O = s.useCallback(() => {
+  }), r = (0, h.useClanDiscoveryUIStore)(e => e.selectedGames, i.default), u = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedGames, i.default), f = s.useMemo(() => new Set(r), [r]), p = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, i.default), S = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, i.default), I = (0, h.useClanDiscoveryUIStore)(e => e.selectedTraits, i.default), T = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedTraits, i.default), A = s.useMemo(() => new Set(I), [I]), N = s.useCallback(e => u(Array.from(e)), [u]), v = s.useCallback(e => S(e), [S]), R = s.useCallback(e => T([...e]), [T]), O = s.useCallback(() => {
     switch (t) {
       case 0:
         return (0, a.jsx)(d.default, {
@@ -42,7 +42,7 @@ function p(e) {
           title: C.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
           description: C.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
           handleUpdate: v,
-          playstyle: S
+          playstyle: p
         });
       case 2:
         return (0, a.jsx)(E.default, {
@@ -54,7 +54,7 @@ function p(e) {
           hidePreview: !0
         })
     }
-  }, [t, l, N, f, v, S, R, A]);
+  }, [t, l, N, f, v, p, R, A]);
   return (0, a.jsx)(o.Sequencer, {
     step: t,
     steps: g,
@@ -101,7 +101,7 @@ t.default = s.memo(function(e) {
     to: {
       opacity: 1
     },
-    config: S
+    config: p
   }), y = (0, l.useSpring)({
     ref: d,
     from: {
@@ -112,7 +112,7 @@ t.default = s.memo(function(e) {
       opacity: 1,
       transform: "translateY(0px)"
     },
-    config: S
+    config: p
   });
   return (0, l.useChain)([o, d], [0, .2]), (0, a.jsxs)(l.animated.div, {
     className: m.container,
@@ -120,7 +120,7 @@ t.default = s.memo(function(e) {
     children: [(0, a.jsx)(l.animated.div, {
       className: m.sequencer,
       style: y,
-      children: (0, a.jsx)(p, {
+      children: (0, a.jsx)(S, {
         currentStep: E,
         selectedGame: t
       })

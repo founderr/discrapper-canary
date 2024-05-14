@@ -28,13 +28,13 @@ function m(e) {
   return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake
 }
 
-function S(e) {
+function p(e) {
   return new Promise((t, n) => {
     "string" == typeof e && (e = E.net.createConnection(e)), e.pause(), e.on("readable", () => {
       try {
         g(e)
       } catch (t) {
-        e.end(p(_.CLOSE, {
+        e.end(S(_.CLOSE, {
           code: 1003,
           message: t.message
         })), e.destroy()
@@ -54,11 +54,11 @@ function S(e) {
       }, e => {
         throw a(), e
       });
-    return e.write(p(_.PING, i().uniqueId())), s.then(t, n)
+    return e.write(S(_.PING, i().uniqueId())), s.then(t, n)
   })
 }
 
-function p(e, t) {
+function S(e, t) {
   var n;
   t = JSON.stringify(t);
   let s = a.Buffer.byteLength(t),
@@ -77,7 +77,7 @@ function g(e) {
   let i = JSON.parse((n = a.Buffer.from(t)).toString());
   switch (s) {
     case _.PING:
-      e.emit("ping", i), e.write(p(_.PONG, i));
+      e.emit("ping", i), e.write(S(_.PONG, i));
       break;
     case _.PONG:
       e.emit("pong", i);
@@ -97,10 +97,10 @@ function g(e) {
 }
 class I extends d.default {
   send(e) {
-    h.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(p(_.FRAME, e))
+    h.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(S(_.FRAME, e))
   }
   close(e, t) {
-    this.socket.end(p(_.CLOSE, {
+    this.socket.end(S(_.CLOSE, {
       code: e,
       message: t
     })), this.socket.destroy()
@@ -121,7 +121,7 @@ class T extends s.EventEmitter {
       try {
         g(e)
       } catch (t) {
-        e.end(p(_.CLOSE, {
+        e.end(S(_.CLOSE, {
           code: f.RPCCloseCodes.CLOSE_UNSUPPORTED,
           message: t.message
         })), e.destroy()
@@ -133,7 +133,7 @@ class T extends s.EventEmitter {
       try {
         n = new I(e, s, "json")
       } catch (t) {
-        e.end(p(_.CLOSE, {
+        e.end(S(_.CLOSE, {
           code: t.code,
           message: t.message
         })), e.destroy();
@@ -157,7 +157,7 @@ class T extends s.EventEmitter {
   constructor() {
     super();
     let e = E.net.createServer(e => this.handleConnection(e));
-    e.on("error", e => h.error("Error: ".concat(e.message))), E.getAvailableSocket(S).then(t => {
+    e.on("error", e => h.error("Error: ".concat(e.message))), E.getAvailableSocket(p).then(t => {
       e.listen(t, () => {
         ("function" == typeof e.listening ? e.listening() : e.listening) && h.info("Starting on ".concat(e.address()))
       })

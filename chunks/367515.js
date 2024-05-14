@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   UserLinkPendingRequestRow: function() {
-    return p
+    return S
   }
 });
 var a = n("735250"),
@@ -19,12 +19,12 @@ var a = n("735250"),
   _ = n("340453"),
   C = n("292352"),
   m = n("689938"),
-  S = n("999593");
+  p = n("999593");
 
-function p(e) {
+function S(e) {
   let {
     user: t
-  } = e, l = (0, f.default)(), p = (0, E.useHasMaxConnections)(), g = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), I = s.useCallback(() => {
+  } = e, l = (0, f.default)(), S = (0, E.useHasMaxConnections)(), g = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), I = s.useCallback(() => {
     i()(void 0 !== g, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -59,29 +59,29 @@ function p(e) {
     })
   }, [g, t]);
   return (0, a.jsxs)("div", {
-    className: S.container,
+    className: p.container,
     children: [(0, a.jsx)("div", {
-      className: S.details,
+      className: p.details,
       children: (0, a.jsx)(_.default, {
         otherUser: t,
         status: C.UserLinkStatus.PENDING
       })
     }), (0, a.jsx)("div", {
-      className: S.actions,
+      className: p.actions,
       children: l ? (0, a.jsx)(h.default, {
         icon: c.default,
-        className: S.__invalid_actionDeny,
+        className: p.__invalid_actionDeny,
         tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
         onClick: A
       }) : (0, a.jsxs)(a.Fragment, {
-        children: [p ? null : (0, a.jsx)(h.default, {
+        children: [S ? null : (0, a.jsx)(h.default, {
           icon: d.default,
-          className: S.__invalid_actionAccept,
+          className: p.__invalid_actionAccept,
           tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
           onClick: I
         }), (0, a.jsx)(h.default, {
           icon: c.default,
-          className: S.__invalid_actionDeny,
+          className: p.__invalid_actionDeny,
           tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
           onClick: T
         })]

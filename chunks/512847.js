@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("314897"),
   C = n("592125"),
   m = n("430824"),
-  S = n("131951"),
-  p = n("292959"),
+  p = n("131951"),
+  S = n("292959"),
   g = n("19780"),
   I = n("944486"),
   T = n("606304"),
@@ -36,19 +36,19 @@ function L(e, t, n, a) {
       l = new r.BatchedStoreListener(e, () => {
         let e = t(),
           l = n(s, e);
-        null != l && !p.default.isSoundDisabled(l) && (0, R.playSound)(l, null != a ? a : .4), s = e
+        null != l && !S.default.isSoundDisabled(l) && (0, R.playSound)(l, null != a ? a : .4), s = e
       });
     return l.attach("useSound"), () => l.detach()
   })
 }
 
 function M() {
-  return L([S.default, I.default], () => ({
+  return L([p.default, I.default], () => ({
     inVoiceChannel: null != I.default.getVoiceChannelId(),
-    selfMute: S.default.isSelfMute(),
-    selfDeaf: S.default.isSelfDeaf(),
-    audioPermissionReady: S.default.isNativeAudioPermissionReady(),
-    shouldSkipMuteUnmuteSound: S.default.shouldSkipMuteUnmuteSound()
+    selfMute: p.default.isSelfMute(),
+    selfDeaf: p.default.isSelfDeaf(),
+    audioPermissionReady: p.default.isNativeAudioPermissionReady(),
+    shouldSkipMuteUnmuteSound: p.default.shouldSkipMuteUnmuteSound()
   }), (e, t) => {
     let {
       inVoiceChannel: n,
@@ -61,7 +61,7 @@ function M() {
     if (!!l) {
       if ((n || e.audioPermissionReady) && e.selfMute !== a) {
         if (i) {
-          S.default.notifyMuteUnmuteSoundWasSkipped();
+          p.default.notifyMuteUnmuteSoundWasSkipped();
           return
         }
         return a ? "mute" : "unmute"
@@ -107,17 +107,17 @@ function y() {
 function P() {
   return L([T.default], () => T.default.isCurrentUserSpeaking(), (e, t) => {
     if (e !== t) {
-      let e = S.default.isSelfMute();
-      if (S.default.getMode() === O.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
+      let e = p.default.isSelfMute();
+      if (p.default.getMode() === O.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
     }
   }), null
 }
 
 function x() {
-  return L([S.default], () => S.default.isSelfMutedTemporarily(), (e, t) => {
+  return L([p.default], () => p.default.isSelfMutedTemporarily(), (e, t) => {
     if (e !== t) {
-      let e = S.default.isSelfMute();
-      if (S.default.getMode() === O.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
+      let e = p.default.isSelfMute();
+      if (p.default.getMode() === O.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
     }
   }), null
 }
