@@ -50391,8 +50391,8 @@ div:has(>div>.modal__06f49) {
 }
 
 .name__4eb92 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: 500;
     flex: 1 1 auto
 }
@@ -132010,13 +132010,10 @@ div.nagbar_c731ff {
     gap: 16px
 }
 
-.username__7cf20 {
-    flex-shrink: 0
-}
-
 .badgeList__70639 {
     max-width: 228px;
-    border: none
+    border: none;
+    flex-shrink: 0
 }
 
 .inner__14185 {

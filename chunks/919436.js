@@ -174,7 +174,7 @@ class b extends(l = s.PureComponent) {
                 children: g ? (0, a.jsx)(m.default, {
                   channel: e,
                   size: u.AvatarSizes.SIZE_48,
-                  facepileSizeOverride: 36,
+                  facepileSizeOverride: u.AvatarSizes.SIZE_32,
                   experimentLocation: "unread_gdm",
                   "aria-hidden": !0
                 }) : void 0,

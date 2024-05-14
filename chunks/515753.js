@@ -236,10 +236,11 @@ function J(e) {
       user: c
     }) : null
   }, em = () => {
+    let e = h.AvatarSizes.SIZE_32;
     if (t.isMultiUserDM()) return t.recipients.length >= 2 && s && null == t.icon ? (0, l.jsx)(L.default, {
       "aria-hidden": !0,
       recipients: t.recipients,
-      size: (0, h.getAvatarSize)(h.AvatarSizes.SIZE_32),
+      size: e,
       isTyping: M,
       status: O
     }) : (0, l.jsx)(z, {
@@ -247,18 +248,18 @@ function J(e) {
       src: (0, _.getChannelIconURL)(t),
       "aria-hidden": !0,
       className: W.__invalid_avatar,
-      size: h.AvatarSizes.SIZE_32,
+      size: e,
       status: M ? Y.StatusTypes.ONLINE : O,
       isTyping: M
     });
     o()(null != c, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
-    let e = null;
-    return !c.isSystemUser() && (e = (0, C.default)(A) ? Y.StatusTypes.STREAMING : O), (0, l.jsx)(z, {
+    let n = null;
+    return !c.isSystemUser() && (n = (0, C.default)(A) ? Y.StatusTypes.STREAMING : O), (0, l.jsx)(z, {
       ...et,
       size: h.AvatarSizes.SIZE_32,
       src: $,
       avatarDecoration: ee,
-      status: e,
+      status: n,
       isMobile: b,
       isTyping: M,
       className: W.__invalid_avatar,
