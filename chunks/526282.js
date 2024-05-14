@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryUserUpsellBackgroundRings: function() {
-    return p
+    return g
   }
 }), n("47120");
 var a = n("735250"),
@@ -10,19 +10,20 @@ var a = n("735250"),
   l = n("442837"),
   r = n("481060"),
   o = n("607070"),
-  u = n("970606"),
-  d = n("231467"),
-  c = n("207796"),
-  f = n("436137"),
-  E = n("559469"),
-  h = n("689938"),
-  _ = n("531612");
-let C = {
+  u = n("100527"),
+  d = n("970606"),
+  c = n("231467"),
+  f = n("207796"),
+  E = n("436137"),
+  h = n("559469"),
+  _ = n("689938"),
+  C = n("531612");
+let m = {
     mass: 1,
     tension: 600,
     friction: 60
   },
-  m = {
+  S = {
     from: {
       transform: "translateY(40px) scale(0.9)",
       opacity: 0
@@ -31,47 +32,47 @@ let C = {
       transform: "translateY(0px) scale(1)",
       opacity: 1
     },
-    config: C
+    config: m
   },
-  S = {
+  p = {
     from: {
       opacity: 0
     },
     to: {
       opacity: 1
     },
-    config: C
+    config: m
   };
 
-function p() {
+function g() {
   let e = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion),
     t = s.useRef(null),
     n = s.useRef(null),
     r = s.useRef(null),
     u = (0, i.useSpring)({
       ref: t,
-      ...S
+      ...p
     }),
     d = (0, i.useSpring)({
       ref: n,
-      ...S
+      ...p
     }),
     c = (0, i.useSpring)({
       ref: r,
-      ...S
+      ...p
     });
   return (0, i.useChain)([t, n, r], [.8, .9, 1]), (0, a.jsx)("div", {
-    className: _.backgroundContainer,
+    className: C.backgroundContainer,
     children: (0, a.jsxs)("div", {
-      className: _.ringsContainer,
+      className: C.ringsContainer,
       children: [(0, a.jsx)(i.animated.div, {
-        className: _.ringOuter,
+        className: C.ringOuter,
         style: e ? void 0 : c
       }), (0, a.jsx)(i.animated.div, {
-        className: _.ringMiddle,
+        className: C.ringMiddle,
         style: e ? void 0 : d
       }), (0, a.jsx)(i.animated.div, {
-        className: _.ringInner,
+        className: C.ringInner,
         style: e ? void 0 : u
       })]
     })
@@ -81,23 +82,23 @@ t.default = s.memo(function(e) {
   let {
     selectedGame: t,
     onClick: n
-  } = e, S = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = s.useRef(null), g = s.useRef(null), I = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = (0, i.useSpring)({
-    ref: p,
-    ...m
-  }), R = (0, i.useSpring)({
+  } = e, p = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), g = s.useRef(null), I = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), R = (0, i.useSpring)({
     ref: g,
-    ...m
+    ...S
   }), L = (0, i.useSpring)({
     ref: I,
-    ...m
+    ...S
   }), O = (0, i.useSpring)({
     ref: T,
-    ...m
+    ...S
   }), y = (0, i.useSpring)({
     ref: A,
-    ...m
+    ...S
   }), M = (0, i.useSpring)({
     ref: N,
+    ...S
+  }), P = (0, i.useSpring)({
+    ref: v,
     from: {
       transform: "translateY(40px)",
       opacity: 0
@@ -106,78 +107,80 @@ t.default = s.memo(function(e) {
       transform: "translateY(0px)",
       opacity: 1
     },
-    config: C
+    config: m
   });
-  (0, i.useChain)([p, g, I, T, A, N], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
-    (0, u.trackClanDiscoveryUserNuxViewed)()
+  (0, i.useChain)([g, I, T, A, N, v], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
+    (0, d.trackClanUserInviteViewed)({
+      location: u.default.CLAN_DISCOVERY
+    })
   }, []);
-  let [P, x] = s.useMemo(() => {
+  let [x, D] = s.useMemo(() => {
     switch (t) {
-      case c.ClanDiscoveryGame.GENSHIN:
-        return [h.default.Messages.CLAN_DISCOVERY_UPSELL_TITLE, h.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE];
-      case c.ClanDiscoveryGame.VALORANT:
-        return [h.default.Messages.CLAN_DISCOVERY_UPSELL_TITLE, h.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE]
+      case f.ClanDiscoveryGame.GENSHIN:
+        return [_.default.Messages.CLAN_DISCOVERY_UPSELL_TITLE, _.default.Messages.CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE];
+      case f.ClanDiscoveryGame.VALORANT:
+        return [_.default.Messages.CLAN_DISCOVERY_UPSELL_TITLE, _.default.Messages.CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE]
     }
   }, [t]);
   return (0, a.jsxs)("div", {
-    className: _.upsellContainer,
+    className: C.upsellContainer,
     children: [(0, a.jsx)("div", {
-      className: _.cardsContainer,
+      className: C.cardsContainer,
       children: (0, a.jsxs)("div", {
-        className: _.cards,
+        className: C.cards,
         children: [(0, a.jsx)(i.animated.div, {
-          className: _.clanCardOuterContainer,
-          style: S ? void 0 : O,
-          children: (0, a.jsx)(d.ClanDiscoveryCardView, {
-            clan: E.FAKE_DISCOVERY_UPSELL_CLANS["0"],
-            className: _.clanCardOuterLeft
+          className: C.clanCardOuterContainer,
+          style: p ? void 0 : y,
+          children: (0, a.jsx)(c.ClanDiscoveryCardView, {
+            clan: h.FAKE_DISCOVERY_UPSELL_CLANS["0"],
+            className: C.clanCardOuterLeft
           })
         }), (0, a.jsx)(i.animated.div, {
-          className: _.clanCardInnerContainer,
-          style: S ? void 0 : R,
-          children: (0, a.jsx)(d.ClanDiscoveryCardView, {
-            clan: E.FAKE_DISCOVERY_UPSELL_CLANS["1"],
-            className: _.clanCardInnerLeft
+          className: C.clanCardInnerContainer,
+          style: p ? void 0 : L,
+          children: (0, a.jsx)(c.ClanDiscoveryCardView, {
+            clan: h.FAKE_DISCOVERY_UPSELL_CLANS["1"],
+            className: C.clanCardInnerLeft
           })
         }), (0, a.jsx)(i.animated.div, {
-          className: _.clanCardCenterContainer,
-          style: S ? void 0 : v,
-          children: (0, a.jsx)(d.ClanDiscoveryCardView, {
-            clan: E.FAKE_DISCOVERY_UPSELL_CLANS["4"],
-            className: _.clanCardCenter
+          className: C.clanCardCenterContainer,
+          style: p ? void 0 : R,
+          children: (0, a.jsx)(c.ClanDiscoveryCardView, {
+            clan: h.FAKE_DISCOVERY_UPSELL_CLANS["4"],
+            className: C.clanCardCenter
           })
         }), (0, a.jsx)(i.animated.div, {
-          className: _.clanCardInnerContainer,
-          style: S ? void 0 : L,
-          children: (0, a.jsx)(d.ClanDiscoveryCardView, {
-            clan: E.FAKE_DISCOVERY_UPSELL_CLANS["2"],
-            className: _.clanCardInnerRight
+          className: C.clanCardInnerContainer,
+          style: p ? void 0 : O,
+          children: (0, a.jsx)(c.ClanDiscoveryCardView, {
+            clan: h.FAKE_DISCOVERY_UPSELL_CLANS["2"],
+            className: C.clanCardInnerRight
           })
         }), (0, a.jsx)(i.animated.div, {
-          className: _.clanCardOuterContainer,
-          style: S ? void 0 : y,
-          children: (0, a.jsx)(d.ClanDiscoveryCardView, {
-            clan: E.FAKE_DISCOVERY_UPSELL_CLANS["3"],
-            className: _.clanCardOuterRight
+          className: C.clanCardOuterContainer,
+          style: p ? void 0 : M,
+          children: (0, a.jsx)(c.ClanDiscoveryCardView, {
+            clan: h.FAKE_DISCOVERY_UPSELL_CLANS["3"],
+            className: C.clanCardOuterRight
           })
         })]
       })
     }), (0, a.jsxs)(i.animated.div, {
-      className: _.upsellDetails,
-      style: S ? void 0 : M,
+      className: C.upsellDetails,
+      style: p ? void 0 : P,
       children: [(0, a.jsx)(r.Heading, {
-        className: _.upsellTitle,
+        className: C.upsellTitle,
         color: "header-primary",
         variant: "heading-xxl/semibold",
-        children: P
+        children: x
       }), (0, a.jsx)(r.Text, {
-        className: _.upsellSubtitle,
+        className: C.upsellSubtitle,
         color: "header-secondary",
         variant: "text-md/medium",
-        children: x
-      }), (0, a.jsx)(f.default, {
+        children: D
+      }), (0, a.jsx)(E.default, {
         onClick: n,
-        children: h.default.Messages.CHECK_IT_OUT
+        children: _.default.Messages.CHECK_IT_OUT
       })]
     })]
   })

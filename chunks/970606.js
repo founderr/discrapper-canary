@@ -30,12 +30,6 @@ n.r(t), n.d(t, {
   trackClanDiscoveryCardClicked: function() {
     return C
   },
-  trackClanDiscoveryUserNuxClicked: function() {
-    return N
-  },
-  trackClanDiscoveryUserNuxViewed: function() {
-    return m
-  },
   trackClanDiscoveryViewed: function() {
     return h
   },
@@ -44,6 +38,12 @@ n.r(t), n.d(t, {
   },
   trackClanSendInterviewMessage: function() {
     return g
+  },
+  trackClanUserInviteClicked: function() {
+    return N
+  },
+  trackClanUserInviteViewed: function() {
+    return m
   },
   trackConvertStepViewed: function() {
     return I
@@ -182,12 +182,22 @@ function A(e) {
   }
 }
 
-function m() {
-  o.default.track(u.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_VIEWED)
+function m(e) {
+  let {
+    location: t
+  } = e;
+  o.default.track(u.AnalyticEvents.CLAN_USER_INVITE_VIEWED, {
+    location: t
+  })
 }
 
-function N() {
-  o.default.track(u.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_CLICKED)
+function N(e) {
+  let {
+    location: t
+  } = e;
+  o.default.track(u.AnalyticEvents.CLAN_USER_INVITE_CLICKED, {
+    location: t
+  })
 }
 
 function p(e) {
