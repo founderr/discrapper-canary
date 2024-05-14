@@ -2,7 +2,7 @@
 a.r(t), a("47120");
 var n, l, s, r, o = a("735250"),
   u = a("470079"),
-  i = a("231819"),
+  i = a("160612"),
   d = a("120356"),
   c = a.n(d),
   E = a("481060"),
@@ -131,7 +131,8 @@ t.default = function(e) {
             }), (0, o.jsx)(i.CardNumberElement, {
               options: {
                 style: R,
-                placeholder: m.default.Messages.PAYMENT_SOURCE_CARD_NUMBER
+                placeholder: m.default.Messages.PAYMENT_SOURCE_CARD_NUMBER,
+                disableLink: !0
               },
               className: D()
             })]
