@@ -126,15 +126,14 @@ t.default = function(e) {
         className: O.infoSide,
         children: [(0, a.jsxs)("div", {
           className: O.titlesContainer,
-          children: [(0, a.jsxs)("div", {
+          children: [(0, a.jsx)("div", {
             className: O.title,
-            children: [(0, a.jsx)(h.Heading, {
+            children: (0, a.jsx)(h.Heading, {
               variant: "heading-xxl/medium",
-              children: y.default.Messages.CLAN_JOIN_SUCCESS_TITLE
-            }), (0, a.jsx)(h.Heading, {
-              variant: "heading-xxl/bold",
-              children: B.name
-            })]
+              children: y.default.Messages.CLAN_JOIN_SUCCESS_TITLE.format({
+                name: B.name
+              })
+            })
           }), (0, a.jsx)(h.Text, {
             className: O.subtitle,
             variant: "text-md/normal",

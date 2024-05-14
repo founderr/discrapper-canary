@@ -24,8 +24,8 @@ var a = n("735250"),
   N = n("725568"),
   v = n("231467"),
   R = n("207796"),
-  L = n("316553"),
-  O = n("273254"),
+  O = n("316553"),
+  L = n("273254"),
   M = n("559469"),
   y = n("308083"),
   P = n("689938"),
@@ -84,29 +84,21 @@ function k(e) {
     selectedGuildId: t,
     setSelectedGuildId: n,
     eligibleGuilds: l,
-    selectedGame: r,
-    onButtonClick: f,
-    buttonText: _,
-    hasCompletedUpsell: C
-  } = e, m = (0, R.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), S = (0, R.useClanDiscoveryUIStore)(e => e.started, o.default), p = s.useMemo(() => {
-    switch (r) {
-      case R.ClanDiscoveryGame.GENSHIN:
-        return P.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_GENSHIN;
-      case R.ClanDiscoveryGame.VALORANT:
-        return P.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT_VALORANT
-    }
-  }, [r]), I = s.useMemo(() => l.map(e => ({
+    onButtonClick: r,
+    buttonText: f,
+    hasCompletedUpsell: _
+  } = e, C = (0, R.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), m = (0, R.useClanDiscoveryUIStore)(e => e.started, o.default), S = s.useMemo(() => l.map(e => ({
     value: e.id,
     label: e.name
   })), [l]), {
-    enableApplication: T
-  } = (0, g.useClanPrePilotApplicationExperiment)("discovery"), A = s.useCallback(() => {
+    enableApplication: p
+  } = (0, g.useClanPrePilotApplicationExperiment)("discovery"), I = s.useCallback(() => {
     (0, R.setClanDiscoveryMode)(R.ClanDiscoveryMode.DISCOVERY)
-  }, []), N = s.useCallback(() => {
-    (0, R.setClanDiscoveryMode)(R.ClanDiscoveryMode.GET_STARTED), m(R.ClanDiscoveryUserScreens.USER_ONBOARDING)
-  }, [m]), v = !S && T, L = l.length > 1;
+  }, []), T = s.useCallback(() => {
+    (0, R.setClanDiscoveryMode)(R.ClanDiscoveryMode.GET_STARTED), C(R.ClanDiscoveryUserScreens.USER_ONBOARDING)
+  }, [C]), A = !m && p, N = l.length > 1;
   return (0, a.jsxs)(a.Fragment, {
-    children: [C ? (0, a.jsxs)(a.Fragment, {
+    children: [_ ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.Heading, {
         className: x.upsellTitle,
         variant: "heading-xxl/semibold",
@@ -121,7 +113,7 @@ function k(e) {
       children: [(0, a.jsxs)(h.Heading, {
         className: x.upsellTitle,
         variant: "heading-xxl/semibold",
-        children: [P.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_GUILD_INVITE, (0, a.jsx)("br", {}), p]
+        children: [P.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_GUILD_INVITE, (0, a.jsx)("br", {}), P.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT]
       }), (0, a.jsxs)("div", {
         className: x.upsellDetails,
         children: [(0, a.jsx)(G, {
@@ -137,43 +129,43 @@ function k(e) {
       })]
     }), (0, a.jsxs)("div", {
       className: x.upsellButton,
-      children: [L && (0, a.jsx)(h.SearchableSelect, {
+      children: [N && (0, a.jsx)(h.SearchableSelect, {
         className: x.upsellSelect,
         value: t,
-        options: I,
+        options: S,
         onChange: n
-      }), !C && (0, a.jsx)(h.Button, {
+      }), !_ && (0, a.jsx)(h.Button, {
         look: h.ButtonLooks.FILLED,
         size: h.ButtonSizes.LARGE,
         color: h.ButtonColors.BRAND,
         className: i()(x.reserveButton, {
-          [x.buttonWithSelect]: L
+          [x.buttonWithSelect]: N
         }),
-        onClick: f,
+        onClick: r,
         children: (0, a.jsx)(h.Text, {
           variant: "text-sm/medium",
           color: "always-white",
-          children: _
+          children: f
         })
-      }), L && v && (0, a.jsx)("div", {
+      }), N && A && (0, a.jsx)("div", {
         className: x.spacer,
         children: "\xb7"
-      }), v && (0, a.jsx)(h.Button, {
+      }), A && (0, a.jsx)(h.Button, {
         look: h.ButtonLooks.OUTLINED,
         color: h.ButtonColors.PRIMARY,
         className: x.browseButton,
-        onClick: N,
+        onClick: T,
         children: (0, a.jsx)(h.Text, {
           variant: "text-sm/medium",
           children: P.default.Messages.CLAN_DISCOVERY_UPSELL_BROWSE
         })
       })]
-    }), S && (0, a.jsx)("div", {
+    }), m && (0, a.jsx)("div", {
       className: x.upsellStaticHeader,
       children: (0, a.jsx)("div", {
         className: x.upsellBackButton,
         children: (0, a.jsx)(h.Clickable, {
-          onClick: A,
+          onClick: I,
           "aria-label": P.default.Messages.BACK,
           children: (0, a.jsx)(E.ArrowLargeLeftIcon, {})
         })
@@ -200,7 +192,7 @@ t.default = s.memo(function(e) {
   }, [i, o]);
   let d = (0, f.useStateFromStores)([A.default], () => A.default.getGuild(o)),
     c = (0, f.useStateFromStores)([I.default], () => null != o ? I.default.getStateForGuild(o).progress : null),
-    E = (0, L.useDiscoveryGameApplicationId)({
+    E = (0, O.useDiscoveryGameApplicationId)({
       selectedGame: l
     }),
     g = s.useCallback(() => {
@@ -221,7 +213,7 @@ t.default = s.memo(function(e) {
       }))
     }, [i, o, E]),
     R = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion),
-    D = (0, O.useFakeDiscoveryClanForGuild)({
+    D = (0, L.useFakeDiscoveryClanForGuild)({
       guild: d,
       selectedGame: l
     }),
@@ -387,7 +379,6 @@ t.default = s.memo(function(e) {
         selectedGuildId: o,
         setSelectedGuildId: u,
         eligibleGuilds: t,
-        selectedGame: l,
         onButtonClick: g,
         buttonText: Y,
         hasCompletedUpsell: i
