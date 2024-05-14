@@ -69,14 +69,14 @@ function R(e) {
     canOpenModal: j,
     cannotOpenReason: P
   } = (0, g.default)({
-    listing: t,
     guildId: s,
     groupListingId: l,
     showBenefitsFirst: !1,
     analyticsLocation: r,
     onComplete: T,
-    forcesTransitionToGuild: O
-  }), b = t.subscription_plans[0], D = 0 === b.price, y = (null == v ? void 0 : v.id) === t.id, G = (0, d.default)(), B = G && !j || R, H = () => {
+    forcesTransitionToGuild: O,
+    skuId: t.id
+  }), b = t.subscription_plans[0], D = 0 === b.price, y = (null == v ? void 0 : v.id) === t.id, G = (0, d.default)(), B = G && !j || R, k = () => {
     G ? L() : (0, u.redirectToLogin)({
       [A]: "true"
     })
@@ -123,7 +123,7 @@ function R(e) {
               ...e,
               disabled: B,
               submitting: !1,
-              onClick: H,
+              onClick: k,
               children: h.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
             })
           })

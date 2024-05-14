@@ -27,8 +27,8 @@ var i = n("735250"),
   C = n("591759"),
   E = n("110742"),
   L = n("147496"),
-  N = n("680005"),
-  j = n("519896"),
+  j = n("680005"),
+  N = n("519896"),
   R = n("981631"),
   b = n("689938"),
   y = n("399461");
@@ -78,15 +78,15 @@ function A(e) {
     });
     return null != t && null !== (e = C.default.toURLSafe(t)) && void 0 !== e ? e : void 0
   }, [v]), E = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = l.useMemo(() => [...S.map(e => e.id), ...h.map(e => e.id)], [S, h]), {
-    analyticsLocations: N
+    analyticsLocations: j
   } = (0, f.default)(c.default.APP_STOREFRONT);
   return l.useEffect(() => {
     0 !== L.length && T.default.track(R.AnalyticEvents.VIEW_PREMIUM_APP_STOREFRONT, {
       application_id: t.id,
       sku_ids: L,
-      location_stack: N
+      location_stack: j
     })
-  }, [N, t.id, L]), (0, i.jsxs)("div", {
+  }, [j, t.id, L]), (0, i.jsxs)("div", {
     className: y.wrapper,
     children: [(0, i.jsx)(r.Banner, {
       title: t.name,
@@ -144,11 +144,11 @@ function O(e) {
   } = e, {
     openModal: d
   } = (0, S.default)({
-    listing: s,
     guildId: r,
     groupListingId: n,
     showBenefitsFirst: !1,
-    analyticsLocation: R.AnalyticsLocations.APP_STOREFRONT
+    analyticsLocation: R.AnalyticsLocations.APP_STOREFRONT,
+    skuId: s.id
   }), c = l.useMemo(() => {
     var e;
     return null === (e = s.store_listing_benefits) || void 0 === e ? void 0 : e.map(e => ({
@@ -167,7 +167,7 @@ function O(e) {
     imgSrc: f,
     subscriptionType: o,
     onPurchase: d,
-    PurchaseButton: e => (0, i.jsx)(N.SubscriptionPurchaseButton, {
+    PurchaseButton: e => (0, i.jsx)(j.SubscriptionPurchaseButton, {
       ...e,
       appId: t,
       groupListingId: n,
@@ -186,7 +186,7 @@ function O(e) {
           onClose: l,
           transitionState: r
         } = e;
-        return (0, i.jsx)(j.SubscriptionDetailsModal, {
+        return (0, i.jsx)(N.SubscriptionDetailsModal, {
           appId: t,
           groupListingId: n,
           groupListingType: o,
@@ -209,7 +209,7 @@ function M(e) {
   } = (0, f.default)(c.default.APP_STOREFRONT), h = (0, o.useStateFromStores)([v.default], () => v.default.getForSKU(a), [a]), S = (0, o.useStateFromStores)([g.default], () => g.default.get(a), [a]), T = (0, E.useHasActiveEntitlement)(a);
   if (null == S) return null;
   let x = null !== (n = S.name) && void 0 !== n ? n : "",
-    j = null !== (l = null == h ? void 0 : null === (t = h.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== l ? l : void 0,
+    N = null !== (l = null == h ? void 0 : null === (t = h.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== l ? l : void 0,
     y = (null == h ? void 0 : h.headerBackground) != null && null !== (r = C.default.toURLSafe((0, _.getAssetURL)(d, h.headerBackground, 256))) && void 0 !== r ? r : void 0,
     A = S.type === R.SKUTypes.DURABLE && T,
     O = S.type === R.SKUTypes.DURABLE ? A ? b.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : b.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
@@ -218,10 +218,10 @@ function M(e) {
     } = S;
   return null == M ? null : (0, i.jsx)(s.ProductCard, {
     title: x,
-    description: j,
+    description: N,
     headerImage: y,
     availabilityLabel: O,
-    onDetails: (0, I.isNullOrEmpty)(j) ? void 0 : () => {
+    onDetails: (0, I.isNullOrEmpty)(N) ? void 0 : () => {
       (0, u.openModal)(e => {
         let {
           onClose: t,
@@ -235,7 +235,7 @@ function M(e) {
         })
       })
     },
-    PurchaseButton: e => (0, i.jsx)(N.ItemPurchaseButton, {
+    PurchaseButton: e => (0, i.jsx)(j.ItemPurchaseButton, {
       ...e,
       appId: d,
       sku: S

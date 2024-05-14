@@ -26,11 +26,11 @@ function E(e) {
     openModal: I,
     canOpenModal: p
   } = (0, d.default)({
-    listing: T,
     guildId: n,
     groupListingId: null == m ? void 0 : m.id,
     showBenefitsFirst: !0,
-    analyticsLocation: c.AnalyticsLocations.INTERACTION_RESPONSE
+    analyticsLocation: c.AnalyticsLocations.INTERACTION_RESPONSE,
+    skuId: null == T ? void 0 : T.id
   });
   return (0, s.jsx)(u.default, {
     size: l.Button.Sizes.MEDIUM,

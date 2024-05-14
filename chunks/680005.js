@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ItemPurchaseButton: function() {
-    return g
+    return S
   },
   SubscriptionPurchaseButton: function() {
-    return S
+    return h
   }
 });
 var i = n("735250");
@@ -13,16 +13,15 @@ var l = n("481060"),
   r = n("100527"),
   s = n("906732"),
   a = n("87484"),
-  o = n("789703"),
-  u = n("696906"),
-  d = n("626135"),
-  c = n("937615"),
-  f = n("110742"),
-  p = n("981631"),
-  m = n("474936"),
-  h = n("689938");
+  o = n("696906"),
+  u = n("626135"),
+  d = n("937615"),
+  c = n("110742"),
+  f = n("981631"),
+  p = n("474936"),
+  m = n("689938");
 
-function S(e) {
+function h(e) {
   let {
     appId: t,
     className: n,
@@ -30,32 +29,32 @@ function S(e) {
     groupListingType: r,
     guildId: s,
     onClick: a,
-    skuId: d,
-    subPlan: S
-  } = e, g = (0, o.useGetSubscriptionListing__DO_NOT_USE)(d), {
-    openModal: x
-  } = (0, u.default)({
-    listing: g,
+    skuId: u,
+    subPlan: h
+  } = e, {
+    openModal: S
+  } = (0, o.default)({
     guildId: s,
     groupListingId: l,
     showBenefitsFirst: !1,
-    analyticsLocation: p.AnalyticsLocations.APP_STOREFRONT
-  }), _ = (0, f.useHasActiveEntitlement)(d);
-  return "guild" !== r && ("user" !== r || _) ? (0, i.jsx)(T, {
+    analyticsLocation: f.AnalyticsLocations.APP_STOREFRONT,
+    skuId: u
+  }), T = (0, c.useHasActiveEntitlement)(u);
+  return "guild" !== r && ("user" !== r || T) ? (0, i.jsx)(v, {
     className: n,
-    children: h.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
-  }) : (0, i.jsx)(v, {
+    children: m.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
+  }) : (0, i.jsx)(g, {
     appId: t,
-    skuId: d,
-    onClick: null != a ? a : x,
+    skuId: u,
+    onClick: null != a ? a : S,
     className: n,
-    children: h.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
-      rate: (0, c.formatRate)((0, c.formatPrice)(S.price, S.currency), m.SubscriptionIntervalTypes.MONTH, 1)
+    children: m.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
+      rate: (0, d.formatRate)((0, d.formatPrice)(h.price, h.currency), p.SubscriptionIntervalTypes.MONTH, 1)
     })
   })
 }
 
-function g(e) {
+function S(e) {
   let {
     appId: t,
     className: n,
@@ -63,13 +62,13 @@ function g(e) {
     sku: o
   } = e, {
     analyticsLocations: u
-  } = (0, s.default)(r.default.APP_STOREFRONT), d = (0, f.useHasActiveEntitlement)(o.id), m = o.type === p.SKUTypes.DURABLE && d, {
+  } = (0, s.default)(r.default.APP_STOREFRONT), p = (0, c.useHasActiveEntitlement)(o.id), h = o.type === f.SKUTypes.DURABLE && p, {
     price: S
   } = o;
-  return null == S ? null : m ? (0, i.jsx)(T, {
+  return null == S ? null : h ? (0, i.jsx)(v, {
     className: n,
-    children: h.default.Messages.COLLECTIBLES_ALREADY_OWNED
-  }) : (0, i.jsx)(v, {
+    children: m.default.Messages.COLLECTIBLES_ALREADY_OWNED
+  }) : (0, i.jsx)(g, {
     appId: t,
     skuId: o.id,
     onClick: null != l ? l : () => {
@@ -80,13 +79,13 @@ function g(e) {
       })
     },
     className: n,
-    children: h.default.Messages.STOREFRONT_PURCHASE_FOR.format({
-      price: (0, c.formatPrice)(S.amount, S.currency)
+    children: m.default.Messages.STOREFRONT_PURCHASE_FOR.format({
+      price: (0, d.formatPrice)(S.amount, S.currency)
     })
   })
 }
 
-function v(e) {
+function g(e) {
   let {
     appId: t,
     skuId: n,
@@ -96,7 +95,7 @@ function v(e) {
   return (0, i.jsx)(l.Button, {
     ...s,
     onClick: e => {
-      d.default.track(p.AnalyticEvents.STOREFRONT_PURCHASE_CLICKED, {
+      u.default.track(f.AnalyticEvents.STOREFRONT_PURCHASE_CLICKED, {
         application_id: t,
         sku_id: n
       }), null == r || r(e)
@@ -104,7 +103,7 @@ function v(e) {
   })
 }
 
-function T(e) {
+function v(e) {
   let {
     className: t,
     children: n

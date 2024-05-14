@@ -68,11 +68,11 @@ function p(e) {
   }), s = null != a ? (0, l.getPayableSubscriptionListing)(a) : null, {
     openModal: o
   } = (0, _.default)({
-    listing: s,
     guildId: n,
     groupListingId: null == a ? void 0 : a.id,
     showBenefitsFirst: !0,
-    analyticsLocation: h.AnalyticsLocations.BOT_PROFILE_POPOUT
+    analyticsLocation: h.AnalyticsLocations.BOT_PROFILE_POPOUT,
+    skuId: null == s ? void 0 : s.id
   });
   return r && null != s ? (0, i.jsx)(u.default, {
     onClick: o,
