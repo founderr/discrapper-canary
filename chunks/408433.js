@@ -15,7 +15,7 @@ n.r(t), n.d(t, {
   sanitizeEmbed: function() {
     return h
   }
-}), n("47120"), n("789020"), n("653041");
+}), n("47120"), n("789020"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("653041");
 var i = n("392711"),
   r = n.n(i),
   a = n("913527"),
@@ -91,7 +91,14 @@ function h(e, t, n) {
   if (null != n.image && f(n.image) && (i.image = S(n.image)), null != n.video && (null == i.thumbnail && null != n.video.proxy_url && f(n.video) && (i.thumbnail = {
       width: n.video.width,
       height: n.video.height,
-      url: "".concat(n.video.proxy_url, "?format=jpeg")
+      url: function(e, t) {
+        let n = new URL(e);
+        return Object.keys(t).forEach(e => {
+          n.searchParams.set(e, t[e])
+        }), n.toString()
+      }(n.video.proxy_url, {
+        format: "jpeg"
+      })
     }), null != i.thumbnail && f(n.video) && function(e, t, n) {
       if (null != t && d.test(t.name) || _.test(n.url)) return !1;
       let i = null != n.proxy_url || /^https:/i.test(n.url);
