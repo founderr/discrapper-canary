@@ -79,7 +79,7 @@ class C extends(s = i.PureComponent) {
       showSubtext: n,
       isForSubscription: r,
       showPaymentSourceIcon: t,
-      showDefaultLabel: o
+      showLabels: o
     } = this.props, s = this.renderSubText();
     return (0, c.jsxs)(y.default, {
       children: [t && (0, c.jsx)(A.default, {
@@ -95,7 +95,7 @@ class C extends(s = i.PureComponent) {
           }) : null, r ? (0, c.jsx)("div", {
             className: _.premiumIndicator,
             children: S.default.Messages.PAYMENT_SOURCE_SUBSCRIPTION
-          }) : null, a.invalid ? (0, c.jsx)("div", {
+          }) : null, o && a.invalid ? (0, c.jsx)("div", {
             className: _.invalidIndicator,
             children: S.default.Messages.PAYMENT_SOURCE_INVALID
           }) : null]
@@ -112,7 +112,7 @@ o = {
   isDefault: !1,
   showSubtext: !1,
   showPaymentSourceIcon: !1,
-  showDefaultLabel: !1
+  showLabels: !1
 }, (t = "defaultProps") in(r = C) ? Object.defineProperty(r, t, {
   value: o,
   enumerable: !0,

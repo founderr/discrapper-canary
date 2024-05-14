@@ -65,7 +65,7 @@ class N extends(a = l.PureComponent) {
           isForSubscription: i,
           locale: r,
           showSubtext: !0,
-          showDefaultLabel: !0,
+          showLabels: !0,
           showPaymentSourceIcon: !0
         }), s ? null : (0, n.jsx)(o.Button, {
           color: o.Button.Colors.PRIMARY,

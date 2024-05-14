@@ -135,7 +135,7 @@ function _(e) {
           isDefault: !0,
           showSubtext: !1,
           showPaymentSourceIcon: !1,
-          showDefaultLabel: !1,
+          showLabels: !1,
           locale: "en-US"
         })
       })

@@ -116,7 +116,7 @@ function b(e) {
     children: [(0, a.jsx)(u.default, {
       locale: "en-US",
       paymentSource: t,
-      showDefaultLabel: !0,
+      showLabels: !0,
       showPaymentSourceIcon: !0
     }, t.id), (0, a.jsx)("img", {
       alt: t.country,

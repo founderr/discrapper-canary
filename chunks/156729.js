@@ -168,7 +168,7 @@ class A extends(a = l.PureComponent) {
             isDefault: t,
             isForSubscription: l,
             locale: s,
-            showDefaultLabel: !0,
+            showLabels: !0,
             showPaymentSourceIcon: !0
           }), e.invalid ? (0, n.jsx)("div", {
             className: N.errorSubText,
