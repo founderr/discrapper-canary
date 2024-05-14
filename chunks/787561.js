@@ -192,7 +192,7 @@ let D = "dismissedCommunityFeaturesUpsell",
       x = () => {
         if (null == t) return;
         let e = new Set(t.features);
-        e.delete(L.GuildFeatures.COMMUNITY), e.delete(L.GuildFeatures.DISCOVERABLE), e.delete(L.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED), e.delete(L.GuildFeatures.PREVIEW_ENABLED), C.default.updateGuild({
+        e.delete(L.GuildFeatures.COMMUNITY), e.delete(L.GuildFeatures.DISCOVERABLE), !t.hasFeature(L.GuildFeatures.CLAN) && e.delete(L.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED), e.delete(L.GuildFeatures.PREVIEW_ENABLED), C.default.updateGuild({
           features: e,
           rulesChannelId: null,
           publicUpdatesChannelId: null
@@ -254,7 +254,7 @@ let D = "dismissedCommunityFeaturesUpsell",
             variant: "text-sm/normal",
             children: A.default.Messages.GUILD_SETTINGS_PARTNER_DISABLE_PUBLIC_CONFIRM_TEXT
           })
-        })) : t.features.has(L.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) ? (0, u.openModal)(e => (0, a.jsx)(u.ConfirmModal, {
+        })) : t.features.has(L.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) && !t.features.has(L.GuildFeatures.CLAN) ? (0, u.openModal)(e => (0, a.jsx)(u.ConfirmModal, {
           ...e,
           header: A.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
           confirmButtonColor: u.Button.Colors.BRAND,
