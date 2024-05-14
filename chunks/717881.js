@@ -105,7 +105,7 @@ t.default = function(e) {
     activityGuild: null != V ? V : x,
     showReactions: j,
     showChannelDetails: _,
-    channel: b,
+    channel: _ ? b : void 0,
     renderActions: l ? () => (0, i.jsxs)("div", {
       className: s()(j && y.actionsWrapper),
       children: [(0, i.jsx)(P, {
