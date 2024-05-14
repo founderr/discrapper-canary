@@ -16,13 +16,15 @@ function u(e) {
     children: t,
     "aria-label": n,
     className: a,
-    position: u
-  } = e, d = r.useRef(null), _ = null != n ? n : "string" == typeof t && t;
+    position: u,
+    ...d
+  } = e, _ = r.useRef(null), c = null != n ? n : "string" == typeof t && t;
   return (0, i.jsx)(o.Tooltip, {
+    ...d,
     position: null != u ? u : "top",
     delay: 500,
     text: t,
-    "aria-label": _,
+    "aria-label": c,
     children: n => {
       let {
         onMouseEnter: r,
@@ -30,12 +32,12 @@ function u(e) {
       } = n;
       return (0, i.jsx)("div", {
         className: s()(a, l.overflow),
-        ref: d,
+        ref: _,
         "aria-hidden": e["aria-hidden"],
         onMouseEnter: () => {
           let {
             current: e
-          } = d;
+          } = _;
           null != e && e.offsetWidth < e.scrollWidth && (null == r || r())
         },
         onMouseLeave: o,

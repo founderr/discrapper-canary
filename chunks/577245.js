@@ -16,5 +16,6 @@ e.exports = {
   link: "link__3a950",
   linkButton: "linkButton__9da2c",
   linkButtonIcon: "linkButtonIcon_cff89e",
+  overflowTooltip: "overflowTooltip__6cbcb",
   subtext: "subtext__798a4"
 }

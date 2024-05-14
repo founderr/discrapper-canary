@@ -6,8 +6,11 @@ n.r(t), n.d(t, {
   getClanBadgeUrl: function() {
     return _
   },
-  getClanBannerUrl: function() {
+  getClanBadgeUrlFromClan: function() {
     return c
+  },
+  getClanBannerUrl: function() {
+    return E
   },
   getUserClanData: function() {
     return s
@@ -81,6 +84,10 @@ function _(e, t) {
 }
 
 function c(e, t) {
+  if (null != e && null != e.identityGuildId) return _(e.identityGuildId, e.badge, t)
+}
+
+function E(e, t) {
   if (null == t) return;
   let {
     CDN_HOST: n
