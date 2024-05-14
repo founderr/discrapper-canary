@@ -8,5 +8,5 @@ var i = n("592125"),
   r = n("596401");
 
 function a(e) {
-  return e === i.default.getDMFromUserId(r.SYSTEM_UPDATES_USER_ID)
+  return null != e && e === i.default.getDMFromUserId(r.SYSTEM_UPDATES_USER_ID)
 }
