@@ -7,20 +7,23 @@ var s = n("735250"),
   l = n("873546"),
   o = n("481060"),
   u = n("605782"),
-  d = n("703656"),
-  c = n("980483"),
-  f = n("612744"),
-  h = n("624138"),
-  E = n("830064"),
-  g = n("981631"),
-  _ = n("734541");
-let m = (0, h.cssValueToNumber)(_.responsiveWidthMobile),
-  p = [g.Routes.LOGIN, g.Routes.LOGIN_HANDOFF, g.Routes.REGISTER, g.Routes.INVITE(""), g.Routes.GIFT_CODE(""), g.Routes.GUILD_TEMPLATE_LOGIN(""), g.Routes.GUILD_TEMPLATE(""), g.Routes.DISABLE_EMAIL_NOTIFICATIONS, g.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, g.Routes.BILLING_PREMIUM_SUBSCRIBE, g.Routes.BILLING_PAYMENT_SOURCES_CREATE, g.Routes.BILLING_PAYMENTS, g.Routes.BILLING_PREMIUM_SWITCH_PLAN, g.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, g.Routes.VERIFY, g.Routes.VERIFY_HUB_EMAIL, g.Routes.REJECT_IP, g.Routes.REJECT_MFA, g.Routes.AUTHORIZE_IP, g.Routes.AUTHORIZE_PAYMENT, g.Routes.RESET, g.Routes.HANDOFF, g.Routes.REPORT, g.Routes.REPORT_SECOND_LOOK];
+  d = n("566010"),
+  c = n("703656"),
+  f = n("980483"),
+  h = n("612744"),
+  E = n("624138"),
+  g = n("830064"),
+  _ = n("981631"),
+  m = n("734541");
+let p = n("407025"),
+  T = n("2984"),
+  A = (0, E.cssValueToNumber)(m.responsiveWidthMobile),
+  I = [_.Routes.LOGIN, _.Routes.LOGIN_HANDOFF, _.Routes.REGISTER, _.Routes.INVITE(""), _.Routes.GIFT_CODE(""), _.Routes.GUILD_TEMPLATE_LOGIN(""), _.Routes.GUILD_TEMPLATE(""), _.Routes.DISABLE_EMAIL_NOTIFICATIONS, _.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, _.Routes.BILLING_PREMIUM_SUBSCRIBE, _.Routes.BILLING_PAYMENT_SOURCES_CREATE, _.Routes.BILLING_PAYMENTS, _.Routes.BILLING_PREMIUM_SWITCH_PLAN, _.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, _.Routes.VERIFY, _.Routes.VERIFY_HUB_EMAIL, _.Routes.REJECT_IP, _.Routes.REJECT_MFA, _.Routes.AUTHORIZE_IP, _.Routes.AUTHORIZE_PAYMENT, _.Routes.RESET, _.Routes.HANDOFF, _.Routes.REPORT, _.Routes.REPORT_SECOND_LOOK];
 
-function T(e) {
-  return p.some(t => e.startsWith(t))
+function S(e) {
+  return I.some(t => e.startsWith(t))
 }
-class A extends a.Component {
+class N extends a.Component {
   componentDidMount() {
     window.addEventListener("resize", this.handleResize)
   }
@@ -28,42 +31,58 @@ class A extends a.Component {
     window.removeEventListener("resize", this.handleResize)
   }
   mobileTransitionTo(e, t) {
-    if (T(e))(0, d.transitionTo)(e, t);
+    if (S(e))(0, c.transitionTo)(e, t);
     else {
       let n = null != t && null != t.search ? t.search : null;
       window.location = null == n ? e : "".concat(e, "?").concat(n)
     }
   }
   mobileReplaceWith(e) {
-    T(e) ? (0, d.replaceWith)(e) : window.location = e
+    S(e) ? (0, c.replaceWith)(e) : window.location = e
   }
   renderDefault() {
     let {
       splash: e
-    } = this.props, t = (0, s.jsx)(u.default, {
+    } = this.props, {
+      isWelcomeRefreshEnabled: t
+    } = d.default.getCurrentConfig({
+      location: "authWrapper"
+    }, {
+      autoTrackExposure: !0
+    }), n = (0, s.jsx)(u.default, {
       component: a.Fragment,
       children: a.Children.map(this.props.children, e => a.cloneElement(e, {
-        transitionTo: d.transitionTo,
-        replaceWith: d.replaceWith
+        transitionTo: c.transitionTo,
+        replaceWith: c.replaceWith
       }))
     });
     return (0, s.jsx)("div", {
-      className: _.characterBackground,
+      className: m.characterBackground,
       children: (0, s.jsx)(o.HeadingLevel, {
         forceLevel: 1,
         children: null != e ? (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(c.default, {
+          children: [(0, s.jsx)(f.default, {
             show: !0,
-            className: r()(_.logo)
-          }), (0, s.jsx)(f.Splash, {
+            className: r()(m.logo)
+          }), (0, s.jsx)(h.Splash, {
             splash: e,
-            children: t
+            children: n
           })]
+        }) : t ? (0, s.jsxs)(s.Fragment, {
+          children: [(0, s.jsx)("img", {
+            className: m.artwork,
+            src: p,
+            alt: ""
+          }), (0, s.jsx)("img", {
+            className: m.logoWithText,
+            src: T,
+            alt: ""
+          }), n]
         }) : (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(E.default, {
-            className: _.artwork,
+          children: [(0, s.jsx)(g.default, {
+            className: m.artwork,
             preserveAspectRatio: "xMinYMin slice"
-          }), t]
+          }), n]
         })
       })
     })
@@ -87,7 +106,7 @@ class A extends a.Component {
     var t, n, s;
     super(e), t = this, n = "handleResize", s = () => {
       this.setState({
-        isMobileWidth: window.innerWidth <= m
+        isMobileWidth: window.innerWidth <= A
       })
     }, n in t ? Object.defineProperty(t, n, {
       value: s,
@@ -95,8 +114,8 @@ class A extends a.Component {
       configurable: !0,
       writable: !0
     }) : t[n] = s, this.state = {
-      isMobileWidth: window.innerWidth <= m
+      isMobileWidth: window.innerWidth <= A
     }
   }
 }
-t.default = A
+t.default = N
