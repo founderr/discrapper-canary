@@ -414,7 +414,7 @@ class L extends E.default {
       this.onDesktopEncodingOptionsSet(i, t, n), this.setDesktopEncodingOptions(i, t, n);
       return
     }
-    if (this.goLiveSourceIdentifier = r, null != this.conn.setDesktopSource) {
+    if (this.videoQualityManager.setGoliveSimulcast(this.experimentFlags.has(p.ExperimentFlags.GOLIVE_SIMULCAST)), this.goLiveSourceIdentifier = r, null != this.conn.setDesktopSource) {
       if (null != e.desktopDescription) {
         let {
           id: t,

@@ -54,7 +54,7 @@ class l {
 }
 class u {
   getQuality(e) {
-    let t = this.isStreamContext ? this.getGoliveQuality(100) : this.getVideoQuality(this.connection.getLocalWant(e));
+    let t = this.isStreamContext ? this.getGoliveQuality(e) : this.getVideoQuality(this.connection.getLocalWant(e));
     if (null != this.qualityOverwrite) {
       var n, i, r;
       return new o({
@@ -89,6 +89,9 @@ class u {
       localWant: this.goliveMaxQuality.localWant
     })
   }
+  setGoliveSimulcast(e) {
+    this.goliveSimulcastEnabled = e
+  }
   getVideoQuality(e) {
     let t = this.ladder.getResolution(e),
       n = this.options.videoBitrate.min * t.budgetPortion,
@@ -110,7 +113,8 @@ class u {
     })
   }
   getGoliveQuality(e) {
-    return 100 === e ? this.goliveMaxQuality : this.getDefaultGoliveQuality()
+    let t = this.connection.getLocalWant(e);
+    return this.goliveSimulcastEnabled ? this.getVideoQuality(t) : this.goliveMaxQuality
   }
   getDefaultGoliveQuality() {
     return new o({
@@ -125,6 +129,6 @@ class u {
     })
   }
   constructor(e, t, n = r.defaultVideoQualityOptions) {
-    a(this, "contextType", void 0), a(this, "connection", void 0), a(this, "options", void 0), a(this, "isMuted", void 0), a(this, "qualityOverwrite", void 0), a(this, "goliveMaxQuality", void 0), a(this, "isStreamContext", void 0), a(this, "ladder", void 0), this.contextType = e, this.connection = t, this.options = n, this.isMuted = !1, this.isStreamContext = this.contextType === r.MediaEngineContextTypes.STREAM, this.ladder = new i.MediaSinkWantsLadder(n), this.goliveMaxQuality = this.getDefaultGoliveQuality()
+    a(this, "contextType", void 0), a(this, "connection", void 0), a(this, "options", void 0), a(this, "isMuted", void 0), a(this, "qualityOverwrite", void 0), a(this, "goliveMaxQuality", void 0), a(this, "goliveSimulcastEnabled", void 0), a(this, "isStreamContext", void 0), a(this, "ladder", void 0), this.contextType = e, this.connection = t, this.options = n, this.isMuted = !1, this.isStreamContext = this.contextType === r.MediaEngineContextTypes.STREAM, this.ladder = new i.MediaSinkWantsLadder(n), this.goliveMaxQuality = this.getDefaultGoliveQuality(), this.goliveSimulcastEnabled = !1
   }
 }

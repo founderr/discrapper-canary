@@ -37,7 +37,9 @@ function B() {
 }
 
 function k(e) {
-  e.filter(e => {
+  c().forEach(G, (t, n) => {
+    t.updateStats(e)
+  }), e.filter(e => {
     let {
       connection: t
     } = e;
@@ -135,11 +137,6 @@ class x extends(a = E.default.Store) {
   }
   getStreamSourceId(e) {
     return U[e]
-  }
-  setFocusedGoLiveStream(e) {
-    c().forEach(G, (t, n) => {
-      t.setSelectedGoLiveStream(n === e ? n : null)
-    })
   }
 }
 l = "StreamRTCConnectionStore", (o = "displayName") in(s = x) ? Object.defineProperty(s, o, {

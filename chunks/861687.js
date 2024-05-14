@@ -210,10 +210,6 @@ class el extends _.default {
     var t;
     null === (t = this._localMediaSinkWantsManager) || void 0 === t || t.setSelectedParticipant(e)
   }
-  setSelectedGoLiveStream(e) {
-    var t;
-    null === (t = this._goLiveQualityManager) || void 0 === t || t.setGoLiveStreamFocused(null != e)
-  }
   setPipOpen(e) {
     var t;
     null === (t = this._localMediaSinkWantsManager) || void 0 === t || t.setPipOpen(e)
