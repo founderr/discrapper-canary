@@ -205,9 +205,12 @@ z.Basic = e => {
   } = (0, A.useBrandRefreshPerksExperiment)({
     location: "GradientSelectors"
   }), z = (null === (i = (0, N.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === w.PremiumSubscriptionSKUs.TIER_2, Z = s.useMemo(() => e => {
-    let t = U.CLIENT_THEME_DC_MAP.get(e.id);
-    return null != t && !(0, h.isDismissibleContentDismissed)(t)
-  }, []);
+    let t = U.CLIENT_THEME_DC_MAP.get(e.id),
+      n = null != t && !(0, h.isDismissibleContentDismissed)(t);
+    return l && n && setTimeout(() => (0, h.markDismissibleContentAsDismissed)(t, {
+      dismissAction: G.ContentDismissActionType.AUTO_DISMISS
+    }), 5e3), n
+  }, [l]);
   s.useEffect(() => {
     (b === U.BACKGROUND_GRADIENT_PRESETS.length - (H ? 2 : 3) && "EDITOR" === u || g === _.BackgroundGradientPresetId.EASTER_EGG) && D(!0)
   }, [b, u, g, H]);

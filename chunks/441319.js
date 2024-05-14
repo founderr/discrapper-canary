@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   CUSTOM_BASE_SIZE: function() {
-    return L
+    return M
   },
   ICONS: function() {
-    return v
+    return y
   },
   ICONS_BY_ID: function() {
-    return D
+    return P
   }
 });
 var i = n("392711"),
@@ -21,119 +21,137 @@ var i = n("392711"),
   _ = n("448578"),
   c = n("946185"),
   E = n("480423"),
-  I = n("665801"),
-  T = n("818143"),
-  f = n("666475"),
-  S = n("591304"),
-  h = n("328664"),
-  A = n("328259"),
-  m = n("19009"),
-  N = n("405571"),
-  p = n("730886"),
-  O = n("473974"),
-  C = n("563856"),
-  R = n("997945"),
-  g = n("689938");
-let L = 60,
-  v = [{
-    id: R.FreemiumAppIconIds.DEFAULT,
+  I = n("273593"),
+  T = n("665801"),
+  f = n("818143"),
+  S = n("666475"),
+  h = n("591304"),
+  A = n("73375"),
+  m = n("328664"),
+  N = n("328259"),
+  p = n("19009"),
+  O = n("234912"),
+  C = n("405571"),
+  R = n("730886"),
+  g = n("473974"),
+  L = n("563856"),
+  v = n("997945"),
+  D = n("689938");
+let M = 60,
+  y = [{
+    id: v.FreemiumAppIconIds.DEFAULT,
     iconSource: s,
-    name: g.default.Messages.APP_ICON_DEFAULT,
+    name: D.default.Messages.APP_ICON_DEFAULT,
     isPremium: !1
   }].concat([{
-    id: R.PremiumAppIconIds.BRAND_DARK,
+    id: v.PremiumAppIconIds.BRAND_DARK,
     iconSource: d,
-    name: g.default.Messages.APP_ICON_BRAND_DARK,
+    name: D.default.Messages.APP_ICON_BRAND_DARK,
     isPremium: !0
   }, {
-    id: R.PremiumAppIconIds.MANGA,
-    iconSource: h,
-    isPremium: !0,
-    name: g.default.Messages.APP_ICON_MANGA
-  }, {
-    id: R.PremiumAppIconIds.MATTE_DARK,
-    iconSource: A,
-    isPremium: !0,
-    name: g.default.Messages.APP_ICON_MATTE_DARK
-  }, {
-    id: R.PremiumAppIconIds.MATTE_LIGHT,
+    id: v.PremiumAppIconIds.MANGA,
     iconSource: m,
-    name: g.default.Messages.APP_ICON_MATTE_LIGHT,
-    isPremium: !0
+    isPremium: !0,
+    name: D.default.Messages.APP_ICON_MANGA
   }, {
-    id: R.PremiumAppIconIds.PASTEL,
+    id: v.PremiumAppIconIds.MATTE_DARK,
     iconSource: N,
     isPremium: !0,
-    name: g.default.Messages.APP_ICON_PASTEL
+    name: D.default.Messages.APP_ICON_MATTE_DARK
   }, {
-    id: R.PremiumAppIconIds.PIRATE,
+    id: v.PremiumAppIconIds.MATTE_LIGHT,
     iconSource: p,
-    isPremium: !0,
-    name: g.default.Messages.APP_ICON_PIRATE
+    name: D.default.Messages.APP_ICON_MATTE_LIGHT,
+    isPremium: !0
   }, {
-    id: R.PremiumAppIconIds.CAMO,
-    iconSource: _,
-    isPremium: !0,
-    name: g.default.Messages.APP_ICON_CAMO
-  }, {
-    id: R.PremiumAppIconIds.SUNSET,
-    iconSource: O,
-    isPremium: !0,
-    name: g.default.Messages.APP_ICON_SUNSET
-  }, {
-    id: R.PremiumAppIconIds.GALAXY,
-    iconSource: T,
-    isPremium: !0,
-    name: g.default.Messages.APP_ICON_GALAXY
-  }, {
-    id: R.PremiumAppIconIds.Y2K,
+    id: v.PremiumAppIconIds.PASTEL,
     iconSource: C,
     isPremium: !0,
-    name: g.default.Messages.APP_ICON_Y2K
+    name: D.default.Messages.APP_ICON_PASTEL
   }, {
-    id: R.PremiumAppIconIds.CHERRY_BLOSSOM,
-    iconSource: c,
+    id: v.PremiumAppIconIds.PIRATE,
+    iconSource: R,
     isPremium: !0,
-    name: g.default.Messages.APP_ICON_CHERRY_BLOSSOM
+    name: D.default.Messages.APP_ICON_PIRATE
   }, {
-    id: R.PremiumAppIconIds.BEANIE,
-    iconSource: o,
+    id: v.PremiumAppIconIds.CAMO,
+    iconSource: _,
     isPremium: !0,
-    name: g.default.Messages.APP_ICON_BEANIE
+    name: D.default.Messages.APP_ICON_CAMO
   }, {
-    id: R.PremiumAppIconIds.GAMING,
+    id: v.PremiumAppIconIds.SUNSET,
+    iconSource: g,
+    isPremium: !0,
+    name: D.default.Messages.APP_ICON_SUNSET
+  }, {
+    id: v.PremiumAppIconIds.GALAXY,
     iconSource: f,
     isPremium: !0,
-    name: g.default.Messages.APP_ICON_GAMING
+    name: D.default.Messages.APP_ICON_GALAXY
   }, {
-    id: R.PremiumAppIconIds.CIRCUIT,
-    iconSource: E,
+    id: v.PremiumAppIconIds.Y2K,
+    iconSource: L,
     isPremium: !0,
-    name: g.default.Messages.APP_ICON_CIRCUIT
+    name: D.default.Messages.APP_ICON_Y2K
   }, {
-    id: R.PremiumAppIconIds.HOLO_WAVES,
+    id: v.PremiumAppIconIds.CHERRY_BLOSSOM,
+    iconSource: c,
+    isPremium: !0,
+    name: D.default.Messages.APP_ICON_CHERRY_BLOSSOM
+  }, {
+    id: v.PremiumAppIconIds.BEANIE,
+    iconSource: o,
+    isPremium: !0,
+    name: D.default.Messages.APP_ICON_BEANIE
+  }, {
+    id: v.PremiumAppIconIds.GAMING,
     iconSource: S,
     isPremium: !0,
-    name: g.default.Messages.APP_ICON_HOLO_WAVES
+    name: D.default.Messages.APP_ICON_GAMING
   }, {
-    id: R.PremiumAppIconIds.BLUSH,
+    id: v.PremiumAppIconIds.CIRCUIT,
+    iconSource: E,
+    isPremium: !0,
+    name: D.default.Messages.APP_ICON_CIRCUIT
+  }, {
+    id: v.PremiumAppIconIds.HOLO_WAVES,
+    iconSource: h,
+    isPremium: !0,
+    name: D.default.Messages.APP_ICON_HOLO_WAVES
+  }, {
+    id: v.PremiumAppIconIds.BLUSH,
     iconSource: u,
     isPremium: !0,
-    name: g.default.Messages.APP_ICON_BLUSH
+    name: D.default.Messages.APP_ICON_BLUSH
   }, {
-    id: R.PremiumAppIconIds.ANGRY,
+    id: v.PremiumAppIconIds.ANGRY,
     iconSource: a,
     isPremium: !0,
-    name: g.default.Messages.APP_ICON_ANGRY
+    name: D.default.Messages.APP_ICON_ANGRY
   }, {
-    id: R.PremiumAppIconIds.CONTROLLER,
-    iconSource: I,
+    id: v.PremiumAppIconIds.CONTROLLER,
+    iconSource: T,
     isPremium: !0,
-    name: g.default.Messages.APP_ICON_CONTROLLER
+    name: D.default.Messages.APP_ICON_CONTROLLER
   }, {
-    id: R.PremiumAppIconIds.BLURPLE_TWILIGHT,
+    id: v.PremiumAppIconIds.BLURPLE_TWILIGHT,
     iconSource: l,
     isPremium: !0,
-    name: g.default.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT
+    name: D.default.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT
+  }, {
+    id: v.PremiumAppIconIds.IN_RAINBOWS,
+    iconSource: A,
+    isPremium: !0,
+    name: D.default.Messages.APP_ICON_IN_RAINBOWS
+  }, {
+    id: v.PremiumAppIconIds.MIDNIGHT_PRISM,
+    iconSource: O,
+    isPremium: !0,
+    name: D.default.Messages.APP_ICON_MIDNIGHT_PRISM
+  }, {
+    id: v.PremiumAppIconIds.COLOR_WAVE,
+    iconSource: I,
+    isPremium: !0,
+    name: D.default.Messages.APP_ICON_COLOR_WAVE
   }]),
-  D = r().keyBy(v, "id")
+  P = r().keyBy(y, "id")

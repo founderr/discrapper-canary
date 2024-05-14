@@ -1,10 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
+  PrideMonthPerksExperiment: function() {
+    return i
+  },
   usePrideMonthPerksExperiment: function() {
-    return s
+    return r
   }
 });
-let a = (0, n("818083").createExperiment)({
+let i = (0, n("818083").createExperiment)({
     kind: "user",
     id: "2024-05_pride_month_perks_experiment",
     label: "Pride Month Perks Experiment",
@@ -19,11 +22,11 @@ let a = (0, n("818083").createExperiment)({
       }
     }]
   }),
-  s = e => {
+  r = e => {
     let {
       location: t
     } = e;
-    return a.useExperiment({
+    return i.useExperiment({
       location: t
     })
   }
