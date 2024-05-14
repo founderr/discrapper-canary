@@ -1,7 +1,8 @@
 "use strict";
 e.exports = {
   biteSize: "biteSize__4396a",
-  contentOverflow: "contentOverflow__4ab1c",
+  clamp: "clamp__79a59",
+  content: "content_faa8bf",
   fullSize: "fullSize_b0d012",
   invisibleContainer: "invisibleContainer__1e05d",
   statusBubble: "statusBubble__1a4c3",
@@ -15,5 +16,6 @@ e.exports = {
   statusEmojiInline: "statusEmojiInline__099a8",
   statusEmojiOnly: "statusEmojiOnly__3469b",
   statusText: "statusText__32d26",
+  unclamp: "unclamp__1fab3",
   visibleContainer: "visibleContainer_adf761"
 }

@@ -20394,7 +20394,7 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 .theme-dark .statusBubbleOuter__7e51b,
 .theme-dark .statusBubbleOuter__7e51b:before,
 .theme-dark .statusBubbleOuter__7e51b:after {
-    border: 1px solid var(--border-subtle)
+    border: 1px solid var(--border-strong)
 }
 
 .invisibleContainer__1e05d {
@@ -20485,11 +20485,6 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     height: 10px
 }
 
-.statusBubble__1a4c3:hover .contentOverflow__4ab1c {
-    overflow: visible;
-    -webkit-line-clamp: unset
-}
-
 .statusBubbleShape__093b0 {
     border-radius: 16px
 }
@@ -20510,15 +20505,22 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     min-width: 18px
 }
 
-.contentOverflow__4ab1c {
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+.content_faa8bf {
     display: -webkit-box;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
     color: var(--text-normal);
     word-wrap: break-word;
-    word-break: break-word
+    word-break: break-word;
+    line-height: 16px
+}
+
+.clamp__79a59 {
+    -webkit-line-clamp: 2
+}
+
+.unclamp__1fab3 {
+    -webkit-line-clamp: unset
 }
 
 .statusText__32d26 {
