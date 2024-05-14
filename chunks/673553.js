@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i = n("802498"),
-  l = n("607070"),
-  o = n("819640"),
+  o = n("607070"),
+  l = n("819640"),
   a = n("131951"),
   u = n("19780"),
   s = n("585483"),
@@ -24,6 +24,6 @@ let c = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
       let T = null === (n = (0, d.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement;
       if ((0, d.isInputLikeElement)(T) || i.LOCK_STACK.isActive() || _.has(t) || A.has(t) || C.has(t)) return !1;
       let S = null != T && "BODY" === T.tagName;
-      return !(l.default.keyboardModeEnabled && !S && !/^[a-zA-Z0-9]$/.test(t) || s.ComponentDispatch.hasSubscribers(E.ComponentActions.MODAL_CLOSE) || o.default.hasLayers()) && ("Tab" === t && s.ComponentDispatch.hasSubscribers(E.ComponentActions.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]') ? (e.preventDefault(), s.ComponentDispatch.dispatch(E.ComponentActions.TEXTAREA_FOCUS), !1) : !(u.default.isConnected() && a.default.getMode() === E.InputModes.PUSH_TO_TALK && !a.default.isSelfMute() && Object.values(a.default.getShortcuts()).map(r.toBrowserEvents).some(t => t.map(e => e.keyCode).includes(e.keyCode))) && void(!e.metaKey && !e.ctrlKey && !c.has(t) && s.ComponentDispatch.dispatchToLastSubscribed(E.ComponentActions.TEXTAREA_FOCUS)))
+      return !(o.default.keyboardModeEnabled && !S && !/^[a-zA-Z0-9]$/.test(t) || s.ComponentDispatch.hasSubscribers(E.ComponentActions.MODAL_CLOSE) || l.default.hasLayers()) && ("Tab" === t && s.ComponentDispatch.hasSubscribers(E.ComponentActions.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]') ? (e.preventDefault(), s.ComponentDispatch.dispatch(E.ComponentActions.TEXTAREA_FOCUS), !1) : !(u.default.isConnected() && a.default.getMode() === E.InputModes.PUSH_TO_TALK && !a.default.isSelfMute() && Object.values(a.default.getShortcuts()).map(r.toBrowserEvents).some(t => t.map(e => e.keyCode).includes(e.keyCode))) && void(!e.metaKey && !e.ctrlKey && !c.has(t) && s.ComponentDispatch.dispatchToLastSubscribed(E.ComponentActions.TEXTAREA_FOCUS)))
     }
   }

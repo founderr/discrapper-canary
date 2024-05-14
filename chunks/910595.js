@@ -37,18 +37,18 @@ function _(e) {
       location: "487e85_2"
     })
   }, []);
-  let S = (0, u.useCanSeeOnboardingHome)(t.id),
-    I = (0, s.useStateFromStores)([c.default], () => c.default.hasUnread(t.id, g.ReadStateTypes.GUILD_HOME) && _, [t.id, _]);
+  let I = (0, u.useCanSeeOnboardingHome)(t.id),
+    S = (0, s.useStateFromStores)([c.default], () => c.default.hasUnread(t.id, g.ReadStateTypes.GUILD_HOME) && _, [t.id, _]);
   return (0, l.jsx)(p.BasicChannelRow, {
     id: "home-tab-".concat(t.id),
-    renderIcon: e => S ? (0, l.jsx)(h.default, {
+    renderIcon: e => I ? (0, l.jsx)(h.default, {
       className: e
     }) : (0, l.jsx)(f.default, {
       className: e
     }),
-    text: S ? E.default.Messages.SERVER_GUIDE : E.default.Messages.GUILD_HOME,
+    text: I ? E.default.Messages.SERVER_GUIDE : E.default.Messages.GUILD_HOME,
     selected: n,
-    showUnread: I,
+    showUnread: S,
     onMouseDown: function() {
       i.default.preload(t.id, C.StaticChannelRoute.GUILD_HOME)
     },

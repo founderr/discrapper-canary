@@ -4,23 +4,23 @@ n.r(t), n.d(t, {
     return a
   },
   GuildProductSortOptions: function() {
-    return s
-  },
-  ServerShopTabOrder: function() {
     return l
   },
+  ServerShopTabOrder: function() {
+    return s
+  },
   getGuildProductSortOptionLabel: function() {
-    return o
+    return u
   }
 });
-var r, i, s, l, u = n("689938");
+var r, i, l, s, o = n("689938");
 
-function o(e) {
+function u(e) {
   return ({
-    4: u.default.Messages.GUILD_STORE_SORT_OPTION_NEWEST_ARRIVALS,
-    2: u.default.Messages.GUILD_STORE_SORT_OPTION_PRICE_ASC,
-    3: u.default.Messages.GUILD_STORE_SORT_OPTION_PRICE_DESC,
-    1: u.default.Messages.GUILD_STORE_SORT_OPTION_NAME
+    4: o.default.Messages.GUILD_STORE_SORT_OPTION_NEWEST_ARRIVALS,
+    2: o.default.Messages.GUILD_STORE_SORT_OPTION_PRICE_ASC,
+    3: o.default.Messages.GUILD_STORE_SORT_OPTION_PRICE_DESC,
+    1: o.default.Messages.GUILD_STORE_SORT_OPTION_NAME
   })[e]
-}(r = s || (s = {}))[r.NAME = 1] = "NAME", r[r.PRICE_ASC = 2] = "PRICE_ASC", r[r.PRICE_DESC = 3] = "PRICE_DESC", r[r.NEWEST_ARRIVALS = 4] = "NEWEST_ARRIVALS", (i = l || (l = {}))[i.SUBS_FIRST = 1] = "SUBS_FIRST", i[i.PRODUCTS_FIRST = 2] = "PRODUCTS_FIRST";
+}(r = l || (l = {}))[r.NAME = 1] = "NAME", r[r.PRICE_ASC = 2] = "PRICE_ASC", r[r.PRICE_DESC = 3] = "PRICE_DESC", r[r.NEWEST_ARRIVALS = 4] = "NEWEST_ARRIVALS", (i = s || (s = {}))[i.SUBS_FIRST = 1] = "SUBS_FIRST", i[i.PRODUCTS_FIRST = 2] = "PRODUCTS_FIRST";
 let a = [4, 2, 3, 1]

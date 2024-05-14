@@ -17,23 +17,23 @@ function r(e) {
       otherUser: u,
       otherUsernameHook: d,
       compact: c,
-      channel: E
+      channel: f
     } = e,
-    f = (0, a.default)(r),
-    _ = f.nick,
-    T = o(f),
-    I = (0, a.useNullableUserAuthor)(u, E);
-  if (null != I && null != d) {
-    let e = d(I);
+    E = (0, a.default)(r),
+    _ = E.nick,
+    m = o(E),
+    T = (0, a.useNullableUserAuthor)(u, f);
+  if (null != T && null != d) {
+    let e = d(T);
     t = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
       username: _,
-      usernameHook: T,
-      otherUsername: I.nick,
+      usernameHook: m,
+      otherUsername: T.nick,
       otherUsernameHook: e
     })
   } else t = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF_HOOK.format({
     username: _,
-    usernameHook: T
+    usernameHook: m
   });
   return (0, s.jsx)(l.default, {
     icon: n("474019"),

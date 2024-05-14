@@ -4,7 +4,7 @@ var a = n("735250");
 n("470079");
 var r = n("960259"),
   s = n("289987"),
-  l = n("325767");
+  o = n("325767");
 t.default = (0, r.replaceIcon)(function(e) {
   let {
     width: t = 24,
@@ -14,7 +14,7 @@ t.default = (0, r.replaceIcon)(function(e) {
     ...i
   } = e;
   return (0, a.jsx)("svg", {
-    ...(0, l.default)(i),
+    ...(0, o.default)(i),
     width: t,
     height: n,
     viewBox: "0 0 24 24",

@@ -45,7 +45,7 @@ function _(e) {
     } = e,
     [T, A] = a.useState(n);
 
-  function S(e) {
+  function I(e) {
     let {
       handoffKey: t,
       handoffToken: n,
@@ -66,12 +66,12 @@ function _(e) {
       if (null != e && null != t) {
         let n = null != p ? (0, d.getLoginHandoffSourceFromRedirectTo)(p) : void 0;
         T ? o.default.logout(null).finally(() => {
-          S({
+          I({
             handoffKey: e,
             handoffToken: t,
             handoffSource: n
           })
-        }) : S({
+        }) : I({
           handoffKey: e,
           handoffToken: t,
           handoffSource: n

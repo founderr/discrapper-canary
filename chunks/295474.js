@@ -1,84 +1,84 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   useCurrentUserHasAutomodQuarantinedProfile: function() {
-    return M
+    return p
   },
   useGuildAutomodProfileQuarantineErrors: function() {
-    return O
+    return h
   },
   useOpenFixQuarantinedProfileModal: function() {
     return N
   }
-}), l("789020");
-var a = l("470079"),
-  s = l("399606"),
-  n = l("230711"),
-  u = l("906732"),
-  r = l("18438"),
-  i = l("314897"),
-  o = l("271383"),
-  d = l("430824"),
-  f = l("496675"),
-  c = l("914010"),
-  _ = l("715903"),
-  I = l("981631"),
-  A = l("372897"),
-  E = l("526761"),
-  L = l("689938");
+}), n("789020");
+var s = n("470079"),
+  a = n("399606"),
+  l = n("230711"),
+  i = n("906732"),
+  r = n("18438"),
+  o = n("314897"),
+  u = n("271383"),
+  d = n("430824"),
+  c = n("496675"),
+  f = n("914010"),
+  E = n("715903"),
+  _ = n("981631"),
+  m = n("372897"),
+  T = n("526761"),
+  I = n("689938");
 
-function M(e) {
-  return (0, s.useStateFromStores)([i.default, o.default], () => {
+function p(e) {
+  return (0, a.useStateFromStores)([o.default, u.default], () => {
     if (null == e) return !1;
-    let t = i.default.getId();
-    return (0, _.hasAutomodQuarantinedProfile)(o.default.getMember(e, t))
+    let t = o.default.getId();
+    return (0, E.hasAutomodQuarantinedProfile)(u.default.getMember(e, t))
   }, [e])
 }
 
-function O(e) {
-  return (0, s.useStateFromStoresObject)([i.default, o.default, c.default, d.default], () => {
+function h(e) {
+  return (0, a.useStateFromStoresObject)([o.default, u.default, f.default, d.default], () => {
     let t = {
         nick: void 0,
         bio: void 0
       },
-      l = c.default.getGuildId(),
-      a = null != e ? e : l,
-      s = d.default.getGuild(a);
-    if (null == s || null == a) return t;
-    let n = i.default.getId(),
-      u = o.default.getMember(a, n),
-      r = (0, _.getAutomodQuarantinedProfileFlags)(null == u ? void 0 : u.flags);
+      n = f.default.getGuildId(),
+      s = null != e ? e : n,
+      a = d.default.getGuild(s);
+    if (null == a || null == s) return t;
+    let l = o.default.getId(),
+      i = u.default.getMember(s, l),
+      r = (0, E.getAutomodQuarantinedProfileFlags)(null == i ? void 0 : i.flags);
     if (0 === r.size) return t;
-    if (r.has(A.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
+    if (r.has(m.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
       if (null == e) {
-        var f;
-        t.nick = [L.default.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME_IN_GUILD.format({
-          guildName: null !== (f = s.name) && void 0 !== f ? f : ""
+        var c;
+        t.nick = [I.default.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME_IN_GUILD.format({
+          guildName: null !== (c = a.name) && void 0 !== c ? c : ""
         })]
-      } else t.nick = [L.default.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME]
+      } else t.nick = [I.default.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME]
     }
-    return r.has(A.GuildMemberFlags.AUTOMOD_QUARANTINED_BIO) && (t.bio = [L.default.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_BIO]), t
+    return r.has(m.GuildMemberFlags.AUTOMOD_QUARANTINED_BIO) && (t.bio = [I.default.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_BIO]), t
   }, [e])
 }
 
 function N(e) {
   let {
     guildId: t,
-    scrollPosition: l,
-    analyticsLocation: i,
-    analyticsLocations: o,
-    openWithoutBackstack: c
+    scrollPosition: n,
+    analyticsLocation: o,
+    analyticsLocations: u,
+    openWithoutBackstack: f
   } = e, {
-    analyticsLocations: _
-  } = (0, u.default)(), A = (0, s.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]), L = (0, s.useStateFromStores)([f.default], () => null != A && f.default.can(I.Permissions.CHANGE_NICKNAME, A), [A]);
-  return [a.useCallback(() => {
-    if (null == A) return;
-    let e = I.UserSettingsSections.PROFILE_CUSTOMIZATION,
-      t = E.ProfileCustomizationSubsection.GUILD;
-    L ? (0, r.initGuildIdentitySettings)(A, null != o ? o : _) : t = E.ProfileCustomizationSubsection.USER_PROFILE, n.default.open(e, t, {
-      scrollPosition: l,
-      analyticsLocation: i,
-      analyticsLocations: o,
-      openWithoutBackstack: c
+    analyticsLocations: E
+  } = (0, i.default)(), m = (0, a.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]), I = (0, a.useStateFromStores)([c.default], () => null != m && c.default.can(_.Permissions.CHANGE_NICKNAME, m), [m]);
+  return [s.useCallback(() => {
+    if (null == m) return;
+    let e = _.UserSettingsSections.PROFILE_CUSTOMIZATION,
+      t = T.ProfileCustomizationSubsection.GUILD;
+    I ? (0, r.initGuildIdentitySettings)(m, null != u ? u : E) : t = T.ProfileCustomizationSubsection.USER_PROFILE, l.default.open(e, t, {
+      scrollPosition: n,
+      analyticsLocation: o,
+      analyticsLocations: u,
+      openWithoutBackstack: f
     })
-  }, [L, l, i, o, c, A, _]), L]
+  }, [I, n, o, u, f, m, E]), I]
 }

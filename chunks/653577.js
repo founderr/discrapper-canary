@@ -27,10 +27,10 @@ function _(e) {
     connected: n,
     hovered: s,
     subtitle: _,
-    onClick: S,
-    enableHangStatus: I,
+    onClick: I,
+    enableHangStatus: S,
     allowChannelTopic: N
-  } = e, T = (0, r.useStateFromStores)([d.default], () => d.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, u.default)(t, !0), v = (!I || !!N) && L, x = null != _ && _.length > 0;
+  } = e, T = (0, r.useStateFromStores)([d.default], () => d.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, u.default)(t, !0), v = (!S || !!N) && L, x = null != _ && _.length > 0;
   a.useEffect(() => {
     A && p.default.track(m.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
       guild_id: t.guild_id,
@@ -42,7 +42,7 @@ function _(e) {
   let M = i()(g.statusDiv, n && v ? g.hoverable : null);
   if (A) return (0, l.jsx)(o.Clickable, {
     className: M,
-    onClick: v ? S : void 0,
+    onClick: v ? I : void 0,
     children: (0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: i()(g.statusText, E.markup),
@@ -55,7 +55,7 @@ function _(e) {
   });
   if (n && v && (!x || s)) return (0, l.jsxs)(o.Clickable, {
     className: M,
-    onClick: S,
+    onClick: I,
     children: [(0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: g.statusText,

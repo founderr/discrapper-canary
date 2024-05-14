@@ -4,18 +4,18 @@ n.r(t), n.d(t, {
     return a
   },
   SCROLL_UP: function() {
-    return o
+    return l
   }
 });
 var i = n("585483"),
-  l = n("981631");
-let o = {
+  o = n("981631");
+let l = {
     binds: ["pageup"],
     comboKeysBindGlobal: !0,
-    action: () => (i.ComponentDispatch.dispatchToLastSubscribed(l.ComponentActions.SCROLL_PAGE_UP), !1)
+    action: () => (i.ComponentDispatch.dispatchToLastSubscribed(o.ComponentActions.SCROLL_PAGE_UP), !1)
   },
   a = {
     binds: ["pagedown"],
     comboKeysBindGlobal: !0,
-    action: () => (i.ComponentDispatch.dispatchToLastSubscribed(l.ComponentActions.SCROLL_PAGE_DOWN), !1)
+    action: () => (i.ComponentDispatch.dispatchToLastSubscribed(o.ComponentActions.SCROLL_PAGE_DOWN), !1)
   }

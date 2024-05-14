@@ -18,8 +18,8 @@ var s = n("735250"),
   p = n("981631"),
   T = n("474936"),
   A = n("689938"),
-  S = n("354052"),
-  I = n("961047"),
+  I = n("354052"),
+  S = n("961047"),
   N = n("611273");
 t.default = l.default.connectStores([E.default, u.default, h.default, f.default], e => {
   let {
@@ -51,7 +51,7 @@ t.default = l.default.connectStores([E.default, u.default, h.default, f.default]
     children: [null != n.giftStyle ? (0, s.jsx)(c.default, {
       defaultAnimationState: d.AnimationState.LOOP,
       giftStyle: n.giftStyle,
-      className: S.seasonalIcon
+      className: I.seasonalIcon
     }) : (0, s.jsx)(_.Avatar, {
       src: null != i ? i.getAvatarURL(void 0, 100) : null,
       size: o.AvatarSizes.DEPRECATED_SIZE_100,
@@ -66,10 +66,10 @@ t.default = l.default.connectStores([E.default, u.default, h.default, f.default]
       children: [(0, s.jsx)(_.SubTitle, {
         children: h
       }), (0, s.jsxs)(_.Title, {
-        className: r()(N.marginTop8, I.flexCenter),
+        className: r()(N.marginTop8, S.flexCenter),
         children: [l.productLine !== p.SKUProductLines.COLLECTIBLES && (0, s.jsx)(g.default, {
           size: g.default.Sizes.MEDIUM,
-          className: S.applicationIcon,
+          className: I.applicationIcon,
           game: u,
           skuId: l.id
         }), E]

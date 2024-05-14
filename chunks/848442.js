@@ -22,8 +22,8 @@ var a = n("120356"),
   g = n("605236"),
   E = n("703656"),
   _ = n("984933"),
-  S = n("430824"),
-  I = n("696202"),
+  I = n("430824"),
+  S = n("696202"),
   N = n("26290"),
   T = n("626135"),
   A = n("434479"),
@@ -38,7 +38,7 @@ function y(e) {
     guildId: t,
     selected: n,
     handleClick: a
-  } = e, d = (0, p.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), m = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(t)), v = (null == m ? void 0 : m.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, y = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
+  } = e, d = (0, p.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), m = (0, i.useStateFromStores)([I.default], () => I.default.getGuild(t)), v = (null == m ? void 0 : m.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, y = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
   return (0, l.jsx)(A.BasicChannelRow, {
     id: "shop-".concat(t),
     className: s()(M.previewChannelRow, {
@@ -76,7 +76,7 @@ function y(e) {
           }
         },
         "aria-label": R.default.Messages.CLOSE,
-        children: (0, l.jsx)(I.default, {
+        children: (0, l.jsx)(S.default, {
           width: 16,
           height: 16
         })

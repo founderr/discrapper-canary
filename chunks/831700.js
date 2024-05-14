@@ -22,8 +22,8 @@ var a = n("120356"),
   g = n("933557"),
   E = n("557135"),
   _ = n("873696"),
-  S = n("446226"),
-  I = n("305325"),
+  I = n("446226"),
+  S = n("305325"),
   N = n("281956"),
   T = n("66999"),
   A = n("554747"),
@@ -151,8 +151,8 @@ class Q extends F.default {
       connectDragPreview: g,
       canReorderChannel: E,
       canMoveMembers: _,
-      showTutorial: S,
-      hasActiveEvent: I,
+      showTutorial: I,
+      hasActiveEvent: S,
       embeddedApps: N,
       isSubscriptionGated: T,
       isFavoriteSuggestion: A,
@@ -185,7 +185,7 @@ class Q extends F.default {
               return (0, l.jsxs)(H.default, {
                 className: Z.iconVisibility,
                 iconClassName: s()({
-                  [Z.iconLive]: I
+                  [Z.iconLive]: S
                 }),
                 channel: e,
                 selected: !A && t,
@@ -224,7 +224,7 @@ class Q extends F.default {
         })
       }), this.renderVoiceUsers()]
     });
-    return _ && (y = p(y)), E && (y = f(h(y))), S && (y = (0, l.jsx)(R.default, {
+    return _ && (y = p(y)), E && (y = f(h(y))), I && (y = (0, l.jsx)(R.default, {
       tutorialId: "voice-conversations",
       position: "right",
       offsetX: -20,
@@ -288,7 +288,7 @@ class Q extends F.default {
       let {
         channel: e
       } = this.props, t = e.getGuildId();
-      null != t && (0, N.shouldShowMembershipVerificationGate)(t) && (0, I.openMemberVerificationModal)(t), this.handleVoiceConnect()
+      null != t && (0, N.shouldShowMembershipVerificationGate)(t) && (0, S.openMemberVerificationModal)(t), this.handleVoiceConnect()
     }), X(this, "handleVoiceStatusClick", e => {
       let {
         connected: t,
@@ -402,8 +402,8 @@ function J(e) {
     }
   }), p = (0, i.useStateFromStores)([G.default], () => G.default.hasVideo(n.id)), m = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
     isSubscriptionGated: _,
-    needSubscriptionToAccess: I
-  } = (0, T.default)(n.id), N = (0, S.default)(), L = (0, i.useStateFromStores)([P.default], () => P.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
+    needSubscriptionToAccess: S
+  } = (0, T.default)(n.id), N = (0, I.default)(), L = (0, i.useStateFromStores)([P.default], () => P.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
     enableHangStatus: R,
     allowChannelTopic: M
   } = v.HangStatusExperiment.useExperiment({
@@ -417,7 +417,7 @@ function J(e) {
     isChannelCollapsed: o,
     voiceStates: u,
     isSubscriptionGated: _,
-    needSubscriptionToAccess: I,
+    needSubscriptionToAccess: S,
     enableConnectedUserLimit: !0,
     enableActivities: !0
   }), U = x && null == O;
@@ -428,7 +428,7 @@ function J(e) {
     video: p,
     hasActiveEvent: null != E,
     isSubscriptionGated: _,
-    needSubscriptionToAccess: I,
+    needSubscriptionToAccess: S,
     ...d,
     ...f,
     ...e,

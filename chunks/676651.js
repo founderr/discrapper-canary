@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   openModal: function() {
-    return l
+    return s
   }
 });
 var r = n("735250");
 n("470079");
 var i = n("481060"),
-  s = n("302463");
+  l = n("302463");
 
-function l(e, t) {
+function s(e, t) {
   (0, i.openModalLazy)(async () => {
     let {
       default: i
@@ -20,6 +20,6 @@ function l(e, t) {
       ...n
     })
   }, {
-    modalKey: s.GUILD_PRODUCT_EDIT_MODAL_KEY
+    modalKey: l.GUILD_PRODUCT_EDIT_MODAL_KEY
   })
 }

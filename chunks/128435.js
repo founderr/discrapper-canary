@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 }), n("627341");
 var s = n("735250"),
@@ -13,24 +13,24 @@ var s = n("735250"),
   u = n("481060"),
   d = n("203143"),
   c = n("365206"),
-  E = n("294608"),
-  f = n("65145"),
+  f = n("294608"),
+  E = n("65145"),
   _ = n("920557"),
-  T = n("642000");
+  m = n("642000");
 
-function I(e) {
+function T(e) {
   let {
     media: t
   } = e;
   return (0, s.jsx)(u.Heading, {
     variant: "text-md/medium",
-    className: T.question,
+    className: m.question,
     scaleFontToUserSetting: !0,
     children: t.text
   })
 }
 
-function m(e) {
+function I(e) {
   let {
     children: t,
     onClick: n,
@@ -41,7 +41,7 @@ function m(e) {
   } = e;
   return (0, s.jsx)(u.Button, {
     onClick: n,
-    className: i()(T.__invalid_textButton, r),
+    className: i()(m.__invalid_textButton, r),
     look: u.Button.Looks.BLANK,
     size: u.Button.Sizes.NONE,
     buttonRef: o,
@@ -54,7 +54,7 @@ function m(e) {
   })
 }
 
-function N(e) {
+function p(e) {
   let {
     buttonLabel: t,
     secondaryLabel: n,
@@ -63,12 +63,12 @@ function N(e) {
     className: r
   } = e;
   return (0, s.jsxs)("div", {
-    className: i()(T.detailsText, r),
-    children: [l ? (0, s.jsx)(m, {
+    className: i()(m.detailsText, r),
+    children: [l ? (0, s.jsx)(I, {
       onClick: a,
       variant: "text-sm/normal",
       color: "none",
-      className: i()(T.detailsTextButton, T.interactive),
+      className: i()(m.detailsTextButton, m.interactive),
       children: t
     }) : (0, s.jsx)(u.Text, {
       variant: "text-sm/normal",
@@ -84,7 +84,7 @@ function N(e) {
   })
 }
 
-function p(e) {
+function h(e) {
   let {
     action: t,
     channelId: n,
@@ -93,33 +93,33 @@ function p(e) {
     className: o
   } = e, {
     actionButtonRef: c,
-    manageFocusOnAction: E
-  } = (0, f.usePollFocusManager)(), _ = a.useCallback(async () => {
+    manageFocusOnAction: f
+  } = (0, E.usePollFocusManager)(), _ = a.useCallback(async () => {
     (null == t ? void 0 : t.type) != null && (await d.default.handlePollActionTapped({
       channelId: n,
       messageId: l,
       type: t.type
-    }), E(t.type))
-  }, [null == t ? void 0 : t.type, n, l, E]);
+    }), f(t.type))
+  }, [null == t ? void 0 : t.type, n, l, f]);
   return null == t ? null : "button" === t.presentation || "secondaryButton" === t.presentation ? (0, s.jsx)(u.Button, {
     buttonRef: c,
     onClick: _,
     disabled: !t.enabled,
     color: "secondaryButton" === t.presentation ? u.Button.Colors.CUSTOM : u.Button.Colors.BRAND,
     size: u.Button.Sizes.SMALL,
-    className: i()(o, T.buttonPresentation, "secondaryButton" === t.presentation && T.secondaryButtonPresentation),
+    className: i()(o, m.buttonPresentation, "secondaryButton" === t.presentation && m.secondaryButtonPresentation),
     children: (0, s.jsx)(u.Text, {
       variant: "text-sm/medium",
       color: "none",
       scaleFontToUserSetting: !0,
       children: t.label
     })
-  }, t.presentation) : "textButton" === t.presentation ? (0, s.jsx)(m, {
+  }, t.presentation) : "textButton" === t.presentation ? (0, s.jsx)(I, {
     buttonRef: c,
     onClick: _,
     className: o,
     children: t.label
-  }) : (0, s.jsx)(N, {
+  }) : (0, s.jsx)(p, {
     buttonLabel: t.label,
     secondaryLabel: t.secondaryLabel,
     handleClick: _,
@@ -128,12 +128,12 @@ function p(e) {
   })
 }
 
-function S(e) {
+function N(e) {
   let {
     message: t,
     poll: n,
     className: a
-  } = e, l = (0, E.useStyleClass)(n.containerStyle), d = function(e, t) {
+  } = e, l = (0, f.useStyleClass)(n.containerStyle), d = function(e, t) {
     let n = {
       answers: t.answers,
       answersInteraction: t.answersInteraction,
@@ -151,33 +151,33 @@ function S(e) {
     })).otherwise(() => null)
   }(0, n);
   return null == d ? null : (0, s.jsx)("div", {
-    className: i()(T.container, l, a),
+    className: i()(m.container, l, a),
     children: (0, s.jsxs)(u.HeadingLevel, {
       children: [(0, s.jsxs)("div", {
-        className: T.header,
-        children: [(0, s.jsx)(I, {
+        className: m.header,
+        children: [(0, s.jsx)(T, {
           media: n.question
         }), null != n.promptLabel && (0, s.jsx)(u.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          className: T.prompt,
+          className: m.prompt,
           scaleFontToUserSetting: !0,
           children: n.promptLabel
         })]
       }), d, (0, s.jsxs)("div", {
-        className: T.bottomBar,
-        children: [(0, s.jsx)(p, {
+        className: m.bottomBar,
+        children: [(0, s.jsx)(h, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.secondaryAction,
-          className: T.secondaryAction,
+          className: m.secondaryAction,
           isInteractive: n.isInteractive
-        }), (0, s.jsx)(p, {
+        }), (0, s.jsx)(h, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.tertiaryAction,
-          className: T.tertiaryAction
-        }), (0, s.jsx)(p, {
+          className: m.tertiaryAction
+        }), (0, s.jsx)(h, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.primaryAction
@@ -187,17 +187,17 @@ function S(e) {
   })
 }
 
-function C(e) {
+function S(e) {
   let {
     message: t,
     poll: n,
     className: a
   } = e;
-  return (0, s.jsx)(E.PollContextProvider, {
+  return (0, s.jsx)(f.PollContextProvider, {
     message: t,
     poll: n,
-    children: (0, s.jsx)(f.PollFocusManager, {
-      children: (0, s.jsx)(S, {
+    children: (0, s.jsx)(E.PollFocusManager, {
+      children: (0, s.jsx)(N, {
         message: t,
         poll: n,
         className: a

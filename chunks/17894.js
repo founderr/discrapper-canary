@@ -1,46 +1,46 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return E
   }
 });
-var a = n("525654"),
-  r = n.n(a),
-  s = n("39612"),
+var r = n("525654"),
+  s = n.n(r),
+  a = n("39612"),
   l = n("271579"),
   i = n("756647"),
-  u = n("232567"),
-  o = n("703656"),
-  d = n("314897"),
-  c = n("896797"),
-  f = n("626135"),
-  _ = n("954824"),
-  P = n("981631");
-async function S(e) {
+  o = n("232567"),
+  u = n("703656"),
+  c = n("314897"),
+  d = n("896797"),
+  p = n("626135"),
+  m = n("954824"),
+  f = n("981631");
+async function h(e) {
   var t, n;
-  let a = null === (t = r().os) || void 0 === t ? void 0 : t.family;
-  if ("Android" === a || "iOS" === a) {
-    let t = null !== (n = d.default.getFingerprint()) && void 0 !== n ? n : d.default.getId(),
-      a = (0, l.generateAttemptId)();
-    if (null == t && d.default.isAuthenticated()) try {
-      await (0, u.fetchCurrentUser)(), t = d.default.getId()
+  let r = null === (t = s().os) || void 0 === t ? void 0 : t.family;
+  if ("Android" === r || "iOS" === r) {
+    let t = null !== (n = c.default.getFingerprint()) && void 0 !== n ? n : c.default.getId(),
+      r = (0, l.generateAttemptId)();
+    if (null == t && c.default.isAuthenticated()) try {
+      await (0, o.fetchCurrentUser)(), t = c.default.getId()
     } catch {}
-    return (0, l.default)((0, s.getDefaultDynamicLinkTemplate)(), {
+    return (0, l.default)((0, a.getDefaultDynamicLinkTemplate)(), {
       utmSource: e,
       fingerprint: t,
-      attemptId: a
+      attemptId: r
     })
   }
   return "discord://"
 }
-async function A(e) {
-  let t = await S(e),
+async function E(e) {
+  let t = await h(e),
     n = (0, l.parseDynamicLink)(t);
-  null != n && f.default.track(P.AnalyticEvents.DEEP_LINK_CLICKED, {
+  null != n && p.default.track(f.AnalyticEvents.DEEP_LINK_CLICKED, {
     fingerprint: (0, i.maybeExtractId)(n.fingerprint),
     attempt_id: n.attemptId,
     source: n.utmSource
-  }), _.default.launch(t, e => {
-    !e && (0, o.replaceWith)(c.default.fallbackRoute)
+  }), m.default.launch(t, e => {
+    !e && (0, u.replaceWith)(d.default.fallbackRoute)
   })
 }

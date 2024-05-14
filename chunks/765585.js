@@ -21,8 +21,8 @@ t.default = a.forwardRef(function(e, t) {
     contentClassName: g,
     tryItText: E,
     dismissText: _,
-    onTryFeature: S,
-    onClose: I,
+    onTryFeature: I,
+    onClose: S,
     className: N,
     inlineArt: T = !1,
     isPremiumFeature: A = !1,
@@ -90,12 +90,12 @@ t.default = a.forwardRef(function(e, t) {
       }), (0, l.jsx)("div", {
         ref: G,
         className: j || !L ? p.buttonContainerVertical : p.buttonContainerHorizontal,
-        children: null != S ? (0, l.jsxs)(l.Fragment, {
+        children: null != I ? (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(r.Button, {
             className: p.button,
             size: b,
             onClick: e => {
-              null == I || I(e), S(e), w(f.ContentDismissActionType.PRIMARY)
+              null == S || S(e), I(e), w(f.ContentDismissActionType.PRIMARY)
             },
             color: A || O ? r.Button.Colors.BRAND : r.Button.Colors.WHITE,
             look: A || O ? r.Button.Looks.INVERTED : r.Button.Looks.FILLED,
@@ -104,7 +104,7 @@ t.default = a.forwardRef(function(e, t) {
             className: p.button,
             size: b,
             onClick: e => {
-              null == I || I(e), w(f.ContentDismissActionType.DISMISS)
+              null == S || S(e), w(f.ContentDismissActionType.DISMISS)
             },
             color: A || O ? r.Button.Colors.WHITE : r.Button.Colors.BRAND,
             look: A || O ? r.Button.Looks.LINK : r.Button.Looks.FILLED,
@@ -114,7 +114,7 @@ t.default = a.forwardRef(function(e, t) {
           className: p.button,
           size: r.Button.Sizes.MAX,
           onClick: e => {
-            null == I || I(e), w(f.ContentDismissActionType.PRIMARY)
+            null == S || S(e), w(f.ContentDismissActionType.PRIMARY)
           },
           color: r.Button.Colors.WHITE,
           children: h.default.Messages.EDUCATION_NEW_FEATURE_CONFIRM

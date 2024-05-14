@@ -18,13 +18,13 @@ function d(e) {
       message: n,
       channel: d,
       onDeleteMessage: c,
-      children: E
+      children: f
     } = e,
-    f = (0, a.useIsMessageInteractionForcedEphemeral)(n, d, {
+    E = (0, a.useIsMessageInteractionForcedEphemeral)(n, d, {
       location: "EphemeralAccessories"
     }),
     _ = () => c(n, !0);
-  return t = f ? (0, s.jsx)("div", {
+  return t = E ? (0, s.jsx)("div", {
     className: u.userAppsBetaContent,
     children: o.default.Messages.APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL.format({
       learnMoreUrl: i.default.getArticleURL(r.HelpdeskArticles.USING_APPS_FAQ),
@@ -43,6 +43,6 @@ function d(e) {
       className: u.icon,
       width: 16,
       height: 16
-    }), t, E]
+    }), t, f]
   })
 }

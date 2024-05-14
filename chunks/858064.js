@@ -88,14 +88,14 @@ function E(e) {
   let _ = (0, a.useStateFromStores)([r.default], () => r.default.getId());
   if (null == E) return null;
   let {
-    streamLengthRequirement: S,
-    viewerCountRequirement: I
+    streamLengthRequirement: I,
+    viewerCountRequirement: S
   } = E.config, N = E.drop, {
     header: T,
     body: A,
     imgSrc: L,
     imgStyle: v
-  } = C(n, N, S), x = () => {
+  } = C(n, N, I), x = () => {
     u.default.track(h.AnalyticEvents.DROPS_ACTIVITY_PANEL_POPOVER_CTA_CLICK, {
       user_id: _,
       drops_quest_id: N.dropsQuestId,
@@ -128,8 +128,8 @@ function E(e) {
       variant: "heading-md/extrabold",
       children: T
     }), n === f.TooltipActions.TRACK_PROGRESS ? (0, l.jsx)(g, {
-      streamLengthRequirement: S,
-      viewerCountRequirement: I
+      streamLengthRequirement: I,
+      viewerCountRequirement: S
     }) : (0, l.jsx)(s.Text, {
       variant: "text-sm/medium",
       className: m.subTitle,

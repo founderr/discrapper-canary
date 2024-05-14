@@ -106,8 +106,8 @@ t.default = a.memo(function(e) {
     itemHeight: g,
     showDeadZoneIndicator: E,
     activeItem: _,
-    onItemSelect: S,
-    onItemAction: I,
+    onItemSelect: I,
+    onItemAction: S,
     interactive: N = !0,
     children: T
   } = e, A = a.useRef(null), L = a.useRef([]), v = a.useRef(!1), x = a.useRef(null), [R, M] = a.useState(0), [y, O] = a.useState({
@@ -116,10 +116,10 @@ t.default = a.memo(function(e) {
   }), D = Math.abs(y.x) + Math.abs(y.y) > 0, b = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
     null == L.current[R] ? L.current[R] = [] : L.current[R][t] = e
   }, [R]), P = a.useCallback((e, t) => {
-    x.current = t, S(h * e + t)
-  }, [S]), G = a.useCallback(() => {
-    x.current = null, S(null)
-  }, [S]), U = a.useCallback(e => {
+    x.current = t, I(h * e + t)
+  }, [I]), G = a.useCallback(() => {
+    x.current = null, I(null)
+  }, [I]), U = a.useCallback(e => {
     G(), v.current = e
   }, [G]), w = a.useCallback((e, t, n) => {
     if (v.current) {
@@ -142,8 +142,8 @@ t.default = a.memo(function(e) {
       y: (s ? Math.max(l.y, -i.y) : Math.min(l.y, i.y)) / 2
     })
   }, []), F = a.useCallback(e => {
-    null != x.current && (e.preventDefault(), e.stopPropagation(), null == I || I(h * R + x.current))
-  }, [I, R]), B = a.useMemo(() => (0, s.throttle)(e => {
+    null != x.current && (e.preventDefault(), e.stopPropagation(), null == S || S(h * R + x.current))
+  }, [S, R]), B = a.useMemo(() => (0, s.throttle)(e => {
     if (null == A.current) return;
     let l = A.current.getBoundingClientRect(),
       a = l.left + l.width / 2,

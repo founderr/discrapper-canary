@@ -17,13 +17,13 @@ var l = n("735250"),
   g = n("236756"),
   E = n("981631"),
   _ = n("854903");
-let S = {
+let I = {
     [E.RTCConnectionQuality.UNKNOWN]: f.Tooltip.Colors.BLACK,
     [E.RTCConnectionQuality.BAD]: f.Tooltip.Colors.RED,
     [E.RTCConnectionQuality.AVERAGE]: f.Tooltip.Colors.YELLOW,
     [E.RTCConnectionQuality.FINE]: f.Tooltip.Colors.GREEN
   },
-  I = {
+  S = {
     [E.ConnectionStatus.CONNECTED]: _.rtcConnectionStatusConnected,
     [E.ConnectionStatus.CONNECTING]: _.rtcConnectionStatusConnecting,
     [E.ConnectionStatus.ERROR]: _.rtcConnectionStatusError
@@ -67,7 +67,7 @@ class A extends a.PureComponent {
       return (0, l.jsx)(f.Button, {
         look: f.Button.Looks.BLANK,
         size: f.Button.Sizes.NONE,
-        className: i()(e, I[a]),
+        className: i()(e, S[a]),
         onClick: n,
         children: s
       })
@@ -85,7 +85,7 @@ class A extends a.PureComponent {
     } = this.props;
     return s === E.RTCConnectionStates.RTC_CONNECTED && (e = (0, l.jsx)(f.Tooltip, {
       text: t !== E.RTCConnectionQuality.UNKNOWN && null != a ? "".concat(a.toFixed(0), " ms") : null,
-      color: S[t],
+      color: I[t],
       children: e => (0, l.jsx)(L, {
         quality: t,
         smallPing: n,

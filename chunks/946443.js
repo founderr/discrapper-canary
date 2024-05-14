@@ -1,143 +1,143 @@
 "use strict";
 n.r(t), n.d(t, {
   UnreadsCrashed: function() {
-    return L
+    return x
   },
   default: function() {
-    return R
+    return v
   }
 }), n("47120");
-var a = n("735250"),
-  l = n("470079"),
-  s = n("120356"),
-  i = n.n(s),
+var s = n("735250"),
+  a = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
   r = n("525654"),
   o = n.n(r),
   u = n("924826"),
   d = n("442837"),
   c = n("524437"),
   f = n("481060"),
-  h = n("570140"),
-  E = n("607070"),
+  E = n("570140"),
+  _ = n("607070"),
   m = n("724757"),
-  p = n("837062"),
-  g = n("626135"),
-  S = n("585483"),
-  N = n("143316"),
-  _ = n("240126"),
-  I = n("791914"),
-  T = n("147522"),
-  C = n("809780"),
-  A = n("981631"),
-  v = n("689938"),
-  x = n("953214");
+  T = n("837062"),
+  I = n("626135"),
+  p = n("585483"),
+  h = n("143316"),
+  N = n("240126"),
+  S = n("791914"),
+  C = n("147522"),
+  A = n("809780"),
+  g = n("981631"),
+  M = n("689938"),
+  R = n("953214");
 
-function R(e) {
+function v(e) {
   let {
     setTab: t,
     onJump: n,
-    showTutorial: s,
+    showTutorial: l,
     setSeenTutorial: r,
-    closePopout: R,
-    badgeState: L
-  } = e, b = l.useRef(null), [O, y] = (0, C.default)(b), {
-    loadState: j,
-    channels: D
-  } = O, {
-    maybeLoadMore: F,
-    markAllRead: P
-  } = y;
+    closePopout: v,
+    badgeState: x
+  } = e, L = a.useRef(null), [D, P] = (0, A.default)(L), {
+    loadState: y,
+    channels: U
+  } = D, {
+    maybeLoadMore: j,
+    markAllRead: b
+  } = P;
   (function(e, t, n) {
-    l.useLayoutEffect(() => {
-      var a;
+    a.useLayoutEffect(() => {
+      var s;
       let {
-        scrollToChannelIndex: l
+        scrollToChannelIndex: a
       } = t;
       n.clearScrollToChannelIndex();
       let {
-        current: s
+        current: l
       } = e;
-      if (null == s || null == l) return;
-      let i = null === (a = s.getScrollerNode()) || void 0 === a ? void 0 : a.children;
+      if (null == l || null == a) return;
+      let i = null === (s = l.getScrollerNode()) || void 0 === s ? void 0 : s.children;
       if (null == i) return;
-      let r = i[l];
+      let r = i[a];
       if (null == r) return;
       let {
         scrollTop: o,
         scrollHeight: u
-      } = s.getScrollerState();
-      (r.offsetTop < o || r.offsetTop > o + u) && s.scrollTo({
+      } = l.getScrollerState();
+      (r.offsetTop < o || r.offsetTop > o + u) && l.scrollTo({
         to: r.offsetTop
       })
     })
-  })(b, O, y),
+  })(L, D, P),
   function(e, t) {
-    l.useEffect(() => {
+    a.useEffect(() => {
       let n = () => {
         let n = e.channels.find(e => !e.collapsed);
         null != n && t.markChannelRead(n)
       };
-      return S.ComponentDispatch.subscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n), () => {
-        S.ComponentDispatch.unsubscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
+      return p.ComponentDispatch.subscribe(g.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n), () => {
+        p.ComponentDispatch.unsubscribe(g.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
       }
     }, [t, e.channels])
-  }(O, y), l.useEffect(() => {
-    g.default.track(A.AnalyticEvents.OPEN_POPOUT, {
+  }(D, P), a.useEffect(() => {
+    I.default.track(g.AnalyticEvents.OPEN_POPOUT, {
       type: "Inbox"
     })
-  }, []), l.useEffect(() => (h.default.subscribe("CONNECTION_OPEN", R), () => {
-    h.default.unsubscribe("CONNECTION_OPEN", R)
-  }), [R]);
-  let k = (0, d.useStateFromStores)([E.default], () => E.default.messageGroupSpacing),
-    U = (0, m.default)("unreads", b);
-  if (0 === D.length) {
-    var w;
-    return (0, a.jsxs)("div", {
-      className: x.container,
-      children: [(0, a.jsx)(I.default, {
+  }, []), a.useEffect(() => (E.default.subscribe("CONNECTION_OPEN", v), () => {
+    E.default.unsubscribe("CONNECTION_OPEN", v)
+  }), [v]);
+  let B = (0, d.useStateFromStores)([_.default], () => _.default.messageGroupSpacing),
+    F = (0, m.default)("unreads", L);
+  if (0 === U.length) {
+    var G;
+    return (0, s.jsxs)("div", {
+      className: R.container,
+      children: [(0, s.jsx)(S.default, {
         tab: c.InboxTab.UNREADS,
         setTab: t,
-        badgeState: L,
-        closePopout: R
-      }), (0, a.jsx)(_.default, {
-        Icon: p.default,
-        header: v.default.Messages.UNREADS_EMPTY_STATE_HEADER,
-        tip: (null === (w = o().os) || void 0 === w ? void 0 : w.family) === "OS X" ? v.default.Messages.UNREADS_EMPTY_STATE_TIP_MAC : v.default.Messages.UNREADS_EMPTY_STATE_TIP
+        badgeState: x,
+        closePopout: v
+      }), (0, s.jsx)(N.default, {
+        Icon: T.default,
+        header: M.default.Messages.UNREADS_EMPTY_STATE_HEADER,
+        tip: (null === (G = o().os) || void 0 === G ? void 0 : G.family) === "OS X" ? M.default.Messages.UNREADS_EMPTY_STATE_TIP_MAC : M.default.Messages.UNREADS_EMPTY_STATE_TIP
       })]
     })
   }
-  return (0, a.jsxs)("div", {
-    className: i()(x.container, "group-spacing-".concat(k)),
-    "aria-label": v.default.Messages.UNREADS_TAB_LABEL,
-    children: [(0, a.jsx)(I.default, {
+  return (0, s.jsxs)("div", {
+    className: i()(R.container, "group-spacing-".concat(B)),
+    "aria-label": M.default.Messages.UNREADS_TAB_LABEL,
+    children: [(0, s.jsx)(S.default, {
       tab: c.InboxTab.UNREADS,
       setTab: t,
-      badgeState: L,
-      closePopout: R,
-      children: (0, a.jsx)(N.default, {
+      badgeState: x,
+      closePopout: v,
+      children: (0, s.jsx)(h.default, {
         type: "top-header",
-        onClick: P
+        onClick: b
       })
-    }), (0, a.jsx)(u.ListNavigatorProvider, {
-      navigator: U,
-      children: (0, a.jsx)(u.ListNavigatorContainer, {
+    }), (0, s.jsx)(u.ListNavigatorProvider, {
+      navigator: F,
+      children: (0, s.jsx)(u.ListNavigatorContainer, {
         children: e => {
           let {
             ref: t,
-            ...l
+            ...a
           } = e;
-          return (0, a.jsxs)(f.AdvancedScrollerThin, {
+          return (0, s.jsxs)(f.AdvancedScrollerThin, {
             ref: e => {
               var n;
-              b.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
+              L.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
-            ...l,
-            onScroll: j === C.LoadState.Done ? void 0 : F,
-            className: x.scroller,
-            children: [s ? (0, a.jsx)(M, {
+            ...a,
+            onScroll: y === A.LoadState.Done ? void 0 : j,
+            className: R.scroller,
+            children: [l ? (0, s.jsx)(O, {
               setSeenTutorial: r
-            }) : null, (0, T.default)(D, y, n), j === C.LoadState.Done ? null : (0, a.jsx)(f.Spinner, {
-              className: x.spinner
+            }) : null, (0, C.default)(U, P, n), y === A.LoadState.Done ? null : (0, s.jsx)(f.Spinner, {
+              className: R.spinner
             })]
           })
         }
@@ -146,55 +146,55 @@ function R(e) {
   })
 }
 
-function M(e) {
+function O(e) {
   let {
     setSeenTutorial: t
   } = e;
-  return (0, a.jsxs)("div", {
-    className: x.tutorial,
-    children: [(0, a.jsx)("div", {
-      className: x.tutorialIcon,
-      children: (0, a.jsx)(p.default, {
+  return (0, s.jsxs)("div", {
+    className: R.tutorial,
+    children: [(0, s.jsx)("div", {
+      className: R.tutorialIcon,
+      children: (0, s.jsx)(T.default, {
         width: 24,
         height: 24
       })
-    }), (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(f.Heading, {
-        className: x.__invalid_tutorialHeader,
+    }), (0, s.jsxs)("div", {
+      children: [(0, s.jsx)(f.Heading, {
+        className: R.__invalid_tutorialHeader,
         variant: "heading-md/semibold",
-        children: v.default.Messages.UNREADS_TUTORIAL_HEADER
-      }), (0, a.jsx)(f.Text, {
+        children: M.default.Messages.UNREADS_TUTORIAL_HEADER
+      }), (0, s.jsx)(f.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: v.default.Messages.UNREADS_TUTORIAL_BODY
-      }), (0, a.jsx)(f.Button, {
-        className: x.tutorialButton,
+        children: M.default.Messages.UNREADS_TUTORIAL_BODY
+      }), (0, s.jsx)(f.Button, {
+        className: R.tutorialButton,
         onClick: t,
         size: f.Button.Sizes.SMALL,
-        children: v.default.Messages.TUTORIAL_CLOSE
+        children: M.default.Messages.TUTORIAL_CLOSE
       })]
     })]
   })
 }
 
-function L(e) {
+function x(e) {
   let {
     setTab: t,
     badgeState: n,
-    closePopout: l
+    closePopout: a
   } = e;
-  return (0, a.jsxs)("div", {
-    className: x.container,
-    children: [(0, a.jsx)(I.default, {
+  return (0, s.jsxs)("div", {
+    className: R.container,
+    children: [(0, s.jsx)(S.default, {
       tab: c.InboxTab.UNREADS,
       setTab: t,
       badgeState: n,
-      closePopout: l
-    }), (0, a.jsx)(_.default, {
-      Icon: p.default,
+      closePopout: a
+    }), (0, s.jsx)(N.default, {
+      Icon: T.default,
       disableStars: !0,
-      header: v.default.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,
-      tip: v.default.Messages.UNREADS_EMPTY_STATE_ERROR_SUBTITLE
+      header: M.default.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,
+      tip: M.default.Messages.UNREADS_EMPTY_STATE_ERROR_SUBTITLE
     })]
   })
 }

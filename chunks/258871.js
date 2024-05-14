@@ -17,7 +17,7 @@ var l = n("735250"),
   g = n("688438"),
   E = n("981631"),
   _ = n("689938");
-let S = [{
+let I = [{
   key: "EVENTS",
   renderIcon: e => (0, l.jsx)(f.default, {
     className: e
@@ -72,7 +72,7 @@ let S = [{
   handler: (e, t) => (0, i.openModalLazy)(async () => {
     let {
       default: a
-    } = await Promise.all([n.e("99387"), n.e("7654"), n.e("92893")]).then(n.bind(n, "560114"));
+    } = await Promise.all([n.e("99387"), n.e("7654"), n.e("61939")]).then(n.bind(n, "560114"));
     return n => (0, l.jsx)(a, {
       ...n,
       guild: e,
@@ -103,7 +103,7 @@ t.default = e => {
     numEvents: i.length
   }), [i.length]), p = (0, g.useHubUnreadCount)(n);
   return (0, l.jsx)(l.Fragment, {
-    children: S.map(e => {
+    children: I.map(e => {
       let {
         key: a,
         getName: s,

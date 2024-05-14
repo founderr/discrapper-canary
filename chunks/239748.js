@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("925549"),
-  l = n("475468"),
-  o = n("19780"),
+  o = n("475468"),
+  l = n("19780"),
   a = n("944486"),
   u = n("981631");
 let s = {
@@ -14,9 +14,9 @@ let s = {
   comboKeysBindGlobal: !0,
   action() {
     var e;
-    if (!o.default.isConnected()) return !1;
-    let t = null !== (e = o.default.getGuildId()) && void 0 !== e ? e : u.ME,
+    if (!l.default.isConnected()) return !1;
+    let t = null !== (e = l.default.getGuildId()) && void 0 !== e ? e : u.ME,
       n = a.default.getChannelId(t);
-    return (0, l.transitionToChannel)(t, n), i.default.channelListScrollTo(t, o.default.getChannelId()), !1
+    return (0, o.transitionToChannel)(t, n), i.default.channelListScrollTo(t, l.default.getChannelId()), !1
   }
 }

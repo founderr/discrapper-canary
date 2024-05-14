@@ -24,8 +24,8 @@ var l = n("735250"),
   g = n("702321"),
   E = n("201895"),
   _ = n("43267"),
-  S = n("933557"),
-  I = n("853856"),
+  I = n("933557"),
+  S = n("853856"),
   N = n("93687"),
   T = n("785232"),
   A = n("878857"),
@@ -154,7 +154,7 @@ function Q(e) {
     user: c,
     size: h.AvatarSizes.SIZE_32,
     animateOnHover: !(r || w)
-  }), ee = (0, f.useStateFromStores)([y.default], () => y.default.isChannelMuted(t.getGuildId(), t.id)), et = (0, f.useStateFromStores)([R.default], () => R.default.getMentionCount(t.id) > 0), en = (0, S.default)(t), el = (0, f.useStateFromStores)([I.default], () => I.default.isFavorite(t.id)), ea = () => {
+  }), ee = (0, f.useStateFromStores)([y.default], () => y.default.isChannelMuted(t.getGuildId(), t.id)), et = (0, f.useStateFromStores)([R.default], () => R.default.getMentionCount(t.id) > 0), en = (0, I.default)(t), el = (0, f.useStateFromStores)([S.default], () => S.default.isFavorite(t.id)), ea = () => {
     F(!0)
   }, es = () => {
     F(!1)

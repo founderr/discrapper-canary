@@ -21,8 +21,8 @@ var l = n("735250"),
   g = n("143614"),
   E = n("544803"),
   _ = n("899740"),
-  S = n("155409"),
-  I = n("699516"),
+  I = n("155409"),
+  S = n("699516"),
   N = n("944486"),
   T = n("594174"),
   A = n("295226"),
@@ -64,7 +64,7 @@ function Y(e) {
     badge: f,
     link: p,
     showProgressBadge: m
-  } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [I, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, D] = a.useState(0), [j, F] = a.useState(!1), {
+  } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [S, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, D] = a.useState(0), [j, F] = a.useState(!1), {
     canViewBroadcasts: Y
   } = h.default.useExperiment({
     location: "home_button_no_track"
@@ -88,7 +88,7 @@ function Y(e) {
   }) : W && (Q = (0, l.jsx)(R.default, {
     className: V.broadcastBadge
   }));
-  let q = t || I || _,
+  let q = t || S || _,
     J = (0, l.jsx)(o.BlobMask, {
       highlight: W,
       selected: q,
@@ -150,14 +150,14 @@ function Y(e) {
         F(!1)
       }, 250)
     },
-    children: (0, l.jsx)(S.default, {
+    children: (0, l.jsx)(I.default, {
       inlineSpecs: k,
       tutorialId: "friends-list",
       position: "right",
       children: (0, l.jsxs)(P.ListItem, {
         children: [(0, l.jsx)(M.default, {
           selected: t,
-          hovered: I,
+          hovered: S,
           className: V.pill
         }), null != $ ? $ : (0, l.jsx)(G.default, {
           color: o.Tooltip.Colors.PRIMARY,
@@ -183,7 +183,7 @@ function K() {
       return l > 0 && l < 100
     }),
     n = (0, i.useStateFromStores)([p.default], () => p.default.getUserIdsToValidate()),
-    s = (0, i.useStateFromStores)([I.default], () => I.default.getPendingCount()),
+    s = (0, i.useStateFromStores)([S.default], () => S.default.getPendingCount()),
     r = Object.keys(F.SubscriptionTrials),
     {
       unviewedTrialCount: o,
@@ -200,13 +200,13 @@ function K() {
   a.useEffect(() => {
     n.length > 0 && (0, f.fetchBroadcasterBuckets)()
   }, [n]), (0, m.default)();
-  let S = L.default.getHomeLink();
-  return E && (S = w.Routes.APPLICATION_STORE), (0, l.jsx)(Y, {
+  let I = L.default.getHomeLink();
+  return E && (I = w.Routes.APPLICATION_STORE), (0, l.jsx)(Y, {
     selected: e,
     user: h,
     selectedChannelId: N.default.getChannelId(w.ME),
     badge: g,
-    link: S,
+    link: I,
     showProgressBadge: t
   })
 }

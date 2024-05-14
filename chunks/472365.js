@@ -21,8 +21,8 @@ var l = n("735250"),
   g = n("285952"),
   E = n("672752"),
   _ = n("153124"),
-  S = n("819570"),
-  I = n("757698"),
+  I = n("819570"),
+  S = n("757698"),
   N = n("466111"),
   T = n("855981"),
   A = n("55543"),
@@ -87,7 +87,7 @@ function U(e) {
     className: i()(j.iconContainer, t),
     children: [(0, l.jsx)(T.default, {
       className: j.iconSparklePlus
-    }), (0, l.jsx)(I.default, {
+    }), (0, l.jsx)(S.default, {
       className: j.iconLink,
       width: 40,
       height: 40
@@ -121,10 +121,10 @@ function w(e) {
         }), (0, l.jsx)("div", {
           className: j.errorBody,
           children: b.default.Messages.INVITE_MODAL_ERROR_INVALID_BODY
-        }), (0, l.jsx)(S.Button, {
-          size: S.Button.Sizes.LARGE,
+        }), (0, l.jsx)(I.Button, {
+          size: I.Button.Sizes.LARGE,
           onClick: () => M.default.close(),
-          color: S.Button.Colors.BRAND,
+          color: I.Button.Colors.BRAND,
           children: b.default.Messages.INVITE_MODAL_ERROR_BUTTON_TEXT
         })]
       })
@@ -143,7 +143,7 @@ function F(e) {
   let {
     invite: p,
     error: E,
-    submitting: I
+    submitting: S
   } = (0, r.useStateFromStoresObject)([y.default], () => y.default.getProps());
   a.useEffect(() => {
     !__OVERLAY__ && x.isPlatformEmbedded && ((0, x.isWindows)() ? R.default.minimize() : R.default.restore(), R.default.focus())
@@ -216,12 +216,12 @@ function F(e) {
                     onMouseEnter: t,
                     onMouseLeave: n
                   } = e;
-                  return (0, l.jsx)(S.Button, {
-                    size: S.Button.Sizes.LARGE,
+                  return (0, l.jsx)(I.Button, {
+                    size: I.Button.Sizes.LARGE,
                     onClick: A,
-                    submitting: I,
+                    submitting: S,
                     disabled: V,
-                    color: B ? S.Button.Colors.GREEN : S.Button.Colors.BRAND,
+                    color: B ? I.Button.Colors.GREEN : I.Button.Colors.BRAND,
                     onMouseEnter: t,
                     onMouseLeave: n,
                     children: V ? b.default.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : k
@@ -229,28 +229,28 @@ function F(e) {
                 }
               }) : (0, l.jsxs)("div", {
                 className: j.buttonGroup,
-                children: [(0, l.jsx)(S.Button, {
-                  size: S.Button.Sizes.LARGE,
+                children: [(0, l.jsx)(I.Button, {
+                  size: I.Button.Sizes.LARGE,
                   onClick: A,
-                  submitting: I,
+                  submitting: S,
                   children: b.default.Messages.PLAY
-                }), (0, l.jsx)(S.Button, {
-                  color: S.Button.Colors.PRIMARY,
-                  size: S.Button.Sizes.LARGE,
+                }), (0, l.jsx)(I.Button, {
+                  color: I.Button.Colors.PRIMARY,
+                  size: I.Button.Sizes.LARGE,
                   onClick: A,
-                  submitting: I,
+                  submitting: S,
                   children: b.default.Messages.SPECTATE
                 })]
               }), (0, l.jsx)(g.default, {
                 justify: g.default.Justify.CENTER,
                 className: P.marginTop8,
-                children: (0, l.jsx)(S.Button, {
-                  look: S.Button.Looks.LINK,
+                children: (0, l.jsx)(I.Button, {
+                  look: I.Button.Looks.LINK,
                   className: j.noThanksButton,
                   onClick: function() {
                     M.default.close()
                   },
-                  color: S.Button.Colors.TRANSPARENT,
+                  color: I.Button.Colors.TRANSPARENT,
                   children: b.default.Messages.INIVTE_MODAL_NO_THANKS
                 })
               })]

@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   ErrorBoundary: function() {
-    return r
+    return a
   }
 });
-var s = n("470079");
-let i = (0, s.createContext)(null),
-  a = {
+var i = n("470079");
+let s = (0, i.createContext)(null),
+  r = {
     didCatch: !1,
     error: null
   };
-class r extends s.Component {
+class a extends i.Component {
   constructor(e) {
-    super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = a
+    super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = r
   }
   static getDerivedStateFromError(e) {
     return {
@@ -25,34 +25,34 @@ class r extends s.Component {
       error: e
     } = this.state;
     if (null !== e) {
-      for (var t, n, s = arguments.length, i = Array(s), r = 0; r < s; r++) i[r] = arguments[r];
+      for (var t, n, i = arguments.length, s = Array(i), a = 0; a < i; a++) s[a] = arguments[a];
       null === (t = (n = this.props).onReset) || void 0 === t || t.call(n, {
-        args: i,
+        args: s,
         reason: "imperative-api"
-      }), this.setState(a)
+      }), this.setState(r)
     }
   }
   componentDidCatch(e, t) {
-    var n, s;
-    null === (n = (s = this.props).onError) || void 0 === n || n.call(s, e, t)
+    var n, i;
+    null === (n = (i = this.props).onError) || void 0 === n || n.call(i, e, t)
   }
   componentDidUpdate(e, t) {
     let {
       didCatch: n
     } = this.state, {
-      resetKeys: s
+      resetKeys: i
     } = this.props;
     if (n && null !== t.error && function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
           t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
         return e.length !== t.length || e.some((e, n) => !Object.is(e, t[n]))
-      }(e.resetKeys, s)) {
-      var i, r;
-      null === (i = (r = this.props).onReset) || void 0 === i || i.call(r, {
-        next: s,
+      }(e.resetKeys, i)) {
+      var s, a;
+      null === (s = (a = this.props).onReset) || void 0 === s || s.call(a, {
+        next: i,
         prev: e.resetKeys,
         reason: "keys"
-      }), this.setState(a)
+      }), this.setState(r)
     }
   }
   render() {
@@ -60,24 +60,24 @@ class r extends s.Component {
       children: e,
       fallbackRender: t,
       FallbackComponent: n,
-      fallback: a
+      fallback: r
     } = this.props, {
-      didCatch: r,
+      didCatch: a,
       error: l
     } = this.state, u = e;
-    if (r) {
+    if (a) {
       let e = {
         error: l,
         resetErrorBoundary: this.resetErrorBoundary
       };
-      if ((0, s.isValidElement)(a)) u = a;
+      if ((0, i.isValidElement)(r)) u = r;
       else if ("function" == typeof t) u = t(e);
-      else if (n) u = (0, s.createElement)(n, e);
+      else if (n) u = (0, i.createElement)(n, e);
       else throw l
     }
-    return (0, s.createElement)(i.Provider, {
+    return (0, i.createElement)(s.Provider, {
       value: {
-        didCatch: r,
+        didCatch: a,
         error: l,
         resetErrorBoundary: this.resetErrorBoundary
       }

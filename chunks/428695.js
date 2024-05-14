@@ -23,8 +23,8 @@ t.default = function(e) {
     imageStyles: g,
     imageMarginX: E,
     imageMarginTop: _,
-    trackingSource: S,
-    undismissable: I,
+    trackingSource: I,
+    undismissable: S,
     onDismissed: N,
     onClick: T,
     cta: A,
@@ -44,7 +44,7 @@ t.default = function(e) {
     size: o.Button.Sizes.SMALL,
     onClick: () => {
       null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-        source: S,
+        source: I,
         guild_id: t.id,
         notice_type: C
       }), null == T || T()
@@ -76,7 +76,7 @@ t.default = function(e) {
   let O = null != E ? "".concat(E, "px") : "16px";
   return (0, l.jsxs)("div", {
     className: i()(p.container, x),
-    children: [!0 === I ? null : (0, l.jsx)(o.Clickable, {
+    children: [!0 === S ? null : (0, l.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
           notice_type: C

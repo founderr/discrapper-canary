@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return f
   },
   subscriptionCanDowngrade: function() {
-    return C
+    return y
   },
   subscriptionCanSwitchImmediately: function() {
-    return y
+    return C
   }
 }), n("47120"), n("653041"), n("470079");
 var a = n("512722"),
@@ -35,13 +35,13 @@ function f(e) {
   }).map(e => e.skuId)
 }
 
-function y(e, t, n) {
+function C(e, t, n) {
   let a = e.getCurrentSubscriptionPlanIdForGroup(n);
   return e.type === d.SubscriptionTypes.PREMIUM && null == a || (r()(null != a, "Current subscription has no plan in group"), r()(!(a === p.SubscriptionPlans.PREMIUM_YEAR_TIER_1 && t === p.SubscriptionPlans.PREMIUM_MONTH_TIER_2), "Unexpected plan switch"), n.indexOf(a) < n.indexOf(t))
 }
 
-function C(e, t, n) {
-  return !y(e, t, n)
+function y(e, t, n) {
+  return !C(e, t, n)
 }
 
 function P(e, t) {

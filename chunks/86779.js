@@ -16,15 +16,15 @@ var s, a, i = n("735250"),
   p = n("70956"),
   T = n("970648"),
   A = n("981631"),
-  S = n("415393");
-let I = "mweb_handoff_nonce",
+  I = n("415393");
+let S = "mweb_handoff_nonce",
   N = "mweb_handoff_nonce_expiration",
   R = 1 * p.default.Millis.MINUTE;
 (a = s || (s = {})).NONCE_MISSING = "nonce_missing", a.NONCE_EXPIRED = "nonce_expired", a.NULL_HANDOFF_TOKEN = "deep_link_failed", a.HANDOFF_EXCHANGE = "handoff_exchange";
 let C = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
   O = new Set(["deep_link_failed"]),
   L = () => {
-    c.Storage.remove(I), c.Storage.remove(N)
+    c.Storage.remove(S), c.Storage.remove(N)
   };
 t.default = () => {
   let e = (0, u.useStateFromStores)([_.default], () => _.default.getFingerprint()),
@@ -47,7 +47,7 @@ t.default = () => {
     }, {
       fingerprint: a
     })
-  }, [v, a]), x = c.Storage.get(I);
+  }, [v, a]), x = c.Storage.get(S);
   if ("null" === n && null === p && M("deep_link_failed"), null != n && "null" !== n && null == x && null === p && M("nonce_missing"), r.useEffect(() => {
       if (null != x) {
         let e = c.Storage.get(N);
@@ -75,7 +75,7 @@ t.default = () => {
         L()
       })
     }, [n, x, p, a, M]), null == a) return null;
-  let b = (() => {
+  let y = (() => {
     if (null == p) return (0, i.jsxs)(i.Fragment, {
       children: [g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1, (0, i.jsx)("br", {}), g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2]
     });
@@ -83,23 +83,23 @@ t.default = () => {
     if (C.has(p)) return g.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN
   })();
   return null != p && O.has(p) ? (0, i.jsx)("div", {
-    className: S.errorContainer,
+    className: I.errorContainer,
     children: (0, i.jsx)(f.Text, {
       color: "interactive-normal",
       variant: "text-sm/semibold",
-      children: b
+      children: y
     })
   }) : (0, i.jsxs)("div", {
-    className: S.container,
+    className: I.container,
     children: [(0, i.jsx)(f.Text, {
       variant: "text-sm/semibold",
-      children: b
+      children: y
     }), (0, i.jsx)(f.Button, {
       look: f.Button.Looks.INVERTED,
       color: f.Button.Colors.BRAND_NEW,
       onClick: () => {
         let e = T.default.generateNonce();
-        c.Storage.set(I, e), c.Storage.set(N, Date.now() + R);
+        c.Storage.set(S, e), c.Storage.set(N, Date.now() + R);
         let t = new URL(A.MOBILE_WEB_HANDOFF_DEEP_LINK),
           n = new URLSearchParams(window.location.search);
         n.delete("fingerprint"), n.delete("handoff_token");
@@ -114,7 +114,7 @@ t.default = () => {
         }), window.location.href = t.toString()
       },
       children: (0, i.jsx)(f.Text, {
-        className: S.buttonText,
+        className: I.buttonText,
         variant: "text-sm/semibold",
         children: g.MOBILE_WEB_HANDOFF_BUTTON_TEXT
       })

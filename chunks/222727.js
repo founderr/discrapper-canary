@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   useTrackLocalizedPricingPromoImpression: function() {
-    return s
+    return l
   }
 });
 var r = n("990547"),
   i = n("213609");
 
-function s(e, t) {
+function l(e, t) {
   (0, i.default)({
     type: r.ImpressionTypes.VIEW,
     name: r.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,

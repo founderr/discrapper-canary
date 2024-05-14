@@ -17,8 +17,8 @@ var l = n("735250"),
   g = n("769654"),
   E = n("271383"),
   _ = n("771845"),
-  S = n("880080"),
-  I = n("26290"),
+  I = n("880080"),
+  S = n("26290"),
   N = n("15434"),
   T = n("727258"),
   A = n("249792"),
@@ -76,7 +76,7 @@ t.default = a.memo(function(e) {
   null == en && z > 0 ? en = null !== (s = (0, M.renderMentionBadge)(z)) && void 0 !== s ? s : void 0 : null == en && null != J && (en = null !== (h = (0, M.renderGuildJoinRequestBadge)({
     guildJoinRequestStatus: J
   })) && void 0 !== h ? h : void 0);
-  let el = null !== (P = e.lowerBadgeWidth) && void 0 !== P ? P : (0, I.getBadgeWidthForValue)(z),
+  let el = null !== (P = e.lowerBadgeWidth) && void 0 !== P ? P : (0, S.getBadgeWidthForValue)(z),
     [{
       dragging: ea
     }, es] = (0, r.useDrag)({
@@ -126,14 +126,14 @@ t.default = a.memo(function(e) {
         null === (t = document.querySelector("[aria-owns=folder-items-".concat(ee, "]"))) || void 0 === t || t.focus()
       }
     }, [ee]),
-    eS = a.useCallback(e => {
+    eI = a.useCallback(e => {
       if (e) {
         ep.delay();
         return
       }
       ep.cancel(), eh(!1)
     }, [ep]),
-    eI = a.useCallback(e => {
+    eS = a.useCallback(e => {
       null == U || U($, e)
     }, [$, U]);
   if (null == H) return null;
@@ -187,8 +187,8 @@ t.default = a.memo(function(e) {
       })
     });
   return (0, l.jsxs)(R.ListItem, {
-    ref: eI,
-    children: [(0, l.jsx)(S.default, {
+    ref: eS,
+    children: [(0, l.jsx)(I.default, {
       hovered: !ea && eu,
       selected: !ea && k,
       unread: !ea && Y,
@@ -201,7 +201,7 @@ t.default = a.memo(function(e) {
     }), X ? (0, l.jsx)(L.default, {
       name: H.name,
       targetNode: G,
-      onDragOverChanged: eS
+      onDragOverChanged: eI
     }) : null]
   })
 })

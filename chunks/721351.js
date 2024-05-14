@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 });
 var l = n("607514"),
   a = n("374129"),
-  u = n("639351"),
-  i = n("927923");
+  i = n("639351"),
+  u = n("927923");
 
 function s(e) {
-  return null != e ? e === i.GameConsoleTypes.XBOX ? u.default : a.default : l.default
+  return null != e ? e === u.GameConsoleTypes.XBOX ? i.default : a.default : l.default
 }

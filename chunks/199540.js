@@ -21,8 +21,8 @@ var l = n("735250"),
   g = n("674552"),
   E = n("981631"),
   _ = n("689938"),
-  S = n("538962");
-let I = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
+  I = n("538962");
+let S = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
   N = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_SIZE);
 
 function T(e) {
@@ -31,13 +31,13 @@ function T(e) {
     animate: n
   } = e, a = (0, u.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
   return null == a ? (0, l.jsx)("div", {
-    className: S.guildIconUnavailable,
+    className: I.guildIconUnavailable,
     children: "!"
   }) : (0, l.jsx)(h.default, {
     guild: a,
     animate: n,
     size: h.default.Sizes.SMOL,
-    className: S.guildIcon,
+    className: I.guildIcon,
     tabIndex: -1
   })
 }
@@ -60,7 +60,7 @@ function A(e) {
     L = (0, r.useSpring)({
       transform: "translate3d(0, ".concat(A, "px, 0)"),
       config: {
-        duration: I
+        duration: S
       },
       onStart() {
         C(!0), _(u)
@@ -72,7 +72,7 @@ function A(e) {
     v = m ? L : void 0;
   return (m || g) && (t = (0, l.jsx)(r.animated.div, {
     style: v,
-    className: S.expandedFolderIconWrapper,
+    className: I.expandedFolderIconWrapper,
     children: (0, l.jsx)(p.default, {
       style: {
         color: (0, o.int2hex)(f)
@@ -80,7 +80,7 @@ function A(e) {
     })
   })), (m || !g) && (n = (0, l.jsx)(r.animated.div, {
     style: v,
-    className: S.closedFolderIconWrapper,
+    className: I.closedFolderIconWrapper,
     children: h.slice(0, 4).map(e => (0, l.jsx)(T, {
       guildId: e,
       animate: i
@@ -90,7 +90,7 @@ function A(e) {
     style: u ? void 0 : {
       backgroundColor: (0, o.int2rgba)(f, .4)
     },
-    className: S.folderIconWrapper,
+    className: I.folderIconWrapper,
     children: [t, n]
   })
 }
@@ -109,7 +109,7 @@ function L(e) {
     onClick: p,
     onContextMenu: C,
     onHoverChange: E,
-    onKeyDown: I,
+    onKeyDown: S,
     treeItemProps: {
       onFocus: N,
       ...T
@@ -125,14 +125,14 @@ function L(e) {
     lowerBadge: y,
     lowerBadgeWidth: (0, m.getBadgeWidthForValue)(u),
     children: (0, l.jsx)(c.Clickable, {
-      className: i()(S.folder, {
-        [S.hover]: L
+      className: i()(I.folder, {
+        [I.hover]: L
       }),
       onClick: p,
       onContextMenu: C,
       onMouseEnter: x,
       onMouseLeave: R,
-      onKeyDown: I,
+      onKeyDown: S,
       onFocus: N,
       "aria-label": _.default.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({
         folderName: d,
@@ -146,7 +146,7 @@ function L(e) {
       ...T,
       role: "treeitem",
       children: null != h ? (0, l.jsx)("div", {
-        className: S.expandedFolderIconWrapper,
+        className: I.expandedFolderIconWrapper,
         children: h
       }) : (0, l.jsx)(A, {
         folderNode: t,

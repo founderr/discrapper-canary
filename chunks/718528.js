@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 }), n("653041");
 var i = n("470079"),
-  l = n("442837"),
-  o = n("734307"),
+  o = n("442837"),
+  l = n("734307"),
   a = n("854444"),
   u = n("131704"),
   s = n("680089"),
@@ -18,13 +18,13 @@ var i = n("470079"),
   E = n("647086");
 
 function c(e, t, n) {
-  return A(e === E.FAVORITES_RAW_GUILD_ID || e === r.FAVORITES ? (0, a.computeFavoritesState)() : o.default.getGuildWithoutChangingCommunityRows(e).guildChannels, t, n)
+  return A(e === E.FAVORITES_RAW_GUILD_ID || e === r.FAVORITES ? (0, a.computeFavoritesState)() : l.default.getGuildWithoutChangingCommunityRows(e).guildChannels, t, n)
 }
 
-function _(e, t, n, o, a) {
-  let u = (0, l.useStateFromStores)([d.default], () => d.default.getGuildChangeSentinel(e)),
-    r = (0, l.useStateFromStores)([s.default], () => s.default.version);
-  return (0, i.useMemo)(() => A(t, o, a).map(e => e.id), [t, n, u, r])
+function _(e, t, n, l, a) {
+  let u = (0, o.useStateFromStores)([d.default], () => d.default.getGuildChangeSentinel(e)),
+    r = (0, o.useStateFromStores)([s.default], () => s.default.version);
+  return (0, i.useMemo)(() => A(t, l, a).map(e => e.id), [t, n, u, r])
 }
 
 function A(e, t, n) {

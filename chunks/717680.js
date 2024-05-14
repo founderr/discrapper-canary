@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return r
   }
 }), n("47120");
-var a = n("470079");
-let l = !1,
-  s = new Set;
+var s = n("470079");
+let a = !1,
+  l = new Set;
 
 function i(e) {
-  e !== l && (l = e, s.forEach(e => e(l)))
+  e !== a && (a = e, l.forEach(e => e(a)))
 }
 
 function r() {
-  let [e, t] = a.useState(l);
-  return a.useEffect(() => {
+  let [e, t] = s.useState(a);
+  return s.useEffect(() => {
     let e = e => {
       t(e)
     };
-    return s.add(e), () => {
-      s.delete(e)
+    return l.add(e), () => {
+      l.delete(e)
     }
   }, []), e
 }

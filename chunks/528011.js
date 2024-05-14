@@ -1,69 +1,69 @@
 "use strict";
 n.r(t), n.d(t, {
   shouldShowRaidNotificationNagbar: function() {
-    return I
+    return p
   },
   useGuildIncidentsState: function() {
-    return h
+    return _
   }
 }), n("47120");
 var r = n("149765"),
   i = n("399606"),
-  s = n("581883"),
-  l = n("430824"),
-  u = n("496675"),
-  o = n("914010"),
+  l = n("581883"),
+  s = n("430824"),
+  o = n("496675"),
+  u = n("914010"),
   a = n("594174"),
-  d = n("700785"),
-  c = n("709054"),
+  c = n("700785"),
+  d = n("709054"),
   f = n("154285"),
   S = n("533244"),
-  _ = n("487419"),
-  E = n("676770"),
-  g = n("981631");
+  h = n("487419"),
+  g = n("676770"),
+  E = n("981631");
 
-function h(e) {
+function _(e) {
   let {
     showAlertMode: t
-  } = (0, f.useGuildAlertModeEnabled)(null != e ? e : g.ZERO_STRING_GUILD_ID), n = (0, i.useStateFromStores)([l.default, u.default], () => {
-    let t = l.default.getGuild(e);
+  } = (0, f.useGuildAlertModeEnabled)(null != e ? e : E.ZERO_STRING_GUILD_ID), n = (0, i.useStateFromStores)([s.default, o.default], () => {
+    let t = s.default.getGuild(e);
     if (null == t) return !1;
-    let n = u.default.getGuildPermissions(t);
-    return null != n && r.hasAny(n, E.IncidentAlertModeratorPermissions)
-  }), s = (0, i.useStateFromStores)([_.default], () => null != e ? _.default.getGuildIncident(e) : null), o = null != s && (0, S.isUnderLockdown)(s);
+    let n = o.default.getGuildPermissions(t);
+    return null != n && r.hasAny(n, g.IncidentAlertModeratorPermissions)
+  }), l = (0, i.useStateFromStores)([h.default], () => null != e ? h.default.getGuildIncident(e) : null), u = null != l && (0, S.isUnderLockdown)(l);
   return {
     shouldShowIncidentActions: n && t,
-    incidentData: s,
-    isUnderLockdown: o
+    incidentData: l,
+    isUnderLockdown: u
   }
 }
 
-function I() {
+function p() {
   var e;
   let t = function(e) {
       let t = a.default.getCurrentUser(),
-        n = _.default.getIncidentsByGuild();
-      for (let i of c.default.keys(n).map(e => l.default.getGuild(e))) {
+        n = h.default.getIncidentsByGuild();
+      for (let i of d.default.keys(n).map(e => s.default.getGuild(e))) {
         if (null == i) continue;
-        let s = n[i.id];
-        if (!(null == s || !(0, S.hasDetectedActivity)(s) && !(0, S.isUnderLockdown)(s) || (0, S.isUnderLockdown)(s) && i.id !== e)) {
-          if (r.hasAny(d.computePermissions({
+        let l = n[i.id];
+        if (!(null == l || !(0, S.hasDetectedActivity)(l) && !(0, S.isUnderLockdown)(l) || (0, S.isUnderLockdown)(l) && i.id !== e)) {
+          if (r.hasAny(c.computePermissions({
               user: t,
               context: i,
               checkElevated: !1
-            }), E.IncidentAlertModeratorPermissions)) return i.id
+            }), g.IncidentAlertModeratorPermissions)) return i.id
         }
       }
       return null
-    }(o.default.getGuildId()),
+    }(u.default.getGuildId()),
     {
       showAlertMode: n
-    } = (0, f.getGuildAlertModeEnabled)(null != t ? t : g.ZERO_STRING_GUILD_ID),
-    i = null !== (e = s.default.getGuildsProto()) && void 0 !== e ? e : {},
-    u = null != t ? i[t] : null,
-    h = null != u && u.disableRaidAlertNag;
+    } = (0, f.getGuildAlertModeEnabled)(null != t ? t : E.ZERO_STRING_GUILD_ID),
+    i = null !== (e = l.default.getGuildsProto()) && void 0 !== e ? e : {},
+    o = null != t ? i[t] : null,
+    _ = null != o && o.disableRaidAlertNag;
   return {
-    show: null != t && n && !h,
+    show: null != t && n && !_,
     guildId: t
   }
 }

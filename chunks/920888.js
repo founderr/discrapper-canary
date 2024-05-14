@@ -9,19 +9,19 @@ var s = n("735250"),
   u = n("566006"),
   d = n("60174"),
   c = n("453687"),
-  E = n("434624"),
-  f = n("287151"),
+  f = n("434624"),
+  E = n("287151"),
   _ = n("689938"),
-  T = n("858313"),
-  I = n("601064");
-let m = (e, t) => null == e && null == t || e === t,
-  N = (e, t) => e.findIndex(e => m(e.emoji.id, null == t ? void 0 : t.id) && m(e.emoji.name, null == t ? void 0 : t.name)),
-  p = (e, t) => {
+  m = n("858313"),
+  T = n("601064");
+let I = (e, t) => null == e && null == t || e === t,
+  p = (e, t) => e.findIndex(e => I(e.emoji.id, null == t ? void 0 : t.id) && I(e.emoji.name, null == t ? void 0 : t.name)),
+  h = (e, t) => {
     if (null == t) return e;
-    let n = N(e, t);
+    let n = p(e, t);
     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)]
   };
-class S extends a.PureComponent {
+class N extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let n = e.message.reactions.length;
     return 0 === t.reactionsCount && n > 0 ? {
@@ -38,24 +38,24 @@ class S extends a.PureComponent {
       disableReactionUpdates: n,
       isLurking: a,
       isGuest: l,
-      isPendingMember: m,
-      isForumToolbar: N,
-      channel: p,
-      className: S,
-      forceAddReactions: C,
-      reactionClassName: A,
-      useChatFontScaling: h,
+      isPendingMember: I,
+      isForumToolbar: p,
+      channel: h,
+      className: N,
+      forceAddReactions: S,
+      reactionClassName: C,
+      useChatFontScaling: A,
       forceHideReactionCreates: g,
       remainingReactions: M,
-      combinedReactions: O,
-      visibleReactionsCount: R
+      combinedReactions: R,
+      visibleReactionsCount: v
     } = this.props, {
-      disableTransitionAppear: v
-    } = this.state, L = h ? I : T, P = R > 0;
-    return P || C ? (0, s.jsxs)(r.TransitionGroup, {
+      disableTransitionAppear: O
+    } = this.state, x = A ? T : m, L = v > 0;
+    return L || S ? (0, s.jsxs)(r.TransitionGroup, {
       component: "div",
-      className: i()(L.reactions, S),
-      transitionAppear: !v,
+      className: i()(x.reactions, N),
+      transitionAppear: !O,
       role: "group",
       transitionLeave: !1,
       id: (0, c.getMessageReactionsId)(e),
@@ -65,36 +65,36 @@ class S extends a.PureComponent {
       onMouseLeave: () => this.setState({
         isHovered: !1
       }),
-      children: [(0, s.jsx)(E.MessageReactionsGroupWrapper, {
-        reactions: O,
+      children: [(0, s.jsx)(f.MessageReactionsGroupWrapper, {
+        reactions: R,
         message: e,
         readOnly: n,
         isLurking: a,
         isGuest: l,
-        isPendingMember: m,
-        isForumToolbar: N,
-        useChatFontScaling: h,
-        className: A
+        isPendingMember: I,
+        isForumToolbar: p,
+        useChatFontScaling: A,
+        className: C
       }), M > 0 && (0, s.jsx)(o.Clickable, {
         onClick: t => {
-          t.stopPropagation(), (0, f.showReactionsModal)(p, e)
+          t.stopPropagation(), (0, E.showReactionsModal)(h, e)
         },
-        className: i()(L.reaction, A, L.remainingReactions),
+        className: i()(x.reaction, C, x.remainingReactions),
         "aria-label": _.default.Messages.ADD_REACTION,
         children: (0, s.jsxs)(o.Text, {
-          className: L.reactionInner,
+          className: x.reactionInner,
           variant: "text-sm/normal",
           children: ["+", M]
         })
       }), !t && !g && (0, s.jsx)(d.ButtonAddReaction, {
         type: u.ReactionTypes.NORMAL,
         message: e,
-        channel: p,
-        useChatFontScaling: h,
+        channel: h,
+        useChatFontScaling: A,
         isHovered: this.state.isHovered,
         className: i()({
-          [L.forceShow]: C && !P,
-          [L.forceShowLook]: C
+          [x.forceShow]: S && !L,
+          [x.forceShowLook]: S
         })
       })]
     }) : null
@@ -124,7 +124,7 @@ t.default = e => {
     visibleReactionsCount: o
   } = a.useMemo(() => {
     let e = [],
-      s = p(t.reactions, l),
+      s = h(t.reactions, l),
       a = null != n && n < s.length ? s.slice(0, n) : s,
       i = s.length - a.length,
       r = s.length;
@@ -142,7 +142,7 @@ t.default = e => {
       remainingReactions: i
     }
   }, [l, n, t.reactions]);
-  return (0, s.jsx)(S, {
+  return (0, s.jsx)(N, {
     ...e,
     visibleReactionsCount: o,
     combinedReactions: i,

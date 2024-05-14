@@ -17,27 +17,27 @@ function c(e) {
   var t, n;
   let {
     message: c,
-    channel: E,
-    enabled: f = !0
+    channel: f,
+    enabled: E = !0
   } = e, _ = (0, l.useStateFromStores)([r.default], () => {
     var e;
-    let t = r.default.getGuild(E.guild_id);
+    let t = r.default.getGuild(f.guild_id);
     return null !== (e = null == t ? void 0 : t.hasFeature(d.GuildFeatures.COMMUNITY)) && void 0 !== e && e
-  }, [E.guild_id]), T = (null === (t = c.messageReference) || void 0 === t ? void 0 : t.guild_id) != null && null != c.webhookId && c.hasFlag(d.MessageFlags.IS_CROSSPOST) && null != E.guild_id, I = E.type === a.ChannelTypes.GUILD_ANNOUNCEMENT && _, m = !c.hasFlag(d.MessageFlags.EPHEMERAL) && (T || I), N = T && null != c.messageReference ? c.messageReference.message_id : c.id, p = T && null != c.messageReference ? c.messageReference.channel_id : E.id, S = T && (null === (n = c.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? c.messageReference.guild_id : E.guild_id, C = s.useCallback(e => {
+  }, [f.guild_id]), m = (null === (t = c.messageReference) || void 0 === t ? void 0 : t.guild_id) != null && null != c.webhookId && c.hasFlag(d.MessageFlags.IS_CROSSPOST) && null != f.guild_id, T = f.type === a.ChannelTypes.GUILD_ANNOUNCEMENT && _, I = !c.hasFlag(d.MessageFlags.EPHEMERAL) && (m || T), p = m && null != c.messageReference ? c.messageReference.message_id : c.id, h = m && null != c.messageReference ? c.messageReference.channel_id : f.id, N = m && (null === (n = c.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? c.messageReference.guild_id : f.guild_id, S = s.useCallback(e => {
     e ? u.default.handleMessageBecameVisible({
-      messageId: N,
-      channelId: E.id,
-      guildId: E.guild_id,
-      sourceChannelId: p,
-      sourceGuildId: S
-    }) : u.default.handleMessageLostVisibility(N)
-  }, [N, E.id, E.guild_id, p, S]), A = o.default.useExperiment({
+      messageId: p,
+      channelId: f.id,
+      guildId: f.guild_id,
+      sourceChannelId: h,
+      sourceGuildId: N
+    }) : u.default.handleMessageLostVisibility(p)
+  }, [p, f.id, f.guild_id, h, N]), C = o.default.useExperiment({
     location: "836a4b_1"
   }, {
-    disable: !m || !f,
+    disable: !I || !E,
     autoTrackExposure: !0
-  }).enabled, h = (0, i.useIsVisible)(C, 0, A);
+  }).enabled, A = (0, i.useIsVisible)(S, 0, C);
   return s.useEffect(() => () => {
-    u.default.handleMessageLostVisibility(N)
-  }, [N]), h
+    u.default.handleMessageLostVisibility(p)
+  }, [p]), A
 }

@@ -21,8 +21,8 @@ var l = n("735250"),
   g = n("709054"),
   E = n("540126"),
   _ = n("434479"),
-  S = n("981631"),
-  I = n("176505"),
+  I = n("981631"),
+  S = n("176505"),
   N = n("490897"),
   T = n("689938"),
   A = n("658609");
@@ -38,7 +38,7 @@ function L(e) {
     let l = g.default.extractTimestamp(n);
     return null != e && e > l
   }), D = a.useCallback(() => {
-    (0, h.transitionTo)(S.Routes.CHANNEL(t.id, v ? I.StaticChannelRoute.CUSTOMIZE_COMMUNITY : I.StaticChannelRoute.CHANNEL_BROWSER))
+    (0, h.transitionTo)(I.Routes.CHANNEL(t.id, v ? S.StaticChannelRoute.CUSTOMIZE_COMMUNITY : S.StaticChannelRoute.CHANNEL_BROWSER))
   }, [t.id, v]), b = a.useCallback(e => {
     (0, o.openContextMenuLazy)(e, async () => {
       let {

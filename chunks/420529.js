@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var l = n("735250");
 n("470079");
 var a = n("399606"),
-  u = n("481060"),
-  i = n("231757"),
+  i = n("481060"),
+  u = n("231757"),
   s = n("397639"),
   r = n("19780"),
   d = n("979651"),
@@ -24,19 +24,19 @@ function _(e) {
     _ = (0, c.default)(),
     C = (null == _ ? void 0 : _.channelId) === e.id,
     g = (0, s.useIsVoiceChannelLocked)(e) && !e.isPrivate(),
-    T = (0, s.default)(e),
-    L = !(0, a.useStateFromStores)([d.default], () => d.default.isInChannel(e.id)) && T || g,
-    h = (0, f.default)();
-  if (!C && 0 === h.length) return null;
-  let M = t => {
+    L = (0, s.default)(e),
+    h = !(0, a.useStateFromStores)([d.default], () => d.default.isInChannel(e.id)) && L || g,
+    T = (0, f.default)();
+  if (!C && 0 === T.length) return null;
+  let I = t => {
     if (!t.twoWayLink || t.revoked) {
-      (0, i.default)({
+      (0, u.default)({
         platformType: t.type,
         location: "Console Transfer Item"
       });
       return
     }
-    t.type === S.PlatformTypes.XBOX ? (0, u.openModalLazy)(async () => {
+    t.type === S.PlatformTypes.XBOX ? (0, i.openModalLazy)(async () => {
       let {
         default: t
       } = await Promise.all([n.e("49237"), n.e("99387"), n.e("14734"), n.e("522")]).then(n.bind(n, "200623"));
@@ -44,7 +44,7 @@ function _(e) {
         ...n,
         channel: e
       })
-    }) : (t.type === S.PlatformTypes.PLAYSTATION || t.type === S.PlatformTypes.PLAYSTATION_STAGING) && (0, u.openModalLazy)(async () => {
+    }) : (t.type === S.PlatformTypes.PLAYSTATION || t.type === S.PlatformTypes.PLAYSTATION_STAGING) && (0, i.openModalLazy)(async () => {
       let {
         default: a
       } = await Promise.all([n.e("99387"), n.e("638")]).then(n.bind(n, "543974"));
@@ -56,24 +56,24 @@ function _(e) {
     })
   };
   return (0, l.jsx)(l.Fragment, {
-    children: C ? (0, l.jsx)(u.MenuItem, {
+    children: C ? (0, l.jsx)(i.MenuItem, {
       label: N.default.Messages.TRANSFER_VOICE_TO_DEVICE,
       id: "handoff",
       action: () => {
         (0, o.handoffRemote)(_)
       },
       icon: (0, E.default)(void 0),
-      disabled: L
-    }) : h.map(e => (0, l.jsx)(u.MenuItem, {
+      disabled: h
+    }) : T.map(e => (0, l.jsx)(i.MenuItem, {
       id: "transfer-".concat(e.type, "-").concat(e.id),
       label: function(e, t) {
         if (e === S.PlatformTypes.XBOX) return t ? N.default.Messages.TRANSFER_VOICE_TO_XBOX : N.default.Messages.JOIN_ON_XBOX;
         if (e === S.PlatformTypes.PLAYSTATION) return t ? N.default.Messages.CONSOLE_PLAYSTATION_TRANSFER_VOICE : N.default.Messages.CONSOLE_PLAYSTATION_JOIN_VOICE;
         if (e === S.PlatformTypes.PLAYSTATION_STAGING) return t ? N.default.Messages.CONSOLE_PLAYSTATION_STAGING_TRANSFER_VOICE : N.default.Messages.CONSOLE_PLAYSTATION_STAGING_JOIN_VOICE
       }(e.type, t),
-      action: () => M(e),
+      action: () => I(e),
       icon: (0, E.default)(e.type),
-      disabled: L
+      disabled: h
     }, e.id))
   })
 }

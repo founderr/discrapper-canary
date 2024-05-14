@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("47120");
-var a = n("735250"),
-  l = n("470079"),
-  s = n("442837"),
+var s = n("735250"),
+  a = n("470079"),
+  l = n("442837"),
   i = n("481060"),
   r = n("668781"),
   o = n("431583"),
@@ -10,12 +10,12 @@ var a = n("735250"),
   d = n("19780"),
   c = n("943461"),
   f = n("264674"),
-  h = n("502568"),
-  E = n("35818"),
+  E = n("502568"),
+  _ = n("35818"),
   m = n("689938"),
-  p = n("504891");
+  T = n("504891");
 
-function g(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,7 +23,7 @@ function g(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class S extends l.PureComponent {
+class p extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     return e.mode !== t.memoizedMode ? {
       memoizedMode: e.mode,
@@ -31,7 +31,7 @@ class S extends l.PureComponent {
     } : null
   }
   handleDownloadApps() {
-    (0, i.openModal)(e => (0, a.jsx)(o.default, {
+    (0, i.openModal)(e => (0, s.jsx)(o.default, {
       source: "Links",
       ...e
     }))
@@ -39,18 +39,18 @@ class S extends l.PureComponent {
   render() {
     switch (this.props.mode) {
       case "UPDATE_AVAILABLE":
-        return (0, a.jsx)(h.Icon, {
+        return (0, s.jsx)(E.Icon, {
           hideOnClick: !1,
           tooltip: m.default.Messages.UPDATE_AVAILABLE,
-          foreground: p.downloadArrow,
-          background: p.cloud,
+          foreground: T.downloadArrow,
+          background: T.cloud,
           icon: f.default
         });
       case "UPDATE_MANUALLY":
       case "UPDATE_DOWNLOADED":
-        return (0, a.jsx)(h.Icon, {
+        return (0, s.jsx)(E.Icon, {
           tooltip: m.default.Messages.UPDATE_DOWNLOADED,
-          foreground: p.updateIconForeground,
+          foreground: T.updateIconForeground,
           onClick: this.handleInstallDownload,
           icon: c.default
         });
@@ -59,10 +59,10 @@ class S extends l.PureComponent {
     }
   }
   constructor(...e) {
-    super(...e), g(this, "state", {
+    super(...e), I(this, "state", {
       memoizedMode: this.props.mode,
       clicked: !1
-    }), g(this, "handleInstallDownload", () => {
+    }), I(this, "handleInstallDownload", () => {
       d.default.isConnected() ? r.default.show({
         title: m.default.Messages.UPDATE_DURING_CALL_TITLE,
         body: m.default.Messages.UPDATE_DURING_CALL_BODY,
@@ -70,13 +70,13 @@ class S extends l.PureComponent {
         cancelText: m.default.Messages.CANCEL,
         confirmText: m.default.Messages.UPDATE_DURING_CALL_CONTINUE
       }) : this.doUpdate()
-    }), g(this, "doUpdate", () => {
+    }), I(this, "doUpdate", () => {
       !this.state.clicked && (this.setState({
         clicked: !0
-      }), (0, E.quitAndInstall)())
+      }), (0, _.quitAndInstall)())
     })
   }
 }
-t.default = s.default.connectStores([u.default], () => ({
+t.default = l.default.connectStores([u.default], () => ({
   mode: u.default.getState()
-}))(S)
+}))(p)

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   CircleIconButtonColors: function() {
-    return s
+    return u
   },
   CircleIconButtonSizes: function() {
-    return u
+    return a
   },
   default: function() {
     return c
@@ -12,51 +12,51 @@ n.r(t), n.d(t, {
 });
 var r = n("735250");
 n("470079");
-var l = n("120356"),
-  o = n.n(l),
-  a = n("481060"),
-  i = n("675109");
-let s = {
-    TERTIARY: i.tertiary,
-    SECONDARY: i.secondary,
-    PRIMARY: i.primary
+var i = n("120356"),
+  l = n.n(i),
+  s = n("481060"),
+  o = n("675109");
+let u = {
+    TERTIARY: o.tertiary,
+    SECONDARY: o.secondary,
+    PRIMARY: o.primary
   },
-  u = {
-    SIZE_24: i.size24,
-    SIZE_32: i.size32,
-    SIZE_36: i.size36
+  a = {
+    SIZE_24: o.size24,
+    SIZE_32: o.size32,
+    SIZE_36: o.size36
   };
 
 function c(e) {
   let {
     className: t,
     tooltip: n,
-    color: l,
-    size: s = u.SIZE_32,
+    color: i,
+    size: u = a.SIZE_32,
     icon: c,
     onClick: d,
     disabled: f,
-    focusProps: h
+    focusProps: S
   } = e;
-  return (0, r.jsx)(a.Tooltip, {
+  return (0, r.jsx)(s.Tooltip, {
     text: n,
     shouldShow: !f,
     children: e => {
       let {
-        onClick: u,
-        ...p
+        onClick: a,
+        ...h
       } = e;
-      return (0, r.jsx)(a.Clickable, {
-        ...p,
+      return (0, r.jsx)(s.Clickable, {
+        ...h,
         "aria-label": n,
         "aria-disabled": f,
-        className: o()(t, i.button, l, s, {
-          [i.disabled]: f
+        className: l()(t, o.button, i, u, {
+          [o.disabled]: f
         }),
         onClick: e => {
-          null == u || u(), d(e)
+          null == a || a(), d(e)
         },
-        focusProps: h,
+        focusProps: S,
         children: c
       })
     }

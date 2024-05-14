@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return p
   },
   getLocalizedPricingBannerStrings: function() {
-    return C
+    return y
   },
   getLocalizedPricingNotice: function() {
-    return y
+    return C
   }
 }), n("47120"), n("653041");
 var a = n("217986"),
@@ -39,7 +39,7 @@ let c = new Set([l.CurrencyCodes.ARS, l.CurrencyCodes.CLP, l.CurrencyCodes.COP])
     [i.PaymentSourceTypes.APPLE]: () => u.default.Messages.PAYMENT_SOURCE_APPLE
   },
   f = [i.PaymentSourceTypes.EPS, i.PaymentSourceTypes.BANCONTACT, i.PaymentSourceTypes.IDEAL, i.PaymentSourceTypes.SOFORT, i.PaymentSourceTypes.GIROPAY, i.PaymentSourceTypes.SEPA_DEBIT, i.PaymentSourceTypes.PAYSAFE_CARD],
-  y = (e, t, n, a) => {
+  C = (e, t, n, a) => {
     if (null == e) return "";
     let s = (0, r.getI18NCountryName)(e);
     if (t === l.CurrencyCodes.EUR) return n ? u.default.Messages.LOCALIZED_PRICING_NOTICE_GENERALIZED_PAYMENT_METHODS_PROMO.format({
@@ -53,39 +53,39 @@ let c = new Set([l.CurrencyCodes.ARS, l.CurrencyCodes.CLP, l.CurrencyCodes.COP])
       country: s
     })
   },
-  C = e => {
+  y = e => {
     let {
       localizedPricingPromo: t,
       subscription: n,
       forceSingleLine: a = !1,
-      userLocale: y
+      userLocale: C
     } = e, {
-      countryCode: C,
+      countryCode: y,
       amount: _,
       currency: A,
       paymentSourceTypes: m
-    } = t, E = 0 !== m.length, S = P(C), h = (0, o.formatPrice)(_, A, {
+    } = t, E = 0 !== m.length, h = P(y), S = (0, o.formatPrice)(_, A, {
       style: "currency",
       currency: A,
       currencyDisplay: "symbol",
-      localeOverride: S
+      localeOverride: h
     }), N = u.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY.format({
       helpCenterLink: s.default.getArticleURL(i.HelpdeskArticles.LOCALIZED_PRICING),
       currencyISOCode: A.toUpperCase(),
-      localizedPriceWithCurrencySymbol: h
+      localizedPriceWithCurrencySymbol: S
     });
     if (d.has(A) && (N = u.default.Messages.LOCALIZED_PRICING_BANNER_BODY_EXISTING_CURRENCY.format({
         helpCenterLink: s.default.getArticleURL(i.HelpdeskArticles.LOCALIZED_PRICING),
-        localizedPriceWithCurrencySymbol: h
+        localizedPriceWithCurrencySymbol: S
       })), c.has(A) && (N = u.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY_WITH_AMBIGUOUS_SYMBOL.format({
         helpCenterLink: s.default.getArticleURL(i.HelpdeskArticles.LOCALIZED_PRICING),
         currencyISOCode: A.toUpperCase(),
-        localizedPriceWithCurrencySymbol: h
+        localizedPriceWithCurrencySymbol: S
       })), null != n && !n.hasPremiumNitroMonthly && (N = u.default.Messages.LOCALIZED_PRICING_BANNER_BODY_WITHOUT_PRICE.format({
         helpCenterLink: s.default.getArticleURL(i.HelpdeskArticles.LOCALIZED_PRICING),
         currencyISOCode: A.toUpperCase()
       })), A === l.CurrencyCodes.EUR && (N = a ? u.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE_SINGLE_STRING.format({
-        country: (0, r.getI18NCountryName)(C),
+        country: (0, r.getI18NCountryName)(y),
         currencyISOCode: A.toUpperCase(),
         helpCenterLink: s.default.getArticleURL(i.HelpdeskArticles.LOCALIZED_PRICING)
       }) : u.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE.format({
@@ -98,7 +98,7 @@ let c = new Set([l.CurrencyCodes.ARS, l.CurrencyCodes.CLP, l.CurrencyCodes.COP])
           return null !== (n = null === (t = p[e]) || void 0 === t ? void 0 : t.call(p)) && void 0 !== n ? n : u.default.Messages.PAYMENT_SOURCE_UNKNOWN
         });
       m.length >= 3 && t.push(u.default.Messages.LOCALIZED_PRICING_MORE_NEW_WAYS_TO_PAY);
-      let n = new Intl.ListFormat(y, {
+      let n = new Intl.ListFormat(C, {
         style: "short",
         type: "conjunction"
       });
@@ -109,7 +109,7 @@ let c = new Set([l.CurrencyCodes.ARS, l.CurrencyCodes.CLP, l.CurrencyCodes.COP])
     }
     return {
       localizedPricingBannerHeader: u.default.Messages.LOCALIZED_PRICING_BANNER_HEADER.format({
-        country: (0, r.getI18NCountryName)(C)
+        country: (0, r.getI18NCountryName)(y)
       }),
       localizedPricingBannerBody: N,
       localizedPricingBannerLinkOnly: u.default.Messages.LOCALIZED_PRICING_BANNER_LINK_ONLY.format({

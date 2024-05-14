@@ -13,8 +13,8 @@ var l, a, s, i, r = n("392711"),
   g = n("728345"),
   E = n("812206"),
   _ = n("710845"),
-  S = n("38618"),
-  I = n("656063"),
+  I = n("38618"),
+  S = n("656063"),
   N = n("761282"),
   T = n("789407"),
   A = n("630186"),
@@ -97,7 +97,7 @@ function en(e, t, n) {
     m = null !== (l = null == p ? void 0 : p.nsfwAllowed) && void 0 !== l && l,
     C = t.map(e => e.id),
     g = t.filter(t => e.has(t.id)),
-    S = !1,
+    I = !1,
     R = [],
     j = new Set,
     P = !1,
@@ -112,7 +112,7 @@ function en(e, t, n) {
         streamUser: e,
         activity: r
       }), null == r) continue;
-    let u = (0, I.default)(r);
+    let u = (0, S.default)(r);
     if (null == u) continue;
     P = u === T.SPOTIFY_APPLICATION_ID;
     let d = function(e) {
@@ -150,7 +150,7 @@ function en(e, t, n) {
       let t = X(e.id),
         n = null != t ? $(t) : null;
       return null != n && n.id === d.id
-    }), (b = o().orderBy(b, [et], ["desc"])).length !== t.length && (S = !0), j.add(d.id), R.push({
+    }), (b = o().orderBy(b, [et], ["desc"])).length !== t.length && (I = !0), j.add(d.id), R.push({
       game: d,
       activity: r,
       activityUser: e,
@@ -191,7 +191,7 @@ function en(e, t, n) {
       status: b.default.getStatus(e.id)
     })),
     partiedMembers: t,
-    showPlayingMembers: S,
+    showPlayingMembers: I,
     guildContext: d,
     currentActivities: (r = R, u = e => {
       var t;
@@ -202,7 +202,7 @@ function en(e, t, n) {
 }
 
 function el() {
-  return B && S.default.isConnected()
+  return B && I.default.isConnected()
 }
 let ea = o().throttle(() => {
   ! function() {
@@ -237,7 +237,7 @@ function es() {
 }
 class ei extends(l = u.default.Store) {
   initialize() {
-    this.syncWith([G.default, E.default, b.default, M.default, U.default, v.default, j.default, R.default, P.default], es), this.waitFor(S.default, O.default, E.default, G.default, P.default)
+    this.syncWith([G.default, E.default, b.default, M.default, U.default, v.default, j.default, R.default, P.default], es), this.waitFor(I.default, O.default, E.default, G.default, P.default)
   }
   get currentActivityParties() {
     return V

@@ -44,14 +44,14 @@ function _(e) {
     guildTemplateCode: p,
     birthday: T,
     invite: A = null,
-    giftCodeSKUId: S = null,
-    multiStep: I = !1,
+    giftCodeSKUId: I = null,
+    multiStep: S = !1,
     promoEmailConsent: N = null,
     usedUsernameSuggestion: R = null
   } = e;
   return r.default.dispatch({
     type: "REGISTER",
-    birthday: I ? T : null
+    birthday: S ? T : null
   }), null != T && ((0, f.default)(T, h.AnalyticsSections.REGISTER), d.default.track(h.AnalyticEvents.AGE_GATE_ACTION, {
     source: E.AgeGateSource.REGISTER,
     action: E.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
@@ -73,7 +73,7 @@ function _(e) {
       consent: _,
       phone_token: n,
       date_of_birth: null == T ? void 0 : T.format("YYYY-MM-DD"),
-      gift_code_sku_id: S,
+      gift_code_sku_id: I,
       guild_template_code: p,
       promotional_email_opt_in: null == N ? void 0 : N.checked
     },

@@ -19,7 +19,7 @@ var a = n("399606"),
   E = n("689938"),
   _ = n("473533");
 
-function S(e) {
+function I(e) {
   (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
@@ -30,7 +30,7 @@ function S(e) {
   })
 }
 
-function I() {
+function S() {
   (0, C.saveClip)()
 }
 let N = e => {
@@ -110,8 +110,8 @@ t.default = () => {
       tooltipText: null != i ? E.default.Messages.CLIPS_SAVE_CLIP_TOOLTIP.format({
         hotkey: h.toString(null == i ? void 0 : i.shortcut, !0)
       }) : E.default.Messages.CLIPS_EDIT_SAVE_CLIP,
-      onClick: I,
-      onContextMenu: S,
+      onClick: S,
+      onContextMenu: I,
       icon: c.default
     })
   })

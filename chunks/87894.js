@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
     return c
   },
   QUESTS_CARD_MAX_HEIGHT_FALLBACK_PX: function() {
-    return E
+    return f
   },
   QUESTS_CARD_PADDING_Y_PX: function() {
     return d
   },
   QUESTS_CARD_SMALL_BREAKPOINT_PX: function() {
-    return f
+    return E
   },
   isQuestCardInGiftInventory: function() {
     return i
@@ -47,6 +47,6 @@ function o(e) {
 let u = 100,
   d = 20,
   c = 32,
-  E = 1e3,
-  f = 460,
+  f = 1e3,
+  E = 460,
   _ = 280

@@ -17,8 +17,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("140492"),
-  l = n("475468"),
-  o = n("703656"),
+  o = n("475468"),
+  l = n("703656"),
   a = n("769654"),
   u = n("944486"),
   s = n("914010"),
@@ -42,7 +42,7 @@ let E = {
       if (null != s.default.getGuildId()) e = r.ME;
       else {
         let t = s.default.getLastSelectedGuildId();
-        null != t && (e = t, (0, l.transitionToChannel)(t, u.default.getChannelId(t)))
+        null != t && (e = t, (0, o.transitionToChannel)(t, u.default.getChannelId(t)))
       }
       return null != e && (0, a.transitionToGuild)(e), !1
     }
@@ -50,10 +50,10 @@ let E = {
   A = {
     binds: (0, d.isMac)() ? ["mod+["] : ["alt+left"],
     comboKeysBindGlobal: !0,
-    action: () => ((0, o.back)(), !1)
+    action: () => ((0, l.back)(), !1)
   },
   C = {
     binds: (0, d.isMac)() ? ["mod+]"] : ["alt+right"],
     comboKeysBindGlobal: !0,
-    action: () => ((0, o.forward)(), !1)
+    action: () => ((0, l.forward)(), !1)
   }

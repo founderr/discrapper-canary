@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return I
   }
 });
-var a = n("735250");
+var s = n("735250");
 n("470079");
-var l = n("442837"),
-  s = n("481060"),
+var a = n("442837"),
+  l = n("481060"),
   i = n("758059"),
   r = n("377171"),
   o = n("497089"),
@@ -15,25 +15,25 @@ var l = n("442837"),
   d = n("699516"),
   c = n("988951"),
   f = n("26290"),
-  h = n("626135"),
-  E = n("981631"),
+  E = n("626135"),
+  _ = n("981631"),
   m = n("689938"),
-  p = n("966171");
+  T = n("966171");
 
-function g(e) {
+function I(e) {
   let {
     closePopout: t
-  } = e, n = (0, l.useStateFromStores)([d.default], () => d.default.getPendingCount());
-  return (0, a.jsx)(s.TooltipContainer, {
+  } = e, n = (0, a.useStateFromStores)([d.default], () => d.default.getPendingCount());
+  return (0, s.jsx)(l.TooltipContainer, {
     text: m.default.Messages.VIEW_FRIEND_REQUESTS,
-    children: (0, a.jsxs)(s.Clickable, {
-      className: p.friendRequestsButton,
+    children: (0, s.jsxs)(l.Clickable, {
+      className: T.friendRequestsButton,
       onClick: () => {
-        h.default.track(E.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
+        E.default.track(_.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
           action_type: o.NotificationCenterActionTypes.FRIEND_REQUESTS_BUTTON_CLICK
-        }), (0, u.transitionTo)(E.Routes.FRIENDS), i.default.setSection(E.FriendsSections.PENDING), t()
+        }), (0, u.transitionTo)(_.Routes.FRIENDS), i.default.setSection(_.FriendsSections.PENDING), t()
       },
-      children: [(0, a.jsx)(c.default, {}), (0, a.jsx)(f.NumberBadge, {
+      children: [(0, s.jsx)(c.default, {}), (0, s.jsx)(f.NumberBadge, {
         count: n,
         color: r.default.BACKGROUND_ACCENT
       })]

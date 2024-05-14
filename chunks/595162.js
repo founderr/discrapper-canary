@@ -17,7 +17,7 @@ function u(e) {
     message: t,
     compact: n,
     usernameHook: u
-  } = e, d = (0, a.default)(t), c = u(d), E = r.default.Messages.SYSTEM_MESSAGE_STAGE_RAISE_HAND_HOOK.format({
+  } = e, d = (0, a.default)(t), c = u(d), f = r.default.Messages.SYSTEM_MESSAGE_STAGE_RAISE_HAND_HOOK.format({
     username: d.nick,
     usernameHook: c
   });
@@ -30,6 +30,6 @@ function u(e) {
     iconContainerClassName: o.iconContainer,
     timestamp: t.timestamp,
     compact: n,
-    children: E
+    children: f
   })
 }

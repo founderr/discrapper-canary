@@ -5,16 +5,16 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("481060"),
-  l = n("560067"),
-  o = n("675999");
+  o = n("560067"),
+  l = n("675999");
 let a = {
   binds: ["mod+shift+n"],
   comboKeysBindGlobal: !0,
   action() {
-    (0, i.hasModalOpen)(o.CREATE_GUILD_MODAL_KEY) ? l.default.updateCreateGuildModal({
-      slide: o.CreateGuildSlideTypes.JOIN_GUILD,
+    (0, i.hasModalOpen)(l.CREATE_GUILD_MODAL_KEY) ? o.default.updateCreateGuildModal({
+      slide: l.CreateGuildSlideTypes.JOIN_GUILD,
       location: "Keyboard Shortcut"
-    }): l.default.openCreateGuildModal({
+    }): o.default.openCreateGuildModal({
       location: "Keyboard Shortcut"
     })
   }

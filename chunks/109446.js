@@ -21,8 +21,8 @@ var l = n("735250"),
   g = n("768581"),
   E = n("709054"),
   _ = n("981631"),
-  S = n("124368"),
-  I = n("689938"),
+  I = n("124368"),
+  S = n("689938"),
   N = n("97600");
 
 function T(e) {
@@ -44,7 +44,7 @@ function T(e) {
       className: N.title,
       variant: "text-xs/bold",
       color: "header-secondary",
-      children: t.isForumLikeChannel() ? I.default.Messages.ACTIVE_THREADS_POPOUT_HEADER_FORUM : I.default.Messages.ACTIVE_THREADS_POPOUT_HEADER
+      children: t.isForumLikeChannel() ? S.default.Messages.ACTIVE_THREADS_POPOUT_HEADER_FORUM : S.default.Messages.ACTIVE_THREADS_POPOUT_HEADER
     }), s.slice(0, t.isForumLikeChannel() ? s.length : u).map(e => (0, l.jsx)(A, {
       thread: e
     }, e.id)).filter(e => a.isValidElement(e)).slice(0, u), (0, l.jsx)(o.Clickable, {
@@ -63,7 +63,7 @@ function T(e) {
       children: (0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: I.default.Messages.ACTIVE_THREADS_POPOUT_LINK
+        children: S.default.Messages.ACTIVE_THREADS_POPOUT_LINK
       })
     })]
   })
@@ -76,7 +76,7 @@ function A(e) {
   return (0, l.jsxs)(o.Clickable, {
     className: N.row,
     onClick: e => {
-      (0, h.openThreadSidebarForViewing)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, S.OpenThreadAnalyticsLocations.POPOUT)
+      (0, h.openThreadSidebarForViewing)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, I.OpenThreadAnalyticsLocations.POPOUT)
     },
     children: [null == n ? (0, l.jsx)("img", {
       className: N.avatar,

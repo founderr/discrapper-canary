@@ -27,8 +27,8 @@ t.default = e => {
       className: g,
       style: E,
       to: _,
-      onClick: S,
-      selected: I = !1,
+      onClick: I,
+      selected: S = !1,
       ...N
     } = e,
     T = (0, r.useHistory)();
@@ -46,13 +46,13 @@ t.default = e => {
       } = _;
       T.push(e, t)
     }
-    null != S && S(e)
-  }, [T, _, S]);
+    null != I && I(e)
+  }, [T, _, I]);
   return (0, l.jsxs)(o.Clickable, {
     ...N,
     onClick: L,
     className: i()(g, d.wrapper, {
-      [d.selected]: I
+      [d.selected]: S
     }),
     "aria-label": null != C && "" !== C ? C : null != m ? m : "",
     style: {

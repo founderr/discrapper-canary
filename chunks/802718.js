@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useSignUpButton: function() {
-    return I
+    return S
   }
 });
 var l = n("735250"),
@@ -22,7 +22,7 @@ var l = n("735250"),
   E = n("689938"),
   _ = n("211005");
 
-function S(e) {
+function I(e) {
   let {
     target: t
   } = e, o = (0, s.useTreeItem)("fakedoor"), C = a.useCallback(() => {
@@ -35,7 +35,7 @@ function S(e) {
         target: t
       })
     })
-  }, [t]), S = a.useCallback(e => {
+  }, [t]), I = a.useCallback(e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -45,12 +45,12 @@ function S(e) {
         signupTarget: t
       })
     })
-  }, [t]), I = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), N = (0, l.jsxs)("div", {
+  }, [t]), S = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), N = (0, l.jsxs)("div", {
     className: _.tooltipContainer,
     children: [(0, l.jsx)("div", {
       className: _.tooltipBackground,
       style: {
-        background: I
+        background: S
       }
     }), (0, l.jsx)(r.Heading, {
       variant: "heading-sm/medium",
@@ -77,7 +77,7 @@ function S(e) {
             children: (0, l.jsx)(m.default, {
               ...o,
               onClick: C,
-              onContextMenu: S,
+              onContextMenu: I,
               children: (0, l.jsx)(i.BellIcon, {
                 color: c.default.TEXT_NORMAL
               })
@@ -87,7 +87,7 @@ function S(e) {
       })
     }), (0, l.jsx)("div", {
       style: {
-        background: I,
+        background: S,
         width: 0,
         height: 0
       }
@@ -95,9 +95,9 @@ function S(e) {
   })
 }
 
-function I() {
+function S() {
   let e = (0, o.useStateFromStores)([C.default], () => C.default.getActiveUserSignUp());
-  return null == e ? null : (0, l.jsx)(S, {
+  return null == e ? null : (0, l.jsx)(I, {
     target: e
   })
 }

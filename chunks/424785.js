@@ -22,8 +22,8 @@ var a = n("120356"),
   g = n("359110"),
   E = n("922482"),
   _ = n("431328"),
-  S = n("501655"),
-  I = n("427679"),
+  I = n("501655"),
+  S = n("427679"),
   N = n("71275"),
   T = n("201469"),
   A = n("680089"),
@@ -117,9 +117,9 @@ class K extends P.default {
       unread: g,
       resolvedUnreadSetting: E,
       mentionCount: _,
-      isFavoriteSuggestion: S
+      isFavoriteSuggestion: I
     } = this.props, {
-      shouldShowGuildVerificationPopout: I
+      shouldShowGuildVerificationPopout: S
     } = this.state, N = this.getVoiceStatesCount(), T = (0, l.jsxs)("li", {
       className: s()(this.getModeClass(), {
         [V.disabled]: this.isDisabled()
@@ -130,7 +130,7 @@ class K extends P.default {
         renderPopout: this.renderPopout,
         spacing: 0,
         onRequestClose: this.closeGuildVerificationPopout,
-        shouldShow: I,
+        shouldShow: S,
         children: () => (0, l.jsx)(r.Tooltip, {
           text: this.getTooltipText(),
           children: i => {
@@ -145,7 +145,7 @@ class K extends P.default {
                 [k.iconLive]: null != p
               }),
               channel: e,
-              selected: !S && t,
+              selected: !I && t,
               connected: n,
               unread: n ? g : void 0,
               resolvedUnreadSetting: E,
@@ -159,7 +159,7 @@ class K extends P.default {
               },
               connectDragPreview: d,
               subtitle: this.renderSubtitle(),
-              isFavoriteSuggestion: S,
+              isFavoriteSuggestion: I,
               "aria-label": (0, f.default)({
                 channel: e,
                 unread: g,
@@ -169,7 +169,7 @@ class K extends P.default {
                 needSubscriptionToAccess: C
               }),
               ...u,
-              children: [S && this.renderAcceptSuggestionButton(), S && this.renderRemoveSuggestionButton(), !S && this.renderOpenChatButton(), !S && this.renderInviteButton(), !S && this.renderEditButton(), !S && this.renderChannelInfo()]
+              children: [I && this.renderAcceptSuggestionButton(), I && this.renderRemoveSuggestionButton(), !I && this.renderOpenChatButton(), !I && this.renderInviteButton(), !I && this.renderEditButton(), !I && this.renderChannelInfo()]
             })
           }
         })
@@ -297,7 +297,7 @@ function z(e) {
       bypassLimit: R.default.can(F.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), p = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, _.useStageParticipantsCount)(n.id, S.StageChannelParticipantNamedIndex.AUDIENCE), {
+  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), p = (0, i.useStateFromStores)([S.default], () => S.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, _.useStageParticipantsCount)(n.id, I.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E
   } = (0, m.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), D = (0, G.default)({
