@@ -95,6 +95,34 @@ class o extends i.default {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return e ? this.giftPremiumUserPrice : this.premiumUserPrice
   }
+  toServerData() {
+    let e = {};
+    return Object.keys(this.prices).forEach(t => {
+      let n = this.prices[t];
+      e[t] = {
+        country_prices: {
+          country_code: n.countryPrices.countryCode,
+          prices: n.countryPrices.prices
+        },
+        payment_source_prices: n.paymentSourcePrices
+      }
+    }), {
+      id: this.id,
+      name: this.name,
+      sku_id: this.skuId,
+      interval: this.interval,
+      interval_count: this.intervalCount,
+      tax_inclusive: this.taxInclusive,
+      currency: this.currency,
+      price: this.price,
+      prices: e,
+      price_tier: this.price,
+      discount_price: this.premiumUserPrice,
+      fallback_price: this.fallbackPrice,
+      fallback_currency: this.fallbackCurrency,
+      fallback_discount_price: this.fallbackPremiumUserPrice
+    }
+  }
   constructor(e) {
     super(), s(this, "id", void 0), s(this, "name", void 0), s(this, "interval", void 0), s(this, "intervalCount", void 0), s(this, "taxInclusive", void 0), s(this, "skuId", void 0), s(this, "currency", void 0), s(this, "price", void 0), s(this, "prices", void 0), s(this, "premiumUserPrice", void 0), s(this, "fallbackPrice", void 0), s(this, "fallbackCurrency", void 0), s(this, "fallbackPremiumUserPrice", void 0), this.id = e.id, this.name = e.name, this.interval = e.interval, this.intervalCount = e.intervalCount, this.taxInclusive = e.taxInclusive, this.skuId = e.skuId, this.currency = e.currency, this.price = e.price, this.premiumUserPrice = e.premiumUserPrice, this.prices = e.prices, e.fallbackPrice && (this.fallbackPrice = e.fallbackPrice, this.fallbackCurrency = e.fallbackCurrency, this.fallbackPremiumUserPrice = e.fallbackPremiumUserPrice)
   }

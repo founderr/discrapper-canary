@@ -1,83 +1,86 @@
 "use strict";
 n.r(t), n.d(t, {
   SubscriptionDetailsModal: function() {
-    return h
+    return g
   }
 });
 var i = n("735250"),
-  r = n("470079"),
-  l = n("269210"),
+  l = n("470079"),
+  r = n("269210"),
   s = n("752843"),
   a = n("368072"),
   o = n("481060"),
-  u = n("889989"),
-  d = n("73346"),
-  c = n("591759"),
-  f = n("680005"),
-  p = n("938337"),
-  m = n("689938"),
+  u = n("789703"),
+  d = n("889989"),
+  c = n("73346"),
+  f = n("591759"),
+  p = n("680005"),
+  m = n("938337"),
+  h = n("689938"),
   S = n("399461");
 
-function h(e) {
+function g(e) {
   let {
     appId: t,
     groupListingId: n,
-    groupListingType: h,
-    guildId: g,
-    listing: v,
-    onClose: x,
-    transitionState: T
-  } = e, C = r.useMemo(() => {
+    groupListingType: g,
+    guildId: v,
+    onClose: T,
+    skuId: x,
+    transitionState: _
+  } = e, I = (0, u.useGetSubscriptionListing__DO_NOT_USE)(x), C = l.useMemo(() => {
     var e;
-    return null != v.image_asset && null !== (e = c.default.toURLSafe((0, d.getAssetURL)(t, v.image_asset, 256))) && void 0 !== e ? e : void 0
-  }, [t, v.image_asset]), I = r.useMemo(() => {
+    return (null == I ? void 0 : I.image_asset) != null && null !== (e = f.default.toURLSafe((0, c.getAssetURL)(t, I.image_asset, 256))) && void 0 !== e ? e : void 0
+  }, [t, null == I ? void 0 : I.image_asset]), E = l.useMemo(() => {
     var e;
-    return null === (e = v.store_listing_benefits) || void 0 === e ? void 0 : e.map(e => ({
+    return null == I ? void 0 : null === (e = I.store_listing_benefits) || void 0 === e ? void 0 : e.map(e => ({
       id: e.id,
       title: e.name,
       description: e.description,
-      icon: (0, u.getBenefitIcon)(t, e.icon)
+      icon: (0, d.getBenefitIcon)(t, e.icon)
     }))
-  }, [t, v.store_listing_benefits]), E = v.subscription_plans.length > 0 ? v.subscription_plans[0] : null;
-  return null == E || null == I ? null : (0, i.jsxs)(o.ModalRoot, {
-    transitionState: T,
+  }, [t, null == I ? void 0 : I.store_listing_benefits]);
+  if (null == I) return null;
+  let L = I.subscription_plans.length > 0 ? I.subscription_plans[0] : null;
+  return null == L || null == E ? null : (0, i.jsxs)(o.ModalRoot, {
+    transitionState: _,
     size: o.ModalSize.DYNAMIC,
     className: S.subDetailsModal,
-    children: [(0, i.jsx)(p.TrackedCardDetails, {
+    children: [(0, i.jsx)(m.TrackedCardDetails, {
       appId: t,
-      skuId: v.id,
-      benefits: I.map(e => (0, i.jsx)(l.SubscriptionCardBenefit, {
+      skuId: x,
+      benefits: E.map(e => (0, i.jsx)(r.SubscriptionCardBenefit, {
         name: e.title,
         icon: e.icon,
         description: e.description
       }, e.id)),
-      description: v.description,
+      description: I.description,
       imgSrc: C,
-      title: v.name,
+      title: I.name,
       tag: (0, i.jsx)(s.SubscriptionTag, {
-        type: h
+        type: g
       }),
-      onClose: x,
+      onClose: T,
       FallbackIcon: a.BadgeIcon
     }), (0, i.jsxs)(o.ModalFooter, {
       className: S.footer,
       children: [(0, i.jsx)(o.Button, {
         className: S.backButton,
-        onClick: x,
+        onClick: T,
         look: o.ButtonLooks.BLANK,
         children: (0, i.jsx)(o.Text, {
           color: "header-primary",
           tag: "p",
           variant: "heading-md/semibold",
-          children: m.default.Messages.BACK
+          children: h.default.Messages.BACK
         })
-      }), (0, i.jsx)(f.SubscriptionPurchaseButton, {
+      }), (0, i.jsx)(p.SubscriptionPurchaseButton, {
         appId: t,
-        listing: v,
         groupListingId: n,
-        groupListingType: h,
-        guildId: g,
-        subPlan: E
+        groupListingType: g,
+        guildId: v,
+        skuId: x,
+        subPlan: L
       })]
     })]
   })

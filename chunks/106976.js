@@ -46,7 +46,8 @@ function l(e) {
     summary: e.description,
     description: e.description,
     benefits: null !== (t = e.store_listing_benefits) && void 0 !== t ? t : [],
-    thumbnail: e.image_asset
+    thumbnail: e.image_asset,
+    published: e.published
   }
 }
 

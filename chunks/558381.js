@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return f
   },
   goToApplicationStoreListing: function() {
-    return x
+    return T
   },
   goToSKUStoreListing: function() {
     return v
@@ -22,15 +22,15 @@ n.r(t), n.d(t, {
     return g
   },
   matureAgree: function() {
-    return S
+    return h
   },
   matureDisagree: function() {
-    return h
+    return S
   }
 });
 var i = n("544891"),
-  r = n("570140"),
-  l = n("115130");
+  l = n("570140"),
+  r = n("115130");
 n("812206");
 var s = n("703656"),
   a = n("55563");
@@ -46,20 +46,23 @@ function c(e) {
       application_id: e
     },
     oldFormErrors: !0
-  }).then(e => (r.default.dispatch({
+  }).then(e => (l.default.dispatch({
     type: "STORE_LISTINGS_FETCH_SUCCESS",
-    storeListings: e.body
+    storeListings: e.body.map(e => ({
+      ...e,
+      published: !0
+    }))
   }), e.body))
 }
 
 function f(e) {
   let t = a.default.get(e),
-    n = null != t && (o.default.inTestModeForApplication(t.applicationId) || l.default.inDevModeForApplication(t.applicationId));
+    n = null != t && (o.default.inTestModeForApplication(t.applicationId) || r.default.inDevModeForApplication(t.applicationId));
   return (0, u.httpGetWithCountryCodeQuery)(n ? d.Endpoints.STORE_LISTINGS_SKU(e) : d.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(e)).then(e => {
-    n ? r.default.dispatch({
+    n ? l.default.dispatch({
       type: "STORE_LISTINGS_FETCH_SUCCESS",
       storeListings: e.body
-    }) : r.default.dispatch({
+    }) : l.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
       storeListing: e.body
     })
@@ -68,7 +71,7 @@ function f(e) {
 
 function p(e) {
   return (0, u.httpGetWithCountryCodeQuery)(d.Endpoints.STORE_LISTING(e)).then(e => {
-    r.default.dispatch({
+    l.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
       storeListing: e.body
     })
@@ -77,20 +80,20 @@ function p(e) {
 
 function m(e) {
   return (0, u.httpGetWithCountryCodeQuery)(d.Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATION(e)).then(e => {
-    r.default.dispatch({
+    l.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
       storeListing: e.body
     })
   })
 }
 
-function S() {
-  r.default.dispatch({
+function h() {
+  l.default.dispatch({
     type: "APPLICATION_STORE_MATURE_AGREE"
   })
 }
 
-function h() {
+function S() {
   (0, s.transitionTo)(d.Routes.APPLICATION_STORE)
 }
 
@@ -109,7 +112,7 @@ function v(e, t) {
   (0, s.transitionTo)(n, i)
 }
 
-function x(e, t) {
+function T(e, t) {
   let {
     pathname: n,
     ...i
