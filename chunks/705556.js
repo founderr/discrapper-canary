@@ -48,6 +48,7 @@ function I(e) {
     children: e => (0, i.jsx)(c.default, {
       icon: u.default,
       text: E.default.Messages.EDIT_PROFILE,
+      autoFocus: !0,
       ...e
     })
   }) : null
