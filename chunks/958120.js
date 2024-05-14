@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return A
   }
 });
 var i = n("735250");
@@ -19,70 +19,72 @@ var r = n("442837"),
   I = n("67152"),
   T = n("579285"),
   f = n("287612"),
-  S = n("153362");
+  S = n("228168"),
+  h = n("153362");
 
-function h(e) {
+function A(e) {
   let {
     user: t,
     currentUser: n,
-    displayProfile: h,
-    guild: A,
-    onOpenProfile: m,
-    channelId: N,
-    onClose: p
+    displayProfile: A,
+    guild: m,
+    onOpenProfile: N,
+    channelId: p,
+    onClose: O
   } = e, {
-    moreUserDetailsEnabled: O
+    moreUserDetailsEnabled: C
   } = (0, o.useSimplifiedProfileExperiment)({
     location: "BiteSizeProfileBody"
-  }), C = s.default.getName(null == A ? void 0 : A.id, N, t), R = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation);
+  }), R = s.default.getName(null == m ? void 0 : m.id, p, t), g = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation);
   return (0, i.jsxs)("div", {
-    className: S.body,
+    className: h.body,
     children: [(0, i.jsx)(d.default, {
       user: t,
-      onOpenProfile: () => m({
+      profileType: S.UserProfileTypes.BITE_SIZE,
+      onOpenProfile: () => N({
         autoFocusNote: !1
       }),
-      guildId: null == A ? void 0 : A.id,
-      usernameIcon: t.hasAvatarForGuild(null == A ? void 0 : A.id) && (0, i.jsx)(c.default, {
+      guildId: null == m ? void 0 : m.id,
+      usernameIcon: t.hasAvatarForGuild(null == m ? void 0 : m.id) && (0, i.jsx)(c.default, {
         user: t,
-        nickname: C
+        nickname: R
       }),
-      pronouns: null == h ? void 0 : h.pronouns,
+      pronouns: null == A ? void 0 : A.pronouns,
       tags: (0, i.jsx)(_.UserProfileBadgesTag, {
-        displayProfile: h,
-        onClose: p
+        displayProfile: A,
+        onClose: O
       }),
       nicknameIcons: (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(l.default, {
           userId: t.id
-        }), O && !R && (0, i.jsx)(u.default, {
+        }), C && !g && (0, i.jsx)(u.default, {
           user: t,
-          onOpenProfile: () => m({
+          onOpenProfile: () => N({
             autoFocusNote: !0
           })
         })]
       })
     }), t.id !== n.id && (0, i.jsx)(f.default, {
       user: t,
-      onOpenProfile: e => m({
+      onOpenProfile: e => N({
         section: e,
         autoFocusNote: !1
       })
-    }), O && (0, i.jsx)(I.default, {
+    }), C && (0, i.jsx)(I.default, {
       user: t,
-      bio: null == h ? void 0 : h.bio,
-      hidePersonalInformation: R,
-      onClose: p
+      bio: null == A ? void 0 : A.bio,
+      hidePersonalInformation: g,
+      onClose: O
     }), (0, i.jsx)(E.default, {
       user: t,
-      guild: A,
-      channelId: N,
-      onClose: p
-    }), null != A && (0, i.jsx)(T.default, {
+      guild: m,
+      channelId: p,
+      onClose: O
+    }), null != m && (0, i.jsx)(T.default, {
       user: t,
       currentUser: n,
-      guild: A,
-      onOpenProfile: () => m({
+      guild: m,
+      onOpenProfile: () => N({
         autoFocusNote: !1
       })
     })]

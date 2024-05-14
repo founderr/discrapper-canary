@@ -18,43 +18,44 @@ var r = n("120356"),
 function c(e) {
   let {
     user: t,
-    guildId: n,
-    channelId: r,
-    usernameIcon: c,
-    tags: E,
-    nicknameIcons: I,
-    pronouns: T,
-    className: f,
-    onOpenProfile: S,
-    nicknameVariant: h = "heading-lg/bold",
-    pronounsVariant: A = "text-sm/medium"
-  } = e, m = e => null == S ? e : (0, i.jsx)(s.Clickable, {
-    onClick: S,
+    profileType: n,
+    guildId: r,
+    channelId: c,
+    usernameIcon: E,
+    tags: I,
+    nicknameIcons: T,
+    pronouns: f,
+    className: S,
+    onOpenProfile: h,
+    nicknameVariant: A = "heading-lg/bold",
+    pronounsVariant: m = "text-sm/medium"
+  } = e, N = e => null == h ? e : (0, i.jsx)(s.Clickable, {
+    onClick: h,
     className: _.clickableUsername,
     children: e
   });
   return (0, i.jsxs)("div", {
-    className: a()(_.container, f),
+    className: a()(_.container, S),
     children: [(0, i.jsxs)("div", {
       className: _.usernameRow,
-      children: [m((0, i.jsx)(s.Heading, {
-        className: _.nickname,
-        variant: h,
-        children: l.default.getName(n, r, t)
+      children: [N((0, i.jsx)(s.Heading, {
+        className: a()(_.nickname, n === u.UserProfileTypes.FULL_SIZE && _.fullSizeNickname),
+        variant: A,
+        children: l.default.getName(r, c, t)
       })), (0, i.jsx)("div", {
         className: _.nicknameIcons,
-        children: I
+        children: T
       })]
     }), (0, i.jsxs)("div", {
       className: _.tags,
-      children: [m((0, i.jsx)(o.default, {
+      children: [N((0, i.jsx)(o.default, {
         user: t,
-        usernameIcon: c,
+        usernameIcon: E,
         forceUsername: !0,
         className: _.userTag,
         usernameClass: _.userTagUsername,
         discriminatorClass: _.userTagDiscriminator
-      })), null != T && T.length > 0 && (0, i.jsxs)(i.Fragment, {
+      })), null != f && f.length > 0 && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("div", {
           "aria-hidden": "true",
           className: _.dotSpacer
@@ -62,13 +63,13 @@ function c(e) {
           text: d.default.Messages.USER_PROFILE_PRONOUNS,
           delay: u.USER_PROFILE_TOOLTIP_DELAY,
           children: (0, i.jsx)(s.Text, {
-            variant: A,
+            variant: m,
             className: _.pronouns,
             color: "header-primary",
-            children: T
+            children: f
           })
         })]
-      }), E]
+      }), I]
     })]
   })
 }
