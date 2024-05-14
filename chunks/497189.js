@@ -217,7 +217,8 @@ t.default = s.memo(function(e) {
       guild: d,
       selectedGame: l
     }),
-    b = (0, r.useSpring)({
+    b = (0, M.useFakeDiscoveryUpsellClans)(E),
+    G = (0, r.useSpring)({
       from: {
         opacity: 0
       },
@@ -229,7 +230,7 @@ t.default = s.memo(function(e) {
         duration: 0
       }
     }),
-    G = (0, r.useSpring)({
+    w = (0, r.useSpring)({
       from: R ? {
         transform: "translate(0px, 0px) rotate(0deg) scale(1)"
       } : {
@@ -241,7 +242,7 @@ t.default = s.memo(function(e) {
       config: U,
       delay: 400
     }),
-    w = (0, r.useSpring)({
+    B = (0, r.useSpring)({
       from: R ? {
         transform: "translate(0px, 0px) rotate(0deg) scale(1)"
       } : {
@@ -253,7 +254,7 @@ t.default = s.memo(function(e) {
       config: U,
       delay: 400
     }),
-    B = (0, r.useSpring)({
+    F = (0, r.useSpring)({
       from: R ? {
         transform: "translate(0px, 0px) rotate(0deg) scale(1)"
       } : {
@@ -265,7 +266,7 @@ t.default = s.memo(function(e) {
       config: U,
       delay: 400
     }),
-    F = (0, r.useSpring)({
+    H = (0, r.useSpring)({
       from: R ? {
         transform: "translate(0px, 0px) rotate(0deg) scale(1)"
       } : {
@@ -277,7 +278,7 @@ t.default = s.memo(function(e) {
       config: U,
       delay: 400
     }),
-    H = (0, r.useSpring)({
+    V = (0, r.useSpring)({
       from: R ? {
         transform: "scale(1)",
         opacity: 0
@@ -292,7 +293,7 @@ t.default = s.memo(function(e) {
       config: U,
       delay: 200
     }),
-    V = (0, r.useSpring)({
+    Y = (0, r.useSpring)({
       from: R ? {
         transform: "translateY(0px)"
       } : {
@@ -304,14 +305,14 @@ t.default = s.memo(function(e) {
       config: U,
       delay: 400
     }),
-    Y = s.useMemo(() => null == c ? P.default.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : P.default.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [c]),
-    W = s.useCallback(e => (0, a.jsx)(h.Text, {
+    W = s.useMemo(() => null == c ? P.default.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : P.default.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [c]),
+    K = s.useCallback(e => (0, a.jsx)(h.Text, {
       tag: "span",
       variant: "text-xs/medium",
       color: "text-brand",
       children: e
     }), []),
-    K = s.useCallback(async () => {
+    z = s.useCallback(async () => {
       await (0, S.joinWumpusFeedbackSquad)(o), _.default.transitionToGuildSync("936317138904440892")
     }, [o]);
   return (0, a.jsxs)(a.Fragment, {
@@ -320,31 +321,31 @@ t.default = s.memo(function(e) {
       children: [(0, a.jsx)(r.animated.div, {
         className: x.clanCardOuterContainer,
         style: {
-          ...G,
-          ...b
+          ...w,
+          ...G
         },
         children: (0, a.jsx)(v.ClanDiscoveryCardView, {
-          clan: M.FAKE_DISCOVERY_UPSELL_CLANS["0"],
+          clan: b[0],
           className: x.clanCardOuterLeft
         })
       }), (0, a.jsx)(r.animated.div, {
         className: x.clanCardInnerContainer,
         style: {
-          ...w,
-          ...b
+          ...B,
+          ...G
         },
         children: (0, a.jsx)(v.ClanDiscoveryCardView, {
-          clan: M.FAKE_DISCOVERY_UPSELL_CLANS["1"],
+          clan: b[1],
           className: x.clanCardInnerLeft
         })
       }), null != D && (0, a.jsx)(r.animated.div, {
         className: x.clanEnvelope,
-        style: H,
+        style: V,
         children: (0, a.jsx)(j, {
           children: (0, a.jsx)("div", {
             className: x.clanCardCenterContainer,
             children: (0, a.jsx)(r.animated.div, {
-              style: V,
+              style: Y,
               children: (0, a.jsx)(v.ClanDiscoveryCardView, {
                 clan: D,
                 className: x.clanCardCenter
@@ -355,21 +356,21 @@ t.default = s.memo(function(e) {
       }), (0, a.jsx)(r.animated.div, {
         className: x.clanCardInnerContainer,
         style: {
-          ...B,
-          ...b
+          ...F,
+          ...G
         },
         children: (0, a.jsx)(v.ClanDiscoveryCardView, {
-          clan: M.FAKE_DISCOVERY_UPSELL_CLANS["2"],
+          clan: b[2],
           className: x.clanCardInnerRight
         })
       }), (0, a.jsx)(r.animated.div, {
         className: x.clanCardOuterContainer,
         style: {
-          ...F,
-          ...b
+          ...H,
+          ...G
         },
         children: (0, a.jsx)(v.ClanDiscoveryCardView, {
-          clan: M.FAKE_DISCOVERY_UPSELL_CLANS["3"],
+          clan: b[3],
           className: x.clanCardOuterRight
         })
       })]
@@ -380,20 +381,20 @@ t.default = s.memo(function(e) {
         setSelectedGuildId: u,
         eligibleGuilds: t,
         onButtonClick: g,
-        buttonText: Y,
+        buttonText: W,
         hasCompletedUpsell: i
       })
     }), (0, a.jsx)("div", {
       className: x.joinWFSContainer,
       children: (0, a.jsx)(h.Clickable, {
         className: x.joinWFS,
-        onClick: K,
+        onClick: z,
         "aria-label": P.default.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL,
         children: (0, a.jsx)(h.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
           children: P.default.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS.format({
-            wfsHook: W
+            wfsHook: K
           })
         })
       })

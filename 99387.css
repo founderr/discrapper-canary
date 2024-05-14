@@ -6403,6 +6403,11 @@
     width: 100%
 }
 
+.clanBannerPreview__4375a {
+    height: 98px;
+    margin-top: -2px
+}
+
 .cardBrandingFooter__98c32 {
     height: 8px;
     width: 100%
@@ -12228,7 +12233,8 @@ span.clanTag_f4aadc {
     border-radius: var(--radius-sm);
     display: flex;
     gap: 8px;
-    min-width: 280px
+    width: 280px;
+    cursor: pointer
 }
 
 .image__75373 {
@@ -12245,7 +12251,23 @@ span.clanTag_f4aadc {
 .content_c9b545 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: 2px
+}
+
+.header_ccd333 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px
+}
+
+.footer__86943 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 8px
 }
 
 .pill__2f6a4 {
@@ -12267,7 +12289,8 @@ span.clanTag_f4aadc {
 .categoryIcon__79c68 {
     width: 14px;
     height: 14px;
-    color: var(--icon-muted)
+    color: var(--icon-muted);
+    flex-shrink: 0
 }
 
 .actions_f9b6b2 {
@@ -12321,6 +12344,16 @@ span.clanTag_f4aadc {
 .gameIcon__4a06f {
     width: 64px;
     height: 64px
+}
+
+.pillContainer_d3df22 {
+    display: flex
+}
+
+.joinButton__081d8 {
+    padding: 4px 8px;
+    flex-grow: 0;
+    flex-shrink: 0
 }
 
 .container_a88e31 {

@@ -171,7 +171,8 @@ function G(e) {
     } = (0, I.default)(T.default.INVITE_EMBED),
     $ = (0, _.default)({
       applicationId: k.id,
-      size: U
+      size: U,
+      names: ["embedded_cover"]
     }),
     ee = (0, u.useStateFromStoresArray)([E.default], () => null != X ? E.default.getEmbeddedActivitiesForChannel(X.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [X, k.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),

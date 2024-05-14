@@ -1,58 +1,74 @@
 "use strict";
 n.r(t), n.d(t, {
-  FAKE_DISCOVERY_UPSELL_CLANS: function() {
-    return i
+  useFakeDiscoveryUpsellClans: function() {
+    return r
   }
 });
-var a = n("116175"),
-  s = n("308083");
+var a = n("470079"),
+  s = n("116175"),
+  l = n("308083");
 
-function l(e) {
+function i(e) {
   let {
     id: t,
-    preset: n,
-    banner: l
-  } = e;
+    gameId: n,
+    preset: a,
+    banner: i,
+    ...r
+  } = e, o = function() {
+    let e = Object.keys(s.ClanBadgeKind).filter(e => isNaN(Number(e))),
+      t = e[Math.round(Math.random() * e.length - 1)];
+    return s.ClanBadgeKind[t]
+  }();
   return {
     id: t,
     name: "",
     description: "",
     memberCount: 0,
-    games: [s.VALORANT_ID],
-    playstyle: s.ClanPlaystyles.CASUAL,
+    games: [n],
+    playstyle: l.ClanPlaystyles.CASUAL,
     tag: "",
     traits: [],
-    banner: l,
+    banner: i,
     badge: {
-      badgeKind: a.ClanBadgeKind.SWORD,
-      primaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].primary,
-      secondaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].secondary
+      badgeKind: o,
+      primaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
+      secondaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
     },
     branding: {
-      primaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].primary,
-      secondaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].secondary
+      primaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
+      secondaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
     },
-    wildcardDescriptors: []
+    wildcardDescriptors: [],
+    ...r
   }
 }
-let i = [l({
-  id: "1",
-  preset: s.ClanBrandPresets.ZEPHYR,
-  banner: s.ClanBannerKind.WORLD_MAP
-}), l({
-  id: "2",
-  preset: s.ClanBrandPresets.THUNDER,
-  banner: s.ClanBannerKind.CASTLE
-}), l({
-  id: "3",
-  preset: s.ClanBrandPresets.MARSH,
-  banner: s.ClanBannerKind.SEA_FOAM
-}), l({
-  id: "4",
-  preset: s.ClanBrandPresets.BOULDER,
-  banner: s.ClanBannerKind.NIGHT_SKY
-}), l({
-  id: "5",
-  preset: s.ClanBrandPresets.SOUL,
-  banner: s.ClanBannerKind.SEA_FOAM
-})]
+
+function r(e) {
+  return a.useMemo(() => [i({
+    id: "1",
+    gameId: e,
+    preset: l.ClanBrandPresets.ZEPHYR,
+    banner: l.ClanBannerKind.WORLD_MAP
+  }), i({
+    id: "2",
+    gameId: e,
+    preset: l.ClanBrandPresets.THUNDER,
+    banner: l.ClanBannerKind.CASTLE
+  }), i({
+    id: "3",
+    gameId: e,
+    preset: l.ClanBrandPresets.MARSH,
+    banner: l.ClanBannerKind.HOUSE
+  }), i({
+    id: "4",
+    gameId: e,
+    preset: l.ClanBrandPresets.SOUL,
+    banner: l.ClanBannerKind.SEA_FOAM
+  }), i({
+    id: "5",
+    gameId: e,
+    preset: l.ClanBrandPresets.CASCADE,
+    banner: l.ClanBannerKind.NIGHT_SKY
+  })], [e])
+}
