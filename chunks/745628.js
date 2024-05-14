@@ -40,7 +40,7 @@ t.default = e => {
       className: c.maxWidthContainer,
       children: (0, n.jsx)(i.TextArea, {
         className: c.input,
-        maxLength: 160,
+        maxLength: l.MAX_DESCRIPTION_LENGTH,
         onChange: e => t({
           description: e
         }),

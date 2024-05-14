@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a("47120");
+a.r(t), a("47120"), a("653041");
 var n = a("735250"),
   r = a("470079"),
   s = a("120356"),
@@ -63,13 +63,16 @@ t.default = e => {
     requiredGameId: E,
     optional: T = !1,
     hidePreview: C = !1
-  } = e, x = r.useMemo(() => m.default.getAvailableLocales().map(e => ({
-    value: e.localizedName,
-    label: e.localizedName
-  })), []), _ = r.useMemo(() => Array.from(i), [i]), g = r.useMemo(() => _.filter(e => f.LANGUAGES_SET.has(e)), [_]), I = r.useCallback(e => {
-    let t = _.filter(e => !f.LANGUAGES_SET.has(e));
+  } = e, _ = r.useMemo(() => {
+    let e = [];
+    return f.LANGUAGES_SET.forEach(t => e.push({
+      value: t,
+      label: t
+    })), e
+  }, []), x = r.useMemo(() => Array.from(i), [i]), g = r.useMemo(() => x.filter(e => f.LANGUAGES_SET.has(e)), [x]), I = r.useCallback(e => {
+    let t = x.filter(e => !f.LANGUAGES_SET.has(e));
     s(new Set([...t, ...e]))
-  }, [s, _]), N = r.useMemo(() => _.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [_]);
+  }, [s, x]), N = r.useMemo(() => x.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [x]);
   return (0, n.jsxs)("div", {
     className: h.slideContent,
     children: [T && (0, n.jsx)(l.Text, {
@@ -117,7 +120,7 @@ t.default = e => {
           className: h.languageSelect,
           children: (0, n.jsx)(l.SearchableSelect, {
             wrapperClassName: h.input,
-            options: x,
+            options: _,
             value: g,
             onChange: I,
             placeholder: m.default.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
@@ -126,8 +129,8 @@ t.default = e => {
         })]
       }), (0, n.jsx)("div", {
         className: h.fixedWidthSidebar,
-        children: _.length > 0 && !C && (0, n.jsx)(u.default, {
-          traits: _,
+        children: x.length > 0 && !C && (0, n.jsx)(u.default, {
+          traits: x,
           traitsToHighlight: N
         })
       })]

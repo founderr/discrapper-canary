@@ -69,7 +69,7 @@ let p = e => [{
     section: d.SectionTypes.DIVIDER
   }, {
     section: L.ClanSetupSteps.MEMBER_APPLICATION,
-    label: O.default.Messages.CLAN_SETTINGS_JOIN_APPLICATION,
+    label: O.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP,
     hasError: (null == e ? void 0 : e.verificationForm) != null
   }, {
     section: d.SectionTypes.DIVIDER
@@ -295,7 +295,8 @@ t.default = e => {
               });
             case L.ClanSetupSteps.MEMBER_APPLICATION:
               return (0, a.jsx)(h.default, {
-                guildId: t
+                guildId: t,
+                inSettings: !0
               });
             case L.ClanSetupSteps.CUSTOMIZE_BANNER:
               return (0, a.jsx)(f.default, {
