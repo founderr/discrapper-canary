@@ -11,6 +11,7 @@ e.exports = {
   heroAssetTint: "heroAssetTint__7e70f",
   heroAssetWrapper: "heroAssetWrapper__1bc27",
   partnerBranding: "partnerBranding__46b3f",
+  postEnrollmentBackground: "postEnrollmentBackground__79a8d",
   preEnrollmentWrapper: "preEnrollmentWrapper_de7def",
   questAvailable: "questAvailable_d9e1f5",
   questProgressBar: "questProgressBar__3d3fa",
