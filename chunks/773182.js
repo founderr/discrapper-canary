@@ -22,7 +22,7 @@ var l = n("735250"),
   f = n("100527"),
   h = n("970606"),
   m = n("824991"),
-  p = n("802001"),
+  p = n("878241"),
   C = n("243778"),
   g = n("602147"),
   E = n("981631"),
@@ -148,7 +148,7 @@ function L(e) {
   let {
     defaultGameId: t,
     children: n
-  } = e, s = (0, p.useGuildsEligibleForClanConversion)("GuildsBarClanAdminUpsellPopout").length > 0, i = a.useCallback(() => {
+  } = e, s = (0, p.useGuildsEligibleForClan)("GuildsBarClanAdminUpsellPopout").length > 0, i = a.useCallback(() => {
     (0, h.trackClanAdminInviteViewed)({
       location: f.default.GUILDS_LIST
     })

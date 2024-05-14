@@ -8,7 +8,7 @@ var a = n("735250"),
   o = n("963202"),
   u = n("824991"),
   d = n("705348"),
-  c = n("802001"),
+  c = n("878241"),
   f = n("243778"),
   E = n("360453"),
   h = n("377743"),
@@ -41,7 +41,7 @@ function b(e) {
     guild: n
   } = e, [E, C] = s.useState(null !== (t = r.Storage.get(y.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), S = e => {
     r.Storage.set(y.LAST_HIDDEN_CHANNEL_NOTICE, e), C(e)
-  }, p = (0, c.useIsGuildEligibleForClanConversion)(n.id, "ChannelNoticesGuard"), {
+  }, p = (0, c.useIsGuildEligibleForClan)(n.id, "ChannelNoticesGuard"), {
     defaultGameId: g
   } = (0, o.useClanPrepilotExperiment)(n, "ChannelNoticesGuard_2"), I = (0, l.useStateFromStoresArray)(y.CHANNEL_NOTICE_STORES, () => y.CHANNEL_NOTICES.filter(e => {
     let {
