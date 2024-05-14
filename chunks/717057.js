@@ -100,7 +100,7 @@ t.default = function(e) {
   }, [N, F, x]);
   let w = null == N ? void 0 : null === (t = N.branding) || void 0 === t ? void 0 : t.primaryColor,
     k = l.useCallback(() => {
-      (0, _.adoptClanIdentity)(s, P, y.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL), F()
+      P && (0, _.adoptClanIdentity)(s, P, y.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL), F()
     }, [s, F, P]),
     H = l.useCallback(() => {
       U(!0)
