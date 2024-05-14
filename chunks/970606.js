@@ -1,61 +1,64 @@
 "use strict";
 n.r(t), n.d(t, {
   getProgressStepAnalyticsName: function() {
-    return A
+    return m
   },
   trackClanAdminInviteClicked: function() {
-    return O
+    return C
   },
   trackClanAdminInviteViewed: function() {
-    return p
+    return O
   },
   trackClanAdoptIdentity: function() {
     return E
   },
   trackClanApplicationAction: function() {
-    return v
+    return D
   },
   trackClanApplicationNavigation: function() {
-    return L
+    return v
   },
   trackClanApplicationViewed: function() {
-    return D
+    return M
   },
   trackClanApplyToJoinViewed: function() {
     return c
   },
   trackClanApplyWaitlist: function() {
-    return M
+    return y
   },
   trackClanDiscoveryCardClicked: function() {
-    return C
+    return R
   },
   trackClanDiscoveryViewed: function() {
-    return h
+    return A
   },
   trackClanProfileViewed: function() {
     return _
   },
   trackClanSendInterviewMessage: function() {
-    return g
+    return L
   },
   trackClanUserInviteClicked: function() {
-    return N
+    return p
   },
   trackClanUserInviteViewed: function() {
-    return m
+    return N
   },
   trackConvertStepViewed: function() {
     return I
   },
   trackConvertSuccessModalConfirm: function() {
-    return S
+    return h
   },
   trackConvertSuccessModalViewed: function() {
-    return f
+    return S
   },
   trackMemberVerificationApplicationViewed: function() {
-    return R
+    return g
+  },
+  trackSettingsSaved: function() {
+    return f
   },
   trackSettingsViewed: function() {
     return T
@@ -137,19 +140,25 @@ function T(e, t) {
 }
 
 function f(e) {
+  o.default.track(u.AnalyticEvents.CLAN_SETTINGS_SAVED, {
+    guild_id: e
+  })
+}
+
+function S(e) {
   o.default.track(u.AnalyticEvents.CLAN_CONVERT_SUCCESS_MODAL_VIEWED, {
     guild_id: e
   })
 }
 
-function S(e, t) {
+function h(e, t) {
   o.default.track(u.AnalyticEvents.CLAN_CONVERT_SUCCESS_MODAL_CONFIRM, {
     guild_id: e,
     enable_tag: t
   })
 }
 
-function h(e, t, n) {
+function A(e, t, n) {
   o.default.track(u.AnalyticEvents.CLAN_DISCOVERY_VIEWED, {
     guild_ids: e,
     section: t,
@@ -159,7 +168,7 @@ function h(e, t, n) {
   })
 }
 
-function A(e) {
+function m(e) {
   switch (e) {
     case l.ClanSetupSteps.GAMES:
       return "games";
@@ -182,7 +191,7 @@ function A(e) {
   }
 }
 
-function m(e) {
+function N(e) {
   let {
     location: t
   } = e;
@@ -191,7 +200,7 @@ function m(e) {
   })
 }
 
-function N(e) {
+function p(e) {
   let {
     location: t
   } = e;
@@ -200,7 +209,7 @@ function N(e) {
   })
 }
 
-function p(e) {
+function O(e) {
   let {
     guildId: t,
     location: n
@@ -211,7 +220,7 @@ function p(e) {
   })
 }
 
-function O(e) {
+function C(e) {
   let {
     guildId: t,
     location: n
@@ -222,7 +231,7 @@ function O(e) {
   })
 }
 
-function C(e) {
+function R(e) {
   let {
     guildId: t,
     isMember: n,
@@ -239,13 +248,13 @@ function C(e) {
   })
 }
 
-function R(e) {
+function g(e) {
   o.default.track(u.AnalyticEvents.MEMBER_VERIFICATION_APPLICATION_VIEWED, {
     guild_id: e
   })
 }
 
-function g(e) {
+function L(e) {
   var t;
   let {
     guildId: n,
@@ -265,7 +274,7 @@ function g(e) {
   })
 }
 
-function L(e) {
+function v(e) {
   let {
     guildId: t,
     source: n,
@@ -278,7 +287,7 @@ function L(e) {
   })
 }
 
-function v(e) {
+function D(e) {
   let {
     guildId: t,
     actionType: n,
@@ -292,7 +301,7 @@ function v(e) {
   })
 }
 
-function D(e) {
+function M(e) {
   let {
     guildId: t,
     applicationUserId: n,
@@ -306,7 +315,7 @@ function D(e) {
   })
 }
 
-function M(e) {
+function y(e) {
   let {
     originGuildId: t,
     tagGuildId: n,

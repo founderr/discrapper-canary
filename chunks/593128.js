@@ -159,7 +159,7 @@ t.default = e => {
     }),
     y = e => (0, E.updateClanSettings)(t, e),
     F = async () => {
-      await (0, E.saveClanSettings)(t, D), s()
+      await (0, E.saveClanSettings)(t, D), (0, _.trackSettingsSaved)(t), s()
     }, H = l.useMemo(() => null != v && Object.values(v).some(e => null != e), [v]), w = H ? (0, a.jsxs)("div", {
       className: A.tooltipContents,
       children: [(0, a.jsx)(c.default, {
