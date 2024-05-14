@@ -74,7 +74,7 @@ function V(e) {
         message: t,
         compact: n
       });
-    case d.AutomodNotificationEmbedTypeKeys.MODAL_BLOCKED:
+    case d.AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED:
       return (0, s.jsx)(K, {
         compact: n
       });
@@ -124,13 +124,13 @@ function K(e) {
       }), (0, s.jsx)(T.Text, {
         variant: "text-md/semibold",
         color: "header-secondary",
-        children: k.default.Messages.GUILD_AUTOMOD_NOTFICATION_MODAL_BLOCKED_TITLE
+        children: k.default.Messages.GUILD_AUTOMOD_NOTFICATION_APP_INTERACTION_BLOCKED_TITLE
       })]
     }),
     content: (0, s.jsx)(T.Text, {
       variant: "text-md/normal",
       color: "text-muted",
-      children: k.default.Messages.GUILD_AUTOMOD_NOTFICATION_MODAL_BLOCKED_DESCRIPTION
+      children: k.default.Messages.GUILD_AUTOMOD_NOTFICATION_APP_INTERACTION_BLOCKED_DESCRIPTION
     })
   })
 }
