@@ -1,13 +1,13 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return v
+    return N
   }
 }), a("47120");
 var n = a("735250"),
   r = a("470079"),
-  s = a("120356"),
-  i = a.n(s),
+  i = a("120356"),
+  s = a.n(i),
   l = a("442837"),
   o = a("481060"),
   c = a("11265"),
@@ -16,9 +16,9 @@ var n = a("735250"),
   f = a("246364"),
   m = a("571728"),
   h = a("755340"),
-  p = a("794358"),
-  E = a("931468"),
-  T = a("449226"),
+  E = a("794358"),
+  T = a("931468"),
+  p = a("449226"),
   C = a("689938"),
   _ = a("212723"),
   x = a("5288");
@@ -26,8 +26,8 @@ var n = a("735250"),
 function g(e) {
   let {
     guild: t,
-    isExpanded: s,
-    emptyFormFields: i,
+    isExpanded: i,
+    emptyFormFields: s,
     hasTermsField: l
   } = e, c = t.hasVerificationGate(), [u, f] = r.useState(c), m = e => {
     e.preventDefault(), e.stopPropagation()
@@ -38,7 +38,7 @@ function g(e) {
       f(u)
     }
   }, g = e => {
-    e && i ? (0, o.openModalLazy)(async () => {
+    e && s ? (0, o.openModalLazy)(async () => {
       let {
         ConfirmModal: t
       } = await Promise.resolve().then(a.bind(a, "481060"));
@@ -74,17 +74,17 @@ function g(e) {
         variant: "text-md/semibold",
         color: "header-primary",
         children: C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_SCREENING
-      }), (s || i && !u) && (0, n.jsx)(o.Text, {
+      }), (i || s && !u) && (0, n.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
         children: C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
-      }), !s && (0, n.jsx)("div", {
+      }), !i && (0, n.jsx)("div", {
         className: x.pillRow,
         children: l && (0, n.jsxs)(o.Text, {
           color: "interactive-normal",
           variant: "text-xs/medium",
           className: _.valuePill,
-          children: [(0, n.jsx)(E.default, {
+          children: [(0, n.jsx)(T.default, {
             width: 16,
             height: 16
           }), C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
@@ -92,7 +92,7 @@ function g(e) {
       })]
     }), (0, n.jsx)("div", {
       className: x.previewAndEnable,
-      children: s || u || !i ? (0, n.jsxs)(n.Fragment, {
+      children: i || u || !s ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(o.Clickable, {
           onMouseDown: m,
           onMouseUp: m,
@@ -102,14 +102,14 @@ function g(e) {
           children: (0, n.jsx)(o.Tooltip, {
             tooltipContentClassName: x.__invalid_tooltip,
             text: C.default.Messages.PREVIEW,
-            children: e => (0, n.jsx)(p.default, {
+            children: e => (0, n.jsx)(E.default, {
               height: 24,
               width: 24,
               className: x.previewIcon,
               ...e
             })
           })
-        }), (0, n.jsx)(T.default, {
+        }), (0, n.jsx)(p.default, {
           checked: u,
           onChange: () => g(!u)
         })]
@@ -123,53 +123,53 @@ function g(e) {
 async function I(e, t) {
   await d.default.updateVerificationForm(e, t)
 }
-async function N(e, t) {
+async function v(e, t) {
   await d.default.updateVerificationFormDescription(e, t)
 }
 
-function v(e) {
-  var t, a, s;
+function N(e) {
+  var t, a, i;
   let {
     guild: o,
-    isClanContext: p = !1,
-    onFieldsSave: E,
-    onDescriptionSave: T,
+    isClanContext: E = !1,
+    onFieldsSave: T,
+    onDescriptionSave: p,
     verificationForm: C
-  } = e, [v, A] = r.useState(p), S = r.useRef(!1), L = r.useCallback(() => {
+  } = e, [N, A] = r.useState(E), S = r.useRef(!1), R = r.useCallback(() => {
     S.current = !0
-  }, []), y = null !== (t = (0, m.useSubmittedGuildJoinRequestTotal)({
+  }, []), M = null !== (t = (0, m.useSubmittedGuildJoinRequestTotal)({
     guildId: o.id
-  })) && void 0 !== t ? t : 0, R = (0, l.useStateFromStores)([u.default], () => null != C ? C : u.default.get(o.id)), b = null !== (a = null == R ? void 0 : R.formFields) && void 0 !== a ? a : [];
+  })) && void 0 !== t ? t : 0, L = (0, l.useStateFromStores)([u.default], () => null != C ? C : u.default.get(o.id)), y = null !== (a = null == L ? void 0 : L.formFields) && void 0 !== a ? a : [];
   r.useEffect(() => {
     d.default.fetchVerificationForm(o.id)
   }, [o.id]);
-  let M = !p;
+  let b = !E;
   return (0, n.jsx)(c.default, {
-    renderHeader: M ? (0, n.jsx)(g, {
+    renderHeader: b ? (0, n.jsx)(g, {
       guild: o,
-      isExpanded: v,
-      emptyFormFields: (null == b ? void 0 : b.length) == null || (null == b ? void 0 : b.length) === 0,
-      hasTermsField: null == b ? void 0 : b.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
+      isExpanded: N,
+      emptyFormFields: (null == y ? void 0 : y.length) == null || (null == y ? void 0 : y.length) === 0,
+      hasTermsField: null == y ? void 0 : y.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
     }) : null,
-    isExpanded: v,
-    onExpand: () => A(!v),
-    disableAnimation: p,
-    disableBackground: !M,
+    isExpanded: N,
+    onExpand: () => A(!N),
+    disableAnimation: E,
+    disableBackground: !b,
     children: (0, n.jsx)("div", {
-      className: i()(_.itemBodyContainer, {
-        [_.noPadding]: !M,
-        [x.rulesScreeningItemsNoBorder]: !M
+      className: s()(_.itemBodyContainer, {
+        [_.noPadding]: !b,
+        [x.rulesScreeningItemsNoBorder]: !b
       }),
-      children: null != R && (0, n.jsx)(h.default, {
+      children: null != L && (0, n.jsx)(h.default, {
         guild: o,
-        submittedGuildJoinRequestsCount: y,
-        formFields: b,
-        onFormFieldUpdate: L,
+        submittedGuildJoinRequestsCount: M,
+        formFields: y,
+        onFormFieldUpdate: R,
         hideVerificationLevelField: !0,
-        isClanContext: p,
-        onFieldsSave: null != E ? E : I,
-        onDescriptionSave: null != T ? T : N,
-        formDescription: null !== (s = null == R ? void 0 : R.description) && void 0 !== s ? s : ""
+        isClanContext: E,
+        onFieldsSave: null != T ? T : I,
+        onDescriptionSave: null != p ? p : v,
+        formDescription: null !== (i = null == L ? void 0 : L.description) && void 0 !== i ? i : ""
       })
     })
   })

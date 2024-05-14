@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i = n("735250"),
-  r = n("470079"),
-  l = n("557533"),
-  s = n.n(l),
+  l = n("470079"),
+  r = n("557533"),
+  s = n.n(r),
   a = n("349361"),
   o = n("418944");
 
@@ -15,14 +15,14 @@ function u(e) {
   let {
     children: t,
     gradientClassName: n,
-    ...l
-  } = e, u = r.useRef(null), [d, c] = r.useState(!0), f = () => {
+    ...r
+  } = e, u = l.useRef(null), [d, c] = l.useState(!0), f = () => {
     var e;
     (null === (e = u.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? c(!1) : c(!0)
   };
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(a.AdvancedScrollerThin, {
-      ...l,
+      ...r,
       fade: !0,
       ref: e => {
         null != e && (u.current = e, f())

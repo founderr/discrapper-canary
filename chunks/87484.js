@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("153832"),
-  l = n("481060"),
+var l = n("153832"),
+  r = n("481060"),
   s = n("976255"),
   a = n("667"),
   o = n("626135"),
@@ -21,43 +21,43 @@ function d(e) {
     onComplete: f,
     analyticsLocations: p,
     analyticsLocationObject: m,
-    contextKey: S
-  } = e, h = !1, g = (0, r.v4)();
-  (0, l.openModalLazy)(async () => {
+    contextKey: h
+  } = e, S = !1, g = (0, l.v4)();
+  (0, r.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("440"), n.e("6416"), n.e("63438"), n.e("62511"), n.e("58600"), n.e("32776"), n.e("95900"), n.e("32747")]).then(n.bind(n, "409600"));
     return n => {
       let {
-        onClose: r,
-        ...l
+        onClose: l,
+        ...r
       } = n;
       return (0, i.jsx)(e, {
-        ...l,
+        ...r,
         loadId: g,
         applicationId: t,
         skuId: d,
         analyticsLocations: p,
         analyticsLocationObject: m,
         onClose: e => {
-          r(), null == c || c(e)
+          l(), null == c || c(e)
         },
         onComplete: e => {
-          h = !0, null == f || f(e)
+          S = !0, null == f || f(e)
         }
       })
     }
   }, {
-    contextKey: S,
+    contextKey: h,
     onCloseCallback: () => {
-      !h && o.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+      !S && o.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
         load_id: g,
         payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
         location: m,
         is_gift: !1,
         application_id: t,
         location_stack: p
-      }), (0, s.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == c || c(h)
+      }), (0, s.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == c || c(S)
     },
     onCloseRequest: u.NOOP
   })

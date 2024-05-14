@@ -90,12 +90,12 @@ function R(e) {
       direction: h.default.Directions.RIGHT
     })
   }));
-  let k = (0, u.useToken)(o.default.colors.INTERACTIVE_MUTED).hex(),
-    B = (0, u.useToken)(o.default.colors.INTERACTIVE_ACTIVE).hex(),
+  let B = (0, u.useToken)(o.default.colors.INTERACTIVE_MUTED).hex(),
+    k = (0, u.useToken)(o.default.colors.INTERACTIVE_ACTIVE).hex(),
     V = S.verified ? (0, i.jsx)(f.default, {
       className: C.connectedAccountVerifiedIcon,
-      color: null != a ? a : k,
-      forcedIconColor: B,
+      color: null != a ? a : B,
+      forcedIconColor: k,
       size: 16,
       tooltipText: b
     }) : null;

@@ -73,7 +73,7 @@ n.r(t), n.d(t, {
     return L
   },
   UPLOAD_LARGE_FILES: function() {
-    return k
+    return B
   },
   VIDEO_FILTER_ASSETS: function() {
     return U
@@ -101,7 +101,7 @@ class _ extends s.default {
       try {
         let n = d[t.premiumType];
         if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let i = B[n];
+        let i = k[n];
         if (null == i) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, " and premium type ").concat(t.premiumType)), !1;
         return i.skuFeatures.includes(e)
       } catch (e) {
@@ -138,11 +138,11 @@ new s.default(i.EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE, a.getUserMax
 let b = new _(i.EntitlementFeatureNames.INCREASED_GUILD_LIMIT),
   G = new _(i.EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH),
   w = new _("increasedVideoUploadQuality"),
-  k = new _("uploadLargeFiles"),
-  B = Object.freeze({
-    [l.PremiumSubscriptionSKUs.TIER_0]: new o.default(l.PremiumSubscriptionSKUs.TIER_0, [c, E, I, m, U, w, k, O]),
-    [l.PremiumSubscriptionSKUs.TIER_1]: new o.default(l.PremiumSubscriptionSKUs.TIER_1, [c, E, S, h, m, R, L, M, w, k, O]),
-    [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, h, A, m, N, C, R, g, L, v, M, y, P, U, b, G, w, k, O, p, D])
+  B = new _("uploadLargeFiles"),
+  k = Object.freeze({
+    [l.PremiumSubscriptionSKUs.TIER_0]: new o.default(l.PremiumSubscriptionSKUs.TIER_0, [c, E, I, m, U, w, B, O]),
+    [l.PremiumSubscriptionSKUs.TIER_1]: new o.default(l.PremiumSubscriptionSKUs.TIER_1, [c, E, S, h, m, R, L, M, w, B, O]),
+    [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, h, A, m, N, C, R, g, L, v, M, y, P, U, b, G, w, B, O, p, D])
   });
 
 function V(e, t) {

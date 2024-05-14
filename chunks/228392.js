@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return A
   },
   trackForumCreateNewPostStarted: function() {
-    return B
+    return k
   },
   trackForumEnableAutomodClicked: function() {
     return b
@@ -73,7 +73,7 @@ n.r(t), n.d(t, {
     return M
   },
   trackForumUpsellModalViewed: function() {
-    return k
+    return B
   }
 });
 var i = n("367907"),
@@ -413,7 +413,7 @@ function w(e) {
   })
 }
 
-function k() {
+function B() {
   i.default.trackWithMetadata(E.AnalyticEvents.OPEN_MODAL, {
     type: "Forum Channel Upsell Modal",
     location: {
@@ -422,7 +422,7 @@ function k() {
   })
 }
 
-function B(e) {
+function k(e) {
   let {
     guildId: t,
     channelId: n

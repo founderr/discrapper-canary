@@ -199,14 +199,14 @@ function w(e) {
   L(t)
 }
 
-function k(e) {
+function B(e) {
   let {
     user: t
   } = e;
   L(t)
 }
 
-function B(e) {
+function k(e) {
   let {
     messages: t
   } = e;
@@ -224,7 +224,7 @@ function x(e) {
   let {
     messages: t
   } = e;
-  return t.forEach(e => B({
+  return t.forEach(e => k({
     messages: e
   })), !1
 }
@@ -667,7 +667,7 @@ class ev extends T.default {
     super({
       CONNECTION_OPEN: y,
       CONNECTION_OPEN_SUPPLEMENTAL: P,
-      UPDATE_CLIENT_PREMIUM_TYPE: k,
+      UPDATE_CLIENT_PREMIUM_TYPE: B,
       OVERLAY_INITIALIZE: b,
       CACHE_LOADED: e => this.handleLoadCache(e),
       USER_UPDATE: G,
@@ -675,10 +675,10 @@ class ev extends T.default {
       PRESENCE_UPDATES: J,
       SEARCH_FINISH: x,
       MOD_VIEW_SEARCH_FINISH: x,
-      LOAD_MESSAGES_SUCCESS: B,
-      LOAD_MESSAGES_AROUND_SUCCESS: B,
-      LOAD_PINNED_MESSAGES_SUCCESS: B,
-      LOAD_RECENT_MENTIONS_SUCCESS: B,
+      LOAD_MESSAGES_SUCCESS: k,
+      LOAD_MESSAGES_AROUND_SUCCESS: k,
+      LOAD_PINNED_MESSAGES_SUCCESS: k,
+      LOAD_RECENT_MENTIONS_SUCCESS: k,
       THREAD_LIST_SYNC: V,
       MESSAGE_CREATE: Z,
       MESSAGE_UPDATE: Z,

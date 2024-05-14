@@ -40,7 +40,7 @@ var i = n("735250"),
 n("987744");
 var w = n("946278");
 
-function k(e) {
+function B(e) {
   let {
     text: t
   } = e, [n, a] = r.useState(!1);
@@ -61,7 +61,7 @@ function k(e) {
     })
   })
 }
-let B = {
+let k = {
   blockQuote: {
     react: (e, t, n) => (0, i.jsxs)("div", {
       className: w.blockquoteContainer,
@@ -105,7 +105,7 @@ let B = {
           className: w.codeContainer,
           children: [O.SUPPORTS_COPY ? (0, i.jsx)("div", {
             className: w.codeActions,
-            children: (0, i.jsx)(k, {
+            children: (0, i.jsx)(B, {
               text: e.content
             })
           }) : null, (0, i.jsx)(d.LazyLibrary, {
@@ -273,7 +273,7 @@ let B = {
 
 function V(e) {
   return {
-    ...B,
+    ...k,
     link: (0, y.default)(e),
     devLink: (0, M.default)(e),
     emoji: function(e) {

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("789978"),
-  l = n("727075"),
+var l = n("789978"),
+  r = n("727075"),
   s = n("777207"),
   a = n("541822"),
   o = n("330711"),
@@ -22,7 +22,7 @@ function d(e) {
     onClose: f,
     tag: p,
     FallbackIcon: m
-  } = e, S = null != d ? {
+  } = e, h = null != d ? {
     "--custom-background-url": "url(".concat(d.toString(), ")")
   } : void 0;
   return (0, i.jsxs)("div", {
@@ -31,17 +31,17 @@ function d(e) {
       className: u.header,
       children: [(0, i.jsx)("div", {
         className: u.headerBackground,
-        style: S
+        style: h
       }), (0, i.jsxs)("div", {
         className: u.headerTop,
         children: [(0, i.jsx)("div", {
           children: p
-        }), (0, i.jsx)(r.FocusRing, {
+        }), (0, i.jsx)(l.FocusRing, {
           children: (0, i.jsx)("button", {
             onClick: f,
             className: u.closeBtn,
             type: "button",
-            children: (0, i.jsx)(l.CloseSmallIcon, {
+            children: (0, i.jsx)(r.CloseSmallIcon, {
               height: 24,
               width: 24,
               color: "var(--header-primary)"

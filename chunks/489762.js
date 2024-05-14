@@ -34,8 +34,8 @@ var i = n("735250"),
   b = n("491173"),
   G = n("515005"),
   w = n("652136"),
-  k = n("981631"),
-  B = n("957825"),
+  B = n("981631"),
+  k = n("957825"),
   V = n("689938"),
   x = n("102554"),
   F = n("239840");
@@ -100,11 +100,11 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           type: u
         } = e, d = {
           ...a.location,
-          object: "" === o ? k.AnalyticsObjects.STICKER_PICKER_VIEW_ALL : k.AnalyticsObjects.STICKER_SEARCH_VIEW_ALL
+          object: "" === o ? B.AnalyticsObjects.STICKER_PICKER_VIEW_ALL : B.AnalyticsObjects.STICKER_SEARCH_VIEW_ALL
         };
         if (null != l && !(0, v.isSendableSticker)(l, i, n)) {
           let e = D.default.getStickerPack(r);
-          null != e && (R.default.track(k.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
+          null != e && (R.default.track(B.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
             sticker_id: l.id,
             sticker_pack_id: r,
             location: d,
@@ -174,9 +174,9 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       let {
         isStickerPack: n = !0
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, i = new Set(t), r = t.has(e);
-      r ? i.delete(e) : i.add(e), R.default.track(k.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+      r ? i.delete(e) : i.add(e), R.default.track(B.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
         location: null == v ? void 0 : v.location,
-        tab: B.ExpressionPickerViewType.STICKER,
+        tab: k.ExpressionPickerViewType.STICKER,
         collapsed: !r,
         sticker_pack_id: n ? e : null
       }), K(i)
@@ -321,8 +321,8 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
     } = (0, c.default)(_.default.STICKER_PICKER), P = (0, T.useExpressionPickerStore)(e => e.searchQuery), U = (0, s.useStateFromStores)([D.default], () => D.default.getPremiumPacks()), {
       renderRow: G,
       renderSection: w,
-      renderSectionFooter: k,
-      sectionFooterHeight: B,
+      renderSectionFooter: B,
+      sectionFooterHeight: k,
       renderSectionHeader: Y,
       sectionHeaderHeight: j
     } = eu({
@@ -406,12 +406,12 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           renderRow: G,
           renderSection: null == l ? w : void 0,
           renderSectionHeader: Y,
-          renderSectionFooter: k,
+          renderSectionFooter: B,
           rowCount: m,
           rowCountBySection: N,
           rowHeight: o > H ? et : en,
           sectionHeaderHeight: j,
-          sectionFooterHeight: B,
+          sectionFooterHeight: k,
           stickyHeaders: !0,
           ref: L
         }), (0, i.jsx)(b.default, {

@@ -56,11 +56,11 @@ let C = (0, E.default)(function(e) {
     b = M.length < D.length,
     G = T && null != _,
     w = r.useRef(null),
-    k = r.useRef(null);
+    B = r.useRef(null);
   r.useLayoutEffect(() => {
     var e, t, n, i, r, a;
     let s = null !== (r = null === (t = w.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0,
-      o = null !== (a = null === (i = k.current) || void 0 === i ? void 0 : null === (n = i.getBoundingClientRect()) || void 0 === n ? void 0 : n.width) && void 0 !== a ? a : 0,
+      o = null !== (a = null === (i = B.current) || void 0 === i ? void 0 : null === (n = i.getBoundingClientRect()) || void 0 === n ? void 0 : n.width) && void 0 !== a ? a : 0,
       l = S - (s > 0 ? s + 4 : 0) - (o > 0 ? o + 4 : 0),
       u = [];
     for (let e = 0; e < 2; e++) {
@@ -77,9 +77,9 @@ let C = (0, E.default)(function(e) {
     }
     U(l), y(e => e.length !== u.length ? u : e)
   }, [S, D, M]);
-  let B = r.useMemo(() => "roles-".concat((0, o.v4)()), []),
+  let k = r.useMemo(() => "roles-".concat((0, o.v4)()), []),
     V = (0, l.default)({
-      id: B,
+      id: k,
       isEnabled: !0,
       scrollToStart: N.NOOP_PROMISE,
       scrollToEnd: N.NOOP_PROMISE,
@@ -126,7 +126,7 @@ let C = (0, E.default)(function(e) {
               children: "+".concat(D.length - M.length)
             })
           }), G && (0, i.jsx)(m.default, {
-            buttonRef: k,
+            buttonRef: B,
             guild: a,
             guildMember: _,
             highestRole: I,

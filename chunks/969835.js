@@ -53,7 +53,7 @@ function v(e) {
     channelId: v,
     messageId: D,
     roleId: M
-  }), k = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser()), B = (0, a.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), V = (0, a.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), x = r.useRef(null), F = (0, T.default)(t.id, n), H = (0, o.default)(x);
+  }), B = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser()), k = (0, a.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), V = (0, a.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), x = r.useRef(null), F = (0, T.default)(t.id, n), H = (0, o.default)(x);
   r.useEffect(() => {
     null == P || P(null == x ? void 0 : x.current)
   }, [x, P]);
@@ -68,7 +68,7 @@ function v(e) {
       ...e
     })
   };
-  return null == k ? null : (0, i.jsx)(u.AnalyticsLocationProvider, {
+  return null == B ? null : (0, i.jsx)(u.AnalyticsLocationProvider, {
     value: G,
     children: (0, i.jsx)(I.UserProfileAnalyticsProvider, {
       layout: "BITE_SIZE_POPOUT",
@@ -119,9 +119,9 @@ function v(e) {
             onOpenProfile: U ? void 0 : Y
           }), (0, i.jsx)(p.default, {
             user: t,
-            currentUser: k,
+            currentUser: B,
             displayProfile: F,
-            guild: B,
+            guild: k,
             onOpenProfile: Y,
             channelId: v,
             onClose: y

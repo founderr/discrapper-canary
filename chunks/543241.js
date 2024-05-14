@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   allowUnicodeEmojiForIntention: function() {
-    return B
+    return k
   },
   dedupeUnicodeEmojis: function() {
     return K
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return z
   },
   getStringForEmojiCategory: function() {
-    return k
+    return B
   },
   trackEmojiFavorited: function() {
     return G
@@ -168,7 +168,7 @@ let L = function(e, t) {
         } else if (i === N.EmojiCategories.CUSTOM) {
           let e = u;
           !r && (e = u.filter(e => e.type === N.EmojiCategoryTypes.GUILD && e.guild.id === n)), t.push(...e)
-        } else if (B(e)) t.push({
+        } else if (k(e)) t.push({
           type: N.EmojiCategoryTypes.UNICODE,
           id: i,
           name: i,
@@ -334,7 +334,7 @@ let w = (e, t) => {
     if (e.type === N.EmojiCategoryTypes.GUILD) return null != t ? t.toString() : "";
     return e.id
   },
-  k = (e, t) => {
+  B = (e, t) => {
     switch (e) {
       case N.EmojiCategories.TOP_GUILD_EMOJI:
         return g.default.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
@@ -366,7 +366,7 @@ let w = (e, t) => {
         return null != t ? t : e
     }
   },
-  B = e => e !== O.EmojiIntention.COMMUNITY_CONTENT_ONLY;
+  k = e => e !== O.EmojiIntention.COMMUNITY_CONTENT_ONLY;
 
 function V(e, t, n) {
   i.useEffect(() => {

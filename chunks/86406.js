@@ -1,24 +1,24 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return h
+    return I
   }
 });
-var n = a("735250");
-a("470079");
-var r = a("249849"),
-  s = a("907561"),
-  i = a("689938"),
-  l = a("408263");
-let o = ["#00ff00"],
-  c = ["#000000", "#ed1c24"],
+var i = n("735250");
+n("470079");
+var r = n("249849"),
+  a = n("907561"),
+  s = n("689938"),
+  o = n("408263");
+let l = ["#00ff00"],
+  u = ["#000000", "#ed1c24"],
   d = [.7],
-  u = [{
+  _ = [{
     base: 1,
     tint: 2
   }],
-  f = [0, .2],
-  m = [{
+  c = [0, .2],
+  E = [{
     base: 1,
     tint: 0
   }, {
@@ -26,75 +26,75 @@ let o = ["#00ff00"],
     tint: 4
   }];
 
-function h(e) {
+function I(e) {
   let {
     width: t,
-    height: a,
-    primaryTintColor: h,
-    secondaryTintColor: p,
-    ...E
+    height: n,
+    primaryTintColor: I,
+    secondaryTintColor: T,
+    ...f
   } = e, {
-    primaryColorsTransformed: T,
-    secondaryColorsTransformed: C
+    primaryColorsTransformed: S,
+    secondaryColorsTransformed: h
   } = (0, r.getTransformedBadgeColors)({
-    primaryBaseColors: o,
-    primaryTintColor: h,
+    primaryBaseColors: l,
+    primaryTintColor: I,
     primaryTintLuminances: d,
-    primaryLuminanceWeights: u,
-    secondaryBaseColors: c,
-    secondaryTintColor: p,
-    secondaryTintLuminances: f,
-    secondaryLuminanceWeights: m
+    primaryLuminanceWeights: _,
+    secondaryBaseColors: u,
+    secondaryTintColor: T,
+    secondaryTintLuminances: c,
+    secondaryLuminanceWeights: E
   }), {
-    styleContent: _,
-    containerId: x
-  } = (0, s.useClanBannerStyleInjection)(T, C);
-  return (0, n.jsxs)("svg", {
-    ...E,
-    "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
+    styleContent: A,
+    containerId: m
+  } = (0, a.useClanBannerStyleInjection)(S, h);
+  return (0, i.jsxs)("svg", {
+    ...f,
+    "aria-label": s.default.Messages.CLAN_LOOK_BANNER,
     width: t,
-    height: a,
-    viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
-    children: [(0, n.jsxs)("defs", {
-      children: [(0, n.jsx)("defs", {
-        children: (0, n.jsxs)("linearGradient", {
+    height: n,
+    viewBox: "0 0 ".concat(a.CLAN_BANNER_WIDTH, " ").concat(a.CLAN_BANNER_HEIGHT),
+    children: [(0, i.jsxs)("defs", {
+      children: [(0, i.jsx)("defs", {
+        children: (0, i.jsxs)("linearGradient", {
           id: "line-gradient",
           x1: "0",
           x2: "1",
           y1: "0",
           y2: "1",
-          children: [(0, n.jsx)("stop", {
-            stopColor: C[1],
+          children: [(0, i.jsx)("stop", {
+            stopColor: h[1],
             offset: "0%"
-          }), (0, n.jsx)("stop", {
-            stopColor: T[0],
+          }), (0, i.jsx)("stop", {
+            stopColor: S[0],
             offset: "50%"
-          }), (0, n.jsx)("stop", {
-            stopColor: T[0],
+          }), (0, i.jsx)("stop", {
+            stopColor: S[0],
             offset: "80%"
-          }), (0, n.jsx)("stop", {
-            stopColor: C[1],
+          }), (0, i.jsx)("stop", {
+            stopColor: h[1],
             offset: "100%"
           })]
         })
-      }), (0, n.jsx)("style", {
-        children: _
+      }), (0, i.jsx)("style", {
+        children: A
       })]
-    }), (0, n.jsx)("use", {
-      href: "".concat(l, "#wrapper-layer"),
-      id: x
-    }), (0, n.jsx)("use", {
-      href: "".concat(l, "#heightmap-lines-0"),
+    }), (0, i.jsx)("use", {
+      href: "".concat(o, "#wrapper-layer"),
+      id: m
+    }), (0, i.jsx)("use", {
+      href: "".concat(o, "#heightmap-lines-0"),
       style: {
         fill: "url(#line-gradient)"
       }
-    }), (0, n.jsx)("use", {
-      href: "".concat(l, "#heightmap-lines-1"),
+    }), (0, i.jsx)("use", {
+      href: "".concat(o, "#heightmap-lines-1"),
       style: {
         fill: "url(#line-gradient)"
       }
-    }), (0, n.jsx)("use", {
-      href: "".concat(l, "#heightmap-lines-2"),
+    }), (0, i.jsx)("use", {
+      href: "".concat(o, "#heightmap-lines-2"),
       style: {
         fill: "url(#line-gradient)"
       }

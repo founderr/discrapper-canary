@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return a
   },
   useCategorySelectHandler: function() {
-    return k
+    return B
   },
   useEmojiGrid: function() {
     return G
@@ -54,8 +54,8 @@ let G = e => {
     emojiPaddingHorizontal: o,
     emojiSpriteSize: l
   } = e, d = (0, E.useStateFromStores)([T.default], () => T.default.categories), I = (0, E.useStateFromStores)([p.default], () => p.default.getGuild(null == t ? void 0 : t.getGuildId()), [t]), h = null == t ? null : t.getGuildId(), A = (0, E.useStateFromStores)([T.default], () => T.default.getDisambiguatedEmojiContext(h), [h]), G = (0, D.useFavoriteEmojis)(h), w = (0, D.useFrequentlyUsedEmojis)(h), {
-    topEmojis: k,
-    newlyAddedEmojis: B
+    topEmojis: B,
+    newlyAddedEmojis: k
   } = (0, y.default)(h, r), V = (0, E.useStateFromStoresArray)([C.default], () => C.default.getFlattenedGuildIds(), []), {
     canCreateExpressions: x
   } = (0, m.useManageResourcePermissions)(I), F = (0, E.useStateFromStores)([R.default], () => R.default.getCurrentUser()), H = (0, L.isPremium)(F), Y = A.getCustomEmoji(), j = e => {
@@ -116,7 +116,7 @@ let G = e => {
                   columnIndex: y && t ? n + 1 : n,
                   visibleRowIndex: f,
                   category: s.type,
-                  subCategory: s.sectionId === P.EmojiCategoryTypes.TOP_GUILD_EMOJI ? (0, D.getEmojiSubCategory)(k, B, null !== (r = null !== (i = e.id) && void 0 !== i ? i : e.uniqueName) && void 0 !== r ? r : e.name) : P.EmojiSubCategory.NONE
+                  subCategory: s.sectionId === P.EmojiCategoryTypes.TOP_GUILD_EMOJI ? (0, D.getEmojiSubCategory)(B, k, null !== (r = null !== (i = e.id) && void 0 !== i ? i : e.uniqueName) && void 0 !== r ? r : e.name) : P.EmojiSubCategory.NONE
                 }
               });
             if (y && t && !d && (r = [{
@@ -196,8 +196,8 @@ let G = e => {
           let {
             allEmojis: t
           } = (0, M.getEmojiHotrail)({
-            topEmojis: k,
-            newlyAddedEmojis: B
+            topEmojis: B,
+            newlyAddedEmojis: k
           });
           t.length > 0 && m(t, {
             categoryId: e,
@@ -251,7 +251,7 @@ let G = e => {
       rowCountBySection: e,
       sectionDescriptors: u
     }
-  }, [A, s, l, o, a, n, t, r, d, I, W, V, B, k, w, G, x, i, H, K, z])
+  }, [A, s, l, o, a, n, t, r, d, I, W, V, k, B, w, G, x, i, H, K, z])
 };
 (l = a || (a = {}))[l.PREMIUM = 0] = "PREMIUM", l[l.ROLE_SUBSCRIPTION = 1] = "ROLE_SUBSCRIPTION";
 let w = e => {
@@ -304,7 +304,7 @@ let w = e => {
       }
     }, [n, t, i, r, o, a, s])
   },
-  k = e => {
+  B = e => {
     let {
       emojiListRef: t
     } = e, n = (0, A.useExpressionPickerStore)(e => e.searchQuery), i = u.useCallback(e => {

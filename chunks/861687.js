@@ -38,8 +38,8 @@ var U = n("736871"),
   b = n("214890"),
   G = n("592125"),
   w = n("131951"),
-  k = n("19780"),
-  B = n("226961"),
+  B = n("19780"),
+  k = n("226961"),
   V = n("936349"),
   x = n("594174"),
   F = n("626135"),
@@ -283,7 +283,7 @@ class el extends _.default {
       connect_count: this._connectCount,
       code: n,
       reason: i
-    }), this._encountered_socket_failure = !0), k.default.getRemoteDisconnectVoiceChannelId() === this.channelId && (null === (l = this._connection) || void 0 === l || l.wasRemoteDisconnected());
+    }), this._encountered_socket_failure = !0), B.default.getRemoteDisconnectVoiceChannelId() === this.channelId && (null === (l = this._connection) || void 0 === l || l.wasRemoteDisconnected());
     let d = "Force Close" !== i;
     if (d) {
       let e = this._backoff.fail(this.reconnect);
@@ -986,7 +986,7 @@ class el extends _.default {
         this.logger.info("Go Live Media sink wants: ".concat(JSON.stringify(e))), this._socket.mediaSinkWants(e), null === (t = this._connection) || void 0 === t || t.setLocalVideoSinkWants(e)
       }
     }));
-    this._remoteVideoSinkWants = Q.DEFAULT_WANTS_FULL, B.default.shouldRecordNextConnection() ? (this._recordingEnabled = !0, f.setShouldRecordNextConnection(!1)) : this._recordingEnabled = !1, this._soundshareStats = new q.default, H.default.addOnlineCallback(this._handleNetworkOnline), H.default.addOfflineCallback(this._handleNetworkOffline), (0, Y.isDesktop)() && (this.powerMonitorListener = W.default.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, w.default.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
+    this._remoteVideoSinkWants = Q.DEFAULT_WANTS_FULL, k.default.shouldRecordNextConnection() ? (this._recordingEnabled = !0, f.setShouldRecordNextConnection(!1)) : this._recordingEnabled = !1, this._soundshareStats = new q.default, H.default.addOnlineCallback(this._handleNetworkOnline), H.default.addOfflineCallback(this._handleNetworkOffline), (0, Y.isDesktop)() && (this.powerMonitorListener = W.default.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, w.default.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
       this._supportedBandwidthEstimationExperiments = e
     })
   }

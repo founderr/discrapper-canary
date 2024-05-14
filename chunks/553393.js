@@ -43,8 +43,8 @@ t.default = function(e) {
     quest: N,
     memberListItemRef: p,
     applicationStream: O,
-    position: k,
-    closePopout: B,
+    position: B,
+    closePopout: k,
     updatePosition: V
   } = e, x = (0, l.useStateFromStores)([m.default], () => {
     var e;
@@ -58,10 +58,10 @@ t.default = function(e) {
   } = (0, I.default)(), [q, J] = r.useState(Z), $ = (0, T.useWindowDispatch)(), ee = (0, s.useListContainerScrollerRef)();
   r.useEffect(() => {
     let e = ee.current;
-    return null == e || e.addEventListener("scroll", B), () => {
-      null == e || e.removeEventListener("scroll", B)
+    return null == e || e.addEventListener("scroll", k), () => {
+      null == e || e.removeEventListener("scroll", k)
     }
-  }, [B, ee]), r.useEffect(() => {
+  }, [k, ee]), r.useEffect(() => {
     let e = ee.current,
       t = p.current;
     if (null == e || null == t) return;
@@ -98,7 +98,7 @@ t.default = function(e) {
     ei = () => {
       $.dispatch(y.ComponentActions.POPOUT_CLOSE)
     },
-    er = "top" === k ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px");
+    er = "top" === B ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px");
   if (null == N || H || Y && !w(O, x)) return null;
   let ea = () => {
       (0, C.trackQuestContentClicked)({

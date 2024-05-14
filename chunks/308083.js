@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return b
   },
   CLAN_BRAND_PALETTE_PRESETS: function() {
-    return k
+    return B
   },
   CLAN_BRAND_PALETTE_PRESETS_BY_NAME: function() {
     return x
   },
   CLAN_BRAND_PRIMARY_DEFAULT: function() {
-    return B
+    return k
   },
   CLAN_BRAND_SECONDARY_DEFAULT: function() {
     return V
@@ -188,7 +188,7 @@ let D = "700136079562375258",
   G = new Set(["Bulgarian", "Chinese (Simplified)", "Chinese (Traditional)", "Croatian", "Czech", "Danish", "Dutch", "English", "Finnish", "French", "German", "Greek", "Hindi", "Hungarian", "Italian", "Japanese", "Korean", "Lithuanian", "Norwegian", "Polish", "Portuguese", "Romanian", "Russian", "Spanish", "Swedish", "Thai", "Turkish", "Ukrainian", "Vietnamese"]),
   w = new Set(["anime", "fanart", "venting", "movie nights", "pirate shows", "skincare", "microwaved food", "board games", "sci-fi books", "sleeping", "brunch pics", "pet pics", "recipes", "speedrunning", "eating on mic", "k-pop", "deafened", "programming", "study buddies", "DnD", "lore dumping", "sleepy cats", "podcasts", "houseplants", "knitting", "tech", "keyboards", "horses", "bad movies", "hiking", "lo-fi chilling", "watch together", "listen alongs", "late night tacos", "drip", "trading", "travel", "cups", "coffee", "F1", "roman history"]);
 (l = r || (r = {}))[l.NIGHT_SKY = 0] = "NIGHT_SKY", l[l.CASTLE = 1] = "CASTLE", l[l.WORLD_MAP = 2] = "WORLD_MAP", l[l.SEA_FOAM = 3] = "SEA_FOAM", l[l.WARP_TUNNEL = 4] = "WARP_TUNNEL", l[l.HOUSE = 5] = "HOUSE", l[l.HEIGHTMAP = 6] = "HEIGHTMAP", l[l.MESH = 7] = "MESH", l[l.SPATTER = 8] = "SPATTER", (u = a || (a = {})).BOULDER = "boulder", u.CASCADE = "cascade", u.THUNDER = "thunder", u.SOUL = "soul", u.MARSH = "marsh", u.VOLCANO = "volcano", u.EARTH = "earth", u.ZEPHYR = "zephyr";
-let k = [{
+let B = [{
     name: "boulder",
     primary: "#8c8d8d",
     secondary: "#d0d0d1"
@@ -221,15 +221,15 @@ let k = [{
     primary: "#4892d5",
     secondary: "#78b6f0"
   }],
-  B = k[0].primary,
-  V = k[0].secondary,
-  x = Object.fromEntries(k.map(e => [e.name, {
+  k = B[0].primary,
+  V = B[0].secondary,
+  x = Object.fromEntries(B.map(e => [e.name, {
     primary: e.primary,
     secondary: e.secondary
   }]));
 
 function F() {
-  return k[Math.floor(Math.random() * k.length)]
+  return B[Math.floor(Math.random() * B.length)]
 }
 
 function H(e) {

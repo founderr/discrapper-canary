@@ -38,8 +38,8 @@ var i = n("735250"),
   b = n("785717"),
   G = n("621853"),
   w = n("888778"),
-  k = n("943217"),
-  B = n("793397"),
+  B = n("943217"),
+  k = n("793397"),
   V = n("841040"),
   x = n("228168"),
   F = n("981631"),
@@ -178,7 +178,7 @@ function X(e) {
   } = (0, w.default)({
     displayProfile: c,
     overrideBannerSrc: E,
-    size: (0, B.getUserBannerSize)(v),
+    size: (0, k.getUserBannerSize)(v),
     canAnimate: M || !en ? $ : et
   }), ea = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), es = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), eo = (0, o.hex2int)((0, I.default)(_.getAvatarURL(L, es), ea, !1)), el = (0, T.default)(null !== (t = null == c ? void 0 : c.primaryColor) && void 0 !== t ? t : eo).hsl, eu = (0, l.useStateFromStores)([G.default], () => G.default.getUserProfile(_.id)), ed = m.default.getChannel(p.default.getChannelId()), {
     appsInGDMEnabled: e_,
@@ -191,14 +191,14 @@ function X(e) {
       section: F.AnalyticsSections.PROFILE_POPOUT
     }
   });
-  return (0, i.jsx)(k.default, {
+  return (0, i.jsx)(B.default, {
     isPremium: q,
     hasThemeColors: null !== (a = null == c ? void 0 : c.canEditThemes) && void 0 !== a && a,
     profileType: v,
     hasBanner: null != ei,
     hasProfileEffect: K,
     children: (0, i.jsxs)("div", {
-      className: s()(j.banner, (0, B.getUserBannerStyles)({
+      className: s()(j.banner, (0, k.getUserBannerStyles)({
         profileType: v,
         user: {
           hasBanner: null != ei,

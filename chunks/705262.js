@@ -39,15 +39,15 @@ var i, r, a = n("735250"),
   b = n("981631"),
   G = n("921944"),
   w = n("474936"),
-  k = n("874893"),
-  B = n("526761"),
+  B = n("874893"),
+  k = n("526761"),
   V = n("231338"),
   x = n("689938"),
   F = n("737679");
 (r = i || (i = {})).EDITOR = "EDITOR", r.SETTINGS = "SETTINGS";
 let H = Object.freeze({
-    EDITOR: B.UserSettingsDelay.SLOW_USER_ACTION,
-    SETTINGS: B.UserSettingsDelay.INFREQUENT_USER_ACTION
+    EDITOR: k.UserSettingsDelay.SLOW_USER_ACTION,
+    SETTINGS: k.UserSettingsDelay.INFREQUENT_USER_ACTION
   }),
   Y = s.createContext({}),
   j = e => {
@@ -151,7 +151,7 @@ z.Basic = e => {
     delay: n
   } = s.useContext(Y), {
     analyticsLocations: i
-  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([R.default, g.default, y.default], () => [R.default.theme, null == y.default.gradientPreset, g.default.useSystemTheme === k.SystemThemeState.ON]), _ = e => {
+  } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([R.default, g.default, y.default], () => [R.default.theme, null == y.default.gradientPreset, g.default.useSystemTheme === B.SystemThemeState.ON]), _ = e => {
     (0, M.resetBackgroundGradientPreset)(), j({
       isPersisted: !0,
       analyticsLocations: i,
@@ -200,7 +200,7 @@ z.Basic = e => {
   } = (0, f.default)(T.default.CLIENT_THEMES_THEME_SELECTOR), [O, R, g] = (0, d.useStateFromStoresArray)([y.default], () => {
     var e;
     return [y.default.isPreview, y.default.isCoachmark, null === (e = y.default.gradientPreset) || void 0 === e ? void 0 : e.id]
-  }), [v, D] = s.useState(!1), [b, B] = s.useState(-1), V = (0, d.useStateFromStores)([I.default], () => I.default.useReducedMotion), {
+  }), [v, D] = s.useState(!1), [b, k] = s.useState(-1), V = (0, d.useStateFromStores)([I.default], () => I.default.useReducedMotion), {
     enabled: H
   } = (0, A.useBrandRefreshPerksExperiment)({
     location: "GradientSelectors"
@@ -221,7 +221,7 @@ z.Basic = e => {
     if (null != n && !(0, h.isDismissibleContentDismissed)(n) && (0, h.markDismissibleContentAsDismissed)(n, {
         dismissAction: G.ContentDismissActionType.TAKE_ACTION
       }), O) {
-      (0, C.setUseSystemTheme)(k.SystemThemeState.OFF);
+      (0, C.setUseSystemTheme)(B.SystemThemeState.OFF);
       return
     }
     if ((0, E.saveClientTheme)({
@@ -229,10 +229,10 @@ z.Basic = e => {
         theme: e.theme
       }, c), null != t) {
       if (v && D(!1), t <= b || 0 === t) {
-        B(0);
+        k(0);
         return
       }
-      B(e => e + 1)
+      k(e => e + 1)
     }
   };
   return (0, a.jsxs)("section", {

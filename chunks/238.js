@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var i, r, l, s, a = n("442837"),
+var i, l, r, s, a = n("442837"),
   o = n("570140"),
   u = n("55563"),
   d = n("551428");
@@ -21,12 +21,12 @@ class p extends(s = a.default.Store) {
     return null !== (t = c[e]) && void 0 !== t ? t : f
   }
 }
-l = "ApplicationStoreDirectoryStore", (r = "displayName") in(i = p) ? Object.defineProperty(i, r, {
-  value: l,
+r = "ApplicationStoreDirectoryStore", (l = "displayName") in(i = p) ? Object.defineProperty(i, l, {
+  value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = l, t.default = new p(o.default, {
+}) : i[l] = r, t.default = new p(o.default, {
   APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: function(e) {
     let {
       applicationId: t,

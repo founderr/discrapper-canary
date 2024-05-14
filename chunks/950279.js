@@ -2,8 +2,8 @@
 a.r(t), a("47120");
 var n = a("735250"),
   r = a("470079"),
-  s = a("442837"),
-  i = a("481060"),
+  i = a("442837"),
+  s = a("481060"),
   l = a("32966"),
   o = a("314897"),
   c = a("77498"),
@@ -16,70 +16,70 @@ t.default = e => {
   let {
     title: t,
     description: a,
-    handleUpdate: p,
-    gameApplicationIds: E,
-    error: T,
+    handleUpdate: E,
+    gameApplicationIds: T,
+    error: p,
     requiredGameId: C
-  } = e, _ = (0, s.useStateFromStores)([o.default], () => o.default.getId()), {
+  } = e, _ = (0, i.useStateFromStores)([o.default], () => o.default.getId()), {
     recentGames: x
   } = (0, l.useUserRecentGames)(_), {
     options: g,
     matchSorterOptions: I
   } = (0, d.useClanSetupGameSelectableSearch)();
   r.useEffect(() => {
-    null != C && !E.has(C) && g.length > 0 && v(C)
+    null != C && !T.has(C) && g.length > 0 && N(C)
   }, [g.length, C]);
-  let N = e => {
-      if (!E.has(e) || e === C) return;
-      let t = new Set(E);
-      t.delete(e), p(t)
+  let v = e => {
+      if (!T.has(e) || e === C) return;
+      let t = new Set(T);
+      t.delete(e), E(t)
     },
-    v = e => {
-      if (E.size === f.MAX_NUM_SELECTED_GAMES || E.has(e) || null == c.default.getGameById(e)) return;
-      let t = new Set(E);
-      t.add(e), p(t)
+    N = e => {
+      if (T.size === f.MAX_NUM_SELECTED_GAMES || T.has(e) || null == c.default.getGameById(e)) return;
+      let t = new Set(T);
+      t.add(e), E(t)
     };
   return (0, n.jsxs)("div", {
     className: h.slideContent,
-    children: [(0, n.jsx)(i.Heading, {
+    children: [(0, n.jsx)(s.Heading, {
       variant: "heading-xxl/medium",
       className: h.title,
       children: t
-    }), (0, n.jsx)(i.Text, {
+    }), (0, n.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: h.subtitle,
       children: a
     }), (0, n.jsx)("div", {
       className: h.inputContainer,
-      children: (0, n.jsx)(i.SearchableSelect, {
+      children: (0, n.jsx)(s.SearchableSelect, {
         wrapperClassName: h.input,
         options: g,
         value: "",
         placeholder: m.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-        onChange: v,
-        isDisabled: E.size === f.MAX_NUM_SELECTED_GAMES,
+        onChange: N,
+        isDisabled: T.size === f.MAX_NUM_SELECTED_GAMES,
         matchSorterOptions: I,
         clearQueryOnSelect: !0
       })
     }), (0, n.jsxs)("div", {
       className: h.contentWithMinHeight,
-      children: [null != T && (0, n.jsx)(i.Text, {
+      children: [null != p && (0, n.jsx)(s.Text, {
         variant: "text-sm/normal",
         color: "status-danger",
         className: h.errorText,
-        children: T
-      }), E.size > 0 && (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(i.Text, {
+        children: p
+      }), T.size > 0 && (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(s.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
           className: h.contentLabel,
           children: m.default.Messages.CLAN_SETUP_SELECTED_GAMES
         }), (0, n.jsx)("div", {
           className: h.selectedSection,
-          children: Array.from(E).map(e => (0, n.jsx)(u.default, {
+          children: Array.from(T).map(e => (0, n.jsx)(u.default, {
             applicationId: e,
-            onClick: e !== C ? N : void 0,
+            onClick: e !== C ? v : void 0,
             imageContainerClassName: e !== C ? h.clickableGame : h.defaultGame,
             selected: !0,
             locked: e === C
@@ -88,7 +88,7 @@ t.default = e => {
           className: h.divider
         })]
       }), null != x && x.length > 0 && (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(i.Text, {
+        children: [(0, n.jsx)(s.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
           className: h.contentLabel,
@@ -97,7 +97,7 @@ t.default = e => {
           className: h.selectedSection,
           children: x.map(e => (0, n.jsx)(u.default, {
             applicationId: e.applicationId,
-            onClick: v,
+            onClick: N,
             imageContainerClassName: h.clickableGame
           }, e.applicationId))
         })]

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("752843"),
-  l = n("790472"),
+var l = n("752843"),
+  r = n("790472"),
   s = n("442837"),
   a = n("481060"),
   o = n("55563"),
@@ -17,56 +17,56 @@ var r = n("752843"),
   f = n("110742"),
   p = n("680005"),
   m = n("938337"),
-  S = n("981631"),
-  h = n("689938"),
+  h = n("981631"),
+  S = n("689938"),
   g = n("399461");
 
 function v(e) {
-  var t, n, v, x;
+  var t, n, v, T;
   let {
-    onClose: T,
-    transitionState: C,
+    onClose: x,
+    transitionState: _,
     skuId: I,
-    appId: E
-  } = e, _ = (0, s.useStateFromStores)([u.default], () => u.default.getForSKU(I), [I]), L = (0, s.useStateFromStores)([o.default], () => o.default.get(I), [I]), j = (0, f.useHasActiveEntitlement)(I);
+    appId: C
+  } = e, E = (0, s.useStateFromStores)([u.default], () => u.default.getForSKU(I), [I]), L = (0, s.useStateFromStores)([o.default], () => o.default.get(I), [I]), N = (0, f.useHasActiveEntitlement)(I);
   if (null == L) return null;
-  let N = null !== (n = L.name) && void 0 !== n ? n : "",
-    R = null !== (v = null == _ ? void 0 : null === (t = _.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== v ? v : void 0,
-    y = (null == _ ? void 0 : _.headerBackground) != null && null !== (x = c.default.toURLSafe((0, d.getAssetURL)(E, _.headerBackground, 256))) && void 0 !== x ? x : void 0,
-    A = L.type === S.SKUTypes.DURABLE && j,
-    b = L.type === S.SKUTypes.DURABLE ? A ? h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
+  let j = null !== (n = L.name) && void 0 !== n ? n : "",
+    R = null !== (v = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== v ? v : void 0,
+    b = (null == E ? void 0 : E.headerBackground) != null && null !== (T = c.default.toURLSafe((0, d.getAssetURL)(C, E.headerBackground, 256))) && void 0 !== T ? T : void 0,
+    y = L.type === h.SKUTypes.DURABLE && N,
+    A = L.type === h.SKUTypes.DURABLE ? y ? S.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : S.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
     {
       price: O
     } = L;
   return null == O ? null : (0, i.jsxs)(a.ModalRoot, {
-    transitionState: C,
+    transitionState: _,
     size: a.ModalSize.DYNAMIC,
     className: g.subDetailsModal,
     children: [(0, i.jsx)(m.TrackedCardDetails, {
-      appId: E,
+      appId: C,
       skuId: L.id,
-      title: N,
+      title: j,
       description: R,
-      imgSrc: y,
-      tag: null != b ? (0, i.jsx)(r.Tag, {
-        text: b
+      imgSrc: b,
+      tag: null != A ? (0, i.jsx)(l.Tag, {
+        text: A
       }) : void 0,
-      onClose: T,
-      FallbackIcon: l.TicketIcon
+      onClose: x,
+      FallbackIcon: r.TicketIcon
     }), (0, i.jsxs)(a.ModalFooter, {
       className: g.footer,
       children: [(0, i.jsx)(a.Button, {
         className: g.backButton,
-        onClick: T,
+        onClick: x,
         look: a.ButtonLooks.BLANK,
         children: (0, i.jsx)(a.Text, {
           color: "header-primary",
           tag: "p",
           variant: "heading-md/semibold",
-          children: h.default.Messages.BACK
+          children: S.default.Messages.BACK
         })
       }), (0, i.jsx)(p.ItemPurchaseButton, {
-        appId: E,
+        appId: C,
         sku: L
       })]
     })]

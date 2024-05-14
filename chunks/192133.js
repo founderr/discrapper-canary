@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return k
   }
 }), n("47120");
 var i = n("735250"),
@@ -38,12 +38,12 @@ var i = n("735250"),
   b = n("186395"),
   G = n("584045"),
   w = n("981631"),
-  k = n("383630");
+  B = n("383630");
 
-function B(e) {
+function k(e) {
   var t, n, a;
   let {
-    activity: B,
+    activity: k,
     customStatusActivity: V,
     user: x,
     displayProfile: F,
@@ -95,7 +95,7 @@ function B(e) {
     user: x,
     nickname: null,
     pronouns: null,
-    className: k.usernameSection,
+    className: B.usernameSection,
     lastSection: !0
   });
   let ed = null !== (t = I.default.getNickname(null == H ? void 0 : H.id, j, x)) && void 0 !== t ? t : T.default.getName(x),
@@ -107,7 +107,7 @@ function B(e) {
     };
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(G.default, {
-      className: k.usernameSection,
+      className: B.usernameSection,
       user: x,
       nickname: ed,
       pronouns: null == F ? void 0 : F.pronouns,
@@ -118,13 +118,13 @@ function B(e) {
       shouldCopyOnClick: X
     }), (0, i.jsxs)(l.HeadingLevel, {
       children: [(0, i.jsx)(v.default, {
-        className: k.customStatusSection,
+        className: B.customStatusSection,
         customStatusActivity: V
       }), (0, i.jsx)(N.default, {
-        className: k.divider
+        className: B.divider
       }), (0, i.jsxs)(l.AdvancedScroller, {
-        className: s()(k.scroller, {
-          [k.scrollerSeparator]: !en
+        className: s()(B.scroller, {
+          [B.scrollerSeparator]: !en
         }),
         onScroll: er,
         ref: et,
@@ -137,14 +137,14 @@ function B(e) {
           guild: H,
           hidePersonalInformation: q
         }), el && (0, i.jsx)(A.default, {
-          className: k.profileMutuals,
+          className: B.profileMutuals,
           user: x,
           onClose: W
         }), (0, i.jsx)(M.default, {
           userId: x.id,
           guildId: null == H ? void 0 : H.id
         }), (0, i.jsx)(O.default, {
-          activity: B,
+          activity: k,
           user: x,
           guild: H,
           channelId: j,

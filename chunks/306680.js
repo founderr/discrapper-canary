@@ -35,8 +35,8 @@ var r, a, s, o = n("512722"),
   b = n("131704"),
   G = n("386438"),
   w = n("70956"),
-  k = n("630388"),
-  B = n("823379"),
+  B = n("630388"),
+  k = n("823379"),
   V = n("931619"),
   x = n("709054"),
   F = n("314897"),
@@ -575,7 +575,7 @@ class ey {
       remote: t,
       persisted: this._persisted,
       channelMissing: null == n,
-      isOld: ek(this, em()),
+      isOld: eB(this, em()),
       validType: null != n && b.ALL_CHANNEL_TYPES.has(n.type),
       readableType: null != n && (0, b.isReadableType)(n.type),
       oldThreadCutoff: em(),
@@ -608,10 +608,10 @@ class ey {
       }
     }(this);
     let t = Y.default.getBasicChannel(this.channelId);
-    if (null == t) return !!ek(this, e) || !1;
+    if (null == t) return !!eB(this, e) || !1;
     return !!b.ALL_CHANNEL_TYPES.has(t.type) && (!(0, b.isReadableType)(t.type) || !(0, b.isPrivate)(t.type) && (!!(b.THREAD_CHANNEL_TYPES.has(t.type) && function(e, t, n) {
       let i = e.guildId;
-      return !(null != i && M.default.isActive(i, t.parent_id, e.channelId)) && ek(e, n)
+      return !(null != i && M.default.isActive(i, t.parent_id, e.channelId)) && eB(e, n)
     }(this, t, e)) || !!(this.mentionCount > 0) && !Q.default.canBasicChannel(eu, t) || !1))
   }
   getAckTimestamp() {
@@ -667,7 +667,7 @@ function eU(e) {
     if ((0, b.isReadableType)(e.type)) {
       var t;
       let n = ey.get(e.id);
-      n.lastMessageId = e.last_message_id, n.lastPinTimestamp = eR(e.last_pin_timestamp), n._isResourceChannel = (0, k.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, er.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL), b.THREAD_CHANNEL_TYPES.has(e.type) && n.syncThreadSettings()
+      n.lastMessageId = e.last_message_id, n.lastPinTimestamp = eR(e.last_pin_timestamp), n._isResourceChannel = (0, B.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, er.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL), b.THREAD_CHANNEL_TYPES.has(e.type) && n.syncThreadSettings()
     }
   })
 }
@@ -730,11 +730,11 @@ function ew(e) {
   return Date.now()
 }
 
-function ek(e, t) {
+function eB(e, t) {
   return !!(e.mentionCount > 0) || !(x.default.compare(e.channelId, t) > 0 || null != e._ackMessageId && x.default.compare(e._ackMessageId, t) > 0 || null != e._lastMessageId && x.default.compare(e._lastMessageId, t) > 0) && !0
 }
 
-function eB(e) {
+function ek(e) {
   if (null != e) {
     let t = ey.get(e);
     if (eM(t)) return t.ack({})
@@ -782,7 +782,7 @@ function eY(e) {
       thread: t
     } = e;
     return t
-  }).filter(B.isNotNullish));
+  }).filter(k.isNotNullish));
   eU(n)
 }
 
@@ -801,7 +801,7 @@ function eW(e) {
 function eK() {
   let e = H.default.getCurrentSidebarChannelId(ed),
     t = !1;
-  return e_ !== e ? (t = eZ(e_), e_ = e) : t = eB(e) || t, t
+  return e_ !== e ? (t = eZ(e_), e_ = e) : t = ek(e) || t, t
 }
 
 function ez(e) {
@@ -979,7 +979,7 @@ let e$ = new eJ(T.default, {
       let r = t[e],
         a = ey.getIfExists(e);
       if (null != a)
-        for (let e of [null === (n = r.new_messages) || void 0 === n ? void 0 : n[0]].concat(null !== (i = r.modified_messages) && void 0 !== i ? i : []).filter(B.isNotNullish)) 1 === x.default.compare(e.id, a.lastMessageId) && (a.lastMessageId = e.id)
+        for (let e of [null === (n = r.new_messages) || void 0 === n ? void 0 : n[0]].concat(null !== (i = r.modified_messages) && void 0 !== i ? i : []).filter(k.isNotNullish)) 1 === x.default.compare(e.id, a.lastMessageId) && (a.lastMessageId = e.id)
     }
   },
   CONNECTION_OPEN: function(e) {
@@ -1072,7 +1072,7 @@ let e$ = new eJ(T.default, {
     } = e, r = ey.get(t);
     r.loadedMessages = !0;
     let a = X.default.getMessages(t);
-    null != a && (i.length > 0 && 1 === x.default.compare(i[0].id, r.ackMessageId) && 0 === r.unreadCount ? r.rebuildChannelState() : a.hasPresent() || a.jumpTargetId === r.ackMessageId ? r.rebuildChannelState() : n && null != r.ackMessageId && a.has(r.ackMessageId, !0) && (r.unreadCount += i.length, null == r.oldestUnreadMessageId && r.rebuildChannelState())), eU(i.map(e => e.thread).filter(B.isNotNullish))
+    null != a && (i.length > 0 && 1 === x.default.compare(i[0].id, r.ackMessageId) && 0 === r.unreadCount ? r.rebuildChannelState() : a.hasPresent() || a.jumpTargetId === r.ackMessageId ? r.rebuildChannelState() : n && null != r.ackMessageId && a.has(r.ackMessageId, !0) && (r.unreadCount += i.length, null == r.oldestUnreadMessageId && r.rebuildChannelState())), eU(i.map(e => e.thread).filter(k.isNotNullish))
   },
   MESSAGE_CREATE: function(e) {
     let t, n, {
@@ -1172,7 +1172,7 @@ let e$ = new eJ(T.default, {
     }
     ez(ed), ez(e_);
     let a = !1;
-    return ed !== t && (a = eZ(ed) || a, a = eZ(e_) || a), (ed === t || (null == i ? void 0 : i.type) != null && en.ChannelTypesSets.GUILD_THREADS_ONLY.has(i.type)) && (a = eB(t) || a), ed === t && (a = eB(n) || a), ed = t, e_ = n, a
+    return ed !== t && (a = eZ(ed) || a, a = eZ(e_) || a), (ed === t || (null == i ? void 0 : i.type) != null && en.ChannelTypesSets.GUILD_THREADS_ONLY.has(i.type)) && (a = ek(t) || a), ed === t && (a = ek(n) || a), ed = t, e_ = n, a
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
@@ -1251,7 +1251,7 @@ let e$ = new eJ(T.default, {
     for (let [n, i] of x.default.entries(eS)) i === e.windowId && (t = function(e, t) {
       if (null == e) return !1;
       let n = ey.get(e);
-      return !t && !n.hasUnread() && (n.oldestUnreadMessageIdStale = !0), eB(e)
+      return !t && !n.hasUnread() && (n.oldestUnreadMessageIdStale = !0), ek(e)
     }(n, e.focused) || t);
     return t
   },
@@ -1259,7 +1259,7 @@ let e$ = new eJ(T.default, {
     let {
       channelId: t
     } = e;
-    return eB(t)
+    return ek(t)
   },
   CURRENT_USER_UPDATE: function() {
     ec = null
@@ -1275,7 +1275,7 @@ let e$ = new eJ(T.default, {
     return eh = null != t, !1
   },
   DRAWER_CLOSE: function() {
-    return eh = !1, eB(ed)
+    return eh = !1, ek(ed)
   },
   BULK_ACK: function(e) {
     var t, n, i;
@@ -1308,7 +1308,7 @@ let e$ = new eJ(T.default, {
       channelId: t,
       windowId: n
     } = e;
-    return eS[t] !== n && (l()(void 0 === eS[t], "handleEnableAutomaticAck: channel already visible in another window"), eS[t] = n, eB(t))
+    return eS[t] !== n && (l()(void 0 === eS[t], "handleEnableAutomaticAck: channel already visible in another window"), eS[t] = n, ek(t))
   },
   DISABLE_AUTOMATIC_ACK: function(e) {
     let {
@@ -1364,7 +1364,7 @@ let e$ = new eJ(T.default, {
     let {
       channelId: t
     } = e;
-    return eB(t)
+    return ek(t)
   },
   CHANNEL_RTC_UPDATE_CHAT_OPEN: function(e) {
     let {
@@ -1448,7 +1448,7 @@ let e$ = new eJ(T.default, {
     let {
       channelId: t
     } = e;
-    return eB(t)
+    return ek(t)
   }
 });
 t.default = e$

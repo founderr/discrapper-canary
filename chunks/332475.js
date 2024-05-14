@@ -60,7 +60,7 @@ class p extends(i = a.PureComponent) {
       ...w
     } = this.props;
     if (1 === E && 1 === A) return null;
-    let k = (0, c.fit)({
+    let B = (0, c.fit)({
         width: E,
         height: A,
         maxWidth: m,
@@ -68,23 +68,23 @@ class p extends(i = a.PureComponent) {
         minWidth: p,
         minHeight: R
       }),
-      B = 0 !== k.width ? k.width / k.height : 1;
+      k = 0 !== B.width ? B.width / B.height : 1;
     "" !== a && i !== f.ImageReadyStates.ERROR ? e = y({
       src: a,
-      size: k,
+      size: B,
       alt: d,
       className: n,
       mediaLayoutType: g
     }) : i !== f.ImageReadyStates.LOADING && (e = (0, r.jsx)(O, {
-      size: k,
+      size: B,
       mediaLayoutType: g,
       alt: d
     })), e = (0, r.jsx)(I.ImageLoadingOverlay, {
       readyState: i,
-      aspectRatio: B,
+      aspectRatio: k,
       placeholder: s,
       placeholderVersion: l,
-      placeholderStyle: C(k, g),
+      placeholderStyle: C(B, g),
       children: e
     });
     let V = null != P ? P() : null;
@@ -109,7 +109,7 @@ class p extends(i = a.PureComponent) {
             width: "100%",
             aspectRatio: "".concat(e.width, " / ").concat(e.height)
           } : e
-        }(k, L, G, g),
+        }(B, L, G, g),
         ...w,
         children: [null != M && (0, r.jsx)("a", {
           tabIndex: -1,

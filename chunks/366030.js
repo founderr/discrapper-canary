@@ -79,7 +79,7 @@ function w(e) {
   })
 }
 
-function k(e) {
+function B(e) {
   let {
     eligibilityStates: t
   } = e, n = (0, T.default)(), r = (0, c.useToken)(d.default.unsafe_rawColors.GREEN_330).hex(), a = l().groupBy(t, e => "".concat(e.connection_type).concat(null != e.application_id ? ":".concat(e.application_id) : ""));
@@ -138,7 +138,7 @@ function k(e) {
   })
 }
 
-function B(e) {
+function k(e) {
   let t, {
     onGetRolesClicked: n,
     onOpenProfile: a,
@@ -172,7 +172,7 @@ function B(e) {
       })
     }), (0, i.jsx)("div", {
       className: G.popoutChecks,
-      children: (0, i.jsx)(k, {
+      children: (0, i.jsx)(B, {
         eligibilityStates: s.flat()
       })
     }), (0, i.jsxs)("div", {
@@ -211,7 +211,7 @@ function V(e) {
         let {
           closePopout: r
         } = e;
-        return null == _ ? (0, i.jsx)(i.Fragment, {}) : (s()(null != d, "visibleConnectionsRole is null"), (0, i.jsx)(B, {
+        return null == _ ? (0, i.jsx)(i.Fragment, {}) : (s()(null != d, "visibleConnectionsRole is null"), (0, i.jsx)(k, {
           eligibilityStates: _,
           userId: t,
           roleId: d.id,

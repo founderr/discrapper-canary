@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("557533"),
-  l = n.n(r),
+var l = n("557533"),
+  r = n.n(l),
   s = n("789978"),
   a = n("790472"),
   o = n("777207"),
@@ -18,7 +18,7 @@ function c(e) {
   let {
     title: t,
     description: n,
-    headerImage: r,
+    headerImage: l,
     onDetails: c,
     onPurchase: f,
     PurchaseButton: p,
@@ -26,17 +26,17 @@ function c(e) {
   } = e;
   return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
-      className: l()(u.wrapper, d.hoverCard),
+      className: r()(u.wrapper, d.hoverCard),
       tabIndex: 0,
       onClick: () => {
         null != c ? c() : null != f && f()
       },
       children: [(0, i.jsx)("div", {
         className: u.cardHeaderImg,
-        style: null != r ? {
-          backgroundImage: null != r ? "url(".concat(r.toString(), ")") : void 0
+        style: null != l ? {
+          backgroundImage: null != l ? "url(".concat(l.toString(), ")") : void 0
         } : void 0,
-        children: null == r && (0, i.jsx)(a.TicketIcon, {
+        children: null == l && (0, i.jsx)(a.TicketIcon, {
           color: "white",
           height: 80,
           width: 80

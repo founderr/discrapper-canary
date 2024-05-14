@@ -38,8 +38,8 @@ var i = n("735250"),
   b = n("835648"),
   G = n("650743"),
   w = n("394740"),
-  k = n("343747"),
-  B = n("981631"),
+  B = n("343747"),
+  k = n("981631"),
   V = n("689938"),
   x = n("819245");
 let F = [8, 0, 8, 8];
@@ -192,7 +192,7 @@ function K(e) {
     analyticsLocations: U
   } = (0, c.default)(), [K, z] = r.useState(null), Z = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), X = (0, o.useStateFromStores)([A.default], () => {
     var e;
-    return A.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : B.EMPTY_STRING_SNOWFLAKE_ID)
+    return A.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : k.EMPTY_STRING_SNOWFLAKE_ID)
   }), Q = (null == X ? void 0 : X.selfDeaf) || (null == X ? void 0 : X.mute) || (null == X ? void 0 : X.suppress), q = (0, T.useExpressionPickerStore)(e => e.searchQuery), J = (0, m.useUID)(), {
     categories: $
   } = (0, y.default)(a, void 0, P), [ee, et] = r.useState([]), en = (0, y.useSearchCategories)($, ee, q), ei = S.SoundboardPickerCollapsedSections.useSetting(), er = r.useMemo(() => new Set(ei), [ei]), ea = null == a, es = L.default.canUseCustomCallSounds(Z), eo = r.useCallback(e => {
@@ -200,7 +200,7 @@ function K(e) {
   }, [er]), el = r.useCallback((e, t) => {
     if (!E && (0, D.canUseSoundboardSound)(Z, e, a, !1)) {
       var n;
-      (0, D.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : B.EMPTY_STRING_SNOWFLAKE_ID, t)
+      (0, D.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : k.EMPTY_STRING_SNOWFLAKE_ID, t)
     } else {
       if ((0, D.canUseSoundboardSound)(Z, e, a)) return;
       N && z(e)
@@ -210,7 +210,7 @@ function K(e) {
       case v.SoundboardSoundItemType.SOUND:
         return null == _ || _(e.item.sound), el(e.item.sound, U);
       case v.SoundboardSoundItemType.ADD_SOUND:
-        return (0, k.default)(e.item.guild.id)
+        return (0, B.default)(e.item.guild.id)
     }
   }, [U, el, _]), ed = r.useCallback((e, t, n, r, s) => (0, i.jsx)(W, {
     descriptors: e,

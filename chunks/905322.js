@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("735250"),
-  r = n("470079"),
-  l = n("777207"),
+  l = n("470079"),
+  r = n("777207"),
   s = n("156440");
 
 function a(e) {
@@ -17,12 +17,12 @@ function a(e) {
     backgroundSrc: o,
     animatedBackgroundSrc: u,
     prefersReducedMotion: d = !0
-  } = e, c = r.useMemo(() => {
+  } = e, c = l.useMemo(() => {
     let e = null != o ? o : a;
     if (null != e) return {
       "--custom-background-url": "url(".concat(e.toString(), ")")
     }
-  }, [o, a]), f = r.useMemo(() => {
+  }, [o, a]), f = l.useMemo(() => {
     if (null == o) return;
     let e = {
       "--custom-background-static": "url(".concat(o.toString())
@@ -43,11 +43,11 @@ function a(e) {
           alt: ""
         })
       }), (0, i.jsxs)("div", {
-        children: [(0, i.jsx)(l.Text, {
+        children: [(0, i.jsx)(r.Text, {
           variant: "heading-xl/bold",
           tag: "div",
           children: t
-        }), null != n && (0, i.jsxs)(l.Text, {
+        }), null != n && (0, i.jsxs)(r.Text, {
           variant: "text-sm/normal",
           children: ["“", n, "”"]
         })]

@@ -3,8 +3,8 @@ a.r(t);
 var n = a("735250");
 a("470079");
 var r = a("442837"),
-  s = a("481060"),
-  i = a("863249"),
+  i = a("481060"),
+  s = a("863249"),
   l = a("944163"),
   o = a("616230"),
   c = a("430824"),
@@ -21,11 +21,11 @@ t.default = e => {
   });
   return null == m ? null : (0, n.jsxs)("div", {
     className: f.slideContent,
-    children: [(0, n.jsx)(s.Heading, {
+    children: [(0, n.jsx)(i.Heading, {
       variant: "heading-xxl/medium",
       className: f.title,
       children: a ? u.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP : u.default.Messages.CLAN_SETUP_APPLICATION_TITLE
-    }), (0, n.jsx)(s.Text, {
+    }), (0, n.jsx)(i.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: f.subtitle,
@@ -35,8 +35,8 @@ t.default = e => {
       children: (0, n.jsx)(o.default, {
         guild: m,
         isClanContext: !0,
-        onFieldsSave: (e, t) => (i.default.updateVerificationFormFieldsLocal(e, t), Promise.resolve()),
-        onDescriptionSave: (e, t) => (i.default.updateVerificationFormDescriptionLocal(e, t), Promise.resolve()),
+        onFieldsSave: (e, t) => (s.default.updateVerificationFormFieldsLocal(e, t), Promise.resolve()),
+        onDescriptionSave: (e, t) => (s.default.updateVerificationFormDescriptionLocal(e, t), Promise.resolve()),
         verificationForm: h
       })
     })]

@@ -2,8 +2,8 @@
 a.r(t), a("47120"), a("653041");
 var n = a("735250"),
   r = a("470079"),
-  s = a("120356"),
-  i = a.n(s),
+  i = a("120356"),
+  s = a.n(i),
   l = a("481060"),
   o = a("90062"),
   c = a("964309"),
@@ -12,11 +12,11 @@ var n = a("735250"),
   f = a("308083"),
   m = a("689938"),
   h = a("661926");
-let p = e => {
+let E = e => {
   let {
     title: t,
     icon: a,
-    traits: s,
+    traits: i,
     interests: o,
     handleUpdate: c
   } = e, d = r.useCallback(e => {
@@ -35,10 +35,10 @@ let p = e => {
       children: t
     }), (0, n.jsx)("div", {
       className: h.interestsCategory,
-      children: s.map(e => {
+      children: i.map(e => {
         let t = o.has(e);
         return (0, n.jsxs)(l.Clickable, {
-          className: i()(h.interestsTag, h.selectableOption, {
+          className: s()(h.interestsTag, h.selectableOption, {
             [h.selectedOption]: t
           }),
           onClick: () => t ? d(e) : u(e),
@@ -58,10 +58,10 @@ t.default = e => {
   let {
     title: t,
     description: a,
-    handleUpdate: s,
-    interests: i,
-    requiredGameId: E,
-    optional: T = !1,
+    handleUpdate: i,
+    interests: s,
+    requiredGameId: T,
+    optional: p = !1,
     hidePreview: C = !1
   } = e, _ = r.useMemo(() => {
     let e = [];
@@ -69,13 +69,13 @@ t.default = e => {
       value: t,
       label: t
     })), e
-  }, []), x = r.useMemo(() => Array.from(i), [i]), g = r.useMemo(() => x.filter(e => f.LANGUAGES_SET.has(e)), [x]), I = r.useCallback(e => {
+  }, []), x = r.useMemo(() => Array.from(s), [s]), g = r.useMemo(() => x.filter(e => f.LANGUAGES_SET.has(e)), [x]), I = r.useCallback(e => {
     let t = x.filter(e => !f.LANGUAGES_SET.has(e));
-    s(new Set([...t, ...e]))
-  }, [s, x]), N = r.useMemo(() => x.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [x]);
+    i(new Set([...t, ...e]))
+  }, [i, x]), v = r.useMemo(() => x.filter(e => f.ALL_TRAITS_SET.has(e) || f.LANGUAGES_SET.has(e)), [x]);
   return (0, n.jsxs)("div", {
     className: h.slideContent,
-    children: [T && (0, n.jsx)(l.Text, {
+    children: [p && (0, n.jsx)(l.Text, {
       variant: "text-sm/medium",
       color: "header-secondary",
       className: h.optionalTag,
@@ -93,24 +93,24 @@ t.default = e => {
       className: h.content,
       children: [(0, n.jsxs)("div", {
         className: h.mainPanelContainer,
-        children: [E === f.VALORANT_ID && (0, n.jsx)(p, {
+        children: [T === f.VALORANT_ID && (0, n.jsx)(E, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
           icon: d.default,
           traits: f.VALORANT_TRAITS,
-          interests: i,
-          handleUpdate: s
-        }), (0, n.jsx)(p, {
+          interests: s,
+          handleUpdate: i
+        }), (0, n.jsx)(E, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
           icon: o.default,
           traits: f.AGE_TRAITS,
-          interests: i,
-          handleUpdate: s
-        }), (0, n.jsx)(p, {
+          interests: s,
+          handleUpdate: i
+        }), (0, n.jsx)(E, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
           icon: c.default,
           traits: f.IDENTITY_TRAITS,
-          interests: i,
-          handleUpdate: s
+          interests: s,
+          handleUpdate: i
         }), (0, n.jsx)(l.Text, {
           className: h.interestsCategoryTitle,
           variant: "text-xs/semibold",
@@ -131,7 +131,7 @@ t.default = e => {
         className: h.fixedWidthSidebar,
         children: x.length > 0 && !C && (0, n.jsx)(u.default, {
           traits: x,
-          traitsToHighlight: N
+          traitsToHighlight: v
         })
       })]
     })]

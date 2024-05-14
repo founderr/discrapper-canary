@@ -55,8 +55,8 @@ let U = r.forwardRef(function(e, t) {
     isDisabled: U = !1,
     maxVisibleItems: G = 7,
     look: w = v.SelectLooks.FILLED,
-    autoFocus: k = !1,
-    popoutPosition: B = "bottom",
+    autoFocus: B = !1,
+    popoutPosition: k = "bottom",
     filter: F = !0,
     debounceTime: H,
     renderOptionLabel: Y = P,
@@ -180,7 +180,7 @@ let U = r.forwardRef(function(e, t) {
         callback: () => requestAnimationFrame(() => e())
       })
     }), []),
-    ek = (0, u.default)({
+    eB = (0, u.default)({
       id: eD,
       defaultFocused: null != eg ? String(eg.value) : void 0,
       scrollToStart: eG,
@@ -191,7 +191,7 @@ let U = r.forwardRef(function(e, t) {
       setFocus: eb,
       disableClickOnSpace: !0
     }),
-    eB = (0, p.default)(ek),
+    ek = (0, p.default)(eB),
     eV = (0, p.default)(eN);
   r.useEffect(() => {
     let e = eV.current,
@@ -205,7 +205,7 @@ let U = r.forwardRef(function(e, t) {
       })
     })
   }, [eE, ep]), r.useEffect(() => {
-    let e = eB.current;
+    let e = ek.current;
     if (eE && !ep) {
       var t;
       let n = ed.current;
@@ -245,11 +245,11 @@ let U = r.forwardRef(function(e, t) {
     ec(null), (!I || T) && ey(!1), eh(!1), et && ef("")
   }, [n, eN, I, T, et, l, a, ey]);
   r.useLayoutEffect(() => {
-    if (k) {
+    if (B) {
       var e;
       null === (e = ed.current) || void 0 === e || e.focus()
     }
-  }, [k]);
+  }, [B]);
   let eF = r.useCallback(() => {
       ef(""), ex(null), ey(!0)
     }, [ex, ey]),
@@ -268,11 +268,11 @@ let U = r.forwardRef(function(e, t) {
     let e = eA.current;
     null == e || e.scrollToTop()
   }, [eT]), r.useEffect(() => {
-    !ep && eS && null !== eT && requestAnimationFrame(() => ek.focusFirstVisibleItem())
+    !ep && eS && null !== eT && requestAnimationFrame(() => eB.focusFirstVisibleItem())
   }, [ep, eS, eT]);
   let ej = I ? x : V;
   return (0, i.jsx)(u.ListNavigatorProvider, {
-    navigator: ek,
+    navigator: eB,
     children: (0, i.jsx)(f.Popout, {
       spacing: 0,
       animation: f.Popout.Animation.NONE,
@@ -305,7 +305,7 @@ let U = r.forwardRef(function(e, t) {
           renderOptionSuffix: K
         })
       },
-      position: B,
+      position: k,
       children: (e, t) => {
         let {
           "aria-expanded": n,
@@ -316,7 +316,7 @@ let U = r.forwardRef(function(e, t) {
         } = t, l = a ? C.default : O.default, {
           ref: u,
           onKeyDown: E
-        } = ek.containerProps;
+        } = eB.containerProps;
         return (0, i.jsxs)("div", {
           ref: em,
           className: s()(R, M.wrapper),
@@ -509,7 +509,7 @@ function b(e) {
           let {
             row: n
           } = e, r = o[n], s = I(r);
-          return (0, i.jsx)(k, {
+          return (0, i.jsx)(B, {
             multi: m,
             "aria-posinset": n,
             "aria-setsize": o.length,
@@ -585,7 +585,7 @@ function w(e) {
   })
 }
 
-function k(e) {
+function B(e) {
   let {
     value: t,
     label: n,
@@ -624,14 +624,14 @@ function k(e) {
     }), " ", null != a && (0, i.jsx)("div", {
       className: M.suffix,
       children: a
-    }), " ", (0, i.jsx)(B, {
+    }), " ", (0, i.jsx)(k, {
       isSelected: l,
       multi: c
     })]
   })
 }
 
-function B(e) {
+function k(e) {
   let {
     isSelected: t,
     multi: n

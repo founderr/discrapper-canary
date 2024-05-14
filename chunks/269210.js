@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("557533"),
-  l = n.n(r),
+var l = n("557533"),
+  r = n.n(l),
   s = n("789978"),
   a = n("368072"),
   o = n("777207"),
@@ -23,20 +23,20 @@ function p(e) {
   let {
     description: t,
     imgSrc: n,
-    PurchaseButton: r,
+    PurchaseButton: l,
     onPurchase: p,
     subscriptionType: m,
-    title: S,
-    onDetails: h,
+    title: h,
+    onDetails: S,
     benefitItems: g,
     benefitsSummary: v
   } = e;
   return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
-      className: l()(c.container, f.hoverCard),
+      className: r()(c.container, f.hoverCard),
       tabIndex: 0,
       onClick: () => {
-        null != h ? h() : null != p && p()
+        null != S ? S() : null != p && p()
       },
       children: [(0, i.jsxs)("div", {
         className: c.card,
@@ -47,7 +47,7 @@ function p(e) {
           children: [(0, i.jsx)(o.Text, {
             tag: "div",
             variant: "heading-lg/semibold",
-            children: S
+            children: h
           }), (0, i.jsx)("div", {
             className: c.image,
             children: null != n ? (0, i.jsx)("img", {
@@ -58,7 +58,7 @@ function p(e) {
               height: 48,
               width: 48
             })
-          }), null != r && (0, i.jsx)(r, {
+          }), null != l && (0, i.jsx)(l, {
             className: c.purchaseBtn,
             onClick: e => {
               e.stopPropagation(), null == p || p()
@@ -109,7 +109,7 @@ function m(e) {
   let {
     icon: t,
     name: n,
-    description: r
+    description: l
   } = e;
   return (0, i.jsxs)("div", {
     className: c.cardBenefit,
@@ -120,10 +120,10 @@ function m(e) {
       children: [(0, i.jsx)(o.Text, {
         variant: "text-md/semibold",
         children: n
-      }), null != r && (0, i.jsx)(o.Text, {
+      }), null != l && (0, i.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "text-muted",
-        children: r
+        children: l
       })]
     })]
   })

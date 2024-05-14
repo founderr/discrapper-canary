@@ -29,8 +29,8 @@ let y = n("952265").hasModalOpen,
   b = "email_cache",
   G = "user_id_cache",
   w = null,
-  k = null,
   B = null,
+  k = null,
   V = null,
   x = null,
   F = null,
@@ -138,10 +138,10 @@ function eI(e) {
 }
 class eT extends(a = E.default.Store) {
   initialize() {
-    w = T.Storage.get(G), k = T.Storage.get(b), ea = T.Storage.get("login_cache"), null == _.getToken() && el(), this.addChangeListener(() => (0, A.setClientState)(w))
+    w = T.Storage.get(G), B = T.Storage.get(b), ea = T.Storage.get("login_cache"), null == _.getToken() && el(), this.addChangeListener(() => (0, A.setClientState)(w))
   }
   getEmail() {
-    return k
+    return B
   }
   getLogin() {
     return ea
@@ -165,7 +165,7 @@ class eT extends(a = E.default.Store) {
     return w
   }
   getSessionId() {
-    return B
+    return k
   }
   getAuthSessionIdHash() {
     return V
@@ -261,7 +261,7 @@ l = "AuthenticationStore", (o = "displayName") in(s = eT) ? Object.definePropert
       analyticsToken: a,
       auth: s
     } = e;
-    eo("handleConnectionOpen called"), g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), B = i, V = r, H = a, w = n.id, k = n.email, void 0 !== s && (K = s.authenticator_types), T.Storage.set(b, n.email), T.Storage.set(G, n.id)
+    eo("handleConnectionOpen called"), g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), k = i, V = r, H = a, w = n.id, B = n.email, void 0 !== s && (K = s.authenticator_types), T.Storage.set(b, n.email), T.Storage.set(G, n.id)
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -271,7 +271,7 @@ l = "AuthenticationStore", (o = "displayName") in(s = eT) ? Object.definePropert
       analyticsToken: r,
       token: a
     } = e;
-    g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), B = i, H = r, e_(a), ed(), w = n.id, T.Storage.set(G, n.id)
+    g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), k = i, H = r, e_(a), ed(), w = n.id, T.Storage.set(G, n.id)
   },
   CONNECTION_CLOSED: function(e) {
     let {
@@ -465,7 +465,7 @@ l = "AuthenticationStore", (o = "displayName") in(s = eT) ? Object.definePropert
     let {
       user: t
     } = e;
-    w = t.id, k = t.email, void 0 !== t.authenticator_types && (K = t.authenticator_types), T.Storage.set(b, t.email), T.Storage.set(G, t.id)
+    w = t.id, B = t.email, void 0 !== t.authenticator_types && (K = t.authenticator_types), T.Storage.set(b, t.email), T.Storage.set(G, t.id)
   },
   AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: eE,
   CLEAR_AUTHENTICATION_ERRORS: function() {

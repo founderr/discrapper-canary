@@ -64,10 +64,10 @@ n.r(t), n.d(t, {
     return Y
   },
   isCollectibleReward: function() {
-    return B
+    return k
   },
   isDismissed: function() {
-    return k
+    return B
   },
   isDismissible: function() {
     return w
@@ -387,18 +387,18 @@ function w(e) {
   return Object.keys(_.DismissibleQuestContentFlags).includes(u.QuestContent[e])
 }
 
-function k(e, t) {
+function B(e, t) {
   if (!w(t)) return !1;
   let n = u.QuestContent[t];
   return (0, s.hasFlag)(e.dismissedQuestContent, _.DismissibleQuestContentFlags[n])
 }
 
-function B(e) {
+function k(e) {
   return e.tag === a.QuestRewardTypes.COLLECTIBLE
 }
 
 function V(e) {
-  return e.rewardsConfig.rewards.some(B)
+  return e.rewardsConfig.rewards.some(k)
 }
 
 function x(e, t) {

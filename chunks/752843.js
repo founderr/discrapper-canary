@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("628028"),
-  l = n("220427"),
+var l = n("628028"),
+  r = n("220427"),
   s = n("777207"),
   a = n("330711"),
   o = n("305967");
@@ -24,10 +24,10 @@ function d(e) {
     type: t
   } = e;
   return (0, i.jsx)(c, {
-    icon: "user" === t ? (0, i.jsx)(l.UserIcon, {
+    icon: "user" === t ? (0, i.jsx)(r.UserIcon, {
       ...u,
       color: "var(--text-positive)"
-    }) : (0, i.jsx)(r.ServerIcon, {
+    }) : (0, i.jsx)(l.ServerIcon, {
       ...u,
       color: "var(--text-brand)"
     }),

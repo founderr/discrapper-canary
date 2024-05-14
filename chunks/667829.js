@@ -188,8 +188,8 @@ class b extends r.Component {
       maxCharacterCount: b,
       allowNewLines: G,
       "aria-describedby": w,
-      "aria-labelledby": k,
-      accessibilityLabel: B
+      "aria-labelledby": B,
+      accessibilityLabel: k
     } = this.props, {
       submitting: V,
       popup: x
@@ -202,7 +202,7 @@ class b extends r.Component {
       id: y,
       placeholder: this.getPlaceholder(),
       required: P,
-      accessibilityLabel: B,
+      accessibilityLabel: k,
       disabled: d || !1,
       submitting: V,
       isEdit: S === p.ChatInputTypes.EDIT,
@@ -235,7 +235,7 @@ class b extends r.Component {
       "aria-activedescendant": null !== (o = x.activeDescendant) && void 0 !== o ? o : void 0,
       "aria-invalid": l.length > b,
       "aria-describedby": w,
-      "aria-labelledby": k,
+      "aria-labelledby": B,
       "aria-autocomplete": "list"
     }, H = A ? (0, i.jsx)(g.default, {
       ref: this.ref,

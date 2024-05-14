@@ -10,8 +10,8 @@ a.r(t), a.d(t, {
 var n = a("735250");
 a("470079");
 var r = a("392711"),
-  s = a("481060"),
-  i = a("246364"),
+  i = a("481060"),
+  s = a("246364"),
   l = a("405545"),
   o = a("382574"),
   c = a("279988"),
@@ -25,64 +25,64 @@ function m(e) {
     formField: u,
     guild: m,
     index: h,
-    isDragEnabled: E,
-    submittedGuildJoinRequestsCount: T,
+    isDragEnabled: T,
+    submittedGuildJoinRequestsCount: p,
     removeFormField: C,
     updateFormField: _,
     updateFormFieldOrder: x,
     canRemove: g,
     actionsLocation: I
-  } = e, N = async () => {
+  } = e, v = async () => {
     await C(h)
-  }, v = async e => {
+  }, N = async e => {
     await _(h, e)
   }, A = async (e, t, a) => {
     await x(e, t, a)
-  }, S = (0, r.uniqueId)(), L = t === h, y = {
+  }, S = (0, r.uniqueId)(), R = t === h, M = {
     key: S,
     index: h,
-    isDragEnabled: E,
-    isDropHovered: L,
+    isDragEnabled: T,
+    isDropHovered: R,
     onEdit: () => {
-      0 === T ? p(u, v, m) : (0, s.openModalLazy)(async () => {
+      0 === p ? E(u, N, m) : (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([a.e("99387"), a.e("74673")]).then(a.bind(a, "394045"));
         return t => (0, n.jsx)(e, {
           ...t,
           guildId: m.id,
-          submittedGuildJoinRequestsCount: T,
-          onConfirm: () => p(u, v, m)
+          submittedGuildJoinRequestsCount: p,
+          onConfirm: () => E(u, N, m)
         })
       })
     },
-    onRemove: N,
+    onRemove: v,
     onDrop: A,
     canRemove: g,
     actionsLocation: I
   };
   switch (u.field_type) {
-    case i.VerificationFormFieldTypes.TERMS:
+    case s.VerificationFormFieldTypes.TERMS:
       return (0, n.jsx)(c.default, {
         channelId: m.rulesChannelId,
         title: f.default.Messages.GUILD_RULES_HEADER,
         formField: u,
-        ...y
+        ...M
       });
-    case i.VerificationFormFieldTypes.PARAGRAPH:
+    case s.VerificationFormFieldTypes.PARAGRAPH:
       return (0, n.jsx)(o.default, {
         formField: u,
-        ...y
+        ...M
       });
-    case i.VerificationFormFieldTypes.TEXT_INPUT:
+    case s.VerificationFormFieldTypes.TEXT_INPUT:
       return (0, n.jsx)(d.default, {
         formField: u,
-        ...y
+        ...M
       });
-    case i.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
       return (0, n.jsx)(l.default, {
         formField: u,
-        ...y
+        ...M
       });
     default:
       return null
@@ -94,8 +94,8 @@ function h(e, t, r) {
     onCloseRequest: u.NOOP
   };
   switch (e) {
-    case i.VerificationFormFieldTypes.TERMS:
-      return (0, s.openModalLazy)(async () => {
+    case s.VerificationFormFieldTypes.TERMS:
+      return (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([a.e("99387"), a.e("5945")]).then(a.bind(a, "92451"));
@@ -106,8 +106,8 @@ function h(e, t, r) {
           guild: r
         })
       }, l);
-    case i.VerificationFormFieldTypes.PARAGRAPH:
-      return (0, s.openModalLazy)(async () => {
+    case s.VerificationFormFieldTypes.PARAGRAPH:
+      return (0, i.openModalLazy)(async () => {
         let {
           ParagraphFormFieldModal: e
         } = await Promise.all([a.e("99387"), a.e("6595")]).then(a.bind(a, "457042"));
@@ -117,8 +117,8 @@ function h(e, t, r) {
           onSave: t
         })
       }, l);
-    case i.VerificationFormFieldTypes.TEXT_INPUT:
-      return (0, s.openModalLazy)(async () => {
+    case s.VerificationFormFieldTypes.TEXT_INPUT:
+      return (0, i.openModalLazy)(async () => {
         let {
           TextInputFormFieldModal: e
         } = await Promise.all([a.e("99387"), a.e("6595")]).then(a.bind(a, "457042"));
@@ -128,8 +128,8 @@ function h(e, t, r) {
           onSave: t
         })
       }, l);
-    case i.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-      return (0, s.openModalLazy)(async () => {
+    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+      return (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([a.e("99387"), a.e("94064")]).then(a.bind(a, "607569"));
@@ -142,25 +142,25 @@ function h(e, t, r) {
   }
 }
 
-function p(e, t, r) {
+function E(e, t, r) {
   let l = {
     onCloseRequest: u.NOOP
   };
   switch (e.field_type) {
-    case i.VerificationFormFieldTypes.TERMS:
-      return (0, s.openModalLazy)(async () => {
+    case s.VerificationFormFieldTypes.TERMS:
+      return (0, i.openModalLazy)(async () => {
         let {
-          default: s
+          default: i
         } = await Promise.all([a.e("99387"), a.e("5945")]).then(a.bind(a, "92451"));
-        return a => (0, n.jsx)(s, {
+        return a => (0, n.jsx)(i, {
           ...a,
           field: e,
           onSave: t,
           guild: r
         })
       }, l);
-    case i.VerificationFormFieldTypes.PARAGRAPH:
-      return (0, s.openModalLazy)(async () => {
+    case s.VerificationFormFieldTypes.PARAGRAPH:
+      return (0, i.openModalLazy)(async () => {
         let {
           ParagraphFormFieldModal: r
         } = await Promise.all([a.e("99387"), a.e("6595")]).then(a.bind(a, "457042"));
@@ -170,8 +170,8 @@ function p(e, t, r) {
           onSave: t
         })
       }, l);
-    case i.VerificationFormFieldTypes.TEXT_INPUT:
-      return (0, s.openModalLazy)(async () => {
+    case s.VerificationFormFieldTypes.TEXT_INPUT:
+      return (0, i.openModalLazy)(async () => {
         let {
           TextInputFormFieldModal: r
         } = await Promise.all([a.e("99387"), a.e("6595")]).then(a.bind(a, "457042"));
@@ -181,8 +181,8 @@ function p(e, t, r) {
           onSave: t
         })
       }, l);
-    case i.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-      return (0, s.openModalLazy)(async () => {
+    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+      return (0, i.openModalLazy)(async () => {
         let {
           default: r
         } = await Promise.all([a.e("99387"), a.e("94064")]).then(a.bind(a, "607569"));
