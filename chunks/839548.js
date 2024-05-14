@@ -54,6 +54,7 @@ class _ extends a.default {
   setCallExperience(e) {}
   setClipRecordUser(e, t, n) {}
   setViewerSideClip(e) {}
+  setRemoteAudioHistory(e) {}
   setClipsKeyFrameInterval(e) {}
   setQualityDecoupling(e) {}
   getStreamParameters() {

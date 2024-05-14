@@ -256,6 +256,11 @@ class L extends E.default {
       enableViewerSideClip: e
     })
   }
+  setRemoteAudioHistory(e) {
+    this.conn.setTransportOptions({
+      remoteAudioHistoryMs: e
+    })
+  }
   setQualityDecoupling(e) {
     this.context === O.MediaEngineContextTypes.STREAM && this.conn.setTransportOptions({
       enableQualityDecoupling: e

@@ -242,6 +242,7 @@ function d(e, t, n, r) {
       decodingNormal: s.decodingNormal,
       decodingPLC: s.decodingPLC,
       decodingPLCCNG: s.decodingPLCCNG,
+      nackCount: s.nackCount,
       accelerateRate: 100 * s.accelerateRate,
       expandRate: 100 * s.expandRate,
       preemptiveExpandRate: 100 * s.preemptiveExpandRate,

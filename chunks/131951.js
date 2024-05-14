@@ -586,7 +586,7 @@ class tN extends(l = f.default.Store) {
       }, {
         autoTrackExposure: !0
       });
-      if (T && eR.setHasFullbandPerformance((0, L.hasPerformanceForKrispFullband)()), (0, R.default)(i)) {
+      if (T && eR.setHasFullbandPerformance((0, L.hasPerformanceForKrispFullband)()), e.setRemoteAudioHistory(0), (0, R.default)(i)) {
         let t = C.default.getSettings();
         e.setExperimentFlag(eS.ExperimentFlags.STREAMER_CLIP, t.clipsEnabled);
         let {
