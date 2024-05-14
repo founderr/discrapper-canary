@@ -44682,15 +44682,18 @@ img.thumbnail__18ece {
 }
 
 .progressStepTooltip__53c08 {
-    background-color: var(--custom-clan-bg) !important;
-    color: var(--custom-clan-text) !important;
     margin-bottom: -4px;
     text-align: center;
     display: flex;
     flex: 1
 }
 
-.progressStepTooltip__53c08>div {
+.progressStepTooltipCustomColors_d247ec {
+    background-color: var(--custom-clan-bg) !important;
+    color: var(--custom-clan-text) !important
+}
+
+.progressStepTooltipCustomColors_d247ec>div {
     border-top-color: var(--custom-clan-bg) !important
 }
 

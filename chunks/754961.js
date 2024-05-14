@@ -54,7 +54,9 @@ function C(e) {
     "aria-label": S ? h.default.Messages.CLAN_SUBMIT_ERROR_TITLE : i,
     shouldShow: null != n,
     tooltipStyle: I,
-    tooltipClassName: _.progressStepTooltip,
+    tooltipClassName: l()(_.progressStepTooltip, {
+      [_.progressStepTooltipCustomColors]: !S && null != I
+    }),
     children: e => (0, a.jsxs)(u.Clickable, {
       ...e,
       "aria-label": h.default.Messages.STEP_NUMBER.format({
