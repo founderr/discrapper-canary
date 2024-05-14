@@ -119,7 +119,7 @@ let y = e => {
       children: Y ? (0, a.jsxs)("div", {
         className: M.questAcceptedContent,
         ref: t,
-        children: [!W && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsxs)("div", {
             className: M.questAcceptedHeader,
             children: [(0, a.jsx)(u.Text, {
