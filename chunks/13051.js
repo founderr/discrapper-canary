@@ -47,7 +47,7 @@ function v(e) {
     B = a.useCallback(() => {
       y(!0), P(s)
     }, [s, P]),
-    H = a.useCallback(() => {
+    k = a.useCallback(() => {
       !s.syncing && (0, u.openModal)(e => {
         let t = 0 === s.expire_behavior ? x.default.Messages.REMOVE_SYNCED_ROLE : x.default.Messages.KICK_FROM_SERVER;
         return (0, n.jsx)(u.ConfirmModal, {
@@ -63,7 +63,7 @@ function v(e) {
         })
       })
     }, [s, j]),
-    k = a.useCallback(() => {
+    H = a.useCallback(() => {
       I.default.syncIntegration(l.id, s.id)
     }, [l.id, s.id]),
     U = a.useCallback(() => {
@@ -240,7 +240,7 @@ function v(e) {
       subscribersText: Y,
       descriptionText: z,
       roleLink: K,
-      onSync: k
+      onSync: H
     }), (0, n.jsx)(u.FormDivider, {
       className: R.midDivider
     }), function(e) {
@@ -361,7 +361,7 @@ function v(e) {
         size: u.Button.Sizes.SMALL,
         color: u.Button.Colors.RED,
         look: u.Button.Looks.LINK,
-        onClick: H,
+        onClick: k,
         children: x.default.Messages.INTEGRATIONS_DISABLE
       })
     })]

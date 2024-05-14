@@ -88,7 +88,7 @@ function N(e) {
     className: d,
     onViewCategory: u,
     onClickGuildWidget: h
-  } = e, [N, T] = a.useState(null), P = [], j = null !== (l = null == r ? void 0 : null === (t = r.directory_entry) || void 0 === t ? void 0 : t.external_urls) && void 0 !== l ? l : [];
+  } = e, [N, T] = a.useState(null), P = [], S = null !== (l = null == r ? void 0 : null === (t = r.directory_entry) || void 0 === t ? void 0 : t.external_urls) && void 0 !== l ? l : [];
   a.useEffect(() => {
     var e;
     if ((null === (e = r.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
@@ -96,7 +96,7 @@ function N(e) {
       T(C.filter(t => e.has(t.value)).map(e => e.localizedName))
     }
   }, [r.directory_entry]);
-  let S = (e, t) => {
+  let j = (e, t) => {
     m.default.track(v.AnalyticEvents.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
       application_id: r.id,
       guild_id: c,
@@ -135,24 +135,24 @@ function N(e) {
     }), (0, i.jsx)(g.default, {
       supportedLanguages: N
     })]
-  })), (null != r.terms_of_service_url || null != r.privacy_policy_url || j.length > 0) && P.push((0, i.jsxs)(i.Fragment, {
+  })), (null != r.terms_of_service_url || null != r.privacy_policy_url || S.length > 0) && P.push((0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(o.Heading, {
       className: E.sectionHeader,
       variant: "eyebrow",
       children: A.default.Messages.APP_DIRECTORY_PROFILE_LINKS_HEADING
-    }), j.map((e, t) => (0, i.jsx)(R, {
+    }), S.map((e, t) => (0, i.jsx)(R, {
       url: e.url,
-      onClick: S,
+      onClick: j,
       children: e.name
     }, t)), null != r.terms_of_service_url ? (0, i.jsx)(x, {
       icon: p.default,
-      onClick: S,
+      onClick: j,
       url: r.terms_of_service_url,
       type: "tos",
       children: A.default.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
     }) : null, null != r.privacy_policy_url ? (0, i.jsx)(x, {
       icon: _.default,
-      onClick: S,
+      onClick: j,
       url: r.privacy_policy_url,
       type: "policy",
       children: A.default.Messages.APP_DIRECTORY_PROFILE_PRIVACY_LINK

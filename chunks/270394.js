@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return H
+    return k
   }
 }), l("47120");
 var n = l("735250"),
@@ -123,7 +123,7 @@ function B(e) {
   })
 }
 
-function H(e) {
+function k(e) {
   let {
     invites: t,
     guild: s,
@@ -150,8 +150,8 @@ function H(e) {
       location: "5c23b0_1"
     })
   }, [N, S, s.id]);
-  let H = (0, g.default)(),
-    k = a.useMemo(() => null == t || I ? [] : u()(t).sortBy(e => {
+  let k = (0, g.default)(),
+    H = a.useMemo(() => null == t || I ? [] : u()(t).sortBy(e => {
       var t, l;
       return (null !== (l = null === (t = e.inviter) || void 0 === t ? void 0 : t.username) && void 0 !== l ? l : "").toLowerCase()
     }).value(), [t, I]),
@@ -205,10 +205,10 @@ function H(e) {
       })
     };
   return (0, n.jsx)(E.ListContentScroller, {
-    sections: [Math.max(1, k.length)],
+    sections: [Math.max(1, H.length)],
     renderSection: () => {
       let e;
-      return e = 0 !== k.length || I ? (0, n.jsxs)(M.default, {
+      return e = 0 !== H.length || I ? (0, n.jsxs)(M.default, {
         children: [(0, n.jsx)(M.default.Child, {
           grow: G.INVITER,
           basis: 0,
@@ -239,7 +239,7 @@ function H(e) {
           })
         })]
       }) : (0, n.jsxs)(R.default, {
-        theme: H,
+        theme: k,
         children: [(0, n.jsx)(R.EmptyStateImage, {
           darkSrc: l("914814"),
           lightSrc: l("370392"),
@@ -291,12 +291,12 @@ function H(e) {
         section: t,
         row: l
       } = e;
-      if (0 === k.length && 0 === l && I) return (0, n.jsx)(m.Spinner, {
+      if (0 === H.length && 0 === l && I) return (0, n.jsx)(m.Spinner, {
         className: y.marginTop20,
         type: m.Spinner.Type.SPINNING_CIRCLE
       }, "spinner");
       if (t > 0) return null;
-      let a = k[l];
+      let a = H[l];
       return null == a ? null : (0, n.jsx)(B, {
         hide: i,
         invite: a,
@@ -304,7 +304,7 @@ function H(e) {
         inviteDisabled: C
       }, a.code)
     },
-    rowHeight: (e, t) => e > 0 ? 0 : 0 === k.length && 0 === t && I ? 62 : null != k[t] ? 62 : 0,
-    sectionHeight: () => 0 !== k.length || I ? 120 : 344
+    rowHeight: (e, t) => e > 0 ? 0 : 0 === H.length && 0 === t && I ? 62 : null != H[t] ? 62 : 0,
+    sectionHeight: () => 0 !== H.length || I ? 120 : 344
   })
 }

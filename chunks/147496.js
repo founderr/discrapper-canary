@@ -28,12 +28,12 @@ function v(e) {
     transitionState: _,
     skuId: I,
     appId: C
-  } = e, E = (0, s.useStateFromStores)([u.default], () => u.default.getForSKU(I), [I]), L = (0, s.useStateFromStores)([o.default], () => o.default.get(I), [I]), N = (0, f.useHasActiveEntitlement)(I);
+  } = e, E = (0, s.useStateFromStores)([u.default], () => u.default.getForSKU(I), [I]), L = (0, s.useStateFromStores)([o.default], () => o.default.get(I), [I]), j = (0, f.useHasActiveEntitlement)(I);
   if (null == L) return null;
-  let j = null !== (n = L.name) && void 0 !== n ? n : "",
+  let N = null !== (n = L.name) && void 0 !== n ? n : "",
     R = null !== (v = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== v ? v : void 0,
     b = (null == E ? void 0 : E.headerBackground) != null && null !== (T = c.default.toURLSafe((0, d.getAssetURL)(C, E.headerBackground, 256))) && void 0 !== T ? T : void 0,
-    y = L.type === h.SKUTypes.DURABLE && N,
+    y = L.type === h.SKUTypes.DURABLE && j,
     A = L.type === h.SKUTypes.DURABLE ? y ? S.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : S.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
     {
       price: O
@@ -45,7 +45,7 @@ function v(e) {
     children: [(0, i.jsx)(m.TrackedCardDetails, {
       appId: C,
       skuId: L.id,
-      title: j,
+      title: N,
       description: R,
       imgSrc: b,
       tag: null != A ? (0, i.jsx)(l.Tag, {

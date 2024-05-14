@@ -39,14 +39,14 @@ function x(e) {
     details: y,
     integration: G,
     buttonText: B,
-    buttonDisabled: H,
-    hasNextSection: k,
+    buttonDisabled: k,
+    hasNextSection: H,
     onButtonClick: U,
     guildId: F,
     isScrolling: W,
     canShowMigrationTooltip: w
   } = e, [V, Y] = a.useState(!1), [K, z] = a.useState(!1);
-  let Z = (x = B, R = H, M = k, v = U, null == x || null == v ? null : M ? (0, n.jsxs)(I.default, {
+  let Z = (x = B, R = k, M = H, v = U, null == x || null == v ? null : M ? (0, n.jsxs)(I.default, {
       align: I.default.Align.CENTER,
       children: [(0, n.jsx)(o.Text, {
         variant: "text-sm/normal",
@@ -150,7 +150,7 @@ function x(e) {
         })
       })]
     });
-  return k ? (0, n.jsx)(o.Clickable, {
+  return H ? (0, n.jsx)(o.Clickable, {
     onClick: () => {
       w && null != F && null != G && h.default.dismissOverviewTooltip(F, G.integration), null == U || U()
     },

@@ -29,23 +29,23 @@ function h(e) {
     disableTooltipPointerEvents: h,
     alwaysWhiteText: b = !0,
     nitroWheelColor: x
-  } = e, T = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), L = (0, n.useStateFromStores)([u.default], () => (0, i.isThemeDark)(u.default.theme)), v = (0, C.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
-  if (null == v) return null;
-  if (v.amount <= 0) return (0, a.jsx)("div", {
+  } = e, v = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), T = (0, n.useStateFromStores)([u.default], () => (0, i.isThemeDark)(u.default.theme)), L = (0, C.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
+  if (null == L) return null;
+  if (L.amount <= 0) return (0, a.jsx)("div", {
     className: r()(g.priceTagsContainer, l),
     children: (0, a.jsx)(m.default, {
       alwaysWhiteText: b,
-      price: v,
+      price: L,
       className: s
     })
   });
   let S = (0, C.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
-    I = !f.default.canUseCollectibles(T);
+    I = !f.default.canUseCollectibles(v);
   return (0, a.jsxs)("div", {
     className: r()(g.priceTagsContainer, l),
     children: [(0, a.jsx)(m.default, {
       alwaysWhiteText: b,
-      price: v,
+      price: L,
       className: r()([s, I ? void 0 : g.strikedPrice])
     }), null != S && (0, a.jsx)(m.default, {
       price: S,
@@ -68,7 +68,7 @@ function h(e) {
             className: r()(g.premiumIcon, {
               [g.fullPrice]: I
             }),
-            color: null != x ? x : b || L ? "white" : "black"
+            color: null != x ? x : b || T ? "white" : "black"
           })
         }
       })

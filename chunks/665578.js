@@ -52,7 +52,7 @@ function v(e) {
       commandLevelPermissions: b,
       defaultMemberPermissions: null == y ? void 0 : y.defaultMemberPermissions
     })
-  }, [p, y, P, b]), H = null != s ? s : t, [k, U] = a.useMemo(() => {
+  }, [p, y, P, b]), k = null != s ? s : t, [H, U] = a.useMemo(() => {
     let e = {},
       t = {};
     for (let [l, n] of Object.entries(v)) n.type === u.ApplicationCommandPermissionType.CHANNEL ? e[l] = n : t[l] = n;
@@ -106,9 +106,9 @@ function v(e) {
       W(e, l);
       return
     }
-    S.editPermissions(t, H, n)
-  }, [t, v, H, F, W]), V = a.useCallback(() => {
-    let e = Object.keys(k);
+    S.editPermissions(t, k, n)
+  }, [t, v, k, F, W]), V = a.useCallback(() => {
+    let e = Object.keys(H);
     return (0, d.openModalLazy)(async () => {
       let {
         default: t
@@ -125,7 +125,7 @@ function v(e) {
         ...l
       })
     })
-  }, [w, k, p, D]), Y = a.useCallback(() => {
+  }, [w, H, p, D]), Y = a.useCallback(() => {
     let e = Object.keys(U);
     return (0, d.openModalLazy)(async () => {
       let {
@@ -161,7 +161,7 @@ function v(e) {
     buttonClick: V,
     buttonText: R.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_ADD_BUTTON,
     noneSelectedText: R.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_NO_ENTRIES,
-    overwrites: k,
+    overwrites: H,
     title: null == s ? R.default.Messages.CHANNELS : R.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_HEADER
   }];
   return (0, n.jsxs)(a.Fragment, {

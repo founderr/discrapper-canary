@@ -30,7 +30,7 @@ function T(e) {
     status: 1
   } : {
     status: 0
-  }), C = s.useRef(null), [E, L] = s.useState(!0), N = () => {
+  }), C = s.useRef(null), [E, L] = s.useState(!0), j = () => {
     var e;
     (null === (e = C.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? L(!1) : L(!0)
   };
@@ -48,7 +48,7 @@ function T(e) {
       })
     }))
   }, [i, _.status]);
-  let j = (0, a.useStateFromStores)([h.default], () => h.default.getStoreLayout(i), [i]);
+  let N = (0, a.useStateFromStores)([h.default], () => h.default.getStoreLayout(i), [i]);
   if (s.useEffect(() => {
       (0, u.fetchStoreDirectoryLayout)(i), (0, c.fetchAllStoreListingsForApplication)(i)
     }, [i]), s.useEffect(() => {
@@ -76,14 +76,14 @@ function T(e) {
       })]
     }), (0, r.jsx)(o.ModalContent, {
       scrollerRef: e => {
-        null != e && (C.current = e, N())
+        null != e && (C.current = e, j())
       },
-      onScroll: N,
+      onScroll: j,
       children: (0, r.jsx)(S.default, {
         app: x,
         subscriptionGroupListing: T,
         guildId: l,
-        storeLayout: j
+        storeLayout: N
       })
     }), (0, r.jsx)("div", {
       className: v.containerScrollGradient,

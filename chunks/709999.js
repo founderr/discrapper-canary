@@ -18,9 +18,9 @@ var a = l("735250"),
   h = l("125988"),
   b = l("333867"),
   x = l("197115"),
-  T = l("300284"),
-  L = l("876917"),
-  v = l("642619"),
+  v = l("300284"),
+  T = l("876917"),
+  L = l("642619"),
   S = l("210887"),
   I = l("594174"),
   N = l("725808"),
@@ -88,8 +88,8 @@ t.default = function(e) {
     isPremiumUser: _ = !1,
     isGiftEasterEggEnabled: A
   } = e, {
-    analyticsLocations: Q
-  } = (0, E.default)(p.default.COLLECTIBLES_SHOP_CARD), q = s.useRef(null), $ = (0, m.default)(q), [J, ee] = s.useState(!1), et = $ || J, el = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [ea] = t.items, {
+    analyticsLocations: q
+  } = (0, E.default)(p.default.COLLECTIBLES_SHOP_CARD), Q = s.useRef(null), $ = (0, m.default)(Q), [J, ee] = s.useState(!1), et = $ || J, el = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [ea] = t.items, {
     avatarDecorationSrc: es,
     eventHandlers: er,
     avatarPlaceholderSrc: en
@@ -106,40 +106,40 @@ t.default = function(e) {
   s.useEffect(() => {
     let {
       current: e
-    } = q;
+    } = Q;
     if (null == e) return;
     let t = () => ee(!0);
     return e.addEventListener("focusin", t), e.blur(), () => {
       e.removeEventListener("focusin", t)
     }
   }, []);
-  let eh = (0, T.default)({
-      analyticsLocations: Q
+  let eh = (0, v.default)({
+      analyticsLocations: q
     }),
     eb = s.useRef(null),
     ex = () => {
       if ((0, C.popLayer)(), eh(), (null == ea ? void 0 : ea.type) === o.CollectiblesItemType.AVATAR_DECORATION) {
         (0, g.openAvatarDecorationModal)({
           initialSelectedDecoration: ea,
-          analyticsLocations: Q
+          analyticsLocations: q
         });
         return
-      }(null == ea ? void 0 : ea.type) === o.CollectiblesItemType.PROFILE_EFFECT && (0, v.openProfileEffectModal)({
+      }(null == ea ? void 0 : ea.type) === o.CollectiblesItemType.PROFILE_EFFECT && (0, L.openProfileEffectModal)({
         initialSelectedEffectId: ea.id,
-        analyticsLocations: Q
+        analyticsLocations: q
       })
     },
-    eT = e => a => {
+    ev = e => a => {
       eb.current = a.currentTarget, (0, H.openCollectiblesShopProductDetailsModal)({
         product: t,
         category: l,
-        analyticsLocations: Q,
+        analyticsLocations: q,
         analyticsSource: e,
         returnRef: eb
       })
     },
-    eL = eT(p.default.COLLECTIBLES_SHOP_CARD),
-    ev = eT(p.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    eT = ev(p.default.COLLECTIBLES_SHOP_CARD),
+    eL = ev(p.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eS = () => (0, a.jsx)("div", {
       className: V.hoverUpsellContainer,
       children: (0, a.jsx)(x.default, {
@@ -152,7 +152,7 @@ t.default = function(e) {
       })
     });
   s.useEffect(() => {
-    null == r || r(q)
+    null == r || r(Q)
   }, [r]);
   let eI = () => null != ed ? (0, a.jsx)(f.Text, {
       variant: "text-md/semibold",
@@ -169,10 +169,10 @@ t.default = function(e) {
       disableTooltipPointerEvents: !0
     }),
     eN = () => eu ? null : ec ? (0, a.jsx)(X, {
-      onClick: ev
+      onClick: eL
     }) : (0, a.jsx)(F.default, {
       product: t,
-      returnRef: q,
+      returnRef: Q,
       isGiftEasterEggEnabled: A,
       disableCustomColor: !0,
       tooltipDelay: 250
@@ -186,14 +186,14 @@ t.default = function(e) {
         onClick: async () => {
           await (0, k.claimPremiumCollectiblesProduct)(t.skuId), (0, U.default)({
             product: t,
-            analyticsLocations: Q
+            analyticsLocations: q
           })
         }
       } : {
         onClick: () => (0, b.default)({
           skuId: t.skuId,
-          analyticsLocations: Q,
-          returnRef: q
+          analyticsLocations: q,
+          returnRef: Q
         })
       };
       return (0, a.jsxs)("div", {
@@ -215,10 +215,10 @@ t.default = function(e) {
     eO = em ? "0 0 15px 1px ".concat(c.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
   return (0, a.jsx)(f.FocusRing, {
     children: (0, a.jsxs)(f.Clickable, {
-      innerRef: q,
+      innerRef: Q,
       className: n()(V.shopCard, (0, i.match)(eE).with(B.ShopCardHoverAnimationVariant.CONTROL, () => V.shopCardDefaultAnimation).with(B.ShopCardHoverAnimationVariant.TRANSFORMATION, () => V.shopCardTransformationAnimation).otherwise(() => void 0)),
       onBlur: () => ee(!1),
-      onClick: eL,
+      onClick: eT,
       style: null != ei ? {
         backgroundColor: em ? "var(--background-floating)" : "var(--background-secondary)",
         borderColor: "var(--chat-border)",
@@ -238,7 +238,7 @@ t.default = function(e) {
         })
       }), (null == ea ? void 0 : ea.type) === o.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)("div", {
         className: V.profileEffectShopPreview,
-        children: (0, a.jsx)(L.default, {
+        children: (0, a.jsx)(T.default, {
           isHovering: et,
           profileEffectId: ea.id,
           isPurchased: null != ed,

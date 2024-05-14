@@ -18,9 +18,9 @@ var a = l("735250"),
   h = l("300284"),
   b = l("876917"),
   x = l("642619"),
-  T = l("594174"),
-  L = l("725808"),
-  v = l("794358"),
+  v = l("594174"),
+  T = l("725808"),
+  L = l("794358"),
   S = l("466111"),
   I = l("26290"),
   N = l("998502"),
@@ -69,7 +69,7 @@ let H = N.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
       innerClassName: w.previewButtonInner,
       "aria-label": F.default.Messages.PREVIEW,
       ...l,
-      children: (0, a.jsx)(v.default, {
+      children: (0, a.jsx)(L.default, {
         width: 24,
         height: 24
       })
@@ -80,23 +80,23 @@ t.default = function(e) {
     product: t,
     category: l,
     onMount: r,
-    isPremiumUser: v = !1,
+    isPremiumUser: L = !1,
     isGiftEasterEggEnabled: N
   } = e, {
     analyticsLocations: z
-  } = (0, C.default)(f.default.COLLECTIBLES_SHOP_CARD), K = s.useRef(null), Y = (0, d.default)(K), [Z, X] = s.useState(!1), Q = Y || Z, q = (0, o.useStateFromStores)([T.default], () => T.default.getCurrentUser()), [$] = t.items, {
+  } = (0, C.default)(f.default.COLLECTIBLES_SHOP_CARD), K = s.useRef(null), Y = (0, d.default)(K), [Z, X] = s.useState(!1), q = Y || Z, Q = (0, o.useStateFromStores)([v.default], () => v.default.getCurrentUser()), [$] = t.items, {
     avatarDecorationSrc: J,
     eventHandlers: ee,
     avatarPlaceholderSrc: et
   } = (0, p.default)({
-    user: q,
+    user: Q,
     avatarDecorationOverride: (null == $ ? void 0 : $.type) === i.CollectiblesItemType.AVATAR_DECORATION ? $ : void 0,
     size: W,
-    animateOnHover: !Q
+    animateOnHover: !q
   }), {
     buttonColors: el,
     backgroundColors: ea
-  } = (0, A.default)(t.styles), es = (0, y.getFormattedPriceForCollectiblesProduct)(t, v, !1), er = (0, y.isPremiumCollectiblesProduct)(t), en = (0, y.isFreeCollectiblesProduct)(t), [ei, eo, eu] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.getPurchase(t.skuId), O.default.isClaiming === t.skuId, null != O.default.isClaiming && O.default.isClaiming !== t.skuId]), ec = s.useRef(null);
+  } = (0, A.default)(t.styles), es = (0, y.getFormattedPriceForCollectiblesProduct)(t, L, !1), er = (0, y.isPremiumCollectiblesProduct)(t), en = (0, y.isFreeCollectiblesProduct)(t), [ei, eo, eu] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.getPurchase(t.skuId), O.default.isClaiming === t.skuId, null != O.default.isClaiming && O.default.isClaiming !== t.skuId]), ec = s.useRef(null);
   s.useEffect(() => {
     let {
       current: e
@@ -176,7 +176,7 @@ t.default = function(e) {
       tooltipDelay: 250
     }),
     eb = () => {
-      if (er && !v && !en) return eE();
+      if (er && !L && !en) return eE();
       let e = null != el ? {
           background: (0, B.getBackgroundGradient)(el, 90),
           color: el.text.toHslString()
@@ -219,7 +219,7 @@ t.default = function(e) {
     ex = null != ea ? {
       background: "".concat((0, B.getBackgroundGradient)(ea), " border-box border-box"),
       borderColor: ea.border.toHslString(),
-      boxShadow: Q ? "0 0 25px 1px ".concat(ea.primary.toHslString()) : "none"
+      boxShadow: q ? "0 0 25px 1px ".concat(ea.primary.toHslString()) : "none"
     } : void 0;
   return (0, a.jsx)(u.FocusRing, {
     children: (0, a.jsxs)(u.Clickable, {
@@ -243,7 +243,7 @@ t.default = function(e) {
       }), (null == $ ? void 0 : $.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)("div", {
         className: w.profileEffectShopPreview,
         children: (0, a.jsx)(b.default, {
-          isHovering: Q,
+          isHovering: q,
           profileEffectId: $.id,
           isPurchased: null != ei
         })
@@ -258,7 +258,7 @@ t.default = function(e) {
         "aria-label": F.default.Messages.USER_SETTINGS_AVATAR
       }), null != ei ? (0, a.jsx)("div", {
         className: (null == $ ? void 0 : $.type) === i.CollectiblesItemType.PROFILE_EFFECT ? w.profileEffectCheckmarkWrapper : w.checkmarkWrapper,
-        children: (0, a.jsx)(L.default, {
+        children: (0, a.jsx)(T.default, {
           width: 38,
           height: 38,
           className: w.checkmark

@@ -40,11 +40,11 @@ var n = l("735250"),
   G = l("790904"),
   B = l("609182");
 
-function H(e, t) {
+function k(e, t) {
   return t.includes(e)
 }
 
-function k(e) {
+function H(e) {
   let {
     query: t,
     setQuery: l
@@ -119,7 +119,7 @@ function U(e) {
       showYoutubeCard: et > 0 || !n && e
     }
   }, [J, $, t, X, ee, et]), ei = Object.values(s).length, er = a.useMemo(() => {
-    let e = ei > 100 ? H : o();
+    let e = ei > 100 ? k : o();
     return Object.values(s).filter(t => {
       var l, n, a;
       let {
@@ -323,7 +323,7 @@ function U(e) {
           variant: "heading-md/semibold",
           className: D.sectionHeader,
           children: b.default.Messages.INTEGRATIONS_APPLICATION_SECTION
-        }), ei > 4 ? (0, n.jsx)(k, {
+        }), ei > 4 ? (0, n.jsx)(H, {
           query: Z,
           setQuery: q
         }) : null, eT]

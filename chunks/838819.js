@@ -18,9 +18,9 @@ var a = l("735250"),
   h = l("906732"),
   b = l("702486"),
   x = l("580747"),
-  T = l("605236"),
-  L = l("984370"),
-  v = l("329067"),
+  v = l("605236"),
+  T = l("984370"),
+  L = l("329067"),
   S = l("51855"),
   I = l("479446"),
   N = l("981632"),
@@ -47,8 +47,8 @@ var a = l("735250"),
   Y = l("752053"),
   Z = l("861746"),
   X = l("508498"),
-  Q = l("38900"),
-  q = l("709999"),
+  q = l("38900"),
+  Q = l("709999"),
   $ = l("373113"),
   J = l("141594"),
   ee = l("302800"),
@@ -73,11 +73,11 @@ function ei(e) {
   } = (0, w.useCollectiblesUnifiedProductCatalogExperiment)({
     location: "CollectiblesShop"
   }), x = K.default;
-  d && C ? x = Z.default : d && (x = q.default);
-  let T = s.useCallback(e => t => {
+  d && C ? x = Z.default : d && (x = Q.default);
+  let v = s.useCallback(e => t => {
       e.skuId === h && (c.current = t.current)
     }, [h, c]),
-    L = (e, t) => 0 === e.length ? null : (0, a.jsxs)("div", {
+    T = (e, t) => 0 === e.length ? null : (0, a.jsxs)("div", {
       children: [null != t ? (0, a.jsx)(f.Text, {
         className: n()(en.itemTypeTitle, {
           [en.itemTypeTitleForTallerCard]: d
@@ -90,7 +90,7 @@ function ei(e) {
       }), (0, a.jsx)("div", {
         className: n()(en.cardsContainer, d ? en.tallerShopCard : en.regularShopCard),
         children: e.map(e => (0, a.jsx)(x, {
-          onMount: T(e),
+          onMount: v(e),
           isPremiumUser: m,
           category: r,
           product: e,
@@ -98,8 +98,8 @@ function ei(e) {
         }, e.skuId))
       })]
     });
-  return b ? L(E) : (0, a.jsxs)(a.Fragment, {
-    children: [L(null !== (t = g[o.CollectiblesItemType.AVATAR_DECORATION]) && void 0 !== t ? t : [], er.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), L(null !== (l = g[o.CollectiblesItemType.PROFILE_EFFECT]) && void 0 !== l ? l : [], er.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE)]
+  return b ? T(E) : (0, a.jsxs)(a.Fragment, {
+    children: [T(null !== (t = g[o.CollectiblesItemType.AVATAR_DECORATION]) && void 0 !== t ? t : [], er.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), T(null !== (l = g[o.CollectiblesItemType.PROFILE_EFFECT]) && void 0 !== l ? l : [], er.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE)]
   })
 }
 
@@ -175,7 +175,7 @@ t.default = function(e) {
     includeUnpublished: G
   });
   (0, _.useReloadProfileEffectWhenConfigsAreMissing)();
-  let q = (0, U.usePurchasedCategoriesSort)(z),
+  let Q = (0, U.usePurchasedCategoriesSort)(z),
     {
       tallerCardsEnabled: ee
     } = (0, F.useCollectiblesShopTallerCardsExperiment)({
@@ -188,7 +188,7 @@ t.default = function(e) {
     }),
     {
       userIsEligible: eu
-    } = (0, v.useLightningCheckoutEligibility)(),
+    } = (0, L.useLightningCheckoutEligibility)(),
     ec = ei.enabled && eu,
     ed = s.useRef(null),
     [ef, eC] = s.useState(!1);
@@ -217,7 +217,7 @@ t.default = function(e) {
     dismissCollectiblesShopTabNewBadge: eg
   } = (0, J.default)();
   s.useEffect(() => {
-    eg(), !(0, T.isDismissibleContentDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK) && (0, T.markDismissibleContentAsDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK, {
+    eg(), !(0, v.isDismissibleContentDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK) && (0, v.markDismissibleContentAsDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK, {
       dismissAction: el.ContentDismissActionType.AUTO_DISMISS,
       forceTrack: !0
     })
@@ -248,7 +248,7 @@ t.default = function(e) {
     eb = (0, E.default)(),
     {
       containerRef: ex,
-      returnRef: eT
+      returnRef: ev
     } = function() {
       let e = s.useRef(null),
         t = s.useRef(null);
@@ -264,12 +264,12 @@ t.default = function(e) {
     children: [(0, a.jsxs)("div", {
       className: en.shop,
       ref: t ? ex : void 0,
-      children: [t ? null : (0, a.jsxs)(L.default, {
+      children: [t ? null : (0, a.jsxs)(T.default, {
         className: n()((0, B.getThemeClass)(eb), en.__invalid_headerBar),
         toolbar: !0,
         children: [(0, a.jsx)(R.default, {
           className: en.logo
-        }), (0, a.jsx)(L.default.Title, {
+        }), (0, a.jsx)(T.default.Title, {
           className: en.title,
           children: er.default.Messages.COLLECTIBLES_SHOP
         })]
@@ -297,12 +297,12 @@ t.default = function(e) {
             }),
             children: [t ? (0, a.jsx)(A.default, {
               title: er.default.Messages.COLLECTIBLES_SHOP,
-              ref: t ? eT : void 0
-            }) : null, K ? (0, a.jsx)(Q.default, {}) : Z ? (0, a.jsx)(Y.default, {
+              ref: t ? ev : void 0
+            }) : null, K ? (0, a.jsx)(q.default, {}) : Z ? (0, a.jsx)(Y.default, {
               onRetry: eh
             }) : (0, a.jsx)("div", {
               className: en.categories,
-              children: q.filter(e => null == e.unpublishedAt || e.unpublishedAt > new Date).filter(e => {
+              children: Q.filter(e => null == e.unpublishedAt || e.unpublishedAt > new Date).filter(e => {
                 let {
                   products: t
                 } = e;
