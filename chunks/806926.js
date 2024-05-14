@@ -30,7 +30,6 @@ function S(e) {
     children: [(0, l.jsxs)("div", {
       className: f.usernameBadgeList,
       children: [(0, l.jsx)(u.default, {
-        className: f.username,
         user: t,
         guildId: null == s ? void 0 : s.guildId,
         pronouns: null == s ? void 0 : s.pronouns,
