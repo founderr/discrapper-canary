@@ -184,7 +184,7 @@ let R = {
   }
 };
 
-function L(e) {
+function O(e) {
   var t, n, o, d;
   let {
     item: c,
@@ -244,7 +244,7 @@ function L(e) {
   })
 }
 
-function O(e) {
+function L(e) {
   return e.currentStep.toString()
 }
 
@@ -264,7 +264,7 @@ function M(e) {
       guildId: t
     }], [n, t]),
     u = s.useMemo(() => null == l.current || n === l.current ? 0 : l.current < n ? 1 : -1, [n]),
-    d = s.useCallback((e, t, n, s) => (0, a.jsx)(L, {
+    d = s.useCallback((e, t, n, s) => (0, a.jsx)(O, {
       item: t,
       direction: u,
       state: n,
@@ -275,7 +275,7 @@ function M(e) {
     children: (0, a.jsx)(r.TransitionGroup, {
       items: o,
       renderItem: d,
-      getItemKey: O
+      getItemKey: L
     })
   })
 }

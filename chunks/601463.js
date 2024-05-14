@@ -39,7 +39,7 @@ function C(e) {
       transform: "translateX(0px)"
     }],
     loop: !0
-  })), L = (0, l.useSpring)({
+  })), O = (0, l.useSpring)({
     from: {
       opacity: 0
     },
@@ -57,7 +57,7 @@ function C(e) {
       }
     }))
   }, [v, n, R]);
-  let O = s.useCallback(() => {
+  let L = s.useCallback(() => {
       var e;
       null === (e = T.current) || void 0 === e || e.scrollIntoView({
         behavior: "smooth"
@@ -101,7 +101,7 @@ function C(e) {
           children: (0, a.jsx)(d.default, {
             className: h.signButton,
             size: r.Button.Sizes.SMALL,
-            onClick: O,
+            onClick: L,
             themeColor: g,
             children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
           })
@@ -118,7 +118,7 @@ function C(e) {
       signed: n,
       setSigned: C,
       signRef: T,
-      animatedTextStyle: L
+      animatedTextStyle: O
     })]
   })
 }

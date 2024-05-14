@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryAdminContainer: function() {
-    return L
+    return O
   },
   ClanDiscoveryUserContainer: function() {
     return R
@@ -97,7 +97,7 @@ function R() {
   }
 }
 
-function L() {
+function O() {
   let e = (0, S.useClanDiscoveryUIStore)(e => e.game, r.default),
     t = (0, u.useStateFromStoresArray)([_.default], () => Object.values(_.default.getGuilds())),
     {

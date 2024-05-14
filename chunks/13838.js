@@ -53,7 +53,7 @@ function R(e) {
     errorCode: T.RPCErrors.INVALID_CHANNEL
   }, "Invalid channel id: ".concat(t))
 }
-let L = {
+let O = {
   [T.RPCEvents.GUILD_STATUS]: {
     scope: T.OAuth2Scopes.RPC,
     validation: e => (0, S.default)(e).required().keys({
@@ -375,4 +375,4 @@ let L = {
     }
   }
 };
-t.default = L
+t.default = O

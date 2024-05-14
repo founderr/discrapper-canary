@@ -28,8 +28,8 @@ var a = n("735250"),
   N = n("292140"),
   v = n("525296"),
   R = n("981631"),
-  L = n("674563"),
-  O = n("689938"),
+  O = n("674563"),
+  L = n("689938"),
   M = n("676563");
 let y = 15 * p.default.Millis.MINUTE,
   P = (0, v.default)(function(e) {
@@ -53,7 +53,7 @@ let y = 15 * p.default.Millis.MINUTE,
     } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, g = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
-        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.ApplicationTypes.GAME
+        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === O.ApplicationTypes.GAME
       }).map(e => e.game.name);
       S.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
         num_users: _,
@@ -139,12 +139,12 @@ function D() {
     children: [(0, a.jsx)(d.Heading, {
       variant: "heading-md/semibold",
       className: M.emptyHeader,
-      children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
+      children: L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
     }), (0, a.jsx)(d.Text, {
       color: "none",
       className: M.emptyText,
       variant: "text-sm/normal",
-      children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
+      children: L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
     })]
   }), (0, a.jsx)(a.Fragment, {
     children: f

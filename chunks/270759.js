@@ -24,8 +24,8 @@ var a = n("735250"),
   N = n("26290"),
   v = n("792125"),
   R = n("666286"),
-  L = n("596957"),
-  O = n("981631"),
+  O = n("596957"),
+  L = n("981631"),
   M = n("723359"),
   y = n("689938"),
   P = n("915128");
@@ -47,10 +47,10 @@ t.default = function(e) {
       type: "AGE_GATE_MODAL_OPEN",
       source: M.AgeGateSource.DEEP_LINK_PROMPT
     }).then(() => {
-      l.replace(O.Routes.ME)
+      l.replace(L.Routes.ME)
     })
   }, [l, n]), s.useEffect(() => {
-    f.setHomeLink(O.Routes.FRIENDS), (0, p.trackAppUIViewed)("friends")
+    f.setHomeLink(L.Routes.FRIENDS), (0, p.trackAppUIViewed)("friends")
   }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
   }, [t]);
@@ -88,15 +88,15 @@ t.default = function(e) {
         },
         className: P.tabBar,
         children: [(0, a.jsx)(d.TabBar.Item, {
-          id: O.FriendsSections.ONLINE,
+          id: L.FriendsSections.ONLINE,
           className: P.item,
           children: y.default.Messages.FRIENDS_SECTION_ONLINE
         }), (0, a.jsx)(d.TabBar.Item, {
-          id: O.FriendsSections.ALL,
+          id: L.FriendsSections.ALL,
           className: P.item,
           children: y.default.Messages.FRIENDS_SECTION_ALL
         }), (0, a.jsxs)(d.TabBar.Item, {
-          id: O.FriendsSections.PENDING,
+          id: L.FriendsSections.PENDING,
           className: P.item,
           "aria-label": y.default.Messages.FRIENDS_SECTION_PENDING,
           children: [y.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, a.jsx)(N.NumberBadge, {
@@ -107,7 +107,7 @@ t.default = function(e) {
             }
           }) : null]
         }), U > 0 ? (0, a.jsxs)(d.TabBar.Item, {
-          id: O.FriendsSections.SUGGESTIONS,
+          id: L.FriendsSections.SUGGESTIONS,
           className: P.item,
           "aria-label": y.default.Messages.FRIENDS_SECTION_SUGGESTIONS,
           children: [y.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(N.NumberBadge, {
@@ -118,13 +118,13 @@ t.default = function(e) {
             }
           })]
         }) : null, (0, a.jsx)(d.TabBar.Item, {
-          id: O.FriendsSections.BLOCKED,
+          id: L.FriendsSections.BLOCKED,
           className: P.item,
           children: y.default.Messages.BLOCKED
         }), (0, a.jsx)(d.TabBar.Item, {
           "aria-label": y.default.Messages.FRIENDS_SECTION_ADD_FRIEND,
           className: i()(P.item, P.addFriend),
-          id: O.FriendsSections.ADD_FRIEND,
+          id: L.FriendsSections.ADD_FRIEND,
           children: (0, a.jsx)("span", {
             children: y.default.Messages.FRIENDS_SECTION_ADD_FRIEND
           })
@@ -136,7 +136,7 @@ t.default = function(e) {
         id: D,
         className: P.peopleColumn,
         "aria-labelledby": G,
-        children: D === O.FriendsSections.ADD_FRIEND ? (0, a.jsx)(R.default, {}) : (0, a.jsx)(L.default, {
+        children: D === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(R.default, {}) : (0, a.jsx)(O.default, {
           titleId: G,
           sectionFilter: D
         })

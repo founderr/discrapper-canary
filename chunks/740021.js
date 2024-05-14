@@ -36,8 +36,8 @@ function U(e) {
     channelId: N,
     onClose: C
   } = e, {
-    theme: h
-  } = (0, E.useUserProfileThemeContext)(), p = (0, c.default)(t.id, U), {
+    theme: p
+  } = (0, E.useUserProfileThemeContext)(), h = (0, c.default)(t.id, U), {
     avatarSrc: R,
     eventHandlers: M,
     avatarDecorationSrc: P
@@ -65,17 +65,17 @@ function U(e) {
           size: T.AvatarSizes.SIZE_120,
           className: A.avatar,
           status: j,
-          statusBackdropColor: (0, n.getStatusBackdropColor)(h),
+          statusBackdropColor: (0, n.getStatusBackdropColor)(p),
           "aria-label": t.username,
           isMobile: L,
           statusTooltip: !0,
           statusTooltipDelay: _.USER_PROFILE_TOOLTIP_DELAY
         }), (0, l.jsxs)("div", {
           className: A.buttons,
-          children: [p && (0, l.jsx)(v.default, {
+          children: [h && (0, l.jsx)(v.default, {
             user: t,
             onClose: C
-          }), !p && (0, l.jsx)(I.default, {
+          }), !h && (0, l.jsx)(I.default, {
             user: t,
             guildId: U,
             onClose: C

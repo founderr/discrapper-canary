@@ -27,8 +27,8 @@ var a, s = n("735250"),
   N = n("880008"),
   v = n("466111"),
   R = n("931003"),
-  L = n("626135"),
-  O = n("780570"),
+  O = n("626135"),
+  L = n("780570"),
   M = n("624138"),
   y = n("645818"),
   P = n("981631"),
@@ -152,7 +152,7 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
             }),
             libraryApplication: e.libraryApplication
           })]
-        }), (0, O.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(m.default, {
+        }), (0, L.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, s.jsx)(m.default, {
           analyticsListSort: (a = t.sortKey, i = t.sortDirection, "".concat(G[a], " ").concat(i === P.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
           analyticsListIndex: n,
           source: P.AnalyticsLocations.APPLICATION_LIBRARY,
@@ -272,7 +272,7 @@ class F extends(a = l.PureComponent) {
       }
       e.num_applications_total++
     }
-    L.default.track(P.AnalyticEvents.LIBRARY_VIEWED, {
+    O.default.track(P.AnalyticEvents.LIBRARY_VIEWED, {
       ...e,
       load_id: t.loadId
     })
@@ -396,7 +396,7 @@ class F extends(a = l.PureComponent) {
 }
 
 function H(e) {
-  let t = l.useContext(L.AnalyticsContext),
+  let t = l.useContext(O.AnalyticsContext),
     n = (0, o.useLocation)(),
     {
       applicationViewItems: a,

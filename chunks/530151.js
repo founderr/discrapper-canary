@@ -24,8 +24,8 @@ var a = n("735250"),
   N = n("941128"),
   v = n("451478"),
   R = n("285952"),
-  L = n("366695"),
-  O = n("366966"),
+  O = n("366695"),
+  L = n("366966"),
   M = n("151011"),
   y = n("774832"),
   P = n("465670"),
@@ -106,24 +106,24 @@ function W(e, t) {
 }
 let K = {
   [k.LocalDispatchApplicationStates.INSTALLING]: {
-    [O.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+    [L.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
       percent: e,
       progress: t,
       total: n
     }),
-    [O.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+    [L.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [O.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+    [L.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [O.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+    [L.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
       percent: e,
       progress: t,
       total: n,
@@ -131,24 +131,24 @@ let K = {
     })
   },
   [k.LocalDispatchApplicationStates.UPDATING]: {
-    [O.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
+    [L.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
       percent: e,
       progress: t,
       total: n
     }),
-    [O.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
+    [L.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [O.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
+    [L.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [O.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
+    [L.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
       percent: e,
       progress: t,
       total: n,
@@ -156,24 +156,24 @@ let K = {
     })
   },
   [k.LocalDispatchApplicationStates.REPAIRING]: {
-    [O.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+    [L.TimeUnits.NONE]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
       percent: e,
       progress: t,
       total: n
     }),
-    [O.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+    [L.TimeUnits.SECONDS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [O.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+    [L.TimeUnits.MINUTES]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [O.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+    [L.TimeUnits.HOURS]: (e, t, n, a) => w.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
       percent: e,
       progress: t,
       total: n,
@@ -188,7 +188,7 @@ function z(e, t, n, a, s) {
     {
       unit: r,
       time: o
-    } = (0, O.getTimeAndUnit)(null != e ? e / 60 : null, i);
+    } = (0, L.getTimeAndUnit)(null != e ? e / 60 : null, i);
   if (null != l && null != r) {
     let e = l[r];
     return null != e ? e(n, a, s, o) : null
@@ -503,10 +503,10 @@ let X = () => (0, a.jsx)(Y, {
     cellClassName: B.nameCell,
     render: e => (0, a.jsxs)(R.default, {
       align: R.default.Align.CENTER,
-      children: [(0, a.jsx)(L.default, {
+      children: [(0, a.jsx)(O.default, {
         game: e.application,
         className: B.__invalid_gameIcon,
-        size: L.default.Sizes.SMALL
+        size: O.default.Sizes.SMALL
       }), (0, a.jsx)("div", {
         className: B.nameCellText,
         children: e.application.name

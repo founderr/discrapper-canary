@@ -54,7 +54,7 @@ function R() {
   s.listen(S.RPC_STARTING_PORT + e % S.RPC_PORT_RANGE, "127.0.0.1", t)
 }
 
-function L(e, t, n) {
+function O(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
     s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
     l = null != v(e.headers).origin ? {
@@ -69,9 +69,9 @@ function L(e, t, n) {
   }), t.end(n)
 }
 
-function O(e, t, n, a) {
+function L(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-  L(e, t, {
+  O(e, t, {
     code: s,
     message: a
   }, n)
@@ -113,7 +113,7 @@ class P extends l.EventEmitter {
   handleRequest(e, t) {
     let [n, a] = v(e.url).split("?"), s = v(e.method);
     if ("/rpc" === n && "OPTIONS" === s) {
-      L(e, t, {
+      O(e, t, {
         body: ""
       });
       return
@@ -130,10 +130,10 @@ class P extends l.EventEmitter {
           } = o.parse(null !== (e = n.get("callback")) && void 0 !== e ? e : "");
           a === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", T), t.writeHead(301), t.end()
         },
-        u = new y(l ? L.bind(null, e, t) : r, l ? O.bind(null, e, t, 400) : r, Number(n.get("v")), s);
+        u = new y(l ? O.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
       if (l)(0, C.validateSocketClient)(u, v(e.headers).origin, n.get("client_id")).then(() => {
         let n = "";
-        e.on("data", e => n += e), e.on("error", () => O(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(u, n))
+        e.on("data", e => n += e), e.on("error", () => L(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(u, n))
       }).catch(e => {
         let {
           code: t,
@@ -147,7 +147,7 @@ class P extends l.EventEmitter {
       }
       return
     }
-    O(e, t, 404, "Not Found")
+    L(e, t, 404, "Not Found")
   }
   handleConnection(e) {
     var t, n;

@@ -33,15 +33,15 @@ let T = s.memo(function(e) {
     noStyleAndInteraction: !0
   }) : {
     content: null
-  }, [T]), L = null;
-  if (l) L = (0, a.jsx)(o.Text, {
+  }, [T]), O = null;
+  if (l) O = (0, a.jsx)(o.Text, {
     className: g.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
     children: p.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (n) {
-    if (null != T && A) L = (0, a.jsx)(o.Text, {
+    if (null != T && A) O = (0, a.jsx)(o.Text, {
       className: g.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
@@ -55,7 +55,7 @@ let T = s.memo(function(e) {
         iconClass: g.messageContentIcon,
         iconSize: S.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
-      L = null != t ? (0, a.jsx)(o.Text, {
+      O = null != t ? (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         className: g.messageContent,
@@ -67,18 +67,18 @@ let T = s.memo(function(e) {
         className: g.messageReplacement,
         children: e
       })
-    } else L = (0, a.jsx)(o.Text, {
+    } else O = (0, a.jsx)(o.Text, {
       className: g.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
       children: p.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
-  } else L = null;
+  } else O = null;
   return (0, a.jsx)(h.ObscuredDisplayContext.Provider, {
     value: (0, u.default)(v, N),
     children: (0, a.jsx)(o.FocusBlock, {
       className: g.messageFocusBlock,
-      children: L
+      children: O
     })
   })
 });

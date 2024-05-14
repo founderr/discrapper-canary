@@ -27,8 +27,8 @@ var l = s("735250"),
   U = s("735336"),
   N = s("520978"),
   C = s("184325"),
-  h = s("652853"),
-  p = s("496206"),
+  p = s("652853"),
+  h = s("496206"),
   R = s("228168"),
   M = s("981631"),
   P = s("231338"),
@@ -50,7 +50,7 @@ function F(e) {
     onClose: w
   } = e, Y = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(T.id)), H = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(T.id)), V = (0, i.useStateFromStores)([E.default], () => E.default.getStatus(T.id)), z = (0, i.useStateFromStores)([A.default], () => A.default.getUserProfile(T.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === T.id), {
     theme: Z
-  } = (0, h.useUserProfileThemeContext)(), {
+  } = (0, p.useUserProfileThemeContext)(), {
     trackUserProfileAction: K
   } = (0, g.useUserProfileAnalyticsContext)(), {
     avatarSrc: J,
@@ -147,7 +147,7 @@ function F(e) {
           children: [(0, l.jsx)(N.default, {
             className: L.applicationInstallButton,
             application: null == z ? void 0 : z.application
-          }), (0, l.jsx)(p.default, {
+          }), (0, l.jsx)(h.default, {
             user: T,
             isCurrentUser: W,
             relationshipType: Y,

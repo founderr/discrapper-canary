@@ -221,7 +221,7 @@ let R = {
     }
   }
 };
-class L extends u.default {
+class O extends u.default {
   _initialize() {
     a.default.wait(() => a.default.dispatch({
       type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS",
@@ -230,4 +230,4 @@ class L extends u.default {
   }
   _terminate() {}
 }
-t.default = new L
+t.default = new O

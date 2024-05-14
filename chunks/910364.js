@@ -27,8 +27,8 @@ var l = s("735250"),
   U = s("706327"),
   N = s("484404"),
   C = s("502762"),
-  h = s("62154"),
-  p = s("293259"),
+  p = s("62154"),
+  h = s("293259"),
   R = s("725954"),
   M = s("228168"),
   P = s("981631"),
@@ -164,7 +164,7 @@ function O(e) {
             displayProfile: H,
             profileType: M.UserProfileTypes.MODAL,
             ref: ee,
-            children: [(0, l.jsx)(p.default, {
+            children: [(0, l.jsx)(h.default, {
               className: L.topSection,
               displayProfile: H,
               user: Y,
@@ -191,7 +191,7 @@ function O(e) {
                   isCurrentUser: q
                 }) : (0, l.jsx)("div", {
                   className: L.divider
-                }), (0, l.jsx)(h.default, {
+                }), (0, l.jsx)(p.default, {
                   displayProfile: H,
                   user: Y,
                   autoFocusNote: b && !Z,

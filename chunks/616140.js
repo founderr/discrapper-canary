@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return h
   }
 }), s("47120"), s("653041"), s("627341");
 var l = s("735250"),
@@ -58,7 +58,7 @@ let C = e => {
   })), c
 };
 
-function h(e) {
+function p(e) {
   let {
     section: t,
     user: s,
@@ -85,7 +85,7 @@ function h(e) {
   })
 }
 
-function p(e) {
+function h(e) {
   var t, s;
   let {
     user: i,
@@ -98,7 +98,7 @@ function p(e) {
   } = (0, m.useUserProfileAnalyticsContext)(), v = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), _ = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), g = C({
     user: i,
     currentUser: v
-  }), [x, U] = a.useState(S), [p, R] = a.useState(null !== (s = null === (t = g.find(e => {
+  }), [x, U] = a.useState(S), [h, R] = a.useState(null !== (s = null === (t = g.find(e => {
     let {
       section: t
     } = e;
@@ -117,7 +117,7 @@ function p(e) {
     children: [(0, l.jsx)(r.TabBar, {
       className: N.tabBar,
       type: "top",
-      selectedItem: p,
+      selectedItem: h,
       onItemSelect: M,
       children: g.map(e => {
         let {
@@ -134,8 +134,8 @@ function p(e) {
           })
         }, t)
       })
-    }), (0, l.jsx)(h, {
-      section: p,
+    }), (0, l.jsx)(p, {
+      section: h,
       user: i,
       currentUser: v,
       displayProfile: u,

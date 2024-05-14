@@ -33,9 +33,9 @@ function C(e) {
     user: s,
     displayProfile: i,
     autoFocusNote: C = !1,
-    scrollToConnections: h = !1
+    scrollToConnections: p = !1
   } = e, {
-    trackUserProfileAction: p
+    trackUserProfileAction: h
   } = (0, E.useUserProfileAnalyticsContext)(), R = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
     theme: M
   } = (0, T.useUserProfileThemeContext)(), P = (0, r.useStateFromStores)([S.default], () => S.default.locale), j = (0, f.useIsUserRecentGamesEnabled)({
@@ -43,11 +43,11 @@ function C(e) {
     location: "28tk0bf_3"
   }), L = (0, d.default)("user_profile"), y = (0, I.default)(s.id), O = a.useRef(null);
   return (a.useLayoutEffect(() => {
-    if (h) {
+    if (p) {
       var e;
       null == O || null === (e = O.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [h]), R) ? (0, l.jsx)(x.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
+  }, [p]), R) ? (0, l.jsx)(x.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: N.infoScroller,
     children: [(0, l.jsxs)("div", {
@@ -90,7 +90,7 @@ function C(e) {
         userId: s.id,
         autoFocus: C,
         className: N.note,
-        onUpdate: () => p({
+        onUpdate: () => h({
           action: "SET_NOTE"
         })
       })]

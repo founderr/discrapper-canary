@@ -28,8 +28,8 @@ var a = n("735250"),
   N = n("734934"),
   v = n("158238"),
   R = n("785717"),
-  L = n("221292"),
-  O = n("318661"),
+  O = n("221292"),
+  L = n("318661"),
   M = n("502762"),
   y = n("192133"),
   P = n("138394"),
@@ -157,7 +157,7 @@ function $(e) {
     closePopout: b
   } = e, U = (0, _.useAnalyticsContext)(), {
     analyticsLocations: G
-  } = (0, g.default)(p.default.ACCOUNT_PROFILE_POPOUT), F = (0, O.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
+  } = (0, g.default)(p.default.ACCOUNT_PROFILE_POPOUT), F = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = j.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), j.default.getStatus(n), j.default.isMobileOnline(n)]
@@ -333,7 +333,7 @@ function $(e) {
                     focusedClassName: Q.menuItemFocused,
                     subMenuIconClassName: Q.subMenuIcon,
                     action: d.isMobile ? function() {
-                      (0, L.trackUserProfileAction)({
+                      (0, O.trackUserProfileAction)({
                         action: "PRESS_SET_STATUS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,
@@ -382,7 +382,7 @@ function $(e) {
                     icon: k.default,
                     showIconFirst: !0,
                     action: () => {
-                      (0, L.trackUserProfileAction)({
+                      (0, O.trackUserProfileAction)({
                         action: "PRESS_SWITCH_ACCOUNTS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,

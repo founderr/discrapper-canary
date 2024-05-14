@@ -85,10 +85,10 @@ t.default = s.memo(function(e) {
   } = e, p = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), g = s.useRef(null), I = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), R = (0, l.useSpring)({
     ref: g,
     ...S
-  }), L = (0, l.useSpring)({
+  }), O = (0, l.useSpring)({
     ref: I,
     ...S
-  }), O = (0, l.useSpring)({
+  }), L = (0, l.useSpring)({
     ref: T,
     ...S
   }), M = (0, l.useSpring)({
@@ -137,7 +137,7 @@ t.default = s.memo(function(e) {
           })
         }), (0, a.jsx)(l.animated.div, {
           className: C.clanCardInnerContainer,
-          style: p ? void 0 : L,
+          style: p ? void 0 : O,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: h.FAKE_DISCOVERY_UPSELL_CLANS["1"],
             className: C.clanCardInnerLeft
@@ -151,7 +151,7 @@ t.default = s.memo(function(e) {
           })
         }), (0, a.jsx)(l.animated.div, {
           className: C.clanCardInnerContainer,
-          style: p ? void 0 : O,
+          style: p ? void 0 : L,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: h.FAKE_DISCOVERY_UPSELL_CLANS["2"],
             className: C.clanCardInnerRight

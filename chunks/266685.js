@@ -24,8 +24,8 @@ var a = n("735250"),
   N = n("78826"),
   v = n("670638"),
   R = n("667105"),
-  L = n("341907"),
-  O = n("46140"),
+  O = n("341907"),
+  L = n("46140"),
   M = n("689938"),
   y = n("96268");
 let P = s.forwardRef(function(e, t) {
@@ -48,13 +48,13 @@ let P = s.forwardRef(function(e, t) {
     quest: G,
     location: S.QuestContent.QUEST_BAR
   }), K = s.useCallback(() => {
-    (0, L.openGameLink)(G, {
+    (0, O.openGameLink)(G, {
       content: S.QuestContent.QUEST_BAR,
       ctaContent: h.QuestContentCTA.OPEN_GAME_LINK
     })
-  }, [G]), z = G.config.variants.includes(O.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)(G) > 0, [G]), Q = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Z = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, X = s.useMemo(() => (0, p.hasQuestCollectibleRewards)(G.config), [G.config]), J = P && D, $ = (0, p.getQuestBarHeroAssetUrl)(G), ee = (0, p.getQuestsInstructionsToWinReward)({
+  }, [G]), z = G.config.variants.includes(L.QuestVariants.POST_ENROLLMENT_CTA), q = s.useMemo(() => (0, p.calculatePercentComplete)(G) > 0, [G]), Q = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Z = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, X = s.useMemo(() => (0, p.hasQuestCollectibleRewards)(G.config), [G.config]), J = P && D, $ = (0, p.getQuestBarHeroAssetUrl)(G), ee = (0, p.getQuestsInstructionsToWinReward)({
     quest: G,
-    location: O.QuestsExperimentLocations.QUESTS_BAR
+    location: L.QuestsExperimentLocations.QUESTS_BAR
   }), et = (0, E.isWeb)(), en = s.useMemo(() => {
     let e = (0, u.getContrastingColor)(G.config.colors.primary, {
       base: "#ffffff",
@@ -230,7 +230,7 @@ function x(e) {
     onClick: n
   } = e;
   return (0, g.useIsEligibleForQuestBarProgressCTA)({
-    location: O.QuestsExperimentLocations.QUESTS_BAR,
+    location: L.QuestsExperimentLocations.QUESTS_BAR,
     autoTrackExposure: !0
   }) ? (0, a.jsx)(d.Button, {
     className: y.cta,

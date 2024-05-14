@@ -24,21 +24,21 @@ var a = n("735250"),
   N = n("46140"),
   v = n("981631"),
   R = n("689938"),
-  L = n("758895");
+  O = n("758895");
 
-function O(e) {
+function L(e) {
   var t;
   let {
     quest: n
   } = e, s = (0, _.useQuestFormattedDate)(n.config.expiresAt), l = (0, _.useQuestFormattedDate)(n.config.rewardCodeExpiresAt), i = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), d = (0, o.isThemeDark)(i) ? v.ThemeTypes.DARK : v.ThemeTypes.LIGHT, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, a.jsxs)("div", {
-    className: L.heading,
+    className: O.heading,
     children: [(0, a.jsx)("img", {
-      className: L.headingGameTile,
+      className: O.headingGameTile,
       alt: "",
       src: (0, S.getGameTileAssetUrl)(n, d)
     }), (0, a.jsxs)("div", {
-      className: L.headingCopy,
+      className: O.headingCopy,
       children: [(0, a.jsx)(u.Heading, {
         variant: "heading-md/semibold",
         color: "header-primary",
@@ -93,8 +93,8 @@ t.default = function(e) {
         ref: t => {
           e.current = t
         },
-        className: i()(L.wrapper, {
-          [L.wrapperQuestAccepted]: w
+        className: i()(O.wrapper, {
+          [O.wrapperQuestAccepted]: w
         }),
         onClick: D,
         onKeyPress: D,
@@ -103,8 +103,8 @@ t.default = function(e) {
         onBlur: x,
         onMouseLeave: x,
         children: [(0, a.jsxs)("div", {
-          className: L.utils,
-          children: [w ? (0, a.jsx)(O, {
+          className: O.utils,
+          children: [w ? (0, a.jsx)(L, {
             quest: o
           }) : (0, a.jsx)(g.default, {
             textOpacity: .5
@@ -117,15 +117,15 @@ t.default = function(e) {
               ...e,
               "aria-label": R.default.Messages.ACTIONS,
               children: (0, a.jsx)(f.default, {
-                className: L.submenuIcon
+                className: O.submenuIcon
               })
             })
           })]
         }), !w && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(O, {
+          children: [(0, a.jsx)(L, {
             quest: o
           }), (0, a.jsx)(u.Text, {
-            className: L.instructions,
+            className: O.instructions,
             variant: "text-sm/normal",
             color: "text-normal",
             children: (0, S.getQuestsInstructionsToWinReward)({
@@ -135,22 +135,22 @@ t.default = function(e) {
           })]
         }), w && !B && (0, a.jsx)(A.default, {
           autoplay: M,
-          className: L.rewardTileWithInstructions,
+          className: O.rewardTileWithInstructions,
           quest: o,
           questContent: m.QuestContent.ACTIVITY_PANEL,
           questExperimentLocation: N.QuestsExperimentLocations.ACTIVITY_PANEL
         }), (0, a.jsxs)("div", {
-          className: L.ctas,
+          className: O.ctas,
           children: [!w && (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(u.Button, {
-              className: L.cta,
+              className: O.cta,
               color: u.Button.Colors.PRIMARY,
               fullWidth: !0,
               size: u.Button.Sizes.SMALL,
               onClick: j,
               children: R.default.Messages.QUESTS_LEARN_MORE_V2
             }), (0, a.jsx)(u.Button, {
-              className: L.cta,
+              className: O.cta,
               color: u.Button.Colors.BRAND,
               fullWidth: !0,
               onClick: b,
@@ -159,14 +159,14 @@ t.default = function(e) {
               children: R.default.Messages.QUESTS_ACCEPT_QUEST
             })]
           }), w && !B && (0, a.jsx)(u.Button, {
-            className: L.cta,
+            className: O.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: U,
             size: u.Button.Sizes.SMALL,
             children: R.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
           }), B && (0, a.jsx)(u.Button, {
-            className: L.cta,
+            className: O.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: G,

@@ -29,7 +29,7 @@ function v(e) {
   } = (0, o.default)(), {
     trackUserProfileAction: N,
     ...C
-  } = (0, f.useUserProfileAnalyticsContext)(), h = {
+  } = (0, f.useUserProfileAnalyticsContext)(), p = {
     location: {
       page: m.AnalyticsPages.USER_PROFILE,
       section: m.AnalyticsSections.PROFILE_MODAL
@@ -47,7 +47,7 @@ function v(e) {
       showChannelDetails: s === c.Types.SIMPLIFIED_PROFILE,
       activity: g,
       actionColor: E.actionColor,
-      analyticsParams: h,
+      analyticsParams: p,
       onAction: () => {
         N({
           action: "JOIN_ACTIVITY"
@@ -71,7 +71,7 @@ function v(e) {
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       showChannelDetails: s === c.Types.SIMPLIFIED_PROFILE,
       actionColor: E.actionColor,
-      analyticsParams: h,
+      analyticsParams: p,
       onAction: () => {
         N({
           action: "JOIN_ACTIVITY"

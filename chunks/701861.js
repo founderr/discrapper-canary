@@ -33,7 +33,7 @@ function R(e, t, n) {
   }) : e[t] = n, e
 }
 
-function L(e) {
+function O(e) {
   let {
     user: t,
     onSelect: n
@@ -83,7 +83,7 @@ function L(e) {
     })]
   })
 }
-class O extends s.PureComponent {
+class L extends s.PureComponent {
   componentWillLeave(e) {
     null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e)
   }
@@ -154,7 +154,7 @@ class O extends s.PureComponent {
       let {
         user: t
       } = this.props;
-      (0, d.openContextMenu)(e, e => (0, a.jsx)(L, {
+      (0, d.openContextMenu)(e, e => (0, a.jsx)(O, {
         ...e,
         user: t
       }), {
@@ -169,4 +169,4 @@ class O extends s.PureComponent {
     })
   }
 }
-t.default = O
+t.default = L

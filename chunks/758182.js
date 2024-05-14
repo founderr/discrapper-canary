@@ -25,8 +25,8 @@ var o = n("149765"),
   N = n("38618"),
   v = n("218543"),
   R = n("314897"),
-  L = n("944486"),
-  O = n("914010"),
+  O = n("944486"),
+  L = n("914010"),
   M = n("449934"),
   y = n("576376"),
   P = n("38217"),
@@ -71,8 +71,8 @@ async function Y(e, t, n) {
   b.verbose("loading early cache");
   let i = N.default.getSocket();
   i.connect();
-  let o = null !== (a = O.default.getGuildId()) && void 0 !== a ? a : null,
-    d = null !== (s = L.default.getChannelId()) && void 0 !== s ? s : null,
+  let o = null !== (a = L.default.getGuildId()) && void 0 !== a ? a : null,
+    d = null !== (s = O.default.getChannelId()) && void 0 !== s ? s : null,
     f = performance.now(),
     E = v.default.loadCachedMessages.measureAsyncWithoutNesting(() => V(e, o, d)),
     h = v.default.fetchGuildCache.measureAsync(() => K(e, n)),

@@ -50,7 +50,7 @@ function C(e) {
       width: .4 * N,
       height: .4 * N
     },
-    L = {
+    O = {
       width: R.width + 1,
       height: R.height + 1,
       right: p.stroke + 1,
@@ -74,14 +74,14 @@ function C(e) {
       })
     }), !f && (0, a.jsx)("div", {
       className: E.lockContainer,
-      style: L,
+      style: O,
       children: (0, a.jsx)(u.default, {
         color: (0, r.getColor)(A.locked),
         ...R
       })
     }), f && I === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {
       className: E.lockContainer,
-      style: L,
+      style: O,
       children: (0, a.jsx)(o.default, {
         className: E.confettiIcon,
         ...R

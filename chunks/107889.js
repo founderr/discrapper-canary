@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return p
   }
 }), s("47120");
 var l = s("735250"),
@@ -28,12 +28,12 @@ var l = s("735250"),
   N = s("689938"),
   C = s("61007");
 
-function h(e) {
+function p(e) {
   let {
     user: t,
     guildId: s,
-    channelId: h,
-    messageId: p,
+    channelId: p,
+    messageId: h,
     roleId: R,
     friendToken: M,
     initialSection: P,
@@ -47,8 +47,8 @@ function h(e) {
     layout: "SIMPLIFIED_MODAL",
     userId: t.id,
     guildId: F,
-    channelId: h,
-    messageId: p,
+    channelId: p,
+    messageId: h,
     roleId: R
   }), [B, G] = a.useState(F), k = (0, m.default)(t.id), w = (0, m.default)(t.id, F), Y = null == B ? k : w, {
     activity: H,
@@ -73,8 +73,8 @@ function h(e) {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: F,
-      channelId: h,
-      messageId: p,
+      channelId: p,
+      messageId: h,
       roleId: R,
       children: (0, l.jsxs)(n.ModalRoot, {
         transitionState: L,
@@ -91,7 +91,7 @@ function h(e) {
             children: [(0, l.jsx)(_.default, {
               user: t,
               guildId: F,
-              channelId: h,
+              channelId: p,
               onClose: O
             }), (0, l.jsx)(v.default, {
               user: t,
@@ -116,7 +116,7 @@ function h(e) {
                 id: "view-server-profile",
                 label: N.default.Messages.VIEW_SERVER_PROFILE,
                 subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
-                  displayName: f.default.getName(F, h, t)
+                  displayName: f.default.getName(F, p, t)
                 }),
                 action: () => {
                   b({
@@ -130,7 +130,7 @@ function h(e) {
             user: t,
             displayProfile: Y,
             guildId: F,
-            channelId: h,
+            channelId: p,
             activity: H,
             customStatusActivity: V,
             onClose: O

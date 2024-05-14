@@ -47,7 +47,7 @@ function R(e) {
         platform: v
       })
     })
-  }(e), L = function(e) {
+  }(e), O = function(e) {
     let {
       currentActivities: t
     } = e, n = s.useContext(g.AnalyticsContext);
@@ -73,12 +73,12 @@ function R(e) {
         location: n.location
       }
     }), [n.location, t])
-  }(e), O = [];
-  for (let e of L) {
+  }(e), L = [];
+  for (let e of O) {
     let {
       activity: t
     } = e;
-    null != t && null != t.type && O.push(function(e, t) {
+    null != t && null != t.type && L.push(function(e, t) {
       let {
         canJoin: n,
         activity: s,
@@ -137,5 +137,5 @@ function R(e) {
       })
     }(e, n))
   }
-  return [R, ...O]
+  return [R, ...L]
 }

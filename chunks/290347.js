@@ -78,8 +78,8 @@ function N(e) {
     modalTopExtra: N,
     header: v,
     headerClassName: R,
-    subHeader: L,
-    subHeaderExtra: O,
+    subHeader: O,
+    subHeaderExtra: L,
     featureCards: M,
     changeLogId: y,
     button: P
@@ -184,8 +184,8 @@ function N(e) {
       }) : null, (0, a.jsx)(o.Heading, {
         variant: "heading-lg/extrabold",
         className: I.bodyText,
-        children: L
-      }), null == O ? void 0 : O(), (0, a.jsx)("div", {
+        children: O
+      }), null == L ? void 0 : L(), (0, a.jsx)("div", {
         className: i()(I.featureCardGroup, {
           [I.wideStyle]: U
         }),

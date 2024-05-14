@@ -39,14 +39,14 @@ function A(e) {
     let a = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== null,
       i = (null === (l = t.tags) || void 0 === l ? void 0 : l.guild_connections) !== null;
     return a && !i ? 1 : !a && i ? -1 : 0
-  }), [x, c]), N = E && null != d, C = a.useMemo(() => "roles-".concat((0, i.v4)()), []), h = (0, n.default)({
+  }), [x, c]), N = E && null != d, C = a.useMemo(() => "roles-".concat((0, i.v4)()), []), p = (0, n.default)({
     id: C,
     isEnabled: !0,
     scrollToStart: _.NOOP_PROMISE,
     scrollToEnd: _.NOOP_PROMISE,
     wrap: !0
-  }), p = U.length, R = 0 === p ? T.default.Messages.ROLE_LIST_EMPTY : T.default.Messages.ROLES_LIST.format({
-    numRoles: p
+  }), h = U.length, R = 0 === h ? T.default.Messages.ROLE_LIST_EMPTY : T.default.Messages.ROLES_LIST.format({
+    numRoles: h
   }), M = U.map(e => {
     var a;
     return (0, l.jsx)(u.MemberRole, {
@@ -59,7 +59,7 @@ function A(e) {
     }, e.id)
   });
   return (0, l.jsx)(n.ListNavigatorProvider, {
-    navigator: h,
+    navigator: p,
     children: (0, l.jsx)(n.ListNavigatorContainer, {
       children: e => {
         let {

@@ -25,8 +25,8 @@ var s = n("45792"),
   N = n("996106"),
   v = n("914946"),
   R = n("452426"),
-  L = n("561205"),
-  O = n("600027"),
+  O = n("561205"),
+  L = n("600027"),
   M = n("852926"),
   y = n("186901"),
   P = n("981631");
@@ -163,7 +163,7 @@ t.default = {
       } = e, {
         channel: s,
         guild: i
-      } = (0, O.validateOpenInviteDialog)(), r = _.default.getWindow(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+      } = (0, L.validateOpenInviteDialog)(), r = _.default.getWindow(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
       (null == r ? void 0 : r.closed) && (r = null);
       let o = null != r ? P.AppContext.POPOUT : P.AppContext.APP;
       (0, A.exitFullScreen)({}, null == r ? void 0 : r.document), (0, l.openModalLazy)(async () => {
@@ -195,7 +195,7 @@ t.default = {
       if (null == a) throw new N.default({
         errorCode: P.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      let s = null === (t = (0, L.default)()) || void 0 === t ? void 0 : t.id;
+      let s = null === (t = (0, O.default)()) || void 0 === t ? void 0 : t.id;
       if (null == s) throw new N.default({
         errorCode: P.RPCErrors.UNKNOWN_ERROR
       }, "Unable to find selected channel");
@@ -253,7 +253,7 @@ t.default = {
       if (!(0, g.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.ApplicationFlags.EMBEDDED)) throw new N.default({
         errorCode: P.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
-      let l = (0, L.default)();
+      let l = (0, O.default)();
       if (null == l) throw new N.default({
         errorCode: P.RPCErrors.INVALID_COMMAND
       }, "No channel found");

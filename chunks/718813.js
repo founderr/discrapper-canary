@@ -47,15 +47,15 @@ let N = (0, _.makeLazy)({
     webpackId: "838819",
     name: "CollectiblesShop"
   }),
-  L = (0, _.makeLazy)({
+  O = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502")]).then(n.bind(n, "994763")),
     webpackId: "994763",
     name: "GuildSettings"
   }),
-  O = {
+  L = {
     [I.Layers.USER_SETTINGS]: () => (0, s.jsx)(N, {}),
     [I.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(v, {}),
-    [I.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(L, {}),
+    [I.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(O, {}),
     [I.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(R, {})
   },
   M = "SHOWN",
@@ -228,7 +228,7 @@ class b extends l.PureComponent {
   }
   renderComponent(e, t, n) {
     let a;
-    return a = "string" == typeof e ? O[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(D, {
+    return a = "string" == typeof e ? L[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(D, {
       mode: t === n - 1 ? M : y,
       children: [(0, s.jsx)(x, {}), a]
     }, "layer-".concat(t))

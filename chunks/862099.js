@@ -32,8 +32,8 @@ var a, s, l = n("735250"),
   N = n("465670"),
   v = n("242315"),
   R = n("393112"),
-  L = n("170039"),
-  O = n("602623"),
+  O = n("170039"),
+  L = n("602623"),
   M = n("626135"),
   y = n("823379"),
   P = n("15274"),
@@ -340,7 +340,7 @@ function ee(e) {
       height: 14,
       className: K.stageIcon
     }),
-    locationIcon: (0, l.jsx)(L.default, {
+    locationIcon: (0, l.jsx)(O.default, {
       width: 16,
       height: 16,
       className: K.stageIcon
@@ -376,11 +376,11 @@ function et(e) {
   return null == s ? null : (0, l.jsxs)(l.Fragment, {
     children: [u.length > 0 ? (0, l.jsxs)("div", {
       className: K.textBlock,
-      children: [(0, l.jsx)(O.default, {
+      children: [(0, l.jsx)(L.default, {
         guildId: s,
         users: u,
         showUserPopout: !0,
-        size: O.Sizes.SIZE_16
+        size: L.Sizes.SIZE_16
       }), (0, l.jsx)(o.Text, {
         color: "header-secondary",
         variant: "text-xs/normal",

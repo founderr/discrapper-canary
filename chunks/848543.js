@@ -33,11 +33,11 @@ function v(e) {
     iconClassName: l,
     className: v,
     innerClassName: R,
-    ...L
+    ...O
   } = e, {
-    mute: O,
+    mute: L,
     suppress: M
-  } = (0, _.default)(t), y = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), P = O || M || y, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+  } = (0, _.default)(t), y = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), P = L || M || y, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: P
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: k
@@ -97,16 +97,16 @@ function v(e) {
         },
         onMouseEnter: t => {
           var n, a;
-          null === (n = L.onMouseEnter) || void 0 === n || n.call(L, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), H()
+          null === (n = O.onMouseEnter) || void 0 === n || n.call(O, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), H()
         },
         onMouseLeave: t => {
           var n, a;
-          null === (n = L.onMouseLeave) || void 0 === n || n.call(L, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
+          null === (n = O.onMouseLeave) || void 0 === n || n.call(O, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
         },
         onContextMenu: w,
         fullWidth: !0,
         size: d.Button.Sizes.SMALL,
-        ...L,
+        ...O,
         children: (0, a.jsx)(B, {
           className: l,
           size: "sm",
@@ -124,7 +124,7 @@ function v(e) {
     value: k,
     children: (0, a.jsx)(d.Tooltip, {
       text: function() {
-        if (O) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+        if (L) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
         if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
         if (y) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
         return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD

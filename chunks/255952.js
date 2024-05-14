@@ -105,7 +105,7 @@ function R(e) {
     })]
   })
 }
-let L = e => {
+let O = e => {
   let {
     customStatus: t,
     onClose: l,
@@ -219,7 +219,7 @@ let L = e => {
 t.default = (0, d.default)(e => {
   let t = (0, r.useStateFromStores)([C.default], () => C.default.getCustomStatusActivity()),
     n = _.StatusSetting.useSetting();
-  return (0, a.jsx)(L, {
+  return (0, a.jsx)(O, {
     ...e,
     customStatus: t,
     status: n

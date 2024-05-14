@@ -39,8 +39,8 @@ function R(e) {
     onClose: n,
     gameId: l
   } = e, R = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
-    progress: L,
-    errors: O,
+    progress: O,
+    errors: L,
     submitting: M
   } = (0, u.useStateFromStoresObject)([C.default], () => {
     var e, n, a, s;
@@ -49,7 +49,7 @@ function R(e) {
       errors: null === (n = C.default.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
       submitting: null === (a = C.default.getStateForGuild(t)) || void 0 === a ? void 0 : a.submitting
     }
-  }), y = s.useMemo(() => (0, T.getClanSetupProgressSteps)(O), [O]), [P, x] = s.useState(!1), [D, b] = s.useState(window.innerWidth), [U, j] = s.useState(1), [G, k] = s.useState(!0), w = (0, m.useFullScreenModalAnimationStyle)(), B = (0, o.useSpring)({
+  }), y = s.useMemo(() => (0, T.getClanSetupProgressSteps)(L), [L]), [P, x] = s.useState(!1), [D, b] = s.useState(window.innerWidth), [U, j] = s.useState(1), [G, k] = s.useState(!0), w = (0, m.useFullScreenModalAnimationStyle)(), B = (0, o.useSpring)({
     opacity: U,
     config: v,
     onStart: () => k(!0),
@@ -88,13 +88,13 @@ function R(e) {
       var n;
       h.updateClanSetup(t, {
         currentStep: e,
-        furthestStep: Math.max(null !== (n = L.furthestStep) && void 0 !== n ? n : 0, e)
+        furthestStep: Math.max(null !== (n = O.furthestStep) && void 0 !== n ? n : 0, e)
       })
     }
-  }, [U, t, L.furthestStep, y.length]);
+  }, [U, t, O.furthestStep, y.length]);
   s.useEffect(() => {
-    (0, _.trackConvertStepViewed)(t, (0, _.getProgressStepAnalyticsName)(L.currentStep))
-  }, [t, L.currentStep]), s.useEffect(() => {
+    (0, _.trackConvertStepViewed)(t, (0, _.getProgressStepAnalyticsName)(O.currentStep))
+  }, [t, O.currentStep]), s.useEffect(() => {
     let e = (0, E.getResizeObserver)((0, r.debounce)(() => b(window.innerWidth), 250));
     return (0, E.watch)(e, document.body), () => (0, E.unwatch)(e, document.body)
   }, [U, G]), s.useEffect(() => {
@@ -102,8 +102,8 @@ function R(e) {
       requiredGameId: l
     })
   }, [l, t]);
-  let W = s.useMemo(() => null != O && Object.values(O).some(e => null != e), [O]),
-    K = s.useMemo(() => null != O && Object.values(O).length > 0 ? (0, T.getClanSetupProgressSteps)(O).find(e => e.hasError) : null, [O]),
+  let W = s.useMemo(() => null != L && Object.values(L).some(e => null != e), [L]),
+    K = s.useMemo(() => null != L && Object.values(L).length > 0 ? (0, T.getClanSetupProgressSteps)(L).find(e => e.hasError) : null, [L]),
     z = s.useCallback(() => {
       j(1), h.updateClanSetup(t, {
         currentStep: null == K ? void 0 : K.index
@@ -113,9 +113,9 @@ function R(e) {
       (0, T.submitClanSetup)({
         guildId: t,
         onClose: n,
-        progress: L
+        progress: O
       })
-    }, [n, t, L]),
+    }, [n, t, O]),
     Q = s.useRef(null),
     Z = null != K ? (0, a.jsxs)("div", {
       className: N.tooltipContents,
@@ -170,7 +170,7 @@ function R(e) {
             }),
             children: (0, a.jsx)(p.default, {
               steps: y,
-              progress: L,
+              progress: O,
               updateCurrentStep: Y,
               animationStyle: B,
               animationClassName: i()({
@@ -196,7 +196,7 @@ function R(e) {
             sidebarWidth: 380,
             windowWidth: D,
             transition: H,
-            brandPrimaryColor: L.brandPrimaryColor
+            brandPrimaryColor: O.brandPrimaryColor
           })
         })]
       }), V((e, t) => t && (0, a.jsx)(o.animated.div, {
@@ -211,7 +211,7 @@ function R(e) {
           forceOpen: null != K,
           children: e => (0, a.jsx)(S.default, {
             ...e,
-            themeColor: L.brandPrimaryColor,
+            themeColor: O.brandPrimaryColor,
             disabled: !P || W,
             submitting: M,
             look: d.Button.Looks.FILLED,

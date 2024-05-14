@@ -98,7 +98,7 @@ function R() {
   })
 }
 
-function L() {
+function O() {
   let e = (0, h.useHasMaxConnections)();
   return (0, a.jsxs)("div", {
     className: i()(T.box, T.linkingBanner),
@@ -125,7 +125,7 @@ function L() {
   })
 }
 
-function O(e) {
+function L(e) {
   let {
     sectionType: t,
     sectionTitle: n,
@@ -196,7 +196,7 @@ let M = () => {
       },
       l = (0, c.useAgeSpecificText)(I.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(s), I.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(s));
     return (0, a.jsx)(a.Fragment, {
-      children: t.length > 0 ? (0, a.jsx)(O, {
+      children: t.length > 0 ? (0, a.jsx)(L, {
         sectionType: g.UserLinkStatus.ACTIVE,
         sectionTitle: l,
         requests: t
@@ -256,7 +256,7 @@ let M = () => {
       }), I.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({
         count: e.length
       }));
-    return 0 === e.length ? null : (0, a.jsx)(O, {
+    return 0 === e.length ? null : (0, a.jsx)(L, {
       sectionType: g.UserLinkStatus.PENDING,
       sectionTitle: t,
       requests: e
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, E.default)();
   return (0, a.jsxs)("div", {
     className: T.container,
-    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(L, {}), (0, a.jsx)(M, {}), (0, a.jsx)(x, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {})]
+    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(O, {}), (0, a.jsx)(M, {}), (0, a.jsx)(x, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {})]
   })
 }

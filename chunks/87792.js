@@ -24,8 +24,8 @@ var a = n("735250"),
   N = n("657825"),
   v = n("198952"),
   R = n("329242"),
-  L = n("895328"),
-  O = n("292352"),
+  O = n("895328"),
+  L = n("292352"),
   M = n("981631"),
   y = n("689938"),
   P = n("334611");
@@ -62,10 +62,10 @@ function D(e) {
     isMoreLoading: c
   } = (0, m.useFamilyCenterActions)({
     onError: n
-  }), E = O.ACTION_TO_TEXT.get(t), [C, p] = s.useState(O.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), I = (0, _.useIsEligibleForFamilyCenterVCJoin)({
+  }), E = L.ACTION_TO_TEXT.get(t), [C, p] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), I = (0, _.useIsEligibleForFamilyCenterVCJoin)({
     location: "family_center_activity_section_web"
   }), T = s.useCallback(() => {
-    p(e => e + O.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
+    p(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i()(E, "No text for action type");
   let v = E.sectionHeader(u),
@@ -81,7 +81,7 @@ function D(e) {
         guildId: n.entity_id
       }, n.event_id) : void 0
     }, [r, E.timestampFormatter]),
-    L = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
+    O = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Text, {
         className: P.sectionHeader,
         variant: "eyebrow",
@@ -98,7 +98,7 @@ function D(e) {
   let M = r.slice(0, C);
   return (0, a.jsxs)("div", {
     className: P.actionSection,
-    children: [L(), (0, a.jsx)("div", {
+    children: [O(), (0, a.jsx)("div", {
       className: P.actions,
       style: {
         maxHeight: 65 * M.length
@@ -117,7 +117,7 @@ function D(e) {
         className: P.loadMore,
         variant: "text-sm/bold",
         children: y.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-          pageSize: Math.min(u - M.length, O.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
+          pageSize: Math.min(u - M.length, L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
         })
       })
     }) : null]
@@ -125,7 +125,7 @@ function D(e) {
 }
 let b = () => {
     let e = (0, g.default)(),
-      t = (0, I.useUserForLinkStatus)(O.UserLinkStatus.ACTIVE),
+      t = (0, I.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       n = (0, C.useAgeSpecificText)(y.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
       }), y.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
@@ -167,7 +167,7 @@ let b = () => {
     })
   },
   j = () => {
-    let e = (0, I.useUserForLinkStatus)(O.UserLinkStatus.ACTIVE),
+    let e = (0, I.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       t = (0, r.useStateFromStores)([E.default], () => E.default.getSelectedTeenId()),
       {
         selectTeenUser: n
@@ -190,7 +190,7 @@ let b = () => {
       serialize: e => e,
       select: e => {
         n(e), c.default.track(M.AnalyticEvents.FAMILY_CENTER_ACTION, {
-          action: O.FamilyCenterAction.SelectTeen
+          action: L.FamilyCenterAction.SelectTeen
         })
       },
       isSelected: e => e === t,
@@ -200,7 +200,7 @@ let b = () => {
   G = e => {
     let {
       userId: t
-    } = e, n = (0, g.default)(), s = (0, I.useUserForLinkStatus)(O.UserLinkStatus.ACTIVE), l = (0, h.getActivityWindowTimestampFormatter)(!!n), i = (0, I.useActivityWindowTimeStamp)(l);
+    } = e, n = (0, g.default)(), s = (0, I.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), l = (0, h.getActivityWindowTimestampFormatter)(!!n), i = (0, I.useActivityWindowTimeStamp)(l);
     return n && 1 !== s.length ? (0, a.jsx)(j, {}) : (0, a.jsx)(U, {
       userId: t,
       subText: i
@@ -209,7 +209,7 @@ let b = () => {
 t.default = e => {
   let {
     user: t
-  } = e, n = Array.from(O.ACTION_TO_TEXT.entries()), s = (0, S.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, I.useActivityWindowTimeStamp)(l);
+  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, S.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, I.useActivityWindowTimeStamp)(l);
   return (0, a.jsxs)("div", {
     className: P.container,
     children: [(0, a.jsxs)("div", {
@@ -240,7 +240,7 @@ t.default = e => {
             return (0, a.jsx)(D, {
               displayType: t
             }, "".concat(t, "-list"))
-          }) : (0, a.jsx)(L.default, {
+          }) : (0, a.jsx)(O.default, {
             className: P.emptyActivity,
             text: null != i ? i : ""
           })

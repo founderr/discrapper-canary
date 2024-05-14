@@ -24,8 +24,8 @@ var a = n("735250"),
   N = n("696577"),
   v = n("163417"),
   R = n("492347"),
-  L = n("42575"),
-  O = n("617015"),
+  O = n("42575"),
+  L = n("617015"),
   M = n("981631"),
   y = n("689938"),
   P = n("739426");
@@ -64,7 +64,7 @@ t.default = function(e) {
   });
   let H = 0 === F.length && "" !== G[t],
     V = F.filter(e => e.type === M.RelationshipTypes.PENDING_INCOMING).length,
-    Y = t === M.FriendsSections.PENDING && V > 0 && j && V >= O.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
+    Y = t === M.FriendsSections.PENDING && V > 0 && j && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
   return (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: l,
     children: (0, a.jsxs)(c.default, {
@@ -135,7 +135,7 @@ t.default = function(e) {
                 isFocused: b
               });
             case M.FriendsSections.SUGGESTIONS:
-              return (0, a.jsx)(L.default, {
+              return (0, a.jsx)(O.default, {
                 ...e,
                 isFocused: b
               });

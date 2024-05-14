@@ -37,8 +37,8 @@ let I = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       ctaText: N,
       dismissText: v,
       description: R,
-      learnMore: L,
-      title: O,
+      learnMore: O,
+      title: L,
       videoPosterUrl: M,
       videoUrl: y,
       ctaOnClick: P
@@ -98,13 +98,13 @@ let I = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 className: g.__invalid_headerText,
                 variant: "text-sm/bold",
                 color: "always-white",
-                children: O
+                children: L
               })
             }), (0, l.jsxs)(o.Text, {
               className: g.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
-              children: [R, L ? (0, l.jsxs)(l.Fragment, {
+              children: [R, O ? (0, l.jsxs)(l.Fragment, {
                 children: [" ", (0, l.jsx)(o.Anchor, {
                   className: g.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",

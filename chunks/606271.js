@@ -28,9 +28,9 @@ var a = n("392711"),
   N = n("863141"),
   v = n("981631"),
   R = n("701488"),
-  L = n("65154");
+  O = n("65154");
 
-function O(e, t, n) {
+function L(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -96,7 +96,7 @@ class M {
   handleSpeaking(e) {
     if (0 === this.rpcServer.subscriptions.length) return;
     let t = 0 !== e.speakingFlags ? v.RPCEvents.SPEAKING_START : v.RPCEvents.SPEAKING_STOP;
-    if (e.context === L.MediaEngineContextTypes.DEFAULT) {
+    if (e.context === O.MediaEngineContextTypes.DEFAULT) {
       let n = _.default.getVoiceChannelId();
       if (null != n) {
         let a = o.default.getChannel(n);
@@ -325,6 +325,6 @@ class M {
     })
   }
   constructor(e) {
-    O(this, "rpcServer", void 0), O(this, "transports", void 0), O(this, "rpcCommandHandlers", void 0), O(this, "rpcEventHandlers", void 0), O(this, "stores", void 0), O(this, "registerTransportsForEmbeddedPlatform", void 0), this.rpcServer = e.server, this.transports = e.transports, this.rpcCommandHandlers = e.commands, this.rpcEventHandlers = e.events, this.stores = e.stores, this.registerTransportsForEmbeddedPlatform = e.registerTransportsForEmbeddedPlatform
+    L(this, "rpcServer", void 0), L(this, "transports", void 0), L(this, "rpcCommandHandlers", void 0), L(this, "rpcEventHandlers", void 0), L(this, "stores", void 0), L(this, "registerTransportsForEmbeddedPlatform", void 0), this.rpcServer = e.server, this.transports = e.transports, this.rpcCommandHandlers = e.commands, this.rpcEventHandlers = e.events, this.stores = e.stores, this.registerTransportsForEmbeddedPlatform = e.registerTransportsForEmbeddedPlatform
   }
 }

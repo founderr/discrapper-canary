@@ -24,8 +24,8 @@ var a = n("735250"),
   N = n("100527"),
   v = n("838134"),
   R = n("77987"),
-  L = n("679891"),
-  O = n("491575"),
+  O = n("679891"),
+  L = n("491575"),
   M = n("561345"),
   y = n("314533"),
   P = n("935347"),
@@ -78,8 +78,8 @@ var a = n("735250"),
   eN = n("911560"),
   ev = n("703016"),
   eR = n("171368"),
-  eL = n("429974"),
-  eO = n("332754"),
+  eO = n("429974"),
+  eL = n("332754"),
   eM = n("507468"),
   ey = n("357269"),
   eP = n("282506"),
@@ -164,7 +164,7 @@ let e4 = o.default.connectStores([H.default, ej.default, eD.default], () => ({
       return null
     }
   }),
-  e2 = (0, R.makeAuthenticated)(O.default, null, {
+  e2 = (0, R.makeAuthenticated)(L.default, null, {
     passProps: !1
   }),
   e3 = (0, R.makeAuthenticated)(v.default, null, {
@@ -427,7 +427,7 @@ function e8(e) {
 }
 class te extends s.PureComponent {
   componentDidMount() {
-    M.default.initialize(), eQ.default.setZoomFactor(C.default.zoom), eC.default.init(), L.default.initialize(), eo.default.initialize(), k.default.initialize(), ex.default.initialize(), w.default.initialize(), ed.default.initialize(), J.default.initialize(), m.default.init(), F.default.init(), B.default.init(), ea.default.initialize(), T.default.initialize(), j.default.initialize(), ec.default.initialize(), I.default.initialize(), eP.default.initialize(), er.default.initialize(), g.default.initialize(), Y.default.init(), Z.default.init(), eW.default.init(), ez.default.init(), p.default.initialize(), ev.default.init(), eY.default.init(), eV.default.init(), eO.default.init(), eI.default.initialize(), eT.default.initialize(), eL.default.initialize(), eM.default.init(), U.default.initialize(), S.default.initialize(), em.default.initialize(), eg.default.initialize(), el.default.initialize(), es.default.initialize(), ei.default.initialize(), y.default.initialize(), X.default.init({
+    M.default.initialize(), eQ.default.setZoomFactor(C.default.zoom), eC.default.init(), O.default.initialize(), eo.default.initialize(), k.default.initialize(), ex.default.initialize(), w.default.initialize(), ed.default.initialize(), J.default.initialize(), m.default.init(), F.default.init(), B.default.init(), ea.default.initialize(), T.default.initialize(), j.default.initialize(), ec.default.initialize(), I.default.initialize(), eP.default.initialize(), er.default.initialize(), g.default.initialize(), Y.default.init(), Z.default.init(), eW.default.init(), ez.default.init(), p.default.initialize(), ev.default.init(), eY.default.init(), eV.default.init(), eL.default.init(), eI.default.initialize(), eT.default.initialize(), eO.default.initialize(), eM.default.init(), U.default.initialize(), S.default.initialize(), em.default.initialize(), eg.default.initialize(), el.default.initialize(), es.default.initialize(), ei.default.initialize(), y.default.initialize(), X.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -440,7 +440,7 @@ class te extends s.PureComponent {
     }), b.default.init(), $.default.initialize(), ef.default.initialize(), eu.default.initialize(), D.default.initialize(), this.rewriterUnlisten = eE.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = eE.default.addRouteChangeListener(this.handleHistoryChange)
   }
   componentWillUnmount() {
-    M.default.terminate(), ex.default.terminate(), ed.default.terminate(), eo.default.terminate(), L.default.terminate(), I.default.terminate(), eP.default.terminate(), g.default.terminate(), ec.default.terminate(), er.default.terminate(), eL.default.terminate(), p.default.terminate(), U.default.terminate(), $.default.terminate(), S.default.terminate(), ef.default.terminate(), em.default.terminate(), eg.default.terminate(), el.default.terminate(), es.default.terminate(), ei.default.terminate(), y.default.terminate(), eu.default.terminate(), D.default.terminate(), G.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
+    M.default.terminate(), ex.default.terminate(), ed.default.terminate(), eo.default.terminate(), O.default.terminate(), I.default.terminate(), eP.default.terminate(), g.default.terminate(), ec.default.terminate(), er.default.terminate(), eO.default.terminate(), p.default.terminate(), U.default.terminate(), $.default.terminate(), S.default.terminate(), ef.default.terminate(), em.default.terminate(), eg.default.terminate(), el.default.terminate(), es.default.terminate(), ei.default.terminate(), y.default.terminate(), eu.default.terminate(), D.default.terminate(), G.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
   }
   handleHistoryChange(e) {
     let {

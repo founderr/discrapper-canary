@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return p
   }
 });
 var l = s("735250"),
@@ -28,13 +28,13 @@ var l = s("735250"),
   N = s("689938"),
   C = s("363175");
 
-function h(e) {
+function p(e) {
   let {
     user: t,
     currentUser: s,
     displayProfile: i,
-    autoFocusNote: h,
-    className: p
+    autoFocusNote: p,
+    className: h
   } = e, {
     theme: R
   } = (0, _.useUserProfileThemeContext)(), {
@@ -52,7 +52,7 @@ function h(e) {
   }), b = (0, r.useStateFromStores)([f.default], () => f.default.locale), B = (0, E.default)(t.id);
   return (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: n()(C.scroller, p),
+    className: n()(C.scroller, h),
     children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(I.default, {
       userBio: i.bio,
       setLineClamp: !1
@@ -88,7 +88,7 @@ function h(e) {
       children: (0, l.jsx)(u.default, {
         userId: t.id,
         className: C.note,
-        autoFocus: h,
+        autoFocus: p,
         onUpdate: () => M({
           action: "SET_NOTE"
         })

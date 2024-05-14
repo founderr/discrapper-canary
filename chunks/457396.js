@@ -27,8 +27,8 @@ var i = n("924826"),
   N = n("52188"),
   v = n("248042"),
   R = n("924540"),
-  L = n("649765"),
-  O = n("565626"),
+  O = n("649765"),
+  L = n("565626"),
   M = n("701910"),
   y = n("487980"),
   P = n("474936"),
@@ -53,7 +53,7 @@ let G = e => {
     W = (0, g.usePremiumDiscountOffer)(),
     K = (0, r.useStateFromStores)([f.default], () => f.default.isLocalizedPromoEnabled) && null == Y,
     z = (0, v.useIsEligibleForBogoPromotion)(),
-    q = (0, O.default)(),
+    q = (0, L.default)(),
     Q = (0, A.useTenureRewardBadgeDescription)(),
     Z = (0, y.useIsEligibleSenderForReferralProgramTabBadge)(j),
     X = (0, r.useStateFromStores)([m.default], () => m.default.getCreatedAtOverride()),
@@ -80,7 +80,7 @@ let G = e => {
     userDiscount: W,
     isTabSelected: s,
     includesAmountOff: !1
-  }), a = 3) : null == Y || et ? Z ? (n = (0, l.jsx)(L.default, {
+  }), a = 3) : null == Y || et ? Z ? (n = (0, l.jsx)(O.default, {
     isSelected: s,
     onSelect: () => (0, d.markDismissibleContentAsDismissed)(o.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
       dismissAction: D.ContentDismissActionType.TAKE_ACTION
@@ -108,7 +108,7 @@ let G = e => {
     className: t,
     children: n
   });
-  return Z ? (0, l.jsx)(L.ReferralProgramCoachtipLinkButton, {
+  return Z ? (0, l.jsx)(O.ReferralProgramCoachtipLinkButton, {
     children: ea
   }) : ea
 }

@@ -19,8 +19,8 @@ let p = new Set,
   N = null,
   v = null,
   R = null,
-  L = null,
-  O = f.Storage.get(S.ADVANCED_MODE_ON_KEY) || !1;
+  O = null,
+  L = f.Storage.get(S.ADVANCED_MODE_ON_KEY) || !1;
 
 function M(e) {
   let t = e.getGuildId(),
@@ -33,7 +33,7 @@ function M(e) {
 function y() {
   if (N = _.default.getChannel(), v = _.default.getCategory(), null == N) return !1;
   let e = N.getGuildId();
-  A = T = M(N), null == T[R] && (R = e), s = null != v, a = h.areChannelsLocked(N, v), L = null, I = !1, g = m.FormStates.CLOSED, p.clear()
+  A = T = M(N), null == T[R] && (R = e), s = null != v, a = h.areChannelsLocked(N, v), O = null, I = !1, g = m.FormStates.CLOSED, p.clear()
 }
 class P extends(l = c.default.Store) {
   initialize() {
@@ -73,7 +73,7 @@ class P extends(l = c.default.Store) {
     return v
   }
   get advancedMode() {
-    return O
+    return L
   }
 }
 o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = P) ? Object.defineProperty(i, r, {
@@ -113,11 +113,11 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = P) ? Object.de
     if (null != T && null != T[t]) R = t;
     else {
       if (null == N) return !1;
-      L = t
+      O = t
     }
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    g = m.FormStates.CLOSED, T = null, A = null, N = null, v = null, I = !1, p.clear(), R = null, L = null
+    g = m.FormStates.CLOSED, T = null, A = null, N = null, v = null, I = !1, p.clear(), R = null, O = null
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -137,7 +137,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = P) ? Object.de
       }), null == n[t] && null == N.permissionOverwrites[t] && (n[t] = h.makeEveryoneOverwrite(t)), null == (T = {
         ...N.permissionOverwrites,
         ...n
-      })[R] ? R = t : null != L && null != T[L] && (R = L, L = null), a = h.areChannelsLocked(N, v), !0
+      })[R] ? R = t : null != O && null != T[O] && (R = O, O = null), a = h.areChannelsLocked(N, v), !0
     }(e.id) && (n = !0);
     return n
   },
@@ -154,6 +154,6 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = P) ? Object.de
     let {
       advancedMode: t
     } = e;
-    O = t, f.Storage.set(S.ADVANCED_MODE_ON_KEY, t)
+    L = t, f.Storage.set(S.ADVANCED_MODE_ON_KEY, t)
   }
 })

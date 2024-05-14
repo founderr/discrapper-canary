@@ -167,7 +167,7 @@ function R() {
   })
 }
 
-function L() {
+function O() {
   let e = (0, o.useStateFromStoresArray)([S.default], () => Object.values(S.default.getGuilds()));
   return (0, _.useAnyClanPrepilotExperimentEnabled)(e, "clan_discovery_add_clan", !1) ? (0, a.jsxs)(h.Clickable, {
     className: i()(T.buttonPill),
@@ -190,7 +190,7 @@ t.default = function() {
     className: T.toolbar,
     children: [(0, a.jsx)("div", {
       className: T.addClan,
-      children: (0, a.jsx)(L, {})
+      children: (0, a.jsx)(O, {})
     }), (0, a.jsxs)("div", {
       className: T.preferences,
       children: [(0, a.jsx)(N, {}), (0, a.jsx)(v, {}), (0, a.jsx)(R, {})]

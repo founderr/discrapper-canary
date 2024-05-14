@@ -27,7 +27,7 @@ function p(e) {
     selectedGame: n
   } = e, l = (0, _.useDiscoveryGameApplicationId)({
     selectedGame: n
-  }), r = (0, h.useClanDiscoveryUIStore)(e => e.selectedGames, i.default), u = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedGames, i.default), f = s.useMemo(() => new Set(r), [r]), S = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, i.default), p = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, i.default), I = (0, h.useClanDiscoveryUIStore)(e => e.selectedTraits, i.default), T = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedTraits, i.default), A = s.useMemo(() => new Set(I), [I]), N = s.useCallback(e => u(Array.from(e)), [u]), v = s.useCallback(e => p(e), [p]), R = s.useCallback(e => T([...e]), [T]), L = s.useCallback(() => {
+  }), r = (0, h.useClanDiscoveryUIStore)(e => e.selectedGames, i.default), u = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedGames, i.default), f = s.useMemo(() => new Set(r), [r]), S = (0, h.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, i.default), p = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, i.default), I = (0, h.useClanDiscoveryUIStore)(e => e.selectedTraits, i.default), T = (0, h.useClanDiscoveryUIStore)(e => e.setSelectedTraits, i.default), A = s.useMemo(() => new Set(I), [I]), N = s.useCallback(e => u(Array.from(e)), [u]), v = s.useCallback(e => p(e), [p]), R = s.useCallback(e => T([...e]), [T]), O = s.useCallback(() => {
     switch (t) {
       case 0:
         return (0, a.jsx)(d.default, {
@@ -68,7 +68,7 @@ function p(e) {
       fade: !0,
       children: (0, a.jsx)("div", {
         className: m.stepsContainer,
-        children: L()
+        children: O()
       })
     })
   })
@@ -84,7 +84,7 @@ t.default = s.memo(function(e) {
     0 === E ? (n(h.ClanDiscoveryUserScreens.USER_UPSELL), (0, h.setClanDiscoveryMode)(A)) : N(E - 1)
   }, [E, A, n, N]), R = s.useCallback(() => {
     2 === E ? (0, h.setClanDiscoveryMode)(h.ClanDiscoveryMode.DISCOVERY) : N(E + 1)
-  }, [E, N]), L = s.useMemo(() => 1 === E && null == T, [T, E]), O = s.useMemo(() => [{
+  }, [E, N]), O = s.useMemo(() => 1 === E && null == T, [T, E]), L = s.useMemo(() => [{
     index: 0,
     name: C.default.Messages.CLAN_SETUP_GAMES_STEP
   }, {
@@ -128,13 +128,13 @@ t.default = s.memo(function(e) {
       className: m.footer,
       children: [(0, a.jsx)(f.ClanSetupProgress, {
         currentStepIndex: E,
-        steps: O,
+        steps: L,
         furthestStepIndex: g,
         onStepClick: N
       }), (0, a.jsx)(f.ClanSetupProgressButtons, {
         className: m.footerButtons,
         isBackDisabled: !1,
-        isNextDisabled: L,
+        isNextDisabled: O,
         onNextClick: R,
         onBackClick: v
       })]

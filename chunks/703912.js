@@ -32,8 +32,8 @@ async function A(e, t, n) {
     response_type: N = "code",
     redirect_uri: v,
     code_challenge: R,
-    code_challenge_method: L,
-    state: O,
+    code_challenge_method: O,
+    state: L,
     nonce: M,
     scope: y,
     permissions: P,
@@ -63,8 +63,8 @@ async function A(e, t, n) {
       responseType: N,
       redirectUri: v,
       codeChallenge: R,
-      codeChallengeMethod: L,
-      state: O,
+      codeChallengeMethod: O,
+      state: L,
       integrationType: o
     })
   } catch (t) {
@@ -96,8 +96,8 @@ async function A(e, t, n) {
       responseType: N,
       redirectUri: v,
       codeChallenge: R,
-      codeChallengeMethod: L,
-      state: O,
+      codeChallengeMethod: O,
+      state: L,
       nonce: M,
       integrationType: o
     })).location
@@ -122,8 +122,8 @@ async function A(e, t, n) {
     responseType: N,
     redirectUri: v,
     codeChallenge: R,
-    codeChallengeMethod: L,
-    state: O,
+    codeChallengeMethod: O,
+    state: L,
     guildId: x,
     channelId: D,
     prompt: b,
