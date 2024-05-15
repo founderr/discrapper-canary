@@ -38,21 +38,20 @@ let A = {
   };
 
 function v(e) {
-  let t = (0, c.useDefaultClanProgress)(),
-    {
-      progress: n,
-      errors: a
-    } = (0, i.useStateFromStoresObject)([c.default], () => {
-      var n;
-      let a = c.default.getStateForGuild(e);
-      return {
-        progress: null !== (n = a.progress) && void 0 !== n ? n : t,
-        errors: a.errors
-      }
-    });
+  let {
+    progress: t,
+    errors: n
+  } = (0, i.useStateFromStoresObject)([c.default], () => {
+    var t;
+    let n = c.default.getStateForGuild(e);
+    return {
+      progress: null !== (t = n.progress) && void 0 !== t ? t : c.DEFAULT_CLAN_PROGRESS,
+      errors: n.errors
+    }
+  });
   return {
-    progress: n,
-    errors: a,
+    progress: t,
+    errors: n,
     handleClanUpdate: s.useCallback(t => d.updateClanSetup(e, t), [e])
   }
 }
@@ -252,30 +251,30 @@ function L(e) {
 function M(e) {
   let {
     guildId: t
-  } = e, n = (0, c.useDefaultClanProgress)(), l = (0, i.useStateFromStores)([c.default], () => {
-    var e, a, s;
-    return null !== (s = null === (a = c.default.getStateForGuild(t)) || void 0 === a ? void 0 : null === (e = a.progress) || void 0 === e ? void 0 : e.currentStep) && void 0 !== s ? s : n.currentStep
-  }), o = s.useRef(l - 1);
+  } = e, n = (0, i.useStateFromStores)([c.default], () => {
+    var e, n, a;
+    return null !== (a = null === (n = c.default.getStateForGuild(t)) || void 0 === n ? void 0 : null === (e = n.progress) || void 0 === e ? void 0 : e.currentStep) && void 0 !== a ? a : c.DEFAULT_CLAN_PROGRESS.currentStep
+  }), l = s.useRef(n - 1);
   s.useEffect(() => {
-    o.current = l
-  }, [l]);
-  let u = s.useMemo(() => [{
-      previousStep: o,
-      currentStep: l,
+    l.current = n
+  }, [n]);
+  let o = s.useMemo(() => [{
+      previousStep: l,
+      currentStep: n,
       guildId: t
-    }], [l, t]),
-    d = s.useMemo(() => null == o.current || l === o.current ? 0 : o.current < l ? 1 : -1, [l]),
-    f = s.useCallback((e, t, n, s) => (0, a.jsx)(O, {
+    }], [n, t]),
+    u = s.useMemo(() => null == l.current || n === l.current ? 0 : l.current < n ? 1 : -1, [n]),
+    d = s.useCallback((e, t, n, s) => (0, a.jsx)(O, {
       item: t,
-      direction: d,
+      direction: u,
       state: n,
       cleanUp: s
-    }, e), [d]);
+    }, e), [u]);
   return (0, a.jsx)("div", {
     className: T.stepsTransitionGroup,
     children: (0, a.jsx)(r.TransitionGroup, {
-      items: u,
-      renderItem: f,
+      items: o,
+      renderItem: d,
       getItemKey: L
     })
   })

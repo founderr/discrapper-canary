@@ -1,20 +1,19 @@
 "use strict";
 s.r(t), s.d(t, {
-  useDefaultClanProgress: function() {
-    return g
+  DEFAULT_CLAN_PROGRESS: function() {
+    return d
   }
 }), s("47120");
-var E, _ = s("470079"),
-  a = s("392711"),
-  n = s.n(a),
-  T = s("442837"),
-  i = s("570140"),
-  u = s("944163"),
-  A = s("709054"),
-  l = s("116175"),
-  I = s("308083");
+var E, _ = s("392711"),
+  a = s.n(_),
+  n = s("442837"),
+  T = s("570140"),
+  i = s("944163"),
+  u = s("709054"),
+  A = s("116175"),
+  l = s("308083");
 
-function r(e, t, s) {
+function I(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -22,79 +21,70 @@ function r(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let o = new Map,
-  L = new Map,
-  d = !1,
-  N = Object.freeze({
+let r = new Map,
+  o = new Map,
+  L = !1,
+  d = Object.freeze({
     gameApplicationIds: new Set,
-    playstyle: I.ClanPlaystyles.NONE,
+    playstyle: l.ClanPlaystyles.NONE,
     interests: new Set,
     description: "",
-    wildcardDescriptors: [I.EMPTY_WILDCARD, I.EMPTY_WILDCARD, I.EMPTY_WILDCARD],
+    wildcardDescriptors: [l.EMPTY_WILDCARD, l.EMPTY_WILDCARD, l.EMPTY_WILDCARD],
     tag: "",
     verificationForm: {
-      ...u.NO_MEMBER_VERIFICATION_FORM
+      ...i.NO_MEMBER_VERIFICATION_FORM
     },
-    badgeKind: l.ClanBadgeKind.SWORD,
+    badgeKind: A.ClanBadgeKind.SWORD,
     badgePrimaryColor: void 0,
     badgeSecondaryColor: void 0,
-    banner: I.ClanBannerKind.NIGHT_SKY,
+    banner: l.ClanBannerKind.NIGHT_SKY,
     brandPrimaryColor: void 0,
     brandSecondaryColor: void 0,
-    currentStep: I.ClanSetupSteps.GAMES,
-    furthestStep: I.ClanSetupSteps.GAMES,
+    currentStep: l.ClanSetupSteps.GAMES,
+    furthestStep: l.ClanSetupSteps.GAMES,
     badgeImage: "",
     requiredGameId: void 0
   });
 
-function S() {
-  let e = n().cloneDeep(N);
-  return e.badgeKind = (0, l.getRandomClanBadgeKind)(), e.banner = (0, I.getRandomClanBannerKind)(), e
-}
-
-function g() {
-  return _.useState(() => S())[0]
-}
-
-function D(e) {
+function N(e) {
   var t;
-  return null !== (t = o.get(e)) && void 0 !== t ? t : S()
+  return null !== (t = r.get(e)) && void 0 !== t ? t : a().cloneDeep(d)
 }
 
-function c(e, t) {
-  let s = D(e);
-  o.set(e, {
+function S(e, t) {
+  let s = N(e);
+  r.set(e, {
     ...s,
     ...t
   });
-  let E = L.get(e);
+  let E = o.get(e);
   if (null != E) {
     let s = {
       ...E
     };
     Object.keys(t).forEach(e => {
       delete s[e]
-    }), L.set(e, s)
+    }), o.set(e, s)
   }
 }
-class G extends(E = T.default.PersistedStore) {
+class g extends(E = n.default.PersistedStore) {
   initialize(e) {
-    null != e && A.default.keys(e.progressByGuild).forEach(t => {
+    null != e && u.default.keys(e.progressByGuild).forEach(t => {
       var s, E, _, a, n;
-      o.set(t, (s = e.progressByGuild[t], {
+      r.set(t, (s = e.progressByGuild[t], {
         gameApplicationIds: new Set(s.gameApplicationIds),
         playstyle: s.playstyle,
         interests: new Set(s.interests),
         description: s.description,
-        wildcardDescriptors: null !== (E = s.wildcardDescriptors) && void 0 !== E ? E : [I.EMPTY_WILDCARD, I.EMPTY_WILDCARD, I.EMPTY_WILDCARD],
+        wildcardDescriptors: null !== (E = s.wildcardDescriptors) && void 0 !== E ? E : [l.EMPTY_WILDCARD, l.EMPTY_WILDCARD, l.EMPTY_WILDCARD],
         tag: s.tag,
         verificationForm: null !== (_ = s.verificationForm) && void 0 !== _ ? _ : {
-          ...u.NO_MEMBER_VERIFICATION_FORM
+          ...i.NO_MEMBER_VERIFICATION_FORM
         },
-        badgeKind: null !== (a = s.badgeKind) && void 0 !== a ? a : l.ClanBadgeKind.SWORD,
+        badgeKind: null !== (a = s.badgeKind) && void 0 !== a ? a : A.ClanBadgeKind.SWORD,
         badgePrimaryColor: s.badgePrimaryColor,
         badgeSecondaryColor: s.badgeSecondaryColor,
-        banner: null !== (n = s.banner) && void 0 !== n ? n : I.ClanBannerKind.NIGHT_SKY,
+        banner: null !== (n = s.banner) && void 0 !== n ? n : l.ClanBannerKind.NIGHT_SKY,
         brandPrimaryColor: s.brandPrimaryColor,
         brandSecondaryColor: s.brandSecondaryColor,
         currentStep: s.currentStep,
@@ -106,7 +96,7 @@ class G extends(E = T.default.PersistedStore) {
   }
   getState() {
     let e = {};
-    return o.forEach((t, s) => {
+    return r.forEach((t, s) => {
       var E;
       e[s] = {
         gameApplicationIds: Array.from((E = t).gameApplicationIds),
@@ -133,44 +123,44 @@ class G extends(E = T.default.PersistedStore) {
   }
   getStateForGuild(e) {
     return {
-      progress: o.get(e),
-      errors: L.get(e),
-      submitting: d
+      progress: r.get(e),
+      errors: o.get(e),
+      submitting: L
     }
   }
   getGuildIds() {
-    return [...o.keys()]
+    return [...r.keys()]
   }
 }
-r(G, "displayName", "ClanSetupStore"), r(G, "persistKey", "ClanSetupStore"), t.default = new G(i.default, {
+I(g, "displayName", "ClanSetupStore"), I(g, "persistKey", "ClanSetupStore"), t.default = new g(T.default, {
   CLAN_SETUP_RESET: function() {
-    o.clear(), L.clear()
+    r.clear(), o.clear()
   },
   CLAN_SETUP_UPDATE: function(e) {
     let {
       guildId: t,
       updates: s
     } = e;
-    c(t, s)
+    S(t, s)
   },
   CLAN_SETUP_SUBMIT: function(e) {
     let {
       guildId: t
     } = e;
-    d = !0, L.delete(t)
+    L = !0, o.delete(t)
   },
   CLAN_SETUP_SUCCESS: function(e) {
     let {
       guildId: t
     } = e;
-    d = !1, o.delete(t), L.delete(t)
+    L = !1, r.delete(t), o.delete(t)
   },
   CLAN_SETUP_ERROR: function(e) {
     let {
       guildId: t,
       error: s
     } = e;
-    d = !1, L.set(t, {
+    L = !1, o.set(t, {
       gameApplicationIds: s.getFirstFieldErrorMessage("game_application_ids"),
       playstyle: s.getFirstFieldErrorMessage("play_style"),
       description: s.getFirstFieldErrorMessage("description"),
@@ -186,10 +176,10 @@ r(G, "displayName", "ClanSetupStore"), r(G, "persistKey", "ClanSetupStore"), t.d
       guildId: E,
       isLocalUpdate: _
     } = e;
-    _ && (t = null == s ? u.NO_MEMBER_VERIFICATION_FORM : {
-      ...D(E).verificationForm,
+    _ && (t = null == s ? i.NO_MEMBER_VERIFICATION_FORM : {
+      ...N(E).verificationForm,
       ...s
-    }, c(E, {
+    }, S(E, {
       verificationForm: t
     }))
   }

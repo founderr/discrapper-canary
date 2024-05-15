@@ -86,21 +86,21 @@ t.default = e => {
     setSigned: r,
     animatedTextStyle: E,
     signRef: C
-  } = e, g = (0, m.useDefaultClanProgress)(), S = (0, d.useStateFromStores)([f.default], () => {
+  } = e, g = (0, d.useStateFromStores)([f.default], () => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : ""
   }), {
-    gameApplicationIds: x,
-    playstyle: M,
-    interests: R,
-    tag: L,
-    badgeKind: y,
-    badgePrimaryColor: O,
-    badgeSecondaryColor: j
+    gameApplicationIds: S,
+    playstyle: x,
+    interests: M,
+    tag: R,
+    badgeKind: L,
+    badgePrimaryColor: y,
+    badgeSecondaryColor: O
   } = (0, d.useStateFromStoresObject)([m.default], () => {
     var e;
-    return null !== (e = m.default.getStateForGuild(n).progress) && void 0 !== e ? e : g
-  }), P = l.useMemo(() => (null == R ? void 0 : R.size) > 0 ? (0, p.formatSelectionList)(Array.from(R), T.MAX_TRAITS_TO_DISPLAY) : null, [R]);
+    return null !== (e = m.default.getStateForGuild(n).progress) && void 0 !== e ? e : m.DEFAULT_CLAN_PROGRESS
+  }), j = l.useMemo(() => (null == M ? void 0 : M.size) > 0 ? (0, p.formatSelectionList)(Array.from(M), T.MAX_TRAITS_TO_DISPLAY) : null, [M]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: A.scrollBg,
@@ -116,10 +116,10 @@ t.default = e => {
         fade: !0,
         className: A.overviewSidebarContent,
         children: [(0, a.jsx)(N, {
-          tag: L,
-          badge: y,
-          primaryColor: null != O ? O : _.CLAN_BADGE_PRIMARY_DEFAULT,
-          secondaryColor: null != j ? j : _.CLAN_BADGE_SECONDARY_DEFAULT
+          tag: R,
+          badge: L,
+          primaryColor: null != y ? y : _.CLAN_BADGE_PRIMARY_DEFAULT,
+          secondaryColor: null != O ? O : _.CLAN_BADGE_SECONDARY_DEFAULT
         }), (0, a.jsx)(c.Heading, {
           variant: "heading-xl/normal",
           color: "text-muted",
@@ -129,7 +129,7 @@ t.default = e => {
           variant: "heading-xl/bold",
           color: "interactive-active",
           className: A.overviewGuildName,
-          children: S
+          children: g
         }), (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
@@ -138,14 +138,14 @@ t.default = e => {
             date: o()().format("MMMM YYYY")
           })
         }), (0, a.jsx)(v, {
-          applicationIds: x,
-          playstyle: M
-        }), null != P ? (0, a.jsx)(c.Text, {
+          applicationIds: S,
+          playstyle: x
+        }), null != j ? (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: A.overviewText,
           children: I.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
-            traits: P
+            traits: j
           })
         }) : null, (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",

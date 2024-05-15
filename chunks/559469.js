@@ -15,7 +15,11 @@ function i(e) {
     preset: a,
     banner: i,
     ...r
-  } = e, o = (0, s.getRandomClanBadgeKind)();
+  } = e, o = function() {
+    let e = Object.keys(s.ClanBadgeKind).filter(e => isNaN(Number(e))),
+      t = e[Math.round(Math.random() * e.length - 1)];
+    return s.ClanBadgeKind[t]
+  }();
   return {
     id: t,
     name: "",
