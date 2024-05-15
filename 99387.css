@@ -46183,7 +46183,8 @@ img.thumbnail__18ece {
     padding-top: 40px;
     height: 344px;
     width: 100%;
-    z-index: 5
+    z-index: 5;
+    pointer-events: none
 }
 
 .clanCardCenterContainer__3c574 {

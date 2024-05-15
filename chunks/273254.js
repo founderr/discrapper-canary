@@ -1,36 +1,40 @@
 "use strict";
 n.r(t), n.d(t, {
   useFakeDiscoveryClanForGuild: function() {
-    return o
+    return d
   }
-});
+}), n("47120");
 var a = n("470079"),
   s = n("468194"),
+  i = n("645896"),
   l = n("316553"),
-  i = n("559469"),
-  r = n("308083");
+  r = n("559469"),
+  o = n("308083"),
+  u = n("689938");
 
-function o(e) {
+function d(e) {
   let {
     guild: t,
     selectedGame: n
-  } = e, o = (0, l.useDiscoveryGameApplicationId)({
+  } = e, d = (0, l.useDiscoveryGameApplicationId)({
     selectedGame: n
-  }), u = a.useMemo(() => null == o ? [] : [o], [o]), d = (0, i.useFakeDiscoveryUpsellClans)(o);
-  return a.useMemo(() => {
+  }), c = a.useMemo(() => null == d ? [] : [d], [d]), f = (0, r.useFakeDiscoveryUpsellClans)(d), E = (0, i.useClanInfo)(null == t ? void 0 : t.id), [h, _] = (0, i.useFetchClanInfo)(null == t ? void 0 : t.id);
+  return a.useEffect(() => {
+    !h && null != t && _()
+  }, [t, h, _]), a.useMemo(() => {
     var e;
-    return null == t ? null : {
-      ...d[d.length - 1],
+    return null != E ? E : null == t ? null : {
+      ...f[f.length - 1],
       id: t.id,
       name: t.name,
       icon: t.icon,
-      description: null !== (e = t.description) && void 0 !== e ? e : "",
+      description: null !== (e = t.description) && void 0 !== e ? e : u.default.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER,
       memberCount: 0,
-      games: u,
-      playstyle: r.ClanPlaystyles.CASUAL,
+      games: c,
+      playstyle: o.ClanPlaystyles.CASUAL,
       traits: [],
       tag: (0, s.getAcronym)(t.name),
-      wildcardDescriptors: []
+      wildcardDescriptors: o.CLAN_WILDCARD_PLACEHOLDERS
     }
-  }, [u, t, d])
+  }, [c, t, f, E])
 }
