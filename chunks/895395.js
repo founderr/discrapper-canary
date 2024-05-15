@@ -1,10 +1,10 @@
 "use strict";
 l.r(t), l.d(t, {
   ActivityDirectoryFooter: function() {
-    return M
+    return V
   },
   default: function() {
-    return D
+    return L
   }
 }), l("47120");
 var i = l("735250"),
@@ -19,95 +19,97 @@ var i = l("735250"),
   v = l("906732"),
   f = l("430824"),
   h = l("594174"),
-  I = l("867176"),
-  m = l("115130"),
-  E = l("566620"),
-  T = l("127255"),
-  C = l("880308"),
-  x = l("451576"),
-  S = l("439934"),
-  p = l("701488"),
-  A = l("689938"),
-  _ = l("734867"),
-  g = l("497263");
-let N = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
-  j = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
-  y = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
+  I = l("792125"),
+  m = l("867176"),
+  E = l("115130"),
+  T = l("566620"),
+  C = l("127255"),
+  x = l("880308"),
+  S = l("451576"),
+  p = l("439934"),
+  A = l("701488"),
+  _ = l("981631"),
+  g = l("689938"),
+  N = l("734867"),
+  j = l("497263");
+let y = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
+  D = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
+  M = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
 
-function D(e) {
+function L(e) {
   let {
     channel: t,
     guildId: l,
     locationObject: n,
     onClose: r,
     onActivityItemVisible: c,
-    scrollerRef: p
-  } = e, [D, M] = a.useState(0), L = (0, T.default)({
+    scrollerRef: A
+  } = e, [L, V] = a.useState(0), R = (0, C.default)({
     guildId: l,
     enableFilter: !0,
     channel: t
-  }), V = (0, d.useStateFromStores)([h.default], () => h.default.getCurrentUser()), R = (0, d.useStateFromStores)([f.default], () => f.default.getGuild(l), [l]), {
-    analyticsLocations: b
-  } = (0, v.default)(u.default.ACTIVITY_DIRECTORY), O = (0, x.default)(null == t ? void 0 : t.id), H = (0, I.useIsActivitiesInTextShelfPosterEnabled)(null == t ? void 0 : t.id, "ActivityShelfSlideActivityDirectory"), {
-    isDeveloperActivityShelfEnabled: F,
-    filter: B
-  } = (0, d.useStateFromStoresObject)([m.default], () => ({
-    filter: m.default.getFilter(),
-    isDeveloperActivityShelfEnabled: m.default.getIsEnabled()
+  }), b = (0, d.useStateFromStores)([h.default], () => h.default.getCurrentUser()), O = (0, d.useStateFromStores)([f.default], () => f.default.getGuild(l), [l]), {
+    analyticsLocations: H
+  } = (0, v.default)(u.default.ACTIVITY_DIRECTORY), F = (0, S.default)(null == t ? void 0 : t.id), B = (0, m.useIsActivitiesInTextShelfPosterEnabled)(null == t ? void 0 : t.id, "ActivityShelfSlideActivityDirectory"), {
+    isDeveloperActivityShelfEnabled: Y,
+    filter: w
+  } = (0, d.useStateFromStoresObject)([E.default], () => ({
+    filter: E.default.getFilter(),
+    isDeveloperActivityShelfEnabled: E.default.getIsEnabled()
   }));
   if (a.useEffect(() => {
-      let e = p.current;
+      let e = A.current;
       if (null != e) return e.addEventListener("scroll", t, !1), () => {
         null != e && e.removeEventListener("scroll", t, !1)
       };
 
       function t() {
         var e, t;
-        M(null !== (t = null === (e = p.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
+        V(null !== (t = null === (e = A.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
       }
-    }, [p]), a.useEffect(() => {
-      (O || null != l) && (0, E.fetchShelf)({
+    }, [A]), a.useEffect(() => {
+      (F || null != l) && (0, T.fetchShelf)({
         guildId: l,
         force: !0
       })
-    }, [l, O]), (0, C.useFetchDeveloperActivityShelfItems)(), null == R && !O || null == V) return null;
-  let Y = L.length > 0;
+    }, [l, F]), (0, x.useFetchDeveloperActivityShelfItems)(), null == O && !F || null == b) return null;
+  let k = R.length > 0;
   return (0, i.jsx)(v.AnalyticsLocationProvider, {
-    value: b,
+    value: H,
     children: (0, i.jsxs)("div", {
-      className: _.scrollContainer,
-      children: [Y ? (0, i.jsx)("div", {
-        className: _.scrollBackgroundContainer,
+      className: N.scrollContainer,
+      children: [k ? (0, i.jsx)("div", {
+        className: N.scrollBackgroundContainer,
         style: {
-          top: -D
+          top: -L
         },
         children: (0, i.jsx)("div", {
-          className: s()(_.scrollTierBackground),
+          className: s()(N.scrollTierBackground),
           style: {
             height: (e => {
               let t = 1 === e.length;
-              return N + Math.ceil(e.length / 2) * (t ? y : j)
-            })(L)
+              return y + Math.ceil(e.length / 2) * (t ? M : D)
+            })(R)
           }
         })
       }) : null, (0, i.jsxs)(o.Scroller, {
-        ref: p,
-        className: _.scroller,
+        ref: A,
+        className: N.scroller,
         children: [function() {
-          if (H) {
-            let e = A.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITIES_AVAILABLE_IN_TEXT,
+          if (B) {
+            let e = g.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITIES_AVAILABLE_IN_TEXT,
               t = Math.min(Math.max(Math.ceil(1660 / e.length), 32), 48);
             return (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsxs)("div", {
-                className: _.poster,
+                className: N.poster,
                 children: [(0, i.jsx)("img", {
-                  className: _.posterBackground,
-                  src: g,
+                  className: N.posterBackground,
+                  src: j,
                   alt: e
                 }), (0, i.jsx)("div", {
-                  className: _.posterTextParent,
+                  className: N.posterTextParent,
                   children: (0, i.jsx)(o.Text, {
-                    className: _.posterText,
+                    className: s()((0, I.getThemeClass)(_.ThemeTypes.DARK), N.posterText),
                     variant: "display-sm",
                     style: {
                       fontSize: t
@@ -116,17 +118,17 @@ function D(e) {
                   })
                 })]
               }), (0, i.jsx)("div", {
-                className: _.posterDivider
+                className: N.posterDivider
               })]
             })
           }
           return null
-        }(), Y ? (0, i.jsx)("div", {
-          className: _.scrollSection,
+        }(), k ? (0, i.jsx)("div", {
+          className: N.scrollSection,
           children: (0, i.jsx)("div", {
-            className: s()(_.shelf),
-            children: L.map(e => (0, i.jsx)(S.default, {
-              large: 1 === L.length,
+            className: s()(N.shelf),
+            children: R.map(e => (0, i.jsx)(p.default, {
+              large: 1 === R.length,
               activityItem: e,
               channel: t,
               guildId: l,
@@ -138,14 +140,14 @@ function D(e) {
               }
             }, "activity-shelf-item-".concat(e.application.id)))
           })
-        }) : F && B.length > 0 ? (0, i.jsx)(o.Text, {
+        }) : Y && w.length > 0 ? (0, i.jsx)(o.Text, {
           variant: "text-md/normal",
-          className: _.filterError,
-          children: A.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({
-            filter: B
+          className: N.filterError,
+          children: g.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({
+            filter: w
           })
         }) : (0, i.jsx)("div", {
-          className: _.spinnerContainer,
+          className: N.spinnerContainer,
           children: (0, i.jsx)(o.Spinner, {})
         })]
       })]
@@ -153,11 +155,11 @@ function D(e) {
   })
 }
 
-function M() {
+function V() {
   return (0, i.jsx)(o.Text, {
     variant: "text-sm/normal",
-    children: A.default.Messages.EMBEDDED_ACTIVITIES_FEEDBACK_SURVEY.format({
-      surveyURL: p.EMBEDDED_ACTIVITY_SURVEY_URL
+    children: g.default.Messages.EMBEDDED_ACTIVITIES_FEEDBACK_SURVEY.format({
+      surveyURL: A.EMBEDDED_ACTIVITY_SURVEY_URL
     })
   })
 }
