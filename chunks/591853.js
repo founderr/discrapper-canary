@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return el
   },
   PopoutContent: function() {
-    return ec
+    return ef
   },
   PopoutInteractionsContainer: function() {
     return er
@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return eo
   },
   StreamingPopoutContent: function() {
-    return ef
+    return eh
   },
   VoiceChannelPopoutReactor: function() {
-    return eh
+    return em
   }
 }), n("47120");
 var a = n("735250"),
@@ -356,17 +356,33 @@ function ed(e) {
 
 function ec(e) {
   let {
+    children: t,
+    onClick: n
+  } = e;
+  return null == n ? (0, a.jsx)(a.Fragment, {
+    children: t
+  }) : (0, a.jsx)(_.Clickable, {
+    className: en.maybeClickable,
+    onClick: n,
+    children: t
+  })
+}
+
+function ef(e) {
+  let {
     thumbnailSrc: t,
     title: n,
     subtitle: l,
     badges: s,
     children: i,
-    ...r
+    onClickTitle: r,
+    onClickSubtitle: o,
+    ...u
   } = e;
   return (0, a.jsxs)(es, {
     backgroundImgSrc: t,
     children: [(0, a.jsx)(ed, {
-      ...r
+      ...u
     }), (0, a.jsxs)("div", {
       className: en.popoutContentBody,
       children: [(0, a.jsx)("div", {
@@ -380,15 +396,21 @@ function ec(e) {
         size: 16,
         horizontal: !0
       }), (0, a.jsxs)("div", {
-        children: [(0, a.jsx)(_.Heading, {
-          variant: "heading-md/medium",
-          className: en.popoutTextPrimary,
-          lineClamp: 3,
-          children: n
-        }), null != l ? (0, a.jsx)(_.Text, {
-          variant: "text-md/normal",
-          className: en.popoutTextSecondary,
-          children: l
+        children: [(0, a.jsx)(ec, {
+          onClick: r,
+          children: (0, a.jsx)(_.Heading, {
+            variant: "heading-md/medium",
+            className: en.popoutTextPrimary,
+            lineClamp: 3,
+            children: n
+          })
+        }), null != l ? (0, a.jsx)(ec, {
+          onClick: o,
+          children: (0, a.jsx)(_.Text, {
+            variant: "text-md/normal",
+            className: en.popoutTextSecondary,
+            children: l
+          })
         }) : null, (0, a.jsx)(w.default, {
           size: 8
         }), s]
@@ -397,7 +419,7 @@ function ec(e) {
   })
 }
 
-function ef(e) {
+function eh(e) {
   let {
     title: t,
     badges: n,
@@ -430,7 +452,7 @@ function ef(e) {
   })
 }
 
-function eh(e) {
+function em(e) {
   let {
     user: t,
     entry: n,

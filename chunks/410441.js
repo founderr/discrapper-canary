@@ -29,17 +29,24 @@ function d(e) {
     Icon: d,
     getLabel: c
   } = null !== (t = u[l]) && void 0 !== t ? t : {};
-  return null == d ? null : (0, a.jsx)(s.BlockInteractionsContext.Provider, {
-    value: null == n,
-    children: (0, a.jsx)(s.Clickable, {
+  if (null == d) return null;
+  let f = null != i ? i : null == c ? void 0 : c(),
+    h = (0, a.jsx)(d, {
+      color: r.hex(),
+      width: 16,
+      height: 16
+    });
+  return null == n ? (0, a.jsx)("div", {
+    className: o.container,
+    "aria-label": f,
+    children: h
+  }) : (0, a.jsx)(s.Tooltip, {
+    text: f,
+    children: e => (0, a.jsx)(s.Clickable, {
       className: o.container,
       onClick: n,
-      "aria-label": null != i ? i : null == c ? void 0 : c(),
-      children: (0, a.jsx)(d, {
-        color: r.hex(),
-        width: 16,
-        height: 16
-      })
+      ...e,
+      children: h
     })
   })
 }
