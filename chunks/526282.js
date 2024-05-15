@@ -136,40 +136,35 @@ t.default = s.memo(function(e) {
           style: g ? void 0 : x,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[0],
-            className: m.clanCardOuterLeft,
-            renderBannerFromRaw: !0
+            className: m.clanCardOuterLeft
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardInnerContainer,
           style: g ? void 0 : y,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[1],
-            className: m.clanCardInnerLeft,
-            renderBannerFromRaw: !0
+            className: m.clanCardInnerLeft
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardCenterContainer,
           style: g ? void 0 : M,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[4],
-            className: m.clanCardCenter,
-            renderBannerFromRaw: !0
+            className: m.clanCardCenter
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardInnerContainer,
           style: g ? void 0 : P,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[2],
-            className: m.clanCardInnerRight,
-            renderBannerFromRaw: !0
+            className: m.clanCardInnerRight
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardOuterContainer,
           style: g ? void 0 : D,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[3],
-            className: m.clanCardOuterRight,
-            renderBannerFromRaw: !0
+            className: m.clanCardOuterRight
           })
         })]
       })
