@@ -96,7 +96,7 @@ t.default = e => {
     month: "long",
     day: "numeric"
   }), ee = e => {
-    e.stopPropagation(), F(), (0, h.trackQuestContentClicked)({
+    e.stopPropagation(), e.currentTarget.blur(), F(), (0, h.trackQuestContentClicked)({
       questId: u.id,
       questContent: c,
       questContentCTA: j ? h.QuestContentCTA.COLLAPSE : h.QuestContentCTA.EXPAND,
