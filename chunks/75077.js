@@ -102,9 +102,7 @@ let m = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
       } = e;
       t.length < l && t.push(s)
     };
-    return null != s.shyProject && o({
-      card: s.shyProject
-    }), null != s.freeBoost && !0 === r && o({
+    return null != s.freeBoost && !0 === r && o({
       card: s.freeBoost
     }), o({
       card: s.earlyAccess
