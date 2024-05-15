@@ -314,15 +314,21 @@ t.default = s.memo(function(e) {
       onRest: () => H(!1)
     }),
     Z = s.useMemo(() => null == c ? P.default.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : P.default.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [c]),
-    X = s.useCallback(e => (0, a.jsx)(h.Text, {
-      tag: "span",
-      variant: "text-xs/medium",
-      color: "text-brand",
-      children: e
-    }), []),
-    J = s.useCallback(async () => {
+    X = s.useCallback(async () => {
       await (0, p.joinWumpusFeedbackSquad)(o), _.default.transitionToGuildSync("936317138904440892")
-    }, [o]);
+    }, [o]),
+    J = s.useCallback(e => (0, a.jsx)(h.Clickable, {
+      tag: "span",
+      className: x.joinWFSLink,
+      onClick: X,
+      "aria-label": P.default.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL,
+      children: (0, a.jsx)(h.Text, {
+        tag: "span",
+        variant: "text-xs/medium",
+        color: "text-brand",
+        children: e
+      })
+    }), [X]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: x.cardsContainer,
@@ -402,15 +408,13 @@ t.default = s.memo(function(e) {
       })
     }), (0, a.jsx)("div", {
       className: x.joinWFSContainer,
-      children: (0, a.jsx)(h.Clickable, {
+      children: (0, a.jsx)("div", {
         className: x.joinWFS,
-        onClick: J,
-        "aria-label": P.default.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL,
         children: (0, a.jsx)(h.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
           children: P.default.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS.format({
-            wfsHook: X
+            wfsHook: J
           })
         })
       })

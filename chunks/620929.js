@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("650461"),
   p = n("353093"),
   E = n("105671"),
-  C = n("287679"),
-  g = n("979264"),
+  C = n("979264"),
+  g = n("570938"),
   S = n("550271"),
   _ = n("116175"),
   T = n("308083"),
@@ -33,11 +33,13 @@ function N(e) {
     primaryColor: l,
     secondaryColor: s
   } = e;
-  return null == t || 0 === t.length ? (0, a.jsx)(C.default, {
-    height: 42,
-    width: 42,
-    className: A.placeholderIcon
-  }) : (0, a.jsx)(g.BaseClanTagChiplet, {
+  return null == t || 0 === t.length ? (0, a.jsx)("div", {
+    className: A.placeholderIcon,
+    children: (0, a.jsx)(g.default, {
+      height: 42,
+      width: 42
+    })
+  }) : (0, a.jsx)(C.BaseClanTagChiplet, {
     className: A.charterClanTag,
     clanTag: t,
     textVariant: "heading-lg/semibold",

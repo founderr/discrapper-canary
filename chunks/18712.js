@@ -19,6 +19,7 @@ e.exports = {
   clanEnvelopeTop: "clanEnvelopeTop_bf09a8",
   joinWFS: "joinWFS_b2bee7",
   joinWFSContainer: "joinWFSContainer_feee17",
+  joinWFSLink: "joinWFSLink_fee015",
   reserveButton: "reserveButton_c5765e",
   spacer: "spacer__960c0",
   upsellBackButton: "upsellBackButton__339ae",
