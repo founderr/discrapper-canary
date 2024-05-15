@@ -83,7 +83,7 @@ t.default = r.memo(function(e) {
       switch (!0) {
         case !b:
           return null;
-        case !U && !B:
+        case !V && !U && !B:
           return (0, i.jsx)(s.Button, {
             onClick: H,
             color: s.Button.Colors.PRIMARY,
@@ -91,7 +91,7 @@ t.default = r.memo(function(e) {
             fullWidth: !0,
             children: C.default.Messages.JOIN_WAITLIST
           });
-        case !U && B:
+        case !V && !U && B:
           return (0, i.jsx)(s.Button, {
             onClick: H,
             color: s.Button.Colors.PRIMARY,
