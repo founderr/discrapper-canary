@@ -96,7 +96,8 @@ function y(e) {
       items: s.slice(P),
       sectionHeight: 24
     }], [s, I, P]),
-    B = i.useCallback((e, t, n, a) => {
+    B = i.useMemo(() => new Set(f.games), [f.games]),
+    F = i.useCallback((e, t, n, a) => {
       var s;
       let {
         items: i
@@ -107,10 +108,11 @@ function y(e) {
         traitsToHighlight: C,
         className: L.card,
         style: n,
-        source: R.AnalyticsSections.DISCOVER_SEARCH
+        source: R.AnalyticsSections.DISCOVER_SEARCH,
+        prioritizedGameIds: B
       }, a)
-    }, [f, w, C]),
-    F = i.useCallback(e => {
+    }, [f, w, C, B]),
+    H = i.useCallback(e => {
       let {
         header: t,
         subtitle: n,
@@ -181,8 +183,8 @@ function y(e) {
         paddingHorizontal: 32,
         paddingVertical: 40,
         removeEdgeItemGutters: !0,
-        renderItem: B,
-        renderSection: F,
+        renderItem: F,
+        renderSection: H,
         getSectionHeight: e => w[e].sectionHeight,
         getItemKey: (e, t) => w[e].items[t].id,
         getItemHeight: () => 400,

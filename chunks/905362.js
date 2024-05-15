@@ -29,7 +29,7 @@ function l(e) {
   })
 }
 
-function u(e, t, r) {
+function u(e, t, r, s) {
   (0, o.trackClanApplyToJoinViewed)({
     guildId: e,
     ...r
@@ -39,7 +39,8 @@ function u(e, t, r) {
     } = await Promise.all([n.e("99387"), n.e("80026"), n.e("18482")]).then(n.bind(n, "767593"));
     return n => (0, i.jsx)(e, {
       ...n,
-      clan: t
+      clan: t,
+      prioritizedGameIds: s
     })
   })
 }

@@ -43,28 +43,29 @@ t.default = function(e) {
   var t, n;
   let {
     clan: c,
-    transitionState: v,
-    onClose: N
-  } = e, T = (0, h.useUID)(), I = (0, o.useStateFromStores)([d.default], () => d.default.get(c.id)), [R, F] = i.useState(null !== (n = null == I ? void 0 : I.formFields) && void 0 !== n ? n : []), C = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser()), g = null == C ? void 0 : C.verified, P = null == C ? void 0 : C.isPhoneVerified(), {
-    enableApplication: j
+    prioritizedGameIds: v,
+    transitionState: N,
+    onClose: I
+  } = e, T = (0, h.useUID)(), R = (0, o.useStateFromStores)([d.default], () => d.default.get(c.id)), [F, C] = i.useState(null !== (n = null == R ? void 0 : R.formFields) && void 0 !== n ? n : []), g = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser()), P = null == g ? void 0 : g.verified, j = null == g ? void 0 : g.isPhoneVerified(), {
+    enableApplication: O
   } = (0, a.useClanPrePilotApplicationExperiment)("discovery");
   i.useEffect(() => {
     l.default.fetchVerificationForm(c.id)
   }, [c.id]), i.useEffect(() => {
-    null != I && F(I.formFields)
-  }, [I]);
-  let O = i.useCallback(async e => {
+    null != R && C(R.formFields)
+  }, [R]);
+  let A = i.useCallback(async e => {
       await l.default.submitVerificationForm(c.id, e)
     }, [c.id]),
-    A = i.useCallback(async () => {
-      await O({
-        ...null != I ? I : d.NO_MEMBER_VERIFICATION_FORM,
-        formFields: R
-      }), N()
-    }, [O, N, I, R]),
-    y = !((null == I ? void 0 : null === (t = I.guild) || void 0 === t ? void 0 : t.verification_level) === p.VerificationLevels.VERY_HIGH ? P : g || P) || R.some(e => !(0, u.isValidFormResponse)(e));
+    y = i.useCallback(async () => {
+      await A({
+        ...null != R ? R : d.NO_MEMBER_VERIFICATION_FORM,
+        formFields: F
+      }), I()
+    }, [A, I, R, F]),
+    b = !((null == R ? void 0 : null === (t = R.guild) || void 0 === t ? void 0 : t.verification_level) === p.VerificationLevels.VERY_HIGH ? j : P || j) || F.some(e => !(0, u.isValidFormResponse)(e));
   return (0, r.jsxs)(s.ModalRoot, {
-    transitionState: v,
+    transitionState: N,
     "aria-labelledby": T,
     size: s.ModalSize.DYNAMIC,
     className: _.container,
@@ -78,8 +79,8 @@ t.default = function(e) {
           className: _.scroller,
           children: (0, r.jsx)(x, {
             guildId: c.id,
-            formState: R,
-            updateFormState: F
+            formState: F,
+            updateFormState: C
           })
         })
       }), (0, r.jsx)("div", {
@@ -88,15 +89,16 @@ t.default = function(e) {
         className: _.clanContainer,
         children: [(0, r.jsx)(m.ClanDiscoveryCardView, {
           clan: c,
-          className: _.card
+          className: _.card,
+          prioritizedGameIds: v
         }), (0, r.jsx)(s.Tooltip, {
           text: E.default.Messages.CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP,
-          shouldShow: !j,
+          shouldShow: !O,
           children: e => (0, r.jsx)(s.Button, {
             ...e,
             type: "submit",
-            onClick: A,
-            disabled: y || !j,
+            onClick: y,
+            disabled: b || !O,
             children: E.default.Messages.APPLY
           })
         })]
@@ -104,7 +106,7 @@ t.default = function(e) {
     }), (0, r.jsx)("div", {
       className: _.closeButtonContainer,
       children: (0, r.jsx)(s.Button, {
-        onClick: N,
+        onClick: I,
         look: s.ButtonLooks.OUTLINED,
         color: s.ButtonColors.PRIMARY,
         children: E.default.Messages.CLOSE
