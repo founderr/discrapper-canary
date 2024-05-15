@@ -55,28 +55,28 @@ function I() {
     }(),
     t = a.useMemo(() => [{
       header: g.default.Messages.USER_SETTINGS,
-      settings: [_.Setting.ACCOUNT, _.Setting.GAMES, _.Setting.PROFILE_CUSTOMIZATION, _.Setting.PRIVACY_AND_SAFETY, _.Setting.FAMILY_CENTER, _.Setting.AUTHORIZED_APPS, _.Setting.SESSIONS, _.Setting.CONNECTIONS, _.Setting.CLIPS, _.Setting.FRIEND_REQUESTS]
+      settings: [_.WebSetting.ACCOUNT, _.WebSetting.GAMES, _.WebSetting.PROFILE_CUSTOMIZATION, _.WebSetting.PRIVACY_AND_SAFETY, _.WebSetting.FAMILY_CENTER, _.WebSetting.AUTHORIZED_APPS, _.WebSetting.SESSIONS, _.WebSetting.CONNECTIONS, _.WebSetting.CLIPS, _.WebSetting.FRIEND_REQUESTS]
     }, {
       header: g.default.Messages.BILLING_SETTINGS,
       divider: !0,
-      settings: [_.Setting.PREMIUM, _.Setting.GUILD_BOOSTING, _.Setting.SUBSCRIPTIONS, _.Setting.GIFT_INVENTORY, _.Setting.BILLING]
+      settings: [_.WebSetting.PREMIUM, _.WebSetting.GUILD_BOOSTING, _.WebSetting.SUBSCRIPTIONS, _.WebSetting.GIFT_INVENTORY, _.WebSetting.BILLING]
     }, {
       header: g.default.Messages.APP_SETTINGS,
       divider: !0,
-      settings: [_.Setting.APPEARANCE, _.Setting.ACCESSIBILITY, _.Setting.VOICE_AND_VIDEO, _.Setting.POGGERMODE, _.Setting.CHAT, _.Setting.NOTIFICATIONS, _.Setting.KEYBINDS, _.Setting.LANGUAGE, _.Setting.WINDOW_SETTINGS, _.Setting.LINUX_SETTINGS, _.Setting.STREAMER_MODE, _.Setting.SPEED_TEST, _.Setting.SETTINGS_ADVANCED]
+      settings: [_.WebSetting.APPEARANCE, _.WebSetting.ACCESSIBILITY, _.WebSetting.VOICE_AND_VIDEO, _.WebSetting.POGGERMODE, _.WebSetting.CHAT, _.WebSetting.NOTIFICATIONS, _.WebSetting.KEYBINDS, _.WebSetting.LANGUAGE, _.WebSetting.WINDOW_SETTINGS, _.WebSetting.LINUX_SETTINGS, _.WebSetting.STREAMER_MODE, _.WebSetting.SPEED_TEST, _.WebSetting.SETTINGS_ADVANCED]
     }, {
       header: g.default.Messages.ACTIVITY_SETTINGS,
       divider: !0,
-      settings: [_.Setting.ACTIVITY_PRIVACY, _.Setting.REGISTERED_GAMES, _.Setting.OVERLAY]
+      settings: [_.WebSetting.ACTIVITY_PRIVACY, _.WebSetting.REGISTERED_GAMES, _.WebSetting.OVERLAY]
     }, {
       divider: !0,
-      settings: [_.Setting.CHANGELOG, _.Setting.MERCHANDISE, _.Setting.HYPESQUAD, _.Setting.EXPERIMENTS, _.Setting.DEVELOPER_OPTIONS, _.Setting.HOTSPOT_OPTIONS, _.Setting.DISMISSIBLE_CONTENT_OPTIONS, _.Setting.PAYMENT_FLOW_MODALS, _.Setting.TEXT_PLAYGROUND, _.Setting.TEXT_COMPONENTS, _.Setting.PROFILE_EFFECTS_PREVIEW_TOOL, _.Setting.QUEST_PREVIEW_TOOL]
+      settings: [_.WebSetting.CHANGELOG, _.WebSetting.MERCHANDISE, _.WebSetting.HYPESQUAD, _.WebSetting.EXPERIMENTS, _.WebSetting.DEVELOPER_OPTIONS, _.WebSetting.HOTSPOT_OPTIONS, _.WebSetting.DISMISSIBLE_CONTENT_OPTIONS, _.WebSetting.PAYMENT_FLOW_MODALS, _.WebSetting.TEXT_PLAYGROUND, _.WebSetting.TEXT_COMPONENTS, _.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL, _.WebSetting.QUEST_PREVIEW_TOOL]
     }, {
       divider: !0,
-      settings: [_.Setting.LOGOUT]
+      settings: [_.WebSetting.LOGOUT]
     }, {
       divider: !0,
-      settings: [_.Setting.SOCIAL_LINKS, _.Setting.CLIENT_DEBUG_INFO]
+      settings: [_.WebSetting.SOCIAL_LINKS, _.WebSetting.CLIENT_DEBUG_INFO]
     }], []);
   return a.useMemo(() => (function(e, t) {
     let s = [];

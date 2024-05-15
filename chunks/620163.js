@@ -108,20 +108,20 @@ let eD = () => {
       shouldMergeGameSettings: ey
     } = e;
     return Object.freeze({
-      [ex.Setting.ACCOUNT]: {
+      [ex.WebSetting.ACCOUNT]: {
         section: eR.UserSettingsSections.ACCOUNT,
         label: ev.default.Messages.USER_SETTINGS_MY_ACCOUNT,
         ariaLabel: ev.default.Messages.USER_SETTINGS_MY_ACCOUNT,
         element: J.default
       },
-      [ex.Setting.GAMES]: {
+      [ex.WebSetting.GAMES]: {
         section: eR.UserSettingsSections.GAMES,
         label: ev.default.Messages.GAMES,
         ariaLabel: ev.default.Messages.GAMES,
         element: eA.default,
         predicate: () => ey
       },
-      [ex.Setting.PROFILE_CUSTOMIZATION]: {
+      [ex.WebSetting.PROFILE_CUSTOMIZATION]: {
         section: eR.UserSettingsSections.PROFILE_CUSTOMIZATION,
         type: S.ContentTypes.WIDE,
         label: ev.default.Messages.USER_SETTINGS_PROFILES,
@@ -140,12 +140,12 @@ let eD = () => {
           })
         }
       },
-      [ex.Setting.PRIVACY_AND_SAFETY]: {
+      [ex.WebSetting.PRIVACY_AND_SAFETY]: {
         section: eR.UserSettingsSections.PRIVACY_AND_SAFETY,
         label: ev.default.Messages.PRIVACY_AND_SAFETY,
         element: em.default
       },
-      [ex.Setting.FAMILY_CENTER]: {
+      [ex.WebSetting.FAMILY_CENTER]: {
         section: eR.UserSettingsSections.FAMILY_CENTER,
         label: ev.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
         ariaLabel: ev.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
@@ -157,12 +157,12 @@ let eD = () => {
         }),
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.FAMILY_CENTER_NEW_BADGE]
       },
-      [ex.Setting.AUTHORIZED_APPS]: {
+      [ex.WebSetting.AUTHORIZED_APPS]: {
         section: eR.UserSettingsSections.AUTHORIZED_APPS,
         label: ev.default.Messages.AUTHORIZED_APPS,
         element: es.default
       },
-      [ex.Setting.SESSIONS]: {
+      [ex.WebSetting.SESSIONS]: {
         section: eR.UserSettingsSections.SESSIONS,
         label: ev.default.Messages.AUTH_SESSIONS,
         ariaLabel: ev.default.Messages.AUTH_SESSIONS,
@@ -174,7 +174,7 @@ let eD = () => {
           autoTrackExposure: !1
         }).showSettings
       },
-      [ex.Setting.CONNECTIONS]: {
+      [ex.WebSetting.CONNECTIONS]: {
         section: eR.UserSettingsSections.CONNECTIONS,
         label: ev.default.Messages.CONNECTIONS,
         ariaLabel: ev.default.Messages.CONNECTIONS,
@@ -185,7 +185,7 @@ let eD = () => {
         },
         newIndicatorDismissibleContentTypes: [l.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION]
       },
-      [ex.Setting.CLIPS]: {
+      [ex.WebSetting.CLIPS]: {
         section: eR.UserSettingsSections.CLIPS,
         label: ev.default.Messages.CLIPS,
         ariaLabel: ev.default.Messages.CLIPS,
@@ -193,24 +193,24 @@ let eD = () => {
         element: m.default,
         predicate: () => !ey
       },
-      [ex.Setting.FRIEND_REQUESTS]: {
+      [ex.WebSetting.FRIEND_REQUESTS]: {
         section: eR.UserSettingsSections.FRIEND_REQUESTS,
         label: ev.default.Messages.FRIEND_REQUESTS,
         element: er.default
       },
-      [ex.Setting.PREMIUM]: {
+      [ex.WebSetting.PREMIUM]: {
         section: eR.UserSettingsSections.PREMIUM,
         ariaLabel: ev.default.Messages.PREMIUM,
         label: ev.default.Messages.PREMIUM,
         element: K.default,
         className: eL.premiumTab
       },
-      [ex.Setting.GUILD_BOOSTING]: {
+      [ex.WebSetting.GUILD_BOOSTING]: {
         section: eR.UserSettingsSections.GUILD_BOOSTING,
         label: ev.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE,
         element: ef.default
       },
-      [ex.Setting.SUBSCRIPTIONS]: {
+      [ex.WebSetting.SUBSCRIPTIONS]: {
         section: eR.UserSettingsSections.SUBSCRIPTIONS,
         ariaLabel: ev.default.Messages.SUBSCRIPTIONS_TITLE,
         label: ev.default.Messages.SUBSCRIPTIONS_TITLE,
@@ -221,19 +221,19 @@ let eD = () => {
           color: i.default.unsafe_rawColors.YELLOW_300.css
         }) : null
       },
-      [ex.Setting.GIFT_INVENTORY]: {
+      [ex.WebSetting.GIFT_INVENTORY]: {
         section: eR.UserSettingsSections.INVENTORY,
         label: ev.default.Messages.GIFT_INVENTORY,
         element: eu.default,
         ariaLabel: ev.default.Messages.GIFT_INVENTORY,
         badgeCount: t
       },
-      [ex.Setting.BILLING]: {
+      [ex.WebSetting.BILLING]: {
         section: eR.UserSettingsSections.BILLING,
         label: ev.default.Messages.BILLING,
         element: ea.default
       },
-      [ex.Setting.APPEARANCE]: {
+      [ex.WebSetting.APPEARANCE]: {
         section: eR.UserSettingsSections.APPEARANCE,
         label: ev.default.Messages.APPEARANCE,
         ariaLabel: ev.default.Messages.APPEARANCE,
@@ -243,18 +243,18 @@ let eD = () => {
         }),
         newIndicatorDismissibleContentTypes: eD()
       },
-      [ex.Setting.ACCESSIBILITY]: {
+      [ex.WebSetting.ACCESSIBILITY]: {
         section: eR.UserSettingsSections.ACCESSIBILITY,
         label: ev.default.Messages.ACCESSIBILITY,
         element: X.default
       },
-      [ex.Setting.VOICE_AND_VIDEO]: {
+      [ex.WebSetting.VOICE_AND_VIDEO]: {
         section: eR.UserSettingsSections.VOICE,
         label: ev.default.Messages.VOICE_AND_VIDEO,
         element: eO.default,
         predicate: () => j.default.isSupported()
       },
-      [ex.Setting.POGGERMODE]: {
+      [ex.WebSetting.POGGERMODE]: {
         section: eR.UserSettingsSections.POGGERMODE,
         label: ev.default.Messages.POGGERMODE,
         ariaLabel: ev.default.Messages.POGGERMODE,
@@ -266,44 +266,44 @@ let eD = () => {
           className: eL.poggermodeIcon
         })
       },
-      [ex.Setting.CHAT]: {
+      [ex.WebSetting.CHAT]: {
         section: eR.UserSettingsSections.TEXT,
         label: ev.default.Messages.CHAT,
         element: eI.default
       },
-      [ex.Setting.NOTIFICATIONS]: {
+      [ex.WebSetting.NOTIFICATIONS]: {
         section: eR.UserSettingsSections.NOTIFICATIONS,
         label: ev.default.Messages.NOTIFICATIONS,
         element: eE.default
       },
-      [ex.Setting.KEYBINDS]: {
+      [ex.WebSetting.KEYBINDS]: {
         section: eR.UserSettingsSections.KEYBINDS,
         label: ev.default.Messages.KEYBINDS,
         element: ec.default
       },
-      [ex.Setting.LANGUAGE]: {
+      [ex.WebSetting.LANGUAGE]: {
         section: eR.UserSettingsSections.LOCALE,
         label: ev.default.Messages.LANGUAGE,
         element: eS.default
       },
-      [ex.Setting.WINDOW_SETTINGS]: {
+      [ex.WebSetting.WINDOW_SETTINGS]: {
         section: eR.UserSettingsSections.WINDOWS,
         label: ev.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
         element: eN.default,
         predicate: () => k.isPlatformEmbedded && (0, k.isWindows)()
       },
-      [ex.Setting.LINUX_SETTINGS]: {
+      [ex.WebSetting.LINUX_SETTINGS]: {
         section: eR.UserSettingsSections.LINUX,
         label: ev.default.Messages.USER_SETTINGS_LINUX_SETTINGS,
         element: eP,
         predicate: () => k.isPlatformEmbedded && (0, k.isLinux)()
       },
-      [ex.Setting.STREAMER_MODE]: {
+      [ex.WebSetting.STREAMER_MODE]: {
         section: eR.UserSettingsSections.STREAMER_MODE,
         label: ev.default.Messages.STREAMER_MODE,
         element: eg.default
       },
-      [ex.Setting.SPEED_TEST]: {
+      [ex.WebSetting.SPEED_TEST]: {
         section: eR.UserSettingsSections.SPEED_TEST,
         label: "Speed Test",
         element: Q.default,
@@ -311,35 +311,35 @@ let eD = () => {
           location: "9f7d84_2"
         }).showSettings
       },
-      [ex.Setting.SETTINGS_ADVANCED]: {
+      [ex.WebSetting.SETTINGS_ADVANCED]: {
         section: eR.UserSettingsSections.ADVANCED,
         label: ev.default.Messages.SETTINGS_ADVANCED,
         element: ee.default
       },
-      [ex.Setting.ACTIVITY_PRIVACY]: {
+      [ex.WebSetting.ACTIVITY_PRIVACY]: {
         section: eR.UserSettingsSections.ACTIVITY_PRIVACY,
         label: ev.default.Messages.ACTIVITY_PRIVACY,
         element: $.default,
         predicate: () => !ey
       },
-      [ex.Setting.REGISTERED_GAMES]: {
+      [ex.WebSetting.REGISTERED_GAMES]: {
         section: eR.UserSettingsSections.REGISTERED_GAMES,
         label: ev.default.Messages.REGISTERED_GAMES,
         element: eo.default,
         predicate: () => !ey && (0, eC.shouldShowRegisteredGamesSettings)()
       },
-      [ex.Setting.OVERLAY]: {
+      [ex.WebSetting.OVERLAY]: {
         section: eR.UserSettingsSections.OVERLAY,
         label: ev.default.Messages.OVERLAY,
         element: eT.default,
         predicate: () => !ey && eb
       },
-      [ex.Setting.CHANGELOG]: {
+      [ex.WebSetting.CHANGELOG]: {
         section: "changelog",
         onClick: () => (0, T.openChangelog)(!0),
         label: ev.default.Messages.WHATS_NEW
       },
-      [ex.Setting.MERCHANDISE]: {
+      [ex.WebSetting.MERCHANDISE]: {
         section: "merchandise",
         onClick: () => {
           let e = "https://discordmerch.com/Dsktopprm";
@@ -354,60 +354,60 @@ let eD = () => {
         label: ev.default.Messages.MERCHANDISE,
         ariaLabel: ev.default.Messages.MERCHANDISE
       },
-      [ex.Setting.HYPESQUAD]: {
+      [ex.WebSetting.HYPESQUAD]: {
         section: eR.UserSettingsSections.HYPESQUAD_ONLINE,
         label: ev.default.Messages.USER_SETTINGS_HYPESQUAD,
         element: ed.default
       },
-      [ex.Setting.EXPERIMENTS]: {
+      [ex.WebSetting.EXPERIMENTS]: {
         section: eR.UserSettingsSections.EXPERIMENTS,
         label: "Experiments",
         element: ep.default,
         predicate: () => P.default.isDeveloper
       },
-      [ex.Setting.DEVELOPER_OPTIONS]: {
+      [ex.WebSetting.DEVELOPER_OPTIONS]: {
         section: eR.UserSettingsSections.DEVELOPER_OPTIONS,
         label: "Developer Options",
         element: el.default,
         predicate: () => P.default.isDeveloper
       },
-      [ex.Setting.HOTSPOT_OPTIONS]: {
+      [ex.WebSetting.HOTSPOT_OPTIONS]: {
         section: eR.UserSettingsSections.HOTSPOT_OPTIONS,
         label: "Hotspot Options",
         element: Y.default,
         predicate: () => P.default.isDeveloper
       },
-      [ex.Setting.DISMISSIBLE_CONTENT_OPTIONS]: {
+      [ex.WebSetting.DISMISSIBLE_CONTENT_OPTIONS]: {
         section: eR.UserSettingsSections.DISMISSIBLE_CONTENT_OPTIONS,
         label: "Dismissible Contents",
         element: I.default,
         predicate: () => P.default.isDeveloper
       },
-      [ex.Setting.PAYMENT_FLOW_MODALS]: {
+      [ex.WebSetting.PAYMENT_FLOW_MODALS]: {
         section: eR.UserSettingsSections.PAYMENT_FLOW_MODAL_TEST_PAGE,
         label: "Payment Flow Modals",
         element: W.default,
         predicate: () => P.default.isDeveloper
       },
-      [ex.Setting.TEXT_PLAYGROUND]: {
+      [ex.WebSetting.TEXT_PLAYGROUND]: {
         section: eR.UserSettingsSections.TEXT_PLAYGROUND,
         label: "Text Playground",
         element: eh.default,
         predicate: () => (0, Z.shouldShowTextPlayground)() || P.default.isDeveloper
       },
-      [ex.Setting.TEXT_COMPONENTS]: {
+      [ex.WebSetting.TEXT_COMPONENTS]: {
         section: eR.UserSettingsSections.TEXT_COMPONENT,
         label: "Text Components",
         element: q.default,
         predicate: () => (0, Z.shouldShowTextPlayground)() || P.default.isDeveloper
       },
-      [ex.Setting.PROFILE_EFFECTS_PREVIEW_TOOL]: {
+      [ex.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL]: {
         section: eR.UserSettingsSections.PROFILE_EFFECTS_PREVIEW_TOOL,
         label: "Profile Effects Preview Tool",
         element: _.default,
         predicate: () => P.default.isDeveloper
       },
-      [ex.Setting.QUEST_PREVIEW_TOOL]: {
+      [ex.WebSetting.QUEST_PREVIEW_TOOL]: {
         section: eR.UserSettingsSections.QUEST_PREVIEW_TOOL,
         label: "Quest Preview Tool",
         element: L.default,
@@ -415,7 +415,7 @@ let eD = () => {
           location: eM.QuestsExperimentLocations.QUEST_PREVIEW_TOOL
         })
       },
-      [ex.Setting.LOGOUT]: {
+      [ex.WebSetting.LOGOUT]: {
         section: "logout",
         onClick: () => {
           (0, r.openModal)(e => (0, a.jsx)(r.ConfirmModal, {
@@ -438,11 +438,11 @@ let eD = () => {
           height: 16
         })
       },
-      [ex.Setting.SOCIAL_LINKS]: {
+      [ex.WebSetting.SOCIAL_LINKS]: {
         section: S.SectionTypes.CUSTOM,
         element: z.default
       },
-      [ex.Setting.CLIENT_DEBUG_INFO]: {
+      [ex.WebSetting.CLIENT_DEBUG_INFO]: {
         section: S.SectionTypes.CUSTOM,
         element: V.default
       }
