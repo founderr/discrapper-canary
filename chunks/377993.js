@@ -108,7 +108,7 @@ function U(e) {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await n.e("30887").then(n.bind(n, "496281"));
+      } = await n.e("37969").then(n.bind(n, "496281"));
       return t => (0, a.jsx)(e, {
         ...t,
         channel: u,

@@ -31,8 +31,8 @@ var a = s("735250"),
   R = s("808268"),
   M = s("759231"),
   v = s("572004"),
-  L = s("51144"),
-  D = s("998502"),
+  D = s("51144"),
+  L = s("998502"),
   P = s("695346"),
   j = s("461877"),
   b = s("981631"),
@@ -41,7 +41,7 @@ var a = s("735250"),
   B = s("228168"),
   F = s("689938"),
   G = s("276380");
-let k = D.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
+let k = L.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
 function w(e) {
   var t, l;
@@ -137,7 +137,7 @@ function H(e) {
   let {
     user: l,
     className: r
-  } = e, o = (0, _.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = L.default.getGlobalName(l), E = n.useRef(null), [T, f] = n.useState(!1);
+  } = e, o = (0, _.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = D.default.getGlobalName(l), E = n.useRef(null), [T, f] = n.useState(!1);
   return n.useEffect(() => {
     f(null != E.current && E.current.scrollWidth > E.current.clientWidth)
   }, [S]), (0, a.jsxs)("div", {

@@ -7,16 +7,16 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var l = n("735250");
+var u = n("735250");
 n("470079");
-var u = n("481060");
+var l = n("481060");
 
 function a(e, t, a) {
-  (0, u.openModalLazy)(async () => {
+  (0, l.openModalLazy)(async () => {
     let {
-      default: u
+      default: l
     } = await Promise.all([n.e("49237"), n.e("99387"), n.e("72920")]).then(n.bind(n, "109730"));
-    return n => (0, l.jsx)(u, {
+    return n => (0, u.jsx)(l, {
       guildId: e,
       userId: t,
       anaylticsLocations: a,
@@ -26,11 +26,11 @@ function a(e, t, a) {
 }
 
 function i(e, t, a) {
-  (0, u.openModalLazy)(async () => {
+  (0, l.openModalLazy)(async () => {
     let {
-      default: u
+      default: l
     } = await Promise.all([n.e("99387"), n.e("76233")]).then(n.bind(n, "171494"));
-    return n => (0, l.jsx)(u, {
+    return n => (0, u.jsx)(l, {
       guildId: e,
       userId: t,
       anaylticsLocations: a,

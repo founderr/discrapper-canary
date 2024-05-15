@@ -1,26 +1,26 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   default: function() {
     return s
   }
 });
-var i = l("735250");
-l("470079");
-var a = l("481060"),
-  n = l("212208");
+var l = i("735250");
+i("470079");
+var a = i("481060"),
+  n = i("212208");
 
 function s(e) {
   let {
     activeSection: t,
-    setSection: l,
+    setSection: i,
     shownSections: s
   } = e;
-  return (0, i.jsx)(a.TabBar, {
+  return (0, l.jsx)(a.TabBar, {
     selectedItem: t,
     type: "top",
-    onItemSelect: l,
+    onItemSelect: i,
     className: n.tabBar,
-    children: s.map(e => (0, i.jsx)(a.TabBar.Item, {
+    children: s.map(e => (0, l.jsx)(a.TabBar.Item, {
       id: e.sectionName,
       className: n.tabBarItem,
       children: e.sectionText

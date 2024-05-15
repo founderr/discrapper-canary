@@ -15,9 +15,9 @@ function u(e, t) {
       location: t
     }),
     u = (0, o.useSafetyAlertsSettingOrDefault)(),
-    l = (0, s.useInappropriateConversationWarningsForChannel)(e),
-    d = (0, a.useChannelSafetyWarning)(e, r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2);
-  if (!!n && !!u && 0 !== l.length) {
-    if (!l.some(e => e.type === r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2 && null != e.dismiss_timestamp)) return d
+    d = (0, s.useInappropriateConversationWarningsForChannel)(e),
+    l = (0, a.useChannelSafetyWarning)(e, r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2);
+  if (!!n && !!u && 0 !== d.length) {
+    if (!d.some(e => e.type === r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2 && null != e.dismiss_timestamp)) return l
   }
 }

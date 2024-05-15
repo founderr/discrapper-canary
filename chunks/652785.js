@@ -21,6 +21,9 @@ var a = n("524437"),
   c = n("981631");
 let f = "lastHiddenChannelNotice",
   E = [{
+    type: c.ChannelNoticeTypes.CLAN_ADMIN_UPSELL,
+    dismissibleContentType: a.DismissibleContent.CHANNEL_LIST_CLAN_ADMIN_UPSELL
+  }, {
     type: c.ChannelNoticeTypes.GUILD_BOOSTING,
     store: i.default,
     dismissibleContentType: a.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION
@@ -47,8 +50,5 @@ let f = "lastHiddenChannelNotice",
   }, {
     type: c.ChannelNoticeTypes.LINKED_ROLES_ADMIN,
     dismissibleContentType: a.DismissibleContent.LINKED_ROLE_ADMIN_GUILD
-  }, {
-    type: c.ChannelNoticeTypes.CLAN_ADMIN_UPSELL,
-    dismissibleContentType: a.DismissibleContent.CHANNEL_LIST_CLAN_ADMIN_UPSELL
   }],
   h = E.map(e => e.store).filter(d.isNotNullish)

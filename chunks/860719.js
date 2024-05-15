@@ -1,15 +1,15 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   useBotDataAccess: function() {
     return a
   }
-}), l("789020");
-var i = l("85025");
+}), i("789020");
+var l = i("85025");
 
 function a(e) {
   let {
     flags: t
-  } = e, l = (0, i.usePrivilegedApplicationIntents)(t), a = null != l && ((null == l ? void 0 : l.messageContent) || (null == l ? void 0 : l.messageContentLimited)), n = null != l && ((null == l ? void 0 : l.guildPresences) || (null == l ? void 0 : l.guildPresencesLimited)), s = null != l && ((null == l ? void 0 : l.guildMembers) || (null == l ? void 0 : l.guildMembersLimited));
+  } = e, i = (0, l.usePrivilegedApplicationIntents)(t), a = null != i && ((null == i ? void 0 : i.messageContent) || (null == i ? void 0 : i.messageContentLimited)), n = null != i && ((null == i ? void 0 : i.guildPresences) || (null == i ? void 0 : i.guildPresencesLimited)), s = null != i && ((null == i ? void 0 : i.guildMembers) || (null == i ? void 0 : i.guildMembersLimited));
   return {
     hasMessageContent: a,
     hasGuildPresences: n,

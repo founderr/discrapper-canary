@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return E
   },
   useAvailableTriggerTypes: function() {
-    return f
+    return O
   },
   validateRuleByTriggerConfigOrThrow: function() {
     return I
@@ -119,7 +119,7 @@ function I(e, t) {
   if (r !== u.eventType) throw Error("You have provided an event type that is not available for this trigger type")
 }
 
-function f(e) {
+function O(e) {
   let t = (0, s.useIsUserProfileRuleEnabled)(e);
   return a.useMemo(() => Object.keys(A).reduce((e, n) => {
     let r = A[n].filter(e => e.type !== d.AutomodTriggerType.SERVER_POLICY && (e.type !== d.AutomodTriggerType.USER_PROFILE || !!t) && e.perGuildMaxCount > 0).map(e => e.type);

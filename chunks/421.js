@@ -20,8 +20,8 @@ var i = l("735250"),
   m = l("146936"),
   E = l("678173"),
   T = l("636508"),
-  C = l("696068"),
-  x = l("361213"),
+  x = l("696068"),
+  C = l("361213"),
   S = l("952561"),
   p = l("778569"),
   A = l("182906"),
@@ -29,8 +29,8 @@ var i = l("735250"),
   g = l("412019"),
   N = l("431136"),
   j = l("226799"),
-  y = l("689938"),
-  D = l("6863");
+  D = l("689938"),
+  y = l("6863");
 
 function M(e) {
   var t;
@@ -40,7 +40,7 @@ function M(e) {
     channelId: m,
     onActivityLaunch: T
   } = e, {
-    analyticsLocations: C
+    analyticsLocations: x
   } = (0, d.default)(r.default.ACTIVITY_SHELF_ACTIVITY_DETAILS);
   a.useEffect(() => {
     (0, I.fetchShelf)({
@@ -54,93 +54,93 @@ function M(e) {
     A = (0, n.useStateFromStores)([c.default], () => c.default.getChannel(m)),
     _ = (0, E.useActivityShelfItemData)(null != v ? v : null, l, A);
   if (null == _) return null;
-  let g = null != _.activity.activity_preview_video_asset_id ? (0, x.default)(l, _.activity.activity_preview_video_asset_id) : null,
+  let g = null != _.activity.activity_preview_video_asset_id ? (0, C.default)(l, _.activity.activity_preview_video_asset_id) : null,
     N = j.ACTIVITIES_EXTRA_DETAILS[l],
     M = (null == N ? void 0 : N.playersSuggestionMin) != null && (null == N ? void 0 : N.playersSuggestionMax) != null ? "".concat(N.playersSuggestionMin, " - ").concat(N.playersSuggestionMax) : void 0;
   return (0, i.jsx)(d.AnalyticsLocationProvider, {
-    value: C,
+    value: x,
     children: (0, i.jsx)("div", {
-      className: D.scrollContainer,
+      className: y.scrollContainer,
       children: (0, i.jsxs)(s.Scroller, {
-        className: D.scroller,
+        className: y.scroller,
         children: [(0, i.jsx)("div", {
-          className: D.launcherOuterContainer,
+          className: y.launcherOuterContainer,
           children: (0, i.jsx)(L, {
             activityItem: _,
             onLaunch: T,
             channelId: m
           })
         }), (0, i.jsxs)("div", {
-          className: D.activityDetailsContainer,
+          className: y.activityDetailsContainer,
           children: [(0, i.jsxs)("div", {
             children: [null != g ? (0, i.jsx)("div", {
-              className: D.heroVideoContainer,
+              className: y.heroVideoContainer,
               children: (0, i.jsx)(h.default, {
                 loop: !0,
                 autoPlay: !0,
                 muted: !0,
-                className: D.heroVideo,
+                className: y.heroVideo,
                 src: g,
                 poster: S.url
               })
             }) : null, (0, i.jsx)("div", {
-              className: D.detailsTitle,
+              className: y.detailsTitle,
               children: (0, i.jsx)(s.Heading, {
                 variant: "heading-xxl/bold",
                 children: _.application.name
               })
             }), (0, i.jsxs)("div", {
-              className: D.detailsDetails,
+              className: y.detailsDetails,
               children: [null != M ? (0, i.jsxs)("div", {
-                className: D.detailItem,
+                className: y.detailItem,
                 children: [(0, i.jsx)(u.default, {
                   width: 16,
                   height: 16
                 }), (0, i.jsx)(s.Text, {
                   variant: "text-xs/semibold",
-                  className: D.detailItemText,
-                  children: y.default.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format({
+                  className: y.detailItemText,
+                  children: D.default.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format({
                     nPlayers: M
                   })
                 })]
               }) : null, (null == N ? void 0 : N.timeSuggestionMinutes) != null ? (0, i.jsxs)("div", {
-                className: D.detailItem,
+                className: y.detailItem,
                 children: [(0, i.jsx)(o.default, {
                   width: 16,
                   height: 16
                 }), (0, i.jsx)(s.Text, {
                   variant: "text-xs/semibold",
-                  className: D.detailItemText,
-                  children: y.default.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({
+                  className: y.detailItemText,
+                  children: D.default.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({
                     nMinutes: N.timeSuggestionMinutes
                   })
                 })]
               }) : null, (0, i.jsxs)("div", {
-                className: D.detailItem,
+                className: y.detailItem,
                 children: [(0, i.jsx)(f.default, {
                   width: 16,
                   height: 16
                 }), (0, i.jsx)(s.Text, {
                   variant: "text-xs/semibold",
-                  className: D.detailItemText,
+                  className: y.detailItemText,
                   children: _.application.tags.slice(0, 3).join(", ")
                 })]
               })]
             })]
           }), (0, i.jsx)(s.Heading, {
             variant: "heading-lg/medium",
-            className: D.detailsDescription,
+            className: y.detailsDescription,
             children: _.application.description
           }), (0, i.jsx)("div", {
-            className: D.divider
+            className: y.divider
           }), (0, i.jsx)("div", {
-            className: D.imagesContainer,
+            className: y.imagesContainer,
             children: (null !== (t = null == N ? void 0 : N.gameplayImageUrls) && void 0 !== t ? t : []).map(e => (0, i.jsx)("img", {
               src: e,
-              alt: y.default.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format({
+              alt: D.default.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format({
                 activityName: _.application.name
               }),
-              className: D.activityImage
+              className: y.activityImage
             }, e))
           })]
         })]
@@ -160,22 +160,22 @@ function L(e) {
     size: 2048
   }), {
     analyticsLocations: I
-  } = (0, d.default)(), E = (0, S.default)(), [x, j] = a.useState(null !== (t = (0, T.getActivityGuildSuggestion)({
+  } = (0, d.default)(), E = (0, S.default)(), [C, j] = a.useState(null !== (t = (0, T.getActivityGuildSuggestion)({
     allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== t ? t : void 0), [M, L] = a.useState(null !== (r = (0, C.getActivityVoiceChannelSuggestion)({
-    guildId: x,
+  })) && void 0 !== t ? t : void 0), [M, L] = a.useState(null !== (r = (0, x.getActivityVoiceChannelSuggestion)({
+    guildId: C,
     allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== r ? r : void 0), V = (0, n.useStateFromStores)([c.default], () => c.default.getChannel(M), [M]), R = (0, T.useSelectGuildOptions)(), b = (0, C.useSelectVoiceChannelOptions)(x), O = a.useCallback(() => {
+  })) && void 0 !== r ? r : void 0), V = (0, n.useStateFromStores)([c.default], () => c.default.getChannel(M), [M]), b = (0, T.useSelectGuildOptions)(), R = (0, x.useSelectVoiceChannelOptions)(C), O = a.useCallback(() => {
     var e;
     null != M && (0, m.default)({
       targetApplicationId: null == o ? void 0 : null === (e = o.application) || void 0 === e ? void 0 : e.id,
       currentEmbeddedApplication: E,
       channelId: M,
-      guildId: x,
+      guildId: C,
       embeddedActivitiesManager: _.default,
       analyticsLocations: I
     }).then(u)
-  }, [o, I, E, u, M, x]), H = a.useCallback(() => {
+  }, [o, I, E, u, M, C]), F = a.useCallback(() => {
     (0, s.openModalLazy)(async () => {
       let {
         default: e
@@ -186,24 +186,24 @@ function L(e) {
         analyticsLocations: I
       })
     })
-  }, [o, I]), F = null == V || null != V.guild_id && !(null != x && null != M && R.some(e => e.value === x) && b.some(e => e.value.channel.id === M)) && !0;
+  }, [o, I]), H = null == V || null != V.guild_id && !(null != C && null != M && b.some(e => e.value === C) && R.some(e => e.value.channel.id === M)) && !0;
   return (0, i.jsxs)("div", {
-    className: D.launcherInnerContainer,
+    className: y.launcherInnerContainer,
     children: [(0, i.jsx)(A.default, {
       applicationName: o.application.name,
       imageBackground: h,
-      imageClassName: D.launchImage,
-      imageNotFoundClassName: D.brokenLaunchImage
+      imageClassName: y.launchImage,
+      imageNotFoundClassName: y.brokenLaunchImage
     }), (0, i.jsx)(s.Text, {
       variant: "text-md/medium",
-      children: y.default.Messages.EMBEDDED_ACTIVITIES_START_OR_SHARE
+      children: D.default.Messages.EMBEDDED_ACTIVITIES_START_OR_SHARE
     }), null == f ? (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(s.Select, {
-        placeholder: y.default.Messages.GUILD_SELECT,
-        optionClassName: D.__invalid_option,
-        options: R,
+        placeholder: D.default.Messages.GUILD_SELECT,
+        optionClassName: y.__invalid_option,
+        options: b,
         renderOptionValue: e => {
-          let t = e.find(e => e.value === x);
+          let t = e.find(e => e.value === C);
           return null == t ? null : (0, i.jsx)(N.SelectGuildOption, {
             guildId: t.value
           })
@@ -216,18 +216,18 @@ function L(e) {
             guildId: t
           })
         },
-        isSelected: e => e === x,
+        isSelected: e => e === C,
         select: e => {
           var t;
-          j(e), L(null !== (t = (0, C.getActivityVoiceChannelSuggestion)({
+          j(e), L(null !== (t = (0, x.getActivityVoiceChannelSuggestion)({
             guildId: e
           })) && void 0 !== t ? t : void 0)
         },
         serialize: e => e
       }), (0, i.jsx)(s.Select, {
-        placeholder: y.default.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
-        optionClassName: D.__invalid_option,
-        options: b,
+        placeholder: D.default.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
+        optionClassName: y.__invalid_option,
+        options: R,
         isSelected: e => {
           let {
             channel: t
@@ -247,7 +247,7 @@ function L(e) {
           return t.id
         },
         renderOptionValue: () => {
-          let e = b.find(e => e.value.channel.id === M);
+          let e = R.find(e => e.value.channel.id === M);
           return null == e ? null : (0, i.jsx)(g.SelectChannelOption, {
             channel: e.value.channel,
             users: e.value.users
@@ -267,28 +267,28 @@ function L(e) {
         }
       }), (0, i.jsx)(s.Button, {
         fullWidth: !0,
-        disabled: F,
+        disabled: H,
         onClick: O,
-        children: y.default.Messages.START
+        children: D.default.Messages.START
       }), (0, i.jsx)("div", {
-        className: D.divider
+        className: y.divider
       }), (0, i.jsx)(s.Button, {
         fullWidth: !0,
         color: s.Button.Colors.PRIMARY,
-        onClick: H,
-        children: y.default.Messages.SHARE
+        onClick: F,
+        children: D.default.Messages.SHARE
       })]
     }) : (0, i.jsxs)("div", {
-      className: D.singleRowShareContainer,
+      className: y.singleRowShareContainer,
       children: [(0, i.jsx)(s.Button, {
         fullWidth: !0,
-        disabled: F,
+        disabled: H,
         onClick: O,
-        children: y.default.Messages.START
+        children: D.default.Messages.START
       }), (0, i.jsx)(s.Button, {
-        className: D.shareIconButton,
+        className: y.shareIconButton,
         color: s.Button.Colors.PRIMARY,
-        onClick: H,
+        onClick: F,
         children: (0, i.jsx)(v.default, {})
       })]
     })]

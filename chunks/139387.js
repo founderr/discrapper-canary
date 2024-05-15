@@ -1,9 +1,9 @@
 "use strict";
 n.r(t);
 var r = n("570140"),
-  a = n("434404"),
+  o = n("434404"),
   i = n("821864"),
-  s = n("308063");
+  u = n("308063");
 t.default = {
   init() {
     r.default.dispatch({
@@ -89,7 +89,7 @@ t.default = {
     try {
       r.default.dispatch({
         type: "INTEGRATION_SETTINGS_SUBMITTING"
-      }), await a.default.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons), r.default.dispatch({
+      }), await o.default.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons), r.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_SUCCESS"
       })
     } catch (e) {
@@ -103,7 +103,7 @@ t.default = {
     try {
       r.default.dispatch({
         type: "INTEGRATION_SETTINGS_SUBMITTING"
-      }), await s.default.update(e, t.id, t), r.default.dispatch({
+      }), await u.default.update(e, t.id, t), r.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_SUCCESS"
       })
     } catch (e) {

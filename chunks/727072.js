@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _
   },
   useAutomodRulesList: function() {
-    return f
+    return O
   },
   useSyncAutomodRules: function() {
     return c
@@ -132,7 +132,7 @@ function I(e) {
   }, [e, n]), [t, n]
 }
 
-function f(e) {
+function O(e) {
   return A(t => {
     var n;
     return {

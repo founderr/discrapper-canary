@@ -78,7 +78,7 @@ function I() {
     }, i)
   }
 
-  function L(e) {
+  function D(e) {
     return v(e[0])
   }
   return (0, a.jsxs)(S.default, {
@@ -103,7 +103,7 @@ function I() {
           }
         }),
         isDisabled: x,
-        renderOptionValue: L,
+        renderOptionValue: D,
         renderOptionLabel: v
       }), e]
     }), (0, a.jsxs)(S.default.Child, {
@@ -126,7 +126,7 @@ function I() {
           }
         }),
         isDisabled: M,
-        renderOptionValue: L,
+        renderOptionValue: D,
         renderOptionLabel: v
       }), t]
     })]

@@ -1,71 +1,71 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return R
+    return E
   }
-}), l("653041"), l("47120");
-var a = l("735250"),
-  n = l("470079"),
-  u = l("442837"),
-  d = l("481060"),
-  s = l("493683"),
-  r = l("447543"),
-  i = l("904245"),
-  o = l("159300"),
-  f = l("592125"),
-  c = l("984933"),
-  E = l("430824"),
-  m = l("496675"),
-  M = l("699516"),
-  S = l("771845"),
-  _ = l("594174"),
-  g = l("981631"),
-  I = l("689938");
+}), i("653041"), i("47120");
+var a = i("735250"),
+  n = i("470079"),
+  l = i("442837"),
+  d = i("481060"),
+  u = i("493683"),
+  s = i("447543"),
+  o = i("904245"),
+  r = i("159300"),
+  c = i("592125"),
+  f = i("984933"),
+  I = i("430824"),
+  p = i("496675"),
+  A = i("699516"),
+  T = i("771845"),
+  S = i("594174"),
+  _ = i("981631"),
+  y = i("689938");
 
-function C(e, t) {
-  s.default.ensurePrivateChannel(e).then(e => {
-    null != f.default.getChannel(e) && i.default.sendInvite(e, t, "context_menu", null)
+function v(e, t) {
+  u.default.ensurePrivateChannel(e).then(e => {
+    null != c.default.getChannel(e) && o.default.sendInvite(e, t, "context_menu", null)
   })
 }
 
-function R(e) {
+function E(e) {
   let {
     user: t,
-    guildId: l,
-    onAction: s
-  } = e, i = (0, u.useStateFromStores)([_.default], () => _.default.getCurrentUser(), []), f = (0, u.useStateFromStoresArray)([S.default, E.default, m.default], () => {
-    let e = S.default.getFlattenedGuildIds(),
+    guildId: i,
+    onAction: u
+  } = e, o = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentUser(), []), c = (0, l.useStateFromStoresArray)([T.default, I.default, p.default], () => {
+    let e = T.default.getFlattenedGuildIds(),
       t = [];
     return e.forEach(e => {
-      let a = E.default.getGuild(e);
-      null != a && (0, o.canViewInviteModal)(m.default, a) && a.id !== l && t.push(a)
+      let a = I.default.getGuild(e);
+      null != a && (0, r.canViewInviteModal)(p.default, a) && a.id !== i && t.push(a)
     }), t
-  }, [l]), [R, A] = n.useState({});
-  return (null == i ? void 0 : i.id) === t.id || t.bot || 0 === f.length || M.default.isBlocked(t.id) ? null : (0, a.jsx)(d.MenuItem, {
+  }, [i]), [E, m] = n.useState({});
+  return (null == o ? void 0 : o.id) === t.id || t.bot || 0 === c.length || A.default.isBlocked(t.id) ? null : (0, a.jsx)(d.MenuItem, {
     id: "invite-to-server",
-    label: I.default.Messages.INVITE_TO_SERVER,
-    children: f.map(e => R[e.id] ? (0, a.jsx)(d.MenuItem, {
+    label: y.default.Messages.INVITE_TO_SERVER,
+    children: c.map(e => E[e.id] ? (0, a.jsx)(d.MenuItem, {
       id: e.id,
       disabled: !0,
-      label: I.default.Messages.INVITE_SENT
+      label: y.default.Messages.INVITE_SENT
     }, e.id) : (0, a.jsx)(d.MenuItem, {
       id: e.id,
       label: e.name,
       action: () => {
-        null == s || s(), ! function(e, t) {
-          let l = c.default.getDefaultChannel(e.id, !0, g.Permissions.CREATE_INSTANT_INVITE);
-          if (null != l) {
-            if (A({
-                ...R,
+        null == u || u(), ! function(e, t) {
+          let i = f.default.getDefaultChannel(e.id, !0, _.Permissions.CREATE_INSTANT_INVITE);
+          if (null != i) {
+            if (m({
+                ...E,
                 [e.id]: !0
-              }), !m.default.can(g.Permissions.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode) {
-              C(t, e.vanityURLCode);
+              }), !p.default.can(_.Permissions.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode) {
+              v(t, e.vanityURLCode);
               return
             }
-            r.default.createInvite(l.id, {
+            s.default.createInvite(i.id, {
               max_uses: 1,
               unique: !0
-            }, "User Invite Context Menu").then(e => C(t, e.code))
+            }, "User Invite Context Menu").then(e => v(t, e.code))
           }
         }(e, t.id)
       }

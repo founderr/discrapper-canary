@@ -48,7 +48,7 @@ function I(e) {
   }
   i.useEffect(() => () => d.default.wait(() => u.resetError()), []);
   let v = null != a && a === h,
-    L = v ? function() {
+    D = v ? function() {
       u.reset(), N(""), O(null)
     } : M;
   return (0, l.jsxs)(o.ModalRoot, {
@@ -76,7 +76,7 @@ function I(e) {
         children: n
       }), (0, l.jsx)("form", {
         onSubmit: e => {
-          e.preventDefault(), L()
+          e.preventDefault(), D()
         },
         children: (0, l.jsxs)(E.default, {
           direction: E.default.Direction.VERTICAL,

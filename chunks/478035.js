@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return r
   }
 });
 var a = n("735250");
 n("470079");
-var l = n("442837"),
-  u = n("481060"),
-  i = n("703656"),
-  s = n("914010"),
-  r = n("981631"),
-  d = n("689938");
+var i = n("442837"),
+  l = n("481060"),
+  u = n("703656"),
+  d = n("914010"),
+  s = n("981631"),
+  o = n("689938");
 
-function o(e) {
-  let t = (0, l.useStateFromStores)([s.default], () => s.default.getGuildId());
-  return __OVERLAY__ || t !== r.FAVORITES ? null : (0, a.jsx)(u.MenuItem, {
+function r(e) {
+  let t = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId());
+  return __OVERLAY__ || t !== s.FAVORITES ? null : (0, a.jsx)(l.MenuItem, {
     id: "go-to-original-guild",
-    label: d.default.Messages.FAVORITES_GO_TO_ORIGINAL_GUILD,
+    label: o.default.Messages.FAVORITES_GO_TO_ORIGINAL_GUILD,
     action: function() {
-      (0, i.transitionToGuild)(e.guild_id, e.id)
+      (0, u.transitionToGuild)(e.guild_id, e.id)
     }
   })
 }

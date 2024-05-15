@@ -37,8 +37,8 @@ function h(e) {
     analyticsLocations: M
   } = (0, o.default)(), {
     pendingProfileEffectId: v,
-    errors: L
-  } = (0, E.useGlobalOrGuildIdentityPendingProfileEffect)(s), D = n.useCallback(() => (0, d.openProfileEffectModal)({
+    errors: D
+  } = (0, E.useGlobalOrGuildIdentityPendingProfileEffect)(s), L = n.useCallback(() => (0, d.openProfileEffectModal)({
     analyticsLocations: M,
     initialSelectedEffectId: O,
     guild: s
@@ -58,13 +58,13 @@ function h(e) {
     hasBackground: !0,
     title: h,
     showBorder: C,
-    errors: L,
+    errors: D,
     className: l,
     children: (0, a.jsxs)("div", {
       className: I.buttonsContainer,
       children: [(0, a.jsx)(b, {
         size: r.Button.Sizes.SMALL,
-        onClick: D,
+        onClick: L,
         className: i()({
           [I.buttonHighlighted]: p
         }),

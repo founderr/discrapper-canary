@@ -70,7 +70,7 @@ t.default = a.memo(function(e) {
     null != a && (0, c.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await n.e("78650").then(n.bind(n, "422200"));
+      } = await n.e("40157").then(n.bind(n, "422200"));
       return t => (0, l.jsx)(e, {
         ...t,
         channel: a

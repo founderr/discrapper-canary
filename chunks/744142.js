@@ -1,20 +1,20 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   default: function() {
     return u
   }
 });
-var i = l("735250"),
-  a = l("470079"),
-  n = l("481060"),
-  s = l("768581"),
-  r = l("924489"),
-  o = l("950854"),
-  c = l("491576"),
-  d = l("719491");
+var l = i("735250"),
+  a = i("470079"),
+  n = i("481060"),
+  s = i("768581"),
+  r = i("924489"),
+  o = i("950854"),
+  c = i("491576"),
+  d = i("719491");
 
 function u(e) {
-  var t, l, u, p, _;
+  var t, i, u, p, _;
   let {
     application: m,
     className: f,
@@ -28,11 +28,11 @@ function u(e) {
     size: 48
   }), E = (0, c.default)({
     application: m
-  }), C = null === (t = m.categories) || void 0 === t ? void 0 : t[0], R = (null !== (p = null === (l = m.directory_entry) || void 0 === l ? void 0 : l.guild_count) && void 0 !== p ? p : 0) > 0 || E.length > 0, x = a.useCallback(() => {
+  }), R = null === (t = m.categories) || void 0 === t ? void 0 : t[0], x = (null !== (p = null === (i = m.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== p ? p : 0) > 0 || E.length > 0, C = a.useCallback(() => {
     g({
       mutualGuilds: E
     })
-  }, [g, E]), N = (0, i.jsx)(r.default, {
+  }, [g, E]), T = (0, l.jsx)(r.default, {
     application: m,
     textVariant: "text-xs/normal",
     mutualGuilds: E,
@@ -40,30 +40,30 @@ function u(e) {
     guildIconSize: r.GuildIconSize.SMALL,
     compact: !0
   });
-  return (0, i.jsxs)(o.default, {
+  return (0, l.jsxs)(o.default, {
     className: f,
-    onClick: x,
+    onClick: C,
     iconSrc: A,
     header: m.name,
-    subheader: null != C && (0, i.jsx)(n.Text, {
+    subheader: null != R && (0, l.jsx)(n.Text, {
       tag: "span",
       color: "header-secondary",
       variant: "text-xs/normal",
-      children: C.name
+      children: R.name
     }),
     animatesOnHover: I,
     ...v,
-    children: [(null != m.description || null != h) && (0, i.jsx)("div", {
+    children: [(null != m.description || null != h) && (0, l.jsx)("div", {
       className: h,
-      children: (0, i.jsx)(n.Text, {
+      children: (0, l.jsx)(n.Text, {
         className: d.listingDescription,
         variant: "text-sm/normal",
         lineClamp: 2,
         children: null !== (_ = null === (u = m.directory_entry) || void 0 === u ? void 0 : u.short_description) && void 0 !== _ ? _ : m.description
       })
-    }), R && (0, i.jsx)("div", {
+    }), x && (0, l.jsx)("div", {
       className: d.bottomGuildCountContainer,
-      children: N
+      children: T
     })]
   })
 }

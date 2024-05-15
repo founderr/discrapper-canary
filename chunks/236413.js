@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return R
   },
   createDefaultRule: function() {
-    return f
+    return O
   },
   eventTypeToName: function() {
-    return S
+    return f
   },
   isBackendPersistedRule: function() {
-    return N
+    return S
   },
   isRuleDefaultKeywordListFilter: function() {
     return _
@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return g
   },
   validateRuleBeforeSaveOrThrow: function() {
-    return O
+    return N
   }
 }), n("47120"), n("411104");
 var r = n("581364"),
@@ -52,7 +52,7 @@ let T = (e, t) => "".concat(e, "-").concat(t, "-new-rule"),
   c = e => (null == e ? void 0 : e.triggerType) === s.AutomodTriggerType.MENTION_SPAM,
   I = e => (null == e ? void 0 : e.triggerType) === s.AutomodTriggerType.USER_PROFILE;
 
-function f(e, t) {
+function O(e, t) {
   let n = l.triggerConfigs[t],
     r = (0, l.getDefaultTriggerMetadataForTriggerType)(t, e),
     u = {
@@ -69,7 +69,7 @@ function f(e, t) {
       exemptChannels: new Set,
       exemptRoles: new Set
     };
-  if (N(u)) throw Error(d.default.Messages.GUILD_AUTOMOD_NEW_RULE_ERROR);
+  if (S(u)) throw Error(d.default.Messages.GUILD_AUTOMOD_NEW_RULE_ERROR);
   let s = (0, a.getRuleCountByTriggerType)(e, t);
   return s > 0 && (u.name += " ".concat(s + 1)), u
 }
@@ -87,7 +87,7 @@ function g(e, t) {
   })
 }
 
-function O(e) {
+function N(e) {
   if (E(e)) {
     var t, n;
     let r = null !== (t = e.triggerMetadata.keywordFilter) && void 0 !== t ? t : [],
@@ -109,12 +109,12 @@ function O(e) {
   if (0 === e.actions.length) throw Error(d.default.Messages.GUILD_AUTOMOD_ERROR_NO_ACTIONS)
 }
 
-function N(e) {
+function S(e) {
   var t;
   return (0, r.isSnowflake)(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "INVALID_SNOWFLAKE")
 }
 
-function S(e) {
+function f(e) {
   switch (e) {
     case s.AutomodEventType.MESSAGE_SEND:
       return d.default.Messages.GUILD_AUTOMOD_EVENT_TYPE_MESSAGE_SEND;

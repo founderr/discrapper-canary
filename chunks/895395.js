@@ -23,8 +23,8 @@ var i = l("735250"),
   m = l("867176"),
   E = l("115130"),
   T = l("566620"),
-  C = l("127255"),
-  x = l("880308"),
+  x = l("127255"),
+  C = l("880308"),
   S = l("451576"),
   p = l("439934"),
   A = l("701488"),
@@ -32,8 +32,8 @@ var i = l("735250"),
   g = l("689938"),
   N = l("734867"),
   j = l("497263");
-let y = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
-  D = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
+let D = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
+  y = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
   M = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
 
 function L(e) {
@@ -44,15 +44,15 @@ function L(e) {
     onClose: r,
     onActivityItemVisible: c,
     scrollerRef: A
-  } = e, [L, V] = a.useState(0), R = (0, C.default)({
+  } = e, [L, V] = a.useState(0), b = (0, x.default)({
     guildId: l,
     enableFilter: !0,
     channel: t
-  }), b = (0, d.useStateFromStores)([h.default], () => h.default.getCurrentUser()), O = (0, d.useStateFromStores)([f.default], () => f.default.getGuild(l), [l]), {
-    analyticsLocations: H
-  } = (0, v.default)(u.default.ACTIVITY_DIRECTORY), F = (0, S.default)(null == t ? void 0 : t.id), B = (0, m.useIsActivitiesInTextShelfPosterEnabled)(null == t ? void 0 : t.id, "ActivityShelfSlideActivityDirectory"), {
+  }), R = (0, d.useStateFromStores)([h.default], () => h.default.getCurrentUser()), O = (0, d.useStateFromStores)([f.default], () => f.default.getGuild(l), [l]), {
+    analyticsLocations: F
+  } = (0, v.default)(u.default.ACTIVITY_DIRECTORY), H = (0, S.default)(null == t ? void 0 : t.id), B = (0, m.useIsActivitiesInTextShelfPosterEnabled)(null == t ? void 0 : t.id, "ActivityShelfSlideActivityDirectory"), {
     isDeveloperActivityShelfEnabled: Y,
-    filter: w
+    filter: k
   } = (0, d.useStateFromStoresObject)([E.default], () => ({
     filter: E.default.getFilter(),
     isDeveloperActivityShelfEnabled: E.default.getIsEnabled()
@@ -68,17 +68,17 @@ function L(e) {
         V(null !== (t = null === (e = A.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
       }
     }, [A]), a.useEffect(() => {
-      (F || null != l) && (0, T.fetchShelf)({
+      (H || null != l) && (0, T.fetchShelf)({
         guildId: l,
         force: !0
       })
-    }, [l, F]), (0, x.useFetchDeveloperActivityShelfItems)(), null == O && !F || null == b) return null;
-  let k = R.length > 0;
+    }, [l, H]), (0, C.useFetchDeveloperActivityShelfItems)(), null == O && !H || null == R) return null;
+  let w = b.length > 0;
   return (0, i.jsx)(v.AnalyticsLocationProvider, {
-    value: H,
+    value: F,
     children: (0, i.jsxs)("div", {
       className: N.scrollContainer,
-      children: [k ? (0, i.jsx)("div", {
+      children: [w ? (0, i.jsx)("div", {
         className: N.scrollBackgroundContainer,
         style: {
           top: -L
@@ -88,8 +88,8 @@ function L(e) {
           style: {
             height: (e => {
               let t = 1 === e.length;
-              return y + Math.ceil(e.length / 2) * (t ? M : D)
-            })(R)
+              return D + Math.ceil(e.length / 2) * (t ? M : y)
+            })(b)
           }
         })
       }) : null, (0, i.jsxs)(o.Scroller, {
@@ -123,12 +123,12 @@ function L(e) {
             })
           }
           return null
-        }(), k ? (0, i.jsx)("div", {
+        }(), w ? (0, i.jsx)("div", {
           className: N.scrollSection,
           children: (0, i.jsx)("div", {
             className: s()(N.shelf),
-            children: R.map(e => (0, i.jsx)(p.default, {
-              large: 1 === R.length,
+            children: b.map(e => (0, i.jsx)(p.default, {
+              large: 1 === b.length,
               activityItem: e,
               channel: t,
               guildId: l,
@@ -140,11 +140,11 @@ function L(e) {
               }
             }, "activity-shelf-item-".concat(e.application.id)))
           })
-        }) : Y && w.length > 0 ? (0, i.jsx)(o.Text, {
+        }) : Y && k.length > 0 ? (0, i.jsx)(o.Text, {
           variant: "text-md/normal",
           className: N.filterError,
           children: g.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({
-            filter: w
+            filter: k
           })
         }) : (0, i.jsx)("div", {
           className: N.spinnerContainer,

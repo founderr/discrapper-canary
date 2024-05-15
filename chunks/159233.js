@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return c
   }
 });
 var l = n("735250");
@@ -13,21 +13,21 @@ var u = n("442837"),
   i = n("894017"),
   r = n("79874"),
   o = n("576749"),
-  c = n("689938");
+  E = n("689938");
 
-function E(e) {
+function c(e) {
   let {
     guildEventId: t,
-    guild: E,
+    guild: c,
     channel: f,
     recurrenceId: _,
     isRecurrenceItem: T
   } = e, {
     canManageGuildEvent: S
-  } = (0, d.useManageResourcePermissions)(null != f ? f : E), N = (0, u.useStateFromStores)([s.default], () => s.default.getGuildScheduledEvent(t)), v = S(N), g = (0, o.default)(), I = (0, i.default)(_, null == N ? void 0 : N.id), M = (0, r.default)(t, _);
-  if (!v || null == N) return null;
-  let m = null != N.recurrence_rule && !T,
-    h = e => {
+  } = (0, d.useManageResourcePermissions)(null != f ? f : c), N = (0, u.useStateFromStores)([s.default], () => s.default.getGuildScheduledEvent(t)), g = S(N), I = (0, o.default)(), v = (0, i.default)(_, null == N ? void 0 : N.id), m = (0, r.default)(t, _);
+  if (!g || null == N) return null;
+  let M = null != N.recurrence_rule && !T,
+    D = e => {
       (null == _ || e) && !T ? (0, a.openModalLazy)(async () => {
         let {
           default: e
@@ -35,9 +35,9 @@ function E(e) {
         return n => (0, l.jsx)(e, {
           ...n,
           guildScheduledEventId: t,
-          guildId: E.id
+          guildId: c.id
         })
-      }, g) : null != _ && (0, a.openModalLazy)(async () => {
+      }, I) : null != _ && (0, a.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("27919")]).then(n.bind(n, "379038"));
@@ -46,22 +46,22 @@ function E(e) {
           guildEvent: N,
           recurrenceId: _
         })
-      }, g)
+      }, I)
     };
   return (0, l.jsx)(a.MenuItem, {
-    id: c.default.Messages.EDIT_EVENT,
-    label: c.default.Messages.EDIT_EVENT,
-    action: m ? void 0 : () => h(!0),
-    children: m && (0, l.jsxs)(l.Fragment, {
+    id: E.default.Messages.EDIT_EVENT,
+    label: E.default.Messages.EDIT_EVENT,
+    action: M ? void 0 : () => D(!0),
+    children: M && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(a.MenuItem, {
-        id: c.default.Messages.EDIT_THIS_EVENT,
-        label: c.default.Messages.EDIT_THIS_EVENT,
-        action: () => h(!1),
-        disabled: (null == I ? void 0 : I.is_canceled) || M.startTime.getTime() < Date.now()
+        id: E.default.Messages.EDIT_THIS_EVENT,
+        label: E.default.Messages.EDIT_THIS_EVENT,
+        action: () => D(!1),
+        disabled: (null == v ? void 0 : v.is_canceled) || m.startTime.getTime() < Date.now()
       }), (0, l.jsx)(a.MenuItem, {
-        id: c.default.Messages.EDIT_ALL_EVENTS,
-        label: c.default.Messages.EDIT_ALL_EVENTS,
-        action: () => h(!0),
+        id: E.default.Messages.EDIT_ALL_EVENTS,
+        label: E.default.Messages.EDIT_ALL_EVENTS,
+        action: () => D(!0),
         disabled: new Date(N.scheduled_start_time).getTime() < Date.now()
       })]
     })

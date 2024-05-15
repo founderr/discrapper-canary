@@ -6,21 +6,21 @@ l.r(t), l.d(t, {
 });
 var a = l("735250");
 l("470079");
-var n = l("481060"),
-  u = l("493683"),
-  d = l("37234"),
-  s = l("314897"),
+var u = l("481060"),
+  n = l("493683"),
+  s = l("37234"),
+  d = l("314897"),
   r = l("981631"),
   i = l("689938");
 
 function o(e, t) {
-  let l = s.default.getId(),
+  let l = d.default.getId(),
     o = t === r.AppContext.POPOUT;
-  return l === e || o ? null : (0, a.jsx)(n.MenuItem, {
+  return l === e || o ? null : (0, a.jsx)(u.MenuItem, {
     id: "message-user",
     label: i.default.Messages.USER_POPOUT_MESSAGE,
     action: () => {
-      u.default.openPrivateChannel(e), (0, d.popLayer)()
+      n.default.openPrivateChannel(e), (0, s.popLayer)()
     }
   })
 }

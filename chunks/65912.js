@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return g
   },
   useAutomodEditingRuleState: function() {
-    return O
+    return N
   }
 });
 var r = n("392711"),
@@ -26,7 +26,7 @@ let I = Object.freeze({
     isLoading: !1,
     errorMessage: null
   }),
-  f = (0, i.default)((e, t) => ({
+  O = (0, i.default)((e, t) => ({
     editingRule: null,
     hasChanges: !1,
     setEditingRule: n => {
@@ -110,7 +110,7 @@ let I = Object.freeze({
   }));
 
 function g() {
-  return f(e => ({
+  return O(e => ({
     hasChanges: e.hasChanges,
     editingRule: e.editingRule,
     isLoading: e.isLoading,
@@ -121,9 +121,9 @@ function g() {
   }))
 }
 
-function O() {
+function N() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-    t = f(e => ({
+    t = O(e => ({
       hasChanges: e.hasChanges,
       editingRule: e.editingRule,
       setEditingRule: e.setEditingRule,

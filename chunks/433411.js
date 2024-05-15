@@ -40,7 +40,7 @@ function g(e) {
     analyticsLocations: p,
     isTryItOutFlow: N,
     guild: s
-  }), [p, N, s]), L = N || void 0 !== x ? null != x : (C ? O : A) != null, D = h ? S.default : r.Button;
+  }), [p, N, s]), D = N || void 0 !== x ? null != x : (C ? O : A) != null, L = h ? S.default : r.Button;
   return (0, a.jsxs)(f.default, {
     className: l,
     forcedDivider: g,
@@ -49,14 +49,14 @@ function g(e) {
     errors: R,
     children: [(0, a.jsxs)("div", {
       className: _.buttonsContainer,
-      children: [(0, a.jsx)(D, {
+      children: [(0, a.jsx)(L, {
         size: r.Button.Sizes.SMALL,
         onClick: v,
         className: i()({
           [_.buttonHighlighted]: h
         }),
         children: m.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
-      }), L && (0, a.jsx)(r.Button, {
+      }), D && (0, a.jsx)(r.Button, {
         className: _.removeButton,
         color: r.Button.Colors.PRIMARY,
         look: r.Button.Looks.LINK,

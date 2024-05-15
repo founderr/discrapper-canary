@@ -19,23 +19,23 @@ function r(e, t, n) {
     } = (0, d.default)(t, e);
   if (!o) return null;
 
-  function c() {
+  function E() {
     let l = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     (0, a.copy)("".concat(location.protocol, "//").concat(location.host).concat(s.Routes.GUILD_EVENT_DETAILS(t, e, l ? null : n))), (0, u.showToast)((0, u.createToast)(i.default.Messages.COPIED_LINK, u.ToastType.SUCCESS))
   }
   return (0, l.jsx)(u.MenuItem, {
     id: i.default.Messages.COPY_EVENT_LINK,
     label: i.default.Messages.COPY_EVENT_LINK,
-    action: r ? void 0 : () => c(!0),
+    action: r ? void 0 : () => E(!0),
     children: r && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(u.MenuItem, {
         id: i.default.Messages.COPY_RECURRENCE_LINK,
         label: i.default.Messages.COPY_RECURRENCE_LINK,
-        action: () => c(!1)
+        action: () => E(!1)
       }), (0, l.jsx)(u.MenuItem, {
         id: i.default.Messages.COPY_SERIES_LINK,
         label: i.default.Messages.COPY_SERIES_LINK,
-        action: () => c(!0)
+        action: () => E(!0)
       })]
     })
   })

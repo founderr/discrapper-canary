@@ -1,44 +1,44 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
-var a = l("735250");
-l("470079");
-var n = l("442837"),
-  u = l("481060"),
-  d = l("493683"),
-  s = l("740492"),
-  r = l("314897"),
-  i = l("592125"),
-  o = l("699516"),
-  f = l("944486"),
-  c = l("981631"),
-  E = l("689938");
+var a = i("735250");
+i("470079");
+var n = i("442837"),
+  l = i("481060"),
+  d = i("493683"),
+  u = i("740492"),
+  s = i("314897"),
+  o = i("592125"),
+  r = i("699516"),
+  c = i("944486"),
+  f = i("981631"),
+  I = i("689938");
 
-function m(e, t) {
-  let m = r.default.getId(),
-    M = t === c.AppContext.POPOUT,
-    S = (0, n.useStateFromStores)([f.default, i.default], () => f.default.getVoiceChannelId() === i.default.getDMFromUserId(e.id)),
-    _ = (0, n.useStateFromStores)([o.default], () => o.default.isBlocked(e.id));
-  if (m === e.id || M || S || e.bot) return null;
-  let g = () => d.default.openPrivateChannel(e.id, !0),
-    I = !s.default.disableCallUserConfirmationPrompt;
-  return (0, a.jsx)(u.MenuItem, {
+function p(e, t) {
+  let p = s.default.getId(),
+    A = t === f.AppContext.POPOUT,
+    T = (0, n.useStateFromStores)([c.default, o.default], () => c.default.getVoiceChannelId() === o.default.getDMFromUserId(e.id)),
+    S = (0, n.useStateFromStores)([r.default], () => r.default.isBlocked(e.id));
+  if (p === e.id || A || T || e.bot) return null;
+  let _ = () => d.default.openPrivateChannel(e.id, !0),
+    y = !u.default.disableCallUserConfirmationPrompt;
+  return (0, a.jsx)(l.MenuItem, {
     id: "call",
-    label: E.default.Messages.CALL,
-    action: I ? () => {
-      (0, u.openModalLazy)(async () => {
+    label: I.default.Messages.CALL,
+    action: y ? () => {
+      (0, l.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([l.e("99387"), l.e("27157")]).then(l.bind(l, "736454"));
+        } = await Promise.all([i.e("99387"), i.e("27157")]).then(i.bind(i, "736454"));
         return t => (0, a.jsx)(e, {
-          onSubmit: g,
+          onSubmit: _,
           ...t
         })
       })
-    } : g,
-    disabled: _
+    } : _,
+    disabled: S
   })
 }

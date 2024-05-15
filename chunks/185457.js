@@ -1,46 +1,46 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return M
+    return A
   }
 });
-var a = l("735250"),
-  n = l("470079"),
-  u = l("481060"),
-  d = l("906732"),
-  s = l("702557"),
-  r = l("171368"),
-  i = l("314897"),
-  o = l("246946"),
-  f = l("626135"),
-  c = l("981631"),
-  E = l("228168"),
-  m = l("689938");
+var a = i("735250"),
+  n = i("470079"),
+  l = i("481060"),
+  d = i("906732"),
+  u = i("702557"),
+  s = i("171368"),
+  o = i("314897"),
+  r = i("246946"),
+  c = i("626135"),
+  f = i("981631"),
+  I = i("228168"),
+  p = i("689938");
 
-function M(e) {
+function A(e) {
   let {
     user: t,
-    guildId: l,
-    context: M
+    guildId: i,
+    context: A
   } = e, {
-    id: S
+    id: T
   } = t, {
-    loading: _,
-    note: g
-  } = (0, s.default)(S), I = !_ && null != g && g.length > 0, C = M === c.AppContext.POPOUT, R = n.useContext(f.AnalyticsContext), {
-    analyticsLocations: A
+    loading: S,
+    note: _
+  } = (0, u.default)(T), y = !S && null != _ && _.length > 0, v = A === f.AppContext.POPOUT, E = n.useContext(c.AnalyticsContext), {
+    analyticsLocations: m
   } = (0, d.default)();
-  return S === i.default.getId() || o.default.hidePersonalInformation || C ? null : (0, a.jsx)(u.MenuItem, {
+  return T === o.default.getId() || r.default.hidePersonalInformation || v ? null : (0, a.jsx)(l.MenuItem, {
     id: "note",
-    label: _ ? m.default.Messages.LOADING_NOTE : I ? m.default.Messages.EDIT_NOTE : m.default.Messages.ADD_NOTE,
+    label: S ? p.default.Messages.LOADING_NOTE : y ? p.default.Messages.EDIT_NOTE : p.default.Messages.ADD_NOTE,
     action: () => {
-      (0, r.openUserProfileModal)({
+      (0, s.openUserProfileModal)({
         userId: t.id,
-        section: E.UserProfileSections.USER_INFO,
-        guildId: l,
+        section: I.UserProfileSections.USER_INFO,
+        guildId: i,
         autoFocusNote: !0,
-        sourceAnalyticsLocations: A,
-        analyticsLocation: R.location
+        sourceAnalyticsLocations: m,
+        analyticsLocation: E.location
       })
     }
   })

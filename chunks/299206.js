@@ -4,34 +4,34 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var r = n("735250");
+var i = n("735250");
 n("470079");
-var a = n("512722"),
-  i = n.n(a),
+var r = n("512722"),
+  a = n.n(r),
   s = n("481060"),
   o = n("695346"),
-  u = n("754424"),
-  l = n("572004");
+  l = n("754424"),
+  u = n("572004");
 
 function d(e) {
   let {
     id: t,
     label: n,
-    onSuccess: a,
+    onSuccess: r,
     shiftId: d,
-    showIconFirst: E,
+    showIconFirst: _,
     showWithoutDeveloperMode: c
-  } = e, f = o.DeveloperMode.useSetting();
-  if (__OVERLAY__ || !(c || f) || !l.SUPPORTS_COPY || null == t) return null;
-  let T = "devmode-copy-id-".concat(t);
-  return (0, r.jsx)(s.MenuItem, {
-    id: T,
+  } = e, E = o.DeveloperMode.useSetting();
+  if (__OVERLAY__ || !(c || E) || !u.SUPPORTS_COPY || null == t) return null;
+  let I = "devmode-copy-id-".concat(t);
+  return (0, i.jsx)(s.MenuItem, {
+    id: I,
     label: n,
     action: function(e) {
       let n = null != d && e.shiftKey ? d : t;
-      i()(null != n, "cannot copy null text"), (0, l.copy)(n), null == a || a()
+      a()(null != n, "cannot copy null text"), (0, u.copy)(n), null == r || r()
     },
-    icon: u.default,
-    showIconFirst: E
-  }, T)
+    icon: l.default,
+    showIconFirst: _
+  }, I)
 }

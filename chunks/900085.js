@@ -332,7 +332,7 @@ class k extends s.PureComponent {
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
-                } = await n.e("78650").then(n.bind(n, "422200"));
+                } = await n.e("40157").then(n.bind(n, "422200"));
                 return t => (0, a.jsx)(e, {
                   ...t,
                   channel: l,
@@ -379,7 +379,7 @@ class k extends s.PureComponent {
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await Promise.all([n.e("99387"), n.e("36441"), n.e("64409")]).then(n.bind(n, "881351"));
+            } = await Promise.all([n.e("99387"), n.e("36441"), n.e("69220")]).then(n.bind(n, "881351"));
             return n => (0, a.jsx)(e, {
               ...n,
               user: t.record,

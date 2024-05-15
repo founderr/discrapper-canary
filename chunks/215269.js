@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return I
   }
 });
 var l = n("735250");
@@ -13,65 +13,65 @@ var u = n("481060"),
   i = n("70877"),
   r = n("572427"),
   o = n("231259"),
-  c = n("159233"),
-  E = n("924952"),
+  E = n("159233"),
+  c = n("924952"),
   f = n("99528"),
   _ = n("830394"),
   T = n("473545"),
   S = n("124422"),
   N = n("981631"),
-  v = n("689938");
+  g = n("689938");
 
-function g(e) {
+function I(e) {
   let {
     guildEventId: t,
     recurrenceId: n,
-    channel: g,
-    guild: I,
-    analyticsContext: M,
-    isRecurrenceItem: m = !1,
-    onSelect: h
-  } = e, D = (0, _.default)({
+    channel: I,
+    guild: v,
+    analyticsContext: m,
+    isRecurrenceItem: M = !1,
+    onSelect: D
+  } = e, O = (0, _.default)({
     guildEventId: t,
     recurrenceId: n,
-    guild: I,
-    channel: g
-  }), p = (0, o.default)({
+    guild: v,
+    channel: I
+  }), h = (0, o.default)({
     guildEventId: t,
     recurrenceId: n,
-    guild: I,
-    channel: g
-  }), O = (0, c.default)({
+    guild: v,
+    channel: I
+  }), p = (0, E.default)({
     guildEventId: t,
-    guild: I,
-    channel: g,
+    guild: v,
+    channel: I,
     recurrenceId: n,
-    isRecurrenceItem: m
-  }), R = (0, E.default)(t, I, g), C = (0, S.default)(t, I, g), A = (0, r.default)(t, I.id, n), L = (0, f.default)(t), G = (0, s.default)({
+    isRecurrenceItem: M
+  }), R = (0, c.default)(t, v, I), A = (0, S.default)(t, v, I), C = (0, r.default)(t, v.id, n), L = (0, f.default)(t), G = (0, s.default)({
     id: t,
-    label: v.default.Messages.COPY_ID_EVENT
-  }), y = (0, s.default)({
+    label: g.default.Messages.COPY_ID_EVENT
+  }), P = (0, s.default)({
     id: n,
-    label: v.default.Messages.COPY_ID_EVENT_RECURRENCE
-  }), P = (0, i.default)(t, I.id, g, n), V = (0, T.default)({
+    label: g.default.Messages.COPY_ID_EVENT_RECURRENCE
+  }), y = (0, i.default)(t, v.id, I, n), U = (0, T.default)({
     guildEventId: t,
-    guildId: I.id,
+    guildId: v.id,
     recurrenceId: n
   });
   return (0, l.jsx)(d.default, {
-    context: M,
+    context: m,
     object: N.AnalyticsObjects.CONTEXT_MENU,
     children: (0, l.jsxs)(u.Menu, {
       navId: "user-context",
       onClose: a.closeContextMenu,
-      "aria-label": v.default.Messages.USER_ACTIONS_MENU_LABEL,
-      onSelect: h,
+      "aria-label": g.default.Messages.USER_ACTIONS_MENU_LABEL,
+      onSelect: D,
       children: [(0, l.jsxs)(u.MenuGroup, {
-        children: [P, !m && C, O, !m && R, p, D, A, m && V]
-      }), !m && (0, l.jsx)(u.MenuGroup, {
+        children: [y, !M && A, p, !M && R, h, O, C, M && U]
+      }), !M && (0, l.jsx)(u.MenuGroup, {
         children: L
       }), (0, l.jsxs)(u.MenuGroup, {
-        children: [G, y]
+        children: [G, P]
       })]
     })
   })

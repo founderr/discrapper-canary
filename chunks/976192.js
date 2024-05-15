@@ -5,70 +5,70 @@ l.r(t), l.d(t, {
   }
 });
 var a = l("735250"),
-  n = l("470079"),
-  u = l("442837"),
-  d = l("481060"),
-  s = l("58540"),
+  u = l("470079"),
+  n = l("442837"),
+  s = l("481060"),
+  d = l("58540"),
   r = l("300284"),
   i = l("484459"),
   o = l("314897"),
   f = l("271383"),
   c = l("430824"),
   E = l("496675"),
-  m = l("594174"),
-  M = l("981631"),
-  S = l("689938"),
+  M = l("594174"),
+  S = l("981631"),
+  m = l("689938"),
   _ = l("104288");
 
 function g(e) {
   let {
     guildId: t,
     userId: g,
-    analyticsLocation: I,
-    analyticsLocations: C,
-    context: R,
-    icon: A
-  } = e, N = c.default.getGuild(t), T = o.default.getId(), v = (0, u.useStateFromStores)([m.default], () => m.default.getUser(g)), h = (0, u.useStateFromStores)([f.default], () => f.default.isGuestOrLurker(t, g), [t, g]);
-  (0, u.useStateFromStores)([E.default], () => E.default.getGuildVersion(t), [t]);
-  let O = n.useMemo(() => ({
+    analyticsLocation: R,
+    analyticsLocations: A,
+    context: C,
+    icon: N
+  } = e, I = c.default.getGuild(t), O = o.default.getId(), h = (0, n.useStateFromStores)([M.default], () => M.default.getUser(g)), T = (0, n.useStateFromStores)([f.default], () => f.default.isGuestOrLurker(t, g), [t, g]);
+  (0, n.useStateFromStores)([E.default], () => E.default.getGuildVersion(t), [t]);
+  let p = u.useMemo(() => ({
     [t]: [g]
   }), [t, g]);
-  (0, s.useSubscribeGuildMembers)(O);
-  let p = R === M.AppContext.POPOUT,
-    x = (0, r.default)({
-      guild: N,
-      analyticsLocation: I
+  (0, d.useSubscribeGuildMembers)(p);
+  let v = C === S.AppContext.POPOUT,
+    U = (0, r.default)({
+      guild: I,
+      analyticsLocation: R
     });
-  if (null == N || p) return null;
-  let b = T === g && (E.default.can(M.Permissions.CHANGE_NICKNAME, N) || E.default.can(M.Permissions.MANAGE_NICKNAMES, N)),
-    F = T === g,
-    U = E.default.canManageUser(M.Permissions.MANAGE_NICKNAMES, g, N);
-  if (!(b || U || F) || null == v || h) return null;
-  let j = N.hasFeature(M.GuildFeatures.HUB) ? S.default.Messages.HUB_EDIT_PROFILE : S.default.Messages.CHANGE_IDENTITY,
-    P = F ? j : S.default.Messages.CHANGE_NICKNAME;
-  return (0, a.jsx)(d.MenuItem, {
+  if (null == I || v) return null;
+  let b = O === g && (E.default.can(S.Permissions.CHANGE_NICKNAME, I) || E.default.can(S.Permissions.MANAGE_NICKNAMES, I)),
+    x = O === g,
+    F = E.default.canManageUser(S.Permissions.MANAGE_NICKNAMES, g, I);
+  if (!(b || F || x) || null == h || T) return null;
+  let j = I.hasFeature(S.GuildFeatures.HUB) ? m.default.Messages.HUB_EDIT_PROFILE : m.default.Messages.CHANGE_IDENTITY,
+    L = x ? j : m.default.Messages.CHANGE_NICKNAME;
+  return (0, a.jsx)(s.MenuItem, {
     id: "change-nickname",
     label: (0, a.jsx)("div", {
       className: _.labelWrapper,
       children: (0, a.jsx)("span", {
         className: _.label,
-        children: P
+        children: L
       })
     }),
-    icon: A,
+    icon: N,
     action: () => {
-      F ? ((0, i.default)(v.id, v.getAvatarURL(t, 80), {
+      x ? ((0, i.default)(h.id, h.getAvatarURL(t, 80), {
         guildId: t
-      }), x()) : (0, d.openModalLazy)(async () => {
+      }), U()) : (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([l.e("99387"), l.e("17712")]).then(l.bind(l, "620021"));
         return l => (0, a.jsx)(e, {
           ...l,
           guildId: t,
-          user: v,
-          analyticsSource: I,
-          analyticsLocations: C
+          user: h,
+          analyticsSource: R,
+          analyticsLocations: A
         })
       })
     }

@@ -62,7 +62,7 @@ let z = H.default.getEnableHardwareAcceleration(),
       null != C && (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("70675")]).then(n.bind(n, "654663"));
+        } = await Promise.all([n.e("99387"), n.e("36441"), n.e("70675")]).then(n.bind(n, "654663"));
         return n => (0, a.jsx)(e, {
           ...n,
           user: C,
