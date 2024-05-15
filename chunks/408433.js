@@ -15,20 +15,20 @@ n.r(t), n.d(t, {
   sanitizeEmbed: function() {
     return h
   }
-}), n("47120"), n("789020"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("653041");
+}), n("789020"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("653041");
 var i = n("392711"),
   r = n.n(i),
   a = n("913527"),
   s = n.n(a),
   o = n("866442"),
   l = n("709054"),
-  u = n("981631");
-let d = /sketchfab/i,
-  _ = /^https:\/\/sketchfab\.com/i,
-  c = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-  E = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
-  I = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-  T = new Set([u.MessageEmbedTypes.AUTO_MODERATION_MESSAGE, u.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION, u.MessageEmbedTypes.RICH, u.MessageEmbedTypes.SAFETY_POLICY_NOTICE, u.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION, u.MessageEmbedTypes.VOICE_CHANNEL, u.MessageEmbedTypes.POLL_RESULT]);
+  u = n("981631"),
+  d = n("817384");
+let _ = /sketchfab/i,
+  c = /^https:\/\/sketchfab\.com/i,
+  E = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
+  I = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
+  T = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
 
 function f(e) {
   let {
@@ -100,10 +100,10 @@ function h(e, t, n) {
         format: "jpeg"
       })
     }), null != i.thumbnail && f(n.video) && function(e, t, n) {
-      if (null != t && d.test(t.name) || _.test(n.url)) return !1;
+      if (null != t && _.test(t.name) || c.test(n.url)) return !1;
       let i = null != n.proxy_url || /^https:/i.test(n.url);
-      return null != e && 1492472454139 > l.default.extractTimestamp(e) && (i = i && null != t && c.test(t.name)), i
-    }(t, n.provider, n.video) && (i.video = S(n.video))), T.has(i.type)) {
+      return null != e && 1492472454139 > l.default.extractTimestamp(e) && (i = i && null != t && E.test(t.name)), i
+    }(t, n.provider, n.video) && (i.video = S(n.video))), d.EMBED_TYPES_WITH_PARSEABLE_FIELDS.has(i.type)) {
     var a;
     let e = null !== (a = n.fields) && void 0 !== a ? a : [];
     i.fields = e.map(e => {
@@ -151,7 +151,7 @@ function m(e) {
 }
 
 function N(e) {
-  return e.type === u.MessageEmbedTypes.ARTICLE && null != e.url && (I.test(e.url) || E.test(e.url))
+  return e.type === u.MessageEmbedTypes.ARTICLE && null != e.url && (T.test(e.url) || I.test(e.url))
 }
 
 function p(e, t, n) {
