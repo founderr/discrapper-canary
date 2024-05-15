@@ -11,33 +11,32 @@ var a = n("470079"),
 function i(e) {
   let {
     id: t,
-    gameId: n,
-    preset: a,
-    banner: i,
-    ...r
-  } = e, o = (0, s.getRandomClanBadgeKind)();
+    preset: n,
+    banner: a,
+    ...i
+  } = e, r = (0, s.getRandomClanBadgeKind)();
   return {
     id: t,
     name: "",
     icon: null,
     description: "",
     memberCount: 0,
-    games: [n],
     playstyle: l.ClanPlaystyles.CASUAL,
     tag: "",
     traits: [],
-    banner: i,
+    games: [],
+    banner: a,
     badge: {
-      badgeKind: o,
-      primaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
-      secondaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
+      badgeKind: r,
+      primaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].primary,
+      secondaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].secondary
     },
     branding: {
-      primaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
-      secondaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
+      primaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].primary,
+      secondaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[n].secondary
     },
     wildcardDescriptors: l.CLAN_WILDCARD_PLACEHOLDERS,
-    ...r
+    ...i
   }
 }
 
@@ -45,9 +44,10 @@ function r(e) {
   return a.useMemo(() => [i({
     id: "1239910082150400001",
     icon: "bea185f5c9dbde7ba2f0c50363c16ec6",
-    gameId: e,
+    games: [e, l.FAKE_CLAN_APP_IDS.AGE_OF_EMPIRES_2, l.FAKE_CLAN_APP_IDS.APEX],
     preset: l.ClanBrandPresets.VOLCANO,
     banner: l.ClanBannerKind.WORLD_MAP,
+    playstyle: l.ClanPlaystyles.COMPETITIVE,
     name: "Retro Rebels",
     description: "Are you a console collector? Rare game curator? Be a rebel and join us in celebrating retro gaming classics \uD83D\uDE0E",
     tag: "RR",
@@ -57,9 +57,10 @@ function r(e) {
   }), i({
     id: "1239910082150400002",
     icon: "fe5e3c39b398965133d24d3c5d72b06c",
-    gameId: e,
+    games: [e, l.FAKE_CLAN_APP_IDS.HONKAI_STAR_RAIL],
     preset: l.ClanBrandPresets.THUNDER,
     banner: l.ClanBannerKind.CASTLE,
+    playstyle: l.ClanPlaystyles.SOCIAL,
     name: "the lofi tavern",
     description: "~ hosting chill beats and study rooms every night ~ join the tavern to kick back and meet other cozy gamers ~",
     tag: "MUSE",
@@ -69,19 +70,20 @@ function r(e) {
   }), i({
     id: "1239910082150400003",
     icon: "fc7bdf17dadd9a59014fc2a41dd88613",
-    gameId: e,
+    games: [e, l.FAKE_CLAN_APP_IDS.LETHAL_COMPANY, l.FAKE_CLAN_APP_IDS.HELLDIVERS_2],
     preset: l.ClanBrandPresets.MARSH,
     banner: l.ClanBannerKind.WARP_TUNNEL,
+    playstyle: l.ClanPlaystyles.VERY_HARDCORE,
     name: "midnight tacos",
     description: "gamers and doritos tacos enthusiasts pls apply",
     tag: "CHZZ",
-    wildcardDescriptors: ["crunchy", "chaotic", "gamba"],
+    wildcardDescriptors: ["spicy", "chaotic", "gamba"],
     traits: ["20+", "Streamers", "ranking bottled water", "late night tacos", "voice chat", "anime"],
     memberCount: 45
   }), i({
     id: "1239910082150400004",
     icon: "7b7a2a06e7852e7cdb7f301fb86c3e18",
-    gameId: e,
+    games: [e, l.FAKE_CLAN_APP_IDS.SIMS_4],
     preset: l.ClanBrandPresets.EARTH,
     banner: l.ClanBannerKind.SEA_FOAM,
     name: "Eco ELO",
@@ -93,7 +95,7 @@ function r(e) {
   }), i({
     id: "1239910082150400005",
     icon: "5ca93390d20f7b96a0f0c3702fceec8e",
-    gameId: e,
+    games: [e, l.FAKE_CLAN_APP_IDS.SIMS_4],
     preset: l.ClanBrandPresets.CASCADE,
     banner: l.ClanBannerKind.NIGHT_SKY,
     name: "Moewtopia",
