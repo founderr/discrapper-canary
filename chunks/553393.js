@@ -144,17 +144,17 @@ t.default = function(e) {
       tileAssetType: "reward"
     } : j && !Y ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
-      ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_PROGRESS_CTA,
+      ctaText: U.default.Messages.QUESTS_CHECK_PROGRESS,
       handleClickCta: es,
       tileAssetType: "reward"
     } : w(O, x) ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
-      ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_WATCH_CTA,
+      ctaText: U.default.Messages.QUESTS_JOIN_ME,
       handleClickCta: el,
       tileAssetType: "game"
     } : {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
-      ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_BEGIN_CTA,
+      ctaText: U.default.Messages.QUESTS_UNLOCK_REWARDS,
       handleClickCta: es,
       tileAssetType: "game"
     };

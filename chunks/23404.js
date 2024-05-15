@@ -164,7 +164,7 @@ t.default = function(e) {
             fullWidth: !0,
             onClick: U,
             size: u.Button.Sizes.SMALL,
-            children: R.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
+            children: R.default.Messages.QUESTS_CHECK_PROGRESS
           }), B && (0, a.jsx)(u.Button, {
             className: O.cta,
             color: u.Button.Colors.BRAND,
