@@ -270,6 +270,8 @@ e.exports = Object.freeze({
   GUILD_POPOUT_USERS_STREAMING: "{username} and {count, plural, one {{count} other is} other {{count} others are}} streaming",
   GUILD_POPOUT_USER_IN_VOICE: "{username} is in voice",
   GUILD_POPOUT_USERS_IN_VOICE: "{username} and {count, plural, one {{count} other is} other {{count} others are}} in voice",
+  GUILD_POPOUT_USER_ON_VIDEO: "{username} is on video",
+  GUILD_POPOUT_USERS_ON_VIDEO: "{username} and {count, plural, one {{count} other is} other {{count} others are}} on video",
   INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE_HEADER: "Contact Crisis Text Line",
   INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE_DESCRIPTION: "Get 24-hour, live support from a counselor. To start, text DISCORD to 741-741.",
   INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE_ALT: "Illustration of floating phone surrounded by various abstract health info bubbles",

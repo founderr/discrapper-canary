@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return _
   }
 });
 var i = n("735250"),
@@ -9,8 +9,9 @@ var i = n("735250"),
   a = n("120356"),
   s = n.n(a),
   o = n("481060"),
-  l = n("411511");
-let u = [
+  l = n("718582"),
+  u = n("411511");
+let d = [
   [{
     translateY: 0,
     translateX: 0,
@@ -81,51 +82,51 @@ let u = [
   }]
 ];
 
-function d(e) {
+function _(e) {
   let {
     users: t,
     guildId: n
-  } = e, a = r.useRef(!1);
+  } = e, a = (0, l.useSortUsersByAffinity)(t), o = r.useRef(!1);
   r.useEffect(() => {
-    a.current = !0
+    o.current = !0
   }, []);
-  let o = Math.min(u.length - 1, t.length - 1),
-    d = u[Math.max(0, o)],
-    E = t.length > 4,
-    I = t.length - 3,
-    T = I >= 10 ? 1 : 2,
-    f = d.map((e, r) => {
-      let a = t[r];
-      if (null == a) return null;
-      let o = E && r === T;
+  let _ = Math.min(d.length - 1, a.length - 1),
+    I = d[Math.max(0, _)],
+    T = a.length > 4,
+    f = a.length - 3,
+    S = f >= 10 ? 1 : 2,
+    h = I.map((e, t) => {
+      let r = a[t];
+      if (null == r) return null;
+      let o = T && t === S;
       return (0, i.jsx)("div", {
-        className: s()(l.avatarContainer),
+        className: s()(u.avatarContainer),
         style: {
           opacity: 1,
           transform: "translateX(".concat(e.translateX, "px) translateY(").concat(e.translateY, "px) scale(").concat(e.scale, ")")
         },
-        children: o ? (0, i.jsx)(_, {
-          count: I
-        }) : (0, i.jsx)(c, {
+        children: o ? (0, i.jsx)(c, {
+          count: f
+        }) : (0, i.jsx)(E, {
           guildId: n,
-          user: a
+          user: r
         })
-      }, a.id)
+      }, r.id)
     });
   return (0, i.jsx)("div", {
-    className: l.groupContainer,
-    children: f
+    className: u.groupContainer,
+    children: h
   })
 }
 
-function _(e) {
+function c(e) {
   let {
     count: t
   } = e;
   return (0, i.jsx)("div", {
-    className: l.avatarWrapper,
+    className: u.avatarWrapper,
     children: (0, i.jsx)("div", {
-      className: l.overflowCount,
+      className: u.overflowCount,
       children: (0, i.jsxs)(o.Text, {
         variant: "text-sm/semibold",
         children: ["+", t]
@@ -134,15 +135,15 @@ function _(e) {
   })
 }
 
-function c(e) {
+function E(e) {
   let {
     guildId: t,
     user: n
   } = e;
   return null == r.useMemo(() => null == n ? void 0 : n.getAvatarSource(t, !1, 32), [t, n]) ? null : (0, i.jsx)("div", {
-    className: l.avatarWrapper,
+    className: u.avatarWrapper,
     children: (0, i.jsx)("img", {
-      className: l.avatar,
+      className: u.avatar,
       src: null == n ? void 0 : n.getAvatarURL(t, 80),
       alt: ""
     })
