@@ -18,13 +18,13 @@ var a = n("735250"),
   S = n("233269");
 t.default = function(e) {
   let {} = e, t = (0, r.useStateFromStores)([E.default], () => E.default.theme), n = (0, _.default)(u.default.QUEST_HOME_PAGE);
-  return s.useEffect(() => {
+  return (s.useEffect(() => {
     !n && (0, l.transitionTo)(C.Routes.FRIENDS)
   }, [n]), s.useEffect(() => {
     o.setHomeLink(C.Routes.QUEST_HOME), (0, f.trackAppUIViewed)("quest-home")
   }, []), (0, d.usePageTitle)({
     location: m.default.Messages.QUESTS
-  }), (0, a.jsx)("div", {
+  }), n) ? (0, a.jsx)("div", {
     className: S.container,
     children: (0, a.jsxs)(c.default, {
       className: (0, h.getThemeClass)(t),
@@ -36,5 +36,5 @@ t.default = function(e) {
         children: m.default.Messages.QUESTS
       }), (0, a.jsx)(c.default.Divider, {})]
     })
-  })
+  }) : null
 }
