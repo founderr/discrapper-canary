@@ -19,7 +19,7 @@ function E(e) {
   let {
     cardData: t,
     guildId: n
-  } = e, [a, E] = r.useState(!1), I = (0, o.useStateFromStores)([u.default], () => t.category === _.CardCategory.HANGOUT && t.streamUserIds.length > 0 ? u.default.getPreviewURL(n, t.channelId, t.streamUserIds[0]) : null), T = (0, d.getImage)(t, n, I), f = (0, d.getCardTitle)(t, n), S = (0, d.getSubtitle)(t), h = (0, d.getCount)(t), A = (0, d.getCategoryIcon)(t), m = (0, d.getClickHandler)(t, n), N = (0, d.getJoinButton)(t, n), p = t.category === _.CardCategory.HANGOUT && 0 === t.streamUserIds.length;
+  } = e, [a, E] = r.useState(!1), I = (0, o.useStateFromStores)([u.default], () => t.category === _.CardCategory.HANGOUT && t.streamUserIds.length > 0 ? u.default.getPreviewURL(n, t.channelId, t.streamUserIds[0]) : null), T = (0, d.getImage)(t, n, I), f = (0, d.useCardTitle)(t, n), S = (0, d.getSubtitle)(t), h = (0, d.getCount)(t), A = (0, d.getCategoryIcon)(t), m = (0, d.getClickHandler)(t, n), N = (0, d.getJoinButton)(t, n), p = t.category === _.CardCategory.HANGOUT && 0 === t.streamUserIds.length;
   return (0, i.jsxs)(l.Clickable, {
     onClick: () => null == m ? void 0 : m(),
     tag: "div",

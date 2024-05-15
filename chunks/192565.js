@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return y
   }
 });
 var a = n("735250"),
@@ -249,7 +249,7 @@ function L(e) {
   return e.currentStep.toString()
 }
 
-function M(e) {
+function y(e) {
   let {
     guildId: t
   } = e, n = (0, c.useDefaultClanProgress)(), l = (0, i.useStateFromStores)([c.default], () => {

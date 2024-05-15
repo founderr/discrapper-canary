@@ -30,14 +30,14 @@ async function m(e) {
   let R = E.default.getUserProfile(p),
     O = u.default.getPrimaryActivity(p),
     L = u.default.getStatus(p),
-    M = u.default.isMobileOnline(p),
+    y = u.default.isMobileOnline(p),
     {
-      party: y,
+      party: M,
       assets: P,
       application_id: x
     } = null != O ? O : {},
     D = null != x ? o.default.getApplication(x) : null,
-    b = M ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
+    b = y ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
     U = L === h.StatusTypes.ONLINE ? b : L;
   C = await (0, s.openModalLazy)(async () => {
     let {
@@ -63,9 +63,9 @@ async function m(e) {
     sku_id: null !== (i = null == D ? void 0 : D.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(p),
     has_images: !!(null !== (m = null == P ? void 0 : P.large_image) && void 0 !== m ? m : null == P ? void 0 : P.small_image),
-    party_max: null == y ? void 0 : null === (t = y.size) || void 0 === t ? void 0 : t[1],
-    party_id: null == y ? void 0 : y.id,
-    party_platform: (0, _.isSpotifyParty)(null == y ? void 0 : y.id) ? h.PlatformTypes.SPOTIFY : null,
+    party_max: null == M ? void 0 : null === (t = M.size) || void 0 === t ? void 0 : t[1],
+    party_id: null == M ? void 0 : M.id,
+    party_platform: (0, _.isSpotifyParty)(null == M ? void 0 : M.id) ? h.PlatformTypes.SPOTIFY : null,
     game_platform: (0, r.default)(O),
     profile_user_status: U,
     profile_has_nitro_customization: (null == R ? void 0 : R.banner) != null,

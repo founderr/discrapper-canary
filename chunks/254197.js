@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("341907"),
   O = n("759853"),
   L = n("95985"),
-  M = n("46140"),
-  y = n("689938"),
+  y = n("46140"),
+  M = n("689938"),
   P = n("263094");
 let x = e => {
     let {
@@ -42,7 +42,7 @@ let x = e => {
         fullWidth: !0,
         size: u.Button.Sizes.SMALL,
         onClick: n,
-        children: y.default.Messages.QUESTS_CLAIM_REWARD
+        children: M.default.Messages.QUESTS_CLAIM_REWARD
       })
     })
   },
@@ -59,9 +59,9 @@ let x = e => {
           content: p.QuestContent.QUEST_BAR_V2,
           ctaContent: h.QuestContentCTA.OPEN_GAME_LINK
         }),
-        children: y.default.Messages.QUESTS_PLAY_GAME
+        children: M.default.Messages.QUESTS_PLAY_GAME
       }), (0, a.jsx)(u.Tooltip, {
-        text: y.default.Messages.QUESTS_SHARE_LINK,
+        text: M.default.Messages.QUESTS_SHARE_LINK,
         children: e => (0, a.jsx)(u.Button, {
           ...e,
           className: P.iconButton,
@@ -104,12 +104,12 @@ let x = e => {
     }, [G]), {
       primaryVariant: W
     } = g.QuestBarExperiment.useExperiment({
-      location: M.QuestsExperimentLocations.QUESTS_BAR
+      location: y.QuestsExperimentLocations.QUESTS_BAR
     }, {
       autoTrackExposure: !1
     }), K = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, z = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, q = c && v, Q = (0, S.getQuestBarHeroAssetUrl)(G), Z = (0, S.getQuestsInstructionsToWinReward)({
       quest: G,
-      location: M.QuestsExperimentLocations.QUESTS_BAR,
+      location: y.QuestsExperimentLocations.QUESTS_BAR,
       useV2Variants: W === g.QuestBarExperimentVariants.V2
     });
     return (0, a.jsx)("div", {
@@ -126,7 +126,7 @@ let x = e => {
           children: [(0, a.jsx)(u.Text, {
             variant: "text-xxs/medium",
             className: i()(P.flex, P.headerText),
-            children: y.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+            children: M.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
               expirationDate: F
             })
           }), (0, a.jsx)(N.QuestsEntryContextMenuPopout, {
@@ -140,7 +140,7 @@ let x = e => {
             children: e => (0, a.jsx)(u.Clickable, {
               ...e,
               className: P.submenuWrapper,
-              "aria-label": y.default.Messages.ACTIONS,
+              "aria-label": M.default.Messages.ACTIONS,
               children: (0, a.jsx)(f.default, {
                 className: i()(P.submenuIcon, P.interactiveNormal)
               })
@@ -179,7 +179,7 @@ let x = e => {
                 children: [(0, a.jsx)(u.Text, {
                   color: "always-white",
                   variant: "text-xs/normal",
-                  children: y.default.Messages.QUESTS_PROMOTED
+                  children: M.default.Messages.QUESTS_PROMOTED
                 }), (0, a.jsx)(o.CircleQuestionIcon, {
                   color: u.tokens.colors.WHITE,
                   className: P.promotedBadgeIcon
@@ -196,7 +196,7 @@ let x = e => {
               children: e => (0, a.jsx)(u.Clickable, {
                 ...e,
                 className: P.submenuWrapper,
-                "aria-label": y.default.Messages.ACTIONS,
+                "aria-label": M.default.Messages.ACTIONS,
                 children: (0, a.jsx)(f.default, {
                   className: i()(P.submenuIcon, P.white)
                 })
@@ -213,7 +213,7 @@ let x = e => {
               className: P.title,
               color: "always-white",
               variant: "heading-md/medium",
-              children: y.default.Messages.QUESTS_TITLE.format({
+              children: M.default.Messages.QUESTS_TITLE.format({
                 questName: G.config.messages.questName
               })
             }), (0, a.jsx)(u.Text, {
@@ -229,7 +229,7 @@ let x = e => {
             onClick: q ? V : void 0,
             size: u.Button.Sizes.SMALL,
             submitting: B,
-            children: y.default.Messages.QUESTS_ACCEPT_QUEST
+            children: M.default.Messages.QUESTS_ACCEPT_QUEST
           })]
         }), (0, a.jsx)("div", {
           className: P.heroAssetWrapper,

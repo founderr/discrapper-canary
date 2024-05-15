@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return M
   }
 }), n("47120");
 var a = n("735250"),
@@ -31,7 +31,7 @@ var a = n("735250"),
   O = n("689938"),
   L = n("267071");
 
-function M(e) {
+function y(e) {
   let {
     users: t
   } = e;
@@ -51,7 +51,7 @@ function M(e) {
   })
 }
 
-function y(e) {
+function M(e) {
   var t;
   let {
     broadcast: n
@@ -59,7 +59,7 @@ function y(e) {
     userId: i,
     applicationId: S,
     channelId: g,
-    streamKey: y
+    streamKey: M
   } = n, [P, x] = s.useState(!1), D = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([S]), U = null !== (t = I.default.getGlobalName(D)) && void 0 !== t ? t : I.default.getUserTag(D), j = (0, N.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, g, i)), k = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), w = (0, A.default)(), B = (0, T.default)(g);
   if (s.useEffect(() => {
       P && k === g && x(!1)
@@ -97,7 +97,7 @@ function y(e) {
         }) : O.default.Messages.STREAMING_A_GAME
       }), (0, a.jsxs)("div", {
         className: L.activity,
-        children: [B.length > 0 && (0, a.jsx)(M, {
+        children: [B.length > 0 && (0, a.jsx)(y, {
           users: B
         }), (0, a.jsxs)(r.Button, {
           onClick: () => {
@@ -105,7 +105,7 @@ function y(e) {
               o.default.selectPrivateChannel(g);
               return
             }
-            x(!0), (0, u.joinPrivateChannelAndWatchStream)(g, y), d.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_VIEWED, {
+            x(!0), (0, u.joinPrivateChannelAndWatchStream)(g, M), d.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_VIEWED, {
               num_active_broadcasts: j.length,
               broadcast_position: j.findIndex(e => e.userId === i) + 1,
               is_broadcasting: w,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryTopPicks: function() {
-    return y
+    return M
   }
 }), n("47120");
 var a, s, l = n("735250"),
@@ -28,13 +28,13 @@ var a, s, l = n("735250"),
   R = n("981631"),
   O = n("689938"),
   L = n("93118");
-let M = {
+let y = {
   [A.ClanDiscoveryMode.PLAYSTYLE]: I.PlayStyleSelector,
   [A.ClanDiscoveryMode.TRAITS]: I.TraitSelector,
   [A.ClanDiscoveryMode.GAMES]: I.GameSelector
 };
 
-function y(e) {
+function M(e) {
   let {
     limit: t,
     width: n
@@ -43,29 +43,29 @@ function y(e) {
     clans: s,
     searchResult: c,
     searchCriteria: f
-  } = (0, S.useClanDiscoveryList)(t), C = (0, A.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), g = (0, E.default)(c), I = (0, A.useClanDiscoveryUIStore)(e => e.mode, o.default), T = i.useRef(null), N = (0, E.default)(I), M = i.useRef(0), y = Math.min(null != n ? n : 1024, 2e3), P = i.useMemo(() => {
-    let e = y / 256,
-      t = y / 376,
-      n = y / e,
-      a = y / t;
+  } = (0, S.useClanDiscoveryList)(t), C = (0, A.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), g = (0, E.default)(c), I = (0, A.useClanDiscoveryUIStore)(e => e.mode, o.default), T = i.useRef(null), N = (0, E.default)(I), y = i.useRef(0), M = Math.min(null != n ? n : 1024, 2e3), P = i.useMemo(() => {
+    let e = M / 256,
+      t = M / 376,
+      n = M / e,
+      a = M / t;
     return a > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e
-  }, [y]), [x, D] = i.useState({}), [b, U] = (0, r.useSpring)(() => ({
+  }, [M]), [x, D] = i.useState({}), [b, U] = (0, r.useSpring)(() => ({
     opacity: 0,
     config: r.config.stiff
   })), j = i.useCallback(() => {
     if (null == k.current) {
-      0 !== M.current && (D({
+      0 !== y.current && (D({
         height: 0
       }), U({
         opacity: 0
-      }), M.current = 0);
+      }), y.current = 0);
       return
     }
     D({
       height: k.current.getBoundingClientRect().y + 400 + 16 + 40
-    }), 0 === M.current && (U({
+    }), 0 === y.current && (U({
       opacity: 1
-    }), M.current = 1)
+    }), y.current = 1)
   }, []), G = (0, _.useThrottledFunction)(j, 10, [j], {
     leading: !0,
     trailing: !0
@@ -246,7 +246,7 @@ let P = i.memo(function(e) {
     },
     delay: 500
   }), E = i.useCallback(e => {
-    let t = M[e];
+    let t = y[e];
     return null == t ? null : (0, l.jsx)(g.default, {
       children: (0, l.jsx)(t, {})
     })
@@ -268,7 +268,7 @@ let P = i.memo(function(e) {
         }, t)), f((e, n) => (0, l.jsx)(r.animated.div, {
           className: L.content,
           style: e,
-          children: (0, l.jsx)(y, {
+          children: (0, l.jsx)(M, {
             width: t
           })
         }, n)), (0, l.jsx)("div", {

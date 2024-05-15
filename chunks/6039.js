@@ -27,7 +27,7 @@ t.default = e => {
   let {
     guildId: v,
     inviteCode: R
-  } = e, [O, L] = s.useState(I.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), y = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), P = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+  } = e, [O, L] = s.useState(I.WaveStates.INITIAL), y = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), M = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), P = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
     hasFetchedRequestToJoinGuilds: x,
     guildPreviewDisabled: D
   } = (0, l.useStateFromStoresObject)([C.default], () => ({
@@ -66,9 +66,9 @@ t.default = e => {
         })
       }))
     }),
-    k = (null == M ? void 0 : null === (t = M.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
-      id: M.guild.id,
-      splash: M.guild.splash
+    k = (null == y ? void 0 : null === (t = y.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
+      id: y.guild.id,
+      splash: y.guild.splash
     }) : (0, d.getArtForPath)();
   return (0, a.jsx)("div", {
     className: A.page,
@@ -83,7 +83,7 @@ t.default = e => {
       }), (0, a.jsx)("div", {
         className: A.contentWrapper,
         children: (() => {
-          switch (null == y ? void 0 : y.applicationStatus) {
+          switch (null == M ? void 0 : M.applicationStatus) {
             case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
               return (0, a.jsx)(p.default, {
                 onWithdrawApplication: G,
@@ -95,7 +95,7 @@ t.default = e => {
                 onReapply: j,
                 confirmText: T.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
                 onWithdrawApplication: G,
-                rejectionReason: null == y ? void 0 : y.rejectionReason,
+                rejectionReason: null == M ? void 0 : M.rejectionReason,
                 guild: D
               });
             default:

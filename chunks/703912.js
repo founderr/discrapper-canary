@@ -34,8 +34,8 @@ async function A(e, t, n) {
     code_challenge: R,
     code_challenge_method: O,
     state: L,
-    nonce: M,
-    scope: y,
+    nonce: y,
+    scope: M,
     permissions: P,
     guild_id: x,
     channel_id: D,
@@ -50,7 +50,7 @@ async function A(e, t, n) {
     errorCode: I.RPCErrors.OAUTH2_ERROR
   }, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
   let G = [];
-  if ("string" == typeof y ? G = y.split(" ").filter(e => e.length > 0) : Array.isArray(y) && (G = y), null == C.default.getCurrentUser()) throw new S.default({
+  if ("string" == typeof M ? G = M.split(" ").filter(e => e.length > 0) : Array.isArray(M) && (G = M), null == C.default.getCurrentUser()) throw new S.default({
     errorCode: I.RPCErrors.OAUTH2_ERROR
   }, "Client is not logged in");
   let k = null !== (i = d.default.getApplication(A)) && void 0 !== i ? i : _.default.createFromServer(await (0, h.fetchApplication)(A)),
@@ -98,7 +98,7 @@ async function A(e, t, n) {
       codeChallenge: R,
       codeChallengeMethod: O,
       state: L,
-      nonce: M,
+      nonce: y,
       integrationType: o
     })).location
   } catch (t) {

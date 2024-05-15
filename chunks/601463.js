@@ -63,7 +63,7 @@ function C(e) {
         behavior: "smooth"
       }), null == C || C(!0)
     }, [C]),
-    M = () => open(u.default.getArticleURL(f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES));
+    y = () => open(u.default.getArticleURL(f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES));
   return (0, a.jsxs)("div", {
     className: h.sidebarContent,
     children: [S((e, t) => t && (0, a.jsx)(l.animated.div, {
@@ -109,7 +109,7 @@ function C(e) {
           variant: "text-xs/normal",
           color: "text-muted",
           children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_AGREEMENT.format({
-            onGuidelinesClick: M
+            onGuidelinesClick: y
           })
         })]
       })

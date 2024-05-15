@@ -136,15 +136,15 @@ let N = !0,
   R = m.FriendsSections.ONLINE,
   O = new A,
   L = !0,
-  M = !1;
+  y = !1;
 
-function y() {
+function M() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   N && (e || R !== m.FriendsSections.ONLINE && R !== m.FriendsSections.ADD_FRIEND) && !v && (N = !1, v = !0, o.default.fetchRelationships())
 }
 
 function P() {
-  if (N = !0, L ? v = !1 : y(), O = O.reset(), M) return;
+  if (N = !0, L ? v = !1 : M(), O = O.reset(), y) return;
   let e = O.getRelationshipCounts();
   R = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
 }
@@ -176,7 +176,7 @@ p(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     P()
   },
   FRIENDS_SET_SECTION: function(e) {
-    R = e.section, y()
+    R = e.section, M()
   },
   CHANNEL_SELECT: function(e) {
     let {
@@ -197,6 +197,6 @@ p(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     return L = t !== m.DrawerTabTypes.FRIENDS, x(), !L
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
-    R = e.section, M = !0
+    R = e.section, y = !0
   }
 })

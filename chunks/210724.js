@@ -35,7 +35,7 @@ function N(e) {
     location: I.QuestsExperimentLocations.QUESTS_BAR
   }), v = (0, C.useIsEligibleForQuests)({
     location: I.QuestsExperimentLocations.QUESTS_BAR
-  }), R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), L = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, M = s.useRef(L), y = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, P = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, x = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), D = (0, f.useIsQuestExpired)(E), {
+  }), R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), L = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, y = s.useRef(L), M = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, P = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, x = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), D = (0, f.useIsQuestExpired)(E), {
     hasError: b,
     isLoading: U
   } = (0, S.useQuestsAssetsLoadState)(), j = v && !x && !P && !D && !U, G = s.useRef(j), {
@@ -51,10 +51,10 @@ function N(e) {
   }, []), et = s.useCallback(() => {
     Y(!0)
   }, []), en = s.useCallback(() => {
-    Y(!1), !H.current && !y && K(!1)
-  }, [y]), ea = s.useCallback(() => {
-    Y(!1), !y && K(!1), H.current = !1
-  }, [y]), es = s.useCallback(function() {
+    Y(!1), !H.current && !M && K(!1)
+  }, [M]), ea = s.useCallback(() => {
+    Y(!1), !M && K(!1), H.current = !1
+  }, [M]), es = s.useCallback(function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
       {
         withDelay: t = !1
@@ -73,15 +73,15 @@ function N(e) {
     H.current = !1, el()
   }, [el]);
   s.useLayoutEffect(() => {
-    y && B.shouldExpandOnQuestComplete && ee()
-  }, [ee, y, B]), s.useLayoutEffect(() => {
-    L && !M.current && H.current && ee()
+    M && B.shouldExpandOnQuestComplete && ee()
+  }, [ee, M, B]), s.useLayoutEffect(() => {
+    L && !y.current && H.current && ee()
   }, [L, ee]), s.useLayoutEffect(() => {
-    !y && L && !M.current && !H.current && K(!1)
-  }, [L, y]), s.useLayoutEffect(() => {
+    !M && L && !y.current && !H.current && K(!1)
+  }, [L, M]), s.useLayoutEffect(() => {
     j !== G.current && Z(!1), G.current = j
   }, [j]), s.useEffect(() => {
-    M.current = L
+    y.current = L
   }, [L]);
   let {
     expansionSpring: eo
@@ -143,7 +143,7 @@ function N(e) {
           color: E.config.colors.secondary,
           height: eu.to({
             range: [0, 1],
-            output: [0, y && W ? X : B.collapsedHeight]
+            output: [0, M && W ? X : B.collapsedHeight]
           })
         },
         children: (0, a.jsx)(r.animated.div, {

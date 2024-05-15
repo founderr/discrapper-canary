@@ -30,14 +30,14 @@ function N(e) {
   let {
     channel: t,
     baseChannelId: n
-  } = e, N = (0, S.default)(t), v = (0, c.useListHasSingleMessageRequest)(), R = (0, c.useListHasSingleSpamMessageRequest)(), O = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), L = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), M = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), y = s.useCallback(() => {
+  } = e, N = (0, S.default)(t), v = (0, c.useListHasSingleMessageRequest)(), R = (0, c.useListHasSingleSpamMessageRequest)(), O = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), L = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), y = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), M = s.useCallback(() => {
     _.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), O && v && (0, h.transitionToChannel)(t.id), L && R && (0, h.transitionToChannel)(t.id)
   }, [t.id, L, R, O, v]), P = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(I.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), {
     markAsNotSpam: x
   } = (0, f.useMessageRequestActions)({
-    onAcceptSuccess: y,
+    onAcceptSuccess: M,
     onError: P
   });
   if (null == t || !t.isDM()) return null;
@@ -64,7 +64,7 @@ function N(e) {
       }), (0, a.jsx)(i.Button, {
         className: A.hamBannerButton,
         size: i.ButtonSizes.SMALL,
-        onClick: () => x(t, M),
+        onClick: () => x(t, y),
         children: I.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
       })]
     }), (0, a.jsx)("div", {

@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("207796"),
   O = n("316553"),
   L = n("273254"),
-  M = n("559469"),
-  y = n("308083"),
+  y = n("559469"),
+  M = n("308083"),
   P = n("689938"),
   x = n("18712"),
   D = n("345480"),
@@ -203,7 +203,7 @@ t.default = s.memo(function(e) {
       includeConverted: !1
     });
   s.useEffect(() => {
-    let e = D === y.VALORANT_ID ? R.ClanDiscoveryGame.VALORANT : D === y.GENSHIN_ID ? R.ClanDiscoveryGame.GENSHIN : void 0;
+    let e = D === M.VALORANT_ID ? R.ClanDiscoveryGame.VALORANT : D === M.GENSHIN_ID ? R.ClanDiscoveryGame.GENSHIN : void 0;
     null != e && E !== D && R.useClanDiscoveryUIStore.getState().setGame(e)
   }, [D, E]);
   let b = s.useCallback(() => {
@@ -219,7 +219,7 @@ t.default = s.memo(function(e) {
           guildId: o
         })
       }, {
-        layerKey: y.CLAN_SETUP_MODAL_LAYER_KEY
+        layerKey: M.CLAN_SETUP_MODAL_LAYER_KEY
       }))
     }, [i, o]),
     G = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion),
@@ -227,7 +227,7 @@ t.default = s.memo(function(e) {
       guild: d,
       selectedGame: l
     }),
-    B = (0, M.useFakeDiscoveryUpsellClans)(E),
+    B = (0, y.useFakeDiscoveryUpsellClans)(E),
     [F, H] = s.useState(!0),
     V = (0, r.useSpring)({
       from: {

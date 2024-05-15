@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("492347"),
   O = n("42575"),
   L = n("617015"),
-  M = n("981631"),
-  y = n("689938"),
+  y = n("981631"),
+  M = n("689938"),
   P = n("739426");
 t.default = function(e) {
   let {
@@ -40,7 +40,7 @@ t.default = function(e) {
     section: D
   } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([p.default], () => p.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, g.useIsClearIncomingFriendRequestsEnabled)(), [G, k] = s.useState(() => {
     let e = {};
-    for (let t of Object.values(M.FriendsSections)) e[t] = "";
+    for (let t of Object.values(y.FriendsSections)) e[t] = "";
     return e
   }), w = s.useCallback(e => {
     k({
@@ -55,50 +55,50 @@ t.default = function(e) {
   }, [G, t]), F = x.filter(t, G[t]);
   if (0 === F.length && "" === G[t]) return (0, a.jsxs)("div", {
     className: P.emptyStateContainer,
-    children: [t === M.FriendsSections.ONLINE && (0, a.jsx)(_.default, {}), (0, a.jsx)(A.default, {
+    children: [t === y.FriendsSections.ONLINE && (0, a.jsx)(_.default, {}), (0, a.jsx)(A.default, {
       type: t,
       onClick: () => {
-        u.default.setSection(M.FriendsSections.ADD_FRIEND)
+        u.default.setSection(y.FriendsSections.ADD_FRIEND)
       }
     }, D)]
   });
   let H = 0 === F.length && "" !== G[t],
-    V = F.filter(e => e.type === M.RelationshipTypes.PENDING_INCOMING).length,
-    Y = t === M.FriendsSections.PENDING && V > 0 && j && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
+    V = F.filter(e => e.type === y.RelationshipTypes.PENDING_INCOMING).length,
+    Y = t === y.FriendsSections.PENDING && V > 0 && j && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
   return (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: l,
     children: (0, a.jsxs)(c.default, {
-      section: M.AnalyticsSections.FRIENDS_LIST,
+      section: y.AnalyticsSections.FRIENDS_LIST,
       children: [(0, a.jsx)(S.default, {
         className: i()(P.searchBar, H ? P.searchEmptyState : null),
         query: G[t],
         onChange: w,
         onClear: B,
         size: S.default.Sizes.MEDIUM
-      }), t === M.FriendsSections.ONLINE && "" === G[t] && (0, a.jsx)(_.default, {}), (0, a.jsxs)("div", {
+      }), t === y.FriendsSections.ONLINE && "" === G[t] && (0, a.jsx)(_.default, {}), (0, a.jsxs)("div", {
         className: P.sectionTitle,
         children: [(0, a.jsx)(R.default, {
           id: n,
           title: function(e, t) {
             switch (e) {
-              case M.FriendsSections.ONLINE:
-                return y.default.Messages.FRIENDS_ONLINE_HEADER.format({
+              case y.FriendsSections.ONLINE:
+                return M.default.Messages.FRIENDS_ONLINE_HEADER.format({
                   online: t.toString()
                 });
-              case M.FriendsSections.PENDING:
-                return y.default.Messages.FRIENDS_PENDING_HEADER.format({
+              case y.FriendsSections.PENDING:
+                return M.default.Messages.FRIENDS_PENDING_HEADER.format({
                   count: t.toString()
                 });
-              case M.FriendsSections.SUGGESTIONS:
-                return y.default.Messages.FRIENDS_FRIEND_SUGGESTIONS_HEADER.format({
+              case y.FriendsSections.SUGGESTIONS:
+                return M.default.Messages.FRIENDS_FRIEND_SUGGESTIONS_HEADER.format({
                   count: t.toString()
                 });
-              case M.FriendsSections.BLOCKED:
-                return y.default.Messages.FRIENDS_BLOCKED_HEADER.format({
+              case y.FriendsSections.BLOCKED:
+                return M.default.Messages.FRIENDS_BLOCKED_HEADER.format({
                   count: t.toString()
                 });
               default:
-                return y.default.Messages.FRIENDS_ALL_HEADER.format({
+                return M.default.Messages.FRIENDS_ALL_HEADER.format({
                   count: t.toString()
                 })
             }
@@ -111,8 +111,8 @@ t.default = function(e) {
           onClick: e => {
             e.stopPropagation(), d.default.confirmClearPendingRelationships(V)
           },
-          "aria-label": y.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON,
-          children: y.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON
+          "aria-label": M.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON,
+          children: M.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON
         })]
       }), H ? (0, a.jsx)("div", {
         className: P.emptyStateContainer,
@@ -124,23 +124,23 @@ t.default = function(e) {
         statusSections: [F],
         renderRow: function(e) {
           switch (t) {
-            case M.FriendsSections.BLOCKED:
+            case y.FriendsSections.BLOCKED:
               return (0, a.jsx)(I.default, {
                 ...e,
                 isFocused: b
               });
-            case M.FriendsSections.PENDING:
+            case y.FriendsSections.PENDING:
               return (0, a.jsx)(N.default, {
                 ...e,
                 isFocused: b
               });
-            case M.FriendsSections.SUGGESTIONS:
+            case y.FriendsSections.SUGGESTIONS:
               return (0, a.jsx)(O.default, {
                 ...e,
                 isFocused: b
               });
-            case M.FriendsSections.ONLINE:
-            case M.FriendsSections.ALL:
+            case y.FriendsSections.ONLINE:
+            case y.FriendsSections.ALL:
             default:
               return (0, a.jsx)(T.default, {
                 ...e,

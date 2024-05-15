@@ -40,8 +40,8 @@ function O(e) {
     onClose: n
   } = e, l = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = (0, C.useDefaultClanProgress)(), {
     progress: L,
-    errors: M,
-    submitting: y
+    errors: y,
+    submitting: M
   } = (0, u.useStateFromStoresObject)([C.default], () => {
     var e, n, a, s;
     return {
@@ -49,7 +49,7 @@ function O(e) {
       errors: null === (n = C.default.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
       submitting: null === (a = C.default.getStateForGuild(t)) || void 0 === a ? void 0 : a.submitting
     }
-  }), P = (0, m.useDefaultGameIdForClan)(t, "ClanSetupModal"), x = s.useMemo(() => (0, A.getClanSetupProgressSteps)(M), [M]), [D, b] = s.useState(!1), [U, j] = s.useState(window.innerWidth), [G, k] = s.useState(1), [w, B] = s.useState(!0), F = (0, p.useFullScreenModalAnimationStyle)(), H = (0, o.useSpring)({
+  }), P = (0, m.useDefaultGameIdForClan)(t, "ClanSetupModal"), x = s.useMemo(() => (0, A.getClanSetupProgressSteps)(y), [y]), [D, b] = s.useState(!1), [U, j] = s.useState(window.innerWidth), [G, k] = s.useState(1), [w, B] = s.useState(!0), F = (0, p.useFullScreenModalAnimationStyle)(), H = (0, o.useSpring)({
     opacity: G,
     config: R,
     onStart: () => B(!0),
@@ -102,8 +102,8 @@ function O(e) {
       requiredGameId: P
     })
   }, [P, t]);
-  let z = s.useMemo(() => null != M && Object.values(M).some(e => null != e), [M]),
-    q = s.useMemo(() => null != M && Object.values(M).length > 0 ? (0, A.getClanSetupProgressSteps)(M).find(e => e.hasError) : null, [M]),
+  let z = s.useMemo(() => null != y && Object.values(y).some(e => null != e), [y]),
+    q = s.useMemo(() => null != y && Object.values(y).length > 0 ? (0, A.getClanSetupProgressSteps)(y).find(e => e.hasError) : null, [y]),
     Q = s.useCallback(() => {
       k(1), h.updateClanSetup(t, {
         currentStep: null == q ? void 0 : q.index
@@ -213,7 +213,7 @@ function O(e) {
             ...e,
             themeColor: L.brandPrimaryColor,
             disabled: !D || z,
-            submitting: y,
+            submitting: M,
             look: d.Button.Looks.FILLED,
             size: d.Button.Sizes.MEDIUM,
             color: d.Button.Colors.BRAND,

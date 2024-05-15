@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return y
   }
 }), n("47120");
 var a, s = n("735250"),
@@ -283,7 +283,7 @@ class L extends(a = l.PureComponent) {
   }
 }
 
-function M(e) {
+function y(e) {
   let t = (0, d.useStateFromStores)([g.default], () => g.default.getDiscoveryCategories(), [], g.areDiscoveryCategoriesEqual),
     n = (0, d.useStateFromStores)([E.default], () => E.default.getTopCategoryCounts(e.mostRecentQuery));
   return (0, s.jsx)(L, {
