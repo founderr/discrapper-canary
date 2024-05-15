@@ -19,9 +19,10 @@ let u = () => ({
   c = new Set,
   f = new Set,
   h = 0,
-  m = !1;
+  m = !1,
+  p = !1;
 
-function p() {
+function E() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   if (!e && Date.now() < h) return;
   d.itemImpressions.length > 1e3 && (d.itemImpressions = []);
@@ -33,14 +34,15 @@ function p() {
     else break
   }
   t > 0 && (d.itemImpressions = d.itemImpressions.slice(t));
-  let a = new Set,
+  let a = p ? 1e3 : 108e5,
     l = new Set,
-    s = Date.now() - 108e5,
-    i = null;
-  for (let [e, t] of d.itemImpressions) t < s ? a.add(e) : null == i && (i = t + 108e5), l.add(e);
-  c = a, f = l, h = null != i ? i : 1 / 0, m = !0
+    s = new Set,
+    i = Date.now() - a,
+    r = null;
+  for (let [e, t] of d.itemImpressions) t < i ? l.add(e) : null == r && (r = t + a), s.add(e);
+  c = l, f = s, h = null != r ? r : 1 / 0, m = !0
 }
-class E extends(l = i.default.PersistedStore) {
+class C extends(l = i.default.PersistedStore) {
   initialize(e) {
     d = {
       ...d,
@@ -54,13 +56,16 @@ class E extends(l = i.default.PersistedStore) {
     return "channel" === d.replyMode
   }
   getImpressionCappedItemIds() {
-    return p(), c
+    return E(), c
+  }
+  getDebugFastImpressionCappingEnabled() {
+    return p
   }
   reset() {
     d = u()
   }
 }
-o(E, "displayName", "ContentInventoryPersistedStore"), o(E, "persistKey", "ContentInventoryPersistedStore"), t.default = new E(r.default, {
+o(C, "displayName", "ContentInventoryPersistedStore"), o(C, "persistKey", "ContentInventoryPersistedStore"), t.default = new C(r.default, {
   CONTENT_INVENTORY_TOGGLE_REPLY_MODE: () => {
     "direct_message" === d.replyMode ? d.replyMode = "channel" : d.replyMode = "direct_message"
   },
@@ -68,10 +73,19 @@ o(E, "displayName", "ContentInventoryPersistedStore"), o(E, "persistKey", "Conte
     let {
       itemIds: t
     } = e;
-    !m && p();
+    !m && E();
     let n = Date.now(),
       a = !1;
     for (let e of t) !f.has(e) && (d.itemImpressions.push([e, n]), a = !0);
-    return p(a), a
+    return E(a), a
+  },
+  CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: function() {
+    d.itemImpressions = [], E(!0)
+  },
+  CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: function() {
+    return console.log("Item impressions:", d.itemImpressions), !1
+  },
+  CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: function() {
+    p = !p
   }
 })
