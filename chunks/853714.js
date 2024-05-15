@@ -123,7 +123,7 @@ class H extends l.PureComponent {
           return (0, I.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await s.e("65889").then(s.bind(s, "731646"));
+            } = await s.e("5396").then(s.bind(s, "731646"));
             return s => (0, a.jsx)(e, {
               ...s,
               id: t.targetId,

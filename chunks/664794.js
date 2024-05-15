@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return S
   }
 });
 var i = n("735250");
@@ -10,54 +10,61 @@ var r = n("442837"),
   a = n("481060"),
   s = n("100527"),
   o = n("906732"),
-  l = n("389052"),
-  u = n("622724"),
-  d = n("314897"),
-  _ = n("808268"),
-  c = n("785717"),
-  E = n("537387"),
-  I = n("228168"),
-  T = n("689938");
+  l = n("299206"),
+  u = n("389052"),
+  d = n("622724"),
+  _ = n("314897"),
+  c = n("808268"),
+  E = n("785717"),
+  I = n("537387"),
+  T = n("228168"),
+  f = n("689938");
 
-function f(e) {
+function S(e) {
   let {
     user: t,
     profileType: n,
-    guildId: f,
-    viewProfileItem: S
-  } = e, h = (0, r.useStateFromStores)([d.default], () => d.default.getId() === t.id), {
-    trackUserProfileAction: A
-  } = (0, c.useUserProfileAnalyticsContext)(), {
-    analyticsLocations: m,
-    newestAnalyticsLocation: N
-  } = (0, o.default)(s.default.USER_PROFILE_OVERFLOW_MENU), p = (0, l.default)({
+    guildId: S,
+    viewProfileItem: h
+  } = e, A = (0, r.useStateFromStores)([_.default], () => _.default.getId() === t.id), {
+    trackUserProfileAction: m
+  } = (0, E.useUserProfileAnalyticsContext)(), {
+    analyticsLocations: N,
+    newestAnalyticsLocation: p
+  } = (0, o.default)(s.default.USER_PROFILE_OVERFLOW_MENU), O = (0, u.default)({
     user: t,
     color: "danger",
-    location: N,
-    onBlock: () => A({
+    location: p,
+    onBlock: () => m({
       action: "BLOCK",
-      analyticsLocations: m
+      analyticsLocations: N
     }),
-    onUnblock: () => A({
+    onUnblock: () => m({
       action: "UNBLOCK",
-      analyticsLocations: m
+      analyticsLocations: N
     })
-  }), O = (0, u.default)({
+  }), C = (0, d.default)({
     user: t,
-    guildId: f,
+    guildId: S,
     color: "danger",
-    location: N,
-    onAction: () => A({
+    location: p,
+    onAction: () => m({
       action: "REPORT",
-      analyticsLocations: m
+      analyticsLocations: N
     })
+  }), R = (0, l.default)({
+    id: t.id,
+    label: f.default.Messages.COPY_ID_USER
   });
-  if (h && n !== I.UserProfileTypes.FULL_SIZE) return null;
-  let C = () => h ? null : (0, i.jsxs)(a.MenuGroup, {
-    children: [p, O]
-  });
+  if (A && n !== T.UserProfileTypes.FULL_SIZE) return null;
+  let g = () => A ? null : (0, i.jsxs)(a.MenuGroup, {
+      children: [O, C]
+    }),
+    L = () => null == R ? null : (0, i.jsx)(a.MenuGroup, {
+      children: R
+    });
   return (0, i.jsx)(o.AnalyticsLocationProvider, {
-    value: m,
+    value: N,
     children: (0, i.jsx)(a.Popout, {
       renderPopout: e => {
         let {
@@ -67,15 +74,15 @@ function f(e) {
           navId: "user-profile-overflow-menu",
           onSelect: void 0,
           onClose: t,
-          "aria-label": T.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
+          "aria-label": f.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
           children: [(0, i.jsx)(a.MenuGroup, {
-            children: S
-          }), C()]
+            children: h
+          }), g(), L()]
         })
       },
-      children: e => (0, i.jsx)(E.default, {
-        text: T.default.Messages.MORE,
-        icon: _.default,
+      children: e => (0, i.jsx)(I.default, {
+        text: f.default.Messages.MORE,
+        icon: c.default,
         ...e
       })
     })
