@@ -19,27 +19,27 @@ var a = n("735250"),
   _ = n("689938"),
   C = n("909759"),
   m = n("611273");
-let p = {
+let S = {
     canSend: !1,
     hint: null,
     success: null,
     error: null
   },
-  S = (0, c.uid)(),
-  g = "".concat(S, "-decription"),
-  I = "".concat(S, "-error");
+  p = (0, c.uid)(),
+  g = "".concat(p, "-decription"),
+  I = "".concat(p, "-error");
 
 function T(e, t) {
   switch (t.type) {
     case "RESET":
-      return p;
+      return S;
     case "SUCCESS":
       return {
-        ...p, success: t.text
+        ...S, success: t.text
       };
     case "HINT":
       return {
-        ...p, canSend: !0, hint: t.text
+        ...S, canSend: !0, hint: t.text
       };
     case "ERROR":
       return {
@@ -51,7 +51,7 @@ function T(e, t) {
 function A() {
   let e = s.createRef(),
     t = s.createRef(),
-    [n, l] = s.useReducer(T, p),
+    [n, l] = s.useReducer(T, S),
     {
       canSend: r,
       hint: c,
@@ -107,7 +107,7 @@ function A() {
           [C.error]: N
         }),
         children: [(0, a.jsx)(u.TextInput, {
-          id: S,
+          id: p,
           inputRef: e,
           className: C.addFriendInput,
           inputClassName: C.input,

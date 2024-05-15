@@ -16,7 +16,7 @@ t.default = e => {
   } = e, {
     completionSpring: f,
     startCompletionAnimation: E
-  } = (0, r.useQuestBarCompletionAnimation)(), h = s.useRef(!1), [_, C] = s.useState(null), [m, p] = s.useState(null), S = s.useRef(new l.Environment({
+  } = (0, r.useQuestBarCompletionAnimation)(), h = s.useRef(!1), [_, C] = s.useState(null), [m, S] = s.useState(null), p = s.useRef(new l.Environment({
     gravity: 0,
     wind: 0
   })), g = (0, l.useConfettiCannon)(_, m), I = s.useCallback(() => {
@@ -73,9 +73,9 @@ t.default = e => {
     }), (0, a.jsx)(l.ConfettiCanvas, {
       ref: C,
       className: u.confetti,
-      environment: S.current
+      environment: p.current
     }), (0, a.jsx)(l.SpriteCanvas, {
-      ref: p,
+      ref: S,
       sprites: [d],
       colors: c,
       spriteWidth: o.COMMON_CONFETTI_MAX_SPRITE_SIZE,

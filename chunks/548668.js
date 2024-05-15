@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
     return R
   }
 });
-var l, a = n("735250"),
-  i = n("470079"),
+var l, i = n("735250"),
+  a = n("470079"),
   r = n("557533"),
   o = n.n(r),
   c = n("622535"),
@@ -157,14 +157,14 @@ let C = "Footer Navigation",
       colorVariant: t,
       animate: n
     } = e;
-    return (0, a.jsx)("svg", {
+    return (0, i.jsx)("svg", {
       className: (0, d.getClass)(k, "footerBackground", t),
       preserveAspectRatio: "none",
       width: "1920",
       height: "100%",
       viewBox: "0 0 1920 330",
       version: "1.1",
-      children: (0, a.jsx)("path", {
+      children: (0, i.jsx)("path", {
         className: (0, d.getClass)(k, "footerBackground", n ? "Play" : "Paused"),
         fill: "#1a1c1e",
         fillOpacity: "0.3",
@@ -172,7 +172,7 @@ let C = "Footer Navigation",
       })
     })
   };
-class R extends(l = i.PureComponent) {
+class R extends(l = a.PureComponent) {
   componentDidMount() {
     this.setState({
       token: (0, u.getToken)(),
@@ -185,16 +185,16 @@ class R extends(l = i.PureComponent) {
       downloadLink: t,
       isMobile: n,
       mobileDownloadText: l,
-      platform: i,
+      platform: a,
       variant: r,
       authRedirectTo: o
     } = this.props, {
       isAppCompatible: c
     } = this.state;
-    if (n) return (0, a.jsx)(s, {
+    if (n) return (0, i.jsx)(s, {
       eventName: "Download App",
       data: {
-        Platform: i,
+        Platform: a,
         PTB: !1,
         Released: !0,
         "Referring Location": "Footer"
@@ -205,10 +205,10 @@ class R extends(l = i.PureComponent) {
       href: t,
       children: l
     });
-    if (!c) return (0, a.jsx)(s, {
+    if (!c) return (0, i.jsx)(s, {
       eventName: "Download App",
       data: {
-        Platform: i,
+        Platform: a,
         PTB: !1,
         Released: !0,
         "Referring Location": "Footer"
@@ -220,7 +220,7 @@ class R extends(l = i.PureComponent) {
     });
     let u = null != o ? N.AppRoutes.REGISTER_WITH_REDIRECT(o) : N.AppRoutes.REGISTER,
       p = m.default.Messages.Common.SIGN_UP_NOW;
-    return e && (u = N.AppRoutes.ME, p = m.default.Messages.Common.OPEN_DISCORD), (0, a.jsx)(s, {
+    return e && (u = N.AppRoutes.ME, p = m.default.Messages.Common.OPEN_DISCORD), (0, i.jsx)(s, {
       eventName: C,
       className: (0, d.getClass)(k, "button", this.props.variant),
       data: {
@@ -236,13 +236,13 @@ class R extends(l = i.PureComponent) {
       variant: e,
       style: t,
       className: l,
-      avoidRouter: i,
+      avoidRouter: a,
       showWave: r
     } = this.props, {
       animateBackground: u,
       token: p
     } = this.state, g = A(m.default.Messages.Navigation).map(e => {
-      let t = e.routes.map((e, t) => e.external ? (0, a.jsx)(s, {
+      let t = e.routes.map((e, t) => e.external ? (0, i.jsx)(s, {
         className: k.route,
         eventName: C,
         data: {
@@ -250,12 +250,12 @@ class R extends(l = i.PureComponent) {
         },
         href: e.link,
         children: e.title
-      }, e.link || t) : (0, a.jsx)(h.default, {
-        avoidRouter: i,
+      }, e.link || t) : (0, i.jsx)(h.default, {
+        avoidRouter: a,
         to: e.link,
         from: "footer_navigation",
         className: k.route,
-        children: (0, a.jsx)(s, {
+        children: (0, i.jsx)(s, {
           tag: "span",
           eventName: C,
           data: {
@@ -264,51 +264,51 @@ class R extends(l = i.PureComponent) {
           children: e.title
         })
       }, e.link));
-      return (0, a.jsxs)("div", {
+      return (0, i.jsxs)("div", {
         className: k.navigationSection,
-        children: [(0, a.jsx)("h3", {
+        children: [(0, i.jsx)("h3", {
           className: k.navigationHeader,
           children: e.title
         }), t]
       }, e.title)
     });
-    return (0, a.jsx)(c.VisibilitySensor, {
+    return (0, i.jsx)(c.VisibilitySensor, {
       onChange: this.handleVisibility,
-      children: (0, a.jsxs)("footer", {
+      children: (0, i.jsxs)("footer", {
         className: o()((0, d.getClass)(k, "footer", e), l),
         style: t,
-        children: [r ? (0, a.jsx)(v, {
+        children: [r ? (0, i.jsx)(v, {
           colorVariant: e,
           animate: u
-        }) : null, (0, a.jsxs)("div", {
+        }) : null, (0, i.jsxs)("div", {
           className: k.footerContent,
-          children: [(0, a.jsxs)("div", {
+          children: [(0, i.jsxs)("div", {
             className: k.navigation,
-            children: [(0, a.jsx)("div", {
+            children: [(0, i.jsx)("div", {
               className: k.logoWrap,
-              children: (0, a.jsx)(s, {
+              children: (0, i.jsx)(s, {
                 className: k.logo,
                 href: N.WebRoutes.INDEX,
                 eventName: C,
                 data: {
                   linkClicked: "logo"
                 },
-                children: (0, a.jsx)("img", {
+                children: (0, i.jsx)("img", {
                   alt: m.default.Messages.Navigation.HOME,
                   src: n("131529")
                 })
               })
             }), g]
-          }), (0, a.jsx)("div", {
+          }), (0, i.jsx)("div", {
             className: k.separator
-          }), (0, a.jsxs)("div", {
+          }), (0, i.jsxs)("div", {
             className: k.joinDiscord,
-            children: [(0, a.jsxs)("div", {
+            children: [(0, i.jsxs)("div", {
               className: k.stats,
-              children: [(0, a.jsx)("h2", {
+              children: [(0, i.jsx)("h2", {
                 className: k.readyToJoin,
                 children: m.default.Messages.Footer.READY_TO_TRY_DISCORD
-              }), (0, a.jsx)("h3", {
+              }), (0, i.jsx)("h3", {
                 className: k.joinOtherPlayers,
                 children: m.default.Messages.Footer.JOIN_OVER_PLAYERS_TODAY.format({
                   num: N.ROUGH_COUNT_MILLION_PLAYERS
@@ -330,7 +330,7 @@ class R extends(l = i.PureComponent) {
       this.setState({
         animateBackground: e
       })
-    }), null != e.locale && m.default.setLocale(e.locale), s = t => (0, a.jsx)(p.default, {
+    }), null != e.locale && m.default.setLocale(e.locale), s = t => (0, i.jsx)(p.default, {
       track: e.track,
       trackOutboundLink: e.trackOutboundLink,
       ...t

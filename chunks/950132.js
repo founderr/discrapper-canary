@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return k
   }
 });
-var s, l, a, i, r = n("735250"),
+var s, l, i, a, r = n("735250"),
   o = n("470079"),
   c = n("476400"),
   u = n.n(c),
@@ -14,7 +14,7 @@ var s, l, a, i, r = n("735250"),
   N = n("231338"),
   g = n("602097");
 let m = N.WebAnalyticsEvents.MAIN_NAVIGATION_MENU;
-class k extends(i = o.PureComponent) {
+class k extends(a = o.PureComponent) {
   render() {
     let e = (0, d.isActiveCreator)(this.context.router),
       {
@@ -22,8 +22,8 @@ class k extends(i = o.PureComponent) {
         dropdownLinks: n,
         TrackClick: s,
         avoidRouter: l,
-        id: a,
-        "aria-label": i
+        id: i,
+        "aria-label": a
       } = this.props,
       o = n.map((t, n) => t.divider ? (0, r.jsx)("hr", {
         className: g.divider
@@ -62,18 +62,18 @@ class k extends(i = o.PureComponent) {
         })
       }, t.route));
     return (0, r.jsx)("ul", {
-      id: a,
+      id: i,
       className: (0, p.getClass)(g, "moreList", t ? "Open" : "Closed"),
-      "aria-label": i,
+      "aria-label": a,
       children: o
     })
   }
 }
-s = k, l = "contextTypes", a = {
+s = k, l = "contextTypes", i = {
   router: u().object.isRequired
 }, l in s ? Object.defineProperty(s, l, {
-  value: a,
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = a
+}) : s[l] = i

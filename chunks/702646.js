@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("105671"),
   C = n("92373"),
   m = n("207796"),
-  p = n("308083"),
-  S = n("689938"),
+  S = n("308083"),
+  p = n("689938"),
   g = n("683391");
 
 function I(e) {
@@ -86,7 +86,7 @@ function T() {
     });
   return (0, a.jsx)(I, {
     icon: c,
-    text: S.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
+    text: p.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
       count: t.length
     }),
     tooltip: d,
@@ -98,7 +98,7 @@ function T() {
 }
 
 function A() {
-  let e = s.useMemo(p.getPlaystyleOptions, []),
+  let e = s.useMemo(S.getPlaystyleOptions, []),
     t = (0, m.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
     n = null != t ? e[t] : null,
     l = null == n ? void 0 : n.title,
@@ -157,7 +157,7 @@ function N() {
     });
   return (0, a.jsx)(I, {
     icon: l,
-    text: S.default.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
+    text: p.default.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
     tooltip: n,
     onClick: t,
     isActive: e.length > 0,
@@ -183,7 +183,7 @@ function v() {
       children: (0, a.jsx)(E.Text, {
         variant: "text-xs/medium",
         color: "none",
-        children: S.default.Messages.CLAN_DISCOVERY_ADD_CLAN
+        children: p.default.Messages.CLAN_DISCOVERY_ADD_CLAN
       })
     })]
   }) : null

@@ -85,16 +85,16 @@ class c extends(a = l.PureComponent) {
       C.addColorStop(1, this.fillColor), E.fillStyle = C;
       let m = s.length >= r ? r : s.length;
       E.setTransform(1, 0, 0, -1, 0, a.height), E.clearRect(0, 0, a.width, a.height), E.translate(0, .5 * E.lineWidth);
-      let p = Math.floor(a.width / (m - 3)),
-        S = .5 * p;
-      E.translate(p - p * f, 0), E.beginPath();
-      let g = -p;
+      let S = Math.floor(a.width / (m - 3)),
+        p = .5 * S;
+      E.translate(S - S * f, 0), E.beginPath();
+      let g = -S;
       s.forEach((e, a) => {
         t = {
           x: g,
           y: _ * e / h
-        }, 0 === a ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + S, n.y, t.x - S, t.y, t.x, t.y), n = t, g += p
-      }), E.stroke(), E.lineTo(g - p, 0), E.lineTo(0, 0), E.fill(), d && f < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
+        }, 0 === a ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + p, n.y, t.x - p, t.y, t.x, t.y), n = t, g += S
+      }), E.stroke(), E.lineTo(g - S, 0), E.lineTo(0, 0), E.fill(), d && f < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
     })
   }
 }

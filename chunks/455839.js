@@ -28,12 +28,12 @@ function _(e) {
     onSelect: _,
     closePopout: C,
     "aria-label": m
-  } = e, p = (0, r.default)({
+  } = e, S = (0, r.default)({
     id: t.id,
     label: h.default.Messages.COPY_ID_GUILD,
     shiftId: n,
     onSuccess: C
-  }), S = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), g = (0, s.useStateFromStores)([d.default], () => d.default.can(E.Permissions.ADMINISTRATOR, S)), {
+  }), p = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), g = (0, s.useStateFromStores)([d.default], () => d.default.can(E.Permissions.ADMINISTRATOR, p)), {
     canSeeInAppReportingButtons: I
   } = f.DiscoveryInAppReportingExperiment.useExperiment({
     location: "0e35b9_1"
@@ -58,7 +58,7 @@ function _(e) {
         color: "danger"
       }) : null
     }), (0, a.jsx)(l.MenuGroup, {
-      children: p
+      children: S
     })]
   })
 }

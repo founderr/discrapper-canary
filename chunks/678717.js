@@ -24,27 +24,27 @@ var a = r("735250"),
   k = r("432877");
 r("381996");
 var v = r("392750"),
-  j = r("926976"),
-  C = r("592197"),
+  C = r("926976"),
+  j = r("592197"),
   S = r("860337"),
-  w = r("789654"),
-  T = r("691867"),
-  N = r("916790"),
-  L = r("912072"),
-  E = r("246992"),
+  T = r("789654"),
+  N = r("691867"),
+  w = r("916790"),
+  E = r("912072"),
+  L = r("246992"),
   _ = r("442954"),
-  R = r("702904"),
-  I = r("248526"),
-  D = r("958328"),
-  O = r("514866"),
+  I = r("702904"),
+  R = r("248526"),
+  O = r("958328"),
+  D = r("514866"),
   A = r("678639"),
   P = r("351930"),
-  B = r("771751"),
-  M = r("596768"),
+  M = r("771751"),
+  B = r("596768"),
   F = r("621060"),
   H = r("689938"),
-  U = r("770131"),
-  G = r("277513");
+  G = r("770131"),
+  U = r("277513");
 
 function z(e) {
   let {
@@ -60,7 +60,7 @@ function z(e) {
   });
   return (0, a.jsx)("div", {
     onMouseDown: l,
-    className: U.resizeHandle
+    className: G.resizeHandle
   })
 }
 
@@ -70,11 +70,11 @@ function V() {
       let e = [{
         id: "analytics",
         name: "Analytics",
-        render: () => (0, a.jsx)(j.default, {})
+        render: () => (0, a.jsx)(C.default, {})
       }, {
         id: "triggers",
         name: "Triggers",
-        render: () => (0, a.jsx)(M.default, {})
+        render: () => (0, a.jsx)(B.default, {})
       }, {
         id: "stores",
         name: "Stores",
@@ -82,16 +82,16 @@ function V() {
       }, {
         id: "dispatcher",
         name: "Dispatcher",
-        render: () => (0, a.jsx)(N.default, {})
+        render: () => (0, a.jsx)(w.default, {})
       }];
       return m.default.isDeveloper && (e.push({
         id: "quick_actions",
         name: "Quick Actions",
-        render: () => (0, a.jsx)(O.default, {})
+        render: () => (0, a.jsx)(D.default, {})
       }), e.push({
         id: "perks_demos",
         name: "Perks Demos",
-        render: () => (0, a.jsx)(I.default, {})
+        render: () => (0, a.jsx)(R.default, {})
       })), m.default.isDeveloper && e.push({
         id: "clans",
         name: "Clans",
@@ -99,27 +99,27 @@ function V() {
       }), e.push({
         id: "colors",
         name: "Colors",
-        render: () => (0, a.jsx)(w.default, {})
+        render: () => (0, a.jsx)(T.default, {})
       }), e.push({
         id: "design_toggles",
         name: "Design Toggles",
-        render: () => (0, a.jsx)(T.default, {})
+        render: () => (0, a.jsx)(N.default, {})
       }), e.push({
         id: "overlays",
         name: "Dev Overlays",
-        render: () => (0, a.jsx)(L.default, {
+        render: () => (0, a.jsx)(E.default, {
           devSettingsCategory: k.DevSettingsCategory.OVERLAYS
         })
       }), e.push({
         id: "messaging",
         name: "Messaging",
-        render: () => (0, a.jsx)(L.default, {
+        render: () => (0, a.jsx)(E.default, {
           devSettingsCategory: k.DevSettingsCategory.MESSAGING
         })
       }), e.push({
         id: "permissions",
         name: "Permissions",
-        render: () => (0, a.jsx)(D.default, {})
+        render: () => (0, a.jsx)(O.default, {})
       }), e.push({
         id: "modals",
         name: "Modals",
@@ -135,11 +135,11 @@ function V() {
       }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") && (e.push({
         id: "trials",
         name: "Trials",
-        render: () => (0, a.jsx)(B.default, {})
+        render: () => (0, a.jsx)(M.default, {})
       }), e.push({
         id: "payments",
         name: "Payments",
-        render: () => (0, a.jsx)(R.default, {})
+        render: () => (0, a.jsx)(I.default, {})
       }), e.push({
         id: "subscriptions",
         name: "Subscriptions",
@@ -147,7 +147,7 @@ function V() {
       }), e.push({
         id: "billing",
         name: "Billing",
-        render: () => (0, a.jsx)(C.default, {})
+        render: () => (0, a.jsx)(j.default, {})
       })), e
     }, []),
     {
@@ -169,9 +169,9 @@ function V() {
     properties: {
       panel: n
     }
-  }), (0, a.jsxs)(E.DevToolsLayerProvider, {
+  }), (0, a.jsxs)(L.DevToolsLayerProvider, {
     children: [(0, a.jsxs)(y.default, {
-      className: G.headerBar,
+      className: U.headerBar,
       toolbar: (0, a.jsx)(y.default.Icon, {
         icon: g.default,
         tooltip: H.default.Messages.CLOSE,
@@ -183,8 +183,8 @@ function V() {
       }), (0, a.jsx)(y.default.Title, {
         children: "DevTools"
       })]
-    }), (0, a.jsx)(r, {}), l(), (0, a.jsx)(E.DevToolsLayerContainer, {
-      className: U.layerContainer
+    }), (0, a.jsx)(r, {}), l(), (0, a.jsx)(L.DevToolsLayerContainer, {
+      className: G.layerContainer
     })]
   })
 }
@@ -200,7 +200,7 @@ function W() {
     null === r && null !== t && l(t)
   }, [t, r]), null === r) ? null : (0, a.jsxs)("div", {
     ref: e,
-    className: n()(U.container),
+    className: n()(G.container),
     style: {
       minWidth: x.DEVTOOLS_SIDEBAR_MIN_WIDTH,
       width: r
@@ -210,7 +210,7 @@ function W() {
       onResize: l,
       onResizeEnd: o
     }), (0, a.jsx)("div", {
-      className: U.sidebarContent,
+      className: G.sidebarContent,
       children: (0, a.jsx)(V, {})
     })]
   })
@@ -219,17 +219,17 @@ function W() {
 function Y() {
   let e = (0, s.useStateFromStores)([x.default], () => x.default.displayTools);
   return e ? (0, a.jsx)("div", {
-    className: n()(U.container, U.mobileContainerExpanded),
+    className: n()(G.container, G.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
-      className: U.sidebarContent,
+      className: G.sidebarContent,
       children: (0, a.jsx)(V, {})
     })
   }) : (0, a.jsx)("div", {
-    className: U.container,
+    className: G.container,
     children: (0, a.jsx)(c.Clickable, {
       onClick: b.toggleDisplayDevTools,
       children: (0, a.jsxs)(y.default, {
-        className: n()(G.headerBar, U.mobileHeaderCollapsed),
+        className: n()(U.headerBar, G.mobileHeaderCollapsed),
         toolbar: (0, a.jsx)(p.default, {
           direction: p.default.Directions.UP
         }),

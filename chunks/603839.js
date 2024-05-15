@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("970606"),
   C = n("650461"),
   m = n("432632"),
-  p = n("35313"),
-  S = n("284019"),
+  S = n("35313"),
+  p = n("284019"),
   g = n("672775"),
   I = n("601463"),
   T = n("192565"),
@@ -40,8 +40,8 @@ function O(e) {
     onClose: n
   } = e, l = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = (0, C.useDefaultClanProgress)(), {
     progress: L,
-    errors: y,
-    submitting: M
+    errors: M,
+    submitting: y
   } = (0, u.useStateFromStoresObject)([C.default], () => {
     var e, n, a, s;
     return {
@@ -49,7 +49,7 @@ function O(e) {
       errors: null === (n = C.default.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
       submitting: null === (a = C.default.getStateForGuild(t)) || void 0 === a ? void 0 : a.submitting
     }
-  }), P = (0, m.useDefaultGameIdForClan)(t, "ClanSetupModal"), x = s.useMemo(() => (0, A.getClanSetupProgressSteps)(y), [y]), [D, b] = s.useState(!1), [U, j] = s.useState(window.innerWidth), [G, k] = s.useState(1), [w, B] = s.useState(!0), F = (0, p.useFullScreenModalAnimationStyle)(), H = (0, o.useSpring)({
+  }), P = (0, m.useDefaultGameIdForClan)(t, "ClanSetupModal"), x = s.useMemo(() => (0, A.getClanSetupProgressSteps)(M), [M]), [D, b] = s.useState(!1), [U, j] = s.useState(window.innerWidth), [G, k] = s.useState(1), [w, B] = s.useState(!0), F = (0, S.useFullScreenModalAnimationStyle)(), H = (0, o.useSpring)({
     opacity: G,
     config: R,
     onStart: () => B(!0),
@@ -102,8 +102,8 @@ function O(e) {
       requiredGameId: P
     })
   }, [P, t]);
-  let z = s.useMemo(() => null != y && Object.values(y).some(e => null != e), [y]),
-    q = s.useMemo(() => null != y && Object.values(y).length > 0 ? (0, A.getClanSetupProgressSteps)(y).find(e => e.hasError) : null, [y]),
+  let z = s.useMemo(() => null != M && Object.values(M).some(e => null != e), [M]),
+    q = s.useMemo(() => null != M && Object.values(M).length > 0 ? (0, A.getClanSetupProgressSteps)(M).find(e => e.hasError) : null, [M]),
     Q = s.useCallback(() => {
       k(1), h.updateClanSetup(t, {
         currentStep: null == q ? void 0 : q.index
@@ -209,11 +209,11 @@ function O(e) {
           "aria-label": null != q ? N.default.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
           shouldShow: null != q,
           forceOpen: null != q,
-          children: e => (0, a.jsx)(S.default, {
+          children: e => (0, a.jsx)(p.default, {
             ...e,
             themeColor: L.brandPrimaryColor,
             disabled: !D || z,
-            submitting: M,
+            submitting: y,
             look: d.Button.Looks.FILLED,
             size: d.Button.Sizes.MEDIUM,
             color: d.Button.Colors.BRAND,

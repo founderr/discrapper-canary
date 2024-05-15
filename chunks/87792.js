@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("259756"),
   C = n("785681"),
   m = n("985002"),
-  p = n("858719"),
-  S = n("780985"),
+  S = n("858719"),
+  p = n("780985"),
   g = n("880257"),
   I = n("631885"),
   T = n("240351"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("329242"),
   O = n("895328"),
   L = n("292352"),
-  y = n("981631"),
-  M = n("689938"),
+  M = n("981631"),
+  y = n("689938"),
   P = n("334611");
 
 function x() {
@@ -56,16 +56,16 @@ function D(e) {
   let {
     displayType: t
   } = e, n = s.useCallback(() => {
-    (0, o.showToast)((0, o.createToast)(M.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
-  }, []), l = (0, g.default)(), r = (0, p.useActionsForDisplayType)(t), u = (0, p.useActionTotalsForDisplayType)(t), {
+    (0, o.showToast)((0, o.createToast)(y.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
+  }, []), l = (0, g.default)(), r = (0, S.useActionsForDisplayType)(t), u = (0, S.useActionTotalsForDisplayType)(t), {
     loadMore: d,
     isMoreLoading: c
   } = (0, m.useFamilyCenterActions)({
     onError: n
-  }), E = L.ACTION_TO_TEXT.get(t), [C, S] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), I = (0, _.useIsEligibleForFamilyCenterVCJoin)({
+  }), E = L.ACTION_TO_TEXT.get(t), [C, p] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), I = (0, _.useIsEligibleForFamilyCenterVCJoin)({
     location: "family_center_activity_section_web"
   }), T = s.useCallback(() => {
-    S(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
+    p(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i()(E, "No text for action type");
   let v = E.sectionHeader(u),
@@ -95,18 +95,18 @@ function D(e) {
       }) : null]
     }), [v, E, l, I]);
   if (0 === r.length) return null;
-  let y = r.slice(0, C);
+  let M = r.slice(0, C);
   return (0, a.jsxs)("div", {
     className: P.actionSection,
     children: [O(), (0, a.jsx)("div", {
       className: P.actions,
       style: {
-        maxHeight: 65 * y.length
+        maxHeight: 65 * M.length
       },
-      children: y.map((e, t) => R({
+      children: M.map((e, t) => R({
         row: t
       }))
-    }), y.length !== u ? (0, a.jsx)(o.Clickable, {
+    }), M.length !== u ? (0, a.jsx)(o.Clickable, {
       className: P.loadMoreBar,
       onClick: T,
       role: "button",
@@ -116,8 +116,8 @@ function D(e) {
       }) : (0, a.jsx)(o.Text, {
         className: P.loadMore,
         variant: "text-sm/bold",
-        children: M.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-          pageSize: Math.min(u - y.length, L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
+        children: y.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
+          pageSize: Math.min(u - M.length, L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
         })
       })
     }) : null]
@@ -126,9 +126,9 @@ function D(e) {
 let b = () => {
     let e = (0, g.default)(),
       t = (0, I.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
-      n = (0, C.useAgeSpecificText)(M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
+      n = (0, C.useAgeSpecificText)(y.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
-      }), M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
+      }), y.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
       s = (0, h.getActivityWindowTimestampFormatter)(!!e),
       l = (0, I.useActivityWindowTimeStamp)(s);
     return e && t.length > 1 ? (0, a.jsx)(o.Text, {
@@ -148,7 +148,7 @@ let b = () => {
       userId: t,
       subText: n,
       avatarSize: s = o.AvatarSizes.SIZE_40
-    } = e, l = (0, S.useTeenUserForId)(t);
+    } = e, l = (0, p.useTeenUserForId)(t);
     return void 0 === l ? null : (0, a.jsxs)("div", {
       className: P.accountRow,
       children: [(0, a.jsx)(v.FamilyCenterAvatar, {
@@ -189,7 +189,7 @@ let b = () => {
       },
       serialize: e => e,
       select: e => {
-        n(e), c.default.track(y.AnalyticEvents.FAMILY_CENTER_ACTION, {
+        n(e), c.default.track(M.AnalyticEvents.FAMILY_CENTER_ACTION, {
           action: L.FamilyCenterAction.SelectTeen
         })
       },
@@ -209,7 +209,7 @@ let b = () => {
 t.default = e => {
   let {
     user: t
-  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, p.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, I.useActivityWindowTimeStamp)(l);
+  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, S.useHasActionForAnyDisplayType)(), l = (0, h.getEmptyActivityFormatter)(), i = (0, I.useActivityWindowTimeStamp)(l);
   return (0, a.jsxs)("div", {
     className: P.container,
     children: [(0, a.jsxs)("div", {

@@ -22,7 +22,7 @@ function m(e) {
     contactNames: n
   }
 }
-class p extends(a = u.default.Store) {
+class S extends(a = u.default.Store) {
   initialize() {
     this.waitFor(f.default)
   }
@@ -39,12 +39,12 @@ class p extends(a = u.default.Store) {
     return E[e]
   }
 }
-i = "FriendSuggestionStore", (l = "displayName") in(s = p) ? Object.defineProperty(s, l, {
+i = "FriendSuggestionStore", (l = "displayName") in(s = S) ? Object.defineProperty(s, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new p(d.default, {
+}) : s[l] = i, t.default = new S(d.default, {
   CONNECTION_OPEN: function(e) {
     E = {}, (h = e.friendSuggestionCount) > 0 && (C = !0, _ || !C || (_ = !0, C = !1))
   },

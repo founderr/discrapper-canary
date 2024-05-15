@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("2052"),
   C = n("393238"),
   m = n("727637"),
-  p = n("420660"),
-  S = n("100527"),
+  S = n("420660"),
+  p = n("100527"),
   g = n("906732"),
   I = n("521868"),
   T = n("299206"),
@@ -30,8 +30,8 @@ var a = n("735250"),
   R = n("785717"),
   O = n("221292"),
   L = n("318661"),
-  y = n("502762"),
-  M = n("192133"),
+  M = n("502762"),
+  y = n("192133"),
   P = n("138394"),
   x = n("131640"),
   D = n("695346"),
@@ -157,7 +157,7 @@ function $(e) {
     closePopout: b
   } = e, U = (0, _.useAnalyticsContext)(), {
     analyticsLocations: G
-  } = (0, g.default)(S.default.ACCOUNT_PROFILE_POPOUT), F = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
+  } = (0, g.default)(p.default.ACCOUNT_PROFILE_POPOUT), F = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = j.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), j.default.getStatus(n), j.default.isMobileOnline(n)]
@@ -281,7 +281,7 @@ function $(e) {
         className: Q.popoutContainer,
         children: (0, a.jsx)("div", {
           ref: ea,
-          children: (0, a.jsxs)(y.default, {
+          children: (0, a.jsxs)(M.default, {
             className: Q.themeContainer,
             user: t,
             displayProfile: F,
@@ -291,13 +291,13 @@ function $(e) {
               displayProfile: F,
               onClose: () => null == b ? void 0 : b(),
               isMobile: et,
-              isStreaming: (0, p.default)(V),
+              isStreaming: (0, S.default)(V),
               status: ee,
               disableUserProfileLink: __OVERLAY__,
               isHovering: es,
               showPremiumBadgeUpsell: !1
-            }), (0, a.jsxs)(y.default.Overlay, {
-              children: [(0, a.jsx)(M.default, {
+            }), (0, a.jsxs)(M.default.Overlay, {
+              children: [(0, a.jsx)(y.default, {
                 activity: V,
                 customStatusActivity: $,
                 displayProfile: F,

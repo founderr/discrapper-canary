@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("434404"),
   C = n("567458"),
   m = n("782959"),
-  p = n("276645"),
-  S = n("970731"),
+  S = n("276645"),
+  p = n("970731"),
   g = n("626135"),
   I = n("267642"),
   T = n("981631"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("689938"),
   O = n("925058"),
   L = n("835104"),
-  y = n("741160"),
-  M = n("829972"),
+  M = n("741160"),
+  y = n("829972"),
   P = n("31932"),
   x = n("642301");
 
@@ -92,13 +92,13 @@ t.default = s.memo(function(e) {
       },
       location_stack: f
     })
-  }, k = (0, i.isThemeDark)(n) ? M : P, [w, B] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, k = (0, i.isThemeDark)(n) ? y : P, [w, B] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, a.jsx)(a.Fragment, {
     children: (() => {
       switch (w) {
         case l.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(p.default, {
+            renderPopout: (0, a.jsx)(S.default, {
               guildId: s.id,
               markAsDismissed: B
             }),
@@ -106,7 +106,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(S.default, {
+            renderPopout: (0, a.jsx)(p.default, {
               onComponentMount: N,
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
@@ -125,7 +125,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(S.default, {
+            renderPopout: (0, a.jsx)(p.default, {
               onComponentMount: N,
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
@@ -173,12 +173,12 @@ t.default = s.memo(function(e) {
             }),
             t = (0, I.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : R.default.Messages.LEARN_MORE;
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(S.default, {
+            renderPopout: (0, a.jsx)(p.default, {
               onComponentMount: G,
               header: R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: y,
+                src: M,
                 className: L.fullWidthImage
               }),
               content: e,
@@ -199,7 +199,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(S.default, {
+            renderPopout: (0, a.jsx)(p.default, {
               className: O.tooltipOverrideColor,
               header: R.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
               content: R.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
@@ -211,7 +211,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.GUILD_HEADER_SOUNDBOARD_PERMISSION:
           return (0, a.jsx)(j, {
-            renderPopout: (0, a.jsx)(S.default, {
+            renderPopout: (0, a.jsx)(p.default, {
               header: R.default.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
               content: R.default.Messages.SOUNDBOARD_TOOLTIP_BODY,
               buttonCTA: R.default.Messages.CHECK_IT_OUT,

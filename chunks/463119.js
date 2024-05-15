@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("100527"),
   C = n("906732"),
   m = n("821982"),
-  p = n("377171"),
-  S = n("633302"),
+  S = n("377171"),
+  p = n("633302"),
   g = n("126900"),
   I = n("26290"),
   T = n("153066"),
@@ -30,17 +30,17 @@ var a = n("735250"),
   R = n("981631"),
   O = n("689938"),
   L = n("858666");
-let y = e => {
+let M = e => {
     let {
       color: t
     } = e;
     return (0, a.jsx)(I.TextBadge, {
       className: L.newBadge,
-      color: null != t ? t : p.default.STATUS_DANGER_BACKGROUND,
+      color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
       text: O.default.Messages.NEW
     })
   },
-  M = e => {
+  y = e => {
     let {
       selected: t,
       locationState: n,
@@ -119,7 +119,7 @@ let y = e => {
       allowOverflow: !0,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, a.jsxs)(M, {
+      children: e => (0, a.jsxs)(y, {
         className: null != l.entryPointClassName ? (0, T.getClass)(L, l.entryPointClassName) : void 0,
         selected: t,
         locationState: n,
@@ -133,7 +133,7 @@ let y = e => {
           }),
           alt: "",
           "aria-hidden": !0
-        }), (0, a.jsx)(y, {
+        }), (0, a.jsx)(M, {
           color: l.badgeColor
         })]
       })
@@ -146,7 +146,7 @@ let y = e => {
       displayOptions: l
     } = e, i = s.useMemo(() => {
       var e;
-      let t = null != l.emojiName ? null === (e = S.default.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
+      let t = null != l.emojiName ? null === (e = p.default.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
       return (0, a.jsxs)(d.Text, {
         variant: "text-sm/medium",
         className: L.marketingBadgeTooltipContent,
@@ -162,11 +162,11 @@ let y = e => {
       delay: 100,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, a.jsx)(M, {
+      children: e => (0, a.jsx)(y, {
         selected: t,
         locationState: n,
         ...e,
-        children: (0, a.jsx)(y, {
+        children: (0, a.jsx)(M, {
           color: l.badgeColor
         })
       })
@@ -193,7 +193,7 @@ let y = e => {
           displayOptions: s
         })
     }
-    return (0, a.jsx)(M, {
+    return (0, a.jsx)(y, {
       selected: t,
       locationState: n
     })

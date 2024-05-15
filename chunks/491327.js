@@ -15,13 +15,13 @@ var a = n("392711"),
   _ = n("996106"),
   C = n("914946"),
   m = n("452426"),
-  p = n("561205"),
-  S = n("186901"),
+  S = n("561205"),
+  p = n("186901"),
   g = n("981631");
 t.default = {
   [g.RPCCommands.GET_CHANNEL]: {
     scope: {
-      [S.RPC_SCOPE_CONFIG.ANY]: [g.OAuth2Scopes.RPC, g.OAuth2Scopes.GUILDS]
+      [p.RPC_SCOPE_CONFIG.ANY]: [g.OAuth2Scopes.RPC, g.OAuth2Scopes.GUILDS]
     },
     handler(e) {
       let {
@@ -81,7 +81,7 @@ t.default = {
   [g.RPCCommands.GET_CHANNEL_PERMISSIONS]: {
     scope: g.OAuth2Scopes.GUILDS_MEMBERS_READ,
     handler(e) {
-      let t = (0, p.default)();
+      let t = (0, S.default)();
       if (null == t) throw new _.default({
         errorCode: g.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel");
@@ -110,8 +110,8 @@ t.default = {
         }
       } = e;
       if (!a) return i.default.selectVoiceChannel(null), null;
-      let p = f.default.getVoiceChannelId();
-      if (null != p && p !== a && !1 === l) throw new _.default({
+      let S = f.default.getVoiceChannelId();
+      if (null != S && S !== a && !1 === l) throw new _.default({
         errorCode: g.RPCErrors.SELECT_VOICE_FORCE_REQUIRED
       }, "User is already joined to a voice channel.");
       return t.storeWait(n, () => u.default.getChannel(a), s).catch(() => {
@@ -142,7 +142,7 @@ t.default = {
   },
   [g.RPCCommands.GET_SELECTED_VOICE_CHANNEL]: {
     scope: {
-      [S.RPC_SCOPE_CONFIG.ANY]: [g.OAuth2Scopes.RPC, g.OAuth2Scopes.RPC_VOICE_READ]
+      [p.RPC_SCOPE_CONFIG.ANY]: [g.OAuth2Scopes.RPC, g.OAuth2Scopes.RPC_VOICE_READ]
     },
     handler(e) {
       let {

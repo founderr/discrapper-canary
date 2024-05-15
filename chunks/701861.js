@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("974029"),
   C = n("621113"),
   m = n("51144"),
-  p = n("321488"),
-  S = n("417183"),
+  S = n("321488"),
+  p = n("417183"),
   g = n("825682"),
   I = n("170245"),
   T = n("981631"),
@@ -101,7 +101,7 @@ class L extends s.PureComponent {
     } = this.props, {
       isActiveRow: r
     } = this.state;
-    return (0, a.jsx)(S.default, {
+    return (0, a.jsx)(p.default, {
       ref: this.peopleListItemRef,
       isFocused: t,
       isActive: r,
@@ -125,12 +125,12 @@ class L extends s.PureComponent {
           showAccountIdentifier: !0
         }), (0, a.jsxs)("div", {
           className: v.actions,
-          children: [(0, a.jsx)(p.default, {
+          children: [(0, a.jsx)(S.default, {
             icon: _.default,
             tooltip: N.default.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
-          }), (0, a.jsx)(p.default, {
+          }), (0, a.jsx)(S.default, {
             icon: C.default,
             tooltip: N.default.Messages.MORE,
             onClick: this.handleOpenActionsMenu,

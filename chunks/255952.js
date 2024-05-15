@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("695346"),
   C = n("293273"),
   m = n("696202"),
-  p = n("881201"),
-  S = n("626135"),
+  S = n("881201"),
+  p = n("626135"),
   g = n("51144"),
   I = n("981631"),
   T = n("689938"),
@@ -94,7 +94,7 @@ function R(e) {
   return (0, a.jsxs)("div", {
     className: i()(A.statusItem, A.statusItemNoPadding, A.__invalid_customStatusContentIcon, A.switchAccountsItem),
     "aria-label": T.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-    children: [(0, a.jsx)(p.default, {
+    children: [(0, a.jsx)(S.default, {
       width: 18,
       height: 18,
       className: A.switchAccountsIcon,
@@ -113,7 +113,7 @@ let O = e => {
     onSelect: r
   } = e, o = (0, h.useMultiAccountMenuItems)();
   s.useEffect(() => {
-    S.default.track(I.AnalyticEvents.OPEN_POPOUT, {
+    p.default.track(I.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != t,
       location: i.location

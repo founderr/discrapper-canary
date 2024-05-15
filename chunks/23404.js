@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("113434"),
   C = n("569984"),
   m = n("497505"),
-  p = n("918701"),
-  S = n("874137"),
+  S = n("918701"),
+  p = n("874137"),
   g = n("611855"),
   I = n("670638"),
   T = n("667105"),
@@ -36,7 +36,7 @@ function L(e) {
     children: [(0, a.jsx)("img", {
       className: O.headingGameTile,
       alt: "",
-      src: (0, p.getGameTileAssetUrl)(n, d)
+      src: (0, S.getGameTileAssetUrl)(n, d)
     }), (0, a.jsxs)("div", {
       className: O.headingCopy,
       children: [(0, a.jsx)(u.Heading, {
@@ -61,7 +61,7 @@ t.default = function(e) {
   var t, n, l;
   let {
     quest: o
-  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [y, M] = s.useState(!1), P = s.useCallback(() => M(!0), []), x = s.useCallback(() => M(!1), []), D = s.useCallback(e => {
+  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [M, y] = s.useState(!1), P = s.useCallback(() => y(!0), []), x = s.useCallback(() => y(!1), []), D = s.useCallback(e => {
     e.stopPropagation()
   }, []), b = s.useCallback(() => {
     (0, h.enrollInQuest)(o.id, {
@@ -84,7 +84,7 @@ t.default = function(e) {
     quest: o,
     location: m.QuestContent.ACTIVITY_PANEL
   }), k = (0, _.useIsQuestExpired)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == o ? void 0 : o.userStatus) == null || (0, p.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || k || F ? null : (0, a.jsx)(S.QuestContentImpressionTracker, {
+  return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || k || F ? null : (0, a.jsx)(p.QuestContentImpressionTracker, {
     questOrQuests: o,
     questContent: m.QuestContent.ACTIVITY_PANEL,
     children: e => {
@@ -128,13 +128,13 @@ t.default = function(e) {
             className: O.instructions,
             variant: "text-sm/normal",
             color: "text-normal",
-            children: (0, p.getQuestsInstructionsToWinReward)({
+            children: (0, S.getQuestsInstructionsToWinReward)({
               quest: o,
               location: N.QuestsExperimentLocations.ACTIVITY_PANEL
             })
           })]
         }), w && !B && (0, a.jsx)(A.default, {
-          autoplay: y,
+          autoplay: M,
           className: O.rewardTileWithInstructions,
           quest: o,
           questContent: m.QuestContent.ACTIVITY_PANEL,

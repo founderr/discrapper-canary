@@ -42,7 +42,7 @@ function m(e) {
     className: l,
     quest: r,
     useReducedMotion: o
-  } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), m = s.useRef(null), [p, S] = s.useState(!1), g = s.useMemo(() => {
+  } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isFocused()), m = s.useRef(null), [S, p] = s.useState(!1), g = s.useMemo(() => {
     if (null == r) return null;
     let e = (0, f.hexToRgb)(r.config.colors.primary),
       t = {
@@ -58,7 +58,7 @@ function m(e) {
     _ ? T && (null === (a = m.current) || void 0 === a || null === (n = a.animation) || void 0 === n || n.play()) : null === (t = m.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
   }, [T, _]);
   let A = s.useCallback(() => {
-    S(!0)
+    p(!0)
   }, []);
   return null == g || I ? (0, a.jsx)("div", {
     className: E.backgroundFallback,
@@ -71,7 +71,7 @@ function m(e) {
       ref: m,
       onComplete: A,
       importData: () => g,
-      shouldAnimate: !p && T,
+      shouldAnimate: !S && T,
       className: i()(E.lottieAnimation, E.lottieAnimationBackground, n),
       loop: 0,
       rendererSettings: {

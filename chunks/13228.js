@@ -45,7 +45,7 @@ function E(e) {
     if (!(null != e && (0, o.isUserPremiumTypeForClipsEarlyAccess)(e))) return !1;
     let C = Date.now() - a > c.CLIPS_EDUCATION_COOLDOWN,
       m = l >= c.CLIPS_EDUCATION_GAME_LAUNCH_THRESHOLD,
-      p = _ ? c.CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED : c.CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED;
-    return C && m && E < p && !h
+      S = _ ? c.CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED : c.CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED;
+    return C && m && E < S && !h
   })
 }

@@ -14,8 +14,8 @@ var a, s = n("735250"),
   _ = n("134432"),
   C = n("695346"),
   m = n("768581"),
-  p = n("900849"),
-  S = n("940627"),
+  S = n("900849"),
+  p = n("940627"),
   g = n("806519"),
   I = n("981631"),
   T = n("689938"),
@@ -58,8 +58,8 @@ class L extends(a = l.PureComponent) {
       name: R,
       description: O,
       presenceCount: L,
-      memberCount: y,
-      keywords: M
+      memberCount: M,
+      keywords: y
     } = t, P = null === (e = t.features) || void 0 === e ? void 0 : e.has(I.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
@@ -156,7 +156,7 @@ class L extends(a = l.PureComponent) {
               className: A.guildInfo,
               children: [(0, s.jsxs)("div", {
                 className: A.title,
-                children: [(0, s.jsx)(S.default, {
+                children: [(0, s.jsx)(p.default, {
                   className: A.guildBadge,
                   guild: t,
                   tooltipColor: u.Tooltip.Colors.PRIMARY
@@ -170,11 +170,11 @@ class L extends(a = l.PureComponent) {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: O
-              }), U && null != M && null != l && (0, s.jsx)(E.DiscoveryTags, {
-                tags: M,
+              }), U && null != y && null != l && (0, s.jsx)(E.DiscoveryTags, {
+                tags: y,
                 onTagClick: e => l(e, t.id),
                 guildId: t.id,
-                section: p.AnalyticsContexts.POPULAR
+                section: S.AnalyticsContexts.POPULAR
               }), (0, s.jsxs)("div", {
                 className: A.memberInfo,
                 children: [null != L && (0, s.jsxs)("div", {
@@ -188,7 +188,7 @@ class L extends(a = l.PureComponent) {
                       membersOnline: L
                     })
                   })]
-                }), null != y && (0, s.jsxs)("div", {
+                }), null != M && (0, s.jsxs)("div", {
                   className: A.memberCount,
                   children: [(0, s.jsx)("div", {
                     className: A.dotOffline
@@ -196,7 +196,7 @@ class L extends(a = l.PureComponent) {
                     variant: "text-xs/normal",
                     color: "header-secondary",
                     children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-                      count: y
+                      count: M
                     })
                   })]
                 })]

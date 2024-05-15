@@ -40,14 +40,14 @@ t.default = {
         errorCode: _.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
       let m = (0, l.getActiveAnalyticsSessionIDs)(r),
-        p = {
+        S = {
           activity_application_id: r,
           activity_channel_type: f.type,
           activity_guild_id: h,
           activity_user_session_id: null == m ? void 0 : m.activityUserSessionId
         };
       o.default.track(a, {
-        ...p,
+        ...S,
         ...s
       })
     }

@@ -19,15 +19,15 @@ var a = n("433517"),
 let _ = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
   C = null,
   m = null,
-  p = null,
-  S = !1;
+  S = null,
+  p = !1;
 async function g() {
-  if (S) return;
-  S = !0, (0, E.setSessionExtendingEnabled)(!0), f.default.addBreadcrumb({
+  if (p) return;
+  p = !0, (0, E.setSessionExtendingEnabled)(!0), f.default.addBreadcrumb({
     message: "Start Analytics Heartbeat"
   });
   let e = await a.Storage.getAfterRefresh(_).then(E.timestampOrZero);
-  if (!S) return;
+  if (!p) return;
   let t = Date.now(),
     n = 15 * d.default.Millis.MINUTE + e - t;
   n > d.default.Millis.HOUR && f.default.addBreadcrumb({
@@ -43,9 +43,9 @@ async function g() {
 
 function I() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  null != m && (clearTimeout(m), m = null), null != C && (clearInterval(C), C = null), null != p && e && (f.default.addBreadcrumb({
+  null != m && (clearTimeout(m), m = null), null != C && (clearInterval(C), C = null), null != S && e && (f.default.addBreadcrumb({
     message: "Heartbeat correctly scheduled. Clearing 10s check timeout"
-  }), clearTimeout(p), p = null)
+  }), clearTimeout(S), S = null)
 }
 async function T() {
   let e = Date.now(),
@@ -55,7 +55,7 @@ async function T() {
     f.default.captureException(Error("Null session when tracking session heartbeat. Waited ".concat(n - e, "ms")));
     return
   }
-  if (!S) {
+  if (!p) {
     f.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), I();
     return
   }
@@ -87,7 +87,7 @@ function v() {
     g()
   } catch (e) {
     f.default.captureException(e)
-  } else !S || (S = !1, f.default.addBreadcrumb({
+  } else !p || (p = !1, f.default.addBreadcrumb({
     message: "Stopping Analytics Heartbeat"
   }), (0, E.setSessionExtendingEnabled)(!1), I(), (0, l.drainClickstream)())
 }
@@ -95,7 +95,7 @@ function v() {
 function R() {
   f.default.addBreadcrumb({
     message: "Initializing SessionHeartbeatScheduler"
-  }), o.default.addChangeListener(L), s.default.subscribe("WINDOW_FOCUS", y), s.default.subscribe("APP_STATE_UPDATE", M), s.default.subscribe("LOGIN_SUCCESS", O), v()
+  }), o.default.addChangeListener(L), s.default.subscribe("WINDOW_FOCUS", M), s.default.subscribe("APP_STATE_UPDATE", y), s.default.subscribe("LOGIN_SUCCESS", O), v()
 }
 
 function O() {
@@ -107,14 +107,14 @@ function L() {
   A !== e && (A = e, v())
 }
 
-function y(e) {
+function M(e) {
   let {
     focused: t
   } = e;
   N = t, v()
 }
 
-function M(e) {
+function y(e) {
   let {
     state: t
   } = e;

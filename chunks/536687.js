@@ -20,8 +20,8 @@ var a, s, l = n("470079"),
   _ = n("678513"),
   C = n("899667"),
   m = n("496675"),
-  p = n("541566"),
-  S = n("192513"),
+  S = n("541566"),
+  p = n("192513"),
   g = n("255791"),
   I = n("70956"),
   T = n("267642"),
@@ -39,20 +39,20 @@ function N(e) {
     {
       lastDismissedGracePeriod: s,
       isGracePeriodVisible: N
-    } = (0, i.useStateFromStoresObject)([p.default], () => ({
-      lastDismissedGracePeriod: p.default.getLastDismissedGracePeriodForGuild(n),
-      isGracePeriodVisible: p.default.isVisible(n)
+    } = (0, i.useStateFromStoresObject)([S.default], () => ({
+      lastDismissedGracePeriod: S.default.getLastDismissedGracePeriodForGuild(n),
+      isGracePeriodVisible: S.default.isVisible(n)
     })),
     v = (0, i.useStateFromStores)([h.default], () => h.default.isVisible(e)),
     R = (0, i.useStateFromStores)([g.default], () => g.default.isVisible(e)),
     O = (0, i.useStateFromStores)([m.default], () => m.default.can(A.Permissions.ADMINISTRATOR, e)),
     L = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
-    y = null != e ? e.premiumSubscriberCount : 0,
-    M = (0, T.getGuildTierFromAppliedBoostCount)(y, n) !== A.BoostedGuildTiers.NONE,
+    M = null != e ? e.premiumSubscriberCount : 0,
+    y = (0, T.getGuildTierFromAppliedBoostCount)(M, n) !== A.BoostedGuildTiers.NONE,
     P = null != a && Date.now() - a <= 432e5,
-    x = !P && !L && O && M,
+    x = !P && !L && O && y,
     D = (0, u.useGuildHasLiveChannelNotice)(n),
-    b = (0, i.useStateFromStores)([S.default], () => S.default.isVisible(e)),
+    b = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
     U = f.default.useShouldShowChannelNotice(n),
     j = (0, E.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {

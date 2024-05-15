@@ -15,7 +15,7 @@ var a, s = n("735250"),
   C = n("679091"),
   m = n("611273");
 
-function p(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,7 +23,7 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = c.default.getArticleURL(h.HelpdeskArticles.VERIFICATION_FAQ);
+let p = c.default.getArticleURL(h.HelpdeskArticles.VERIFICATION_FAQ);
 class g extends(a = l.PureComponent) {
   renderFields() {
     let {
@@ -63,7 +63,7 @@ class g extends(a = l.PureComponent) {
         }), (0, s.jsx)("div", {
           className: r()(C.body, m.marginTop4, m.marginBottom20),
           children: _.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
-            helpCenterURL: S
+            helpCenterURL: p
           })
         }), (0, s.jsx)(f.default, {
           grow: 0,
@@ -95,7 +95,7 @@ class g extends(a = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), p(this, "handleClick", e => {
+    super(...e), S(this, "handleClick", e => {
       let {
         onClick: t
       } = this.props;
@@ -103,7 +103,7 @@ class g extends(a = l.PureComponent) {
     })
   }
 }
-p(g, "defaultProps", {
+S(g, "defaultProps", {
   types: [h.VerificationTypes.CAPTCHA],
   onCaptchaVerify: h.NOOP,
   onLogout: h.NOOP

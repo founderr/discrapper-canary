@@ -16,7 +16,7 @@ t.default = e => {
     glowColor: c = s.NO_PROGRESS_COLORS.glow,
     glowBlur: f = .4,
     children: E
-  } = e, h = i / 2, _ = i / 2 - r / 2, C = 2 * Math.PI * _, m = C - n * C, p = {
+  } = e, h = i / 2, _ = i / 2 - r / 2, C = 2 * Math.PI * _, m = C - n * C, S = {
     strokeDasharray: "".concat(C, " ").concat(C),
     strokeDashoffset: m
   };
@@ -79,7 +79,7 @@ t.default = e => {
         cx: h,
         cy: h,
         stroke: d,
-        style: p
+        style: S
       })]
     })]
   })

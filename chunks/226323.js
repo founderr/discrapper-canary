@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("512384"),
   C = n("484459"),
   m = n("103575"),
-  p = n("314897"),
-  S = n("131951"),
+  S = n("314897"),
+  p = n("131951"),
   g = n("836946"),
   I = n("381238"),
   T = n("779863"),
@@ -30,10 +30,10 @@ var a = n("735250"),
   R = n("524484"),
   O = n("689938"),
   L = n("164159");
-let y = {
+let M = {
     offset: 2
   },
-  M = {
+  y = {
     serverDeaf: {
       icon: I.default,
       colorize: !0,
@@ -91,9 +91,9 @@ function x(e) {
     nick: u,
     mute: d,
     deaf: c,
-    serverMute: p,
+    serverMute: S,
     serverDeaf: g
-  } = e, I = (0, r.useStateFromStores)([S.default], () => S.default.isLocalMute(o.id)), T = (0, h.default)({
+  } = e, I = (0, r.useStateFromStores)([p.default], () => p.default.isLocalMute(o.id)), T = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
   }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), x = null != u ? u : v.default.getName(o), {
@@ -108,15 +108,15 @@ function x(e) {
       mute: s,
       localMute: l
     } = e, i = (0, f.useRedesignIconContext)().enabled;
-    if (t) return i ? P.serverDeaf : M.serverDeaf;
-    if (n) return i ? P.deaf : M.deaf;
-    if (a) return i ? P.serverMute : M.serverMute;
-    else if (l) return i ? P.localMute : M.mute;
-    else if (s) return i ? P.mute : M.mute
+    if (t) return i ? P.serverDeaf : y.serverDeaf;
+    if (n) return i ? P.deaf : y.deaf;
+    if (a) return i ? P.serverMute : y.serverMute;
+    else if (l) return i ? P.localMute : y.mute;
+    else if (s) return i ? P.mute : y.mute
   }({
     serverDeaf: g,
     deaf: c,
-    serverMute: p,
+    serverMute: S,
     mute: d,
     localMute: I
   })) && void 0 !== s ? s : {}, j = null != U ? O.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
@@ -167,7 +167,7 @@ function x(e) {
         ...e,
         className: L.avatarContainer,
         onContextMenu: G,
-        focusProps: y,
+        focusProps: M,
         children: (0, a.jsx)(_.default, {
           shakeLocation: R.ShakeLocation.VOICE_USER,
           isShaking: T,
@@ -209,8 +209,8 @@ function D(e) {
       width: 16,
       height: 16
     }),
-    focusProps: y
-  }), E = (0, r.useStateFromStores)([p.default], () => p.default.getId(), []), [h, _] = function(e, t) {
+    focusProps: M
+  }), E = (0, r.useStateFromStores)([S.default], () => S.default.getId(), []), [h, _] = function(e, t) {
     let n = [];
     for (let a of e) {
       if (a.user.id !== t) {

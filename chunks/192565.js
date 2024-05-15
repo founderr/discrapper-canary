@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return M
   }
 });
 var a = n("735250"),
@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("796918"),
   C = n("513532"),
   m = n("741595"),
-  p = n("974842"),
-  S = n("359380"),
+  S = n("974842"),
+  p = n("359380"),
   g = n("308083"),
   I = n("689938"),
   T = n("590190");
@@ -105,7 +105,7 @@ let R = {
       progress: n,
       handleClanUpdate: s
     } = v(t);
-    return (0, a.jsx)(S.default, {
+    return (0, a.jsx)(p.default, {
       title: I.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
       description: I.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
       handleUpdate: e => s({
@@ -152,7 +152,7 @@ let R = {
       errors: s,
       handleClanUpdate: l
     } = v(t);
-    return (0, a.jsx)(p.default, {
+    return (0, a.jsx)(S.default, {
       handleUpdate: l,
       tag: n.tag,
       error: null == s ? void 0 : s.tag,
@@ -249,7 +249,7 @@ function L(e) {
   return e.currentStep.toString()
 }
 
-function y(e) {
+function M(e) {
   let {
     guildId: t
   } = e, n = (0, c.useDefaultClanProgress)(), l = (0, i.useStateFromStores)([c.default], () => {

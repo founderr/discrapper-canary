@@ -14,8 +14,8 @@ var a, s, l = n("470079"),
   C = n("998502"),
   m = n("981631");
 (s = a || (a = {})).DEFAULT = "DEFAULT", s.UNREAD = "UNREAD", s.CONNECTED = "CONNECTED", s.SPEAKING = "SPEAKING", s.MUTED = "MUTED", s.DEAFENED = "DEAFENED";
-let p = (0, _.isMac)() ? null : "DEFAULT";
-class S extends l.PureComponent {
+let S = (0, _.isMac)() ? null : "DEFAULT";
+class p extends l.PureComponent {
   componentDidMount() {
     C.default.setSystemTrayIcon(this.getIcon())
   }
@@ -23,7 +23,7 @@ class S extends l.PureComponent {
     C.default.setSystemTrayIcon(this.getIcon())
   }
   componentWillUnmount() {
-    C.default.setSystemTrayIcon(p)
+    C.default.setSystemTrayIcon(S)
   }
   render() {
     return null
@@ -37,7 +37,7 @@ class S extends l.PureComponent {
         speaking: n,
         connected: a,
         unread: s
-      } = this.props, l = p;
+      } = this.props, l = S;
       return (0, _.isMac)() && !a ? l : (0, _.isLinux)() || !a ? (s && (l = "UNREAD"), l) : l = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED"
     }, n in t ? Object.defineProperty(t, n, {
       value: a,
@@ -62,4 +62,4 @@ _.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default
     deafened: d.default.isSelfDeaf(),
     unread: !a && !!(t || e + n > 0)
   }
-})(S)), t.default = g
+})(p)), t.default = g

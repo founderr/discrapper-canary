@@ -15,12 +15,12 @@ var a = n("735250"),
   _ = n("95985"),
   C = n("743294"),
   m = n("689938"),
-  p = n("481900");
+  S = n("481900");
 t.default = function(e) {
   var t;
   let {
     className: l,
-    expansionSpring: S,
+    expansionSpring: p,
     isExpanded: g,
     isExpansionAnimationComplete: I,
     quest: T,
@@ -28,22 +28,22 @@ t.default = function(e) {
   } = e, N = s.useRef(null), v = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, R = s.useMemo(() => (0, d.isAssetAnimated)(T.config.assets.questBarHero), [T]), O = (0, d.getQuestBarHeroAssetUrl)(T);
   return (0, a.jsxs)(r.animated.div, {
     "aria-hidden": g && I,
-    className: i()(l, p.contentCollapsed, {
-      [p.contentCollapsedExpanded]: g,
-      [p.contentCollapsedAccepted]: v
+    className: i()(l, S.contentCollapsed, {
+      [S.contentCollapsedExpanded]: g,
+      [S.contentCollapsedAccepted]: v
     }),
     style: {
-      opacity: S.to({
+      opacity: p.to({
         range: [0, 1],
         output: [1, 0]
       })
     },
     children: [(0, a.jsxs)("div", {
-      className: p.heroAssetWrapper,
+      className: S.heroAssetWrapper,
       children: [(0, a.jsx)("div", {
-        className: p.heroAssetDarken
+        className: S.heroAssetDarken
       }), (0, a.jsx)("div", {
-        className: p.heroAssetTint,
+        className: S.heroAssetTint,
         style: {
           backgroundColor: T.config.colors.primary
         }
@@ -55,7 +55,7 @@ t.default = function(e) {
           loop: !0,
           muted: !0,
           playsInline: !0,
-          className: p.heroAsset,
+          className: S.heroAsset,
           controls: !1,
           children: (0, a.jsx)("source", {
             src: O,
@@ -67,43 +67,43 @@ t.default = function(e) {
         children: e => (0, a.jsx)("img", {
           ref: e,
           alt: "",
-          className: p.heroAsset,
+          className: S.heroAsset,
           src: O
         })
       })]
     }), v ? (0, a.jsx)("div", {
-      className: p.postEnrollmentBackground,
+      className: S.postEnrollmentBackground,
       style: {
         backgroundImage: "linear-gradient(90deg, ".concat(C.QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT, ", ").concat(C.QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT, ")")
       }
     }) : (0, a.jsx)(E.QuestBarBackgroundAnimation, {
-      className: p.background,
-      animationClassName: p.backgroundAnimation,
+      className: S.background,
+      animationClassName: S.backgroundAnimation,
       quest: T,
       useReducedMotion: A
     }), (0, a.jsx)(h.default, {
       progressBarRef: N,
       quest: T
     }), (0, a.jsx)("div", {
-      className: p.contentCollapsedWrapper,
+      className: S.contentCollapsedWrapper,
       children: v ? (0, a.jsx)(_.default, {
         quest: T,
         progressBarRef: N,
         isExpanded: !1
       }) : (0, a.jsxs)("div", {
-        className: p.preEnrollmentWrapper,
+        className: S.preEnrollmentWrapper,
         children: [(0, a.jsx)("img", {
           alt: "",
-          className: p.wreathIcon,
+          className: S.wreathIcon,
           src: n("896145")
         }), (0, a.jsx)(c.default, {
-          className: p.partnerBranding,
+          className: S.partnerBranding,
           quest: T,
           withGameTile: !1
         }), (0, a.jsx)(o.Text, {
           color: "always-white",
           variant: "text-xs/medium",
-          className: p.questAvailable,
+          className: S.questAvailable,
           children: m.default.Messages.QUEST_AVAILABLE
         })]
       })

@@ -23,8 +23,8 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       type: c,
       imageMarginX: f,
       imageMarginTop: m,
-      trackingSource: p,
-      undismissable: S,
+      trackingSource: S,
+      undismissable: p,
       onDismissed: g,
       onClick: I,
       cta: T,
@@ -42,7 +42,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       size: r.Button.Sizes.SMALL,
       onClick: () => {
         null != c && d.default.track(E.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-          source: p,
+          source: S,
           guild_id: t.id,
           notice_type: c
         }), null == I || I()
@@ -54,7 +54,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
     let v = null != f ? "".concat(f, "px") : "16px";
     return (0, a.jsxs)("div", {
       className: _.channelNotice,
-      children: [!0 === S ? null : (0, a.jsx)(r.Clickable, {
+      children: [!0 === p ? null : (0, a.jsx)(r.Clickable, {
         onClick: () => {
           o.default.trackWithMetadata(E.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: c

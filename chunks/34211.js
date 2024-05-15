@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s, l = n("735250"),
-  a = n("470079"),
-  i = n("948789"),
+  i = n("470079"),
+  a = n("948789"),
   r = n("66037"),
   o = n("248108"),
   c = n("231338"),
@@ -98,51 +98,51 @@ let p = c.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
       external: !0
     }]
   }];
-class N extends(s = a.PureComponent) {
+class N extends(s = i.PureComponent) {
   render() {
-    let e = (0, i.isActiveCreator)(this.context.router),
+    let e = (0, a.isActiveCreator)(this.context.router),
       {
         isMobile: t,
         isVisible: n,
         styles: s,
-        NavigationMessages: a,
+        NavigationMessages: i,
         TrackClick: d,
         avoidRouter: N
       } = this.props,
       {
         sectionShown: g
       } = this.state;
-    return h(null != u.default ? u.default.getLocale().toLowerCase() : "", a).map(a => {
-      if (null != a.links) return (0, l.jsx)(o.default, {
-        title: a.title,
-        links: a.links,
-        isOpen: g === a.title,
+    return h(null != u.default ? u.default.getLocale().toLowerCase() : "", i).map(i => {
+      if (null != i.links) return (0, l.jsx)(o.default, {
+        title: i.title,
+        links: i.links,
+        isOpen: g === i.title,
         isMobile: t,
         avoidRouter: N,
         TrackClick: d,
         onClose: this.closeSubNav,
         onOpen: this.openSubNav
-      }, a.title);
-      if (a.external && null != a.route) return (0, l.jsx)("li", {
+      }, i.title);
+      if (i.external && null != i.route) return (0, l.jsx)("li", {
         className: s.listItemInactive,
         role: "none",
         children: (0, l.jsx)(d, {
           className: s.mainNavLink,
           eventName: p,
-          data: a.linkClicked ? {
-            linkClicked: a.linkClicked
+          data: i.linkClicked ? {
+            linkClicked: i.linkClicked
           } : {},
-          href: a.route,
+          href: i.route,
           rel: "me",
-          children: a.title
+          children: i.title
         })
-      }, "external_link_".concat(a.route));
-      if (null != a.route) return (0, l.jsx)("li", {
-        className: e(a.route) ? s.listItemActive : s.listItemInactive,
+      }, "external_link_".concat(i.route));
+      if (null != i.route) return (0, l.jsx)("li", {
+        className: e(i.route) ? s.listItemActive : s.listItemInactive,
         role: "none",
         children: (0, l.jsx)(r.default, {
           avoidRouter: N,
-          to: a.route,
+          to: i.route,
           from: c.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
           tabIndex: n ? 0 : -1,
           role: "menuitem",
@@ -151,12 +151,12 @@ class N extends(s = a.PureComponent) {
             className: s.mainNavLink,
             eventName: p,
             data: {
-              linkClicked: a.linkClicked
+              linkClicked: i.linkClicked
             },
-            children: a.title
+            children: i.title
           })
         })
-      }, "link_".concat(a.route));
+      }, "link_".concat(i.route));
       return []
     })
   }

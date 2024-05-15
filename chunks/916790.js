@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return L
+    return E
   }
 }), r("47120");
 var a = r("735250"),
@@ -24,10 +24,10 @@ var a = r("735250"),
   k = r("585864"),
   v = r("277513");
 
-function j(e) {
+function C(e) {
   return parseFloat(e.toFixed(3))
 }
-let C = [{
+let j = [{
   key: "store",
   cellClassName: k.actionColumn,
   render(e) {
@@ -43,7 +43,7 @@ let C = [{
     let {
       trace: t
     } = e;
-    return "".concat(j(t.time), " ms")
+    return "".concat(C(t.time), " ms")
   }
 }];
 
@@ -56,12 +56,12 @@ function S(e) {
   })), [t]);
   return (0, a.jsx)(c.ScrollerThin, {
     children: (0, a.jsx)(b.default, {
-      columns: C,
+      columns: j,
       data: r
     })
   })
 }
-let w = [{
+let T = [{
   id: "action",
   name: "Action",
   render(e) {
@@ -81,7 +81,7 @@ let w = [{
           })
         }), (0, a.jsxs)(f.Property, {
           name: "Total Time",
-          children: [j(r.totalTime), " ms"]
+          children: [C(r.totalTime), " ms"]
         })]
       }), (0, a.jsx)(c.ScrollerThin, {
         className: k.inspectorContainer,
@@ -104,11 +104,11 @@ let w = [{
   }
 }];
 
-function T(e) {
+function N(e) {
   let {
     actionLog: t,
     initialHeight: r
-  } = e, l = i.useMemo(() => t.error ? [...w, {
+  } = e, l = i.useMemo(() => t.error ? [...T, {
     id: "error",
     name: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.default, {
@@ -139,7 +139,7 @@ function T(e) {
         })]
       })
     }
-  }] : w, [t]), {
+  }] : T, [t]), {
     TabBar: o,
     renderSelectedTab: s
   } = (0, x.default)({
@@ -162,7 +162,7 @@ function T(e) {
     })]
   })
 }
-let N = [{
+let w = [{
   key: "action",
   cellClassName: k.actionColumn,
   render(e) {
@@ -182,11 +182,11 @@ let N = [{
     let {
       actionLog: t
     } = e;
-    return "".concat(j(t.totalTime), " ms")
+    return "".concat(C(t.totalTime), " ms")
   }
 }];
 
-function L() {
+function E() {
   let e = i.useRef(null),
     t = function(e) {
       let [t, r] = i.useState([...e.logs]), a = i.useCallback(() => r([...e.logs]), [e]);
@@ -206,12 +206,12 @@ function L() {
     children: [(0, a.jsx)(c.ScrollerThin, {
       className: k.tableContainer,
       children: (0, a.jsx)(b.default, {
-        columns: N,
+        columns: w,
         data: r,
         selectedRowKey: null == l ? void 0 : l.toString(),
         onClickRow: e => o(Number.parseInt(e, 10))
       })
-    }), null != s && (0, a.jsx)(T, {
+    }), null != s && (0, a.jsx)(N, {
       actionLog: s,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
     })]

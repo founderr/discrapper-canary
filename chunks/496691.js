@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var s = n("735250"),
   l = n("470079"),
-  a = n("548668"),
-  i = n("231262"),
+  i = n("548668"),
+  a = n("231262"),
   r = n("501522"),
   o = n("442837"),
   c = n("153867"),
@@ -30,7 +30,7 @@ class g extends l.Component {
       className: t,
       shouldScrollToTop: this.shouldScrollToTop,
       render: (t, r) => (0, s.jsxs)(l.Fragment, {
-        children: [(0, s.jsx)(i.Header, {
+        children: [(0, s.jsx)(a.Header, {
           avoidRouter: !0,
           locale: o,
           authRedirectTo: e.pathname,
@@ -41,7 +41,7 @@ class g extends l.Component {
           openNavAriaLabel: h.default.Messages.OPEN_NAVIGATION,
           hideNavAriaLabel: h.default.Messages.HIDE_NAVIGATION,
           skipToContentLabel: h.default.Messages.SKIP_TO_CONTENT
-        }), n(t, r), (0, s.jsx)(a.Footer, {
+        }), n(t, r), (0, s.jsx)(i.Footer, {
           locale: o,
           authRedirectTo: e.pathname,
           avoidRouter: !0,

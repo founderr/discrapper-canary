@@ -19,12 +19,12 @@ t.default = function(e) {
     className: _,
     expansionSpring: C,
     isExpanded: m,
-    isExpansionAnimationComplete: p,
-    quest: S,
+    isExpansionAnimationComplete: S,
+    quest: p,
     useReducedMotion: g
-  } = e, I = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = (null !== (s = null === (n = S.userStatus) || void 0 === n ? void 0 : n.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
+  } = e, I = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = (null !== (s = null === (n = p.userStatus) || void 0 === n ? void 0 : n.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
   return (0, a.jsxs)(i.animated.div, {
-    "aria-hidden": m && p,
+    "aria-hidden": m && S,
     className: l()(_, h.contentCollapsed, {
       [h.contentCollapsedExpanded]: m,
       [h.contentCollapsedAccepted]: I
@@ -36,7 +36,7 @@ t.default = function(e) {
       })
     },
     children: [(0, a.jsx)(f.QuestBarBackgroundAnimation, {
-      quest: S,
+      quest: p,
       useReducedMotion: g
     }), (0, a.jsx)("div", {
       className: h.contentCollapsedWrapper,
@@ -44,12 +44,12 @@ t.default = function(e) {
         className: h.questProgressWrapper,
         children: [(0, a.jsx)(c.default, {
           className: h.questProgressRewardTile,
-          quest: S,
+          quest: p,
           questContent: o.QuestContent.QUEST_BAR,
           autoplay: !1
         }), T ? (0, a.jsx)(d.default, {
           className: h.questProgressBar,
-          quest: S
+          quest: p
         }) : (0, a.jsx)(r.Text, {
           className: h.questProgressHint,
           color: "always-white",
@@ -60,13 +60,13 @@ t.default = function(e) {
         className: h.brandingWrapper,
         children: [(0, a.jsx)(u.default, {
           className: h.partnerBranding,
-          quest: S
+          quest: p
         }), (0, a.jsx)(r.Heading, {
           color: "always-white",
           variant: "heading-sm/medium",
           className: h.questName,
           children: E.default.Messages.QUEST.format({
-            questName: S.config.messages.questName
+            questName: p.config.messages.questName
           })
         })]
       })

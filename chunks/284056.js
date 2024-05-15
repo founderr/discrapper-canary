@@ -19,9 +19,9 @@ var a = n("735250"),
   _ = n("626135"),
   C = n("981631"),
   m = n("689938"),
-  p = n("246963");
+  S = n("246963");
 
-function S(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -88,7 +88,7 @@ class g extends s.PureComponent {
       isDetectingInput: s
     } = this.state;
     return (0, a.jsx)(d.FormText, {
-      className: p.micTestCaption,
+      className: S.micTestCaption,
       type: d.FormText.Types.DESCRIPTION,
       children: n ? s ? e : t : null
     })
@@ -109,17 +109,17 @@ class g extends s.PureComponent {
       volume: f
     } = this.state, E = e && !c ? m.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
     return c && e && !u && this._micTestStop(), (0, a.jsxs)("div", {
-      className: p.container,
+      className: S.container,
       children: [(0, a.jsx)(d.FormTitle, {
         tag: d.FormTitleTags.H5,
-        className: p.title,
+        className: S.title,
         children: t
       }), null != n && (0, a.jsx)(d.FormText, {
         type: d.FormText.Types.DESCRIPTION,
-        className: p.description,
+        className: S.description,
         children: n
       }), (0, a.jsxs)("div", {
-        className: p.micTest,
+        className: S.micTest,
         children: [(0, a.jsx)(d.Tooltip, {
           text: E,
           children: e => {
@@ -146,14 +146,14 @@ class g extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), S(this, "_initTimeout", new u.Timeout), S(this, "_silenceTimeout", new u.Timeout), S(this, "_messageTimeout", new u.Timeout), S(this, "_micTestStartTime", void 0), S(this, "state", {
+    super(...e), p(this, "_initTimeout", new u.Timeout), p(this, "_silenceTimeout", new u.Timeout), p(this, "_messageTimeout", new u.Timeout), p(this, "_micTestStartTime", void 0), p(this, "state", {
       volume: -100,
       isMicTesting: !1,
       isDetectingInput: !0,
       didDeafenUser: !1
-    }), S(this, "setupVoiceActivity", () => {
+    }), p(this, "setupVoiceActivity", () => {
       f.default.getMediaEngine().on(o.MediaEngineEvent.VoiceActivity, this.handleVoiceActivity)
-    }), S(this, "handleVoiceActivity", e => {
+    }), p(this, "handleVoiceActivity", e => {
       let {
         isMicTesting: t
       } = this.state;
@@ -171,7 +171,7 @@ class g extends s.PureComponent {
         volume: e,
         isDetectingInput: !0
       })
-    }), S(this, "handleToggleMicTest", () => {
+    }), p(this, "handleToggleMicTest", () => {
       this.state.isMicTesting ? this._micTestStop() : this._micTestStart()
     })
   }

@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("834743"),
   C = n("862099"),
   m = n("704631"),
-  p = n("819792"),
-  S = n("919285"),
+  S = n("819792"),
+  p = n("919285"),
   g = n("118470"),
   I = n("413307"),
   T = n("849688"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("617899"),
   O = n("8521"),
   L = n("760326"),
-  y = n("536687"),
-  M = n("652785"),
+  M = n("536687"),
+  y = n("652785"),
   P = n("981631"),
   x = n("921944");
 
@@ -39,9 +39,9 @@ function b(e) {
   var t;
   let {
     guild: n
-  } = e, [E, C] = s.useState(null !== (t = r.Storage.get(M.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), p = e => {
-    r.Storage.set(M.LAST_HIDDEN_CHANNEL_NOTICE, e), C(e)
-  }, S = (0, c.useIsGuildEligibleForClanConversion)({
+  } = e, [E, C] = s.useState(null !== (t = r.Storage.get(y.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), S = e => {
+    r.Storage.set(y.LAST_HIDDEN_CHANNEL_NOTICE, e), C(e)
+  }, p = (0, c.useIsGuildEligibleForClanConversion)({
     guildId: n.id,
     location: "ChannelNoticesGuard"
   }), {
@@ -50,12 +50,12 @@ function b(e) {
     guild: n,
     location: "ChannelNoticesGuard_2",
     includeConverted: !1
-  }), I = (0, l.useStateFromStoresArray)(M.CHANNEL_NOTICE_STORES, () => M.CHANNEL_NOTICES.filter(e => {
+  }), I = (0, l.useStateFromStoresArray)(y.CHANNEL_NOTICE_STORES, () => y.CHANNEL_NOTICES.filter(e => {
     let {
       type: t,
       store: a
     } = e;
-    if (t === P.ChannelNoticeTypes.CLAN_ADMIN_UPSELL) return S;
+    if (t === P.ChannelNoticeTypes.CLAN_ADMIN_UPSELL) return p;
     return null == a ? void 0 : a.channelNoticePredicate(n, E)
   }).map(e => e.dismissibleContentType));
   return (0, a.jsx)(f.default, {
@@ -66,7 +66,7 @@ function b(e) {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        p(Date.now()), s(x.ContentDismissActionType.UNKNOWN)
+        S(Date.now()), s(x.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
@@ -125,40 +125,40 @@ t.default = e => {
   let {
     guild: t
   } = e;
-  switch ((0, y.default)(t)) {
-    case y.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
+  switch ((0, M.default)(t)) {
+    case M.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
       return (0, a.jsx)(I.default, {
         guild: t
       });
-    case y.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
+    case M.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
       return (0, a.jsx)(E.default, {
         guild: t
       });
-    case y.ConnectedChannelNotices.MAX_MEMBER_COUNT:
+    case M.ConnectedChannelNotices.MAX_MEMBER_COUNT:
       return (0, a.jsx)(O.default, {
         guild: t
       });
-    case y.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
+    case M.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
       return (0, a.jsx)(C.default, {
         guild: t
       });
-    case y.ConnectedChannelNotices.GUILD_MFA_WARNING:
+    case M.ConnectedChannelNotices.GUILD_MFA_WARNING:
       return (0, a.jsx)(N.default, {
         guild: t
       });
-    case y.ConnectedChannelNotices.COMMANDS_MIGRATION:
-      return (0, a.jsx)(S.default, {
-        guild: t
-      });
-    case y.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
-      return (0, a.jsx)(g.default, {
-        guild: t
-      });
-    case y.ConnectedChannelNotices.HUB_STUDY_ROOM:
+    case M.ConnectedChannelNotices.COMMANDS_MIGRATION:
       return (0, a.jsx)(p.default, {
         guild: t
       });
-    case y.ConnectedChannelNotices.SIGNUP:
+    case M.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
+      return (0, a.jsx)(g.default, {
+        guild: t
+      });
+    case M.ConnectedChannelNotices.HUB_STUDY_ROOM:
+      return (0, a.jsx)(S.default, {
+        guild: t
+      });
+    case M.ConnectedChannelNotices.SIGNUP:
       return (0, a.jsx)(T.default, {
         guild: t
       })

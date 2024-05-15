@@ -15,8 +15,8 @@ let h = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack(
   _ = !1,
   C = !1,
   m = [],
-  p = null,
-  S = () => {
+  S = null,
+  p = () => {
     !_ && (h.loop(), _ = !0)
   },
   g = () => {
@@ -31,7 +31,7 @@ let h = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack(
     if (0 === m.length || !I() || C) return;
     C = !0;
     let [e, t] = m[m.length - 1];
-    (0, d.playSound)(e, t), p = setTimeout(A, 1e3)
+    (0, d.playSound)(e, t), S = setTimeout(A, 1e3)
   },
   A = () => {
     m.pop(), C = !1, T()
@@ -46,7 +46,7 @@ class v extends s.default {
     f.default.addChangeListener(this.startAudio), a.default.subscribe("RTC_CONNECTION_STATE", this.setVolume), a.default.subscribe("TYPING_STOP", this.stopAudio), a.default.subscribe("TYPING_STOP_LOCAL", this.stopAudio), a.default.subscribe("CHANNEL_SELECT", this.stopAudio), a.default.subscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio)
   }
   _terminate() {
-    f.default.removeChangeListener(this.startAudio), a.default.unsubscribe("RTC_CONNECTION_STATE", this.setVolume), a.default.unsubscribe("TYPING_STOP", this.stopAudio), a.default.unsubscribe("TYPING_STOP_LOCAL", this.stopAudio), a.default.unsubscribe("CHANNEL_SELECT", this.stopAudio), a.default.unsubscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio), clearTimeout(p)
+    f.default.removeChangeListener(this.startAudio), a.default.unsubscribe("RTC_CONNECTION_STATE", this.setVolume), a.default.unsubscribe("TYPING_STOP", this.stopAudio), a.default.unsubscribe("TYPING_STOP_LOCAL", this.stopAudio), a.default.unsubscribe("CHANNEL_SELECT", this.stopAudio), a.default.unsubscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio), clearTimeout(S)
   }
   setVolume(e) {
     let {
@@ -72,7 +72,7 @@ class v extends s.default {
       a = u.default.isTyping(t, n),
       s = f.default.getUserCombo(n, t),
       l = null !== (e = null == s ? void 0 : s.multiplier) && void 0 !== e ? e : 1;
-    a && l >= 7 ? S() : g()
+    a && l >= 7 ? p() : g()
   }
   playAchievementUnlockSound() {
     I() && N("poggermode_achievement_unlock")

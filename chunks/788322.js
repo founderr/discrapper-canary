@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("768581"),
   C = n("900849"),
   m = n("556017"),
-  p = n("879484"),
-  S = n("26580"),
+  S = n("879484"),
+  p = n("26580"),
   g = n("206887"),
   I = n("981631"),
   T = n("689938"),
@@ -38,8 +38,8 @@ t.default = e => {
     onView: O,
     onTagClick: L
   } = e, {
-    id: y,
-    discoverySplash: M,
+    id: M,
+    discoverySplash: y,
     icon: P,
     name: x,
     description: D,
@@ -49,8 +49,8 @@ t.default = e => {
   } = l, [G, k] = s.useState(!1), [w, B] = s.useState(!1), {
     analyticsLocations: F
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
-    id: y,
-    splash: M,
+    id: M,
+    splash: y,
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
@@ -60,7 +60,7 @@ t.default = e => {
         return v
     }
   }(R), Y = null !== (t = _.default.getGuildIconURL({
-    id: y,
+    id: M,
     icon: P,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
@@ -89,12 +89,12 @@ t.default = e => {
       }
     }
   };
-  s.useEffect(() => p.DiscoveryTagsExperiment.trackExposure({
+  s.useEffect(() => S.DiscoveryTagsExperiment.trackExposure({
     location: "4302e4_1"
   }));
   let {
     shouldDisplayTags: K
-  } = p.DiscoveryTagsExperiment.useExperiment({
+  } = S.DiscoveryTagsExperiment.useExperiment({
     location: "4302e4_2"
   }, {
     autoTrackExposure: !1
@@ -167,9 +167,9 @@ t.default = e => {
             className: A.description,
             variant: "text-sm/normal",
             children: D
-          }), K && null != j && null != L && (0, a.jsx)(S.DiscoveryTags, {
+          }), K && null != j && null != L && (0, a.jsx)(p.DiscoveryTags, {
             guildId: l.id,
-            discoveryTagStyle: S.DiscoveryTagStyle.ALT,
+            discoveryTagStyle: p.DiscoveryTagStyle.ALT,
             onTagClick: e => L(e, l.id),
             tags: j,
             section: C.AnalyticsContexts.SEARCH

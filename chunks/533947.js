@@ -9,28 +9,28 @@ var i, r, o, u, d = n("392711"),
   _ = n("388610"),
   C = n("430824"),
   m = n("496675"),
-  p = n("855674"),
-  S = n("981631");
+  S = n("855674"),
+  p = n("981631");
 let g = [],
   I = null,
   T = !1,
-  A = S.FormStates.CLOSED,
+  A = p.FormStates.CLOSED,
   N = {},
   v = !1,
   R = null;
 
 function O() {
-  if (a = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, g = null != s && null != a && m.default.can(S.Permissions.MANAGE_WEBHOOKS, s) ? p.default.getWebhooksForChannel(a.id, s.id) : [], null != I) {
-    let e = y(I.id);
+  if (a = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, g = null != s && null != a && m.default.can(p.Permissions.MANAGE_WEBHOOKS, s) ? S.default.getWebhooksForChannel(a.id, s.id) : [], null != I) {
+    let e = M(I.id);
     null != e && (I = e)
   }
-  A = S.FormStates.OPEN, N = {}, v = !1
+  A = p.FormStates.OPEN, N = {}, v = !1
 }
 let L = c().debounce(() => {
-  v && ((null == I || c().isEqual(I, y(I.id))) && (v = !1), !v && P.emitChange())
+  v && ((null == I || c().isEqual(I, M(I.id))) && (v = !1), !v && P.emitChange())
 }, 500);
 
-function y(e) {
+function M(e) {
   return g.find(t => {
     let {
       id: n
@@ -38,9 +38,9 @@ function y(e) {
     return n === e
   })
 }
-class M extends(i = f.default.Store) {
+class y extends(i = f.default.Store) {
   initialize() {
-    this.waitFor(_.default, C.default, p.default, m.default)
+    this.waitFor(_.default, C.default, S.default, m.default)
   }
   hasChanges() {
     return v
@@ -55,14 +55,14 @@ class M extends(i = f.default.Store) {
     return A
   }
   getWebhook(e) {
-    return y(e)
+    return M(e)
   }
   showNotice() {
     return this.hasChanges()
   }
   getProps() {
     return {
-      submitting: A === S.FormStates.SUBMITTING,
+      submitting: A === p.FormStates.SUBMITTING,
       webhooks: g,
       editedWebhook: I,
       section: l,
@@ -73,21 +73,21 @@ class M extends(i = f.default.Store) {
     }
   }
 }
-u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = M) ? Object.defineProperty(r, o, {
+u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = y) ? Object.defineProperty(r, o, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[o] = u;
-let P = new M(E.default, __OVERLAY__ ? {} : {
+let P = new y(E.default, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_INIT: O,
   INTEGRATION_SETTINGS_SAVE_SUCCESS: O,
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
     let {
       section: t
     } = e;
-    if (t !== S.ChannelSettingsSections.INTEGRATIONS) return !1;
-    if (l = S.IntegrationSettingsSections.OVERVIEW, null == a) {
+    if (t !== p.ChannelSettingsSections.INTEGRATIONS) return !1;
+    if (l = p.IntegrationSettingsSections.OVERVIEW, null == a) {
       let e = _.default.getChannel(),
         t = null == e ? void 0 : e.getGuildId();
       null != e && null != t && (h.default.fetchForChannel(t, e.id), T = !0), O()
@@ -103,7 +103,7 @@ let P = new M(E.default, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
     let {
       webhookId: t
-    } = e, n = y(t);
+    } = e, n = M(t);
     if (null == n) return !1;
     I = n, N = {}, v = !1
   },
@@ -120,7 +120,7 @@ let P = new M(E.default, __OVERLAY__ ? {} : {
     }, null != t.name && I.name !== t.name && (I.name = t.name, v = !0), void 0 !== t.avatar && I.avatar !== t.avatar && (I.avatar = t.avatar, v = !0), null != t.channelId && I.channel_id !== t.channelId && (I.channel_id = t.channelId, v = !0), v && L()
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    s = null, a = null, g = [], I = null, A = S.FormStates.CLOSED
+    s = null, a = null, g = [], I = null, A = p.FormStates.CLOSED
   },
   WEBHOOKS_UPDATE: function(e) {
     let {
@@ -128,7 +128,7 @@ let P = new M(E.default, __OVERLAY__ ? {} : {
       channelId: n,
       webhooks: l
     } = e;
-    if (null == a || t !== a.id || null == s || n !== s.id || null == l || A === S.FormStates.SUBMITTING) return !1;
+    if (null == a || t !== a.id || null == s || n !== s.id || null == l || A === p.FormStates.SUBMITTING) return !1;
     T = !1;
     for (let e = g.length - 1; e >= 0; e--) {
       let t = g[e];
@@ -156,12 +156,12 @@ let P = new M(E.default, __OVERLAY__ ? {} : {
     g = [...g], L()
   },
   INTEGRATION_SETTINGS_SUBMITTING: function() {
-    A = S.FormStates.SUBMITTING, N = {}
+    A = p.FormStates.SUBMITTING, N = {}
   },
   INTEGRATION_SETTINGS_SAVE_FAILURE: function(e) {
     var t;
-    if (A !== S.FormStates.SUBMITTING) return !1;
-    A = S.FormStates.OPEN, N = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (A !== p.FormStates.SUBMITTING) return !1;
+    A = p.FormStates.OPEN, N = null !== (t = e.errors) && void 0 !== t ? t : {}
   }
 });
 t.default = P

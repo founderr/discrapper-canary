@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("749210"),
   C = n("607070"),
   m = n("100527"),
-  p = n("931240"),
-  S = n("970606"),
+  S = n("931240"),
+  p = n("970606"),
   g = n("963202"),
   I = n("650461"),
   T = n("603839"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("207796"),
   O = n("316553"),
   L = n("273254"),
-  y = n("559469"),
-  M = n("308083"),
+  M = n("559469"),
+  y = n("308083"),
   P = n("689938"),
   x = n("18712"),
   D = n("345480"),
@@ -87,16 +87,16 @@ function k(e) {
     onButtonClick: r,
     buttonText: f,
     hasCompletedUpsell: _
-  } = e, C = (0, R.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), m = (0, R.useClanDiscoveryUIStore)(e => e.started, o.default), p = s.useMemo(() => l.map(e => ({
+  } = e, C = (0, R.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, o.default), m = (0, R.useClanDiscoveryUIStore)(e => e.started, o.default), S = s.useMemo(() => l.map(e => ({
     value: e.id,
     label: e.name
   })), [l]), {
-    enableApplication: S
+    enableApplication: p
   } = (0, g.useClanPrePilotApplicationExperiment)("discovery"), I = s.useCallback(() => {
     (0, R.setClanDiscoveryMode)(R.ClanDiscoveryMode.DISCOVERY)
   }, []), T = s.useCallback(() => {
     (0, R.setClanDiscoveryMode)(R.ClanDiscoveryMode.GET_STARTED), C(R.ClanDiscoveryUserScreens.USER_ONBOARDING)
-  }, [C]), A = !m && S, N = l.length > 1;
+  }, [C]), A = !m && p, N = l.length > 1;
   return (0, a.jsxs)(a.Fragment, {
     children: [_ ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.Heading, {
@@ -132,7 +132,7 @@ function k(e) {
       children: [N && (0, a.jsx)(h.SearchableSelect, {
         className: x.upsellSelect,
         value: t,
-        options: p,
+        options: S,
         onChange: n
       }), !_ && (0, a.jsx)(h.Button, {
         look: h.ButtonLooks.FILLED,
@@ -185,7 +185,7 @@ t.default = s.memo(function(e) {
     return i ? n[0].id : t[0].id
   });
   s.useEffect(() => {
-    !i && (0, S.trackClanAdminInviteViewed)({
+    !i && (0, p.trackClanAdminInviteViewed)({
       guildId: o,
       location: m.default.CLAN_DISCOVERY
     })
@@ -203,11 +203,11 @@ t.default = s.memo(function(e) {
       includeConverted: !1
     });
   s.useEffect(() => {
-    let e = D === M.VALORANT_ID ? R.ClanDiscoveryGame.VALORANT : D === M.GENSHIN_ID ? R.ClanDiscoveryGame.GENSHIN : void 0;
+    let e = D === y.VALORANT_ID ? R.ClanDiscoveryGame.VALORANT : D === y.GENSHIN_ID ? R.ClanDiscoveryGame.GENSHIN : void 0;
     null != e && E !== D && R.useClanDiscoveryUIStore.getState().setGame(e)
   }, [D, E]);
   let b = s.useCallback(() => {
-      !i && ((0, S.trackClanAdminInviteClicked)({
+      !i && ((0, p.trackClanAdminInviteClicked)({
         guildId: o,
         location: m.default.CLAN_DISCOVERY
       }), (0, N.openFullScreenLayer)(e => {
@@ -219,7 +219,7 @@ t.default = s.memo(function(e) {
           guildId: o
         })
       }, {
-        layerKey: M.CLAN_SETUP_MODAL_LAYER_KEY
+        layerKey: y.CLAN_SETUP_MODAL_LAYER_KEY
       }))
     }, [i, o]),
     G = (0, f.useStateFromStores)([C.default], () => C.default.useReducedMotion),
@@ -227,7 +227,7 @@ t.default = s.memo(function(e) {
       guild: d,
       selectedGame: l
     }),
-    B = (0, y.useFakeDiscoveryUpsellClans)(E),
+    B = (0, M.useFakeDiscoveryUpsellClans)(E),
     [F, H] = s.useState(!0),
     V = (0, r.useSpring)({
       from: {
@@ -319,7 +319,7 @@ t.default = s.memo(function(e) {
     }),
     Z = s.useMemo(() => null == c ? P.default.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : P.default.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [c]),
     X = s.useCallback(async () => {
-      await (0, p.joinWumpusFeedbackSquad)(o), _.default.transitionToGuildSync("936317138904440892")
+      await (0, S.joinWumpusFeedbackSquad)(o), _.default.transitionToGuildSync("936317138904440892")
     }, [o]),
     J = s.useCallback(e => (0, a.jsx)(h.Clickable, {
       tag: "span",

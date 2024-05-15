@@ -19,12 +19,12 @@ var a = n("735250"),
   _ = n("559469"),
   C = n("689938"),
   m = n("531612");
-let p = {
+let S = {
     mass: 1,
     tension: 600,
     friction: 60
   },
-  S = {
+  p = {
     from: {
       transform: "translateY(40px) scale(0.9)",
       opacity: 0
@@ -33,7 +33,7 @@ let p = {
       transform: "translateY(0px) scale(1)",
       opacity: 1
     },
-    config: p
+    config: S
   },
   g = {
     from: {
@@ -42,7 +42,7 @@ let p = {
     to: {
       opacity: 1
     },
-    config: p
+    config: S
   };
 
 function I() {
@@ -85,21 +85,21 @@ t.default = s.memo(function(e) {
     onClick: n
   } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), R = s.useRef(null), O = (0, h.useDiscoveryGameApplicationId)({
     selectedGame: t
-  }), L = (0, _.useFakeDiscoveryUpsellClans)(O), y = (0, l.useSpring)({
+  }), L = (0, _.useFakeDiscoveryUpsellClans)(O), M = (0, l.useSpring)({
     ref: I,
-    ...S
-  }), M = (0, l.useSpring)({
+    ...p
+  }), y = (0, l.useSpring)({
     ref: T,
-    ...S
+    ...p
   }), P = (0, l.useSpring)({
     ref: A,
-    ...S
+    ...p
   }), x = (0, l.useSpring)({
     ref: N,
-    ...S
+    ...p
   }), D = (0, l.useSpring)({
     ref: v,
-    ...S
+    ...p
   }), b = (0, l.useSpring)({
     ref: R,
     from: {
@@ -110,7 +110,7 @@ t.default = s.memo(function(e) {
       transform: "translateY(0px)",
       opacity: 1
     },
-    config: p
+    config: S
   });
   (0, l.useChain)([I, T, A, N, v, R], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
     (0, d.trackClanUserInviteViewed)({
@@ -141,7 +141,7 @@ t.default = s.memo(function(e) {
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardInnerContainer,
-          style: g ? void 0 : M,
+          style: g ? void 0 : y,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[1],
             className: m.clanCardInnerLeft,
@@ -149,7 +149,7 @@ t.default = s.memo(function(e) {
           })
         }), (0, a.jsx)(l.animated.div, {
           className: m.clanCardCenterContainer,
-          style: g ? void 0 : y,
+          style: g ? void 0 : M,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[4],
             className: m.clanCardCenter,

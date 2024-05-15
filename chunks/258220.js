@@ -25,7 +25,7 @@ function _(e) {
   let {
     applicationId: n,
     ..._
-  } = e, [C, m] = s.useState(!1), [p] = (0, r.default)([n]), S = null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : "This Activity";
+  } = e, [C, m] = s.useState(!1), [S] = (0, r.default)([n]), p = null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : "This Activity";
   s.useEffect(() => {
     u.default.track(c.AnalyticEvents.OPEN_MODAL, {
       type: h
@@ -60,7 +60,7 @@ function _(e) {
         variant: "text-md/normal",
         className: E.__invalid_ratingBody,
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_BODY.format({
-          applicationName: S
+          applicationName: p
         })
       })
     }), (0, a.jsxs)(l.ModalFooter, {

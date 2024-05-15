@@ -28,8 +28,8 @@ t.default = e => {
     title: n,
     subtitle: C,
     guildsData: m,
-    analyticsContext: p,
-    theme: S,
+    analyticsContext: S,
+    theme: p,
     onViewGuild: g,
     fetchGuilds: I,
     onGuildCardSeen: T,
@@ -47,10 +47,10 @@ t.default = e => {
     } = (0, r.default)();
   if (null == m) return null;
   let {
-    guilds: y,
-    loading: M
-  } = m, P = null == y || 0 === y.length;
-  if (!M && P) return null;
+    guilds: M,
+    loading: y
+  } = m, P = null == M || 0 === M.length;
+  if (!y && P) return null;
   let x = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
@@ -63,19 +63,19 @@ t.default = e => {
       analyticsLocations: L
     });
     else {
-      let t = y.findIndex(t => t.id === e);
-      await g(e, t, p, N)
+      let t = M.findIndex(t => t.id === e);
+      await g(e, t, S, N)
     }
   };
-  if (M || null == y) {
+  if (y || null == M) {
     let e = [];
     for (let t = 0; t < O; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = y.slice(0, O).map(e => (0, a.jsx)(d.default, {
+  } else t = M.slice(0, O).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
     onView: x,
-    theme: S,
+    theme: p,
     onGuildCardSeen: T,
     onTagClick: v
   }, e.id));

@@ -19,7 +19,7 @@ t.default = e => {
     className: h
   } = e, [_, C] = s.useState(!1), {
     analyticsLocations: m
-  } = (0, d.default)(), p = s.useCallback(() => {
+  } = (0, d.default)(), S = s.useCallback(() => {
     (0, c.openUserProfileModal)({
       userId: t,
       sourceAnalyticsLocations: m,
@@ -27,7 +27,7 @@ t.default = e => {
         section: f.AnalyticsSections.FAMILY_CENTER
       }
     })
-  }, [t, m]), S = () => {
+  }, [t, m]), p = () => {
     C(!0)
   }, g = () => {
     C(!1)
@@ -47,9 +47,9 @@ t.default = e => {
           [E.last]: l,
           [E.active]: _
         }),
-        onMouseEnter: S,
+        onMouseEnter: p,
         onMouseLeave: g,
-        onClick: p,
+        onClick: S,
         ...e,
         children: n(_)
       })

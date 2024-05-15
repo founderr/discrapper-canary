@@ -2,8 +2,8 @@
 n.r(t), n("411104"), n("47120");
 var s = n("735250"),
   l = n("470079"),
-  a = n("539528"),
-  i = n("786876");
+  i = n("539528"),
+  a = n("786876");
 class r extends l.Component {
   render() {
     let {
@@ -11,7 +11,7 @@ class r extends l.Component {
       from: t,
       isNavLink: n,
       children: l,
-      tabIndex: a = 0,
+      tabIndex: i = 0,
       role: r,
       className: o
     } = this.props;
@@ -19,9 +19,9 @@ class r extends l.Component {
     let c = "string" == typeof e ? e : e.pathname,
       u = "string" == typeof e ? "" : e.hash,
       d = "string" == typeof e ? "" : e.search;
-    return n ? (0, s.jsx)(i.NavLink, {
+    return n ? (0, s.jsx)(a.NavLink, {
       className: o,
-      tabIndex: a,
+      tabIndex: i,
       onClick: this.handleOnClick,
       to: {
         pathname: c,
@@ -33,9 +33,9 @@ class r extends l.Component {
       },
       role: r,
       children: l
-    }) : (0, s.jsx)(i.Link, {
+    }) : (0, s.jsx)(a.Link, {
       className: o,
-      tabIndex: a,
+      tabIndex: i,
       onClick: this.handleOnClick,
       to: {
         pathname: c,
@@ -60,7 +60,7 @@ class r extends l.Component {
       } = this.props;
       if (null != n) n();
       else if (t) {
-        let t = "string" == typeof e ? (0, a.createLocation)(e, null, void 0, s.location) : e,
+        let t = "string" == typeof e ? (0, i.createLocation)(e, null, void 0, s.location) : e,
           n = s.createHref(t);
         window.location = n
       }
@@ -72,4 +72,4 @@ class r extends l.Component {
     }) : t[n] = s
   }
 }
-t.default = (0, i.withRouter)(r)
+t.default = (0, a.withRouter)(r)

@@ -23,8 +23,8 @@ var a, s, l = n("735250"),
   _ = n("501655"),
   C = n("192079"),
   m = n("427679"),
-  p = n("448206"),
-  S = n("496675"),
+  S = n("448206"),
+  p = n("496675"),
   g = n("938475"),
   I = n("808602"),
   T = n("305878"),
@@ -34,8 +34,8 @@ var a, s, l = n("735250"),
   R = n("393112"),
   O = n("170039"),
   L = n("602623"),
-  y = n("626135"),
-  M = n("823379"),
+  M = n("626135"),
+  y = n("823379"),
   P = n("15274"),
   x = n("924301"),
   D = n("504160"),
@@ -158,7 +158,7 @@ function Q(e) {
     className: K.joinButton,
     innerClassName: K.rsvpButton,
     onClick: function() {
-      (0, H.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, D.hideUpcomingEventNotice)(t.id), 1e3)), y.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
+      (0, H.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, D.hideUpcomingEventNotice)(t.id), 1e3)), M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
         guild_id: t.guild_id,
         notice_type: n
       })
@@ -196,7 +196,7 @@ function Z(e) {
     date: h
   });
   return i.useEffect(() => {
-    y.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+    M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
       notice_type: a,
       guild_id: n.guild_id
     })
@@ -217,7 +217,7 @@ function Z(e) {
         })
       }), (0, l.jsx)(o.Clickable, {
         onClick: () => {
-          y.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
+          M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: a,
             guild_id: n.guild_id
           }), (0, D.hideUpcomingEventNotice)(n.id)
@@ -359,7 +359,7 @@ function et(e) {
     channel: t,
     speakers: n,
     voiceType: a
-  } = e, s = t.getGuildId(), u = i.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([S.default], () => S.default.can(Y.Permissions.CONNECT, t)), c = (0, p.default)(t.id), f = W.default.Messages.JOIN;
+  } = e, s = t.getGuildId(), u = i.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([p.default], () => p.default.can(Y.Permissions.CONNECT, t)), c = (0, S.default)(t.id), f = W.default.Messages.JOIN;
   switch (a) {
     case 1:
       f = W.default.Messages.JOIN;
@@ -371,7 +371,7 @@ function et(e) {
       f = W.default.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
       break;
     default:
-      (0, M.assertNever)(a)
+      (0, y.assertNever)(a)
   }
   return null == s ? null : (0, l.jsxs)(l.Fragment, {
     children: [u.length > 0 ? (0, l.jsxs)("div", {

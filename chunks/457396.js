@@ -18,8 +18,8 @@ var i = n("924826"),
   _ = n("626135"),
   C = n("74538"),
   m = n("502087"),
-  p = n("647265"),
-  S = n("650032"),
+  S = n("647265"),
+  p = n("650032"),
   g = n("104494"),
   I = n("639119"),
   T = n("655525"),
@@ -29,8 +29,8 @@ var i = n("924826"),
   R = n("924540"),
   O = n("649765"),
   L = n("565626"),
-  y = n("701910"),
-  M = n("487980"),
+  M = n("701910"),
+  y = n("487980"),
   P = n("474936"),
   x = n("981631"),
   D = n("921944"),
@@ -55,28 +55,28 @@ let G = e => {
     z = (0, v.useIsEligibleForBogoPromotion)(),
     q = (0, L.default)(),
     Q = (0, A.useTenureRewardBadgeDescription)(),
-    Z = (0, M.useIsEligibleSenderForReferralProgramTabBadge)(j),
+    Z = (0, y.useIsEligibleSenderForReferralProgramTabBadge)(j),
     X = (0, r.useStateFromStores)([m.default], () => m.default.getCreatedAtOverride()),
     J = null != X ? X : null == B ? void 0 : B.createdAt,
     $ = s || null != Y || null != W || z || q || null != Q || H,
     {
       enabled: ee
-    } = S.ReferralProgramRecipient.useExperiment({
+    } = p.ReferralProgramRecipient.useExperiment({
       location: j
     }, {
       autoTrackExposure: !1
     }),
     et = ee && (null == Y ? void 0 : Y.trial_id) === P.PREMIUM_TIER_2_REFERRAL_TRIAL_ID,
-    en = (0, p.usePremiumMarketingTabDisplayTimingExperiment)({
+    en = (0, S.usePremiumMarketingTabDisplayTimingExperiment)({
       location: "NitroTabButton",
       showTabForOtherReasons: $
     });
   if (!($ = $ || null != B && null != J && Date.now() - J.getTime() > en)) return null;
   z ? (n = (0, l.jsx)(T.default, {
     isNitroTab: !0
-  }), a = 0) : null != Q ? (n = (0, l.jsx)(y.default, {
+  }), a = 0) : null != Q ? (n = (0, l.jsx)(M.default, {
     copy: Q
-  }), a = 1) : q ? (n = (0, l.jsx)(y.default, {}), a = 2) : null != W ? (n = (0, l.jsx)(R.PremiumDiscountOfferTabBadge, {
+  }), a = 1) : q ? (n = (0, l.jsx)(M.default, {}), a = 2) : null != W ? (n = (0, l.jsx)(R.PremiumDiscountOfferTabBadge, {
     userDiscount: W,
     isTabSelected: s,
     includesAmountOff: !1

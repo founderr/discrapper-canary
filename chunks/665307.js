@@ -18,8 +18,8 @@ var a, s = n("735250"),
   _ = n("287259"),
   C = n("404133"),
   m = n("785547"),
-  p = n("490983"),
-  S = n("799777"),
+  S = n("490983"),
+  p = n("799777"),
   g = n("285952"),
   I = n("366695"),
   T = n("366966"),
@@ -29,8 +29,8 @@ var a, s = n("735250"),
   R = n("931003"),
   O = n("626135"),
   L = n("780570"),
-  y = n("624138"),
-  M = n("645818"),
+  M = n("624138"),
+  y = n("645818"),
   P = n("981631"),
   x = n("689938"),
   D = n("638920");
@@ -43,8 +43,8 @@ function b(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let U = (0, y.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
-  j = (0, y.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
+  j = (0, M.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
   G = Object.freeze({
     [P.GameTableListKeys.PLATFORM]: "Platform",
     [P.GameTableListKeys.LAST_PLAYED]: "Last Played",
@@ -146,7 +146,7 @@ let U = (0, y.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
             item: e,
             icon: R.default,
             tooltip: x.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
-          }), (0, s.jsx)(M.default, {
+          }), (0, s.jsx)(y.default, {
             className: r()(D.settingIcon, {
               [D.hidden]: !e.supportsCloudSync
             }),
@@ -402,21 +402,21 @@ function H(e) {
       applicationViewItems: a,
       filterQuery: i,
       fetched: r
-    } = (0, u.useStateFromStoresObject)([p.default], () => ({
-      applicationViewItems: p.default.sortedFilteredLibraryApplicationViewItems,
-      filterQuery: p.default.applicationFilterQuery,
-      fetched: p.default.hasFetchedApplications
+    } = (0, u.useStateFromStoresObject)([S.default], () => ({
+      applicationViewItems: S.default.sortedFilteredLibraryApplicationViewItems,
+      filterQuery: S.default.applicationFilterQuery,
+      fetched: S.default.hasFetchedApplications
     })),
     {
       sortKey: d,
       sortDirection: c,
       activeRowKey: f,
       isNavigatingByKeyboard: E
-    } = (0, u.useStateFromStoresObject)([S.default], () => ({
-      sortKey: S.default.sortKey,
-      sortDirection: S.default.sortDirection,
-      activeRowKey: S.default.activeRowKey,
-      isNavigatingByKeyboard: S.default.isNavigatingByKeyboard
+    } = (0, u.useStateFromStoresObject)([p.default], () => ({
+      sortKey: p.default.sortKey,
+      sortDirection: p.default.sortDirection,
+      activeRowKey: p.default.activeRowKey,
+      isNavigatingByKeyboard: p.default.isNavigatingByKeyboard
     }));
   return (0, s.jsx)(F, {
     ...e,

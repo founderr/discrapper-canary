@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return S
   }
 });
 var a = n("735250");
@@ -21,7 +21,7 @@ var s = n("442837"),
   C = n("689938"),
   m = n("995858");
 
-function p() {
+function S() {
   let {
     analyticsLocations: e
   } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([f.default], () => f.default.hasConsented(_.Consents.PERSONALIZATION)) ? [] : [l.DismissibleContent.NOW_PLAYING_CONSENT_CARD], n = (0, E.useUID)();

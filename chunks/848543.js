@@ -19,8 +19,8 @@ var a = n("735250"),
   _ = n("294629"),
   C = n("131951"),
   m = n("459273"),
-  p = n("242291"),
-  S = n("792165"),
+  S = n("242291"),
+  p = n("792165"),
   g = n("603074"),
   I = n("981631"),
   T = n("921944"),
@@ -36,8 +36,8 @@ function v(e) {
     ...O
   } = e, {
     mute: L,
-    suppress: y
-  } = (0, _.default)(t), M = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), P = L || y || M, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, p.useSoundBoardDismissContentTypes)({
+    suppress: M
+  } = (0, _.default)(t), y = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), P = L || M || y, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: P
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: k
@@ -73,7 +73,7 @@ function v(e) {
         guildId: b,
         channel: t,
         onClose: n,
-        gridNotice: j === o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(S.CustomCallSoundUpsell, {
+        gridNotice: j === o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(p.CustomCallSoundUpsell, {
           onClose: n,
           markAsDismissed: G
         }),
@@ -125,8 +125,8 @@ function v(e) {
     children: (0, a.jsx)(d.Tooltip, {
       text: function() {
         if (L) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (y) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (y) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
         return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => Y(e)

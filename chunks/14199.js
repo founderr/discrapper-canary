@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return u
   }
 });
 var r = n("470079"),
@@ -18,7 +18,7 @@ var a = function(e) {
   },
   c = /(http|https):\/\/(www)?.+\/recaptcha/,
   s = ["sitekey", "theme", "size", "badge", "tabindex", "hl", "isolated"],
-  l = function(e) {
+  u = function(e) {
     function t() {
       for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
       return (t = e.call.apply(e, [this].concat(r)) || this).container = void 0, t.timer = void 0, t.state = {
@@ -139,7 +139,7 @@ var a = function(e) {
       })
     }, t
   }(r.Component);
-l.defaultProps = {
+u.defaultProps = {
   id: "",
   className: "g-recaptcha",
   theme: "light",

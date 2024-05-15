@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return M
   }
 }), n("47120");
 var a, s = n("735250"),
@@ -18,8 +18,8 @@ var a, s = n("735250"),
   _ = n("626135"),
   C = n("585483"),
   m = n("900849"),
-  p = n("878727"),
-  S = n("117496"),
+  S = n("878727"),
+  p = n("117496"),
   g = n("150192"),
   I = n("731455"),
   T = n("981631"),
@@ -107,7 +107,7 @@ class L extends(a = l.PureComponent) {
       isHandlingTagSearch: !1
     })), !t.isSearching && r && m.trackSearchStarted(n, E, c), e.mostRecentQuery !== i && this.setState({
       query: i,
-      searchId: (0, S.makeAnalyticsID)(),
+      searchId: (0, p.makeAnalyticsID)(),
       isHandlingTagSearch: !0
     })
   }
@@ -195,7 +195,7 @@ class L extends(a = l.PureComponent) {
     })
   }
   constructor(e) {
-    super(e), v(this, "_searchRef", l.createRef()), v(this, "canSearch", e => e.trim().length >= 2 && !(0, p.searchQueryContainsBannedWord)(e)), v(this, "doSearch", (e, t, n, a) => {
+    super(e), v(this, "_searchRef", l.createRef()), v(this, "canSearch", e => e.trim().length >= 2 && !(0, S.searchQueryContainsBannedWord)(e)), v(this, "doSearch", (e, t, n, a) => {
       var s;
       let {
         defaultLanguage: l,
@@ -207,7 +207,7 @@ class L extends(a = l.PureComponent) {
         approximate_member_count: m.MINIMUM_MEMBER_COUNT
       };
       a && f.getSearchResultsCount(r, u), this.setState({
-        searchId: (0, S.makeAnalyticsID)(),
+        searchId: (0, p.makeAnalyticsID)(),
         queryHasChanged: !1,
         isSearching: !0
       }), f.doAlgoliaSearch(r, {
@@ -272,7 +272,7 @@ class L extends(a = l.PureComponent) {
       var e;
       null === (e = this._searchRef.current) || void 0 === e || e.focus()
     }), this.state = {
-      searchId: (0, S.makeAnalyticsID)(),
+      searchId: (0, p.makeAnalyticsID)(),
       query: e.isSearchPage ? e.mostRecentQuery : "",
       queryHasChanged: !1,
       isSearching: !1,
@@ -283,7 +283,7 @@ class L extends(a = l.PureComponent) {
   }
 }
 
-function y(e) {
+function M(e) {
   let t = (0, d.useStateFromStores)([g.default], () => g.default.getDiscoveryCategories(), [], g.areDiscoveryCategoriesEqual),
     n = (0, d.useStateFromStores)([E.default], () => E.default.getTopCategoryCounts(e.mostRecentQuery));
   return (0, s.jsx)(L, {

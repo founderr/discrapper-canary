@@ -33,19 +33,19 @@ function C(e) {
     achievementId: n,
     unlocked: f,
     size: C = l.AvatarSizes.SIZE_40
-  } = e, m = (0, i.default)(), p = (0, c.getPoggermodeAchievementData)(n);
-  if (null == p) return null;
-  let S = (0, l.getAvatarSpecs)(C),
+  } = e, m = (0, i.default)(), S = (0, c.getPoggermodeAchievementData)(n);
+  if (null == S) return null;
+  let p = (0, l.getAvatarSpecs)(C),
     {
       name: g,
       rarity: I
-    } = p,
+    } = S,
     {
       color: T
     } = (0, c.getAchievementStyles)(I),
     A = (0, s.isThemeDark)(m) ? h : _,
-    N = (S.size - S.offset - 2 * S.stroke) * .8,
-    v = S.size - S.stroke,
+    N = (p.size - p.offset - 2 * p.stroke) * .8,
+    v = p.size - p.stroke,
     R = {
       width: .4 * N,
       height: .4 * N
@@ -53,8 +53,8 @@ function C(e) {
     O = {
       width: R.width + 1,
       height: R.height + 1,
-      right: S.stroke + 1,
-      bottom: S.stroke + 1,
+      right: p.stroke + 1,
+      bottom: p.stroke + 1,
       padding: 0
     };
   return (0, a.jsxs)("div", {
@@ -62,7 +62,7 @@ function C(e) {
     style: {
       width: v,
       height: v,
-      padding: S.stroke
+      padding: p.stroke
     },
     "aria-label": "".concat(null !== (t = g()) && void 0 !== t ? t : ""),
     children: [(0, a.jsx)("div", {

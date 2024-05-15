@@ -20,8 +20,8 @@ var s = n("442837"),
   _ = n("726745"),
   C = n("251423"),
   m = n("383832"),
-  p = n("981631"),
-  S = n("689938"),
+  S = n("981631"),
+  p = n("689938"),
   g = n("368110");
 
 function I() {
@@ -31,9 +31,9 @@ function I() {
       multiAccountUsers: n
     } = (0, C.useMultiAccountUsers)(),
     I = t => {
-      t !== (null == e ? void 0 : e.id) && (f.default.track(p.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+      t !== (null == e ? void 0 : e.id) && (f.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
         location: {
-          section: p.AnalyticsSections.PROFILE_POPOUT
+          section: S.AnalyticsSections.PROFILE_POPOUT
         }
       }), h.switchAccount(t))
     },
@@ -70,14 +70,14 @@ function I() {
                 children: f
               })]
             }), o && (0, a.jsx)(d.default, {
-              color: (0, i.getColor)(r ? p.Color.WHITE_500 : p.Color.BRAND_500),
-              backgroundColor: (0, i.getColor)(r ? p.Color.BRAND_500 : p.Color.WHITE_500),
+              color: (0, i.getColor)(r ? S.Color.WHITE_500 : S.Color.BRAND_500),
+              backgroundColor: (0, i.getColor)(r ? S.Color.BRAND_500 : S.Color.WHITE_500),
               width: 18,
               height: 18,
               className: g.activeIcon
             }), u && (0, a.jsx)(c.default, {
-              color: (0, i.getColor)(p.Color.RED_400),
-              backgroundColor: (0, i.getColor)(p.Color.WHITE_500),
+              color: (0, i.getColor)(S.Color.RED_400),
+              backgroundColor: (0, i.getColor)(S.Color.WHITE_500),
               width: 15,
               height: 15,
               className: g.activeIcon
@@ -92,7 +92,7 @@ function I() {
   return T.push((0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(l.MenuSeparator, {}), (0, a.jsx)(l.MenuItem, {
       id: "manage-accounts",
-      label: S.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
+      label: p.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
       action: m.default
     })]
   })), T

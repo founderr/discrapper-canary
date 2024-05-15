@@ -13,8 +13,8 @@ var a, s, l = n("735250"),
   _ = n("638880"),
   C = n("655922"),
   m = n("122810"),
-  p = n("833664"),
-  S = n("503438"),
+  S = n("833664"),
+  p = n("503438"),
   g = n("420660"),
   I = n("74433"),
   T = n("952561"),
@@ -24,8 +24,8 @@ var a, s, l = n("735250"),
   R = n("933557"),
   O = n("102172"),
   L = n("871118"),
-  y = n("849171"),
-  M = n("314897"),
+  M = n("849171"),
+  y = n("314897"),
   P = n("592125"),
   x = n("594174"),
   D = n("368874"),
@@ -91,7 +91,7 @@ class et extends i.Component {
     } = this.props, {
       timestamps: n
     } = t;
-    return null == n || !(0, p.default)(t) || (0, S.default)(t) ? null : J(e = (0, m.default)(t) ? (0, l.jsx)($, {
+    return null == n || !(0, S.default)(t) || (0, p.default)(t) ? null : J(e = (0, m.default)(t) ? (0, l.jsx)($, {
       timestamps: n
     }) : (0, l.jsx)(U.default, {
       start: n.start,
@@ -491,38 +491,38 @@ es.Header = ea, es.Body = e => {
       return d(t)
     })
   }, [f]);
-  let h = (0, u.useStateFromStoresArray)([x.default, M.default], () => Array.from(s).map(e => M.default.getId() === e ? null : x.default.getUser(e)).filter(V.isNotNullish)),
+  let h = (0, u.useStateFromStoresArray)([x.default, y.default], () => Array.from(s).map(e => y.default.getId() === e ? null : x.default.getUser(e)).filter(V.isNotNullish)),
     C = (0, E.useAnalyticsContext)(),
     {
       analyticsLocations: m
     } = (0, N.default)();
   if (null == f) return null;
-  let p = v.default.getApplication(f);
-  if (null == p) return null;
-  let S = null != t.created_at && t.created_at > 0 ? {
+  let S = v.default.getApplication(f);
+  if (null == S) return null;
+  let p = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    g = (0, H.getAssetImage)(p.id, o, 300);
+    g = (0, H.getAssetImage)(S.id, o, 300);
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
       children: [(0, l.jsx)(b.default, {
-        game: p,
+        game: S,
         size: b.default.Sizes.XSMALL,
         className: q.embeddedActivityIcon
       }), (0, l.jsx)("div", {
         className: q.embeddedActivityName,
         children: (0, l.jsx)(c.Text, {
           variant: "text-sm/semibold",
-          children: p.name
+          children: S.name
         })
-      }), null != S ? (0, l.jsx)("div", {
+      }), null != p ? (0, l.jsx)("div", {
         className: q.embeddedActivityTimeElapsed,
         children: (0, l.jsx)(c.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
           children: (0, l.jsx)($, {
-            timestamps: S
+            timestamps: p
           })
         })
       }) : null]
@@ -530,11 +530,11 @@ es.Header = ea, es.Body = e => {
       className: q.embeddedActivityPlayerContainer,
       children: [null != g ? (0, l.jsx)("img", {
         src: g,
-        alt: p.name,
+        alt: S.name,
         className: q.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {
         className: q.embeddedActivityImageOverlay,
-        children: [(0, l.jsx)(y.Avatars, {
+        children: [(0, l.jsx)(M.Avatars, {
           users: h,
           guildId: a,
           channelId: n.id

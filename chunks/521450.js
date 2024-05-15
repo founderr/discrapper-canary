@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("877453"),
   C = n("26290"),
   m = n("981631"),
-  p = n("930441"),
-  S = n("689938"),
+  S = n("930441"),
+  p = n("689938"),
   g = n("120762"),
   I = n("611273");
 t.default = () => {
@@ -32,14 +32,14 @@ t.default = () => {
     children: [(0, a.jsx)(d.Text, {
       variant: "eyebrow",
       color: "text-muted",
-      children: S.default.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
+      children: p.default.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
     }), (0, a.jsx)(d.FormSwitch, {
       className: i()(I.marginTop8, I.marginBottom20),
       value: e,
-      note: S.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
+      note: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
       onChange: h.FamilyCenterEnabled.updateSetting,
-      children: S.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
+      children: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
     }), e ? (0, a.jsx)(d.Card, {
       className: g.enableCard,
       type: d.Card.Types.CUSTOM,
@@ -50,7 +50,7 @@ t.default = () => {
           children: (0, a.jsx)(d.Text, {
             variant: "text-sm/semibold",
             color: "text-normal",
-            children: S.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
+            children: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
           })
         }), (0, a.jsx)(d.Clickable, {
           children: (0, a.jsx)(r.Link, {
@@ -61,7 +61,7 @@ t.default = () => {
                 scrollRestoration: !1
               }
             },
-            children: S.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
+            children: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
           })
         }), (0, a.jsx)(C.IconBadge, {
           icon: _.default,
@@ -71,13 +71,13 @@ t.default = () => {
       })
     }) : null, (0, a.jsx)(d.FormSwitch, {
       className: i()(I.marginTop20, I.marginBottom20),
-      value: !!t[p.EmailCategories.FAMILY_CENTER_DIGEST],
-      note: S.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
+      value: !!t[S.EmailCategories.FAMILY_CENTER_DIGEST],
+      note: p.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
       onChange: function(e) {
-        (0, f.updateEmailSetting)(p.EmailCategories.FAMILY_CENTER_DIGEST, e)
+        (0, f.updateEmailSetting)(S.EmailCategories.FAMILY_CENTER_DIGEST, e)
       },
-      children: S.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
+      children: p.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
     })]
   })
 }

@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("895328"),
   C = n("568671"),
   m = n("419821"),
-  p = n("367515"),
-  S = n("250285"),
+  S = n("367515"),
+  p = n("250285"),
   g = n("292352"),
   I = n("689938"),
   T = n("280590"),
@@ -135,12 +135,12 @@ function L(e) {
       row: n,
       listIndex: s
     } = e, i = l[n], r = s === l.length;
-    return null == i ? null : (0, a.jsx)(S.default, {
+    return null == i ? null : (0, a.jsx)(p.default, {
       userId: i.id,
       isLast: r,
       children: () => t === g.UserLinkStatus.ACTIVE ? (0, a.jsx)(m.UserLinkAcceptedRequestRow, {
         user: i
-      }) : (0, a.jsx)(p.UserLinkPendingRequestRow, {
+      }) : (0, a.jsx)(S.UserLinkPendingRequestRow, {
         user: i
       })
     }, i.id)
@@ -186,7 +186,7 @@ function L(e) {
     })
   })
 }
-let y = () => {
+let M = () => {
     let e = (0, E.default)(),
       t = (0, h.useUserForLinkStatus)(g.UserLinkStatus.ACTIVE),
       n = e ? g.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : g.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
@@ -216,7 +216,7 @@ let y = () => {
       })
     })
   },
-  M = () => {
+  y = () => {
     let e = (0, h.useHasMaxConnections)(),
       t = (0, E.default)() ? g.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : g.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
       n = (0, c.useAgeSpecificText)(I.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, E.default)();
   return (0, a.jsxs)("div", {
     className: T.container,
-    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(O, {}), (0, a.jsx)(y, {}), (0, a.jsx)(x, {}), (0, a.jsx)(M, {}), (0, a.jsx)(P, {})]
+    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(O, {}), (0, a.jsx)(M, {}), (0, a.jsx)(x, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {})]
   })
 }

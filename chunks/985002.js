@@ -14,7 +14,7 @@ function o(e) {
   let {
     onError: t,
     onSuccess: n
-  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, m] = a.useState(!1), [p, S] = a.useState(!1), [g, I] = a.useState(!1), [T, A] = a.useState(!1), N = o || d || f || h || p || T, v = a.useCallback(async e => {
+  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, m] = a.useState(!1), [S, p] = a.useState(!1), [g, I] = a.useState(!1), [T, A] = a.useState(!1), N = o || d || f || h || S || T, v = a.useCallback(async e => {
     if (!N) {
       u(!0);
       try {
@@ -62,7 +62,7 @@ function o(e) {
         _(!1)
       }
     }
-  }, [N, t, n]), y = a.useCallback(async () => {
+  }, [N, t, n]), M = a.useCallback(async () => {
     if (!C) {
       m(!0);
       try {
@@ -74,7 +74,7 @@ function o(e) {
         m(!1)
       }
     }
-  }, [C, t, n]), M = a.useCallback(async e => {
+  }, [C, t, n]), y = a.useCallback(async e => {
     if (!g) {
       I(!0);
       try {
@@ -87,25 +87,25 @@ function o(e) {
       }
     }
   }, [g, t, n]), P = a.useCallback(async (e, a) => {
-    if (!p) {
-      S(!0);
+    if (!S) {
+      p(!0);
       try {
         await l.default.requestLink(e, a), null == n || n()
       } catch (n) {
         let e = new s.APIError(n);
         null == t || t(e)
       } finally {
-        S(!1)
+        p(!1)
       }
     }
-  }, [p, t, n]);
+  }, [S, t, n]);
   return {
     acceptLinkRequest: v,
     declineLinkRequest: R,
     disconnectLinkRequest: O,
     cancelLinkRequest: L,
-    selectTeenUser: M,
-    getLinkCode: y,
+    selectTeenUser: y,
+    getLinkCode: M,
     requestLink: P,
     loadMore: a.useCallback(async e => {
       let n = i.default.getActionsForDisplayType(e),
@@ -130,7 +130,7 @@ function o(e) {
     isCancelLoading: h,
     isGetLinkCodeLoading: C,
     isSelectTeenUserLoading: g,
-    isRequestingLink: p,
+    isRequestingLink: S,
     isMoreLoading: T
   }
 }

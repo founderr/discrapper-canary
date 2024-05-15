@@ -19,14 +19,14 @@ var a = n("470079"),
   _ = n("252618"),
   C = n("981631"),
   m = n("689938");
-let p = new Set(["Blink", "Gecko", "WebKit"]),
-  S = C.NOOP;
-if (E.isPlatformEmbedded) S = e => h.default.setBadge(e);
-else if (p.has(r().layout)) {
+let S = new Set(["Blink", "Gecko", "WebKit"]),
+  p = C.NOOP;
+if (E.isPlatformEmbedded) p = e => h.default.setBadge(e);
+else if (S.has(r().layout)) {
   let e = new(l())({
     animation: "none"
   });
-  S = t => {
+  p = t => {
     try {
       (0, _.setPageTitleNotificationCount)(t), e.badge(-1 === t ? "•" : t)
     } catch (e) {}
@@ -54,6 +54,6 @@ function g() {
       null == t || t(), n()
     }
   }, [e]), a.useEffect(() => {
-    S(t)
-  }, [t]), a.useEffect(() => () => S(0), [])
+    p(t)
+  }, [t]), a.useEffect(() => () => p(0), [])
 }

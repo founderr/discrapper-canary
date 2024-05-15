@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return R
+    return I
   }
 }), r("47120");
 var a = r("735250"),
@@ -23,11 +23,11 @@ var a = r("735250"),
   x = r("257785"),
   k = r("484036"),
   v = r("681619"),
-  j = r("621060"),
-  C = r("689938"),
+  C = r("621060"),
+  j = r("689938"),
   S = r("457501"),
-  w = r("277513");
-let T = [{
+  T = r("277513");
+let N = [{
   key: "event",
   cellClassName: S.eventColumn,
   render(e) {
@@ -47,7 +47,7 @@ let T = [{
   }
 }];
 
-function N(e) {
+function w(e) {
   let {
     children: t
   } = e;
@@ -59,7 +59,7 @@ function N(e) {
   })
 }
 
-function L(e) {
+function E(e) {
   let {
     name: t,
     children: r
@@ -74,7 +74,7 @@ function L(e) {
     })]
   })
 }
-let E = [{
+let L = [{
     id: "details",
     name: "Details",
     render: e => {
@@ -88,7 +88,7 @@ let E = [{
       } = e, o = h.default.getUser(l), c = s()(i);
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(g.default, {
-          className: n()(w.headerBar, S.subPanelHeaderBar),
+          className: n()(T.headerBar, S.subPanelHeaderBar),
           children: [(0, a.jsx)(g.default.Icon, {
             icon: m.default,
             tooltip: t
@@ -115,10 +115,10 @@ let E = [{
               children: l
             })
           })]
-        }), (0, a.jsx)(N, {
+        }), (0, a.jsx)(w, {
           children: Object.entries(r).map(e => {
             let [t, r] = e;
-            return (0, a.jsx)(L, {
+            return (0, a.jsx)(E, {
               name: "".concat(t, ":"),
               children: null != r ? (0, a.jsx)("code", {
                 children: JSON.stringify(r)
@@ -159,7 +159,7 @@ let E = [{
     }
   };
 
-function R() {
+function I() {
   let e = i.useRef(null),
     t = (0, c.useStateFromStores)([y.default], () => y.default.loggedEvents),
     [r, l] = i.useState(Object.keys(_)),
@@ -173,12 +173,12 @@ function R() {
     {
       TabBar: m,
       renderSelectedTab: g
-    } = (0, j.default)({
-      tabs: E
+    } = (0, C.default)({
+      tabs: L
     }, []);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: n()(w.panel, S.panel),
+    className: n()(T.panel, S.panel),
     children: [(0, a.jsxs)("div", {
       className: S.toolbar,
       children: [(0, a.jsx)(d.Button, {
@@ -187,9 +187,9 @@ function R() {
         size: d.Button.Sizes.ICON,
         onClick: b.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
-          title: C.default.Messages.CLEAR,
+          title: j.default.Messages.CLEAR,
           children: (0, a.jsx)(p.default, {
-            "aria-label": C.default.Messages.CLEAR
+            "aria-label": j.default.Messages.CLEAR
           })
         })
       }), (0, a.jsx)("div", {
@@ -211,7 +211,7 @@ function R() {
     }), (0, a.jsx)(d.ScrollerThin, {
       className: S.tableContainer,
       children: (0, a.jsx)(v.default, {
-        columns: T,
+        columns: N,
         data: o,
         selectedRowKey: s,
         onClickRow: u

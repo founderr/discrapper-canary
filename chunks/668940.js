@@ -16,7 +16,7 @@ var s = n("442837"),
   _ = n("878241"),
   C = n("731455"),
   m = n("689938");
-let p = e => {
+let S = e => {
     switch (e) {
       case C.CategoryId.Activity:
         return C.CategoryIcons.Activity;
@@ -32,7 +32,7 @@ let p = e => {
         return C.CategoryIcons.Discover
     }
   },
-  S = () => {
+  p = () => {
     let {
       currentCategoryId: e,
       isViewingSearchResults: t
@@ -41,7 +41,7 @@ let p = e => {
       isViewingSearchResults: d.default.getMostRecentQuery().length > 0
     })), n = (0, s.useStateFromStores)([c.default], () => c.default.getDiscoveryCategories(), [], c.areDiscoveryCategoriesEqual), r = null == n ? void 0 : n.map(e => ({
       ...e,
-      icon: p(e.categoryId)
+      icon: S(e.categoryId)
     })), h = e => {
       (0, i.selectCategory)(e, !0), u.default.closeSidebar(), t && (0, i.clearSearch)()
     };
@@ -67,5 +67,5 @@ t.default = function() {
     {
       clanDiscoveryEnabled: t
     } = (0, r.useClanPilotExperiment)("guild_discovery_sidebar");
-  return e || t ? (0, a.jsx)(h.default, {}) : (0, a.jsx)(S, {})
+  return e || t ? (0, a.jsx)(h.default, {}) : (0, a.jsx)(p, {})
 }

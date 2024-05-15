@@ -17,7 +17,7 @@ var s = n("481060"),
   C = n("318199"),
   m = n("474936");
 
-function p(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -25,7 +25,7 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = "PremiumServerDriveAnnouncementModal";
+let p = "PremiumServerDriveAnnouncementModal";
 class g extends i.default {
   _initialize() {
     l.default.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), l.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
@@ -34,12 +34,12 @@ class g extends i.default {
     l.default.unsubscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), l.default.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
   constructor(...e) {
-    super(...e), p(this, "maybeOpenServerDriveAnnouncementModal", (e, t) => {
+    super(...e), S(this, "maybeOpenServerDriveAnnouncementModal", (e, t) => {
       let l = (0, C.extractAnnouncementModalContent)({
         content: e,
         isPreview: t
       });
-      return null != l && ((0, s.closeModal)(S), (0, s.openModalLazy)(async () => {
+      return null != l && ((0, s.closeModal)(p), (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.resolve().then(n.bind(n, "318199"));
@@ -48,14 +48,14 @@ class g extends i.default {
           properties: l
         })
       }, {
-        modalKey: S
+        modalKey: p
       }), !0)
-    }), p(this, "handlePreview", e => {
+    }), S(this, "handlePreview", e => {
       let {
         properties: t
       } = e;
       this.maybeOpenServerDriveAnnouncementModal(t, !0)
-    }), p(this, "getOfferFromStore", () => {
+    }), S(this, "getOfferFromStore", () => {
       let e = r.default.getCurrentUser();
       if ((0, u.isPremium)(e)) return {};
       let t = [(0, m.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID), (0, m.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID), (0, m.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID), (0, m.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID)].map(e => o.default.getUserDiscountOffer(e)).filter(e => null != e && !(0, f.hasUserDiscountExpired)(e)).shift();
@@ -66,7 +66,7 @@ class g extends i.default {
       return null != n ? {
         userTrialOffer: n
       } : {}
-    }), p(this, "mayShowAnnouncementModal", async () => {
+    }), S(this, "mayShowAnnouncementModal", async () => {
       if (await (0, _.maybeFetchActiveBogoPromotion)(), !d.ProcessArgs.isDisallowPopupsSet()) {
         if (!(0, s.hasAnyModalOpen)() && c.default.getCurrentConfig({
             location: "OfferAnnouncementManager"

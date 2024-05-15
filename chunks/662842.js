@@ -17,8 +17,8 @@ var a, s, l = n("735250"),
   _ = n("15274"),
   C = n("924301"),
   m = n("504160"),
-  p = n("151864"),
-  S = n("725436"),
+  S = n("151864"),
+  p = n("725436"),
   g = n("497656"),
   I = n("554747"),
   T = n("230900"),
@@ -28,8 +28,8 @@ var a, s, l = n("735250"),
   R = n("565799"),
   O = n("501655"),
   L = n("427679"),
-  y = n("448206"),
-  M = n("484459"),
+  M = n("448206"),
+  y = n("484459"),
   P = n("103575"),
   x = n("496675"),
   D = n("594174"),
@@ -52,14 +52,14 @@ function Y(e) {
   } = e, a = (0, g.useActiveEventOrStageInstanceChannel)(t.id), s = (0, I.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: Y,
     isEventNoticeHidden: W
-  } = (0, u.useStateFromStoresObject)([p.default], () => ({
-    isStageNoticeHidden: p.default.isLiveChannelNoticeHidden({
+  } = (0, u.useStateFromStoresObject)([S.default], () => ({
+    isStageNoticeHidden: S.default.isLiveChannelNoticeHidden({
       stageId: null == r ? void 0 : r.id
     }),
-    isEventNoticeHidden: p.default.isLiveChannelNoticeHidden({
+    isEventNoticeHidden: S.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([x.default], () => x.default.can(B.Permissions.CONNECT, a)), Z = (0, y.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
+  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([x.default], () => x.default.can(B.Permissions.CONNECT, a)), Z = (0, M.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
   i.useEffect(() => {
     null != X && (0, f.getUser)(X)
   }, [X]);
@@ -86,7 +86,7 @@ function Y(e) {
       isEventNoticeHidden: d,
       isStageNoticeHidden: f,
       isStudyRoomNotice: E
-    } = e, _ = null != n && null != a && !f, p = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
+    } = e, _ = null != n && null != a && !f, S = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
     if (E && null != a) {
       let e = (0, h.getChannelIconComponent)(a);
       return {
@@ -175,11 +175,11 @@ function Y(e) {
         if (null == e) return {
           noticeType: null
         };
-        let n = C.default.getUserCount(t.id, p);
+        let n = C.default.getUserCount(t.id, S);
         return {
           noticeType: 1,
           title: t.name,
-          location: (0, S.guildEventDetailsParser)(e, !0),
+          location: (0, p.guildEventDetailsParser)(e, !0),
           locationIcon: (0, l.jsx)(G.default, {
             width: 16,
             height: 16,
@@ -207,7 +207,7 @@ function Y(e) {
         }
       } else if (t.entity_type === F.GuildScheduledEventEntityTypes.VOICE && null != a) {
         let e = (0, h.getChannelIconComponent)(a),
-          n = C.default.getUserCount(t.id, p);
+          n = C.default.getUserCount(t.id, S);
         return {
           noticeType: 2,
           title: t.name,
@@ -278,7 +278,7 @@ function Y(e) {
     }), (el.length > 0 || null != ei) && (0, l.jsxs)("div", {
       className: V.participants,
       children: [el.map(e => (0, l.jsx)(c.Popout, {
-        preload: () => (0, M.maybeFetchUserProfileForPopout)(e, {
+        preload: () => (0, y.maybeFetchUserProfileForPopout)(e, {
           guildId: t.id
         }),
         renderPopout: n => (0, l.jsx)(P.default, {

@@ -29,11 +29,11 @@ t.default = function(e) {
         guildId: t.id
       })
     })
-  }, [l, t.id]), p = s.useCallback(() => {
+  }, [l, t.id]), S = s.useCallback(() => {
     null != l && (0, f.dismissSignUp)(l.key, l.dismissibleContent)
   }, [l]);
   if (null == l) return null;
-  let S = "url(".concat(l.backgroundAssetUrl, ") black top / cover no-repeat");
+  let p = "url(".concat(l.backgroundAssetUrl, ") black top / cover no-repeat");
   return (0, a.jsx)(o.ThemeContextProvider, {
     theme: h.ThemeTypes.DARK,
     children: (0, a.jsx)("div", {
@@ -41,7 +41,7 @@ t.default = function(e) {
       children: (0, a.jsxs)("div", {
         className: C.card,
         style: {
-          background: S
+          background: p
         },
         children: [(0, a.jsxs)("div", {
           className: C.eyebrow,
@@ -69,7 +69,7 @@ t.default = function(e) {
         }), (0, a.jsx)("div", {
           className: C.dismiss,
           children: (0, a.jsx)(o.Clickable, {
-            onClick: p,
+            onClick: S,
             children: (0, a.jsx)(d.default, {
               height: 16,
               width: 16,

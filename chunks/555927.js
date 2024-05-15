@@ -134,7 +134,7 @@ function f(e) {
         })
       }, n)
     }),
-    p = h.map(e => e.id);
+    S = h.map(e => e.id);
   return [...m, (0, a.jsx)(l.MenuGroup, {
     label: "".concat(d.default.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, " - ").concat(h.length),
     children: c({
@@ -142,7 +142,7 @@ function f(e) {
         let {
           user: t
         } = e;
-        return p.includes(t.id)
+        return S.includes(t.id)
       }),
       otherMembers: h.filter(e => !u.has(e.id)),
       totalMembers: h.length,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return p
   }
 }), n("653041"), n("47120");
 var a = n("735250");
@@ -20,13 +20,13 @@ var s = n("287734"),
   _ = n("358924"),
   C = n("868854"),
   m = n("817915"),
-  p = n("981631");
+  S = n("981631");
 
-function S(e) {
+function p(e) {
   let {
     party: t,
     onChannelContextMenu: n,
-    quest: S
+    quest: p
   } = e, g = (0, C.useNowPlayingVisible)(), {
     voiceChannels: I,
     currentActivities: T,
@@ -107,23 +107,23 @@ function S(e) {
     var n, s, l, f, h, C, g, N, R;
     let {
       activity: L,
-      game: y,
-      playingMembers: M,
+      game: M,
+      playingMembers: y,
       activityUser: P
     } = e;
     if (null == L || null == L.type) return null;
-    if (T.length > 1 && L.type === p.ActivityTypes.PLAYING && !(0, i.default)(L) && null != y) O((0, a.jsx)(_.default.GameSection, {
-      icon: y.getIconURL(m.ICON_SIZE),
-      name: y.name,
+    if (T.length > 1 && L.type === S.ActivityTypes.PLAYING && !(0, i.default)(L) && null != M) O((0, a.jsx)(_.default.GameSection, {
+      icon: M.getIconURL(m.ICON_SIZE),
+      name: M.name,
       partySize: {
-        knownSize: M.length,
+        knownSize: y.length,
         unknownSize: 0,
-        totalSize: M.length
+        totalSize: y.length
       },
-      members: M
+      members: y
     }, "game-".concat(null !== (n = L.session_id) && void 0 !== n ? n : t, "-").concat(null !== (s = L.application_id) && void 0 !== s ? s : t)));
     else if ((0, r.default)(L)) {
-      let e = new Set(M.map(e => e.id)),
+      let e = new Set(y.map(e => e.id)),
         t = null === (l = I.find(e => null != e)) || void 0 === l ? void 0 : l.channel;
       null != t && O((0, a.jsx)(_.default.EmbeddedActivitySection, {
         activity: L,
@@ -131,13 +131,13 @@ function S(e) {
         channel: t,
         guildId: t.guild_id
       }, "embedded-activity-".concat(L.application_id)))
-    } else if ((null != L.assets || (0, i.default)(L)) && L.type === p.ActivityTypes.PLAYING) O((0, a.jsx)(_.default.RichPresenceSection, {
+    } else if ((null != L.assets || (0, i.default)(L)) && L.type === S.ActivityTypes.PLAYING) O((0, a.jsx)(_.default.RichPresenceSection, {
       activity: L,
       getAssetImage: E.getAssetImage
     }, "rich-presence-".concat(null !== (f = L.session_id) && void 0 !== f ? f : t, "-").concat(P.id)));
     else if ((0, d.default)(L)) {
       let e = I.length > 0 && I[0].members.length > 1,
-        n = M.length > 1;
+        n = y.length > 1;
       O((0, a.jsx)(_.default.TwitchSection, {
         guildId: null == v ? void 0 : v.id,
         activity: L,
@@ -148,21 +148,21 @@ function S(e) {
       activity: L,
       isSolo: 1 === A.length,
       partySize: {
-        knownSize: M.length,
+        knownSize: y.length,
         unknownSize: 0,
-        totalSize: M.length
+        totalSize: y.length
       },
       getAssetImage: E.getAssetImage,
-      members: M
-    }, "spotify-".concat(null !== (C = L.session_id) && void 0 !== C ? C : t, "-").concat(P.id))) : (null != L.assets || (0, i.default)(L)) && L.type === p.ActivityTypes.LISTENING ? O((0, a.jsx)(_.default.RichPresenceSection, {
+      members: y
+    }, "spotify-".concat(null !== (C = L.session_id) && void 0 !== C ? C : t, "-").concat(P.id))) : (null != L.assets || (0, i.default)(L)) && L.type === S.ActivityTypes.LISTENING ? O((0, a.jsx)(_.default.RichPresenceSection, {
       activity: L,
       getAssetImage: E.getAssetImage
     }, "rich-presence-".concat(null !== (g = L.session_id) && void 0 !== g ? g : t, "-").concat(P.id))) : (0, u.default)(L) && O((0, a.jsx)(_.default.XboxSection, {
-      title: y.name
+      title: M.name
     }, "xbox-".concat(null !== (N = L.session_id) && void 0 !== N ? N : t)));
-    null != S && null != y && y.id === S.config.applicationId && O((0, a.jsx)(c.default, {
-      quest: S
-    }, "quest-".concat(S.id, "-").concat(null !== (R = L.session_id) && void 0 !== R ? R : t)))
+    null != p && null != M && M.id === p.config.applicationId && O((0, a.jsx)(c.default, {
+      quest: p
+    }, "quest-".concat(p.id, "-").concat(null !== (R = L.session_id) && void 0 !== R ? R : t)))
   }), R.length > 0 ? (0, a.jsx)(_.default.Body, {
     children: R
   }) : null

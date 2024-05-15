@@ -15,8 +15,8 @@ var a = n("735250"),
   _ = n("51025"),
   C = n("785547"),
   m = n("730749"),
-  p = n("112724"),
-  S = n("812206"),
+  S = n("112724"),
+  p = n("812206"),
   g = n("44315"),
   I = n("210887"),
   T = n("283595"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("285952"),
   O = n("366695"),
   L = n("366966"),
-  y = n("151011"),
-  M = n("774832"),
+  M = n("151011"),
+  y = n("774832"),
   P = n("465670"),
   x = n("786048"),
   D = n("897353"),
@@ -483,7 +483,7 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: M.default,
+      icon: y.default,
       tooltip: w.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
       onClick: () => _.moveUp(t.applicationId, t.branchId)
     })
@@ -587,7 +587,7 @@ class en extends s.PureComponent {
           color: k.Color.BLUE_345,
           animate: s
         })]
-      }), (0, a.jsx)(y.default, {
+      }), (0, a.jsx)(M.default, {
         hasHeader: !1,
         columns: et,
         data: e,
@@ -649,10 +649,10 @@ function ea(e, t, n, a) {
     }), e
   }, [])
 }
-t.default = (0, p.default)(u.default.connectStores([S.default, A.default, N.default, I.default, v.default], () => {
-  let e = ea(N.default.activeItems, !1, S.default, A.default);
+t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, I.default, v.default], () => {
+  let e = ea(N.default.activeItems, !1, p.default, A.default);
   return {
-    applications: [...e, ...ea(N.default.finishedItems, !0, S.default, A.default)],
+    applications: [...e, ...ea(N.default.finishedItems, !0, p.default, A.default)],
     paused: N.default.paused,
     isFocused: v.default.isFocused(),
     theme: I.default.theme

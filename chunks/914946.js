@@ -66,8 +66,8 @@ var a, s = n("729594"),
   _ = n("592125"),
   C = n("430824"),
   m = n("131951"),
-  p = n("375954"),
-  S = n("158776"),
+  S = n("375954"),
+  p = n("158776"),
   g = n("594174"),
   I = n("979651"),
   T = n("70956"),
@@ -77,15 +77,15 @@ var a, s = n("729594"),
   R = n("863141"),
   O = n("186901"),
   L = n("981631");
-let y = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
-  M = function() {
-    let e = y.split(":")[0];
+let M = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
+  y = function() {
+    let e = M.split(":")[0];
     if (!e.includes(".")) return e;
     let t = e.split("."),
       n = t[t.length - 1];
     return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
   }(),
-  P = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(M), "|discordapp.com|discord.com)$")),
+  P = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(y), "|discordapp.com|discord.com)$")),
   x = 1 * T.default.Millis.MINUTE,
   D = {};
 
@@ -106,13 +106,13 @@ function G(e, t) {
   let n = [],
     a = e.getGuildId();
   return ![L.ChannelTypes.GUILD_CATEGORY, ...(0, E.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
-    p.default.whenReady(e.id, () => t()), o.default.fetchMessages({
+    S.default.whenReady(e.id, () => t()), o.default.fetchMessages({
       channelId: e.id,
       limit: L.MAX_MESSAGES_PER_CHANNEL
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = (!e.isNSFW() || (null === (n = g.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? p.default.getMessages(e.id).toArray().map(k) : [],
+    let s = (!e.isNSFW() || (null === (n = g.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(k) : [],
       l = Object.values(I.default.getVoiceStatesForChannel(e.id)).map(t => w(a, e.id, t));
     return {
       id: e.id,
@@ -189,8 +189,8 @@ function B(e, t, n) {
     type: e,
     user: null != a ? (0, R.default)(a) : null,
     presence: {
-      status: S.default.getStatus(t),
-      activity: null != n ? S.default.getApplicationActivity(t, n) : S.default.getPrimaryActivity(t)
+      status: p.default.getStatus(t),
+      activity: null != n ? p.default.getApplicationActivity(t, n) : p.default.getPrimaryActivity(t)
     }
   }
 }
