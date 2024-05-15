@@ -329,7 +329,7 @@ function J(e) {
                 verified: !0
               }) : null
             })
-          }), es ? (0, l.jsx)(Q, {}) : null, !eg && (0, l.jsx)(X, {
+          }), es ? (0, l.jsx)(Q, {}) : null, (0, l.jsx)(X, {
             "aria-label": eC ? K.default.Messages.LEAVE_GROUP_DM : K.default.Messages.CLOSE_DM,
             onClick: eC ? eh : eo,
             onMouseDown: ed
