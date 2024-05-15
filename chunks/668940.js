@@ -61,7 +61,9 @@ let p = e => {
     })
   };
 t.default = function() {
-  let e = (0, _.useGuildsEligibleForClan)("guild_discovery_sidebar", !0).length > 0,
+  let e = (0, _.useGuildsEligibleForClan)({
+      location: "guild_discovery_sidebar"
+    }).length > 0,
     {
       clanDiscoveryEnabled: t
     } = (0, r.useClanPilotExperiment)("guild_discovery_sidebar");

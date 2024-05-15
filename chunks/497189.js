@@ -197,7 +197,11 @@ t.default = s.memo(function(e) {
     }),
     {
       defaultGameId: D
-    } = (0, g.useClanPrepilotExperiment)(d, "ClanDiscoveryAdminUpsell", !1);
+    } = (0, g.useClanPrepilotExperimentForGuild)({
+      guild: d,
+      location: "ClanDiscoveryAdminUpsell",
+      includeConverted: !1
+    });
   s.useEffect(() => {
     let e = D === y.VALORANT_ID ? R.ClanDiscoveryGame.VALORANT : D === y.GENSHIN_ID ? R.ClanDiscoveryGame.GENSHIN : void 0;
     null != e && E !== D && R.useClanDiscoveryUIStore.getState().setGame(e)

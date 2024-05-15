@@ -16,6 +16,10 @@ function o(e, t) {
   let d = null != (o = c) && o.hasFeature(s.GuildFeatures.CLAN) ? o.hasFeature(s.GuildFeatures.CLAN_PILOT_VALORANT) ? l.VALORANT_ID : o.hasFeature(s.GuildFeatures.CLAN_PILOT_GENSHIN) ? l.GENSHIN_ID : null : null,
     {
       defaultGameId: u
-    } = (0, i.useClanPrepilotExperiment)(c, t);
+    } = (0, i.useClanPrepilotExperimentForGuild)({
+      guild: c,
+      location: t,
+      includeConverted: !1
+    });
   return null !== (a = null != d ? d : u) && void 0 !== a ? a : l.GENSHIN_ID
 }

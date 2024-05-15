@@ -95,7 +95,9 @@ function T() {
 
 function A() {
   let e = (0, h.useClanDiscoveryUIStore)(e => e.game, r.default),
-    t = (0, p.useGuildsEligibleForClan)("ClanDiscoveryAdminContainer", !0),
+    t = (0, p.useGuildsEligibleForClan)({
+      location: "ClanDiscoveryAdminContainer"
+    }),
     n = t.length > 0,
     i = s.useMemo(() => t.filter(e => !e.hasFeature(S.GuildFeatures.CLAN)), [t]),
     {

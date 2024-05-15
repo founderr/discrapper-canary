@@ -41,9 +41,16 @@ function b(e) {
     guild: n
   } = e, [E, C] = s.useState(null !== (t = r.Storage.get(y.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), p = e => {
     r.Storage.set(y.LAST_HIDDEN_CHANNEL_NOTICE, e), C(e)
-  }, S = (0, c.useIsGuildEligibleForClan)(n.id, "ChannelNoticesGuard"), {
+  }, S = (0, c.useIsGuildEligibleForClanConversion)({
+    guildId: n.id,
+    location: "ChannelNoticesGuard"
+  }), {
     defaultGameId: g
-  } = (0, o.useClanPrepilotExperiment)(n, "ChannelNoticesGuard_2"), I = (0, i.useStateFromStoresArray)(y.CHANNEL_NOTICE_STORES, () => y.CHANNEL_NOTICES.filter(e => {
+  } = (0, o.useClanPrepilotExperimentForGuild)({
+    guild: n,
+    location: "ChannelNoticesGuard_2",
+    includeConverted: !1
+  }), I = (0, i.useStateFromStoresArray)(y.CHANNEL_NOTICE_STORES, () => y.CHANNEL_NOTICES.filter(e => {
     let {
       type: t,
       store: a

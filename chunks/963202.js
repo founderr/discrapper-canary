@@ -1,31 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
-  useAnyClanPrepilotExperiment: function() {
-    return E
-  },
-  useAnyClanPrepilotExperimentEnabled: function() {
-    return T
-  },
   useClanGeneralExperiment: function() {
-    return N
+    return p
   },
   useClanPilotExperiment: function() {
-    return A
+    return m
   },
   useClanPrePilotApplicationExperiment: function() {
-    return u
-  },
-  useClanPrepilotExperiment: function() {
-    return I
+    return c
   },
   useClanPrepilotExperimentDefaultGameId: function() {
+    return S
+  },
+  useClanPrepilotExperimentForAllGuilds: function() {
+    return T
+  },
+  useClanPrepilotExperimentForGuild: function() {
     return f
   }
 }), n("653041");
-var i = n("818083"),
-  r = n("308083"),
-  a = n("981631");
-let s = (0, i.createExperiment)({
+var i = n("442837"),
+  r = n("818083"),
+  a = n("430824"),
+  s = n("496675"),
+  o = n("308083"),
+  l = n("981631");
+let u = (0, r.createExperiment)({
     kind: "user",
     id: "2024-05_clans_valorant_prepilot",
     label: "Clans Valorant Prepilot",
@@ -38,11 +38,11 @@ let s = (0, i.createExperiment)({
       label: "Enable creation of clan guilds - Valorant",
       config: {
         enableClanCreation: !0,
-        defaultGameId: r.VALORANT_ID
+        defaultGameId: o.VALORANT_ID
       }
     }]
   }),
-  o = (0, i.createExperiment)({
+  d = (0, r.createExperiment)({
     kind: "user",
     id: "2024-05_clans_genshin_prepilot",
     label: "Clans Genshin Prepilot",
@@ -55,11 +55,11 @@ let s = (0, i.createExperiment)({
       label: "Enable creation of clan guilds - Genshin",
       config: {
         enableClanCreation: !0,
-        defaultGameId: r.GENSHIN_ID
+        defaultGameId: o.GENSHIN_ID
       }
     }]
   }),
-  l = (0, i.createExperiment)({
+  _ = (0, r.createExperiment)({
     kind: "user",
     id: "2024-05_rapidash_prepilot_applications",
     label: "Rapidash Prepilot Application Gate",
@@ -75,15 +75,15 @@ let s = (0, i.createExperiment)({
     }]
   });
 
-function u(e) {
-  return l.useExperiment({
+function c(e) {
+  return _.useExperiment({
     location: e
   }, {
     autoTrackExposure: !1
   })
 }
 
-function d(e) {
+function E(e) {
   var t, n;
   let {
     valorantConfig: i,
@@ -92,112 +92,93 @@ function d(e) {
   return null !== (n = null !== (t = null == r ? void 0 : r.defaultGameId) && void 0 !== t ? t : null == i ? void 0 : i.defaultGameId) && void 0 !== n ? n : null
 }
 
-function _(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return null != e && e.hasFeature(a.GuildFeatures.CLAN_PILOT_VALORANT) && (t || !e.hasFeature(a.GuildFeatures.CLAN))
+function I(e) {
+  let {
+    guilds: t,
+    valorantConfig: n,
+    genshinConfig: r,
+    includeConverted: a
+  } = e, o = (0, i.useStateFromStoresArray)([s.default], () => t.filter(e => s.default.can(l.Permissions.ADMINISTRATOR, e))), u = o.filter(e => (function(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return null != e && e.hasFeature(l.GuildFeatures.CLAN_PILOT_GENSHIN) && (t || !e.hasFeature(l.GuildFeatures.CLAN))
+  })(e, a)), d = o.filter(e => (function(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return null != e && e.hasFeature(l.GuildFeatures.CLAN_PILOT_VALORANT) && (t || !e.hasFeature(l.GuildFeatures.CLAN))
+  })(e, a)), _ = u.length > 0 && r.enableClanCreation, c = d.length > 0 && n.enableClanCreation, I = [];
+  return _ && u.forEach(e => I.push(e)), c && d.forEach(e => I.push(e)), {
+    guilds: I,
+    enableClanCreation: _ || c,
+    defaultGameId: E({
+      genshinConfig: _ ? r : void 0,
+      valorantConfig: c ? n : void 0
+    })
+  }
 }
 
-function c(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return null != e && e.hasFeature(a.GuildFeatures.CLAN_PILOT_GENSHIN) && (t || !e.hasFeature(a.GuildFeatures.CLAN))
-}
-
-function E(e, t) {
-  let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
-    r = s.useExperiment({
+function T(e) {
+  let {
+    location: t,
+    includeConverted: n,
+    autoTrackExposure: r = !0
+  } = e, s = (0, i.useStateFromStoresArray)([a.default], () => Object.values(a.default.getGuilds())), o = u.useExperiment({
+    location: t
+  }, {
+    autoTrackExposure: r
+  });
+  return I({
+    guilds: s,
+    valorantConfig: o,
+    genshinConfig: d.useExperiment({
       location: t
     }, {
-      autoTrackExposure: i
-    });
-  return function(e) {
-    let {
-      guilds: t,
-      valorantConfig: n,
-      genshinConfig: i,
-      includeConverted: r = !1
-    } = e, a = t.filter(e => c(e, r)), s = a.length > 0 && i.enableClanCreation, o = t.filter(e => _(e, r)), l = o.length > 0 && n.enableClanCreation, u = [];
-    return s && a.forEach(e => u.push(e)), l && o.forEach(e => u.push(e)), {
-      guilds: u,
-      enableClanCreation: l || s,
-      defaultGameId: d({
-        valorantConfig: n,
-        genshinConfig: i
-      })
-    }
-  }({
-    guilds: e,
-    valorantConfig: r,
-    genshinConfig: o.useExperiment({
-      location: t
-    }, {
-      autoTrackExposure: i
+      autoTrackExposure: r
     }),
     includeConverted: n
   })
 }
 
-function I(e, t) {
-  let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    i = s.useExperiment({
-      location: t
-    }, {
-      autoTrackExposure: n
-    });
-  return function(e) {
-    let {
-      guild: t,
-      valorantConfig: n,
-      genshinConfig: i
-    } = e;
-    if (null == t) return {
-      defaultGameId: null,
-      enableClanCreation: !1
-    };
-    let r = c(t),
-      a = _(t),
-      s = r && i.enableClanCreation;
-    return {
-      enableClanCreation: a && n.enableClanCreation || s,
-      defaultGameId: d({
-        genshinConfig: r ? i : void 0,
-        valorantConfig: a ? n : void 0
-      })
-    }
-  }({
-    guild: e,
-    valorantConfig: i,
-    genshinConfig: o.useExperiment({
-      location: t
-    }, {
-      autoTrackExposure: n
-    })
-  })
-}
-
-function T(e, t) {
-  let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-  return E(e, t, n, i).enableClanCreation
-}
-
 function f(e) {
-  let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    n = s.useExperiment({
-      location: e
+  let {
+    guild: t,
+    location: n,
+    includeConverted: i,
+    autoTrackExposure: r = !0
+  } = e, a = u.useExperiment({
+    location: n
+  }, {
+    autoTrackExposure: r
+  });
+  return I({
+    guilds: [t],
+    valorantConfig: a,
+    genshinConfig: d.useExperiment({
+      location: n
     }, {
-      autoTrackExposure: t
-    });
-  return d({
-    valorantConfig: n,
-    genshinConfig: o.useExperiment({
-      location: e
+      autoTrackExposure: r
+    }),
+    includeConverted: i
+  })
+}
+
+function S(e) {
+  let {
+    location: t,
+    autoTrackExposure: n = !0
+  } = e, i = u.useExperiment({
+    location: t
+  }, {
+    autoTrackExposure: n
+  });
+  return E({
+    valorantConfig: i,
+    genshinConfig: d.useExperiment({
+      location: t
     }, {
-      autoTrackExposure: t
+      autoTrackExposure: n
     })
   })
 }
-let S = (0, i.createExperiment)({
+let h = (0, r.createExperiment)({
     kind: "user",
     id: "2024-05_clans_valorant_pilot",
     label: "Clans Valorant Pilot",
@@ -210,11 +191,11 @@ let S = (0, i.createExperiment)({
       label: "Show clan discovery (Valorant)",
       config: {
         clanDiscoveryEnabled: !0,
-        defaultGameId: r.VALORANT_ID
+        defaultGameId: o.VALORANT_ID
       }
     }]
   }),
-  h = (0, i.createExperiment)({
+  A = (0, r.createExperiment)({
     kind: "user",
     id: "2024-05_clans_genshin_pilot",
     label: "Clans Genshin Pilot",
@@ -227,20 +208,20 @@ let S = (0, i.createExperiment)({
       label: "Show clan discovery (Genshin Impact)",
       config: {
         clanDiscoveryEnabled: !0,
-        defaultGameId: r.GENSHIN_ID
+        defaultGameId: o.GENSHIN_ID
       }
     }]
   });
 
-function A(e) {
+function m(e) {
   var t, n;
   let i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    r = S.useExperiment({
+    r = h.useExperiment({
       location: e
     }, {
       autoTrackExposure: i
     }),
-    a = h.useExperiment({
+    a = A.useExperiment({
       location: e
     }, {
       autoTrackExposure: i
@@ -250,7 +231,7 @@ function A(e) {
     defaultGameId: null !== (n = null !== (t = r.defaultGameId) && void 0 !== t ? t : a.defaultGameId) && void 0 !== n ? n : null
   }
 }
-let m = (0, i.createExperiment)({
+let N = (0, r.createExperiment)({
   kind: "user",
   id: "2024-05_clans_general",
   label: "Clans General",
@@ -266,9 +247,9 @@ let m = (0, i.createExperiment)({
   }]
 });
 
-function N(e) {
+function p(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return m.useExperiment({
+  return N.useExperiment({
     location: e
   }, {
     autoTrackExposure: t

@@ -26,7 +26,9 @@ function _() {
     n = (0, f.useClanDiscoveryUIStore)(e => e.setSelectedGames, l.default),
     s = (0, f.useClanDiscoveryUIStore)(e => e.selectedGames, l.default),
     E = (0, f.useClanDiscoveryUIStore)(f.buildSearchCriteriaFromUIState, i()),
-    _ = (0, u.useClanPrepilotExperimentDefaultGameId)("clan_discovery"),
+    _ = (0, u.useClanPrepilotExperimentDefaultGameId)({
+      location: "clan_discovery"
+    }),
     {
       defaultGameId: C
     } = (0, u.useClanPilotExperiment)("clan_discovery"),

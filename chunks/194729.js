@@ -491,7 +491,9 @@ function X(e) {
 t.default = function(e) {
   let {
     searchRoute: t
-  } = e, n = (0, F.useGuildsEligibleForClan)("guild_discovery", !0).length > 0, {
+  } = e, n = (0, F.useGuildsEligibleForClan)({
+    location: "guild_discovery"
+  }).length > 0, {
     clanDiscoveryEnabled: s
   } = (0, p.useClanPilotExperiment)("guild_discovery"), i = (0, f.useStateFromStores)([O.default], () => O.default.getCurrentCategoryId()), l = (0, f.useStateFromStores)([O.default], () => O.default.getIsReady());
   return (n || s) && (!l || i === H.CategoryId.Clans) ? (0, a.jsx)(j.default, {}) : (0, a.jsx)(X, {
