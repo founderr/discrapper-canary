@@ -3,9 +3,9 @@ a.r(t);
 var n = a("735250");
 a("470079");
 var r = a("481060"),
-  i = a("239091"),
-  l = a("282597"),
-  s = a("877715"),
+  s = a("239091"),
+  i = a("282597"),
+  l = a("877715"),
   o = a("729285"),
   c = a("838221"),
   d = a("246364"),
@@ -22,7 +22,7 @@ function h(e) {
   return (0, n.jsx)(r.Menu, {
     navId: "add-questions",
     className: m.menu,
-    onClose: i.closeContextMenu,
+    onClose: s.closeContextMenu,
     "aria-label": f.default.Messages.USER_ACTIONS_MENU_LABEL,
     onSelect: a,
     children: (0, n.jsxs)(r.MenuGroup, {
@@ -33,12 +33,12 @@ function h(e) {
         action: () => (0, u.openEmptyFormFieldModal)(d.VerificationFormFieldTypes.TEXT_INPUT, t, o)
       }), (0, n.jsx)(r.MenuItem, {
         id: "paragraph",
-        icon: s.default,
+        icon: l.default,
         label: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
         action: () => (0, u.openEmptyFormFieldModal)(d.VerificationFormFieldTypes.PARAGRAPH, t, o)
       }), (0, n.jsx)(r.MenuItem, {
         id: "multiple-choice",
-        icon: l.default,
+        icon: i.default,
         label: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_MULTIPLE_CHOICE,
         action: () => (0, u.openEmptyFormFieldModal)(d.VerificationFormFieldTypes.MULTIPLE_CHOICE, t, o)
       })]
@@ -49,8 +49,8 @@ t.default = function(e) {
   let {
     addFormField: t,
     guild: a
-  } = e, l = e => {
-    (0, i.openContextMenu)(e, e => (0, n.jsx)(h, {
+  } = e, i = e => {
+    (0, s.openContextMenu)(e, e => (0, n.jsx)(h, {
       ...e,
       addFormField: t,
       guild: a
@@ -64,7 +64,7 @@ t.default = function(e) {
     children: e => (0, n.jsxs)(r.Clickable, {
       ...e,
       className: m.container,
-      onClick: l,
+      onClick: i,
       children: [(0, n.jsx)(o.default, {
         width: 24,
         height: 24,

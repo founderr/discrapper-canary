@@ -1,16 +1,16 @@
 "use strict";
 a.r(t), a.d(t, {
   useFullScreenModalAnimationStyle: function() {
-    return s
+    return l
   }
 });
 var n = a("685626"),
   r = a("748780"),
-  i = a("442837"),
-  l = a("607070");
+  s = a("442837"),
+  i = a("607070");
 
-function s() {
-  let e = (0, i.useStateFromStores)([l.default], () => l.default.useReducedMotion);
+function l() {
+  let e = (0, s.useStateFromStores)([i.default], () => i.default.useReducedMotion);
   return (0, n.useSpring)({
     from: {
       opacity: e ? 1 : 0,

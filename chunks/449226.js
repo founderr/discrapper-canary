@@ -7,9 +7,9 @@ a.r(t), a.d(t, {
 var n = a("735250");
 a("470079");
 var r = a("120356"),
-  i = a.n(r),
-  l = a("481060"),
-  s = a("212723");
+  s = a.n(r),
+  i = a("481060"),
+  l = a("212723");
 
 function o(e) {
   let {
@@ -21,13 +21,13 @@ function o(e) {
   } = e, d = e => {
     e.stopPropagation(), e.preventDefault()
   };
-  return (0, n.jsx)(l.Clickable, {
+  return (0, n.jsx)(i.Clickable, {
     onClick: d,
     onMouseDown: d,
     onMouseUp: d,
-    className: i()(s.switch, o),
+    className: s()(l.switch, o),
     ...c,
-    children: (0, n.jsx)(l.Switch, {
+    children: (0, n.jsx)(i.Switch, {
       checked: t,
       onChange: a,
       disabled: r

@@ -18,13 +18,13 @@ var a = l("735250"),
   m = l("624377"),
   p = l("372654"),
   E = l("715627"),
-  g = l("300284"),
-  h = l("642619"),
-  b = l("598"),
-  x = l("333867"),
-  T = l("329067"),
-  v = l("981631"),
-  L = l("302800"),
+  h = l("300284"),
+  g = l("642619"),
+  x = l("598"),
+  b = l("333867"),
+  L = l("329067"),
+  T = l("981631"),
+  v = l("302800"),
   S = l("689938"),
   I = l("894775");
 let N = {
@@ -54,11 +54,11 @@ function O(e) {
     onUse: y,
     onError: A,
     onReviewPurchase: k,
-    loadId: R,
-    baseAnalyticsData: j,
+    loadId: j,
+    baseAnalyticsData: R,
     confettiCanvas: P = null
   } = e;
-  R = null != R ? R : (0, r.v4)();
+  j = null != j ? j : (0, r.v4)();
   let B = s.useRef(null),
     [M] = t.items,
     {
@@ -68,14 +68,14 @@ function O(e) {
       buttonColors: F
     } = (0, m.default)(t.styles),
     w = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion),
-    H = (0, L.getCustomConfettiDisplayOptions)(t.skuId),
+    H = (0, v.getCustomConfettiDisplayOptions)(t.skuId),
     [U, W] = s.useState(!1),
-    [G, V] = s.useState(!1),
+    [V, G] = s.useState(!1),
     z = null != F ? {
       background: (0, p.getBackgroundGradient)(F, 90),
       color: F.text.toHslString()
     } : void 0,
-    K = (0, g.default)({
+    K = (0, h.default)({
       analyticsLocations: D
     }),
     Y = {
@@ -83,18 +83,18 @@ function O(e) {
         W(!0), O()
       },
       onError: e => {
-        A(e), V(!0)
+        A(e), G(!0)
       },
       onReviewPurchase: k,
       paymentSource: l,
       skuId: t.skuId,
-      loadId: R,
-      baseAnalyticsData: j
+      loadId: j,
+      baseAnalyticsData: R
     };
   return (0, a.jsxs)("div", {
     ref: B,
     className: I.container,
-    children: [G && (0, a.jsxs)("div", {
+    children: [V && (0, a.jsxs)("div", {
       className: I.cardDetails,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
@@ -109,7 +109,7 @@ function O(e) {
         })
       }), (0, a.jsx)(o.Button, {
         onClick: () => {
-          k(), (0, x.default)({
+          k(), (0, b.default)({
             skuId: t.skuId,
             analyticsLocations: D,
             returnRef: B
@@ -117,7 +117,7 @@ function O(e) {
         },
         children: S.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
       })]
-    }), !G && (U ? (0, a.jsxs)("div", {
+    }), !V && (U ? (0, a.jsxs)("div", {
       className: I.cardDetails,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
@@ -141,7 +141,7 @@ function O(e) {
               analyticsLocations: D
             });
             return
-          }(null == M ? void 0 : M.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, h.openProfileEffectModal)({
+          }(null == M ? void 0 : M.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
             initialSelectedEffectId: M.id,
             analyticsLocations: D
           })
@@ -154,19 +154,19 @@ function O(e) {
         variant: "text-lg/bold",
         className: I.productName,
         children: t.name
-      }), (0, a.jsx)(b.PaymentContextProvider, {
-        loadId: R,
+      }), (0, a.jsx)(x.PaymentContextProvider, {
+        loadId: j,
         stepConfigs: [],
-        applicationId: v.COLLECTIBLES_APPLICATION_ID,
+        applicationId: T.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
         isGift: !1,
         activeSubscription: null,
-        purchaseType: v.PurchaseTypes.ONE_TIME,
-        children: (0, a.jsx)(T.default, {
+        purchaseType: T.PurchaseTypes.ONE_TIME,
+        children: (0, a.jsx)(L.default, {
           ...Y
         })
       })]
-    })), !G && U && !(null != H) && !w && (0, a.jsx)(E.default, {
+    })), !V && U && !(null != H) && !w && (0, a.jsx)(E.default, {
       confettiTarget: B.current,
       customConfettiCanvas: P,
       speedValues: N,

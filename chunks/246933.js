@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return I
+    return h
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("249849"),
-  a = n("907561"),
-  s = n("689938"),
-  o = n("409814");
-let l = ["#cc99ff", "#ffffff"],
-  u = ["#2d3dee", "#ffffff"],
+var n = a("735250");
+a("470079");
+var r = a("249849"),
+  s = a("907561"),
+  i = a("689938"),
+  l = a("409814");
+let o = ["#cc99ff", "#ffffff"],
+  c = ["#2d3dee", "#ffffff"],
   d = [.3, 1],
-  _ = [{
+  u = [{
     base: 2,
     tint: 1
   }, {
     base: 5,
     tint: 1
   }],
-  c = [.3, 1],
-  E = [{
+  f = [.3, 1],
+  m = [{
     base: 2,
     tint: 1
   }, {
@@ -29,38 +29,38 @@ let l = ["#cc99ff", "#ffffff"],
     tint: 1
   }];
 
-function I(e) {
+function h(e) {
   let {
     width: t,
-    height: n,
-    primaryTintColor: I,
-    secondaryTintColor: T,
-    ...f
+    height: a,
+    primaryTintColor: h,
+    secondaryTintColor: p,
+    ...E
   } = e, {
-    primaryColorsTransformed: S,
-    secondaryColorsTransformed: h
+    primaryColorsTransformed: T,
+    secondaryColorsTransformed: C
   } = (0, r.getTransformedBadgeColors)({
-    primaryBaseColors: l,
-    primaryTintColor: I,
+    primaryBaseColors: o,
+    primaryTintColor: h,
     primaryTintLuminances: d,
-    primaryLuminanceWeights: _,
-    secondaryBaseColors: u,
-    secondaryTintColor: T,
-    secondaryTintLuminances: c,
-    secondaryLuminanceWeights: E
+    primaryLuminanceWeights: u,
+    secondaryBaseColors: c,
+    secondaryTintColor: p,
+    secondaryTintLuminances: f,
+    secondaryLuminanceWeights: m
   }), {
-    styleContent: A,
-    containerId: m
-  } = (0, a.useClanBannerStyleInjection)(S, h);
-  return (0, i.jsxs)("svg", {
-    ...f,
-    "aria-label": s.default.Messages.CLAN_LOOK_BANNER,
+    styleContent: x,
+    containerId: _
+  } = (0, s.useClanBannerStyleInjection)(T, C);
+  return (0, n.jsxs)("svg", {
+    ...E,
+    "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
-    height: n,
-    viewBox: "0 0 ".concat(a.CLAN_BANNER_WIDTH, " ").concat(a.CLAN_BANNER_HEIGHT),
-    children: [(0, i.jsxs)("defs", {
-      children: [(0, i.jsxs)("defs", {
-        children: [(0, i.jsxs)("radialGradient", {
+    height: a,
+    viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
+    children: [(0, n.jsxs)("defs", {
+      children: [(0, n.jsxs)("defs", {
+        children: [(0, n.jsxs)("radialGradient", {
           id: "fog-gradient-primary",
           cx: ".5",
           cy: ".5",
@@ -68,14 +68,14 @@ function I(e) {
           fx: ".76",
           fy: ".33",
           spreadMethod: "pad",
-          children: [(0, i.jsx)("stop", {
-            stopColor: S[1],
+          children: [(0, n.jsx)("stop", {
+            stopColor: T[1],
             offset: "0%"
-          }), (0, i.jsx)("stop", {
-            stopColor: S[0],
+          }), (0, n.jsx)("stop", {
+            stopColor: T[0],
             offset: "70%"
           })]
-        }), (0, i.jsxs)("radialGradient", {
+        }), (0, n.jsxs)("radialGradient", {
           id: "fog-gradient-secondary",
           cx: ".5",
           cy: ".5",
@@ -83,27 +83,27 @@ function I(e) {
           fx: ".76",
           fy: ".33",
           spreadMethod: "pad",
-          children: [(0, i.jsx)("stop", {
-            stopColor: h[1],
+          children: [(0, n.jsx)("stop", {
+            stopColor: C[1],
             offset: "0%"
-          }), (0, i.jsx)("stop", {
-            stopColor: h[0],
+          }), (0, n.jsx)("stop", {
+            stopColor: C[0],
             offset: "70%"
           })]
         })]
-      }), (0, i.jsx)("style", {
-        children: A
+      }), (0, n.jsx)("style", {
+        children: x
       })]
-    }), (0, i.jsx)("use", {
-      href: "".concat(o, "#wrapper-layer"),
-      id: m
-    }), (0, i.jsx)("use", {
-      href: "".concat(o, "#clan-banner-warp-tunnel-secondary"),
+    }), (0, n.jsx)("use", {
+      href: "".concat(l, "#wrapper-layer"),
+      id: _
+    }), (0, n.jsx)("use", {
+      href: "".concat(l, "#clan-banner-warp-tunnel-secondary"),
       style: {
         fill: "url(#fog-gradient-secondary)"
       }
-    }), (0, i.jsx)("use", {
-      href: "".concat(o, "#clan-banner-warp-tunnel-primary"),
+    }), (0, n.jsx)("use", {
+      href: "".concat(l, "#clan-banner-warp-tunnel-primary"),
       style: {
         fill: "url(#fog-gradient-primary)"
       }

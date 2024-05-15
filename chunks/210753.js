@@ -6,9 +6,9 @@ a.r(t), a.d(t, {
 }), a("653041"), a("47120");
 var n = a("470079"),
   r = a("392711"),
-  i = a.n(r),
-  l = a("442837"),
-  s = a("846519"),
+  s = a.n(r),
+  i = a("442837"),
+  l = a("846519"),
   o = a("224706"),
   c = a("669764");
 
@@ -28,12 +28,12 @@ let u = new class e {
     let e = [];
     this._pending.forEach(t => {
       this._fetched.add(t), e.push(t)
-    }), i().chunk(e, 20).forEach(e => {
+    }), s().chunk(e, 20).forEach(e => {
       o.default.getDetectableGamesSupplemental(e)
     })
   }
   constructor() {
-    d(this, "_fetched", new Set), d(this, "_pending", new Set), d(this, "_flushHandler", new s.DelayedCall(0, () => this._flush()))
+    d(this, "_fetched", new Set), d(this, "_pending", new Set), d(this, "_flushHandler", new l.DelayedCall(0, () => this._flush()))
   }
 };
 
@@ -45,7 +45,7 @@ function f(e, t) {
     width: t.coverImageWidth,
     height: t.coverImageHeight
   } : void 0, [t]);
-  return (0, l.useStateFromStoresObject)([c.default], () => ({
+  return (0, i.useStateFromStoresObject)([c.default], () => ({
     isFetching: c.default.isFetching(e),
     localizedName: c.default.getLocalizedName(e),
     themes: c.default.getThemes(e),

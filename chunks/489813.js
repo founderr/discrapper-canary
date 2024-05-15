@@ -13,9 +13,9 @@ a.r(t), a.d(t, {
 var n = a("735250");
 a("470079");
 var r = a("692547"),
-  i = a("481060"),
-  l = a("441674"),
-  s = a("696202"),
+  s = a("481060"),
+  i = a("441674"),
+  l = a("696202"),
   o = a("73356");
 
 function c(e) {
@@ -25,7 +25,7 @@ function c(e) {
   } = e;
   return (0, n.jsxs)("div", {
     className: o.questionContainer,
-    children: [(0, n.jsx)(i.Text, {
+    children: [(0, n.jsx)(s.Text, {
       className: o.questionTitle,
       variant: "text-md/semibold",
       color: "header-primary",
@@ -46,16 +46,16 @@ function d(e) {
       className: o.requirementIcon,
       height: 20,
       width: 20
-    }), (0, n.jsx)(i.Text, {
+    }), (0, n.jsx)(s.Text, {
       className: o.requirementText,
       variant: "text-md/normal",
       children: a
-    }), c ? (0, n.jsx)(l.default, {
+    }), c ? (0, n.jsx)(i.default, {
       width: 24,
       height: 24,
       className: o.requirementSuccess,
       backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
-    }) : (0, n.jsx)(s.default, {
+    }) : (0, n.jsx)(l.default, {
       width: 24,
       height: 24,
       className: o.requirementFailure,
@@ -68,7 +68,7 @@ function u(e) {
   let {
     icon: t,
     text: a,
-    footnote: s,
+    footnote: l,
     meetsRequirement: c,
     children: d
   } = e;
@@ -79,21 +79,21 @@ function u(e) {
         className: o.requirementIcon,
         height: 20,
         width: 20
-      }), (0, n.jsx)(i.Text, {
+      }), (0, n.jsx)(s.Text, {
         className: o.requirementText,
         variant: "text-md/normal",
         children: a
-      }), c ? (0, n.jsx)(l.default, {
+      }), c ? (0, n.jsx)(i.default, {
         width: 24,
         height: 24,
         className: o.requirementSuccess,
         backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
       }) : d]
-    }), null != s && (0, n.jsx)(i.Text, {
+    }), null != l && (0, n.jsx)(s.Text, {
       color: "header-secondary",
       className: o.footnote,
       variant: "text-xs/normal",
-      children: s
+      children: l
     })]
   })
 }

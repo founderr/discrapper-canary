@@ -21,13 +21,13 @@ var a = l("735250"),
   m = l("754347"),
   p = l("74538"),
   E = l("884697"),
-  g = l("624377"),
-  h = l("141011"),
-  b = l("813083"),
-  x = l("372654"),
-  T = l("994896"),
-  v = l("215023"),
-  L = l("474936"),
+  h = l("624377"),
+  g = l("141011"),
+  x = l("813083"),
+  b = l("372654"),
+  L = l("994896"),
+  T = l("215023"),
+  v = l("474936"),
   S = l("689938"),
   I = l("897246");
 let N = (0, E.getLogoSize)(96),
@@ -90,7 +90,7 @@ let N = (0, E.getLogoSize)(96),
           className: I.getPremiumHook,
           onClick: () => {
             (0, d.default)({
-              subscriptionTier: L.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: l,
               returnRef: r
             })
@@ -113,13 +113,13 @@ function y(e) {
     category: i,
     index: o
   } = e, u = _[i.skuId], c = o % 2 == 0, d = null !== (r = c ? null == u ? void 0 : u.left() : null == u ? void 0 : u.right()) && void 0 !== r ? r : (0, E.getCollectiblesAssetURL)(i.banner, {
-    size: x.MAX_CONTENT_WIDTH,
+    size: b.MAX_CONTENT_WIDTH,
     format: "jpg"
   }), f = c ? null == u ? void 0 : null === (t = u.leftOverflow) || void 0 === t ? void 0 : t.call(u) : null == u ? void 0 : null === (l = u.rightOverflow) || void 0 === l ? void 0 : l.call(u), {
     backgroundColors: C
-  } = (0, g.default)(i.styles), m = {
+  } = (0, h.default)(i.styles), m = {
     objectPosition: c ? "right" : "left",
-    background: null != C ? "".concat((0, x.getBackgroundGradient)(C), " border-box border-box") : void 0,
+    background: null != C ? "".concat((0, b.getBackgroundGradient)(C), " border-box border-box") : void 0,
     outlineColor: null != C ? C.border.toHslString() : void 0
   };
   return (0, a.jsxs)("div", {
@@ -140,9 +140,9 @@ function y(e) {
       }),
       alt: i.name,
       style: {
-        maxWidth: null === (s = v.categoryBannerOverrides[i.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
+        maxWidth: null === (s = T.categoryBannerOverrides[i.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
       }
-    }), (0, a.jsx)(b.default, {
+    }), (0, a.jsx)(x.default, {
       category: i,
       className: n()(I.limitedTimeBadge, c ? I.limitedTimeBadge : I.limitedTimeBadgeLeft),
       display: "banner"
@@ -159,19 +159,19 @@ function A(e) {
     index: c = 0
   } = e, {
     backgroundColors: d
-  } = (0, g.default)(s.styles), f = !!(null === (t = v.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
+  } = (0, h.default)(s.styles), f = !!(null === (t = T.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
     condensedBannersEnabled: p
-  } = (0, T.useCollectiblesCondensedBannersExperiment)({
+  } = (0, L.useCollectiblesCondensedBannersExperiment)({
     location: "Collectibles Shop Banner"
   });
   return p ? (0, a.jsx)(y, {
     category: s,
     index: c
-  }) : (0, a.jsxs)(h.default, {
+  }) : (0, a.jsxs)(g.default, {
     asset: s.banner,
     className: n()(I.shopBanner, r),
     style: null != d ? {
-      background: "".concat((0, x.getBackgroundGradient)(d), " border-box border-box"),
+      background: "".concat((0, b.getBackgroundGradient)(d), " border-box border-box"),
       outlineColor: d.border.toHslString()
     } : void 0,
     children: [(0, a.jsxs)("div", {
@@ -188,7 +188,7 @@ function A(e) {
       }),
       alt: s.name,
       style: {
-        maxWidth: null === (l = v.categoryBannerOverrides[s.skuId]) || void 0 === l ? void 0 : l.logoMaxWidth
+        maxWidth: null === (l = T.categoryBannerOverrides[s.skuId]) || void 0 === l ? void 0 : l.logoMaxWidth
       }
     }), (0, a.jsx)(u.Text, {
       className: n()(I.summary, {
@@ -198,7 +198,7 @@ function A(e) {
       children: s.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, a.jsx)(O, {
         category: s
       }) : s.summary
-    }), !o && (0, a.jsx)(b.default, {
+    }), !o && (0, a.jsx)(x.default, {
       category: s,
       className: I.limitedTimeBadge,
       display: "banner"

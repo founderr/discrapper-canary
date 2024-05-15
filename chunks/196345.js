@@ -10,15 +10,15 @@ a.r(t), a.d(t, {
     return m
   },
   TermsFormField: function() {
-    return E
+    return p
   }
 }), a("47120");
 var n = a("735250");
 a("470079");
 var r = a("120356"),
-  i = a.n(r),
-  l = a("481060"),
-  s = a("454585"),
+  s = a.n(r),
+  i = a("481060"),
+  l = a("454585"),
   o = a("814550"),
   c = a("489813"),
   d = a("689938"),
@@ -31,17 +31,17 @@ function f(e) {
     className: r
   } = e;
   return (0, n.jsx)("div", {
-    className: i()(u.termsFieldBody, r),
+    className: s()(u.termsFieldBody, r),
     children: t.map((e, t) => (0, n.jsxs)("div", {
       className: u.termsRow,
-      children: [(0, n.jsx)(l.Text, {
+      children: [(0, n.jsx)(i.Text, {
         variant: "text-md/normal",
         color: "text-muted",
         children: "".concat(t + 1, ".")
-      }), (0, n.jsx)(l.Text, {
+      }), (0, n.jsx)(i.Text, {
         variant: "text-md/normal",
         className: u.termsRowContent,
-        children: s.default.parseGuildVerificationFormRule(e, !0, {
+        children: l.default.parseGuildVerificationFormRule(e, !0, {
           channelId: a
         })
       })]
@@ -55,9 +55,9 @@ function m(e) {
     checked: a,
     disabled: r
   } = e;
-  return (0, n.jsx)(l.Checkbox, {
+  return (0, n.jsx)(i.Checkbox, {
     size: 20,
-    type: l.Checkbox.Types.INVERTED,
+    type: i.Checkbox.Types.INVERTED,
     value: a,
     onChange: t,
     disabled: r,
@@ -65,7 +65,7 @@ function m(e) {
       borderWidth: 2
     },
     className: u.checkbox,
-    children: (0, n.jsx)(l.Text, {
+    children: (0, n.jsx)(i.Text, {
       variant: "text-sm/normal",
       children: d.default.Messages.MEMBER_VERIFICATION_READ_RULES
     })
@@ -82,7 +82,7 @@ function h(e) {
     meetsRequirement: !!t.response
   })
 }
-let E = e => {
+let p = e => {
   let {
     channelId: t,
     formField: a,

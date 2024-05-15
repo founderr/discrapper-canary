@@ -3,9 +3,9 @@ a.r(t);
 var n = a("735250");
 a("470079");
 var r = a("120356"),
-  i = a.n(r),
-  l = a("186078"),
-  s = a("137158"),
+  s = a.n(r),
+  i = a("186078"),
+  l = a("137158"),
   o = a("17359");
 t.default = function(e) {
   let {
@@ -19,9 +19,9 @@ t.default = function(e) {
     canRemove: m,
     actionsLocation: h
   } = e, {
-    label: E
+    label: p
   } = t;
-  return (0, n.jsx)(s.default, {
+  return (0, n.jsx)(l.default, {
     field: t,
     index: a,
     isDragEnabled: r,
@@ -29,13 +29,13 @@ t.default = function(e) {
     onDrop: d,
     onEdit: u,
     onRemove: f,
-    title: E,
+    title: p,
     canRemove: m,
     actionsLocation: h,
-    children: (0, n.jsx)(l.MultipleChoiceFieldBody, {
+    children: (0, n.jsx)(i.MultipleChoiceFieldBody, {
       field: t,
       value: void 0,
-      radioItemClassName: i()(o.fieldBackground, o.multipleChoiceFixedTextColor),
+      radioItemClassName: s()(o.fieldBackground, o.multipleChoiceFixedTextColor),
       disabled: !1
     })
   })

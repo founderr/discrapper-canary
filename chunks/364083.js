@@ -6,9 +6,9 @@ a.r(t), a.d(t, {
 });
 var n = a("470079"),
   r = a("392711"),
-  i = a.n(r),
-  l = a("442837"),
-  s = a("77498"),
+  s = a.n(r),
+  i = a("442837"),
+  l = a("77498"),
   o = a("308083");
 
 function c(e) {
@@ -17,7 +17,7 @@ function c(e) {
 }
 
 function d() {
-  let e = (0, l.useStateFromStores)([s.default], () => i()(s.default.games).map(e => ({
+  let e = (0, i.useStateFromStores)([l.default], () => s()(l.default.games).map(e => ({
       value: e.id,
       label: e.name
     })).sortBy(e => {

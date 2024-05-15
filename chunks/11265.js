@@ -2,9 +2,9 @@
 a.r(t), a("47120");
 var n = a("735250"),
   r = a("470079"),
-  i = a("120356"),
-  l = a.n(i),
-  s = a("685626"),
+  s = a("120356"),
+  i = a.n(s),
+  l = a("685626"),
   o = a("442837"),
   c = a("481060"),
   d = a("393238"),
@@ -15,22 +15,22 @@ t.default = r.memo(function(e) {
   let {
     renderHeader: t,
     children: a,
-    isExpanded: i,
+    isExpanded: s,
     isStuck: h,
-    onExpand: E,
-    disableAnimation: T,
-    disableBackground: p
-  } = e, C = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [_, x] = r.useState(!0), [g, I] = r.useState(!1), {
-    ref: v,
-    height: N = 0
+    onExpand: p,
+    disableAnimation: E,
+    disableBackground: T
+  } = e, C = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [x, _] = r.useState(!0), [g, I] = r.useState(!1), {
+    ref: N,
+    height: v = 0
   } = (0, d.default)(), {
-    ref: S,
-    height: A = 0
-  } = (0, d.default)(), [R, M] = r.useState(i), L = (0, s.useSpring)({
-    height: R ? A + N : N,
-    immediate: _ || C || T,
+    ref: A,
+    height: S = 0
+  } = (0, d.default)(), [L, R] = r.useState(s), y = (0, l.useSpring)({
+    height: L ? S + v : v,
+    immediate: x || C || E,
     config: {
-      ...s.config.stiff,
+      ...l.config.stiff,
       clamp: !0
     },
     onStart: () => {
@@ -41,32 +41,32 @@ t.default = r.memo(function(e) {
     }
   });
   return r.useLayoutEffect(() => {
-    I(!1), M(i)
-  }, [i]), r.useLayoutEffect(() => {
+    I(!1), R(s)
+  }, [s]), r.useLayoutEffect(() => {
     let e = setTimeout(() => {
-      x(!1)
+      _(!1)
     }, 100);
     return () => clearTimeout(e)
   }, []), (0, n.jsx)(c.Clickable, {
-    className: l()(m.editCard, {
-      [m.toggled]: i,
-      [m.noBackground]: p
+    className: i()(m.editCard, {
+      [m.toggled]: s,
+      [m.noBackground]: T
     }),
-    children: (0, n.jsxs)(s.animated.div, {
-      className: l()(m.contentExpandContainer, {
-        [m.showOverflow]: i && g
+    children: (0, n.jsxs)(l.animated.div, {
+      className: i()(m.contentExpandContainer, {
+        [m.showOverflow]: s && g
       }),
-      style: L,
+      style: y,
       children: [(0, n.jsx)(c.Clickable, {
-        innerRef: v,
-        onClick: h ? void 0 : E,
-        className: l()(m.innerHeader, {
-          [m.toggled]: i && h
+        innerRef: N,
+        onClick: h ? void 0 : p,
+        className: i()(m.innerHeader, {
+          [m.toggled]: s && h
         }),
         "aria-label": f.default.Messages.EXPAND,
         children: t
       }), (0, n.jsx)("div", {
-        ref: S,
+        ref: A,
         children: a
       })]
     })

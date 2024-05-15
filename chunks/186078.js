@@ -12,9 +12,9 @@ a.r(t), a.d(t, {
 });
 var n = a("735250"),
   r = a("470079"),
-  i = a("120356"),
-  l = a.n(i),
-  s = a("481060"),
+  s = a("120356"),
+  i = a.n(s),
+  l = a("481060"),
   o = a("489813"),
   c = a("707592"),
   d = a("303765");
@@ -23,7 +23,7 @@ function u(e) {
   let {
     disabled: t,
     field: a,
-    value: i,
+    value: s,
     radioItemClassName: o,
     radioItemIconClassName: c,
     onChange: u
@@ -32,12 +32,12 @@ function u(e) {
   } = a, m = r.useMemo(() => f.map((e, t) => ({
     name: e,
     value: t,
-    radioItemIconClassName: l()(d.multipleChoiceIcon, c)
+    radioItemIconClassName: i()(d.multipleChoiceIcon, c)
   })), [f, c]);
-  return (0, n.jsx)(s.RadioGroup, {
+  return (0, n.jsx)(l.RadioGroup, {
     disabled: t,
     options: m,
-    value: i,
+    value: s,
     onChange: u,
     radioItemClassName: o,
     withTransparentBackground: !0

@@ -2,9 +2,9 @@
 a.r(t), a("47120");
 var n = a("735250"),
   r = a("470079"),
-  i = a("481060"),
-  l = a("881052"),
-  s = a("484455"),
+  s = a("481060"),
+  i = a("881052"),
+  l = a("484455"),
   o = a("592286"),
   c = a("689938"),
   d = a("17359");
@@ -13,37 +13,37 @@ t.default = function(e) {
     guildId: t,
     onSave: a,
     formDescription: u
-  } = e, [f, m] = r.useState(null), [h, E] = r.useState(u), T = r.useRef(!1), p = r.useRef(!1);
+  } = e, [f, m] = r.useState(null), [h, p] = r.useState(u), E = r.useRef(!1), T = r.useRef(!1);
   r.useEffect(() => () => {
-    p.current = !0
+    T.current = !0
   }, []);
   let C = r.useCallback(async () => {
-    if (!T.current) {
+    if (!E.current) {
       m(null);
       try {
         await a(t, h)
       } catch (e) {
-        if (p.current) return;
-        m(new l.APIError(e).getAnyErrorMessage())
+        if (T.current) return;
+        m(new i.APIError(e).getAnyErrorMessage())
       } finally {
-        if (p.current) return;
-        T.current = !1
+        if (T.current) return;
+        E.current = !1
       }
     }
   }, [h, t, a]);
-  return (0, n.jsxs)(s.default, {
+  return (0, n.jsxs)(l.default, {
     title: c.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
-    children: [(0, n.jsx)(i.TextArea, {
+    children: [(0, n.jsx)(s.TextArea, {
       className: d.fieldBackground,
       maxLength: o.MAX_DESCRIPTION_LENGTH,
       value: null != h ? h : "",
       placeholder: c.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
       onChange: e => {
-        E(e)
+        p(e)
       },
       onBlur: C,
       autosize: !0
-    }), null != f && "" !== f ? (0, n.jsx)(i.Text, {
+    }), null != f && "" !== f ? (0, n.jsx)(s.Text, {
       className: d.errorText,
       variant: "text-xs/normal",
       color: "text-danger",

@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return I
+    return h
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("249849"),
-  a = n("907561"),
-  s = n("689938"),
-  o = n("12008");
-let l = ["#01007f", "#0000b0", "#0000e1", "#2d3dee", "#5470e9", "#a091eb", "#cc99ff"],
-  u = ["#a7e4e4", "#ffffff"],
+var n = a("735250");
+a("470079");
+var r = a("249849"),
+  s = a("907561"),
+  i = a("689938"),
+  l = a("12008");
+let o = ["#01007f", "#0000b0", "#0000e1", "#2d3dee", "#5470e9", "#a091eb", "#cc99ff"],
+  c = ["#a7e4e4", "#ffffff"],
   d = [.01, .03, .055, .1, .19, .25, .35],
-  _ = [{
+  u = [{
     base: 8,
     tint: 1
   }, {
@@ -35,8 +35,8 @@ let l = ["#01007f", "#0000b0", "#0000e1", "#2d3dee", "#5470e9", "#a091eb", "#cc9
     base: 6,
     tint: 1
   }],
-  c = [.55, 1],
-  E = [{
+  f = [.55, 1],
+  m = [{
     base: 8,
     tint: 1
   }, {
@@ -44,42 +44,42 @@ let l = ["#01007f", "#0000b0", "#0000e1", "#2d3dee", "#5470e9", "#a091eb", "#cc9
     tint: 1
   }];
 
-function I(e) {
+function h(e) {
   let {
     width: t,
-    height: n,
-    primaryTintColor: I,
-    secondaryTintColor: T,
-    ...f
+    height: a,
+    primaryTintColor: h,
+    secondaryTintColor: p,
+    ...E
   } = e, {
-    primaryColorsTransformed: S,
-    secondaryColorsTransformed: h
+    primaryColorsTransformed: T,
+    secondaryColorsTransformed: C
   } = (0, r.getTransformedBadgeColors)({
-    primaryBaseColors: l,
-    primaryTintColor: I,
+    primaryBaseColors: o,
+    primaryTintColor: h,
     primaryTintLuminances: d,
-    primaryLuminanceWeights: _,
-    secondaryBaseColors: u,
-    secondaryTintColor: T,
-    secondaryTintLuminances: c,
-    secondaryLuminanceWeights: E
+    primaryLuminanceWeights: u,
+    secondaryBaseColors: c,
+    secondaryTintColor: p,
+    secondaryTintLuminances: f,
+    secondaryLuminanceWeights: m
   }), {
-    styleContent: A,
-    containerId: m
-  } = (0, a.useClanBannerStyleInjection)(S, h);
-  return (0, i.jsxs)("svg", {
-    ...f,
-    "aria-label": s.default.Messages.CLAN_LOOK_BANNER,
+    styleContent: x,
+    containerId: _
+  } = (0, s.useClanBannerStyleInjection)(T, C);
+  return (0, n.jsxs)("svg", {
+    ...E,
+    "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
-    height: n,
-    viewBox: "0 0 ".concat(a.CLAN_BANNER_WIDTH, " ").concat(a.CLAN_BANNER_HEIGHT),
-    children: [(0, i.jsx)("defs", {
-      children: (0, i.jsx)("style", {
-        children: A
+    height: a,
+    viewBox: "0 0 ".concat(s.CLAN_BANNER_WIDTH, " ").concat(s.CLAN_BANNER_HEIGHT),
+    children: [(0, n.jsx)("defs", {
+      children: (0, n.jsx)("style", {
+        children: x
       })
-    }), (0, i.jsx)("use", {
-      href: "".concat(o, "#wrapper-layer"),
-      id: m
+    }), (0, n.jsx)("use", {
+      href: "".concat(l, "#wrapper-layer"),
+      id: _
     })]
   })
 }
