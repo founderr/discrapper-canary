@@ -24,7 +24,7 @@ n.r(t), n.d(t, {
   CLAN_SETUP_MODAL_LAYER_KEY: function() {
     return f
   },
-  CLAN_SETUP_TAG_PLACEHOLDERS: function() {
+  CLAN_WILDCARD_PLACEHOLDERS: function() {
     return g
   },
   ClanBannerKind: function() {

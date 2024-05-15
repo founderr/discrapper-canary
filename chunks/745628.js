@@ -7,13 +7,13 @@ var r = a("120356"),
   s = a("481060"),
   l = a("308083"),
   o = a("689938"),
-  c = a("661926");
+  d = a("661926");
 t.default = e => {
   let {
     handleUpdate: t,
     description: a,
     wildcardDescriptors: r,
-    errors: d
+    errors: c
   } = e, u = (e, a) => {
     let n = [...r];
     n[a] = e, t({
@@ -21,25 +21,25 @@ t.default = e => {
     })
   };
   return (0, n.jsxs)("div", {
-    className: c.slideContent,
+    className: d.slideContent,
     children: [(0, n.jsx)(s.Heading, {
       variant: "heading-xxl/medium",
-      className: c.title,
+      className: d.title,
       children: o.default.Messages.CLAN_SETUP_DESCRIPTION_TITLE
     }), (0, n.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: c.subtitle,
+      className: d.subtitle,
       children: o.default.Messages.CLAN_SETUP_DESCRIPTION_SUBTITLE
-    }), (null == d ? void 0 : d.description) != null && (0, n.jsx)(s.Text, {
+    }), (null == c ? void 0 : c.description) != null && (0, n.jsx)(s.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
-      className: c.errorText,
-      children: d.description
+      className: d.errorText,
+      children: c.description
     }), (0, n.jsx)("div", {
-      className: c.maxWidthContainer,
+      className: d.maxWidthContainer,
       children: (0, n.jsx)(s.TextArea, {
-        className: c.input,
+        className: d.input,
         maxLength: l.MAX_DESCRIPTION_LENGTH,
         onChange: e => t({
           description: e
@@ -53,38 +53,38 @@ t.default = e => {
     }), (0, n.jsx)(s.Text, {
       variant: "text-sm/medium",
       color: "header-secondary",
-      className: c.optionalTag,
+      className: d.optionalTag,
       children: o.default.Messages.CLAN_SETUP_OPTIONAL
     }), (0, n.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: c.title,
+      className: d.title,
       children: o.default.Messages.CLAN_SETUP_WILDCARDS_SUBTITLE
-    }), (null == d ? void 0 : d.wildcardDescriptors) != null && (0, n.jsx)(s.Text, {
+    }), (null == c ? void 0 : c.wildcardDescriptors) != null && (0, n.jsx)(s.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
-      className: c.errorText,
-      children: d.wildcardDescriptors
+      className: d.errorText,
+      children: c.wildcardDescriptors
     }), (0, n.jsxs)("div", {
-      className: c.wildcardRow,
+      className: d.wildcardRow,
       children: [(0, n.jsx)(s.TextInput, {
-        inputClassName: i()(c.input, c.wildcardInput),
+        inputClassName: i()(d.input, d.wildcardInput),
         value: r[0],
         onChange: e => u(e, 0),
         maxLength: l.MAX_WILDCARD_LENGTH,
-        placeholder: l.CLAN_SETUP_TAG_PLACEHOLDERS["0"]
+        placeholder: l.CLAN_WILDCARD_PLACEHOLDERS["0"]
       }), (0, n.jsx)(s.TextInput, {
-        inputClassName: i()(c.input, c.wildcardInput),
+        inputClassName: i()(d.input, d.wildcardInput),
         value: r[1],
         onChange: e => u(e, 1),
         maxLength: l.MAX_WILDCARD_LENGTH,
-        placeholder: l.CLAN_SETUP_TAG_PLACEHOLDERS["1"]
+        placeholder: l.CLAN_WILDCARD_PLACEHOLDERS["1"]
       }), (0, n.jsx)(s.TextInput, {
-        inputClassName: i()(c.input, c.wildcardInput),
+        inputClassName: i()(d.input, d.wildcardInput),
         value: r[2],
         onChange: e => u(e, 2),
         maxLength: l.MAX_WILDCARD_LENGTH,
-        placeholder: l.CLAN_SETUP_TAG_PLACEHOLDERS["2"]
+        placeholder: l.CLAN_WILDCARD_PLACEHOLDERS["2"]
       })]
     })]
   })
