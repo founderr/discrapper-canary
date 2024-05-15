@@ -27,6 +27,9 @@ n.r(t), n.d(t, {
   optimisticallyUpdateQuestProgress: function() {
     return N
   },
+  overrideQuestDelivery: function() {
+    return p
+  },
   resetQuestDismissibilityStatus: function() {
     return m
   },
@@ -305,5 +308,12 @@ function N(e) {
   r.default.dispatch({
     type: "QUESTS_OPTIMISTIC_PROGRESS_UPDATE",
     userStatus: e
+  })
+}
+
+function p(e) {
+  r.default.dispatch({
+    type: "QUESTS_DELIVERY_OVERRIDE",
+    questId: e
   })
 }

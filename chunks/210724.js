@@ -186,7 +186,10 @@ function N(e) {
 t.default = function(e) {
   let {
     overrideQuest: t
-  } = e, n = (0, o.useStateFromStores)([E.default], () => null != t ? t : (0, _.getQuestForTargetedContent)(E.default.quests, h.QuestContent.QUEST_BAR));
+  } = e, n = (0, o.useStateFromStores)([E.default], () => {
+    var e;
+    return null !== (e = null != t ? t : E.default.questDeliveryOverride) && void 0 !== e ? e : (0, _.getQuestForTargetedContent)(E.default.quests, h.QuestContent.QUEST_BAR)
+  });
   return null == n ? null : (0, a.jsx)(S.QuestsAssetContextProvider, {
     sentrySource: I.QuestsExperimentLocations.QUESTS_BAR,
     children: (0, a.jsx)(N, {
