@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("47120"), n("653041");
 var a, s = n("442837"),
-  l = n("570140"),
-  i = n("314897"),
+  i = n("570140"),
+  l = n("314897"),
   r = n("592125"),
   o = n("430824"),
   u = n("709054"),
@@ -24,7 +24,7 @@ function E(e, t) {
 }
 class h extends(a = s.default.PersistedStore) {
   initialize(e) {
-    this.waitFor(i.default, o.default), f = {}, null != e && u.default.keys(e).forEach(t => {
+    this.waitFor(l.default, o.default), f = {}, null != e && u.default.keys(e).forEach(t => {
       let n = e[t];
       null != n && "function" == typeof n[Symbol.iterator] && (f[t] = new Set(n))
     })
@@ -40,7 +40,7 @@ class h extends(a = s.default.PersistedStore) {
     return f
   }
 }
-c(h, "displayName", "GuildProgressStore"), c(h, "persistKey", "GuildProgressStore"), new h(l.default, {
+c(h, "displayName", "GuildProgressStore"), c(h, "persistKey", "GuildProgressStore"), new h(i.default, {
   CONNECTION_OPEN: function() {
     let e = [];
     u.default.keys(f).forEach(t => {
@@ -74,7 +74,7 @@ c(h, "displayName", "GuildProgressStore"), c(h, "persistKey", "GuildProgressStor
       }
     } = e, a = o.default.getGuild(t);
     if (null == a) return !1;
-    a.ownerId === i.default.getId() && null != f[a.id] && (null != a.icon && f[a.id].add(d.Steps.AVATAR), n > 1 && f[a.id].add(d.Steps.INVITE))
+    a.ownerId === l.default.getId() && null != f[a.id] && (null != a.icon && f[a.id].add(d.Steps.AVATAR), n > 1 && f[a.id].add(d.Steps.INVITE))
   },
   CHANNEL_CREATE: function(e) {
     let {
@@ -101,7 +101,7 @@ c(h, "displayName", "GuildProgressStore"), c(h, "persistKey", "GuildProgressStor
       channelId: n,
       message: a
     } = e, s = r.default.getChannel(n);
-    return (null === (t = a.author) || void 0 === t ? void 0 : t.id) === i.default.getId() && null != s && null != f[s.guild_id] && E(s.guild_id, d.Steps.MESSAGE)
+    return (null === (t = a.author) || void 0 === t ? void 0 : t.id) === l.default.getId() && null != s && null != f[s.guild_id] && E(s.guild_id, d.Steps.MESSAGE)
   },
   GUILD_MEMBER_LIST_UPDATE: function(e) {
     let {

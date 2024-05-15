@@ -1,7 +1,7 @@
 "use strict";
 let a;
 n.r(t);
-var s, l, i, r, o = n("442837"),
+var s, i, l, r, o = n("442837"),
   u = n("570140"),
   d = n("900849");
 let c = null,
@@ -21,12 +21,12 @@ class h extends(r = o.default.Store) {
     return E
   }
 }
-i = "GuildRecommendationsStore", (l = "displayName") in(s = h) ? Object.defineProperty(s, l, {
-  value: i,
+l = "GuildRecommendationsStore", (i = "displayName") in(s = h) ? Object.defineProperty(s, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new h(u.default, {
+}) : s[i] = l, t.default = new h(u.default, {
   GUILD_RECOMMENDATION_FETCH: function() {
     f = !0
   },

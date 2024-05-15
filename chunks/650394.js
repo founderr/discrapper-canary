@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("653041"), n("47120");
 var a, s = n("735250"),
-  l = n("470079"),
-  i = n("685626"),
+  i = n("470079"),
+  l = n("685626"),
   r = n("788322"),
   o = n("59415");
 
@@ -14,7 +14,7 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class d extends(a = l.PureComponent) {
+class d extends(a = i.PureComponent) {
   renderPlaceholders() {
     let {
       loadingPlaceholderCount: e
@@ -27,7 +27,7 @@ class d extends(a = l.PureComponent) {
       guilds: e,
       loading: t
     } = this.props;
-    return (0, s.jsx)(i.Spring, {
+    return (0, s.jsx)(l.Spring, {
       from: {
         opacity: t ? 0 : 1
       },
@@ -35,7 +35,7 @@ class d extends(a = l.PureComponent) {
         opacity: 1
       },
       delay: 100,
-      children: n => (0, s.jsx)(i.animated.div, {
+      children: n => (0, s.jsx)(l.animated.div, {
         className: o.guildList,
         style: n,
         children: t || null == e ? this.renderPlaceholders() : e.map(this.renderGuild)

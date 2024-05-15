@@ -1,9 +1,9 @@
 "use strict";
 a.r(t), a("47120");
-var n, r, i, s, l = a("442837"),
+var n, r, i, l, s = a("442837"),
   o = a("570140");
-let d = {},
-  c = null,
+let c = {},
+  d = null,
   u = [],
   f = !1,
   m = !1,
@@ -13,12 +13,12 @@ let d = {},
 function T() {
   m = !0
 }
-class p extends(n = l.default.Store) {
+class p extends(n = s.default.Store) {
   getAppliedGuildBoostsForGuild(e) {
-    return null != d[e] ? d[e].subscriptions : null
+    return null != c[e] ? c[e].subscriptions : null
   }
   getLastFetchedAtForGuild(e) {
-    return null != d[e] ? d[e].lastFetchedAt : null
+    return null != c[e] ? c[e].lastFetchedAt : null
   }
   getCurrentUserAppliedBoosts() {
     return u
@@ -36,24 +36,24 @@ class p extends(n = l.default.Store) {
     return E
   }
   get cooldownEndsAt() {
-    return c
+    return d
   }
   get isFetchingCurrentUserAppliedBoosts() {
     return f
   }
 }
-s = "AppliedGuildBoostStore", (i = "displayName") in(r = p) ? Object.defineProperty(r, i, {
-  value: s,
+l = "AppliedGuildBoostStore", (i = "displayName") in(r = p) ? Object.defineProperty(r, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[i] = s, t.default = new p(o.default, {
+}) : r[i] = l, t.default = new p(o.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
       appliedBoosts: a
     } = e;
-    d[t] = {
+    c[t] = {
       subscriptions: a,
       lastFetchedAt: Date.now()
     }
@@ -68,7 +68,7 @@ s = "AppliedGuildBoostStore", (i = "displayName") in(r = p) ? Object.definePrope
     let {
       endsAt: t
     } = e;
-    c = t
+    d = t
   },
   GUILD_UNAPPLY_BOOST_START: T,
   GUILD_APPLY_BOOST_START: T,

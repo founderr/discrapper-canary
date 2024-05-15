@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("685626"),
-  i = n("442837"),
+  i = n("685626"),
+  l = n("442837"),
   r = n("481060"),
   o = n("607070"),
   u = n("63063"),
@@ -32,14 +32,14 @@ function C(e) {
     windowWidth: p,
     transition: S,
     brandPrimaryColor: g
-  } = e, I = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = s.useRef(null), A = s.useMemo(() => (p - m) / 2, [m, p]), [N, v, R] = (0, l.useSpring)(() => ({
+  } = e, I = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = s.useRef(null), A = s.useMemo(() => (p - m) / 2, [m, p]), [N, v, R] = (0, i.useSpring)(() => ({
     to: [{
       transform: "translateX(-8px)"
     }, {
       transform: "translateX(0px)"
     }],
     loop: !0
-  })), O = (0, l.useSpring)({
+  })), O = (0, i.useSpring)({
     from: {
       opacity: 0
     },
@@ -66,7 +66,7 @@ function C(e) {
     M = () => open(u.default.getArticleURL(f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES));
   return (0, a.jsxs)("div", {
     className: h.sidebarContent,
-    children: [S((e, t) => t && (0, a.jsx)(l.animated.div, {
+    children: [S((e, t) => t && (0, a.jsx)(i.animated.div, {
       className: h.sidebarLeftDecorationContainer,
       style: {
         opacity: e.opacity,
@@ -87,7 +87,7 @@ function C(e) {
           children: E.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
         })]
       })
-    })), S((e, t) => t && (0, a.jsx)(l.animated.div, {
+    })), S((e, t) => t && (0, a.jsx)(i.animated.div, {
       className: h.sidebarRightDecorationContainer,
       style: {
         opacity: e.opacity,
@@ -96,7 +96,7 @@ function C(e) {
       },
       children: (0, a.jsxs)("div", {
         className: h.sidebarRightDecoration,
-        children: [(0, a.jsx)(l.animated.div, {
+        children: [(0, a.jsx)(i.animated.div, {
           style: I ? void 0 : N,
           children: (0, a.jsx)(d.default, {
             className: h.signButton,

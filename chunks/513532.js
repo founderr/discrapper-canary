@@ -4,20 +4,20 @@ var n = a("735250");
 a("470079");
 var r = a("442837"),
   i = a("481060"),
-  s = a("863249"),
-  l = a("944163"),
+  l = a("863249"),
+  s = a("944163"),
   o = a("616230"),
-  d = a("430824"),
-  c = a("650461"),
+  c = a("430824"),
+  d = a("650461"),
   u = a("689938"),
   f = a("661926");
 t.default = e => {
   let {
     guildId: t,
     inSettings: a = !1
-  } = e, m = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(t)), h = (0, r.useStateFromStores)([l.default, c.default], () => {
+  } = e, m = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(t)), h = (0, r.useStateFromStores)([s.default, d.default], () => {
     var e, n;
-    return a ? l.default.get(t) : null === (n = c.default.getStateForGuild(t)) || void 0 === n ? void 0 : null === (e = n.progress) || void 0 === e ? void 0 : e.verificationForm
+    return a ? s.default.get(t) : null === (n = d.default.getStateForGuild(t)) || void 0 === n ? void 0 : null === (e = n.progress) || void 0 === e ? void 0 : e.verificationForm
   });
   return null == m ? null : (0, n.jsxs)("div", {
     className: f.slideContent,
@@ -35,8 +35,8 @@ t.default = e => {
       children: (0, n.jsx)(o.default, {
         guild: m,
         isClanContext: !0,
-        onFieldsSave: (e, t) => (s.default.updateVerificationFormFieldsLocal(e, t), Promise.resolve()),
-        onDescriptionSave: (e, t) => (s.default.updateVerificationFormDescriptionLocal(e, t), Promise.resolve()),
+        onFieldsSave: (e, t) => (l.default.updateVerificationFormFieldsLocal(e, t), Promise.resolve()),
+        onDescriptionSave: (e, t) => (l.default.updateVerificationFormDescriptionLocal(e, t), Promise.resolve()),
         verificationForm: h
       })
     })]

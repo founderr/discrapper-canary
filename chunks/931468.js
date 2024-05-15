@@ -10,7 +10,7 @@ t.default = (0, r.replaceIcon)(function(e) {
     height: a = 16,
     color: r = "currentColor",
     className: i,
-    foreground: s
+    foreground: l
   } = e;
   return (0, n.jsx)("svg", {
     className: i,
@@ -20,7 +20,7 @@ t.default = (0, r.replaceIcon)(function(e) {
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
     children: (0, n.jsx)("path", {
-      className: s,
+      className: l,
       fill: r,
       fillRule: "evenodd",
       clipRule: "evenodd",

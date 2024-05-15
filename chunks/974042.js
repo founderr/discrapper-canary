@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("653041");
 var a, s = n("392711"),
-  l = n.n(s),
-  i = n("442837"),
+  i = n.n(s),
+  l = n("442837"),
   r = n("570140"),
   o = n("194359"),
   u = n("81825"),
@@ -43,7 +43,7 @@ function g(e) {
 
 function I(e) {
   let t = [];
-  return l()(f.default.memberOf(e)).map(E.default.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
+  return i()(f.default.memberOf(e)).map(E.default.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
     null != e && t.push(e)
   }), {
     mutualGuildsLength: t.length,
@@ -61,7 +61,7 @@ class T extends u.default {
 }
 class A {
   reset() {
-    let e = l().map(_.default.getRelationships(), (e, t) => new T({
+    let e = i().map(_.default.getRelationships(), (e, t) => new T({
         key: t,
         type: e,
         nickname: _.default.getNickname(t),
@@ -69,7 +69,7 @@ class A {
         ...g(t),
         ...I(t)
       })),
-      t = l().map(d.default.getSuggestions(), e => new T({
+      t = i().map(d.default.getSuggestions(), e => new T({
         key: e.key,
         type: 99,
         nickname: e.name,
@@ -77,7 +77,7 @@ class A {
         ...g(e.key),
         ...I(e.key)
       }));
-    return new A(l().concat(e, t))
+    return new A(i().concat(e, t))
   }
   clone() {
     return new A(this._rows)
@@ -92,7 +92,7 @@ class A {
     return t
   }
   filter(e, t) {
-    return l()(this._rows).filter(e => {
+    return i()(this._rows).filter(e => {
       if (null == e.user) return !1;
       if (null != t && "" !== t) {
         let n = t.toLowerCase();
@@ -158,7 +158,7 @@ function D(e) {
     return !L && !!O.update(e) && (O = O.clone(), !0)
   }
 }
-class b extends(a = i.default.Store) {
+class b extends(a = l.default.Store) {
   initialize() {
     this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], x), this.syncWith([d.default], x), this.syncWith([C.default], D(S)), this.syncWith([h.default, c.default], D(g)), P()
   }

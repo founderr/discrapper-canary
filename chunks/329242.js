@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("120356"),
-  l = n.n(s),
-  i = n("481060"),
+  i = n.n(s),
+  l = n("481060"),
   r = n("51144"),
   o = n("757024");
 t.default = e => {
@@ -14,8 +14,8 @@ t.default = e => {
   } = e, s = "\xa0(@".concat(r.default.getUserTag(t, {
     decoration: "never"
   }), ")");
-  return (0, a.jsxs)(i.Text, {
-    className: l()([o.text, {
+  return (0, a.jsxs)(l.Text, {
+    className: i()([o.text, {
       [o.fill]: n
     }]),
     variant: "text-md/medium",

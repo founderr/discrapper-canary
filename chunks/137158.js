@@ -7,11 +7,11 @@ a.r(t), a.d(t, {
 var n = a("735250"),
   r = a("470079"),
   i = a("120356"),
-  s = a.n(i),
-  l = a("392711"),
+  l = a.n(i),
+  s = a("392711"),
   o = a("176617"),
-  d = a("299468"),
-  c = a("490236"),
+  c = a("299468"),
+  d = a("490236"),
   u = a("692547"),
   f = a("481060"),
   m = a("548343"),
@@ -24,7 +24,7 @@ function T(e) {
     children: a,
     onEdit: r,
     onRemove: i,
-    canRemove: l,
+    canRemove: s,
     actionsLocation: o
   } = e;
   return (0, n.jsxs)("div", {
@@ -40,14 +40,14 @@ function T(e) {
       className: E.containerFooter,
       children: [(0, n.jsx)(f.Tooltip, {
         text: h.default.Messages.CLAN_APPLICATION_CANT_REMOVE_FIELD,
-        shouldShow: !l,
+        shouldShow: !s,
         children: e => (0, n.jsx)(f.Button, {
           ...e,
-          className: s()(E.removeButton, E.button),
+          className: l()(E.removeButton, E.button),
           size: f.Button.Sizes.SMALL,
           look: f.Button.Looks.BLANK,
           onClick: i,
-          disabled: !l,
+          disabled: !s,
           children: h.default.Messages.REMOVE
         })
       }), (0, n.jsx)(f.Button, {
@@ -67,9 +67,9 @@ function C(e) {
     index: t,
     field: a,
     isDropHovered: i,
-    onDrop: d
-  } = e, c = (0, l.debounce)(async (e, t, a) => {
-    await d(e, t, a)
+    onDrop: c
+  } = e, d = (0, s.debounce)(async (e, t, a) => {
+    await c(e, t, a)
   }), f = r.useRef(null), [, h] = (0, o.useDrag)({
     type: p,
     item: {
@@ -77,7 +77,7 @@ function C(e) {
       field: a
     },
     end: (e, t) => {
-      null != e && !t.didDrop() && c(e.field, null, !0)
+      null != e && !t.didDrop() && d(e.field, null, !0)
     }
   }), [, C] = (0, o.useDrop)({
     accept: p,
@@ -85,14 +85,14 @@ function C(e) {
       var n;
       let {
         index: r
-      } = e, i = null === (n = f.current) || void 0 === n ? void 0 : n.getBoundingClientRect(), s = a.getClientOffset();
-      if (null == i || null == s) return;
-      let l = (i.bottom - i.top) / 2,
-        o = s.y - i.top;
-      (!(r < t) || !(o < l)) && (!(r > t) || !(o < l)) && r !== t && c(e.field, t, !1)
+      } = e, i = null === (n = f.current) || void 0 === n ? void 0 : n.getBoundingClientRect(), l = a.getClientOffset();
+      if (null == i || null == l) return;
+      let s = (i.bottom - i.top) / 2,
+        o = l.y - i.top;
+      (!(r < t) || !(o < s)) && (!(r > t) || !(o < s)) && r !== t && d(e.field, t, !1)
     },
     drop: e => {
-      c(e.field, t, !0)
+      d(e.field, t, !0)
     }
   });
   return r.useLayoutEffect(() => (h(C(f)), () => {
@@ -100,7 +100,7 @@ function C(e) {
   }), [h, C]), (0, n.jsxs)("div", {
     ref: f,
     "data-dnd-name": "field-".concat(t),
-    className: s()(E.dragContainer, {
+    className: l()(E.dragContainer, {
       [E.dropHovered]: i
     }),
     children: [(0, n.jsx)("div", {
@@ -131,7 +131,7 @@ function _(e) {
         className: E.actionButton,
         onClick: e.onEdit,
         "aria-label": h.default.Messages.EDIT,
-        children: (0, n.jsx)(d.PencilIcon, {
+        children: (0, n.jsx)(c.PencilIcon, {
           width: 16,
           height: 16
         })
@@ -139,7 +139,7 @@ function _(e) {
         className: E.actionButton,
         onClick: e.onRemove,
         "aria-label": h.default.Messages.REMOVE,
-        children: (0, n.jsx)(c.TrashIcon, {
+        children: (0, n.jsx)(d.TrashIcon, {
           width: 16,
           height: 16
         })

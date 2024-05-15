@@ -4,10 +4,10 @@ a.r(t), a.d(t, {
     return h
   }
 }), a("653041"), a("47120");
-var n, r, i, s, l = a("392711"),
-  o = a.n(l),
-  d = a("442837"),
-  c = a("570140"),
+var n, r, i, l, s = a("392711"),
+  o = a.n(s),
+  c = a("442837"),
+  d = a("570140"),
   u = a("823379"),
   f = a("731455"),
   m = a("689938");
@@ -19,7 +19,7 @@ let E = null,
   T = [],
   p = [],
   C = {};
-class _ extends(n = d.default.Store) {
+class _ extends(n = c.default.Store) {
   getPrimaryCategories() {
     return T
   }
@@ -47,12 +47,12 @@ class _ extends(n = d.default.Store) {
     return e === f.DISCOVERY_ALL_CATEGORIES_ID ? m.default.Messages.HOME : C[e]
   }
 }
-s = "GuildDiscoveryCategoryStore", (i = "displayName") in(r = _) ? Object.defineProperty(r, i, {
-  value: s,
+l = "GuildDiscoveryCategoryStore", (i = "displayName") in(r = _) ? Object.defineProperty(r, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[i] = s, t.default = new _(c.default, {
+}) : r[i] = l, t.default = new _(d.default, {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
     let t, {
         categories: a,
@@ -64,7 +64,7 @@ s = "GuildDiscoveryCategoryStore", (i = "displayName") in(r = _) ? Object.define
         let {
           id: a,
           name: n,
-          is_primary: s
+          is_primary: l
         } = e;
         if (a !== f.DEFAULT_DISCOVERY_CATEGORY_ID) {
           if (a === f.OTHER_DISCOVERY_CATEGORY_ID) {
@@ -73,7 +73,7 @@ s = "GuildDiscoveryCategoryStore", (i = "displayName") in(r = _) ? Object.define
               name: n
             };
             return
-          }!0 === s && r.push({
+          }!0 === l && r.push({
             categoryId: a,
             name: n
           }), i.push({

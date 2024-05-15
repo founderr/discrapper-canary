@@ -3,18 +3,18 @@ a.r(t);
 var n = a("735250"),
   r = a("470079"),
   i = a("574523"),
-  s = a("475521"),
-  l = a("491630");
+  l = a("475521"),
+  s = a("491630");
 let o = (0, i.CustomPicker)(e => (0, n.jsxs)("div", {
-  className: l.wrapper,
+  className: s.wrapper,
   children: [(0, n.jsx)("div", {
-    className: l.saturation,
-    children: (0, n.jsx)(s.Saturation, {
+    className: s.saturation,
+    children: (0, n.jsx)(l.Saturation, {
       ...e
     })
   }), (0, n.jsx)("div", {
-    className: l.hue,
-    children: (0, n.jsx)(s.Hue, {
+    className: s.hue,
+    children: (0, n.jsx)(l.Hue, {
       ...e,
       direction: "horizontal"
     })

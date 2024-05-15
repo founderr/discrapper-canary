@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return G
   }
 });
-var a, s, l = n("735250");
+var a, s, i = n("735250");
 n("470079");
-var i = n("924826"),
+var l = n("924826"),
   r = n("442837"),
   o = n("524437"),
   u = n("515753"),
@@ -48,7 +48,7 @@ let G = e => {
     B = (0, r.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
     F = (0, r.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()),
     H = (0, C.hasPremiumSubscriptionToDisplay)(B, F),
-    V = (0, i.useListItem)("nitro"),
+    V = (0, l.useListItem)("nitro"),
     Y = (0, I.usePremiumTrialOffer)(),
     W = (0, g.usePremiumDiscountOffer)(),
     K = (0, r.useStateFromStores)([f.default], () => f.default.isLocalizedPromoEnabled) && null == Y,
@@ -72,26 +72,26 @@ let G = e => {
       showTabForOtherReasons: $
     });
   if (!($ = $ || null != B && null != J && Date.now() - J.getTime() > en)) return null;
-  z ? (n = (0, l.jsx)(T.default, {
+  z ? (n = (0, i.jsx)(T.default, {
     isNitroTab: !0
-  }), a = 0) : null != Q ? (n = (0, l.jsx)(M.default, {
+  }), a = 0) : null != Q ? (n = (0, i.jsx)(M.default, {
     copy: Q
-  }), a = 1) : q ? (n = (0, l.jsx)(M.default, {}), a = 2) : null != W ? (n = (0, l.jsx)(R.PremiumDiscountOfferTabBadge, {
+  }), a = 1) : q ? (n = (0, i.jsx)(M.default, {}), a = 2) : null != W ? (n = (0, i.jsx)(R.PremiumDiscountOfferTabBadge, {
     userDiscount: W,
     isTabSelected: s,
     includesAmountOff: !1
-  }), a = 3) : null == Y || et ? Z ? (n = (0, l.jsx)(O.default, {
+  }), a = 3) : null == Y || et ? Z ? (n = (0, i.jsx)(O.default, {
     isSelected: s,
     onSelect: () => (0, d.markDismissibleContentAsDismissed)(o.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
       dismissAction: D.ContentDismissActionType.TAKE_ACTION
     })
-  }), a = 6) : K && (n = (0, l.jsx)(N.LocalizedPricingBadgeIcon, {
+  }), a = 6) : K && (n = (0, i.jsx)(N.LocalizedPricingBadgeIcon, {
     entryPoint: N.BadgeEntryPoint.PrivateMessages
-  }), !s && (t = U.localizeBadge), a = 5) : (n = (0, l.jsx)(R.PremiumTrialOfferTabBadge, {
+  }), !s && (t = U.localizeBadge), a = 5) : (n = (0, i.jsx)(R.PremiumTrialOfferTabBadge, {
     trialOffer: Y,
     isTabSelected: s
   }), a = 4);
-  let ea = (0, l.jsx)(u.LinkButton, {
+  let ea = (0, i.jsx)(u.LinkButton, {
     selected: s,
     route: G,
     icon: h.default,
@@ -108,7 +108,7 @@ let G = e => {
     className: t,
     children: n
   });
-  return Z ? (0, l.jsx)(O.ReferralProgramCoachtipLinkButton, {
+  return Z ? (0, i.jsx)(O.ReferralProgramCoachtipLinkButton, {
     children: ea
   }) : ea
 }

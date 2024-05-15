@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   acceptCreatorMonetizationTerms: function() {
-    return c
+    return d
   },
   acceptCreatorMonetizationTermsV2: function() {
     return u
@@ -19,7 +19,7 @@ a.r(t), a.d(t, {
     return m
   },
   getCreatorMonetizationEligibility: function() {
-    return d
+    return c
   },
   getCreatorMonetizationOnboardingMarketing: function() {
     return f
@@ -34,37 +34,37 @@ a.r(t), a.d(t, {
 var n = a("544891"),
   r = a("570140"),
   i = a("728345"),
-  s = a("981631"),
-  l = a("674563");
+  l = a("981631"),
+  s = a("674563");
 async function o(e) {
   await n.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(e)
+    url: l.Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(e)
   })
 }
-async function d(e) {
+async function c(e) {
   return (await n.HTTP.get({
-    url: s.Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(e)
+    url: l.Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(e)
   })).body
 }
-async function c(e, t) {
+async function d(e, t) {
   await n.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(e, t)
+    url: l.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(e, t)
   })
 }
 async function u(e) {
   await n.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(e)
+    url: l.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(e)
   })
 }
 async function f(e) {
   return (await n.HTTP.get({
-    url: s.Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(e)
+    url: l.Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(e)
   })).body
 }
 async function m(e) {
   try {
     let t = await n.HTTP.get({
-      url: s.Endpoints.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
+      url: l.Endpoints.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
       query: {
         nag_guild_ids: e
       }
@@ -77,7 +77,7 @@ async function m(e) {
 }
 async function h(e, t) {
   let a = (await n.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),
+    url: l.Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),
     body: {
       team_id: t
     }
@@ -90,24 +90,24 @@ async function h(e, t) {
 
 function E(e) {
   return n.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e)
+    url: l.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e)
   })
 }
 
 function T(e) {
   return n.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e)
+    url: l.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e)
   })
 }
 async function p(e) {
   await n.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(e),
+    url: l.Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(e),
     body: {}
   })
 }
 async function C(e) {
   return await p(e), await i.default.getApplicationsForGuild(e, {
-    type: l.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS,
+    type: s.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS,
     includeTeam: !0
   })
 }

@@ -3,11 +3,11 @@ a.r(t), a("47120"), a("315314"), a("610138"), a("216116"), a("78328"), a("815648
 var n = a("735250"),
   r = a("470079"),
   i = a("120356"),
-  s = a.n(i),
-  l = a("866442"),
+  l = a.n(i),
+  s = a("866442"),
   o = a("19602"),
-  d = a("481060"),
-  c = a("550271"),
+  c = a("481060"),
+  d = a("550271"),
   u = a("688298"),
   f = a("116175"),
   m = a("308083"),
@@ -65,11 +65,11 @@ t.default = e => {
     })
   }, [t, A, O.primary, O.secondary, v, a, i, x]), (0, n.jsxs)("div", {
     className: T.slideContent,
-    children: [(0, n.jsx)(d.Heading, {
+    children: [(0, n.jsx)(c.Heading, {
       variant: "heading-xxl/medium",
       className: T.title,
       children: h.default.Messages.CLAN_SETUP_CUSTOMIZE_TITLE
-    }), (0, n.jsx)(d.Text, {
+    }), (0, n.jsx)(c.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: T.subtitle,
@@ -80,18 +80,18 @@ t.default = e => {
         className: E.badgesContainer,
         children: [(0, n.jsxs)("div", {
           className: E.pickerContainer,
-          children: [(0, n.jsx)(d.Text, {
+          children: [(0, n.jsx)(c.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
             children: h.default.Messages.CLAN_BADGE
           }), (0, n.jsx)("div", {
             className: E.pickerGrid,
-            children: C.map(e => (0, n.jsx)(d.Clickable, {
+            children: C.map(e => (0, n.jsx)(c.Clickable, {
               onClick: () => S(e),
-              className: s()(E.badgeAssetContainer, {
+              className: l()(E.badgeAssetContainer, {
                 [E.badgeAssetContainerSelected]: e === A
               }),
-              children: (0, n.jsx)(c.ClanBadge, {
+              children: (0, n.jsx)(d.ClanBadge, {
                 badge: e,
                 width: 32,
                 height: 32
@@ -100,20 +100,20 @@ t.default = e => {
           })]
         }), (0, n.jsxs)("div", {
           className: E.pickerContainer,
-          children: [(0, n.jsx)(d.Text, {
+          children: [(0, n.jsx)(c.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
             children: h.default.Messages.CLAN_BADGE_COLORS
           }), (0, n.jsxs)("div", {
             className: E.pickerGrid,
-            children: [f.CLAN_BADGE_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(d.Clickable, {
+            children: [f.CLAN_BADGE_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(c.Clickable, {
               onClick: () => {
                 y(t), M(f.CLAN_BADGE_PALETTE_PRESETS[t])
               },
-              className: s()(E.badgeAssetContainer, {
+              className: l()(E.badgeAssetContainer, {
                 [E.badgeAssetContainerSelected]: t === L
               }),
-              children: (0, n.jsx)(c.ClanBadge, {
+              children: (0, n.jsx)(d.ClanBadge, {
                 badge: A,
                 width: 32,
                 height: 32,
@@ -126,23 +126,23 @@ t.default = e => {
               onPrimaryColorChange: e => {
                 M(t => ({
                   ...t,
-                  primary: (0, l.int2hex)(e)
+                  primary: (0, s.int2hex)(e)
                 }))
               },
               onSecondaryColorChange: e => {
                 M(t => ({
                   ...t,
-                  secondary: (0, l.int2hex)(e)
+                  secondary: (0, s.int2hex)(e)
                 }))
               },
               shouldShow: b,
               onRequestClose: () => j(!1),
-              children: e => (0, n.jsx)(d.Clickable, {
+              children: e => (0, n.jsx)(c.Clickable, {
                 ...e,
                 onClick: () => {
                   y(_), j(e => !e)
                 },
-                className: s()(E.badgeAssetContainer, {
+                className: l()(E.badgeAssetContainer, {
                   [E.badgeAssetContainerSelected]: _ === L
                 }),
                 children: (0, n.jsx)(o.EyeDropperIcon, {
@@ -155,16 +155,16 @@ t.default = e => {
         })]
       }), (0, n.jsxs)("div", {
         className: E.tagContainer,
-        children: [(0, n.jsx)(d.Text, {
+        children: [(0, n.jsx)(c.Text, {
           variant: "text-xs/semibold",
           color: "text-muted",
           children: h.default.Messages.CLAN_OVERVIEW_LABEL_CLAN_TAG
-        }), null != I && (0, n.jsx)(d.Text, {
+        }), null != I && (0, n.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "status-danger",
           className: T.errorText,
           children: I
-        }), (0, n.jsx)(d.TextInput, {
+        }), (0, n.jsx)(c.TextInput, {
           className: E.tagInputWrapper,
           inputClassName: E.tagInput,
           value: g,
@@ -174,14 +174,14 @@ t.default = e => {
           maxLength: m.MAX_TAG_LENGTH,
           placeholder: h.default.Messages.CLAN_SETUP_TAG_PLACEHOLDER,
           autoFocus: !0,
-          prefixElement: (0, n.jsx)(c.ClanBadge, {
+          prefixElement: (0, n.jsx)(d.ClanBadge, {
             badge: A,
             width: 40,
             height: 40,
             primaryTintColor: O.primary,
             secondaryTintColor: O.secondary
           })
-        }), (0, n.jsx)(d.Text, {
+        }), (0, n.jsx)(c.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
           className: E.tagValidationText,
@@ -190,7 +190,7 @@ t.default = e => {
           style: {
             visibility: "hidden"
           },
-          children: [(0, n.jsx)(c.ClanBadge, {
+          children: [(0, n.jsx)(d.ClanBadge, {
             id: p,
             badge: A,
             width: 64,

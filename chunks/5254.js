@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var a, s, l, i, r = n("392711"),
+var a, s, i, l, r = n("392711"),
   o = n.n(r),
   u = n("442837"),
   d = n("570140"),
@@ -39,12 +39,12 @@ class p extends(a = u.default.Store) {
     return E[e]
   }
 }
-i = "FriendSuggestionStore", (l = "displayName") in(s = p) ? Object.defineProperty(s, l, {
-  value: i,
+l = "FriendSuggestionStore", (i = "displayName") in(s = p) ? Object.defineProperty(s, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new p(d.default, {
+}) : s[i] = l, t.default = new p(d.default, {
   CONNECTION_OPEN: function(e) {
     E = {}, (h = e.friendSuggestionCount) > 0 && (C = !0, _ || !C || (_ = !0, C = !1))
   },

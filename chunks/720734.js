@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("653041");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("442837"),
   o = n("524437"),
   u = n("846519"),
@@ -60,8 +60,8 @@ var a = n("735250"),
   en = n("111653"),
   ea = n("212704"),
   es = n("14357"),
-  el = n("393333"),
-  ei = n("763296"),
+  ei = n("393333"),
+  el = n("763296"),
   er = n("640806"),
   eo = n("484459"),
   eu = n("584427"),
@@ -147,21 +147,21 @@ class eq extends s.PureComponent {
     } = this.state, {
       customStatusActivity: n,
       userTag: s,
-      currentUser: l,
-      status: i
+      currentUser: i,
+      status: l
     } = this.props;
-    if (null == l) return null;
-    let r = ek.default.getName(l),
-      o = null != i && i !== eB.StatusTypes.UNKNOWN,
+    if (null == i) return null;
+    let r = ek.default.getName(i),
+      o = null != l && l !== eB.StatusTypes.UNKNOWN,
       u = null != n;
-    return (u || o && l.isPomelo()) && (e = (0, a.jsx)(eN.default, {
+    return (u || o && i.isPomelo()) && (e = (0, a.jsx)(eN.default, {
       hoverText: s,
       forceHover: t,
       children: u ? (0, a.jsx)(k.default, {
         activity: n,
         emojiClassName: eY.emoji,
         className: eY.customStatus
-      }) : ek.default.humanizeStatus(i)
+      }) : ek.default.humanizeStatus(l)
     })), (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
         className: eY.panelTitleContainer,
@@ -185,12 +185,12 @@ class eq extends s.PureComponent {
     } = this.state;
     if (null == e) return null;
     let s = null,
-      l = m.TooltipColors.PRIMARY;
-    return eU.SUPPORTS_COPY && (s = eV.default.Messages.ACCOUNT_CLICK_TO_COPY, n && (s = this.renderCopiedSuccess(), l = this.isCopiedStreakGodlike ? m.TooltipColors.RED : m.TooltipColors.GREEN)), (0, a.jsx)(m.Tooltip, {
+      i = m.TooltipColors.PRIMARY;
+    return eU.SUPPORTS_COPY && (s = eV.default.Messages.ACCOUNT_CLICK_TO_COPY, n && (s = this.renderCopiedSuccess(), i = this.isCopiedStreakGodlike ? m.TooltipColors.RED : m.TooltipColors.GREEN)), (0, a.jsx)(m.Tooltip, {
       text: s,
       forceOpen: t,
       "aria-label": !!eU.SUPPORTS_COPY && eV.default.Messages.ACCOUNT_CLICK_TO_COPY,
-      color: l,
+      color: i,
       delay: 500,
       onAnimationRest: (e, a) => {
         n && !t && a.phase === eB.SpringTransitionPhases.LEAVE && this.setState({
@@ -201,10 +201,10 @@ class eq extends s.PureComponent {
         let {
           onClick: t,
           onMouseEnter: s,
-          ...l
+          ...i
         } = e;
         return (0, a.jsx)(m.Clickable, {
-          ...l,
+          ...i,
           onMouseEnter: () => {
             n ? (this.copiedTimeout.stop(), this.setState({
               shouldShowNametagTooltip: !1
@@ -213,7 +213,7 @@ class eq extends s.PureComponent {
           onClick: () => {
             null == t || t(), this.handleCopyTag()
           },
-          className: i()(eY.nameTag, {
+          className: l()(eY.nameTag, {
             [eY.canCopy]: eU.SUPPORTS_COPY
           }),
           children: this.renderNameTag()
@@ -227,7 +227,7 @@ class eq extends s.PureComponent {
       streaming: t,
       currentUser: n,
       status: s,
-      showTagAsButton: l,
+      showTagAsButton: i,
       showTaglessAccountPanel: r
     } = this.props;
     if (null == n) return null;
@@ -248,8 +248,8 @@ class eq extends s.PureComponent {
         children: (u, d) => (0, a.jsxs)(m.Clickable, {
           ...u,
           "aria-label": eV.default.Messages.SET_STATUS,
-          className: i()(eY.avatarWrapper, {
-            [eY.withTagAsButton]: l,
+          className: l()(eY.avatarWrapper, {
+            [eY.withTagAsButton]: i,
             [eY.withTagless]: r
           }),
           children: [(0, a.jsx)(eK, {
@@ -260,8 +260,8 @@ class eq extends s.PureComponent {
             status: t ? eB.StatusTypes.STREAMING : s,
             isSpeaking: e,
             className: eY.avatar
-          }), l || r ? (0, a.jsx)("div", {
-            className: i()(eY.nameTag, {
+          }), i || r ? (0, a.jsx)("div", {
+            className: l()(eY.nameTag, {
               [eY.canCopy]: eU.SUPPORTS_COPY
             }),
             children: r ? (0, a.jsx)(eM.default, {
@@ -306,8 +306,8 @@ class eq extends s.PureComponent {
       selfDeaf: t,
       selfMute: n,
       awaitingRemote: s,
-      serverMute: l,
-      serverDeaf: i,
+      serverMute: i,
+      serverDeaf: l,
       suppress: r,
       dismissibleContents: u
     } = this.props, {
@@ -321,10 +321,10 @@ class eq extends s.PureComponent {
         grow: 0,
         children: [(0, a.jsx)(eX, {
           selfMute: n,
-          serverMute: l,
+          serverMute: i,
           suppress: r,
           awaitingRemote: s,
-          tooltipText: d ? eV.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, x.default)(n, l, r, s),
+          tooltipText: d ? eV.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, x.default)(n, i, r, s),
           tooltipColor: d ? m.TooltipColors.GREEN : void 0,
           tooltipForceOpen: d || void 0,
           onMouseEnter: this.handleMouseEnterMute,
@@ -333,7 +333,7 @@ class eq extends s.PureComponent {
           onContextMenu: this.handleInputAudioContextMenu
         }), (0, a.jsx)(eJ, {
           selfDeaf: t,
-          serverDeaf: i,
+          serverDeaf: l,
           onClick: this.handleToggleSelfDeaf,
           onContextMenu: this.handleOutputAudioContextMenu,
           awaitingRemote: s
@@ -420,7 +420,7 @@ class eq extends s.PureComponent {
                   position: "top",
                   align: "center",
                   shouldShow: !0,
-                  renderPopout: () => (0, a.jsx)(el.UserSafetyEducationReportingCoachmark, {
+                  renderPopout: () => (0, a.jsx)(ei.UserSafetyEducationReportingCoachmark, {
                     markAsDismissed: n
                   }),
                   children: this.renderSettingsGear
@@ -573,9 +573,9 @@ class eq extends s.PureComponent {
         speakingWhileMuted: a,
         occluded: s
       } = this.props, {
-        hoveringOnMute: l
+        hoveringOnMute: i
       } = this.state;
-      a ? !l && e && !t && !n && !s && this.setState({
+      a ? !i && e && !t && !n && !s && this.setState({
         shouldShowSpeakingWhileMutedTooltip: !0
       }, () => {
         this.speakingWhileMutedTooltipTimeout.start(2e3, () => this.setState({
@@ -623,8 +623,8 @@ class eq extends s.PureComponent {
 function eQ() {
   var e, t;
   let n = (0, r.useStateFromStores)([eI.default], () => eI.default.getCurrentUser()),
-    l = (0, F.useShowEligibilityEnrollmentTooltip)(eH.PartnerGame.FORTNITE),
-    i = (0, r.useStateFromStores)([eh.default], () => eh.default.getId()),
+    i = (0, F.useShowEligibilityEnrollmentTooltip)(eH.PartnerGame.FORTNITE),
+    l = (0, r.useStateFromStores)([eh.default], () => eh.default.getId()),
     u = (0, G.useCustomStatusActivity)(),
     {
       streaming: d,
@@ -634,7 +634,7 @@ function eQ() {
       status: eS.default.getStatus()
     })),
     f = (0, R.default)({
-      userId: i
+      userId: l
     }),
     E = ek.default.useUserTag(n, {
       decoration: "never"
@@ -683,7 +683,7 @@ function eQ() {
     ee = (0, N.useIsDmSpamFilterCoachmarkEnabled)(),
     ea = (0, et.useCanSeeSafetyEducationBlockMuteCoachmark)(),
     es = (0, A.useIsSafetyConsumerEducationBlockMuteBucket)(),
-    el = (0, en.useCanSeeSafetyEducationReportingCoachmark)(),
+    ei = (0, en.useCanSeeSafetyEducationReportingCoachmark)(),
     er = (0, eu.default)(n),
     eo = (null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eF.GYOIKO_SAKURA_DECO_SKU_ID,
     ed = "account";
@@ -694,13 +694,13 @@ function eQ() {
     location: ed + " auto off",
     autoTrackExposure: !1
   }), (0, et.useSafetyEducationAATriggerPoint)();
-  let ec = (0, r.useStateFromStores)([ei.default], () => ei.default.hasHadOtherUserPlaySoundInSession()),
+  let ec = (0, r.useStateFromStores)([el.default], () => el.default.hasHadOtherUserPlaySoundInSession()),
     eA = function() {
       let e = (0, w.useIsDismissibleContentDismissed)(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
         [t, n] = (0, r.useStateFromStoresArray)([X.default], () => [X.default.hasFetchedRelevance, X.default.profileThemesRelevanceExceeded]),
-        [a, l] = (0, r.useStateFromStoresArray)([eT.default], () => [eT.default.hasFetchedMostRecentPremiumTypeSubscription(), eT.default.getMostRecentPremiumTypeSubscription()]),
+        [a, i] = (0, r.useStateFromStoresArray)([eT.default], () => [eT.default.hasFetchedMostRecentPremiumTypeSubscription(), eT.default.getMostRecentPremiumTypeSubscription()]),
         {
-          enabled: i
+          enabled: l
         } = $.default.useExperiment({
           location: "08bd40_1"
         }, {
@@ -708,18 +708,18 @@ function eQ() {
         }),
         u = s.useMemo(() => {
           let e = new Date().getTime();
-          return null != l && (l.status === eB.SubscriptionStatusTypes.ACTIVE || e - l.currentPeriodEnd.getTime() < ez)
-        }, [l]);
+          return null != i && (i.status === eB.SubscriptionStatusTypes.ACTIVE || e - i.currentPeriodEnd.getTime() < ez)
+        }, [i]);
       return s.useEffect(() => {
         (async () => {
-          if (!e && null == n && !!i) {
+          if (!e && null == n && !!l) {
             if (!a) {
               await (0, p.fetchMostRecentSubscription)();
               return
             }!u && !t && await (0, p.getPerksRelevance)()
           }
         })()
-      }, [i, n, e, a, t, u]), !e && !!i && !u && null != n && n
+      }, [l, n, e, a, t, u]), !e && !!l && !u && null != n && n
     }(),
     {
       enabled: eN
@@ -730,7 +730,7 @@ function eQ() {
       avatar: [],
       settings: []
     };
-  return !D && (eA && ev.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), l && (ev.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && W === (null === (t = (0, V.getDrop)(eH.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && ev.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), Q && ee && ev.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), ea && (1 === es ? ev.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ev.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ec && ev.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), el && ev.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), er && ev.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eN && ev.settings.push(o.DismissibleContent.PRIDE_ICONS_COACHMARK), eo && ev.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eq, {
+  return !D && (eA && ev.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), i && (ev.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && W === (null === (t = (0, V.getDrop)(eH.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && ev.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), Q && ee && ev.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), ea && (1 === es ? ev.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ev.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ec && ev.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), ei && ev.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), er && ev.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eN && ev.settings.push(o.DismissibleContent.PRIDE_ICONS_COACHMARK), eo && ev.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eq, {
     currentUser: n,
     customStatusActivity: u,
     dismissibleContents: ev,
@@ -761,9 +761,9 @@ function eZ(e) {
     webBuildOverride: t,
     isEligibleForPomelo: n,
     onClick: s,
-    onContextMenu: l
-  } = e, i = (0, m.useRedesignIconContext)().enabled, r = null, o = eO.default, u = (0, C.useSettingsLottie)();
-  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eL.default, {
+    onContextMenu: i
+  } = e, l = (0, m.useRedesignIconContext)().enabled, r = null, o = eO.default, u = (0, C.useSettingsLottie)();
+  return l ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eL.default, {
     width: 9,
     height: 9,
     className: eY.hasBuildOverride,
@@ -777,7 +777,7 @@ function eZ(e) {
       webBuildOverride: t.id
     }) : eV.default.Messages.USER_SETTINGS,
     onClick: s,
-    onContextMenu: l,
+    onContextMenu: i,
     innerClassName: null != t || n ? eY.buildOverrideButton : null,
     icon: o,
     ...u.events,
@@ -789,8 +789,8 @@ function eX(e) {
   let {
     selfMute: t,
     serverMute: n,
-    suppress: l,
-    awaitingRemote: i,
+    suppress: i,
+    awaitingRemote: l,
     tooltipText: r,
     tooltipColor: o,
     tooltipForceOpen: u,
@@ -798,11 +798,11 @@ function eX(e) {
     onMouseLeave: f,
     onClick: E,
     onContextMenu: h
-  } = e, C = t || l || n, {
+  } = e, C = t || i || n, {
     Component: p,
     play: S,
     events: g
-  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), I = n || l ? c.MicrophoneDenyIcon : p;
+  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), I = n || i ? c.MicrophoneDenyIcon : p;
   return s.useEffect(() => () => S(), [C, S]), (0, a.jsx)(eM.default, {
     tooltipText: r,
     tooltipColor: o,
@@ -825,7 +825,7 @@ function eX(e) {
     role: "switch",
     "aria-label": eV.default.Messages.MUTE,
     "aria-checked": C,
-    disabled: i
+    disabled: l
   })
 }
 
@@ -833,7 +833,7 @@ function eJ(e) {
   let {
     selfDeaf: t,
     serverDeaf: n,
-    awaitingRemote: l,
+    awaitingRemote: i,
     onClick: r,
     onContextMenu: o
   } = e, u = t || n, {
@@ -845,7 +845,7 @@ function eJ(e) {
     }
   } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = n ? d.HeadphonesDenyIcon : c;
   return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eM.default, {
-    tooltipText: (0, P.default)(t, n, l),
+    tooltipText: (0, P.default)(t, n, i),
     onMouseEnter: E,
     onMouseLeave: _,
     icon: (0, a.jsx)(C, {
@@ -856,13 +856,13 @@ function eJ(e) {
     }),
     onClick: r,
     onContextMenu: o,
-    innerClassName: i()({
+    innerClassName: l()({
       [eY.redIcon]: n
     }),
     iconForeground: u ? eY.strikethrough : null,
     role: "switch",
     "aria-label": eV.default.Messages.DEAFEN,
     "aria-checked": u,
-    disabled: l
+    disabled: i
   })
 }

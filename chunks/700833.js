@@ -11,11 +11,11 @@ var n = a("735250");
 a("470079");
 var r = a("392711"),
   i = a("481060"),
-  s = a("246364"),
-  l = a("405545"),
+  l = a("246364"),
+  s = a("405545"),
   o = a("382574"),
-  d = a("279988"),
-  c = a("786127"),
+  c = a("279988"),
+  d = a("786127"),
   u = a("981631"),
   f = a("689938");
 
@@ -62,25 +62,25 @@ function m(e) {
     actionsLocation: I
   };
   switch (u.field_type) {
-    case s.VerificationFormFieldTypes.TERMS:
-      return (0, n.jsx)(d.default, {
+    case l.VerificationFormFieldTypes.TERMS:
+      return (0, n.jsx)(c.default, {
         channelId: m.rulesChannelId,
         title: f.default.Messages.GUILD_RULES_HEADER,
         formField: u,
         ...M
       });
-    case s.VerificationFormFieldTypes.PARAGRAPH:
+    case l.VerificationFormFieldTypes.PARAGRAPH:
       return (0, n.jsx)(o.default, {
         formField: u,
         ...M
       });
-    case s.VerificationFormFieldTypes.TEXT_INPUT:
-      return (0, n.jsx)(c.default, {
+    case l.VerificationFormFieldTypes.TEXT_INPUT:
+      return (0, n.jsx)(d.default, {
         formField: u,
         ...M
       });
-    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-      return (0, n.jsx)(l.default, {
+    case l.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+      return (0, n.jsx)(s.default, {
         formField: u,
         ...M
       });
@@ -90,11 +90,11 @@ function m(e) {
 }
 
 function h(e, t, r) {
-  let l = {
+  let s = {
     onCloseRequest: u.NOOP
   };
   switch (e) {
-    case s.VerificationFormFieldTypes.TERMS:
+    case l.VerificationFormFieldTypes.TERMS:
       return (0, i.openModalLazy)(async () => {
         let {
           default: e
@@ -105,8 +105,8 @@ function h(e, t, r) {
           onSave: t,
           guild: r
         })
-      }, l);
-    case s.VerificationFormFieldTypes.PARAGRAPH:
+      }, s);
+    case l.VerificationFormFieldTypes.PARAGRAPH:
       return (0, i.openModalLazy)(async () => {
         let {
           ParagraphFormFieldModal: e
@@ -116,8 +116,8 @@ function h(e, t, r) {
           field: void 0,
           onSave: t
         })
-      }, l);
-    case s.VerificationFormFieldTypes.TEXT_INPUT:
+      }, s);
+    case l.VerificationFormFieldTypes.TEXT_INPUT:
       return (0, i.openModalLazy)(async () => {
         let {
           TextInputFormFieldModal: e
@@ -127,8 +127,8 @@ function h(e, t, r) {
           field: void 0,
           onSave: t
         })
-      }, l);
-    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+      }, s);
+    case l.VerificationFormFieldTypes.MULTIPLE_CHOICE:
       return (0, i.openModalLazy)(async () => {
         let {
           default: e
@@ -138,16 +138,16 @@ function h(e, t, r) {
           field: void 0,
           onSave: t
         })
-      }, l)
+      }, s)
   }
 }
 
 function E(e, t, r) {
-  let l = {
+  let s = {
     onCloseRequest: u.NOOP
   };
   switch (e.field_type) {
-    case s.VerificationFormFieldTypes.TERMS:
+    case l.VerificationFormFieldTypes.TERMS:
       return (0, i.openModalLazy)(async () => {
         let {
           default: i
@@ -158,8 +158,8 @@ function E(e, t, r) {
           onSave: t,
           guild: r
         })
-      }, l);
-    case s.VerificationFormFieldTypes.PARAGRAPH:
+      }, s);
+    case l.VerificationFormFieldTypes.PARAGRAPH:
       return (0, i.openModalLazy)(async () => {
         let {
           ParagraphFormFieldModal: r
@@ -169,8 +169,8 @@ function E(e, t, r) {
           field: e,
           onSave: t
         })
-      }, l);
-    case s.VerificationFormFieldTypes.TEXT_INPUT:
+      }, s);
+    case l.VerificationFormFieldTypes.TEXT_INPUT:
       return (0, i.openModalLazy)(async () => {
         let {
           TextInputFormFieldModal: r
@@ -180,8 +180,8 @@ function E(e, t, r) {
           field: e,
           onSave: t
         })
-      }, l);
-    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+      }, s);
+    case l.VerificationFormFieldTypes.MULTIPLE_CHOICE:
       return (0, i.openModalLazy)(async () => {
         let {
           default: r
@@ -191,6 +191,6 @@ function E(e, t, r) {
           field: e,
           onSave: t
         })
-      }, l)
+      }, s)
   }
 }

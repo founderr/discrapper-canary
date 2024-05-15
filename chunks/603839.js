@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("392711"),
   o = n("685626"),
   u = n("442837"),
@@ -38,7 +38,7 @@ function O(e) {
   let {
     guildId: t,
     onClose: n
-  } = e, l = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
+  } = e, i = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
     progress: O,
     errors: L,
     submitting: M
@@ -54,11 +54,11 @@ function O(e) {
     config: R,
     onStart: () => w(!0),
     onRest: () => w(1 === j),
-    immediate: l
+    immediate: i
   }), H = (0, o.useSpring)({
     transform: "translateX(".concat(1 === j ? 0 : -1 * b / 2 + 190, "px)"),
     config: R,
-    immediate: l
+    immediate: i
   }), V = (0, o.useTransition)(0 === j, {
     from: {
       opacity: 0
@@ -68,7 +68,7 @@ function O(e) {
       delay: 500
     },
     config: R,
-    immediate: l
+    immediate: i
   }), Y = (0, o.useTransition)(0 === j, {
     from: {
       opacity: 0
@@ -80,7 +80,7 @@ function O(e) {
       opacity: 0
     },
     config: R,
-    immediate: l
+    immediate: i
   }), W = s.useCallback(e => {
     if (e === P.length) G(0), (0, _.trackConvertStepViewed)(t, "signature");
     else if (0 === j) G(1);
@@ -158,14 +158,14 @@ function O(e) {
           className: v.panel,
           children: [(0, a.jsx)(o.animated.div, {
             style: F,
-            className: i()(v.stepsContainer, {
+            className: l()(v.stepsContainer, {
               [v.hidden]: !k
             }),
             children: (0, a.jsx)(T.default, {
               guildId: t
             })
           }), (0, a.jsx)("div", {
-            className: i()(v.navigationContainer, {
+            className: l()(v.navigationContainer, {
               [v.elevatedNavigationContainer]: !k
             }),
             children: (0, a.jsx)(g.default, {
@@ -173,20 +173,20 @@ function O(e) {
               progress: O,
               updateCurrentStep: W,
               animationStyle: F,
-              animationClassName: i()({
+              animationClassName: l()({
                 [v.hidden]: !k
               })
             })
           })]
         }), (0, a.jsx)(o.animated.div, {
           style: F,
-          className: i()(v.divider, {
+          className: l()(v.divider, {
             [v.hidden]: !k,
             [v.dividerResponsive]: k
           })
         }), (0, a.jsx)(o.animated.div, {
           style: H,
-          className: i()(v.sidebar, {
+          className: l()(v.sidebar, {
             [v.sidebarResponsive]: k
           }),
           children: (0, a.jsx)(I.default, {

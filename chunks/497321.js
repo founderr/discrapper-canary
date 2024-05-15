@@ -2,11 +2,11 @@
 a.r(t), a("47120");
 var n, r = a("735250"),
   i = a("470079"),
-  s = a("120356"),
-  l = a.n(s),
+  l = a("120356"),
+  s = a.n(l),
   o = a("481060"),
-  d = a("37234"),
-  c = a("230711"),
+  c = a("37234"),
+  d = a("230711"),
   u = a("981631"),
   f = a("689938"),
   m = a("662090");
@@ -26,7 +26,7 @@ class E extends(n = i.Component) {
       children: [(0, r.jsx)("div", {
         className: m.streamerModeEnabledImage
       }), (0, r.jsx)(o.Clickable, {
-        className: l()(m.streamerModeEnabledBtn, {
+        className: s()(m.streamerModeEnabledBtn, {
           [m.disabled]: this.props.disableButton
         }),
         onClick: this.handleClick,
@@ -36,7 +36,7 @@ class E extends(n = i.Component) {
   }
   constructor(...e) {
     super(...e), h(this, "handleClick", () => {
-      !this.props.disableButton && ((0, d.pushLayer)(u.Layers.USER_SETTINGS), c.default.setSection(u.UserSettingsSections.STREAMER_MODE))
+      !this.props.disableButton && ((0, c.pushLayer)(u.Layers.USER_SETTINGS), d.default.setSection(u.UserSettingsSections.STREAMER_MODE))
     })
   }
 }

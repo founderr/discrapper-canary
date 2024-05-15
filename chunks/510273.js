@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("481060"),
   o = n("955204"),
   u = n("818765"),
@@ -70,7 +70,7 @@ function E(e) {
     achievement: t,
     unlocked: n
   } = e, {
-    name: l,
+    name: i,
     description: E,
     rarity: h,
     hideDescriptionUntilUnlock: _,
@@ -89,7 +89,7 @@ function E(e) {
   let p = null != C && n,
     S = p ? r.Clickable : "div";
   return (0, a.jsxs)(S, {
-    className: i()(c.container, p && c.actionable),
+    className: l()(c.container, p && c.actionable),
     onClick: () => {
       p && C()
     },
@@ -105,7 +105,7 @@ function E(e) {
       children: [(0, a.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: l()
+        children: i()
       }), (0, a.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",

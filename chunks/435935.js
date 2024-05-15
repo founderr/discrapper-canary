@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return p
   }
 });
-var a, s, l = n("735250"),
-  i = n("470079"),
+var a, s, i = n("735250"),
+  l = n("470079"),
   r = n("557533"),
   o = n.n(r),
   u = n("424591"),
@@ -46,7 +46,7 @@ let f = {
     SMALL: d.flexGutterSmall,
     LARGE: d.flexGutterLarge
   };
-class m extends(a = i.PureComponent) {
+class m extends(a = l.PureComponent) {
   render() {
     let {
       children: e,
@@ -67,14 +67,14 @@ class m extends(a = i.PureComponent) {
       className: t === d.flexChild ? t : o()(d.flexChild, t),
       ...c
     };
-    if (!u && "string" != typeof e && 1 === i.Children.count(e)) {
-      let n = i.Children.only(e);
+    if (!u && "string" != typeof e && 1 === l.Children.count(e)) {
+      let n = l.Children.only(e);
       return f.style = {
         ...f.style,
         ...n.props.style
-      }, f.className = o()(n.props.className, t), i.cloneElement(n, f)
+      }, f.className = o()(n.props.className, t), l.cloneElement(n, f)
     }
-    return (0, l.jsx)("div", {
+    return (0, i.jsx)("div", {
       ...f,
       children: e
     })
@@ -85,7 +85,7 @@ c(m, "defaultProps", {
   style: {},
   wrap: !1
 });
-class p extends(s = i.PureComponent) {
+class p extends(s = l.PureComponent) {
   render() {
     let {
       children: e,
@@ -93,7 +93,7 @@ class p extends(s = i.PureComponent) {
       direction: n,
       justify: a,
       align: s,
-      wrap: i,
+      wrap: l,
       shrink: r,
       grow: u,
       basis: c,
@@ -106,9 +106,9 @@ class p extends(s = i.PureComponent) {
       flexBasis: c,
       ...f
     };
-    return (0, l.jsx)("div", {
+    return (0, i.jsx)("div", {
       style: _,
-      className: o()(d.flex, n, a, s, i, E, t),
+      className: o()(d.flex, n, a, s, l, E, t),
       ...h,
       children: e
     })

@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("887024"),
-  i = n("685626"),
+  i = n("887024"),
+  l = n("685626"),
   r = n("569379"),
   o = n("675654"),
   u = n("977524"),
@@ -16,14 +16,14 @@ t.default = e => {
   } = e, {
     completionSpring: f,
     startCompletionAnimation: E
-  } = (0, r.useQuestBarCompletionAnimation)(), h = s.useRef(!1), [_, C] = s.useState(null), [m, p] = s.useState(null), S = s.useRef(new l.Environment({
+  } = (0, r.useQuestBarCompletionAnimation)(), h = s.useRef(!1), [_, C] = s.useState(null), [m, p] = s.useState(null), S = s.useRef(new i.Environment({
     gravity: 0,
     wind: 0
-  })), g = (0, l.useConfettiCannon)(_, m), I = s.useCallback(() => {
+  })), g = (0, i.useConfettiCannon)(_, m), I = s.useCallback(() => {
     let e = n.current;
     if (null != e && g.isReady) {
-      var t, a, s, l;
-      g.createMultipleConfetti((t = e.offsetLeft, a = e.offsetTop, s = e.clientHeight, l = e.clientWidth, {
+      var t, a, s, i;
+      g.createMultipleConfetti((t = e.offsetLeft, a = e.offsetTop, s = e.clientHeight, i = e.clientWidth, {
         ...o.COMMON_CONFETTI_BASE_CONFIG,
         position: {
           type: "static-random",
@@ -33,7 +33,7 @@ t.default = e => {
           },
           maxValue: {
             x: t + 12 + s,
-            y: a + 12 + l
+            y: a + 12 + i
           }
         },
         velocity: {
@@ -65,16 +65,16 @@ t.default = e => {
     !h.current && n && (E(), I()), h.current = n
   }, [t, I, E]), (0, a.jsxs)("div", {
     className: u.wrapper,
-    children: [(0, a.jsx)(i.animated.div, {
+    children: [(0, a.jsx)(l.animated.div, {
       className: u.background,
       style: {
         opacity: f
       }
-    }), (0, a.jsx)(l.ConfettiCanvas, {
+    }), (0, a.jsx)(i.ConfettiCanvas, {
       ref: C,
       className: u.confetti,
       environment: S.current
-    }), (0, a.jsx)(l.SpriteCanvas, {
+    }), (0, a.jsx)(i.SpriteCanvas, {
       ref: p,
       sprites: [d],
       colors: c,

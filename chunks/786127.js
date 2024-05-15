@@ -4,15 +4,15 @@ var n = a("735250");
 a("470079");
 var r = a("707592"),
   i = a("137158"),
-  s = a("689938"),
-  l = a("17359");
+  l = a("689938"),
+  s = a("17359");
 t.default = function(e) {
   let {
     formField: t,
     index: a,
     isDragEnabled: o,
-    isDropHovered: d,
-    onDrop: c,
+    isDropHovered: c,
+    onDrop: d,
     onEdit: u,
     onRemove: f,
     canRemove: m,
@@ -25,16 +25,16 @@ t.default = function(e) {
     field: t,
     index: a,
     isDragEnabled: o,
-    isDropHovered: d,
-    onDrop: c,
+    isDropHovered: c,
+    onDrop: d,
     onEdit: u,
     onRemove: f,
     title: E,
     canRemove: m,
     actionsLocation: h,
     children: (0, n.jsx)(r.TextInputFieldBody, {
-      className: l.fieldBackground,
-      placeholder: null != T ? T : s.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
+      className: s.fieldBackground,
+      placeholder: null != T ? T : l.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0
     })
   })

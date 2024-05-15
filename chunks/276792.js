@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("524437"),
-  l = n("740111"),
-  i = n("481060"),
+  i = n("740111"),
+  l = n("481060"),
   r = n("963249"),
   o = n("703656"),
   u = n("976644"),
@@ -31,7 +31,7 @@ function p(e) {
     isLightTheme: T
   } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(p.dismissKey)]), {
     onClose: N
-  } = S, v = null != p.button && "" !== p.button.copy ? p.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = p.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = p.button) || void 0 === n ? void 0 : n.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = S, v = null != p.button && "" !== p.button.copy ? p.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = p.button) || void 0 === t ? void 0 : t.buttonAction) === i.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = p.button) || void 0 === n ? void 0 : n.buttonAction) === i.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, o.transitionTo)(h.Routes.APPLICATION_STORE), N()
   } : () => (0, r.default)({
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
@@ -44,10 +44,10 @@ function p(e) {
     onClose: e => {
       e && N()
     }
-  }), L = "" !== p.helpArticleId ? () => (0, a.jsx)(i.Anchor, {
+  }), L = "" !== p.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
     className: C.termsApplyAnchor,
     href: c.default.getArticleURL(p.helpArticleId),
-    children: (0, a.jsx)(i.Heading, {
+    children: (0, a.jsx)(l.Heading, {
       variant: "heading-md/normal",
       className: C.termsApplyBodyText,
       children: _.default.Messages.BOGO_TERMS_APPLY
@@ -85,8 +85,8 @@ function p(e) {
       return (0, a.jsxs)(u.default, {
         className: C.buttonWide,
         innerClassName: C.innerButton,
-        color: i.Button.Colors.GREEN,
-        size: i.Button.Sizes.SMALL,
+        color: l.Button.Colors.GREEN,
+        size: l.Button.Sizes.SMALL,
         onClick: () => {
           d.default.track(h.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
             change_log_id: A,

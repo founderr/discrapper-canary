@@ -17,11 +17,11 @@ var n = a("735250");
 a("470079");
 var r = a("120356"),
   i = a.n(r),
-  s = a("481060"),
-  l = a("454585"),
+  l = a("481060"),
+  s = a("454585"),
   o = a("814550"),
-  d = a("489813"),
-  c = a("689938"),
+  c = a("489813"),
+  d = a("689938"),
   u = a("303765");
 
 function f(e) {
@@ -34,14 +34,14 @@ function f(e) {
     className: i()(u.termsFieldBody, r),
     children: t.map((e, t) => (0, n.jsxs)("div", {
       className: u.termsRow,
-      children: [(0, n.jsx)(s.Text, {
+      children: [(0, n.jsx)(l.Text, {
         variant: "text-md/normal",
         color: "text-muted",
         children: "".concat(t + 1, ".")
-      }), (0, n.jsx)(s.Text, {
+      }), (0, n.jsx)(l.Text, {
         variant: "text-md/normal",
         className: u.termsRowContent,
-        children: l.default.parseGuildVerificationFormRule(e, !0, {
+        children: s.default.parseGuildVerificationFormRule(e, !0, {
           channelId: a
         })
       })]
@@ -55,9 +55,9 @@ function m(e) {
     checked: a,
     disabled: r
   } = e;
-  return (0, n.jsx)(s.Checkbox, {
+  return (0, n.jsx)(l.Checkbox, {
     size: 20,
-    type: s.Checkbox.Types.INVERTED,
+    type: l.Checkbox.Types.INVERTED,
     value: a,
     onChange: t,
     disabled: r,
@@ -65,9 +65,9 @@ function m(e) {
       borderWidth: 2
     },
     className: u.checkbox,
-    children: (0, n.jsx)(s.Text, {
+    children: (0, n.jsx)(l.Text, {
       variant: "text-sm/normal",
-      children: c.default.Messages.MEMBER_VERIFICATION_READ_RULES
+      children: d.default.Messages.MEMBER_VERIFICATION_READ_RULES
     })
   })
 }
@@ -76,9 +76,9 @@ function h(e) {
   let {
     formField: t
   } = e;
-  return (0, n.jsx)(d.RequirementRenderer, {
+  return (0, n.jsx)(c.RequirementRenderer, {
     icon: o.default,
-    text: c.default.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
+    text: d.default.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
     meetsRequirement: !!t.response
   })
 }
@@ -88,8 +88,8 @@ let E = e => {
     formField: a,
     onChange: r
   } = e;
-  return (0, n.jsxs)(d.QuestionRenderer, {
-    title: c.default.Messages.SERVER_DISCOVERY_AGREE_TO_RULES,
+  return (0, n.jsxs)(c.QuestionRenderer, {
+    title: d.default.Messages.SERVER_DISCOVERY_AGREE_TO_RULES,
     children: [(0, n.jsx)(f, {
       className: u.fieldBackground,
       terms: a.values,

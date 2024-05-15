@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return T
   }
 }), n("627341");
-var a, s, l, i, r = n("278074"),
+var a, s, i, l, r = n("278074"),
   o = n("180650"),
   u = n("524437"),
   d = n("689938"),
@@ -28,7 +28,7 @@ var a, s, l, i, r = n("278074"),
   C = n("782984"),
   m = n("186077"),
   p = n("376477");
-(l = a || (a = {}))[l.NONE = 0] = "NONE", l[l.TOOLTIP = 1] = "TOOLTIP", l[l.COACHTIP = 2] = "COACHTIP", (i = s || (s = {})).NONE = "NONE", i.SHY = "SHY", i.LOFI_VIBES = "LOFI_VIBES", i.GALAXY = "GALAXY", i.RETRO_AND_PIRATES = "RETRO_AND_PIRATES";
+(i = a || (a = {}))[i.NONE = 0] = "NONE", i[i.TOOLTIP = 1] = "TOOLTIP", i[i.COACHTIP = 2] = "COACHTIP", (l = s || (s = {})).NONE = "NONE", l.SHY = "SHY", l.LOFI_VIBES = "LOFI_VIBES", l.GALAXY = "GALAXY", l.RETRO_AND_PIRATES = "RETRO_AND_PIRATES";
 let S = {
     [u.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
       type: 2,

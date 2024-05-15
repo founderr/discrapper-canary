@@ -7,11 +7,11 @@ a.r(t), a.d(t, {
 var n = a("735250"),
   r = a("470079"),
   i = a("692547"),
-  s = a("481060"),
-  l = a("496675"),
+  l = a("481060"),
+  s = a("496675"),
   o = a("916187"),
-  d = a("736921"),
-  c = a("185403"),
+  c = a("736921"),
+  d = a("185403"),
   u = a("484455"),
   f = a("981631"),
   m = a("689938"),
@@ -41,11 +41,11 @@ let T = {
 t.default = function(e) {
   let {
     guild: t
-  } = e, i = l.default.can(f.Permissions.MANAGE_GUILD, t), p = t.verificationLevel, C = p === f.VerificationLevels.VERY_HIGH ? d.default : o.default, _ = r.useMemo(() => E(p), [p]), x = T[p], g = (0, n.jsx)("div", {
+  } = e, i = s.default.can(f.Permissions.MANAGE_GUILD, t), p = t.verificationLevel, C = p === f.VerificationLevels.VERY_HIGH ? c.default : o.default, _ = r.useMemo(() => E(p), [p]), x = T[p], g = (0, n.jsx)("div", {
     className: h.verificationLevelTitle,
     children: m.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {
-        return (0, n.jsx)(s.Text, {
+        return (0, n.jsx)(l.Text, {
           className: h.verificationLevelHook,
           style: {
             color: x
@@ -64,13 +64,13 @@ t.default = function(e) {
         width: 20,
         height: 20,
         className: h.icon
-      }), (0, n.jsx)(s.Text, {
+      }), (0, n.jsx)(l.Text, {
         className: h.guildVerificationText,
         variant: "text-sm/normal",
         children: I
-      }), i && (0, n.jsx)(s.Clickable, {
+      }), i && (0, n.jsx)(l.Clickable, {
         className: h.iconInteractiveContainer,
-        onClick: () => (0, s.openModalLazy)(async () => {
+        onClick: () => (0, l.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([a.e("99387"), a.e("27933")]).then(a.bind(a, "694278"));
@@ -79,7 +79,7 @@ t.default = function(e) {
             guild: t
           })
         }),
-        children: (0, n.jsx)(c.default, {
+        children: (0, n.jsx)(d.default, {
           width: 20,
           height: 20,
           className: h.iconInteractive

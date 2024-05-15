@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("442837"),
   o = n("289987"),
   u = n("481060"),
@@ -81,7 +81,7 @@ let x = e => {
     })
   },
   b = s.forwardRef(function(e, t) {
-    var n, l;
+    var n, i;
     let {
       className: d,
       isExpanded: c,
@@ -107,14 +107,14 @@ let x = e => {
       location: M.QuestsExperimentLocations.QUESTS_BAR
     }, {
       autoTrackExposure: !1
-    }), K = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, z = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, q = c && v, Q = (0, S.getQuestBarHeroAssetUrl)(G), Z = (0, S.getQuestsInstructionsToWinReward)({
+    }), K = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, z = (null === (i = G.userStatus) || void 0 === i ? void 0 : i.completedAt) != null, q = c && v, Q = (0, S.getQuestBarHeroAssetUrl)(G), Z = (0, S.getQuestsInstructionsToWinReward)({
       quest: G,
       location: M.QuestsExperimentLocations.QUESTS_BAR,
       useV2Variants: W === g.QuestBarExperimentVariants.V2
     });
     return (0, a.jsx)("div", {
       "aria-hidden": !q,
-      className: i()(d, P.contentExpanded, {
+      className: l()(d, P.contentExpanded, {
         [P.contentInteractable]: q,
         [P.contentExpandedAccepted]: K
       }),
@@ -125,7 +125,7 @@ let x = e => {
           className: P.questAcceptedHeader,
           children: [(0, a.jsx)(u.Text, {
             variant: "text-xxs/medium",
-            className: i()(P.flex, P.headerText),
+            className: l()(P.flex, P.headerText),
             children: y.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
               expirationDate: F
             })
@@ -142,7 +142,7 @@ let x = e => {
               className: P.submenuWrapper,
               "aria-label": y.default.Messages.ACTIONS,
               children: (0, a.jsx)(f.default, {
-                className: i()(P.submenuIcon, P.interactiveNormal)
+                className: l()(P.submenuIcon, P.interactiveNormal)
               })
             })
           })]
@@ -198,7 +198,7 @@ let x = e => {
                 className: P.submenuWrapper,
                 "aria-label": y.default.Messages.ACTIONS,
                 children: (0, a.jsx)(f.default, {
-                  className: i()(P.submenuIcon, P.white)
+                  className: l()(P.submenuIcon, P.white)
                 })
               })
             })]

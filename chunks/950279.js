@@ -3,11 +3,11 @@ a.r(t), a("47120");
 var n = a("735250"),
   r = a("470079"),
   i = a("442837"),
-  s = a("481060"),
-  l = a("32966"),
+  l = a("481060"),
+  s = a("32966"),
   o = a("314897"),
-  d = a("77498"),
-  c = a("364083"),
+  c = a("77498"),
+  d = a("364083"),
   u = a("92373"),
   f = a("308083"),
   m = a("689938"),
@@ -22,10 +22,10 @@ t.default = e => {
     requiredGameId: C
   } = e, _ = (0, i.useStateFromStores)([o.default], () => o.default.getId()), {
     recentGames: x
-  } = (0, l.useUserRecentGames)(_), {
+  } = (0, s.useUserRecentGames)(_), {
     options: g,
     matchSorterOptions: I
-  } = (0, c.useClanSetupGameSelectableSearch)();
+  } = (0, d.useClanSetupGameSelectableSearch)();
   r.useEffect(() => {
     null != C && !T.has(C) && g.length > 0 && N(C)
   }, [g.length, C]);
@@ -35,24 +35,24 @@ t.default = e => {
       t.delete(e), E(t)
     },
     N = e => {
-      if (T.size === f.MAX_NUM_SELECTED_GAMES || T.has(e) || null == d.default.getGameById(e)) return;
+      if (T.size === f.MAX_NUM_SELECTED_GAMES || T.has(e) || null == c.default.getGameById(e)) return;
       let t = new Set(T);
       t.add(e), E(t)
     };
   return (0, n.jsxs)("div", {
     className: h.slideContent,
-    children: [(0, n.jsx)(s.Heading, {
+    children: [(0, n.jsx)(l.Heading, {
       variant: "heading-xxl/medium",
       className: h.title,
       children: t
-    }), (0, n.jsx)(s.Text, {
+    }), (0, n.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: h.subtitle,
       children: a
     }), (0, n.jsx)("div", {
       className: h.inputContainer,
-      children: (0, n.jsx)(s.SearchableSelect, {
+      children: (0, n.jsx)(l.SearchableSelect, {
         wrapperClassName: h.input,
         options: g,
         value: "",
@@ -64,13 +64,13 @@ t.default = e => {
       })
     }), (0, n.jsxs)("div", {
       className: h.contentWithMinHeight,
-      children: [null != p && (0, n.jsx)(s.Text, {
+      children: [null != p && (0, n.jsx)(l.Text, {
         variant: "text-sm/normal",
         color: "status-danger",
         className: h.errorText,
         children: p
       }), T.size > 0 && (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(s.Text, {
+        children: [(0, n.jsx)(l.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
           className: h.contentLabel,
@@ -84,11 +84,11 @@ t.default = e => {
             selected: !0,
             locked: e === C
           }, e))
-        }), (0, n.jsx)("div", {
-          className: h.divider
         })]
       }), null != x && x.length > 0 && (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(s.Text, {
+        children: [(0, n.jsx)("div", {
+          className: h.divider
+        }), (0, n.jsx)(l.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
           className: h.contentLabel,

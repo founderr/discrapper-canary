@@ -9,11 +9,11 @@ a.r(t), a.d(t, {
 }), a("47120");
 var n, r, i = a("735250");
 a("470079");
-var s = a("120356"),
-  l = a.n(s),
+var l = a("120356"),
+  s = a.n(l),
   o = a("442837"),
-  d = a("246946"),
-  c = a("91802"),
+  c = a("246946"),
+  d = a("91802"),
   u = a("222727"),
   f = a("981631"),
   m = a("137407"),
@@ -109,12 +109,12 @@ function en(e) {
   let {
     entryPoint: t,
     className: a
-  } = e, r = (0, o.useStateFromStores)([d.default], () => d.default.hidePersonalInformation), s = (0, c.useLocalizedPromoQuery)(), h = null == s ? void 0 : s.countryCode;
+  } = e, r = (0, o.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), l = (0, d.useLocalizedPromoQuery)(), h = null == l ? void 0 : l.countryCode;
   if ((0, u.useTrackLocalizedPricingPromoImpression)(f.AnalyticsSections.SETTINGS_PREMIUM, h), null == h || !ea.has(h) || r) return null;
   let E = ea.get(h),
     T = "badgeIcon" + n[t];
   return (0, i.jsx)("img", {
-    className: l()(a, m[T]),
+    className: s()(a, m[T]),
     "aria-hidden": !0,
     alt: "Wumpus holding a country-specific flag",
     src: E

@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("442837"),
-  l = n("481060"),
-  i = n("212093"),
+  i = n("481060"),
+  l = n("212093"),
   r = n("963202"),
   o = n("677277"),
   u = n("285865"),
@@ -43,9 +43,9 @@ let p = e => {
       ...e,
       icon: p(e.categoryId)
     })), h = e => {
-      (0, i.selectCategory)(e, !0), u.default.closeSidebar(), t && (0, i.clearSearch)()
+      (0, l.selectCategory)(e, !0), u.default.closeSidebar(), t && (0, l.clearSearch)()
     };
-    return (0, a.jsxs)(l.Scroller, {
+    return (0, a.jsxs)(i.Scroller, {
       children: [(0, a.jsx)(E.DiscoverySidebarHeader, {
         text: m.default.Messages.DISCOVER
       }), (0, a.jsx)(f.default, {

@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("392711"),
   s = n.n(a),
-  l = n("570140"),
-  i = n("755264"),
+  i = n("570140"),
+  l = n("755264"),
   r = n("315341"),
   o = n("262847"),
   u = n("675478"),
@@ -51,6 +51,6 @@ function _(e) {
 }
 t.default = {
   init() {
-    o.default[c.UserSettingsTypes.PRELOADED_USER_SETTINGS] = r.default, o.default[c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = i.default, l.default.subscribe("CONNECTION_OPEN", f), l.default.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", E), l.default.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", h), l.default.subscribe("APP_STATE_UPDATE", _)
+    o.default[c.UserSettingsTypes.PRELOADED_USER_SETTINGS] = r.default, o.default[c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = l.default, i.default.subscribe("CONNECTION_OPEN", f), i.default.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", E), i.default.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", h), i.default.subscribe("APP_STATE_UPDATE", _)
   }
 }

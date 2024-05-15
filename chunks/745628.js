@@ -4,16 +4,16 @@ var n = a("735250");
 a("470079");
 var r = a("120356"),
   i = a.n(r),
-  s = a("481060"),
-  l = a("308083"),
+  l = a("481060"),
+  s = a("308083"),
   o = a("689938"),
-  d = a("661926");
+  c = a("661926");
 t.default = e => {
   let {
     handleUpdate: t,
     description: a,
     wildcardDescriptors: r,
-    errors: c
+    errors: d
   } = e, u = (e, a) => {
     let n = [...r];
     n[a] = e, t({
@@ -21,26 +21,26 @@ t.default = e => {
     })
   };
   return (0, n.jsxs)("div", {
-    className: d.slideContent,
-    children: [(0, n.jsx)(s.Heading, {
+    className: c.slideContent,
+    children: [(0, n.jsx)(l.Heading, {
       variant: "heading-xxl/medium",
-      className: d.title,
+      className: c.title,
       children: o.default.Messages.CLAN_SETUP_DESCRIPTION_TITLE
-    }), (0, n.jsx)(s.Text, {
+    }), (0, n.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: d.subtitle,
+      className: c.subtitle,
       children: o.default.Messages.CLAN_SETUP_DESCRIPTION_SUBTITLE
-    }), (null == c ? void 0 : c.description) != null && (0, n.jsx)(s.Text, {
+    }), (null == d ? void 0 : d.description) != null && (0, n.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
-      className: d.errorText,
-      children: c.description
+      className: c.errorText,
+      children: d.description
     }), (0, n.jsx)("div", {
-      className: d.maxWidthContainer,
-      children: (0, n.jsx)(s.TextArea, {
-        className: d.input,
-        maxLength: l.MAX_DESCRIPTION_LENGTH,
+      className: c.maxWidthContainer,
+      children: (0, n.jsx)(l.TextArea, {
+        className: c.input,
+        maxLength: s.MAX_DESCRIPTION_LENGTH,
         onChange: e => t({
           description: e
         }),
@@ -50,41 +50,41 @@ t.default = e => {
         autosize: !0,
         placeholder: o.default.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
       })
-    }), (0, n.jsx)(s.Text, {
+    }), (0, n.jsx)(l.Text, {
       variant: "text-sm/medium",
       color: "header-secondary",
-      className: d.optionalTag,
+      className: c.optionalTag,
       children: o.default.Messages.CLAN_SETUP_OPTIONAL
-    }), (0, n.jsx)(s.Text, {
+    }), (0, n.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: d.title,
+      className: c.title,
       children: o.default.Messages.CLAN_SETUP_WILDCARDS_SUBTITLE
-    }), (null == c ? void 0 : c.wildcardDescriptors) != null && (0, n.jsx)(s.Text, {
+    }), (null == d ? void 0 : d.wildcardDescriptors) != null && (0, n.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
-      className: d.errorText,
-      children: c.wildcardDescriptors
+      className: c.errorText,
+      children: d.wildcardDescriptors
     }), (0, n.jsxs)("div", {
-      className: d.wildcardRow,
-      children: [(0, n.jsx)(s.TextInput, {
-        inputClassName: i()(d.input, d.wildcardInput),
+      className: c.wildcardRow,
+      children: [(0, n.jsx)(l.TextInput, {
+        inputClassName: i()(c.input, c.wildcardInput),
         value: r[0],
         onChange: e => u(e, 0),
-        maxLength: l.MAX_WILDCARD_LENGTH,
-        placeholder: l.CLAN_WILDCARD_PLACEHOLDERS["0"]
-      }), (0, n.jsx)(s.TextInput, {
-        inputClassName: i()(d.input, d.wildcardInput),
+        maxLength: s.MAX_WILDCARD_LENGTH,
+        placeholder: s.CLAN_WILDCARD_PLACEHOLDERS["0"]
+      }), (0, n.jsx)(l.TextInput, {
+        inputClassName: i()(c.input, c.wildcardInput),
         value: r[1],
         onChange: e => u(e, 1),
-        maxLength: l.MAX_WILDCARD_LENGTH,
-        placeholder: l.CLAN_WILDCARD_PLACEHOLDERS["1"]
-      }), (0, n.jsx)(s.TextInput, {
-        inputClassName: i()(d.input, d.wildcardInput),
+        maxLength: s.MAX_WILDCARD_LENGTH,
+        placeholder: s.CLAN_WILDCARD_PLACEHOLDERS["1"]
+      }), (0, n.jsx)(l.TextInput, {
+        inputClassName: i()(c.input, c.wildcardInput),
         value: r[2],
         onChange: e => u(e, 2),
-        maxLength: l.MAX_WILDCARD_LENGTH,
-        placeholder: l.CLAN_WILDCARD_PLACEHOLDERS["2"]
+        maxLength: s.MAX_WILDCARD_LENGTH,
+        placeholder: s.CLAN_WILDCARD_PLACEHOLDERS["2"]
       })]
     })]
   })

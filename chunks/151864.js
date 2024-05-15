@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("653041");
 var a, s = n("442837"),
-  l = n("570140"),
-  i = n("765305");
+  i = n("570140"),
+  l = n("765305");
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ class u extends(a = s.default.PersistedStore) {
     return o
   }
 }
-r(u, "displayName", "LiveChannelNoticesStore"), r(u, "persistKey", "liveChannelNotices_v2"), t.default = new u(l.default, {
+r(u, "displayName", "LiveChannelNoticesStore"), r(u, "persistKey", "liveChannelNotices_v2"), t.default = new u(i.default, {
   LIVE_CHANNEL_NOTICE_HIDE: function(e) {
     let {
       eventId: t,
@@ -42,7 +42,7 @@ r(u, "displayName", "LiveChannelNoticesStore"), r(u, "persistKey", "liveChannelN
     let {
       guildScheduledEvent: t
     } = e, n = "event-".concat(t.id);
-    o.hiddenEventsAndStages.includes(n) && (t.status === i.GuildScheduledEventStatus.CANCELED || t.status === i.GuildScheduledEventStatus.COMPLETED) && (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter(e => e !== n))
+    o.hiddenEventsAndStages.includes(n) && (t.status === l.GuildScheduledEventStatus.CANCELED || t.status === l.GuildScheduledEventStatus.COMPLETED) && (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter(e => e !== n))
   },
   GUILD_SCHEDULED_EVENT_DELETE: function(e) {
     let {

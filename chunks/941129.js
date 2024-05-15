@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useIsSafetyConsumerEducationBlockMuteBucket: function() {
-    return l
+    return i
   },
   useIsSafetyConsumerEducationBlockMuteEnabled: function() {
     return s
@@ -40,7 +40,7 @@ function s() {
   }).enabled
 }
 
-function l() {
+function i() {
   return a.useExperiment({
     location: "b85a21_2"
   }, {

@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  l = n("689938"),
-  i = n("880183");
+  i = n("689938"),
+  l = n("880183");
 let r = Math.ceil(2 * Math.PI * 20);
 t.default = e => {
   let {
@@ -12,29 +12,29 @@ t.default = e => {
     used: n
   } = e, o = Math.max(0, Math.min(1, n / t)), u = "".concat(Math.floor(100 * o), "%");
   return (0, a.jsx)(s.Tooltip, {
-    text: l.default.Messages.APPLICATION_INSTALLATION_SPACE_USED.format({
+    text: i.default.Messages.APPLICATION_INSTALLATION_SPACE_USED.format({
       used: u
     }),
     children: e => {
       var t;
       return (0, a.jsxs)("div", {
-        className: i.wrapper,
+        className: l.wrapper,
         role: "progressbar",
-        "aria-label": l.default.Messages.APPLICATION_INSTALLATION_SPACE_USED.format({
+        "aria-label": i.default.Messages.APPLICATION_INSTALLATION_SPACE_USED.format({
           used: u
         }),
         ...e,
         children: [(0, a.jsxs)("svg", {
           viewBox: "25 25 50 50",
-          className: i.svg,
+          className: l.svg,
           "aria-hidden": !0,
           children: [(0, a.jsx)("circle", {
-            className: i.background,
+            className: l.background,
             cx: "50",
             cy: "50",
             r: 20
           }), (0, a.jsx)("circle", {
-            className: i.foreground,
+            className: l.foreground,
             cx: "50",
             cy: "50",
             r: 20,
@@ -45,7 +45,7 @@ t.default = e => {
             }(o)
           })]
         }), (0, a.jsx)("aside", {
-          className: i.usageInfo,
+          className: l.usageInfo,
           "aria-hidden": !0,
           children: u
         })]

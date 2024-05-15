@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("442837"),
   o = n("663002"),
   u = n("481060"),
@@ -30,7 +30,7 @@ function L(e) {
   var t;
   let {
     quest: n
-  } = e, s = (0, _.useQuestFormattedDate)(n.config.expiresAt), l = (0, _.useQuestFormattedDate)(n.config.rewardCodeExpiresAt), i = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), d = (0, o.isThemeDark)(i) ? v.ThemeTypes.DARK : v.ThemeTypes.LIGHT, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+  } = e, s = (0, _.useQuestFormattedDate)(n.config.expiresAt), i = (0, _.useQuestFormattedDate)(n.config.rewardCodeExpiresAt), l = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), d = (0, o.isThemeDark)(l) ? v.ThemeTypes.DARK : v.ThemeTypes.LIGHT, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, a.jsxs)("div", {
     className: O.heading,
     children: [(0, a.jsx)("img", {
@@ -49,7 +49,7 @@ function L(e) {
         variant: "text-xs/normal",
         color: "header-secondary",
         children: f ? R.default.Messages.QUESTS_CLAIM_BY_DATE.format({
-          expirationDate: l
+          expirationDate: i
         }) : R.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
           expirationDate: s
         })
@@ -58,7 +58,7 @@ function L(e) {
   })
 }
 t.default = function(e) {
-  var t, n, l;
+  var t, n, i;
   let {
     quest: o
   } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [M, y] = s.useState(!1), P = s.useCallback(() => y(!0), []), x = s.useCallback(() => y(!1), []), D = s.useCallback(e => {
@@ -83,7 +83,7 @@ t.default = function(e) {
   }, [o]), G = (0, T.useHandleClaimQuestsReward)({
     quest: o,
     location: m.QuestContent.ACTIVITY_PANEL
-  }), k = (0, _.useIsQuestExpired)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  }), k = (0, _.useIsQuestExpired)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (i = o.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null;
   return (null == o ? void 0 : o.userStatus) == null || (0, p.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || k || F ? null : (0, a.jsx)(S.QuestContentImpressionTracker, {
     questOrQuests: o,
     questContent: m.QuestContent.ACTIVITY_PANEL,
@@ -93,7 +93,7 @@ t.default = function(e) {
         ref: t => {
           e.current = t
         },
-        className: i()(O.wrapper, {
+        className: l()(O.wrapper, {
           [O.wrapperQuestAccepted]: w
         }),
         onClick: D,

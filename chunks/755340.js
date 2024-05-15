@@ -3,11 +3,11 @@ a.r(t), a("47120");
 var n = a("735250"),
   r = a("470079"),
   i = a("481060"),
-  s = a("467138"),
-  l = a("246364"),
+  l = a("467138"),
+  s = a("246364"),
   o = a("983736"),
-  d = a("5056"),
-  c = a("565321"),
+  c = a("5056"),
+  d = a("565321"),
   u = a("297619"),
   f = a("456935"),
   m = a("446945"),
@@ -24,11 +24,11 @@ t.default = function(e) {
     formDescription: x,
     onFieldsSave: g,
     onDescriptionSave: I
-  } = e, v = r.useRef(!1), [N, A] = r.useState(null), [S, R] = r.useState(e.formFields), M = r.useRef(e.formFields), L = r.useMemo(() => S.filter(o.isAutomaticApprovalFormField), [S]), y = r.useMemo(() => S.filter(o.isManualApprovalFormField), [S]), b = y.length, j = r.useMemo(() => S.length === E.MAX_FORM_ELEMENTS, [S]), O = r.useMemo(() => S.some(l.isTermsFormField), [S]), D = r.useMemo(() => S.some(e => !(0, l.isTermsFormField)(e)), [S]), F = b > 1, P = (0, s.useIsMemberVerificationManualApproval)(t.id) || _, w = r.useCallback(() => {
+  } = e, v = r.useRef(!1), [N, A] = r.useState(null), [S, R] = r.useState(e.formFields), M = r.useRef(e.formFields), L = r.useMemo(() => S.filter(o.isAutomaticApprovalFormField), [S]), y = r.useMemo(() => S.filter(o.isManualApprovalFormField), [S]), b = y.length, j = r.useMemo(() => S.length === E.MAX_FORM_ELEMENTS, [S]), O = r.useMemo(() => S.some(s.isTermsFormField), [S]), D = r.useMemo(() => S.some(e => !(0, s.isTermsFormField)(e)), [S]), F = b > 1, P = (0, l.useIsMemberVerificationManualApproval)(t.id) || _, w = r.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(T.default.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE))
   }, []), G = r.useCallback(async e => {
     if (!v.current) {
-      v.current = !0, _ && (e = e.filter(e => e.field_type !== l.VerificationFormFieldTypes.TERMS));
+      v.current = !0, _ && (e = e.filter(e => e.field_type !== s.VerificationFormFieldTypes.TERMS));
       try {
         await g(t.id, e), p(), R(e), M.current = e
       } catch (e) {
@@ -38,7 +38,7 @@ t.default = function(e) {
       }
     }
   }, [N, t.id, p, g, _]), U = r.useCallback(async e => {
-    let t = e.field_type === l.VerificationFormFieldTypes.TERMS ? [e, ...S] : [...S, e];
+    let t = e.field_type === s.VerificationFormFieldTypes.TERMS ? [e, ...S] : [...S, e];
     await G(t)
   }, [S, G]), B = r.useCallback(async (e, t) => {
     if (S[e] === t) return;
@@ -61,7 +61,7 @@ t.default = function(e) {
   }, [S, G, w]), V = (0, n.jsxs)(n.Fragment, {
     children: [!C && (0, n.jsx)(f.default, {
       guild: t
-    }), (0, n.jsx)(c.default, {
+    }), (0, n.jsx)(d.default, {
       formDescription: x,
       guildId: t.id,
       onSave: I
@@ -83,7 +83,7 @@ t.default = function(e) {
     }))]
   });
   return P ? (0, n.jsxs)(n.Fragment, {
-    children: [!_ && V, !D && (0, n.jsx)(d.default, {
+    children: [!_ && V, !D && (0, n.jsx)(c.default, {
       addFormField: U,
       showManualApprovalWarning: !_ && !(b > 0),
       guild: t,

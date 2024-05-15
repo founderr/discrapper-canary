@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a, s, l = n("735250"),
-  i = n("470079"),
+var a, s, i = n("735250"),
+  l = n("470079"),
   r = n("442837"),
   o = n("481060"),
   u = n("40851"),
@@ -68,22 +68,22 @@ let I = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
     }(a), {
       analyticsLocations: x
     } = (0, E.default)(s);
-    i.useEffect(() => {
+    l.useEffect(() => {
       C.default.track(m.AnalyticEvents.TOOLTIP_VIEWED, {
         type: A
       })
     }, [A]);
     let D = (0, u.useAppContext)() === m.AppContext.POPOUT,
       b = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
-    return (0, l.jsx)(E.AnalyticsLocationProvider, {
+    return (0, i.jsx)(E.AnalyticsLocationProvider, {
       value: x,
-      children: (0, l.jsx)("div", {
+      children: (0, i.jsx)("div", {
         className: g.wrapper,
-        children: (0, l.jsx)("div", {
+        children: (0, i.jsx)("div", {
           className: g.container,
-          children: (0, l.jsxs)("div", {
+          children: (0, i.jsxs)("div", {
             className: g.content,
-            children: [(0, l.jsx)(_.default, {
+            children: [(0, i.jsx)(_.default, {
               className: g.video,
               src: y,
               poster: M,
@@ -92,34 +92,34 @@ let I = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               loop: !0,
               muted: !0,
               autoPlay: !0
-            }), (0, l.jsx)("div", {
+            }), (0, i.jsx)("div", {
               className: g.header,
-              children: (0, l.jsx)(o.Heading, {
+              children: (0, i.jsx)(o.Heading, {
                 className: g.__invalid_headerText,
                 variant: "text-sm/bold",
                 color: "always-white",
                 children: L
               })
-            }), (0, l.jsxs)(o.Text, {
+            }), (0, i.jsxs)(o.Text, {
               className: g.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
-              children: [R, O ? (0, l.jsxs)(l.Fragment, {
-                children: [" ", (0, l.jsx)(o.Anchor, {
+              children: [R, O ? (0, i.jsxs)(i.Fragment, {
+                children: [" ", (0, i.jsx)(o.Anchor, {
                   className: g.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",
                   children: S.default.Messages.LEARN_MORE
                 })]
               }) : null]
-            }), (0, l.jsxs)("div", {
+            }), (0, i.jsxs)("div", {
               className: g.ctaActionWrapper,
-              children: [(0, l.jsx)(o.Button, {
+              children: [(0, i.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 onClick: () => {
                   n(p.ContentDismissActionType.UNKNOWN)
                 },
                 children: v
-              }), (0, l.jsx)(o.Button, {
+              }), (0, i.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,
                 onClick: null != P ? P : () => {

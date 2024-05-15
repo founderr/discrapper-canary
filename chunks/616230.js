@@ -7,11 +7,11 @@ a.r(t), a.d(t, {
 var n = a("735250"),
   r = a("470079"),
   i = a("120356"),
-  s = a.n(i),
-  l = a("442837"),
+  l = a.n(i),
+  s = a("442837"),
   o = a("481060"),
-  d = a("11265"),
-  c = a("863249"),
+  c = a("11265"),
+  d = a("863249"),
   u = a("944163"),
   f = a("246364"),
   m = a("571728"),
@@ -27,18 +27,18 @@ function g(e) {
   let {
     guild: t,
     isExpanded: i,
-    emptyFormFields: s,
-    hasTermsField: l
-  } = e, d = t.hasVerificationGate(), [u, f] = r.useState(d), m = e => {
+    emptyFormFields: l,
+    hasTermsField: s
+  } = e, c = t.hasVerificationGate(), [u, f] = r.useState(c), m = e => {
     e.preventDefault(), e.stopPropagation()
   }, h = async e => {
     try {
-      f(e), await c.default.enableVerificationForm(t.id, e)
+      f(e), await d.default.enableVerificationForm(t.id, e)
     } catch {
       f(u)
     }
   }, g = e => {
-    e && s ? (0, o.openModalLazy)(async () => {
+    e && l ? (0, o.openModalLazy)(async () => {
       let {
         ConfirmModal: t
       } = await Promise.resolve().then(a.bind(a, "481060"));
@@ -74,13 +74,13 @@ function g(e) {
         variant: "text-md/semibold",
         color: "header-primary",
         children: C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_SCREENING
-      }), (i || s && !u) && (0, n.jsx)(o.Text, {
+      }), (i || l && !u) && (0, n.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
         children: C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
       }), !i && (0, n.jsx)("div", {
         className: x.pillRow,
-        children: l && (0, n.jsxs)(o.Text, {
+        children: s && (0, n.jsxs)(o.Text, {
           color: "interactive-normal",
           variant: "text-xs/medium",
           className: _.valuePill,
@@ -92,7 +92,7 @@ function g(e) {
       })]
     }), (0, n.jsx)("div", {
       className: x.previewAndEnable,
-      children: i || u || !s ? (0, n.jsxs)(n.Fragment, {
+      children: i || u || !l ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(o.Clickable, {
           onMouseDown: m,
           onMouseUp: m,
@@ -121,10 +121,10 @@ function g(e) {
   })
 }
 async function I(e, t) {
-  await c.default.updateVerificationForm(e, t)
+  await d.default.updateVerificationForm(e, t)
 }
 async function v(e, t) {
-  await c.default.updateVerificationFormDescription(e, t)
+  await d.default.updateVerificationFormDescription(e, t)
 }
 
 function N(e) {
@@ -139,12 +139,12 @@ function N(e) {
     S.current = !0
   }, []), M = null !== (t = (0, m.useSubmittedGuildJoinRequestTotal)({
     guildId: o.id
-  })) && void 0 !== t ? t : 0, L = (0, l.useStateFromStores)([u.default], () => null != C ? C : u.default.get(o.id)), y = null !== (a = null == L ? void 0 : L.formFields) && void 0 !== a ? a : [];
+  })) && void 0 !== t ? t : 0, L = (0, s.useStateFromStores)([u.default], () => null != C ? C : u.default.get(o.id)), y = null !== (a = null == L ? void 0 : L.formFields) && void 0 !== a ? a : [];
   r.useEffect(() => {
-    c.default.fetchVerificationForm(o.id)
+    d.default.fetchVerificationForm(o.id)
   }, [o.id]);
   let b = !E;
-  return (0, n.jsx)(d.default, {
+  return (0, n.jsx)(c.default, {
     renderHeader: b ? (0, n.jsx)(g, {
       guild: o,
       isExpanded: N,
@@ -156,7 +156,7 @@ function N(e) {
     disableAnimation: E,
     disableBackground: !b,
     children: (0, n.jsx)("div", {
-      className: s()(_.itemBodyContainer, {
+      className: l()(_.itemBodyContainer, {
         [_.noPadding]: !b,
         [x.rulesScreeningItemsNoBorder]: !b
       }),

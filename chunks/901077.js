@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
 var a = n("981631");
 let s = "<removed>";
 
-function l(e) {
+function i(e) {
   var t, n;
-  let l = {
+  let i = {
     ...e
   };
-  if ("object" == typeof(t = l).args && "string" == typeof t.cmd) l = function(e) {
+  if ("object" == typeof(t = i).args && "string" == typeof t.cmd) i = function(e) {
     switch (e.cmd) {
       case a.RPCCommands.AUTHENTICATE:
       case a.RPCCommands.GET_PROVIDER_ACCESS_TOKEN:
@@ -27,8 +27,8 @@ function l(e) {
           ...e
         }
     }
-  }(l);
-  if ("object" == typeof(n = l).data && "string" == typeof n.cmd) l = function(e) {
+  }(i);
+  if ("object" == typeof(n = i).data && "string" == typeof n.cmd) i = function(e) {
     switch (e.cmd) {
       case a.RPCCommands.AUTHENTICATE:
       case a.RPCCommands.GET_PROVIDER_ACCESS_TOKEN:
@@ -43,6 +43,6 @@ function l(e) {
           ...e
         }
     }
-  }(l);
-  return l
+  }(i);
+  return i
 }

@@ -3,27 +3,27 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("570140"),
-  l = n("317770"),
-  i = n("663993"),
+  i = n("317770"),
+  l = n("663993"),
   r = n("788983"),
   o = n("981631");
 n("746057");
-let u = (0, i.makeLazy)({
+let u = (0, l.makeLazy)({
     createPromise: () => n.e("58621").then(n.bind(n, "223455")),
     webpackId: "223455",
     name: "PopoutWindowChannelCall"
   }),
-  d = (0, i.makeLazy)({
+  d = (0, l.makeLazy)({
     createPromise: () => n.e("91032").then(n.bind(n, "432472")),
     webpackId: "432472",
     name: "PopoutWindowStageChannelCall"
   }),
-  c = (0, i.makeLazy)({
+  c = (0, l.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("33053"), n.e("92006")]).then(n.bind(n, "945778")),
     webpackId: "945778",
     name: "PopoutWindowRTCDebug"
   });
-class f extends l.default {
+class f extends i.default {
   _initialize() {
     s.default.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout), s.default.subscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout)
   }

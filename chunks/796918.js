@@ -3,11 +3,11 @@ a.r(t), a("47120");
 var n = a("735250"),
   r = a("470079"),
   i = a("120356"),
-  s = a.n(i),
-  l = a("481060"),
+  l = a.n(i),
+  s = a("481060"),
   o = a("442837"),
-  d = a("314897"),
-  c = a("729285"),
+  c = a("314897"),
+  d = a("729285"),
   u = a("353093"),
   f = a("87576"),
   m = a("308083"),
@@ -22,7 +22,7 @@ t.default = e => {
     handleUpdate: t,
     interests: a,
     error: i
-  } = e, [p, C] = r.useState(""), _ = (0, o.useStateFromStores)([d.default], () => d.default.getId()), x = r.useMemo(() => (0, u.stableSortSet)(m.SUGGESTED_TRAITS_SET, _), [_]), g = r.useMemo(() => Array.from(a), [a]), I = r.useMemo(() => g.filter(T), [g]), v = r.useMemo(() => [...x, ...I], [I, x]), N = r.useMemo(() => g.filter(e => !m.ALL_TRAITS_SET.has(e) && !m.LANGUAGES_SET.has(e)), [g]), A = e => {
+  } = e, [p, C] = r.useState(""), _ = (0, o.useStateFromStores)([c.default], () => c.default.getId()), x = r.useMemo(() => (0, u.stableSortSet)(m.SUGGESTED_TRAITS_SET, _), [_]), g = r.useMemo(() => Array.from(a), [a]), I = r.useMemo(() => g.filter(T), [g]), v = r.useMemo(() => [...x, ...I], [I, x]), N = r.useMemo(() => g.filter(e => !m.ALL_TRAITS_SET.has(e) && !m.LANGUAGES_SET.has(e)), [g]), A = e => {
     let n = new Set(a);
     n.delete(e), t({
       interests: n
@@ -44,16 +44,16 @@ t.default = e => {
   }, [S]);
   return (0, n.jsxs)("div", {
     className: E.slideContent,
-    children: [(0, n.jsx)(l.Heading, {
+    children: [(0, n.jsx)(s.Heading, {
       variant: "heading-xxl/medium",
       className: E.title,
       children: h.default.Messages.CLAN_SETUP_INTERESTS_TITLE
-    }), (0, n.jsx)(l.Text, {
+    }), (0, n.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: E.subtitle,
       children: h.default.Messages.CLAN_SETUP_INTERESTS_SUBTITLE.format()
-    }), null != i && (0, n.jsx)(l.Text, {
+    }), null != i && (0, n.jsx)(s.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
       className: E.errorText,
@@ -64,7 +64,7 @@ t.default = e => {
         className: E.mainPanelContainer,
         children: [(0, n.jsxs)("div", {
           className: E.inputContainer,
-          children: [(0, n.jsx)(l.TextInput, {
+          children: [(0, n.jsx)(s.TextInput, {
             inputClassName: E.input,
             value: p,
             onKeyDown: R,
@@ -72,19 +72,19 @@ t.default = e => {
             placeholder: h.default.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
             maxLength: m.MAX_INTEREST_LENGTH,
             disabled: a.size === m.MAX_NUM_INTERESTS
-          }), p.length > 0 && (0, n.jsx)(l.Clickable, {
+          }), p.length > 0 && (0, n.jsx)(s.Clickable, {
             onClick: () => S(p.trim()),
-            className: s()(E.plusIcon, E.clickable),
-            children: (0, n.jsx)(c.default, {
+            className: l()(E.plusIcon, E.clickable),
+            children: (0, n.jsx)(d.default, {
               className: E.icon
             })
-          }), p.length > 0 && (0, n.jsx)(l.Text, {
+          }), p.length > 0 && (0, n.jsx)(s.Text, {
             color: "text-muted",
             variant: "text-xs/normal",
             className: E.enterToSearchText,
             children: h.default.Messages.CLAN_SETUP_INTERESTS_HELP
           })]
-        }), (0, n.jsx)(l.Text, {
+        }), (0, n.jsx)(s.Text, {
           className: E.interestsCategoryTitle,
           variant: "text-xs/semibold",
           color: "text-muted",
@@ -93,12 +93,12 @@ t.default = e => {
           className: E.interestsCategory,
           children: v.map(e => {
             let t = a.has(e);
-            return (0, n.jsx)(l.Clickable, {
-              className: s()(E.interestsTag, E.selectableOption, {
+            return (0, n.jsx)(s.Clickable, {
+              className: l()(E.interestsTag, E.selectableOption, {
                 [E.selectedOption]: t
               }),
               onClick: () => t ? A(e) : S(e),
-              children: (0, n.jsx)(l.Text, {
+              children: (0, n.jsx)(s.Text, {
                 variant: "text-xs/medium",
                 color: "none",
                 children: e

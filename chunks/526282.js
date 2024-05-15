@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("685626"),
-  i = n("442837"),
+  i = n("685626"),
+  l = n("442837"),
   r = n("481060"),
   o = n("607070"),
   u = n("100527"),
@@ -46,33 +46,33 @@ let p = {
   };
 
 function I() {
-  let e = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion),
+  let e = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion),
     t = s.useRef(null),
     n = s.useRef(null),
     r = s.useRef(null),
-    u = (0, l.useSpring)({
+    u = (0, i.useSpring)({
       ref: t,
       ...g
     }),
-    d = (0, l.useSpring)({
+    d = (0, i.useSpring)({
       ref: n,
       ...g
     }),
-    c = (0, l.useSpring)({
+    c = (0, i.useSpring)({
       ref: r,
       ...g
     });
-  return (0, l.useChain)([t, n, r], [.8, .9, 1]), (0, a.jsx)("div", {
+  return (0, i.useChain)([t, n, r], [.8, .9, 1]), (0, a.jsx)("div", {
     className: m.backgroundContainer,
     children: (0, a.jsxs)("div", {
       className: m.ringsContainer,
-      children: [(0, a.jsx)(l.animated.div, {
+      children: [(0, a.jsx)(i.animated.div, {
         className: m.ringOuter,
         style: e ? void 0 : c
-      }), (0, a.jsx)(l.animated.div, {
+      }), (0, a.jsx)(i.animated.div, {
         className: m.ringMiddle,
         style: e ? void 0 : d
-      }), (0, a.jsx)(l.animated.div, {
+      }), (0, a.jsx)(i.animated.div, {
         className: m.ringInner,
         style: e ? void 0 : u
       })]
@@ -83,24 +83,24 @@ t.default = s.memo(function(e) {
   let {
     selectedGame: t,
     onClick: n
-  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), R = s.useRef(null), O = (0, h.useDiscoveryGameApplicationId)({
+  } = e, g = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = s.useRef(null), T = s.useRef(null), A = s.useRef(null), N = s.useRef(null), v = s.useRef(null), R = s.useRef(null), O = (0, h.useDiscoveryGameApplicationId)({
     selectedGame: t
-  }), L = (0, _.useFakeDiscoveryUpsellClans)(O), M = (0, l.useSpring)({
+  }), L = (0, _.useFakeDiscoveryUpsellClans)(O), M = (0, i.useSpring)({
     ref: I,
     ...S
-  }), y = (0, l.useSpring)({
+  }), y = (0, i.useSpring)({
     ref: T,
     ...S
-  }), P = (0, l.useSpring)({
+  }), P = (0, i.useSpring)({
     ref: A,
     ...S
-  }), x = (0, l.useSpring)({
+  }), x = (0, i.useSpring)({
     ref: N,
     ...S
-  }), D = (0, l.useSpring)({
+  }), D = (0, i.useSpring)({
     ref: v,
     ...S
-  }), b = (0, l.useSpring)({
+  }), b = (0, i.useSpring)({
     ref: R,
     from: {
       transform: "translateY(40px)",
@@ -112,7 +112,7 @@ t.default = s.memo(function(e) {
     },
     config: p
   });
-  (0, l.useChain)([I, T, A, N, v, R], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
+  (0, i.useChain)([I, T, A, N, v, R], [.1, .2, .3, .4, .5, 1]), s.useEffect(() => {
     (0, d.trackClanUserInviteViewed)({
       location: u.default.CLAN_DISCOVERY
     })
@@ -131,35 +131,35 @@ t.default = s.memo(function(e) {
       className: m.cardsContainer,
       children: (0, a.jsxs)("div", {
         className: m.cards,
-        children: [(0, a.jsx)(l.animated.div, {
+        children: [(0, a.jsx)(i.animated.div, {
           className: m.clanCardOuterContainer,
           style: g ? void 0 : x,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[0],
             className: m.clanCardOuterLeft
           })
-        }), (0, a.jsx)(l.animated.div, {
+        }), (0, a.jsx)(i.animated.div, {
           className: m.clanCardInnerContainer,
           style: g ? void 0 : y,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[1],
             className: m.clanCardInnerLeft
           })
-        }), (0, a.jsx)(l.animated.div, {
+        }), (0, a.jsx)(i.animated.div, {
           className: m.clanCardCenterContainer,
           style: g ? void 0 : M,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[4],
             className: m.clanCardCenter
           })
-        }), (0, a.jsx)(l.animated.div, {
+        }), (0, a.jsx)(i.animated.div, {
           className: m.clanCardInnerContainer,
           style: g ? void 0 : P,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
             clan: L[2],
             className: m.clanCardInnerRight
           })
-        }), (0, a.jsx)(l.animated.div, {
+        }), (0, a.jsx)(i.animated.div, {
           className: m.clanCardOuterContainer,
           style: g ? void 0 : D,
           children: (0, a.jsx)(c.ClanDiscoveryCardView, {
@@ -168,7 +168,7 @@ t.default = s.memo(function(e) {
           })
         })]
       })
-    }), (0, a.jsxs)(l.animated.div, {
+    }), (0, a.jsxs)(i.animated.div, {
       className: m.upsellDetails,
       style: g ? void 0 : b,
       children: [(0, a.jsx)(r.Heading, {

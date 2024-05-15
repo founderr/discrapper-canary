@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var a, s = n("735250"),
-  l = n("470079"),
-  i = n("120356"),
-  r = n.n(i),
+  i = n("470079"),
+  l = n("120356"),
+  r = n.n(l),
   o = n("873546"),
   u = n("481060"),
   d = n("1964"),
@@ -24,7 +24,7 @@ function p(e, t, n) {
   }) : e[t] = n, e
 }
 let S = c.default.getArticleURL(h.HelpdeskArticles.VERIFICATION_FAQ);
-class g extends(a = l.PureComponent) {
+class g extends(a = i.PureComponent) {
   renderFields() {
     let {
       types: e,

@@ -2,13 +2,13 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("481060"),
-  i = n("442837"),
+  i = n("481060"),
+  l = n("442837"),
   r = n("212093"),
-  o = n("677277"),
-  u = n("285865"),
-  d = n("683301"),
-  c = n("104259"),
+  o = n("570938"),
+  u = n("677277"),
+  d = n("285865"),
+  c = n("683301"),
   f = n("360048"),
   E = n("296386"),
   h = n("150192"),
@@ -37,22 +37,22 @@ t.default = function() {
   let {
     currentCategoryId: e,
     isViewingSearchResults: t
-  } = (0, i.useStateFromStoresObject)([d.default], () => ({
-    currentCategoryId: d.default.getCurrentCategoryId(),
-    isViewingSearchResults: d.default.getMostRecentQuery().length > 0
-  })), n = (0, i.useStateFromStores)([h.default], () => h.default.getClanDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), I = null == n ? void 0 : n.map(e => ({
+  } = (0, l.useStateFromStoresObject)([c.default], () => ({
+    currentCategoryId: c.default.getCurrentCategoryId(),
+    isViewingSearchResults: c.default.getMostRecentQuery().length > 0
+  })), n = (0, l.useStateFromStores)([h.default], () => h.default.getClanDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), I = null == n ? void 0 : n.map(e => ({
     ...e,
     icon: g(e.categoryId)
   })), T = e => {
-    (0, r.selectCategory)(e, !0), u.default.closeSidebar(), t && (0, r.clearSearch)()
+    (0, r.selectCategory)(e, !0), d.default.closeSidebar(), t && (0, r.clearSearch)()
   };
   return s.useEffect(() => {
     (0, E.maybeFetchGuildDiscoveryCategories)(!1, !0)
-  }, [e]), (0, a.jsxs)(l.Scroller, {
+  }, [e]), (0, a.jsxs)(i.Scroller, {
     children: [(0, a.jsx)(C.DiscoverySidebarHeader, {
       text: p.default.Messages.DISCOVER
     }), (0, a.jsx)(f.default, {
-      avatar: (0, a.jsx)(c.default, {}),
+      avatar: (0, a.jsx)(o.default, {}),
       name: p.default.Messages.CLANS,
       focusProps: {
         offset: {
@@ -72,7 +72,7 @@ t.default = function() {
       handleCategorySelect: T,
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t
-    }), (0, a.jsx)(o.default, {
+    }), (0, a.jsx)(u.default, {
       handleCategorySelect: T,
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t

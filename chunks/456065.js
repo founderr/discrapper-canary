@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var a, s, l, i, r = n("442837"),
+var a, s, i, l, r = n("442837"),
   o = n("570140"),
   u = n("810788"),
   d = n("430824"),
@@ -23,12 +23,12 @@ class _ extends(a = r.default.Store) {
     return !!e.hasFeature(c.GuildFeatures.LINKED_TO_HUB) && !f && !0
   }
 }
-i = "HubLinkNoticeStore", (l = "displayName") in(s = _) ? Object.defineProperty(s, l, {
-  value: i,
+l = "HubLinkNoticeStore", (i = "displayName") in(s = _) ? Object.defineProperty(s, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new _(o.default, {
+}) : s[i] = l, t.default = new _(o.default, {
   CONNECTION_OPEN: function(e) {
     for (let t of e.guilds)
       if (E(t.id)) return !0;

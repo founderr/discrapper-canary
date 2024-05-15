@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("685626"),
   o = n("481060"),
   u = n("810090"),
@@ -19,7 +19,7 @@ var a = n("735250"),
 t.default = function(e) {
   var t;
   let {
-    className: l,
+    className: i,
     expansionSpring: S,
     isExpanded: g,
     isExpansionAnimationComplete: I,
@@ -28,7 +28,7 @@ t.default = function(e) {
   } = e, N = s.useRef(null), v = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, R = s.useMemo(() => (0, d.isAssetAnimated)(T.config.assets.questBarHero), [T]), O = (0, d.getQuestBarHeroAssetUrl)(T);
   return (0, a.jsxs)(r.animated.div, {
     "aria-hidden": g && I,
-    className: i()(l, p.contentCollapsed, {
+    className: l()(i, p.contentCollapsed, {
       [p.contentCollapsedExpanded]: g,
       [p.contentCollapsedAccepted]: v
     }),

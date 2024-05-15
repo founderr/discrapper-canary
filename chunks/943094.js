@@ -6,24 +6,24 @@ n.r(t), n.d(t, {
 });
 var a = n("481060"),
   s = n("812206"),
-  l = n("710845"),
-  i = n("51025");
+  i = n("710845"),
+  l = n("51025");
 
 function r(e, t, r) {
   ! function(e, t) {
-    let i = s.default.getApplication(e);
-    if (null == i) {
-      new l.default("DispatchUninstallActionCreators").log("Application not found for game ".concat(e));
+    let l = s.default.getApplication(e);
+    if (null == l) {
+      new i.default("DispatchUninstallActionCreators").log("Application not found for game ".concat(e));
       return
     }(0, a.openModalLazy)(async () => {
       let {
         default: e
       } = await n.e("70061").then(n.bind(n, "764998"));
       return n => e({
-        game: i,
+        game: l,
         onConfirmUninstall: t,
         ...n
       })
     })
-  }(e, () => (0, i.uninstallApplication)(e, t, r))
+  }(e, () => (0, l.uninstallApplication)(e, t, r))
 }

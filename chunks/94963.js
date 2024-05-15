@@ -3,11 +3,11 @@ a.r(t), a("47120");
 var n = a("735250"),
   r = a("470079"),
   i = a("120356"),
-  s = a.n(i),
-  l = a("866442"),
+  l = a.n(i),
+  s = a("866442"),
   o = a("717772"),
-  d = a("931622"),
-  c = a("19602"),
+  c = a("931622"),
+  d = a("19602"),
   u = a("322282"),
   f = a("585797"),
   m = a("889812"),
@@ -35,7 +35,7 @@ let y = S.CLAN_BRAND_PALETTE_PRESETS.length + 1,
   }, {
     name: "Castle",
     bannerKind: S.ClanBannerKind.CASTLE,
-    icon: d.CrownIcon
+    icon: c.CrownIcon
   }, {
     name: "World Map",
     bannerKind: S.ClanBannerKind.WORLD_MAP,
@@ -73,7 +73,7 @@ let y = S.CLAN_BRAND_PALETTE_PRESETS.length + 1,
       isCustom: i
     } = e;
     return (0, n.jsxs)(n.Fragment, {
-      children: [i ? (0, n.jsx)(c.EyeDropperIcon, {
+      children: [i ? (0, n.jsx)(d.EyeDropperIcon, {
         width: 24,
         height: 24
       }) : (0, n.jsx)("div", {
@@ -90,7 +90,7 @@ let y = S.CLAN_BRAND_PALETTE_PRESETS.length + 1,
     })
   };
 t.default = e => {
-  var t, a, i, o, d, c, u, f;
+  var t, a, i, o, c, d, u, f;
   let {
     handleUpdate: m,
     progress: h,
@@ -158,7 +158,7 @@ t.default = e => {
                     secondary: null !== (t = h.badgeSecondaryColor) && void 0 !== t ? t : S.CLAN_BRAND_SECONDARY_DEFAULT
                   })
                 },
-                className: s()(M.brandItemContainer, {
+                className: l()(M.brandItemContainer, {
                   [M.brandItemContainerSelected]: 0 === w
                 }),
                 children: (0, n.jsx)(j, {
@@ -171,7 +171,7 @@ t.default = e => {
                 onClick: () => {
                   G(t + 1), P(S.CLAN_BRAND_PALETTE_PRESETS[t])
                 },
-                className: s()(M.brandItemContainer, {
+                className: l()(M.brandItemContainer, {
                   [M.brandItemContainerSelected]: w === t + 1
                 }),
                 children: (0, n.jsx)(j, {
@@ -185,13 +185,13 @@ t.default = e => {
                 onPrimaryColorChange: e => {
                   P(t => ({
                     ...t,
-                    primary: (0, l.int2hex)(e)
+                    primary: (0, s.int2hex)(e)
                   }))
                 },
                 onSecondaryColorChange: e => {
                   P(t => ({
                     ...t,
-                    secondary: (0, l.int2hex)(e)
+                    secondary: (0, s.int2hex)(e)
                   }))
                 },
                 shouldShow: U,
@@ -201,7 +201,7 @@ t.default = e => {
                   onClick: () => {
                     G(y), B(e => !e)
                   },
-                  className: s()(M.brandItemContainer, {
+                  className: l()(M.brandItemContainer, {
                     [M.brandItemContainerSelected]: w === y
                   }),
                   children: (0, n.jsx)(j, {
@@ -224,7 +224,7 @@ t.default = e => {
                 onClick: () => {
                   D(e.bannerKind)
                 },
-                className: s()(M.bannerItemContainer, {
+                className: l()(M.bannerItemContainer, {
                   [M.bannerItemContainerSelected]: e.bannerKind === O
                 }),
                 children: [(0, n.jsx)(e.icon, {
@@ -260,8 +260,8 @@ t.default = e => {
             banner: O,
             badge: {
               badgeKind: h.badgeKind,
-              primaryColor: null !== (d = h.badgePrimaryColor) && void 0 !== d ? d : S.CLAN_BRAND_PRIMARY_DEFAULT,
-              secondaryColor: null !== (c = h.badgeSecondaryColor) && void 0 !== c ? c : S.CLAN_BRAND_SECONDARY_DEFAULT
+              primaryColor: null !== (c = h.badgePrimaryColor) && void 0 !== c ? c : S.CLAN_BRAND_PRIMARY_DEFAULT,
+              secondaryColor: null !== (d = h.badgeSecondaryColor) && void 0 !== d ? d : S.CLAN_BRAND_SECONDARY_DEFAULT
             },
             branding: {
               primaryColor: null !== (u = V.primary) && void 0 !== u ? u : S.CLAN_BRAND_PRIMARY_DEFAULT,

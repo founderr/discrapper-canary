@@ -4,11 +4,11 @@ var n = a("735250");
 a("470079");
 var r = a("120356"),
   i = a.n(r),
-  s = a("692547"),
-  l = a("481060"),
+  l = a("692547"),
+  s = a("481060"),
   o = a("259580"),
-  d = a("196345"),
-  c = a("137158"),
+  c = a("196345"),
+  d = a("137158"),
   u = a("689938"),
   f = a("17359");
 t.default = function(e) {
@@ -25,7 +25,7 @@ t.default = function(e) {
     title: _,
     actionsLocation: x
   } = e, g = a.values, I = g.slice(0, 1), v = g.length - I.length;
-  return (0, n.jsxs)(c.default, {
+  return (0, n.jsxs)(d.default, {
     field: a,
     index: r,
     isDragEnabled: m,
@@ -36,16 +36,16 @@ t.default = function(e) {
     title: _,
     canRemove: C,
     actionsLocation: x,
-    children: [(0, n.jsx)(d.TermsFieldBody, {
+    children: [(0, n.jsx)(c.TermsFieldBody, {
       className: i()(f.fieldBackground, {
         [f.withFooter]: 0 !== v
       }),
       terms: I,
       channelId: t
-    }), 0 !== v && (0, n.jsxs)(l.Clickable, {
+    }), 0 !== v && (0, n.jsxs)(s.Clickable, {
       className: i()(f.fieldFooterContainer, f.clickable),
       onClick: T,
-      children: [(0, n.jsx)(l.FormText, {
+      children: [(0, n.jsx)(s.FormText, {
         className: f.clickable,
         children: u.default.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({
           count: v
@@ -54,9 +54,9 @@ t.default = function(e) {
         className: f.termsFieldCaretIcon,
         height: 14,
         width: 14,
-        color: s.default.unsafe_rawColors.WHITE_500.css
+        color: l.default.unsafe_rawColors.WHITE_500.css
       })]
-    }), (0, n.jsx)(d.TermsFieldCheckbox, {
+    }), (0, n.jsx)(c.TermsFieldCheckbox, {
       disabled: !0,
       checked: !1
     })]

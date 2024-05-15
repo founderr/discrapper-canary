@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var s = n("481060"),
-  l = n("230711"),
-  i = n("100527"),
+  i = n("230711"),
+  l = n("100527"),
   r = n("906732"),
   o = n("170671"),
   u = n("465670"),
@@ -22,7 +22,7 @@ function h(e) {
     markAsDismissed: t
   } = e, {
     analyticsLocations: n
-  } = (0, r.default)(i.default.APP_ICON_NEW_STYLES_COACHMARK);
+  } = (0, r.default)(l.default.APP_ICON_NEW_STYLES_COACHMARK);
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)("div", {
@@ -64,7 +64,7 @@ function h(e) {
       look: s.Button.Looks.FILLED,
       color: s.Button.Colors.CUSTOM,
       onClick: () => {
-        t(c.ContentDismissActionType.TAKE_ACTION), l.default.open(d.UserSettingsSections.APPEARANCE, null, {
+        t(c.ContentDismissActionType.TAKE_ACTION), i.default.open(d.UserSettingsSections.APPEARANCE, null, {
           openWithoutBackstack: !0,
           analyticsLocations: n
         })

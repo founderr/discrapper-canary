@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return a
   },
   QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT: function() {
-    return l
+    return i
   },
   QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT: function() {
-    return i
+    return l
   }
 });
 let a = {
@@ -25,5 +25,5 @@ let a = {
     foreground: "var(--text-positive)",
     glow: "var(--text-positive)"
   },
-  l = "#00000000",
-  i = "#CDD8FF1A"
+  i = "#00000000",
+  l = "#CDD8FF1A"

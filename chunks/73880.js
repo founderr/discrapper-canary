@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return u
   },
   ParagraphFieldBody: function() {
-    return c
+    return d
   },
   ParagraphFormField: function() {
     return f
@@ -14,27 +14,27 @@ var n = a("735250");
 a("470079");
 var r = a("120356"),
   i = a.n(r),
-  s = a("481060"),
-  l = a("489813"),
+  l = a("481060"),
+  s = a("489813"),
   o = a("592286"),
-  d = a("303765");
+  c = a("303765");
 
-function c(e) {
+function d(e) {
   let {
     value: t,
     placeholder: a,
     onChange: r,
-    disabled: l,
-    className: c,
+    disabled: s,
+    className: d,
     autofocus: u
   } = e;
-  return (0, n.jsx)(s.TextArea, {
-    className: i()(d.paragraphFieldBody, c),
+  return (0, n.jsx)(l.TextArea, {
+    className: i()(c.paragraphFieldBody, d),
     maxLength: o.MAX_PARAGRAPH_RESPONSE_LENGTH,
     value: null != t ? t : "",
     placeholder: null != a ? a : "",
     onChange: r,
-    disabled: l,
+    disabled: s,
     autoFocus: u,
     autosize: !0
   })
@@ -44,10 +44,10 @@ function u(e) {
   let {
     formField: t
   } = e;
-  return (0, n.jsx)(l.QuestionRenderer, {
+  return (0, n.jsx)(s.QuestionRenderer, {
     title: t.label,
-    children: (0, n.jsx)(c, {
-      className: d.fieldBackground,
+    children: (0, n.jsx)(d, {
+      className: c.fieldBackground,
       value: t.response,
       disabled: !0
     })
@@ -60,10 +60,10 @@ function f(e) {
     autofocus: a,
     onChange: r
   } = e;
-  return (0, n.jsx)(l.QuestionRenderer, {
+  return (0, n.jsx)(s.QuestionRenderer, {
     title: t.label,
-    children: (0, n.jsx)(c, {
-      className: d.fieldBackground,
+    children: (0, n.jsx)(d, {
+      className: c.fieldBackground,
       value: t.response,
       onChange: r,
       autofocus: a

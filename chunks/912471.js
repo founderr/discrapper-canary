@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("411104");
 var a = n("433517"),
   s = n("570140"),
-  l = n("188471"),
-  i = n("581567"),
+  i = n("188471"),
+  l = n("581567"),
   r = n("594190"),
   o = n("19780"),
   u = n("626135"),
@@ -75,9 +75,9 @@ async function T() {
   null != d && (s.client_heartbeat_renderer_memory_used_heap = d);
   {
     let e = r.default.getCurrentGameForAnalytics();
-    null != e && (s.client_heartbeat_current_game_id = e.id, s.client_heartbeat_current_game_name = e.name, s.client_heartbeat_current_game_executable = (0, i.removeExecutablePathPrefix)(e.exePath), s.client_heartbeat_current_game_distributor = e.distributor)
+    null != e && (s.client_heartbeat_current_game_id = e.id, s.client_heartbeat_current_game_name = e.name, s.client_heartbeat_current_game_executable = (0, l.removeExecutablePathPrefix)(e.exePath), s.client_heartbeat_current_game_distributor = e.distributor)
   }
-  u.default.track(h.AnalyticEvents.CLIENT_HEARTBEAT, s), a.Storage.set(_, Date.now().toString()), (0, l.drainClickstream)()
+  u.default.track(h.AnalyticEvents.CLIENT_HEARTBEAT, s), a.Storage.set(_, Date.now().toString()), (0, i.drainClickstream)()
 }
 let A = null,
   N = !0;
@@ -89,7 +89,7 @@ function v() {
     f.default.captureException(e)
   } else !S || (S = !1, f.default.addBreadcrumb({
     message: "Stopping Analytics Heartbeat"
-  }), (0, E.setSessionExtendingEnabled)(!1), I(), (0, l.drainClickstream)())
+  }), (0, E.setSessionExtendingEnabled)(!1), I(), (0, i.drainClickstream)())
 }
 
 function R() {

@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  i = n("120356"),
+  l = n.n(i),
   r = n("873546"),
   o = n("286379"),
   u = n("399606"),
@@ -62,7 +62,7 @@ function K(e) {
   let {
     section: t,
     handleItemSelect: n
-  } = e, s = (0, b.usePendingRequestCount)(), l = (0, D.default)();
+  } = e, s = (0, b.usePendingRequestCount)(), i = (0, D.default)();
   return (0, a.jsxs)(c.TabBar, {
     className: V.settingsTabBar,
     "aria-label": H.default.Messages.FAMILY_CENTER_TITLE,
@@ -82,7 +82,7 @@ function K(e) {
         className: V.badge,
         count: s
       }) : null]
-    }), l ? (0, a.jsx)(c.TabBar.Item, {
+    }), i ? (0, a.jsx)(c.TabBar.Item, {
       className: V.settingsTabBarItem,
       id: k.FamilyCenterSubPages.SETTINGS,
       children: H.default.Messages.SETTINGS
@@ -95,18 +95,18 @@ function z(e) {
     theme: t,
     section: n,
     handleItemSelect: s
-  } = e, l = (0, N.useUID)(), o = (0, b.usePendingRequestCount)();
+  } = e, i = (0, N.useUID)(), o = (0, b.usePendingRequestCount)();
   return (0, a.jsxs)(p.default, {
-    className: i()((0, L.getThemeClass)(t), V.sidebarTabBar),
+    className: l()((0, L.getThemeClass)(t), V.sidebarTabBar),
     scrollable: r.isMobile,
     role: "navigation",
-    "aria-labelledby": l,
+    "aria-labelledby": i,
     toolbar: !0,
     children: [(0, a.jsx)(p.default.Icon, {
       icon: v.default,
       "aria-hidden": !0
     }), (0, a.jsx)(p.default.Title, {
-      id: l,
+      id: i,
       children: H.default.Messages.FAMILY_CENTER_TITLE
     }), (0, a.jsx)(p.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
       "aria-label": H.default.Messages.FAMILY_CENTER_TITLE,
@@ -135,7 +135,7 @@ function q() {
   let e = (0, D.default)(),
     t = (0, b.useAcceptedRequestsCount)(),
     n = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
-    l = (0, u.useStateFromStores)([y.default], () => y.default.getIsInitialized()),
+    i = (0, u.useStateFromStores)([y.default], () => y.default.getIsInitialized()),
     r = (0, x.useSelectedTeenId)(),
     {
       selectedTab: f,
@@ -144,14 +144,14 @@ function q() {
     _ = (0, N.useUID)(),
     p = A.default.getCurrentUser(),
     I = null != e,
-    T = l && null != p && !I;
+    T = i && null != p && !I;
   return (s.useEffect(() => {
     (0, g.trackAppUIViewed)("family-center"), M.default.initialPageLoad(), !n && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
       dismissAction: F.ContentDismissActionType.AUTO,
       forceTrack: !0
     })
   }, []), s.useEffect(() => {
-    l && I && (O.default.track(w.AnalyticEvents.FAMILY_CENTER_VIEWED, {
+    i && I && (O.default.track(w.AnalyticEvents.FAMILY_CENTER_VIEWED, {
       is_considered_adult: e,
       num_of_accepted_links: t,
       selected_teen_id: r,
@@ -160,8 +160,8 @@ function q() {
     }), S.default.increment({
       name: o.MetricEvents.FAMILY_CENTER_VIEW
     }))
-  }, [l, I]), T) ? ((0, E.openAgeGateModal)(B.AgeGateSource.FAMILY_CENTER), null) : (0, a.jsxs)("main", {
-    className: i()(V.container),
+  }, [i, I]), T) ? ((0, E.openAgeGateModal)(B.AgeGateSource.FAMILY_CENTER), null) : (0, a.jsxs)("main", {
+    className: l()(V.container),
     "aria-label": H.default.Messages.FAMILY_CENTER_TITLE,
     children: [(0, a.jsx)(C.AppPageTitle, {
       location: H.default.Messages.FAMILY_CENTER_TITLE
@@ -184,12 +184,12 @@ function q() {
 function Q() {
   let {
     analyticsLocations: e
-  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, D.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([y.default], () => y.default.getIsInitialized()), p = (0, x.useSelectedTeenId)(), v = (0, u.useStateFromStores)([I.default], () => I.default.theme), {
+  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, D.default)(), n = (0, b.useAcceptedRequestsCount)(), i = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([y.default], () => y.default.getIsInitialized()), p = (0, x.useSelectedTeenId)(), v = (0, u.useStateFromStores)([I.default], () => I.default.theme), {
     selectedTab: R,
     handleTabChange: L
   } = (0, P.default)(), U = (0, N.useUID)(), j = A.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
   if (s.useEffect(() => {
-      f.setHomeLink(w.Routes.FAMILY_CENTER), (0, g.trackAppUIViewed)("family-center"), !y.default.isLoading() && y.default.canRefetch() && M.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+      f.setHomeLink(w.Routes.FAMILY_CENTER), (0, g.trackAppUIViewed)("family-center"), !y.default.isLoading() && y.default.canRefetch() && M.default.initialPageLoad(), !i && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
         dismissAction: F.ContentDismissActionType.AUTO,
         forceTrack: !0
       })
@@ -212,7 +212,7 @@ function Q() {
   return (0, a.jsx)(_.AnalyticsLocationProvider, {
     value: e,
     children: (0, a.jsxs)("main", {
-      className: i()(V.container, V.containerSidenav),
+      className: l()(V.container, V.containerSidenav),
       "aria-label": H.default.Messages.FAMILY_CENTER_TITLE,
       children: [(0, a.jsx)(C.AppPageTitle, {
         location: H.default.Messages.FAMILY_CENTER_TITLE

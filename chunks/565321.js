@@ -3,11 +3,11 @@ a.r(t), a("47120");
 var n = a("735250"),
   r = a("470079"),
   i = a("481060"),
-  s = a("881052"),
-  l = a("484455"),
+  l = a("881052"),
+  s = a("484455"),
   o = a("592286"),
-  d = a("689938"),
-  c = a("17359");
+  c = a("689938"),
+  d = a("17359");
 t.default = function(e) {
   let {
     guildId: t,
@@ -24,27 +24,27 @@ t.default = function(e) {
         await a(t, h)
       } catch (e) {
         if (p.current) return;
-        m(new s.APIError(e).getAnyErrorMessage())
+        m(new l.APIError(e).getAnyErrorMessage())
       } finally {
         if (p.current) return;
         T.current = !1
       }
     }
   }, [h, t, a]);
-  return (0, n.jsxs)(l.default, {
-    title: d.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
+  return (0, n.jsxs)(s.default, {
+    title: c.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
     children: [(0, n.jsx)(i.TextArea, {
-      className: c.fieldBackground,
+      className: d.fieldBackground,
       maxLength: o.MAX_DESCRIPTION_LENGTH,
       value: null != h ? h : "",
-      placeholder: d.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
+      placeholder: c.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
       onChange: e => {
         E(e)
       },
       onBlur: C,
       autosize: !0
     }), null != f && "" !== f ? (0, n.jsx)(i.Text, {
-      className: c.errorText,
+      className: d.errorText,
       variant: "text-xs/normal",
       color: "text-danger",
       children: f

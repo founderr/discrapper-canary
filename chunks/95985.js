@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("481060"),
-  i = n("497505"),
+  i = n("481060"),
+  l = n("497505"),
   r = n("918701"),
   o = n("644646"),
   u = n("472144"),
@@ -30,16 +30,16 @@ t.default = e => {
       children: (0, a.jsx)(o.default, {
         className: f.questProgressRewardTile,
         quest: t,
-        questContent: i.QuestContent.QUEST_BAR,
+        questContent: l.QuestContent.QUEST_BAR,
         autoplay: !1
       })
     }), (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(l.Text, {
+      children: [(0, a.jsx)(i.Text, {
         className: f.questProgressHint,
         color: "header-primary",
         variant: "text-sm/semibold",
         children: C
-      }), (0, a.jsx)(l.Text, {
+      }), (0, a.jsx)(i.Text, {
         className: f.questProgressHint,
         color: "text-muted",
         variant: "text-xs/normal",

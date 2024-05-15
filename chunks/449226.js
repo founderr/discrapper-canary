@@ -8,8 +8,8 @@ var n = a("735250");
 a("470079");
 var r = a("120356"),
   i = a.n(r),
-  s = a("481060"),
-  l = a("212723");
+  l = a("481060"),
+  s = a("212723");
 
 function o(e) {
   let {
@@ -17,17 +17,17 @@ function o(e) {
     onChange: a,
     disabled: r,
     className: o,
-    tooltipProps: d
-  } = e, c = e => {
+    tooltipProps: c
+  } = e, d = e => {
     e.stopPropagation(), e.preventDefault()
   };
-  return (0, n.jsx)(s.Clickable, {
-    onClick: c,
-    onMouseDown: c,
-    onMouseUp: c,
-    className: i()(l.switch, o),
-    ...d,
-    children: (0, n.jsx)(s.Switch, {
+  return (0, n.jsx)(l.Clickable, {
+    onClick: d,
+    onMouseDown: d,
+    onMouseUp: d,
+    className: i()(s.switch, o),
+    ...c,
+    children: (0, n.jsx)(l.Switch, {
       checked: t,
       onChange: a,
       disabled: r
