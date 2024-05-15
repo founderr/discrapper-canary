@@ -136,7 +136,7 @@ class X extends l.Component {
       (0, m.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
+        } = await Promise.all([n.e("99387"), n.e("36441"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
         return t => (0, a.jsx)(e, {
           ...t,
           user: this.props.user,

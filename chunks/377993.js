@@ -51,7 +51,7 @@ function b(e) {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("60677")]).then(n.bind(n, "354589"));
+      } = await Promise.all([n.e("99387"), n.e("36441"), n.e("60677")]).then(n.bind(n, "354589"));
       return n => (0, a.jsx)(e, {
         ...n,
         user: t,

@@ -263,7 +263,7 @@ class Q extends B.default {
       null != a && (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("79695"), n.e("18320"), n.e("83331")]).then(n.bind(n, "213202"));
+        } = await Promise.all([n.e("8137"), n.e("83331")]).then(n.bind(n, "213202"));
         return n => (0, l.jsx)(e, {
           ...n,
           channel: t,

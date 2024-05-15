@@ -176,7 +176,7 @@ function J(e) {
     t.isMultiUserDM() ? (0, m.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("25421")]).then(n.bind(n, "354741"));
+      } = await Promise.all([n.e("99387"), n.e("25421")]).then(n.bind(n, "354741"));
       return n => (0, l.jsx)(e, {
         ...n,
         channel: t,
@@ -187,7 +187,7 @@ function J(e) {
     }) : (0, m.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("56826")]).then(n.bind(n, "131404"));
+      } = await Promise.all([n.e("99387"), n.e("36441"), n.e("56826")]).then(n.bind(n, "131404"));
       return n => (0, l.jsx)(e, {
         ...n,
         user: c,

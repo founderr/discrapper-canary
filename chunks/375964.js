@@ -4308,6 +4308,7 @@ e.exports = Object.freeze({
   TWITTER: "Twitter",
   FACEBOOK: "Facebook",
   INSTAGRAM: "Instagram",
+  SPOTIFY: "Spotify",
   VIEW_SPECTATORS: "View spectators",
   OPEN: "Open",
   SELECT_PICTURE: "Select picture",
