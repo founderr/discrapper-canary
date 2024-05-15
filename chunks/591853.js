@@ -350,7 +350,10 @@ function ed(e) {
           }, t)
         })
       })]
-    }), l]
+    }), (0, a.jsx)("div", {
+      className: en.popoutHeaderIcons,
+      children: l
+    })]
   })
 }
 
