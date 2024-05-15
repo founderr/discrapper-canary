@@ -38,28 +38,28 @@ function O(e) {
   let {
     guildId: t,
     onClose: n
-  } = e, l = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
-    progress: O,
-    errors: L,
-    submitting: M
+  } = e, l = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = (0, C.useDefaultClanProgress)(), {
+    progress: L,
+    errors: M,
+    submitting: y
   } = (0, u.useStateFromStoresObject)([C.default], () => {
     var e, n, a, s;
     return {
-      progress: null !== (s = null === (e = C.default.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== s ? s : C.DEFAULT_CLAN_PROGRESS,
+      progress: null !== (s = null === (e = C.default.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== s ? s : O,
       errors: null === (n = C.default.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
       submitting: null === (a = C.default.getStateForGuild(t)) || void 0 === a ? void 0 : a.submitting
     }
-  }), y = (0, m.useDefaultGameIdForClan)(t, "ClanSetupModal"), P = s.useMemo(() => (0, A.getClanSetupProgressSteps)(L), [L]), [x, D] = s.useState(!1), [b, U] = s.useState(window.innerWidth), [j, G] = s.useState(1), [k, w] = s.useState(!0), B = (0, p.useFullScreenModalAnimationStyle)(), F = (0, o.useSpring)({
-    opacity: j,
+  }), P = (0, m.useDefaultGameIdForClan)(t, "ClanSetupModal"), x = s.useMemo(() => (0, A.getClanSetupProgressSteps)(M), [M]), [D, b] = s.useState(!1), [U, j] = s.useState(window.innerWidth), [G, k] = s.useState(1), [w, B] = s.useState(!0), F = (0, p.useFullScreenModalAnimationStyle)(), H = (0, o.useSpring)({
+    opacity: G,
     config: R,
-    onStart: () => w(!0),
-    onRest: () => w(1 === j),
+    onStart: () => B(!0),
+    onRest: () => B(1 === G),
     immediate: l
-  }), H = (0, o.useSpring)({
-    transform: "translateX(".concat(1 === j ? 0 : -1 * b / 2 + 190, "px)"),
+  }), V = (0, o.useSpring)({
+    transform: "translateX(".concat(1 === G ? 0 : -1 * U / 2 + 190, "px)"),
     config: R,
     immediate: l
-  }), V = (0, o.useTransition)(0 === j, {
+  }), Y = (0, o.useTransition)(0 === G, {
     from: {
       opacity: 0
     },
@@ -69,7 +69,7 @@ function O(e) {
     },
     config: R,
     immediate: l
-  }), Y = (0, o.useTransition)(0 === j, {
+  }), W = (0, o.useTransition)(0 === G, {
     from: {
       opacity: 0
     },
@@ -81,43 +81,43 @@ function O(e) {
     },
     config: R,
     immediate: l
-  }), W = s.useCallback(e => {
-    if (e === P.length) G(0), (0, _.trackConvertStepViewed)(t, "signature");
-    else if (0 === j) G(1);
+  }), K = s.useCallback(e => {
+    if (e === x.length) k(0), (0, _.trackConvertStepViewed)(t, "signature");
+    else if (0 === G) k(1);
     else {
       var n;
       h.updateClanSetup(t, {
         currentStep: e,
-        furthestStep: Math.max(null !== (n = O.furthestStep) && void 0 !== n ? n : 0, e)
+        furthestStep: Math.max(null !== (n = L.furthestStep) && void 0 !== n ? n : 0, e)
       })
     }
-  }, [j, t, O.furthestStep, P.length]);
+  }, [G, t, L.furthestStep, x.length]);
   s.useEffect(() => {
-    (0, _.trackConvertStepViewed)(t, (0, _.getProgressStepAnalyticsName)(O.currentStep))
-  }, [t, O.currentStep]), s.useEffect(() => {
-    let e = (0, E.getResizeObserver)((0, r.debounce)(() => U(window.innerWidth), 250));
+    (0, _.trackConvertStepViewed)(t, (0, _.getProgressStepAnalyticsName)(L.currentStep))
+  }, [t, L.currentStep]), s.useEffect(() => {
+    let e = (0, E.getResizeObserver)((0, r.debounce)(() => j(window.innerWidth), 250));
     return (0, E.watch)(e, document.body), () => (0, E.unwatch)(e, document.body)
-  }, [j, k]), s.useEffect(() => {
-    null != y && (0, h.updateClanSetup)(t, {
-      requiredGameId: y
+  }, [G, w]), s.useEffect(() => {
+    null != P && (0, h.updateClanSetup)(t, {
+      requiredGameId: P
     })
-  }, [y, t]);
-  let K = s.useMemo(() => null != L && Object.values(L).some(e => null != e), [L]),
-    z = s.useMemo(() => null != L && Object.values(L).length > 0 ? (0, A.getClanSetupProgressSteps)(L).find(e => e.hasError) : null, [L]),
-    q = s.useCallback(() => {
-      G(1), h.updateClanSetup(t, {
-        currentStep: null == z ? void 0 : z.index
-      })
-    }, [null == z ? void 0 : z.index, t]),
+  }, [P, t]);
+  let z = s.useMemo(() => null != M && Object.values(M).some(e => null != e), [M]),
+    q = s.useMemo(() => null != M && Object.values(M).length > 0 ? (0, A.getClanSetupProgressSteps)(M).find(e => e.hasError) : null, [M]),
     Q = s.useCallback(() => {
+      k(1), h.updateClanSetup(t, {
+        currentStep: null == q ? void 0 : q.index
+      })
+    }, [null == q ? void 0 : q.index, t]),
+    Z = s.useCallback(() => {
       (0, A.submitClanSetup)({
         guildId: t,
         onClose: n,
-        progress: O
+        progress: L
       })
-    }, [n, t, O]),
-    Z = s.useRef(null),
-    X = null != z ? (0, a.jsxs)("div", {
+    }, [n, t, L]),
+    X = s.useRef(null),
+    J = null != q ? (0, a.jsxs)("div", {
       className: v.tooltipContents,
       children: [(0, a.jsx)(f.default, {
         className: v.errorIcon
@@ -132,7 +132,7 @@ function O(e) {
           children: N.default.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
             backHook: (e, t) => (0, a.jsx)(d.Anchor, {
               className: v.errorLink,
-              onClick: q,
+              onClick: Q,
               children: e
             }, t)
           })
@@ -140,11 +140,11 @@ function O(e) {
       })]
     }) : null;
   return (0, a.jsx)(o.animated.div, {
-    ref: Z,
-    style: B,
+    ref: X,
+    style: F,
     className: v.modal,
     children: (0, a.jsxs)(d.FocusRingScope, {
-      containerRef: Z,
+      containerRef: X,
       children: [(0, a.jsx)(d.Button, {
         className: v.close,
         look: d.Button.Looks.OUTLINED,
@@ -157,67 +157,67 @@ function O(e) {
         children: [(0, a.jsxs)("div", {
           className: v.panel,
           children: [(0, a.jsx)(o.animated.div, {
-            style: F,
+            style: H,
             className: i()(v.stepsContainer, {
-              [v.hidden]: !k
+              [v.hidden]: !w
             }),
             children: (0, a.jsx)(T.default, {
               guildId: t
             })
           }), (0, a.jsx)("div", {
             className: i()(v.navigationContainer, {
-              [v.elevatedNavigationContainer]: !k
+              [v.elevatedNavigationContainer]: !w
             }),
             children: (0, a.jsx)(g.default, {
-              steps: P,
-              progress: O,
-              updateCurrentStep: W,
-              animationStyle: F,
+              steps: x,
+              progress: L,
+              updateCurrentStep: K,
+              animationStyle: H,
               animationClassName: i()({
-                [v.hidden]: !k
+                [v.hidden]: !w
               })
             })
           })]
         }), (0, a.jsx)(o.animated.div, {
-          style: F,
+          style: H,
           className: i()(v.divider, {
-            [v.hidden]: !k,
-            [v.dividerResponsive]: k
+            [v.hidden]: !w,
+            [v.dividerResponsive]: w
           })
         }), (0, a.jsx)(o.animated.div, {
-          style: H,
+          style: V,
           className: i()(v.sidebar, {
-            [v.sidebarResponsive]: k
+            [v.sidebarResponsive]: w
           }),
           children: (0, a.jsx)(I.default, {
             guildId: t,
-            signed: x,
-            setSigned: k ? void 0 : D,
+            signed: D,
+            setSigned: w ? void 0 : b,
             sidebarWidth: 380,
-            windowWidth: b,
-            transition: V,
-            brandPrimaryColor: O.brandPrimaryColor
+            windowWidth: U,
+            transition: Y,
+            brandPrimaryColor: L.brandPrimaryColor
           })
         })]
-      }), Y((e, t) => t && (0, a.jsx)(o.animated.div, {
+      }), W((e, t) => t && (0, a.jsx)(o.animated.div, {
         style: e,
         className: v.submit,
         children: (0, a.jsx)(d.Tooltip, {
           color: d.Tooltip.Colors.GREY,
           tooltipClassName: v.tooltip,
-          text: X,
-          "aria-label": null != z ? N.default.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
-          shouldShow: null != z,
-          forceOpen: null != z,
+          text: J,
+          "aria-label": null != q ? N.default.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
+          shouldShow: null != q,
+          forceOpen: null != q,
           children: e => (0, a.jsx)(S.default, {
             ...e,
-            themeColor: O.brandPrimaryColor,
-            disabled: !x || K,
-            submitting: M,
+            themeColor: L.brandPrimaryColor,
+            disabled: !D || z,
+            submitting: y,
             look: d.Button.Looks.FILLED,
             size: d.Button.Sizes.MEDIUM,
             color: d.Button.Colors.BRAND,
-            onClick: Q,
+            onClick: Z,
             children: N.default.Messages.FINISH
           })
         })
