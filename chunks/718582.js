@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   useGetCardUsers: function() {
-    return P
+    return b
   },
   useGetEventCardUsers: function() {
-    return U
+    return G
   },
   useGuildPopoutCards: function() {
-    return v
-  },
-  useSortUserIdsByAffinity: function() {
     return M
   },
+  useSortUserIdsByAffinity: function() {
+    return P
+  },
   useSortUsersByAffinity: function() {
-    return y
+    return U
   }
 }), n("47120"), n("390547"), n("653041"), n("627341");
 var i = n("470079"),
@@ -27,20 +27,22 @@ var i = n("470079"),
   _ = n("501655"),
   c = n("344185"),
   E = n("199902"),
-  I = n("480294"),
-  T = n("984933"),
-  f = n("158776"),
-  S = n("699516"),
-  h = n("800599"),
-  A = n("594174"),
-  m = n("979651"),
-  N = n("938475"),
-  p = n("823379"),
-  O = n("5192"),
-  C = n("126134"),
-  R = n("981631"),
-  g = n("689938");
-let L = {
+  I = n("592125"),
+  T = n("480294"),
+  f = n("984933"),
+  S = n("158776"),
+  h = n("699516"),
+  A = n("800599"),
+  m = n("594174"),
+  N = n("979651"),
+  p = n("938475"),
+  O = n("823379"),
+  C = n("5192"),
+  R = n("59688"),
+  g = n("126134"),
+  L = n("981631"),
+  v = n("689938");
+let D = {
   Event: 7,
   Game: 6,
   EmbeddedActivity: 5,
@@ -50,17 +52,12 @@ let L = {
   Base: 1
 };
 
-function v(e) {
+function M(e) {
   let t = e.id,
     [n, d] = i.useState([]),
-    [_, A] = i.useState(0),
-    O = (0, s.useStateFromStoresArray)([T.default, c.default], () => {
-      let e = T.default.getChannels(t)[T.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
-        let {
-          channel: t
-        } = e;
-        return t.type === R.ChannelTypes.GUILD_VOICE
-      }).map(e => {
+    [_, m] = i.useState(0),
+    C = (0, s.useStateFromStoresArray)([f.default, c.default], () => {
+      let e = f.default.getChannels(t)[f.GUILD_VOCAL_CHANNELS_KEY].map(e => {
         let {
           channel: t
         } = e;
@@ -68,101 +65,106 @@ function v(e) {
       });
       return [...e, ...Object.values(c.default.getThreadsForGuild(t)).flatMap(e => Object.keys(e))]
     }, [t]),
-    g = (0, s.useStateFromStoresArray)([u.default], () => u.default.getGuildScheduledEventsForGuild(t).filter(e => (0, u.isGuildScheduledEventActive)(e)).map(e => ({
-      category: C.CardCategory.EVENT,
-      event: e
-    })), [t]),
-    L = g.map(e => {
+    R = (0, s.useStateFromStores)([u.default, I.default], () => u.default.getGuildScheduledEventsForGuild(t).filter(e => (0, u.isGuildScheduledEventActive)(e)).map(e => {
+      var t;
+      return {
+        category: g.CardCategory.EVENT,
+        event: e,
+        isStage: !!(null === (t = I.default.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.isGuildStageVoice())
+      }
+    }), [t], r.isEqual),
+    v = R.map(e => {
       let {
         event: t
       } = e;
       return t.channel_id
     }),
-    v = (0, s.useStateFromStores)([S.default], () => S.default.getRelationships()),
-    M = i.useMemo(() => Object.keys(v).filter(e => v[e] === R.RelationshipTypes.BLOCKED), [v]),
-    y = (0, s.useStateFromStores)([N.default], () => N.default.getVoiceStates(t), [t]),
-    P = i.useMemo(() => {
-      let t = Object.keys(y);
+    D = (0, s.useStateFromStores)([h.default], () => h.default.getRelationships()),
+    M = i.useMemo(() => Object.keys(D).filter(e => D[e] === L.RelationshipTypes.BLOCKED), [D]),
+    P = (0, s.useStateFromStores)([p.default], () => p.default.getVoiceStates(t), [t]),
+    U = i.useMemo(() => {
+      let t = Object.keys(P);
       return 0 === t.length ? [] : t.filter(t => {
-        let n = y[t].filter(p.isNotNullish);
-        return !(0 === n.length || L.includes(t)) && null == n.find(e => {
+        let n = P[t].filter(O.isNotNullish);
+        return !(0 === n.length || v.includes(t)) && null == n.find(e => {
           let {
             user: t
           } = e;
           return M.includes(t.id)
-        }) && t !== e.afkChannelId && O.includes(t)
+        }) && t !== e.afkChannelId && C.includes(t)
       })
-    }, [y, L, O, M, e.afkChannelId]),
-    U = (0, s.useStateFromStoresArray)([o.default, m.default, f.default, E.default], () => P.map(e => {
-      let t = E.default.getAllApplicationStreamsForChannel(e).map(e => e.ownerId),
-        n = y[e].filter(p.isNotNullish),
-        i = o.default.getEmbeddedActivitiesForChannel(e),
-        r = C.CardCategory.HANGOUT,
-        a = [],
+    }, [P, v, C, M, e.afkChannelId]),
+    b = (0, s.useStateFromStores)([o.default, N.default, E.default, S.default, I.default], () => U.map(e => {
+      var t;
+      let n = E.default.getAllApplicationStreamsForChannel(e).map(e => e.ownerId),
+        i = P[e].filter(O.isNotNullish),
+        r = o.default.getEmbeddedActivitiesForChannel(e),
+        a = g.CardCategory.HANGOUT,
         s = [],
-        u = n.map(e => {
+        u = i.map(e => {
           let {
             user: t
           } = e;
           return t.id
         }),
-        d = m.default.hasVideo(e),
+        d = N.default.hasVideo(e),
         _ = [],
         c = [];
-      if (i.length > 0)
-        for (let e of (r = C.CardCategory.EMBEDDED_ACTIVITY, i)) a.push(e);
-      for (let e of n) {
-        let t = f.default.findActivity(e.user.id, D(e));
-        null != t && !(0, l.default)(t) && (r = C.CardCategory.GAMING, s.push(t), _.push(e.user.id)), e.voiceState.selfVideo && c.push(e.user.id)
+      for (let e of (r.length > 0 && (a = g.CardCategory.EMBEDDED_ACTIVITY), i)) {
+        let t = S.default.findActivity(e.user.id, y(e));
+        null != t && !(0, l.default)(t) && (a = g.CardCategory.GAMING, s.push(t), _.push(e.user.id)), e.voiceState.selfVideo && c.push(e.user.id)
       }
-      return r === C.CardCategory.EMBEDDED_ACTIVITY ? {
-        category: r,
-        embeddedActivities: a,
-        streamersCount: t.length,
-        voiceUsersCount: n.length
-      } : r === C.CardCategory.GAMING ? {
-        category: r,
+      if (a === g.CardCategory.EMBEDDED_ACTIVITY) return {
+        category: a,
+        embeddedActivities: r,
+        streamersCount: n.length,
+        voiceUsersCount: i.length
+      };
+      if (a === g.CardCategory.GAMING) return {
+        category: a,
         channelId: e,
         games: s,
-        voiceStates: n,
-        streamersCount: t.length,
+        voiceStates: i,
+        streamersCount: n.length,
         gameUserIds: _
-      } : {
-        category: r,
+      };
+      return {
+        category: a,
         channelId: e,
         userIds: u,
-        streamUserIds: t,
+        streamUserIds: n,
         channelHasVideo: d,
-        videoUserIds: c
+        videoUserIds: c,
+        isStage: !!(null === (t = I.default.getChannel(e)) || void 0 === t ? void 0 : t.isGuildStageVoice())
       }
-    }), [y, P]),
-    b = (0, s.useStateFromStores)([I.default], () => I.default.hasConsented(R.Consents.PERSONALIZATION)),
-    G = (0, s.useStateFromStores)([h.default], () => h.default.getUserAffinities());
-  if (0 === U.length && 0 === g.length) return 0 === O.length ? [] : O.slice(0, 2).map(e => ({
-    category: C.CardCategory.EMPTY,
+    }), [P, U], r.isEqual),
+    G = (0, s.useStateFromStores)([T.default], () => T.default.hasConsented(L.Consents.PERSONALIZATION)),
+    w = (0, s.useStateFromStores)([A.default], () => A.default.getUserAffinities());
+  if (0 === b.length && 0 === R.length) return 0 === C.length ? [] : C.slice(0, 2).map(e => ({
+    category: g.CardCategory.EMPTY,
     channelId: e
   }));
-  let w = b && G.length > 0,
-    B = [...U, ...g];
-  return _ !== B.length && (d((function(e, t) {
+  let B = G && w.length > 0,
+    k = [...b, ...R];
+  return _ !== k.length && (d((function(e, t) {
     return (0, r.orderBy)(e, [e => (function(e, t) {
       let n = e => e > 0 ? Math.log(e + 1) : 0,
         i = e => e.map(e => {
           var t, n;
-          return null !== (n = null === (t = h.default.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
+          return null !== (n = null === (t = A.default.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
         }).map(n),
         r = (0, a.match)(e).with({
-          category: C.CardCategory.EVENT
+          category: g.CardCategory.EVENT
         }, () => 7).with({
-          category: C.CardCategory.GAMING
+          category: g.CardCategory.GAMING
         }, () => 6).with({
-          category: C.CardCategory.EMBEDDED_ACTIVITY
+          category: g.CardCategory.EMBEDDED_ACTIVITY
         }, () => 5).with({
           streamUserIds: a.P.when(e => e.length > 0)
         }, () => 4).with({
           channelHasVideo: !0
         }, () => 3).with({
-          category: C.CardCategory.HANGOUT
+          category: g.CardCategory.HANGOUT
         }, () => 2).otherwise(() => 1),
         s = 0;
       if (t) {
@@ -172,7 +174,7 @@ function v(e) {
             t = new Set([...t, ...e.userIds])
           }), s += Math.max(...i([...t]))
         }
-        "voiceStates" in e && (s += Math.max(...i(e.voiceStates.filter(p.isNotNullish).map(e => {
+        "voiceStates" in e && (s += Math.max(...i(e.voiceStates.filter(O.isNotNullish).map(e => {
           let {
             user: t
           } = e;
@@ -185,7 +187,7 @@ function v(e) {
             t = new Set([t, ...e.userIds])
           }), s += t.size
         }
-        "voiceStates" in e && (s += e.voiceStates.filter(p.isNotNullish).map(e => {
+        "voiceStates" in e && (s += e.voiceStates.filter(O.isNotNullish).map(e => {
           let {
             user: t
           } = e;
@@ -194,51 +196,51 @@ function v(e) {
       }
       return s = s > 0 ? s * r : 1e-5 * r
     })(e, t)], ["desc"])
-  })(B, w).slice(0, 3)), A(B.length)), n
+  })(k, B).slice(0, 3)), m(k.length)), n
 }
-let D = e => t => [R.ActivityTypes.PLAYING, R.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId);
+let y = e => t => [L.ActivityTypes.PLAYING, L.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId);
 
-function M(e) {
-  return (0, s.useStateFromStoresArray)([I.default, h.default], () => {
-    let t = I.default.hasConsented(R.Consents.PERSONALIZATION),
-      n = h.default.getUserAffinities();
+function P(e) {
+  return (0, s.useStateFromStoresArray)([T.default, A.default], () => {
+    let t = T.default.hasConsented(L.Consents.PERSONALIZATION),
+      n = A.default.getUserAffinities();
     return t && n.length > 0 ? (0, r.orderBy)(e, [e => {
       var t, n;
-      return null !== (n = null === (t = h.default.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
+      return null !== (n = null === (t = A.default.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
     }], ["desc"]) : e
   }, [e])
 }
 
-function y(e) {
-  return (0, s.useStateFromStoresArray)([I.default, h.default], () => {
-    let t = I.default.hasConsented(R.Consents.PERSONALIZATION),
-      n = h.default.getUserAffinities();
+function U(e) {
+  return (0, s.useStateFromStoresArray)([T.default, A.default], () => {
+    let t = T.default.hasConsented(L.Consents.PERSONALIZATION),
+      n = A.default.getUserAffinities();
     return t && n.length > 0 ? (0, r.orderBy)(e, [e => {
       var t, n;
-      return null !== (n = null === (t = h.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
+      return null !== (n = null === (t = A.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
     }], ["desc"]) : e
   }, [e])
 }
 
-function P(e, t, n, r) {
+function b(e, t, n, r) {
   let a;
-  let s = M(e),
-    o = i.useMemo(() => s.map(e => A.default.getUser(e)).filter(p.isNotNullish), [s]),
+  let s = P(e),
+    o = i.useMemo(() => s.map(e => m.default.getUser(e)).filter(O.isNotNullish), [s]),
     l = o.slice(0, 6),
     u = Math.max(0, o.length - l.length);
   if (null != r && r.length > 0) {
-    let e = O.default.getName(t, n, A.default.getUser(r[0]));
-    a = 1 === r.length ? g.default.Messages.GUILD_POPOUT_ACTIVITY_STREAMER.format({
+    let e = C.default.getName(t, n, m.default.getUser(r[0]));
+    a = 1 === r.length ? v.default.Messages.GUILD_POPOUT_ACTIVITY_STREAMER.format({
       username: e
-    }) : g.default.Messages.GUILD_POPOUT_USERS_STREAMING.format({
+    }) : v.default.Messages.GUILD_POPOUT_USERS_STREAMING.format({
       username: e,
       count: r.length - 1
     })
-  } else {
-    let e = O.default.getName(t, n, A.default.getUser(l[0].id));
-    a = 1 === l.length ? g.default.Messages.GUILD_POPOUT_USER_IN_VOICE.format({
+  } else if (l.length > 0) {
+    let e = C.default.getName(t, n, m.default.getUser(l[0].id));
+    a = 1 === l.length ? v.default.Messages.GUILD_POPOUT_USER_IN_VOICE.format({
       username: e
-    }) : g.default.Messages.GUILD_POPOUT_USERS_IN_VOICE.format({
+    }) : v.default.Messages.GUILD_POPOUT_USERS_IN_VOICE.format({
       username: e,
       count: l.length - 1
     })
@@ -251,32 +253,33 @@ function P(e, t, n, r) {
   }
 }
 
-function U(e) {
-  let t = (0, s.useStateFromStores)([d.default], () => null == e ? null : d.default.getParticipantCount(e.id, _.StageChannelParticipantNamedIndex.AUDIENCE)),
-    n = (0, s.useStateFromStoresArray)([d.default], () => null == e ? [] : d.default.getMutableParticipants(e.id, _.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === _.StageChannelParticipantTypes.VOICE).map(e => {
+function G(e) {
+  let t = (0, R.useGuildPeekCardType)(),
+    n = (0, s.useStateFromStores)([d.default], () => null == e ? null : d.default.getParticipantCount(e.id, _.StageChannelParticipantNamedIndex.AUDIENCE)),
+    i = (0, s.useStateFromStoresArray)([d.default], () => null == e ? [] : d.default.getMutableParticipants(e.id, _.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === _.StageChannelParticipantTypes.VOICE).map(e => {
       let {
         user: t
       } = e;
       return t
     })),
-    i = (0, s.useStateFromStoresArray)([N.default], () => null == e ? [] : N.default.getVoiceStatesForChannel(e).filter(p.isNotNullish).map(e => {
+    r = (0, s.useStateFromStoresArray)([p.default], () => null == e ? [] : p.default.getVoiceStatesForChannel(e).filter(O.isNotNullish).map(e => {
       let {
         user: t
       } = e;
       return t
     }));
-  if ((null == e ? void 0 : e.type) === R.ChannelTypes.GUILD_STAGE_VOICE) {
-    let e = n.slice(0, 3),
-      i = Math.max(0, n.length - e.length);
+  if ((null == e ? void 0 : e.type) === L.ChannelTypes.GUILD_STAGE_VOICE) {
+    let e = i.slice(0, 3),
+      r = Math.max(0, i.length - e.length);
     return {
-      usersToShow: e,
-      othersCount: i,
-      audienceCount: null != t ? t : 0
+      usersToShow: t === g.GuildPeekCardTypes.WHO ? i : e,
+      othersCount: r,
+      audienceCount: null != n ? n : 0
     }
   }
-  if ((null == e ? void 0 : e.type) === R.ChannelTypes.GUILD_VOICE) {
-    let e = i.slice(0, 7),
-      t = Math.max(0, i.length - e.length);
+  if ((null == e ? void 0 : e.type) === L.ChannelTypes.GUILD_VOICE) {
+    let e = r.slice(0, 7),
+      t = Math.max(0, r.length - e.length);
     return {
       usersToShow: e,
       othersCount: t,
