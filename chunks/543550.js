@@ -38,21 +38,27 @@ function T() {
   let e = (0, h.useClanDiscoveryUIStore)(e => e.game, r.default),
     t = (0, h.useClanDiscoveryUIStore)(e => e.userUpsellScreen, r.default),
     n = (0, h.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, r.default),
-    l = s.useCallback(() => {
+    l = (0, S.useGuildsEligibleForClan)({
+      location: "ClanDiscoveryAdminContainer"
+    }).length > 0;
+  s.useEffect(() => {
+    l && t === h.ClanDiscoveryUserScreens.USER_UPSELL && (0, h.setClanDiscoveryMode)(h.ClanDiscoveryMode.ADMIN_UPSELL)
+  }, [t, l]);
+  let u = s.useCallback(() => {
       (0, f.trackClanUserInviteClicked)({
         location: c.default.CLAN_DISCOVERY
       }), n(h.ClanDiscoveryUserScreens.USER_ONBOARDING)
     }, [n]),
-    u = (0, d.default)(),
-    E = s.useMemo(() => I(e, u), [e, u]),
-    _ = s.useMemo(() => {
+    E = (0, d.default)(),
+    _ = s.useMemo(() => I(e, E), [e, E]),
+    T = s.useMemo(() => {
       switch (e) {
         case h.ClanDiscoveryGame.GENSHIN:
-          return u === p.ThemeTypes.DARK ? g.genshinOnboardingBackgroundImageDark : g.genshinOnboardingBackgroundImageLight;
+          return E === p.ThemeTypes.DARK ? g.genshinOnboardingBackgroundImageDark : g.genshinOnboardingBackgroundImageLight;
         case h.ClanDiscoveryGame.VALORANT:
-          return u === p.ThemeTypes.DARK ? g.valorantOnboardingBackgroundImageDark : g.valorantOnboardingBackgroundImageLight
+          return E === p.ThemeTypes.DARK ? g.valorantOnboardingBackgroundImageDark : g.valorantOnboardingBackgroundImageLight
       }
-    }, [e, u]);
+    }, [e, E]);
   switch (t) {
     case h.ClanDiscoveryUserScreens.USER_UPSELL:
       return (0, a.jsx)("div", {
@@ -61,14 +67,14 @@ function T() {
           className: g.upsellScroller,
           fade: !0,
           children: (0, a.jsxs)("div", {
-            className: i()(E, g.userUpsell),
+            className: i()(_, g.userUpsell),
             children: [(0, a.jsx)("div", {
               className: g.backgroundImageBlur
             }), (0, a.jsxs)("div", {
               className: g.backgroundImageContent,
               children: [(0, a.jsx)(m.ClanDiscoveryUserUpsellBackgroundRings, {}), (0, a.jsx)(m.default, {
                 selectedGame: e,
-                onClick: l
+                onClick: u
               })]
             })]
           })
@@ -78,7 +84,7 @@ function T() {
       return (0, a.jsx)("div", {
         className: g.container,
         children: (0, a.jsxs)("div", {
-          className: i()(_, g.userOnboarding),
+          className: i()(T, g.userOnboarding),
           children: [(0, a.jsx)("div", {
             className: g.backgroundImageBlur
           }), (0, a.jsx)("div", {
