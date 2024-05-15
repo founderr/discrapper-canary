@@ -6,14 +6,14 @@ n.r(t), n.d(t, {
 });
 var a = n("470079"),
   s = n("116175"),
-  i = n("308083");
+  l = n("308083");
 
-function l(e) {
+function i(e) {
   let {
     id: t,
     gameId: n,
     preset: a,
-    banner: l,
+    banner: i,
     ...r
   } = e, o = function() {
     let e = Object.keys(s.ClanBadgeKind).filter(e => isNaN(Number(e))),
@@ -27,84 +27,84 @@ function l(e) {
     description: "",
     memberCount: 0,
     games: [n],
-    playstyle: i.ClanPlaystyles.CASUAL,
+    playstyle: l.ClanPlaystyles.CASUAL,
     tag: "",
     traits: [],
-    banner: l,
+    banner: i,
     badge: {
       badgeKind: o,
-      primaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
-      secondaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
+      primaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
+      secondaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
     },
     branding: {
-      primaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
-      secondaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
+      primaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
+      secondaryColor: l.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
     },
-    wildcardDescriptors: i.CLAN_WILDCARD_PLACEHOLDERS,
+    wildcardDescriptors: l.CLAN_WILDCARD_PLACEHOLDERS,
     ...r
   }
 }
 
 function r(e) {
-  return a.useMemo(() => [l({
+  return a.useMemo(() => [i({
     id: "1239910082150400001",
     icon: "bea185f5c9dbde7ba2f0c50363c16ec6",
     gameId: e,
-    preset: i.ClanBrandPresets.VOLCANO,
-    banner: i.ClanBannerKind.WORLD_MAP,
+    preset: l.ClanBrandPresets.VOLCANO,
+    banner: l.ClanBannerKind.WORLD_MAP,
     name: "Retro Rebels",
-    description: "Reviving nostalgia, one pixel at a time. Join fellow rebels in celebrating retro gaming classics.",
+    description: "Are you a console collector? Rare game curator? Be a rebel and join us in celebrating retro gaming classics \uD83D\uDE0E",
     tag: "RR",
-    wildcardDescriptors: ["retro", "nostalgia", "rebels"],
+    wildcardDescriptors: ["collector", "nostalgia", "classic"],
     traits: ["30+", "Inclusive", "cooking", "podcasts", "hiking"],
     memberCount: 98
-  }), l({
+  }), i({
     id: "1239910082150400002",
     icon: "fe5e3c39b398965133d24d3c5d72b06c",
     gameId: e,
-    preset: i.ClanBrandPresets.THUNDER,
-    banner: i.ClanBannerKind.CASTLE,
-    name: "Midnight Musicians",
-    description: "Jamming through the virtual night, where music and gaming collide in harmonious melodies.",
+    preset: l.ClanBrandPresets.THUNDER,
+    banner: l.ClanBannerKind.CASTLE,
+    name: "the lofi tavern",
+    description: "~ hosting chill beats and study rooms every night ~ join the tavern to kick back and meet other cozy gamers ~",
     tag: "MUSE",
-    wildcardDescriptors: ["music", "harmony", "nightowl"],
-    traits: ["All Ages", "Streamers", "study buddies", "sleepy cats", "lo-fi chilling"],
+    wildcardDescriptors: ["creative", "harmony", "nightowl"],
+    traits: ["Streamers", "study buddies", "sleepy cats", "lo-fi chilling"],
     memberCount: 112
-  }), l({
+  }), i({
     id: "1239910082150400003",
     icon: "fc7bdf17dadd9a59014fc2a41dd88613",
     gameId: e,
-    preset: i.ClanBrandPresets.MARSH,
-    banner: i.ClanBannerKind.WARP_TUNNEL,
-    name: "Epic Gamer Squad",
-    description: "Yo, welcome to the coolest Guild ever! We're all about epic gaming moments, memes, and chilling together like a bunch of boss gamers. Join us for some lit gaming sessions and mad vibes!",
-    tag: "EPIC",
-    wildcardDescriptors: ["epic", "lit", "boss"],
-    traits: ["20+", "Streamers", "venting", "late night tacos", "voice chat", "anime"],
+    preset: l.ClanBrandPresets.MARSH,
+    banner: l.ClanBannerKind.WARP_TUNNEL,
+    name: "midnight tacos",
+    description: "gamers and doritos tacos enthusiasts pls apply",
+    tag: "CHZZ",
+    wildcardDescriptors: ["crunchy", "chaotic", "gamba"],
+    traits: ["20+", "Streamers", "ranking bottled water", "late night tacos", "voice chat", "anime"],
     memberCount: 45
-  }), l({
+  }), i({
     id: "1239910082150400004",
     icon: "7b7a2a06e7852e7cdb7f301fb86c3e18",
     gameId: e,
-    preset: i.ClanBrandPresets.EARTH,
-    banner: i.ClanBannerKind.SEA_FOAM,
-    name: "Eco Explorers",
-    description: "Green gaming enthusiasts, navigating virtual worlds while advocating for a sustainable future.",
+    preset: l.ClanBrandPresets.EARTH,
+    banner: l.ClanBannerKind.SEA_FOAM,
+    name: "Eco ELO",
+    description: "If you like growing plants or gardening, in game and IRL, then this is the place for you! Welcome home \uD83C\uDF31 \uD83D\uDC9A",
     tag: "eco",
     wildcardDescriptors: ["ecofriendly", "explorers", "advocates"],
-    traits: ["20+", "Inclusive", "PUGs", "board games", "pirate shows", "drip", "cups", "houseplants"],
+    traits: ["20+", "Inclusive", "PUGs", "board games", "going outside", "PvP", "the stalk market", "growing stuff"],
     memberCount: 32
-  }), l({
+  }), i({
     id: "1239910082150400005",
     icon: "5ca93390d20f7b96a0f0c3702fceec8e",
     gameId: e,
-    preset: i.ClanBrandPresets.CASCADE,
-    banner: i.ClanBannerKind.NIGHT_SKY,
+    preset: l.ClanBrandPresets.CASCADE,
+    banner: l.ClanBannerKind.NIGHT_SKY,
     name: "Moewtopia",
-    description: "Welcome to the purrfect haven for gamers and cat lovers alike! Join our whiskered warriors as we embark on epic quests and cozy adventures.",
+    description: "the purrfect place for a pawsitive and hissterical time :D are you kitten me...i feline like that’s too many puns...",
     tag: "meow",
-    wildcardDescriptors: ["Whiskered", "Purrfect", "Cozy"],
-    traits: ["All Ages", "Streamers", "Parent Friendly", "sleepy cats", "DnD", "travel", "sleeping"],
+    wildcardDescriptors: ["Meow", "Meow", "Meow"],
+    traits: ["All Ages", "Streamers", "Parent Friendly", "sleepy cats", "DnD", "travel", "catnaps"],
     memberCount: 94
   })], [e])
 }
