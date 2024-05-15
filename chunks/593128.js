@@ -268,7 +268,8 @@ t.default = e => {
                 title: O.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
                 description: O.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
                 handleUpdate: B,
-                interests: D.interests
+                interests: D.interests,
+                requiredGameId: null != G ? G : void 0
               });
             case L.ClanSetupSteps.INTERESTS:
               return (0, a.jsx)(g.default, {
