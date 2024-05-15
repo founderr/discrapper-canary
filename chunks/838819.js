@@ -18,8 +18,8 @@ var a = l("735250"),
   h = l("906732"),
   b = l("702486"),
   x = l("580747"),
-  v = l("605236"),
-  T = l("984370"),
+  T = l("605236"),
+  v = l("984370"),
   L = l("329067"),
   S = l("51855"),
   I = l("479446"),
@@ -74,10 +74,10 @@ function ei(e) {
     location: "CollectiblesShop"
   }), x = K.default;
   d && C ? x = Z.default : d && (x = Q.default);
-  let v = s.useCallback(e => t => {
+  let T = s.useCallback(e => t => {
       e.skuId === h && (c.current = t.current)
     }, [h, c]),
-    T = (e, t) => 0 === e.length ? null : (0, a.jsxs)("div", {
+    v = (e, t) => 0 === e.length ? null : (0, a.jsxs)("div", {
       children: [null != t ? (0, a.jsx)(f.Text, {
         className: n()(en.itemTypeTitle, {
           [en.itemTypeTitleForTallerCard]: d
@@ -90,7 +90,7 @@ function ei(e) {
       }), (0, a.jsx)("div", {
         className: n()(en.cardsContainer, d ? en.tallerShopCard : en.regularShopCard),
         children: e.map(e => (0, a.jsx)(x, {
-          onMount: v(e),
+          onMount: T(e),
           isPremiumUser: m,
           category: r,
           product: e,
@@ -98,8 +98,8 @@ function ei(e) {
         }, e.skuId))
       })]
     });
-  return b ? T(E) : (0, a.jsxs)(a.Fragment, {
-    children: [T(null !== (t = g[o.CollectiblesItemType.AVATAR_DECORATION]) && void 0 !== t ? t : [], er.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), T(null !== (l = g[o.CollectiblesItemType.PROFILE_EFFECT]) && void 0 !== l ? l : [], er.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE)]
+  return b ? v(E) : (0, a.jsxs)(a.Fragment, {
+    children: [v(null !== (t = g[o.CollectiblesItemType.AVATAR_DECORATION]) && void 0 !== t ? t : [], er.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), v(null !== (l = g[o.CollectiblesItemType.PROFILE_EFFECT]) && void 0 !== l ? l : [], er.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE)]
   })
 }
 
@@ -217,7 +217,7 @@ t.default = function(e) {
     dismissCollectiblesShopTabNewBadge: eg
   } = (0, J.default)();
   s.useEffect(() => {
-    eg(), !(0, v.isDismissibleContentDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK) && (0, v.markDismissibleContentAsDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK, {
+    eg(), !(0, T.isDismissibleContentDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK) && (0, T.markDismissibleContentAsDismissed)(c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK, {
       dismissAction: el.ContentDismissActionType.AUTO_DISMISS,
       forceTrack: !0
     })
@@ -248,7 +248,7 @@ t.default = function(e) {
     eb = (0, E.default)(),
     {
       containerRef: ex,
-      returnRef: ev
+      returnRef: eT
     } = function() {
       let e = s.useRef(null),
         t = s.useRef(null);
@@ -264,12 +264,12 @@ t.default = function(e) {
     children: [(0, a.jsxs)("div", {
       className: en.shop,
       ref: t ? ex : void 0,
-      children: [t ? null : (0, a.jsxs)(T.default, {
+      children: [t ? null : (0, a.jsxs)(v.default, {
         className: n()((0, B.getThemeClass)(eb), en.__invalid_headerBar),
         toolbar: !0,
         children: [(0, a.jsx)(R.default, {
           className: en.logo
-        }), (0, a.jsx)(T.default.Title, {
+        }), (0, a.jsx)(v.default.Title, {
           className: en.title,
           children: er.default.Messages.COLLECTIBLES_SHOP
         })]
@@ -297,7 +297,7 @@ t.default = function(e) {
             }),
             children: [t ? (0, a.jsx)(A.default, {
               title: er.default.Messages.COLLECTIBLES_SHOP,
-              ref: t ? ev : void 0
+              ref: t ? eT : void 0
             }) : null, K ? (0, a.jsx)(q.default, {}) : Z ? (0, a.jsx)(Y.default, {
               onRetry: eh
             }) : (0, a.jsx)("div", {

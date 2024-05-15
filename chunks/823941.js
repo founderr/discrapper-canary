@@ -25,8 +25,8 @@ var a = l("735250"),
   h = l("141011"),
   b = l("813083"),
   x = l("372654"),
-  v = l("994896"),
-  T = l("215023"),
+  T = l("994896"),
+  v = l("215023"),
   L = l("474936"),
   S = l("689938"),
   I = l("897246");
@@ -140,7 +140,7 @@ function y(e) {
       }),
       alt: i.name,
       style: {
-        maxWidth: null === (s = T.categoryBannerOverrides[i.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
+        maxWidth: null === (s = v.categoryBannerOverrides[i.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
       }
     }), (0, a.jsx)(b.default, {
       category: i,
@@ -159,9 +159,9 @@ function A(e) {
     index: c = 0
   } = e, {
     backgroundColors: d
-  } = (0, g.default)(s.styles), f = !!(null === (t = T.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
+  } = (0, g.default)(s.styles), f = !!(null === (t = v.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
     condensedBannersEnabled: p
-  } = (0, v.useCollectiblesCondensedBannersExperiment)({
+  } = (0, T.useCollectiblesCondensedBannersExperiment)({
     location: "Collectibles Shop Banner"
   });
   return p ? (0, a.jsx)(y, {
@@ -188,7 +188,7 @@ function A(e) {
       }),
       alt: s.name,
       style: {
-        maxWidth: null === (l = T.categoryBannerOverrides[s.skuId]) || void 0 === l ? void 0 : l.logoMaxWidth
+        maxWidth: null === (l = v.categoryBannerOverrides[s.skuId]) || void 0 === l ? void 0 : l.logoMaxWidth
       }
     }), (0, a.jsx)(u.Text, {
       className: n()(I.summary, {

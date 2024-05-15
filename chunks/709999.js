@@ -18,8 +18,8 @@ var a = l("735250"),
   h = l("125988"),
   b = l("333867"),
   x = l("197115"),
-  v = l("300284"),
-  T = l("876917"),
+  T = l("300284"),
+  v = l("876917"),
   L = l("642619"),
   S = l("210887"),
   I = l("594174"),
@@ -113,7 +113,7 @@ t.default = function(e) {
       e.removeEventListener("focusin", t)
     }
   }, []);
-  let eh = (0, v.default)({
+  let eh = (0, T.default)({
       analyticsLocations: q
     }),
     eb = s.useRef(null),
@@ -129,7 +129,7 @@ t.default = function(e) {
         analyticsLocations: q
       })
     },
-    ev = e => a => {
+    eT = e => a => {
       eb.current = a.currentTarget, (0, H.openCollectiblesShopProductDetailsModal)({
         product: t,
         category: l,
@@ -138,8 +138,8 @@ t.default = function(e) {
         returnRef: eb
       })
     },
-    eT = ev(p.default.COLLECTIBLES_SHOP_CARD),
-    eL = ev(p.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    ev = eT(p.default.COLLECTIBLES_SHOP_CARD),
+    eL = eT(p.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eS = () => (0, a.jsx)("div", {
       className: V.hoverUpsellContainer,
       children: (0, a.jsx)(x.default, {
@@ -218,7 +218,7 @@ t.default = function(e) {
       innerRef: Q,
       className: n()(V.shopCard, (0, i.match)(eE).with(B.ShopCardHoverAnimationVariant.CONTROL, () => V.shopCardDefaultAnimation).with(B.ShopCardHoverAnimationVariant.TRANSFORMATION, () => V.shopCardTransformationAnimation).otherwise(() => void 0)),
       onBlur: () => ee(!1),
-      onClick: eT,
+      onClick: ev,
       style: null != ei ? {
         backgroundColor: em ? "var(--background-floating)" : "var(--background-secondary)",
         borderColor: "var(--chat-border)",
@@ -238,7 +238,7 @@ t.default = function(e) {
         })
       }), (null == ea ? void 0 : ea.type) === o.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)("div", {
         className: V.profileEffectShopPreview,
-        children: (0, a.jsx)(T.default, {
+        children: (0, a.jsx)(v.default, {
           isHovering: et,
           profileEffectId: ea.id,
           isPurchased: null != ed,

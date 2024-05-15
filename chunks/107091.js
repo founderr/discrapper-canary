@@ -22,8 +22,8 @@ var a = l("735250"),
   h = l("642619"),
   b = l("598"),
   x = l("333867"),
-  v = l("329067"),
-  T = l("981631"),
+  T = l("329067"),
+  v = l("981631"),
   L = l("302800"),
   S = l("689938"),
   I = l("894775");
@@ -157,12 +157,12 @@ function O(e) {
       }), (0, a.jsx)(b.PaymentContextProvider, {
         loadId: R,
         stepConfigs: [],
-        applicationId: T.COLLECTIBLES_APPLICATION_ID,
+        applicationId: v.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
         isGift: !1,
         activeSubscription: null,
-        purchaseType: T.PurchaseTypes.ONE_TIME,
-        children: (0, a.jsx)(v.default, {
+        purchaseType: v.PurchaseTypes.ONE_TIME,
+        children: (0, a.jsx)(T.default, {
           ...Y
         })
       })]

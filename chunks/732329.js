@@ -18,8 +18,8 @@ var a = l("735250"),
   h = l("300284"),
   b = l("876917"),
   x = l("642619"),
-  v = l("594174"),
-  T = l("725808"),
+  T = l("594174"),
+  v = l("725808"),
   L = l("794358"),
   S = l("466111"),
   I = l("26290"),
@@ -84,7 +84,7 @@ t.default = function(e) {
     isGiftEasterEggEnabled: N
   } = e, {
     analyticsLocations: z
-  } = (0, C.default)(f.default.COLLECTIBLES_SHOP_CARD), K = s.useRef(null), Y = (0, d.default)(K), [Z, X] = s.useState(!1), q = Y || Z, Q = (0, o.useStateFromStores)([v.default], () => v.default.getCurrentUser()), [$] = t.items, {
+  } = (0, C.default)(f.default.COLLECTIBLES_SHOP_CARD), K = s.useRef(null), Y = (0, d.default)(K), [Z, X] = s.useState(!1), q = Y || Z, Q = (0, o.useStateFromStores)([T.default], () => T.default.getCurrentUser()), [$] = t.items, {
     avatarDecorationSrc: J,
     eventHandlers: ee,
     avatarPlaceholderSrc: et
@@ -258,7 +258,7 @@ t.default = function(e) {
         "aria-label": F.default.Messages.USER_SETTINGS_AVATAR
       }), null != ei ? (0, a.jsx)("div", {
         className: (null == $ ? void 0 : $.type) === i.CollectiblesItemType.PROFILE_EFFECT ? w.profileEffectCheckmarkWrapper : w.checkmarkWrapper,
-        children: (0, a.jsx)(T.default, {
+        children: (0, a.jsx)(v.default, {
           width: 38,
           height: 38,
           className: w.checkmark
