@@ -45,6 +45,7 @@ let m = (0, r.default)(e => {
         ...e,
         location: "PartyAvatars",
         userId: t.id,
+        guildId: l,
         analyticsParams: r,
         newAnalyticsLocations: [o.default.AVATAR]
       }),

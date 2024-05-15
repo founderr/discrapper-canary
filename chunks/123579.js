@@ -140,9 +140,10 @@ t.default = e => {
   }, []), l.useEffect(() => {
     (0, D.maybeFetchUserProfileForPopout)(ec, {
       withMutualGuilds: !ec.bot,
-      withMutualFriendsCount: !ec.bot
+      withMutualFriendsCount: !ec.bot,
+      channelId: n.id
     })
-  }, [ec]), l.useEffect(() => {
+  }, [ec, n.id]), l.useEffect(() => {
     null != eh && eg && (0, U.trackProfilePanelViewed)({
       displayProfile: eh,
       isMobile: eN,

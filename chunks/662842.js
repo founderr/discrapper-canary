@@ -281,10 +281,11 @@ function Y(e) {
         preload: () => (0, y.maybeFetchUserProfileForPopout)(e, {
           guildId: t.id
         }),
-        renderPopout: t => (0, l.jsx)(P.default, {
-          ...t,
+        renderPopout: n => (0, l.jsx)(P.default, {
+          ...n,
           location: "LiveChannelNotice",
           userId: e.id,
+          guildId: t.id,
           newAnalyticsLocations: [E.default.AVATAR]
         }),
         position: "right",

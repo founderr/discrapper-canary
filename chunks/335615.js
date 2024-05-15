@@ -93,7 +93,10 @@ class X extends l.Component {
       ...g
     } = this.props, S = null != E ? new Date(E) : null;
     return (0, a.jsx)(h.Popout, {
-      preload: () => (0, y.maybeFetchUserProfileForPopout)(s),
+      preload: () => (0, y.maybeFetchUserProfileForPopout)(s, {
+        channelId: c.id,
+        guildId: f
+      }),
       renderPopout: this.renderUserPopout,
       position: d.isMobile ? "window_center" : "left",
       spacing: 16,

@@ -60,7 +60,9 @@ function b(e) {
     })
   };
   return (0, a.jsx)(r.Popout, {
-    preload: () => (0, h.maybeFetchUserProfileForPopout)(t),
+    preload: () => (0, h.maybeFetchUserProfileForPopout)(t, {
+      channelId: l.id
+    }),
     renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
       location: "PrivateChannelRecipients",
@@ -120,7 +122,9 @@ function U(e) {
     botIconFirst: !0
   });
   return null != c ? (0, a.jsx)(r.Popout, {
-    preload: () => (0, h.maybeFetchUserProfileForPopout)(c.id, f),
+    preload: () => (0, h.maybeFetchUserProfileForPopout)(c.id, f, {
+      channelId: u.id
+    }),
     renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
       location: "PrivateChannelRecipients",
@@ -177,9 +181,10 @@ function F(e) {
   l.useEffect(() => {
     if (o)
       for (let e of m)(0, h.maybeFetchUserProfileForPopout)(e, {
-        dispatchWait: !0
+        dispatchWait: !0,
+        channelId: t.id
       })
-  }, [o, m]), l.useEffect(() => {
+  }, [o, m, t.id]), l.useEffect(() => {
     A.default.track(y.AnalyticEvents.MEMBER_LIST_VIEWED, {
       channel_id: t.id,
       channel_type: t.type,
