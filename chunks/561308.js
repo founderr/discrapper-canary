@@ -36,6 +36,9 @@ n.r(t), n.d(t, {
   getStreakCount: function() {
     return x
   },
+  getTrait: function() {
+    return E
+  },
   isEntryActive: function() {
     return C
   },

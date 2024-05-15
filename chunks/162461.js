@@ -7,6 +7,9 @@ n.r(t), n.d(t, {
     return o
   },
   isEligibleForListenedMediaInventory: function() {
+    return E
+  },
+  useIsEligibleForTopArtistInventory: function() {
     return _
   }
 });
@@ -115,8 +118,8 @@ let l = (0, i.createExperiment)({
   }),
   d = (0, i.createExperiment)({
     kind: "user",
-    id: "2024-04_content_inventory_listened_media",
-    label: "Content Inventory: LISTENED_MEDIA",
+    id: "2024-05_content_inventory_top_artist_cards",
+    label: "Content Inventory: TOP_ARTIST cards",
     defaultConfig: {
       enabled: !1
     },
@@ -132,7 +135,33 @@ let l = (0, i.createExperiment)({
 function _(e) {
   let {
     enabled: t
-  } = d.getCurrentConfig({
+  } = d.useExperiment({
+    location: e
+  }, {
+    autoTrackExposure: !0
+  });
+  return t
+}
+let c = (0, i.createExperiment)({
+  kind: "user",
+  id: "2024-04_content_inventory_listened_media",
+  label: "Content Inventory: LISTENED_MEDIA",
+  defaultConfig: {
+    enabled: !1
+  },
+  treatments: [{
+    id: 1,
+    label: "Enabled",
+    config: {
+      enabled: !0
+    }
+  }]
+});
+
+function E(e) {
+  let {
+    enabled: t
+  } = c.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !0

@@ -12,7 +12,7 @@ var a = n("470079"),
   o = n("520951"),
   u = n("897674"),
   d = n("206583");
-let c = new Set([l.ContentInventoryEntryType.PLAYED_GAME, l.ContentInventoryEntryType.WATCHED_MEDIA, l.ContentInventoryEntryType.TOP_GAME, l.ContentInventoryEntryType.LISTENED_SESSION]);
+let c = new Set([l.ContentInventoryEntryType.PLAYED_GAME, l.ContentInventoryEntryType.WATCHED_MEDIA, l.ContentInventoryEntryType.TOP_GAME, l.ContentInventoryEntryType.TOP_ARTIST, l.ContentInventoryEntryType.LISTENED_SESSION]);
 
 function f(e) {
   let t = (0, u.default)(d.ContentInventoryFeedKey.GLOBAL_FEED);

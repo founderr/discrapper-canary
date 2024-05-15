@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_CONTENT_ROW_HEIGHT: function() {
-    return x
+    return M
   },
   getContentRowHeight: function() {
-    return M
+    return R
   }
 }), n("47120");
 var a = n("735250"),
@@ -25,23 +25,24 @@ var a = n("735250"),
   g = n("227172"),
   S = n("551228"),
   _ = n("678869"),
-  T = n("555672"),
-  I = n("644548"),
-  A = n("335326"),
-  N = n("268010"),
-  v = n("206583");
-let x = 72;
+  T = n("278399"),
+  I = n("555672"),
+  A = n("644548"),
+  N = n("335326"),
+  v = n("268010"),
+  x = n("206583");
+let M = 72;
 
-function M(e) {
-  return (null == e ? void 0 : e.type) === h.MemberListRowTypes.CONTENT_INVENTORY ? x : 0
+function R(e) {
+  return (null == e ? void 0 : e.type) === h.MemberListRowTypes.CONTENT_INVENTORY ? M : 0
 }
-let R = i().throttle(e => {
-    (0, E.trackInteraction)(v.ContentInventoryInteractionTypes.CARD_HOVER, e)
+let L = i().throttle(e => {
+    (0, E.trackInteraction)(x.ContentInventoryInteractionTypes.CARD_HOVER, e)
   }, 5e3, {
     leading: !0,
     trailing: !1
   }),
-  L = e => {
+  y = e => {
     let {
       entry: t,
       ...n
@@ -53,11 +54,16 @@ let R = i().throttle(e => {
           entry: t
         });
       case o.ContentInventoryEntryType.WATCHED_MEDIA:
-        return (0, a.jsx)(A.default, {
+        return (0, a.jsx)(N.default, {
           ...n,
           entry: t
         });
       case o.ContentInventoryEntryType.TOP_GAME:
+        return (0, a.jsx)(I.default, {
+          ...n,
+          entry: t
+        });
+      case o.ContentInventoryEntryType.TOP_ARTIST:
         return (0, a.jsx)(T.default, {
           ...n,
           entry: t
@@ -71,7 +77,7 @@ let R = i().throttle(e => {
         return null
     }
   },
-  y = e => {
+  O = e => {
     let {
       entry: t,
       ...n
@@ -83,12 +89,12 @@ let R = i().throttle(e => {
           entry: t
         });
       case o.ContentInventoryEntryType.WATCHED_MEDIA:
-        return (0, a.jsx)(N.default, {
+        return (0, a.jsx)(v.default, {
           ...n,
           entry: t
         });
       case o.ContentInventoryEntryType.TOP_GAME:
-        return (0, a.jsx)(I.default, {
+        return (0, a.jsx)(A.default, {
           ...n,
           entry: t
         });
@@ -115,9 +121,9 @@ t.default = l.memo(e => {
     openOnHover: _
   } = (0, p.useMemberListHoverInteractions)({
     location: "MemberListContentRow"
-  }), T = l.useRef(!1), [I, A] = l.useState(!1), [N, x] = l.useState(!1), [M, O] = l.useState(!1), j = (0, u.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled);
+  }), T = l.useRef(!1), [I, A] = l.useState(!1), [N, v] = l.useState(!1), [M, R] = l.useState(!1), j = (0, u.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled);
   l.useEffect(() => {
-    I && j && O(!0)
+    I && j && R(!0)
   }, [I, j]);
   let P = l.useCallback(e => {
       g && (0, c.openContextMenuLazy)(e, async () => {
@@ -135,13 +141,13 @@ t.default = l.memo(e => {
     }, []),
     b = () => {
       T.current = !1, setTimeout(() => {
-        !T.current && (A(!1), O(j))
+        !T.current && (A(!1), R(j))
       }, 100)
     };
   return (0, a.jsx)("div", {
     onMouseEnter: () => {
       T.current = !0, setTimeout(() => {
-        T.current && A(!0), _ && (0, E.trackInteraction)(v.ContentInventoryInteractionTypes.CARD_CLICK, S)
+        T.current && A(!0), _ && (0, E.trackInteraction)(x.ContentInventoryInteractionTypes.CARD_CLICK, S)
       }, 100)
     },
     onMouseLeave: b,
@@ -150,7 +156,7 @@ t.default = l.memo(e => {
         let {
           closePopout: t
         } = e;
-        return (0, a.jsx)(y, {
+        return (0, a.jsx)(O, {
           closePopout: t,
           updatePopoutPosition: D,
           ...i
@@ -159,9 +165,9 @@ t.default = l.memo(e => {
       position: "left",
       shouldShow: _ ? I : N,
       positionKey: o,
-      onRequestOpen: () => (0, E.trackInteraction)(v.ContentInventoryInteractionTypes.CARD_CLICK, S),
+      onRequestOpen: () => (0, E.trackInteraction)(x.ContentInventoryInteractionTypes.CARD_CLICK, S),
       onRequestClose: () => {
-        M && b(), !_ && (A(!1), x(!1))
+        M && b(), !_ && (A(!1), v(!1))
       },
       spacing: 8,
       children: (e, t) => {
@@ -170,7 +176,7 @@ t.default = l.memo(e => {
         } = t;
         return (0, a.jsx)(d.Clickable, {
           onClick: () => {
-            _ && !I && A(!0), !_ && x(e => !e)
+            _ && !I && A(!0), !_ && v(e => !e)
           },
           children: (0, a.jsx)(d.FocusRing, {
             offset: {
@@ -183,10 +189,10 @@ t.default = l.memo(e => {
               ...e,
               ...C,
               onMouseEnter: () => {
-                R(S)
+                L(S)
               },
               onContextMenu: P,
-              children: (0, a.jsx)(L, {
+              children: (0, a.jsx)(y, {
                 ...i,
                 selected: n
               })
