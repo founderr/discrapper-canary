@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("237997"),
   s = n("998502"),
-  i = n("576027"),
-  l = n("13838"),
+  l = n("576027"),
+  i = n("13838"),
   r = n("812967"),
   o = n("350085"),
   u = n("910484"),
@@ -20,7 +20,7 @@ var a = n("237997"),
   g = n("662194"),
   I = n("188861");
 let T = {
-    ...i.crossPlatformCommands,
+    ...l.crossPlatformCommands,
     ...d.default,
     ...c.default,
     ...E.default,
@@ -34,7 +34,7 @@ let T = {
     ...m.default
   },
   A = {
-    ...l.default,
+    ...i.default,
     ...o.overlayEventHandlers,
     ...u.voiceSettingsEventHandlers
   };

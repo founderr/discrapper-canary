@@ -16,8 +16,8 @@ var a = n("442837"),
   c = n("601070"),
   f = n("430824"),
   h = n("496675"),
-  m = n("306680"),
-  p = n("979651"),
+  p = n("306680"),
+  m = n("979651"),
   C = n("26290"),
   g = n("968358"),
   E = n("790901"),
@@ -45,7 +45,7 @@ function R(e) {
     isNewChannel: P,
     muted: G,
     resolvedUnreadSetting: U
-  } = e, w = (0, a.useStateFromStores)([m.default], () => m.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), H = (0, a.useStateFromStores)([p.default], () => p.default.hasVideo(n.id)), V = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, S.default)({
+  } = e, w = (0, a.useStateFromStores)([p.default], () => p.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), H = (0, a.useStateFromStores)([m.default], () => m.default.hasVideo(n.id)), V = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, S.default)({
     channel: n,
     locked: F,
     video: H || V,

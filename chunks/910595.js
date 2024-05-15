@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("306680"),
   f = n("356842"),
   h = n("308570"),
-  m = n("434479"),
-  p = n("981631"),
+  p = n("434479"),
+  m = n("981631"),
   C = n("176505"),
   g = n("490897"),
   E = n("689938");
@@ -39,7 +39,7 @@ function _(e) {
   }, []);
   let S = (0, u.useCanSeeOnboardingHome)(t.id),
     I = (0, s.useStateFromStores)([c.default], () => c.default.hasUnread(t.id, g.ReadStateTypes.GUILD_HOME) && _, [t.id, _]);
-  return (0, l.jsx)(m.BasicChannelRow, {
+  return (0, l.jsx)(p.BasicChannelRow, {
     id: "home-tab-".concat(t.id),
     renderIcon: e => S ? (0, l.jsx)(h.default, {
       className: e
@@ -53,7 +53,7 @@ function _(e) {
       i.default.preload(t.id, C.StaticChannelRoute.GUILD_HOME)
     },
     onClick: function() {
-      (0, o.ackGuildHome)(t.id), (0, d.transitionTo)(p.Routes.CHANNEL(t.id, C.StaticChannelRoute.GUILD_HOME))
+      (0, o.ackGuildHome)(t.id), (0, d.transitionTo)(m.Routes.CHANNEL(t.id, C.StaticChannelRoute.GUILD_HOME))
     }
   })
 }

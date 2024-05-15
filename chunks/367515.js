@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  i = n("512722"),
-  l = n.n(i),
+  l = n("512722"),
+  i = n.n(l),
   r = n("399606"),
   o = n("481060"),
   u = n("594174"),
@@ -24,8 +24,8 @@ var a = n("735250"),
 function S(e) {
   let {
     user: t
-  } = e, i = (0, f.default)(), S = (0, E.useHasMaxConnections)(), g = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), I = s.useCallback(() => {
-    l()(void 0 !== g, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
+  } = e, l = (0, f.default)(), S = (0, E.useHasMaxConnections)(), g = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), I = s.useCallback(() => {
+    i()(void 0 !== g, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("59716")]).then(n.bind(n, "275370"));
@@ -36,7 +36,7 @@ function S(e) {
       })
     })
   }, [g, t]), T = s.useCallback(() => {
-    l()(void 0 !== g, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
+    i()(void 0 !== g, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("958")]).then(n.bind(n, "4526"));
@@ -47,7 +47,7 @@ function S(e) {
       })
     })
   }, [g, t]), A = s.useCallback(() => {
-    l()(void 0 !== g, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
+    i()(void 0 !== g, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("69015")]).then(n.bind(n, "247265"));
@@ -68,7 +68,7 @@ function S(e) {
       })
     }), (0, a.jsx)("div", {
       className: p.actions,
-      children: i ? (0, a.jsx)(h.default, {
+      children: l ? (0, a.jsx)(h.default, {
         icon: c.default,
         className: p.__invalid_actionDeny,
         tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,

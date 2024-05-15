@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("442837"),
   o = n("481060"),
   u = n("758059"),
@@ -34,7 +34,7 @@ t.default = function(e) {
     sectionFilter: t,
     titleId: n
   } = e, {
-    analyticsLocations: i
+    analyticsLocations: l
   } = (0, h.default)(E.default.FRIENDS_LIST), {
     rows: x,
     section: D
@@ -66,11 +66,11 @@ t.default = function(e) {
     V = F.filter(e => e.type === M.RelationshipTypes.PENDING_INCOMING).length,
     Y = t === M.FriendsSections.PENDING && V > 0 && j && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
   return (0, a.jsx)(h.AnalyticsLocationProvider, {
-    value: i,
+    value: l,
     children: (0, a.jsxs)(c.default, {
       section: M.AnalyticsSections.FRIENDS_LIST,
       children: [(0, a.jsx)(S.default, {
-        className: l()(P.searchBar, H ? P.searchEmptyState : null),
+        className: i()(P.searchBar, H ? P.searchEmptyState : null),
         query: G[t],
         onChange: w,
         onClear: B,

@@ -16,8 +16,8 @@ var a = n("120356"),
   c = n("867176"),
   f = n("619915"),
   h = n("201895"),
-  m = n("873696"),
-  p = n("66999"),
+  p = n("873696"),
+  m = n("66999"),
   C = n("22082"),
   g = n("665906"),
   E = n("592125"),
@@ -71,7 +71,7 @@ class b extends L.default {
       mentionCount: d,
       connectChannelDropTarget: c,
       connectChannelDragSource: f,
-      connectDragPreview: p,
+      connectDragPreview: m,
       canReorderChannel: C,
       isSubscriptionGated: g,
       isFavoriteSuggestion: E,
@@ -81,7 +81,7 @@ class b extends L.default {
       resolvedUnreadSetting: N,
       withGuildIcon: T,
       enableActivities: A
-    } = this.props, L = A && null != I && I.length > 0, v = (0, m.getChannelSubtitle)(_), R = (0, l.jsx)("li", {
+    } = this.props, L = A && null != I && I.length > 0, v = (0, p.getChannelSubtitle)(_), R = (0, l.jsx)("li", {
       className: s()(this.getClassName(), {
         [O.disabled]: this.isDisabled(),
         [O.selected]: n
@@ -108,7 +108,7 @@ class b extends L.default {
           subtitleColor: null == v ? void 0 : v.color,
           onMouseDown: this.handleMouseDown,
           onContextMenu: this.handleContextMenu,
-          connectDragPreview: C ? p : null,
+          connectDragPreview: C ? m : null,
           isFavoriteSuggestion: E,
           channelTypeOverride: S ? M.ChannelTypes.GUILD_TEXT : void 0,
           resolvedUnreadSetting: N,
@@ -239,7 +239,7 @@ function P(e) {
     unread: I.default.hasUnread(t.id),
     ackMessageId: I.default.ackMessageId(t.id),
     mentionCount: I.default.getMentionCount(t.id)
-  })), m = (0, i.useStateFromStores)([N.default], () => N.default.resolveUnreadSetting(t)), _ = (0, i.useStateFromStoresObject)([E.default, S.default], () => {
+  })), p = (0, i.useStateFromStores)([N.default], () => N.default.resolveUnreadSetting(t)), _ = (0, i.useStateFromStoresObject)([E.default, S.default], () => {
     let e = E.default.getChannel(t.parent_id);
     return {
       canManageChannel: S.default.can(M.Permissions.MANAGE_CHANNELS, t),
@@ -248,7 +248,7 @@ function P(e) {
   }), A = (0, i.useStateFromStores)([C.default], () => C.default.shouldIndicateNewChannel(n.id, t.id)), {
     needSubscriptionToAccess: L,
     isSubscriptionGated: x
-  } = (0, p.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), O = (0, i.useStateFromStores)([T.default], () => {
+  } = (0, m.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), O = (0, i.useStateFromStores)([T.default], () => {
     let e = T.default.getCurrentUser();
     return null != e && (!t.isNSFW() || e.nsfwAllowed)
   }, [t]), D = (0, c.useIsActivitiesInTextEnabled)(t.id, !1, "webGuildTextChannel"), b = (0, v.default)({
@@ -260,7 +260,7 @@ function P(e) {
     isNewChannel: A,
     muted: r,
     enableActivities: D,
-    resolvedUnreadSetting: m
+    resolvedUnreadSetting: p
   }), P = (0, f.default)(t);
   return (0, l.jsx)(j, {
     ...h,
@@ -275,7 +275,7 @@ function P(e) {
     canShowThreadPreviewForUser: O,
     channelInfo: b,
     embeddedApps: P,
-    resolvedUnreadSetting: m,
+    resolvedUnreadSetting: p,
     hasChannelInfo: null != b,
     enableActivities: D
   })

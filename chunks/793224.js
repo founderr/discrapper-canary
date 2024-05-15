@@ -16,8 +16,8 @@ var a = n("442837"),
   c = n("757454"),
   f = n("286328"),
   h = n("493355"),
-  m = n("134598"),
-  p = n("243778"),
+  p = n("134598"),
+  m = n("243778"),
   C = n("594190"),
   g = n("569545"),
   E = n("989941"),
@@ -60,7 +60,7 @@ function M() {
     P = () => {
       if (y) {
         let l = D.find(e => e.ownerId === t);
-        null == l ? (0, m.openBroadcastingPrivacySettingsModal)(R.default.Messages.START_BROADCASTING, R.default.Messages.START_BROADCASTING_CTA, () => {
+        null == l ? (0, p.openBroadcastingPrivacySettingsModal)(R.default.Messages.START_BROADCASTING, R.default.Messages.START_BROADCASTING_CTA, () => {
           (0, r.createBroadcastChannelOrStartStream)({
             pid: null == n ? void 0 : n.pid,
             channelId: e
@@ -82,7 +82,7 @@ function M() {
     U = e => (0, l.jsx)(f.default, {
       markAsDismissed: e
     });
-  return (0, l.jsx)(p.default, {
+  return (0, l.jsx)(m.default, {
     contentTypes: b,
     bypassAutoDismiss: !0,
     children: e => {

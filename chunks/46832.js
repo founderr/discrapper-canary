@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("836560"),
   s = n("317381"),
-  i = n("626135"),
-  l = n("585483"),
+  l = n("626135"),
+  i = n("585483"),
   r = n("70956"),
   o = n("996106"),
   u = n("631467"),
@@ -33,23 +33,23 @@ class C extends a.EventEmitter {
       console.warn("[PostMessageTransport] Protocol error: event data should be an Array!");
       return
     }
-    let [s, i] = n;
+    let [s, l] = n;
     switch (s) {
       case u.default.HANDSHAKE:
         if (null != e) throw new o.default({
           closeCode: d.RPCCloseCodes.CLOSE_UNSUPPORTED
         }, "Already connected");
-        return this.handleHandshake(t, i, a);
+        return this.handleHandshake(t, l, a);
       case u.default.FRAME:
         if (null == e) throw new o.default({
           closeCode: d.RPCCloseCodes.CLOSE_UNSUPPORTED
         }, "Not connected");
-        return this.handleFrame(t, e, i);
+        return this.handleFrame(t, e, l);
       case u.default.CLOSE:
         if (null == e) throw new o.default({
           closeCode: d.RPCCloseCodes.CLOSE_UNSUPPORTED
         }, "Not connected");
-        return this.handleClose(e, i);
+        return this.handleClose(e, l);
       default:
         throw new o.default({
           closeCode: d.RPCCloseCodes.CLOSE_UNSUPPORTED
@@ -62,11 +62,11 @@ class C extends a.EventEmitter {
       var n, a;
       let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
       u.emit("disconnect", e, s ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : "Unknown");
-      let [i] = null !== (a = Array.from(E.entries()).find(t => {
+      let [l] = null !== (a = Array.from(E.entries()).find(t => {
         let [n, a] = t;
         return a === e
       })) && void 0 !== a ? a : [null, null];
-      null != i && E.delete(i)
+      null != l && E.delete(l)
     }), c(this, "handleIFrameMount", e => {
       let {
         id: t
@@ -74,7 +74,7 @@ class C extends a.EventEmitter {
       h.add(t), this.handshakeFailureTimeoutId = setTimeout(() => {
         Array.from(s.default.getSelfEmbeddedActivities().entries()).forEach(e => {
           let [t, n] = e;
-          i.default.track(d.AnalyticEvents.ACTIVITY_HANDSHAKE_TIMED_OUT, {
+          l.default.track(d.AnalyticEvents.ACTIVITY_HANDSHAKE_TIMED_OUT, {
             application_id: t,
             channel_id: n.channelId,
             guild_id: n.guildId,
@@ -127,29 +127,29 @@ class C extends a.EventEmitter {
     }), c(this, "handleHandshake", async (e, t, a) => {
       let s;
       null != this.handshakeFailureTimeoutId && clearTimeout(this.handshakeFailureTimeoutId);
-      let i = (await n.e("56268").then(n.t.bind(n, "826753", 23))).default;
+      let l = (await n.e("56268").then(n.t.bind(n, "826753", 23))).default;
       try {
-        i.assert(t, i.object().required().keys({
-          v: i.number().min(1).max(1).required(),
-          encoding: i.string().equal("json").optional(),
-          client_id: i.string().required(),
-          frame_id: i.string().required()
+        l.assert(t, l.object().required().keys({
+          v: l.number().min(1).max(1).required(),
+          encoding: l.string().equal("json").optional(),
+          client_id: l.string().required(),
+          frame_id: l.string().required()
         }))
       } catch (e) {
         throw new o.default({
           closeCode: d.RPCCloseCodes.CLOSE_UNSUPPORTED
         }, e.message)
       }
-      let l = t.frame_id;
-      if (!h.has(l)) throw this.logger.error("Unrecognized frame ID ".concat(l)), new o.default({
+      let i = t.frame_id;
+      if (!h.has(i)) throw this.logger.error("Unrecognized frame ID ".concat(i)), new o.default({
         closeCode: d.RPCCloseCodes.CLOSE_UNSUPPORTED
-      }, "Unrecognized frame ID ".concat(l));
+      }, "Unrecognized frame ID ".concat(i));
       try {
         var r;
         s = this.createPostMessageProxySocket({
           origin: e,
           postMessageToRPCClient: a,
-          frameId: l,
+          frameId: i,
           version: Number(t.v),
           logger: this.logger,
           postClose: _,
@@ -160,10 +160,10 @@ class C extends a.EventEmitter {
       }
       this.logger.info("Socket Opened: ".concat(s.id));
       try {
-        if (await this.validateSocketClient(s, e, t.client_id), !h.has(l)) throw this.logger.error("Frame ID ".concat(l, " no longer exists")), new o.default({
+        if (await this.validateSocketClient(s, e, t.client_id), !h.has(i)) throw this.logger.error("Frame ID ".concat(i, " no longer exists")), new o.default({
           closeCode: d.RPCCloseCodes.CLOSE_UNSUPPORTED
-        }, "Unrecognized frame ID ".concat(l));
-        E.set(e, s), h.delete(l), this.emit("connect", s), this.logger.info("Socket Validated: ".concat(s.id))
+        }, "Unrecognized frame ID ".concat(i));
+        E.set(e, s), h.delete(i), this.emit("connect", s), this.logger.info("Socket Validated: ".concat(s.id))
       } catch (e) {
         throw this.logger.info("Socket Closed: ".concat(s.id, ", ").concat(e.message)), e
       }
@@ -180,6 +180,6 @@ class C extends a.EventEmitter {
         }, e.message)
       }
       this.disconnectSocket(e, t)
-    }), l.ComponentDispatch.subscribe(d.ComponentActions.IFRAME_MOUNT, this.handleIFrameMount), l.ComponentDispatch.subscribe(d.ComponentActions.IFRAME_UNMOUNT, this.handleIFrameUnmount), this.validateSocketClient = e, this.logger = t, this.createPostMessageProxySocket = a, this.onFrameHandled = r
+    }), i.ComponentDispatch.subscribe(d.ComponentActions.IFRAME_MOUNT, this.handleIFrameMount), i.ComponentDispatch.subscribe(d.ComponentActions.IFRAME_UNMOUNT, this.handleIFrameUnmount), this.validateSocketClient = e, this.logger = t, this.createPostMessageProxySocket = a, this.onFrameHandled = r
   }
 }

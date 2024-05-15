@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  i = n("481060"),
-  l = n("626135"),
+  l = n("481060"),
+  i = n("626135"),
   r = n("144145"),
   o = n("555927"),
   u = n("738762"),
@@ -29,20 +29,20 @@ function C(e) {
       var t, n;
       return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === h.ApplicationTypes.GAME
     }).map(e => e.game.name);
-    l.default.track(E.AnalyticEvents.OPEN_POPOUT, {
+    i.default.track(E.AnalyticEvents.OPEN_POPOUT, {
       type: "Now Playing Card Popout",
       games_detected: e
     })
-  }, []), (0, a.jsxs)(i.Menu, {
+  }, []), (0, a.jsxs)(l.Menu, {
     navId: "now-playing-menu",
     onClose: n,
     "aria-label": _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onSelect: C,
-    children: [m, (0, a.jsxs)(i.MenuGroup, {
+    children: [m, (0, a.jsxs)(l.MenuGroup, {
       children: [p, S]
-    }), (0, a.jsx)(i.MenuGroup, {
+    }), (0, a.jsx)(l.MenuGroup, {
       children: g
-    }), (0, a.jsx)(i.MenuGroup, {
+    }), (0, a.jsx)(l.MenuGroup, {
       children: I
     }), T]
   })

@@ -6,11 +6,11 @@ n.r(t), n.d(t, {
 });
 var a = n("497505"),
   s = n("977156"),
-  i = n("909389"),
-  l = n("941348"),
+  l = n("909389"),
+  i = n("941348"),
   r = n("743294");
 let o = {
-    component: i.default,
+    component: l.default,
     getCollapsedHeight: () => 40,
     getPreEnrollmentExpandedHeight: () => 240,
     getPostEnrollmentBackgroundImage: e => "linear-gradient(90deg, ".concat(e.config.colors.primary, ", ").concat(e.config.colors.secondary, ")"),
@@ -22,7 +22,7 @@ let o = {
     shouldExpandOnQuestComplete: e => !0
   },
   u = {
-    component: l.default,
+    component: i.default,
     getCollapsedHeight: e => {
       var t;
       return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null ? 66 : 40
@@ -34,9 +34,9 @@ let o = {
     shouldExpandOnQuestComplete: e => !1
   },
   d = (e, t, n) => {
-    var i;
-    let l = (null === (i = e.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null,
-      r = !l && t === s.QuestBarExperimentVariants.V2 || l && n === s.QuestBarExperimentVariants.V2,
+    var l;
+    let i = (null === (l = e.userStatus) || void 0 === l ? void 0 : l.enrolledAt) != null,
+      r = !i && t === s.QuestBarExperimentVariants.V2 || i && n === s.QuestBarExperimentVariants.V2,
       d = r ? u : o;
     return {
       component: d.component,

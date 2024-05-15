@@ -22,12 +22,12 @@ t.default = e => {
     handleUpdate: t,
     interests: a,
     error: i
-  } = e, [p, C] = r.useState(""), _ = (0, o.useStateFromStores)([c.default], () => c.default.getId()), x = r.useMemo(() => (0, u.stableSortSet)(m.SUGGESTED_TRAITS_SET, _), [_]), g = r.useMemo(() => Array.from(a), [a]), I = r.useMemo(() => g.filter(T), [g]), v = r.useMemo(() => [...x, ...I], [I, x]), N = r.useMemo(() => g.filter(e => !m.ALL_TRAITS_SET.has(e) && !m.LANGUAGES_SET.has(e)), [g]), A = e => {
+  } = e, [p, C] = r.useState(""), _ = (0, o.useStateFromStores)([c.default], () => c.default.getId()), x = r.useMemo(() => (0, u.stableSortSet)(m.SUGGESTED_TRAITS_SET, _), [_]), g = r.useMemo(() => Array.from(a), [a]), I = r.useMemo(() => g.filter(T), [g]), v = r.useMemo(() => [...x, ...I], [I, x]), N = r.useMemo(() => g.filter(e => !m.ALL_TRAITS_SET.has(e) && !m.LANGUAGES_SET.has(e)), [g]), S = e => {
     let n = new Set(a);
     n.delete(e), t({
       interests: n
     })
-  }, S = r.useCallback(e => {
+  }, A = r.useCallback(e => {
     if (a.size === m.MAX_NUM_INTERESTS) return;
     let n = null != e ? e : p.trim();
     if (0 === n.length) return;
@@ -39,9 +39,9 @@ t.default = e => {
     switch (e.key) {
       case "Enter":
       case "Tab":
-        e.preventDefault(), e.stopPropagation(), S()
+        e.preventDefault(), e.stopPropagation(), A()
     }
-  }, [S]);
+  }, [A]);
   return (0, n.jsxs)("div", {
     className: E.slideContent,
     children: [(0, n.jsx)(s.Heading, {
@@ -73,7 +73,7 @@ t.default = e => {
             maxLength: m.MAX_INTEREST_LENGTH,
             disabled: a.size === m.MAX_NUM_INTERESTS
           }), p.length > 0 && (0, n.jsx)(s.Clickable, {
-            onClick: () => S(p.trim()),
+            onClick: () => A(p.trim()),
             className: l()(E.plusIcon, E.clickable),
             children: (0, n.jsx)(d.default, {
               className: E.icon
@@ -97,7 +97,7 @@ t.default = e => {
               className: l()(E.interestsTag, E.selectableOption, {
                 [E.selectedOption]: t
               }),
-              onClick: () => t ? A(e) : S(e),
+              onClick: () => t ? S(e) : A(e),
               children: (0, n.jsx)(s.Text, {
                 variant: "text-xs/medium",
                 color: "none",

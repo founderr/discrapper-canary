@@ -11,8 +11,8 @@ var l = n("735250"),
   c = n("706619"),
   f = n("695346"),
   h = n("131951"),
-  m = n("757206"),
-  p = n("441957"),
+  p = n("757206"),
+  m = n("441957"),
   C = n("630641"),
   g = n("626135"),
   E = n("572004"),
@@ -150,7 +150,7 @@ t.default = function(e) {
           children: [(0, l.jsxs)(u.Anchor, {
             className: r()(A.debugButton, A.textWithIcon),
             onClick: t,
-            children: [T.default.Messages.DEBUG, (0, l.jsx)(p.default, {
+            children: [T.default.Messages.DEBUG, (0, l.jsx)(m.default, {
               className: A.__invalid_icon,
               width: 12,
               height: 12
@@ -159,7 +159,7 @@ t.default = function(e) {
             className: r()(A.copyStatsButton, A.textWithIcon),
             onClick: L,
             title: "Copy to clipboard",
-            children: [T.default.Messages.COPY_STATS, (0, l.jsx)(m.default, {
+            children: [T.default.Messages.COPY_STATS, (0, l.jsx)(p.default, {
               className: A.__invalid_icon,
               width: 12,
               height: 12

@@ -14,8 +14,8 @@ var i = n("442837"),
   c = n("607744"),
   f = n("594174"),
   h = n("153124"),
-  m = n("981631"),
-  p = n("815660"),
+  p = n("981631"),
+  m = n("815660"),
   C = n("689938"),
   g = n("227960");
 (l = a || (a = {}))[l.VOICE = 0] = "VOICE";
@@ -32,9 +32,9 @@ t.default = e => {
     newMember: T
   } = (0, i.useStateFromStores)([c.default], () => c.default.getCheck(l), [l]), A = 0 === t ? C.default.Messages.GUILD_VERIFICATION_VOICE_HEADER : null, L = null, v = null;
   return (0 === t && (_ ? (L = C.default.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED, v = C.default.Messages.CLAIM_ACCOUNT) : I ? (L = C.default.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED, v = C.default.Messages.VERIFY_PHONE) : S ? (L = C.default.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED, v = C.default.Messages.RESEND_VERIFICATION_EMAIL) : T ? (L = C.default.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({
-    min: m.VerificationCriteria.MEMBER_AGE
+    min: p.VerificationCriteria.MEMBER_AGE
   }), v = C.default.Messages.OKAY) : N && (L = C.default.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({
-    min: m.VerificationCriteria.ACCOUNT_AGE
+    min: p.VerificationCriteria.ACCOUNT_AGE
   }), v = C.default.Messages.OKAY)), null == A || null == L) ? null : (0, s.jsxs)(r.Dialog, {
     className: g.container,
     "aria-labelledby": E,
@@ -65,7 +65,7 @@ t.default = e => {
                 ...t
               })
             }, {
-              modalKey: p.PHONE_VERIFICATION_MODAL_KEY
+              modalKey: m.PHONE_VERIFICATION_MODAL_KEY
             }) : S && (o.default.verifyResend(), (0, r.openModal)(e => {
               var t;
               return (0, s.jsx)(r.ConfirmModal, {

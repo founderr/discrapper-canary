@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("570140"),
   s = n("457330"),
-  i = n("726542"),
-  l = n("231757"),
+  l = n("726542"),
+  i = n("231757"),
   r = n("553795"),
   o = n("585483"),
   u = n("996106"),
@@ -33,7 +33,7 @@ t.default = {
       } = e;
       (0, d.validatePostMessageTransport)(t.transport);
       let f = (0, d.validateApplication)(t.application),
-        h = i.default.get(n);
+        h = l.default.get(n);
       if (null == h) throw new u.default({
         errorCode: _.RPCErrors.INVALID_PROVIDER
       }, 'Platform not found for provider "'.concat(n, '"'));
@@ -45,8 +45,8 @@ t.default = {
         errorCode: _.RPCErrors.UNAUTHORIZED_FOR_APPLICATION
       }, "Command not available for this application");
       return new Promise(async (e, t) => {
-        let i = r.default.getAccount(null, n);
-        if (null == i) {
+        let l = r.default.getAccount(null, n);
+        if (null == l) {
           function d(t) {
             var n;
             if (null == h) return;
@@ -65,13 +65,13 @@ t.default = {
           function C() {
             a.default.unsubscribe("USER_CONNECTIONS_UPDATE", d), o.ComponentDispatch.unsubscribe(E.ComponentActions.CONNECTIONS_CALLBACK_ERROR, f)
           }
-          a.default.subscribe("USER_CONNECTIONS_UPDATE", d), o.ComponentDispatch.subscribe(E.ComponentActions.CONNECTIONS_CALLBACK_ERROR, f), (0, l.default)({
+          a.default.subscribe("USER_CONNECTIONS_UPDATE", d), o.ComponentDispatch.subscribe(E.ComponentActions.CONNECTIONS_CALLBACK_ERROR, f), (0, i.default)({
             platformType: h.type,
             location: E.AnalyticsLocations.ACTIVITY_RPC,
             successRedirect: c
           })
         } else try {
-          let t = await s.default.refreshAccessToken(h.type, i.id);
+          let t = await s.default.refreshAccessToken(h.type, l.id);
           if (null == t) throw new u.default({
             errorCode: _.RPCErrors.OAUTH2_ERROR
           }, "Refreshing access token did not return a new access token");

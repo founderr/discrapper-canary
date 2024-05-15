@@ -2,8 +2,8 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  i = n("481060"),
-  l = n("970606"),
+  l = n("481060"),
+  i = n("970606"),
   r = n("346656"),
   o = n("689938"),
   u = n("72226"),
@@ -14,7 +14,7 @@ t.default = function(e) {
     guild: n = null
   } = e, c = null == n ? void 0 : n.id;
   return s.useEffect(() => {
-    null != c && (0, l.trackMemberVerificationApplicationViewed)(c)
+    null != c && (0, i.trackMemberVerificationApplicationViewed)(c)
   }, [c]), (0, a.jsxs)("div", {
     className: u.confirmation,
     children: [(0, a.jsxs)("div", {
@@ -26,24 +26,24 @@ t.default = function(e) {
       }) : (0, a.jsx)("img", {
         alt: o.default.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_ICON,
         src: d
-      }), (0, a.jsx)(i.Heading, {
+      }), (0, a.jsx)(l.Heading, {
         variant: "heading-xl/semibold",
         className: u.header,
         children: (null == n ? void 0 : n.name) != null ? o.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE_WITH_GUILD_NAME.format({
           guildName: n.name
         }) : o.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE
-      }), (0, a.jsx)(i.Text, {
+      }), (0, a.jsx)(l.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         children: o.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_SUBTITLE
       })]
     }), (0, a.jsx)("div", {
       className: u.confirmationButtonColumn,
-      children: (0, a.jsx)(i.Button, {
+      children: (0, a.jsx)(l.Button, {
         onClick: t,
-        look: i.Button.Looks.LINK,
-        color: i.Button.Colors.LINK,
-        size: i.Button.Sizes.SMALL,
+        look: l.Button.Looks.LINK,
+        color: l.Button.Colors.LINK,
+        size: l.Button.Sizes.SMALL,
         children: o.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION
       })
     })]

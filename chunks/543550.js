@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("143927"),
   o = n("597312"),
   u = n("393238"),
@@ -38,7 +38,7 @@ function T() {
   let e = (0, h.useClanDiscoveryUIStore)(e => e.game, r.default),
     t = (0, h.useClanDiscoveryUIStore)(e => e.userUpsellScreen, r.default),
     n = (0, h.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, r.default),
-    i = s.useCallback(() => {
+    l = s.useCallback(() => {
       (0, f.trackClanUserInviteClicked)({
         location: c.default.CLAN_DISCOVERY
       }), n(h.ClanDiscoveryUserScreens.USER_ONBOARDING)
@@ -61,14 +61,14 @@ function T() {
           className: g.upsellScroller,
           fade: !0,
           children: (0, a.jsxs)("div", {
-            className: l()(E, g.userUpsell),
+            className: i()(E, g.userUpsell),
             children: [(0, a.jsx)("div", {
               className: g.backgroundImageBlur
             }), (0, a.jsxs)("div", {
               className: g.backgroundImageContent,
               children: [(0, a.jsx)(m.ClanDiscoveryUserUpsellBackgroundRings, {}), (0, a.jsx)(m.default, {
                 selectedGame: e,
-                onClick: i
+                onClick: l
               })]
             })]
           })
@@ -78,7 +78,7 @@ function T() {
       return (0, a.jsx)("div", {
         className: g.container,
         children: (0, a.jsxs)("div", {
-          className: l()(_, g.userOnboarding),
+          className: i()(_, g.userOnboarding),
           children: [(0, a.jsx)("div", {
             className: g.backgroundImageBlur
           }), (0, a.jsx)("div", {
@@ -99,14 +99,14 @@ function A() {
       location: "ClanDiscoveryAdminContainer"
     }),
     n = t.length > 0,
-    i = s.useMemo(() => t.filter(e => !e.hasFeature(S.GuildFeatures.CLAN)), [t]),
+    l = s.useMemo(() => t.filter(e => !e.hasFeature(S.GuildFeatures.CLAN)), [t]),
     {
       ref: c,
       width: f
     } = (0, u.default)();
   s.useEffect(() => {
-    n ? 0 === i.length && n && (0, h.setClanDiscoveryMode)(h.ClanDiscoveryMode.ADMIN_UPSELL) : (0, h.setClanDiscoveryMode)(h.ClanDiscoveryMode.GET_STARTED)
-  }, [i.length, n]);
+    n ? 0 === l.length && n && (0, h.setClanDiscoveryMode)(h.ClanDiscoveryMode.ADMIN_UPSELL) : (0, h.setClanDiscoveryMode)(h.ClanDiscoveryMode.GET_STARTED)
+  }, [l.length, n]);
   let C = (0, d.default)(),
     m = s.useMemo(() => I(e, C), [e, C]);
   return 0 === t.length ? null : (0, a.jsx)("div", {
@@ -116,14 +116,14 @@ function A() {
       className: g.upsellScroller,
       fade: !0,
       children: [(0, a.jsxs)("div", {
-        className: l()(m, g.adminUpsell),
+        className: i()(m, g.adminUpsell),
         children: [(0, a.jsx)("div", {
           className: g.backgroundImageBlur
         }), (0, a.jsx)("div", {
           className: g.backgroundImageContent,
           children: (0, a.jsx)(_.default, {
             selectedGame: e,
-            eligibleGuilds: i,
+            eligibleGuilds: l,
             eligibleGuildsIncludingConverted: t
           })
         })]

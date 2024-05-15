@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("789020");
 var a = n("544891"),
   s = n("115130"),
-  i = n("287545"),
-  l = n("812206"),
+  l = n("287545"),
+  i = n("812206"),
   r = n("695103"),
   o = n("626135"),
   u = n("630388"),
@@ -35,11 +35,11 @@ t.default = {
       if (null == f) throw new d.default({
         errorCode: _.RPCErrors.INVALID_COMMAND
       }, "Invalid channel");
-      let C = l.default.getApplication(r);
+      let C = i.default.getApplication(r);
       if (!(0, u.hasFlag)(null !== (t = null == C ? void 0 : C.flags) && void 0 !== t ? t : 0, _.ApplicationFlags.EMBEDDED_FIRST_PARTY)) throw new d.default({
         errorCode: _.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
-      let m = (0, i.getActiveAnalyticsSessionIDs)(r),
+      let m = (0, l.getActiveAnalyticsSessionIDs)(r),
         p = {
           activity_application_id: r,
           activity_channel_type: f.type,

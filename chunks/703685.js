@@ -128,13 +128,13 @@ let v = r.memo(function(e) {
     if (null == e) return null;
     if ("string" == typeof e) return (0, o.isValidHex)(e) ? (0, o.hex2int)(e) : null;
     return e
-  }(t), N = null != v ? v : 0, A = (0, o.int2hex)(N), S = (0, o.int2hslRaw)(N), [R, M] = r.useState({
+  }(t), N = null != v ? v : 0, S = (0, o.int2hex)(N), A = (0, o.int2hslRaw)(N), [R, M] = r.useState({
     current: N,
     pending: {
-      hex: A,
-      hsl: S
+      hex: S,
+      hsl: A
     },
-    input: A
+    input: S
   });
   r.useEffect(() => {
     if (null == v || v === R.current) return;

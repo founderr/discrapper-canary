@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("120356"),
-  i = n.n(s),
-  l = n("481060"),
+  l = n.n(s),
+  i = n("481060"),
   r = n("189732"),
   o = n("611273"),
   u = n("398008");
@@ -14,12 +14,12 @@ t.default = e => {
     className: n
   } = e;
   return (0, a.jsxs)("div", {
-    className: i()(n, r.empty),
+    className: l()(n, r.empty),
     children: [(0, a.jsx)("img", {
       className: r.image,
       src: u,
       alt: ""
-    }), (0, a.jsx)(l.Text, {
+    }), (0, a.jsx)(i.Text, {
       className: o.marginTop8,
       variant: "text-sm/medium",
       color: "text-muted",

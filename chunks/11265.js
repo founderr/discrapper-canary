@@ -24,10 +24,10 @@ t.default = r.memo(function(e) {
     ref: v,
     height: N = 0
   } = (0, d.default)(), {
-    ref: A,
-    height: S = 0
+    ref: S,
+    height: A = 0
   } = (0, d.default)(), [R, M] = r.useState(i), L = (0, s.useSpring)({
-    height: R ? S + N : N,
+    height: R ? A + N : N,
     immediate: _ || C || T,
     config: {
       ...s.config.stiff,
@@ -66,7 +66,7 @@ t.default = r.memo(function(e) {
         "aria-label": f.default.Messages.EXPAND,
         children: t
       }), (0, n.jsx)("div", {
-        ref: A,
+        ref: S,
         children: a
       })]
     })

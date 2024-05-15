@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   s = n("470079"),
-  i = n("873546"),
-  l = n("442837"),
+  l = n("873546"),
+  i = n("442837"),
   r = n("481060"),
   o = n("355467"),
   u = n("270237"),
@@ -33,20 +33,20 @@ var a = n("735250"),
 function L(e) {
   let {
     guildId: t
-  } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, l.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), y = (0, S.default)(t), P = (0, l.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), x = (0, p.useGroupListingsFetchContext)(), {
+  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), y = (0, S.default)(t), P = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), x = (0, p.useGroupListingsFetchContext)(), {
     shouldHideGuildPurchaseEntryPoints: D,
     restrictionsLoading: b
   } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !x || P || b;
   (0, d.usePageTitle)({
     subsection: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == n ? void 0 : n.name
-  }), (0, u.default)(i.isMobile ? "role-subscriptions-overview" : void 0);
+  }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
   let j = L && (null == n || !(M || y) || D && !b);
   if (s.useEffect(() => {
       o.fetchSubscriptions()
     }, []), s.useEffect(() => {
-      j && !i.isMobile && (0, c.handleInaccessiblePage)(t, v.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
-    }, [t, j]), i.isMobile && j) {
+      j && !l.isMobile && (0, c.handleInaccessiblePage)(t, v.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
+    }, [t, j]), l.isMobile && j) {
     let e = null == n ? T.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : T.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
     return (0, a.jsx)(T.GuildRoleSubscriptionsOverviewErrorPage, {
       errorType: e

@@ -16,8 +16,8 @@ var a = n("120356"),
   c = n("565799"),
   f = n("501655"),
   h = n("199902"),
-  m = n("592125"),
-  p = n("594174"),
+  p = n("592125"),
+  m = n("594174"),
   C = n("938475"),
   g = n("242315"),
   E = n("944581"),
@@ -48,7 +48,7 @@ function y(e, t) {
 
 function O() {
   var e, t;
-  let n = (0, o.useStateFromStoresArray)([L.default, m.default], () => A.default.keys(L.default.getFavoriteChannels()).map(e => m.default.getChannel(e)).filter(T.isNotNullish)),
+  let n = (0, o.useStateFromStoresArray)([L.default, p.default], () => A.default.keys(L.default.getFavoriteChannels()).map(e => p.default.getChannel(e)).filter(T.isNotNullish)),
     a = n.map(e => e.id),
     s = n.filter(e => e.type === v.ChannelTypes.GUILD_VOICE),
     i = n.filter(e => e.type === v.ChannelTypes.GUILD_STAGE_VOICE).map(e => e.id),
@@ -79,8 +79,8 @@ function O() {
       }
       return t
     }, [a]),
-    j = (0, o.useStateFromStoresArray)([p.default], () => b.map(e => p.default.getUser(e)), [b]),
-    P = (0, o.useStateFromStoresArray)([p.default], () => D.map(e => p.default.getUser(e)), [D]),
+    j = (0, o.useStateFromStoresArray)([m.default], () => b.map(e => m.default.getUser(e)), [b]),
+    P = (0, o.useStateFromStoresArray)([m.default], () => D.map(e => m.default.getUser(e)), [D]),
     G = y(_.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
   let U = (e = M, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,

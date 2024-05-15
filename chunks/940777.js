@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("239091"),
   f = n("317381"),
   h = n("682662"),
-  m = n("674552"),
-  p = n("593364"),
+  p = n("674552"),
+  m = n("593364"),
   C = n("905423"),
   g = n("199902"),
   E = n("592125"),
@@ -84,17 +84,17 @@ function j() {
         d = !1,
         c = !1,
         h = !1,
-        p = !1;
-      return n ? (d = !s, c = s, h = l, p = r) : (h = a, p = u), (0, m.renderMediaBadge)({
+        m = !1;
+      return n ? (d = !s, c = s, h = l, m = r) : (h = a, m = u), (0, p.renderMediaBadge)({
         audio: d,
         video: c,
         screenshare: h,
         liveStage: !1,
         isCurrentUserConnected: n,
-        activity: p
+        activity: m
       })
     }(U),
-    Y = H > 0 ? (0, p.renderMentionBadge)(H) : null,
+    Y = H > 0 ? (0, m.renderMentionBadge)(H) : null,
     K = a.useCallback(() => {
       s()
     }, [s]);

@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var a, s, i, l, r, o = n("442837"),
+var a, s, l, i, r, o = n("442837"),
   u = n("433517"),
   d = n("846519"),
   c = n("570140"),
@@ -38,8 +38,8 @@ function D(e) {
     a = null != e.updatedAt ? n - e.updatedAt : 0;
   a > O + L && (a = 0);
   let s = (0, S.shouldShareApplicationActivity)(e.applicationId, T.default),
-    i = N.default.getVoiceChannelId(),
-    l = g.default.getSessionId(),
+    l = N.default.getVoiceChannelId(),
+    i = g.default.getSessionId(),
     r = A.default.getMediaSessionId();
   f.default.updateActivity({
     applicationId: e.applicationId,
@@ -49,8 +49,8 @@ function D(e) {
     duration: Math.floor(a / 1e3),
     closed: t,
     exePath: e.exePath,
-    voiceChannelId: i,
-    sessionId: l,
+    voiceChannelId: l,
+    sessionId: i,
     mediaSessionId: r
   }), e.updatedAt = n;
   let o = (0, C.isUserRecentGamesExperimentEnabled)({
@@ -94,12 +94,12 @@ class j extends(s = o.default.Store) {
     return M
   }
 }
-r = "ActivityTrackingStore", (l = "displayName") in(i = j) ? Object.defineProperty(i, l, {
+r = "ActivityTrackingStore", (i = "displayName") in(l = j) ? Object.defineProperty(l, i, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = r, new j(c.default, {
+}) : l[i] = r, new j(c.default, {
   RUNNING_GAMES_CHANGE: () => b(),
   CONNECTION_OPEN: function() {
     if (P) return !1;

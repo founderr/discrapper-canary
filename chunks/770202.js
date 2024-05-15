@@ -11,8 +11,8 @@ var l = n("735250"),
   c = n("201895"),
   f = n("703656"),
   h = n("592125"),
-  m = n("430824"),
-  p = n("496675"),
+  p = n("430824"),
+  m = n("496675"),
   C = n("98597"),
   g = n("473403"),
   E = n("981631"),
@@ -68,7 +68,7 @@ class T extends C.default {
     super(...e), I(this, "handleContextMenu", e => {
       let {
         channel: t
-      } = this.props, a = m.default.getGuild(t.getGuildId());
+      } = this.props, a = p.default.getGuild(t.getGuildId());
       null != a && (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -102,11 +102,11 @@ t.default = a.memo(function(e) {
     channel: t,
     guild: n,
     disableSorting: a
-  } = e, s = (0, r.useStateFromStoresObject)([h.default, p.default], () => {
+  } = e, s = (0, r.useStateFromStoresObject)([h.default, m.default], () => {
     let e = h.default.getChannel(t.parent_id);
     return {
-      canManageChannel: p.default.can(E.Permissions.MANAGE_CHANNELS, t),
-      canReorderChannel: !0 !== a && null != e ? p.default.can(E.Permissions.MANAGE_CHANNELS, e) : p.default.can(E.Permissions.MANAGE_CHANNELS, n)
+      canManageChannel: m.default.can(E.Permissions.MANAGE_CHANNELS, t),
+      canReorderChannel: !0 !== a && null != e ? m.default.can(E.Permissions.MANAGE_CHANNELS, e) : m.default.can(E.Permissions.MANAGE_CHANNELS, n)
     }
   });
   return (0, l.jsx)(A, {

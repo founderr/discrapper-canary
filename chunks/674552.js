@@ -25,8 +25,8 @@ var a = n("120356"),
   c = n("263704"),
   f = n("465670"),
   h = n("737688"),
-  m = n("497309"),
-  p = n("169278"),
+  p = n("497309"),
+  m = n("169278"),
   C = n("185403"),
   g = n("944581"),
   E = n("632184"),
@@ -68,7 +68,7 @@ function v(e) {
     }), r) t = u.default;
   else if (i) t = _.default;
   else if (o) t = g.default;
-  else if (a) t = p.default;
+  else if (a) t = m.default;
   else if (l) t = d.default;
   else if (c && f) t = h.default;
   else {
@@ -87,7 +87,7 @@ function x(e) {
   } = e, [n, l] = function(e) {
     switch (e) {
       case r.GuildJoinRequestApplicationStatuses.SUBMITTED:
-        return [void 0, m.default];
+        return [void 0, p.default];
       case r.GuildJoinRequestApplicationStatuses.REJECTED:
         return [N.Color.RED_400, f.default];
       case r.GuildJoinRequestApplicationStatuses.APPROVED:

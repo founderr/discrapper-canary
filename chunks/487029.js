@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("19780"),
   f = n("709054"),
   h = n("208049"),
-  m = n("763296"),
-  p = n("242291"),
+  p = n("763296"),
+  m = n("242291"),
   C = n("174470"),
   g = n("549771"),
   E = n("964398"),
@@ -35,7 +35,7 @@ function N(e) {
     analyticsSource: v,
     onClose: x
   } = e, R = function(e) {
-    let [t, n] = (0, i.useStateFromStoresArray)([m.default], () => [m.default.getSounds(), m.default.getFavorites()]);
+    let [t, n] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getSounds(), p.default.getFavorites()]);
     return a.useMemo(() => {
       let l = [],
         a = [...e, S.DEFAULT_SOUND_GUILD_ID],
@@ -51,7 +51,7 @@ function N(e) {
   }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), M = (0, C.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [O, D] = a.useState(void 0), b = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
     analyticsLocations: j
   } = (0, o.default)(r.default.SOUNDBOARD_WHEEL), P = a.useCallback(e => {
-    (0, p.playSound)(e, n.id, j), x()
+    (0, m.playSound)(e, n.id, j), x()
   }, [j, n.id, x]);
   a.useEffect(() => {
     h.maybeFetchSoundboardSounds(), d.FrecencyUserSettingsActionCreators.loadIfNecessary()

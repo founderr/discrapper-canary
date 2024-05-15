@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("442837"),
-  l = n("82950"),
+  l = n("442837"),
+  i = n("82950"),
   r = n("623624"),
   o = n("650774"),
   u = n("981631"),
@@ -17,7 +17,7 @@ class E extends s.PureComponent {
       memberCount: t,
       markAsDismissed: n
     } = this.props;
-    return (0, a.jsx)(l.default, {
+    return (0, a.jsx)(i.default, {
       guild: e,
       onDismissed: () => n(d.ContentDismissActionType.UNKNOWN),
       onClick: this.handleButtonClick,
@@ -50,7 +50,7 @@ class E extends s.PureComponent {
     }) : t[n] = a
   }
 }
-t.default = i.default.connectStores([o.default], e => {
+t.default = l.default.connectStores([o.default], e => {
   let {
     guild: t
   } = e;

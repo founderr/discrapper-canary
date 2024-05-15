@@ -11,8 +11,8 @@ var l = n("735250"),
   c = n("695346"),
   f = n("752916"),
   h = n("898140"),
-  m = n("768581"),
-  p = n("358555"),
+  p = n("768581"),
+  m = n("358555"),
   C = n("981631"),
   g = n("647086"),
   E = n("689938"),
@@ -45,7 +45,7 @@ function S(e) {
         className: i()(_.bannerImg, {
           [_.bannerImgFullWidth]: o.isMobile
         }),
-        src: null !== (t = m.default.getGuildBannerURL({
+        src: null !== (t = p.default.getGuildBannerURL({
           id: n.id,
           banner: s
         }, u)) && void 0 !== t ? t : "",
@@ -126,7 +126,7 @@ t.default = a.memo(function(e) {
     headerClassName: O,
     communityInfoVisible: D,
     hasSubheader: b
-  } = e, j = x.hasFeature(C.GuildFeatures.ANIMATED_BANNER), P = (0, d.default)(x), G = !P && x.hasCommunityInfoSubheader(), U = (0, m.isAnimatedIconHash)(R) && j && !A, [w, B] = a.useState(!1), F = a.useRef(), H = a.useRef(null), V = a.useRef(), k = c.GifAutoPlay.getSetting();
+  } = e, j = x.hasFeature(C.GuildFeatures.ANIMATED_BANNER), P = (0, d.default)(x), G = !P && x.hasCommunityInfoSubheader(), U = (0, p.isAnimatedIconHash)(R) && j && !A, [w, B] = a.useState(!1), F = a.useRef(), H = a.useRef(null), V = a.useRef(), k = c.GifAutoPlay.getSetting();
   a.useEffect(() => {
     if (U && n && !F.current && k) return B(!0), V.current = setTimeout(() => {
       B(!1)
@@ -163,7 +163,7 @@ t.default = a.memo(function(e) {
         }),
         children: [(0, l.jsxs)("div", {
           className: i()(_.headerContent, _.primaryInfo),
-          children: [(0, l.jsx)(p.default, {
+          children: [(0, l.jsx)(m.default, {
             guild: x,
             isBannerVisible: n
           }), x.id === g.FAVORITES_RAW_GUILD_ID && (0, l.jsx)(N, {}), (0, l.jsx)(u.Heading, {

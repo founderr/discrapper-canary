@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("703656"),
   f = n("259580"),
   h = n("981631"),
-  m = n("176505"),
-  p = n("689938"),
+  p = n("176505"),
+  m = n("689938"),
   C = n("590575");
 
 function g(e, t) {
@@ -47,20 +47,20 @@ let E = a.memo(function(e) {
       },
       className: C.progressBarContainer,
       onClick: function() {
-        (0, c.transitionTo)(h.Routes.CHANNEL(t.id, m.StaticChannelRoute.GUILD_HOME))
+        (0, c.transitionTo)(h.Routes.CHANNEL(t.id, p.StaticChannelRoute.GUILD_HOME))
       },
       children: [(0, l.jsxs)("div", {
         className: C.progressBarText,
         children: [(0, l.jsx)(r.Heading, {
           variant: "heading-sm/bold",
-          children: p.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
+          children: m.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
         }), (0, l.jsxs)("div", {
           className: C.rightContainer,
           children: [(0, l.jsx)(r.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
             className: C.rightText,
-            children: p.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
+            children: m.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
               numberHook: g,
               total: S.toString(),
               completed: _.toString()

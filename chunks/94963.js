@@ -22,47 +22,47 @@ var n = a("735250"),
   I = a("430824"),
   v = a("175557"),
   N = a("688298"),
-  A = a("116175"),
-  S = a("308083"),
+  S = a("116175"),
+  A = a("308083"),
   R = a("689938"),
   M = a("106832"),
   L = a("661926");
-let y = S.CLAN_BRAND_PALETTE_PRESETS.length + 1,
+let y = A.CLAN_BRAND_PALETTE_PRESETS.length + 1,
   b = [{
     name: "Night Sky",
-    bannerKind: S.ClanBannerKind.NIGHT_SKY,
+    bannerKind: A.ClanBannerKind.NIGHT_SKY,
     icon: E.ThemeDarkIcon
   }, {
     name: "Castle",
-    bannerKind: S.ClanBannerKind.CASTLE,
+    bannerKind: A.ClanBannerKind.CASTLE,
     icon: c.CrownIcon
   }, {
     name: "World Map",
-    bannerKind: S.ClanBannerKind.WORLD_MAP,
+    bannerKind: A.ClanBannerKind.WORLD_MAP,
     icon: u.GlobeEarthIcon
   }, {
     name: "Sea Foam",
-    bannerKind: S.ClanBannerKind.SEA_FOAM,
+    bannerKind: A.ClanBannerKind.SEA_FOAM,
     icon: h.PrivacyAndSafetyIcon
   }, {
     name: "Warp",
-    bannerKind: S.ClanBannerKind.WARP_TUNNEL,
+    bannerKind: A.ClanBannerKind.WARP_TUNNEL,
     icon: o.BlurBackgroundIcon
   }, {
     name: "House",
-    bannerKind: S.ClanBannerKind.HOUSE,
+    bannerKind: A.ClanBannerKind.HOUSE,
     icon: T.TreehouseIcon
   }, {
     name: "Pulsar",
-    bannerKind: S.ClanBannerKind.HEIGHTMAP,
+    bannerKind: A.ClanBannerKind.HEIGHTMAP,
     icon: p.WaveformIcon
   }, {
     name: "Mesh",
-    bannerKind: S.ClanBannerKind.MESH,
+    bannerKind: A.ClanBannerKind.MESH,
     icon: f.GridVerticalIcon
   }, {
     name: "Spatter",
-    bannerKind: S.ClanBannerKind.SPATTER,
+    bannerKind: A.ClanBannerKind.SPATTER,
     icon: m.PaintbrushThickIcon
   }],
   j = e => {
@@ -95,30 +95,30 @@ t.default = e => {
     handleUpdate: m,
     progress: h,
     guildId: E
-  } = e, T = (0, C.useStateFromStores)([I.default], () => I.default.getGuild(E)), p = null !== (t = (0, C.useStateFromStores)([g.default], () => g.default.getMemberCount(E))) && void 0 !== t ? t : 0, [O, D] = r.useState(h.banner), [F, P] = r.useState({
-    primary: null !== (a = h.brandPrimaryColor) && void 0 !== a ? a : S.CLAN_BRAND_PRIMARY_DEFAULT,
-    secondary: null !== (i = h.brandSecondaryColor) && void 0 !== i ? i : S.CLAN_BRAND_SECONDARY_DEFAULT
+  } = e, T = (0, C.useStateFromStores)([I.default], () => I.default.getGuild(E)), p = null !== (t = (0, C.useStateFromStores)([g.default], () => g.default.getMemberCount(E))) && void 0 !== t ? t : 0, [O, D] = r.useState(h.banner), [P, F] = r.useState({
+    primary: null !== (a = h.brandPrimaryColor) && void 0 !== a ? a : A.CLAN_BRAND_PRIMARY_DEFAULT,
+    secondary: null !== (i = h.brandSecondaryColor) && void 0 !== i ? i : A.CLAN_BRAND_SECONDARY_DEFAULT
   }), [w, G] = r.useState(() => {
     if (h.brandPrimaryColor === h.badgePrimaryColor && h.brandSecondaryColor === h.badgeSecondaryColor) return 0;
-    for (let e = 0; e < S.CLAN_BRAND_PALETTE_PRESETS.length; e++)
-      if (S.CLAN_BRAND_PALETTE_PRESETS[e].primary === h.brandPrimaryColor && S.CLAN_BRAND_PALETTE_PRESETS[e].secondary === h.brandSecondaryColor) return e + 1;
+    for (let e = 0; e < A.CLAN_BRAND_PALETTE_PRESETS.length; e++)
+      if (A.CLAN_BRAND_PALETTE_PRESETS[e].primary === h.brandPrimaryColor && A.CLAN_BRAND_PALETTE_PRESETS[e].secondary === h.brandSecondaryColor) return e + 1;
     return y
   }), [U, B] = r.useState(!1), k = y === w, H = 0 === w, V = r.useMemo(() => {
-    if (k) return F;
+    if (k) return P;
     if (H) {
       var e, t;
       return {
-        primary: null !== (e = h.badgePrimaryColor) && void 0 !== e ? e : A.CLAN_BADGE_PRIMARY_DEFAULT,
-        secondary: null !== (t = h.badgeSecondaryColor) && void 0 !== t ? t : A.CLAN_BADGE_SECONDARY_DEFAULT
+        primary: null !== (e = h.badgePrimaryColor) && void 0 !== e ? e : S.CLAN_BADGE_PRIMARY_DEFAULT,
+        secondary: null !== (t = h.badgeSecondaryColor) && void 0 !== t ? t : S.CLAN_BADGE_SECONDARY_DEFAULT
       }
     } {
-      let e = S.CLAN_BRAND_PALETTE_PRESETS[w - 1];
+      let e = A.CLAN_BRAND_PALETTE_PRESETS[w - 1];
       return {
         primary: e.primary,
         secondary: e.secondary
       }
     }
-  }, [F, H, k, h.badgePrimaryColor, h.badgeSecondaryColor, w]);
+  }, [P, H, k, h.badgePrimaryColor, h.badgeSecondaryColor, w]);
   return r.useEffect(() => {
     m({
       banner: O,
@@ -153,9 +153,9 @@ t.default = e => {
               children: [(0, n.jsx)(_.Clickable, {
                 onClick: () => {
                   var e, t;
-                  G(0), P({
-                    primary: null !== (e = h.badgePrimaryColor) && void 0 !== e ? e : S.CLAN_BRAND_PRIMARY_DEFAULT,
-                    secondary: null !== (t = h.badgeSecondaryColor) && void 0 !== t ? t : S.CLAN_BRAND_SECONDARY_DEFAULT
+                  G(0), F({
+                    primary: null !== (e = h.badgePrimaryColor) && void 0 !== e ? e : A.CLAN_BRAND_PRIMARY_DEFAULT,
+                    secondary: null !== (t = h.badgeSecondaryColor) && void 0 !== t ? t : A.CLAN_BRAND_SECONDARY_DEFAULT
                   })
                 },
                 className: l()(M.brandItemContainer, {
@@ -166,10 +166,10 @@ t.default = e => {
                   primaryColor: h.badgePrimaryColor,
                   secondaryColor: h.badgeSecondaryColor
                 })
-              }), S.CLAN_BRAND_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(_.Clickable, {
+              }), A.CLAN_BRAND_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(_.Clickable, {
                 "aria-label": e.name,
                 onClick: () => {
-                  G(t + 1), P(S.CLAN_BRAND_PALETTE_PRESETS[t])
+                  G(t + 1), F(A.CLAN_BRAND_PALETTE_PRESETS[t])
                 },
                 className: l()(M.brandItemContainer, {
                   [M.brandItemContainerSelected]: w === t + 1
@@ -181,15 +181,15 @@ t.default = e => {
                 })
               }, t)), (0, n.jsx)(N.default, {
                 showSecondaryColor: !0,
-                palette: F,
+                palette: P,
                 onPrimaryColorChange: e => {
-                  P(t => ({
+                  F(t => ({
                     ...t,
                     primary: (0, s.int2hex)(e)
                   }))
                 },
                 onSecondaryColorChange: e => {
-                  P(t => ({
+                  F(t => ({
                     ...t,
                     secondary: (0, s.int2hex)(e)
                   }))
@@ -260,12 +260,12 @@ t.default = e => {
             banner: O,
             badge: {
               badgeKind: h.badgeKind,
-              primaryColor: null !== (c = h.badgePrimaryColor) && void 0 !== c ? c : S.CLAN_BRAND_PRIMARY_DEFAULT,
-              secondaryColor: null !== (d = h.badgeSecondaryColor) && void 0 !== d ? d : S.CLAN_BRAND_SECONDARY_DEFAULT
+              primaryColor: null !== (c = h.badgePrimaryColor) && void 0 !== c ? c : A.CLAN_BRAND_PRIMARY_DEFAULT,
+              secondaryColor: null !== (d = h.badgeSecondaryColor) && void 0 !== d ? d : A.CLAN_BRAND_SECONDARY_DEFAULT
             },
             branding: {
-              primaryColor: null !== (u = V.primary) && void 0 !== u ? u : S.CLAN_BRAND_PRIMARY_DEFAULT,
-              secondaryColor: null !== (f = V.secondary) && void 0 !== f ? f : S.CLAN_BRAND_SECONDARY_DEFAULT
+              primaryColor: null !== (u = V.primary) && void 0 !== u ? u : A.CLAN_BRAND_PRIMARY_DEFAULT,
+              secondaryColor: null !== (f = V.secondary) && void 0 !== f ? f : A.CLAN_BRAND_SECONDARY_DEFAULT
             }
           }
         })

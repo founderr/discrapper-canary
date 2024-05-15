@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("442837"),
-  i = n("471445"),
-  l = n("862099"),
+  l = n("471445"),
+  i = n("862099"),
   r = n("938475"),
   o = n("689938"),
   u = n("660026");
@@ -17,8 +17,8 @@ t.default = function(e) {
       user: t
     } = e;
     return t
-  }), [n]), c = (0, i.getChannelIconComponent)(n);
-  return (0, a.jsx)(l.GuildNoticeBody, {
+  }), [n]), c = (0, l.getChannelIconComponent)(n);
+  return (0, a.jsx)(i.GuildNoticeBody, {
     heading: o.default.Messages.STAGE_CHANNEL_LIVE_NOW,
     topic: t,
     location: o.default.Messages.HUB_STUDY_ROOM_VOICE_CHANNEL_TOOLTIP,
@@ -27,10 +27,10 @@ t.default = function(e) {
       height: 16,
       className: u.icon
     }) : null,
-    children: (0, a.jsx)(l.LiveVoiceOrStageChannelNotice, {
+    children: (0, a.jsx)(i.LiveVoiceOrStageChannelNotice, {
       channel: n,
       speakers: d,
-      voiceType: l.VoiceChannelType.STUDY_ROOM
+      voiceType: i.VoiceChannelType.STUDY_ROOM
     })
   })
 }

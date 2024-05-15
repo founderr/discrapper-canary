@@ -16,7 +16,7 @@ s.r(t), s.d(t, {
     return f
   },
   GuildScheduledEventChangeStrings: function() {
-    return F
+    return K
   },
   IntegrationChangeStrings: function() {
     return V
@@ -37,7 +37,7 @@ s.r(t), s.d(t, {
     return H
   },
   ThreadChangeStrings: function() {
-    return K
+    return F
   },
   UserChangeStrings: function() {
     return p
@@ -260,7 +260,7 @@ let U = new A.default("AuditLogUtils"),
     },
     ...R()
   }),
-  F = () => ({
+  K = () => ({
     [G.AuditLogChangeKeys.NAME]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
     [G.AuditLogChangeKeys.DESCRIPTION]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DESCRIPTION_CREATE,
     [G.AuditLogChangeKeys.PRIVACY_LEVEL]: {
@@ -284,7 +284,7 @@ let U = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.RECURRENCE_RULE]: e_(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE_CLEAR, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE),
     ...R()
   }),
-  K = () => ({
+  F = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE),
     [G.AuditLogChangeKeys.ARCHIVED]: {
       true: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_ARCHIVED,

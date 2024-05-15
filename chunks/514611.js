@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var a, s = n("735250"),
-  i = n("470079"),
-  l = n("120356"),
-  r = n.n(l),
+  l = n("470079"),
+  i = n("120356"),
+  r = n.n(i),
   o = n("622535"),
   u = n("481060"),
   d = n("239091"),
@@ -32,7 +32,7 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class L extends(a = i.PureComponent) {
+class L extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
     if (t) return R;
     switch (e) {
@@ -48,9 +48,9 @@ class L extends(a = i.PureComponent) {
       guild: t,
       className: n,
       theme: a,
-      onTagClick: i
+      onTagClick: l
     } = this.props, {
-      loaded: l,
+      loaded: i,
       hasBeenSeen: d,
       isVisible: N,
       submitting: v
@@ -99,8 +99,8 @@ class L extends(a = i.PureComponent) {
         threshold: .55,
         children: (0, s.jsxs)("div", {
           className: r()(n, {
-            [A.loaded]: l,
-            [A.loading]: !l
+            [A.loaded]: i,
+            [A.loading]: !i
           }),
           children: [v ? (0, s.jsx)(u.Spinner, {
             type: u.Spinner.Type.PULSING_ELLIPSIS,
@@ -170,9 +170,9 @@ class L extends(a = i.PureComponent) {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: O
-              }), U && null != y && null != i && (0, s.jsx)(E.DiscoveryTags, {
+              }), U && null != y && null != l && (0, s.jsx)(E.DiscoveryTags, {
                 tags: y,
-                onTagClick: e => i(e, t.id),
+                onTagClick: e => l(e, t.id),
                 guildId: t.id,
                 section: p.AnalyticsContexts.POPULAR
               }), (0, s.jsxs)("div", {

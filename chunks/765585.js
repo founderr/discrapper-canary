@@ -11,12 +11,12 @@ var l = n("735250"),
   c = n("466111"),
   f = n("921944"),
   h = n("689938"),
-  m = n("255372");
+  p = n("255372");
 t.default = a.forwardRef(function(e, t) {
   let {
     body: n,
     header: s,
-    artClassName: p,
+    artClassName: m,
     headerClassName: C,
     contentClassName: g,
     tryItText: E,
@@ -54,31 +54,31 @@ t.default = a.forwardRef(function(e, t) {
     className: N,
     ref: t,
     children: (0, l.jsxs)("div", {
-      className: i()(m.content, g, {
-        [m.contentNoArt]: null == p || T,
-        [m.contentPremium]: A || O
+      className: i()(p.content, g, {
+        [p.contentNoArt]: null == m || T,
+        [p.contentPremium]: A || O
       }),
       children: [(0, l.jsxs)("div", {
-        className: i()(p, T ? m.artInline : m.artAbsolute),
+        className: i()(m, T ? p.artInline : p.artAbsolute),
         children: [v && (0, l.jsx)(d.default, {
-          className: m.gifTag
+          className: p.gifTag
         }), y]
       }), (0, l.jsxs)("div", {
-        className: m.body,
+        className: p.body,
         children: [(0, l.jsxs)(r.Heading, {
-          className: i()(A ? m.headerWithPremiumIcon : m.header, C),
+          className: i()(A ? p.headerWithPremiumIcon : p.header, C),
           variant: "heading-md/bold",
           color: "always-white",
           children: [A && !O ? (0, l.jsx)(c.default, {
-            className: m.premiumIcon
+            className: p.premiumIcon
           }) : null, O ? (0, l.jsxs)(r.Text, {
             color: "always-white",
             variant: "eyebrow",
-            className: m.earlyAccessBadgeContainer,
+            className: p.earlyAccessBadgeContainer,
             children: [(0, l.jsx)(c.default, {
-              className: m.earlyAccessIcon
+              className: p.earlyAccessIcon
             }), (0, l.jsx)("span", {
-              className: m.earlyAccessText,
+              className: p.earlyAccessText,
               children: h.default.Messages.REMIXING_TOOLTIP_NITRO_EARLY_ACCESS
             })]
           }) : null, s]
@@ -89,10 +89,10 @@ t.default = a.forwardRef(function(e, t) {
         }) : n]
       }), (0, l.jsx)("div", {
         ref: G,
-        className: j || !L ? m.buttonContainerVertical : m.buttonContainerHorizontal,
+        className: j || !L ? p.buttonContainerVertical : p.buttonContainerHorizontal,
         children: null != S ? (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(r.Button, {
-            className: m.button,
+            className: p.button,
             size: b,
             onClick: e => {
               null == I || I(e), S(e), w(f.ContentDismissActionType.PRIMARY)
@@ -101,7 +101,7 @@ t.default = a.forwardRef(function(e, t) {
             look: A || O ? r.Button.Looks.INVERTED : r.Button.Looks.FILLED,
             children: null != E ? E : h.default.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }), (0, l.jsx)(r.Button, {
-            className: m.button,
+            className: p.button,
             size: b,
             onClick: e => {
               null == I || I(e), w(f.ContentDismissActionType.DISMISS)
@@ -111,7 +111,7 @@ t.default = a.forwardRef(function(e, t) {
             children: null != _ ? _ : h.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
           })]
         }) : (0, l.jsx)(r.Button, {
-          className: m.button,
+          className: p.button,
           size: r.Button.Sizes.MAX,
           onClick: e => {
             null == I || I(e), w(f.ContentDismissActionType.PRIMARY)
@@ -120,10 +120,10 @@ t.default = a.forwardRef(function(e, t) {
           children: h.default.Messages.EDUCATION_NEW_FEATURE_CONFIRM
         })
       }), (0, l.jsx)("div", {
-        className: i()(m.pointer, {
-          [m.bottomPointer]: "top" === R,
-          [m.centerLeftPointer]: "right" === R && "center" === M,
-          [m.topLeftPointer]: "right" === R && "top" === M
+        className: i()(p.pointer, {
+          [p.bottomPointer]: "top" === R,
+          [p.centerLeftPointer]: "right" === R && "center" === M,
+          [p.topLeftPointer]: "right" === R && "top" === M
         })
       })]
     })

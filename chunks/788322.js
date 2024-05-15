@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("481060"),
   o = n("239091"),
   u = n("906732"),
@@ -33,7 +33,7 @@ let R = () => (0, a.jsx)("div", {
 t.default = e => {
   var t;
   let {
-    guild: i,
+    guild: l,
     theme: R,
     onView: O,
     onTagClick: L
@@ -46,7 +46,7 @@ t.default = e => {
     presenceCount: b,
     memberCount: U,
     keywords: j
-  } = i, [G, k] = s.useState(!1), [w, B] = s.useState(!1), {
+  } = l, [G, k] = s.useState(!1), [w, B] = s.useState(!1), {
     analyticsLocations: F
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: M,
@@ -83,7 +83,7 @@ t.default = e => {
       }
       B(!0);
       try {
-        null != O && await O(i.id)
+        null != O && await O(l.id)
       } finally {
         B(!1)
       }
@@ -106,7 +106,7 @@ t.default = e => {
         type: r.Spinner.Type.PULSING_ELLIPSIS,
         className: A.spinner
       }) : null, (0, a.jsxs)(r.Clickable, {
-        className: l()(A.container, {
+        className: i()(A.container, {
           [A.hover]: G,
           [A.submitting]: w
         }),
@@ -118,14 +118,14 @@ t.default = e => {
             } = await Promise.resolve().then(n.bind(n, "455839"));
             return t => (0, a.jsx)(e, {
               ...t,
-              guild: i
+              guild: l
             })
           })
         },
         onMouseEnter: () => k(!0),
         onMouseLeave: () => k(!1),
         children: [(0, a.jsx)("div", {
-          className: l()(A.splashContainer, {
+          className: i()(A.splashContainer, {
             [A.splashContainerWithTags]: K
           }),
           children: (0, a.jsx)("img", {
@@ -135,7 +135,7 @@ t.default = e => {
             width: 240
           })
         }), (0, a.jsxs)("div", {
-          className: l()(A.content, {
+          className: i()(A.content, {
             [A.contentWithTags]: K
           }),
           children: [(0, a.jsxs)("div", {
@@ -153,7 +153,7 @@ t.default = e => {
               className: A.headerName,
               children: [(0, a.jsx)("div", {
                 children: (0, a.jsx)(E.default, {
-                  guild: i,
+                  guild: l,
                   className: A.guildBadge,
                   size: 16
                 })
@@ -168,9 +168,9 @@ t.default = e => {
             variant: "text-sm/normal",
             children: D
           }), K && null != j && null != L && (0, a.jsx)(S.DiscoveryTags, {
-            guildId: i.id,
+            guildId: l.id,
             discoveryTagStyle: S.DiscoveryTagStyle.ALT,
-            onTagClick: e => L(e, i.id),
+            onTagClick: e => L(e, l.id),
             tags: j,
             section: C.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
@@ -202,7 +202,7 @@ t.default = e => {
         }), z ? (0, a.jsx)("div", {
           className: A.actionButtons,
           children: (0, a.jsx)(g.default, {
-            guild: i
+            guild: l
           })
         }) : null]
       })]

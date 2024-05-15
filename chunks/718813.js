@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("653041");
 var a, s = n("735250"),
-  i = n("470079"),
-  l = n("120356"),
-  r = n.n(l),
+  l = n("470079"),
+  i = n("120356"),
+  r = n.n(i),
   o = n("748780"),
   u = n("442837"),
   d = n("215569"),
@@ -66,9 +66,9 @@ let N = (0, _.makeLazy)({
   };
 
 function x() {
-  return i.useEffect(() => (h.default.enable(), h.default.enableTemp(E.SETTINGS_LAYERS_LAYOUT), () => h.default.disableTemp()), []), null
+  return l.useEffect(() => (h.default.enable(), h.default.enableTemp(E.SETTINGS_LAYERS_LAYOUT), () => h.default.disableTemp()), []), null
 }
-class D extends(a = i.PureComponent) {
+class D extends(a = l.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     return e.mode !== t.mode ? {
       animating: !0,
@@ -156,8 +156,8 @@ class D extends(a = i.PureComponent) {
       mode: t,
       children: n,
       baseLayer: a,
-      ...i
-    } = this.props, l = e || t === y ? this.getAnimatedStyle() : null, u = (0, s.jsx)(o.default.div, {
+      ...l
+    } = this.props, i = e || t === y ? this.getAnimatedStyle() : null, u = (0, s.jsx)(o.default.div, {
       ref: e => this.containerRef.current = null != e ? e.refs.node : void 0,
       "aria-hidden": t === y,
       className: r()(T.layer, {
@@ -165,8 +165,8 @@ class D extends(a = i.PureComponent) {
         [T.animating]: e,
         "stop-animations": t === y
       }),
-      style: l,
-      ...i,
+      style: i,
+      ...l,
       children: n
     });
     return a ? u : (0, s.jsx)(c.FocusLock, {
@@ -191,7 +191,7 @@ class D extends(a = i.PureComponent) {
     }
   }
   constructor(e) {
-    super(e), A(this, "containerRef", i.createRef());
+    super(e), A(this, "containerRef", l.createRef());
     let t = 1,
       n = 1;
     e.mode === y && (t = .93, n = 0), this.state = {
@@ -205,7 +205,7 @@ class D extends(a = i.PureComponent) {
 A(D, "defaultProps", {
   baseLayer: !1
 }), A(D, "contextType", c.AccessibilityPreferencesContext);
-class b extends i.PureComponent {
+class b extends l.PureComponent {
   componentDidMount() {
     S.ComponentDispatch.subscribe(I.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
   }
@@ -219,12 +219,12 @@ class b extends i.PureComponent {
       hasFullScreenLayer: n
     } = this.props, {
       length: a
-    } = t, i = [];
-    return i.push((0, s.jsx)(D, {
+    } = t, l = [];
+    return l.push((0, s.jsx)(D, {
       mode: 0 !== a || n ? y : M,
       baseLayer: !0,
       children: e
-    }, "layer-base")), t.forEach((e, t) => i.push(this.renderComponent(e, t, a))), i
+    }, "layer-base")), t.forEach((e, t) => l.push(this.renderComponent(e, t, a))), l
   }
   renderComponent(e, t, n) {
     let a;

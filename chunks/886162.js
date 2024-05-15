@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("990547"),
-  l = n("399606"),
+  l = n("990547"),
+  i = n("399606"),
   r = n("481060"),
   o = n("232567"),
   u = n("213609"),
@@ -20,13 +20,13 @@ var a = n("735250"),
 function _(e) {
   let {
     transitionState: t
-  } = e, _ = (0, l.useStateFromStores)([d.default], () => d.default.getAction()), [C, m] = s.useState(!1), p = (0, c.useUID)();
+  } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.getAction()), [C, m] = s.useState(!1), p = (0, c.useUID)();
   async function S() {
     return m(!0), _ === f.UserRequiredActions.AGREEMENTS && m(await (0, o.acceptAgreements)()), null
   }
   return (0, u.default)({
-    type: i.ImpressionTypes.VIEW,
-    name: i.ImpressionNames.USER_AGREEMENTS,
+    type: l.ImpressionTypes.VIEW,
+    name: l.ImpressionNames.USER_AGREEMENTS,
     properties: {
       required_action: _
     }

@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("864682"),
   f = n("67212"),
   h = n("770471"),
-  m = n("292584"),
-  p = n("835865"),
+  p = n("292584"),
+  m = n("835865"),
   C = n("456541"),
   g = n("143614"),
   E = n("544803"),
@@ -62,8 +62,8 @@ function Y(e) {
     selected: t,
     user: n,
     badge: f,
-    link: m,
-    showProgressBadge: p
+    link: p,
+    showProgressBadge: m
   } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [I, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, D] = a.useState(0), [j, B] = a.useState(!1), {
     canViewBroadcasts: Y
   } = h.default.useExperiment({
@@ -82,7 +82,7 @@ function Y(e) {
     location: "home_button"
   });
   let Q = null;
-  !t && p ? Q = (0, l.jsx)(u.default, {
+  !t && m ? Q = (0, l.jsx)(u.default, {
     className: V.downloadProgress,
     determineOwnVisibility: !1
   }) : W && (Q = (0, l.jsx)(R.default, {
@@ -111,7 +111,7 @@ function Y(e) {
         ariaLabel: H.default.Messages.DIRECT_MESSAGES,
         ...z,
         to: {
-          pathname: m,
+          pathname: p,
           state: {
             analyticsSource: {
               page: w.AnalyticsPages.GUILD_CHANNEL,
@@ -182,7 +182,7 @@ function K() {
         l = D.calculateProgressPercentage(n, t);
       return l > 0 && l < 100
     }),
-    n = (0, i.useStateFromStores)([m.default], () => m.default.getUserIdsToValidate()),
+    n = (0, i.useStateFromStores)([p.default], () => p.default.getUserIdsToValidate()),
     s = (0, i.useStateFromStores)([I.default], () => I.default.getPendingCount()),
     r = Object.keys(B.SubscriptionTrials),
     {
@@ -199,7 +199,7 @@ function K() {
     E = g === c && c > 0 && s + C === 0;
   a.useEffect(() => {
     n.length > 0 && (0, f.fetchBroadcasterBuckets)()
-  }, [n]), (0, p.default)();
+  }, [n]), (0, m.default)();
   let S = L.default.getHomeLink();
   return E && (S = w.Routes.APPLICATION_STORE), (0, l.jsx)(Y, {
     selected: e,

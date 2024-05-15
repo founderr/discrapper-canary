@@ -1,47 +1,47 @@
 "use strict";
 n.r(t), n.d(t, {
   useClanSetupModalNavigation: function() {
-    return l
+    return i
   }
 });
 var a = n("470079"),
   s = n("246364"),
-  i = n("308083");
+  l = n("308083");
 
-function l(e) {
+function i(e) {
   let {
     progress: t,
     updateCurrentStep: n
   } = e, {
-    currentStep: l,
+    currentStep: i,
     gameApplicationIds: r,
     playstyle: o,
     interests: u,
     description: d,
     tag: c,
     verificationForm: f
-  } = t, E = a.useMemo(() => null != f && f.formFields.some(e => !(0, s.isTermsFormField)(e)), [f]), h = a.useMemo(() => Array.from(u).filter(e => !i.ALL_TRAITS_SET.has(e) && !i.LANGUAGES_SET.has(e)), [u]), _ = a.useCallback(() => {
-    n(l + 1)
-  }, [l, n]), C = a.useCallback(() => {
-    n(l - 1)
-  }, [l, n]), m = a.useCallback(e => n(e), [n]), p = a.useMemo(() => {
-    switch (l) {
-      case i.ClanSetupSteps.GAMES:
+  } = t, E = a.useMemo(() => null != f && f.formFields.some(e => !(0, s.isTermsFormField)(e)), [f]), h = a.useMemo(() => Array.from(u).filter(e => !l.ALL_TRAITS_SET.has(e) && !l.LANGUAGES_SET.has(e)), [u]), _ = a.useCallback(() => {
+    n(i + 1)
+  }, [i, n]), C = a.useCallback(() => {
+    n(i - 1)
+  }, [i, n]), m = a.useCallback(e => n(e), [n]), p = a.useMemo(() => {
+    switch (i) {
+      case l.ClanSetupSteps.GAMES:
         return 0 === r.size;
-      case i.ClanSetupSteps.PLAYSTYLE:
-        return o === i.ClanPlaystyles.NONE;
-      case i.ClanSetupSteps.INTERESTS:
+      case l.ClanSetupSteps.PLAYSTYLE:
+        return o === l.ClanPlaystyles.NONE;
+      case l.ClanSetupSteps.INTERESTS:
         return h.length < 3;
-      case i.ClanSetupSteps.DESCRIPTION:
+      case l.ClanSetupSteps.DESCRIPTION:
         return 0 === d.length;
-      case i.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
+      case l.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
         return c.length < 2;
-      case i.ClanSetupSteps.MEMBER_APPLICATION:
+      case l.ClanSetupSteps.MEMBER_APPLICATION:
         return !E;
       default:
         return !1
     }
-  }, [l, d.length, r.size, E, h.length, o, c.length]), S = 0 === l;
+  }, [i, d.length, r.size, E, h.length, o, c.length]), S = 0 === i;
   return a.useMemo(() => ({
     onStepClick: m,
     onNextClick: _,

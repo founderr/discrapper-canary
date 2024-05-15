@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("685626"),
   o = n("442837"),
   u = n("607070"),
@@ -27,7 +27,7 @@ var a = n("735250"),
   A = n("837955");
 
 function N(e) {
-  var t, n, i;
+  var t, n, l;
   let {
     quest: E
   } = e, N = (0, m.getQuestLogger)({
@@ -35,7 +35,7 @@ function N(e) {
     location: I.QuestsExperimentLocations.QUESTS_BAR
   }), v = (0, C.useIsEligibleForQuests)({
     location: I.QuestsExperimentLocations.QUESTS_BAR
-  }), R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), L = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, M = s.useRef(L), y = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, P = (null === (i = E.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, x = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), D = (0, f.useIsQuestExpired)(E), {
+  }), R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), L = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, M = s.useRef(L), y = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, P = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, x = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), D = (0, f.useIsQuestExpired)(E), {
     hasError: b,
     isLoading: U
   } = (0, S.useQuestsAssetsLoadState)(), j = v && !x && !P && !D && !U, G = s.useRef(j), {
@@ -60,9 +60,9 @@ function N(e) {
         withDelay: t = !1
       } = e;
     t ? F.current = window.setTimeout(ee, 75) : ee()
-  }, [ee]), ei = s.useCallback(() => {
+  }, [ee]), el = s.useCallback(() => {
     if (window.clearTimeout(F.current), !!B.canCollapseOnBlur && !V) !H.current && K(!1)
-  }, [V, B]), el = s.useCallback(() => {
+  }, [V, B]), ei = s.useCallback(() => {
     (0, c.trackQuestEvent)({
       questId: E.id,
       event: T.AnalyticEvents.QUEST_HOVER
@@ -70,8 +70,8 @@ function N(e) {
       withDelay: !0
     })
   }, [es, E]), er = s.useCallback(() => {
-    H.current = !1, ei()
-  }, [ei]);
+    H.current = !1, el()
+  }, [el]);
   s.useLayoutEffect(() => {
     y && B.shouldExpandOnQuestComplete && ee()
   }, [ee, y, B]), s.useLayoutEffect(() => {
@@ -135,7 +135,7 @@ function N(e) {
       let e = B.component;
       return (0, a.jsx)(r.animated.div, {
         "aria-hidden": !j,
-        className: l()(A.wrapper, {
+        className: i()(A.wrapper, {
           [A.wrapperInvisible]: !j,
           [A.wrapperVisible]: j && Q
         }),
@@ -148,10 +148,10 @@ function N(e) {
         },
         children: (0, a.jsx)(r.animated.div, {
           onMouseLeave: er,
-          onMouseEnter: el,
+          onMouseEnter: ei,
           onFocus: () => es(),
-          onBlur: ei,
-          className: l()(A.contentWrapper, {
+          onBlur: el,
+          className: i()(A.contentWrapper, {
             [A.contentWrapperExpanded]: W,
             [A.contentWrapperAccepted]: L
           }),

@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("153867"),
   f = n("771845"),
   h = n("880080"),
-  m = n("624138"),
-  p = n("727258"),
+  p = n("624138"),
+  m = n("727258"),
   C = n("199540"),
   g = n("40153"),
   E = n("252686"),
@@ -25,9 +25,9 @@ var l = n("735250"),
   I = n("689938"),
   N = n("538962"),
   T = n("634165");
-let A = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
-  L = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_SIZE),
-  v = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_MARGIN);
+let A = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
+  L = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_SIZE),
+  v = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_MARGIN);
 
 function x(e) {
   let {
@@ -35,7 +35,7 @@ function x(e) {
     setNodeRef: n,
     selected: s,
     expanded: d,
-    mediaState: m,
+    mediaState: p,
     mentionCount: x = 0,
     unread: R = !1,
     defaultFolderName: M,
@@ -59,9 +59,9 @@ function x(e) {
   let [{
     dragging: z
   }, Z] = (0, r.useDrag)({
-    type: p.GuildsNodeType.FOLDER,
+    type: m.GuildsNodeType.FOLDER,
     item: () => (null == b || b(), {
-      type: p.GuildsNodeType.FOLDER,
+      type: m.GuildsNodeType.FOLDER,
       nodeId: t.id
     }),
     end() {
@@ -110,7 +110,7 @@ function x(e) {
           expanded: d,
           forceCircular: y,
           sorting: D,
-          mediaState: m,
+          mediaState: p,
           mentionCount: x,
           tooltipName: q,
           folderGroupId: $,

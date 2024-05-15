@@ -135,8 +135,8 @@ function N(e) {
     onFieldsSave: T,
     onDescriptionSave: p,
     verificationForm: C
-  } = e, [N, A] = r.useState(E), S = r.useRef(!1), R = r.useCallback(() => {
-    S.current = !0
+  } = e, [N, S] = r.useState(E), A = r.useRef(!1), R = r.useCallback(() => {
+    A.current = !0
   }, []), M = null !== (t = (0, m.useSubmittedGuildJoinRequestTotal)({
     guildId: o.id
   })) && void 0 !== t ? t : 0, L = (0, s.useStateFromStores)([u.default], () => null != C ? C : u.default.get(o.id)), y = null !== (a = null == L ? void 0 : L.formFields) && void 0 !== a ? a : [];
@@ -152,7 +152,7 @@ function N(e) {
       hasTermsField: null == y ? void 0 : y.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
     }) : null,
     isExpanded: N,
-    onExpand: () => A(!N),
+    onExpand: () => S(!N),
     disableAnimation: E,
     disableBackground: !b,
     children: (0, n.jsx)("div", {

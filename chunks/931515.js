@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var a = n("470079"),
   s = n("348327"),
-  i = n.n(s),
-  l = n("143927"),
+  l = n.n(s),
+  i = n("143927"),
   r = n("442837"),
   o = n("224706"),
   u = n("963202"),
@@ -21,11 +21,11 @@ var a = n("470079"),
   h = n("308083");
 
 function _() {
-  let e = (0, f.useClanDiscoveryUIStore)(e => e.game, l.default),
-    t = (0, f.useClanDiscoveryUIStore)(e => e.setGame, l.default),
-    n = (0, f.useClanDiscoveryUIStore)(e => e.setSelectedGames, l.default),
-    s = (0, f.useClanDiscoveryUIStore)(e => e.selectedGames, l.default),
-    E = (0, f.useClanDiscoveryUIStore)(f.buildSearchCriteriaFromUIState, i()),
+  let e = (0, f.useClanDiscoveryUIStore)(e => e.game, i.default),
+    t = (0, f.useClanDiscoveryUIStore)(e => e.setGame, i.default),
+    n = (0, f.useClanDiscoveryUIStore)(e => e.setSelectedGames, i.default),
+    s = (0, f.useClanDiscoveryUIStore)(e => e.selectedGames, i.default),
+    E = (0, f.useClanDiscoveryUIStore)(f.buildSearchCriteriaFromUIState, l()),
     _ = (0, u.useClanPrepilotExperimentDefaultGameId)({
       location: "clan_discovery"
     }),
@@ -50,8 +50,8 @@ function _() {
 
 function C() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-    t = (0, f.useClanDiscoveryUIStore)(f.buildSearchCriteriaFromUIState, i()),
-    n = (0, f.useClanDiscoveryUIStore)(e => e.game, l.default),
+    t = (0, f.useClanDiscoveryUIStore)(f.buildSearchCriteriaFromUIState, l()),
+    n = (0, f.useClanDiscoveryUIStore)(e => e.game, i.default),
     s = (0, r.useStateFromStores)([c.default], () => c.default.hasLoadedStaticClanDiscovery(n)),
     o = (0, r.useStateFromStores)([c.default], () => c.default.getSearchResult(t), [t]);
   return {

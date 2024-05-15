@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("470079"),
   s = n("468194"),
-  i = n("645896"),
-  l = n("316553"),
+  l = n("645896"),
+  i = n("316553"),
   r = n("559469"),
   o = n("308083"),
   u = n("689938");
@@ -16,9 +16,9 @@ function d(e) {
   let {
     guild: t,
     selectedGame: n
-  } = e, d = (0, l.useDiscoveryGameApplicationId)({
+  } = e, d = (0, i.useDiscoveryGameApplicationId)({
     selectedGame: n
-  }), c = a.useMemo(() => null == d ? [] : [d], [d]), f = (0, r.useFakeDiscoveryUpsellClans)(d), E = (0, i.useClanInfo)(null == t ? void 0 : t.id), [h, _] = (0, i.useFetchClanInfo)(null == t ? void 0 : t.id);
+  }), c = a.useMemo(() => null == d ? [] : [d], [d]), f = (0, r.useFakeDiscoveryUpsellClans)(d), E = (0, l.useClanInfo)(null == t ? void 0 : t.id), [h, _] = (0, l.useFetchClanInfo)(null == t ? void 0 : t.id);
   return a.useEffect(() => {
     !h && null != t && _()
   }, [t, h, _]), a.useMemo(() => {

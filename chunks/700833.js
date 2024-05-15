@@ -36,10 +36,10 @@ function m(e) {
     await C(h)
   }, N = async e => {
     await _(h, e)
-  }, A = async (e, t, a) => {
+  }, S = async (e, t, a) => {
     await x(e, t, a)
-  }, S = (0, r.uniqueId)(), R = t === h, M = {
-    key: S,
+  }, A = (0, r.uniqueId)(), R = t === h, M = {
+    key: A,
     index: h,
     isDragEnabled: T,
     isDropHovered: R,
@@ -57,7 +57,7 @@ function m(e) {
       })
     },
     onRemove: v,
-    onDrop: A,
+    onDrop: S,
     canRemove: g,
     actionsLocation: I
   };

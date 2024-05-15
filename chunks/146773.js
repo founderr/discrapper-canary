@@ -16,8 +16,8 @@ var a = n("176617"),
   c = n("398758"),
   f = n("680089"),
   h = n("592125"),
-  m = n("324067"),
-  p = n("984933"),
+  p = n("324067"),
+  m = n("984933"),
   C = n("430824"),
   g = n("496675"),
   E = n("914010"),
@@ -30,8 +30,8 @@ function T(e, t) {
   var n, l;
   if (null == e || null == t) return null;
   if (e !== I.FAVORITES) return h.default.getChannel(t);
-  let a = p.default.getChannels(e),
-    s = null !== (l = null !== (n = a[0, p.GUILD_SELECTABLE_CHANNELS_KEY].find(e => e.channel.id === t)) && void 0 !== n ? n : a[0, p.GUILD_VOCAL_CHANNELS_KEY].find(e => e.channel.id === t)) && void 0 !== l ? l : a[I.ChannelTypes.GUILD_CATEGORY].find(e => e.channel.id === t);
+  let a = m.default.getChannels(e),
+    s = null !== (l = null !== (n = a[0, m.GUILD_SELECTABLE_CHANNELS_KEY].find(e => e.channel.id === t)) && void 0 !== n ? n : a[0, m.GUILD_VOCAL_CHANNELS_KEY].find(e => e.channel.id === t)) && void 0 !== l ? l : a[I.ChannelTypes.GUILD_CATEGORY].find(e => e.channel.id === t);
   return null == s ? void 0 : s.channel
 }
 
@@ -45,9 +45,9 @@ function A(e) {
       if (null == u) return;
       let c = T(a, s.id);
       if (null == c) return;
-      let f = m.default.getCategories(a),
-        p = C.default.getGuild(a);
-      if (null == p) return;
+      let f = p.default.getCategories(a),
+        m = C.default.getGuild(a);
+      if (null == m) return;
       let N = (0, _.getDnDUpdates)(c, T(a, u.referenceId), u.parentId, f);
       if (0 !== N.length) {
         if (a === I.FAVORITES) {
@@ -60,7 +60,7 @@ function A(e) {
             } = e, n = h.default.getChannel(t);
             if (null == n) return !1;
             let l = h.default.getChannel(n.parent_id);
-            return n.type === I.ChannelTypes.GUILD_CATEGORY || null == l ? g.default.can(I.Permissions.MANAGE_CHANNELS, p) : g.default.can(I.Permissions.MANAGE_CHANNELS, l)
+            return n.type === I.ChannelTypes.GUILD_CATEGORY || null == l ? g.default.can(I.Permissions.MANAGE_CHANNELS, m) : g.default.can(I.Permissions.MANAGE_CHANNELS, l)
           }), c.parent_id !== u.parentId && N.find(e => {
             if (e.id !== c.id) return !1;
             let t = h.default.getChannel(e.parent_id);
@@ -144,7 +144,7 @@ function A(e) {
           type: a
         },
         position: s
-      } = e, i = E.default.getGuildId(), r = m.default.getCategories(i);
+      } = e, i = E.default.getGuildId(), r = p.default.getCategories(i);
       return {
         isChannelDrag: !0,
         id: t,

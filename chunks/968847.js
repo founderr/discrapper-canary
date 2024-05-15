@@ -9,8 +9,8 @@ var l, a, s, i, r, o, u = n("392711"),
   c = n("442837"),
   f = n("570140"),
   h = n("220444"),
-  m = n("565799"),
-  p = n("501655"),
+  p = n("565799"),
+  m = n("501655"),
   C = n("569471"),
   g = n("592125"),
   E = n("430824"),
@@ -50,7 +50,7 @@ function O(e) {
 }
 
 function D(e) {
-  return !I.default.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? m.default.getMutableParticipants(e.id, p.StageChannelParticipantNamedIndex.SPEAKER).length > 0 : N.default.getVoiceStatesForChannel(e).length > 0)
+  return !I.default.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? p.default.getMutableParticipants(e.id, m.StageChannelParticipantNamedIndex.SPEAKER).length > 0 : N.default.getVoiceStatesForChannel(e).length > 0)
 }
 
 function b(e) {
@@ -66,12 +66,12 @@ function b(e) {
     c = !0,
     f = !0,
     h = !1,
-    m = a.getCategoryFromSection(a.voiceChannelsSectionNumber),
-    p = null !== (n = null == m ? void 0 : m.getShownChannelIds()) && void 0 !== n ? n : [],
+    p = a.getCategoryFromSection(a.voiceChannelsSectionNumber),
+    m = null !== (n = null == p ? void 0 : p.getShownChannelIds()) && void 0 !== n ? n : [],
     [C, g, E] = a.getSlicedChannels(s);
   for (let e = 0; e < g.length; e++) {
     let t = g[e];
-    if ((y(t.id) || d().some(t.threadIds, y)) && (f = !1), (O(t.id) || d().some(t.threadIds, O)) && (c = !1), p.includes(t.id) && (h = !0), !f && !c && h) break
+    if ((y(t.id) || d().some(t.threadIds, y)) && (f = !1), (O(t.id) || d().some(t.threadIds, O)) && (c = !1), m.includes(t.id) && (h = !0), !f && !c && h) break
   }
   let S = 0,
     I = !1,
@@ -90,7 +90,7 @@ function b(e) {
     }
   let L = null,
     x = null,
-    b = null !== (l = null == m ? void 0 : m.getChannelRecords()) && void 0 !== l ? l : [];
+    b = null !== (l = null == p ? void 0 : p.getChannelRecords()) && void 0 !== l ? l : [];
   c && N > 0 ? L = {
     mode: "mentions",
     mentionCount: N,

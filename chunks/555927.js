@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("653041"), n("47120"), n("390547");
 var a = n("735250"),
   s = n("470079"),
-  i = n("481060"),
-  l = n("906732"),
+  l = n("481060"),
+  i = n("906732"),
   r = n("171368"),
   o = n("841710"),
   u = n("981631"),
@@ -18,7 +18,7 @@ function c(e) {
     priorityMembers: t,
     otherMembers: n,
     totalMembers: s,
-    activity: l,
+    activity: i,
     guildId: c,
     sourceAnalyticsLocations: f
   } = e, E = [];
@@ -26,7 +26,7 @@ function c(e) {
       user: e,
       status: n
     }
-    of t) E.push((0, a.jsx)(i.MenuItem, {
+    of t) E.push((0, a.jsx)(l.MenuItem, {
     id: e.id,
     keepItemStyles: !0,
     render: t => (0, a.jsx)(o.default, {
@@ -44,7 +44,7 @@ function c(e) {
       }
     })
   }));
-  for (let e of n) E.push((0, a.jsx)(i.MenuItem, {
+  for (let e of n) E.push((0, a.jsx)(l.MenuItem, {
     id: e.id,
     keepItemStyles: !0,
     render: t => (0, a.jsx)(o.default, {
@@ -62,8 +62,8 @@ function c(e) {
     })
   }));
   let h = s - E.length;
-  return h > 0 && E.push((0, a.jsx)(i.MenuItem, {
-    id: "unknown-members-".concat(null == l ? void 0 : l.session_id),
+  return h > 0 && E.push((0, a.jsx)(l.MenuItem, {
+    id: "unknown-members-".concat(null == i ? void 0 : i.session_id),
     render: e => (0, a.jsx)(o.NowPlayingUnknownMemberMenuItem, {
       ...e,
       label: d.default.Messages.GAME_FEED_UNKNOWN_PLAYERS.format({
@@ -86,7 +86,7 @@ function f(e) {
     return t.id
   })), f = n.filter(e => !u.has(e.id)), {
     analyticsLocations: E
-  } = (0, l.default)(), h = s.useMemo(() => {
+  } = (0, i.default)(), h = s.useMemo(() => {
     let e = r.flatMap(e => {
       let {
         playingMembers: t
@@ -97,7 +97,7 @@ function f(e) {
   }, [n, r]);
   if (r.length <= 1 && 0 === h.length) {
     var _, C;
-    return (0, a.jsx)(i.MenuGroup, {
+    return (0, a.jsx)(l.MenuGroup, {
       label: n.length > 1 ? d.default.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({
         memberCount: n.length
       }) : void 0,
@@ -114,11 +114,11 @@ function f(e) {
   let m = r.map((e, n) => {
       let {
         playingMembers: s,
-        game: l,
+        game: i,
         activity: r
       } = e, d = new Set(s.map(e => e.id));
-      return (0, a.jsx)(i.MenuGroup, {
-        label: "".concat(l.name, " - ").concat(s.length),
+      return (0, a.jsx)(l.MenuGroup, {
+        label: "".concat(i.name, " - ").concat(s.length),
         children: c({
           priorityMembers: t.filter(e => {
             let {
@@ -135,7 +135,7 @@ function f(e) {
       }, n)
     }),
     p = h.map(e => e.id);
-  return [...m, (0, a.jsx)(i.MenuGroup, {
+  return [...m, (0, a.jsx)(l.MenuGroup, {
     label: "".concat(d.default.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, " - ").concat(h.length),
     children: c({
       priorityMembers: t.filter(e => {

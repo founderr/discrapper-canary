@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var a, s = n("735250"),
-  i = n("470079"),
-  l = n("120356"),
-  r = n.n(l),
+  l = n("470079"),
+  i = n("120356"),
+  r = n.n(i),
   o = n("692547"),
   u = n("477690"),
   d = n("624138"),
@@ -27,7 +27,7 @@ let h = (0, d.cssValueToNumber)(u.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
     BLACK: f.black,
     GRAY: f.gray
   });
-class C extends(a = i.Component) {
+class C extends(a = l.Component) {
   componentDidMount() {
     this.computeBars(), window.addEventListener("resize", this.computeBars)
   }
@@ -86,7 +86,7 @@ class C extends(a = i.Component) {
   constructor(...e) {
     super(...e), E(this, "state", {
       barWidth: 0
-    }), E(this, "sizerRef", i.createRef()), E(this, "computeBars", () => {
+    }), E(this, "sizerRef", l.createRef()), E(this, "computeBars", () => {
       let {
         current: e
       } = this.sizerRef;

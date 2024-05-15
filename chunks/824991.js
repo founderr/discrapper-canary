@@ -27,21 +27,21 @@ var l = n("735250"),
   c = n("308083"),
   f = n("981631"),
   h = n("921944"),
-  m = n("689938"),
-  p = n("207030");
+  p = n("689938"),
+  m = n("207030");
 
 function C() {
   return (0, l.jsxs)("div", {
-    className: p.inviteContainer,
+    className: m.inviteContainer,
     children: [(0, l.jsx)(s.EnvelopeIcon, {
       color: "currentColor",
       height: 12,
       width: 12,
-      className: p.envelope
+      className: m.envelope
     }), (0, l.jsx)(i.Text, {
       variant: "text-xs/bold",
-      className: p.invite,
-      children: m.default.Messages.CLAN_UPSELL_INVITE
+      className: m.invite,
+      children: p.default.Messages.CLAN_UPSELL_INVITE
     })]
   })
 }
@@ -54,7 +54,7 @@ function g(e) {
     children: (0, l.jsx)(i.Heading, {
       variant: "heading-md/semibold",
       color: "header-primary",
-      className: p.title,
+      className: m.title,
       children: t
     })
   })
@@ -67,7 +67,7 @@ function E(e) {
   return (0, l.jsx)(i.Text, {
     variant: "text-xs/normal",
     color: "text-muted",
-    className: p.message,
+    className: m.message,
     children: t
   })
 }
@@ -81,12 +81,12 @@ function _(e) {
     look: i.ButtonLooks.FILLED,
     size: i.ButtonSizes.SMALL,
     color: i.ButtonColors.BRAND_NEW,
-    className: p.button,
+    className: m.button,
     onClick: t,
     children: (0, l.jsx)(i.Text, {
       variant: "text-sm/semibold",
       color: "always-white",
-      children: m.default.Messages.CHECK_IT_OUT
+      children: p.default.Messages.CHECK_IT_OUT
     })
   })
 }
@@ -103,9 +103,9 @@ function S(e) {
       location: r.default.GUILD_CHANNEL_LIST
     })
   }, [t.id]);
-  let i = s === c.GENSHIN_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : s === c.VALORANT_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+  let i = s === c.GENSHIN_ID ? p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : s === c.VALORANT_ID ? p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
     C = a.useCallback(() => (0, l.jsx)(E, {
-      message: m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
+      message: p.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
     }), []),
     S = a.useCallback(() => (0, l.jsx)(g, {
       title: i
@@ -120,7 +120,7 @@ function S(e) {
       onClick: I
     }), [I]);
   return (0, l.jsx)(o.default, {
-    className: p.notice,
+    className: m.notice,
     guild: t,
     onDismissed: () => n(h.ContentDismissActionType.DISMISS),
     title: S,

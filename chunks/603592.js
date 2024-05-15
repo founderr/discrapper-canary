@@ -15,8 +15,8 @@ let h = a.forwardRef(function(e, t) {
     id: n,
     onClick: s,
     onContextMenu: h,
-    icon: m,
-    selected: p,
+    icon: p,
+    selected: m,
     tooltip: C,
     upperBadge: g,
     lowerBadge: E,
@@ -34,14 +34,14 @@ let h = a.forwardRef(function(e, t) {
       className: f.pill,
       children: (0, l.jsx)(u.default, {
         hovered: R,
-        selected: p
+        selected: m
       })
     }) : null, (0, l.jsx)(c.default, {
       text: C,
-      selected: p,
+      selected: m,
       children: (0, l.jsx)(o.BlobMask, {
         className: f.__invalid_circleButtonMask,
-        selected: p || R,
+        selected: m || R,
         upperBadge: g,
         lowerBadge: E,
         lowerBadgeWidth: _,
@@ -55,7 +55,7 @@ let h = a.forwardRef(function(e, t) {
           },
           onMouseDown: v,
           className: i()(f.circleIconButton, I, {
-            [f.selected]: p || R
+            [f.selected]: m || R
           }),
           onClick: s,
           "aria-label": y,
@@ -64,7 +64,7 @@ let h = a.forwardRef(function(e, t) {
             enabled: !1
           },
           ...x,
-          children: null != m && (0, l.jsx)(m, {
+          children: null != p && (0, l.jsx)(p, {
             className: f.circleIcon,
             color: "currentColor"
           })

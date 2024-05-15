@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("442837"),
   s = n("594190"),
-  i = n("836157"),
-  l = n("480294"),
+  l = n("836157"),
+  i = n("480294"),
   r = n("131951"),
   o = n("924557"),
   u = n("435064"),
@@ -21,19 +21,19 @@ function E(e) {
     }),
     {
       enableDecoupledGameClipping: n
-    } = i.default.useExperiment({
+    } = l.default.useExperiment({
       location: "useShouldDisplayClipsGuildSidebarEducation"
     }, {
       autoTrackExposure: !1
     });
-  return (0, a.useStateFromStores)([u.default, s.default, l.default, r.default], () => {
+  return (0, a.useStateFromStores)([u.default, s.default, i.default, r.default], () => {
     if (!(0, d.default)(r.default) || !t || !n) return !1;
     if (null != u.default.getLastClipsError()) return !0;
-    if (!l.default.hasConsented(f.Consents.PERSONALIZATION) || null == s.default.getVisibleGame()) return !1;
+    if (!i.default.hasConsented(f.Consents.PERSONALIZATION) || null == s.default.getVisibleGame()) return !1;
     let {
       clipsEducationState: {
         dismissedAt: a,
-        numberOfGamesLaunchedSinceDismissal: i,
+        numberOfGamesLaunchedSinceDismissal: l,
         numberOfTimesDismissed: E
       },
       hasTakenDecoupledClip: h,
@@ -44,7 +44,7 @@ function E(e) {
     if (null === a) return !0;
     if (!(null != e && (0, o.isUserPremiumTypeForClipsEarlyAccess)(e))) return !1;
     let C = Date.now() - a > c.CLIPS_EDUCATION_COOLDOWN,
-      m = i >= c.CLIPS_EDUCATION_GAME_LAUNCH_THRESHOLD,
+      m = l >= c.CLIPS_EDUCATION_GAME_LAUNCH_THRESHOLD,
       p = _ ? c.CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED : c.CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED;
     return C && m && E < p && !h
   })

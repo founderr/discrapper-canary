@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("607070"),
   f = n("492162"),
   h = n("451478"),
-  m = n("409216"),
-  p = n("86813"),
+  p = n("409216"),
+  m = n("86813"),
   C = n("826026"),
   g = n("632184"),
   E = n("934415"),
@@ -35,7 +35,7 @@ function T(e) {
     jumpToVoiceChannels: s
   } = e, r = n.getCategoryFromSection(n.voiceChannelsSectionNumber), o = (0, f.default)(n.id), c = a.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), s()
-  }, [s]), h = null !== (t = null == r ? void 0 : r.getChannelRecords()) && void 0 !== t ? t : [], p = (0, E.computeSummarizedVoiceUsers)({
+  }, [s]), h = null !== (t = null == r ? void 0 : r.getChannelRecords()) && void 0 !== t ? t : [], m = (0, E.computeSummarizedVoiceUsers)({
     channels: h,
     selectedChannelId: null,
     selectedVoiceChannelId: null,
@@ -54,12 +54,12 @@ function T(e) {
       color: "text-positive",
       className: I.barText,
       children: S.default.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
-        count: p.length
+        count: m.length
       })
-    }), (0, l.jsx)(m.default, {
+    }), (0, l.jsx)(p.default, {
       guildId: n.id,
       className: I.voiceChannelsUsers,
-      users: p.slice(0, 4),
+      users: m.slice(0, 4),
       renderMoreUsers: () => null,
       max: 4,
       size: d.AvatarSizes.SIZE_16
@@ -75,13 +75,13 @@ function A(e) {
     jumpToVoiceChannels: u,
     jumpToChannel: f
   } = e, {
-    bottomBar: m,
+    bottomBar: p,
     topBar: g
   } = (0, o.useStateFromStoresObject)([_.default], () => _.default.getUnreadStateForGuildId(n.id)), E = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), A = (0, o.useStateFromStores)([h.default], () => h.default.isFocused()), {
     mode: L,
     mentionCount: v,
     targetChannelId: x
-  } = "bottom" === t ? m : g, R = L === _.UnreadBarMode.HIDDEN, M = (0, r.useSpring)({
+  } = "bottom" === t ? p : g, R = L === _.UnreadBarMode.HIDDEN, M = (0, r.useSpring)({
     to: {
       transform: R ? "bottom" === t ? "translateY(180%)" : "translateY(-180%)" : "translateY(0%)"
     },
@@ -104,7 +104,7 @@ function A(e) {
       }) : L === _.UnreadBarMode.UNREAD ? (0, l.jsxs)(d.Clickable, {
         className: I.bar,
         onClick: y,
-        children: ["bottom" === t ? (0, l.jsx)(p.default, {
+        children: ["bottom" === t ? (0, l.jsx)(m.default, {
           className: I.unreadIcon,
           height: 14,
           width: 14

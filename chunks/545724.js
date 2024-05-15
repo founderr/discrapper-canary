@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("748780"),
   o = n("924826"),
   u = n("481060"),
@@ -13,7 +13,7 @@ var a = n("735250"),
 t.default = function(e) {
   let {
     index: t,
-    children: i,
+    children: l,
     user: E,
     channel: h,
     onClick: _,
@@ -48,7 +48,7 @@ t.default = function(e) {
         right: -8
       },
       children: (0, a.jsx)(r.default.div, {
-        className: l()(f.messageRequestItem, S, {
+        className: i()(f.messageRequestItem, S, {
           [f.active]: m || T,
           [f.firstItem]: 0 === t
         }),
@@ -61,7 +61,7 @@ t.default = function(e) {
           opacity: 1
         },
         ...e,
-        children: i(g || m || T)
+        children: l(g || m || T)
       })
     })
   })

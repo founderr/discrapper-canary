@@ -7,8 +7,8 @@ var l, a, s, i, r = n("392711"),
   c = n("782769"),
   f = n("527805"),
   h = n("841784"),
-  m = n("503438"),
-  p = n("802856"),
+  p = n("503438"),
+  m = n("802856"),
   C = n("420660"),
   g = n("728345"),
   E = n("812206"),
@@ -74,9 +74,9 @@ function J(e) {
 }
 
 function $(e) {
-  if ((0, m.default)(e)) return T.SpotifyApplication;
+  if ((0, p.default)(e)) return T.SpotifyApplication;
   let t = null != e.application_id ? E.default.getApplication(e.application_id) : null;
-  return null != t ? t : (0, p.default)(e) ? Q(e.name) : (0, C.default)(e) && null != e.url ? q(e.url) : (null != e.application_id && J(e.application_id), t)
+  return null != t ? t : (0, m.default)(e) ? Q(e.name) : (0, C.default)(e) && null != e.url ? q(e.url) : (null != e.application_id && J(e.application_id), t)
 }
 
 function ee(e) {
@@ -93,8 +93,8 @@ function et(e) {
 function en(e, t, n) {
   var l, a, s, i, r, u;
   let d;
-  let m = G.default.getCurrentUser(),
-    p = null !== (l = null == m ? void 0 : m.nsfwAllowed) && void 0 !== l && l,
+  let p = G.default.getCurrentUser(),
+    m = null !== (l = null == p ? void 0 : p.nsfwAllowed) && void 0 !== l && l,
     C = t.map(e => e.id),
     g = t.filter(t => e.has(t.id)),
     S = !1,
@@ -105,7 +105,7 @@ function en(e, t, n) {
   for (let e of t) {
     let n = v.default.getAnyStreamForUser(e.id),
       l = x.default.getChannel(null == n ? void 0 : n.channelId);
-    if ((null == l ? void 0 : l.isNSFW()) && (!p || !y.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
+    if ((null == l ? void 0 : l.isNSFW()) && (!m || !y.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
     let r = X(e.id);
     if (null != n && B.push({
         stream: n,
@@ -131,7 +131,7 @@ function en(e, t, n) {
           userId: e.id,
           application: d,
           channelId: null === (s = U.default.getVoiceStateForUser(e.id)) || void 0 === s ? void 0 : s.channelId,
-          currentUser: m,
+          currentUser: p,
           isActivitiesEnabledForCurrentPlatform: t,
           ChannelStore: x.default,
           VoiceStateStore: U.default,

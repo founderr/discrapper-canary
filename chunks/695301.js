@@ -11,14 +11,14 @@ var l = n("735250"),
   c = n("430824"),
   f = n("451478"),
   h = n("291082"),
-  m = n("61634"),
-  p = n("325257"),
+  p = n("61634"),
+  m = n("325257"),
   C = n("640651");
 t.default = a.memo(function(e) {
   let {
     guildNode: t,
     lowerBadge: n
-  } = e, g = t.id, E = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(g)), _ = (0, i.useCurrentUserGuildBadgeStatus)(g), S = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), I = (0, s.useStateFromStores)([u.default], () => u.default.isUnavailable(g)), N = (0, o.default)(e => e.guildId), T = (0, m.default)(g), {
+  } = e, g = t.id, E = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(g)), _ = (0, i.useCurrentUserGuildBadgeStatus)(g), S = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), I = (0, s.useStateFromStores)([u.default], () => u.default.isUnavailable(g)), N = (0, o.default)(e => e.guildId), T = (0, p.default)(g), {
     badge: A,
     unread: L
   } = (0, s.useStateFromStoresObject)([d.default], () => ({
@@ -32,7 +32,7 @@ t.default = a.memo(function(e) {
       height: 10
     })
   }) : null, [n, v]);
-  return (0, l.jsx)(p.default, {
+  return (0, l.jsx)(m.default, {
     ...e,
     guild: E,
     unavailable: I,

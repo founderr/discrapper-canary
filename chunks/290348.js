@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
     return V
   },
   useChannelBenefits: function() {
-    return F
+    return K
   },
   useCreateOrUpdateListingFromEditState: function() {
     return q
@@ -184,14 +184,14 @@ function V(e, t) {
 }
 let B = [];
 
-function F(e) {
+function K(e) {
   let t = f(e, e => null == e ? B : e.role_benefits.benefits.filter(o.isChannelBenefit));
   return R(e, "channelBenefits", t)
 }
-let K = [];
+let F = [];
 
 function x(e) {
-  let t = f(e, e => null == e ? K : e.role_benefits.benefits.filter(o.isIntangibleBenefit));
+  let t = f(e, e => null == e ? F : e.role_benefits.benefits.filter(o.isIntangibleBenefit));
   return R(e, "intangibleBenefits", t)
 }
 let b = new Set;

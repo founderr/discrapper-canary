@@ -9,19 +9,19 @@ n.r(t), n.d(t, {
 }), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
 var a = n("108131"),
   s = n.n(a),
-  i = n("544891"),
-  l = n("570140"),
+  l = n("544891"),
+  i = n("570140"),
   r = n("10473"),
   o = n("976757"),
   u = n("981631");
 let d = new Worker(new URL(n.p + n.u("59546"), n.b));
 
 function c(e) {
-  return i.HTTP.get({
+  return l.HTTP.get({
     url: u.Endpoints.DISCOVERY_GAME(e)
   }).then(t => {
     let n = t.body.clans.map(o.buildClanFromServer);
-    l.default.dispatch({
+    i.default.dispatch({
       type: "FETCH_STATIC_CLAN_LIST_SUCCESS",
       game: e,
       clans: function(e) {
@@ -32,24 +32,24 @@ function c(e) {
   })
 }
 async function f(e, t) {
-  var n, a, i;
+  var n, a, l;
   let o = s().v3(JSON.stringify(t)),
     u = r.default.getStaticClans(e);
-  let c = await (n = u, a = o, i = t, new Promise(e => {
+  let c = await (n = u, a = o, l = t, new Promise(e => {
       let t = n => {
         let {
           data: {
             id: s,
-            sortedClans: i
+            sortedClans: l
           }
         } = n;
-        a === s && e(i), null == d || d.removeEventListener("message", t)
+        a === s && e(l), null == d || d.removeEventListener("message", t)
       };
       null == d || d.addEventListener("message", t);
       null == d || d.postMessage({
         id: a,
         unsortedClans: n,
-        criteria: i
+        criteria: l
       })
     })),
     f = {
@@ -57,7 +57,7 @@ async function f(e, t) {
       loadedAt: Date.now(),
       items: c
     };
-  l.default.dispatch({
+  i.default.dispatch({
     type: "FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS",
     criteriaHash: o,
     searchResult: f

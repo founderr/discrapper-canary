@@ -8,8 +8,8 @@ var l, a, s, i = n("735250"),
   c = n("442837"),
   f = n("902704"),
   h = n("481060"),
-  m = n("925549"),
-  p = n("607070"),
+  p = n("925549"),
+  m = n("607070"),
   C = n("367907"),
   g = n("453542"),
   E = n("762914"),
@@ -296,7 +296,7 @@ class U extends(a = r.Component) {
     }), P(this, "handleScroll", u()(() => {
       if (null != this._list) {
         let e = this._list.getScrollerNode();
-        null != e && m.default.updateChannelListScroll(D.ME, e.scrollTop)
+        null != e && p.default.updateChannelListScroll(D.ME, e.scrollTop)
       }
     }, 100)), P(this, "renderDM", (e, t) => {
       let {
@@ -371,12 +371,12 @@ t.default = e => {
     let e = x.default.getPrivateChannelIds(),
       t = (0, N.filterOutMessageRequestsAndSpamById)(e, [I.default, T.default]);
     return (0, E.filterBroadcastingGDMs)(t)
-  }, []), h = (0, c.useStateFromStoresObject)([p.default, A.default, L.default], () => ({
+  }, []), h = (0, c.useStateFromStoresObject)([m.default, A.default, L.default], () => ({
     theme: A.default.darkSidebar ? D.ThemeTypes.DARK : n,
-    keyboardModeEnabled: p.default.keyboardModeEnabled,
+    keyboardModeEnabled: m.default.keyboardModeEnabled,
     version: null != t ? "".concat(t, ":").concat(L.default.getPrivateChannelsVersion()) : L.default.getPrivateChannelsVersion()
-  })), m = r.useRef(null), C = r.useCallback(e => {
-    let t = m.current,
+  })), p = r.useRef(null), C = r.useCallback(e => {
+    let t = p.current,
       n = document.querySelector(e);
     null != t && null != n && t.scrollIntoViewNode({
       node: n,
@@ -390,13 +390,13 @@ t.default = e => {
       }
     })
   }, []), g = r.useCallback(() => new Promise(e => {
-    let t = m.current;
+    let t = p.current;
     if (null == t) return e();
     t.scrollToTop({
       callback: () => requestAnimationFrame(() => e())
     })
   }), []), _ = r.useCallback(() => new Promise(e => {
-    let t = m.current;
+    let t = p.current;
     if (null == t) return e();
     t.scrollToBottom({
       callback() {
@@ -416,7 +416,7 @@ t.default = e => {
     children: (0, i.jsx)(U, {
       channels: u,
       privateChannelIds: f,
-      listRef: m,
+      listRef: p,
       theme: n,
       version: t,
       ...e,

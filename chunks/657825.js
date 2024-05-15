@@ -3,8 +3,8 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var s = n("399606"),
-  i = n("481060"),
-  l = n("594174"),
+  l = n("481060"),
+  i = n("594174"),
   r = n("51144"),
   o = n("546791"),
   u = n("198952"),
@@ -14,19 +14,19 @@ t.default = e => {
     userId: t,
     timestamp: n,
     timestampFormatter: c
-  } = e, f = (0, s.useStateFromStores)([l.default], () => l.default.getUser(t));
+  } = e, f = (0, s.useStateFromStores)([i.default], () => i.default.getUser(t));
   return void 0 === f ? null : (0, a.jsxs)("div", {
     className: d.container,
     children: [(0, a.jsx)(u.FamilyCenterAvatar, {
       user: f,
-      avatarSize: i.AvatarSizes.SIZE_40
+      avatarSize: l.AvatarSizes.SIZE_40
     }), (0, a.jsx)("div", {
       children: (0, a.jsxs)("div", {
         className: d.descriptors,
-        children: [(0, a.jsx)(i.Text, {
+        children: [(0, a.jsx)(l.Text, {
           variant: "text-md/semibold",
           children: r.default.getName(f)
-        }), (0, a.jsx)(i.Text, {
+        }), (0, a.jsx)(l.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
           children: (0, o.formatUserActivityTimestamp)(new Date(n).getTime(), c)

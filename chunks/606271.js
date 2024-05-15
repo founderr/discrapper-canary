@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("392711"),
   s = n.n(a),
-  i = n("442837"),
-  l = n("570140"),
+  l = n("442837"),
+  i = n("570140"),
   r = n("573979"),
   o = n("592125"),
   u = n("271383"),
@@ -46,7 +46,7 @@ class M {
   }
   init() {
     this.rpcServer.getCurrentUser = () => m.default.getCurrentUser(), this.rpcServer.onConnect = e => {
-      l.default.dispatch({
+      i.default.dispatch({
         type: "RPC_APP_CONNECTED",
         socketId: e.id,
         application: e.application
@@ -55,7 +55,7 @@ class M {
         transport: e.transport
       })
     }, this.rpcServer.onDisconnect = (e, t) => {
-      l.default.dispatch({
+      i.default.dispatch({
         type: "RPC_APP_DISCONNECTED",
         socketId: e.id,
         application: e.application,
@@ -63,7 +63,7 @@ class M {
       })
     };
     let e = [o.default, u.default, f.default, p.default, c.default, E.default];
-    new i.BatchedStoreListener(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach("RPCServerManager"), l.default.subscribe("MESSAGE_CREATE", e => this.handleMessage(e)), l.default.subscribe("MESSAGE_UPDATE", e => this.handleMessage(e)), l.default.subscribe("MESSAGE_DELETE", e => this.handleMessage(e)), l.default.subscribe("SPEAKING", e => this.handleSpeaking(e)), l.default.subscribe("OAUTH2_TOKEN_REVOKE", e => this.handleOAuth2TokenRevoke(e)), l.default.subscribe("GUILD_CREATE", e => this.handleGuildCreate(e)), l.default.subscribe("CHANNEL_CREATE", e => this.handleChannelCreate(e)), l.default.subscribe("LOGOUT", () => this.handleLogout()), l.default.subscribe("VOICE_CHANNEL_SELECT", e => this.handleVoiceChannelSelect(e)), l.default.subscribe("RPC_NOTIFICATION_CREATE", e => this.handleNotificationCreate(e)), l.default.subscribe("ACTIVITY_JOIN", e => this.handleActivityJoin(e)), l.default.subscribe("ACTIVITY_LAYOUT_MODE_UPDATE", e => this.handleActivityLayoutModeUpdate(e)), l.default.subscribe("THERMAL_STATE_CHANGE", e => this.handleThermalStateChange(e)), l.default.subscribe("ACTIVITY_SCREEN_ORIENTATION_UPDATE", e => this.handleScreenOrientationUpdate(e)), (0, A.subscribeToActivityInstanceConnectedParticipants)(e => this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), l.default.subscribe("RELATIONSHIP_ADD", e => this.handleRelationshipAdd(e)), l.default.subscribe("RELATIONSHIP_REMOVE", e => this.handleRelationshipRemove(e)), l.default.subscribe("PRESENCE_UPDATES", e => this.handlePresenceUpdate(e)), l.default.subscribe("PRESENCES_REPLACE", () => this.handlePresencesReplace()), l.default.subscribe("ENTITLEMENT_CREATE", e => this.handleEntitlementCreate(e)), l.default.subscribe("ENTITLEMENT_DELETE", e => this.handleEntitlementDelete(e)), l.default.subscribe("USER_ACHIEVEMENT_UPDATE", e => this.handleUserAchievementUpdate(e))
+    new l.BatchedStoreListener(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach("RPCServerManager"), i.default.subscribe("MESSAGE_CREATE", e => this.handleMessage(e)), i.default.subscribe("MESSAGE_UPDATE", e => this.handleMessage(e)), i.default.subscribe("MESSAGE_DELETE", e => this.handleMessage(e)), i.default.subscribe("SPEAKING", e => this.handleSpeaking(e)), i.default.subscribe("OAUTH2_TOKEN_REVOKE", e => this.handleOAuth2TokenRevoke(e)), i.default.subscribe("GUILD_CREATE", e => this.handleGuildCreate(e)), i.default.subscribe("CHANNEL_CREATE", e => this.handleChannelCreate(e)), i.default.subscribe("LOGOUT", () => this.handleLogout()), i.default.subscribe("VOICE_CHANNEL_SELECT", e => this.handleVoiceChannelSelect(e)), i.default.subscribe("RPC_NOTIFICATION_CREATE", e => this.handleNotificationCreate(e)), i.default.subscribe("ACTIVITY_JOIN", e => this.handleActivityJoin(e)), i.default.subscribe("ACTIVITY_LAYOUT_MODE_UPDATE", e => this.handleActivityLayoutModeUpdate(e)), i.default.subscribe("THERMAL_STATE_CHANGE", e => this.handleThermalStateChange(e)), i.default.subscribe("ACTIVITY_SCREEN_ORIENTATION_UPDATE", e => this.handleScreenOrientationUpdate(e)), (0, A.subscribeToActivityInstanceConnectedParticipants)(e => this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), i.default.subscribe("RELATIONSHIP_ADD", e => this.handleRelationshipAdd(e)), i.default.subscribe("RELATIONSHIP_REMOVE", e => this.handleRelationshipRemove(e)), i.default.subscribe("PRESENCE_UPDATES", e => this.handlePresenceUpdate(e)), i.default.subscribe("PRESENCES_REPLACE", () => this.handlePresencesReplace()), i.default.subscribe("ENTITLEMENT_CREATE", e => this.handleEntitlementCreate(e)), i.default.subscribe("ENTITLEMENT_DELETE", e => this.handleEntitlementDelete(e)), i.default.subscribe("USER_ACHIEVEMENT_UPDATE", e => this.handleUserAchievementUpdate(e))
   }
   handleMessage(e) {
     let t, n, a;
@@ -128,14 +128,14 @@ class M {
       message: n,
       icon: a,
       title: s,
-      body: i
+      body: l
     } = e;
     0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.NOTIFICATION_CREATE, {}, {
       channel_id: t,
       message: (0, T.transformInternalTextMessage)(n),
       icon_url: null != a ? (0, T.getRemoteIconURL)(a) : null,
       title: s,
-      body: i
+      body: l
     })
   }
   handleActivityJoin(e) {
@@ -146,10 +146,10 @@ class M {
       embedded: s
     } = e;
     if (0 === this.rpcServer.subscriptions.length) return;
-    let i = {
+    let l = {
       secret: n
     };
-    s && (i.intent = a), this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_JOIN, e => e.socket.application.id === t, i), this.rpcServer.dispatchToSubscriptions(v.RPCEvents.GAME_JOIN, e => e.socket.application.id === t, i)
+    s && (l.intent = a), this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_JOIN, e => e.socket.application.id === t, l), this.rpcServer.dispatchToSubscriptions(v.RPCEvents.GAME_JOIN, e => e.socket.application.id === t, l)
   }
   handleActivityLayoutModeUpdate(e) {
     let {
@@ -196,29 +196,29 @@ class M {
     if (0 === this.rpcServer.subscriptions.length) return;
     let {
       application: s,
-      activity: i
+      activity: l
     } = a;
-    if (null == s || null == i || null == i.party_id) return;
-    let l = m.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
-    if (null == l) return;
+    if (null == s || null == l || null == l.party_id) return;
+    let i = m.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
+    if (null == i) return;
     let r = m.default.getCurrentUser();
-    if (null == r || l.id === r.id) return;
-    let o = i.type === v.ActivityActionTypes.JOIN_REQUEST ? f.default.getApplicationActivity(r.id, s.id) : f.default.getApplicationActivity(l.id, s.id);
-    if (null == o || null == o.party || o.party.id !== i.party_id) return;
+    if (null == r || i.id === r.id) return;
+    let o = l.type === v.ActivityActionTypes.JOIN_REQUEST ? f.default.getApplicationActivity(r.id, s.id) : f.default.getApplicationActivity(i.id, s.id);
+    if (null == o || null == o.party || o.party.id !== l.party_id) return;
     let u = o.application_id;
-    switch (i.type) {
+    switch (l.type) {
       case v.ActivityActionTypes.JOIN:
         this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_INVITE, e => e.socket.application.id === u, {
-          user: (0, N.default)(l),
+          user: (0, N.default)(i),
           activity: o,
-          type: i.type,
+          type: l.type,
           channel_id: n,
           message_id: a.id
         });
         break;
       case v.ActivityActionTypes.JOIN_REQUEST:
         this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_JOIN_REQUEST, e => e.socket.application.id === u, {
-          user: (0, N.default)(l)
+          user: (0, N.default)(i)
         })
     }
   }

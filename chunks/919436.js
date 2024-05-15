@@ -10,8 +10,8 @@ var l, a = n("735250"),
   c = n("358221"),
   f = n("43267"),
   h = n("933557"),
-  m = n("93687"),
-  p = n("266076"),
+  p = n("93687"),
+  m = n("266076"),
   C = n("199902"),
   g = n("19780"),
   E = n("306680"),
@@ -132,14 +132,14 @@ class b extends(l = s.PureComponent) {
       unread: f,
       isGDMFacepileEnabled: h
     } = this.props, {
-      hovered: m,
+      hovered: p,
       animating: C
     } = this.state, g = e.isMultiUserDM() && null == e.icon && h;
     return (0, a.jsx)(i.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, a.jsxs)(L.ListItem, {
         children: [(0, a.jsx)(N.default, {
-          hovered: !C && m,
+          hovered: !C && p,
           selected: !C && n,
           unread: !C && f,
           className: M.pill
@@ -147,7 +147,7 @@ class b extends(l = s.PureComponent) {
           text: null != t ? t : "",
           selected: n,
           children: (0, a.jsx)(u.BlobMask, {
-            selected: n || m,
+            selected: n || p,
             lowerBadge: l > 0 ? (0, x.renderMentionBadge)(l) : null,
             upperBadge: (0, x.renderMediaBadge)({
               audio: s,
@@ -166,12 +166,12 @@ class b extends(l = s.PureComponent) {
                 onMouseLeave: () => this.setState({
                   hovered: !1
                 }),
-                selected: n || m,
+                selected: n || p,
                 ariaLabel: null != t ? t : "",
                 onContextMenu: this.handleContextMenu,
                 icon: g ? void 0 : this.getChannelIcon(),
                 backgroundStyle: g ? "on-hover" : "always",
-                children: g ? (0, a.jsx)(p.default, {
+                children: g ? (0, a.jsx)(m.default, {
                   channel: e,
                   size: u.AvatarSizes.SIZE_48,
                   facepileSizeOverride: u.AvatarSizes.SIZE_32,
@@ -237,15 +237,15 @@ y(b, "defaultProps", {
     d = (0, o.useStateFromStores)([E.default], () => E.default.getMentionCount(n), [n]),
     {
       isFacepileEnabled: f
-    } = m.default.useExperiment({
+    } = p.default.useExperiment({
       location: "unread_direct_message"
     }, {
       autoTrackExposure: !1
     }),
-    p = s === n,
+    m = s === n,
     S = !1,
     I = !1;
-  return p && (S = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
+  return m && (S = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
     ...e,
     ref: t,
     channelName: l,
@@ -255,7 +255,7 @@ y(b, "defaultProps", {
     audio: S,
     video: I,
     stream: r,
-    isCurrentUserInThisDMCall: p,
+    isCurrentUserInThisDMCall: m,
     isGDMFacepileEnabled: f
   })
 })

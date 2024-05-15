@@ -2,8 +2,8 @@
 n.r(t), n("390547"), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  i = n("120356"),
-  l = n.n(i),
+  l = n("120356"),
+  i = n.n(l),
   r = n("392711"),
   o = n.n(r),
   u = n("664751"),
@@ -61,9 +61,9 @@ class Q extends s.PureComponent {
       isFetching: a,
       guilds: {
         gamesYouPlay: s,
-        featured: i
+        featured: l
       },
-      searchRoute: l,
+      searchRoute: i,
       currentHomepageCategoryId: r,
       mostRecentQuery: o
     } = this.props;
@@ -72,16 +72,16 @@ class Q extends s.PureComponent {
       }), !a && 0 === o.length && P.trackDiscoveryViewed({
         loadId: this.loadId,
         gamesYouPlayGuilds: s.guilds,
-        allGuilds: i.guilds,
+        allGuilds: l.guilds,
         categoryId: r
-      }), null != l) {
+      }), null != i) {
       let {
         query: e,
         offset: t,
         limit: n,
         preferredLocale: a,
         categoryId: s
-      } = u.parse(l);
+      } = u.parse(i);
       (0, _.doAlgoliaSearch)(e, {
         categoryId: parseInt(s, 10),
         preferredLocale: a,
@@ -105,21 +105,21 @@ class Q extends s.PureComponent {
       },
       isFetching: a,
       mostRecentQuery: s,
-      currentHomepageCategoryId: i,
-      currentCategoryId: l
+      currentHomepageCategoryId: l,
+      currentCategoryId: i
     } = this.props;
     if (e.isFetching && !a && P.trackDiscoveryViewed({
         loadId: this.loadId,
         gamesYouPlayGuilds: t.guilds,
         allGuilds: n.guilds,
-        categoryId: i
-      }), e.currentCategoryId !== l) {
+        categoryId: l
+      }), e.currentCategoryId !== i) {
       var r;
       null === (r = this._scroller.current) || void 0 === r || r.scrollTo({
         to: 0
       })
     }
-    e.currentCategoryId !== l && P.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && s.length < 1 && i !== l && (0, _.selectCategory)(i)
+    e.currentCategoryId !== i && P.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && s.length < 1 && l !== i && (0, _.selectCategory)(l)
   }
   componentWillUnmount() {
     let {
@@ -138,15 +138,15 @@ class Q extends s.PureComponent {
       mightHaveGamesYouPlay: t,
       theme: n,
       userGuilds: s
-    } = this.props, i = Object.keys(s), l = e[V.GuildDiscoverySections.GAMES_YOU_PLAY];
-    l.guilds = l.guilds.filter(e => !i.includes(e.id));
+    } = this.props, l = Object.keys(s), i = e[V.GuildDiscoverySections.GAMES_YOU_PLAY];
+    i.guilds = i.guilds.filter(e => !l.includes(e.id));
     let {
       loadingGuildId: r
     } = this.state;
     return t ? (0, a.jsx)(G.default, {
       loadId: this.loadId,
       title: Y.default.Messages.GUILD_DISCOVERY_HEADER_GAMES_YOU_PLAY,
-      guildsData: l,
+      guildsData: i,
       loadingGuildId: r,
       analyticsContext: P.AnalyticsContexts.RECOMMENDED,
       onViewGuild: this.handleViewGuild,
@@ -162,8 +162,8 @@ class Q extends s.PureComponent {
       guilds: {
         search: s
       },
-      defaultLanguage: i,
-      isFetchingSearch: l,
+      defaultLanguage: l,
+      isFetchingSearch: i,
       currentCategoryId: r,
       categories: o,
       currentCategoryName: u
@@ -186,8 +186,8 @@ class Q extends s.PureComponent {
       loadId: this.loadId,
       searchResults: f,
       mostRecentQuery: n,
-      isFetchingSearch: l,
-      defaultLanguage: i,
+      isFetchingSearch: i,
+      defaultLanguage: l,
       placeholder: c,
       currentCategoryId: r,
       categories: o
@@ -200,8 +200,8 @@ class Q extends s.PureComponent {
       guilds: {
         search: s
       },
-      availableLanguages: i,
-      defaultLanguage: l,
+      availableLanguages: l,
+      defaultLanguage: i,
       isFetchingSearch: r,
       theme: o,
       currentCategoryId: u,
@@ -213,8 +213,8 @@ class Q extends s.PureComponent {
     }), E = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[u]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
     return (0, a.jsx)(k.default, {
       loadId: this.loadId,
-      availableLanguages: i,
-      defaultLanguage: l,
+      availableLanguages: l,
+      defaultLanguage: i,
       placeholder: f,
       isFetchingSearch: r,
       searchResults: E,
@@ -275,10 +275,10 @@ class Q extends s.PureComponent {
     var e, t;
     let {
       currentCategoryName: n,
-      mostRecentQuery: i,
+      mostRecentQuery: l,
       currentCategoryId: r,
       guilds: u
-    } = this.props, d = i.length > 0;
+    } = this.props, d = l.length > 0;
     x.DiscoveryTagsExperiment.trackExposure({
       location: "54961b_3"
     });
@@ -298,10 +298,10 @@ class Q extends s.PureComponent {
     return (0, a.jsxs)("div", {
       className: W.pageWrapper,
       children: [(0, a.jsx)(S.AppPageTitle, {
-        subsection: d ? i : void 0,
+        subsection: d ? l : void 0,
         location: _
       }), (0, a.jsx)("div", {
-        className: l()(W.dragRegion, W.pageHeaderDrag, {
+        className: i()(W.dragRegion, W.pageHeaderDrag, {
           [W.searchPageDrag]: d
         })
       }), c.isMobile && (0, a.jsx)(y.default, {
@@ -311,7 +311,7 @@ class Q extends s.PureComponent {
         ref: this._scroller,
         onScroll: this.handleScroll,
         children: (0, a.jsx)("div", {
-          className: l()(W.viewWrapper, {
+          className: i()(W.viewWrapper, {
             [W.searchPage]: d
           }),
           children: d ? this.renderSearchResults() : (0, a.jsxs)(E.HeadingLevel, {
@@ -387,14 +387,14 @@ class Q extends s.PureComponent {
       } = this.state, a = null !== (t = null === (e = this._scroller.current) || void 0 === e ? void 0 : e.getScrollerState().scrollTop) && void 0 !== t ? t : 0;
       n.setValue(Math.min(1, a / 200))
     }), q(this, "handleViewGuild", async (e, t, n, a) => {
-      var s, i;
+      var s, l;
       let {
-        currentCategoryId: l
+        currentCategoryId: i
       } = this.props, {
         loadingGuildId: r
       } = this.state;
       if (e === r) return;
-      let o = null !== (i = null === (s = this._scroller.current) || void 0 === s ? void 0 : s.getScrollerState().scrollTop) && void 0 !== i ? i : 0,
+      let o = null !== (l = null === (s = this._scroller.current) || void 0 === s ? void 0 : s.getScrollerState().scrollTop) && void 0 !== l ? l : 0,
         {
           location: u
         } = (0, T.getHistory)();
@@ -404,7 +404,7 @@ class Q extends s.PureComponent {
       }), this.setState({
         loadingGuildId: e
       });
-      let d = l !== H.DISCOVERY_ALL_CATEGORIES_ID ? l : null;
+      let d = i !== H.DISCOVERY_ALL_CATEGORIES_ID ? i : null;
       try {
         await P.viewGuild({
           loadId: null != a ? a : this.loadId,
@@ -426,11 +426,11 @@ class Q extends s.PureComponent {
         defaultLanguage: s
       } = this.props;
       if (null == a) return;
-      let i = {
+      let l = {
         approximate_member_count: P.MINIMUM_MEMBER_COUNT
       };
-      (0, _.getSearchResultsCount)(e, i), (0, _.doAlgoliaSearch)(e, {
-        filters: i,
+      (0, _.getSearchResultsCount)(e, l), (0, _.doAlgoliaSearch)(e, {
+        filters: l,
         categoryId: a,
         preferredLocale: s.code,
         offset: 0,
@@ -448,21 +448,21 @@ let Z = f.default.connectStores([v.default, N.default, M.default, R.default, O.d
       code: n
     })) && void 0 !== e ? e : t[0],
     s = Object.keys(M.default.applicationStatistics),
-    i = R.default.hasConsented(V.Consents.PERSONALIZATION) && s.length > 0,
-    l = O.default.getCurrentCategoryId(),
+    l = R.default.hasConsented(V.Consents.PERSONALIZATION) && s.length > 0,
+    i = O.default.getCurrentCategoryId(),
     r = O.default.getCurrentHomepageCategoryId();
   return {
     isFetching: O.default.isFetching(),
     isFetchingSearch: O.default.isFetchingSearch(),
     guilds: O.default.getDiscoverableGuilds(),
     mostRecentQuery: O.default.getMostRecentQuery(),
-    currentCategoryId: l,
+    currentCategoryId: i,
     currentHomepageCategoryId: r,
-    currentCategoryName: U.default.getCategoryName(l),
+    currentCategoryName: U.default.getCategoryName(i),
     categories: U.default.getDiscoveryCategories(),
     userGuilds: L.default.getGuilds(),
     theme: v.default.theme,
-    mightHaveGamesYouPlay: i,
+    mightHaveGamesYouPlay: l,
     availableLanguages: t,
     defaultLanguage: a
   }
@@ -474,7 +474,7 @@ function X(e) {
   } = e, {
     fetching: n,
     loadId: s,
-    recommendedGuilds: i
+    recommendedGuilds: l
   } = (0, f.useStateFromStoresObject)([g.default], () => ({
     recommendedGuilds: g.default.getRecommendedGuilds(),
     loadId: g.default.getLoadId(),
@@ -484,7 +484,7 @@ function X(e) {
     searchRoute: t,
     fetchingRecommendations: n,
     usingGameRecommendations: !1,
-    recommendationsGuilds: i,
+    recommendationsGuilds: l,
     recommendationsLoadId: s
   })
 }
@@ -495,8 +495,8 @@ t.default = function(e) {
     location: "guild_discovery"
   }).length > 0, {
     clanDiscoveryEnabled: s
-  } = (0, p.useClanPilotExperiment)("guild_discovery"), i = (0, f.useStateFromStores)([O.default], () => O.default.getCurrentCategoryId()), l = (0, f.useStateFromStores)([O.default], () => O.default.getIsReady());
-  return (n || s) && (!l || i === H.CategoryId.Clans) ? (0, a.jsx)(j.default, {}) : (0, a.jsx)(X, {
+  } = (0, p.useClanPilotExperiment)("guild_discovery"), l = (0, f.useStateFromStores)([O.default], () => O.default.getCurrentCategoryId()), i = (0, f.useStateFromStores)([O.default], () => O.default.getIsReady());
+  return (n || s) && (!i || l === H.CategoryId.Clans) ? (0, a.jsx)(j.default, {}) : (0, a.jsx)(X, {
     searchRoute: t
   })
 }

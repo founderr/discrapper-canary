@@ -81,7 +81,7 @@ function B(e) {
   }), t
 }
 
-function F(e) {
+function K(e) {
   let {
     section: t
   } = e;
@@ -97,7 +97,7 @@ function F(e) {
     }
   })).map(e => e.userId).value()
 }
-class K extends(E = A.default.Store) {
+class F extends(E = A.default.Store) {
   get logs() {
     return g
   }
@@ -153,12 +153,12 @@ class K extends(E = A.default.Store) {
     return V
   }
 }
-n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = K) ? Object.defineProperty(_, a, {
+n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = F) ? Object.defineProperty(_, a, {
   value: n,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : _[a] = n, t.default = new K(l.default, {
+}) : _[a] = n, t.default = new F(l.default, {
   AUDIT_LOG_FETCH_START: function() {
     f = !0
   },
@@ -211,13 +211,13 @@ n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = K) ? Object.defineP
     } = e;
     v = t
   },
-  GUILD_SETTINGS_SET_SECTION: F,
+  GUILD_SETTINGS_SET_SECTION: K,
   GUILD_SETTINGS_INIT: function(e) {
     let {
       guildId: t,
       section: s
     } = e;
-    return S = t, v = null, F({
+    return S = t, v = null, K({
       section: s
     })
   },

@@ -26,13 +26,13 @@ async function c() {
       type: "BILLING_USER_OFFER_FETCH_START"
     });
     try {
-      var c, h, m;
+      var c, h, p;
       let e = await l.HTTP.post({
           url: d.Endpoints.USER_OFFER
         }),
         t = null !== (c = e.body.user_trial_offer) && void 0 !== c ? c : null,
         o = null !== (h = e.body.user_discount) && void 0 !== h ? h : null,
-        u = null !== (m = e.body.user_discount_offer) && void 0 !== m ? m : null;
+        u = null !== (p = e.body.user_discount_offer) && void 0 !== p ? p : null;
       return null == t && (0, i.isDismissibleContentDismissed)(a.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, r.removeDismissedContent)(a.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING), s.default.dispatch({
         type: "BILLING_USER_OFFER_FETCH_SUCCESS",
         userTrialOffer: t,
@@ -58,7 +58,7 @@ async function f() {
         url: d.Endpoints.ANNUAL_USER_OFFER
       }),
       n = null !== (e = t.body.user_discount_offer) && void 0 !== e ? e : null;
-    null != n && (m(n), s.default.dispatch({
+    null != n && (p(n), s.default.dispatch({
       type: "BILLING_ANNUAL_USER_OFFER_FETCH_SUCCESS",
       userDiscountOffer: n
     }))
@@ -96,7 +96,7 @@ function h(e, t) {
     })
   })
 }
-async function m(e) {
+async function p(e) {
   if (null != e && null == e.applied_at) try {
     await l.HTTP.post({
       url: d.Endpoints.USER_OFFER_REDEEM,

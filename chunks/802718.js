@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("377171"),
   f = n("682662"),
   h = n("662146"),
-  m = n("26290"),
-  p = n("15434"),
+  p = n("26290"),
+  m = n("15434"),
   C = n("678513"),
   g = n("981631"),
   E = n("689938"),
@@ -70,11 +70,11 @@ function S(e) {
         children: (0, l.jsx)(r.ThemeContextProvider, {
           theme: T,
           children: (0, l.jsx)(r.BlobMask, {
-            lowerBadge: (0, l.jsx)(m.NumberBadge, {
+            lowerBadge: (0, l.jsx)(p.NumberBadge, {
               count: 1,
               color: c.default.BG_BRAND
             }),
-            children: (0, l.jsx)(p.default, {
+            children: (0, l.jsx)(m.default, {
               ...o,
               onClick: C,
               onContextMenu: S,

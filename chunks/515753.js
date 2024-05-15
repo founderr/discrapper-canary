@@ -18,8 +18,8 @@ var l = n("735250"),
   c = n("873546"),
   f = n("442837"),
   h = n("481060"),
-  m = n("493683"),
-  p = n("239091"),
+  p = n("493683"),
+  m = n("239091"),
   C = n("420660"),
   g = n("702321"),
   E = n("201895"),
@@ -89,8 +89,8 @@ class q extends a.Component {
       children: o,
       locationState: d,
       onClick: f,
-      className: m,
-      role: p,
+      className: p,
+      role: m,
       "aria-posinset": C,
       "aria-setsize": g,
       ...E
@@ -98,9 +98,9 @@ class q extends a.Component {
     return (0, l.jsx)(U.default, {
       className: i()(W.channel, {
         [W.fullWidth]: c.isMobile
-      }, m),
+      }, p),
       onClick: f,
-      role: p,
+      role: m,
       focusProps: {
         within: !0,
         ...Z
@@ -162,9 +162,9 @@ function J(e) {
     H(!1)
   }, eo = function(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    null != e && (e.preventDefault(), e.stopPropagation()), m.default.closePrivateChannel(t.id, r, n)
+    null != e && (e.preventDefault(), e.stopPropagation()), p.default.closePrivateChannel(t.id, r, n)
   }, eu = () => {
-    m.default.preload(Y.ME, t.id)
+    p.default.preload(Y.ME, t.id)
   }, ed = e => {
     e.stopPropagation()
   }, ec = e => {
@@ -173,7 +173,7 @@ function J(e) {
       null === (t = q.current) || void 0 === t || t.click()
     }
   }, ef = e => {
-    t.isMultiUserDM() ? (0, p.openContextMenuLazy)(e, async () => {
+    t.isMultiUserDM() ? (0, m.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("79695"), n.e("25421")]).then(n.bind(n, "354741"));
@@ -184,7 +184,7 @@ function J(e) {
       })
     }, {
       noBlurEvent: !0
-    }) : (0, p.openContextMenuLazy)(e, async () => {
+    }) : (0, m.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("56826")]).then(n.bind(n, "131404"));
@@ -213,7 +213,7 @@ function J(e) {
       onSubmit: eo,
       ...e
     }))
-  }, em = () => {
+  }, ep = () => {
     let e = {
       className: W.activity,
       textClassName: W.activityText,
@@ -235,7 +235,7 @@ function J(e) {
       hideTooltip: !0,
       user: c
     }) : null
-  }, ep = () => {
+  }, em = () => {
     let e = h.AvatarSizes.SIZE_32;
     if (t.isMultiUserDM()) return t.recipients.length >= 2 && s && null == t.icon ? (0, l.jsx)(L.default, {
       "aria-hidden": !0,
@@ -314,11 +314,11 @@ function J(e) {
             }),
             ...a,
             children: (0, l.jsx)(G.default, {
-              avatar: ep(),
+              avatar: em(),
               selected: r,
               highlighted: el,
               muted: null != en && en,
-              subText: em(),
+              subText: ep(),
               name: (0, l.jsx)(P.default, {
                 tooltipClassName: W.overflowTooltip,
                 children: eN

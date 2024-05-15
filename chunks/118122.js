@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("451603"),
   f = n("885714"),
   h = n("155409"),
-  m = n("430824"),
-  p = n("594174"),
+  p = n("430824"),
+  m = n("594174"),
   C = n("729285"),
   g = n("40153"),
   E = n("603592"),
@@ -52,7 +52,7 @@ function L(e) {
   let {
     disableTooltip: t,
     lastTargetNode: n
-  } = e, o = (0, s.useStateFromStores)([m.default], () => m.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, S.CREATE_GUILD_MODAL_KEY)), {
+  } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([m.default], () => m.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, S.CREATE_GUILD_MODAL_KEY)), {
     analyticsLocations: M
   } = (0, u.default)(), y = (0, r.useRedesignIconContext)().enabled, O = (0, l.jsx)(E.default, {
     showPill: !1,
