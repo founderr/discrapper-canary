@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return C
   }
 }), n("789020"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
 var i = n("735250");
@@ -25,59 +25,70 @@ var r = n("120356"),
   m = n("231338"),
   N = n("689938"),
   p = n("236099");
+let O = e => {
+  switch (e) {
+    case l.ApplicationDisclosure.IP_LOCATION:
+      return d.default;
+    case l.ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS:
+      return s.EmbedIcon;
+    default:
+      return null
+  }
+};
 
-function O(e) {
+function C(e) {
   var t;
   let n, {
       application: r,
       scopes: a,
-      redirectUri: o,
-      approximateGuildCount: O,
-      isEmbeddedFlow: R,
-      disclosures: g
+      redirectUri: s,
+      approximateGuildCount: o,
+      isEmbeddedFlow: d,
+      disclosures: C
     } = e,
-    L = new Date(f.default.extractTimestamp(r.id)),
-    v = (0, h.getSecurityMessage)(a),
-    D = (0, T.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, A.ApplicationFlags.EMBEDDED);
-  if (null != o && !D && !R) {
-    let e = new URL(o);
+    g = new Date(f.default.extractTimestamp(r.id)),
+    L = (0, h.getSecurityMessage)(a),
+    v = (0, T.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, A.ApplicationFlags.EMBEDDED);
+  if (null != s && !v && !d) {
+    let e = new URL(s);
     n = null != e.host && e.host.length > 0 ? e.origin : e.href
   }
   return (0, i.jsxs)("div", {
     className: p.applicationDetails,
-    children: [null != n ? (0, i.jsx)(C, {
+    children: [null != n ? (0, i.jsx)(R, {
       className: p.redirectWarning,
       icon: _.default,
       text: N.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
         origin: n
       })
-    }) : null, (0, i.jsx)(C, {
+    }) : null, (0, i.jsx)(R, {
       icon: c.default,
       text: (0, S.getApplicationDetailsText)(r)
-    }), (0, i.jsx)(C, {
+    }), (0, i.jsx)(R, {
       icon: u.default,
       text: N.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
-        date: L
+        date: g
       })
-    }), a.includes(m.OAuth2Scopes.BOT) && null != O ? (0, i.jsx)(C, {
+    }), a.includes(m.OAuth2Scopes.BOT) && null != o ? (0, i.jsx)(R, {
       icon: E.default,
       text: N.default.Messages.OAUTH2_DETAILS_GUILDS.format({
-        guildCount: O
+        guildCount: o
       })
-    }) : null, (0, i.jsx)(C, {
+    }) : null, (0, i.jsx)(R, {
       icon: I.default,
-      text: v
-    }), null != g && g.includes(l.ApplicationDisclosure.IP_LOCATION) ? (0, i.jsx)(C, {
-      icon: d.default,
-      text: N.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE
-    }) : null, null != g && g.includes(l.ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS) ? (0, i.jsx)(C, {
-      icon: s.EmbedIcon,
-      text: N.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE
+      text: L
+    }), null != C ? C.map(e => {
+      let t = (0, l.getTextForDisclosure)(e),
+        n = O(e);
+      return null != n && null != t ? (0, i.jsx)(R, {
+        icon: n,
+        text: t
+      }) : null
     }) : null]
   })
 }
 
-function C(e) {
+function R(e) {
   let {
     icon: t,
     text: n,

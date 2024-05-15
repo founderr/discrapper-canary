@@ -48,6 +48,6 @@ function u(e) {
     case r.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS:
       return s.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE;
     default:
-      return s.default.Messages.OAUTH2_UNKNOWN_DISCLOSURE
+      return null
   }
 }

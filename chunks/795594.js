@@ -211,14 +211,17 @@ let V = e => {
                 }), (0, a.jsx)(f.FormText, {
                   children: e
                 })]
-              }, t)), null == l ? void 0 : l.map((t, s) => (0, a.jsxs)("li", {
-                className: i()(G.permission, k.marginTop8),
-                children: [(0, a.jsx)(V, {
-                  disclosure: t
-                }), (0, a.jsx)(f.FormText, {
-                  children: (0, p.getTextForDisclosure)(t)
-                })]
-              }, s + e.length))]
+              }, t)), null == l ? void 0 : l.map((t, s) => {
+                let n = (0, p.getTextForDisclosure)(t);
+                return null != n ? (0, a.jsxs)("li", {
+                  className: i()(G.permission, k.marginTop8),
+                  children: [(0, a.jsx)(V, {
+                    disclosure: t
+                  }), (0, a.jsx)(f.FormText, {
+                    children: n
+                  })]
+                }, s + e.length) : null
+              })]
             })
           })
         })(), u && (0, a.jsx)(H, {
