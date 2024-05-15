@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n("47120");
-var i, s = n("735250"),
-  r = n("470079"),
-  a = n("120356"),
-  l = n.n(a),
-  u = n("481060"),
-  o = n("37234"),
-  d = n("230711"),
-  c = n("981631"),
-  f = n("689938"),
-  _ = n("662090");
+a.r(t), a("47120");
+var n, r = a("735250"),
+  i = a("470079"),
+  s = a("120356"),
+  l = a.n(s),
+  o = a("481060"),
+  d = a("37234"),
+  c = a("230711"),
+  u = a("981631"),
+  f = a("689938"),
+  m = a("662090");
 
-function E(e, t, n) {
+function h(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
-class S extends(i = r.Component) {
+class E extends(n = i.Component) {
   render() {
-    return (0, s.jsxs)("div", {
-      className: _.streamerModeEnabled,
-      children: [(0, s.jsx)("div", {
-        className: _.streamerModeEnabledImage
-      }), (0, s.jsx)(u.Clickable, {
-        className: l()(_.streamerModeEnabledBtn, {
-          [_.disabled]: this.props.disableButton
+    return (0, r.jsxs)("div", {
+      className: m.streamerModeEnabled,
+      children: [(0, r.jsx)("div", {
+        className: m.streamerModeEnabledImage
+      }), (0, r.jsx)(o.Clickable, {
+        className: l()(m.streamerModeEnabledBtn, {
+          [m.disabled]: this.props.disableButton
         }),
         onClick: this.handleClick,
         children: f.default.Messages.STREAMER_MODE_ENABLED
@@ -35,11 +35,11 @@ class S extends(i = r.Component) {
     })
   }
   constructor(...e) {
-    super(...e), E(this, "handleClick", () => {
-      !this.props.disableButton && ((0, o.pushLayer)(c.Layers.USER_SETTINGS), d.default.setSection(c.UserSettingsSections.STREAMER_MODE))
+    super(...e), h(this, "handleClick", () => {
+      !this.props.disableButton && ((0, d.pushLayer)(u.Layers.USER_SETTINGS), c.default.setSection(u.UserSettingsSections.STREAMER_MODE))
     })
   }
 }
-E(S, "defaultProps", {
+h(E, "defaultProps", {
   disableButton: !1
-}), t.default = S
+}), t.default = E

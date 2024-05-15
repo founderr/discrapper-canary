@@ -54,7 +54,7 @@ function Y(e) {
     ...B
   } = e, Y = (0, d.useStateFromStores)([_.default], () => _.default.getIsEnabled(), []), {
     analyticsLocations: k
-  } = (0, I.default)(H), [P, G] = a.useState(T), U = (0, u.default)(P), [Z, W] = a.useState(null), [z, q] = a.useState(v), [J, K] = a.useState(void 0), [X] = (0, m.default)(null == z ? [] : [z]), Q = a.useRef(null), $ = a.useMemo(() => ({
+  } = (0, I.default)(H), [P, G] = a.useState(T), U = (0, u.default)(P), [Z, W] = a.useState(null), [z, K] = a.useState(v), [q, J] = a.useState(void 0), [X] = (0, m.default)(null == z ? [] : [z]), Q = a.useRef(null), $ = a.useMemo(() => ({
     application_id: z,
     source_section: n.section,
     impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW
@@ -72,13 +72,13 @@ function Y(e) {
       let {
         applicationId: l
       } = e, i = null === (t = Q.current) || void 0 === t ? void 0 : t.scrollTop;
-      null != i && W(i), q(l), G(M.ActivityShelfSlides.SELECT_CHANNEL)
+      null != i && W(i), K(l), G(M.ActivityShelfSlides.SELECT_CHANNEL)
     }, []),
     et = a.useCallback(e => {
       let {
         applicationId: t
       } = e;
-      q(t), G(M.ActivityShelfSlides.DETAIL_PAGE)
+      K(t), G(M.ActivityShelfSlides.DETAIL_PAGE)
     }, []);
   a.useEffect(() => {
     S.default.track(L.AnalyticEvents.OPEN_MODAL, {
@@ -215,8 +215,8 @@ function Y(e) {
             slide: P,
             children: (0, i.jsx)(y.default, {
               applicationId: z,
-              selectedChannelId: J,
-              setSelectedChannelId: K,
+              selectedChannelId: q,
+              setSelectedChannelId: J,
               guildId: l,
               enableSelectedTextChannelInvite: A
             })
@@ -257,7 +257,7 @@ function Y(e) {
                     guildId: l,
                     applicationId: z,
                     locationObject: n,
-                    selectedChannelId: J,
+                    selectedChannelId: q,
                     enableSelectedTextChannelInvite: A
                   })
                 })]

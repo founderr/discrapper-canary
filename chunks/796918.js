@@ -6,8 +6,8 @@ var n = a("735250"),
   s = a.n(i),
   l = a("481060"),
   o = a("442837"),
-  c = a("314897"),
-  d = a("729285"),
+  d = a("314897"),
+  c = a("729285"),
   u = a("353093"),
   f = a("87576"),
   m = a("308083"),
@@ -22,7 +22,7 @@ t.default = e => {
     handleUpdate: t,
     interests: a,
     error: i
-  } = e, [p, C] = r.useState(""), _ = (0, o.useStateFromStores)([c.default], () => c.default.getId()), x = r.useMemo(() => (0, u.stableSortSet)(m.SUGGESTED_TRAITS_SET, _), [_]), g = r.useMemo(() => Array.from(a), [a]), I = r.useMemo(() => g.filter(T), [g]), v = r.useMemo(() => [...x, ...I], [I, x]), N = r.useMemo(() => g.filter(e => !m.ALL_TRAITS_SET.has(e) && !m.LANGUAGES_SET.has(e)), [g]), A = e => {
+  } = e, [p, C] = r.useState(""), _ = (0, o.useStateFromStores)([d.default], () => d.default.getId()), x = r.useMemo(() => (0, u.stableSortSet)(m.SUGGESTED_TRAITS_SET, _), [_]), g = r.useMemo(() => Array.from(a), [a]), I = r.useMemo(() => g.filter(T), [g]), v = r.useMemo(() => [...x, ...I], [I, x]), N = r.useMemo(() => g.filter(e => !m.ALL_TRAITS_SET.has(e) && !m.LANGUAGES_SET.has(e)), [g]), A = e => {
     let n = new Set(a);
     n.delete(e), t({
       interests: n
@@ -75,7 +75,7 @@ t.default = e => {
           }), p.length > 0 && (0, n.jsx)(l.Clickable, {
             onClick: () => S(p.trim()),
             className: s()(E.plusIcon, E.clickable),
-            children: (0, n.jsx)(d.default, {
+            children: (0, n.jsx)(c.default, {
               className: E.icon
             })
           }), p.length > 0 && (0, n.jsx)(l.Text, {

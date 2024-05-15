@@ -27,8 +27,8 @@ var a = s("735250"),
   R = s("285952"),
   M = s("6048"),
   v = s("950463"),
-  D = s("507893"),
-  L = s("768581"),
+  L = s("507893"),
+  D = s("768581"),
   P = s("49012"),
   j = s("210887"),
   b = s("436267"),
@@ -48,7 +48,7 @@ function H(e) {
   } = e;
   return (0, a.jsxs)("div", {
     className: G.twoWayWarning,
-    children: [(0, a.jsx)(D.default, {
+    children: [(0, a.jsx)(L.default, {
       className: G.twoWayWarningIcon
     }), (0, a.jsx)(f.Text, {
       color: "text-normal",
@@ -120,7 +120,7 @@ let V = e => {
       outline: !0,
       children: (0, a.jsxs)(f.HeadingLevel, {
         component: (() => {
-          let e = L.default.getApplicationIconURL({
+          let e = D.default.getApplicationIconURL({
               id: s.id,
               icon: s.icon
             }),

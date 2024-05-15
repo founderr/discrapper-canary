@@ -6,8 +6,8 @@ var n = a("735250"),
   s = a.n(i),
   l = a("481060"),
   o = a("282597"),
-  c = a("877715"),
-  d = a("729285"),
+  d = a("877715"),
+  c = a("729285"),
   u = a("838221"),
   f = a("246364"),
   m = a("700833"),
@@ -69,7 +69,7 @@ t.default = function(e) {
       className: E.leftRailIconContainer,
       children: [(0, n.jsx)("div", {
         className: E.iconContainer,
-        children: (0, n.jsx)(d.default, {
+        children: (0, n.jsx)(c.default, {
           width: 18,
           height: 20,
           className: E.icon
@@ -92,7 +92,7 @@ t.default = function(e) {
         }), (0, n.jsx)(T, {
           formFieldType: f.VerificationFormFieldTypes.PARAGRAPH,
           addFormField: t,
-          icon: c.default,
+          icon: d.default,
           text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
           onClick: () => x(f.VerificationFormFieldTypes.PARAGRAPH)
         }), (0, n.jsx)(T, {

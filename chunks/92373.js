@@ -6,8 +6,8 @@ var n = a("735250"),
   s = a.n(i),
   l = a("183249"),
   o = a("824385"),
-  c = a("481060"),
-  d = a("442837"),
+  d = a("481060"),
+  c = a("442837"),
   u = a("210753"),
   f = a("77498"),
   m = a("441674"),
@@ -21,13 +21,13 @@ t.default = function(e) {
     selected: T,
     locked: p = !1,
     remainingGame: C = 0
-  } = e, _ = (0, c.useToken)(c.tokens.colors.WHITE), {
+  } = e, _ = (0, d.useToken)(d.tokens.colors.WHITE), {
     isFetching: x,
     coverImageUrl: g
   } = (0, u.useDetectableGameSupplementalData)(t, {
     coverImageHeight: 336,
     coverImageWidth: 252
-  }), I = (0, d.useStateFromStores)([f.default], () => {
+  }), I = (0, c.useStateFromStores)([f.default], () => {
     var e, a;
     return null !== (a = null === (e = f.default.getGameById(t)) || void 0 === e ? void 0 : e.name) && void 0 !== a ? a : ""
   }), v = r.useCallback(() => {
@@ -45,7 +45,7 @@ t.default = function(e) {
   }), [g, x, I]);
   return (0, n.jsxs)("div", {
     className: E.selectedGame,
-    children: [(0, n.jsxs)(c.Clickable, {
+    children: [(0, n.jsxs)(d.Clickable, {
       onClick: v,
       className: s()(a, x ? E.gameImageLoading : void 0, E.gameImageBackground),
       children: [T && (0, n.jsx)("div", {
@@ -58,7 +58,7 @@ t.default = function(e) {
         })
       }), N, C > 0 && (0, n.jsx)("div", {
         className: E.remainingGame,
-        children: (0, n.jsx)(c.Text, {
+        children: (0, n.jsx)(d.Text, {
           variant: "text-xs/normal",
           color: "always-white",
           children: h.default.Messages.COUNT_REMAINING.format({
@@ -66,7 +66,7 @@ t.default = function(e) {
           })
         })
       })]
-    }), (0, n.jsxs)(c.Text, {
+    }), (0, n.jsxs)(d.Text, {
       className: E.gameName,
       variant: "text-xs/normal",
       color: "header-primary",

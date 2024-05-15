@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   useClanSetupGameSelectableSearch: function() {
-    return d
+    return c
   }
 });
 var n = a("470079"),
@@ -11,12 +11,12 @@ var n = a("470079"),
   l = a("77498"),
   o = a("308083");
 
-function c(e) {
+function d(e) {
   var t;
   return null !== (t = o.HOISTED_SEARCH_APPLICATION_IDS_BY_PRIORITY.get(e)) && void 0 !== t ? t : 0
 }
 
-function d() {
+function c() {
   let e = (0, s.useStateFromStores)([l.default], () => i()(l.default.games).map(e => ({
       value: e.id,
       label: e.name
@@ -24,9 +24,9 @@ function d() {
       let {
         value: t
       } = e;
-      return c(t)
+      return d(t)
     }).reverse().value(), []),
-    t = n.useCallback((e, t) => c(t.item.value) - c(e.item.value), []);
+    t = n.useCallback((e, t) => d(t.item.value) - d(e.item.value), []);
   return {
     options: e,
     matchSorterOptions: n.useMemo(() => ({

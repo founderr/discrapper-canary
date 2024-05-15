@@ -6,8 +6,8 @@ var n = a("470079"),
   s = a("570140"),
   l = a("367907"),
   o = a("430824"),
-  c = a("496675"),
-  d = a("626135"),
+  d = a("496675"),
+  c = a("626135"),
   u = a("70956"),
   f = a("997787"),
   m = a("981631");
@@ -15,9 +15,9 @@ let h = 1 * u.default.Millis.DAY,
   E = new Map;
 t.default = {
   useShouldShowChannelNotice(e) {
-    let t = (0, r.useStateFromStores)([o.default, c.default], () => {
+    let t = (0, r.useStateFromStores)([o.default, d.default], () => {
       let t = o.default.getGuild(e);
-      return null != t && c.default.can(m.Permissions.ADMINISTRATOR, t)
+      return null != t && d.default.can(m.Permissions.ADMINISTRATOR, t)
     });
     n.useEffect(() => {
       t && ! function(e) {
@@ -53,7 +53,7 @@ t.default = {
       type: "COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED",
       guildId: e,
       integrationId: t.id
-    }), d.default.track(m.AnalyticEvents.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
+    }), c.default.track(m.AnalyticEvents.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
       ...(0, l.collectGuildAnalyticsMetadata)(e),
       application_id: null === (a = t.application) || void 0 === a ? void 0 : a.id,
       location: "overview"
@@ -64,7 +64,7 @@ t.default = {
     void 0 !== t && (s.default.dispatch({
       type: "COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED",
       integrationId: t.id
-    }), d.default.track(m.AnalyticEvents.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
+    }), c.default.track(m.AnalyticEvents.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
       ...(0, l.collectGuildAnalyticsMetadata)(e),
       application_id: null === (a = t.application) || void 0 === a ? void 0 : a.id,
       location: "toggle"

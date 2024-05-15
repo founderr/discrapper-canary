@@ -7,8 +7,8 @@ var r = a("120356"),
   s = a("481060"),
   l = a("814550"),
   o = a("246364"),
-  c = a("700833"),
-  d = a("689938"),
+  d = a("700833"),
+  c = a("689938"),
   u = a("17359");
 t.default = function(e) {
   let {
@@ -28,14 +28,14 @@ t.default = function(e) {
       children: [(0, n.jsx)(s.FormTitle, {
         tag: "h3",
         className: u.leftRailIconContainerTitle,
-        children: d.default.Messages.MEMBER_VERIFICATION_GET_STARTED_TITLE
+        children: c.default.Messages.MEMBER_VERIFICATION_GET_STARTED_TITLE
       }), (0, n.jsx)(s.FormText, {
         className: u.leftRailIconContainerDescription,
         type: s.FormText.Types.DESCRIPTION,
-        children: d.default.Messages.MEMBER_VERIFICATION_GET_STARTED_DESCRIPTION
+        children: c.default.Messages.MEMBER_VERIFICATION_GET_STARTED_DESCRIPTION
       }), (0, n.jsx)(s.Button, {
-        onClick: () => (0, c.openEmptyFormFieldModal)(o.VerificationFormFieldTypes.TERMS, t, a),
-        children: d.default.Messages.MEMBER_VERIFICATION_GET_STARTED_BUTTON
+        onClick: () => (0, d.openEmptyFormFieldModal)(o.VerificationFormFieldTypes.TERMS, t, a),
+        children: c.default.Messages.MEMBER_VERIFICATION_GET_STARTED_BUTTON
       })]
     })]
   })

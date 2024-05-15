@@ -32,8 +32,8 @@ var n = s("512722"),
   R = s("619914"),
   M = s("25990"),
   v = s("594174"),
-  D = s("74538"),
-  L = s("689938"),
+  L = s("74538"),
+  D = s("689938"),
   P = s("741129");
 
 function j() {
@@ -61,7 +61,7 @@ function j() {
       }
     }),
     z = (0, c.useGuildAutomodProfileQuarantineErrors)(),
-    Q = D.default.canUsePremiumProfileCustomization(B),
+    Q = L.default.canUsePremiumProfileCustomization(B),
     q = (0, S.showRemoveAvatar)(G, B.avatar),
     Z = (0, S.showRemoveBanner)(w, null == F ? void 0 : F.banner),
     X = "DefaultCustomizationSections";
@@ -90,7 +90,7 @@ function j() {
       pendingGlobalName: k,
       onGlobalNameChange: r.setPendingGlobalNameName
     }), (0, a.jsx)(p.default, {
-      sectionTitle: L.default.Messages.USER_SETTINGS_PRONOUNS,
+      sectionTitle: D.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: K.pronouns,
       onPronounsChange: A.setPendingPronouns,
       pendingPronouns: V,
@@ -99,14 +99,14 @@ function j() {
       onAvatarChange: r.setPendingAvatar,
       showRemoveAvatarButton: q,
       errors: K.avatar,
-      sectionTitle: L.default.Messages.USER_SETTINGS_AVATAR,
+      sectionTitle: D.default.Messages.USER_SETTINGS_AVATAR,
       forcedDivider: !0
     }, "avatar"), (0, a.jsx)(T.default, {
       user: B,
-      sectionTitle: L.default.Messages.USER_SETTINGS_AVATAR_DECORATION
+      sectionTitle: D.default.Messages.USER_SETTINGS_AVATAR_DECORATION
     }, "decoration"), (0, a.jsx)(h.default, {
       user: B,
-      sectionTitle: L.default.Messages.USER_SETTINGS_PROFILE_EFFECT
+      sectionTitle: D.default.Messages.USER_SETTINGS_PROFILE_EFFECT
     }, "effect"), Q ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(g.default, {
         showRemoveBannerButton: Z,
@@ -126,7 +126,7 @@ function j() {
       pendingColor: Y,
       setPendingAccentColor: A.setPendingAccentColor
     }, "color"), (0, a.jsx)(E.default, {
-      sectionTitle: L.default.Messages.USER_SETTINGS_ABOUT_ME,
+      sectionTitle: D.default.Messages.USER_SETTINGS_ABOUT_ME,
       errors: et,
       onBioChange: e => (0, S.setNewPendingUserBio)(e, null == F ? void 0 : F.bio),
       pendingBio: H,

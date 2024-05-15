@@ -124,12 +124,12 @@ function b(e) {
     application: P
   } = l, G = a.useCallback(e => e && (null == T ? void 0 : T({
     applicationId: l.application.id
-  })), [l.application.id, T]), U = (0, o.useIsVisible)(G, .8, !0), [Z, W] = a.useState(!1), [z, q] = a.useState(Z);
+  })), [l.application.id, T]), U = (0, o.useIsVisible)(G, .8, !0), [Z, W] = a.useState(!1), [z, K] = a.useState(Z);
   a.useEffect(() => {
-    Z && q(!0)
+    Z && K(!0)
   }, [Z]);
-  let J = () => W(!0),
-    K = () => W(!1),
+  let q = () => W(!0),
+    J = () => W(!1),
     X = v.DeveloperMode.useSetting(),
     Q = a.useCallback(() => {
       null == B || B(), u.default.maybeQueryForInstallLessApps(P.id, null == n ? void 0 : n.id)
@@ -151,10 +151,10 @@ function b(e) {
       className: s()(M.activityImageContainer, {
         [M.large]: !0 === x
       }),
-      onMouseEnter: J,
-      onFocus: J,
-      onMouseLeave: K,
-      onBlur: K,
+      onMouseEnter: q,
+      onFocus: q,
+      onMouseLeave: J,
+      onBlur: J,
       children: [(0, i.jsx)(g.default, {
         imageBackground: b,
         applicationName: P.name,
@@ -166,7 +166,7 @@ function b(e) {
         className: s()(M.activityVideo, {
           [M.videoFadeOut]: !Z
         }),
-        onAnimationEnd: () => Z ? null : q(!1),
+        onAnimationEnd: () => Z ? null : K(!1),
         children: (0, i.jsx)(E.default, {
           className: M.activityVideo,
           src: O,

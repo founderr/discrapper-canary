@@ -1,38 +1,38 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   TagsIcon: function() {
     return s
   }
 });
-var i = l("735250");
-l("470079");
-var a = l("692547"),
-  n = l("331595");
+var n = a("735250");
+a("470079");
+var r = a("692547"),
+  i = a("331595");
 let s = e => {
   let {
     width: t = 24,
-    height: l = 24,
-    color: s = a.default.colors.INTERACTIVE_NORMAL,
-    colorClass: r = "",
-    ...d
+    height: a = 24,
+    color: s = r.default.colors.INTERACTIVE_NORMAL,
+    colorClass: l = "",
+    ...o
   } = e;
-  return (0, i.jsxs)("svg", {
-    ...(0, n.default)(d),
+  return (0, n.jsxs)("svg", {
+    ...(0, i.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
-    height: l,
+    height: a,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: [(0, i.jsx)("path", {
+    children: [(0, n.jsx)("path", {
       fill: "string" == typeof s ? s : s.css,
       d: "M9.12 1.88A3 3 0 0 1 11.24 1H17a2 2 0 0 1 1.94 1.5c.07.27-.16.5-.44.5h-4.26a4 4 0 0 0-2.83 1.17l-7.25 7.25c-.5.51-.85 1.12-1.03 1.77-.12.45-.74.7-1.06.38l-.2-.2a3 3 0 0 1 0-4.24l7.25-7.25Z",
-      className: r
-    }), (0, i.jsx)("path", {
+      className: l
+    }), (0, n.jsx)("path", {
       fill: "string" == typeof s ? s : s.css,
       fillRule: "evenodd",
       d: "M13.12 5.88A3 3 0 0 1 15.24 5H21a2 2 0 0 1 2 2v5.76a3 3 0 0 1-.88 2.12l-7.25 7.25a3 3 0 0 1-4.24 0l-4.76-4.76a3 3 0 0 1 0-4.24l7.25-7.25ZM20 9.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z",
       clipRule: "evenodd",
-      className: r
+      className: l
     })]
   })
 }

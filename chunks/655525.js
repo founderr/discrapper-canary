@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return c
+    return d
   }
 });
 var n = a("735250");
@@ -12,7 +12,7 @@ var r = a("120356"),
   l = a("673591"),
   o = a("591815");
 
-function c(e) {
+function d(e) {
   let {
     isNitroTab: t = !1
   } = e, a = (0, s.useIsEligibleForBogoPromotion)(), r = (0, s.getBOGOPillCopy)();

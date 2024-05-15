@@ -7,13 +7,13 @@ a.r(t), a.d(t, {
     return g
   },
   fetchMetadataForGuild: function() {
-    return d
+    return c
   },
   fetchSlugForGuild: function() {
     return u
   },
   maybeFetchGuildDiscoveryCategories: function() {
-    return c
+    return d
   },
   saveGuildMetadata: function() {
     return _
@@ -46,13 +46,13 @@ var n = a("544891"),
   s = a("683301"),
   l = a("150192"),
   o = a("981631");
-async function c() {
+async function d() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     a = i.default.locale,
-    c = t && !s.default.getIsReady();
-  if (a === l.default.getFetchedLocale() && !c) return;
-  let d = await n.HTTP.get({
+    d = t && !s.default.getIsReady();
+  if (a === l.default.getFetchedLocale() && !d) return;
+  let c = await n.HTTP.get({
     url: o.Endpoints.GUILD_DISCOVERY_CATEGORIES,
     query: {
       locale: a,
@@ -62,12 +62,12 @@ async function c() {
   });
   r.default.dispatch({
     type: "GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS",
-    categories: d.body,
+    categories: c.body,
     locale: a,
     forClanDiscovery: t
   })
 }
-async function d(e) {
+async function c(e) {
   try {
     let {
       primary_category_id: t,
@@ -75,8 +75,8 @@ async function d(e) {
       keywords: i,
       emoji_discoverability_enabled: s,
       partner_actioned_timestamp: l,
-      partner_application_timestamp: c,
-      is_published: d,
+      partner_application_timestamp: d,
+      is_published: c,
       reasons_to_join: u,
       social_links: f,
       about: m
@@ -89,8 +89,8 @@ async function d(e) {
       keywords: i,
       emojiDiscoverabilityEnabled: s,
       partnerActionedTimestamp: l,
-      partnerApplicationTimestamp: c,
-      isPublished: d,
+      partnerApplicationTimestamp: d,
+      isPublished: c,
       reasonsToJoin: u,
       socialLinks: f,
       about: m
@@ -185,8 +185,8 @@ async function _(e) {
     keywords: i,
     emojiDiscoverabilityEnabled: s,
     partnerActionedTimestamp: l,
-    partnerApplicationTimestamp: c,
-    isPublished: d,
+    partnerApplicationTimestamp: d,
+    isPublished: c,
     reasonsToJoin: u,
     socialLinks: f,
     about: m
@@ -209,9 +209,9 @@ async function _(e) {
         primary_category_id: a,
         emoji_discoverability_enabled: s,
         partner_actioned_timestamp: l,
-        partner_application_timestamp: c,
+        partner_application_timestamp: d,
         keywords: i,
-        is_published: d,
+        is_published: c,
         reasons_to_join: u,
         social_links: f,
         about: m

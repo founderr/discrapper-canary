@@ -7,8 +7,8 @@ var r = a("481060"),
   s = a("282597"),
   l = a("877715"),
   o = a("729285"),
-  c = a("838221"),
-  d = a("246364"),
+  d = a("838221"),
+  c = a("246364"),
   u = a("700833"),
   f = a("689938"),
   m = a("166562");
@@ -28,19 +28,19 @@ function h(e) {
     children: (0, n.jsxs)(r.MenuGroup, {
       children: [(0, n.jsx)(r.MenuItem, {
         id: "text-input",
-        icon: c.default,
+        icon: d.default,
         label: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
-        action: () => (0, u.openEmptyFormFieldModal)(d.VerificationFormFieldTypes.TEXT_INPUT, t, o)
+        action: () => (0, u.openEmptyFormFieldModal)(c.VerificationFormFieldTypes.TEXT_INPUT, t, o)
       }), (0, n.jsx)(r.MenuItem, {
         id: "paragraph",
         icon: l.default,
         label: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
-        action: () => (0, u.openEmptyFormFieldModal)(d.VerificationFormFieldTypes.PARAGRAPH, t, o)
+        action: () => (0, u.openEmptyFormFieldModal)(c.VerificationFormFieldTypes.PARAGRAPH, t, o)
       }), (0, n.jsx)(r.MenuItem, {
         id: "multiple-choice",
         icon: s.default,
         label: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_MULTIPLE_CHOICE,
-        action: () => (0, u.openEmptyFormFieldModal)(d.VerificationFormFieldTypes.MULTIPLE_CHOICE, t, o)
+        action: () => (0, u.openEmptyFormFieldModal)(c.VerificationFormFieldTypes.MULTIPLE_CHOICE, t, o)
       })]
     })
   })

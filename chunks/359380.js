@@ -6,8 +6,8 @@ var n = a("735250"),
   s = a.n(i),
   l = a("481060"),
   o = a("90062"),
-  c = a("964309"),
-  d = a("898543"),
+  d = a("964309"),
+  c = a("898543"),
   u = a("87576"),
   f = a("308083"),
   m = a("689938"),
@@ -18,15 +18,15 @@ let E = e => {
     icon: a,
     traits: i,
     interests: o,
-    handleUpdate: c
-  } = e, d = r.useCallback(e => {
+    handleUpdate: d
+  } = e, c = r.useCallback(e => {
     let t = new Set(o);
-    t.delete(e), c(t)
-  }, [c, o]), u = r.useCallback(e => {
+    t.delete(e), d(t)
+  }, [d, o]), u = r.useCallback(e => {
     if (o.size === f.MAX_NUM_INTERESTS) return;
     let t = new Set(o);
-    t.add(e), c(t)
-  }, [c, o]);
+    t.add(e), d(t)
+  }, [d, o]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(l.Text, {
       className: h.interestsCategoryTitle,
@@ -41,7 +41,7 @@ let E = e => {
           className: s()(h.interestsTag, h.selectableOption, {
             [h.selectedOption]: t
           }),
-          onClick: () => t ? d(e) : u(e),
+          onClick: () => t ? c(e) : u(e),
           children: [(0, n.jsx)(a, {
             className: h.utilityTagIcon
           }), (0, n.jsx)(l.Text, {
@@ -95,7 +95,7 @@ t.default = e => {
         className: h.mainPanelContainer,
         children: [T === f.VALORANT_ID && (0, n.jsx)(E, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
-          icon: d.default,
+          icon: c.default,
           traits: f.VALORANT_TRAITS,
           interests: s,
           handleUpdate: i
@@ -107,7 +107,7 @@ t.default = e => {
           handleUpdate: i
         }), (0, n.jsx)(E, {
           title: m.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
-          icon: c.default,
+          icon: d.default,
           traits: f.IDENTITY_TRAITS,
           interests: s,
           handleUpdate: i
