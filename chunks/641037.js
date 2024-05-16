@@ -51,7 +51,7 @@ function o(e) {
 async function u(e) {
   let {
     guildId: t,
-    onClose: i,
+    onSuccess: i,
     progress: r
   } = e;
   try {
