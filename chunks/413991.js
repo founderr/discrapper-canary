@@ -1,70 +1,70 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
     return d
   }
-}), t("47120");
-var l = t("735250"),
-  a = t("470079"),
-  r = t("481060"),
-  u = t("911969"),
-  s = t("970184"),
-  o = t("293979"),
-  i = t("834507");
+}), n("47120");
+var l = n("735250"),
+  a = n("470079"),
+  u = n("481060"),
+  i = n("911969"),
+  o = n("970184"),
+  s = n("293979"),
+  r = n("834507");
 
 function d(e) {
-  let n;
+  let t;
   let {
-    type: t,
+    type: n,
     style: d,
     label: c,
-    placeholder: m,
-    minLength: p,
+    placeholder: p,
+    minLength: m,
     maxLength: f,
-    required: C,
-    value: S
-  } = e, [E, v] = a.useState(null != S ? S : ""), {
+    required: S,
+    value: C
+  } = e, [v, E] = a.useState(null != C ? C : ""), {
     state: N,
     executeStateUpdate: h,
-    error: T
-  } = (0, s.useComponentState)(e, null != S ? {
-    type: t,
-    value: S
-  } : void 0), g = (0, o.useIsFirstTextInputInModal)(e.id);
+    error: g
+  } = (0, o.useComponentState)(e, null != C ? {
+    type: n,
+    value: C
+  } : void 0), T = (0, s.useIsFirstTextInputInModal)(e.id);
   a.useEffect(() => {
-    (null == N ? void 0 : N.type) === t && v(N.value)
-  }, [t, N]);
-  let x = {
+    (null == N ? void 0 : N.type) === n && E(N.value)
+  }, [n, N]);
+  let y = {
     name: c,
-    value: E,
-    placeholder: m,
-    minLength: p,
+    value: v,
+    placeholder: p,
+    minLength: m,
     maxLength: f,
-    required: C,
+    required: S,
     onChange: e => {
-      v(e), h({
-        type: t,
+      E(e), h({
+        type: n,
         value: e
       })
     },
-    autoFocus: g
+    autoFocus: T
   };
   switch (d) {
-    case u.TextComponentStyle.SMALL:
-      n = (0, l.jsx)(r.TextInput, {
-        ...x
+    case i.TextComponentStyle.SMALL:
+      t = (0, l.jsx)(u.TextInput, {
+        ...y
       });
       break;
-    case u.TextComponentStyle.PARAGRAPH:
-      n = (0, l.jsx)(r.TextArea, {
-        ...x
+    case i.TextComponentStyle.PARAGRAPH:
+      t = (0, l.jsx)(u.TextArea, {
+        ...y
       })
   }
-  return (0, l.jsx)(r.FormItem, {
+  return (0, l.jsx)(u.FormItem, {
     title: c,
-    required: C,
-    className: i.formItem,
-    error: T,
-    children: n
+    required: S,
+    className: r.formItem,
+    error: g,
+    children: t
   })
 }

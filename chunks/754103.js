@@ -5,8 +5,8 @@ var n = a("735250"),
   s = a("120356"),
   r = a.n(s),
   o = a("481060"),
-  u = a("285952"),
-  i = a("282605");
+  i = a("285952"),
+  u = a("282605");
 
 function d(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
@@ -64,8 +64,8 @@ class c extends l.PureComponent {
         onFieldChange: a,
         onFieldFocus: l,
         onFieldBlur: s,
-        layout: u,
-        ...i
+        layout: i,
+        ...u
       } = this.props, {
         getClassNameForLayout: d,
         renderInput: c,
@@ -77,7 +77,7 @@ class c extends l.PureComponent {
       } = e, _ = {
         ...S,
         placeholder: null == f ? void 0 : f(),
-        layout: u,
+        layout: i,
         error: this.getError(p),
         value: t[p],
         name: p,
@@ -87,15 +87,15 @@ class c extends l.PureComponent {
         onBlur: s
       };
       return (0, n.jsx)(o.FormSection, {
-        className: r()(null == d ? void 0 : d(u)),
+        className: r()(null == d ? void 0 : d(i)),
         title: E(),
         titleId: m,
-        children: c(_, i)
+        children: c(_, u)
       }, p)
     }), d(this, "renderFormRow", e => {
       let t = e.fields.map(this.renderFormSection);
-      return (0, n.jsx)(u.default, {
-        className: r()(i.row, e.className),
+      return (0, n.jsx)(i.default, {
+        className: r()(u.row, e.className),
         children: t
       }, e.fields.map(e => e.name).join(""))
     })

@@ -34,8 +34,8 @@ var n, a = s("735250"),
   u = s("355467"),
   c = s("873115"),
   p = s("976255"),
-  f = s("246946"),
-  h = s("351402"),
+  h = s("246946"),
+  f = s("351402"),
   S = s("618541"),
   P = s("975060"),
   A = s("853872"),
@@ -542,8 +542,8 @@ D(z, "defaultProps", {
   billingError: null,
   extraRenderers: {},
   className: v.modal
-}), t.default = i.default.connectStores([A.default, P.default, h.default, f.default, S.default], () => ({
-  submitting: h.default.isBusy,
+}), t.default = i.default.connectStores([A.default, P.default, f.default, h.default, S.default], () => ({
+  submitting: f.default.isBusy,
   paymentSources: A.default.paymentSources,
   defaultPaymentSourceId: A.default.defaultPaymentSourceId,
   stripePaymentMethod: P.default.stripePaymentMethod,
@@ -557,5 +557,5 @@ D(z, "defaultProps", {
   billingError: P.default.error,
   paypalClient: S.default.getPayPalClient(),
   venmoClient: S.default.getVenmoClient(),
-  hidePersonalInformation: f.default.hidePersonalInformation
+  hidePersonalInformation: h.default.hidePersonalInformation
 }))(z)

@@ -36,13 +36,13 @@ var n = a("544891"),
   s = a("618541"),
   r = a("751767"),
   o = a("358085"),
-  u = a("355467"),
-  i = a("981631");
+  i = a("355467"),
+  u = a("981631");
 
 function d() {
   (0, r.getBraintreeSDK)().then(e => {
     e.client.create({
-      authorization: i.PaymentSettings.BRAINTREE.KEY
+      authorization: u.PaymentSettings.BRAINTREE.KEY
     }).then(e => {
       l.default.dispatch({
         type: "BRAINTREE_CREATE_CLIENT_SUCCESS",
@@ -86,7 +86,7 @@ function E() {
       e._navigateFrameToAuth = function(e) {
         let t = this._formatPaymentResourceData(e);
         return n.HTTP.post({
-          url: i.Endpoints.BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS,
+          url: u.Endpoints.BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS,
           oldFormErrors: !0,
           body: {
             return_url: t.returnUrl,
@@ -99,7 +99,7 @@ function E() {
             }
           } = e;
           this._frameService.redirect(function(e) {
-            let t = i.PaymentSettings.BRAINTREE.KEY.startsWith("production_") ? "https://www.paypal.com" : "https://sandbox.paypal.com";
+            let t = u.PaymentSettings.BRAINTREE.KEY.startsWith("production_") ? "https://www.paypal.com" : "https://sandbox.paypal.com";
             return "".concat(t, "/agreements/approve?nolegacy=1&ba_token=").concat(e)
           }(t))
         }).catch(e => (this._frameService.close(), this._authorizationInProgress = !1, Promise.reject(Error(e.body && e.body.message))))
@@ -120,7 +120,7 @@ function p() {
     type: "BRAINTREE_TOKENIZE_PAYPAL_START"
   });
   let t = Promise.resolve("");
-  (0, o.isDesktop)() && (t = (0, u.popupBridgeState)(i.PaymentSourceTypes.PAYPAL)), t.then(() => e.tokenize({
+  (0, o.isDesktop)() && (t = (0, i.popupBridgeState)(u.PaymentSourceTypes.PAYPAL)), t.then(() => e.tokenize({
     flow: "vault"
   })).then(e => {
     let {
@@ -148,7 +148,7 @@ function p() {
       message: t,
       code: a
     } = e;
-    a === i.BraintreeErrors.PAYPAL_POPUP_CLOSED || null == a ? l.default.dispatch({
+    a === u.BraintreeErrors.PAYPAL_POPUP_CLOSED || null == a ? l.default.dispatch({
       type: "BRAINTREE_TOKENIZE_PAYPAL_FAIL_WINDOW_CLOSED"
     }) : l.default.dispatch({
       type: "BRAINTREE_TOKENIZE_PAYPAL_FAIL",
@@ -177,7 +177,7 @@ function m() {
       message: t,
       code: a
     } = e;
-    a === i.BraintreeErrors.VENMO_APP_CANCELED || a === i.BraintreeErrors.VENMO_CANCELED ? l.default.dispatch({
+    a === u.BraintreeErrors.VENMO_APP_CANCELED || a === u.BraintreeErrors.VENMO_CANCELED ? l.default.dispatch({
       type: "BRAINTREE_TOKENIZE_VENMO_FAIL_CANCELED"
     }) : l.default.dispatch({
       type: "BRAINTREE_TOKENIZE_VENMO_FAIL",

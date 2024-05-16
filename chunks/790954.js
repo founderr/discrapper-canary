@@ -1,26 +1,26 @@
 "use strict";
 r.r(t), r.d(t, {
   resetInspectedStickerPosition: function() {
-    return c
+    return o
   },
   setInspectedStickerPosition: function() {
-    return i
+    return a
   },
   useStickerViewAllStore: function() {
-    return a
+    return i
   }
 });
-var s = r("652874");
-let l = Object.freeze({
+var l = r("652874");
+let n = Object.freeze({
     inspectedStickerPosition: {
       rowIndex: -1,
       columnIndex: -1
     }
   }),
-  n = (0, s.default)(e => l),
-  a = n,
-  i = (e, t, r) => {
-    n.setState({
+  s = (0, l.default)(e => n),
+  i = s,
+  a = (e, t, r) => {
+    s.setState({
       inspectedStickerPosition: {
         rowIndex: t,
         columnIndex: e,
@@ -28,6 +28,6 @@ let l = Object.freeze({
       }
     })
   },
-  c = () => {
-    i(-1, -1)
+  o = () => {
+    a(-1, -1)
   }

@@ -14,26 +14,26 @@ var l = i("735250"),
   d = i("719491");
 
 function u(e) {
-  var t, i, u, p, _;
+  var t, i, u, p, m;
   let {
-    application: m,
+    application: _,
     className: f,
     childrenClassName: h,
     animatesOnHover: I,
     onClick: g,
     ...v
   } = e, A = s.default.getApplicationIconURL({
-    id: m.id,
-    icon: m.icon,
+    id: _.id,
+    icon: _.icon,
     size: 48
   }), E = (0, c.default)({
-    application: m
-  }), R = null === (t = m.categories) || void 0 === t ? void 0 : t[0], x = (null !== (p = null === (i = m.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== p ? p : 0) > 0 || E.length > 0, C = a.useCallback(() => {
+    application: _
+  }), C = null === (t = _.categories) || void 0 === t ? void 0 : t[0], R = (null !== (p = null === (i = _.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== p ? p : 0) > 0 || E.length > 0, N = a.useCallback(() => {
     g({
       mutualGuilds: E
     })
   }, [g, E]), T = (0, l.jsx)(r.default, {
-    application: m,
+    application: _,
     textVariant: "text-xs/normal",
     mutualGuilds: E,
     mutualGuildShownMax: 3,
@@ -42,26 +42,26 @@ function u(e) {
   });
   return (0, l.jsxs)(o.default, {
     className: f,
-    onClick: C,
+    onClick: N,
     iconSrc: A,
-    header: m.name,
-    subheader: null != R && (0, l.jsx)(n.Text, {
+    header: _.name,
+    subheader: null != C && (0, l.jsx)(n.Text, {
       tag: "span",
       color: "header-secondary",
       variant: "text-xs/normal",
-      children: R.name
+      children: C.name
     }),
     animatesOnHover: I,
     ...v,
-    children: [(null != m.description || null != h) && (0, l.jsx)("div", {
+    children: [(null != _.description || null != h) && (0, l.jsx)("div", {
       className: h,
       children: (0, l.jsx)(n.Text, {
         className: d.listingDescription,
         variant: "text-sm/normal",
         lineClamp: 2,
-        children: null !== (_ = null === (u = m.directory_entry) || void 0 === u ? void 0 : u.short_description) && void 0 !== _ ? _ : m.description
+        children: null !== (m = null === (u = _.directory_entry) || void 0 === u ? void 0 : u.short_description) && void 0 !== m ? m : _.description
       })
-    }), x && (0, l.jsx)("div", {
+    }), R && (0, l.jsx)("div", {
       className: d.bottomGuildCountContainer,
       children: T
     })]

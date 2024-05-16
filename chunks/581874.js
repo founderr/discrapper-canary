@@ -4,7 +4,7 @@ t.r(s), t.d(s, {
     return N
   }
 }), t("47120");
-var a, l = t("735250"),
+var l, a = t("735250"),
   n = t("470079"),
   _ = t("120356"),
   u = t.n(_),
@@ -27,7 +27,7 @@ let N = {
   SUCCESS: "success",
   ERROR: "error"
 };
-class T extends(a = n.PureComponent) {
+class T extends(l = n.PureComponent) {
   select() {
     var e;
     null === (e = this.inputRef.current) || void 0 === e || e.select()
@@ -36,10 +36,10 @@ class T extends(a = n.PureComponent) {
     var s;
     let {
       value: t,
-      mode: a
+      mode: l
     } = this.props, n = null === (s = this.context) || void 0 === s ? void 0 : s.titleId;
-    return (0, l.jsx)("input", {
-      className: u()((0, I.getClass)(o, "input", a), {
+    return (0, a.jsx)("input", {
+      className: u()((0, I.getClass)(o, "input", l), {
         [o.inputHidden]: e
       }),
       ref: this.inputRef,
@@ -55,10 +55,10 @@ class T extends(a = n.PureComponent) {
     let {
       text: s = d.default.Messages.COPY,
       mode: t,
-      hideMessage: a,
+      hideMessage: l,
       className: n,
       buttonLook: _
-    } = this.props, E = null != a;
+    } = this.props, E = null != l;
     switch (t) {
       case N.SUCCESS:
         e = i.ButtonColors.GREEN;
@@ -69,27 +69,27 @@ class T extends(a = n.PureComponent) {
       default:
         e = this.props.buttonColor
     }
-    return (0, l.jsx)(i.FocusRing, {
+    return (0, a.jsx)(i.FocusRing, {
       focusTarget: this.inputRef,
       ringTarget: this.containerRef,
-      children: (0, l.jsx)("div", {
+      children: (0, a.jsx)("div", {
         className: u()((0, I.getClass)(o, "copyInput", t), n),
         ref: this.containerRef,
-        children: (0, l.jsxs)(r.default, {
+        children: (0, a.jsxs)(r.default, {
           className: o.layout,
-          children: [(0, l.jsxs)(r.default, {
+          children: [(0, a.jsxs)(r.default, {
             className: o.inputWrapper,
-            children: [this.renderInput(E), E ? (0, l.jsx)("div", {
+            children: [this.renderInput(E), E ? (0, a.jsx)("div", {
               className: o.hiddenMessage,
-              children: a
+              children: l
             }) : null]
-          }), (0, l.jsx)(r.default, {
+          }), (0, a.jsx)(r.default, {
             shrink: 1,
             grow: 0,
             style: {
               margin: 0
             },
-            children: (0, l.jsx)(i.Button, {
+            children: (0, a.jsx)(i.Button, {
               className: o.button,
               onClick: this.handleButtonClick,
               size: i.ButtonSizes.MIN,

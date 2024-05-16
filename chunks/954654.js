@@ -1,88 +1,88 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
     return N
   },
   renderComponents: function() {
-    return v
+    return E
   }
 });
-var l = t("735250");
-t("470079");
-var a = t("120356"),
-  r = t.n(a),
-  u = t("911969"),
-  s = t("970184"),
-  o = t("987106"),
-  i = t("927057"),
-  d = t("574597"),
-  c = t("378975"),
-  m = t("413991"),
-  p = t("12067"),
-  f = t("676149"),
-  C = t("861529"),
-  S = t("889515"),
-  E = t("72920");
+var l = n("735250");
+n("470079");
+var a = n("120356"),
+  u = n.n(a),
+  i = n("911969"),
+  o = n("970184"),
+  s = n("987106"),
+  r = n("927057"),
+  d = n("574597"),
+  c = n("378975"),
+  p = n("413991"),
+  m = n("12067"),
+  f = n("676149"),
+  S = n("861529"),
+  C = n("889515"),
+  v = n("72920");
 
-function v(e) {
-  return e.map((e, n) => (function(e, n) {
+function E(e) {
+  return e.map((e, t) => (function(e, t) {
     switch (e.type) {
-      case u.ComponentType.ACTION_ROW:
-        return (0, l.jsx)(S.default, {
+      case i.ComponentType.ACTION_ROW:
+        return (0, l.jsx)(C.default, {
           ...e,
-          renderComponents: v
-        }, n);
-      case u.ComponentType.BUTTON:
-        return (0, l.jsx)(o.default, {
+          renderComponents: E
+        }, t);
+      case i.ComponentType.BUTTON:
+        return (0, l.jsx)(s.default, {
           ...e
-        }, n);
-      case u.ComponentType.STRING_SELECT:
+        }, t);
+      case i.ComponentType.STRING_SELECT:
         return (0, l.jsx)(c.default, {
           ...e
-        }, n);
-      case u.ComponentType.CHANNEL_SELECT:
-        return (0, l.jsx)(i.default, {
+        }, t);
+      case i.ComponentType.CHANNEL_SELECT:
+        return (0, l.jsx)(r.default, {
           ...e
-        }, n);
-      case u.ComponentType.USER_SELECT:
-      case u.ComponentType.ROLE_SELECT:
-      case u.ComponentType.MENTIONABLE_SELECT:
+        }, t);
+      case i.ComponentType.USER_SELECT:
+      case i.ComponentType.ROLE_SELECT:
+      case i.ComponentType.MENTIONABLE_SELECT:
         return (0, l.jsx)(d.default, {
           ...e
-        }, n);
-      case u.ComponentType.INPUT_TEXT:
-        return (0, l.jsx)(m.default, {
-          ...e
-        }, n);
-      case u.ComponentType.TEXT:
-        return (0, l.jsx)(C.default, {
-          ...e
-        }, n);
-      case u.ComponentType.MEDIA_GALLERY:
+        }, t);
+      case i.ComponentType.INPUT_TEXT:
         return (0, l.jsx)(p.default, {
           ...e
-        }, n);
-      case u.ComponentType.SEPARATOR:
+        }, t);
+      case i.ComponentType.TEXT:
+        return (0, l.jsx)(S.default, {
+          ...e
+        }, t);
+      case i.ComponentType.MEDIA_GALLERY:
+        return (0, l.jsx)(m.default, {
+          ...e
+        }, t);
+      case i.ComponentType.SEPARATOR:
         return (0, l.jsx)(f.default, {
           ...e
-        }, n)
+        }, t)
     }
-  })(e, n.toString()))
+  })(e, t.toString()))
 }
 
 function N(e) {
   let {
-    message: n
+    message: t
   } = e, {
-    components: t
-  } = n;
-  return 0 === t.length ? null : (0, l.jsx)("div", {
-    className: r()([E.container, {
-      [E.containerUikit]: n.isUIKitComponents()
+    components: n
+  } = t;
+  return 0 === n.length ? null : (0, l.jsx)("div", {
+    className: u()([v.container, {
+      [v.containerUikit]: t.isUIKitComponents()
     }]),
-    children: (0, l.jsx)(s.ComponentStateContextProvider, {
-      message: n,
-      children: v(t)
+    children: (0, l.jsx)(o.ComponentStateContextProvider, {
+      message: t,
+      children: E(n)
     })
   })
 }

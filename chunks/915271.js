@@ -5,8 +5,8 @@ var n = a("735250"),
   s = a("442837"),
   r = a("481060"),
   o = a("873115"),
-  u = a("618541"),
-  i = a("975060"),
+  i = a("618541"),
+  u = a("975060"),
   d = a("912454"),
   c = a("689938"),
   E = a("376943");
@@ -49,7 +49,7 @@ class p extends l.PureComponent {
     })
   }
 }
-t.default = s.default.connectStores([u.default, i.default], () => ({
-  venmoUsername: i.default.venmoUsername,
-  venmoClient: u.default.getVenmoClient()
+t.default = s.default.connectStores([i.default, u.default], () => ({
+  venmoUsername: u.default.venmoUsername,
+  venmoClient: i.default.getVenmoClient()
 }))(p)

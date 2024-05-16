@@ -1,54 +1,54 @@
 "use strict";
 t.r(s), t.d(s, {
   default: function() {
-    return o
+    return d
   }
 });
 var a = t("735250");
 t("470079");
 var r = t("120356"),
-  l = t.n(r),
-  i = t("481060"),
+  i = t.n(r),
+  l = t("481060"),
   n = t("204197"),
   C = t("293494");
 
-function o(e) {
+function d(e) {
   var s;
   let {
     user: t,
     checked: r,
-    onChange: o,
-    disabled: d
+    onChange: d,
+    disabled: o
   } = e, {
     avatarSrc: c,
     eventHandlers: u
   } = (0, n.default)({
     user: t,
-    size: i.AvatarSizes.SIZE_32
+    size: l.AvatarSizes.SIZE_32
   }), f = null !== (s = t.globalName) && void 0 !== s ? s : t.username;
   return (0, a.jsxs)("div", {
     className: C.container,
     children: [(0, a.jsxs)("div", {
       className: C.user,
-      children: [(0, a.jsx)(i.Avatar, {
-        className: l()({
-          [C.muted]: d
+      children: [(0, a.jsx)(l.Avatar, {
+        className: i()({
+          [C.muted]: o
         }),
         src: c,
         "aria-label": f,
-        size: i.AvatarSizes.SIZE_32,
+        size: l.AvatarSizes.SIZE_32,
         ...u
-      }), (0, a.jsx)(i.Text, {
-        color: d ? "text-muted" : "text-normal",
+      }), (0, a.jsx)(l.Text, {
+        color: o ? "text-muted" : "text-normal",
         variant: "text-md/semibold",
         children: f
       })]
     }), (0, a.jsx)("div", {
       className: C.checkbox,
-      children: (0, a.jsx)(i.Checkbox, {
-        disabled: d,
+      children: (0, a.jsx)(l.Checkbox, {
+        disabled: o,
         value: r,
-        onChange: (e, s) => o(t, s)
+        onChange: (e, s) => d(t, s)
       })
     })]
   })

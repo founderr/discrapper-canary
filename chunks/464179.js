@@ -16,7 +16,7 @@ a.r(t), a.d(t, {
     return h
   }
 }), a("47120"), a("411104");
-var n, l, s, r, o, u, i, d = a("735250"),
+var n, l, s, r, o, i, u, d = a("735250"),
   c = a("470079"),
   E = a("588391"),
   p = a("217986"),
@@ -27,9 +27,9 @@ var n, l, s, r, o, u, i, d = a("735250"),
   A = a("823379"),
   N = a("754103"),
   I = a("689938"),
-  T = a("282605");
+  C = a("282605");
 
-function C(e, t, a) {
+function T(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
     value: a,
     enumerable: !0,
@@ -52,7 +52,7 @@ let y = "US",
   D = (0, _.uid)(),
   v = (0, _.uid)(),
   x = (0, _.uid)();
-(o = n || (n = {})).NAME = "name", o.COUNTRY = "country", o.LINE1 = "line1", o.LINE2 = "line2", o.CITY = "city", o.POSTAL_CODE = "postalCode", o.STATE = "state", (u = l || (l = {})).MODAL_US = "modalUS", u.MODAL_INTL = "modalInternational", u.MODAL_US_WITH_NAME = "modalUSWithName", u.MODAL_INTL_WITH_NAME = "modalInternationalWithName", u.MODAL_US_REDUCED = "modalUSReduced", u.SETTINGS_US = "settingsUS", u.SETTINGS_INTL = "settingsInternational", u.SETTINGS_INTL_NO_NAME = "settingsInternationalWithoutName", u.SETTINGS_US_MOBILE = "settingsUSMobile", u.SETTINGS_INTL_MOBILE = "settingsInternationalMobile", u.SETTINGS_INTL_NO_NAME_MOBILE = "settingsInternationalWithoutNameMobile", (i = s || (s = {})).EDIT = "edit", i.CREATE = "create";
+(o = n || (n = {})).NAME = "name", o.COUNTRY = "country", o.LINE1 = "line1", o.LINE2 = "line2", o.CITY = "city", o.POSTAL_CODE = "postalCode", o.STATE = "state", (i = l || (l = {})).MODAL_US = "modalUS", i.MODAL_INTL = "modalInternational", i.MODAL_US_WITH_NAME = "modalUSWithName", i.MODAL_INTL_WITH_NAME = "modalInternationalWithName", i.MODAL_US_REDUCED = "modalUSReduced", i.SETTINGS_US = "settingsUS", i.SETTINGS_INTL = "settingsInternational", i.SETTINGS_INTL_NO_NAME = "settingsInternationalWithoutName", i.SETTINGS_US_MOBILE = "settingsUSMobile", i.SETTINGS_INTL_MOBILE = "settingsInternationalMobile", i.SETTINGS_INTL_NO_NAME_MOBILE = "settingsInternationalWithoutNameMobile", (u = s || (s = {})).EDIT = "edit", u.CREATE = "create";
 let U = {
     [y]: m.States,
     [R]: E.CanadaProvinces
@@ -63,7 +63,7 @@ let U = {
       id: M,
       title: () => I.default.Messages.BILLING_ADDRESS_NAME,
       autoComplete: "name",
-      getClassNameForLayout: e => ["modalUS", "modalInternational", "modalUSWithName", "modalInternationalWithName", "settingsUSMobile", "settingsInternationalMobile", "settingsInternationalWithoutNameMobile"].includes(e) ? T.width100 : T.width60,
+      getClassNameForLayout: e => ["modalUS", "modalInternational", "modalUSWithName", "modalInternationalWithName", "settingsUSMobile", "settingsInternationalMobile", "settingsInternationalWithoutNameMobile"].includes(e) ? C.width100 : C.width60,
       renderInput: e => (0, d.jsx)(f.TextInput, {
         ...e
       })
@@ -79,11 +79,11 @@ let U = {
           case "modalInternational":
           case "modalUSWithName":
           case "modalInternationalWithName":
-            return T.width100;
+            return C.width100;
           case "modalUSReduced":
-            return T.width50;
+            return C.width50;
           default:
-            return T.width75
+            return C.width75
         }
       },
       renderInput(e, t) {
@@ -109,7 +109,7 @@ let U = {
       title: () => I.default.Messages.BILLING_ADDRESS_ADDRESS,
       autoComplete: "address-line1",
       placeholder: () => I.default.Messages.BILLING_ADDRESS_ADDRESS_PLACEHOLDER,
-      getClassNameForLayout: e => ["modalUS", "modalInternational", "modalUSWithName", "modalInternationalWithName", "settingsUSMobile", "settingsInternationalMobile", "settingsInternationalWithoutNameMobile"].includes(e) ? T.width100 : T.width60,
+      getClassNameForLayout: e => ["modalUS", "modalInternational", "modalUSWithName", "modalInternationalWithName", "settingsUSMobile", "settingsInternationalMobile", "settingsInternationalWithoutNameMobile"].includes(e) ? C.width100 : C.width60,
       renderInput: e => (0, d.jsx)(f.TextInput, {
         ...e
       })
@@ -120,7 +120,7 @@ let U = {
       title: () => I.default.Messages.BILLING_ADDRESS_ADDRESS2,
       placeholder: () => I.default.Messages.BILLING_ADDRESS_ADDRESS2_PLACEHOLDER,
       autoComplete: "address-line2",
-      getClassNameForLayout: e => ["modalUS", "modalInternational", "modalUSWithName", "modalInternationalWithName", "settingsUSMobile", "settingsInternationalMobile", "settingsInternationalWithoutNameMobile"].includes(e) ? T.width100 : T.width40,
+      getClassNameForLayout: e => ["modalUS", "modalInternational", "modalUSWithName", "modalInternationalWithName", "settingsUSMobile", "settingsInternationalMobile", "settingsInternationalWithoutNameMobile"].includes(e) ? C.width100 : C.width40,
       renderInput: e => (0, d.jsx)(f.TextInput, {
         ...e
       })
@@ -140,11 +140,11 @@ let U = {
           case "settingsUSMobile":
           case "settingsInternationalMobile":
           case "settingsInternationalWithoutNameMobile":
-            return T.width100;
+            return C.width100;
           case "settingsInternational":
-            return T.width60;
+            return C.width60;
           default:
-            return T.width50
+            return C.width50
         }
       },
       renderInput: e => (0, d.jsx)(f.TextInput, {
@@ -173,18 +173,18 @@ let U = {
           switch (e) {
             case "modalInternational":
             case "modalInternationalWithName":
-              return T.width100;
+              return C.width100;
             case "modalUS":
             case "modalUSWithName":
             case "modalUSReduced":
             case "settingsUSMobile":
             case "settingsInternationalMobile":
             case "settingsInternationalWithoutNameMobile":
-              return T.width50;
+              return C.width50;
             case "settingsInternational":
-              return T.width30;
+              return C.width30;
             default:
-              return T.width25
+              return C.width25
           }
         },
         renderInput: e => "modalUSReduced" === e.layout ? (0, d.jsx)(f.TextInput, {
@@ -221,14 +221,14 @@ let U = {
             case "settingsUSMobile":
             case "settingsInternationalMobile":
             case "settingsInternationalWithoutNameMobile":
-              return T.width100;
+              return C.width100;
             case "modalUS":
             case "modalUSWithName":
-              return T.width50;
+              return C.width50;
             case "settingsInternational":
-              return T.width30;
+              return C.width30;
             default:
-              return T.width25
+              return C.width25
           }
         },
         renderInput(t) {
@@ -393,7 +393,7 @@ class w extends(r = c.PureComponent) {
     } = this.props, r = Y[a];
     if (null == r) throw Error("Provide a proper layout property.");
     let o = t.country,
-      u = r.map(e => {
+      i = r.map(e => {
         let t = e.map(e => e(null != o ? o : "")).filter(A.isNotNullish);
         return t.length > 0 ? {
           fields: t
@@ -401,7 +401,7 @@ class w extends(r = c.PureComponent) {
       }).filter(A.isNotNullish);
     return (0, d.jsx)(N.default, {
       className: l,
-      form: u,
+      form: i,
       layout: a,
       values: t,
       errors: e,
@@ -412,7 +412,7 @@ class w extends(r = c.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), C(this, "state", {
+    super(...e), T(this, "state", {
       values: {
         name: this.props.name,
         country: this.props.country,
@@ -424,11 +424,11 @@ class w extends(r = c.PureComponent) {
       },
       dirtyFields: {},
       errors: {}
-    }), C(this, "handleFieldBlur", () => {
+    }), T(this, "handleFieldBlur", () => {
       this.setState({
         errors: this.validateForm(!0)
       })
-    }), C(this, "handleFieldChange", (e, t) => {
+    }), T(this, "handleFieldChange", (e, t) => {
       if (null == t) return;
       let {
         values: a,
@@ -449,7 +449,7 @@ class w extends(r = c.PureComponent) {
     })
   }
 }
-C(w, "Layouts", l), C(w, "Modes", s), C(w, "defaultProps", {
+T(w, "Layouts", l), T(w, "Modes", s), T(w, "defaultProps", {
   name: "",
   country: "",
   line1: "",

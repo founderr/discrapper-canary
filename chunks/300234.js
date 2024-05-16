@@ -49,7 +49,7 @@ t.default = l.memo(function(e) {
     onContextMenu: e => (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([a.e("99387"), a.e("39285"), a.e("53466"), a.e("40157")]).then(a.bind(a, "422200"));
+      } = await Promise.all([a.e("99387"), a.e("39285"), a.e("53466"), a.e("78650")]).then(a.bind(a, "422200"));
       return t => (0, s.jsx)(e, {
         ...t,
         channel: o

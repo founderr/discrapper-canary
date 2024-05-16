@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getMemberSupplemental: function() {
-    return E
+    return h
   },
   goToMemberSafetyDashboard: function() {
     return g
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return S
   },
   updateSearchState: function() {
-    return h
+    return p
   }
 });
 var r = n("570140"),
@@ -52,7 +52,7 @@ function S(e, t) {
     pagination: i
   })
 }
-async function h(e, t) {
+async function p(e, t) {
   await r.default.dispatch({
     type: "MEMBER_SAFETY_SEARCH_STATE_UPDATE",
     guildId: e,
@@ -65,7 +65,7 @@ function g(e) {
     n = s.default.getGuild(e);
   return !!t && null != n && (n.hasFeature(a.GuildFeatures.COMMUNITY) || n.hasFeature(a.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, l.transitionTo)(a.Routes.CHANNEL(e, c.StaticChannelRoute.MEMBER_SAFETY)), !0) : (i.default.open(n.id, a.GuildSettingsSections.MEMBERS), !0))
 }
-async function E(e, t) {
+async function h(e, t) {
   let n = await (0, u.fetchMemberSupplemental)(e, t);
   return 0 === n.length ? [] : (await r.default.dispatch({
     type: "FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS",

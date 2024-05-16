@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return u
   },
   usePaymentAuthenticationPoller: function() {
-    return d
+    return _
   },
   usePaymentStepForAuthentication: function() {
-    return _
+    return d
   }
 });
 var r, u, i = n("470079"),
@@ -18,7 +18,7 @@ var r, u, i = n("470079"),
   E = n("409813"),
   S = n("505649");
 
-function _(e, t, n) {
+function d(e, t, n) {
   let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     u = arguments.length > 4 ? arguments[4] : void 0;
   i.useEffect(() => {
@@ -26,7 +26,7 @@ function _(e, t, n) {
   }, [e, t, n, r, u])
 }(r = u || (u = {}))[r.PENDING = 1] = "PENDING", r[r.ERROR = 2] = "ERROR", r[r.NONE = 3] = "NONE";
 
-function d(e) {
+function _(e) {
   let t = (0, a.useStateFromStores)([S.default], () => S.default.awaitingPaymentId),
     n = (0, a.useStateFromStores)([s.default], () => s.default.isConnected()),
     r = i.useRef(new l.Interval);

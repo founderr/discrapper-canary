@@ -5,8 +5,8 @@ var n = a("735250"),
   s = a("481060"),
   r = a("710845"),
   o = a("285952"),
-  u = a("912454"),
-  i = a("358085"),
+  i = a("912454"),
+  u = a("358085"),
   d = a("622999"),
   c = a("981631"),
   E = a("689938");
@@ -39,9 +39,9 @@ class f extends l.Component {
       look: s.Button.Looks.FILLED,
       children: E.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_UNSUPPORTED
     });
-    let t = (0, i.isAndroidChrome)(),
+    let t = (0, u.isAndroidChrome)(),
       a = t ? E.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GPAY : E.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GENERIC,
-      l = t ? u.default.Types.G_PAY : u.default.Types.PAYMENT_REQUEST,
+      l = t ? i.default.Types.G_PAY : i.default.Types.PAYMENT_REQUEST,
       {
         className: r,
         iconClassName: d
@@ -51,7 +51,7 @@ class f extends l.Component {
       className: r,
       children: (0, n.jsxs)(o.default, {
         align: o.default.Align.CENTER,
-        children: [(0, n.jsx)(u.default, {
+        children: [(0, n.jsx)(i.default, {
           className: d,
           type: l
         }), a]

@@ -1,20 +1,20 @@
 "use strict";
 t.r(n), t.d(n, {
   default: function() {
-    return l
+    return s
   }
 });
 var a = t("735250");
 t("470079");
 var u = t("906732");
 
-function l(e, n) {
+function s(e, n) {
   return function(t) {
     let {
-      analyticsLocations: l
+      analyticsLocations: s
     } = (0, u.default)(n);
     return (0, a.jsx)(u.AnalyticsLocationProvider, {
-      value: l,
+      value: s,
       children: (0, a.jsx)(e, {
         ...t
       })

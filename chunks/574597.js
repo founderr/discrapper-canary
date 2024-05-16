@@ -1,103 +1,103 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
-    return y
+    return I
   }
 });
-var l = t("735250"),
-  a = t("470079"),
-  r = t("866442"),
-  u = t("481060"),
-  s = t("129861"),
-  o = t("829883"),
-  i = t("518738"),
-  d = t("14263"),
-  c = t("592125"),
-  m = t("430824"),
-  p = t("158776"),
-  f = t("594174"),
-  C = t("964309"),
-  S = t("241820"),
-  E = t("176278"),
-  v = t("970184"),
-  N = t("280501"),
-  h = t("811654"),
-  T = t("344991"),
-  g = t("981631"),
-  x = t("879565");
+var l = n("735250"),
+  a = n("470079"),
+  u = n("866442"),
+  i = n("481060"),
+  o = n("129861"),
+  s = n("829883"),
+  r = n("518738"),
+  d = n("14263"),
+  c = n("592125"),
+  p = n("430824"),
+  m = n("158776"),
+  f = n("594174"),
+  S = n("964309"),
+  C = n("241820"),
+  v = n("176278"),
+  E = n("970184"),
+  N = n("280501"),
+  h = n("811654"),
+  g = n("344991"),
+  T = n("981631"),
+  y = n("879565");
 
-function y(e) {
-  var n;
-  let t = (0, v.useComponentStateContext)(),
-    y = null == t ? void 0 : null === (n = t.message) || void 0 === n ? void 0 : n.getChannelId(),
-    O = c.default.getChannel(y),
-    I = m.default.getGuild(null == O ? void 0 : O.getGuildId()),
-    j = (0, d.default)(null == I ? void 0 : I.id, h.MIN_REREQUEST_TIME),
-    _ = a.useMemo(() => (0, h.getSnowflakeSelectDefaultValues)(e.defaultValues, null == I ? void 0 : I.id), [e.defaultValues, I]);
-  return (0, l.jsx)(T.default, {
+function I(e) {
+  var t;
+  let n = (0, E.useComponentStateContext)(),
+    I = null == n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.getChannelId(),
+    x = c.default.getChannel(I),
+    O = p.default.getGuild(null == x ? void 0 : x.getGuildId()),
+    j = (0, d.default)(null == O ? void 0 : O.id, h.MIN_REREQUEST_TIME),
+    L = a.useMemo(() => (0, h.getSnowflakeSelectDefaultValues)(e.defaultValues, null == O ? void 0 : O.id), [e.defaultValues, O]);
+  return (0, l.jsx)(g.default, {
     selectActionComponent: e,
-    queryOptions: n => (0, h.queryMentionables)(e.type, n, y),
-    renderIcon: (e, n) => {
-      let t = n === T.SelectIconSize.PILL_ICON_SIZE;
+    queryOptions: t => (0, h.queryMentionables)(e.type, t, I),
+    renderIcon: (e, t) => {
+      let n = t === g.SelectIconSize.PILL_ICON_SIZE;
       if ((null == e ? void 0 : e.type) === N.SelectOptionType.USER) {
         let a = f.default.getUser(e.value);
         if (null == a) return;
-        return (0, l.jsx)(u.Avatar, {
-          size: t ? u.AvatarSizes.SIZE_16 : u.AvatarSizes.SIZE_24,
-          src: a.getAvatarURL(null == I ? void 0 : I.id, n),
-          status: t ? null : p.default.getStatus(a.id),
+        return (0, l.jsx)(i.Avatar, {
+          size: n ? i.AvatarSizes.SIZE_16 : i.AvatarSizes.SIZE_24,
+          src: a.getAvatarURL(null == O ? void 0 : O.id, t),
+          status: n ? null : m.default.getStatus(a.id),
           "aria-hidden": !0
         })
       }
       if ((null == e ? void 0 : e.type) === N.SelectOptionType.ROLE) {
         var a;
-        let t = null != I ? m.default.getRole(I.id, e.value) : void 0;
-        if (null == t || null == I) return;
-        let u = (0, o.canGuildUseRoleIcons)(I, t) ? (0, i.getRoleIconProps)(t, n) : null;
-        return null != u ? (0, l.jsx)(E.default, {
-          ...u
-        }) : (0, l.jsx)(S.default, {
-          color: null !== (a = t.colorString) && void 0 !== a ? a : (0, r.int2hex)(g.DEFAULT_ROLE_COLOR),
-          height: n,
-          width: n
+        let n = null != O ? p.default.getRole(O.id, e.value) : void 0;
+        if (null == n || null == O) return;
+        let i = (0, s.canGuildUseRoleIcons)(O, n) ? (0, r.getRoleIconProps)(n, t) : null;
+        return null != i ? (0, l.jsx)(v.default, {
+          ...i
+        }) : (0, l.jsx)(C.default, {
+          color: null !== (a = n.colorString) && void 0 !== a ? a : (0, u.int2hex)(T.DEFAULT_ROLE_COLOR),
+          height: t,
+          width: t
         })
       }
     },
     renderOptionLabel: e => {
-      let n = null;
+      let t = null;
       if (e.type === N.SelectOptionType.USER) {
-        let t = f.default.getUser(e.value);
-        null != t && (n = (0, l.jsx)(s.default, {
-          className: x.tag,
-          usernameClass: x.username,
-          discriminatorClass: x.discriminator,
-          botClass: x.bot,
-          user: t,
+        let n = f.default.getUser(e.value);
+        null != n && (t = (0, l.jsx)(o.default, {
+          className: y.tag,
+          usernameClass: y.username,
+          discriminatorClass: y.discriminator,
+          botClass: y.bot,
+          user: n,
           forceUsername: !0
         }))
       } else if (e.type === N.SelectOptionType.ROLE) {
-        let t = null != I ? m.default.getRole(I.id, e.value) : void 0,
-          a = null == t ? null : null == j ? void 0 : j[t.id];
-        null != a && (n = (0, l.jsxs)("div", {
-          className: x.roleCountContainer,
-          children: [(0, l.jsx)(C.default, {
-            className: x.roleCountIcon,
+        let n = null != O ? p.default.getRole(O.id, e.value) : void 0,
+          a = null == n ? null : null == j ? void 0 : j[n.id];
+        null != a && (t = (0, l.jsxs)("div", {
+          className: y.roleCountContainer,
+          children: [(0, l.jsx)(S.default, {
+            className: y.roleCountIcon,
             height: 18,
             width: 18
           }), (0, l.jsx)("span", {
-            className: x.roleCountText,
+            className: y.roleCountText,
             children: a
           })]
         }))
       }
       return (0, l.jsxs)("span", {
-        className: x.label,
+        className: y.label,
         children: [(0, l.jsx)("span", {
-          className: x.labelText,
+          className: y.labelText,
           children: e.label
-        }), n]
+        }), t]
       })
     },
-    defaultValues: _
+    defaultValues: L
   })
 }

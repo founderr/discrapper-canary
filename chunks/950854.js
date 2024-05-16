@@ -21,8 +21,8 @@ function c(e) {
     header: d,
     headerClassName: u,
     subheaderVariant: p = "text-sm/normal",
-    subheader: _,
-    children: m,
+    subheader: m,
+    children: _,
     animatesOnHover: f,
     ...h
   } = e, I = null != a, g = (0, l.jsxs)(l.Fragment, {
@@ -50,14 +50,14 @@ function c(e) {
             variant: "heading-md/medium",
             className: u,
             children: d
-          }), null != _ && (0, l.jsx)(s.Text, {
+          }), null != m && (0, l.jsx)(s.Text, {
             className: o.subheader,
             color: "header-secondary",
             variant: p,
-            children: _
+            children: m
           })]
         })]
-      }), m]
+      }), _]
     })]
   }), v = n()(t, o.container, {
     [o.hasImage]: I

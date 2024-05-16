@@ -110,7 +110,7 @@ function er(e) {
     avatarOverride: eh,
     size: d.AvatarSizes.SIZE_80,
     showPending: !0
-  }), eW = (0, E.default)(er.id, null == es ? void 0 : es.id), eH = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eV = (0, m.default)(), eZ = (0, o.useStateFromStores)([z.default], () => null == es ? null : z.default.getMember(es.id, er.id)), eY = null === (a = (0, E.default)(er.id, null)) || void 0 === a ? void 0 : a.profileEffectId, eq = null == eW ? void 0 : eW.profileEffectId, eK = null != es && null == eT ? eT !== eq && null !== eT ? eq : eY : eT, eX = void 0 === eh ? er.getAvatarURL(void 0, 80) : eh, eJ = (0, h.default)(eX, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), eQ = null == eW ? void 0 : eW.getPreviewThemeColors(eA), e$ = null !== (n = null == eQ ? void 0 : eQ[0]) && void 0 !== n ? n : null == eW ? void 0 : eW.primaryColor, e0 = eH ? eV : (0, x.getProfileTheme)(e$), e1 = (0, I.default)(null !== (P = null != ef ? ef : e$) && void 0 !== P ? P : (0, s.hex2int)(eJ)).hsl, e6 = (0, o.useStateFromStores)([G.default], () => G.default.isFocused()), e8 = null == eW ? void 0 : eW.getPreviewBanner(em, ez ? e6 : eB), e4 = null != e8 || null != eK, e5 = ew || null != eK, e3 = null !== (q = (0, X.getPreviewNickname)(eS, null == eZ ? void 0 : eZ.nick)) && void 0 !== q ? q : (0, X.getPreviewDisplayName)(eI, Y.default.getName(er)), [e9, e2] = (0, o.useStateFromStoresArray)([F.default], () => [F.default.findActivity(er.id, e => e.type === Q.ActivityTypes.CUSTOM_STATUS), F.default.getStatus(er.id)]), e7 = (0, d.useStatusFillColor)(e2), ae = (0, o.useStateFromStores)([D.default], () => D.default.hidePersonalInformation), aa = (null == eW ? void 0 : eW.canUsePremiumProfileCustomization) || eo, at = i.useCallback(() => {
+  }), eW = (0, E.default)(er.id, null == es ? void 0 : es.id), eH = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eV = (0, m.default)(), eZ = (0, o.useStateFromStores)([z.default], () => null == es ? null : z.default.getMember(es.id, er.id)), eY = null === (a = (0, E.default)(er.id, null)) || void 0 === a ? void 0 : a.profileEffectId, eq = null == eW ? void 0 : eW.profileEffectId, eK = null != es && null == eT ? eT !== eq && null !== eT ? eq : eY : eT, eX = void 0 === eh ? er.getAvatarURL(void 0, 80) : eh, eJ = (0, h.default)(eX, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), eQ = null == eW ? void 0 : eW.getPreviewThemeColors(eA), e$ = null !== (n = null == eQ ? void 0 : eQ[0]) && void 0 !== n ? n : null == eW ? void 0 : eW.primaryColor, e0 = eH ? eV : (0, x.getProfileTheme)(e$), e1 = (0, I.default)(null !== (P = null != ef ? ef : e$) && void 0 !== P ? P : (0, s.hex2int)(eJ)).hsl, e6 = (0, o.useStateFromStores)([G.default], () => G.default.isFocused()), e4 = null == eW ? void 0 : eW.getPreviewBanner(em, ez ? e6 : eB), e8 = null != e4 || null != eK, e9 = ew || null != eK, e3 = null !== (q = (0, X.getPreviewNickname)(eS, null == eZ ? void 0 : eZ.nick)) && void 0 !== q ? q : (0, X.getPreviewDisplayName)(eI, Y.default.getName(er)), [e5, e2] = (0, o.useStateFromStoresArray)([F.default], () => [F.default.findActivity(er.id, e => e.type === Q.ActivityTypes.CUSTOM_STATUS), F.default.getStatus(er.id)]), e7 = (0, d.useStatusFillColor)(e2), ae = (0, o.useStateFromStores)([D.default], () => D.default.hidePersonalInformation), aa = (null == eW ? void 0 : eW.canUsePremiumProfileCustomization) || eo, at = i.useCallback(() => {
     var e, a;
     null === (a = eO.current) || void 0 === a || null === (e = a.inputRef.current) || void 0 === e || e.activateUploadDialogue()
   }, []), al = i.useCallback((e, a) => {
@@ -211,11 +211,11 @@ function er(e) {
     }), (0, l.jsxs)(d.HeadingLevel, {
       children: [(0, l.jsx)(y.default, {
         profileType: ee.UserProfileTypes.POPOUT,
-        hasBanner: e4,
+        hasBanner: e8,
         isPremium: eo,
         hasThemeColors: aa,
         overrideBannerWidth: eM ? 280 : void 0,
-        hasProfileEffect: e5,
+        hasProfileEffect: e9,
         children: eo ? (0, l.jsxs)("div", {
           onMouseMove: () => eL(!0),
           onMouseLeave: () => eL(!1),
@@ -223,23 +223,23 @@ function er(e) {
             className: et.bannerUploader,
             showRemoveButton: !1,
             disabled: !eo || eU,
-            image: e8,
-            makeURL: () => e8,
+            image: e4,
+            makeURL: () => e4,
             onChange: ai,
             imageStyle: {
               backgroundColor: e1
             },
-            imageClassName: r()(e4 ? et.bannerUploaderInnerSquare : et.bannerUploaderInnerSquareEmpty),
+            imageClassName: r()(e8 ? et.bannerUploaderInnerSquare : et.bannerUploaderInnerSquareEmpty),
             hint: ea.default.Messages.CHANGE_BANNER,
             onOpenImageSelectModal: () => (0, X.handleOpenSelectImageModal)($.UploadTypes.BANNER, null == eZ ? void 0 : eZ.guildId, eP, void 0),
             hideSize: !0,
             maxFileSizeBytes: J.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
             onFileSizeError: X.showFileSizeErrorModal
-          }), !ez && V.isAnimatedImageURL(e8) ? (0, l.jsx)(W.default, {
+          }), !ez && V.isAnimatedImageURL(e4) ? (0, l.jsx)(W.default, {
             className: et.gifTag
           }) : null]
         }) : (0, l.jsx)("div", {
-          className: e5 ? et.bannerUploaderInnerSquare : et.bannerNormal,
+          className: e9 ? et.bannerUploaderInnerSquare : et.bannerNormal,
           style: {
             backgroundColor: e1
           },
@@ -278,8 +278,8 @@ function er(e) {
           },
           className: r()(en({
             isPremium: eo,
-            hasBanner: e4,
-            hasProfileEffect: e5
+            hasBanner: e8,
+            hasProfileEffect: e9
           }), {
             [et.defaultCursor]: eU
           }),
@@ -312,8 +312,8 @@ function er(e) {
           a = (0, l.jsxs)("div", {
             className: en({
               isPremium: eo,
-              hasBanner: e4,
-              hasProfileEffect: e5
+              hasBanner: e8,
+              hasProfileEffect: e9
             }),
             children: [(0, l.jsx)(A.default, {
               disabled: eU,
@@ -366,7 +366,7 @@ function er(e) {
               }
             })()
           }), !eM && (0, l.jsx)(R.default, {
-            customStatusActivity: e9
+            customStatusActivity: e5
           }), (0, l.jsx)(C.default, {}), !eC && (0, l.jsx)(_.default, {
             isUsingGuildBio: null == e ? void 0 : e.isUsingGuildValue,
             guild: es,

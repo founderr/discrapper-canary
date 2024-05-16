@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return l
   },
   canGoBack: function() {
-    return i
+    return u
   },
   errorToStep: function() {
     return o
@@ -13,7 +13,7 @@ a.r(t), a.d(t, {
     return r
   },
   getStepIndex: function() {
-    return u
+    return i
   }
 });
 var n, l, s = a("689938");
@@ -45,10 +45,10 @@ function o(e) {
   return null
 }
 
-function u(e, t) {
+function i(e, t) {
   return t.findIndex(t => t === e)
 }
 
-function i(e, t) {
+function u(e, t) {
   return e > 0 || Object.keys(t).length > 0
 }(n = l || (l = {})).SELECT_PLAN = "select_plan", n.PAYMENT_TYPE = "payment_type", n.PAYPAL = "paypal", n.PAYPAL_ADDRESS = "paypal_address", n.PAYMENT_REQUEST_INFO = "payment_request_info", n.CREDIT_CARD_INFORMATION = "credit_card_information", n.ADDRESS = "address", n.REVIEW = "review", n.CONFIRM = "confirm", n.AWAITING_AUTHENTICATION = "awaiting_authentication", n.VENMO = "venmo", n.VENMO_ADDRESS = "venmo_address"

@@ -67,7 +67,7 @@ t.default = e => {
     disableCustomColor: g = !1
   } = e, {
     analyticsLocations: x
-  } = (0, i.default)(), b = s.useRef(null), L = (0, n.default)(b), T = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
+  } = (0, i.default)(), b = s.useRef(null), T = (0, n.default)(b), L = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
   return (0, a.jsx)(r.Tooltip, {
     text: f.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: E,
@@ -92,9 +92,9 @@ t.default = e => {
         })
       },
       children: h ? (0, a.jsx)(o.SeasonalGiftIcon, {
-        hovered: L,
+        hovered: T,
         isContentDismissed: !0,
-        themeOverride: T,
+        themeOverride: L,
         boxColors: m
       }) : (0, a.jsx)(c.default, {
         width: 24,

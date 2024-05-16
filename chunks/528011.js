@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   shouldShowRaidNotificationNagbar: function() {
-    return p
+    return _
   },
   useGuildIncidentsState: function() {
-    return _
+    return E
   }
 }), n("47120");
 var r = n("149765"),
@@ -18,19 +18,19 @@ var r = n("149765"),
   d = n("709054"),
   f = n("154285"),
   S = n("533244"),
-  h = n("487419"),
+  p = n("487419"),
   g = n("676770"),
-  E = n("981631");
+  h = n("981631");
 
-function _(e) {
+function E(e) {
   let {
     showAlertMode: t
-  } = (0, f.useGuildAlertModeEnabled)(null != e ? e : E.ZERO_STRING_GUILD_ID), n = (0, i.useStateFromStores)([s.default, o.default], () => {
+  } = (0, f.useGuildAlertModeEnabled)(null != e ? e : h.ZERO_STRING_GUILD_ID), n = (0, i.useStateFromStores)([s.default, o.default], () => {
     let t = s.default.getGuild(e);
     if (null == t) return !1;
     let n = o.default.getGuildPermissions(t);
     return null != n && r.hasAny(n, g.IncidentAlertModeratorPermissions)
-  }), l = (0, i.useStateFromStores)([h.default], () => null != e ? h.default.getGuildIncident(e) : null), u = null != l && (0, S.isUnderLockdown)(l);
+  }), l = (0, i.useStateFromStores)([p.default], () => null != e ? p.default.getGuildIncident(e) : null), u = null != l && (0, S.isUnderLockdown)(l);
   return {
     shouldShowIncidentActions: n && t,
     incidentData: l,
@@ -38,11 +38,11 @@ function _(e) {
   }
 }
 
-function p() {
+function _() {
   var e;
   let t = function(e) {
       let t = a.default.getCurrentUser(),
-        n = h.default.getIncidentsByGuild();
+        n = p.default.getIncidentsByGuild();
       for (let i of d.default.keys(n).map(e => s.default.getGuild(e))) {
         if (null == i) continue;
         let l = n[i.id];
@@ -58,12 +58,12 @@ function p() {
     }(u.default.getGuildId()),
     {
       showAlertMode: n
-    } = (0, f.getGuildAlertModeEnabled)(null != t ? t : E.ZERO_STRING_GUILD_ID),
+    } = (0, f.getGuildAlertModeEnabled)(null != t ? t : h.ZERO_STRING_GUILD_ID),
     i = null !== (e = l.default.getGuildsProto()) && void 0 !== e ? e : {},
     o = null != t ? i[t] : null,
-    _ = null != o && o.disableRaidAlertNag;
+    E = null != o && o.disableRaidAlertNag;
   return {
-    show: null != t && n && !_,
+    show: null != t && n && !E,
     guildId: t
   }
 }

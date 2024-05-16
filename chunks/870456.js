@@ -1,5 +1,5 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS: function() {
     return l
   }

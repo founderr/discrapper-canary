@@ -12,8 +12,8 @@ var n = a("735250"),
   s = a("442837"),
   r = a("481060"),
   o = a("464179"),
-  u = a("812169"),
-  i = a("706454"),
+  i = a("812169"),
+  u = a("706454"),
   d = a("351402"),
   c = a("285952"),
   E = a("603421"),
@@ -28,10 +28,10 @@ let S = e => {
         paymentSourceType: _
       } = e,
       A = null != c && (null == c.code || (0, E.errorToStep)(c) === E.Steps.ADDRESS),
-      N = (0, s.useStateFromStores)([i.default], () => i.default.locale);
+      N = (0, s.useStateFromStores)([u.default], () => u.default.locale);
     switch (_) {
       case p.PaymentSourceTypes.CARD:
-        t = "en-US" === N ? 1 === (0, u.reducedPaymentInfoExperiment)().bucket ? o.default.Layouts.MODAL_US_REDUCED : o.default.Layouts.MODAL_US : o.default.Layouts.MODAL_INTL;
+        t = "en-US" === N ? 1 === (0, i.reducedPaymentInfoExperiment)().bucket ? o.default.Layouts.MODAL_US_REDUCED : o.default.Layouts.MODAL_US : o.default.Layouts.MODAL_INTL;
         break;
       case p.PaymentSourceTypes.GIROPAY:
       case p.PaymentSourceTypes.PAYSAFE_CARD:

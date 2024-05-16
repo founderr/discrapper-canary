@@ -12,18 +12,18 @@ var n = a("735250"),
   s = a("481060"),
   r = a("462566"),
   o = a("285952"),
-  u = a("603421"),
-  i = a("689938"),
+  i = a("603421"),
+  u = a("689938"),
   d = a("868312");
 let c = e => {
     let {
       billingError: t,
       onCardInfoChange: a
-    } = e, o = null != t && (null == t.code || (0, u.errorToStep)(t) === u.Steps.CREDIT_CARD_INFORMATION);
+    } = e, o = null != t && (null == t.code || (0, i.errorToStep)(t) === i.Steps.CREDIT_CARD_INFORMATION);
     return (0, n.jsxs)(l.Fragment, {
       children: [o ? (0, n.jsx)(s.FormErrorBlock, {
         className: d.errorBlock,
-        children: i.default.Messages.BILLING_ERROR_SECTION_CARD
+        children: u.default.Messages.BILLING_ERROR_SECTION_CARD
       }) : null, (0, n.jsx)(r.default, {
         onCardInfoChange: a,
         error: t
@@ -45,7 +45,7 @@ let c = e => {
         disabled: !t,
         submitting: a,
         onClick: r,
-        children: i.default.Messages.NEXT
+        children: u.default.Messages.NEXT
       })]
     })
   }

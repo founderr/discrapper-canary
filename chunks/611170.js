@@ -1,36 +1,36 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   renderImageComponentForGalleryItem: function() {
-    return r
+    return u
   },
   renderVideoComponentForGalleryItem: function() {
-    return u
+    return i
   }
 });
-var l = t("591759"),
-  a = t("524444");
+var l = n("591759"),
+  a = n("524444");
 
-function r(e) {
-  let n = e.item.originalItem.media;
+function u(e) {
+  let t = e.item.originalItem.media;
   return (0, a.renderImageComponent)({
     ...e,
     alt: e.item.originalItem.description,
-    src: n.proxyUrl,
-    original: n.url,
-    placeholder: n.placeholder,
-    placeholderVersion: n.placeholderVersion
+    src: t.proxyUrl,
+    original: t.url,
+    placeholder: t.placeholder,
+    placeholderVersion: t.placeholderVersion
   })
 }
 
-function u(e) {
-  let n = e.item.originalItem.media,
-    t = l.default.toURLSafe(n.proxyUrl);
-  return null == t ? null : (t.searchParams.append("format", "jpeg"), (0, a.renderVideoComponent)({
+function i(e) {
+  let t = e.item.originalItem.media,
+    n = l.default.toURLSafe(t.proxyUrl);
+  return null == n ? null : (n.searchParams.append("format", "jpeg"), (0, a.renderVideoComponent)({
     ...e,
-    poster: t.toString(),
+    poster: n.toString(),
     alt: e.item.originalItem.description,
-    src: n.proxyUrl,
-    placeholder: n.placeholder,
-    placeholderVersion: n.placeholderVersion
+    src: t.proxyUrl,
+    placeholder: t.placeholder,
+    placeholderVersion: t.placeholderVersion
   }))
 }

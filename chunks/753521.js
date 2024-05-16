@@ -27,16 +27,16 @@ function _(e) {
     transitionState: t,
     dismissable: u,
     guildPain: _,
-    myUsage: j
-  } = e, [g, M] = l.useState(x.Tab.Intro), {
+    myUsage: g
+  } = e, [j, M] = l.useState(x.Tab.Intro), {
     submitted: O,
     submitting: C,
     saveSettings: A
   } = (0, o.useSaveSettings)(s), {
     guildPlans: R,
-    overrideGuild: E,
-    getDebug: p
-  } = (0, o.useGuildMigrationSteps)(_, j), b = l.useRef(null);
+    overrideGuild: p,
+    getDebug: E
+  } = (0, o.useGuildMigrationSteps)(_, g), w = l.useRef(null);
   return l.useEffect(() => {
     c.default.track(T.AnalyticEvents.OPEN_MODAL, {
       type: "notification_migration_modal"
@@ -47,15 +47,15 @@ function _(e) {
     "aria-label": m.default.Messages.NOTIFICATIONS,
     size: i.ModalSize.DYNAMIC,
     children: [(0, a.jsx)(x.default, {
-      selectedTab: g,
+      selectedTab: j,
       onClick: M,
       submitted: O
-    }), g === x.Tab.Intro ? (0, a.jsx)(h.default, {
-      ref: b
-    }) : g === x.Tab.Customize ? (0, a.jsx)(v, {
+    }), j === x.Tab.Intro ? (0, a.jsx)(h.default, {
+      ref: w
+    }) : j === x.Tab.Customize ? (0, a.jsx)(v, {
       guildPlans: R,
-      overrideGuild: E,
-      getDebug: p
+      overrideGuild: p,
+      getDebug: E
     }) : (0, a.jsx)(N.default, {
       count: Object.values(R).filter(e => {
         var s;
@@ -65,7 +65,7 @@ function _(e) {
       className: f.buttons,
       children: [(0, a.jsxs)("div", {
         className: f.__invalid_left,
-        children: [u || g !== x.Tab.Tips && g !== x.Tab.Customize ? null : (0, a.jsx)(i.Anchor, {
+        children: [u || j !== x.Tab.Tips && j !== x.Tab.Customize ? null : (0, a.jsx)(i.Anchor, {
           className: f.dismiss,
           href: "https://dis.gd/better-muting",
           children: (0, a.jsx)(i.Text, {
@@ -73,7 +73,7 @@ function _(e) {
             color: "interactive-normal",
             children: m.default.Messages.LEARN_MORE
           })
-        }), u && g === x.Tab.Intro ? (0, a.jsx)(i.Clickable, {
+        }), u && j === x.Tab.Intro ? (0, a.jsx)(i.Clickable, {
           className: f.dismiss,
           onClick: s,
           children: (0, a.jsx)(i.Text, {
@@ -81,7 +81,7 @@ function _(e) {
             color: "interactive-normal",
             children: m.default.Messages.DISMISS
           })
-        }) : null, u && g === x.Tab.Customize ? (0, a.jsx)(i.Clickable, {
+        }) : null, u && j === x.Tab.Customize ? (0, a.jsx)(i.Clickable, {
           className: f.dismiss,
           onClick: s,
           children: (0, a.jsx)(i.Text, {
@@ -92,28 +92,28 @@ function _(e) {
         }) : null]
       }), (0, a.jsxs)("div", {
         className: f.right,
-        children: [g === x.Tab.Customize ? (0, a.jsx)(i.Text, {
+        children: [j === x.Tab.Customize ? (0, a.jsx)(i.Text, {
           className: f.warning,
           variant: "text-xs/medium",
           color: "text-muted",
           children: m.default.Messages.NOTIF_MIGRATION_BACKUP
-        }) : null, g !== x.Tab.Customize || O ? null : (0, a.jsxs)(i.Button, {
+        }) : null, j !== x.Tab.Customize || O ? null : (0, a.jsxs)(i.Button, {
           onClick: () => M(x.Tab.Intro),
           color: i.Button.Colors.TRANSPARENT,
           children: [(0, a.jsx)(n.default, {
             width: 16,
             height: 16
           }), " ", m.default.Messages.BACK]
-        }), g === x.Tab.Intro ? (0, a.jsxs)(i.Button, {
+        }), j === x.Tab.Intro ? (0, a.jsxs)(i.Button, {
           onClick: () => {
             var e;
-            (null === (e = b.current) || void 0 === e ? void 0 : e.maybeChangeToAfterTab()) && M(x.Tab.Customize)
+            (null === (e = w.current) || void 0 === e ? void 0 : e.maybeChangeToAfterTab()) && M(x.Tab.Customize)
           },
           children: [m.default.Messages.TRY_IT_OUT, " ", (0, a.jsx)(d.default, {
             width: 16,
             height: 16
           })]
-        }) : g === x.Tab.Customize ? (0, a.jsxs)(i.Button, {
+        }) : j === x.Tab.Customize ? (0, a.jsxs)(i.Button, {
           onClick: () => {
             M(x.Tab.Tips), A(R)
           },

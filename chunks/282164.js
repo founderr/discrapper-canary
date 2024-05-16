@@ -5,8 +5,8 @@ var n = a("735250"),
   s = a("442837"),
   r = a("481060"),
   o = a("873115"),
-  u = a("618541"),
-  i = a("975060"),
+  i = a("618541"),
+  u = a("975060"),
   d = a("912454"),
   c = a("689938"),
   E = a("802632");
@@ -42,7 +42,7 @@ class p extends l.PureComponent {
     })
   }
 }
-t.default = s.default.connectStores([u.default, i.default], () => ({
-  braintreeEmail: i.default.braintreeEmail,
-  paypalClient: u.default.getPayPalClient()
+t.default = s.default.connectStores([i.default, u.default], () => ({
+  braintreeEmail: u.default.braintreeEmail,
+  paypalClient: i.default.getPayPalClient()
 }))(p)

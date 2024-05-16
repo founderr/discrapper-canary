@@ -18,8 +18,8 @@ var a = l("735250"),
   g = l("37234"),
   x = l("727637"),
   b = l("607070"),
-  L = l("100527"),
-  T = l("906732"),
+  T = l("100527"),
+  L = l("906732"),
   v = l("1585"),
   S = l("125988"),
   I = l("377171"),
@@ -36,12 +36,12 @@ var a = l("735250"),
   M = l("794358"),
   D = l("466111"),
   F = l("26290"),
-  w = l("626135"),
-  H = l("998502"),
+  H = l("626135"),
+  w = l("998502"),
   U = l("335131"),
   W = l("1870"),
-  V = l("884697"),
-  G = l("266386"),
+  G = l("884697"),
+  V = l("266386"),
   z = l("664018"),
   K = l("624377"),
   Y = l("813083"),
@@ -54,7 +54,7 @@ var a = l("735250"),
   ee = l("689938"),
   et = l("638075"),
   el = l("42615");
-let ea = H.default.getEnableHardwareAcceleration() ? E.AnimatedAvatar : E.Avatar,
+let ea = w.default.getEnableHardwareAcceleration() ? E.AnimatedAvatar : E.Avatar,
   es = E.AvatarSizes.SIZE_152,
   er = E.AvatarSizes.SIZE_120,
   en = (0, v.getDecorationSizeForAvatarSize)(es),
@@ -100,9 +100,9 @@ t.default = function(e) {
     onMount: r,
     isPremiumUser: o = !1,
     isGiftEasterEggEnabled: M
-  } = e, H = s.useRef(null), {
+  } = e, w = s.useRef(null), {
     analyticsLocations: eu
-  } = (0, T.default)(L.default.COLLECTIBLES_SHOP_CARD), ec = s.useRef(null), ed = s.useRef(null), ef = (0, x.default)(ec), {
+  } = (0, L.default)(T.default.COLLECTIBLES_SHOP_CARD), ec = s.useRef(null), ed = s.useRef(null), ef = (0, x.default)(ec), {
     defaultPaymentSource: eC
   } = (0, N.default)({
     isGift: !1,
@@ -110,24 +110,24 @@ t.default = function(e) {
   }), [em, ep] = s.useState(!1), eE = ef || em, eh = (0, C.useStateFromStores)([R.default], () => R.default.getCurrentUser()), [eg] = t.items, {
     avatarDecorationSrc: ex,
     eventHandlers: eb,
-    avatarPlaceholderSrc: eL
+    avatarPlaceholderSrc: eT
   } = (0, S.default)({
     user: eh,
     avatarDecorationOverride: (null == eg ? void 0 : eg.type) === f.CollectiblesItemType.AVATAR_DECORATION ? eg : void 0,
     size: en,
     animateOnHover: !eE
   }), {
-    backgroundColors: eT,
+    backgroundColors: eL,
     buttonColors: ev
-  } = (0, K.default)(t.styles), eS = (0, V.getFormattedPriceForCollectiblesProduct)(t, o, !1), eI = (0, V.isPremiumCollectiblesProduct)(t), eN = (0, V.isFreeCollectiblesProduct)(t), [e_, eO, ey] = (0, C.useStateFromStoresArray)([W.default], () => [W.default.getPurchase(t.skuId), W.default.isClaiming === t.skuId, null != W.default.isClaiming && W.default.isClaiming !== t.skuId]), eA = (0, C.useStateFromStores)([j.default], () => (0, p.isThemeDark)(j.default.theme)), ek = (0, V.isProductNew)(t.skuId), {
+  } = (0, K.default)(t.styles), eS = (0, G.getFormattedPriceForCollectiblesProduct)(t, o, !1), eI = (0, G.isPremiumCollectiblesProduct)(t), eN = (0, G.isFreeCollectiblesProduct)(t), [e_, eO, ey] = (0, C.useStateFromStoresArray)([W.default], () => [W.default.getPurchase(t.skuId), W.default.isClaiming === t.skuId, null != W.default.isClaiming && W.default.isClaiming !== t.skuId]), eA = (0, C.useStateFromStores)([j.default], () => (0, p.isThemeDark)(j.default.theme)), ek = (0, G.isProductNew)(t.skuId), {
     hoverVariant: ej
-  } = (0, z.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard"), eR = (0, G.useCollectiblesHoverPreviewExperiment)("CollectiblesShopTallCard"), [eP, eB] = s.useState(!1), eM = s.useRef(null), eD = s.useRef(new i.Environment), [eF, ew] = s.useState(!1), [eH, eU] = s.useState(null), eW = null != e_ || eF, eV = (0, y.default)({
+  } = (0, z.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard"), eR = (0, V.useCollectiblesHoverPreviewExperiment)("CollectiblesShopTallCard"), [eP, eB] = s.useState(!1), eM = s.useRef(null), eD = s.useRef(new i.Environment), [eF, eH] = s.useState(!1), [ew, eU] = s.useState(null), eW = null != e_ || eF, eG = (0, y.default)({
     analyticsLocations: eu
-  }), eG = s.useRef(null), ez = s.useMemo(() => ({
+  }), eV = s.useRef(null), ez = s.useMemo(() => ({
     sku_id: t.skuId,
     location: $.AnalyticsLocations.COLLECTIBLES_LIGHTNING_CHECKOUT
   }), [t]), eK = () => {
-    if ((0, g.popLayer)(), eV(), (null == eg ? void 0 : eg.type) === f.CollectiblesItemType.AVATAR_DECORATION) {
+    if ((0, g.popLayer)(), eG(), (null == eg ? void 0 : eg.type) === f.CollectiblesItemType.AVATAR_DECORATION) {
       (0, v.openAvatarDecorationModal)({
         initialSelectedDecoration: eg,
         analyticsLocations: eu
@@ -139,15 +139,15 @@ t.default = function(e) {
     })
   }, eY = e => {
     if (!eP) return a => {
-      eG.current = a.currentTarget, (0, q.openCollectiblesShopProductDetailsModal)({
+      eV.current = a.currentTarget, (0, q.openCollectiblesShopProductDetailsModal)({
         product: t,
         category: l,
         analyticsLocations: eu,
         analyticsSource: e,
-        returnRef: eG
+        returnRef: eV
       })
     }
-  }, eZ = eY(L.default.COLLECTIBLES_SHOP_CARD), eX = eY(L.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON), eq = () => (0, a.jsx)("div", {
+  }, eZ = eY(T.default.COLLECTIBLES_SHOP_CARD), eX = eY(T.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON), eq = () => (0, a.jsx)("div", {
     className: et.hoverUpsellContainer,
     children: (0, a.jsx)(O.default, {
       fullWidth: !0,
@@ -161,13 +161,13 @@ t.default = function(e) {
   s.useEffect(() => {
     null == r || r(ec)
   }, [r]), s.useEffect(() => {
-    if (!b.default.useReducedMotion && null !== eH) {
+    if (!b.default.useReducedMotion && null !== ew) {
       let {
         current: e
       } = ed;
       u()(null != e, "Shakeable is shaken when not mounted"), e.shake(300, 2)
     }
-  }, [eH]);
+  }, [ew]);
   let eQ = () => eW ? (0, a.jsx)(E.Text, {
       variant: "text-md/semibold",
       className: et.priceTag,
@@ -222,7 +222,7 @@ t.default = function(e) {
         }), e$()]
       })
     },
-    e1 = () => eP && null !== eH ? (0, a.jsx)("div", {
+    e1 = () => eP && null !== ew ? (0, a.jsx)("div", {
       className: et.avatarContainer,
       children: (0, a.jsx)("img", {
         src: el,
@@ -254,7 +254,7 @@ t.default = function(e) {
         children: (0, a.jsx)(ea, {
           ...eb,
           avatarDecoration: ex,
-          src: eR && eE ? null == eh ? void 0 : eh.getAvatarURL(void 0, 152, !0) : eL,
+          src: eR && eE ? null == eh ? void 0 : eh.getAvatarURL(void 0, 152, !0) : eT,
           imageClassName: eR && eE ? et.fadeInAvatarImg : void 0,
           className: n()(et.avatar, {
             [et.avatarPurchased]: eW && !eP
@@ -275,21 +275,21 @@ t.default = function(e) {
         paymentSource: eC,
         itemPreview: e1(),
         onPurchaseComplete: () => {
-          ew(!0), w.default.track($.AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, {
+          eH(!0), H.default.track($.AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, {
             ...ez,
-            load_id: H.current
+            load_id: w.current
           })
         },
         onUse: e7,
         onError: e => {
-          eU(e), w.default.track($.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+          eU(e), H.default.track($.AnalyticEvents.PAYMENT_FLOW_FAILED, {
             ...ez,
-            load_id: H.current
+            load_id: w.current
           })
         },
         onReviewPurchase: e7,
         confettiCanvas: eM.current,
-        loadId: H.current,
+        loadId: w.current,
         baseAnalyticsData: ez
       }) : (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(E.Text, {
@@ -309,23 +309,23 @@ t.default = function(e) {
       })]
     })),
     e4 = () => {
-      H.current = (0, d.v4)(), eU(null), eB(!0), ep(!0), h.default.dispatch({
+      w.current = (0, d.v4)(), eU(null), eB(!0), ep(!0), h.default.dispatch({
         type: "LIGHTNING_CHECKOUT_OPEN"
-      }), w.default.track($.AnalyticEvents.PAYMENT_FLOW_STARTED, {
+      }), H.default.track($.AnalyticEvents.PAYMENT_FLOW_STARTED, {
         ...ez,
-        load_id: H.current
+        load_id: w.current
       })
     },
     e7 = s.useCallback(() => {
       eB(!1), ep(!1), h.default.dispatch({
         type: "LIGHTNING_CHECKOUT_CLOSE"
-      }), w.default.track($.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+      }), H.default.track($.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
         ...ez,
-        load_id: H.current
+        load_id: w.current
       })
     }, [eB, ez]),
     e2 = eA ? "0 0 15px 1px ".concat(m.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)",
-    e3 = null != eT ? {
+    e3 = null != eL ? {
       backgroundColor: eA ? "var(--background-floating)" : "var(--background-secondary)",
       borderColor: "var(--chat-border)",
       boxShadow: eE ? e2 : "none"
@@ -333,7 +333,7 @@ t.default = function(e) {
     e8 = null != ev && eP ? {
       boxShadow: "0px 4px 50px 0px " + ev.primary.toHexString()
     } : {},
-    e6 = eP && eH ? {
+    e6 = eP && ew ? {
       boxShadow: "0px 4px 50px 0px " + (eA ? I.default.WHITE : I.default.BLACK)
     } : e8;
   return s.useEffect(() => {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DraftBadge: function() {
-    return h
+    return p
   },
   PublishedBadge: function() {
     return S
@@ -51,7 +51,7 @@ function S() {
   })
 }
 
-function h() {
+function p() {
   return (0, r.jsx)(f, {
     label: c.default.Messages.GUILD_PRODUCT_STATUS_BADGE_DRAFT,
     icon: o.default,

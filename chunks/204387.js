@@ -4,12 +4,12 @@ t.r(s), t.d(s, {
     return a
   }
 }), t("47120");
-var a, r, l = t("735250"),
-  i = t("470079"),
+var a, r, i = t("735250"),
+  l = t("470079"),
   n = t("481060"),
   C = t("100527"),
-  o = t("906732"),
-  d = t("626135"),
+  d = t("906732"),
+  o = t("626135"),
   c = t("281494"),
   u = t("687555"),
   f = t("596583"),
@@ -21,17 +21,17 @@ s.default = e => {
       onClose: a,
       sourceAnalyticsLocations: r
     } = e,
-    [p, h] = i.useState(1),
-    [_, R] = i.useState(new Set),
+    [p, h] = l.useState(1),
+    [_, R] = l.useState(new Set),
     {
       analyticsLocations: j
-    } = (0, o.default)([...r, C.default.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
+    } = (0, d.default)([...r, C.default.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
   switch (p) {
     case 1:
-      s = (0, l.jsx)(u.default, {
+      s = (0, i.jsx)(u.default, {
         onShare: async e => {
           try {
-            d.default.track(x.AnalyticEvents.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, {
+            o.default.track(x.AnalyticEvents.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, {
               location_stack: j
             }), await (0, c.createReferralTrials)(e.map(e => e.id)), h(2), R(new Set(e))
           } catch {}
@@ -40,7 +40,7 @@ s.default = e => {
       });
       break;
     case 2:
-      s = (0, l.jsx)(f.default, {
+      s = (0, i.jsx)(f.default, {
         selectedUsers: _,
         onClose: a
       });
@@ -48,7 +48,7 @@ s.default = e => {
     default:
       a()
   }
-  return (0, l.jsx)(n.ModalRoot, {
+  return (0, i.jsx)(n.ModalRoot, {
     transitionState: t,
     children: s
   })

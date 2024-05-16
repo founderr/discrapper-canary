@@ -1,45 +1,45 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
-    return v
+    return E
   }
-}), t("47120");
-var l = t("735250"),
-  a = t("470079"),
-  r = t("120356"),
-  u = t.n(r),
-  s = t("481060"),
-  o = t("596454"),
-  i = t("911969"),
-  d = t("114484"),
-  c = t("970184"),
-  m = t("280501"),
-  p = t("689938"),
-  f = t("622252");
+}), n("47120");
+var l = n("735250"),
+  a = n("470079"),
+  u = n("120356"),
+  i = n.n(u),
+  o = n("481060"),
+  s = n("596454"),
+  r = n("911969"),
+  d = n("114484"),
+  c = n("970184"),
+  p = n("280501"),
+  m = n("689938"),
+  f = n("622252");
 
-function C(e) {
+function S(e) {
   let {
-    emoji: n,
-    label: t,
+    emoji: t,
+    label: n,
     description: a,
-    isDisabled: r,
-    isOffset: s
-  } = e, i = u()(f.labelContainer, {
-    [f.disabled]: r,
-    [f.offset]: null == n && s
+    isDisabled: u,
+    isOffset: o
+  } = e, r = i()(f.labelContainer, {
+    [f.disabled]: u,
+    [f.offset]: null == t && o
   });
   return (0, l.jsxs)("div", {
     className: f.option,
-    children: [null != n ? (0, l.jsx)(o.default, {
+    children: [null != t ? (0, l.jsx)(s.default, {
       className: f.emoji,
-      emojiId: n.id,
-      emojiName: n.name,
-      animated: n.animated
+      emojiId: t.id,
+      emojiName: t.name,
+      animated: t.animated
     }) : null, (0, l.jsxs)("div", {
-      className: i,
+      className: r,
       children: [(0, l.jsx)("strong", {
         className: f.label,
-        children: t
+        children: n
       }), null != a ? (0, l.jsx)("span", {
         className: f.description,
         children: a
@@ -48,40 +48,40 @@ function C(e) {
   })
 }
 
-function S(e) {
+function C(e) {
   let {
-    emoji: n,
-    label: t
+    emoji: t,
+    label: n
   } = e;
   return (0, l.jsx)("div", {
     className: f.option,
     children: (0, l.jsxs)("div", {
-      className: u()(f.value, f.singleValue),
-      children: [null != n ? (0, l.jsx)(o.default, {
+      className: i()(f.value, f.singleValue),
+      children: [null != t ? (0, l.jsx)(s.default, {
         className: f.emoji,
-        src: n.src,
-        emojiId: n.id,
-        emojiName: n.name,
-        animated: n.animated
+        src: t.src,
+        emojiId: t.id,
+        emojiName: t.name,
+        animated: t.animated
       }) : null, (0, l.jsx)("span", {
         className: f.singleValueLabel,
-        children: t
+        children: n
       })]
     })
   })
 }
 
-function E(e) {
+function v(e) {
   let {
-    options: n
+    options: t
   } = e;
   return (0, l.jsx)("div", {
     className: f.option,
     children: (0, l.jsx)("div", {
       className: f.value,
-      children: n.map((e, n) => (0, l.jsxs)("div", {
+      children: t.map((e, t) => (0, l.jsxs)("div", {
         className: f.optionTag,
-        children: [null != e.emoji ? (0, l.jsx)(o.default, {
+        children: [null != e.emoji ? (0, l.jsx)(s.default, {
           className: f.smallEmoji,
           src: e.emoji.src,
           emojiId: e.emoji.id,
@@ -91,91 +91,91 @@ function E(e) {
           className: f.tag,
           children: e.label
         }, e.value)]
-      }, n))
+      }, t))
     })
   })
 }
 
-function v(e) {
+function E(e) {
   let {
-    type: n,
-    options: t,
-    id: r,
-    placeholder: u,
-    maxValues: o,
-    minValues: v,
+    type: t,
+    options: n,
+    id: u,
+    placeholder: i,
+    maxValues: s,
+    minValues: E,
     disabled: N
-  } = e, h = a.useMemo(() => t.filter(e => e.default).map(e => e.value), [t]), {
-    state: T,
-    executeStateUpdate: g,
-    visualState: x,
-    isDisabled: y,
-    error: O
+  } = e, h = a.useMemo(() => n.filter(e => e.default).map(e => e.value), [n]), {
+    state: g,
+    executeStateUpdate: T,
+    visualState: y,
+    isDisabled: I,
+    error: x
   } = (0, c.useComponentState)(e, {
-    type: n,
+    type: t,
     values: h
-  }), I = o > 1, j = x === m.ActionComponentState.LOADING, [_, L] = a.useState(!1), [M, R] = a.useState(() => new Set(t.filter(e => e.default).map(e => e.value))), [A, b] = a.useState(M), P = a.useMemo(() => t.some(e => null != e.emoji), [t]);
+  }), O = s > 1, j = y === p.ActionComponentState.LOADING, [L, _] = a.useState(!1), [M, R] = a.useState(() => new Set(n.filter(e => e.default).map(e => e.value))), [A, b] = a.useState(M), U = a.useMemo(() => n.some(e => null != e.emoji), [n]);
   a.useEffect(() => {
-    if ((null == T ? void 0 : T.type) === i.ComponentType.STRING_SELECT) {
-      let e = new Set(T.values);
+    if ((null == g ? void 0 : g.type) === r.ComponentType.STRING_SELECT) {
+      let e = new Set(g.values);
       R(e), b(e)
     } else {
       let e = new Set(h);
       R(e), b(e)
     }
-  }, [r, h, T]);
-  let U = a.useCallback(() => {
-    A !== M && g({
-      type: i.ComponentType.STRING_SELECT,
+  }, [u, h, g]);
+  let P = a.useCallback(() => {
+    A !== M && T({
+      type: r.ComponentType.STRING_SELECT,
       values: Array.from(M)
     }) && b(M)
-  }, [M, A, b, g]);
+  }, [M, A, b, T]);
   a.useEffect(() => {
-    if (!_) !(M.size === A.size && Array.from(A).every(e => M.has(e))) && U()
-  }, [_, M, A, U]);
-  let w = s.singleSelect;
-  I ? w = s.multiSelect : 0 === v && (w = s.toggleSelect);
-  let D = (0, s.useVariableSelect)({
+    if (!L) !(M.size === A.size && Array.from(A).every(e => M.has(e))) && P()
+  }, [L, M, A, P]);
+  let k = o.singleSelect;
+  O ? k = o.multiSelect : 0 === E && (k = o.toggleSelect);
+  let w = (0, o.useVariableSelect)({
     value: M,
     onChange: e => R(e),
-    onSelectInteraction: w
+    onSelectInteraction: k
   });
   return (0, l.jsxs)(a.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: f.container,
-      children: [(0, l.jsx)(s.Select, {
-        isDisabled: N || y,
+      children: [(0, l.jsx)(o.Select, {
+        isDisabled: N || I,
         className: f.select,
-        options: t.map(e => ({
+        options: n.map(e => ({
           ...e,
-          disabled: I && !M.has(e.value) && M.size === o
+          disabled: O && !M.has(e.value) && M.size === s
         })),
-        placeholder: null != u ? u : p.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
-        onClose: () => L(!1),
-        onOpen: () => L(!0),
+        placeholder: null != i ? i : m.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
+        onClose: () => _(!1),
+        onOpen: () => _(!0),
         maxVisibleItems: 5,
-        closeOnSelect: !I,
+        closeOnSelect: !O,
         optionClassName: f.selectOption,
-        renderOptionLabel: e => (0, l.jsx)(C, {
+        renderOptionLabel: e => (0, l.jsx)(S, {
           ...e,
-          isDisabled: I && !M.has(e.value) && M.size === o,
-          isOffset: P
+          isDisabled: O && !M.has(e.value) && M.size === s,
+          isOffset: U
         }),
-        renderOptionValue: e => I ? (0, l.jsx)(E, {
+        renderOptionValue: e => O ? (0, l.jsx)(v, {
           options: e
-        }) : (0, l.jsx)(S, {
+        }) : (0, l.jsx)(C, {
           ...e[0]
         }),
-        ...D
+        ...w
       }), j ? (0, l.jsx)("div", {
         className: f.__invalid_loading,
-        children: (0, l.jsx)(s.Dots, {
+        children: (0, l.jsx)(o.Dots, {
           dotRadius: 3.5,
           themed: !0
         })
       }) : null]
-    }), null != O ? (0, l.jsx)(d.InteractionStatusMessage, {
-      ...(0, d.getFailedContent)(O),
+    }), null != x ? (0, l.jsx)(d.InteractionStatusMessage, {
+      ...(0, d.getFailedContent)(x),
       className: f.error
     }) : null]
   })

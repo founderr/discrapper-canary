@@ -17,8 +17,8 @@ var n = s("735250"),
   u = s("435274"),
   c = s("4912"),
   p = s("937615"),
-  f = s("689938"),
-  h = s("868312");
+  h = s("689938"),
+  f = s("868312");
 let S = e => {
     let {
       legalNotice: t,
@@ -38,24 +38,24 @@ let S = e => {
       icon: c.default,
       color: l.default.Colors.ERROR,
       iconSize: l.default.Sizes.NONE,
-      iconClassName: h.invalidIcon,
-      children: f.default.Messages.BILLING_PAYMENT_SOURCE_INVALID
+      iconClassName: f.invalidIcon,
+      children: h.default.Messages.BILLING_PAYMENT_SOURCE_INVALID
     }, "source_invalid")), null != d && (d.taxInclusive ? g.push((0, n.jsx)(l.default, {
       icon: u.default,
       color: l.default.Colors.PRIMARY,
       iconSize: l.default.Sizes.LARGE,
-      children: f.default.Messages.BILLING_SALES_TAX_INCLUDED
+      children: h.default.Messages.BILLING_SALES_TAX_INCLUDED
     }, "tax_included")) : d.tax > 0 && g.push((0, n.jsx)(l.default, {
       icon: u.default,
       color: l.default.Colors.PRIMARY,
       iconSize: l.default.Sizes.LARGE,
-      children: f.default.Messages.BILLING_SALES_TAX_ADDED.format({
+      children: h.default.Messages.BILLING_SALES_TAX_ADDED.format({
         tax: (0, p.formatPrice)(d.tax, d.currency)
       })
     }, "tax_added"))), (0, n.jsxs)(a.Fragment, {
       children: [(0, n.jsx)(r.FormTitle, {
-        className: h.formTitle,
-        children: f.default.Messages.BILLING_PAY_FOR_IT_WITH
+        className: f.formTitle,
+        children: h.default.Messages.BILLING_PAY_FOR_IT_WITH
       }), (0, n.jsx)(i.default, {
         paymentSources: Object.values(s),
         selectedPaymentSourceId: P,
@@ -64,18 +64,18 @@ let S = e => {
         onPaymentSourceAdd: T
       }), g, A && (0, n.jsx)(r.Checkbox, {
         disabled: m,
-        className: h.giftToggle,
+        className: f.giftToggle,
         type: r.Checkbox.Types.INVERTED,
         value: _,
         onChange: y,
         children: (0, n.jsx)("div", {
-          className: h.checkboxLabel,
-          children: f.default.Messages.BILLING_IS_GIFT_PURCHASE
+          className: f.checkboxLabel,
+          children: h.default.Messages.BILLING_IS_GIFT_PURCHASE
         })
       }), (0, n.jsx)(o.default, {
         onChange: C,
         forceShow: !0,
-        className: h.purchaseTerms,
+        className: f.purchaseTerms,
         finePrint: t
       })]
     })
@@ -91,21 +91,21 @@ let S = e => {
       onPurchase: u,
       tooltipText: c,
       needsToBeGift: p,
-      isGift: f
+      isGift: h
     } = e, S = null != o && !o.invalid, P = {
       submitting: l,
       color: r.Button.Colors.GREEN,
-      disabled: !(i && !(p && !f) && S && t),
+      disabled: !(i && !(p && !h) && S && t),
       onClick: u
     };
     return (0, n.jsx)(r.ModalFooter, {
       children: (0, n.jsxs)("div", {
-        className: h.buyButtonTooltipWrapper,
+        className: f.buyButtonTooltipWrapper,
         children: [P.disabled && null != c ? (0, n.jsx)(r.Tooltip, {
           text: c,
           children: e => (0, n.jsx)("div", {
             "aria-hidden": !0,
-            className: h.buyButtonTooltipTarget,
+            className: f.buyButtonTooltipTarget,
             ...e
           })
         }) : null, a ? (0, n.jsx)(d.default, {

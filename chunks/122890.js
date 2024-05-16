@@ -13,13 +13,13 @@ function o(e) {
     purchaseState: t,
     currentStep: n,
     initialScene: o,
-    purchaseScene: i,
-    errorScene: l,
+    purchaseScene: l,
+    errorScene: i,
     successScene: u
   } = e, [c, d] = (0, a.useState)(o);
   return (0, a.useEffect)(() => {
-    t === s.PurchaseState.PURCHASING ? d(i) : t === s.PurchaseState.FAIL && d(l)
-  }, [t, i, l]), (0, a.useEffect)(() => {
+    t === s.PurchaseState.PURCHASING ? d(l) : t === s.PurchaseState.FAIL && d(i)
+  }, [t, l, i]), (0, a.useEffect)(() => {
     n === r.Step.CONFIRM && d(u)
   }, [n, u]), [c, d]
 }

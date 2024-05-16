@@ -1,146 +1,146 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   SelectIconSize: function() {
     return l
   },
   default: function() {
-    return v
+    return E
   }
-}), t("47120");
-var l, a, r = t("735250"),
-  u = t("470079"),
-  s = t("120356"),
-  o = t.n(s),
-  i = t("481060"),
-  d = t("911969"),
-  c = t("114484"),
-  m = t("970184"),
-  p = t("280501"),
-  f = t("689938"),
-  C = t("783894"),
-  S = t("622252");
-
-function E(e) {
-  let {
-    icon: n,
-    iconSize: t
-  } = e;
-  return (0, r.jsx)("div", {
-    className: C.iconContainer,
-    style: {
-      height: t,
-      width: t
-    },
-    children: n
-  })
-}
+}), n("47120");
+var l, a, u = n("735250"),
+  i = n("470079"),
+  o = n("120356"),
+  s = n.n(o),
+  r = n("481060"),
+  d = n("911969"),
+  c = n("114484"),
+  p = n("970184"),
+  m = n("280501"),
+  f = n("689938"),
+  S = n("783894"),
+  C = n("622252");
 
 function v(e) {
   let {
-    selectActionComponent: n,
-    queryOptions: t,
+    icon: t,
+    iconSize: n
+  } = e;
+  return (0, u.jsx)("div", {
+    className: S.iconContainer,
+    style: {
+      height: n,
+      width: n
+    },
+    children: t
+  })
+}
+
+function E(e) {
+  let {
+    selectActionComponent: t,
+    queryOptions: n,
     renderIcon: l,
     renderOptionLabel: a,
-    defaultValues: s
+    defaultValues: o
   } = e, {
-    type: v,
+    type: E,
     placeholder: N,
     maxValues: h,
-    disabled: T
-  } = n, [g, x] = u.useState(!1), [y, O] = u.useState(!1), [I, j] = u.useState(new Map(null == s ? void 0 : s.map(e => [e.value, e]))), [_, L] = u.useState(new Set(I.keys())), [M, R] = u.useState(() => (null != s ? s : []).map(e => e.value)), [A, b] = u.useState(0);
-  u.useEffect(() => {
-    let e = (null != s ? s : []).map(e => e.value);
-    if (e.every(e => M.includes(e)) && M.every(n => e.includes(n))) return;
+    disabled: g
+  } = t, [T, y] = i.useState(!1), [I, x] = i.useState(!1), [O, j] = i.useState(new Map(null == o ? void 0 : o.map(e => [e.value, e]))), [L, _] = i.useState(new Set(O.keys())), [M, R] = i.useState(() => (null != o ? o : []).map(e => e.value)), [A, b] = i.useState(0);
+  i.useEffect(() => {
+    let e = (null != o ? o : []).map(e => e.value);
+    if (e.every(e => M.includes(e)) && M.every(t => e.includes(t))) return;
     R(e);
-    let n = new Map(null == s ? void 0 : s.map(e => [e.value, e]));
-    j(n), L(new Set(n.keys())), b(e => e + 1)
-  }, [s, M]);
+    let t = new Map(null == o ? void 0 : o.map(e => [e.value, e]));
+    j(t), _(new Set(t.keys())), b(e => e + 1)
+  }, [o, M]);
   let {
-    state: P,
-    executeStateUpdate: U,
-    visualState: w,
-    isDisabled: D,
-    error: k
-  } = (0, m.useComponentState)(n, {
-    type: v,
-    selectedOptions: Array.from(I.values())
-  }), G = w === p.ActionComponentState.LOADING;
-  u.useEffect(() => {
-    if ((null == P ? void 0 : P.type) === d.ComponentType.USER_SELECT || (null == P ? void 0 : P.type) === d.ComponentType.ROLE_SELECT || (null == P ? void 0 : P.type) === d.ComponentType.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === d.ComponentType.CHANNEL_SELECT) {
-      let e = new Map(P.selectedOptions.map(e => [e.value, e]));
-      j(e), L(new Set(e.keys()))
+    state: U,
+    executeStateUpdate: P,
+    visualState: k,
+    isDisabled: w,
+    error: D
+  } = (0, p.useComponentState)(t, {
+    type: E,
+    selectedOptions: Array.from(O.values())
+  }), G = k === m.ActionComponentState.LOADING;
+  i.useEffect(() => {
+    if ((null == U ? void 0 : U.type) === d.ComponentType.USER_SELECT || (null == U ? void 0 : U.type) === d.ComponentType.ROLE_SELECT || (null == U ? void 0 : U.type) === d.ComponentType.MENTIONABLE_SELECT || (null == U ? void 0 : U.type) === d.ComponentType.CHANNEL_SELECT) {
+      let e = new Map(U.selectedOptions.map(e => [e.value, e]));
+      j(e), _(new Set(e.keys()))
     }
-  }, [P]);
-  let V = u.useCallback(() => {
-    U({
-      type: v,
-      selectedOptions: Array.from(I.values())
-    }) && L(new Set(I.keys()))
-  }, [U, v, I]);
-  u.useEffect(() => {
-    if (!g && !y) !(I.size === _.size && Array.from(I.keys()).every(e => _.has(e))) && V()
-  }, [g, y, _, I, V]);
-  let F = 0 === I.size || g,
+  }, [U]);
+  let F = i.useCallback(() => {
+    P({
+      type: E,
+      selectedOptions: Array.from(O.values())
+    }) && _(new Set(O.keys()))
+  }, [P, E, O]);
+  i.useEffect(() => {
+    if (!T && !I) !(O.size === L.size && Array.from(O.keys()).every(e => L.has(e))) && F()
+  }, [T, I, L, O, F]);
+  let V = 0 === O.size || T,
     B = {
-      isDisabled: T || D,
-      wrapperClassName: C.select,
-      options: e => new Promise(n => {
-        n(t(e))
+      isDisabled: g || w,
+      wrapperClassName: S.select,
+      options: e => new Promise(t => {
+        t(n(e))
       }),
-      placeholder: F ? null != N ? N : f.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER : void 0,
-      onClose: () => x(!1),
-      onOpen: () => x(!0),
-      onBlur: () => O(!1),
+      placeholder: V ? null != N ? N : f.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER : void 0,
+      onClose: () => y(!1),
+      onOpen: () => y(!0),
+      onBlur: () => x(!1),
       maxVisibleItems: 5,
-      optionClassName: C.__invalid_selectOption,
-      renderOptionPrefix: (e, n) => {
+      optionClassName: S.__invalid_selectOption,
+      renderOptionPrefix: (e, t) => {
         let {
-          inPill: t
-        } = n, a = t ? 16 : 24, u = l(e, a);
-        return null != u ? (0, r.jsx)(E, {
-          icon: u,
+          inPill: n
+        } = t, a = n ? 16 : 24, i = l(e, a);
+        return null != i ? (0, u.jsx)(v, {
+          icon: i,
           iconSize: a
         }) : null
       },
       renderOptionLabel: a
     };
-  return (0, r.jsxs)(u.Fragment, {
-    children: [(0, r.jsxs)("div", {
-      className: C.container,
-      children: [h > 1 ? (0, r.jsx)(i.SearchableSelect, {
-        className: C.badges,
-        value: Array.from(I.values()),
+  return (0, u.jsxs)(i.Fragment, {
+    children: [(0, u.jsxs)("div", {
+      className: S.container,
+      children: [h > 1 ? (0, u.jsx)(r.SearchableSelect, {
+        className: S.badges,
+        value: Array.from(O.values()),
         onChange: e => {
-          !g && O(!0), j(new Map(e.map(e => [e.value, e])))
+          !T && x(!0), j(new Map(e.map(e => [e.value, e])))
         },
         multi: !0,
-        inputClassNames: o()({
-          [C.soloInput]: 0 === I.size,
-          [C.inlineInput]: I.size > 0,
-          [C.hidden]: !F
+        inputClassNames: s()({
+          [S.soloInput]: 0 === O.size,
+          [S.inlineInput]: O.size > 0,
+          [S.hidden]: !V
         }),
         closeOnSelect: !1,
         centerCaret: !0,
         ...B
-      }, A) : (0, r.jsx)(i.SearchableSelect, {
-        className: (C.badges, C.singleSelect),
-        value: [...I.values()][0],
+      }, A) : (0, u.jsx)(r.SearchableSelect, {
+        className: (S.badges, S.singleSelect),
+        value: [...O.values()][0],
         onChange: e => j(null != e ? new Map([
           [e.value, e]
         ]) : new Map),
         clearable: !0,
         centerCaret: !0,
         ...B
-      }, A), G ? (0, r.jsx)("div", {
-        className: C.loading,
-        children: (0, r.jsx)(i.Dots, {
+      }, A), G ? (0, u.jsx)("div", {
+        className: S.loading,
+        children: (0, u.jsx)(r.Dots, {
           dotRadius: 3.5,
           themed: !0
         })
       }) : null]
-    }), null != k ? (0, r.jsx)(c.InteractionStatusMessage, {
-      ...(0, c.getFailedContent)(k),
-      className: S.error
+    }), null != D ? (0, u.jsx)(c.InteractionStatusMessage, {
+      ...(0, c.getFailedContent)(D),
+      className: C.error
     }) : null]
   })
 }(a = l || (l = {}))[a.PILL_ICON_SIZE = 16] = "PILL_ICON_SIZE", a[a.ROW_ICON_SIZE = 24] = "ROW_ICON_SIZE"

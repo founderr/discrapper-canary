@@ -22,8 +22,8 @@ var a = t("735250"),
   f = t("441674"),
   _ = t("988951"),
   v = t("626135"),
-  j = t("789662"),
-  g = t("981631"),
+  g = t("789662"),
+  j = t("981631"),
   M = t("689938"),
   O = t("212887");
 
@@ -36,10 +36,10 @@ function C(e) {
     return -1 === s ? i.length : s
   }).partition(e => {
     var s;
-    return (null !== (s = e.overrideMode) && void 0 !== s ? s : e.mode) === j.Mode.UseGreyDot
+    return (null !== (s = e.overrideMode) && void 0 !== s ? s : e.mode) === g.Mode.UseGreyDot
   }).value(), [s, i]), o = l.useCallback(e => {
     var a;
-    return t(e, (null !== (a = s[e].overrideMode) && void 0 !== a ? a : s[e].mode) === j.Mode.UseGreyDot ? j.Mode.KeepAsIs : j.Mode.UseGreyDot)
+    return t(e, (null !== (a = s[e].overrideMode) && void 0 !== a ? a : s[e].mode) === g.Mode.UseGreyDot ? g.Mode.KeepAsIs : g.Mode.UseGreyDot)
   }, [t, s]);
   return (0, a.jsxs)("div", {
     className: O.container,
@@ -98,10 +98,10 @@ function R(e) {
     onClick: l
   } = e, i = (0, c.useStateFromStores)([h.default], () => h.default.getGuild(t.guildId));
   if (null == i) return null;
-  let d = (null !== (s = t.overrideMode) && void 0 !== s ? s : t.mode) === j.Mode.UseGreyDot;
+  let d = (null !== (s = t.overrideMode) && void 0 !== s ? s : t.mode) === g.Mode.UseGreyDot;
 
   function r() {
-    v.default.track(g.AnalyticEvents.NOTIFICATION_MIGRATION_GUILD_CHANGED, {
+    v.default.track(j.AnalyticEvents.NOTIFICATION_MIGRATION_GUILD_CHANGED, {
       ...(0, u.collectGuildAnalyticsMetadata)(t.guildId),
       is_selected: !d,
       is_muted: N.default.isMuted(t.guildId),

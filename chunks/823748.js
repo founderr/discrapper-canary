@@ -155,7 +155,7 @@ class e5 extends l.PureComponent {
     o()(null != t, "Missing channel in Channel.openChannelContextMenu"), (0, C.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await n.e("78650").then(n.bind(n, "422200"));
+      } = await n.e("40157").then(n.bind(n, "422200"));
       return n => (0, a.jsx)(e, {
         ...n,
         channel: t
@@ -739,7 +739,7 @@ class e5 extends l.PureComponent {
     })
   }
 }
-let e6 = (0, I.default)(e5);
+let e9 = (0, I.default)(e5);
 t.default = l.memo(function(e) {
   var t;
   let {
@@ -790,7 +790,7 @@ t.default = l.memo(function(e) {
     })
   }, [null == u ? void 0 : u.id, eu, ea, el]);
   let ec = (0, p.useHasAnyModalOpen)();
-  return (0, a.jsx)(e6, {
+  return (0, a.jsx)(e9, {
     guildId: null == u ? void 0 : u.guild_id,
     channelId: r,
     channel: u,

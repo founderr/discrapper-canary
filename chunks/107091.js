@@ -22,8 +22,8 @@ var a = l("735250"),
   g = l("642619"),
   x = l("598"),
   b = l("333867"),
-  L = l("329067"),
-  T = l("981631"),
+  T = l("329067"),
+  L = l("981631"),
   v = l("302800"),
   S = l("689938"),
   I = l("894775");
@@ -67,10 +67,10 @@ function O(e) {
     {
       buttonColors: F
     } = (0, m.default)(t.styles),
-    w = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion),
-    H = (0, v.getCustomConfettiDisplayOptions)(t.skuId),
+    H = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion),
+    w = (0, v.getCustomConfettiDisplayOptions)(t.skuId),
     [U, W] = s.useState(!1),
-    [V, G] = s.useState(!1),
+    [G, V] = s.useState(!1),
     z = null != F ? {
       background: (0, p.getBackgroundGradient)(F, 90),
       color: F.text.toHslString()
@@ -83,7 +83,7 @@ function O(e) {
         W(!0), O()
       },
       onError: e => {
-        A(e), G(!0)
+        A(e), V(!0)
       },
       onReviewPurchase: k,
       paymentSource: l,
@@ -94,7 +94,7 @@ function O(e) {
   return (0, a.jsxs)("div", {
     ref: B,
     className: I.container,
-    children: [V && (0, a.jsxs)("div", {
+    children: [G && (0, a.jsxs)("div", {
       className: I.cardDetails,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
@@ -117,7 +117,7 @@ function O(e) {
         },
         children: S.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
       })]
-    }), !V && (U ? (0, a.jsxs)("div", {
+    }), !G && (U ? (0, a.jsxs)("div", {
       className: I.cardDetails,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-lg/bold",
@@ -157,16 +157,16 @@ function O(e) {
       }), (0, a.jsx)(x.PaymentContextProvider, {
         loadId: j,
         stepConfigs: [],
-        applicationId: T.COLLECTIBLES_APPLICATION_ID,
+        applicationId: L.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
         isGift: !1,
         activeSubscription: null,
-        purchaseType: T.PurchaseTypes.ONE_TIME,
-        children: (0, a.jsx)(L.default, {
+        purchaseType: L.PurchaseTypes.ONE_TIME,
+        children: (0, a.jsx)(T.default, {
           ...Y
         })
       })]
-    })), !V && U && !(null != H) && !w && (0, a.jsx)(E.default, {
+    })), !G && U && !(null != w) && !H && (0, a.jsx)(E.default, {
       confettiTarget: B.current,
       customConfettiCanvas: P,
       speedValues: N,

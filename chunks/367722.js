@@ -1,13 +1,13 @@
 "use strict";
 t.r(n), t.d(n, {
   default: function() {
-    return l
+    return s
   }
 });
 var a = t("466330"),
   u = t("981631");
 
-function l(e, n, t) {
+function s(e, n, t) {
   return (0, a.default)({
     guild: n,
     channel: e,

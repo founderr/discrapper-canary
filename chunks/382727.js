@@ -9,8 +9,8 @@ var n, a = s("735250"),
   u = s("505649"),
   c = s("853872"),
   p = s("603421"),
-  f = s("866071"),
-  h = s("981631");
+  h = s("866071"),
+  f = s("981631");
 
 function S(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -74,7 +74,7 @@ class A extends(n = r.Component) {
       onClearError: d,
       size: u,
       renderConfirmationBody: c,
-      renderConfirmationFooter: h,
+      renderConfirmationFooter: f,
       className: S,
       isGift: P,
       isGiftable: A,
@@ -84,7 +84,7 @@ class A extends(n = r.Component) {
     } = this.props, T = {
       [p.Steps.CONFIRM]: {
         renderBody: c,
-        renderFooter: h
+        renderFooter: f
       },
       [p.Steps.SELECT_PLAN]: {
         renderBody: () => this.props.renderSelectPlanBody(this.handleSelectPlan),
@@ -94,7 +94,7 @@ class A extends(n = r.Component) {
       step: C,
       paymentSourceId: y
     } = this.state, g = this.stepsToRender;
-    return (0, a.jsx)(f.default, {
+    return (0, a.jsx)(h.default, {
       transitionState: E,
       className: S,
       isPurchasing: e,
@@ -146,7 +146,7 @@ class A extends(n = r.Component) {
     }), S(this, "handleReviewPaymentSourceAdd", () => {
       this.setState({
         step: p.Steps.PAYMENT_TYPE,
-        steps: f.ADD_PAYMENT_STEPS,
+        steps: h.ADD_PAYMENT_STEPS,
         paymentSourceId: null
       });
       let {
@@ -166,7 +166,7 @@ class A extends(n = r.Component) {
           t = e === p.Steps.PAYMENT_TYPE;
         t && o.clearError(), this.setState({
           step: e,
-          steps: t ? f.ADD_PAYMENT_STEPS : n
+          steps: t ? h.ADD_PAYMENT_STEPS : n
         })
       } else if ((0, p.canGoBack)(r, e)) {
         let {
@@ -174,46 +174,46 @@ class A extends(n = r.Component) {
         } = this.props;
         this.setState({
           step: p.Steps.REVIEW,
-          steps: f.REVIEW_PAYMENT_STEPS,
+          steps: h.REVIEW_PAYMENT_STEPS,
           paymentSourceId: e
         })
       } else t()
     }), S(this, "handleChoosePaymentType", e => {
       switch (e) {
-        case h.PaymentSourceTypes.PAYPAL:
+        case f.PaymentSourceTypes.PAYPAL:
           this.setState({
             step: p.Steps.PAYPAL,
-            steps: f.ADD_PAYPAL_STEPS
+            steps: h.ADD_PAYPAL_STEPS
           });
           break;
-        case h.PaymentSourceTypes.CARD:
+        case f.PaymentSourceTypes.CARD:
           this.setState({
             step: p.Steps.CREDIT_CARD_INFORMATION,
-            steps: f.ADD_CARD_STEPS
+            steps: h.ADD_CARD_STEPS
           });
           break;
-        case h.PaymentSourceTypes.PAYMENT_REQUEST:
+        case f.PaymentSourceTypes.PAYMENT_REQUEST:
           this.setState({
             step: p.Steps.PAYMENT_REQUEST_INFO,
-            steps: f.ADD_PAYMENT_REQUEST_STEPS
+            steps: h.ADD_PAYMENT_REQUEST_STEPS
           });
           break;
-        case h.PaymentSourceTypes.GIROPAY:
+        case f.PaymentSourceTypes.GIROPAY:
           this.setState({
             step: p.Steps.ADDRESS,
-            steps: f.ADD_GIROPAY_STEPS
+            steps: h.ADD_GIROPAY_STEPS
           });
           break;
-        case h.PaymentSourceTypes.PAYSAFE_CARD:
+        case f.PaymentSourceTypes.PAYSAFE_CARD:
           this.setState({
             step: p.Steps.ADDRESS,
-            steps: f.ADD_PAYSAFECARD_STEPS
+            steps: h.ADD_PAYSAFECARD_STEPS
           });
           break;
-        case h.PaymentSourceTypes.VENMO:
+        case f.PaymentSourceTypes.VENMO:
           this.setState({
             step: p.Steps.VENMO,
-            steps: f.ADD_VENMO_STEPS
+            steps: h.ADD_VENMO_STEPS
           })
       }
     }), S(this, "handlePaymentSourceAdd", e => {
@@ -250,7 +250,7 @@ class A extends(n = r.Component) {
     } = e, a = Object.values(s).length > 0, r = n;
     null == r && (r = a ? p.Steps.REVIEW : p.Steps.PAYMENT_TYPE), this.state = {
       paymentSourceId: t,
-      steps: a ? f.REVIEW_PAYMENT_STEPS : f.ADD_PAYMENT_STEPS,
+      steps: a ? h.REVIEW_PAYMENT_STEPS : h.ADD_PAYMENT_STEPS,
       step: r,
       errorStep: null
     }
@@ -261,10 +261,10 @@ S(A, "defaultProps", {
   needsToBeGift: !1,
   isGiftable: !1,
   isGift: !1,
-  renderConfirmationBody: h.NOOP_NULL,
-  renderConfirmationFooter: h.NOOP_NULL,
-  renderSelectPlanBody: h.NOOP_NULL,
-  renderSelectPlanFooter: h.NOOP_NULL
+  renderConfirmationBody: f.NOOP_NULL,
+  renderConfirmationFooter: f.NOOP_NULL,
+  renderSelectPlanBody: f.NOOP_NULL,
+  renderSelectPlanFooter: f.NOOP_NULL
 }), t.default = r.forwardRef((e, t) => {
   let [s, n] = (0, l.useStateFromStoresArray)([c.default], () => [c.default.paymentSources, c.default.defaultPaymentSourceId]), r = (0, l.useStateFromStores)([d.default], () => d.default.error), [i, o] = (0, l.useStateFromStoresArray)([u.default], () => [u.default.error, u.default.isAwaitingAuthentication]);
   return (0, a.jsx)(A, {

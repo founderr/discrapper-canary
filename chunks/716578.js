@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var i = n("685626");
+var i = n("920906");
 let r = new(n("603767")).default;
 i.Globals.assign({
   frameLoop: r

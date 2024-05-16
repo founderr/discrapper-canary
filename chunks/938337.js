@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("735250"),
-  l = n("470079"),
-  r = n("512100"),
-  s = n("906732"),
+  s = n("470079"),
+  l = n("512100"),
+  r = n("906732"),
   a = n("626135"),
   o = n("981631");
 
@@ -18,14 +18,14 @@ function u(e) {
     ...u
   } = e, {
     analyticsLocations: d
-  } = (0, s.default)();
-  return l.useEffect(() => {
+  } = (0, r.default)();
+  return s.useEffect(() => {
     a.default.track(o.AnalyticEvents.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
       application_id: t,
       sku_id: n,
       location_stack: d
     })
-  }, [d, t, n]), (0, i.jsx)(r.CardDetails, {
+  }, [d, t, n]), (0, i.jsx)(l.CardDetails, {
     ...u
   })
 }

@@ -3,8 +3,8 @@ a.r(t), a("47120");
 var n, l, s = a("735250"),
   r = a("470079"),
   o = a("120356"),
-  u = a.n(o),
-  i = a("481060"),
+  i = a.n(o),
+  u = a("481060"),
   d = a("812169"),
   c = a("594174"),
   E = a("912454"),
@@ -17,20 +17,20 @@ var n, l, s = a("735250"),
   N = a("282605");
 (l = n || (n = {})).CARD_NUMBER = "cardNumber", l.EXPIRATION_DATE = "cardExpiry", l.CVC = "cardCvc", l.NAME = "name", l.COUNTRY = "country", l.POSTAL_CODE = "postalCode";
 let I = (0, p.uid)(),
-  T = (0, p.uid)();
+  C = (0, p.uid)();
 t.default = function(e) {
   var t;
   let {
     onCardInfoChange: a,
     error: n
-  } = e, l = r.useRef(a), [o, p] = r.useState(!1), [C, y] = r.useState({}), [R, h] = r.useState({
+  } = e, l = r.useRef(a), [o, p] = r.useState(!1), [T, y] = r.useState({}), [R, h] = r.useState({
     name: "",
     country: "",
     postalCode: ""
   }), [L, P] = r.useState({}), [M, g] = r.useState({});
 
   function b(e, t) {
-    !!C[e] !== t && y(a => ({
+    !!T[e] !== t && y(a => ({
       ...a,
       [e]: t
     }))
@@ -53,11 +53,11 @@ t.default = function(e) {
     return t
   }, [L, R]);
   r.useEffect(() => {
-    let e = C.cardNumber && C.cardExpiry && C.cardCvc && 0 === Object.keys(O(!0)).length;
+    let e = T.cardNumber && T.cardExpiry && T.cardCvc && 0 === Object.keys(O(!0)).length;
     2 === (0, d.reducedPaymentInfoExperiment)().bucket ? l.current(R, !!e) : l.current({
       name: R.name
     }, !!e)
-  }, [C, R, O]);
+  }, [T, R, O]);
   let D = {
       cardNumber: {
         name: "cardNumber",
@@ -100,7 +100,7 @@ t.default = function(e) {
         autoComplete: "cc-name",
         placeholder: () => _.default.Messages.CREDIT_CARD_NAME,
         getClassNameForLayout: () => N.width100,
-        renderInput: e => (0, s.jsx)(i.TextInput, {
+        renderInput: e => (0, s.jsx)(u.TextInput, {
           ...e
         })
       }
@@ -117,7 +117,7 @@ t.default = function(e) {
             onChange: t,
             ...a
           } = e;
-          return (0, s.jsx)(i.SearchableSelect, {
+          return (0, s.jsx)(u.SearchableSelect, {
             ...a,
             maxVisibleItems: 8,
             options: m.COUNTRY_CODE_OPTIONS,
@@ -140,13 +140,13 @@ t.default = function(e) {
             t = _.default.Messages.BILLING_ADDRESS_POSTAL_CODE
         }
         return {
-          id: T,
+          id: C,
           name: "postalCode",
           title: () => t,
           autoComplete: "postal-code",
           placeholder: () => a,
           getClassNameForLayout: () => N.width50,
-          renderInput: e => (0, s.jsx)(i.TextInput, {
+          renderInput: e => (0, s.jsx)(u.TextInput, {
             style: {
               minHeight: "45px"
             },
@@ -177,32 +177,32 @@ t.default = function(e) {
     children: [(null === (t = c.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) ? (0, s.jsxs)("div", {
       className: A.cardBrands,
       children: [(0, s.jsx)("div", {
-        className: u()(E.IconSizes.SMALL, A.visa, A.cardFormHeader)
+        className: i()(E.IconSizes.SMALL, A.visa, A.cardFormHeader)
       }), (0, s.jsx)("div", {
-        className: u()(E.IconSizes.SMALL, A.mastercard, A.cardFormHeader)
+        className: i()(E.IconSizes.SMALL, A.mastercard, A.cardFormHeader)
       }), (0, s.jsx)("div", {
-        className: u()(E.IconSizes.SMALL, A.discover, A.cardFormHeader)
+        className: i()(E.IconSizes.SMALL, A.discover, A.cardFormHeader)
       }), (0, s.jsx)("div", {
-        className: u()(E.IconSizes.SMALL, A.amex, A.cardFormHeader)
+        className: i()(E.IconSizes.SMALL, A.amex, A.cardFormHeader)
       }), (0, s.jsx)("div", {
-        className: u()(E.IconSizes.SMALL, A.jcb, A.cardFormHeader)
+        className: i()(E.IconSizes.SMALL, A.jcb, A.cardFormHeader)
       }), (0, s.jsx)("div", {
-        className: u()(E.IconSizes.SMALL, A.dinersclub, A.cardFormHeader)
+        className: i()(E.IconSizes.SMALL, A.dinersclub, A.cardFormHeader)
       })]
     }) : (0, s.jsxs)("div", {
       className: A.cardBrands,
       children: [(0, s.jsx)("div", {
-        className: u()(E.IconSizes.SMALL, A.visa_monochrome, A.cardFormHeader)
+        className: i()(E.IconSizes.SMALL, A.visa_monochrome, A.cardFormHeader)
       }), (0, s.jsx)("div", {
-        className: u()(E.IconSizes.SMALL, A.mastercard_monochrome, A.cardFormHeader)
+        className: i()(E.IconSizes.SMALL, A.mastercard_monochrome, A.cardFormHeader)
       }), (0, s.jsx)("div", {
-        className: u()(E.IconSizes.SMALL, A.discover_monochrome, A.cardFormHeader)
+        className: i()(E.IconSizes.SMALL, A.discover_monochrome, A.cardFormHeader)
       }), (0, s.jsx)("div", {
-        className: u()(E.IconSizes.SMALL, A.amex_monochrome, A.cardFormHeader)
+        className: i()(E.IconSizes.SMALL, A.amex_monochrome, A.cardFormHeader)
       }), (0, s.jsx)("div", {
-        className: u()(E.IconSizes.SMALL, A.jcb_monochrome, A.cardFormHeader)
+        className: i()(E.IconSizes.SMALL, A.jcb_monochrome, A.cardFormHeader)
       }), (0, s.jsx)("div", {
-        className: u()(E.IconSizes.SMALL, A.dinersclub_monochrome, A.cardFormHeader)
+        className: i()(E.IconSizes.SMALL, A.dinersclub_monochrome, A.cardFormHeader)
       })]
     }), (0, s.jsx)(f.default, {
       form: B,
