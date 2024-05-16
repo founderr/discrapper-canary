@@ -50,7 +50,7 @@ function G(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
   if (t.hasFlag(v.UserFlags.SPAMMER) || n.isManaged()) return !1;
   let i = n.getGuildId();
-  return !(null != i && a.default.isLurking(i) || l.ignoreSameUser && t.id === e.id || I.default.isBlocked(t.id) || !l.ignoreStatus && A.default.getStatus() === v.StatusTypes.DND || c.FocusMode.getSetting() || !l.ignoreNoMessagesSetting && p.default.allowNoMessages(n)) && !0
+  return !(null != i && a.default.isLurking(i) || !l.ignoreSameUser && t.id === e.id || I.default.isBlocked(t.id) || !l.ignoreStatus && A.default.getStatus() === v.StatusTypes.DND || c.FocusMode.getSetting() || !l.ignoreNoMessagesSetting && p.default.allowNoMessages(n)) && !0
 }
 
 function U(e, t) {
