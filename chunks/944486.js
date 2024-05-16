@@ -236,7 +236,7 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
         clearInterval(u), u = void 0, l = 0;
         let n = null === (r = R.default.getChannel(o)) || void 0 === r ? void 0 : r.getGuildId(),
           i = null === (a = R.default.getChannel(t.channelId)) || void 0 === a ? void 0 : a.getGuildId();
-        null != n && i === n && (o = null), B()
+        (null != n && i === n || o === t.channelId) && (o = null), B()
       }
       return !0
     }, !1)
