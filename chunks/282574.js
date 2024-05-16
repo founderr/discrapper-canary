@@ -8,8 +8,8 @@ var n, a, r = s("735250"),
   u = s("570140"),
   c = s("447273"),
   p = s("16084"),
-  f = s("224550"),
-  h = s("382727"),
+  h = s("224550"),
+  f = s("382727"),
   S = s("609194"),
   P = s("546239"),
   A = s("115130"),
@@ -65,7 +65,7 @@ class V extends l.PureComponent {
       skuId: t,
       applicationId: s
     } = this.props;
-    null == e ? p.fetchSKU(s, t).catch(e => this.handleClose(e.message)) : L.default.track(U.AnalyticEvents.PAYMENT_FLOW_STARTED, this.getBaseAnalyticsData())
+    null == e ? p.fetchPublishedSKU(s, t).catch(e => this.handleClose(e.message)) : L.default.track(U.AnalyticEvents.PAYMENT_FLOW_STARTED, this.getBaseAnalyticsData())
   }
   componentDidUpdate(e, t) {
     null == e.sku && null != this.props.sku && L.default.track(U.AnalyticEvents.PAYMENT_FLOW_STARTED, this.getBaseAnalyticsData()), this.checkPriceChange(this.getSkuPrice(e, t), this.getSkuPrice())
@@ -249,13 +249,13 @@ class V extends l.PureComponent {
       forceConfirmationStepOnMount: i,
       transitionState: o
     } = this.props;
-    return null == e || t ? (0, r.jsx)(d.Spinner, {}) : (0, r.jsx)(h.default, {
+    return null == e || t ? (0, r.jsx)(d.Spinner, {}) : (0, r.jsx)(f.default, {
       ref: this._paymentModalRef,
       transitionState: o,
       canSubmit: null != this.getSkuPrice(),
       needsToBeGift: e.type === U.SKUTypes.DURABLE_PRIMARY && !0 === l,
       isGiftable: this.isGiftable,
-      legalNotice: n ? (0, r.jsx)(f.default, {
+      legalNotice: n ? (0, r.jsx)(h.default, {
         isEmbeddedIAP: n
       }) : null,
       isPurchasing: s,
@@ -376,7 +376,7 @@ let W = l.forwardRef((e, t) => {
     applicationId: a,
     skuId: l,
     ...i
-  } = e, d = (0, o.useStateFromStores)([_.default], () => _.default.getApplication(a)), u = (0, B.hasFlag)(null !== (s = null == d ? void 0 : d.flags) && void 0 !== s ? s : 0, U.ApplicationFlags.EMBEDDED) && (0, B.hasFlag)(null !== (n = null == d ? void 0 : d.flags) && void 0 !== n ? n : 0, U.ApplicationFlags.EMBEDDED_IAP), [c, p, f, h, S, P, m, E, N] = (0, o.useStateFromStoresArray)([g.default], () => [g.default.getPricesForSku(l), g.default.isPurchasingSKU, g.default.error, g.default.analyticsLocation, g.default.promotionId, g.default.giftCode, g.default.isGift, g.default.isIAP, g.default.forceConfirmationStepOnMount]), [b, O] = (0, o.useStateFromStoresArray)([I.default], () => [I.default.get(l), I.default.isFetching(l)]), M = (0, o.useStateFromStores)([A.default, R.default], () => R.default.inTestModeForApplication(a) || A.default.inDevModeForApplication(a), [a]), L = (0, o.useStateFromStores)([y.default, T.default], () => y.default.isEntitledToSku(T.default.getCurrentUser(), l, a)), x = (0, o.useStateFromStores)([C.default], () => C.default.error);
+  } = e, d = (0, o.useStateFromStores)([_.default], () => _.default.getApplication(a)), u = (0, B.hasFlag)(null !== (s = null == d ? void 0 : d.flags) && void 0 !== s ? s : 0, U.ApplicationFlags.EMBEDDED) && (0, B.hasFlag)(null !== (n = null == d ? void 0 : d.flags) && void 0 !== n ? n : 0, U.ApplicationFlags.EMBEDDED_IAP), [c, p, h, f, S, P, m, E, N] = (0, o.useStateFromStoresArray)([g.default], () => [g.default.getPricesForSku(l), g.default.isPurchasingSKU, g.default.error, g.default.analyticsLocation, g.default.promotionId, g.default.giftCode, g.default.isGift, g.default.isIAP, g.default.forceConfirmationStepOnMount]), [b, O] = (0, o.useStateFromStoresArray)([I.default], () => [I.default.get(l), I.default.isFetching(l)]), M = (0, o.useStateFromStores)([A.default, R.default], () => R.default.inTestModeForApplication(a) || A.default.inDevModeForApplication(a), [a]), L = (0, o.useStateFromStores)([y.default, T.default], () => y.default.isEntitledToSku(T.default.getCurrentUser(), l, a)), x = (0, o.useStateFromStores)([C.default], () => C.default.error);
   return (0, r.jsx)(V, {
     ...i,
     application: d,
@@ -384,8 +384,8 @@ let W = l.forwardRef((e, t) => {
     skuId: l,
     prices: c,
     isPurchasing: p,
-    purchaseError: null != x ? x : f,
-    analyticsLocation: h,
+    purchaseError: null != x ? x : h,
+    analyticsLocation: f,
     promotionId: S,
     isIAP: E,
     giftCode: P,

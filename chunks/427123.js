@@ -34,7 +34,7 @@ function M() {
     }
     let a = h.default.get(t);
     if (null == a) {
-      !h.default.isFetching(t) && !h.default.didFetchingSkuFail(t) && E.fetchSKU(s.id, t);
+      !h.default.isFetching(t) && !h.default.didFetchingSkuFail(t) && E.fetchPublishedSKU(s.id, t);
       continue
     }
     p.default.applicationIdsFetching.has(s.id) || p.default.isEntitledToSku(I.default.getCurrentUser(), t, s.id, s.id) || !a.available ? null != C[t] && (delete C[t], e = !0) : (C[t] = {

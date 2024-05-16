@@ -6,8 +6,8 @@ var l = s("735250"),
   n = s("481060"),
   c = s("16084"),
   r = s("546239"),
-  o = s("812206"),
-  d = s("55563"),
+  d = s("812206"),
+  o = s("55563"),
   u = s("285952"),
   p = s("792295"),
   h = s("626135"),
@@ -24,7 +24,7 @@ class E extends a.Component {
       sku: s,
       onClose: l
     } = this.props;
-    null == s ? (0, c.fetchSKU)(e.id, t).catch(e => l(e.message)) : this.track(s)
+    null == s ? (0, c.fetchPublishedSKU)(e.id, t).catch(e => l(e.message)) : this.track(s)
   }
   componentDidUpdate(e) {
     let {
@@ -78,13 +78,13 @@ class E extends a.Component {
     })
   }
 }
-t.default = i.default.connectStores([d.default, o.default], e => {
+t.default = i.default.connectStores([o.default, d.default], e => {
   let {
     applicationId: t,
     skuId: s
   } = e;
   return {
-    application: o.default.getApplication(t),
-    sku: d.default.get(s)
+    application: d.default.getApplication(t),
+    sku: o.default.get(s)
   }
 })(E)

@@ -69,10 +69,10 @@ class G extends(s = l.Component) {
       applicationId: t,
       targetSkuId: n
     } = this.props;
-    null == e && null != n && E.fetchSKU(t, n).catch(() => {})
+    null == e && null != n && E.fetchPublishedSKU(t, n).catch(() => {})
   }
   componentDidUpdate(e) {
-    this.props.locale !== e.locale && null != this.props.targetSkuId && E.fetchSKU(this.props.applicationId, this.props.targetSkuId).catch(() => {})
+    this.props.locale !== e.locale && null != this.props.targetSkuId && E.fetchPublishedSKU(this.props.applicationId, this.props.targetSkuId).catch(() => {})
   }
   async purchaseOrGrantSKU(e) {
     let {

@@ -28,7 +28,7 @@ class R extends r.PureComponent {
       primarySkuId: t,
       isFetchingPrimarySku: s
     } = this.props;
-    null != t && !s && null != e && (0, n.fetchSKU)(e.applicationId, t)
+    null != t && !s && null != e && (0, n.fetchPublishedSKU)(e.applicationId, t)
   }
   render() {
     let {

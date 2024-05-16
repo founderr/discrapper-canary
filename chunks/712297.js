@@ -17,7 +17,7 @@ function s(e) {
     skuIDs: n,
     currentPaymentSourceId: s,
     isGift: E
-  } = e, S = r.useMemo(() => n.filter(e => !o.ACTIVE_PREMIUM_SKUS.includes(e)), [JSON.stringify(n)]), _ = (0, u.useStateFromStores)([l.default], () => S.every(e => !l.default.isFetching(e) && null != l.default.get(e))), d = (0, u.useStateFromStoresObject)([l.default], () => {
+  } = e, S = r.useMemo(() => n.filter(e => !o.ACTIVE_PREMIUM_SKUS.includes(e)), [JSON.stringify(n)]), d = (0, u.useStateFromStores)([l.default], () => S.every(e => !l.default.isFetching(e) && null != l.default.get(e))), _ = (0, u.useStateFromStoresObject)([l.default], () => {
     let e = {};
     for (let n of S) {
       var t;
@@ -26,7 +26,7 @@ function s(e) {
     return e
   }, [S]);
   r.useEffect(() => {
-    for (let e of S) !l.default.isFetching(e) && null == l.default.get(e) && (0, i.fetchSKU)(t, e)
+    for (let e of S) !l.default.isFetching(e) && null == l.default.get(e) && (0, i.fetchPublishedSKU)(t, e)
   }, [t, S]);
   let c = (0, u.useStateFromStoresObject)([a.default], () => {
     let e = {};
@@ -41,8 +41,8 @@ function s(e) {
       isGift: E
     })
   }, [t, S, s, E]), {
-    hasFetchedSkus: _,
-    skusById: d,
+    hasFetchedSkus: d,
+    skusById: _,
     skuPricePreviewsById: c
   }
 }
