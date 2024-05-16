@@ -4679,6 +4679,7 @@ e.exports = Object.freeze({
   SCOPE_PRESENCES_WRITE: "Set your online status and current activity",
   SCOPE_DM_CHANNELS_MESSAGES_READ: "Read your direct messages",
   SCOPE_DM_CHANNELS_MESSAGES_WRITE: "Send messages in your DMs",
+  SCOPE_GATEWAY_CONNECT: "Start a gateway session on your behalf",
   AUTHORIZE: "Authorize",
   AUTHORIZED: "Authorized",
   AUTHORIZED_SUCCESS: "Success!",

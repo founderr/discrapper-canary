@@ -1,33 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return R
   }
 }), n("789020"), n("47120");
 var a = n("664751"),
   s = n("373793"),
-  l = n("149765"),
-  i = n("544891"),
-  r = n("45792"),
-  o = n("433517"),
-  u = n("570140"),
-  d = n("812206"),
-  c = n("979200"),
-  f = n("489863"),
-  E = n("166148"),
-  h = n("307643"),
-  _ = n("973616"),
-  C = n("594174"),
-  m = n("630388"),
-  S = n("700785"),
-  p = n("996106"),
-  g = n("186901"),
-  I = n("981631");
-let T = "CachedTokens";
-async function A(e, t, n) {
-  var a, i;
+  l = n("243814"),
+  i = n("149765"),
+  r = n("544891"),
+  o = n("45792"),
+  u = n("433517"),
+  d = n("570140"),
+  c = n("812206"),
+  f = n("979200"),
+  E = n("489863"),
+  h = n("166148"),
+  _ = n("307643"),
+  C = n("973616"),
+  m = n("594174"),
+  S = n("630388"),
+  p = n("700785"),
+  g = n("996106"),
+  I = n("186901"),
+  T = n("981631");
+let A = "CachedTokens";
+async function N(e, t, n) {
+  var a, l;
   let r;
-  let o, u, g, T, {
+  let o, u, d, I, {
     client_id: A,
     response_type: N = "code",
     redirect_uri: v,
@@ -43,21 +44,21 @@ async function A(e, t, n) {
     disable_guild_select: U,
     integration_type: j
   } = e;
-  if (null == A) throw new p.default({
-    errorCode: I.RPCErrors.OAUTH2_ERROR
+  if (null == A) throw new g.default({
+    errorCode: T.RPCErrors.OAUTH2_ERROR
   }, "No Client ID provided");
-  if (null != v) throw new p.default({
-    errorCode: I.RPCErrors.OAUTH2_ERROR
+  if (null != v) throw new g.default({
+    errorCode: T.RPCErrors.OAUTH2_ERROR
   }, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
   let G = [];
-  if ("string" == typeof y ? G = y.split(" ").filter(e => e.length > 0) : Array.isArray(y) && (G = y), null == C.default.getCurrentUser()) throw new p.default({
-    errorCode: I.RPCErrors.OAUTH2_ERROR
+  if ("string" == typeof y ? G = y.split(" ").filter(e => e.length > 0) : Array.isArray(y) && (G = y), null == m.default.getCurrentUser()) throw new g.default({
+    errorCode: T.RPCErrors.OAUTH2_ERROR
   }, "Client is not logged in");
-  let k = null !== (i = d.default.getApplication(A)) && void 0 !== i ? i : _.default.createFromServer(await (0, h.fetchApplication)(A)),
-    w = null != k && (0, m.hasFlag)(k.flags, I.ApplicationFlags.EMBEDDED) && (null === (a = k.integrationTypesConfig) || void 0 === a ? void 0 : a[s.ApplicationIntegrationType.USER_INSTALL]) != null;
+  let k = null !== (l = c.default.getApplication(A)) && void 0 !== l ? l : C.default.createFromServer(await (0, _.fetchApplication)(A)),
+    w = null != k && (0, S.hasFlag)(k.flags, T.ApplicationFlags.EMBEDDED) && (null === (a = k.integrationTypesConfig) || void 0 === a ? void 0 : a[s.ApplicationIntegrationType.USER_INSTALL]) != null;
   o = null == j ? w ? s.ApplicationIntegrationType.USER_INSTALL : s.ApplicationIntegrationType.GUILD_INSTALL : Number(j);
   try {
-    u = await (0, f.fetchAuthorization)({
+    u = await (0, E.fetchAuthorization)({
       clientId: A,
       scopes: G,
       responseType: N,
@@ -71,25 +72,25 @@ async function A(e, t, n) {
     let {
       body: e
     } = t;
-    throw new p.default({
-      errorCode: I.RPCErrors.OAUTH2_ERROR
+    throw new g.default({
+      errorCode: T.RPCErrors.OAUTH2_ERROR
     }, "OAuth2 Authorization Error: ".concat(e.message || "Unknown Error"))
   }
   try {
     ({
-      disclosures: g,
-      allAcked: T
-    } = await (0, c.getDisclosures)(u.application.id))
+      disclosures: d,
+      allAcked: I
+    } = await (0, f.getDisclosures)(u.application.id))
   } catch (t) {
     let {
       body: e
     } = t;
-    throw new p.default({
-      errorCode: I.RPCErrors.OAUTH2_ERROR
+    throw new g.default({
+      errorCode: T.RPCErrors.OAUTH2_ERROR
     }, "OAuth2 Authorization Error: ".concat(e.message || "Unknown Error"))
   }
-  if (b === E.OAuth2Prompts.NONE && null != u && u.authorized && T) try {
-    return (await (0, f.authorize)({
+  if (b === h.OAuth2Prompts.NONE && null != u && u.authorized && I) try {
+    return (await (0, E.authorize)({
       authorize: !0,
       clientId: A,
       scopes: G,
@@ -105,14 +106,14 @@ async function A(e, t, n) {
     let {
       body: e
     } = t;
-    throw new p.default({
-      errorCode: I.RPCErrors.OAUTH2_ERROR
+    throw new g.default({
+      errorCode: T.RPCErrors.OAUTH2_ERROR
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
   null == n || n(u.application, D);
-  let B = S.NONE;
+  let B = p.NONE;
   try {
-    B = l.deserialize(null != P ? P : 0)
+    B = i.deserialize(null != P ? P : 0)
   } catch (e) {}
   return null != u.integration_type && Object.values(s.ApplicationIntegrationType).includes(u.integration_type) && (r = new Map).set(u.integration_type, u), t({
     clientId: A,
@@ -128,20 +129,20 @@ async function A(e, t, n) {
     channelId: D,
     prompt: b,
     disableGuildSelect: U,
-    disclosures: g,
+    disclosures: d,
     integrationType: o
   })
 }
 
-function N(e, t) {
-  if (e.authorization.accessToken) throw new p.default({
-    errorCode: I.RPCErrors.INVALID_COMMAND
+function v(e, t) {
+  if (e.authorization.accessToken) throw new g.default({
+    errorCode: T.RPCErrors.INVALID_COMMAND
   }, "Already authenticated");
-  if (e.authorization.authing) throw new p.default({
-    errorCode: I.RPCErrors.INVALID_COMMAND
+  if (e.authorization.authing) throw new g.default({
+    errorCode: T.RPCErrors.INVALID_COMMAND
   }, "Already authenticating");
-  return e.authorization.authing = !0, i.HTTP.get({
-    url: I.Endpoints.OAUTH2_CURRENT_AUTH,
+  return e.authorization.authing = !0, r.HTTP.get({
+    url: T.Endpoints.OAUTH2_CURRENT_AUTH,
     headers: {
       Authorization: "Bearer ".concat(t)
     },
@@ -154,14 +155,14 @@ function N(e, t) {
       scopes: l,
       expires: i
     } = n.body;
-    if (e.application.id !== a.id) throw new p.default({
-      errorCode: I.RPCErrors.INVALID_CLIENTID
+    if (e.application.id !== a.id) throw new g.default({
+      errorCode: T.RPCErrors.INVALID_CLIENTID
     }, "Application does not match the connection's");
-    let r = C.default.getCurrentUser();
-    if (null == r || !s || r.id !== s.id) throw new p.default({
-      errorCode: I.RPCErrors.INVALID_TOKEN
+    let r = m.default.getCurrentUser();
+    if (null == r || !s || r.id !== s.id) throw new g.default({
+      errorCode: T.RPCErrors.INVALID_TOKEN
     }, "Token does not match current user");
-    return e.authorization.scopes = [...e.authorization.scopes, ...l, g.RPC_AUTHENTICATED_SCOPE], e.authorization.accessToken = t, e.authorization.expires = new Date(i), u.default.dispatch({
+    return e.authorization.scopes = [...e.authorization.scopes, ...l, I.RPC_AUTHENTICATED_SCOPE], e.authorization.accessToken = t, e.authorization.expires = new Date(i), d.default.dispatch({
       type: "RPC_APP_AUTHENTICATED",
       socketId: e.id,
       application: e.application
@@ -170,116 +171,116 @@ function N(e, t) {
       access_token: t
     }
   }, () => {
-    throw new p.default({
-      errorCode: I.RPCErrors.INVALID_TOKEN
+    throw new g.default({
+      errorCode: T.RPCErrors.INVALID_TOKEN
     }, "Invalid access token: ".concat(t))
   }).catch(t => {
     throw e.authorization.authing = !1, t
   })
 }
 
-function v(e, t) {
+function R(e, t) {
   return {
-    [I.RPCCommands.AUTHENTICATE]: (0, r.createRPCCommand)(I.RPCCommands.AUTHENTICATE, {
+    [T.RPCCommands.AUTHENTICATE]: (0, o.createRPCCommand)(T.RPCCommands.AUTHENTICATE, {
       handler(n) {
         let {
           socket: s,
           args: {
-            access_token: l
+            access_token: i
           }
         } = n;
-        if (null == l && s.transport === g.TransportTypes.IPC) {
+        if (null == i && s.transport === I.TransportTypes.IPC) {
           let n = s.application.id;
-          if (null == n) throw new p.default({
-            errorCode: I.RPCErrors.INVALID_COMMAND
+          if (null == n) throw new g.default({
+            errorCode: T.RPCErrors.INVALID_COMMAND
           }, "No application.");
-          let i = I.OAuth2Scopes.IDENTIFY,
-            r = () => A({
+          let r = l.OAuth2Scopes.IDENTIFY,
+            o = () => N({
               client_id: n,
-              scope: i,
+              scope: r,
               response_type: "token"
             }, e, t).then(e => {
-              if (null == e) throw new p.default({
-                errorCode: I.RPCErrors.UNKNOWN_ERROR
+              if (null == e) throw new g.default({
+                errorCode: T.RPCErrors.UNKNOWN_ERROR
               }, "Unknown error occurred");
               let t = e.split(/#|\?/),
                 l = a.parse(t[t.length - 1]);
               if (null != l.error) {
                 var i;
-                throw new p.default({
-                  errorCode: I.RPCErrors.OAUTH2_ERROR
+                throw new g.default({
+                  errorCode: T.RPCErrors.OAUTH2_ERROR
                 }, "OAuth2 Error: ".concat(l.error, ": ").concat(null !== (i = l.error_description) && void 0 !== i ? i : "unknown error"))
               }
               return ! function(e, t, n, a) {
                 var s;
-                let l = null !== (s = o.Storage.get(T)) && void 0 !== s ? s : {};
+                let l = null !== (s = u.Storage.get(A)) && void 0 !== s ? s : {};
                 l[e] = {
                   accessToken: t,
                   scope: n,
                   expires: Date.now() + a
-                }, o.Storage.set(T, l)
-              }(n, l.access_token, l.scope, l.expires_in), N(s, l.access_token)
+                }, u.Storage.set(A, l)
+              }(n, l.access_token, l.scope, l.expires_in), v(s, l.access_token)
             });
-          return null != (l = function(e, t) {
-            let n = o.Storage.get(T);
+          return null != (i = function(e, t) {
+            let n = u.Storage.get(A);
             if (null != n && null != n[e]) {
               let a = n[e];
               if (!(a.scope !== t || a.expires <= Date.now())) return a.accessToken;
-              delete n[e], o.Storage.set(T, n)
+              delete n[e], u.Storage.set(A, n)
             }
-          }(n, i)) ? N(s, l).catch(() => (! function(e) {
+          }(n, r)) ? v(s, i).catch(() => (! function(e) {
             var t;
-            let n = null !== (t = o.Storage.get(T)) && void 0 !== t ? t : {};
-            delete n[e], o.Storage.set(T, n)
-          }(n), r())) : r()
+            let n = null !== (t = u.Storage.get(A)) && void 0 !== t ? t : {};
+            delete n[e], u.Storage.set(A, n)
+          }(n), o())) : o()
         }
-        if (null == l) throw new p.default({
-          errorCode: I.RPCErrors.INVALID_TOKEN
+        if (null == i) throw new g.default({
+          errorCode: T.RPCErrors.INVALID_TOKEN
         }, "No access token provided");
-        return N(s, l)
+        return v(s, i)
       }
     }),
-    [I.RPCCommands.AUTHORIZE]: {
+    [T.RPCCommands.AUTHORIZE]: {
       handler(n) {
         let {
           socket: s,
           args: l
-        } = n, r = l.client_id;
-        if (!r) throw new p.default({
-          errorCode: I.RPCErrors.INVALID_CLIENTID
+        } = n, i = l.client_id;
+        if (!i) throw new g.default({
+          errorCode: T.RPCErrors.INVALID_CLIENTID
         }, "No client id provided");
-        if (null != s.authorization.accessToken) throw new p.default({
-          errorCode: I.RPCErrors.INVALID_COMMAND
+        if (null != s.authorization.accessToken) throw new g.default({
+          errorCode: T.RPCErrors.INVALID_COMMAND
         }, "Already authenticated");
-        if (s.authorization.authing) throw new p.default({
-          errorCode: I.RPCErrors.INVALID_COMMAND
+        if (s.authorization.authing) throw new g.default({
+          errorCode: T.RPCErrors.INVALID_COMMAND
         }, "Already authing");
-        return s.authorization.authing = !0, i.HTTP.get({
-          url: I.Endpoints.APPLICATION_RPC(r),
+        return s.authorization.authing = !0, r.HTTP.get({
+          url: T.Endpoints.APPLICATION_RPC(i),
           oldFormErrors: !0
         }).then(n => {
           let a = n.body;
-          if (s.application.id !== a.id) throw new p.default({
-            errorCode: I.RPCErrors.INVALID_CLIENTID
+          if (s.application.id !== a.id) throw new g.default({
+            errorCode: T.RPCErrors.INVALID_CLIENTID
           }, "Application does not match the connection's");
           let i = l.scopes || l.scope;
-          return delete l.scopes, A({
+          return delete l.scopes, N({
             ...l,
             scope: i
           }, e, t)
         }, () => {
-          throw new p.default({
-            errorCode: I.RPCErrors.INVALID_CLIENTID
-          }, "Invalid client id: ".concat(r))
+          throw new g.default({
+            errorCode: T.RPCErrors.INVALID_CLIENTID
+          }, "Invalid client id: ".concat(i))
         }).then(e => {
-          if (s.authorization.authing = !1, null == e) throw new p.default({
-            errorCode: I.RPCErrors.UNKNOWN_ERROR
+          if (s.authorization.authing = !1, null == e) throw new g.default({
+            errorCode: T.RPCErrors.UNKNOWN_ERROR
           }, "Unknown error occurred");
           let t = a.parse(e.split("?")[1].split("#")[0]);
           if (null != t.error) {
             var n;
-            throw new p.default({
-              errorCode: I.RPCErrors.OAUTH2_ERROR
+            throw new g.default({
+              errorCode: T.RPCErrors.OAUTH2_ERROR
             }, "OAuth2 Error: ".concat(t.error, ": ").concat(null !== (n = t.error_description) && void 0 !== n ? n : "unknown error"))
           }
           return {
