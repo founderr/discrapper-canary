@@ -41,11 +41,16 @@ class l {
     return null == e && null == t || null != e && null != t && e.width === t.width && e.height === t.height && e.framerate === t.framerate
   }
   static extend(e, t) {
-    var n, i, r;
-    return null == e ? t : null == t ? e : {
-      width: null !== (n = null == t ? void 0 : t.width) && void 0 !== n ? n : null == e ? void 0 : e.width,
-      height: null !== (i = null == t ? void 0 : t.height) && void 0 !== i ? i : null == e ? void 0 : e.height,
-      framerate: null !== (r = null == t ? void 0 : t.framerate) && void 0 !== r ? r : null == e ? void 0 : e.framerate
+    var n, i, r, a, s;
+    if (null == e) return t;
+    if (null == t) return e;
+    let o = null !== (i = null !== (n = null == t ? void 0 : t.width) && void 0 !== n ? n : null == e ? void 0 : e.width) && void 0 !== i ? i : 0,
+      l = null !== (a = null !== (r = null == t ? void 0 : t.height) && void 0 !== r ? r : null == e ? void 0 : e.height) && void 0 !== a ? a : 0;
+    return {
+      width: o,
+      height: l,
+      framerate: null !== (s = null == t ? void 0 : t.framerate) && void 0 !== s ? s : null == e ? void 0 : e.framerate,
+      pixelCount: o * l
     }
   }
   constructor(e) {
@@ -54,19 +59,20 @@ class l {
 }
 class u {
   getQuality(e) {
-    let t = this.isStreamContext ? this.getGoliveQuality(e) : this.getVideoQuality(this.connection.getLocalWant(e));
+    let t = this.connection.getLocalWant(e),
+      n = this.isStreamContext ? this.getGoliveQuality(t) : this.getVideoQuality(t);
     if (null != this.qualityOverwrite) {
-      var n, i, r;
+      var i, r, a;
       return new o({
-        encode: l.extend(t.encode, this.qualityOverwrite.encode),
-        capture: l.extend(t.capture, this.qualityOverwrite.capture),
-        bitrateMin: null !== (n = this.qualityOverwrite.bitrateMin) && void 0 !== n ? n : t.bitrateMin,
-        bitrateMax: null !== (i = this.qualityOverwrite.bitrateMax) && void 0 !== i ? i : t.bitrateMax,
-        bitrateTarget: null !== (r = this.qualityOverwrite.bitrateTarget) && void 0 !== r ? r : t.bitrateTarget,
-        localWant: t.localWant
+        encode: l.extend(n.encode, this.qualityOverwrite.encode),
+        capture: l.extend(n.capture, this.qualityOverwrite.capture),
+        bitrateMin: null !== (i = this.qualityOverwrite.bitrateMin) && void 0 !== i ? i : n.bitrateMin,
+        bitrateMax: null !== (r = this.qualityOverwrite.bitrateMax) && void 0 !== r ? r : n.bitrateMax,
+        bitrateTarget: null !== (a = this.qualityOverwrite.bitrateTarget) && void 0 !== a ? a : n.bitrateTarget,
+        localWant: n.localWant
       })
     }
-    return t
+    return n
   }
   applyQualityConstraints(e, t) {
     let n = this.getQuality(t);
@@ -113,8 +119,7 @@ class u {
     })
   }
   getGoliveQuality(e) {
-    let t = this.connection.getLocalWant(e);
-    return this.goliveSimulcastEnabled ? this.getVideoQuality(t) : this.goliveMaxQuality
+    return this.goliveSimulcastEnabled && e < 100 ? this.getDefaultGoliveQuality() : this.goliveMaxQuality
   }
   getDefaultGoliveQuality() {
     return new o({
@@ -122,6 +127,12 @@ class u {
         width: 1280,
         height: 720,
         framerate: r.VIDEO_QUALITY_FRAMERATE
+      },
+      encode: {
+        width: 1280,
+        height: 720,
+        framerate: r.VIDEO_QUALITY_FRAMERATE,
+        pixelCount: 921600
       },
       bitrateMin: this.options.desktopBitrate.min,
       bitrateMax: this.options.desktopBitrate.max,
