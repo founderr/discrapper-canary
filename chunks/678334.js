@@ -76,7 +76,7 @@ function R(e) {
     soundEffect: ec,
     giftRecipient: ed
   } = (0, v.useGiftContext)(), em = (0, T.getGiftExperience)(ed), ef = {};
-  ef.gift_style = er, em === T.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (a()(null != ed, "Gift recipient must be set at purchase review step for these gift options."), ef.recipient_id = ed.id, ef.custom_message = eu, ef.emoji_id = null == eo ? void 0 : eo.id, ef.emoji_name = null == eo ? void 0 : eo.surrogates, ef.sound_id = null == ec ? void 0 : ec.soundId);
+  ef.gift_style = er, em === T.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (a()(null != ed, "Gift recipient must be set at purchase review step for these gift options."), ef.recipient_id = ed.id, ef.custom_message = eu, ef.emoji_id = null == eo ? void 0 : eo.id, ef.emoji_name = (null == eo ? void 0 : eo.id) == null ? null == eo ? void 0 : eo.surrogates : void 0, ef.sound_id = null == ec ? void 0 : ec.soundId);
   let ep = null == Z ? void 0 : Z.id,
     e_ = (0, C.checkNoPaymentTrialEnabled)(F, z.paymentSourceId, ep),
     eS = (0, r.useStateFromStores)([_.default], () => _.default.popupCallbackCalled),

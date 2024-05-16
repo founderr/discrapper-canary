@@ -149,7 +149,7 @@ function Y(e) {
         ...eL,
         is_custom_message_edited: ey && e && null != ev ? ev !== G.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : void 0,
         is_custom_emoji_sound_available: ey && e,
-        emoji_name: ey && e ? null == eh ? void 0 : eh.surrogates : void 0,
+        emoji_name: ey && e && (null == eh ? void 0 : eh.id) == null ? null == eh ? void 0 : eh.surrogates : void 0,
         sound_id: ey && e ? null == eN ? void 0 : eN.soundId : void 0,
         duration_ms: t - e_.startTime,
         payment_source_type: null == eg ? void 0 : eg.type
