@@ -1,7 +1,16 @@
 "use strict";
 s.r(t), s.d(t, {
+  getSearchableSettingTitles: function() {
+    return A
+  },
   useDefaultUserSettingsSections: function() {
+    return p
+  },
+  useGenerateUserSettingsSections: function() {
     return h
+  },
+  useSearchUserSettingsSections: function() {
+    return C
   }
 }), s("47120"), s("653041");
 var a = s("470079"),
@@ -23,40 +32,56 @@ var a = s("470079"),
   I = s("689938");
 
 function h() {
-  let e = function() {
-      let e = (0, S.useUnseenOutboundPromotions)().length,
-        t = (0, c.useIsPrepaidPaymentPastDue)(),
-        s = (0, n.useStateFromStores)([E.default], () => E.default.getProps().impressionSource),
-        a = (0, u.usePendingRequestCount)(),
-        i = (0, _.useShouldShowOverlaySettings)(),
-        g = (0, o.useEnableClips)(),
-        [I] = (0, d.useGetDismissibleContent)(g ? [l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
-        h = "useGenerateUserSettingsSections";
-      (0, r.useTriggerDebuggingAA)({
-        location: h + " auto on",
-        autoTrackExposure: !0
-      }), (0, r.useTriggerDebuggingAA)({
-        location: h + " auto off",
-        autoTrackExposure: !1
-      });
-      let {
-        shouldMergeGameSettings: N
-      } = T.GameSettingsMergeExperiment.useExperiment({
-        location: "settings"
-      }), p = (0, m.useIsEligibleForUserSettingsSearchDesktop)({
-        location: "settings"
-      });
-      return (0, f.getConfig)({
-        unseenGiftCount: e,
-        showPrepaidPaymentPastDueWarning: t,
-        impressionSource: s,
-        numOfPendingFamilyRequests: a,
-        isOverlaySupported: i,
-        isClipsBetaTagShowing: I === l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
-        shouldMergeGameSettings: N,
-        isUserSettingsSearchEnabled: p
-      })
-    }(),
+  let e = (0, S.useUnseenOutboundPromotions)().length,
+    t = (0, c.useIsPrepaidPaymentPastDue)(),
+    s = (0, n.useStateFromStores)([E.default], () => E.default.getProps().impressionSource),
+    a = (0, u.usePendingRequestCount)(),
+    i = (0, _.useShouldShowOverlaySettings)(),
+    g = (0, o.useEnableClips)(),
+    [I] = (0, d.useGetDismissibleContent)(g ? [l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
+    h = "useGenerateUserSettingsSections";
+  (0, r.useTriggerDebuggingAA)({
+    location: h + " auto on",
+    autoTrackExposure: !0
+  }), (0, r.useTriggerDebuggingAA)({
+    location: h + " auto off",
+    autoTrackExposure: !1
+  });
+  let {
+    shouldMergeGameSettings: N
+  } = T.GameSettingsMergeExperiment.useExperiment({
+    location: "settings"
+  }), p = (0, m.useIsEligibleForUserSettingsSearchDesktop)({
+    location: "settings"
+  });
+  return (0, f.getConfig)({
+    unseenGiftCount: e,
+    showPrepaidPaymentPastDueWarning: t,
+    impressionSource: s,
+    numOfPendingFamilyRequests: a,
+    isOverlaySupported: i,
+    isClipsBetaTagShowing: I === l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
+    shouldMergeGameSettings: N,
+    isUserSettingsSearchEnabled: p
+  })
+}
+
+function N(e, t) {
+  let s = [];
+  return e.forEach(e => {
+    0 !== e.settings.length && (!0 === e.divider && s.push({
+      section: i.SectionTypes.DIVIDER
+    }), null != e.header && s.push({
+      section: i.SectionTypes.HEADER,
+      label: e.header
+    }), e.settings.forEach(e => {
+      s.push(t[e])
+    }))
+  }), s
+}
+
+function p() {
+  let e = h(),
     t = a.useMemo(() => [{
       header: I.default.Messages.USER_SETTINGS,
       settings: [g.WebSetting.SEARCH_BAR, g.WebSetting.ACCOUNT, g.WebSetting.GAMES, g.WebSetting.PROFILE_CUSTOMIZATION, g.WebSetting.PRIVACY_AND_SAFETY, g.WebSetting.FAMILY_CENTER, g.WebSetting.AUTHORIZED_APPS, g.WebSetting.SESSIONS, g.WebSetting.CONNECTIONS, g.WebSetting.CLIPS, g.WebSetting.FRIEND_REQUESTS]
@@ -82,17 +107,25 @@ function h() {
       divider: !0,
       settings: [g.WebSetting.SOCIAL_LINKS, g.WebSetting.CLIENT_DEBUG_INFO]
     }], []);
-  return a.useMemo(() => (function(e, t) {
-    let s = [];
-    return e.forEach(e => {
-      0 !== e.settings.length && (!0 === e.divider && s.push({
-        section: i.SectionTypes.DIVIDER
-      }), null != e.header && s.push({
-        section: i.SectionTypes.HEADER,
-        label: e.header
-      }), e.settings.forEach(e => {
-        s.push(t[e])
-      }))
-    }), s
-  })(t, e), [t, e])
+  return a.useMemo(() => N(t, e), [t, e])
+}
+
+function C(e) {
+  let t = h();
+  return a.useMemo(() => N([{
+    header: I.default.Messages.USER_SETTINGS,
+    settings: [g.WebSetting.SEARCH_BAR, ...e]
+  }], t), [e, t])
+}
+
+function A(e) {
+  return Object.entries(e).filter(e => {
+    let [t, s] = e;
+    return s.section !== i.SectionTypes.CUSTOM
+  }).map(e => {
+    let [t, {
+      section: s
+    }] = e;
+    return [t, s]
+  })
 }
