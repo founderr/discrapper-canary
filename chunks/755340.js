@@ -24,7 +24,7 @@ t.default = function(e) {
     formDescription: _,
     onFieldsSave: g,
     onDescriptionSave: I
-  } = e, N = r.useRef(!1), [v, A] = r.useState(null), [S, L] = r.useState(e.formFields), R = r.useRef(e.formFields), y = r.useMemo(() => S.filter(o.isAutomaticApprovalFormField), [S]), b = r.useMemo(() => S.filter(o.isManualApprovalFormField), [S]), M = b.length, j = r.useMemo(() => S.length === p.MAX_FORM_ELEMENTS, [S]), O = r.useMemo(() => S.some(l.isTermsFormField), [S]), D = r.useMemo(() => S.some(e => !(0, l.isTermsFormField)(e)), [S]), P = M > 1, F = (0, i.useIsMemberVerificationManualApproval)(t.id) || x, w = r.useCallback(() => {
+  } = e, N = r.useRef(!1), [v, A] = r.useState(null), [S, L] = r.useState(e.formFields), R = r.useRef(e.formFields), y = r.useMemo(() => S.filter(o.isAutomaticApprovalFormField), [S]), b = r.useMemo(() => S.filter(o.isManualApprovalFormField), [S]), M = b.length, j = r.useMemo(() => S.length === p.MAX_FORM_ELEMENTS, [S]), O = r.useMemo(() => S.some(l.isTermsFormField), [S]), D = r.useMemo(() => S.some(e => !(0, l.isTermsFormField)(e)), [S]), P = M > 0, F = (0, i.useIsMemberVerificationManualApproval)(t.id) || x, w = r.useCallback(() => {
     (0, s.showToast)((0, s.createToast)(E.default.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE))
   }, []), B = r.useCallback(async e => {
     if (!N.current) {
@@ -85,7 +85,7 @@ t.default = function(e) {
   return F ? (0, n.jsxs)(n.Fragment, {
     children: [!x && V, !D && (0, n.jsx)(c.default, {
       addFormField: G,
-      showManualApprovalWarning: !x && !(M > 0),
+      showManualApprovalWarning: !x && !P,
       guild: t,
       showHeader: !x
     }), b.map(e => (0, h.getFormFieldBuilderComponent)({
