@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return M
   },
   default: function() {
-    return L
+    return y
   }
 }), n("47120");
 var a = n("735250"),
@@ -101,7 +101,7 @@ function R(e) {
   })
 }
 
-function L(e) {
+function y(e) {
   let {
     channel: t,
     title: n,
@@ -113,7 +113,7 @@ function L(e) {
     emojiSearchProps: E,
     recentlyUsedEmojis: g,
     analyticsOverride: _
-  } = e, L = (0, C.useUID)(), [y, O] = l.useState(!1), j = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...j, ...x], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
+  } = e, y = (0, C.useUID)(), [L, O] = l.useState(!1), j = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...j, ...x], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
     intention: v
@@ -131,12 +131,12 @@ function L(e) {
       D(!t), t && p.EmojiPickerStore.setSearchPlaceholder(null)
     };
   return (0, a.jsxs)(u.Dialog, {
-    "aria-labelledby": L,
+    "aria-labelledby": y,
     children: [(0, a.jsx)(u.HeadingLevel, {
       forceLevel: 2,
       children: (0, a.jsx)(u.HiddenVisually, {
         children: (0, a.jsx)(u.H, {
-          id: L,
+          id: y,
           children: n
         })
       })
@@ -146,26 +146,26 @@ function L(e) {
         analyticsOverride: _,
         channel: t,
         className: i()(N.animatedPicker, {
-          [N.animatedPickerTall]: y
+          [N.animatedPickerTall]: L
         }),
         headerClassName: i()(N.emojiPickerHeader, {
-          [N.emojiPickerHeaderExpanded]: y
+          [N.emojiPickerHeaderExpanded]: L
         }),
         closePopout: s,
-        onSelectEmoji: y ? b : () => {},
-        shouldHidePickerActions: !y,
+        onSelectEmoji: L ? b : () => {},
+        shouldHidePickerActions: !L,
         wrapper: "div",
         pickerIntention: v,
         searchProps: {
           ...E,
           accessory: (0, a.jsx)(R, {
             otherAccessories: null == E ? void 0 : E.accessory,
-            isEmojiPickerExpanded: y,
+            isEmojiPickerExpanded: L,
             onSetExpanded: D,
             onFocus: o
           }),
           onKeyDown: e => {
-            null != e && e.key !== A.KeyboardKeysUpdated.TAB && (e.key !== A.KeyboardKeysUpdated.ENTER || e.shiftKey ? D(!0) : D(!y))
+            null != e && e.key !== A.KeyboardKeysUpdated.TAB && (e.key !== A.KeyboardKeysUpdated.ENTER || e.shiftKey ? D(!0) : D(!L))
           }
         }
       }), (0, a.jsx)("div", {

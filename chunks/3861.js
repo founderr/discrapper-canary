@@ -32,8 +32,8 @@ t.default = (0, r.default)(e => {
     className: x,
     inCall: M,
     showParticipants: R = !0,
-    paused: L = !1,
-    width: y,
+    paused: y = !1,
+    width: L,
     height: O,
     idle: j,
     mode: P,
@@ -43,7 +43,7 @@ t.default = (0, r.default)(e => {
   } = e;
   l.useEffect(() => {
     c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
-  }, [y, O]);
+  }, [L, O]);
   let F = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.some(e => (0, o.isActivityParticipantCurrentUserCurrentSession)(e))), [n, r]);
   if ((null == b ? void 0 : b.channelId) === N.id) return (0, a.jsx)(h.default, {
     height: O
@@ -55,7 +55,7 @@ t.default = (0, r.default)(e => {
   });
   if (P === C.ChannelModes.VOICE) return (0, a.jsx)(u.default, {
     guildId: N.guild_id,
-    width: y,
+    width: L,
     className: S.voiceCallWrapper,
     participants: t,
     onContextMenu: I
@@ -63,7 +63,7 @@ t.default = (0, r.default)(e => {
   if (n = M ? n : t, null == s) return 0 === n.length ? (0, a.jsx)(E.default, {
     className: i()(S.videoGrid, S.hiddenParticipants),
     channelId: N.id,
-    width: y
+    width: L
   }) : (0, a.jsx)(d.default, {
     className: S.videoGridWrapper,
     justify: d.default.Justify.CENTER,
@@ -76,7 +76,7 @@ t.default = (0, r.default)(e => {
       onClick: T,
       onDoubleClick: A,
       onContextMenu: I,
-      paused: L,
+      paused: y,
       inCall: M
     })
   });
@@ -91,7 +91,7 @@ t.default = (0, r.default)(e => {
     className: x,
     idle: j,
     height: O,
-    width: y,
+    width: L,
     layout: _,
     inCall: M,
     channel: N,

@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("883904"),
   T = s("678558"),
   f = s("730647"),
-  m = s("584825"),
-  _ = s("305342"),
+  _ = s("584825"),
+  m = s("305342"),
   g = s("333867"),
   I = s("963249"),
   h = s("87484"),
@@ -29,11 +29,11 @@ var a = s("735250"),
 function M(e) {
   let {
     selectedGuildForGuildSub: t
-  } = e, s = (0, m.useGroupListingsForGuild)(null == t ? void 0 : t.id)[0];
+  } = e, s = (0, _.useGroupListingsForGuild)(null == t ? void 0 : t.id)[0];
   return (0, a.jsx)(a.Fragment, {
     children: null != t && null != s ? (0, a.jsx)("div", {
       className: R.formItem,
-      children: s.subscription_listings_ids.map(e => (0, a.jsx)(_.default, {
+      children: s.subscription_listings_ids.map(e => (0, a.jsx)(m.default, {
         guildId: t.id,
         groupListingId: e,
         listingId: e
@@ -42,9 +42,9 @@ function M(e) {
   })
 }
 t.default = function() {
-  let [e, t] = n.useState(x.PremiumSubscriptionSKUs.TIER_2), [s, m] = n.useState(null), [_] = (0, i.useStateFromStoresArray)([C.default], () => [C.default.getGuilds()]), [v] = (0, i.useStateFromStoresArray)([A.default], () => [A.default.getPremiumSubscription()]);
+  let [e, t] = n.useState(x.PremiumSubscriptionSKUs.TIER_2), [s, _] = n.useState(null), [m] = (0, i.useStateFromStoresArray)([C.default], () => [C.default.getGuilds()]), [v] = (0, i.useStateFromStoresArray)([A.default], () => [A.default.getPremiumSubscription()]);
   (0, p.useFetchProfileEffects)();
-  let D = Object.values(_).map(e => ({
+  let D = Object.values(m).map(e => ({
       value: e,
       label: e.name
     })),
@@ -55,7 +55,7 @@ t.default = function() {
       gift: "true"
     }),
     B = "true" !== U.gift && null != v,
-    [F, G] = n.useState(D.length > 0 ? D[0].value : null),
+    [G, F] = n.useState(D.length > 0 ? D[0].value : null),
     {
       analyticsLocations: k
     } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE),
@@ -115,7 +115,7 @@ t.default = function() {
             value: null,
             label: "None"
           }],
-          onChange: e => m(e)
+          onChange: e => _(e)
         }), (0, a.jsx)(r.Button, {
           onClick: () => (0, I.default)({
             subscriptionTier: s,
@@ -240,14 +240,14 @@ t.default = function() {
           variant: "text-sm/normal",
           children: "Premium Server Subscription For"
         }), (0, a.jsx)(r.SingleSelect, {
-          value: F,
+          value: G,
           options: D,
-          onChange: e => G(e)
+          onChange: e => F(e)
         })]
       }), (0, a.jsx)(f.GroupListingsFetchContextProvider, {
-        guildId: null == F ? void 0 : F.id,
+        guildId: null == G ? void 0 : G.id,
         children: (0, a.jsx)(M, {
-          selectedGuildForGuildSub: F
+          selectedGuildForGuildSub: G
         })
       }), (0, a.jsx)(r.FormDivider, {
         className: R.formDivider

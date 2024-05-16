@@ -18,8 +18,8 @@ var n = s("512722"),
   E = s("887278"),
   T = s("630699"),
   f = s("658785"),
-  m = s("556296"),
-  _ = s("808506"),
+  _ = s("556296"),
+  m = s("808506"),
   g = s("237997"),
   I = s("739563"),
   h = s("626135");
@@ -34,17 +34,17 @@ function x(e) {
   var t;
   let s = g.default.getNotificationPositionMode(),
     a = s !== p.OverlayNotificationPositions.DISABLED,
-    n = m.default.getOverlayKeybind(),
-    l = m.default.getOverlayChatKeybind();
+    n = _.default.getOverlayKeybind(),
+    l = _.default.getOverlayChatKeybind();
   return {
-    enabled: _.default.enabled,
+    enabled: m.default.enabled,
     notifications_enabled: a,
     notifications_position: a ? s : null,
     text_notifications_mode: g.default.getTextChatNotificationMode(),
     hotkey: null != n ? (0, N.toString)(n.shortcut) : null,
     text_activation_hotkey: null != l ? (0, N.toString)(l.shortcut) : null,
     text_opacity_slider: g.default.getTextWidgetOpacity(),
-    old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : _.default.enabled
+    old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : m.default.enabled
   }
 }
 
@@ -67,9 +67,9 @@ function M(e) {
   } = e, {
     enabled: n,
     legacyEnabled: i
-  } = (0, o.useStateFromStoresObject)([_.default], () => ({
-    enabled: _.default.enabled,
-    legacyEnabled: _.default.legacyEnabled
+  } = (0, o.useStateFromStoresObject)([m.default], () => ({
+    enabled: m.default.enabled,
+    legacyEnabled: m.default.legacyEnabled
   })), {
     avatarSizeMode: N,
     displayNameMode: M,
@@ -84,7 +84,7 @@ function M(e) {
     notificationPositionMode: g.default.getNotificationPositionMode(),
     textChatNotificationMode: g.default.getTextChatNotificationMode(),
     shouldShowKeybindIndicators: g.default.showKeybindIndicators
-  })), j = (0, o.useStateFromStores)([m.default], () => m.default.getOverlayKeybind()), {
+  })), j = (0, o.useStateFromStores)([_.default], () => _.default.getOverlayKeybind()), {
     showKeybindIndicators: b
   } = f.default.useExperiment({
     location: "overlay_user_settings"

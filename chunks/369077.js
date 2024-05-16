@@ -21,8 +21,8 @@ var u = s("594174"),
   E = s("905362"),
   T = s("353093"),
   f = s("891728"),
-  m = s("438365"),
-  _ = s("114487"),
+  _ = s("438365"),
+  m = s("114487"),
   g = s("219039"),
   I = s("979264"),
   h = s("308083"),
@@ -41,7 +41,7 @@ function A(e) {
     guildIcon: S,
     guildIconSize: E,
     memberCount: f
-  } = e, m = n.useMemo(() => c.default.getGuildIconURL({
+  } = e, _ = n.useMemo(() => c.default.getGuildIconURL({
     id: d,
     icon: S,
     size: E,
@@ -56,9 +56,9 @@ function A(e) {
     className: i()(C.container, t),
     children: [(0, a.jsxs)("div", {
       className: C.guildPrefixContainer,
-      children: [(0, a.jsx)(_.ClanGuildIconSimple, {
+      children: [(0, a.jsx)(m.ClanGuildIconSimple, {
         guildName: u,
-        guildIconURL: m,
+        guildIconURL: _,
         iconSize: E,
         className: C.guildPrefixIcon
       }), (0, a.jsxs)("div", {
@@ -100,8 +100,8 @@ function O(e) {
     guildId: l,
     guildName: i,
     guildIcon: c,
-    clan: m,
-    userId: _
+    clan: _,
+    userId: m
   } = e, g = (0, f.useCurrentUserAvailableClanIds)(), I = (0, r.useStateFromStores)([u.default], () => {
     var e;
     return (0, T.getUserClanData)(null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
@@ -125,15 +125,15 @@ function O(e) {
           })
         }))
       };
-      if (null != m) return () => {
-        (0, E.openClanApplyFlow)(l, m, {
+      if (null != _) return () => {
+        (0, E.openClanApplyFlow)(l, _, {
           source: N.AnalyticsSections.USER_PROFILE,
           location: d.default.CLAN_TAG,
-          tagUserId: _
+          tagUserId: m
         })
       }
     }
-  }, [g, m, I, l, i, _]);
+  }, [g, _, I, l, i, m]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Heading, {
       className: C.header,
@@ -148,7 +148,7 @@ function O(e) {
       guildId: l,
       guildIcon: c,
       guildIconSize: 40,
-      memberCount: null == m ? void 0 : m.memberCount
+      memberCount: null == _ ? void 0 : _.memberCount
     })]
   })
 }
@@ -164,7 +164,7 @@ function x(e) {
     guildName: r,
     guildIcon: o,
     clan: d
-  } = (0, m.useUserSelectedClan)({
+  } = (0, _.useUserSelectedClan)({
     userId: t
   });
   if (null == n || null == i || null == r) return null;

@@ -18,8 +18,8 @@ var n = s("990547"),
   E = s("782568"),
   T = s("163379"),
   f = s("703288"),
-  m = s("574755"),
-  _ = s("425799"),
+  _ = s("574755"),
+  m = s("425799"),
   g = s("377171"),
   I = s("621628"),
   h = s("18438"),
@@ -40,8 +40,8 @@ var n = s("990547"),
   U = s("87086"),
   y = s("759231"),
   B = s("26290"),
-  F = s("626135"),
-  G = s("49012"),
+  G = s("626135"),
+  F = s("49012"),
   k = s("358085"),
   w = s("392735"),
   H = s("61160"),
@@ -72,8 +72,8 @@ var n = s("990547"),
   eE = s("593648"),
   eT = s("327885"),
   ef = s("595242"),
-  em = s("301121"),
-  e_ = s("207874"),
+  e_ = s("301121"),
+  em = s("207874"),
   eg = s("36192"),
   eI = s("338345"),
   eh = s("400287"),
@@ -107,13 +107,13 @@ let eP = () => {
       isOverlaySupported: eU,
       isClipsBetaTagShowing: ey = !1,
       shouldMergeGameSettings: eB,
-      isUserSettingsSearchEnabled: eF
+      isUserSettingsSearchEnabled: eG
     } = e;
     return Object.freeze({
       [eR.WebSetting.SEARCH_BAR]: {
         section: S.SectionTypes.CUSTOM,
-        element: e_.default,
-        predicate: () => eF
+        element: em.default,
+        predicate: () => eG
       },
       [eR.WebSetting.ACCOUNT]: {
         section: eM.UserSettingsSections.ACCOUNT,
@@ -150,7 +150,7 @@ let eP = () => {
       [eR.WebSetting.PRIVACY_AND_SAFETY]: {
         section: eM.UserSettingsSections.PRIVACY_AND_SAFETY,
         label: eD.default.Messages.PRIVACY_AND_SAFETY,
-        element: em.default
+        element: e_.default
       },
       [eR.WebSetting.FAMILY_CENTER]: {
         section: eM.UserSettingsSections.FAMILY_CENTER,
@@ -197,7 +197,7 @@ let eP = () => {
         label: eD.default.Messages.CLIPS,
         ariaLabel: eD.default.Messages.CLIPS,
         icon: ey ? (0, a.jsx)(f.default, {}) : void 0,
-        element: m.default,
+        element: _.default,
         predicate: () => !eB
       },
       [eR.WebSetting.FRIEND_REQUESTS]: {
@@ -350,11 +350,11 @@ let eP = () => {
         section: "merchandise",
         onClick: () => {
           let e = "https://discordmerch.com/Dsktopprm";
-          F.default.track(eM.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CLICKED), (0, G.handleClick)({
+          G.default.track(eM.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CLICKED), (0, F.handleClick)({
             href: e,
             shouldConfirm: !0,
             onConfirm: () => {
-              F.default.track(eM.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, E.default)(e)
+              G.default.track(eM.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, E.default)(e)
             }
           })
         },
@@ -411,7 +411,7 @@ let eP = () => {
       [eR.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL]: {
         section: eM.UserSettingsSections.PROFILE_EFFECTS_PREVIEW_TOOL,
         label: "Profile Effects Preview Tool",
-        element: _.default,
+        element: m.default,
         predicate: () => P.default.isDeveloper
       },
       [eR.WebSetting.QUEST_PREVIEW_TOOL]: {

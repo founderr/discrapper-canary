@@ -14,7 +14,7 @@ var a = s("735250"),
   T = s("689938"),
   f = s("413127");
 
-function m(e) {
+function _(e) {
   u.RecentGamesEnabled.updateSetting(e), e && r.default.fetchUserRecentGames(c.default.getId()), !e && (0, o.trackDisableRecentGamesSetting)()
 }
 t.default = n.memo(function() {
@@ -30,7 +30,7 @@ t.default = n.memo(function() {
       note: T.default.Messages.RECENT_GAMES_SETTING_NOTE.format({
         helpdeskArticle: S.default.getArticleURL(E.HelpdeskArticles.USER_PROFILE_RECENT_GAMES)
       }),
-      onChange: m,
+      onChange: _,
       hideBorder: !0,
       children: T.default.Messages.USER_RECENT_GAMES_ON_PROFILE
     }), (0, a.jsx)(l.FormText, {

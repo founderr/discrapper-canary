@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("594174"),
   T = s("314884"),
   f = s("74538"),
-  m = s("296533"),
-  _ = s("901750"),
+  _ = s("296533"),
+  m = s("901750"),
   g = s("112863"),
   I = s("701157"),
   h = s("912152"),
@@ -33,7 +33,7 @@ function A(e) {
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(i.BlockedPaymentsWarning, {
       className: C.blockedPaymentsWarning
-    }), (0, a.jsx)(_.default, {
+    }), (0, a.jsx)(m.default, {
       hasGuildBoostSlots: D,
       hasAppliedGuildBoosts: L,
       isUserPremiumTier2: x,
@@ -43,10 +43,10 @@ function A(e) {
       isUserPremiumTier2: x,
       hasGuildAffinitiesOrInGuild: v,
       subscriptionIsPausedOrPausePending: j
-    }), !v && (0, a.jsx)(g.default, {}), (null == t ? void 0 : t.isPaused) ? (0, a.jsx)(m.GuildBoostingSettingsPausedAppliedBoosts, {
+    }), !v && (0, a.jsx)(g.default, {}), (null == t ? void 0 : t.isPaused) ? (0, a.jsx)(_.GuildBoostingSettingsPausedAppliedBoosts, {
       appliedGuildBoosts: P,
       premiumSubscription: t
-    }) : (0, a.jsx)(m.default, {
+    }) : (0, a.jsx)(_.default, {
       guildBoostSlots: s,
       premiumSubscription: t
     }), (0, a.jsx)(N.default, {

@@ -102,7 +102,7 @@ function g(e) {
                 m(), (0, d.transitionToGuild)(g), (0, r.openModalLazy)(async () => {
                   let {
                     default: e
-                  } = await Promise.all([a.e("99387"), a.e("59500")]).then(a.bind(a, "241420"));
+                  } = await Promise.all([a.e("99387"), a.e("88408")]).then(a.bind(a, "241420"));
                   return t => (0, n.jsx)(e, {
                     ...t,
                     guild: G

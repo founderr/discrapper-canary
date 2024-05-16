@@ -29,12 +29,12 @@ function f(e) {
       }
       return null
     }, [e]),
-    m = (0, i.useStateFromStores)([r.default], () => {
+    _ = (0, i.useStateFromStores)([r.default], () => {
       if (null == f) return;
       let e = r.default.getApplication(f.applicationId);
       if (null != e) return e
     }, [f]),
-    _ = (0, i.useStateFromStores)([o.default], () => {
+    m = (0, i.useStateFromStores)([o.default], () => {
       if (null != f) return o.default.getGuild(f.guildId)
     }, [f]),
     [g, I] = a.useState(!1),
@@ -57,8 +57,8 @@ function f(e) {
       subscription: e
     });
   return {
-    application: m,
-    guild: _,
+    application: _,
+    guild: m,
     expanded: g,
     handleToggleExpanded: () => I(e => !e),
     listing: s,

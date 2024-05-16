@@ -19,7 +19,7 @@ t.default = function(e) {
     subscriptionIsPausedOrPausePending: T
   } = e, {
     subtitle: f,
-    flavor: m
+    flavor: _
   } = function(e) {
     let {
       hasAppliedGuildBoosts: t,
@@ -62,9 +62,9 @@ t.default = function(e) {
       variant: "heading-lg/bold",
       className: S.subtitle,
       children: f
-    }), null != m && (0, a.jsx)(n.Text, {
+    }), null != _ && (0, a.jsx)(n.Text, {
       variant: "text-sm/normal",
-      children: m
+      children: _
     })]
   })
 }

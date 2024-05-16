@@ -9,8 +9,8 @@ var a, n, l, i, r = s("442837"),
   E = s("866960"),
   T = s("936349"),
   f = s("979651"),
-  m = s("622414"),
-  _ = s("42955"),
+  _ = s("622414"),
+  m = s("42955"),
   g = s("399002"),
   I = s("369541"),
   h = s("981631"),
@@ -176,7 +176,7 @@ async function U() {
     headers: {
       "Content-Type": "text/plain"
     }
-  })]), P(I.SpeedTestLifecycles.COMPLETED), L(), m.default.stopSpeedTest(), A.running = !1, A.notes = ""
+  })]), P(I.SpeedTestLifecycles.COMPLETED), L(), _.default.stopSpeedTest(), A.running = !1, A.notes = ""
 }
 class y extends(a = r.default.Store) {
   initialize() {
@@ -237,7 +237,7 @@ i = "RTCSpeedTestStore", (l = "displayName") in(n = y) ? Object.defineProperty(n
   },
   SPEED_TEST_CREATE: function(e) {
     if (!A.running) {
-      m.default.stopSpeedTest();
+      _.default.stopSpeedTest();
       return
     }
     A.rtcServerId = e.rtcServerId
@@ -247,7 +247,7 @@ i = "RTCSpeedTestStore", (l = "displayName") in(n = y) ? Object.defineProperty(n
   },
   SPEED_TEST_SERVER_UPDATE: function(e) {
     var t;
-    L(), A.endpoint = null !== (t = e.endpoint) && void 0 !== t ? t : null, A.connection = new _.default({
+    L(), A.endpoint = null !== (t = e.endpoint) && void 0 !== t ? t : null, A.connection = new m.default({
       userId: c.default.getId(),
       sessionId: c.default.getSessionId(),
       rtcServerId: A.rtcServerId,

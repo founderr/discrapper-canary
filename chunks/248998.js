@@ -27,18 +27,18 @@ function E(e) {
       name: E,
       description: T,
       hideDescriptionUntilUnlock: f,
-      onAction: m
+      onAction: _
     } = n,
-    _ = f && !i,
+    m = f && !i,
     g = i ? "header-primary" : "text-muted",
     I = i ? "header-secondary" : "text-muted",
     h = r()(s),
-    N = null != m && i,
+    N = null != _ && i,
     p = N ? o.Clickable : "div";
   return (0, a.jsxs)(p, {
     className: l()(S.container, N && S.actionable),
     onClick: () => {
-      N && m()
+      N && _()
     },
     children: [(0, a.jsx)("div", {
       className: S.iconContainer,
@@ -61,7 +61,7 @@ function E(e) {
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/normal",
         color: I,
-        children: _ ? "?????" : T()
+        children: m ? "?????" : T()
       })]
     })]
   })

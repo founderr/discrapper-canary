@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return m
   }
 });
 var a = s("735250");
@@ -18,9 +18,9 @@ var n = s("410575"),
   E = s("206339"),
   T = s("981631"),
   f = s("46140"),
-  m = s("313026");
+  _ = s("313026");
 
-function _() {
+function m() {
   let e = (0, u.useIsEligibleForQuests)({
       location: f.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
     }),
@@ -36,8 +36,8 @@ function _() {
     children: [!s && (0, a.jsxs)(a.Fragment, {
       children: [t && (0, a.jsx)(d.default, {
         location: l.default.USER_SETTINGS_GIFT_INVENTORY,
-        className: m.giftNitro,
-        imageClassName: m.giftNitroImage,
+        className: _.giftNitro,
+        imageClassName: _.giftNitroImage,
         textContainerOverrideStyles: {
           padding: "32px",
           width: "360px"

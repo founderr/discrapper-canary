@@ -1,10 +1,10 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   useCollectiblesHoverPreviewExperiment: function() {
     return s
   }
 });
-let a = (0, l("818083").createExperiment)({
+let l = (0, a("818083").createExperiment)({
     kind: "user",
     id: "2024-05_collectibles_hover_preview",
     label: "Collectibles Hover Preview Experiment",
@@ -19,6 +19,6 @@ let a = (0, l("818083").createExperiment)({
       }
     }]
   }),
-  s = e => a.useExperiment({
+  s = e => l.useExperiment({
     location: e
   }).enabled

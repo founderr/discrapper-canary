@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("367907"),
   T = s("906732"),
   f = s("414666"),
-  m = s("962746"),
-  _ = s("296810"),
+  _ = s("962746"),
+  m = s("296810"),
   g = s("621853"),
   I = s("246946"),
   h = s("594174"),
@@ -69,8 +69,8 @@ function j(e) {
     pendingProfileEffectId: U,
     pendingNickname: y,
     pendingBanner: B,
-    pendingBio: F,
-    pendingPronouns: G,
+    pendingBio: G,
+    pendingPronouns: F,
     pendingThemeColors: k,
     source: w
   } = (0, r.useStateFromStoresObject)([O.default], () => ({
@@ -97,8 +97,8 @@ function j(e) {
       pendingAvatarDecoration: b,
       pendingProfileEffectId: U,
       pendingBanner: B,
-      pendingBio: F,
-      pendingPronouns: G,
+      pendingBio: G,
+      pendingPronouns: F,
       pendingNickname: y,
       activityName: D.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
       activityCharacter: f.FakeActivityCharacter.PHIBI,
@@ -117,11 +117,11 @@ function j(e) {
         onChange: e => {
           null != e && (0, A.setCurrentGuild)(e)
         }
-      }), (0, a.jsx)(_.default, {
+      }), (0, a.jsx)(m.default, {
         previewTitle: D.default.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
           guildName: null == t ? void 0 : t.name
         }),
-        profilePreview: (0, a.jsx)(m.default, {
+        profilePreview: (0, a.jsx)(_.default, {
           ...V,
           pendingThemeColors: k
         }),

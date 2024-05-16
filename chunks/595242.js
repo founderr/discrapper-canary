@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("15640"),
   T = s("314684"),
   f = s("899667"),
-  m = s("853872"),
-  _ = s("78839"),
+  _ = s("853872"),
+  m = s("78839"),
   g = s("783739"),
   I = s("981631"),
   h = s("220439");
@@ -32,10 +32,10 @@ function N() {
   let {
     hasFetchedSubscriptions: e,
     premiumSubscription: t
-  } = (0, r.useStateFromStoresObject)([_.default], () => ({
-    hasFetchedSubscriptions: _.default.hasFetchedSubscriptions(),
-    premiumSubscription: _.default.getPremiumTypeSubscription()
-  })), s = (0, E.useSubscriptionPlansLoaded)(), l = (0, r.useStateFromStores)([m.default], () => m.default.hasFetchedPaymentSources), N = (0, r.useStateFromStores)([f.default], () => f.default.isFetchingCurrentUserAppliedBoosts);
+  } = (0, r.useStateFromStoresObject)([m.default], () => ({
+    hasFetchedSubscriptions: m.default.hasFetchedSubscriptions(),
+    premiumSubscription: m.default.getPremiumTypeSubscription()
+  })), s = (0, E.useSubscriptionPlansLoaded)(), l = (0, r.useStateFromStores)([_.default], () => _.default.hasFetchedPaymentSources), N = (0, r.useStateFromStores)([f.default], () => f.default.isFetchingCurrentUserAppliedBoosts);
   return ((0, T.useFetchEntitlementsForTenureReward)(), e && s && l && !N) ? (0, a.jsxs)("div", {
     className: h.container,
     children: [(0, a.jsx)("div", {

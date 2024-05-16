@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("800965"),
   M = n("107169"),
   R = n("891551"),
-  L = n("314897"),
-  y = n("979696"),
+  y = n("314897"),
+  L = n("979696"),
   O = n("430824"),
   j = n("496675"),
   P = n("944486"),
@@ -75,7 +75,7 @@ function el(e) {
     popoutWindow: i,
     popoutWindowAlwaysOnTop: r,
     selectedParticipant: u
-  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([P.default], () => P.default.getMostRecentSelectedTextChannelId(d), [d]), f = L.default.getId(), h = !(0, o.useStateFromStores)([E.default], () => E.default.isFullscreenInContext(n)) && (!D.isPlatformEmbedded || D.isPlatformEmbedded && U.default.supportsFeature(X.NativeFeatures.POPOUT_WINDOWS)), m = null != u && u.type !== Q.ParticipantTypes.ACTIVITY && u.user.id !== f, p = l.useMemo(() => {
+  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([P.default], () => P.default.getMostRecentSelectedTextChannelId(d), [d]), f = y.default.getId(), h = !(0, o.useStateFromStores)([E.default], () => E.default.isFullscreenInContext(n)) && (!D.isPlatformEmbedded || D.isPlatformEmbedded && U.default.supportsFeature(X.NativeFeatures.POPOUT_WINDOWS)), m = null != u && u.type !== Q.ParticipantTypes.ACTIVITY && u.user.id !== f, p = l.useMemo(() => {
     var e;
     return null !== (e = null == i ? void 0 : i.window) && void 0 !== e ? e : window
   }, [i]), g = (0, Z.default)({
@@ -137,8 +137,8 @@ function ei(e) {
       isOnStartStageScreen: M
     } = (0, B.default)();
   (0, B.useUpdateIsOnStartStageScreenEffect)(n);
-  let R = (0, o.useStateFromStores)([y.default], () => y.default.getToastsEnabled(n.id)),
-    L = (0, q.default)(n) ? null != T ? "84px" : "124px" : null != T ? "0px" : "48px";
+  let R = (0, o.useStateFromStores)([L.default], () => L.default.getToastsEnabled(n.id)),
+    y = (0, q.default)(n) ? null != T ? "84px" : "124px" : null != T ? "0px" : "48px";
   return t = M ? (0, a.jsx)(K.default, {
     channel: n,
     onContinueClick: () => {
@@ -160,8 +160,8 @@ function ei(e) {
     hasConnectPermission: S
   }), (0, a.jsx)(v.default, {
     style: {
-      height: "calc(100% - ".concat(L, ")"),
-      paddingTop: L
+      height: "calc(100% - ".concat(y, ")"),
+      paddingTop: y
     },
     disableGradients: 0 === A && v.DisableGradient.TOP,
     renderBottomLeft: () => (0, a.jsx)(es, {

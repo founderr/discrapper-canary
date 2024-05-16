@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("857595"),
   T = s("607070"),
   f = s("627845"),
-  m = s("786761"),
-  _ = s("3148"),
+  _ = s("786761"),
+  m = s("3148"),
   g = s("739566"),
   I = s("753206"),
   h = s("440849"),
@@ -39,8 +39,8 @@ var a = s("735250"),
   U = s("653477"),
   y = s("689938"),
   B = s("572965"),
-  F = s("611273"),
-  G = s("328756");
+  G = s("611273"),
+  F = s("328756");
 let k = (0, A.uid)(),
   w = (0, A.uid)(),
   H = (0, A.uid)(),
@@ -56,7 +56,7 @@ function W(e) {
     tag: u.FormTitleTags.H1,
     title: y.default.Messages.ACCESSIBILITY,
     children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
-      className: F.marginBottom20
+      className: G.marginBottom20
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
       children: y.default.Messages.ACCESSIBILITY_SETTINGS_APPEARANCE_LINK.format({
@@ -71,8 +71,8 @@ function W(e) {
 function K() {
   let e = v.MessageDisplayCompact.useSetting(),
     [t] = n.useState(() => {
-      let e = (0, m.createMessageRecord)({
-        ...(0, _.default)({
+      let e = (0, _.createMessageRecord)({
+        ...(0, m.default)({
           channelId: "1337",
           content: y.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_LINK_PREVIEW_MESSAGE.format({
             previewLink: "https://discord.com/accessibility"
@@ -97,7 +97,7 @@ function K() {
           className: B.previewAvatars,
           children: [j.StatusTypes.ONLINE, j.StatusTypes.DND, j.StatusTypes.IDLE].map(e => (0, a.jsx)(u.AnimatedAvatar, {
             "aria-label": y.default.Messages.USER_SETTINGS_AVATAR,
-            src: G,
+            src: F,
             size: u.AvatarSizes.SIZE_32,
             status: e
           }, e))
@@ -126,15 +126,15 @@ function z() {
     desaturateUserColors: T.default.desaturateUserColors
   }));
   return (0, a.jsxs)(u.FormSection, {
-    className: F.marginTop20,
+    className: G.marginTop20,
     children: [(0, a.jsx)(u.FormTitle, {
       id: k,
-      className: F.marginBottom8,
+      className: G.marginBottom8,
       children: y.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
     }), (0, a.jsx)(u.FormText, {
       id: w,
       type: u.FormText.Types.DESCRIPTION,
-      className: F.marginBottom20,
+      className: G.marginBottom20,
       children: y.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_DESCRIPTION
     }), (0, a.jsx)(u.Slider, {
       "aria-labelledby": k,
@@ -149,7 +149,7 @@ function z() {
       onMarkerRender: e => 100 * e % 2 == 0 ? "".concat(100 * e, "%") : void 0
     }), (0, a.jsx)(u.FormSwitch, {
       hideBorder: !0,
-      className: i()(F.marginTop8, F.marginBottom20),
+      className: i()(G.marginTop8, G.marginBottom20),
       value: t,
       onChange: E.toggleDesaturateUserColors,
       note: y.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_CUSTOM_COLORS_DESCRIPTION,
@@ -161,7 +161,7 @@ function z() {
 function Q() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.alwaysShowLinkDecorations);
   return (0, a.jsx)(u.FormItem, {
-    className: F.marginTop20,
+    className: G.marginTop20,
     children: (0, a.jsx)(u.FormSwitch, {
       note: y.default.Messages.ACCESSIBILITY_SETTINGS_ALWAYS_SHOW_LINK_DECORATIONS_NOTE,
       value: e,
@@ -178,10 +178,10 @@ function q() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormItem, {
       title: y.default.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_TITLE,
-      className: F.marginTop20,
+      className: G.marginTop20,
       children: [(0, a.jsx)(u.FormText, {
         type: u.FormText.Types.DESCRIPTION,
-        className: F.marginBottom8,
+        className: G.marginBottom8,
         children: y.default.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_DESCRIPTION
       }), (0, a.jsx)(u.RadioGroup, {
         options: [{
@@ -200,7 +200,7 @@ function q() {
         value: e
       })]
     }), (0, a.jsx)(u.FormDivider, {
-      className: F.marginTop20
+      className: G.marginTop20
     })]
   })
 }
@@ -211,14 +211,14 @@ function Z() {
   return (0, L.default)(t, P.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME), (0, a.jsx)(u.FormItem, {
     ref: t,
     title: y.default.Messages.ACCESSIBILITY_SETTINGS_PROFILE_COLORS_TITLE,
-    className: i()(F.marginTop20, B.syncProfileThemeWithUserTheme),
+    className: i()(G.marginTop20, B.syncProfileThemeWithUserTheme),
     children: (0, a.jsx)(u.FormSwitch, {
       note: y.default.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_NOTE.format({
         onThemeClick() {
           c.default.open(j.UserSettingsSections.APPEARANCE)
         }
       }),
-      className: F.marginTop20,
+      className: G.marginTop20,
       value: e,
       onChange: E.toggleSyncProfileThemeWithUserTheme,
       children: y.default.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_DESCRIPTION
@@ -240,7 +240,7 @@ function X() {
   });
   return (0, a.jsx)(u.FormItem, {
     title: y.default.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
-    className: F.marginTop20,
+    className: G.marginTop20,
     children: (0, a.jsx)(u.FormSwitch, {
       value: t,
       note: i,
@@ -271,21 +271,21 @@ function J() {
   let f = n.useCallback((e, t) => {
       (0, E.setPrefersReducedMotion)(t ? "auto" : r)
     }, [r]),
-    m = n.useCallback(e => {
+    _ = n.useCallback(e => {
       (0, E.setPrefersReducedMotion)(e ? "reduce" : "no-preference")
     }, []);
   return (0, a.jsxs)(u.FormItem, {
     ref: S,
     title: y.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION,
-    className: i()(F.marginTop20, B.reducedMotion),
+    className: i()(G.marginTop20, B.reducedMotion),
     children: [(0, a.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
-      className: F.marginBottom8,
+      className: G.marginBottom8,
       children: y.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({
         helpdeskArticle: M.default.getArticleURL(j.HelpdeskArticles.REDUCED_MOTION)
       })
     }), (0, a.jsx)(u.Checkbox, {
-      className: F.marginTop20,
+      className: G.marginTop20,
       value: "auto" === l,
       shape: u.Checkbox.Shapes.BOX,
       type: u.Checkbox.Types.INVERTED,
@@ -295,18 +295,18 @@ function J() {
         children: y.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_AUTO
       })
     }), (0, a.jsx)(u.FormSwitch, {
-      className: F.marginTop20,
+      className: G.marginTop20,
       value: s,
-      onChange: m,
+      onChange: _,
       children: y.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE
     }), (0, a.jsx)(u.FormSwitch, {
-      className: F.marginBottom40,
+      className: G.marginBottom40,
       value: e,
       note: null != o ? (0, h.default)(o) : void 0,
       onChange: v.GifAutoPlay.updateSetting,
       children: y.default.Messages.GIF_AUTO_PLAY_LABEL
     }), (0, a.jsx)(u.FormSwitch, {
-      className: i()(F.marginTop8, F.marginBottom20),
+      className: i()(G.marginTop8, G.marginBottom20),
       value: t,
       note: null != c ? (0, h.default)(c) : void 0,
       onChange: v.AnimateEmoji.updateSetting,
@@ -322,11 +322,11 @@ function $() {
       v.AnimateStickers.updateSetting(e.value)
     }, []);
   return (0, a.jsxs)(u.FormItem, {
-    className: F.marginBottom40,
+    className: G.marginBottom40,
     title: y.default.Messages.STICKERS_AUTO_PLAY_HEADING,
     children: [(0, a.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
-      className: F.marginBottom8,
+      className: G.marginBottom8,
       children: null != t ? (0, h.default)(t) : y.default.Messages.STICKERS_AUTO_PLAY_HELP
     }), (0, a.jsx)(u.RadioGroup, {
       options: [{
@@ -353,15 +353,15 @@ function ee() {
   return (0, L.default)(s, P.AccessibilityScrollPositions.LEGACY_CHAT_INPUT), (0, a.jsxs)(u.FormItem, {
     ref: s,
     children: [(0, a.jsx)(u.FormTitle, {
-      className: F.marginBottom8,
+      className: G.marginBottom8,
       children: y.default.Messages.FORM_LABEL_ACCESSIBILITY_CHAT_INPUT
     }), (0, a.jsx)(u.FormSwitch, {
-      className: F.marginTop20,
+      className: G.marginTop20,
       value: e,
       onChange: E.toggleSubmitButton,
       children: y.default.Messages.DISPLAY_SUBMIT_BUTTON
     }), (0, a.jsx)(u.FormSwitch, {
-      className: F.marginTop8,
+      className: G.marginTop8,
       value: t,
       note: y.default.Messages.LEGACY_CHAT_INPUT_DESCRIPTION,
       onChange: e => {
@@ -384,19 +384,19 @@ function et() {
   return S.supported ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormItem, {
       children: [(0, a.jsx)(u.FormTitle, {
-        className: F.marginBottom8,
+        className: G.marginBottom8,
         children: y.default.Messages.FORM_LABEL_TTS
       }), (0, a.jsx)(u.FormSwitch, {
-        className: F.marginTop20,
+        className: G.marginTop20,
         value: e,
         onChange: v.EnableTTSCommand.updateSetting,
         children: y.default.Messages.ALLOW_TTS_COMMAND
       })]
     }), (0, a.jsxs)(u.FormItem, {
-      className: F.marginBottom20,
+      className: G.marginBottom20,
       children: [(0, a.jsx)(u.FormTitle, {
         id: H,
-        className: F.marginBottom20,
+        className: G.marginBottom20,
         children: y.default.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_LABEL
       }), (0, a.jsx)("div", {
         className: B.ttsPreviewWrapper,

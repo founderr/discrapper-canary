@@ -20,8 +20,8 @@ var a = s("735250"),
   E = s("430824"),
   T = s("621113"),
   f = s("267642"),
-  m = s("709054"),
-  _ = s("357956"),
+  _ = s("709054"),
+  m = s("357956"),
   g = s("275909"),
   I = s("300037"),
   h = s("981631"),
@@ -40,7 +40,7 @@ function A(e) {
     if (o) return p.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format({
       date: d.currentPeriodEnd
     });
-    let e = null != s.premiumGuildSubscription ? m.default.extractTimestamp(s.premiumGuildSubscription.id) : 0;
+    let e = null != s.premiumGuildSubscription ? _.default.extractTimestamp(s.premiumGuildSubscription.id) : 0;
     return p.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_DURATION_SHORTENED.format({
       date: new Date(e)
     })
@@ -104,7 +104,7 @@ function O(e) {
     hasCancelableGuildBoostSlot: d,
     showAltText: c,
     isLastGuildBoostSlot: S
-  } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), m = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), I = n.useMemo(() => null != m && m > new Date, [m]), h = (0, f.isGuildBoostSlotCanceled)(s);
+  } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), _ = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), I = n.useMemo(() => null != _ && _ > new Date, [_]), h = (0, f.isGuildBoostSlotCanceled)(s);
   return (0, a.jsxs)("div", {
     className: C.boostContainer,
     children: [(0, a.jsxs)("div", {
@@ -115,9 +115,9 @@ function O(e) {
         useReducedMotion: E
       }), (0, a.jsx)("div", {
         className: C.boostDescriptionContainer,
-        children: null != m && I && !h ? (0, a.jsx)(_.default, {
+        children: null != _ && I && !h ? (0, a.jsx)(m.default, {
           className: C.boostDescriptionInnerContainer,
-          cooldown: m.getTime()
+          cooldown: _.getTime()
         }) : (0, a.jsx)(A, {
           guildTier: t,
           guildBoostSlot: s,
@@ -181,12 +181,12 @@ function R(e) {
     guildId: t,
     appliedGuildBoosts: s,
     premiumSubscription: n
-  } = e, l = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]), r = m.default.fromTimestamp(Date.now());
+  } = e, l = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]), r = _.default.fromTimestamp(Date.now());
   if (s.forEach(e => {
-      (null == r || 0 > m.default.compare(e.id, r)) && (r = e.id)
+      (null == r || 0 > _.default.compare(e.id, r)) && (r = e.id)
     }), null == r) return null;
   let o = S.default.createFromServer({
-    id: m.default.fromTimestamp(Date.now()),
+    id: _.default.fromTimestamp(Date.now()),
     subscription_id: n.id,
     canceled: !1,
     premium_guild_subscription: {
@@ -226,7 +226,7 @@ function M(e) {
     className: C.wrapper,
     children: [(0, a.jsx)("div", {
       className: C.container,
-      children: m.default.keys(l).map(e => (0, a.jsx)(R, {
+      children: _.default.keys(l).map(e => (0, a.jsx)(R, {
         guildId: e,
         premiumSubscription: s,
         appliedGuildBoosts: l[e]
@@ -273,7 +273,7 @@ function v(e) {
     className: C.wrapper,
     children: [(0, a.jsx)("div", {
       className: C.container,
-      children: m.default.keys(o).map(e => (0, a.jsx)(x, {
+      children: _.default.keys(o).map(e => (0, a.jsx)(x, {
         guildId: e,
         guildBoostSlotRecords: o[e],
         premiumSubscription: s,

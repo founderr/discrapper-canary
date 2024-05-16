@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("540086"),
   T = s("150039"),
   f = s("993413"),
-  m = s("689938"),
-  _ = s("35071");
+  _ = s("689938"),
+  m = s("35071");
 
 function g(e) {
   let {
@@ -48,23 +48,23 @@ function g(e) {
     title: E,
     errors: R,
     children: [(0, a.jsxs)("div", {
-      className: _.buttonsContainer,
+      className: m.buttonsContainer,
       children: [(0, a.jsx)(L, {
         size: r.Button.Sizes.SMALL,
         onClick: v,
         className: i()({
-          [_.buttonHighlighted]: h
+          [m.buttonHighlighted]: h
         }),
-        children: m.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+        children: _.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), D && (0, a.jsx)(r.Button, {
-        className: _.removeButton,
+        className: m.removeButton,
         color: r.Button.Colors.PRIMARY,
         look: r.Button.Looks.LINK,
         size: r.Button.Sizes.SMALL,
         onClick: function() {
           (0, T.setNewPendingAvatarDecoration)(null == s ? void 0 : s.id, null)
         },
-        children: (0, d.hasGlobalDefaultAvatarDecoration)(t, s) ? m.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : m.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
+        children: (0, d.hasGlobalDefaultAvatarDecoration)(t, s) ? _.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : _.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
       })]
     }), t.isStaff() && M && (0, a.jsx)(I, {
       user: t
@@ -76,7 +76,7 @@ let I = e => {
     user: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: _.overrideButtonsContainer,
+    className: m.overrideButtonsContainer,
     children: [(0, a.jsx)(r.Text, {
       variant: "text-xs/bold",
       children: "STAFF ONLY and Experimental. Upload a decoration to view throughout the app."

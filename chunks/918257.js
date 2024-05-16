@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return _
   }
 });
 var a = s("735250");
@@ -19,7 +19,7 @@ var n = s("120356"),
   T = s("917527");
 let f = (0, d.uid)();
 
-function m() {
+function _() {
   let e = (0, o.getAmplitudinalSoundboardVolume)();
   return (0, a.jsxs)("div", {
     className: l()(T.soundboardRow),

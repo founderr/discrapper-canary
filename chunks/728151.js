@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var o = n("231338");
+var o = n("243814");
 let s = "https://crunchyroll.com",
   i = "981509069309354054",
   r = [o.OAuth2Scopes.ACTIVITIES_WRITE, o.OAuth2Scopes.EMAIL, o.OAuth2Scopes.IDENTIFY]

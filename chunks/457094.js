@@ -129,7 +129,7 @@ let e1 = !1;
     }
   })
 }));
-let e2 = o.default.connectStores([H.default, ej.default, eD.default], () => ({
+let e4 = o.default.connectStores([H.default, ej.default, eD.default], () => ({
     isConnected: H.default.isConnected(),
     defaultRoute: ej.default.defaultRoute,
     defaultRouteFallback: ej.default.fallbackRoute,
@@ -164,7 +164,7 @@ let e2 = o.default.connectStores([H.default, ej.default, eD.default], () => ({
       return null
     }
   }),
-  e4 = (0, R.makeAuthenticated)(L.default, null, {
+  e2 = (0, R.makeAuthenticated)(L.default, null, {
     passProps: !1
   }),
   e3 = (0, R.makeAuthenticated)(v.default, null, {
@@ -192,14 +192,14 @@ let e9 = [{
     let {
       match: t
     } = e;
-    return (0, a.jsx)(e2, {
+    return (0, a.jsx)(e4, {
       match: t
     })
   },
   isSessionRequired: !0
 }, {
   path: [eX.Routes.APP],
-  render: () => (0, a.jsx)(e2, {}),
+  render: () => (0, a.jsx)(e4, {}),
   isSessionRequired: !0
 }, {
   path: [eX.Routes.USERS(":id")],
@@ -389,7 +389,7 @@ let e9 = [{
   isChatRoute: !0
 }, {
   path: [eX.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eX.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"), eX.Routes.ACTIVITY, eX.Routes.ACTIVITIES, eX.Routes.ACTIVITIES_HAPPENING_NOW, eX.Routes.ACTIVITY_DETAILS(":applicationId"), eX.Routes.APPLICATION_LIBRARY, eX.Routes.APPLICATION_STORE, eX.Routes.MESSAGE_REQUESTS, eX.Routes.QUEST_HOME, eX.Routes.COLLECTIBLES_SHOP, eX.Routes.COLLECTIBLES_SHOP_FULLSCREEN, eX.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"), eX.Routes.GUILD_DISCOVERY, eX.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"), eX.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"), eX.Routes.GUILD_BOOSTING_MARKETING(":guildId"), eX.Routes.FEATURE(":feature"), eX.Routes.FAMILY_CENTER],
-  render: e4,
+  render: e2,
   isSessionRequired: !0,
   isChatRoute: !0
 }, {

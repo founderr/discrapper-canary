@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("144114"),
   T = s("607018"),
   f = s("778764"),
-  m = s("314897"),
-  _ = s("325067"),
+  _ = s("314897"),
+  m = s("325067"),
   g = s("594174"),
   I = s("285952"),
   h = s("572004"),
@@ -274,7 +274,7 @@ class L extends n.PureComponent {
     }), v(this, "handleDisableMFA", () => {
       d.default.disable()
     }), v(this, "generateBackupCodes", async () => {
-      let e = _.default.getVerificationKey();
+      let e = m.default.getVerificationKey();
       await d.default.confirmViewBackupCodes(e, !0)
     }), v(this, "sendMFABackupCodesVerificationKeyEmail", () => {
       (0, o.openModal)(e => (0, a.jsx)(S.default, {
@@ -340,9 +340,9 @@ class L extends n.PureComponent {
 function P(e) {
   let t = (0, r.useStateFromStores)([g.default], () => g.default.getCurrentUser());
   i()(null != t, "TwoFactorAuth: currentUser cannot be undefined");
-  let s = (0, r.useStateFromStoresObject)([_.default, m.default], () => ({
-    togglingSMS: _.default.togglingSMS,
-    hasTOTPEnabled: m.default.hasTOTPEnabled()
+  let s = (0, r.useStateFromStoresObject)([m.default, _.default], () => ({
+    togglingSMS: m.default.togglingSMS,
+    hasTOTPEnabled: _.default.hasTOTPEnabled()
   }));
   return (0, a.jsx)(L, {
     currentUser: t,

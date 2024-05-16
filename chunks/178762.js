@@ -36,13 +36,13 @@ let M = 72;
 function R(e) {
   return (null == e ? void 0 : e.type) === h.MemberListRowTypes.CONTENT_INVENTORY ? M : 0
 }
-let L = i().throttle(e => {
+let y = i().throttle(e => {
     (0, E.trackInteraction)(x.ContentInventoryInteractionTypes.CARD_HOVER, e)
   }, 5e3, {
     leading: !0,
     trailing: !1
   }),
-  y = e => {
+  L = e => {
     let {
       entry: t,
       ...n
@@ -189,10 +189,10 @@ t.default = l.memo(e => {
               ...e,
               ...C,
               onMouseEnter: () => {
-                L(S)
+                y(S)
               },
               onContextMenu: P,
-              children: (0, a.jsx)(y, {
+              children: (0, a.jsx)(L, {
                 ...i,
                 selected: n
               })

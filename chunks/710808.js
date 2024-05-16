@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("594174"),
   T = s("285952"),
   f = s("12647"),
-  m = s("998502"),
-  _ = s("981631"),
+  _ = s("998502"),
+  m = s("981631"),
   g = s("65154"),
   I = s("689938"),
   h = s("611273");
@@ -57,7 +57,7 @@ function C() {
   })), O = (0, l.useStateFromStores)([S.default], () => S.default.shouldRecordNextConnection()), x = (0, l.useStateFromStores)([E.default], () => {
     var e, t;
     return null !== (t = null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t
-  }), R = ("canary" === m.default.releaseChannel || "development" === m.default.releaseChannel) && x && A;
+  }), R = ("canary" === _.default.releaseChannel || "development" === _.default.releaseChannel) && x && A;
   async function M() {
     t(!0);
     try {
@@ -65,7 +65,7 @@ function C() {
         message: {
           message: "User Live Dump"
         }
-      }), await (0, u.uploadDebugLogFiles)(_.DebugLogCategory.RTC), ! function() {
+      }), await (0, u.uploadDebugLogFiles)(m.DebugLogCategory.RTC), ! function() {
         let e = I.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
           t = I.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
         (0, i.openModal)(s => (0, a.jsx)(i.ConfirmModal, {

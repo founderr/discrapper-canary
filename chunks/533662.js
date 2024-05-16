@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return _
   }
 });
 var a = s("735250"),
@@ -18,10 +18,10 @@ var a = s("735250"),
   T = s("689938"),
   f = s("574923");
 
-function m(e) {
+function _(e) {
   let {
     onBackClick: t
-  } = e, s = (0, l.useStateFromStores)([c.default], () => c.default.getAllUnlockedAchievements()), m = n.useMemo(() => Object.values(s).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [s]), _ = n.useMemo(() => Object.values(S.ACHIEVEMENT_LIST).filter(u.isNotNullish).filter(e => null == s[e.id]).sort((e, t) => e.rarity - t.rarity), [s]);
+  } = e, s = (0, l.useStateFromStores)([c.default], () => c.default.getAllUnlockedAchievements()), _ = n.useMemo(() => Object.values(s).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [s]), m = n.useMemo(() => Object.values(S.ACHIEVEMENT_LIST).filter(u.isNotNullish).filter(e => null == s[e.id]).sort((e, t) => e.rarity - t.rarity), [s]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(r.FormSection, {
       children: (0, a.jsxs)(r.Clickable, {
@@ -57,11 +57,11 @@ function m(e) {
           height: 40
         })
       })]
-    }), m.length > 0 && (0, a.jsx)(r.FormSection, {
+    }), _.length > 0 && (0, a.jsx)(r.FormSection, {
       className: f.divider,
       children: (0, a.jsx)("div", {
         className: f.achievementGrid,
-        children: m.map(e => {
+        children: _.map(e => {
           let {
             achievementId: t,
             dateUnlocked: s
@@ -72,7 +72,7 @@ function m(e) {
           }, t)
         })
       })
-    }), _.length > 0 && (0, a.jsxs)(r.FormSection, {
+    }), m.length > 0 && (0, a.jsxs)(r.FormSection, {
       className: f.divider,
       children: [(0, a.jsx)("div", {
         className: f.headerTextContainer,
@@ -83,7 +83,7 @@ function m(e) {
         })
       }), (0, a.jsx)("div", {
         className: f.achievementGrid,
-        children: _.map(e => (0, a.jsx)(E.default, {
+        children: m.map(e => (0, a.jsx)(E.default, {
           achievementId: e.id
         }, e.id))
       })]

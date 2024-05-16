@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("285952"),
   T = s("107828"),
   f = s("727785"),
-  m = s("689938"),
-  _ = s("158200");
+  _ = s("689938"),
+  m = s("158200");
 
 function g() {}
 let I = [f.AutocompleterResultTypes.VOICE_CHANNEL];
@@ -54,12 +54,12 @@ function C() {
 
 function A() {
   return (0, a.jsx)("div", {
-    className: _.voiceListSearchEmpty,
+    className: m.voiceListSearchEmpty,
     children: (0, a.jsx)(i.Text, {
       variant: "text-md/medium",
       color: "text-muted",
-      className: _.noVoiceChannelSelected,
-      children: m.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_NO_RESULTS_FOUND
+      className: m.noVoiceChannelSelected,
+      children: _.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_NO_RESULTS_FOUND
     })
   })
 }
@@ -84,12 +84,12 @@ function O(e) {
     }))
   }, []);
   return (0, a.jsx)(i.FormSection, {
-    title: m.default.Messages.USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION,
-    className: _.channelIdSection,
+    title: _.default.Messages.USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION,
+    className: m.channelIdSection,
     children: (0, a.jsxs)(E.default, {
       align: E.default.Align.STRETCH,
       children: [(0, a.jsx)("div", {
-        className: _.selectedVoiceChannel,
+        className: m.selectedVoiceChannel,
         children: (0, a.jsx)(R, {
           channelId: d
         })
@@ -98,7 +98,7 @@ function O(e) {
         shrink: 0,
         children: (0, a.jsx)(i.Button, {
           onClick: c,
-          children: m.default.Messages.USER_SETTINGS_KEYBINDS_SELECT_VOICE_CHANNEL
+          children: _.default.Messages.USER_SETTINGS_KEYBINDS_SELECT_VOICE_CHANNEL
         })
       })]
     })
@@ -177,14 +177,14 @@ function x(e) {
       if ((null == t ? void 0 : t.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
     })();
   return (0, a.jsx)("div", {
-    className: _.voiceModalContainer,
+    className: m.voiceModalContainer,
     onMouseMove: O,
     children: (0, a.jsxs)(i.ModalRoot, {
       transitionState: t,
       size: i.ModalSize.MEDIUM,
-      className: _.voiceModalRootContainer,
+      className: m.voiceModalRootContainer,
       children: [(0, a.jsx)("div", {
-        className: _.inputWrapper,
+        className: m.inputWrapper,
         children: (0, a.jsx)(i.TextInput, {
           value: R,
           onChange: M,
@@ -211,7 +211,7 @@ function x(e) {
                 L >= j - 1 ? P(0) : P(L + 1)
             }
           },
-          placeholder: m.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
+          placeholder: _.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
           role: "combobox",
           "aria-controls": E,
           "aria-expanded": j > 0,
@@ -222,7 +222,7 @@ function x(e) {
       }), 0 === j && "" !== R && (0, a.jsx)(A, {}), (j > 0 || "" === R) && (0, a.jsx)(i.ListThin, {
         innerId: E,
         innerRole: "listbox",
-        "aria-label": m.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
+        "aria-label": _.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
         ref: g,
         sections: [j],
         renderRow: function(e) {
@@ -247,7 +247,7 @@ function x(e) {
             },
             onFocus: () => P(t),
             children: null != i ? (0, a.jsx)("div", {
-              className: _.guildName,
+              className: m.guildName,
               children: i.name
             }) : null
           }, n.id)
@@ -256,7 +256,7 @@ function x(e) {
         renderFooter: p,
         sectionHeight: 0,
         rowHeight: 34,
-        className: _.voiceChannelList,
+        className: m.voiceChannelList,
         listHeaderHeight: 8,
         footerHeight: 16
       })]
@@ -286,8 +286,8 @@ function R(e) {
   return null == s ? (0, a.jsx)(i.Text, {
     variant: "text-md/medium",
     color: "text-muted",
-    className: _.noVoiceChannelSelected,
-    children: m.default.Messages.USER_SETTINGS_KEYBINDS_NO_VOICE_CHANNEL_SELECTED
+    className: m.noVoiceChannelSelected,
+    children: _.default.Messages.USER_SETTINGS_KEYBINDS_NO_VOICE_CHANNEL_SELECTED
   }) : (0, a.jsx)(T.Channel, {
     channel: s,
     id: s.id,
@@ -297,7 +297,7 @@ function R(e) {
     onMouseEnter: g,
     focused: !1,
     children: null != r ? (0, a.jsx)("div", {
-      className: _.guildName,
+      className: m.guildName,
       children: r.name
     }) : null
   })

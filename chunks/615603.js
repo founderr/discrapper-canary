@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("594174"),
   T = s("78839"),
   f = s("267642"),
-  m = s("74538"),
-  _ = s("283029"),
+  _ = s("74538"),
+  m = s("283029"),
   g = s("357956"),
   I = s("275909"),
   h = s("981631"),
@@ -120,21 +120,21 @@ t.default = function(e) {
       numActiveGuildBoostSlots: s,
       hasCooldownBoosts: a
     }
-  }, [g]), U = null != I ? (0, u.getNumIncludedAndTenureRewardPremiumGuildSubscriptionSlots)(I, D) : 0, y = Math.max(0, U - L.length), B = j > U, F = U === g.length, G = F ? y : 1, k = n.useMemo(() => {
+  }, [g]), U = null != I ? (0, u.getNumIncludedAndTenureRewardPremiumGuildSubscriptionSlots)(I, D) : 0, y = Math.max(0, U - L.length), B = j > U, G = U === g.length, F = G ? y : 1, k = n.useMemo(() => {
     let e = [];
-    for (let t = 0; t < G; t++) e.push((0, a.jsx)(_.default, {
+    for (let t = 0; t < F; t++) e.push((0, a.jsx)(m.default, {
       className: C.headerBoostGem,
       useReducedMotion: M
     }, t));
     return e
-  }, [G, M]), w = null != D, H = n.useMemo(() => P.find(e => e.isAvailable()), [P]);
+  }, [F, M]), w = null != D, H = n.useMemo(() => P.find(e => e.isAvailable()), [P]);
   if (0 === P.length) return null;
   let V = P.length;
-  return t = F ? 1 === V && w ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format({
+  return t = G ? 1 === V && w ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format({
     numUnappliedGuildBoostSlots: V
   }) : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2.format({
     numUnappliedGuildBoostSlots: V
-  }), m.default.isPremium(v) ? l = F && 1 === V && w ? D.skuId === N.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
+  }), _.default.isPremium(v) ? l = G && 1 === V && w ? D.skuId === N.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
     numUnappliedGuildBoostSlots: V,
     learnMoreHook: (e, t) => (0, a.jsx)(o.Clickable, {
       className: C.headerLearnMoreLink,
@@ -209,7 +209,7 @@ t.default = function(e) {
             })
           })
         })]
-      }), (!F || b) && (0, a.jsx)("ul", {
+      }), (!G || b) && (0, a.jsx)("ul", {
         className: C.unappliedBoostSlots,
         children: P.map(e => (0, a.jsx)(A, {
           guildBoostSlot: e,

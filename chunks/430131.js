@@ -22,7 +22,7 @@ function S(e) {
     currentNick: S,
     username: E,
     guild: T
-  } = e, f = null != s ? s : S, m = (0, n.useStateFromStores)([r.default], () => r.default.can(d.Permissions.CHANGE_NICKNAME, T) || r.default.can(d.Permissions.MANAGE_NICKNAMES, T));
+  } = e, f = null != s ? s : S, _ = (0, n.useStateFromStores)([r.default], () => r.default.can(d.Permissions.CHANGE_NICKNAME, T) || r.default.can(d.Permissions.MANAGE_NICKNAMES, T));
   return (0, a.jsxs)(i.default, {
     title: u.default.Messages.SERVER_NICKNAME,
     errors: t,
@@ -33,8 +33,8 @@ function S(e) {
       onChange: function(e) {
         (0, o.setNewPendingNickname)(e, S)
       },
-      disabled: !m
-    }), !m && (0, a.jsx)(l.FormText, {
+      disabled: !_
+    }), !_ && (0, a.jsx)(l.FormText, {
       className: c.nicknameDisabled,
       type: l.FormText.Types.DESCRIPTION,
       children: u.default.Messages.CHANGE_IDENTITY_NICKNAME_PERMISSIONS_DISABLED

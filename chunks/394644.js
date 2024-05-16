@@ -26,8 +26,8 @@ var a = s("470079"),
   E = s("663389"),
   T = s("202527"),
   f = s("620163"),
-  m = s("295545"),
-  _ = s("168308"),
+  _ = s("295545"),
+  m = s("168308"),
   g = s("726985"),
   I = s("689938");
 
@@ -36,7 +36,7 @@ function h() {
     t = (0, c.useIsPrepaidPaymentPastDue)(),
     s = (0, n.useStateFromStores)([E.default], () => E.default.getProps().impressionSource),
     a = (0, u.usePendingRequestCount)(),
-    i = (0, _.useShouldShowOverlaySettings)(),
+    i = (0, m.useShouldShowOverlaySettings)(),
     g = (0, o.useEnableClips)(),
     [I] = (0, d.useGetDismissibleContent)(g ? [l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
     h = "useGenerateUserSettingsSections";
@@ -51,7 +51,7 @@ function h() {
     shouldMergeGameSettings: N
   } = T.GameSettingsMergeExperiment.useExperiment({
     location: "settings"
-  }), p = (0, m.useIsEligibleForUserSettingsSearchDesktop)({
+  }), p = (0, _.useIsEligibleForUserSettingsSearchDesktop)({
     location: "settings"
   });
   return (0, f.getConfig)({

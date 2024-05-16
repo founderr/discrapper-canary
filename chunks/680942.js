@@ -1,16 +1,16 @@
 "use strict";
-l.r(t);
-var a = l("735250"),
-  s = l("470079"),
-  r = l("481060"),
-  n = l("727637"),
-  i = l("906732"),
-  o = l("241553"),
-  u = l("333867"),
-  c = l("559629"),
-  d = l("231338"),
-  f = l("689938"),
-  C = l("46309");
+a.r(t);
+var l = a("735250"),
+  s = a("470079"),
+  r = a("481060"),
+  n = a("727637"),
+  i = a("906732"),
+  o = a("241553"),
+  u = a("333867"),
+  c = a("559629"),
+  d = a("231338"),
+  f = a("689938"),
+  C = a("46309");
 let m = {
   dark: [{
     box: "#FFF19E",
@@ -60,20 +60,20 @@ let m = {
 t.default = e => {
   let {
     product: t,
-    returnRef: l,
+    returnRef: a,
     onSuccess: p,
     tooltipDelay: E,
     isGiftEasterEggEnabled: h,
     disableCustomColor: g = !1
   } = e, {
     analyticsLocations: x
-  } = (0, i.default)(), b = s.useRef(null), T = (0, n.default)(b), L = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
-  return (0, a.jsx)(r.Tooltip, {
+  } = (0, i.default)(), v = s.useRef(null), b = (0, n.default)(v), T = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
+  return (0, l.jsx)(r.Tooltip, {
     text: f.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: E,
-    children: e => (0, a.jsx)(r.Button, {
+    children: e => (0, l.jsx)(r.Button, {
       ...e,
-      buttonRef: b,
+      buttonRef: v,
       className: C.giftButton,
       color: g ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
@@ -85,18 +85,18 @@ t.default = e => {
           skuId: t.skuId,
           isGift: !0,
           analyticsLocations: x,
-          returnRef: l,
+          returnRef: a,
           onClose: null != p ? e => {
             e && p()
           } : void 0
         })
       },
-      children: h ? (0, a.jsx)(o.SeasonalGiftIcon, {
-        hovered: T,
+      children: h ? (0, l.jsx)(o.SeasonalGiftIcon, {
+        hovered: b,
         isContentDismissed: !0,
-        themeOverride: L,
+        themeOverride: T,
         boxColors: m
-      }) : (0, a.jsx)(c.default, {
+      }) : (0, l.jsx)(c.default, {
         width: 24,
         height: 24
       })

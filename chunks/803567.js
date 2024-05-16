@@ -16,8 +16,8 @@ var i = s("120356"),
   E = s("131951"),
   T = s("285952"),
   f = s("153124"),
-  m = s("626135"),
-  _ = s("63063"),
+  _ = s("626135"),
+  m = s("63063"),
   g = s("210887"),
   I = s("981631"),
   h = s("689938"),
@@ -33,7 +33,7 @@ let O = {
 
 function x(e) {
   let t = e.currentTarget;
-  m.default.track(I.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
+  _.default.track(I.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
     text: t.text,
     href: t.href,
     location: {
@@ -94,7 +94,7 @@ function R() {
       },
       align: T.default.Align.CENTER,
       body: (0, l.jsx)(u.Anchor, {
-        href: _.default.getArticleURL(I.HelpdeskArticles.NOISE_SUPPRESSION),
+        href: m.default.getArticleURL(I.HelpdeskArticles.NOISE_SUPPRESSION),
         onClick: x,
         children: h.default.Messages.LEARN_MORE
       })
@@ -123,13 +123,13 @@ function M() {
     automaticGainControlSupported: E.default.isAutomaticGainControlSupported()
   })), {
     hasEchoCancellation: f,
-    hasNoiseSuppression: m,
-    hasAutomaticGainControl: _
+    hasNoiseSuppression: _,
+    hasAutomaticGainControl: m
   } = (0, o.useStateFromStoresObject)([S.default], () => ({
     hasEchoCancellation: S.default.hasEchoCancellation(t),
     hasNoiseSuppression: S.default.hasNoiseSuppression(t),
     hasAutomaticGainControl: S.default.hasAutomaticGainControl(t)
-  }), [t]), g = f || m || _, p = e === I.InputModes.VOICE_ACTIVITY && n;
+  }), [t]), g = f || _ || m, p = e === I.InputModes.VOICE_ACTIVITY && n;
   return (0, l.jsxs)(u.FormSection, {
     className: N.marginBottom20,
     title: h.default.Messages.FORM_LABEL_VOICE_PROCESSING,
@@ -161,7 +161,7 @@ function M() {
         page: I.AnalyticsPages.USER_SETTINGS,
         section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
-      disabled: _,
+      disabled: m,
       children: h.default.Messages.AUTOMATIC_GAIN_CONTROL
     })]
   })

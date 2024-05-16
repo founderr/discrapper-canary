@@ -19,8 +19,8 @@ var a = s("735250"),
 function T(e) {
   var t, s, T, f;
   let {
-    transitionState: m,
-    onSuccess: _,
+    transitionState: _,
+    onSuccess: m,
     onClose: g,
     requirementsUpdated: I,
     noSkip: h = !1
@@ -33,19 +33,19 @@ function T(e) {
       password: N,
       newPassword: C
     });
-    if (null == s ? void 0 : s.ok) _();
+    if (null == s ? void 0 : s.ok) m();
     else {
       var a;
       (null == s ? void 0 : null === (a = s.body) || void 0 === a ? void 0 : a.username) != null && (0, u.showInvalidUsernameToast)()
     }
   }
   return n.useEffect(() => {
-    if (m === i.ModalTransitionState.ENTERED) {
+    if (_ === i.ModalTransitionState.ENTERED) {
       var e;
       null === (e = j.current) || void 0 === e || e.focus()
     }
-  }, [m]), (0, a.jsxs)(i.ModalRoot, {
-    transitionState: m,
+  }, [_]), (0, a.jsxs)(i.ModalRoot, {
+    transitionState: _,
     children: [(0, a.jsxs)(i.ModalHeader, {
       separator: !1,
       className: E.header,

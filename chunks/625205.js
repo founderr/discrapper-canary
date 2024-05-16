@@ -18,8 +18,8 @@ var n = s("392711"),
   E = s("210887"),
   T = s("962100"),
   f = s("65154"),
-  m = s("689938"),
-  _ = s("623378"),
+  _ = s("689938"),
+  m = s("623378"),
   g = s("611273");
 
 function I() {
@@ -41,13 +41,13 @@ function I() {
   !I && (e = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
     className: g.marginTop8,
-    children: m.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
+    children: _.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Input Devices")
     })
   })), !h && (t = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
     className: g.marginTop8,
-    children: m.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
+    children: _.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Output Devices")
     })
   }));
@@ -66,13 +66,13 @@ function I() {
       t = (0, a.jsx)("img", {
         src: e,
         alt: "Certified",
-        className: _.deviceOptionCertified
+        className: m.deviceOptionCertified
       })
     }
     return (0, a.jsxs)("span", {
-      className: _.deviceOption,
+      className: m.deviceOption,
       children: [(0, a.jsx)("span", {
-        className: _.deviceOptionLabel,
+        className: m.deviceOptionLabel,
         children: u.default.getCertifiedDeviceName(i, l)
       }), t]
     }, i)
@@ -88,7 +88,7 @@ function I() {
       children: [(0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
         className: g.marginBottom8,
-        children: m.default.Messages.FORM_LABEL_INPUT_DEVICE
+        children: _.default.Messages.FORM_LABEL_INPUT_DEVICE
       }), (0, a.jsx)(o.SingleSelect, {
         value: N,
         onChange: e => d.default.setInputDevice(e, "Settings"),
@@ -111,7 +111,7 @@ function I() {
       children: [(0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
         className: g.marginBottom8,
-        children: m.default.Messages.FORM_LABEL_OUTPUT_DEVICE
+        children: _.default.Messages.FORM_LABEL_OUTPUT_DEVICE
       }), (0, a.jsx)(o.SingleSelect, {
         value: p,
         onChange: e => d.default.setOutputDevice(e, "Settings"),

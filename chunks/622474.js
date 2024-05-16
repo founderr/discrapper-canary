@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("37234"),
   T = s("960359"),
   f = s("853197"),
-  m = s("430492"),
-  _ = s("688465"),
+  _ = s("430492"),
+  m = s("688465"),
   g = s("594174"),
   I = s("55935"),
   h = s("702512"),
@@ -39,14 +39,14 @@ function A(e) {
   }, []);
   let {
     title: u,
-    endDate: m,
-    dropsQuestId: _,
+    endDate: _,
+    dropsQuestId: m,
     assets: g,
     articleUrl: I
-  } = t, h = (0, f.getDropByQuestId)(_);
+  } = t, h = (0, f.getDropByQuestId)(m);
   if (null == h) return null;
   let C = () => {
-    (0, T.enrollDropsUser)(_).then(() => {
+    (0, T.enrollDropsUser)(m).then(() => {
       S.default.wait(async () => {
         await (0, T.fetchDropsUserStatus)()
       })
@@ -76,7 +76,7 @@ function A(e) {
               color: "text-normal",
               className: p.availableUntil,
               children: N.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
-                endDate: o()(m, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
+                endDate: o()(_, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
               })
             })]
           })]
@@ -161,7 +161,7 @@ function O(e) {
         })]
       })
     }), r && (0, a.jsx)(c.Modal, {
-      renderModal: e => (0, a.jsx)(m.default, {
+      renderModal: e => (0, a.jsx)(_.default, {
         ...e,
         onClose: f,
         code: s,
@@ -204,13 +204,13 @@ t.default = function(e) {
       }).dropsEnabled) continue;
     d = !0;
     let T = o()(t.endDate, C),
-      m = o()();
-    c && null == s.completed_at || null != s.enrolled_at && null == s.completed_at && s.eligible ? m < T && l.push({
+      _ = o()();
+    c && null == s.completed_at || null != s.enrolled_at && null == s.completed_at && s.eligible ? _ < T && l.push({
       dropsQuestId: e,
       dropsStatus: s,
       showUnenroll: E,
       experiment: S
-    }) : (null != s.code || null != s.completed_at) && m < o()(t.finalClaimDate, C) && i.push({
+    }) : (null != s.code || null != s.completed_at) && _ < o()(t.finalClaimDate, C) && i.push({
       dropsQuestId: e,
       dropsStatus: s,
       showUnenroll: E,
@@ -222,7 +222,7 @@ t.default = function(e) {
     children: [(0, a.jsx)(c.Heading, {
       variant: "heading-md/semibold",
       children: N.default.Messages.DROPS_GIFT_INVENTORY_TITLE
-    }), (0, a.jsx)(_.default, {
+    }), (0, a.jsx)(m.default, {
       className: p.betaTagIcon
     })]
   });

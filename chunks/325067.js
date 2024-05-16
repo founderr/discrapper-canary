@@ -9,8 +9,8 @@ let S = !1,
   E = [],
   T = "",
   f = "",
-  m = !1,
-  _ = {
+  _ = !1,
+  m = {
     viewNonce: "",
     regenerateNonce: ""
   };
@@ -25,13 +25,13 @@ class g extends(i = u.default.Store) {
     return S
   }
   getNonces() {
-    return _
+    return m
   }
   get emailToken() {
     return f
   }
   get hasSeenBackupPrompt() {
-    return m
+    return _
   }
 }
 l = "MFAStore", (n = "displayName") in(a = g) ? Object.defineProperty(a, n, {
@@ -79,9 +79,9 @@ l = "MFAStore", (n = "displayName") in(a = g) ? Object.defineProperty(a, n, {
     let {
       nonces: t
     } = e;
-    _ = t
+    m = t
   },
   MFA_SEEN_BACKUP_CODE_PROMPT: function() {
-    m = !0
+    _ = !0
   }
 })

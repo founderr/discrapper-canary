@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("150039"),
   T = s("993413"),
   f = s("504983"),
-  m = s("981631"),
-  _ = s("474936"),
+  _ = s("981631"),
+  m = s("474936"),
   g = s("689938"),
   I = s("484589");
 
@@ -44,8 +44,8 @@ function h(e) {
     guild: s
   }), [M, O, s]);
   n.useEffect(() => {
-    R && c.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: _.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
+    R && c.default.track(_.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: m.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
       location_stack: M
     })
   }, [R, M]);

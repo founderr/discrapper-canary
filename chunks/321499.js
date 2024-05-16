@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("998502"),
   T = s("210887"),
   f = s("996073"),
-  m = s("526761"),
-  _ = s("65154"),
+  _ = s("526761"),
+  m = s("65154"),
   g = s("689938"),
   I = s("611273");
 let h = s("651714"),
@@ -48,10 +48,10 @@ function C() {
     } = (0, r.useStateFromStoresObject)([c.default], () => ({
       openH264: c.default.getOpenH264(),
       hardwareH264: c.default.getHardwareH264(),
-      supportsOpenH264: c.default.supports(_.Features.OPEN_H264)
+      supportsOpenH264: c.default.supports(m.Features.OPEN_H264)
     })),
     E = n.useRef(null);
-  return (0, f.default)(E, m.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
+  return (0, f.default)(E, _.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.FormSection, {
       className: I.marginBottom20,
       title: g.default.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,

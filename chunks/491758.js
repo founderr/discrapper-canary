@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("706454"),
   T = s("494620"),
   f = s("131951"),
-  m = s("556296"),
-  _ = s("924557"),
+  _ = s("556296"),
+  m = s("924557"),
   g = s("435064"),
   I = s("894694"),
   h = s("779618"),
@@ -43,7 +43,7 @@ function L() {
       clipsQuality: P
     } = (0, r.useStateFromStoresObject)([g.default], () => g.default.getSettings()),
     j = (0, r.useStateFromStores)([g.default], () => g.default.getHardwareClassification()),
-    b = (0, r.useStateFromStores)([m.default], () => m.default.getKeybindForAction(A.GlobalKeybindActions.SAVE_CLIP, !0)),
+    b = (0, r.useStateFromStores)([_.default], () => _.default.getKeybindForAction(A.GlobalKeybindActions.SAVE_CLIP, !0)),
     {
       enableDecoupledGameClipping: U
     } = S.default.useExperiment({
@@ -54,14 +54,14 @@ function L() {
     y = (0, h.default)(f.default),
     {
       showClipsHeaderEntrypoint: B
-    } = _.ClipsExperiment.useExperiment({
+    } = m.ClipsExperiment.useExperiment({
       location: "clips_recording_settings"
     }, {
       autoTrackExposure: !1
     });
   i()(null != b, "Save clip keybind unset");
-  let F = (0, r.useStateFromStores)([E.default], () => E.default.locale),
-    G = n.useMemo(() => [{
+  let G = (0, r.useStateFromStores)([E.default], () => E.default.locale),
+    F = n.useMemo(() => [{
       value: C.ClipsLengthSettings.SECONDS_30,
       label: R.default.Messages.CLIPS_LENGTH_SECONDS.format({
         count: 30
@@ -76,7 +76,7 @@ function L() {
       label: R.default.Messages.CLIPS_LENGTH_MINUTES.format({
         count: 2
       })
-    }], [F]),
+    }], [G]),
     k = n.useMemo(() => [{
       value: O.ApplicationStreamResolutions.RESOLUTION_480,
       label: R.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
@@ -100,7 +100,7 @@ function L() {
     }, {
       value: O.ApplicationStreamResolutions.RESOLUTION_SOURCE,
       label: R.default.Messages.SCREENSHARE_SOURCE
-    }], [F]),
+    }], [G]),
     w = n.useMemo(() => [{
       value: O.ApplicationStreamFPS.FPS_15,
       label: R.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
@@ -116,7 +116,7 @@ function L() {
       label: R.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
         fps: O.ApplicationStreamFPS.FPS_60
       })
-    }], [F]),
+    }], [G]),
     H = n.useCallback(e => {
       d.default.setKeybind({
         ...b,
@@ -190,7 +190,7 @@ function L() {
         title: R.default.Messages.CLIPS_SETTINGS_LENGTH,
         note: R.default.Messages.CLIPS_SETTINGS_LENGTH_HELP,
         value: L,
-        options: G
+        options: F
       }), (0, a.jsx)(p.SelectItem, {
         className: v.formItem,
         select: e => N.updateClipsQuality({

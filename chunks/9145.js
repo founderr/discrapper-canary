@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("719296"),
   M = n("651612"),
   R = n("918559"),
-  L = n("981631"),
-  y = n("689938"),
+  y = n("981631"),
+  L = n("689938"),
   O = n("258004");
 let j = {
   [R.FocusedActivityLayouts.NO_CHAT]: O.noChat,
@@ -79,7 +79,7 @@ function P(e) {
   let et = k.get(null === (n = w[0]) || void 0 === n ? void 0 : null === (t = n.application) || void 0 === t ? void 0 : t.id),
     en = [];
   return null != et && (en = Array.from(et.embeddedActivity.userIds).map(e => E.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, a.jsxs)("div", {
-    className: i()(O.wrapper, j[G], (0, _.getThemeClass)(L.ThemeTypes.DARK)),
+    className: i()(O.wrapper, j[G], (0, _.getThemeClass)(y.ThemeTypes.DARK)),
     ref: B,
     style: V && null != W ? {
       minHeight: 200,
@@ -134,7 +134,7 @@ function P(e) {
               className: O.leaveActivityButton
             })
           }), (0, a.jsx)(h.CenterControlButton, {
-            label: y.default.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
+            label: L.default.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
             onClick: H,
             iconComponent: C.default,
             themeable: !0,
@@ -149,12 +149,12 @@ function P(e) {
       maxHeight: P,
       resizableNode: B,
       onResize: e => {
-        S.ComponentDispatch.dispatch(L.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        S.ComponentDispatch.dispatch(y.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !0
         }), Y(e)
       },
       onResizeEnd: e => {
-        S.ComponentDispatch.dispatch(L.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        S.ComponentDispatch.dispatch(y.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !1
         }), z(e)
       }

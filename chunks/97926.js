@@ -13,9 +13,9 @@ var a = s("735250"),
   E = s("46140"),
   T = s("981631"),
   f = s("689938"),
-  m = s("201403");
+  _ = s("201403");
 
-function _(e) {
+function m(e) {
   if (null == e) return !1;
   let {
     userStatus: t
@@ -55,11 +55,11 @@ t.default = () => {
       }
       if (T && !o) return -1;
       if (f && !S) return 1;
-      let m = (0, c.isTargetedForContent)(e, u.QuestContent.QUEST_BAR),
-        _ = (0, c.isTargetedForContent)(t, u.QuestContent.QUEST_BAR);
-      if (m && _) return 0;
-      if (m) return -1;
-      if (_) return 1;
+      let _ = (0, c.isTargetedForContent)(e, u.QuestContent.QUEST_BAR),
+        m = (0, c.isTargetedForContent)(t, u.QuestContent.QUEST_BAR);
+      if (_ && m) return 0;
+      if (_) return -1;
+      if (m) return 1;
       let g = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
         I = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
       if (g && !T && !o && I && !f && !S) return 0;
@@ -75,11 +75,11 @@ t.default = () => {
     let e = g ? [{
       location: u.QuestContent.GIFT_INVENTORY_FOR_YOU,
       title: f.default.Messages.QUESTS_FOR_YOU,
-      questIds: C.filter(e => _(h.get(e)))
+      questIds: C.filter(e => m(h.get(e)))
     }, {
       location: u.QuestContent.GIFT_INVENTORY_OTHER,
       title: f.default.Messages.QUESTS_OTHER,
-      questIds: C.filter(e => !_(h.get(e)))
+      questIds: C.filter(e => !m(h.get(e)))
     }] : [];
     return A.current = e, e
   }, [g, C, h]), x = O.every(e => {
@@ -110,28 +110,28 @@ t.default = () => {
     })
   }, [x, h]);
   return t ? (0, a.jsx)(i.Spinner, {
-    className: m.spinner
+    className: _.spinner
   }) : 0 === C.length ? null : (0, a.jsx)(i.FormSection, {
-    className: m.questsContainer,
+    className: _.questsContainer,
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsxs)("div", {
-        className: m.questsHeading,
+        className: _.questsHeading,
         children: [g && (0, a.jsx)(l.QuestsIcon, {
-          className: m.questsIcon
+          className: _.questsIcon
         }), (0, a.jsx)(i.Heading, {
           variant: "heading-md/semibold",
-          className: m.questsHeading,
+          className: _.questsHeading,
           children: f.default.Messages.QUESTS
         }), (0, a.jsx)(i.Text, {
           variant: "text-xs/normal",
-          className: m.questsHeadingLearnMore,
+          className: _.questsHeadingLearnMore,
           children: f.default.Messages.QUESTS_LEARN_MORE_LINK.format({
             questsLearnMoreLink: r.default.getArticleURL(T.HelpdeskArticles.QUESTS_LEARN_MORE)
           })
         })]
       }),
       children: [(0, a.jsx)(i.FormDivider, {
-        className: m.divider
+        className: _.divider
       }), g ? O.map((e, t, s) => {
         let {
           location: n,
@@ -146,11 +146,11 @@ t.default = () => {
           return e + s.length
         }, 0);
         return (0, a.jsxs)("section", {
-          className: m.questsListContainer,
+          className: _.questsListContainer,
           children: [x && (0, a.jsx)(i.Text, {
             variant: "text-xs/semibold",
             color: "header-secondary",
-            className: m.sectionHeader,
+            className: _.sectionHeader,
             children: r
           }), (0, a.jsx)(R, {
             questIds: l,

@@ -15,8 +15,8 @@ var a, n, l = s("735250"),
   E = s("285952"),
   T = s("153124"),
   f = s("689938"),
-  m = s("737646"),
-  _ = s("611273");
+  _ = s("737646"),
+  m = s("611273");
 let g = /^\d+$|^$/;
 (n = a || (a = {})).LOCALHOST = "localhost", n.PROXY = "proxy";
 
@@ -60,19 +60,19 @@ function I(e) {
       children: [(0, l.jsx)(o.FormTitle, {
         id: x,
         tag: "h1",
-        className: _.marginReset,
+        className: m.marginReset,
         children: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
       }), (0, l.jsx)(o.ModalCloseButton, {
         onClick: t
       })]
     }), (0, l.jsxs)(o.ModalContent, {
-      className: m.modalContent,
+      className: _.modalContent,
       children: [(0, l.jsx)(o.FormText, {
-        className: _.marginBottom20,
+        className: m.marginBottom20,
         type: o.FormText.Types.DESCRIPTION,
         children: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
       }), null == n ? null : (0, l.jsx)(o.FormErrorBlock, {
-        className: _.marginBottom20,
+        className: m.marginBottom20,
         children: n
       }), (0, l.jsx)("form", {
         onSubmit: e => {
@@ -82,7 +82,7 @@ function I(e) {
           direction: E.default.Direction.VERTICAL,
           align: E.default.Align.START,
           children: [(0, l.jsx)(o.FormItem, {
-            className: m.inputWrapper,
+            className: _.inputWrapper,
             title: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {
@@ -95,7 +95,7 @@ function I(e) {
               disabled: I
             })
           }), (0, l.jsx)(o.FormItem, {
-            className: m.inputWrapper,
+            className: _.inputWrapper,
             title: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
             children: (0, l.jsx)(o.SingleSelect, {
               isDisabled: !R || "" === h,
@@ -115,7 +115,7 @@ function I(e) {
               placeholder: "URL Origin Type"
             })
           }), "localhost" !== A ? null : (0, l.jsx)(o.FormItem, {
-            className: m.inputWrapper,
+            className: _.inputWrapper,
             title: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {

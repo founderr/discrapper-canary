@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return _
   }
 }), s("47120"), s("653041");
 var a = s("735250"),
@@ -147,7 +147,7 @@ class f extends n.Component {
   }
 }
 
-function m() {
+function _() {
   let e = (0, r.useStateFromStoresObject)([c.default], () => ({
       available: c.default.getAvailable(),
       active: c.default.getActive(),

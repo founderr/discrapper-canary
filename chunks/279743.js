@@ -22,9 +22,9 @@ function T(e) {
     className: s,
     onFlashEnd: l,
     animationDelay: S = 500
-  } = e, T = d.tokens.colors.TEXT_LINK, f = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), m = (0, d.useToken)(T).spring({
+  } = e, T = d.tokens.colors.TEXT_LINK, f = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), _ = (0, d.useToken)(T).spring({
     opacity: 0
-  }), _ = (0, d.useToken)(T).spring({
+  }), m = (0, d.useToken)(T).spring({
     opacity: .1
   }), g = (0, d.useToken)(T).spring({
     opacity: 0
@@ -35,8 +35,8 @@ function T(e) {
   }, [N, p] = (0, r.useSpring)(() => ({
     immediate: !0,
     from: {
-      backgroundColor: m,
-      borderColor: m
+      backgroundColor: _,
+      borderColor: _
     }
   })), C = S + 200 + 200, A = f ? 0 : 200;
   return n.useEffect(() => {
@@ -44,8 +44,8 @@ function T(e) {
       reset: !0,
       immediate: !1,
       to: {
-        backgroundColor: m,
-        borderColor: m
+        backgroundColor: _,
+        borderColor: _
       },
       config: {
         duration: A,
@@ -55,7 +55,7 @@ function T(e) {
       delay: S,
       immediate: f,
       to: [{
-        backgroundColor: _,
+        backgroundColor: m,
         borderColor: I
       }],
       config: {

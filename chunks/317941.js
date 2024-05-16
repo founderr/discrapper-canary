@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("314897"),
   T = s("82142"),
   f = s("246946"),
-  m = s("509545"),
-  _ = s("55563"),
+  _ = s("509545"),
+  m = s("55563"),
   g = s("15887"),
   I = s("581874"),
   h = s("285952"),
@@ -248,12 +248,12 @@ class L extends n.PureComponent {
     })
   }
 }
-t.default = r.default.connectStores([_.default, f.default, T.default, c.default, m.default, E.default], e => {
+t.default = r.default.connectStores([m.default, f.default, T.default, c.default, _.default, E.default], e => {
   let {
     skuId: t,
     subscriptionPlanId: s,
     giftStyle: a
-  } = e, n = _.default.get(t);
+  } = e, n = m.default.get(t);
   if (null == n) throw Error("SKU was unavailable while rendering gift.");
   let l = T.default.getForGifterSKUAndPlan(E.default.getId(), t, s).filter(e => !e.isClaimed).filter(e => e.giftStyle === a);
   return {

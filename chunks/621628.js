@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("285952"),
   T = s("6048"),
   f = s("154921"),
-  m = s("915486"),
-  _ = s("883904"),
+  _ = s("915486"),
+  m = s("883904"),
   g = s("68985"),
   I = s("211644"),
   h = s("312244"),
@@ -29,7 +29,7 @@ function p(e) {
     contents: t,
     content: s,
     onChange: n
-  } = e, l = (0, m.hasBit)(t, o.DismissibleContent[s]);
+  } = e, l = (0, _.hasBit)(t, o.DismissibleContent[s]);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsx)(u.FormSwitch, {
       value: l,
@@ -70,7 +70,7 @@ function A() {
       dailyCapReached: g.default.hasUserHitDCCap(),
       dailyCapOverridden: g.default.dailyCapOverridden
     })),
-    [f, m] = n.useState(""),
+    [f, _] = n.useState(""),
     p = null !== (e = (0, r.useStateFromStores)([S.default], () => {
       var e;
       return null === (e = S.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
@@ -107,11 +107,11 @@ function A() {
         })
       }), (0, a.jsx)(u.FormSwitch, {
         value: l,
-        onChange: _.overrideDismissibleContentFramework,
+        onChange: m.overrideDismissibleContentFramework,
         children: "Override Dismissible Content Daily Cap"
       }), (0, a.jsxs)(u.FormItem, {
         children: [(0, a.jsx)(u.Button, {
-          onClick: () => (0, _.resetDismissibleContentFrameworkStore)(),
+          onClick: () => (0, m.resetDismissibleContentFrameworkStore)(),
           children: "Reset DismissibleContentFrameworkStore"
         }), (0, a.jsx)(u.FormText, {
           className: N.marginTop4,
@@ -125,8 +125,8 @@ function A() {
         className: N.marginBottom20,
         size: T.default.Sizes.LARGE,
         query: f,
-        onChange: m,
-        onClear: () => m("")
+        onChange: _,
+        onClear: () => _("")
       }), (0, a.jsxs)(u.FormItem, {
         className: h.buttonsContainer,
         children: [(0, a.jsx)(u.Button, {

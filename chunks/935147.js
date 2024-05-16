@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("104494"),
   T = s("639119"),
   f = s("165583"),
-  m = s("197115"),
-  _ = s("350327"),
+  _ = s("197115"),
+  m = s("350327"),
   g = s("318661"),
   I = s("996073"),
   h = s("25990"),
@@ -40,12 +40,12 @@ var a = s("735250"),
   y = s("764277");
 
 function B(e) {
-  var t, B, F;
+  var t, B, G;
   let {
-    user: G
+    user: F
   } = e, {
     reducedMotion: k
-  } = n.useContext(i.AccessibilityPreferencesContext), w = C.default.isPremium(G), {
+  } = n.useContext(i.AccessibilityPreferencesContext), w = C.default.isPremium(F), {
     pendingAvatar: H,
     pendingBanner: V,
     pendingThemeColors: Y,
@@ -67,7 +67,7 @@ function B(e) {
     }
   }), J = (0, c.default)(Z), $ = (0, S.default)(X), ee = n.useRef(null);
   (0, I.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
-  let et = (0, g.default)(G.id),
+  let et = (0, g.default)(F.id),
     es = null == et ? void 0 : et.getPreviewBio(K),
     {
       analyticsLocations: ea,
@@ -81,7 +81,7 @@ function B(e) {
       },
       location_stack: en
     })
-  }, [en, G]);
+  }, [en, F]);
   let el = (null === (B = (0, T.usePremiumTrialOffer)()) || void 0 === B ? void 0 : null === (t = B.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === j.PremiumSubscriptionSKUs.TIER_2,
     ei = (0, E.usePremiumDiscountOffer)(),
     er = (0, E.discountOfferHasTier)(ei, j.PremiumSubscriptionSKUs.TIER_2),
@@ -108,12 +108,12 @@ function B(e) {
           }), U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
         }),
         profilePreview: (0, a.jsx)(A.default, {
-          user: G,
-          onAvatarChange: _.setTryItOutAvatar,
-          onBannerChange: _.setTryItOutBanner,
+          user: F,
+          onAvatarChange: m.setTryItOutAvatar,
+          onBannerChange: m.setTryItOutBanner,
           pendingPronouns: W,
           pendingBio: K,
-          pendingBanner: null !== (F = null != q ? q : V) && void 0 !== F ? F : s("466045"),
+          pendingBanner: null !== (G = null != q ? q : V) && void 0 !== G ? G : s("466045"),
           pendingAvatar: null != Q ? Q : H,
           pendingThemeColors: null != z ? z : Y,
           pendingAvatarDecoration: J,
@@ -137,44 +137,44 @@ function B(e) {
             })]
           }), (0, a.jsx)(L.default, {
             className: y.customizationSection,
-            user: G,
+            user: F,
             pendingAvatar: null != Q ? Q : H,
             pendingColors: null != z ? z : Y,
-            onThemeColorsChange: _.setTryItOutThemeColors,
+            onThemeColorsChange: m.setTryItOutThemeColors,
             showPremiumIcon: !1,
             preventDisabled: !0
           }), (0, a.jsx)(v.default, {
             className: y.customizationSection,
             isTryItOutFlow: !0,
             showRemoveBannerButton: null != q,
-            onBannerChange: _.setTryItOutBanner,
+            onBannerChange: m.setTryItOutBanner,
             showPremiumIcon: !1
           }), (0, a.jsx)(R.default, {
             className: y.customizationSection,
             isTryItOutFlow: !0,
-            onAvatarChange: _.setTryItOutAvatar,
+            onAvatarChange: m.setTryItOutAvatar,
             showRemoveAvatarButton: !1,
             changeAvatarButtonText: U.default.Messages.USER_SETTINGS_ADD_ANIMATED_AVATAR,
             sectionTitle: U.default.Messages.PREMIUM_TIER_0_FEATURE_AVATAR
           }), (0, a.jsx)(x.default, {
             isTryItOutFlow: !0,
             className: y.customizationSection,
-            user: G,
+            user: F,
             sectionTitle: U.default.Messages.USER_SETTINGS_AVATAR_DECORATION
           }, "decoration"), (0, a.jsx)(D.default, {
             className: y.customizationSection,
             isTryItOutFlow: !0,
             initialSelectedEffectId: $,
-            user: G,
+            user: F,
             sectionTitle: U.default.Messages.USER_SETTINGS_PROFILE_EFFECT
           }, "effect"), !el && (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(i.Text, {
               variant: "text-sm/normal",
               className: y.premiumPerksListTitle,
               children: U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
-            }), (0, a.jsx)(m.default, {
+            }), (0, a.jsx)(_.default, {
               onSubscribeModalClose: e => {
-                e && ((0, r.setPendingAvatar)(Q), (0, _.setPendingBanner)(q), (0, _.setPendingThemeColors)(z))
+                e && ((0, r.setPendingAvatar)(Q), (0, m.setPendingBanner)(q), (0, m.setPendingThemeColors)(z))
               },
               subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2,
               className: y.premiumSubscribeButton,

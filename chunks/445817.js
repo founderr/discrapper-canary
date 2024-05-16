@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("131951"),
   T = s("594174"),
   f = s("981631"),
-  m = s("689938"),
-  _ = s("688725");
+  _ = s("689938"),
+  m = s("688725");
 let g = {
   width: 387,
   height: 218
@@ -39,9 +39,9 @@ function I(e) {
       }).catch(f.NOOP)
     },
     renderCamera: e => t ? (0, a.jsx)("div", {
-      className: _.cameraWrapper,
+      className: m.cameraWrapper,
       children: (0, a.jsxs)("div", {
-        className: _.camera,
+        className: m.camera,
         children: [(0, a.jsx)(I, {
           deviceId: e,
           width: g.width,
@@ -50,16 +50,16 @@ function I(e) {
         }), (0, a.jsx)(S.FilterLoadingIndicator, {})]
       })
     }) : (0, a.jsxs)("div", {
-      className: _.cameraWrapper,
+      className: m.cameraWrapper,
       children: [(0, a.jsx)("div", {
-        className: _.previewImage
+        className: m.previewImage
       }), (0, a.jsx)(i.Tooltip, {
-        text: O ? null : m.default.Messages.CAMERA_UNAVAILABLE,
+        text: O ? null : _.default.Messages.CAMERA_UNAVAILABLE,
         children: e => (0, a.jsx)(i.Button, {
           ...e,
           onClick: s,
           disabled: !O,
-          children: m.default.Messages.TEST_VIDEO
+          children: _.default.Messages.TEST_VIDEO
         })
       })]
     })

@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("52736"),
   M = n("700785"),
   R = n("51144"),
-  L = n("396769"),
-  y = n("967128"),
+  y = n("396769"),
+  L = n("967128"),
   O = n("318374"),
   j = n("981631"),
   P = n("689938"),
@@ -76,16 +76,16 @@ function b(e) {
     h.default.open(t.id)
   }
   let V = l.useCallback(() => s(!1), []);
-  return (0, a.jsxs)(y.default, {
+  return (0, a.jsxs)(L.default, {
     channelId: t.id,
-    children: [(0, a.jsx)(y.EmptyMessageIcon, {
+    children: [(0, a.jsx)(L.EmptyMessageIcon, {
       locked: !0,
       channelType: t.type
-    }), (0, a.jsx)(y.EmptyMessageHeader, {
+    }), (0, a.jsx)(L.EmptyMessageHeader, {
       children: P.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: r
       })
-    }), (0, a.jsx)(y.EmptyMessageBody, {
+    }), (0, a.jsx)(L.EmptyMessageBody, {
       children: P.default.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
         channelName: r,
         topicHook: () => S.default.parseTopic(t.topic, !0, {
@@ -94,14 +94,14 @@ function b(e) {
       })
     }), B ? (0, a.jsxs)("div", {
       className: D.channelSettingButtons,
-      children: [(0, a.jsx)(L.default, {
+      children: [(0, a.jsx)(y.default, {
         label: P.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
         onClick: () => s(!0),
         icon: (0, a.jsx)(N.default, {
           width: 16,
           height: 16
         })
-      }), (0, a.jsx)(L.default, {
+      }), (0, a.jsx)(y.default, {
         label: P.default.Messages.EDIT_CHANNEL,
         onClick: G,
         icon: (0, a.jsx)(A.default, {

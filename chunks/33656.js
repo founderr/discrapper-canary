@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return m
   }
 }), s("724458");
 var a = s("735250"),
@@ -18,7 +18,7 @@ var a = s("735250"),
   T = s("63057"),
   f = s("611273");
 
-function m(e) {
+function _(e) {
   let {
     label: t,
     onChange: s,
@@ -33,7 +33,7 @@ function m(e) {
   })
 }
 
-function _() {
+function m() {
   let e = (0, r.useStateFromStores)([d.default], () => d.default.getSubsection()),
     t = n.createRef(),
     {
@@ -47,7 +47,7 @@ function _() {
       null == t || null === (s = t.current) || void 0 === s || s.scrollIntoView(!0)
     }
   }, [l, t, e]);
-  let _ = S.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1);
+  let m = S.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1);
   return l ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       ref: t
@@ -61,7 +61,7 @@ function _() {
           label: n,
           subLabel: l
         } = e;
-        return (0, a.jsx)(m, {
+        return (0, a.jsx)(_, {
           label: n(),
           subLabel: l(),
           enabled: s[t],
@@ -72,7 +72,7 @@ function _() {
         }, n())
       }), (0, a.jsx)(o.Button, {
         className: T.marketingUnsubscribeButton,
-        disabled: !_,
+        disabled: !m,
         look: o.ButtonLooks.LINK,
         color: o.ButtonColors.LINK,
         onClick: u.updateMarketingEmailSettings,

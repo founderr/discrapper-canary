@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("924557"),
   T = s("435064"),
   f = s("779618"),
-  m = s("39604"),
-  _ = s("703288"),
+  _ = s("39604"),
+  m = s("703288"),
   g = s("491758"),
   I = s("183632"),
   h = s("689938"),
@@ -50,7 +50,7 @@ function A(e) {
       tag: r.FormTitleTags.H1,
       title: s ? (0, a.jsxs)("div", {
         className: N.headerContainer,
-        children: [h.default.Messages.CLIPS, (0, a.jsx)(_.default, {})]
+        children: [h.default.Messages.CLIPS, (0, a.jsx)(m.default, {})]
       }) : null,
       children: R && (0, a.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
@@ -63,7 +63,7 @@ function A(e) {
         className: p.formItem,
         value: A,
         note: h.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
-        onChange: e => m.updateAllowVoiceRecording({
+        onChange: e => _.updateAllowVoiceRecording({
           allowVoiceRecording: e
         }),
         children: h.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
@@ -72,7 +72,7 @@ function A(e) {
         className: p.formItem,
         value: M,
         note: h.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
-        onChange: e => m.updateViewerClipsEnabled({
+        onChange: e => _.updateViewerClipsEnabled({
           enabled: e,
           trackAnalytics: !0
         }),

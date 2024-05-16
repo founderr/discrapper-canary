@@ -37,13 +37,13 @@ function S() {
       }
       i && (0, d.clearErrors)(), E(!1)
     }, [null == t ? void 0 : t.id]),
-    m = n.useCallback(() => {
+    _ = n.useCallback(() => {
       (0, d.resetAllPending)()
     }, []);
   return (0, a.jsx)(i.default, {
     submitting: S,
     onSave: f,
-    onReset: m,
+    onReset: _,
     disabled: e,
     errorMessage: null != T ? T : void 0
   })

@@ -35,8 +35,8 @@ function N(e) {
     channel: x,
     className: M,
     inCall: R,
-    totalNumberOfParticipants: L,
-    paused: y = !1
+    totalNumberOfParticipants: y,
+    paused: L = !1
   } = e, O = (0, o.useAppContext)() === I.AppContext.POPOUT, j = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(x.guild_id), [x.guild_id]), {
     dismissedActivityEntryPointTileChannel: P
   } = (0, _.useChannelCallVideoGridStore)(), D = (0, i.useStateFromStores)([f.default], () => f.default.getUserParticipantCount(x.id), [x]), b = l.useCallback(() => {
@@ -60,7 +60,7 @@ function N(e) {
       participant: e,
       channel: x,
       className: A.tile,
-      paused: y,
+      paused: L,
       onClick: n,
       onDoubleClick: N,
       onContextMenu: v,
@@ -72,7 +72,7 @@ function N(e) {
     type: s.ImpressionTypes.VIEW,
     name: s.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
     properties: {
-      total_participants: L,
+      total_participants: y,
       can_invite: U,
       is_afk_channel: F,
       channel_user_limit: x.userLimit

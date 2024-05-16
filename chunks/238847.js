@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("100527"),
   T = s("906732"),
   f = s("218946"),
-  m = s("404203"),
-  _ = s("330181"),
+  _ = s("404203"),
+  m = s("330181"),
   g = s("374649"),
   I = s("908951"),
   h = s("255078"),
@@ -85,7 +85,7 @@ let y = e => {
       })]
     }) : (0, a.jsx)(c.Spinner, {})
   },
-  F = e => {
+  G = e => {
     let {
       isCancelled: t,
       onCancelSubscriptionClick: s,
@@ -119,7 +119,7 @@ t.default = e => {
     handleToggleExpanded: g,
     subscriptionInfo: I,
     application: N
-  } = (0, P.default)(t), A = (0, x.useUID)(), [M, G] = n.useState(!1), {
+  } = (0, P.default)(t), A = (0, x.useUID)(), [M, F] = n.useState(!1), {
     analyticsLocations: k
   } = (0, T.default)();
   if (null == r || null == l || null == I) return null;
@@ -139,7 +139,7 @@ t.default = e => {
     },
     H = async () => {
       try {
-        G(!0);
+        F(!0);
         let {
           subscription: e
         } = await S.resubscribeToSubscription(t, k);
@@ -154,7 +154,7 @@ t.default = e => {
           })
         })
       } finally {
-        G(!1)
+        F(!1)
       }
     }, {
       isCancelled: V,
@@ -197,7 +197,7 @@ t.default = e => {
   }));
   return (0, a.jsxs)("div", {
     className: U.container,
-    children: [(0, a.jsx)(m.default, {
+    children: [(0, a.jsx)(_.default, {
       onClick: g,
       className: U.headerContainer,
       children: e => {
@@ -245,7 +245,7 @@ t.default = e => {
         messageType: C.HelpMessageTypes.WARNING,
         className: U.deletedHelpMessage,
         children: b.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_DELETED_WARNING
-      }) : null, (0, a.jsx)(_.default, {
+      }) : null, (0, a.jsx)(m.default, {
         groupListingId: r.id,
         subscription: t,
         className: U.changePlanNotice
@@ -270,7 +270,7 @@ t.default = e => {
       }), t.status === j.SubscriptionStatusTypes.ACTIVE && (0, a.jsx)(B, {
         subscription: t,
         disabled: Y
-      }), !J && (0, a.jsx)(F, {
+      }), !J && (0, a.jsx)(G, {
         isCancelled: V,
         onCancelSubscriptionClick: w,
         isResubscribing: M,

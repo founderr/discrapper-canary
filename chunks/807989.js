@@ -8,29 +8,29 @@ var i = n("735250");
 n("470079");
 var r = n("120356"),
   a = n.n(r),
-  s = n("389507"),
-  o = n("993365"),
-  l = n("979200"),
-  u = n("497309"),
-  d = n("950463"),
-  _ = n("757698"),
-  c = n("630641"),
-  E = n("912527"),
-  I = n("833571"),
-  T = n("630388"),
-  f = n("709054"),
-  S = n("941532"),
-  h = n("713938"),
-  A = n("981631"),
-  m = n("231338"),
+  s = n("243814"),
+  o = n("389507"),
+  l = n("993365"),
+  u = n("979200"),
+  d = n("497309"),
+  _ = n("950463"),
+  c = n("757698"),
+  E = n("630641"),
+  I = n("912527"),
+  T = n("833571"),
+  f = n("630388"),
+  S = n("709054"),
+  h = n("941532"),
+  A = n("713938"),
+  m = n("981631"),
   N = n("689938"),
   p = n("236099");
 let O = e => {
   switch (e) {
-    case l.ApplicationDisclosure.IP_LOCATION:
-      return d.default;
-    case l.ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS:
-      return s.EmbedIcon;
+    case u.ApplicationDisclosure.IP_LOCATION:
+      return _.default;
+    case u.ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS:
+      return o.EmbedIcon;
     default:
       return null
   }
@@ -41,44 +41,44 @@ function C(e) {
   let n, {
       application: r,
       scopes: a,
-      redirectUri: s,
-      approximateGuildCount: o,
-      isEmbeddedFlow: d,
+      redirectUri: o,
+      approximateGuildCount: l,
+      isEmbeddedFlow: _,
       disclosures: C
     } = e,
-    g = new Date(f.default.extractTimestamp(r.id)),
-    L = (0, h.getSecurityMessage)(a),
-    v = (0, T.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, A.ApplicationFlags.EMBEDDED);
-  if (null != s && !v && !d) {
-    let e = new URL(s);
+    g = new Date(S.default.extractTimestamp(r.id)),
+    L = (0, A.getSecurityMessage)(a),
+    v = (0, f.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, m.ApplicationFlags.EMBEDDED);
+  if (null != o && !v && !_) {
+    let e = new URL(o);
     n = null != e.host && e.host.length > 0 ? e.origin : e.href
   }
   return (0, i.jsxs)("div", {
     className: p.applicationDetails,
     children: [null != n ? (0, i.jsx)(R, {
       className: p.redirectWarning,
-      icon: _.default,
+      icon: c.default,
       text: N.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
         origin: n
       })
     }) : null, (0, i.jsx)(R, {
-      icon: c.default,
-      text: (0, S.getApplicationDetailsText)(r)
+      icon: E.default,
+      text: (0, h.getApplicationDetailsText)(r)
     }), (0, i.jsx)(R, {
-      icon: u.default,
+      icon: d.default,
       text: N.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
         date: g
       })
-    }), a.includes(m.OAuth2Scopes.BOT) && null != o ? (0, i.jsx)(R, {
-      icon: E.default,
+    }), a.includes(s.OAuth2Scopes.BOT) && null != l ? (0, i.jsx)(R, {
+      icon: I.default,
       text: N.default.Messages.OAUTH2_DETAILS_GUILDS.format({
-        guildCount: o
+        guildCount: l
       })
     }) : null, (0, i.jsx)(R, {
-      icon: I.default,
+      icon: T.default,
       text: L
     }), null != C ? C.map(e => {
-      let t = (0, l.getTextForDisclosure)(e),
+      let t = (0, u.getTextForDisclosure)(e),
         n = O(e);
       return null != n && null != t ? (0, i.jsx)(R, {
         icon: n,
@@ -98,7 +98,7 @@ function R(e) {
     className: a()(p.entry, r),
     children: [(0, i.jsx)(t, {
       className: p.entryIcon
-    }), (0, i.jsx)(o.Text, {
+    }), (0, i.jsx)(l.Text, {
       variant: "text-xs/medium",
       color: "text-muted",
       className: p.entryInner,

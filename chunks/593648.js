@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("92114"),
   T = s("419363"),
   f = s("818083"),
-  m = s("688465"),
-  _ = s("487419"),
+  _ = s("688465"),
+  m = s("487419"),
   g = s("378364"),
   I = s("197344"),
   h = s("734934"),
@@ -39,8 +39,8 @@ var a = s("735250"),
   U = s("695346"),
   y = s("675478"),
   B = s("33656"),
-  F = s("981631"),
-  G = s("468788"),
+  G = s("981631"),
+  F = s("468788"),
   k = s("689938"),
   w = s("153764"),
   H = s("611273");
@@ -113,7 +113,7 @@ function W(e) {
     }, []),
     T = n.useCallback((e, s) => {
       let a = t.filter(t => t !== e);
-      !s && a.push(e), e === g.default.ringtone && D.default.track(F.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
+      !s && a.push(e), e === g.default.ringtone && D.default.track(G.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
         toggled_on: s,
         sound_name: e
       }), S.default.setDisabledSounds(a)
@@ -234,7 +234,7 @@ function W(e) {
 }
 
 function K() {
-  let e = (0, d.useStateFromStores)([_.default], () => _.default.getGuildAlertSettings()),
+  let e = (0, d.useStateFromStores)([m.default], () => m.default.getGuildAlertSettings()),
     [t, s] = n.useState(null),
     l = j.default.keys(e).map(t => {
       let s = e[t];
@@ -247,7 +247,7 @@ function K() {
     children: [(0, a.jsxs)(u.Heading, {
       variant: "heading-lg/semibold",
       className: i()(w.titleWithBeta, H.marginBottom20),
-      children: [k.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(m.default, {})]
+      children: [k.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(_.default, {})]
     }), (0, a.jsx)(u.FormText, {
       type: u.FormTextTypes.DESCRIPTION,
       className: H.marginBottom20,
@@ -291,11 +291,11 @@ function K() {
 }
 class z extends n.PureComponent {
   handleDesktopChange(e) {
-    let t = e ? F.DesktopNotificationTypes.ALL : F.DesktopNotificationTypes.NEVER;
-    if (t !== F.DesktopNotificationTypes.NEVER) {
+    let t = e ? G.DesktopNotificationTypes.ALL : G.DesktopNotificationTypes.NEVER;
+    if (t !== G.DesktopNotificationTypes.NEVER) {
       var s;
       s = "UserSettingsModal", L.default.requestPermission(e => {
-        let t = e ? F.NotificationPermissionTypes.ENABLED : F.NotificationPermissionTypes.BLOCKED;
+        let t = e ? G.NotificationPermissionTypes.ENABLED : G.NotificationPermissionTypes.BLOCKED;
         S.default.setPermissionsState(t, s)
       })
     } else S.default.setDesktopType(t)
@@ -325,7 +325,7 @@ class z extends n.PureComponent {
       title: k.default.Messages.NOTIFICATIONS,
       children: [(0, a.jsx)(u.FormSwitch, {
         className: H.marginBottom20,
-        value: e !== F.DesktopNotificationTypes.NEVER && !c,
+        value: e !== G.DesktopNotificationTypes.NEVER && !c,
         onChange: this.handleDesktopChange,
         note: k.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
         disabled: c,
@@ -376,13 +376,13 @@ class z extends n.PureComponent {
       if (!T.supported) return null;
       let e = [{
         name: k.default.Messages.TTS_ALLS,
-        value: F.TTSNotificationTypes.ALL_CHANNELS
+        value: G.TTSNotificationTypes.ALL_CHANNELS
       }, {
         name: k.default.Messages.TTS_CURRENT,
-        value: F.TTSNotificationTypes.SELECTED_CHANNEL
+        value: G.TTSNotificationTypes.SELECTED_CHANNEL
       }, {
         name: k.default.Messages.TTS_NEVER,
-        value: F.TTSNotificationTypes.NEVER
+        value: G.TTSNotificationTypes.NEVER
       }];
       return (0, a.jsxs)(u.FormItem, {
         title: k.default.Messages.FORM_LABEL_TTS_NOTIFICATIONS,
@@ -426,7 +426,7 @@ function q() {
     className: H.marginBottom20,
     value: t,
     onChange: e => {
-      E.default.setAccountFlag(G.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES, e)
+      E.default.setAccountFlag(F.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES, e)
     },
     note: "Increments the mention count when receiving a message in a channel set to 'All Messages'",
     children: "Mention on all messages?"

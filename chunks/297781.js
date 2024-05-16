@@ -67,8 +67,8 @@ var a, l, s = n("735250"),
   x = n("22211"),
   M = n("561308"),
   R = n("371991"),
-  L = n("689938"),
-  y = n("106940");
+  y = n("689938"),
+  L = n("106940");
 (a = l || (l = {}))[a.CARD = 0] = "CARD", a[a.POPOUT = 1] = "POPOUT";
 let O = i.createContext({});
 
@@ -91,7 +91,7 @@ function P(e) {
     text: l,
     shouldShow: i,
     children: e => (0, s.jsxs)("div", {
-      className: y.badgeContainer,
+      className: L.badgeContainer,
       ...e,
       children: [(0, s.jsx)(t, {
         width: 12,
@@ -100,7 +100,7 @@ function P(e) {
       }), (0, s.jsx)(A.Text, {
         variant: "text-xs/normal",
         color: r,
-        className: y.badgeLabel,
+        className: L.badgeLabel,
         children: n
       })]
     })
@@ -130,7 +130,7 @@ function b(e) {
     location: l
   } = j(), i = 0 === l, r = (0, M.isEntryActive)(t), o = i && r ? A.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
   return (0, s.jsxs)("div", {
-    className: y.badgeContainer,
+    className: L.badgeContainer,
     children: [(0, s.jsx)(h.GameControllerIcon, {
       width: 12,
       height: 12,
@@ -155,7 +155,7 @@ function U(e) {
   let u = r ? A.tokens.colors.STATUS_POSITIVE : l,
     d = null === (t = o.timestamps) || void 0 === t ? void 0 : t.start;
   return (0, s.jsxs)("div", {
-    className: y.badgeContainer,
+    className: L.badgeContainer,
     children: [(0, s.jsx)(E.RecordPlayerIcon, {
       width: 12,
       height: 12,
@@ -177,7 +177,7 @@ function F(e) {
   } = j(), a = 0 === n ? A.tokens.colors.STATUS_POSITIVE : void 0;
   return (0, M.isEntryNew)(t) ? (0, s.jsx)(P, {
     Icon: p.NewUserLargeIcon,
-    text: L.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
+    text: y.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
     iconColor: a
   }) : null
 }
@@ -212,7 +212,7 @@ function k(e) {
     Icon: C.RetryIcon,
     showTooltip: 0 === n,
     tooltipText: l,
-    text: 1 === n ? l : L.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
+    text: 1 === n ? l : y.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
   })
 }
 
@@ -225,10 +225,10 @@ function H(e) {
   return (0, M.isValidStreak)(t) ? (0, s.jsx)(P, {
     Icon: f.FlashIcon,
     showTooltip: 0 === n,
-    text: L.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+    text: y.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
       days: a
     }),
-    tooltipText: L.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_TOOLTIP.format({
+    tooltipText: y.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_TOOLTIP.format({
       days: a
     })
   }) : null
@@ -242,11 +242,11 @@ function B(e) {
   } = j(), a = (0, M.getEntryDuration)(t);
   if (null == a) return null;
   let l = 1 === n,
-    i = l ? L.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : L.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
+    i = l ? y.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : y.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
   return (0, s.jsx)(P, {
     Icon: _.TrophyIcon,
     text: (0, s.jsxs)(s.Fragment, {
-      children: [L.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, l ? " — " : ": ", i.format({
+      children: [y.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, l ? " — " : ": ", i.format({
         hours: Math.round(a / N.default.Seconds.HOUR)
       })]
     })
@@ -261,9 +261,9 @@ function G(e) {
     location: a
   } = j(), l = null === (t = (0, M.getTrait)(n, u.ContentInventoryTraitType.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
   if (null == l) return null;
-  let i = 1 === a ? L.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
+  let i = 1 === a ? y.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
     count: l
-  }) : L.default.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({
+  }) : y.default.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({
     count: l
   });
   return (0, s.jsx)(P, {
@@ -278,7 +278,7 @@ function V(e) {
   } = e, n = (0, M.getTrendingType)(t);
   return null == n || n === d.TrendingType.TRENDING_TYPE_UNSPECIFIED ? null : (0, s.jsx)(P, {
     Icon: m.GlobeEarthIcon,
-    text: L.default.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+    text: y.default.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
   })
 }
 
@@ -290,7 +290,7 @@ function W(e) {
     defaultIconColor: a
   } = j();
   return (0, s.jsxs)("div", {
-    className: y.badgeContainer,
+    className: L.badgeContainer,
     children: [(0, s.jsx)(T.TvIcon, {
       width: 12,
       height: 12,
@@ -306,7 +306,7 @@ function Y(e) {
   var t;
   let {
     entry: n
-  } = e, a = /\w+ (\d+), \w+ (\d+)/.exec(null !== (t = n.extra.media_assets_large_text) && void 0 !== t ? t : ""), l = null != a ? L.default.Messages.MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE.format({
+  } = e, a = /\w+ (\d+), \w+ (\d+)/.exec(null !== (t = n.extra.media_assets_large_text) && void 0 !== t ? t : ""), l = null != a ? y.default.Messages.MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE.format({
     seasonNum: a[1],
     episodeNum: a[2]
   }) : null;
@@ -332,9 +332,9 @@ function z(e) {
       ...a
     },
     children: (0, s.jsx)("div", {
-      className: o()(y.badgesContainer, {
-        [y.badgesContainerCard]: 0 === t,
-        [y.badgesContainerPopout]: 1 === t
+      className: o()(L.badgesContainer, {
+        [L.badgesContainerCard]: 0 === t,
+        [L.badgesContainerPopout]: 1 === t
       }),
       children: n
     })

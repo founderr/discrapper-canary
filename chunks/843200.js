@@ -13,7 +13,7 @@ var a = s("735250"),
   E = s("418632"),
   T = s("689938"),
   f = s("70983");
-class m extends n.Component {
+class _ extends n.Component {
   renderNotice() {
     let {
       isClaimed: e,
@@ -110,4 +110,4 @@ t.default = d.default.connectStores([c.default], () => {
     isVerified: e.verified,
     hasEmail: null != e.email
   }
-})(m)
+})(_)

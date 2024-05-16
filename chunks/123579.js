@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("594174"),
   M = n("979651"),
   R = n("5192"),
-  L = n("51144"),
-  y = n("342656"),
+  y = n("51144"),
+  L = n("342656"),
   O = n("785717"),
   j = n("221292"),
   P = n("621853"),
@@ -125,11 +125,11 @@ t.default = e => {
       }
     }),
     eM = null != eT || null != ex || eA,
-    eR = null !== (t = R.default.getNickname(null, n.id, ec)) && void 0 !== t ? t : L.default.getName(ec),
-    eL = (0, u.useStateFromStores)([v.default], () => v.default.hidePersonalInformation),
-    [ey, eO, ej, eP, eD] = (0, u.useStateFromStoresArray)([P.default], () => [P.default.getMutualFriendsCount(ec.id), P.default.getMutualFriends(ec.id), P.default.getMutualGuilds(ec.id), P.default.isFetchingProfile(ec.id), P.default.isFetchingFriends(ec.id)]),
+    eR = null !== (t = R.default.getNickname(null, n.id, ec)) && void 0 !== t ? t : y.default.getName(ec),
+    ey = (0, u.useStateFromStores)([v.default], () => v.default.hidePersonalInformation),
+    [eL, eO, ej, eP, eD] = (0, u.useStateFromStoresArray)([P.default], () => [P.default.getMutualFriendsCount(ec.id), P.default.getMutualFriends(ec.id), P.default.getMutualGuilds(ec.id), P.default.isFetchingProfile(ec.id), P.default.isFetchingFriends(ec.id)]),
     eb = !ec.bot && null != ej && ej.length > 0,
-    eU = !ec.bot && null != ey && ey > 0,
+    eU = !ec.bot && null != eL && eL > 0,
     eF = (0, X.useShouldShowUserPopoutCollectiblesUpsell)({
       popoutUser: ec,
       source: G.UserPopoutUpsellSource.PROFILE_PANEL
@@ -176,7 +176,7 @@ t.default = e => {
     eK = ec.bot || ez,
     {
       enabled: eZ
-    } = (0, y.useProfileMutualsExperiment)({
+    } = (0, L.useProfileMutualsExperiment)({
       autoTrackExposure: !0,
       location: h.default.PROFILE,
       disable: eK
@@ -223,7 +223,7 @@ t.default = e => {
                 animate: ei
               }), (0, a.jsx)(V.default, {}), (0, a.jsx)(Y.default, {
                 bio: null == eh ? void 0 : eh.bio,
-                hidePersonalInformation: eL,
+                hidePersonalInformation: ey,
                 animateOnHover: !0,
                 isHovering: ei,
                 userId: ec.id
@@ -276,11 +276,11 @@ t.default = e => {
                   [es.mutualFriendsDivider]: eb
                 }),
                 header: el.default.Messages.MUTUAL_FRIENDS_COUNT.format({
-                  count: ey
+                  count: eL
                 }),
                 isLoadingHeader: eP,
                 isLoadingContents: eD,
-                loadingContentsCount: ey,
+                loadingContentsCount: eL,
                 onFocus: eG,
                 onHover: eG,
                 itemType: J.ListType.MutualFriendsList,

@@ -13,14 +13,14 @@ var a = s("735250"),
   E = s("981631"),
   T = s("689938"),
   f = s("101331");
-let m = (0, d.uid)();
+let _ = (0, d.uid)();
 t.default = n.memo(function(e) {
   let {
     availableClans: t
   } = e, s = n.useMemo(() => new Map(t.map(e => [e.id, e])), [t]), d = (0, l.useStateFromStores)([o.default], () => {
     var e;
     return (0, c.getUserClanData)(null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
-  }), _ = n.useMemo(() => t.reduce((e, t) => {
+  }), m = n.useMemo(() => t.reduce((e, t) => {
     var s;
     return (null === (s = t.clan) || void 0 === s ? void 0 : s.tag) != null && e.push({
       label: t.name,
@@ -48,7 +48,7 @@ t.default = n.memo(function(e) {
   }, [g]), h = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, E.AnalyticsLocations.USER_SETTINGS), []), N = n.useCallback(e => e === d, [d]), p = n.useCallback(e => e, []), C = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
   return (0, a.jsxs)(r.default, {
     title: T.default.Messages.CLANS,
-    titleId: m,
+    titleId: _,
     children: [(0, a.jsx)(i.Text, {
       className: f.subtitle,
       variant: "text-sm/normal",
@@ -57,7 +57,7 @@ t.default = n.memo(function(e) {
       className: f.select,
       optionClassName: f.selectPopout,
       isSelected: N,
-      options: _,
+      options: m,
       select: h,
       renderOptionValue: I,
       renderOptionLabel: g,

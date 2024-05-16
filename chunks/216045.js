@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("100527"),
   T = s("906732"),
   f = s("475977"),
-  m = s("957730"),
-  _ = s("962746"),
+  _ = s("957730"),
+  m = s("962746"),
   g = s("296810"),
   I = s("935147"),
   h = s("350327"),
@@ -57,12 +57,12 @@ function M() {
         errors: t
       }
     }),
-    U = O.UseLegacyChatInput.useSetting() && null != M ? m.default.parse(void 0, M).content : M,
+    U = O.UseLegacyChatInput.useSetting() && null != M ? _.default.parse(void 0, M).content : M,
     y = A.default.canUsePremiumProfileCustomization(e),
     {
       analyticsLocations: B
     } = (0, T.default)(E.default.PROFILE),
-    F = {
+    G = {
       user: e,
       canUsePremiumCustomization: y,
       onUpsellClick: x.default,
@@ -77,19 +77,19 @@ function M() {
       pendingProfileEffectId: b
     };
   n.useEffect(() => () => o.default.wait(u.resetAllPending), []);
-  let G = "UserSettingsProfileCustomization";
+  let F = "UserSettingsProfileCustomization";
   return ((0, S.useTriggerDebuggingAA)({
-    location: G + " auto on",
+    location: F + " auto on",
     autoTrackExposure: !0
   }), (0, S.useTriggerDebuggingAA)({
-    location: G + " auto off",
+    location: F + " auto off",
     autoTrackExposure: !1
   }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(T.AnalyticsLocationProvider, {
     value: B,
     children: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(f.default, {}), (0, a.jsx)(g.default, {
-        profilePreview: (0, a.jsx)(_.default, {
-          ...F,
+        profilePreview: (0, a.jsx)(m.default, {
+          ...G,
           pendingThemeColors: j,
           pendingAccentColor: L
         }),

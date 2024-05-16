@@ -13,8 +13,8 @@ var a = s("735250"),
   E = s("457330"),
   T = s("497321"),
   f = s("23551"),
-  m = s("468026"),
-  _ = s("410030"),
+  _ = s("468026"),
+  m = s("410030"),
   g = s("726542"),
   I = s("122021"),
   h = s("275759"),
@@ -35,8 +35,8 @@ var a = s("735250"),
   U = s("626135"),
   y = s("63063"),
   B = s("706454"),
-  F = s("349728"),
-  G = s("494620"),
+  G = s("349728"),
+  F = s("494620"),
   k = s("205266"),
   w = s("216153"),
   H = s("981631"),
@@ -107,7 +107,7 @@ function q(e) {
       onDisconnect: S,
       account: T,
       theme: f,
-      locale: _
+      locale: m
     } = e,
     [C, A] = n.useState(T.friendSync),
     [O, x] = n.useState(T.visibility),
@@ -135,14 +135,14 @@ function q(e) {
   function es() {
     let e = g.default.get(T.type),
       t = W.default.Messages.DISCONNECT_ACCOUNT_BODY;
-    (0, F.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
-      children: [t, (0, a.jsx)(G.default, {
+    (0, G.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
+      children: [t, (0, a.jsx)(F.default, {
         className: K.infoBox,
         children: W.default.Messages.CONNECTED_ACCOUNT_IS_AUTHORIZED_APP_DISCONNECT_WARNING.format({
           platformName: e.name
         })
       })]
-    })), (0, c.openModal)(s => (0, a.jsx)(m.default, {
+    })), (0, c.openModal)(s => (0, a.jsx)(_.default, {
       title: W.default.Messages.DISCONNECT_ACCOUNT_TITLE.format({
         name: e.name
       }),
@@ -255,7 +255,7 @@ function q(e) {
       var t;
       let s = null !== (t = e.metadata) && void 0 !== t ? t : {},
         n = null,
-        l = (0, h.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], _);
+        l = (0, h.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], m);
       switch (e.type) {
         case H.PlatformTypes.REDDIT:
           n = (0, p.generateRedditMetadataItems)(s, K.metadataItem);
@@ -510,7 +510,7 @@ t.default = () => {
   let e = (0, r.useStateFromStores)([R.default], () => R.default.hidePersonalInformation),
     t = (0, r.useStateFromStores)([A.default], () => A.default.isFetching()),
     s = (0, r.useStateFromStores)([A.default], () => A.default.getAccounts()),
-    l = (0, _.default)();
+    l = (0, m.default)();
   (0, r.useStateFromStores)([x.default], () => x.default.getFlattenedGuildIds());
   let i = (0, r.useStateFromStores)([B.default], () => B.default.locale);
   return (n.useEffect(() => {

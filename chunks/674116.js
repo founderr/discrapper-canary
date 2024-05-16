@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("663389"),
   T = s("153124"),
   f = s("63063"),
-  m = s("358085"),
-  _ = s("894939"),
+  _ = s("358085"),
+  m = s("894939"),
   g = s("321499"),
   I = s("710808"),
   h = s("625205"),
@@ -62,8 +62,8 @@ function y() {
     silenceWarning: v,
     debugLoggingEnabled: y,
     legacyAudioSubsystemSupported: B,
-    experimentalAudioSubsystemSupported: F,
-    qosSupported: G,
+    experimentalAudioSubsystemSupported: G,
+    qosSupported: F,
     attenuationSupported: k
   } = (0, r.useStateFromStoresObject)([S.default], () => ({
     inputMode: S.default.getMode(),
@@ -78,7 +78,7 @@ function y() {
     experimentalAudioSubsystemSupported: S.default.supports(D.Features.EXPERIMENTAL_AUDIO_SUBSYSTEM),
     qosSupported: S.default.supports(D.Features.QOS),
     attenuationSupported: S.default.supports(D.Features.ATTENUATION)
-  })), w = (0, r.useStateFromStores)([E.default], () => E.default.getSubsection()), H = n.createRef(), V = m.isPlatformEmbedded && y && null != c.default.fileManager.readLogFiles;
+  })), w = (0, r.useStateFromStores)([E.default], () => E.default.getSubsection()), H = n.createRef(), V = _.isPlatformEmbedded && y && null != c.default.fileManager.readLogFiles;
   return n.useEffect(() => {
     if (w === M.SOUNDBOARD_SUBSECTION) {
       var e;
@@ -102,13 +102,13 @@ function y() {
         scrollMarginTop: "48px"
       },
       ref: H
-    }), (0, a.jsx)(_.default, {}), (0, a.jsx)(A.default, {}), (0, a.jsxs)(o.HeadingLevel, {
+    }), (0, a.jsx)(m.default, {}), (0, a.jsx)(A.default, {}), (0, a.jsxs)(o.HeadingLevel, {
       component: (0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H1,
         className: P.marginBottom20,
         children: L.default.Messages.SETTINGS_ADVANCED
       }),
-      children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(O.default, {}), G && (0, a.jsx)(o.FormSection, {
+      children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(O.default, {}), F && (0, a.jsx)(o.FormSection, {
         className: P.marginBottom20,
         title: L.default.Messages.FORM_LABEL_QOS,
         children: (0, a.jsx)(o.FormSwitch, {
@@ -145,7 +145,7 @@ function y() {
           onChange: e => d.default.setAttenuation(s, l, e),
           children: L.default.Messages.ATTENUATE_WHILE_SPEAKING_OTHERS
         })]
-      }), (B || F) && (0, a.jsxs)(o.FormSection, {
+      }), (B || G) && (0, a.jsxs)(o.FormSection, {
         className: P.marginBottom20,
         title: L.default.Messages.FORM_LABEL_SUBSYSTEM,
         children: [(0, a.jsx)(o.SingleSelect, {
@@ -163,14 +163,14 @@ function y() {
               value: D.AudioSubsystems.EXPERIMENTAL,
               label: "Experimental"
             }), s
-          }(B, F),
+          }(B, G),
           onChange: e => {
             U(L.default.Messages.SWITCH_SUBSYSTEM, L.default.Messages.SWITCH_SUBSYSTEM_BODY, () => d.default.setAudioSubsystem(e))
           }
         }), (0, a.jsx)(o.FormDivider, {
           className: P.marginBottom20
         })]
-      }), m.isPlatformEmbedded && (0, a.jsxs)(a.Fragment, {
+      }), _.isPlatformEmbedded && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(C.default, {}), (0, a.jsx)(o.FormSection, {
           className: P.marginBottom20,
           title: L.default.Messages.FORM_LABEL_VOICE_DIAGNOSTICS,

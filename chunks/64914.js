@@ -17,23 +17,23 @@ var a = s("735250"),
   E = s("63063"),
   T = s("358085"),
   f = s("998502"),
-  m = s("695346"),
-  _ = s("399970"),
+  _ = s("695346"),
+  m = s("399970"),
   g = s("981631"),
   I = s("689938"),
   h = s("485767");
 
 function N() {
-  let [e] = n.useState(() => f.default.getEnableHardwareAcceleration()), t = m.DisableGamesTab.useSetting(), s = m.DeveloperMode.useSetting(), N = m.DisableHomeAutoNav.useSetting(), {
+  let [e] = n.useState(() => f.default.getEnableHardwareAcceleration()), t = _.DisableGamesTab.useSetting(), s = _.DeveloperMode.useSetting(), N = _.DisableHomeAutoNav.useSetting(), {
     hasLibraryApplication: p,
     testModeApplicationId: C
   } = (0, l.useStateFromStoresObject)([u.default, d.default], () => ({
     hasLibraryApplication: d.default.hasLibraryApplication(),
     testModeApplicationId: u.default.testModeApplicationId
   })), A = n.useCallback(e => {
-    m.DisableGamesTab.updateSetting(!e)
+    _.DisableGamesTab.updateSetting(!e)
   }, []), O = n.useCallback(e => {
-    e ? (0, r.openModal)(e => (0, a.jsx)(_.default, {
+    e ? (0, r.openModal)(e => (0, a.jsx)(m.default, {
       ...e
     })) : o.reset()
   }, []), x = n.useCallback(e => {
@@ -49,14 +49,14 @@ function N() {
       })
     }))
   }, []), R = n.useCallback(e => {
-    m.DisableHomeAutoNav.updateSetting(!e)
+    _.DisableHomeAutoNav.updateSetting(!e)
   }, []);
   return (0, a.jsxs)(r.FormSection, {
     tag: r.FormTitleTags.H1,
     title: I.default.Messages.SETTINGS_ADVANCED,
     children: [S.SUPPORTS_COPY && (0, a.jsx)(r.FormSwitch, {
       value: s,
-      onChange: m.DeveloperMode.updateSetting,
+      onChange: _.DeveloperMode.updateSetting,
       note: I.default.Messages.DEVELOPER_MODE_HELP_TEXT.format({
         apiDocsUrl: g.MarketingURLs.API_DOCS
       }),

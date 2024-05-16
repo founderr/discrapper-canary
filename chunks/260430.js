@@ -10,12 +10,12 @@ var r = n("120356"),
   a = n.n(r),
   s = n("207561"),
   o = n("373793"),
-  l = n("260034"),
-  u = n("993365"),
-  d = n("263704"),
-  _ = n("465670"),
-  c = n("713938"),
-  E = n("231338"),
+  l = n("243814"),
+  u = n("260034"),
+  d = n("993365"),
+  _ = n("263704"),
+  c = n("465670"),
+  E = n("713938"),
   I = n("689938"),
   T = n("361375");
 
@@ -29,17 +29,17 @@ function f(e) {
     className: T.scope,
     children: [(0, i.jsx)("div", {
       className: a()(T.iconWrapper, r ? T.fakeScopeIcon : T.scopeIcon),
-      children: r ? (0, i.jsx)(_.default, {
+      children: r ? (0, i.jsx)(c.default, {
         className: T.icon
-      }) : (0, i.jsx)(d.default, {
+      }) : (0, i.jsx)(_.default, {
         className: T.icon
       })
     }), (0, i.jsxs)("div", {
       className: T.scopeInner,
-      children: [(0, i.jsx)(u.Text, {
+      children: [(0, i.jsx)(d.Text, {
         variant: "text-md/medium",
         children: t
-      }), null != n ? (0, i.jsx)(u.Text, {
+      }), null != n ? (0, i.jsx)(d.Text, {
         variant: "text-xs/normal",
         color: "text-danger",
         children: n
@@ -54,17 +54,17 @@ function S(e) {
     application: n,
     accountScopes: r,
     requestedScopes: a,
-    integrationType: u,
-    errors: d,
-    isTrustedName: _ = !1
-  } = e, S = (0, s.useLazyValue)(() => c.FAKE_SCOPES[Math.floor(Math.random() * c.FAKE_SCOPES.length)]);
+    integrationType: d,
+    errors: _,
+    isTrustedName: c = !1
+  } = e, S = (0, s.useLazyValue)(() => E.FAKE_SCOPES[Math.floor(Math.random() * E.FAKE_SCOPES.length)]);
   if (0 === r.length) return null;
   let h = S(),
-    A = _ ? I.default.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : I.default.Messages.OAUTH2_SCOPES_LABEL,
-    m = u === o.ApplicationIntegrationType.USER_INSTALL && a.includes(E.OAuth2Scopes.APPLICATIONS_COMMANDS);
+    A = c ? I.default.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : I.default.Messages.OAUTH2_SCOPES_LABEL,
+    m = d === o.ApplicationIntegrationType.USER_INSTALL && a.includes(l.OAuth2Scopes.APPLICATIONS_COMMANDS);
   return (0, i.jsxs)("div", {
     className: T.scopes,
-    children: [(0, i.jsx)(l.Heading, {
+    children: [(0, i.jsx)(u.Heading, {
       variant: "heading-deprecated-12/semibold",
       className: T.sectionLabel,
       children: A.format({
@@ -73,8 +73,8 @@ function S(e) {
     }), r.map(e => {
       var t;
       return (0, i.jsx)(f, {
-        text: (0, c.getScopeName)(e, r),
-        error: null == d ? void 0 : null === (t = d[e]) || void 0 === t ? void 0 : t[0]
+        text: (0, E.getScopeName)(e, r),
+        error: null == _ ? void 0 : null === (t = _[e]) || void 0 === t ? void 0 : t[0]
       }, e)
     }), m && (0, i.jsx)(f, {
       text: I.default.Messages.SCOPE_DM_YOU

@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("594174"),
   T = s("590259"),
   f = s("301733"),
-  m = s("334428"),
-  _ = s("844593");
+  _ = s("334428"),
+  m = s("844593");
 
 function g() {
   let e = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
@@ -33,7 +33,7 @@ function g() {
     children: [(0, a.jsxs)("div", {
       className: f.root,
       children: [(0, a.jsx)("img", {
-        src: N ? m : _,
+        src: N ? _ : m,
         alt: "",
         width: 450
       }), t && (0, a.jsx)(S.ProfileEffect, {

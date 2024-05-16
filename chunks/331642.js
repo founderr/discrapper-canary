@@ -17,8 +17,8 @@ var a = s("735250"),
   E = s("74538"),
   T = s("242291"),
   f = s("706667"),
-  m = s("792165"),
-  _ = s("409673"),
+  _ = s("792165"),
+  m = s("409673"),
   g = s("603074"),
   I = s("689938"),
   h = s("152951");
@@ -47,12 +47,12 @@ function N(e) {
           channel: null,
           onClose: t,
           onSelect: S,
-          gridNotice: c ? null : (0, a.jsx)(m.CustomCallSoundUpsell, {}),
+          gridNotice: c ? null : (0, a.jsx)(_.CustomCallSoundUpsell, {}),
           analyticsSource: "call sounds edit setting"
         })
       })
     },
-    children: e => (0, a.jsx)(_.SecondaryActionButton, {
+    children: e => (0, a.jsx)(m.SecondaryActionButton, {
       ...e,
       onClick: () => {
         i(!s)
@@ -74,7 +74,7 @@ function p(e) {
     emojiName: t.emojiName,
     soundName: t.name
   });
-  return (0, a.jsx)(_.SecondaryActionButton, {
+  return (0, a.jsx)(m.SecondaryActionButton, {
     onClick: s,
     text: n,
     children: (0, a.jsx)(c.default, {
@@ -119,7 +119,7 @@ function C(e) {
       className: h.container,
       children: [(0, a.jsx)(N, {
         onSelect: n
-      }), l && !s && (0, a.jsx)(_.SecondaryActionButton, {
+      }), l && !s && (0, a.jsx)(m.SecondaryActionButton, {
         onClick: () => n(null),
         text: I.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
         children: (0, a.jsx)(S.default, {

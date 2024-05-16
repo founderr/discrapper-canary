@@ -18,8 +18,8 @@ var n = s("120356"),
   E = s("74538"),
   T = s("193528"),
   f = s("993413"),
-  m = s("689938"),
-  _ = s("452240");
+  _ = s("689938"),
+  m = s("452240");
 
 function g(e) {
   let {
@@ -47,50 +47,50 @@ function g(e) {
     i(r()(e, null == A ? void 0 : A.themeColors) ? void 0 : e)
   };
   return (0, a.jsx)(f.default, {
-    title: m.default.Messages.USER_SETTINGS_PROFILE_THEME,
+    title: _.default.Messages.USER_SETTINGS_PROFILE_THEME,
     disabled: !R && !g,
-    className: l()(_.__invalid_profileThemesSection, h),
+    className: l()(m.__invalid_profileThemesSection, h),
     showPremiumIcon: N,
     forcedDivider: C,
     children: (0, a.jsxs)("div", {
-      className: _.sectionContainer,
+      className: m.sectionContainer,
       children: [(0, a.jsx)("div", {
-        className: _.sparkleContainer,
+        className: m.sparkleContainer,
         children: (0, a.jsx)(T.default, {
           onChange: e => L([e, x]),
           color: O,
           suggestedColors: D,
           showEyeDropper: !0,
           label: (0, a.jsx)(d.Text, {
-            className: _.colorSwatchLabel,
+            className: m.colorSwatchLabel,
             color: "header-secondary",
             variant: "text-xs/normal",
             "aria-hidden": !0,
-            children: m.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
+            children: _.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
           })
         })
       }), (0, a.jsx)("div", {
-        className: _.sparkleContainer,
+        className: m.sparkleContainer,
         children: (0, a.jsx)(T.default, {
           onChange: e => L([O, e]),
           color: x,
           suggestedColors: D,
           showEyeDropper: !0,
           label: (0, a.jsx)(d.Text, {
-            className: _.colorSwatchLabel,
+            className: m.colorSwatchLabel,
             color: "header-secondary",
             variant: "text-xs/normal",
             "aria-hidden": !0,
-            children: m.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
+            children: _.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
           })
         })
       }), p && null != I && (0, a.jsx)(d.Button, {
-        className: _.resetButton,
+        className: m.resetButton,
         color: d.Button.Colors.PRIMARY,
         look: d.Button.Looks.LINK,
         size: d.Button.Sizes.SMALL,
         onClick: () => L([null, null]),
-        children: m.default.Messages.USER_SETTINGS_RESET_PROFILE_THEME
+        children: _.default.Messages.USER_SETTINGS_RESET_PROFILE_THEME
       })]
     })
   })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return m
   }
 });
 var a = s("735250");
@@ -18,12 +18,12 @@ var n = s("120356"),
   E = s("981631"),
   T = s("689938"),
   f = s("247763"),
-  m = s("611273");
+  _ = s("611273");
 
-function _() {
+function m() {
   var e, t, n;
   let {
-    enabled: _,
+    enabled: m,
     autoToggle: g,
     hideInstantInvites: I,
     hidePersonalInformation: h,
@@ -42,7 +42,7 @@ function _() {
     tag: r.FormTitleTags.H1,
     title: T.default.Messages.STREAMER_MODE,
     children: [(0, a.jsx)(r.FormNotice, {
-      className: m.marginBottom40,
+      className: _.marginBottom40,
       iconClassName: f.noticeIcon,
       type: r.FormNoticeTypes.PRIMARY,
       imageData: {
@@ -56,7 +56,7 @@ function _() {
         streamkitURL: E.MarketingURLs.STREAMKIT
       })
     }), (0, a.jsx)(r.FormSwitch, {
-      value: _,
+      value: m,
       onChange: e => A("enabled", e),
       note: T.default.Messages.ENABLE_STREAMER_MODE_DESCRIPTION.format({
         onClick: () => {
@@ -72,7 +72,7 @@ function _() {
         children: T.default.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
       })
     })(), (0, a.jsx)(r.FormTitle, {
-      className: l()(m.marginTop40, m.marginBottom8),
+      className: l()(_.marginTop40, _.marginBottom8),
       children: T.default.Messages.OPTIONS
     }), (0, a.jsx)(r.FormSwitch, {
       value: h,
