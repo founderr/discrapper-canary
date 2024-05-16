@@ -1084,7 +1084,7 @@ let e$ = new eJ(T.default, {
     o.lastMessageId = a.id;
     let l = ee.default.getCurrentUser(),
       u = Y.default.getBasicChannel(r);
-    if (null != a.author && null != l && a.author.id === l.id) return null != o.outgoingAck && o.clearOutgoingAck(), eX({
+    if (null != a.author && null != l && a.author.id === l.id && !en.MessageTypesSets.SELF_MENTIONABLE_SYSTEM.has(a.type)) return null != o.outgoingAck && o.clearOutgoingAck(), eX({
       channelId: r,
       messageId: a.id,
       manual: !1
