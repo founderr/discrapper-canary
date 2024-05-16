@@ -13479,6 +13479,8 @@ e.exports = Object.freeze({
   GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_FLAGGED_MOBILE: "flagged a message",
   GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_BLOCKED_HOOK: "has blocked a message in $[**!!{channelName}!!**](channelHook)",
   GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_FLAGGED_HOOK: "has flagged a message in $[**!!{channelName}!!**](channelHook)",
+  GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_APP_BLOCKED_HOOK: "has blocked **!!{applicationName}!!**'s message in $[**!!{channelName}!!**](channelHook), sent by $[](userHook)",
+  GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_APP_FLAGGED_HOOK: "has flagged **!!{applicationName}!!**'s message in $[**!!{channelName}!!**](channelHook), sent by $[](userHook)",
   GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_BLOCKED_VOICE_CHANNEL_STATUS_HOOK: "has blocked a voice channel status for $[**!!{channelName}!!**](channelHook)",
   GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_FLAGGED_VOICE_CHANNEL_STATUS_HOOK: "has flagged a voice channel status for $[**!!{channelName}!!**](channelHook)",
   GUILD_AUTOMOD_USERNAME: "AutoMod",
