@@ -114,9 +114,7 @@ function I(e) {
   try {
     return (0, i.match)(e.config).with({
       config_version: 1
-    }, () => !0).with({
-      config_version: 2
-    }, () => !0).exhaustive()
+    }, () => !0).otherwise(() => !1)
   } catch (n) {
     var t;
     return console.error("Unknown config version '".concat(null == e ? void 0 : null === (t = e.config) || void 0 === t ? void 0 : t.config_version, "'"), n), !1
@@ -222,44 +220,7 @@ function m(e) {
         variants: e.variants,
         supplementaryApplicationIds: e.supplementary_application_ids
       }
-    }).with({
-      config_version: 2
-    }, e => ({
-      configVersion: 2,
-      expiresAt: e.expires_at,
-      getGameLink: e.get_game_link,
-      applicationId: e.application_id,
-      applicationName: e.application_name,
-      variants: e.variants,
-      streamDurationRequirementMinutes: 0,
-      rewardCodeExpiresAt: "",
-      gameTitle: "",
-      messages: {
-        questName: "",
-        rewardName: "",
-        rewardNameWithArticle: "",
-        rewardRedemptionInstructionsByPlatform: {},
-        gameTitle: "",
-        gamePublisher: ""
-      },
-      colors: {
-        primary: "",
-        secondary: ""
-      },
-      rewardsConfig: {
-        assignmentMethod: r.QuestRewardAssignmentMethods.ALL,
-        rewards: []
-      },
-      rewardCodePlatforms: [],
-      assets: {
-        rewardTile: "",
-        hero: "",
-        questBarHero: "",
-        gameTile: "",
-        logotype: ""
-      },
-      inGameQuestConfig: null
-    })).exhaustive()),
+    }).exhaustive()),
     userStatus: null == e.user_status ? null : A(e.user_status),
     targetedContent: e.targeted_content
   }
