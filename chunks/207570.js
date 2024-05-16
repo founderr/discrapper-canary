@@ -25,14 +25,14 @@ function E(e) {
     var e;
     return null === (e = l.default.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application
   }), u = (0, s.useAppStorefrontAvailable)(null !== (t = null == o ? void 0 : o.id) && void 0 !== t ? t : "");
-  return (0, i.jsx)(_.default, {
+  return null == o ? null : (0, i.jsx)(_.default, {
     children: (0, i.jsxs)("div", {
       className: c.buttonsContainer,
       children: [(0, i.jsx)(d.default, {
         application: o,
         className: c.button
-      }), u && (0, i.jsx)(I, {
-        app: o,
+      }), u && null != a && (0, i.jsx)(I, {
+        application: o,
         user: n,
         guildId: a
       })]
@@ -43,14 +43,14 @@ function E(e) {
 function I(e) {
   var t;
   let {
-    app: r,
+    application: r,
     user: s,
     guildId: l
   } = e, d = null !== (t = (0, u.default)({
     user: s,
     guildId: l
   }).subscriptionGroupListing) && void 0 !== t ? t : void 0;
-  return null == r || null == l ? null : (0, i.jsx)(o.StorefrontButton, {
+  return (0, i.jsx)(o.StorefrontButton, {
     onClick: () => (function(e, t, r) {
       (0, a.openModalLazy)(async () => {
         let {
