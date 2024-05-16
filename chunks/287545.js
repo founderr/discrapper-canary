@@ -238,10 +238,10 @@ function z(e) {
 
 function Z(e) {
   let t = C.default.getSelfEmbeddedActivityForChannel(e);
-  null != t && (0, O.stopEmbeddedActivity)({
+  null != t && ((0, O.stopEmbeddedActivity)({
     channelId: e,
     applicationId: t.applicationId
-  })
+  }), (0, O.disconnectEmbeddedActivity)(e, t.applicationId))
 }
 
 function X(e) {
