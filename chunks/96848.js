@@ -84,7 +84,7 @@ function p(e) {
           children: [(0, i.jsx)(l.Text, {
             className: d.textSelected,
             variant: "text-sm/semibold",
-            children: n.optionallyDiverseSequence
+            children: null == n.guildId ? n.optionallyDiverseSequence : null
           }), (0, i.jsx)(l.Text, {
             className: d.text,
             variant: "text-sm/semibold",

@@ -50,9 +50,9 @@ function m(e) {
     f = null != r && (0, s.isGuildVocalChannelType)(r.type),
     S = A(n, _),
     m = o.default.can(E.Permissions.USE_EXTERNAL_EMOJIS, r);
-  if (u === I.EmojiIntention.COMMUNITY_CONTENT || u === I.EmojiIntention.COMMUNITY_CONTENT_ONLY) return S && n.available ? null : I.EmojiDisabledReasons.DISALLOW_EXTERNAL;
+  if (u === I.EmojiIntention.COMMUNITY_CONTENT || u === I.EmojiIntention.COMMUNITY_CONTENT_ONLY) return S && null != n.guildId && n.available ? null : I.EmojiDisabledReasons.DISALLOW_EXTERNAL;
   if (!(0, I.isExternalEmojiAllowedForIntention)(u) && !A(n, _) && !d || (T || f) && !S && !m) return I.EmojiDisabledReasons.DISALLOW_EXTERNAL;
-  if (!n.available) return I.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE;
+  if (null != n.id && !n.available) return I.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE;
   let N = l.default.getCurrentUser();
   if (!c.default.canUseEmojisEverywhere(N) && !S) {
     if (u === I.EmojiIntention.STATUS) return I.EmojiDisabledReasons.PREMIUM_LOCKED;

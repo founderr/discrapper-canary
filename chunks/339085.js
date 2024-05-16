@@ -93,9 +93,9 @@ let j = y.default.fromTimestamp(Date.now() - 60 * L.default.Millis.DAY),
   q = new Map;
 
 function J(e) {
-  var t;
-  let n = $()[e];
-  return null != n ? null === (t = Z[n]) || void 0 === t ? void 0 : t.getUsableEmoji(e) : null
+  var t, n;
+  let i = $()[e];
+  return null != i && null !== (n = null === (t = Z[i]) || void 0 === t ? void 0 : t.getUsableEmoji(e)) && void 0 !== n ? n : void 0
 }
 
 function $() {
@@ -440,9 +440,9 @@ class ed extends(i = u.default.PersistedStore) {
   getCustomEmojiById(e) {
     return ee(),
       function(e) {
-        var t;
-        let n = $()[e];
-        return null != n ? null === (t = Z[n]) || void 0 === t ? void 0 : t.getEmoji(e) : null
+        var t, n;
+        let i = $()[e];
+        return null != i && null !== (n = null === (t = Z[i]) || void 0 === t ? void 0 : t.getEmoji(e)) && void 0 !== n ? n : void 0
       }(e)
   }
   getTopEmoji(e) {
