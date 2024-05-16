@@ -5,6 +5,7 @@ e.exports = {
   contentPanelNagbar: "contentPanelNagbar_cd5bfd",
   dependentSetting: "dependentSetting__5c861",
   feedback: "feedback_fa4f12",
+  guildSelector: "guildSelector__19a19",
   list: "list__1b9fb",
   requestNote: "requestNote__7fd48",
   requestNoteColor: "requestNoteColor__23149",
