@@ -77,7 +77,6 @@ function p(e) {
     user: s,
     onClose: r
   }) : (0, l.jsx)(g.default, {
-    className: N.infoTab,
     user: s,
     currentUser: a,
     displayProfile: i,
