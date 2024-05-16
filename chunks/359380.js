@@ -9,7 +9,7 @@ var n = a("735250"),
   c = a("964309"),
   d = a("161426"),
   u = a("898543"),
-  f = a("87576"),
+  f = a("18100"),
   m = a("308083"),
   h = a("689938"),
   p = a("661926");
@@ -57,26 +57,31 @@ let E = e => {
 };
 t.default = e => {
   let {
-    title: t,
-    description: a,
-    handleUpdate: s,
-    interests: i,
-    requiredGameId: T,
-    optional: C = !1,
-    hidePreview: x = !1
-  } = e, _ = r.useMemo(() => {
+    guildId: t,
+    title: a,
+    description: s,
+    handleUpdate: i,
+    progress: T,
+    interests: C,
+    requiredGameId: x,
+    optional: _ = !1,
+    hidePreview: g = !1
+  } = e, I = r.useMemo(() => {
     let e = [];
     return m.LANGUAGES_SET.forEach(t => e.push({
       value: t,
       label: t
     })), e
-  }, []), g = r.useMemo(() => Array.from(i), [i]), I = r.useMemo(() => g.filter(e => m.LANGUAGES_SET.has(e)), [g]), N = r.useCallback(e => {
-    let t = g.filter(e => !m.LANGUAGES_SET.has(e));
-    s(new Set([...t, ...e]))
-  }, [s, g]), v = r.useMemo(() => g.filter(e => m.ALL_TRAITS_SET.has(e) || m.LANGUAGES_SET.has(e)), [g]);
+  }, []), N = r.useMemo(() => {
+    var e;
+    return null !== (e = null != C ? C : null == T ? void 0 : T.interests) && void 0 !== e ? e : new Set
+  }, [C, null == T ? void 0 : T.interests]), v = r.useMemo(() => Array.from(N), [N]), A = r.useMemo(() => v.filter(e => m.LANGUAGES_SET.has(e)), [v]), S = r.useCallback(e => {
+    let t = v.filter(e => !m.LANGUAGES_SET.has(e));
+    i(new Set([...t, ...e]))
+  }, [i, v]), L = r.useMemo(() => v.filter(e => m.ALL_TRAITS_SET.has(e) || m.LANGUAGES_SET.has(e)), [v]);
   return (0, n.jsxs)("div", {
     className: p.slideContent,
-    children: [C && (0, n.jsx)(l.Text, {
+    children: [_ && (0, n.jsx)(l.Text, {
       variant: "text-sm/medium",
       color: "header-secondary",
       className: p.optionalTag,
@@ -84,40 +89,40 @@ t.default = e => {
     }), (0, n.jsx)(l.Heading, {
       variant: "heading-xxl/medium",
       className: p.title,
-      children: t
+      children: a
     }), (0, n.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: p.subtitle,
-      children: a
+      children: s
     }), (0, n.jsxs)("div", {
       className: p.content,
       children: [(0, n.jsxs)("div", {
         className: p.mainPanelContainer,
-        children: [T === m.VALORANT_ID && (0, n.jsx)(E, {
+        children: [x === m.VALORANT_ID && (0, n.jsx)(E, {
           title: h.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
           icon: u.default,
           traits: m.VALORANT_TRAITS,
-          interests: i,
-          handleUpdate: s
-        }), T === m.GENSHIN_ID && (0, n.jsx)(E, {
+          interests: N,
+          handleUpdate: i
+        }), x === m.GENSHIN_ID && (0, n.jsx)(E, {
           title: h.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_GENSHIN,
           icon: d.default,
           traits: m.GENSHIN_TRAITS,
-          interests: i,
-          handleUpdate: s
+          interests: N,
+          handleUpdate: i
         }), (0, n.jsx)(E, {
           title: h.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
           icon: o.default,
           traits: m.AGE_TRAITS,
-          interests: i,
-          handleUpdate: s
+          interests: N,
+          handleUpdate: i
         }), (0, n.jsx)(E, {
           title: h.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
           icon: c.default,
           traits: m.IDENTITY_TRAITS,
-          interests: i,
-          handleUpdate: s
+          interests: N,
+          handleUpdate: i
         }), (0, n.jsx)(l.Text, {
           className: p.interestsCategoryTitle,
           variant: "text-xs/semibold",
@@ -127,18 +132,20 @@ t.default = e => {
           className: p.languageSelect,
           children: (0, n.jsx)(l.SearchableSelect, {
             wrapperClassName: p.input,
-            options: _,
-            value: I,
-            onChange: N,
+            options: I,
+            value: A,
+            onChange: S,
             placeholder: h.default.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
             multi: !0
           })
         })]
       }), (0, n.jsx)("div", {
         className: p.fixedWidthSidebar,
-        children: g.length > 0 && !x && (0, n.jsx)(f.default, {
-          traits: g,
-          traitsToHighlight: v
+        children: null != T && v.length > 0 && !g && (0, n.jsx)(f.default, {
+          guildId: t,
+          progress: T,
+          traitsToHighlight: L,
+          maskDescription: !0
         })
       })]
     })]

@@ -16095,6 +16095,37 @@ h3.improved_e02592:after {
     margin: 0 0 0 .25rem
 }
 
+@use postcss-pxtorem;
+
+.gameIcon__2f065 {
+    position: relative;
+    top: .1875rem;
+    cursor: pointer;
+    margin-left: 4px
+}
+
+.gameMessageTooltip__8e99d {
+    max-width: none
+}
+
+.gameMessageTooltipContent__2e554 {
+    display: flex;
+    padding: 16px;
+    align-items: center
+}
+
+.textContainer_e1f8ac {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 8px;
+    width: 200px
+}
+
+.timestamp_f0be43 {
+    margin-bottom: 4px
+}
+
 .wrapper__40fdf {
     width: auto
 }

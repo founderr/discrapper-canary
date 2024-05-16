@@ -5,6 +5,9 @@ n.r(t), n.d(t, {
   },
   ClanDiscoveryCardView: function() {
     return y
+  },
+  Wildcards: function() {
+    return L
   }
 }), n("47120"), n("733860");
 var i = n("735250"),
@@ -34,19 +37,15 @@ var i = n("735250"),
 
 function L(e) {
   let {
-    clan: t
-  } = e, {
-    wildcardDescriptors: n,
-    branding: {
-      primaryColor: a
-    }
-  } = t, s = n.filter(e => e !== C.EMPTY_WILDCARD).join(", "), l = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), u = (0, c.getAccessibleClanColor)(a, l.hex()), d = r.useRef(null), [_, E] = r.useState(!1);
+    wildcardDescriptors: t,
+    primaryColor: n
+  } = e, a = t.filter(e => e !== C.EMPTY_WILDCARD).join(", "), s = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), l = (0, c.getAccessibleClanColor)(n, s.hex()), u = r.useRef(null), [d, _] = r.useState(!1);
   if (r.useEffect(() => {
-      let e = d.current;
-      null != e && null != e.offsetWidth && null != e.scrollWidth && E(e.offsetWidth < e.scrollWidth)
-    }, []), 0 === s.length) return null;
-  let I = null != u ? {
-    color: u.css()
+      let e = u.current;
+      null != e && null != e.offsetWidth && null != e.scrollWidth && _(e.offsetWidth < e.scrollWidth)
+    }, []), 0 === a.length) return null;
+  let E = null != l ? {
+    color: l.css()
   } : void 0;
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(o.Text, {
@@ -55,15 +54,15 @@ function L(e) {
       className: g.clanInfoItem,
       children: "\xb7"
     }), (0, i.jsx)(o.Tooltip, {
-      text: s,
+      text: a,
       color: o.Tooltip.Colors.PRIMARY,
-      shouldShow: _,
+      shouldShow: d,
       children: e => (0, i.jsx)("span", {
         ...e,
-        style: I,
+        style: E,
         className: g.wildCardText,
-        ref: d,
-        children: s
+        ref: u,
+        children: a
       })
     })]
   })
@@ -72,10 +71,11 @@ function L(e) {
 function v(e) {
   let {
     trait: t,
-    isHighlighted: n
+    isHighlighted: n,
+    className: r
   } = e;
   return (0, i.jsx)("div", {
-    className: s()(g.trait, {
+    className: s()(r, g.trait, {
       [g.highlightedTrait]: n
     }),
     children: (0, i.jsx)(o.Text, {
@@ -91,19 +91,21 @@ function D(e) {
   let {
     traits: t,
     traitsToHighlight: n,
-    expanded: a
-  } = e, s = r.useMemo(() => new Set(n), [n]);
+    expanded: a,
+    traitClassName: s
+  } = e, l = r.useMemo(() => new Set(n), [n]);
   return a ? (0, i.jsx)("div", {
     className: g.expandedTraitsContainer,
     children: t.map(e => (0, i.jsx)(v, {
+      className: s,
       trait: e,
-      isHighlighted: s.has(e)
+      isHighlighted: l.has(e)
     }, e))
   }) : (0, i.jsx)(p.default, {
     items: t,
     renderItem: e => (0, i.jsx)(v, {
       trait: e,
-      isHighlighted: s.has(e)
+      isHighlighted: l.has(e)
     }, e),
     renderOverflow: e => (0, i.jsx)(o.Tooltip, {
       text: (0, i.jsx)("div", {
@@ -307,7 +309,8 @@ function y(e) {
             className: g.clanInfoItem,
             children: null !== (n = (0, C.getPlaystyleTitle)(r.playstyle)) && void 0 !== n ? n : R.default.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
           }), (0, i.jsx)(L, {
-            clan: r
+            wildcardDescriptors: r.wildcardDescriptors,
+            primaryColor: r.branding.primaryColor
           })]
         })]
       }), (0, i.jsx)("div", {

@@ -9,7 +9,7 @@ var n = a("735250"),
   c = a("314897"),
   d = a("729285"),
   u = a("353093"),
-  f = a("87576"),
+  f = a("18100"),
   m = a("308083"),
   h = a("689938"),
   p = a("661926");
@@ -19,29 +19,32 @@ function E(e) {
 }
 t.default = e => {
   let {
-    handleUpdate: t,
-    interests: a,
-    error: s
-  } = e, [T, C] = r.useState(""), x = (0, o.useStateFromStores)([c.default], () => c.default.getId()), _ = r.useMemo(() => (0, u.stableSortSet)(m.SUGGESTED_TRAITS_SET, x), [x]), g = r.useMemo(() => Array.from(a), [a]), I = r.useMemo(() => g.filter(E), [g]), N = r.useMemo(() => [..._, ...I], [I, _]), v = r.useMemo(() => g.filter(e => !m.ALL_TRAITS_SET.has(e) && !m.LANGUAGES_SET.has(e)), [g]), A = e => {
-    let n = new Set(a);
-    n.delete(e), t({
-      interests: n
+    guildId: t,
+    handleUpdate: a,
+    progress: s,
+    error: T
+  } = e, {
+    interests: C
+  } = s, [x, _] = r.useState(""), g = (0, o.useStateFromStores)([c.default], () => c.default.getId()), I = r.useMemo(() => (0, u.stableSortSet)(m.SUGGESTED_TRAITS_SET, g), [g]), N = r.useMemo(() => Array.from(C), [C]), v = r.useMemo(() => N.filter(E), [N]), A = r.useMemo(() => [...I, ...v], [v, I]), S = r.useMemo(() => N.filter(e => !m.ALL_TRAITS_SET.has(e) && !m.LANGUAGES_SET.has(e)), [N]), L = e => {
+    let t = new Set(C);
+    t.delete(e), a({
+      interests: t
     })
-  }, S = r.useCallback(e => {
-    if (a.size === m.MAX_NUM_INTERESTS) return;
-    let n = null != e ? e : T.trim();
-    if (0 === n.length) return;
-    let r = new Set(a);
-    r.add(n), t({
-      interests: r
-    }), C("")
-  }, [t, T, a]), L = r.useCallback(e => {
+  }, R = r.useCallback(e => {
+    if (C.size === m.MAX_NUM_INTERESTS) return;
+    let t = null != e ? e : x.trim();
+    if (0 === t.length) return;
+    let n = new Set(C);
+    n.add(t), a({
+      interests: n
+    }), _("")
+  }, [a, x, C]), y = r.useCallback(e => {
     switch (e.key) {
       case "Enter":
       case "Tab":
-        e.preventDefault(), e.stopPropagation(), S()
+        e.preventDefault(), e.stopPropagation(), R()
     }
-  }, [S]);
+  }, [R]);
   return (0, n.jsxs)("div", {
     className: p.slideContent,
     children: [(0, n.jsx)(l.Heading, {
@@ -53,11 +56,11 @@ t.default = e => {
       color: "header-secondary",
       className: p.subtitle,
       children: h.default.Messages.CLAN_SETUP_INTERESTS_SUBTITLE.format()
-    }), null != s && (0, n.jsx)(l.Text, {
+    }), null != T && (0, n.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
       className: p.errorText,
-      children: s
+      children: T
     }), (0, n.jsxs)("div", {
       className: p.content,
       children: [(0, n.jsxs)("div", {
@@ -66,19 +69,19 @@ t.default = e => {
           className: p.inputContainer,
           children: [(0, n.jsx)(l.TextInput, {
             inputClassName: p.input,
-            value: T,
-            onKeyDown: L,
-            onChange: C,
+            value: x,
+            onKeyDown: y,
+            onChange: _,
             placeholder: h.default.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
             maxLength: m.MAX_INTEREST_LENGTH,
-            disabled: a.size === m.MAX_NUM_INTERESTS
-          }), T.length > 0 && (0, n.jsx)(l.Clickable, {
-            onClick: () => S(T.trim()),
+            disabled: C.size === m.MAX_NUM_INTERESTS
+          }), x.length > 0 && (0, n.jsx)(l.Clickable, {
+            onClick: () => R(x.trim()),
             className: i()(p.plusIcon, p.clickable),
             children: (0, n.jsx)(d.default, {
               className: p.icon
             })
-          }), T.length > 0 && (0, n.jsx)(l.Text, {
+          }), x.length > 0 && (0, n.jsx)(l.Text, {
             color: "text-muted",
             variant: "text-xs/normal",
             className: p.enterToSearchText,
@@ -91,13 +94,13 @@ t.default = e => {
           children: h.default.Messages.CLAN_SETUP_SUGGESTED_INTERESTS
         }), (0, n.jsx)("div", {
           className: p.interestsCategory,
-          children: N.map(e => {
-            let t = a.has(e);
+          children: A.map(e => {
+            let t = C.has(e);
             return (0, n.jsx)(l.Clickable, {
               className: i()(p.interestsTag, p.selectableOption, {
                 [p.selectedOption]: t
               }),
-              onClick: () => t ? A(e) : S(e),
+              onClick: () => t ? L(e) : R(e),
               children: (0, n.jsx)(l.Text, {
                 variant: "text-xs/medium",
                 color: "none",
@@ -108,9 +111,11 @@ t.default = e => {
         })]
       }), (0, n.jsx)("div", {
         className: p.fixedWidthSidebar,
-        children: g.length > 0 && (0, n.jsx)(f.default, {
-          traits: g,
-          traitsToHighlight: v
+        children: N.length > 0 && (0, n.jsx)(f.default, {
+          guildId: t,
+          progress: s,
+          traitsToHighlight: S,
+          maskDescription: !0
         })
       })]
     })]

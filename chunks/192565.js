@@ -106,13 +106,14 @@ let R = {
       handleClanUpdate: s
     } = v(t);
     return (0, a.jsx)(p.default, {
+      guildId: t,
       title: I.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
       description: I.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
       handleUpdate: e => s({
         interests: e
       }),
       requiredGameId: n.requiredGameId,
-      interests: n.interests
+      progress: n
     })
   },
   [g.ClanSetupSteps.INTERESTS]: function(e) {
@@ -124,8 +125,9 @@ let R = {
       handleClanUpdate: l
     } = v(t);
     return (0, a.jsx)(_.default, {
+      guildId: t,
       handleUpdate: l,
-      interests: n.interests,
+      progress: n,
       error: null == s ? void 0 : s.interests
     })
   },
@@ -138,9 +140,9 @@ let R = {
       handleClanUpdate: l
     } = v(t);
     return (0, a.jsx)(E.default, {
+      guildId: t,
       handleUpdate: l,
-      description: n.description,
-      wildcardDescriptors: n.wildcardDescriptors,
+      progress: n,
       errors: s
     })
   },

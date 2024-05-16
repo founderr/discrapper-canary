@@ -265,23 +265,25 @@ t.default = e => {
               });
             case L.ClanSetupSteps.UTILITY_TRAITS:
               return (0, a.jsx)(x.default, {
+                guildId: t,
                 title: O.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
                 description: O.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
                 handleUpdate: B,
-                interests: D.interests,
+                progress: D,
                 requiredGameId: null != G ? G : void 0
               });
             case L.ClanSetupSteps.INTERESTS:
               return (0, a.jsx)(g.default, {
+                guildId: t,
                 handleUpdate: y,
-                interests: D.interests,
+                progress: D,
                 error: v.interests
               });
             case L.ClanSetupSteps.DESCRIPTION:
               return (0, a.jsx)(m.default, {
+                guildId: t,
                 handleUpdate: y,
-                description: D.description,
-                wildcardDescriptors: D.wildcardDescriptors,
+                progress: D,
                 errors: v
               });
             case L.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
