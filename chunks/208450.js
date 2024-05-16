@@ -201,7 +201,7 @@ class b extends a.PureComponent {
           n = R.getSearchQueryFromTokens(e);
         for (let t = 0; t < e.length; t++) !R.filterHasAnswer(e[t], e[t + 1]) && (s = s.substring(0, e[t].start) + s.substring(e[t].end));
         if (0 === e.length || 0 === Object.keys(n).length) return !1;
-        j(t, n, s, !!a), this.onBlur()
+        j(t, n, s, !!a), c.AccessibilityAnnouncer.announce(D.default.Messages.SEARCH_STARTED_A11Y_ANNOUNCE), this.onBlur()
       }
       return !0
     }), y(this, "handleClearSearch", e => {
