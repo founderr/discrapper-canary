@@ -17148,6 +17148,8 @@ e.exports = Object.freeze({
   QUESTS_JOIN_ME: "Join Me",
   QUESTS_FOR_YOU: "QUESTS FOR YOU",
   QUESTS_OTHER: "OTHER QUESTS",
+  QUESTS_ALL: "All Quests",
+  QUESTS_COMPLETED: "Completed Quests",
   QUESTS_REWARD_VERIFICATION_TITLE: "Verify your account to claim rewards!",
   QUESTS_REWARD_VERIFICATION_BODY: "We have sent a verification email to: [{emailAddress}]({emailAddressLink})",
   QUESTS_REWARD_VERIFICATION_ERROR: "Uh oh! We failed to send you a verification email.",
