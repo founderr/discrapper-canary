@@ -26,10 +26,10 @@ var s, a, i, r, l = n("735250"),
   O = n("981631"),
   v = n("231338"),
   L = n("689938"),
-  M = n("531690"),
+  x = n("531690"),
   b = n("611273");
 (i = s || (s = {}))[i.INITIALIZING = 0] = "INITIALIZING", i[i.PENDING_REMOTE_INIT = 1] = "PENDING_REMOTE_INIT", i[i.PENDING_FINISH = 2] = "PENDING_FINISH", i[i.PENDING_TICKET = 3] = "PENDING_TICKET", i[i.PENDING_LOGIN = 4] = "PENDING_LOGIN", i[i.FINISH = 5] = "FINISH", (r = a || (a = {}))[r.QR_CODE = 0] = "QR_CODE", r[r.CONFIRM = 1] = "CONFIRM";
-let x = n("515695"),
+let M = n("515695"),
   y = new m.default("LoginQRSocket");
 
 function U(e) {
@@ -38,29 +38,29 @@ function U(e) {
   } = e, [n, s] = o.useState(!1);
   return o.useEffect(() => {
     let e = new Image;
-    e.src = x, e.onload = () => s(!0), e.onerror = () => s(!0)
-  }, [x]), o.useEffect(() => {
+    e.src = M, e.onload = () => s(!0), e.onerror = () => s(!0)
+  }, [M]), o.useEffect(() => {
     n && f.AccessibilityAnnouncer.announce(L.default.Messages.LOGIN_WITH_QR_LOADING_FINISHED_LABEL)
   }, [n]), (0, l.jsx)("div", {
-    className: M.qrCodeContainer,
+    className: x.qrCodeContainer,
     children: "" !== t && n ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(T.default, {
-        className: M.qrCode,
+        className: x.qrCode,
         size: 160,
         text: t
       }), (0, l.jsx)("div", {
-        className: M.qrCodeOverlay,
+        className: x.qrCodeOverlay,
         children: (0, l.jsx)("img", {
-          src: x,
+          src: M,
           alt: ""
         })
       })]
     }) : (0, l.jsx)("div", {
-      className: M.qrCodeOverlay,
+      className: x.qrCodeOverlay,
       "aria-label": L.default.Messages.LOGIN_WITH_QR_LOADING_LABEL,
       "aria-busy": !0,
       children: (0, l.jsx)(f.Spinner, {
-        className: M.qrCode,
+        className: x.qrCode,
         type: f.Spinner.Type.WANDERING_CUBES,
         "aria-hidden": !0
       })
@@ -133,7 +133,7 @@ function G(e) {
       } = t;
       return (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(g.default, {
-          className: M.qrAvatar,
+          className: x.qrAvatar,
           user: e,
           size: f.AvatarSizes.SIZE_120,
           isMobile: !0,
@@ -150,7 +150,7 @@ function G(e) {
           color: f.Button.Colors.LINK,
           size: f.Button.Sizes.MIN,
           onClick: n,
-          className: M.startOverButton,
+          className: x.startOverButton,
           children: L.default.Messages.QR_CODE_LOGIN_START_OVER
         })]
       })
@@ -343,14 +343,14 @@ function w(e) {
     })
   }, [a, t, i, u]), (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
-      className: M.verticalSeparator
+      className: x.verticalSeparator
     }), (0, l.jsx)(f.Sequencer, {
       fillParent: !0,
-      className: M.qrLogin,
+      className: x.qrLogin,
       step: h,
       steps: [0, 1],
       children: (0, l.jsx)("div", {
-        className: M.qrLoginInner,
+        className: x.qrLoginInner,
         children: (0, l.jsx)(G, {
           state: a,
           cancel: r,

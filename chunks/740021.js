@@ -39,8 +39,8 @@ function U(e) {
     theme: p
   } = (0, E.useUserProfileThemeContext)(), h = (0, c.default)(t.id, U), {
     avatarSrc: R,
-    eventHandlers: M,
-    avatarDecorationSrc: P
+    eventHandlers: P,
+    avatarDecorationSrc: M
   } = (0, f.default)({
     user: t,
     guildId: null == s ? void 0 : s.guildId,
@@ -58,10 +58,10 @@ function U(e) {
     }), (0, l.jsx)("div", {
       className: A.inner,
       children: (0, l.jsxs)("div", {
-        ...M,
+        ...P,
         children: [(0, l.jsx)(x, {
           src: R,
-          avatarDecoration: P,
+          avatarDecoration: M,
           size: T.AvatarSizes.SIZE_120,
           className: A.avatar,
           status: j,

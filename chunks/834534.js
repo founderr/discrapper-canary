@@ -38,8 +38,8 @@ function p(e) {
   } = e, {
     theme: R
   } = (0, _.useUserProfileThemeContext)(), {
-    trackUserProfileAction: M
-  } = (0, m.useUserProfileAnalyticsContext)(), P = null == i ? void 0 : i.guildId, j = (0, r.useStateFromStores)([S.default], () => null != P ? S.default.getGuild(P) : null), {
+    trackUserProfileAction: P
+  } = (0, m.useUserProfileAnalyticsContext)(), M = null == i ? void 0 : i.guildId, j = (0, r.useStateFromStores)([S.default], () => null != M ? S.default.getGuild(M) : null), {
     recentGames: L,
     isFetching: y,
     currentUserApplicationIds: O
@@ -89,7 +89,7 @@ function p(e) {
         userId: t.id,
         className: C.note,
         autoFocus: p,
-        onUpdate: () => M({
+        onUpdate: () => P({
           action: "SET_NOTE"
         })
       })

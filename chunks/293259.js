@@ -30,8 +30,8 @@ var l = s("735250"),
   p = s("652853"),
   h = s("496206"),
   R = s("228168"),
-  M = s("981631"),
-  P = s("231338"),
+  P = s("981631"),
+  M = s("231338"),
   j = s("689938"),
   L = s("155614");
 let y = r.AvatarSizes.SIZE_120,
@@ -88,7 +88,7 @@ function F(e) {
         context: {
           location: "User Profile"
         },
-        type: M.RelationshipTypes.BLOCKED
+        type: P.RelationshipTypes.BLOCKED
       })
     } catch (e) {
       $()
@@ -118,7 +118,7 @@ function F(e) {
           avatarDecoration: q,
           size: y,
           className: L.avatar,
-          status: X ? P.StatusTypes.UNKNOWN : G ? P.StatusTypes.STREAMING : V,
+          status: X ? M.StatusTypes.UNKNOWN : G ? M.StatusTypes.STREAMING : V,
           statusBackdropColor: (0, r.getStatusBackdropColor)(Z),
           isMobile: H,
           statusTooltip: !0,

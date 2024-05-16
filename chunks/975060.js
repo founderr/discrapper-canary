@@ -16,19 +16,19 @@ let E = "",
   P = "",
   R = "",
   N = "",
-  M = "",
-  U = !1,
+  U = "",
+  M = !1,
   p = null,
   h = null,
   O = null,
   L = null;
 
 function m() {
-  _ = null, E = "", S = null, d = "", c = !1, A = null, f = "US", T = "", I = "", C = "", P = "", R = "", N = "", M = "", U = !1, p = null, h = null, O = null, L = null
+  _ = null, E = "", S = null, d = "", c = !1, A = null, f = "US", T = "", I = "", C = "", P = "", R = "", N = "", U = "", M = !1, p = null, h = null, O = null, L = null
 }
 
 function y(e) {
-  T = e.name, f = e.country, C = e.line1, P = e.line2, R = e.city, N = e.postalCode, M = e.state, I = e.email
+  T = e.name, f = e.country, C = e.line1, P = e.line2, R = e.city, N = e.postalCode, U = e.state, I = e.email
 }
 
 function F() {
@@ -83,11 +83,11 @@ class g extends(a = l.default.Store) {
       line2: P,
       city: R,
       postalCode: N,
-      state: M
+      state: U
     }
   }
   get isBillingAddressInfoValid() {
-    return U
+    return M
   }
   get error() {
     return p
@@ -125,7 +125,7 @@ i = "NewPaymentSourceStore", (u = "displayName") in(r = g) ? Object.defineProper
       info: t,
       isValid: n
     } = e;
-    null != t.name && "" !== t.name && (T = t.name), f = t.country, T = t.name, C = t.line1, P = t.line2, R = t.city, N = t.postalCode, M = t.state, I = t.email, U = n
+    null != t.name && "" !== t.name && (T = t.name), f = t.country, T = t.name, C = t.line1, P = t.line2, R = t.city, N = t.postalCode, U = t.state, I = t.email, M = n
   },
   BRAINTREE_TOKENIZE_PAYPAL_START: function() {
     E = "", S = null
@@ -136,7 +136,7 @@ i = "NewPaymentSourceStore", (u = "displayName") in(r = g) ? Object.defineProper
       nonce: n,
       billingAddress: r
     } = e;
-    E = t, S = n, y(r), U = f.length > 0
+    E = t, S = n, y(r), M = f.length > 0
   },
   BRAINTREE_TOKENIZE_VENMO_START: function() {
     d = "", S = null

@@ -20,7 +20,7 @@ t.default = e => {
     style: p,
     children: b,
     blur: m = !1
-  } = e, v = (0, s.useStateFromStores)([c.default], () => c.default.saturation), y = n.useMemo(() => {
+  } = e, y = (0, s.useStateFromStores)([c.default], () => c.default.saturation), v = n.useMemo(() => {
     if (null == t) return p;
     let e = (0, d.getCollectiblesAssetURL)(t, {
         size: r,
@@ -30,14 +30,14 @@ t.default = e => {
         filter: "blur(2px)",
         transform: "scale(1.02)"
       } : {};
-    if (1 === v) return {
+    if (1 === y) return {
       ...p,
       backgroundImage: a ? "url(".concat(e, "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)") : "url(".concat(e, ")"),
       backgroundBlendMode: "multiply",
       backgroundSize: "cover",
       ...o
     };
-    let n = (0, u.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - v);
+    let n = (0, u.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - y);
     return {
       ...p,
       backgroundImage: "linear-gradient(".concat(n, ", ").concat(n, "), url(").concat(e, ")"),
@@ -45,10 +45,10 @@ t.default = e => {
       backgroundSize: "cover",
       ...o
     }
-  }, [t, r, v, p, m, a]);
+  }, [t, r, y, p, m, a]);
   return (0, o.jsx)("div", {
     className: l()(C.banner, g),
-    style: y,
+    style: v,
     children: b
   })
 }

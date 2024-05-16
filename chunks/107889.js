@@ -35,8 +35,8 @@ function p(e) {
     channelId: p,
     messageId: h,
     roleId: R,
-    friendToken: M,
-    initialSection: P,
+    friendToken: P,
+    initialSection: M,
     autoFocusNote: j,
     transitionState: L,
     sourceAnalyticsLocations: y = [],
@@ -95,7 +95,7 @@ function p(e) {
               onClose: O
             }), (0, l.jsx)(v.default, {
               user: t,
-              friendToken: M
+              friendToken: P
             }), (0, l.jsx)(T.default, {
               user: t,
               profileType: x.UserProfileTypes.FULL_SIZE,
@@ -137,7 +137,7 @@ function p(e) {
           }), (0, l.jsx)(g.default, {
             user: t,
             displayProfile: Y,
-            initialSection: P,
+            initialSection: M,
             autoFocusNote: j,
             transitionState: L,
             onClose: O

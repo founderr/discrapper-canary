@@ -37,8 +37,8 @@ function C(e) {
   } = e, {
     trackUserProfileAction: h
   } = (0, E.useUserProfileAnalyticsContext)(), R = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
-    theme: M
-  } = (0, T.useUserProfileThemeContext)(), P = (0, r.useStateFromStores)([S.default], () => S.default.locale), j = (0, f.useIsUserRecentGamesEnabled)({
+    theme: P
+  } = (0, T.useUserProfileThemeContext)(), M = (0, r.useStateFromStores)([S.default], () => S.default.locale), j = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
   }), L = (0, d.default)("user_profile"), y = (0, I.default)(s.id), O = a.useRef(null);
@@ -97,8 +97,8 @@ function C(e) {
     }), (0, l.jsx)(g.ConnectedUserAccounts, {
       ref: O,
       connectedAccounts: y,
-      theme: M,
-      locale: P,
+      theme: P,
+      locale: M,
       className: N.userInfoSection,
       userId: s.id
     })]

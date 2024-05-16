@@ -53,7 +53,7 @@ function N(e) {
   if (!f || t.id !== T || ![c.PaymentStatusTypes.COMPLETED, c.PaymentStatusTypes.CANCELED].includes(t.status)) return !1;
   f = !1, I = null, T = null, o.default.wait(s.clearError), o.default.wait(E.clearPurchaseError)
 }
-class M extends(r = l.default.Store) {
+class U extends(r = l.default.Store) {
   get isAwaitingAuthentication() {
     return f
   }
@@ -64,12 +64,12 @@ class M extends(r = l.default.Store) {
     return T
   }
 }
-a = "PaymentAuthenticationStore", (i = "displayName") in(u = M) ? Object.defineProperty(u, i, {
+a = "PaymentAuthenticationStore", (i = "displayName") in(u = U) ? Object.defineProperty(u, i, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : u[i] = a, t.default = new M(o.default, {
+}) : u[i] = a, t.default = new U(o.default, {
   BILLING_SUBSCRIPTION_UPDATE_START: C,
   PAYMENT_AUTHENTICATION_CLEAR_ERROR: C,
   PREMIUM_PAYMENT_ERROR_CLEAR: C,

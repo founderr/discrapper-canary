@@ -1,22 +1,22 @@
 "use strict";
-s.r(S), s.d(S, {
+n.r(e), n.d(e, {
   isGuildEligibleForStageChannels: function() {
-    return n
+    return a
   },
   useGuildEligibleForStageChannels: function() {
-    return I
+    return l
   }
-}), s("47120");
-var e = s("442837"),
-  i = s("430824"),
-  _ = s("981631");
+}), n("47120");
+var i = n("442837"),
+  r = n("430824"),
+  o = n("981631");
 
-function n(E) {
-  var S;
-  let [s] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.default];
-  return !!(null === (S = s.getGuild(E)) || void 0 === S ? void 0 : S.hasFeature(_.GuildFeatures.COMMUNITY))
+function a(t) {
+  var e;
+  let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default];
+  return !!(null === (e = n.getGuild(t)) || void 0 === e ? void 0 : e.hasFeature(o.GuildFeatures.COMMUNITY))
 }
 
-function I(E) {
-  return (0, e.useStateFromStores)([i.default], () => n(E, [i.default]), [E])
+function l(t) {
+  return (0, i.useStateFromStores)([r.default], () => a(t, [r.default]), [t])
 }
