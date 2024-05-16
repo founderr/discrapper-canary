@@ -1,0 +1,58 @@
+"use strict";
+e.exports = function(e) {
+  var a, n;
+  return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (a = !0, e = "Y" + e.substr(1)), h.test(e) ? e = e.substr(0, e.length - 2) : M.test(e) && (e = e.substr(0, e.length - 1)), (n = g.exec(e)) ? s.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = p.exec(e)) && u.test(n[1]) && (e = n[1], E.test(e) ? e += "e" : A.test(e) ? e = e.substr(0, e.length - 1) : d.test(e) && (e += "e")), (n = m.exec(e)) && u.test(n[1]) && (e = n[1] + "i"), (n = x.exec(e)) && s.test(n[1]) && (e = n[1] + t[n[2]]), (n = T.exec(e)) && s.test(n[1]) && (e = n[1] + l[n[2]]), (n = I.exec(e)) ? o.test(n[1]) && (e = n[1]) : (n = _.exec(e)) && o.test(n[1]) && (e = n[1]), (n = f.exec(e)) && (o.test(n[1]) || r.test(n[1]) && !d.test(n[1])) && (e = n[1]), c.test(e) && o.test(e) && (e = e.substr(0, e.length - 1)), a && (e = "y" + e.substr(1)), e)
+};
+var t = {
+    ational: "ate",
+    tional: "tion",
+    enci: "ence",
+    anci: "ance",
+    izer: "ize",
+    bli: "ble",
+    alli: "al",
+    entli: "ent",
+    eli: "e",
+    ousli: "ous",
+    ization: "ize",
+    ation: "ate",
+    ator: "ate",
+    alism: "al",
+    iveness: "ive",
+    fulness: "ful",
+    ousness: "ous",
+    aliti: "al",
+    iviti: "ive",
+    biliti: "ble",
+    logi: "log"
+  },
+  l = {
+    icate: "ic",
+    ative: "",
+    alize: "al",
+    iciti: "ic",
+    ical: "ic",
+    ful: "",
+    ness: ""
+  },
+  a = "[aeiouy]",
+  n = "([^aeiou][^aeiouy]*)",
+  i = "(" + a + "[aeiou]*)",
+  s = RegExp("^" + n + "?" + i + n),
+  r = RegExp("^" + n + "?" + i + n + i + "?$"),
+  o = RegExp("^" + n + "?(" + i + n + "){2,}"),
+  u = RegExp("^" + n + "?" + a),
+  d = RegExp("^" + n + a + "[^aeiouwxy]$"),
+  c = /ll$/,
+  f = /^(.+?)e$/,
+  m = /^(.+?)y$/,
+  _ = /^(.+?(s|t))(ion)$/,
+  p = /^(.+?)(ed|ing)$/,
+  E = /(at|bl|iz)$/,
+  g = /^(.+?)eed$/,
+  M = /^.+?[^s]s$/,
+  h = /^.+?(ss|i)es$/,
+  A = /([^aeiouylsz])\1$/,
+  x = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
+  T = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+  I = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")

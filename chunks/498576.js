@@ -1,5 +1,5 @@
-    "use strict";
-    var n = r("332916");
-    e.exports = Array.isArray || function(e) {
-      return "Array" === n(e)
-    }
+"use strict";
+var e = n("332916");
+t.exports = Array.isArray || function(t) {
+  return "Array" === e(t)
+}

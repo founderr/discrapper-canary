@@ -1,0 +1,94 @@
+"use strict";
+r.r(t);
+var a = r("319301");
+let i = {
+  figma: {
+    category: "feedback"
+  }
+};
+t.default = (0, a.defineColorTokens)({
+  "info-positive-background": {
+    dark: {
+      color: "green.360",
+      opacity: .1
+    },
+    light: {
+      color: "green.400",
+      opacity: .05
+    },
+    meta: i
+  },
+  "info-positive-foreground": {
+    dark: "green.360",
+    light: "green.400",
+    meta: i
+  },
+  "info-positive-text": {
+    dark: "white.500",
+    light: "black.500",
+    meta: i
+  },
+  "info-warning-background": {
+    dark: {
+      color: "yellow.300",
+      opacity: .1
+    },
+    light: {
+      color: "yellow.400",
+      opacity: .1
+    },
+    meta: i
+  },
+  "info-warning-foreground": {
+    dark: "yellow.300",
+    light: "yellow.400",
+    meta: i
+  },
+  "info-warning-text": {
+    dark: "white.500",
+    light: "black.500",
+    meta: i
+  },
+  "info-danger-background": {
+    dark: {
+      color: "red.400",
+      opacity: .1
+    },
+    light: {
+      color: "red.430",
+      opacity: .1
+    },
+    meta: i
+  },
+  "info-danger-foreground": {
+    dark: "red.400",
+    light: "red.430",
+    meta: i
+  },
+  "info-danger-text": {
+    dark: "white.500",
+    light: "black.500",
+    meta: i
+  },
+  "info-help-background": {
+    dark: {
+      color: "blue.345",
+      opacity: .1
+    },
+    light: {
+      color: "blue.430",
+      opacity: .1
+    },
+    meta: i
+  },
+  "info-help-foreground": {
+    dark: "blue.345",
+    light: "blue.430",
+    meta: i
+  },
+  "info-help-text": {
+    dark: "white.500",
+    light: "black.500",
+    meta: i
+  }
+})

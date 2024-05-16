@@ -1,0 +1,38 @@
+"use strict";
+r.r(t);
+var a = r("319301");
+let i = {
+  figma: {
+    category: "embeds"
+  }
+};
+t.default = (0, a.defineColorTokens)({
+  "embed-title": {
+    name: "header-primary",
+    meta: i
+  },
+  "embed-background": {
+    light: {
+      color: "primary.130"
+    },
+    dark: {
+      color: "primary.630"
+    },
+    darker: {
+      color: "plum.18"
+    },
+    midnight: {
+      color: "plum.23"
+    },
+    meta: i
+  },
+  "embed-background-alternate": {
+    dark: {
+      color: "primary.600"
+    },
+    light: {
+      color: "primary.200"
+    },
+    meta: i
+  }
+})

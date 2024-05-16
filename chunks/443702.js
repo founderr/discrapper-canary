@@ -1,0 +1,103 @@
+"use strict";
+s.r(t), s.d(t, {
+  default: function() {
+    return x
+  }
+});
+var a = s("735250"),
+  n = s("470079"),
+  l = s("512722"),
+  i = s.n(l),
+  r = s("442837"),
+  o = s("481060"),
+  d = s("570140"),
+  u = s("355467"),
+  c = s("230711"),
+  S = s("497321"),
+  E = s("231428"),
+  T = s("390954"),
+  f = s("89057"),
+  m = s("246946"),
+  _ = s("594174"),
+  g = s("351402"),
+  I = s("853872"),
+  h = s("78839"),
+  N = s("706454"),
+  p = s("981631"),
+  C = s("689938"),
+  A = s("499937");
+class O extends n.PureComponent {
+  componentDidMount() {
+    d.default.wait(() => {
+      u.fetchPaymentSources(), u.fetchSubscriptions()
+    })
+  }
+  handleRedemptionRedirect() {
+    c.default.setSection(p.UserSettingsSections.INVENTORY)
+  }
+  render() {
+    let {
+      syncing: e,
+      hide: t,
+      paymentSources: s,
+      defaultPaymentSourceId: n,
+      locale: l,
+      premiumSubscription: i,
+      isRemovingPaymentSource: r,
+      isUpdatingPaymentSource: d
+    } = this.props;
+    return t ? (0, a.jsx)(S.default, {}) : (0, a.jsxs)("div", {
+      className: A.__invalid_userSettingsBilling,
+      children: [e && 0 === Object.keys(s).length ? (0, a.jsx)("div", {
+        className: A.syncing,
+        children: (0, a.jsx)(o.Spinner, {})
+      }) : (0, a.jsx)(T.default, {
+        paymentSources: s,
+        defaultPaymentSourceId: n,
+        premiumSubscriptionPaymentSourceId: null != i && i.status !== p.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
+        locale: l,
+        removing: r,
+        submitting: d
+      }), (0, a.jsx)("div", {
+        className: A.paymentHistory,
+        children: (0, a.jsxs)(o.HeadingLevel, {
+          component: (0, a.jsx)(o.FormTitle, {
+            tag: "h1",
+            children: C.default.Messages.BILLING_PAYMENT_HISTORY
+          }),
+          children: [(0, a.jsx)(f.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
+            locale: l
+          })]
+        })
+      }), (0, a.jsx)(o.Card, {
+        className: A.codeRedemptionRedirect,
+        type: o.Card.Types.CUSTOM,
+        children: C.default.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({
+          onClick: this.handleRedemptionRedirect
+        })
+      })]
+    })
+  }
+}
+
+function x() {
+  let e = (0, r.useStateFromStoresObject)([N.default, g.default, I.default, _.default, m.default, h.default], () => {
+    let e = h.default.getPremiumTypeSubscription(),
+      t = _.default.getCurrentUser();
+    return i()(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
+      locale: N.default.locale,
+      hide: m.default.enabled,
+      isClaimed: t.isClaimed(),
+      isVerified: t.verified,
+      premiumSubscription: e,
+      defaultPaymentSourceId: I.default.defaultPaymentSourceId,
+      paymentSources: I.default.paymentSources,
+      syncing: g.default.isSyncing,
+      isRemovingPaymentSource: g.default.isRemovingPaymentSource,
+      isUpdatingPaymentSource: g.default.isUpdatingPaymentSource
+    }
+  });
+  return (0, a.jsx)(O, {
+    ...e
+  })
+}
