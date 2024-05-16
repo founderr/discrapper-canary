@@ -12,124 +12,118 @@ var e = s("253923"),
   R = s("71275"),
   O = s("60222"),
   A = s("665906"),
-  P = s("854536"),
-  T = s("131704"),
-  M = s("430824"),
-  C = s("63063"),
-  a = s("981631"),
-  l = s("71080"),
-  m = s("689938");
+  P = s("131704"),
+  T = s("430824"),
+  M = s("63063"),
+  C = s("981631"),
+  a = s("71080"),
+  D = s("689938");
 
-function D(E) {
+function m(E) {
   let S = (0, O.isGuildEligibleForStageChannels)(E),
     s = (0, I.getEnableForumPermissions)(E),
     e = (0, N.isMemberVerificationManualApproval)(E),
-    t = M.default.getGuild(E),
+    t = T.default.getGuild(E),
     r = null != t && (0, n.isCreatorMonetizationEnabledGuild)(t),
-    o = (0, _.getClydeExperimentEnabled)(t),
-    R = P.default.getCurrentConfig({
-      guildId: E,
-      location: "getPermissionOptions"
-    }).enabled;
+    o = (0, _.getClydeExperimentEnabled)(t);
   return {
-    PRIORITY_SPEAKER_DESCRIPTION: m.default.Messages.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_APP.format({
-      keybind: m.default.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY,
+    PRIORITY_SPEAKER_DESCRIPTION: D.default.Messages.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_APP.format({
+      keybind: D.default.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY,
       onClick: () => {
-        i.default.open(a.UserSettingsSections.KEYBINDS)
+        i.default.open(C.UserSettingsSections.KEYBINDS)
       }
     }),
-    SOUNDBOARD_DESCRIPTION: m.default.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION_LEARN_MORE.format({
-      helpCenterArticle: C.default.getArticleURL(a.HelpdeskArticles.SOUNDBOARD)
+    SOUNDBOARD_DESCRIPTION: D.default.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION_LEARN_MORE.format({
+      helpCenterArticle: M.default.getArticleURL(C.HelpdeskArticles.SOUNDBOARD)
     }),
     showStageChannelPermissions: S,
     showExperimental: !0,
     showForumPermissions: s,
     showMembershipManualApprovalPermissions: e,
     showCreatorMonetizationAnalyticsPermission: r,
-    showClydeAIPermissions: o,
-    inVoiceBgExperiment: R
+    showClydeAIPermissions: o
   }
 }
 
-function L(E, S) {
+function l(E, S) {
   return E ? [S()] : []
 }
 S.default = {
   generateChannelPermissionSpec: function(E, S, s, i) {
-    var n, N, O, P, C, L;
+    var n, N, O, M, l, L;
     let g = (0, I.getEnableForumPermissions)(E),
-      u = (0, l.getChannelPermissionSpecMap)(S, s, g, i),
-      c = D(E),
-      d = A.VoiceInThreadsExperiment.getCurrentConfig({
+      u = (0, a.getChannelPermissionSpecMap)(S, s, g, i),
+      c = m(E),
+      G = A.VoiceInThreadsExperiment.getCurrentConfig({
         guildId: E,
         location: "3ad37d_1"
-      }).enabled && T.VOICE_THREAD_PARENT_CHANNEL_TYPES.has(S.type),
-      G = (0, R.isStageVideoEnabled)(E),
-      f = (0, r.canCurrentUserManageMessageFilters)(E),
-      U = S.isMediaChannel(),
-      p = M.default.getGuild(E),
+      }).enabled && P.VOICE_THREAD_PARENT_CHANNEL_TYPES.has(S.type),
+      d = (0, R.isStageVideoEnabled)(E),
+      U = (0, r.canCurrentUserManageMessageFilters)(E),
+      f = S.isMediaChannel(),
+      p = T.default.getGuild(E),
       V = (0, _.getClydeExperimentEnabled)(p);
     switch (S.type) {
-      case a.ChannelTypes.GUILD_CATEGORY:
+      case C.ChannelTypes.GUILD_CATEGORY:
         ;
-        return [e.generateChannelGeneralSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CATEGORY), e.generateChannelMembershipSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
+        return [e.generateChannelGeneralSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CATEGORY), e.generateChannelMembershipSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
           showPrivateThreads: !0,
           showCreateThreads: !0,
           showClydeAIPermissions: V
-        }), e.generateChannelVoiceSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), ...(n = c.showStageChannelPermissions, N = () => e.generateChannelStageSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_STAGE), n ? [N()] : []), e.generateChannelEventsSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS)];
-      case a.ChannelTypes.GUILD_VOICE:
-        return [e.generateChannelGeneralSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL, {
+        }), e.generateChannelVoiceSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), ...(n = c.showStageChannelPermissions, N = () => e.generateChannelStageSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_STAGE), n ? [N()] : []), e.generateChannelEventsSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS)];
+      case C.ChannelTypes.GUILD_VOICE:
+        return [e.generateChannelGeneralSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL, {
           showManageWebhooks: !0
-        }), e.generateChannelMembershipSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelVoiceSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), e.generateChannelVoiceChatSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT, {
-          sectionDescription: f ? m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT_DESCRIPTION.format({
+        }), e.generateChannelMembershipSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelVoiceSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), e.generateChannelVoiceChatSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT, {
+          sectionDescription: U ? D.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT_DESCRIPTION.format({
             setUpAutomod: () => {
-              o.default.open(E, a.GuildSettingsSections.GUILD_AUTOMOD)
+              o.default.open(E, C.GuildSettingsSections.GUILD_AUTOMOD)
             }
           }) : void 0
-        }), e.generateChannelEventsSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS)];
-      case a.ChannelTypes.GUILD_STAGE_VOICE:
-        return [e.generateChannelGeneralSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL, {
+        }), e.generateChannelEventsSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS)];
+      case C.ChannelTypes.GUILD_STAGE_VOICE:
+        return [e.generateChannelGeneralSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL, {
           showManageWebhooks: !1
-        }), e.generateChannelMembershipSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelStageVoiceSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE, G), e.generateChannelStageSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_STAGE), e.generateChannelEventsSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS), e.generateChannelVoiceChatSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT, {
-          sectionDescription: f ? m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT_DESCRIPTION.format({
+        }), e.generateChannelMembershipSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelStageVoiceSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE, d), e.generateChannelStageSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_STAGE), e.generateChannelEventsSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS), e.generateChannelVoiceChatSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT, {
+          sectionDescription: U ? D.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT_DESCRIPTION.format({
             setUpAutomod: () => {
-              o.default.open(E, a.GuildSettingsSections.GUILD_AUTOMOD)
+              o.default.open(E, C.GuildSettingsSections.GUILD_AUTOMOD)
             }
           }) : void 0
         })];
-      case a.ChannelTypes.GUILD_FORUM:
-      case a.ChannelTypes.GUILD_MEDIA:
+      case C.ChannelTypes.GUILD_FORUM:
+      case C.ChannelTypes.GUILD_MEDIA:
         ;
-        let h = U ? m.default.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL : m.default.Messages.ROLE_PERMISSIONS_SECTION_FORUMS,
-          H = U ? m.default.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL_DESCRIPTION : m.default.Messages.ROLE_PERMISSIONS_SECTION_FORUMS_DESCRIPTION;
-        return [e.generateChannelGeneralSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL), e.generateChannelMembershipSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, h, {
+        let h = f ? D.default.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL : D.default.Messages.ROLE_PERMISSIONS_SECTION_FORUMS,
+          H = f ? D.default.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL_DESCRIPTION : D.default.Messages.ROLE_PERMISSIONS_SECTION_FORUMS_DESCRIPTION;
+        return [e.generateChannelGeneralSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL), e.generateChannelMembershipSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, h, {
           showPrivateThreads: !1,
           showCreateThreads: !1,
-          sectionDescription: f ? H.format({
+          sectionDescription: U ? H.format({
             setUpAutomod: () => {
-              !U && (0, t.trackForumEnableAutomodClicked)(), o.default.open(E, a.GuildSettingsSections.GUILD_AUTOMOD)
+              !f && (0, t.trackForumEnableAutomodClicked)(), o.default.open(E, C.GuildSettingsSections.GUILD_AUTOMOD)
             }
           }) : void 0,
           showClydeAIPermissions: V
-        }), ...(O = d, P = () => e.generateChannelVoiceSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), O ? [P()] : [])];
+        }), ...(O = G, M = () => e.generateChannelVoiceSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), O ? [M()] : [])];
       default:
         ;
-        return [e.generateChannelGeneralSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL), e.generateChannelMembershipSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
-          showPrivateThreads: S.type !== a.ChannelTypes.GUILD_ANNOUNCEMENT,
+        return [e.generateChannelGeneralSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL), e.generateChannelMembershipSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
+          showPrivateThreads: S.type !== C.ChannelTypes.GUILD_ANNOUNCEMENT,
           showCreateThreads: !0,
           showClydeAIPermissions: V
-        }), ...(C = d, L = () => e.generateChannelVoiceSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), C ? [L()] : [])]
+        }), ...(l = G, L = () => e.generateChannelVoiceSection(u, D.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), l ? [L()] : [])]
     }
   },
   generateGuildPermissionSpec: function(E) {
     var S, s;
     let i = new Set;
-    return !E.hasFeature(a.GuildFeatures.COMMUNITY) && i.add(a.Permissions.VIEW_GUILD_ANALYTICS.toString()), S = e.generateGuildPermissionSpec(m.default.Messages, D(E.id)), 0 === (s = i).size ? S : S.map(E => ({
+    return !E.hasFeature(C.GuildFeatures.COMMUNITY) && i.add(C.Permissions.VIEW_GUILD_ANALYTICS.toString()), S = e.generateGuildPermissionSpec(D.default.Messages, m(E.id)), 0 === (s = i).size ? S : S.map(E => ({
       ...E,
       permissions: E.permissions.filter(E => !s.has(E.flag.toString()))
     }))
   },
   getGuildPermissionSpecMap: function(E) {
-    return e.getGuildPermissionSpec(m.default.Messages, D(E.id))
+    return e.getGuildPermissionSpec(D.default.Messages, m(E.id))
   }
 }

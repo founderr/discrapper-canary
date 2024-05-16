@@ -17,8 +17,7 @@ var i = n("544891"),
   S = n("26151"),
   h = n("287734"),
   A = n("981631"),
-  m = n("423219"),
-  N = n("689938");
+  m = n("689938");
 t.default = {
   async openPrivateChannel(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -129,9 +128,9 @@ t.default = {
       },
       oldFormErrors: !0
     }).then(() => {
-      r.AccessibilityAnnouncer.announce(N.default.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED)
+      r.AccessibilityAnnouncer.announce(m.default.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED)
     }).catch(() => {
-      r.AccessibilityAnnouncer.announce(N.default.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED_FAILED)
+      r.AccessibilityAnnouncer.announce(m.default.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED_FAILED)
     })
   },
   updatePermissionOverwrite: (e, t) => i.HTTP.put({
@@ -150,7 +149,7 @@ t.default = {
         location: n
       },
       oldFormErrors: !0
-    }).then(t => (r.AccessibilityAnnouncer.announce(N.default.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e).catch(() => (r.AccessibilityAnnouncer.announce(N.default.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM_FAILED), e))
+    }).then(t => (r.AccessibilityAnnouncer.announce(m.default.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e).catch(() => (r.AccessibilityAnnouncer.announce(m.default.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM_FAILED), e))
   },
   addRecipients(e, t, n, i) {
     return this.addRecipient(e, t[0], n, i).then(e => Promise.all(t.slice(1).map(t => this.addRecipient(e, t, n))).then(() => e))
@@ -189,19 +188,6 @@ t.default = {
     }).then(() => {
       let e = null == n ? void 0 : n.getGuildId();
       null != e && !(null == n ? void 0 : n.isThread()) && l.default.checkGuildTemplateDirty(e)
-    })
-  },
-  setVoiceBackgroundDisplay(e, t) {
-    let n;
-    return n = t.type === m.VoiceCallBackgroundTypes.EMPTY ? t : {
-      type: t.type,
-      resource_id: t.resourceId
-    }, i.HTTP.put({
-      url: A.Endpoints.UPDATE_VOICE_CHANNEL_BACKGROUND(e),
-      body: {
-        voice_background_display: n
-      },
-      oldFormErrors: !0
     })
   },
   convertToGuild: e => i.HTTP.post({

@@ -39,8 +39,7 @@ let I = {
     alwaysShowLinkDecorations: !1,
     roleStyle: "username",
     submitButtonEnabled: !1,
-    syncProfileThemeWithUserTheme: !1,
-    disableVoiceBackgrounds: !1
+    syncProfileThemeWithUserTheme: !1
   },
   T = I,
   f = {
@@ -163,9 +162,6 @@ class S extends(i = r.default.DeviceSettingsStore) {
   get roleStyle() {
     return T.roleStyle
   }
-  get disableVoiceBackgrounds() {
-    return T.disableVoiceBackgrounds
-  }
   getUserAgnosticState() {
     return T
   }
@@ -229,7 +225,12 @@ E(S, "displayName", "AccessibilityStore"), E(S, "persistKey", "AccessibilityStor
 }), e => ({
   ...e,
   disableVoiceBackgrounds: !1
-})]);
+}), e => {
+  try {
+    delete e.disableVoiceBackgrounds
+  } catch (e) {}
+  return e
+}]);
 let h = new S(o.default, {
   ACCESSIBILITY_SET_FONT_SIZE: function(e) {
     var t;
@@ -368,11 +369,6 @@ let h = new S(o.default, {
       ...T,
       contrast: t
     }
-  },
-  ACCESSIBILITY_TOGGLE_DISABLE_VOICE_BACKGROUNDS: function() {
-    (T = {
-      ...T
-    }).disableVoiceBackgrounds = !T.disableVoiceBackgrounds
   }
 });
 t.default = h

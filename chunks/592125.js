@@ -437,9 +437,5 @@ s = "ChannelStore", (a = "displayName") in(r = eu) ? Object.defineProperty(r, a,
       m.ALL_CHANNEL_TYPES.has(e.type) && Q(e)
     })
   },
-  THREAD_UPDATE: et,
-  VOICE_BACKGROUND_UPDATE: function(e) {
-    let t = X(e.channelId);
-    null != t && (t.voiceBackgroundDisplay = e.background, Q(t))
-  }
+  THREAD_UPDATE: et
 })
