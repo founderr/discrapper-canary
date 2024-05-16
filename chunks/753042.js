@@ -12,8 +12,8 @@ var l = n("120356"),
   r = n("421086"),
   o = n("461920"),
   u = n("760852"),
-  d = n("458890"),
-  c = n("780014"),
+  d = n("115850"),
+  c = n("458890"),
   f = n("481060"),
   h = n("376923"),
   m = n("16829"),
@@ -38,7 +38,7 @@ function N(e) {
       titleClassName: A.infoTitle,
       children: (0, a.jsxs)(_.UserModInfoItemContainer, {
         children: [(0, a.jsx)(_.UserModInfoItem, {
-          icon: (0, a.jsx)(d.ShieldUserIcon, {
+          icon: (0, a.jsx)(c.ShieldUserIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             className: A.__invalid_unusualDMLabelIcon
@@ -110,7 +110,7 @@ function N(e) {
             children: x
           })
         }), (0, a.jsx)(_.UserModInfoItem, {
-          icon: (0, a.jsx)(c.UserPlusIcon, {
+          icon: (0, a.jsx)(d.GroupPlusIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX
           }),

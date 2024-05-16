@@ -21,22 +21,22 @@ var l, a, s, i, r = n("735250"),
   u = n("120356"),
   d = n.n(u),
   c = n("442837"),
-  f = n("481060"),
-  h = n("787014"),
-  p = n("924301"),
-  m = n("159300"),
-  C = n("152376"),
-  g = n("427679"),
-  E = n("155409"),
-  _ = n("131704"),
-  S = n("199902"),
-  I = n("430824"),
-  N = n("496675"),
-  T = n("914010"),
-  A = n("263704"),
-  L = n("465670"),
-  v = n("937482"),
-  x = n("782089"),
+  f = n("115850"),
+  h = n("481060"),
+  p = n("787014"),
+  m = n("924301"),
+  C = n("159300"),
+  g = n("152376"),
+  E = n("427679"),
+  _ = n("155409"),
+  S = n("131704"),
+  I = n("199902"),
+  N = n("430824"),
+  T = n("496675"),
+  A = n("914010"),
+  L = n("263704"),
+  v = n("465670"),
+  x = n("937482"),
   R = n("281029"),
   M = n("981631"),
   y = n("689938"),
@@ -58,12 +58,12 @@ function j(e) {
     forceShowButtons: a,
     hasChannelInfo: s = !1
   } = e;
-  if ((0, c.useStateFromStores)([N.default, T.default], () => n || T.default.getGuildId() === M.FAVORITES || !N.default.can(M.Permissions.MANAGE_CHANNELS, t) && !N.default.can(M.Permissions.MANAGE_ROLES, t) && !N.default.can(M.Permissions.MANAGE_WEBHOOKS, t) || (0, _.isGuildSelectableChannelType)(t.type) && !N.default.can(M.Permissions.VIEW_CHANNEL, t) || t.isGuildVocal() && !N.default.can(M.Permissions.CONNECT, t) || !_.EDITABLE_CHANNEL_TYPES.has(t.type))) return null;
+  if ((0, c.useStateFromStores)([T.default, A.default], () => n || A.default.getGuildId() === M.FAVORITES || !T.default.can(M.Permissions.MANAGE_CHANNELS, t) && !T.default.can(M.Permissions.MANAGE_ROLES, t) && !T.default.can(M.Permissions.MANAGE_WEBHOOKS, t) || (0, S.isGuildSelectableChannelType)(t.type) && !T.default.can(M.Permissions.VIEW_CHANNEL, t) || t.isGuildVocal() && !T.default.can(M.Permissions.CONNECT, t) || !S.EDITABLE_CHANNEL_TYPES.has(t.type))) return null;
 
   function i() {
-    h.default.open(t.id)
+    p.default.open(t.id)
   }
-  return (0, r.jsx)(f.Tooltip, {
+  return (0, r.jsx)(h.Tooltip, {
     text: y.default.Messages.EDIT_CHANNEL,
     children: e => {
       let {
@@ -72,7 +72,7 @@ function j(e) {
         onFocus: o,
         onBlur: u
       } = e;
-      return (0, r.jsx)(f.Clickable, {
+      return (0, r.jsx)(h.Clickable, {
         className: d()(O.iconItem, a ? O.alwaysShown : void 0, s ? O.iconWithChannelInfo : O.iconNoChannelInfo),
         onClick: i,
         tabIndex: l,
@@ -81,7 +81,7 @@ function j(e) {
         onMouseLeave: n,
         onFocus: o,
         onBlur: u,
-        children: (0, r.jsx)(v.default, {
+        children: (0, r.jsx)(x.default, {
           width: 16,
           height: 16,
           className: O.actionIcon
@@ -99,48 +99,48 @@ function P(e) {
     tabIndex: s,
     forceShowButtons: i,
     hasChannelInfo: o = !1
-  } = e, u = (0, c.useStateFromStores)([I.default], () => I.default.getGuild(t.getGuildId())), h = (0, c.useStateFromStores)([g.default], () => g.default.getStageInstanceByChannel(t.id), [t.id]), C = (0, c.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(t.id), [t.id]), _ = (0, c.useStateFromStores)([N.default], () => (0, m.canViewInviteModal)(N.default, u, t, h)), T = (0, c.useStateFromStores)([N.default], () => N.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
-  if (a || !_) return null;
+  } = e, u = (0, c.useStateFromStores)([N.default], () => N.default.getGuild(t.getGuildId())), p = (0, c.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(t.id), [t.id]), g = (0, c.useStateFromStores)([m.default], () => m.default.getActiveEventByChannel(t.id), [t.id]), S = (0, c.useStateFromStores)([T.default], () => (0, C.canViewInviteModal)(T.default, u, t, p)), A = (0, c.useStateFromStores)([T.default], () => T.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
+  if (a || !S) return null;
 
-  function A() {
+  function L() {
     if (null != u) {
-      let e = S.default.getAllActiveStreams().filter(e => e.state !== M.ApplicationStreamStates.ENDED && e.channelId === t.id);
-      (0, f.openModalLazy)(async () => {
+      let e = I.default.getAllActiveStreams().filter(e => e.state !== M.ApplicationStreamStates.ENDED && e.channelId === t.id);
+      (0, h.openModalLazy)(async () => {
         let {
           default: l
-        } = await Promise.all([n.e("99387"), n.e("7654"), n.e("61939")]).then(n.bind(n, "560114"));
+        } = await Promise.all([n.e("99387"), n.e("7654"), n.e("92893")]).then(n.bind(n, "560114"));
         return n => (0, r.jsx)(l, {
           ...n,
           guild: u,
           channel: t,
           streamUserId: 1 === e.length ? e[0].ownerId : null,
           source: M.InstantInviteSources.GUILD_CHANNELS,
-          guildScheduledEvent: C
+          guildScheduledEvent: g
         })
       })
     }
   }
-  let L = (0, r.jsx)(x.default, {
+  let v = (0, r.jsx)(f.GroupPlusIcon, {
     width: 16,
     height: 16,
     className: O.actionIcon,
     "aria-hidden": !0
   });
-  return l && (L = (0, r.jsx)(E.default, {
+  return l && (v = (0, r.jsx)(_.default, {
     tutorialId: "instant-invite",
     position: "left",
     children: (0, r.jsx)("div", {
-      children: L
+      children: v
     })
-  })), (0, r.jsx)(f.Tooltip, {
-    text: T,
-    children: e => (0, r.jsx)(f.Clickable, {
+  })), (0, r.jsx)(h.Tooltip, {
+    text: A,
+    children: e => (0, r.jsx)(h.Clickable, {
       className: d()(O.iconItem, i ? O.alwaysShown : void 0, o ? O.iconWithChannelInfo : O.iconNoChannelInfo),
       ...e,
-      onClick: A,
+      onClick: L,
       tabIndex: s,
-      "aria-label": T,
-      children: L
+      "aria-label": A,
+      children: v
     })
   })
 }
@@ -149,16 +149,16 @@ function G(e) {
   let {
     channel: t
   } = e, n = () => {
-    (0, C.dimissFavoriteSuggestion)(t.guild_id, t.id)
+    (0, g.dimissFavoriteSuggestion)(t.guild_id, t.id)
   };
-  return (0, r.jsx)(f.Tooltip, {
+  return (0, r.jsx)(h.Tooltip, {
     text: y.default.Messages.REMOVE_FAVORITE_SUGGESTION,
-    children: e => (0, r.jsx)(f.Clickable, {
+    children: e => (0, r.jsx)(h.Clickable, {
       className: O.iconItem,
       ...e,
       onClick: n,
       "aria-label": y.default.Messages.REMOVE_FAVORITE_SUGGESTION,
-      children: (0, r.jsx)(L.default, {
+      children: (0, r.jsx)(v.default, {
         width: 16,
         height: 16,
         className: O.actionIcon
@@ -171,18 +171,18 @@ function U(e) {
   let {
     channel: t
   } = e, n = () => {
-    (0, C.setIsFavorite)(t.guild_id, t.id, !0, {
+    (0, g.setIsFavorite)(t.guild_id, t.id, !0, {
       section: M.AnalyticsSections.CHANNEL_LIST
     })
   };
-  return (0, r.jsx)(f.Tooltip, {
+  return (0, r.jsx)(h.Tooltip, {
     text: y.default.Messages.ADD_FAVORITE,
-    children: e => (0, r.jsx)(f.Clickable, {
+    children: e => (0, r.jsx)(h.Clickable, {
       className: O.iconItem,
       ...e,
       onClick: n,
       "aria-label": y.default.Messages.ADD_FAVORITE,
-      children: (0, r.jsx)(A.default, {
+      children: (0, r.jsx)(L.default, {
         width: 16,
         height: 16,
         className: O.actionIcon
