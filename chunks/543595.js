@@ -102,7 +102,7 @@ class q extends(r = o.PureComponent) {
       activity: e,
       activityGuild: t
     } = this.props;
-    return null != t && (null == e ? void 0 : e.type) !== F.ActivityTypes.PLAYING && (null == e ? void 0 : e.type) !== F.ActivityTypes.WATCHING && (null == e ? void 0 : e.type) !== F.ActivityTypes.HANG_STATUS ? {
+    return null != t && (null == e ? void 0 : e.type) !== F.ActivityTypes.PLAYING && (null == e ? void 0 : e.type) !== F.ActivityTypes.WATCHING && (null == e ? void 0 : e.type) !== F.ActivityTypes.LISTENING && (null == e ? void 0 : e.type) !== F.ActivityTypes.HANG_STATUS ? {
       type: F.ActivityTypes.PLAYING,
       name: Y.default.Messages.SHARING_SCREEN
     } : e
