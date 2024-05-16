@@ -1,34 +1,34 @@
-"use strict";
-var e = n("147018"),
-  o = n("339718"),
-  i = n("49693"),
-  u = n("610148"),
-  f = n("886960"),
-  c = n("936940")(function() {
-    return 4294967297 !== [].push.call({
-      length: 4294967296
-    }, 1)
-  });
-e({
-  target: "Array",
-  proto: !0,
-  arity: 1,
-  forced: c || ! function() {
-    try {
-      Object.defineProperty([], "length", {
-        writable: !1
-      }).push()
-    } catch (t) {
-      return t instanceof TypeError
-    }
-  }()
-}, {
-  push: function(t) {
-    var r = o(this),
-      n = i(r),
-      e = arguments.length;
-    f(n + e);
-    for (var c = 0; c < e; c++) r[n] = arguments[c], n++;
-    return u(r, n), n
-  }
-})
+    "use strict";
+    var n = r("147018"),
+      o = r("339718"),
+      i = r("49693"),
+      u = r("610148"),
+      f = r("886960"),
+      l = r("936940")(function() {
+        return 4294967297 !== [].push.call({
+          length: 4294967296
+        }, 1)
+      });
+    n({
+      target: "Array",
+      proto: !0,
+      arity: 1,
+      forced: l || ! function() {
+        try {
+          Object.defineProperty([], "length", {
+            writable: !1
+          }).push()
+        } catch (e) {
+          return e instanceof TypeError
+        }
+      }()
+    }, {
+      push: function(e) {
+        var t = o(this),
+          r = i(t),
+          n = arguments.length;
+        f(r + n);
+        for (var l = 0; l < n; l++) t[r] = arguments[l], r++;
+        return u(t, r), r
+      }
+    })
