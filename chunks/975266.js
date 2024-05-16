@@ -1,5 +1,6 @@
 "use strict";
 e.exports = {
+  channelCallParticipationToggle: "channelCallParticipationToggle_d0595e",
   componentPreview: "componentPreview__21783",
   componentPreviewWrapper: "componentPreviewWrapper__6e4d4",
   componentPreviewWrapperBordered: "componentPreviewWrapperBordered_c68846",
@@ -15,6 +16,7 @@ e.exports = {
   headingWithTooltip: "headingWithTooltip__3f120",
   questBarPreview: "questBarPreview_e90e97",
   questBarPreviewWrapper: "questBarPreviewWrapper__9be26",
+  questChannelCallHeaderPreview: "questChannelCallHeaderPreview__046ba",
   subheading: "subheading__50893",
   swatchContainer: "swatchContainer_bf7226",
   swatchIcon: "swatchIcon_c203b3"

@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("5881"),
   M = n("874137"),
   R = n("340100"),
-  L = n("611855"),
-  y = n("644646"),
+  y = n("611855"),
+  L = n("644646"),
   O = n("670638"),
   j = n("667105"),
   P = n("860151"),
@@ -37,14 +37,16 @@ var a = n("735250"),
   F = n("689938"),
   w = n("599660");
 t.default = function(e) {
-  var t, n;
+  var t, n, s;
   let {
-    channelId: s
-  } = e, [k, H] = l.useState(!1), B = l.useCallback(() => H(!0), []), G = l.useCallback(() => H(!1), []), V = l.useContext(p.IdleStateContext), W = (0, r.useStateFromStores)([C.default], () => C.default.getCurrentUser()), Y = (0, r.useStateFromStores)([m.default], () => m.default.getState().theme), z = (0, o.isThemeDark)(Y) ? b.ThemeTypes.DARK : b.ThemeTypes.LIGHT, {
-    isCurrentUserStreamingQuestApplication: K,
-    quest: Z
+    channelId: k,
+    previewQuest: H,
+    isParticipatingOverride: B
+  } = e, [G, V] = l.useState(!1), W = l.useCallback(() => V(!0), []), Y = l.useCallback(() => V(!1), []), z = l.useContext(p.IdleStateContext), K = (0, r.useStateFromStores)([C.default], () => C.default.getCurrentUser()), Z = (0, r.useStateFromStores)([m.default], () => m.default.getState().theme), q = (0, o.isThemeDark)(Z) ? b.ThemeTypes.DARK : b.ThemeTypes.LIGHT, {
+    isCurrentUserStreamingQuestApplication: X,
+    quest: Q
   } = (0, r.useStateFromStoresObject)([E.default, c.default, I.default], () => {
-    let e = c.default.getParticipants(s),
+    let e = c.default.getParticipants(k),
       t = function(e, t, n) {
         for (let s of e) {
           var a, l;
@@ -68,81 +70,83 @@ t.default = function(e) {
         return null
       }(e, I.default.quests, E.default);
     return {
-      isCurrentUserStreamingQuestApplication: null != t && null != W && function(e, t, n, a) {
+      isCurrentUserStreamingQuestApplication: null != t && null != K && function(e, t, n, a) {
         for (let s of e) {
           var l;
           if (s.type === U.ParticipantTypes.STREAM && s.user.id === n.id && t.config.applicationId === (null === (l = (0, h.getStreamerApplication)(s.stream, a)) || void 0 === l ? void 0 : l.id)) return !0
         }
         return !1
-      }(e, t, W, E.default),
+      }(e, t, K, E.default),
       quest: t
     }
-  }, [s, W]), q = (0, r.useStateFromStoresObject)([f.default], () => {
+  }, [k, K]), J = (0, r.useStateFromStoresObject)([f.default], () => {
     let e = f.default.getRunningGames().map(e => e.id);
-    return null != Z && (0, v.isEligibleForQuestPlaytime)({
+    return null != Q && (0, v.isEligibleForQuestPlaytime)({
       location: D.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
     }) && (0, N.hasPlaytimeTaskVariant)({
-      quest: Z
-    }) && e.includes(Z.config.applicationId)
-  }, [Z]), X = K || q, Q = (0, r.useStateFromStores)([I.default], () => null != Z && I.default.isEnrolling(Z.id), [Z]), J = (0, r.useStateFromStores)([c.default], () => ((null == W ? void 0 : W.id) == null ? null : c.default.getParticipant(s, W.id)) != null, [s, W]), $ = (0, T.useQuestFormattedDate)(null == Z ? void 0 : Z.config.expiresAt), ee = (0, T.useQuestFormattedDate)(null == Z ? void 0 : Z.config.rewardCodeExpiresAt), et = l.useCallback(() => {
-    null != Z && (0, _.enrollInQuest)(Z.id, {
+      quest: Q
+    }) && e.includes(Q.config.applicationId)
+  }, [Q]), $ = !0 === B || X || J, ee = (0, r.useStateFromStores)([I.default], () => null != Q && I.default.isEnrolling(Q.id), [Q]), et = (0, r.useStateFromStores)([c.default], () => ((null == K ? void 0 : K.id) == null ? null : c.default.getParticipant(k, K.id)) != null, [k, K]), en = (0, T.useQuestFormattedDate)(null == Q ? void 0 : Q.config.expiresAt), ea = (0, T.useQuestFormattedDate)(null == Q ? void 0 : Q.config.rewardCodeExpiresAt), el = l.useCallback(() => {
+    null != Q && (0, _.enrollInQuest)(Q.id, {
       questContent: A.QuestContent.QUEST_LIVE_STREAM,
       questContentCTA: S.QuestContentCTA.ACCEPT_QUEST
     })
-  }, [Z]), en = l.useCallback(() => {
-    null != Z && ((0, S.trackQuestContentClicked)({
-      questId: Z.id,
+  }, [Q]), es = l.useCallback(() => {
+    null != Q && ((0, S.trackQuestContentClicked)({
+      questId: Q.id,
       questContent: A.QuestContent.QUEST_LIVE_STREAM,
       questContentCTA: S.QuestContentCTA.TRACK_PROGRESS
     }), d.default.open(b.UserSettingsSections.INVENTORY))
-  }, [Z]), ea = l.useCallback(() => {
-    null != Z && ((0, S.trackQuestContentClicked)({
-      questId: Z.id,
+  }, [Q]), ei = l.useCallback(() => {
+    null != Q && ((0, S.trackQuestContentClicked)({
+      questId: Q.id,
       questContent: A.QuestContent.QUEST_LIVE_STREAM,
       questContentCTA: S.QuestContentCTA.LEARN_MORE
     }), d.default.open(b.UserSettingsSections.INVENTORY))
-  }, [Z]), el = (0, j.useHandleClaimQuestsReward)({
-    quest: Z,
+  }, [Q]), er = (0, j.useHandleClaimQuestsReward)({
+    quest: Q,
     location: A.QuestContent.QUEST_LIVE_STREAM
-  }), es = l.useMemo(() => (0, x.getQuestLogger)({
-    quest: Z,
+  }), eo = l.useMemo(() => (0, x.getQuestLogger)({
+    quest: Q,
     location: D.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
-  }), [Z]), ei = (0, T.useIsQuestExpired)(Z);
-  if (null == Z) return null;
-  let er = (null === (t = Z.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-    eo = (null === (n = Z.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-    eu = null != Z.userStatus && (0, N.isDismissed)(Z.userStatus, A.QuestContent.QUEST_LIVE_STREAM),
-    ed = null != Z.userStatus && (0, N.isDismissed)(Z.userStatus, A.QuestContent.QUEST_BAR),
-    ec = (0, N.isTargetedForContent)(Z, A.QuestContent.QUEST_BAR) && !ed;
-  if (es.info({
-      isQuestCallHeaderDismissed: eu,
-      isQuestExpired: ei,
-      isQuestBarShowing: ec,
-      isCurrentUserCallParticipant: J
-    }), eu || ei || ec || !J) return null;
-  let ef = (0, a.jsx)(y.default, {
+  }), [Q]), eu = (0, T.useIsQuestExpired)(Q);
+  if (null != H && (Q = H), null == Q) return null;
+  let ed = (null === (t = Q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+    ec = (null === (n = Q.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+    ef = null != Q.userStatus && (0, N.isDismissed)(Q.userStatus, A.QuestContent.QUEST_LIVE_STREAM),
+    eh = null != Q.userStatus && (0, N.isDismissed)(Q.userStatus, A.QuestContent.QUEST_BAR),
+    em = (0, N.isTargetedForContent)(Q, A.QuestContent.QUEST_BAR) && !eh;
+  eo.info({
+    isQuestCallHeaderDismissed: ef,
+    isQuestExpired: eu,
+    isQuestBarShowing: em,
+    isCurrentUserCallParticipant: et
+  });
+  let ep = null != H && (null === (s = Q.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null;
+  if (!ep && (ef || eu || em) || !ep && !et) return null;
+  let eE = (0, a.jsx)(L.default, {
     className: w.rewardTile,
-    autoplay: k,
-    quest: Z,
+    autoplay: G,
+    quest: Q,
     questContent: A.QuestContent.QUEST_LIVE_STREAM
   });
   return (0, a.jsx)(M.QuestContentImpressionTracker, {
-    questOrQuests: Z,
-    overrideVisibility: !V,
+    questOrQuests: Q,
+    overrideVisibility: !z,
     questContent: A.QuestContent.QUEST_LIVE_STREAM,
     children: () => {
       var e;
       return (0, a.jsxs)("div", {
         className: i()(w.wrapper, {
-          [w.wrapperAccepted]: er
+          [w.wrapperAccepted]: ed
         }),
-        onFocus: B,
-        onMouseEnter: B,
-        onBlur: G,
-        onMouseLeave: G,
-        children: [!er && (0, a.jsxs)("div", {
+        onFocus: W,
+        onMouseEnter: W,
+        onBlur: Y,
+        onMouseLeave: Y,
+        children: [!ed && (0, a.jsxs)("div", {
           className: w.rewardTileWrapper,
-          children: [ef, (0, a.jsx)(L.default, {
+          children: [eE, (0, a.jsx)(y.default, {
             bgOpacity: .32,
             className: w.promotedTag
           })]
@@ -150,10 +154,10 @@ t.default = function(e) {
           className: w.content,
           children: [(0, a.jsxs)("div", {
             className: w.heading,
-            children: [er && X ? ef : (0, a.jsx)("img", {
+            children: [ed && $ ? eE : (0, a.jsx)("img", {
               className: w.gameTile,
-              alt: Z.config.messages.gameTitle,
-              src: (0, N.getGameTileAssetUrl)(Z, z)
+              alt: Q.config.messages.gameTitle,
+              src: (0, N.getGameTileAssetUrl)(Q, q)
             }), (0, a.jsxs)("div", {
               className: w.__invalid_details,
               children: [(0, a.jsxs)("div", {
@@ -162,14 +166,14 @@ t.default = function(e) {
                   className: w.questTitle,
                   variant: "heading-md/semibold",
                   color: "header-primary",
-                  children: X ? (0, N.getContextualEntrypointHeading)(Z) : F.default.Messages.QUESTS_TITLE.format({
-                    questName: Z.config.messages.questName
+                  children: $ ? (0, N.getContextualEntrypointHeading)(Q) : F.default.Messages.QUESTS_TITLE.format({
+                    questName: Q.config.messages.questName
                   })
                 }), (0, a.jsx)(O.QuestsEntryContextMenuPopout, {
                   questContent: A.QuestContent.QUEST_LIVE_STREAM,
-                  quest: Z,
+                  quest: Q,
                   preventIdle: !0,
-                  shouldShowDisclosure: (null === (e = Z.userStatus) || void 0 === e ? void 0 : e.enrolledAt) == null,
+                  shouldShowDisclosure: (null === (e = Q.userStatus) || void 0 === e ? void 0 : e.enrolledAt) == null,
                   children: e => (0, a.jsx)(u.Clickable, {
                     ...e,
                     className: w.submenuWrapper,
@@ -182,52 +186,52 @@ t.default = function(e) {
               }), (0, a.jsx)(u.Text, {
                 color: "header-secondary",
                 variant: "text-xs/medium",
-                children: eo ? F.default.Messages.QUESTS_CLAIM_BY_DATE.format({
-                  expirationDate: ee
+                children: ec ? F.default.Messages.QUESTS_CLAIM_BY_DATE.format({
+                  expirationDate: ea
                 }) : F.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
-                  expirationDate: $
+                  expirationDate: en
                 })
               })]
             })]
-          }), er && !eo && !X && (0, a.jsx)(P.default, {
-            autoplay: k,
-            quest: Z,
+          }), ed && !ec && !$ && (0, a.jsx)(P.default, {
+            autoplay: G,
+            quest: Q,
             questContent: A.QuestContent.QUEST_LIVE_STREAM,
             questExperimentLocation: D.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
           }), (0, a.jsxs)("div", {
             className: w.ctas,
-            children: [!er && (0, a.jsxs)(a.Fragment, {
+            children: [!ed && (0, a.jsxs)(a.Fragment, {
               children: [(0, a.jsx)(u.Button, {
                 className: w.cta,
                 color: u.Button.Colors.PRIMARY,
                 fullWidth: !0,
                 size: u.Button.Sizes.SMALL,
-                onClick: ea,
+                onClick: ei,
                 children: F.default.Messages.QUESTS_LEARN_MORE_V2
               }), (0, a.jsx)(u.Button, {
                 className: w.cta,
                 color: u.Button.Colors.BRAND,
                 fullWidth: !0,
-                onClick: et,
+                onClick: el,
                 size: u.Button.Sizes.SMALL,
-                submitting: Q,
+                submitting: ee,
                 children: F.default.Messages.QUESTS_ACCEPT_QUEST
               })]
-            }), er && !eo && X && (0, a.jsx)(R.default, {
+            }), ed && !ec && $ && (0, a.jsx)(R.default, {
               color: u.tokens.colors.BG_BRAND,
-              quest: Z
-            }), er && !eo && !X && (0, a.jsx)(u.Button, {
+              quest: Q
+            }), ed && !ec && !$ && (0, a.jsx)(u.Button, {
               className: w.cta,
               color: u.Button.Colors.BRAND,
               fullWidth: !0,
-              onClick: en,
+              onClick: es,
               size: u.Button.Sizes.SMALL,
               children: F.default.Messages.QUESTS_CHECK_PROGRESS
-            }), eo && (0, a.jsx)(u.Button, {
+            }), ec && (0, a.jsx)(u.Button, {
               className: w.cta,
               color: u.Button.Colors.BRAND,
               fullWidth: !0,
-              onClick: el,
+              onClick: er,
               size: u.Button.Sizes.SMALL,
               children: F.default.Messages.QUESTS_CLAIM_REWARD
             })]
