@@ -6638,6 +6638,12 @@ div.cardContainer__94a1c {
     opacity: .9
 }
 
+.waitlistedButton__5769e {
+    display: flex;
+    align-items: center;
+    gap: 4px
+}
+
 .chipletContainerInner_bfcb1e {
     line-height: 16px !important;
     display: inline-block;
