@@ -46,9 +46,7 @@ function h(e) {
       })
     },
     children: e => (0, i.jsx)(T.default, {
-      className: a()(S.button, {
-        [S.compact]: A
-      }),
+      className: a()(S.button),
       text: (0, i.jsx)(u.Text, {
         variant: "text-xs/medium",
         children: f.default.Messages.USER_PROFILE_ADD_ROLE

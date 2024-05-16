@@ -91,7 +91,7 @@ function g(e) {
             (0, l.openModalLazy)(async () => {
               let {
                 default: e
-              } = await Promise.all([s.e("99387"), s.e("45094"), s.e("36494")]).then(s.bind(s, "218613"));
+              } = await Promise.all([s.e("99387"), s.e("90508"), s.e("7590"), s.e("45094"), s.e("72366")]).then(s.bind(s, "218613"));
               return s => (0, t.jsx)(e, {
                 ...s,
                 channelType: M.ChannelTypes.GUILD_FORUM,
