@@ -76,19 +76,27 @@ let K = {
   });
 
 function X(e) {
-  let t, {
-      activity: n
-    } = e,
-    i = (0, T.default)();
-  if ((0, m.default)(n) && (t = F.PlatformTypes.SPOTIFY), null != n.platform && [F.ActivityGamePlatforms.PS4, F.ActivityGamePlatforms.PS5].includes(n.platform) && (t = F.PlatformTypes.PLAYSTATION), null == t) return null;
-  let r = f.default.get(t);
+  let {
+    activity: t
+  } = e, n = null;
+  return (0, m.default)(t) && (n = F.PlatformTypes.SPOTIFY), null != t.platform && [F.ActivityGamePlatforms.PS4, F.ActivityGamePlatforms.PS5].includes(t.platform) && (n = F.PlatformTypes.PLAYSTATION), n
+}
+
+function Q(e) {
+  let {
+    activity: t
+  } = e, n = (0, T.default)(), i = X({
+    activity: t
+  });
+  if (null == i) return null;
+  let r = f.default.get(i);
   return (0, s.jsx)("img", {
     alt: "",
-    src: (0, c.isThemeLight)(i) ? r.icon.lightSVG : r.icon.darkSVG,
+    src: (0, c.isThemeLight)(n) ? r.icon.lightSVG : r.icon.darkSVG,
     className: j.platformIcon
   })
 }
-class Q extends(r = o.PureComponent) {
+class q extends(r = o.PureComponent) {
   get activity() {
     let {
       activity: e,
@@ -309,20 +317,24 @@ class Q extends(r = o.PureComponent) {
     } = e;
     if (o === F.ActivityTypes.CUSTOM_STATUS) return null;
     let l = (0, A.default)(e),
-      u = e.name,
-      d = u;
-    return (o === F.ActivityTypes.HANG_STATUS ? d = (0, C.getHangStatusText)(e) : l && null != n ? d = (0, s.jsx)("span", {
-      className: j.activityName,
-      children: d
-    }) : !l && (u = a, d = a, (0, m.default)(e) && null != e.sync_id && null != a ? d = (0, s.jsx)(E.Anchor, {
-      className: j.bodyLink,
-      onClick: this.handleOpenSpotifyTrack,
-      children: a
-    }) : (0, L.isStageActivity)(e) && (d = e.name)), null == d) ? null : (0, s.jsx)(E.Text, {
-      title: u,
+      d = e.name,
+      _ = d;
+    if (o === F.ActivityTypes.HANG_STATUS ? _ = (0, C.getHangStatusText)(e) : l && null != n ? _ = (0, s.jsx)("span", {
+        className: j.activityName,
+        children: _
+      }) : !l && (d = a, _ = a, (0, m.default)(e) && null != e.sync_id && null != a ? _ = (0, s.jsx)(E.Anchor, {
+        className: j.bodyLink,
+        onClick: this.handleOpenSpotifyTrack,
+        children: a
+      }) : (0, L.isStageActivity)(e) && (_ = e.name)), null == _) return null;
+    let c = null != X({
+      activity: e
+    }) && "BiteSizePopout" === this.props.type;
+    return (0, s.jsx)(E.Text, {
+      title: d,
       variant: r ? "text-md/semibold" : "text-sm/semibold",
-      className: (0, M.getClass)(j, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"),
-      children: d
+      className: u()((0, M.getClass)(j, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"), c && j.namePlatformIconMarginBiteSizePopout),
+      children: _
     })
   }
   renderDetails(e) {
@@ -505,7 +517,7 @@ class Q extends(r = o.PureComponent) {
             children: A
           }) : null]
         })
-      }), l ? m : null, l || c ? A : null, (0, s.jsx)(X, {
+      }), l ? m : null, l || c ? A : null, (0, s.jsx)(Q, {
         activity: o
       })]
     })
@@ -534,4 +546,4 @@ class Q extends(r = o.PureComponent) {
     })
   }
 }
-W(Q, "Types", i), t.default = Q
+W(q, "Types", i), t.default = q
