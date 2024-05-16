@@ -29,9 +29,9 @@ var s, a = n("735250"),
   O = n("541692"),
   v = n("952802"),
   L = n("108427"),
-  x = n("238214"),
+  M = n("238214"),
   b = n("365007"),
-  M = n("314897"),
+  x = n("314897"),
   y = n("117240"),
   U = n("896797"),
   D = n("285952"),
@@ -168,7 +168,7 @@ class J extends(s = i.PureComponent) {
       let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + V.Endpoints.SSO,
         t = {
           ...a,
-          token: M.default.getToken()
+          token: x.default.getToken()
         };
       window.location = "".concat(e, "?").concat((0, u.stringify)(t))
     }
@@ -741,21 +741,21 @@ Z(J, "defaultProps", {
   transitionTo: e => n.g.location.assign(e)
 });
 t.default = function(e) {
-  let t = (0, c.useStateFromStoresObject)([y.default, U.default, M.default, N.default, O.default], () => ({
-      authenticated: M.default.isAuthenticated(),
+  let t = (0, c.useStateFromStoresObject)([y.default, U.default, x.default, N.default, O.default], () => ({
+      authenticated: x.default.isAuthenticated(),
       handoffAvailable: y.default.isHandoffAvailable(),
       user: y.default.user,
-      loginStatus: M.default.getLoginStatus(),
-      mfaTicket: M.default.getMFATicket(),
-      mfaSMS: M.default.getMFASMS(),
-      mfaMethods: M.default.getMFAMethods(),
-      maskedPhone: M.default.getMaskedPhone(),
-      errors: M.default.getErrors(),
+      loginStatus: x.default.getLoginStatus(),
+      mfaTicket: x.default.getMFATicket(),
+      mfaSMS: x.default.getMFASMS(),
+      mfaMethods: x.default.getMFAMethods(),
+      maskedPhone: x.default.getMaskedPhone(),
+      errors: x.default.getErrors(),
       defaultRoute: U.default.defaultRoute,
       country: O.default.getCountryCode(),
       hasLoggedInAccounts: N.default.getHasLoggedInAccounts()
     })),
-    n = x.default.useExperiment({
+    n = M.default.useExperiment({
       location: "login"
     }).enabled;
   return (0, a.jsx)(J, {

@@ -29,9 +29,9 @@ var s, a = n("735250"),
   O = n("692483"),
   v = n("100159"),
   L = n("473855"),
-  x = n("726745"),
+  M = n("726745"),
   b = n("929809"),
-  M = n("541692"),
+  x = n("541692"),
   y = n("986197"),
   U = n("135200"),
   D = n("219496"),
@@ -433,12 +433,12 @@ class eo extends(s = i.PureComponent) {
         password: v,
         date_of_birth: L
       } = {},
-      hasLoggedInAccounts: x,
+      hasLoggedInAccounts: M,
       registrationCopyExperimentConfig: {
         hasCopyAboveButton: b
       }
     } = this.props, {
-      subText: M,
+      subText: x,
       consentText: D
     } = this.renderConsentComponents(), P = this.renderErrorMessage(), G = (0, a.jsx)(h.Tooltip, {
       text: !u && T ? en.default.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
@@ -552,7 +552,7 @@ class eo extends(s = i.PureComponent) {
         error: null != _ ? _ : el(L),
         value: d,
         required: !0
-      }), b && M, (0, a.jsx)(R.default, {}), G, P, D, !b && M, $.CONFERENCE_MODE_ENABLED ? null : (0, a.jsx)(H.Button, {
+      }), b && x, (0, a.jsx)(R.default, {}), G, P, D, !b && x, $.CONFERENCE_MODE_ENABLED ? null : (0, a.jsx)(H.Button, {
         look: A ? H.Button.Looks.FILLED : H.Button.Looks.LINK,
         color: A ? H.Button.Colors.PRIMARY : H.Button.Colors.LINK,
         onClick: this.handleGotoLogin,
@@ -575,7 +575,7 @@ class eo extends(s = i.PureComponent) {
       onSubmit: this.handleSubmit,
       tag: "form",
       className: S,
-      children: [x && !A ? (0, a.jsx)(H.Button, {
+      children: [M && !A ? (0, a.jsx)(H.Button, {
         onClick: this.handleGotoLogin,
         look: H.Button.Looks.LINK,
         color: H.Button.Colors.PRIMARY,
@@ -717,14 +717,14 @@ class eo extends(s = i.PureComponent) {
 }
 
 function eu(e) {
-  let t = (0, c.useStateFromStoresObject)([B.default, F.default, g.default, M.default, x.default], () => ({
+  let t = (0, c.useStateFromStoresObject)([B.default, F.default, g.default, x.default, M.default], () => ({
       consentRequired: B.default.getAuthenticationConsentRequired(),
       registering: F.default.getRegisterStatus() === J.RegistrationStates.REGISTERING,
       apiErrors: F.default.getErrors(),
       authenticated: F.default.isAuthenticated(),
       isUnderage: g.default.isUnderageAnonymous(),
-      country: M.default.getCountryCode(),
-      hasLoggedInAccounts: x.default.getHasLoggedInAccounts()
+      country: x.default.getCountryCode(),
+      hasLoggedInAccounts: M.default.getHasLoggedInAccounts()
     })),
     n = (0, P.useUURegistrationExperiment)(),
     s = (0, c.useStateFromStores)([U.default], () => U.default.registrationUsernameSuggestion()),

@@ -40,7 +40,7 @@ t.default = () => {
       fingerprint: s
     })
   }, [s, e]);
-  let [p, L] = r.useState(null), x = r.useCallback(e => {
+  let [p, L] = r.useState(null), M = r.useCallback(e => {
     L(e), m.default.track(A.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
       reason: e,
       fingerprint: (0, o.maybeExtractId)(a)
@@ -48,12 +48,12 @@ t.default = () => {
       fingerprint: a
     })
   }, [L, a]), b = c.Storage.get(S);
-  if ("null" === n && null === p && x("deep_link_failed"), null != n && "null" !== n && null == b && null === p && x("nonce_missing"), r.useEffect(() => {
+  if ("null" === n && null === p && M("deep_link_failed"), null != n && "null" !== n && null == b && null === p && M("nonce_missing"), r.useEffect(() => {
       if (null != b) {
         let e = c.Storage.get(N);
-        (null == e || Date.now() >= e) && (x("nonce_expired"), v())
+        (null == e || Date.now() >= e) && (M("nonce_expired"), v())
       }
-    }, [b, x]), r.useEffect(() => {
+    }, [b, M]), r.useEffect(() => {
       null != n && "null" !== n && null != b && null == p && d.HTTP.post({
         url: A.Endpoints.HANDOFF_EXCHANGE,
         body: {
@@ -70,12 +70,12 @@ t.default = () => {
           t = new URLSearchParams(e.search);
         t.delete("handoff_token"), t.delete("fingerprint"), e.search = t.toString(), window.history.pushState(null, "", e)
       }).catch(() => {
-        x("handoff_exchange")
+        M("handoff_exchange")
       }).finally(() => {
         v()
       })
-    }, [n, b, p, a, x]), null == a) return null;
-  let M = (() => {
+    }, [n, b, p, a, M]), null == a) return null;
+  let x = (() => {
     if (null == p) return (0, i.jsxs)(i.Fragment, {
       children: [g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1, (0, i.jsx)("br", {}), g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2]
     });
@@ -87,13 +87,13 @@ t.default = () => {
     children: (0, i.jsx)(f.Text, {
       color: "interactive-normal",
       variant: "text-sm/semibold",
-      children: M
+      children: x
     })
   }) : (0, i.jsxs)("div", {
     className: I.container,
     children: [(0, i.jsx)(f.Text, {
       variant: "text-sm/semibold",
-      children: M
+      children: x
     }), (0, i.jsx)(f.Button, {
       look: f.Button.Looks.INVERTED,
       color: f.Button.Colors.BRAND_NEW,

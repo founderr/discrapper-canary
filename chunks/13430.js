@@ -98,7 +98,7 @@ let T = a.forwardRef(function(e, t) {
   }, [v, l]);
   let L = _;
   null != v && !v.isValid() && (L = c.default.Messages.AGE_GATE_INVALID_BIRTHDAY);
-  let x = function() {
+  let M = function() {
       let e = new Date().getFullYear(),
         t = a.useRef(Array.from(Array(150).keys()).map(t => ({
           value: e - t - 3,
@@ -111,7 +111,7 @@ let T = a.forwardRef(function(e, t) {
         }))
       }, [e]), t.current
     }(),
-    [b, M] = a.useState(T ? 0 : -1),
+    [b, x] = a.useState(T ? 0 : -1),
     y = a.useRef(null),
     U = a.useRef(null),
     D = a.useRef(null),
@@ -165,7 +165,7 @@ let T = a.forwardRef(function(e, t) {
                 let {
                   value: n
                 } = t;
-                S(n), M(e + 1)
+                S(n), x(e + 1)
               },
               maxMenuHeight: 215
             })
@@ -193,7 +193,7 @@ let T = a.forwardRef(function(e, t) {
                 let {
                   value: n
                 } = t;
-                R(n), M(e + 1)
+                R(n), x(e + 1)
               },
               maxMenuHeight: 215
             })
@@ -204,7 +204,7 @@ let T = a.forwardRef(function(e, t) {
         w.push({
           key: "year",
           input: (0, s.jsx)(m, {
-            options: x,
+            options: M,
             selectOption: O,
             children: (0, s.jsx)(d.default, {
               ref: D,
@@ -215,13 +215,13 @@ let T = a.forwardRef(function(e, t) {
                 "aria-hidden": !0,
                 children: c.default.Messages.AGE_GATE_DOB_YEAR
               }),
-              options: x,
+              options: M,
               value: C,
               onChange: t => {
                 let {
                   value: n
                 } = t;
-                O(n), M(e + 1)
+                O(n), x(e + 1)
               },
               maxMenuHeight: 215
             })
