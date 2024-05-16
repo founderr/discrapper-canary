@@ -51,7 +51,7 @@ class r {
       } return l
   }
   addWord(e) {
-    this.trie.add(e)
+    null == this.trie && (this.trie = new i), this.trie.add(e)
   }
   addWords(e) {
     e.forEach(e => this.addWord(e))
