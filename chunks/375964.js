@@ -2758,6 +2758,8 @@ e.exports = Object.freeze({
   BEGINNING_CHAT_DM_MOBILE: "This is the very beginning of your legendary conversation with !!{username}!!.",
   MESSAGE_EDITED: "edited",
   MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL: "Edited !!{timeFormatted}!!",
+  MESSAGE_GAME_ICON_TOOLTIP: "Game message tooltip",
+  MESSAGE_GAME_ICON_TOOLTIP_CONTENT: "This message was sent from !!{applicationName}!!.",
   EDIT_TEXTAREA_HELP: "escape to [cancel](onCancel) • enter to [save](onSave)",
   INVALID_VOICE_CHANNEL: "Invalid Channel",
   INVALID_TEXT_CHANNEL: "invalid-channel",

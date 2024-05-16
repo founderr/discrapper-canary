@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   default: function() {
-    return R
+    return g
   }
 });
 var i, r, a = n("735250"),
@@ -24,90 +24,91 @@ var i, r, a = n("735250"),
   A = n("484459"),
   m = n("467679"),
   N = n("768581"),
-  p = n("981631"),
-  O = n("822545");
+  p = n("51063"),
+  O = n("981631"),
+  C = n("822545");
 
-function C(e) {
+function R(e) {
   let {
     compact: t
   } = e;
   return (0, a.jsx)(m.default, {
-    className: t ? O.botTagCompact : O.botTagCozy,
+    className: t ? C.botTagCompact : C.botTagCozy,
     type: m.default.Types.REMIX,
     useRemSizes: !0
   })
 }
 
-function R(e) {
+function g(e) {
   let t, {
       author: n,
       message: i,
       userOverride: r,
       compact: o = !1,
       withMentionPrefix: m = !1,
-      showPopout: R = !1,
-      className: g,
-      onClick: L,
-      onContextMenu: v,
-      onPopoutRequestClose: D,
-      renderPopout: M,
-      renderRemixTag: y = !1,
-      decorations: P
+      showPopout: g = !1,
+      className: L,
+      onClick: v,
+      onContextMenu: D,
+      onPopoutRequestClose: M,
+      renderPopout: y,
+      renderRemixTag: P = !1,
+      decorations: U
     } = e,
-    U = s.useContext(f.default),
+    b = s.useContext(f.default),
     {
-      analyticsLocations: b
+      analyticsLocations: G
     } = (0, I.default)(E.default.USERNAME),
-    G = m ? "@" : "",
+    w = m ? "@" : "",
     {
-      nick: w,
-      colorString: k,
-      colorRoleName: B
+      nick: k,
+      colorString: B,
+      colorRoleName: V
     } = n,
-    V = null != i.messageReference && null != i.webhookId,
-    x = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
-    F = (0, h.useCanSeeRemixBadge)(),
-    H = s.useMemo(() => ({
-      source: p.AnalyticsSections.CHANNEL,
+    x = null != i.messageReference && null != i.webhookId,
+    F = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
+    H = (0, h.useCanSeeRemixBadge)(),
+    Y = s.useMemo(() => ({
+      source: O.AnalyticsSections.CHANNEL,
       messageId: i.id,
       tagUserId: i.author.id
     }), [i.id, i.author.id]),
-    Y = {
-      className: O.username,
-      style: "username" === x && null != k ? {
-        color: k
+    j = {
+      className: C.username,
+      style: "username" === F && null != B ? {
+        color: B
       } : void 0,
-      onClick: L,
-      onContextMenu: v,
+      onClick: v,
+      onContextMenu: D,
       children: o ? (0, a.jsxs)(a.Fragment, {
-        children: [G + w, (0, a.jsx)(T.default, {
+        children: [w + k, (0, a.jsx)(T.default, {
           clan: n.clan,
           userId: i.author.id,
-          contextGuildId: U,
-          className: O.clanTagChiplet,
-          profileViewedAnalytics: H
+          contextGuildId: b,
+          className: C.clanTagChiplet,
+          profileViewedAnalytics: Y
         })]
       }) : (0, a.jsx)(a.Fragment, {
-        children: G + w
+        children: w + k
       })
     };
-  t = null != M && null != R ? (0, a.jsx)(_.Popout, {
-    preload: V ? void 0 : function() {
+  t = null != y && null != g ? (0, a.jsx)(_.Popout, {
+    preload: x ? void 0 : function() {
       let e = null != r ? r : i.author;
-      return (0, A.maybeFetchUserProfileForPopout)(e.id, null != n.guildMemberAvatar && null != U ? (0, N.getGuildMemberAvatarURLSimple)({
-        guildId: U,
+      return (0, A.maybeFetchUserProfileForPopout)(e.id, null != n.guildMemberAvatar && null != b ? (0, N.getGuildMemberAvatarURLSimple)({
+        guildId: b,
         userId: e.id,
         avatar: n.guildMemberAvatar,
         size: 80
-      }) : e.getAvatarURL(U, 80), {
-        guildId: U,
+      }) : e.getAvatarURL(b, 80), {
+        guildId: b,
         channelId: i.channel_id
       })
     },
-    renderPopout: M,
-    shouldShow: R,
+    renderPopout: y,
+    shouldShow: g,
     position: u.isMobile ? "window_center" : "right",
-    onRequestClose: D,
+    onRequestClose: M,
     children: e => {
       let {
         onClick: t,
@@ -116,32 +117,36 @@ function R(e) {
       return (0, a.jsx)(_.Clickable, {
         tag: "span",
         ...n,
-        ...Y,
-        className: l()(Y.className, O.clickable, g)
+        ...j,
+        className: l()(j.className, C.clickable, L)
       })
     }
   }) : (0, a.jsx)(_.Clickable, {
-    ...Y,
-    className: l()(Y.className, g)
+    ...j,
+    className: l()(j.className, L)
   });
-  let j = null != P ? P[0] : null,
-    W = null != P ? P[1] : null;
+  let W = null != U ? U[0] : null,
+    K = null != U ? U[1] : null;
   return (0, a.jsxs)(I.AnalyticsLocationProvider, {
-    value: b,
-    children: [null != j && o ? (0, a.jsxs)(a.Fragment, {
-      children: [" ", j, " "]
-    }) : null, "dot" === x ? (0, a.jsx)(_.RoleDot, {
-      color: k,
-      name: B,
-      className: O.roleDot
-    }) : null, t, !o && (0, a.jsx)(T.default, {
-      clan: n.clan,
-      userId: i.author.id,
-      contextGuildId: U,
-      className: O.clanTagChiplet,
-      profileViewedAnalytics: H
-    }), null != W ? (0, a.jsx)(a.Fragment, {
-      children: W
-    }) : null, null == j || o ? null : j, null != i && (0, S.default)(i) && F && y ? (0, a.jsx)(C, {}) : null]
+    value: G,
+    children: [null != W && o ? (0, a.jsxs)(a.Fragment, {
+      children: [" ", W, " "]
+    }) : null, "dot" === F ? (0, a.jsx)(_.RoleDot, {
+      color: B,
+      name: V,
+      className: C.roleDot
+    }) : null, t, !o && (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(T.default, {
+        clan: n.clan,
+        userId: i.author.id,
+        contextGuildId: b,
+        className: C.clanTagChiplet,
+        profileViewedAnalytics: Y
+      }), (0, a.jsx)(p.default, {
+        message: i
+      })]
+    }), null != K ? (0, a.jsx)(a.Fragment, {
+      children: K
+    }) : null, null == W || o ? null : W, null != i && (0, S.default)(i) && H && P ? (0, a.jsx)(R, {}) : null]
   })
 }(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"
