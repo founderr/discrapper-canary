@@ -39,6 +39,9 @@ n.r(t), n.d(t, {
   getTrait: function() {
     return E
   },
+  getTrendingType: function() {
+    return O
+  },
   isEntryActive: function() {
     return C
   },
@@ -222,4 +225,9 @@ function y(e) {
   let t = R(e),
     n = L(e);
   return null == t ? n : "".concat(n, " — ").concat(t)
+}
+
+function O(e) {
+  var t;
+  return null === (t = E(e, i.ContentInventoryTraitType.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending
 }
