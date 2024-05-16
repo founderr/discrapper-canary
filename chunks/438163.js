@@ -79,7 +79,7 @@ function S(e) {
       [T.biteSize]: n === I.UserProfileTypes.BITE_SIZE,
       [T.fullSize]: n === I.UserProfileTypes.FULL_SIZE
     }),
-    B = s()(T.statusBubble, {
+    k = s()(T.statusBubble, {
       [T.statusBubbleShape]: h <= 1 && !g && C || h > 1,
       [T.statusBubbleSingleLineWithTextShape]: h <= 1 && g,
       [T.statusBubbleEmojiOnlyPadding]: C && !g,
@@ -93,7 +93,7 @@ function S(e) {
       children: (0, i.jsx)("div", {
         className: w,
         children: (0, i.jsx)("span", {
-          className: B,
+          className: k,
           children: (0, i.jsxs)("div", {
             className: s()(T.content, T.clamp),
             children: [U(), b()]
@@ -110,7 +110,7 @@ function S(e) {
         onMouseEnter: () => P(!0),
         onMouseLeave: () => P(!1),
         children: (0, i.jsx)("span", {
-          className: B,
+          className: k,
           children: (() => {
             let e = s()(T.content, {
               [T.clamp]: m,

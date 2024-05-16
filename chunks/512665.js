@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return k
   },
   renderSingleLineMessage: function() {
     return w
@@ -129,7 +129,7 @@ function w(e, t, n, r, a) {
   }
 }
 
-function B(e) {
+function k(e) {
   let t;
   let {
     repliedAuthor: n,

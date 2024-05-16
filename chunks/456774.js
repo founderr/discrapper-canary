@@ -38,8 +38,8 @@ var i = n("735250"),
   b = n("507893"),
   G = n("645284"),
   w = n("632184"),
-  B = n("170039"),
-  k = n("806519"),
+  k = n("170039"),
+  B = n("806519"),
   V = n("5192"),
   x = n("59688"),
   F = n("718582"),
@@ -69,10 +69,10 @@ function Q(e) {
       return r === t.length - 1 && 0 === n ? (0, i.jsx)("div", {
         className: Z.facePileItem,
         children: a
-      }, e.id) : (0, i.jsx)(k.default, {
+      }, e.id) : (0, i.jsx)(B.default, {
         width: 24,
         height: 24,
-        mask: k.default.Masks.GUILD_POPOUT_FACE_PILE_AVATAR,
+        mask: B.default.Masks.GUILD_POPOUT_FACE_PILE_AVATAR,
         className: Z.facePileItem,
         children: a
       }, e.id)
@@ -254,7 +254,7 @@ function ee(e) {
       }), (0, i.jsx)(q, {
         title: null !== (t = null != y ? y : null == T ? void 0 : T.name) && void 0 !== t ? t : "",
         subtitle: D,
-        icon: v && (0, i.jsx)(B.default, {
+        icon: v && (0, i.jsx)(k.default, {
           width: 12,
           height: 12,
           className: s()(Z.cardIcon, Z.cardDetailsIcon)

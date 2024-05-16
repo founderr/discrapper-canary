@@ -49,8 +49,8 @@ function w(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let B = {},
-  k = {};
+let k = {},
+  B = {};
 
 function V(e) {
   var t;
@@ -77,9 +77,9 @@ async function x(e) {
       releasePhase: I
     } = V(d),
     T = await (0, E.default)();
-  k[n] = e => {
+  B[n] = e => {
     var t, a, o;
-    B[n] = e, m.default.track(b.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
+    k[n] = e, m.default.track(b.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
       channel_id: r.id,
       guild_id: r.getGuildId(),
       media_session_id: e.mediaSessionIds[0],
@@ -120,7 +120,7 @@ async function F(e) {
     applicationId: r,
     locationId: a,
     instanceId: o
-  } = e, l = B[r], u = f.default.getChannel(i), d = C.default.getEmbeddedActivityDurationMs(i, r), _ = A.default.getCurrentUser(), c = null == u ? void 0 : u.getGuildId(), I = T.default.getSessionId();
+  } = e, l = k[r], u = f.default.getChannel(i), d = C.default.getEmbeddedActivityDurationMs(i, r), _ = A.default.getCurrentUser(), c = null == u ? void 0 : u.getGuildId(), I = T.default.getSessionId();
   if (null != a && null != o && null != I && await s.HTTP.post({
       url: b.Endpoints.ACTIVITY_LEAVE(r, a, o),
       body: {
@@ -160,7 +160,7 @@ async function F(e) {
     activity_user_session_id: l.activityUserSessionId,
     raw_thermal_state: p,
     duration_ms: d
-  }), delete k[r], delete B[r]
+  }), delete B[r], delete k[r]
 }
 
 function H(e) {
@@ -191,13 +191,13 @@ function j(e, t, n, i, r, s) {
   let c = S.default.getMediaSessionId(),
     E = (0, D.default)(t),
     I = null == c && (null == _ ? void 0 : _.isVocal()) === !0 && (null == _ ? void 0 : _.isPrivate()) === !1;
-  null != E && !I && (null === (o = k[n]) || void 0 === o || o.call(k, {
+  null != E && !I && (null === (o = B[n]) || void 0 === o || o.call(B, {
     activitySessionId: E,
     activityUserSessionId: (0, a.v4)(),
     launchId: i,
     mediaSessionIds: null != c ? [c] : [],
     activities_infra_version: "location" in t ? 2 : 1
-  }), delete k[n])
+  }), delete B[n])
 }
 
 function W(e) {
@@ -205,7 +205,7 @@ function W(e) {
     mediaSessionId: t
   } = e;
   if (null == t) return;
-  for (let e in B) B[e].mediaSessionIds.push(t);
+  for (let e in k) k[e].mediaSessionIds.push(t);
   let n = S.default.getChannelId();
   if (null != n) {
     let e = C.default.getSelfEmbeddedActivityForChannel(n),
@@ -213,14 +213,14 @@ function W(e) {
       s = null == e ? void 0 : e.launchId,
       o = (0, D.default)(e);
     if (null != i && null != t && null != o && null != s) {
-      let e = B[i],
-        n = k[i];
+      let e = k[i],
+        n = B[i];
       r()(null == e || null == n, "an active session and awaiting session both exist"), null == n || n({
         activitySessionId: o,
         activityUserSessionId: (0, a.v4)(),
         launchId: s,
         mediaSessionIds: [t]
-      }), delete k[i]
+      }), delete B[i]
     }
   }
 }
@@ -245,7 +245,7 @@ function Z(e) {
 }
 
 function X(e) {
-  return B[e]
+  return k[e]
 }
 class Q extends u.default {
   _initialize() {
@@ -277,7 +277,7 @@ class Q extends u.default {
         error: t,
         applicationId: n
       } = e;
-      delete k[n];
+      delete B[n];
       let i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC;
       switch (t.code) {
         case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:

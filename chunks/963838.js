@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return V
   },
   getResizedEmojiData: function() {
-    return B
+    return k
   },
   sampleAnimationId: function() {
-    return k
+    return B
   }
 });
 var i = n("392711"),
@@ -62,7 +62,7 @@ let b = {
     [P.VoiceChannelEffectAnimationType.BASIC]: G.BASIC,
     [P.VoiceChannelEffectAnimationType.PREMIUM]: G.PREMIUM
   },
-  B = r().memoize(e => new Promise(t => {
+  k = r().memoize(e => new Promise(t => {
     let n = new Image;
     n.src = e, n.crossOrigin = "Anonymous", n.onload = () => {
       let i = P.EMOJI_SIZE * (0, v.getDevicePixelRatio)();
@@ -74,7 +74,7 @@ let b = {
       }
     }
   })),
-  k = (e, t) => {
+  B = (e, t) => {
     let n = w[e];
     if (null != t && e === P.VoiceChannelEffectAnimationType.PREMIUM) {
       let e = t.end + 1;

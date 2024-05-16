@@ -80,14 +80,14 @@ function g(e, t, n, d) {
   };
   let G = null,
     w = null,
-    B = null,
     k = null,
+    B = null,
     V = null;
   return e.onChange = () => {
     if (null != t) {
       let a = o.default.getState(t.id),
         u = s.getChangeKeys(t);
-      if (A.EditorUtils.richValue(e) !== G || !A.SelectionUtils.equals(e.selection, w) || a.activeCommand !== B || null == V || u.some((e, t) => V[t] !== e)) {
+      if (A.EditorUtils.richValue(e) !== G || !A.SelectionUtils.equals(e.selection, w) || a.activeCommand !== k || null == V || u.some((e, t) => V[t] !== e)) {
         let o = f.HistoryUtils.withMergedEntry(e, () => {
           var o;
           return function(e) {
@@ -308,15 +308,15 @@ function g(e, t, n, d) {
             channel: t,
             canUseCommands: n,
             canOnlyUseTextCommands: d,
-            commandChanged: (null === (o = a.activeCommand) || void 0 === o ? void 0 : o.id) !== (null == B ? void 0 : B.id),
-            previousOptionValues: k
+            commandChanged: (null === (o = a.activeCommand) || void 0 === o ? void 0 : o.id) !== (null == k ? void 0 : k.id),
+            previousOptionValues: B
           })
         });
         if (null != o) {
           let t = f.HistoryUtils.currentEntry(e);
-          null != t && (t.commandId = o.commandId), k = o.optionValues
-        } else k = null;
-        G = A.EditorUtils.richValue(e), w = e.selection, B = a.activeCommand, V = u
+          null != t && (t.commandId = o.commandId), B = o.optionValues
+        } else B = null;
+        G = A.EditorUtils.richValue(e), w = e.selection, k = a.activeCommand, V = u
       }
     }
     N()

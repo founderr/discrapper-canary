@@ -52,8 +52,8 @@ var c = n("120356"),
   b = n("599250"),
   G = n("466111"),
   w = n("761374"),
-  B = n("363138"),
-  k = n("325767"),
+  k = n("363138"),
+  B = n("325767"),
   V = n("930153"),
   x = n("74538"),
   F = n("357355"),
@@ -168,7 +168,7 @@ function eo(e) {
     ...i
   } = e;
   return (0, _.jsxs)("svg", {
-    ...(0, k.default)({
+    ...(0, B.default)({
       ...i
     }),
     width: t,
@@ -338,7 +338,7 @@ function ed(e) {
 function e_() {
   return (0, _.jsxs)(_.Fragment, {
     children: [(0, _.jsx)(el, {
-      Icon: B.default,
+      Icon: k.default,
       text: et.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
         maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)($.PremiumTypes.TIER_0, {
           useSpace: !1
@@ -484,7 +484,7 @@ function eE(e) {
         percentageOff: (0, V.formatPercent)(r, $.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
       })
     }), (0, _.jsx)(el, {
-      Icon: B.default,
+      Icon: k.default,
       text: et.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
         maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)($.PremiumTypes.TIER_2, {
           useSpace: !1
@@ -503,7 +503,7 @@ function eE(e) {
   });
   return (0, _.jsxs)(_.Fragment, {
     children: [(0, _.jsx)(el, {
-      Icon: B.default,
+      Icon: k.default,
       text: et.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
         maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)($.PremiumTypes.TIER_2, {
           useSpace: !1
@@ -556,16 +556,16 @@ function eI(e) {
     b = !l && C,
     G = (0, Z.getBOGOPillCopy)(),
     w = (0, h.isThemeLight)((0, m.default)()),
-    B = w ? 5 : 2,
+    k = w ? 5 : 2,
     {
-      enabled: k
+      enabled: B
     } = j.ReferralProgramRecipient.useExperiment({
       location: "Tier2Card"
     }, {
       autoTrackExposure: !1
     }),
     V = et.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
-  return k && (null == N ? void 0 : N.trial_id) === $.PREMIUM_TIER_2_REFERRAL_TRIAL_ID && (V = et.default.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), !b || y || w ? b && y && !w && (n = en.rimGlowTier2Stacked) : n = en.rimGlowTier2, (0, _.jsxs)("div", {
+  return B && (null == N ? void 0 : N.trial_id) === $.PREMIUM_TIER_2_REFERRAL_TRIAL_ID && (V = et.default.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), !b || y || w ? b && y && !w && (n = en.rimGlowTier2Stacked) : n = en.rimGlowTier2, (0, _.jsxs)("div", {
     className: E()(en.card, o, {
       [en.withTier2Rim]: b && !y,
       [en.withTier2RimStacked]: b && y,
@@ -579,7 +579,7 @@ function eI(e) {
           percent: R.discount.amount
         }),
         className: en.topRimPill,
-        colorOptions: B
+        colorOptions: k
       }), (0, _.jsx)("div", {
         className: n
       })]
@@ -587,7 +587,7 @@ function eI(e) {
       children: [(0, _.jsx)(es, {
         text: V,
         className: en.topRimPill,
-        colorOptions: B
+        colorOptions: k
       }), (0, _.jsx)("div", {
         className: n
       })]
@@ -595,7 +595,7 @@ function eI(e) {
       children: [(0, _.jsx)(es, {
         text: et.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
         className: en.topRimPill,
-        colorOptions: B
+        colorOptions: k
       }), (0, _.jsx)("div", {
         className: n
       })]
@@ -603,7 +603,7 @@ function eI(e) {
       children: [(0, _.jsx)(es, {
         text: et.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
         className: en.topRimPill,
-        colorOptions: B
+        colorOptions: k
       }), (0, _.jsx)("div", {
         className: n
       })]

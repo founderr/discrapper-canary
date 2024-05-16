@@ -42,7 +42,7 @@ function d(e) {
     gridNavigatorId: U,
     gridNotice: b,
     renderHeader: G
-  } = e, w = r.useRef(null), B = r.useRef(null), k = r.useRef(null), V = 0 === t.length, x = (0, a.useExpressionPickerStore)(e => e.searchQuery), F = _.useStore(e => e.inspectedExpressionPosition), H = (0, s.useExpressionPickerGridWidth)({
+  } = e, w = r.useRef(null), k = r.useRef(null), B = r.useRef(null), V = 0 === t.length, x = (0, a.useExpressionPickerStore)(e => e.searchQuery), F = _.useStore(e => e.inspectedExpressionPosition), H = (0, s.useExpressionPickerGridWidth)({
     gridWrapperRef: w,
     containerWidth: d,
     showingEmptyState: V
@@ -67,7 +67,7 @@ function d(e) {
     isUsingKeyboardNavigation: J
   } = (0, s.useKeyboardNavigation)({
     columnCounts: K,
-    expressionsListRef: B,
+    expressionsListRef: k,
     expressionsGrid: Y,
     onSelectItem: c,
     store: _,
@@ -84,15 +84,15 @@ function d(e) {
     E(x)
   }, [E, x]), r.useEffect(() => _.resetStoreState, [_.resetStoreState]), r.useLayoutEffect(() => {
     var e;
-    null === (e = k.current) || void 0 === e || e.focus()
+    null === (e = B.current) || void 0 === e || e.focus()
   }, []);
   let er = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.default, {
-      ref: k,
+      ref: B,
       store: _,
       hasSendableExpressions: !0,
       onKeyDown: q,
-      expressionsListRef: B,
+      expressionsListRef: k,
       gridNavigatorId: U,
       defaultSearchPlaceholder: T,
       emptySearchPlaceholder: f
@@ -103,7 +103,7 @@ function d(e) {
       className: u.header,
       children: [" ", er, " "]
     }), V && null != S ? S(u.emptyState) : (0, i.jsxs)(i.Fragment, {
-      children: [C(B), null != b && (0, i.jsx)("div", {
+      children: [C(k), null != b && (0, i.jsx)("div", {
         className: u.gridNoticeWrapper,
         children: b
       }), (0, i.jsx)("div", {
@@ -112,7 +112,7 @@ function d(e) {
         id: U,
         ...Q,
         children: null != H ? (0, i.jsx)(o.default, {
-          ref: B,
+          ref: k,
           store: _,
           hasSearchResults: I,
           listPadding: P,

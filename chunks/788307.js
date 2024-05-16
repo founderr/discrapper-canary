@@ -109,11 +109,11 @@ t.default = e => {
     location: "ActivityStatus"
   }, {
     autoTrackExposure: !1
-  }), B = (0, E.useColorValue)(R.Color.BRAND_345), k = null, V = w && null != b && N.default.can(R.Permissions.CONNECT, G);
-  V ? k = (0, i.jsx)(S.default, {
+  }), k = (0, E.useColorValue)(R.Color.BRAND_345), B = null, V = w && null != b && N.default.can(R.Permissions.CONNECT, G);
+  V ? B = (0, i.jsx)(S.default, {
     className: u,
     hangStatusActivity: b
-  }) : null != P && null != P.emoji && !h && (k = (0, i.jsx)(v, {
+  }) : null != P && null != P.emoji && !h && (B = (0, i.jsx)(v, {
     emoji: P.emoji,
     animate: d,
     hideTooltip: I,
@@ -123,16 +123,16 @@ t.default = e => {
     F = null !== x && [R.StatusTypes.OFFLINE, R.StatusTypes.INVISIBLE].includes(x),
     H = null === (t = (0, c.default)(n, r, void 0, V)) || void 0 === t ? void 0 : t.activityText,
     Y = null != H && H.length > 0;
-  return F || null == k && !Y ? null : (0, i.jsxs)("div", {
+  return F || null == B && !Y ? null : (0, i.jsxs)("div", {
     className: a,
-    children: [k, (0, i.jsx)(D, {
+    children: [B, (0, i.jsx)(D, {
       text: H,
       className: s
     }), y && (0, i.jsx)(o.QuestsIcon, {
       className: g.questsIcon,
       height: L,
       width: L,
-      color: B.hex
+      color: k.hex
     }), null != n && n.some(e => (0, _.default)(e, V)) ? (0, i.jsx)(C.default, {
       width: 16,
       height: 16,

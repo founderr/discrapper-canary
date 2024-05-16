@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return V
   },
   UserPopoutBadgeList: function() {
-    return B
+    return k
   },
   default: function() {
     return x
@@ -45,7 +45,7 @@ var i = n("735250"),
 let G = d.AvatarSizes.SIZE_80,
   w = (0, c.getDecorationSizeForAvatarSize)(G);
 
-function B(e) {
+function k(e) {
   let {
     user: t,
     guildId: n,
@@ -72,7 +72,7 @@ function B(e) {
     })]
   })
 }
-let k = N.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
+let B = N.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
 
 function V(e) {
   let {
@@ -91,7 +91,7 @@ function V(e) {
     hasProfileEffect: R,
     statusTooltipDelay: L
   } = e, {
-    theme: B
+    theme: k
   } = (0, v.useUserProfileThemeContext)(), V = r.useContext(A.AnalyticsContext), x = t.isNonUserBot() && !t.isClyde(), F = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), H = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
     analyticsLocations: Y
   } = (0, _.default)(), {
@@ -110,13 +110,13 @@ function V(e) {
   }), q = (0, i.jsx)("div", {
     className: b.avatarHoverTarget,
     ...Q,
-    children: (0, i.jsx)(k, {
+    children: (0, i.jsx)(B, {
       src: null != a ? a : X,
       avatarDecoration: Z,
       size: G,
       "aria-label": t.username,
       status: H ? y.StatusTypes.UNKNOWN : u,
-      statusBackdropColor: F && !H ? (0, d.getStatusBackdropColor)(B) : void 0,
+      statusBackdropColor: F && !H ? (0, d.getStatusBackdropColor)(k) : void 0,
       isMobile: c,
       statusTooltip: !0,
       statusTooltipDelay: L
@@ -212,7 +212,7 @@ function x(e) {
       hasBanner: (null == n ? void 0 : n.banner) != null,
       hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
       profileType: M.UserProfileTypes.POPOUT
-    }), (0, i.jsx)(B, {
+    }), (0, i.jsx)(k, {
       user: t,
       guildId: r,
       onClick: s

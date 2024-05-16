@@ -78,22 +78,22 @@ function L(e) {
         guildId: P
       })
     })
-  }, b = C.default.useName(M), G = (0, l.useStateFromStores)([S.default, h.default, m.default], () => O.default.getNickname(P, a, M)), w = A.default.getGuild(P), B = (0, E.useClydeEnabled)(w, y) && r === R.CLYDE_AI_USER_ID ? R.CLYDE_AI_MENTION_COLOR : null;
+  }, b = C.default.useName(M), G = (0, l.useStateFromStores)([S.default, h.default, m.default], () => O.default.getNickname(P, a, M)), w = A.default.getGuild(P), k = (0, E.useClydeEnabled)(w, y) && r === R.CLYDE_AI_USER_ID ? R.CLYDE_AI_MENTION_COLOR : null;
   if (null == M) return (0, i.jsx)(g, {
     userId: I,
     className: t,
     children: L
   });
-  let k = e => (0, i.jsx)(p.default, {
+  let B = e => (0, i.jsx)(p.default, {
     className: t,
     onContextMenu: U,
-    color: B,
+    color: k,
     ...e,
     children: "@".concat(null != G ? G : b)
   });
   return v ? (0, i.jsx)(c.AnalyticsLocationProvider, {
     value: D,
-    children: k()
+    children: B()
   }) : (0, i.jsx)(c.AnalyticsLocationProvider, {
     value: D,
     children: (0, i.jsx)(u.Popout, {
@@ -109,7 +109,7 @@ function L(e) {
         ...e
       })),
       position: o.isMobile ? "top" : "right",
-      children: e => k(e)
+      children: e => B(e)
     })
   })
 }

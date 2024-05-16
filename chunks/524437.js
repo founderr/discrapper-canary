@@ -525,7 +525,7 @@ class G extends R.MessageType {
   }
 }
 let w = new G;
-class B extends R.MessageType {
+class k extends R.MessageType {
   create(e) {
     let t = {};
     return globalThis.Object.defineProperty(t, R.MESSAGE_TYPE, {
@@ -581,7 +581,7 @@ class B extends R.MessageType {
     }])
   }
 }
-let k = new B;
+let B = new k;
 class V extends R.MessageType {
   create(e) {
     let t = {
@@ -602,7 +602,7 @@ class V extends R.MessageType {
           r.collapsedInInbox = e.bool();
           break;
         case 2:
-          r.iconEmoji = k.internalBinaryRead(e, e.uint32(), n, r.iconEmoji);
+          r.iconEmoji = B.internalBinaryRead(e, e.uint32(), n, r.iconEmoji);
           break;
         case 3:
           r.customNotificationSoundConfig = H.internalBinaryRead(e, e.uint32(), n, r.customNotificationSoundConfig);
@@ -617,7 +617,7 @@ class V extends R.MessageType {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    !1 !== e.collapsedInInbox && t.tag(1, R.WireType.Varint).bool(e.collapsedInInbox), e.iconEmoji && k.internalBinaryWrite(e.iconEmoji, t.tag(2, R.WireType.LengthDelimited).fork(), n).join(), e.customNotificationSoundConfig && H.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, R.WireType.LengthDelimited).fork(), n).join();
+    !1 !== e.collapsedInInbox && t.tag(1, R.WireType.Varint).bool(e.collapsedInInbox), e.iconEmoji && B.internalBinaryWrite(e.iconEmoji, t.tag(2, R.WireType.LengthDelimited).fork(), n).join(), e.customNotificationSoundConfig && H.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, R.WireType.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? R.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
   }
@@ -631,7 +631,7 @@ class V extends R.MessageType {
       no: 2,
       name: "icon_emoji",
       kind: "message",
-      T: () => k
+      T: () => B
     }, {
       no: 3,
       name: "custom_notification_sound_config",
@@ -904,7 +904,7 @@ class X extends R.MessageType {
           r.nativePhoneIntegrationEnabled = g.BoolValue.internalBinaryRead(e, e.uint32(), n, r.nativePhoneIntegrationEnabled);
           break;
         case 9:
-          r.soundboardSettings = ek.internalBinaryRead(e, e.uint32(), n, r.soundboardSettings);
+          r.soundboardSettings = eB.internalBinaryRead(e, e.uint32(), n, r.soundboardSettings);
           break;
         default:
           let a = n.readUnknownField;
@@ -916,7 +916,7 @@ class X extends R.MessageType {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    "blur" === e.videoBackgroundFilterDesktop.oneofKind && Z.internalBinaryWrite(e.videoBackgroundFilterDesktop.blur, t.tag(1, R.WireType.LengthDelimited).fork(), n).join(), "presetOption" === e.videoBackgroundFilterDesktop.oneofKind && t.tag(2, R.WireType.Varint).uint32(e.videoBackgroundFilterDesktop.presetOption), "customAsset" === e.videoBackgroundFilterDesktop.oneofKind && K.internalBinaryWrite(e.videoBackgroundFilterDesktop.customAsset, t.tag(3, R.WireType.LengthDelimited).fork(), n).join(), e.alwaysPreviewVideo && g.BoolValue.internalBinaryWrite(e.alwaysPreviewVideo, t.tag(5, R.WireType.LengthDelimited).fork(), n).join(), e.afkTimeout && g.UInt32Value.internalBinaryWrite(e.afkTimeout, t.tag(6, R.WireType.LengthDelimited).fork(), n).join(), e.streamNotificationsEnabled && g.BoolValue.internalBinaryWrite(e.streamNotificationsEnabled, t.tag(7, R.WireType.LengthDelimited).fork(), n).join(), e.nativePhoneIntegrationEnabled && g.BoolValue.internalBinaryWrite(e.nativePhoneIntegrationEnabled, t.tag(8, R.WireType.LengthDelimited).fork(), n).join(), e.soundboardSettings && ek.internalBinaryWrite(e.soundboardSettings, t.tag(9, R.WireType.LengthDelimited).fork(), n).join();
+    "blur" === e.videoBackgroundFilterDesktop.oneofKind && Z.internalBinaryWrite(e.videoBackgroundFilterDesktop.blur, t.tag(1, R.WireType.LengthDelimited).fork(), n).join(), "presetOption" === e.videoBackgroundFilterDesktop.oneofKind && t.tag(2, R.WireType.Varint).uint32(e.videoBackgroundFilterDesktop.presetOption), "customAsset" === e.videoBackgroundFilterDesktop.oneofKind && K.internalBinaryWrite(e.videoBackgroundFilterDesktop.customAsset, t.tag(3, R.WireType.LengthDelimited).fork(), n).join(), e.alwaysPreviewVideo && g.BoolValue.internalBinaryWrite(e.alwaysPreviewVideo, t.tag(5, R.WireType.LengthDelimited).fork(), n).join(), e.afkTimeout && g.UInt32Value.internalBinaryWrite(e.afkTimeout, t.tag(6, R.WireType.LengthDelimited).fork(), n).join(), e.streamNotificationsEnabled && g.BoolValue.internalBinaryWrite(e.streamNotificationsEnabled, t.tag(7, R.WireType.LengthDelimited).fork(), n).join(), e.nativePhoneIntegrationEnabled && g.BoolValue.internalBinaryWrite(e.nativePhoneIntegrationEnabled, t.tag(8, R.WireType.LengthDelimited).fork(), n).join(), e.soundboardSettings && eB.internalBinaryWrite(e.soundboardSettings, t.tag(9, R.WireType.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? R.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
   }
@@ -963,7 +963,7 @@ class X extends R.MessageType {
       no: 9,
       name: "soundboard_settings",
       kind: "message",
-      T: () => ek
+      T: () => eB
     }])
   }
 }
@@ -2647,7 +2647,7 @@ class eG extends R.MessageType {
   }
 }
 let ew = new eG;
-class eB extends R.MessageType {
+class ek extends R.MessageType {
   create(e) {
     let t = {
       volume: 0
@@ -2686,7 +2686,7 @@ class eB extends R.MessageType {
     }])
   }
 }
-let ek = new eB;
+let eB = new ek;
 class eV extends R.MessageType {
   create(e) {
     let t = {

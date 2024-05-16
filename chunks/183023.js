@@ -50,8 +50,8 @@ var i = n("735250"),
   b = n("605403"),
   G = n("806519"),
   w = n("626135"),
-  B = n("768581"),
-  k = n("900849"),
+  k = n("768581"),
+  B = n("900849"),
   V = n("74538"),
   x = n("886132"),
   F = n("524444"),
@@ -111,13 +111,13 @@ let z = () => ({
       id: a,
       icon: o,
       name: l
-    } = t, u = B.default.getGuildIconURL({
+    } = t, u = k.default.getGuildIconURL({
       id: a,
       icon: o,
       size: 32,
       canAnimate: !0
     }), _ = (n = null == n || n) || t.isDiscoverable(), c = () => {
-      t.isDiscoverable() ? (0, k.startLurking)(a, {}) : n && (0, g.transitionTo)(H.Routes.CHANNEL(a, L.default.getChannelId(a)))
+      t.isDiscoverable() ? (0, B.startLurking)(a, {}) : n && (0, g.transitionTo)(H.Routes.CHANNEL(a, L.default.getChannelId(a)))
     }, E = t.isDiscoverable() && null != t.presenceCount, I = () => {
       let e = !r && !n;
       return (0, i.jsxs)(i.Fragment, {
@@ -239,7 +239,7 @@ let z = () => ({
       guildEmoji: y,
       demoMode: P = !1,
       nonce: G
-    } = e, B = (0, l.useStateFromStores)([D.default], () => D.default.getCurrentUser()), k = (0, l.useStateFromStores)([v.default], () => v.default.getGuildId()), Z = V.default.isPremium(B), Q = null != k && (k === (null == S ? void 0 : S.id) || k === (null == O ? void 0 : O.id)), q = null != O, $ = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
+    } = e, k = (0, l.useStateFromStores)([D.default], () => D.default.getCurrentUser()), B = (0, l.useStateFromStores)([v.default], () => v.default.getGuildId()), Z = V.default.isPremium(k), Q = null != B && (B === (null == S ? void 0 : S.id) || B === (null == O ? void 0 : O.id)), q = null != O, $ = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
     P && (Z = !0, $ = !0, q = !1, Q = !1);
     let ee = z(),
       {
@@ -252,9 +252,9 @@ let z = () => ({
         userIsRoleSubscriber: !1
       } : {
         isRoleSubscriptionEmoji: m.isPurchasableRoleSubscriptionEmoji(y),
-        isUnusableRoleSubscriptionEmoji: m.isUnusableRoleSubscriptionEmoji(y, null != k ? k : void 0),
+        isUnusableRoleSubscriptionEmoji: m.isUnusableRoleSubscriptionEmoji(y, null != B ? B : void 0),
         userIsRoleSubscriber: N.default.getUserSubscriptionRoles(y.guildId).size > 0
-      }, [y, k]),
+      }, [y, B]),
       er = !!en && (0, f.shouldHideGuildPurchaseEntryPoints)(null == y ? void 0 : y.guildId),
       {
         analyticsLocations: ea
@@ -456,7 +456,7 @@ let z = () => ({
         color: d.ButtonColors.BRAND,
         fullWidth: !0,
         onClick: () => {
-          (0, k.startLurking)(r.id, {})
+          (0, B.startLurking)(r.id, {})
         },
         children: s.text
       }) : null)]

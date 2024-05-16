@@ -144,9 +144,9 @@ function M(e) {
     category: g.CardCategory.EMPTY,
     channelId: e
   }));
-  let B = G && w.length > 0,
-    k = [...b, ...R];
-  return _ !== k.length && (d((function(e, t) {
+  let k = G && w.length > 0,
+    B = [...b, ...R];
+  return _ !== B.length && (d((function(e, t) {
     return (0, r.orderBy)(e, [e => (function(e, t) {
       let n = e => e > 0 ? Math.log(e + 1) : 0,
         i = e => e.map(e => {
@@ -196,7 +196,7 @@ function M(e) {
       }
       return s = s > 0 ? s * r : 1e-5 * r
     })(e, t)], ["desc"])
-  })(k, B).slice(0, 3)), m(k.length)), n
+  })(B, k).slice(0, 3)), m(B.length)), n
 }
 let y = e => t => [L.ActivityTypes.PLAYING, L.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId);
 

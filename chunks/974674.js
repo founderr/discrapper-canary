@@ -429,7 +429,7 @@ function L(e) {
     "aria-hidden": y = !1,
     "aria-label": P,
     imageClassName: U
-  } = e, b = (0, d.useStatusFillColor)(g, L), G = r.useId(), w = r.useId(), [B] = r.useState(() => ({
+  } = e, b = (0, d.useStatusFillColor)(g, L), G = r.useId(), w = r.useId(), [k] = r.useState(() => ({
     fill: a,
     ...O({
       size: S,
@@ -437,7 +437,7 @@ function L(e) {
       isMobile: t,
       isTyping: !1
     })
-  })), k = r.useMemo(() => ({
+  })), B = r.useMemo(() => ({
     fill: b,
     ...O({
       size: S,
@@ -456,8 +456,8 @@ function L(e) {
   } = (0, o.useSpring)({
     immediate: !document.hasFocus(),
     config: A,
-    from: B,
-    to: k
+    from: k,
+    to: B
   }), K = (0, I.getAvatarSize)(S), z = (0, I.getAvatarSpecs)(S), Z = z.status * I.TYPING_WIDTH_RATIO, X = z.status * I.MOBILE_HEIGHT_RATIO, Q = null != g ? (z.status * I.TYPING_WIDTH_RATIO - z.status) / 2 : 0, q = z.size - z.status - Q - z.offset, J = z.size - X - z.offset, $ = z.size + Math.ceil(Q);
   return (0, i.jsx)(C, {
     ...e,

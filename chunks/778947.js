@@ -47,8 +47,8 @@ var i = n("735250"),
   b = n("534761"),
   G = n("307187"),
   w = n("750858"),
-  B = n("981631"),
-  k = n("689938"),
+  k = n("981631"),
+  B = n("689938"),
   V = n("822545"),
   x = n("255963");
 
@@ -152,7 +152,7 @@ function Y(e) {
   }), U = null != T.messageReference && null != T.webhookId, b = T.author, {
     id: G
   } = b, w = S ? 32 : 80, {
-    avatarSrc: k,
+    avatarSrc: B,
     avatarDecorationSrc: V,
     eventHandlers: x
   } = (0, O.default)({
@@ -168,10 +168,10 @@ function Y(e) {
       icon: T.application.icon,
       size: w,
       fallbackAvatar: !1
-    })) && void 0 !== t ? t : k : k
-  }, [H, null === (t = T.application) || void 0 === t ? void 0 : t.icon, null === (n = T.application) || void 0 === n ? void 0 : n.id, b.avatar, w, k]);
+    })) && void 0 !== t ? t : B : B
+  }, [H, null === (t = T.application) || void 0 === t ? void 0 : t.icon, null === (n = T.application) || void 0 === n ? void 0 : n.id, b.avatar, w, B]);
   if (r.useEffect(() => {
-      if (null != h) return y.ComponentDispatch.subscribeKeyed(B.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(h, ":").concat(G), v), () => void y.ComponentDispatch.unsubscribeKeyed(B.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(h, ":").concat(G), v)
+      if (null != h) return y.ComponentDispatch.subscribeKeyed(k.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(h, ":").concat(G), v), () => void y.ComponentDispatch.unsubscribeKeyed(k.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(h, ":").concat(G), v)
     }, [G, h]), !S || P) return null != c && null != g ? (0, i.jsx)(_.AnalyticsLocationProvider, {
     value: D,
     children: (0, i.jsx)(u.Popout, {
@@ -278,14 +278,14 @@ function K(e) {
   return (0, i.jsx)(u.Tooltip, {
     tooltipClassName: V.nitroAuthorBadgeTootip,
     shouldShow: null != r,
-    text: k.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
+    text: B.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
       date: r
     }),
     onTooltipShow: () => (0, p.default)(n.id),
     children: e => (0, i.jsx)(u.Clickable, {
       className: V.nitroAuthorBadgeContainer,
       onClick: () => W(t),
-      "aria-label": k.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
+      "aria-label": B.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
         date: r
       }),
       children: (0, i.jsx)("img", {
@@ -310,7 +310,7 @@ function z(e) {
     hideTimestamp: N,
     className: p,
     channel: O
-  } = e, M = r.useMemo(() => null != o ? e => o(e, t) : void 0, [o, t]), [, y] = (0, E.default)(t.author.id, e.guildId), b = (0, l.useStateFromStores)([R.default], () => R.default.getGuild(e.guildId), [e.guildId]), x = null != t.author && null != b && g.default.canManageUser(B.Permissions.MODERATE_MEMBERS, t.author, b), F = y && x, W = Y({
+  } = e, M = r.useMemo(() => null != o ? e => o(e, t) : void 0, [o, t]), [, y] = (0, E.default)(t.author.id, e.guildId), b = (0, l.useStateFromStores)([R.default], () => R.default.getGuild(e.guildId), [e.guildId]), x = null != t.author && null != b && g.default.canManageUser(k.Permissions.MODERATE_MEMBERS, t.author, b), F = y && x, W = Y({
     props: e,
     guildId: e.guildId,
     handleRenderPopout: M,
@@ -361,7 +361,7 @@ function z(e) {
     messageId: t.id
   }, "connections"));
   let et = [];
-  (0, P.hasFlag)(t.flags, B.MessageFlags.SUPPRESS_NOTIFICATIONS) && et.push((0, i.jsx)(m.default, {}, "suppress-notifications"));
+  (0, P.hasFlag)(t.flags, k.MessageFlags.SUPPRESS_NOTIFICATIONS) && et.push((0, i.jsx)(m.default, {}, "suppress-notifications"));
   let en = {};
   en[w.UsernameDecorationTypes.SYSTEM_TAG] = X, en[w.UsernameDecorationTypes.BADGES] = Q;
   let ei = H(e, M, en),
@@ -374,7 +374,7 @@ function z(e) {
     avatar: W,
     username: (0, i.jsxs)(i.Fragment, {
       children: [F && (0, i.jsx)(u.Tooltip, {
-        text: k.default.Messages.GUILD_COMMUNICATION_DISABLED_ICON_TOOLTIP_BODY,
+        text: B.default.Messages.GUILD_COMMUNICATION_DISABLED_ICON_TOOLTIP_BODY,
         children: e => (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(v.default, {
             ...e,
@@ -382,7 +382,7 @@ function z(e) {
             height: 12,
             className: a ? V.compactCommunicationDisabled : V.communicationDisabled
           }), (0, i.jsx)(u.HiddenVisually, {
-            children: k.default.Messages.GUILD_COMMUNICATION_DISABLED_BOTTOM_SHEET_TITLE
+            children: B.default.Messages.GUILD_COMMUNICATION_DISABLED_BOTTOM_SHEET_TITLE
           })]
         })
       }), ei]

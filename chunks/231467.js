@@ -239,9 +239,9 @@ function y(e) {
     icon: r.icon,
     size: 64,
     canAnimate: !0
-  })) && void 0 !== t ? t : void 0, w = null != A ? A : (0, E.getClanBannerUrl)(r.id, y), B = null == a && null == w ? {
+  })) && void 0 !== t ? t : void 0, w = null != A ? A : (0, E.getClanBannerUrl)(r.id, y), k = null == a && null == w ? {
     background: "linear-gradient(90deg, ".concat(O, ", ").concat(v, ")")
-  } : void 0, k = null != a ? a : null != w ? (0, i.jsx)("img", {
+  } : void 0, B = null != a ? a : null != w ? (0, i.jsx)("img", {
     alt: R.default.Messages.CLAN_LOOK_BANNER,
     src: w,
     className: g.bannerImage
@@ -250,8 +250,8 @@ function y(e) {
     className: s()(g.card, S),
     children: [(0, i.jsx)("div", {
       className: g.cardBrandingHeader,
-      style: B,
-      children: k
+      style: k,
+      children: B
     }), (0, i.jsxs)("div", {
       className: g.cardContent,
       children: [(0, i.jsxs)("div", {

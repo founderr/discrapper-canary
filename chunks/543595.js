@@ -35,8 +35,8 @@ var i, r, a, s = n("735250"),
   b = n("346656"),
   G = n("514342"),
   w = n("366966"),
-  B = n("936195"),
-  k = n("692437"),
+  k = n("936195"),
+  B = n("692437"),
   V = n("632184"),
   x = n("806519"),
   F = n("981631"),
@@ -342,7 +342,7 @@ class Q extends(r = o.PureComponent) {
     else if (!(0, A.default)(e)) {
       if (o = a = i, (0, m.default)(e) && null != i) a = Y.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
         artists: o,
-        artistsHook: (t, n) => (0, s.jsx)(B.default, {
+        artistsHook: (t, n) => (0, s.jsx)(k.default, {
           artists: i,
           linkClassName: j.bodyLink,
           canOpen: null != e.sync_id,
@@ -384,7 +384,7 @@ class Q extends(r = o.PureComponent) {
         guild: t,
         size: b.default.Sizes.SMOL,
         className: j.guildIcon
-      }), (0, s.jsx)(k.default, {
+      }), (0, s.jsx)(B.default, {
         width: 12,
         height: 12
       }), (0, s.jsxs)("div", {
