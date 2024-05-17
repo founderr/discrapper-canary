@@ -1,21 +1,22 @@
 "use strict";
 i.r(t), i("47120");
-var n, a, l = i("735250"),
-  s = i("470079"),
-  r = i("120356"),
-  o = i.n(r),
-  c = i("392711"),
+var n, a, l, s, r = i("735250"),
+  o = i("470079"),
+  c = i("120356"),
   d = i.n(c),
-  u = i("846519"),
-  h = i("481060"),
-  p = i("585483"),
-  f = i("996753"),
-  m = i("206895"),
-  g = i("981631"),
-  x = i("689938"),
-  C = i("382763");
+  u = i("392711"),
+  h = i.n(u),
+  p = i("846519"),
+  f = i("481060"),
+  m = i("585483"),
+  g = i("996753"),
+  C = i("206895"),
+  x = i("259580"),
+  _ = i("981631"),
+  I = i("689938"),
+  v = i("382763");
 
-function _(e, t, i) {
+function A(e, t, i) {
   return t in e ? Object.defineProperty(e, t, {
     value: i,
     enumerable: !0,
@@ -23,90 +24,100 @@ function _(e, t, i) {
     writable: !0
   }) : e[t] = i, e
 }
-let I = {
+let E = {
   JUMP: "jump",
   NEXT: "next",
   PREVIOUS: "previous"
 };
-class v extends(n = s.PureComponent) {
+(s = n || (n = {})).ARROW = "arrow", s.CARET = "caret";
+class N extends(a = o.PureComponent) {
   componentDidMount() {
-    p.ComponentDispatch.subscribe(g.ComponentActions.CAROUSEL_PREV, this.handlePrevious), p.ComponentDispatch.subscribe(g.ComponentActions.CAROUSEL_NEXT, this.handleNext)
+    m.ComponentDispatch.subscribe(_.ComponentActions.CAROUSEL_PREV, this.handlePrevious), m.ComponentDispatch.subscribe(_.ComponentActions.CAROUSEL_NEXT, this.handleNext)
   }
   componentWillUnmount() {
-    p.ComponentDispatch.unsubscribe(g.ComponentActions.CAROUSEL_PREV, this.handlePrevious), p.ComponentDispatch.unsubscribe(g.ComponentActions.CAROUSEL_NEXT, this.handleNext)
+    m.ComponentDispatch.unsubscribe(_.ComponentActions.CAROUSEL_PREV, this.handlePrevious), m.ComponentDispatch.unsubscribe(_.ComponentActions.CAROUSEL_NEXT, this.handleNext)
   }
   render() {
     let {
       current: e,
       count: t,
       includeHitboxPadding: i,
-      arrowClassName: n
-    } = this.props, a = o()(C.arrowHitbox, n, {
-      [C.arrowHitboxPadding]: i
-    });
-    return (0, l.jsxs)("div", {
-      className: o()(C.controls, this.props.className),
-      children: [(0, l.jsx)(h.Button, {
-        look: h.Button.Looks.BLANK,
-        className: a,
+      arrowClassName: n,
+      paginationDotClassName: a,
+      paginationDotSelectedClassName: l,
+      paginationArrowIconType: s = "arrow"
+    } = this.props, o = d()(v.arrowHitbox, {
+      [v.arrowHitboxPadding]: i
+    }, n);
+    return (0, r.jsxs)("div", {
+      className: d()(v.controls, this.props.className),
+      children: [(0, r.jsx)(f.Button, {
+        look: f.Button.Looks.BLANK,
+        className: o,
         onClick: this.handlePrevious,
-        "aria-label": x.default.Messages.PAGINATION_PREVIOUS,
-        children: (0, l.jsx)(f.default, {
-          className: C.arrow,
-          direction: f.default.Directions.LEFT
+        "aria-label": I.default.Messages.PAGINATION_PREVIOUS,
+        children: "caret" === s ? (0, r.jsx)(x.default, {
+          className: v.arrow,
+          direction: x.default.Directions.LEFT
+        }) : (0, r.jsx)(g.default, {
+          className: v.arrow,
+          direction: g.default.Directions.LEFT
         })
-      }), (0, l.jsx)("div", {
-        className: C.dots,
-        children: d().times(t, t => (0, l.jsx)(h.Button, {
-          look: h.Button.Looks.BLANK,
-          size: h.Button.Sizes.NONE,
+      }), (0, r.jsx)("div", {
+        className: v.dots,
+        children: h().times(t, t => (0, r.jsx)(f.Button, {
+          look: f.Button.Looks.BLANK,
+          size: f.Button.Sizes.NONE,
           onClick: () => this.handleDotClick(t),
-          className: t === e ? C.dotSelected : C.dotNormal,
-          "aria-label": x.default.Messages.PAGINATION_SLIDE_LABEL.format({
+          className: t === e ? d()(v.dotSelected, l) : d()(v.dotNormal, a),
+          "aria-label": I.default.Messages.PAGINATION_SLIDE_LABEL.format({
             pageNumber: t + 1
           })
         }, "dot-".concat(t)))
-      }), (0, l.jsx)(h.Button, {
-        look: h.Button.Looks.BLANK,
-        className: a,
+      }), (0, r.jsx)(f.Button, {
+        look: f.Button.Looks.BLANK,
+        className: o,
         onClick: this.handleNext,
-        "aria-label": x.default.Messages.PAGINATION_NEXT,
-        children: (0, l.jsx)(f.default, {
-          className: C.arrow,
-          direction: f.default.Directions.RIGHT
+        "aria-label": I.default.Messages.PAGINATION_NEXT,
+        children: "caret" === s ? (0, r.jsx)(x.default, {
+          className: v.arrow,
+          direction: x.default.Directions.RIGHT
+        }) : (0, r.jsx)(g.default, {
+          className: v.arrow,
+          direction: g.default.Directions.RIGHT
         })
       })]
     })
   }
   constructor(...e) {
-    super(...e), _(this, "handleDotClick", e => {
+    super(...e), A(this, "handleDotClick", e => {
       let {
         onSetItem: t,
         onIntentionalChange: i,
         current: n
       } = this.props;
-      null == i || i(n, e, I.JUMP), t(e)
-    }), _(this, "handleNext", () => {
+      null == i || i(n, e, E.JUMP), t(e)
+    }), A(this, "handleNext", () => {
       let {
         onIntentionalChange: e,
         current: t,
         onChangePage: i
       } = this.props, n = i(1);
-      null == e || e(t, n, I.NEXT)
-    }), _(this, "handlePrevious", () => {
+      null == e || e(t, n, E.NEXT)
+    }), A(this, "handlePrevious", () => {
       let {
         onIntentionalChange: e,
         current: t,
         onChangePage: i
       } = this.props, n = i(-1);
-      null == e || e(t, n, I.PREVIOUS)
+      null == e || e(t, n, E.PREVIOUS)
     })
   }
 }
-_(v, "defaultProps", {
+A(N, "defaultProps", {
   includeHitboxPadding: !0
 });
-class A extends(a = s.PureComponent) {
+class T extends(l = o.PureComponent) {
   componentDidMount() {
     !this.props.paused && !this.state.hovered && this.startTimer()
   }
@@ -138,7 +149,7 @@ class A extends(a = s.PureComponent) {
       onChangeItem: n
     } = this.props;
     null == n || n(e[i], this.state.visibleIndex, i);
-    let a = t > 0 ? m.SlideDirection.LEFT : m.SlideDirection.RIGHT;
+    let a = t > 0 ? C.SlideDirection.LEFT : C.SlideDirection.RIGHT;
     return this.setState({
       visibleIndex: i,
       direction: a
@@ -149,81 +160,99 @@ class A extends(a = s.PureComponent) {
       items: e,
       renderItem: t,
       className: i,
-      paginationClassName: n,
-      paginationArrowClassName: a,
-      themedPagination: s,
-      includeHitboxPadding: r,
-      style: c,
-      aspectRatio: d
+      slideAnimatorClassName: n,
+      slideAnimatorSpringSettings: a,
+      slideAnimatorFadeInOut: l,
+      paginationClassName: s,
+      paginationArrowClassName: o,
+      paginationArrowIconType: c,
+      paginationDotClassName: u,
+      paginationDotSelectedClassName: h,
+      themedPagination: p,
+      includeHitboxPadding: f,
+      style: m,
+      aspectRatio: g,
+      children: x
     } = this.props, {
-      visibleIndex: u
+      visibleIndex: _
     } = this.state;
-    return (0, l.jsxs)("div", {
-      className: o()(C.root, i),
-      style: c,
-      onMouseEnter: this.handleMouseEnter,
-      onMouseLeave: this.handleMouseLeave,
-      children: [(0, l.jsx)("div", {
-        style: {
-          aspectRatio: d
-        },
-        children: (0, l.jsx)(m.default, {
-          step: u,
-          direction: this.getCurrentDirection(),
-          className: C.carousel,
-          children: t(e[u], u)
-        })
-      }), e.length > 1 && (0, l.jsx)(v, {
-        className: o()(n, s ? C.themedPagination : C.pagination),
-        arrowClassName: a,
-        includeHitboxPadding: r,
-        current: u,
-        count: e.length,
-        onChangePage: t => this.changeItem(e, t),
-        onSetItem: this.handleSetItem,
-        onIntentionalChange: this.handleIntentionalChange
+    return (0, r.jsxs)("div", {
+      className: v.root,
+      children: [(0, r.jsxs)("div", {
+        className: d()(v.carouselContainer, i),
+        style: m,
+        onMouseEnter: this.handleMouseEnter,
+        onMouseLeave: this.handleMouseLeave,
+        children: [(0, r.jsx)("div", {
+          style: {
+            aspectRatio: g
+          },
+          children: (0, r.jsx)(C.default, {
+            className: d()(v.carousel, n),
+            step: _,
+            direction: this.getCurrentDirection(),
+            springSettings: a,
+            fadeInOut: l,
+            children: t(e[_], _)
+          })
+        }), e.length > 1 && (0, r.jsx)(N, {
+          className: d()(s, p ? v.themedPagination : v.pagination),
+          arrowClassName: o,
+          includeHitboxPadding: f,
+          current: _,
+          count: e.length,
+          onChangePage: t => this.changeItem(e, t),
+          onSetItem: this.handleSetItem,
+          onIntentionalChange: this.handleIntentionalChange,
+          paginationArrowIconType: c,
+          paginationDotClassName: u,
+          paginationDotSelectedClassName: h
+        })]
+      }), null != x && x({
+        step: _,
+        direction: this.getCurrentDirection()
       })]
     })
   }
   constructor(e) {
-    super(e), _(this, "timer", new u.Interval), _(this, "getCurrentDirection", () => this.state.direction), _(this, "nextItem", () => {
+    super(e), A(this, "timer", new p.Interval), A(this, "getCurrentDirection", () => this.state.direction), A(this, "nextItem", () => {
       let {
         items: e
       } = this.props;
       this.changeItem(e, 1)
-    }), _(this, "previousItem", () => {
+    }), A(this, "previousItem", () => {
       let {
         items: e
       } = this.props;
       this.changeItem(e, -1)
-    }), _(this, "handleSetItem", e => {
+    }), A(this, "handleSetItem", e => {
       let {
         visibleIndex: t
       } = this.state, {
         items: i
       } = this.props;
       this.changeItem(i, e - t)
-    }), _(this, "handleMouseEnter", () => {
+    }), A(this, "handleMouseEnter", () => {
       this.setState({
         hovered: !0
       })
-    }), _(this, "handleMouseLeave", () => {
+    }), A(this, "handleMouseLeave", () => {
       this.setState({
         hovered: !1
       })
-    }), _(this, "handleIntentionalChange", (e, t, i) => {
+    }), A(this, "handleIntentionalChange", (e, t, i) => {
       let {
         items: n,
         onIntentionalChange: a
       } = this.props;
       return null == a ? void 0 : a(n[t], e, t, i)
     }), this.state = {
-      visibleIndex: !0 === e.randomize ? d().random(0, e.items.length - 1) : 0,
-      direction: m.SlideDirection.LEFT,
+      visibleIndex: !0 === e.randomize ? h().random(0, e.items.length - 1) : 0,
+      direction: C.SlideDirection.LEFT,
       hovered: !1
     }
   }
 }
-_(A, "defaultProps", {
+A(T, "defaultProps", {
   aspectRatio: 16 / 9
-}), t.default = A
+}), t.default = T

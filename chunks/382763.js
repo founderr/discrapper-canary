@@ -4,6 +4,7 @@ e.exports = {
   arrowHitbox: "arrowHitbox__58add",
   arrowHitboxPadding: "arrowHitboxPadding__8a68d",
   carousel: "carousel_c25a21",
+  carouselContainer: "carouselContainer__8d9fc",
   carouselItem: "carouselItem_dd9fbe",
   controls: "controls_a919f2",
   dot: "dot__6356c",
