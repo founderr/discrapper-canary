@@ -15,9 +15,9 @@ var l = n("735250"),
   c = n("153867"),
   f = n("771845"),
   h = n("880080"),
-  p = n("624138"),
-  m = n("727258"),
-  C = n("199540"),
+  m = n("624138"),
+  C = n("727258"),
+  p = n("199540"),
   g = n("40153"),
   E = n("252686"),
   _ = n("682662"),
@@ -25,9 +25,9 @@ var l = n("735250"),
   I = n("689938"),
   N = n("538962"),
   T = n("634165");
-let A = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
-  L = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_SIZE),
-  v = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_MARGIN);
+let A = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
+  L = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_SIZE),
+  v = (0, m.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_MARGIN);
 
 function x(e) {
   let {
@@ -35,7 +35,7 @@ function x(e) {
     setNodeRef: n,
     selected: s,
     expanded: d,
-    mediaState: p,
+    mediaState: m,
     mentionCount: x = 0,
     unread: R = !1,
     defaultFolderName: M,
@@ -52,16 +52,16 @@ function x(e) {
     id: B,
     name: F,
     children: H
-  } = t, [V, k] = a.useState(!1), [Y, K] = a.useState(!1), W = V || Y;
+  } = t, [V, k] = a.useState(!1), [Y, W] = a.useState(!1), K = V || Y;
   a.useEffect(() => {
     D && k(!1)
   }, [D]);
   let [{
     dragging: z
   }, Z] = (0, r.useDrag)({
-    type: m.GuildsNodeType.FOLDER,
+    type: C.GuildsNodeType.FOLDER,
     item: () => (null == b || b(), {
-      type: m.GuildsNodeType.FOLDER,
+      type: C.GuildsNodeType.FOLDER,
       nodeId: t.id
     }),
     end() {
@@ -71,7 +71,7 @@ function x(e) {
       dragging: e.isDragging()
     })
   }), X = a.useCallback(e => {
-    K(e)
+    W(e)
   }, []), Q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && P()
   }, [P, d]), q = null != F && "" !== F ? F : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(B)), $ = "folder-items-".concat(B), ee = H.length * (L + v), et = (0, o.useTransition)(!z && d, {
@@ -105,12 +105,12 @@ function x(e) {
           [T.wobble]: !z && Y && !d
         }),
         "data-dnd-name": q,
-        children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(C.default, {
+        children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(p.default, {
           folderNode: t,
           expanded: d,
           forceCircular: y,
           sorting: D,
-          mediaState: p,
+          mediaState: m,
           mentionCount: x,
           tooltipName: q,
           folderGroupId: $,
@@ -134,7 +134,7 @@ function x(e) {
     children: [!z && (0, l.jsx)("span", {
       className: i()(N.expandedFolderBackground, {
         [N.collapsed]: !d,
-        [N.hover]: W
+        [N.hover]: K
       })
     }), el, et((e, t, n) => {
       let {

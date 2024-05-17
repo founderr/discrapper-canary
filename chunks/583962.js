@@ -18,9 +18,9 @@ var l = n("735250"),
   c = n("481060"),
   f = n("239091"),
   h = n("607070"),
-  p = n("100527"),
-  m = n("367907"),
-  C = n("906732"),
+  m = n("100527"),
+  C = n("367907"),
+  p = n("906732"),
   g = n("434404"),
   E = n("496675"),
   _ = n("259580"),
@@ -69,7 +69,7 @@ t.default = e => {
     withMargin: n
   } = e, {
     analyticsLocations: s
-  } = (0, C.default)(p.default.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
+  } = (0, p.default)(m.default.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
     premiumSubscriberCount: d,
     id: g
   } = t, I = (0, S.getGuildTierFromAppliedBoostCount)(d, g), M = (0, S.getNextTier)(I, t.id), O = null == M, D = null != M ? M : I, j = (0, u.useStateFromStores)([T.default], () => {
@@ -95,7 +95,7 @@ t.default = e => {
     },
     [F, H] = (0, r.useSpring)(() => B),
     V = () => {
-      (0, m.trackWithMetadata)(v.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
+      (0, C.trackWithMetadata)(v.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
           section: v.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
         },
@@ -123,7 +123,7 @@ t.default = e => {
   O && (k = (0, S.getShortenedTierName)(D), Y = x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
     numBoosts: d
   }));
-  let K = (0, o.useListItem)("boosts-".concat(t.id));
+  let W = (0, o.useListItem)("boosts-".concat(t.id));
   return (0, l.jsx)("li", {
     children: (0, l.jsx)(c.Tooltip, {
       text: O ? x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : x.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({
@@ -134,7 +134,7 @@ t.default = e => {
       delay: 200,
       hideOnClick: !0,
       children: e => (0, l.jsxs)(c.Clickable, {
-        ...K,
+        ...W,
         ...e,
         "aria-label": void 0,
         role: "button",

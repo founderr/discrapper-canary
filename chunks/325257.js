@@ -11,9 +11,9 @@ var l = n("735250"),
   c = n("481060"),
   f = n("493683"),
   h = n("239091"),
-  p = n("153867"),
-  m = n("35225"),
-  C = n("703656"),
+  m = n("153867"),
+  C = n("35225"),
+  p = n("703656"),
   g = n("769654"),
   E = n("271383"),
   _ = n("771845"),
@@ -61,8 +61,8 @@ t.default = a.memo(function(e) {
     animatable: V,
     selected: k = !1,
     unread: Y = !1,
-    mediaState: K,
-    unavailable: W = !1,
+    mediaState: W,
+    unavailable: K = !1,
     badge: z = 0,
     contextMenu: Z = j,
     draggable: X = !1,
@@ -72,7 +72,7 @@ t.default = a.memo(function(e) {
   } = e, {
     id: $,
     parentId: ee
-  } = G, et = null !== (t = e.upperBadge) && void 0 !== t ? t : W ? (0, M.renderUnavailableBadge)() : null != K ? (0, M.renderMediaBadge)(K) : void 0, en = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
+  } = G, et = null !== (t = e.upperBadge) && void 0 !== t ? t : K ? (0, M.renderUnavailableBadge)() : null != W ? (0, M.renderMediaBadge)(W) : void 0, en = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
   null == en && z > 0 ? en = null !== (s = (0, M.renderMentionBadge)(z)) && void 0 !== s ? s : void 0 : null == en && null != J && (en = null !== (h = (0, M.renderGuildJoinRequestBadge)({
     guildJoinRequestStatus: J
   })) && void 0 !== h ? h : void 0);
@@ -88,7 +88,7 @@ t.default = a.memo(function(e) {
         nodeId: G.id
       }),
       end() {
-        null == B || B(), (0, p.saveGuildFolders)(_.default.getCompatibleGuildFolders())
+        null == B || B(), (0, m.saveGuildFolders)(_.default.getCompatibleGuildFolders())
       },
       collect: e => ({
         dragging: e.isDragging()
@@ -99,11 +99,11 @@ t.default = a.memo(function(e) {
     eu = !Q && er,
     [ed, ec] = a.useState(!1),
     [ef, eh] = a.useState(!1),
-    [ep] = a.useState(() => new d.DelayedCall(70, () => eh(!0)));
-  a.useEffect(() => () => ep.cancel(), [ep]);
-  let em = a.useCallback(() => {
+    [em] = a.useState(() => new d.DelayedCall(70, () => eh(!0)));
+  a.useEffect(() => () => em.cancel(), [em]);
+  let eC = a.useCallback(() => {
       if (null != F) {
-        (0, C.transitionTo)(F, {
+        (0, p.transitionTo)(F, {
           state: b
         });
         return
@@ -111,11 +111,11 @@ t.default = a.memo(function(e) {
         state: b
       })
     }, [$, F]),
-    eC = a.useCallback(() => {
-      if (null != F || null == H || W || !q) return;
-      let e = (0, m.getChannelIdForGuildTransition)(H.id);
+    ep = a.useCallback(() => {
+      if (null != F || null == H || K || !q) return;
+      let e = (0, C.getChannelIdForGuildTransition)(H.id);
       null != e && f.default.preload(H.id, e)
-    }, [F, H, W, q]),
+    }, [F, H, K, q]),
     eg = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest($)),
     eE = a.useCallback(e => {
       null != H && !eg && Z(e, H)
@@ -128,11 +128,11 @@ t.default = a.memo(function(e) {
     }, [ee]),
     eS = a.useCallback(e => {
       if (e) {
-        ep.delay();
+        em.delay();
         return
       }
-      ep.cancel(), eh(!1)
-    }, [ep]),
+      em.cancel(), eh(!1)
+    }, [em]),
     eI = a.useCallback(e => {
       null == U || U($, e)
     }, [$, U]);
@@ -153,14 +153,14 @@ t.default = a.memo(function(e) {
         mentions: z
       }),
       name: H.toString(),
-      onClick: em,
+      onClick: eC,
       onMouseEnter: function() {
         Q || eo(!0)
       },
       onMouseLeave: function() {
         Q || eo(!1)
       },
-      onMouseDown: eC,
+      onMouseDown: ep,
       onContextMenu: eE,
       onKeyDown: e_,
       icon: H.getIconURL(96, eu && V),

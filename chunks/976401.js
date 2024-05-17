@@ -21,9 +21,9 @@ function d(e) {
     disabled: c,
     icon: f,
     iconForeground: h,
-    innerClassName: p,
-    tooltipClassName: m,
-    onMouseEnter: C,
+    innerClassName: m,
+    tooltipClassName: C,
+    onMouseEnter: p,
     onMouseLeave: g,
     "aria-label": E,
     "aria-checked": _,
@@ -37,7 +37,7 @@ function d(e) {
     foreground: h
   });
   return (0, l.jsx)(r.Tooltip, {
-    tooltipClassName: m,
+    tooltipClassName: C,
     text: t,
     "aria-label": E,
     color: I,
@@ -54,7 +54,7 @@ function d(e) {
         look: r.Button.Looks.BLANK,
         size: r.Button.Sizes.NONE,
         disabled: c,
-        innerClassName: p,
+        innerClassName: m,
         wrapperClassName: u.button,
         className: i()(u.button, {
           [u.disabled]: c,
@@ -64,7 +64,7 @@ function d(e) {
           null != t && t(), null != d && d(e)
         },
         onMouseEnter: () => {
-          null == a || a(), null == C || C()
+          null == a || a(), null == p || p()
         },
         onMouseLeave: () => {
           null == f || f(), null == g || g()

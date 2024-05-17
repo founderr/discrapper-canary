@@ -18,9 +18,9 @@ var l = n("735250"),
   c = n("873546"),
   f = n("442837"),
   h = n("481060"),
-  p = n("493683"),
-  m = n("239091"),
-  C = n("420660"),
+  m = n("493683"),
+  C = n("239091"),
+  p = n("420660"),
   g = n("702321"),
   E = n("201895"),
   _ = n("43267"),
@@ -49,8 +49,8 @@ var l = n("735250"),
   V = n("788307"),
   k = n("960670"),
   Y = n("981631"),
-  K = n("689938"),
-  W = n("577245");
+  W = n("689938"),
+  K = n("577245");
 let z = H.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
   Z = {
     offset: {
@@ -60,7 +60,7 @@ let z = H.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
     }
   },
   X = e => (0, l.jsx)(h.Clickable, {
-    className: W.closeButton,
+    className: K.closeButton,
     ...e,
     focusProps: {
       offset: {
@@ -71,11 +71,11 @@ let z = H.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
       }
     },
     children: (0, l.jsx)(w.default, {
-      className: W.closeIcon
+      className: K.closeIcon
     })
   }),
   Q = () => (0, l.jsx)(B.default, {
-    className: W.favoriteIcon
+    className: K.favoriteIcon
   });
 class q extends a.Component {
   render() {
@@ -89,45 +89,45 @@ class q extends a.Component {
       children: o,
       locationState: d,
       onClick: f,
-      className: p,
-      role: m,
-      "aria-posinset": C,
+      className: m,
+      role: C,
+      "aria-posinset": p,
       "aria-setsize": g,
       ...E
     } = this.props;
     return (0, l.jsx)(U.default, {
-      className: i()(W.channel, {
-        [W.fullWidth]: c.isMobile
-      }, p),
+      className: i()(K.channel, {
+        [K.fullWidth]: c.isMobile
+      }, m),
       onClick: f,
-      role: m,
+      role: C,
       focusProps: {
         within: !0,
         ...Z
       },
-      "aria-posinset": C,
+      "aria-posinset": p,
       "aria-setsize": g,
       children: (0, l.jsx)(h.Interactive, {
         as: "div",
         selected: t,
-        className: i()(s, W.interactive, W.linkButton, {
-          [W.interactiveSelected]: t
+        className: i()(s, K.interactive, K.linkButton, {
+          [K.interactiveSelected]: t
         }),
         children: (0, l.jsxs)(u.Link, {
           to: {
             pathname: e,
             state: d
           },
-          className: W.link,
+          className: K.link,
           ...E,
           children: [(0, l.jsx)(G.default, {
             selected: t,
             muted: !1,
             avatar: (0, l.jsx)(n, {
-              className: i()(W.linkButtonIcon, a)
+              className: i()(K.linkButtonIcon, a)
             }),
             name: r,
-            innerClassName: W.avatarWithText
+            innerClassName: K.avatarWithText
           }), o]
         })
       })
@@ -162,9 +162,9 @@ function J(e) {
     H(!1)
   }, eo = function(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    null != e && (e.preventDefault(), e.stopPropagation()), p.default.closePrivateChannel(t.id, r, n)
+    null != e && (e.preventDefault(), e.stopPropagation()), m.default.closePrivateChannel(t.id, r, n)
   }, eu = () => {
-    p.default.preload(Y.ME, t.id)
+    m.default.preload(Y.ME, t.id)
   }, ed = e => {
     e.stopPropagation()
   }, ec = e => {
@@ -173,7 +173,7 @@ function J(e) {
       null === (t = q.current) || void 0 === t || t.click()
     }
   }, ef = e => {
-    t.isMultiUserDM() ? (0, m.openContextMenuLazy)(e, async () => {
+    t.isMultiUserDM() ? (0, C.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("25421")]).then(n.bind(n, "354741"));
@@ -184,7 +184,7 @@ function J(e) {
       })
     }, {
       noBlurEvent: !0
-    }) : (0, m.openContextMenuLazy)(e, async () => {
+    }) : (0, C.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("36441"), n.e("56826")]).then(n.bind(n, "131404"));
@@ -197,15 +197,15 @@ function J(e) {
     })
   }, eh = e => {
     e.preventDefault(), e.stopPropagation();
-    let n = K.default.Messages.LEAVE_GROUP_DM_TITLE.format({
+    let n = W.default.Messages.LEAVE_GROUP_DM_TITLE.format({
         name
       }),
-      a = K.default.Messages.LEAVE_GROUP_DM_BODY.format({
+      a = W.default.Messages.LEAVE_GROUP_DM_BODY.format({
         name
       });
-    t.isManaged() && (n = K.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
+    t.isManaged() && (n = W.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
       name
-    }), a = K.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
+    }), a = W.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
       name
     })), (0, h.openModal)(e => (0, l.jsx)(k.default, {
       header: n,
@@ -213,18 +213,18 @@ function J(e) {
       onSubmit: eo,
       ...e
     }))
-  }, ep = () => {
+  }, em = () => {
     let e = {
-      className: W.activity,
-      textClassName: W.activityText,
-      emojiClassName: W.activityEmoji
+      className: K.activity,
+      textClassName: K.activityText,
+      emojiClassName: K.activityEmoji
     };
     return t.isSystemDM() ? (0, l.jsx)("div", {
-      className: W.subtext,
-      children: (0, g.default)(t.id) ? K.default.Messages.SYSTEM_DM_CHANGELOG_STATUS : K.default.Messages.SYSTEM_DM_ACTIVITY_TEXT
+      className: K.subtext,
+      children: (0, g.default)(t.id) ? W.default.Messages.SYSTEM_DM_CHANGELOG_STATUS : W.default.Messages.SYSTEM_DM_ACTIVITY_TEXT
     }) : t.isMultiUserDM() ? (0, l.jsx)("div", {
-      className: W.subtext,
-      children: K.default.Messages.MEMBERS_HEADER.format({
+      className: K.subtext,
+      children: W.default.Messages.MEMBERS_HEADER.format({
         members: t.recipients.length + 1
       })
     }) : null != A ? (0, l.jsx)(V.default, {
@@ -235,7 +235,7 @@ function J(e) {
       hideTooltip: !0,
       user: c
     }) : null
-  }, em = () => {
+  }, eC = () => {
     let e = h.AvatarSizes.SIZE_32;
     if (t.isMultiUserDM()) return t.recipients.length >= 2 && s && null == t.icon ? (0, l.jsx)(L.default, {
       "aria-hidden": !0,
@@ -247,14 +247,14 @@ function J(e) {
       ...et,
       src: (0, _.getChannelIconURL)(t),
       "aria-hidden": !0,
-      className: W.__invalid_avatar,
+      className: K.__invalid_avatar,
       size: e,
       status: M ? Y.StatusTypes.ONLINE : O,
       isTyping: M
     });
     o()(null != c, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
     let n = null;
-    return !c.isSystemUser() && (n = (0, C.default)(A) ? Y.StatusTypes.STREAMING : O), (0, l.jsx)(z, {
+    return !c.isSystemUser() && (n = (0, p.default)(A) ? Y.StatusTypes.STREAMING : O), (0, l.jsx)(z, {
       ...et,
       size: h.AvatarSizes.SIZE_32,
       src: $,
@@ -262,11 +262,11 @@ function J(e) {
       status: n,
       isMobile: b,
       isTyping: M,
-      className: W.__invalid_avatar,
+      className: K.__invalid_avatar,
       "aria-label": c.username,
       statusTooltip: !0
     })
-  }, eC = t.isMultiUserDM(), eg = t.isSystemDM(), eE = (0, v.systemDMRedesignEnabled)(), e_ = !eC && !eg && t.type === Y.ChannelTypes.DM, eS = null == c ? void 0 : c.clan, eI = (0, I.getClanBadgeUrlFromClan)(eS), eN = e_ && null != eS ? (0, l.jsxs)(l.Fragment, {
+  }, ep = t.isMultiUserDM(), eg = t.isSystemDM(), eE = (0, v.systemDMRedesignEnabled)(), e_ = !ep && !eg && t.type === Y.ChannelTypes.DM, eS = null == c ? void 0 : c.clan, eI = (0, I.getClanBadgeUrlFromClan)(eS), eN = e_ && null != eS ? (0, l.jsxs)(l.Fragment, {
     children: [ea, (0, l.jsx)(N.BaseClanTagChiplet, {
       clanTag: eS.tag,
       clanBadge: eI,
@@ -281,7 +281,7 @@ function J(e) {
         ...a
       } = e;
       return (0, l.jsx)(U.default, {
-        className: W.channel,
+        className: K.channel,
         role: n,
         focusProps: {
           ...Z,
@@ -296,9 +296,9 @@ function J(e) {
         "aria-setsize": B,
         "aria-posinset": w,
         children: (0, l.jsxs)(h.Interactive, {
-          className: i()(W.interactive, {
-            [W.interactiveSystemDM]: eE && eg,
-            [W.interactiveSelected]: r
+          className: i()(K.interactive, {
+            [K.interactiveSystemDM]: eE && eg,
+            [K.interactiveSelected]: r
           }),
           as: "div",
           onClick: ec,
@@ -307,31 +307,31 @@ function J(e) {
           children: [(0, l.jsx)(u.Link, {
             innerRef: q,
             to: Y.Routes.CHANNEL(Y.ME, t.id),
-            className: W.link,
+            className: K.link,
             "aria-label": (0, E.default)({
               channel: t,
               unread: el
             }),
             ...a,
             children: (0, l.jsx)(G.default, {
-              avatar: em(),
+              avatar: eC(),
               selected: r,
               highlighted: el,
               muted: null != en && en,
-              subText: ep(),
+              subText: em(),
               name: (0, l.jsx)(P.default, {
-                tooltipClassName: W.overflowTooltip,
+                tooltipClassName: K.overflowTooltip,
                 children: eN
               }),
               decorators: t.isSystemDM() ? (0, l.jsx)(j.default, {
-                className: W.decorator,
+                className: K.decorator,
                 type: j.default.Types.SYSTEM_DM,
                 verified: !0
               }) : null
             })
           }), es ? (0, l.jsx)(Q, {}) : null, (0, l.jsx)(X, {
-            "aria-label": eC ? K.default.Messages.LEAVE_GROUP_DM : K.default.Messages.CLOSE_DM,
-            onClick: eC ? eh : eo,
+            "aria-label": ep ? W.default.Messages.LEAVE_GROUP_DM : W.default.Messages.CLOSE_DM,
+            onClick: ep ? eh : eo,
             onMouseDown: ed
           })]
         })

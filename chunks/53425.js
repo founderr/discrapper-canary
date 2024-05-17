@@ -17,9 +17,9 @@ t.default = a.memo(function(e) {
     selectedChannel: n,
     selectedVoiceChannelId: a,
     sortedThreadIds: s,
-    withGuildIcon: p
-  } = e, m = (0, r.useStateFromStoresArray)([o.default], () => s.map(e => o.default.getChannel(e)).filter(d.isNotNullish), [s]), C = (0, r.useStateFromStores)([u.default], () => {
-    let e = m[m.length - 1];
+    withGuildIcon: m
+  } = e, C = (0, r.useStateFromStoresArray)([o.default], () => s.map(e => o.default.getChannel(e)).filter(d.isNotNullish), [s]), p = (0, r.useStateFromStores)([u.default], () => {
+    let e = C[C.length - 1];
     if (null == e) return 0;
     let t = u.default.getVoiceStates(e.guild_id)[e.id];
     return null == t || 0 === t.length ? 0 : a !== e.id ? 40 : 32 * t.length + 8
@@ -33,17 +33,17 @@ t.default = a.memo(function(e) {
       }),
       children: [(0, l.jsx)("div", {
         className: i()(h.spineBorder, {
-          [h.spineBorderWithGuildIcon]: p
+          [h.spineBorderWithGuildIcon]: m
         }),
         style: {
-          bottom: 24 + C
+          bottom: 24 + p
         }
-      }), m.map((e, t) => (0, l.jsx)(c.default, {
+      }), C.map((e, t) => (0, l.jsx)(c.default, {
         thread: e,
         isSelectedChannel: (null == n ? void 0 : n.id) === e.id,
         isSelectedVoice: a === e.id,
-        isLast: t === m.length - 1,
-        withGuildIcon: p
+        isLast: t === C.length - 1,
+        withGuildIcon: m
       }, e.id))]
     })
   })

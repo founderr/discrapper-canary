@@ -16,9 +16,9 @@ var a = n("120356"),
   c = n("146773"),
   f = n("888651"),
   h = n("619915"),
-  p = n("339340"),
-  m = n("201895"),
-  C = n("718589"),
+  m = n("339340"),
+  C = n("201895"),
+  p = n("718589"),
   g = n("933557"),
   E = n("557135"),
   _ = n("873696"),
@@ -47,8 +47,8 @@ var a = n("120356"),
   V = n("830993"),
   k = n("653577"),
   Y = n("207055"),
-  K = n("981631"),
-  W = n("647086"),
+  W = n("981631"),
+  K = n("647086"),
   z = n("689938"),
   Z = n("513285");
 
@@ -122,7 +122,7 @@ class Q extends B.default {
       voiceStates: t,
       withGuildIcon: a,
       tabIndex: s,
-      location: K.AnalyticsLocations.GUILD_CHANNEL_LIST
+      location: W.AnalyticsLocations.GUILD_CHANNEL_LIST
     })
   }
   renderChannelInfo() {
@@ -147,7 +147,7 @@ class Q extends B.default {
       isUserOver: c,
       connectChannelDropTarget: f,
       connectChannelDragSource: h,
-      connectUserDropTarget: p,
+      connectUserDropTarget: m,
       connectDragPreview: g,
       canReorderChannel: E,
       canMoveMembers: _,
@@ -203,7 +203,7 @@ class Q extends B.default {
                 },
                 connectDragPreview: g,
                 isFavoriteSuggestion: A,
-                "aria-label": (0, m.default)({
+                "aria-label": (0, C.default)({
                   channel: e,
                   unread: a,
                   mentionCount: r,
@@ -211,7 +211,7 @@ class Q extends B.default {
                   embeddedActivitiesCount: N.length,
                   isSubscriptionGated: T
                 }),
-                "aria-describedby": (0, C.default)({
+                "aria-describedby": (0, p.default)({
                   channel: e,
                   embeddedApps: N
                 }),
@@ -224,7 +224,7 @@ class Q extends B.default {
         })
       }), this.renderVoiceUsers()]
     });
-    return _ && (y = p(y)), E && (y = f(h(y))), S && (y = (0, l.jsx)(R.default, {
+    return _ && (y = m(y)), E && (y = f(h(y))), S && (y = (0, l.jsx)(R.default, {
       tutorialId: "voice-conversations",
       position: "right",
       offsetX: -20,
@@ -303,7 +303,7 @@ class Q extends B.default {
           ...t
         })
       }, {
-        modalKey: p.VOICE_CHANNEL_STATUS_MODAL_KEY
+        modalKey: m.VOICE_CHANNEL_STATUS_MODAL_KEY
       }))
     }), X(this, "renderPopout", () => {
       let {
@@ -393,14 +393,14 @@ function J(e) {
     let e = y.default.getChannel(n.parent_id),
       l = D.default.getCheck(n.guild_id);
     return {
-      canManageChannel: b.default.can(K.Permissions.MANAGE_CHANNELS, n),
-      canReorderChannel: !0 !== a && (t.id === W.FAVORITES_RAW_GUILD_ID || (null != e ? b.default.can(K.Permissions.MANAGE_CHANNELS, e) : b.default.can(K.Permissions.MANAGE_CHANNELS, t))),
-      canMoveMembers: b.default.can(K.Permissions.MOVE_MEMBERS, n),
-      locked: !b.default.can(K.Permissions.CONNECT, n),
-      bypassLimit: b.default.can(K.Permissions.MOVE_MEMBERS, n),
+      canManageChannel: b.default.can(W.Permissions.MANAGE_CHANNELS, n),
+      canReorderChannel: !0 !== a && (t.id === K.FAVORITES_RAW_GUILD_ID || (null != e ? b.default.can(W.Permissions.MANAGE_CHANNELS, e) : b.default.can(W.Permissions.MANAGE_CHANNELS, t))),
+      canMoveMembers: b.default.can(W.Permissions.MOVE_MEMBERS, n),
+      locked: !b.default.can(W.Permissions.CONNECT, n),
+      bypassLimit: b.default.can(W.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), p = (0, i.useStateFromStores)([G.default], () => G.default.hasVideo(n.id)), m = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
+  }), m = (0, i.useStateFromStores)([G.default], () => G.default.hasVideo(n.id)), C = (0, h.default)(n), p = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
     isSubscriptionGated: _,
     needSubscriptionToAccess: I
   } = (0, T.default)(n.id), N = (0, S.default)(), L = (0, i.useStateFromStores)([P.default], () => P.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
@@ -422,10 +422,10 @@ function J(e) {
     enableActivities: !0
   }), U = x && null == O;
   return (0, l.jsx)(q, {
-    channelName: C,
-    embeddedApps: m,
-    embeddedActivityType: K.ActivityTypes.PLAYING,
-    video: p,
+    channelName: p,
+    embeddedApps: C,
+    embeddedActivityType: W.ActivityTypes.PLAYING,
+    video: m,
     hasActiveEvent: null != E,
     isSubscriptionGated: _,
     needSubscriptionToAccess: I,

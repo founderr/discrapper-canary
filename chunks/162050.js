@@ -16,9 +16,9 @@ var a = n("442837"),
   c = n("594174"),
   f = n("153124"),
   h = n("436088"),
-  p = n("51144"),
-  m = n("603592"),
-  C = n("674552"),
+  m = n("51144"),
+  C = n("603592"),
+  p = n("674552"),
   g = n("689938");
 
 function E() {
@@ -27,7 +27,7 @@ function E() {
     [n, E] = (0, a.useStateFromStoresArray)([d.default, o.default], () => [o.default.getChannel(d.default.getVoiceChannelId()), d.default.getCurrentlySelectedChannelId(null)]),
     _ = (0, a.useStateFromStores)([u.default], () => null != n ? u.default.getMentionCount(n.id) : 0),
     S = (0, a.useStateFromStores)([c.default], () => c.default.getUser(null == n ? void 0 : n.ownerId)),
-    I = null !== (e = p.default.getGlobalName(S)) && void 0 !== e ? e : p.default.getUserTag(S),
+    I = null !== (e = m.default.getGlobalName(S)) && void 0 !== e ? e : m.default.getUserTag(S),
     {
       canViewBroadcasts: N
     } = r.default.useExperiment({
@@ -37,7 +37,7 @@ function E() {
     }),
     T = null == n ? void 0 : n.isBroadcastChannel(),
     A = T && E === (null == n ? void 0 : n.id);
-  return T && N ? (0, l.jsx)(m.default, {
+  return T && N ? (0, l.jsx)(C.default, {
     id: t,
     onClick: () => {
       T && null != n && i.default.selectPrivateChannel(n.id)
@@ -52,6 +52,6 @@ function E() {
       src: null == S ? void 0 : S.getAvatarURL(null, 16),
       "aria-label": I
     }),
-    lowerBadge: _ > 0 ? (0, C.renderMentionBadge)(_) : null
+    lowerBadge: _ > 0 ? (0, p.renderMentionBadge)(_) : null
   }) : null
 }

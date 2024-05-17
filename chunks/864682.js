@@ -17,12 +17,12 @@ var a = n("442837"),
   f = n("441319");
 
 function h() {
-  let [e, t, n] = (0, a.useStateFromStoresArray)([i.default, u.default], () => [u.default.getCurrentDesktopIcon(), u.default.isEditorOpen, o.default.isPremium(i.default.getCurrentUser())]), h = f.ICONS_BY_ID[e], p = e !== d.FreemiumAppIconIds.DEFAULT && (n || t), m = (0, s.useRedesignIconContext)().enabled, C = (0, l.jsx)(r.default, {
+  let [e, t, n] = (0, a.useStateFromStoresArray)([i.default, u.default], () => [u.default.getCurrentDesktopIcon(), u.default.isEditorOpen, o.default.isPremium(i.default.getCurrentUser())]), h = f.ICONS_BY_ID[e], m = e !== d.FreemiumAppIconIds.DEFAULT && (n || t), C = (0, s.useRedesignIconContext)().enabled, p = (0, l.jsx)(r.default, {
     width: 30,
-    height: m ? 30 : 22
+    height: C ? 30 : 22
   });
-  return null != h && p ? (0, l.jsx)(c.default, {
+  return null != h && m ? (0, l.jsx)(c.default, {
     id: e,
     width: 48
-  }) : C
+  }) : p
 }

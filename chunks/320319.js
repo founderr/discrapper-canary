@@ -41,11 +41,11 @@ let x = {
       forceShadow: m,
       cardType: g,
       confettiCanvas: C
-    } = e, D = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), [U, j] = r.useState(!1), [G, y] = r.useState(!1), B = (0, f.useFreeBoostUserTenureReward)(), k = (0, f.useShouldShowConfettiAndGlow)(), [H, F] = r.useState(!1), [w, K] = r.useState(t === N.PerksDiscoverabilityCardTypes.FREE_BOOST && k && (null == B ? void 0 : B.nitroTenureStatus) === P.NitroRewardStatus.REDEEMABLE);
+    } = e, D = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), [U, j] = r.useState(!1), [G, y] = r.useState(!1), B = (0, f.useFreeBoostUserTenureReward)(), k = (0, f.useShouldShowConfettiAndGlow)(), [H, F] = r.useState(!1), [w, W] = r.useState(t === N.PerksDiscoverabilityCardTypes.FREE_BOOST && k && (null == B ? void 0 : B.nitroTenureStatus) === P.NitroRewardStatus.REDEEMABLE);
     r.useEffect(() => {
-      t === N.PerksDiscoverabilityCardTypes.FREE_BOOST && k && (null == B ? void 0 : B.nitroTenureStatus) === P.NitroRewardStatus.REDEEMABLE && K(!0)
+      t === N.PerksDiscoverabilityCardTypes.FREE_BOOST && k && (null == B ? void 0 : B.nitroTenureStatus) === P.NitroRewardStatus.REDEEMABLE && W(!0)
     }, [k, t, B]);
-    let W = r.useCallback(() => {
+    let K = r.useCallback(() => {
         F(!0)
       }, []),
       V = g === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || g === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || g === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW,
@@ -58,8 +58,8 @@ let x = {
     }, [z, H]);
     let {
       easterEggLevel: Q,
-      isEasterEggTriggered: Z,
-      onHover: J,
+      isEasterEggTriggered: J,
+      onHover: Z,
       onUnhover: q
     } = (0, A.default)(5), $ = (0, l.debounce)(() => {
       R.default.track(O.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
@@ -93,15 +93,15 @@ let x = {
       className: n()(L.flipCardContainer, {
         [L.forceShadow]: m
       }),
-      onMouseEnter: J,
-      onFocus: J,
+      onMouseEnter: Z,
+      onFocus: Z,
       onMouseLeave: q,
       onBlur: q,
       children: (0, a.jsxs)("div", {
         className: n()(L.flipCard, {
-          [L.partialFlipCard]: !Z,
-          [L.ultraFlipCard]: Z,
-          [L.rotateCard]: Z && 3 === Q,
+          [L.partialFlipCard]: !J,
+          [L.ultraFlipCard]: J,
+          [L.rotateCard]: J && 3 === Q,
           [L.reducedMotion]: D
         }),
         children: [(0, a.jsx)("div", {
@@ -140,7 +140,7 @@ let x = {
           offsetYPercentageMin: 20,
           customConfettiCanvas: C,
           dragCoefficientValue: 1e-5,
-          onAnimationEnd: W
+          onAnimationEnd: K
         })]
       })
     }) : (0, a.jsx)("div", {

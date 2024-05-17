@@ -12,9 +12,9 @@ var a = n("848246"),
   c = n("594174"),
   f = n("295226"),
   h = n("74538"),
-  p = n("736871"),
-  m = n("351742"),
-  C = n("114064"),
+  m = n("736871"),
+  C = n("351742"),
+  p = n("114064"),
   g = n("937579"),
   E = n("485731"),
   _ = n("841174"),
@@ -85,21 +85,21 @@ class T extends r.default {
     var t;
     let {
       inPerksDemosExperiment: n
-    } = p.default.getCurrentConfig({
+    } = m.default.getCurrentConfig({
       location: "PremiumManager"
     }, {
       autoTrackExposure: !1
     }), {
       enabled: l
-    } = m.default.getCurrentConfig({
+    } = C.default.getCurrentConfig({
       location: "PremiumManager"
     }, {
       autoTrackExposure: !1
     });
     if (!n || !l || e.state !== I.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
     let s = d.default.getChannel(e.channelId);
-    if (null == s || !(null === (t = C.default.getPerksDemos()) || void 0 === t ? void 0 : t[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY])) return;
-    let r = C.default.getActivated()[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY];
+    if (null == s || !(null === (t = p.default.getPerksDemos()) || void 0 === t ? void 0 : t[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY])) return;
+    let r = p.default.getActivated()[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY];
     r && i.default.dispatch({
       type: "PREMIUM_PERKS_DEMO_COMPLETE",
       perkType: a.EntitlementFeatureNames.STREAM_HIGH_QUALITY

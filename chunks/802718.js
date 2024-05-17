@@ -15,9 +15,9 @@ var l = n("735250"),
   c = n("377171"),
   f = n("682662"),
   h = n("662146"),
-  p = n("26290"),
-  m = n("15434"),
-  C = n("678513"),
+  m = n("26290"),
+  C = n("15434"),
+  p = n("678513"),
   g = n("981631"),
   E = n("689938"),
   _ = n("211005");
@@ -25,7 +25,7 @@ var l = n("735250"),
 function S(e) {
   let {
     target: t
-  } = e, o = (0, s.useTreeItem)("fakedoor"), C = a.useCallback(() => {
+  } = e, o = (0, s.useTreeItem)("fakedoor"), p = a.useCallback(() => {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
@@ -70,13 +70,13 @@ function S(e) {
         children: (0, l.jsx)(r.ThemeContextProvider, {
           theme: T,
           children: (0, l.jsx)(r.BlobMask, {
-            lowerBadge: (0, l.jsx)(p.NumberBadge, {
+            lowerBadge: (0, l.jsx)(m.NumberBadge, {
               count: 1,
               color: c.default.BG_BRAND
             }),
-            children: (0, l.jsx)(m.default, {
+            children: (0, l.jsx)(C.default, {
               ...o,
-              onClick: C,
+              onClick: p,
               onContextMenu: S,
               children: (0, l.jsx)(i.BellIcon, {
                 color: c.default.TEXT_NORMAL
@@ -96,7 +96,7 @@ function S(e) {
 }
 
 function I() {
-  let e = (0, o.useStateFromStores)([C.default], () => C.default.getActiveUserSignUp());
+  let e = (0, o.useStateFromStores)([p.default], () => p.default.getActiveUserSignUp());
   return null == e ? null : (0, l.jsx)(S, {
     target: e
   })

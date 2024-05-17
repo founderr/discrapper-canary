@@ -16,9 +16,9 @@ var a = n("442837"),
   c = n("601070"),
   f = n("430824"),
   h = n("496675"),
-  p = n("306680"),
-  m = n("979651"),
-  C = n("26290"),
+  m = n("306680"),
+  C = n("979651"),
+  p = n("26290"),
   g = n("968358"),
   E = n("790901"),
   _ = n("714794"),
@@ -45,12 +45,12 @@ function R(e) {
     isNewChannel: P,
     muted: G,
     resolvedUnreadSetting: U
-  } = e, w = (0, a.useStateFromStores)([p.default], () => p.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), H = (0, a.useStateFromStores)([m.default], () => m.default.hasVideo(n.id)), V = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, S.default)({
+  } = e, w = (0, a.useStateFromStores)([m.default], () => m.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), H = (0, a.useStateFromStores)([C.default], () => C.default.hasVideo(n.id)), V = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, S.default)({
     channel: n,
     locked: F,
     video: H || V,
     selected: R
-  }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getNewThreadCount(n.guild_id, n.id)), K = (0, o.useUnreadThreadsCountForParent)(n.guild_id, n.id), W = (0, a.useStateFromStores)([f.default], () => {
+  }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getNewThreadCount(n.guild_id, n.id)), W = (0, o.useUnreadThreadsCountForParent)(n.guild_id, n.id), K = (0, a.useStateFromStores)([f.default], () => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(A.GuildFeatures.COMMUNITY)) && void 0 !== t && t
   });
@@ -60,7 +60,7 @@ function R(e) {
   if ((0, u.showPremiumChannelIconButton)(b)) return (0, l.jsx)(u.default, {
     locked: j
   });
-  if (P) return (0, l.jsx)(C.TextBadge, {
+  if (P) return (0, l.jsx)(p.TextBadge, {
     text: v.default.Messages.NEW,
     color: s.default.unsafe_rawColors.BRAND_260.css,
     className: x.newChannel
@@ -69,20 +69,20 @@ function R(e) {
     variant: "text-xs/semibold",
     color: "text-brand",
     children: v.default.Messages.CHANNEL_NEW_POSTS_LABEL.format({
-      count: (0, C.getBadgeCountString)(Y)
+      count: (0, p.getBadgeCountString)(Y)
     })
   });
-  if (!G && n.isForumLikeChannel() && null != K && K > 0) return (0, l.jsx)(i.Text, {
+  if (!G && n.isForumLikeChannel() && null != W && W > 0) return (0, l.jsx)(i.Text, {
     variant: "text-xs/semibold",
     color: "text-muted",
-    children: (0, C.getBadgeCountString)(K)
+    children: (0, p.getBadgeCountString)(W)
   });
   let z = null !== (t = null == y ? void 0 : y.length) && void 0 !== t ? t : 0;
   return null != O && O && k ? (0, l.jsx)(N.default, {
     userCount: z,
     video: H || V,
     channel: n
-  }) : M && (0, g.hasStream)(y) && W ? (0, l.jsx)(C.TextBadge, {
+  }) : M && (0, g.hasStream)(y) && K ? (0, l.jsx)(p.TextBadge, {
     text: v.default.Messages.LIVE,
     color: s.default.unsafe_rawColors.RED_400.css
   }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(B) ? (0, l.jsx)(I.default, {

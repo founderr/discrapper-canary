@@ -85,11 +85,11 @@ let f = [{
   }],
   h = f.length;
 
-function p(e, t, n) {
+function m(e, t, n) {
   let l = e * t;
   return e > .5 ? l - n : e < .5 ? l : l - n / 2
 }
-let m = (e, t) => {
+let C = (e, t) => {
   let n = Math.abs(t.x),
     l = 180 / Math.PI * Math.atan2(Math.abs(t.y), n),
     a = e / 2 - 28.8;
@@ -102,7 +102,7 @@ t.default = a.memo(function(e) {
   let {
     wheelWidth: t,
     wheelHeight: n,
-    itemWidth: C,
+    itemWidth: p,
     itemHeight: g,
     showDeadZoneIndicator: E,
     activeItem: _,
@@ -135,7 +135,7 @@ t.default = a.memo(function(e) {
       },
       a = l.x < 0,
       s = l.y < 0,
-      i = m(n, l),
+      i = C(n, l),
       r = a ? Math.max(l.x, -i.x) : Math.min(l.x, i.x);
     O({
       x: r / 2,
@@ -177,20 +177,20 @@ t.default = a.memo(function(e) {
   }, [N, R, b, P, G]), V = a.useMemo(() => b[R].map((e, a) => {
     let s = f[a];
     if (null == s) throw Error("Too many items supplied ".concat(T.length, " expected max of ").concat(f.length));
-    let i = p(s.x, t, C),
-      r = p(s.y, n, g);
+    let i = m(s.x, t, p),
+      r = m(s.y, n, g);
     return (0, l.jsx)("div", {
       ref: e => j(e, a),
       className: d.chatWheelItem,
       style: {
         left: i,
         top: r,
-        width: C,
+        width: p,
         height: g
       },
       children: e
     }, a)
-  }), [b, R, t, C, n, g, T.length, j]);
+  }), [b, R, t, p, n, g, T.length, j]);
   return (0, l.jsx)(r.Clickable, {
     className: d.chatWheelMouseInput,
     onMouseMove: F,

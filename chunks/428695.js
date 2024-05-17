@@ -11,15 +11,15 @@ var l = n("735250"),
   c = n("626135"),
   f = n("981631"),
   h = n("689938"),
-  p = n("53116");
-let m = (0, r.debounce)(u.default.trackWithMetadata, 500);
+  m = n("53116");
+let C = (0, r.debounce)(u.default.trackWithMetadata, 500);
 t.default = function(e) {
   let {
     guild: t,
     title: n,
     message: s,
     image: r,
-    type: C,
+    type: p,
     imageStyles: g,
     imageMarginX: E,
     imageMarginTop: _,
@@ -33,20 +33,20 @@ t.default = function(e) {
     className: x
   } = e;
   a.useEffect(() => {
-    m(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
-      notice_type: C,
+    C(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+      notice_type: p,
       guild_id: t.id
     })
-  }, [t.id, C]);
+  }, [t.id, p]);
   let R = null;
   "function" == typeof A ? R = A() : null != A && (R = (0, l.jsx)(o.Button, {
-    className: p.button,
+    className: m.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
-      null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
+      null != p && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
         source: S,
         guild_id: t.id,
-        notice_type: C
+        notice_type: p
       }), null == T || T()
     },
     fullWidth: !0,
@@ -57,17 +57,17 @@ t.default = function(e) {
   "function" == typeof n ? M = n() : null != n && (M = (0, l.jsx)(o.Text, {
     variant: "text-md/medium",
     color: "header-primary",
-    className: i()(p.title, {
-      [p.noImageTitle]: null == r
+    className: i()(m.title, {
+      [m.noImageTitle]: null == r
     }, {
-      [p.center]: v
+      [m.center]: v
     }),
     children: n
   }));
   let y = null;
   "function" == typeof s ? y = s() : null != s && (y = (0, l.jsx)(o.Text, {
     className: i()({
-      [p.center]: v
+      [m.center]: v
     }),
     variant: "text-sm/normal",
     color: "text-muted",
@@ -75,33 +75,33 @@ t.default = function(e) {
   }));
   let O = null != E ? "".concat(E, "px") : "16px";
   return (0, l.jsxs)("div", {
-    className: i()(p.container, x),
+    className: i()(m.container, x),
     children: [!0 === I ? null : (0, l.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
-          notice_type: C
+          notice_type: p
         }), null == N || N()
       },
-      className: p.close,
+      className: m.close,
       "aria-label": h.default.Messages.DISMISS,
       children: (0, l.jsx)(d.default, {
-        className: p.closeIcon
+        className: m.closeIcon
       })
     }), null != r && (0, l.jsx)("div", {
-      className: p.imageContainer,
+      className: m.imageContainer,
       style: {
         marginTop: "".concat(_, "px"),
         marginLeft: O,
         marginRight: O
       },
       children: (0, l.jsx)("img", {
-        className: p.image,
+        className: m.image,
         style: g,
         src: r,
         alt: ""
       })
     }), (0, l.jsxs)("div", {
-      className: p.message,
+      className: m.message,
       children: [M, y, R]
     })]
   })

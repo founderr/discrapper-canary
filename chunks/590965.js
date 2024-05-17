@@ -7,9 +7,9 @@ var a, s, i, r, o = n("442837"),
   c = n("703656"),
   f = n("131704"),
   h = n("601964"),
-  p = n("592125"),
-  m = n("430824"),
-  C = n("701190"),
+  m = n("592125"),
+  C = n("430824"),
+  p = n("701190"),
   g = n("496675"),
   E = n("594174"),
   _ = n("998502"),
@@ -25,7 +25,7 @@ function v() {
 }
 class x extends(a = o.default.Store) {
   initialize() {
-    this.waitFor(m.default, C.default, E.default)
+    this.waitFor(C.default, p.default, E.default)
   }
   isOpen() {
     let e = __OVERLAY__ ? S.AppContext.OVERLAY : S.AppContext.APP;
@@ -60,17 +60,17 @@ r = "InviteModalStore", (i = "displayName") in(s = x) ? Object.defineProperty(s,
       } = t;
       if (null == e) return !1;
       if ((0, f.isMultiUserDM)(e.type)) {
-        if (null != p.default.getChannel(e.id)) return (0, c.transitionToGuild)(S.ME, e.id), _.default.focus(), !1
+        if (null != m.default.getChannel(e.id)) return (0, c.transitionToGuild)(S.ME, e.id), _.default.focus(), !1
       } else {
         if (null == n) return !1;
-        if (null != m.default.getGuild(n.id) && !(0, d.isStreamInvite)(t)) {
+        if (null != C.default.getGuild(n.id) && !(0, d.isStreamInvite)(t)) {
           let e = function(e) {
             if ((0, d.isRoleSubscriptionInvite)(e)) return I.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
             let {
               channel: t
             } = e;
             if (null != t) {
-              let e = p.default.getChannel(t.id);
+              let e = m.default.getChannel(t.id);
               if (g.default.can(S.Permissions.VIEW_CHANNEL, e)) return t.id
             }
             return null

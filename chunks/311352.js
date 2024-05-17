@@ -12,9 +12,9 @@ var a = n("399606"),
   c = n("529653"),
   f = n("976401"),
   h = n("13140"),
-  p = n("924557"),
-  m = n("435064"),
-  C = n("39604"),
+  m = n("924557"),
+  C = n("435064"),
+  p = n("39604"),
   g = n("981631"),
   E = n("689938"),
   _ = n("473533");
@@ -31,7 +31,7 @@ function S(e) {
 }
 
 function I() {
-  (0, C.saveClip)()
+  (0, p.saveClip)()
 }
 let N = e => {
   let {
@@ -92,13 +92,13 @@ let N = e => {
 };
 t.default = () => {
   let e = (0, a.useStateFromStores)([u.default], () => u.default.hasLayers()),
-    t = (0, p.useEnableClips)(),
+    t = (0, m.useEnableClips)(),
     {
       clipsEnabled: n,
       isAtMaxSavingClipsOperations: s
-    } = (0, a.useStateFromStoresObject)([m.default], () => ({
-      clipsEnabled: m.default.getSettings().clipsEnabled,
-      isAtMaxSavingClipsOperations: m.default.getIsAtMaxSaveClipOperations()
+    } = (0, a.useStateFromStoresObject)([C.default], () => ({
+      clipsEnabled: C.default.getSettings().clipsEnabled,
+      isAtMaxSavingClipsOperations: C.default.getIsAtMaxSaveClipOperations()
     })),
     i = (0, a.useStateFromStores)([d.default], () => d.default.getKeybindForAction(g.GlobalKeybindActions.SAVE_CLIP));
   if (!(t && n) || null == i || e) return null;

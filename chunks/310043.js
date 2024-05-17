@@ -1,91 +1,91 @@
 "use strict";
-i.r(t), i("47120");
-var n = i("735250"),
-  s = i("470079"),
-  l = i("120356"),
-  a = i.n(l),
-  o = i("512722"),
-  r = i.n(o),
-  u = i("392711"),
-  d = i.n(u),
-  c = i("941797"),
-  m = i("69750"),
-  I = i("768760"),
-  h = i("266632");
-let M = Math.round((I.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
-  f = Math.round((I.MEDIA_MOSAIC_MAX_WIDTH - 4) / 2),
-  p = Math.round((I.MEDIA_MOSAIC_MAX_HEIGHT - 4) / 2),
-  x = Math.round(2 * (I.MEDIA_MOSAIC_MAX_WIDTH - 4) / 3),
-  T = x / 2;
+n.r(t), n("47120");
+var i = n("735250"),
+  s = n("470079"),
+  a = n("120356"),
+  o = n.n(a),
+  l = n("512722"),
+  r = n.n(l),
+  u = n("392711"),
+  d = n.n(u),
+  m = n("941797"),
+  c = n("69750"),
+  h = n("768760"),
+  I = n("266632");
+let M = Math.round((h.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
+  p = Math.round((h.MEDIA_MOSAIC_MAX_WIDTH - 4) / 2),
+  x = Math.round((h.MEDIA_MOSAIC_MAX_HEIGHT - 4) / 2),
+  f = Math.round(2 * (h.MEDIA_MOSAIC_MAX_WIDTH - 4) / 3),
+  C = f / 2;
 
 function g(e) {
   let {
     visualMediaItems: t,
-    footer: i
+    footer: n
   } = e;
-  null != i && r()(1 === t.length, "footer only gets applied to single items");
+  null != n && r()(1 === t.length, "footer only gets applied to single items");
   let s = t.length;
-  if (1 === s) return (0, n.jsx)(C, {
+  if (1 === s) return (0, i.jsx)(y, {
     itemsForLayout: t,
     isSingleImage: !0,
-    footer: i
+    footer: n
   });
-  if (2 === s) return (0, n.jsx)(y, {
+  if (2 === s) return (0, i.jsx)(T, {
     itemsForLayout: t
   });
-  if (3 === s) return (0, n.jsx)(A, {
+  if (3 === s) return (0, i.jsx)(A, {
     itemsForLayout: t
   });
-  if (4 === s) return (0, n.jsx)(E, {
+  if (4 === s) return (0, i.jsx)(E, {
     itemsForLayout: t
   });
-  let l = s % 3;
-  return (0, n.jsxs)(n.Fragment, {
-    children: [1 === l && (0, n.jsx)(C, {
-      itemsForLayout: t.slice(0, l)
-    }), 2 === l && (0, n.jsx)(y, {
-      itemsForLayout: t.slice(0, l)
-    }), 0 === l ? (0, n.jsx)(O, {
+  let a = s % 3;
+  return (0, i.jsxs)(i.Fragment, {
+    children: [1 === a && (0, i.jsx)(y, {
+      itemsForLayout: t.slice(0, a)
+    }), 2 === a && (0, i.jsx)(T, {
+      itemsForLayout: t.slice(0, a)
+    }), 0 === a ? (0, i.jsx)(j, {
       itemsForLayout: t
-    }) : (0, n.jsx)(O, {
-      itemsForLayout: t.slice(l)
+    }) : (0, i.jsx)(j, {
+      itemsForLayout: t.slice(a)
     })]
   })
 }
 
-function C(e) {
+function y(e) {
   let {
     itemsForLayout: t,
-    isSingleImage: i,
+    isSingleImage: n,
     footer: s
-  } = e, l = t[0];
-  return (0, n.jsx)("div", {
-    className: a()(h.oneByOneGrid, {
-      [h.oneByOneGridSingle]: i,
-      [h.oneByOneGridMosaic]: !i,
-      [h.hasFooter]: null != s
+  } = e, a = t[0];
+  return (0, i.jsx)("div", {
+    className: o()(I.oneByOneGrid, {
+      [I.oneByOneGridSingle]: n,
+      [I.oneByOneGridMosaic]: !n,
+      [I.hasFooter]: null != s
     }),
-    children: (0, n.jsx)(N, {
-      props: l,
-      useFullWidth: !i,
+    children: (0, i.jsx)(v, {
+      props: a,
+      useFullWidth: !n,
       isSingleItem: !0,
       footer: s
     })
   })
 }
 
-function y(e) {
+function T(e) {
   let {
     itemsForLayout: t
   } = e;
-  return (0, n.jsx)("div", {
-    className: h.oneByTwoGrid,
-    children: t.map(e => (0, n.jsx)("div", {
-      className: h.oneByTwoGridItem,
-      children: (0, n.jsx)(N, {
+  return (0, i.jsx)("div", {
+    className: I.oneByTwoGrid,
+    children: t.map(e => (0, i.jsx)("div", {
+      className: I.oneByTwoGridItem,
+      children: (0, i.jsx)(v, {
         props: e,
-        maxWidth: f,
-        maxHeight: f
+        maxWidth: p,
+        maxHeight: p
       })
     }, e.item.uniqueId))
   })
@@ -95,24 +95,24 @@ function A(e) {
   let {
     itemsForLayout: t
   } = e;
-  return (0, n.jsxs)("div", {
-    className: a()(h.oneByTwoGrid, h.oneByTwoLayoutThreeGrid),
-    children: [(0, n.jsx)("div", {
-      className: h.oneByTwoSoloItem,
-      children: (0, n.jsx)(N, {
+  return (0, i.jsxs)("div", {
+    className: o()(I.oneByTwoGrid, I.oneByTwoLayoutThreeGrid),
+    children: [(0, i.jsx)("div", {
+      className: I.oneByTwoSoloItem,
+      children: (0, i.jsx)(v, {
         props: t[0],
-        maxWidth: x
+        maxWidth: f
       })
-    }), (0, n.jsx)("div", {
-      className: h.oneByTwoDuoItem,
-      children: (0, n.jsx)("div", {
-        className: h.twoByOneGrid,
-        children: t.splice(1).map(e => (0, n.jsx)("div", {
-          className: h.twoByOneGridItem,
-          children: (0, n.jsx)(N, {
+    }), (0, i.jsx)("div", {
+      className: I.oneByTwoDuoItem,
+      children: (0, i.jsx)("div", {
+        className: I.twoByOneGrid,
+        children: t.splice(1).map(e => (0, i.jsx)("div", {
+          className: I.twoByOneGridItem,
+          children: (0, i.jsx)(v, {
             props: e,
-            maxWidth: T,
-            maxHeight: p
+            maxWidth: C,
+            maxHeight: x
           })
         }, e.item.uniqueId))
       })
@@ -124,61 +124,61 @@ function E(e) {
   let {
     itemsForLayout: t
   } = e;
-  return (0, n.jsx)("div", {
-    className: h.twoByTwoGrid,
-    children: t.map(e => (0, n.jsx)(N, {
+  return (0, i.jsx)("div", {
+    className: I.twoByTwoGrid,
+    children: t.map(e => (0, i.jsx)(v, {
       props: e,
-      maxWidth: f,
-      maxHeight: p
+      maxWidth: p,
+      maxHeight: x
     }, e.item.uniqueId))
   })
 }
 
-function O(e) {
+function j(e) {
   let {
     itemsForLayout: t
   } = e;
-  return (0, n.jsx)("div", {
-    className: h.threeByThreeGrid,
-    children: t.map(e => (0, n.jsx)(N, {
+  return (0, i.jsx)("div", {
+    className: I.threeByThreeGrid,
+    children: t.map(e => (0, i.jsx)(v, {
       props: e,
       maxWidth: M,
       maxHeight: M
     }, e.item.uniqueId))
   })
 }
-let _ = e => ({
-    className: a()(e, h.itemContentContainer),
-    imgContainerClassName: h.lazyImgContainer,
-    imgClassName: h.lazyImg
+let O = e => ({
+    className: o()(e, I.itemContentContainer),
+    imgContainerClassName: I.lazyImgContainer,
+    imgClassName: I.lazyImg
   }),
-  v = e => ({
-    className: a()(e, h.lazyImg)
+  N = e => ({
+    className: o()(e, I.lazyImg)
   });
 
-function N(e) {
+function v(e) {
   let {
     props: t,
-    maxWidth: i = I.MEDIA_MOSAIC_MAX_WIDTH,
-    maxHeight: s = I.MEDIA_MOSAIC_MAX_HEIGHT,
-    useFullWidth: l = !0,
-    isSingleItem: a = !1,
-    footer: o
+    maxWidth: n = h.MEDIA_MOSAIC_MAX_WIDTH,
+    maxHeight: s = h.MEDIA_MOSAIC_MAX_HEIGHT,
+    useFullWidth: a = !0,
+    isSingleItem: o = !1,
+    footer: l
   } = e, r = t.item.type, u = {
     ...t,
-    ..."IMAGE" === r && _(t.className),
-    ..."VIDEO" === r && v(t.className),
-    mediaLayoutType: I.MediaLayoutType.MOSAIC,
-    maxWidth: i,
+    ..."IMAGE" === r && O(t.className),
+    ..."VIDEO" === r && N(t.className),
+    mediaLayoutType: h.MediaLayoutType.MOSAIC,
+    maxWidth: n,
     maxHeight: s,
-    useFullWidth: l,
-    isSingleMosaicItem: a
+    useFullWidth: a,
+    isSingleMosaicItem: o
   };
-  return (0, n.jsx)(c.GIFAccessoryContext.Provider, {
+  return (0, i.jsx)(m.GIFAccessoryContext.Provider, {
     value: t.gifFavoriteButton,
-    children: (0, n.jsx)(m.default, {
+    children: (0, i.jsx)(c.default, {
       ...u,
-      footer: o
+      footer: l
     })
   })
 }
@@ -186,42 +186,42 @@ t.default = function(e) {
   let {
     items: t
   } = e, {
-    groupableVisualMediaItems: i,
-    nonGroupableVisualMediaItems: l,
-    nonVisualMediaItems: a
+    groupableVisualMediaItems: n,
+    nonGroupableVisualMediaItems: a,
+    nonVisualMediaItems: o
   } = function(e) {
     return s.useMemo(() => {
-      let [t, i] = d().partition(e, e => (0, m.isVisualMedia)(e.item.type)), [n, s] = d().partition(t, e => (0, m.isGroupableMedia)(e.item.type));
+      let [t, n] = d().partition(e, e => (0, c.isVisualMedia)(e.item.type)), [i, s] = d().partition(t, e => (0, c.isGroupableMedia)(e.item.type));
       return {
-        groupableVisualMediaItems: n,
+        groupableVisualMediaItems: i,
         nonGroupableVisualMediaItems: s,
-        nonVisualMediaItems: i
+        nonVisualMediaItems: n
       }
     }, [e])
   }(t);
-  return (0, n.jsxs)(n.Fragment, {
-    children: [i.length > 0 && (0, n.jsx)("div", {
-      className: h.visualMediaItemContainer,
-      children: (0, n.jsx)(g, {
-        visualMediaItems: i
+  return (0, i.jsxs)(i.Fragment, {
+    children: [n.length > 0 && (0, i.jsx)("div", {
+      className: I.visualMediaItemContainer,
+      children: (0, i.jsx)(g, {
+        visualMediaItems: n
       })
-    }), l.length > 0 && l.map(e => {
+    }), a.length > 0 && a.map(e => {
       let t = e.renderMosaicItemFooter({
         item: e.item,
         message: e.message
       });
-      return (0, n.jsx)("div", {
-        className: h.visualMediaItemContainer,
-        children: (0, n.jsx)(g, {
+      return (0, i.jsx)("div", {
+        className: I.visualMediaItemContainer,
+        children: (0, i.jsx)(g, {
           visualMediaItems: [e],
           footer: t
         })
       }, e.item.uniqueId)
-    }), a.length > 0 && (0, n.jsx)("div", {
-      className: h.nonVisualMediaItemContainer,
-      children: a.map(e => (0, n.jsx)("div", {
-        className: h.nonVisualMediaItem,
-        children: (0, n.jsx)(N, {
+    }), o.length > 0 && (0, i.jsx)("div", {
+      className: I.nonVisualMediaItemContainer,
+      children: o.map(e => (0, i.jsx)("div", {
+        className: I.nonVisualMediaItem,
+        children: (0, i.jsx)(v, {
           props: e
         })
       }, e.item.uniqueId))

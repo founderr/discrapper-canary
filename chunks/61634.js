@@ -15,9 +15,9 @@ var l = n("470079"),
   c = n("317381"),
   f = n("554747"),
   h = n("146085"),
-  p = n("427679"),
-  m = n("131704"),
-  C = n("199902"),
+  m = n("427679"),
+  C = n("131704"),
+  p = n("199902"),
   g = n("314897"),
   E = n("592125"),
   _ = n("650774"),
@@ -107,7 +107,7 @@ function O(e) {
       }
     }, [e, n]),
     P = g.default.getId();
-  return (0, r.useStateFromStoresObject)([N.default, C.default, p.default, E.default, I.default, c.default], () => {
+  return (0, r.useStateFromStoresObject)([N.default, p.default, m.default, E.default, I.default, c.default], () => {
     var t, l, s;
     let r = N.default.getVoiceChannelId(),
       o = (null === (t = E.default.getChannel(r)) || void 0 === t ? void 0 : t.guild_id) === e,
@@ -127,19 +127,19 @@ function O(e) {
       gaming: i,
       isCurrentUserConnected: !1
     };
-    let T = L.default.keys(p.default.getStageInstancesByGuild(e)).some(e => {
+    let T = L.default.keys(m.default.getStageInstancesByGuild(e)).some(e => {
         let t = E.default.getChannel(e);
         return null != t && I.default.can(h.JOIN_VOCAL_CHANNEL_PERMISSIONS, t)
       }),
       A = o && null !== (s = null === (l = E.default.getChannel(r)) || void 0 === l ? void 0 : l.isGuildStageVoice()) && void 0 !== s && s,
-      v = !!o && null != C.default.getActiveStreamForUser(P, e),
-      x = C.default.getAllApplicationStreams().some(t => t.guildId === e),
+      v = !!o && null != p.default.getActiveStreamForUser(P, e),
+      x = p.default.getAllApplicationStreams().some(t => t.guildId === e),
       M = o && j,
       y = (() => {
         if (O) return R.length > 0;
         for (let e of R) {
           let t = E.default.getChannel(e.channelId);
-          if (null != t && (0, m.isVoiceChannel)(t.type)) return !0
+          if (null != t && (0, C.isVoiceChannel)(t.type)) return !0
         }
         return !1
       })(),

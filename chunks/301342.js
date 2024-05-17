@@ -24,9 +24,9 @@ var l = n("735250"),
   c = n("239091"),
   f = n("146773"),
   h = n("680089"),
-  p = n("430824"),
-  m = n("496675"),
-  C = n("9156"),
+  m = n("430824"),
+  C = n("496675"),
+  p = n("9156"),
   g = n("514342"),
   E = n("696202"),
   _ = n("605403"),
@@ -53,16 +53,16 @@ let M = a.memo(function(e) {
       hideIcon: M,
       children: y
     } = e,
-    O = (0, o.useStateFromStores)([C.default], () => C.default.isChannelMuted(s.getGuildId(), s.id)),
+    O = (0, o.useStateFromStores)([p.default], () => p.default.isChannelMuted(s.getGuildId(), s.id)),
     D = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
-    b = (0, o.useStateFromStores)([m.default], () => m.default.can(L.Permissions.MANAGE_CHANNELS, s));
+    b = (0, o.useStateFromStores)([C.default], () => C.default.can(L.Permissions.MANAGE_CHANNELS, s));
   t = null != A ? T > A ? x.containerDragAfter : x.containerDragBefore : x.containerDefault;
   let j = a.useCallback(() => {
       D ? (0, d.categoryExpand)(s.id) : (0, d.categoryCollapse)(s.id)
     }, [s.id, D]),
     P = a.useCallback(e => {
       if ("null" !== s.id) {
-        let t = p.default.getGuild(s.getGuildId());
+        let t = m.default.getGuild(s.getGuildId());
         null != t && (0, c.openContextMenuLazy)(e, async () => {
           let {
             default: e

@@ -8,9 +8,9 @@ var l, a, s, i = n("735250"),
   c = n("442837"),
   f = n("902704"),
   h = n("481060"),
-  p = n("925549"),
-  m = n("607070"),
-  C = n("367907"),
+  m = n("925549"),
+  C = n("607070"),
+  p = n("367907"),
   g = n("453542"),
   E = n("762914"),
   _ = n("702321"),
@@ -283,7 +283,7 @@ class U extends(a = r.Component) {
           num_users_visible: i.length,
           num_users_visible_with_mobile_indicator: o.filter(e => null != e && v.default.isMobileOnline(e)).length
         };
-      this.hasReportedAnalytics = !0, C.default.trackWithMetadata(D.AnalyticEvents.DM_LIST_VIEWED, {
+      this.hasReportedAnalytics = !0, p.default.trackWithMetadata(D.AnalyticEvents.DM_LIST_VIEWED, {
         ...d,
         ...(0, g.getNowPlayingAnalytics)(),
         changelog_dm_visible: u
@@ -296,7 +296,7 @@ class U extends(a = r.Component) {
     }), P(this, "handleScroll", u()(() => {
       if (null != this._list) {
         let e = this._list.getScrollerNode();
-        null != e && p.default.updateChannelListScroll(D.ME, e.scrollTop)
+        null != e && m.default.updateChannelListScroll(D.ME, e.scrollTop)
       }
     }, 100)), P(this, "renderDM", (e, t) => {
       let {
@@ -371,12 +371,12 @@ t.default = e => {
     let e = x.default.getPrivateChannelIds(),
       t = (0, N.filterOutMessageRequestsAndSpamById)(e, [I.default, T.default]);
     return (0, E.filterBroadcastingGDMs)(t)
-  }, []), h = (0, c.useStateFromStoresObject)([m.default, A.default, L.default], () => ({
+  }, []), h = (0, c.useStateFromStoresObject)([C.default, A.default, L.default], () => ({
     theme: A.default.darkSidebar ? D.ThemeTypes.DARK : n,
-    keyboardModeEnabled: m.default.keyboardModeEnabled,
+    keyboardModeEnabled: C.default.keyboardModeEnabled,
     version: null != t ? "".concat(t, ":").concat(L.default.getPrivateChannelsVersion()) : L.default.getPrivateChannelsVersion()
-  })), p = r.useRef(null), C = r.useCallback(e => {
-    let t = p.current,
+  })), m = r.useRef(null), p = r.useCallback(e => {
+    let t = m.current,
       n = document.querySelector(e);
     null != t && null != n && t.scrollIntoViewNode({
       node: n,
@@ -390,13 +390,13 @@ t.default = e => {
       }
     })
   }, []), g = r.useCallback(() => new Promise(e => {
-    let t = p.current;
+    let t = m.current;
     if (null == t) return e();
     t.scrollToTop({
       callback: () => requestAnimationFrame(() => e())
     })
   }), []), _ = r.useCallback(() => new Promise(e => {
-    let t = p.current;
+    let t = m.current;
     if (null == t) return e();
     t.scrollToBottom({
       callback() {
@@ -409,14 +409,14 @@ t.default = e => {
     scrollToStart: g,
     scrollToEnd: _,
     defaultFocused: (s + (a ? 1 : 0)).toString(),
-    setFocus: C
+    setFocus: p
   });
   return (0, i.jsx)(d.ListNavigatorProvider, {
     navigator: v,
     children: (0, i.jsx)(U, {
       channels: u,
       privateChannelIds: f,
-      listRef: p,
+      listRef: m,
       theme: n,
       version: t,
       ...e,

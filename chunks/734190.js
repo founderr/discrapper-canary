@@ -11,9 +11,9 @@ var l = n("735250"),
   c = n("239091"),
   f = n("569471"),
   h = n("488131"),
-  p = n("592125"),
-  m = n("306680"),
-  C = n("979651"),
+  m = n("592125"),
+  C = n("306680"),
+  p = n("979651"),
   g = n("938475"),
   E = n("514342"),
   _ = n("714794"),
@@ -55,18 +55,18 @@ t.default = a.memo(function(e) {
     isSelectedVoice: R,
     isLast: y,
     withGuildIcon: O
-  } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
+  } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([p.default], () => p.default.hasVideo(t.id)), {
     unread: j,
     mentionCount: P
-  } = (0, o.useStateFromStoresObject)([m.default], () => ({
-    unread: m.default.hasUnread(t.id),
-    mentionCount: m.default.getMentionCount(t.id)
+  } = (0, o.useStateFromStoresObject)([C.default], () => ({
+    unread: C.default.hasUnread(t.id),
+    mentionCount: C.default.getMentionCount(t.id)
   })), G = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), U = a.useCallback(e => {
     (0, h.openThreadSidebarForViewing)(t, !e.shiftKey, A.OpenThreadAnalyticsLocations.CHANNEL_LIST)
   }, [t]), w = a.useCallback(() => {
     d.default.preload(t.guild_id, t.id)
   }, [t.guild_id, t.id]), B = a.useCallback(e => {
-    let a = p.default.getChannel(t.id);
+    let a = m.default.getChannel(t.id);
     null != a && (0, c.openContextMenuLazy)(e, async () => {
       let {
         default: e

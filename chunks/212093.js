@@ -10,11 +10,11 @@ n.r(t), n.d(t, {
     return function e(t, n) {
       let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         {
-          categoryId: a = p.DISCOVERY_ALL_CATEGORIES_ID,
+          categoryId: a = m.DISCOVERY_ALL_CATEGORIES_ID,
           preferredLocale: s,
           offset: c,
-          length: m,
-          tag: C
+          length: C,
+          tag: p
         } = n,
         E = d.default.getSearchIndex();
       if (null == E) return;
@@ -41,9 +41,9 @@ n.r(t), n.d(t, {
         query: t,
         preferredLocale: s,
         offset: c,
-        limit: m,
+        limit: C,
         categoryId: a,
-        tag: C
+        tag: p
       }), o.default.dispatch({
         type: "GUILD_DISCOVERY_SEARCH_FETCH_START",
         section: h.GuildDiscoverySections.SEARCH,
@@ -52,13 +52,13 @@ n.r(t), n.d(t, {
       });
       let _ = Object.assign({}, g, n.filters),
         S = Object.keys(_).map(e => "".concat(e).concat(_[e]));
-      a !== p.DISCOVERY_ALL_CATEGORIES_ID && S.push("(primary_category_id=".concat(a, " OR categories.id=").concat(a, ")"));
+      a !== m.DISCOVERY_ALL_CATEGORIES_ID && S.push("(primary_category_id=".concat(a, " OR categories.id=").concat(a, ")"));
       let I = S.join(" AND ");
       try {
         let i = E.search(t, {
             filters: I,
             optionalFilters: ["preferred_locale: ".concat(s)],
-            length: m,
+            length: C,
             offset: c,
             restrictSearchableAttributes: ["name", "description", "keywords", "categories.name", "categories.name_localizations.".concat(s), "primary_category.name", "primary_category.name_localizations.".concat(s), "vanity_url_code"]
           }),
@@ -88,8 +88,8 @@ n.r(t), n.d(t, {
               id: e.objectID
             }))] : [],
             offset: c,
-            limit: m,
-            total: s ? Math.min(l, p.MAX_ALGOLIA_PAGINATOR_RESULTS) : 0
+            limit: C,
+            total: s ? Math.min(l, m.MAX_ALGOLIA_PAGINATOR_RESULTS) : 0
           })
         }).catch(s => {
           s.body.retry_after > 0 && E === d.default.getSearchIndex() ? setTimeout(() => {
@@ -138,9 +138,9 @@ var l = n("807034"),
   c = n("230307"),
   f = n("70956"),
   h = n("981631"),
-  p = n("731455");
-let m = window.GLOBAL_ENV.ALGOLIA_KEY,
-  C = "production" === window.GLOBAL_ENV.PROJECT_ENV ? "prod_discoverable_guilds" : "staging" === window.GLOBAL_ENV.PROJECT_ENV ? "stg_discoverable_guilds" : "dev_discoverable_guilds",
+  m = n("731455");
+let C = window.GLOBAL_ENV.ALGOLIA_KEY,
+  p = "production" === window.GLOBAL_ENV.PROJECT_ENV ? "prod_discoverable_guilds" : "staging" === window.GLOBAL_ENV.PROJECT_ENV ? "stg_discoverable_guilds" : "dev_discoverable_guilds",
   g = {
     "auto_removed:": !1,
     approximate_presence_count: "> 0",
@@ -148,10 +148,10 @@ let m = window.GLOBAL_ENV.ALGOLIA_KEY,
   };
 
 function E() {
-  if (null == m) return;
-  let e = s()("NKTZZ4AIZU", m, {
+  if (null == C) return;
+  let e = s()("NKTZZ4AIZU", C, {
     responsesCache: (0, l.createNullCache)()
-  }).initIndex(C);
+  }).initIndex(p);
   o.default.wait(() => o.default.dispatch({
     type: "GUILD_DISCOVERY_SEARCH_INIT",
     index: e

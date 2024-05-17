@@ -14,9 +14,9 @@ var l, a = n("735250"),
   c = n("215569"),
   f = n("481060"),
   h = n("812206"),
-  p = n("703656"),
-  m = n("417363"),
-  C = n("941128"),
+  m = n("703656"),
+  C = n("417363"),
+  p = n("941128"),
   g = n("366966"),
   E = n("943461"),
   _ = n("780570"),
@@ -95,7 +95,7 @@ class v extends s.PureComponent {
     if (e.type === I.LocalDispatchApplicationStates.UPDATING || e.type === I.LocalDispatchApplicationStates.REPAIRING || e.type === I.LocalDispatchApplicationStates.INSTALLING) {
       if (t) return N.default.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
       if (e.stage === I.DispatchApplicationStages.PATCHING || e.stage === I.DispatchApplicationStages.REPAIRING) return (0, a.jsx)(S.default, {
-        getHistoricalTotalBytes: m.default.getHistoricalTotalBytesWritten,
+        getHistoricalTotalBytes: C.default.getHistoricalTotalBytesWritten,
         updateInterval: 5e3,
         children: this.renderProgressBody
       })
@@ -200,7 +200,7 @@ class x extends(l = s.PureComponent) {
       let {
         onClick: t
       } = this.props;
-      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, p.transitionTo)(I.Routes.APPLICATION_LIBRARY)
+      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.transitionTo)(I.Routes.APPLICATION_LIBRARY)
     })
   }
 }
@@ -217,16 +217,16 @@ function R(e, t) {
     return null != s && e.push(s), e
   }, [])
 }
-t.default = u.default.connectStores([C.default, m.default, h.default], () => {
-  let e = C.default.activeItems,
-    t = R(e, m.default),
+t.default = u.default.connectStores([p.default, C.default, h.default], () => {
+  let e = p.default.activeItems,
+    t = R(e, C.default),
     {
       total: n,
       progress: l
     } = _.getCombinedProgress(t);
   return {
     percent: _.calculateProgressPercentage(l, n),
-    isPaused: C.default.paused,
+    isPaused: p.default.paused,
     firstApplication: e.length > 0 ? h.default.getApplication(e[0].applicationId) : null,
     firstState: t.length > 0 ? t[0] : null
   }

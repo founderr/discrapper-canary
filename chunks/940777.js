@@ -15,9 +15,9 @@ var l = n("735250"),
   c = n("239091"),
   f = n("317381"),
   h = n("682662"),
-  p = n("674552"),
-  m = n("593364"),
-  C = n("905423"),
+  m = n("674552"),
+  C = n("593364"),
+  p = n("905423"),
   g = n("199902"),
   E = n("592125"),
   _ = n("944486"),
@@ -58,7 +58,7 @@ function j() {
     })),
     w = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(y.FAVORITES)),
     B = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(w)),
-    F = (0, C.default)(e => e.guildId) === y.FAVORITES,
+    F = (0, p.default)(e => e.guildId) === y.FAVORITES,
     {
       badge: H,
       unread: V
@@ -84,18 +84,18 @@ function j() {
         d = !1,
         c = !1,
         h = !1,
-        m = !1;
-      return n ? (d = !s, c = s, h = l, m = r) : (h = a, m = u), (0, p.renderMediaBadge)({
+        C = !1;
+      return n ? (d = !s, c = s, h = l, C = r) : (h = a, C = u), (0, m.renderMediaBadge)({
         audio: d,
         video: c,
         screenshare: h,
         liveStage: !1,
         isCurrentUserConnected: n,
-        activity: m
+        activity: C
       })
     }(U),
-    Y = H > 0 ? (0, m.renderMentionBadge)(H) : null,
-    K = a.useCallback(() => {
+    Y = H > 0 ? (0, C.renderMentionBadge)(H) : null,
+    W = a.useCallback(() => {
       s()
     }, [s]);
   return (0, l.jsxs)(h.ListItem, {
@@ -105,7 +105,7 @@ function j() {
       unread: V && !G,
       className: D.pill
     }), (0, l.jsx)(M.default, {
-      onShow: K,
+      onShow: W,
       children: (0, l.jsx)(R.FavoriteAddedTooltip, {
         children: (0, l.jsx)(u.BlobMask, {
           selected: F || j,

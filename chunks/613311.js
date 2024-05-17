@@ -40,15 +40,15 @@ var a = s("735250"),
   H = s("757698"),
   F = s("466111"),
   w = s("548420"),
-  K = s("626135"),
-  W = s("572004"),
+  W = s("626135"),
+  K = s("572004"),
   V = s("630388"),
   Y = s("937615"),
   z = s("73346"),
   X = s("3570"),
   Q = s("689796"),
-  Z = s("15470"),
-  J = s("506648"),
+  J = s("15470"),
+  Z = s("506648"),
   q = s("449275"),
   $ = s("445986"),
   ee = s("119520"),
@@ -122,7 +122,7 @@ class eE extends r.PureComponent {
         loadDate: t
       }
     } = this.props;
-    null != t && K.default.track(eo.AnalyticEvents.STORE_LISTING_EXITED, {
+    null != t && W.default.track(eo.AnalyticEvents.STORE_LISTING_EXITED, {
       load_id: e,
       duration_ms: Date.now() - t
     })
@@ -140,7 +140,7 @@ class eE extends r.PureComponent {
       images: 0,
       videos: 0
     });
-    K.default.track(eo.AnalyticEvents.STORE_LISTING_VIEWED, {
+    W.default.track(eo.AnalyticEvents.STORE_LISTING_VIEWED, {
       ...this._extraAnalyticsProperties,
       load_id: a.loadId,
       has_description: null != t.description && t.description.length > 0,
@@ -259,7 +259,7 @@ class eE extends r.PureComponent {
     })
   }
   renderFeatures(e) {
-    return (0, a.jsx)(J.default, {
+    return (0, a.jsx)(Z.default, {
       sku: e
     })
   }
@@ -281,7 +281,7 @@ class eE extends r.PureComponent {
         children: ed.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
           name: s.name
         })
-      }), (0, a.jsx)(f.default, {}), (0, a.jsx)(Z.default, {
+      }), (0, a.jsx)(f.default, {}), (0, a.jsx)(J.default, {
         applicationId: e.id,
         blurb: t.summary,
         description: i,
@@ -417,7 +417,7 @@ class eE extends r.PureComponent {
       let {
         sku: a
       } = this.props;
-      null != a && K.default.track(eo.AnalyticEvents.STORE_LISTING_MEDIA_SCROLLED, {
+      null != a && W.default.track(eo.AnalyticEvents.STORE_LISTING_MEDIA_SCROLLED, {
         ...(0, g.default)(a),
         card_index: s,
         card_type: e.type === eo.CarouselMediaTypes.IMG ? "image" : "video"
@@ -427,7 +427,7 @@ class eE extends r.PureComponent {
       let {
         location: t
       } = this.props;
-      (0, W.copy)((e = t.pathname, "".concat(location.protocol, "//").concat(location.host).concat(e))), this.setState({
+      (0, K.copy)((e = t.pathname, "".concat(location.protocol, "//").concat(location.host).concat(e))), this.setState({
         showLinkCopied: !0
       }, () => {
         this.showCopyLinkTextTimeout.start(1500, () => {

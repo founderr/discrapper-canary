@@ -15,9 +15,9 @@ var l = n("735250"),
   c = n("906732"),
   f = n("792766"),
   h = n("451603"),
-  p = n("885714"),
-  m = n("973616"),
-  C = n("594174"),
+  m = n("885714"),
+  C = n("973616"),
+  p = n("594174"),
   g = n("285952"),
   E = n("672752"),
   _ = n("153124"),
@@ -52,7 +52,7 @@ function G() {
       location_stack: t
     })
   }, [t]), (0, l.jsxs)(o.Clickable, {
-    onClick: () => (0, p.default)({
+    onClick: () => (0, m.default)({
       analyticsSource: {
         page: O.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL
       },
@@ -136,12 +136,12 @@ function B(e) {
   let t, n, {
     transitionState: s
   } = e;
-  (0, r.useStateFromStores)([C.default], () => {
+  (0, r.useStateFromStores)([p.default], () => {
     var e;
-    return null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
+    return null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
   });
   let {
-    invite: p,
+    invite: m,
     error: E,
     submitting: I
   } = (0, r.useStateFromStoresObject)([y.default], () => y.default.getProps());
@@ -152,22 +152,22 @@ function B(e) {
     {
       analyticsLocations: T
     } = (0, c.default)(d.default.INVITE_MODAL);
-  if (null == p) return null;
-  if (p.state === O.InviteStates.EXPIRED || p.state === O.InviteStates.BANNED || p.state === O.InviteStates.ERROR) return (0, l.jsx)(w, {
+  if (null == m) return null;
+  if (m.state === O.InviteStates.EXPIRED || m.state === O.InviteStates.BANNED || m.state === O.InviteStates.ERROR) return (0, l.jsx)(w, {
     transitionState: s
   });
-  if (null == p.channel) return null;
+  if (null == m.channel) return null;
 
   function A() {
-    null != p && M.default.acceptInvite(p)
+    null != m && M.default.acceptInvite(m)
   }
   let {
     guild: L,
     channel: D,
     inviter: U,
     target_application: B
-  } = p, F = null != p.stage_instance, H = null == p.guild && null == p.channel && null != p.inviter;
-  if (null != B) t = null == L ? void 0 : L.name, n = m.default.createFromServer(B).getCoverImageURL(1024);
+  } = m, F = null != m.stage_instance, H = null == m.guild && null == m.channel && null != m.inviter;
+  if (null != B) t = null == L ? void 0 : L.name, n = C.default.createFromServer(B).getCoverImageURL(1024);
   else if (null != L) t = L.name, n = v.default.getGuildSplashURL({
     id: L.id,
     splash: L.splash
@@ -196,7 +196,7 @@ function B(e) {
               id: N,
               className: P.marginBottom20,
               children: (0, l.jsx)(u.default, {
-                invite: p,
+                invite: m,
                 disableUser: null != L,
                 error: E
               })
@@ -204,7 +204,7 @@ function B(e) {
               className: i()(P.marginBottom20, j.stage),
               children: (0, l.jsx)(f.default, {
                 isCard: !0,
-                stageInstance: p.stage_instance,
+                stageInstance: m.stage_instance,
                 guild: L
               })
             }) : null, (0, l.jsxs)("div", {

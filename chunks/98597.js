@@ -23,9 +23,9 @@ var l, a, s, i, r = n("735250"),
   c = n("442837"),
   f = n("115850"),
   h = n("481060"),
-  p = n("787014"),
-  m = n("924301"),
-  C = n("159300"),
+  m = n("787014"),
+  C = n("924301"),
+  p = n("159300"),
   g = n("152376"),
   E = n("427679"),
   _ = n("155409"),
@@ -61,7 +61,7 @@ function j(e) {
   if ((0, c.useStateFromStores)([T.default, A.default], () => n || A.default.getGuildId() === M.FAVORITES || !T.default.can(M.Permissions.MANAGE_CHANNELS, t) && !T.default.can(M.Permissions.MANAGE_ROLES, t) && !T.default.can(M.Permissions.MANAGE_WEBHOOKS, t) || (0, S.isGuildSelectableChannelType)(t.type) && !T.default.can(M.Permissions.VIEW_CHANNEL, t) || t.isGuildVocal() && !T.default.can(M.Permissions.CONNECT, t) || !S.EDITABLE_CHANNEL_TYPES.has(t.type))) return null;
 
   function i() {
-    p.default.open(t.id)
+    m.default.open(t.id)
   }
   return (0, r.jsx)(h.Tooltip, {
     text: y.default.Messages.EDIT_CHANNEL,
@@ -99,7 +99,7 @@ function P(e) {
     tabIndex: s,
     forceShowButtons: i,
     hasChannelInfo: o = !1
-  } = e, u = (0, c.useStateFromStores)([N.default], () => N.default.getGuild(t.getGuildId())), p = (0, c.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(t.id), [t.id]), g = (0, c.useStateFromStores)([m.default], () => m.default.getActiveEventByChannel(t.id), [t.id]), S = (0, c.useStateFromStores)([T.default], () => (0, C.canViewInviteModal)(T.default, u, t, p)), A = (0, c.useStateFromStores)([T.default], () => T.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
+  } = e, u = (0, c.useStateFromStores)([N.default], () => N.default.getGuild(t.getGuildId())), m = (0, c.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(t.id), [t.id]), g = (0, c.useStateFromStores)([C.default], () => C.default.getActiveEventByChannel(t.id), [t.id]), S = (0, c.useStateFromStores)([T.default], () => (0, p.canViewInviteModal)(T.default, u, t, m)), A = (0, c.useStateFromStores)([T.default], () => T.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
   if (a || !S) return null;
 
   function L() {

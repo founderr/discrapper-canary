@@ -15,9 +15,9 @@ var l = n("735250"),
   c = n("703656"),
   f = n("259580"),
   h = n("981631"),
-  p = n("176505"),
-  m = n("689938"),
-  C = n("590575");
+  m = n("176505"),
+  C = n("689938"),
+  p = n("590575");
 
 function g(e, t) {
   return (0, l.jsx)(r.Text, {
@@ -45,42 +45,42 @@ let E = a.memo(function(e) {
           right: 4
         }
       },
-      className: C.progressBarContainer,
+      className: p.progressBarContainer,
       onClick: function() {
-        (0, c.transitionTo)(h.Routes.CHANNEL(t.id, p.StaticChannelRoute.GUILD_HOME))
+        (0, c.transitionTo)(h.Routes.CHANNEL(t.id, m.StaticChannelRoute.GUILD_HOME))
       },
       children: [(0, l.jsxs)("div", {
-        className: C.progressBarText,
+        className: p.progressBarText,
         children: [(0, l.jsx)(r.Heading, {
           variant: "heading-sm/bold",
-          children: m.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
+          children: C.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
         }), (0, l.jsxs)("div", {
-          className: C.rightContainer,
+          className: p.rightContainer,
           children: [(0, l.jsx)(r.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
-            className: C.rightText,
-            children: m.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
+            className: p.rightText,
+            children: C.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
               numberHook: g,
               total: S.toString(),
               completed: _.toString()
             })
           }), (0, l.jsx)(f.default, {
-            className: C.arrow,
+            className: p.arrow,
             width: 16,
             height: 16,
             direction: f.default.Directions.RIGHT
           })]
         })]
       }), (0, l.jsx)(r.Progress, {
-        className: C.progressBar,
+        className: p.progressBar,
         foregroundGradientColor: [(0, o.getColor)(h.Color.GREEN_300), (0, o.getColor)(h.Color.GREEN_230)],
         percent: _ / S * 100 + 3,
         animate: !0
       })]
     }), (0, l.jsx)("div", {
       role: "separator",
-      className: C.divider
+      className: p.divider
     })]
   })
 })

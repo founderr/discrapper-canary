@@ -16,9 +16,9 @@ var a = n("120356"),
   c = n("607070"),
   f = n("367907"),
   h = n("357352"),
-  p = n("652515"),
-  m = n("550951"),
-  C = n("886176"),
+  m = n("652515"),
+  C = n("550951"),
+  p = n("886176"),
   g = n("605236"),
   E = n("703656"),
   _ = n("984933"),
@@ -38,7 +38,7 @@ function y(e) {
     guildId: t,
     selected: n,
     handleClick: a
-  } = e, d = (0, p.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), m = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(t)), v = (null == m ? void 0 : m.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, y = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
+  } = e, d = (0, m.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), C = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(t)), v = (null == C ? void 0 : C.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, y = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
   return (0, l.jsx)(A.BasicChannelRow, {
     id: "shop-".concat(t),
     className: s()(M.previewChannelRow, {
@@ -46,7 +46,7 @@ function y(e) {
       [M.phantomPreview]: y
     }),
     innerClassName: M.previewChannelRowContent,
-    renderIcon: e => (0, l.jsx)(C.default, {
+    renderIcon: e => (0, l.jsx)(p.default, {
       width: 20,
       height: 20,
       className: s()([e, M.shopIcon])
@@ -89,7 +89,7 @@ function O(e) {
   let {
     guild: t,
     selected: a
-  } = e, s = (0, m.useGuildShopPreviewVisible)(t, "guild_shop_channel_row"), i = () => {
+  } = e, s = (0, C.useGuildShopPreviewVisible)(t, "guild_shop_channel_row"), i = () => {
     o.Storage.set(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "true"), (0, E.transitionTo)(L.Routes.CHANNEL(t.id, v.StaticChannelRoute.GUILD_SHOP))
   };
   return s ? (0, l.jsx)(y, {
@@ -98,7 +98,7 @@ function O(e) {
     handleClick: i
   }) : (0, l.jsx)(A.BasicChannelRow, {
     id: "shop-".concat(t.id),
-    renderIcon: e => (0, l.jsx)(C.default, {
+    renderIcon: e => (0, l.jsx)(p.default, {
       width: 20,
       height: 20,
       className: e

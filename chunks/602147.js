@@ -24,7 +24,7 @@ function h() {
     search: n
   })
 }
-let p = a.forwardRef(function(e, t) {
+let m = a.forwardRef(function(e, t) {
   let {
     selected: n,
     tooltip: a,
@@ -41,4 +41,4 @@ let p = a.forwardRef(function(e, t) {
     icon: o.default
   })
 });
-t.default = p
+t.default = m
