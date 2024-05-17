@@ -99,28 +99,33 @@ let x = e => {
         questContentCTA: h.QuestContentCTA.ACCEPT_QUEST
       })
     }, [G]), Y = s.useCallback(() => {
+      (0, R.openGameLink)(G, {
+        content: S.QuestContent.QUEST_BAR,
+        ctaContent: h.QuestContentCTA.OPEN_GAME_LINK
+      })
+    }, [G]), W = s.useCallback(() => {
       (0, R.openDisclosureModal)(G, {
         content: S.QuestContent.QUEST_BAR,
         ctaContent: h.QuestContentCTA.OPEN_DISCLOSURE
       })
     }, [G]), {
-      primaryVariant: W
+      primaryVariant: K
     } = g.QuestBarExperiment.useExperiment({
       location: M.QuestsExperimentLocations.QUESTS_BAR
     }, {
       autoTrackExposure: !1
-    }), K = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, z = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, q = c && v, Q = (0, p.getQuestBarHeroAssetUrl)(G), Z = (0, p.getQuestsInstructionsToWinReward)({
+    }), z = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, q = (null === (l = G.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, Q = c && v, Z = (0, p.getQuestBarHeroAssetUrl)(G), X = (0, p.getQuestsInstructionsToWinReward)({
       quest: G,
       location: M.QuestsExperimentLocations.QUESTS_BAR,
-      useV2Variants: W === g.QuestBarExperimentVariants.V2
+      useV2Variants: K === g.QuestBarExperimentVariants.V2
     });
     return (0, a.jsx)("div", {
-      "aria-hidden": !q,
+      "aria-hidden": !Q,
       className: i()(d, P.contentExpanded, {
-        [P.contentInteractable]: q,
-        [P.contentExpandedAccepted]: K
+        [P.contentInteractable]: Q,
+        [P.contentExpandedAccepted]: z
       }),
-      children: K ? (0, a.jsxs)("div", {
+      children: z ? (0, a.jsxs)("div", {
         className: P.questAcceptedContent,
         ref: t,
         children: [(0, a.jsxs)("div", {
@@ -157,7 +162,7 @@ let x = e => {
           quest: G,
           progressBarRef: w,
           isExpanded: !0
-        }), z ? (0, a.jsx)(x, {
+        }), q ? (0, a.jsx)(x, {
           quest: G,
           useReducedMotion: k
         }) : (0, a.jsx)(D, {
@@ -171,15 +176,19 @@ let x = e => {
           ref: t,
           children: [(0, a.jsxs)("div", {
             className: P.utils,
-            children: [(0, a.jsx)(I.default, {
-              className: P.partnerBranding,
-              quest: G,
-              withGameTile: !1
+            children: [(0, a.jsx)(u.Clickable, {
+              className: P.promotedBadge,
+              onClick: Y,
+              children: (0, a.jsx)(I.default, {
+                className: P.partnerBranding,
+                quest: G,
+                withGameTile: !1
+              })
             }), (0, a.jsx)("div", {
               className: P.promotedBadgeWrapper,
               children: (0, a.jsxs)(u.Clickable, {
                 className: P.promotedBadge,
-                onClick: Y,
+                onClick: W,
                 children: [(0, a.jsx)(u.Text, {
                   color: "always-white",
                   variant: "text-xs/normal",
@@ -224,13 +233,13 @@ let x = e => {
               className: P.description,
               color: "always-white",
               variant: "text-xs/normal",
-              children: Z
+              children: X
             })]
           }), (0, a.jsx)(u.Button, {
             className: P.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
-            onClick: q ? V : void 0,
+            onClick: Q ? V : void 0,
             size: u.Button.Sizes.SMALL,
             submitting: B,
             children: y.default.Messages.QUESTS_ACCEPT_QUEST
@@ -248,8 +257,8 @@ let x = e => {
               className: P.heroAsset,
               controls: !1,
               children: (0, a.jsx)("source", {
-                src: Q,
-                type: (0, p.getVideoAssetMimeType)(Q)
+                src: Z,
+                type: (0, p.getVideoAssetMimeType)(Z)
               })
             })
           }) : (0, a.jsx)(A.QuestsAsset, {
@@ -258,7 +267,7 @@ let x = e => {
               ref: e,
               alt: "",
               className: P.heroAsset,
-              src: Q
+              src: Z
             })
           })
         })]
