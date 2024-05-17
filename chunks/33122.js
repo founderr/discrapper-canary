@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ItemSizes: function() {
-    return L
+    return S
   }
 }), n("47120");
 var s, a = n("735250"),
@@ -43,7 +43,7 @@ function b() {
     return n
   }, n
 }
-let L = {
+let S = {
     SMALL: {
       width: 640,
       height: 360,
@@ -55,7 +55,7 @@ let L = {
       margin: 20
     }
   },
-  S = {
+  L = {
     width: 1920,
     height: 1080
   },
@@ -86,7 +86,7 @@ let L = {
     } = e;
     if (i.type === E.CarouselMediaTypes.YOUTUBE_VIDEO) t = {
       url: (0, E.YOUTUBE_PREVIEW_URL)(i.youtubeVideoId),
-      ...S
+      ...L
     }, n = {
       url: "".concat((0, E.YOUTUBE_EMBED_URL)(i.youtubeVideoId), "?").concat("rel=0&iv_load_policy=3&showinfo=0&modestbranding=1"),
       ...P
@@ -132,7 +132,7 @@ let L = {
       children: x
     })
   },
-  M = () => (0, a.jsx)("div", {
+  R = () => (0, a.jsx)("div", {
     className: v.paginationVideoOverlay,
     children: (0, a.jsx)(I.default, {
       inactive: !0,
@@ -140,7 +140,7 @@ let L = {
       renderLinkComponent: h.renderMaskedLinkComponent
     })
   });
-class R extends(s = i.PureComponent) {
+class M extends(s = i.PureComponent) {
   componentDidMount() {
     x.ComponentDispatch.subscribe(E.ComponentActions.CAROUSEL_PREV, this.manualPrevious), x.ComponentDispatch.subscribe(E.ComponentActions.CAROUSEL_NEXT, this.manualNext)
   }
@@ -258,8 +258,8 @@ class R extends(s = i.PureComponent) {
     }), N(this, "getItemSize", () => {
       let {
         width: e
-      } = this.props, t = L.MEDIUM;
-      return null != e && e < t.width && (t = L.SMALL), t
+      } = this.props, t = S.MEDIUM;
+      return null != e && e < t.width && (t = S.SMALL), t
     }), N(this, "setItem", (e, t) => {
       let {
         props: {
@@ -358,14 +358,14 @@ class R extends(s = i.PureComponent) {
           className: v.storePaginationImg,
           src: this.getPaginationSrc(e),
           draggable: !1
-        }), e.type === E.CarouselMediaTypes.YOUTUBE_VIDEO || e.type === E.CarouselMediaTypes.VIDEO ? (0, a.jsx)(M, {}) : null, s ? (0, a.jsx)("div", {
+        }), e.type === E.CarouselMediaTypes.YOUTUBE_VIDEO || e.type === E.CarouselMediaTypes.VIDEO ? (0, a.jsx)(R, {}) : null, s ? (0, a.jsx)("div", {
           className: v.overlappingBorder
         }) : null]
       }, "page-".concat(t))
     })
   }
 }
-N(R, "defaultProps", {
+N(M, "defaultProps", {
   autoplayInterval: 8e3,
   paused: !1
-}), t.default = (0, u.default)(R)
+}), t.default = (0, u.default)(M)

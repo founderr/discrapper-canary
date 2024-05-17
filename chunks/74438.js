@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return C
+    return g
   }
 });
 var n = i("735250"),
@@ -18,7 +18,7 @@ var n = i("735250"),
   f = i("981631"),
   m = i("691032");
 
-function C() {
+function g() {
   let e = (0, c.useApplicationDirectoryHistory)(e => e.guildId),
     t = (0, l.useStateFromStores)([r.default], () => r.default.getCategories()),
     i = (0, c.getPreviousView)();

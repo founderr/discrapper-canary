@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return _
+    return C
   }
 });
 var n = i("735250");
@@ -18,36 +18,36 @@ var a = i("120356"),
   p = i("132871"),
   f = i("147890"),
   m = i("57716"),
-  C = i("981631"),
+  g = i("981631"),
   x = i("95830");
 
-function _(e) {
+function C(e) {
   let {
     collection: t,
     collection: {
       id: i,
       title: a,
-      application_directory_collection_items: _
+      application_directory_collection_items: C
     }
-  } = e, g = (0, m.default)({
+  } = e, _ = (0, m.default)({
     collection: t
   }), I = (0, p.useApplicationDirectoryHistory)(e => e.guildId);
   return (0, n.jsxs)("div", {
-    ref: g,
+    ref: _,
     children: [(0, n.jsx)(r.Heading, {
       variant: "heading-lg/semibold",
       className: x.header,
       children: a
     }), (0, n.jsx)("div", {
       className: x.list,
-      children: _.map(e => {
+      children: C.map(e => {
         let {
           id: t,
           type: a,
           application: p,
           image_hash: m,
-          title: _,
-          description: g,
+          title: C,
+          description: _,
           call_to_action_label: v,
           call_to_action_url: A
         } = e;
@@ -57,7 +57,7 @@ function _(e) {
           hash: m
         });
         return a === s.ApplicationDirectoryCollectionItemType.APPLICATION && null != p ? (0, n.jsx)(c.default, {
-          href: C.Routes.APPLICATION_DIRECTORY_PROFILE(p.id),
+          href: g.Routes.APPLICATION_DIRECTORY_PROFILE(p.id),
           className: x.item,
           children: (0, n.jsx)(u.default, {
             imageSrc: E,
@@ -66,7 +66,7 @@ function _(e) {
               let {
                 mutualGuilds: t
               } = e;
-              o.default.track(C.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+              o.default.track(g.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                 collection_id: i,
                 application_id: p.id,
                 guild_id: I,
@@ -77,18 +77,18 @@ function _(e) {
             },
             animatesOnHover: !0
           })
-        }, t) : a === s.ApplicationDirectoryCollectionItemType.LINK && null != _ ? (0, n.jsxs)(h.default, {
+        }, t) : a === s.ApplicationDirectoryCollectionItemType.LINK && null != C ? (0, n.jsxs)(h.default, {
           className: l()(x.item, x.linkCard),
           imageSrc: E,
-          header: _,
+          header: C,
           headerClassName: x.cardHeader,
           children: [(0, n.jsx)(r.Text, {
             variant: "text-sm/normal",
             className: x.linkDescription,
-            children: g
+            children: _
           }), (0, n.jsx)(r.Anchor, {
             onClick: () => {
-              o.default.track(C.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+              o.default.track(g.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                 collection_id: i,
                 link: A,
                 guild_id: I,

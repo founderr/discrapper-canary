@@ -67,14 +67,14 @@ t.default = a.memo(function(e) {
     contextMenu: Z = j,
     draggable: X = !1,
     sorting: Q = !1,
-    preloadOnClick: q = !0,
-    guildJoinRequestStatus: J
+    preloadOnClick: J = !0,
+    guildJoinRequestStatus: q
   } = e, {
     id: $,
     parentId: ee
   } = G, et = null !== (t = e.upperBadge) && void 0 !== t ? t : K ? (0, M.renderUnavailableBadge)() : null != W ? (0, M.renderMediaBadge)(W) : void 0, en = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-  null == en && z > 0 ? en = null !== (s = (0, M.renderMentionBadge)(z)) && void 0 !== s ? s : void 0 : null == en && null != J && (en = null !== (h = (0, M.renderGuildJoinRequestBadge)({
-    guildJoinRequestStatus: J
+  null == en && z > 0 ? en = null !== (s = (0, M.renderMentionBadge)(z)) && void 0 !== s ? s : void 0 : null == en && null != q && (en = null !== (h = (0, M.renderGuildJoinRequestBadge)({
+    guildJoinRequestStatus: q
   })) && void 0 !== h ? h : void 0);
   let el = null !== (P = e.lowerBadgeWidth) && void 0 !== P ? P : (0, I.getBadgeWidthForValue)(z),
     [{
@@ -112,10 +112,10 @@ t.default = a.memo(function(e) {
       })
     }, [$, F]),
     ep = a.useCallback(() => {
-      if (null != F || null == H || K || !q) return;
+      if (null != F || null == H || K || !J) return;
       let e = (0, C.getChannelIdForGuildTransition)(H.id);
       null != e && f.default.preload(H.id, e)
-    }, [F, H, K, q]),
+    }, [F, H, K, J]),
     eg = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest($)),
     eE = a.useCallback(e => {
       null != H && !eg && Z(e, H)

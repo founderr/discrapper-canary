@@ -52,11 +52,11 @@ let v = e => {
     width: 1280,
     height: 720
   },
-  L = {
+  S = {
     width: 640,
     height: 360
   },
-  S = e => {
+  L = e => {
     let t, n, s, {
       item: i,
       onPlay: r,
@@ -71,7 +71,7 @@ let v = e => {
       ...b
     }, n = {
       url: "".concat((0, C.YOUTUBE_EMBED_URL)(i.youtubeVideoId), "?").concat("rel=0&iv_load_policy=3&showinfo=0&modestbranding=1"),
-      ...L
+      ...S
     }, s = p.SupportedEmbedIFrame.YOUTUBE;
     else {
       let e = null != i.width ? i.width : 0,
@@ -214,7 +214,7 @@ class P extends(s = i.PureComponent) {
       switch (e.type) {
         case C.CarouselMediaTypes.YOUTUBE_VIDEO:
         case C.CarouselMediaTypes.VIDEO:
-          n = (0, a.jsx)(S, {
+          n = (0, a.jsx)(L, {
             item: e,
             onPlay: this.handlePlay,
             isMuted: s,

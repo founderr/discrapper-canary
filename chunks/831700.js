@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return J
+    return q
   }
 }), n("47120"), n("411104");
 var l = n("735250");
@@ -375,9 +375,9 @@ class Q extends B.default {
     })
   }
 }
-let q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(Q));
+let J = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(Q));
 
-function J(e) {
+function q(e) {
   let {
     guild: t,
     channel: n,
@@ -421,7 +421,7 @@ function J(e) {
     enableConnectedUserLimit: !0,
     enableActivities: !0
   }), U = x && null == O;
-  return (0, l.jsx)(q, {
+  return (0, l.jsx)(J, {
     channelName: p,
     embeddedApps: C,
     embeddedActivityType: W.ActivityTypes.PLAYING,

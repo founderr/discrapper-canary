@@ -89,10 +89,10 @@ function W(e) {
   }) : K && (Q = (0, l.jsx)(M.default, {
     className: k.broadcastBadge
   }));
-  let q = t || S || _,
-    J = (0, l.jsx)(o.BlobMask, {
+  let J = t || S || _,
+    q = (0, l.jsx)(o.BlobMask, {
       highlight: K,
-      selected: q,
+      selected: J,
       lowerBadge: f > 0 ? (0, w.renderMentionBadge)(f) : null,
       upperBadge: Q,
       lowerBadgeWidth: (0, O.getBadgeWidthForValue)(f),
@@ -108,7 +108,7 @@ function W(e) {
             }, 1e3)
           }
         },
-        selected: q,
+        selected: J,
         ariaLabel: V.default.Messages.DIRECT_MESSAGES,
         ...z,
         to: {
@@ -139,7 +139,7 @@ function W(e) {
       },
       spacing: 8,
       shouldShow: b,
-      children: () => J
+      children: () => q
     }) : null;
   return (0, l.jsx)("div", {
     className: k.tutorialContainer,
@@ -165,7 +165,7 @@ function W(e) {
           hideOnClick: !0,
           text: X,
           selected: t,
-          children: J
+          children: q
         })]
       })
     })

@@ -54,8 +54,8 @@ var l, a = n("735250"),
   Z = n("424785"),
   X = n("770202"),
   Q = n("79556"),
-  q = n("428127"),
-  J = n("950969"),
+  J = n("428127"),
+  q = n("950969"),
   $ = n("233657"),
   ee = n("831700"),
   et = n("443063"),
@@ -163,7 +163,7 @@ class eo extends(l = s.PureComponent) {
     } = this.props;
     return (0, a.jsx)("div", {
       className: ei.positionedContainer,
-      children: (0, a.jsx)(J.default, {
+      children: (0, a.jsx)(q.default, {
         ref: this.unreadTopRef,
         textUnread: es.default.Messages.NEW_UNREADS,
         textMention: es.default.Messages.NEW_MENTIONS,
@@ -188,7 +188,7 @@ class eo extends(l = s.PureComponent) {
       bottomMention: l,
       isUnreadVisible: s
     } = this.state;
-    return (0, a.jsx)(J.default, {
+    return (0, a.jsx)(q.default, {
       reverse: !0,
       ref: this.unreadBottomRef,
       textUnread: es.default.Messages.NEW_UNREADS,
@@ -258,14 +258,14 @@ class eo extends(l = s.PureComponent) {
           children: n ? (0, a.jsxs)(s.Fragment, {
             children: [(0, a.jsx)("div", {
               className: ei.positionedContainer,
-              children: (0, a.jsx)(q.default, {
+              children: (0, a.jsx)(J.default, {
                 position: "top",
                 guildChannels: e,
                 guildChannelsVersion: t,
                 jumpToVoiceChannels: this.jumpToVoiceChannels,
                 jumpToChannel: this.jumpToChannel
               })
-            }), this.renderList(), (0, a.jsx)(q.default, {
+            }), this.renderList(), (0, a.jsx)(J.default, {
               position: "bottom",
               guildChannels: e,
               guildChannelsVersion: t,

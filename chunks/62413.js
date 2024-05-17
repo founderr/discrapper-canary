@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return _
+    return C
   }
 }), i("411104");
 var n = i("735250"),
@@ -17,10 +17,10 @@ var n = i("735250"),
   p = i("125909"),
   f = i("185156"),
   m = i("87528"),
-  C = i("57348"),
+  g = i("57348"),
   x = i("164217");
 
-function _() {
+function C() {
   let e = (0, o.useStateFromStores)([c.default], () => c.default.appDirectoryIncludesInactiveCollections),
     t = (0, o.useStateFromStores)([u.default], () => u.default.getFetchState({
       includesInactive: e
@@ -44,7 +44,7 @@ function _() {
           });
           break;
         case r.ApplicationDirectoryCollectionType.LIST_WITH_IMAGE:
-          a = (0, n.jsx)(C.default, {
+          a = (0, n.jsx)(g.default, {
             collection: e
           });
           break;

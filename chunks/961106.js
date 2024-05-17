@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return _
+    return C
   }
 }), i("47120"), i("610138"), i("216116"), i("78328"), i("815648");
 var n = i("735250"),
@@ -17,18 +17,18 @@ var n = i("735250"),
   p = i("132871"),
   f = i("147890"),
   m = i("981631"),
-  C = i("689938"),
+  g = i("689938"),
   x = i("125129");
 
-function _(e) {
+function C(e) {
   let {
     className: t
-  } = e, i = (0, p.useApplicationDirectoryHistory)(e => e.guildId), l = (0, r.useStateFromStores)([u.default], () => u.default.getCategories()), _ = a.useMemo(() => [(0, h.getAllCategory)(), ...l], [l]), g = (0, p.getCurrentView)(), I = e => {
-    let t = _.find(t => t.id === e);
+  } = e, i = (0, p.useApplicationDirectoryHistory)(e => e.guildId), l = (0, r.useStateFromStores)([u.default], () => u.default.getCategories()), C = a.useMemo(() => [(0, h.getAllCategory)(), ...l], [l]), _ = (0, p.getCurrentView)(), I = e => {
+    let t = C.find(t => t.id === e);
     c.default.track(m.AnalyticEvents.APP_DIRECTORY_CATEGORY_CLICKED, {
       category: t.name,
       category_id: t.id,
-      current_page: null == g ? void 0 : g.type,
+      current_page: null == _ ? void 0 : _.type,
       guild_id: i
     }), (0, f.goToCategory)({
       categoryId: t.id
@@ -36,7 +36,7 @@ function _(e) {
   };
   return (0, n.jsx)("nav", {
     className: s()(x.container, t),
-    children: _.map(e => {
+    children: C.map(e => {
       let t = e.id,
         i = e.name,
         a = (0, h.getCategoryIcon)(e),
@@ -45,7 +45,7 @@ function _(e) {
         href: "".concat(m.Routes.APPLICATION_DIRECTORY_SEARCH, "?").concat(l),
         children: (0, n.jsxs)(o.Clickable, {
           className: x.category,
-          "aria-label": C.default.Messages.APP_DIRECTORY_CATEGORY_BUTTON_A11Y_LABEL.format({
+          "aria-label": g.default.Messages.APP_DIRECTORY_CATEGORY_BUTTON_A11Y_LABEL.format({
             categoryName: i
           }),
           onClick: () => I(t),

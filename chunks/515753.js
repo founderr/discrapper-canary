@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return X
   },
   LinkButton: function() {
-    return q
+    return J
   }
 }), n("47120");
 var l = n("735250"),
@@ -77,7 +77,7 @@ let z = H.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
   Q = () => (0, l.jsx)(B.default, {
     className: K.favoriteIcon
   });
-class q extends a.Component {
+class J extends a.Component {
   render() {
     let {
       route: e,
@@ -135,7 +135,7 @@ class q extends a.Component {
   }
 }
 
-function J(e) {
+function q(e) {
   let {
     channel: t,
     isGDMFacepileEnabled: s,
@@ -148,7 +148,7 @@ function J(e) {
     isMobile: b,
     "aria-posinset": w,
     "aria-setsize": B
-  } = e, [F, H] = a.useState(!1), q = a.useRef(null), J = a.useRef(null), {
+  } = e, [F, H] = a.useState(!1), J = a.useRef(null), q = a.useRef(null), {
     avatarSrc: $,
     avatarDecorationSrc: ee,
     eventHandlers: et
@@ -170,7 +170,7 @@ function J(e) {
   }, ec = e => {
     if (e.target === e.currentTarget) {
       var t;
-      null === (t = q.current) || void 0 === t || t.click()
+      null === (t = J.current) || void 0 === t || t.click()
     }
   }, ef = e => {
     t.isMultiUserDM() ? (0, C.openContextMenuLazy)(e, async () => {
@@ -285,10 +285,10 @@ function J(e) {
         role: n,
         focusProps: {
           ...Z,
-          focusTarget: q,
-          ringTarget: J
+          focusTarget: J,
+          ringTarget: q
         },
-        ref: J,
+        ref: q,
         onMouseEnter: ei,
         onMouseLeave: er,
         onMouseDown: eu,
@@ -305,7 +305,7 @@ function J(e) {
           muted: en,
           selected: r,
           children: [(0, l.jsx)(u.Link, {
-            innerRef: q,
+            innerRef: J,
             to: Y.Routes.CHANNEL(Y.ME, t.id),
             className: K.link,
             "aria-label": (0, E.default)({
@@ -374,14 +374,14 @@ t.default = e => {
     if (null != s) return O.default.isTyping(t.id, t.getRecipientId());
     return !1
   }, [t, s, r]);
-  return t.isMultiUserDM() ? (0, l.jsx)(J, {
+  return t.isMultiUserDM() ? (0, l.jsx)(q, {
     channel: t,
     selected: n,
     isTyping: c,
     status: d.status === Y.StatusTypes.ONLINE ? Y.StatusTypes.ONLINE : void 0,
     isGDMFacepileEnabled: o,
     ...a
-  }) : (0, l.jsx)(J, {
+  }) : (0, l.jsx)(q, {
     channel: t,
     selected: n,
     user: s,

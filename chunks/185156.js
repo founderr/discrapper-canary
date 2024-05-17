@@ -17,10 +17,10 @@ var n = i("735250"),
   p = i("34674"),
   f = i("132871"),
   m = i("147890"),
-  C = i("409425"),
+  g = i("409425"),
   x = i("57716"),
-  _ = i("981631"),
-  g = i("689938"),
+  C = i("981631"),
+  _ = i("689938"),
   I = i("305319");
 
 function v(e) {
@@ -38,7 +38,7 @@ function v(e) {
     onClick: l,
     children: o
   }) : (0, n.jsx)(h.default, {
-    href: _.Routes.APPLICATION_DIRECTORY_PROFILE(u),
+    href: C.Routes.APPLICATION_DIRECTORY_PROFILE(u),
     children: (0, n.jsx)(c.Button, {
       className: I.applicationCta,
       onClick: l,
@@ -60,7 +60,7 @@ function v(e) {
         }), (0, n.jsxs)(c.Heading, {
           className: I.applicationName,
           variant: "heading-xxl/medium",
-          children: [i, " ", p && (0, n.jsx)(C.default, {})]
+          children: [i, " ", p && (0, n.jsx)(g.default, {})]
         }), (0, n.jsx)(c.Text, {
           className: I.applicationDescription,
           variant: "text-md/normal",
@@ -96,7 +96,7 @@ function A(e) {
     }
   } = e, h = (0, x.default)({
     collection: t
-  }), [C, A] = a.useState(), E = (0, f.useApplicationDirectoryHistory)(e => e.guildId);
+  }), [g, A] = a.useState(), E = (0, f.useApplicationDirectoryHistory)(e => e.guildId);
   return a.useEffect(() => {
     let e = null == h ? void 0 : h.current;
     if (null == e) return;
@@ -113,7 +113,7 @@ function A(e) {
       [I.collectionBottomMargin]: c.length <= 1
     }),
     children: (0, n.jsx)(d.default, {
-      aspectRatio: C,
+      aspectRatio: g,
       themedPagination: !0,
       paginationClassName: I.paginationControls,
       paginationArrowClassName: I.paginationArrow,
@@ -122,7 +122,7 @@ function A(e) {
         let {
           application: a
         } = e;
-        null != a && u.default.track(_.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
+        null != a && u.default.track(C.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
           collection_id: i,
           offset: n,
           results: [a.id],
@@ -141,7 +141,7 @@ function A(e) {
           call_to_action_url: f
         } = e;
         if (null == a) return;
-        let C = (0, p.getCollectionItemAssetUrl)({
+        let g = (0, p.getCollectionItemAssetUrl)({
           itemId: t,
           hash: a
         });
@@ -152,7 +152,7 @@ function A(e) {
             title: s.name,
             description: null !== (I = null === (x = s.directory_entry) || void 0 === x ? void 0 : x.short_description) && void 0 !== I ? I : s.description,
             handleClick: () => {
-              u.default.track(_.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+              u.default.track(C.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                 collection_id: i,
                 application_id: s.id,
                 guild_id: E,
@@ -161,8 +161,8 @@ function A(e) {
                 applicationId: s.id
               })
             },
-            imageSrc: C,
-            ctaLabel: g.default.Messages.APP_DIRECTORY_GALLERY_COLLECTION_VIEW_APP_CTA,
+            imageSrc: g,
+            ctaLabel: _.default.Messages.APP_DIRECTORY_GALLERY_COLLECTION_VIEW_APP_CTA,
             applicationId: s.id
           })
         }
@@ -171,14 +171,14 @@ function A(e) {
           title: d,
           description: c,
           handleClick: () => {
-            u.default.track(_.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+            u.default.track(C.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
               collection_id: i,
               link: f,
               guild_id: E,
               shown_mutual_guilds_count: void 0
             })
           },
-          imageSrc: C,
+          imageSrc: g,
           ctaLabel: h,
           ctaLink: f
         })

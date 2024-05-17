@@ -17,7 +17,7 @@ var n = i("735250"),
   p = i("216547"),
   f = i("57716"),
   m = i("981631"),
-  C = i("806318");
+  g = i("806318");
 
 function x(e) {
   let {
@@ -25,19 +25,19 @@ function x(e) {
     collection: {
       id: i,
       title: x,
-      application_directory_collection_items: _
+      application_directory_collection_items: C
     }
-  } = e, [g, I] = a.useState(300), [v, A] = a.useState(4), E = parseFloat(s.default.COLLECTION_LIST_CARD_GAP), N = (0, u.useApplicationDirectoryHistory)(e => e.guildId), T = (0, f.default)({
+  } = e, [_, I] = a.useState(300), [v, A] = a.useState(4), E = parseFloat(s.default.COLLECTION_LIST_CARD_GAP), N = (0, u.useApplicationDirectoryHistory)(e => e.guildId), R = (0, f.default)({
     collection: t
   });
   a.useEffect(() => {
     function e() {
       var e;
-      let t = null === (e = T.current) || void 0 === e ? void 0 : e.offsetWidth,
+      let t = null === (e = R.current) || void 0 === e ? void 0 : e.offsetWidth,
         i = 1;
       return null == t ? 300 : (t >= 500 && (i = 2), t >= 700 && (i = 3), t >= 1e3 && (i = 4), A(i), (t - (i - 1) * E) / i)
     }
-    let t = T.current;
+    let t = R.current;
     if (null == t) return;
     let i = new ResizeObserver(() => {
       I(e())
@@ -45,19 +45,19 @@ function x(e) {
     return I(e()), i.observe(t), () => {
       i.disconnect()
     }
-  }, [E, T]);
-  let R = (0, r.useUID)();
+  }, [E, R]);
+  let T = (0, r.useUID)();
   return (0, n.jsx)("div", {
-    ref: T,
+    ref: R,
     children: (0, n.jsx)(p.default, {
       header: x,
-      headerId: R,
-      tileWidth: g,
+      headerId: T,
+      tileWidth: _,
       tileMargin: E,
       onScroll: e => {
         let {
           tileIndex: t
-        } = e, n = _.slice(t, t + v).reduce((e, t) => {
+        } = e, n = C.slice(t, t + v).reduce((e, t) => {
           let {
             type: i,
             application: n
@@ -72,9 +72,9 @@ function x(e) {
         })
       },
       children: (0, n.jsx)("ul", {
-        "aria-labelledby": R,
-        className: C.itemsContainer,
-        children: _.map(e => {
+        "aria-labelledby": T,
+        className: g.itemsContainer,
+        children: C.map(e => {
           let {
             id: t,
             type: a,
@@ -82,11 +82,11 @@ function x(e) {
           } = e;
           if (a === l.ApplicationDirectoryCollectionItemType.APPLICATION && null != s) return (0, n.jsx)("li", {
             style: {
-              width: g
+              width: _
             },
-            className: C.itemContainer,
+            className: g.itemContainer,
             children: (0, n.jsx)(c.default, {
-              className: C.seoAnchor,
+              className: g.seoAnchor,
               href: m.Routes.APPLICATION_DIRECTORY_PROFILE(s.id),
               children: (0, n.jsx)(d.default, {
                 application: s,
