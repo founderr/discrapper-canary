@@ -42,25 +42,26 @@ function E(e) {
 }
 
 function N(e) {
-  let t;
+  let t, n;
   let {
-    label: n,
-    style: a,
-    disabled: p,
-    emoji: C,
-    url: N,
-    sku_id: h
+    label: a,
+    style: p,
+    disabled: C,
+    emoji: N,
+    url: h,
+    sku_id: g
   } = e, {
-    executeStateUpdate: g,
-    visualState: T,
-    isDisabled: y
-  } = (0, f.useComponentState)(e), I = null != n && n.length > 0, x = a === r.ButtonStyle.LINK && null != N && N.length > 0, O = T === S.ActionComponentState.LOADING, j = (0, d.useLoadStoreListingDetails)(h);
-  return t = x ? () => {
+    executeStateUpdate: T,
+    visualState: y,
+    isDisabled: I
+  } = (0, f.useComponentState)(e), x = null != a && a.length > 0, O = p === r.ButtonStyle.LINK && null != h && h.length > 0, j = y === S.ActionComponentState.LOADING, L = (0, d.useLoadStoreListingDetails)(g);
+  return O ? n = () => {
     (0, m.handleClick)({
-      href: null != N ? N : "",
+      href: null != h ? h : "",
       shouldConfirm: !0
     })
-  } : null != j ? j : () => g(), (0, l.jsxs)(i.Button, {
+  } : null != L ? (n = L, t = v.premium) : n = () => T(), (0, l.jsxs)(i.Button, {
+    className: t,
     color: function(e) {
       switch (e) {
         case r.ButtonStyle.PRIMARY:
@@ -72,39 +73,39 @@ function N(e) {
         default:
           return i.Button.Colors.PRIMARY
       }
-    }(a),
+    }(p),
     size: i.Button.Sizes.SMALL,
-    disabled: p || T === S.ActionComponentState.DISABLED || y || null != h && void 0 === j,
-    onClick: t,
+    disabled: C || y === S.ActionComponentState.DISABLED || I || null != g && void 0 === L,
+    onClick: n,
     onContextMenu: e => {
-      x && (0, o.openContextMenu)(e, e => (0, l.jsx)(E, {
+      O && (0, o.openContextMenu)(e, e => (0, l.jsx)(E, {
         ...e,
-        url: N
+        url: h
       }))
     },
-    role: x ? "link" : "button",
+    role: O ? "link" : "button",
     children: [(0, l.jsxs)("div", {
       className: u()(v.content, {
-        [v.hidden]: O
+        [v.hidden]: j
       }),
-      "aria-hidden": O,
-      children: [null != C ? (0, l.jsx)(s.default, {
+      "aria-hidden": j,
+      children: [null != N ? (0, l.jsx)(s.default, {
         className: u()({
-          [v.textEmoji]: I
+          [v.textEmoji]: x
         }),
-        src: C.src,
-        emojiId: C.id,
-        emojiName: C.name,
-        animated: C.animated
-      }) : null, I ? (0, l.jsx)("div", {
+        src: N.src,
+        emojiId: N.id,
+        emojiName: N.name,
+        animated: N.animated
+      }) : null, x ? (0, l.jsx)("div", {
         className: v.label,
-        children: n
-      }) : null, x ? (0, l.jsx)(c.default, {
+        children: a
+      }) : null, O ? (0, l.jsx)(c.default, {
         className: v.launchIcon,
         width: 16,
         height: 16
       }) : null]
-    }), O ? (0, l.jsx)("div", {
+    }), j ? (0, l.jsx)("div", {
       className: v.loading,
       children: (0, l.jsx)(i.Dots, {
         dotRadius: 3.5,
