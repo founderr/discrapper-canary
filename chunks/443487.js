@@ -34,13 +34,16 @@ function C(e) {
     children: t,
     selected: n
   } = e, {
-    showReplyIcon: l
+    showReplyIcon: l,
+    openOnHover: i
   } = (0, p.useMemberListHoverInteractions)({
     location: "ContentCard"
   });
   return (0, a.jsxs)("div", {
     className: s()(E.container, {
       [E.selected]: n
+    }, {
+      [E.openOnHover]: i
     }),
     children: [t, l && (0, a.jsx)("div", {
       className: E.reply,
