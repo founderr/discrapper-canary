@@ -21,29 +21,28 @@ var a = n("470079"),
   h = n("308083");
 
 function _() {
-  let e = (0, f.useClanDiscoveryUIStore)(e => e.game, i.default),
-    t = (0, f.useClanDiscoveryUIStore)(e => e.setGame, i.default),
-    n = (0, f.useClanDiscoveryUIStore)(e => e.setSelectedGames, i.default),
-    s = (0, f.useClanDiscoveryUIStore)(e => e.selectedGames, i.default),
-    E = (0, f.useClanDiscoveryUIStore)(f.buildSearchCriteriaFromUIState, l()),
-    _ = (0, u.useClanPrepilotExperimentDefaultGameId)({
+  let e = (0, f.useClanDiscoveryUIStore)(e => e.setGame, i.default),
+    t = (0, f.useClanDiscoveryUIStore)(e => e.setSelectedGames, i.default),
+    n = (0, f.useClanDiscoveryUIStore)(e => e.selectedGames, i.default),
+    s = (0, f.useClanDiscoveryUIStore)(f.buildSearchCriteriaFromUIState, l()),
+    E = (0, u.useClanPrepilotExperimentDefaultGameId)({
       location: "clan_discovery"
     }),
     {
-      defaultGameId: C
+      defaultGameId: _
     } = (0, u.useClanPilotExperiment)("clan_discovery"),
-    m = null != _ ? _ : C,
-    S = function(e) {
-      let t = (0, r.useStateFromStores)([c.default], () => c.default.hasLoadedStaticClanDiscovery(e));
+    C = null != E ? E : _,
+    m = function() {
+      let e = (0, r.useStateFromStores)([c.default], () => c.default.hasLoadedStaticClanDiscovery());
       return a.useEffect(() => {
-        !t && (0, d.loadStaticClanDiscovery)(e)
-      }, [e, t]), t
-    }(e);
+        !e && (0, d.loadStaticClanDiscovery)()
+      }, [e]), e
+    }();
   a.useEffect(() => {
-    !(s.length > 0) && (m === h.VALORANT_ID ? (t(f.ClanDiscoveryGame.VALORANT), n([m])) : m === h.GENSHIN_ID && (t(f.ClanDiscoveryGame.GENSHIN), n([m])))
-  }, [t, n, m, s]), a.useEffect(() => {
-    S && (0, d.searchClanDiscovery)(e, E)
-  }, [e, E, S]), a.useEffect(() => {
+    !(n.length > 0) && (C === h.VALORANT_ID ? (e(f.ClanDiscoveryGame.VALORANT), t([C])) : C === h.GENSHIN_ID && (e(f.ClanDiscoveryGame.GENSHIN), t([C])))
+  }, [e, t, C, n]), a.useEffect(() => {
+    m && (0, d.searchClanDiscovery)(s)
+  }, [s, m]), a.useEffect(() => {
     o.default.getDetectableGames()
   }, [])
 }
@@ -51,19 +50,18 @@ function _() {
 function C() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
     t = (0, f.useClanDiscoveryUIStore)(f.buildSearchCriteriaFromUIState, l()),
-    n = (0, f.useClanDiscoveryUIStore)(e => e.game, i.default),
-    s = (0, r.useStateFromStores)([c.default], () => c.default.hasLoadedStaticClanDiscovery(n)),
-    o = (0, r.useStateFromStores)([c.default], () => c.default.getSearchResult(t), [t]);
+    n = (0, r.useStateFromStores)([c.default], () => c.default.hasLoadedStaticClanDiscovery()),
+    s = (0, r.useStateFromStores)([c.default], () => c.default.getSearchResult(t), [t]);
   return {
-    loaded: s,
+    loaded: n,
     clans: a.useMemo(() => {
-      if ((0, E.isLoadedSearchResult)(o)) {
-        let t = o.items;
+      if ((0, E.isLoadedSearchResult)(s)) {
+        let t = s.items;
         return null != e ? t.slice(0, e) : t
       }
       return []
-    }, [e, o]),
+    }, [e, s]),
     searchCriteria: t,
-    searchResult: o
+    searchResult: s
   }
 }
