@@ -28,8 +28,8 @@ function v(e) {
     newestAnalyticsLocation: U
   } = (0, o.default)(), {
     trackUserProfileAction: N,
-    ...C
-  } = (0, f.useUserProfileAnalyticsContext)(), p = {
+    ...p
+  } = (0, f.useUserProfileAnalyticsContext)(), C = {
     location: {
       page: m.AnalyticsPages.USER_PROFILE,
       section: m.AnalyticsSections.PROFILE_MODAL
@@ -47,7 +47,7 @@ function v(e) {
       showChannelDetails: s === c.Types.SIMPLIFIED_PROFILE,
       activity: g,
       actionColor: E.actionColor,
-      analyticsParams: p,
+      analyticsParams: C,
       onAction: () => {
         N({
           action: "JOIN_ACTIVITY"
@@ -58,7 +58,7 @@ function v(e) {
           activitySessionId: null == g ? void 0 : g.session_id,
           applicationId: null == g ? void 0 : g.application_id,
           analyticsLocations: x,
-          ...C
+          ...p
         })
       }
     }) : null, A.map(e => (0, l.jsx)(r.default, {
@@ -71,7 +71,7 @@ function v(e) {
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       showChannelDetails: s === c.Types.SIMPLIFIED_PROFILE,
       actionColor: E.actionColor,
-      analyticsParams: p,
+      analyticsParams: C,
       onAction: () => {
         N({
           action: "JOIN_ACTIVITY"
@@ -82,7 +82,7 @@ function v(e) {
           activitySessionId: e.session_id,
           applicationId: e.application_id,
           analyticsLocations: x,
-          ...C
+          ...p
         })
       }
     }, "".concat(e.application_id, "-").concat(e.session_id, "-").concat(e.name)))]

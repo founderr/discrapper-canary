@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   getPromiseableActionHandlers: function() {
-    return a
+    return E
   },
   openConfirmRemoveMentionRaid: function() {
-    return s
+    return A
   },
   openRaidResolveModal: function() {
     return i
   },
   openSubmitFeedback: function() {
-    return E
+    return r
   }
 });
 var o = n("735250");
 n("470079");
 var _ = n("481060"),
   u = n("273504"),
-  r = n("689938");
+  a = n("689938");
 
-function a(e) {
+function E(e) {
   return {
     [u.AutomodActionType.BLOCK_MESSAGE]: (e, t) => new Promise(e => {
       (0, _.openModalLazy)(async () => {
@@ -39,45 +39,45 @@ function a(e) {
         }
       })
     }),
-    [u.AutomodActionType.FLAG_TO_CHANNEL]: (t, r) => new Promise(a => {
+    [u.AutomodActionType.FLAG_TO_CHANNEL]: (t, a) => new Promise(E => {
       (0, _.openModalLazy)(async () => {
         let {
           default: _
-        } = await Promise.all([n.e("99387"), n.e("74543")]).then(n.bind(n, "643611")), E = t.actions.find(e => e.type === u.AutomodActionType.FLAG_TO_CHANNEL);
+        } = await Promise.all([n.e("99387"), n.e("74543")]).then(n.bind(n, "643611")), r = t.actions.find(e => e.type === u.AutomodActionType.FLAG_TO_CHANNEL);
         return n => (0, o.jsx)(_, {
-          action: r,
-          isEdit: null != E,
+          action: a,
+          isEdit: null != r,
           triggerType: t.triggerType,
           guildId: e,
           onEditChannel: e => {
-            r.metadata.channelId = e, t.exemptChannels.add(e), a(r), n.onClose()
+            a.metadata.channelId = e, t.exemptChannels.add(e), E(a), n.onClose()
           },
           ...n,
-          onClose: () => (a(null), n.onClose())
+          onClose: () => (E(null), n.onClose())
         })
       })
     }),
-    [u.AutomodActionType.USER_COMMUNICATION_DISABLED]: (e, t) => new Promise(r => {
+    [u.AutomodActionType.USER_COMMUNICATION_DISABLED]: (e, t) => new Promise(a => {
       (0, _.openModalLazy)(async () => {
         let {
           default: _
-        } = await Promise.all([n.e("99387"), n.e("78273")]).then(n.bind(n, "41767")), a = e.actions.find(e => e.type === u.AutomodActionType.USER_COMMUNICATION_DISABLED);
+        } = await Promise.all([n.e("99387"), n.e("78273")]).then(n.bind(n, "41767")), E = e.actions.find(e => e.type === u.AutomodActionType.USER_COMMUNICATION_DISABLED);
         return n => (0, o.jsx)(_, {
           action: t,
-          isEdit: null != a,
+          isEdit: null != E,
           triggerType: e.triggerType,
           onUpdateDuration: e => {
-            null != e && (t.metadata.durationSeconds = e), r(t), n.onClose()
+            null != e && (t.metadata.durationSeconds = e), a(t), n.onClose()
           },
           ...n,
-          onClose: () => (r(null), n.onClose())
+          onClose: () => (a(null), n.onClose())
         })
       })
     })
   }
 }
 
-function E(e, t, u, r) {
+function r(e, t, u, a) {
   (0, _.openModalLazy)(async () => {
     let {
       default: _
@@ -88,7 +88,7 @@ function E(e, t, u, r) {
         messageId: e,
         messageContent: t,
         decisionId: u,
-        channel: r
+        channel: a
       }
     })
   })
@@ -107,16 +107,16 @@ function i(e, t) {
   })
 }
 
-function s(e) {
+function A(e) {
   (0, _.openModal)(t => (0, o.jsx)(_.ConfirmModal, {
-    header: r.default.Messages.GUILD_AUTOMOD_REMOVE_MENTION_RAID_MODAL_TITLE,
-    confirmText: r.default.Messages.CONFIRM,
+    header: a.default.Messages.GUILD_AUTOMOD_REMOVE_MENTION_RAID_MODAL_TITLE,
+    confirmText: a.default.Messages.CONFIRM,
     onConfirm: e,
-    cancelText: r.default.Messages.CANCEL,
+    cancelText: a.default.Messages.CANCEL,
     ...t,
     children: (0, o.jsx)(_.Text, {
       variant: "text-md/normal",
-      children: r.default.Messages.GUILD_AUTOMOD_REMOVE_MENTION_RAID_MODAL_BODY
+      children: a.default.Messages.GUILD_AUTOMOD_REMOVE_MENTION_RAID_MODAL_BODY
     })
   }))
 }

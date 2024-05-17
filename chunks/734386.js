@@ -52,7 +52,7 @@ function b(e) {
       context: t
     });
     return u.has(n, j.Permissions.ADMINISTRATOR) || u.has(n, j.Permissions.VIEW_CHANNEL)
-  }).value(), [t, b, w]), H = (0, c.useStateFromStoresArray)([I.default], () => {
+  }).value(), [t, b, w]), B = (0, c.useStateFromStoresArray)([I.default], () => {
     let e = {};
     for (let n of (null != F && (e[F.id] = F), Object.values(t.permissionOverwrites))) {
       if (n.type !== m.PermissionOverwriteType.MEMBER || null != e[n.id]) continue;
@@ -70,7 +70,7 @@ function b(e) {
         s = u.has(l.allow, j.Permissions.VIEW_CHANNEL);
       return a || s
     }).value()
-  }, [t, F]), B = T.default.can(j.Permissions.MANAGE_CHANNELS, t) || T.default.can(j.Permissions.MANAGE_ROLES, t);
+  }, [t, F]), H = T.default.can(j.Permissions.MANAGE_CHANNELS, t) || T.default.can(j.Permissions.MANAGE_ROLES, t);
 
   function G() {
     h.default.open(t.id)
@@ -92,7 +92,7 @@ function b(e) {
           channelId: t.id
         })
       })
-    }), B ? (0, a.jsxs)("div", {
+    }), H ? (0, a.jsxs)("div", {
       className: D.channelSettingButtons,
       children: [(0, a.jsx)(y.default, {
         label: P.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
@@ -112,13 +112,13 @@ function b(e) {
     }) : null, (0, a.jsxs)("div", {
       className: D.members,
       children: [function() {
-        if (1 !== H.length || k.length > 0) return (0, a.jsx)(O.default, {
+        if (1 !== B.length || k.length > 0) return (0, a.jsx)(O.default, {
           guildId: t.guild_id,
           className: D.avatars,
           maxUsers: 5,
-          users: H
+          users: B
         });
-        let e = H[0],
+        let e = B[0],
           n = R.default.getName(e);
         return (0, a.jsxs)("div", {
           className: D.avatars,
@@ -142,13 +142,13 @@ function b(e) {
         var l, s;
         let r = null !== (s = e.colorString) && void 0 !== s ? s : (0, d.int2hex)(j.DEFAULT_ROLE_COLOR),
           o = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== void 0;
-        return B ? (0, a.jsx)(v.default, {
+        return H ? (0, a.jsx)(v.default, {
           className: i()(D.role, {
             [D.last]: n === k.length - 1
           }),
           roleName: e.name,
           roleColor: r,
-          disabled: !B,
+          disabled: !H,
           verified: o,
           onClick: () => {
             g.default.open(t.guild_id, j.GuildSettingsSections.MEMBERS), g.default.selectRole(e.id)

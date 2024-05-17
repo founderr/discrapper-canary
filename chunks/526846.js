@@ -46,9 +46,9 @@ let U = "vc-activities-".concat((0, o.v4)()),
       onMouseEnter: F,
       onMouseLeave: w,
       onClick: k,
-      className: H
+      className: B
     } = e, {
-      enabled: B
+      enabled: H
     } = I.BirthdayActivitiesExperiment.useExperiment({
       location: "8009ca_3"
     }), {
@@ -104,7 +104,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
           guild_id: n.getGuildId()
         })
       }, [F, n]),
-      et = B ? (0, a.jsxs)(r.Link, {
+      et = H ? (0, a.jsxs)(r.Link, {
         to: L.Routes.ACTIVITIES,
         children: [(0, a.jsx)("img", {
           alt: O.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
@@ -134,7 +134,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
         children: (0, a.jsxs)(d.Dialog, {
           ref: t,
           "aria-labelledby": U,
-          className: H,
+          className: B,
           children: [(0, a.jsx)(d.HeadingLevel, {
             forceLevel: 2,
             children: (0, a.jsx)(d.HiddenVisually, {

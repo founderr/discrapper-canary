@@ -112,12 +112,12 @@ function j(e) {
     F = (0, d.useStateFromStores)([p.default], () => p.default.getCurrentUser()),
     w = (0, d.useStateFromStores)([h.default], () => null != F ? h.default.getMember(n, F.id) : null),
     k = (0, f.default)(),
-    H = (0, _.useBrandColor)(null == T ? void 0 : null === (t = T.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, .7]),
-    B = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+    B = (0, _.useBrandColor)(null == T ? void 0 : null === (t = T.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, .7]),
+    H = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
       theme: k,
       saturation: 1
     }).hex(),
-    G = (0, _.getClanRadialBackgroundStyle)(H, B, "top center");
+    G = (0, _.getClanRadialBackgroundStyle)(B, H, "top center");
   return null == U || null == F || null == w || null == T ? null : (0, a.jsx)(c.ModalRoot, {
     ...o,
     transitionState: o.transitionState,
@@ -159,7 +159,7 @@ function j(e) {
       }), (0, a.jsx)(x.default, {
         onClick: D,
         color: c.Button.Colors.BRAND,
-        themeColor: H,
+        themeColor: B,
         fullWidth: !1,
         className: i()(L.ctaButton, M ? L.ctaButtonSigned : null),
         children: (0, a.jsxs)("div", {
@@ -171,7 +171,7 @@ function j(e) {
           }), (0, a.jsx)(u.ArrowLargeRightIcon, {
             width: 20,
             height: 20,
-            color: null == H ? void 0 : (0, _.getAccessibleTextColor)(H).hex()
+            color: null == B ? void 0 : (0, _.getAccessibleTextColor)(B).hex()
           })]
         })
       })]

@@ -39,8 +39,8 @@ function A(e) {
     let a = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== null,
       i = (null === (l = t.tags) || void 0 === l ? void 0 : l.guild_connections) !== null;
     return a && !i ? 1 : !a && i ? -1 : 0
-  }), [x, d]), N = m && null != u, C = a.useMemo(() => "roles-".concat((0, i.v4)()), []), p = (0, n.default)({
-    id: C,
+  }), [x, d]), N = m && null != u, p = a.useMemo(() => "roles-".concat((0, i.v4)()), []), C = (0, n.default)({
+    id: p,
     isEnabled: !0,
     scrollToStart: _.NOOP_PROMISE,
     scrollToEnd: _.NOOP_PROMISE,
@@ -58,7 +58,7 @@ function A(e) {
     }, e.id)
   });
   return (0, l.jsx)(n.ListNavigatorProvider, {
-    navigator: p,
+    navigator: C,
     children: (0, l.jsx)(n.ListNavigatorContainer, {
       children: e => {
         let {

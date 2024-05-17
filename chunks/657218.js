@@ -41,8 +41,8 @@ var a = n("735250"),
   F = n("127654"),
   w = n("241309"),
   k = n("928477"),
-  H = n("456077"),
-  B = n("488131"),
+  B = n("456077"),
+  H = n("488131"),
   G = n("602034"),
   V = n("981631"),
   W = n("689938"),
@@ -71,7 +71,7 @@ function Z(e) {
           toolbar: (0, a.jsx)(D.default.Icon, {
             icon: O.default,
             tooltip: W.default.Messages.CLOSE,
-            onClick: () => (0, B.closeAndClearThreadSidebar)(t)
+            onClick: () => (0, H.closeAndClearThreadSidebar)(t)
           }),
           children: [(0, a.jsx)(D.default.Icon, {
             icon: P.default,
@@ -155,7 +155,7 @@ function q(e) {
       threadSettings: a,
       privateThreadMode: s,
       location: r,
-      onThreadCreated: B.openThreadSidebarForViewing,
+      onThreadCreated: H.openThreadSidebarForViewing,
       useDefaultThreadName: !0
     });
     return {
@@ -327,11 +327,11 @@ function Q(e) {
       maxLength: V.MAX_CHANNEL_NAME_LENGTH,
       onChange: e => {
         i({
-          name: (0, H.default)(e, !1)
+          name: (0, B.default)(e, !1)
         }), "" !== e ? d.default.startTyping(n.id) : d.default.stopTyping(n.id)
       },
       onBlur: () => {
-        let e = (0, H.default)(u, !0);
+        let e = (0, B.default)(u, !0);
         e !== u && i({
           name: e
         })

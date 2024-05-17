@@ -26,7 +26,7 @@ var l = s("735250"),
   x = s("981631"),
   U = s("689938"),
   N = s("773386");
-let C = e => {
+let p = e => {
   let {
     user: t,
     currentUser: s
@@ -58,7 +58,7 @@ let C = e => {
   })), c
 };
 
-function p(e) {
+function C(e) {
   let {
     section: t,
     user: s,
@@ -94,7 +94,7 @@ function h(e) {
     onClose: E
   } = e, {
     trackUserProfileAction: I
-  } = (0, m.useUserProfileAnalyticsContext)(), v = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), _ = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), g = C({
+  } = (0, m.useUserProfileAnalyticsContext)(), v = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), _ = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), g = p({
     user: i,
     currentUser: v
   }), [x, U] = a.useState(S), [h, R] = a.useState(null !== (s = null === (t = g.find(e => {
@@ -133,7 +133,7 @@ function h(e) {
           })
         }, t)
       })
-    }), (0, l.jsx)(p, {
+    }), (0, l.jsx)(C, {
       section: h,
       user: i,
       currentUser: v,

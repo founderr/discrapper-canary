@@ -37,8 +37,8 @@ var a = n("735250"),
   F = n("87728"),
   w = n("502762"),
   k = n("421486"),
-  H = n("347949"),
-  B = n("240328"),
+  B = n("347949"),
+  H = n("240328"),
   G = n("436478"),
   V = n("138394"),
   W = n("248345"),
@@ -158,17 +158,17 @@ t.default = e => {
       user: ec,
       theme: ew
     }, e.guild.id)),
-    eH = null == eO ? void 0 : eO.map(e => (0, a.jsx)($.default, {
+    eB = null == eO ? void 0 : eO.map(e => (0, a.jsx)($.default, {
       connection: e,
       channelId: n.id
     }, e.key)),
-    eB = em.map(e => (0, a.jsx)(Q.default, {
+    eH = em.map(e => (0, a.jsx)(Q.default, {
       channel: n,
       integration: e
     }, e.application.id)),
     eG = l.useCallback(() => {
-      !ec.bot && !eD && null == eH && (0, c.fetchMutualFriends)(ec.id)
-    }, [eD, eH, ec.id, ec.bot]),
+      !ec.bot && !eD && null == eB && (0, c.fetchMutualFriends)(ec.id)
+    }, [eD, eB, ec.id, ec.bot]),
     eV = l.useCallback(() => er(!0), []),
     eW = l.useCallback(() => er(!1), []),
     eY = (0, u.useStateFromStores)([T.default], () => T.default.getId()),
@@ -200,7 +200,7 @@ t.default = e => {
           displayProfile: eh,
           profileType: en.UserProfileTypes.PANEL,
           themeOverride: ew,
-          children: [eF.shouldShow && (0, a.jsx)(B.default, {
+          children: [eF.shouldShow && (0, a.jsx)(H.default, {
             user: ec,
             upsellSource: G.UserPopoutUpsellSource.PROFILE_PANEL,
             displayProfile: eh,
@@ -250,7 +250,7 @@ t.default = e => {
                   }
                 }
               })
-            }) : null, eq && (0, a.jsx)(H.UserProfileRecentGamesThemedSection, {
+            }) : null, eq && (0, a.jsx)(B.UserProfileRecentGamesThemedSection, {
               userId: r
             }), (eb || eU) && (0, a.jsxs)(w.default.Overlay, {
               className: es.profilePanelConnections,
@@ -294,18 +294,18 @@ t.default = e => {
                     analyticsLocations: ed
                   })
                 },
-                children: eH
+                children: eB
               }) : null]
             }), eE && (0, a.jsx)(w.default.Overlay, {
               className: i()(es.profilePanelConnections, es.appListThemedContainer),
               children: (0, a.jsxs)(J.default, {
-                header: eB.length > 0 ? el.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
-                  count: eB.length
+                header: eH.length > 0 ? el.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
+                  count: eH.length
                 }) : el.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
                 isLoadingContents: !ep,
                 isLoadingHeader: !1,
                 itemType: J.ListType.AppsList,
-                children: [eB, eC.length > 0 && (0, a.jsxs)("div", {
+                children: [eH, eC.length > 0 && (0, a.jsxs)("div", {
                   className: es.appButtonContainer,
                   children: [0 === em.length && (0, a.jsx)(d.Text, {
                     variant: "text-xs/normal",

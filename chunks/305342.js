@@ -188,7 +188,7 @@ t.default = e => {
   } = (0, O.default)(p, s, h, m), M = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
     activeSubscription: R,
     activeSubscriptionListing: U
-  } = (0, T.default)(h), F = (null == U ? void 0 : U.id) === n, H = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [B, G] = l.useState(!1), [V, W] = l.useState(!1), Y = l.useCallback(e => {
+  } = (0, T.default)(h), F = (null == U ? void 0 : U.id) === n, B = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [H, G] = l.useState(!1), [V, W] = l.useState(!1), Y = l.useCallback(e => {
     let t = !1;
     null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t)
   }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [q] = _.useTrialLimit(n), X = (0, I.default)(s, n), Q = null != Z && null == R && X, J = (0, u.default)(j.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = l.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), ea = (null == p ? void 0 : p.published) === !0, el = (null == p ? void 0 : p.soft_deleted) === !0, es = D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
@@ -232,7 +232,7 @@ t.default = e => {
             look: o.Button.Looks.OUTLINED,
             color: o.Button.Colors.PRIMARY,
             disabled: !0,
-            children: H ? D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
+            children: B ? D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
           }) : (0, a.jsx)(o.Tooltip, {
             text: A ? null : N,
             "aria-label": null !== (t = A && N) && void 0 !== t && t,
@@ -250,13 +250,13 @@ t.default = e => {
           }), (0, a.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "text-normal",
-            className: i()((!V || !B) && b.tierDescriptionTruncate),
+            className: i()((!V || !H) && b.tierDescriptionTruncate),
             children: (0, a.jsx)("div", {
               ref: Y,
               children: K
             })
           }), V && (0, a.jsx)(k, {
-            isViewAll: B,
+            isViewAll: H,
             onToggle: () => G(e => !e),
             showMoreText: es
           })]

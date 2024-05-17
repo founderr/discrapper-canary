@@ -100,21 +100,21 @@ t.default = e => {
         })
       })
     } : void 0,
-    H = e => {
+    B = e => {
       0 !== b.trim().length && e.charCode === I.KeyboardKeys.ENTER && (h.searchDirectoryEntries(N.id, b), c.default.track(I.AnalyticEvents.GUILD_DIRECTORY_SEARCH, {
         directory_channel_id: N.id,
         directory_guild_id: v.id
       }))
     },
-    B = () => {
+    H = () => {
       U(""), h.clearDirectorySearch(N.id)
     };
   return F ? (0, a.jsx)(_.default, {
     searchQuery: b,
     setSearchQuery: U,
     mostRecentQuery: j,
-    handleSearchKeyPress: H,
-    handleClearSearch: B,
+    handleSearchKeyPress: B,
+    handleClearSearch: H,
     handleCreateOrAddGuild: k,
     searchResults: D,
     searchFetching: P
@@ -133,8 +133,8 @@ t.default = e => {
     channel: N,
     searchQuery: b,
     setSearchQuery: U,
-    handleSearchKeyPress: H,
-    handleClearSearch: B,
+    handleSearchKeyPress: B,
+    handleClearSearch: H,
     handleCreateOrAddGuild: k,
     currentCategoryId: x,
     handleSelectCategory: e => {

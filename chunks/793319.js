@@ -42,8 +42,8 @@ var a, l, s = n("735250"),
   F = n("569545"),
   w = n("74299"),
   k = n("989941"),
-  H = n("803647"),
-  B = n("554747"),
+  B = n("803647"),
+  H = n("554747"),
   G = n("95764"),
   V = n("459502"),
   W = n("386542"),
@@ -117,9 +117,9 @@ function eN(e) {
     }(0, eC.default)()
   }, j = () => {
     if (M) {
-      (0, R.openStopBroadcastConfirmModal)(() => (0, H.default)(d));
+      (0, R.openStopBroadcastConfirmModal)(() => (0, B.default)(d));
       return
-    }(0, H.default)(d)
+    }(0, B.default)(d)
   }, P = (e, t) => {
     let {
       onClick: n,
@@ -211,7 +211,7 @@ let ex = i.memo(function(e) {
       ownerId: t
     } = e;
     return t !== (null == n ? void 0 : n.id)
-  })), _ = (0, B.useActiveEvent)(l.id), T = (0, x.useIsBroadcastingInChannel)(l.id), I = i.useCallback(() => {
+  })), _ = (0, H.useActiveEvent)(l.id), T = (0, x.useIsBroadcastingInChannel)(l.id), I = i.useCallback(() => {
     if ((null == r ? void 0 : r.type) === eT.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
     if (g) return "STREAM";
     if (null != _) return "EVENT";

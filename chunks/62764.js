@@ -45,7 +45,7 @@ function D(e) {
   } = e, {
     ref: b,
     width: U
-  } = (0, d.default)(), [F, w] = l.useState(3), [k, H] = l.useState(!n), [B, G] = (0, c.default)(!1, 2e3), V = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(t), [t]), {
+  } = (0, d.default)(), [F, w] = l.useState(3), [k, B] = l.useState(!n), [H, G] = (0, c.default)(!1, 2e3), V = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(t), [t]), {
     firstMessage: W
   } = (0, R.useFirstForumPostMessage)(V), Y = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
     disableReactionUpdates: z,
@@ -58,7 +58,7 @@ function D(e) {
     if (null != t && n) {
       let e = t.intersectionRect,
         n = t.boundingClientRect;
-      H((e.bottom - e.top) / (n.bottom - n.top) < 1)
+      B((e.bottom - e.top) / (n.bottom - n.top) < 1)
     }
   }, [n]);
   l.useLayoutEffect(() => {
@@ -164,13 +164,13 @@ function D(e) {
             onClick: es,
             className: j.button,
             innerClassName: j.buttonInner,
-            children: [B ? (0, a.jsx)(N.default, {
+            children: [H ? (0, a.jsx)(N.default, {
               width: 16,
               height: 16
             }) : (0, a.jsx)(v.default, {
               width: 16,
               height: 16
-            }), B ? O.default.Messages.COPIED : null]
+            }), H ? O.default.Messages.COPIED : null]
           })
         })]
       })]

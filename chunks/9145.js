@@ -44,9 +44,9 @@ function P(e) {
     maxHeight: P,
     connectedChannelId: D,
     renderExternalHeader: b
-  } = e, U = (0, N.default)(), F = (0, r.useStateFromStoresArray)([I.default], () => null != D ? I.default.getEmbeddedActivitiesForChannel(D) : [], [D]), w = (0, A.useEmbeddedApps)(F), k = (0, A.useEmbeddedAppsWithPresence)(w), H = l.useCallback(() => {
+  } = e, U = (0, N.default)(), F = (0, r.useStateFromStoresArray)([I.default], () => null != D ? I.default.getEmbeddedActivitiesForChannel(D) : [], [D]), w = (0, A.useEmbeddedApps)(F), k = (0, A.useEmbeddedAppsWithPresence)(w), B = l.useCallback(() => {
     (0, T.updateActivityPanelMode)(R.ActivityPanelModes.PIP)
-  }, []), B = l.useRef(null), G = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), V = G !== R.FocusedActivityLayouts.NO_CHAT, [W, Y] = l.useState(null !== (s = f.default.activityPanelHeight) && void 0 !== s ? s : P), z = l.useCallback(e => {
+  }, []), H = l.useRef(null), G = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), V = G !== R.FocusedActivityLayouts.NO_CHAT, [W, Y] = l.useState(null !== (s = f.default.activityPanelHeight) && void 0 !== s ? s : P), z = l.useCallback(e => {
     u.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
@@ -80,7 +80,7 @@ function P(e) {
     en = [];
   return null != et && (en = Array.from(et.embeddedActivity.userIds).map(e => E.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, a.jsxs)("div", {
     className: i()(O.wrapper, j[G], (0, _.getThemeClass)(y.ThemeTypes.DARK)),
-    ref: B,
+    ref: H,
     style: V && null != W ? {
       minHeight: 200,
       maxHeight: P,
@@ -135,7 +135,7 @@ function P(e) {
             })
           }), (0, a.jsx)(h.CenterControlButton, {
             label: L.default.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
-            onClick: H,
+            onClick: B,
             iconComponent: C.default,
             themeable: !0,
             className: O.circularButton
@@ -147,7 +147,7 @@ function P(e) {
     }), V ? (0, a.jsx)(d.default, {
       minHeight: 480,
       maxHeight: P,
-      resizableNode: B,
+      resizableNode: H,
       onResize: e => {
         S.ComponentDispatch.dispatch(y.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !0

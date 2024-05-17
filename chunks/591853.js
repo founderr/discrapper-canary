@@ -57,8 +57,8 @@ var u = n("194048"),
   F = n("346656"),
   w = n("682864"),
   k = n("409216"),
-  H = n("368666"),
-  B = n("626135"),
+  B = n("368666"),
+  H = n("626135"),
   G = n("768581"),
   V = n("5192"),
   W = n("485267"),
@@ -149,7 +149,7 @@ function eo(e) {
     location: "PopoutReactor"
   }), [I, A] = l.useState(!1), [M, R] = l.useState(!1), y = "#".concat(t.name), L = V.default.getName(t.guild_id, t.id, n), j = m ? et.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : et.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, D = async e => {
     if (null != e) {
-      if (B.default.track(ee.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
+      if (H.default.track(ee.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: $.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
           channel_id: t.id,
           guild_id: t.guild_id
@@ -433,8 +433,8 @@ function eh(e) {
     className: en.streamingPopoutHero,
     children: [(0, a.jsx)(ed, {
       ...s,
-      headerIcons: (0, a.jsx)(H.default, {
-        size: H.default.Sizes.SMALL
+      headerIcons: (0, a.jsx)(B.default, {
+        size: B.default.Sizes.SMALL
       })
     }), (0, a.jsx)(w.default, {
       size: 16
@@ -489,7 +489,7 @@ function em(e) {
       guildId: i.guild_id,
       requestId: r
     })
-  }, H = () => {
+  }, B = () => {
     I.default.updateChatOpen(s.id, !0), (0, y.transitionToChannel)(s.id), (0, Z.trackInteraction)($.ContentInventoryInteractionTypes.VOICE_CHANNEL_PREVIEWED, {
       entry: n,
       channelId: i.id,
@@ -589,7 +589,7 @@ function em(e) {
         children: e => (0, a.jsxs)(_.Button, {
           ...e,
           color: _.Button.Colors.GREEN,
-          onClick: H,
+          onClick: B,
           fullWidth: !0,
           innerClassName: en.iconButton,
           size: _.Button.Sizes.LARGE,

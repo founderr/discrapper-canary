@@ -26,8 +26,8 @@ var l = s("735250"),
   x = s("318661"),
   U = s("706327"),
   N = s("484404"),
-  C = s("502762"),
-  p = s("62154"),
+  p = s("502762"),
+  C = s("62154"),
   h = s("293259"),
   R = s("725954"),
   P = s("228168"),
@@ -159,7 +159,7 @@ function O(e) {
           className: L.root,
           hideShadow: !0,
           "aria-label": j.default.Messages.USER_PROFILE_MODAL,
-          children: [(0, l.jsxs)(C.default, {
+          children: [(0, l.jsxs)(p.default, {
             user: Y,
             displayProfile: H,
             profileType: P.UserProfileTypes.MODAL,
@@ -174,7 +174,7 @@ function O(e) {
               guildId: A,
               channelId: U,
               hasProfileEffect: null != el
-            }), (0, l.jsxs)(C.default.Overlay, {
+            }), (0, l.jsxs)(p.default.Overlay, {
               className: L.overlay,
               children: [G === n.ModalTransitionState.ENTERED && (0, l.jsx)(N.default, {
                 onTooltipClose: w
@@ -191,7 +191,7 @@ function O(e) {
                   isCurrentUser: q
                 }) : (0, l.jsx)("div", {
                   className: L.divider
-                }), (0, l.jsx)(p.default, {
+                }), (0, l.jsx)(C.default, {
                   displayProfile: H,
                   user: Y,
                   autoFocusNote: b && !Z,

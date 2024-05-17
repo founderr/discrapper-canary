@@ -103,11 +103,11 @@ function b(e) {
     (0, g.openThreadSidebarForCreating)(t, void 0, "Plus Button")
   }
 
-  function H() {
+  function B() {
     T.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), U("/", (0, v.toRichValue)("/"))
   }
 
-  function B() {
+  function H() {
     F()
   }
 
@@ -199,7 +199,7 @@ function b(e) {
           return (0, a.jsx)(o.MenuItem, {
             id: "clips",
             label: l,
-            action: B
+            action: H
           }, "clips");
         case x.AttachmentTypes.POLL:
           return (0, a.jsx)(o.MenuItem, {
@@ -254,7 +254,7 @@ function b(e) {
           return (0, a.jsx)(o.MenuItem, {
             id: "SLASH_COMMAND",
             label: l,
-            action: H
+            action: B
           }, "SLASH_COMMAND");
         case x.AttachmentTypes.ACTIVITY:
           return (0, a.jsx)(o.MenuItem, {

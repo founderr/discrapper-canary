@@ -40,8 +40,8 @@ var a, l = n("735250"),
   F = n("306680"),
   w = n("699516"),
   k = n("246946"),
-  H = n("594174"),
-  B = n("285952"),
+  B = n("594174"),
+  H = n("285952"),
   G = n("153124"),
   V = n("917885"),
   W = n("502568"),
@@ -75,10 +75,10 @@ function er(e) {
     className: t,
     children: n
   } = e;
-  return (0, l.jsxs)(B.default, {
-    align: B.default.Align.CENTER,
-    justify: B.default.Justify.CENTER,
-    direction: B.default.Direction.VERTICAL,
+  return (0, l.jsxs)(H.default, {
+    align: H.default.Align.CENTER,
+    justify: H.default.Justify.CENTER,
+    direction: H.default.Direction.VERTICAL,
     className: r()(et.errorState, t),
     children: [(0, l.jsx)("div", {
       className: r()(et.errorStateIcon, ea.marginBottom20)
@@ -206,7 +206,7 @@ class ed extends(a = s.PureComponent) {
   getMaxParticipants() {
     let {
       channel: e
-    } = this.props, t = H.default.getCurrentUser();
+    } = this.props, t = B.default.getCurrentUser();
     return null != t && t.isStaff() ? $.MAX_GROUP_DM_STAFF_PARTICIPANTS : null != e && e.isBroadcastChannel() ? $.MAX_GROUP_DM_BROADCAST_PARTICIPANTS : null != e && e.userLimit > 0 ? e.userLimit : $.MAX_GROUP_DM_PARTICIPANTS
   }
   getRemaining() {
@@ -274,9 +274,9 @@ class ed extends(a = s.PureComponent) {
     if (!n || this.isNotFriends()) return null;
     let o = [];
     return i.forEach(e => {
-      let t = H.default.getUser(e);
+      let t = B.default.getUser(e);
       null != t && o.push(X.default.getName(t))
-    }), (0, l.jsxs)(B.default, {
+    }), (0, l.jsxs)(H.default, {
       className: r()(et.searchBar, ea.marginTop20),
       children: [(0, l.jsx)(N.default, {
         ref: this.searchBarRef,
@@ -306,8 +306,8 @@ class ed extends(a = s.PureComponent) {
     let e = null != this.scrollerRef.current && this.state.separator,
       t = this.isNotFriends() ? ee.default.Messages.GROUP_DM_ADD_FRIENDS : ee.default.Messages.GROUP_DM_HEADER;
     return (0, l.jsxs)(p.ModalHeader, {
-      direction: B.default.Direction.VERTICAL,
-      align: B.default.Align.STRETCH,
+      direction: H.default.Direction.VERTICAL,
+      align: H.default.Align.STRETCH,
       className: et.__invalid_header,
       separator: e,
       children: [f.isMobile ? this.renderMobileCloseButton() : null, (0, l.jsx)(p.Heading, {
@@ -326,7 +326,7 @@ class ed extends(a = s.PureComponent) {
     if (this.isNotFriends()) {
       let t = null != e ? e.getRecipientId() : null;
       if (null == t) throw Error("no recipient in DM");
-      let n = H.default.getUser(t),
+      let n = B.default.getUser(t),
         a = null != n ? n.username : "",
         s = null != n && w.default.getRelationshipType(n.id) === $.RelationshipTypes.PENDING_OUTGOING;
       return (0, l.jsxs)(er, {
@@ -408,12 +408,12 @@ class ed extends(a = s.PureComponent) {
         tag: "h5",
         className: ea.marginBottom8,
         children: ee.default.Messages.GROUP_DM_INVITE_LINK_TITLE
-      }), (0, l.jsxs)(B.default, {
+      }), (0, l.jsxs)(H.default, {
         className: r()(en.input, {
           [en.success]: a
         }),
-        justify: B.default.Justify.BETWEEN,
-        align: B.default.Align.CENTER,
+        justify: H.default.Justify.BETWEEN,
+        align: H.default.Align.CENTER,
         children: [i.length > 0 ? (0, l.jsx)(p.TextInput, {
           className: et.copyInput,
           name: "invite",
@@ -463,8 +463,8 @@ class ed extends(a = s.PureComponent) {
     if (null != n) return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)("div", {
         className: et.footerSeparator
-      }), (0, l.jsx)(B.default, {
-        direction: B.default.Direction.VERTICAL,
+      }), (0, l.jsx)(H.default, {
+        direction: H.default.Direction.VERTICAL,
         className: et.footer,
         children: n
       })]

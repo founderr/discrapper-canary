@@ -40,8 +40,8 @@ t.default = function(e) {
   var t, n, s;
   let {
     channelId: k,
-    previewQuest: H,
-    isParticipatingOverride: B
+    previewQuest: B,
+    isParticipatingOverride: H
   } = e, [G, V] = l.useState(!1), W = l.useCallback(() => V(!0), []), Y = l.useCallback(() => V(!1), []), z = l.useContext(p.IdleStateContext), K = (0, r.useStateFromStores)([C.default], () => C.default.getCurrentUser()), Z = (0, r.useStateFromStores)([m.default], () => m.default.getState().theme), q = (0, o.isThemeDark)(Z) ? b.ThemeTypes.DARK : b.ThemeTypes.LIGHT, {
     isCurrentUserStreamingQuestApplication: X,
     quest: Q
@@ -86,7 +86,7 @@ t.default = function(e) {
     }) && (0, N.hasPlaytimeTaskVariant)({
       quest: Q
     }) && e.includes(Q.config.applicationId)
-  }, [Q]), $ = !0 === B || X || J, ee = (0, r.useStateFromStores)([I.default], () => null != Q && I.default.isEnrolling(Q.id), [Q]), et = (0, r.useStateFromStores)([c.default], () => ((null == K ? void 0 : K.id) == null ? null : c.default.getParticipant(k, K.id)) != null, [k, K]), en = (0, T.useQuestFormattedDate)(null == Q ? void 0 : Q.config.expiresAt), ea = (0, T.useQuestFormattedDate)(null == Q ? void 0 : Q.config.rewardCodeExpiresAt), el = l.useCallback(() => {
+  }, [Q]), $ = !0 === H || X || J, ee = (0, r.useStateFromStores)([I.default], () => null != Q && I.default.isEnrolling(Q.id), [Q]), et = (0, r.useStateFromStores)([c.default], () => ((null == K ? void 0 : K.id) == null ? null : c.default.getParticipant(k, K.id)) != null, [k, K]), en = (0, T.useQuestFormattedDate)(null == Q ? void 0 : Q.config.expiresAt), ea = (0, T.useQuestFormattedDate)(null == Q ? void 0 : Q.config.rewardCodeExpiresAt), el = l.useCallback(() => {
     null != Q && (0, _.enrollInQuest)(Q.id, {
       questContent: A.QuestContent.QUEST_LIVE_STREAM,
       questContentCTA: S.QuestContentCTA.ACCEPT_QUEST
@@ -110,7 +110,7 @@ t.default = function(e) {
     quest: Q,
     location: D.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
   }), [Q]), eu = (0, T.useIsQuestExpired)(Q);
-  if (null != H && (Q = H), null == Q) return null;
+  if (null != B && (Q = B), null == Q) return null;
   let ed = (null === (t = Q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
     ec = (null === (n = Q.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
     ef = null != Q.userStatus && (0, N.isDismissed)(Q.userStatus, A.QuestContent.QUEST_LIVE_STREAM),
@@ -122,7 +122,7 @@ t.default = function(e) {
     isQuestBarShowing: em,
     isCurrentUserCallParticipant: et
   });
-  let ep = null != H && (null === (s = Q.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null;
+  let ep = null != B && (null === (s = Q.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null;
   if (!ep && (ef || eu || em) || !ep && !et) return null;
   let eE = (0, a.jsx)(L.default, {
     className: w.rewardTile,

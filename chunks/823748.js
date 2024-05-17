@@ -37,8 +37,8 @@ var a = n("735250"),
   F = n("588322"),
   w = n("517525"),
   k = n("445384"),
-  H = n("613464"),
-  B = n("705563"),
+  B = n("613464"),
+  H = n("705563"),
   G = n("730647"),
   V = n("66999"),
   W = n("826763"),
@@ -91,8 +91,8 @@ var a = n("735250"),
   eF = n("944486"),
   ew = n("914010"),
   ek = n("594174"),
-  eH = n("979651"),
-  eB = n("368666"),
+  eB = n("979651"),
+  eH = n("368666"),
   eG = n("792125"),
   eV = n("933557"),
   eW = n("287746"),
@@ -391,7 +391,7 @@ class e5 extends l.PureComponent {
           style: {
             width: eX.DEFAULT_CHAT_SIDEBAR_WIDTH
           },
-          children: (0, a.jsx)(H.default, {
+          children: (0, a.jsx)(B.default, {
             guildId: e,
             userId: t,
             onClose: () => em.default.closeGuildSidebar(e)
@@ -509,7 +509,7 @@ class e5 extends l.PureComponent {
       let {
         channel: e
       } = this.props;
-      return (null == e ? void 0 : e.hasFlag(eq.ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) ? (0, a.jsx)(B.default, {
+      return (null == e ? void 0 : e.hasFlag(eq.ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) ? (0, a.jsx)(H.default, {
         channelId: e.id,
         showTrailingDivider: !0
       }) : null
@@ -527,7 +527,7 @@ class e5 extends l.PureComponent {
         perkDemoEnabled: t
       } = this.props;
       return (null == e ? void 0 : e.type) !== eJ.ParticipantTypes.STREAM ? null : (0, a.jsx)(w.default, {
-        size: eB.default.Sizes.LARGE,
+        size: eH.default.Sizes.LARGE,
         participant: e,
         showQuality: !0,
         premiumIndicator: t
@@ -753,9 +753,9 @@ t.default = l.memo(function(e) {
   }, [r]), I = (0, h.useStateFromStores)([v.default], () => {
     var e;
     return v.default.getSelfEmbeddedActivityForChannel(null !== (e = null == u ? void 0 : u.id) && void 0 !== e ? e : eX.EMPTY_STRING_SNOWFLAKE_ID)
-  }), x = (0, h.useStateFromStores)([v.default], () => v.default.getActivityPanelMode()), y = null != I && !(0, M.default)(null == u ? void 0 : u.id) && x === eQ.ActivityPanelModes.PANEL, L = (0, h.useStateFromStores)([eH.default], () => null != u && u.isVocalThread() && !d().isEmpty(eH.default.getVoiceStatesForChannel(u.id)), [u]), O = null != u && u.isPrivate() && !y && T, j = (null == u ? void 0 : u.isGuildVocal()) || O || L, {
+  }), x = (0, h.useStateFromStores)([v.default], () => v.default.getActivityPanelMode()), y = null != I && !(0, M.default)(null == u ? void 0 : u.id) && x === eQ.ActivityPanelModes.PANEL, L = (0, h.useStateFromStores)([eB.default], () => null != u && u.isVocalThread() && !d().isEmpty(eB.default.getVoiceStatesForChannel(u.id)), [u]), O = null != u && u.isPrivate() && !y && T, j = (null == u ? void 0 : u.isGuildVocal()) || O || L, {
     welcomeModalChannelId: P
-  } = (0, c.useLocation)(), D = (0, h.useStateFromStores)([er.default], () => null != u && er.default.isLurking(u.guild_id), [u]), U = (0, h.useStateFromStores)([eM.default], () => eM.default.hasSeen(null == u ? void 0 : u.guild_id, D), [u, D]), F = (0, h.useStateFromStores)([R.default, v.default], () => null != v.default.getConnectedActivityChannelId() && v.default.getActivityPanelMode() === eQ.ActivityPanelModes.PANEL ? v.default.getFocusedLayout() === eQ.FocusedActivityLayouts.NO_CHAT ? eX.ChannelLayouts.NO_CHAT : eX.ChannelLayouts.NORMAL : null != r ? R.default.getLayout(r) : eX.ChannelLayouts.NORMAL, [r]), w = (0, h.useStateFromStores)([R.default], () => null != u ? R.default.getSelectedParticipant(u.id) : null), k = (0, h.useStateFromStores)([ek.default], () => ek.default.getCurrentUser()), H = (0, es.default)(S), B = (0, eR.default)(P, null == S ? void 0 : S.id), {
+  } = (0, c.useLocation)(), D = (0, h.useStateFromStores)([er.default], () => null != u && er.default.isLurking(u.guild_id), [u]), U = (0, h.useStateFromStores)([eM.default], () => eM.default.hasSeen(null == u ? void 0 : u.guild_id, D), [u, D]), F = (0, h.useStateFromStores)([R.default, v.default], () => null != v.default.getConnectedActivityChannelId() && v.default.getActivityPanelMode() === eQ.ActivityPanelModes.PANEL ? v.default.getFocusedLayout() === eQ.FocusedActivityLayouts.NO_CHAT ? eX.ChannelLayouts.NO_CHAT : eX.ChannelLayouts.NORMAL : null != r ? R.default.getLayout(r) : eX.ChannelLayouts.NORMAL, [r]), w = (0, h.useStateFromStores)([R.default], () => null != u ? R.default.getSelectedParticipant(u.id) : null), k = (0, h.useStateFromStores)([ek.default], () => ek.default.getCurrentUser()), B = (0, es.default)(S), H = (0, eR.default)(P, null == S ? void 0 : S.id), {
     section: G,
     channelSidebarState: W
   } = (0, h.useStateFromStoresObject)([ey.default], () => ({
@@ -812,11 +812,11 @@ t.default = l.memo(function(e) {
     nsfwAgree: (0, h.useStateFromStores)([eP.default], () => eP.default.didAgree(null == u ? void 0 : u.guild_id)),
     isMobile: (0, h.useStateFromStores)([eb.default], () => (null == u ? void 0 : u.type) === eX.ChannelTypes.DM && eb.default.isMobileOnline(u.getRecipientId()), [u]),
     isUnavailable: (0, h.useStateFromStores)([ej.default], () => (null == u ? void 0 : u.guild_id) != null && ej.default.isUnavailable(u.guild_id), [u]),
-    showRealNameModal: H,
-    showWelcomeModal: !U && B,
+    showRealNameModal: B,
+    showWelcomeModal: !U && H,
     showFollowButton: (null == u ? void 0 : u.type) === eX.ChannelTypes.GUILD_ANNOUNCEMENT && (null == S ? void 0 : S.hasFeature(eX.GuildFeatures.NEWS)) || !1,
-    ...(0, h.useStateFromStoresObject)([eH.default], () => ({
-      hasVideo: null != u && eH.default.hasVideo(u.id)
+    ...(0, h.useStateFromStoresObject)([eB.default], () => ({
+      hasVideo: null != u && eB.default.hasVideo(u.id)
     }), [u]),
     inCall: ee,
     selectedParticipant: w,

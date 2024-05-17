@@ -47,8 +47,8 @@ function y(e) {
   } = e, U = C.default.getVideoComponent(), F = (0, r.useStateFromStores)([p.default], () => p.default.getId()), {
     user: w,
     streamId: k,
-    speaking: H
-  } = t, B = w.id === F, G = (0, I.default)(t), V = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != w.id && C.default.isLocalVideoDisabled(w.id, (0, f.default)(t.type)), [w.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, w.id)), K = T.default.getName(n.getGuildId(), n.id, w) + (z ? " ".concat(v.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = H && (W || V), q = o < 124 ? R : M, {
+    speaking: B
+  } = t, H = w.id === F, G = (0, I.default)(t), V = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != w.id && C.default.isLocalVideoDisabled(w.id, (0, f.default)(t.type)), [w.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, w.id)), K = T.default.getName(n.getGuildId(), n.id, w) + (z ? " ".concat(v.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = B && (W || V), q = o < 124 ? R : M, {
     avatarSrc: X,
     avatarDecorationSrc: Q
   } = (0, m.default)({
@@ -63,7 +63,7 @@ function y(e) {
     onResize: j,
     wrapperClassName: x.videoWrapper,
     className: x.content,
-    mirror: B,
+    mirror: H,
     streamId: k,
     videoComponent: U,
     fit: O,
@@ -81,7 +81,7 @@ function y(e) {
       backgroundSrc: w.getAvatarURL(n.guild_id, 80),
       size: q,
       pulseSpeakingIndicator: b,
-      speaking: H,
+      speaking: B,
       userId: w.id
     })
   })

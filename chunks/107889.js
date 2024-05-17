@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return C
   }
 }), s("47120");
 var l = s("735250"),
@@ -26,13 +26,13 @@ var l = s("735250"),
   x = s("228168"),
   U = s("981631"),
   N = s("689938"),
-  C = s("61007");
+  p = s("61007");
 
-function p(e) {
+function C(e) {
   let {
     user: t,
     guildId: s,
-    channelId: p,
+    channelId: C,
     messageId: h,
     roleId: R,
     friendToken: P,
@@ -47,7 +47,7 @@ function p(e) {
     layout: "SIMPLIFIED_MODAL",
     userId: t.id,
     guildId: F,
-    channelId: p,
+    channelId: C,
     messageId: h,
     roleId: R
   }), [B, G] = a.useState(F), k = (0, m.default)(t.id), w = (0, m.default)(t.id, F), Y = null == B ? k : w, {
@@ -73,12 +73,12 @@ function p(e) {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: F,
-      channelId: p,
+      channelId: C,
       messageId: h,
       roleId: R,
       children: (0, l.jsxs)(n.ModalRoot, {
         transitionState: L,
-        className: C.root,
+        className: p.root,
         hideShadow: !0,
         "aria-label": N.default.Messages.USER_PROFILE_MODAL,
         children: [(0, l.jsxs)(E.default, {
@@ -91,7 +91,7 @@ function p(e) {
             children: [(0, l.jsx)(_.default, {
               user: t,
               guildId: F,
-              channelId: p,
+              channelId: C,
               onClose: O
             }), (0, l.jsx)(v.default, {
               user: t,
@@ -116,7 +116,7 @@ function p(e) {
                 id: "view-server-profile",
                 label: N.default.Messages.VIEW_SERVER_PROFILE,
                 subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
-                  displayName: f.default.getName(F, p, t)
+                  displayName: f.default.getName(F, C, t)
                 }),
                 action: () => {
                   b({
@@ -130,7 +130,7 @@ function p(e) {
             user: t,
             displayProfile: Y,
             guildId: F,
-            channelId: p,
+            channelId: C,
             activity: H,
             customStatusActivity: V,
             onClose: O

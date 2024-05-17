@@ -25,13 +25,13 @@ n.r(t), n.d(t, {
     return k
   },
   StreakBadge: function() {
-    return H
+    return B
   },
   TopArtistBadge: function() {
     return G
   },
   TopGameBadge: function() {
-    return B
+    return H
   },
   TrendingBadge: function() {
     return V
@@ -216,7 +216,7 @@ function k(e) {
   })
 }
 
-function H(e) {
+function B(e) {
   let {
     entry: t
   } = e, {
@@ -234,7 +234,7 @@ function H(e) {
   }) : null
 }
 
-function B(e) {
+function H(e) {
   let {
     entry: t
   } = e, {
