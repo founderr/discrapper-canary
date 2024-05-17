@@ -279,7 +279,8 @@ let b = i.memo(function(e) {
     case v.ClanDiscoveryMode.GAMES:
     case v.ClanDiscoveryMode.PLAYSTYLE:
     case v.ClanDiscoveryMode.TRAITS:
-      return (0, l.jsxs)(l.Fragment, {
+      return (0, l.jsxs)("div", {
+        className: P.discoveryContainer,
         children: [d((e, t) => (0, l.jsx)(r.animated.div, {
           style: e,
           className: P.toolbar,
