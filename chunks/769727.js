@@ -305,11 +305,13 @@ t.default = i.memo(function() {
     ref: e,
     width: t
   } = (0, f.default)();
-  return (0, l.jsx)("main", {
+  return (0, l.jsxs)("main", {
     className: P.container,
     ref: e,
-    children: (0, l.jsx)(b, {
+    children: [(0, l.jsx)("div", {
+      className: P.dragRegion
+    }), (0, l.jsx)(b, {
       width: null != t ? t : 0
-    })
+    })]
   })
 })

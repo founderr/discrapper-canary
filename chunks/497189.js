@@ -156,10 +156,7 @@ function w(e) {
         color: h.ButtonColors.PRIMARY,
         className: D.browseButton,
         onClick: T,
-        children: (0, a.jsx)(h.Text, {
-          variant: "text-sm/medium",
-          children: x.default.Messages.CLAN_DISCOVERY_UPSELL_BROWSE
-        })
+        children: x.default.Messages.CLAN_DISCOVERY_UPSELL_BROWSE
       })]
     }), m && (0, a.jsx)("div", {
       className: D.upsellStaticHeader,
