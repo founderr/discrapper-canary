@@ -307,34 +307,33 @@ class q extends(r = o.PureComponent) {
     let {
       user: t,
       application: n,
-      hideName: i,
-      showChannelDetails: r
+      hideName: i
     } = this.props;
     if (i) return null;
     let {
-      details: a,
-      type: o
+      details: r,
+      type: a
     } = e;
-    if (o === F.ActivityTypes.CUSTOM_STATUS) return null;
-    let l = (0, A.default)(e),
-      d = e.name,
-      _ = d;
-    if (o === F.ActivityTypes.HANG_STATUS ? _ = (0, C.getHangStatusText)(e) : l && null != n ? _ = (0, s.jsx)("span", {
+    if (a === F.ActivityTypes.CUSTOM_STATUS) return null;
+    let o = (0, A.default)(e),
+      l = e.name,
+      d = l;
+    if (a === F.ActivityTypes.HANG_STATUS ? d = (0, C.getHangStatusText)(e) : o && null != n ? d = (0, s.jsx)("span", {
         className: j.activityName,
-        children: _
-      }) : !l && (d = a, _ = a, (0, m.default)(e) && null != e.sync_id && null != a ? _ = (0, s.jsx)(E.Anchor, {
+        children: d
+      }) : !o && (l = r, d = r, (0, m.default)(e) && null != e.sync_id && null != r ? d = (0, s.jsx)(E.Anchor, {
         className: j.bodyLink,
         onClick: this.handleOpenSpotifyTrack,
-        children: a
-      }) : (0, L.isStageActivity)(e) && (_ = e.name)), null == _) return null;
-    let c = null != X({
+        children: r
+      }) : (0, L.isStageActivity)(e) && (d = e.name)), null == d) return null;
+    let _ = null != X({
       activity: e
     }) && "BiteSizePopout" === this.props.type;
     return (0, s.jsx)(E.Text, {
-      title: d,
-      variant: r ? "text-md/semibold" : "text-sm/semibold",
-      className: u()((0, M.getClass)(j, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"), c && j.namePlatformIconMarginBiteSizePopout),
-      children: _
+      title: l,
+      variant: "text-sm/semibold",
+      className: u()((0, M.getClass)(j, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"), _ && j.namePlatformIconMarginBiteSizePopout),
+      children: d
     })
   }
   renderDetails(e) {
