@@ -75,9 +75,9 @@ function H(e) {
       let {
         row: n
       } = e;
-      if (0 === f.length) return (0, a.jsx)(w, {}, "empty-role");
+      if (0 === f.length) return (0, a.jsx)(k, {}, "empty-role");
       let o = f[n];
-      return (0, a.jsx)(k, {
+      return (0, a.jsx)(w, {
         role: o,
         guild: s,
         highestRole: I,
@@ -101,7 +101,7 @@ function H(e) {
   })
 }
 
-function w() {
+function k() {
   return (0, a.jsxs)("div", {
     className: B.emptyRoles,
     children: [(0, a.jsx)("div", {
@@ -115,7 +115,7 @@ function w() {
   })
 }
 
-function k(e) {
+function w(e) {
   var t, n, o;
   let {
     role: d,
@@ -130,13 +130,13 @@ function k(e) {
     disableDrag: D,
     setEditRoleId: v,
     setSelectedSection: j
-  } = e, P = (0, G.useLockTooltip)(E, S, d), H = null != P, [w, k] = l.useState(!1), Y = l.useMemo(() => ({
+  } = e, P = (0, G.useLockTooltip)(E, S, d), H = null != P, [k, w] = l.useState(!1), Y = l.useMemo(() => ({
     type: F,
     item: () => (O(d.id), {
       id: d.id,
       position: m
     }),
-    canDrag: () => w && !H,
+    canDrag: () => k && !H,
     collect: e => ({
       isDragging: e.isDragging()
     }),
@@ -148,7 +148,7 @@ function k(e) {
       }
       p(s.roleId)
     }
-  }), [d, O, A, p, H, w]), [{
+  }), [d, O, A, p, H, k]), [{
     isDragging: W
   }, z] = (0, r.useDrag)(Y), K = l.useMemo(() => ({
     accept: F,
@@ -208,8 +208,8 @@ function k(e) {
       className: i()(B.dragIcon, y.dragSpacing, {
         [B.dragIconHidden]: H || D
       }),
-      onMouseEnter: () => k(!0),
-      onMouseLeave: () => k(!1),
+      onMouseEnter: () => w(!0),
+      onMouseLeave: () => w(!1),
       children: (0, a.jsx)(g.default, {})
     }), (0, a.jsxs)("div", {
       className: i()(B.roleNameContainer, y.roleNameSpacing),

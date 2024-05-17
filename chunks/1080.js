@@ -307,25 +307,25 @@ function H() {
       currentPage: 1
     }))
   }, [f, B.currentPage]);
-  let w = l.useCallback(e => {
+  let k = l.useCallback(e => {
       E.default.fetchGuildBansBatch(x, 1e3, e)
     }, [x]),
-    k = l.useMemo(() => o().chunk(D, B.pageSize), [B.pageSize, D]),
+    w = l.useMemo(() => o().chunk(D, B.pageSize), [B.pageSize, D]),
     V = l.useCallback(e => {
       var t, s, a;
-      null === (t = L.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * B.pageSize > D.length && P && !_ && (Y.current = null !== (a = null === (s = D[D.length - 1]) || void 0 === s ? void 0 : s.id) && void 0 !== a ? a : null, w(Y.current)), (null != k[e - 1] || P) && H(t => ({
+      null === (t = L.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * B.pageSize > D.length && P && !_ && (Y.current = null !== (a = null === (s = D[D.length - 1]) || void 0 === s ? void 0 : s.id) && void 0 !== a ? a : null, k(Y.current)), (null != w[e - 1] || P) && H(t => ({
         ...t,
         currentPage: e
       }))
-    }, [B.pageSize, D, P, k, w, _]),
+    }, [B.pageSize, D, P, w, k, _]),
     Y = l.useRef(null);
   l.useEffect(() => {
-    w(Y.current)
-  }, [w]);
+    k(Y.current)
+  }, [k]);
   let W = l.useMemo(() => {
     var e;
-    return null !== (e = k[B.currentPage - 1]) && void 0 !== e ? e : []
-  }, [k, B.currentPage]);
+    return null !== (e = w[B.currentPage - 1]) && void 0 !== e ? e : []
+  }, [w, B.currentPage]);
   return null == n ? null : (0, a.jsxs)("div", {
     className: i()(U.container),
     children: [(0, a.jsx)(F, {

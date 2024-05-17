@@ -81,10 +81,10 @@ function p(e) {
     }, {
       modalKey: O
     }) : p()
-  }, [t, M, p, n, b, P]), y = h.useHasChangesForEditStateIds(j), F = l.useCallback(() => j.forEach(h.clearEditState), [j]), H = (0, g.useRoleSubscriptionSettingsDisabled)(), w = (0, o.useStateFromStores)([E.default], () => E.default.getProps().subsection);
-  return l.useEffect(() => (w === R.GuildSettingsSubsections.ROLE_SUBSCRIPTION_TIER_TEMPLATE && B(), () => {
+  }, [t, M, p, n, b, P]), y = h.useHasChangesForEditStateIds(j), F = l.useCallback(() => j.forEach(h.clearEditState), [j]), H = (0, g.useRoleSubscriptionSettingsDisabled)(), k = (0, o.useStateFromStores)([E.default], () => E.default.getProps().subsection);
+  return l.useEffect(() => (k === R.GuildSettingsSubsections.ROLE_SUBSCRIPTION_TIER_TEMPLATE && B(), () => {
     (0, u.closeModal)(O)
-  }), [w, B]), (0, a.jsxs)(a.Fragment, {
+  }), [k, B]), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: L.groupListings,
       children: [j.map(e => (0, a.jsx)(C.default, {

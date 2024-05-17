@@ -48,9 +48,9 @@ var a = s("735250"),
   y = s("717251"),
   F = s("981631"),
   H = s("689938"),
-  w = s("55973");
+  k = s("55973");
 
-function k(e) {
+function w(e) {
   let {
     guild: t
   } = e, s = t.canHaveRaidActivityAlerts(), n = (0, o.useStateFromStores)([C.default], () => null != t && C.default.can(F.Permissions.MANAGE_GUILD, t), [t]), {
@@ -70,16 +70,16 @@ function k(e) {
   }
   return n ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.FormDivider, {
-      className: w.divider
+      className: k.divider
     }), (0, a.jsxs)("div", {
-      className: w.setupContainer,
+      className: k.setupContainer,
       children: [(0, a.jsxs)("div", {
-        className: w.switchItemTextContent,
+        className: k.switchItemTextContent,
         children: [(0, a.jsxs)(d.Text, {
           color: "header-primary",
           variant: "text-md/semibold",
           children: [H.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_TITLE, " ", (0, a.jsx)(T.default, {
-            className: w.betaTag
+            className: k.betaTag
           })]
         }), (0, a.jsx)(d.Text, {
           color: "header-secondary",
@@ -88,7 +88,7 @@ function k(e) {
         })]
       }), (0, a.jsx)(y.default, {
         title: (0, a.jsxs)("div", {
-          className: w.settingsRowHeader,
+          className: k.settingsRowHeader,
           children: [(0, a.jsx)(A.default, {
             width: 20,
             height: 20
@@ -111,9 +111,9 @@ function k(e) {
         }),
         onClick: i ? R : void 0,
         subsection: i ? (0, a.jsxs)("div", {
-          className: w.settingsRowSubsection,
+          className: k.settingsRowSubsection,
           children: [(0, a.jsxs)("div", {
-            className: w.settingsRowSubsectionItem,
+            className: k.settingsRowSubsectionItem,
             children: [(0, a.jsx)(d.Text, {
               color: "text-normal",
               variant: "text-xs/semibold",
@@ -124,7 +124,7 @@ function k(e) {
               children: S && s ? H.default.Messages.GUILD_ANTIRAID_SETTING_ENABLED_ALERTS : H.default.Messages.GUILD_ANTIRAID_SETTING_ENABLED
             })]
           }), (0, a.jsx)("div", {
-            className: w.settingsRowSubsectionItem,
+            className: k.settingsRowSubsectionItem,
             children: S && s ? (0, a.jsxs)(a.Fragment, {
               children: [(0, a.jsx)(d.Text, {
                 color: "text-normal",
@@ -133,9 +133,9 @@ function k(e) {
               }), (0, a.jsxs)(d.Text, {
                 color: "text-muted",
                 variant: "text-xs/medium",
-                className: w.channelContainer,
+                className: k.channelContainer,
                 children: [(0, a.jsx)(g, {
-                  className: w.channelIcon,
+                  className: k.channelIcon,
                   width: 12,
                   height: 12
                 }), " ", c]
@@ -161,7 +161,7 @@ function k(e) {
         })
       }) : null, r ? (0, a.jsx)(y.default, {
         title: (0, a.jsxs)("div", {
-          className: w.settingsRowHeader,
+          className: k.settingsRowHeader,
           children: [(0, a.jsx)(p.default, {
             width: 20,
             height: 20
@@ -182,9 +182,9 @@ function k(e) {
             }), j.default.setSection(F.GuildSettingsSections.GUILD_AUTOMOD, F.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM)
           },
           children: (0, a.jsxs)("div", {
-            className: w.setupAutomodButton,
+            className: k.setupAutomodButton,
             children: [H.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_IN_AUTOMOD_ACTION, (0, a.jsx)(M.default, {
-              className: w.setupAutomodIcon,
+              className: k.setupAutomodIcon,
               width: 16,
               height: 16
             })]
@@ -219,9 +219,9 @@ function V(e) {
     return (0, G.mapOptionToHighlightedRowOptions)(e)
   }, [t]), r = l.useMemo(() => i.find(e => e.value === (null == t ? void 0 : t.verificationLevel)), [t, i]);
   return (0, a.jsxs)("div", {
-    className: w.setupContainer,
+    className: k.setupContainer,
     children: [(0, a.jsxs)("div", {
-      className: w.switchItemTextContent,
+      className: k.switchItemTextContent,
       children: [(0, a.jsx)(d.Text, {
         color: "header-primary",
         variant: "text-md/semibold",
@@ -268,11 +268,11 @@ function Y(e) {
   }, [t]), E = l.useMemo(() => c.find(e => e.value === (null == t ? void 0 : t.explicitContentFilter)), [t, c]);
   return (0, a.jsxs)(a.Fragment, {
     children: [n && (0, a.jsx)(d.FormDivider, {
-      className: w.divider
+      className: k.divider
     }), (0, a.jsxs)("div", {
-      className: i()(w.setupContainer, s),
+      className: i()(k.setupContainer, s),
       children: [(0, a.jsxs)("div", {
-        className: w.switchItemTextContent,
+        className: k.switchItemTextContent,
         children: [(0, a.jsx)(d.Text, {
           color: "header-primary",
           variant: "text-md/semibold",
@@ -310,20 +310,20 @@ function z(e) {
   }, [t]);
   return n || !i ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: w.setupContainer,
+      className: k.setupContainer,
       children: [(0, a.jsx)(d.FormSwitch, {
         value: r,
         onChange: c,
-        className: w.switchItem,
+        className: k.switchItem,
         disabled: !s,
         hideBorder: !0,
         children: (0, a.jsxs)("div", {
-          className: w.switchItemTextContent,
+          className: k.switchItemTextContent,
           children: [(0, a.jsxs)(d.Text, {
             color: "header-primary",
             variant: "text-md/semibold",
             children: [H.default.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE, (0, a.jsx)(T.default, {
-              className: w.betaTag
+              className: k.betaTag
             })]
           }), (0, a.jsx)(d.Text, {
             color: "header-secondary",
@@ -337,7 +337,7 @@ function z(e) {
         children: H.default.Messages.GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_IN_COMMUNITY
       })]
     }), (0, a.jsx)(d.FormDivider, {
-      className: w.divider
+      className: k.divider
     })]
   })
 }
@@ -364,17 +364,17 @@ function K(e) {
   }, 1e3);
   return n ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.FormDivider, {
-      className: w.divider
+      className: k.divider
     }), (0, a.jsxs)("div", {
-      className: w.setupContainer,
+      className: k.setupContainer,
       children: [(0, a.jsx)(d.FormSwitch, {
         value: _,
         onChange: I,
-        className: w.switchItem,
+        className: k.switchItem,
         disabled: !c,
         hideBorder: !0,
         children: (0, a.jsxs)("div", {
-          className: w.switchItemTextContent,
+          className: k.switchItemTextContent,
           children: [(0, a.jsx)(d.Text, {
             color: "header-primary",
             variant: "text-md/semibold",
@@ -409,7 +409,7 @@ function Z() {
   return null == t ? null : l ? (0, a.jsx)(c.default, {}) : (0, a.jsxs)(d.FormSection, {
     title: H.default.Messages.SAFETY_SETUP,
     tag: d.FormTitleTags.H1,
-    titleClassName: w.headerContainer,
+    titleClassName: k.headerContainer,
     children: [(0, a.jsx)(z, {
       guild: t
     }), (0, a.jsx)(V, {
@@ -421,14 +421,14 @@ function Z() {
       guild: t
     }), n ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(d.FormDivider, {
-        className: w.divider
+        className: k.divider
       }), (0, a.jsx)("div", {
-        className: i()(w.setupContainer),
+        className: i()(k.setupContainer),
         children: (0, a.jsx)(b.RaidAlertsSection, {
           guild: t
         })
       })]
-    }) : (0, a.jsx)(k, {
+    }) : (0, a.jsx)(w, {
       guild: t
     })]
   })

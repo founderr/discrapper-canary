@@ -40,7 +40,7 @@ function A(e) {
     groupListingId: D,
     onBeforeDispatchNewListing: v,
     onAfterDispatchNewListing: G
-  } = e, [j, U] = l.useState(r), P = (0, d.useStateFromStores)([m.default], () => m.default.getSubscriptionListing(j)), b = null == P, [B, y] = l.useState(b), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, w = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, k = (0, N.useRoleSubscriptionSettingsDisabled)(), [V] = h.useName(j), [Y] = h.usePriceTier(j), [W] = h.useDescription(j), [z] = h.useImage(j, 1024), K = "" !== V ? V : L.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, Z = "" !== V && null != z && "" !== W && null != Y && !k, X = h.useHasChanges(j), {
+  } = e, [j, U] = l.useState(r), P = (0, d.useStateFromStores)([m.default], () => m.default.getSubscriptionListing(j)), b = null == P, [B, y] = l.useState(b), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, k = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, w = (0, N.useRoleSubscriptionSettingsDisabled)(), [V] = h.useName(j), [Y] = h.usePriceTier(j), [W] = h.useDescription(j), [z] = h.useImage(j, 1024), K = "" !== V ? V : L.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, Z = "" !== V && null != z && "" !== W && null != Y && !w, X = h.useHasChanges(j), {
     loading: Q,
     error: J,
     handleCreateOrUpdateFromEditState: q
@@ -75,11 +75,11 @@ function A(e) {
           size: 2
         }), (0, a.jsxs)("div", {
           className: O.headerDescriptionContainer,
-          children: [!w && !H && void 0 !== P && (0, a.jsx)(I.TextBadge, {
+          children: [!k && !H && void 0 !== P && (0, a.jsx)(I.TextBadge, {
             color: (0, c.getColor)(x.Color.YELLOW_300),
             text: L.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_MANAGEMENT_DRAFT_LABEL,
             className: O.draftBadge
-          }), w && (0, a.jsx)(I.TextBadge, {
+          }), k && (0, a.jsx)(I.TextBadge, {
             color: (0, c.getColor)(x.Color.PRIMARY_500),
             text: L.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_MANAGEMENT_ARCHIVED_LABEL,
             className: O.archivedBadge

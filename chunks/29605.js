@@ -45,14 +45,14 @@ var a = s("735250"),
   y = s("138716"),
   F = s("164149");
 let H = u().throttle(T.fetchEmoji, 1e3),
-  w = e => {
+  k = e => {
     let {
       currentTarget: t,
       which: s
     } = e;
     13 === s && t.blur()
   },
-  k = e => {
+  w = e => {
     let {
       guildId: t,
       emoji: s,
@@ -87,7 +87,7 @@ let H = u().throttle(T.fetchEmoji, 1e3),
           }),
           inputClassName: y.emojiInput,
           placeholder: B.default.Messages.GUILD_SETTINGS_EMOJI_ALIAS_PLACEHOLDER,
-          onKeyPress: w,
+          onKeyPress: k,
           onChange: d,
           onBlur: () => {
             o !== s.name && (0, T.updateEmoji)({
@@ -230,7 +230,7 @@ let H = u().throttle(T.fetchEmoji, 1e3),
           className: y.columnLabel,
           children: B.default.Messages.UPLOADED_BY
         })]
-      }), r.map(e => (0, a.jsx)(k, {
+      }), r.map(e => (0, a.jsx)(w, {
         guildId: s.id,
         emoji: e,
         onEdit: n,
@@ -296,7 +296,7 @@ t.default = () => {
     let t = null == I ? void 0 : I.filter(t => !(0, C.isRoleSubscriptionEmoji)(t, e.id)),
       [s, a] = u().partition(t, e => !e.animated);
     return [s, a]
-  }, [I, e.id]), F = e.getMaxEmojiSlots(), w = Math.max(F - D.length, F - v.length), k = (s, a, l) => (0, g.uploadEmojiFile)({
+  }, [I, e.id]), F = e.getMaxEmojiSlots(), k = Math.max(F - D.length, F - v.length), w = (s, a, l) => (0, g.uploadEmojiFile)({
     data: s,
     file: a,
     image: l,
@@ -307,7 +307,7 @@ t.default = () => {
     n((0, c.v4)()), p.default.track(P.AnalyticEvents.EMOJI_UPLOAD_STARTED, {
       guild_id: e.id,
       upload_id: t
-    }), await (0, R.processImages)(s, k), h(!0)
+    }), await (0, R.processImages)(s, w), h(!0)
   }, W = () => {
     null !== M.current && ((0, _.closeModal)(M.current), M.current = null)
   }, K = async e => {
@@ -323,7 +323,7 @@ t.default = () => {
   }, Z = (0, N.isCreatorMonetizationEnabledGuild)(e);
   return (0, a.jsxs)("div", {
     className: y.emojiSettings,
-    children: [0 === w ? null : (0, a.jsx)(f.default, {
+    children: [0 === k ? null : (0, a.jsx)(f.default, {
       className: y.emojiUploadContainer,
       onDrop: K
     }), (0, a.jsxs)(_.FormSection, {
@@ -386,15 +386,15 @@ t.default = () => {
               upload_id: t
             })
           },
-          disabled: O || 0 === w || !r,
+          disabled: O || 0 === k || !r,
           submitting: O,
           focusProps: {
             within: !0
           },
-          children: [B.default.Messages.UPLOAD_EMOJI, w > 0 ? (0, a.jsx)(R.default, {
-            disabled: O || 0 === w || !r,
+          children: [B.default.Messages.UPLOAD_EMOJI, k > 0 ? (0, a.jsx)(R.default, {
+            disabled: O || 0 === k || !r,
             tabIndex: 0,
-            onChange: k,
+            onChange: w,
             setLoading: A,
             multiple: !0
           }) : null]

@@ -115,11 +115,11 @@ function G() {
     expandedId: null,
     lastExpandedId: null,
     actionFilterQuery: ""
-  }), F = R.transformLogs(U, n), H = !1, w = l.useRef(null), k = (0, T.default)(B), V = (0, T.default)(F), Y = () => {
+  }), F = R.transformLogs(U, n), H = !1, k = l.useRef(null), w = (0, T.default)(B), V = (0, T.default)(F), Y = () => {
     var e;
-    return (null === (e = w.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1
+    return (null === (e = k.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1
   };
-  x || (null == F ? void 0 : F.length) === (null == V ? void 0 : V.length) || null == w || Y();
+  x || (null == F ? void 0 : F.length) === (null == V ? void 0 : V.length) || null == k || Y();
   let W = () => {
       let s = {
         expanded: null,
@@ -147,10 +147,10 @@ function G() {
       })), z = W())
     });
   l.useEffect(() => {
-    B.expandedId !== (null == k ? void 0 : k.expandedId) && Z()
+    B.expandedId !== (null == w ? void 0 : w.expandedId) && Z()
   }, []);
   let Z = () => {
-      let e = w.current;
+      let e = k.current;
       if (null == e) return;
       let t = W(),
         s = z;
@@ -199,7 +199,7 @@ function G() {
         onScroll: () => {
           Y() && J()
         },
-        ref: w,
+        ref: k,
         children: (0, a.jsxs)("div", {
           className: A.content,
           children: [(0, a.jsxs)(a.Fragment, {
@@ -251,7 +251,7 @@ function G() {
               setLastExpandedRef: $,
               onHeaderClick: X,
               onContentClick: Q,
-              scroller: w.current
+              scroller: k.current
             })
           })(), (() => {
             if (x && j && !b) return (0, a.jsx)(E.Button, {

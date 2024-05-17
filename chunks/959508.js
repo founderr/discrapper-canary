@@ -59,7 +59,7 @@ function L(e) {
   }), H = (0, r.useStateFromStoresObject)([N.default], () => {
     var e;
     return null !== (e = N.default.errors[g]) && void 0 !== e ? e : x
-  }), [w, k] = l.useState(!1), [V, Y] = l.useState(!1), W = null !== (t = H.options) && void 0 !== t ? t : H.optionErrors.filter(S.isNotNullish)[0], z = H.config, K = j && n.options.length >= h.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD, Z = (0, c.getMinimumSetOfDefaultChannelIds)(s.id, Array.from(U), [n]).length - U.size, X = l.useRef(null);
+  }), [k, w] = l.useState(!1), [V, Y] = l.useState(!1), W = null !== (t = H.options) && void 0 !== t ? t : H.optionErrors.filter(S.isNotNullish)[0], z = H.config, K = j && n.options.length >= h.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD, Z = (0, c.getMinimumSetOfDefaultChannelIds)(s.id, Array.from(U), [n]).length - U.size, X = l.useRef(null);
   return (l.useLayoutEffect(() => {
     setTimeout(() => {
       if (0 === g && !u) {
@@ -67,7 +67,7 @@ function L(e) {
         null === (e = X.current) || void 0 === e || e.focus()
       }
     }, 0)
-  }, [u]), w) ? (0, a.jsx)(o.FocusRing, {
+  }, [u]), k) ? (0, a.jsx)(o.FocusRing, {
     children: (0, a.jsxs)("div", {
       tabIndex: 0,
       onFocus: () => Y(!0),
@@ -99,7 +99,7 @@ function L(e) {
         children: n.title
       }), (0, a.jsx)(o.Clickable, {
         className: R.collapseButton,
-        onClick: () => k(!1),
+        onClick: () => w(!1),
         children: (0, a.jsx)(_.default, {
           direction: _.default.Directions.DOWN,
           height: 16,
@@ -210,7 +210,7 @@ function L(e) {
           }) : null]
         }), (0, a.jsx)(o.Clickable, {
           className: R.collapseButton,
-          onClick: () => k(!0),
+          onClick: () => w(!0),
           children: (0, a.jsx)(_.default, {
             direction: _.default.Directions.UP,
             height: 16,

@@ -43,9 +43,9 @@ var a, l, n = s("735250"),
   y = s("364268");
 let F = (0, x.uid)(),
   H = (0, x.uid)(),
-  w = (0, v.cssValueToNumber)(I.default.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+  k = (0, v.cssValueToNumber)(I.default.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 
-function k(e) {
+function w(e) {
   var t;
   let {
     emojiId: s,
@@ -133,7 +133,7 @@ function Y(e) {
     }), (0, n.jsx)("div", {
       className: y.list,
       children: a.map(e => (0, n.jsxs)(V, {
-        icon: (0, n.jsx)(k, {
+        icon: (0, n.jsx)(w, {
           emojiId: e.emoji_id,
           emojiName: e.emoji_name,
           className: y.rowIcon
@@ -234,7 +234,7 @@ function z(e) {
   } = e, r = (0, g.useRoleIcon)({
     guildId: s,
     roleId: a.id,
-    size: w
+    size: k
   });
   return (0, n.jsxs)(T.Clickable, {
     className: y.roleRow,

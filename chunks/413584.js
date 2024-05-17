@@ -54,7 +54,7 @@ let b = "WELCOME_CHANNEL",
       {
         homeSettingsEnabled: H
       } = (0, m.useOnboardingHomeAdminExperiment)(r),
-      [, w] = (0, d.useDrag)({
+      [, k] = (0, d.useDrag)({
         type: b,
         item: {
           channel: o,
@@ -64,7 +64,7 @@ let b = "WELCOME_CHANNEL",
           null != e && !t.didDrop() && N(e.channel, null, !0)
         }
       }),
-      [, k] = (0, d.useDrop)({
+      [, w] = (0, d.useDrop)({
         accept: b,
         hover: e => {
           N(e.channel, R, !1)
@@ -73,9 +73,9 @@ let b = "WELCOME_CHANNEL",
           N(e.channel, R, !0)
         }
       });
-    return l.useLayoutEffect(() => (w(k(p)), () => {
-      w(null), k(null)
-    }), [w, k]), n = B ? null != v || null != o.emoji_name ? (0, a.jsx)(_.default, {
+    return l.useLayoutEffect(() => (k(w(p)), () => {
+      k(null), w(null)
+    }), [k, w]), n = B ? null != v || null != o.emoji_name ? (0, a.jsx)(_.default, {
       emojiId: null == v ? void 0 : v.id,
       emojiName: null != v ? v.name : o.emoji_name,
       animated: !!(null == v ? void 0 : v.animated)
@@ -174,11 +174,11 @@ t.default = e => {
     if (null != n) !o()(e, d.channels) && ((0, N.saveWelcomeScreen)(n.id, {
       channels: e
     }), f(!0))
-  }, w = e => {
+  }, k = e => {
     if (null != n) e !== d.enabled && ((0, N.saveWelcomeScreen)(n.id, {
       enabled: e
     }), C(!E), f(!0))
-  }, k = e => {
+  }, w = e => {
     if (null == e) return;
     let t = [...null != M ? M : [], e];
     (0, N.updateSettings)({
@@ -190,7 +190,7 @@ t.default = e => {
       channels: s
     }), H(s), 0 === s.length && b && ((0, N.updateSettings)({
       enabled: !1
-    }), w(!1))
+    }), k(!1))
   }, Y = (e, t, s) => {
     if (null == M) return;
     let a = M.indexOf(e),
@@ -206,7 +206,7 @@ t.default = e => {
     return t => (0, a.jsx)(e, {
       ...t,
       guildId: n.id,
-      onSave: k
+      onSave: w
     })
   }, {
     onCloseRequest: () => j.NOOP_NULL
@@ -267,7 +267,7 @@ t.default = e => {
         })
       },
       onToggle: b || (null == M ? void 0 : M.length) !== 0 ? () => {
-        w(!b)
+        k(!b)
       } : void 0,
       animateStatus: h,
       firstLine: b ? U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED : U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PROGRESS_WILL_SAVE,
@@ -343,7 +343,7 @@ t.default = e => {
             return t => (0, a.jsx)(e, {
               ...t,
               guildId: n.id,
-              onSave: k
+              onSave: w
             })
           }, {
             onCloseRequest: () => j.NOOP_NULL

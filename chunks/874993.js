@@ -68,7 +68,7 @@ function O(e) {
     A(j, (0, h.createOnPreventNavigation)(F))
   }, [A, j, F]);
   let H = (0, S.useAvailableTriggerTypes)(G),
-    w = e => (0, a.jsx)(a.Fragment, {
+    k = e => (0, a.jsx)(a.Fragment, {
       children: e.map(e => {
         var t;
         return (0, a.jsx)(g.default, {
@@ -136,7 +136,7 @@ function O(e) {
       }) : null;
       return (0, a.jsxs)("div", {
         className: L.categoryContainer,
-        children: [n, w(s)]
+        children: [n, k(s)]
       }, t)
     }), null != D && (0, a.jsx)(d.GuildExplicitContentFilter, {
       guild: D,

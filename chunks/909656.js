@@ -111,8 +111,8 @@ function y(e) {
     var e;
     return (null == r ? void 0 : null === (e = r.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, x.getAssetURL)(r.cover_image_asset.application_id, r.cover_image_asset, P)
   }, [r]), [c, _] = l.useState(i), [S, C] = l.useState(null !== (t = null == r ? void 0 : r.description) && void 0 !== t ? t : ""), [R, L] = l.useState(d), [b, y] = l.useState(null == r ? void 0 : r.store_page_guild_products_default_sort), [F, H] = l.useState(null == r ? void 0 : r.server_shop_tab_order), {
-    loading: w,
-    error: k,
+    loading: k,
+    error: w,
     updateSubscriptionsSettings: V
   } = (0, O.useUpdateSubscriptionsSettings)(), {
     imageCTA: Y,
@@ -146,9 +146,9 @@ function y(e) {
     }], []);
   return (0, a.jsxs)("div", {
     className: U.container,
-    children: [null != k && (0, a.jsxs)(a.Fragment, {
+    children: [null != w && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(D.default, {
-        children: k.getAnyErrorMessage()
+        children: w.getAnyErrorMessage()
       }), (0, a.jsx)(N.default, {
         size: 16
       })]
@@ -272,7 +272,7 @@ function y(e) {
       className: U.contentRegion,
       children: J && (0, a.jsx)(m.default, {
         children: (0, a.jsx)(T.default, {
-          submitting: w,
+          submitting: k,
           disabled: !q,
           onReset: () => {
             var e;
