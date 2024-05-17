@@ -53,49 +53,51 @@ t.default = e => {
     showAllPerksButton: g,
     headerClassname: C,
     isFullScreen: P = !0
-  } = e, O = r.useRef(null), M = (0, _.useFreeBoostUserTenureReward)(), h = (0, E.useShouldScrollToWhatsNew)(M), L = (0, u.default)("perks-discoverability"), x = (0, c.useMarketingOptimizationExperiment)({
+  } = e, O = r.useRef(null), M = (0, _.useFreeBoostUserTenureReward)(), [h, L] = r.useState(!1), x = (0, E.useShouldScrollToWhatsNew)(M) || h, v = (0, u.default)("perks-discoverability"), b = (0, c.useMarketingOptimizationExperiment)({
     autoTrackExposure: !1
   });
-  (0, E.useClearNewBadge)(), (0, I.useDismissWhatsNewCardDCs)();
-  let v = (0, d.useGetMarketingPageNonSubPerkTileOrderExperiment)({
+  r.useLayoutEffect(() => {
+    L((0, I.shouldScrollToMarketingMomentContent)())
+  }, []), (0, E.useClearNewBadge)(), (0, I.useDismissWhatsNewCardDCs)();
+  let D = (0, d.useGetMarketingPageNonSubPerkTileOrderExperiment)({
       location: R.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY
     }),
-    b = i === R.PerksDiscoverabilityCardSection.WHATS_NEW,
-    D = (0, _.useClearTenureBadge)();
+    U = i === R.PerksDiscoverabilityCardSection.WHATS_NEW,
+    j = (0, _.useClearTenureBadge)();
   r.useEffect(() => {
-    b && !h && D()
-  }, [D, b, h]), r.useEffect(() => {
+    U && !x && j()
+  }, [j, U, x]), r.useEffect(() => {
     let e = O.current;
-    if (null == e || !h || !b) return;
+    if (null == e || !x || !U) return;
     let t = requestAnimationFrame(() => {
       e.scrollIntoView({
         behavior: "smooth"
-      }), b && D()
+      }), U && j()
     });
     return () => {
-      cancelAnimationFrame(t), b && D()
+      cancelAnimationFrame(t), U && j()
     }
-  }, [O, h, b, D]);
-  let U = (0, f.usePerksDiscoverabilityStrings)(b),
-    j = (0, T.default)(),
-    G = (0, f.useIsPremiumSubscriber)(),
-    y = (0, f.getFilteredPerksDiscoverabilityCards)({
-      perksCards: j,
+  }, [O, x, U, j]);
+  let G = (0, f.usePerksDiscoverabilityStrings)(U),
+    y = (0, T.default)(),
+    B = (0, f.useIsPremiumSubscriber)(),
+    k = (0, f.getFilteredPerksDiscoverabilityCards)({
+      perksCards: y,
       variant: i,
-      shopMarketingVariation: L,
+      shopMarketingVariation: v,
       isFullScreen: P,
       showTenureCard: null == M ? void 0 : M.showCard,
-      tileOrderVariant: v,
-      isPremiumSubscriber: G
+      tileOrderVariant: D,
+      isPremiumSubscriber: B
     }),
-    B = y.some(e => null != e.pillText),
-    [k, H] = r.useState(null),
-    F = r.useRef(new l.Environment);
+    H = k.some(e => null != e.pillText),
+    [F, w] = r.useState(null),
+    W = r.useRef(new l.Environment);
   return (0, a.jsxs)(a.Fragment, {
-    children: [(null == j ? void 0 : null === (t = j.freeBoost) || void 0 === t ? void 0 : t.name) === T.PerksDiscoverabilityCardTypes.FREE_BOOST && (0, a.jsx)(l.ConfettiCanvas, {
-      ref: H,
+    children: [(null == y ? void 0 : null === (t = y.freeBoost) || void 0 === t ? void 0 : t.name) === T.PerksDiscoverabilityCardTypes.FREE_BOOST && (0, a.jsx)(l.ConfettiCanvas, {
+      ref: w,
       className: m.confettiCanvas,
-      environment: F.current
+      environment: W.current
     }), (0, a.jsxs)("div", {
       ref: O,
       className: n()(m.section, {
@@ -105,20 +107,20 @@ t.default = e => {
       children: [(0, a.jsx)(A, {
         showAllPerksButton: g,
         leftAlignHeaders: p,
-        title: U.title,
+        title: G.title,
         headerClassname: C
-      }), !x && (0, a.jsx)(o.Text, {
+      }), !b && (0, a.jsx)(o.Text, {
         variant: "text-lg/normal",
         color: "header-primary",
         className: n()(m.subtitle, {
           [m.subtitle]: null == g || p,
           [m.subtitleWithButton]: null != g && !p,
-          [m.fullWidth]: b || p,
-          [m.moreSubtitleMargin]: B,
+          [m.fullWidth]: U || p,
+          [m.moreSubtitleMargin]: H,
           [m.leftAlignSubtitle]: p,
           [m.centerAlignSubtitle]: !p
         }),
-        children: U.subtitle
+        children: G.subtitle
       }), !p && null != g && (0, a.jsx)("div", {
         className: n()(m.showAllPerksButtonCenter),
         children: g
@@ -127,8 +129,8 @@ t.default = e => {
           [m.cardContainer]: P,
           [m.cardContainerNarrowWidth]: !P
         }),
-        children: y.map((e, t) => (0, a.jsx)(S.default, {
-          confettiCanvas: e.name === T.PerksDiscoverabilityCardTypes.FREE_BOOST ? k : void 0,
+        children: k.map((e, t) => (0, a.jsx)(S.default, {
+          confettiCanvas: e.name === T.PerksDiscoverabilityCardTypes.FREE_BOOST ? F : void 0,
           ...e,
           forceShadow: N
         }, "".concat(e.name, "_").concat(t)))

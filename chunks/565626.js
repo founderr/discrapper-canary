@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   useClearNewBadge: function() {
-    return R
+    return I
   },
   useShouldScrollToWhatsNew: function() {
-    return I
+    return T
   }
 }), s("47120");
 var a = s("470079"),
@@ -16,14 +16,13 @@ var a = s("470079"),
   u = s("581883"),
   d = s("494127"),
   c = s("687362"),
-  _ = s("734741"),
-  E = s("526761");
-let T = [
+  _ = s("526761");
+let E = [
     [i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, d.WhatsNewAvatarDecoRollout, i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP],
     [i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, d.WhatsNewProfileFXRollout, i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP]
   ],
-  I = e => {
-    let t = T.some(e => {
+  T = e => {
+    let t = E.some(e => {
         let [t, s, a] = e, {
           flipped: r
         } = s.getCurrentConfig({
@@ -31,13 +30,12 @@ let T = [
         });
         return !!r && !(0, l.isDismissibleContentDismissed)(t)
       }),
-      s = (0, c.useShouldScrollToTenureRewardContent)(e),
-      a = (0, _.shouldScrollToMarketingMomentContent)();
-    return t || a || !0 === s
+      s = (0, c.useShouldScrollToTenureRewardContent)(e);
+    return t || !0 === s
   },
-  R = () => {
+  I = () => {
     let e = (0, n.useBlockedPaymentsConfig)(),
-      t = T.map(e => {
+      t = E.map(e => {
         let [t, s] = e, {
           flipped: a
         } = s.getCurrentConfig({
@@ -50,8 +48,8 @@ let T = [
   };
 t.default = () => {
   let e = (0, n.useBlockedPaymentsConfig)(),
-    t = (0, r.useStateFromStores)([u.default], () => u.default.hasLoaded(E.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
-    s = T.map(e => {
+    t = (0, r.useStateFromStores)([u.default], () => u.default.hasLoaded(_.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
+    s = E.map(e => {
       let [t, s, a] = e, {
         flipped: r
       } = s.getCurrentConfig({
@@ -60,7 +58,7 @@ t.default = () => {
       return r && !i ? t : null
     }).filter(e => null != e);
   a.useEffect(() => {
-    t && T.forEach(e => {
+    t && E.forEach(e => {
       let [t, s, a] = e;
       if (null != a)(0, l.isDismissibleContentDismissed)(a) && (0, l.markDismissibleContentAsDismissed)(t)
     })
