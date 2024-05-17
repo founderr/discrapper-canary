@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   NitroTabButton: function() {
-    return G
+    return k
   }
 });
 var a, s, l = n("735250");
@@ -29,86 +29,88 @@ var i = n("924826"),
   R = n("924540"),
   O = n("649765"),
   L = n("565626"),
-  M = n("701910"),
-  y = n("487980"),
-  P = n("474936"),
-  x = n("981631"),
-  D = n("921944"),
-  b = n("689938"),
-  U = n("985252");
-let j = "NitroTabButton";
+  M = n("734741"),
+  y = n("701910"),
+  P = n("487980"),
+  x = n("474936"),
+  D = n("981631"),
+  b = n("921944"),
+  U = n("689938"),
+  j = n("985252");
+let G = "NitroTabButton";
 (a = s || (s = {}))[a.BOGO_PROMOTION = 0] = "BOGO_PROMOTION", a[a.TENURE_REWARD = 1] = "TENURE_REWARD", a[a.NEW_PERKS_BADGE = 2] = "NEW_PERKS_BADGE", a[a.DISCOUNT_OFFER = 3] = "DISCOUNT_OFFER", a[a.TRIAL_OFFER = 4] = "TRIAL_OFFER", a[a.LOCALIZED_PRICING = 5] = "LOCALIZED_PRICING", a[a.REFERRAL_PROGRAM = 6] = "REFERRAL_PROGRAM";
-let G = e => {
+let k = e => {
   let t, n, a, {
       selected: s,
-      route: G,
-      locationState: k,
-      ...w
+      route: k,
+      locationState: w,
+      ...B
     } = e,
-    B = (0, r.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
-    F = (0, r.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()),
-    H = (0, C.hasPremiumSubscriptionToDisplay)(B, F),
-    V = (0, i.useListItem)("nitro"),
-    Y = (0, I.usePremiumTrialOffer)(),
-    W = (0, g.usePremiumDiscountOffer)(),
-    K = (0, r.useStateFromStores)([f.default], () => f.default.isLocalizedPromoEnabled) && null == Y,
-    z = (0, v.useIsEligibleForBogoPromotion)(),
-    q = (0, L.default)(),
-    Q = (0, A.useTenureRewardBadgeDescription)(),
-    Z = (0, y.useIsEligibleSenderForReferralProgramTabBadge)(j),
-    X = (0, r.useStateFromStores)([m.default], () => m.default.getCreatedAtOverride()),
-    J = null != X ? X : null == B ? void 0 : B.createdAt,
-    $ = s || null != Y || null != W || z || q || null != Q || H,
+    F = (0, r.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
+    H = (0, r.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()),
+    V = (0, C.hasPremiumSubscriptionToDisplay)(F, H),
+    Y = (0, i.useListItem)("nitro"),
+    W = (0, I.usePremiumTrialOffer)(),
+    K = (0, g.usePremiumDiscountOffer)(),
+    z = (0, r.useStateFromStores)([f.default], () => f.default.isLocalizedPromoEnabled) && null == W,
+    q = (0, v.useIsEligibleForBogoPromotion)(),
+    Q = (0, L.default)(),
+    Z = (0, M.useShouldShowWhatsNewBadge)(),
+    X = (0, A.useTenureRewardBadgeDescription)(),
+    J = (0, P.useIsEligibleSenderForReferralProgramTabBadge)(G),
+    $ = (0, r.useStateFromStores)([m.default], () => m.default.getCreatedAtOverride()),
+    ee = null != $ ? $ : null == F ? void 0 : F.createdAt,
+    et = s || null != W || null != K || q || Q || Z || null != X || V,
     {
-      enabled: ee
+      enabled: en
     } = p.ReferralProgramRecipient.useExperiment({
-      location: j
+      location: G
     }, {
       autoTrackExposure: !1
     }),
-    et = ee && (null == Y ? void 0 : Y.trial_id) === P.PREMIUM_TIER_2_REFERRAL_TRIAL_ID,
-    en = (0, S.usePremiumMarketingTabDisplayTimingExperiment)({
+    ea = en && (null == W ? void 0 : W.trial_id) === x.PREMIUM_TIER_2_REFERRAL_TRIAL_ID,
+    es = (0, S.usePremiumMarketingTabDisplayTimingExperiment)({
       location: "NitroTabButton",
-      showTabForOtherReasons: $
+      showTabForOtherReasons: et
     });
-  if (!($ = $ || null != B && null != J && Date.now() - J.getTime() > en)) return null;
-  z ? (n = (0, l.jsx)(T.default, {
+  if (!(et = et || null != F && null != ee && Date.now() - ee.getTime() > es)) return null;
+  Z ? (n = (0, l.jsx)(y.PerksDiscoverabilityMarketingMomentWhatsNewBadge, {}), a = 2) : q ? (n = (0, l.jsx)(T.default, {
     isNitroTab: !0
-  }), a = 0) : null != Q ? (n = (0, l.jsx)(M.default, {
-    copy: Q
-  }), a = 1) : q ? (n = (0, l.jsx)(M.default, {}), a = 2) : null != W ? (n = (0, l.jsx)(R.PremiumDiscountOfferTabBadge, {
-    userDiscount: W,
+  }), a = 0) : null != X ? (n = (0, l.jsx)(y.default, {
+    copy: X
+  }), a = 1) : Q ? (n = (0, l.jsx)(y.default, {}), a = 2) : null != K ? (n = (0, l.jsx)(R.PremiumDiscountOfferTabBadge, {
+    userDiscount: K,
     isTabSelected: s,
     includesAmountOff: !1
-  }), a = 3) : null == Y || et ? Z ? (n = (0, l.jsx)(O.default, {
+  }), a = 3) : null == W || ea ? J ? (n = (0, l.jsx)(O.default, {
     isSelected: s,
     onSelect: () => (0, d.markDismissibleContentAsDismissed)(o.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
-      dismissAction: D.ContentDismissActionType.TAKE_ACTION
+      dismissAction: b.ContentDismissActionType.TAKE_ACTION
     })
-  }), a = 6) : K && (n = (0, l.jsx)(N.LocalizedPricingBadgeIcon, {
+  }), a = 6) : z && (n = (0, l.jsx)(N.LocalizedPricingBadgeIcon, {
     entryPoint: N.BadgeEntryPoint.PrivateMessages
-  }), !s && (t = U.localizeBadge), a = 5) : (n = (0, l.jsx)(R.PremiumTrialOfferTabBadge, {
-    trialOffer: Y,
+  }), !s && (t = j.localizeBadge), a = 5) : (n = (0, l.jsx)(R.PremiumTrialOfferTabBadge, {
+    trialOffer: W,
     isTabSelected: s
   }), a = 4);
-  let ea = (0, l.jsx)(u.LinkButton, {
+  let el = (0, l.jsx)(u.LinkButton, {
     selected: s,
-    route: G,
+    route: k,
     icon: h.default,
-    text: b.default.Messages.PREMIUM,
-    locationState: k,
+    text: U.default.Messages.PREMIUM,
+    locationState: w,
     onClick: () => {
-      _.default.track(x.AnalyticEvents.NITRO_TAB_VISITED, {
+      _.default.track(D.AnalyticEvents.NITRO_TAB_VISITED, {
         badge_decorator: a,
-        has_premium: H
+        has_premium: V
       })
     },
-    ...w,
-    ...V,
+    ...B,
+    ...Y,
     className: t,
     children: n
   });
-  return Z ? (0, l.jsx)(O.ReferralProgramCoachtipLinkButton, {
-    children: ea
-  }) : ea
+  return J ? (0, l.jsx)(O.ReferralProgramCoachtipLinkButton, {
+    children: el
+  }) : el
 }
