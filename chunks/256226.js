@@ -78,22 +78,36 @@ t.default = r.forwardRef(function(e, t) {
       "aria-label": R.name,
       tabIndex: M,
       ...y,
-      children: [(0, i.jsxs)(_.Clickable, {
-        className: s()(O && A.roleRemoveButtonCanRemove, A.roleRemoveButton),
-        onClick: O ? g : void 0,
-        tabIndex: O ? M : -1,
+      children: [O ? (0, i.jsx)(_.TooltipContainer, {
+        text: h.default.Messages.REMOVE_SYNCED_ROLE,
+        children: (0, i.jsxs)(_.Clickable, {
+          className: s()(A.roleRemoveButtonCanRemove, A.roleRemoveButton),
+          onClick: g,
+          tabIndex: M,
+          focusProps: {
+            focusClassName: A.roleRemoveIconFocused
+          },
+          "aria-hidden": !1,
+          "aria-label": h.default.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
+            roleName: R.name
+          }),
+          children: [p, (0, i.jsx)(f.default, {
+            color: V,
+            className: A.roleRemoveIcon,
+            "aria-hidden": !0
+          })]
+        })
+      }) : (0, i.jsx)(_.Clickable, {
+        className: A.roleRemoveButton,
+        tabIndex: -1,
         focusProps: {
           focusClassName: A.roleRemoveIconFocused
         },
-        "aria-hidden": !O,
+        "aria-hidden": !0,
         "aria-label": h.default.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
           roleName: R.name
         }),
-        children: [p, O ? (0, i.jsx)(f.default, {
-          color: V,
-          className: A.roleRemoveIcon,
-          "aria-hidden": !0
-        }) : null]
+        children: p
       }), null != P ? (0, i.jsx)(S.default, {
         className: A.roleIcon,
         ...P,
