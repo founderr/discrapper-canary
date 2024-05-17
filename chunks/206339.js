@@ -27,8 +27,8 @@ var a = s("735250"),
   R = s("622474"),
   M = s("981631"),
   v = s("474936"),
-  D = s("689938"),
-  L = s("193225");
+  L = s("689938"),
+  D = s("193225");
 
 function P(e) {
   let t, {
@@ -43,20 +43,20 @@ function P(e) {
     _ = (0, h.getPromotionImageURL)(s.id, f),
     m = null != l,
     N = (0, I.default)(s, m);
-  m && o ? t = D.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
+  m && o ? t = L.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
     endDate: N,
     onClickDetails: E
-  }) : m && !o ? t = D.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_UNEXPANDED_BODY.format({
+  }) : m && !o ? t = L.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_UNEXPANDED_BODY.format({
     endDate: N,
     onClickDetails: E
-  }) : !m && o ? t = D.default.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_EXPANDED_BODY.format({
+  }) : !m && o ? t = L.default.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_EXPANDED_BODY.format({
     endDate: N,
     onClickDetails: E
-  }) : !m && !o && (t = D.default.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_UNEXPANDED_BODY.format({
+  }) : !m && !o && (t = L.default.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_UNEXPANDED_BODY.format({
     endDate: N,
     onClickDetails: E
   }));
-  let C = m ? D.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : D.default.Messages.PROMOTION_CARD_ACTION_CLAIM,
+  let C = m ? L.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : L.default.Messages.PROMOTION_CARD_ACTION_CLAIM,
     A = n.useCallback(() => S(!1), []),
     {
       outboundTitle: O,
@@ -64,17 +64,17 @@ function P(e) {
     } = s;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: i()(L.skuCard, L.promotionCard),
+      className: i()(D.skuCard, D.promotionCard),
       children: [(0, a.jsxs)("div", {
-        className: L.mainPromotionCardContainer,
+        className: D.mainPromotionCardContainer,
         children: [(0, a.jsxs)("div", {
-          className: L.promotionCardLeftContainer,
+          className: D.promotionCardLeftContainer,
           children: [(0, a.jsx)("div", {
-            className: L.promotionIcon,
+            className: D.promotionIcon,
             children: (0, a.jsx)("img", {
               alt: "",
               src: _,
-              className: L.promotionIconImage
+              className: D.promotionIconImage
             })
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsx)(u.Heading, {
@@ -83,19 +83,19 @@ function P(e) {
             }), (0, a.jsx)(u.Text, {
               variant: "text-sm/normal",
               color: "text-normal",
-              className: L.__invalid_promotionText,
+              className: D.__invalid_promotionText,
               children: t
             })]
           })]
         }), (0, a.jsx)(u.Button, {
-          className: L.promotionCardButton,
+          className: D.promotionCardButton,
           color: u.Button.Colors.BRAND,
           size: u.Button.Sizes.SMALL,
           onClick: () => S(!0),
           children: C
         })]
       }), o && (0, a.jsx)(u.Text, {
-        className: L.promotionLegalese,
+        className: D.promotionLegalese,
         variant: "text-xs/normal",
         color: "header-secondary",
         children: g.default.parse(x, !1, {
@@ -168,10 +168,10 @@ t.default = function() {
         children: (0, a.jsxs)(u.HeadingLevel, {
           component: (0, a.jsx)(u.Heading, {
             variant: "heading-md/semibold",
-            children: r ? D.default.Messages.GIFT_INVENTORY_YOUR_GIFTS : void 0
+            children: r ? L.default.Messages.GIFT_INVENTORY_YOUR_GIFTS : void 0
           }),
           children: [r ? (0, a.jsx)(u.FormDivider, {
-            className: L.divider
+            className: D.divider
           }) : null, b.map(e => {
             let {
               code: t,
@@ -187,19 +187,19 @@ t.default = function() {
             code: U[e.id],
             addClaimedOutboundPromotionCode: y
           }, e.id)), null != t ? (0, a.jsx)(x.default, {
-            className: L.skuCard,
+            className: D.skuCard,
             skuId: t.skuId,
             subscriptionPlanId: t.subscriptionPlanId,
             entitlements: [t],
             giftCodeBatchId: v.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID
           }, (0, A.makeComboId)(t.skuId, t.subscriptionPlanId)) : null, l.length > 0 ? (0, a.jsx)(x.default, {
-            className: L.skuCard,
+            className: D.skuCard,
             skuId: l[0].skuId,
             subscriptionPlanId: l[0].subscriptionPlanId,
             entitlements: l,
             giftCodeBatchId: v.STICKERS_GIFT_CODE_BATCH_ID
           }, (0, A.makeComboId)(l[0].skuId, l[0].subscriptionPlanId)) : null, i.length > 0 ? (0, a.jsx)(x.default, {
-            className: L.skuCard,
+            className: D.skuCard,
             skuId: i[0].skuId,
             subscriptionPlanId: i[0].subscriptionPlanId,
             entitlements: i,
@@ -211,20 +211,20 @@ t.default = function() {
       children: (0, a.jsxs)(u.HeadingLevel, {
         component: (0, a.jsx)(u.Heading, {
           variant: "heading-md/semibold",
-          children: D.default.Messages.GIFT_INVENTORY_GIFTS_YOU_PURCHASED
+          children: L.default.Messages.GIFT_INVENTORY_GIFTS_YOU_PURCHASED
         }),
         children: [(0, a.jsx)(u.FormDivider, {
-          className: L.divider
+          className: D.divider
         }), 0 === Object.keys(l).length ? (0, a.jsxs)("div", {
-          className: L.emptyState,
+          className: D.emptyState,
           children: [(0, a.jsx)("div", {
-            className: L.emptyStateImage
+            className: D.emptyStateImage
           }), (0, a.jsx)(u.H, {
-            className: L.emptyStateHeader,
-            children: D.default.Messages.GIFT_INVENTORY_NO_GIFTS
+            className: D.emptyStateHeader,
+            children: L.default.Messages.GIFT_INVENTORY_NO_GIFTS
           }), (0, a.jsx)("p", {
-            className: L.emptyStateSubtext,
-            children: D.default.Messages.GIFT_INVENTORY_NO_GIFTS_SUBTEXT.format({
+            className: D.emptyStateSubtext,
+            children: L.default.Messages.GIFT_INVENTORY_NO_GIFTS_SUBTEXT.format({
               onClick: B
             })
           })]
@@ -235,7 +235,7 @@ t.default = function() {
             giftStyle: n
           } = (0, A.parseComboId)(e);
           return (0, a.jsx)(x.default, {
-            className: L.skuCard,
+            className: D.skuCard,
             skuId: t,
             subscriptionPlanId: s,
             entitlements: l[e],
@@ -245,6 +245,6 @@ t.default = function() {
       })
     })]
   }) : (0, a.jsx)(u.Spinner, {
-    className: L.loading
+    className: D.loading
   })
 }

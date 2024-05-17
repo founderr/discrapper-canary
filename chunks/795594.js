@@ -27,8 +27,8 @@ var a = s("735250"),
   R = s("186095"),
   M = s("285952"),
   v = s("6048"),
-  D = s("950463"),
-  L = s("507893"),
+  L = s("950463"),
+  D = s("507893"),
   P = s("768581"),
   j = s("49012"),
   b = s("210887"),
@@ -48,7 +48,7 @@ function H(e) {
   } = e;
   return (0, a.jsxs)("div", {
     className: F.twoWayWarning,
-    children: [(0, a.jsx)(L.default, {
+    children: [(0, a.jsx)(D.default, {
       className: F.twoWayWarningIcon
     }), (0, a.jsx)(_.Text, {
       color: "text-normal",
@@ -67,7 +67,7 @@ let V = e => {
     return n.useMemo(() => {
       switch (t) {
         case c.ApplicationDisclosureType.IP_LOCATION:
-          return (0, a.jsx)(D.default, {
+          return (0, a.jsx)(L.default, {
             className: F.disclosureIcon
           });
         case c.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS:

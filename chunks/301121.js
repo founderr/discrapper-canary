@@ -31,8 +31,8 @@ var a = s("735250"),
   R = s("610697"),
   M = s("880257"),
   v = s("16703"),
-  D = s("236289"),
-  L = s("518560"),
+  L = s("236289"),
+  D = s("518560"),
   P = s("237292"),
   j = s("604849"),
   b = s("278828"),
@@ -738,7 +738,7 @@ class eS extends n.PureComponent {
   constructor(e) {
     super(e), en(this, "SETTINGS_TABS", {
       [ee.SafetyHubView.SETTINGS]: () => this.renderSettingsBody(),
-      [ee.SafetyHubView.ACCOUNT_STANDING]: () => (0, a.jsx)(L.default, {}),
+      [ee.SafetyHubView.ACCOUNT_STANDING]: () => (0, a.jsx)(D.default, {}),
       [ee.SafetyHubView.GUILD_SETTINGS]: () => (0, a.jsx)(el, {})
     }), en(this, "handleChangeDefaultGuildsRestricted", e => {
       this.setState({
@@ -819,7 +819,7 @@ function eE() {
       usageStatistics: U.default.hasConsented($.Consents.USAGE_STATISTICS),
       personalization: U.default.hasConsented($.Consents.PERSONALIZATION)
     })),
-    s = (0, c.useStateFromStores)([D.default], () => D.default.getFetchError()),
+    s = (0, c.useStateFromStores)([L.default], () => L.default.getFetchError()),
     n = (0, c.useStateFromStores)([B.default], () => B.default.getSubsection()),
     l = (0, h.useIsEligibleForExplicitMediaRedaction)(),
     i = (0, O.useIsEligibleForKeywordFiltering)({
