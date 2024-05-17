@@ -4,27 +4,29 @@ var a = n("735250"),
   s = n("470079"),
   l = n("887024"),
   i = n("920906"),
-  r = n("569379"),
-  o = n("675654"),
-  u = n("977524"),
-  d = n("197857");
-let c = ["#51BC9D"];
+  r = n("442837"),
+  o = n("607070"),
+  u = n("569379"),
+  d = n("675654"),
+  c = n("977524"),
+  f = n("197857");
+let E = ["#51BC9D"];
 t.default = e => {
   let {
     quest: t,
     progressBarRef: n
   } = e, {
-    completionSpring: f,
-    startCompletionAnimation: E
-  } = (0, r.useQuestBarCompletionAnimation)(), h = s.useRef(!1), [_, C] = s.useState(null), [m, S] = s.useState(null), p = s.useRef(new l.Environment({
+    completionSpring: h,
+    startCompletionAnimation: _
+  } = (0, u.useQuestBarCompletionAnimation)(), C = s.useRef(!1), m = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), [S, p] = s.useState(null), [g, I] = s.useState(null), T = s.useRef(new l.Environment({
     gravity: 0,
     wind: 0
-  })), g = (0, l.useConfettiCannon)(_, m), I = s.useCallback(() => {
+  })), A = (0, l.useConfettiCannon)(S, g), N = s.useCallback(() => {
     let e = n.current;
-    if (null != e && g.isReady) {
+    if (null != e && A.isReady) {
       var t, a, s, l;
-      g.createMultipleConfetti((t = e.offsetLeft, a = e.offsetTop, s = e.clientHeight, l = e.clientWidth, {
-        ...o.COMMON_CONFETTI_BASE_CONFIG,
+      A.createMultipleConfetti((t = e.offsetLeft, a = e.offsetTop, s = e.clientHeight, l = e.clientWidth, {
+        ...d.COMMON_CONFETTI_BASE_CONFIG,
         position: {
           type: "static-random",
           minValue: {
@@ -58,28 +60,28 @@ t.default = e => {
         }
       }), 50)
     }
-  }, [n, g]);
-  return s.useEffect(() => {
+  }, [n, A]);
+  return (s.useEffect(() => {
     var e;
     let n = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
-    !h.current && n && (E(), I()), h.current = n
-  }, [t, I, E]), (0, a.jsxs)("div", {
-    className: u.wrapper,
+    !C.current && n && (_(), N()), C.current = n
+  }, [t, N, _]), m) ? null : (0, a.jsxs)("div", {
+    className: c.wrapper,
     children: [(0, a.jsx)(i.animated.div, {
-      className: u.background,
+      className: c.background,
       style: {
-        opacity: f
+        opacity: h
       }
     }), (0, a.jsx)(l.ConfettiCanvas, {
-      ref: C,
-      className: u.confetti,
-      environment: p.current
+      ref: p,
+      className: c.confetti,
+      environment: T.current
     }), (0, a.jsx)(l.SpriteCanvas, {
-      ref: S,
-      sprites: [d],
-      colors: c,
-      spriteWidth: o.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-      spriteHeight: o.COMMON_CONFETTI_MAX_SPRITE_SIZE
+      ref: I,
+      sprites: [f],
+      colors: E,
+      spriteWidth: d.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+      spriteHeight: d.COMMON_CONFETTI_MAX_SPRITE_SIZE
     })]
   })
 }

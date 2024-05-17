@@ -31,8 +31,9 @@ var a = n("735250"),
   P = n("263094");
 let x = e => {
     let {
-      quest: t
-    } = e, n = (0, v.useHandleClaimQuestsReward)({
+      quest: t,
+      useReducedMotion: n
+    } = e, s = (0, v.useHandleClaimQuestsReward)({
       quest: t,
       location: S.QuestContent.QUEST_BAR
     });
@@ -41,7 +42,8 @@ let x = e => {
       children: (0, a.jsx)(d.default, {
         fullWidth: !0,
         size: u.Button.Sizes.SMALL,
-        onClick: n,
+        onClick: s,
+        pauseAnimation: n,
         children: y.default.Messages.QUESTS_CLAIM_REWARD
       })
     })
@@ -156,9 +158,11 @@ let x = e => {
           progressBarRef: w,
           isExpanded: !0
         }), z ? (0, a.jsx)(x, {
-          quest: G
+          quest: G,
+          useReducedMotion: k
         }) : (0, a.jsx)(D, {
-          quest: G
+          quest: G,
+          useReducedMotion: k
         })]
       }) : (0, a.jsxs)("div", {
         className: P.questUnacceptedContent,
