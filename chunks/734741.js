@@ -3,6 +3,9 @@ n.r(t), n.d(t, {
   shouldScrollToMarketingMomentContent: function() {
     return L
   },
+  shouldShowReferralProgramPlanComparisonRow: function() {
+    return v
+  },
   useDismissWhatsNewCardDCs: function() {
     return A
   },
@@ -171,4 +174,14 @@ let h = "getWhatsNewBadgeCount",
       t = _(),
       n = I();
     return e || t || n
+  },
+  v = () => {
+    let {
+      canFlipReferralProgramCard: e
+    } = d.June2024MarketingMoment.getCurrentConfig({
+      location: "shouldShowReferralProgramPlanComparisonRow"
+    }, {
+      autoTrackExposure: !1
+    });
+    return C() && e
   }
