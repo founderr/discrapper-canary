@@ -3228,6 +3228,7 @@ e.exports = Object.freeze({
   QUICK_DM_BLOCKED: "You cannot message blocked users",
   QUICK_DM_USER: "Message @!!{name}!!",
   USER_SETTINGS_SEARCH_BAR: "Search User Settings",
+  USER_SETTINGS_NO_SEARCH_RESULTS: "No Search Results",
   USER_SETTINGS_MY_ACCOUNT: "My Account",
   USER_SETTINGS_EDIT_USER_PROFILE: "Edit User Profile",
   USER_SETTINGS_EDIT_STATUS: "Edit Status",
