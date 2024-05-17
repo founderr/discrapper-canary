@@ -15,13 +15,13 @@ var n, a, l = i("735250"),
 let h = {
   friction: 7,
   tension: 40,
-  overshootClamping: !0
+  clamp: !0
 };
 class p extends s.PureComponent {
   componentWillEnter(e) {
     this._animated.setValue(-this.props.direction), c.default.spring(this._animated, {
       toValue: 0,
-      ...h
+      ...this.props.springSettings
     }).start(e)
   }
   componentDidAppear() {
@@ -30,18 +30,22 @@ class p extends s.PureComponent {
   componentWillLeave(e) {
     c.default.spring(this._animated, {
       toValue: this.props.direction,
-      ...h
+      ...this.props.springSettings
     }).start(e)
   }
   getStyle() {
-    return c.default.accelerate({
+    let e = c.default.accelerate({
       transform: [{
         translateX: this._animated.interpolate({
           inputRange: [0, 1],
           outputRange: ["0%", "-100%"]
         })
       }]
-    })
+    });
+    return this.props.fadeInOut && (e.opacity = this._animated.interpolate({
+      inputRange: [-1, 0, 1],
+      outputRange: [0, 1, 0]
+    })), e
   }
   render() {
     return (0, l.jsx)(c.default.div, {
@@ -65,13 +69,17 @@ t.default = e => {
     children: t,
     step: i,
     direction: n,
-    className: a
+    className: a,
+    springSettings: s = h,
+    fadeInOut: r = !1
   } = e;
   return (0, l.jsx)(d.TransitionGroup, {
     component: "div",
     className: o()(u.animator, a),
     children: (0, l.jsx)(p, {
       direction: n,
+      springSettings: s,
+      fadeInOut: r,
       children: t
     }, i)
   })
