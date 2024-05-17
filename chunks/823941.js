@@ -112,13 +112,13 @@ function O(e) {
   let {
     category: i,
     index: o
-  } = e, u = _[i.skuId], c = o % 2 == 0, d = null !== (r = c ? null == u ? void 0 : u.left() : null == u ? void 0 : u.right()) && void 0 !== r ? r : (0, E.getCollectiblesAssetURL)(i.banner, {
+  } = e, u = _[i.skuId], c = o % 2 == 1, d = null !== (r = c ? null == u ? void 0 : u.left() : null == u ? void 0 : u.right()) && void 0 !== r ? r : (0, E.getCollectiblesAssetURL)(i.banner, {
     size: v.MAX_CONTENT_WIDTH,
     format: "jpg"
   }), f = c ? null == u ? void 0 : null === (t = u.leftOverflow) || void 0 === t ? void 0 : t.call(u) : null == u ? void 0 : null === (a = u.rightOverflow) || void 0 === a ? void 0 : a.call(u), {
     backgroundColors: C
   } = (0, h.default)(i.styles), m = {
-    objectPosition: c ? "right" : "left",
+    objectPosition: c ? "left" : "right",
     background: null != C ? "".concat((0, v.getBackgroundGradient)(C), " border-box border-box") : void 0,
     outlineColor: null != C ? C.border.toHslString() : void 0
   };
@@ -131,10 +131,14 @@ function O(e) {
       alt: ""
     }), null != f && (0, l.jsx)("img", {
       src: f,
-      className: c ? I.overflowImage : I.overflowImageLeft,
+      className: n()(I.overflowImage, {
+        [I.overflowImageLeft]: c
+      }),
       alt: ""
     }), (0, l.jsx)("img", {
-      className: n()(I.condensedCategoryLogo, c ? I.condensedCategoryLogoLeft : I.condensedCategoryLogo),
+      className: n()(I.condensedCategoryLogo, {
+        [I.condensedCategoryLogoLeft]: !c
+      }),
       src: (0, E.getCollectiblesAssetURL)(i.logo, {
         size: N
       }),
@@ -144,7 +148,9 @@ function O(e) {
       }
     }), (0, l.jsx)(x.default, {
       category: i,
-      className: n()(I.limitedTimeBadge, c ? I.limitedTimeBadge : I.limitedTimeBadgeLeft),
+      className: n()(I.limitedTimeBadge, {
+        [I.limitedTimeBadgeLeft]: c
+      }),
       display: "banner"
     })]
   })
