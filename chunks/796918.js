@@ -67,7 +67,13 @@ t.default = e => {
         className: p.mainPanelContainer,
         children: [(0, n.jsxs)("div", {
           className: p.inputContainer,
-          children: [(0, n.jsx)(l.TextInput, {
+          children: [(0, n.jsx)(l.Text, {
+            variant: "text-xs/semibold",
+            color: "text-muted",
+            className: p.contentLabel,
+            children: h.default.Messages.CLAN_SETUP_INTERESTS_LABEL
+          }), (0, n.jsx)(l.TextInput, {
+            autoFocus: !0,
             inputClassName: p.input,
             value: x,
             onKeyDown: y,
