@@ -7,5 +7,5 @@ n.r(t), n.d(t, {
 var i = n("981631");
 
 function r(e) {
-  return e.type === i.MessageTypes.DEFAULT && null != e.messageReference
+  return e.type === i.MessageTypes.DEFAULT && null != e.messageReference && e.messageReference.type !== i.MessageReferenceTypes.FORWARD
 }

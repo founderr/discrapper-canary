@@ -529,5 +529,8 @@ e.exports = Object.freeze({
   CLAN_DISCOVERY_UPSELL_JOIN_WFS: "Questions? Head over to the $[Wumpus Feedback Squad](wfsHook) server to ask Discord questions or give feedback!",
   CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL: "Join Wumpus Feedback Squad server",
   CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP: "You cannot apply to Guilds right now",
-  MESSAGE_ACTION_FORWARD: "Forward"
+  MESSAGE_ACTION_FORWARD: "Forward",
+  MESSAGE_FORWARDED: "Forwarded",
+  MESSAGE_ACTION_FORWARD_MEDIA_A11Y: "Forward media from this message",
+  MESSAGE_ACTION_FORWARD_EMBED_A11Y: "Forward embed from this message"
 })

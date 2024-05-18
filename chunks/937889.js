@@ -77,19 +77,20 @@ function c(e, t, n) {
 function E(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return function(e, t, n) {
+    var r;
     let {
-      toAST: r = !1,
-      hideSimpleEmbedContent: a = !0,
-      formatInline: o = !1,
-      postProcessor: _
-    } = n, c = !1, E = e(t.content, !0, d(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), a && (e = function(e, t) {
+      toAST: a = !1,
+      hideSimpleEmbedContent: o = !0,
+      formatInline: _ = !1,
+      postProcessor: c
+    } = n, E = !1, I = e((null !== (r = n.contentMessage) && void 0 !== r ? r : t).content, !0, d(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), o && (e = function(e, t) {
       if (1 !== e.length || 1 !== t.length) return e;
       let n = e[0],
         i = t[0];
       return ("link" === n.type || "attachmentLink" === n.type) && l.has(i.type) && (0, s.isEmbedInline)(i) ? [] : e
-    }(e, t.embeds)), !o && (e = function(e, t) {
+    }(e, t.embeds)), !_ && (e = function(e, t) {
       return t ? T(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = T(e[0].content)), e)
-    }(e, n)), c = function(e, t) {
+    }(e, n)), E = function(e, t) {
       return t ? f(e) : "paragraph" === e[0].type && e[0].content instanceof Array && f(e[0].content)
     }(e = function(e) {
       let t = e.some(e => "link" !== e.type || !1);
@@ -98,14 +99,14 @@ function E(e) {
           r = (0, i.parseQuestsEmbedCode)(e.target);
         return !(n && null != r && !t)
       })
-    }(e), n), o && (e = function e(t) {
+    }(e), n), _ && (e = function e(t) {
       return t.forEach(t => {
         u.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
       }), t
-    }(e)), null != _ && (e = _(e, n)), e));
+    }(e)), null != c && (e = c(e, n)), e));
     return {
-      hasSpoilerEmbeds: c,
-      content: E
+      hasSpoilerEmbeds: E,
+      content: I
     }
   }(t.formatInline ? r.default.parseInlineReply : r.default.parse, e, t)
 }
