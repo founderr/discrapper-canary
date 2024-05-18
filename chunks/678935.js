@@ -12,7 +12,9 @@ var a = n("735250"),
   o = n("214655");
 
 function u(e) {
-  let {} = e, [t, n] = s.useState(l.QuestFilters.INCOMPLETE);
+  let {} = e, [t, n] = s.useState(l.QuestFilters.INCOMPLETE), {
+    quests: u
+  } = (0, l.useFilteredQuests)(t);
   return (0, a.jsxs)("div", {
     className: o.container,
     children: [(0, a.jsx)(r.default, {
@@ -21,7 +23,7 @@ function u(e) {
       },
       selectedFilter: t
     }), (0, a.jsx)(i.default, {
-      quests: []
+      quests: u
     })]
   })
 }

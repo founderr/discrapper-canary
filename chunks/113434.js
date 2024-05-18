@@ -4,31 +4,34 @@ n.r(t), n.d(t, {
     return r
   },
   useDismissNewQuestBadge: function() {
-    return L
-  },
-  useExpiredQuestsMap: function() {
-    return p
-  },
-  useIsQuestExpired: function() {
-    return O
-  },
-  useQuestCollectibles: function() {
     return D
   },
-  useQuestFormattedDate: function() {
+  useExpiredQuestsMap: function() {
     return C
   },
+  useFilteredQuests: function() {
+    return O
+  },
+  useIsQuestExpired: function() {
+    return R
+  },
+  useQuestCollectibles: function() {
+    return y
+  },
+  useQuestFormattedDate: function() {
+    return g
+  },
   useQuestFromActivities: function() {
-    return v
+    return M
   },
   useQuestInstructionTitle: function() {
-    return R
+    return L
   },
   useQuests: function() {
     return N
   },
   useQuestsForSettingsBadge: function() {
-    return g
+    return v
   }
 }), n("47120"), n("653041");
 var i, r, a, s, o = n("470079"),
@@ -70,7 +73,69 @@ function N() {
   }
 }
 
-function p() {
+function p(e, t, n) {
+  return e.localeCompare(t) * (0 === n ? -1 : 1)
+}(a = i || (i = {}))[a.DESC = 0] = "DESC", a[a.ASC = 1] = "ASC";
+
+function O(e) {
+  let {
+    quests: t,
+    isFetchingCurrentQuests: n
+  } = N({
+    fetchPolicy: "cache-and-network"
+  }), i = function(e) {
+    let t = o.useMemo(() => e.filter(e => {
+        var t;
+        return !((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null)
+      }), [e]),
+      n = o.useRef([]);
+    return o.useMemo(() => {
+      if (0 === t.length) return [];
+      if (n.current.length > 0) return n.current;
+      let e = t.sort((e, t) => {
+        var n, i, r, a, s, o;
+        let l = !(0, T.isQuestExpired)(e),
+          u = !(0, T.isQuestExpired)(t);
+        if (l !== u) return l ? -1 : 1;
+        let d = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
+          _ = (null === (i = t.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null,
+          c = d && l;
+        if (c !== (_ && u)) return c ? -1 : 1;
+        let E = (0, T.isTargetedForContent)(e, I.QuestContent.QUEST_BAR),
+          f = (0, T.isTargetedForContent)(t, I.QuestContent.QUEST_BAR),
+          S = E && l;
+        if (S !== (f && u)) return S ? -1 : 1;
+        let h = d && !l;
+        return h !== (_ && !u) ? h ? -1 : 1 : l && u ? p(null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : p(null === (r = e.config) || void 0 === r ? void 0 : r.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0)
+      });
+      return n.current = e, e
+    }, [t])
+  }(t), r = function(e) {
+    let t = o.useMemo(() => e.filter(e => {
+        var t;
+        return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null
+      }), [e]),
+      n = o.useRef([]);
+    return o.useMemo(() => {
+      if (0 === t.length) return [];
+      if (n.current.length > 0) return n.current;
+      let e = t.sort((e, t) => {
+        var n, i, r, a;
+        let s = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null;
+        if (s !== ((null === (i = t.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null)) return s ? -1 : 1;
+        let o = null === (r = e.config) || void 0 === r ? void 0 : r.rewardCodeExpiresAt;
+        return p(o, null === (a = t.config) || void 0 === a ? void 0 : a.rewardCodeExpiresAt, 1)
+      });
+      return n.current = e, e
+    }, [t])
+  }(t), a = [];
+  return {
+    quests: a = "incomplete" === e ? i : r,
+    isFetchingCurrentQuests: n
+  }
+}
+
+function C() {
   let {
     quests: e,
     isFetchingCurrentQuests: t
@@ -97,15 +162,15 @@ function p() {
   }, [e, t]), n
 }
 
-function O(e) {
-  let t = p();
+function R(e) {
+  let t = C();
   return o.useMemo(() => {
     var n;
     return null != e && null !== (n = t.get(e.id)) && void 0 !== n && n
   }, [e, t])
 }
 
-function C(e) {
+function g(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
       dateStyle: "short"
     },
@@ -113,7 +178,7 @@ function C(e) {
   return o.useMemo(() => null == e ? "" : new Date(e).toLocaleDateString(n, t), [e, t, n])
 }
 
-function R(e, t) {
+function L(e, t) {
   return ((0, f.useIsEligibleForQuestPlaytime)({
     location: t
   }) && (0, T.hasPlaytimeTaskVariant)({
@@ -124,13 +189,13 @@ function R(e, t) {
   })
 }
 
-function g() {
+function v() {
   let {
     quests: e,
     isFetchingCurrentQuests: t
   } = N({
     fetchPolicy: "cache-or-network"
-  }), n = p();
+  }), n = C();
   return o.useMemo(() => {
     let i = [];
     if (t || 0 === e.length) return i;
@@ -152,23 +217,23 @@ function g() {
   }, [e, n, t])
 }
 
-function L() {
-  let e = g();
+function D() {
+  let e = v();
   o.useEffect(() => {
     for (let t of e)(0, c.dismissQuestContent)(t.id, I.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE)
   }, [e])
 }
 
-function v(e) {
+function M(e) {
   let t = (0, h.useIsEligibleForMembersListQuestEntrypoint)({
       location: A.QuestsExperimentLocations.MEMBERS_LIST
     }),
     n = (0, u.useStateFromStores)([E.default], () => t ? E.default.quests : null),
     i = o.useMemo(() => (0, T.getQuestsFromActivities)(n, e), [e, n]);
-  return O(i) ? null : i
+  return R(i) ? null : i
 }
 
-function D(e) {
+function y(e) {
   var t;
   let n = (0, T.hasQuestCollectibleRewards)(e),
     {
@@ -180,4 +245,4 @@ function D(e) {
     avatarDecoration: null == i ? void 0 : null === (t = i.items) || void 0 === t ? void 0 : t[0],
     isFetching: r
   }
-}(a = i || (i = {}))[a.DESC = 0] = "DESC", a[a.ASC = 1] = "ASC", (s = r || (r = {})).INCOMPLETE = "incomplete", s.COMPLETE = "complete"
+}(s = r || (r = {})).INCOMPLETE = "incomplete", s.COMPLETE = "complete"
