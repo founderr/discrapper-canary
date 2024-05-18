@@ -65,7 +65,7 @@ function h(e) {
         variant: "text-xs/medium",
         color: "header-secondary",
         className: m.descriptionText,
-        children: x.length > 0 ? x : f.default.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
+        children: (null == x ? void 0 : x.length) > 0 ? x : f.default.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
       })]
     }), (0, n.jsxs)("div", {
       className: s()(m.tagsContainer, E ? m.traitsBorderMask : void 0),
