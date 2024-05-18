@@ -111,7 +111,7 @@ let v = e => {
       })
     })
   };
-class P extends(s = i.PureComponent) {
+class y extends(s = i.PureComponent) {
   componentDidMount() {
     let {
       items: e
@@ -266,7 +266,7 @@ class P extends(s = i.PureComponent) {
     })
   }
 }
-E(P, "defaultProps", {
+E(y, "defaultProps", {
   paused: !1,
   videoAutoPlay: !0
-}), t.default = P
+}), t.default = y

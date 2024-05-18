@@ -18,8 +18,8 @@ var n = i("735250"),
   f = i("132871"),
   m = i("147890"),
   g = i("409425"),
-  x = i("57716"),
-  C = i("981631"),
+  C = i("57716"),
+  x = i("981631"),
   _ = i("689938"),
   I = i("305319");
 
@@ -38,7 +38,7 @@ function v(e) {
     onClick: l,
     children: o
   }) : (0, n.jsx)(h.default, {
-    href: C.Routes.APPLICATION_DIRECTORY_PROFILE(u),
+    href: x.Routes.APPLICATION_DIRECTORY_PROFILE(u),
     children: (0, n.jsx)(c.Button, {
       className: I.applicationCta,
       onClick: l,
@@ -94,7 +94,7 @@ function A(e) {
       title: l,
       application_directory_collection_items: c
     }
-  } = e, h = (0, x.default)({
+  } = e, h = (0, C.default)({
     collection: t
   }), [g, A] = a.useState(), E = (0, f.useApplicationDirectoryHistory)(e => e.guildId);
   return a.useEffect(() => {
@@ -122,7 +122,7 @@ function A(e) {
         let {
           application: a
         } = e;
-        null != a && u.default.track(C.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
+        null != a && u.default.track(x.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
           collection_id: i,
           offset: n,
           results: [a.id],
@@ -146,13 +146,13 @@ function A(e) {
           hash: a
         });
         if (o === r.ApplicationDirectoryCollectionItemType.APPLICATION && null != s) {
-          var x, I;
+          var C, I;
           return (0, n.jsx)(v, {
             collectionTitle: l,
             title: s.name,
-            description: null !== (I = null === (x = s.directory_entry) || void 0 === x ? void 0 : x.short_description) && void 0 !== I ? I : s.description,
+            description: null !== (I = null === (C = s.directory_entry) || void 0 === C ? void 0 : C.short_description) && void 0 !== I ? I : s.description,
             handleClick: () => {
-              u.default.track(C.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+              u.default.track(x.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                 collection_id: i,
                 application_id: s.id,
                 guild_id: E,
@@ -171,7 +171,7 @@ function A(e) {
           title: d,
           description: c,
           handleClick: () => {
-            u.default.track(C.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+            u.default.track(x.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
               collection_id: i,
               link: f,
               guild_id: E,

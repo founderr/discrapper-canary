@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return C
+    return x
   }
 }), i("47120"), i("610138"), i("216116"), i("78328"), i("815648");
 var n = i("735250"),
@@ -18,13 +18,13 @@ var n = i("735250"),
   f = i("147890"),
   m = i("981631"),
   g = i("689938"),
-  x = i("125129");
+  C = i("125129");
 
-function C(e) {
+function x(e) {
   let {
     className: t
-  } = e, i = (0, p.useApplicationDirectoryHistory)(e => e.guildId), l = (0, r.useStateFromStores)([u.default], () => u.default.getCategories()), C = a.useMemo(() => [(0, h.getAllCategory)(), ...l], [l]), _ = (0, p.getCurrentView)(), I = e => {
-    let t = C.find(t => t.id === e);
+  } = e, i = (0, p.useApplicationDirectoryHistory)(e => e.guildId), l = (0, r.useStateFromStores)([u.default], () => u.default.getCategories()), x = a.useMemo(() => [(0, h.getAllCategory)(), ...l], [l]), _ = (0, p.getCurrentView)(), I = e => {
+    let t = x.find(t => t.id === e);
     c.default.track(m.AnalyticEvents.APP_DIRECTORY_CATEGORY_CLICKED, {
       category: t.name,
       category_id: t.id,
@@ -35,8 +35,8 @@ function C(e) {
     })
   };
   return (0, n.jsx)("nav", {
-    className: s()(x.container, t),
-    children: C.map(e => {
+    className: s()(C.container, t),
+    children: x.map(e => {
       let t = e.id,
         i = e.name,
         a = (0, h.getCategoryIcon)(e),
@@ -44,13 +44,13 @@ function C(e) {
       return l.set("category_id", t.toString()), (0, n.jsx)(d.default, {
         href: "".concat(m.Routes.APPLICATION_DIRECTORY_SEARCH, "?").concat(l),
         children: (0, n.jsxs)(o.Clickable, {
-          className: x.category,
+          className: C.category,
           "aria-label": g.default.Messages.APP_DIRECTORY_CATEGORY_BUTTON_A11Y_LABEL.format({
             categoryName: i
           }),
           onClick: () => I(t),
           children: [(0, n.jsx)(a, {
-            className: x.icon,
+            className: C.icon,
             width: "24",
             height: "24"
           }), (0, n.jsx)(o.Text, {

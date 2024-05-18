@@ -44,8 +44,8 @@ function d(e) {
     text: f,
     children: e => (0, a.jsx)(s.Clickable, {
       className: o.container,
-      onClick: n,
       ...e,
+      onClick: n,
       children: h
     })
   })

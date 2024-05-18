@@ -59,16 +59,16 @@ let S = {
     width: 1920,
     height: 1080
   },
-  P = {
+  y = {
     width: 1280,
     height: 720
   },
-  y = e => (0, h.renderVideoComponent)({
+  O = e => (0, h.renderVideoComponent)({
     ...e,
     className: v.videoWrapper,
     mediaPlayerClassName: v.mediaPlayer
   }),
-  O = e => (0, a.jsx)(C.default, {
+  P = e => (0, a.jsx)(C.default, {
     ...e
   }),
   A = e => {
@@ -89,7 +89,7 @@ let S = {
       ...L
     }, n = {
       url: "".concat((0, E.YOUTUBE_EMBED_URL)(i.youtubeVideoId), "?").concat("rel=0&iv_load_policy=3&showinfo=0&modestbranding=1"),
-      ...P
+      ...y
     }, s = g.SupportedEmbedIFrame.YOUTUBE;
     else {
       let e = null != i.width ? i.width : 0,
@@ -122,8 +122,8 @@ let S = {
       autoMute: f,
       onMute: I,
       autoPlay: c,
-      renderVideoComponent: y,
-      renderImageComponent: O,
+      renderVideoComponent: O,
+      renderImageComponent: P,
       renderLinkComponent: h.renderMaskedLinkComponent
     });
     return c ? x : (0, a.jsx)(d.Clickable, {
@@ -140,7 +140,7 @@ let S = {
       renderLinkComponent: h.renderMaskedLinkComponent
     })
   });
-class M extends(s = i.PureComponent) {
+class T extends(s = i.PureComponent) {
   componentDidMount() {
     x.ComponentDispatch.subscribe(E.ComponentActions.CAROUSEL_PREV, this.manualPrevious), x.ComponentDispatch.subscribe(E.ComponentActions.CAROUSEL_NEXT, this.manualNext)
   }
@@ -365,7 +365,7 @@ class M extends(s = i.PureComponent) {
     })
   }
 }
-N(M, "defaultProps", {
+N(T, "defaultProps", {
   autoplayInterval: 8e3,
   paused: !1
-}), t.default = (0, u.default)(M)
+}), t.default = (0, u.default)(T)

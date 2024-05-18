@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return C
+    return x
   }
 });
 var n = i("735250");
@@ -19,15 +19,15 @@ var a = i("120356"),
   f = i("147890"),
   m = i("57716"),
   g = i("981631"),
-  x = i("95830");
+  C = i("95830");
 
-function C(e) {
+function x(e) {
   let {
     collection: t,
     collection: {
       id: i,
       title: a,
-      application_directory_collection_items: C
+      application_directory_collection_items: x
     }
   } = e, _ = (0, m.default)({
     collection: t
@@ -36,17 +36,17 @@ function C(e) {
     ref: _,
     children: [(0, n.jsx)(r.Heading, {
       variant: "heading-lg/semibold",
-      className: x.header,
+      className: C.header,
       children: a
     }), (0, n.jsx)("div", {
-      className: x.list,
-      children: C.map(e => {
+      className: C.list,
+      children: x.map(e => {
         let {
           id: t,
           type: a,
           application: p,
           image_hash: m,
-          title: C,
+          title: x,
           description: _,
           call_to_action_label: v,
           call_to_action_url: A
@@ -58,7 +58,7 @@ function C(e) {
         });
         return a === s.ApplicationDirectoryCollectionItemType.APPLICATION && null != p ? (0, n.jsx)(c.default, {
           href: g.Routes.APPLICATION_DIRECTORY_PROFILE(p.id),
-          className: x.item,
+          className: C.item,
           children: (0, n.jsx)(u.default, {
             imageSrc: E,
             application: p,
@@ -77,14 +77,14 @@ function C(e) {
             },
             animatesOnHover: !0
           })
-        }, t) : a === s.ApplicationDirectoryCollectionItemType.LINK && null != C ? (0, n.jsxs)(h.default, {
-          className: l()(x.item, x.linkCard),
+        }, t) : a === s.ApplicationDirectoryCollectionItemType.LINK && null != x ? (0, n.jsxs)(h.default, {
+          className: l()(C.item, C.linkCard),
           imageSrc: E,
-          header: C,
-          headerClassName: x.cardHeader,
+          header: x,
+          headerClassName: C.cardHeader,
           children: [(0, n.jsx)(r.Text, {
             variant: "text-sm/normal",
-            className: x.linkDescription,
+            className: C.linkDescription,
             children: _
           }), (0, n.jsx)(r.Anchor, {
             onClick: () => {
@@ -96,7 +96,7 @@ function C(e) {
               })
             },
             href: A,
-            className: l()((0, r.getButtonStyle)(), x.linkCta),
+            className: l()((0, r.getButtonStyle)(), C.linkCta),
             children: v
           })]
         }, t) : void 0

@@ -19,17 +19,17 @@ function d(e) {
     onClick: f,
     imageSrc: m,
     className: g,
-    animatesOnHover: x
-  } = e, C = (0, o.default)({
+    animatesOnHover: C
+  } = e, x = (0, o.default)({
     application: p
-  }), _ = null === (t = p.categories) || void 0 === t ? void 0 : t[0], I = (null !== (u = null === (i = p.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== u ? u : 0) > 0 || C.length > 0, v = a.useCallback(() => {
+  }), _ = null === (t = p.categories) || void 0 === t ? void 0 : t[0], I = (null !== (u = null === (i = p.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== u ? u : 0) > 0 || x.length > 0, v = a.useCallback(() => {
     f({
-      mutualGuilds: C
+      mutualGuilds: x
     })
-  }, [f, C]), A = (0, n.jsx)(s.default, {
+  }, [f, x]), A = (0, n.jsx)(s.default, {
     application: p,
     textVariant: "text-xs/normal",
-    mutualGuilds: C,
+    mutualGuilds: x,
     mutualGuildShownMax: 3,
     guildIconSize: s.GuildIconSize.SMALL,
     compact: !0
@@ -53,7 +53,7 @@ function d(e) {
         }), A]
       })]
     }),
-    animatesOnHover: x,
+    animatesOnHover: C,
     children: null != p.description && (0, n.jsx)("div", {
       className: c.__invalid_children,
       children: (0, n.jsx)(l.Text, {

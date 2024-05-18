@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return C
+    return x
   }
 }), i("411104");
 var n = i("735250"),
@@ -18,9 +18,9 @@ var n = i("735250"),
   f = i("185156"),
   m = i("87528"),
   g = i("57348"),
-  x = i("164217");
+  C = i("164217");
 
-function C() {
+function x() {
   let e = (0, o.useStateFromStores)([c.default], () => c.default.appDirectoryIncludesInactiveCollections),
     t = (0, o.useStateFromStores)([u.default], () => u.default.getFetchState({
       includesInactive: e
@@ -58,7 +58,7 @@ function C() {
       }
       return (0, n.jsx)("div", {
         className: s()({
-          [x.topMargin]: l
+          [C.topMargin]: l
         }),
         children: a
       }, e.id)
