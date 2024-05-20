@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return Q
+    return z
   },
   getActiveAnalyticsSessionIDs: function() {
-    return X
+    return K
   }
 }), n("653041"), n("47120");
 var i = n("512722"),
@@ -226,33 +226,14 @@ function W(e) {
 }
 
 function K(e) {
-  let {
-    channelId: t
-  } = e, n = h.default.getVoiceChannelId();
-  null != n && n === t && Z(t)
-}
-
-function z(e) {
-  if (e.state === b.RTCConnectionStates.DISCONNECTED) Z(e.channelId)
-}
-
-function Z(e) {
-  let t = C.default.getSelfEmbeddedActivityForChannel(e);
-  null != t && ((0, O.stopEmbeddedActivity)({
-    channelId: e,
-    applicationId: t.applicationId
-  }), (0, O.disconnectEmbeddedActivity)(e, t.applicationId))
-}
-
-function X(e) {
   return k[e]
 }
-class Q extends u.default {
+class z extends u.default {
   _initialize() {
-    h.default.addChangeListener(this.handleSelectedChannelUpdate), o.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), o.default.subscribe("EMBEDDED_ACTIVITY_OPEN", x), o.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", F), o.default.subscribe("EMBEDDED_ACTIVITY_UPDATE", H), o.default.subscribe("EMBEDDED_ACTIVITY_UPDATE_V2", Y), o.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), o.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), o.default.subscribe("MEDIA_SESSION_JOINED", W), o.default.subscribe("CALL_DELETE", K), o.default.subscribe("RTC_CONNECTION_STATE", z)
+    h.default.addChangeListener(this.handleSelectedChannelUpdate), o.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), o.default.subscribe("EMBEDDED_ACTIVITY_OPEN", x), o.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", F), o.default.subscribe("EMBEDDED_ACTIVITY_UPDATE", H), o.default.subscribe("EMBEDDED_ACTIVITY_UPDATE_V2", Y), o.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), o.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), o.default.subscribe("MEDIA_SESSION_JOINED", W), o.default.subscribe("CALL_DELETE", this.handleCallDelete), o.default.subscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState)
   }
   _terminate() {
-    h.default.removeChangeListener(this.handleSelectedChannelUpdate), o.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), o.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", x), o.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", F), o.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE", H), o.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE_V2", Y), o.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), o.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), o.default.unsubscribe("MEDIA_SESSION_JOINED", W), o.default.unsubscribe("CALL_DELETE", K), o.default.unsubscribe("RTC_CONNECTION_STATE", z)
+    h.default.removeChangeListener(this.handleSelectedChannelUpdate), o.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), o.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", x), o.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", F), o.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE", H), o.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE_V2", Y), o.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), o.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), o.default.unsubscribe("MEDIA_SESSION_JOINED", W), o.default.unsubscribe("CALL_DELETE", this.handleCallDelete), o.default.unsubscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState)
   }
   constructor(...e) {
     super(...e), w(this, "handleSelectedChannelUpdate", () => {
@@ -318,6 +299,21 @@ class Q extends u.default {
         });
         t.code !== b.RPCCloseCodes.CLOSE_NORMAL && this.showErrorModal(t, i)
       }
+    }), w(this, "handleCallDelete", e => {
+      let {
+        channelId: t
+      } = e, n = h.default.getVoiceChannelId();
+      null != n && n === t && this.handleCallEnded(t)
+    }), w(this, "handleRTCConnectionState", e => {
+      if (e.state !== b.RTCConnectionStates.DISCONNECTED) return;
+      let t = e.channelId;
+      this.handleCallEnded(t)
+    }), w(this, "handleCallEnded", e => {
+      let t = C.default.getSelfEmbeddedActivityForChannel(e);
+      null != t && this.leaveActivity({
+        channelId: e,
+        applicationId: t.applicationId
+      })
     }), w(this, "handleDeferredOpen", async e => {
       var t, n, i;
       let r;

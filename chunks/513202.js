@@ -34,10 +34,12 @@ class d extends l.default {
       channelId: t,
       applicationId: n
     } = e;
-    s.default.wait(() => (0, o.stopEmbeddedActivity)({
-      channelId: t,
-      applicationId: n
-    }))
+    s.default.wait(() => {
+      (0, o.stopEmbeddedActivity)({
+        channelId: t,
+        applicationId: n
+      })
+    })
   }
   constructor(...e) {
     var t, n, i;
