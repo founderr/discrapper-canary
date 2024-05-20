@@ -12310,6 +12310,19 @@ span.clanTag_f4aadc {
     justify-content: center
 }
 
+.subtitle__8eb80 {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    width: 208px
+}
+
+.ellipsis_d32cd5 {
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
 .inline__51026 {
     display: flex;
     gap: 4px;
