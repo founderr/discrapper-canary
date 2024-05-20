@@ -55,6 +55,7 @@ function m(e) {
           onSelect: m,
           questContent: d.QuestContent.QUEST_HOME_DESKTOP,
           quest: t,
+          hideLearnMore: !0,
           shouldShowDisclosure: !0,
           showShareLink: !0,
           children: e => (0, a.jsx)(r.Clickable, {
@@ -62,7 +63,7 @@ function m(e) {
             className: C.submenuWrapper,
             "aria-label": _.default.Messages.ACTIONS,
             children: (0, a.jsx)(u.default, {
-              className: l()(C.submenuIcon, C.white)
+              className: l()(C.submenuIcon)
             })
           })
         }), (0, a.jsx)(f.QuestsAsset, {

@@ -11,6 +11,5 @@ e.exports = {
   partnerBranding: "partnerBranding__0ba05",
   positionContentOverBackground: "positionContentOverBackground__8fd75",
   submenuIcon: "submenuIcon__7e66b",
-  submenuWrapper: "submenuWrapper__7b769",
-  white: "white__6bc0a"
+  submenuWrapper: "submenuWrapper__7b769"
 }
