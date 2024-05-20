@@ -1,79 +1,88 @@
 "use strict";
-s.r(t), s("47120");
-var a, l, n, i, r = s("442837"),
-  o = s("570140"),
-  d = s("944163"),
-  u = s("116175"),
-  c = s("308083");
-let E = () => ({
+a.r(t), a("47120");
+var n, r, s, i, l = a("392711"),
+  o = a.n(l),
+  c = a("906280"),
+  d = a.n(c),
+  u = a("442837"),
+  f = a("570140"),
+  m = a("944163"),
+  h = a("116175"),
+  E = a("308083");
+let T = () => ({
     gameApplicationIds: new Set,
-    playstyle: c.ClanPlaystyles.NONE,
+    playstyle: E.ClanPlaystyles.NONE,
     interests: new Set,
     description: "",
-    wildcardDescriptors: [c.EMPTY_WILDCARD, c.EMPTY_WILDCARD, c.EMPTY_WILDCARD],
+    wildcardDescriptors: [E.EMPTY_WILDCARD, E.EMPTY_WILDCARD, E.EMPTY_WILDCARD],
     tag: "",
     verificationForm: {
-      ...d.NO_MEMBER_VERIFICATION_FORM
+      ...m.NO_MEMBER_VERIFICATION_FORM
     },
-    badgeKind: u.ClanBadgeKind.SWORD,
-    badgePrimaryColor: u.CLAN_BADGE_PALETTE_PRESETS["0"].primary,
-    badgeSecondaryColor: u.CLAN_BADGE_PALETTE_PRESETS["0"].secondary,
-    banner: c.ClanBannerKind.NIGHT_SKY,
-    brandPrimaryColor: c.CLAN_BRAND_PALETTE_PRESETS["0"].primary,
-    brandSecondaryColor: c.CLAN_BRAND_PALETTE_PRESETS["0"].secondary
+    badgeKind: h.ClanBadgeKind.SWORD,
+    badgePrimaryColor: h.CLAN_BADGE_PALETTE_PRESETS["0"].primary,
+    badgeSecondaryColor: h.CLAN_BADGE_PALETTE_PRESETS["0"].secondary,
+    banner: E.ClanBannerKind.NIGHT_SKY,
+    brandPrimaryColor: E.CLAN_BRAND_PALETTE_PRESETS["0"].primary,
+    brandSecondaryColor: E.CLAN_BRAND_PALETTE_PRESETS["0"].secondary
   }),
-  _ = E(),
-  I = !1,
-  T = {};
-class S extends(a = r.default.Store) {
+  p = T(),
+  C = d()(p),
+  _ = !1,
+  x = !1,
+  g = {};
+class N extends(n = u.default.Store) {
   getState() {
     return {
-      settings: _,
-      errors: T,
-      submitting: I
+      initialSettings: p,
+      settings: C,
+      dirty: _,
+      errors: g,
+      submitting: x
     }
   }
 }
-i = "ClanSettingsStore", (n = "displayName") in(l = S) ? Object.defineProperty(l, n, {
+i = "ClanSettingsStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[n] = i, t.default = new S(o.default, {
+}) : r[s] = i, t.default = new N(f.default, {
   CLAN_SETTINGS_FETCH_START: function() {
-    I = !1, _ = E(), T = {}
+    x = !1, p = T(), C = d()(p), _ = !1, g = {}
   },
   CLAN_SETTINGS_FETCH_SUCCESS: function(e) {
     let {
       settings: t
     } = e;
-    _ = {
-      ...E(),
+    p = {
+      ...T(),
       ...t
-    }
+    }, C = d()(p), _ = !1
   },
   CLAN_SETTINGS_UPDATE: function(e) {
     let {
       updates: t
     } = e;
-    for (let e in _ = {
-        ..._,
-        ...t
-      }, t) delete T[e], T = {
-      ...T
-    }
+    for (let e in C = {
+        ...C,
+        ...d()(t)
+      }, t) delete g[e], g = {
+      ...g
+    };
+    _ = !o().isEqual(o().omit(C, "verificationForm"), o().omit(p, "verificationForm"))
   },
   CLAN_SETTINGS_SUBMIT: function() {
-    I = !0, T = {}
+    x = !0, g = {}
   },
   CLAN_SETTINGS_SUBMIT_SUCCESS: function() {
-    I = !1, T = {}
+    x = !1, p = d()(C), _ = !1, g = {}
   },
   CLAN_SETTINGS_SUBMIT_ERROR: function(e) {
     let {
       error: t
     } = e;
-    I = !1, T = {
+    x = !1, g = {
       gameApplicationIds: t.getFirstFieldErrorMessage("game_application_ids"),
       playstyle: t.getFirstFieldErrorMessage("play_style"),
       description: t.getFirstFieldErrorMessage("description"),
@@ -84,15 +93,19 @@ i = "ClanSettingsStore", (n = "displayName") in(l = S) ? Object.defineProperty(l
   },
   MEMBER_VERIFICATION_FORM_UPDATE: function(e) {
     let {
-      form: t
+      form: t,
+      isLocalUpdate: a
     } = e;
-    if (null == _.verificationForm) return !1;
-    _ = {
-      ..._,
-      verificationForm: {
-        ..._.verificationForm,
-        ...t
-      }
-    }
+    if (null == C.verificationForm) return !1;
+    if (C = {
+        ...C,
+        verificationForm: {
+          ...C.verificationForm,
+          ...t
+        }
+      }, a) {
+      var n;
+      _ = !o().isEqual(C.verificationForm.formFields, null === (n = p.verificationForm) || void 0 === n ? void 0 : n.formFields)
+    } else _ = !1
   }
 })

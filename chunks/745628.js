@@ -10,18 +10,19 @@ var r = a("120356"),
   c = a("689938"),
   d = a("661926");
 t.default = e => {
+  var t, a, r;
   let {
-    guildId: t,
-    handleUpdate: a,
-    progress: r,
-    errors: u
+    guildId: u,
+    handleUpdate: f,
+    progress: m,
+    errors: h
   } = e, {
-    wildcardDescriptors: f,
-    description: m
-  } = r, h = (e, t) => {
-    let n = [...f];
-    n[t] = e, a({
-      wildcardDescriptors: n
+    wildcardDescriptors: E,
+    description: T
+  } = m, p = (e, t) => {
+    let a = [...E];
+    a[t] = e, f({
+      wildcardDescriptors: a
     })
   };
   return (0, n.jsxs)("div", {
@@ -35,11 +36,11 @@ t.default = e => {
       color: "header-secondary",
       className: d.subtitle,
       children: c.default.Messages.CLAN_SETUP_DESCRIPTION_SUBTITLE
-    }), (null == u ? void 0 : u.description) != null && (0, n.jsx)(i.Text, {
+    }), (null == h ? void 0 : h.description) != null && (0, n.jsx)(i.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
       className: d.errorText,
-      children: u.description
+      children: h.description
     }), (0, n.jsxs)("div", {
       className: d.content,
       children: [(0, n.jsxs)("div", {
@@ -49,10 +50,10 @@ t.default = e => {
           children: (0, n.jsx)(i.TextArea, {
             className: d.input,
             maxLength: o.MAX_DESCRIPTION_LENGTH,
-            onChange: e => a({
+            onChange: e => f({
               description: e
             }),
-            value: m,
+            value: null != T ? T : "",
             rows: 5,
             autoFocus: !0,
             autosize: !0,
@@ -68,29 +69,29 @@ t.default = e => {
           color: "header-secondary",
           className: d.title,
           children: c.default.Messages.CLAN_SETUP_WILDCARDS_SUBTITLE
-        }), (null == u ? void 0 : u.wildcardDescriptors) != null && (0, n.jsx)(i.Text, {
+        }), (null == h ? void 0 : h.wildcardDescriptors) != null && (0, n.jsx)(i.Text, {
           variant: "text-sm/normal",
           color: "status-danger",
           className: d.errorText,
-          children: u.wildcardDescriptors
+          children: h.wildcardDescriptors
         }), (0, n.jsxs)("div", {
           className: d.wildcardRow,
           children: [(0, n.jsx)(i.TextInput, {
             inputClassName: s()(d.input, d.wildcardInput),
-            value: f[0],
-            onChange: e => h(e, 0),
+            value: null !== (t = E[0]) && void 0 !== t ? t : "",
+            onChange: e => p(e, 0),
             maxLength: o.MAX_WILDCARD_LENGTH,
             placeholder: o.CLAN_WILDCARD_PLACEHOLDERS["0"]
           }), (0, n.jsx)(i.TextInput, {
             inputClassName: s()(d.input, d.wildcardInput),
-            value: f[1],
-            onChange: e => h(e, 1),
+            value: null !== (a = E[1]) && void 0 !== a ? a : "",
+            onChange: e => p(e, 1),
             maxLength: o.MAX_WILDCARD_LENGTH,
             placeholder: o.CLAN_WILDCARD_PLACEHOLDERS["1"]
           }), (0, n.jsx)(i.TextInput, {
             inputClassName: s()(d.input, d.wildcardInput),
-            value: f[2],
-            onChange: e => h(e, 2),
+            value: null !== (r = E[2]) && void 0 !== r ? r : "",
+            onChange: e => p(e, 2),
             maxLength: o.MAX_WILDCARD_LENGTH,
             placeholder: o.CLAN_WILDCARD_PLACEHOLDERS["2"]
           })]
@@ -98,8 +99,8 @@ t.default = e => {
       }), (0, n.jsx)("div", {
         className: d.fixedWidthSidebar,
         children: (0, n.jsx)(l.default, {
-          guildId: t,
-          progress: r,
+          guildId: u,
+          progress: m,
           maskTraits: !0
         })
       })]

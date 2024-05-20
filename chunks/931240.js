@@ -62,8 +62,7 @@ async function d(e, t) {
         banner: t.banner,
         brand_color_primary: t.brandPrimaryColor,
         brand_color_secondary: t.brandSecondaryColor,
-        wildcard_descriptors: t.wildcardDescriptors,
-        badge_image: t.badgeImage
+        wildcard_descriptors: t.wildcardDescriptors
       }
     }), r.default.dispatch({
       type: "CLAN_SETUP_SUCCESS",
@@ -186,8 +185,7 @@ async function h(e, t) {
         banner: t.banner,
         brand_color_primary: t.brandPrimaryColor,
         brand_color_secondary: t.brandSecondaryColor,
-        wildcard_descriptors: t.wildcardDescriptors,
-        badge_image: t.badgeImage
+        wildcard_descriptors: t.wildcardDescriptors
       }
     });
     return r.default.dispatch({

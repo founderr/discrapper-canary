@@ -43,7 +43,6 @@ let o = new Map,
     brandSecondaryColor: void 0,
     currentStep: I.ClanSetupSteps.GAMES,
     furthestStep: I.ClanSetupSteps.GAMES,
-    badgeImage: "",
     requiredGameId: void 0
   });
 
@@ -99,8 +98,7 @@ class G extends(E = T.default.PersistedStore) {
         brandSecondaryColor: s.brandSecondaryColor,
         currentStep: s.currentStep,
         furthestStep: s.furthestStep,
-        requiredGameId: s.requiredGameId,
-        badgeImage: s.badgeImage
+        requiredGameId: s.requiredGameId
       }))
     })
   }
@@ -124,8 +122,7 @@ class G extends(E = T.default.PersistedStore) {
         brandSecondaryColor: E.brandSecondaryColor,
         currentStep: E.currentStep,
         furthestStep: E.furthestStep,
-        requiredGameId: E.requiredGameId,
-        badgeImage: E.badgeImage
+        requiredGameId: E.requiredGameId
       }
     }), {
       progressByGuild: e

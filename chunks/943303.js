@@ -8,6 +8,7 @@ e.exports = {
   mainContent: "mainContent__465e0",
   modal: "modal__06f49",
   modalContents: "modalContents_d4af1c",
+  noticeRegion: "noticeRegion_f037d9",
   settingsTab: "settingsTab_c602d2",
   sidebar: "sidebar__57865",
   sidebarWrapper: "sidebarWrapper_c37160",
