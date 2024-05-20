@@ -87,11 +87,11 @@ async function E(e, t) {
     return n
   } catch (t) {
     let e = new a.APIError(t);
-    r.default.dispatch({
+    return r.default.dispatch({
       type: "USER_PROFILE_UPDATE_FAILURE",
       errors: {},
       apiError: e
-    })
+    }), t
   }
 }
 
