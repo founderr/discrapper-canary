@@ -24,14 +24,15 @@ let c = async e => {
     status: n = u.GuildJoinRequestApplicationStatuses.SUBMITTED,
     before: a,
     after: s,
-    limit: o = u.MAX_RESULTS_PER_PAGE
-  } = e;
-  if (!(l.default.isFetching() || l.default.hasFetched(t))) {
+    limit: o = u.MAX_RESULTS_PER_PAGE,
+    force: c = !1
+  } = e, E = c || !l.default.hasFetched(t);
+  if (!l.default.isFetching() && E) {
     r.default.dispatch({
       type: "GUILD_JOIN_REQUESTS_FETCH_START"
     });
     try {
-      var c;
+      var I;
       let e = await i.HTTP.get({
           url: _.Endpoints.GUILD_JOIN_REQUESTS(t),
           query: {
@@ -42,7 +43,7 @@ let c = async e => {
           }
         }),
         l = e.body.total,
-        u = (null !== (c = e.body.guild_join_requests) && void 0 !== c ? c : []).map(d.joinRequestFromServer);
+        u = (null !== (I = e.body.guild_join_requests) && void 0 !== I ? I : []).map(d.joinRequestFromServer);
       return r.default.dispatch({
         type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
         status: n,
