@@ -10,8 +10,8 @@ var r = n("481060"),
   a = n("318374"),
   s = n("522289"),
   o = n("346656"),
-  l = n("706327"),
-  u = n("285470"),
+  l = n("726059"),
+  u = n("162267"),
   d = n("228168"),
   _ = n("182294"),
   c = n("689938"),
@@ -21,7 +21,11 @@ function I(e) {
   let {
     user: t,
     onOpenProfile: n
-  } = e, I = (0, l.useMutualFriends)(t), T = (0, u.useMutualGuilds)(t), f = null != I && I.length > 0, S = null != T && T.length > 0, h = f && S ? "text-xs/normal" : "text-sm/normal";
+  } = e, {
+    mutualFriends: I
+  } = (0, l.default)(t.id), {
+    mutualGuilds: T
+  } = (0, u.default)(t.id), f = null != I && I.length > 0, S = null != T && T.length > 0, h = f && S ? "text-xs/normal" : "text-sm/normal";
   return f || S ? (0, i.jsxs)("div", {
     className: E.mutuals,
     children: [f ? (0, i.jsxs)(r.Clickable, {

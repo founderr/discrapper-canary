@@ -33,7 +33,7 @@ t.default = e => {
     })
   });
   return (0, s.jsxs)("div", {
-    className: o()(f.__invalid_listWrapper, p),
+    className: p,
     children: [(0, s.jsx)(u.Button, {
       className: f.collapseBtn,
       innerClassName: f.collapseBtnContent,
@@ -66,7 +66,7 @@ t.default = e => {
       }).map((e, t) => (0, s.jsxs)("div", {
         className: o()({
           [h.mutualFriendItem]: 0 === a,
-          [h.__invalid_mutualGuildsItem]: 1 === a
+          [h.mutualGuildItem]: 1 === a
         }),
         children: [(0, s.jsx)(c.ContentBlob, {
           width: 34,

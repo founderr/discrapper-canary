@@ -58,6 +58,9 @@ class I extends(i = r.default.PersistedStore) {
   getUserAffinities() {
     return _.userAffinities
   }
+  getUserAffinitiesMap() {
+    return c.userAffinitiesMap
+  }
   getUserAffinity(e) {
     return c.userAffinitiesMap.get(e)
   }

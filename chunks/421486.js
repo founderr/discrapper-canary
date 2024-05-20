@@ -14,8 +14,8 @@ var i, r, a = n("735250"),
 n("5192");
 var f = n("342656"),
   S = n("785717"),
-  h = n("706327"),
-  A = n("285470"),
+  h = n("726059"),
+  A = n("162267"),
   m = n("171368"),
   N = n("228168"),
   p = n("689938"),
@@ -152,8 +152,12 @@ t.default = s.memo(function(e) {
     autoTrackExposure: !1,
     location: E,
     disable: m
-  }), R = (0, A.useMutualGuilds)(i), g = (0, h.useMutualFriends)(i);
-  return !N || m || (null == g || 0 === g.length) && 0 === R.length ? null : (0, a.jsxs)("div", {
+  }), {
+    mutualGuilds: R
+  } = (0, A.default)(i.id), {
+    mutualFriends: g
+  } = (0, h.default)(i.id);
+  return !N || m || (null == g || 0 === g.length) && (null == R || 0 === R.length) ? null : (0, a.jsxs)("div", {
     className: l()(O.mainContainer, s),
     children: [(0, a.jsx)(d.Heading, {
       variant: "eyebrow",
