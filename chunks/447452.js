@@ -13,21 +13,32 @@ let i = (0, n("818083").createExperiment)({
     label: "Simplified Profile Experiment",
     defaultConfig: {
       basicsEnabled: !1,
-      moreUserDetailsEnabled: !1
+      moreUserDetailsEnabled: !1,
+      updatedOnAllSurfaces: !1
     },
     treatments: [{
       id: 1,
       label: "Only the basics",
       config: {
         basicsEnabled: !0,
-        moreUserDetailsEnabled: !1
+        moreUserDetailsEnabled: !1,
+        updatedOnAllSurfaces: !1
       }
     }, {
       id: 2,
       label: "More user details",
       config: {
         basicsEnabled: !0,
-        moreUserDetailsEnabled: !0
+        moreUserDetailsEnabled: !0,
+        updatedOnAllSurfaces: !1
+      }
+    }, {
+      id: 3,
+      label: "Updated detailed profile across all surfaces",
+      config: {
+        basicsEnabled: !0,
+        moreUserDetailsEnabled: !0,
+        updatedOnAllSurfaces: !0
       }
     }]
   }),
