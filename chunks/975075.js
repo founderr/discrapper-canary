@@ -26,7 +26,6 @@ e.exports = {
   nonPremiumPrice: "nonPremiumPrice__59e8a",
   pfxPreviewContainer: "pfxPreviewContainer__6eda3",
   premiumIcon: "premiumIcon__355c8",
-  premiumPriceTag: "premiumPriceTag_fb5ea7",
   premiumPriceTagIcon: "premiumPriceTagIcon__21d57",
   previewsContainerInner: "previewsContainerInner__71adf",
   priceTag: "priceTag__1abdb",

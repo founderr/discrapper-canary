@@ -19,9 +19,9 @@ var l = a("735250"),
   x = a("1585"),
   v = a("333867"),
   b = a("197115"),
-  T = a("300284"),
-  L = a("876917"),
-  S = a("642619"),
+  L = a("300284"),
+  S = a("876917"),
+  T = a("642619"),
   I = a("210887"),
   N = a("594174"),
   _ = a("725808"),
@@ -36,8 +36,8 @@ var l = a("735250"),
   M = a("813083"),
   D = a("680942"),
   F = a("558060"),
-  w = a("237031"),
-  H = a("616066"),
+  H = a("237031"),
+  w = a("616066"),
   U = a("216541"),
   W = a("832149"),
   V = a("474936"),
@@ -104,7 +104,7 @@ t.default = function(e) {
   }, []), s.useEffect(() => {
     null == r || r(X)
   }, [r]);
-  let eC = (0, T.default)({
+  let eC = (0, L.default)({
       analyticsLocations: Z
     }),
     em = s.useRef(null),
@@ -116,13 +116,13 @@ t.default = function(e) {
         });
         return
       }
-      t.type === c.CollectiblesItemType.PROFILE_EFFECT && (0, S.openProfileEffectModal)({
+      t.type === c.CollectiblesItemType.PROFILE_EFFECT && (0, T.openProfileEffectModal)({
         initialSelectedEffectId: et.id,
         analyticsLocations: Z
       })
     },
     eE = e => l => {
-      em.current = l.currentTarget, (0, w.openCollectiblesShopProductDetailsModal)({
+      em.current = l.currentTarget, (0, H.openCollectiblesShopProductDetailsModal)({
         product: t,
         category: a,
         analyticsLocations: Z,
@@ -152,10 +152,8 @@ t.default = function(e) {
       className: z.priceTag,
       children: G.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
     }) : (0, l.jsx)(F.default, {
-      alwaysWhiteText: !1,
       product: t,
-      className: z.priceTag,
-      disableTooltipPointerEvents: !0
+      className: z.priceTag
     }),
     eb = () => es ? null : er ? (0, l.jsx)(Y, {
       onClick: eg
@@ -166,7 +164,7 @@ t.default = function(e) {
       disableCustomColor: !0,
       tooltipDelay: 250
     }),
-    eT = () => {
+    eL = () => {
       if (es && !i && !er) return ex();
       let e = es ? {
         submitting: ei,
@@ -201,7 +199,7 @@ t.default = function(e) {
         }), eb()]
       })
     },
-    eL = ec ? "0 0 15px 1px ".concat(f.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
+    eS = ec ? "0 0 15px 1px ".concat(f.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
   return (0, l.jsx)(m.FocusRing, {
     children: (0, l.jsxs)(m.Clickable, {
       innerRef: X,
@@ -211,7 +209,7 @@ t.default = function(e) {
       style: null != ea ? {
         backgroundColor: ec ? "var(--background-floating)" : "var(--background-secondary)",
         borderColor: "var(--chat-border)",
-        boxShadow: J ? eL : "none"
+        boxShadow: J ? eS : "none"
       } : void 0,
       id: "shop-item-".concat(t.skuId),
       children: [es && (0, l.jsx)(m.Tooltip, {
@@ -227,7 +225,7 @@ t.default = function(e) {
         })
       }), (0, u.match)(t.type).with(c.CollectiblesItemType.PROFILE_EFFECT, () => (0, l.jsx)("div", {
         className: z.profileEffectShopPreview,
-        children: (0, l.jsx)(L.default, {
+        children: (0, l.jsx)(S.default, {
           isHovering: J,
           profileEffectId: et.id,
           isPurchased: eu,
@@ -235,7 +233,7 @@ t.default = function(e) {
         })
       })).with(c.CollectiblesItemType.AVATAR_DECORATION, () => (o()(et.type === c.CollectiblesItemType.AVATAR_DECORATION, "ts-match already checked the type"), (0, l.jsx)("div", {
         className: z.avatarContainer,
-        children: (0, l.jsx)(H.AvatarDecorationPreview, {
+        children: (0, l.jsx)(w.AvatarDecorationPreview, {
           item: et,
           user: ee,
           isPurchased: eu,
@@ -270,7 +268,7 @@ t.default = function(e) {
             children: ev()
           }), (0, l.jsx)("div", {
             className: z.innerHover,
-            children: eT()
+            children: eL()
           })]
         })]
       }), (0, l.jsx)(M.default, {

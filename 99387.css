@@ -98479,7 +98479,12 @@ div.content_aac020 {
 .strikedPrice__8a625 {
     -webkit-text-decoration: line-through;
     text-decoration: line-through;
-    opacity: .7
+    opacity: .7;
+    margin-right: 8px
+}
+
+.defaultPrice__04919 {
+    margin-right: 4px
 }
 
 .fullPrice__8d254 {
@@ -98489,12 +98494,10 @@ div.content_aac020 {
 .premiumIcon_a6a247 {
     width: 16px;
     height: 16px;
-    margin-left: 8px;
     margin-right: 4px
 }
 
 .premiumIcon_a6a247.fullPrice__8d254 {
-    margin-left: 4px;
     margin-right: 2px
 }
 
@@ -99221,11 +99224,8 @@ div.content_aac020 {
     margin-top: 24px;
     display: flex;
     flex-direction: column;
-    gap: 4px
-}
-
-.premiumPriceTag_fb5ea7 {
-    opacity: .7
+    gap: 4px;
+    align-items: flex-start
 }
 
 .premiumPriceTagIcon__21d57 {
