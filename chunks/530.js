@@ -60,6 +60,7 @@ function c(e) {
           "aria-hidden": "true",
           className: _.dotSpacer
         }), (0, i.jsx)(s.TooltipContainer, {
+          className: _.pronounsTooltip,
           text: d.default.Messages.USER_PROFILE_PRONOUNS,
           delay: u.USER_PROFILE_TOOLTIP_DELAY,
           children: (0, i.jsx)(s.Text, {

@@ -32,6 +32,7 @@ function m(e) {
       className: S.usernameBadgeList,
       children: [(0, l.jsx)(u.default, {
         user: t,
+        className: S.username,
         profileType: c.UserProfileTypes.FULL_SIZE,
         guildId: null == s ? void 0 : s.guildId,
         pronouns: null == s ? void 0 : s.pronouns,
