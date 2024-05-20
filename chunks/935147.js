@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return B
+    return G
   }
 });
 var a = s("735250"),
@@ -39,8 +39,8 @@ var a = s("735250"),
   U = s("689938"),
   y = s("764277");
 
-function B(e) {
-  var t, B, G;
+function G(e) {
+  var t, G, B;
   let {
     user: F
   } = e, {
@@ -82,7 +82,7 @@ function B(e) {
       location_stack: en
     })
   }, [en, F]);
-  let el = (null === (B = (0, T.usePremiumTrialOffer)()) || void 0 === B ? void 0 : null === (t = B.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === j.PremiumSubscriptionSKUs.TIER_2,
+  let el = (null === (G = (0, T.usePremiumTrialOffer)()) || void 0 === G ? void 0 : null === (t = G.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === j.PremiumSubscriptionSKUs.TIER_2,
     ei = (0, E.usePremiumDiscountOffer)(),
     er = (0, E.discountOfferHasTier)(ei, j.PremiumSubscriptionSKUs.TIER_2),
     eo = "TryOutPremiumSection";
@@ -113,7 +113,7 @@ function B(e) {
           onBannerChange: m.setTryItOutBanner,
           pendingPronouns: W,
           pendingBio: K,
-          pendingBanner: null !== (G = null != q ? q : V) && void 0 !== G ? G : s("466045"),
+          pendingBanner: null !== (B = null != q ? q : V) && void 0 !== B ? B : s("466045"),
           pendingAvatar: null != Q ? Q : H,
           pendingThemeColors: null != z ? z : Y,
           pendingAvatarDecoration: J,

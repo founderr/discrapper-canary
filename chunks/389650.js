@@ -39,7 +39,7 @@ var a = s("735250"),
   U = s("164149"),
   y = s("611273");
 
-function B(e, t, s) {
+function G(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -48,7 +48,7 @@ function B(e, t, s) {
   }) : e[t] = s, e
 }
 
-function G(e) {
+function B(e) {
   let {
     children: t
   } = e;
@@ -153,19 +153,19 @@ class w extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), B(this, "handleActionChanged", e => {
+    super(...e), G(this, "handleActionChanged", e => {
       S.default.setKeybind({
         ...this.props.keybind,
         action: e
       })
-    }), B(this, "handleShortcutChange", e => {
+    }), G(this, "handleShortcutChange", e => {
       S.default.setKeybind({
         ...this.props.keybind,
         shortcut: e
       })
-    }), B(this, "handleDeleteKeybind", () => {
+    }), G(this, "handleDeleteKeybind", () => {
       S.default.deleteKeybind(this.props.keybind.id)
-    }), B(this, "handleEnableDisable", () => {
+    }), G(this, "handleEnableDisable", () => {
       let {
         keybind: e
       } = this.props;
@@ -340,7 +340,7 @@ class H extends n.PureComponent {
               className: b.__invalid_defaultKeybindShortcut
             })
           })]
-        }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsx)(G, {
+        }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsx)(B, {
           children: e => (0, a.jsx)(a.Fragment, {
             children: e.map((e, t) => {
               let s = (0, _.getNameForKeybindGroup)(e),
@@ -381,7 +381,7 @@ class H extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), B(this, "handleAddKeybind", () => {
+    super(...e), G(this, "handleAddKeybind", () => {
       S.default.addKeybind()
     })
   }

@@ -38,8 +38,8 @@ var a = s("735250"),
   b = s("557177"),
   U = s("695346"),
   y = s("675478"),
-  B = s("33656"),
-  G = s("981631"),
+  G = s("33656"),
+  B = s("981631"),
   F = s("468788"),
   k = s("689938"),
   w = s("153764"),
@@ -113,7 +113,7 @@ function W(e) {
     }, []),
     T = n.useCallback((e, s) => {
       let a = t.filter(t => t !== e);
-      !s && a.push(e), e === g.default.ringtone && L.default.track(G.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
+      !s && a.push(e), e === g.default.ringtone && L.default.track(B.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
         toggled_on: s,
         sound_name: e
       }), S.default.setDisabledSounds(a)
@@ -291,11 +291,11 @@ function K() {
 }
 class z extends n.PureComponent {
   handleDesktopChange(e) {
-    let t = e ? G.DesktopNotificationTypes.ALL : G.DesktopNotificationTypes.NEVER;
-    if (t !== G.DesktopNotificationTypes.NEVER) {
+    let t = e ? B.DesktopNotificationTypes.ALL : B.DesktopNotificationTypes.NEVER;
+    if (t !== B.DesktopNotificationTypes.NEVER) {
       var s;
       s = "UserSettingsModal", D.default.requestPermission(e => {
-        let t = e ? G.NotificationPermissionTypes.ENABLED : G.NotificationPermissionTypes.BLOCKED;
+        let t = e ? B.NotificationPermissionTypes.ENABLED : B.NotificationPermissionTypes.BLOCKED;
         S.default.setPermissionsState(t, s)
       })
     } else S.default.setDesktopType(t)
@@ -325,7 +325,7 @@ class z extends n.PureComponent {
       title: k.default.Messages.NOTIFICATIONS,
       children: [(0, a.jsx)(u.FormSwitch, {
         className: H.marginBottom20,
-        value: e !== G.DesktopNotificationTypes.NEVER && !c,
+        value: e !== B.DesktopNotificationTypes.NEVER && !c,
         onChange: this.handleDesktopChange,
         note: k.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
         disabled: c,
@@ -364,7 +364,7 @@ class z extends n.PureComponent {
           disableAllSounds: r,
           notifyMessagesInSelectedChannel: d
         })
-      }), (0, a.jsx)(B.default, {})]
+      }), (0, a.jsx)(G.default, {})]
     })
   }
   constructor(...e) {
@@ -376,13 +376,13 @@ class z extends n.PureComponent {
       if (!T.supported) return null;
       let e = [{
         name: k.default.Messages.TTS_ALLS,
-        value: G.TTSNotificationTypes.ALL_CHANNELS
+        value: B.TTSNotificationTypes.ALL_CHANNELS
       }, {
         name: k.default.Messages.TTS_CURRENT,
-        value: G.TTSNotificationTypes.SELECTED_CHANNEL
+        value: B.TTSNotificationTypes.SELECTED_CHANNEL
       }, {
         name: k.default.Messages.TTS_NEVER,
-        value: G.TTSNotificationTypes.NEVER
+        value: B.TTSNotificationTypes.NEVER
       }];
       return (0, a.jsxs)(u.FormItem, {
         title: k.default.Messages.FORM_LABEL_TTS_NOTIFICATIONS,

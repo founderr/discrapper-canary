@@ -38,8 +38,8 @@ var a = s("735250"),
   b = s("278828"),
   U = s("480294"),
   y = s("430824"),
-  B = s("663389"),
-  G = s("594174"),
+  G = s("663389"),
+  B = s("594174"),
   F = s("285952"),
   k = s("153124"),
   w = s("626135"),
@@ -810,8 +810,8 @@ class eS extends n.PureComponent {
 }
 
 function eE() {
-  let e = (0, c.useStateFromStores)([G.default], () => {
-      let e = G.default.getCurrentUser();
+  let e = (0, c.useStateFromStores)([B.default], () => {
+      let e = B.default.getCurrentUser();
       return o()(null != e, "ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined"), e
     }),
     t = (0, c.useStateFromStoresObject)([U.default], () => ({
@@ -820,7 +820,7 @@ function eE() {
       personalization: U.default.hasConsented($.Consents.PERSONALIZATION)
     })),
     s = (0, c.useStateFromStores)([L.default], () => L.default.getFetchError()),
-    n = (0, c.useStateFromStores)([B.default], () => B.default.getSubsection()),
+    n = (0, c.useStateFromStores)([G.default], () => G.default.getSubsection()),
     l = (0, h.useIsEligibleForExplicitMediaRedaction)(),
     i = (0, O.useIsEligibleForKeywordFiltering)({
       location: "web_user_privacy_and_safety_settings"

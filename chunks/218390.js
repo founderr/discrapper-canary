@@ -34,8 +34,8 @@ var a = s("735250"),
   b = s("646476"),
   U = s("424082"),
   y = s("91802"),
-  B = s("898997"),
-  G = s("197115"),
+  G = s("898997"),
+  B = s("197115"),
   F = s("823188"),
   k = s("504865"),
   w = s("179984"),
@@ -180,7 +180,7 @@ function J() {
         }),
         variant: "text-sm/normal",
         children: s ? K.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : K.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
-      }), (0, a.jsx)(G.default, {
+      }), (0, a.jsx)(B.default, {
         isGift: !0,
         className: i()(z.giftCardButton, s ? z.seasonalColor : z.giftCardButtonColor),
         look: S.Button.Looks.OUTLINED,
@@ -216,7 +216,7 @@ t.default = function() {
   }), (0, I.useTriggerDebuggingAA)({
     location: h + " auto off",
     autoTrackExposure: !1
-  }), (0, B.useMaybeFetchReferralsRemaining)("PremiumManagementSettings");
+  }), (0, G.useMaybeFetchReferralsRemaining)("PremiumManagementSettings");
   let x = (0, V.useIsEligibleSenderForReferralProgram)("PremiumManagementSettings");
   n.useEffect(() => {
     E.default.wait(async () => {

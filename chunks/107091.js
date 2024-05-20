@@ -23,9 +23,9 @@ var l = a("735250"),
   x = a("598"),
   v = a("333867"),
   b = a("329067"),
-  T = a("981631"),
-  L = a("302800"),
-  S = a("689938"),
+  L = a("981631"),
+  S = a("302800"),
+  T = a("689938"),
   I = a("894775");
 let N = {
     xMin: -100,
@@ -67,8 +67,8 @@ function y(e) {
     {
       buttonColors: F
     } = (0, m.default)(t.styles),
-    w = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion),
-    H = (0, L.getCustomConfettiDisplayOptions)(t.skuId),
+    H = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion),
+    w = (0, S.getCustomConfettiDisplayOptions)(t.skuId),
     [U, W] = s.useState(!1),
     [V, G] = s.useState(!1),
     z = null != F ? {
@@ -99,13 +99,13 @@ function y(e) {
       children: [(0, l.jsx)(o.Text, {
         variant: "text-lg/bold",
         className: I.productName,
-        children: S.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE
+        children: T.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE
       }), (0, l.jsx)("div", {
         className: I.innerBlur,
         children: (0, l.jsx)(o.Text, {
           className: I.description,
           variant: "text-md/normal",
-          children: S.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION
+          children: T.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION
         })
       }), (0, l.jsx)(o.Button, {
         onClick: () => {
@@ -115,14 +115,14 @@ function y(e) {
             returnRef: B
           })
         },
-        children: S.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
+        children: T.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
       })]
     }), !V && (U ? (0, l.jsxs)("div", {
       className: I.cardDetails,
       children: [(0, l.jsx)(o.Text, {
         variant: "text-lg/bold",
         className: I.productName,
-        children: S.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
+        children: T.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
           itemName: t.name
         })
       }), (0, l.jsx)("div", {
@@ -130,7 +130,7 @@ function y(e) {
         children: (0, l.jsx)(o.Text, {
           className: I.description,
           variant: "text-xs/normal",
-          children: S.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
+          children: T.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
         })
       }), (0, l.jsx)(_, {
         style: z,
@@ -146,7 +146,7 @@ function y(e) {
             analyticsLocations: D
           })
         },
-        children: S.default.Messages.COLLECTIBLES_USE_NOW
+        children: T.default.Messages.COLLECTIBLES_USE_NOW
       })]
     }) : (0, l.jsxs)("div", {
       className: I.cardDetails,
@@ -157,16 +157,16 @@ function y(e) {
       }), (0, l.jsx)(x.PaymentContextProvider, {
         loadId: k,
         stepConfigs: [],
-        applicationId: T.COLLECTIBLES_APPLICATION_ID,
+        applicationId: L.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
         isGift: !1,
         activeSubscription: null,
-        purchaseType: T.PurchaseTypes.ONE_TIME,
+        purchaseType: L.PurchaseTypes.ONE_TIME,
         children: (0, l.jsx)(b.default, {
           ...Y
         })
       })]
-    })), !V && U && !(null != H) && !w && (0, l.jsx)(E.default, {
+    })), !V && U && !(null != w) && !H && (0, l.jsx)(E.default, {
       confettiTarget: B.current,
       customConfettiCanvas: P,
       speedValues: N,

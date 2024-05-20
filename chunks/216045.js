@@ -60,9 +60,9 @@ function M() {
     U = O.UseLegacyChatInput.useSetting() && null != M ? _.default.parse(void 0, M).content : M,
     y = A.default.canUsePremiumProfileCustomization(e),
     {
-      analyticsLocations: B
+      analyticsLocations: G
     } = (0, T.default)(E.default.PROFILE),
-    G = {
+    B = {
       user: e,
       canUsePremiumCustomization: y,
       onUpsellClick: x.default,
@@ -85,11 +85,11 @@ function M() {
     location: F + " auto off",
     autoTrackExposure: !1
   }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(T.AnalyticsLocationProvider, {
-    value: B,
+    value: G,
     children: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(f.default, {}), (0, a.jsx)(g.default, {
         profilePreview: (0, a.jsx)(m.default, {
-          ...G,
+          ...B,
           pendingThemeColors: j,
           pendingAccentColor: D
         }),

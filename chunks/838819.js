@@ -19,9 +19,9 @@ var l = a("735250"),
   x = a("702486"),
   v = a("580747"),
   b = a("605236"),
-  T = a("984370"),
-  L = a("329067"),
-  S = a("51855"),
+  L = a("984370"),
+  S = a("329067"),
+  T = a("51855"),
   I = a("479446"),
   N = a("981632"),
   _ = a("290026"),
@@ -36,8 +36,8 @@ var l = a("735250"),
   M = a("792125"),
   D = a("335131"),
   F = a("328347"),
-  w = a("280773"),
-  H = a("617452"),
+  H = a("280773"),
+  w = a("617452"),
   U = a("223143"),
   W = a("298228"),
   V = a("937510"),
@@ -70,7 +70,7 @@ function eo(e) {
     isGiftEasterEggEnabled: C
   } = e, m = (0, V.usePurchasedProductsSort)(r.products), p = (0, i.groupBy)(m, "type"), E = (0, u.useStateFromStores)([F.default], () => F.default.initialProductSkuId), {
     unifiedProductCatalogEnabled: h
-  } = (0, w.useCollectiblesUnifiedProductCatalogExperiment)({
+  } = (0, H.useCollectiblesUnifiedProductCatalogExperiment)({
     location: "CollectiblesShop"
   }), g = c ? Z.default : Q.default, x = s.useCallback(e => t => {
     e.skuId === E && (n.current = t.current)
@@ -163,19 +163,19 @@ function ec(e) {
       closeAction: a ? D.closeCollectiblesShop : s,
       keybind: "ESC"
     })
-  }) : r ? (0, l.jsx)(T.default, {
+  }) : r ? (0, l.jsx)(L.default, {
     className: n()((0, M.getThemeClass)(i), ei.headerBar),
     innerClassname: ei.shopLogoContainer,
     toolbar: !0,
     children: (0, l.jsx)(R.default, {
       className: ei.shopLogo
     })
-  }) : (0, l.jsxs)(T.default, {
+  }) : (0, l.jsxs)(L.default, {
     className: n()((0, M.getThemeClass)(i)),
     toolbar: !0,
     children: [(0, l.jsx)(k.default, {
       className: ei.logo
-    }), (0, l.jsx)(T.default.Title, {
+    }), (0, l.jsx)(L.default.Title, {
       className: ei.title,
       children: en.default.Messages.COLLECTIBLES_SHOP
     })]
@@ -191,7 +191,7 @@ t.default = function(e) {
     analyticsLocations: i
   } = (0, g.default)([...r, h.default.COLLECTIBLES_SHOP]), m = (0, u.useStateFromStores)([y.default], () => y.default.getLayers().includes(ea.Layers.COLLECTIBLES_SHOP)), p = (0, d.useHasAnyModalOpen)(), {
     onClose: E
-  } = (0, X.useCollectiblesShopRouting)(), T = (0, u.useStateFromStores)([O.default], () => O.default.getCurrentUser()), I = B.default.canUseCollectibles(T), N = (0, v.default)("shop_disable_cache"), j = (0, v.default)("shop_include_unpublished"), {
+  } = (0, X.useCollectiblesShopRouting)(), L = (0, u.useStateFromStores)([O.default], () => O.default.getCurrentUser()), I = B.default.canUseCollectibles(L), N = (0, v.default)("shop_disable_cache"), j = (0, v.default)("shop_include_unpublished"), {
     categories: k,
     isFetchingCategories: R,
     error: M
@@ -200,17 +200,17 @@ t.default = function(e) {
     includeUnpublished: j
   });
   (0, _.useReloadProfileEffectWhenConfigsAreMissing)();
-  let w = (0, W.usePurchasedCategoriesSort)(k),
-    V = S.default.useExperiment({
+  let H = (0, W.usePurchasedCategoriesSort)(k),
+    V = T.default.useExperiment({
       location: h.default.COLLECTIBLES_SHOP
     }, {
       autoTrackExposure: !1
     }),
     {
       userIsEligible: G
-    } = (0, L.useLightningCheckoutEligibility)(),
+    } = (0, S.useLightningCheckoutEligibility)(),
     K = V.enabled && G,
-    Z = (0, H.useShopBundleEnabled)("CollectiblesShop"),
+    Z = (0, w.useShopBundleEnabled)("CollectiblesShop"),
     Q = s.useRef(null),
     [J, et] = s.useState(!1);
   (0, z.useProductDetailsDeepLinking)({
@@ -256,7 +256,7 @@ t.default = function(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [t, m, p, E]), s.useEffect(() => {
-    G && S.default.trackExposure({
+    G && T.default.trackExposure({
       location: h.default.COLLECTIBLES_SHOP
     })
   }, [G]);
@@ -308,7 +308,7 @@ t.default = function(e) {
               onRetry: em
             }) : (0, l.jsx)("div", {
               className: ei.categories,
-              children: w.filter(e => null == e.unpublishedAt || e.unpublishedAt > new Date).filter(e => {
+              children: H.filter(e => null == e.unpublishedAt || e.unpublishedAt > new Date).filter(e => {
                 let {
                   products: t
                 } = e;

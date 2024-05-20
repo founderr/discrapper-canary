@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return C
+    return p
   }
 }), s("47120");
 var l = s("735250"),
@@ -18,21 +18,21 @@ var l = s("735250"),
   m = s("318661"),
   E = s("502762"),
   I = s("544989"),
-  v = s("301984"),
-  _ = s("94918"),
+  _ = s("301984"),
+  v = s("94918"),
   T = s("664794"),
-  g = s("806926"),
-  A = s("740021"),
-  x = s("228168"),
-  U = s("981631"),
+  A = s("806926"),
+  g = s("740021"),
+  U = s("228168"),
+  x = s("981631"),
   N = s("689938"),
-  p = s("61007");
+  C = s("61007");
 
-function C(e) {
+function p(e) {
   let {
     user: t,
     guildId: s,
-    channelId: C,
+    channelId: p,
     messageId: h,
     roleId: R,
     friendToken: P,
@@ -41,13 +41,13 @@ function C(e) {
     transitionState: L,
     sourceAnalyticsLocations: y = [],
     onClose: O
-  } = e, F = s === U.ME ? void 0 : s, {
+  } = e, F = s === x.ME ? void 0 : s, {
     analyticsLocations: D
   } = (0, u.default)([...y, o.default.SIMPLIFIED_PROFILE_MODAL]), b = (0, S.useTrackUserProfileAction)({
     layout: "SIMPLIFIED_MODAL",
     userId: t.id,
     guildId: F,
-    channelId: C,
+    channelId: p,
     messageId: h,
     roleId: R
   }), [B, G] = a.useState(F), k = (0, m.default)(t.id), w = (0, m.default)(t.id, F), Y = null == B ? k : w, {
@@ -58,13 +58,13 @@ function C(e) {
       let {
         type: t
       } = e;
-      return t !== U.ActivityTypes.CUSTOM_STATUS
+      return t !== x.ActivityTypes.CUSTOM_STATUS
     }),
     customStatusActivity: c.default.findActivity(t.id, e => {
       let {
         type: t
       } = e;
-      return t === U.ActivityTypes.CUSTOM_STATUS
+      return t === x.ActivityTypes.CUSTOM_STATUS
     })
   })), z = a.createRef(), W = (0, r.default)(z);
   return (0, l.jsx)(u.AnalyticsLocationProvider, {
@@ -73,32 +73,32 @@ function C(e) {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: F,
-      channelId: C,
+      channelId: p,
       messageId: h,
       roleId: R,
       children: (0, l.jsxs)(n.ModalRoot, {
         transitionState: L,
-        className: p.root,
+        className: C.root,
         hideShadow: !0,
         "aria-label": N.default.Messages.USER_PROFILE_MODAL,
         children: [(0, l.jsxs)(E.default, {
           user: t,
           displayProfile: Y,
-          profileType: x.UserProfileTypes.FULL_SIZE,
+          profileType: U.UserProfileTypes.FULL_SIZE,
           ref: z,
           children: [(0, l.jsxs)(I.default, {
-            profileType: x.UserProfileTypes.FULL_SIZE,
-            children: [(0, l.jsx)(_.default, {
+            profileType: U.UserProfileTypes.FULL_SIZE,
+            children: [(0, l.jsx)(v.default, {
               user: t,
               guildId: F,
-              channelId: C,
+              channelId: p,
               onClose: O
-            }), (0, l.jsx)(v.default, {
+            }), (0, l.jsx)(_.default, {
               user: t,
               friendToken: P
             }), (0, l.jsx)(T.default, {
               user: t,
-              profileType: x.UserProfileTypes.FULL_SIZE,
+              profileType: U.UserProfileTypes.FULL_SIZE,
               guildId: F,
               viewProfileItem: (null == w ? void 0 : w.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, l.jsx)(n.MenuItem, {
                 id: "view-main-profile",
@@ -116,7 +116,7 @@ function C(e) {
                 id: "view-server-profile",
                 label: N.default.Messages.VIEW_SERVER_PROFILE,
                 subtext: N.default.Messages.AKA_DISPLAY_NAME.format({
-                  displayName: f.default.getName(F, C, t)
+                  displayName: f.default.getName(F, p, t)
                 }),
                 action: () => {
                   b({
@@ -126,15 +126,15 @@ function C(e) {
                 }
               })
             })]
-          }), (0, l.jsx)(A.default, {
+          }), (0, l.jsx)(g.default, {
             user: t,
             displayProfile: Y,
             guildId: F,
-            channelId: C,
+            channelId: p,
             activity: H,
             customStatusActivity: V,
             onClose: O
-          }), (0, l.jsx)(g.default, {
+          }), (0, l.jsx)(A.default, {
             user: t,
             displayProfile: Y,
             initialSection: M,

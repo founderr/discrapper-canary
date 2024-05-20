@@ -26,9 +26,9 @@ var l = a("735250"),
   x = a("333867"),
   v = a("74179"),
   b = a("981631"),
-  T = a("689938"),
-  L = a("834042");
-let S = e => {
+  L = a("689938"),
+  S = a("834042");
+let T = e => {
     let {
       children: t,
       style: a,
@@ -94,7 +94,7 @@ function _(e) {
     skuPricePreviewsById: B
   } = (0, h.usePaymentContext)(), {
     analyticsLocations: M
-  } = (0, f.default)(), [D, F] = s.useState(!1), w = s.useRef(null), H = B[_], U = null != H ? H[v.id] : null, W = null != U ? (0, E.formatPrice)(null == U ? void 0 : U.amount, null == U ? void 0 : U.currency) : null, V = s.useMemo(() => ({
+  } = (0, f.default)(), [D, F] = s.useState(!1), H = s.useRef(null), w = B[_], U = null != w ? w[v.id] : null, W = null != U ? (0, E.formatPrice)(null == U ? void 0 : U.amount, null == U ? void 0 : U.currency) : null, V = s.useMemo(() => ({
     ...O,
     load_id: N,
     payment_type: b.PurchaseTypeToAnalyticsPaymentType[b.PurchaseTypes.ONE_TIME],
@@ -127,7 +127,7 @@ function _(e) {
     }), e === g.Step.CONFIRM && (F(!1), t()), j(e)
   }, [V, j, t]);
   return (0, C.usePaymentStepForAuthentication)(A, R, z), (0, l.jsxs)("div", {
-    className: L.reviewContainer,
+    className: S.reviewContainer,
     children: [(0, l.jsx)(i.FormSection, {
       children: (0, l.jsx)(i.FormItem, {
         children: (0, l.jsx)(u.default, {
@@ -140,34 +140,34 @@ function _(e) {
         })
       })
     }), (0, l.jsx)("div", {
-      className: L.legalTerms,
+      className: S.legalTerms,
       children: (0, l.jsx)("p", {
-        children: T.default.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
+        children: L.default.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
           paidURL: p.default.getArticleURL(b.HelpdeskArticles.PAID_TERMS)
         })
       })
-    }), (0, l.jsx)(S, {
-      className: L.buyButton,
+    }), (0, l.jsx)(T, {
+      className: S.buyButton,
       submitting: D,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
         F(!0), await G()
       },
-      children: null !== W ? T.default.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
+      children: null !== W ? L.default.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
         price: W
       }) : (0, l.jsx)(i.Spinner, {
         type: i.Spinner.Type.PULSING_ELLIPSIS
       })
     }), !D && (0, l.jsx)(I, {
-      className: L.reviewButton,
+      className: S.reviewButton,
       onClick: () => {
         r(), (0, x.default)({
           skuId: _,
           analyticsLocations: M,
-          returnRef: w
+          returnRef: H
         })
       },
-      children: T.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
+      children: L.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
     })]
   })
 }

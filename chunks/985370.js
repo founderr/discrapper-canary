@@ -31,9 +31,9 @@ t.default = e => {
     !_ && g()
   }, [g, _]), R = l.useCallback((e, t) => {
     S(), T(!_), (!s || _) && (null == t || t(e))
-  }, [S, _, s]), y = s || _;
+  }, [S, _, s]), L = s || _;
   return (0, a.jsx)(o.Popout, {
-    shouldShow: y,
+    shouldShow: L,
     animationPosition: "bottom",
     position: "bottom",
     align: "center",
@@ -46,7 +46,7 @@ t.default = e => {
         closePopout: n
       } = e;
       return (0, a.jsx)(h.default, {
-        isHovered: y,
+        isHovered: L,
         channel: t,
         closePopout: n,
         onMouseEnter: C,
@@ -73,7 +73,7 @@ t.default = e => {
         },
         onMouseEnter: x,
         onMouseLeave: M,
-        isActive: y
+        isActive: L
       })
     }
   })

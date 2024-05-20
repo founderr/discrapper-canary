@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return C
   }
 });
 var l = s("735250"),
@@ -18,22 +18,22 @@ var l = s("735250"),
   m = s("246946"),
   E = s("785717"),
   I = s("648067"),
-  v = s("588822"),
-  _ = s("81334"),
+  _ = s("588822"),
+  v = s("81334"),
   T = s("652853"),
-  g = s("335191"),
-  A = s("347949"),
-  x = s("988246"),
-  U = s("689938"),
+  A = s("335191"),
+  g = s("347949"),
+  U = s("988246"),
+  x = s("689938"),
   N = s("921152");
 
-function p(e) {
+function C(e) {
   var t;
   let {
     user: s,
     displayProfile: i,
-    autoFocusNote: p = !1,
-    scrollToConnections: C = !1
+    autoFocusNote: C = !1,
+    scrollToConnections: p = !1
   } = e, {
     trackUserProfileAction: h
   } = (0, E.useUserProfileAnalyticsContext)(), R = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
@@ -43,11 +43,11 @@ function p(e) {
     location: "28tk0bf_3"
   }), L = (0, d.default)("user_profile"), y = (0, I.default)(s.id), O = a.useRef(null);
   return (a.useLayoutEffect(() => {
-    if (C) {
+    if (p) {
       var e;
       null == O || null === (e = O.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [C]), R) ? (0, l.jsx)(x.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
+  }, [p]), R) ? (0, l.jsx)(U.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: N.infoScroller,
     children: [(0, l.jsxs)("div", {
@@ -56,8 +56,8 @@ function p(e) {
         children: [(0, l.jsx)(o.Heading, {
           variant: "eyebrow",
           className: N.userInfoSectionHeader,
-          children: U.default.Messages.USER_PROFILE_ABOUT_ME
-        }), (0, l.jsx)(v.default, {
+          children: x.default.Messages.USER_PROFILE_ABOUT_ME
+        }), (0, l.jsx)(_.default, {
           className: N.userInfoText,
           userBio: null !== (t = null == i ? void 0 : i.bio) && void 0 !== t ? t : ""
         })]
@@ -65,8 +65,8 @@ function p(e) {
         children: [(0, l.jsx)(o.Heading, {
           variant: "eyebrow",
           className: N.userInfoSectionHeader,
-          children: U.default.Messages.USER_PROFILE_MEMBER_SINCE
-        }), (0, l.jsx)(_.default, {
+          children: x.default.Messages.USER_PROFILE_MEMBER_SINCE
+        }), (0, l.jsx)(v.default, {
           userId: s.id,
           textClassName: N.userInfoText
         })]
@@ -78,23 +78,23 @@ function p(e) {
             userId: s.id
           })
         })
-      }), j && (0, l.jsx)(A.UserProfileRecentGamesContainer, {
+      }), j && (0, l.jsx)(g.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
         containerClassName: n()(N.userInfoText, N.recentGames)
       }), (0, l.jsx)(o.Heading, {
         variant: "eyebrow",
         className: N.userInfoSectionHeader,
-        children: U.default.Messages.NOTE
+        children: x.default.Messages.NOTE
       }), (0, l.jsx)(u.default, {
         userId: s.id,
-        autoFocus: p,
+        autoFocus: C,
         className: N.note,
         onUpdate: () => h({
           action: "SET_NOTE"
         })
       })]
-    }), (0, l.jsx)(g.ConnectedUserAccounts, {
+    }), (0, l.jsx)(A.ConnectedUserAccounts, {
       ref: O,
       connectedAccounts: y,
       theme: P,

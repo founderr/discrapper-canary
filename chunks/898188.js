@@ -74,7 +74,7 @@ function M(e) {
   } = e, {
     channelAction: E,
     completed: T
-  } = (0, _.useMemberActionsForChannel)(f, h), I = (0, _.useNextMemberAction)(f, null == E ? void 0 : E.channelId), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), R = (null == E ? void 0 : E.actionType) === S.NewMemberActionTypes.VIEW, y = (0, u.useToken)(u.tokens.colors.WHITE), [L, O] = l.useState(!1), [j] = l.useState(new r.default.Value(0)), [P] = l.useState(new r.default.Value(0));
+  } = (0, _.useMemberActionsForChannel)(f, h), I = (0, _.useNextMemberAction)(f, null == E ? void 0 : E.channelId), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), R = (null == E ? void 0 : E.actionType) === S.NewMemberActionTypes.VIEW, L = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = l.useState(!1), [j] = l.useState(new r.default.Value(0)), [P] = l.useState(new r.default.Value(0));
   l.useEffect(() => {
     T ? r.default.timing(j, {
       toValue: 0,
@@ -88,19 +88,19 @@ function M(e) {
       delay: 400
     }).start()
   }, [T, j, R, M]), l.useEffect(() => {
-    T && L && r.default.timing(P, {
+    T && y && r.default.timing(P, {
       toValue: 1,
       duration: M ? 0 : 350,
       easing: r.default.Easing.quad,
       delay: 400
     }).start()
-  }, [T, P, L, M]);
+  }, [T, P, y, M]);
   let D = l.useCallback(() => {
     null != I && (0, g.selectNewMemberActionChannel)(f, I.channelId)
   }, [f, I]);
-  return null == E || R && !L ? null : (0, a.jsx)("div", {
+  return null == E || R && !y ? null : (0, a.jsx)("div", {
     className: i()(N.container, m),
-    children: L && null != I ? (0, a.jsx)(r.default.div, {
+    children: y && null != I ? (0, a.jsx)(r.default.div, {
       style: {
         marginBottom: P.interpolate({
           inputRange: [0, 1],
@@ -130,7 +130,7 @@ function M(e) {
           children: (0, a.jsx)(p.default, {
             width: 16,
             height: 16,
-            color: y.hex(),
+            color: L.hex(),
             className: N.nextIcon
           })
         })]
@@ -160,7 +160,7 @@ function M(e) {
         })]
       }), T ? (0, a.jsx)(C.default, {
         className: N.completed,
-        backgroundColor: y.hex(),
+        backgroundColor: L.hex(),
         width: 20,
         height: 20
       }) : null]

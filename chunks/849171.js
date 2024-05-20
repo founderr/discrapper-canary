@@ -32,8 +32,8 @@ var i = n("120356"),
   x = n("602623"),
   M = n("823379"),
   R = n("5192"),
-  y = n("689938"),
-  L = n("655338");
+  L = n("689938"),
+  y = n("655338");
 (l = a || (a = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM", l[l.LARGE = 2] = "LARGE";
 let O = ["embedded_background"];
 
@@ -58,7 +58,7 @@ function j(e) {
         children: (0, s.jsx)("img", {
           src: e.getAvatarURL(n, r),
           alt: t,
-          className: L.avatar
+          className: y.avatar
         }, e.id)
       }, e.id)
     }
@@ -83,33 +83,33 @@ function P(e) {
     application: p
   }) === m.EmbeddedActivityJoinability.CAN_JOIN, U = null !== (n = C.getGuildId()) && void 0 !== n ? n : void 0;
   return (0, s.jsxs)("div", {
-    className: L.splash,
+    className: y.splash,
     children: [(0, s.jsx)(j, {
       avatarSize: T,
       guildId: U,
       channelId: C.id,
       users: A
     }), (0, s.jsx)(u.Text, {
-      className: r()(L.subheader, {
-        [L.small]: 0 === _,
-        [L.medium]: 1 === _
+      className: r()(y.subheader, {
+        [y.small]: 0 === _,
+        [y.medium]: 1 === _
       }),
       variant: "text-sm/normal",
-      children: A.length > 1 ? y.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+      children: A.length > 1 ? L.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
         username: D,
         count: A.length - 1
-      }) : y.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
+      }) : L.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
         username: D
       })
     }), (0, s.jsx)(u.Text, {
-      className: r()(L.header, {
-        [L.small]: 0 === _,
-        [L.medium]: 1 === _
+      className: r()(y.header, {
+        [y.small]: 0 === _,
+        [y.medium]: 1 === _
       }),
       variant: "text-sm/normal",
       children: p.name
     }), (0, s.jsx)("div", {
-      className: L.buttons,
+      className: y.buttons,
       children: b ? (0, s.jsx)(u.Button, {
         onClick: function(e) {
           e.stopPropagation(), null != x && (0, f.default)({
@@ -131,9 +131,9 @@ function P(e) {
               return u.Button.Sizes.SMALL
           }
         }(_),
-        className: L.button,
+        className: y.button,
         color: u.Button.Colors.PRIMARY,
-        children: y.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
+        children: L.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
       }) : null
     })]
   })
@@ -160,13 +160,13 @@ function D(e) {
   return (0, s.jsx)(I.AnalyticsLocationProvider, {
     value: r,
     children: (0, s.jsx)("div", {
-      className: L.container,
+      className: y.container,
       children: (0, s.jsxs)(s.Fragment, {
         children: [!a && d && (0, s.jsx)(g.default, {
-          className: L.iframe,
+          className: y.iframe,
           embedId: (0, _.default)(i.id, o)
         }), m && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
-          className: L.splashImage,
+          className: y.splashImage,
           alt: f.name,
           src: h
         }) : null, !d && !a && null != f && (0, s.jsx)(P, {
@@ -176,7 +176,7 @@ function D(e) {
           application: f,
           currentEmbeddedApplication: c
         }), l || m ? null : (0, s.jsx)("div", {
-          className: L.clickShield
+          className: y.clickShield
         })]
       })
     })

@@ -34,8 +34,8 @@ var a = s("735250"),
   b = s("91430"),
   U = s("474936"),
   y = s("981631"),
-  B = s("526761"),
-  G = s("689938"),
+  G = s("526761"),
+  B = s("689938"),
   F = s("431008");
 
 function k() {
@@ -50,7 +50,7 @@ function k() {
         className: F.noItemsIcon
       }), (0, a.jsx)("span", {
         className: F.cardText,
-        children: G.default.Messages.USER_SETTINGS_NO_SUBSCRIPTION_CREDIT
+        children: B.default.Messages.USER_SETTINGS_NO_SUBSCRIPTION_CREDIT
       })]
     })
   })
@@ -65,10 +65,10 @@ function w() {
     children: [(0, a.jsx)(o.FormTitle, {
       className: F.accountCreditTitle,
       tag: o.FormTitleTags.H1,
-      children: G.default.Messages.BILLING_SUBSCRIPTION_CREDIT
+      children: B.default.Messages.BILLING_SUBSCRIPTION_CREDIT
     }), (0, a.jsx)("p", {
       className: F.accountCreditDescription,
-      children: G.default.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
+      children: B.default.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
     }), null != e && D.default.hasAccountCredit(e) ? (0, a.jsx)(P.default, {
       className: F.accountCredit,
       entitlements: e
@@ -90,9 +90,9 @@ t.default = function() {
     (0, E.fetchPremiumSubscriptionPlans)(), u.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), u.fetchPaymentSources()
   }), function() {
     T.default.clearSubsection()
-  }), []), p.default.enabled) ? (0, a.jsx)(f.default, {}) : S && M ? v === B.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(I.default, {
+  }), []), p.default.enabled) ? (0, a.jsx)(f.default, {}) : S && M ? v === G.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(I.default, {
     onGoBack: () => T.default.clearSubsection()
-  }) : v === B.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(N.default, {
+  }) : v === G.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(N.default, {
     onGoBack: () => T.default.clearSubsection()
   }) : (0, a.jsx)("div", {
     className: F.container,
@@ -107,10 +107,10 @@ t.default = function() {
       }) : (0, a.jsx)(b.SubscriptionDetailsEmpty, {
         className: F.subscriptionDetails
       }), (0, a.jsx)(g.default, {
-        onClickManageSubscription: () => T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, B.ROLE_SUBSCRIPTION_SUBSECTION)
+        onClickManageSubscription: () => T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, G.ROLE_SUBSCRIPTION_SUBSECTION)
       }), (0, a.jsx)(h.default, {
         onClickManageSubscription: () => {
-          T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, B.APPLICATION_SUBSCRIPTION_SUBSECTION), L.default.track(y.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
+          T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, G.APPLICATION_SUBSCRIPTION_SUBSECTION), L.default.track(y.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
         }
       }), (0, a.jsx)(w, {}), null != e ? (0, a.jsx)(j.default, {
         subscription: e,

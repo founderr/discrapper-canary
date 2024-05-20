@@ -34,8 +34,8 @@ var a = s("735250"),
   b = s("210887"),
   U = s("436267"),
   y = s("494620"),
-  B = s("981631"),
-  G = s("689938"),
+  G = s("981631"),
+  B = s("689938"),
   F = s("338009"),
   k = s("611273");
 let w = u.default.connectStores([b.default], () => ({
@@ -53,9 +53,9 @@ function H(e) {
     }), (0, a.jsx)(_.Text, {
       color: "text-normal",
       variant: "text-sm/medium",
-      children: G.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT.format({
+      children: B.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT.format({
         applicationName: t.name,
-        onConnectionPress: () => g.default.setSection(B.AnalyticsSections.SETTINGS_CONNECTIONS)
+        onConnectionPress: () => g.default.setSection(G.AnalyticsSections.SETTINGS_CONNECTIONS)
       })
     })]
   })
@@ -88,19 +88,19 @@ let V = e => {
       onDelete: n,
       disclosures: l
     } = e, r = () => {
-      let e = G.default.Messages.DELETE_APP_CONFIRM_MSG;
+      let e = B.default.Messages.DELETE_APP_CONFIRM_MSG;
       return (0, U.default)(s.id) && (e = (0, a.jsxs)(a.Fragment, {
         children: [e, (0, a.jsx)(y.default, {
           className: F.infoBox,
-          children: G.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({
+          children: B.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({
             applicationName: s.name
           })
         })]
       })), (0, _.openModal)(t => (0, a.jsx)(h.default, {
-        title: G.default.Messages.DEAUTHORIZE_APP,
+        title: B.default.Messages.DEAUTHORIZE_APP,
         body: e,
-        confirmText: G.default.Messages.DEAUTHORIZE,
-        cancelText: G.default.Messages.CANCEL,
+        confirmText: B.default.Messages.DEAUTHORIZE,
+        cancelText: B.default.Messages.CANCEL,
         onConfirm: n,
         ...t
       }))
@@ -151,7 +151,7 @@ let V = e => {
                 look: _.ButtonLooks.OUTLINED,
                 size: _.ButtonSizes.SMALL,
                 onClick: r,
-                children: G.default.Messages.DEAUTHORIZE
+                children: B.default.Messages.DEAUTHORIZE
               })
             })]
           })
@@ -159,7 +159,7 @@ let V = e => {
         children: [(() => {
           if (null != s.description && "" !== s.description) return (0, a.jsx)(_.FormItem, {
             faded: !0,
-            title: G.default.Messages.ABOUT_THIS_APP,
+            title: B.default.Messages.ABOUT_THIS_APP,
             children: (0, a.jsx)(_.FormText, {
               children: s.description
             })
@@ -173,7 +173,7 @@ let V = e => {
               className: F.tos,
               children: [(0, a.jsx)(_.FormText, {
                 className: F.link,
-                children: G.default.Messages.AUTHORIZED_APPS_TERMS_OF_SERVICE
+                children: B.default.Messages.AUTHORIZED_APPS_TERMS_OF_SERVICE
               }), (0, a.jsx)(f.LinkExternalSmallIcon, {
                 className: F.externalLinkIcon,
                 color: "var(--text-link)"
@@ -188,7 +188,7 @@ let V = e => {
                 className: F.privacy,
                 children: [(0, a.jsx)(_.FormText, {
                   className: F.link,
-                  children: G.default.Messages.AUTHORIZED_APPS_PRIVACY_POLICY
+                  children: B.default.Messages.AUTHORIZED_APPS_PRIVACY_POLICY
                 }), (0, a.jsx)(f.LinkExternalSmallIcon, {
                   className: F.externalLinkIcon,
                   color: "var(--text-link)"
@@ -198,10 +198,10 @@ let V = e => {
           })
         })(), (() => {
           let e = [];
-          for (let s of t) e.push((0, A.getScopeName)(s, t)), s === d.OAuth2Scopes.APPLICATIONS_COMMANDS && e.push(G.default.Messages.SCOPE_DM_YOU);
+          for (let s of t) e.push((0, A.getScopeName)(s, t)), s === d.OAuth2Scopes.APPLICATIONS_COMMANDS && e.push(B.default.Messages.SCOPE_DM_YOU);
           if (e.length > 0 || null != l && l.length > 0) return (0, a.jsx)(_.FormItem, {
             faded: !0,
-            title: G.default.Messages.PERMISSIONS,
+            title: B.default.Messages.PERMISSIONS,
             className: k.marginTop20,
             children: (0, a.jsxs)("ul", {
               children: [e.map((e, t) => (0, a.jsxs)("li", {
@@ -263,8 +263,8 @@ t.default = () => {
         query: r,
         onChange: c,
         onClear: S,
-        placeholder: G.default.Messages.INTEGRATIONS_SEARCH,
-        "aria-label": G.default.Messages.INTEGRATIONS_SEARCH
+        placeholder: B.default.Messages.INTEGRATIONS_SEARCH,
+        "aria-label": B.default.Messages.INTEGRATIONS_SEARCH
       })
     }),
     T = (e, t) => (0, a.jsxs)(w, {
@@ -285,19 +285,19 @@ t.default = () => {
     }, [t, r]);
   return e ? (0, a.jsx)(I.default, {}) : (0, a.jsx)(_.FormSection, {
     tag: _.FormTitleTags.H1,
-    title: G.default.Messages.AUTHORIZED_APPS,
+    title: B.default.Messages.AUTHORIZED_APPS,
     children: (0, a.jsx)(_.HeadingLevel, {
       component: (0, a.jsx)(_.FormNotice, {
         className: k.marginBottom40,
         type: _.CardTypes.PRIMARY,
-        title: G.default.Messages.APPLICATIONS_AND_CONNECTIONS,
-        body: G.default.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
+        title: B.default.Messages.APPLICATIONS_AND_CONNECTIONS,
+        body: B.default.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
       }),
       children: null == t || null == f ? (0, a.jsx)(_.Spinner, {
         className: k.marginTop20,
         type: _.Spinner.Type.SPINNING_CIRCLE
-      }) : 0 === t.length ? T(G.default.Messages.NO_AUTHORIZED_APPS_NOTE, G.default.Messages.NO_AUTHORIZED_APPS) : 0 === f.length ? (0, a.jsxs)(a.Fragment, {
-        children: [E(), T(null, G.default.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
+      }) : 0 === t.length ? T(B.default.Messages.NO_AUTHORIZED_APPS_NOTE, B.default.Messages.NO_AUTHORIZED_APPS) : 0 === f.length ? (0, a.jsxs)(a.Fragment, {
+        children: [E(), T(null, B.default.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
       }) : (0, a.jsxs)(a.Fragment, {
         children: [E(), f.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(Y, {
           onDelete: () => i(e),

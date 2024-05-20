@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return v
+    return _
   }
 });
 var l = s("735250"),
@@ -19,17 +19,17 @@ var l = s("735250"),
   E = s("886140"),
   I = s("305944");
 
-function v(e) {
+function _(e) {
   let {
     user: t,
     type: s
-  } = e, v = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), T = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), g = a.useMemo(() => v ? T.find(e => e.type === m.ActivityTypes.PLAYING) : null, [T, v]), A = a.useMemo(() => T.filter(e => e !== g), [g, T]), {
-    analyticsLocations: x,
-    newestAnalyticsLocation: U
+  } = e, _ = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), v = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), T = a.useMemo(() => v.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [v]), A = a.useMemo(() => _ ? T.find(e => e.type === m.ActivityTypes.PLAYING) : null, [T, _]), g = a.useMemo(() => T.filter(e => e !== A), [A, T]), {
+    analyticsLocations: U,
+    newestAnalyticsLocation: x
   } = (0, o.default)(), {
     trackUserProfileAction: N,
-    ...p
-  } = (0, f.useUserProfileAnalyticsContext)(), C = {
+    ...C
+  } = (0, f.useUserProfileAnalyticsContext)(), p = {
     location: {
       page: m.AnalyticsPages.USER_PROFILE,
       section: m.AnalyticsSections.PROFILE_MODAL
@@ -38,40 +38,40 @@ function v(e) {
   return (0, l.jsxs)(n.ScrollerThin, {
     className: I.listScroller,
     fade: !0,
-    children: [v ? (0, l.jsx)(r.default, {
+    children: [_ ? (0, l.jsx)(r.default, {
       type: s,
       user: t,
-      source: U,
+      source: x,
       className: E.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       showChannelDetails: s === c.Types.SIMPLIFIED_PROFILE,
-      activity: g,
+      activity: A,
       actionColor: E.actionColor,
-      analyticsParams: C,
+      analyticsParams: p,
       onAction: () => {
         N({
           action: "JOIN_ACTIVITY"
         }), (0, S.trackUserProfileActivityJoined)({
           activityType: m.ActivityTypes.STREAMING,
-          activityName: null == g ? void 0 : g.name,
-          activityPlatform: null == g ? void 0 : g.platform,
-          activitySessionId: null == g ? void 0 : g.session_id,
-          applicationId: null == g ? void 0 : g.application_id,
-          analyticsLocations: x,
-          ...p
+          activityName: null == A ? void 0 : A.name,
+          activityPlatform: null == A ? void 0 : A.platform,
+          activitySessionId: null == A ? void 0 : A.session_id,
+          applicationId: null == A ? void 0 : A.application_id,
+          analyticsLocations: U,
+          ...C
         })
       }
-    }) : null, A.map(e => (0, l.jsx)(r.default, {
+    }) : null, g.map(e => (0, l.jsx)(r.default, {
       type: s,
       activity: e,
       user: t,
       useStoreStream: !1,
-      source: U,
+      source: x,
       className: E.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       showChannelDetails: s === c.Types.SIMPLIFIED_PROFILE,
       actionColor: E.actionColor,
-      analyticsParams: C,
+      analyticsParams: p,
       onAction: () => {
         N({
           action: "JOIN_ACTIVITY"
@@ -81,8 +81,8 @@ function v(e) {
           activityPlatform: e.platform,
           activitySessionId: e.session_id,
           applicationId: e.application_id,
-          analyticsLocations: x,
-          ...p
+          analyticsLocations: U,
+          ...C
         })
       }
     }, "".concat(e.application_id, "-").concat(e.session_id, "-").concat(e.name)))]

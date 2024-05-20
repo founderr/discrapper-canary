@@ -35,8 +35,8 @@ function A(e) {
       popoutWindow: x,
       inCall: M,
       channel: R,
-      selectedParticipant: y,
-      showParticipants: L = !0,
+      selectedParticipant: L,
+      showParticipants: y = !0,
       className: O,
       paused: j,
       width: P,
@@ -51,11 +51,11 @@ function A(e) {
     [H, G] = l.useState(null),
     [V, W] = l.useState(!0),
     [Y, z] = l.useState(!1),
-    K = y.type === g.ParticipantTypes.ACTIVITY,
-    Z = !K && null != y.streamId,
+    K = L.type === g.ParticipantTypes.ACTIVITY,
+    Z = !K && null != L.streamId,
     q = Z && null != H && H.width > 0 && H.height > 0 ? H.width / H.height : T,
     X = D <= 2 * I + 144,
-    Q = L && !X,
+    Q = y && !X,
     J = (0, o.default)(Q),
     $ = 0;
   (K || Q) && ($ += 72), K && !Q && ($ += 48), Q && ($ += .5 * I + 8);
@@ -106,7 +106,7 @@ function A(e) {
         clamp: !0
       }
     }),
-    eo = (0, r.useTransition)(y, {
+    eo = (0, r.useTransition)(L, {
       keys: e => null == e ? void 0 : e.id,
       config: {
         ...r.config.stiff,
@@ -126,7 +126,7 @@ function A(e) {
     eu = l.useCallback(e => {
       G(e), W(!1)
     }, []),
-    ed = Q || j ? [] : (0, p.getPipParticipants)(N, y, B),
+    ed = Q || j ? [] : (0, p.getPipParticipants)(N, L, B),
     {
       visibleParticipants: ec,
       participantTileWidth: ef
@@ -188,7 +188,7 @@ function A(e) {
           },
           children: (0, a.jsx)(u.default, {
             channelId: R.id,
-            isParticipantsOpen: L,
+            isParticipantsOpen: y,
             isVertical: !0
           })
         }) : null]
@@ -206,9 +206,9 @@ function A(e) {
           onDoubleClick: A,
           participants: ec,
           participantTileWidth: ef,
-          selectedParticipantId: y.id,
+          selectedParticipantId: L.id,
           inCall: M,
-          paused: j || Y || !L,
+          paused: j || Y || !y,
           popoutWindow: x
         })
       })]

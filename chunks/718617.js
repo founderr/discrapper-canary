@@ -42,9 +42,9 @@ function S(e) {
   let M = null == (n = v) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
     R = (0, c.default)(M),
     {
-      reducedMotion: y
+      reducedMotion: L
     } = l.useContext(r.AccessibilityPreferencesContext),
-    L = l.useCallback(e => {
+    y = l.useCallback(e => {
       null != N && (0, f.openGuildMemberModViewSidebar)(_, S, N.baseChannelId, {
         modViewPanel: e
       })
@@ -55,10 +55,10 @@ function S(e) {
         comboKeysBindGlobal: !0,
         action() {
           if (v === E.ModViewPanel.INFO) return T();
-          return L(E.ModViewPanel.INFO)
+          return y(E.ModViewPanel.INFO)
         }
       }
-    }), [T, v, L]);
+    }), [T, v, y]);
   l.useEffect(() => (u.default.enable(), u.default.enableTemp(O), () => u.default.disableTemp()), [O]);
   let j = (0, s.useTransition)(v, {
     immediate: x !== S,
@@ -93,7 +93,7 @@ function S(e) {
           backfaceVisibility: "hidden",
           width: "100%",
           height: "100%",
-          ...y.enabled ? {
+          ...L.enabled ? {
             opacity: null === (l = e.value) || void 0 === l ? void 0 : l.to(e => 1 - Math.abs(e))
           } : {
             left: null === (i = e.value) || void 0 === i ? void 0 : i.to(g("left", R)),
@@ -106,21 +106,21 @@ function S(e) {
               return (0, a.jsx)(h.default, {
                 userId: S,
                 guildId: _,
-                onNavigate: L,
+                onNavigate: y,
                 className: A
               });
             case E.ModViewPanel.MESSAGE_HISTORY:
               return (0, a.jsx)(m.default, {
                 userId: S,
                 guildId: _,
-                onNavigate: () => L(E.ModViewPanel.INFO),
+                onNavigate: () => y(E.ModViewPanel.INFO),
                 className: A
               });
             case E.ModViewPanel.PERMISSIONS:
               return (0, a.jsx)(p.default, {
                 userId: S,
                 guildId: _,
-                onNavigate: () => L(E.ModViewPanel.INFO),
+                onNavigate: () => y(E.ModViewPanel.INFO),
                 className: A
               });
             default:

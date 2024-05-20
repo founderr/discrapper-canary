@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("703558"),
   M = n("375954"),
   R = n("496675"),
-  y = n("117530"),
-  L = n("153124"),
+  L = n("117530"),
+  y = n("153124"),
   O = n("465670"),
   j = n("663949"),
   P = n("934458"),
@@ -163,7 +163,7 @@ function q(e) {
       messageError: d,
       submit: l.useCallback(async (e, l, s) => {
         var r, o, d;
-        null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = I.default.getStickerPreview(t.id, K.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = y.default.getUploads(t.id, x.DraftType.FirstThreadMessage));
+        null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = I.default.getStickerPreview(t.id, K.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = L.default.getUploads(t.id, x.DraftType.FirstThreadMessage));
         let h = null !== (o = a.name) && void 0 !== o ? o : "",
           m = null == n && 0 === h.length,
           p = "" === e && (null == l || 0 === l.length) && 0 === s.length;
@@ -314,7 +314,7 @@ function Q(e) {
     error: r
   } = e, u = null !== (t = s.name) && void 0 !== t ? t : "", c = (0, w.renderError)(r, {
     content: u
-  }), f = (0, k.getDefaultThreadName)(n, l), h = null != l, m = (0, L.useUID)();
+  }), f = (0, k.getDefaultThreadName)(n, l), h = null != l, m = (0, y.useUID)();
   return (0, a.jsx)(o.FormSection, {
     tag: "label",
     htmlFor: m,

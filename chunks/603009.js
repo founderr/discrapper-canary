@@ -30,19 +30,19 @@ var a = n("735250"),
   x = n("981631"),
   M = n("921944"),
   R = n("689938"),
-  y = n("838373");
+  L = n("838373");
 
-function L(e) {
+function y(e) {
   var t, n;
   let {
     guild: s,
     showToast: o,
     onConfirm: m,
     onDismiss: p
-  } = e, [E, g] = l.useState(!1), _ = l.useRef(null), A = (0, S.useClanInfo)(s.id), x = (0, f.default)(), M = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion), L = (0, T.useBrandColor)(null == A ? void 0 : null === (t = A.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, .5]), O = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+  } = e, [E, g] = l.useState(!1), _ = l.useRef(null), A = (0, S.useClanInfo)(s.id), x = (0, f.default)(), M = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion), y = (0, T.useBrandColor)(null == A ? void 0 : null === (t = A.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, .5]), O = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
     theme: x,
     saturation: 1
-  }).hex(), j = (0, T.getClanRadialBackgroundStyle)(L, O, "top left", .3, "30%"), P = (0, c.useStateFromStores)([C.default], () => {
+  }).hex(), j = (0, T.getClanRadialBackgroundStyle)(y, O, "top left", .3, "30%"), P = (0, c.useStateFromStores)([C.default], () => {
     var e;
     return null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan
   }, []);
@@ -102,7 +102,7 @@ function L(e) {
     return t && (0, a.jsx)(r.animated.div, {
       onMouseEnter: () => g(!0),
       onMouseLeave: () => g(!1),
-      className: i()(y.wrapper),
+      className: i()(L.wrapper),
       style: {
         ...e,
         ...j
@@ -112,19 +112,19 @@ function L(e) {
         "aria-label": B,
         onClick: b,
         children: (0, a.jsxs)("div", {
-          className: i()(y.toastContainerInner, E ? y.hovered : null),
+          className: i()(L.toastContainerInner, E ? L.hovered : null),
           children: [(0, a.jsxs)("div", {
-            className: y.guildIconContainer,
+            className: L.guildIconContainer,
             children: [(0, a.jsx)(N.default, {
               guild: s,
               iconSize: 64,
-              className: y.icon
+              className: L.icon
             }), (0, a.jsx)("div", {
-              className: y.guildTagContainer,
+              className: L.guildTagContainer,
               children: (0, a.jsx)(v.BaseClanTagChiplet, {
                 clanTag: null === (n = s.clan) || void 0 === n ? void 0 : n.tag,
                 clanBadge: H,
-                className: y.guildClanTag
+                className: L.guildClanTag
               })
             })]
           }), (0, a.jsxs)("div", {
@@ -143,7 +143,7 @@ function L(e) {
             })]
           }), (0, a.jsx)("div", {
             children: (0, a.jsx)(d.Clickable, {
-              className: y.toastButton,
+              className: L.toastButton,
               onClick: D,
               children: (0, a.jsx)(u.CloseSmallBoldIcon, {
                 width: 20,
@@ -173,7 +173,7 @@ function O(e) {
     f = l.useCallback(() => {
       r(!1), null != t && (0, m.markContentAsDismissed)(o.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : x.EMPTY_STRING_SNOWFLAKE_ID, !0, M.ContentDismissActionType.DISMISS)
     }, [t]);
-  return n && null != t && null != s ? (0, a.jsx)(L, {
+  return n && null != t && null != s ? (0, a.jsx)(y, {
     guild: s,
     onConfirm: d,
     onDismiss: f,

@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("868671"),
   M = n("623624"),
   R = n("518738"),
-  y = n("155409"),
-  L = n("484459"),
+  L = n("155409"),
+  y = n("484459"),
   O = n("103575"),
   j = n("439170"),
   P = n("430824"),
@@ -93,7 +93,7 @@ class X extends l.Component {
       ...g
     } = this.props, S = null != E ? new Date(E) : null;
     return (0, a.jsx)(h.Popout, {
-      preload: () => (0, L.maybeFetchUserProfileForPopout)(s, {
+      preload: () => (0, y.maybeFetchUserProfileForPopout)(s, {
         channelId: c.id,
         guildId: f
       }),
@@ -354,7 +354,7 @@ class ee extends l.Component {
       return (0, A.isContentGroup)(i) ? (0, l.createElement)(A.default, {
         ...i,
         key: "section-".concat(t)
-      }) : 0 === t ? (0, a.jsx)(y.default, {
+      }) : 0 === t ? (0, a.jsx)(L.default, {
         tutorialId: "whos-online",
         position: "left",
         inlineSpecs: q,

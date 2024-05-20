@@ -61,8 +61,8 @@ function y() {
     audioSubsystem: f,
     silenceWarning: v,
     debugLoggingEnabled: y,
-    legacyAudioSubsystemSupported: B,
-    experimentalAudioSubsystemSupported: G,
+    legacyAudioSubsystemSupported: G,
+    experimentalAudioSubsystemSupported: B,
     qosSupported: F,
     attenuationSupported: k
   } = (0, r.useStateFromStoresObject)([S.default], () => ({
@@ -145,7 +145,7 @@ function y() {
           onChange: e => d.default.setAttenuation(s, l, e),
           children: D.default.Messages.ATTENUATE_WHILE_SPEAKING_OTHERS
         })]
-      }), (B || G) && (0, a.jsxs)(o.FormSection, {
+      }), (G || B) && (0, a.jsxs)(o.FormSection, {
         className: P.marginBottom20,
         title: D.default.Messages.FORM_LABEL_SUBSYSTEM,
         children: [(0, a.jsx)(o.SingleSelect, {
@@ -163,7 +163,7 @@ function y() {
               value: L.AudioSubsystems.EXPERIMENTAL,
               label: "Experimental"
             }), s
-          }(B, G),
+          }(G, B),
           onChange: e => {
             U(D.default.Messages.SWITCH_SUBSYSTEM, D.default.Messages.SWITCH_SUBSYSTEM_BODY, () => d.default.setAudioSubsystem(e))
           }

@@ -34,8 +34,8 @@ var a = s("735250"),
   b = s("888256"),
   U = s("2719"),
   y = s("194530"),
-  B = s("981631"),
-  G = s("801461"),
+  G = s("981631"),
+  B = s("801461"),
   F = s("689938"),
   k = s("493087"),
   w = s("611273");
@@ -110,7 +110,7 @@ class H extends n.PureComponent {
         date: (0, m.getLocalizedForcedUUDate)(this.props.locale)
       }) : F.default.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, a.jsx)(M.default, {
         className: k.noticeTextButton,
-        onClick: () => (0, h.default)(G.PomeloEntrypoints.USER_SETTINGS),
+        onClick: () => (0, h.default)(B.PomeloEntrypoints.USER_SETTINGS),
         children: F.default.Messages.GET_STARTED
       })]
     }) : null
@@ -253,14 +253,14 @@ class H extends n.PureComponent {
     })
   }
   handleDisableAccountError(e) {
-    if (e.body.code === B.AbortCodes.INVALID_PASSWORD) throw e;
+    if (e.body.code === G.AbortCodes.INVALID_PASSWORD) throw e;
     this.setState({
       shouldRenderDisableAccountErrorModal: !0,
       disableAccountErrorMessage: e.body.message
     })
   }
   handleSubmitDisableAccount(e, t) {
-    return (0, E.disableAccount)(e, t).then(B.NOOP, this.handleDisableAccountError)
+    return (0, E.disableAccount)(e, t).then(G.NOOP, this.handleDisableAccountError)
   }
   handleDisableAccount() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],

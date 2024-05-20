@@ -158,7 +158,7 @@ t.default = function(e) {
       return h[n] = o, o
     }(p, S, t)
   }, [N, S, p]);
-  let y = (t = null != _, n = S, s = p, n ? g[s].typing : t ? g[s].status : g[s].default);
+  let L = (t = null != _, n = S, s = p, n ? g[s].typing : t ? g[s].status : g[s].default);
   return (0, a.jsxs)("div", {
     style: {
       width: N,
@@ -169,7 +169,7 @@ t.default = function(e) {
     "aria-hidden": A["aria-hidden"],
     className: i()(f.container, I),
     children: [(0, a.jsxs)(d.default, {
-      mask: y,
+      mask: L,
       height: N,
       width: N,
       children: [(0, a.jsx)("img", {

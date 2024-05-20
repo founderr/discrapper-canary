@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return L
   }
 }), n("47120");
 var a = n("735250"),
@@ -116,7 +116,7 @@ class R extends l.PureComponent {
   }
 }
 
-function y(e) {
+function L(e) {
   let {
     user: t,
     channel: n,

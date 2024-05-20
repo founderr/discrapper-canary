@@ -1,266 +1,266 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   clearPurchaseError: function() {
-    return F
+    return p
   },
   fetchPublishedSKU: function() {
-    return C
-  },
-  fetchPurchasePreview: function() {
-    return T
-  },
-  fetchSKU: function() {
-    return h
-  },
-  fetchTestSKUsForApplication: function() {
-    return y
-  },
-  grantChannelBranchEntitlement: function() {
-    return U
-  },
-  purchaseSKU: function() {
-    return R
-  },
-  resendPaymentVerificationEmail: function() {
     return I
   },
-  showPurchaseConfirmationStep: function() {
+  fetchPurchasePreview: function() {
     return P
   },
+  fetchSKU: function() {
+    return T
+  },
+  fetchTestSKUsForApplication: function() {
+    return C
+  },
+  grantChannelBranchEntitlement: function() {
+    return R
+  },
+  purchaseSKU: function() {
+    return U
+  },
+  resendPaymentVerificationEmail: function() {
+    return M
+  },
+  showPurchaseConfirmationStep: function() {
+    return h
+  },
   updateSKUPaymentIsGift: function() {
-    return g
+    return O
   }
 }), n("411104");
-var i = n("544891"),
-  r = n("570140"),
-  o = n("881052"),
+var r = n("544891"),
+  u = n("570140"),
+  i = n("881052"),
   a = n("128069"),
   l = n("34756"),
-  u = n("115130"),
-  d = n("55563"),
-  c = n("695103"),
-  s = n("122289"),
-  p = n("823379"),
-  f = n("936101"),
-  _ = n("73346"),
-  E = n("355467"),
-  S = n("981631");
-async function h(t) {
-  if (null == d.default.get(t)) {
-    r.default.dispatch({
-      type: "SKU_FETCH_START",
-      skuId: t
-    });
-    try {
-      let e = await (0, _.httpGetWithCountryCodeQuery)(S.Endpoints.STORE_SKU(t));
-      r.default.dispatch({
-        type: "SKU_FETCH_SUCCESS",
-        sku: e.body
-      })
-    } catch (e) {
-      throw r.default.dispatch({
-        type: "SKU_FETCH_FAIL",
-        skuId: t
-      }), new l.default("Failed to fetch SKU ".concat(t))
-    }
-  }
-}
-async function C(t, e) {
-  if (null == d.default.get(e)) {
-    r.default.dispatch({
+  o = n("115130"),
+  s = n("55563"),
+  E = n("695103"),
+  S = n("122289"),
+  d = n("823379"),
+  _ = n("936101"),
+  c = n("73346"),
+  A = n("355467"),
+  f = n("981631");
+async function T(e) {
+  if (null == s.default.get(e)) {
+    u.default.dispatch({
       type: "SKU_FETCH_START",
       skuId: e
     });
     try {
-      let n = c.default.inTestModeForApplication(t) || u.default.inDevModeForApplication(t),
-        i = await (0, _.httpGetWithCountryCodeQuery)(n ? S.Endpoints.STORE_SKU(e) : S.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(e));
-      r.default.dispatch({
+      let t = await (0, c.httpGetWithCountryCodeQuery)(f.Endpoints.STORE_SKU(e));
+      u.default.dispatch({
         type: "SKU_FETCH_SUCCESS",
-        sku: n ? i.body : i.body.sku
-      }), !n && r.default.dispatch({
-        type: "STORE_LISTING_FETCH_SUCCESS",
-        storeListing: i.body
+        sku: t.body
       })
     } catch (t) {
-      throw r.default.dispatch({
+      throw u.default.dispatch({
         type: "SKU_FETCH_FAIL",
         skuId: e
       }), new l.default("Failed to fetch SKU ".concat(e))
     }
   }
 }
-async function y(t) {
-  let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  if (!(c.default.inTestModeForApplication(t) || u.default.inDevModeForApplication(t)) && e) throw Error("this should only be used in test mode");
-  let n = (await (0, _.httpGetWithCountryCodeQuery)(S.Endpoints.APPLICATION_SKUS(t))).body;
-  return r.default.dispatch({
+async function I(e, t) {
+  if (null == s.default.get(t)) {
+    u.default.dispatch({
+      type: "SKU_FETCH_START",
+      skuId: t
+    });
+    try {
+      let n = E.default.inTestModeForApplication(e) || o.default.inDevModeForApplication(e),
+        r = await (0, c.httpGetWithCountryCodeQuery)(n ? f.Endpoints.STORE_SKU(t) : f.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(t));
+      u.default.dispatch({
+        type: "SKU_FETCH_SUCCESS",
+        sku: n ? r.body : r.body.sku
+      }), !n && u.default.dispatch({
+        type: "STORE_LISTING_FETCH_SUCCESS",
+        storeListing: r.body
+      })
+    } catch (e) {
+      throw u.default.dispatch({
+        type: "SKU_FETCH_FAIL",
+        skuId: t
+      }), new l.default("Failed to fetch SKU ".concat(t))
+    }
+  }
+}
+async function C(e) {
+  let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+  if (!(E.default.inTestModeForApplication(e) || o.default.inDevModeForApplication(e)) && t) throw Error("this should only be used in test mode");
+  let n = (await (0, c.httpGetWithCountryCodeQuery)(f.Endpoints.APPLICATION_SKUS(e))).body;
+  return u.default.dispatch({
     type: "SKUS_FETCH_SUCCESS",
     skus: n
   }), n
 }
-async function T(t, e, n, i) {
-  let o;
+async function P(e, t, n, r) {
+  let i;
   let a = {
     payment_source_id: n,
-    gift: null == i ? void 0 : i.isGift
+    gift: null == r ? void 0 : r.isGift
   };
-  (c.default.inTestModeForApplication(t) || u.default.inDevModeForApplication(t)) && (a.test_mode = !0), r.default.dispatch({
+  (E.default.inTestModeForApplication(e) || o.default.inDevModeForApplication(e)) && (a.test_mode = !0), u.default.dispatch({
     type: "SKU_PURCHASE_PREVIEW_FETCH",
-    skuId: e
+    skuId: t
   });
   try {
-    o = await (0, _.httpGetWithCountryCodeQuery)({
-      url: S.Endpoints.STORE_SKU_PURCHASE(e),
+    i = await (0, c.httpGetWithCountryCodeQuery)({
+      url: f.Endpoints.STORE_SKU_PURCHASE(t),
       query: a,
       oldFormErrors: !0
-    }), r.default.dispatch({
+    }), u.default.dispatch({
       type: "SKU_PURCHASE_PREVIEW_FETCH_SUCCESS",
-      skuId: e,
+      skuId: t,
       paymentSourceId: n,
-      price: o.body
+      price: i.body
     })
-  } catch (t) {
-    r.default.dispatch({
+  } catch (e) {
+    u.default.dispatch({
       type: "SKU_PURCHASE_PREVIEW_FETCH_FAILURE",
-      skuId: e
+      skuId: t
     })
   }
-  return o
+  return i
 }
-async function U(t, e, n) {
-  r.default.dispatch({
+async function R(e, t, n) {
+  u.default.dispatch({
     type: "SKU_PURCHASE_START",
-    applicationId: t,
+    applicationId: e,
     skuId: n
   });
   try {
-    let t = await i.HTTP.post({
-      url: S.Endpoints.CHANNEL_ENTITLEMENT_GRANT(e),
+    let e = await r.HTTP.post({
+      url: f.Endpoints.CHANNEL_ENTITLEMENT_GRANT(t),
       oldFormErrors: !0
     });
-    return r.default.dispatch({
+    return u.default.dispatch({
       type: "SKU_PURCHASE_SUCCESS",
       skuId: n,
-      entitlements: t.body,
+      entitlements: e.body,
       libraryApplications: []
-    }), t.body
-  } catch (i) {
-    let e = new o.BillingError(i);
-    throw r.default.dispatch({
+    }), e.body
+  } catch (r) {
+    let t = new i.BillingError(r);
+    throw u.default.dispatch({
       type: "SKU_PURCHASE_FAIL",
-      applicationId: t,
+      applicationId: e,
       skuId: n,
-      error: e
-    }), e
+      error: t
+    }), t
   }
 }
-let A = {
+let N = {
   isGift: !1
 };
-async function R(t, e, n) {
+async function U(e, t, n) {
   let {
     paymentSource: l,
-    expectedAmount: d,
-    expectedCurrency: _,
-    analyticsLoadId: h,
-    isGift: C,
-    giftInfoOptions: y,
-    subscriptionPlanId: T,
-    loadId: U,
-    countryCode: R
+    expectedAmount: s,
+    expectedCurrency: c,
+    analyticsLoadId: T,
+    isGift: I,
+    giftInfoOptions: C,
+    subscriptionPlanId: P,
+    loadId: R,
+    countryCode: U
   } = {
-    ...A,
+    ...N,
     ...n
   };
-  r.default.wait(() => {
-    r.default.dispatch({
+  u.default.wait(() => {
+    u.default.dispatch({
       type: "SKU_PURCHASE_START",
-      applicationId: t,
-      skuId: e
+      applicationId: e,
+      skuId: t
     })
   });
-  let I = c.default.inTestModeForApplication(t) || u.default.inDevModeForApplication(t);
+  let M = E.default.inTestModeForApplication(e) || o.default.inDevModeForApplication(e);
   try {
-    let t = {
-      gift: C,
-      sku_subscription_plan_id: T,
-      gateway_checkout_context: await (0, s.createGatewayCheckoutContext)(l),
-      load_id: U
+    let e = {
+      gift: I,
+      sku_subscription_plan_id: P,
+      gateway_checkout_context: await (0, S.createGatewayCheckoutContext)(l),
+      load_id: R
     };
-    if (I) t.test_mode = !0;
+    if (M) e.test_mode = !0;
     else {
-      if (null != l && (t.payment_source_id = l.id, t.payment_source_token = await (0, E.createPaymentSourceToken)(l), S.ADYEN_PAYMENT_SOURCES.has(l.type))) {
-        let e = await (0, E.popupBridgeState)(l.type);
-        t.return_url = (0, i.getAPIBaseURL)() + S.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(l.type, null != e ? e : "", "success")
+      if (null != l && (e.payment_source_id = l.id, e.payment_source_token = await (0, A.createPaymentSourceToken)(l), f.ADYEN_PAYMENT_SOURCES.has(l.type))) {
+        let t = await (0, A.popupBridgeState)(l.type);
+        e.return_url = (0, r.getAPIBaseURL)() + f.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(l.type, null != t ? t : "", "success")
       }
-      null != d && (t.expected_amount = d), null != _ && (t.expected_currency = _), t.gift_info_options = y, null != R && (t.country_code = R), t.purchase_token = (0, f.getPurchaseToken)()
+      null != s && (e.expected_amount = s), null != c && (e.expected_currency = c), e.gift_info_options = C, null != U && (e.country_code = U), e.purchase_token = (0, _.getPurchaseToken)()
     }
-    let n = await i.HTTP.post({
-      url: S.Endpoints.STORE_SKU_PURCHASE(e),
-      body: t,
+    let n = await r.HTTP.post({
+      url: f.Endpoints.STORE_SKU_PURCHASE(t),
+      body: e,
       context: {
-        load_id: h
+        load_id: T
       },
       oldFormErrors: !0
     });
-    return r.default.dispatch({
+    return u.default.dispatch({
       type: "SKU_PURCHASE_SUCCESS",
-      skuId: e,
-      libraryApplications: null != n.body.library_applications ? n.body.library_applications.filter(p.isNotNullish) : [],
+      skuId: t,
+      libraryApplications: null != n.body.library_applications ? n.body.library_applications.filter(d.isNotNullish) : [],
       entitlements: n.body.entitlements,
       giftCode: n.body.gift_code
     }), {
       ...n.body,
       redirectConfirmation: !1
     }
-  } catch (i) {
-    let n = i instanceof o.BillingError ? i : new o.BillingError(i);
-    if ((n.code === a.ErrorCodes.CONFIRMATION_REQUIRED || n.code === a.ErrorCodes.AUTHENTICATION_REQUIRED) && r.default.dispatch({
+  } catch (r) {
+    let n = r instanceof i.BillingError ? r : new i.BillingError(r);
+    if ((n.code === a.ErrorCodes.CONFIRMATION_REQUIRED || n.code === a.ErrorCodes.AUTHENTICATION_REQUIRED) && u.default.dispatch({
         type: "SKU_PURCHASE_AWAIT_CONFIRMATION",
-        skuId: e,
-        isGift: C
-      }), n.code !== a.ErrorCodes.CONFIRMATION_REQUIRED) throw r.default.dispatch({
+        skuId: t,
+        isGift: I
+      }), n.code !== a.ErrorCodes.CONFIRMATION_REQUIRED) throw u.default.dispatch({
       type: "SKU_PURCHASE_FAIL",
-      applicationId: t,
-      skuId: e,
+      applicationId: e,
+      skuId: t,
       error: n
     }), n;
-    if (!i.body.payment_id) throw (0, E.dispatchConfirmationError)("payment id cannot be null on redirected confirmations.");
-    return (0, E.handleConfirmation)(i.body, l)
+    if (!r.body.payment_id) throw (0, A.dispatchConfirmationError)("payment id cannot be null on redirected confirmations.");
+    return (0, A.handleConfirmation)(r.body, l)
   }
 }
-async function I() {
+async function M() {
   try {
-    let t = {
-      purchase_token: (0, f.getPurchaseToken)()
+    let e = {
+      purchase_token: (0, _.getPurchaseToken)()
     };
     return {
-      ...(await i.HTTP.post({
-        url: S.Endpoints.STORE_EMAIL_RESEND_PAYMENT_VERIFICATION,
-        body: t,
+      ...(await r.HTTP.post({
+        url: f.Endpoints.STORE_EMAIL_RESEND_PAYMENT_VERIFICATION,
+        body: e,
         oldFormErrors: !0
       })).body
     }
-  } catch (t) {
-    throw t instanceof o.BillingError ? t : new o.BillingError(t)
+  } catch (e) {
+    throw e instanceof i.BillingError ? e : new i.BillingError(e)
   }
 }
 
-function F() {
-  r.default.dispatch({
+function p() {
+  u.default.dispatch({
     type: "SKU_PURCHASE_CLEAR_ERROR"
   })
 }
 
-function P() {
-  r.default.wait(() => r.default.dispatch({
+function h() {
+  u.default.wait(() => u.default.dispatch({
     type: "SKU_PURCHASE_SHOW_CONFIRMATION_STEP"
   }))
 }
 
-function g(t) {
-  r.default.dispatch({
+function O(e) {
+  u.default.dispatch({
     type: "SKU_PURCHASE_UPDATE_IS_GIFT",
-    isGift: t
+    isGift: e
   })
 }

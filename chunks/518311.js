@@ -29,8 +29,8 @@ var a, l = n("735250"),
   x = n("367907"),
   M = n("762914"),
   R = n("43267"),
-  y = n("933557"),
-  L = n("366980"),
+  L = n("933557"),
+  y = n("366980"),
   O = n("703656"),
   j = n("131704"),
   P = n("592125"),
@@ -90,7 +90,7 @@ let eo = e => {
     let {
       channel: n,
       onClose: a
-    } = e, s = null !== (t = (0, y.default)(n)) && void 0 !== t ? t : "", i = (0, h.useStateFromStores)([F.default], () => {
+    } = e, s = null !== (t = (0, L.default)(n)) && void 0 !== t ? t : "", i = (0, h.useStateFromStores)([F.default], () => {
       var e;
       return null !== (e = F.default.lastMessageId(n.id)) && void 0 !== e ? e : n.id
     });
@@ -402,7 +402,7 @@ class ed extends(a = s.PureComponent) {
       copied: a
     } = this.state;
     if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
-    let i = null != t ? (0, L.default)(t.code) : "";
+    let i = null != t ? (0, y.default)(t.code) : "";
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(p.FormTitle, {
         tag: "h5",
@@ -426,7 +426,7 @@ class ed extends(a = s.PureComponent) {
           className: et.copyInput,
           name: "invite",
           value: i,
-          placeholder: (0, L.default)(ee.default.Messages.GROUP_DM_INVITE_LINK_EXAMPLE),
+          placeholder: (0, y.default)(ee.default.Messages.GROUP_DM_INVITE_LINK_EXAMPLE),
           editable: !1,
           inputClassName: et.input,
           spellCheck: "false",

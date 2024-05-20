@@ -39,8 +39,8 @@ var n = s("990547"),
   b = s("25990"),
   U = s("87086"),
   y = s("759231"),
-  B = s("26290"),
-  G = s("626135"),
+  G = s("26290"),
+  B = s("626135"),
   F = s("49012"),
   k = s("358085"),
   w = s("392735"),
@@ -106,8 +106,8 @@ let ej = () => {
       impressionSource: O,
       numOfPendingFamilyRequests: eU,
       isOverlaySupported: ey,
-      isClipsBetaTagShowing: eB = !1,
-      shouldMergeGameSettings: eG,
+      isClipsBetaTagShowing: eG = !1,
+      shouldMergeGameSettings: eB,
       isUserSettingsSearchEnabled: eF
     } = e;
     return Object.freeze({
@@ -132,7 +132,7 @@ let ej = () => {
         label: eD.default.Messages.GAMES,
         ariaLabel: eD.default.Messages.GAMES,
         element: ex.default,
-        predicate: () => eG
+        predicate: () => eB
       },
       [eM.WebSetting.PROFILE_CUSTOMIZATION]: {
         section: ev.UserSettingsSections.PROFILE_CUSTOMIZATION,
@@ -140,7 +140,7 @@ let ej = () => {
         label: eD.default.Messages.USER_SETTINGS_PROFILES,
         ariaLabel: eD.default.Messages.USER_SETTINGS_PROFILES,
         element: M.default,
-        newIndicator: (0, a.jsx)(B.PremiumBadge, {
+        newIndicator: (0, a.jsx)(G.PremiumBadge, {
           text: eD.default.Messages.NEW
         }),
         notice: {
@@ -164,7 +164,7 @@ let ej = () => {
         ariaLabel: eD.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
         element: ei.default,
         badgeCount: eU,
-        newIndicator: (0, a.jsx)(B.TextBadge, {
+        newIndicator: (0, a.jsx)(G.TextBadge, {
           text: eD.default.Messages.NEW,
           color: g.default.BG_BRAND
         }),
@@ -202,9 +202,9 @@ let ej = () => {
         section: ev.UserSettingsSections.CLIPS,
         label: eD.default.Messages.CLIPS,
         ariaLabel: eD.default.Messages.CLIPS,
-        icon: eB ? (0, a.jsx)(f.default, {}) : void 0,
+        icon: eG ? (0, a.jsx)(f.default, {}) : void 0,
         element: _.default,
-        predicate: () => !eG
+        predicate: () => !eB
       },
       [eM.WebSetting.FRIEND_REQUESTS]: {
         section: ev.UserSettingsSections.FRIEND_REQUESTS,
@@ -251,7 +251,7 @@ let ej = () => {
         label: eD.default.Messages.APPEARANCE,
         ariaLabel: eD.default.Messages.APPEARANCE,
         element: et.default,
-        newIndicator: (0, a.jsx)(B.PremiumBadge, {
+        newIndicator: (0, a.jsx)(G.PremiumBadge, {
           text: eD.default.Messages.NEW
         }),
         newIndicatorDismissibleContentTypes: ej()
@@ -333,19 +333,19 @@ let ej = () => {
         section: ev.UserSettingsSections.ACTIVITY_PRIVACY,
         label: eD.default.Messages.ACTIVITY_PRIVACY,
         element: $.default,
-        predicate: () => !eG
+        predicate: () => !eB
       },
       [eM.WebSetting.REGISTERED_GAMES]: {
         section: ev.UserSettingsSections.REGISTERED_GAMES,
         label: eD.default.Messages.REGISTERED_GAMES,
         element: eo.default,
-        predicate: () => !eG && (0, eO.shouldShowRegisteredGamesSettings)()
+        predicate: () => !eB && (0, eO.shouldShowRegisteredGamesSettings)()
       },
       [eM.WebSetting.OVERLAY]: {
         section: ev.UserSettingsSections.OVERLAY,
         label: eD.default.Messages.OVERLAY,
         element: eT.default,
-        predicate: () => !eG && ey
+        predicate: () => !eB && ey
       },
       [eM.WebSetting.CHANGELOG]: {
         section: "changelog",
@@ -356,11 +356,11 @@ let ej = () => {
         section: "merchandise",
         onClick: () => {
           let e = "https://discordmerch.com/Dsktopprm";
-          G.default.track(ev.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CLICKED), (0, F.handleClick)({
+          B.default.track(ev.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CLICKED), (0, F.handleClick)({
             href: e,
             shouldConfirm: !0,
             onConfirm: () => {
-              G.default.track(ev.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, E.default)(e)
+              B.default.track(ev.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, E.default)(e)
             }
           })
         },

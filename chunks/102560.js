@@ -1,64 +1,64 @@
 "use strict";
-s.r(t), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  o = s("392711"),
-  r = s.n(o),
-  n = s("442837"),
-  u = s("481060"),
-  d = s("48210"),
-  i = s("412899"),
-  c = s("605436"),
-  m = s("430824"),
-  f = s("496675"),
-  E = s("987134"),
-  p = s("689938"),
-  g = s("700344");
+r.r(t), r("47120");
+var o = r("735250"),
+  a = r("470079"),
+  n = r("392711"),
+  l = r.n(n),
+  s = r("442837"),
+  i = r("481060"),
+  u = r("48210"),
+  d = r("412899"),
+  c = r("605436"),
+  p = r("430824"),
+  h = r("496675"),
+  v = r("987134"),
+  g = r("689938"),
+  f = r("700344");
 t.default = e => {
   let {
     guild: t,
-    transitionState: s,
-    onClose: o
-  } = e, [_, R] = l.useState(7), [h, M] = l.useState(null), [S, v] = l.useState([]), x = l.useCallback(async () => {
-    M(null), M(await d.default.updateEstimate(t.id, _, S))
-  }, [_, t.id, S]);
-  l.useEffect(() => {
-    x()
-  }, [x]);
-  let N = (0, n.useStateFromStoresArray)([f.default, m.default], () => {
-    let e = f.default.getHighestRole(t);
-    return r()(m.default.getRoles(t.id)).sortBy(e => e.position).filter(e => !(0, c.isEveryoneRoleId)(t.id, e.id)).filter(s => f.default.isRoleHigher(t, e, s)).value().map(e => {
+    transitionState: r,
+    onClose: n
+  } = e, [m, b] = a.useState(7), [E, x] = a.useState(null), [S, R] = a.useState([]), M = a.useCallback(async () => {
+    x(null), x(await u.default.updateEstimate(t.id, m, S))
+  }, [m, t.id, S]);
+  a.useEffect(() => {
+    M()
+  }, [M]);
+  let _ = (0, s.useStateFromStoresArray)([h.default, p.default], () => {
+    let e = h.default.getHighestRole(t);
+    return l()(p.default.getRoles(t.id)).sortBy(e => e.position).filter(e => !(0, c.isEveryoneRoleId)(t.id, e.id)).filter(r => h.default.isRoleHigher(t, e, r)).value().map(e => {
       let {
         id: t,
-        name: s
+        name: r
       } = e;
       return {
-        label: s,
+        label: r,
         value: t
       }
     })
   }, [t]);
-  return (0, a.jsxs)(u.ModalRoot, {
-    transitionState: s,
-    children: [(0, a.jsx)(u.ModalHeader, {
+  return (0, o.jsxs)(i.ModalRoot, {
+    transitionState: r,
+    children: [(0, o.jsx)(i.ModalHeader, {
       separator: !1,
-      children: (0, a.jsxs)(u.Heading, {
+      children: (0, o.jsxs)(i.Heading, {
         variant: "heading-lg/semibold",
-        children: [p.default.Messages.PRUNE_MEMBERS, "—", null != t ? t.toString() : ""]
+        children: [g.default.Messages.PRUNE_MEMBERS, "—", null != t ? t.toString() : ""]
       })
-    }), (0, a.jsxs)("div", {
-      className: g.content,
-      children: [(0, a.jsx)(u.FormItem, {
-        title: p.default.Messages.FORM_LABEL_LAST_SEEN,
-        children: (0, a.jsx)(u.RadioGroup, {
-          value: _,
+    }), (0, o.jsxs)("div", {
+      className: f.content,
+      children: [(0, o.jsx)(i.FormItem, {
+        title: g.default.Messages.FORM_LABEL_LAST_SEEN,
+        children: (0, o.jsx)(i.RadioGroup, {
+          value: m,
           options: [{
-            name: p.default.Messages.LAST_SEEN.format({
+            name: g.default.Messages.LAST_SEEN.format({
               days: 7
             }),
             value: 7
           }, {
-            name: p.default.Messages.LAST_SEEN.format({
+            name: g.default.Messages.LAST_SEEN.format({
               days: 30
             }),
             value: 30
@@ -67,31 +67,31 @@ t.default = e => {
             let {
               value: t
             } = e;
-            R(t)
+            b(t)
           },
-          className: g.spacing
+          className: f.spacing
         })
-      }), (0, a.jsx)(u.FormItem, {
-        title: p.default.Messages.PRUNE_WITH_ROLES,
-        children: (0, a.jsx)(E.default, {
+      }), (0, o.jsx)(i.FormItem, {
+        title: g.default.Messages.PRUNE_WITH_ROLES,
+        children: (0, o.jsx)(v.default, {
           isMulti: !0,
-          options: N,
+          options: _,
           onChange: e => {
-            v(e.map(e => e.value))
+            R(e.map(e => e.value))
           },
           value: S,
           multiValueRenderer: e => {
             let {
-              value: s
-            } = e, l = m.default.getRole(t.id, s);
-            if (null == l) return null;
-            let o = S.indexOf(s);
-            return (0, a.jsx)(i.MemberRole, {
-              className: g.role,
-              role: l,
+              value: r
+            } = e, a = p.default.getRole(t.id, r);
+            if (null == a) return null;
+            let n = S.indexOf(r);
+            return (0, o.jsx)(d.MemberRole, {
+              className: f.role,
+              role: a,
               canRemove: !0,
               onRemove: () => {
-                v([...S.slice(0, o), ...S.slice(o + 1)])
+                R([...S.slice(0, n), ...S.slice(n + 1)])
               },
               onMouseDown: e => {
                 e.stopPropagation(), e.preventDefault()
@@ -101,28 +101,28 @@ t.default = e => {
           },
           maxMenuHeight: 200
         })
-      }), (0, a.jsx)(u.FormText, {
-        type: u.FormText.Types.DESCRIPTION,
-        className: g.spacing,
-        children: S.length > 0 ? p.default.Messages.FORM_HELP_LAST_SEEN_WITH_ROLES_1.format({
-          members: h,
-          days: _
-        }) : p.default.Messages.FORM_HELP_LAST_SEEN_1.format({
-          members: h,
-          days: _
+      }), (0, o.jsx)(i.FormText, {
+        type: i.FormText.Types.DESCRIPTION,
+        className: f.spacing,
+        children: S.length > 0 ? g.default.Messages.FORM_HELP_LAST_SEEN_WITH_ROLES_1.format({
+          members: E,
+          days: m
+        }) : g.default.Messages.FORM_HELP_LAST_SEEN_1.format({
+          members: E,
+          days: m
         })
       })]
-    }), (0, a.jsxs)(u.ModalFooter, {
-      children: [(0, a.jsx)(u.Button, {
+    }), (0, o.jsxs)(i.ModalFooter, {
+      children: [(0, o.jsx)(i.Button, {
         onClick: () => {
-          d.default.prune(t.id, _, S), o()
+          u.default.prune(t.id, m, S), n()
         },
-        children: p.default.Messages.PRUNE
-      }), (0, a.jsx)(u.Button, {
-        look: u.Button.Looks.LINK,
-        color: u.Button.Colors.PRIMARY,
-        onClick: o,
-        children: p.default.Messages.CANCEL
+        children: g.default.Messages.PRUNE
+      }), (0, o.jsx)(i.Button, {
+        look: i.Button.Looks.LINK,
+        color: i.Button.Colors.PRIMARY,
+        onClick: n,
+        children: g.default.Messages.CANCEL
       })]
     })]
   })

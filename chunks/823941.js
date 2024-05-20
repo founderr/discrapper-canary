@@ -26,9 +26,9 @@ var l = a("735250"),
   x = a("813083"),
   v = a("372654"),
   b = a("994896"),
-  T = a("215023"),
-  L = a("474936"),
-  S = a("689938"),
+  L = a("215023"),
+  S = a("474936"),
+  T = a("689938"),
   I = a("897246");
 let N = (0, E.getLogoSize)(96),
   _ = {
@@ -84,13 +84,13 @@ let N = (0, E.getLogoSize)(96),
     return p.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
       children: t.summary
     }) : (0, l.jsx)(l.Fragment, {
-      children: S.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
+      children: T.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
         getPremium: e => (0, l.jsx)(u.Clickable, {
           innerRef: r,
           className: I.getPremiumHook,
           onClick: () => {
             (0, d.default)({
-              subscriptionTier: L.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: a,
               returnRef: r
             })
@@ -144,7 +144,7 @@ function O(e) {
       }),
       alt: i.name,
       style: {
-        maxWidth: null === (s = T.categoryBannerOverrides[i.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
+        maxWidth: null === (s = L.categoryBannerOverrides[i.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
       }
     }), (0, l.jsx)(x.default, {
       category: i,
@@ -165,7 +165,7 @@ function A(e) {
     index: c = 0
   } = e, {
     backgroundColors: d
-  } = (0, h.default)(s.styles), f = !!(null === (t = T.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
+  } = (0, h.default)(s.styles), f = !!(null === (t = L.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
     condensedBannersEnabled: p
   } = (0, b.useCollectiblesCondensedBannersExperiment)({
     location: "Collectibles Shop Banner"
@@ -194,7 +194,7 @@ function A(e) {
       }),
       alt: s.name,
       style: {
-        maxWidth: null === (a = T.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
+        maxWidth: null === (a = L.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
       }
     }), (0, l.jsx)(u.Text, {
       className: n()(I.summary, {
