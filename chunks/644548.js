@@ -11,10 +11,11 @@ var a = n("735250"),
   c = n("555672"),
   f = n("297781"),
   h = n("591853"),
-  m = n("689938");
-let p = (e, t, n, a) => {
+  m = n("265048"),
+  p = n("689938");
+let E = (e, t, n, a) => {
     let l = function(e) {
-        if (e === s.AggregateRange.WEEK) return m.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT
+        if (e === s.AggregateRange.WEEK) return p.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT
       }(a),
       i = r.default.getName(t.guild_id, t.id, n),
       o = e.extra.game_name;
@@ -23,7 +24,7 @@ let p = (e, t, n, a) => {
       userName: i
     }).replaceAll("*", "")
   },
-  E = (e, t) => m.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+  C = (e, t) => p.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
     username: t.username,
     activity: e.extra.game_name
   });
@@ -34,30 +35,30 @@ t.default = e => {
     requestId: s,
     closePopout: r
   } = e, {
-    applicationImageSrc: C,
-    user: g
-  } = (0, c.useGamingContentData)(n), {
-    primaryColor: S,
-    secondaryColor: _
-  } = (0, d.default)(C), T = (0, o.getEntryDuration)(n), I = (0, o.getAggregateRange)(n), A = l.useCallback(e => {
-    if (null != g && null != T && null != I && (0, c.isAllowedRange)(I)) return (0, u.generateGamingContentImage)({
+    iconUrl: g,
+    user: S
+  } = (0, m.useGamingContentData)(n), {
+    primaryColor: _,
+    secondaryColor: T
+  } = (0, d.default)(g), I = (0, o.getEntryDuration)(n), A = (0, o.getAggregateRange)(n), N = l.useCallback(e => {
+    if (null != S && null != I && null != A && (0, c.isAllowedRange)(A)) return (0, u.generateGamingContentImage)({
       entry: n,
-      applicationImageSrc: C,
-      avatarSrcs: [g.getAvatarURL(t.guild_id, 128)],
-      description: p(n, t, g, I),
-      timestamp: m.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
-        hours: Math.round(T / i.default.Seconds.HOUR)
+      applicationImageSrc: g,
+      avatarSrcs: [S.getAvatarURL(t.guild_id, 128)],
+      description: E(n, t, S, A),
+      timestamp: p.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
+        hours: Math.round(I / i.default.Seconds.HOUR)
       }),
-      colors: [S, _],
+      colors: [_, T],
       channelId: e
     })
-  }, [C, t, T, n, S, I, _, g]);
-  return null != g && null != T && null != I && (0, c.isAllowedRange)(I) ? (0, a.jsxs)(h.Popout, {
+  }, [g, t, I, n, _, A, T, S]);
+  return null != S && null != I && null != A && (0, c.isAllowedRange)(A) ? (0, a.jsxs)(h.Popout, {
     children: [(0, a.jsx)(h.PopoutContent, {
-      thumbnailSrc: C,
+      thumbnailSrc: g,
       channel: t,
       entry: n,
-      userDescription: m.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+      userDescription: p.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
       title: n.extra.game_name,
       badges: (0, a.jsx)(f.BadgesContainer, {
         location: f.BadgeLocation.POPOUT,
@@ -68,10 +69,10 @@ t.default = e => {
     }), (0, a.jsx)(h.PopoutInteractionsContainer, {
       children: (0, a.jsx)(h.PopoutReactor, {
         closePopout: r,
-        user: g,
+        user: S,
         channel: t,
-        generateReactionImage: A,
-        reactionImageAltText: E(n, g),
+        generateReactionImage: N,
+        reactionImageAltText: C(n, S),
         entry: n,
         requestId: s
       })

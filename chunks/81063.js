@@ -86,8 +86,9 @@ function m(e, t, n) {
     return Object.prototype.hasOwnProperty.call(f, e) ? f[e].deserialize(i) : void 0
   }
   if (null == e || null == t) return;
-  let i = "number" == typeof n ? "?size=".concat((0, u.getBestMediaProxySize)(n)) : "";
-  return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/").concat(e, "/").concat(t, ".png").concat(i) : "".concat((0, s.getAPIBaseURL)(), "/applications/").concat(e, "/app-assets/").concat(t, ".png").concat(i)
+  let i = Array.isArray(n) ? Math.max(...n) : n,
+    r = "number" == typeof i ? "?size=".concat((0, u.getBestMediaProxySize)(i)) : "";
+  return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/").concat(e, "/").concat(t, ".png").concat(r) : "".concat((0, s.getAPIBaseURL)(), "/applications/").concat(e, "/app-assets/").concat(t, ".png").concat(r)
 }
 async function N(e) {
   let t = await
