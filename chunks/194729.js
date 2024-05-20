@@ -38,15 +38,14 @@ var a = n("735250"),
   k = n("59222"),
   w = n("749436"),
   B = n("26580"),
-  F = n("878241"),
-  H = n("731455"),
-  V = n("981631"),
-  Y = n("689938"),
-  W = n("59415"),
-  K = n("368179"),
-  z = n("52518");
+  F = n("731455"),
+  H = n("981631"),
+  V = n("689938"),
+  Y = n("59415"),
+  W = n("368179"),
+  K = n("52518");
 
-function q(e, t, n) {
+function z(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -54,7 +53,7 @@ function q(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class Q extends s.PureComponent {
+class q extends s.PureComponent {
   componentDidMount() {
     var e, t, n;
     let {
@@ -68,7 +67,7 @@ class Q extends s.PureComponent {
       mostRecentQuery: o
     } = this.props;
     if ((0, C.fetchActivityStatistics)(), (0, b.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, _.createAlgoliaIndex)(), h.default.wait(() => {
-        (0, m.markView)(V.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
+        (0, m.markView)(H.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
       }), !a && 0 === o.length && P.trackDiscoveryViewed({
         loadId: this.loadId,
         gamesYouPlayGuilds: s.guilds,
@@ -91,7 +90,7 @@ class Q extends s.PureComponent {
         },
         length: parseInt(n, 10)
       })
-    } else null != r && r !== H.DISCOVERY_ALL_CATEGORIES_ID && h.default.wait(() => (0, _.selectCategory)(r));
+    } else null != r && r !== F.DISCOVERY_ALL_CATEGORIES_ID && h.default.wait(() => (0, _.selectCategory)(r));
     let d = null !== (t = null === (e = (0, T.getHistory)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
     d > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({
       to: d
@@ -127,7 +126,7 @@ class Q extends s.PureComponent {
       recommendationsLoadId: t,
       recommendationsGuilds: n
     } = this.props;
-    e === H.DISCOVERY_ALL_CATEGORIES_ID ? null != n && null != t && P.trackDiscoveryExited(t, this.getOrderedGuildIdsSeen(n.map(e => e.id)), "Game Recommendations") : P.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen))
+    e === F.DISCOVERY_ALL_CATEGORIES_ID ? null != n && null != t && P.trackDiscoveryExited(t, this.getOrderedGuildIdsSeen(n.map(e => e.id)), "Game Recommendations") : P.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen))
   }
   getOrderedGuildIdsSeen(e) {
     return e.filter(e => this._guildIdsSeen.has(e))
@@ -138,14 +137,14 @@ class Q extends s.PureComponent {
       mightHaveGamesYouPlay: t,
       theme: n,
       userGuilds: s
-    } = this.props, l = Object.keys(s), i = e[V.GuildDiscoverySections.GAMES_YOU_PLAY];
+    } = this.props, l = Object.keys(s), i = e[H.GuildDiscoverySections.GAMES_YOU_PLAY];
     i.guilds = i.guilds.filter(e => !l.includes(e.id));
     let {
       loadingGuildId: r
     } = this.state;
     return t ? (0, a.jsx)(G.default, {
       loadId: this.loadId,
-      title: Y.default.Messages.GUILD_DISCOVERY_HEADER_GAMES_YOU_PLAY,
+      title: V.default.Messages.GUILD_DISCOVERY_HEADER_GAMES_YOU_PLAY,
       guildsData: i,
       loadingGuildId: r,
       analyticsContext: P.AnalyticsContexts.RECOMMENDED,
@@ -177,9 +176,9 @@ class Q extends s.PureComponent {
       location: "54961b_2"
     }, {
       autoTrackExposure: !1
-    }), c = d ? r === H.DISCOVERY_ALL_CATEGORIES_ID ? Y.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER_TAGS : Y.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER_TAGS.format({
+    }), c = d ? r === F.DISCOVERY_ALL_CATEGORIES_ID ? V.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER_TAGS : V.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER_TAGS.format({
       categoryName: u
-    }) : r === H.DISCOVERY_ALL_CATEGORIES_ID ? Y.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : Y.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
+    }) : r === F.DISCOVERY_ALL_CATEGORIES_ID ? V.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : V.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: u
     }), f = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[r]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
     return (0, a.jsx)(w.default, {
@@ -208,7 +207,7 @@ class Q extends s.PureComponent {
       currentCategoryName: d
     } = this.props, {
       loadingGuildId: c
-    } = this.state, f = u === H.DISCOVERY_ALL_CATEGORIES_ID ? Y.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : Y.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
+    } = this.state, f = u === F.DISCOVERY_ALL_CATEGORIES_ID ? V.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : V.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: d
     }), E = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[u]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
     return (0, a.jsx)(k.default, {
@@ -238,7 +237,7 @@ class Q extends s.PureComponent {
     } = this.state;
     return (0, a.jsx)(G.default, {
       loadId: this.loadId,
-      title: Y.default.Messages.GUILD_DISCOVERY_FEATURED_HEADER,
+      title: V.default.Messages.GUILD_DISCOVERY_FEATURED_HEADER,
       guildsData: e.featured,
       analyticsContext: P.AnalyticsContexts.POPULAR,
       onViewGuild: this.handleViewGuild,
@@ -259,7 +258,7 @@ class Q extends s.PureComponent {
     } = this.state;
     return (0, a.jsx)(G.default, {
       loadId: this.loadId,
-      title: Y.default.Messages.GUILD_DISCOVERY_POPULAR_HEADER,
+      title: V.default.Messages.GUILD_DISCOVERY_POPULAR_HEADER,
       guildsData: e[n],
       loadingGuildId: s,
       analyticsContext: P.AnalyticsContexts.POPULAR,
@@ -288,58 +287,58 @@ class Q extends s.PureComponent {
       location: "54961b_4"
     }, {
       autoTrackExposure: !1
-    }), h = r === H.DISCOVERY_ALL_CATEGORIES_ID ? null === (e = u[V.GuildDiscoverySections.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = u[r]) || void 0 === t ? void 0 : t.guilds;
-    if (r === H.DISCORD_HUB_ID) return (0, a.jsx)(I.default, {
+    }), h = r === F.DISCOVERY_ALL_CATEGORIES_ID ? null === (e = u[H.GuildDiscoverySections.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = u[r]) || void 0 === t ? void 0 : t.guilds;
+    if (r === F.DISCORD_HUB_ID) return (0, a.jsx)(I.default, {
       loadId: this.loadId
     });
-    let _ = r === H.DISCOVERY_ALL_CATEGORIES_ID ? Y.default.Messages.GUILD_DISCOVERY_HOME_TITLE : Y.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
+    let _ = r === F.DISCOVERY_ALL_CATEGORIES_ID ? V.default.Messages.GUILD_DISCOVERY_HOME_TITLE : V.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
       categoryName: n
     });
     return (0, a.jsxs)("div", {
-      className: W.pageWrapper,
+      className: Y.pageWrapper,
       children: [(0, a.jsx)(p.AppPageTitle, {
         subsection: d ? l : void 0,
         location: _
       }), (0, a.jsx)("div", {
-        className: i()(W.dragRegion, W.pageHeaderDrag, {
-          [W.searchPageDrag]: d
+        className: i()(Y.dragRegion, Y.pageHeaderDrag, {
+          [Y.searchPageDrag]: d
         })
       }), c.isMobile && (0, a.jsx)(y.default, {
         children: (0, a.jsx)(s.Fragment, {})
       }), (0, a.jsx)(E.AdvancedScrollerAuto, {
-        className: W.scroller,
+        className: Y.scroller,
         ref: this._scroller,
         onScroll: this.handleScroll,
         children: (0, a.jsx)("div", {
-          className: i()(W.viewWrapper, {
-            [W.searchPage]: d
+          className: i()(Y.viewWrapper, {
+            [Y.searchPage]: d
           }),
           children: d ? this.renderSearchResults() : (0, a.jsxs)(E.HeadingLevel, {
             forceLevel: 1,
             component: (0, a.jsxs)("div", {
-              className: W.searchHeader,
+              className: Y.searchHeader,
               children: [(0, a.jsx)("img", {
                 alt: "",
-                className: W.headerImage,
-                src: z
+                className: Y.headerImage,
+                src: K
               }), (0, a.jsx)("div", {
-                className: W.headerContentWrapper,
+                className: Y.headerContentWrapper,
                 children: (0, a.jsxs)("div", {
-                  className: W.headerContent,
+                  className: Y.headerContent,
                   children: [(0, a.jsx)(E.Heading, {
                     variant: "heading-xl/semibold",
-                    className: W.searchTitle,
-                    children: r === H.DISCOVERY_ALL_CATEGORIES_ID ? Y.default.Messages.GUILD_DISCOVERY_HOME_TITLE : Y.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
+                    className: Y.searchTitle,
+                    children: r === F.DISCOVERY_ALL_CATEGORIES_ID ? V.default.Messages.GUILD_DISCOVERY_HOME_TITLE : V.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
                       categoryName: n
                     })
                   }), (0, a.jsx)(E.Text, {
                     variant: "text-md/normal",
-                    className: W.searchSubtitle,
-                    children: r === H.DISCOVERY_ALL_CATEGORIES_ID && Y.default.Messages.GUILD_DISCOVERY_HOME_SUBTITLE
+                    className: Y.searchSubtitle,
+                    children: r === F.DISCOVERY_ALL_CATEGORIES_ID && V.default.Messages.GUILD_DISCOVERY_HOME_SUBTITLE
                   }), this.renderSearchBar(), f && (0, a.jsx)(B.DiscoveryTags, {
                     hideOverflow: !0,
                     section: P.AnalyticsContexts.HEADER,
-                    className: W.headerTagContainer,
+                    className: Y.headerTagContainer,
                     discoveryTagStyle: B.DiscoveryTagStyle.LIGHT,
                     onTagClick: e => this.handleTagSearch(e, void 0, P.AnalyticsContexts.HEADER),
                     tags: o().chain(h).flatMap(e => e.keywords).compact().uniq().sampleSize(10).value()
@@ -348,23 +347,23 @@ class Q extends s.PureComponent {
               })]
             }),
             children: [(0, a.jsx)("div", {
-              className: W.__invalid_featuredBody,
-              children: r === H.DISCOVERY_ALL_CATEGORIES_ID ? this.renderRecommendedGuildsSection() : this.renderPopularGuildsSection()
+              className: Y.__invalid_featuredBody,
+              children: r === F.DISCOVERY_ALL_CATEGORIES_ID ? this.renderRecommendedGuildsSection() : this.renderPopularGuildsSection()
             }), (0, a.jsxs)("div", {
-              className: W.footer,
+              className: Y.footer,
               children: [(0, a.jsx)("img", {
                 alt: "",
-                src: K,
-                className: W.footerImage
+                src: W,
+                className: Y.footerImage
               }), (0, a.jsx)(E.Heading, {
                 variant: "heading-md/semibold",
-                children: Y.default.Messages.GUILD_DISCOVERY_CATEGORY_FOOTER_TITLE
+                children: V.default.Messages.GUILD_DISCOVERY_CATEGORY_FOOTER_TITLE
               }), (0, a.jsx)(E.Button, {
                 look: E.Button.Looks.LINK,
                 color: E.Button.Colors.LINK,
                 size: E.Button.Sizes.MIN,
                 onClick: this.scrollToTop,
-                children: Y.default.Messages.GUILD_DISCOVERY_FOOTER_BODY
+                children: V.default.Messages.GUILD_DISCOVERY_FOOTER_BODY
               })]
             })]
           })
@@ -373,20 +372,20 @@ class Q extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), q(this, "_scroller", s.createRef()), q(this, "_guildIdsSeen", new Set), q(this, "loadId", (0, D.makeAnalyticsID)()), q(this, "state", {
+    super(...e), z(this, "_scroller", s.createRef()), z(this, "_guildIdsSeen", new Set), z(this, "loadId", (0, D.makeAnalyticsID)()), z(this, "state", {
       animatedValue: new d.default.Value(0),
       loadingGuildId: null
-    }), q(this, "scrollToTop", () => {
+    }), z(this, "scrollToTop", () => {
       null != this._scroller.current && this._scroller.current.scrollTo({
         to: 0
       })
-    }), q(this, "handleScroll", () => {
+    }), z(this, "handleScroll", () => {
       var e, t;
       let {
         animatedValue: n
       } = this.state, a = null !== (t = null === (e = this._scroller.current) || void 0 === e ? void 0 : e.getScrollerState().scrollTop) && void 0 !== t ? t : 0;
       n.setValue(Math.min(1, a / 200))
-    }), q(this, "handleViewGuild", async (e, t, n, a) => {
+    }), z(this, "handleViewGuild", async (e, t, n, a) => {
       var s, l;
       let {
         currentCategoryId: i
@@ -404,7 +403,7 @@ class Q extends s.PureComponent {
       }), this.setState({
         loadingGuildId: e
       });
-      let d = i !== H.DISCOVERY_ALL_CATEGORIES_ID ? i : null;
+      let d = i !== F.DISCOVERY_ALL_CATEGORIES_ID ? i : null;
       try {
         await P.viewGuild({
           loadId: null != a ? a : this.loadId,
@@ -418,9 +417,9 @@ class Q extends s.PureComponent {
           loadingGuildId: null
         })
       }
-    }), q(this, "handleGuildCardSeen", e => {
+    }), z(this, "handleGuildCardSeen", e => {
       this._guildIdsSeen.add(e)
-    }), q(this, "handleTagSearch", (e, t, n) => {
+    }), z(this, "handleTagSearch", (e, t, n) => {
       let {
         currentCategoryId: a,
         defaultLanguage: s
@@ -440,15 +439,15 @@ class Q extends s.PureComponent {
     })
   }
 }
-let Z = f.default.connectStores([v.default, N.default, M.default, R.default, O.default, U.default, L.default], () => {
+let Q = f.default.connectStores([v.default, N.default, M.default, R.default, O.default, U.default, L.default], () => {
   var e;
-  let t = H.LANGUAGE_OPTIONS,
+  let t = F.LANGUAGE_OPTIONS,
     n = N.default.locale,
     a = null !== (e = o().find(t, {
       code: n
     })) && void 0 !== e ? e : t[0],
     s = Object.keys(M.default.applicationStatistics),
-    l = R.default.hasConsented(V.Consents.PERSONALIZATION) && s.length > 0,
+    l = R.default.hasConsented(H.Consents.PERSONALIZATION) && s.length > 0,
     i = O.default.getCurrentCategoryId(),
     r = O.default.getCurrentHomepageCategoryId();
   return {
@@ -466,9 +465,9 @@ let Z = f.default.connectStores([v.default, N.default, M.default, R.default, O.d
     availableLanguages: t,
     defaultLanguage: a
   }
-})(Q);
+})(q);
 
-function X(e) {
+function Z(e) {
   let {
     searchRoute: t
   } = e, {
@@ -480,7 +479,7 @@ function X(e) {
     loadId: g.default.getLoadId(),
     fetching: g.default.isFetching()
   }));
-  return (0, a.jsx)(Z, {
+  return (0, a.jsx)(Q, {
     searchRoute: t,
     fetchingRecommendations: n,
     usingGameRecommendations: !1,
@@ -491,12 +490,15 @@ function X(e) {
 t.default = function(e) {
   let {
     searchRoute: t
-  } = e, n = (0, F.useGuildsEligibleForClan)({
-    location: "guild_discovery"
-  }).length > 0, {
-    clanDiscoveryEnabled: s
-  } = (0, S.useClanPilotExperiment)("guild_discovery"), l = (0, f.useStateFromStores)([O.default], () => O.default.getCurrentCategoryId()), i = (0, f.useStateFromStores)([O.default], () => O.default.getIsReady());
-  return (n || s) && (!i || l === H.CategoryId.Clans) ? (0, a.jsx)(j.default, {}) : (0, a.jsx)(X, {
+  } = e, {
+    guilds: n
+  } = (0, S.useClanPrepilotExperimentForAllGuilds)({
+    location: "guild_discovery",
+    includeConverted: !0
+  }), s = n.length > 0, {
+    clanDiscoveryEnabled: l
+  } = (0, S.useClanPilotExperiment)("guild_discovery"), i = (0, f.useStateFromStores)([O.default], () => O.default.getCurrentCategoryId()), r = (0, f.useStateFromStores)([O.default], () => O.default.getIsReady());
+  return (s || l) && (!r || i === F.CategoryId.Clans) ? (0, a.jsx)(j.default, {}) : (0, a.jsx)(Z, {
     searchRoute: t
   })
 }

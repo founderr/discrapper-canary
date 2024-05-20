@@ -21,9 +21,9 @@ var l = n("735250"),
   c = n("350810"),
   f = n("100527"),
   h = n("970606"),
-  m = n("824991"),
-  C = n("878241"),
-  p = n("243778"),
+  m = n("963202"),
+  p = n("824991"),
+  C = n("243778"),
   g = n("602147"),
   E = n("981631"),
   _ = n("308083"),
@@ -40,9 +40,9 @@ function T(e) {
     onPopoutVisible: u,
     onClick: f,
     children: h,
-    isEligibleForUpsell: C = !0,
+    isEligibleForUpsell: m = !0,
     withInviteIcon: I = !0
-  } = e, T = (0, r.useLocation)(), [A, L] = (0, p.useSelectedDismissibleContent)([s], S.DismissibleContentGroupName.SIDEBAR), v = A !== s, x = (0, c.default)(), R = C && !x && !v && T.pathname !== E.Routes.GUILD_DISCOVERY;
+  } = e, T = (0, r.useLocation)(), [A, L] = (0, C.useSelectedDismissibleContent)([s], S.DismissibleContentGroupName.SIDEBAR), v = A !== s, x = (0, c.default)(), R = m && !x && !v && T.pathname !== E.Routes.GUILD_DISCOVERY;
   a.useEffect(() => {
     R && u()
   }, [R, u]);
@@ -84,11 +84,11 @@ function T(e) {
             })
           }), (0, l.jsxs)("div", {
             className: N.popoutContent,
-            children: [I && (0, l.jsx)(m.ClanUpsellInviteByline, {}), (0, l.jsx)(m.ClanUpsellTitle, {
+            children: [I && (0, l.jsx)(p.ClanUpsellInviteByline, {}), (0, l.jsx)(p.ClanUpsellTitle, {
               title: t
-            }), (0, l.jsx)(m.ClanUpsellMessage, {
+            }), (0, l.jsx)(p.ClanUpsellMessage, {
               message: n
-            }), (0, l.jsx)(m.ClanUpsellButton, {
+            }), (0, l.jsx)(p.ClanUpsellButton, {
               onClick: y
             })]
           }), (0, l.jsx)("div", {
@@ -148,17 +148,20 @@ function L(e) {
   let {
     defaultGameId: t,
     children: n
-  } = e, s = (0, C.useGuildsEligibleForClanConversion)({
-    location: "GuildsBarClanAdminUpsellPopout"
-  }).length > 0, i = a.useCallback(() => {
+  } = e, {
+    guilds: s
+  } = (0, m.useClanPrepilotExperimentForAllGuilds)({
+    location: "GuildsBarClanAdminUpsellPopout",
+    includeConverted: !1
+  }), i = s.length > 0, r = a.useCallback(() => {
     (0, h.trackClanAdminInviteViewed)({
       location: f.default.GUILDS_LIST
     })
-  }, []), r = a.useCallback(() => {
+  }, []), o = a.useCallback(() => {
     (0, h.trackClanAdminInviteClicked)({
       location: f.default.GUILDS_LIST
     })
-  }, []), [o, d] = a.useMemo(() => {
+  }, []), [d, c] = a.useMemo(() => {
     switch (t) {
       case _.GENSHIN_ID:
         return [I.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE, I.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE];
@@ -169,13 +172,13 @@ function L(e) {
     }
   }, [t]);
   return (0, l.jsx)(T, {
-    title: o,
-    message: d,
+    title: d,
+    message: c,
     dismissibleContent: u.DismissibleContent.GUILD_LIST_CLAN_ADMIN_UPSELL,
     defaultGameId: t,
-    onClick: r,
-    isEligibleForUpsell: s,
-    onPopoutVisible: i,
+    onClick: o,
+    isEligibleForUpsell: i,
+    onPopoutVisible: r,
     children: n
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryTopPicks: function() {
-    return D
+    return x
   }
 }), n("47120");
 var a, s, l = n("735250"),
@@ -26,18 +26,17 @@ var a, s, l = n("735250"),
   N = n("702646"),
   v = n("207796"),
   R = n("543550"),
-  O = n("878241"),
-  L = n("976757"),
-  M = n("981631"),
-  y = n("689938"),
-  P = n("93118");
-let x = {
+  O = n("976757"),
+  L = n("981631"),
+  M = n("689938"),
+  y = n("93118");
+let P = {
   [v.ClanDiscoveryMode.PLAYSTYLE]: A.PlayStyleSelector,
   [v.ClanDiscoveryMode.TRAITS]: A.TraitSelector,
   [v.ClanDiscoveryMode.GAMES]: A.GameSelector
 };
 
-function D(e) {
+function x(e) {
   let {
     limit: t,
     width: n
@@ -46,7 +45,7 @@ function D(e) {
     clans: s,
     searchResult: c,
     searchCriteria: f
-  } = (0, I.useClanDiscoveryList)(t), C = (0, v.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), S = (0, E.default)(c), p = (0, v.useClanDiscoveryUIStore)(e => e.mode, o.default), T = i.useRef(null), A = (0, E.default)(p), N = i.useRef(0), R = Math.min(null != n ? n : 1024, 2e3), O = i.useMemo(() => {
+  } = (0, I.useClanDiscoveryList)(t), C = (0, v.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), S = (0, E.default)(c), p = (0, v.useClanDiscoveryUIStore)(e => e.mode, o.default), T = i.useRef(null), A = (0, E.default)(p), N = i.useRef(0), R = Math.min(null != n ? n : 1024, 2e3), P = i.useMemo(() => {
     let e = R / 256,
       t = R / 376,
       n = R / e,
@@ -74,7 +73,7 @@ function D(e) {
     trailing: !0
   }), k = (0, h.useResizeObserver)(j);
   i.useEffect(() => {
-    if (null != c && !!(0, L.isLoadedSearchResult)(c))(!(null != S && (0, L.isLoadedSearchResult)(S)) || !(S.loadedAt >= c.loadedAt)) && (j(), (0, m.trackClanDiscoveryViewed)(c.items.map(e => e.id), "top_picks", f))
+    if (null != c && !!(0, O.isLoadedSearchResult)(c))(!(null != S && (0, O.isLoadedSearchResult)(S)) || !(S.loadedAt >= c.loadedAt)) && (j(), (0, m.trackClanDiscoveryViewed)(c.items.map(e => e.id), "top_picks", f))
   }, [f, c, S, j]), i.useEffect(() => {
     if (A !== p && A !== v.ClanDiscoveryMode.DISCOVERY)(A === v.ClanDiscoveryMode.ADMIN_UPSELL || null == A) && p === v.ClanDiscoveryMode.DISCOVERY && (j(), T.current = setTimeout(() => {
       j()
@@ -86,19 +85,19 @@ function D(e) {
       section: "other_guilds",
       items: s,
       sectionHeight: 24,
-      header: y.default.Messages.CLAN_DISCOVERY_STANDBY_TITLE,
-      subtitle: y.default.Messages.CLAN_DISCOVERY_PREPILOT_SUBTITLE
+      header: M.default.Messages.CLAN_DISCOVERY_STANDBY_TITLE,
+      subtitle: M.default.Messages.CLAN_DISCOVERY_PREPILOT_SUBTITLE
     }] : [{
       section: "top_picks",
-      items: s.slice(0, O),
+      items: s.slice(0, P),
       sectionHeight: 24,
-      header: y.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-      subtitle: y.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+      header: M.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+      subtitle: M.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
     }, {
       section: "other_guilds",
-      items: s.slice(O),
+      items: s.slice(P),
       sectionHeight: 24
-    }], [s, p, O]),
+    }], [s, p, P]),
     B = i.useMemo(() => new Set(f.games), [f.games]),
     F = i.useCallback((e, t, n, a) => {
       var s;
@@ -107,11 +106,11 @@ function D(e) {
       } = w[e], r = i[t];
       return (0, l.jsx)(g.default, {
         clan: r,
-        affinity: null !== (s = r.affininty) && void 0 !== s ? s : (0, L.getClanDiscoveryAffinity)(r, f),
+        affinity: null !== (s = r.affininty) && void 0 !== s ? s : (0, O.getClanDiscoveryAffinity)(r, f),
         traitsToHighlight: C,
-        className: P.card,
+        className: y.card,
         style: n,
-        source: M.AnalyticsSections.DISCOVER_SEARCH,
+        source: L.AnalyticsSections.DISCOVER_SEARCH,
         prioritizedGameIds: B
       }, a)
     }, [f, w, C, B]),
@@ -123,9 +122,9 @@ function D(e) {
       } = w[e];
       return null == t ? null : "top_picks" === a ? (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsxs)("div", {
-          className: P.topPicksHeader,
+          className: y.topPicksHeader,
           children: [(0, l.jsxs)("div", {
-            className: P.topPicksTitle,
+            className: y.topPicksTitle,
             children: [(0, l.jsx)(u.TrophyIcon, {
               color: "currentColor"
             }), (0, l.jsx)(d.Heading, {
@@ -134,7 +133,7 @@ function D(e) {
               children: t
             })]
           }), (0, l.jsx)("div", {
-            className: P.topPicksSpacer
+            className: y.topPicksSpacer
           }), (0, l.jsx)(d.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
@@ -144,9 +143,9 @@ function D(e) {
           ref: k
         })]
       }) : (0, l.jsxs)("div", {
-        className: P.topPicksHeader,
+        className: y.topPicksHeader,
         children: [(0, l.jsxs)("div", {
-          className: P.topPicksTitle,
+          className: y.topPicksTitle,
           children: [(0, l.jsx)(u.TrophyIcon, {
             color: "currentColor"
           }), (0, l.jsx)(d.Heading, {
@@ -155,7 +154,7 @@ function D(e) {
             children: t
           })]
         }), (0, l.jsx)("div", {
-          className: P.topPicksSpacer
+          className: y.topPicksSpacer
         }), (0, l.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
@@ -165,22 +164,22 @@ function D(e) {
     }, [w, k]);
   return 0 !== s.length && a ? (0, l.jsx)(l.Fragment, {
     children: (0, l.jsxs)("div", {
-      className: P.topPicks,
+      className: y.topPicks,
       children: [(0, l.jsx)(r.animated.div, {
-        className: P.gradient,
+        className: y.gradient,
         style: {
           ...b,
           ...x
         }
       }), (0, l.jsx)(d.MasonryList, {
-        className: P.topPicksList,
+        className: y.topPicksList,
         sections: w.map(e => {
           let {
             items: t
           } = e;
           return t.length
         }),
-        columns: O,
+        columns: P,
         sectionGutter: 16,
         itemGutter: 16,
         paddingHorizontal: 32,
@@ -197,7 +196,7 @@ function D(e) {
     })
   }) : null
 }(s = a || (a = {})).TOP_PICKS = "top_picks", s.OTHER_GUILDS = "other_guilds";
-let b = i.memo(function(e) {
+let D = i.memo(function(e) {
   let {
     width: t
   } = e, n = (0, c.useStateFromStores)([C.default], () => C.default.useReducedMotion), a = (0, v.useClanDiscoveryUIStore)(e => e.mode, o.default), [, s] = i.useState(0), u = (0, r.useTransition)([a], {
@@ -251,12 +250,15 @@ let b = i.memo(function(e) {
     },
     delay: 500
   }), E = i.useCallback(e => {
-    let t = x[e];
+    let t = P[e];
     return null == t ? null : (0, l.jsx)(T.default, {
       children: (0, l.jsx)(t, {})
     })
-  }, []), h = (0, v.useClanDiscoveryUIStore)(e => e.userUpsellScreen, o.default), _ = (0, v.useClanDiscoveryUIStore)(e => e.started, o.default), m = (0, O.useGuildsEligibleForClan)({
-    location: "ClanDiscoveryAdminContainer"
+  }, []), h = (0, v.useClanDiscoveryUIStore)(e => e.userUpsellScreen, o.default), _ = (0, v.useClanDiscoveryUIStore)(e => e.started, o.default), {
+    guilds: m
+  } = (0, S.useClanPrepilotExperimentForAllGuilds)({
+    location: "ClanDiscoveryAdminContainer",
+    includeConverted: !0
   }), g = i.useMemo(() => m.filter(e => !(0, p.isGuildAClan)(e)), [m]), {
     enableApplication: I
   } = (0, S.useClanPrePilotApplicationExperiment)("ClanDiscoveryAdminContainer");
@@ -280,15 +282,15 @@ let b = i.memo(function(e) {
     case v.ClanDiscoveryMode.PLAYSTYLE:
     case v.ClanDiscoveryMode.TRAITS:
       return (0, l.jsxs)("div", {
-        className: P.discoveryContainer,
+        className: y.discoveryContainer,
         children: [d((e, t) => (0, l.jsx)(r.animated.div, {
           style: e,
-          className: P.toolbar,
+          className: y.toolbar,
           children: (0, l.jsx)(N.default, {})
         }, t)), f((e, n) => (0, l.jsx)(r.animated.div, {
-          className: P.content,
+          className: y.content,
           style: e,
-          children: (0, l.jsx)(D, {
+          children: (0, l.jsx)(x, {
             width: t
           })
         }, n)), (0, l.jsx)("div", {
@@ -307,11 +309,11 @@ t.default = i.memo(function() {
     width: t
   } = (0, f.default)();
   return (0, l.jsxs)("main", {
-    className: P.container,
+    className: y.container,
     ref: e,
     children: [(0, l.jsx)("div", {
-      className: P.dragRegion
-    }), (0, l.jsx)(b, {
+      className: y.dragRegion
+    }), (0, l.jsx)(D, {
       width: null != t ? t : 0
     })]
   })

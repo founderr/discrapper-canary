@@ -13,26 +13,25 @@ var s = n("442837"),
   f = n("889010"),
   E = n("488905"),
   h = n("347137"),
-  _ = n("878241"),
-  C = n("731455"),
-  m = n("689938");
-let S = e => {
+  _ = n("731455"),
+  C = n("689938");
+let m = e => {
     switch (e) {
-      case C.CategoryId.Activity:
-        return C.CategoryIcons.Activity;
-      case C.CategoryId.Music:
-        return C.CategoryIcons.Music;
-      case C.CategoryId.Television:
-        return C.CategoryIcons.Television;
-      case C.CategoryId.Science:
-        return C.CategoryIcons.Science;
-      case C.CategoryId.Education:
-        return C.CategoryIcons.Education;
+      case _.CategoryId.Activity:
+        return _.CategoryIcons.Activity;
+      case _.CategoryId.Music:
+        return _.CategoryIcons.Music;
+      case _.CategoryId.Television:
+        return _.CategoryIcons.Television;
+      case _.CategoryId.Science:
+        return _.CategoryIcons.Science;
+      case _.CategoryId.Education:
+        return _.CategoryIcons.Education;
       default:
-        return C.CategoryIcons.Discover
+        return _.CategoryIcons.Discover
     }
   },
-  p = () => {
+  S = () => {
     let {
       currentCategoryId: e,
       isViewingSearchResults: t
@@ -41,13 +40,13 @@ let S = e => {
       isViewingSearchResults: d.default.getMostRecentQuery().length > 0
     })), n = (0, s.useStateFromStores)([c.default], () => c.default.getDiscoveryCategories(), [], c.areDiscoveryCategoriesEqual), r = null == n ? void 0 : n.map(e => ({
       ...e,
-      icon: S(e.categoryId)
+      icon: m(e.categoryId)
     })), h = e => {
       (0, i.selectCategory)(e, !0), u.default.closeSidebar(), t && (0, i.clearSearch)()
     };
     return (0, a.jsxs)(l.Scroller, {
       children: [(0, a.jsx)(E.DiscoverySidebarHeader, {
-        text: m.default.Messages.DISCOVER
+        text: C.default.Messages.DISCOVER
       }), (0, a.jsx)(f.default, {
         categories: r,
         handleCategorySelect: h,
@@ -61,11 +60,13 @@ let S = e => {
     })
   };
 t.default = function() {
-  let e = (0, _.useGuildsEligibleForClan)({
-      location: "guild_discovery_sidebar"
-    }).length > 0,
-    {
-      clanDiscoveryEnabled: t
-    } = (0, r.useClanPilotExperiment)("guild_discovery_sidebar");
-  return e || t ? (0, a.jsx)(h.default, {}) : (0, a.jsx)(p, {})
+  let {
+    guilds: e
+  } = (0, r.useClanPrepilotExperimentForAllGuilds)({
+    location: "guild_discovery_sidebar",
+    includeConverted: !0
+  }), t = e.length > 0, {
+    clanDiscoveryEnabled: n
+  } = (0, r.useClanPilotExperiment)("guild_discovery_sidebar");
+  return t || n ? (0, a.jsx)(h.default, {}) : (0, a.jsx)(S, {})
 }
