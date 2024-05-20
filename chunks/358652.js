@@ -8,29 +8,29 @@ var l, a, s, i, r = n("442837"),
   f = n("306680"),
   h = n("944486"),
   m = n("55589");
-let C = [];
+let p = [];
 
-function p() {
+function C() {
   let e = m.default.getPrivateChannelIds().filter(e => f.default.getMentionCount(e) > 0);
-  return e.length > 20 && (e.length = 20), !(0, d.areArraysShallowlyEqual)(e, C) && (C = e, !0)
+  return e.length > 20 && (e.length = 20), !(0, d.areArraysShallowlyEqual)(e, p) && (p = e, !0)
 }
 
 function g() {
-  return p()
+  return C()
 }
 
 function E(e) {
   let {
     channelId: t
   } = e, n = c.default.getChannel(t);
-  return !!(null != n && (0, u.isPrivate)(n.type)) && p()
+  return !!(null != n && (0, u.isPrivate)(n.type)) && C()
 }
 class _ extends(l = r.default.Store) {
   initialize() {
     this.waitFor(m.default, c.default, h.default, f.default)
   }
   getUnreadPrivateChannelIds() {
-    return C
+    return p
   }
 }
 i = "PrivateChannelReadStateStore", (s = "displayName") in(a = _) ? Object.defineProperty(a, s, {
@@ -47,7 +47,7 @@ i = "PrivateChannelReadStateStore", (s = "displayName") in(a = _) ? Object.defin
     let {
       channelId: t
     } = e, n = c.default.getChannel(t);
-    return !!(null != n && (0, u.isPrivate)(n.type)) && p()
+    return !!(null != n && (0, u.isPrivate)(n.type)) && C()
   },
   CHANNEL_DELETE: function(e) {
     let {
@@ -55,11 +55,11 @@ i = "PrivateChannelReadStateStore", (s = "displayName") in(a = _) ? Object.defin
         id: t
       }
     } = e, n = c.default.getChannel(t);
-    return !!(null != n && (0, u.isPrivate)(n.type)) && p()
+    return !!(null != n && (0, u.isPrivate)(n.type)) && C()
   },
   WINDOW_FOCUS: function() {
     let e = c.default.getChannel(h.default.getChannelId());
-    return !!(null != e && (0, u.isPrivate)(e.type)) && p()
+    return !!(null != e && (0, u.isPrivate)(e.type)) && C()
   },
   CHANNEL_CREATE: function(e) {
     let {
@@ -67,7 +67,7 @@ i = "PrivateChannelReadStateStore", (s = "displayName") in(a = _) ? Object.defin
         id: t
       }
     } = e, n = c.default.getChannel(t);
-    return !!(null != n && (0, u.isPrivate)(n.type)) && p()
+    return !!(null != n && (0, u.isPrivate)(n.type)) && C()
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -80,6 +80,6 @@ i = "PrivateChannelReadStateStore", (s = "displayName") in(a = _) ? Object.defin
       let t = c.default.getChannel(e);
       null != t && (0, u.isPrivate)(t.type) && (n = !0)
     }
-    return !!n && p()
+    return !!n && C()
   }
 })

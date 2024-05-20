@@ -17,40 +17,40 @@ t.default = r.memo(function(e) {
     children: a,
     isExpanded: s,
     isStuck: h,
-    onExpand: p,
-    disableAnimation: E,
-    disableBackground: T
-  } = e, C = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [x, _] = r.useState(!0), [g, I] = r.useState(!1), {
-    ref: N,
+    onExpand: E,
+    disableAnimation: T,
+    disableBackground: p
+  } = e, C = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [_, x] = r.useState(!0), [g, N] = r.useState(!1), {
+    ref: I,
     height: v = 0
   } = (0, d.default)(), {
     ref: A,
     height: S = 0
   } = (0, d.default)(), [L, R] = r.useState(s), y = (0, l.useSpring)({
     height: L ? S + v : v,
-    immediate: x || C || E,
+    immediate: _ || C || T,
     config: {
       ...l.config.stiff,
       clamp: !0
     },
     onStart: () => {
-      I(!1)
+      N(!1)
     },
     onRest: () => {
-      I(!0)
+      N(!0)
     }
   });
   return r.useLayoutEffect(() => {
-    I(!1), R(s)
+    N(!1), R(s)
   }, [s]), r.useLayoutEffect(() => {
     let e = setTimeout(() => {
-      _(!1)
+      x(!1)
     }, 100);
     return () => clearTimeout(e)
   }, []), (0, n.jsx)(c.Clickable, {
     className: i()(m.editCard, {
       [m.toggled]: s,
-      [m.noBackground]: T
+      [m.noBackground]: p
     }),
     children: (0, n.jsxs)(l.animated.div, {
       className: i()(m.contentExpandContainer, {
@@ -58,8 +58,8 @@ t.default = r.memo(function(e) {
       }),
       style: y,
       children: [(0, n.jsx)(c.Clickable, {
-        innerRef: N,
-        onClick: h ? void 0 : p,
+        innerRef: I,
+        onClick: h ? void 0 : E,
         className: i()(m.innerHeader, {
           [m.toggled]: s && h
         }),

@@ -21,8 +21,8 @@ n.r(t), n.d(t, {
 });
 var i = n("818083"),
   r = n("836157"),
-  a = n("441167"),
-  s = n("131951"),
+  s = n("441167"),
+  a = n("131951"),
   o = n("74538"),
   l = n("779618"),
   u = n("474936");
@@ -90,7 +90,7 @@ let d = (0, i.createExperiment)({
   });
 
 function c() {
-  if (!(0, l.default)(s.default)) return !1;
+  if (!(0, l.default)(a.default)) return !1;
   let {
     enableClips: e
   } = _.getCurrentConfig({
@@ -111,7 +111,7 @@ function c() {
     autoTrackExposure: !1
   }), {
     enableViewerClipping: i
-  } = a.default.getCurrentConfig({
+  } = s.default.getCurrentConfig({
     location: "areClipsEnabled"
   }, {
     autoTrackExposure: !1
@@ -120,7 +120,7 @@ function c() {
 }
 
 function E() {
-  let e = (0, l.default)(s.default),
+  let e = (0, l.default)(a.default),
     {
       enableClips: t
     } = _.useExperiment({
@@ -144,7 +144,7 @@ function E() {
     }),
     {
       enableViewerClipping: o
-    } = a.default.useExperiment({
+    } = s.default.useExperiment({
       location: "useEnableClips"
     }, {
       autoTrackExposure: !1
@@ -154,7 +154,7 @@ function E() {
 let I = e => {
     let {
       autoTrackExposure: t
-    } = e, n = (0, l.default)(s.default), {
+    } = e, n = (0, l.default)(a.default), {
       enablePremiumEarlyAccessGoLiveRoadblock: i
     } = _.useExperiment({
       location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock"
@@ -166,7 +166,7 @@ let I = e => {
   T = e => {
     let {
       autoTrackExposure: t
-    } = e, n = (0, l.default)(s.default), {
+    } = e, n = (0, l.default)(a.default), {
       enablePremiumEarlyAccessAnnouncementCoachmark: i
     } = _.useExperiment({
       location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock"

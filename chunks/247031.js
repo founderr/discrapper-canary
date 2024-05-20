@@ -28,14 +28,14 @@ var a = s("735250"),
   x = s("372454"),
   L = s("999382"),
   O = s("84613"),
-  A = s("740903"),
-  p = s("1080"),
+  p = s("740903"),
+  A = s("1080"),
   M = s("981631"),
   D = s("689938"),
   v = s("939056"),
-  G = s("164149");
+  j = s("164149");
 
-function j(e, t, s) {
+function G(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -119,7 +119,7 @@ class P extends l.PureComponent {
       guild: s
     } = this.props;
     return (0, a.jsxs)(d.Clickable, {
-      className: i()(v.bannedUser, G.card),
+      className: i()(v.bannedUser, j.card),
       onClick: this.handleShowModal,
       onContextMenu: this.handleContextMenu,
       children: [(0, a.jsx)(d.Avatar, {
@@ -140,7 +140,7 @@ class P extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), j(this, "handleShowModal", () => {
+    super(...e), G(this, "handleShowModal", () => {
       let {
         guild: e,
         user: t,
@@ -154,7 +154,7 @@ class P extends l.PureComponent {
         ban: l,
         hideDiscriminator: s
       }))
-    }), j(this, "handleContextMenu", e => {
+    }), G(this, "handleContextMenu", e => {
       (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -192,7 +192,7 @@ class b extends l.PureComponent {
     })
   }
   handleModerationClick() {
-    R.default.setSection(M.GuildSettingsSections.SAFETY), (0, O.setSafetyPage)(A.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION)
+    R.default.setSection(M.GuildSettingsSections.SAFETY), (0, O.setSafetyPage)(p.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION)
   }
   handleQueryChange(e) {
     R.default.setSearchQuery(e)
@@ -201,7 +201,7 @@ class b extends l.PureComponent {
     R.default.setSearchQuery("")
   }
   constructor(...e) {
-    super(...e), j(this, "getSortedBans", (0, g.cachedFunction)((e, t) => {
+    super(...e), G(this, "getSortedBans", (0, g.cachedFunction)((e, t) => {
       if (null == e) return [];
       let s = this.makeFilter(t),
         a = [];
@@ -210,7 +210,7 @@ class b extends l.PureComponent {
         null != e && s(e) && a.push(e)
       }
       return a.sort((e, t) => e.username.localeCompare(t.username))
-    })), j(this, "getRowHeight", (e, t) => {
+    })), G(this, "getRowHeight", (e, t) => {
       var s;
       if (e > 0) return 0;
       let {
@@ -221,7 +221,7 @@ class b extends l.PureComponent {
       let i = n[t],
         r = null == a ? void 0 : a.get(null !== (s = null == i ? void 0 : i.id) && void 0 !== s ? s : "");
       return null == i || null == r ? 0 : 56
-    }), j(this, "renderRow", e => {
+    }), G(this, "renderRow", e => {
       var t;
       let {
         section: s,
@@ -245,13 +245,13 @@ class b extends l.PureComponent {
         hideDiscriminator: i,
         guild: r
       }, u.id)
-    }), j(this, "getSectionHeight", e => {
+    }), G(this, "getSectionHeight", e => {
       if (e > 0) return 0;
       let {
         bans: t
       } = this.props;
       return null == t ? 462 : 120
-    }), j(this, "renderSection", () => {
+    }), G(this, "renderSection", () => {
       var e;
       let t;
       let {
@@ -333,5 +333,5 @@ function y() {
   }, {
     autoTrackExposure: !0
   });
-  return s ? (0, a.jsx)(p.default, {}) : (0, a.jsx)(B, {})
+  return s ? (0, a.jsx)(A.default, {}) : (0, a.jsx)(B, {})
 }

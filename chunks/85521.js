@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("789020");
 var i = n("913527"),
   r = n.n(i),
-  a = n("81825"),
-  s = n("812206"),
+  s = n("81825"),
+  a = n("812206"),
   o = n("630388"),
   l = n("959546"),
   u = n("981631");
@@ -20,7 +20,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class _ extends a.default {
+class _ extends s.default {
   static createFromServer(e) {
     return new _({
       id: e.application.id,
@@ -91,7 +91,7 @@ class _ extends a.default {
     return this.sku.id
   }
   getAnalyticsData() {
-    let e = s.default.getApplication(this.id);
+    let e = a.default.getApplication(this.id);
     return {
       application_id: null != e ? e.id : null,
       application_name: null != e ? e.name : null,

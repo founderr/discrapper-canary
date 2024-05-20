@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("302454"),
   r = n.n(i),
-  a = n("668781"),
-  s = n("45986"),
+  s = n("668781"),
+  a = n("45986"),
   o = n("782568"),
   l = n("704133"),
   u = n("139674"),
@@ -51,7 +51,7 @@ function D(e, t) {
     } = e,
     P = r().sanitizeUrl(e.href);
   if (null == P) {
-    null != t && t.preventDefault(), a.default.show({
+    null != t && t.preventDefault(), s.default.show({
       title: L.default.Messages.HOLD_UP,
       body: L.default.Messages.MALFORMED_LINK_BODY.format({
         url: e.href
@@ -74,8 +74,8 @@ function D(e, t) {
       i = (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(g.MessageFlags.IS_CROSSPOST)) && null != U;
     i && (null == e ? void 0 : null === (V = e.messageReference) || void 0 === V ? void 0 : V.guild_id) != null ? (G = e.messageReference.message_id, w = e.messageReference.channel_id, k = e.messageReference.guild_id) : k = U;
     let r = (null == t ? void 0 : t.type) === g.ChannelTypes.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(g.GuildFeatures.COMMUNITY)) === !0,
-      a = (null == e ? void 0 : e.hasFlag(g.MessageFlags.EPHEMERAL)) === !0;
-    b = null != e && !a && (i || r)
+      s = (null == e ? void 0 : e.hasFlag(g.MessageFlags.EPHEMERAL)) === !0;
+    b = null != e && !s && (i || r)
   }
   if (null != y) {
     let e = h.default.getChannel(y),
@@ -139,7 +139,7 @@ function D(e, t) {
   }
   if (null != t && t.preventDefault(), j) T.default.show({
     url: P,
-    trustUrl: s.trustProtocol,
+    trustUrl: a.trustProtocol,
     onConfirm: F,
     isProtocol: !0
   });
@@ -148,7 +148,7 @@ function D(e, t) {
       t = null != e ? e.displayTarget : P;
     T.default.show({
       url: t,
-      trustUrl: s.trustDomain,
+      trustUrl: a.trustDomain,
       onConfirm: F,
       isProtocol: !1
     })

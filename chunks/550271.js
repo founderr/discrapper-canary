@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("496532"),
-  a = n("514904"),
-  s = n("72977"),
+  s = n("514904"),
+  a = n("72977"),
   o = n("746479"),
   l = n("419643"),
   u = n("561015"),
@@ -79,7 +79,7 @@ let g = e => {
         ...L
       });
     case R.ClanBadgeKind.FIRE:
-      return (0, i.jsx)(s.ClanBadgeFire, {
+      return (0, i.jsx)(a.ClanBadgeFire, {
         primaryTintColor: n,
         ...L
       });
@@ -90,7 +90,7 @@ let g = e => {
         ...L
       });
     case R.ClanBadgeKind.CROSSHAIRS:
-      return (0, i.jsx)(a.ClanBadgeCrosshairs, {
+      return (0, i.jsx)(s.ClanBadgeCrosshairs, {
         primaryTintColor: n,
         secondaryTintColor: g,
         ...L

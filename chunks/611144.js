@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var i, r, a = n("536895");
+var i, r, s = n("536895");
 
-function s(e, t) {
+function a(e, t) {
   return Number.isNaN(e) ? t : Number.isNaN(t) ? e : Math.max(e, t)
 }
 
@@ -20,16 +20,16 @@ function o(e, t) {
 function l(e, t) {
   var n, i, r, l;
   switch (t.type) {
-    case a.ActionType.NAVIGATE_UP:
+    case s.ActionType.NAVIGATE_UP:
       return function(e, t) {
-        let n = s(0, e.focusedY - 1);
+        let n = a(0, e.focusedY - 1);
         return {
           ...e,
           focusedX: o(e.columnCounts[n] - 1, e.focusedX),
           focusedY: n
         }
       }(e, 0);
-    case a.ActionType.NAVIGATE_DOWN:
+    case s.ActionType.NAVIGATE_DOWN:
       return function(e, t) {
         let n = o(e.focusedY + 1, e.columnCounts.length - 1);
         return {
@@ -38,7 +38,7 @@ function l(e, t) {
           focusedY: n
         }
       }(e, 0);
-    case a.ActionType.NAVIGATE_RIGHT:
+    case s.ActionType.NAVIGATE_RIGHT:
       return function(e, t) {
         let n = e.focusedY !== e.columnCounts.length - 1 && e.focusedX + 1 === e.columnCounts[e.focusedY],
           i = n ? 0 : o(e.focusedX + 1, e.columnCounts[e.focusedY] - 1),
@@ -49,37 +49,37 @@ function l(e, t) {
           focusedY: r
         }
       }(e, 0);
-    case a.ActionType.NAVIGATE_LEFT:
+    case s.ActionType.NAVIGATE_LEFT:
       return function(e, t) {
         let n = 0 !== e.focusedY && 0 === e.focusedX,
           i = n ? e.focusedY - 1 : e.focusedY,
-          r = n ? e.columnCounts[i] - 1 : s(0, e.focusedX - 1);
+          r = n ? e.columnCounts[i] - 1 : a(0, e.focusedX - 1);
         return {
           ...e,
           focusedX: r,
           focusedY: i
         }
       }(e, 0);
-    case a.ActionType.NAVIGATE_INLINE_START:
+    case s.ActionType.NAVIGATE_INLINE_START:
       ;
       return n = 0, {
         ...e,
         focusedX: 0
       };
-    case a.ActionType.NAVIGATE_INLINE_END:
+    case s.ActionType.NAVIGATE_INLINE_END:
       ;
       return r = 0, {
         ...i = e,
         focusedX: i.columnCounts[i.focusedY] - 1
       };
-    case a.ActionType.NAVIGATE_START:
+    case s.ActionType.NAVIGATE_START:
       ;
       return l = 0, {
         ...e,
         focusedX: 0,
         focusedY: 0
       };
-    case a.ActionType.NAVIGATE_END:
+    case s.ActionType.NAVIGATE_END:
       return function(e, t) {
         let n = e.columnCounts.length - 1;
         return {
@@ -92,7 +92,7 @@ function l(e, t) {
       return function(e, t) {
         let {
           columnCounts: n
-        } = t, i = o(s(0, n.length - 1), e.focusedY);
+        } = t, i = o(a(0, n.length - 1), e.focusedY);
         return {
           ...e,
           columnCounts: n,
@@ -105,14 +105,14 @@ function l(e, t) {
         let {
           x: n,
           y: i
-        } = t, r = s(0, o(i, e.columnCounts.length - 1));
+        } = t, r = a(0, o(i, e.columnCounts.length - 1));
         return {
           ...e,
-          focusedX: s(0, o(n, e.columnCounts[r] - 1)),
+          focusedX: a(0, o(n, e.columnCounts[r] - 1)),
           focusedY: r
         }
       }(e, t);
-    case a.ActionType.SELECT_FOCUSED_ITEM:
+    case s.ActionType.SELECT_FOCUSED_ITEM:
       break;
     default:
       console.warn("Grid navigator was given an unhandled action ".concat(t.type))

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("477690"),
   l = n("481060"),
   u = n("420660"),
@@ -36,7 +36,7 @@ t.default = function(e) {
   var t;
   let {
     selected: n = !1,
-    colorString: a,
+    colorString: s,
     colorRoleName: o,
     isOwner: p,
     ownerTooltipText: M,
@@ -67,7 +67,7 @@ t.default = function(e) {
     id: et,
     tabIndex: en,
     itemProps: ei
-  } = e, er = null == b ? void 0 : b.id, ea = O.default.useName(b), es = (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === er, eo = r.useRef(null), [el, eu] = r.useState(!1), [ed, e_] = r.useState(null), {
+  } = e, er = null == b ? void 0 : b.id, es = O.default.useName(b), ea = (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === er, eo = r.useRef(null), [el, eu] = r.useState(!1), [ed, e_] = r.useState(null), {
     avatarDecorationSrc: ec,
     avatarSrc: eE,
     eventHandlers: eI
@@ -84,7 +84,7 @@ t.default = function(e) {
     n && eS(!1)
   }, [n]);
   let eh = (0, E.useQuestFromActivities)(w),
-    eA = null != eh && !es && n && !ef,
+    eA = null != eh && !ea && n && !ef,
     em = () => {
       eu(!0)
     },
@@ -166,8 +166,8 @@ t.default = function(e) {
     eD = () => (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(l.NameWithRole, {
         roleName: o,
-        color: null != a ? a : void 0,
-        name: null != U ? U : ea,
+        color: null != s ? s : void 0,
+        name: null != U ? U : es,
         className: D.name
       }), (0, i.jsx)(d.default, {
         clan: null == b ? void 0 : b.clan,
@@ -199,7 +199,7 @@ t.default = function(e) {
     children: () => (0, i.jsx)(N.default, {
       ref: eo,
       selected: n,
-      className: s()(D.member, j, {
+      className: a()(D.member, j, {
         [D.offline]: eM && !n
       }),
       innerClassName: D.memberInner,
@@ -216,7 +216,7 @@ t.default = function(e) {
         text: y,
         children: e => (0, i.jsx)("span", {
           ...e,
-          className: s()(D.username, D.lostPermission),
+          className: a()(D.username, D.lostPermission),
           children: eD()
         })
       }),

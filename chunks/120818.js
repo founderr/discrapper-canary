@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("259580"),
   h = n("981631"),
   m = n("176505"),
-  C = n("689938"),
-  p = n("590575");
+  p = n("689938"),
+  C = n("590575");
 
 function g(e, t) {
   return (0, l.jsx)(r.Text, {
@@ -45,42 +45,42 @@ let E = a.memo(function(e) {
           right: 4
         }
       },
-      className: p.progressBarContainer,
+      className: C.progressBarContainer,
       onClick: function() {
         (0, c.transitionTo)(h.Routes.CHANNEL(t.id, m.StaticChannelRoute.GUILD_HOME))
       },
       children: [(0, l.jsxs)("div", {
-        className: p.progressBarText,
+        className: C.progressBarText,
         children: [(0, l.jsx)(r.Heading, {
           variant: "heading-sm/bold",
-          children: C.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
+          children: p.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
         }), (0, l.jsxs)("div", {
-          className: p.rightContainer,
+          className: C.rightContainer,
           children: [(0, l.jsx)(r.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
-            className: p.rightText,
-            children: C.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
+            className: C.rightText,
+            children: p.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
               numberHook: g,
               total: S.toString(),
               completed: _.toString()
             })
           }), (0, l.jsx)(f.default, {
-            className: p.arrow,
+            className: C.arrow,
             width: 16,
             height: 16,
             direction: f.default.Directions.RIGHT
           })]
         })]
       }), (0, l.jsx)(r.Progress, {
-        className: p.progressBar,
+        className: C.progressBar,
         foregroundGradientColor: [(0, o.getColor)(h.Color.GREEN_300), (0, o.getColor)(h.Color.GREEN_230)],
         percent: _ / S * 100 + 3,
         animate: !0
       })]
     }), (0, l.jsx)("div", {
       role: "separator",
-      className: p.divider
+      className: C.divider
     })]
   })
 })

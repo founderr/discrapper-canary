@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("239091"),
   l = n("665692"),
   u = n("689938"),
@@ -15,7 +15,7 @@ var i = n("735250"),
 
 function _(e) {
   var t;
-  let a, _, c, {
+  let s, _, c, {
       className: E,
       activeCommand: I,
       activeOption: T,
@@ -41,14 +41,14 @@ function _(e) {
   if (null == I) return null;
   if (null != T) {
     let e = f[T.name].lastValidationResult;
-    a = T.displayName, _ = T.displayDescription, c = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error
-  } else a = "".concat(l.COMMAND_SENTINEL).concat(I.displayName), _ = I.displayDescription, c = null;
+    s = T.displayName, _ = T.displayDescription, c = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error
+  } else s = "".concat(l.COMMAND_SENTINEL).concat(I.displayName), _ = I.displayDescription, c = null;
   return (0, i.jsxs)("div", {
-    className: s()(E, d.bar),
+    className: a()(E, d.bar),
     onContextMenu: S,
     children: [(0, i.jsx)("span", {
       className: d.name,
-      children: a
+      children: s
     }), null != c ? (0, i.jsx)("span", {
       className: d.error,
       children: c

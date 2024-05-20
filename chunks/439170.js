@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("724458"), n("653041"), n("47120");
-var i, r, a, s = n("392711"),
-  o = n.n(s),
+var i, r, s, a = n("392711"),
+  o = n.n(a),
   l = n("108131"),
   u = n.n(l),
   d = n("149765"),
@@ -60,9 +60,9 @@ function v(e, t, n, i) {
       };
     default:
       let r = A.default.getGuild(e),
-        a = null != r ? A.default.getRole(r.id, t) : null;
+        s = null != r ? A.default.getRole(r.id, t) : null;
       return {
-        type: "GROUP", key: t, id: t, title: null != a ? a.name : "", count: n, index: i
+        type: "GROUP", key: t, id: t, title: null != s ? s.name : "", count: n, index: i
       }
   }
 }
@@ -70,16 +70,16 @@ function v(e, t, n, i) {
 function D(e, t, n) {
   let i = n === T.default.getId(),
     r = m.default.isMobileOnline(n),
-    a = i ? N.default.getStatus() : m.default.getStatus(n, e),
-    s = i ? N.default.getActivities() : m.default.getActivities(n, e),
+    s = i ? N.default.getStatus() : m.default.getStatus(n, e),
+    a = i ? N.default.getActivities() : m.default.getActivities(n, e),
     o = I.default.getStreamForUser(n, e),
     l = p.default.getUser(n);
   return null == l ? null : {
     type: "MEMBER",
     ...h.default.getMember(e, n),
     user: l,
-    status: a,
-    activities: s,
+    status: s,
+    activities: a,
     applicationStream: o,
     isOwner: t === n,
     isMobileOnline: r
@@ -98,7 +98,7 @@ function M(e) {
       return d.has(i, O.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : d.has(r, O.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
     }, []).sort().join(",")).toString()
   }(t) : t.memberListId
-}(a = i || (i = {})).GROUP = "GROUP", a.MEMBER = "MEMBER", a.CONTENT_INVENTORY = "CONTENT_INVENTORY", a.CONTENT_INVENTORY_GROUP = "CONTENT_INVENTORY_GROUP", a.HIDDEN_CONTENT_INVENTORY = "HIDDEN_CONTENT_INVENTORY";
+}(s = i || (i = {})).GROUP = "GROUP", s.MEMBER = "MEMBER", s.CONTENT_INVENTORY = "CONTENT_INVENTORY", s.CONTENT_INVENTORY_GROUP = "CONTENT_INVENTORY_GROUP", s.HIDDEN_CONTENT_INVENTORY = "HIDDEN_CONTENT_INVENTORY";
 class y {
   updateOwnerId() {
     let e = A.default.getGuild(this.guildId);

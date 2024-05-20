@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
 var i = n("913527"),
   r = n.n(i);
 
-function a(e, t) {
+function s(e, t) {
   if ("function" == typeof t) {
     let n = r().localeData(),
       i = t.bind(n);
@@ -18,7 +18,7 @@ function a(e, t) {
   return t = Array.isArray(t) ? t : t.format, e => t[e]
 }
 
-function s(e, t, n) {
+function a(e, t, n) {
   return e < 12 ? n ? "am" : "AM" : n ? "pm" : "PM"
 }
 
@@ -32,7 +32,7 @@ function o(e) {
         weekdays: i,
         weekdaysShort: o,
         weekdaysMin: l,
-        meridiem: u = s,
+        meridiem: u = a,
         ordinal: d,
         longDateFormat: _,
         week: c = {
@@ -41,11 +41,11 @@ function o(e) {
         }
       } = r().localeData()._config;
       return {
-        months: a("month", t),
-        monthsShort: a("month", n),
-        weekdays: a("day", i),
-        weekdaysShort: a("day", o),
-        weekdaysMin: a("day", l),
+        months: s("month", t),
+        monthsShort: s("month", n),
+        weekdays: s("day", i),
+        weekdaysShort: s("day", o),
+        weekdaysMin: s("day", l),
         meridiem: u,
         ordinal: "string" == typeof(e = d) ? t => e.replace("%d", "".concat(t)) : e,
         longDateFormat: _,

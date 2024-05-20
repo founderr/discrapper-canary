@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return r
   },
   isApprovedAndAcked: function() {
-    return s
+    return a
   },
   isSubmittedApplicationStatus: function() {
-    return a
+    return s
   }
 });
 var i = n("246364");
@@ -19,11 +19,11 @@ function r(e) {
   return e === i.GuildJoinRequestApplicationStatuses.APPROVED || e === i.GuildJoinRequestApplicationStatuses.REJECTED
 }
 
-function a(e) {
+function s(e) {
   return e === i.GuildJoinRequestApplicationStatuses.SUBMITTED
 }
 
-function s(e) {
+function a(e) {
   return e.applicationStatus === i.GuildJoinRequestApplicationStatuses.APPROVED && null != e.lastSeen
 }
 

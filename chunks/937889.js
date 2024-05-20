@@ -18,8 +18,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("757143"), n("865427");
 var i = n("830121"),
   r = n("454585"),
-  a = n("55406"),
-  s = n("408433"),
+  s = n("55406"),
+  a = n("408433"),
   o = n("981631");
 let l = new Set([o.MessageEmbedTypes.IMAGE, o.MessageEmbedTypes.GIFV]),
   u = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
@@ -68,7 +68,7 @@ function _(e) {
 function c(e, t, n) {
   return {
     hasSpoilerEmbeds: !1,
-    content: r.default.reactParserFor(a.default.getDefaultRules(t))(e.content, !1, null != n ? {
+    content: r.default.reactParserFor(s.default.getDefaultRules(t))(e.content, !1, null != n ? {
       changeLog: n
     } : {})
   }
@@ -79,7 +79,7 @@ function E(e) {
   return function(e, t, n) {
     var r;
     let {
-      toAST: a = !1,
+      toAST: s = !1,
       hideSimpleEmbedContent: o = !0,
       formatInline: _ = !1,
       postProcessor: c
@@ -87,7 +87,7 @@ function E(e) {
       if (1 !== e.length || 1 !== t.length) return e;
       let n = e[0],
         i = t[0];
-      return ("link" === n.type || "attachmentLink" === n.type) && l.has(i.type) && (0, s.isEmbedInline)(i) ? [] : e
+      return ("link" === n.type || "attachmentLink" === n.type) && l.has(i.type) && (0, a.isEmbedInline)(i) ? [] : e
     }(e, t.embeds)), !_ && (e = function(e, t) {
       return t ? T(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = T(e[0].content)), e)
     }(e, n)), E = function(e, t) {

@@ -17,8 +17,8 @@ var a = n("120356"),
   f = n("201895"),
   h = n("305325"),
   m = n("281956"),
-  C = n("66999"),
-  p = n("506936"),
+  p = n("66999"),
+  C = n("506936"),
   g = n("359110"),
   E = n("922482"),
   _ = n("431328"),
@@ -112,8 +112,8 @@ class W extends P.default {
       canReorderChannel: c,
       canMoveMembers: h,
       stageInstance: m,
-      isSubscriptionGated: C,
-      needSubscriptionToAccess: p,
+      isSubscriptionGated: p,
+      needSubscriptionToAccess: C,
       unread: g,
       resolvedUnreadSetting: E,
       mentionCount: _,
@@ -165,8 +165,8 @@ class W extends P.default {
                 unread: g,
                 mentionCount: _,
                 userCount: N,
-                isSubscriptionGated: C,
-                needSubscriptionToAccess: p
+                isSubscriptionGated: p,
+                needSubscriptionToAccess: C
               }),
               ...u,
               children: [S && this.renderAcceptSuggestionButton(), S && this.renderRemoveSuggestionButton(), !S && this.renderOpenChatButton(), !S && this.renderInviteButton(), !S && this.renderEditButton(), !S && this.renderChannelInfo()]
@@ -220,8 +220,8 @@ class W extends P.default {
       } = this.props, {
         shouldShowGuildVerificationPopout: t
       } = this.state;
-      if (t) return (0, l.jsx)(p.default, {
-        type: p.GuildVerificationPopoutTypes.VOICE,
+      if (t) return (0, l.jsx)(C.default, {
+        type: C.GuildVerificationPopoutTypes.VOICE,
         guildId: e.guild_id,
         closePopout: this.closeGuildVerificationPopout
       });
@@ -297,10 +297,10 @@ function z(e) {
       bypassLimit: R.default.can(B.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), m = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), p = (0, _.useStageParticipantsCount)(n.id, S.StageChannelParticipantNamedIndex.AUDIENCE), {
+  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), m = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, _.useStageParticipantsCount)(n.id, S.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E
-  } = (0, C.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), D = (0, G.default)({
+  } = (0, p.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), D = (0, G.default)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: r,
@@ -312,7 +312,7 @@ function z(e) {
   return (0, l.jsx)(K, {
     categoryCollapsed: f,
     connectAction: h,
-    numAudience: p,
+    numAudience: C,
     stageInstance: m,
     isSubscriptionGated: g,
     needSubscriptionToAccess: E,

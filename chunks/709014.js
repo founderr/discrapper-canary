@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("906280"),
   l = n.n(o),
   u = n("186325"),
@@ -17,7 +17,7 @@ var i = n("735250"),
   E = n("108447");
 let I = r.forwardRef(function(e, t) {
   let {
-    color: a,
+    color: s,
     src: o,
     size: I = "md",
     width: T,
@@ -73,11 +73,11 @@ let I = r.forwardRef(function(e, t) {
     null === (e = C.current) || void 0 === e || e.destroy()
   }), [m, h, A]), (0, i.jsx)("div", {
     style: {
-      "--__lottieIconColor": null != a && "string" == typeof a ? a : null == a ? void 0 : a.css,
+      "--__lottieIconColor": null != s && "string" == typeof s ? s : null == s ? void 0 : s.css,
       display: "flex",
       ...R
     },
-    className: s()(E.lottieIcon, S),
+    className: a()(E.lottieIcon, S),
     ref: p
   })
 })

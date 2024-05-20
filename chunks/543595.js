@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("789020"), n("47120");
-var i, r, a, s = n("735250"),
+var i, r, s, a = n("735250"),
   o = n("470079"),
   l = n("120356"),
   u = n.n(l),
@@ -51,7 +51,7 @@ function W(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(a = i || (i = {})).USER_POPOUT = "UserPopout", a.USER_POPOUT_V2 = "UserPopoutV2", a.ACTIVITY_FEED = "ActivityFeed", a.PROFILE = "Profile", a.PROFILE_V2 = "ProfileV2", a.STREAM_PREVIEW = "StreamPreview", a.VOICE_CHANNEL = "VoiceChannel", a.SIMPLIFIED_PROFILE = "SimplifiedProfile", a.BITE_SIZE_POPOUT = "BiteSizePopout";
+}(s = i || (i = {})).USER_POPOUT = "UserPopout", s.USER_POPOUT_V2 = "UserPopoutV2", s.ACTIVITY_FEED = "ActivityFeed", s.PROFILE = "Profile", s.PROFILE_V2 = "ProfileV2", s.STREAM_PREVIEW = "StreamPreview", s.VOICE_CHANNEL = "VoiceChannel", s.SIMPLIFIED_PROFILE = "SimplifiedProfile", s.BITE_SIZE_POPOUT = "BiteSizePopout";
 let K = {
     StreamPreview: [108, 60],
     UserPopout: [108, 60],
@@ -68,7 +68,7 @@ let K = {
   } = n("81063"),
   Z = (0, I.default)(class extends o.PureComponent {
     render() {
-      return (0, s.jsx)("div", {
+      return (0, a.jsx)("div", {
         className: j.timestamp,
         children: this.props.message
       })
@@ -90,7 +90,7 @@ function Q(e) {
   });
   if (null == i) return null;
   let r = f.default.get(i);
-  return (0, s.jsx)("img", {
+  return (0, a.jsx)("img", {
     alt: "",
     src: (0, c.isThemeLight)(n) ? r.icon.lightSVG : r.icon.darkSVG,
     className: j.platformIcon
@@ -122,7 +122,7 @@ class q extends(r = o.PureComponent) {
       hideHeader: n,
       activityGuild: i,
       channel: r,
-      renderHeaderAccessory: a,
+      renderHeaderAccessory: s,
       type: o
     } = this.props, l = this.activity;
     if (n || null == l) return null;
@@ -164,24 +164,24 @@ class q extends(r = o.PureComponent) {
       })
     }(null == l ? void 0 : l.type) === F.ActivityTypes.HANG_STATUS && (t = Y.default.Messages.STATUS_LEAD_IN_JUST);
     let c = (0, O.getChannelIconComponent)(r, i);
-    return null != r && (t = r.name), (0, s.jsxs)("div", {
+    return null != r && (t = r.name), (0, a.jsxs)("div", {
       className: j.headerContainer,
-      children: [null != r && null !== c ? (0, s.jsx)(c, {
+      children: [null != r && null !== c ? (0, a.jsx)(c, {
         className: u()(j.icon)
-      }) : null, (0, s.jsx)(E.Heading, {
+      }) : null, (0, a.jsx)(E.Heading, {
         className: (0, M.getClass)(j, "headerText", e ? "EmptyBody" : "Normal"),
         variant: "eyebrow",
         color: "ProfileV2" === o ? "header-primary" : void 0,
-        children: (0, s.jsx)(G.default, {
+        children: (0, a.jsx)(G.default, {
           children: t
         })
-      }), null == a ? void 0 : a()]
+      }), null == s ? void 0 : s()]
     })
   }
   renderXboxImage() {
-    return (0, s.jsx)("div", {
+    return (0, a.jsx)("div", {
       className: j.assets,
-      children: (0, s.jsx)("img", {
+      children: (0, a.jsx)("img", {
         alt: "",
         src: f.default.get(F.PlatformTypes.XBOX).icon.customPNG,
         className: u()(this.getTypeClass("assetsLargeImage", "Xbox"))
@@ -190,10 +190,10 @@ class q extends(r = o.PureComponent) {
   }
   renderImage(e) {
     var t, n, i;
-    let r, a;
-    if (e.type === F.ActivityTypes.HANG_STATUS) return (0, s.jsx)("div", {
+    let r, s;
+    if (e.type === F.ActivityTypes.HANG_STATUS) return (0, a.jsx)("div", {
       className: j.assets,
-      children: (0, s.jsx)(R.default, {
+      children: (0, a.jsx)(R.default, {
         hangStatusActivity: e,
         className: u()(j.assetsHangStatus, this.getTypeClass("assetsSmallImage", "WithoutLargeImage"))
       })
@@ -207,7 +207,7 @@ class q extends(r = o.PureComponent) {
     if (null == d || null == d.large_image && null == d.small_image) return null;
     (0, p.default)(e) && (r = K[l]);
     let c = (0, m.default)(e),
-      I = null != d.large_image ? (0, s.jsx)("img", {
+      I = null != d.large_image ? (0, a.jsx)("img", {
         alt: null !== (t = d.large_text) && void 0 !== t ? t : "",
         src: z(_, d.large_image, null != r ? r : [H.ImageSizes.LARGE, H.ImageSizes.LARGE]),
         className: u()(this.getTypeClass("assetsLargeImage", this.isStreamerOnTypeProfile() || this.isStreamerOnTypeActivityFeed() ? F.PlatformTypes.TWITCH : ""), {
@@ -216,18 +216,18 @@ class q extends(r = o.PureComponent) {
           [j.assetsLargeImageSpotify]: c
         })
       }) : null;
-    if (c) I = (0, s.jsx)(E.Anchor, {
+    if (c) I = (0, a.jsx)(E.Anchor, {
       onClick: this.handleOpenSpotifyAlbum,
       children: I
     });
     else if ((0, L.isStageActivity)(e)) {
       let t = (0, L.unpackStageChannelParty)(e);
       if (null == t) return null;
-      I = (0, s.jsx)(x.default, {
+      I = (0, a.jsx)(x.default, {
         mask: x.default.Masks.SQUIRCLE,
         width: H.ImageSizes.SMALL,
         height: H.ImageSizes.SMALL,
-        children: (0, s.jsx)("img", {
+        children: (0, a.jsx)("img", {
           src: null !== (i = v.default.getGuildIconURL({
             id: t.guildId,
             icon: d.small_image,
@@ -238,42 +238,42 @@ class q extends(r = o.PureComponent) {
         })
       })
     }
-    return (this.isStreamerOnTypeActivityFeed() && null != e.url && "" !== e.url && (I = (0, s.jsxs)("div", {
+    return (this.isStreamerOnTypeActivityFeed() && null != e.url && "" !== e.url && (I = (0, a.jsxs)("div", {
       className: j.twitchImageContainer,
-      children: [(0, s.jsxs)("div", {
+      children: [(0, a.jsxs)("div", {
         className: j.twitchImageOverlay,
-        children: [(0, s.jsx)(E.H, {
+        children: [(0, a.jsx)(E.H, {
           className: j.streamName,
           children: e.name
-        }), (0, s.jsx)("div", {
+        }), (0, a.jsx)("div", {
           className: j.streamGame,
           children: Y.default.Messages.STREAMER_PLAYING.format({
             game: e.details
           })
         })]
-      }), (0, s.jsx)(E.Anchor, {
+      }), (0, a.jsx)(E.Anchor, {
         className: j.twitchBackgroundImage,
         href: e.url,
         children: I
       })]
-    })), !(0, L.isStageActivity)(e) && null != d.small_image && (a = (0, s.jsx)(E.Tooltip, {
+    })), !(0, L.isStageActivity)(e) && null != d.small_image && (s = (0, a.jsx)(E.Tooltip, {
       text: "" !== d.small_text ? d.small_text : null,
       position: "top",
       children: e => {
         var t;
-        return (0, s.jsx)("img", {
+        return (0, a.jsx)("img", {
           alt: null !== (t = d.small_text) && void 0 !== t ? t : "",
           src: z(_, d.small_image, [H.ImageSizes.SMALL, H.ImageSizes.SMALL]),
           className: this.getTypeClass("assetsSmallImage", null == I ? "WithoutLargeImage" : void 0),
           ...e
         })
       }
-    })), null == I) ? (0, s.jsx)("div", {
+    })), null == I) ? (0, a.jsx)("div", {
       className: j.assets,
-      children: a
-    }) : (0, s.jsxs)("div", {
+      children: s
+    }) : (0, a.jsxs)("div", {
       className: j.assets,
-      children: [(0, s.jsx)(E.Tooltip, {
+      children: [(0, a.jsx)(E.Tooltip, {
         text: null != d.large_text ? d.large_text : null,
         position: "top",
         children: e => {
@@ -286,7 +286,7 @@ class q extends(r = o.PureComponent) {
             onMouseLeave: n
           }) : null
         }
-      }), a]
+      }), s]
     })
   }
   renderGameImage(e) {
@@ -296,9 +296,9 @@ class q extends(r = o.PureComponent) {
       application: i,
       activityGuild: r
     } = this.props;
-    return null != e.assets || (0, h.default)(e) || e.type !== F.ActivityTypes.PLAYING || "ActivityFeed" === n || t.bot ? null : null == i && null != r ? (0, s.jsx)("div", {
+    return null != e.assets || (0, h.default)(e) || e.type !== F.ActivityTypes.PLAYING || "ActivityFeed" === n || t.bot ? null : null == i && null != r ? (0, a.jsx)("div", {
       className: u()(j.gameIcon, j.screenshareIcon)
-    }) : (0, s.jsx)(U.default, {
+    }) : (0, a.jsx)(U.default, {
       className: j.gameIcon,
       game: i
     })
@@ -312,16 +312,16 @@ class q extends(r = o.PureComponent) {
     if (i) return null;
     let {
       details: r,
-      type: a
+      type: s
     } = e;
-    if (a === F.ActivityTypes.CUSTOM_STATUS) return null;
+    if (s === F.ActivityTypes.CUSTOM_STATUS) return null;
     let o = (0, A.default)(e),
       l = e.name,
       d = l;
-    if (a === F.ActivityTypes.HANG_STATUS ? d = (0, C.getHangStatusText)(e) : o && null != n ? d = (0, s.jsx)("span", {
+    if (s === F.ActivityTypes.HANG_STATUS ? d = (0, C.getHangStatusText)(e) : o && null != n ? d = (0, a.jsx)("span", {
         className: j.activityName,
         children: d
-      }) : !o && (l = r, d = r, (0, m.default)(e) && null != e.sync_id && null != r ? d = (0, s.jsx)(E.Anchor, {
+      }) : !o && (l = r, d = r, (0, m.default)(e) && null != e.sync_id && null != r ? d = (0, a.jsx)(E.Anchor, {
         className: j.bodyLink,
         onClick: this.handleOpenSpotifyTrack,
         children: r
@@ -329,7 +329,7 @@ class q extends(r = o.PureComponent) {
     let _ = null != X({
       activity: e
     }) && "BiteSizePopout" === this.props.type;
-    return (0, s.jsx)(E.Text, {
+    return (0, a.jsx)(E.Text, {
       title: l,
       variant: "text-sm/semibold",
       className: u()((0, M.getClass)(j, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"), _ && j.namePlatformIconMarginBiteSizePopout),
@@ -343,17 +343,17 @@ class q extends(r = o.PureComponent) {
       state: i
     } = e, {
       activityGuild: r
-    } = this.props, a = n, o = n;
-    if (e.type === F.ActivityTypes.CUSTOM_STATUS) a = i;
-    else if (e.type === F.ActivityTypes.HANG_STATUS) a = null != r ? Y.default.Messages.HANG_STATUS_LOCATION.format({
+    } = this.props, s = n, o = n;
+    if (e.type === F.ActivityTypes.CUSTOM_STATUS) s = i;
+    else if (e.type === F.ActivityTypes.HANG_STATUS) s = null != r ? Y.default.Messages.HANG_STATUS_LOCATION.format({
       guildName: r.name
     }) : null, t = null != r ? () => {
       (0, g.transitionToGuild)(r.id)
     } : void 0;
     else if (!(0, A.default)(e)) {
-      if (o = a = i, (0, m.default)(e) && null != i) a = Y.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
+      if (o = s = i, (0, m.default)(e) && null != i) s = Y.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
         artists: o,
-        artistsHook: (t, n) => (0, s.jsx)(k.default, {
+        artistsHook: (t, n) => (0, a.jsx)(k.default, {
           artists: i,
           linkClassName: j.bodyLink,
           canOpen: null != e.sync_id,
@@ -362,20 +362,20 @@ class q extends(r = o.PureComponent) {
       });
       else if ((0, L.isStageActivity)(e)) {
         var l;
-        a = null === (l = e.assets) || void 0 === l ? void 0 : l.small_text
+        s = null === (l = e.assets) || void 0 === l ? void 0 : l.small_text
       }
     }
-    return null == a || 0 === a.length ? null : ((0, p.default)(e) && (a = Y.default.Messages.STREAMER_PLAYING.format({
-      game: a
-    })), null != t) ? (0, s.jsx)(E.Clickable, {
+    return null == s || 0 === s.length ? null : ((0, p.default)(e) && (s = Y.default.Messages.STREAMER_PLAYING.format({
+      game: s
+    })), null != t) ? (0, a.jsx)(E.Clickable, {
       onClick: t,
       title: null != o ? o : void 0,
       className: j.clickableDetails,
-      children: a
-    }) : (0, s.jsx)("div", {
+      children: s
+    }) : (0, a.jsx)("div", {
       title: null != o ? o : void 0,
       className: (0, p.default)(e) || (0, m.default)(e) ? j.detailsWrap : j.details,
-      children: a
+      children: s
     })
   }
   renderChannelDetails(e) {
@@ -384,26 +384,26 @@ class q extends(r = o.PureComponent) {
       showChannelDetails: n,
       channel: i
     } = this.props;
-    return n && null != t ? null == i ? (0, s.jsx)("div", {
+    return n && null != t ? null == i ? (0, a.jsx)("div", {
       className: (0, p.default)(e) || (0, m.default)(e) ? j.detailsWrap : j.details,
       children: Y.default.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({
         guildName: t.name
       })
-    }) : (0, s.jsxs)("div", {
+    }) : (0, a.jsxs)("div", {
       className: u()((0, p.default)(e) || (0, m.default)(e) ? j.detailsWrap : j.details, j.guildDetails),
-      children: [(0, s.jsx)(b.default, {
+      children: [(0, a.jsx)(b.default, {
         guild: t,
         size: b.default.Sizes.SMOL,
         className: j.guildIcon
-      }), (0, s.jsx)(B.default, {
+      }), (0, a.jsx)(B.default, {
         width: 12,
         height: 12
-      }), (0, s.jsxs)("div", {
+      }), (0, a.jsxs)("div", {
         className: j.voiceChannelInfo,
-        children: [(0, s.jsx)(V.default, {
+        children: [(0, a.jsx)(V.default, {
           width: 12,
           height: 12
-        }), (0, s.jsx)(E.Text, {
+        }), (0, a.jsx)(E.Text, {
           variant: "text-xs/semibold",
           children: null == i ? void 0 : i.name
         })]
@@ -418,9 +418,9 @@ class q extends(r = o.PureComponent) {
     let {
       timestamps: n
     } = e;
-    return null == n ? null : (0, h.default)(e) ? (0, s.jsx)(Z, {
+    return null == n ? null : (0, h.default)(e) ? (0, a.jsx)(Z, {
       timestamps: n
-    }) : (0, s.jsx)(w.default, {
+    }) : (0, a.jsx)(w.default, {
       start: n.start,
       location: w.default.Locations.USER_ACTIVITY,
       className: j.playTime,
@@ -437,7 +437,7 @@ class q extends(r = o.PureComponent) {
       start: n,
       end: i
     } = t;
-    return null == n || null == i ? null : (0, s.jsx)(y.default, {
+    return null == n || null == i ? null : (0, a.jsx)(y.default, {
       start: n,
       end: i,
       className: this.getTypeClass("timeBar"),
@@ -448,13 +448,13 @@ class q extends(r = o.PureComponent) {
     var n, i;
     let r;
     let {
-      state: a,
+      state: s,
       party: o,
       assets: l
-    } = e, u = a, d = u;
+    } = e, u = s, d = u;
     return (!(0, A.default)(e) && (d = u = null == l ? void 0 : l.large_text, (0, m.default)(e) && null != u && (u = Y.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
       album: d,
-      albumHook: (t, n) => null != e.sync_id && null != d ? (0, s.jsx)(E.Anchor, {
+      albumHook: (t, n) => null != e.sync_id && null != d ? (0, a.jsx)(E.Anchor, {
         className: j.bodyLink,
         onClick: this.handleOpenSpotifyAlbum,
         children: d
@@ -468,12 +468,12 @@ class q extends(r = o.PureComponent) {
     }) : (null == o ? void 0 : o.size) != null && o.size.length >= 2 && (r = Y.default.Messages.USER_ACTIVITY_STATE_SIZE.format({
       count: o.size[0],
       max: o.size[1]
-    })), (0, s.jsxs)("div", {
+    })), (0, a.jsxs)("div", {
       className: j.state,
-      children: [(0, s.jsx)("span", {
+      children: [(0, a.jsx)("span", {
         title: d,
         children: u
-      }), null != r ? (0, s.jsxs)("span", {
+      }), null != r ? (0, a.jsxs)("span", {
         children: [" ", r]
       }) : null]
     })) : null
@@ -485,7 +485,7 @@ class q extends(r = o.PureComponent) {
       renderActions: n,
       className: i,
       application: r,
-      showReactions: a
+      showReactions: s
     } = this.props, o = this.activity;
     if (null == o || o.type === F.ActivityTypes.CUSTOM_STATUS) return null;
     let l = "UserPopout" === t || "UserPopoutV2" === t || "BiteSizePopout" === t,
@@ -502,21 +502,21 @@ class q extends(r = o.PureComponent) {
       A = null != n ? n() : null,
       m = this.renderTimeBar(o),
       p = ![e, I, T, f, S, m, A].some(e => null != e);
-    return (0, s.jsxs)("div", {
+    return (0, a.jsxs)("div", {
       className: u()(this.getTypeClass("activity"), i),
-      children: [this.renderHeader(p), (0, s.jsx)("div", {
-        className: u()(E ? j.bodyAlignCenter : j.bodyNormal, a && !l && !c && j.wrap),
-        children: (0, s.jsxs)("div", {
+      children: [this.renderHeader(p), (0, a.jsx)("div", {
+        className: u()(E ? j.bodyAlignCenter : j.bodyNormal, s && !l && !c && j.wrap),
+        children: (0, a.jsxs)("div", {
           className: j.activityDetails,
-          children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, s.jsxs)(P.default.Child, {
+          children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(P.default.Child, {
             className: u()((0, M.getClass)(j, "content", E ? "GameImage" : null != e ? "Images" : "NoImages", t)),
             children: [I, T, f, S, h, l || c ? null : m, _ ? A : null]
-          }), d ? (0, s.jsx)("div", {
+          }), d ? (0, a.jsx)("div", {
             className: j.actions,
             children: A
           }) : null]
         })
-      }), l ? m : null, l || c ? A : null, (0, s.jsx)(Q, {
+      }), l ? m : null, l || c ? A : null, (0, a.jsx)(Q, {
         activity: o
       })]
     })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
 let i = Object.freeze({
@@ -12,13 +12,13 @@ let i = Object.freeze({
     overflowX: "scroll",
     overflowY: "hidden"
   }),
-  a = Object.freeze({
+  s = Object.freeze({
     overflow: "auto"
   });
 
-function s(e) {
+function a(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vertical",
-    n = "vertical" === t ? i : "horizontal" === t ? r : a;
+    n = "vertical" === t ? i : "horizontal" === t ? r : s;
   return null != e ? {
     ...n,
     ...e

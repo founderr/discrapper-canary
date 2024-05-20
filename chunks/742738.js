@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var i, r, a, s, o = n("348327"),
+var i, r, s, a, o = n("348327"),
   l = n.n(o),
   u = n("442837"),
   d = n("570140"),
@@ -20,7 +20,7 @@ let O = null;
 
 function C() {
   let e = function() {
-    var e, t, n, i, r, a, s;
+    var e, t, n, i, r, s, a;
     let o = I.default.getVoiceChannelId();
     if (null == o) return null;
     let l = A.default.getStageInstanceByChannel(o);
@@ -41,10 +41,10 @@ function C() {
       name: null !== (r = null !== (i = l.topic) && void 0 !== i ? i : u.topic) && void 0 !== r ? r : u.name,
       type: (0, m.getStageHasMedia)(u.id) ? p.ActivityTypes.WATCHING : p.ActivityTypes.LISTENING,
       timestamps: {
-        start: null !== (a = null == C ? void 0 : null === (n = C.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== a ? a : new Date().getTime()
+        start: null !== (s = null == C ? void 0 : null === (n = C.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== s ? s : new Date().getTime()
       },
       assets: {
-        small_image: null !== (s = d.icon) && void 0 !== s ? s : void 0,
+        small_image: null !== (a = d.icon) && void 0 !== a ? a : void 0,
         small_text: d.name
       },
       party: {
@@ -55,7 +55,7 @@ function C() {
   }();
   return !l()(e, O) && (O = e, !0)
 }
-class R extends(s = u.default.Store) {
+class R extends(a = u.default.Store) {
   initialize() {
     this.waitFor(_.default, I.default, A.default, E.default)
   }
@@ -63,12 +63,12 @@ class R extends(s = u.default.Store) {
     return O
   }
 }
-a = "StageChannelSelfRichPresenceStore", (r = "displayName") in(i = R) ? Object.defineProperty(i, r, {
-  value: a,
+s = "StageChannelSelfRichPresenceStore", (r = "displayName") in(i = R) ? Object.defineProperty(i, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = a, t.default = new R(d.default, {
+}) : i[r] = s, t.default = new R(d.default, {
   CONNECTION_OPEN: C,
   STAGE_INSTANCE_CREATE: C,
   STAGE_INSTANCE_UPDATE: C,
@@ -78,8 +78,8 @@ a = "StageChannelSelfRichPresenceStore", (r = "displayName") in(i = R) ? Object.
     var t, n, i;
     let {
       state: r
-    } = e, a = null !== (i = null == O ? void 0 : null === (n = O.party) || void 0 === n ? void 0 : null === (t = n.size) || void 0 === t ? void 0 : t[1]) && void 0 !== i ? i : 0;
-    return r === p.RTCConnectionStates.RTC_CONNECTED && !(a > 0) && C()
+    } = e, s = null !== (i = null == O ? void 0 : null === (n = O.party) || void 0 === n ? void 0 : null === (t = n.size) || void 0 === t ? void 0 : t[1]) && void 0 !== i ? i : 0;
+    return r === p.RTCConnectionStates.RTC_CONNECTED && !(s > 0) && C()
   },
   VOICE_STATE_UPDATES: function(e) {
     let {

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("442837"),
-  s = n("481060"),
+  s = n("442837"),
+  a = n("481060"),
   o = n("727637"),
   l = n("100527"),
   u = n("906732"),
@@ -53,7 +53,7 @@ function v(e) {
     channelId: v,
     messageId: D,
     roleId: M
-  }), k = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser()), B = (0, a.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), V = (0, a.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), x = r.useRef(null), F = (0, T.default)(t.id, n), H = (0, o.default)(x);
+  }), k = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), B = (0, s.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), V = (0, s.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), x = r.useRef(null), F = (0, T.default)(t.id, n), H = (0, o.default)(x);
   r.useEffect(() => {
     null == P || P(null == x ? void 0 : x.current)
   }, [x, P]);
@@ -78,7 +78,7 @@ function v(e) {
       messageId: D,
       roleId: M,
       shouldTrackViewOnMount: null == V || null != V.fullProfileLoadedTimestamp,
-      children: (0, i.jsxs)(s.Dialog, {
+      children: (0, i.jsxs)(a.Dialog, {
         ref: x,
         "aria-label": t.username,
         onClick: L,
@@ -100,7 +100,7 @@ function v(e) {
               user: t,
               profileType: R.UserProfileTypes.BITE_SIZE,
               guildId: n,
-              viewProfileItem: (0, i.jsx)(s.MenuItem, {
+              viewProfileItem: (0, i.jsx)(a.MenuItem, {
                 id: "view-profile",
                 label: g.default.Messages.VIEW_FULL_PROFILE,
                 action: () => {

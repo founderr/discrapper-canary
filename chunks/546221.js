@@ -71,9 +71,9 @@ let x = e => {
     currentPeriod: x,
     allPeriods: L,
     metrics: O
-  } = (0, E.default)(d, u), A = (0, _.useRoleSubscriptionInsightsAccess)(d), p = (0, c.useRoleSubscriptionSettingsDisabled)();
+  } = (0, E.default)(d, u), p = (0, _.useRoleSubscriptionInsightsAccess)(d), A = (0, c.useRoleSubscriptionSettingsDisabled)();
   return I ? (0, a.jsx)(l.Spinner, {}) : (0, a.jsxs)(a.Fragment, {
-    children: [A && (0, a.jsxs)(a.Fragment, {
+    children: [p && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(n.default, {
         children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_INSIGHTS_NOTICE_TEXT.format({
           insightsURL: N.MarketingURLs.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(d)
@@ -120,7 +120,7 @@ let x = e => {
       })
     }), (0, a.jsx)(l.FormSection, {
       title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TITLE,
-      disabled: p,
+      disabled: A,
       className: h.formSection,
       children: (0, a.jsx)(f.default, {
         guildId: d,

@@ -23,7 +23,7 @@ let m = {
   friction: 15,
   tension: 100
 };
-class C extends a.PureComponent {
+class p extends a.PureComponent {
   componentDidMount() {
     this.setState({
       shown: !0
@@ -132,4 +132,4 @@ class C extends a.PureComponent {
     })
   }
 }
-t.default = C
+t.default = p

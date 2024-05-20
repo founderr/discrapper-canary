@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   initialize: function() {
-    return s
+    return a
   }
 }), n("47120"), n("411104"), n("653041");
 var i = n("570140");
 let r = {},
-  a = !1;
+  s = !1;
 
-function s(e) {
+function a(e) {
   for (let t in e) {
     let n = e[t];
     (function(e, t) {
@@ -25,9 +25,9 @@ function s(e) {
 }
 
 function o(e) {
-  if (("CONNECTION_OPEN" === e.type || "OVERLAY_INITIALIZE" === e.type) && (a = !0), e.type in r) {
+  if (("CONNECTION_OPEN" === e.type || "OVERLAY_INITIALIZE" === e.type) && (s = !0), e.type in r) {
     let t = [];
-    for (let n of r[e.type]) !a && n.neverLoadBeforeConnectionOpen ? t.push(n) : n.inlineRequire().initialize();
+    for (let n of r[e.type]) !s && n.neverLoadBeforeConnectionOpen ? t.push(n) : n.inlineRequire().initialize();
     t.length > 0 ? r[e.type] = t : delete r[e.type]
   }
   return !1

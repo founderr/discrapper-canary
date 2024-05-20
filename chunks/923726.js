@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return u
   },
   isGuildEligibleForRoleSubscriptions: function() {
-    return s
+    return a
   },
   isGuildEligibleForTierTemplates: function() {
     return d
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return E
   },
   useGuildEligibleForRoleSubscriptions: function() {
-    return a
+    return s
   },
   useGuildEligibleForTierTemplates: function() {
     return _
@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
 var i = n("644542"),
   r = n("981631");
 
-function a(e) {
+function s(e) {
   let {
     enableRoleSubscriptionsForGuild: t
   } = i.GuildRoleSubscriptionsExperiment.useExperiment({
@@ -49,7 +49,7 @@ function a(e) {
   return null != e && t && n
 }
 
-function s(e) {
+function a(e) {
   let {
     enableRoleSubscriptionsForGuild: t
   } = i.GuildRoleSubscriptionsExperiment.getCurrentConfig({

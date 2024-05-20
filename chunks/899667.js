@@ -8,12 +8,12 @@ let c = {},
   f = !1,
   m = !1,
   h = null,
-  p = null;
+  E = null;
 
-function E() {
+function T() {
   m = !0
 }
-class T extends(n = l.default.Store) {
+class p extends(n = l.default.Store) {
   getAppliedGuildBoostsForGuild(e) {
     return null != c[e] ? c[e].subscriptions : null
   }
@@ -33,7 +33,7 @@ class T extends(n = l.default.Store) {
     return h
   }
   get unapplyBoostError() {
-    return p
+    return E
   }
   get cooldownEndsAt() {
     return d
@@ -42,12 +42,12 @@ class T extends(n = l.default.Store) {
     return f
   }
 }
-i = "AppliedGuildBoostStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
+i = "AppliedGuildBoostStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = i, t.default = new T(o.default, {
+}) : r[s] = i, t.default = new p(o.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
@@ -70,8 +70,8 @@ i = "AppliedGuildBoostStore", (s = "displayName") in(r = T) ? Object.definePrope
     } = e;
     d = t
   },
-  GUILD_UNAPPLY_BOOST_START: E,
-  GUILD_APPLY_BOOST_START: E,
+  GUILD_UNAPPLY_BOOST_START: T,
+  GUILD_APPLY_BOOST_START: T,
   GUILD_APPLY_BOOST_SUCCESS: function(e) {
     let {
       appliedGuildBoost: t
@@ -94,7 +94,7 @@ i = "AppliedGuildBoostStore", (s = "displayName") in(r = T) ? Object.definePrope
     let {
       error: t
     } = e;
-    m = !1, p = t
+    m = !1, E = t
   },
   USER_APPLIED_BOOSTS_FETCH_START: function() {
     f = !0

@@ -30,13 +30,13 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("25441"),
-  s = n("536895"),
+  s = n("25441"),
+  a = n("536895"),
   o = n("260866");
 let l = {
     id: "NO_LIST",
     onKeyDown() {},
-    orientation: s.Orientations.VERTICAL,
+    orientation: a.Orientations.VERTICAL,
     ref: r.createRef(),
     tabIndex: -1
   },
@@ -49,9 +49,9 @@ let l = {
 function _(e) {
   let [t, n] = r.useState(-1), {
     id: i,
-    setFocus: s
-  } = r.useContext(u), l = r.useCallback(() => s(e), [e, s]);
-  return r.useLayoutEffect(() => (0, a.addFocusSubscriber)(i, (t, i) => {
+    setFocus: a
+  } = r.useContext(u), l = r.useCallback(() => a(e), [e, a]);
+  return r.useLayoutEffect(() => (0, s.addFocusSubscriber)(i, (t, i) => {
     n(i && t === e ? 0 : -1)
   }), [e, i]), {
     role: "listitem",
@@ -104,7 +104,7 @@ function f(e) {
       ref: i,
       tabIndex: r
     },
-    orientation: a
+    orientation: s
   } = e;
   return {
     role: "list",
@@ -127,8 +127,8 @@ function h(e) {
     children: t,
     navigator: n
   } = e, {
-    id: a,
-    setFocus: s,
+    id: s,
+    setFocus: a,
     containerProps: {
       onKeyDown: o,
       ref: l,
@@ -136,15 +136,15 @@ function h(e) {
     },
     orientation: c
   } = n, E = r.useMemo(() => ({
-    id: a,
-    setFocus: s
-  }), [a, s]), I = r.useMemo(() => ({
+    id: s,
+    setFocus: a
+  }), [s, a]), I = r.useMemo(() => ({
     onKeyDown: o,
     orientation: c,
     ref: l,
-    id: a,
+    id: s,
     tabIndex: _
-  }), [o, c, l, a, _]);
+  }), [o, c, l, s, _]);
   return (0, i.jsxs)(d.Provider, {
     value: I,
     children: [(0, i.jsx)(u.Provider, {

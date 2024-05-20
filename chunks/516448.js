@@ -30,8 +30,8 @@ function h(e) {
     editStateId: s,
     guildId: h
   } = (0, d.useEditStateContext)(), [C, R] = u.useChannelBenefits(s), [x, L] = u.useIntangibleBenefits(s), O = l.useMemo(() => t.filter(e => e.id !== s), [t, s]), {
-    isFullServerGating: A
-  } = (0, c.default)(h), p = (0, r.useUID)(), M = (0, o.useRoleSubscriptionSettingsDisabled)();
+    isFullServerGating: p
+  } = (0, c.default)(h), A = (0, r.useUID)(), M = (0, o.useRoleSubscriptionSettingsDisabled)();
   return (0, a.jsxs)(E.default, {
     title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BENEFITS_HEADER_TITLE,
     description: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BENEFITS_HEADER_SUBTITLE,
@@ -74,16 +74,16 @@ function h(e) {
       size: 24
     }), (0, a.jsxs)(n.FormSection, {
       title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_TITLE,
-      titleId: p,
+      titleId: A,
       disabled: M,
       children: [(0, a.jsx)(n.FormText, {
         type: n.FormText.Types.DESCRIPTION,
         className: g.formDescription,
         disabled: M,
         children: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_DESCRIPTION
-      }), A && (0, a.jsxs)(a.Fragment, {
+      }), p && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(I.default, {
-          "aria-labelledby": p,
+          "aria-labelledby": A,
           disabled: M
         }), (0, a.jsx)(i.default, {
           size: 8

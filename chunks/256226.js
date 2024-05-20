@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("924826"),
   l = n("866442"),
   u = n("442837"),
@@ -18,7 +18,7 @@ var i = n("735250"),
   h = n("689938"),
   A = n("904726");
 t.default = r.forwardRef(function(e, t) {
-  var a, m, N;
+  var s, m, N;
   let p;
   let {
     canRemove: O,
@@ -35,7 +35,7 @@ t.default = r.forwardRef(function(e, t) {
     roleId: R.id,
     size: 16,
     guildId: L
-  }), U = (0, u.useStateFromStores)([E.default], () => E.default.roleStyle), b = (null === (a = R.tags) || void 0 === a ? void 0 : a.guild_connections) === null, G = r.useCallback(e => {
+  }), U = (0, u.useStateFromStores)([E.default], () => E.default.roleStyle), b = (null === (s = R.tags) || void 0 === s ? void 0 : s.guild_connections) === null, G = r.useCallback(e => {
     (0, c.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -71,7 +71,7 @@ t.default = r.forwardRef(function(e, t) {
   return (0, i.jsx)(_.FocusRing, {
     children: (0, i.jsxs)("div", {
       ref: t,
-      className: s()(A.role, C),
+      className: a()(A.role, C),
       style: F,
       onContextMenu: G,
       onMouseDown: D,
@@ -81,7 +81,7 @@ t.default = r.forwardRef(function(e, t) {
       children: [O ? (0, i.jsx)(_.TooltipContainer, {
         text: h.default.Messages.REMOVE_SYNCED_ROLE,
         children: (0, i.jsxs)(_.Clickable, {
-          className: s()(A.roleRemoveButtonCanRemove, A.roleRemoveButton),
+          className: a()(A.roleRemoveButtonCanRemove, A.roleRemoveButton),
           onClick: g,
           tabIndex: M,
           focusProps: {

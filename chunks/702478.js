@@ -24,13 +24,13 @@ var a = s("735250"),
   x = s("146596"),
   L = s("559368"),
   O = s("999382"),
-  A = s("981631"),
-  p = s("921944"),
+  p = s("981631"),
+  A = s("921944"),
   M = s("190378"),
   D = s("689938"),
   v = s("480330"),
-  G = s("287837"),
-  j = s("573189"),
+  j = s("287837"),
+  G = s("573189"),
   U = s("899947"),
   P = s("117831"),
   b = s("996737"),
@@ -52,7 +52,7 @@ let k = function(e, t, s) {
   },
   w = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return t || e === A.AbortCodes.NOT_ENOUGH_GUILD_MEMBERS ? (0, a.jsx)(c.FormErrorBlock, {
+    return t || e === p.AbortCodes.NOT_ENOUGH_GUILD_MEMBERS ? (0, a.jsx)(c.FormErrorBlock, {
       icon: N.default,
       className: v.notEnoughMembersError,
       backgroundColor: c.FormErrorBlockColors.BACKGROUND_ACCENT,
@@ -64,20 +64,20 @@ let k = function(e, t, s) {
   };
 
 function V(e) {
-  h.default.track(A.AnalyticEvents.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, {
+  h.default.track(p.AnalyticEvents.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, {
     guild_id: e
   });
-  let t = null == e ? A.RelativeMarketingURLs.DEVELOPER_PORTAL : A.RelativeMarketingURLs.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
+  let t = null == e ? p.RelativeMarketingURLs.DEVELOPER_PORTAL : p.RelativeMarketingURLs.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
     s = (0, n.v4)();
   return o.HTTP.post({
-    url: A.Endpoints.HANDOFF,
+    url: p.Endpoints.HANDOFF,
     body: {
       key: s
     },
     oldFormErrors: !0
   }).then(e => {
     let a = e.body.handoff_token;
-    window.open(A.MarketingURLs.DEVELOPER_PORTAL_LOGIN_HANDOFF(s, a, t))
+    window.open(p.MarketingURLs.DEVELOPER_PORTAL_LOGIN_HANDOFF(s, a, t))
   }, () => {
     window.open(t)
   })
@@ -110,7 +110,7 @@ function W(e) {
   } = (0, C.useGuildAccessRateInsightExperiment)(t, !s);
   if (l.useEffect(() => {
       o && ((0, _.requestMarkDismissibleContentAsShown)(d.DismissibleContent.GUILD_INSIGHTS_ACCESS_RATE_NEW), (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.GUILD_INSIGHTS_ACCESS_RATE_NEW, {
-        dismissAction: p.ContentDismissActionType.AUTO
+        dismissAction: A.ContentDismissActionType.AUTO
       }))
     }, [o]), !o || !s || null == n) return null;
   let E = 10 * Math.ceil((1 - n) * 10),
@@ -221,13 +221,13 @@ function W(e) {
             children: [(0, a.jsx)("img", {
               alt: "",
               className: v.actionIcon,
-              src: j
+              src: G
             }), (0, a.jsx)(c.Text, {
               className: v.actionText,
               variant: "text-sm/normal",
               children: D.default.Messages.ACCESS_RATE_ACTION_BOTS.format({
                 integrationsHook: (e, t) => (0, a.jsx)(m.default, {
-                  onClick: () => R.default.setSection(A.GuildSettingsSections.INTEGRATIONS),
+                  onClick: () => R.default.setSection(p.GuildSettingsSections.INTEGRATIONS),
                   className: v.link,
                   children: e
                 }, t)
@@ -240,7 +240,7 @@ function W(e) {
             children: [(0, a.jsx)("img", {
               alt: "",
               className: v.actionIcon,
-              src: G
+              src: j
             }), (0, a.jsx)(c.Text, {
               className: v.actionText,
               variant: "text-sm/normal",
@@ -290,7 +290,7 @@ t.default = () => {
       analytics: null != e ? L.default.getOverviewAnalytics(e) : null,
       errorCode: L.default.getError()
     })),
-    d = null == t || null == s || null != t && t < 500 && null != s && !s.hasFeature(A.GuildFeatures.PARTNERED) && !s.hasFeature(A.GuildFeatures.VERIFIED);
+    d = null == t || null == s || null != t && t < 500 && null != s && !s.hasFeature(p.GuildFeatures.PARTNERED) && !s.hasFeature(p.GuildFeatures.VERIFIED);
   l.useEffect(() => {
     null != e && !d && ((0, x.fetchEngagementOverview)(e), (0, x.fetchGrowthActivationOverview)(e), (0, x.fetchGrowthActivationRetention)(e))
   }, [e, d]), l.useEffect(() => {

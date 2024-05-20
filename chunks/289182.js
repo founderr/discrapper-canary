@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   getUpdatedOptions: function() {
-    return a
+    return s
   }
 });
 var i = n("625306"),
   r = n("570140");
 
-function a(e) {
+function s(e) {
   return {
     ...e,
     extra: {

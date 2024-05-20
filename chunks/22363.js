@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  a = n.n(r),
-  s = n("646574"),
+  s = n.n(r),
+  a = n("646574"),
   o = n("543241"),
   l = n("747613"),
   u = n("533432"),
@@ -39,7 +39,7 @@ t.default = e => {
       defaultSearchPlaceholder: (0, o.getSearchPlaceholder)(n, m)
     }), n === _.EmojiIntention.REACTION ? (0, i.jsx)("div", {
       className: c.burstToggle,
-      children: (0, i.jsx)(s.default, {
+      children: (0, i.jsx)(a.default, {
         checked: m,
         onClick: N
       })
@@ -51,7 +51,7 @@ t.default = e => {
     })]
   });
   return (0, i.jsx)("div", {
-    className: a()(c.header, r),
+    className: s()(c.header, r),
     children: null != p ? p(O) : O
   })
 }

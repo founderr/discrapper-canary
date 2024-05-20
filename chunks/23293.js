@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  a = n("158776"),
-  s = n("78675"),
+  s = n("158776"),
+  a = n("78675"),
   o = n("438163"),
   l = n("513099"),
   u = n("228168"),
@@ -22,7 +22,7 @@ function c(e) {
     guildId: c,
     channelId: E,
     onOpenProfile: I
-  } = e, T = (0, r.useStateFromStores)([a.default], () => a.default.findActivity(t.id, e => {
+  } = e, T = (0, r.useStateFromStores)([s.default], () => s.default.findActivity(t.id, e => {
     let {
       type: t
     } = e;
@@ -30,7 +30,7 @@ function c(e) {
   }));
   return (0, i.jsxs)("header", {
     className: _.header,
-    children: [(0, i.jsx)(s.default, {
+    children: [(0, i.jsx)(a.default, {
       user: t,
       displayProfile: n,
       guildId: c,

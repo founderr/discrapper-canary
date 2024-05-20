@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("47120");
-var i, r, a, s = n("442837"),
+var i, r, s, a = n("442837"),
   o = n("570140");
 
 function l(e, t, n) {
@@ -14,7 +14,7 @@ function l(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(a = i || (i = {}))[a.MESSAGING = 0] = "MESSAGING", a[a.OVERLAYS = 1] = "OVERLAYS", a[a.PREMIUM = 2] = "PREMIUM";
+}(s = i || (i = {}))[s.MESSAGING = 0] = "MESSAGING", s[s.OVERLAYS = 1] = "OVERLAYS", s[s.PREMIUM = 2] = "PREMIUM";
 let u = {
     visual_effect_view_overrides: {
       label: "Blur view overrides for designers to test with",
@@ -42,7 +42,7 @@ let u = {
     }
   },
   d = {};
-class _ extends(r = s.default.DeviceSettingsStore) {
+class _ extends(r = a.default.DeviceSettingsStore) {
   getUserAgnosticState() {
     return {
       toggleStates: d

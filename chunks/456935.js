@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   getVerificationLevelText: function() {
-    return p
+    return E
   }
 });
 var n = a("735250"),
@@ -17,7 +17,7 @@ var n = a("735250"),
   m = a("689938"),
   h = a("17359");
 
-function p(e) {
+function E(e) {
   switch (e) {
     case f.VerificationLevels.LOW:
       return m.default.Messages.VERIFICATION_LEVEL_LOW;
@@ -31,7 +31,7 @@ function p(e) {
       return ""
   }
 }
-let E = {
+let T = {
   [f.VerificationLevels.NONE]: "",
   [f.VerificationLevels.LOW]: s.default.unsafe_rawColors.GREEN_360.css,
   [f.VerificationLevels.MEDIUM]: s.default.unsafe_rawColors.YELLOW_300.css,
@@ -41,21 +41,21 @@ let E = {
 t.default = function(e) {
   let {
     guild: t
-  } = e, s = l.default.can(f.Permissions.MANAGE_GUILD, t), T = t.verificationLevel, C = T === f.VerificationLevels.VERY_HIGH ? c.default : o.default, x = r.useMemo(() => p(T), [T]), _ = E[T], g = (0, n.jsx)("div", {
+  } = e, s = l.default.can(f.Permissions.MANAGE_GUILD, t), p = t.verificationLevel, C = p === f.VerificationLevels.VERY_HIGH ? c.default : o.default, _ = r.useMemo(() => E(p), [p]), x = T[p], g = (0, n.jsx)("div", {
     className: h.verificationLevelTitle,
     children: m.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {
         return (0, n.jsx)(i.Text, {
           className: h.verificationLevelHook,
           style: {
-            color: _
+            color: x
           },
           variant: "text-sm/semibold",
-          children: x
+          children: _
         }, "hook")
       }
     })
-  }), I = T === f.VerificationLevels.VERY_HIGH ? m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
+  }), N = p === f.VerificationLevels.VERY_HIGH ? m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : m.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
   return (0, n.jsx)(u.default, {
     title: g,
     children: (0, n.jsxs)("div", {
@@ -67,7 +67,7 @@ t.default = function(e) {
       }), (0, n.jsx)(i.Text, {
         className: h.guildVerificationText,
         variant: "text-sm/normal",
-        children: I
+        children: N
       }), s && (0, n.jsx)(i.Clickable, {
         className: h.iconInteractiveContainer,
         onClick: () => (0, i.openModalLazy)(async () => {

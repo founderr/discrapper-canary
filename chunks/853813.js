@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return p
   }
 });
 var a = s("735250"),
@@ -29,12 +29,12 @@ var a = s("735250"),
   L = s("981631"),
   O = s("408965");
 
-function A(e) {
+function p(e) {
   let t, {
       editRoleId: s,
       setEditRoleId: n,
-      selectedSection: A,
-      setSelectedSection: p
+      selectedSection: p,
+      setSelectedSection: A
     } = e,
     M = (0, r.useStateFromStores)([S.default], () => S.default.guild, []);
   i()(null != M, "guildId cannot be null here");
@@ -48,13 +48,13 @@ function A(e) {
   l.useEffect(() => {
     null == D && n(null)
   }, [D, n]);
-  let G = (0, r.useStateFromStores)([E.default], () => E.default.getHighestRole(M), [M]),
-    j = (0, r.useStateFromStores)([E.default], () => !E.default.isRoleHigher(M, G, D)),
+  let j = (0, r.useStateFromStores)([E.default], () => E.default.getHighestRole(M), [M]),
+    G = (0, r.useStateFromStores)([E.default], () => !E.default.isRoleHigher(M, j, D)),
     U = l.useRef(null),
     P = (0, r.useStateFromStores)([f.default], () => f.default.getProps().integrations);
   if (l.useEffect(() => {
       var e, t;
-      let a = (0, m.getSectionAnalyticsName)(A),
+      let a = (0, m.getSectionAnalyticsName)(p),
         l = null !== (t = null === (e = T.default.getRoleMemberCount(M.id)) || void 0 === e ? void 0 : e[s]) && void 0 !== t ? t : 0;
       _.default.track(L.AnalyticEvents.ROLE_PAGE_VIEWED, {
         tab_opened: a,
@@ -66,25 +66,25 @@ function A(e) {
         role_num_members: l,
         ...(0, d.collectGuildAnalyticsMetadata)(M.id)
       })
-    }, [A, M.id, null == D ? void 0 : D.id]), l.useEffect(() => {
+    }, [p, M.id, null == D ? void 0 : D.id]), l.useEffect(() => {
       (null == D ? void 0 : D.id) != null && (0, c.fetchRoleConnectionsConfiguration)(M.id, D.id)
     }, [M.id, null == D ? void 0 : D.id]), null == D) return null;
-  switch (A) {
+  switch (p) {
     case x.GuildSettingsRoleEditSections.DISPLAY:
       t = (0, a.jsx)(g.default, {
         guild: M,
         role: D,
-        locked: j,
-        highestRole: G,
-        setSelectedSection: p
+        locked: G,
+        highestRole: j,
+        setSelectedSection: A
       });
       break;
     case x.GuildSettingsRoleEditSections.PERMISSIONS:
       t = (0, a.jsx)(C.default, {
         guild: M,
         role: D,
-        locked: j,
-        setSelectedSection: p,
+        locked: G,
+        setSelectedSection: A,
         initialSearchQuery: v
       });
       break;
@@ -92,8 +92,8 @@ function A(e) {
       t = (0, a.jsx)(N.default, {
         guild: M,
         role: D,
-        locked: j,
-        setSelectedSection: p,
+        locked: G,
+        setSelectedSection: A,
         integrations: null != P ? P : void 0
       });
       break;
@@ -101,12 +101,12 @@ function A(e) {
       t = (0, a.jsx)(h.default, {
         guild: M,
         role: D,
-        locked: j,
-        setSelectedSection: p
+        locked: G,
+        setSelectedSection: A
       });
       break;
     default:
-      (0, I.assertNever)(A)
+      (0, I.assertNever)(p)
   }
   return (0, a.jsxs)(o.FormSection, {
     className: O.page,
@@ -114,7 +114,7 @@ function A(e) {
       guild: M,
       currentRoleId: s,
       setCurrentRoleId: n,
-      setSelectedSection: p
+      setSelectedSection: A
     }), (0, a.jsx)("div", {
       className: O.contentContainer,
       ref: U,

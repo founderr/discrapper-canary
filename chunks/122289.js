@@ -10,14 +10,14 @@ n.r(t), n.d(t, {
     return o
   },
   getLocalizedDisplayMonth: function() {
-    return s
+    return a
   }
 });
 var i = n("751767"),
   r = n("960048"),
-  a = n("231338");
+  s = n("231338");
 
-function s(e, t) {
+function a(e, t) {
   let n = new Date;
   return n.setMonth(e - 1), n.toLocaleString(t, {
     month: "short"
@@ -25,7 +25,7 @@ function s(e, t) {
 }
 async function o(e) {
   let t = null;
-  if (null != e && e.paymentGateway === a.PaymentGateways.BRAINTREE) {
+  if (null != e && e.paymentGateway === s.PaymentGateways.BRAINTREE) {
     let e = await (0, i.collectDeviceData)();
     null != e && (t = {
       braintree_device_data: e

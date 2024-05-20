@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   }
 });
 var i = n("963202"),
   r = n("169559");
 
-function a(e) {
+function s(e) {
   let t = (0, r.default)(e),
     {
       clanTagsVisible: n

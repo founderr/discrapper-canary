@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("570140"),
   r = n("147913"),
-  a = n("703656"),
-  s = n("70956"),
+  s = n("703656"),
+  a = n("70956"),
   o = n("654769"),
   l = n("641051"),
   u = n("329461"),
@@ -39,7 +39,7 @@ class c extends r.default {
             omitViewTracking: !0,
             tag: e.messageId,
             onClick() {
-              (0, a.transitionTo)(d.Routes.CHANNEL(e.guildId, e.channelId, e.messageId))
+              (0, s.transitionTo)(d.Routes.CHANNEL(e.guildId, e.channelId, e.messageId))
             }
           }), i.default.dispatch({
             type: "MESSAGE_REMINDER_NOTIFIED",
@@ -47,7 +47,7 @@ class c extends r.default {
           })
         }), setTimeout(() => {
           e()
-        }, 5 * s.default.Millis.MINUTE))
+        }, 5 * a.default.Millis.MINUTE))
       }()
     })
   }

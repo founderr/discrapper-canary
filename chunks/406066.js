@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("653041"), n("47120");
-var i, r, a, s, o = n("348327"),
+var i, r, s, a, o = n("348327"),
   l = n.n(o),
   u = n("442837"),
   d = n("570140"),
@@ -24,9 +24,9 @@ class T extends(i = u.default.Store) {
     return E
   }
 }
-s = "FirstPartyRichPresenceStore", (a = "displayName") in(r = T) ? Object.defineProperty(r, a, {
-  value: s,
+a = "FirstPartyRichPresenceStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new T(d.default)
+}) : r[s] = a, t.default = new T(d.default)

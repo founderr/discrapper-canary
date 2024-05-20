@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("481060"),
   l = n("69649");
 
@@ -15,7 +15,7 @@ function u(e) {
   let {
     children: t,
     "aria-label": n,
-    className: a,
+    className: s,
     position: u,
     ...d
   } = e, _ = r.useRef(null), c = null != n ? n : "string" == typeof t && t;
@@ -31,7 +31,7 @@ function u(e) {
         onMouseLeave: o
       } = n;
       return (0, i.jsx)("div", {
-        className: s()(a, l.overflow),
+        className: a()(s, l.overflow),
         ref: _,
         "aria-hidden": e["aria-hidden"],
         onMouseEnter: () => {

@@ -3,18 +3,18 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("960259"),
-  a = n("498503"),
-  s = n("325767");
+  s = n("498503"),
+  a = n("325767");
 t.default = (0, r.replaceIcon)(function(e) {
   let {
     width: t = 24,
     height: n = 24,
     color: r = "currentColor",
-    foreground: a,
+    foreground: s,
     ...o
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, s.default)(o),
+    ...(0, a.default)(o),
     width: t,
     height: n,
     viewBox: "0 0 24 24",
@@ -26,10 +26,10 @@ t.default = (0, r.replaceIcon)(function(e) {
       fill: r
     }), (0, i.jsx)("path", {
       d: "M3.20101 23.6243L1.7868 22.2101L21.5858 2.41113L23 3.82535L3.20101 23.6243Z",
-      className: a,
+      className: s,
       fill: r
     })]
   })
-}, a.HeadphonesSlashIcon, void 0, {
+}, s.HeadphonesSlashIcon, void 0, {
   size: 24
 })

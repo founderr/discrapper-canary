@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  a = n("996146"),
-  s = n("481060"),
+  s = n("996146"),
+  a = n("481060"),
   o = n("100527"),
   l = n("906732"),
   u = n("963249"),
@@ -23,7 +23,7 @@ t.default = r.memo(function(e) {
     Component: S,
     events: h,
     play: A
-  } = (0, a.useGiftLottie)();
+  } = (0, s.useGiftLottie)();
   if (t) return null;
   let m = () => (0, u.default)({
     isGift: !0,
@@ -38,7 +38,7 @@ t.default = r.memo(function(e) {
       objectType: c.AnalyticsObjectTypes.GIFT
     }
   });
-  return (0, i.jsx)(s.Tooltip, {
+  return (0, i.jsx)(a.Tooltip, {
     text: I.default.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
     children: e => (0, i.jsx)(d.default, {
       ...e,

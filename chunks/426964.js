@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  a = n("524437"),
-  s = n("481060"),
+  s = n("524437"),
+  a = n("481060"),
   o = n("442837"),
   l = n("100527"),
   u = n("231467"),
@@ -36,7 +36,7 @@ t.default = r.memo(function(e) {
     isLoading: D,
     onClose: M,
     profileViewedAnalytics: y
-  } = e, P = null == n ? void 0 : n.identityGuildId, U = (0, A.useClanInfo)(null != P ? P : null), b = null == n ? void 0 : n.tag, G = (0, O.default)("clan_guild_profile"), w = (0, p.default)("base_clan_tag_chiplet"), k = (0, o.useStateFromStores)([E.default], () => E.default.getId()), B = (0, o.useStateFromStores)([I.default], () => null != P ? I.default.getMember(P, k) : null, [P, k]), V = (0, d.useIsDismissibleContentDismissed)(a.DismissibleContent.CLAN_TAG_WAITLIST), x = (0, o.useStateFromStores)([T.default], () => T.default.getUser(k), [k]), F = (null == B ? void 0 : B.joinedAt) != null, H = (0, N.isGuildAdoptedUserClanIdentity)(P, null == x ? void 0 : x.clan), Y = null != (0, _.default)(P);
+  } = e, P = null == n ? void 0 : n.identityGuildId, U = (0, A.useClanInfo)(null != P ? P : null), b = null == n ? void 0 : n.tag, G = (0, O.default)("clan_guild_profile"), w = (0, p.default)("base_clan_tag_chiplet"), k = (0, o.useStateFromStores)([E.default], () => E.default.getId()), B = (0, o.useStateFromStores)([I.default], () => null != P ? I.default.getMember(P, k) : null, [P, k]), V = (0, d.useIsDismissibleContentDismissed)(s.DismissibleContent.CLAN_TAG_WAITLIST), x = (0, o.useStateFromStores)([T.default], () => T.default.getUser(k), [k]), F = (null == B ? void 0 : B.joinedAt) != null, H = (0, N.isGuildAdoptedUserClanIdentity)(P, null == x ? void 0 : x.clan), Y = null != (0, _.default)(P);
   r.useEffect(() => {
     null != P && (0, h.trackClanProfileViewed)({
       guildId: P,
@@ -52,7 +52,7 @@ t.default = r.memo(function(e) {
         messageId: null == y ? void 0 : y.messageId,
         tagUserId: null == y ? void 0 : y.tagUserId,
         location: l.default.CLAN_GUILD_PROFILE
-      }), (0, s.showToast)((0, s.createToast)(g.default.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, s.ToastType.SUCCESS)))
+      }), (0, a.showToast)((0, a.createToast)(g.default.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, a.ToastType.SUCCESS)))
     }, [P, V, y]),
     W = r.useCallback(e => {
       null != P && (e.stopPropagation(), e.preventDefault(), null == M || M(), (0, m.openAdoptClanIdentityModal)(P))
@@ -77,8 +77,8 @@ t.default = r.memo(function(e) {
     Q = r.useMemo(() => {
       var e, t;
       return {
-        color: s.Button.Colors.BRAND,
-        size: s.Button.Sizes.SMALL,
+        color: a.Button.Colors.BRAND,
+        size: a.Button.Sizes.SMALL,
         fullWidth: !0,
         className: L.button,
         themeColor: null !== (t = null == U ? void 0 : null === (e = U.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null
@@ -89,19 +89,19 @@ t.default = r.memo(function(e) {
         case !w:
           return null;
         case !F && !G && !V:
-          return (0, i.jsx)(s.Button, {
+          return (0, i.jsx)(a.Button, {
             onClick: j,
-            color: s.Button.Colors.PRIMARY,
-            size: s.Button.Sizes.SMALL,
+            color: a.Button.Colors.PRIMARY,
+            size: a.Button.Sizes.SMALL,
             fullWidth: !0,
             children: g.default.Messages.CLAN_USER_WAITLIST_CTA
           });
         case !F && !G && V:
-          return (0, i.jsxs)(s.Button, {
+          return (0, i.jsxs)(a.Button, {
             innerClassName: L.waitlistedButton,
             onClick: z,
-            color: s.Button.Colors.PRIMARY,
-            size: s.Button.Sizes.SMALL,
+            color: a.Button.Colors.PRIMARY,
+            size: a.Button.Sizes.SMALL,
             fullWidth: !0,
             children: [g.default.Messages.CLAN_USER_WAITLISTED, (0, i.jsx)(f.default, {})]
           });
@@ -139,7 +139,7 @@ t.default = r.memo(function(e) {
     }), []);
   return null == b || null == U || null == P || D ? (0, i.jsx)("div", {
     ...J,
-    children: (0, i.jsx)(s.Spinner, {})
+    children: (0, i.jsx)(a.Spinner, {})
   }) : (0, i.jsxs)("div", {
     ...J,
     children: [(0, i.jsx)(u.ClanDiscoveryCardView, {

@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("91159"),
   h = n("488131"),
   m = n("496675"),
-  C = n("306680"),
-  p = n("594174"),
+  p = n("306680"),
+  C = n("594174"),
   g = n("768581"),
   E = n("709054"),
   _ = n("981631"),
@@ -28,11 +28,11 @@ var l = n("735250"),
 function T(e) {
   let {
     channel: t
-  } = e, s = (0, r.useStateFromStoresArray)([c.default, C.default, m.default], () => {
+  } = e, s = (0, r.useStateFromStoresArray)([c.default, p.default, m.default], () => {
     let e = c.default.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
     return i()(c.default.getActiveJoinedThreadsForParent(t.guild_id, t.id)).values().map(e => e.channel).concat(i().values(c.default.getActiveUnjoinedThreadsForParent(t.guild_id, t.id))).filter(t => !(t.id in e) && m.default.can(_.Permissions.VIEW_CHANNEL, t)).sort((e, t) => {
-      let n = C.default.lastMessageId(e.id),
-        l = C.default.lastMessageId(t.id);
+      let n = p.default.lastMessageId(e.id),
+        l = p.default.lastMessageId(t.id);
       return E.default.compare(n, l)
     }).reverse().value()
   }), u = t.isForumLikeChannel() ? 5 : 3;
@@ -72,7 +72,7 @@ function T(e) {
 function A(e) {
   let {
     thread: t
-  } = e, n = (0, r.useStateFromStores)([p.default], () => p.default.getUser(t.ownerId)), a = (0, f.useLastMessageTimestamp)(t);
+  } = e, n = (0, r.useStateFromStores)([C.default], () => C.default.getUser(t.ownerId)), a = (0, f.useLastMessageTimestamp)(t);
   return (0, l.jsxs)(o.Clickable, {
     className: N.row,
     onClick: e => {

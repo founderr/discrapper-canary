@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("91192"),
   l = n("552075"),
   u = n("481060"),
@@ -28,14 +28,14 @@ function N(e) {
     icon: t,
     isSelected: n,
     onClick: r,
-    listItemProps: a,
+    listItemProps: s,
     ...o
   } = e;
   return (0, i.jsx)(u.Clickable, {
-    ...a,
+    ...s,
     ...o,
     onClick: r,
-    className: s()(A.categoryIcon, {
+    className: a()(A.categoryIcon, {
       [A.selected]: n
     }),
     children: (0, i.jsx)(t, {
@@ -49,8 +49,8 @@ function p(e) {
     category: t,
     categoryIndex: n,
     onClick: r,
-    isSelected: a
-  } = e, s = (0, o.useListItem)("soundboard_guild_".concat(n));
+    isSelected: s
+  } = e, a = (0, o.useListItem)("soundboard_guild_".concat(n));
   return (0, i.jsx)(u.Tooltip, {
     text: function(e) {
       switch (e.categoryInfo.type) {
@@ -84,7 +84,7 @@ function p(e) {
       }
     }(t),
     position: "right",
-    children: e => (function(e, t, n, r, a) {
+    children: e => (function(e, t, n, r, s) {
       switch (e.categoryInfo.type) {
         case S.SoundboardSoundGridSectionType.FAVORITES:
           return (0, i.jsx)(N, {
@@ -92,7 +92,7 @@ function p(e) {
             icon: f.default,
             onClick: t,
             isSelected: n,
-            listItemProps: a
+            listItemProps: s
           }, e.key);
         case S.SoundboardSoundGridSectionType.RECENTLY_HEARD:
           return (0, i.jsx)(N, {
@@ -100,7 +100,7 @@ function p(e) {
             icon: I.default,
             onClick: t,
             isSelected: n,
-            listItemProps: a
+            listItemProps: s
           }, e.key);
         case S.SoundboardSoundGridSectionType.FREQUENTLY_USED:
           return (0, i.jsx)(N, {
@@ -108,11 +108,11 @@ function p(e) {
             icon: l.AnalyticsIcon,
             onClick: t,
             isSelected: n,
-            listItemProps: a
+            listItemProps: s
           }, e.key);
         case S.SoundboardSoundGridSectionType.GUILD:
           return (0, i.jsx)(u.Clickable, {
-            ...a,
+            ...s,
             ...r,
             className: A.category,
             onClick: t,
@@ -127,12 +127,12 @@ function p(e) {
             icon: T.default,
             onClick: t,
             isSelected: n,
-            listItemProps: a
+            listItemProps: s
           }, e.key);
         default:
           return null
       }
-    })(t, r, a, e, s)
+    })(t, r, s, e, a)
   })
 }
 
@@ -140,8 +140,8 @@ function O(e) {
   let {
     soundboardListRef: t,
     categories: n,
-    listPadding: a = m
-  } = e, s = r.useRef(null), o = r.useCallback((e, t, n, r) => (0, i.jsx)(p, {
+    listPadding: s = m
+  } = e, a = r.useRef(null), o = r.useCallback((e, t, n, r) => (0, i.jsx)(p, {
     category: e,
     categoryIndex: t,
     onClick: n,
@@ -149,11 +149,11 @@ function O(e) {
   }), []);
   return (0, i.jsx)(c.default, {
     className: A.categoryList,
-    categoryListRef: s,
+    categoryListRef: a,
     expressionsListRef: t,
     store: _.SoundboardPickerStore,
     categories: n,
-    listPadding: a,
+    listPadding: s,
     renderCategoryListItem: o,
     rowCount: n.length,
     categoryHeight: 40

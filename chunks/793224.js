@@ -17,8 +17,8 @@ var a = n("442837"),
   f = n("286328"),
   h = n("493355"),
   m = n("134598"),
-  C = n("243778"),
-  p = n("594190"),
+  p = n("243778"),
+  C = n("594190"),
   g = n("569545"),
   E = n("989941"),
   _ = n("199902"),
@@ -35,7 +35,7 @@ var a = n("442837"),
 function M() {
   let e = (0, a.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
     t = (0, a.useStateFromStores)([S.default], () => S.default.getId()),
-    n = (0, a.useStateFromStores)([p.default, T.default], () => (0, E.default)(p.default, T.default)),
+    n = (0, a.useStateFromStores)([C.default, T.default], () => (0, E.default)(C.default, T.default)),
     {
       canBroadcast: M
     } = d.default.useExperiment({
@@ -82,7 +82,7 @@ function M() {
     U = e => (0, l.jsx)(f.default, {
       markAsDismissed: e
     });
-  return (0, l.jsx)(C.default, {
+  return (0, l.jsx)(p.default, {
     contentTypes: b,
     bypassAutoDismiss: !0,
     children: e => {

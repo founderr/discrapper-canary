@@ -29,13 +29,13 @@ var a, l, n = s("735250"),
   x = s("153124"),
   L = s("259580"),
   O = s("93879"),
-  A = s("263704"),
-  p = s("486511"),
+  p = s("263704"),
+  A = s("486511"),
   M = s("241820"),
   D = s("176278"),
   v = s("624138"),
-  G = s("817460"),
-  j = s("166803"),
+  j = s("817460"),
+  G = s("166803"),
   U = s("629262"),
   P = s("686807"),
   b = s("981631"),
@@ -93,7 +93,7 @@ function V(e) {
         })
       }), (0, n.jsx)("div", {
         className: y.checkboxDisplay,
-        children: (0, n.jsx)(A.default, {
+        children: (0, n.jsx)(p.default, {
           className: y.checkboxIcon,
           "aria-hidden": !0
         })
@@ -117,7 +117,7 @@ function Y(e) {
     children: [a.length - l.size > 1 && (0, n.jsx)("div", {
       className: y.list,
       children: (0, n.jsx)(V, {
-        icon: (0, n.jsx)(p.default, {
+        icon: (0, n.jsx)(A.default, {
           className: y.rowIcon
         }),
         checked: o,
@@ -150,7 +150,7 @@ function Y(e) {
           variant: "text-sm/normal",
           children: e.description
         })]
-      }, (0, G.getBenefitKey)(e)))
+      }, (0, j.getBenefitKey)(e)))
     })]
   }) : null
 }
@@ -163,7 +163,7 @@ function W(e) {
     existingIntangibleBenefits: l,
     onSubmit: r,
     onClose: o
-  } = e, d = s.role_benefits.benefits, [u, c] = i.useState(() => new Set(d)), E = i.useMemo(() => d.filter(G.isChannelBenefit), [d]), I = (0, U.default)(E), S = i.useMemo(() => d.filter(G.isIntangibleBenefit), [d]), f = i.useMemo(() => new Set(I.filter(e => a.some(t => t.ref_id === e.ref_id))), [I, a]), m = i.useMemo(() => new Set(S.filter(e => l.some(t => (0, _.default)(e, t)))), [l, S]), N = (0, x.useUID)();
+  } = e, d = s.role_benefits.benefits, [u, c] = i.useState(() => new Set(d)), E = i.useMemo(() => d.filter(j.isChannelBenefit), [d]), I = (0, U.default)(E), S = i.useMemo(() => d.filter(j.isIntangibleBenefit), [d]), f = i.useMemo(() => new Set(I.filter(e => a.some(t => t.ref_id === e.ref_id))), [I, a]), m = i.useMemo(() => new Set(S.filter(e => l.some(t => (0, _.default)(e, t)))), [l, S]), N = (0, x.useUID)();
 
   function g(e, t) {
     c(s => {
@@ -175,8 +175,8 @@ function W(e) {
     onSubmit: function(e) {
       e.preventDefault();
       let t = d.filter(e => u.has(e)),
-        s = t.filter(G.isChannelBenefit).filter(e => !f.has(e));
-      r(s, t.filter(G.isIntangibleBenefit).filter(e => !m.has(e))), o()
+        s = t.filter(j.isChannelBenefit).filter(e => !f.has(e));
+      r(s, t.filter(j.isIntangibleBenefit).filter(e => !m.has(e))), o()
     },
     children: (0, n.jsxs)(T.ModalRoot, {
       transitionState: t,
@@ -287,7 +287,7 @@ function K(e) {
   })), [l]), o = i.useMemo(() => Object.values(a).flatMap(e => {
     var s;
     if ((0, m.isEveryoneRoleId)(t.id, e.id) || (null === (s = e.tags) || void 0 === s ? void 0 : s.subscription_listing_id) != null || u.hasAny(e.permissions, b.ElevatedPermissions)) return [];
-    let a = (0, j.default)(r, e).length;
+    let a = (0, G.default)(r, e).length;
     return a > 0 ? {
       role: e,
       channelCount: a
@@ -357,7 +357,7 @@ function X(e) {
         return t
       }))
     }),
-    E = i.useMemo(() => (0, j.default)(c, u), [c, u]),
+    E = i.useMemo(() => (0, G.default)(c, u), [c, u]),
     [_, I] = i.useState(() => new Set(E.map(e => e.id)));
 
   function S(e, t) {
@@ -387,7 +387,7 @@ function X(e) {
       children: [E.length > 1 && (0, n.jsx)("div", {
         className: y.list,
         children: (0, n.jsx)(V, {
-          icon: (0, n.jsx)(p.default, {}),
+          icon: (0, n.jsx)(A.default, {}),
           checked: _.size === E.length,
           onChange: function(e) {
             for (let t of E) S(t.id, e)

@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var i, r, a, s, o = n("442837"),
+var i, r, s, a, o = n("442837"),
   l = n("570140");
 let u = {},
   d = {};
@@ -15,7 +15,7 @@ function _(e) {
   if ((null == n ? void 0 : n.id) == null || null == i) return !1;
   d[n.id] = i
 }
-class c extends(s = o.default.Store) {
+class c extends(a = o.default.Store) {
   getMemberCounts() {
     return u
   }
@@ -26,12 +26,12 @@ class c extends(s = o.default.Store) {
     return null != e ? d[e] : null
   }
 }
-a = "GuildMemberCountStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
-  value: a,
+s = "GuildMemberCountStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = a, t.default = new c(l.default, {
+}) : i[r] = s, t.default = new c(l.default, {
   CONNECTION_OPEN: function(e) {
     let {
       guilds: t

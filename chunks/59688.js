@@ -7,12 +7,12 @@ n.r(t), n.d(t, {
     return l
   },
   useGuildPeekCardType: function() {
-    return s
+    return a
   }
 });
 var i = n("818083"),
   r = n("126134");
-let a = (0, i.createExperiment)({
+let s = (0, i.createExperiment)({
   kind: "user",
   id: "2024-04_server_peek",
   label: "Change the guild tooltip",
@@ -48,10 +48,10 @@ let a = (0, i.createExperiment)({
   }]
 });
 
-function s() {
+function a() {
   let {
     cardType: e
-  } = a.useExperiment({
+  } = s.useExperiment({
     location: "useCanShowNewGuildTooltip"
   }, {
     autoTrackExposure: !1
@@ -62,7 +62,7 @@ function s() {
 function o() {
   let {
     showNewGuildTooltip: e
-  } = a.useExperiment({
+  } = s.useExperiment({
     location: "useCanShowNewGuildTooltip"
   }, {
     autoTrackExposure: !0
@@ -73,11 +73,11 @@ function o() {
 function l() {
   let {
     showNewGuildTooltipActivityEmptyState: e
-  } = a.useExperiment({
+  } = s.useExperiment({
     location: "useCanShowNewGuildTooltipActivityEmptyState"
   }, {
     autoTrackExposure: !0
   });
   return e
 }
-t.default = a
+t.default = s

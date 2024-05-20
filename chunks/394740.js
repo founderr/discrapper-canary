@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("780384"),
   l = n("481060"),
   u = n("2052"),
@@ -29,7 +29,7 @@ var i = n("735250"),
 function C(e) {
   var t;
   let {
-    onClose: a,
+    onClose: s,
     closePopout: C,
     sound: R,
     channel: g
@@ -65,15 +65,15 @@ function C(e) {
     }), (0, E.navigateToPremiumMarketingPage)(), C()
   }, [C]);
   return (0, i.jsxs)("div", {
-    className: s()(O.premiumPromo, p.container),
+    className: a()(O.premiumPromo, p.container),
     children: [(0, i.jsx)(l.Clickable, {
       className: O.premiumPromoClose,
-      onClick: a,
+      onClick: s,
       children: N.default.Messages.CLOSE
     }), (0, i.jsx)("img", {
       "aria-hidden": !0,
       alt: "",
-      className: s()(O.premiumPromoImage, O.premiumPromoImageSmaller, p.image),
+      className: a()(O.premiumPromoImage, O.premiumPromoImageSmaller, p.image),
       src: G
     }), (0, i.jsx)(l.Heading, {
       variant: "heading-lg/normal",
@@ -105,7 +105,7 @@ function C(e) {
           D(!0)
         },
         onSubscribeModalClose: e => {
-          D(!1), e && a()
+          D(!1), e && s()
         }
       })]
     })]

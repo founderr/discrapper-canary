@@ -3,12 +3,12 @@ var i;
 
 function r(e) {}
 
-function a(e, t) {}
+function s(e, t) {}
 n.r(t), n.d(t, {
   mark: function() {
     return r
   },
   measure: function() {
-    return a
+    return s
   }
 }), n.g.performance

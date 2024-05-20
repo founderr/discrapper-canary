@@ -70,7 +70,7 @@ class O extends l.PureComponent {
     })
   }
 }
-class A extends l.PureComponent {
+class p extends l.PureComponent {
   hasChangesToRender() {
     let {
       log: e
@@ -390,4 +390,4 @@ class A extends l.PureComponent {
     })
   }
 }
-t.default = A
+t.default = p

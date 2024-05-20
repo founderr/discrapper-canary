@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
 var i, r = n("392711"),
-  a = n.n(r),
-  s = n("442837"),
+  s = n.n(r),
+  a = n("442837"),
   o = n("433517"),
   l = n("570140"),
   u = n("981631");
@@ -16,7 +16,7 @@ function d(e, t, n) {
   }) : e[t] = n, e
 }
 let _ = {};
-class c extends(i = s.default.PersistedStore) {
+class c extends(i = a.default.PersistedStore) {
   initialize(e) {
     _ = null != e ? e : {}
   }
@@ -44,10 +44,10 @@ d(c, "displayName", "SelectivelySyncedUserSettingsStore"), d(c, "persistKey", "S
   let r = {};
   return !1 === n[u.UserSettingsSections.TEXT] && (r.text = {
     shouldSync: !1,
-    settings: a().pick(i, ["inlineAttachmentMedia", "inlineEmbedMedia", "renderEmbeds", "renderReactions", "animateEmoji", "animateStickers", "gifAutoPlay"])
+    settings: s().pick(i, ["inlineAttachmentMedia", "inlineEmbedMedia", "renderEmbeds", "renderReactions", "animateEmoji", "animateStickers", "gifAutoPlay"])
   }), !1 === n[u.UserSettingsSections.APPEARANCE] && (r.appearance = {
     shouldSync: !1,
-    settings: a().pick(i, ["theme", "clientThemeSettings", "developerMode"])
+    settings: s().pick(i, ["theme", "clientThemeSettings", "developerMode"])
   }), r
 }, e => {
   var t, n;

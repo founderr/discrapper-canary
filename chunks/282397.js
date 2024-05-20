@@ -1,7 +1,7 @@
 "use strict";
 let i, r;
 n.r(t), n("47120");
-var a, s, o, l, u = n("442837"),
+var s, a, o, l, u = n("442837"),
   d = n("570140"),
   _ = n("911969"),
   c = n("314897"),
@@ -24,7 +24,7 @@ function A(e) {
   let t = S[e];
   null != t && delete f[t], delete S[e]
 }
-class m extends(a = u.default.Store) {
+class m extends(s = u.default.Store) {
   getInteraction(e) {
     let t = f[e.id];
     return null != t ? T[t] : null
@@ -48,12 +48,12 @@ class m extends(a = u.default.Store) {
     return i
   }
 }
-l = "InteractionStore", (o = "displayName") in(s = m) ? Object.defineProperty(s, o, {
+l = "InteractionStore", (o = "displayName") in(a = m) ? Object.defineProperty(a, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = l, t.default = new m(d.default, {
+}) : a[o] = l, t.default = new m(d.default, {
   LOGOUT: function() {
     T = {}, f = {}, S = {}
   },
@@ -63,16 +63,16 @@ l = "InteractionStore", (o = "displayName") in(s = m) ? Object.defineProperty(s,
       messageId: n,
       data: i,
       onCreate: r,
-      onCancel: a,
-      onSuccess: s,
+      onCancel: s,
+      onSuccess: a,
       onFailure: o
     } = e;
     null != n && (f[n] = t, S[t] = n), T[t] = {
       state: I.InteractionState.QUEUED,
       data: i,
       onCreate: r,
-      onCancel: a,
-      onSuccess: s,
+      onCancel: s,
+      onSuccess: a,
       onFailure: o
     }
   },
@@ -101,10 +101,10 @@ l = "InteractionStore", (o = "displayName") in(s = m) ? Object.defineProperty(s,
       errorMessage: r
     } = e;
     if (null == n) return !1;
-    let a = T[n];
-    if (null == a) return !1;
-    null === (t = a.onFailure) || void 0 === t || t.call(a, i, r), a.data.interactionType === _.InteractionTypes.APPLICATION_COMMAND ? A(n) : T[n] = {
-      ...a,
+    let s = T[n];
+    if (null == s) return !1;
+    null === (t = s.onFailure) || void 0 === t || t.call(s, i, r), s.data.interactionType === _.InteractionTypes.APPLICATION_COMMAND ? A(n) : T[n] = {
+      ...s,
       state: I.InteractionState.FAILED,
       errorCode: i,
       errorMessage: r

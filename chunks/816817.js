@@ -28,7 +28,7 @@ t.default = function(e) {
     memberCount: x,
     presenceCount: L,
     className: O
-  } = e, A = (0, d.default)(), [p, M] = l.useState(!1);
+  } = e, p = (0, d.default)(), [A, M] = l.useState(!1);
   if (null == n || C) return (0, a.jsx)("div", {
     className: i()(O, S.card, S.cardPlaceholder, {
       [S.cardSmall]: h,
@@ -41,13 +41,13 @@ t.default = function(e) {
     id: n.id,
     splash: n.discoverySplash,
     size: 240 * (0, u.getDevicePixelRatio)()
-  }), G = (0, r.isThemeDark)(A) ? f : m, j = null !== (t = _.default.getGuildIconURL({
+  }), j = (0, r.isThemeDark)(p) ? f : m, G = null !== (t = _.default.getGuildIconURL({
     id: n.id,
     icon: n.icon,
     size: 40
   })) && void 0 !== t ? t : void 0, U = null != n.description ? n.description : R, P = null != x ? x : null == n ? void 0 : n.memberCount, b = null != L ? L : null == n ? void 0 : n.presenceCount, B = null;
-  if (null != j) B = (0, a.jsx)("img", {
-    src: j,
+  if (null != G) B = (0, a.jsx)("img", {
+    src: G,
     alt: "",
     className: S.avatar
   });
@@ -69,14 +69,14 @@ t.default = function(e) {
     className: i()(O, S.card, {
       [S.cardSmall]: h,
       [S.cardDisabled]: g,
-      [S.splashLoaded]: p
+      [S.splashLoaded]: A
     }),
     children: [(0, a.jsxs)("div", {
       className: S.cardHeader,
       children: [(0, a.jsx)("div", {
         className: S.splash,
         children: (0, a.jsx)("img", {
-          src: null != v ? v : G,
+          src: null != v ? v : j,
           alt: "",
           className: S.splashImage,
           onLoad: () => M(!0)

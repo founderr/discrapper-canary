@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i, r = n("735250"),
-  a = n("470079"),
-  s = n("120356"),
-  o = n.n(s),
+  s = n("470079"),
+  a = n("120356"),
+  o = n.n(a),
   l = n("477690"),
   u = n("257915"),
   d = n("624138"),
@@ -33,13 +33,13 @@ function S(e, t) {
   } = window;
   if (0 === e || 0 === t) return null;
   let r = t / e,
-    a = n,
-    s = Math.round(n * r);
-  return s < i && (s = i, a = Math.round(i * (r = e / t))), {
+    s = n,
+    a = Math.round(n * r);
+  return a < i && (a = i, s = Math.round(i * (r = e / t))), {
     naturalWidth: e,
     naturalHeight: t,
-    width: a,
-    height: s
+    width: s,
+    height: a
   }
 }
 
@@ -49,14 +49,14 @@ function h(e) {
     children: n
   } = e, [{
     width: i,
-    height: s
-  }, l] = a.useState({
+    height: a
+  }, l] = s.useState({
     width: 0,
     height: 0,
     naturalHeight: 0,
     naturalWidth: 0
   });
-  return a.useEffect(() => {
+  return s.useEffect(() => {
     function e() {
       l(e => {
         let {
@@ -81,7 +81,7 @@ function h(e) {
       },
       src: t,
       width: i,
-      height: s
+      height: a
     }), (0, r.jsx)("div", {
       className: o()(I.leftSplit, {
         [I.nonEmbeddedLeftSplit]: !0
@@ -90,7 +90,7 @@ function h(e) {
     })]
   })
 }
-class A extends(i = a.PureComponent) {
+class A extends(i = s.PureComponent) {
   componentWillUnmount() {
     window.removeEventListener("resize", this.handleResize)
   }
@@ -122,13 +122,13 @@ class A extends(i = a.PureComponent) {
       embedded: n
     } = this.props, {
       showWaveAnimation: i,
-      splashLoaded: a
+      splashLoaded: s
     } = this.state;
     return i ? (0, r.jsx)(c.default, {
       embedded: n,
       waveState: e,
       updateWaveState: t,
-      hideFallback: !a
+      hideFallback: !s
     }) : (0, r.jsx)("div", {
       className: I.mobileWave
     })
@@ -139,14 +139,14 @@ class A extends(i = a.PureComponent) {
       waveState: t,
       showLogo: n,
       logoClassName: i,
-      embedded: s
+      embedded: a
     } = this.props, {
       showWaveAnimation: l
     } = this.state;
-    return (0, r.jsxs)(a.Fragment, {
+    return (0, r.jsxs)(s.Fragment, {
       children: [this.renderWave(), (0, r.jsxs)("div", {
         className: o()(I.leftSplit, {
-          [I.nonEmbeddedLeftSplit]: s
+          [I.nonEmbeddedLeftSplit]: a
         }),
         children: [n ? (0, r.jsx)(_.default, {
           show: !l || t === E.WaveStates.ENTERED && t !== E.WaveStates.FILLING,

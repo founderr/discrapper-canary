@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return v
   },
   CurrencyAmountCell: function() {
-    return G
+    return j
   },
   SubscribersCell: function() {
     return b
@@ -32,66 +32,66 @@ var a, l, n = s("735250"),
   x = s("462087"),
   L = s("685201"),
   O = s("981631"),
-  A = s("198139"),
-  p = s("689938"),
+  p = s("198139"),
+  A = s("689938"),
   M = s("225278");
 (l = a || (a = {})).DROPDOWN = "dropdown", l.PERIOD = "period", l.SUBSCRIBERS = "subscribers", l.AMOUNT = "amount", l.STATUS = "status";
 let D = (e, t, s, a) => {
     let l = null != a ? u()(a).add(15, "days").toISOString() : void 0,
       i = (0, C.formatNextPaymentDate)(l, "MMM D");
     switch (e) {
-      case A.PaymentPayoutGroupStatuses.OPEN:
+      case p.PaymentPayoutGroupStatuses.OPEN:
         return (0, n.jsxs)(n.Fragment, {
-          children: [null != i ? p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({
+          children: [null != i ? A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({
             payoutDate: i
-          }) : p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING, (0, n.jsx)(x.default, {
+          }) : A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING, (0, n.jsx)(x.default, {
             className: M.statusScheduledIcon
           })]
         });
-      case A.PaymentPayoutGroupStatuses.CANCELED:
+      case p.PaymentPayoutGroupStatuses.CANCELED:
         return (0, n.jsxs)(n.Fragment, {
-          children: [p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED, (0, n.jsx)(S.default, {
+          children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED, (0, n.jsx)(S.default, {
             className: M.statusErrorIcon
           })]
         });
-      case A.PaymentPayoutGroupStatuses.PAYOUT_DEFERRED:
-        if ((null == s ? void 0 : s.includes(A.PaymentPayoutGroupDeferralReasons.PAYOUT_SEIZED)) === !0) return (0, n.jsxs)(n.Fragment, {
-          children: [p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED, (0, n.jsx)(S.default, {
+      case p.PaymentPayoutGroupStatuses.PAYOUT_DEFERRED:
+        if ((null == s ? void 0 : s.includes(p.PaymentPayoutGroupDeferralReasons.PAYOUT_SEIZED)) === !0) return (0, n.jsxs)(n.Fragment, {
+          children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED, (0, n.jsx)(S.default, {
             className: M.statusErrorIcon
           })]
         });
         return (0, n.jsxs)(n.Fragment, {
-          children: [p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_DEFERRED, (0, n.jsx)(L.default, {
+          children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_DEFERRED, (0, n.jsx)(L.default, {
             className: M.statusDeferredIcon
           })]
         })
     }
     switch (t) {
-      case A.PayoutStatuses.MANUAL:
-      case A.PayoutStatuses.OPEN:
-      case A.PayoutStatuses.PENDING:
-      case A.PayoutStatuses.PROCESSING:
-      case A.PayoutStatuses.SUBMITTED:
-      case A.PayoutStatuses.PENDING_FUNDS:
-      case A.PayoutStatuses.CANCELED:
-      case A.PayoutStatuses.ERROR:
+      case p.PayoutStatuses.MANUAL:
+      case p.PayoutStatuses.OPEN:
+      case p.PayoutStatuses.PENDING:
+      case p.PayoutStatuses.PROCESSING:
+      case p.PayoutStatuses.SUBMITTED:
+      case p.PayoutStatuses.PENDING_FUNDS:
+      case p.PayoutStatuses.CANCELED:
+      case p.PayoutStatuses.ERROR:
         return (0, n.jsxs)(n.Fragment, {
-          children: [null != i ? p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({
+          children: [null != i ? A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({
             payoutDate: i
-          }) : p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_SCHEDULED, (0, n.jsx)(x.default, {
+          }) : A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_SCHEDULED, (0, n.jsx)(x.default, {
             className: M.statusScheduledIcon
           })]
         });
-      case A.PayoutStatuses.PAID:
+      case p.PayoutStatuses.PAID:
         return (0, n.jsxs)(n.Fragment, {
-          children: [p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PAID, (0, n.jsx)(T.default, {
+          children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PAID, (0, n.jsx)(T.default, {
             className: M.statusPaidIcon
           })]
         });
-      case A.PayoutStatuses.DEFERRED:
-      case A.PayoutStatuses.DEFERRED_INTERNAL:
-      case A.PayoutStatuses.REJECTED:
-      case A.PayoutStatuses.RISK_REVIEW:
+      case p.PayoutStatuses.DEFERRED:
+      case p.PayoutStatuses.DEFERRED_INTERNAL:
+      case p.PayoutStatuses.REJECTED:
+      case p.PayoutStatuses.RISK_REVIEW:
         return (0, n.jsxs)(n.Fragment, {
           children: [R.default.getStatusErrorText(t), (0, n.jsx)(S.default, {
             className: M.statusErrorIcon
@@ -110,7 +110,7 @@ let D = (e, t, s, a) => {
       children: t
     })
   },
-  G = e => {
+  j = e => {
     let {
       children: t
     } = e;
@@ -119,7 +119,7 @@ let D = (e, t, s, a) => {
       children: (0, g.formatPrice)(null != t ? t : 0, O.CurrencyCodes.USD)
     })
   },
-  j = e => {
+  G = e => {
     let {
       children: t
     } = e;
@@ -141,7 +141,7 @@ let D = (e, t, s, a) => {
     var t;
     let {
       listingId: s
-    } = e, a = (0, c.useStateFromStores)([h.default], () => h.default.getSubscriptionListing(s)), l = null !== (t = null == a ? void 0 : a.name) && void 0 !== t ? t : "[".concat(p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_TIER_DELETED, "]");
+    } = e, a = (0, c.useStateFromStores)([h.default], () => h.default.getSubscriptionListing(s)), l = null !== (t = null == a ? void 0 : a.name) && void 0 !== t ? t : "[".concat(A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_TIER_DELETED, "]");
     return (0, n.jsx)(v, {
       children: l
     })
@@ -160,26 +160,26 @@ let D = (e, t, s, a) => {
   },
   B = () => {
     let e = (0, n.jsx)(E.Tooltip, {
-      text: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT_DISCLAIMER,
+      text: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT_DISCLAIMER,
       children: e => (0, n.jsx)(f.default, {
         className: M.amountDisclaimer,
         ...e
       })
     });
     return (0, n.jsxs)(n.Fragment, {
-      children: [p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT, " ", e]
+      children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT, " ", e]
     })
   },
   y = () => {
     let e = (0, n.jsx)(E.Tooltip, {
-      text: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_NEXT_PAYMENT_DISCLAIMER,
+      text: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_NEXT_PAYMENT_DISCLAIMER,
       children: e => (0, n.jsx)(f.default, {
         className: M.statusDisclaimer,
         ...e
       })
     });
     return (0, n.jsxs)(n.Fragment, {
-      children: [p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS, " ", e]
+      children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS, " ", e]
     })
   },
   F = [{
@@ -204,7 +204,7 @@ let D = (e, t, s, a) => {
   }, {
     key: "period",
     cellClassName: M.periodColumn,
-    renderHeader: () => p.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_PERIOD,
+    renderHeader: () => A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_PERIOD,
     render(e, t) {
       let {
         expandedRows: s
@@ -224,13 +224,13 @@ let D = (e, t, s, a) => {
     render(e, t) {
       let {
         expandedRows: s
-      } = t, a = [(0, n.jsx)(G, {
+      } = t, a = [(0, n.jsx)(j, {
         children: e.amount
       }, e.key)];
       if (s.has(e.key))
         for (let t in e.ppgs) {
           let s = e.ppgs[t];
-          a.push((0, n.jsx)(G, {
+          a.push((0, n.jsx)(j, {
             children: null == s ? void 0 : s.amount
           }, t))
         }
@@ -247,7 +247,7 @@ let D = (e, t, s, a) => {
         ppgDeferralReasons: a,
         periodEndDate: l
       } = (0, _.getStatusForPeriod)(e);
-      return (0, n.jsx)(j, {
+      return (0, n.jsx)(G, {
         children: D(t, s, a, l)
       })
     }

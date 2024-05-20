@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("981729"),
-  s = n("780384"),
+  s = n("981729"),
+  a = n("780384"),
   o = n("351773"),
   l = n("410030"),
   u = n("100527"),
@@ -41,7 +41,7 @@ t.default = r.memo(function(e) {
       channel: m,
       onClose: () => v(!1),
       isResending: N
-    }), (0, i.jsx)(a.Tooltip, {
+    }), (0, i.jsx)(s.Tooltip, {
       text: O,
       shouldShow: !L,
       "aria-label": null != C ? C : O,
@@ -74,7 +74,7 @@ t.default = r.memo(function(e) {
             hovered: R,
             isResending: N,
             shouldShowBirthdayUX: p,
-            isLightTheme: (0, s.isThemeLight)(P)
+            isLightTheme: (0, a.isThemeLight)(P)
           })
         })
       })

@@ -34,8 +34,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  a = n("481060"),
-  s = n("596454"),
+  s = n("481060"),
+  a = n("596454"),
   o = n("99690"),
   l = n("607070"),
   u = n("797610"),
@@ -59,11 +59,11 @@ function R(e) {
   let {
     emoji: t
   } = e;
-  return (0, i.jsx)(a.Tooltip, {
+  return (0, i.jsx)(s.Tooltip, {
     text: t.name,
     delay: 750,
     position: "top",
-    children: e => (0, i.jsx)(s.default, {
+    children: e => (0, i.jsx)(a.default, {
       src: t.src,
       emojiName: t.name,
       animated: !1,
@@ -76,11 +76,11 @@ function g(e) {
   let {
     emoji: t
   } = e;
-  return (0, i.jsx)(a.Tooltip, {
+  return (0, i.jsx)(s.Tooltip, {
     text: t.name,
     delay: 750,
     position: "top",
-    children: e => (0, i.jsx)(s.default, {
+    children: e => (0, i.jsx)(a.default, {
       emojiId: t.emojiId,
       emojiName: t.name,
       animated: t.animated,
@@ -94,7 +94,7 @@ function L(e) {
     text: t,
     channelId: n,
     guildId: r
-  } = e, a = I.default.getGuild(r), s = E.default.getChannel(n), o = (0, u.useClydeEnabled)(a, s) && "@Clyde" === t ? N.CLYDE_AI_MENTION_COLOR : null;
+  } = e, s = I.default.getGuild(r), a = E.default.getChannel(n), o = (0, u.useClydeEnabled)(s, a) && "@Clyde" === t ? N.CLYDE_AI_MENTION_COLOR : null;
   return (0, i.jsx)(S.default, {
     color: o,
     children: t
@@ -105,19 +105,19 @@ function v(e) {
   let {
     id: t,
     guildId: n,
-    channelId: s
-  } = e, l = (0, r.useStateFromStores)([f.default], () => f.default.getUser(t)), u = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), d = A.default.useName(n, s, l), _ = (0, i.jsx)(S.default, {
+    channelId: a
+  } = e, l = (0, r.useStateFromStores)([f.default], () => f.default.getUser(t)), u = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), d = A.default.useName(n, a, l), _ = (0, i.jsx)(S.default, {
     children: null == d ? "<@".concat(t, ">") : "@".concat(d)
   });
   if (null != l) {
     let e = u || l.isPomelo() ? null : "#".concat(l.discriminator);
-    return (0, i.jsx)(a.Tooltip, {
+    return (0, i.jsx)(s.Tooltip, {
       text: (0, i.jsxs)("div", {
         className: O.userTooltip,
         children: [(0, i.jsx)(o.default, {
           user: l,
           animate: !0,
-          size: a.AvatarSizes.SIZE_16,
+          size: s.AvatarSizes.SIZE_16,
           className: O.avatar
         }), m.default.getUserTag(l, {
           mode: "username",
@@ -132,7 +132,7 @@ function v(e) {
       "aria-label": m.default.getUserTag(l, {
         decoration: "never"
       }),
-      children: e => (0, i.jsx)(a.Clickable, {
+      children: e => (0, i.jsx)(s.Clickable, {
         tag: "span",
         ...e,
         children: _
@@ -146,34 +146,34 @@ function D(e) {
   let {
     id: t,
     guildId: n
-  } = e, s = (0, r.useStateFromStores)([I.default], () => null != n ? I.default.getRole(n, t) : void 0), o = (0, r.useStateFromStores)([l.default], () => l.default.roleStyle);
-  if (null == s) return (0, i.jsx)("span", {
+  } = e, a = (0, r.useStateFromStores)([I.default], () => null != n ? I.default.getRole(n, t) : void 0), o = (0, r.useStateFromStores)([l.default], () => l.default.roleStyle);
+  if (null == a) return (0, i.jsx)("span", {
     children: "@deleted-role"
   });
-  let u = null != s.color && 0 !== s.color;
+  let u = null != a.color && 0 !== a.color;
   return (0, i.jsxs)(S.default, {
-    color: "username" === o && u ? s.color : null,
-    children: ["dot" === o && (0, i.jsx)(a.RoleDot, {
-      color: s.colorString,
+    color: "username" === o && u ? a.color : null,
+    children: ["dot" === o && (0, i.jsx)(s.RoleDot, {
+      color: a.colorString,
       background: !1,
       tooltip: !1
-    }), "@", s.name]
+    }), "@", a.name]
   })
 }
 
 function M(e) {
   let {
     id: t
-  } = e, n = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(t)), a = p.default.Messages.UNKNOWN_CHANNEL.toLowerCase(), s = "text", o = !0;
+  } = e, n = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(t)), s = p.default.Messages.UNKNOWN_CHANNEL.toLowerCase(), a = "text", o = !0;
   if (null != n) {
     var l;
-    a = (0, d.canViewChannel)(n) ? n.name : p.default.Messages.NO_ACCESS, s = (0, d.canViewChannel)(n) ? null !== (l = (0, h.getMentionIconType)(n)) && void 0 !== l ? l : "text" : "locked", o = (0, _.isChannelTypeMentionable)(n.type)
+    s = (0, d.canViewChannel)(n) ? n.name : p.default.Messages.NO_ACCESS, a = (0, d.canViewChannel)(n) ? null !== (l = (0, h.getMentionIconType)(n)) && void 0 !== l ? l : "text" : "locked", o = (0, _.isChannelTypeMentionable)(n.type)
   }
   return o ? (0, i.jsx)(S.default, {
-    iconType: s,
-    children: a
+    iconType: a,
+    children: s
   }) : (0, i.jsx)("span", {
-    children: "#" + a
+    children: "#" + s
   })
 }
 
@@ -181,9 +181,9 @@ function y(e) {
   var t;
   let {
     id: n
-  } = e, a = (0, r.useStateFromStores)([c.default], () => c.default.getSoundById(n));
+  } = e, s = (0, r.useStateFromStores)([c.default], () => c.default.getSoundById(n));
   return (0, i.jsx)(S.default, {
-    children: null !== (t = null == a ? void 0 : a.name) && void 0 !== t ? t : "Sound"
+    children: null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : "Sound"
   })
 }
 

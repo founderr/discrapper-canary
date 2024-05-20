@@ -1,7 +1,7 @@
 "use strict";
 let i;
 n.r(t);
-var r, a, s, o, l = n("442837"),
+var r, s, a, o, l = n("442837"),
   u = n("570140"),
   d = n("594190"),
   _ = n("77498");
@@ -16,12 +16,12 @@ class c extends(o = l.default.Store) {
     return __OVERLAY__ ? i : null
   }
 }
-s = "OverlayRunningGameStore", (a = "displayName") in(r = c) ? Object.defineProperty(r, a, {
-  value: s,
+a = "OverlayRunningGameStore", (s = "displayName") in(r = c) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new c(u.default, {
+}) : r[s] = a, t.default = new c(u.default, {
   OVERLAY_INITIALIZE: function(e) {
     i = e.currentGame
   },

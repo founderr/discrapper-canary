@@ -29,7 +29,7 @@ var a = s("735250"),
   L = s("318745"),
   O = s("585512");
 
-function A(e) {
+function p(e) {
   let {
     guild: t,
     role: s,
@@ -74,7 +74,7 @@ function A(e) {
   })
 }
 
-function p(e) {
+function A(e) {
   let {
     guild: t,
     role: s,
@@ -101,7 +101,7 @@ function p(e) {
   }
   return (0, a.jsxs)("div", {
     className: L.permissionsWrapper,
-    children: [(0, a.jsx)(A, {
+    children: [(0, a.jsx)(p, {
       guild: t,
       role: s,
       locked: n
@@ -137,7 +137,7 @@ function M(e) {
     headerRef: f
   } = (0, N.default)(0), {
     scrolledToTop: m,
-    handleScroll: A
+    handleScroll: p
   } = (0, g.useScrolledToTop)(), M = l.useRef(!1);
   return l.useEffect(() => {
     !M.current && "" !== u.trimStart() && (I.default.track(R.AnalyticEvents.SEARCH_STARTED, {
@@ -148,7 +148,7 @@ function M(e) {
     style: {
       scrollPaddingTop: S
     },
-    onScroll: A,
+    onScroll: p,
     children: (0, a.jsxs)("div", {
       className: O.contentWidth,
       children: [(0, a.jsxs)("div", {
@@ -177,7 +177,7 @@ function M(e) {
             "aria-label": x.default.Messages.ROLE_PERMISSIONS_SEARCH_PLACEHOLDER
           })
         })]
-      }), (0, a.jsx)(p, {
+      }), (0, a.jsx)(A, {
         guild: t,
         role: s,
         specs: E,

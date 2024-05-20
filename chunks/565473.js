@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   coercePlatformTypeToConsoleType: function() {
-    return a
+    return s
   }
 });
 var i = n("927923"),
   r = n("981631");
 
-function a(e) {
+function s(e) {
   switch (e) {
     case r.PlatformTypes.XBOX:
       return i.GameConsoleTypes.XBOX;

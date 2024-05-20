@@ -19,8 +19,8 @@ var l = n("735250"),
   f = n("442837"),
   h = n("481060"),
   m = n("493683"),
-  C = n("239091"),
-  p = n("420660"),
+  p = n("239091"),
+  C = n("420660"),
   g = n("702321"),
   E = n("201895"),
   _ = n("43267"),
@@ -90,8 +90,8 @@ class J extends a.Component {
       locationState: d,
       onClick: f,
       className: m,
-      role: C,
-      "aria-posinset": p,
+      role: p,
+      "aria-posinset": C,
       "aria-setsize": g,
       ...E
     } = this.props;
@@ -100,12 +100,12 @@ class J extends a.Component {
         [K.fullWidth]: c.isMobile
       }, m),
       onClick: f,
-      role: C,
+      role: p,
       focusProps: {
         within: !0,
         ...Z
       },
-      "aria-posinset": p,
+      "aria-posinset": C,
       "aria-setsize": g,
       children: (0, l.jsx)(h.Interactive, {
         as: "div",
@@ -173,7 +173,7 @@ function q(e) {
       null === (t = J.current) || void 0 === t || t.click()
     }
   }, ef = e => {
-    t.isMultiUserDM() ? (0, C.openContextMenuLazy)(e, async () => {
+    t.isMultiUserDM() ? (0, p.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("25421")]).then(n.bind(n, "354741"));
@@ -184,7 +184,7 @@ function q(e) {
       })
     }, {
       noBlurEvent: !0
-    }) : (0, C.openContextMenuLazy)(e, async () => {
+    }) : (0, p.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("36441"), n.e("56826")]).then(n.bind(n, "131404"));
@@ -235,7 +235,7 @@ function q(e) {
       hideTooltip: !0,
       user: c
     }) : null
-  }, eC = () => {
+  }, ep = () => {
     let e = h.AvatarSizes.SIZE_32;
     if (t.isMultiUserDM()) return t.recipients.length >= 2 && s && null == t.icon ? (0, l.jsx)(L.default, {
       "aria-hidden": !0,
@@ -254,7 +254,7 @@ function q(e) {
     });
     o()(null != c, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
     let n = null;
-    return !c.isSystemUser() && (n = (0, p.default)(A) ? Y.StatusTypes.STREAMING : O), (0, l.jsx)(z, {
+    return !c.isSystemUser() && (n = (0, C.default)(A) ? Y.StatusTypes.STREAMING : O), (0, l.jsx)(z, {
       ...et,
       size: h.AvatarSizes.SIZE_32,
       src: $,
@@ -266,7 +266,7 @@ function q(e) {
       "aria-label": c.username,
       statusTooltip: !0
     })
-  }, ep = t.isMultiUserDM(), eg = t.isSystemDM(), eE = (0, v.systemDMRedesignEnabled)(), e_ = !ep && !eg && t.type === Y.ChannelTypes.DM, eS = null == c ? void 0 : c.clan, eI = (0, I.getClanBadgeUrlFromClan)(eS), eN = e_ && null != eS ? (0, l.jsxs)(l.Fragment, {
+  }, eC = t.isMultiUserDM(), eg = t.isSystemDM(), eE = (0, v.systemDMRedesignEnabled)(), e_ = !eC && !eg && t.type === Y.ChannelTypes.DM, eS = null == c ? void 0 : c.clan, eI = (0, I.getClanBadgeUrlFromClan)(eS), eN = e_ && null != eS ? (0, l.jsxs)(l.Fragment, {
     children: [ea, (0, l.jsx)(N.BaseClanTagChiplet, {
       clanTag: eS.tag,
       clanBadge: eI,
@@ -314,7 +314,7 @@ function q(e) {
             }),
             ...a,
             children: (0, l.jsx)(G.default, {
-              avatar: eC(),
+              avatar: ep(),
               selected: r,
               highlighted: el,
               muted: null != en && en,
@@ -330,8 +330,8 @@ function q(e) {
               }) : null
             })
           }), es ? (0, l.jsx)(Q, {}) : null, (0, l.jsx)(X, {
-            "aria-label": ep ? W.default.Messages.LEAVE_GROUP_DM : W.default.Messages.CLOSE_DM,
-            onClick: ep ? eh : eo,
+            "aria-label": eC ? W.default.Messages.LEAVE_GROUP_DM : W.default.Messages.CLOSE_DM,
+            onClick: eC ? eh : eo,
             onMouseDown: ed
           })]
         })

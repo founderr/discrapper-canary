@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   trustProtocol: function() {
-    return a
+    return s
   }
 });
 var i = n("570140");
@@ -16,7 +16,7 @@ function r(e) {
   })
 }
 
-function a(e) {
+function s(e) {
   i.default.dispatch({
     type: "MASKED_LINK_ADD_TRUSTED_PROTOCOL",
     url: e

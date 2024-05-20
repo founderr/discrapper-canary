@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("317381"),
   h = n("682662"),
   m = n("674552"),
-  C = n("593364"),
-  p = n("905423"),
+  p = n("593364"),
+  C = n("905423"),
   g = n("199902"),
   E = n("592125"),
   _ = n("944486"),
@@ -58,7 +58,7 @@ function j() {
     })),
     w = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(y.FAVORITES)),
     B = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(w)),
-    F = (0, p.default)(e => e.guildId) === y.FAVORITES,
+    F = (0, C.default)(e => e.guildId) === y.FAVORITES,
     {
       badge: H,
       unread: V
@@ -84,17 +84,17 @@ function j() {
         d = !1,
         c = !1,
         h = !1,
-        C = !1;
-      return n ? (d = !s, c = s, h = l, C = r) : (h = a, C = u), (0, m.renderMediaBadge)({
+        p = !1;
+      return n ? (d = !s, c = s, h = l, p = r) : (h = a, p = u), (0, m.renderMediaBadge)({
         audio: d,
         video: c,
         screenshare: h,
         liveStage: !1,
         isCurrentUserConnected: n,
-        activity: C
+        activity: p
       })
     }(U),
-    Y = H > 0 ? (0, C.renderMentionBadge)(H) : null,
+    Y = H > 0 ? (0, p.renderMentionBadge)(H) : null,
     W = a.useCallback(() => {
       s()
     }, [s]);

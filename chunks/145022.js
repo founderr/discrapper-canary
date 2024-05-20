@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("392711"),
   r = n.n(i),
-  a = n("314897"),
-  s = n("908442"),
+  s = n("314897"),
+  a = n("908442"),
   o = n("981631"),
   l = n("689938");
 
@@ -28,7 +28,7 @@ function u(e, t, n) {
     reason: l.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_TARGETS.format({
       requestedTargets: E.map(e => {
         var t;
-        return null !== (t = s.BUILD_OVERRIDE_TARGET_NAMES[e]) && void 0 !== t ? t : "unknown"
+        return null !== (t = a.BUILD_OVERRIDE_TARGET_NAMES[e]) && void 0 !== t ? t : "unknown"
       }).join(", ")
     })
   };
@@ -51,7 +51,7 @@ function u(e, t, n) {
   return null != I && I < Date.now() ? {
     valid: !1,
     reason: l.default.Messages.BUILD_OVERRIDE_EXPIRED
-  } : d.length > 0 && !d.includes(a.default.getId()) ? {
+  } : d.length > 0 && !d.includes(s.default.getId()) ? {
     valid: !1,
     reason: l.default.Messages.BUILD_OVERRIDE_INVALID_USER
   } : {

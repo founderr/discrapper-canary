@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   }
 });
 var i = n("311850");
@@ -14,21 +14,21 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class s {
   static fromServer(e) {
     let {
       prices: t,
       type: n,
       premium_type: r,
-      name: s,
+      name: a,
       sku_id: o,
       summary: l
     } = e;
-    return new a({
+    return new s({
       prices: (0, i.getPricesFromServer)(t),
       type: n,
       premiumType: r,
-      name: s,
+      name: a,
       skuId: o,
       summary: l
     })

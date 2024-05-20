@@ -2,9 +2,9 @@
 n.r(t), n("653041");
 var i = n("981631");
 let r = [],
-  a = !1;
+  s = !1;
 
-function s() {
+function a() {
   let e = window.navigator.connection;
   return null == e ? {
     type: i.NetworkConnectionTypes.UNKNOWN,
@@ -16,7 +16,7 @@ function s() {
 }
 
 function o() {
-  let e = s();
+  let e = a();
   r.forEach(t => t(e))
 }
 t.default = {
@@ -36,21 +36,21 @@ t.default = {
     var t;
     t = e, r.push(t),
       function() {
-        if (!0 === a) return;
+        if (!0 === s) return;
         let e = window.navigator.connection;
-        null != e && (a = !0, e.addEventListener("change", o))
+        null != e && (s = !0, e.addEventListener("change", o))
       }()
   },
   removeChangeCallback(e) {
     ! function(e) {
       let t = r.indexOf(e); - 1 !== t && (r.splice(t, 1), ! function() {
-        if (!1 === a) return;
+        if (!1 === s) return;
         let e = window.navigator.connection;
-        null != e && 0 === r.length && null != e && (e.removeEventListener("change", o), a = !1)
+        null != e && 0 === r.length && null != e && (e.removeEventListener("change", o), s = !1)
       }())
     }(e)
   },
-  getNetworkInformation: () => Promise.resolve(s()),
+  getNetworkInformation: () => Promise.resolve(a()),
   isOnline() {
     let e = navigator.onLine;
     return void 0 === e || e

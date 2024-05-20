@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 });
 var i = n("859802"),
   r = n("281956"),
-  a = n("271383"),
-  s = n("430824"),
+  s = n("271383"),
+  a = n("430824"),
   o = n("607744"),
   l = n("594174"),
   u = n("482500"),
@@ -115,8 +115,8 @@ function q(e, t) {
       textFocused: $ = !1
     } = n;
   if (null == e) return null;
-  null == t && (t = s.default.getGuild(e.getGuildId()));
-  let ee = (0, r.shouldShowMembershipVerificationGate)(null == t ? void 0 : t.id, [s.default, o.default, l.default, a.default]),
+  null == t && (t = a.default.getGuild(e.getGuildId()));
+  let ee = (0, r.shouldShowMembershipVerificationGate)(null == t ? void 0 : t.id, [a.default, o.default, l.default, s.default]),
     et = null != t && (0, i.canSeeGuildHome)(null == t ? void 0 : t.id);
   if ((null == e ? void 0 : e.id) === (null == t ? void 0 : t.rulesChannelId)) return f.default;
   switch (e.type) {

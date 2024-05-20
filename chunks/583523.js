@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("570140"),
   r = n("147913"),
-  a = n("314897"),
-  s = n("967368"),
+  s = n("314897"),
+  a = n("967368"),
   o = n("592125"),
   l = n("944486"),
   u = n("631768"),
@@ -12,7 +12,7 @@ var i = n("570140"),
 function _() {
   ! function() {
     let e = l.default.getVoiceChannelId(),
-      t = s.default.bitrate;
+      t = a.default.bitrate;
     if (null == e) return;
     let n = o.default.getChannel(e);
     if (null != n) t !== n.bitrate && i.default.dispatch({
@@ -26,10 +26,10 @@ function _() {
     if (null == t) return;
     let r = o.default.getChannel(t);
     if (null == r) return;
-    let a = null !== (e = r.videoQualityMode) && void 0 !== e ? e : d.VideoQualityMode.AUTO;
-    n !== a && i.default.dispatch({
+    let s = null !== (e = r.videoQualityMode) && void 0 !== e ? e : d.VideoQualityMode.AUTO;
+    n !== s && i.default.dispatch({
       type: "SET_CHANNEL_VIDEO_QUALITY_MODE",
-      mode: a
+      mode: s
     })
   }()
 }
@@ -46,7 +46,7 @@ function E(e) {
     voiceStates: t
   } = e;
   t.forEach(e => {
-    a.default.getSessionId() === e.sessionId && _()
+    s.default.getSessionId() === e.sessionId && _()
   })
 }
 class I extends r.default {

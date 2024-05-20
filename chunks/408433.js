@@ -18,8 +18,8 @@ n.r(t), n.d(t, {
 }), n("789020"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("653041");
 var i = n("392711"),
   r = n.n(i),
-  a = n("913527"),
-  s = n.n(a),
+  s = n("913527"),
+  a = n.n(s),
   o = n("866442"),
   l = n("709054"),
   u = n("981631"),
@@ -44,16 +44,16 @@ function S(e) {
     proxy_url: n,
     width: i,
     height: r,
-    placeholder: a,
-    placeholder_version: s
+    placeholder: s,
+    placeholder_version: a
   } = e;
   return {
     url: t,
     proxyURL: n,
     width: i,
     height: r,
-    placeholder: a,
-    placeholderVersion: s
+    placeholder: s,
+    placeholderVersion: a
   }
 }
 
@@ -80,7 +80,7 @@ function h(e, t, n) {
     }), null != n.provider && null != n.provider.name && (i.provider = {
       name: n.provider.name,
       url: n.provider.url
-    }), null != n.timestamp && (i.timestamp = s()(new Date(n.timestamp))), null != n.color && (i.color = (0, o.int2hsl)(n.color, !0)), null != n.thumbnail && f(n.thumbnail)) switch (i.type) {
+    }), null != n.timestamp && (i.timestamp = a()(new Date(n.timestamp))), null != n.color && (i.color = (0, o.int2hsl)(n.color, !0)), null != n.thumbnail && f(n.thumbnail)) switch (i.type) {
     case u.MessageEmbedTypes.ARTICLE:
     case u.MessageEmbedTypes.IMAGE:
       i.image = S(n.thumbnail);
@@ -104,8 +104,8 @@ function h(e, t, n) {
       let i = null != n.proxy_url || /^https:/i.test(n.url);
       return null != e && 1492472454139 > l.default.extractTimestamp(e) && (i = i && null != t && E.test(t.name)), i
     }(t, n.provider, n.video) && (i.video = S(n.video))), d.EMBED_TYPES_WITH_PARSEABLE_FIELDS.has(i.type)) {
-    var a;
-    let e = null !== (a = n.fields) && void 0 !== a ? a : [];
+    var s;
+    let e = null !== (s = n.fields) && void 0 !== s ? s : [];
     i.fields = e.map(e => {
       let {
         name: t,
@@ -145,9 +145,9 @@ function m(e) {
     video: n,
     type: i,
     author: r,
-    rawTitle: a
+    rawTitle: s
   } = e;
-  return (null != t || null != n) && (i === u.MessageEmbedTypes.GIFV || i !== u.MessageEmbedTypes.RICH && null == r && null == a)
+  return (null != t || null != n) && (i === u.MessageEmbedTypes.GIFV || i !== u.MessageEmbedTypes.RICH && null == r && null == s)
 }
 
 function N(e) {

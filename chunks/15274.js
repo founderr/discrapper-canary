@@ -13,15 +13,15 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("952265"),
-  a = n("749210"),
-  s = n("981631"),
+  s = n("749210"),
+  a = n("981631"),
   o = n("602091");
 
 function l(e) {
   let {
     eventId: t,
-    parentGuildId: a,
-    recurrenceId: s
+    parentGuildId: s,
+    recurrenceId: a
   } = e;
   (0, r.openModalLazy)(async () => {
     let {
@@ -29,8 +29,8 @@ function l(e) {
     } = await Promise.all([n.e("49237"), n.e("99387"), n.e("11250"), n.e("95393"), n.e("14262"), n.e("22347"), n.e("92816")]).then(n.bind(n, "697849"));
     return n => (0, i.jsx)(e, {
       guildScheduledEventId: t,
-      parentGuildId: a,
-      initialRecurrenceId: s,
+      parentGuildId: s,
+      initialRecurrenceId: a,
       ...n
     })
   })
@@ -39,7 +39,7 @@ async function u(e, t) {
   let {
     guild_id: n
   } = e;
-  await a.default.transitionToGuildSync(n, t), l({
+  await s.default.transitionToGuildSync(n, t), l({
     eventId: e.id,
     event: e
   })
@@ -55,6 +55,6 @@ function d(e, t) {
       channel: e
     })
   }, {
-    contextKey: t === s.AppContext.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT
+    contextKey: t === a.AppContext.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT
   })
 }

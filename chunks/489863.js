@@ -27,12 +27,12 @@ n.r(t), n.d(t, {
 });
 var i = n("860911"),
   r = n("544891"),
-  a = n("893776"),
-  s = n("981631");
+  s = n("893776"),
+  a = n("981631");
 
 function o(e) {
   return r.HTTP.post({
-    url: s.Endpoints.OAUTH2_WHITELIST_ACCEPT,
+    url: a.Endpoints.OAUTH2_WHITELIST_ACCEPT,
     query: {
       token: e
     },
@@ -44,7 +44,7 @@ async function l(e) {
     authorize: t,
     clientId: n,
     scopes: i,
-    responseType: a,
+    responseType: s,
     redirectUri: o,
     codeChallenge: l,
     codeChallengeMethod: u,
@@ -56,10 +56,10 @@ async function l(e) {
     nonce: T
   } = e;
   return (await r.HTTP.post({
-    url: s.Endpoints.OAUTH2_AUTHORIZE,
+    url: a.Endpoints.OAUTH2_AUTHORIZE,
     query: {
       client_id: n,
-      response_type: a,
+      response_type: s,
       redirect_uri: o,
       code_challenge: l,
       code_challenge_method: u,
@@ -83,7 +83,7 @@ async function u(e) {
     clientId: t,
     scopes: n,
     responseType: i,
-    redirectUri: a,
+    redirectUri: s,
     codeChallenge: o,
     codeChallengeMethod: l,
     state: u,
@@ -91,11 +91,11 @@ async function u(e) {
     nonce: _
   } = e;
   return (await r.HTTP.get({
-    url: s.Endpoints.OAUTH2_AUTHORIZE,
+    url: a.Endpoints.OAUTH2_AUTHORIZE,
     query: {
       client_id: t,
       response_type: i,
-      redirect_uri: a,
+      redirect_uri: s,
       code_challenge: o,
       code_challenge_method: l,
       scope: n.join(" "),
@@ -111,7 +111,7 @@ async function d(e) {
   let {
     body: t
   } = await r.HTTP.get({
-    url: s.Endpoints.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
+    url: a.Endpoints.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
     query: {
       guild_id: e
     },
@@ -121,11 +121,11 @@ async function d(e) {
 }
 
 function _(e) {
-  a.default.logout((0, i.getLoginPath)(e.pathname + e.search, !1))
+  s.default.logout((0, i.getLoginPath)(e.pathname + e.search, !1))
 }
 async function c(e) {
   return await r.HTTP.post({
-    url: s.Endpoints.OAUTH2_DEVICE_VERIFY,
+    url: a.Endpoints.OAUTH2_DEVICE_VERIFY,
     body: {
       user_code: e
     }
@@ -133,7 +133,7 @@ async function c(e) {
 }
 async function E(e, t) {
   return await r.HTTP.post({
-    url: s.Endpoints.OAUTH2_DEVICE_FINISH,
+    url: a.Endpoints.OAUTH2_DEVICE_FINISH,
     body: {
       user_code: e,
       result: t
@@ -142,7 +142,7 @@ async function E(e, t) {
 }
 async function I(e, t, n) {
   return await r.HTTP.post({
-    url: s.Endpoints.OAUTH2_DEVICE_FINISH,
+    url: a.Endpoints.OAUTH2_DEVICE_FINISH,
     body: {
       user_code: e,
       result: "two_way_link_error",

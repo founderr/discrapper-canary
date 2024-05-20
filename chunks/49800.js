@@ -8,9 +8,9 @@ n.r(t), n.d(t, {
   }
 });
 var i, r = n("735250"),
-  a = n("470079"),
-  s = n("120356"),
-  o = n.n(s),
+  s = n("470079"),
+  a = n("120356"),
+  o = n.n(a),
   l = n("922423");
 
 function u(e, t, n) {
@@ -29,19 +29,19 @@ let d = {
   BRAND: l.cardBrand,
   CUSTOM: l.card
 };
-class _ extends(i = a.PureComponent) {
+class _ extends(i = s.PureComponent) {
   render() {
     let e;
     let {
       children: t,
       editable: n,
       type: i,
-      className: a,
-      outline: s,
+      className: s,
+      outline: a,
       ...u
     } = this.props;
-    return s ? e = l.outline : i === d.PRIMARY && n && (e = l.editable), (0, r.jsx)("div", {
-      className: o()(a, i, e),
+    return a ? e = l.outline : i === d.PRIMARY && n && (e = l.editable), (0, r.jsx)("div", {
+      className: o()(s, i, e),
       ...u,
       children: t
     })

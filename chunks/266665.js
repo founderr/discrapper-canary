@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("203377"),
   L = s("981631"),
   O = s("689938"),
-  A = s("272197");
-let p = "DRAGGABLE_ROLE";
+  p = s("272197");
+let A = "DRAGGABLE_ROLE";
 
 function M(e) {
   var t, l;
@@ -50,7 +50,7 @@ function M(e) {
     M = null == x && !O,
     D = (null === (t = E.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
     [, v] = (0, r.useDrag)({
-      type: p,
+      type: A,
       item: () => (N(E.id), {
         id: E.id,
         position: m
@@ -66,9 +66,9 @@ function M(e) {
       }
     }),
     [{
-      dragSourcePosition: G
-    }, j] = (0, r.useDrop)({
-      accept: p,
+      dragSourcePosition: j
+    }, G] = (0, r.useDrop)({
+      accept: A,
       canDrop: () => M,
       collect: e => {
         let t = e.getItem();
@@ -86,7 +86,7 @@ function M(e) {
   return n = D ? (0, a.jsx)(T.default, {
     size: 12,
     color: E.colorString,
-    className: A.verifiedRoleIcon
+    className: p.verifiedRoleIcon
   }) : "dot" === R ? (0, a.jsx)(u.RoleDot, {
     color: U,
     background: !1,
@@ -94,9 +94,9 @@ function M(e) {
   }) : (0, a.jsx)(u.RoleCircle, {
     color: U
   }), (0, a.jsxs)(u.TabBar.Item, {
-    className: i()(A.row, {
-      [A.dragBefore]: null !== G && m < G,
-      [A.dragAfter]: null !== G && m > G
+    className: i()(p.row, {
+      [p.dragBefore]: null !== j && m < j,
+      [p.dragAfter]: null !== j && m > j
     }),
     id: E.id,
     selectedItem: S,
@@ -117,10 +117,10 @@ function M(e) {
     "aria-label": E.name,
     clickableRef: e => {
       var t;
-      return v(j(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null))
+      return v(G(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null))
     },
     children: [n, null != x ? (0, a.jsx)(h.default, {
-      className: A.lock,
+      className: p.lock,
       tooltipText: x
     }) : null, (0, a.jsx)(u.Text, {
       variant: "text-sm/medium",
@@ -139,15 +139,15 @@ function D(e) {
     setSelectedSection: r
   } = e, o = (0, d.useStateFromStores)([g.default], () => g.default.roles), c = (0, d.useStateFromStores)([S.default], () => S.default.getHighestRole(t)), I = (0, d.useStateFromStores)([_.default], () => _.default.roleStyle), [T, h] = l.useState(o.length), {
     scrolledToTop: L,
-    handleScroll: p
+    handleScroll: A
   } = (0, R.useScrolledToTop)(), {
     handleDragStart: D,
     handleDragReset: v,
-    handleDragComplete: G
-  } = (0, C.default)(o), j = l.useRef(null), U = l.useCallback(e => {
+    handleDragComplete: j
+  } = (0, C.default)(o), G = l.useRef(null), U = l.useCallback(e => {
     var t, s;
     let a = o.findIndex(t => t.id === e);
-    null === (s = j.current) || void 0 === s || null === (t = s.getScrollerNode()) || void 0 === t || t.scrollTo({
+    null === (s = G.current) || void 0 === s || null === (t = s.getScrollerNode()) || void 0 === t || t.scrollTo({
       top: Math.max((a - 2) * 34, 0)
     })
   }, [o]);
@@ -160,20 +160,20 @@ function D(e) {
     E.default.createRole(t.id), r(x.GuildSettingsRoleEditSections.DISPLAY)
   };
   return (0, a.jsx)(f.default.Sidebar, {
-    className: A.sidebar,
+    className: p.sidebar,
     children: (0, a.jsxs)("div", {
-      className: A.container,
+      className: p.container,
       children: [(0, a.jsxs)("div", {
-        className: i()(A.titleContainer, {
-          [A.titleElevated]: !L
+        className: i()(p.titleContainer, {
+          [p.titleElevated]: !L
         }),
         children: [(0, a.jsxs)(u.Clickable, {
-          className: A.title,
+          className: p.title,
           onClick: () => n(null),
           children: [(0, a.jsx)(m.default, {
             direction: m.default.Directions.LEFT
           }), (0, a.jsx)(u.Text, {
-            className: A.titleText,
+            className: p.titleText,
             variant: "text-md/semibold",
             color: "none",
             children: O.default.Messages.BACK
@@ -182,12 +182,12 @@ function D(e) {
           position: "top",
           "aria-label": O.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE,
           text: (0, a.jsx)(u.Text, {
-            className: A.tooltip,
+            className: p.tooltip,
             variant: "text-sm/normal",
             children: O.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE
           }),
           children: e => (0, a.jsx)(u.Clickable, {
-            className: A.addRole,
+            className: p.addRole,
             ...e,
             onClick: P,
             children: (0, a.jsx)(N.default, {
@@ -197,9 +197,9 @@ function D(e) {
           })
         })]
       }), (0, a.jsx)(u.AdvancedScroller, {
-        className: A.list,
-        ref: j,
-        onScroll: p,
+        className: p.list,
+        ref: G,
+        onScroll: A,
         children: (0, a.jsx)(u.TabBar, {
           selectedItem: s,
           onItemSelect: e => n(e),
@@ -213,7 +213,7 @@ function D(e) {
             currentPosition: l,
             onDragStart: D,
             onDragReset: v,
-            onDragComplete: G,
+            onDragComplete: j,
             roleStyle: I
           }, e.id))
         })

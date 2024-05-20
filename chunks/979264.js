@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("442837"),
   l = n("481060"),
   u = n("715903"),
@@ -35,7 +35,7 @@ let A = r.memo(function(e) {
     return null == t ? null : (0, i.jsx)("img", {
       src: t,
       alt: S.default.Messages.CLAN_BADGE,
-      className: s()(h.badge, n),
+      className: a()(h.badge, n),
       width: r,
       height: r
     })
@@ -45,7 +45,7 @@ let A = r.memo(function(e) {
       clanTag: t,
       clanBadge: n,
       className: r,
-      textClassName: a,
+      textClassName: s,
       badgeClassName: o,
       onClick: u,
       onMouseEnter: d,
@@ -59,12 +59,12 @@ let A = r.memo(function(e) {
       tabIndex: null == u ? -1 : void 0,
       onClick: u,
       onMouseEnter: d,
-      className: s()(h.chipletContainerInner, T && h.chipletContainerInline, null != u && h.clickable, r),
+      className: a()(h.chipletContainerInner, T && h.chipletContainerInline, null != u && h.clickable, r),
       children: (0, i.jsxs)(l.Text, {
         variant: _,
         color: c,
         tag: "span",
-        className: s()(h.text, a),
+        className: a()(h.text, s),
         children: [null != n && "string" == typeof n ? (0, i.jsx)(A, {
           src: n,
           size: E,
@@ -76,11 +76,11 @@ let A = r.memo(function(e) {
   N = r.memo(function(e) {
     var t, n;
     let {
-      clan: a,
-      userId: s,
+      clan: s,
+      userId: a,
       children: u,
       profileViewedAnalytics: d
-    } = e, E = (0, o.useStateFromStores)([_.default], () => _.default.getUser(s), [s]), I = null !== (t = null == E ? void 0 : E.clan) && void 0 !== t ? t : a, [f, S] = (0, c.useFetchClanInfo)(null !== (n = null == I ? void 0 : I.identityGuildId) && void 0 !== n ? n : null), A = r.useCallback(() => {
+    } = e, E = (0, o.useStateFromStores)([_.default], () => _.default.getUser(a), [a]), I = null !== (t = null == E ? void 0 : E.clan) && void 0 !== t ? t : s, [f, S] = (0, c.useFetchClanInfo)(null !== (n = null == I ? void 0 : I.identityGuildId) && void 0 !== n ? n : null), A = r.useCallback(() => {
       S()
     }, [S]);
     return (0, i.jsx)(l.Popout, {
@@ -124,16 +124,16 @@ function p(e, t) {
     }, [t, e]),
     {
       tag: r,
-      guildId: a
+      guildId: s
     } = (0, E.getUserClanData)(null == n ? void 0 : n.clan);
-  return !!(0, I.default)("clan_tag_chiplet") && null != a && null != r && !i && !0
+  return !!(0, I.default)("clan_tag_chiplet") && null != s && null != r && !i && !0
 }
 t.default = r.memo(function(e) {
   var t;
   let {
     clan: n,
     userId: r,
-    contextGuildId: a,
+    contextGuildId: s,
     className: l,
     textVariant: u,
     textColor: d,
@@ -146,12 +146,12 @@ t.default = r.memo(function(e) {
     badge: C,
     guildId: R
   } = (0, E.getUserClanData)(A);
-  if (!p(r, a) || null == R) return null;
+  if (!p(r, s) || null == R) return null;
   let g = (0, E.getClanBadgeUrl)(R, C, c);
   return I ? (0, i.jsx)(m, {
     clanTag: O,
     clanBadge: g,
-    className: s()(h.noTooltip, l),
+    className: a()(h.noTooltip, l),
     textVariant: u,
     textColor: d,
     badgeSize: c,

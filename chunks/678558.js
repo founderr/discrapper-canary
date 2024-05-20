@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("824385"),
   l = n("481060"),
   u = n("40851"),
@@ -19,7 +19,7 @@ t.default = e => {
   let {
     analyticsLocation: t,
     analyticsSourceLocation: n,
-    guild: a,
+    guild: s,
     buttonText: h,
     targetBoostedGuildTier: A,
     onClose: m = () => {},
@@ -31,12 +31,12 @@ t.default = e => {
     ...g
   } = e, {
     analyticsLocations: L
-  } = (0, d.default)(), v = (0, u.useAppContext)() === T.AppContext.POPOUT, [D, M] = r.useState(!1), y = null != A ? Math.max((0, E.getNumberOfAppliedBoostsNeededForTier)(a, A), 1) : 1, P = (0, E.generateBlockGuildSubscriptionPurchasesNode)(), U = async () => {
+  } = (0, d.default)(), v = (0, u.useAppContext)() === T.AppContext.POPOUT, [D, M] = r.useState(!1), y = null != A ? Math.max((0, E.getNumberOfAppliedBoostsNeededForTier)(s, A), 1) : 1, P = (0, E.generateBlockGuildSubscriptionPurchasesNode)(), U = async () => {
     M(!0), await (0, I.addAppliedGuildBoosts)({
       analyticsLocations: L,
       analyticsLocation: t,
       analyticsSourceLocation: n,
-      guild: a,
+      guild: s,
       numberOfBoostsToAdd: y,
       onClose: m,
       closeLayer: N,
@@ -68,7 +68,7 @@ t.default = e => {
   }) : (0, i.jsx)(c.default, {
     size: l.Button.Sizes.SMALL,
     ...g,
-    className: s()(g.className, {
+    className: a()(g.className, {
       [S.buttonHighlighted]: R
     }),
     submitting: D,

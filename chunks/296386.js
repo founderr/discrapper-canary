@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   addGuildCategory: function() {
-    return _
+    return x
   },
   deleteGuildCategory: function() {
     return g
@@ -16,16 +16,16 @@ a.r(t), a.d(t, {
     return c
   },
   saveGuildMetadata: function() {
-    return x
+    return _
   },
   updateGuildDiscoveryMetadataAbout: function() {
-    return E
+    return T
   },
   updateGuildDiscoveryMetadataIsPublished: function() {
-    return p
+    return E
   },
   updateGuildDiscoveryMetadataReasonsToJoin: function() {
-    return T
+    return p
   },
   updateGuildDiscoveryMetadataSocialLinks: function() {
     return C
@@ -147,7 +147,7 @@ function h(e, t) {
   })
 }
 
-function p(e, t) {
+function E(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -155,7 +155,7 @@ function p(e, t) {
   })
 }
 
-function E(e, t) {
+function T(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -163,7 +163,7 @@ function E(e, t) {
   })
 }
 
-function T(e, t) {
+function p(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -178,7 +178,7 @@ function C(e, t) {
     socialLinks: t
   })
 }
-async function x(e) {
+async function _(e) {
   let {
     guildId: t,
     primaryCategoryId: a,
@@ -195,14 +195,14 @@ async function x(e) {
     let {
       primary_category_id: e,
       category_ids: h,
-      keywords: p,
-      emoji_discoverability_enabled: E,
-      partner_actioned_timestamp: T,
+      keywords: E,
+      emoji_discoverability_enabled: T,
+      partner_actioned_timestamp: p,
       partner_application_timestamp: C,
-      is_published: x,
-      reasons_to_join: _,
+      is_published: _,
+      reasons_to_join: x,
       social_links: g,
-      about: I
+      about: N
     } = (await n.HTTP.patch({
       url: o.Endpoints.GUILD_DISCOVERY_METADATA(t),
       body: {
@@ -224,14 +224,14 @@ async function x(e) {
       metadata: {
         primaryCategoryId: e,
         secondaryCategoryIds: h,
-        keywords: p,
-        emojiDiscoverabilityEnabled: E,
-        partnerActionedTimestamp: T,
+        keywords: E,
+        emojiDiscoverabilityEnabled: T,
+        partnerActionedTimestamp: p,
         partnerApplicationTimestamp: C,
-        isPublished: x,
-        reasonsToJoin: _,
+        isPublished: _,
+        reasonsToJoin: x,
         socialLinks: g,
-        about: I
+        about: N
       }
     })
   } catch (e) {
@@ -243,7 +243,7 @@ async function x(e) {
   }
 }
 
-function _(e, t) {
+function x(e, t) {
   n.HTTP.put({
     url: o.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
     oldFormErrors: !0

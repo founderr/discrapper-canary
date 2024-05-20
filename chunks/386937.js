@@ -32,7 +32,7 @@ function L(e, t, s) {
   }) : e[t] = s, e
 }
 let O = (0, h.cssValueToNumber)(u.default.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
-class A extends l.Component {
+class p extends l.Component {
   componentDidMount() {
     this.measure();
     let {
@@ -223,7 +223,7 @@ class A extends l.Component {
     }, s))
   }
 }
-let p = d.default.connectStores([I.default, f.default, T.default, S.default], () => {
+let A = d.default.connectStores([I.default, f.default, T.default, S.default], () => {
   let e = I.default.getGuildId(),
     t = null != e ? T.default.getAppliedGuildBoostsForGuild(e) : null,
     s = o()(null != t ? t : []).uniqBy(e => e.userId),
@@ -237,5 +237,5 @@ let p = d.default.connectStores([I.default, f.default, T.default, S.default], ()
     subscribers: a,
     subscriberCount: s.size()
   }
-})(A);
-t.default = p
+})(p);
+t.default = A

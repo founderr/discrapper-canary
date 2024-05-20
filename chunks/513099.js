@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("442837"),
-  s = n("481060"),
+  s = n("442837"),
+  a = n("481060"),
   o = n("420660"),
   l = n("233440"),
   u = n("199902"),
@@ -21,8 +21,8 @@ var i = n("735250"),
   S = n("981631"),
   h = n("474936"),
   A = n("579935");
-let m = s.AvatarSizes.SIZE_80,
-  N = c.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+let m = a.AvatarSizes.SIZE_80,
+  N = c.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function p(e) {
   let {
@@ -39,7 +39,7 @@ function p(e) {
   } = (0, E.useUserProfileAnalyticsContext)(), L = _.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, h.PremiumTypes.TIER_2), v = r.useMemo(() => (0, l.shouldDisableUserPresenceInChannel)(t, p), [t, p]), {
     status: D,
     isMobileOnline: M
-  } = (0, a.useStateFromStoresObject)([u.default, d.default], () => {
+  } = (0, s.useStateFromStoresObject)([u.default, d.default], () => {
     let e = null != u.default.getAnyStreamForUser(t.id),
       n = d.default.findActivity(t.id, t => {
         let {
@@ -61,7 +61,7 @@ function p(e) {
     size: m,
     animateOnHover: O
   });
-  return (0, i.jsx)(s.Clickable, {
+  return (0, i.jsx)(a.Clickable, {
     ...U,
     className: A.clickable,
     onClick: null == C ? void 0 : () => {
@@ -76,7 +76,7 @@ function p(e) {
       "aria-label": t.username,
       imageClassName: null != C ? A.overlay : void 0,
       status: v ? S.StatusTypes.UNKNOWN : D,
-      statusBackdropColor: L && !v ? (0, s.getStatusBackdropColor)(R) : void 0,
+      statusBackdropColor: L && !v ? (0, a.getStatusBackdropColor)(R) : void 0,
       isMobile: M,
       statusTooltip: !0,
       statusTooltipDelay: f.USER_PROFILE_TOOLTIP_DELAY

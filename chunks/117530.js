@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120"), n("653041");
-var i, r, a, s, o = n("392711"),
+var i, r, s, a, o = n("392711"),
   l = n.n(o),
   u = n("442837"),
   d = n("570140"),
@@ -50,12 +50,12 @@ class p extends(i = u.default.Store) {
     return A(e, t).find(n)
   }
 }
-s = "UploadAttachmentStore", (a = "displayName") in(r = p) ? Object.defineProperty(r, a, {
-  value: s,
+a = "UploadAttachmentStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new p(d.default, {
+}) : r[s] = a, t.default = new p(d.default, {
   UPLOAD_ATTACHMENT_POP_FILE: function(e) {
     let {
       channelId: t
@@ -68,8 +68,8 @@ s = "UploadAttachmentStore", (a = "displayName") in(r = p) ? Object.defineProper
       channelId: n,
       showLargeMessageDialog: i,
       draftType: r
-    } = e, a = [...A(n, r)];
-    if (a.length + t.length > T.MAX_UPLOAD_COUNT && r !== I.DraftType.SlashCommand && r !== I.DraftType.ApplicationLauncherCommand) {
+    } = e, s = [...A(n, r)];
+    if (s.length + t.length > T.MAX_UPLOAD_COUNT && r !== I.DraftType.SlashCommand && r !== I.DraftType.ApplicationLauncherCommand) {
       _.default.show({
         title: f.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
         body: f.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
@@ -79,9 +79,9 @@ s = "UploadAttachmentStore", (a = "displayName") in(r = p) ? Object.defineProper
       return
     }
     l().forEach(t, e => {
-      let t = new c.CloudUpload(e, n, i, a.length);
-      t.upload(), a.push(t)
-    }), N(n, r, a)
+      let t = new c.CloudUpload(e, n, i, s.length);
+      t.upload(), s.push(t)
+    }), N(n, r, s)
   },
   UPLOAD_ATTACHMENT_UPDATE_FILE: function(e) {
     let {
@@ -89,10 +89,10 @@ s = "UploadAttachmentStore", (a = "displayName") in(r = p) ? Object.defineProper
       id: n,
       filename: i,
       description: r,
-      spoiler: a,
-      thumbnail: s,
+      spoiler: s,
+      thumbnail: a,
       draftType: o
-    } = e, l = [...A(t, o)].map(e => (e.id === n && (void 0 !== i && (e.filename = i), void 0 !== a && (e.spoiler = a), void 0 !== r && (e.description = r), void 0 !== s && (e.isThumbnail = s)), e));
+    } = e, l = [...A(t, o)].map(e => (e.id === n && (void 0 !== i && (e.filename = i), void 0 !== s && (e.spoiler = s), void 0 !== r && (e.description = r), void 0 !== a && (e.isThumbnail = a)), e));
     N(t, o, l)
   },
   UPLOAD_ATTACHMENT_REMOVE_FILE: function(e) {
@@ -100,11 +100,11 @@ s = "UploadAttachmentStore", (a = "displayName") in(r = p) ? Object.defineProper
       channelId: t,
       id: n,
       draftType: i
-    } = e, r = [...A(t, i)], a = r.findIndex(e => (0, E.doesImageMatchUpload)({
+    } = e, r = [...A(t, i)], s = r.findIndex(e => (0, E.doesImageMatchUpload)({
       uri: n,
       filename: n
     }, e));
-    a > -1 && (r.splice(a, 1)[0].cancel(), N(t, i, r))
+    s > -1 && (r.splice(s, 1)[0].cancel(), N(t, i, r))
   },
   UPLOAD_ATTACHMENT_REMOVE_FILES: function(e) {
     let {
@@ -138,8 +138,8 @@ s = "UploadAttachmentStore", (a = "displayName") in(r = p) ? Object.defineProper
       id: n,
       file: i,
       draftType: r
-    } = e, a = [...A(t, r)].filter(e => e.id !== n), s = new c.CloudUpload(i, t);
-    s.upload(), a.push(s), N(t, r, a)
+    } = e, s = [...A(t, r)].filter(e => e.id !== n), a = new c.CloudUpload(i, t);
+    a.upload(), s.push(a), N(t, r, s)
   },
   SIDEBAR_CLOSE: function(e) {
     let {

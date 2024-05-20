@@ -19,8 +19,8 @@ var l = n("735250"),
   f = n("239091"),
   h = n("607070"),
   m = n("100527"),
-  C = n("367907"),
-  p = n("906732"),
+  p = n("367907"),
+  C = n("906732"),
   g = n("434404"),
   E = n("496675"),
   _ = n("259580"),
@@ -69,7 +69,7 @@ t.default = e => {
     withMargin: n
   } = e, {
     analyticsLocations: s
-  } = (0, p.default)(m.default.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
+  } = (0, C.default)(m.default.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
     premiumSubscriberCount: d,
     id: g
   } = t, I = (0, S.getGuildTierFromAppliedBoostCount)(d, g), M = (0, S.getNextTier)(I, t.id), O = null == M, D = null != M ? M : I, j = (0, u.useStateFromStores)([T.default], () => {
@@ -95,7 +95,7 @@ t.default = e => {
     },
     [F, H] = (0, r.useSpring)(() => B),
     V = () => {
-      (0, C.trackWithMetadata)(v.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
+      (0, p.trackWithMetadata)(v.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
           section: v.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
         },

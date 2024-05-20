@@ -10,7 +10,7 @@ a.r(t), a.d(t, {
     return m
   },
   TermsFormField: function() {
-    return p
+    return E
   }
 }), a("47120");
 var n = a("735250");
@@ -82,7 +82,7 @@ function h(e) {
     meetsRequirement: !!t.response
   })
 }
-let p = e => {
+let E = e => {
   let {
     channelId: t,
     formField: a,

@@ -107,15 +107,15 @@ function T(e) {
     ref: L,
     width: O = 0
   } = (0, d.default)(R), {
-    ref: A,
-    width: p = 0
-  } = (0, d.default)(R), M = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [D, v] = l.useState(g), G = l.useRef(null), j = O > p ? O : p;
+    ref: p,
+    width: A = 0
+  } = (0, d.default)(R), M = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [D, v] = l.useState(g), j = l.useRef(null), G = O > A ? O : A;
   l.useEffect(() => {
-    g ? (v(!0), G.current = setTimeout(() => {
-      v(!1), G.current = null
+    g ? (v(!0), j.current = setTimeout(() => {
+      v(!1), j.current = null
     }, E.CHIPLET_ERROR_FORCE_SHOW_TOOLTIP_TIMER_MS)) : v(!1)
   }, [g]), l.useEffect(() => () => {
-    clearTimeout(G.current)
+    clearTimeout(j.current)
   }, []);
   let U = l.useCallback(e => {
       s(e.target.value)
@@ -142,7 +142,7 @@ function T(e) {
   return (0, a.jsx)("div", {
     className: _.chipletFlexContainer,
     children: (0, a.jsxs)("div", {
-      ref: A,
+      ref: p,
       className: i()(_.chipletContainer, {
         [_.isEditing]: R,
         [_.smallBlink]: !R && !M,
@@ -172,7 +172,7 @@ function T(e) {
           onKeyDownCapture: b,
           value: t,
           style: {
-            width: j > 0 ? j : "calc(".concat(t.length, "ch + 10px)")
+            width: G > 0 ? G : "calc(".concat(t.length, "ch + 10px)")
           }
         }), (0, a.jsx)(I, {
           ref: L,

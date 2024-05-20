@@ -26,8 +26,8 @@ var a, l, n = s("735250"),
   x = s("310800"),
   L = s("833695"),
   O = s("981631"),
-  A = s("176505"),
-  p = s("689938"),
+  p = s("176505"),
+  A = s("689938"),
   M = s("594567");
 
 function D(e) {
@@ -37,8 +37,8 @@ function D(e) {
   } = e, {
     listingsLoaded: a
   } = (0, C.useFetchGuildProductListingsForGuild)(t), l = (0, o.useStateFromStores)([N.default], () => N.default.getGuild(t)), D = (0, o.useStateFromStores)([g.default], () => g.default.getCurrentUser()), v = (null == l ? void 0 : l.isOwner(D)) === !0, {
-    loading: G
-  } = (0, u.useMonetizationSettings)(t), [j, U] = i.useState(s ? "manage_listings" : "payment");
+    loading: j
+  } = (0, u.useMonetizationSettings)(t), [G, U] = i.useState(s ? "manage_listings" : "payment");
   (0, _.useNewOwnerOnboardingRequired)(l);
   let P = i.useCallback(() => {
     if (null == l) return;
@@ -53,17 +53,17 @@ function D(e) {
       roles: t,
       initialTab: "guild_products",
       returnToSection: O.GuildSettingsSections.GUILD_PRODUCTS
-    }), (0, m.transitionTo)(O.Routes.CHANNEL(l.id, A.StaticChannelRoute.GUILD_SHOP))
+    }), (0, m.transitionTo)(O.Routes.CHANNEL(l.id, p.StaticChannelRoute.GUILD_SHOP))
   }, [l]);
-  if (!a || G) return (0, n.jsx)(d.Spinner, {});
+  if (!a || j) return (0, n.jsx)(d.Spinner, {});
   if (null == l) return null;
   let b = (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(d.FormTitle, {
         tag: d.FormTitleTags.H1,
-        children: p.default.Messages.GUILD_PRODUCTS_TITLE
+        children: A.default.Messages.GUILD_PRODUCTS_TITLE
       }), (0, n.jsx)(d.FormText, {
         type: d.FormText.Types.DESCRIPTION,
-        children: p.default.Messages.GUILD_PRODUCTS_SETTINGS_DESCRIPTION.format({
+        children: A.default.Messages.GUILD_PRODUCTS_SETTINGS_DESCRIPTION.format({
           monetizationPolicyLink: h.default.getArticleURL(O.HelpdeskArticles.CREATOR_POLICY),
           serverProductsSupportLink: h.default.getCreatorSupportArticleURL(O.HelpdeskArticles.SERVER_PRODUCTS)
         })
@@ -73,23 +73,23 @@ function D(e) {
       type: "top",
       look: "brand",
       className: M.tabBar,
-      "aria-label": p.default.Messages.GUILD_PRODUCTS_TITLE,
-      selectedItem: j,
+      "aria-label": A.default.Messages.GUILD_PRODUCTS_TITLE,
+      selectedItem: G,
       onItemSelect: U,
       children: [(0, n.jsx)(E.default, {
         id: "basic_info",
-        disabledTooltip: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+        disabledTooltip: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
         disabled: !s,
-        children: p.default.Messages.GUILD_PRODUCTS_BASIC_INFO_SECTION
+        children: A.default.Messages.GUILD_PRODUCTS_BASIC_INFO_SECTION
       }), (0, n.jsx)(E.default, {
         id: "manage_listings",
-        disabledTooltip: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+        disabledTooltip: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
         disabled: !s,
-        children: p.default.Messages.GUILD_PRODUCTS_LISTINGS_SECTION
+        children: A.default.Messages.GUILD_PRODUCTS_LISTINGS_SECTION
       }), v ? (0, n.jsx)(d.TabBar.Item, {
         id: "payment",
         className: M.tabBarItem,
-        children: p.default.Messages.GUILD_PRODUCTS_PAYMENT_SECTION
+        children: A.default.Messages.GUILD_PRODUCTS_PAYMENT_SECTION
       }) : null, s ? (0, n.jsx)("div", {
         className: M.previewButton,
         children: (0, n.jsx)(d.Button, {
@@ -97,11 +97,11 @@ function D(e) {
           color: d.Button.Colors.PRIMARY,
           size: d.Button.Sizes.SMALL,
           look: d.Button.Looks.OUTLINED,
-          children: p.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW
+          children: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW
         })
       }) : null]
     }),
-    y = (0, r.match)(j).with("basic_info", () => (0, n.jsx)(R.default, {
+    y = (0, r.match)(G).with("basic_info", () => (0, n.jsx)(R.default, {
       guildId: t
     })).with("manage_listings", () => (0, n.jsx)(x.default, {
       guildId: t
@@ -109,7 +109,7 @@ function D(e) {
       guildId: t
     })).exhaustive(),
     F = a ? (0, n.jsx)(d.TabBar.Panel, {
-      id: j,
+      id: G,
       children: y
     }) : (0, n.jsx)(d.Spinner, {});
   return (0, n.jsxs)(c.CreatorMonetizationSettingsDisabledContextProvider, {

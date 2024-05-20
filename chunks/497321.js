@@ -19,7 +19,7 @@ function h(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-class p extends(n = s.Component) {
+class E extends(n = s.Component) {
   render() {
     return (0, r.jsxs)("div", {
       className: m.streamerModeEnabled,
@@ -40,6 +40,6 @@ class p extends(n = s.Component) {
     })
   }
 }
-h(p, "defaultProps", {
+h(E, "defaultProps", {
   disableButton: !1
-}), t.default = p
+}), t.default = E

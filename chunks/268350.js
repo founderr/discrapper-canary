@@ -36,8 +36,8 @@ n.r(t), n.d(t, {
 }), n("653041");
 var i = n("392711"),
   r = n.n(i),
-  a = n("544891"),
-  s = n("570140"),
+  s = n("544891"),
+  a = n("570140"),
   o = n("668781"),
   l = n("38618"),
   u = n("706454"),
@@ -54,7 +54,7 @@ let A = async (e, t) => {
   let {
     body: n
   } = await (0, I.httpGetWithCountryCodeQuery)(f.Endpoints.STICKER_PACK(e));
-  return s.default.dispatch({
+  return a.default.dispatch({
     type: "STICKER_PACK_FETCH_SUCCESS",
     packId: e,
     pack: n,
@@ -65,8 +65,8 @@ let A = async (e, t) => {
     locale: e = u.default.locale
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   if (T.default.isFetchingStickerPacks || T.default.hasLoadedStickerPacks) return;
-  s.default.wait(() => {
-    s.default.dispatch({
+  a.default.wait(() => {
+    a.default.dispatch({
       type: "STICKER_PACKS_FETCH_START"
     })
   });
@@ -74,33 +74,33 @@ let A = async (e, t) => {
     body: {
       sticker_packs: t
     }
-  } = await a.HTTP.get({
+  } = await s.HTTP.get({
     url: f.Endpoints.STICKER_PACKS,
     query: {
       locale: e
     }
   });
-  s.default.dispatch({
+  a.default.dispatch({
     type: "STICKER_PACKS_FETCH_SUCCESS",
     packs: t
   })
 }, N = async e => {
   let {
     body: t
-  } = await a.HTTP.get({
+  } = await s.HTTP.get({
     url: f.Endpoints.STICKER(e)
   });
-  s.default.dispatch({
+  a.default.dispatch({
     type: "STICKER_FETCH_SUCCESS",
     sticker: t
   })
 }, p = async e => {
   let {
     body: t
-  } = await a.HTTP.get({
+  } = await s.HTTP.get({
     url: f.Endpoints.GUILD_STICKER_PACKS(e)
   });
-  s.default.dispatch({
+  a.default.dispatch({
     type: "GUILD_STICKERS_FETCH_SUCCESS",
     guildId: e,
     stickers: t.map(e => null != e.user ? {
@@ -109,15 +109,15 @@ let A = async (e, t) => {
     } : e)
   })
 }, O = async e => {
-  await a.HTTP.del({
+  await s.HTTP.del({
     url: f.Endpoints.GUILD_STICKER(e.guild_id, e.id)
   })
 }, C = async (e, t) => {
-  let n = await a.HTTP.post({
+  let n = await s.HTTP.post({
     url: f.Endpoints.GUILD_STICKER_PACKS(e),
     body: t
   });
-  return s.default.dispatch({
+  return a.default.dispatch({
     type: "GUILD_STICKERS_CREATE_SUCCESS",
     guildId: e,
     sticker: {
@@ -125,13 +125,13 @@ let A = async (e, t) => {
       user: E.default.getCurrentUser()
     }
   }), n.body
-}, R = async (e, t, n) => (await a.HTTP.patch({
+}, R = async (e, t, n) => (await s.HTTP.patch({
   url: f.Endpoints.GUILD_STICKER(e, t),
   body: n
 })).body;
 
 function g(e, t, n) {
-  s.default.dispatch({
+  a.default.dispatch({
     type: "ADD_STICKER_PREVIEW",
     channelId: e,
     sticker: t,
@@ -140,7 +140,7 @@ function g(e, t, n) {
 }
 
 function L(e, t) {
-  s.default.dispatch({
+  a.default.dispatch({
     type: "CLEAR_STICKER_PREVIEW",
     channelId: e,
     draftType: t

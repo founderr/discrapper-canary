@@ -8,12 +8,12 @@ function r(e) {
   return "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST, "/").concat(e)
 }
 
-function a() {
+function s() {
   return "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, "/channels/@me")
 }
 n.r(t), n.d(t, {
   getDefaultDynamicLinkTemplate: function() {
-    return a
+    return s
   },
   getGuildTemplateDynamicLinkTemplate: function() {
     return r

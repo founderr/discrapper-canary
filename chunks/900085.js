@@ -15,8 +15,8 @@ var l, a = n("735250"),
   f = n("134616"),
   h = n("714338"),
   m = n("212819"),
-  C = n("14429"),
-  p = n("592125"),
+  p = n("14429"),
+  C = n("592125"),
   g = n("888369"),
   E = n("430824"),
   _ = n("306680"),
@@ -73,14 +73,14 @@ class G extends(l = s.Component) {
 b(G, "defaultProps", {
   unread: !1
 });
-let U = u.default.connectStores([_.default, p.default], e => {
+let U = u.default.connectStores([_.default, C.default], e => {
     let {
       channel: t
     } = e;
     return {
       unread: _.default.hasUnread(t.id),
       mentions: _.default.getMentionCount(t.id),
-      category: p.default.getChannel(t.parent_id)
+      category: C.default.getChannel(t.parent_id)
     }
   })(G),
   w = u.default.connectStores([I.default], e => {
@@ -108,10 +108,10 @@ let U = u.default.connectStores([_.default, p.default], e => {
       mentions: _.default.getMentionCount(t.id)
     }
   })(T.GroupDM),
-  H = u.default.connectStores([p.default, _.default], e => {
+  H = u.default.connectStores([C.default, _.default], e => {
     let {
       user: t
-    } = e, n = p.default.getDMFromUserId(t.id);
+    } = e, n = C.default.getDMFromUserId(t.id);
     return {
       mentions: null != n ? _.default.getMentionCount(n) : 0
     }
@@ -440,7 +440,7 @@ class k extends s.PureComponent {
         selectedIndex: l
       } = this.props, {
         showScores: s
-      } = C.default.getCurrentConfig({
+      } = p.default.getCurrentConfig({
         location: "62f4be_1"
       }, {
         autoTrackExposure: !1

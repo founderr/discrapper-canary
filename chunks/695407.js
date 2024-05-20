@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("1561"),
   l = n("84735"),
   u = n("922770"),
@@ -16,7 +16,7 @@ var i = n("735250"),
   c = n("689938"),
   E = n("703273");
 let I = r.forwardRef(function(e, t) {
-  var n, a, I;
+  var n, s, I;
   let {
     query: T,
     onChange: f,
@@ -36,15 +36,15 @@ let I = r.forwardRef(function(e, t) {
     },
     activate: () => !1
   }), []);
-  let O = (n = T, a = S, I = f, a ? (0, i.jsx)("div", {
+  let O = (n = T, s = S, I = f, s ? (0, i.jsx)("div", {
     className: E.iconContainer,
     children: (0, i.jsx)(u.Spinner, {
       type: u.Spinner.Type.SPINNING_CIRCLE,
-      className: s()(E.icon)
+      className: a()(E.icon)
     })
   }) : n.length > 0 ? (0, i.jsx)(o.Clickable, {
     "aria-label": c.default.Messages.SEARCH_CLEAR,
-    className: s()(E.iconContainer, E.iconClickable),
+    className: a()(E.iconContainer, E.iconClickable),
     onClick: e => {
       e.stopPropagation(), I("")
     },

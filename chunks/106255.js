@@ -21,16 +21,16 @@ n.r(t), n.d(t, {
 }), n("580130");
 var i = n("55563"),
   r = n("474936"),
-  a = n("735825"),
-  s = n("981631"),
+  s = n("735825"),
+  a = n("981631"),
   o = n("689938");
 
 function l(e) {
-  return e.type === s.EntitlementTypes.PURCHASE && e.skuId === r.PremiumSubscriptionSKUs.TIER_2 && e.applicationId === r.PREMIUM_SUBSCRIPTION_APPLICATION && e.isValid(null, i.default)
+  return e.type === a.EntitlementTypes.PURCHASE && e.skuId === r.PremiumSubscriptionSKUs.TIER_2 && e.applicationId === r.PREMIUM_SUBSCRIPTION_APPLICATION && e.isValid(null, i.default)
 }
 
 function u(e) {
-  return e.type === s.EntitlementTypes.PREMIUM_PURCHASE && a.ALL_TENURE_REWARD_SKUS.has(e.skuId) && e.applicationId === r.PREMIUM_SUBSCRIPTION_APPLICATION && e.isValid(null, i.default)
+  return e.type === a.EntitlementTypes.PREMIUM_PURCHASE && s.ALL_TENURE_REWARD_SKUS.has(e.skuId) && e.applicationId === r.PREMIUM_SUBSCRIPTION_APPLICATION && e.isValid(null, i.default)
 }
 
 function d(e) {
@@ -38,7 +38,7 @@ function d(e) {
 }
 
 function _(e, t) {
-  if (null != t) return Array.from(t).find(t => t.type === s.EntitlementTypes.PREMIUM_PURCHASE && e.includes(t.skuId) && t.applicationId === r.PREMIUM_SUBSCRIPTION_APPLICATION && t.isValid(null, i.default))
+  if (null != t) return Array.from(t).find(t => t.type === a.EntitlementTypes.PREMIUM_PURCHASE && e.includes(t.skuId) && t.applicationId === r.PREMIUM_SUBSCRIPTION_APPLICATION && t.isValid(null, i.default))
 }
 
 function c(e) {
@@ -47,11 +47,11 @@ function c(e) {
 
 function E(e) {
   switch (e) {
-    case a.NitroRewardStatus.PENDING:
+    case s.NitroRewardStatus.PENDING:
       return o.default.Messages.REWARD;
-    case a.NitroRewardStatus.REDEEMABLE:
+    case s.NitroRewardStatus.REDEEMABLE:
       return o.default.Messages.REDEEM;
-    case a.NitroRewardStatus.REDEEMED:
+    case s.NitroRewardStatus.REDEEMED:
     default:
       return null
   }

@@ -28,7 +28,7 @@ function f(e) {
     createNewEditingRule: C
   } = (0, _.useAutomodEditingRuleState)(), {
     getDefaultRuleName: R
-  } = E.triggerConfigs[s], x = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = !(0, c.isBackendPersistedRule)(h) && (null == h ? void 0 : h.triggerType) === s, [O, A] = l.useState(L ? h : m), p = (0, n.useSpring)({
+  } = E.triggerConfigs[s], x = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = !(0, c.isBackendPersistedRule)(h) && (null == h ? void 0 : h.triggerType) === s, [O, p] = l.useState(L ? h : m), A = (0, n.useSpring)({
     opacity: L ? 0 : 1,
     pointerEvents: L ? "none" : "all",
     config: {
@@ -45,10 +45,10 @@ function f(e) {
     },
     immediate: x,
     onStart: () => {
-      A(L ? h : m)
+      p(L ? h : m)
     },
     onRest: () => {
-      A(L ? h : m), g(L)
+      p(L ? h : m), g(L)
     }
   });
   return null == h || L ? (0, a.jsxs)("div", {
@@ -65,7 +65,7 @@ function f(e) {
       })
     }), (0, a.jsx)(n.animated.div, {
       className: S.animatedNewRuleContainer,
-      style: p,
+      style: A,
       children: (0, a.jsxs)(o.Clickable, {
         className: S.addAnotherRuleCardContainer,
         onClick: () => {

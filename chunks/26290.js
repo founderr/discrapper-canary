@@ -28,9 +28,9 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  a = n.n(r);
+  s = n.n(r);
 n("481060");
-var s = n("377171");
+var a = n("377171");
 n("689938");
 var o = n("511958");
 let l = {
@@ -50,7 +50,7 @@ function d(e) {
 let _ = e => {
     let {
       count: t,
-      color: n = s.default.STATUS_DANGER,
+      color: n = a.default.STATUS_DANGER,
       disableColor: r = !1,
       shape: _ = l.ROUND,
       className: c,
@@ -58,7 +58,7 @@ let _ = e => {
       ...I
     } = e;
     return (0, i.jsx)("div", {
-      className: a()(c, o.numberBadge, _),
+      className: s()(c, o.numberBadge, _),
       style: {
         backgroundColor: r ? void 0 : n,
         width: u(t),
@@ -82,14 +82,14 @@ let _ = e => {
     let {
       text: t,
       className: n,
-      color: r = s.default.STATUS_DANGER,
+      color: r = a.default.STATUS_DANGER,
       shape: u = l.ROUND,
       disableColor: d = !1,
       style: _,
       ...c
     } = e;
     return (0, i.jsx)("div", {
-      className: a()(n, o.textBadge, u),
+      className: s()(n, o.textBadge, u),
       style: {
         backgroundColor: d ? void 0 : r,
         ..._
@@ -105,7 +105,7 @@ let _ = e => {
       ...r
     } = e;
     return (0, i.jsx)(c, {
-      className: a()(o.premiumBadge, n),
+      className: s()(o.premiumBadge, n),
       text: t,
       ...r
     })
@@ -114,13 +114,13 @@ let _ = e => {
     let {
       icon: t,
       className: n,
-      color: r = s.default.STATUS_DANGER,
+      color: r = a.default.STATUS_DANGER,
       shape: u = l.ROUND,
       disableColor: d = !1,
       style: _
     } = e;
     return (0, i.jsx)("div", {
-      className: a()(n, o.iconBadge, u),
+      className: s()(n, o.iconBadge, u),
       style: {
         backgroundColor: d ? void 0 : r,
         ..._
@@ -133,14 +133,14 @@ let _ = e => {
   T = e => {
     let {
       className: t,
-      color: n = s.default.INTERACTIVE_ACTIVE,
+      color: n = a.default.INTERACTIVE_ACTIVE,
       shape: r = l.ROUND,
       disableColor: u = !1,
       style: d,
       ..._
     } = e;
     return (0, i.jsx)("div", {
-      className: a()(t, o.circleBadge, r),
+      className: s()(t, o.circleBadge, r),
       style: {
         backgroundColor: u ? void 0 : n,
         ...d

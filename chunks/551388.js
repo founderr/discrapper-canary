@@ -3,17 +3,17 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("960259"),
-  a = n("483901"),
-  s = n("325767");
+  s = n("483901"),
+  a = n("325767");
 t.default = (0, r.replaceIcon)(function(e) {
   let {
     width: t = 24,
     height: n = 24,
     color: r = "currentColor",
-    ...a
+    ...s
   } = e;
   return (0, i.jsx)("svg", {
-    ...(0, s.default)(a),
+    ...(0, a.default)(s),
     width: t,
     height: n,
     viewBox: "0 0 16 16",
@@ -25,6 +25,6 @@ t.default = (0, r.replaceIcon)(function(e) {
       "aria-hidden": !0
     })
   })
-}, a.CrownIcon, void 0, {
+}, s.CrownIcon, void 0, {
   size: 24
 })

@@ -28,7 +28,7 @@ var a = s("735250"),
   x = s("689938"),
   L = s("321809");
 let O = "guild-role-subscription-tier-template-selector",
-  A = e => {
+  p = e => {
     let [t, s] = l.useState(!0), [a, n] = l.useState();
     return l.useEffect(() => {
       s(!0), (0, N.getPriceTiers)(e).then(e => {
@@ -40,26 +40,26 @@ let O = "guild-role-subscription-tier-template-selector",
     }
   };
 
-function p(e) {
+function A(e) {
   let {
     guildId: t,
     priceTiers: n,
     groupListingId: I
   } = e, N = (0, m.useSubscriptionListingsForGroup)(I), {
-    editStateIds: A,
-    addNewEditStateId: p,
+    editStateIds: p,
+    addNewEditStateId: A,
     addNewEditStateFromTemplate: M,
     removeEditStateId: D
   } = h.useEditStateIds(I, t, {
     includeSoftDeleted: !0
-  }), [v, G] = l.useState({}), j = l.useMemo(() => {
-    let e = A.map(e => {
+  }), [v, j] = l.useState({}), G = l.useMemo(() => {
+    let e = p.map(e => {
       var t;
       return null !== (t = v[e]) && void 0 !== t ? t : e
     });
     return (0, r.uniq)(e)
-  }, [A, v]), U = (e, t) => {
-    G(s => ({
+  }, [p, v]), U = (e, t) => {
+    j(s => ({
       ...s,
       [e]: t
     }))
@@ -75,19 +75,19 @@ function p(e) {
         ...s,
         guildId: t,
         addNewEditStateFromTemplate: M,
-        addNewEditStateFromScratch: p,
+        addNewEditStateFromScratch: A,
         priceTiers: n
       })
     }, {
       modalKey: O
-    }) : p()
-  }, [t, M, p, n, b, P]), y = h.useHasChangesForEditStateIds(j), F = l.useCallback(() => j.forEach(h.clearEditState), [j]), H = (0, g.useRoleSubscriptionSettingsDisabled)(), k = (0, o.useStateFromStores)([E.default], () => E.default.getProps().subsection);
+    }) : A()
+  }, [t, M, A, n, b, P]), y = h.useHasChangesForEditStateIds(G), F = l.useCallback(() => G.forEach(h.clearEditState), [G]), H = (0, g.useRoleSubscriptionSettingsDisabled)(), k = (0, o.useStateFromStores)([E.default], () => E.default.getProps().subsection);
   return l.useEffect(() => (k === R.GuildSettingsSubsections.ROLE_SUBSCRIPTION_TIER_TEMPLATE && B(), () => {
     (0, u.closeModal)(O)
   }), [k, B]), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: L.groupListings,
-      children: [j.map(e => (0, a.jsx)(C.default, {
+      children: [G.map(e => (0, a.jsx)(C.default, {
         guildId: t,
         initialEditStateId: e,
         allSubscriptionListings: N,
@@ -127,7 +127,7 @@ function M(e) {
     guildId: t
   } = e, {
     priceTiers: s
-  } = A(t), l = (0, m.useGroupListingsForGuild)(t), {
+  } = p(t), l = (0, m.useGroupListingsForGuild)(t), {
     maxTiers: n
   } = (0, f.useRoleSubscriptionMaxTiersExperiment)(t), i = l.map(e => e.id);
   return (0, a.jsxs)(u.FormSection, {
@@ -140,7 +140,7 @@ function M(e) {
       })
     }), (0, a.jsx)(I.default, {
       size: 16
-    }), (0, a.jsx)(p, {
+    }), (0, a.jsx)(A, {
       priceTiers: s,
       guildId: t,
       groupListingId: i[0]

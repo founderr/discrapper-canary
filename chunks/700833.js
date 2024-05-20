@@ -25,41 +25,41 @@ function m(e) {
     formField: u,
     guild: m,
     index: h,
-    isDragEnabled: E,
-    submittedGuildJoinRequestsCount: T,
+    isDragEnabled: T,
+    submittedGuildJoinRequestsCount: p,
     removeFormField: C,
-    updateFormField: x,
-    updateFormFieldOrder: _,
+    updateFormField: _,
+    updateFormFieldOrder: x,
     canRemove: g,
-    actionsLocation: I
-  } = e, N = async () => {
+    actionsLocation: N
+  } = e, I = async () => {
     await C(h)
   }, v = async e => {
-    await x(h, e)
+    await _(h, e)
   }, A = async (e, t, a) => {
-    await _(e, t, a)
+    await x(e, t, a)
   }, S = (0, r.uniqueId)(), L = t === h, R = {
     key: S,
     index: h,
-    isDragEnabled: E,
+    isDragEnabled: T,
     isDropHovered: L,
     onEdit: () => {
-      0 === T ? p(u, v, m) : (0, s.openModalLazy)(async () => {
+      0 === p ? E(u, v, m) : (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([a.e("99387"), a.e("74673")]).then(a.bind(a, "394045"));
         return t => (0, n.jsx)(e, {
           ...t,
           guildId: m.id,
-          submittedGuildJoinRequestsCount: T,
-          onConfirm: () => p(u, v, m)
+          submittedGuildJoinRequestsCount: p,
+          onConfirm: () => E(u, v, m)
         })
       })
     },
-    onRemove: N,
+    onRemove: I,
     onDrop: A,
     canRemove: g,
-    actionsLocation: I
+    actionsLocation: N
   };
   switch (u.field_type) {
     case i.VerificationFormFieldTypes.TERMS:
@@ -142,7 +142,7 @@ function h(e, t, r) {
   }
 }
 
-function p(e, t, r) {
+function E(e, t, r) {
   let l = {
     onCloseRequest: u.NOOP
   };

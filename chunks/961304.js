@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var i, r, a = n("259443"),
-  s = n("47770"),
+var i, r, s = n("259443"),
+  a = n("47770"),
   o = n("740197"),
   l = n("376398"),
   u = n("65154");
@@ -21,9 +21,9 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let _ = new a.Logger("Output");
+let _ = new s.Logger("Output");
 (i = r || (r = {})).InteractionRequired = "interactionrequired", i.Speaking = "speaking", i.Video = "video";
-class c extends s.default {
+class c extends a.default {
   play() {
     var e;
     null === (e = this.audioElement) || void 0 === e || e.play()

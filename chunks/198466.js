@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return E
   }
 }), n("47120");
-var i, r, a = n("735250"),
-  s = n("470079"),
+var i, r, s = n("735250"),
+  a = n("470079"),
   o = n("920906"),
   l = n("442837"),
   u = n("481060"),
@@ -20,7 +20,7 @@ function E(e) {
     setConfettiCount: i,
     setShouldFireConfetti: r,
     tooltipProps: _
-  } = e, [E, I] = s.useState(0), T = s.useRef(-1), f = s.useRef(!0), S = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
+  } = e, [E, I] = a.useState(0), T = a.useRef(-1), f = a.useRef(!0), S = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
     scaleFactor: h
   } = (0, o.useSpring)({
     from: {
@@ -34,16 +34,16 @@ function E(e) {
       friction: 7
     }
   });
-  return (s.useEffect(() => () => {
+  return (a.useEffect(() => () => {
     f.current = !1
-  }, []), S) ? (0, a.jsx)(a.Fragment, {
+  }, []), S) ? (0, s.jsx)(s.Fragment, {
     children: t
-  }) : (0, a.jsx)(o.animated.div, {
+  }) : (0, s.jsx)(o.animated.div, {
     className: c.confettiTriggerWrapper,
     style: {
       transform: h.to(e => "scale(".concat(e, ")"))
     },
-    children: (0, a.jsx)(u.Clickable, {
+    children: (0, s.jsx)(u.Clickable, {
       className: c.confettiTrigger,
       onMouseDown: () => {
         I(1), r(!0), i(e => Math.min(e + 2, 200)), window.clearTimeout(T.current), T.current = window.setTimeout(() => {
@@ -73,15 +73,15 @@ t.default = function(e) {
     isFiring: i
   } = e, {
     cannon: r,
-    createMultipleConfettiAt: a
-  } = s.useContext(_.ConfettiCannonContext), o = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion);
-  return s.useEffect(() => () => {
+    createMultipleConfettiAt: s
+  } = a.useContext(_.ConfettiCannonContext), o = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion);
+  return a.useEffect(() => () => {
     null == r || r.clearConfetti()
-  }, [r]), s.useEffect(() => {
+  }, [r]), a.useEffect(() => {
     if (!i || o || null == n.current) return;
     let e = n.current.getBoundingClientRect(),
       r = e.left + e.width / 2;
-    a(r, e.top + e.height / 2, {
+    s(r, e.top + e.height / 2, {
       velocity: {
         type: "static-random",
         minValue: {
@@ -94,5 +94,5 @@ t.default = function(e) {
         }
       }
     }, Math.max(t, 20))
-  }, [t, n, a, i, o]), null
+  }, [t, n, s, i, o]), null
 }

@@ -28,13 +28,13 @@ var a = s("735250"),
   x = s("337344"),
   L = s("275296"),
   O = s("203377"),
-  A = s("981631"),
-  p = s("689938"),
+  p = s("981631"),
+  A = s("689938"),
   M = s("75518"),
   D = s("585512"),
   v = s("179517"),
-  G = s("79829");
-let j = (0, E.makeLazy)({
+  j = s("79829");
+let G = (0, E.makeLazy)({
     createPromise: () => s.e("5609").then(s.bind(s, "336231")),
     webpackId: "336231"
   }),
@@ -48,12 +48,12 @@ function P(e) {
   return l.useEffect(() => {
     i(t.name)
   }, [t.name]), (0, a.jsx)(u.FormItem, {
-    title: p.default.Messages.FORM_LABEL_ROLE_NAME,
+    title: A.default.Messages.FORM_LABEL_ROLE_NAME,
     required: !0,
     children: (0, a.jsx)(u.TextInput, {
       type: "text",
       value: n,
-      maxLength: A.ROLE_NAME_MAX_LENGTH,
+      maxLength: p.ROLE_NAME_MAX_LENGTH,
       onChange: function(e) {
         i(e), U(t.id, e)
       },
@@ -69,19 +69,19 @@ function b(e) {
   } = e;
   return (0, a.jsxs)(u.FormItem, {
     className: M.colorPicker,
-    title: p.default.Messages.FORM_LABEL_ROLE_COLOR,
+    title: A.default.Messages.FORM_LABEL_ROLE_COLOR,
     required: !0,
     children: [(0, a.jsx)(u.FormText, {
       className: M.colorDescription,
-      children: p.default.Messages.ROLE_COLOR_HELP
-    }), (0, a.jsx)(j, {
-      defaultColor: A.DEFAULT_ROLE_COLOR,
-      colors: A.ROLE_COLORS,
+      children: A.default.Messages.ROLE_COLOR_HELP
+    }), (0, a.jsx)(G, {
+      defaultColor: p.DEFAULT_ROLE_COLOR,
+      colors: p.ROLE_COLORS,
       value: t.color,
       disabled: s,
       onChange: e => {
         var s, a;
-        return s = t, a = e, void(s.color !== a && (a !== A.DEFAULT_ROLE_COLOR || 0 !== s.color) && (a === A.DEFAULT_ROLE_COLOR && (a = 0), (0, g.updateRoleColor)(s.id, a)))
+        return s = t, a = e, void(s.color !== a && (a !== p.DEFAULT_ROLE_COLOR || 0 !== s.color) && (a === p.DEFAULT_ROLE_COLOR && (a = 0), (0, g.updateRoleColor)(s.id, a)))
       },
       customPickerPosition: "right"
     }, t.id)]
@@ -94,18 +94,18 @@ function B(e) {
     role: i,
     guildId: r
   } = e;
-  let o = (n = p.default.Messages.ROLE_SAMPLE_MESSAGE, l.useMemo(() => {
+  let o = (n = A.default.Messages.ROLE_SAMPLE_MESSAGE, l.useMemo(() => {
       let e = (0, I.createMessageRecord)({
         ...(0, T.default)({
           channelId: "1337",
           content: n
         }),
-        state: A.MessageStates.SENT,
+        state: p.MessageStates.SENT,
         id: "31337"
       });
       return e.author = new f.default({
         id: "313337",
-        username: p.default.Messages.WUMPUS,
+        username: A.default.Messages.WUMPUS,
         discriminator: "0000",
         bot: !1
       }), e.author.getAvatarURL = () => s("52008"), e
@@ -119,7 +119,7 @@ function B(e) {
       name: i.name
     },
     E = {
-      src: G,
+      src: j,
       name: i.name
     },
     m = (0, _.useRoleIconForPreview)(r, i);
@@ -128,7 +128,7 @@ function B(e) {
       className: M.previewContainer,
       "aria-hidden": !0,
       children: [(0, a.jsx)("div", {
-        className: (0, N.getThemeClass)(A.ThemeTypes.LIGHT),
+        className: (0, N.getThemeClass)(p.ThemeTypes.LIGHT),
         children: (0, a.jsx)("div", {
           className: M.messageContainer,
           children: (0, a.jsx)(S.default, {
@@ -139,7 +139,7 @@ function B(e) {
           })
         })
       }), (0, a.jsx)("div", {
-        className: (0, N.getThemeClass)(A.ThemeTypes.DARK),
+        className: (0, N.getThemeClass)(p.ThemeTypes.DARK),
         children: (0, a.jsx)("div", {
           className: M.messageContainer,
           children: (0, a.jsx)(S.default, {
@@ -165,16 +165,16 @@ function y(e) {
       value: t.hoist,
       onChange: e => (0, g.toggleRoleSettings)(t.id, e, t.mentionable),
       hideBorder: !0,
-      children: p.default.Messages.FORM_LABEL_HOIST_DESCRIPTION
+      children: A.default.Messages.FORM_LABEL_HOIST_DESCRIPTION
     }), (0, a.jsx)(u.FormDivider, {
       className: M.divider
     }), (0, a.jsx)(u.FormSwitch, {
       disabled: s,
       value: t.mentionable,
       onChange: e => (0, g.toggleRoleSettings)(t.id, t.hoist, e),
-      note: p.default.Messages.FORM_LABEL_MENTIONABLE_DESCRIPTION,
+      note: A.default.Messages.FORM_LABEL_MENTIONABLE_DESCRIPTION,
       hideBorder: !0,
-      children: p.default.Messages.FORM_LABEL_MENTIONABLE.format()
+      children: A.default.Messages.FORM_LABEL_MENTIONABLE.format()
     })]
   })
 }

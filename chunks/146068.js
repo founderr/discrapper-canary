@@ -52,10 +52,10 @@ function h(e) {
     width: t,
     height: a,
     primaryTintColor: h,
-    secondaryTintColor: p,
-    ...E
+    secondaryTintColor: E,
+    ...T
   } = e, {
-    primaryColorsTransformed: T,
+    primaryColorsTransformed: p,
     secondaryColorsTransformed: C
   } = (0, r.getTransformedBadgeColors)({
     primaryBaseColors: o,
@@ -63,15 +63,15 @@ function h(e) {
     primaryTintLuminances: d,
     primaryLuminanceWeights: u,
     secondaryBaseColors: c,
-    secondaryTintColor: p,
+    secondaryTintColor: E,
     secondaryTintLuminances: f,
     secondaryLuminanceWeights: m
   }), {
-    styleContent: x,
-    containerId: _
-  } = (0, s.useClanBannerStyleInjection)(T, C);
+    styleContent: _,
+    containerId: x
+  } = (0, s.useClanBannerStyleInjection)(p, C);
   return (0, n.jsxs)("svg", {
-    ...E,
+    ...T,
     "aria-label": i.default.Messages.CLAN_LOOK_BANNER,
     width: t,
     height: a,
@@ -85,15 +85,15 @@ function h(e) {
           y1: "0",
           y2: "1",
           children: [(0, n.jsx)("stop", {
-            stopColor: T[2],
+            stopColor: p[2],
             offset: "0%"
           }), (0, n.jsx)("stop", {
-            stopColor: T[0],
+            stopColor: p[0],
             offset: "100%"
           })]
         })
       }), (0, n.jsx)("style", {
-        children: x
+        children: _
       })]
     }), (0, n.jsx)("use", {
       href: "".concat(l, "#sky"),
@@ -102,7 +102,7 @@ function h(e) {
       }
     }), (0, n.jsx)("use", {
       href: "".concat(l, "#wrapper-layer"),
-      id: _
+      id: x
     })]
   })
 }

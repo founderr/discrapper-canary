@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return l
   },
   MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID: function() {
-    return a
+    return s
   },
   MESSAGE_PRE_TIMESTAMP_PAUSE_LABEL_SEGMENT_ID: function() {
-    return s
+    return a
   },
   MESSAGE_REACTIONS_LABEL_SEGMENT_ID: function() {
     return o
@@ -18,17 +18,17 @@ n.r(t), n.d(t, {
 });
 var i = n("153124"),
   r = n("689938");
-let a = (0, i.uid)(),
-  s = (0, i.uid)(),
+let s = (0, i.uid)(),
+  a = (0, i.uid)(),
   o = (0, i.uid)(),
   l = (0, i.uid)();
 
 function u() {
   [{
-    id: a,
+    id: s,
     text: ","
   }, {
-    id: s,
+    id: a,
     text: ","
   }, {
     id: o,

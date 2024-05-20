@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 }), n("653041"), n("47120"), n("411104");
 var i = n("259443"),
   r = n("198584"),
-  a = n("444675");
+  s = n("444675");
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,7 +16,7 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let o = "1" === a.env.KV_STORAGE_LOGGING,
+let o = "1" === s.env.KV_STORAGE_LOGGING,
   l = new i.Logger("Runtime");
 class u {
   static nextId() {
@@ -86,4 +86,4 @@ class u {
     }), this.addDatabaseStateCallback((e, t) => l.info("".concat(e, " (state: ").concat(t, ")")))), this.initialized = !0)
   }
 }
-s(u, "counter", 0), s(u, "pending", new Map), s(u, "initialized", !1), s(u, "dbStateCallbacks", []), s(u, "completionCallbacks", [])
+a(u, "counter", 0), a(u, "pending", new Map), a(u, "initialized", !1), a(u, "dbStateCallbacks", []), a(u, "completionCallbacks", [])

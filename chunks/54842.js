@@ -24,8 +24,8 @@ var a = s("735250"),
   x = s("518513"),
   L = s("168179"),
   O = s("348986"),
-  A = s("930065"),
-  p = s("345669");
+  p = s("930065"),
+  A = s("345669");
 let M = () => [{
     icon: T.default,
     color: o.default.unsafe_rawColors.GREEN_360.css,
@@ -65,7 +65,7 @@ let M = () => [{
     name: "Pokemon GO Paris",
     position: [-230, -100]
   }, {
-    iconSrc: A,
+    iconSrc: p,
     name: "Python",
     position: [-180, -100],
     faded: !0,
@@ -81,7 +81,7 @@ let M = () => [{
     position: [-320, -30],
     rightAlign: !0
   }, {
-    iconSrc: p,
+    iconSrc: A,
     name: "Sneaker Fans",
     position: [-250, 40]
   }, {
@@ -119,7 +119,7 @@ let M = () => [{
       })]
     })
   },
-  G = e => {
+  j = e => {
     let {
       iconSrc: t,
       name: s,
@@ -167,7 +167,7 @@ t.default = e => {
     children: [(0, a.jsxs)("div", {
       className: g.banner,
       ref: e => I(e),
-      children: [D.map(e => (0, a.jsx)(G, {
+      children: [D.map(e => (0, a.jsx)(j, {
         ...e,
         imageCoordinates: [s, i]
       }, e.name)), (0, a.jsx)("img", {

@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
 var i, r = n("392711"),
-  a = n.n(r),
-  s = n("442837"),
+  s = n.n(r),
+  a = n("442837"),
   o = n("570140"),
   l = n("70956");
 
@@ -21,7 +21,7 @@ let d = {
   },
   _ = d,
   c = 1 * l.default.Millis.HOUR;
-class E extends(i = s.default.DeviceSettingsStore) {
+class E extends(i = a.default.DeviceSettingsStore) {
   initialize(e) {
     _ = null != e ? e : d
   }
@@ -43,7 +43,7 @@ class E extends(i = s.default.DeviceSettingsStore) {
   }
   shouldPerformLatencyTest(e) {
     var t, n;
-    return null === _.preferredRegions || !a().isEqual(e, null !== (t = _.lastGeoRankedOrder) && void 0 !== t ? t : []) || Date.now() - (null !== (n = _.lastTestTimestamp) && void 0 !== n ? n : 0) >= c
+    return null === _.preferredRegions || !s().isEqual(e, null !== (t = _.lastGeoRankedOrder) && void 0 !== t ? t : []) || Date.now() - (null !== (n = _.lastTestTimestamp) && void 0 !== n ? n : 0) >= c
   }
 }
 u(E, "displayName", "RTCRegionStore"), u(E, "persistKey", "RTCRegionStore"), u(E, "migrations", [e => (e.preferredRegion ? e.preferredRegions = [e.preferredRegion] : e.preferredRegions = null, delete e.preferredRegion, e)]), t.default = new E(o.default, {

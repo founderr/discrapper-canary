@@ -23,25 +23,25 @@ function h(e) {
     guildId: a,
     progress: r,
     traitsToHighlight: h = [],
-    maskDescription: p,
-    maskTraits: E
-  } = e, T = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(a)), {
+    maskDescription: E,
+    maskTraits: T
+  } = e, p = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(a)), {
     interests: C,
-    description: x,
-    playstyle: _,
+    description: _,
+    playstyle: x,
     wildcardDescriptors: g,
-    brandPrimaryColor: I
-  } = r, N = (0, o.useToken)(o.tokens.colors.TEXT_BRAND), v = Array.from(C);
+    brandPrimaryColor: N
+  } = r, I = (0, o.useToken)(o.tokens.colors.TEXT_BRAND), v = Array.from(C);
   return (0, n.jsxs)("div", {
     children: [(0, n.jsxs)("div", {
-      className: s()(m.description, p ? m.descriptionBorderMask : void 0),
+      className: s()(m.description, E ? m.descriptionBorderMask : void 0),
       children: [(0, n.jsx)("div", {
-        className: p ? m.descriptionMask : void 0
+        className: E ? m.descriptionMask : void 0
       }), (0, n.jsx)(o.Heading, {
         variant: "heading-md/medium",
         color: "header-primary",
         lineClamp: 1,
-        children: null == T ? void 0 : T.name
+        children: null == p ? void 0 : p.name
       }), (0, n.jsxs)("div", {
         className: m.clanInfoRow,
         children: [(0, n.jsx)(o.Text, {
@@ -56,21 +56,21 @@ function h(e) {
           variant: "text-xs/normal",
           color: "text-secondary",
           className: m.clanInfoItem,
-          children: null !== (t = (0, u.getPlaystyleTitle)(_)) && void 0 !== t ? t : f.default.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
-        }), null != T && (0, n.jsx)(c.Wildcards, {
+          children: null !== (t = (0, u.getPlaystyleTitle)(x)) && void 0 !== t ? t : f.default.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+        }), null != p && (0, n.jsx)(c.Wildcards, {
           wildcardDescriptors: g,
-          primaryColor: null != I ? I : N.hex()
+          primaryColor: null != N ? N : I.hex()
         })]
       }), (0, n.jsx)(o.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
         className: m.descriptionText,
-        children: (null == x ? void 0 : x.length) > 0 ? x : f.default.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
+        children: (null == _ ? void 0 : _.length) > 0 ? _ : f.default.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
       })]
     }), (0, n.jsxs)("div", {
-      className: s()(m.tagsContainer, E ? m.traitsBorderMask : void 0),
+      className: s()(m.tagsContainer, T ? m.traitsBorderMask : void 0),
       children: [(0, n.jsx)("div", {
-        className: E ? m.traitsMask : void 0
+        className: T ? m.traitsMask : void 0
       }), (0, n.jsxs)("div", {
         className: m.tagsCount,
         children: [(0, n.jsx)(i.TagsIcon, {

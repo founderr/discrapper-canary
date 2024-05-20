@@ -17,29 +17,29 @@ var a = n("442837"),
   f = n("702512"),
   h = n("981631"),
   m = n("689938"),
-  C = n("477237");
-let p = (e, t, n) => {
+  p = n("477237");
+let C = (e, t, n) => {
   let l = t.assets.tooltipSrc;
   switch (e) {
     case f.TooltipActions.STREAM_CTA:
       return {
         header: m.default.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
           gameName: t.title
-        }), body: t.messages.enrollmentTooltip(n), imgSrc: l, imgStyle: C.dropImgPreStreamNotice
+        }), body: t.messages.enrollmentTooltip(n), imgSrc: l, imgStyle: p.dropImgPreStreamNotice
       };
     case f.TooltipActions.TRACK_PROGRESS:
       return {
         header: m.default.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
           gameName: t.title
-        }), body: "", imgSrc: l, imgStyle: C.dropImgProgressTracker
+        }), body: "", imgSrc: l, imgStyle: p.dropImgProgressTracker
       };
     case f.TooltipActions.QUEST_COMPLETION:
       return {
-        header: m.default.Messages.DROPS_QUEST_COMPLETION_TOOLTIP_HEADER, body: t.messages.completionTooltip(n), imgSrc: l, imgStyle: C.dropImgQuestCompletion
+        header: m.default.Messages.DROPS_QUEST_COMPLETION_TOOLTIP_HEADER, body: t.messages.completionTooltip(n), imgSrc: l, imgStyle: p.dropImgQuestCompletion
       };
     case f.TooltipActions.LOADING_INITIAL_PROGRESS:
       return {
-        header: "", body: "", imgSrc: l, imgStyle: C.dropImgPreStreamNotice
+        header: "", body: "", imgSrc: l, imgStyle: p.dropImgPreStreamNotice
       }
   }
 };
@@ -52,17 +52,17 @@ function g(e) {
   return (0, l.jsxs)("div", {
     children: [(0, l.jsx)(s.Text, {
       variant: "text-sm/bold",
-      className: C.progressBarCount,
+      className: p.progressBarCount,
       children: m.default.Messages.DROPS_STREAM_PROGRESS_INDICATOR.format({
         minutesStreamed: r,
         streamLengthRequirement: t
       })
     }), (0, l.jsx)("div", {
-      className: C.progressBarContainer,
+      className: p.progressBarContainer,
       children: (0, l.jsx)("div", {
-        className: C.progressBarOuter,
+        className: p.progressBarOuter,
         children: (0, l.jsx)("div", {
-          className: C.progressBarInner,
+          className: p.progressBarInner,
           style: {
             width: "".concat(i, "%")
           }
@@ -70,7 +70,7 @@ function g(e) {
       })
     }), (0, l.jsxs)(s.Text, {
       variant: "text-xs/medium",
-      className: C.viewerCount,
+      className: p.viewerCount,
       children: ["*", m.default.Messages.DROPS_REQUIRE_NUM_VIEWERS.format({
         numViewers: n
       }), "*"]
@@ -95,7 +95,7 @@ function E(e) {
     body: A,
     imgSrc: L,
     imgStyle: v
-  } = p(n, N, S), x = () => {
+  } = C(n, N, S), x = () => {
     u.default.track(h.AnalyticEvents.DROPS_ACTIVITY_PANEL_POPOVER_CTA_CLICK, {
       user_id: _,
       drops_quest_id: N.dropsQuestId,
@@ -107,24 +107,24 @@ function E(e) {
     t()
   };
   return (0, l.jsxs)("div", {
-    className: C.container,
+    className: p.container,
     children: [(0, l.jsx)("img", {
       src: L,
       alt: "",
       className: v
     }), (0, l.jsx)(s.Clickable, {
-      className: C.__invalid_buttonClose,
+      className: p.__invalid_buttonClose,
       "aria-label": m.default.Messages.CLOSE,
       onClick: R,
       children: (0, l.jsx)(o.default, {
         width: 16,
         height: 16,
-        className: C.closeIcon
+        className: p.closeIcon
       })
     }), n === f.TooltipActions.LOADING_INITIAL_PROGRESS ? (0, l.jsx)(s.Spinner, {
-      className: C.spinner
+      className: p.spinner
     }) : (0, l.jsx)(s.Heading, {
-      className: C.title,
+      className: p.title,
       variant: "heading-md/extrabold",
       children: T
     }), n === f.TooltipActions.TRACK_PROGRESS ? (0, l.jsx)(g, {
@@ -132,7 +132,7 @@ function E(e) {
       viewerCountRequirement: I
     }) : (0, l.jsx)(s.Text, {
       variant: "text-sm/medium",
-      className: C.subTitle,
+      className: p.subTitle,
       children: A
     }), n === f.TooltipActions.QUEST_COMPLETION ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(s.Button, {
@@ -143,8 +143,8 @@ function E(e) {
         },
         children: m.default.Messages.REDEEM
       }), (0, l.jsx)(s.Button, {
-        className: C.linkButtonContainer,
-        innerClassName: C.linkButton,
+        className: p.linkButtonContainer,
+        innerClassName: p.linkButton,
         onClick: R,
         look: s.Button.Looks.LINK,
         fullWidth: !0,
@@ -159,7 +159,7 @@ function E(e) {
       },
       children: m.default.Messages.LEARN_MORE
     }), (0, l.jsx)("div", {
-      className: C.pointer
+      className: p.pointer
     })]
   })
 }

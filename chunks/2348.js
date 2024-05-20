@@ -102,8 +102,8 @@ let R = l.memo(function() {
       isFirstChannel: _,
       isLastChannel: C,
       tooltipDirection: L = "right"
-    } = e, O = (0, f.useIsChecked)(t.id, l.id), A = (0, f.useIsDisabled)(t.id, l.id), p = (0, f.useDisabledTooltip)(t.id, l.id), M = (0, f.useTooltip)(n.id, l.id), D = null != (0, m.default)(n).find(e => e.id === t.id), v = (0, c.useIsChattableChannel)(t.id), G = e => {
-      if (!A) return e.stopPropagation(), (0, u.canChannelBeDefault)(n.id, t.id) ? (0, S.toggleDefaultChannel)(t.id) : (0, o.openModalLazy)(async () => {
+    } = e, O = (0, f.useIsChecked)(t.id, l.id), p = (0, f.useIsDisabled)(t.id, l.id), A = (0, f.useDisabledTooltip)(t.id, l.id), M = (0, f.useTooltip)(n.id, l.id), D = null != (0, m.default)(n).find(e => e.id === t.id), v = (0, c.useIsChattableChannel)(t.id), j = e => {
+      if (!p) return e.stopPropagation(), (0, u.canChannelBeDefault)(n.id, t.id) ? (0, S.toggleDefaultChannel)(t.id) : (0, o.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([s.e("99387"), s.e("35641")]).then(s.bind(s, "89216"));
@@ -113,7 +113,7 @@ let R = l.memo(function() {
           startingChannelId: t.id
         })
       }), !0
-    }, j = e => {
+    }, G = e => {
       t.isGuildVocal() ? (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -136,18 +136,18 @@ let R = l.memo(function() {
     };
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Tooltip, {
-        text: null != p ? p : M,
+        text: null != A ? A : M,
         delay: 500,
         position: L,
         children: e => (0, a.jsxs)(o.Clickable, {
           className: i()(h.channelRow, {
             [h.firstChannel]: _,
             [h.lastChannel]: C,
-            [h.disabled]: A
+            [h.disabled]: p
           }),
           ...e,
-          onClick: G,
-          onContextMenu: j,
+          onClick: j,
+          onContextMenu: G,
           children: [(0, a.jsx)("div", {
             className: h.channelInfo,
             children: (0, a.jsxs)("div", {
@@ -161,7 +161,7 @@ let R = l.memo(function() {
                   className: h.channelText,
                   variant: "text-md/medium",
                   lineClamp: 1,
-                  color: A ? "text-muted" : "text-normal",
+                  color: p ? "text-muted" : "text-normal",
                   children: t.name
                 })
               }), D ? (0, a.jsxs)(a.Fragment, {
@@ -181,7 +181,7 @@ let R = l.memo(function() {
               "aria-checked": O,
               value: O,
               type: o.Checkbox.Types.INVERTED,
-              disabled: A,
+              disabled: p,
               color: v ? r.default.colors.TEXT_BRAND.css : r.default.colors.BUTTON_SECONDARY_BACKGROUND.css,
               innerClassName: h.checkboxInner,
               displayOnly: !0

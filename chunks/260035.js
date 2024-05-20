@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("887024"),
-  s = n("745510"),
+  s = n("887024"),
+  a = n("745510"),
   o = n("675654"),
   l = n("724734");
 
@@ -20,19 +20,19 @@ function u(e) {
     for (let n of c.current) n(e, t)
   }, []);
   return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(s.ConfettiCannonContextProvider, {
+    children: [(0, i.jsx)(a.ConfettiCannonContextProvider, {
       confettiCanvas: d,
       spriteCanvas: n,
       baseConfig: o.COMMON_CONFETTI_BASE_CONFIG,
       addClickListener: f,
       removeClickListener: T,
       children: t
-    }), (0, i.jsx)(a.ConfettiCanvas, {
+    }), (0, i.jsx)(s.ConfettiCanvas, {
       ref: _,
       className: l.canvas,
       environment: o.COMMON_CONFETTI_ENVIRONMENT,
       onClick: E ? S : void 0
-    }), (0, i.jsx)(a.SpriteCanvas, {
+    }), (0, i.jsx)(s.SpriteCanvas, {
       ref: u,
       colors: o.COMMON_CONFETTI_COLORS,
       sprites: o.COMMON_CONFETTI_SPRITES,

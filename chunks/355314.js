@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("442837"),
   l = n("481060"),
   u = n("310752"),
@@ -26,10 +26,10 @@ var i = n("735250"),
 function N(e) {
   let t, {
       onClose: n,
-      fileSize: a,
+      fileSize: s,
       ...N
     } = e,
-    p = null != a && f.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < a,
+    p = null != s && f.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < s,
     {
       isLoading: O,
       suggestedPremiumType: C
@@ -79,7 +79,7 @@ function N(e) {
     });
   return (0, i.jsx)(T.default, {
     artElement: L,
-    artContainerClassName: s()(m.artContainer),
+    artContainerClassName: a()(m.artContainer),
     enableArtBoxShadow: !1,
     type: f.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
     title: A.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,

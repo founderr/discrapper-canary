@@ -34,18 +34,18 @@ function h(e) {
     onDeleteEditState: L
   } = e, {
     editStateId: O
-  } = (0, c.useEditStateContext)(), A = (0, r.useStateFromStores)([d.default], () => d.default.getSubscriptionListing(O)), p = (0, u.useRoleSubscriptionSettingsDisabled)(), M = l.useMemo(() => {
+  } = (0, c.useEditStateContext)(), p = (0, r.useStateFromStores)([d.default], () => d.default.getSubscriptionListing(O)), A = (0, u.useRoleSubscriptionSettingsDisabled)(), M = l.useMemo(() => {
     let e = n.filter(e => e.id !== O).map(e => {
       var t;
       return null === (t = e.subscription_plans[0]) || void 0 === t ? void 0 : t.price
     });
     return null == h ? void 0 : h.filter(t => !e.includes(t))
-  }, [n, O, h]), D = null == A, v = null !== (t = null == A ? void 0 : A.published) && void 0 !== t && t, G = null !== (s = null == A ? void 0 : A.archived) && void 0 !== s && s;
+  }, [n, O, h]), D = null == p, v = null !== (t = null == p ? void 0 : p.published) && void 0 !== t && t, j = null !== (s = null == p ? void 0 : p.archived) && void 0 !== s && s;
   return (0, a.jsxs)("div", {
     className: g.body,
     children: [null != R && (0, a.jsx)(E.default, {
       children: R.getAnyErrorMessage()
-    }), !v && !p && !G && (0, a.jsxs)("div", {
+    }), !v && !A && !j && (0, a.jsxs)("div", {
       className: g.publishListing,
       children: [(0, a.jsxs)("div", {
         children: [(0, a.jsx)(o.Heading, {

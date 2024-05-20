@@ -18,37 +18,37 @@ t.default = function(e) {
     index: r,
     isDragEnabled: m,
     isDropHovered: h,
-    onDrop: p,
-    onEdit: E,
-    onRemove: T,
+    onDrop: E,
+    onEdit: T,
+    onRemove: p,
     canRemove: C,
-    title: x,
-    actionsLocation: _
-  } = e, g = a.values, I = g.slice(0, 1), N = g.length - I.length;
+    title: _,
+    actionsLocation: x
+  } = e, g = a.values, N = g.slice(0, 1), I = g.length - N.length;
   return (0, n.jsxs)(d.default, {
     field: a,
     index: r,
     isDragEnabled: m,
     isDropHovered: h,
-    onDrop: p,
-    onEdit: E,
-    onRemove: T,
-    title: x,
+    onDrop: E,
+    onEdit: T,
+    onRemove: p,
+    title: _,
     canRemove: C,
-    actionsLocation: _,
+    actionsLocation: x,
     children: [(0, n.jsx)(c.TermsFieldBody, {
       className: s()(f.fieldBackground, {
-        [f.withFooter]: 0 !== N
+        [f.withFooter]: 0 !== I
       }),
-      terms: I,
+      terms: N,
       channelId: t
-    }), 0 !== N && (0, n.jsxs)(l.Clickable, {
+    }), 0 !== I && (0, n.jsxs)(l.Clickable, {
       className: s()(f.fieldFooterContainer, f.clickable),
-      onClick: E,
+      onClick: T,
       children: [(0, n.jsx)(l.FormText, {
         className: f.clickable,
         children: u.default.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({
-          count: N
+          count: I
         })
       }), (0, n.jsx)(o.default, {
         className: f.termsFieldCaretIcon,

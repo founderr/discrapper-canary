@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 });
 var i = n("928801"),
   r = n("549895"),
-  a = n("885110");
+  s = n("885110");
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -18,10 +18,10 @@ function s(e, t, n) {
 }
 class o extends i.default {
   getInitialState() {
-    return a.default.getLocalPresence()
+    return s.default.getLocalPresence()
   }
   getNextState() {
-    return a.default.getLocalPresence()
+    return s.default.getLocalPresence()
   }
   shouldCommit() {
     return this.socket.isSessionEstablished()
@@ -32,9 +32,9 @@ class o extends i.default {
       since: n,
       activities: i,
       afk: r,
-      broadcast: a
+      broadcast: s
     } = e;
-    this.socket.presenceUpdate(t, n, i, r, a)
+    this.socket.presenceUpdate(t, n, i, r, s)
   }
   handleConnectionOpen() {
     let e = !this.switchingAccounts;
@@ -44,6 +44,6 @@ class o extends i.default {
     this.switchingAccounts = !0, this.reset(), this.emitPresenceUpdate(this.getState())
   }
   constructor(e) {
-    super(!1), s(this, "socket", void 0), s(this, "switchingAccounts", void 0), s(this, "didCommit", void 0), this.socket = e, this.switchingAccounts = !1, this.didCommit = (0, r.default)(5, 2e4, this.emitPresenceUpdate.bind(this))
+    super(!1), a(this, "socket", void 0), a(this, "switchingAccounts", void 0), a(this, "didCommit", void 0), this.socket = e, this.switchingAccounts = !1, this.didCommit = (0, r.default)(5, 2e4, this.emitPresenceUpdate.bind(this))
   }
 }

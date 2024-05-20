@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return r
   },
   UNSAFE_RE: function() {
-    return a
+    return s
   },
   UNSAFE_RE_ALL: function() {
-    return s
+    return a
   }
 });
 let i = /\{.+?\}/,
   r = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/,
-  a = /!!/,
-  s = /!!/g
+  s = /!!/,
+  a = /!!/g

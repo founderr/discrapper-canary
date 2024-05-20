@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return G
+    return j
   }
 }), s("47120");
 var a = s("735250"),
@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("770436"),
   L = s("65226"),
   O = s("689938"),
-  A = s("233324"),
-  p = s("84885");
+  p = s("233324"),
+  A = s("84885");
 let M = s("74773"),
   D = s("210657");
 
@@ -60,14 +60,14 @@ function v(e) {
         return (0, a.jsx)("div", {
           ref: l,
           ...r,
-          className: A.listContainer,
+          className: p.listContainer,
           children: null == t ? void 0 : t.map(e => {
             let t = n === e.id,
               l = i === e.id;
             return (0, a.jsx)(x.default, {
               guildId: s,
               ref: t ? o : l ? u : null,
-              className: A.row,
+              className: p.row,
               onHeaderClick: c,
               onContentClick: E,
               log: e,
@@ -80,7 +80,7 @@ function v(e) {
   })
 }
 
-function G() {
+function j() {
   let e, t;
   let {
     guildId: s,
@@ -89,8 +89,8 @@ function G() {
     isLoading: d,
     isLoadingNextPage: S,
     showLoadMore: x,
-    hasError: G,
-    hasOlderLogs: j,
+    hasError: j,
+    hasOlderLogs: G,
     rawLogs: U,
     theme: P,
     hide: b
@@ -187,43 +187,43 @@ function G() {
     },
     ee = () => (0, a.jsx)(E.Spinner, {
       type: E.Spinner.Type.SPINNING_CIRCLE,
-      className: A.spinner
+      className: p.spinner
     });
   return (0, a.jsx)("div", {
     ref: K,
-    className: p.customColumn,
+    className: A.customColumn,
     children: (0, a.jsx)("div", {
-      className: p.customContainer,
+      className: A.customContainer,
       children: (0, a.jsx)(E.AdvancedScrollerAuto, {
-        className: i()(p.customScroller, A.scroller),
+        className: i()(A.customScroller, p.scroller),
         onScroll: () => {
           Y() && J()
         },
         ref: k,
         children: (0, a.jsxs)("div", {
-          className: A.content,
+          className: p.content,
           children: [(0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)("div", {
-              className: A.customHeader,
+              className: p.customHeader,
               children: (0, a.jsx)(E.FormTitle, {
                 tag: E.FormTitleTags.H1,
-                className: A.formTitle,
+                className: p.formTitle,
                 children: O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG
               })
             }), (0, a.jsx)(E.FormDivider, {
-              className: A.divider
+              className: p.divider
             })]
           }), (0, a.jsx)(L.GuildAuditLogSearch, {
-            className: A.__invalid_search
+            className: p.__invalid_search
           }), (() => {
             if (b) return (0, a.jsx)(_.default, {});
             if (d || r) return ee();
             if ((null == F ? void 0 : F.length) === 0) {
-              let e = G ? O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
-                t = G ? O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
+              let e = j ? O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
+                t = j ? O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : O.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
               return (0, a.jsxs)(C.default, {
                 theme: P,
-                className: A.__invalid_empty,
+                className: p.__invalid_empty,
                 children: [(0, a.jsx)(C.EmptyStateImage, {
                   darkSrc: M,
                   lightSrc: D,
@@ -254,9 +254,9 @@ function G() {
               scroller: k.current
             })
           })(), (() => {
-            if (x && j && !b) return (0, a.jsx)(E.Button, {
+            if (x && G && !b) return (0, a.jsx)(E.Button, {
               color: E.Button.Colors.PRIMARY,
-              className: A.__invalid_loadMore,
+              className: p.__invalid_loadMore,
               onClick: J,
               children: O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE
             })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return p
   }
 }), s("47120");
 var a = s("735250"),
@@ -29,18 +29,18 @@ var a = s("735250"),
   L = s("689938"),
   O = s("169769");
 
-function A(e) {
+function p(e) {
   var t, s;
   let {
     guildId: n,
     initialEditStateId: r,
-    allSubscriptionListings: A,
-    priceTiers: p,
+    allSubscriptionListings: p,
+    priceTiers: A,
     onDeleteEditState: M,
     groupListingId: D,
     onBeforeDispatchNewListing: v,
-    onAfterDispatchNewListing: G
-  } = e, [j, U] = l.useState(r), P = (0, d.useStateFromStores)([m.default], () => m.default.getSubscriptionListing(j)), b = null == P, [B, y] = l.useState(b), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, k = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, w = (0, N.useRoleSubscriptionSettingsDisabled)(), [V] = h.useName(j), [Y] = h.usePriceTier(j), [W] = h.useDescription(j), [z] = h.useImage(j, 1024), K = "" !== V ? V : L.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, Z = "" !== V && null != z && "" !== W && null != Y && !w, X = h.useHasChanges(j), {
+    onAfterDispatchNewListing: j
+  } = e, [G, U] = l.useState(r), P = (0, d.useStateFromStores)([m.default], () => m.default.getSubscriptionListing(G)), b = null == P, [B, y] = l.useState(b), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, k = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, w = (0, N.useRoleSubscriptionSettingsDisabled)(), [V] = h.useName(G), [Y] = h.usePriceTier(G), [W] = h.useDescription(G), [z] = h.useImage(G, 1024), K = "" !== V ? V : L.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, Z = "" !== V && null != z && "" !== W && null != Y && !w, X = h.useHasChanges(G), {
     loading: Q,
     error: J,
     handleCreateOrUpdateFromEditState: q
@@ -98,17 +98,17 @@ function A(e) {
           look: u.Button.Looks.BLANK,
           className: O.cancel,
           onClick: () => {
-            h.clearEditState(j), b ? null == M || M() : y(!1)
+            h.clearEditState(G), b ? null == M || M() : y(!1)
           },
           children: L.default.Messages.CANCEL
         }), (0, a.jsx)(u.Button, {
           onClick: () => q({
             guildId: n,
-            editStateId: j,
+            editStateId: G,
             groupListingId: D,
             onBeforeDispatchNewListing: v,
             onAfterDispatchNewListing: e => {
-              U(e.id), null == G || G(e)
+              U(e.id), null == j || j(e)
             }
           }),
           disabled: !Z || !X,
@@ -124,12 +124,12 @@ function A(e) {
         })
       })]
     }), B && (0, a.jsx)(g.EditStateContextProvider, {
-      editStateId: j,
+      editStateId: G,
       guildId: n,
       groupListingId: D,
       children: (0, a.jsx)(R.default, {
-        allSubscriptionListings: A,
-        priceTiers: p,
+        allSubscriptionListings: p,
+        priceTiers: A,
         loading: es,
         error: null != J ? J : ee,
         handlePublishTier: () => {

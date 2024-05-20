@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("913527"),
   l = n.n(o),
   u = n("304497"),
@@ -44,17 +44,17 @@ function b(e) {
     width: t = 12,
     height: n = 8,
     color: r = "currentColor",
-    className: a,
-    foreground: s
+    className: s,
+    foreground: a
   } = e;
   return (0, i.jsx)("svg", {
-    className: a,
+    className: s,
     width: t,
     height: n,
     viewBox: "0 0 12 8",
     children: (0, i.jsx)("path", {
       d: "M0.809739 3.59646L5.12565 0.468433C5.17446 0.431163 5.23323 0.408043 5.2951 0.401763C5.35698 0.395482 5.41943 0.406298 5.4752 0.432954C5.53096 0.45961 5.57776 0.50101 5.61013 0.552343C5.64251 0.603676 5.65914 0.662833 5.6581 0.722939V2.3707C10.3624 2.3707 11.2539 5.52482 11.3991 7.21174C11.4028 7.27916 11.3848 7.34603 11.3474 7.40312C11.3101 7.46021 11.2554 7.50471 11.1908 7.53049C11.1262 7.55626 11.0549 7.56204 10.9868 7.54703C10.9187 7.53201 10.857 7.49695 10.8104 7.44666C8.72224 5.08977 5.6581 5.63359 5.6581 5.63359V7.28135C5.65831 7.34051 5.64141 7.39856 5.60931 7.44894C5.5772 7.49932 5.53117 7.54004 5.4764 7.5665C5.42163 7.59296 5.3603 7.60411 5.29932 7.59869C5.23834 7.59328 5.18014 7.57151 5.13128 7.53585L0.809739 4.40892C0.744492 4.3616 0.691538 4.30026 0.655067 4.22975C0.618596 4.15925 0.599609 4.08151 0.599609 4.00269C0.599609 3.92386 0.618596 3.84612 0.655067 3.77562C0.691538 3.70511 0.744492 3.64377 0.809739 3.59646Z",
-      className: s,
+      className: a,
       fill: r
     })
   })
@@ -65,7 +65,7 @@ function G(e) {
     width: t = 18,
     height: n = 18,
     className: r,
-    foreground: a
+    foreground: s
   } = e;
   return (0, i.jsx)("svg", {
     className: r,
@@ -75,24 +75,24 @@ function G(e) {
     children: (0, i.jsx)("path", {
       fill: "#3ba55c",
       d: "M0 8h14.2l-3.6-3.6L12 3l6 6-6 6-1.4-1.4 3.6-3.6H0",
-      className: a
+      className: s
     })
   })
 }
 
-function w(e, t, n, r, a) {
-  let s, o, l;
+function w(e, t, n, r, s) {
+  let a, o, l;
   let {
     iconClass: d,
     iconSize: _
-  } = a, c = null == t || "" === t || Array.isArray(t) && 0 === t.length, E = (0, m.getMessageStickers)(e).length > 0, I = null != e.interaction, T = e.hasFlag(y.MessageFlags.IS_VOICE_MESSAGE), f = e.isPoll(), h = e.type === y.MessageTypes.POLL_RESULT;
-  if (n) s = P.default.Messages.REPLY_QUOTE_MESSAGE_BLOCKED;
-  else if (e.type === y.MessageTypes.CHANNEL_PINNED_MESSAGE) s = P.default.Messages.MESSAGE_PINNED;
+  } = s, c = null == t || "" === t || Array.isArray(t) && 0 === t.length, E = (0, m.getMessageStickers)(e).length > 0, I = null != e.interaction, T = e.hasFlag(y.MessageFlags.IS_VOICE_MESSAGE), f = e.isPoll(), h = e.type === y.MessageTypes.POLL_RESULT;
+  if (n) a = P.default.Messages.REPLY_QUOTE_MESSAGE_BLOCKED;
+  else if (e.type === y.MessageTypes.CHANNEL_PINNED_MESSAGE) a = P.default.Messages.MESSAGE_PINNED;
   else if (c) {
     if (f) {
       var A, R;
       o = null == e ? void 0 : null === (R = e.poll) || void 0 === R ? void 0 : null === (A = R.question) || void 0 === A ? void 0 : A.text
-    } else h ? s = (0, S.getPollResultsReplyPreview)(e) : E ? s = P.default.Messages.REPLY_QUOTE_STICKER : I ? s = P.default.Messages.REPLY_QUOTE_COMMAND : T ? s = P.default.Messages.REPLY_QUOTE_VOICE_MESSAGE : (s = P.default.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, l = (0, i.jsx)(p.default, {
+    } else h ? a = (0, S.getPollResultsReplyPreview)(e) : E ? a = P.default.Messages.REPLY_QUOTE_STICKER : I ? a = P.default.Messages.REPLY_QUOTE_COMMAND : T ? a = P.default.Messages.REPLY_QUOTE_VOICE_MESSAGE : (a = P.default.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, l = (0, i.jsx)(p.default, {
       className: d,
       width: _,
       height: _
@@ -123,7 +123,7 @@ function w(e, t, n, r, a) {
     width: _,
     height: _
   })), {
-    contentPlaceholder: s,
+    contentPlaceholder: a,
     renderedContent: o,
     icon: l
   }
@@ -133,14 +133,14 @@ function k(e) {
   let t;
   let {
     repliedAuthor: n,
-    baseAuthor: a,
+    baseAuthor: s,
     baseMessage: o,
     referencedMessage: u,
     renderPopout: S
   } = e, m = r.useMemo(() => null != S && u.state === h.ReferencedMessageState.LOADED ? e => S(e, u.message) : void 0, [u, S]), N = function(e, t, n) {
     let {
       referencedMessage: r,
-      compact: a,
+      compact: s,
       isReplyAuthorBlocked: o,
       repliedAuthor: l,
       showAvatarPopout: u,
@@ -150,7 +150,7 @@ function k(e) {
     } = e, {
       analyticsLocations: f
     } = (0, c.default)(_.default.AVATAR);
-    if (a || r.state !== h.ReferencedMessageState.LOADED || o) return (0, i.jsx)("div", {
+    if (s || r.state !== h.ReferencedMessageState.LOADED || o) return (0, i.jsx)("div", {
       className: U.replyBadge,
       children: (0, i.jsx)(b, {
         className: U.replyIcon
@@ -163,17 +163,17 @@ function k(e) {
       className: U.ticketIcon
     });
     let S = () => {
-      var e, n, a, o, u;
-      return e = r.message.author, n = l, a = t, o = E, u = I, (0, i.jsx)("img", {
+      var e, n, s, o, u;
+      return e = r.message.author, n = l, s = t, o = E, u = I, (0, i.jsx)("img", {
         alt: "",
-        src: (null == n ? void 0 : n.guildMemberAvatar) != null && null != a ? (0, g.getGuildMemberAvatarURLSimple)({
-          guildId: a,
+        src: (null == n ? void 0 : n.guildMemberAvatar) != null && null != s ? (0, g.getGuildMemberAvatarURLSimple)({
+          guildId: s,
           userId: e.id,
           avatar: n.guildMemberAvatar
-        }) : e.getAvatarURL(a, 16),
+        }) : e.getAvatarURL(s, 16),
         onClick: o,
         onContextMenu: u,
-        className: s()({
+        className: a()({
           [U.replyAvatar]: !0,
           [U.clickable]: null != o
         })
@@ -196,18 +196,18 @@ function k(e) {
     let {
       baseMessage: n,
       channel: r,
-      referencedMessage: a,
-      showUsernamePopout: s,
+      referencedMessage: s,
+      showUsernamePopout: a,
       onClickUsername: o,
       onContextMenu: l,
       onPopoutRequestClose: u
-    } = e, d = (null == a ? void 0 : a.state) === h.ReferencedMessageState.LOADED ? a.message : void 0;
+    } = e, d = (null == s ? void 0 : s.state) === h.ReferencedMessageState.LOADED ? s.message : void 0;
     return null == d || d.type === y.MessageTypes.USER_JOIN || d.type === y.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE || d.type === y.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || d.type === y.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT || d.type === y.MessageTypes.GUILD_GAMING_STATS_PROMPT ? null : (0, i.jsx)(T.default, {
       message: d,
       channel: r,
       compact: !0,
       withMentionPrefix: (0, A.default)(n, d),
-      showPopout: s,
+      showPopout: a,
       renderPopout: t,
       onClick: o,
       onContextMenu: l,
@@ -219,7 +219,7 @@ function k(e) {
       content: t,
       referencedMessage: n,
       isReplyAuthorBlocked: r
-    } = e, a = n.state !== h.ReferencedMessageState.DELETED ? e.onClickReply : void 0;
+    } = e, s = n.state !== h.ReferencedMessageState.DELETED ? e.onClickReply : void 0;
     switch (n.state) {
       case h.ReferencedMessageState.LOADED: {
         let {
@@ -232,8 +232,8 @@ function k(e) {
         });
         return (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(d.Clickable, {
-            className: s()(U.repliedTextPreview, U.clickable),
-            onClick: a,
+            className: a()(U.repliedTextPreview, U.clickable),
+            onClick: s,
             children: (0, i.jsx)(d.BlockInteractions, {
               children: null != o ? o : (0, i.jsx)("span", {
                 className: U.repliedTextPlaceholder,
@@ -245,8 +245,8 @@ function k(e) {
       }
       case h.ReferencedMessageState.NOT_LOADED:
         return (0, i.jsx)(d.Clickable, {
-          className: s()(U.repliedTextPreview, U.clickable),
-          onClick: a,
+          className: a()(U.repliedTextPreview, U.clickable),
+          onClick: s,
           children: (0, i.jsx)("span", {
             className: U.repliedTextPlaceholder,
             children: P.default.Messages.REPLY_QUOTE_MESSAGE_NOT_LOADED
@@ -264,12 +264,12 @@ function k(e) {
         (0, v.assertNever)(n)
     }
   }(e), C = r.useMemo(() => e.compact ? (0, f.default)((0, L.dateFormat)(l()(), "LT")) : null, [e.compact]);
-  return null != n && null != a && (t = P.default.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
-    author: null == a ? void 0 : a.nick,
+  return null != n && null != s && (t = P.default.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
+    author: null == s ? void 0 : s.nick,
     repliedAuthor: null == n ? void 0 : n.nick
   })), (0, i.jsxs)("div", {
     id: (0, I.getMessageReplyId)(o),
-    className: s()(U.repliedMessage, C),
+    className: a()(U.repliedMessage, C),
     "aria-label": t,
     children: [N, p, O]
   })

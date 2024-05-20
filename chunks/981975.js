@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return G
+    return j
   }
 }), s("47120"), s("653041"), s("536091");
 var a = s("735250"),
@@ -28,8 +28,8 @@ var a = s("735250"),
   x = s("981631"),
   L = s("856651"),
   O = s("689938"),
-  A = s("273879"),
-  p = s("585512");
+  p = s("273879"),
+  A = s("585512");
 let M = (0, _.uid)();
 
 function D(e, t) {
@@ -44,9 +44,9 @@ function v(e) {
     locked: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: A.headerNoConfigContainer,
+    className: p.headerNoConfigContainer,
     children: [(0, a.jsx)(u.Heading, {
-      className: A.headerHeading,
+      className: p.headerHeading,
       variant: "eyebrow",
       children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
     }), (0, a.jsx)(u.Text, {
@@ -57,7 +57,7 @@ function v(e) {
       })
     }), (0, a.jsx)(u.Button, {
       disabled: s,
-      className: A.addVerificationButton,
+      className: p.addVerificationButton,
       size: u.Button.Sizes.MEDIUM,
       look: u.Button.Looks.FILLED,
       color: u.Button.Colors.BRAND_NEW,
@@ -67,7 +67,7 @@ function v(e) {
   })
 }
 
-function G(e) {
+function j(e) {
   let {
     guild: t,
     role: s,
@@ -76,9 +76,9 @@ function G(e) {
     integrations: o
   } = e, {
     headerHeight: _,
-    headerRef: G
+    headerRef: j
   } = (0, g.default)(0), {
-    scrolledToTop: j,
+    scrolledToTop: G,
     handleScroll: U
   } = (0, C.useScrolledToTop)(), P = (0, d.useStateFromStores)([f.default], () => {
     var e;
@@ -118,28 +118,28 @@ function G(e) {
     var V, Y;
     let e = null;
     y.length < 10 && (e = (0, a.jsx)(u.Button, {
-      className: i()(A.addVerificationButton, A.addVerificationButtonAppend),
+      className: i()(p.addVerificationButton, p.addVerificationButtonAppend),
       size: u.Button.Sizes.LARGE,
       look: u.Button.Looks.BLANK,
       color: u.Button.Colors.LINK,
       onClick: k,
       disabled: n,
       children: (0, a.jsxs)("div", {
-        className: A.addVerificationButtonAppendTextContainer,
+        className: p.addVerificationButtonAppendTextContainer,
         children: [(0, a.jsx)(I.default, {}), O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION]
       })
     })), w = (0, a.jsxs)(a.Fragment, {
       children: [(V = () => (0, m.updateRoleConnectionConfigurations)(s.id, []), Y = n, (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)("div", {
-          className: A.headerTitleContainer,
+          className: p.headerTitleContainer,
           children: [(0, a.jsx)("div", {
-            className: A.headerTitleTextContainer,
+            className: p.headerTitleTextContainer,
             children: (0, a.jsx)(u.Heading, {
               variant: "eyebrow",
               children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
             })
           }), (0, a.jsx)(u.Button, {
-            className: A.headerTitleButton,
+            className: p.headerTitleButton,
             size: u.Button.Sizes.TINY,
             look: u.Button.Looks.LINK,
             color: u.Button.Colors.LINK,
@@ -156,7 +156,7 @@ function G(e) {
       })), function(e, t, s, l, n) {
         let i = D(l, E.ConnectionConfigurationRuleOperator.OR);
         return (0, a.jsx)(u.FormItem, {
-          className: A.operatorContainer,
+          className: p.operatorContainer,
           title: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_REQUIREMENTS,
           children: (0, a.jsx)(u.RadioGroup, {
             options: [{
@@ -217,7 +217,7 @@ function G(e) {
           })
         }
         return (0, a.jsx)("div", {
-          className: A.configurationsContainer,
+          className: p.configurationsContainer,
           children: Array.from(r.values()).map(e => (0, a.jsx)(h.default, {
             configurationItems: e,
             onConfigurationChange: i,
@@ -229,18 +229,18 @@ function G(e) {
     })
   }
   return (0, a.jsx)(u.AdvancedScrollerAuto, {
-    className: A.scroller,
+    className: p.scroller,
     style: {
       scrollPaddingTop: _
     },
     onScroll: U,
     children: (0, a.jsxs)("div", {
-      className: p.contentWidth,
+      className: A.contentWidth,
       children: [(0, a.jsx)("div", {
-        className: i()(p.header, p.stickyHeader, {
-          [p.stickyHeaderElevated]: !j
+        className: i()(A.header, A.stickyHeader, {
+          [A.stickyHeaderElevated]: !G
         }),
-        ref: G,
+        ref: j,
         children: (0, a.jsx)(C.default, {
           guild: t,
           role: s,
@@ -248,9 +248,9 @@ function G(e) {
           setSelectedSection: r
         })
       }), (null != P ? P : 0) > 0 ? (0, a.jsxs)("div", {
-        className: A.warningContainer,
+        className: p.warningContainer,
         children: [(0, a.jsx)(T.default, {
-          className: A.warningIcon
+          className: p.warningIcon
         }), (0, a.jsx)(u.Text, {
           variant: "text-sm/normal",
           color: "text-normal",

@@ -31,13 +31,13 @@ var a = s("735250"),
   x = s("890477"),
   L = s("688465"),
   O = s("807582"),
-  A = s("48217"),
-  p = s("26323"),
+  p = s("48217"),
+  A = s("26323"),
   M = s("859802"),
   D = s("744178"),
   v = s("35125"),
-  G = s("536442"),
-  j = s("142497"),
+  j = s("536442"),
+  G = s("142497"),
   U = s("884858"),
   P = s("516129"),
   b = s("813197"),
@@ -865,7 +865,7 @@ class eC extends l.PureComponent {
       if (null != l && null != e) {
         if ("image/gif" !== l || s.hasFeature(es.GuildFeatures.ANIMATED_BANNER)) {
           if (!s.hasFeature(es.GuildFeatures.BANNER)) {
-            n.object = es.AnalyticsObjects.IMAGE_CROPPING_MODAL, (0, A.openGuildBannerUpsellModal)({
+            n.object = es.AnalyticsObjects.IMAGE_CROPPING_MODAL, (0, p.openGuildBannerUpsellModal)({
               guild: s,
               analyticsLocations: a,
               analyticsLocation: n,
@@ -875,7 +875,7 @@ class eC extends l.PureComponent {
             return
           }
         } else {
-          n.object = es.AnalyticsObjects.GIF_CROPPING_MODAL, (0, A.openGuildBannerUpsellModal)({
+          n.object = es.AnalyticsObjects.GIF_CROPPING_MODAL, (0, p.openGuildBannerUpsellModal)({
             guild: s,
             analyticsLocations: a,
             analyticsLocation: n,
@@ -901,7 +901,7 @@ class eC extends l.PureComponent {
         },
         guild_id: null == l ? void 0 : l.id,
         location_stack: n
-      }), (0, p.default)({
+      }), (0, A.default)({
         analyticsLocations: n,
         analyticsSourceLocation: {
           section: t,
@@ -955,7 +955,7 @@ function eR() {
     analyticsLocations: d
   } = (0, g.default)(m.default.OVERVIEW);
   l.useEffect(() => {
-    (0, j.hideHotspot)(G.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
+    (0, G.hideHotspot)(j.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
   }, []);
   let u = (0, c.useStateFromStores)([F.default], () => F.default.getCategories(null == t ? void 0 : t.id)),
     E = l.useMemo(() => (0, h.default)(u._categories, u), [u]),

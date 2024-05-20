@@ -32,10 +32,10 @@ function C(e) {
   } = (0, I.useEditStateContext)(), C = (0, n.useStateFromStores)([E.default], () => {
     var e;
     return null === (e = E.default.getSubscriptionListing(s)) || void 0 === e ? void 0 : e.image_asset
-  }), [R, x] = T.useName(s), [L, O] = T.usePriceTier(s), [A, p] = T.useDescription(s), [M, D] = T.useImage(s, 1024), {
+  }), [R, x] = T.useName(s), [L, O] = T.usePriceTier(s), [p, A] = T.useDescription(s), [M, D] = T.useImage(s, 1024), {
     imageCTA: v,
-    imageAriaLabel: G,
-    setFilename: j
+    imageAriaLabel: j,
+    setFilename: G
   } = (0, S.default)(C), U = l.useMemo(() => {
     var e;
     return null !== (e = null == t ? void 0 : t.map(e => ({
@@ -45,7 +45,7 @@ function C(e) {
   }, [t]);
 
   function P(e, t) {
-    null != t && j(t.name), D(e)
+    null != t && G(t.name), D(e)
   }
   let b = (0, _.useRoleSubscriptionSettingsDisabled)(),
     B = (0, d.useUID)(),
@@ -98,11 +98,11 @@ function C(e) {
       disabled: b,
       children: (0, a.jsx)(i.TextArea, {
         placeholder: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DESCRIPTION_PLACEHOLDER,
-        value: A,
+        value: p,
         rows: 2,
         autosize: !0,
         className: g.formInput,
-        onChange: p,
+        onChange: A,
         "aria-labelledby": F,
         disabled: b
       })
@@ -122,7 +122,7 @@ function C(e) {
         }), (0, a.jsx)(u.default, {
           onChange: P,
           buttonCTA: v,
-          "aria-label": G,
+          "aria-label": j,
           disabled: b,
           look: i.Button.Looks.OUTLINED,
           color: i.Button.Colors.PRIMARY
@@ -136,7 +136,7 @@ function C(e) {
         className: h.iconUploader,
         imageClassName: h.tierSymbolUploaderInner,
         onChange: P,
-        "aria-label": G,
+        "aria-label": j,
         disabled: b
       })]
     })]

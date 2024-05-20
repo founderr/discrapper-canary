@@ -99,9 +99,9 @@ n.r(t), n.d(t, {
 }), n("627341"), n("47120"), n("411104");
 var i = n("278074"),
   r = n("551910"),
-  a = n("887003");
+  s = n("887003");
 n("597688");
-var s = n("630388"),
+var a = n("630388"),
   o = n("960048"),
   l = n("687744"),
   u = n("497505"),
@@ -245,7 +245,7 @@ function p(e) {
       if ((null == e ? void 0 : e.quest_rewards) == null) return null;
       let t = e.quest_rewards;
       switch (t.reward.tag) {
-        case a.QuestRewardTypes.IN_GAME:
+        case s.QuestRewardTypes.IN_GAME:
           return {
             questRewards: {
               reward: {
@@ -253,7 +253,7 @@ function p(e) {
               }
             }
           };
-        case a.QuestRewardTypes.REWARD_CODE:
+        case s.QuestRewardTypes.REWARD_CODE:
           return {
             questRewards: {
               reward: {
@@ -351,11 +351,11 @@ function w(e) {
 function k(e, t) {
   if (!w(t)) return !1;
   let n = u.QuestContent[t];
-  return (0, s.hasFlag)(e.dismissedQuestContent, _.DismissibleQuestContentFlags[n])
+  return (0, a.hasFlag)(e.dismissedQuestContent, _.DismissibleQuestContentFlags[n])
 }
 
 function B(e) {
-  return e.tag === a.QuestRewardTypes.COLLECTIBLE
+  return e.tag === s.QuestRewardTypes.COLLECTIBLE
 }
 
 function V(e) {
@@ -393,8 +393,8 @@ let j = /\.([a-zA-Z0-9]+)$/,
   W = /^data:video\/([a-zA-Z0-9]+)\;/;
 
 function K(e) {
-  var t, n, i, r, a;
-  switch (null !== (a = null === (n = j.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== a ? a : null === (r = W.exec(e)) || void 0 === r ? void 0 : null === (i = r[1]) || void 0 === i ? void 0 : i.toLowerCase()) {
+  var t, n, i, r, s;
+  switch (null !== (s = null === (n = j.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : null === (r = W.exec(e)) || void 0 === r ? void 0 : null === (i = r[1]) || void 0 === i ? void 0 : i.toLowerCase()) {
     case "webm":
       return "video/webm";
     case "mp4":
@@ -408,7 +408,7 @@ function z(e) {
   let {
     quest: t
   } = e, n = t.config.rewardsConfig;
-  return n.assignmentMethod === r.QuestRewardAssignmentMethods.TIERED && n.rewards.length > 0 && n.rewards.every(e => e.tag === a.QuestRewardTypes.REWARD_CODE)
+  return n.assignmentMethod === r.QuestRewardAssignmentMethods.TIERED && n.rewards.length > 0 && n.rewards.every(e => e.tag === s.QuestRewardTypes.REWARD_CODE)
 }
 
 function Z(e) {
@@ -426,7 +426,7 @@ function X(e) {
   if (null == n) return null;
   let i = t.config.rewardsConfig.rewards[n];
   if (null == i);
-  else if (i.tag === a.QuestRewardTypes.REWARD_CODE) return i;
+  else if (i.tag === s.QuestRewardTypes.REWARD_CODE) return i;
   return null
 }
 
@@ -437,9 +437,9 @@ function Q(e) {
     useV2Variants: i = !1
   } = e, {
     messages: r,
-    streamDurationRequirementMinutes: a
+    streamDurationRequirementMinutes: s
   } = t.config, {
-    gameTitle: s,
+    gameTitle: a,
     rewardNameWithArticle: o
   } = r;
   return (0, d.isEligibleForQuestPlaytime)({
@@ -447,17 +447,17 @@ function Q(e) {
   }) && Z({
     quest: t
   }) ? c.default.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD.format({
-    gameTitle: s,
+    gameTitle: a,
     questReward: o,
-    streamingDurationRequirement: a
+    streamingDurationRequirement: s
   }) : z({
     quest: t
   }) ? (i ? c.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2 : c.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED).format({
-    gameTitle: s,
-    streamingDurationRequirement: a
+    gameTitle: a,
+    streamingDurationRequirement: s
   }) : (i ? c.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2 : c.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD).format({
-    gameTitle: s,
+    gameTitle: a,
     questReward: o,
-    streamingDurationRequirement: a
+    streamingDurationRequirement: s
   })
 }

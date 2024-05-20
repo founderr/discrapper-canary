@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("771845"),
   h = n("880080"),
   m = n("624138"),
-  C = n("727258"),
-  p = n("199540"),
+  p = n("727258"),
+  C = n("199540"),
   g = n("40153"),
   E = n("252686"),
   _ = n("682662"),
@@ -59,9 +59,9 @@ function x(e) {
   let [{
     dragging: z
   }, Z] = (0, r.useDrag)({
-    type: C.GuildsNodeType.FOLDER,
+    type: p.GuildsNodeType.FOLDER,
     item: () => (null == b || b(), {
-      type: C.GuildsNodeType.FOLDER,
+      type: p.GuildsNodeType.FOLDER,
       nodeId: t.id
     }),
     end() {
@@ -105,7 +105,7 @@ function x(e) {
           [T.wobble]: !z && Y && !d
         }),
         "data-dnd-name": J,
-        children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(p.default, {
+        children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(C.default, {
           folderNode: t,
           expanded: d,
           forceCircular: y,

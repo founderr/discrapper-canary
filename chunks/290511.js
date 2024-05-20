@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return l
   },
   GuildOnboardingTab: function() {
-    return s
+    return a
   },
   MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING: function() {
     return h
@@ -58,7 +58,7 @@ n.r(t), n.d(t, {
     return L
   }
 });
-var i, r, a, s, o, l, u = n("348327"),
+var i, r, s, a, o, l, u = n("348327"),
   d = n.n(u),
   _ = n("689938");
 let c = 100,
@@ -173,4 +173,4 @@ function L(e) {
 
 function v(e) {
   return null == e || null == e.id && null == e.name
-}(i = s || (s = {}))[i.CUSTOMIZE = 0] = "CUSTOMIZE", i[i.BROWSE = 1] = "BROWSE", (r = o || (o = {}))[r.MULTIPLE_CHOICE = 0] = "MULTIPLE_CHOICE", r[r.DROPDOWN = 1] = "DROPDOWN", (a = l || (l = {}))[a.ONBOARDING_DEFAULT = 0] = "ONBOARDING_DEFAULT", a[a.ONBOARDING_ADVANCED = 1] = "ONBOARDING_ADVANCED"
+}(i = a || (a = {}))[i.CUSTOMIZE = 0] = "CUSTOMIZE", i[i.BROWSE = 1] = "BROWSE", (r = o || (o = {}))[r.MULTIPLE_CHOICE = 0] = "MULTIPLE_CHOICE", r[r.DROPDOWN = 1] = "DROPDOWN", (s = l || (l = {}))[s.ONBOARDING_DEFAULT = 0] = "ONBOARDING_DEFAULT", s[s.ONBOARDING_ADVANCED = 1] = "ONBOARDING_ADVANCED"

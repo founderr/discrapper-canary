@@ -69,8 +69,8 @@ n.r(t), n.d(t, {
 }), n("653041");
 var i = n("149765"),
   r = n("866442"),
-  a = n("741361"),
-  s = n("911969"),
+  s = n("741361"),
+  a = n("911969"),
   o = n("131704"),
   l = n("271383"),
   u = n("594174"),
@@ -89,15 +89,15 @@ function h(e) {
 
 function A(e) {
   var t, n;
-  let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  let s = (n = e, i.has(n.permissions, f.Permissions.ADMINISTRATOR) ? T.RowType.ADMINISTRATOR : T.RowType.ROLE);
+  let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  let a = (n = e, i.has(n.permissions, f.Permissions.ADMINISTRATOR) ? T.RowType.ADMINISTRATOR : T.RowType.ROLE);
   return {
-    rowType: s,
+    rowType: a,
     colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, r.int2hex)(f.DEFAULT_ROLE_COLOR),
     name: e.name,
     id: e.id,
-    disabled: h(e) || a,
-    key: "".concat(s, ":").concat(e.id),
+    disabled: h(e) || s,
+    key: "".concat(a, ":").concat(e.id),
     tags: e.tags
   }
 }
@@ -120,11 +120,11 @@ function N() {
 }
 
 function p(e, t, n, r) {
-  let a = u.default.getCurrentUser();
-  if (null == a) return !1;
-  if (null == e) return a.id !== t;
-  let s = e.permissionOverwrites[t];
-  return (null == r ? void 0 : r[t]) != null && (s = r[t]), null == s || !i.has(s.allow, n)
+  let s = u.default.getCurrentUser();
+  if (null == s) return !1;
+  if (null == e) return s.id !== t;
+  let a = e.permissionOverwrites[t];
+  return (null == r ? void 0 : r[t]) != null && (a = r[t]), null == a || !i.has(a.allow, n)
 }
 
 function O(e, t) {
@@ -145,22 +145,22 @@ function g(e, t, n, i) {
 }
 
 function L(e, t, n, r) {
-  let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return Object.values(t).filter(t => !h(t) && p(n, t.id, r) && R(e, t) && a(t.name)).sort(m).map(e => A(e, i.has(e.permissions, r)))
+  let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
+  return Object.values(t).filter(t => !h(t) && p(n, t.id, r) && R(e, t) && s(t.name)).sort(m).map(e => A(e, i.has(e.permissions, r)))
 }
 
 function v(e, t, n, i, r) {
-  var a, s, o, l, u;
+  var s, a, o, l, u;
   let d = [];
-  return 0 === (d = (a = e, s = t, o = n, l = i, u = r, Object.values(s).filter(e => h(e) || !p(o, e.id, l, u) && R(a, e))).sort(m).map(e => A(e))).length ? N(S.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d
+  return 0 === (d = (s = e, a = t, o = n, l = i, u = r, Object.values(a).filter(e => h(e) || !p(o, e.id, l, u) && R(s, e))).sort(m).map(e => A(e))).length ? N(S.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d
 }
 
-function D(e, t, n, r, a) {
-  var s, o, l, u, d;
+function D(e, t, n, r, s) {
+  var a, o, l, u, d;
   let _ = [];
-  return 0 === (_ = (s = e, o = t, l = n, u = r, d = a, Object.values(o).filter(e => {
+  return 0 === (_ = (a = e, o = t, l = n, u = r, d = s, Object.values(o).filter(e => {
     var t;
-    return h(e) || !p(l, e.id, u, d) && R(s, e) || i.has(i.combine(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
+    return h(e) || !p(l, e.id, u, d) && R(a, e) || i.has(i.combine(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
   })).sort(m).map(e => A(e, i.has(e.permissions, r)))).length ? N(S.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : _
 }
 
@@ -175,9 +175,9 @@ function y(e, t) {
 
 function P(e, t) {
   var n, i, r;
-  let a = (i = e, t.isOwner(i) ? T.RowType.OWNER : T.RowType.MEMBER);
+  let s = (i = e, t.isOwner(i) ? T.RowType.OWNER : T.RowType.MEMBER);
   return {
-    rowType: a,
+    rowType: s,
     name: M(e, t),
     nickname: null !== (n = l.default.getNick(t.id, e.id)) && void 0 !== n ? n : null,
     username: I.default.getName(e),
@@ -186,7 +186,7 @@ function P(e, t) {
     bot: e.bot,
     verifiedBot: e.isVerifiedBot(),
     disabled: (r = e, t.isOwner(r)),
-    key: "".concat(a, ":").concat(e.id)
+    key: "".concat(s, ":").concat(e.id)
   }
 }
 
@@ -200,10 +200,10 @@ function b(e, t, n, i) {
 }
 
 function G(e, t, n, i, r) {
-  var a, s, o, l, d;
-  return (a = e, s = t, o = n, l = i, d = r, a.map(u.default.getUser).filter(_.isNotNullish).filter(e => {
+  var s, a, o, l, d;
+  return (s = e, a = t, o = n, l = i, d = r, s.map(u.default.getUser).filter(_.isNotNullish).filter(e => {
     var t;
-    return !p(s, e.id, l, d) || (t = e, o.isOwner(t))
+    return !p(a, e.id, l, d) || (t = e, o.isOwner(t))
   })).map(e => P(e, n)).sort(U)
 }
 
@@ -245,15 +245,15 @@ function k(e) {
 function B(e, t, n) {
   let r = e.permissionOverwrites[e.guild_id];
   null == r && (r = c.makeEveryoneOverwrite(e.guild_id));
-  let a = {
+  let s = {
     ...r
   };
-  return a.deny = i.remove(a.deny, t), a.allow = i.remove(a.allow, t), !n && (a.deny = i.add(a.deny, t)), a
+  return s.deny = i.remove(s.deny, t), s.allow = i.remove(s.allow, t), !n && (s.deny = i.add(s.deny, t)), s
 }
 
 function V(e, t, n) {
   let i = B(e, t, n);
-  (0, a.updatePermission)(e, i.id, i.allow, i.deny)
+  (0, s.updatePermission)(e, i.id, i.allow, i.deny)
 }
 
 function x(e, t) {
@@ -263,17 +263,17 @@ function x(e, t) {
   if (null == r) {
     let r = {
       id: n.id,
-      type: s.PermissionOverwriteType.MEMBER,
+      type: a.PermissionOverwriteType.MEMBER,
       allow: i.add(c.NONE, t),
       deny: c.NONE
     };
-    return (0, a.savePermissionUpdates)(e.id, [r], !0)
+    return (0, s.savePermissionUpdates)(e.id, [r], !0)
   } {
     let {
       allow: n,
-      deny: s
+      deny: a
     } = r;
-    return n = i.add(n, t), (0, a.updatePermission)(e, r.id, n, s)
+    return n = i.add(n, t), (0, s.updatePermission)(e, r.id, n, a)
   }
 }
 

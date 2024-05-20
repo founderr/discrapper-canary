@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("544891"),
   r = n("147913"),
-  a = n("680089"),
-  s = n("592125"),
+  s = n("680089"),
+  a = n("592125"),
   o = n("70956"),
   l = n("981631");
 
@@ -21,7 +21,7 @@ let d = {},
 
 function E() {
   d = {
-    ...a.default.getCollapsedCategories()
+    ...s.default.getCollapsedCategories()
   }
 }
 
@@ -39,16 +39,16 @@ async function T(e, t) {
 async function f(e) {
   clearTimeout(_);
   let t = 0 !== Object.keys(e).length,
-    n = a.default.getCollapsedCategories(),
+    n = s.default.getCollapsedCategories(),
     r = function() {
       let e = {},
-        t = a.default.getCollapsedCategories();
+        t = s.default.getCollapsedCategories();
       for (let n in t) t[n] !== d[n] && (e[n] = !0);
       for (let n in d) t[n] !== d[n] && (e[n] = !0);
       return e
     }();
   for (let i in r) {
-    let r = s.default.getChannel(i);
+    let r = a.default.getChannel(i);
     null != r && null != r.guild_id && (!(r.guild_id in e) && (e[r.guild_id] = {}), null == e[r.guild_id].channel_overrides && (e[r.guild_id].channel_overrides = {}), e[r.guild_id].channel_overrides[r.id] = {
       ...e[r.guild_id].channel_overrides[r.id],
       collapsed: r.id in n
@@ -66,7 +66,7 @@ async function f(e) {
 
 function S() {
   d = {
-    ...a.default.getCollapsedCategories()
+    ...s.default.getCollapsedCategories()
   }
 }
 class h extends r.default {

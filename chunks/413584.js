@@ -24,13 +24,13 @@ var a = s("735250"),
   x = s("346656"),
   L = s("499150"),
   O = s("93879"),
-  A = s("4912"),
-  p = s("626135"),
+  p = s("4912"),
+  A = s("626135"),
   M = s("700785"),
   D = s("434404"),
   v = s("92160"),
-  G = s("981631"),
-  j = s("231338"),
+  j = s("981631"),
+  G = s("231338"),
   U = s("689938"),
   P = s("913752");
 let b = "WELCOME_CHANNEL",
@@ -45,10 +45,10 @@ let b = "WELCOME_CHANNEL",
         index: R
       } = e,
       [x, L] = l.useState(!1),
-      p = l.useRef(null),
+      A = l.useRef(null),
       D = (0, u.useStateFromStores)([C.default], () => C.default.getChannel(o.channel_id)),
       v = (0, u.useStateFromStores)([f.default], () => null != o.emoji_id ? f.default.getUsableCustomEmojiById(o.emoji_id) : null),
-      B = null != D && M.canEveryoneRole(G.Permissions.VIEW_CHANNEL, D),
+      B = null != D && M.canEveryoneRole(j.Permissions.VIEW_CHANNEL, D),
       y = null !== (t = (0, S.getChannelIconComponent)(D)) && void 0 !== t ? t : O.default,
       F = (0, T.default)(D, !1),
       {
@@ -73,7 +73,7 @@ let b = "WELCOME_CHANNEL",
           N(e.channel, R, !0)
         }
       });
-    return l.useLayoutEffect(() => (k(w(p)), () => {
+    return l.useLayoutEffect(() => (k(w(A)), () => {
       k(null), w(null)
     }), [k, w]), n = B ? null != v || null != o.emoji_name ? (0, a.jsx)(_.default, {
       emojiId: null == v ? void 0 : v.id,
@@ -83,7 +83,7 @@ let b = "WELCOME_CHANNEL",
       width: 24,
       height: 24,
       className: P.channelIcon
-    }) : (0, a.jsx)(A.default, {
+    }) : (0, a.jsx)(p.default, {
       width: 24,
       height: 24,
       className: P.warningIcon
@@ -91,7 +91,7 @@ let b = "WELCOME_CHANNEL",
       className: i()(P.welcomeChannel, {
         [P.dragging]: g
       }),
-      ref: p,
+      ref: A,
       "data-dnd-name": o.description,
       onContextMenu: e => {
         (0, E.openContextMenuLazy)(e, async () => {
@@ -142,7 +142,7 @@ let b = "WELCOME_CHANNEL",
             onSave: I
           })
         }, {
-          onCloseRequest: () => j.NOOP_NULL
+          onCloseRequest: () => G.NOOP_NULL
         }),
         children: U.default.Messages.EDIT
       }), x && (0, a.jsx)(h.default, {
@@ -166,7 +166,7 @@ t.default = e => {
     enabled: b
   } = r, {
     homeSettingsEnabled: y
-  } = (0, m.useOnboardingHomeAdminExperiment)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : G.EMPTY_STRING_SNOWFLAKE_ID), F = () => {
+  } = (0, m.useOnboardingHomeAdminExperiment)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : j.EMPTY_STRING_SNOWFLAKE_ID), F = () => {
     if (null != n) O !== d.description && ((0, N.saveWelcomeScreen)(n.id, {
       description: null == O ? void 0 : O.trim()
     }), f(!0))
@@ -209,7 +209,7 @@ t.default = e => {
       onSave: w
     })
   }, {
-    onCloseRequest: () => j.NOOP_NULL
+    onCloseRequest: () => G.NOOP_NULL
   }), () => {
     W.current = !0
   }), []), l.useEffect(() => () => {
@@ -219,7 +219,7 @@ t.default = e => {
         s = !1;
       null == M || M.forEach(a => {
         e.push(a.description), t.push(a.channel_id), null != a.emoji_id && (s = !0)
-      }), p.default.track(G.AnalyticEvents.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
+      }), A.default.track(j.AnalyticEvents.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
         guild_id: null == n ? void 0 : n.id,
         options: e,
         options_channel_ids: t,
@@ -230,7 +230,7 @@ t.default = e => {
     }
   }, [S, M, O, b, n, W]), l.useEffect(() => () => (0, N.clearWelcomeScreenSettings)(), []);
   let z = l.useCallback(() => {
-    null != n && D.default.open(n.id, G.GuildSettingsSections.ONBOARDING)
+    null != n && D.default.open(n.id, j.GuildSettingsSections.ONBOARDING)
   }, [n]);
   return null == n ? null : (0, a.jsxs)(c.FormSection, {
     title: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
@@ -239,7 +239,7 @@ t.default = e => {
       className: P.notice,
       children: (0, a.jsxs)(c.Text, {
         variant: "text-md/normal",
-        children: [(0, a.jsx)(A.default, {
+        children: [(0, a.jsx)(p.default, {
           className: P.noticeIcon
         }), U.default.Messages.WELCOME_SCREEN_DEPRECATED.format({
           onboardingLink: e => (0, a.jsx)(L.default, {
@@ -311,7 +311,7 @@ t.default = e => {
               F()
             },
             onKeyDown: e => {
-              e.keyCode === G.KeyboardKeys.ENTER && e.preventDefault()
+              e.keyCode === j.KeyboardKeys.ENTER && e.preventDefault()
             },
             value: O,
             maxLength: 140,
@@ -346,7 +346,7 @@ t.default = e => {
               onSave: w
             })
           }, {
-            onCloseRequest: () => j.NOOP_NULL
+            onCloseRequest: () => G.NOOP_NULL
           }),
           className: P.addChannelButton,
           disabled: y,

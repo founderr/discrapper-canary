@@ -57,7 +57,7 @@ let x = e => e < (0, T.getTotalStickerCountForTier)(h.BoostedGuildTiers.NONE) ? 
       })
     })
   },
-  A = () => (0, a.jsx)("div", {
+  p = () => (0, a.jsx)("div", {
     className: R.placeholderCard,
     children: (0, a.jsx)("img", {
       className: R.placeholderImg,
@@ -65,7 +65,7 @@ let x = e => e < (0, T.getTotalStickerCountForTier)(h.BoostedGuildTiers.NONE) ? 
       src: s("872732")
     })
   }),
-  p = e => {
+  A = e => {
     let {
       guild: t
     } = e, {
@@ -121,7 +121,7 @@ t.default = e => {
         totalNumberOfSlotsToAssign: e
       })
     },
-    G = [{
+    j = [{
       tier: h.BoostedGuildTiers.NONE,
       title: (0, a.jsx)(L, {
         guildStickers: I,
@@ -155,7 +155,7 @@ t.default = e => {
       })
     }];
   return (0, a.jsx)(m.default, {
-    tiers: G,
+    tiers: j,
     renderTier: e => {
       let l, {
           isAnimatedTo: n,
@@ -171,19 +171,19 @@ t.default = e => {
         m = u[E - 1],
         L = null != m ? (0, T.getTotalStickerCountForTier)(m.tier) : 0,
         O = (0, T.getTotalStickerCountForTier)(d.tier),
-        G = (0, T.getIncrementalStickerCountForTier)(d.tier),
-        j = I.slice(L, O),
-        U = j.length > 0,
+        j = (0, T.getIncrementalStickerCountForTier)(d.tier),
+        G = I.slice(L, O),
+        U = G.length > 0,
         P = M < d.tier,
         b = x(I.length),
-        B = S && !P && b === d.tier && O !== j.length,
-        y = B || j.length > 0,
+        B = S && !P && b === d.tier && O !== G.length,
+        y = B || G.length > 0,
         F = O - L,
         H = s("872732"),
-        k = G - j.length,
-        w = B ? Math.min(5 - (j.length + 0) % 5, k) : 0,
+        k = j - G.length,
+        w = B ? Math.min(5 - (G.length + 0) % 5, k) : 0,
         V = [];
-      for (let e = 0; e < w; e++) V.push((0, a.jsx)(A, {}, "placeholder-".concat(e)));
+      for (let e = 0; e < w; e++) V.push((0, a.jsx)(p, {}, "placeholder-".concat(e)));
       let Y = b === E + 1 && b > M,
         W = B || Y || E > M;
       return Y ? l = (0, a.jsx)(c.default, {
@@ -198,7 +198,7 @@ t.default = e => {
           object: h.AnalyticsObjects.BOOST_UPSELL_NEXT_LEVEL_HEADER,
           objectType: (0, T.boostedGuildTierToAnalyticsObjectType)(d.tier)
         }
-      }) : B && (l = (0, a.jsx)(p, {
+      }) : B && (l = (0, a.jsx)(A, {
         guild: t
       })), (0, a.jsxs)(N.default, {
         subscriptionCount: D,
@@ -212,12 +212,12 @@ t.default = e => {
         guildId: t.id,
         children: [y && (0, a.jsxs)("div", {
           className: R.grid,
-          children: [j.map(e => (0, a.jsx)(g.default, {
+          children: [G.map(e => (0, a.jsx)(g.default, {
             isDisabled: P,
             sticker: e,
             canManageSticker: f(e)
           }, e.id)), V]
-        }), !P && !B && 0 === j.length && (0, a.jsx)("div", {
+        }), !P && !B && 0 === G.length && (0, a.jsx)("div", {
           className: i()(R.emptyTierWrapper, R.unusedTierWrapper),
           children: (0, a.jsx)(o.Text, {
             variant: "text-md/normal",

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  a = n("318374"),
-  s = n("522289"),
+  s = n("318374"),
+  a = n("522289"),
   o = n("346656"),
   l = n("726059"),
   u = n("162267"),
@@ -31,7 +31,7 @@ function I(e) {
     children: [f ? (0, i.jsxs)(r.Clickable, {
       className: E.section,
       onClick: () => n(d.UserProfileSections.MUTUAL_FRIENDS),
-      children: [(0, i.jsx)(a.default, {
+      children: [(0, i.jsx)(s.default, {
         maxUsers: 3,
         users: I.map(e => {
           let {
@@ -56,7 +56,7 @@ function I(e) {
     }) : null, S ? (0, i.jsxs)(r.Clickable, {
       className: E.section,
       onClick: () => n(d.UserProfileSections.MUTUAL_GUILDS),
-      children: [!f && (0, i.jsx)(s.default, {
+      children: [!f && (0, i.jsx)(a.default, {
         maxGuilds: 3,
         guilds: T.map(e => {
           let {

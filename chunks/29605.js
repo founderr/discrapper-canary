@@ -31,13 +31,13 @@ var a = s("735250"),
   x = s("889161"),
   L = s("210887"),
   O = s("186095"),
-  A = s("185403"),
-  p = s("626135"),
+  p = s("185403"),
+  A = s("626135"),
   M = s("768581"),
   D = s("176354"),
   v = s("267642"),
-  G = s("434404"),
-  j = s("471613"),
+  j = s("434404"),
+  G = s("471613"),
   U = s("999382"),
   P = s("981631"),
   b = s("185923"),
@@ -122,7 +122,7 @@ let H = u().throttle(T.fetchEmoji, 1e3),
         "aria-label": B.default.Messages.EDIT,
         className: y.editEmojiRolesButton,
         onClick: () => n(s, t),
-        children: (0, a.jsx)(A.default, {
+        children: (0, a.jsx)(p.default, {
           width: 24,
           height: 24,
           className: y.editEmojiRolesIcon
@@ -277,13 +277,13 @@ t.default = () => {
     {
       revision: d,
       emojis: I
-    } = (0, E.useStateFromStoresObject)([j.default], () => ({
-      revision: j.default.getEmojiRevision(e.id),
-      emojis: j.default.getEmojis(e.id)
+    } = (0, E.useStateFromStoresObject)([G.default], () => ({
+      revision: G.default.getEmojiRevision(e.id),
+      emojis: G.default.getEmojis(e.id)
     })),
     T = (0, m.default)(d),
     [S, h] = l.useState(!1),
-    [O, A] = l.useState(!1),
+    [O, p] = l.useState(!1),
     M = l.useRef(null);
   l.useEffect(() => {
     S && W()
@@ -304,7 +304,7 @@ t.default = () => {
     uploadId: t,
     hideErrorModal: !0
   }), Y = async s => {
-    n((0, c.v4)()), p.default.track(P.AnalyticEvents.EMOJI_UPLOAD_STARTED, {
+    n((0, c.v4)()), A.default.track(P.AnalyticEvents.EMOJI_UPLOAD_STARTED, {
       guild_id: e.id,
       upload_id: t
     }), await (0, R.processImages)(s, w), h(!0)
@@ -343,7 +343,7 @@ t.default = () => {
         }), Z && (0, a.jsx)(_.FormText, {
           type: _.FormTextTypes.DESCRIPTION,
           children: B.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_SETTINGS_MANAGE_PREMIUM_TEXT.format({
-            onClick: () => G.default.open(e.id, P.GuildSettingsSections.ROLE_SUBSCRIPTIONS, void 0, P.GuildSettingsSubsections.ROLE_SUBSCRIPTION_EMOJI)
+            onClick: () => j.default.open(e.id, P.GuildSettingsSections.ROLE_SUBSCRIPTIONS, void 0, P.GuildSettingsSubsections.ROLE_SUBSCRIPTION_EMOJI)
           })
         }), (0, a.jsxs)("div", {
           children: [(0, a.jsx)(_.FormTitle, {
@@ -381,7 +381,7 @@ t.default = () => {
           size: _.Button.Sizes.MEDIUM,
           onClick: () => {
             let t = (0, c.v4)();
-            n(t), p.default.track(P.AnalyticEvents.EMOJI_UPLOAD_STARTED, {
+            n(t), A.default.track(P.AnalyticEvents.EMOJI_UPLOAD_STARTED, {
               guild_id: e.id,
               upload_id: t
             })
@@ -395,7 +395,7 @@ t.default = () => {
             disabled: O || 0 === k || !r,
             tabIndex: 0,
             onChange: w,
-            setLoading: A,
+            setLoading: p,
             multiple: !0
           }) : null]
         })]

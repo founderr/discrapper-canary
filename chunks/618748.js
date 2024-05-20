@@ -29,13 +29,13 @@ var l = s("442837"),
   x = s("903773"),
   L = s("822531"),
   O = s("909656"),
-  A = s("210591"),
-  p = s("927731"),
+  p = s("210591"),
+  A = s("927731"),
   M = s("798680"),
   D = s("509026"),
   v = s("981631"),
-  G = s("176505"),
-  j = s("829857"),
+  j = s("176505"),
+  G = s("829857"),
   U = s("689938"),
   P = s("213079");
 
@@ -74,7 +74,7 @@ function b(e) {
       completed: u
     }]
   }];
-  return (0, a.jsx)(A.default, {
+  return (0, a.jsx)(p.default, {
     children: E
   })
 }
@@ -89,7 +89,7 @@ function B(e) {
   }), l = s.find(e => {
     var s;
     return e.id === (null == t ? void 0 : null === (s = t.team) || void 0 === s ? void 0 : s.id)
-  }), n = [j.PayoutAccountStatuses.ACTION_REQUIRED, j.PayoutAccountStatuses.BLOCKED, j.PayoutAccountStatuses.SUSPENDED];
+  }), n = [G.PayoutAccountStatuses.ACTION_REQUIRED, G.PayoutAccountStatuses.BLOCKED, G.PayoutAccountStatuses.SUSPENDED];
   return (null == l ? void 0 : l.payout_account_status) != null && n.includes(null == l ? void 0 : l.payout_account_status) ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(S.default, {
       size: 16
@@ -142,8 +142,8 @@ function F(e) {
     N = (0, m.useGroupListingsFetchContext)(),
     g = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
     x = (0, C.default)(s.id),
-    A = s.isOwner(g),
-    j = () => {
+    p = s.isOwner(g),
+    G = () => {
       let e = I.default.getRole(s.id, s.getEveryoneRoleId());
       if (null == e) return;
       o.default.close();
@@ -155,7 +155,7 @@ function F(e) {
         roles: t,
         initialTab: "role_subscriptions",
         returnToSection: v.GuildSettingsSections.ROLE_SUBSCRIPTIONS
-      }), (0, h.announceCreateTemplateChannels)(s.id), (0, E.transitionTo)(v.Routes.CHANNEL(s.id, G.StaticChannelRoute.ROLE_SUBSCRIPTIONS))
+      }), (0, h.announceCreateTemplateChannels)(s.id), (0, E.transitionTo)(v.Routes.CHANNEL(s.id, j.StaticChannelRoute.ROLE_SUBSCRIPTIONS))
     };
   if (!N) return (0, a.jsx)(n.Spinner, {});
   switch (_) {
@@ -165,7 +165,7 @@ function F(e) {
       });
       break;
     case M.TabBarSection.TIERS:
-      t = (0, a.jsx)(p.default, {
+      t = (0, a.jsx)(A.default, {
         guildId: s.id
       });
       break;
@@ -220,7 +220,7 @@ function F(e) {
             disabledTooltip: U.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
             disabled: !d,
             children: U.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_EMOJI
-          }), A ? (0, a.jsx)(n.TabBar.Item, {
+          }), p ? (0, a.jsx)(n.TabBar.Item, {
             className: P.__invalid_tabBarItem,
             id: M.TabBarSection.PAYMENT,
             children: U.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PAYMENT
@@ -238,7 +238,7 @@ function F(e) {
                 disabled: x,
                 onMouseEnter: x ? t : void 0,
                 onMouseLeave: x ? s : void 0,
-                onClick: j,
+                onClick: G,
                 color: n.Button.Colors.PRIMARY,
                 size: n.Button.Sizes.SMALL,
                 grow: !x,

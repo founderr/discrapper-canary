@@ -1,5 +1,5 @@
 "use strict";
-let i, r, a, s, o, l, u, d, _, c, E;
+let i, r, s, a, o, l, u, d, _, c, E;
 n.r(t);
 var I, T, f, S, h = n("442837"),
   A = n("570140"),
@@ -20,7 +20,7 @@ function R() {
 }
 
 function g() {
-  s = void 0, o = void 0, l = void 0, d = void 0, a = void 0
+  a = void 0, o = void 0, l = void 0, d = void 0, s = void 0
 }
 class L extends(S = h.default.Store) {
   getFormState() {
@@ -30,7 +30,7 @@ class L extends(S = h.default.Store) {
     return p
   }
   showNotice() {
-    return void 0 !== i || void 0 !== r || void 0 !== a || void 0 !== s || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== d
+    return void 0 !== i || void 0 !== r || void 0 !== s || void 0 !== a || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== d
   }
   getIsSubmitDisabled() {
     return void 0 !== o && o.length > m.BIO_MAX_LENGTH
@@ -42,10 +42,10 @@ class L extends(S = h.default.Store) {
     return r
   }
   getPendingProfileEffectId() {
-    return a
+    return s
   }
   getPendingBanner() {
-    return s
+    return a
   }
   getPendingBio() {
     return o
@@ -66,8 +66,8 @@ class L extends(S = h.default.Store) {
     return {
       pendingAvatar: i,
       pendingAvatarDecoration: r,
-      pendingProfileEffectId: a,
-      pendingBanner: s,
+      pendingProfileEffectId: s,
+      pendingBanner: a,
       pendingBio: o,
       pendingPronouns: l,
       pendingNickname: u,
@@ -127,13 +127,13 @@ f = "GuildIdentitySettingsStore", (T = "displayName") in(I = L) ? Object.defineP
     let {
       profileEffectId: t
     } = e;
-    a = t
+    s = t
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: function(e) {
     let {
       banner: t
     } = e;
-    s = t
+    a = t
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: function(e) {
     let {

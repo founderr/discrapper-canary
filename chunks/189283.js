@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("1561"),
   l = n("993365"),
   u = n("928283");
@@ -16,7 +16,7 @@ function d(e) {
   let {
     option: t,
     selected: n,
-    onClick: a,
+    onClick: s,
     look: d,
     className: _,
     selectedClassName: c
@@ -32,9 +32,9 @@ function d(e) {
     }(d)]: n
   };
   null != c && (E[c] = n);
-  let I = r.useCallback(e => a(t, e), [a, t]);
+  let I = r.useCallback(e => s(t, e), [s, t]);
   return (0, i.jsx)(o.Clickable, {
-    className: s()(function(e) {
+    className: a()(function(e) {
       switch (e) {
         case "tab":
         default:
@@ -56,7 +56,7 @@ function _(e) {
   let {
     options: t,
     value: n,
-    onChange: a,
+    onChange: s,
     look: o = "tab",
     className: l,
     optionClassName: _,
@@ -68,13 +68,13 @@ function _(e) {
       selected: r,
       option: e,
       look: o,
-      onClick: a,
+      onClick: s,
       className: _,
       selectedClassName: c
     }, null !== (t = e.key) && void 0 !== t ? t : String(e.value))
-  }, [n, o, a, _, c]);
+  }, [n, o, s, _, c]);
   return (0, i.jsx)("div", {
-    className: s()(function(e) {
+    className: a()(function(e) {
       switch (e) {
         case "tab":
         default:

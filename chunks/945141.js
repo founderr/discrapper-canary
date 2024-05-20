@@ -2,17 +2,17 @@
 n.r(t), n("47120");
 var i = n("433517"),
   r = n("147913");
-let a = "formGuidelinesStorageKey";
-class s extends r.default {
+let s = "formGuidelinesStorageKey";
+class a extends r.default {
   _initialize() {
-    let e = i.Storage.get(a);
+    let e = i.Storage.get(s);
     null != e && (this.seenForumGuidelines = new Set(e))
   }
   _terminate() {
-    i.Storage.set(a, this.seenForumGuidelines)
+    i.Storage.set(s, this.seenForumGuidelines)
   }
   markAsSeen(e) {
-    this.seenForumGuidelines.add(e), i.Storage.set(a, this.seenForumGuidelines)
+    this.seenForumGuidelines.add(e), i.Storage.set(s, this.seenForumGuidelines)
   }
   hasSeen(e) {
     return this.seenForumGuidelines.has(e)
@@ -27,4 +27,4 @@ class s extends r.default {
     }) : t[n] = i
   }
 }
-t.default = new s
+t.default = new a

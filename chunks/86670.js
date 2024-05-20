@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   tryLoadAsync: function() {
-    return a
+    return s
   },
   tryLoadOrResetCacheGateway: function() {
-    return s
+    return a
   },
   tryLoadOrResetCacheGatewayAsync: function() {
     return o
@@ -12,7 +12,7 @@ n.r(t), n.d(t, {
 });
 var i = n("570140");
 let r = new(n("710845")).default("TryLoad");
-async function a(e) {
+async function s(e) {
   try {
     return await e()
   } catch (e) {
@@ -20,7 +20,7 @@ async function a(e) {
   }
 }
 
-function s(e, t, n) {
+function a(e, t, n) {
   try {
     return t()
   } catch (t) {

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
     return i
   },
   INDEXING_RESPONSE_CODE: function() {
-    return a
+    return s
   }
 });
-let a = 202;
+let s = 202;
 (r = i || (i = {}))[r.SUCCESSFUL_QUERY = 1] = "SUCCESSFUL_QUERY", r[r.ERROR = 2] = "ERROR"

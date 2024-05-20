@@ -40,32 +40,32 @@ function T(e) {
     } = (0, u.default)(null == e ? void 0 : e.id),
     {
       isApplicationRejected: O,
-      requestCooldownDuration: A
+      requestCooldownDuration: p
     } = (0, c.default)(L),
-    p = (null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_DISABLED)) === !0,
+    A = (null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_DISABLED)) === !0,
     {
       isMonetizationReapplicationDisabled: M
     } = (0, n.useIsMonetizationReapplicationDisabled)(null == e ? void 0 : e.id),
     D = h || (null == L ? void 0 : L.isApplicationPending) === !0,
     v = (null == L ? void 0 : L.canApply) === !0,
-    G = I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({
+    j = I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({
       faqUrl: r.default.getArticleURL(_.HelpdeskArticles.CREATOR_FAQ)
     });
   O && M ? t = !0 === T ? I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({
     communityGuidelineUrl: _.MarketingURLs.GUIDELINES
   }) : I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM_ALT.format({
     communityGuidelineUrl: _.MarketingURLs.GUIDELINES
-  }) : O && null != A && (t = I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_V2.format({
-    requestCooldownDuration: A,
+  }) : O && null != p && (t = I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_V2.format({
+    requestCooldownDuration: p,
     creatorRevenuePolicyUrl: r.default.getArticleURL(_.HelpdeskArticles.CREATOR_POLICY)
   }));
-  let j = s && f && !1 === S,
+  let G = s && f && !1 === S,
     U = s && !1 === T,
     P = (0, E.getCreatorMonetizationAcceptTermsCheckboxText)(),
     b = O && v && f ? I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
   return a.useEffect(() => {
-    j && x()
-  }, [x, j]), {
+    G && x()
+  }, [x, G]), {
     resubmittingEnableRequest: N,
     resubmissionError: m,
     isGuildOwner: f,
@@ -81,8 +81,8 @@ function T(e) {
     requestRejectedNoticeText: t,
     reapplyNoticeText: b,
     showAcceptTermsFlow: U,
-    wasRejectedInV1: U && (p || O),
-    requirementsFinePrintText: G,
+    wasRejectedInV1: U && (A || O),
+    requirementsFinePrintText: j,
     acceptTermsCheckboxText: P
   }
 }

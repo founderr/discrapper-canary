@@ -1,5 +1,5 @@
 "use strict";
-let i, r, a, s;
+let i, r, s, a;
 n.r(t);
 var o, l, u, d, _ = n("442837"),
   c = n("570140"),
@@ -66,7 +66,7 @@ class D extends(d = _.default.Store) {
     return r
   }
   get ipCountryCodeRequest() {
-    return a
+    return s
   }
   get ipCountryCodeWithFallback() {
     return null != r ? r : I.FallbackCurrencyCountry
@@ -78,13 +78,13 @@ class D extends(d = _.default.Store) {
     return i
   }
   get localizedPricingPromo() {
-    return s
+    return a
   }
   get localizedPricingPromoHasError() {
     return O
   }
   get isLocalizedPromoEnabled() {
-    return null != s
+    return null != a
   }
 }
 u = "BillingInfoStore", (l = "displayName") in(o = D) ? Object.defineProperty(o, l, {
@@ -152,7 +152,7 @@ u = "BillingInfoStore", (l = "displayName") in(o = D) ? Object.defineProperty(o,
     let {
       request: t
     } = e;
-    a = t
+    s = t
   },
   BILLING_SET_IP_COUNTRY_CODE: function(e) {
     let {
@@ -167,13 +167,13 @@ u = "BillingInfoStore", (l = "displayName") in(o = D) ? Object.defineProperty(o,
     let {
       localizedPricingPromo: t
     } = e;
-    s = E.LocalizedPricingPromoRecord.createFromServer(t)
+    a = E.LocalizedPricingPromoRecord.createFromServer(t)
   },
   BILLING_LOCALIZED_PRICING_PROMO_FAILURE: function() {
-    s = null, O = !0
+    a = null, O = !0
   },
   LOGOUT: function() {
-    i = void 0, a = void 0, r = void 0, p = !1, s = null, N = null, m = null
+    i = void 0, s = void 0, r = void 0, p = !1, a = null, N = null, m = null
   },
   CONNECTION_OPEN: e => {
     let {

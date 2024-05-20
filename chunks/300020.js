@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   }
 });
 var i = n("616922"),
   r = n("689938");
 
-function a(e, t) {
+function s(e, t) {
   switch (t) {
     case i.SpotifyActionTypes.USER_ACTIVITY_PLAY:
       return e.hasSpotifyAccount ? r.default.Messages.USER_ACTIVITY_PLAY_ON_PLATFORM.format({

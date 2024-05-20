@@ -33,8 +33,8 @@ var l, a = n("735250"),
   f = n("430824"),
   h = n("699516"),
   m = n("594174"),
-  C = n("51144"),
-  p = n("2093"),
+  p = n("51144"),
+  C = n("2093"),
   g = n("366695"),
   E = n("346656"),
   _ = n("409216"),
@@ -218,7 +218,7 @@ class R extends(l = s.Component) {
       category: l,
       channel: s
     } = this.props;
-    return null != n && n > 0 && (e = (0, a.jsx)(p.default, {
+    return null != n && n > 0 && (e = (0, a.jsx)(C.default, {
       className: A.badge,
       value: n
     })), null != l && (t = (0, a.jsx)("span", {
@@ -323,7 +323,7 @@ class M extends s.Component {
       mentions: t,
       channel: n
     } = this.props;
-    return null != t && t > 0 && (e = (0, a.jsx)(p.default, {
+    return null != t && t > 0 && (e = (0, a.jsx)(C.default, {
       className: A.badge,
       value: t
     })), (0, a.jsxs)("div", {
@@ -402,7 +402,7 @@ class y extends s.Component {
       user: t,
       comparator: n
     } = this.props, l = h.default.getNickname(t.id);
-    return ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) && (e = null != l ? l : C.default.getName(t)), e
+    return ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) && (e = null != l ? l : p.default.getName(t)), e
   }
   renderName() {
     let e;
@@ -410,7 +410,7 @@ class y extends s.Component {
       user: t,
       mentions: n
     } = this.props, l = this.getDisplayNickname();
-    return null != n && n > 0 && (e = (0, a.jsx)(p.default, {
+    return null != n && n > 0 && (e = (0, a.jsx)(C.default, {
       className: A.badge,
       value: n
     })), (0, a.jsxs)("div", {
@@ -420,7 +420,7 @@ class y extends s.Component {
         children: l
       }), e, (0, a.jsx)("span", {
         className: A.username,
-        children: C.default.getUserTag(t)
+        children: p.default.getUserTag(t)
       })]
     })
   }
@@ -441,7 +441,7 @@ class y extends s.Component {
     let {
       mentions: e,
       user: t
-    } = this.props, n = this.getDisplayNickname(), l = C.default.getUserTag(t);
+    } = this.props, n = this.getDisplayNickname(), l = p.default.getUserTag(t);
     return null != e && e > 0 ? T.default.Messages.QUICK_SWITCHER_RESULTS_USER_UNREAD_LABEL.format({
       name: n,
       id: l,

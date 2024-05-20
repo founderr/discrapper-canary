@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("442837"),
-  s = n("258609"),
+  s = n("442837"),
+  a = n("258609"),
   o = n("911809");
 
 function l(e) {
@@ -15,7 +15,7 @@ function l(e) {
     body: t,
     dismissCallback: n,
     errorCodeMessage: l
-  } = e, u = (0, a.useStateFromStores)([s.default], () => s.default.getRemoteSessionId());
+  } = e, u = (0, s.useStateFromStores)([a.default], () => a.default.getRemoteSessionId());
   return (r.useEffect(() => {
     null != u && n()
   }, [u, n]), null == l) ? (0, i.jsx)(i.Fragment, {

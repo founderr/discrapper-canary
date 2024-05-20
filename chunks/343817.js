@@ -1,7 +1,7 @@
 "use strict";
 var i, r;
 
-function a(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -17,10 +17,10 @@ n.r(t), n.d(t, {
     return i
   },
   INVALID_FORM_BODY_ERROR_CODE: function() {
-    return s
+    return a
   }
 }), n("47120");
-let s = 50035;
+let a = 50035;
 
 function o(e) {
   return e.map(e => ({
@@ -59,7 +59,7 @@ class l {
     return null
   }
   constructor(e, t, n = "An unexpected error occurred.") {
-    a(this, "message", void 0), a(this, "code", void 0), a(this, "retryAfter", void 0), a(this, "errors", void 0), a(this, "status", void 0), a(this, "captchaFields", void 0);
+    s(this, "message", void 0), s(this, "code", void 0), s(this, "retryAfter", void 0), s(this, "errors", void 0), s(this, "status", void 0), s(this, "captchaFields", void 0);
     let {
       message: i,
       code: r,
@@ -83,7 +83,7 @@ class l {
         message: n.captcha_key.length > 0 ? n.captcha_key[0] : void 0
       } : {
         status: e.status,
-        code: s,
+        code: a,
         errors: function(e) {
           let t = {};
           for (let [n, i] of Object.entries(e)) {

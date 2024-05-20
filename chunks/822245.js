@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("653041");
 var i, r = n("392711"),
-  a = n.n(r),
-  s = n("442837"),
+  s = n.n(r),
+  a = n("442837"),
   o = n("570140"),
   l = n("911969"),
   u = n("704907"),
@@ -43,12 +43,12 @@ function f(e) {
 function S() {
   var e, t;
   let n = null !== (t = null === (e = d.default.frecencyWithoutFetchingLatest.applicationFrecency) || void 0 === e ? void 0 : e.applications) && void 0 !== t ? t : {};
-  T.overwriteHistory(a().mapValues(n, e => ({
+  T.overwriteHistory(s().mapValues(n, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), I.pendingUsages)
 }
-class h extends(i = s.default.PersistedStore) {
+class h extends(i = a.default.PersistedStore) {
   initialize(e) {
     null != e && (I = e), this.syncWith([d.default], S)
   }

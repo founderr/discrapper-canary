@@ -28,13 +28,13 @@ var a = s("735250"),
   x = s("465670"),
   L = s("84017"),
   O = s("185403"),
-  A = s("632184"),
-  p = s("768581"),
+  p = s("632184"),
+  A = s("768581"),
   M = s("267642"),
   D = s("358085"),
   v = s("999382"),
-  G = s("70409"),
-  j = s("981631"),
+  j = s("70409"),
+  G = s("981631"),
   U = s("710111"),
   P = s("689938"),
   b = s("438927");
@@ -86,8 +86,8 @@ function H(e) {
           return e = l, void(0, T.openGuildBoostingMarketingModal)({
             guildId: e,
             location: {
-              section: j.AnalyticsSections.GUILD_SETTINGS_SOUNDBOARD,
-              object: j.AnalyticsObjects.BOOST_GEM_ICON
+              section: G.AnalyticsSections.GUILD_SETTINGS_SOUNDBOARD,
+              object: G.AnalyticsObjects.BOOST_GEM_ICON
             }
           })
         },
@@ -215,7 +215,7 @@ function V(e) {
           currentTier: E,
           availableSounds: _
         })
-      }), (0, a.jsx)(G.default, {
+      }), (0, a.jsx)(j.default, {
         guild: t,
         numSounds: n.length,
         isOutOfSlots: 0 === _
@@ -256,14 +256,14 @@ function Y(e) {
     emojiName: g
   } = t, C = (0, d.useStateFromStores)([h.default], () => null != T ? T : h.default.getUser(m), [m, T]), {
     canManageGuildExpression: R
-  } = (0, S.useManageResourcePermissions)(o), M = l.useMemo(() => R(t), [t, R]), D = null != N || null != g, [v, G] = l.useState(!1);
-  async function j() {
+  } = (0, S.useManageResourcePermissions)(o), M = l.useMemo(() => R(t), [t, R]), D = null != N || null != g, [v, j] = l.useState(!1);
+  async function G() {
     if (!v) {
-      G(!0);
+      j(!0);
       try {
         await (0, f.deleteSound)(o.id, u)
       } catch {
-        G(!1)
+        j(!1)
       }
     }
   }
@@ -290,7 +290,7 @@ function Y(e) {
       children: (0, a.jsxs)(c.Text, {
         variant: "text-sm/normal",
         className: b.soundName,
-        children: [I, " ", (0, a.jsx)(A.default, {
+        children: [I, " ", (0, a.jsx)(p.default, {
           className: b.soundPreviewIcon
         })]
       })
@@ -301,7 +301,7 @@ function Y(e) {
         "aria-label": null == C ? void 0 : C.username,
         size: c.AvatarSizes.SIZE_24,
         className: b.uploaderAvatar,
-        src: (0, p.getUserAvatarURL)(C, !1, 24)
+        src: (0, A.getUserAvatarURL)(C, !1, 24)
       }), null == C ? void 0 : C.username]
     }), M ? (0, a.jsxs)("div", {
       className: b.soundEditContainer,
@@ -332,7 +332,7 @@ function Y(e) {
             }),
             confirmText: P.default.Messages.DELETE,
             cancelText: P.default.Messages.CANCEL,
-            onConfirm: j,
+            onConfirm: G,
             ...e,
             children: (0, a.jsx)(c.Text, {
               variant: "text-md/normal",

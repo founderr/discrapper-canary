@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("22082"),
   h = n("703656"),
   m = n("306680"),
-  C = n("648414"),
-  p = n("26290"),
+  p = n("648414"),
+  C = n("26290"),
   g = n("709054"),
   E = n("540126"),
   _ = n("434479"),
@@ -50,13 +50,13 @@ function L(e) {
       })
     })
   }, [t]), j = null;
-  return (!x || M || y) && !L && !O && (j = (0, l.jsx)(p.TextBadge, {
+  return (!x || M || y) && !L && !O && (j = (0, l.jsx)(C.TextBadge, {
     color: r.default.unsafe_rawColors.BRAND_260.css,
     text: T.default.Messages.NEW,
     className: A.newChannel
   })), (0, l.jsx)(_.BasicChannelRow, {
     id: "channels-".concat(t.id),
-    renderIcon: e => (0, l.jsx)(C.default, {
+    renderIcon: e => (0, l.jsx)(p.default, {
       className: e
     }),
     text: v ? T.default.Messages.CHANNELS_AND_ROLES : T.default.Messages.CHANNEL_BROWSER_TITLE,

@@ -62,7 +62,7 @@ n.r(t), n.d(t, {
     return G
   }
 }), n("757143"), n("47120");
-var a, s, o, l = n("348327"),
+var s, a, o, l = n("348327"),
   u = n.n(l),
   d = n("512722"),
   _ = n.n(d),
@@ -86,7 +86,7 @@ if (null != g) {
   let t = g.remoteApp.getVersion(),
     n = g.process.platform,
     r = g.os.release,
-    s = g.os.arch,
+    a = g.os.arch,
     o = g.os.appArch,
     l = g.remoteApp.getReleaseChannel(),
     u = (0, I.getSystemLocale)();
@@ -109,10 +109,10 @@ if (null != g) {
       release_channel: l || "unknown",
       client_version: t,
       os_version: r,
-      os_arch: s,
+      os_arch: a,
       app_arch: o,
       system_locale: u
-    }, (null === (a = E().name) || void 0 === a ? void 0 : a.toLocaleLowerCase()) === "electron" && (i.browser_user_agent = E().ua || "", i.browser_version = E().version || ""), "linux" === n) {
+    }, (null === (s = E().name) || void 0 === s ? void 0 : s.toLocaleLowerCase()) === "electron" && (i.browser_user_agent = E().ua || "", i.browser_version = E().version || ""), "linux" === n) {
     let e = g.crashReporter.getMetadata();
     i.window_manager = e.wm, i.distro = e.distro
   }
@@ -225,7 +225,7 @@ if (null == i) try {
     ...e,
     browser_user_agent: window.navigator.userAgent || "",
     browser_version: E().version || "",
-    os_version: null !== (o = null === E() || void 0 === E() ? void 0 : null === (s = E().os) || void 0 === s ? void 0 : s.version) && void 0 !== o ? o : "",
+    os_version: null !== (o = null === E() || void 0 === E() ? void 0 : null === (a = E().os) || void 0 === a ? void 0 : a.version) && void 0 !== o ? o : "",
     ...t,
     ...n
   }
@@ -244,10 +244,10 @@ b(function() {
   let i = {},
     r = window.GLOBAL_ENV.RELEASE_CHANNEL;
   r && (i.release_channel = r.split("-")[0]);
-  let a = parseInt((n = "294765", "294765"), 10);
-  !isNaN(a) && (i.client_build_number = a);
-  let s = null == g ? void 0 : null === (e = (t = g.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
-  return !isNaN(s) && (i.native_build_number = s), i.client_event_source = function() {
+  let s = parseInt((n = "294856", "294856"), 10);
+  !isNaN(s) && (i.client_build_number = s);
+  let a = null == g ? void 0 : null === (e = (t = g.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
+  return !isNaN(a) && (i.native_build_number = a), i.client_event_source = function() {
     try {
       if (__OVERLAY__) return "OVERLAY"
     } catch (e) {}
@@ -259,28 +259,28 @@ let G = e => {
     analyticEventConfigs: t,
     dispatcher: i,
     TRACK_ACTION_NAME: r
-  } = e, a = (0, S.queueTrackingEventMaker)(i, r);
+  } = e, s = (0, S.queueTrackingEventMaker)(i, r);
   return function(e, i) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if (null != n.g.isServerRendering && !0 === n.g.isServerRendering) return Promise.resolve();
-    let s = null != i ? i : {},
+    let a = null != i ? i : {},
       o = t[e];
     if (null != o) {
       if ("throttlePeriod" in o) {
-        let t = [e, ...o.throttleKeys(s)].join("_");
+        let t = [e, ...o.throttleKeys(a)].join("_");
         if (U(t)) return Promise.resolve();
         if ("number" == typeof o.throttlePercent && Math.random() > o.throttlePercent) return Promise.resolve();
         if (o.deduplicate) {
           let e = R[t];
-          if (u()(e, s)) return Promise.resolve();
-          R[t] = s
+          if (u()(e, a)) return Promise.resolve();
+          R[t] = a
         }
         C[t] = Date.now() + o.throttlePeriod
       } else if ("throttlePercent" in o) {
         if (Math.random() > o.throttlePercent) return Promise.resolve()
       } else _()(!1, "Unsupported analytics event config: ".concat(o))
     }
-    return a(e, i, r)
+    return s(e, i, r)
   }
 };
 

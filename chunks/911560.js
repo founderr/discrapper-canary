@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("266067"),
   r = n("544891"),
-  a = n("570140"),
-  s = n("38618"),
+  s = n("570140"),
+  a = n("38618"),
   o = n("131704"),
   l = n("592125"),
   u = n("944486"),
@@ -14,12 +14,12 @@ let c = {},
 
 function I(e) {
   if (null == e || e === _.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID || (0, _.isStaticChannelRoute)(e) || null != l.default.getChannel(e)) return Promise.resolve();
-  if (E || (E = !0, a.default.subscribe("CONNECTION_OPEN", () => {
+  if (E || (E = !0, s.default.subscribe("CONNECTION_OPEN", () => {
       c = {};
       let e = u.default.getChannelId(),
         t = l.default.getChannel(e);
       null != e && null == t && I(e)
-    })), !s.default.isConnected()) return Promise.resolve();
+    })), !a.default.isConnected()) return Promise.resolve();
   let t = c[e];
   if (null != t) return "LOADING" === t.type ? t.promise : Promise.resolve();
   let n = (0, i.matchPath)(location.pathname, {
@@ -34,7 +34,7 @@ function I(e) {
           type: "LOADED"
         }, o.THREAD_CHANNEL_TYPES.has(i.type)) {
         var r;
-        a.default.dispatch({
+        s.default.dispatch({
           type: "THREAD_CREATE",
           channel: (0, o.createChannelRecordFromServer)(i),
           messageId: null == n ? void 0 : null === (r = n.params) || void 0 === r ? void 0 : r.messageId
@@ -44,7 +44,7 @@ function I(e) {
       var t;
       c[e] = {
         type: "NOT_FOUND"
-      }, a.default.dispatch({
+      }, s.default.dispatch({
         type: "CHANNEL_DELETE",
         channel: {
           id: e,

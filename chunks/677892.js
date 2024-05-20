@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   CustomizationQuestionsOverviewItem: function() {
-    return A
+    return p
   },
   DefaultChannelsOverviewItem: function() {
     return O
   },
   HomeSettingsOverviewItem: function() {
-    return p
+    return A
   },
   useOnboardingCanBeEnabled: function() {
     return L
@@ -149,8 +149,8 @@ function O(e) {
     guildId: u,
     onEdit: c,
     disableGoodStatus: _
-  } = e, I = (0, n.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(u)), T = (0, n.useStateFromStores)([r.default], () => (0, o.getMinimumSetOfDefaultChannelIds)(u, r.default.getDefaultChannelIds(u), r.default.getOnboardingPrompts(u)).length), S = l.useMemo(() => new Set(I), [I]), [, f] = (0, o.useChattableDefaultChannels)(u, S), m = f.length, L = x(u), O = (0, N.useAdvancedModeReady)(u), A = (0, n.useStateFromStores)([r.default], () => r.default.isAdvancedMode(u));
-  let p = (t = L, s = A, i = m, d = T, s ? h.default.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS_ADVANCED.format({
+  } = e, I = (0, n.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(u)), T = (0, n.useStateFromStores)([r.default], () => (0, o.getMinimumSetOfDefaultChannelIds)(u, r.default.getDefaultChannelIds(u), r.default.getOnboardingPrompts(u)).length), S = l.useMemo(() => new Set(I), [I]), [, f] = (0, o.useChattableDefaultChannels)(u, S), m = f.length, L = x(u), O = (0, N.useAdvancedModeReady)(u), p = (0, n.useStateFromStores)([r.default], () => r.default.isAdvancedMode(u));
+  let A = (t = L, s = p, i = m, d = T, s ? h.default.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS_ADVANCED.format({
     numDefaultChannels: i,
     numFromQuestions: d - i
   }) : t ? h.default.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS.format({
@@ -160,20 +160,20 @@ function O(e) {
     numChattableChannels: g.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN
   }));
   return (0, a.jsx)(R, {
-    title: A ? h.default.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS_ADVANCED : h.default.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS,
-    description: p,
+    title: p ? h.default.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS_ADVANCED : h.default.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS,
+    description: A,
     icon: (0, a.jsx)(E.default, {
       width: 24,
       height: 24,
       className: C.channelIcon
     }),
-    hasStarted: m > 0 || A,
+    hasStarted: m > 0 || p,
     status: L || O ? _ ? "none" : "good" : "required",
     onEdit: c
   })
 }
 
-function A(e) {
+function p(e) {
   let {
     guildId: t,
     onEdit: s,
@@ -202,7 +202,7 @@ function A(e) {
   })
 }
 
-function p(e) {
+function A(e) {
   let {
     guildId: t,
     onEdit: s,

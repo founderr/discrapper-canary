@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("653041"), n("47120");
-var i, r, a = n("498607"),
-  s = n.n(a),
+var i, r, s = n("498607"),
+  a = n.n(s),
   o = n("759174"),
   l = n("493892"),
   u = n("594174"),
@@ -51,8 +51,8 @@ class A {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
       r = (0, d.getJoinedAtTimestamp)(e.joinedAt),
       {
-        hasUnusualDmActivity: a,
-        hasUnusualAccountActivity: s,
+        hasUnusualDmActivity: s,
+        hasUnusualAccountActivity: a,
         sourceInviteCode: o,
         joinSourceType: l,
         inviterId: c,
@@ -60,8 +60,8 @@ class A {
       } = this._computeMemberSupplementals(e.userId, e.unusualDMActivityUntil),
       T = u.default.getUser(e.userId);
     return {
-      hasUnusualDmActivity: a,
-      hasUnusualAccountActivity: s,
+      hasUnusualDmActivity: s,
+      hasUnusualAccountActivity: a,
       sourceInviteCode: o,
       joinSourceType: l,
       inviterId: c,
@@ -79,14 +79,14 @@ class A {
     var n, i;
     let {
       sourceInviteCode: r,
-      joinSourceType: a,
-      inviterId: s,
+      joinSourceType: s,
+      inviterId: a,
       integrationType: o
     } = null !== (n = (0, c.getMemberSupplementalByGuildId)(this.guildId)[e]) && void 0 !== n ? n : {};
     return {
       sourceInviteCode: null != r ? r : null,
-      joinSourceType: null != a ? a : null,
-      inviterId: null != s ? s : null,
+      joinSourceType: null != s ? s : null,
+      inviterId: null != a ? a : null,
       integrationType: null != o ? o : null,
       hasUnusualDmActivity: null != (i = t) && new Date(i).getTime() >= T - _.UNUSUAL_DM_COMPARISON_DELTA,
       hasUnusualAccountActivity: (0, l.isSpammer)(e)
@@ -104,7 +104,7 @@ class A {
       r = {
         ...t
       },
-      a = !1,
+      s = !1,
       {
         sourceInviteCode: o,
         hasUnusualDmActivity: l,
@@ -116,9 +116,9 @@ class A {
     for (let e in i.sourceInviteCode !== o && (r.sourceInviteCode = o), i.hasUnusualDmActivity !== l && (r.hasUnusualDmActivity = l), i.hasUnusualAccountActivity !== u && (r.hasUnusualAccountActivity = u), i.joinSourceType !== d && (r.joinSourceType = d), i.inviterId !== _ && (r.inviterId = _), i.integrationType !== c && (r.integrationType = c), r) {
       let t = r[e],
         n = i[e];
-      !s()(t, n) && (i[e] = t, a = !0)
+      !a()(t, n) && (i[e] = t, s = !0)
     }
-    return this._membersMap.set(i.userId, i) || a
+    return this._membersMap.set(i.userId, i) || s
   }
   removeMember(e) {
     return this._membersMap.delete(e)

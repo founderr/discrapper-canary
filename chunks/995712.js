@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  a = n("806519"),
-  s = n("768581"),
+  s = n("806519"),
+  a = n("768581"),
   o = n("689938"),
   l = n("359959");
 t.default = e => {
@@ -15,7 +15,7 @@ t.default = e => {
     id: u,
     icon: d,
     name: _
-  } = n, c = null !== (t = s.default.getGuildIconURL({
+  } = n, c = null !== (t = a.default.getGuildIconURL({
     id: u,
     icon: d,
     size: 32
@@ -30,8 +30,8 @@ t.default = e => {
       className: l.guildContainer,
       children: (0, i.jsxs)("div", {
         className: l.guildInfo,
-        children: [(0, i.jsx)(a.default, {
-          mask: a.default.Masks.SQUIRCLE,
+        children: [(0, i.jsx)(s.default, {
+          mask: s.default.Masks.SQUIRCLE,
           width: 32,
           height: 32,
           className: l.guildIconMask,

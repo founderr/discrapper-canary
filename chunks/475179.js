@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("570140"),
   r = n("367907"),
-  a = n("626135"),
-  s = n("585483"),
+  s = n("626135"),
+  a = n("585483"),
   o = n("981631");
 t.default = {
   rebuildRTCActiveChannels() {
@@ -20,7 +20,7 @@ t.default = {
   },
   updateLayout(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.AppContext.APP;
-    a.default.track(o.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
+    s.default.track(o.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
       video_layout: t,
       ...(0, r.collectVoiceAnalyticsMetadata)(e)
     }), i.default.dispatch({
@@ -64,9 +64,9 @@ t.default = {
       channelId: e,
       chatOpen: t
     }), t ? setTimeout(() => {
-      s.ComponentDispatch.dispatch(o.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+      a.ComponentDispatch.dispatch(o.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
         channelId: e
       })
-    }, 0) : s.ComponentDispatch.dispatch(o.ComponentActions.FOCUS_CHAT_BUTTON)
+    }, 0) : a.ComponentDispatch.dispatch(o.ComponentActions.FOCUS_CHAT_BUTTON)
   }
 }

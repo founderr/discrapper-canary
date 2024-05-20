@@ -30,8 +30,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("108131"),
   r = n.n(i),
-  a = n("308083"),
-  s = n("981631"),
+  s = n("308083"),
+  a = n("981631"),
   o = n("689938");
 
 function l(e, t) {
@@ -51,7 +51,7 @@ function u(e) {
 }
 
 function d(e) {
-  return null != e && e.hasFeature(s.GuildFeatures.CLAN)
+  return null != e && e.hasFeature(a.GuildFeatures.CLAN)
 }
 
 function _(e, t) {
@@ -88,15 +88,15 @@ let E = (e, t) => {
     }
   },
   I = {
-    [a.ClanTagBadgeSize.SIZE_12]: 16,
-    [a.ClanTagBadgeSize.SIZE_16]: 16,
-    [a.ClanTagBadgeSize.SIZE_24]: 24,
-    [a.ClanTagBadgeSize.SIZE_32]: 32,
-    [a.ClanTagBadgeSize.SIZE_36]: 40
+    [s.ClanTagBadgeSize.SIZE_12]: 16,
+    [s.ClanTagBadgeSize.SIZE_16]: 16,
+    [s.ClanTagBadgeSize.SIZE_24]: 24,
+    [s.ClanTagBadgeSize.SIZE_32]: 32,
+    [s.ClanTagBadgeSize.SIZE_36]: 40
   };
 
 function T(e, t) {
-  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.ClanTagBadgeSize.SIZE_12;
+  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.ClanTagBadgeSize.SIZE_12;
   if (null == t) return;
   let {
     CDN_HOST: i

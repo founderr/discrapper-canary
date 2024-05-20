@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("147913"),
   r = n("70956"),
-  a = n("822893"),
-  s = n("641051");
+  s = n("822893"),
+  a = n("641051");
 
 function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,11 +19,11 @@ class l extends i.default {
       POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
     }), o(this, "handlePostConnectionOpen", () => {
       ! function e() {
-        s.default.getCurrentConfig({
+        a.default.getCurrentConfig({
           location: "e391b1_1"
         }, {
           autoTrackExposure: !1
-        }).showReminders && (0, a.fetchAndUpdateSavedMessages)().then(() => setTimeout(e, 15 * r.default.Millis.MINUTE))
+        }).showReminders && (0, s.fetchAndUpdateSavedMessages)().then(() => setTimeout(e, 15 * r.default.Millis.MINUTE))
       }()
     })
   }

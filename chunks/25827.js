@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("75735"),
   l = n("40851"),
   u = n("67844"),
@@ -21,8 +21,8 @@ function c(e) {
   let t = (0, u.getVideoButtonLabel)(e),
     {
       enabled: n,
-      cameraUnavailable: a,
-      onChange: s,
+      cameraUnavailable: s,
+      onChange: a,
       onCameraUnavailable: d,
       hasPermission: _,
       children: c,
@@ -30,7 +30,7 @@ function c(e) {
       join: I
     } = e,
     T = (0, l.useAppContext)(),
-    f = a ? () => d() : () => s(!e.enabled, T),
+    f = s ? () => d() : () => a(!e.enabled, T),
     {
       Component: S,
       play: h,
@@ -43,7 +43,7 @@ function c(e) {
       disabled: !n && (!_ || E),
       iconComponent: S,
       label: t,
-      unavailable: a,
+      unavailable: s,
       onMouseEnter: I ? void 0 : A.onMouseEnter,
       onMouseLeave: I ? void 0 : A.onMouseLeave
     })
@@ -55,7 +55,7 @@ function E(e) {
     enabled: t,
     join: n,
     channel: r,
-    onChange: a,
+    onChange: s,
     onCameraUnavailable: o,
     cameraUnavailable: l,
     hasPermission: u,
@@ -70,7 +70,7 @@ function E(e) {
     enabled: t,
     join: n,
     channel: r,
-    onChange: a,
+    onChange: s,
     onCameraUnavailable: o,
     cameraUnavailable: l,
     hasPermission: u,
@@ -80,7 +80,7 @@ function E(e) {
       let {
         unavailable: n,
         onMouseEnter: r,
-        onMouseLeave: a,
+        onMouseLeave: s,
         ...o
       } = e;
       return (0, i.jsx)(A, {
@@ -92,10 +92,10 @@ function E(e) {
         },
         onMouseLeave: e => {
           var t;
-          null === (t = h.onMouseLeave) || void 0 === t || t.call(h, e), null == a || a()
+          null === (t = h.onMouseLeave) || void 0 === t || t.call(h, e), null == s || s()
         },
         isActive: t,
-        className: s()(E, {
+        className: a()(E, {
           [_.fauxDisabled]: n
         }),
         onPopoutClick: S

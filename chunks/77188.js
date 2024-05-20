@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("470079"),
   r = n("836560"),
-  a = n("327432"),
-  s = n("40851"),
+  s = n("327432"),
+  a = n("40851"),
   o = n("213459"),
   l = n("998698"),
   u = n("695346"),
@@ -29,10 +29,10 @@ var A = n("814011"),
   C = n("42530");
 
 function R(e) {
-  let t = i.useContext(s.default),
+  let t = i.useContext(a.default),
     n = u.UseRichChatInput.useSetting(),
     [R] = i.useState(() => {
-      let i = (0, a.createEditor)();
+      let i = (0, s.createEditor)();
       return i.children = (0, d.toRichValue)(""), i.selection = {
           anchor: C.FIRST_TEXT_POINT,
           focus: C.FIRST_TEXT_POINT
@@ -40,8 +40,8 @@ function R(e) {
         function(e) {
           var t, n, i;
           let {
-            editor: a,
-            chatInputType: s,
+            editor: s,
+            chatInputType: a,
             channel: o,
             canUseCommands: l,
             canOnlyUseTextCommands: u,
@@ -51,12 +51,12 @@ function R(e) {
             onChangeStart: g,
             onChangeEnd: L,
             updateState: v
-          } = e, D = a, {
+          } = e, D = s, {
             onChange: M
           } = D;
-          D.chatInputType = s, D.windowContext = d, D.previewMarkdown = C, D.composition = null, D.events = new r.EventEmitter, D.isMac = "MacIntel" === navigator.platform, D.onChange = () => {
+          D.chatInputType = a, D.windowContext = d, D.previewMarkdown = C, D.composition = null, D.events = new r.EventEmitter, D.isMac = "MacIntel" === navigator.platform, D.onChange = () => {
             D.events.emit("onChange"), M()
-          }, D = (0, m.withReact)(D, !0 === R), D = (0, A.default)(D), D = (0, h.default)(D), (null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) && (D = (0, _.default)(D, o, !0 === l, !0 === u)), D = (0, S.default)(D, o.guild_id, o.id), !(null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (D = (0, c.default)(D)), !(null === (i = s.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (D = (0, E.default)(D)), R && (D = (0, p.default)(D)), D = (0, f.default)(D), D = (0, I.default)(D), D = (0, N.default)(D), D = (0, O.default)(D, g, L), D = (0, T.default)(D, e => {
+          }, D = (0, m.withReact)(D, !0 === R), D = (0, A.default)(D), D = (0, h.default)(D), (null === (t = a.commands) || void 0 === t ? void 0 : t.enabled) && (D = (0, _.default)(D, o, !0 === l, !0 === u)), D = (0, S.default)(D, o.guild_id, o.id), !(null === (n = a.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (D = (0, c.default)(D)), !(null === (i = a.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (D = (0, E.default)(D)), R && (D = (0, p.default)(D)), D = (0, f.default)(D), D = (0, I.default)(D), D = (0, N.default)(D), D = (0, O.default)(D, g, L), D = (0, T.default)(D, e => {
             let {
               newValue: t,
               newSelection: n

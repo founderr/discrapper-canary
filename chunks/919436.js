@@ -11,8 +11,8 @@ var l, a = n("735250"),
   f = n("43267"),
   h = n("933557"),
   m = n("93687"),
-  C = n("266076"),
-  p = n("199902"),
+  p = n("266076"),
+  C = n("199902"),
   g = n("19780"),
   E = n("306680"),
   _ = n("944486"),
@@ -133,15 +133,15 @@ class b extends(l = s.PureComponent) {
       isGDMFacepileEnabled: h
     } = this.props, {
       hovered: m,
-      animating: p
+      animating: C
     } = this.state, g = e.isMultiUserDM() && null == e.icon && h;
     return (0, a.jsx)(i.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, a.jsxs)(L.ListItem, {
         children: [(0, a.jsx)(N.default, {
-          hovered: !p && m,
-          selected: !p && n,
-          unread: !p && f,
+          hovered: !C && m,
+          selected: !C && n,
+          unread: !C && f,
           className: M.pill
         }), (0, a.jsx)(v.default, {
           text: null != t ? t : "",
@@ -171,7 +171,7 @@ class b extends(l = s.PureComponent) {
                 onContextMenu: this.handleContextMenu,
                 icon: g ? void 0 : this.getChannelIcon(),
                 backgroundStyle: g ? "on-hover" : "always",
-                children: g ? (0, a.jsx)(C.default, {
+                children: g ? (0, a.jsx)(p.default, {
                   channel: e,
                   size: u.AvatarSizes.SIZE_48,
                   facepileSizeOverride: u.AvatarSizes.SIZE_32,
@@ -232,7 +232,7 @@ y(b, "defaultProps", {
     l = (0, h.default)(e.channel),
     s = (0, o.useStateFromStores)([g.default], () => g.default.getChannelId(), []),
     i = (0, o.useStateFromStores)([c.default], () => null != s ? c.default.getMode(s) : R.ChannelModes.VOICE, [s]),
-    r = (0, o.useStateFromStores)([p.default], () => p.default.getAllApplicationStreamsForChannel(n).length > 0),
+    r = (0, o.useStateFromStores)([C.default], () => C.default.getAllApplicationStreamsForChannel(n).length > 0),
     u = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(), []),
     d = (0, o.useStateFromStores)([E.default], () => E.default.getMentionCount(n), [n]),
     {
@@ -242,10 +242,10 @@ y(b, "defaultProps", {
     }, {
       autoTrackExposure: !1
     }),
-    C = s === n,
+    p = s === n,
     S = !1,
     I = !1;
-  return C && (S = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
+  return p && (S = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
     ...e,
     ref: t,
     channelName: l,
@@ -255,7 +255,7 @@ y(b, "defaultProps", {
     audio: S,
     video: I,
     stream: r,
-    isCurrentUserInThisDMCall: C,
+    isCurrentUserInThisDMCall: p,
     isGDMFacepileEnabled: f
   })
 })

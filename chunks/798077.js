@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   MULTIACCOUNT_TOOLTIP_SEEN_KEY: function() {
-    return a
+    return s
   },
   SWITCH_ACCOUNTS_MODAL_KEY: function() {
     return r
@@ -12,4 +12,4 @@ n.r(t), n.d(t, {
 });
 let i = 5,
   r = "switch-accounts-modal",
-  a = "multiaccount_cta_tooltip_seen"
+  s = "multiaccount_cta_tooltip_seen"

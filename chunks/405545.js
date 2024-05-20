@@ -19,7 +19,7 @@ t.default = function(e) {
     canRemove: m,
     actionsLocation: h
   } = e, {
-    label: p
+    label: E
   } = t;
   return (0, n.jsx)(l.default, {
     field: t,
@@ -29,7 +29,7 @@ t.default = function(e) {
     onDrop: d,
     onEdit: u,
     onRemove: f,
-    title: p,
+    title: E,
     canRemove: m,
     actionsLocation: h,
     children: (0, n.jsx)(i.MultipleChoiceFieldBody, {

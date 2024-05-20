@@ -12,7 +12,7 @@ var n = a("470079"),
   f = a("997787"),
   m = a("981631");
 let h = 1 * u.default.Millis.DAY,
-  p = new Map;
+  E = new Map;
 t.default = {
   useShouldShowChannelNotice(e) {
     let t = (0, r.useStateFromStores)([o.default, c.default], () => {
@@ -23,8 +23,8 @@ t.default = {
       t && ! function(e) {
         var t;
         let a = Date.now(),
-          n = null !== (t = p.get(e)) && void 0 !== t ? t : 0;
-        !(a < n + h) && (p.set(e, a), s.HTTP.post({
+          n = null !== (t = E.get(e)) && void 0 !== t ? t : 0;
+        !(a < n + h) && (E.set(e, a), s.HTTP.post({
           url: m.Endpoints.GUILD_MIGRATE_COMMAND_SCOPE(e)
         }).then(t => {
           var a, n;
@@ -34,7 +34,7 @@ t.default = {
             integrationIdsWithAppCommands: null !== (n = null === (a = t.body) || void 0 === a ? void 0 : a.integration_ids_with_app_commands) && void 0 !== n ? n : []
           })
         }, () => {
-          p.set(e, n)
+          E.set(e, n)
         }))
       }(e)
     }, [e, t]);

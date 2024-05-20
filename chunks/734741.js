@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return E
   },
   useShouldShowCustomNotificationSoundBadge: function() {
-    return p
+    return C
   },
   useShouldShowWhatsNewBadge: function() {
     return T
@@ -59,7 +59,7 @@ let h = "getWhatsNewBadgeCount",
       });
     return !t && n && !a && !s
   },
-  C = () => {
+  p = () => {
     let e = i.default.getCurrentUser(),
       t = r.default.isPremium(e),
       {
@@ -85,7 +85,7 @@ let h = "getWhatsNewBadgeCount",
       });
     return !t && n && !l && !a
   },
-  p = () => {
+  C = () => {
     let {
       canFlipCustomNotificationSoundsCard: e
     } = d.June2024MarketingMoment.useExperiment({
@@ -142,23 +142,23 @@ let h = "getWhatsNewBadgeCount",
       location: h
     }, {
       autoTrackExposure: !1
-    }), t = C(), n = (0, s.isDismissibleContentDismissed)(a.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE);
+    }), t = p(), n = (0, s.isDismissibleContentDismissed)(a.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE);
     return t && e && !n
   },
   N = () => {
-    let e = p(),
+    let e = C(),
       t = E(),
       n = S();
     return e || t || n ? 1 : 0
   },
   T = () => {
-    let e = p(),
+    let e = C(),
       t = E(),
       n = S();
     return e || t || n
   },
   A = () => {
-    let e = p(),
+    let e = C(),
       t = E(),
       n = S();
     e && (0, s.markDismissibleContentAsDismissed)(a.DismissibleContent.WHATS_NEW_CUSTOM_NOTIFICATION_SOUNDS_NITRO_BADGE, {
@@ -183,5 +183,5 @@ let h = "getWhatsNewBadgeCount",
     }, {
       autoTrackExposure: !1
     });
-    return C() && e
+    return p() && e
   }

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  a = n("468436"),
-  s = n("378298"),
+  s = n("468436"),
+  a = n("378298"),
   o = n("473092"),
   l = n("237292");
 
@@ -33,9 +33,9 @@ function u(e) {
       modalProps: n
     })
   }, {
-    backdropStyle: a.BackdropStyles.BLUR,
+    backdropStyle: s.BackdropStyles.BLUR,
     onCloseCallback: () => {
-      (0, s.dismissChannelSafetyWarnings)(t, [u]), (0, o.trackCtaEvent)({
+      (0, a.dismissChannelSafetyWarnings)(t, [u]), (0, o.trackCtaEvent)({
         channelId: t,
         senderId: d,
         warningId: u,

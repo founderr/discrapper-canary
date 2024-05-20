@@ -1,7 +1,7 @@
 "use strict";
 let i, r;
 n.r(t);
-var a, s, o, l, u = n("392711"),
+var s, a, o, l, u = n("392711"),
   d = n("442837"),
   _ = n("570140"),
   c = n("358085"),
@@ -42,12 +42,12 @@ class N extends(l = d.default.Store) {
     return null != e ? S[e] : void 0
   }
 }
-o = "ProfileEffectStore", (s = "displayName") in(a = N) ? Object.defineProperty(a, s, {
+o = "ProfileEffectStore", (a = "displayName") in(s = N) ? Object.defineProperty(s, a, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = o, t.default = new N(_.default, {
+}) : s[a] = o, t.default = new N(_.default, {
   USER_PROFILE_EFFECTS_FETCH: () => {
     T = !0
   },

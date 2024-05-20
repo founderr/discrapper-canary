@@ -30,7 +30,7 @@ function N() {
   } = (0, T.default)(null !== (e = null == h ? void 0 : h.active_trial) && void 0 !== e ? e : null), R = (0, I.default)(), x = null != s, L = l.useCallback(e => {
     let t = C.find(e => e.isDefault);
     i()(null != t, "Missing default trial duartion option"), n(e ? t.value : null)
-  }, [n, C]), O = (0, c.useRoleSubscriptionSettingsDisabled)(), A = (0, d.useUID)(), p = (0, d.useUID)();
+  }, [n, C]), O = (0, c.useRoleSubscriptionSettingsDisabled)(), p = (0, d.useUID)(), A = (0, d.useUID)();
   return (0, a.jsxs)(S.default, {
     title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TITLE,
     description: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_DESCRIPTION,
@@ -42,7 +42,7 @@ function N() {
       children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_ENABLE_FREE_TRIAL_CTA
     }), (0, a.jsxs)(r.FormSection, {
       title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TIME_LIMIT_TITLE,
-      titleId: A,
+      titleId: p,
       disabled: !x || O,
       children: [(0, a.jsx)(r.FormText, {
         type: r.FormText.Types.DESCRIPTION,
@@ -52,7 +52,7 @@ function N() {
       }), (0, a.jsx)(o.default, {
         size: 8
       }), (0, a.jsx)(r.SingleSelect, {
-        "aria-labelledby": A,
+        "aria-labelledby": p,
         options: C,
         className: m.formInput,
         placeholder: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_DISABLED,
@@ -66,7 +66,7 @@ function N() {
       size: 24
     }), (0, a.jsxs)(r.FormSection, {
       title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_TITLE,
-      titleId: p,
+      titleId: A,
       disabled: !x || O,
       children: [(0, a.jsx)(r.FormText, {
         type: r.FormText.Types.DESCRIPTION,
@@ -74,7 +74,7 @@ function N() {
         disabled: !x || O,
         children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_DESCRIPTION
       }), (0, a.jsx)(r.SingleSelect, {
-        "aria-labelledby": p,
+        "aria-labelledby": A,
         options: R,
         className: m.formInput,
         value: N,

@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, a, s, o = n("442837"),
+var i, r, s, a, o = n("442837"),
   l = n("570140"),
   u = n("433355"),
   d = n("944486"),
@@ -28,13 +28,13 @@ function T(e) {
     channelId: n,
     command: i,
     section: r,
-    initialValues: a,
-    location: s,
+    initialValues: s,
+    location: a,
     triggerSection: o,
     queryLength: l
   } = e, u = I(n);
   if ((null == i ? void 0 : i.id) === (null === (t = u.activeCommand) || void 0 === t ? void 0 : t.id)) return !1;
-  u.activeCommand = i, u.activeCommandSection = r, u.activeOptionName = null, u.preferredCommandId = null, u.initialValues = null != a ? a : {};
+  u.activeCommand = i, u.activeCommandSection = r, u.activeOptionName = null, u.preferredCommandId = null, u.initialValues = null != s ? s : {};
   let d = {};
   return (null == i ? void 0 : i.options) != null && i.options.forEach(e => {
     d[e.name] = {
@@ -45,7 +45,7 @@ function T(e) {
     }
   }), u.optionStates = d, null != i && (0, _.trackCommandSelected)({
     command: i,
-    location: s,
+    location: a,
     triggerSection: o,
     queryLength: l
   }), !0
@@ -56,8 +56,8 @@ function f(e) {
   let {
     channelId: i,
     commandId: r
-  } = e, a = I(i);
-  return r !== a.preferredCommandId && (null !== a.preferredCommandId || r !== (null !== (n = null === (t = a.activeCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null)) && (a.activeCommand = null, a.activeOptionName = null, a.preferredCommandId = r, a.optionStates = {}, !0)
+  } = e, s = I(i);
+  return r !== s.preferredCommandId && (null !== s.preferredCommandId || r !== (null !== (n = null === (t = s.activeCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null)) && (s.activeCommand = null, s.activeOptionName = null, s.preferredCommandId = r, s.optionStates = {}, !0)
 }
 
 function S(e) {
@@ -68,7 +68,7 @@ function S(e) {
     ...i.optionStates
   };
   for (let [e, t] of Object.entries(n)) {
-    var a, s, o;
+    var s, a, o;
     if (!(e in i.optionStates)) continue;
     if (!(void 0 !== t.hasValue ? t.hasValue : r[e].hasValue)) {
       r[e] = {
@@ -86,8 +86,8 @@ function S(e) {
       hasValue: !0,
       isActive: void 0 !== t.isActive ? t.isActive : n.isActive,
       lastValidationResult: void 0 !== t.lastValidationResult ? t.lastValidationResult : n.lastValidationResult,
-      optionValue: null !== (a = t.optionValue) && void 0 !== a ? a : n.optionValue,
-      location: null !== (s = t.location) && void 0 !== s ? s : n.location,
+      optionValue: null !== (s = t.optionValue) && void 0 !== s ? s : n.optionValue,
+      location: null !== (a = t.location) && void 0 !== a ? a : n.location,
       length: null !== (o = t.length) && void 0 !== o ? o : n.length
     }, void 0 !== t.isActive && (t.isActive ? (null != i.activeOptionName && i.activeOptionName !== e && (r[i.activeOptionName] = {
       ...r[i.activeOptionName]
@@ -140,12 +140,12 @@ class h extends(i = o.default.Store) {
     }
   }
 }
-s = "ApplicationCommandStore", (a = "displayName") in(r = h) ? Object.defineProperty(r, a, {
-  value: s,
+a = "ApplicationCommandStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s;
+}) : r[s] = a;
 let A = new h(l.default, {
   CONNECTION_OPEN: E,
   CHANNEL_SELECT: E,
@@ -159,14 +159,14 @@ let A = new h(l.default, {
       preferredCommandId: n,
       command: i,
       section: r,
-      location: a,
-      changedOptionStates: s
+      location: s,
+      changedOptionStates: a
     } = e, o = T({
       type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
       channelId: t,
       command: i,
       section: r,
-      location: a
+      location: s
     }), l = f({
       type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND",
       channelId: t,
@@ -174,7 +174,7 @@ let A = new h(l.default, {
     }), u = S({
       type: "APPLICATION_COMMAND_UPDATE_OPTIONS",
       channelId: t,
-      changedOptionStates: s
+      changedOptionStates: a
     });
     return o || l || u
   }

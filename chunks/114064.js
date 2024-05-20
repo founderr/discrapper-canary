@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var i, r, a, s, o = n("442837"),
+var i, r, s, a, o = n("442837"),
   l = n("570140"),
   u = n("168232");
 let d = {
@@ -10,7 +10,7 @@ let d = {
     overrides: {}
   },
   _ = d;
-class c extends(s = o.default.Store) {
+class c extends(a = o.default.Store) {
   getPerksDemos() {
     return _.perksDemos
   }
@@ -28,12 +28,12 @@ class c extends(s = o.default.Store) {
     return _.overrides
   }
 }
-a = "PerksDemosStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
-  value: a,
+s = "PerksDemosStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = a, t.default = new c(l.default, {
+}) : i[r] = s, t.default = new c(l.default, {
   PREMIUM_PERKS_DEMOS_FETCH_SUCCESS: function(e) {
     let {
       demos: t

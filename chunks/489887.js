@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return o
   },
   POLL_CREATION_MODAL_KEY: function() {
-    return s
+    return a
   },
   POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: function() {
     return c
@@ -25,12 +25,12 @@ n.r(t), n.d(t, {
     return _
   }
 }), n("47120");
-var i, r, a = n("957825");
-let s = "POLL_CREATION_MODAL_KEY",
+var i, r, s = n("957825");
+let a = "POLL_CREATION_MODAL_KEY",
   o = 1,
   l = 10,
   u = 300,
   d = 55,
   _ = 3,
   c = 50;
-(r = i || (i = {}))[r.ONE_HOUR = 1] = "ONE_HOUR", r[r.FOUR_HOURS = 4] = "FOUR_HOURS", r[r.EIGHT_HOURS = 8] = "EIGHT_HOURS", r[r.ONE_DAY = 24] = "ONE_DAY", r[r.THREE_DAYS = 72] = "THREE_DAYS", r[r.SEVEN_DAYS = 168] = "SEVEN_DAYS", a.ExpressionPickerViewType.GIF, a.ExpressionPickerViewType.EMOJI
+(r = i || (i = {}))[r.ONE_HOUR = 1] = "ONE_HOUR", r[r.FOUR_HOURS = 4] = "FOUR_HOURS", r[r.EIGHT_HOURS = 8] = "EIGHT_HOURS", r[r.ONE_DAY = 24] = "ONE_DAY", r[r.THREE_DAYS = 72] = "THREE_DAYS", r[r.SEVEN_DAYS = 168] = "SEVEN_DAYS", s.ExpressionPickerViewType.GIF, s.ExpressionPickerViewType.EMOJI

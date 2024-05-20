@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("470079"),
   r = n("442837"),
-  a = n("339085"),
-  s = n("633302"),
+  s = n("339085"),
+  a = n("633302"),
   o = n("695346"),
   l = n("981631");
 
@@ -22,7 +22,7 @@ function u(e, t) {
     animated: t.animated
   };
   else if (null != e.emojiName && "" !== e.emojiName) {
-    let t = s.default.getByName(s.default.convertSurrogateToName(e.emojiName, !1));
+    let t = a.default.getByName(a.default.convertSurrogateToName(e.emojiName, !1));
     n = null != t ? {
       id: null,
       name: t.surrogates,
@@ -45,12 +45,12 @@ function d(e) {
   let {
     emojiId: t
   } = e;
-  return u(e, null != t && "0" !== t ? a.default.getUsableCustomEmojiById(t) : null)
+  return u(e, null != t && "0" !== t ? s.default.getUsableCustomEmojiById(t) : null)
 }
 
 function _() {
   let e = o.CustomStatusSetting.useSetting(),
     t = null == e ? void 0 : e.emojiId,
-    n = (0, r.useStateFromStores)([a.default], () => null != t && "0" !== t ? a.default.getUsableCustomEmojiById(t) : null, [t]);
+    n = (0, r.useStateFromStores)([s.default], () => null != t && "0" !== t ? s.default.getUsableCustomEmojiById(t) : null, [t]);
   return (0, i.useMemo)(() => null != e ? u(e, n) : null, [e, n])
 }

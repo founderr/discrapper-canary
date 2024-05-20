@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("514342"),
   h = n("586791"),
   m = n("626135"),
-  C = n("981631"),
-  p = n("689938"),
+  p = n("981631"),
+  C = n("689938"),
   g = n("965752"),
   E = n("946278");
 
@@ -32,7 +32,7 @@ function _(e) {
     allowChannelTopic: N
   } = e, T = (0, r.useStateFromStores)([d.default], () => d.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, u.default)(t, !0), v = (!I || !!N) && L, x = null != _ && _.length > 0;
   a.useEffect(() => {
-    A && m.default.track(C.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
+    A && m.default.track(p.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
       guild_id: t.guild_id,
       channel_id: t.id
     })
@@ -59,7 +59,7 @@ function _(e) {
     children: [(0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: g.statusText,
-      children: p.default.Messages.VOICE_CHANNEL_SET_STATUS
+      children: C.default.Messages.VOICE_CHANNEL_SET_STATUS
     }), (0, l.jsx)(h.default, {
       className: g.pencilIcon,
       width: R,

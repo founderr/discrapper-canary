@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("570140"),
   r = n("661111"),
-  a = n("493683"),
-  s = n("904245"),
+  s = n("493683"),
+  a = n("904245"),
   o = n("147913"),
   l = n("3148"),
   u = n("706454"),
@@ -27,9 +27,9 @@ function A(e, t, n) {
 }
 async function m(e) {
   if (d.LastReceivedChangelogId.getSetting() >= e) return;
-  let t = await a.default.getOrEnsurePrivateChannel(S.SYSTEM_UPDATES_USER_ID);
+  let t = await s.default.getOrEnsurePrivateChannel(S.SYSTEM_UPDATES_USER_ID);
   if (null == t) return;
-  await s.default.fetchMessages({
+  await a.default.fetchMessages({
     channelId: t,
     limit: 1
   });
@@ -42,7 +42,7 @@ async function m(e) {
     poll: void 0,
     changelogId: n.changelogId
   });
-  s.default.receiveMessage(t, {
+  a.default.receiveMessage(t, {
     ...i,
     state: h.MessageStates.SENT,
     channel_id: t
@@ -59,31 +59,31 @@ class N extends o.default {
         location: "changelog_manager"
       }, {
         autoTrackExposure: !1
-      }), n = await r.default.fetchChangelogConfig(), a = n.body, s = function(e, t) {
+      }), n = await r.default.fetchChangelogConfig(), s = n.body, a = function(e, t) {
         let n = 0,
           i = null;
         for (var [r, {
-            min_version: a
-          }] of Object.entries(e)) a <= t && a > n && (n = a, i = r);
+            min_version: s
+          }] of Object.entries(e)) s <= t && s > n && (n = s, i = r);
         return i
-      }(a, (0, T.getClientVersionForChangelog)());
+      }(s, (0, T.getClientVersionForChangelog)());
       if (i.default.dispatch({
           type: "CHANGE_LOG_SET_CONFIG",
           config: n.body,
-          latestChangelogId: s
-        }), null == s) return;
+          latestChangelogId: a
+        }), null == a) return;
       if (t) {
-        m(s);
+        m(a);
         return
       }
-      if (!0 !== a[s].show_on_startup) return;
+      if (!0 !== s[a].show_on_startup) return;
       let o = I.default.lastSeenChangelogId(),
         l = I.default.lastSeenChangelogDate();
-      if (null != o && 0 >= c.default.compare(s, o)) return;
-      let d = await r.default.fetchChangelog(s, u.default.locale);
+      if (null != o && 0 >= c.default.compare(a, o)) return;
+      let d = await r.default.fetchChangelog(a, u.default.locale);
       if (null != d) {
         if (null == l || null == I.default.lastSeenChangelogDate()) {
-          r.default.markChangelogAsSeen(s, d.date);
+          r.default.markChangelogAsSeen(a, d.date);
           return
         }!I.default.isLocked() && new Date(d.date) > new Date(l) && (0, f.openChangelog)()
       }

@@ -22,7 +22,7 @@ let h = e => (0, r.jsx)("div", {
   className: e.className,
   children: e.children
 });
-class p extends(n = s.PureComponent) {
+class E extends(n = s.PureComponent) {
   isSortable(e) {
     return null != e.sort && !1 !== e.sort
   }
@@ -42,8 +42,8 @@ class p extends(n = s.PureComponent) {
       headerCellClassName: s,
       headerClassName: i,
       sortedHeaderCellClassName: m,
-      stickyHeader: p
-    } = this.props, E = e.map(e => {
+      stickyHeader: E
+    } = this.props, T = e.map(e => {
       let i = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
         h = a === u.TableSortDirections.ASCENDING ? d.default : c.default;
       return (0, r.jsx)(o.Clickable, {
@@ -61,9 +61,9 @@ class p extends(n = s.PureComponent) {
     });
     return (0, r.jsx)(h, {
       className: l()(i, f.row, {
-        [f.stickyHeader]: p
+        [f.stickyHeader]: E
       }),
-      children: E
+      children: T
     })
   }
   renderBody() {
@@ -79,7 +79,7 @@ class p extends(n = s.PureComponent) {
       rowProps: d,
       rowComponent: m,
       cellComponent: h
-    } = this.props, p = t;
+    } = this.props, E = t;
     if (a) {
       let a = null != n ? e.find(e => {
           let {
@@ -90,9 +90,9 @@ class p extends(n = s.PureComponent) {
         s = [...t],
         i = null != a && a.sort,
         l = null != a && null != n && this.isSortable(a) ? s.sort("function" == typeof i ? (e, t) => i(e, t, r) : this.getDefaultSort(n)) : s;
-      p = null != a && r === u.TableSortDirections.DESCENDING ? l.reverse() : l
+      E = null != a && r === u.TableSortDirections.DESCENDING ? l.reverse() : l
     }
-    return p.map((t, a) => {
+    return E.map((t, a) => {
       let n = e.map(e => (0, s.createElement)(h, {
         ...c,
         key: e.key,
@@ -128,7 +128,7 @@ class p extends(n = s.PureComponent) {
     })
   }
 }
-m(p, "SortDirection", u.TableSortDirections), m(p, "defaultProps", {
+m(E, "SortDirection", u.TableSortDirections), m(E, "defaultProps", {
   initialSortDirection: u.TableSortDirections.ASCENDING,
   rowHeaderComponent: h,
   rowComponent: e => (0, r.jsx)("div", {
@@ -142,4 +142,4 @@ m(p, "SortDirection", u.TableSortDirections), m(p, "defaultProps", {
   hasHeader: !0,
   sortData: !0,
   stickyHeader: !1
-}), t.default = p
+}), t.default = E

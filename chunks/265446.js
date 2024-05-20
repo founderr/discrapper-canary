@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("53529"),
   r = n("436660"),
-  a = n("887490");
-let s = ["applicationCommand"];
+  s = n("887490");
+let a = ["applicationCommand"];
 
 function o(e) {
   let {
@@ -23,14 +23,14 @@ function o(e) {
       n(t);
       return
     }
-    let a = t.split(/\r\n|\r|\n/);
+    let s = t.split(/\r\n|\r|\n/);
     if (!l(e)) {
-      n(a.join(" "));
+      n(s.join(" "));
       return
     }
     i.HistoryUtils.withSingleEntry(e, () => {
       let t = !1;
-      for (let i of a) t && r.SlateTransforms.splitNodes(e, {
+      for (let i of s) t && r.SlateTransforms.splitNodes(e, {
         always: !0
       }), n(i), t = !0
     })
@@ -38,6 +38,6 @@ function o(e) {
 }
 
 function l(e) {
-  let t = a.EditorUtils.getCurrentBlock(e);
-  return null != t && !s.includes(t[0].type)
+  let t = s.EditorUtils.getCurrentBlock(e);
+  return null != t && !a.includes(t[0].type)
 }

@@ -28,13 +28,13 @@ var a = s("735250"),
   x = s("158010"),
   L = s("964309"),
   O = s("241820"),
-  A = s("176278"),
-  p = s("626135"),
+  p = s("176278"),
+  A = s("626135"),
   M = s("480608"),
   D = s("243730"),
   v = s("130341"),
-  G = s("970129"),
-  j = s("712181"),
+  j = s("970129"),
+  G = s("712181"),
   U = s("203377"),
   P = s("981631"),
   b = s("689938"),
@@ -58,7 +58,7 @@ function H(e) {
   }, [s.id]);
   let S = l.useRef(!1);
   l.useEffect(() => {
-    !S.current && "" !== c.trimStart() && (p.default.track(P.AnalyticEvents.SEARCH_STARTED, {
+    !S.current && "" !== c.trimStart() && (A.default.track(P.AnalyticEvents.SEARCH_STARTED, {
       search_type: "Roles"
     }), S.current = !0)
   }, [c]);
@@ -69,7 +69,7 @@ function H(e) {
       handleDragStart: h,
       handleDragReset: C,
       handleDragComplete: R
-    } = (0, j.default)(N),
+    } = (0, G.default)(N),
     x = l.useCallback(e => {
       var l;
       let {
@@ -124,13 +124,13 @@ function w(e) {
     currentPosition: m,
     memberCount: x,
     onDragStart: O,
-    onDragReset: A,
-    onDragComplete: p,
+    onDragReset: p,
+    onDragComplete: A,
     disableHover: M,
     disableDrag: D,
     setEditRoleId: v,
-    setSelectedSection: j
-  } = e, P = (0, G.useLockTooltip)(E, S, d), H = null != P, [k, w] = l.useState(!1), Y = l.useMemo(() => ({
+    setSelectedSection: G
+  } = e, P = (0, j.useLockTooltip)(E, S, d), H = null != P, [k, w] = l.useState(!1), Y = l.useMemo(() => ({
     type: F,
     item: () => (O(d.id), {
       id: d.id,
@@ -143,12 +143,12 @@ function w(e) {
     end: (e, t) => {
       let s = t.getDropResult();
       if (null == s) {
-        A();
+        p();
         return
       }
-      p(s.roleId)
+      A(s.roleId)
     }
-  }), [d, O, A, p, H, k]), [{
+  }), [d, O, p, A, H, k]), [{
     isDragging: W
   }, z] = (0, r.useDrag)(Y), K = l.useMemo(() => ({
     accept: F,
@@ -188,7 +188,7 @@ function w(e) {
   }
 
   function $() {
-    q(), j(U.GuildSettingsRoleEditSections.MEMBERS)
+    q(), G(U.GuildSettingsRoleEditSections.MEMBERS)
   }
   return (0, a.jsxs)(u.Clickable, {
     className: i()(B.roleRow, {
@@ -223,7 +223,7 @@ function w(e) {
         size: 24,
         className: B.roleIcon,
         defaultIconClassName: B.shield
-      }), null != P ? (0, a.jsx)(G.default, {
+      }), null != P ? (0, a.jsx)(j.default, {
         className: B.lock,
         tooltipText: P
       }) : null, (0, a.jsx)(u.Text, {
@@ -300,7 +300,7 @@ function V(e) {
     roleId: l.id,
     size: n
   });
-  return null != c ? (0, a.jsx)(A.default, {
+  return null != c ? (0, a.jsx)(p.default, {
     ...c,
     className: d,
     enableTooltip: r

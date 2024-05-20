@@ -27,8 +27,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("733860");
 var i = n("652874"),
   r = n("261376");
-let a = new(n("499303")).TaskRunner,
-  s = () => ({
+let s = new(n("499303")).TaskRunner,
+  a = () => ({
     candidates: new Map,
     shownFatigableCandidate: null,
     prevFatigableCandidate: null,
@@ -37,7 +37,7 @@ let a = new(n("499303")).TaskRunner,
     currentlyShownGroup: new Set,
     lastWinnerTime: 0
   }),
-  o = (0, i.default)(s),
+  o = (0, i.default)(a),
   l = e => ({
     ...e,
     candidates: new Map(e.candidates),
@@ -52,8 +52,8 @@ let a = new(n("499303")).TaskRunner,
     var n, i;
     if (null == t) return e;
     e.currentlyShown.add(t.content);
-    let a = e.recentlyShown.filter(e => e !== t.content);
-    return a.unshift(t.content), a.splice(5), e.recentlyShown = a, null != t.groupName && e.currentlyShownGroup.add(t.groupName), !r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(t.content) && (e.shownFatigableCandidate = t, (null === (i = e.prevFatigableCandidate) || void 0 === i ? void 0 : i.content) !== t.content && (e.prevFatigableCandidate = t, e.lastWinnerTime = new Date().getTime())), null === (n = t.onAdded) || void 0 === n || n.call(t), e
+    let s = e.recentlyShown.filter(e => e !== t.content);
+    return s.unshift(t.content), s.splice(5), e.recentlyShown = s, null != t.groupName && e.currentlyShownGroup.add(t.groupName), !r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(t.content) && (e.shownFatigableCandidate = t, (null === (i = e.prevFatigableCandidate) || void 0 === i ? void 0 : i.content) !== t.content && (e.prevFatigableCandidate = t, e.lastWinnerTime = new Date().getTime())), null === (n = t.onAdded) || void 0 === n || n.call(t), e
   },
   _ = (e, t) => (e.candidates.set(t.content, t), e),
   c = (e, t) => (e.candidates.delete(t.content), e),
@@ -70,10 +70,10 @@ let a = new(n("499303")).TaskRunner,
   S = e => {
     if (0 === e.candidates.size) return e;
     let t = new Date().getTime() - e.lastWinnerTime > 3e5;
-    if (f(e) && !t) return a.unschedule(), E(e, I(e));
-    if (null != e.shownFatigableCandidate && !t || a.scheduled()) return e;
+    if (f(e) && !t) return s.unschedule(), E(e, I(e));
+    if (null != e.shownFatigableCandidate && !t || s.scheduled()) return e;
     let n = new Date().getTime();
-    return null == e.shownFatigableCandidate && n - e.lastWinnerTime < 36e5 ? e : (a.schedule(() => {
+    return null == e.shownFatigableCandidate && n - e.lastWinnerTime < 36e5 ? e : (s.schedule(() => {
       o.setState(e => {
         let t = l(e);
         return E(t, T(t))
@@ -101,7 +101,7 @@ let a = new(n("499303")).TaskRunner,
     return [o.getState().currentlyShown.size, e]
   },
   C = () => {
-    o.setState(s), a.unschedule()
+    o.setState(a), s.unschedule()
   };
 
 function R(e) {

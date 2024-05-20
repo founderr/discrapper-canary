@@ -45,7 +45,7 @@ function f(e) {
     })
   }, [e, h]);
   let {
-    enableLowerMemberCountReq: p
+    enableLowerMemberCountReq: E
   } = u.useExperiment({
     guildId: e,
     location: "747eb3_2"
@@ -53,5 +53,5 @@ function f(e) {
     autoTrackExposure: !1,
     disable: !h
   });
-  return p
+  return E
 }

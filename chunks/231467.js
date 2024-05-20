@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("481060"),
   l = n("442837"),
   u = n("239091"),
@@ -41,11 +41,11 @@ function D(e) {
   let {
     wildcardDescriptors: t,
     primaryColor: n
-  } = e, a = t.filter(e => e !== g.EMPTY_WILDCARD).join(", "), s = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), l = (0, E.getAccessibleClanColor)(n, s.hex()), u = r.useRef(null), [d, _] = r.useState(!1);
+  } = e, s = t.filter(e => e !== g.EMPTY_WILDCARD).join(", "), a = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), l = (0, E.getAccessibleClanColor)(n, a.hex()), u = r.useRef(null), [d, _] = r.useState(!1);
   if (r.useEffect(() => {
       let e = u.current;
       null != e && null != e.offsetWidth && null != e.scrollWidth && _(e.offsetWidth < e.scrollWidth)
-    }, []), 0 === a.length) return null;
+    }, []), 0 === s.length) return null;
   let c = null != l ? {
     color: l.css()
   } : void 0;
@@ -56,7 +56,7 @@ function D(e) {
       className: v.clanInfoItem,
       children: "\xb7"
     }), (0, i.jsx)(o.Tooltip, {
-      text: a,
+      text: s,
       color: o.Tooltip.Colors.PRIMARY,
       shouldShow: d,
       children: e => (0, i.jsx)("span", {
@@ -64,7 +64,7 @@ function D(e) {
         style: c,
         className: v.wildCardText,
         ref: u,
-        children: a
+        children: s
       })
     })]
   })
@@ -77,7 +77,7 @@ function M(e) {
     className: r
   } = e;
   return (0, i.jsx)("div", {
-    className: s()(r, v.trait, {
+    className: a()(r, v.trait, {
       [v.highlightedTrait]: n
     }),
     children: (0, i.jsx)(o.Text, {
@@ -93,13 +93,13 @@ function y(e) {
   let {
     traits: t,
     traitsToHighlight: n,
-    expanded: a,
-    traitClassName: s
+    expanded: s,
+    traitClassName: a
   } = e, l = r.useMemo(() => new Set(n), [n]);
-  return a ? (0, i.jsx)("div", {
+  return s ? (0, i.jsx)("div", {
     className: v.expandedTraitsContainer,
     children: t.map(e => (0, i.jsx)(M, {
-      className: s,
+      className: a,
       trait: e,
       isHighlighted: l.has(e)
     }, e))
@@ -144,7 +144,7 @@ function P(e) {
   var t, n;
   let {
     clan: r,
-    bannerComponent: a,
+    bannerComponent: s,
     expanded: l,
     isMember: u,
     traitsToHighlight: _,
@@ -167,15 +167,15 @@ function P(e) {
     icon: r.icon,
     size: 64,
     canAnimate: !0
-  })) && void 0 !== t ? t : void 0, w = null != A ? A : (0, I.getClanBannerUrl)(r.id, M), k = null == a && null == w ? {
+  })) && void 0 !== t ? t : void 0, w = null != A ? A : (0, I.getClanBannerUrl)(r.id, M), k = null == s && null == w ? {
     background: "linear-gradient(90deg, ".concat(C, ", ").concat(R, ")")
-  } : void 0, B = null != a ? a : null != w ? (0, i.jsx)("img", {
+  } : void 0, B = null != s ? s : null != w ? (0, i.jsx)("img", {
     alt: L.default.Messages.CLAN_LOOK_BANNER,
     src: w,
     className: v.bannerImage
   }) : null;
   return (0, i.jsxs)("div", {
-    className: s()(v.card, E),
+    className: a()(v.card, E),
     children: [(0, i.jsx)("div", {
       className: v.cardBrandingHeader,
       style: k,
@@ -281,14 +281,14 @@ function P(e) {
 t.default = function(e) {
   let {
     style: t,
-    prioritizedGameIds: a,
-    ...s
+    prioritizedGameIds: s,
+    ...a
   } = e, {
     clan: d,
     affinity: E,
     index: I,
     source: T
-  } = s, f = (0, l.useStateFromStores)([N.default], () => N.default.getCurrentUser()), S = (0, l.useStateFromStores)([m.default], () => m.default.isMember(d.id, null == f ? void 0 : f.id), [d, f]), p = r.useCallback(() => {
+  } = a, f = (0, l.useStateFromStores)([N.default], () => N.default.getCurrentUser()), S = (0, l.useStateFromStores)([m.default], () => m.default.isMember(d.id, null == f ? void 0 : f.id), [d, f]), p = r.useCallback(() => {
     let e = null != h.default.getRequest(d.id);
     if ((0, _.trackClanDiscoveryCardClicked)({
         guildId: d.id,
@@ -306,8 +306,8 @@ t.default = function(e) {
     }(0, c.openClanApplyFlow)(d.id, d, {
       source: T,
       location: R.AnalyticsLocations.CLAN_DISCOVERY_CARD
-    }, a)
-  }, [d, S, E, I, T, a]), O = r.useCallback(e => {
+    }, s)
+  }, [d, S, E, I, T, s]), O = r.useCallback(e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -324,9 +324,9 @@ t.default = function(e) {
     style: t,
     onContextMenu: O,
     children: (0, i.jsx)(P, {
-      ...s,
+      ...a,
       isMember: S,
-      prioritizedGameIds: a,
+      prioritizedGameIds: s,
       showBrandingFooter: !0
     })
   })

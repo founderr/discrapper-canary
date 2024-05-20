@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("724458");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("392711"),
   l = n.n(o),
   u = n("788911"),
@@ -40,7 +40,7 @@ function b(e) {
 t.default = r.forwardRef(function(e, t) {
   let {
     channel: n,
-    canOnlyUseTextCommands: a
+    canOnlyUseTextCommands: s
   } = e, o = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), k = r.useRef(null), [B, V] = r.useState(!1), x = E.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
   r.useEffect(() => {
     (0, _.trackWithMetadata)(v.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
@@ -56,8 +56,8 @@ t.default = r.forwardRef(function(e, t) {
     filterSection: Z
   } = m.useDiscovery(n, {
     commandType: d.ApplicationCommandType.CHAT,
-    builtIns: a ? N.BuiltInCommandFilter.ONLY_TEXT : N.BuiltInCommandFilter.ALLOW,
-    applicationCommands: !a
+    builtIns: s ? N.BuiltInCommandFilter.ONLY_TEXT : N.BuiltInCommandFilter.ALLOW,
+    applicationCommands: !s
   }, {
     placeholderCount: 7,
     limit: L.DISCOVERY_COMMANDS_QUERY_LIMIT,
@@ -134,7 +134,7 @@ t.default = r.forwardRef(function(e, t) {
       let t = H[e];
       if (null == t) return null;
       let r = (0, g.getIconComponent)(t),
-        a = (0, i.jsx)(r, {
+        s = (0, i.jsx)(r, {
           channel: n,
           section: t,
           width: 16,
@@ -143,7 +143,7 @@ t.default = r.forwardRef(function(e, t) {
         });
       return (0, i.jsx)(T.default, {
         className: M.categoryHeader,
-        icon: a,
+        icon: s,
         children: t.name
       }, e)
     }, [n, H]),
@@ -151,15 +151,15 @@ t.default = r.forwardRef(function(e, t) {
       let n = e === H.length - 1,
         r = H[e],
         {
-          data: a
+          data: s
         } = Y[e];
       return (0, i.jsxs)("ul", {
         role: "group",
         "aria-label": r.name,
-        className: s()(M.categorySection, {
+        className: a()(M.categorySection, {
           [M.categorySectionLast]: n
         }),
-        children: [t, 0 === a.length && (0, i.jsx)(u.default, {
+        children: [t, 0 === s.length && (0, i.jsx)(u.default, {
           message: D.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
             applicationName: r.name
           }),
@@ -170,20 +170,20 @@ t.default = r.forwardRef(function(e, t) {
     }, [H, Y]),
     ei = r.useCallback((e, t) => {
       var r;
-      let a = Y[t.sectionIndex],
-        s = a.data[t.sectionRowIndex],
-        o = "".concat(a.section.id, ":").concat(null !== (r = null == s ? void 0 : s.id) && void 0 !== r ? r : e);
-      if (null == s || a.section.id !== s.applicationId && a.section.id !== L.BuiltInSectionId.FRECENCY || s.inputType === p.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(R.default, {}, o);
-      let l = F.find(e => e.id === s.applicationId);
+      let s = Y[t.sectionIndex],
+        a = s.data[t.sectionRowIndex],
+        o = "".concat(s.section.id, ":").concat(null !== (r = null == a ? void 0 : a.id) && void 0 !== r ? r : e);
+      if (null == a || s.section.id !== a.applicationId && s.section.id !== L.BuiltInSectionId.FRECENCY || a.inputType === p.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(R.default, {}, o);
+      let l = F.find(e => e.id === a.applicationId);
       return (0, i.jsx)(f.default.NewCommand, {
         index: e,
-        command: s,
+        command: a,
         channel: n,
         className: M.itemWrapper,
         selected: G === e,
-        showImage: a.section.id !== s.applicationId,
+        showImage: s.section.id !== a.applicationId,
         section: l,
-        onClick: () => ee(s, l, (0, O.getCommandTriggerSection)(a.section)),
+        onClick: () => ee(a, l, (0, O.getCommandTriggerSection)(s.section)),
         onHover: () => {
           w(null), V(!1)
         }

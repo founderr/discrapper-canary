@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  a = n("717881"),
-  s = n("906732"),
+  s = n("717881"),
+  a = n("906732"),
   o = n("199902"),
   l = n("158776"),
   u = n("785717"),
@@ -25,7 +25,7 @@ function E(e) {
   } = e, {
     analyticsLocations: T,
     newestAnalyticsLocation: f
-  } = (0, s.default)(), {
+  } = (0, a.default)(), {
     trackUserProfileAction: S,
     ...h
   } = (0, u.useUserProfileAnalyticsContext)(), {
@@ -48,8 +48,8 @@ function E(e) {
       })
     }
   });
-  return (0, i.jsx)(a.default, {
-    type: a.UserActivityTypes.BITE_SIZE_POPOUT,
+  return (0, i.jsx)(s.default, {
+    type: s.UserActivityTypes.BITE_SIZE_POPOUT,
     activity: m,
     className: c.activity,
     source: f,

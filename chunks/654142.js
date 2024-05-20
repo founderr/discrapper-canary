@@ -12,11 +12,11 @@ var l = n("735250"),
   f = n("823379"),
   h = n("179809"),
   m = n("652376"),
-  C = n("981631");
+  p = n("981631");
 t.default = a.memo(function(e) {
   let {
     folderNode: t,
-    ...p
+    ...C
   } = e, {
     id: g,
     name: E,
@@ -28,7 +28,7 @@ t.default = a.memo(function(e) {
           n = c.default.getGuild(t);
         return null != n ? n.name : null
       }).filter(f.isNotNullish),
-      n = 2 * C.MAX_GUILD_FOLDER_NAME_LENGTH,
+      n = 2 * p.MAX_GUILD_FOLDER_NAME_LENGTH,
       l = [];
     for (let e of t)(e.length < n || 0 === l.length) && (l.push(e), n -= e.length);
     return "".concat(l.join(", ")).concat(l.length < t.length ? ", ..." : "")
@@ -55,7 +55,7 @@ t.default = a.memo(function(e) {
     })
   }, [g, E, _, x, v]);
   return (0, l.jsx)(h.default, {
-    ...p,
+    ...C,
     folderNode: t,
     expanded: T,
     selected: null != N && I.includes(N),

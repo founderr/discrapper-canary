@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var i, r, a, s, o = n("442837"),
+var i, r, s, a, o = n("442837"),
   l = n("570140"),
   u = n("765305");
 let d = {},
@@ -31,7 +31,7 @@ function I(e, t) {
   };
   delete i[t], d[e] = i
 }
-class T extends(s = o.default.Store) {
+class T extends(a = o.default.Store) {
   getStageInstanceByChannel(e) {
     if (null != e) return _[e]
   }
@@ -50,12 +50,12 @@ class T extends(s = o.default.Store) {
     return Object.values(_)
   }
 }
-a = "StageInstanceStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
-  value: a,
+s = "StageInstanceStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = a, t.default = new T(l.default, {
+}) : i[r] = s, t.default = new T(l.default, {
   CONNECTION_OPEN: function(e) {
     let {
       guilds: t

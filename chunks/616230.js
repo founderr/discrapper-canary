@@ -16,12 +16,12 @@ var n = a("735250"),
   f = a("246364"),
   m = a("571728"),
   h = a("755340"),
-  p = a("794358"),
-  E = a("931468"),
-  T = a("449226"),
+  E = a("794358"),
+  T = a("931468"),
+  p = a("449226"),
   C = a("689938"),
-  x = a("212723"),
-  _ = a("5288");
+  _ = a("212723"),
+  x = a("5288");
 
 function g(e) {
   let {
@@ -54,7 +54,7 @@ function g(e) {
         })
       })
     }) : h(e)
-  }, I = () => {
+  }, N = () => {
     (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -67,9 +67,9 @@ function g(e) {
     })
   };
   return (0, n.jsxs)("div", {
-    className: x.itemWrapper,
+    className: _.itemWrapper,
     children: [(0, n.jsxs)("div", {
-      className: x.itemContent,
+      className: _.itemContent,
       children: [(0, n.jsx)(o.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
@@ -79,37 +79,37 @@ function g(e) {
         color: "header-secondary",
         children: C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
       }), !s && (0, n.jsx)("div", {
-        className: _.pillRow,
+        className: x.pillRow,
         children: l && (0, n.jsxs)(o.Text, {
           color: "interactive-normal",
           variant: "text-xs/medium",
-          className: x.valuePill,
-          children: [(0, n.jsx)(E.default, {
+          className: _.valuePill,
+          children: [(0, n.jsx)(T.default, {
             width: 16,
             height: 16
           }), C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
         })
       })]
     }), (0, n.jsx)("div", {
-      className: _.previewAndEnable,
+      className: x.previewAndEnable,
       children: s || u || !i ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(o.Clickable, {
           onMouseDown: m,
           onMouseUp: m,
           onClick: e => {
-            m(e), I()
+            m(e), N()
           },
           children: (0, n.jsx)(o.Tooltip, {
-            tooltipContentClassName: _.__invalid_tooltip,
+            tooltipContentClassName: x.__invalid_tooltip,
             text: C.default.Messages.PREVIEW,
-            children: e => (0, n.jsx)(p.default, {
+            children: e => (0, n.jsx)(E.default, {
               height: 24,
               width: 24,
-              className: _.previewIcon,
+              className: x.previewIcon,
               ...e
             })
           })
-        }), (0, n.jsx)(T.default, {
+        }), (0, n.jsx)(p.default, {
           checked: u,
           onChange: () => g(!u)
         })]
@@ -120,10 +120,10 @@ function g(e) {
     })]
   })
 }
-async function I(e, t) {
+async function N(e, t) {
   await d.default.updateVerificationForm(e, t)
 }
-async function N(e, t) {
+async function I(e, t) {
   await d.default.updateVerificationFormDescription(e, t)
 }
 
@@ -131,44 +131,44 @@ function v(e) {
   var t, a, s;
   let {
     guild: o,
-    isClanContext: p = !1,
-    onFieldsSave: E,
-    onDescriptionSave: T,
+    isClanContext: E = !1,
+    onFieldsSave: T,
+    onDescriptionSave: p,
     verificationForm: C
-  } = e, [v, A] = r.useState(p), S = r.useRef(!1), L = r.useCallback(() => {
+  } = e, [v, A] = r.useState(E), S = r.useRef(!1), L = r.useCallback(() => {
     S.current = !0
   }, []), R = null !== (t = (0, m.useSubmittedGuildJoinRequestTotal)({
     guildId: o.id
-  })) && void 0 !== t ? t : 0, y = (0, l.useStateFromStores)([u.default], () => null != C ? C : u.default.get(o.id)), b = null !== (a = null == y ? void 0 : y.formFields) && void 0 !== a ? a : [];
+  })) && void 0 !== t ? t : 0, y = (0, l.useStateFromStores)([u.default], () => null != C ? C : u.default.get(o.id)), M = null !== (a = null == y ? void 0 : y.formFields) && void 0 !== a ? a : [];
   r.useEffect(() => {
     d.default.fetchVerificationForm(o.id)
   }, [o.id]);
-  let M = !p;
+  let b = !E;
   return (0, n.jsx)(c.default, {
-    renderHeader: M ? (0, n.jsx)(g, {
+    renderHeader: b ? (0, n.jsx)(g, {
       guild: o,
       isExpanded: v,
-      emptyFormFields: (null == b ? void 0 : b.length) == null || (null == b ? void 0 : b.length) === 0,
-      hasTermsField: null == b ? void 0 : b.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
+      emptyFormFields: (null == M ? void 0 : M.length) == null || (null == M ? void 0 : M.length) === 0,
+      hasTermsField: null == M ? void 0 : M.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
     }) : null,
     isExpanded: v,
     onExpand: () => A(!v),
-    disableAnimation: p,
-    disableBackground: !M,
+    disableAnimation: E,
+    disableBackground: !b,
     children: (0, n.jsx)("div", {
-      className: i()(x.itemBodyContainer, {
-        [x.noPadding]: !M,
-        [_.rulesScreeningItemsNoBorder]: !M
+      className: i()(_.itemBodyContainer, {
+        [_.noPadding]: !b,
+        [x.rulesScreeningItemsNoBorder]: !b
       }),
       children: null != y && (0, n.jsx)(h.default, {
         guild: o,
         submittedGuildJoinRequestsCount: R,
-        formFields: b,
+        formFields: M,
         onFormFieldUpdate: L,
         hideVerificationLevelField: !0,
-        isClanContext: p,
-        onFieldsSave: null != E ? E : I,
-        onDescriptionSave: null != T ? T : N,
+        isClanContext: E,
+        onFieldsSave: null != T ? T : N,
+        onDescriptionSave: null != p ? p : I,
         formDescription: null !== (s = null == y ? void 0 : y.description) && void 0 !== s ? s : ""
       })
     })

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("920906"),
   l = n("442837"),
   u = n("846519"),
@@ -23,7 +23,7 @@ function S(e) {
   let {
     statusActivity: t,
     profileType: n,
-    animate: a = !0
+    animate: s = !0
   } = e, S = (0, l.useStateFromStores)([E.default], () => E.default.useReducedMotion), [h, A] = r.useState(1), [m, N] = r.useState(!0), [p] = r.useState(() => new u.Timeout), {
     emoji: O
   } = null != t ? t : {}, C = null != O, R = (null == t ? void 0 : t.state) != null && "" !== t.state ? t.state : null, g = null != R && R.length > 0, L = C || g, v = r.useCallback(e => {
@@ -63,7 +63,7 @@ function S(e) {
   let U = () => C ? (0, i.jsx)(_.ActivityEmoji, {
       className: g ? T.statusEmojiInline : T.statusEmojiOnly,
       emoji: O,
-      animate: a,
+      animate: s,
       hideTooltip: !1,
       tooltipDelay: I.USER_PROFILE_TOOLTIP_DELAY
     }) : null,
@@ -73,13 +73,13 @@ function S(e) {
       children: R
     }) : null,
     G = n === I.UserProfileTypes.BITE_SIZE ? T.biteSize : T.fullSize,
-    w = s()(T.statusBubbleOuter, {
+    w = a()(T.statusBubbleOuter, {
       [T.statusBubbleShape]: h <= 1 && !g && C || h > 1,
       [T.statusBubbleSingleLineWithTextShape]: 1 === h && g,
       [T.biteSize]: n === I.UserProfileTypes.BITE_SIZE,
       [T.fullSize]: n === I.UserProfileTypes.FULL_SIZE
     }),
-    k = s()(T.statusBubble, {
+    k = a()(T.statusBubble, {
       [T.statusBubbleShape]: h <= 1 && !g && C || h > 1,
       [T.statusBubbleSingleLineWithTextShape]: h <= 1 && g,
       [T.statusBubbleEmojiOnlyPadding]: C && !g,
@@ -89,19 +89,19 @@ function S(e) {
     });
   return (0, i.jsxs)("div", {
     children: [n === I.UserProfileTypes.BITE_SIZE ? (0, i.jsx)("div", {
-      className: s()(T.invisibleContainer, G),
+      className: a()(T.invisibleContainer, G),
       children: (0, i.jsx)("div", {
         className: w,
         children: (0, i.jsx)("span", {
           className: k,
           children: (0, i.jsxs)("div", {
-            className: s()(T.content, T.clamp),
+            className: a()(T.content, T.clamp),
             children: [U(), b()]
           })
         })
       })
     }) : null, (0, i.jsx)("div", {
-      className: s()(T.visibleContainer, G),
+      className: a()(T.visibleContainer, G),
       children: (0, i.jsx)("div", {
         tabIndex: 0,
         className: w,
@@ -112,13 +112,13 @@ function S(e) {
         children: (0, i.jsx)("span", {
           className: k,
           children: (() => {
-            let e = s()(T.content, {
+            let e = a()(T.content, {
               [T.clamp]: m,
               [T.unclamp]: !m
             });
             return (0, i.jsx)(o.animated.div, {
               style: M,
-              className: s()(T.content, e),
+              className: a()(T.content, e),
               children: (0, i.jsxs)("div", {
                 ref: D,
                 children: [U(), b()]

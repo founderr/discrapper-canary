@@ -31,13 +31,13 @@ var a = s("735250"),
   x = s("314897"),
   L = s("592125"),
   O = s("984933"),
-  A = s("430824"),
-  p = s("976644"),
+  p = s("430824"),
+  A = s("976644"),
   M = s("93879"),
   D = s("263704"),
   v = s("465670"),
-  G = s("548343"),
-  j = s("586791"),
+  j = s("548343"),
+  G = s("586791"),
   U = s("709586"),
   P = s("151785"),
   b = s("931468"),
@@ -96,7 +96,7 @@ function $(e) {
       children: e => (0, a.jsxs)("div", {
         ...e,
         className: i()(Z.actionItemEditButton, Z.editWelcomeButton),
-        children: [(0, a.jsx)(j.default, {
+        children: [(0, a.jsx)(G.default, {
           className: Z.__invalid_editIcon
         }), (0, a.jsx)(d.HiddenVisually, {
           children: K.default.Messages.EDIT
@@ -117,7 +117,7 @@ function ee(e) {
     onDragStart: C,
     onDragComplete: R,
     onDragReset: x
-  } = e, O = (0, r.useStateFromStores)([L.default], () => L.default.getChannel(T.channelId)), p = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(I)), {
+  } = e, O = (0, r.useStateFromStores)([L.default], () => L.default.getChannel(T.channelId)), A = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(I)), {
     customEmoji: D,
     unicodeEmoji: v
   } = (0, f.default)(null === (t = T.emoji) || void 0 === t ? void 0 : t.id, null === (n = T.emoji) || void 0 === n ? void 0 : n.name), U = null == T.emoji || null != D || null != v, P = B.default.getNewMemberActionIconURL({
@@ -154,7 +154,7 @@ function ee(e) {
       })
     })
   }, [I, T, S, g, h, V]);
-  if (null == O || null == p) return null;
+  if (null == O || null == A) return null;
   let W = null !== (c = (0, E.getChannelIconComponent)(O)) && void 0 !== c ? c : M.default;
   return (0, a.jsxs)("div", {
     className: i()(Z.actionItemContainer),
@@ -169,7 +169,7 @@ function ee(e) {
         className: Z.dragContainer,
         onMouseEnter: () => w(!0),
         onMouseLeave: () => w(!1),
-        children: (0, a.jsx)(G.default, {
+        children: (0, a.jsx)(j.default, {
           className: Z.dragIcon
         })
       }), null != P ? (0, a.jsx)("div", {
@@ -211,7 +211,7 @@ function ee(e) {
           innerClassName: Z.actionItemEditButtonInner,
           size: d.Button.Sizes.MIN,
           onClick: Y,
-          children: [(0, a.jsx)(j.default, {
+          children: [(0, a.jsx)(G.default, {
             className: Z.__invalid_editIcon
           }), (0, a.jsx)(d.HiddenVisually, {
             children: K.default.Messages.EDIT
@@ -366,7 +366,7 @@ function en(e) {
   var t;
   let {
     guildId: n
-  } = e, i = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(n)), o = null !== (t = null == i ? void 0 : i.hasFeature(V.GuildFeatures.BANNER)) && void 0 !== t && t, u = l.useCallback((e, t) => {
+  } = e, i = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(n)), o = null !== (t = null == i ? void 0 : i.hasFeature(V.GuildFeatures.BANNER)) && void 0 !== t && t, u = l.useCallback((e, t) => {
     if (null != n) {
       if (null == e || void 0 === t) {
         F.default.updateGuild({
@@ -475,7 +475,7 @@ function en(e) {
           variant: "text-sm/normal",
           color: "header-secondary",
           children: K.default.Messages.GUILD_SETTINGS_HOME_HEADER_RECOMMEND
-        }), (0, a.jsxs)(p.default, {
+        }), (0, a.jsxs)(A.default, {
           className: Z.upsellButton,
           innerClassName: Z.upsellButtonInner,
           color: d.Button.Colors.GREEN,
@@ -512,7 +512,7 @@ function ei(e) {
     onDragComplete: u,
     onDragStart: c,
     onDragReset: E
-  } = e, I = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(t)), {
+  } = e, I = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(t)), {
     title: T,
     channelId: S,
     description: f
@@ -527,7 +527,7 @@ function ei(e) {
       drag: R,
       dragSourcePosition: x,
       drop: O,
-      setIsDraggable: p
+      setIsDraggable: A
     } = (0, _.default)({
       type: "RESOURCE_CHANNEL",
       optionId: n.channelId,
@@ -572,9 +572,9 @@ function ei(e) {
       ref: e => R(O(e)),
       children: [(0, a.jsx)("div", {
         className: Z.dragContainer,
-        onMouseEnter: () => p(!0),
-        onMouseLeave: () => p(!1),
-        children: (0, a.jsx)(G.default, {
+        onMouseEnter: () => A(!0),
+        onMouseLeave: () => A(!1),
+        children: (0, a.jsx)(j.default, {
           className: Z.dragIcon
         })
       }), null != C && (0, a.jsx)("div", {
@@ -609,7 +609,7 @@ function ei(e) {
           innerClassName: Z.resourceChannelEditButtonInner,
           size: d.Button.Sizes.MIN,
           onClick: v,
-          children: [(0, a.jsx)(j.default, {}), (0, a.jsx)(d.HiddenVisually, {
+          children: [(0, a.jsx)(G.default, {}), (0, a.jsx)(d.HiddenVisually, {
             children: K.default.Messages.EDIT
           })]
         })
@@ -664,7 +664,7 @@ function er(e) {
 function eo(e) {
   let {
     guildId: t
-  } = e, s = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(t)), n = (0, r.useStateFromStoresArray)([w.default], () => {
+  } = e, s = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(t)), n = (0, r.useStateFromStoresArray)([w.default], () => {
     var e, t;
     return null !== (t = null === (e = w.default.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map(e => e.channelId)) && void 0 !== t ? t : []
   }), i = (0, r.useStateFromStoresArray)([w.default], () => w.default.getDismissedSuggestedChannelIds(t)), o = (0, r.useStateFromStores)([O.default], () => null == t ? [] : O.default.getSelectableChannels(t)).filter(e => !i.includes(e.channel.id) && !n.includes(e.channel.id) && e.channel.type === V.ChannelTypes.GUILD_TEXT && y.canEveryoneRole(V.Permissions.VIEW_CHANNEL, e.channel) && !y.canEveryoneRole(V.Permissions.SEND_MESSAGES, e.channel) && e.channel.id !== (null == s ? void 0 : s.rulesChannelId)).slice(0, 5), u = l.useCallback(() => {

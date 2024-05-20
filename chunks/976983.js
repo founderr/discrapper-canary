@@ -38,27 +38,27 @@ function g(e) {
     onDragStart: x,
     onDragComplete: L,
     onDragReset: O
-  } = e, A = null, p = r().findIndex(T.options, e => e.id === C.id), {
+  } = e, p = null, A = r().findIndex(T.options, e => e.id === C.id), {
     drag: M,
     dragSourcePosition: D,
     drop: v,
-    setIsDraggable: G
+    setIsDraggable: j
   } = (0, u.default)({
     type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(T.id),
-    index: p,
+    index: A,
     optionId: C.id,
     onDragStart: x,
     onDragComplete: L,
     onDragReset: O
   }), {
-    customEmoji: j,
+    customEmoji: G,
     unicodeEmoji: U
   } = (0, E.default)(null === (t = C.emoji) || void 0 === t ? void 0 : t.id, null === (l = C.emoji) || void 0 === l ? void 0 : l.name);
-  return !((0, f.isEmojiEmpty)(C.emoji) || null != j || null != U) && (A = m.default.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI), (0, a.jsxs)(o.Clickable, {
+  return !((0, f.isEmojiEmpty)(C.emoji) || null != G || null != U) && (p = m.default.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI), (0, a.jsxs)(o.Clickable, {
     className: n()(N.optionCard, {
-      [N.hasError]: R || null != A,
-      [N.dropIndicatorBefore]: null != D && p < D,
-      [N.dropIndicatorAfter]: null != D && p > D,
+      [N.hasError]: R || null != p,
+      [N.dropIndicatorBefore]: null != D && A < D,
+      [N.dropIndicatorAfter]: null != D && A > D,
       [N.singleColumn]: g
     }),
     onClick: () => (0, o.openModalLazy)(async () => {
@@ -83,8 +83,8 @@ function g(e) {
         }
       })
     }),
-    onMouseEnter: () => G(!0),
-    onMouseLeave: () => G(!1),
+    onMouseEnter: () => j(!0),
+    onMouseLeave: () => j(!1),
     innerRef: e => M(v(e)),
     children: [(0, a.jsx)("div", {
       className: N.dragContainer,
@@ -114,10 +114,10 @@ function g(e) {
           children: C.description
         })]
       })]
-    }), null != A && (0, a.jsx)(o.Text, {
+    }), null != p && (0, a.jsx)(o.Text, {
       variant: "text-xs/medium",
       color: "text-danger",
-      children: A
+      children: p
     })]
   })
 }

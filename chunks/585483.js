@@ -4,14 +4,14 @@ n.r(t), n.d(t, {
     return o
   },
   ComponentDispatcher: function() {
-    return s
+    return a
   }
 }), n("47120"), n("653041");
 var i = n("836560");
 n("17089");
 var r = n("710845");
 
-function a(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,7 +20,7 @@ function a(e, t, n) {
   }) : e[t] = n, e
 }
 n("981631");
-class s {
+class a {
   safeDispatch(e) {
     for (var t, n = arguments.length, i = Array(n > 1 ? n - 1 : 0), r = 1; r < n; r++) i[r - 1] = arguments[r];
     if (!this.hasSubscribers(e)) {
@@ -75,7 +75,7 @@ class s {
     return this.unsubscribe("".concat(e, "_").concat(t), n)
   }
   constructor() {
-    a(this, "emitter", new i.EventEmitter), a(this, "_savedDispatches", {}), this.emitter.setMaxListeners(100)
+    s(this, "emitter", new i.EventEmitter), s(this, "_savedDispatches", {}), this.emitter.setMaxListeners(100)
   }
 }
-let o = new s
+let o = new a

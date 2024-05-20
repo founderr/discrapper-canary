@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, a, s, o = n("392711"),
+var i, r, s, a, o = n("392711"),
   l = n.n(o),
   u = n("442837"),
   d = n("570140"),
@@ -64,12 +64,12 @@ class p extends(i = u.default.Store) {
     return _.default.keys(I).filter(e => I[e] === E.RelationshipTypes.FRIEND)
   }
 }
-s = "RelationshipStore", (a = "displayName") in(r = p) ? Object.defineProperty(r, a, {
-  value: s,
+a = "RelationshipStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new p(d.default, {
+}) : r[s] = a, t.default = new p(d.default, {
   CONNECTION_OPEN: function(e) {
     I = {}, T = {}, f = {}, e.relationships.forEach(e => {
       I[e.id] = e.type, null != e.nickname && (T[e.id] = e.nickname), null != e.since && (f[e.id] = e.since)

@@ -2,8 +2,8 @@
 n.r(t), n("733860");
 var i = n("735250"),
   r = n("470079"),
-  a = n("481060"),
-  s = n("353093"),
+  s = n("481060"),
+  a = n("353093"),
   o = n("785008");
 
 function l(e) {
@@ -51,8 +51,8 @@ t.default = r.memo(function(e) {
       if (null == t) return null;
       if (u.length > 4) {
         let n = u.slice(3),
-          r = (0, s.formatSelectionList)(n.map(e => e.name));
-        return (0, i.jsx)(a.Tooltip, {
+          r = (0, a.formatSelectionList)(n.map(e => e.name));
+        return (0, i.jsx)(s.Tooltip, {
           "aria-label": null != r ? r : "",
           text: (0, i.jsx)(l, {
             games: n
@@ -67,7 +67,7 @@ t.default = r.memo(function(e) {
               className: o.gameImage
             }), (0, i.jsx)("div", {
               className: o.extraGameCount,
-              children: (0, i.jsx)(a.Text, {
+              children: (0, i.jsx)(s.Text, {
                 variant: "text-xs/medium",
                 color: "always-white",
                 children: "+".concat(n.length)
@@ -76,7 +76,7 @@ t.default = r.memo(function(e) {
           })
         })
       }
-      return (0, i.jsx)(a.Tooltip, {
+      return (0, i.jsx)(s.Tooltip, {
         text: e.name,
         position: "bottom",
         children: n => (0, i.jsx)("div", {
@@ -93,7 +93,7 @@ t.default = r.memo(function(e) {
   return (0, i.jsxs)(i.Fragment, {
     children: [d.map(e => {
       let t = e.getIconURL(24);
-      return null == t ? null : (0, i.jsx)(a.Tooltip, {
+      return null == t ? null : (0, i.jsx)(s.Tooltip, {
         text: e.name,
         position: "bottom",
         children: n => (0, i.jsx)("div", {

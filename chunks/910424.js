@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  a = n("481060"),
-  s = n("572691"),
+  s = n("481060"),
+  a = n("572691"),
   o = n("287734"),
   l = n("872810"),
   u = n("40851"),
@@ -44,7 +44,7 @@ function m(e) {
   })), R = (0, r.useStateFromStores)([c.default], () => c.default.getChannel(null == N ? void 0 : N.channelId)), [g, L] = (0, d.useCanWatchStream)(R), v = (0, u.useWindowDispatch)(), D = null != O && null != N && O.state !== S.ApplicationStreamStates.ENDED && O.ownerId === N.ownerId, M = e => {
     null != N && (null == p || p(), o.default.selectVoiceChannel(N.channelId), !D && (0, l.watchStreamAndTransitionToStream)(N, {
       forceMultiple: e
-    }), v.dispatch(S.ComponentActions.POPOUT_CLOSE), T.ComponentDispatch.dispatch(S.ComponentActions.MODAL_CLOSE), s.default.popAll())
+    }), v.dispatch(S.ComponentActions.POPOUT_CLOSE), T.ComponentDispatch.dispatch(S.ComponentActions.MODAL_CLOSE), a.default.popAll())
   };
   if (null == N) return null;
   let y = (0, d.getStreamCTAString)(L);
@@ -62,7 +62,7 @@ function m(e) {
       children: [(0, i.jsx)(I.default, {
         className: A.streamIcon
       }), y]
-    }, "play"), C && !D ? (0, i.jsx)(a.Tooltip, {
+    }, "play"), C && !D ? (0, i.jsx)(s.Tooltip, {
       text: h.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
       children: e => (0, i.jsx)(f.default, {
         ...e,

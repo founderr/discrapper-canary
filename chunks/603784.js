@@ -24,7 +24,7 @@ var a = s("735250"),
   x = s("981631"),
   L = s("689938"),
   O = s("466568");
-class A extends l.PureComponent {
+class p extends l.PureComponent {
   render() {
     let {
       user: e,
@@ -46,7 +46,7 @@ class A extends l.PureComponent {
     })
   }
 }
-class p extends l.PureComponent {
+class A extends l.PureComponent {
   hasChangesToRender() {
     let {
       log: e
@@ -72,7 +72,7 @@ class p extends l.PureComponent {
         user: n,
         target: i,
         userHook: (s, l) => {
-          if (null != e.user) return (0, a.jsx)(A, {
+          if (null != e.user) return (0, a.jsx)(p, {
             user: e.user,
             onContextMenu: t
           }, l);
@@ -83,7 +83,7 @@ class p extends l.PureComponent {
           }
           return L.default.Messages.UNKNOWN_USER
         },
-        targetHook: (t, l) => e.targetType === x.AuditLogTargetTypes.USER ? (0, a.jsx)(A, {
+        targetHook: (t, l) => e.targetType === x.AuditLogTargetTypes.USER ? (0, a.jsx)(p, {
           user: e.target,
           onContextMenu: s
         }, l) : (0, a.jsx)("span", {
@@ -221,4 +221,4 @@ class p extends l.PureComponent {
 }
 t.default = o.default.connectStores([S.default], () => ({
   theme: S.default.theme
-}))(p)
+}))(A)

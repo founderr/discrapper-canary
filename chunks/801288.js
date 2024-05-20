@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   EntityDao: function() {
-    return s
+    return a
   }
 }), n("627494"), n("757143");
 var i = n("503461"),
   r = n("190313");
 
-function a(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,12 +15,12 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class s {
+class a {
   get prefix() {
     return this.table.prefix
   }
   withoutLogging() {
-    return new s(this.originalPrefix, this.table.tableId, this.table.database, !1)
+    return new a(this.originalPrefix, this.table.tableId, this.table.database, !1)
   }
   get(e) {
     return this.table.get([e])
@@ -77,7 +77,7 @@ class s {
     }
   }
   constructor(e, t, n, i = !0) {
-    a(this, "originalPrefix", void 0), a(this, "table", void 0), this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
+    s(this, "originalPrefix", void 0), s(this, "table", void 0), this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
   }
 }
 class o {
@@ -86,11 +86,11 @@ class o {
   }
   put(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ConflictOptions.Replace;
-    return this.transaction.put(s.cell(e, null), t)
+    return this.transaction.put(a.cell(e, null), t)
   }
   putAll(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ConflictOptions.Replace;
-    return this.transaction.putAll(e.map(e => s.cell(e, null)), t)
+    return this.transaction.putAll(e.map(e => a.cell(e, null)), t)
   }
   replaceAll(e) {
     this.delete(), this.putAll(e)
@@ -99,6 +99,6 @@ class o {
     return 0 == arguments.length ? this.transaction.delete([]) : this.transaction.delete([e])
   }
   constructor(e) {
-    a(this, "transaction", void 0), this.transaction = e
+    s(this, "transaction", void 0), this.transaction = e
   }
 }

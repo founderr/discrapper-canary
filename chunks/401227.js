@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("920906"),
   l = n("481060"),
   u = n("130402"),
@@ -23,7 +23,7 @@ t.default = function(e) {
   var t;
   let {
     tabIndex: n,
-    className: a,
+    className: s,
     renderButtonContents: T,
     active: f,
     onClick: S,
@@ -46,7 +46,7 @@ t.default = function(e) {
     look: l.Button.Looks.BLANK,
     size: l.Button.Sizes.NONE,
     tabIndex: n,
-    className: s()(R, a),
+    className: a()(R, s),
     onMouseEnter: L,
     onMouseOver: L,
     onMouseLeave: v,
@@ -73,9 +73,9 @@ t.default = function(e) {
             transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
           },
           children: [(0, i.jsx)("div", {
-            className: s()(E.sprite, E.spriteColored, C ? E.active : E.inactive)
+            className: a()(E.sprite, E.spriteColored, C ? E.active : E.inactive)
           }), (0, i.jsx)("div", {
-            className: s()(E.sprite, E.spriteGreyscale, C ? E.inactive : E.active)
+            className: a()(E.sprite, E.spriteGreyscale, C ? E.inactive : E.active)
           })]
         })
       }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return A
   }
 }), s("47120");
 var a, l, n, i, r = s("735250"),
@@ -73,7 +73,7 @@ function O(e) {
   })
 }
 
-function A(e) {
+function p(e) {
   let {
     withCardBody: t,
     isAnimatedTo: s,
@@ -131,7 +131,7 @@ function A(e) {
   })
 }
 
-function p(e) {
+function A(e) {
   let {
     children: t,
     subscriptionCount: s,
@@ -174,7 +174,7 @@ function p(e) {
     className: u()(R.tier, {
       [R.tierBottomMargin]: i
     }),
-    children: [(0, r.jsx)(A, {
+    children: [(0, r.jsx)(p, {
       subscriptionCount: s,
       tier: l,
       headerButton: o,

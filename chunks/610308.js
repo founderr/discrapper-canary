@@ -2,7 +2,7 @@
 n.r(t), n("411104");
 var i = n("374023");
 let r = (0, n("733393").getErlpackEncoding)();
-class a {
+class s {
   pack(e) {
     return JSON.stringify(e)
   }
@@ -17,5 +17,5 @@ class a {
     return !0
   }
 }
-let s = void 0 !== r ? r : a;
-i.ProcessArgs.isDiscordGatewayPlaintextSet() && (s = a), t.default = s
+let a = void 0 !== r ? r : s;
+i.ProcessArgs.isDiscordGatewayPlaintextSet() && (a = s), t.default = a

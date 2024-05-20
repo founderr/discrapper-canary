@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i, r = n("735250"),
-  a = n("470079"),
-  s = n("120356"),
-  o = n.n(s),
+  s = n("470079"),
+  a = n("120356"),
+  o = n.n(a),
   l = n("780384"),
   u = n("481060"),
   d = n("410030"),
@@ -30,15 +30,15 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends(i = a.PureComponent) {
+class p extends(i = s.PureComponent) {
   render() {
     let e;
     let {
       className: t,
       imageClassName: n,
       readyState: i,
-      src: a,
-      placeholder: s,
+      src: s,
+      placeholder: a,
       placeholderVersion: l,
       alt: d,
       width: E,
@@ -69,8 +69,8 @@ class p extends(i = a.PureComponent) {
         minHeight: R
       }),
       B = 0 !== k.width ? k.width / k.height : 1;
-    "" !== a && i !== f.ImageReadyStates.ERROR ? e = y({
-      src: a,
+    "" !== s && i !== f.ImageReadyStates.ERROR ? e = y({
+      src: s,
       size: k,
       alt: d,
       className: n,
@@ -82,7 +82,7 @@ class p extends(i = a.PureComponent) {
     })), e = (0, r.jsx)(I.ImageLoadingOverlay, {
       readyState: i,
       aspectRatio: B,
-      placeholder: s,
+      placeholder: a,
       placeholderVersion: l,
       placeholderStyle: C(k, g),
       children: e
@@ -119,7 +119,7 @@ class p extends(i = a.PureComponent) {
           href: M,
           ref: this._containerRef,
           "data-role": "img",
-          "data-safe-src": a
+          "data-safe-src": s
         }), null != U ? (0, r.jsx)(u.Clickable, {
           className: h.clickableWrapper,
           tabIndex: null != b ? b : 0,
@@ -139,7 +139,7 @@ class p extends(i = a.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), N(this, "_containerRef", a.createRef()), N(this, "_clickableRef", a.createRef())
+    super(...e), N(this, "_containerRef", s.createRef()), N(this, "_clickableRef", s.createRef())
   }
 }
 
@@ -148,7 +148,7 @@ function O(e) {
     size: t,
     mediaLayoutType: n,
     alt: i
-  } = e, a = (0, d.default)();
+  } = e, s = (0, d.default)();
   return (0, r.jsx)("div", {
     className: h.imageErrorWrapper,
     style: function(e, t) {
@@ -166,7 +166,7 @@ function O(e) {
       }
     }(t, n),
     children: (0, r.jsx)("img", {
-      src: (0, l.isThemeLight)(a) ? m : A,
+      src: (0, l.isThemeLight)(s) ? m : A,
       className: h.imageError,
       alt: null != i ? i : S.default.Messages.IMAGE
     })
@@ -180,14 +180,14 @@ N(p, "defaultProps", {
       src: t,
       size: n,
       alt: i,
-      className: a,
-      mediaLayoutType: s
+      className: s,
+      mediaLayoutType: a
     } = e;
     return (0, r.jsx)("img", {
-      className: null != a ? a : void 0,
+      className: null != s ? s : void 0,
       alt: null != i ? i : S.default.Messages.IMAGE,
       src: t,
-      style: C(n, s)
+      style: C(n, a)
     })
   },
   minWidth: 0,

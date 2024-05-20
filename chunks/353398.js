@@ -34,7 +34,7 @@ var a, l = s("735250"),
   L = s("657478"),
   O = s("611273");
 
-function A(e, t, s) {
+function p(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -42,7 +42,7 @@ function A(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class p extends(a = u.default.Store) {
+class A extends(a = u.default.Store) {
   getTemplate() {
     let e = C.default.getProps().guild;
     if (null == e) return null;
@@ -54,26 +54,26 @@ class p extends(a = u.default.Store) {
     return null != e && null != this.name && "" !== this.name && (this.name.trim() !== e.name || this.description.trim() !== e.description)
   }
   constructor(...e) {
-    super(...e), A(this, "name", ""), A(this, "description", ""), A(this, "error", null), A(this, "reset", () => {
+    super(...e), p(this, "name", ""), p(this, "description", ""), p(this, "error", null), p(this, "reset", () => {
       let e = this.getTemplate();
       if (null != e) {
         var t, s;
         this.name = null !== (t = e.name) && void 0 !== t ? t : this.name, this.description = null !== (s = e.description) && void 0 !== s ? s : this.description
       } else this.name = "", this.description = "";
       this.emitChange()
-    }), A(this, "setName", e => {
+    }), p(this, "setName", e => {
       this.name = e, this.emitChange()
-    }), A(this, "setDescription", e => {
+    }), p(this, "setDescription", e => {
       this.description = e, this.emitChange()
-    }), A(this, "setError", e => {
+    }), p(this, "setError", e => {
       this.error = e, this.emitChange()
-    }), A(this, "save", async () => {
+    }), p(this, "save", async () => {
       await f.default.updateGuildTemplate(C.default.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange()
     })
   }
 }
-A(p, "displayName", "GuildSettingsTemplateMetadataStore_");
-let M = new p(_.default);
+p(A, "displayName", "GuildSettingsTemplateMetadataStore_");
+let M = new A(_.default);
 
 function D() {
   let [e, t] = n.useState(!1), s = async () => {
@@ -98,14 +98,14 @@ function v() {
         className: O.marginBottom20,
         type: E.FormTextTypes.DESCRIPTION,
         children: x.default.Messages.GUILD_TEMPLATE_SETTINGS_DESCRIPTION.format()
-      }), (0, l.jsx)(j, {}), (0, l.jsx)(E.FormDivider, {
+      }), (0, l.jsx)(G, {}), (0, l.jsx)(E.FormDivider, {
         className: L.divider
-      }), (0, l.jsx)(G, {})]
+      }), (0, l.jsx)(j, {})]
     })
   })
 }
 
-function G() {
+function j() {
   let {
     guild: e
   } = C.default.getProps();
@@ -162,7 +162,7 @@ function G() {
   })
 }
 
-function j() {
+function G() {
   return (0, l.jsxs)("div", {
     className: L.descriptionBox,
     children: [(0, l.jsxs)("div", {

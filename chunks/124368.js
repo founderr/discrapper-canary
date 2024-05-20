@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return T
   }
 }), n("47120");
-var i, r, a, s, o = n("981631"),
+var i, r, s, a, o = n("981631"),
   l = n("689938");
 let u = 4320,
   d = 50,
@@ -59,6 +59,6 @@ function T() {
     setting: I.NO_MESSAGES,
     label: l.default.Messages.FORM_LABEL_NOTHING
   }]
-}(a = i || (i = {})).EMBED = "Embed", a.BROWSER = "Thread Browser", a.POPOUT = "Active Threads Popout", a.CHANNEL_LIST = "Channel List", a.GUILD_ACTIVE_THREADS_MODAL = "Guild Active Threads Modal", a.INBOX = "Inbox", a.FORUM = "Forum", a.VOICE_AUTO_OPEN = "Voice Auto Open", (s = r || (r = {})).LATEST_ACTIVITY = "Last Message", s.CREATION_DATE = "Creation";
+}(s = i || (i = {})).EMBED = "Embed", s.BROWSER = "Thread Browser", s.POPOUT = "Active Threads Popout", s.CHANNEL_LIST = "Channel List", s.GUILD_ACTIVE_THREADS_MODAL = "Guild Active Threads Modal", s.INBOX = "Inbox", s.FORUM = "Forum", s.VOICE_AUTO_OPEN = "Voice Auto Open", (a = r || (r = {})).LATEST_ACTIVITY = "Last Message", a.CREATION_DATE = "Creation";
 let f = new Set([o.AbortCodes.TOO_MANY_ATTACHMENTS, o.AbortCodes.EXPLICIT_CONTENT, o.AbortCodes.ENTITY_TOO_LARGE, o.AbortCodes.EXPLICIT_CONTENT]),
   S = new Set([o.AbortCodes.AUTOMOD_MESSAGE_BLOCKED, o.AbortCodes.AUTOMOD_TITLE_BLOCKED])

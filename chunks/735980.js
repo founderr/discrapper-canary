@@ -1,34 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   PhoneCallIcon: function() {
-    return s
+    return a
   }
 });
 var i = n("735250");
 n("470079");
 var r = n("692547"),
-  a = n("331595");
-let s = e => {
+  s = n("331595");
+let a = e => {
   let {
     width: t = 24,
     height: n = 24,
-    color: s = r.default.colors.INTERACTIVE_NORMAL,
+    color: a = r.default.colors.INTERACTIVE_NORMAL,
     colorClass: o = "",
     ...l
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, a.default)(l),
+    ...(0, s.default)(l),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: n,
     fill: "none",
     viewBox: "0 0 24 24",
     children: [(0, i.jsx)("path", {
-      fill: "string" == typeof s ? s : s.css,
+      fill: "string" == typeof a ? a : a.css,
       d: "M2 7.4A5.4 5.4 0 0 1 7.4 2c.36 0 .7.22.83.55l1.93 4.64a1 1 0 0 1-.43 1.25L7 10a8.52 8.52 0 0 0 7 7l1.12-2.24a1 1 0 0 1 1.19-.51l5.06 1.56c.38.11.63.46.63.85C22 19.6 19.6 22 16.66 22h-.37C8.39 22 2 15.6 2 7.71V7.4ZM13 3a1 1 0 0 1 1-1 8 8 0 0 1 8 8 1 1 0 1 1-2 0 6 6 0 0 0-6-6 1 1 0 0 1-1-1Z",
       className: o
     }), (0, i.jsx)("path", {
-      fill: "string" == typeof s ? s : s.css,
+      fill: "string" == typeof a ? a : a.css,
       d: "M13 7a1 1 0 0 1 1-1 4 4 0 0 1 4 4 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 0 1-1-1Z",
       className: o
     })]

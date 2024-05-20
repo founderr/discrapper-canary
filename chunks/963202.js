@@ -21,8 +21,8 @@ n.r(t), n.d(t, {
 }), n("653041");
 var i = n("442837"),
   r = n("818083"),
-  a = n("430824"),
-  s = n("496675"),
+  s = n("430824"),
+  a = n("496675"),
   o = n("308083"),
   l = n("981631");
 let u = (0, r.createExperiment)({
@@ -97,14 +97,14 @@ function I(e) {
     guilds: t,
     valorantConfig: n,
     genshinConfig: r,
-    includeConverted: a
-  } = e, o = (0, i.useStateFromStoresArray)([s.default], () => t.filter(e => s.default.can(l.Permissions.ADMINISTRATOR, e))), u = o.filter(e => (function(e) {
+    includeConverted: s
+  } = e, o = (0, i.useStateFromStoresArray)([a.default], () => t.filter(e => a.default.can(l.Permissions.ADMINISTRATOR, e))), u = o.filter(e => (function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null != e && e.hasFeature(l.GuildFeatures.CLAN_PILOT_GENSHIN) && (t || !e.hasFeature(l.GuildFeatures.CLAN))
-  })(e, a)), d = o.filter(e => (function(e) {
+  })(e, s)), d = o.filter(e => (function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null != e && e.hasFeature(l.GuildFeatures.CLAN_PILOT_VALORANT) && (t || !e.hasFeature(l.GuildFeatures.CLAN))
-  })(e, a)), _ = u.length > 0 && r.enableClanCreation, c = d.length > 0 && n.enableClanCreation, I = [];
+  })(e, s)), _ = u.length > 0 && r.enableClanCreation, c = d.length > 0 && n.enableClanCreation, I = [];
   return _ && u.forEach(e => I.push(e)), c && d.forEach(e => I.push(e)), {
     guilds: I,
     enableClanCreation: _ || c,
@@ -120,13 +120,13 @@ function T(e) {
     location: t,
     includeConverted: n,
     autoTrackExposure: r = !0
-  } = e, s = (0, i.useStateFromStoresArray)([a.default], () => Object.values(a.default.getGuilds())), o = u.useExperiment({
+  } = e, a = (0, i.useStateFromStoresArray)([s.default], () => Object.values(s.default.getGuilds())), o = u.useExperiment({
     location: t
   }, {
     autoTrackExposure: r
   });
   return I({
-    guilds: s,
+    guilds: a,
     valorantConfig: o,
     genshinConfig: d.useExperiment({
       location: t
@@ -143,14 +143,14 @@ function f(e) {
     location: n,
     includeConverted: i,
     autoTrackExposure: r = !0
-  } = e, a = u.useExperiment({
+  } = e, s = u.useExperiment({
     location: n
   }, {
     autoTrackExposure: r
   });
   return I({
     guilds: [t],
-    valorantConfig: a,
+    valorantConfig: s,
     genshinConfig: d.useExperiment({
       location: n
     }, {
@@ -221,14 +221,14 @@ function m(e) {
     }, {
       autoTrackExposure: i
     }),
-    a = A.useExperiment({
+    s = A.useExperiment({
       location: e
     }, {
       autoTrackExposure: i
     });
   return {
-    clanDiscoveryEnabled: r.clanDiscoveryEnabled || a.clanDiscoveryEnabled,
-    defaultGameId: null !== (n = null !== (t = r.defaultGameId) && void 0 !== t ? t : a.defaultGameId) && void 0 !== n ? n : null
+    clanDiscoveryEnabled: r.clanDiscoveryEnabled || s.clanDiscoveryEnabled,
+    defaultGameId: null !== (n = null !== (t = r.defaultGameId) && void 0 !== t ? t : s.defaultGameId) && void 0 !== n ? n : null
   }
 }
 let N = (0, r.createExperiment)({

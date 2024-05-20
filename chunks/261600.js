@@ -20,18 +20,18 @@ function f(e) {
     activity: f
   } = e, {
     channelId: h
-  } = null !== (t = (0, u.unpackStageChannelParty)(f)) && void 0 !== t ? t : {}, m = (0, s.useStateFromStores)([d.default], () => d.default.getStageInstanceByChannel(h), [h]), C = a.useRef(null), p = a.useCallback(() => {
+  } = null !== (t = (0, u.unpackStageChannelParty)(f)) && void 0 !== t ? t : {}, m = (0, s.useStateFromStores)([d.default], () => d.default.getStageInstanceByChannel(h), [h]), p = a.useRef(null), C = a.useCallback(() => {
     let e = r.default.getChannel(h);
     null != e && o.connectAndOpen(e)
   }, [h]), g = null !== (n = null == m ? void 0 : m.topic) && void 0 !== n ? n : f.name, E = c.default.Messages.STAGE_CHANNEL_ACTIVITY_FEED_JOIN.format({
     channel: g
   });
   return (0, l.jsx)("div", {
-    ref: C,
+    ref: p,
     children: (0, l.jsx)(i.Clickable, {
-      onClick: p,
+      onClick: C,
       focusProps: {
-        ringTarget: C
+        ringTarget: p
       },
       children: (0, l.jsx)(i.Heading, {
         variant: "heading-sm/semibold",

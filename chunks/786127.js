@@ -18,8 +18,8 @@ t.default = function(e) {
     canRemove: m,
     actionsLocation: h
   } = e, {
-    label: p,
-    placeholder: E
+    label: E,
+    placeholder: T
   } = t;
   return (0, n.jsx)(s.default, {
     field: t,
@@ -29,12 +29,12 @@ t.default = function(e) {
     onDrop: d,
     onEdit: u,
     onRemove: f,
-    title: p,
+    title: E,
     canRemove: m,
     actionsLocation: h,
     children: (0, n.jsx)(r.TextInputFieldBody, {
       className: l.fieldBackground,
-      placeholder: null != E ? E : i.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
+      placeholder: null != T ? T : i.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0
     })
   })

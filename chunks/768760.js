@@ -2,10 +2,10 @@
 var i, r;
 n.r(t), n.d(t, {
   MEDIA_MOSAIC_MAX_HEIGHT: function() {
-    return s
+    return a
   },
   MEDIA_MOSAIC_MAX_WIDTH: function() {
-    return a
+    return s
   },
   MINIMUM_MEDIA_MOSAIC_DIM: function() {
     return o
@@ -17,8 +17,8 @@ n.r(t), n.d(t, {
     return l
   }
 });
-let a = 550,
-  s = 350,
+let s = 550,
+  a = 350,
   o = 40;
 (r = i || (i = {})).STATIC = "STATIC", r.RESPONSIVE = "RESPONSIVE", r.MOSAIC = "MOSAIC";
 let l = 20

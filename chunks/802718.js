@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("682662"),
   h = n("662146"),
   m = n("26290"),
-  C = n("15434"),
-  p = n("678513"),
+  p = n("15434"),
+  C = n("678513"),
   g = n("981631"),
   E = n("689938"),
   _ = n("211005");
@@ -25,7 +25,7 @@ var l = n("735250"),
 function S(e) {
   let {
     target: t
-  } = e, o = (0, s.useTreeItem)("fakedoor"), p = a.useCallback(() => {
+  } = e, o = (0, s.useTreeItem)("fakedoor"), C = a.useCallback(() => {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
@@ -74,9 +74,9 @@ function S(e) {
               count: 1,
               color: c.default.BG_BRAND
             }),
-            children: (0, l.jsx)(C.default, {
+            children: (0, l.jsx)(p.default, {
               ...o,
-              onClick: p,
+              onClick: C,
               onContextMenu: S,
               children: (0, l.jsx)(i.BellIcon, {
                 color: c.default.TEXT_NORMAL
@@ -96,7 +96,7 @@ function S(e) {
 }
 
 function I() {
-  let e = (0, o.useStateFromStores)([p.default], () => p.default.getActiveUserSignUp());
+  let e = (0, o.useStateFromStores)([C.default], () => C.default.getActiveUserSignUp());
   return null == e ? null : (0, l.jsx)(S, {
     target: e
   })

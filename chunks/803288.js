@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return v
   },
   default: function() {
-    return j
+    return G
   }
 }), s("757143"), s("47120");
 var a = s("735250"),
@@ -31,8 +31,8 @@ var a = s("735250"),
   x = s("44550"),
   L = s("770270"),
   O = s("981631"),
-  A = s("30513"),
-  p = s("689938"),
+  p = s("30513"),
+  A = s("689938"),
   M = s("292882");
 
 function D(e, t, s) {
@@ -57,7 +57,7 @@ let v = r.default.connectStores([C.default, x.default], () => {
     }
   }
 })(u.default);
-class G extends l.PureComponent {
+class j extends l.PureComponent {
   componentWillUnmount() {
     (0, R.close)()
   }
@@ -80,9 +80,9 @@ class G extends l.PureComponent {
         className: M.__invalid_formTitle,
         children: [(0, a.jsx)("div", {
           className: M.formTitleField,
-          children: p.default.Messages.INVITE_URL
+          children: A.default.Messages.INVITE_URL
         }), l.length > 0 ? (0, a.jsx)("div", {
-          children: p.default.Messages.VANITY_URL_USES.format({
+          children: A.default.Messages.VANITY_URL_USES.format({
             uses: n
           })
         }) : null]
@@ -101,7 +101,7 @@ class G extends l.PureComponent {
         look: o.Button.Looks.LINK,
         size: o.Button.Sizes.MIN,
         color: o.Button.Colors.RED,
-        children: p.default.Messages.REMOVE_VANITY_URL
+        children: A.default.Messages.REMOVE_VANITY_URL
       }) : null]
     })
   }
@@ -115,7 +115,7 @@ class G extends l.PureComponent {
         height: 16,
         width: 16,
         className: M.premiumUpsellBadge
-      }), " ", p.default.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA]
+      }), " ", A.default.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA]
     })
   }
   renderInfo() {
@@ -135,7 +135,7 @@ class G extends l.PureComponent {
       return (0, a.jsx)(o.FormText, {
         className: M.__invalid_marginTop20,
         type: o.FormTextTypes.LABEL_DESCRIPTOR,
-        children: p.default.Messages.VANITY_URL_HELP_EXTENDED_LINK.format({
+        children: A.default.Messages.VANITY_URL_HELP_EXTENDED_LINK.format({
           urlText: e,
           urlValue: e
         })
@@ -158,7 +158,7 @@ class G extends l.PureComponent {
         tag: o.FormTitleTags.H1,
         className: M.flexFormTitle,
         children: [(0, a.jsx)("div", {
-          children: p.default.Messages.VANITY_URL
+          children: A.default.Messages.VANITY_URL
         }), (0, a.jsx)(I.default, {
           guild: t,
           guildFeature: O.GuildFeatures.VANITY_URL,
@@ -168,15 +168,15 @@ class G extends l.PureComponent {
       }), (0, a.jsx)(o.FormText, {
         type: o.FormTextTypes.DESCRIPTION,
         className: M.__invalid_marginBottom8,
-        children: p.default.Messages.VANITY_URL_HELP
+        children: A.default.Messages.VANITY_URL_HELP
       }), (0, a.jsx)(o.FormText, {
         type: o.FormTextTypes.DESCRIPTION,
         className: M.__invalid_marginBottom20,
-        children: p.default.Messages.VANITY_URL_HELP_CONFLICT
+        children: A.default.Messages.VANITY_URL_HELP_CONFLICT
       }), (0, a.jsx)(o.FormText, {
         type: o.FormTextTypes.DESCRIPTION,
         className: M.__invalid_marginBottom20,
-        children: p.default.Messages.VANITY_URL_DEFAULT_CHANNEL
+        children: A.default.Messages.VANITY_URL_DEFAULT_CHANNEL
       }), (0, L.canSeeVanityUrlSettings)(t) ? this.renderEditCard() : this.renderUpsellButton(), this.renderInfo()]
     })
   }
@@ -208,14 +208,14 @@ class G extends l.PureComponent {
         perks: l
       }))
     }), D(this, "handleVanityUrlUpsellIndicator", e => {
-      this.handleShowModalUpsell(e, O.BoostedGuildTiers.TIER_3, O.AnalyticsSections.GUILD_SETTINGS_VANITY_URL, O.AnalyticsObjects.BADGE, (0, A.vanityUrlUpsellPerks)())
+      this.handleShowModalUpsell(e, O.BoostedGuildTiers.TIER_3, O.AnalyticsSections.GUILD_SETTINGS_VANITY_URL, O.AnalyticsObjects.BADGE, (0, p.vanityUrlUpsellPerks)())
     }), D(this, "handleVanityUrlUpsellButton", e => {
-      this.handleShowModalUpsell(e, O.BoostedGuildTiers.TIER_3, O.AnalyticsSections.GUILD_SETTINGS_VANITY_URL, O.AnalyticsObjects.BUTTON_CTA, (0, A.vanityUrlUpsellPerks)())
+      this.handleShowModalUpsell(e, O.BoostedGuildTiers.TIER_3, O.AnalyticsSections.GUILD_SETTINGS_VANITY_URL, O.AnalyticsObjects.BUTTON_CTA, (0, p.vanityUrlUpsellPerks)())
     })
   }
 }
 
-function j() {
+function G() {
   let e = (0, r.useStateFromStores)([C.default], () => C.default.getGuild()),
     t = (0, r.useStateFromStoresObject)([x.default], () => ({
       vanityURLCode: x.default.vanityURLCode,
@@ -230,7 +230,7 @@ function j() {
     } = (0, _.default)(c.default.VANITY_URL);
   return (0, a.jsx)(_.AnalyticsLocationProvider, {
     value: l,
-    children: (0, a.jsx)(G, {
+    children: (0, a.jsx)(j, {
       guild: e,
       ...t,
       hide: s,

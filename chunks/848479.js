@@ -2,10 +2,10 @@
 n.r(t), n("724458");
 var i = n("259443"),
   r = n("579806"),
-  a = n("77450"),
-  s = n("998502");
+  s = n("77450"),
+  a = n("998502");
 let o = new i.Logger("ProcessUtilsElectron");
-class l extends a.ProcessUtils {
+class l extends s.ProcessUtils {
   setupReportingTimer() {
     var e, t;
     let n = null === r.default || void 0 === r.default ? void 0 : null === (e = r.default.processUtils) || void 0 === e ? void 0 : e.setMemoryInformation;
@@ -40,7 +40,7 @@ class l extends a.ProcessUtils {
   }
   static getCurrentMemoryUsageKBCore() {
     try {
-      let e = s.default.getDiscordMemoryUsage();
+      let e = a.default.getDiscordMemoryUsage();
       if (null == e) return 0;
       let t = Object.values(e).reduce((e, t) => e + t, 0);
       return Math.ceil(t / 1024)
@@ -49,11 +49,11 @@ class l extends a.ProcessUtils {
     }
   }
   getMemoryUsageDetails() {
-    return s.default.getDiscordMemoryUsage()
+    return a.default.getDiscordMemoryUsage()
   }
   getMemoryUsageElectronRenderer() {
     try {
-      return s.default.getDiscordMemoryUsageElectronRenderer()
+      return a.default.getDiscordMemoryUsageElectronRenderer()
     } catch (e) {
       return null
     }
@@ -63,13 +63,13 @@ class l extends a.ProcessUtils {
     return null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getUsedHeapSize) || void 0 === e ? void 0 : e.call(t)
   }
   constructor() {
-    var e, t, n, i, a;
-    super(), n = this, a = void 0, (i = "lastMemoryUsageKB") in n ? Object.defineProperty(n, i, {
-      value: a,
+    var e, t, n, i, s;
+    super(), n = this, s = void 0, (i = "lastMemoryUsageKB") in n ? Object.defineProperty(n, i, {
+      value: s,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : n[i] = a, this.cpuCoreCount = null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getCPUCoreCount) || void 0 === e ? void 0 : e.call(t), this.setupReportingTimer()
+    }) : n[i] = s, this.cpuCoreCount = null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getCPUCoreCount) || void 0 === e ? void 0 : e.call(t), this.setupReportingTimer()
   }
 }
 t.default = new l

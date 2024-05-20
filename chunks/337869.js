@@ -2,13 +2,13 @@
 n.r(t), n("411104");
 var i = n("992774"),
   r = n("710845"),
-  a = n("358085"),
-  s = n("998502");
+  s = n("358085"),
+  a = n("998502");
 (0, i.inject)({
   supported() {
     try {
       if (__OVERLAY__);
-      else if (a.isPlatformEmbedded) {
+      else if (s.isPlatformEmbedded) {
         let e = (0, i.getVoiceEngine)();
         if (null == e.VoiceConnection || null == e.setVideoOutputSink && null == e.addVideoOutputSink) throw Error("voe function missing");
         return !0
@@ -18,9 +18,9 @@ var i = n("992774"),
     }
     return !1
   },
-  supportsFeature: e => s.default.supportsFeature(e),
+  supportsFeature: e => a.default.supportsFeature(e),
   setProcessPriority(e) {
-    s.default.getDiscordUtils().setProcessPriority(e)
+    a.default.getDiscordUtils().setProcessPriority(e)
   },
-  getVoiceEngine: () => s.default.getVoiceEngine()
+  getVoiceEngine: () => a.default.getVoiceEngine()
 })

@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  a = n("302454"),
-  s = n.n(a),
+  s = n("302454"),
+  a = n.n(s),
   o = n("481060"),
   l = n("100527"),
   u = n("906732"),
@@ -12,7 +12,7 @@ t.default = r.memo(function(e) {
   let {
     onClick: t,
     trusted: n,
-    title: a,
+    title: s,
     href: _,
     children: c,
     messageId: E,
@@ -22,15 +22,15 @@ t.default = r.memo(function(e) {
     analyticsLocations: f
   } = (0, u.default)(l.default.MASKED_LINK), S = r.useCallback(t => (0, d.handleClick)(e, t, f), [f, e]), h = r.useCallback(e => {
     1 === e.button && S(e)
-  }, [S]), A = s().sanitizeUrl(_);
+  }, [S]), A = a().sanitizeUrl(_);
   return (0, i.jsx)(o.Anchor, {
     ...T,
-    title: a,
+    title: s,
     target: "_blank",
     rel: "noreferrer noopener",
     href: A,
     onClick: S,
     onAuxClick: h,
-    children: null != c ? c : a
+    children: null != c ? c : s
   })
 })

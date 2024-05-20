@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("729594"),
   r = n("873546"),
-  a = n("570140"),
-  s = n("447543"),
+  s = n("570140"),
+  a = n("447543"),
   o = n("230711"),
   l = n("581364"),
   u = n("132871"),
@@ -29,7 +29,7 @@ var i = n("729594"),
 n("782568");
 var R = n("981631");
 async function g(e, t) {
-  await a.default.dispatch({
+  await s.default.dispatch({
     type: "INVITE_MODAL_OPEN",
     invite: e,
     code: t,
@@ -42,7 +42,7 @@ async function L(e) {
   if (null == n) {
     let {
       invite: t
-    } = await s.default.resolveInvite(e.code, "Markdown Link");
+    } = await a.default.resolveInvite(e.code, "Markdown Link");
     n = t
   }
   if (null == n) return;
@@ -52,7 +52,7 @@ async function L(e) {
   }
   let i = p.default.getFlattenedGuildIds(),
     r = null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id;
-  null != r && i.includes(r) ? s.default.transitionToInviteSync(n) : await g(n, e.code)
+  null != r && i.includes(r) ? a.default.transitionToInviteSync(n) : await g(n, e.code)
 }
 let v = {
   skipExtensionCheck: void 0,
@@ -62,19 +62,19 @@ let v = {
 function D(e) {
   let {
     skipExtensionCheck: t,
-    analyticsLocations: a
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v, s = (0, _.findCodedLink)(e);
-  if (null != s && (s.type === d.CodedLinkType.INVITE || s.type === d.CodedLinkType.EMBEDDED_ACTIVITY_INVITE)) return e => (null == e || e.preventDefault(), L(s), !0);
-  if (null != s && s.type === d.CodedLinkType.APP_DIRECTORY_PROFILE) return e => {
+    analyticsLocations: s
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v, a = (0, _.findCodedLink)(e);
+  if (null != a && (a.type === d.CodedLinkType.INVITE || a.type === d.CodedLinkType.EMBEDDED_ACTIVITY_INVITE)) return e => (null == e || e.preventDefault(), L(a), !0);
+  if (null != a && a.type === d.CodedLinkType.APP_DIRECTORY_PROFILE) return e => {
     var t;
     null == e || e.preventDefault();
     let {
       code: i
-    } = s, a = null !== (t = N.default.getGuildId()) && void 0 !== t ? t : void 0;
+    } = a, s = null !== (t = N.default.getGuildId()) && void 0 !== t ? t : void 0;
     return O.default.track(R.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
       application_id: i,
       device_platform: r.isMobile ? "mobile_web" : "desktop_web",
-      guild_id: a,
+      guild_id: s,
       channel_id: m.default.getChannelId()
     }), n.e("56630").then(n.bind(n, "147890")).then(e => {
       let {
@@ -85,16 +85,16 @@ function D(e) {
       t({
         view: r.APPLICATION,
         applicationId: i,
-        guildId: a,
+        guildId: s,
         entrypoint: {
           name: u.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_URL
         }
       })
     }), !0
   };
-  if (null != s && s.type === d.CodedLinkType.GUILD_PRODUCT) return e => {
+  if (null != a && a.type === d.CodedLinkType.GUILD_PRODUCT) return e => {
     null == e || e.preventDefault();
-    let [t, i] = s.code.split("-");
+    let [t, i] = a.code.split("-");
     return n.e("84239").then(n.bind(n, "838433")).then(e => {
       let {
         openGuildProductLink: n
@@ -111,14 +111,14 @@ function D(e) {
   } = i.parse(e), y = C.default.isDiscordHostname(p) || C.default.isDiscordLocalhost(g, p);
   if (y && (null == A ? void 0 : A.startsWith("/application-directory"))) {
     let [, , e, t] = A.split("/"), i = null != e && (0, l.isSnowflake)(e) ? e : void 0;
-    return a => {
-      var s;
-      null == a || a.preventDefault();
+    return s => {
+      var a;
+      null == s || s.preventDefault();
       let {
         ApplicationDirectoryProfileSections: o
       } = n("272242"), {
         ApplicationDirectoryViews: l
-      } = n("132871"), d = null !== (s = N.default.getGuildId()) && void 0 !== s ? s : void 0, _ = l.HOME;
+      } = n("132871"), d = null !== (a = N.default.getGuildId()) && void 0 !== a ? a : void 0, _ = l.HOME;
       return "search" === e && (_ = l.SEARCH), null != i && (_ = l.APPLICATION, O.default.track(R.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
         application_id: i,
         device_platform: r.isMobile ? "mobile_web" : "desktop_web",
@@ -168,7 +168,7 @@ function D(e) {
     if (null != t) return e => (null == e || e.preventDefault(), o.default.open(t.section, t.subsection, {
       openWithoutBackstack: !1,
       impressionSource: t.source,
-      analyticsLocations: a
+      analyticsLocations: s
     }), !0)
   }
   if (!t && null != (0, h.isSuspiciousDownload)(e)) return t => (null == t || t.preventDefault(), S.default.show(e), !0)

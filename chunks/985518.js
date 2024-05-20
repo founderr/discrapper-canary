@@ -15,8 +15,8 @@ n.r(t), n.d(t, {
 }), n("653041"), n("47120");
 var i = n("929991"),
   r = n("480739"),
-  a = n("228392"),
-  s = n("6496");
+  s = n("228392"),
+  a = n("6496");
 
 function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -66,13 +66,13 @@ class _ extends r.AnalyticsFeedItemSeenManager {
           channelId: n,
           sessionId: i,
           trackedFeedItems: r,
-          isForcedFlush: s
+          isForcedFlush: a
         } = e, o = [], l = [];
         for (let e of Object.keys(r)) {
-          let t = r[e].computeSeenTimeDestructive(s);
+          let t = r[e].computeSeenTimeDestructive(a);
           t > 0 && (o.push(e), l.push(t))
         }
-        0 !== o.length && (0, a.trackForumChannelSeenBatch)({
+        0 !== o.length && (0, s.trackForumChannelSeenBatch)({
           guildId: t,
           channelId: n,
           sessionId: i,
@@ -80,6 +80,6 @@ class _ extends r.AnalyticsFeedItemSeenManager {
           additionalTimes: l
         })
       })(r)
-    }), this.guildId = e, this.channelId = t, this.sessionId = (0, s.getForumChannelSessionId)(t)
+    }), this.guildId = e, this.channelId = t, this.sessionId = (0, a.getForumChannelSessionId)(t)
   }
 }

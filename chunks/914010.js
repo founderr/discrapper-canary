@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
 var i, r = n("442837"),
-  a = n("570140"),
-  s = n("937111");
+  s = n("570140"),
+  a = n("937111");
 n("57132");
 var o = n("703656"),
   l = n("314897"),
@@ -22,7 +22,7 @@ let c = null,
   I = {};
 
 function T() {
-  null != c && null == u.default.getGuild(c) && null == s.default.getRequest(c) && (c = null), null != E && null == u.default.getGuild(E) && null == s.default.getRequest(E) && (E = null), f(c)
+  null != c && null == u.default.getGuild(c) && null == a.default.getRequest(c) && (c = null), null != E && null == u.default.getGuild(E) && null == a.default.getRequest(E) && (E = null), f(c)
 }
 
 function f(e) {
@@ -55,7 +55,7 @@ class h extends(i = r.default.PersistedStore) {
     return c === e ? -1 : I[e]
   }
 }
-_(h, "displayName", "SelectedGuildStore"), _(h, "persistKey", "SelectedGuildStore"), t.default = new h(a.default, {
+_(h, "displayName", "SelectedGuildStore"), _(h, "persistKey", "SelectedGuildStore"), t.default = new h(s.default, {
   CONNECTION_OPEN: T,
   OVERLAY_INITIALIZE: function(e) {
     c = e.selectedGuildId, E = void 0, T()

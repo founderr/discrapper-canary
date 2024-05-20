@@ -13,13 +13,13 @@ n.r(t), n.d(t, {
     return c
   },
   SpotifyActionTypes: function() {
-    return s
+    return a
   },
   SpotifyEndpoints: function() {
     return S
   },
   SpotifyResourceTypes: function() {
-    return a
+    return s
   },
   getSpotifyResourceType: function() {
     return h
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return E
   }
 });
-var i, r, a, s, o = n("726542"),
+var i, r, s, a, o = n("726542"),
   l = n("358085"),
   u = n("981631");
 let d = "spotify",
@@ -37,7 +37,7 @@ let d = "spotify",
 
 function E(e) {
   return null != e && e.startsWith(_)
-}(i = a || (a = {})).TRACK = "track", i.ARTIST = "artist", i.ALBUM = "album", i.PLAYLIST = "playlist", i.EPISODE = "episode", i.SHOW = "show", (r = s || (s = {})).USER_ACTIVITY_PLAY = "user_activity_play", r.USER_ACTIVITY_SYNC = "user_activity_sync", r.EMBED_SYNC = "embed_sync";
+}(i = s || (s = {})).TRACK = "track", i.ARTIST = "artist", i.ALBUM = "album", i.PLAYLIST = "playlist", i.EPISODE = "episode", i.SHOW = "show", (r = a || (a = {})).USER_ACTIVITY_PLAY = "user_activity_play", r.USER_ACTIVITY_SYNC = "user_activity_sync", r.EMBED_SYNC = "embed_sync";
 let I = ["open.spotify.com", "www.spotify.com"],
   T = "https://api.spotify.com/v1",
   f = e => "?utm_source=discord&utm_medium=".concat(e),

@@ -18,17 +18,17 @@ var i, r, o, d, u = s("392711"),
 let x = new Set,
   L = R.FormStates.CLOSED,
   O = !1,
-  A = !1,
-  p = [],
+  p = !1,
+  A = [],
   M = [],
   D = C.GuildSettingsRoleEditSections.DISPLAY,
   v = !1,
-  G = new Set,
-  j = new Map,
+  j = new Set,
+  G = new Map,
   U = new Map;
 
 function P() {
-  if (null == a || null == p) return [];
+  if (null == a || null == A) return [];
   let e = c()(f.default.getRoles(a.id)).values().sortBy(e => {
     let {
       position: t
@@ -37,7 +37,7 @@ function P() {
   }).reverse().value();
   return m.default.calculatePositionDeltas({
     oldOrdering: e,
-    newOrdering: p,
+    newOrdering: A,
     idGetter: e => {
       let {
         id: t
@@ -64,18 +64,18 @@ function b(e) {
 
 function B() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  a = h.default.getProps().guild, O = !1, A = !1, n = void 0, x.clear(), L = R.FormStates.OPEN, M = [...p = null != a ? c()(f.default.getRoles(a.id)).values().sortBy(e => {
+  a = h.default.getProps().guild, O = !1, p = !1, n = void 0, x.clear(), L = R.FormStates.OPEN, M = [...A = null != a ? c()(f.default.getRoles(a.id)).values().sortBy(e => {
     let {
       position: t
     } = e;
     return t
-  }).reverse().value() : []], v = !1, e && (U.clear(), j.forEach((e, t) => {
+  }).reverse().value() : []], v = !1, e && (U.clear(), G.forEach((e, t) => {
     U.set(t, [...e])
   }))
 }
 let y = c().debounce(() => {
   let e = !1;
-  A && !(A = P().length > 0) && (e = !0), [...x].forEach(t => {
+  p && !(p = P().length > 0) && (e = !0), [...x].forEach(t => {
     c().isEqual(H(t), function(e) {
       return M.find(t => {
         let {
@@ -84,21 +84,21 @@ let y = c().debounce(() => {
         return s === e
       })
     }(t)) && (x.delete(t), e = !0)
-  }), 0 === x.size && (O = !1), v && c().isEqual(j, U) && (e = !0, v = !1), e && V.emitChange()
+  }), 0 === x.size && (O = !1), v && c().isEqual(G, U) && (e = !0, v = !1), e && V.emitChange()
 }, 500);
 
 function F(e, t) {
-  let s = p.indexOf(e);
+  let s = A.indexOf(e);
   if (s < 0) return !1;
   let a = {
     ...e,
     ...t
   };
-  p[s] = a, p = [...p], O = !0, x.add(a.id), y()
+  A[s] = a, A = [...A], O = !0, x.add(a.id), y()
 }
 
 function H(e) {
-  return p.find(t => {
+  return A.find(t => {
     let {
       id: s
     } = t;
@@ -127,20 +127,20 @@ function k(e) {
       } = t;
       if (l === e) return a = s, !0
     }) || null == t ? x.delete(e) : s[a] = t
-  }), 0 === x.size && (O = !1), A = !1, p = [...s]
+  }), 0 === x.size && (O = !1), p = !1, A = [...s]
 }
 class w extends(i = I.default.Store) {
   initialize() {
     this.waitFor(h.default, S.default, f.default)
   }
   hasChanges() {
-    return O || A || v
+    return O || p || v
   }
   get errorMessage() {
     return n
   }
   get hasSortChanges() {
-    return A
+    return p
   }
   get hasRoleConfigurationChanges() {
     return v
@@ -152,10 +152,10 @@ class w extends(i = I.default.Store) {
     return Array.from(x)
   }
   get editedRoleIdsForConfigurations() {
-    return G
+    return j
   }
   get roles() {
-    return p
+    return A
   }
   get formState() {
     return L
@@ -193,8 +193,8 @@ let V = new w(T.default, __OVERLAY__ ? {} : {
     let {
       roles: t
     } = e;
-    if (null != p && t.length !== p.length) return !1;
-    p = t.map(e => H(e)).filter(N.isNotNullish), A = !0, y()
+    if (null != A && t.length !== A.length) return !1;
+    A = t.map(e => H(e)).filter(N.isNotNullish), p = !0, y()
   },
   GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function(e) {
     let {
@@ -287,7 +287,7 @@ let V = new w(T.default, __OVERLAY__ ? {} : {
         F(t, t);
         return
       }
-      p = [...p, t], y()
+      A = [...A, t], y()
     }
   },
   GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function(e) {
@@ -296,9 +296,9 @@ let V = new w(T.default, __OVERLAY__ ? {} : {
       roleConnectionConfigurations: s
     } = e, a = H(t);
     if (null == a) return !1;
-    let l = j.get(a.id);
+    let l = G.get(a.id);
     if (c().isEqual(l, s)) return !1;
-    U.set(a.id, s), j.set(a.id, s), y()
+    U.set(a.id, s), G.set(a.id, s), y()
   },
   GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function(e) {
     let {
@@ -306,15 +306,15 @@ let V = new w(T.default, __OVERLAY__ ? {} : {
       roleConnectionConfigurations: s
     } = e, a = H(t);
     if (null == a) return !1;
-    v = !0, G.add(a.id), U.set(a.id, s), y()
+    v = !0, j.add(a.id), U.set(a.id, s), y()
   },
   GUILD_SETTINGS_CLOSE: function() {
-    a = null, M = p = [], j.clear(), x.clear(), U.clear(), G = new Set, O = !1, A = !1, v = !1, L = R.FormStates.CLOSED
+    a = null, M = A = [], G.clear(), x.clear(), U.clear(), j = new Set, O = !1, p = !1, v = !1, L = R.FormStates.CLOSED
   },
   GUILD_ROLE_CREATE: k,
   GUILD_ROLE_UPDATE: k,
   GUILD_ROLE_DELETE: function(e) {
-    return G.has(e.roleId) && (G.delete(e.roleId), j.delete(e.roleId), U.delete(e.roleId), v = !1), k(e)
+    return j.has(e.roleId) && (j.delete(e.roleId), G.delete(e.roleId), U.delete(e.roleId), v = !1), k(e)
   },
   GUILD_SETTINGS_ROLES_SUBMITTING: function() {
     L = R.FormStates.SUBMITTING
