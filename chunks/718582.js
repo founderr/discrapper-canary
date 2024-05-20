@@ -198,7 +198,7 @@ function M(e) {
     })(e, t)], ["desc"])
   })(B, k).slice(0, 3)), m(B.length)), n
 }
-let y = e => t => [L.ActivityTypes.PLAYING, L.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId);
+let y = e => e => [L.ActivityTypes.PLAYING, L.ActivityTypes.WATCHING].includes(e.type) && (null != e.assets || null != e.state || null != e.details || null != e.party) && !1;
 
 function P(e) {
   return (0, s.useStateFromStoresArray)([T.default, A.default], () => {

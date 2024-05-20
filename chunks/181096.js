@@ -5,6 +5,7 @@ e.exports = {
   clickableContainer: "clickableContainer__6a669",
   container: "container__0998c",
   content: "content_c9b545",
+  fadeIn: "fadeIn__485ae",
   gameIcon: "gameIcon__4a06f",
   groupAvatar: "groupAvatar__4cf21",
   image: "image__75373",

@@ -23,5 +23,6 @@ e.exports = {
   numberPill: "numberPill__7188a",
   othersCount: "othersCount__89551",
   rowIcon: "rowIcon__45dc2",
-  rowIconV2: "rowIconV2_fe06d9 rowIcon__45dc2"
+  rowIconV2: "rowIconV2_fe06d9 rowIcon__45dc2",
+  tooltipPointer: "tooltipPointer__87949"
 }

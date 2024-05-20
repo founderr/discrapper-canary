@@ -470,7 +470,9 @@ function er(e) {
   };
   return (0, i.jsxs)("div", {
     className: Z.container,
-    children: [(0, i.jsxs)("div", {
+    children: [(0, i.jsx)("div", {
+      className: Z.tooltipPointer
+    }), (0, i.jsxs)("div", {
       className: Z.header,
       children: [a ? (0, i.jsx)(P.default, {
         guild: t,
