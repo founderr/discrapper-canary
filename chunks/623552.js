@@ -32,11 +32,11 @@ let d = [
   [{
     translateY: -14,
     translateX: -14,
-    scale: .75
+    scale: .7058823529411765
   }, {
     translateY: 12,
     translateX: 12,
-    scale: .875
+    scale: .8235294117647058
   }, {
     translateY: 0,
     translateX: 0,
@@ -49,36 +49,36 @@ let d = [
   [{
     translateY: -4,
     translateX: 16,
-    scale: .75
+    scale: .7058823529411765
   }, {
     translateY: 14,
     translateX: -14,
-    scale: .875
+    scale: .8235294117647058
   }, {
     translateY: -18,
     translateX: -12,
-    scale: .625
+    scale: .5882352941176471
   }, {
     translateY: 0,
     translateX: 0,
     scale: 0
   }],
   [{
-    translateY: -14,
-    translateX: -14,
-    scale: .875
+    translateY: -13,
+    translateX: -13,
+    scale: .8235294117647058
   }, {
-    translateY: 14,
-    translateX: 14,
-    scale: .875
+    translateY: 13,
+    translateX: 13,
+    scale: .8235294117647058
   }, {
     translateY: -18,
     translateX: 18,
-    scale: .625
+    scale: .5882352941176471
   }, {
     translateY: 18,
     translateX: -18,
-    scale: .625
+    scale: .5882352941176471
   }]
 ];
 
@@ -140,7 +140,7 @@ function E(e) {
     guildId: t,
     user: n
   } = e;
-  return null == r.useMemo(() => null == n ? void 0 : n.getAvatarSource(t, !1, 32), [t, n]) ? null : (0, i.jsx)("div", {
+  return null == r.useMemo(() => null == n ? void 0 : n.getAvatarSource(t, !1, 30), [t, n]) ? null : (0, i.jsx)("div", {
     className: u.avatarWrapper,
     children: (0, i.jsx)("img", {
       className: u.avatar,

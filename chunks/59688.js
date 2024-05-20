@@ -1,83 +1,32 @@
 "use strict";
 n.r(t), n.d(t, {
   useCanShowNewGuildTooltip: function() {
-    return o
-  },
-  useCanShowNewGuildTooltipActivityEmptyState: function() {
-    return l
-  },
-  useGuildPeekCardType: function() {
-    return a
+    return r
   }
 });
-var i = n("818083"),
-  r = n("126134");
-let s = (0, i.createExperiment)({
+let i = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-04_server_peek",
   label: "Change the guild tooltip",
   defaultConfig: {
-    showNewGuildTooltip: !1,
-    showNewGuildTooltipActivityEmptyState: !1,
-    cardType: r.GuildPeekCardTypes.WHAT
+    showNewGuildTooltip: !1
   },
   treatments: [{
     id: 1,
-    label: "Show new tooltip focusing on WHAT, no empty state",
+    label: "Show new tooltip",
     config: {
-      showNewGuildTooltip: !0,
-      showNewGuildTooltipActivityEmptyState: !1,
-      cardType: r.GuildPeekCardTypes.WHAT
-    }
-  }, {
-    id: 2,
-    label: "Show new tooltip focusing on WHAT, with empty state",
-    config: {
-      showNewGuildTooltip: !0,
-      showNewGuildTooltipActivityEmptyState: !0,
-      cardType: r.GuildPeekCardTypes.WHAT
-    }
-  }, {
-    id: 3,
-    label: "Show new tooltip focusing on WHO, no empty state",
-    config: {
-      showNewGuildTooltip: !0,
-      showNewGuildTooltipActivityEmptyState: !1,
-      cardType: r.GuildPeekCardTypes.WHO
+      showNewGuildTooltip: !0
     }
   }]
 });
 
-function a() {
-  let {
-    cardType: e
-  } = s.useExperiment({
-    location: "useCanShowNewGuildTooltip"
-  }, {
-    autoTrackExposure: !1
-  });
-  return e
-}
-
-function o() {
+function r() {
   let {
     showNewGuildTooltip: e
-  } = s.useExperiment({
+  } = i.useExperiment({
     location: "useCanShowNewGuildTooltip"
   }, {
     autoTrackExposure: !0
   });
   return e
 }
-
-function l() {
-  let {
-    showNewGuildTooltipActivityEmptyState: e
-  } = s.useExperiment({
-    location: "useCanShowNewGuildTooltipActivityEmptyState"
-  }, {
-    autoTrackExposure: !0
-  });
-  return e
-}
-t.default = s
