@@ -396,7 +396,9 @@ function er(e) {
       var n;
       let t = null === (n = e.item.member) || void 0 === n ? void 0 : n.user;
       if (null == t) continue;
-      C(m[t.id], t)
+      let i = m[t.id];
+      if (null == i) continue;
+      C(i, t)
     } return !1
 }
 
