@@ -51,7 +51,7 @@ function _() {
         variant: "lg" === t ? "text-sm/medium" : "text-xs/medium",
         color: "text-normal",
         className: c.__invalid_mobileWebCopy,
-        children: d.default.Messages.QUESTS_EMBED_INVALID_BODY
+        children: d.default.Messages.QUESTS_EMBED_INVALID_BODY_2
       }), (0, s.jsx)(E, {})]
     }), (0, s.jsx)("div", {
       className: c.imgContainer,
