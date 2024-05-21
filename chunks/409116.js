@@ -17,11 +17,20 @@ t.default = e => {
     renderPrice: u,
     icon: c,
     className: d,
-    variant: f = "heading-md/semibold"
-  } = e, C = (0, i.formatPrice)(a, s);
-  return (0, l.jsxs)(n.Heading, {
-    variant: f,
-    className: r()(o.heading, d),
-    children: [c, null !== (t = null == u ? void 0 : u(C)) && void 0 !== t ? t : C]
+    discount: f,
+    variant: C = "heading-md/semibold"
+  } = e, m = (0, i.formatPrice)(a, s), p = null != f && f > 0 ? (0, l.jsxs)(l.Fragment, {
+    children: [m, (0, l.jsx)(n.Heading, {
+      variant: C,
+      color: "text-positive",
+      children: " (-".concat(f, "%)")
+    })]
+  }) : m;
+  return (0, l.jsx)(l.Fragment, {
+    children: (0, l.jsxs)(n.Heading, {
+      variant: C,
+      className: r()(o.heading, d),
+      children: [c, null !== (t = null == u ? void 0 : u(p)) && void 0 !== t ? t : p]
+    })
   })
 }

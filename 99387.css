@@ -98549,19 +98549,21 @@ div.content_aac020 {
     align-items: flex-end
 }
 
-.strikedPrice__8a625 {
-    -webkit-text-decoration: line-through;
-    text-decoration: line-through;
-    opacity: .7;
+.price_b065f9 {
     margin-right: 8px
 }
 
-.defaultPrice__04919 {
-    margin-right: 4px
+.striked__695cb {
+    -webkit-text-decoration: line-through;
+    text-decoration: line-through
+}
+
+.dimmed__15a02 {
+    opacity: .7
 }
 
 .fullPrice__8d254 {
-    opacity: .7
+    margin-right: 4px
 }
 
 .premiumIcon_a6a247 {
