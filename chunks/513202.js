@@ -7,15 +7,17 @@ var r = n("481060"),
   a = n("468026"),
   o = n("566620"),
   l = n("287545"),
-  u = n("689938");
-class d extends l.default {
+  u = n("318891"),
+  d = n("719296"),
+  _ = n("689938");
+class c extends l.default {
   showErrorModal(e) {
     let {
       code: t,
       message: n
     } = e;
     (0, r.openModalLazy)(async () => e => (0, i.jsx)(a.default, {
-      title: u.default.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
+      title: _.default.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
         code: t
       }),
       body: n,
@@ -24,7 +26,7 @@ class d extends l.default {
   }
   showLaunchErrorModal(e) {
     (0, r.openModalLazy)(async () => t => (0, i.jsx)(a.default, {
-      title: u.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+      title: _.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
       body: e,
       ...t
     }))
@@ -40,6 +42,13 @@ class d extends l.default {
         applicationId: n
       })
     })
+  }
+  hidePIPEmbed(e) {
+    let {
+      channelId: t,
+      applicationId: n
+    } = e, i = (0, d.default)(t, n);
+    (0, u.hidePIPEmbed)(i)
   }
   constructor(...e) {
     var t, n, i;
@@ -60,4 +69,4 @@ class d extends l.default {
     }) : t[n] = i
   }
 }
-t.default = new d
+t.default = new c

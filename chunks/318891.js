@@ -1,56 +1,64 @@
 "use strict";
-let a;
-n.r(t);
-var s = n("570140"),
-  l = n("519938"),
-  i = n("317770"),
-  r = n("928518"),
-  o = n("592125"),
+let i;
+n.r(t), n.d(t, {
+  hidePIPEmbed: function() {
+    return h
+  },
+  showPIPEmbed: function() {
+    return A
+  }
+});
+var r = n("570140"),
+  s = n("519938"),
+  a = n("317770"),
+  o = n("928518"),
+  l = n("592125"),
   u = n("819640"),
   d = n("366050"),
-  c = n("19780"),
-  f = n("944486"),
+  _ = n("19780"),
+  c = n("944486"),
   E = n("914010"),
-  h = n("979651"),
-  _ = n("317381"),
-  C = n("917107"),
-  m = n("719296"),
+  I = n("979651"),
+  T = n("317381"),
+  f = n("719296"),
   S = n("981631");
 
-function p() {
-  let e = c.default.getChannelId(),
-    t = _.default.getConnectedActivityChannelId(),
-    n = _.default.getSelfEmbeddedActivityForChannel(null != t ? t : S.EMPTY_STRING_SNOWFLAKE_ID),
-    i = o.default.getChannel(e),
-    r = o.default.getChannel(t);
-  return null == t || (null == e || null == i) && (0, C.default)(t) || null == t || null == r || null == n ? function() {
-    let e = a;
-    null != e && d.default.isOpen(e) && (s.default.wait(() => l.close(e)), a = null)
-  }() : function(e, t) {
-    if (d.default.isOpen(t)) return !1;
-    s.default.wait(() => l.open(t, S.PictureInPictureComponents.EMBED_IFRAME, {
-      channel: e
-    })), a = t
-  }(r, (0, m.default)(t, n.applicationId))
+function h(e) {
+  let t = null != e ? e : i;
+  null != t && d.default.isOpen(t) && r.default.wait(() => s.hide(t))
 }
 
-function g() {
-  let e = u.default.hasLayers(),
-    t = r.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-  return e && !t ? function() {
-    let e = a;
-    null != e && d.default.isOpen(e) && s.default.wait(() => l.hide(e))
-  }() : function() {
-    let e = a;
-    null != e && d.default.isOpen(e) && s.default.wait(() => l.show(e))
-  }()
+function A(e) {
+  let t = null != e ? e : i;
+  null != t && d.default.isOpen(t) && r.default.wait(() => s.show(t))
 }
-class I extends i.default {
+
+function m() {
+  let e = T.default.getConnectedActivityChannelId(),
+    t = T.default.getSelfEmbeddedActivityForChannel(null != e ? e : S.EMPTY_STRING_SNOWFLAKE_ID),
+    n = l.default.getChannel(e);
+  return null == e || null == n || null == t ? function() {
+    let e = i;
+    null != e && d.default.isOpen(e) && (r.default.wait(() => s.close(e)), i = null)
+  }() : function(e, t) {
+    if (d.default.isOpen(t)) return !1;
+    r.default.wait(() => s.open(t, S.PictureInPictureComponents.EMBED_IFRAME, {
+      channel: e
+    })), i = t
+  }(n, (0, f.default)(e, t.applicationId))
+}
+
+function N() {
+  let e = u.default.hasLayers(),
+    t = o.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+  return e && !t ? h() : A()
+}
+class p extends a.default {
   _initialize() {
-    f.default.addChangeListener(p), E.default.addChangeListener(p), c.default.addChangeListener(p), h.default.addChangeListener(p), r.default.addChangeListener(p), _.default.addChangeListener(p), u.default.addChangeListener(g)
+    c.default.addChangeListener(m), E.default.addChangeListener(m), _.default.addChangeListener(m), I.default.addChangeListener(m), o.default.addChangeListener(m), T.default.addChangeListener(m), u.default.addChangeListener(N)
   }
   _terminate() {
-    f.default.removeChangeListener(p), E.default.removeChangeListener(p), c.default.removeChangeListener(p), h.default.removeChangeListener(p), r.default.removeChangeListener(p), _.default.removeChangeListener(p), u.default.removeChangeListener(g)
+    c.default.removeChangeListener(m), E.default.removeChangeListener(m), _.default.removeChangeListener(m), I.default.removeChangeListener(m), o.default.removeChangeListener(m), T.default.removeChangeListener(m), u.default.removeChangeListener(N)
   }
 }
-t.default = new I
+t.default = new p
