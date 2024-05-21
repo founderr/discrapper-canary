@@ -29,8 +29,8 @@ var s = l("735250"),
   T = l("892880"),
   g = l("226951"),
   y = l("605436"),
-  p = l("971628"),
-  A = l("71080"),
+  A = l("971628"),
+  p = l("71080"),
   M = l("981631"),
   b = l("689938"),
   w = l("175798");
@@ -58,7 +58,7 @@ function N(e) {
     let t = v(f.trim(), R);
     return RegExp("".concat(g.default.escape(t)), "i").test(e)
   }
-  let L = (0, n.useStateFromStores)([u.default], () => u.default.getMemberIds(l.id));
+  let L = (0, n.useStateFromStoresArray)([u.default], () => u.default.getMemberIds(l.id));
   R ? t = [] : h ? t = y.getRolesRowsWithPermissionDisabled(l, M, i, r, w) : 0 === (t = y.getRolesRows(l, M, i, r, w)).length && "" === f.trim() && !y.hasCustomRoles(l, M) && (t = y.getNoRolesRow());
   let N = y.getMembersRows(L, i, l, r, w),
     {
@@ -80,10 +80,10 @@ function N(e) {
     onQueryChange: function(e) {
       let t = e.trim(),
         s = "@" === t.charAt(0);
-      T.default.requestMembers(l.id, v(t, s), A.MEMBER_REQUEST_COUNT), x(e), E(s)
+      T.default.requestMembers(l.id, v(t, s), p.MEMBER_REQUEST_COUNT), x(e), E(s)
     },
     onClickRow: function(e) {
-      let t = (0, p.getFullRowId)(e);
+      let t = (0, A.getFullRowId)(e);
       c(l => {
         let s = {
           ...l
@@ -91,11 +91,11 @@ function N(e) {
         if (t in s) delete s[t];
         else {
           let l;
-          e.rowType === A.RowType.ROLE || e.rowType === A.RowType.ADMINISTRATOR ? l = {
+          e.rowType === p.RowType.ROLE || e.rowType === p.RowType.ADMINISTRATOR ? l = {
             type: o.RichTagTypes.ROLE,
             label: e.name,
             color: e.colorString
-          } : (e.rowType === A.RowType.MEMBER || e.rowType === A.RowType.OWNER) && (l = {
+          } : (e.rowType === p.RowType.MEMBER || e.rowType === p.RowType.OWNER) && (l = {
             type: o.RichTagTypes.MEMBER,
             label: e.name,
             avatar: e.avatarURL
@@ -150,7 +150,7 @@ function j(e) {
       className: w.description,
       variant: "text-sm/normal",
       children: t
-    }), (0, s.jsx)(p.default, {
+    }), (0, s.jsx)(A.default, {
       listClassName: l,
       pendingAdditions: a,
       query: n,
@@ -176,7 +176,7 @@ function C(e) {
     channelId: o,
     newChannel: u,
     inSettings: m
-  } = e, [T, g] = a.useState(!1), [y, p] = a.useState({}), v = (0, n.useStateFromStores)([c.default], () => c.default.getChannel(o), [o]), j = (0, n.useStateFromStores)([S.default], () => S.default.getGuild(null == v ? void 0 : v.getGuildId()));
+  } = e, [T, g] = a.useState(!1), [y, A] = a.useState({}), v = (0, n.useStateFromStores)([c.default], () => c.default.getChannel(o), [o]), j = (0, n.useStateFromStores)([S.default], () => S.default.getGuild(null == v ? void 0 : v.getGuildId()));
   if (a.useEffect(() => {
       f.default.track(M.AnalyticEvents.OPEN_MODAL, {
         type: "Grant Channel Access"
@@ -198,7 +198,7 @@ function C(e) {
           let {
             row: l
           } = t;
-          null != l.id && "" !== l.id && (l.rowType === A.RowType.ROLE ? s.push((0, x.permissionOverwriteForRole)(l.id, e.type)) : l.rowType === A.RowType.MEMBER && s.push((0, x.permissionOverwriteForUser)(l.id, e.type)))
+          null != l.id && "" !== l.id && (l.rowType === p.RowType.ROLE ? s.push((0, x.permissionOverwriteForRole)(l.id, e.type)) : l.rowType === p.RowType.MEMBER && s.push((0, x.permissionOverwriteForUser)(l.id, e.type)))
         }), (0, r.savePermissionUpdates)(e.id, s, l)
       }(v, y, m), l(), g(!1)
     } catch (e) {
@@ -235,7 +235,7 @@ function C(e) {
       channel: v,
       permission: v.accessPermissions,
       pendingAdditions: y,
-      setPendingAdditions: p
+      setPendingAdditions: A
     }), (0, s.jsxs)(i.ModalFooter, {
       children: [!C && (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(i.Button, {
