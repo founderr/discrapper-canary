@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildRow: function() {
-    return T
+    return I
   },
   default: function() {
-    return I
+    return A
   }
 });
 var a = n("735250");
@@ -21,13 +21,14 @@ var l = n("120356"),
   h = n("346656"),
   m = n("51144"),
   p = n("162267"),
-  E = n("981631"),
-  C = n("689938"),
-  g = n("305944"),
-  S = n("671794");
-let _ = (0, r.getAvatarSize)(r.AvatarSizes.SIZE_16);
+  E = n("228168"),
+  C = n("981631"),
+  g = n("689938"),
+  S = n("305944"),
+  _ = n("671794");
+let T = (0, r.getAvatarSize)(r.AvatarSizes.SIZE_16);
 
-function T(e) {
+function I(e) {
   let {
     user: t,
     guild: l,
@@ -41,7 +42,7 @@ function T(e) {
         right: 8
       }
     },
-    className: g.listRow,
+    className: S.listRow,
     onClick: f,
     onContextMenu: e => {
       (0, o.openContextMenuLazy)(e, async () => {
@@ -58,21 +59,23 @@ function T(e) {
       tabIndex: -1,
       guild: l,
       showBadge: !0,
-      className: s()(g.listAvatar, null == l.icon ? S.guildAvatarWithoutIcon : null),
-      badgeStrokeColor: (0, c.getColor)((0, i.isThemeDark)(d) ? E.Color.PRIMARY_600 : E.Color.WHITE_500),
+      className: s()(S.listAvatar, null == l.icon ? _.guildAvatarWithoutIcon : null),
+      badgeStrokeColor: (0, c.getColor)((0, i.isThemeDark)(d) ? C.Color.PRIMARY_600 : C.Color.WHITE_500),
+      badgeTooltipColor: r.TooltipColors.PRIMARY,
+      badgeTooltipDelay: E.USER_PROFILE_TOOLTIP_DELAY,
       size: h.default.Sizes.MEDIUM,
       active: !0
     }), (0, a.jsxs)("div", {
-      className: g.listRowContent,
+      className: S.listRowContent,
       children: [(0, a.jsx)("div", {
-        className: g.listName,
+        className: S.listName,
         children: l.toString()
       }), p || null != u ? (0, a.jsxs)("div", {
-        className: S.guildNick,
+        className: _.guildNick,
         children: [p && (0, a.jsx)(r.Avatar, {
-          src: t.getAvatarURL(l.id, _),
+          src: t.getAvatarURL(l.id, T),
           size: r.AvatarSizes.SIZE_16,
-          className: S.guildAvatar,
+          className: _.guildAvatar,
           "aria-hidden": !0
         }), null != u ? u : m.default.getName(t)]
       }) : null]
@@ -80,7 +83,7 @@ function T(e) {
   })
 }
 
-function I(e) {
+function A(e) {
   let {
     user: t,
     onClose: n
@@ -90,25 +93,25 @@ function I(e) {
     (0, f.transitionToGuild)(e), n(), (0, u.popLayer)()
   };
   return (0, a.jsx)(r.ScrollerThin, {
-    className: g.listScroller,
+    className: S.listScroller,
     fade: !0,
     children: null == l ? (0, a.jsx)("div", {
-      className: g.empty,
+      className: S.empty,
       children: (0, a.jsx)(r.Spinner, {})
     }) : 0 === l.length ? (0, a.jsxs)("div", {
-      className: g.empty,
+      className: S.empty,
       children: [(0, a.jsx)("div", {
-        className: g.emptyIconGuilds
+        className: S.emptyIconGuilds
       }), (0, a.jsx)("div", {
-        className: g.emptyText,
-        children: C.default.Messages.NO_MUTUAL_GUILDS
+        className: S.emptyText,
+        children: g.default.Messages.NO_MUTUAL_GUILDS
       })]
     }) : l.map(e => {
       let {
         guild: n,
         nick: l
       } = e;
-      return (0, a.jsx)(T, {
+      return (0, a.jsx)(I, {
         user: t,
         guild: n,
         nick: l,

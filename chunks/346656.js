@@ -68,12 +68,16 @@ class p extends s.PureComponent {
     let {
       showBadge: e,
       guild: t,
-      badgeStrokeColor: n
+      badgeStrokeColor: n,
+      badgeTooltipColor: i,
+      badgeTooltipDelay: s
     } = this.props;
     return e && null != t.hasFeature ? (0, r.jsx)(f.default, {
       className: S.guildIconBadge,
       guild: t,
-      badgeStrokeColor: n
+      badgeStrokeColor: n,
+      tooltipColor: i,
+      tooltipDelay: s
     }) : null
   }
   renderIcon() {

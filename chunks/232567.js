@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   acceptAgreements: function() {
-    return f
-  },
-  fetchCurrentUser: function() {
     return T
   },
-  fetchMutualFriends: function() {
-    return m
+  fetchCurrentUser: function() {
+    return I
   },
-  fetchProfile: function() {
+  fetchMutualFriends: function() {
     return A
   },
-  getUser: function() {
+  fetchProfile: function() {
     return h
   },
-  setFlag: function() {
+  getUser: function() {
     return S
+  },
+  setFlag: function() {
+    return f
   }
 }), n("789020");
 var i = n("512722"),
@@ -27,18 +27,17 @@ var i = n("512722"),
   l = n("570140"),
   u = n("598077"),
   d = n("594174"),
-  _ = n("960048"),
-  c = n("573261"),
-  E = n("981631");
-let I = new a.Logger("UserProfileModalActionCreators");
+  _ = n("573261"),
+  c = n("981631");
+let E = new a.Logger("UserProfileModalActionCreators");
 
-function T() {
+function I() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     {
       withAnalyticsToken: t = !1
     } = e;
   return o.HTTP.get({
-    url: E.Endpoints.ME,
+    url: c.Endpoints.ME,
     query: {
       with_analytics_token: t
     },
@@ -50,11 +49,11 @@ function T() {
   }), new u.default(e.body)))
 }
 
-function f() {
+function T() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return c.default.patch({
-    url: E.Endpoints.USER_AGREEMENTS,
+  return _.default.patch({
+    url: c.Endpoints.USER_AGREEMENTS,
     trackedActionData: {
       event: s.NetworkActionNames.USER_ACCEPT_AGREEMENTS
     },
@@ -66,12 +65,12 @@ function f() {
   }).then(() => !0, () => !1)
 }
 
-function S(e, t) {
+function f(e, t) {
   let n = d.default.getCurrentUser();
   r()(null != n, "setFlag: user cannot be undefined");
   let i = t ? n.flags | e : n.flags & ~e;
   return o.HTTP.patch({
-    url: E.Endpoints.ME,
+    url: c.Endpoints.ME,
     oldFormErrors: !0,
     body: {
       flags: i
@@ -79,17 +78,17 @@ function S(e, t) {
   })
 }
 
-function h(e) {
+function S(e) {
   let t = d.default.getUser(e);
   return null != t ? Promise.resolve(t) : o.HTTP.get({
-    url: E.Endpoints.USER(e),
+    url: c.Endpoints.USER(e),
     oldFormErrors: !0
   }).then(t => (l.default.dispatch({
     type: "USER_UPDATE",
     user: t.body
   }), d.default.getUser(e)))
 }
-async function A(e) {
+async function h(e) {
   let {
     friendToken: t,
     withMutualGuilds: n,
@@ -104,7 +103,7 @@ async function A(e) {
   });
   try {
     let d = await o.HTTP.get({
-      url: E.Endpoints.USER_PROFILE(e),
+      url: c.Endpoints.USER_PROFILE(e),
       query: {
         friend_token: t,
         with_mutual_guilds: n,
@@ -127,20 +126,20 @@ async function A(e) {
       guildMember: d.body.guild_member
     }), d.body
   } catch (t) {
-    throw _.default.captureException(t), null != t && (null == t ? void 0 : t.body) != null && I.warn("fetchProfile error: ".concat(t.body.code, " - ").concat(t.body.message)), l.default.dispatch({
+    throw null != t && (null == t ? void 0 : t.body) != null && E.warn("fetchProfile error: ".concat(t.body.code, " - ").concat(t.body.message)), l.default.dispatch({
       type: "USER_PROFILE_FETCH_FAILURE",
       userId: e
     }), t
   }
 }
-async function m(e, t) {
+async function A(e, t) {
   l.default.dispatch({
     type: "MUTUAL_FRIENDS_FETCH_START",
     userId: e
   });
   try {
     let n = await o.HTTP.get({
-      url: E.Endpoints.USER_RELATIONSHIPS(e),
+      url: c.Endpoints.USER_RELATIONSHIPS(e),
       oldFormErrors: !0,
       signal: t
     });
@@ -150,7 +149,7 @@ async function m(e, t) {
       mutualFriends: n.body
     })
   } catch (t) {
-    throw (null == t ? void 0 : t.body) != null && I.warn("fetchMutualFriends error: ".concat(t.body.code, " - ").concat(t.body.message)), l.default.dispatch({
+    throw (null == t ? void 0 : t.body) != null && E.warn("fetchMutualFriends error: ".concat(t.body.code, " - ").concat(t.body.message)), l.default.dispatch({
       type: "MUTUAL_FRIENDS_FETCH_FAILURE",
       userId: e
     }), t

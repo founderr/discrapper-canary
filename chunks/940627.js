@@ -22,11 +22,12 @@ class A extends a.PureComponent {
       badgeStrokeColor: r,
       tooltipColor: a = u.Tooltip.Colors.BRAND,
       tooltipPosition: o,
-      size: c = 16,
-      badgeColor: E,
-      iconClassName: I,
-      flowerStarClassName: T
-    } = this.props, f = function(e) {
+      tooltipDelay: c,
+      size: E = 16,
+      badgeColor: I,
+      iconClassName: T,
+      flowerStarClassName: f
+    } = this.props, A = function(e) {
       switch (e) {
         case 2:
           return S.default.Messages.GUILD_VERIFIED;
@@ -49,26 +50,27 @@ class A extends a.PureComponent {
     return (0, s.jsx)(u.Tooltip, {
       color: a,
       position: o,
-      text: f,
+      delay: c,
+      text: A,
       children: a => 5 === e || 4 === e ? (0, s.jsx)("div", {
         ...a,
         className: l()(n, i),
         style: {
-          width: c,
-          height: c
+          width: E,
+          height: E
         },
         children: (0, s.jsx)(t, {
-          className: l()(h.icon, I)
+          className: l()(h.icon, T)
         })
       }) : (0, s.jsx)(_.default, {
         ...a,
         className: l()(n, i),
-        flowerStarClassName: T,
-        color: E,
+        flowerStarClassName: f,
+        color: I,
         stroke: r,
-        size: c,
+        size: E,
         children: (0, s.jsx)(t, {
-          className: l()(h.icon, I)
+          className: l()(h.icon, T)
         })
       })
     })
