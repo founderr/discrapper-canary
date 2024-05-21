@@ -14,8 +14,8 @@ t.default = e => {
       amount: a,
       currency: s
     },
-    renderPrice: u,
-    icon: c,
+    renderPrice: c,
+    icon: u,
     className: d,
     discount: f,
     variant: C = "heading-md/semibold"
@@ -30,7 +30,7 @@ t.default = e => {
     children: (0, l.jsxs)(n.Heading, {
       variant: C,
       className: r()(o.heading, d),
-      children: [c, null !== (t = null == u ? void 0 : u(p)) && void 0 !== t ? t : p]
+      children: [u, null !== (t = null == c ? void 0 : c(p)) && void 0 !== t ? t : p]
     })
   })
 }

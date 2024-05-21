@@ -6,8 +6,8 @@ var l = a("735250"),
   n = a("727637"),
   i = a("906732"),
   o = a("241553"),
-  u = a("333867"),
-  c = a("559629"),
+  c = a("333867"),
+  u = a("559629"),
   d = a("231338"),
   f = a("689938"),
   C = a("46309");
@@ -62,41 +62,41 @@ t.default = e => {
     product: t,
     returnRef: a,
     onSuccess: p,
-    tooltipDelay: E,
-    isGiftEasterEggEnabled: h,
-    disableCustomColor: g = !1
+    tooltipDelay: g,
+    isGiftEasterEggEnabled: E,
+    disableCustomColor: h = !1
   } = e, {
-    analyticsLocations: x
-  } = (0, i.default)(), v = s.useRef(null), b = (0, n.default)(v), L = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
+    analyticsLocations: b
+  } = (0, i.default)(), x = s.useRef(null), v = (0, n.default)(x), S = h ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
   return (0, l.jsx)(r.Tooltip, {
     text: f.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: E,
+    delay: g,
     children: e => (0, l.jsx)(r.Button, {
       ...e,
-      buttonRef: v,
+      buttonRef: x,
       className: C.giftButton,
-      color: g ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
+      color: h ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
       size: r.ButtonSizes.ICON,
       innerClassName: C.giftButtonInner,
       "aria-label": f.default.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
-        e.stopPropagation(), (0, u.default)({
+        e.stopPropagation(), (0, c.default)({
           skuId: t.skuId,
           isGift: !0,
-          analyticsLocations: x,
+          analyticsLocations: b,
           returnRef: a,
           onClose: null != p ? e => {
             e && p()
           } : void 0
         })
       },
-      children: h ? (0, l.jsx)(o.SeasonalGiftIcon, {
-        hovered: b,
+      children: E ? (0, l.jsx)(o.SeasonalGiftIcon, {
+        hovered: v,
         isContentDismissed: !0,
-        themeOverride: L,
+        themeOverride: S,
         boxColors: m
-      }) : (0, l.jsx)(c.default, {
+      }) : (0, l.jsx)(u.default, {
         width: 24,
         height: 24
       })

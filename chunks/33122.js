@@ -55,20 +55,20 @@ let S = {
       margin: 20
     }
   },
-  L = {
+  y = {
     width: 1920,
     height: 1080
   },
-  y = {
+  L = {
     width: 1280,
     height: 720
   },
-  O = e => (0, h.renderVideoComponent)({
+  P = e => (0, h.renderVideoComponent)({
     ...e,
     className: v.videoWrapper,
     mediaPlayerClassName: v.mediaPlayer
   }),
-  P = e => (0, a.jsx)(C.default, {
+  O = e => (0, a.jsx)(C.default, {
     ...e
   }),
   A = e => {
@@ -86,10 +86,10 @@ let S = {
     } = e;
     if (i.type === E.CarouselMediaTypes.YOUTUBE_VIDEO) t = {
       url: (0, E.YOUTUBE_PREVIEW_URL)(i.youtubeVideoId),
-      ...L
+      ...y
     }, n = {
       url: "".concat((0, E.YOUTUBE_EMBED_URL)(i.youtubeVideoId), "?").concat("rel=0&iv_load_policy=3&showinfo=0&modestbranding=1"),
-      ...y
+      ...L
     }, s = g.SupportedEmbedIFrame.YOUTUBE;
     else {
       let e = null != i.width ? i.width : 0,
@@ -122,8 +122,8 @@ let S = {
       autoMute: f,
       onMute: I,
       autoPlay: c,
-      renderVideoComponent: O,
-      renderImageComponent: P,
+      renderVideoComponent: P,
+      renderImageComponent: O,
       renderLinkComponent: h.renderMaskedLinkComponent
     });
     return c ? x : (0, a.jsx)(d.Clickable, {

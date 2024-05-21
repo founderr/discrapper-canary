@@ -7,8 +7,8 @@ var s = a("780384"),
   n = a("410030"),
   i = a("689938"),
   o = a("797056"),
-  u = a("982240"),
-  c = a("533854");
+  c = a("982240"),
+  u = a("533854");
 t.default = e => {
   let {
     onRetry: t
@@ -17,7 +17,7 @@ t.default = e => {
     className: o.wrapper,
     children: [(0, l.jsx)("img", {
       className: o.__invalid_loadIssueImg,
-      src: (0, s.isThemeDark)(a) ? u : c,
+      src: (0, s.isThemeDark)(a) ? c : u,
       alt: ""
     }), (0, l.jsx)(r.Heading, {
       className: o.heading1,

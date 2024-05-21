@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   useReloadProfileEffectWhenConfigsAreMissing: function() {
-    return u
+    return c
   }
 }), a("47120");
 var l = a("470079"),
@@ -10,7 +10,7 @@ var l = a("470079"),
   n = a("597688"),
   i = a("365943"),
   o = a("25251");
-let u = () => {
+let c = () => {
   let e = (0, r.useStateFromStores)([n.default], () => n.default.products);
   l.useEffect(() => {
     let t = [...e.values()].filter(e => e.type === s.CollectiblesItemType.PROFILE_EFFECT).some(e => {

@@ -7,9 +7,9 @@ var s = a("120356"),
   n = a("425734"),
   i = a("897246"),
   o = a("211371"),
-  u = a("775087");
-let c = () => 4 * Math.random() + 8,
-  d = [c(), c(), c()];
+  c = a("775087");
+let u = () => 4 * Math.random() + 8,
+  d = [u(), u(), u()];
 t.default = () => (0, l.jsx)(l.Fragment, {
   children: d.map(e => (0, l.jsxs)("div", {
     className: n.cardsContainer,
@@ -21,7 +21,7 @@ t.default = () => (0, l.jsx)(l.Fragment, {
     }), Array.from({
       length: e
     }, (e, t) => t).map(e => (0, l.jsx)("div", {
-      className: r()(o.skeleton, u.shopCard),
+      className: r()(o.skeleton, c.shopCard),
       children: (0, l.jsxs)("div", {
         className: o.cardBody,
         children: [(0, l.jsx)("div", {

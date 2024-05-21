@@ -46,8 +46,8 @@ var u = n("194048"),
   x = n("605236"),
   M = n("543241"),
   R = n("318374"),
-  L = n("359110"),
-  y = n("12168"),
+  y = n("359110"),
+  L = n("12168"),
   O = n("592125"),
   j = n("430824"),
   P = n("496675"),
@@ -147,7 +147,7 @@ function eo(e) {
     requestId: f
   } = e, m = (0, d.useStateFromStores)([Y.default], () => Y.default.isChannelReplyMode()), [p, E] = l.useState(null), C = (0, d.useStateFromStores)([P.default], () => P.default.can(ee.Permissions.SEND_MESSAGES, t)), S = (0, K.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
-  }), [I, A] = l.useState(!1), [M, R] = l.useState(!1), L = "#".concat(t.name), y = V.default.getName(t.guild_id, t.id, n), j = m ? et.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : et.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, D = async e => {
+  }), [I, A] = l.useState(!1), [M, R] = l.useState(!1), y = "#".concat(t.name), L = V.default.getName(t.guild_id, t.id, n), j = m ? et.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : et.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, D = async e => {
     if (null != e) {
       if (H.default.track(ee.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: $.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
@@ -252,7 +252,7 @@ function eo(e) {
         })
       }), (0, a.jsx)(N.ReplyInput, {
         placeholder: et.default.Messages.TEXTAREA_PLACEHOLDER.format({
-          channel: m ? L : "@".concat(y)
+          channel: m ? y : "@".concat(L)
         }),
         onEnter: b,
         setEditorRef: e => E(e),
@@ -298,7 +298,7 @@ let eu = e => {
           }),
           color: _.Tooltip.Colors.PRIMARY,
           shouldShow: !r && void 0,
-          children: (0, a.jsx)(y.HotBarEmoji, {
+          children: (0, a.jsx)(L.HotBarEmoji, {
             emoji: t,
             isDisabled: !s,
             onClick: () => n(t),
@@ -465,15 +465,15 @@ function em(e) {
     reactionImageAltText: c,
     generateReactionImage: h,
     isStreaming: g = !1
-  } = e, A = V.default.getName(i.guild_id, i.id, t), [x, M] = l.useState(!1), R = (0, d.useStateFromStores)([j.default], () => j.default.getGuild(s.guild_id)), y = (0, d.useStateFromStoresArray)([U.default], () => U.default.getVoiceStatesForChannel(s), [s]), P = l.useMemo(() => {
-    for (let e of y) {
+  } = e, A = V.default.getName(i.guild_id, i.id, t), [x, M] = l.useState(!1), R = (0, d.useStateFromStores)([j.default], () => j.default.getGuild(s.guild_id)), L = (0, d.useStateFromStoresArray)([U.default], () => U.default.getVoiceStatesForChannel(s), [s]), P = l.useMemo(() => {
+    for (let e of L) {
       let t = O.default.getDMFromUserId(e.user.id),
         n = null != t && b.default.isChannelMuted(null, t),
         a = D.default.isBlocked(e.user.id);
       if (n || a) return !0
     }
     return !1
-  }, [y]), w = async e => {
+  }, [L]), w = async e => {
     let a = await T.default.openPrivateChannel(t.id, !1, !1),
       l = O.default.getChannel(a);
     o()(null != l, "DM channel must be defined");
@@ -490,7 +490,7 @@ function em(e) {
       requestId: r
     })
   }, B = () => {
-    I.default.updateChatOpen(s.id, !0), (0, L.transitionToChannel)(s.id), (0, Z.trackInteraction)($.ContentInventoryInteractionTypes.VOICE_CHANNEL_PREVIEWED, {
+    I.default.updateChatOpen(s.id, !0), (0, y.transitionToChannel)(s.id), (0, Z.trackInteraction)($.ContentInventoryInteractionTypes.VOICE_CHANNEL_PREVIEWED, {
       entry: n,
       channelId: i.id,
       guildId: i.guild_id,
@@ -524,7 +524,7 @@ function em(e) {
         })]
       }), (0, a.jsx)(k.default, {
         guildId: R.id,
-        users: y,
+        users: L,
         max: 3,
         renderUser: (e, t) => (0, a.jsx)(_.Avatar, {
           src: e.user.getAvatarURL(R.id, 16),

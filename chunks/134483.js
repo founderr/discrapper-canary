@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("5881"),
   M = n("874137"),
   R = n("340100"),
-  L = n("611855"),
-  y = n("644646"),
+  y = n("611855"),
+  L = n("644646"),
   O = n("670638"),
   j = n("667105"),
   P = n("860151"),
@@ -124,7 +124,7 @@ t.default = function(e) {
   });
   let ep = null != B && (null === (s = Q.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null;
   if (!ep && (ef || eu || em) || !ep && !et) return null;
-  let eE = (0, a.jsx)(y.default, {
+  let eE = (0, a.jsx)(L.default, {
     className: w.rewardTile,
     autoplay: G,
     quest: Q,
@@ -146,7 +146,7 @@ t.default = function(e) {
         onMouseLeave: Y,
         children: [!ed && (0, a.jsxs)("div", {
           className: w.rewardTileWrapper,
-          children: [eE, (0, a.jsx)(L.default, {
+          children: [eE, (0, a.jsx)(y.default, {
             bgOpacity: .32,
             className: w.promotedTag
           })]

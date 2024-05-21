@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("33154"),
   M = n("144114"),
   R = n("703656"),
-  L = n("210887"),
-  y = n("606956"),
+  y = n("210887"),
+  L = n("606956"),
   O = n("271383"),
   j = n("430824"),
   P = n("607744"),
@@ -315,7 +315,7 @@ function W(e) {
   let {
     channel: s,
     children: i
-  } = e, o = s.getGuildId(), u = (0, r.useStateFromStores)([j.default], () => j.default.getGuild(o)), d = (0, r.useStateFromStores)([P.default], () => P.default.getCheck(o)), c = s.type === w.ChannelTypes.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(w.GuildFeatures.NEWS), h = (0, r.useStateFromStores)([y.default], () => c ? y.default.getFollowerStatsForChannel(s.id) : null), E = (0, r.useStateFromStores)([N.default], () => N.default.isLurking(o)), C = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), S = null !== (t = null == C ? void 0 : C.isStaff()) && void 0 !== t && t, I = (0, r.useStateFromStores)([O.default], () => {
+  } = e, o = s.getGuildId(), u = (0, r.useStateFromStores)([j.default], () => j.default.getGuild(o)), d = (0, r.useStateFromStores)([P.default], () => P.default.getCheck(o)), c = s.type === w.ChannelTypes.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(w.GuildFeatures.NEWS), h = (0, r.useStateFromStores)([L.default], () => c ? L.default.getFollowerStatsForChannel(s.id) : null), E = (0, r.useStateFromStores)([N.default], () => N.default.isLurking(o)), C = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), S = null !== (t = null == C ? void 0 : C.isStaff()) && void 0 !== t && t, I = (0, r.useStateFromStores)([O.default], () => {
     var e, t;
     return null != C && null !== (t = null === (e = O.default.getMember(o, C.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t
   }), v = !!(null == u ? void 0 : u.hasVerificationGate()), x = (I || d.notClaimed) && v, M = (0, r.useStateFromStores)([A.default], () => A.default.shouldShowPopout(o)), R = (0, r.useStateFromStores)([D.default], () => D.default.can(w.Permissions.SEND_MESSAGES, s)), F = (0, r.useStateFromStores)([T.default], () => T.default.getRequest(o)), [k, B] = (0, m.useFetchClanInfo)(o), H = (0, m.useClanInfo)(o), G = (null == F ? void 0 : F.applicationStatus) === _.GuildJoinRequestApplicationStatuses.APPROVED;
@@ -329,7 +329,7 @@ function W(e) {
     isFollowable: c,
     shouldShowLurkerModeSuccessPopout: M,
     showLurkerModeUpsellPopout: E && null != u && U.canEveryoneRole(w.Permissions.SEND_MESSAGES, s),
-    theme: L.default.theme,
+    theme: y.default.theme,
     canSendMessages: R,
     channelFollowingUsersSeen: null != h ? h.usersSeenEver : null,
     hasVerificationGate: v,

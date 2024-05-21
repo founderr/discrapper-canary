@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   CollectiblesCountdown: function() {
-    return E
+    return g
   }
 }), a("653041");
 var l = a("735250"),
@@ -10,8 +10,8 @@ var l = a("735250"),
   n = a.n(r),
   i = a("920906"),
   o = a("873546"),
-  u = a("399606"),
-  c = a("481060"),
+  c = a("399606"),
+  u = a("481060"),
   d = a("774078"),
   f = a("607070"),
   C = a("689938"),
@@ -30,7 +30,7 @@ function p(e) {
       r = [];
     return e > 0 && r.push(s(e, C.default.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || r.length > 0) && r.push(s(t, C.default.Messages.COUNTDOWN_UNITS_HOURS)), (a > 0 || r.length > 0) && r.push(s(a, C.default.Messages.COUNTDOWN_UNITS_MINUTES)), r.push(s(l, C.default.Messages.COUNTDOWN_UNITS_SECONDS)), r.join(":")
   }(a, s, r, n);
-  return (0, l.jsx)(c.Text, {
+  return (0, l.jsx)(u.Text, {
     variant: "heading-md/medium",
     className: m.countdown,
     tag: "div",
@@ -41,13 +41,13 @@ function p(e) {
     })
   })
 }
-let E = s.memo(function(e) {
+let g = s.memo(function(e) {
   let {
     unpublishedAt: t,
     isVisible: a,
     displayOptions: s,
     isFullScreen: r
-  } = e, d = (0, u.useStateFromStores)([f.default], () => f.default.useReducedMotion), C = (0, i.useSpring)({
+  } = e, d = (0, c.useStateFromStores)([f.default], () => f.default.useReducedMotion), C = (0, i.useSpring)({
     transform: "translateX(-50%) ".concat(a ? "translateY(-100%)" : "translateY(0%)"),
     opacity: a ? 1 : 0,
     config: {
@@ -70,11 +70,11 @@ let E = s.memo(function(e) {
       className: m.countdownIcon,
       alt: "",
       "aria-hidden": !0
-    }), (0, l.jsx)(c.Heading, {
+    }), (0, l.jsx)(u.Heading, {
       variant: "heading-md/medium",
       className: m.countdownLabel,
       children: s.label()
-    }), (0, l.jsx)(c.Heading, {
+    }), (0, l.jsx)(u.Heading, {
       variant: "heading-md/medium",
       className: m.countdown,
       children: "—"

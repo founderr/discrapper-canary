@@ -30,7 +30,7 @@ function x(e) {
 t.default = function(e, t, n) {
   let M = a.useRef(n);
   return M.current = n, a.useCallback(n => {
-    var a, R, L, y, O;
+    var a, R, y, L, O;
     if (!M.current || n.target !== n.currentTarget) return;
     let j = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
       P = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
@@ -51,13 +51,13 @@ t.default = function(e, t, n) {
       case "e":
         if (j) {
           ;
-          if (a = k, R = w, L = F, !R.isSystemDM() && (0, T.default)(L, a)) n.preventDefault(), (0, N.editMessage)(w, F)
+          if (a = k, R = w, y = F, !R.isSystemDM() && (0, T.default)(y, a)) n.preventDefault(), (0, N.editMessage)(w, F)
         }
         break;
       case "p":
         if (j || U) {
           ;
-          if (y = w, O = F, !y.isSystemDM() && !(0, I.default)(O) && (x(y) || y.isPrivate())) n.preventDefault(), (0, N.pinMessage)(w, F, n)
+          if (L = w, O = F, !L.isSystemDM() && !(0, I.default)(O) && (x(L) || L.isPrivate())) n.preventDefault(), (0, N.pinMessage)(w, F, n)
         }
         break;
       case "+":

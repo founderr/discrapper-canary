@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("979651"),
   M = n("805009"),
   R = n("51144"),
-  L = n("649739"),
-  y = n("262317"),
+  y = n("649739"),
+  L = n("262317"),
   O = n("981631"),
   j = n("524484"),
   P = n("149283");
@@ -48,8 +48,8 @@ let D = l.memo(e => {
       userIds: t
     } = e;
     return t.has(M)
-  }), [M, i.id]), H = (0, f.default)(null != B ? [B.applicationId] : []), G = (0, L.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), V = (0, r.useStateFromStores)([I.default, A.default], () => P ? A.default.getActivities() : I.default.getActivities(M, i.guild_id)).find(e => null != e.application_id && e.type === O.ActivityTypes.PLAYING), W = (0, r.useStateFromStores)([c.default], () => (null == V ? void 0 : V.application_id) != null ? c.default.getApplication(null == V ? void 0 : V.application_id) : void 0);
-  null != W && L.default.trackExposure({
+  }), [M, i.id]), H = (0, f.default)(null != B ? [B.applicationId] : []), G = (0, y.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), V = (0, r.useStateFromStores)([I.default, A.default], () => P ? A.default.getActivities() : I.default.getActivities(M, i.guild_id)).find(e => null != e.application_id && e.type === O.ActivityTypes.PLAYING), W = (0, r.useStateFromStores)([c.default], () => (null == V ? void 0 : V.application_id) != null ? c.default.getApplication(null == V ? void 0 : V.application_id) : void 0);
+  null != W && y.default.trackExposure({
     location: "voice_users"
   });
   let [Y, z] = (0, r.useStateFromStoresArray)([C.default], () => [C.default.getStreamForUser(M, i.getGuildId()), C.default.getActiveStreamForUser(M, i.getGuildId())], [i, M]), K = (0, r.useStateFromStores)([N.default], () => N.default.getSessionById(o)), Z = R.default.useName(s), q = (0, r.useStateFromStores)([x.default], () => x.default.getVoicePlatformForChannel(i.id, M), [i.id, M]), {
@@ -61,7 +61,7 @@ let D = l.memo(e => {
   return (0, a.jsx)(E.default, {
     shakeLocation: j.ShakeLocation.VOICE_USER,
     isShaking: w,
-    children: (0, a.jsx)(y.default, {
+    children: (0, a.jsx)(L.default, {
       ...e,
       nick: null != T ? T : Z,
       canDrag: e.canDrag && !k,
@@ -101,12 +101,12 @@ t.default = function(e) {
     children: S
   } = e, [_, A] = l.useState(null), [N, v] = l.useState(!1), x = l.useRef(null), R = l.useRef(new o.DelayedCall(50, () => {
     A(x.current), x.current = null
-  })), L = l.useRef(new o.DelayedCall(175, () => {
+  })), y = l.useRef(new o.DelayedCall(175, () => {
     A(null)
   })), j = l.useCallback(e => {
-    t && (v(!0), L.current.cancel(), x.current = e, R.current.delay())
+    t && (v(!0), y.current.cancel(), x.current = e, R.current.delay())
   }, [t]), b = l.useCallback(e => {
-    t && (R.current.cancel(), _ === e && (v(!1), L.current.delay()))
+    t && (R.current.cancel(), _ === e && (v(!1), y.current.delay()))
   }, [t, _]), U = (0, r.useStateFromStoresArray)([I.default], () => {
     if (d) return [];
     let e = new Set;
@@ -150,10 +150,10 @@ t.default = function(e) {
         location: m
       }, l.id)
     });
-    return null != p && p > 0 ? e.push((0, a.jsx)(y.AudienceVoiceUser, {
+    return null != p && p > 0 ? e.push((0, a.jsx)(L.AudienceVoiceUser, {
       collapsed: d,
       numAudience: p
-    })) : d && u.length > c + 1 && e.push((0, a.jsx)(y.MoreVoiceUser, {
+    })) : d && u.length > c + 1 && e.push((0, a.jsx)(L.MoreVoiceUser, {
       numUsers: u.length - c
     })), e
   })();

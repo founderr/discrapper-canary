@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("934415"),
   M = n("456269"),
   R = n("109590"),
-  L = n("228392"),
-  y = n("981631"),
+  y = n("228392"),
+  L = n("981631"),
   O = n("689938"),
   j = n("269516"),
   P = n("858313");
@@ -80,10 +80,10 @@ function D(e) {
       Y ? T.default.leaveThread(V, "Forum Toolbar") : T.default.joinThread(V, "Forum Toolbar")
     },
     es = () => {
-      (0, L.trackForumPostLinkCopied)({
+      (0, y.trackForumPostLinkCopied)({
         postId: V.id,
         location: {
-          section: y.AnalyticsSections.CHANNEL_HEADER
+          section: L.AnalyticsSections.CHANNEL_HEADER
         }
       }), (0, r.copy)((0, x.getChannelLinkToCopy)(V, Q)), G(!0)
     },

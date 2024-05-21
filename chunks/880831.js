@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   TOAST_LINGER_MS: function() {
-    return L
+    return y
   },
   default: function() {
     return O
@@ -33,9 +33,9 @@ var a = n("735250"),
   x = n("981631"),
   M = n("768760"),
   R = n("588233");
-let L = 10 * A.default.Millis.SECOND;
+let y = 10 * A.default.Millis.SECOND;
 
-function y(e) {
+function L(e) {
   var t;
   let {
     message: n
@@ -50,11 +50,11 @@ function y(e) {
   }).content : null, {
     contentPlaceholder: v,
     renderedContent: x,
-    icon: L
+    icon: y
   } = (0, T.renderSingleLineMessage)(n, N, s, R.messageContent, {
     iconClass: R.messageContentIcon,
     iconSize: M.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
-  }), y = (0, C.getMessageStickers)(n), O = y.length > 0 ? y.map(e => (0, a.jsx)(g.default, {
+  }), L = (0, C.getMessageStickers)(n), O = L.length > 0 ? L.map(e => (0, a.jsx)(g.default, {
     className: R.sticker,
     size: 128,
     sticker: e,
@@ -75,7 +75,7 @@ function y(e) {
       }),
       children: [null !== (t = null != x ? x : O) && void 0 !== t ? t : (0, a.jsx)("span", {
         children: v
-      }), null != O ? null : L]
+      }), null != O ? null : y]
     }), (0, a.jsx)("img", {
       alt: "",
       src: (null == r ? void 0 : r.guildMemberAvatar) != null && null != o ? (0, I.getGuildMemberAvatarURLSimple)({
@@ -133,7 +133,7 @@ function O(e) {
     channelId: t,
     isFrozen: s,
     count: 3,
-    lingerMs: L
+    lingerMs: y
   }), m = l.useRef({}), [p, E] = l.useState({}), C = l.useCallback((e, t) => {
     null == t ? delete m.current[e] : m.current[e] = t
   }, []);
@@ -197,7 +197,7 @@ function O(e) {
       ref: e => C(t.message.id, null != e ? e.offsetHeight : null),
       className: R.toastWrapper,
       style: e,
-      children: (0, a.jsx)(y, {
+      children: (0, a.jsx)(L, {
         message: t.message
       })
     }))

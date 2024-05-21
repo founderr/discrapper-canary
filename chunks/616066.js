@@ -11,34 +11,34 @@ var s = a("120356"),
   n = a("979554"),
   i = a("481060"),
   o = a("1585"),
-  u = a("125988"),
-  c = a("998502"),
+  c = a("125988"),
+  u = a("998502"),
   d = a("266386"),
   f = a("689938"),
   C = a("956308");
-let m = c.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
+let m = u.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
   p = e => {
     let {
       item: t,
       isPurchased: a,
       isHighlighted: s,
-      user: c,
+      user: u,
       avatarSize: p = i.AvatarSizes.SIZE_152
-    } = e, E = (0, o.getDecorationSizeForAvatarSize)(p), h = (0, d.useCollectiblesHoverPreviewExperiment)("AvatarDecorationPreview"), {
-      avatarDecorationSrc: g,
-      eventHandlers: x,
-      avatarPlaceholderSrc: v
-    } = (0, u.default)({
-      user: c,
+    } = e, g = (0, o.getDecorationSizeForAvatarSize)(p), E = (0, d.useCollectiblesHoverPreviewExperiment)("AvatarDecorationPreview"), {
+      avatarDecorationSrc: h,
+      eventHandlers: b,
+      avatarPlaceholderSrc: x
+    } = (0, c.default)({
+      user: u,
       avatarDecorationOverride: (null == t ? void 0 : t.type) === n.CollectiblesItemType.AVATAR_DECORATION ? t : void 0,
-      size: E,
+      size: g,
       animateOnHover: !s
     });
     return (0, l.jsx)(m, {
-      ...x,
-      avatarDecoration: g,
-      src: h && s ? null == c ? void 0 : c.getAvatarURL(void 0, 152, !0) : v,
-      imageClassName: h && s ? C.fadeInAvatarImg : void 0,
+      ...b,
+      avatarDecoration: h,
+      src: E && s ? null == u ? void 0 : u.getAvatarURL(void 0, 152, !0) : x,
+      imageClassName: E && s ? C.fadeInAvatarImg : void 0,
       className: r()(C.avatar, {
         [C.avatarPurchased]: a
       }),

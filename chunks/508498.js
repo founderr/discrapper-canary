@@ -1,29 +1,29 @@
 "use strict";
 a.r(t), a.d(t, {
   useCollectiblesShopRouting: function() {
-    return c
+    return u
   }
 }), a("610138"), a("216116"), a("78328"), a("815648"), a("47120");
 var l, s, r = a("470079"),
   n = a("613828"),
   i = a("37234"),
   o = a("703656"),
-  u = a("981631");
+  c = a("981631");
 
-function c() {
+function u() {
   let {
     search: e
   } = (0, n.useLocation)(), t = (0, n.useParams)(), a = r.useMemo(() => new URLSearchParams(e), [e]).get("source"), l = null != a ? parseInt(a, 10) : null;
   return {
     onClose: r.useCallback(() => {
       if (0 === l) {
-        (0, o.back)(), (0, i.pushLayer)(u.Layers.USER_SETTINGS);
+        (0, o.back)(), (0, i.pushLayer)(c.Layers.USER_SETTINGS);
         return
       }
       if ((0, o.currentRouteHasBackNavigation)()) {
         (0, o.back)();
         return
-      }(0, o.transitionTo)(u.Routes.APP)
+      }(0, o.transitionTo)(c.Routes.APP)
     }, [l]),
     source: l,
     ...t

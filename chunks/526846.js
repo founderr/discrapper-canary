@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("5200"),
   M = n("558317"),
   R = n("403404"),
-  L = n("701488"),
-  y = n("981631"),
+  y = n("701488"),
+  L = n("981631"),
   O = n("689938"),
   j = n("492880"),
   P = n("587952"),
@@ -62,7 +62,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
       guild_id: z
     } = n;
     l.useEffect(() => {
-      T.default.track(y.AnalyticEvents.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+      T.default.track(L.AnalyticEvents.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
         channel_id: Y,
         guild_id: z
       })
@@ -76,7 +76,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
       {
         analyticsLocations: q
       } = (0, p.default)([...Z, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
-      X = K === y.AppContext.POPOUT,
+      X = K === L.AppContext.POPOUT,
       Q = (0, c.useAnalyticsContext)(),
       J = function(e, t) {
         return (0, v.default)({
@@ -99,13 +99,13 @@ let U = "vc-activities-".concat((0, o.v4)()),
         }), w(), k()
       }, [Q, Z, n, k, w, X]),
       ee = l.useCallback(e => {
-        F(), T.default.track(y.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
+        F(), T.default.track(L.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
           guild_id: n.getGuildId()
         })
       }, [F, n]),
       et = H ? (0, a.jsxs)(r.Link, {
-        to: y.Routes.ACTIVITIES,
+        to: L.Routes.ACTIVITIES,
         children: [(0, a.jsx)("img", {
           alt: O.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
           src: "light" === V ? P : D,
@@ -118,7 +118,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
           [j.clickableBannerReducedMotion]: W
         }),
         onClick: () => {
-          k(), o(), (0, E.transitionTo)(y.Routes.ACTIVITY_DETAILS(L.DEATH_BY_AI_APPLICATION_ID), void 0, void 0, q)
+          k(), o(), (0, E.transitionTo)(L.Routes.ACTIVITY_DETAILS(y.DEATH_BY_AI_APPLICATION_ID), void 0, void 0, q)
         },
         children: [(0, a.jsx)("img", {
           alt: O.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_DEATH_BY_AI_POSTER,

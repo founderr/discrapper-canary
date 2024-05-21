@@ -139,17 +139,17 @@ t.default = l.memo(function(e) {
       value: 0,
       multiplier: 1
     }, [v]),
-    L = l.useRef(R);
+    y = l.useRef(R);
   l.useEffect(() => {
-    (R.multiplier > 1 || R.value > 0) && (L.current = R)
+    (R.multiplier > 1 || R.value > 0) && (y.current = R)
   }, [R]);
   let {
-    multiplier: y,
+    multiplier: L,
     value: O
   } = l.useMemo(() => ({
-    value: x ? R.value : L.current.value,
-    multiplier: x ? R.multiplier : L.current.multiplier
-  }), [x, R, L]);
+    value: x ? R.value : y.current.value,
+    multiplier: x ? R.multiplier : y.current.multiplier
+  }), [x, R, y]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(A, {
       channelId: t,
@@ -160,7 +160,7 @@ t.default = l.memo(function(e) {
       style: M,
       children: (0, a.jsx)(N, {
         value: O,
-        multiplier: y
+        multiplier: L
       })
     })]
   })

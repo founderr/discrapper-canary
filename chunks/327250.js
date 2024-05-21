@@ -31,8 +31,8 @@ var l = n("120356"),
   x = n("877410"),
   M = n("572004"),
   R = n("5192"),
-  L = n("51144"),
-  y = n("991570"),
+  y = n("51144"),
+  L = n("991570"),
   O = n("981631"),
   j = n("689938"),
   P = n("710634");
@@ -73,7 +73,7 @@ function D(e) {
         children: (0, a.jsx)(r.Text, {
           variant: "text-md/medium",
           color: "text-normal",
-          children: L.default.getUserTag(t)
+          children: y.default.getUserTag(t)
         })
       })]
     }), (0, a.jsx)("div", {
@@ -128,12 +128,12 @@ function U(e) {
     canBanUser: null != p && C.default.canManageUser(O.Permissions.BAN_MEMBERS, l, p),
     canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, l.id, [_.default, E.default, C.default])
   }), [l, p]), R = (0, d.isMemberCommunicationDisabled)(s), {
-    analyticsLocations: L,
-    newestAnalyticsLocation: y
+    analyticsLocations: y,
+    newestAnalyticsLocation: L
   } = (0, u.default)(), D = (0, h.useTrackModerationAction)(m, {
     targetUserId: l.id,
-    location: y,
-    locations: L
+    location: L,
+    locations: y
   });
   return (0, a.jsxs)("div", {
     className: P.bottomRow,
@@ -166,7 +166,7 @@ function U(e) {
           } = await Promise.all([n.e("99387"), n.e("5454")]).then(n.bind(n, "854360"));
           return t => (0, a.jsx)(e, {
             ...t,
-            location: y,
+            location: L,
             guildId: m,
             user: l
           })
@@ -194,7 +194,7 @@ function U(e) {
           } = await Promise.all([n.e("99387"), n.e("43350")]).then(n.bind(n, "98746"));
           return t => (0, a.jsx)(e, {
             ...t,
-            location: y,
+            location: L,
             guildId: m,
             user: l
           })
@@ -216,7 +216,7 @@ function U(e) {
         backgroundColor: t
       },
       onClick: () => {
-        R ? (0, c.openEnableCommunication)(s.guildId, s.userId, L) : (0, c.openDisableCommunication)(s.guildId, s.userId, L)
+        R ? (0, c.openEnableCommunication)(s.guildId, s.userId, y) : (0, c.openDisableCommunication)(s.guildId, s.userId, y)
       },
       children: [(0, a.jsx)(A.default, {
         width: 22,
@@ -254,7 +254,7 @@ function F(e) {
     userId: t,
     guildId: n,
     onClose: l
-  } = e, s = (0, i.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), o = (0, i.useStateFromStores)([p.default], () => p.default.getMember(n, t), [n, t]), u = (0, y.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
+  } = e, s = (0, i.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), o = (0, i.useStateFromStores)([p.default], () => p.default.getMember(n, t), [n, t]), u = (0, L.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
   return null == s || null == o ? null : (0, a.jsxs)("div", {
     className: P.container,
     children: [(0, a.jsx)(D, {

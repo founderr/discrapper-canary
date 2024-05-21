@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return _
   },
   getFullMarathonDescription: function() {
-    return y
+    return L
   },
   getFullResurrectedBadgeText: function() {
     return N
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return R
   },
   getMarathonName: function() {
-    return L
+    return y
   },
   getResurrectedEntryLastPlayTime: function() {
     return A
@@ -215,15 +215,15 @@ function R(e) {
   })
 }
 
-function L(e) {
+function y(e) {
   var t;
   let n = null !== (t = _(e)) && void 0 !== t ? t : 0;
   return n > 10 * o.default.Seconds.HOUR ? d.default.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : n > 5 * o.default.Seconds.HOUR ? d.default.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : d.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
 }
 
-function y(e) {
+function L(e) {
   let t = R(e),
-    n = L(e);
+    n = y(e);
   return null == t ? n : "".concat(n, " — ").concat(t)
 }
 
