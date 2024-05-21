@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("317381"),
   M = n("619915"),
   R = n("952561"),
-  y = n("563218"),
-  L = n("719296"),
+  L = n("563218"),
+  y = n("719296"),
   O = n("651612"),
   j = n("918559"),
   P = n("981631"),
@@ -138,9 +138,9 @@ function w(e) {
           paddingBottom: el
         },
         ref: $,
-        children: (0, a.jsx)(y.default, {
+        children: (0, a.jsx)(L.default, {
           className: b.iframe,
-          embedId: (0, L.default)(k, H.id)
+          embedId: (0, y.default)(k, H.id)
         })
       }), null != er ? (0, a.jsxs)("div", {
         className: b.footer,

@@ -26,8 +26,8 @@ var n = a("735250"),
   m = a("263704"),
   h = a("214623"),
   E = a("502568"),
-  T = a("981631"),
-  p = a("689938"),
+  p = a("981631"),
+  T = a("689938"),
   C = a("894545");
 let _ = () => Promise.resolve();
 
@@ -40,7 +40,7 @@ function x(e) {
     disabled: d = !1,
     style: f = {},
     onClick: E,
-    "aria-label": p
+    "aria-label": T
   } = e, _ = (0, l.useListItem)("color-".concat(t)), x = null != t ? (0, o.int2hex)(t) : f.backgroundColor, g = !1;
   return r && !s ? g = !0 : (r || s) && (g = (0, o.getDarkness)(t) > .1), (0, n.jsx)(c.FocusRing, {
     offset: -2,
@@ -58,21 +58,21 @@ function x(e) {
         ...f,
         backgroundColor: x
       },
-      "aria-label": null != p ? p : x,
+      "aria-label": null != T ? T : x,
       ..._,
       children: [r ? (0, n.jsx)(h.default, {
         className: C.colorPickerDropper,
         foreground: C.colorPickerDropperFg,
         width: 14,
         height: 14,
-        color: (0, u.getColor)(g ? T.Color.WHITE_500 : T.Color.BLACK_500)
+        color: (0, u.getColor)(g ? p.Color.WHITE_500 : p.Color.BLACK_500)
       }) : null, function() {
         let e = 16,
           t = 16;
         if ((r || a) && (e = 32, t = 24), s) return (0, n.jsx)(m.default, {
           width: e,
           height: t,
-          color: (0, u.getColor)(g ? T.Color.WHITE_500 : T.Color.BLACK_500)
+          color: (0, u.getColor)(g ? p.Color.WHITE_500 : p.Color.BLACK_500)
         })
       }()]
     })
@@ -120,7 +120,7 @@ let I = r.memo(function(e) {
     onClose: l,
     suggestedColors: u,
     middle: m,
-    footer: T,
+    footer: p,
     showEyeDropper: _,
     wrapperComponentType: x,
     className: g
@@ -198,7 +198,7 @@ let I = r.memo(function(e) {
         className: C.customColorPickerInputContainer,
         children: [_ && null != N && (0, n.jsx)(E.Icon, {
           onClick: M,
-          tooltip: p.default.Messages.PICK_A_COLOR_FROM_THE_PAGE,
+          tooltip: T.default.Messages.PICK_A_COLOR_FROM_THE_PAGE,
           tooltipPosition: "top",
           className: C.customColorPickerEyeDropper,
           icon: h.default
@@ -218,10 +218,10 @@ let I = r.memo(function(e) {
           className: C.suggestedColor,
           onClick: () => y(e)
         }, "".concat(e, "-").concat(t)))
-      }), T]
+      }), p]
     }), D = null != x ? x : c.Dialog;
   return (0, n.jsx)(D, {
-    "aria-label": p.default.Messages.PICK_A_COLOR,
+    "aria-label": T.default.Messages.PICK_A_COLOR,
     className: i()(C.customColorPicker, g),
     children: O
   })
@@ -247,14 +247,14 @@ function v(e) {
       onClick: d,
       disabled: c
     }, e))
-  }), E = s.slice(0, s.length / 2), T = s.slice(s.length / 2, s.length), p = (0, l.default)({
+  }), E = s.slice(0, s.length / 2), p = s.slice(s.length / 2, s.length), T = (0, l.default)({
     id: "color-picker",
     isEnabled: !0,
     scrollToStart: _,
     scrollToEnd: _
   });
   return (0, n.jsx)(l.ListNavigatorProvider, {
-    navigator: p,
+    navigator: T,
     children: (0, n.jsx)(l.ListNavigatorContainer, {
       children: e => {
         let {
@@ -282,7 +282,7 @@ function v(e) {
             })
           }), (0, n.jsxs)("div", {
             className: C.__invalid_presets,
-            children: [h(E), h(T)]
+            children: [h(E), h(p)]
           })]
         })
       }

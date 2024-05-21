@@ -16,29 +16,29 @@ function h(e, t) {
   return o().isEqual(e.map(e => [e.categoryId, e.name]), t.map(e => [e.categoryId, e.name]))
 }
 let E = null,
-  T = [],
   p = [],
+  T = [],
   C = {};
 class _ extends(n = c.default.Store) {
   getPrimaryCategories() {
-    return T
+    return p
   }
   getDiscoveryCategories() {
-    let e = f.DISCOVERY_SIDEBAR_CATEGORIES.map(e => p.find(t => t.categoryId === e)).filter(u.isNotNullish);
+    let e = f.DISCOVERY_SIDEBAR_CATEGORIES.map(e => T.find(t => t.categoryId === e)).filter(u.isNotNullish);
     return [{
       categoryId: f.DISCOVERY_ALL_CATEGORIES_ID,
       name: m.default.Messages.HOME
     }, ...e]
   }
   getClanDiscoveryCategories() {
-    let e = f.DISCOVERY_SIDEBAR_CATEGORIES.map(e => p.find(t => t.categoryId === e)).filter(u.isNotNullish);
+    let e = f.DISCOVERY_SIDEBAR_CATEGORIES.map(e => T.find(t => t.categoryId === e)).filter(u.isNotNullish);
     return [{
       categoryId: f.DISCOVERY_ALL_CATEGORIES_ID,
       name: m.default.Messages.COMMUNITIES
     }, ...e]
   }
   getAllCategories() {
-    return p
+    return T
   }
   getFetchedLocale() {
     return E
@@ -91,6 +91,6 @@ i = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = _) ? Object.define
         name: a
       }), C[e] = a
     }
-    E = n, T = r, p = s
+    E = n, p = r, T = s
   }
 })

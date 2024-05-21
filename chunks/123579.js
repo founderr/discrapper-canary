@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("594174"),
   M = n("979651"),
   R = n("5192"),
-  y = n("51144"),
-  L = n("342656"),
+  L = n("51144"),
+  y = n("342656"),
   O = n("785717"),
   j = n("221292"),
   P = n("484459"),
@@ -126,8 +126,8 @@ t.default = e => {
         }) : null
       }
     }),
-    ey = null != eA || null != eR || ev,
-    eL = null !== (t = R.default.getNickname(null, n.id, eh)) && void 0 !== t ? t : y.default.getName(eh),
+    eL = null != eA || null != eR || ev,
+    ey = null !== (t = R.default.getNickname(null, n.id, eh)) && void 0 !== t ? t : L.default.getName(eh),
     eO = (0, u.useStateFromStores)([v.default], () => v.default.hidePersonalInformation),
     {
       mutualFriends: ej,
@@ -206,7 +206,7 @@ t.default = e => {
     eK = eh.bot || ez,
     {
       enabled: eZ
-    } = (0, L.useProfileMutualsExperiment)({
+    } = (0, y.useProfileMutualsExperiment)({
       autoTrackExposure: !0,
       location: f.default.PROFILE,
       disable: eK
@@ -246,7 +246,7 @@ t.default = e => {
             }), (0, a.jsxs)(k.default.Overlay, {
               children: [(0, a.jsx)($.default, {
                 user: eh,
-                nickname: eL,
+                nickname: ey,
                 pronouns: null == ep ? void 0 : ep.pronouns
               }), (0, a.jsx)(X.default, {
                 customStatusActivity: eN,
@@ -268,7 +268,7 @@ t.default = e => {
                 user: eh,
                 setNote: !1
               })]
-            }), ey ? (0, a.jsx)(k.default.Overlay, {
+            }), eL ? (0, a.jsx)(k.default.Overlay, {
               children: (0, a.jsx)(Z.default, {
                 activity: null != eA || ev ? eA : eR,
                 user: eh,

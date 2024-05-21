@@ -17,8 +17,8 @@ var n = a("735250"),
   m = a("571728"),
   h = a("755340"),
   E = a("794358"),
-  T = a("931468"),
-  p = a("449226"),
+  p = a("931468"),
+  T = a("449226"),
   C = a("689938"),
   _ = a("212723"),
   x = a("5288");
@@ -84,7 +84,7 @@ function g(e) {
           color: "interactive-normal",
           variant: "text-xs/medium",
           className: _.valuePill,
-          children: [(0, n.jsx)(T.default, {
+          children: [(0, n.jsx)(p.default, {
             width: 16,
             height: 16
           }), C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
@@ -109,7 +109,7 @@ function g(e) {
               ...e
             })
           })
-        }), (0, n.jsx)(p.default, {
+        }), (0, n.jsx)(T.default, {
           checked: u,
           onChange: () => g(!u)
         })]
@@ -132,8 +132,8 @@ function v(e) {
   let {
     guild: o,
     isClanContext: E = !1,
-    onFieldsSave: T,
-    onDescriptionSave: p,
+    onFieldsSave: p,
+    onDescriptionSave: T,
     verificationForm: C
   } = e, [v, A] = r.useState(E), S = r.useRef(!1), L = r.useCallback(() => {
     S.current = !0
@@ -167,8 +167,8 @@ function v(e) {
         onFormFieldUpdate: L,
         hideVerificationLevelField: !0,
         isClanContext: E,
-        onFieldsSave: null != T ? T : N,
-        onDescriptionSave: null != p ? p : I,
+        onFieldsSave: null != p ? p : N,
+        onDescriptionSave: null != T ? T : I,
         formDescription: null !== (s = null == y ? void 0 : y.description) && void 0 !== s ? s : ""
       })
     })

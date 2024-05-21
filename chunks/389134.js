@@ -9,7 +9,7 @@ var n, r, s, i, l = a("392711"),
   m = a("944163"),
   h = a("116175"),
   E = a("308083");
-let T = () => ({
+let p = () => ({
     gameApplicationIds: new Set,
     playstyle: E.ClanPlaystyles.NONE,
     interests: new Set,
@@ -26,15 +26,15 @@ let T = () => ({
     brandPrimaryColor: E.CLAN_BRAND_PALETTE_PRESETS["0"].primary,
     brandSecondaryColor: E.CLAN_BRAND_PALETTE_PRESETS["0"].secondary
   }),
-  p = T(),
-  C = d()(p),
+  T = p(),
+  C = d()(T),
   _ = !1,
   x = !1,
   g = {};
 class N extends(n = u.default.Store) {
   getState() {
     return {
-      initialSettings: p,
+      initialSettings: T,
       settings: C,
       dirty: _,
       errors: g,
@@ -49,16 +49,16 @@ i = "ClanSettingsStore", (s = "displayName") in(r = N) ? Object.defineProperty(r
   writable: !0
 }) : r[s] = i, t.default = new N(f.default, {
   CLAN_SETTINGS_FETCH_START: function() {
-    x = !1, p = T(), C = d()(p), _ = !1, g = {}
+    x = !1, T = p(), C = d()(T), _ = !1, g = {}
   },
   CLAN_SETTINGS_FETCH_SUCCESS: function(e) {
     let {
       settings: t
     } = e;
-    p = {
-      ...T(),
+    T = {
+      ...p(),
       ...t
-    }, C = d()(p), _ = !1
+    }, C = d()(T), _ = !1
   },
   CLAN_SETTINGS_UPDATE: function(e) {
     let {
@@ -70,13 +70,13 @@ i = "ClanSettingsStore", (s = "displayName") in(r = N) ? Object.defineProperty(r
       }, t) delete g[e], g = {
       ...g
     };
-    _ = !o().isEqual(o().omit(C, "verificationForm"), o().omit(p, "verificationForm"))
+    _ = !o().isEqual(o().omit(C, "verificationForm"), o().omit(T, "verificationForm"))
   },
   CLAN_SETTINGS_SUBMIT: function() {
     x = !0, g = {}
   },
   CLAN_SETTINGS_SUBMIT_SUCCESS: function() {
-    x = !1, p = d()(C), _ = !1, g = {}
+    x = !1, T = d()(C), _ = !1, g = {}
   },
   CLAN_SETTINGS_SUBMIT_ERROR: function(e) {
     let {
@@ -105,7 +105,7 @@ i = "ClanSettingsStore", (s = "displayName") in(r = N) ? Object.defineProperty(r
         }
       }, a) {
       var n;
-      _ = !o().isEqual(C.verificationForm.formFields, null === (n = p.verificationForm) || void 0 === n ? void 0 : n.formFields)
+      _ = !o().isEqual(C.verificationForm.formFields, null === (n = T.verificationForm) || void 0 === n ? void 0 : n.formFields)
     } else _ = !1
   }
 })

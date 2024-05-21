@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("310892"),
   M = n("12168"),
   R = n("353368"),
-  y = n("981631"),
-  L = n("354459"),
+  L = n("981631"),
+  y = n("354459"),
   O = n("185923"),
   j = n("474936"),
   P = n("526761"),
@@ -39,7 +39,7 @@ var a = n("735250"),
   b = n("873137");
 let U = O.EmojiIntention.CHAT,
   F = {
-    section: y.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
+    section: L.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
     openPopoutType: "voice_channel_effect_emoji_picker"
   },
   w = [p.default.getByName("thumbsup"), p.default.getByName("eyes"), p.default.getByName("laughing"), p.default.getByName("watermelon"), p.default.getByName("fork_and_knife"), p.default.getByName("yum")].filter(S.isNotNullish);
@@ -54,7 +54,7 @@ function k(e) {
     emoji: e,
     channel: n,
     intention: U
-  })).slice(0, L.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT), Y = (null !== (t = A.default.recentlyUsedEmojis) && void 0 !== t ? t : []).filter(e => !W.slice(0, L.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT - 1).some(t => t.name === e.name));
+  })).slice(0, y.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT), Y = (null !== (t = A.default.recentlyUsedEmojis) && void 0 !== t ? t : []).filter(e => !W.slice(0, y.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT - 1).some(t => t.name === e.name));
   Y.length > 0 && W.splice(W.length - 1, 1, Y[0]);
   let z = (0, N.sampleAnimationId)(H),
     K = e => {
@@ -74,13 +74,13 @@ function k(e) {
       (0, x.openEffectsUpsellModal)({
         analytics: {
           type: j.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED,
-          object: y.AnalyticsObjects.BUTTON_CTA,
-          section: y.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
+          object: L.AnalyticsObjects.BUTTON_CTA,
+          section: L.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
         }
       })
     },
     q = e => {
-      G.current = e, e && f.default.trackWithMetadata(y.AnalyticEvents.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
+      G.current = e, e && f.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
         channel_id: X,
         guild_id: Q
       })
@@ -90,7 +90,7 @@ function k(e) {
       guild_id: Q
     } = n;
   l.useEffect(() => {
-    f.default.trackWithMetadata(y.AnalyticEvents.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
+    f.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
       channel_id: X,
       guild_id: Q
     })
@@ -115,7 +115,7 @@ function k(e) {
             header: D.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
             content: D.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
             onClick: () => {
-              d.default.open(y.UserSettingsSections.ACCESSIBILITY, null, {
+              d.default.open(L.UserSettingsSections.ACCESSIBILITY, null, {
                 scrollPosition: P.AccessibilityScrollPositions.REDUCED_MOTION
               }), p()
             },
@@ -139,7 +139,7 @@ function k(e) {
               labelText: D.default.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
               value: $,
               onChange: () => {
-                if (B) return f.default.trackWithMetadata(y.AnalyticEvents.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
+                if (B) return f.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
                   channel_id: X,
                   guild_id: Q,
                   enabled: !$
@@ -150,8 +150,8 @@ function k(e) {
               onShowUpsell: () => (0, x.openEffectsUpsellModal)({
                 analytics: {
                   type: G.current ? j.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : j.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
-                  object: y.AnalyticsObjects.VOICE_CHANNEL_EFFECTS_TOGGLE,
-                  section: G.current ? y.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : y.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
+                  object: L.AnalyticsObjects.VOICE_CHANNEL_EFFECTS_TOGGLE,
+                  section: G.current ? L.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : L.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
                 }
               })
             })

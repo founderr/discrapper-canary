@@ -70,8 +70,8 @@ var a, l, s = n("735250"),
   x = n("481060"),
   M = n("70956"),
   R = n("709054"),
-  y = n("719247"),
-  L = n("22211"),
+  L = n("719247"),
+  y = n("22211"),
   O = n("561308"),
   j = n("371991"),
   P = n("689938"),
@@ -119,7 +119,7 @@ function w(e) {
     entry: t
   } = e, {
     channel: n
-  } = (0, L.default)(t), {
+  } = (0, y.default)(t), {
     location: a
   } = U();
   return null == n || 1 === a ? null : (0, s.jsx)(F, {
@@ -157,7 +157,7 @@ function B(e) {
     defaultTextColor: a,
     defaultIconColor: l,
     location: i
-  } = U(), r = 0 === i, o = (0, m.useStateFromStores)([y.default], () => y.default.getMatchingActivity(n));
+  } = U(), r = 0 === i, o = (0, m.useStateFromStores)([L.default], () => L.default.getMatchingActivity(n));
   if ((null == o ? void 0 : o.timestamps) == null) return null;
   let u = r ? x.tokens.colors.STATUS_POSITIVE : l,
     d = null === (t = o.timestamps) || void 0 === t ? void 0 : t.start;

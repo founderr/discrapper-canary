@@ -17,8 +17,8 @@ t.default = e => {
     title: t,
     description: a,
     handleUpdate: E,
-    gameApplicationIds: T,
-    error: p,
+    gameApplicationIds: p,
+    error: T,
     requiredGameId: C,
     inSettings: _
   } = e, x = (0, s.useStateFromStores)([o.default], () => o.default.getId()), {
@@ -28,16 +28,16 @@ t.default = e => {
     matchSorterOptions: I
   } = (0, d.useClanSetupGameSelectableSearch)();
   r.useEffect(() => {
-    !_ && null != C && !T.has(C) && N.length > 0 && A(C)
+    !_ && null != C && !p.has(C) && N.length > 0 && A(C)
   }, [N.length, C, _]);
   let v = e => {
-      if (!T.has(e) || e === C) return;
-      let t = new Set(T);
+      if (!p.has(e) || e === C) return;
+      let t = new Set(p);
       t.delete(e), E(t)
     },
     A = e => {
-      if (T.size === f.MAX_NUM_SELECTED_GAMES || T.has(e) || null == c.default.getGameById(e)) return;
-      let t = new Set(T);
+      if (p.size === f.MAX_NUM_SELECTED_GAMES || p.has(e) || null == c.default.getGameById(e)) return;
+      let t = new Set(p);
       t.add(e), E(t)
     };
   return (0, n.jsxs)("div", {
@@ -59,18 +59,18 @@ t.default = e => {
         value: "",
         placeholder: m.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
         onChange: A,
-        isDisabled: T.size === f.MAX_NUM_SELECTED_GAMES,
+        isDisabled: p.size === f.MAX_NUM_SELECTED_GAMES,
         matchSorterOptions: I,
         clearQueryOnSelect: !0
       })
     }), (0, n.jsxs)("div", {
       className: h.contentWithMinHeight,
-      children: [null != p && (0, n.jsx)(i.Text, {
+      children: [null != T && (0, n.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "status-danger",
         className: h.errorText,
-        children: p
-      }), T.size > 0 && (0, n.jsxs)(n.Fragment, {
+        children: T
+      }), p.size > 0 && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
@@ -78,7 +78,7 @@ t.default = e => {
           children: m.default.Messages.CLAN_SETUP_SELECTED_GAMES
         }), (0, n.jsx)("div", {
           className: h.selectedSection,
-          children: Array.from(T).map(e => (0, n.jsx)(u.default, {
+          children: Array.from(p).map(e => (0, n.jsx)(u.default, {
             applicationId: e,
             onClick: e !== C ? v : void 0,
             imageContainerClassName: e !== C ? h.clickableGame : h.defaultGame,

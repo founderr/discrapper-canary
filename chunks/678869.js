@@ -31,13 +31,13 @@ var a = n("735250"),
   M = n("417094"),
   R = n("936183");
 
-function y(e, t) {
+function L(e, t) {
   return x.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
     username: t.username,
     activity: e
   })
 }
-let L = (e, t, n) => {
+let y = (e, t, n) => {
   let {
     artist: a,
     media: l
@@ -130,7 +130,7 @@ function j(e) {
         channel: M,
         mediaImageSrc: w,
         artist: F,
-        description: L({
+        description: y({
           artist: F,
           media: k
         }, M, B),
@@ -182,7 +182,7 @@ function j(e) {
         user: B,
         channel: M,
         generateReactionImage: z,
-        reactionImageAltText: y(F, B),
+        reactionImageAltText: L(F, B),
         entry: j,
         requestId: P,
         voiceChannel: W,
@@ -192,7 +192,7 @@ function j(e) {
         user: B,
         channel: M,
         generateReactionImage: z,
-        reactionImageAltText: y(F, B),
+        reactionImageAltText: L(F, B),
         entry: j,
         requestId: P
       })

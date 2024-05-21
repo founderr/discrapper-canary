@@ -24,8 +24,8 @@ function h(e) {
     progress: r,
     traitsToHighlight: h = [],
     maskDescription: E,
-    maskTraits: T
-  } = e, p = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(a)), {
+    maskTraits: p
+  } = e, T = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(a)), {
     interests: C,
     description: _,
     playstyle: x,
@@ -41,7 +41,7 @@ function h(e) {
         variant: "heading-md/medium",
         color: "header-primary",
         lineClamp: 1,
-        children: null == p ? void 0 : p.name
+        children: null == T ? void 0 : T.name
       }), (0, n.jsxs)("div", {
         className: m.clanInfoRow,
         children: [(0, n.jsx)(o.Text, {
@@ -57,7 +57,7 @@ function h(e) {
           color: "text-secondary",
           className: m.clanInfoItem,
           children: null !== (t = (0, u.getPlaystyleTitle)(x)) && void 0 !== t ? t : f.default.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
-        }), null != p && (0, n.jsx)(c.Wildcards, {
+        }), null != T && (0, n.jsx)(c.Wildcards, {
           wildcardDescriptors: g,
           primaryColor: null != N ? N : I.hex()
         })]
@@ -68,9 +68,9 @@ function h(e) {
         children: (null == _ ? void 0 : _.length) > 0 ? _ : f.default.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
       })]
     }), (0, n.jsxs)("div", {
-      className: s()(m.tagsContainer, T ? m.traitsBorderMask : void 0),
+      className: s()(m.tagsContainer, p ? m.traitsBorderMask : void 0),
       children: [(0, n.jsx)("div", {
-        className: T ? m.traitsMask : void 0
+        className: p ? m.traitsMask : void 0
       }), (0, n.jsxs)("div", {
         className: m.tagsCount,
         children: [(0, n.jsx)(i.TagsIcon, {

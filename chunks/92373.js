@@ -18,8 +18,8 @@ t.default = function(e) {
     applicationId: t,
     imageContainerClassName: a,
     onClick: s,
-    selected: T,
-    locked: p = !1,
+    selected: p,
+    locked: T = !1,
     remainingGame: C = 0
   } = e, _ = (0, c.useToken)(c.tokens.colors.WHITE), {
     isFetching: x,
@@ -48,12 +48,12 @@ t.default = function(e) {
     children: [(0, n.jsxs)(c.Clickable, {
       onClick: I,
       className: i()(a, x ? E.gameImageLoading : void 0, E.gameImageBackground),
-      children: [T && (0, n.jsx)("div", {
+      children: [p && (0, n.jsx)("div", {
         className: E.checkBackground,
         children: (0, n.jsx)(m.default, {
           backgroundColor: _.hex(),
           className: i()(E.selectedGameCheck, {
-            [E.selectedGameCheckLocked]: p
+            [E.selectedGameCheckLocked]: T
           })
         })
       }), v, C > 0 && (0, n.jsx)("div", {
@@ -70,7 +70,7 @@ t.default = function(e) {
       className: E.gameName,
       variant: "text-xs/normal",
       color: "header-primary",
-      children: [N, p && (0, n.jsx)(o.LockIcon, {
+      children: [N, T && (0, n.jsx)(o.LockIcon, {
         width: 12,
         height: 12
       })]

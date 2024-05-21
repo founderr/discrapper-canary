@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("125015"),
   M = n("119828"),
   R = n("502568"),
-  y = n("810090"),
-  L = n("585483"),
+  L = n("810090"),
+  y = n("585483"),
   O = n("63063"),
   j = n("981631"),
   P = n("921944"),
@@ -49,10 +49,10 @@ function F(e, t, n) {
 }
 class w extends l.PureComponent {
   componentDidMount() {
-    L.ComponentDispatch.subscribe(j.ComponentActions.CALL_START, this.handleVoiceClick)
+    y.ComponentDispatch.subscribe(j.ComponentActions.CALL_START, this.handleVoiceClick)
   }
   componentWillUnmount() {
-    L.ComponentDispatch.unsubscribe(j.ComponentActions.CALL_START, this.handleVoiceClick)
+    y.ComponentDispatch.unsubscribe(j.ComponentActions.CALL_START, this.handleVoiceClick)
   }
   renderVideoCallButton() {
     let e, t;
@@ -119,7 +119,7 @@ class w extends l.PureComponent {
             } = e;
             return (0, a.jsx)(C.default, {
               header: (0, a.jsxs)("div", {
-                children: [(0, a.jsx)(y.default, {
+                children: [(0, a.jsx)(L.default, {
                   className: U.tooltipImage,
                   autoPlay: !f,
                   src: "https://cdn.discordapp.com/attachments/860252504826445825/1078051428028924006/mobile_coachmark.mp4",
@@ -210,9 +210,9 @@ function k(e) {
   } = (0, s.useStateFromStoresObject)([A.default], () => ({
     notFriend: t.type === j.ChannelTypes.DM && null != C && !A.default.isFriend(C),
     isBlocked: t.type === j.ChannelTypes.DM && null != C && A.default.isBlocked(C)
-  })), I = (0, s.useStateFromStores)([N.default], () => N.default.getUser(C)), x = (0, d.useAppContext)(), M = [], R = (0, f.default)(t.id), y = (0, s.useStateFromStores)([T.default], () => T.default.hasLayers());
-  R && !y && M.push(i.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP);
-  let [L, O] = l.useState(!1);
+  })), I = (0, s.useStateFromStores)([N.default], () => N.default.getUser(C)), x = (0, d.useAppContext)(), M = [], R = (0, f.default)(t.id), L = (0, s.useStateFromStores)([T.default], () => T.default.hasLayers());
+  R && !L && M.push(i.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP);
+  let [y, O] = l.useState(!1);
   return (l.useEffect(() => {
     let e = setTimeout(() => {
       O(!0)
@@ -227,7 +227,7 @@ function k(e) {
     notFriend: g,
     isBlocked: S,
     appContext: x,
-    canShowTooltip: L,
+    canShowTooltip: y,
     canShowActivityGdmTooltip: R,
     dismissibleContentTypes: M,
     useReducedMotion: u

@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return C
   },
   PremiumTrialOfferTabBadge: function() {
-    return p
+    return T
   }
 });
 var n = a("735250"),
@@ -21,7 +21,7 @@ var n = a("735250"),
   h = a("689938"),
   E = a("18330");
 
-function T(e) {
+function p(e) {
   let {
     isTabSelected: t,
     expiresAt: a,
@@ -45,7 +45,7 @@ function T(e) {
   })
 }
 
-function p(e) {
+function T(e) {
   var t;
   let {
     isTabSelected: a,
@@ -85,7 +85,7 @@ function _(e) {
     offerExpiresAt: r,
     className: s
   } = e;
-  return null != r ? (0, n.jsx)(T, {
+  return null != r ? (0, n.jsx)(p, {
     expiresAt: r,
     isTabSelected: t,
     trialDuration: a

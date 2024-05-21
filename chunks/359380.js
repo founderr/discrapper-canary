@@ -13,7 +13,7 @@ var n = a("735250"),
   m = a("308083"),
   h = a("689938"),
   E = a("661926");
-let T = e => {
+let p = e => {
   let {
     title: t,
     icon: a,
@@ -61,7 +61,7 @@ t.default = e => {
     title: a,
     description: s,
     handleUpdate: i,
-    progress: p,
+    progress: T,
     interests: C,
     requiredGameId: _,
     optional: x = !1,
@@ -74,8 +74,8 @@ t.default = e => {
     })), e
   }, []), I = r.useMemo(() => {
     var e;
-    return null !== (e = null != C ? C : null == p ? void 0 : p.interests) && void 0 !== e ? e : new Set
-  }, [C, null == p ? void 0 : p.interests]), v = r.useMemo(() => Array.from(I), [I]), A = r.useMemo(() => v.filter(e => m.LANGUAGES_SET.has(e)), [v]), S = r.useCallback(e => {
+    return null !== (e = null != C ? C : null == T ? void 0 : T.interests) && void 0 !== e ? e : new Set
+  }, [C, null == T ? void 0 : T.interests]), v = r.useMemo(() => Array.from(I), [I]), A = r.useMemo(() => v.filter(e => m.LANGUAGES_SET.has(e)), [v]), S = r.useCallback(e => {
     let t = v.filter(e => !m.LANGUAGES_SET.has(e));
     i(new Set([...t, ...e]))
   }, [i, v]), L = r.useMemo(() => v.filter(e => m.ALL_TRAITS_SET.has(e) || m.LANGUAGES_SET.has(e)), [v]);
@@ -99,25 +99,25 @@ t.default = e => {
       className: E.content,
       children: [(0, n.jsxs)("div", {
         className: E.mainPanelContainer,
-        children: [_ === m.VALORANT_ID && (0, n.jsx)(T, {
+        children: [_ === m.VALORANT_ID && (0, n.jsx)(p, {
           title: h.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
           icon: u.default,
           traits: m.VALORANT_TRAITS,
           interests: I,
           handleUpdate: i
-        }), _ === m.GENSHIN_ID && (0, n.jsx)(T, {
+        }), _ === m.GENSHIN_ID && (0, n.jsx)(p, {
           title: h.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_GENSHIN,
           icon: d.default,
           traits: m.GENSHIN_TRAITS,
           interests: I,
           handleUpdate: i
-        }), (0, n.jsx)(T, {
+        }), (0, n.jsx)(p, {
           title: h.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
           icon: o.default,
           traits: m.AGE_TRAITS,
           interests: I,
           handleUpdate: i
-        }), (0, n.jsx)(T, {
+        }), (0, n.jsx)(p, {
           title: h.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
           icon: c.default,
           traits: m.IDENTITY_TRAITS,
@@ -141,9 +141,9 @@ t.default = e => {
         })]
       }), (0, n.jsx)("div", {
         className: E.fixedWidthSidebar,
-        children: null != p && v.length > 0 && !g && (0, n.jsx)(f.default, {
+        children: null != T && v.length > 0 && !g && (0, n.jsx)(f.default, {
           guildId: t,
-          progress: p,
+          progress: T,
           traitsToHighlight: L,
           maskDescription: !0
         })

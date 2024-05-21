@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return L
   }
 });
 var a = n("735250"),
@@ -31,14 +31,14 @@ var a = n("735250"),
 let M = o.AvatarSizes.SIZE_80,
   R = o.AvatarSizes.SIZE_40;
 
-function y(e) {
+function L(e) {
   let {
     participant: t,
     channel: n,
     inCall: s,
     width: o,
-    paused: y,
-    selected: L,
+    paused: L,
+    selected: y,
     fit: O,
     onVideoResize: j,
     blocked: P,
@@ -59,7 +59,7 @@ function y(e) {
   }), J = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
   return (l.useEffect(() => {
     n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === w.id && u.default.selectParticipant(n.id, null)
-  }, [G]), s && !Y && !D && G && !L && null != U && C.default.supports(N.Features.VIDEO)) ? (0, a.jsx)(_.default, {
+  }, [G]), s && !Y && !D && G && !y && null != U && C.default.supports(N.Features.VIDEO)) ? (0, a.jsx)(_.default, {
     onResize: j,
     wrapperClassName: x.videoWrapper,
     className: x.content,
@@ -67,7 +67,7 @@ function y(e) {
     streamId: k,
     videoComponent: U,
     fit: O,
-    paused: y,
+    paused: L,
     videoSpinnerContext: w.id === F ? d.VideoSpinnerContext.SELF_VIDEO : d.VideoSpinnerContext.REMOTE_VIDEO,
     userId: w.id
   }, k) : (0, a.jsx)("div", {

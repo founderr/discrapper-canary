@@ -10,7 +10,7 @@ a.r(t), a.d(t, {
     return E
   },
   acceptNewTermsDemonetized: function() {
-    return T
+    return p
   },
   createCreatorMonetizationEnableRequest: function() {
     return o
@@ -94,19 +94,19 @@ function E(e) {
   })
 }
 
-function T(e) {
+function p(e) {
   return n.HTTP.post({
     url: i.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e)
   })
 }
-async function p(e) {
+async function T(e) {
   await n.HTTP.post({
     url: i.Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(e),
     body: {}
   })
 }
 async function C(e) {
-  return await p(e), await s.default.getApplicationsForGuild(e, {
+  return await T(e), await s.default.getApplicationsForGuild(e, {
     type: l.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS,
     includeTeam: !0
   })

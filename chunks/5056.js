@@ -14,7 +14,7 @@ var n = a("735250"),
   h = a("689938"),
   E = a("17359");
 
-function T(e) {
+function p(e) {
   let {
     onClick: t,
     text: a,
@@ -40,11 +40,11 @@ t.default = function(e) {
   let {
     addFormField: t,
     showManualApprovalWarning: s,
-    guild: p,
+    guild: T,
     showHeader: C
   } = e, _ = r.useCallback(e => {
-    (0, m.openEmptyFormFieldModal)(e, t, p)
-  }, [t, p]), x = r.useCallback(e => {
+    (0, m.openEmptyFormFieldModal)(e, t, T)
+  }, [t, T]), x = r.useCallback(e => {
     s ? (0, l.openModalLazy)(async () => {
       let {
         default: t
@@ -83,19 +83,19 @@ t.default = function(e) {
           className: E.leftRailIconContainerDescription,
           type: l.FormText.Types.DESCRIPTION,
           children: h.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS_DESCRIPTION
-        }), (0, n.jsx)(T, {
+        }), (0, n.jsx)(p, {
           formFieldType: f.VerificationFormFieldTypes.TEXT_INPUT,
           addFormField: t,
           icon: u.default,
           text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
           onClick: () => x(f.VerificationFormFieldTypes.TEXT_INPUT)
-        }), (0, n.jsx)(T, {
+        }), (0, n.jsx)(p, {
           formFieldType: f.VerificationFormFieldTypes.PARAGRAPH,
           addFormField: t,
           icon: c.default,
           text: h.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
           onClick: () => x(f.VerificationFormFieldTypes.PARAGRAPH)
-        }), (0, n.jsx)(T, {
+        }), (0, n.jsx)(p, {
           formFieldType: f.VerificationFormFieldTypes.MULTIPLE_CHOICE,
           addFormField: t,
           icon: o.default,

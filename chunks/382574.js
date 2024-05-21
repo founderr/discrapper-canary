@@ -19,7 +19,7 @@ t.default = function(e) {
     actionsLocation: h
   } = e, {
     label: E,
-    placeholder: T
+    placeholder: p
   } = t;
   return (0, n.jsx)(s.default, {
     field: t,
@@ -34,7 +34,7 @@ t.default = function(e) {
     actionsLocation: h,
     children: (0, n.jsx)(r.ParagraphFieldBody, {
       className: l.fieldBackground,
-      placeholder: null != T ? T : i.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
+      placeholder: null != p ? p : i.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0
     })
   })

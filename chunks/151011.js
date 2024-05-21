@@ -43,7 +43,7 @@ class E extends(n = s.PureComponent) {
       headerClassName: i,
       sortedHeaderCellClassName: m,
       stickyHeader: E
-    } = this.props, T = e.map(e => {
+    } = this.props, p = e.map(e => {
       let i = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
         h = a === u.TableSortDirections.ASCENDING ? d.default : c.default;
       return (0, r.jsx)(o.Clickable, {
@@ -63,7 +63,7 @@ class E extends(n = s.PureComponent) {
       className: l()(i, f.row, {
         [f.stickyHeader]: E
       }),
-      children: T
+      children: p
     })
   }
   renderBody() {

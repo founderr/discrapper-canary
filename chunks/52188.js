@@ -19,8 +19,8 @@ var i = a("120356"),
   m = a("137407"),
   h = a("500052"),
   E = a("375832"),
-  T = a("992171"),
-  p = a("937064"),
+  p = a("992171"),
+  T = a("937064"),
   C = a("434336"),
   _ = a("128955"),
   x = a("803353"),
@@ -73,7 +73,7 @@ let ea = new Map([
   ["MY", V],
   ["MX", k],
   ["KR", P],
-  ["BG", p],
+  ["BG", T],
   ["CZ", N],
   ["HU", M],
   ["RO", X],
@@ -93,7 +93,7 @@ let ea = new Map([
   ["FI", S],
   ["PT", q],
   ["NO", Y],
-  ["BE", T],
+  ["BE", p],
   ["AT", E],
   ["CH", C],
   ["FR", L],
@@ -112,9 +112,9 @@ function en(e) {
   } = e, r = (0, o.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), i = (0, d.useLocalizedPromoQuery)(), h = null == i ? void 0 : i.countryCode;
   if ((0, u.useTrackLocalizedPricingPromoImpression)(f.AnalyticsSections.SETTINGS_PREMIUM, h), null == h || !ea.has(h) || r) return null;
   let E = ea.get(h),
-    T = "badgeIcon" + n[t];
+    p = "badgeIcon" + n[t];
   return (0, s.jsx)("img", {
-    className: l()(a, m[T]),
+    className: l()(a, m[p]),
     "aria-hidden": !0,
     alt: "Wumpus holding a country-specific flag",
     src: E

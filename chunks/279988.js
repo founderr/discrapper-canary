@@ -19,8 +19,8 @@ t.default = function(e) {
     isDragEnabled: m,
     isDropHovered: h,
     onDrop: E,
-    onEdit: T,
-    onRemove: p,
+    onEdit: p,
+    onRemove: T,
     canRemove: C,
     title: _,
     actionsLocation: x
@@ -31,8 +31,8 @@ t.default = function(e) {
     isDragEnabled: m,
     isDropHovered: h,
     onDrop: E,
-    onEdit: T,
-    onRemove: p,
+    onEdit: p,
+    onRemove: T,
     title: _,
     canRemove: C,
     actionsLocation: x,
@@ -44,7 +44,7 @@ t.default = function(e) {
       channelId: t
     }), 0 !== I && (0, n.jsxs)(l.Clickable, {
       className: s()(f.fieldFooterContainer, f.clickable),
-      onClick: T,
+      onClick: p,
       children: [(0, n.jsx)(l.FormText, {
         className: f.clickable,
         children: u.default.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({

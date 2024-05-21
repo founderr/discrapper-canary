@@ -13,12 +13,12 @@ var n = a("735250"),
   m = a("446945"),
   h = a("700833"),
   E = a("592286"),
-  T = a("689938");
+  p = a("689938");
 t.default = function(e) {
   let {
     guild: t,
     submittedGuildJoinRequestsCount: a,
-    onFormFieldUpdate: p,
+    onFormFieldUpdate: T,
     hideVerificationLevelField: C,
     isClanContext: _,
     formDescription: x,
@@ -36,20 +36,20 @@ t.default = function(e) {
     F = b > 0,
     P = (0, i.useIsMemberVerificationManualApproval)(t.id) || _,
     w = r.useCallback(() => {
-      (0, s.showToast)((0, s.createToast)(T.default.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE))
+      (0, s.showToast)((0, s.createToast)(p.default.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE))
     }, []),
     B = r.useCallback(async e => {
       if (!I.current) {
         I.current = !0, _ && (e = e.filter(e => e.field_type !== l.VerificationFormFieldTypes.TERMS));
         try {
-          await g(t.id, e), p(), L(e), R.current = e
+          await g(t.id, e), T(), L(e), R.current = e
         } catch (e) {
           throw L(R.current), e
         } finally {
           null != v && A(null), I.current = !1
         }
       }
-    }, [v, t.id, p, g, _]),
+    }, [v, t.id, T, g, _]),
     G = r.useCallback(async e => {
       let t = e.field_type === l.VerificationFormFieldTypes.TERMS ? [e, ...S] : [...S, e];
       await B(t)

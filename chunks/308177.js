@@ -50,14 +50,14 @@ t.default = (0, o.default)(e => {
     selectedParticipantId: u.default.getSelectedParticipantId(a.id),
     largeStream: u.default.getStageStreamSize(a.id),
     chatOpen: u.default.getChatOpen(a.id)
-  }), [a.id]), R = (0, c.useActualStageSpeakerCount)(a.id), y = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), L = (0, r.useStateFromStores)([d.default], () => null != T ? d.default.getParticipant(a.id, T) : null), O = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), j = O.filter(v), P = null != O.find(e => e.type === f.StageChannelParticipantTypes.STREAM), D = N(l), b = A(l, M), U = {
+  }), [a.id]), R = (0, c.useActualStageSpeakerCount)(a.id), L = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), y = (0, r.useStateFromStores)([d.default], () => null != T ? d.default.getParticipant(a.id, T) : null), O = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), j = O.filter(v), P = null != O.find(e => e.type === f.StageChannelParticipantTypes.STREAM), D = N(l), b = A(l, M), U = {
     [f.StageChannelParticipantNamedIndex.SPEAKER]: b,
     [f.StageChannelParticipantNamedIndex.AUDIENCE]: D,
     [f.StageChannelParticipantNamedIndex.SELECTED]: 1
   }, F = (0, h.useThrottleDurationForChannel)(a.id), [w, k] = (0, h.useStageChannelParticipantsListThrottled)(a.id, U, F), B = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]], {
     speakerTileWidth: H,
     speakerTileHeight: G
-  } = I(l, b), V = x ? l - 32 : Math.min(l - 64, 3 * H + 8), W = e => e === w.length - 1 || 0 === y && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
+  } = I(l, b), V = x ? l - 32 : Math.min(l - 64, 3 * H + 8), W = e => e === w.length - 1 || 0 === L && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
   return (0, s.jsx)(p.default, {
     sections: B,
     renderSection: e => {
@@ -74,8 +74,8 @@ t.default = (0, o.default)(e => {
         channel: a,
         isStreamLive: P
       }, "speaker-header-".concat(t));
-      if (2 === t) return 0 === y ? null : (0, s.jsx)(C.default, {
-        participantCount: y,
+      if (2 === t) return 0 === L ? null : (0, s.jsx)(C.default, {
+        participantCount: L,
         label: S.default.Messages.AUDIENCE_LABEL,
         className: _.header,
         onClick: () => Z(!K),
@@ -109,7 +109,7 @@ t.default = (0, o.default)(e => {
               tileWidth: H,
               channel: a,
               participants: l,
-              selectedParticipant: L
+              selectedParticipant: y
             })
           }, "speakers-".concat(t, "-").concat(n));
         case 2:

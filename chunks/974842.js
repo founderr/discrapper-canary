@@ -13,8 +13,8 @@ var n = a("735250"),
   m = a("308083"),
   h = a("689938"),
   E = a("410453"),
-  T = a("661926");
-let p = [f.ClanBadgeKind.SWORD, f.ClanBadgeKind.WATER_DROP, f.ClanBadgeKind.SKULL, f.ClanBadgeKind.TOADSTOOL, f.ClanBadgeKind.MOON, f.ClanBadgeKind.LIGHTNING, f.ClanBadgeKind.LEAF, f.ClanBadgeKind.HEART, f.ClanBadgeKind.FIRE, f.ClanBadgeKind.COMPASS, f.ClanBadgeKind.CROSSHAIRS, f.ClanBadgeKind.FLOWER, f.ClanBadgeKind.FORCE, f.ClanBadgeKind.GEM, f.ClanBadgeKind.LAVA, f.ClanBadgeKind.PSYCHIC, f.ClanBadgeKind.SMOKE, f.ClanBadgeKind.SNOW, f.ClanBadgeKind.SOUND, f.ClanBadgeKind.SUN, f.ClanBadgeKind.WIND],
+  p = a("661926");
+let T = [f.ClanBadgeKind.SWORD, f.ClanBadgeKind.WATER_DROP, f.ClanBadgeKind.SKULL, f.ClanBadgeKind.TOADSTOOL, f.ClanBadgeKind.MOON, f.ClanBadgeKind.LIGHTNING, f.ClanBadgeKind.LEAF, f.ClanBadgeKind.HEART, f.ClanBadgeKind.FIRE, f.ClanBadgeKind.COMPASS, f.ClanBadgeKind.CROSSHAIRS, f.ClanBadgeKind.FLOWER, f.ClanBadgeKind.FORCE, f.ClanBadgeKind.GEM, f.ClanBadgeKind.LAVA, f.ClanBadgeKind.PSYCHIC, f.ClanBadgeKind.SMOKE, f.ClanBadgeKind.SNOW, f.ClanBadgeKind.SOUND, f.ClanBadgeKind.SUN, f.ClanBadgeKind.WIND],
   C = f.CLAN_BADGE_PALETTE_PRESETS.length;
 t.default = e => {
   let {
@@ -43,15 +43,15 @@ t.default = e => {
       brandSecondaryColor: R.secondary
     })
   }, [t, R.primary, R.secondary, N, s, _, I]), (0, n.jsxs)("div", {
-    className: T.slideContent,
+    className: p.slideContent,
     children: [(0, n.jsx)(c.Heading, {
       variant: "heading-xxl/medium",
-      className: T.title,
+      className: p.title,
       children: h.default.Messages.CLAN_SETUP_CUSTOMIZE_TITLE
     }), (0, n.jsx)(c.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: T.subtitle,
+      className: p.subtitle,
       children: h.default.Messages.CLAN_SETUP_CUSTOMIZE_SUBTITLE
     }), (0, n.jsxs)("div", {
       className: E.container,
@@ -65,7 +65,7 @@ t.default = e => {
             children: h.default.Messages.CLAN_BADGE
           }), (0, n.jsx)("div", {
             className: E.pickerGrid,
-            children: p.map(e => (0, n.jsx)(c.Clickable, {
+            children: T.map(e => (0, n.jsx)(c.Clickable, {
               onClick: () => t({
                 badgeKind: e
               }),
@@ -144,7 +144,7 @@ t.default = e => {
         }), null != g && (0, n.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "status-danger",
-          className: T.errorText,
+          className: p.errorText,
           children: g
         }), (0, n.jsx)(c.TextInput, {
           className: E.tagInputWrapper,

@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("6572"),
   M = n("535400"),
   R = n("512384"),
-  y = n("386542"),
-  L = n("485731"),
+  L = n("386542"),
+  y = n("485731"),
   O = n("614011"),
   j = n("937995"),
   P = n("456631"),
@@ -95,8 +95,8 @@ let eh = l.memo(e => {
   } = e, eC = l.useContext(j.IdleStateContext), [eg, eS] = l.useState(!1), e_ = (0, o.useStateFromStores)([b.default], () => b.default.getId()), eT = c.type === eo.ParticipantTypes.ACTIVITY ? null : null === (t = c.user) || void 0 === t ? void 0 : t.id, [eI] = (0, g.default)(c.type === eo.ParticipantTypes.ACTIVITY ? [c.id] : []), eA = (0, o.useStateFromStores)([v.default], () => v.default.getEnabled()), eN = (0, o.useStateFromStores)([F.default], () => null != eT && F.default.isLocalVideoDisabled(eT, (0, S.default)(c.type)), [eT, c.type]), ev = (0, o.useStateFromStores)([F.default], () => null != eT ? F.default.getVideoToggleState(eT, (0, S.default)(c.type)) : er.VideoToggleState.NONE, [eT, c.type]), ex = ev === er.VideoToggleState.AUTO_PROBING, {
     speaking: eM,
     ringing: eR,
-    hasVideo: ey
-  } = (0, ei.default)(c, e_), eL = function(e, t, n) {
+    hasVideo: eL
+  } = (0, ei.default)(c, e_), ey = function(e, t, n) {
     var a, l, s, i;
     let r = (0, o.useStateFromStoresObject)([k.default], () => {
         var e, a, l;
@@ -132,7 +132,7 @@ let eh = l.memo(e => {
     available: ej,
     activated: eP,
     hqStreamingState: eD
-  } = (0, y.usePerksDemo)(r.EntitlementFeatureNames.STREAM_HIGH_QUALITY), eb = ej && eP && eD.hqStreamingIsEnabled && eO, eU = (0, o.useStateFromStores)([P.default], () => null != eT ? P.default.getEffectForUserId(eT) : null), eF = (0, o.useStateFromStores)([k.default], () => k.default.getVoicePlatformForChannel(Y.id, null != eT ? eT : er.EMPTY_STRING_SNOWFLAKE_ID)), {
+  } = (0, L.usePerksDemo)(r.EntitlementFeatureNames.STREAM_HIGH_QUALITY), eb = ej && eP && eD.hqStreamingIsEnabled && eO, eU = (0, o.useStateFromStores)([P.default], () => null != eT ? P.default.getEffectForUserId(eT) : null), eF = (0, o.useStateFromStores)([k.default], () => k.default.getVoicePlatformForChannel(Y.id, null != eT ? eT : er.EMPTY_STRING_SNOWFLAKE_ID)), {
     enableHangStatus: ew
   } = I.HangStatusExperiment.useExperiment({
     guildId: Y.guild_id,
@@ -157,7 +157,7 @@ let eh = l.memo(e => {
       null != eT && p.default.toggleLocalMute(eT, ed.MediaEngineContextTypes.STREAM)
     }, [eT]),
     ez = l.useCallback(() => {
-      (0, L.hqStreamingFrameAnimationPlayed)(!0)
+      (0, y.hqStreamingFrameAnimationPlayed)(!0)
     }, []),
     eK = l.useCallback(e => {
       null == A || A(c, e)
@@ -296,8 +296,8 @@ let eh = l.memo(e => {
               width: z,
               inCall: q,
               participantType: c.type,
-              hasVideo: null != ey && ey,
-              ...eL,
+              hasVideo: null != eL && eL,
+              ...ey,
               idle: eC,
               platform: eF,
               title: (0, ee.default)(Y, c),
@@ -377,14 +377,14 @@ let ep = l.memo(e => {
     blocked: x,
     hideAudioIcon: M,
     participantType: R,
-    participantUserId: y,
-    onContextMenu: L,
+    participantUserId: L,
+    onContextMenu: y,
     onToggleMute: O,
     platform: j,
     hangStatusActivity: P,
     application: D,
     speaking: b
-  } = e, U = null, w = null, k = null, H = null, K = (0, es.isVideoCompact)(C), Z = (0, es.isNamesCompact)(C), X = (0, o.useStateFromStores)([F.default], () => null != y && F.default.isLocalVideoAutoDisabled(y, (0, S.default)(R)), [y, R]), Q = (0, m.useRedesignIconContext)().enabled;
+  } = e, U = null, w = null, k = null, H = null, K = (0, es.isVideoCompact)(C), Z = (0, es.isNamesCompact)(C), X = (0, o.useStateFromStores)([F.default], () => null != L && F.default.isLocalVideoAutoDisabled(L, (0, S.default)(R)), [L, R]), Q = (0, m.useRedesignIconContext)().enabled;
   if (!M) {
     if (l && R === eo.ParticipantTypes.STREAM && g && !v) U = (0, a.jsx)(m.Tooltip, {
       text: ec.default.Messages.UNMUTE,
@@ -447,7 +447,7 @@ let ep = l.memo(e => {
       return (0, a.jsx)(m.Clickable, {
         ...n,
         onClick: e => {
-          e.stopPropagation(), null == t || t(), L(e)
+          e.stopPropagation(), null == t || t(), y(e)
         },
         className: i()(ef.status, ef.interactive),
         children: (0, a.jsx)(q.default, {})

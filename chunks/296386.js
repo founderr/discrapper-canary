@@ -19,13 +19,13 @@ a.r(t), a.d(t, {
     return _
   },
   updateGuildDiscoveryMetadataAbout: function() {
-    return T
+    return p
   },
   updateGuildDiscoveryMetadataIsPublished: function() {
     return E
   },
   updateGuildDiscoveryMetadataReasonsToJoin: function() {
-    return p
+    return T
   },
   updateGuildDiscoveryMetadataSocialLinks: function() {
     return C
@@ -155,7 +155,7 @@ function E(e, t) {
   })
 }
 
-function T(e, t) {
+function p(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -163,7 +163,7 @@ function T(e, t) {
   })
 }
 
-function p(e, t) {
+function T(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -196,8 +196,8 @@ async function _(e) {
       primary_category_id: e,
       category_ids: h,
       keywords: E,
-      emoji_discoverability_enabled: T,
-      partner_actioned_timestamp: p,
+      emoji_discoverability_enabled: p,
+      partner_actioned_timestamp: T,
       partner_application_timestamp: C,
       is_published: _,
       reasons_to_join: x,
@@ -225,8 +225,8 @@ async function _(e) {
         primaryCategoryId: e,
         secondaryCategoryIds: h,
         keywords: E,
-        emojiDiscoverabilityEnabled: T,
-        partnerActionedTimestamp: p,
+        emojiDiscoverabilityEnabled: p,
+        partnerActionedTimestamp: T,
         partnerApplicationTimestamp: C,
         isPublished: _,
         reasonsToJoin: x,

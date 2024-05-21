@@ -10,10 +10,10 @@ let c = {},
   h = null,
   E = null;
 
-function T() {
+function p() {
   m = !0
 }
-class p extends(n = l.default.Store) {
+class T extends(n = l.default.Store) {
   getAppliedGuildBoostsForGuild(e) {
     return null != c[e] ? c[e].subscriptions : null
   }
@@ -42,12 +42,12 @@ class p extends(n = l.default.Store) {
     return f
   }
 }
-i = "AppliedGuildBoostStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
+i = "AppliedGuildBoostStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = i, t.default = new p(o.default, {
+}) : r[s] = i, t.default = new T(o.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
@@ -70,8 +70,8 @@ i = "AppliedGuildBoostStore", (s = "displayName") in(r = p) ? Object.definePrope
     } = e;
     d = t
   },
-  GUILD_UNAPPLY_BOOST_START: T,
-  GUILD_APPLY_BOOST_START: T,
+  GUILD_UNAPPLY_BOOST_START: p,
+  GUILD_APPLY_BOOST_START: p,
   GUILD_APPLY_BOOST_SUCCESS: function(e) {
     let {
       appliedGuildBoost: t

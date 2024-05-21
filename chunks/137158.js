@@ -18,7 +18,7 @@ var n = a("735250"),
   h = a("689938"),
   E = a("17359");
 
-function T(e) {
+function p(e) {
   let {
     title: t,
     children: a,
@@ -60,7 +60,7 @@ function T(e) {
     })]
   })
 }
-let p = "FORM_FIELD";
+let T = "FORM_FIELD";
 
 function C(e) {
   let {
@@ -71,7 +71,7 @@ function C(e) {
   } = e, d = (0, l.debounce)(async (e, t, a) => {
     await c(e, t, a)
   }), f = r.useRef(null), [, h] = (0, o.useDrag)({
-    type: p,
+    type: T,
     item: {
       index: t,
       field: a
@@ -80,7 +80,7 @@ function C(e) {
       null != e && !t.didDrop() && d(e.field, null, !0)
     }
   }), [, C] = (0, o.useDrop)({
-    accept: p,
+    accept: T,
     hover: (e, a) => {
       var n;
       let {
@@ -109,7 +109,7 @@ function C(e) {
         className: E.dragIcon,
         color: u.default.unsafe_rawColors.PRIMARY_400.css
       })
-    }), (0, n.jsx)(T, {
+    }), (0, n.jsx)(p, {
       ...e
     })]
   })
@@ -122,7 +122,7 @@ function _(e) {
       className: E.spacingContainer,
       children: e.isDragEnabled ? (0, n.jsx)(C, {
         ...e
-      }) : (0, n.jsx)(T, {
+      }) : (0, n.jsx)(p, {
         ...e
       })
     }), "side" === e.actionsLocation && (0, n.jsxs)("div", {

@@ -13,21 +13,21 @@ t.default = function(e) {
     guildId: t,
     onSave: a,
     formDescription: u
-  } = e, [f, m] = r.useState(null), [h, E] = r.useState(u), T = r.useRef(!1), p = r.useRef(!1);
+  } = e, [f, m] = r.useState(null), [h, E] = r.useState(u), p = r.useRef(!1), T = r.useRef(!1);
   r.useEffect(() => () => {
-    p.current = !0
+    T.current = !0
   }, []);
   let C = r.useCallback(async () => {
-    if (!T.current) {
+    if (!p.current) {
       m(null);
       try {
         await a(t, h)
       } catch (e) {
-        if (p.current) return;
+        if (T.current) return;
         m(new i.APIError(e).getAnyErrorMessage())
       } finally {
-        if (p.current) return;
-        T.current = !1
+        if (T.current) return;
+        p.current = !1
       }
     }
   }, [h, t, a]);
