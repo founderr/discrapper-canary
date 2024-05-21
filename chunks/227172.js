@@ -33,15 +33,15 @@ t.default = e => {
     channel: M
   } = (0, o.default)(n), {
     displayParticipants: R,
-    participant1: L,
-    participant2: y,
+    participant1: y,
+    participant2: L,
     numOtherParticipants: O
   } = (0, r.default)(n, 3), j = l.useCallback(e => {
     if (null == _ || null == t || null == T) return;
     let a = O > 0 ? (0, c.formatGroupCanvasDescription)({
       entry: n,
       channel: t,
-      users: [L, y],
+      users: [y, L],
       countOthers: O
     }) : (0, c.formatCanvasDescription)(n, t, T);
     return (0, d.generateGamingContentImage)({
@@ -53,7 +53,7 @@ t.default = e => {
       colors: [I, A],
       channelId: e
     })
-  }, [_, t, R, n, N, O, L, y, I, A, T]);
+  }, [_, t, R, n, N, O, y, L, I, A, T]);
   if (null == T) return null;
   let P = (0, a.jsx)(m.BadgesContainer, {
       location: m.BadgeLocation.POPOUT,

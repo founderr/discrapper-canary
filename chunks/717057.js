@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("284019"),
   M = n("308083"),
   R = n("981631"),
-  L = n("689938"),
-  y = n("946984");
+  y = n("689938"),
+  L = n("946984");
 
 function O(e) {
   var t;
@@ -49,41 +49,41 @@ function O(e) {
     primaryColor: null === (t = s.branding) || void 0 === t ? void 0 : t.primaryColor,
     onSignCharter: r,
     children: (0, a.jsxs)("div", {
-      className: y.scrollContentsContainer,
+      className: L.scrollContentsContainer,
       children: [(0, a.jsx)(N.BaseClanTagChiplet, {
         clanBadge: (0, T.getClanBadgeUrl)(n, s.badge.imageHash, M.ClanTagBadgeSize.SIZE_24),
         clanTag: s.tag,
         textVariant: "heading-lg/semibold",
         badgeSize: M.ClanTagBadgeSize.SIZE_24,
-        className: y.clanTagChiplet
+        className: L.clanTagChiplet
       }), (0, a.jsxs)("div", {
         children: [(0, a.jsx)(c.Heading, {
           variant: "heading-xxl/normal",
           color: "text-muted",
-          className: y.charterHeaderText,
-          children: L.default.Messages.CLAN_SETUP_OVERVIEW_TITLE
+          className: L.charterHeaderText,
+          children: y.default.Messages.CLAN_SETUP_OVERVIEW_TITLE
         }), (0, a.jsx)(c.Heading, {
           variant: "heading-xxl/bold",
           color: "interactive-active",
-          className: y.charterHeaderText,
+          className: L.charterHeaderText,
           children: s.name
         }), (0, a.jsx)(c.Text, {
           variant: "text-md/normal",
           color: "text-muted",
-          className: y.establishedDate,
-          children: L.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
+          className: L.establishedDate,
+          children: y.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
             date: u
           })
         })]
       }), (0, a.jsx)(v.CharterScrollGameSection, {
         applicationIds: d,
         playstyle: s.playstyle,
-        className: i()(y.charterBodyText, y.gameSection)
+        className: i()(L.charterBodyText, L.gameSection)
       }), (0, a.jsx)(c.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        className: y.charterBodyText,
-        children: L.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
+        className: L.charterBodyText,
+        children: y.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
       })]
     })
   })
@@ -112,37 +112,37 @@ function j(e) {
     F = (0, d.useStateFromStores)([p.default], () => p.default.getCurrentUser()),
     w = (0, d.useStateFromStores)([h.default], () => null != F ? h.default.getMember(n, F.id) : null),
     k = (0, f.default)(),
-    B = (0, _.useBrandColor)(null == T ? void 0 : null === (t = T.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, .7]),
-    H = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+    H = (0, _.useBrandColor)(null == T ? void 0 : null === (t = T.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, .7]),
+    B = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
       theme: k,
       saturation: 1
     }).hex(),
-    G = (0, _.getClanRadialBackgroundStyle)(B, H, "top center");
+    G = (0, _.getClanRadialBackgroundStyle)(H, B, "top center");
   return null == U || null == F || null == w || null == T ? null : (0, a.jsx)(c.ModalRoot, {
     ...o,
     transitionState: o.transitionState,
     "aria-labelledby": C,
-    className: y.modal,
+    className: L.modal,
     size: c.ModalSize.DYNAMIC,
     children: (0, a.jsxs)(c.ModalContent, {
-      className: y.content,
+      className: L.content,
       style: G,
       children: [(0, a.jsxs)("div", {
-        className: y.infoSide,
+        className: L.infoSide,
         children: [(0, a.jsxs)("div", {
-          className: y.titlesContainer,
+          className: L.titlesContainer,
           children: [(0, a.jsx)("div", {
-            className: y.title,
+            className: L.title,
             children: (0, a.jsx)(c.Heading, {
               variant: "heading-xxl/medium",
-              children: L.default.Messages.CLAN_JOIN_SUCCESS_TITLE.format({
+              children: y.default.Messages.CLAN_JOIN_SUCCESS_TITLE.format({
                 name: U.name
               })
             })
           }), (0, a.jsx)(c.Text, {
-            className: y.subtitle,
+            className: L.subtitle,
             variant: "text-md/normal",
-            children: L.default.Messages.CLAN_JOIN_SUCCESS_SUBTITLE
+            children: y.default.Messages.CLAN_JOIN_SUCCESS_SUBTITLE
           })]
         }), (0, a.jsx)(A.default, {
           guildId: n,
@@ -150,7 +150,7 @@ function j(e) {
           onChangeUseTag: v
         })]
       }), (0, a.jsx)("div", {
-        className: y.scrollMainContainer,
+        className: L.scrollMainContainer,
         children: (0, a.jsx)(O, {
           guildId: n,
           clanInfo: T,
@@ -159,19 +159,19 @@ function j(e) {
       }), (0, a.jsx)(x.default, {
         onClick: D,
         color: c.Button.Colors.BRAND,
-        themeColor: B,
+        themeColor: H,
         fullWidth: !1,
-        className: i()(y.ctaButton, M ? y.ctaButtonSigned : null),
+        className: i()(L.ctaButton, M ? L.ctaButtonSigned : null),
         children: (0, a.jsxs)("div", {
-          className: y.ctaButtonInner,
+          className: L.ctaButtonInner,
           children: [(0, a.jsx)(c.Text, {
             color: "currentColor",
             variant: "text-md/medium",
-            children: L.default.Messages.CLAN_JOIN_SUCCESS_MAIN_CTA
+            children: y.default.Messages.CLAN_JOIN_SUCCESS_MAIN_CTA
           }), (0, a.jsx)(u.ArrowLargeRightIcon, {
             width: 20,
             height: 20,
-            color: null == B ? void 0 : (0, _.getAccessibleTextColor)(B).hex()
+            color: null == H ? void 0 : (0, _.getAccessibleTextColor)(H).hex()
           })]
         })
       })]

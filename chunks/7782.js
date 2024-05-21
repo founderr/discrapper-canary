@@ -181,7 +181,7 @@ let M = e => {
         return null
     }
   },
-  L = e => {
+  y = e => {
     let {
       channelId: t,
       otherUserId: n
@@ -241,7 +241,7 @@ t.default = e => {
       })
     }), (0, a.jsxs)("div", {
       className: x.mobileButtons,
-      children: [(0, a.jsx)(L, {
+      children: [(0, a.jsx)(y, {
         channelId: n.id,
         otherUserId: t
       }), (0, a.jsx)(f.default, {

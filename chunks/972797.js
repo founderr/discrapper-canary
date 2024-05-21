@@ -22,9 +22,9 @@ function f(e) {
     published: s,
     submitting: f = !1,
     onClick: g
-  } = e, C = (0, i.useUID)(), [h, m] = l.useState(s);
+  } = e, C = (0, i.useUID)(), [h, T] = l.useState(s);
   return l.useEffect(() => {
-    m(e => e || s)
+    T(e => e || s)
   }, [s]), (0, a.jsxs)("div", {
     className: n()({
       [c.publishable]: !t && !s,

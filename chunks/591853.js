@@ -46,8 +46,8 @@ var u = n("194048"),
   x = n("220779"),
   M = n("201133"),
   R = n("605236"),
-  L = n("543241"),
-  y = n("318374"),
+  y = n("543241"),
+  L = n("318374"),
   O = n("258609"),
   j = n("102172"),
   P = n("871118"),
@@ -57,8 +57,8 @@ var u = n("194048"),
   F = n("430824"),
   w = n("496675"),
   k = n("699516"),
-  B = n("9156"),
-  H = n("979651"),
+  H = n("9156"),
+  B = n("979651"),
   G = n("938475"),
   V = n("346656"),
   W = n("682864"),
@@ -153,7 +153,7 @@ function em(e) {
     requestId: f
   } = e, m = (0, d.useStateFromStores)([Q.default], () => Q.default.isChannelReplyMode()), [p, E] = l.useState(null), C = (0, d.useStateFromStores)([w.default], () => w.default.can(ei.Permissions.SEND_MESSAGES, t)), S = (0, $.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
-  }), [I, A] = l.useState(!1), [N, v] = l.useState(!1), L = "#".concat(t.name), y = q.default.getName(t.guild_id, t.id, n), O = m ? er.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : er.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, j = async e => {
+  }), [I, A] = l.useState(!1), [N, v] = l.useState(!1), y = "#".concat(t.name), L = q.default.getName(t.guild_id, t.id, n), O = m ? er.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : er.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, j = async e => {
     if (null != e) {
       if (K.default.track(ei.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: es.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
@@ -258,7 +258,7 @@ function em(e) {
         })
       }), (0, a.jsx)(x.ReplyInput, {
         placeholder: er.default.Messages.TEXTAREA_PLACEHOLDER.format({
-          channel: m ? L : "@".concat(y)
+          channel: m ? y : "@".concat(L)
         }),
         onEnter: P,
         setEditorRef: e => E(e),
@@ -276,7 +276,7 @@ let ep = e => {
     i(!0)
   }, []);
   let r = !!v.default.keyboardModeEnabled && !s,
-    o = (0, L.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
+    o = (0, y.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
       emoji: e,
       url: e.url
     } : {
@@ -332,7 +332,7 @@ function eE(e) {
     className: eo.popoutContentHeader,
     children: [(0, a.jsxs)("div", {
       className: eo.popoutUserContainer,
-      children: [(0, a.jsx)(y.default, {
+      children: [(0, a.jsx)(L.default, {
         maxUsers: 3,
         users: o,
         size: _.AvatarSizes.SIZE_24,
@@ -434,7 +434,7 @@ function eS(e) {
     badges: n,
     stream: s,
     ...i
-  } = e, r = (0, d.useStateFromStores)([U.default], () => U.default.getChannel(null == s ? void 0 : s.channelId)), [o] = l.useMemo(() => (0, j.canWatchStream)(r, H.default, F.default, w.default, O.default), [r]);
+  } = e, r = (0, d.useStateFromStores)([U.default], () => U.default.getChannel(null == s ? void 0 : s.channelId)), [o] = l.useMemo(() => (0, j.canWatchStream)(r, B.default, F.default, w.default, O.default), [r]);
   return null == s ? null : (0, a.jsxs)(ec, {
     className: eo.streamingPopoutHero,
     children: [(0, a.jsx)(eE, {
@@ -486,15 +486,15 @@ function e_(e) {
     reactionImageAltText: c,
     generateReactionImage: h,
     isStreaming: g = !1
-  } = e, A = q.default.getName(i.guild_id, i.id, t), [N, v] = l.useState(!1), R = (0, d.useStateFromStores)([F.default], () => F.default.getGuild(s.guild_id)), L = (0, d.useStateFromStoresArray)([G.default], () => G.default.getVoiceStatesForChannel(s), [s]), y = l.useMemo(() => {
-    for (let e of L) {
+  } = e, A = q.default.getName(i.guild_id, i.id, t), [N, v] = l.useState(!1), R = (0, d.useStateFromStores)([F.default], () => F.default.getGuild(s.guild_id)), y = (0, d.useStateFromStoresArray)([G.default], () => G.default.getVoiceStatesForChannel(s), [s]), L = l.useMemo(() => {
+    for (let e of y) {
       let t = U.default.getDMFromUserId(e.user.id),
-        n = null != t && B.default.isChannelMuted(null, t),
+        n = null != t && H.default.isChannelMuted(null, t),
         a = k.default.isBlocked(e.user.id);
       if (n || a) return !0
     }
     return !1
-  }, [L]), O = async e => {
+  }, [y]), O = async e => {
     let a = await T.default.openPrivateChannel(t.id, !1, !1),
       l = U.default.getChannel(a);
     o()(null != l, "DM channel must be defined");
@@ -545,7 +545,7 @@ function e_(e) {
         })]
       }), (0, a.jsx)(Y.default, {
         guildId: R.id,
-        users: L,
+        users: y,
         max: 3,
         renderUser: (e, t) => (0, a.jsx)(_.Avatar, {
           src: e.user.getAvatarURL(R.id, 16),
@@ -606,7 +606,7 @@ function e_(e) {
             className: eo.popoutBlockedWarningIcon
           }), er.default.Messages.MEMBER_LIST_CONTENT_POPOUT_BLOCKED_USER_WARNING]
         }),
-        shouldShow: y,
+        shouldShow: L,
         children: e => (0, a.jsxs)(_.Button, {
           ...e,
           color: _.Button.Colors.GREEN,

@@ -18,8 +18,8 @@ var a = A("470079"),
   g = A("277985"),
   C = A("240864"),
   h = A("863663"),
-  m = A("981631"),
-  T = A("689938");
+  T = A("981631"),
+  m = A("689938");
 
 function p(e, t, A) {
   return t in e ? Object.defineProperty(e, t, {
@@ -33,21 +33,21 @@ let U = new c.default("ProductAttachmentManager");
 class v {
   addAttachment(e, t) {
     let A = this.target.getMaxAttachmentsCount();
-    if (this.uploads.length >= A) throw s.AccessibilityAnnouncer.announce(T.default.Messages.GUILD_PRODUCT_A11Y_TOO_MANY_ATTACHMENTS.format({
+    if (this.uploads.length >= A) throw s.AccessibilityAnnouncer.announce(m.default.Messages.GUILD_PRODUCT_A11Y_TOO_MANY_ATTACHMENTS.format({
       maxAttachmentsCount: A
     })), Error("Too many attachments");
     e.target = d.UploadTargets.GUILD_PRODUCT_ATTACHMENT;
     let a = new i.CloudUpload(e, this.guildId);
     a.upload(), a.on("error", A => {
       var l;
-      A === m.AbortCodes.ENTITY_TOO_LARGE && this.onFileSizeError();
+      A === T.AbortCodes.ENTITY_TOO_LARGE && this.onFileSizeError();
       let n = "number" == typeof A && A > 0 ? -A : -1,
         r = (0, h.describeUploadProgressError)(n),
         i = null === (l = e.file) || void 0 === l ? void 0 : l.name;
-      null != i ? s.AccessibilityAnnouncer.announce(T.default.Messages.GUILD_PRODUCT_A11Y_NAMED_UPLOAD_FAILED.format({
+      null != i ? s.AccessibilityAnnouncer.announce(m.default.Messages.GUILD_PRODUCT_A11Y_NAMED_UPLOAD_FAILED.format({
         filename: i,
         reason: r
-      })) : s.AccessibilityAnnouncer.announce(T.default.Messages.GUILD_PRODUCT_A11Y_UPLOAD_FAILED.format({
+      })) : s.AccessibilityAnnouncer.announce(m.default.Messages.GUILD_PRODUCT_A11Y_UPLOAD_FAILED.format({
         reason: r
       })), t(e => ({
         ...e,
@@ -114,7 +114,7 @@ class v {
       for (let t of this.uploads) e[t.id] = 1;
       return e
     }), this.isEdit = null != t;
-    let l = null == t ? m.Endpoints.GUILD_PRODUCTS(e) : m.Endpoints.GUILD_PRODUCT_LISTINGS(e, t),
+    let l = null == t ? T.Endpoints.GUILD_PRODUCTS(e) : T.Endpoints.GUILD_PRODUCT_LISTINGS(e, t),
       s = null == t ? "POST" : "PATCH";
     this.createCloudUploader = () => (0, u.createCloudUploader)(l, s), this.guildId = e, this.onFileSizeError = A;
     let n = null === (a = C.default.getGuildProduct(null != t ? t : "")) || void 0 === a ? void 0 : a.attachments;
@@ -150,13 +150,13 @@ function I(e, t) {
   a.useLayoutEffect(() => {
     g(u.generateInitialProgresses())
   }, [u]);
-  let [h, T] = a.useState(), [p, U] = a.useState(), I = a.useCallback(e => {
+  let [h, m] = a.useState(), [p, U] = a.useState(), I = a.useCallback(e => {
     u.deleteAttachment(e) && C({})
   }, [u]), E = a.useCallback(e => {
     u.addAttachment(e, g), C({})
   }, [u]), x = a.useCallback(async e => {
     try {
-      T(e), U(void 0);
+      m(e), U(void 0);
       let t = await u.saveProductWithAttachments(e);
       return null != t && d({
         editSkuId: t.id,
@@ -170,7 +170,7 @@ function I(e, t) {
         }
       }))
     } finally {
-      T(void 0)
+      m(void 0)
     }
   }, [u, n]), N = a.useCallback(() => {
     u.cancelUnusedUploads(), C({})
@@ -193,6 +193,6 @@ function I(e, t) {
     saveError: p,
     hasUnsavedAttachmentChanges: q,
     canAttachFiles: D.length < u.target.getMaxAttachmentsCount(),
-    canAttachArchives: null !== (A = null == i ? void 0 : i.hasFeature(m.GuildFeatures.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE)) && void 0 !== A && A
+    canAttachArchives: null !== (A = null == i ? void 0 : i.hasFeature(T.GuildFeatures.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE)) && void 0 !== A && A
   }
 }

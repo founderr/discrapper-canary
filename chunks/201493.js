@@ -30,8 +30,8 @@ t.default = e => {
     currentCategoryId: x,
     directoryEntries: M,
     categoryCounts: R,
-    allEntriesCount: L,
-    isLoading: y
+    allEntriesCount: y,
+    isLoading: L
   } = (0, s.useStateFromStoresObject)([p.default], () => {
     let e = p.default.getCurrentCategoryId(N.id),
       t = p.default.getDirectoryEntries(N.id, e === T.DirectoryEntryCategories.ALL ? null : e),
@@ -100,21 +100,21 @@ t.default = e => {
         })
       })
     } : void 0,
-    B = e => {
+    H = e => {
       0 !== b.trim().length && e.charCode === I.KeyboardKeys.ENTER && (h.searchDirectoryEntries(N.id, b), c.default.track(I.AnalyticEvents.GUILD_DIRECTORY_SEARCH, {
         directory_channel_id: N.id,
         directory_guild_id: v.id
       }))
     },
-    H = () => {
+    B = () => {
       U(""), h.clearDirectorySearch(N.id)
     };
   return F ? (0, a.jsx)(_.default, {
     searchQuery: b,
     setSearchQuery: U,
     mostRecentQuery: j,
-    handleSearchKeyPress: B,
-    handleClearSearch: H,
+    handleSearchKeyPress: H,
+    handleClearSearch: B,
     handleCreateOrAddGuild: k,
     searchResults: D,
     searchFetching: P
@@ -133,8 +133,8 @@ t.default = e => {
     channel: N,
     searchQuery: b,
     setSearchQuery: U,
-    handleSearchKeyPress: B,
-    handleClearSearch: H,
+    handleSearchKeyPress: H,
+    handleClearSearch: B,
     handleCreateOrAddGuild: k,
     currentCategoryId: x,
     handleSelectCategory: e => {
@@ -142,7 +142,7 @@ t.default = e => {
     },
     directoryEntries: O,
     categoryCounts: R,
-    allEntriesCount: L,
-    isLoading: y
+    allEntriesCount: y,
+    isLoading: L
   })
 }

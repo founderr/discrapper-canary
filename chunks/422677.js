@@ -48,10 +48,10 @@ function A(e) {
         dispatchWait: !0
       })
     },
-    L = (e, t) => {
+    y = (e, t) => {
       I.has(e.key) && R(t)
     },
-    y = l.useCallback(e => {
+    L = l.useCallback(e => {
       let {
         application: t,
         location: n
@@ -127,7 +127,7 @@ function A(e) {
                         scopes: [i.OAuth2Scopes.APPLICATIONS_COMMANDS],
                         channelId: t,
                         disableGuildSelect: !0,
-                        callback: y
+                        callback: L
                       })
                     },
                     size: r.Button.Sizes.SMALL,
@@ -141,7 +141,7 @@ function A(e) {
               } = e;
             return null != o ? (0, a.jsx)(r.ClickableContainer, {
               onMouseDown: () => R(o),
-              onKeyDown: e => L(e, o),
+              onKeyDown: e => y(e, o),
               className: _.applicationRow,
               onClick: () => {
                 (0, h.openUserProfileModal)({

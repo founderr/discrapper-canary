@@ -18,8 +18,8 @@ var a = A("735250"),
   g = A("689938"),
   C = A("713695"),
   h = A("709944");
-let m = (0, r.v4)(),
-  T = (0, u.createChannelRecord)({
+let T = (0, r.v4)(),
+  m = (0, u.createChannelRecord)({
     id: "1",
     type: f.ChannelTypes.DM
   });
@@ -65,7 +65,7 @@ function v(e) {
     value: N,
     enableThemedBackground: D = !1,
     parentModalKey: q
-  } = e, L = (0, i.useFormContext)(), [O, R] = l.useState(() => (0, o.toRichValue)(N)), P = l.useRef(!0 === u), V = null != A ? A : null == L ? void 0 : L.titleId, j = null !== (t = null == L ? void 0 : L.errorId) && void 0 !== t ? t : m, b = l.useMemo(() => ({
+  } = e, L = (0, i.useFormContext)(), [O, R] = l.useState(() => (0, o.toRichValue)(N)), P = l.useRef(!0 === u), V = null != A ? A : null == L ? void 0 : L.titleId, j = null !== (t = null == L ? void 0 : L.errorId) && void 0 !== t ? t : T, b = l.useMemo(() => ({
     analyticsName: "simple",
     autocomplete: {
       alwaysUseLayer: !0,
@@ -97,7 +97,7 @@ function v(e) {
     },
     placeholder: E,
     required: x,
-    channel: T,
+    channel: m,
     textValue: N,
     richValue: O,
     type: b,
@@ -117,7 +117,7 @@ function v(e) {
       text: N,
       maxLength: f
     }), null != f && (0, a.jsx)(i.HiddenVisually, {
-      id: m,
+      id: T,
       children: g.default.Messages.MAXIMUM_LENGTH.format({
         maxLength: f
       })

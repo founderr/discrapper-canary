@@ -31,8 +31,8 @@ var a, l, s = n("735250"),
   x = n("314897"),
   M = n("594174"),
   R = n("602623"),
-  L = n("823379"),
-  y = n("5192"),
+  y = n("823379"),
+  L = n("5192"),
   O = n("689938"),
   j = n("655338");
 (l = a || (a = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM", l[l.LARGE = 2] = "LARGE";
@@ -52,7 +52,7 @@ function D(e) {
     max: 4,
     renderUser: e => {
       if (null == e) return null;
-      let t = y.default.getName(n, a, e);
+      let t = L.default.getName(n, a, e);
       return (0, s.jsx)(d.TooltipContainer, {
         text: t,
         color: d.TooltipColors.GREY,
@@ -76,9 +76,9 @@ function b(e) {
     width: g
   } = e;
   let S = (a = g) > 400 ? 2 : a > 300 ? 1 : 0;
-  let [T] = (l = g) > 400 ? [d.AvatarSizes.SIZE_56, 56] : l > 300 ? [d.AvatarSizes.SIZE_32, 32] : [d.AvatarSizes.SIZE_24, 24], I = (0, u.useStateFromStoresArray)([M.default, x.default], () => Array.from(i).map(e => (0, m.isActivityParticipantCurrentUserCurrentSession)(e, x.default) ? null : M.default.getUser(e.userId)).filter(L.isNotNullish)), A = (0, u.useStateFromStores)([f.default], () => f.default.getEmbeddedActivitiesForChannel(C.id).find(e => e.applicationId === r.id)), {
+  let [T] = (l = g) > 400 ? [d.AvatarSizes.SIZE_56, 56] : l > 300 ? [d.AvatarSizes.SIZE_32, 32] : [d.AvatarSizes.SIZE_24, 24], I = (0, u.useStateFromStoresArray)([M.default, x.default], () => Array.from(i).map(e => (0, m.isActivityParticipantCurrentUserCurrentSession)(e, x.default) ? null : M.default.getUser(e.userId)).filter(y.isNotNullish)), A = (0, u.useStateFromStores)([f.default], () => f.default.getEmbeddedActivitiesForChannel(C.id).find(e => e.applicationId === r.id)), {
     analyticsLocations: v
-  } = (0, N.default)(), R = (0, c.useAnalyticsContext)(), P = y.default.getName(C.getGuildId(), C.id, null == I ? void 0 : I[0]), b = (0, p.useEmbeddedActivityJoinability)({
+  } = (0, N.default)(), R = (0, c.useAnalyticsContext)(), P = L.default.getName(C.getGuildId(), C.id, null == I ? void 0 : I[0]), b = (0, p.useEmbeddedActivityJoinability)({
     userId: null === (t = M.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
     channelId: C.id,
     application: r

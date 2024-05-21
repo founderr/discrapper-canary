@@ -32,7 +32,7 @@ function c(e) {
       questContent: n,
       questContentCTA: o.QuestContentCTA.CLAIM_REWARD,
       questContentPosition: s
-    }), c ? (0, l.hasQuestCollectibleRewards)(t.config) ? (0, u.openCollectibleRewardModal)(t, n) : (0, _.openQuestsRewardCodeModal)({
+    }), c ? (0, l.hasCollectiblesQuestReward)(t.config) ? (0, u.openCollectibleRewardModal)(t, n) : (0, _.openQuestsRewardCodeModal)({
       questId: t.id,
       location: n,
       questContentPosition: s

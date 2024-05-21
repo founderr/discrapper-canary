@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("934415"),
   M = n("456269"),
   R = n("109590"),
-  L = n("228392"),
-  y = n("981631"),
+  y = n("228392"),
+  L = n("981631"),
   O = n("689938"),
   j = n("269516"),
   P = n("858313");
@@ -45,7 +45,7 @@ function D(e) {
   } = e, {
     ref: b,
     width: U
-  } = (0, d.default)(), [F, w] = l.useState(3), [k, B] = l.useState(!n), [H, G] = (0, c.default)(!1, 2e3), V = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(t), [t]), {
+  } = (0, d.default)(), [F, w] = l.useState(3), [k, H] = l.useState(!n), [B, G] = (0, c.default)(!1, 2e3), V = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(t), [t]), {
     firstMessage: W
   } = (0, R.useFirstForumPostMessage)(V), Y = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
     disableReactionUpdates: z,
@@ -58,7 +58,7 @@ function D(e) {
     if (null != t && n) {
       let e = t.intersectionRect,
         n = t.boundingClientRect;
-      B((e.bottom - e.top) / (n.bottom - n.top) < 1)
+      H((e.bottom - e.top) / (n.bottom - n.top) < 1)
     }
   }, [n]);
   l.useLayoutEffect(() => {
@@ -80,10 +80,10 @@ function D(e) {
       Y ? T.default.leaveThread(V, "Forum Toolbar") : T.default.joinThread(V, "Forum Toolbar")
     },
     es = () => {
-      (0, L.trackForumPostLinkCopied)({
+      (0, y.trackForumPostLinkCopied)({
         postId: V.id,
         location: {
-          section: y.AnalyticsSections.CHANNEL_HEADER
+          section: L.AnalyticsSections.CHANNEL_HEADER
         }
       }), (0, r.copy)((0, x.getChannelLinkToCopy)(V, Q)), G(!0)
     },
@@ -164,13 +164,13 @@ function D(e) {
             onClick: es,
             className: j.button,
             innerClassName: j.buttonInner,
-            children: [H ? (0, a.jsx)(N.default, {
+            children: [B ? (0, a.jsx)(N.default, {
               width: 16,
               height: 16
             }) : (0, a.jsx)(v.default, {
               width: 16,
               height: 16
-            }), H ? O.default.Messages.COPIED : null]
+            }), B ? O.default.Messages.COPIED : null]
           })
         })]
       })]

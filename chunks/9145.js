@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("317381"),
   M = n("619915"),
   R = n("952561"),
-  L = n("563218"),
-  y = n("719296"),
+  y = n("563218"),
+  L = n("719296"),
   O = n("651612"),
   j = n("918559"),
   P = n("981631"),
@@ -48,8 +48,8 @@ function w(e) {
   let {
     maxHeight: w,
     connectedChannelId: k,
-    renderExternalHeader: B
-  } = e, H = (0, R.default)(), G = (0, r.useStateFromStoresArray)([x.default], () => null != k ? x.default.getEmbeddedActivitiesForChannel(k) : [], [k]), V = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(k)), W = (0, M.useEmbeddedApps)(G), Y = (0, M.useEmbeddedAppsWithPresence)(W), z = l.useCallback(() => {
+    renderExternalHeader: H
+  } = e, B = (0, R.default)(), G = (0, r.useStateFromStoresArray)([x.default], () => null != k ? x.default.getEmbeddedActivitiesForChannel(k) : [], [k]), V = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(k)), W = (0, M.useEmbeddedApps)(G), Y = (0, M.useEmbeddedAppsWithPresence)(W), z = l.useCallback(() => {
     (0, v.updateActivityPanelMode)(j.ActivityPanelModes.PIP)
   }, []), K = l.useRef(null), Z = (0, r.useStateFromStores)([x.default], () => x.default.getFocusedLayout()), q = Z !== j.FocusedActivityLayouts.NO_CHAT, [X, Q] = l.useState(null !== (s = h.default.activityPanelHeight) && void 0 !== s ? s : w), J = l.useCallback(e => {
     d.default.updatedUnsyncedSettings({
@@ -91,7 +91,7 @@ function w(e) {
         null != t && void 0 !== t && e.set(t.userId, t)
       }), e
     }, [eo]);
-  if (null == H) return null;
+  if (null == B) return null;
   let ed = [];
   null != ei && (ed = Array.from(ei.embeddedActivity.userIds).map(e => S.default.getUser(e)).filter(e => null != e && void 0 !== e));
   let ec = (e, t) => {
@@ -117,7 +117,7 @@ function w(e) {
       maxHeight: w,
       height: X
     } : void 0,
-    children: [null == B ? void 0 : B(), (0, a.jsxs)("div", {
+    children: [null == H ? void 0 : H(), (0, a.jsxs)("div", {
       className: b.activityPanelContainer,
       children: [q ? null : (0, a.jsx)("div", {
         className: b.header,
@@ -125,7 +125,7 @@ function w(e) {
           color: "header-primary",
           variant: "text-md/semibold",
           className: b.headerTitle,
-          children: null == H ? void 0 : H.name
+          children: null == B ? void 0 : B.name
         })
       }), (0, a.jsx)("div", {
         className: i()(b.activityContainer, {
@@ -138,9 +138,9 @@ function w(e) {
           paddingBottom: el
         },
         ref: $,
-        children: (0, a.jsx)(L.default, {
+        children: (0, a.jsx)(y.default, {
           className: b.iframe,
-          embedId: (0, y.default)(k, H.id)
+          embedId: (0, L.default)(k, B.id)
         })
       }), null != er ? (0, a.jsxs)("div", {
         className: b.footer,
@@ -159,7 +159,7 @@ function w(e) {
           }), (0, a.jsx)("div", {
             className: b.leaveButtonContainer,
             children: (0, a.jsx)(p.default, {
-              applicationId: H.id,
+              applicationId: B.id,
               channelId: k,
               centerButton: !0,
               color: "red",

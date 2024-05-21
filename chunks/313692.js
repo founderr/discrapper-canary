@@ -35,43 +35,43 @@ function v(e) {
     location: x,
     className: M,
     onNavigate: R
-  } = e, L = l.useRef(null), y = (0, o.useStateFromStores)([p.default], () => p.default.getGuildSidebarState(v), [v]), O = l.useRef(0), [j, P] = l.useState(null !== (t = null == y ? void 0 : y.details.additionalSearchQuery) && void 0 !== t ? t : {}), D = (0, S.useServerMessageHistoryForUser)(s, v, {
+  } = e, y = l.useRef(null), L = (0, o.useStateFromStores)([p.default], () => p.default.getGuildSidebarState(v), [v]), O = l.useRef(0), [j, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), D = (0, S.useServerMessageHistoryForUser)(s, v, {
     addtionalQuery: j,
     shouldDispatch: !0
   }), b = (0, o.useStateFromStores)([C.default], () => C.default.getUser(s), [s]), U = (0, o.useStateFromStores)([E.default], () => E.default.getMember(v, s), [v, s]), F = (0, T.useProfileThemedPanelBackground)(s, v);
   l.useLayoutEffect(() => {
-    let e = null == y ? void 0 : y.details.scrollOffset;
+    let e = null == L ? void 0 : L.details.scrollOffset;
     if (null != e) {
       var t;
-      null === (t = L.current) || void 0 === t || t.scrollTo({
+      null === (t = y.current) || void 0 === t || t.scrollTo({
         to: e,
         animate: !1
       })
     }
   }, []);
   let w = l.useCallback(e => {
-      if (null == y) return;
+      if (null == L) return;
       let t = e.target.scrollTop;
-      O.current = t, (0, g.openGuildMemberModViewSidebar)(v, s, y.baseChannelId, {
+      O.current = t, (0, g.openGuildMemberModViewSidebar)(v, s, L.baseChannelId, {
         modViewPanel: I.ModViewPanel.MESSAGE_HISTORY,
         additionalSearchQuery: j,
         scrollOffset: O.current
       })
-    }, [v, s, y, j]),
+    }, [v, s, L, j]),
     k = (0, r.throttle)(w, 300),
-    B = l.useCallback(e => {
-      if (null == y) return;
+    H = l.useCallback(e => {
+      if (null == L) return;
       let t = {
         ...j,
         offset: 25 * e
       };
-      P(t), (0, g.openGuildMemberModViewSidebar)(v, s, y.baseChannelId, {
+      P(t), (0, g.openGuildMemberModViewSidebar)(v, s, L.baseChannelId, {
         modViewPanel: I.ModViewPanel.MESSAGE_HISTORY,
         additionalSearchQuery: t,
         scrollOffset: O.current
       })
-    }, [v, s, y, j]),
-    H = null !== (n = null == j ? void 0 : j.offset) && void 0 !== n ? n : 0,
+    }, [v, s, L, j]),
+    B = null !== (n = null == j ? void 0 : j.offset) && void 0 !== n ? n : 0,
     G = (0, o.useStateFromStores)([c.default], () => {
       if (null == D.result) return [];
       let e = D.result.messages,
@@ -96,7 +96,7 @@ function v(e) {
         isSearching: !0,
         isIndexing: !1,
         isHistoricalIndexing: !1,
-        offset: H,
+        offset: B,
         totalResults: 0,
         hasError: !1,
         showBlockedResults: !1,
@@ -106,13 +106,13 @@ function v(e) {
         isSearching: !1,
         isIndexing: null !== (t = D.result.doing_deep_historical_index) && void 0 !== t && t,
         isHistoricalIndexing: null !== (n = D.result.doing_deep_historical_index) && void 0 !== n && n,
-        offset: H,
+        offset: B,
         totalResults: null !== (a = D.result.total_results) && void 0 !== a ? a : 0,
         hasError: !1,
         showBlockedResults: !1,
         showNoResultsAlt: !1
       }
-    }, [D.result, H]);
+    }, [D.result, B]);
   return null == b || null == U || null == V ? null : (0, a.jsxs)("div", {
     className: i()(A.container, M),
     style: {
@@ -124,7 +124,7 @@ function v(e) {
       onNavigate: R
     }), (0, a.jsx)(u.AdvancedScroller, {
       className: i()(N.innerContainer),
-      ref: L,
+      ref: y,
       onScroll: k,
       children: (0, a.jsx)(m.default, {
         searchResults: G,
@@ -133,7 +133,7 @@ function v(e) {
         renderEmbeds: !0,
         blockCount: 0,
         scrollTo: () => {},
-        onChangePage: B
+        onChangePage: H
       })
     })]
   })

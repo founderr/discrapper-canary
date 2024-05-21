@@ -31,8 +31,8 @@ var a, l, s = n("735250"),
   x = n("158631"),
   M = n("709369"),
   R = n("552740"),
-  L = n("358221"),
-  y = n("887012"),
+  y = n("358221"),
+  L = n("887012"),
   O = n("659580"),
   j = n("793865"),
   P = n("575175"),
@@ -42,8 +42,8 @@ var a, l, s = n("735250"),
   F = n("569545"),
   w = n("74299"),
   k = n("989941"),
-  B = n("803647"),
-  H = n("554747"),
+  H = n("803647"),
+  B = n("554747"),
   G = n("95764"),
   V = n("459502"),
   W = n("386542"),
@@ -101,14 +101,14 @@ function eN(e) {
   } = (0, W.usePerksDemo)(f.EntitlementFeatureNames.STREAM_HIGH_QUALITY), g = null != d && c && p, _ = i.useRef(null), T = t.getGuildId(), I = i.useCallback(() => {
     if (null == a || a(), !l) return (0, eC.default)();
     (0, eg.default)(T, t.id, e_.AnalyticsPages.GUILD_CHANNEL)
-  }, [T, t.id, l, a]), A = (0, h.useStateFromStores)([U.default, er.default], () => (0, k.default)(U.default, er.default)), M = (0, x.default)(), L = (0, v.default)() && null != A, y = () => {
-    L && (null == d ? (0, C.createBroadcastChannelOrStartStream)({
+  }, [T, t.id, l, a]), A = (0, h.useStateFromStores)([U.default, er.default], () => (0, k.default)(U.default, er.default)), M = (0, x.default)(), y = (0, v.default)() && null != A, L = () => {
+    y && (null == d ? (0, C.createBroadcastChannelOrStartStream)({
       channelId: t.id,
       pid: null == A ? void 0 : A.pid
     }) : (0, N.startBroadcastForStream)((0, F.encodeStreamKey)(d), null == A ? void 0 : A.pid))
   }, O = () => {
-    if (L) {
-      (0, R.openStartBroadcastConfirmModal)(y);
+    if (y) {
+      (0, R.openStartBroadcastConfirmModal)(L);
       return
     }
     if (l) {
@@ -117,9 +117,9 @@ function eN(e) {
     }(0, eC.default)()
   }, j = () => {
     if (M) {
-      (0, R.openStopBroadcastConfirmModal)(() => (0, B.default)(d));
+      (0, R.openStopBroadcastConfirmModal)(() => (0, H.default)(d));
       return
-    }(0, B.default)(d)
+    }(0, H.default)(d)
   }, P = (e, t) => {
     let {
       onClick: n,
@@ -204,14 +204,14 @@ let ex = i.memo(function(e) {
     currentUser: n,
     onDisconnectCall: a,
     channel: l
-  } = e, r = (0, h.useStateFromStores)([L.default], () => L.default.getSelectedParticipant(l.id)), {
+  } = e, r = (0, h.useStateFromStores)([y.default], () => y.default.getSelectedParticipant(l.id)), {
     reducedMotion: o
   } = i.useContext(m.AccessibilityPreferencesContext), [u, d] = i.useState(!1), f = null == r ? void 0 : r.id, p = (0, h.useStateFromStores)([en.default], () => null != f ? en.default.getActiveStreamForStreamKey(f) : null, [f]), g = (null == r ? void 0 : r.type) === eT.ParticipantTypes.STREAM && null != p && p.ownerId !== (null == n ? void 0 : n.id), S = (0, h.useStateFromStoresArray)([en.default], () => en.default.getAllActiveStreamsForChannel(l.id).filter(e => {
     let {
       ownerId: t
     } = e;
     return t !== (null == n ? void 0 : n.id)
-  })), _ = (0, H.useActiveEvent)(l.id), T = (0, x.useIsBroadcastingInChannel)(l.id), I = i.useCallback(() => {
+  })), _ = (0, B.useActiveEvent)(l.id), T = (0, x.useIsBroadcastingInChannel)(l.id), I = i.useCallback(() => {
     if ((null == r ? void 0 : r.type) === eT.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
     if (g) return "STREAM";
     if (null != _) return "EVENT";
@@ -238,7 +238,7 @@ let ex = i.memo(function(e) {
       else
         for (let e of S)(0, C.stopStream)((0, F.encodeStreamKey)(e))
     }, [S, p]),
-    y = (e, t) => {
+    L = (e, t) => {
       let i = {
         centerButton: !0,
         className: eI.controlButton,
@@ -308,7 +308,7 @@ let ex = i.memo(function(e) {
       } = t;
       return (0, s.jsx)(c.animated.div, {
         style: v,
-        children: y(a, n)
+        children: L(a, n)
       })
     }
   })
@@ -381,12 +381,12 @@ t.default = function(e) {
   })), S = (0, b.default)(), T = (0, h.useStateFromStores)([D.default], () => null != D.default.getAwaitingRemoteSessionInfo()), N = null != S, v = (0, h.useStateFromStores)([es.default], () => {
     var e;
     return (null !== (e = null == S ? void 0 : S.channelId) && void 0 !== e ? e : es.default.getVoiceChannelId()) === t.id
-  }), x = (0, y.default)(t, !0), M = (0, h.useStateFromStores)([_.default], () => {
+  }), x = (0, L.default)(t, !0), M = (0, h.useStateFromStores)([_.default], () => {
     let e = _.default.getSelfEmbeddedActivityForChannel(t.id);
     return null != e ? e.applicationId : null
   }), {
     reachedLimit: R,
-    limit: L
+    limit: y
   } = (0, ed.default)(t), {
     analyticsLocations: U
   } = (0, A.default)(I.default.VOICE_CONTROL_TRAY);
@@ -444,7 +444,7 @@ t.default = function(e) {
               onChange: eA,
               onCameraUnavailable: eE.default,
               channelLimitReached: R,
-              channelLimit: L,
+              channelLimit: y,
               popoutOpen: a,
               onPopoutClick: n
             })

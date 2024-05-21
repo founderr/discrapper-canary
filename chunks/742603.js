@@ -31,8 +31,8 @@ var l = n("120356"),
   x = n("502568"),
   M = n("792125"),
   R = n("358221"),
-  L = n("362721"),
-  y = n("887012"),
+  y = n("362721"),
+  L = n("887012"),
   O = n("613548"),
   j = n("221888"),
   P = n("339340"),
@@ -43,7 +43,7 @@ var l = n("120356"),
   w = n("32825"),
   k = n("946278");
 
-function B(e) {
+function H(e) {
   let {
     focusedParticipant: t,
     channel: n
@@ -60,7 +60,7 @@ function B(e) {
   })
 }
 
-function H(e) {
+function B(e) {
   let {
     user: t,
     channel: n,
@@ -88,7 +88,7 @@ function G(e) {
       focusedParticipant: l,
       channel: s
     } = e,
-    i = (0, y.default)(s, !0),
+    i = (0, L.default)(s, !0),
     o = (0, p.useActiveEvent)(s.id),
     u = null != o ? (0, E.getNextRecurrenceIdInEvent)(o) : null,
     c = null != o;
@@ -103,7 +103,7 @@ function G(e) {
       variant: "text-md/normal",
       color: "none",
       children: (0, d.default)(n.name)
-    }), i && (0, a.jsx)(B, {
+    }), i && (0, a.jsx)(H, {
       channel: s,
       focusedParticipant: l
     })]
@@ -114,12 +114,12 @@ function G(e) {
     t = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(x.default.Divider, {
         className: w.divider
-      }), (0, a.jsx)(H, {
+      }), (0, a.jsx)(B, {
         user: e,
         channel: s,
         stream: n,
         color: i ? "header-primary" : "none"
-      }), i && (0, a.jsx)(B, {
+      }), i && (0, a.jsx)(H, {
         channel: s,
         focusedParticipant: l
       })]
@@ -149,29 +149,29 @@ function V(e) {
     participantsOpen: R.default.getParticipantsOpen(t.id)
   }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), N = F.default.Messages.VOICE_CHANNEL;
   t.isDM() ? N = F.default.Messages.DM : t.isGroupDM() && (N = F.default.Messages.GROUP_DM);
-  let y = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
-    j = t.isGuildVoice() && u && null != y && y.length > 0,
-    B = (0, L.default)(t),
-    H = j ? (0, a.jsx)(r.Tooltip, {
+  let L = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
+    j = t.isGuildVoice() && u && null != L && L.length > 0,
+    H = (0, y.default)(t),
+    B = j ? (0, a.jsx)(r.Tooltip, {
       text: F.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
       position: "bottom",
-      shouldShow: B,
+      shouldShow: H,
       children: e => (0, a.jsxs)(r.Clickable, {
         ...e,
         className: s()(w.channelStatusClickable, {
-          [w.hoverable]: B
+          [w.hoverable]: H
         }),
-        onClick: B ? V : void 0,
+        onClick: H ? V : void 0,
         children: [(0, a.jsx)(r.Text, {
           variant: "text-xs/normal",
           className: s()(w.channelStatus, k.markup, {
-            [w.hoverable]: B
+            [w.hoverable]: H
           }),
-          children: _.default.parseVoiceChannelStatus(y, !0, {
+          children: _.default.parseVoiceChannelStatus(L, !0, {
             channelId: t.id
           })
-        }), B && (0, a.jsx)(v.default, {
+        }), H && (0, a.jsx)(v.default, {
           className: s()(w.pencilIcon, w.hoverable),
           width: 14,
           height: 14
@@ -198,7 +198,7 @@ function V(e) {
       onDoubleClick: g.handleDoubleClick,
       transparent: !0,
       className: (0, M.getThemeClass)(U.ThemeTypes.DARK),
-      childrenBottom: H,
+      childrenBottom: B,
       toolbar: (0, a.jsx)(O.default, {
         inPopout: o === b.AppContext.POPOUT,
         channel: t,

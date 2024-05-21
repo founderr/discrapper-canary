@@ -32,9 +32,9 @@ function T(e) {
     suppress: N
   } = (0, f.default)(t), v = (0, s.useStateFromStores)([p.default], () => p.default.isDeaf()), x = A || N || v, M = (0, u.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: x
-  }), [R, L] = (0, o.useGetDismissibleContent)(M);
+  }), [R, y] = (0, o.useGetDismissibleContent)(M);
 
-  function y(e) {
+  function L(e) {
     null != I && (0, r.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -66,7 +66,7 @@ function T(e) {
           onClose: n,
           gridNotice: R === i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(d.CustomCallSoundUpsell, {
             onClose: n,
-            markAsDismissed: L
+            markAsDismissed: y
           }),
           analyticsSource: "action bar button"
         })
@@ -81,7 +81,7 @@ function T(e) {
       }(),
       iconComponent: E.default,
       disabled: x,
-      onContextMenu: y,
+      onContextMenu: L,
       ...e
     })
   })

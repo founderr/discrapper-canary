@@ -9,7 +9,7 @@ var l = r("735250"),
   c = r("378233"),
   u = r("689938"),
   d = r("48875");
-let m = e => {
+let S = e => {
   let {
     stickerPack: t
   } = e;
@@ -40,7 +40,7 @@ t.default = n.memo(e => {
         className: d.heading,
         variant: "heading-sm/semibold",
         children: r.name
-      }), (0, l.jsx)(m, {
+      }), (0, l.jsx)(S, {
         stickerPack: r
       })]
     }), n && null != r.description && (0, l.jsx)(a.Text, {

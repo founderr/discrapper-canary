@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("560688"),
   M = n("390322"),
   R = n("871499"),
-  L = n("386000"),
-  y = n("25827"),
+  y = n("386000"),
+  L = n("25827"),
   O = n("314897"),
   j = n("131951"),
   P = n("496675"),
@@ -37,8 +37,8 @@ var a = n("735250"),
   F = n("389320"),
   w = n("696202"),
   k = n("398246"),
-  B = n("372662"),
-  H = n("740624"),
+  H = n("372662"),
+  B = n("740624"),
   G = n("250183"),
   V = n("87128"),
   W = n("881824"),
@@ -81,7 +81,7 @@ function eu(e) {
   return (0, a.jsx)(R.CenterControlButton, {
     isActive: i,
     label: (t = i, n = u, t ? ei.default.Messages.AUDIENCE_LOWER_HAND : n ? ei.default.Messages.AUDIENCE_RAISE_HAND_CTA : ei.default.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
-    iconComponent: () => (0, a.jsx)(H.default, {
+    iconComponent: () => (0, a.jsx)(B.default, {
       className: i ? er.raisedHandButtonIconActive : er.raisedHandButtonIcon
     }),
     onClick: o,
@@ -116,7 +116,7 @@ function ec(e) {
     onClick: t,
     children: (0, a.jsxs)("div", {
       className: er.buttonWithTextInnerContainer,
-      children: [(0, a.jsx)(B.default, {
+      children: [(0, a.jsx)(H.default, {
         height: 24,
         width: 24,
         className: er.buttonWithTextIcon
@@ -306,9 +306,9 @@ let ep = l.memo(function(e) {
   } = (0, T.default)(), S = (0, A.default)(t), {
     limit: _,
     reachedLimit: R
-  } = (0, I.default)(t), O = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), P = (0, r.useStateFromStores)([j.default], () => (0, E.default)(j.default)), U = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), F = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), w = (0, Q.useStageHasMedia)(t.id), k = _ > 0, B = R && !w || null != F && F.user.id !== (null == O ? void 0 : O.id);
+  } = (0, I.default)(t), O = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), P = (0, r.useStateFromStores)([j.default], () => (0, E.default)(j.default)), U = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), F = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), w = (0, Q.useStageHasMedia)(t.id), k = _ > 0, H = R && !w || null != F && F.user.id !== (null == O ? void 0 : O.id);
   if (null == O) return null;
-  let H = (0, a.jsxs)(a.Fragment, {
+  let B = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Popout, {
       renderPopout: e => {
         let {
@@ -329,7 +329,7 @@ let ep = l.memo(function(e) {
         } = e, {
           isShown: l
         } = t;
-        return (0, a.jsx)(y.default, {
+        return (0, a.jsx)(L.default, {
           centerButton: !0,
           hasPermission: S,
           enabled: g,
@@ -348,7 +348,7 @@ let ep = l.memo(function(e) {
       exitFullScreen: () => null,
       canGoLive: P,
       hasPermission: S,
-      disabled: B
+      disabled: H
     })]
   });
   return (0, a.jsxs)("div", {
@@ -359,7 +359,7 @@ let ep = l.memo(function(e) {
       channel: t
     }), U && !n ? (0, a.jsxs)("div", {
       className: i()(er.avControls, er.buttonSpacing),
-      children: [k && _ > 0 && H, (0, a.jsx)(o.Popout, {
+      children: [k && _ > 0 && B, (0, a.jsx)(o.Popout, {
         renderPopout: e => {
           let {
             closePopout: t
@@ -381,7 +381,7 @@ let ep = l.memo(function(e) {
           } = e, {
             isShown: r
           } = t;
-          return (0, a.jsx)(L.default, {
+          return (0, a.jsx)(y.default, {
             centerButton: !0,
             onPopoutClick: i,
             selfMute: l,

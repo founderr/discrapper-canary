@@ -53,8 +53,8 @@ function h(e) {
     image: A,
     imageName: s,
     savedImageName: h,
-    onChange: m,
-    uploadButtonLabel: T = c.default.Messages.UPLOAD_IMAGE,
+    onChange: T,
+    uploadButtonLabel: m = c.default.Messages.UPLOAD_IMAGE,
     radioGroupAriaLabel: p = c.default.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
     disabled: U = !1
   } = e, v = s === g, [I, E] = l.useState(v ? A : null), [x, N] = l.useState(null), D = l.useRef(null), q = l.useRef(null);
@@ -73,7 +73,7 @@ function h(e) {
       return null === (e = D.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
     },
     P = () => {
-      s === g && m(t[0].data, t[0].name), E(null), N(null)
+      s === g && T(t[0].data, t[0].name), E(null), N(null)
     };
   return l.useEffect(() => {
     if (v && null != x) {
@@ -99,14 +99,14 @@ function h(e) {
           variant: "text-xxs/normal",
           color: "text-muted",
           "aria-hidden": !0,
-          children: T
+          children: m
         }), (0, a.jsx)(i.default, {
           ref: D,
           tabIndex: 0,
           onChange: (e, t) => {
-            null != t && (N(t.name), E(e), m(e, g))
+            null != t && (N(t.name), E(e), T(e, g))
           },
-          "aria-label": T
+          "aria-label": m
         })]
       })
     }), null != I && (0, a.jsxs)("div", {
@@ -147,14 +147,14 @@ function h(e) {
       children: [null != I && (0, a.jsx)(C, {
         ref: q,
         selectedImageName: s,
-        onChange: m,
+        onChange: T,
         disabled: U,
         name: g,
         alt: L,
         data: I
       }), t.map(e => (0, a.jsx)(C, {
         selectedImageName: s,
-        onChange: m,
+        onChange: T,
         disabled: U,
         ...e
       }, e.name))]

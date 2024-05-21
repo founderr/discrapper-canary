@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("703558"),
   M = n("375954"),
   R = n("496675"),
-  L = n("117530"),
-  y = n("153124"),
+  y = n("117530"),
+  L = n("153124"),
   O = n("465670"),
   j = n("663949"),
   P = n("934458"),
@@ -41,8 +41,8 @@ var a = n("735250"),
   F = n("127654"),
   w = n("241309"),
   k = n("928477"),
-  B = n("456077"),
-  H = n("488131"),
+  H = n("456077"),
+  B = n("488131"),
   G = n("602034"),
   V = n("981631"),
   W = n("689938"),
@@ -71,7 +71,7 @@ function Z(e) {
           toolbar: (0, a.jsx)(D.default.Icon, {
             icon: O.default,
             tooltip: W.default.Messages.CLOSE,
-            onClick: () => (0, H.closeAndClearThreadSidebar)(t)
+            onClick: () => (0, B.closeAndClearThreadSidebar)(t)
           }),
           children: [(0, a.jsx)(D.default.Icon, {
             icon: P.default,
@@ -155,7 +155,7 @@ function q(e) {
       threadSettings: a,
       privateThreadMode: s,
       location: r,
-      onThreadCreated: H.openThreadSidebarForViewing,
+      onThreadCreated: B.openThreadSidebarForViewing,
       useDefaultThreadName: !0
     });
     return {
@@ -163,7 +163,7 @@ function q(e) {
       messageError: d,
       submit: l.useCallback(async (e, l, s) => {
         var r, o, d;
-        null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = I.default.getStickerPreview(t.id, K.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = L.default.getUploads(t.id, x.DraftType.FirstThreadMessage));
+        null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = I.default.getStickerPreview(t.id, K.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = y.default.getUploads(t.id, x.DraftType.FirstThreadMessage));
         let h = null !== (o = a.name) && void 0 !== o ? o : "",
           m = null == n && 0 === h.length,
           p = "" === e && (null == l || 0 === l.length) && 0 === s.length;
@@ -314,7 +314,7 @@ function Q(e) {
     error: r
   } = e, u = null !== (t = s.name) && void 0 !== t ? t : "", c = (0, w.renderError)(r, {
     content: u
-  }), f = (0, k.getDefaultThreadName)(n, l), h = null != l, m = (0, y.useUID)();
+  }), f = (0, k.getDefaultThreadName)(n, l), h = null != l, m = (0, L.useUID)();
   return (0, a.jsx)(o.FormSection, {
     tag: "label",
     htmlFor: m,
@@ -327,11 +327,11 @@ function Q(e) {
       maxLength: V.MAX_CHANNEL_NAME_LENGTH,
       onChange: e => {
         i({
-          name: (0, B.default)(e, !1)
+          name: (0, H.default)(e, !1)
         }), "" !== e ? d.default.startTyping(n.id) : d.default.stopTyping(n.id)
       },
       onBlur: () => {
-        let e = (0, B.default)(u, !0);
+        let e = (0, H.default)(u, !0);
         e !== u && i({
           name: e
         })

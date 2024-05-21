@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("68588"),
   M = n("459273"),
   R = n("255269"),
-  L = n("47481"),
-  y = n("977391"),
+  y = n("47481"),
+  L = n("977391"),
   O = n("73274"),
   j = n("419388"),
   P = n("406534"),
@@ -52,34 +52,34 @@ let F = l.memo(function(e) {
     fontSize: v,
     keyboardModeEnabled: x,
     filterAfterTimestamp: R,
-    showingQuarantineBanner: L,
+    showingQuarantineBanner: y,
     hideSummaries: F = !1
-  } = e, [w, k] = l.useState(!1), B = l.useMemo(() => S ? (0, y.generateMessageSpecs)({
+  } = e, [w, k] = l.useState(!1), H = l.useMemo(() => S ? (0, L.generateMessageSpecs)({
     compact: !0,
     messageGroups: 30,
     groupRange: 4,
     attachments: 8,
     fontSize: v,
     groupSpacing: c
-  }) : (0, y.generateMessageSpecs)({
+  }) : (0, L.generateMessageSpecs)({
     compact: !1,
     messageGroups: 26,
     groupRange: 4,
     attachments: 8,
     fontSize: v,
     groupSpacing: c
-  }), [S, v, c]), H = (0, j.default)({
+  }), [S, v, c]), B = (0, j.default)({
     messages: E,
     channel: m,
     compact: S,
     hasUnreads: A,
     focusId: N,
-    placeholderHeight: B.totalHeight,
+    placeholderHeight: H.totalHeight,
     canLoadMore: null == R,
     handleScrollToBottom: l.useCallback(() => k(!0), [k]),
     handleScrollFromBottom: l.useCallback(() => k(!1), [k])
   }), G = (0, O.default)({
-    scrollerRef: H.ref,
+    scrollerRef: B.ref,
     isEditing: null != N,
     keyboardModeEnabled: x,
     hasMoreAfter: E.hasMoreAfter
@@ -99,17 +99,17 @@ let F = l.memo(function(e) {
       messageDisplayCompact: S,
       channelStream: _,
       uploads: T,
-      loadMore: H.loadMore,
-      scrollManager: H,
-      specs: B,
+      loadMore: B.loadMore,
+      scrollManager: B,
+      specs: H,
       filterAfterTimestamp: null != R ? R : V,
-      showingQuarantineBanner: L,
+      showingQuarantineBanner: y,
       hideSummaries: F,
       isAtBottom: w,
       jumpToPresent: () => {
         if (E.hasPresent()) {
           var e;
-          null === (e = H.ref.current) || void 0 === e || e.scrollToBottom({
+          null === (e = B.ref.current) || void 0 === e || e.scrollToBottom({
             animate: !f.default.useReducedMotion
           })
         } else d.default.jumpToPresent(m.id, D.MAX_MESSAGES_PER_CHANNEL)
@@ -142,7 +142,7 @@ let F = l.memo(function(e) {
       event: D.ComponentActions.SCROLL_PAGE_DOWN,
       handler: a
     })
-  }(H.ref);
+  }(B.ref);
   let q = (0, u.useFocusJumpSection)(),
     {
       ref: X,
@@ -150,7 +150,7 @@ let F = l.memo(function(e) {
     } = (0, r.getContainerPropsFromNavigator)(G),
     J = l.useCallback(e => {
       var t;
-      H.ref.current = e, X.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
+      B.ref.current = e, X.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
     }, []);
   return (0, a.jsxs)(r.ListNavigatorProvider, {
     navigator: G,
@@ -161,10 +161,10 @@ let F = l.memo(function(e) {
         customTheme: !0,
         className: i()(h, U.scroller),
         contentClassName: U.scrollerContent,
-        onResize: H.handleResize,
-        onScroll: H.handleScroll,
-        onMouseDown: H.handleMouseDown,
-        onMouseUp: H.handleMouseUp,
+        onResize: B.handleResize,
+        onScroll: B.handleScroll,
+        onMouseDown: B.handleMouseDown,
+        onMouseUp: B.handleMouseUp,
         ...q,
         tabIndex: -1,
         role: "group",
@@ -181,7 +181,7 @@ let F = l.memo(function(e) {
             children: b.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
           }), W, (0, a.jsx)("div", {
             className: i()({
-              [U.scrollerSpacer]: !L,
+              [U.scrollerSpacer]: !y,
               [U.empty]: 0 === E.length && !E.loadingMore,
               [U.emptyForum]: 1 === E.length && !E.loadingMore && m.isForumPost() && (null === (t = E.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(m))
             })
@@ -219,7 +219,7 @@ t.default = l.memo(function(e) {
       canManageMessages: a
     }
   }(t), {
-    messageGroupSpacing: y,
+    messageGroupSpacing: L,
     fontSize: O,
     messageDisplayCompact: j,
     renderSpoilers: P,
@@ -254,7 +254,7 @@ t.default = l.memo(function(e) {
     messages: U,
     channelStream: w,
     oldestUnreadMessageId: k,
-    editingMessageId: B
+    editingMessageId: H
   } = function(e) {
     var t, n;
     let a = (0, o.useStateFromStores)([T.default], () => T.default.getMessages(e.id), [e.id]),
@@ -277,7 +277,7 @@ t.default = l.memo(function(e) {
         return u && d && null !== (t = E.default.summaries(e.id)) && void 0 !== t ? t : []
       }, [u, e.id, d]),
       p = (0, o.useStateFromStores)([E.default], () => u ? E.default.selectedSummary(e.id) : null, [u, e.id]),
-      C = l.useMemo(() => (0, L.default)({
+      C = l.useMemo(() => (0, y.default)({
         channel: e,
         messages: a,
         oldestUnreadMessageId: s,
@@ -299,7 +299,7 @@ t.default = l.memo(function(e) {
     value: (0, R.default)(P, d),
     children: (0, a.jsx)(F, {
       ...u,
-      messageGroupSpacing: y,
+      messageGroupSpacing: L,
       showNewMessagesBar: !0,
       channel: t,
       messageDisplayCompact: !r && (i || j),
@@ -310,7 +310,7 @@ t.default = l.memo(function(e) {
       unreadCount: (0, o.useStateFromStores)([A.default], () => A.default.getUnreadCount(t.id), [t]),
       hasUnreads: null != k,
       canChat: M,
-      editingMessageId: B,
+      editingMessageId: H,
       fontSize: O,
       keyboardModeEnabled: b,
       showingQuarantineBanner: n,

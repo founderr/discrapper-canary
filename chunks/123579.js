@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("594174"),
   M = n("979651"),
   R = n("5192"),
-  L = n("51144"),
-  y = n("342656"),
+  y = n("51144"),
+  L = n("342656"),
   O = n("785717"),
   j = n("221292"),
   P = n("484459"),
@@ -37,8 +37,8 @@ var a = n("735250"),
   F = n("162267"),
   w = n("87728"),
   k = n("502762"),
-  B = n("171368"),
-  H = n("944546"),
+  H = n("171368"),
+  B = n("944546"),
   G = n("470900"),
   V = n("421486"),
   W = n("347949"),
@@ -126,8 +126,8 @@ t.default = e => {
         }) : null
       }
     }),
-    eL = null != eA || null != eR || ev,
-    ey = null !== (t = R.default.getNickname(null, n.id, eh)) && void 0 !== t ? t : L.default.getName(eh),
+    ey = null != eA || null != eR || ev,
+    eL = null !== (t = R.default.getNickname(null, n.id, eh)) && void 0 !== t ? t : y.default.getName(eh),
     eO = (0, u.useStateFromStores)([v.default], () => v.default.hidePersonalInformation),
     {
       mutualFriends: ej,
@@ -162,7 +162,7 @@ t.default = e => {
       status: eM
     })
   }, [ep, ex, eA, eN, eM, e_]);
-  let eB = null == eD ? void 0 : eD.map(e => {
+  let eH = null == eD ? void 0 : eD.map(e => {
       let {
         guild: t,
         nick: n
@@ -175,16 +175,16 @@ t.default = e => {
         onSelect: () => (0, g.transitionToGuild)(t.id)
       }, t.id)
     }),
-    eH = null == ej ? void 0 : ej.map(e => {
+    eB = null == ej ? void 0 : ej.map(e => {
       let {
         key: t,
         user: l
       } = e;
-      return (0, a.jsx)(H.FriendRow, {
+      return (0, a.jsx)(B.FriendRow, {
         user: l,
         status: null != eM ? eM : es.StatusTypes.UNKNOWN,
         onSelect: () => {
-          (0, B.openUserProfileModal)({
+          (0, H.openUserProfileModal)({
             userId: l.id,
             channelId: n.id,
             sourceAnalyticsLocations: ef,
@@ -206,7 +206,7 @@ t.default = e => {
     eK = eh.bot || ez,
     {
       enabled: eZ
-    } = (0, y.useProfileMutualsExperiment)({
+    } = (0, L.useProfileMutualsExperiment)({
       autoTrackExposure: !0,
       location: f.default.PROFILE,
       disable: eK
@@ -246,7 +246,7 @@ t.default = e => {
             }), (0, a.jsxs)(k.default.Overlay, {
               children: [(0, a.jsx)($.default, {
                 user: eh,
-                nickname: ey,
+                nickname: eL,
                 pronouns: null == ep ? void 0 : ep.pronouns
               }), (0, a.jsx)(X.default, {
                 customStatusActivity: eN,
@@ -268,7 +268,7 @@ t.default = e => {
                 user: eh,
                 setNote: !1
               })]
-            }), eL ? (0, a.jsx)(k.default.Overlay, {
+            }), ey ? (0, a.jsx)(k.default.Overlay, {
               children: (0, a.jsx)(Z.default, {
                 activity: null != eA || ev ? eA : eR,
                 user: eh,
@@ -302,7 +302,7 @@ t.default = e => {
                     analyticsLocations: ef
                   })
                 },
-                children: eB
+                children: eH
               }) : null, eU ? (0, a.jsx)(en.default, {
                 className: i()(er.mutualFriendsList, {
                   [er.mutualFriendsDivider]: eF
@@ -323,7 +323,7 @@ t.default = e => {
                     analyticsLocations: ef
                   })
                 },
-                children: eH
+                children: eB
               }) : null]
             }), eg && (0, a.jsx)(k.default.Overlay, {
               className: i()(er.profilePanelConnections, er.appListThemedContainer),

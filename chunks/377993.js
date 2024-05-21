@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("233870"),
   M = n("51144"),
   R = n("998502"),
-  L = n("276264"),
-  y = n("981631"),
+  y = n("276264"),
+  L = n("981631"),
   O = n("689938"),
   j = n("895294"),
   P = n("67431");
@@ -76,12 +76,12 @@ function b(e) {
           decoration: "never"
         })),
         n = "<@".concat(t.id, ">");
-      v.ComponentDispatch.dispatchToLastSubscribed(y.ComponentActions.INSERT_TEXT, {
+      v.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.INSERT_TEXT, {
         plainText: e,
         rawText: n
       }), u.default.startTyping(l.id)
     },
-    children: e => (0, a.jsx)(L.default, {
+    children: e => (0, a.jsx)(y.default, {
       user: t,
       currentUser: S,
       isOwner: t.id === l.ownerId,
@@ -185,7 +185,7 @@ function F(e) {
         channelId: t.id
       })
   }, [o, m, t.id]), l.useEffect(() => {
-    A.default.track(y.AnalyticEvents.MEMBER_LIST_VIEWED, {
+    A.default.track(L.AnalyticEvents.MEMBER_LIST_VIEWED, {
       channel_id: t.id,
       channel_type: t.type,
       guild_id: t.guild_id

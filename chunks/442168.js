@@ -78,9 +78,9 @@ function g(e) {
       },
       config: p
     }),
-    L = (0, l.useRef)(null),
-    y = (0, s.useTransition)(A, {
-      ref: L,
+    y = (0, l.useRef)(null),
+    L = (0, s.useTransition)(A, {
+      ref: y,
       keys: e => e.timestamp,
       from: e => ({
         position: "fixed",
@@ -111,7 +111,7 @@ function g(e) {
         null != t.item && null != A.find(e => e.timestamp === t.item.timestamp) && (0, u.dismissSaveClipAnimation)(T, t.item.timestamp)
       }
     });
-  return (0, s.useChain)([M, L], [0, .1], 3e3), (0, a.jsxs)(a.Fragment, {
+  return (0, s.useChain)([M, y], [0, .1], 3e3), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: h.hidden,
       ref: S
@@ -121,7 +121,7 @@ function g(e) {
     })), (0, a.jsx)(f.default, {
       children: (0, a.jsx)("div", {
         className: h.hidden,
-        children: y((e, t, n, l) => (null == t ? void 0 : t.thumbnail) != null && (0, a.jsx)(s.animated.img, {
+        children: L((e, t, n, l) => (null == t ? void 0 : t.thumbnail) != null && (0, a.jsx)(s.animated.img, {
           src: t.thumbnail,
           className: h.movingImage,
           style: e

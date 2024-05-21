@@ -11,7 +11,7 @@ var l, n = s("735250"),
   f = s("689938"),
   C = s("124444");
 
-function m(e, t, s) {
+function h(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -19,7 +19,7 @@ function m(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class h extends(l = a.PureComponent) {
+class R extends(l = a.PureComponent) {
   componentWillUnmount() {
     this._timeout.stop()
   }
@@ -76,12 +76,12 @@ class h extends(l = a.PureComponent) {
     }
   }
   constructor(e) {
-    super(e), m(this, "_timeout", void 0), this.state = {
+    super(e), h(this, "_timeout", void 0), this.state = {
       mode: d.default.Modes.DEFAULT
     }, this._timeout = new i.Timeout, this.handleCopy = this.handleCopy.bind(this)
   }
 }
-m(h, "defaultProps", {
+h(R, "defaultProps", {
   isVertical: !1,
   delay: 300
-}), t.default = h
+}), t.default = R

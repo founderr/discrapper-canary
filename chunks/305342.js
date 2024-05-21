@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("761966"),
   M = n("893729"),
   R = n("838940"),
-  L = n("882101"),
-  y = n("11705"),
+  y = n("882101"),
+  L = n("11705"),
   O = n("81273"),
   j = n("293810"),
   P = n("981631"),
@@ -188,7 +188,7 @@ t.default = e => {
   } = (0, O.default)(p, s, h, m), M = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
     activeSubscription: R,
     activeSubscriptionListing: U
-  } = (0, T.default)(h), F = (null == U ? void 0 : U.id) === n, B = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [H, G] = l.useState(!1), [V, W] = l.useState(!1), Y = l.useCallback(e => {
+  } = (0, T.default)(h), F = (null == U ? void 0 : U.id) === n, H = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [B, G] = l.useState(!1), [V, W] = l.useState(!1), Y = l.useCallback(e => {
     let t = !1;
     null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t)
   }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [q] = _.useTrialLimit(n), X = (0, I.default)(s, n), Q = null != Z && null == R && X, J = (0, u.default)(j.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = l.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), ea = (null == p ? void 0 : p.published) === !0, el = (null == p ? void 0 : p.soft_deleted) === !0, es = D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
@@ -216,12 +216,12 @@ t.default = e => {
       className: Q ? void 0 : b.cardContainerWithoutTopIndicator,
       children: [(0, a.jsxs)("div", {
         className: b.tierInfoContainer,
-        children: [J ? (0, a.jsx)(y.GuildRoleSubscriptionCollapsibleCardBasicInfo, {
+        children: [J ? (0, a.jsx)(L.GuildRoleSubscriptionCollapsibleCardBasicInfo, {
           listingId: n,
           isListingPublished: ea,
           expanded: et,
           onToggleExpanded: () => ee(e => !e)
-        }) : (0, a.jsx)(L.GuildRoleSubscriptionCardBasicInfo, {
+        }) : (0, a.jsx)(y.GuildRoleSubscriptionCardBasicInfo, {
           listingId: n,
           isListingPublished: ea
         }), et && (0, a.jsxs)(a.Fragment, {
@@ -232,7 +232,7 @@ t.default = e => {
             look: o.Button.Looks.OUTLINED,
             color: o.Button.Colors.PRIMARY,
             disabled: !0,
-            children: B ? D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
+            children: H ? D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
           }) : (0, a.jsx)(o.Tooltip, {
             text: A ? null : N,
             "aria-label": null !== (t = A && N) && void 0 !== t && t,
@@ -250,13 +250,13 @@ t.default = e => {
           }), (0, a.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "text-normal",
-            className: i()((!V || !H) && b.tierDescriptionTruncate),
+            className: i()((!V || !B) && b.tierDescriptionTruncate),
             children: (0, a.jsx)("div", {
               ref: Y,
               children: K
             })
           }), V && (0, a.jsx)(k, {
-            isViewAll: H,
+            isViewAll: B,
             onToggle: () => G(e => !e),
             showMoreText: es
           })]

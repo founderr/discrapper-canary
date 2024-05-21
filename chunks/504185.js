@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("800965"),
   M = n("107169"),
   R = n("891551"),
-  L = n("314897"),
-  y = n("979696"),
+  y = n("314897"),
+  L = n("979696"),
   O = n("430824"),
   j = n("496675"),
   P = n("944486"),
@@ -41,8 +41,8 @@ var a = n("735250"),
   F = n("922482"),
   w = n("431328"),
   k = n("501655"),
-  B = n("427679"),
-  H = n("513449"),
+  H = n("427679"),
+  B = n("513449"),
   G = n("153349"),
   V = n("901434"),
   W = n("302270"),
@@ -75,7 +75,7 @@ function el(e) {
     popoutWindow: i,
     popoutWindowAlwaysOnTop: r,
     selectedParticipant: u
-  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([P.default], () => P.default.getMostRecentSelectedTextChannelId(d), [d]), f = L.default.getId(), h = !(0, o.useStateFromStores)([E.default], () => E.default.isFullscreenInContext(n)) && (!D.isPlatformEmbedded || D.isPlatformEmbedded && U.default.supportsFeature(X.NativeFeatures.POPOUT_WINDOWS)), m = null != u && u.type !== Q.ParticipantTypes.ACTIVITY && u.user.id !== f, p = l.useMemo(() => {
+  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([P.default], () => P.default.getMostRecentSelectedTextChannelId(d), [d]), f = y.default.getId(), h = !(0, o.useStateFromStores)([E.default], () => E.default.isFullscreenInContext(n)) && (!D.isPlatformEmbedded || D.isPlatformEmbedded && U.default.supportsFeature(X.NativeFeatures.POPOUT_WINDOWS)), m = null != u && u.type !== Q.ParticipantTypes.ACTIVITY && u.user.id !== f, p = l.useMemo(() => {
     var e;
     return null !== (e = null == i ? void 0 : i.window) && void 0 !== e ? e : window
   }, [i]), g = (0, Z.default)({
@@ -107,7 +107,7 @@ function el(e) {
 function es(e) {
   let {
     channel: t
-  } = e, n = (0, h.useAppContext)(), l = (0, o.useStateFromStores)([j.default], () => j.default.can(X.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id)), i = (0, o.useStateFromStores)([B.default], () => B.default.getStageInstanceByChannel(t.id)), r = l || (null == i ? void 0 : i.invite_code) != null;
+  } = e, n = (0, h.useAppContext)(), l = (0, o.useStateFromStores)([j.default], () => j.default.can(X.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id)), i = (0, o.useStateFromStores)([H.default], () => H.default.getStageInstanceByChannel(t.id)), r = l || (null == i ? void 0 : i.invite_code) != null;
   return null != s && r ? (0, a.jsx)(A.default, {
     channel: t,
     appContext: n,
@@ -135,14 +135,14 @@ function ei(e) {
     [A, x] = l.useState(0),
     {
       isOnStartStageScreen: M
-    } = (0, H.default)();
-  (0, H.useUpdateIsOnStartStageScreenEffect)(n);
-  let R = (0, o.useStateFromStores)([y.default], () => y.default.getToastsEnabled(n.id)),
-    L = (0, q.default)(n) ? null != T ? "84px" : "124px" : null != T ? "0px" : "48px";
+    } = (0, B.default)();
+  (0, B.useUpdateIsOnStartStageScreenEffect)(n);
+  let R = (0, o.useStateFromStores)([L.default], () => L.default.getToastsEnabled(n.id)),
+    y = (0, q.default)(n) ? null != T ? "84px" : "124px" : null != T ? "0px" : "48px";
   return t = M ? (0, a.jsx)(K.default, {
     channel: n,
     onContinueClick: () => {
-      (0, H.setIsOnStartStageScreen)(!1), !C && (0, F.connectToStage)(n)
+      (0, B.setIsOnStartStageScreen)(!1), !C && (0, F.connectToStage)(n)
     }
   }) : C ? (0, a.jsx)(Y.default, {
     channel: n,
@@ -160,8 +160,8 @@ function ei(e) {
     hasConnectPermission: S
   }), (0, a.jsx)(v.default, {
     style: {
-      height: "calc(100% - ".concat(L, ")"),
-      paddingTop: L
+      height: "calc(100% - ".concat(y, ")"),
+      paddingTop: y
     },
     disableGradients: 0 === A && v.DisableGradient.TOP,
     renderBottomLeft: () => (0, a.jsx)(es, {

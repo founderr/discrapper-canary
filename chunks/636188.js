@@ -36,7 +36,7 @@ var s = a("735250"),
   U = a("689938"),
   j = a("169880");
 
-function P(e) {
+function V(e) {
   let {
     icon: t,
     onClick: a,
@@ -77,7 +77,7 @@ function P(e) {
   })
 }
 
-function V(e) {
+function P(e) {
   let {
     option: t,
     source: a,
@@ -125,7 +125,7 @@ function S(e) {
     loop: !0,
     playOnHover: !0,
     muted: !0
-  }) : (0, s.jsx)(V, {
+  }) : (0, s.jsx)(P, {
     isAnimated: A,
     option: (0, C.isCustomBackgroundOption)(t) ? t : void 0,
     source: n
@@ -200,7 +200,7 @@ function b(e) {
   return (0, s.jsxs)(c.TooltipContainer, {
     text: r,
     className: j.newBackgroundTooltipContainer,
-    children: [(0, s.jsxs)(P, {
+    children: [(0, s.jsxs)(V, {
       className: j.__invalid_backgroundOptionBlurred,
       disabled: n,
       icon: A.default,
@@ -298,12 +298,12 @@ function H(e) {
     value: A,
     children: (0, s.jsxs)("div", {
       className: d ? j.backgroundOptionsSmall : j.backgroundOptionsLarge,
-      children: [(0, s.jsx)(P, {
+      children: [(0, s.jsx)(V, {
         selected: null == l,
         icon: f.default,
         onClick: () => o(null),
         text: U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_NONE
-      }), (0, s.jsx)(P, {
+      }), (0, s.jsx)(V, {
         className: j.__invalid_backgroundOptionBlurred,
         selected: l === R.BLUR_BACKGROUND_OPTION,
         icon: p.default,
