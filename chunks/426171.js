@@ -1,7 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
-  useProductDetailsDeepLinking: function() {
+  useCategoryDeepLinking: function() {
     return E
+  },
+  useProductDetailsDeepLinking: function() {
+    return g
   },
   useProductDetailsLinkableRoute: function() {
     return m
@@ -13,11 +16,11 @@ var l = a("470079"),
   n = a("100527"),
   i = a("906732"),
   o = a("328347"),
-  u = a("237031"),
-  c = a("981631");
+  c = a("237031"),
+  u = a("981631");
 let d = "".concat("#").concat("itemSkuId", "="),
   f = new RegExp("^".concat(d, "(\\d+)$")),
-  C = [c.Routes.COLLECTIBLES_SHOP, c.Routes.COLLECTIBLES_SHOP_FULLSCREEN],
+  C = [u.Routes.COLLECTIBLES_SHOP, u.Routes.COLLECTIBLES_SHOP_FULLSCREEN],
   m = e => {
     let t = (0, s.useLocation)();
     l.useEffect(() => {
@@ -45,7 +48,7 @@ let d = "".concat("#").concat("itemSkuId", "="),
         });
         let a = setTimeout(() => {
           let a = document.getElementById("shop-item-".concat(t.skuId));
-          a !== document.activeElement && (null == a || a.focus()), (0, u.openCollectiblesShopProductDetailsModal)({
+          a !== document.activeElement && (null == a || a.focus()), (0, c.openCollectiblesShopProductDetailsModal)({
             product: t,
             category: e,
             analyticsSource: s,
@@ -58,35 +61,35 @@ let d = "".concat("#").concat("itemSkuId", "="),
     }
     return () => {}
   },
-  E = e => {
+  g = e => {
     let {
       categories: t,
       isFetchingCategories: a,
-      isLayer: u,
+      isLayer: c,
       initialItemCardRef: d
-    } = e, C = l.useRef(null), m = (0, s.useLocation)(), E = m.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : m.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
-      analyticsLocations: h
-    } = (0, i.default)(E);
+    } = e, C = l.useRef(null), m = (0, s.useLocation)(), g = m.pathname === u.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : m.pathname === u.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
+      analyticsLocations: E
+    } = (0, i.default)(g);
     l.useEffect(() => {
-      if (u) return;
+      if (c) return;
       let e = f.exec(m.hash);
       if (null != e) {
         let t = e[1];
         C.current = t
       }
     }, []);
-    let g = (0, r.useStateFromStores)([o.default], () => o.default.initialProductSkuId);
+    let h = (0, r.useStateFromStores)([o.default], () => o.default.initialProductSkuId);
     l.useEffect(() => {
       if (a) return;
       let e = null;
-      if (u && null != g && (e = g), !u && null != C.current && (e = C.current), null != e) {
+      if (c && null != h && (e = h), !c && null != C.current && (e = C.current), null != e) {
         let a = [],
           l = setTimeout(() => {
             let l = p({
               categories: t,
               productSkuId: e,
-              analyticsLocations: h,
-              analyticsSource: E,
+              analyticsLocations: E,
+              analyticsSource: g,
               initialItemCardRef: d
             });
             a.push(l)
@@ -95,5 +98,21 @@ let d = "".concat("#").concat("itemSkuId", "="),
           a.forEach(e => e())
         }
       }
-    }, [u, h, E, t, a, g, d])
+    }, [c, E, g, t, a, h, d])
+  },
+  E = () => {
+    let e = l.useRef({}),
+      t = l.useCallback((t, a) => {
+        e.current[t] = a
+      }, []);
+    return {
+      setCategoryRef: t,
+      handleScrollToCategory: l.useCallback(t => {
+        var a;
+        null === (a = e.current[t]) || void 0 === a || a.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        })
+      }, [])
+    }
   }
