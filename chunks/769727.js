@@ -99,7 +99,11 @@ let A = i.memo(function(e) {
         (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.GET_STARTED);
         return
       }
-    }, [O.length, R.length, v, L, N]), a) {
+      if (L && a === S.ClanDiscoveryMode.ADMIN_UPSELL && 0 === O.length) {
+        (0, S.setClanDiscoveryMode)(S.ClanDiscoveryMode.GET_STARTED), S.useClanDiscoveryUIStore.getState().setUserUpsellScreen(S.ClanDiscoveryUserScreens.USER_UPSELL);
+        return
+      }
+    }, [O.length, R.length, v, L, a, N]), a) {
     case S.ClanDiscoveryMode.ADMIN_UPSELL:
       return (0, l.jsx)(p.ClanDiscoveryAdminContainer, {});
     case S.ClanDiscoveryMode.GET_STARTED:
