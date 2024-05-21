@@ -99358,6 +99358,35 @@ div.content_aac020 {
     position: relative
 }
 
+.bundlePreviewContainer__4f4af {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.bundlePreviewSlide_dc62a3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    width: 276px
+}
+
+.bundleAvatarPreviewContainer_e07383 {
+    padding: 30px
+}
+
+.bundlePfxPreviewContainer_ec3791 {
+    height: 245px;
+    width: 148px;
+    position: relative
+}
+
+.bundleSlideTitle_f39228 {
+    text-align: center;
+    padding-top: 8px
+}
+
 .sampleProfileAsset__4d996 {
     width: 100%
 }
@@ -99365,6 +99394,7 @@ div.content_aac020 {
 .staticPfxPreview__9aa70 {
     position: absolute;
     left: 0;
+    top: 0;
     height: 100%;
     width: 100%;
     border-radius: 10px;
