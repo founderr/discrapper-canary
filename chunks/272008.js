@@ -1,43 +1,43 @@
 "use strict";
 n.r(t), n.d(t, {
   claimQuestReward: function() {
-    return I
-  },
-  claimQuestRewardCode: function() {
-    return E
-  },
-  completeQuestPreview: function() {
-    return h
-  },
-  dismissProgressTrackingFailureNotice: function() {
-    return S
-  },
-  dismissQuestContent: function() {
-    return f
-  },
-  enrollInQuest: function() {
-    return c
-  },
-  fetchCurrentQuests: function() {
-    return d
-  },
-  fetchQuestRewardCode: function() {
     return T
   },
-  optimisticallyUpdateQuestProgress: function() {
-    return N
+  claimQuestRewardCode: function() {
+    return I
   },
-  overrideQuestDelivery: function() {
-    return p
-  },
-  resetQuestDismissibilityStatus: function() {
-    return m
-  },
-  resetQuestPreviewStatus: function() {
+  completeQuestPreview: function() {
     return A
   },
-  sendHeartbeat: function() {
+  dismissProgressTrackingFailureNotice: function() {
+    return h
+  },
+  dismissQuestContent: function() {
+    return S
+  },
+  enrollInQuest: function() {
+    return E
+  },
+  fetchCurrentQuests: function() {
     return _
+  },
+  fetchQuestRewardCode: function() {
+    return f
+  },
+  optimisticallyUpdateQuestProgress: function() {
+    return p
+  },
+  overrideQuestDelivery: function() {
+    return O
+  },
+  resetQuestDismissibilityStatus: function() {
+    return N
+  },
+  resetQuestPreviewStatus: function() {
+    return m
+  },
+  sendHeartbeat: function() {
+    return c
   }
 });
 var i = n("544891"),
@@ -46,18 +46,19 @@ var i = n("544891"),
   a = n("617136"),
   o = n("569984"),
   l = n("918701"),
-  u = n("981631");
-async function d() {
+  u = n("566078"),
+  d = n("981631");
+async function _() {
   if (!o.default.isFetchingCurrentQuests) {
     r.default.dispatch({
       type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
     });
     try {
       let e = (await i.HTTP.get({
-        url: u.Endpoints.QUESTS_CURRENT_QUESTS
+        url: d.Endpoints.QUESTS_CURRENT_QUESTS
       })).body.quests.filter(e => (0, l.isQuestWithKnownConfigVersion)(e)).map(e => (0, l.questWithUserStatusFromServer)(e)).filter(e => {
         var t;
-        return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || e.config.rewardCodePlatforms.length > 0
+        return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || u.SharedQuestFields.build(e.config).rewardPlatforms.length > 0
       });
       r.default.dispatch({
         type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
@@ -71,7 +72,7 @@ async function d() {
     }
   }
 }
-async function _(e) {
+async function c(e) {
   let {
     questId: t,
     streamKey: n,
@@ -79,7 +80,7 @@ async function _(e) {
   } = e;
   try {
     let e = await i.HTTP.post({
-      url: u.Endpoints.QUESTS_HEARTBEAT(t),
+      url: d.Endpoints.QUESTS_HEARTBEAT(t),
       body: {
         stream_key: n,
         terminal: a
@@ -100,7 +101,7 @@ async function _(e) {
     })
   }
 }
-async function c(e, t) {
+async function E(e, t) {
   if (null != t.questContentCTA && (0, a.trackQuestContentClicked)({
       questId: e,
       questContent: t.questContent,
@@ -113,7 +114,7 @@ async function c(e, t) {
     });
     try {
       let n = await i.HTTP.post({
-        url: u.Endpoints.QUESTS_ENROLL(e),
+        url: d.Endpoints.QUESTS_ENROLL(e),
         body: {
           location: t.questContent
         }
@@ -130,7 +131,7 @@ async function c(e, t) {
     }
   }
 }
-async function E(e, t, n) {
+async function I(e, t, n) {
   if (!o.default.isClaimingRewardCode(e)) {
     r.default.dispatch({
       type: "QUESTS_CLAIM_REWARD_CODE_BEGIN",
@@ -138,7 +139,7 @@ async function E(e, t, n) {
     });
     try {
       let s = await i.HTTP.post({
-        url: u.Endpoints.QUESTS_REWARD_CODE(e),
+        url: d.Endpoints.QUESTS_REWARD_CODE(e),
         body: {
           platform: t,
           location: n
@@ -158,7 +159,7 @@ async function E(e, t, n) {
     }
   }
 }
-async function I(e, t, n) {
+async function T(e, t, n) {
   if (!o.default.isClaimingReward(e)) {
     r.default.dispatch({
       type: "QUESTS_CLAIM_REWARD_BEGIN",
@@ -166,7 +167,7 @@ async function I(e, t, n) {
     });
     try {
       let s = await i.HTTP.post({
-          url: u.Endpoints.QUESTS_CLAIM_REWARD(e),
+          url: d.Endpoints.QUESTS_CLAIM_REWARD(e),
           body: {
             platform: t,
             location: n
@@ -191,7 +192,7 @@ async function I(e, t, n) {
     }
   }
 }
-async function T(e) {
+async function f(e) {
   if (!o.default.isFetchingRewardCode(e)) {
     r.default.dispatch({
       type: "QUESTS_FETCH_REWARD_CODE_BEGIN",
@@ -199,7 +200,7 @@ async function T(e) {
     });
     try {
       let t = await i.HTTP.get({
-        url: u.Endpoints.QUESTS_REWARD_CODE(e)
+        url: d.Endpoints.QUESTS_REWARD_CODE(e)
       });
       r.default.dispatch({
         type: "QUESTS_FETCH_REWARD_CODE_SUCCESS",
@@ -215,7 +216,7 @@ async function T(e) {
     }
   }
 }
-async function f(e, t) {
+async function S(e, t) {
   let n = o.default.isDismissingContent(e),
     a = (0, l.isDismissible)(t);
   if (!n && a) {
@@ -226,7 +227,7 @@ async function f(e, t) {
     });
     try {
       let n = await i.HTTP.post({
-        url: u.Endpoints.QUESTS_DISMISS_CONTENT(e, t),
+        url: d.Endpoints.QUESTS_DISMISS_CONTENT(e, t),
         body: {}
       });
       r.default.dispatch({
@@ -243,34 +244,16 @@ async function f(e, t) {
   }
 }
 
-function S(e) {
+function h(e) {
   r.default.dispatch({
     type: "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE",
     streamKey: e
   })
 }
-async function h(e) {
-  try {
-    let t = await i.HTTP.post({
-      url: u.Endpoints.QUESTS_PREVIEW_COMPLETE(e),
-      body: {}
-    });
-    r.default.dispatch({
-      type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
-      previewQuestUserStatus: (0, l.questUserStatusFromServer)(t.body)
-    })
-  } catch (t) {
-    r.default.dispatch({
-      type: "QUESTS_PREVIEW_UPDATE_FAILURE",
-      error: new s.default(t),
-      questId: e
-    })
-  }
-}
 async function A(e) {
   try {
-    let t = await i.HTTP.del({
-      url: u.Endpoints.QUESTS_PREVIEW_STATUS(e),
+    let t = await i.HTTP.post({
+      url: d.Endpoints.QUESTS_PREVIEW_COMPLETE(e),
       body: {}
     });
     r.default.dispatch({
@@ -288,7 +271,25 @@ async function A(e) {
 async function m(e) {
   try {
     let t = await i.HTTP.del({
-      url: u.Endpoints.QUESTS_PREVIEW_DISMISSIBILITY(e),
+      url: d.Endpoints.QUESTS_PREVIEW_STATUS(e),
+      body: {}
+    });
+    r.default.dispatch({
+      type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
+      previewQuestUserStatus: (0, l.questUserStatusFromServer)(t.body)
+    })
+  } catch (t) {
+    r.default.dispatch({
+      type: "QUESTS_PREVIEW_UPDATE_FAILURE",
+      error: new s.default(t),
+      questId: e
+    })
+  }
+}
+async function N(e) {
+  try {
+    let t = await i.HTTP.del({
+      url: d.Endpoints.QUESTS_PREVIEW_DISMISSIBILITY(e),
       body: {}
     });
     r.default.dispatch({
@@ -304,14 +305,14 @@ async function m(e) {
   }
 }
 
-function N(e) {
+function p(e) {
   r.default.dispatch({
     type: "QUESTS_OPTIMISTIC_PROGRESS_UPDATE",
     userStatus: e
   })
 }
 
-function p(e) {
+function O(e) {
   r.default.dispatch({
     type: "QUESTS_DELIVERY_OVERRIDE",
     questId: e

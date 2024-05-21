@@ -62,7 +62,7 @@ class f {
       quest_status: (0, c.getQuestStatus)(e),
       ...(0, c.getContentProperties)(this.questContent, this.questContentPosition)
     })), T(this, "start", () => {
-      this.stop(!1), this.lastBeatTime = Date.now(), this.beatTimeout = setInterval(() => this.heartbeat(), 6e4), this.minViewTimeReachedTimeout = setTimeout(this.onMinViewTimeReached, 1e3 * this.minViewTimeSecond), this.quests.forEach(e => {
+      this.stop(!1), this.lastBeatTime = Date.now(), this.beatTimeout = window.setInterval(() => this.heartbeat(), 6e4), this.minViewTimeReachedTimeout = window.setTimeout(this.onMinViewTimeReached, 1e3 * this.minViewTimeSecond), this.quests.forEach(e => {
         (0, c.trackQuestEvent)({
           questId: e.id,
           event: I.AnalyticEvents.QUEST_CONTENT_LOADED,

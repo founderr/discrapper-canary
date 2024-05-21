@@ -172,10 +172,7 @@ function M(e) {
     location: o,
     onClose: l,
     transitionState: d
-  } = e, c = r.useMemo(() => {
-    var e;
-    return null !== (e = null == s ? void 0 : s.config.rewardsConfig.rewards.find(p.isCollectibleReward)) && void 0 !== e ? e : null
-  }, [s]), [I, T] = function(e) {
+  } = e, c = r.useMemo(() => (0, p.getCollectiblesQuestReward)(s.config), [s]), [I, T] = function(e) {
     let {
       product: t,
       isFetching: n

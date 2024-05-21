@@ -1,100 +1,100 @@
 "use strict";
 n.r(t), n.d(t, {
   calculatePercentComplete: function() {
-    return b
-  },
-  captureQuestsException: function() {
-    return F
-  },
-  getContextualEntrypointHeading: function() {
-    return G
-  },
-  getGameLogotypeAssetUrl: function() {
-    return D
-  },
-  getGameTileAssetUrl: function() {
-    return v
-  },
-  getHeroAssetUrl: function() {
-    return g
-  },
-  getPlatformString: function() {
-    return U
-  },
-  getPlaytimeQuestByApplicationId: function() {
-    return S
-  },
-  getQuestBarHeroAssetUrl: function() {
-    return L
-  },
-  getQuestByApplicationId: function() {
-    return f
-  },
-  getQuestForTargetedContent: function() {
-    return y
-  },
-  getQuestUrl: function() {
-    return M
-  },
-  getQuestsFromActivities: function() {
-    return H
-  },
-  getQuestsInstructionsToWinReward: function() {
-    return Q
-  },
-  getRewardAssetUrl: function() {
-    return R
-  },
-  getRewardCodeQuestReward: function() {
-    return X
-  },
-  getVideoAssetMimeType: function() {
-    return K
-  },
-  hasPlaytimeTaskVariant: function() {
-    return Z
-  },
-  hasQuestCollectibleRewards: function() {
-    return V
-  },
-  includesTarget: function() {
-    return x
-  },
-  isAssetAnimated: function() {
-    return Y
-  },
-  isCollectibleReward: function() {
-    return B
-  },
-  isDismissed: function() {
-    return k
-  },
-  isDismissible: function() {
     return w
   },
-  isQuestExpired: function() {
-    return h
+  captureQuestsException: function() {
+    return Y
   },
-  isQuestWithKnownConfigVersion: function() {
-    return I
+  getCollectiblesQuestReward: function() {
+    return x
   },
-  isTargetedForContent: function() {
-    return P
+  getContextualEntrypointHeading: function() {
+    return k
   },
-  isTieredRewardCodeQuest: function() {
-    return z
+  getGameLogotypeAssetUrl: function() {
+    return y
   },
-  questUserStatusFromServer: function() {
+  getGameTileAssetUrl: function() {
+    return M
+  },
+  getHeroAssetUrl: function() {
+    return v
+  },
+  getPlatformString: function() {
+    return G
+  },
+  getPlaytimeQuestByApplicationId: function() {
     return A
   },
-  questWithUserStatusFromServer: function() {
+  getQuestBarHeroAssetUrl: function() {
+    return D
+  },
+  getQuestByApplicationId: function() {
+    return h
+  },
+  getQuestForTargetedContent: function() {
+    return U
+  },
+  getQuestUrl: function() {
+    return P
+  },
+  getQuestsFromActivities: function() {
+    return j
+  },
+  getQuestsInstructionsToWinReward: function() {
+    return J
+  },
+  getRewardAsset: function() {
+    return L
+  },
+  getRewardCodeQuestReward: function() {
+    return q
+  },
+  getVideoAssetMimeType: function() {
+    return Z
+  },
+  hasCollectiblesQuestReward: function() {
+    return F
+  },
+  hasPlaytimeTaskVariant: function() {
+    return Q
+  },
+  includesTarget: function() {
+    return H
+  },
+  isAssetAnimated: function() {
+    return W
+  },
+  isDismissed: function() {
+    return V
+  },
+  isDismissible: function() {
+    return B
+  },
+  isQuestExpired: function() {
     return m
   },
+  isQuestWithKnownConfigVersion: function() {
+    return f
+  },
+  isTargetedForContent: function() {
+    return b
+  },
+  isTieredRewardCodeQuest: function() {
+    return X
+  },
+  questUserStatusFromServer: function() {
+    return N
+  },
+  questWithUserStatusFromServer: function() {
+    return p
+  },
   questsEntitlementsFromServer: function() {
-    return O
+    return R
   },
   questsRewardCodeFromServer: function() {
-    return N
+    return O
   }
 }), n("627341"), n("47120"), n("411104");
 var i = n("278074"),
@@ -106,46 +106,49 @@ var a = n("630388"),
   l = n("687744"),
   u = n("497505"),
   d = n("242755"),
-  _ = n("46140"),
-  c = n("689938");
-let E = "https://cdn.discordapp.com/assets/quests/";
+  _ = n("566078"),
+  c = n("312046"),
+  E = n("46140"),
+  I = n("689938");
+let T = "https://cdn.discordapp.com/assets/quests/";
 
-function I(e) {
+function f(e) {
   try {
     return (0, i.match)(e.config).with({
       config_version: 1
-    }, () => !0).otherwise(() => !1)
+    }, () => !0).with({
+      config_version: 2
+    }, () => !0).exhaustive()
   } catch (n) {
     var t;
     return console.error("Unknown config version '".concat(null == e ? void 0 : null === (t = e.config) || void 0 === t ? void 0 : t.config_version, "'"), n), !1
   }
 }
 
-function T(e, t) {
-  let n = t.config.applicationId === e;
-  return 1 === t.config.configVersion && null != t.config.supplementaryApplicationIds && t.config.supplementaryApplicationIds.size > 0 && (n = n || t.config.supplementaryApplicationIds.has(e)), n
+function S(e, t) {
+  return null != _.SharedQuestFields.build(t.config).application.ids.find(t => t === e)
 }
 
-function f(e, t) {
+function h(e, t) {
   let n;
   for (let [i, r] of e)
-    if (T(t, r) && !h(r)) {
+    if (S(t, r) && !m(r)) {
       n = r;
       break
     } return n
 }
 
-function S(e, t) {
-  return Array.from(e.values()).find(e => T(t, e) && !h(e) && Z({
+function A(e, t) {
+  return Array.from(e.values()).find(e => S(t, e) && !m(e) && Q({
     quest: e
   }))
 }
 
-function h(e) {
+function m(e) {
   return new Date(e.config.expiresAt).valueOf() <= Date.now()
 }
 
-function A(e) {
+function N(e) {
   var t;
   return {
     userId: e.user_id,
@@ -170,7 +173,7 @@ function A(e) {
   }
 }
 
-function m(e) {
+function p(e) {
   var t;
   return {
     id: e.id,
@@ -220,13 +223,15 @@ function m(e) {
         variants: e.variants,
         supplementaryApplicationIds: e.supplementary_application_ids
       }
-    }).exhaustive()),
-    userStatus: null == e.user_status ? null : A(e.user_status),
+    }).with({
+      config_version: 2
+    }, e => (0, c.questFromServerV2)(e)).exhaustive()),
+    userStatus: null == e.user_status ? null : N(e.user_status),
     targetedContent: e.targeted_content
   }
 }
 
-function N(e) {
+function O(e) {
   var t;
   return {
     userId: e.user_id,
@@ -238,7 +243,7 @@ function N(e) {
   }
 }
 
-function p(e) {
+function C(e) {
   return {
     skuId: e.sku_id,
     tenantMetadata: function(e) {
@@ -258,7 +263,7 @@ function p(e) {
             questRewards: {
               reward: {
                 tag: t.reward.tag,
-                rewardCode: N(t.reward.reward_code)
+                rewardCode: O(t.reward.reward_code)
               }
             }
           }
@@ -267,106 +272,118 @@ function p(e) {
   }
 }
 
-function O(e) {
+function R(e) {
   return {
     claimedAt: e.claimed_at,
-    items: e.entitlements.map(p),
+    items: e.entitlements.map(C),
     errors: e.errors
   }
 }
 
-function C(e, t) {
+function g(e, t) {
   return e.startsWith("data") ? e : t
 }
-let R = e => {
+let L = e => {
     var t, n;
-    let i = z({
+    let i = X({
         quest: e
-      }) ? X({
+      }) ? q({
         quest: e,
         idx: null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedTier
       }) : null,
-      r = null !== (n = null == i ? void 0 : i.asset) && void 0 !== n ? n : e.config.assets.rewardTile;
-    return C(r, "".concat(E).concat(e.id, "/").concat(r))
+      r = _.SharedQuestFields.build(e.config).defaultRewardAsset,
+      s = null !== (n = null == i ? void 0 : i.asset) && void 0 !== n ? n : r;
+    return {
+      name: s,
+      url: g(s, "".concat(T).concat(e.id, "/").concat(s))
+    }
   },
-  g = e => C(e.config.assets.hero, "".concat(E).concat(e.id, "/").concat(e.config.assets.hero)),
-  L = e => e.config.assets.questBarHero.startsWith("data") ? e.config.assets.questBarHero : C(e.config.assets.questBarHero, "".concat(E).concat(e.id, "/").concat(e.config.assets.questBarHero)),
-  v = (e, t) => C(e.config.assets.gameTile, "".concat(E).concat(e.id, "/").concat(t, "/").concat(e.config.assets.gameTile)),
-  D = (e, t) => C(e.config.assets.logotype, "".concat(E).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype)),
-  M = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
+  v = e => g(e.config.assets.hero, "".concat(T).concat(e.id, "/").concat(e.config.assets.hero)),
+  D = e => e.config.assets.questBarHero.startsWith("data") ? e.config.assets.questBarHero : g(e.config.assets.questBarHero, "".concat(T).concat(e.id, "/").concat(e.config.assets.questBarHero)),
+  M = (e, t) => g(e.config.assets.gameTile, "".concat(T).concat(e.id, "/").concat(t, "/").concat(e.config.assets.gameTile)),
+  y = (e, t) => g(e.config.assets.logotype, "".concat(T).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype)),
+  P = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
-function y(e, t) {
+function U(e, t) {
   for (let [n, i] of e)
-    if (!h(i) && i.targetedContent.includes(t)) return i;
+    if (!m(i) && i.targetedContent.includes(t)) return i;
   return null
 }
 
-function P(e, t) {
+function b(e, t) {
   return e.targetedContent.includes(t)
 }
-let U = e => {
+let G = e => {
   switch (e) {
     case u.QuestRewardCodePlatforms.XBOX:
-      return c.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
+      return I.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
     case u.QuestRewardCodePlatforms.PLAYSTATION:
-      return c.default.Messages.QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION;
+      return I.default.Messages.QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION;
     case u.QuestRewardCodePlatforms.SWITCH:
-      return c.default.Messages.QUESTS_REWARD_CODE_PLATFORM_SWITCH;
+      return I.default.Messages.QUESTS_REWARD_CODE_PLATFORM_SWITCH;
     case u.QuestRewardCodePlatforms.PC:
-      return c.default.Messages.QUESTS_REWARD_CODE_PLATFORM_PC;
+      return I.default.Messages.QUESTS_REWARD_CODE_PLATFORM_PC;
     case u.QuestRewardCodePlatforms.CROSS_PLATFORM:
-      return c.default.Messages.QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM
+      return I.default.Messages.QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM
   }
 };
 
-function b(e) {
+function w(e) {
   if (null == e.userStatus) return 0;
   let {
     streamProgressSeconds: t,
     completedAt: n
   } = e.userStatus;
   if (null != n) return 1;
-  let {
-    streamDurationRequirementMinutes: i
-  } = e.config;
-  return Math.min(t / 60 / i, 1)
+  let i = _.SharedQuestFields.build(e.config).streamTargetSeconds;
+  return null == i ? 0 : Math.min(t / i, 1)
 }
 
-function G(e) {
+function k(e) {
   var t, n;
-  if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return c.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
+  if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return I.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
   if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
-    let t = b(e);
-    return t >= .75 ? c.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE : t >= .45 && t <= .55 ? c.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY : t > 0 ? c.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED : c.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
+    let t = w(e);
+    return t >= .75 ? I.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE : t >= .45 && t <= .55 ? I.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY : t > 0 ? I.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED : I.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
   }
-  return c.default.Messages.QUESTS_TITLE.format({
+  return I.default.Messages.QUESTS_TITLE.format({
     questName: e.config.messages.questName
   })
 }
 
-function w(e) {
-  return Object.keys(_.DismissibleQuestContentFlags).includes(u.QuestContent[e])
-}
-
-function k(e, t) {
-  if (!w(t)) return !1;
-  let n = u.QuestContent[t];
-  return (0, a.hasFlag)(e.dismissedQuestContent, _.DismissibleQuestContentFlags[n])
-}
-
 function B(e) {
-  return e.tag === s.QuestRewardTypes.COLLECTIBLE
+  return Object.keys(E.DismissibleQuestContentFlags).includes(u.QuestContent[e])
 }
 
-function V(e) {
-  return e.rewardsConfig.rewards.some(B)
+function V(e, t) {
+  if (!B(t)) return !1;
+  let n = u.QuestContent[t];
+  return (0, a.hasFlag)(e.dismissedQuestContent, E.DismissibleQuestContentFlags[n])
 }
 
-function x(e, t) {
+function x(e) {
+  return (0, i.match)(e).with({
+    configVersion: 1
+  }, e => {
+    let t = e.rewardsConfig.rewards.find(e => e.tag === s.QuestRewardTypes.COLLECTIBLE);
+    return (null == t ? void 0 : t.tag) === s.QuestRewardTypes.COLLECTIBLE ? t : null
+  }).with({
+    configVersion: 2
+  }, e => {
+    let t = e.rewardsConfig.rewards.find(e => e.type === s.QuestRewardTypes.COLLECTIBLE);
+    return (null == t ? void 0 : t.type) === s.QuestRewardTypes.COLLECTIBLE ? t : null
+  }).exhaustive()
+}
+
+function F(e) {
+  return null != x(e)
+}
+
+function H(e, t) {
   return e.targetedContent.includes(t)
 }
 
-function F(e, t) {
+function Y(e, t) {
   o.default.captureException(e, {
     ...t,
     tags: {
@@ -376,25 +393,25 @@ function F(e, t) {
   })
 }
 
-function H(e, t) {
+function j(e, t) {
   if (null == t || null == e) return null;
   for (let n of t) {
     if (null == n.application_id) continue;
-    let t = f(e, n.application_id);
+    let t = h(e, n.application_id);
     if (null != t) return t
   }
   return null
 }
 
-function Y(e) {
+function W(e) {
   return e.endsWith(".webm") || e.endsWith(".mp4") || e.startsWith("data:video")
 }
-let j = /\.([a-zA-Z0-9]+)$/,
-  W = /^data:video\/([a-zA-Z0-9]+)\;/;
+let K = /\.([a-zA-Z0-9]+)$/,
+  z = /^data:video\/([a-zA-Z0-9]+)\;/;
 
-function K(e) {
+function Z(e) {
   var t, n, i, r, s;
-  switch (null !== (s = null === (n = j.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : null === (r = W.exec(e)) || void 0 === r ? void 0 : null === (i = r[1]) || void 0 === i ? void 0 : i.toLowerCase()) {
+  switch (null !== (s = null === (n = K.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : null === (r = z.exec(e)) || void 0 === r ? void 0 : null === (i = r[1]) || void 0 === i ? void 0 : i.toLowerCase()) {
     case "webm":
       return "video/webm";
     case "mp4":
@@ -404,60 +421,71 @@ function K(e) {
   }
 }
 
-function z(e) {
+function X(e) {
   let {
-    quest: t
-  } = e, n = t.config.rewardsConfig;
-  return n.assignmentMethod === r.QuestRewardAssignmentMethods.TIERED && n.rewards.length > 0 && n.rewards.every(e => e.tag === s.QuestRewardTypes.REWARD_CODE)
+    quest: {
+      config: t
+    }
+  } = e;
+  return (0, i.match)(t).with({
+    configVersion: 1
+  }, e => {
+    let t = e.rewardsConfig;
+    return t.assignmentMethod === r.QuestRewardAssignmentMethods.TIERED && t.rewards.length > 0 && t.rewards.every(e => e.tag === s.QuestRewardTypes.REWARD_CODE)
+  }).with({
+    configVersion: 2
+  }, e => {
+    let t = e.rewardsConfig;
+    return t.assignmentMethod === r.QuestRewardAssignmentMethods.TIERED && t.rewards.length > 0 && t.rewards.every(e => e.type === s.QuestRewardTypes.REWARD_CODE)
+  }).exhaustive()
 }
 
-function Z(e) {
+function Q(e) {
   let {
     quest: t
   } = e;
-  return t.config.variants.includes(_.QuestVariants.PLAYTIME_TASK)
+  return _.SharedQuestFields.build(t.config).features.has(E.QuestVariants.PLAYTIME_TASK)
 }
 
-function X(e) {
+function q(e) {
   let {
     quest: t,
     idx: n
   } = e;
   if (null == n) return null;
-  let i = t.config.rewardsConfig.rewards[n];
-  if (null == i);
-  else if (i.tag === s.QuestRewardTypes.REWARD_CODE) return i;
-  return null
+  let r = t.config.rewardsConfig.rewards[n];
+  return (0, i.match)(r).with({
+    tag: s.QuestRewardTypes.REWARD_CODE
+  }, e => e).with({
+    type: s.QuestRewardTypes.REWARD_CODE
+  }, e => e).otherwise(() => null)
 }
 
-function Q(e) {
+function J(e) {
   let {
     quest: t,
     location: n,
     useV2Variants: i = !1
-  } = e, {
-    messages: r,
-    streamDurationRequirementMinutes: s
-  } = t.config, {
-    gameTitle: a,
-    rewardNameWithArticle: o
-  } = r;
+  } = e, r = t.config.messages.gameTitle, {
+    defaultReward: s,
+    streamTargetMinutes: a
+  } = _.SharedQuestFields.build(t.config);
   return (0, d.isEligibleForQuestPlaytime)({
     location: n
-  }) && Z({
+  }) && Q({
     quest: t
-  }) ? c.default.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD.format({
-    gameTitle: a,
-    questReward: o,
-    streamingDurationRequirement: s
-  }) : z({
+  }) ? I.default.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD.format({
+    gameTitle: r,
+    questReward: s.messages.nameWithArticle,
+    streamingDurationRequirement: a
+  }) : X({
     quest: t
-  }) ? (i ? c.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2 : c.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED).format({
-    gameTitle: a,
-    streamingDurationRequirement: s
-  }) : (i ? c.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2 : c.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD).format({
-    gameTitle: a,
-    questReward: o,
-    streamingDurationRequirement: s
+  }) ? (i ? I.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2 : I.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED).format({
+    gameTitle: r,
+    streamingDurationRequirement: a
+  }) : (i ? I.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2 : I.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD).format({
+    gameTitle: r,
+    questReward: s.messages.nameWithArticle,
+    streamingDurationRequirement: a
   })
 }

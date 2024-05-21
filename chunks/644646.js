@@ -12,74 +12,74 @@ var i = n("735250"),
   c = n("810090"),
   E = n("617136"),
   I = n("918701"),
-  T = n("78826"),
-  f = n("981631"),
-  S = n("689938"),
-  h = n("680273");
+  T = n("566078"),
+  f = n("78826"),
+  S = n("981631"),
+  h = n("689938"),
+  A = n("680273");
 t.default = function(e) {
   let {
     className: t,
     quest: n,
     autoplay: s = !0,
-    learnMoreStyle: A = null
-  } = e, m = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), N = r.useMemo(() => (0, I.isAssetAnimated)(n.config.assets.rewardTile), [n]), p = r.useCallback(t => {
+    learnMoreStyle: m = null
+  } = e, N = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), p = (0, I.getRewardAsset)(n), O = r.useMemo(() => (0, I.isAssetAnimated)(p.name), [p.name]), C = r.useCallback(t => {
     var i;
     (0, E.trackQuestContentClicked)({
       questId: n.id,
       questContent: e.questContent,
       questContentPosition: e.questContentPosition,
       questContentCTA: E.QuestContentCTA.REWARD_LEARN_MORE
-    }), u.default.open(f.UserSettingsSections.INVENTORY), null === (i = e.onClick) || void 0 === i || i.call(e, t)
-  }, [n.id, e]), O = r.useRef(null), C = r.useRef(s);
+    }), u.default.open(S.UserSettingsSections.INVENTORY), null === (i = e.onClick) || void 0 === i || i.call(e, t)
+  }, [n.id, e]), R = r.useRef(null), g = r.useRef(s);
   r.useEffect(() => {
     var e, t;
-    N && !m && null != O.current && (s && !C.current ? null === (e = O.current) || void 0 === e || e.play() : !s && C.current && (null === (t = O.current) || void 0 === t || t.pause()), C.current = s)
-  }, [s, N, m]);
-  let R = (0, I.getRewardAssetUrl)(n),
-    g = N ? (0, i.jsx)(T.QuestsAsset, {
-      id: "QuestRewardTile_rewardTileAnimated",
-      children: e => (0, i.jsx)(c.default, {
-        ref: t => {
-          e.current = t, O.current = t
-        },
-        autoPlay: !m && s,
-        loop: !0,
-        muted: !0,
-        playsInline: !0,
-        className: h.questRewardTileAsset,
-        controls: !1,
-        children: (0, i.jsx)("source", {
-          src: R,
-          type: (0, I.getVideoAssetMimeType)(R)
-        })
+    O && !N && null != R.current && (s && !g.current ? null === (e = R.current) || void 0 === e || e.play() : !s && g.current && (null === (t = R.current) || void 0 === t || t.pause()), g.current = s)
+  }, [s, O, N]);
+  let L = O ? (0, i.jsx)(f.QuestsAsset, {
+    id: "QuestRewardTile_rewardTileAnimated",
+    children: e => (0, i.jsx)(c.default, {
+      ref: t => {
+        e.current = t, R.current = t
+      },
+      autoPlay: !N && s,
+      loop: !0,
+      muted: !0,
+      playsInline: !0,
+      className: A.questRewardTileAsset,
+      controls: !1,
+      children: (0, i.jsx)("source", {
+        src: p.url,
+        type: (0, I.getVideoAssetMimeType)(p.url)
       })
-    }) : (0, i.jsx)(T.QuestsAsset, {
-      id: "QuestRewardTile_rewardTileStatic",
-      children: e => (0, i.jsx)("img", {
-        ref: e,
-        alt: n.config.messages.rewardName,
-        className: a()(h.questRewardTileAsset, h.questRewardTileAssetStatic),
-        src: R
-      })
-    });
-  return null == A ? (0, i.jsx)("div", {
-    className: a()(t, h.questRewardTile),
-    children: g
+    })
+  }) : (0, i.jsx)(f.QuestsAsset, {
+    id: "QuestRewardTile_rewardTileStatic",
+    children: e => (0, i.jsx)("img", {
+      ref: e,
+      alt: T.SharedQuestFields.build(n.config).defaultReward.messages.name,
+      className: a()(A.questRewardTileAsset, A.questRewardTileAssetStatic),
+      src: p.url
+    })
+  });
+  return null == m ? (0, i.jsx)("div", {
+    className: a()(t, A.questRewardTile),
+    children: L
   }) : (0, i.jsxs)(l.Clickable, {
-    className: a()(h.questRewardTile, h.questRewardTileInteractive, t),
-    onClick: p,
-    children: ["text" === A && (0, i.jsx)(l.Text, {
+    className: a()(A.questRewardTile, A.questRewardTileInteractive, t),
+    onClick: C,
+    children: ["text" === m && (0, i.jsx)(l.Text, {
       color: "always-white",
       variant: "text-xs/normal",
-      className: h.questRewardTileDetailsLearnMore,
-      children: S.default.Messages.QUESTS_LEARN_MORE_STACKED.format()
-    }), "icon" === A && (0, i.jsx)("div", {
-      className: h.questRewardTileDetailsLearnMore,
+      className: A.questRewardTileDetailsLearnMore,
+      children: h.default.Messages.QUESTS_LEARN_MORE_STACKED.format()
+    }), "icon" === m && (0, i.jsx)("div", {
+      className: A.questRewardTileDetailsLearnMore,
       children: (0, i.jsx)(_.default, {
         color: l.tokens.colors.WHITE.css,
         width: 12,
         height: 12
       })
-    }), g]
+    }), L]
   })
 }

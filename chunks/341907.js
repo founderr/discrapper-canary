@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   copyShareLink: function() {
-    return E
+    return I
   },
   openDisclosureModal: function() {
-    return c
+    return E
   },
   openGameLink: function() {
-    return _
+    return c
   },
   openQuestsRewardCodeModal: function() {
-    return d
+    return _
   }
 });
 var i = n("735250");
@@ -20,9 +20,10 @@ var r = n("481060"),
   a = n("572004"),
   o = n("49012"),
   l = n("617136"),
-  u = n("918701");
+  u = n("918701"),
+  d = n("566078");
 
-function d(e) {
+function _(e) {
   let {
     questId: t,
     location: s,
@@ -41,21 +42,22 @@ function d(e) {
   })
 }
 
-function _(e, t) {
+function c(e, t) {
+  let n = d.SharedQuestFields.build(e.config).application.link;
   (0, o.handleClick)({
-    href: e.config.getGameLink,
+    href: n,
     onConfirm: () => {
       (0, l.trackQuestContentClicked)({
         questId: e.id,
         questContent: t.content,
         questContentCTA: t.ctaContent,
         questContentPosition: t.position
-      }), (0, s.default)(e.config.getGameLink)
+      }), (0, s.default)(n)
     }
   })
 }
 
-function c(e, t) {
+function E(e, t) {
   (0, l.trackQuestContentClicked)({
     questId: e.id,
     questContent: t.content,
@@ -72,7 +74,7 @@ function c(e, t) {
     })
   })
 }
-let E = (e, t) => {
+let I = (e, t) => {
   (0, l.trackQuestContentClicked)({
     questId: e,
     questContent: t.content,

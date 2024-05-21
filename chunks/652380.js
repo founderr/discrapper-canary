@@ -95,7 +95,7 @@ let O = {
     },
     inGameQuestConfig: null,
     variants: [],
-    supplementaryApplicationIds: new Set
+    supplementaryApplicationIds: []
   },
   userStatus: null,
   targetedContent: []
