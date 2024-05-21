@@ -1,13 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildsBarClanAdminUpsellPopout: function() {
-    return L
+    return M
+  },
+  GuildsBarClanApplicationCoachmarkPopout: function() {
+    return O
   },
   GuildsBarClanUserUpsellPopout: function() {
-    return A
+    return R
   },
   GuildsBarFixedFooter: function() {
-    return v
+    return y
   }
 }), n("47120");
 var l = n("735250"),
@@ -16,83 +19,87 @@ var l = n("735250"),
   i = n.n(s),
   r = n("266067"),
   o = n("727075"),
-  u = n("524437"),
-  d = n("481060"),
-  c = n("350810"),
-  f = n("100527"),
-  h = n("970606"),
-  m = n("963202"),
-  p = n("824991"),
-  C = n("243778"),
-  g = n("602147"),
-  E = n("981631"),
-  _ = n("308083"),
-  S = n("921944"),
-  I = n("689938"),
-  N = n("41004");
+  u = n("442837"),
+  d = n("524437"),
+  c = n("481060"),
+  f = n("350810"),
+  h = n("110924"),
+  m = n("100527"),
+  C = n("970606"),
+  p = n("963202"),
+  g = n("824991"),
+  E = n("243778"),
+  _ = n("863249"),
+  S = n("937111"),
+  I = n("602147"),
+  N = n("981631"),
+  T = n("308083"),
+  A = n("921944"),
+  L = n("689938"),
+  v = n("41004");
 
-function T(e) {
+function x(e) {
   let {
     title: t,
     message: n,
     dismissibleContent: s,
     defaultGameId: i,
     onPopoutVisible: u,
-    onClick: f,
+    onClick: d,
     children: h,
     isEligibleForUpsell: m = !0,
-    withInviteIcon: I = !0
-  } = e, T = (0, r.useLocation)(), [A, L] = (0, C.useSelectedDismissibleContent)([s], S.DismissibleContentGroupName.SIDEBAR), v = A !== s, x = (0, c.default)(), R = m && !x && !v && T.pathname !== E.Routes.GUILD_DISCOVERY;
+    withInviteIcon: C = !0
+  } = e, p = (0, r.useLocation)(), [_, S] = (0, E.useSelectedDismissibleContent)([s], A.DismissibleContentGroupName.SIDEBAR), L = _ !== s, x = (0, f.default)(), R = m && !x && !L && p.pathname !== N.Routes.GUILD_DISCOVERY;
   a.useEffect(() => {
     R && u()
   }, [R, u]);
   let M = a.useMemo(() => {
       switch (i) {
-        case _.VALORANT_ID:
-          return N.valorantBackgroundImage;
-        case _.GENSHIN_ID:
-          return N.genshinBackgroundImage;
+        case T.VALORANT_ID:
+          return v.valorantBackgroundImage;
+        case T.GENSHIN_ID:
+          return v.genshinBackgroundImage;
         default:
           return
       }
     }, [i]),
-    y = a.useCallback(() => {
-      L(S.ContentDismissActionType.TAKE_ACTION), f(), (0, g.handleDiscoveryButtonClick)()
-    }, [L, f]),
-    O = a.useCallback(e => {
-      e(), L(S.ContentDismissActionType.USER_DISMISS)
-    }, [L]);
+    O = a.useCallback(() => {
+      S(A.ContentDismissActionType.TAKE_ACTION), d(), (0, I.handleDiscoveryButtonClick)()
+    }, [S, d]),
+    y = a.useCallback(e => {
+      e(), S(A.ContentDismissActionType.USER_DISMISS)
+    }, [S]);
   return (0, l.jsxs)("div", {
-    className: N.container,
-    children: [(0, l.jsx)(d.Popout, {
+    className: v.container,
+    children: [(0, l.jsx)(c.Popout, {
       shouldShow: R,
       renderPopout: e => {
         let {
           closePopout: a
         } = e;
         return (0, l.jsxs)("div", {
-          className: N.popoutContainer,
+          className: v.popoutContainer,
           children: [(0, l.jsx)("div", {
             className: M
-          }), (0, l.jsx)(d.Clickable, {
-            onClick: () => O(a),
-            className: N.close,
+          }), (0, l.jsx)(c.Clickable, {
+            onClick: () => y(a),
+            className: v.close,
             children: (0, l.jsx)(o.CloseSmallIcon, {
               width: 16,
               height: 16,
-              color: d.tokens.colors.WHITE
+              color: c.tokens.colors.WHITE
             })
           }), (0, l.jsxs)("div", {
-            className: N.popoutContent,
-            children: [I && (0, l.jsx)(p.ClanUpsellInviteByline, {}), (0, l.jsx)(p.ClanUpsellTitle, {
+            className: v.popoutContent,
+            children: [C && (0, l.jsx)(g.ClanUpsellInviteByline, {}), (0, l.jsx)(g.ClanUpsellTitle, {
               title: t
-            }), (0, l.jsx)(p.ClanUpsellMessage, {
+            }), (0, l.jsx)(g.ClanUpsellMessage, {
               message: n
-            }), (0, l.jsx)(p.ClanUpsellButton, {
-              onClick: y
+            }), (0, l.jsx)(g.ClanUpsellButton, {
+              onClick: O
             })]
           }), (0, l.jsx)("div", {
-            className: N.popoutCaret
+            className: v.popoutCaret
           })]
         })
       },
@@ -102,40 +109,40 @@ function T(e) {
       spacing: 16,
       children: e => (0, l.jsx)("div", {
         ...e,
-        className: N.popoutAnchor
+        className: v.popoutAnchor
       })
     }), h({
-      onClick: y
+      onClick: O
     })]
   })
 }
 
-function A(e) {
+function R(e) {
   let {
     defaultGameId: t,
     children: n
   } = e, s = a.useCallback(() => {
-    (0, h.trackClanUserInviteViewed)({
-      location: f.default.GUILDS_LIST
+    (0, C.trackClanUserInviteViewed)({
+      location: m.default.GUILDS_LIST
     })
   }, []), i = a.useCallback(() => {
-    (0, h.trackClanUserInviteClicked)({
-      location: f.default.GUILDS_LIST
+    (0, C.trackClanUserInviteClicked)({
+      location: m.default.GUILDS_LIST
     })
   }, []), [r, o] = a.useMemo(() => {
     switch (t) {
-      case _.GENSHIN_ID:
-        return [I.default.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_TITLE, I.default.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_MESSAGE];
-      case _.VALORANT_ID:
-        return [I.default.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_TITLE, I.default.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE];
+      case T.GENSHIN_ID:
+        return [L.default.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_TITLE, L.default.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_MESSAGE];
+      case T.VALORANT_ID:
+        return [L.default.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_TITLE, L.default.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE];
       default:
         return [void 0, void 0]
     }
   }, [t]);
-  return (0, l.jsx)(T, {
+  return (0, l.jsx)(x, {
     title: r,
     message: o,
-    dismissibleContent: u.DismissibleContent.GUILD_LIST_CLAN_USER_UPSELL,
+    dismissibleContent: d.DismissibleContent.GUILD_LIST_CLAN_USER_UPSELL,
     defaultGameId: t,
     onClick: i,
     onPopoutVisible: s,
@@ -144,37 +151,37 @@ function A(e) {
   })
 }
 
-function L(e) {
+function M(e) {
   let {
     defaultGameId: t,
     children: n
   } = e, {
     guilds: s
-  } = (0, m.useClanPrepilotExperimentForAllGuilds)({
+  } = (0, p.useClanPrepilotExperimentForAllGuilds)({
     location: "GuildsBarClanAdminUpsellPopout",
     includeConverted: !1
   }), i = s.length > 0, r = a.useCallback(() => {
-    (0, h.trackClanAdminInviteViewed)({
-      location: f.default.GUILDS_LIST
+    (0, C.trackClanAdminInviteViewed)({
+      location: m.default.GUILDS_LIST
     })
   }, []), o = a.useCallback(() => {
-    (0, h.trackClanAdminInviteClicked)({
-      location: f.default.GUILDS_LIST
+    (0, C.trackClanAdminInviteClicked)({
+      location: m.default.GUILDS_LIST
     })
-  }, []), [d, c] = a.useMemo(() => {
+  }, []), [u, c] = a.useMemo(() => {
     switch (t) {
-      case _.GENSHIN_ID:
-        return [I.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE, I.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE];
-      case _.VALORANT_ID:
-        return [I.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE, I.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE];
+      case T.GENSHIN_ID:
+        return [L.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE, L.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE];
+      case T.VALORANT_ID:
+        return [L.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE, L.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE];
       default:
         return [void 0, void 0]
     }
   }, [t]);
-  return (0, l.jsx)(T, {
-    title: d,
+  return (0, l.jsx)(x, {
+    title: u,
     message: c,
-    dismissibleContent: u.DismissibleContent.GUILD_LIST_CLAN_ADMIN_UPSELL,
+    dismissibleContent: d.DismissibleContent.GUILD_LIST_CLAN_ADMIN_UPSELL,
     defaultGameId: t,
     onClick: o,
     isEligibleForUpsell: i,
@@ -183,16 +190,70 @@ function L(e) {
   })
 }
 
-function v(e) {
+function O(e) {
+  let {
+    onActivate: t,
+    children: n
+  } = e, s = (0, u.useStateFromStores)([S.default], () => S.default.hasJoinRequestCoackmark()), i = a.useCallback(() => {
+    _.default.clearCoachmark()
+  }, []), r = (0, h.default)(s), o = a.useRef(null);
+  return a.useEffect(() => {
+    if (s && s !== r) {
+      var e, n, l, a, i;
+      t(), null === (i = o.current) || void 0 === i || null === (a = i.ref) || void 0 === a || null === (l = a.current) || void 0 === l || null === (n = l.layerRef) || void 0 === n || null === (e = n.current) || void 0 === e || e.updatePosition()
+    }
+  }, [o, s, r, t]), (0, l.jsxs)("div", {
+    className: v.container,
+    children: [(0, l.jsx)(c.Popout, {
+      ref: o,
+      shouldShow: s,
+      renderPopout: () => (0, l.jsxs)("div", {
+        className: v.popoutContainer,
+        children: [(0, l.jsxs)("div", {
+          className: v.popoutContent,
+          children: [(0, l.jsxs)("div", {
+            className: v.coachmarkTextContainer,
+            children: [(0, l.jsx)(c.Heading, {
+              variant: "heading-md/medium",
+              children: L.default.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
+            }), (0, l.jsx)(c.Text, {
+              variant: "text-xs/normal",
+              color: "text-muted",
+              children: L.default.Messages.CLAN_USER_APPLICATION_COACHMARK_BODY
+            })]
+          }), (0, l.jsx)(c.Button, {
+            fullWidth: !0,
+            size: c.ButtonSizes.SMALL,
+            color: c.ButtonColors.BRAND,
+            onClick: i,
+            children: L.default.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
+          })]
+        }), (0, l.jsx)("div", {
+          className: v.popoutCaretLeft
+        })]
+      }),
+      position: "right",
+      animationPosition: "right",
+      align: "top",
+      spacing: 16,
+      children: e => (0, l.jsx)("div", {
+        ...e,
+        className: v.popoutAnchor
+      })
+    }), n]
+  })
+}
+
+function y(e) {
   let {
     hideGradient: t,
     children: n
   } = e;
   return (0, l.jsxs)("div", {
-    className: N.footer,
+    className: v.footer,
     children: [(0, l.jsx)("div", {
-      className: i()(N.gradient, {
-        [N.gradientHidden]: t
+      className: i()(v.gradient, {
+        [v.gradientHidden]: t
       })
     }), n]
   })

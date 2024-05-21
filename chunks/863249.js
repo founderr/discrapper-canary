@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("544891"),
   r = n("570140"),
-  s = n("668781"),
-  a = n("239091"),
+  a = n("668781"),
+  s = n("239091"),
   o = n("962086"),
   l = n("160404"),
   u = n("264229"),
@@ -14,31 +14,31 @@ var i = n("544891"),
   I = n("689938");
 let T = async (e, t) => {
   let n = null != t ? t : _.default.getInviteKeyForGuildId(e),
-    s = c.default.getCurrentUser(),
-    a = !d.default.isMember(e, null == s ? void 0 : s.id);
+    a = c.default.getCurrentUser(),
+    s = !d.default.isMember(e, null == a ? void 0 : a.id);
   try {
     let t = await i.HTTP.get({
       url: E.Endpoints.GUILD_MEMBER_VERIFICATION(e),
       query: {
-        with_guild: a,
+        with_guild: s,
         invite_code: null != n ? (0, u.parseInviteCodeFromInviteKey)(n) : void 0
       },
       oldFormErrors: !0
     });
     if (null == t.body) throw t;
     let {
-      body: s
+      body: a
     } = t;
     return r.default.dispatch({
       type: "MEMBER_VERIFICATION_FORM_UPDATE",
       guildId: e,
       form: {
-        version: s.version,
-        description: s.description,
-        formFields: s.form_fields,
-        guild: s.guild
+        version: a.version,
+        description: a.description,
+        formFields: a.form_fields,
+        guild: a.guild
       }
-    }), s
+    }), a
   } catch (t) {
     r.default.dispatch({
       type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL",
@@ -114,12 +114,12 @@ let T = async (e, t) => {
       type: "USER_GUILD_JOIN_REQUEST_UPDATE",
       guildId: e,
       request: n
-    }), n
+    }), setTimeout(m, 200), n
   } catch (t) {
     let {
       status: e
     } = t;
-    if (429 === e)(0, a.closeContextMenu)(), s.default.show({
+    if (429 === e)(0, s.closeContextMenu)(), a.default.show({
       title: I.default.Messages.CLAN_APPLICATION_RATE_LIMITED_HEADER,
       body: I.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY,
       confirmText: I.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BUTTON
@@ -127,6 +127,12 @@ let T = async (e, t) => {
     else throw t
   }
 };
+
+function m() {
+  r.default.dispatch({
+    type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW"
+  })
+}
 t.default = {
   fetchVerificationForm: T,
   updateVerificationForm: f,
@@ -152,5 +158,10 @@ t.default = {
     })
   },
   enableVerificationForm: h,
-  submitVerificationForm: A
+  submitVerificationForm: A,
+  clearCoachmark: function() {
+    r.default.dispatch({
+      type: "USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR"
+    })
+  }
 }
