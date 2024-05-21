@@ -1,24 +1,24 @@
 "use strict";
-s.r(t), s.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return c
   }
 });
-var l = s("735250");
-s("470079");
-var a = s("442837"),
-  n = s("270394"),
-  i = s("388610"),
-  r = s("430824"),
-  o = s("496675"),
-  d = s("246946"),
-  u = s("981631");
+var s = l("735250");
+l("470079");
+var a = l("442837"),
+  n = l("270394"),
+  i = l("388610"),
+  r = l("430824"),
+  o = l("496675"),
+  d = l("246946"),
+  u = l("981631");
 
 function c() {
   let e = (0, a.useStateFromStores)([d.default], () => d.default.hideInstantInvites),
     {
       channel: t,
-      guild: s
+      guild: l
     } = (0, a.useStateFromStoresObject)([i.default, r.default], () => {
       let {
         channel: e
@@ -33,10 +33,10 @@ function c() {
       invites: h,
       loading: m
     } = (0, a.useStateFromStoresObject)([i.default], () => i.default.getInvites(), []);
-  return (0, l.jsx)(n.default, {
+  return (0, s.jsx)(n.default, {
     invites: h,
     loading: m,
-    guild: s,
+    guild: l,
     channel: t,
     canCreateInvites: c,
     hide: e

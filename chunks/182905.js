@@ -1,38 +1,38 @@
 "use strict";
-s.r(t);
-var l = s("735250");
-s("470079");
-var a = s("120356"),
-  n = s.n(a),
-  i = s("692547"),
-  r = s("481060"),
-  o = s("285952"),
-  d = s("309429");
+l.r(t);
+var s = l("735250");
+l("470079");
+var a = l("120356"),
+  n = l.n(a),
+  i = l("692547"),
+  r = l("481060"),
+  o = l("285952"),
+  d = l("309429");
 t.default = e => {
   let {
     className: t,
-    icon: s,
+    icon: l,
     noticeText: a,
     buttonText: u,
     onClick: c,
     canSync: h
   } = e;
-  return (0, l.jsx)(r.Card, {
+  return (0, s.jsx)(r.Card, {
     className: n()(t, d.card),
-    children: (0, l.jsxs)(o.default, {
+    children: (0, s.jsxs)(o.default, {
       justify: o.default.Justify.BETWEEN,
       align: o.default.Align.CENTER,
-      children: [(0, l.jsx)(s, {
+      children: [(0, s.jsx)(l, {
         width: 20,
         height: 20,
         color: i.default.unsafe_rawColors.YELLOW_300.css
-      }), (0, l.jsx)("div", {
+      }), (0, s.jsx)("div", {
         className: d.label,
-        children: (0, l.jsx)(r.Text, {
+        children: (0, s.jsx)(r.Text, {
           variant: "text-md/normal",
           children: a
         })
-      }), h && (0, l.jsx)(r.Button, {
+      }), h && (0, s.jsx)(r.Button, {
         size: r.Button.Sizes.SMALL,
         color: r.Button.Colors.PRIMARY,
         onClick: c,

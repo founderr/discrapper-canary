@@ -1,49 +1,49 @@
 "use strict";
-s.r(t), s.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return _
+    return p
   }
 });
-var l = s("735250"),
-  a = s("470079"),
-  n = s("120356"),
-  i = s.n(n),
-  r = s("442837"),
-  o = s("692547"),
-  d = s("481060"),
-  u = s("787014"),
-  c = s("603211"),
-  h = s("710344"),
-  m = s("496675"),
-  E = s("729285"),
-  f = s("479099"),
-  g = s("710352"),
-  S = s("981631"),
-  T = s("689938"),
-  N = s("62184");
+var s = l("735250"),
+  a = l("470079"),
+  n = l("120356"),
+  i = l.n(n),
+  r = l("442837"),
+  o = l("692547"),
+  d = l("481060"),
+  u = l("787014"),
+  c = l("603211"),
+  h = l("710344"),
+  m = l("496675"),
+  f = l("729285"),
+  E = l("479099"),
+  g = l("710352"),
+  S = l("981631"),
+  T = l("689938"),
+  N = l("62184");
 
-function _(e) {
+function p(e) {
   let {
     channel: t
-  } = e, n = (0, r.useStateFromStores)([m.default], () => m.default.can(S.Permissions.MANAGE_CHANNELS, t), [t]), c = t.availableTags.length >= g.MAX_FORUM_TAGS, f = t.availableTags.length > 0, _ = a.useCallback(() => {
+  } = e, n = (0, r.useStateFromStores)([m.default], () => m.default.can(S.Permissions.MANAGE_CHANNELS, t), [t]), c = t.availableTags.length >= g.MAX_FORUM_TAGS, E = t.availableTags.length > 0, p = a.useCallback(() => {
     let e = t.availableTags.length >= g.MAX_FORUM_TAGS;
     n && !e && (0, d.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("21971")]).then(s.bind(s, "201049"));
-      return s => (0, l.jsx)(e, {
-        ...s,
+      } = await Promise.all([l.e("99387"), l.e("21971")]).then(l.bind(l, "201049"));
+      return l => (0, s.jsx)(e, {
+        ...l,
         channelId: t.id,
         guildId: t.guild_id
       })
     })
-  }, [t, n]), C = a.useCallback(e => {
+  }, [t, n]), _ = a.useCallback(e => {
     n && (0, d.openModalLazy)(async () => {
       let {
         default: a
-      } = await Promise.all([s.e("99387"), s.e("21971")]).then(s.bind(s, "201049"));
-      return s => (0, l.jsx)(a, {
-        ...s,
+      } = await Promise.all([l.e("99387"), l.e("21971")]).then(l.bind(l, "201049"));
+      return l => (0, s.jsx)(a, {
+        ...l,
         channelId: t.id,
         guildId: t.guild_id,
         tag: e
@@ -58,48 +58,48 @@ function _(e) {
       availableTags: e
     })
   });
-  return (0, l.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: N.tags,
-    children: [f ? t.availableTags.map(e => (0, l.jsx)(p, {
+    children: [E ? t.availableTags.map(e => (0, s.jsx)(C, {
       tag: e,
       availableTags: t.availableTags,
       canManageChannels: n,
-      onTagClick: C,
+      onTagClick: _,
       onDragComplete: I,
       onDragReset: M,
       onDragStart: x
-    }, e.id)) : null, f ? (0, l.jsx)(d.Clickable, {
-      onClick: _,
+    }, e.id)) : null, E ? (0, s.jsx)(d.Clickable, {
+      onClick: p,
       className: i()(N.addTags, {
         [N.disabled]: !n || c
       }),
-      children: (0, l.jsx)(E.default, {
+      children: (0, s.jsx)(f.default, {
         "aria-label": T.default.Messages.FORUM_TAG_CREATE,
         color: o.default.unsafe_rawColors.WHITE_500.css,
         width: 20,
         height: 20
       })
-    }) : (0, l.jsx)(d.Button, {
+    }) : (0, s.jsx)(d.Button, {
       disabled: !n,
-      onClick: _,
+      onClick: p,
       children: T.default.Messages.FORUM_TAG_CREATE
     })]
   })
 }
 
-function p(e) {
+function C(e) {
   let {
     tag: t,
-    availableTags: s,
+    availableTags: l,
     canManageChannels: a,
     onTagClick: n,
     onDragComplete: r,
     onDragStart: o,
     onDragReset: d
-  } = e, u = s.findIndex(e => e.id === t.id), {
+  } = e, u = l.findIndex(e => e.id === t.id), {
     drag: h,
     dragSourcePosition: m,
-    drop: E,
+    drop: f,
     setIsDraggable: g
   } = (0, c.default)({
     type: "CHANNEL_SETTINGS_FORUM_TAGS",
@@ -109,15 +109,15 @@ function p(e) {
     onDragComplete: r,
     onDragReset: d
   });
-  return (0, l.jsx)("div", {
+  return (0, s.jsx)("div", {
     className: i()(N.container, {
       [N.dropIndicatorBefore]: null != m && u < m,
       [N.dropIndicatorAfter]: null != m && u > m
     }),
-    ref: e => h(E(e)),
+    ref: e => h(f(e)),
     onMouseEnter: () => g(a),
     onMouseLeave: () => g(!1),
-    children: (0, l.jsx)(f.default, {
+    children: (0, s.jsx)(E.default, {
       tag: t,
       disabled: !a,
       ariaLabel: T.default.Messages.FORUM_TAG_EDIT_LABEL.format({

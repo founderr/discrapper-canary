@@ -34,14 +34,14 @@ var s = l("735250"),
   v = l("428813"),
   j = l("2147"),
   y = l("856606"),
-  D = l("981631"),
-  b = l("689938"),
+  b = l("981631"),
+  D = l("689938"),
   F = l("881948");
 
 function P(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
     l = arguments.length > 2 ? arguments[2] : void 0;
-  h.default.trackWithMetadata(D.AnalyticEvents.SETTINGS_PANE_VIEWED, {
+  h.default.trackWithMetadata(b.AnalyticEvents.SETTINGS_PANE_VIEWED, {
     settings_type: "channel",
     origin_pane: t,
     destination_pane: e,
@@ -66,7 +66,7 @@ class w extends a.PureComponent {
       canManageChannels: i,
       canManageWebhooks: r
     } = this.props;
-    (i || n || r) && (s !== D.FormStates.CLOSED || s === t) && (n || a !== D.ChannelSettingsSections.PERMISSIONS) && (r || a !== D.ChannelSettingsSections.INTEGRATIONS) ? a !== l && P(a, l): (0, d.popLayer)()
+    (i || n || r) && (s !== b.FormStates.CLOSED || s === t) && (n || a !== b.ChannelSettingsSections.PERMISSIONS) && (r || a !== b.ChannelSettingsSections.INTEGRATIONS) ? a !== l && P(a, l): (0, d.popLayer)()
   }
   render() {
     let {
@@ -83,7 +83,7 @@ class w extends a.PureComponent {
     return null == a ? null : (0, s.jsx)(u.default, {
       theme: e,
       sidebarTheme: t,
-      section: null != l ? l : D.ChannelSettingsSections.OVERVIEW,
+      section: null != l ? l : b.ChannelSettingsSections.OVERVIEW,
       onSetSection: o.setSection,
       onClose: d.popLayer,
       sections: function(e) {
@@ -96,7 +96,7 @@ class w extends a.PureComponent {
           canManageWebhooks: u
         } = e, h = (0, f.getChannelIconComponent)(t), {
           GUILD_CATEGORY: g
-        } = D.ChannelTypes, S = T.THREAD_CHANNEL_TYPES.has(t.type), _ = t.type === g ? b.default.Messages.DELETE_CATEGORY : S ? t.isForumPost() ? b.default.Messages.DELETE_FORUM_POST : b.default.Messages.DELETE_THREAD : b.default.Messages.DELETE_CHANNEL;
+        } = b.ChannelTypes, S = T.THREAD_CHANNEL_TYPES.has(t.type), _ = t.type === g ? D.default.Messages.DELETE_CATEGORY : S ? t.isForumPost() ? D.default.Messages.DELETE_FORUM_POST : D.default.Messages.DELETE_THREAD : D.default.Messages.DELETE_CHANNEL;
         return [{
           section: c.SectionTypes.HEADER,
           label: null != t ? (0, s.jsxs)(s.Fragment, {
@@ -112,19 +112,19 @@ class w extends a.PureComponent {
               className: F.category,
               children: (0, m.computeChannelName)(l, I.default, M.default)
             }) : null]
-          }) : b.default.Messages.CHANNEL_SETTINGS
+          }) : D.default.Messages.CHANNEL_SETTINGS
         }, {
-          section: D.ChannelSettingsSections.OVERVIEW,
-          label: b.default.Messages.OVERVIEW,
-          ariaLabel: b.default.Messages.OVERVIEW,
+          section: b.ChannelSettingsSections.OVERVIEW,
+          label: D.default.Messages.OVERVIEW,
+          ariaLabel: D.default.Messages.OVERVIEW,
           element: j.default,
           notice: {
             element: j.ChannelSettingsOverviewNotice,
             stores: [C.default]
           }
         }, {
-          section: D.ChannelSettingsSections.PERMISSIONS,
-          label: b.default.Messages.PERMISSIONS,
+          section: b.ChannelSettingsSections.PERMISSIONS,
+          label: D.default.Messages.PERMISSIONS,
           element: E.default,
           notice: {
             element: y.ChannelSettingsPermissionsNotice,
@@ -132,15 +132,15 @@ class w extends a.PureComponent {
           },
           predicate: () => a && !S
         }, {
-          section: D.ChannelSettingsSections.INSTANT_INVITES,
-          label: b.default.Messages.INVITES,
+          section: b.ChannelSettingsSections.INSTANT_INVITES,
+          label: D.default.Messages.INVITES,
           element: v.default,
           type: c.ContentTypes.CUSTOM,
           predicate: () => t.type !== g && n && !S
         }, {
-          section: D.ChannelSettingsSections.INTEGRATIONS,
-          label: b.default.Messages.INTEGRATIONS_OVERVIEW,
-          ariaLabel: b.default.Messages.INTEGRATIONS_OVERVIEW,
+          section: b.ChannelSettingsSections.INTEGRATIONS,
+          label: D.default.Messages.INTEGRATIONS_OVERVIEW,
+          ariaLabel: D.default.Messages.INTEGRATIONS_OVERVIEW,
           element: L.default,
           notice: {
             stores: [N.default],
@@ -150,10 +150,10 @@ class w extends a.PureComponent {
         }, {
           section: c.SectionTypes.DIVIDER
         }, {
-          section: D.ChannelSettingsSections.DELETE,
+          section: b.ChannelSettingsSections.DELETE,
           onClick() {
             (0, O.openDeleteChannelModal)(t, function() {
-              A.ComponentDispatch.subscribeOnce(D.ComponentActions.LAYER_POP_COMPLETE, () => {
+              A.ComponentDispatch.subscribeOnce(b.ComponentActions.LAYER_POP_COMPLETE, () => {
                 (0, o.deleteChannel)(t.id)
               }), (0, d.popLayer)()
             })
@@ -182,14 +182,14 @@ function U() {
   let {
     channel: e,
     analyticsLocation: t
-  } = (0, n.useStateFromStoresObject)([C.default], () => C.default.getProps()), l = (0, n.useStateFromStores)([C.default], () => C.default.getFormState()), a = (0, n.useStateFromStores)([C.default], () => C.default.getSection()), i = (0, n.useStateFromStores)([S.default], () => S.default.theme), r = (0, n.useStateFromStores)([S.default], () => S.default.darkSidebar ? D.ThemeTypes.DARK : void 0), o = (0, g.useCanManageThread)(e), d = (0, g.useIsThreadModerator)(e), {
+  } = (0, n.useStateFromStoresObject)([C.default], () => C.default.getProps()), l = (0, n.useStateFromStores)([C.default], () => C.default.getFormState()), a = (0, n.useStateFromStores)([C.default], () => C.default.getSection()), i = (0, n.useStateFromStores)([S.default], () => S.default.theme), r = (0, n.useStateFromStores)([S.default], () => S.default.darkSidebar ? b.ThemeTypes.DARK : void 0), o = (0, g.useCanManageThread)(e), d = (0, g.useIsThreadModerator)(e), {
     canManageChannels: u,
     canManageRoles: c,
     canManageWebhooks: h
   } = (0, n.useStateFromStoresObject)([x.default], () => ({
-    canManageChannels: x.default.can(D.Permissions.MANAGE_CHANNELS, e),
-    canManageRoles: null != e && x.default.can(D.Permissions.MANAGE_ROLES, e),
-    canManageWebhooks: null != e && x.default.can(D.Permissions.MANAGE_WEBHOOKS, e)
+    canManageChannels: x.default.can(b.Permissions.MANAGE_CHANNELS, e),
+    canManageRoles: null != e && x.default.can(b.Permissions.MANAGE_ROLES, e),
+    canManageWebhooks: null != e && x.default.can(b.Permissions.MANAGE_WEBHOOKS, e)
   })), m = (0, n.useStateFromStores)([_.default], () => _.default.getChannel(null == e ? void 0 : e.parent_id));
   return (0, s.jsx)(w, {
     channel: e,

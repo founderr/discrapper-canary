@@ -1,33 +1,33 @@
 "use strict";
-s.r(t), s("47120");
-var l = s("735250");
-s("470079");
-var a = s("120356"),
-  n = s.n(a),
-  i = s("481060"),
-  r = s("968437"),
-  o = s("689938"),
-  d = s("919665");
+l.r(t), l("47120");
+var s = l("735250");
+l("470079");
+var a = l("120356"),
+  n = l.n(a),
+  i = l("481060"),
+  r = l("968437"),
+  o = l("689938"),
+  d = l("919665");
 t.default = e => {
   let {
     autoArchiveDuration: t,
-    onChange: s,
+    onChange: l,
     isDisabled: a
-  } = e, u = (0, r.getAutoArchiveOptions)(), c = (e, t) => (0, l.jsx)("span", {
+  } = e, u = (0, r.getAutoArchiveOptions)(), c = (e, t) => (0, s.jsx)("span", {
     className: n()(d.optionLabel, {
       [d.dropdownOption]: t
     }),
     children: e.label
   });
-  return (0, l.jsx)(i.FormSection, {
+  return (0, s.jsx)(i.FormSection, {
     title: o.default.Messages.FORM_THREAD_AUTO_ARCHIVE_SECTION_LABEL,
     className: d.formSection,
-    children: (0, l.jsx)(i.SingleSelect, {
+    children: (0, s.jsx)(i.SingleSelect, {
       isDisabled: a,
       options: u,
       value: t,
       maxVisibleItems: u.length,
-      onChange: s,
+      onChange: l,
       optionClassName: d.dropdownOption,
       renderOptionLabel: e => c(e, !0),
       renderOptionValue: e => {

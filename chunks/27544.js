@@ -1,29 +1,29 @@
 "use strict";
-s.r(t), s.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return E
+    return f
   }
-}), s("47120");
-var l = s("735250"),
-  a = s("470079"),
-  n = s("748780"),
-  i = s("442837"),
-  r = s("481060"),
-  o = s("741361"),
-  d = s("856606"),
-  u = s("277053"),
-  c = s("259580"),
-  h = s("689938"),
-  m = s("62403");
+}), l("47120");
+var s = l("735250"),
+  a = l("470079"),
+  n = l("748780"),
+  i = l("442837"),
+  r = l("481060"),
+  o = l("741361"),
+  d = l("856606"),
+  u = l("277053"),
+  c = l("259580"),
+  h = l("689938"),
+  m = l("62403");
 
-function E() {
+function f() {
   let e = (0, i.useStateFromStores)([u.default], () => u.default.advancedMode),
     [t] = a.useState(new n.default.Value(e ? 1 : 0));
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(r.FormDivider, {
+  return (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(r.FormDivider, {
       className: m.advancedModeDivider
-    }), (0, l.jsx)(r.HeadingLevel, {
-      component: (0, l.jsx)(r.Button, {
+    }), (0, s.jsx)(r.HeadingLevel, {
+      component: (0, s.jsx)(r.Button, {
         look: r.Button.Looks.BLANK,
         color: r.Button.Colors.TRANSPARENT,
         onClick: function() {
@@ -37,10 +37,10 @@ function E() {
             duration: 250
           }).start())
         },
-        children: (0, l.jsxs)(r.FormTitle, {
+        children: (0, s.jsxs)(r.FormTitle, {
           tag: "h1",
           className: m.advancedTitle,
-          children: [h.default.Messages.CHANNEL_PERMISSIONS_ADVANCED_PERMISSIONS, (0, l.jsx)(c.default, {
+          children: [h.default.Messages.CHANNEL_PERMISSIONS_ADVANCED_PERMISSIONS, (0, s.jsx)(c.default, {
             expanded: e,
             className: m.titleCaret,
             width: 20,
@@ -48,11 +48,11 @@ function E() {
           })]
         })
       }),
-      children: e && (0, l.jsx)(n.default.div, {
+      children: e && (0, s.jsx)(n.default.div, {
         style: {
           opacity: t
         },
-        children: (0, l.jsx)(d.default, {})
+        children: (0, s.jsx)(d.default, {})
       })
     })]
   })

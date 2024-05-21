@@ -1,35 +1,35 @@
 "use strict";
-s.r(t), s.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return g
   }
-}), s("47120");
-var l = s("735250"),
-  a = s("470079"),
-  n = s("120356"),
-  i = s.n(n),
-  r = s("780384"),
-  o = s("481060"),
-  d = s("239091"),
-  u = s("741247"),
-  c = s("151888"),
-  h = s("808268"),
-  m = s("689938"),
-  E = s("699566");
+}), l("47120");
+var s = l("735250"),
+  a = l("470079"),
+  n = l("120356"),
+  i = l.n(n),
+  r = l("780384"),
+  o = l("481060"),
+  d = l("239091"),
+  u = l("741247"),
+  c = l("151888"),
+  h = l("808268"),
+  m = l("689938"),
+  f = l("699566");
 
-function f(e) {
+function E(e) {
   let {
     role: t,
     guild: n
   } = e, [r, c] = a.useState(!1);
-  return (0, u.useHasGuildRoleItems)(n, t) ? (0, l.jsx)(o.Clickable, {
+  return (0, u.useHasGuildRoleItems)(n, t) ? (0, s.jsx)(o.Clickable, {
     onClick: e => {
       c(!0), (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.resolve().then(s.bind(s, "741247"));
-        return s => (0, l.jsx)(e, {
-          ...s,
+        } = await Promise.resolve().then(l.bind(l, "741247"));
+        return l => (0, s.jsx)(e, {
+          ...l,
           role: t,
           guild: n
         })
@@ -37,10 +37,10 @@ function f(e) {
         onClose: () => c(!1)
       })
     },
-    className: i()(E.roleOverflow, {
-      [E.open]: r
+    className: i()(f.roleOverflow, {
+      [f.open]: r
     }),
-    children: (0, l.jsx)(h.default, {
+    children: (0, s.jsx)(h.default, {
       width: 20,
       height: 20
     })
@@ -58,9 +58,9 @@ function g(e) {
     selectedItem: S,
     onItemSelect: T,
     itemType: N,
-    locked: _,
-    lockTooltip: p,
-    showContextMenu: C,
+    locked: p,
+    lockTooltip: C,
+    showContextMenu: _,
     theme: x,
     roleStyle: M,
     "aria-label": I
@@ -68,50 +68,50 @@ function g(e) {
     (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await s.e("5396").then(s.bind(s, "731646"));
-      return t => (0, l.jsx)(e, {
+      } = await l.e("5396").then(l.bind(l, "731646"));
+      return t => (0, s.jsx)(e, {
         ...t,
         id: n,
         label: m.default.Messages.COPY_ID_ROLE
       })
     })
   }, [n]);
-  return g ? (0, l.jsx)("div", {
-    className: E.dragged
-  }) : (0, l.jsx)(o.TabBar.Item, {
-    className: E.role,
+  return g ? (0, s.jsx)("div", {
+    className: f.dragged
+  }) : (0, s.jsx)(o.TabBar.Item, {
+    className: f.role,
     id: n,
     selectedItem: S,
     onItemSelect: T,
     itemType: N,
-    "aria-label": null != p ? "".concat(I, ", ").concat(p) : I,
-    children: (0, l.jsxs)("div", {
-      className: E.roleContent,
-      children: ["dot" === M ? (0, l.jsx)(o.RoleDot, {
+    "aria-label": null != C ? "".concat(I, ", ").concat(C) : I,
+    children: (0, s.jsxs)("div", {
+      className: f.roleContent,
+      children: ["dot" === M ? (0, s.jsx)(o.RoleDot, {
         color: null != t ? t : void 0,
-        className: E.roleDot,
+        className: f.roleDot,
         background: !1,
         tooltip: !1
-      }) : (0, l.jsx)(o.RoleCircle, {
+      }) : (0, s.jsx)(o.RoleCircle, {
         color: null != t ? t : void 0,
-        className: E.roleCircle
+        className: f.roleCircle
       }), function() {
-        if (!_) return null;
-        let e = (0, r.isThemeDark)(x) ? s("27377") : s("514811");
-        return (0, l.jsx)(o.Tooltip, {
-          text: p,
+        if (!p) return null;
+        let e = (0, r.isThemeDark)(x) ? l("27377") : l("514811");
+        return (0, s.jsx)(o.Tooltip, {
+          text: C,
           color: o.Tooltip.Colors.RED,
-          children: t => (0, l.jsx)(c.default, {
-            className: E.lock,
+          children: t => (0, s.jsx)(c.default, {
+            className: f.lock,
             src: e,
             ...t
           })
         })
-      }(), (0, l.jsx)("div", {
-        className: E.roleInner,
+      }(), (0, s.jsx)("div", {
+        className: f.roleInner,
         onContextMenu: R,
         children: h
-      }), C && null != i ? (0, l.jsx)(f, {
+      }), _ && null != i ? (0, s.jsx)(E, {
         guild: u,
         role: i
       }) : null]

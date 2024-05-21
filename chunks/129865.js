@@ -1,7 +1,7 @@
 "use strict";
-s.r(t);
-var l = s("818083");
-t.default = (0, l.createExperiment)({
+l.r(t);
+var s = l("818083");
+t.default = (0, s.createExperiment)({
   kind: "guild",
   id: "2024-03_advanced_slowmode_input",
   label: "advanced slowmode input",

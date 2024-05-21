@@ -30,8 +30,8 @@ var s = l("735250"),
   v = l("630641"),
   j = l("241820"),
   y = l("170039"),
-  D = l("417622"),
-  b = l("903386"),
+  b = l("417622"),
+  D = l("903386"),
   F = l("700785"),
   P = l("605436"),
   w = l("27544"),
@@ -437,14 +437,14 @@ t.default = r.default.connectStores([C.default, M.default, _.default, x.default]
       children: p.subtitle
     }), null != n && t ? m ? (0, s.jsx)(H.default, {
       canSync: !1,
-      icon: D.default,
+      icon: b.default,
       noticeText: k.default.Messages.CHANNEL_LOCKED_TO_CATEGORY.format({
         categoryName: n.name
       })
     }) : (0, s.jsx)(H.default, {
       buttonText: k.default.Messages.SYNC_NOW,
       canSync: !0,
-      icon: b.default,
+      icon: D.default,
       noticeText: k.default.Messages.PERMISSIONS_UNSYNCED.format({
         categoryName: n.name
       }),
