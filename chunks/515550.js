@@ -45,6 +45,7 @@ function h(e) {
       className: E.body,
       children: [(0, a.jsx)(s.Heading, {
         variant: "heading-md/extrabold",
+        className: E.text,
         children: f.default.Messages.APP_ICON_NEW_STYLES_HEADER
       }), (0, a.jsxs)("div", {
         className: E.poweredByNitroContainer,
@@ -53,10 +54,12 @@ function h(e) {
           isSelected: !0
         }), (0, a.jsx)(s.Text, {
           variant: "text-xxs/medium",
+          className: E.text,
           children: f.default.Messages.POWERED_BY_NITRO
         })]
       }), (0, a.jsx)(s.Text, {
         variant: "text-sm/medium",
+        className: E.text,
         children: f.default.Messages.APP_ICON_NEW_STYLES_BODY
       })]
     }), (0, a.jsx)(s.Button, {
