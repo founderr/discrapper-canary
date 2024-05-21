@@ -4,24 +4,25 @@ var i = n("544891"),
   r = n("570140"),
   s = n("668781"),
   a = n("239091"),
-  o = n("962086"),
-  l = n("160404"),
-  u = n("264229"),
-  d = n("271383"),
-  _ = n("701190"),
-  c = n("594174"),
-  E = n("981631"),
-  I = n("689938");
-let T = async (e, t) => {
-  let n = null != t ? t : _.default.getInviteKeyForGuildId(e),
-    s = c.default.getCurrentUser(),
-    a = !d.default.isMember(e, null == s ? void 0 : s.id);
+  o = n("881052"),
+  l = n("962086"),
+  u = n("160404"),
+  d = n("264229"),
+  _ = n("271383"),
+  c = n("701190"),
+  E = n("594174"),
+  I = n("981631"),
+  T = n("689938");
+let f = async (e, t) => {
+  let n = null != t ? t : c.default.getInviteKeyForGuildId(e),
+    s = E.default.getCurrentUser(),
+    a = !_.default.isMember(e, null == s ? void 0 : s.id);
   try {
     let t = await i.HTTP.get({
-      url: E.Endpoints.GUILD_MEMBER_VERIFICATION(e),
+      url: I.Endpoints.GUILD_MEMBER_VERIFICATION(e),
       query: {
         with_guild: a,
-        invite_code: null != n ? (0, u.parseInviteCodeFromInviteKey)(n) : void 0
+        invite_code: null != n ? (0, d.parseInviteCodeFromInviteKey)(n) : void 0
       },
       oldFormErrors: !0
     });
@@ -45,11 +46,11 @@ let T = async (e, t) => {
       guildId: e
     })
   }
-}, f = async (e, t) => {
+}, S = async (e, t) => {
   let {
     body: n
   } = await i.HTTP.patch({
-    url: E.Endpoints.GUILD_MEMBER_VERIFICATION(e),
+    url: I.Endpoints.GUILD_MEMBER_VERIFICATION(e),
     body: {
       form_fields: t
     },
@@ -64,11 +65,11 @@ let T = async (e, t) => {
       formFields: n.form_fields
     }
   })
-}, S = async (e, t) => {
+}, h = async (e, t) => {
   let {
     body: n
   } = await i.HTTP.patch({
-    url: E.Endpoints.GUILD_MEMBER_VERIFICATION(e),
+    url: I.Endpoints.GUILD_MEMBER_VERIFICATION(e),
     body: {
       description: t
     },
@@ -83,17 +84,17 @@ let T = async (e, t) => {
       formFields: n.form_fields
     }
   })
-}, h = async (e, t) => {
+}, A = async (e, t) => {
   await i.HTTP.patch({
-    url: E.Endpoints.GUILD_MEMBER_VERIFICATION(e),
+    url: I.Endpoints.GUILD_MEMBER_VERIFICATION(e),
     body: {
       enabled: t
     },
     oldFormErrors: !0
   })
-}, A = async (e, t) => {
-  if (l.default.isFullServerPreview(e)) {
-    (0, o.updateImpersonatedData)(e, {
+}, m = async (e, t) => {
+  if (u.default.isFullServerPreview(e)) {
+    (0, l.updateImpersonatedData)(e, {
       memberOptions: {
         isPending: !1
       }
@@ -104,7 +105,7 @@ let T = async (e, t) => {
     let {
       body: n
     } = await i.HTTP.put({
-      url: E.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e),
+      url: I.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e),
       body: {
         version: t.version,
         form_fields: t.formFields
@@ -114,28 +115,42 @@ let T = async (e, t) => {
       type: "USER_GUILD_JOIN_REQUEST_UPDATE",
       guildId: e,
       request: n
-    }), setTimeout(m, 200), n
+    }), setTimeout(N, 200), n
   } catch (t) {
     let {
       status: e
     } = t;
-    if (429 === e)(0, a.closeContextMenu)(), s.default.show({
-      title: I.default.Messages.CLAN_APPLICATION_RATE_LIMITED_HEADER,
-      body: I.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY,
-      confirmText: I.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BUTTON
-    });
-    else throw t
+    switch (e) {
+      case 429:
+        throw (0, a.closeContextMenu)(), s.default.show({
+          title: T.default.Messages.CLAN_APPLICATION_RATE_LIMITED_HEADER,
+          body: T.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY,
+          confirmText: T.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BUTTON
+        }), {
+          ...t,
+          message: T.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY
+        };
+      case 403:
+        throw {
+          ...t, message: T.default.Messages.CLAN_APPLICATION_MISSING_PERMISSION
+        };
+      default:
+        var n, d;
+        throw {
+          ...t, message: null !== (d = (n = new o.APIError(t), n.getAnyErrorMessage())) && void 0 !== d ? d : T.default.Messages.ERROR_GENERIC_TITLE
+        }
+    }
   }
 };
 
-function m() {
+function N() {
   r.default.dispatch({
     type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW"
   })
 }
 t.default = {
-  fetchVerificationForm: T,
-  updateVerificationForm: f,
+  fetchVerificationForm: f,
+  updateVerificationForm: S,
   updateVerificationFormFieldsLocal: (e, t) => {
     r.default.dispatch({
       type: "MEMBER_VERIFICATION_FORM_UPDATE",
@@ -146,7 +161,7 @@ t.default = {
       isLocalUpdate: !0
     })
   },
-  updateVerificationFormDescription: S,
+  updateVerificationFormDescription: h,
   updateVerificationFormDescriptionLocal: (e, t) => {
     r.default.dispatch({
       type: "MEMBER_VERIFICATION_FORM_UPDATE",
@@ -157,8 +172,8 @@ t.default = {
       isLocalUpdate: !0
     })
   },
-  enableVerificationForm: h,
-  submitVerificationForm: A,
+  enableVerificationForm: A,
+  submitVerificationForm: m,
   clearCoachmark: function() {
     r.default.dispatch({
       type: "USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR"
