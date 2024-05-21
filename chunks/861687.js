@@ -664,8 +664,7 @@ class eo extends _.default {
     })
   }
   _handleVideo(e, t, n, i, r) {
-    let s = this._connection;
-    if (null != s && this.userId !== t) {
+    if (null != this._connection && this.userId !== t) {
       if (null != this._localMediaSinkWantsManager) {
         this._localMediaSinkWantsManager.setAudioSSRC(t, n);
         let e = r.map(e => ({
@@ -684,15 +683,15 @@ class eo extends _.default {
           quality: 100,
           active: i > 0
         }), this._localMediaSinkWantsManager.setVideoSSRCs(t, e)
-      } else if (2 === r.length) {
-        var a, o;
+      } else {
+        var s, a;
         let e = [];
         for (let t of r) null != t.ssrc && null != t.quality && e.push({
           ssrc: t.ssrc,
           quality: t.quality
         });
-        null === (a = this._goLiveQualityManager) || void 0 === a || a.setUserID(t), null === (o = this._goLiveQualityManager) || void 0 === o || o.updateAudioAndVideoStreamInfo(n, e)
-      } else s.createUser(t, n, [i]);
+        null === (s = this._goLiveQualityManager) || void 0 === s || s.setUserID(t), null === (a = this._goLiveQualityManager) || void 0 === a || a.updateAudioAndVideoStreamInfo(n, e)
+      }
       null == r || r.forEach(e => {
         100 === e.quality && this.emit(K.RTCConnectionEvent.VideoSourceQualityChanged, this.guildId, this.channelId, t, e.maxResolution, e.maxFrameRate, this.context)
       })
