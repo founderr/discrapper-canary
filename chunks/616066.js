@@ -20,16 +20,16 @@ let m = u.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
   p = e => {
     let {
       item: t,
-      isPurchased: a,
-      isHighlighted: s,
-      user: u,
+      user: a,
+      isHighlighted: s = !1,
+      isPurchased: u = !1,
       avatarSize: p = i.AvatarSizes.SIZE_152
     } = e, g = (0, o.getDecorationSizeForAvatarSize)(p), E = (0, d.useCollectiblesHoverPreviewExperiment)("AvatarDecorationPreview"), {
       avatarDecorationSrc: h,
       eventHandlers: b,
       avatarPlaceholderSrc: x
     } = (0, c.default)({
-      user: u,
+      user: a,
       avatarDecorationOverride: (null == t ? void 0 : t.type) === n.CollectiblesItemType.AVATAR_DECORATION ? t : void 0,
       size: g,
       animateOnHover: !s
@@ -37,10 +37,10 @@ let m = u.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
     return (0, l.jsx)(m, {
       ...b,
       avatarDecoration: h,
-      src: E && s ? null == u ? void 0 : u.getAvatarURL(void 0, 152, !0) : x,
+      src: E && s ? null == a ? void 0 : a.getAvatarURL(void 0, 152, !0) : x,
       imageClassName: E && s ? C.fadeInAvatarImg : void 0,
       className: r()(C.avatar, {
-        [C.avatarPurchased]: a
+        [C.avatarPurchased]: u
       }),
       size: p,
       "aria-label": f.default.Messages.USER_SETTINGS_AVATAR

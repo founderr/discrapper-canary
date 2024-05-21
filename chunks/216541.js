@@ -1,44 +1,44 @@
 "use strict";
 a.r(t), a.d(t, {
   BundlePreview: function() {
-    return u
+    return c
   }
-}), a("724458"), a("653041"), a("47120");
-var l = a("735250"),
-  s = a("470079"),
-  r = a("979554"),
-  n = a("481060"),
-  i = a("876917"),
-  o = a("616066"),
-  c = a("141169");
-let u = e => {
+});
+var l = a("735250");
+a("470079");
+var s = a("481060"),
+  r = a("876917"),
+  n = a("539861"),
+  i = a("616066"),
+  o = a("141169");
+let c = e => {
   let {
     product: t,
     isPurchased: a,
-    isHighlighted: u,
-    user: d
-  } = e, f = s.useMemo(() => t.items.reduce((e, t) => {
-    let a = e.get(t.type);
-    return null != a ? a.push(t) : e.set(t.type, [t]), e
-  }, new Map), [t]), C = f.get(r.CollectiblesItemType.AVATAR_DECORATION), m = f.get(r.CollectiblesItemType.PROFILE_EFFECT), [p] = null != C ? C : [], [g] = null != m ? m : [];
+    isHighlighted: c,
+    user: u
+  } = e, {
+    firstProfileEffect: d,
+    firstAvatarDecoration: f
+  } = (0, n.useProductItems)(t);
   return (0, l.jsxs)("div", {
-    className: c.container,
-    children: [null != g ? (0, l.jsx)("div", {
-      className: c.profileEffectShopPreview,
-      children: (0, l.jsx)(i.default, {
-        isHovering: u,
-        profileEffectId: g.id,
+    className: o.container,
+    children: [null != d ? (0, l.jsx)("div", {
+      className: o.profileEffectShopPreview,
+      children: (0, l.jsx)(r.default, {
+        isHovering: c,
+        profileEffectId: d.id,
         isPurchased: a,
         removeSetHeight: !0
       })
-    }) : null, null != p && p.type === r.CollectiblesItemType.AVATAR_DECORATION ? (0, l.jsx)("div", {
-      className: c.avatarDecorationPreview,
-      children: (0, l.jsx)(o.AvatarDecorationPreview, {
-        item: p,
-        user: d,
-        avatarSize: n.AvatarSizes.SIZE_120,
+    }) : null, null != f ? (0, l.jsx)("div", {
+      className: o.avatarDecorationPreview,
+      children: (0, l.jsx)(i.AvatarDecorationPreview, {
+        item: f,
+        user: u,
+        avatarSize: s.AvatarSizes.SIZE_120,
         isPurchased: a,
-        isHighlighted: u
+        isHighlighted: c
       })
     }) : null]
   })

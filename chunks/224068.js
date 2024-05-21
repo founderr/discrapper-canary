@@ -17,10 +17,10 @@ var a = l("120356"),
 function u(e) {
   var t;
   let {
-    item: l,
+    product: l,
     isDarkText: a = !1
   } = e;
-  let u = (t = null == l ? void 0 : l.type, (0, n.match)(t).with(r.CollectiblesItemType.AVATAR_DECORATION, () => d.default.Messages.USER_SETTINGS_AVATAR_DECORATION).with(r.CollectiblesItemType.PROFILE_EFFECT, () => d.default.Messages.USER_SETTINGS_PROFILE_EFFECT).otherwise(() => null));
+  let u = (t = l.type, (0, n.match)(t).with(r.CollectiblesItemType.AVATAR_DECORATION, () => d.default.Messages.USER_SETTINGS_AVATAR_DECORATION).with(r.CollectiblesItemType.PROFILE_EFFECT, () => d.default.Messages.USER_SETTINGS_PROFILE_EFFECT).otherwise(() => null));
   return null === u ? null : (0, s.jsx)(o.Text, {
     variant: "text-xxs/normal",
     className: i()([c.container, a ? c.darkText : c.lightText]),
