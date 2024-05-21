@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("442837"),
   l = n("481060"),
   u = n("924301"),
@@ -24,18 +24,18 @@ function h(e) {
   var t;
   let {
     cardData: n,
-    guildId: a
+    guildId: s
   } = e, {
     category: h
-  } = n, [A, m] = r.useState(!1), N = h === f.CardCategory.HANGOUT && n.streamUserIds.length > 0, p = (0, o.useStateFromStores)([d.default], () => N ? d.default.getPreviewURL(a, n.channelId, n.streamUserIds[0]) : null), O = (0, o.useStateFromStores)([_.default], () => {
+  } = n, [A, m] = r.useState(!1), N = h === f.CardCategory.HANGOUT && n.streamUserIds.length > 0, p = (0, o.useStateFromStores)([d.default], () => N ? d.default.getPreviewURL(s, n.channelId, n.streamUserIds[0]) : null), O = (0, o.useStateFromStores)([_.default], () => {
     let e = h === f.CardCategory.HANGOUT || h === f.CardCategory.GAMING ? n.channelId : h === f.CardCategory.EVENT ? n.event.channel_id : h === f.CardCategory.EMBEDDED_ACTIVITY ? n.embeddedActivities[0].channelId : null;
     return _.default.getChannel(e)
   }), C = (0, o.useStateFromStores)([u.default], () => u.default.getActiveEventByChannel(null == O ? void 0 : O.id)), {
     usersToShow: R,
     othersCount: g
-  } = (0, I.useVoiceChannelUsers)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : "", a), {
+  } = (0, I.useVoiceChannelUsers)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : "", s), {
     usersToShow: L
-  } = (0, I.useGetEventCardUsers)(O), v = (0, T.useImage)(n, a, p), D = (0, T.useCardTitle)(n, a), M = (0, T.useSubtitle)(n), y = (0, T.useCount)(n), P = (0, T.getClickHandler)(n, a), U = (0, T.getJoinButton)(n, a), b = (null != C || !!(null == O ? void 0 : O.isGuildStageVoice())) && L.length > 0, G = h === f.CardCategory.HANGOUT && 0 === n.streamUserIds.length && !(null == O ? void 0 : O.isGuildStageVoice()), w = b || G, k = h === f.CardCategory.EMBEDDED_ACTIVITY && n.streamersCount > 0 ? (0, i.jsxs)("div", {
+  } = (0, I.useGetEventCardUsers)(O), v = (0, T.useImage)(n, s, p), D = (0, T.useCardTitle)(n, s), M = (0, T.useSubtitle)(n), y = (0, T.useCount)(n), P = (0, T.getClickHandler)(n, s), U = (0, T.getJoinButton)(n, s), b = (null != C || !!(null == O ? void 0 : O.isGuildStageVoice())) && L.length > 0, G = h === f.CardCategory.HANGOUT && 0 === n.streamUserIds.length && !(null == O ? void 0 : O.isGuildStageVoice()), w = b || G, k = h === f.CardCategory.EMBEDDED_ACTIVITY && n.streamersCount > 0 ? (0, i.jsxs)("div", {
     className: S.pill,
     children: [(0, i.jsx)(c.default, {
       className: S.pillIcon
@@ -52,7 +52,7 @@ function h(e) {
     onMouseEnter: () => m(!0),
     onMouseLeave: () => m(!1),
     children: [(0, i.jsx)("div", {
-      className: s()(S.image, {
+      className: a()(S.image, {
         [S.streamContainer]: N && !(null == O ? void 0 : O.isGuildStageVoice()),
         [S.groupAvatar]: w
       }),
@@ -69,7 +69,7 @@ function h(e) {
         color: "text-secondary",
         className: S.subtitle,
         children: M
-      }), !w && !(null == O ? void 0 : O.isGuildStageVoice()) && (0, i.jsx)(E.CardAvatars, {
+      }), !w && !(null == O ? void 0 : O.isGuildStageVoice()) && R.length > 0 && (0, i.jsx)(E.CardAvatars, {
         users: R,
         othersCount: g,
         extraPill: k
