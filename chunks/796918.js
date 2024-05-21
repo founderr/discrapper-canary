@@ -13,10 +13,6 @@ var n = a("735250"),
   m = a("308083"),
   h = a("689938"),
   E = a("661926");
-
-function T(e) {
-  return !m.ALL_TRAITS_SET.has(e) && !m.SUGGESTED_TRAITS_SET.has(e) && !m.LANGUAGES_SET.has(e)
-}
 t.default = e => {
   let {
     guildId: t,
@@ -24,27 +20,27 @@ t.default = e => {
     progress: s,
     error: p
   } = e, {
-    interests: C
-  } = s, [_, x] = r.useState(""), g = (0, o.useStateFromStores)([c.default], () => c.default.getId()), N = r.useMemo(() => (0, u.stableSortSet)(m.SUGGESTED_TRAITS_SET, g), [g]), I = r.useMemo(() => Array.from(C), [C]), v = r.useMemo(() => I.filter(T), [I]), A = r.useMemo(() => [...N, ...v], [v, N]), S = r.useMemo(() => I.filter(e => !m.ALL_TRAITS_SET.has(e) && !m.LANGUAGES_SET.has(e)), [I]), L = e => {
-    let t = new Set(C);
+    interests: T
+  } = s, [C, _] = r.useState(""), x = (0, o.useStateFromStores)([c.default], () => c.default.getId()), g = r.useMemo(() => (0, u.stableSortSet)(m.SUGGESTED_TRAITS_SET, x), [x]), N = r.useMemo(() => Array.from(T), [T]), I = r.useMemo(() => N.filter(m.isCustomInterest), [N]), v = r.useMemo(() => [...g, ...I], [I, g]), A = r.useMemo(() => N.filter(e => !m.ALL_TRAITS_SET.has(e) && !m.LANGUAGES_SET.has(e)), [N]), S = e => {
+    let t = new Set(T);
     t.delete(e), a({
       interests: t
     })
-  }, R = r.useCallback(e => {
-    if (C.size === m.MAX_NUM_INTERESTS) return;
-    let t = null != e ? e : _.trim();
+  }, L = r.useCallback(e => {
+    if (T.size === m.MAX_NUM_INTERESTS) return;
+    let t = null != e ? e : C.trim();
     if (0 === t.length) return;
-    let n = new Set(C);
+    let n = new Set(T);
     n.add(t), a({
       interests: n
-    }), x("")
-  }, [a, _, C]), y = r.useCallback(e => {
+    }), _("")
+  }, [a, C, T]), R = r.useCallback(e => {
     switch (e.key) {
       case "Enter":
       case "Tab":
-        e.preventDefault(), e.stopPropagation(), R()
+        e.preventDefault(), e.stopPropagation(), L()
     }
-  }, [R]);
+  }, [L]);
   return (0, n.jsxs)("div", {
     className: E.slideContent,
     children: [(0, n.jsx)(l.Heading, {
@@ -75,19 +71,19 @@ t.default = e => {
           }), (0, n.jsx)(l.TextInput, {
             autoFocus: !0,
             inputClassName: E.input,
-            value: _,
-            onKeyDown: y,
-            onChange: x,
+            value: C,
+            onKeyDown: R,
+            onChange: _,
             placeholder: h.default.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
             maxLength: m.MAX_INTEREST_LENGTH,
-            disabled: C.size === m.MAX_NUM_INTERESTS
-          }), _.length > 0 && (0, n.jsx)(l.Clickable, {
-            onClick: () => R(_.trim()),
+            disabled: T.size === m.MAX_NUM_INTERESTS
+          }), C.length > 0 && (0, n.jsx)(l.Clickable, {
+            onClick: () => L(C.trim()),
             className: i()(E.plusIcon, E.clickable),
             children: (0, n.jsx)(d.default, {
               className: E.icon
             })
-          }), _.length > 0 && (0, n.jsx)(l.Text, {
+          }), C.length > 0 && (0, n.jsx)(l.Text, {
             color: "text-muted",
             variant: "text-xs/normal",
             className: E.enterToSearchText,
@@ -100,13 +96,13 @@ t.default = e => {
           children: h.default.Messages.CLAN_SETUP_SUGGESTED_INTERESTS
         }), (0, n.jsx)("div", {
           className: E.interestsCategory,
-          children: A.map(e => {
-            let t = C.has(e);
+          children: v.map(e => {
+            let t = T.has(e);
             return (0, n.jsx)(l.Clickable, {
               className: i()(E.interestsTag, E.selectableOption, {
                 [E.selectedOption]: t
               }),
-              onClick: () => t ? L(e) : R(e),
+              onClick: () => t ? S(e) : L(e),
               children: (0, n.jsx)(l.Text, {
                 variant: "text-xs/medium",
                 color: "none",
@@ -117,10 +113,10 @@ t.default = e => {
         })]
       }), (0, n.jsx)("div", {
         className: E.fixedWidthSidebar,
-        children: I.length > 0 && (0, n.jsx)(f.default, {
+        children: N.length > 0 && (0, n.jsx)(f.default, {
           guildId: t,
           progress: s,
-          traitsToHighlight: S,
+          traitsToHighlight: A,
           maskDescription: !0
         })
       })]
