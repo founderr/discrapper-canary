@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("47120");
-var i, r, s, a, o, l, u = n("442837"),
+var i, r, a, s, o, l, u = n("442837"),
   d = n("570140");
-(s = i || (i = {}))[s.FETCHING = 0] = "FETCHING", s[s.FETCHED = 1] = "FETCHED", s[s.ERROR = 2] = "ERROR";
+(a = i || (i = {}))[a.FETCHING = 0] = "FETCHING", a[a.FETCHED = 1] = "FETCHED", a[a.ERROR = 2] = "ERROR";
 let _ = {},
   c = {},
   E = new Set,
@@ -37,12 +37,12 @@ class T extends(r = u.default.Store) {
     if (null != e) return I[e]
   }
 }
-l = "ApplicationDirectoryApplicationsStore", (o = "displayName") in(a = T) ? Object.defineProperty(a, o, {
+l = "ApplicationDirectoryApplicationsStore", (o = "displayName") in(s = T) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new T(d.default, {
+}) : s[o] = l, t.default = new T(d.default, {
   APPLICATION_DIRECTORY_FETCH_APPLICATION: function(e) {
     let {
       applicationId: t

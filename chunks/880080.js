@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("920906"),
+  a = n.n(r),
+  s = n("920906"),
   o = n("771941");
 let l = Object.freeze({
     tension: 400,
@@ -34,7 +34,7 @@ function d(e) {
       height: t ? 40 : n ? 20 : 8,
       x: 0
     },
-    E = (0, a.useTransition)(t || n || r, {
+    E = (0, s.useTransition)(t || n || r, {
       config: l,
       keys: e => e ? "pill" : "empty",
       immediate: !n && !document.hasFocus(),
@@ -45,9 +45,9 @@ function d(e) {
       update: c
     });
   return (0, i.jsx)("div", {
-    className: s()(_, o.wrapper),
+    className: a()(_, o.wrapper),
     "aria-hidden": !0,
-    children: E((e, t) => t && (0, i.jsx)(a.animated.span, {
+    children: E((e, t) => t && (0, i.jsx)(s.animated.span, {
       className: o.item,
       style: e
     }))

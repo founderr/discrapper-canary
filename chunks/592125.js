@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return j
   }
 }), n("47120"), n("51350"), n("411104");
-var i, r, s, a, o = n("392711"),
+var i, r, a, s, o = n("392711"),
   l = n.n(o),
   u = n("956067"),
   d = n("442837"),
@@ -97,9 +97,9 @@ function W(e, t, n) {
     B.add(e), T.default.restored(e), L.log("load returned null; early returning (guild: ".concat(e, ", database: ").concat(i, ")"));
     return
   }
-  let [s, a] = r;
-  for (let n of ((0, f.default)(s), 0 !== t && (Y += 1), B.add(e), T.default.restored(e), u.default.mark("❗", "loaded guild channels (guild: ".concat(e, ")"), a), s)) !Object.hasOwn(D, n.id) && $((0, m.castChannelRecord)(n));
-  L.verbose("hydration complete (guild: ".concat(e, ", channels: ").concat(s.length, ", guilds_loaded: ").concat(Y, ")"))
+  let [a, s] = r;
+  for (let n of ((0, f.default)(a), 0 !== t && (Y += 1), B.add(e), T.default.restored(e), u.default.mark("❗", "loaded guild channels (guild: ".concat(e, ")"), s), a)) !Object.hasOwn(D, n.id) && $((0, m.castChannelRecord)(n));
+  L.verbose("hydration complete (guild: ".concat(e, ", channels: ").concat(a.length, ", guilds_loaded: ").concat(Y, ")"))
 }
 
 function K(e, t, n) {
@@ -216,14 +216,14 @@ function er(e) {
   }(r)
 }
 
-function es(e) {
+function ea(e) {
   let {
     messages: t
   } = e;
   for (let e of t) null != e.thread && !(e.thread.id in U) && m.ALL_CHANNEL_TYPES.has(e.thread.type) && J((0, m.createChannelRecordFromServer)(e.thread))
 }
 
-function ea(e) {
+function es(e) {
   let {
     messages: t,
     threads: n,
@@ -325,12 +325,12 @@ class eu extends(i = d.default.Store) {
 function ed(e) {
   return null == M[e] ? null : Object.keys(M[e]).length
 }
-a = "ChannelStore", (s = "displayName") in(r = eu) ? Object.defineProperty(r, s, {
-  value: a,
+s = "ChannelStore", (a = "displayName") in(r = eu) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new eu(_.default, {
+}) : r[a] = s, t.default = new eu(_.default, {
   BACKGROUND_SYNC: function(e) {
     let {
       guilds: t
@@ -416,8 +416,8 @@ a = "ChannelStore", (s = "displayName") in(r = eu) ? Object.defineProperty(r, s,
       for (let e of (L.fileOnly("Lazy loaded guild channels for ".concat(t)), (0, f.default)(n), B.add(t), T.default.restored(t), n)) !Object.hasOwn(D, e.id) && $((0, m.castChannelRecord)(e));
     return !1
   },
-  LOAD_MESSAGES_AROUND_SUCCESS: es,
-  LOAD_MESSAGES_SUCCESS: es,
+  LOAD_MESSAGES_AROUND_SUCCESS: ea,
+  LOAD_MESSAGES_SUCCESS: ea,
   LOAD_THREADS_SUCCESS: en,
   LOGOUT: function() {
     L.fileOnly("initializeClear()"), b = {}, D = {}, M = {}, w = {}, y = {}, F = {}, U = {}, B = new Set, V = {}, x = Date.now()
@@ -425,8 +425,8 @@ a = "ChannelStore", (s = "displayName") in(r = eu) ? Object.defineProperty(r, s,
   OVERLAY_INITIALIZE: function(e) {
     for (let t of (e.guilds.length, e.channels)) Q((0, f.deserializeChannel)((0, m.castChannelRecord)(t)))
   },
-  SEARCH_FINISH: ea,
-  MOD_VIEW_SEARCH_FINISH: ea,
+  SEARCH_FINISH: es,
+  MOD_VIEW_SEARCH_FINISH: es,
   THREAD_CREATE: et,
   THREAD_DELETE: er,
   THREAD_LIST_SYNC: function(e) {

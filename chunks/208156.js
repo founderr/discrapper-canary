@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("610138"), n("216116"), n("78328"), n("815648");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("482033"),
   l = n("153832"),
   u = n("442837"),
@@ -25,8 +25,8 @@ function A(e) {
   let {
     url: t,
     className: n,
-    style: s,
-    onLoad: a,
+    style: a,
+    onLoad: s,
     shouldRefocus: h,
     queryParams: A,
     allowPopups: m = !1,
@@ -36,7 +36,7 @@ function A(e) {
     frame_id: O,
     platform: f.ActivityPlatform.DESKTOP
   }, [L, v] = r.useState(!1), D = c.default.theme, M = {
-    ...s
+    ...a
   };
   return D === S.ThemeTypes.LIGHT ? M.colorScheme = "light" : M.colorScheme = "dark", r.useEffect(() => (E.ComponentDispatch.dispatch(S.ComponentActions.IFRAME_MOUNT, {
     id: O
@@ -60,7 +60,7 @@ function A(e) {
     referrerPolicy: N,
     onLoad: function(e) {
       var n;
-      null == a || a(e.target), C.current = e.target, R(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([_.default.HELLO, g], null != t ? t : "")
+      null == s || s(e.target), C.current = e.target, R(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([_.default.HELLO, g], null != t ? t : "")
     },
     sandbox: (0, T.default)({
       allowPopups: m
@@ -73,15 +73,15 @@ function A(e) {
 function m(e) {
   let {
     onLoad: t
-  } = e, [n, s] = r.useState(!1), o = r.useCallback(e => {
-    s(!0), null == t || t(e)
+  } = e, [n, a] = r.useState(!1), o = r.useCallback(e => {
+    a(!0), null == t || t(e)
   }, [t]);
   return (0, i.jsxs)("div", {
     className: h.fillParent,
     children: [!n && (0, i.jsx)("div", {
-      className: a()(h.fillParent, h.iframePlaceholder)
+      className: s()(h.fillParent, h.iframePlaceholder)
     }), (0, i.jsx)("div", {
-      className: a()(h.fillParent, n ? void 0 : h.hiddenIframeContainer),
+      className: s()(h.fillParent, n ? void 0 : h.hiddenIframeContainer),
       children: (0, i.jsx)(A, {
         ...e,
         onLoad: o

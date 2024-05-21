@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("920906"),
-  a = n("442837"),
+  a = n("920906"),
+  s = n("442837"),
   o = n("710593"),
   l = n("993365"),
   u = n("607070"),
@@ -26,9 +26,9 @@ function E() {
       keybinds: ["ESC"],
       name: _.default.Messages.DND_OPERATION_LABEL_CANCEL
     }],
-    t = (0, a.useStateFromStores)([u.default], () => u.default.useReducedMotion),
+    t = (0, s.useStateFromStores)([u.default], () => u.default.useReducedMotion),
     n = (0, d.useDndMode)();
-  return (0, s.useTransition)(n, {
+  return (0, a.useTransition)(n, {
     enter: {
       from: {
         opacity: 0,
@@ -43,29 +43,29 @@ function E() {
       opacity: 0,
       y: t ? 0 : 80
     },
-    config: s.config.stiff
+    config: a.config.stiff
   })((t, n) => n ? (0, i.jsx)("div", {
     className: c.positioner,
-    children: (0, i.jsx)(s.animated.div, {
+    children: (0, i.jsx)(a.animated.div, {
       className: c.container,
       style: t,
       children: e.map((t, n) => {
         let {
-          keybinds: s,
-          name: a
+          keybinds: a,
+          name: s
         } = t;
         return (0, i.jsxs)(r.Fragment, {
           children: [(0, i.jsx)(l.Text, {
             variant: "text-md/semibold",
             className: c.bindName,
-            children: a
-          }), s.map(e => (0, i.jsx)(o.KeyCombo, {
+            children: s
+          }), a.map(e => (0, i.jsx)(o.KeyCombo, {
             shortcut: e,
             className: c.shortcut
           }, e)), n < e.length - 1 ? (0, i.jsx)("span", {
             className: c.separator
           }) : null]
-        }, a)
+        }, s)
       })
     })
   }) : null)

@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("792766"),
   h = n("451603"),
   m = n("885714"),
-  p = n("973616"),
-  C = n("594174"),
+  C = n("973616"),
+  p = n("594174"),
   g = n("285952"),
   E = n("672752"),
   _ = n("153124"),
@@ -31,8 +31,8 @@ var l = n("735250"),
   x = n("358085"),
   R = n("998502"),
   M = n("379164"),
-  y = n("590965"),
-  O = n("981631"),
+  O = n("590965"),
+  y = n("981631"),
   D = n("474936"),
   b = n("689938"),
   j = n("379189"),
@@ -44,21 +44,21 @@ function G() {
     sourceAnalyticsLocations: t
   } = (0, c.default)(d.default.PREMIUM_UPSELL_TOOLTIP);
   return a.useEffect(() => {
-    L.default.track(O.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    L.default.track(y.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: D.PremiumUpsellTypes.GUILD_CAP_INLINE_INVITE_MODAL,
       location: {
-        page: O.AnalyticsPages.NATIVE_INVITE_MODAL
+        page: y.AnalyticsPages.NATIVE_INVITE_MODAL
       },
       location_stack: t
     })
   }, [t]), (0, l.jsxs)(o.Clickable, {
     onClick: () => (0, m.default)({
       analyticsSource: {
-        page: O.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL
+        page: y.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL
       },
       analyticsLocation: {
-        page: O.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL,
-        section: O.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+        page: y.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL,
+        section: y.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
       },
       analyticsLocations: e
     }),
@@ -136,15 +136,15 @@ function B(e) {
   let t, n, {
     transitionState: s
   } = e;
-  (0, r.useStateFromStores)([C.default], () => {
+  (0, r.useStateFromStores)([p.default], () => {
     var e;
-    return null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
+    return null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
   });
   let {
     invite: m,
     error: E,
     submitting: I
-  } = (0, r.useStateFromStoresObject)([y.default], () => y.default.getProps());
+  } = (0, r.useStateFromStoresObject)([O.default], () => O.default.getProps());
   a.useEffect(() => {
     !__OVERLAY__ && x.isPlatformEmbedded && ((0, x.isWindows)() ? R.default.minimize() : R.default.restore(), R.default.focus())
   }, []);
@@ -153,7 +153,7 @@ function B(e) {
       analyticsLocations: T
     } = (0, c.default)(d.default.INVITE_MODAL);
   if (null == m) return null;
-  if (m.state === O.InviteStates.EXPIRED || m.state === O.InviteStates.BANNED || m.state === O.InviteStates.ERROR) return (0, l.jsx)(w, {
+  if (m.state === y.InviteStates.EXPIRED || m.state === y.InviteStates.BANNED || m.state === y.InviteStates.ERROR) return (0, l.jsx)(w, {
     transitionState: s
   });
   if (null == m.channel) return null;
@@ -167,7 +167,7 @@ function B(e) {
     inviter: U,
     target_application: B
   } = m, F = null != m.stage_instance, H = null == m.guild && null == m.channel && null != m.inviter;
-  if (null != B) t = null == L ? void 0 : L.name, n = p.default.createFromServer(B).getCoverImageURL(1024);
+  if (null != B) t = null == L ? void 0 : L.name, n = C.default.createFromServer(B).getCoverImageURL(1024);
   else if (null != L) t = L.name, n = v.default.getGuildSplashURL({
     id: L.id,
     splash: L.splash

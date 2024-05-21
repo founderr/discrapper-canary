@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("433517"),
   u = n("570140"),
   d = n("695346"),
@@ -74,12 +74,12 @@ class v extends(i = o.default.Store) {
     return !C && N.size > 0
   }
 }
-a = "IncomingCallStore", (s = "displayName") in(r = v) ? Object.defineProperty(r, s, {
-  value: a,
+s = "IncomingCallStore", (a = "displayName") in(r = v) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new v(u.default, {
+}) : r[a] = s, t.default = new v(u.default, {
   CALL_CREATE: g,
   CALL_UPDATE: g,
   CALL_DELETE: function(e) {

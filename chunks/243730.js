@@ -1,10 +1,10 @@
 "use strict";
 n.r(t);
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140");
 let u = {},
   d = {};
-class _ extends(a = o.default.Store) {
+class _ extends(s = o.default.Store) {
   getRoleMemberCount(e) {
     return null != e ? u[e] : null
   }
@@ -14,12 +14,12 @@ class _ extends(a = o.default.Store) {
     return null == t || Date.now() - t > 12e4
   }
 }
-s = "GuildRoleMemberCountStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
-  value: s,
+a = "GuildRoleMemberCountStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new _(l.default, {
+}) : i[r] = a, t.default = new _(l.default, {
   GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
@@ -43,8 +43,8 @@ s = "GuildRoleMemberCountStore", (r = "displayName") in(i = _) ? Object.definePr
       added: i
     } = e, r = u[t];
     if (null == r || null == r[n]) return !1;
-    let s = Object.keys(i).length;
-    r[n] += s
+    let a = Object.keys(i).length;
+    r[n] += a
   },
   GUILD_ROLE_MEMBER_ADD: function(e) {
     let {

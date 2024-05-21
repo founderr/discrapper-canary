@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("1561"),
+  a = n.n(r),
+  s = n("1561"),
   o = n("590471");
 
 function l(e) {
@@ -18,10 +18,10 @@ function l(e) {
     selected: r = !1,
     className: l,
     ...u
-  } = e, d = null != t ? t : a.Clickable;
+  } = e, d = null != t ? t : s.Clickable;
   return (0, i.jsx)(d, {
     ...u,
-    className: s()(o.interactive, l, {
+    className: a()(o.interactive, l, {
       [o.muted]: n,
       [o.selected]: r
     })

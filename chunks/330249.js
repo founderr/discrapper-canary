@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   },
   getAllMessageIdsFromFeedItem: function() {
     return o
   },
   getAllMessagesFromFeedItem: function() {
-    return a
+    return s
   }
 }), n("47120"), n("536091");
 var i = n("536402"),
   r = n("823379");
 
-function s(e) {
+function a(e) {
   switch (e.type) {
     case i.GuildFeedItemTypes.MESSAGE:
     case i.GuildFeedItemTypes.FORUM_POST:
@@ -27,7 +27,7 @@ function s(e) {
   }
 }
 
-function a(e) {
+function s(e) {
   switch (e.type) {
     case i.GuildFeedItemTypes.MESSAGE:
     case i.GuildFeedItemTypes.FORUM_POST:
@@ -45,5 +45,5 @@ function a(e) {
 }
 
 function o(e) {
-  return new Set(Array.from(a(e)).map(e => e.id))
+  return new Set(Array.from(s(e)).map(e => e.id))
 }

@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("481060"),
   l = n("330726"),
   u = n("906411"),
@@ -24,7 +24,7 @@ t.default = e => {
   let {
     emojiDescriptors: t,
     emojiSize: n,
-    onSelect: s,
+    onSelect: a,
     onInspect: O,
     surrogateCodePoint: C,
     getEmojiItemProps: R,
@@ -60,7 +60,7 @@ t.default = e => {
             visibleRowIndex: n,
             columnIndex: l
           } = e, u = x.rowIndex === n && x.columnIndex === l, d = t => {
-            t.stopPropagation(), !L.current && !v.current && (s(e, {
+            t.stopPropagation(), !L.current && !v.current && (a(e, {
               isFinalSelection: !0,
               toggleFavorite: !1
             }), c.default.open(e.guildId, m.GuildSettingsSections.EMOJI, m.AnalyticsSections.EMOJI_PICKER_POPOUT))
@@ -71,7 +71,7 @@ t.default = e => {
             var e;
             let {
               onMouseEnter: n,
-              onMouseLeave: s
+              onMouseLeave: a
             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, {
               ref: c,
               tabIndex: E,
@@ -85,7 +85,7 @@ t.default = e => {
               children: (0, i.jsx)("button", {
                 "aria-label": N.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                 ref: c,
-                className: a()(p.emojiItem, {
+                className: s()(p.emojiItem, {
                   [p.emojiItemLarge]: W,
                   [p.emojiItemMedium]: K,
                   [p.emojiItemSelected]: u,
@@ -95,7 +95,7 @@ t.default = e => {
                 onFocus: null != T ? T : _,
                 onMouseOver: _,
                 onMouseEnter: n,
-                onMouseLeave: s,
+                onMouseLeave: a,
                 onClick: d,
                 tabIndex: E,
                 children: (0, i.jsx)(I.default, {
@@ -112,8 +112,8 @@ t.default = e => {
           var n;
           let {
             columnIndex: r,
-            visibleRowIndex: a
-          } = e, o = x.rowIndex === a && x.columnIndex === r;
+            visibleRowIndex: s
+          } = e, o = x.rowIndex === s && x.columnIndex === r;
           return (0, i.jsx)(h.default, {
             rowIndex: D,
             descriptor: e,
@@ -124,7 +124,7 @@ t.default = e => {
             surrogateCodePoint: C,
             allowAnimatedEmoji: M,
             selectedItemClassName: b,
-            onSelect: s,
+            onSelect: a,
             onInspect: O,
             channelGuildId: P,
             getEmojiItemProps: R,
@@ -143,7 +143,7 @@ t.default = e => {
     },
     Z = e => (0, i.jsx)("ul", {
       ...g(D),
-      className: a()(p.emojiListRow, {
+      className: s()(p.emojiListRow, {
         [p.emojiListRowLargeSize]: W,
         [p.emojiListRowMediumSize]: K
       }),
@@ -156,20 +156,20 @@ t.default = e => {
   return 0 === Q.length ? Z(t) : (0, i.jsxs)("div", {
     className: p.topEmojiSectionContainer,
     children: [(0, i.jsx)("div", {
-      className: a()(p.topEmojiContainer, {
+      className: s()(p.topEmojiContainer, {
         [p.noEmojis]: 0 === X.length
       }),
       children: Z(X)
     }), (0, i.jsxs)("div", {
       className: p.newlyAddedHighlightContainer,
       children: [(0, i.jsx)("div", {
-        className: a()(p.newlyAddedHighlight, {
+        className: s()(p.newlyAddedHighlight, {
           [p.oneItem]: 1 === Q.length,
           [p.alignRight]: X.length > 0
         }),
         children: Z(Q)
       }), (0, i.jsxs)("div", {
-        className: a()(p.newlyAddedBadge, {
+        className: s()(p.newlyAddedBadge, {
           [p.newlyAddedBadgeLarge]: W,
           [p.newlyAddedBadgeMedium]: K,
           [p.alignRight]: X.length > 0

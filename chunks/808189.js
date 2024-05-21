@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("481060"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("535322"),
   l = n("642113"),
   u = n("57128"),
@@ -93,11 +93,11 @@ t.default = function(e) {
       className: C.tierCard,
       children: [e.tier === N.BoostedGuildTiers.TIER_3 && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("div", {
-          className: s()(C.tierCardBorderHighlight, C.tierCardBorderHighlightTopRight)
+          className: a()(C.tierCardBorderHighlight, C.tierCardBorderHighlightTopRight)
         }), (0, i.jsx)("div", {
-          className: s()(C.tierCardBorderHighlight, C.tierCardBorderHighlightBottomLeft)
+          className: a()(C.tierCardBorderHighlight, C.tierCardBorderHighlightBottomLeft)
         }), (0, i.jsxs)("div", {
-          className: s()(C.tierCardSparkleHighlight, C.tierCardSparkleHighlightTopRight),
+          className: a()(C.tierCardSparkleHighlight, C.tierCardSparkleHighlightTopRight),
           children: [(0, i.jsx)(f.default, {
             className: C.tierCardSparkle1
           }), (0, i.jsx)(f.default, {
@@ -106,12 +106,12 @@ t.default = function(e) {
             className: C.tierCardSparkle3
           })]
         }), (0, i.jsx)("div", {
-          className: s()(C.tierCardSparkleHighlight, C.tierCardSparkleHighlightBottomLeft),
+          className: a()(C.tierCardSparkleHighlight, C.tierCardSparkleHighlightBottomLeft),
           children: (0, i.jsx)(f.default, {
             className: C.tierCardSparkle1
           })
         })]
-      }), e.tier === t.premiumTier && (0, i.jsx)(a.Text, {
+      }), e.tier === t.premiumTier && (0, i.jsx)(s.Text, {
         className: C.tierCardCurrentTier,
         tag: "div",
         variant: "text-xs/semibold",
@@ -119,14 +119,14 @@ t.default = function(e) {
         children: O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_CURRENT_TIER_LABEL
       }), (0, i.jsxs)("div", {
         className: C.tierCardHeader,
-        children: [(0, i.jsx)(a.Heading, {
+        children: [(0, i.jsx)(s.Heading, {
           className: C.tierCardHeading,
           variant: "heading-xxl/semibold",
           color: "always-white",
           children: (0, m.getTierName)(e.tier, {
             useLevels: !1
           })
-        }), (0, i.jsx)(a.Text, {
+        }), (0, i.jsx)(s.Text, {
           className: C.tierCardBoostRequirement,
           variant: "text-md/normal",
           color: "always-white",
@@ -138,7 +138,7 @@ t.default = function(e) {
         className: C.tierCardList,
         children: e.perks.map((e, t) => null == e.predicate || e.predicate() ? (0, i.jsxs)("li", {
           className: C.tierCardPerkRow,
-          children: [(0, i.jsxs)(a.Text, {
+          children: [(0, i.jsxs)(s.Text, {
             className: C.tierCardListItem,
             variant: "text-md/normal",
             color: "always-white",

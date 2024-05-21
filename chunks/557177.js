@@ -12,12 +12,12 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("259443"),
-  s = n("292619"),
-  a = n("474873"),
+  a = n("292619"),
+  s = n("474873"),
   o = n("135906"),
   l = n("246946");
 {
-  let e = (0, s.isEligibleForWebAudioAPI)({
+  let e = (0, a.isEligibleForWebAudioAPI)({
       location: "SoundUtils"
     }),
     t = n("902653");
@@ -42,9 +42,9 @@ function c(e) {
     i = arguments.length > 2 ? arguments[2] : void 0,
     r = arguments.length > 3 ? arguments[3] : void 0;
   if (l.default.disableSounds) return;
-  let s = (0, o.default)(null != r ? r : a.default.getSoundpack());
-  null == s && u.log("Unable to find sound for pack name: ".concat(r));
-  let d = _(null !== (t = s[e]) && void 0 !== t ? t : e, e, n);
+  let a = (0, o.default)(null != r ? r : s.default.getSoundpack());
+  null == a && u.log("Unable to find sound for pack name: ".concat(r));
+  let d = _(null !== (t = a[e]) && void 0 !== t ? t : e, e, n);
   return null != i ? d.playWithListener().then(e => {
     e && i()
   }) : d.play(), d

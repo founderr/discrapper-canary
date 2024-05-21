@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, s = n("544891"),
-  a = n("780384"),
+var i, r, a = n("544891"),
+  s = n("780384"),
   o = n("570140"),
   l = n("391650"),
   u = n("877215"),
@@ -23,7 +23,7 @@ function m(e, t, n) {
   let {
     status: i,
     body: r
-  } = e, s = r && r.code;
+  } = e, a = r && r.code;
   switch (i) {
     case 429:
       0 === t && A({
@@ -33,7 +33,7 @@ function m(e, t, n) {
       });
       break;
     case 403:
-      if (s === S.AbortCodes.EMAIL_VERIFICATION_REQUIRED) {
+      if (a === S.AbortCodes.EMAIL_VERIFICATION_REQUIRED) {
         A({
           title: h.default.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_HEADER,
           body: h.default.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_BODY,
@@ -45,10 +45,10 @@ function m(e, t, n) {
         break
       }
     default:
-      if (s === S.AbortCodes.USER_QUARANTINED)(0, f.closeContextMenu)(), (0, d.default)();
-      else if ((0, _.isLimitedAccessErrorCode)(i, s)) break;
+      if (a === S.AbortCodes.USER_QUARANTINED)(0, f.closeContextMenu)(), (0, d.default)();
+      else if ((0, _.isLimitedAccessErrorCode)(i, a)) break;
       else if (0 === t) {
-        let e = null != n ? (0, E.humanizeAbortCode)(s || 0, n) : h.default.Messages.POMELO_ADD_FRIEND_ERROR;
+        let e = null != n ? (0, E.humanizeAbortCode)(a || 0, n) : h.default.Messages.POMELO_ADD_FRIEND_ERROR;
         A({
           title: h.default.Messages.FRIEND_REQUEST_FAILED_HEADER,
           body: e,
@@ -65,11 +65,11 @@ let N = {
       context: n,
       captchaPayload: i,
       errorUxConfig: r = 0
-    } = e, [a, o] = t.split("#");
-    return s.HTTP.post({
+    } = e, [s, o] = t.split("#");
+    return a.HTTP.post({
       url: S.Endpoints.USER_RELATIONSHIPS(),
       body: {
-        username: a,
+        username: s,
         discriminator: parseInt(o),
         ...i
       },
@@ -84,15 +84,15 @@ let N = {
       userId: n,
       context: i,
       type: r,
-      friendToken: a,
+      friendToken: s,
       fromFriendSuggestion: o,
       captchaPayload: l
     } = e, u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, d = c.default.getUser(n);
-    return s.HTTP.put({
+    return a.HTTP.put({
       url: S.Endpoints.USER_RELATIONSHIP(n),
       body: {
         type: r,
-        friend_token: a,
+        friend_token: s,
         from_friend_suggestion: o,
         ...l
       },
@@ -105,38 +105,38 @@ let N = {
     })
   },
   acceptFriendRequest: e => N.addRelationship(e, function() {
-    a.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST)
+    s.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST)
   }),
   cancelFriendRequest: (e, t) => N.removeRelationship(e, t, function() {
-    a.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST)
+    s.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST)
   }),
   removeFriend(e, t) {
     N.removeRelationship(e, t, function() {
-      a.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED)
+      s.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED)
     })
   },
   unblockUser(e, t) {
     N.removeRelationship(e, t, function() {
-      a.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED)
+      s.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED)
     })
   },
-  removeRelationship: (e, t, n) => s.HTTP.del({
+  removeRelationship: (e, t, n) => a.HTTP.del({
     url: S.Endpoints.USER_RELATIONSHIP(e),
     context: t,
     oldFormErrors: !0
   }).then(() => {
     null == n || n()
   }).catch(() => {
-    a.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
+    s.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
   }),
-  updateRelationship: (e, t) => s.HTTP.patch({
+  updateRelationship: (e, t) => a.HTTP.patch({
     url: S.Endpoints.USER_RELATIONSHIP(e),
     body: {
       nickname: t
     }
   }),
   fetchRelationships() {
-    s.HTTP.get({
+    a.HTTP.get({
       url: S.Endpoints.USER_RELATIONSHIPS(),
       oldFormErrors: !0
     }).then(e => o.default.dispatch({
@@ -149,7 +149,7 @@ let N = {
   confirmClearPendingRelationships(e) {
     (0, u.default)(e)
   },
-  clearPendingRelationships: () => s.HTTP.del({
+  clearPendingRelationships: () => a.HTTP.del({
     url: S.Endpoints.USER_RELATIONSHIPS(),
     query: {
       relationship_type: S.RelationshipTypes.PENDING_INCOMING
@@ -159,7 +159,7 @@ let N = {
       type: "RELATIONSHIP_PENDING_INCOMING_REMOVED"
     })
   }).catch(() => {
-    a.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
+    s.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
   })
 };
 t.default = N

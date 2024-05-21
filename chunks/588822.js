@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("481060"),
   l = n("580552"),
   u = n("240991"),
@@ -22,7 +22,7 @@ function f(e) {
   let {
     userBio: t,
     className: n,
-    animateOnHover: s = !1,
+    animateOnHover: a = !1,
     isHovering: f = !1,
     lineClamp: S = 6,
     setLineClamp: h = !0,
@@ -54,14 +54,14 @@ function f(e) {
     })
   }
   return (0, i.jsx)("div", {
-    className: a()(n, T.markup),
+    className: s()(n, T.markup),
     children: (0, i.jsx)(o.Text, {
       variant: "text-sm/normal",
       lineClamp: h ? S : void 0,
       color: void 0 !== A ? A : void 0,
       children: (0, i.jsx)(d.MessagesInteractionContext.Provider, {
         value: {
-          disableAnimations: s && !f,
+          disableAnimations: a && !f,
           disableInteractions: !1
         },
         children: N

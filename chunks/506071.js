@@ -6,12 +6,12 @@ n.r(t), n.d(t, {
 });
 var i = n("470079"),
   r = n("442837"),
-  s = n("40851"),
-  a = n("451478");
+  a = n("40851"),
+  s = n("451478");
 
 function o() {
   let {
     windowId: e
-  } = i.useContext(s.default);
-  return (0, r.useStateFromStores)([a.default], () => a.default.isFocused(e), [e])
+  } = i.useContext(a.default);
+  return (0, r.useStateFromStores)([s.default], () => s.default.isFocused(e), [e])
 }

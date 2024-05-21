@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return p
   }
 }), n("653041"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("411104"), n("312677"), n("390547");
-var i, r, s = n("392711"),
-  a = n.n(s),
+var i, r, a = n("392711"),
+  s = n.n(a),
   o = n("153832"),
   l = n("147913"),
   u = n("131704"),
@@ -162,10 +162,10 @@ class O extends l.default {
         let i = _.default.getMutableAllGuildsAndMembers();
         for (let e in i)
           for (let t in i[e]) {
-            var r, s;
-            let a = n[t],
-              o = null !== (s = null === (r = i[e][t]) || void 0 === r ? void 0 : r.nick) && void 0 !== s ? s : f.default.getGlobalName(a);
-            null != a && (a[e] = null != o && "" !== o ? o : null)
+            var r, a;
+            let s = n[t],
+              o = null !== (a = null === (r = i[e][t]) || void 0 === r ? void 0 : r.nick) && void 0 !== a ? a : f.default.getGlobalName(s);
+            null != s && (s[e] = null != o && "" !== o ? o : null)
           }
         this.updateUsers(Object.values(n))
       }, 3e3)
@@ -174,7 +174,7 @@ class O extends l.default {
         guilds: t
       } = e;
       setTimeout(() => {
-        let e = a().flatMap(t, e => N(e.members, e.id));
+        let e = s().flatMap(t, e => N(e.members, e.id));
         this.updateUsers(e)
       }, 3e3)
     }), S(this, "_handleOverlayInitialize", e => {
@@ -188,8 +188,8 @@ class O extends l.default {
         if (null != t)
           for (let n of T.default.keys(t)) {
             let r = i.get(n),
-              s = t[n];
-            null != r && null != s && null != s.nick && (A(r, e, s.nick), i.set(n, r))
+              a = t[n];
+            null != r && null != a && null != a.nick && (A(r, e, a.nick), i.set(n, r))
           }
       }
       this.updateUsers(Array.from(i.values())), i.clear()

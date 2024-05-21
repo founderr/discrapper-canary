@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("789020");
 var i = n("570140"),
   r = n("881052"),
-  s = n("728345"),
-  a = n("812206"),
+  a = n("728345"),
+  s = n("812206"),
   o = n("973616"),
   l = n("630388"),
   u = n("317381"),
@@ -18,7 +18,7 @@ var i = n("570140"),
 async function I(e, t) {
   try {
     var n;
-    return null !== (n = a.default.getApplication(e)) && void 0 !== n ? n : o.default.createFromServer(await s.default.fetchApplication(e))
+    return null !== (n = s.default.getApplication(e)) && void 0 !== n ? n : o.default.createFromServer(await a.default.fetchApplication(e))
   } catch (n) {
     i.default.dispatch({
       type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
@@ -51,9 +51,9 @@ async function f(e) {
     user: r
   } = e;
   if (null == r.nsfwAllowed) {
-    var s, a;
+    var a, s;
     let e = null != t ? t : await I(n, i.getGuildId());
-    if (null == e || null !== (a = null === (s = e.embeddedActivityConfig) || void 0 === s ? void 0 : s.requires_age_gate) && void 0 !== a && a && !await new Promise(t => {
+    if (null == e || null !== (s = null === (a = e.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) && void 0 !== s && s && !await new Promise(t => {
         (0, d.confirmActivityAgeGateAlert)({
           application: e,
           onAgree: () => t(!0),

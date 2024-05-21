@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  s = n("124597"),
-  a = n("657147"),
+  a = n("124597"),
+  s = n("657147"),
   o = n("97910"),
   l = n("780014"),
   u = n("481060"),
@@ -55,13 +55,13 @@ function m(e) {
       })
     },
     children: e => (0, i.jsx)(S.default, {
-      icon: a.UserCheckIcon,
+      icon: s.UserCheckIcon,
       text: A.default.Messages.FRIENDS,
       ...e
     })
   }) : p === h.RelationshipTypes.PENDING_INCOMING ? (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(S.default, {
-      icon: e => (0, i.jsx)(s.CheckmarkLargeIcon, {
+      icon: e => (0, i.jsx)(a.CheckmarkLargeIcon, {
         ...e,
         color: u.tokens.colors.TEXT_BRAND
       }),

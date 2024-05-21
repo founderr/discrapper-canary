@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("627341");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("278074"),
   l = n("442837"),
   u = n("524437"),
@@ -70,8 +70,8 @@ let U = () => (0, i.jsx)("div", {
   G = e => {
     var t, n, r;
     let {
-      onSubscribeSuccess: s,
-      markAsDismissed: a
+      onSubscribeSuccess: a,
+      markAsDismissed: s
     } = e, {
       analyticsLocations: o
     } = (0, f.default)(T.default.CLIENT_THEMES_EDITOR), [c, E] = (0, l.useStateFromStoresArray)([m.default, R.default], () => [R.default.gradientPreset, O.default.isPremium(m.default.getCurrentUser())]), I = (0, S.usePremiumTrialOffer)(), A = (0, O.formatTrialCtaIntervalDuration)({
@@ -83,7 +83,7 @@ let U = () => (0, i.jsx)("div", {
       buttonText: E ? y.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == I ? void 0 : null === (r = I.subscription_trial) || void 0 === r ? void 0 : r.sku_id) === M.PremiumSubscriptionSKUs.TIER_2 ? A : y.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
       subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2,
       onSubscribeModalClose: e => {
-        if (!!e) null == s || s(), null != a && a(D.ContentDismissActionType.PRIMARY), null != c && ((0, L.trackClientThemeUpdated)({
+        if (!!e) null == a || a(), null != s && s(D.ContentDismissActionType.PRIMARY), null != c && ((0, L.trackClientThemeUpdated)({
           isPersisted: !0,
           themeName: u.BackgroundGradientPresetId[c.id],
           analyticsLocations: o
@@ -99,14 +99,14 @@ let U = () => (0, i.jsx)("div", {
       markAsDismissed: t
     } = e, {
       isPreview: n,
-      isCoachmark: s
+      isCoachmark: a
     } = (0, l.useStateFromStoresObject)([R.default], () => ({
       isPreview: R.default.isPreview,
       isCoachmark: R.default.isCoachmark
-    })), [a, u] = r.useState(!1), _ = (0, g.useTrackClientThemePreviewEvent)(), E = (0, o.match)({
+    })), [s, u] = r.useState(!1), _ = (0, g.useTrackClientThemePreviewEvent)(), E = (0, o.match)({
       isPreview: n,
-      isCoachmark: s,
-      forceShowCloseButton: a
+      isCoachmark: a,
+      forceShowCloseButton: s
     }).with({
       isCoachmark: !0
     }, {
@@ -124,7 +124,7 @@ let U = () => (0, i.jsx)("div", {
       }), (0, i.jsx)(d.Button, {
         className: P.footerButton,
         onClick: () => {
-          null != t && t(D.ContentDismissActionType.DISMISS), _(v.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, C.closeEditor)(), !s && c.default.open()
+          null != t && t(D.ContentDismissActionType.DISMISS), _(v.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, C.closeEditor)(), !a && c.default.open()
         },
         color: d.Button.Colors.PRIMARY,
         size: d.Button.Sizes.MEDIUM,
@@ -139,7 +139,7 @@ function k(e) {
   } = e, {
     analyticsLocations: n
   } = (0, f.default)(T.default.CLIENT_THEMES_EDITOR), {
-    isPreview: s,
+    isPreview: a,
     isCoachmark: o,
     isEditorOpen: u,
     shouldEditorAnimate: _
@@ -150,20 +150,20 @@ function k(e) {
     shouldEditorAnimate: R.default.isCoachmark && !I.default.useReducedMotion
   })), c = (0, g.useTrackClientThemePreviewEvent)();
   r.useEffect(() => c(v.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [c]), r.useEffect(() => {
-    s && p.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    a && p.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: M.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
       location_stack: n
     })
-  }, [s, n]);
+  }, [a, n]);
   let S = (0, g.useResetClientThemePreview)(),
-    h = (0, E.default)(null, s ? S : v.NOOP);
+    h = (0, E.default)(null, a ? S : v.NOOP);
   return r.useEffect(() => {
-    if (s && !u) return S
-  }, [s, u, S]), (0, i.jsx)(f.AnalyticsLocationProvider, {
+    if (a && !u) return S
+  }, [a, u, S]), (0, i.jsx)(f.AnalyticsLocationProvider, {
     value: n,
     children: (0, i.jsx)("div", {
       ref: h,
-      className: a()(P.themeEditor, _ ? P.editorAnimate : null),
+      className: s()(P.themeEditor, _ ? P.editorAnimate : null),
       children: (0, i.jsxs)(d.HeadingLevel, {
         children: [o ? (0, i.jsx)(U, {}) : (0, i.jsx)(b, {
           markAsDismissed: t
@@ -171,7 +171,7 @@ function k(e) {
           className: P.editorBody,
           children: (0, i.jsxs)(L.default, {
             type: L.ThemeSelectionGroupType.EDITOR,
-            children: [!s && (0, i.jsx)(L.default.Basic, {
+            children: [!a && (0, i.jsx)(L.default.Basic, {
               className: P.selectionGroup
             }), (0, i.jsx)(L.default.Gradient, {
               className: P.selectionGroup

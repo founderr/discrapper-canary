@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("275726"),
   r = n("904245"),
-  s = n("147913"),
-  a = n("314897"),
+  a = n("147913"),
+  s = n("314897"),
   o = n("592125"),
   l = n("375954"),
   u = n("496675"),
@@ -12,7 +12,7 @@ var i = n("275726"),
   c = n("146085"),
   E = n("96052"),
   I = n("981631");
-class T extends s.default {
+class T extends a.default {
   handleVoiceStateUpdates(e) {
     let {
       voiceStates: t
@@ -21,10 +21,10 @@ class T extends s.default {
       let {
         channelId: t,
         userId: n,
-        suppress: s,
+        suppress: a,
         requestToSpeakTimestamp: T
       } = e;
-      if (d.default.getVoiceChannelId() === t && !!s && null != t && n !== a.default.getId()) {
+      if (d.default.getVoiceChannelId() === t && !!a && null != t && n !== s.default.getId()) {
         if (u.default.can(c.MODERATE_STAGE_CHANNEL_PERMISSIONS, o.default.getChannel(t))) {
           if (null != T) {
             let e = _.default.getUser(n);

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   NonChannelCategory: function() {
-    return y
+    return O
   },
   ReadonlyCategoryChannel: function() {
     return b
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return D
   },
   VoiceChannelCategoryButton: function() {
-    return O
+    return y
   }
 });
 var l = n("735250"),
@@ -25,8 +25,8 @@ var l = n("735250"),
   f = n("146773"),
   h = n("680089"),
   m = n("430824"),
-  p = n("496675"),
-  C = n("9156"),
+  C = n("496675"),
+  p = n("9156"),
   g = n("514342"),
   E = n("696202"),
   _ = n("605403"),
@@ -51,11 +51,11 @@ let M = a.memo(function(e) {
       position: T,
       sortingPosition: A,
       hideIcon: M,
-      children: y
+      children: O
     } = e,
-    O = (0, o.useStateFromStores)([C.default], () => C.default.isChannelMuted(s.getGuildId(), s.id)),
+    y = (0, o.useStateFromStores)([p.default], () => p.default.isChannelMuted(s.getGuildId(), s.id)),
     D = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
-    b = (0, o.useStateFromStores)([p.default], () => p.default.can(L.Permissions.MANAGE_CHANNELS, s));
+    b = (0, o.useStateFromStores)([C.default], () => C.default.can(L.Permissions.MANAGE_CHANNELS, s));
   t = null != A ? T > A ? x.containerDragAfter : x.containerDragBefore : x.containerDefault;
   let j = a.useCallback(() => {
       D ? (0, d.categoryExpand)(s.id) : (0, d.categoryCollapse)(s.id)
@@ -111,7 +111,7 @@ let M = a.memo(function(e) {
           ref: H,
           className: i()(x.iconVisibility, x.wrapper, {
             [x.collapsed]: D,
-            [x.muted]: O,
+            [x.muted]: y,
             [x.clickable]: !0
           }),
           onContextMenu: P,
@@ -173,12 +173,12 @@ let M = a.memo(function(e) {
             }) : null
           })]
         })
-      }), y]
+      }), O]
     });
   return null != E && null != f ? E(f(V)) : V
 });
 t.default = (0, f.makeChannelSortable)(M);
-let y = a.memo(function(e) {
+let O = a.memo(function(e) {
     let {
       name: t,
       onDismiss: n,
@@ -210,7 +210,7 @@ let y = a.memo(function(e) {
       })
     })
   }),
-  O = a.memo(function(e) {
+  y = a.memo(function(e) {
     let {
       category: t
     } = e, n = (0, o.useStateFromStores)([T.default], () => T.default.isVoiceCategoryCollapsed(t.guild.id)), s = a.useCallback(() => {

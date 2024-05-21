@@ -51,7 +51,7 @@ t.default = {
     })
   },
   showNotification(e, t, n, r) {
-    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+    let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     i.default.dispatch({
       type: "NOTIFICATION_CREATE",
       icon: e,
@@ -59,10 +59,10 @@ t.default = {
       body: n,
       trackingProps: r,
       options: {
-        ...s,
+        ...a,
         onClick() {
           var e;
-          null === (e = s.onClick) || void 0 === e || e.call(s), i.default.dispatch({
+          null === (e = a.onClick) || void 0 === e || e.call(a), i.default.dispatch({
             type: "NOTIFICATION_CLICK"
           })
         }

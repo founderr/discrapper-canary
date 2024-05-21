@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return c
   }
 }), n("653041");
-var i, r, s, a, o = n("512722"),
+var i, r, a, s, o = n("512722"),
   l = n.n(o),
   u = n("442837"),
   d = n("433517"),
@@ -37,9 +37,9 @@ class c extends(i = u.default.Store) {
     }), l()(null != this.getClass().displayName, "Snapshot stores need a display name"), l()(!("CLEAR_CACHES" in e), "SnapshotStores cannot use the 'CLEAR_CACHES' action"), l()(!("WRITE_CACHES" in e), "SnapshotStores cannot use the 'WRITE_CACHES' action"), c.allStores.push(this)
   }
 }
-a = [], (s = "allStores") in(r = c) ? Object.defineProperty(r, s, {
-  value: a,
+s = [], (a = "allStores") in(r = c) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a
+}) : r[a] = s

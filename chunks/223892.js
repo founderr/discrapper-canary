@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return d
   },
   isUserInCreatorMonetizationEligibleCountry: function() {
-    return a
+    return s
   },
   useIsExpeditedOnboardingGuild: function() {
     return o
@@ -19,13 +19,13 @@ n.r(t), n.d(t, {
     return u
   },
   useIsUserInCreatorMonetizationEligibleCountry: function() {
-    return s
+    return a
   }
 });
 var i = n("586072"),
   r = n("981631");
 
-function s() {
+function a() {
   let {
     isUserEligibleForCreatorMonetization: e
   } = i.CreatorMonetizationCountryAllowlistExperiment.useExperiment({
@@ -36,7 +36,7 @@ function s() {
   return e
 }
 
-function a() {
+function s() {
   let {
     isUserEligibleForCreatorMonetization: e
   } = i.CreatorMonetizationCountryAllowlistExperiment.getCurrentConfig({

@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("693789"),
+  a = n.n(r),
+  s = n("693789"),
   o = n("1561"),
   l = n("512983"),
   u = n("466377"),
@@ -28,20 +28,20 @@ t.default = e => {
     transitionState: R,
     titleClassName: g
   } = e;
-  return null != T && "" !== T && (t = (0, i.jsx)(a.Button, {
+  return null != T && "" !== T && (t = (0, i.jsx)(s.Button, {
     type: "button",
-    size: a.Button.Sizes.XLARGE,
-    color: a.Button.Colors.PRIMARY,
+    size: s.Button.Sizes.XLARGE,
+    color: s.Button.Colors.PRIMARY,
     onClick: () => {
       null == N || N(), null == m || m()
     },
     className: E.secondaryButton,
     children: T
-  })), null != h && "" !== h && (n = (0, i.jsx)(a.Button, {
+  })), null != h && "" !== h && (n = (0, i.jsx)(s.Button, {
     type: "submit",
     color: S,
-    size: a.Button.Sizes.XLARGE,
-    className: s()(E.primaryButton, null != t ? E.gutter : null),
+    size: s.Button.Sizes.XLARGE,
+    className: a()(E.primaryButton, null != t ? E.gutter : null),
     autoFocus: !0,
     children: h
   })), null != A && "" !== A && (r = (0, i.jsx)(o.Clickable, {
@@ -56,7 +56,7 @@ t.default = e => {
     })
   })), (0, i.jsx)(u.ModalRoot, {
     transitionState: R,
-    className: s()(f, E.container),
+    className: a()(f, E.container),
     "aria-label": C,
     children: (0, i.jsxs)("form", {
       onSubmit: e => {
@@ -71,7 +71,7 @@ t.default = e => {
           className: E.content,
           children: [null != C && (0, i.jsx)(l.FormTitle, {
             tag: "h2",
-            className: s()(E.title, g),
+            className: a()(E.title, g),
             children: C
           }), null != I && (0, i.jsx)(d.Text, {
             variant: "text-md/normal",

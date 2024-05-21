@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("505737"),
-  s = n("705556"),
-  a = n("901952"),
+  a = n("705556"),
+  s = n("901952"),
   o = n("391016");
 
 function l(e) {
@@ -20,12 +20,12 @@ function l(e) {
   } = e, d = (0, r.default)(t.id, n);
   return (0, i.jsxs)("footer", {
     className: o.footer,
-    children: [d && (0, i.jsx)(a.default, {
+    children: [d && (0, i.jsx)(s.default, {
       user: t,
       guildId: n,
       channelId: l,
       onClose: u
-    }), !d && (0, i.jsx)(s.default, {
+    }), !d && (0, i.jsx)(a.default, {
       user: t,
       guildId: n,
       onClose: u

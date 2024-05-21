@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, s, a, o = n("392711"),
+var i, r, a, s, o = n("392711"),
   l = n.n(o),
   u = n("442837"),
   d = n("570140"),
@@ -92,12 +92,12 @@ class O extends(i = u.default.Store) {
     return T.has(e)
   }
 }
-a = "ActiveThreadsStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
-  value: a,
+s = "ActiveThreadsStore", (a = "displayName") in(r = O) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new O(d.default, {
+}) : r[a] = s, t.default = new O(d.default, {
   CONNECTION_OPEN: function(e) {
     I = {}, T.clear(), e.guilds.forEach(e => {
       h(e)

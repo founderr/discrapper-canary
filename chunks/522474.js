@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120"), n("411104");
 var i, r = n("512722"),
-  s = n.n(r),
-  a = n("392711"),
-  o = n.n(a),
+  a = n.n(r),
+  s = n("392711"),
+  o = n.n(s),
   l = n("202226"),
   u = n("442837"),
   d = n("570140"),
@@ -45,9 +45,9 @@ function g(e) {
   let t = A[e];
   null != t && (!t.closed && R(e), t.close(), ! function(e) {
     let t = A[e];
-    s()(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", O), t.removeEventListener("blur", O), t.removeEventListener("resize", C);
+    a()(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", O), t.removeEventListener("blur", O), t.removeEventListener("resize", C);
     let n = m[e];
-    s()(null != n, "Window root was null while unmounting"), n.unmount(), delete A[e], delete h[e], delete N[e], delete m[e]
+    a()(null != n, "Window root was null while unmounting"), n.unmount(), delete A[e], delete h[e], delete N[e], delete m[e]
   }(e), M.emitChange())
 }
 
@@ -75,11 +75,11 @@ function L(e) {
           for (let e of i) {
             if (!e.href.startsWith(r)) continue;
             let t = n.createElement("link");
-            t.href = e.href, t.rel = e.rel, t.integrity = e.integrity, s()(null != n.head, "Document head was null"), n.head.appendChild(t)
+            t.href = e.href, t.rel = e.rel, t.integrity = e.integrity, a()(null != n.head, "Document head was null"), n.head.appendChild(t)
           }
         }(0, t);
         let r = (0, l.createRoot)(i.getElementById("app-mount"));
-        s()(null != r, "No render target for popout!"), m[e] = r, r.render(n(e))
+        a()(null != r, "No render target for popout!"), m[e] = r, r.render(n(e))
       }(i), p.delete(i), M.emitChange()));
     case T.PopoutEventTypes.UNLOADED:
       return g(n.key)
@@ -141,8 +141,8 @@ let M = new D(d.default, {
     let r = A[t];
     if (null != r && !r.closed) return c.isPlatformEmbedded ? E.default.focus(t) : r.focus(), !1;
     let {
-      defaultWidth: s,
-      defaultHeight: a,
+      defaultWidth: a,
+      defaultHeight: s,
       defaultAlwaysOnTop: o = !1,
       ...l
     } = n, u = l, d = o, _ = S[t];
@@ -155,8 +155,8 @@ let M = new D(d.default, {
         alwaysOnTop: r
       } = _;
       d = null != r ? r : o, u = {
-        width: null != e && 0 !== e ? e : s,
-        height: null != t && 0 !== t ? t : a,
+        width: null != e && 0 !== e ? e : a,
+        height: null != t && 0 !== t ? t : s,
         left: n,
         top: i,
         ...u

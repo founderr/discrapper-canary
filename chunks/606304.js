@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120"), n("789020"), n("724458");
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140"),
   u = n("700785"),
   d = n("592125"),
@@ -22,8 +22,8 @@ function m(e, t) {
 }
 
 function N(e, t, n) {
-  var i, r, s;
-  return ((null !== (s = null === (r = f.get(e)) || void 0 === r ? void 0 : null === (i = r.get(t)) || void 0 === i ? void 0 : i.flags) && void 0 !== s ? s : T.SpeakingFlags.NONE) & n) === n
+  var i, r, a;
+  return ((null !== (a = null === (r = f.get(e)) || void 0 === r ? void 0 : null === (i = r.get(t)) || void 0 === i ? void 0 : i.flags) && void 0 !== a ? a : T.SpeakingFlags.NONE) & n) === n
 }
 
 function p(e, t) {
@@ -51,8 +51,8 @@ class C extends(i = o.default.Store) {
   getSpeakingDuration(e, t) {
     var n, i;
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T.MediaEngineContextTypes.DEFAULT,
-      s = null === (i = f.get(r)) || void 0 === i ? void 0 : null === (n = i.get(e)) || void 0 === n ? void 0 : n.since;
-    return null != s ? t - s : 0
+      a = null === (i = f.get(r)) || void 0 === i ? void 0 : null === (n = i.get(e)) || void 0 === n ? void 0 : n.since;
+    return null != a ? t - a : 0
   }
   getSpeakers() {
     var e, t;
@@ -88,12 +88,12 @@ class C extends(i = o.default.Store) {
     return null != S && this.isPrioritySpeaker(S, e) && this.isSpeaking(S, e)
   }
 }
-a = "SpeakingStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
-  value: a,
+s = "SpeakingStore", (a = "displayName") in(r = C) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new C(l.default, {
+}) : r[a] = s, t.default = new C(l.default, {
   CONNECTION_OPEN: O,
   OVERLAY_INITIALIZE: O,
   SPEAKING: function(e) {
@@ -112,20 +112,20 @@ a = "SpeakingStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s,
     }
     return function(e, t, n) {
       var i, r;
-      let s = function() {
+      let a = function() {
           let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.MediaEngineContextTypes.DEFAULT,
             t = f.get(e);
           return null == t && (t = new Map, f.set(e, t)), t
         }(e),
-        a = s.get(t),
-        o = null !== (i = null == a ? void 0 : a.flags) && void 0 !== i ? i : 0;
+        s = a.get(t),
+        o = null !== (i = null == s ? void 0 : s.flags) && void 0 !== i ? i : 0;
       if (0 === o && 0 === n) return !1;
-      if (0 === n) s.delete(t), 0 === s.size && f.delete(e);
+      if (0 === n) a.delete(t), 0 === a.size && f.delete(e);
       else {
-        let e = null !== (r = null == a ? void 0 : a.since) && void 0 !== r ? r : null,
+        let e = null !== (r = null == s ? void 0 : s.since) && void 0 !== r ? r : null,
           i = (o & T.SpeakingFlags.VOICE) === T.SpeakingFlags.VOICE,
           l = (n & T.SpeakingFlags.VOICE) === T.SpeakingFlags.VOICE;
-        i !== l && (e = l ? Date.now() : null), s.set(t, {
+        i !== l && (e = l ? Date.now() : null), a.set(t, {
           flags: n,
           since: e
         })
@@ -142,8 +142,8 @@ a = "SpeakingStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s,
         userId: n,
         channelId: i,
         sessionId: r
-      } = t, s = !1, a = A;
-      return n === S && r === h && (A = null != i ? i : null), a !== A && (s = f.delete(T.MediaEngineContextTypes.DEFAULT) || s), null == i ? s = n === S && r === h ? f.delete(T.MediaEngineContextTypes.DEFAULT) || s : m(T.MediaEngineContextTypes.DEFAULT, n) || s : n === S && r !== h ? s = f.delete(T.MediaEngineContextTypes.DEFAULT) || s : n !== S && i !== c.default.getChannelId() && (s = m(T.MediaEngineContextTypes.DEFAULT, n) || s), s || e
+      } = t, a = !1, s = A;
+      return n === S && r === h && (A = null != i ? i : null), s !== A && (a = f.delete(T.MediaEngineContextTypes.DEFAULT) || a), null == i ? a = n === S && r === h ? f.delete(T.MediaEngineContextTypes.DEFAULT) || a : m(T.MediaEngineContextTypes.DEFAULT, n) || a : n === S && r !== h ? a = f.delete(T.MediaEngineContextTypes.DEFAULT) || a : n !== S && i !== c.default.getChannelId() && (a = m(T.MediaEngineContextTypes.DEFAULT, n) || a), a || e
     }, !1)
   }
 })

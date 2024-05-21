@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140"),
   u = n("752305"),
   d = n("957730"),
@@ -8,7 +8,7 @@ var i, r, s, a, o = n("442837"),
   c = n("375954");
 let E = {},
   I = {};
-class T extends(a = o.default.Store) {
+class T extends(s = o.default.Store) {
   isEditing(e, t) {
     var n;
     return (null === (n = E[e]) || void 0 === n ? void 0 : n.messageId) === t
@@ -36,24 +36,24 @@ class T extends(a = o.default.Store) {
     return I[e]
   }
 }
-s = "EditMessageStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
-  value: s,
+a = "EditMessageStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new T(l.default, {
+}) : i[r] = a, t.default = new T(l.default, {
   MESSAGE_START_EDIT: function(e) {
     let {
       channelId: t,
       messageId: n,
       content: i,
       source: r
-    } = e, s = _.UseLegacyChatInput.getSetting(), a = d.default.unparse(i, t);
+    } = e, a = _.UseLegacyChatInput.getSetting(), s = d.default.unparse(i, t);
     E[t] = {
       channelId: t,
       messageId: n,
-      textValue: a,
-      richValue: (0, u.toRichValue)(s ? a : i)
+      textValue: s,
+      richValue: (0, u.toRichValue)(a ? s : i)
     }, I[t] = r
   },
   MESSAGE_UPDATE_EDIT: function(e) {

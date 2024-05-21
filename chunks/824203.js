@@ -9,24 +9,24 @@ n.r(t), n.d(t, {
 });
 var i = n("373793"),
   r = n("911969"),
-  s = n("213459"),
-  a = n("581364"),
+  a = n("213459"),
+  s = n("581364"),
   o = n("807169"),
   l = n("104793");
 
 function u(e, t, n) {
-  let r = (0, a.useIsGuildInUserAppExperiment)(null == t ? void 0 : t.guild_id, n);
+  let r = (0, s.useIsGuildInUserAppExperiment)(null == t ? void 0 : t.guild_id, n);
   if (null == e.interactionMetadata || r) return !1;
-  let s = e.interactionMetadata.authorizing_integration_owners;
-  return 1 === Object.keys(s).length && i.ApplicationIntegrationType.USER_INSTALL in s
+  let a = e.interactionMetadata.authorizing_integration_owners;
+  return 1 === Object.keys(a).length && i.ApplicationIntegrationType.USER_INSTALL in a
 }
 
 function d(e, t, n) {
   var i, u, d, _;
   let c = (0, o.usePermissionContext)(t, r.ApplicationCommandType.CHAT),
-    E = (0, s.useUserIndexState)(!0, !1),
-    I = (0, s.useGuildIndexState)(null == t ? void 0 : t.guild_id, !1),
-    T = (0, a.isGuildInUserAppExperiment)(null == t ? void 0 : t.guild_id, n);
+    E = (0, a.useUserIndexState)(!0, !1),
+    I = (0, a.useGuildIndexState)(null == t ? void 0 : t.guild_id, !1),
+    T = (0, s.isGuildInUserAppExperiment)(null == t ? void 0 : t.guild_id, n);
   if (null == e || T) return !1;
   let {
     context: f,

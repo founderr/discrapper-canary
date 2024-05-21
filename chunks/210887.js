@@ -1,7 +1,7 @@
 "use strict";
 let i;
 n.r(t);
-var r, s, a = n("442837"),
+var r, a, s = n("442837"),
   o = n("524437"),
   l = n("692547"),
   u = n("780384"),
@@ -72,7 +72,7 @@ function M() {
   let e = L();
   return e !== C && (C = e, !0)
 }
-class y extends(s = a.default.PersistedStore) {
+class y extends(a = s.default.PersistedStore) {
   initialize(e) {
     (null == e ? void 0 : e.theme) != null && (C = e.theme), this.waitFor(h.default, S.default, A.default, _.default)
   }

@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
 var i = n("358085"),
   r = n("998502");
 
-function s(e) {
+function a(e) {
   i.isPlatformEmbedded ? r.default.focus(e) : window.focus()
 }

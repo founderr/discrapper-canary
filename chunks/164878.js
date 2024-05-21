@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   useRecentlyHeardExperiment: function() {
-    return s
+    return a
   }
 });
 let i = (0, n("818083").createExperiment)({
@@ -51,7 +51,7 @@ function r(e) {
   })
 }
 
-function s(e) {
+function a(e) {
   let {
     autoTrackExposure: t,
     location: n

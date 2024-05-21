@@ -8,8 +8,8 @@ var a, s, i, r, o = n("442837"),
   f = n("131704"),
   h = n("601964"),
   m = n("592125"),
-  p = n("430824"),
-  C = n("701190"),
+  C = n("430824"),
+  p = n("701190"),
   g = n("496675"),
   E = n("594174"),
   _ = n("998502"),
@@ -25,7 +25,7 @@ function v() {
 }
 class x extends(a = o.default.Store) {
   initialize() {
-    this.waitFor(p.default, C.default, E.default)
+    this.waitFor(C.default, p.default, E.default)
   }
   isOpen() {
     let e = __OVERLAY__ ? S.AppContext.OVERLAY : S.AppContext.APP;
@@ -63,7 +63,7 @@ r = "InviteModalStore", (i = "displayName") in(s = x) ? Object.defineProperty(s,
         if (null != m.default.getChannel(e.id)) return (0, c.transitionToGuild)(S.ME, e.id), _.default.focus(), !1
       } else {
         if (null == n) return !1;
-        if (null != p.default.getGuild(n.id) && !(0, d.isStreamInvite)(t)) {
+        if (null != C.default.getGuild(n.id) && !(0, d.isStreamInvite)(t)) {
           let e = function(e) {
             if ((0, d.isRoleSubscriptionInvite)(e)) return I.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
             let {

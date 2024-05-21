@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("481060"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("976644"),
   l = n("549631"),
   u = n("517039");
@@ -17,15 +17,15 @@ function d(e) {
   let {
     children: t,
     className: n,
-    size: r = a.Button.Sizes.MEDIUM,
+    size: r = s.Button.Sizes.MEDIUM,
     onlyShineOnHover: d = !1,
     ..._
   } = e;
   return (0, i.jsx)(o.default, {
     ..._,
-    color: a.Button.Colors.CUSTOM,
+    color: s.Button.Colors.CUSTOM,
     size: r,
-    className: s()(u.button, n),
+    className: a()(u.button, n),
     onlyShineOnHover: d,
     children: (0, i.jsxs)("div", {
       className: u.buttonContents,

@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("846519"),
   r = n("147913"),
-  s = n("246133"),
-  a = n("734934"),
+  a = n("246133"),
+  s = n("734934"),
   o = n("695346"),
   l = n("885110"),
   u = n("981631");
@@ -37,12 +37,12 @@ class I extends r.default {
       if (null != t && "0" !== t && l.default.getStatus() !== u.StatusTypes.ONLINE) {
         let e = new Date(Number(t)).getTime() - new Date().getTime();
         e > 0 ? _.start(e, () => {
-          (0, s.default)(u.StatusTypes.ONLINE, l.default.getStatus(), {
+          (0, a.default)(u.StatusTypes.ONLINE, l.default.getStatus(), {
             location: {
               object: u.AnalyticsObjects.CUSTOM_STATUS_MANAGER
             }
           }, void 0)
-        }, !0) : ((0, s.default)(u.StatusTypes.ONLINE, l.default.getStatus(), {
+        }, !0) : ((0, a.default)(u.StatusTypes.ONLINE, l.default.getStatus(), {
           location: {
             object: u.AnalyticsObjects.CUSTOM_STATUS_MANAGER
           }
@@ -52,8 +52,8 @@ class I extends r.default {
       if (null != n && "0" !== n) {
         let e = new Date(Number(n)).getTime() - new Date().getTime();
         e > 0 ? c.start(e, () => {
-          (0, a.setFocusMode)(!1)
-        }, !0) : ((0, a.setFocusMode)(!1), c.stop())
+          (0, s.setFocusMode)(!1)
+        }, !0) : ((0, s.setFocusMode)(!1), c.stop())
       } else null != c && c.stop()
     })
   }

@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return i.MenuCheckboxItem
   },
   CompositeControlItem: function() {
-    return s.MenuCompositeControlItem
+    return a.MenuCompositeControlItem
   },
   ControlItem: function() {
     return r.MenuControlItem
   },
   CustomItem: function() {
-    return a.MenuCustomItem
+    return s.MenuCustomItem
   },
   Group: function() {
     return o.MenuGroup
@@ -33,8 +33,8 @@ n.r(t), n.d(t, {
 });
 var i = n("592282"),
   r = n("526714"),
-  s = n("402084"),
-  a = n("756710"),
+  a = n("402084"),
+  s = n("756710"),
   o = n("911810"),
   l = n("504135"),
   u = n("867333"),

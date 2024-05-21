@@ -13,8 +13,8 @@ n.r(t), n.d(t, {
     return h
   }
 }), n("47120");
-var i, r, s = n("735250"),
-  a = n("470079"),
+var i, r, a = n("735250"),
+  s = n("470079"),
   o = n("97613"),
   l = n.n(o),
   u = n("570567"),
@@ -42,8 +42,8 @@ let h = (0, d.default)(e => ({
 function A(e) {
   let {
     item: t
-  } = e, n = a.useRef(null);
-  return (0, c.useFocusLock)(n), a.useEffect(() => (E.default.disable(), E.default.enableTemp(function(e) {
+  } = e, n = s.useRef(null);
+  return (0, c.useFocusLock)(n), s.useEffect(() => (E.default.disable(), E.default.enableTemp(function(e) {
     return {
       POP_LAYER: {
         binds: ["esc"],
@@ -55,11 +55,11 @@ function A(e) {
     }
   }(t.key)), () => {
     E.default.disableTemp()
-  }), [t.key]), (0, s.jsx)(t.LayerComponent, {
-    children: (0, s.jsxs)("div", {
+  }), [t.key]), (0, a.jsx)(t.LayerComponent, {
+    children: (0, a.jsxs)("div", {
       className: f.root,
       ref: n,
-      children: [(0, s.jsx)("div", {
+      children: [(0, a.jsx)("div", {
         className: f.drag
       }), t.render({
         transitionState: null != t ? t.transitionState : 3,
@@ -88,9 +88,9 @@ let m = {
 function p() {
   let {
     reducedMotion: e
-  } = a.useContext(c.AccessibilityPreferencesContext), t = e.enabled ? N : m, n = h(e => e.fullScreenLayers);
-  return (0, s.jsx)(u.TransitionGroup, {
-    children: n.map(e => (0, s.jsx)(u.CSSTransition, {
+  } = s.useContext(c.AccessibilityPreferencesContext), t = e.enabled ? N : m, n = h(e => e.fullScreenLayers);
+  return (0, a.jsx)(u.TransitionGroup, {
+    children: n.map(e => (0, a.jsx)(u.CSSTransition, {
       classNames: t,
       timeout: S,
       onEntered: () => {
@@ -102,7 +102,7 @@ function p() {
         })
       },
       unmountOnExit: !0,
-      children: (0, s.jsx)(A, {
+      children: (0, a.jsx)(A, {
         item: e
       })
     }, e.key))

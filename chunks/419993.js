@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("653041");
 var i, r = n("735250"),
-  s = n("470079"),
-  a = n("120356"),
-  o = n.n(a),
+  a = n("470079"),
+  s = n("120356"),
+  o = n.n(s),
   l = n("153832"),
   u = n("84735"),
   d = n("15127"),
@@ -30,7 +30,7 @@ function h(e, t, n) {
 let A = (0, l.v4)(),
   m = (0, l.v4)(),
   N = (0, l.v4)();
-class p extends(i = s.Component) {
+class p extends(i = a.Component) {
   getPaddingRight() {
     let {
       maxLength: e,
@@ -116,8 +116,8 @@ class p extends(i = s.Component) {
     let {
       disabled: n,
       value: i,
-      placeholder: s,
-      autoFocus: a,
+      placeholder: a,
+      autoFocus: s,
       minLength: l,
       maxLength: d,
       allowOverflow: c,
@@ -156,9 +156,9 @@ class p extends(i = s.Component) {
             },
             id: O,
             disabled: n,
-            placeholder: s,
+            placeholder: a,
             value: i,
-            autoFocus: a,
+            autoFocus: s,
             minLength: l,
             maxLength: c ? void 0 : d,
             spellCheck: h,
@@ -193,8 +193,8 @@ class p extends(i = s.Component) {
         maxLength: t,
         minLength: n,
         error: i
-      } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-      return null != s && r.push(s), null != i ? r.push(A) : (null != t && r.push(N), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
+      } = this.props, r = [], a = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
+      return null != a && r.push(a), null != i ? r.push(A) : (null != t && r.push(N), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
     }), h(this, "onChange", e => {
       let {
         onChange: t,

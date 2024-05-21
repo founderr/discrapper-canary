@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   combineKeyPrefix: function() {
-    return s
+    return a
   }
 }), n("47120"), n("411104");
 var i = n("503461");
@@ -15,7 +15,7 @@ function r(e, t) {
   throw Error("combination results in an invalid key that has ".concat(n.length, " elements: ").concat(JSON.stringify(n)))
 }
 
-function s(e, t) {
+function a(e, t) {
   let n = Array.isArray(t) ? [...e, ...t] : [...e, t];
   if (n.length <= i.MAXIMUM_KEY_BITS) return n;
   throw Error("combination results in an invalid prefix key that has ".concat(n.length, " elements: ").concat(JSON.stringify(n)))

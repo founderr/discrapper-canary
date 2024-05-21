@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("757143");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("481060"),
   l = n("239091"),
   u = n("555573"),
@@ -83,8 +83,8 @@ class h extends r.PureComponent {
       let t = this._ref;
       if (null == t) return;
       let r = t.value.slice(0, t.selectionStart - i.length),
-        s = t.value.slice(t.selectionEnd);
-      this._insertText(e, r, s, n)
+        a = t.value.slice(t.selectionEnd);
+      this._insertText(e, r, a, n)
     }
   }
   insertText(e, t) {
@@ -92,20 +92,20 @@ class h extends r.PureComponent {
       i = this._ref;
     if (null == i) return;
     let r = i.value.slice(0, i.selectionStart),
-      s = i.value.slice(i.selectionEnd);
-    this._insertText(e, r, s, n)
+      a = i.value.slice(i.selectionEnd);
+    this._insertText(e, r, a, n)
   }
   _insertText(e, t, n, i) {
     if (null == this._ref) return;
     i && (e += " ");
     let r = t + e + n,
       {
-        onChange: s
+        onChange: a
       } = this.props;
-    null == s || s(null, r, (0, I.toRichValue)(r));
-    let a = t.length + e.length;
+    null == a || a(null, r, (0, I.toRichValue)(r));
+    let s = t.length + e.length;
     this.setState({
-      nextSelection: a
+      nextSelection: s
     }, () => {
       this.props.maybeShowAutocomplete()
     })
@@ -122,7 +122,7 @@ class h extends r.PureComponent {
       disabled: t,
       placeholder: n,
       required: r,
-      onResize: s,
+      onResize: a,
       className: l,
       id: u,
       submitting: d,
@@ -138,7 +138,7 @@ class h extends r.PureComponent {
         handler: this.handleGlobalPaste
       }), (0, i.jsx)(o.TextAreaAutosize, {
         ref: this.handleSetRef,
-        className: a()(l, c),
+        className: s()(l, c),
         id: u,
         rows: 1,
         fontWidthEstimate: 6,
@@ -146,7 +146,7 @@ class h extends r.PureComponent {
         disabled: t || d,
         required: r,
         onChange: this.handleOnChange,
-        onResize: s,
+        onResize: a,
         onKeyPress: this.handleKeyPress,
         onKeyDown: this.handleKeyDown,
         onKeyUp: this.handleKeyUp,

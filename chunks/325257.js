@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("493683"),
   h = n("239091"),
   m = n("153867"),
-  p = n("35225"),
-  C = n("703656"),
+  C = n("35225"),
+  p = n("703656"),
   g = n("769654"),
   E = n("271383"),
   _ = n("771845"),
@@ -27,14 +27,14 @@ var l = n("735250"),
   x = n("252686"),
   R = n("682662"),
   M = n("674552"),
-  y = n("981631"),
-  O = n("689938"),
+  O = n("981631"),
+  y = n("689938"),
   D = n("634165");
 let b = {
   analyticsSource: {
-    page: y.AnalyticsPages.GUILD_CHANNEL,
-    section: y.AnalyticsSections.CHANNEL_LIST,
-    object: y.AnalyticsObjects.CHANNEL
+    page: O.AnalyticsPages.GUILD_CHANNEL,
+    section: O.AnalyticsSections.CHANNEL_LIST,
+    object: O.AnalyticsObjects.CHANNEL
   }
 };
 
@@ -94,16 +94,16 @@ t.default = a.memo(function(e) {
         dragging: e.isDragging()
       })
     }),
-    ei = (0, o.useTreeItem)(null != $ ? $ : y.EMPTY_STRING_SNOWFLAKE_ID),
+    ei = (0, o.useTreeItem)(null != $ ? $ : O.EMPTY_STRING_SNOWFLAKE_ID),
     [er, eo] = a.useState(!1),
     eu = !Q && er,
     [ed, ec] = a.useState(!1),
     [ef, eh] = a.useState(!1),
     [em] = a.useState(() => new d.DelayedCall(70, () => eh(!0)));
   a.useEffect(() => () => em.cancel(), [em]);
-  let ep = a.useCallback(() => {
+  let eC = a.useCallback(() => {
       if (null != F) {
-        (0, C.transitionTo)(F, {
+        (0, p.transitionTo)(F, {
           state: b
         });
         return
@@ -111,9 +111,9 @@ t.default = a.memo(function(e) {
         state: b
       })
     }, [$, F]),
-    eC = a.useCallback(() => {
+    ep = a.useCallback(() => {
       if (null != F || null == H || K || !J) return;
-      let e = (0, p.getChannelIdForGuildTransition)(H.id);
+      let e = (0, C.getChannelIdForGuildTransition)(H.id);
       null != e && f.default.preload(H.id, e)
     }, [F, H, K, J]),
     eg = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest($)),
@@ -148,19 +148,19 @@ t.default = a.memo(function(e) {
         ef || ec(!1)
       }
     }) : (0, l.jsx)(N.default, {
-      ariaLabel: O.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
+      ariaLabel: y.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
         guildName: H.toString(),
         mentions: z
       }),
       name: H.toString(),
-      onClick: ep,
+      onClick: eC,
       onMouseEnter: function() {
         Q || eo(!0)
       },
       onMouseLeave: function() {
         Q || eo(!1)
       },
-      onMouseDown: eC,
+      onMouseDown: ep,
       onContextMenu: eE,
       onKeyDown: e_,
       icon: H.getIconURL(96, eu && V),

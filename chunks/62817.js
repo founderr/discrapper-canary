@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120"), n("177593");
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140"),
   u = n("375954");
 let d = Object.freeze([]),
@@ -52,12 +52,12 @@ class m extends(i = o.default.Store) {
     if (null != e) return T[e]
   }
 }
-a = "UploadStore", (s = "displayName") in(r = m) ? Object.defineProperty(r, s, {
-  value: a,
+s = "UploadStore", (a = "displayName") in(r = m) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new m(l.default, {
+}) : r[a] = s, t.default = new m(l.default, {
   CONNECTION_OPEN: function() {
     T = {}
   },
@@ -70,18 +70,18 @@ a = "UploadStore", (s = "displayName") in(r = m) ? Object.defineProperty(r, s, {
       channelId: n,
       file: i,
       uploader: r,
-      message: s
+      message: a
     } = e;
     if (r._aborted || r._errored) return;
-    let a = null !== (t = _[n]) && void 0 !== t ? t : d;
-    c[i.id] = r, _[n] = [...a, i], E[i.id] = s;
+    let s = null !== (t = _[n]) && void 0 !== t ? t : d;
+    c[i.id] = r, _[n] = [...s, i], E[i.id] = a;
     let {
       items: o
     } = i;
-    null != o && (I[s.id] = {
+    null != o && (I[a.id] = {
       ...i,
       items: o
-    }), s.nonce
+    }), a.nonce
   },
   UPLOAD_COMPRESSION_PROGRESS: function(e) {
     let {

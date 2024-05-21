@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("470079"),
   r = n("442837"),
-  s = n("570140"),
-  a = n("594174"),
+  a = n("570140"),
+  s = n("594174"),
   o = n("74538"),
   l = n("775412"),
   u = n("518638"),
@@ -35,12 +35,12 @@ function E() {
 function I() {
   let e = (0, r.useStateFromStores)([_.default], () => _.default.lastFetchedActivePromotions),
     t = E(),
-    n = (0, r.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
+    n = (0, r.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
     I = (0, l.useHasActiveTrial)(),
     [T, f] = i.useState(!1),
     [S, h] = i.useState([]);
   i.useEffect(() => {
-    null != e && s.default.wait(() => d.default.markOutboundPromotionsSeen())
+    null != e && a.default.wait(() => d.default.markOutboundPromotionsSeen())
   }, [e]);
   let A = i.useCallback(e => {
       h(t => t.some(t => {
@@ -52,11 +52,11 @@ function I() {
     }, []),
     m = (0, o.isPremiumExactly)(n, c.PremiumTypes.TIER_2);
   i.useEffect(() => {
-    s.default.wait(() => {
+    a.default.wait(() => {
       m && null == e && d.default.fetchActiveOutboundPromotions()
     })
   }, [e, m]), i.useEffect(() => {
-    s.default.wait(() => {
+    a.default.wait(() => {
       (0, u.fetchClaimedOutboundPromotionCodes)().then(e => {
         h(e), f(!0)
       }).catch(() => {

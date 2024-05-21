@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("243814"),
-  s = n("481060"),
-  a = n("239091"),
+  a = n("481060"),
+  s = n("239091"),
   o = n("311819"),
   l = n("69580"),
   u = n("556084"),
@@ -42,19 +42,19 @@ function N(e) {
     })) return null;
   let R = O && null != C.find(e => e.id === (null == n ? void 0 : n.id)),
     g = null != n.customInstallUrl && !f.default.isDiscordUrl(n.customInstallUrl);
-  return (0, i.jsx)(s.Button, {
-    color: s.Button.Colors.PRIMARY,
-    look: s.Button.Looks.FILLED,
-    size: s.Button.Sizes.SMALL,
+  return (0, i.jsx)(a.Button, {
+    color: a.Button.Colors.PRIMARY,
+    look: a.Button.Looks.FILLED,
+    size: a.Button.Sizes.SMALL,
     onContextMenu: T.SUPPORTS_COPY ? e => {
-      (0, a.openContextMenu)(e, e => (0, i.jsx)(s.Menu, {
+      (0, s.openContextMenu)(e, e => (0, i.jsx)(a.Menu, {
         navId: "component-button",
-        onClose: a.closeContextMenu,
+        onClose: s.closeContextMenu,
         "aria-label": A.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS,
         onSelect: void 0,
         ...e,
-        children: (0, i.jsx)(s.MenuGroup, {
-          children: (0, i.jsx)(s.MenuItem, {
+        children: (0, i.jsx)(a.MenuGroup, {
+          children: (0, i.jsx)(a.MenuItem, {
             id: "copy",
             label: A.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
             action: () => (0, T.copy)((0, o.getApplicationInstallURL)(n))

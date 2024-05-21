@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("920906"),
   l = n("442837"),
   u = n("524437"),
@@ -33,20 +33,20 @@ function p(e) {
     tooltipText: t,
     headingText: n,
     textColor: r
-  } = e, s = null != n;
+  } = e, a = null != n;
   return (0, i.jsxs)("span", {
-    className: s ? void 0 : m.tooltipContainer,
+    className: a ? void 0 : m.tooltipContainer,
     children: [(0, i.jsxs)("span", {
       className: m.tooltipContainer,
       children: [(0, i.jsx)(f.default, {
         className: m.nitroWheel
-      }), s ? (0, i.jsx)(_.Heading, {
+      }), a ? (0, i.jsx)(_.Heading, {
         color: null != r ? r : "text-normal",
         variant: "heading-sm/semibold",
         children: n
       }) : null]
     }), (0, i.jsx)(_.Text, {
-      variant: s ? "text-xs/normal" : "text-sm/medium",
+      variant: a ? "text-xs/normal" : "text-sm/medium",
       color: null != r ? r : "text-normal",
       children: t
     })]
@@ -57,7 +57,7 @@ function O(e) {
   let {
     checked: t,
     onClick: n,
-    id: s = "burst-reaction-toggle-button"
+    id: a = "burst-reaction-toggle-button"
   } = e, f = (0, l.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = I.default.getCurrentUser(), C = null == O || (0, S.isPremium)(O) ? [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [R, g] = (0, E.useSelectedDismissibleContent)(C), [L, v] = r.useState(!1), [D, M] = (0, o.useSpring)(() => ({})), y = (0, o.animated)(d.SuperReactionIcon);
   r.useEffect(() => {
     let e = R === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
@@ -90,11 +90,11 @@ function O(e) {
           config: N
         }), null == n || n(), v(!1)
       },
-      id: s,
+      id: a,
       type: "checkbox"
     }), (0, i.jsxs)("label", {
-      htmlFor: s,
-      className: a()(m.label, {
+      htmlFor: a,
+      className: s()(m.label, {
         [m.labelChecked]: t
       }),
       children: [t ? (0, i.jsx)(T.Shine, {

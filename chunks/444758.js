@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("302454"),
   r = n.n(i),
-  s = n("430198"),
-  a = n("933557"),
+  a = n("430198"),
+  s = n("933557"),
   o = n("66999"),
   l = n("754688"),
   u = n("592125"),
@@ -61,7 +61,7 @@ function C(e) {
 function R(e, t) {
   var n;
   let i = u.default.getChannel(e),
-    r = (0, o.getChannelRoleSubscriptionStatus)(e, u.default, s.default, _.default).isSubscriptionGated,
+    r = (0, o.getChannelRoleSubscriptionStatus)(e, u.default, a.default, _.default).isSubscriptionGated,
     d = null !== (n = (0, T.getMentionIconType)(i)) && void 0 !== n ? n : "text";
   if (null != t) {
     let n = t.find(t => t.id === e);
@@ -83,7 +83,7 @@ function R(e, t) {
     type: i.type,
     id: i.id,
     guildId: i.guild_id,
-    name: (0, a.computeChannelName)(i, E.default, c.default),
+    name: (0, s.computeChannelName)(i, E.default, c.default),
     isDm: i.isPrivate(),
     isForumPost: i.isForumPost(),
     isMentionable: (0, S.isChannelTypeMentionable)(i.type),
@@ -114,15 +114,15 @@ function L(e) {
 }
 
 function v(e, t, n, i, r) {
-  let s = d.default.getGuild(e),
-    a = (null == s ? void 0 : s.id) === i;
+  let a = d.default.getGuild(e),
+    s = (null == a ? void 0 : a.id) === i;
   return {
     type: "channelMention",
     guildId: e,
     channelId: t,
     messageId: n,
     originalLink: r,
-    inContent: null == s || a ? null : [p(s)],
+    inContent: null == a || s ? null : [p(a)],
     content: [O({
       name: m.default.Messages.UNKNOWN_CHANNEL.toLowerCase(),
       type: A.ChannelTypes.UNKNOWN,
@@ -156,24 +156,24 @@ function D(e, t, n, i) {
       messageId: t,
       originalLink: i
     },
-    s = d.default.getGuild(e.guildId);
-  if (null == s) {
-    var a;
+    a = d.default.getGuild(e.guildId);
+  if (null == a) {
+    var s;
     if (e.isDm) return {
       ...r,
       guildId: A.ME,
       inContent: [O(e)],
       content: [C(!1)]
     };
-    return null != (a = i) ? g(a) : L("#".concat(m.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
+    return null != (s = i) ? g(s) : L("#".concat(m.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
   }
   let o = e.guildId === n;
   return {
     ...r,
     ... function(e, t, n, i) {
       let r = p(e),
-        s = O(t),
-        a = C(t.isForumPost);
+        a = O(t),
+        s = C(t.isForumPost);
       if (n && i) {
         if (t.isForumPost) {
           let e = u.default.getChannel(t.parentId);
@@ -185,28 +185,28 @@ function D(e, t, n, i) {
                 type: e.type,
                 iconType: null !== (o = (0, T.getMentionIconType)(e)) && void 0 !== o ? o : "forum"
               })],
-              content: [s]
+              content: [a]
             }
           }
         }
         return {
-          inContent: [s],
-          content: [a]
+          inContent: [a],
+          content: [s]
         }
       }
       if (n && !i) return {
         inContent: null,
-        content: [s]
+        content: [a]
       };
       if (!n && i) return {
         inContent: [r],
-        content: [t.isForumPost ? s : a]
+        content: [t.isForumPost ? a : s]
       };
       else if (!n && !i) return {
         inContent: [r],
-        content: [s]
+        content: [a]
       }
-    }(s, e, o, null != t)
+    }(a, e, o, null != t)
   }
 }
 let M = {
@@ -233,11 +233,11 @@ let M = {
     parse(e, t, n) {
       let i = e[0],
         r = e[1],
-        s = e[2],
-        a = e[3];
-      if (null == s) return g(i);
-      let o = R(s, null);
-      return null == o ? v(r, s, a, N(n.channelId), i) : D(o, a, N(n.channelId), i)
+        a = e[2],
+        s = e[3];
+      if (null == a) return g(i);
+      let o = R(a, null);
+      return null == o ? v(r, a, s, N(n.channelId), i) : D(o, s, N(n.channelId), i)
     }
   },
   P = {
@@ -247,14 +247,14 @@ let M = {
     parse(e, t, n) {
       let i = e[0],
         r = e[1],
-        s = e[2],
-        a = e[3],
+        a = e[2],
+        s = e[3],
         o = e[4];
-      if (null == s || null == a) return g(i);
-      let l = R(a, null);
+      if (null == a || null == s) return g(i);
+      let l = R(s, null);
       if (null != l) return D(l, o, N(n.channelId), i);
-      let u = R(s, null);
-      return null != u ? D(u, o, N(n.channelId), i) : v(r, s, o, N(n.channelId), i)
+      let u = R(a, null);
+      return null != u ? D(u, o, N(n.channelId), i) : v(r, a, o, N(n.channelId), i)
     }
   };
 t.default = {

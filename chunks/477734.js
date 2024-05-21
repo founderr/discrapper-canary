@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   useIsRemixANitroPerk: function() {
-    return s
+    return a
   }
 }), n("906732");
 let i = (0, n("818083").createExperiment)({
@@ -51,7 +51,7 @@ function r() {
   }).canSeeRemixBadge
 }
 
-function s() {
+function a() {
   return !!i.useExperiment({
     location: "isRemixANitroPerkHook"
   }, {

@@ -16,14 +16,14 @@ var l = n("735250"),
   f = n("430824"),
   h = n("346656"),
   m = n("286908"),
-  p = n("26290"),
-  C = n("624138"),
+  C = n("26290"),
+  p = n("624138"),
   g = n("674552"),
   E = n("981631"),
   _ = n("689938"),
   S = n("538962");
-let I = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
-  N = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_SIZE);
+let I = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
+  N = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_SIZE);
 
 function T(e) {
   let {
@@ -54,7 +54,7 @@ function A(e) {
     } = s,
     f = null != d ? d : E.DEFAULT_FOLDER_COLOR,
     h = c.map(e => e.id),
-    [p, C] = a.useState(!1),
+    [C, p] = a.useState(!1),
     [g, _] = a.useState(u),
     A = u ? 0 : -N,
     L = (0, r.useSpring)({
@@ -63,14 +63,14 @@ function A(e) {
         duration: I
       },
       onStart() {
-        C(!0), _(u)
+        p(!0), _(u)
       },
       onRest() {
-        C(!1), _(u)
+        p(!1), _(u)
       }
     }),
-    v = p ? L : void 0;
-  return (p || g) && (t = (0, l.jsx)(r.animated.div, {
+    v = C ? L : void 0;
+  return (C || g) && (t = (0, l.jsx)(r.animated.div, {
     style: v,
     className: S.expandedFolderIconWrapper,
     children: (0, l.jsx)(m.default, {
@@ -78,7 +78,7 @@ function A(e) {
         color: (0, o.int2hex)(f)
       }
     })
-  })), (p || !g) && (n = (0, l.jsx)(r.animated.div, {
+  })), (C || !g) && (n = (0, l.jsx)(r.animated.div, {
     style: v,
     className: S.closedFolderIconWrapper,
     children: h.slice(0, 4).map(e => (0, l.jsx)(T, {
@@ -107,7 +107,7 @@ function L(e) {
     folderGroupId: f,
     folderIconContent: h,
     onClick: m,
-    onContextMenu: C,
+    onContextMenu: p,
     onHoverChange: E,
     onKeyDown: I,
     treeItemProps: {
@@ -118,18 +118,18 @@ function L(e) {
     r || v(!0), null == E || E(!0)
   }, [r, E]), R = a.useCallback(() => {
     r || v(!1), null == E || E(!1)
-  }, [r, E]), M = s || null == o ? null : (0, g.renderMediaBadge)(o), y = !s && u > 0 ? (0, g.renderMentionBadge)(u) : null;
+  }, [r, E]), M = s || null == o ? null : (0, g.renderMediaBadge)(o), O = !s && u > 0 ? (0, g.renderMentionBadge)(u) : null;
   return (0, l.jsx)(c.BlobMask, {
     selected: !n,
     upperBadge: M,
-    lowerBadge: y,
-    lowerBadgeWidth: (0, p.getBadgeWidthForValue)(u),
+    lowerBadge: O,
+    lowerBadgeWidth: (0, C.getBadgeWidthForValue)(u),
     children: (0, l.jsx)(c.Clickable, {
       className: i()(S.folder, {
         [S.hover]: L
       }),
       onClick: m,
-      onContextMenu: C,
+      onContextMenu: p,
       onMouseEnter: x,
       onMouseLeave: R,
       onKeyDown: I,

@@ -12,14 +12,14 @@ var l = n("735250"),
   f = n("981631"),
   h = n("689938"),
   m = n("53116");
-let p = (0, r.debounce)(u.default.trackWithMetadata, 500);
+let C = (0, r.debounce)(u.default.trackWithMetadata, 500);
 t.default = function(e) {
   let {
     guild: t,
     title: n,
     message: s,
     image: r,
-    type: C,
+    type: p,
     imageStyles: g,
     imageMarginX: E,
     imageMarginTop: _,
@@ -33,20 +33,20 @@ t.default = function(e) {
     className: x
   } = e;
   a.useEffect(() => {
-    p(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
-      notice_type: C,
+    C(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+      notice_type: p,
       guild_id: t.id
     })
-  }, [t.id, C]);
+  }, [t.id, p]);
   let R = null;
   "function" == typeof A ? R = A() : null != A && (R = (0, l.jsx)(o.Button, {
     className: m.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
-      null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
+      null != p && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
         source: S,
         guild_id: t.id,
-        notice_type: C
+        notice_type: p
       }), null == T || T()
     },
     fullWidth: !0,
@@ -64,8 +64,8 @@ t.default = function(e) {
     }),
     children: n
   }));
-  let y = null;
-  "function" == typeof s ? y = s() : null != s && (y = (0, l.jsx)(o.Text, {
+  let O = null;
+  "function" == typeof s ? O = s() : null != s && (O = (0, l.jsx)(o.Text, {
     className: i()({
       [m.center]: v
     }),
@@ -73,13 +73,13 @@ t.default = function(e) {
     color: "text-muted",
     children: s
   }));
-  let O = null != E ? "".concat(E, "px") : "16px";
+  let y = null != E ? "".concat(E, "px") : "16px";
   return (0, l.jsxs)("div", {
     className: i()(m.container, x),
     children: [!0 === I ? null : (0, l.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
-          notice_type: C
+          notice_type: p
         }), null == N || N()
       },
       className: m.close,
@@ -91,8 +91,8 @@ t.default = function(e) {
       className: m.imageContainer,
       style: {
         marginTop: "".concat(_, "px"),
-        marginLeft: O,
-        marginRight: O
+        marginLeft: y,
+        marginRight: y
       },
       children: (0, l.jsx)("img", {
         className: m.image,
@@ -102,7 +102,7 @@ t.default = function(e) {
       })
     }), (0, l.jsxs)("div", {
       className: m.message,
-      children: [M, y, R]
+      children: [M, O, R]
     })]
   })
 }

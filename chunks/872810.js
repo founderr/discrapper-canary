@@ -45,8 +45,8 @@ n.r(t), n.d(t, {
 });
 var i = n("512722"),
   r = n.n(i),
-  s = n("990547"),
-  a = n("544891"),
+  a = n("990547"),
+  s = n("544891"),
   o = n("570140"),
   l = n("258609"),
   u = n("569545"),
@@ -102,7 +102,7 @@ function y(e, t) {
   } = e;
   if (null != n && M(n, i)) return;
   let r = (0, u.encodeStreamKey)(e),
-    s = (null == t ? void 0 : t.forceMultiple) || c.default.getAllActiveStreamsForChannel(i).filter(e => {
+    a = (null == t ? void 0 : t.forceMultiple) || c.default.getAllActiveStreamsForChannel(i).filter(e => {
       let {
         ownerId: t
       } = e;
@@ -111,8 +111,8 @@ function y(e, t) {
   o.default.dispatch({
     type: "STREAM_WATCH",
     streamKey: r,
-    allowMultiple: s
-  }), !s && (null == t || !t.noFocus) && C.default.selectParticipant(e.channelId, r)
+    allowMultiple: a
+  }), !a && (null == t || !t.noFocus) && C.default.selectParticipant(e.channelId, r)
 }
 
 function P(e, t) {
@@ -131,8 +131,8 @@ function U(e, t) {
   if (null != n && M(n, i)) return;
   y(e, t);
   let r = _.default.getWindowOpen(g.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
-    s = f.default.getVoiceChannelId();
-  (!r || s !== i) && (0, d.default)(e)
+    a = f.default.getVoiceChannelId();
+  (!r || a !== i) && (0, d.default)(e)
 }
 
 function b(e) {
@@ -164,7 +164,7 @@ async function w(e, t, n) {
     streamKey: i
   });
   try {
-    let e = await a.HTTP.get({
+    let e = await s.HTTP.get({
       url: g.Endpoints.STREAM_PREVIEW(i),
       query: {
         version: Date.now()
@@ -191,7 +191,7 @@ async function k(e) {
       url: g.Endpoints.STREAM_NOTIFY(e),
       oldFormErrors: !0,
       trackedActionData: {
-        event: s.NetworkActionNames.STREAM_NOTIFY
+        event: a.NetworkActionNames.STREAM_NOTIFY
       }
     })
   } catch (e) {}
@@ -205,7 +205,7 @@ function B(e) {
 }
 
 function V(e, t) {
-  a.HTTP.patch({
+  s.HTTP.patch({
     url: g.Endpoints.STREAM(e),
     body: {
       region: t

@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140");
 let u = {
     enabled: !1
@@ -8,7 +8,7 @@ let u = {
   d = {},
   _ = {},
   c = !1;
-class E extends(a = o.default.DeviceSettingsStore) {
+class E extends(s = o.default.DeviceSettingsStore) {
   initialize() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
     c = e.enabled
@@ -30,12 +30,12 @@ class E extends(a = o.default.DeviceSettingsStore) {
     }
   }
 }
-s = "HighFiveStore", (r = "persistKey") in(i = E) ? Object.defineProperty(i, r, {
-  value: s,
+a = "HighFiveStore", (r = "persistKey") in(i = E) ? Object.defineProperty(i, r, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new E(l.default, {
+}) : i[r] = a, t.default = new E(l.default, {
   HIGH_FIVE_QUEUE: function(e) {
     let {
       userId: t,
@@ -67,11 +67,11 @@ s = "HighFiveStore", (r = "persistKey") in(i = E) ? Object.defineProperty(i, r, 
       completingEmoji: n,
       completingUserId: i,
       waitingUserId: r,
-      channelId: s
-    } = e, a = null !== (t = d[s]) && void 0 !== t ? t : {}, o = a[r];
-    if (delete a[r], null == o) return !1;
-    _[s] = {
-      ..._[s],
+      channelId: a
+    } = e, s = null !== (t = d[a]) && void 0 !== t ? t : {}, o = s[r];
+    if (delete s[r], null == o) return !1;
+    _[a] = {
+      ..._[a],
       [r]: [o, n],
       [i]: [n, o]
     }
@@ -82,7 +82,7 @@ s = "HighFiveStore", (r = "persistKey") in(i = E) ? Object.defineProperty(i, r, 
       firstUserId: n,
       secondUserId: i,
       channelId: r
-    } = e, s = null !== (t = _[r]) && void 0 !== t ? t : {};
-    delete s[n], delete s[i]
+    } = e, a = null !== (t = _[r]) && void 0 !== t ? t : {};
+    delete a[n], delete a[i]
   }
 })

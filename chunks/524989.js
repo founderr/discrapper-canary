@@ -2,8 +2,8 @@
 n.r(t), n("653041"), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("393903"),
   l = n("255984");
 
@@ -11,19 +11,19 @@ function u(e, t) {
   let n = [],
     i = [],
     r = 0,
-    s = 0,
-    a = !1;
+    a = 0,
+    s = !1;
   for (var o = 0; o < e.length; o++) {
     let l = e[o],
       u = t.widths[o],
       d = o === e.length - 1,
-      _ = s === t.maxLines - 1,
-      c = s + 2 < t.maxLines,
+      _ = a === t.maxLines - 1,
+      c = a + 2 < t.maxLines,
       E = u > t.parentWidth,
       I = _ && !d ? t.spacing + t.overflowWidth : 0,
       T = 0 === t.parentWidth,
-      f = !a && r + t.spacing + u + I < t.parentWidth;
-    T || f || 0 === r ? (r > 0 && (r += t.spacing), r += u, n.push(l)) : s < t.maxLines - 1 ? (s++, r = u, n.push(l)) : E && !_ && 0 === r ? (s++, n.push(l)) : E && c && r > 0 ? (n.push(l), s += 2) : (a = !0, i.push(l))
+      f = !s && r + t.spacing + u + I < t.parentWidth;
+    T || f || 0 === r ? (r > 0 && (r += t.spacing), r += u, n.push(l)) : a < t.maxLines - 1 ? (a++, r = u, n.push(l)) : E && !_ && 0 === r ? (a++, n.push(l)) : E && c && r > 0 ? (n.push(l), a += 2) : (s = !0, i.push(l))
   }
   return {
     ...t,
@@ -35,7 +35,7 @@ t.default = function(e) {
   let {
     items: t,
     renderItem: n,
-    renderOverflow: s,
+    renderOverflow: a,
     className: d,
     maxLines: _,
     initialOverflowWidth: c = 65,
@@ -61,23 +61,23 @@ t.default = function(e) {
   return r.useLayoutEffect(() => {
     T(e => {
       var n, i, r;
-      let s = [...e.widths],
-        a = null !== (r = null === (n = S.current) || void 0 === n ? void 0 : n.childNodes.length) && void 0 !== r ? r : 0,
+      let a = [...e.widths],
+        s = null !== (r = null === (n = S.current) || void 0 === n ? void 0 : n.childNodes.length) && void 0 !== r ? r : 0,
         o = e.overflow.length > 0,
         l = e.overflowWidth;
       return null === (i = S.current) || void 0 === i || i.childNodes.forEach((e, t) => {
         let n = e.offsetWidth;
-        o && t === a - 1 ? l = n : s[t] = n
+        o && t === s - 1 ? l = n : a[t] = n
       }), u(t, {
         ...e,
-        widths: s,
+        widths: a,
         overflowWidth: l
       })
     })
   }, [S, t, T]), (0, i.jsxs)("div", {
     style: f,
-    className: a()(l.container, d),
+    className: s()(l.container, d),
     ref: S,
-    children: [I.visible.map(n), I.overflow.length > 0 ? s(I.overflow) : null]
+    children: [I.visible.map(n), I.overflow.length > 0 ? a(I.overflow) : null]
   })
 }

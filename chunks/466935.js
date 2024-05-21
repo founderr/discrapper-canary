@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("669405"),
   h = n("26290"),
   m = n("434479"),
-  p = n("981631"),
-  C = n("176505"),
+  C = n("981631"),
+  p = n("176505"),
   g = n("689938");
 
 function E(e) {
@@ -43,9 +43,9 @@ function E(e) {
     onClick: () => {
       (0, i.trackClanApplicationNavigation)({
         guildId: t.id,
-        source: p.AnalyticsSections.CHANNEL_LIST,
-        tab: C.StaticChannelRoute.MEMBER_APPLICATIONS
-      }), (0, c.transitionTo)(p.Routes.CHANNEL(t.id, C.StaticChannelRoute.MEMBER_APPLICATIONS))
+        source: C.AnalyticsSections.CHANNEL_LIST,
+        tab: p.StaticChannelRoute.MEMBER_APPLICATIONS
+      }), (0, c.transitionTo)(C.Routes.CHANNEL(t.id, p.StaticChannelRoute.MEMBER_APPLICATIONS))
     },
     trailing: _ > 0 ? (0, l.jsx)(h.NumberBadge, {
       count: _

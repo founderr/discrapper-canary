@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("789020");
 var i = n("913527"),
   r = n.n(i),
-  s = n("81825"),
-  a = n("630388"),
+  a = n("81825"),
+  s = n("630388"),
   o = n("973616"),
   l = n("981631");
 
@@ -20,9 +20,9 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let d = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
-class _ extends s.default {
+class _ extends a.default {
   static createFromServer(e) {
-    var t, n, i, s, a;
+    var t, n, i, a, s;
     let {
       price: l
     } = e;
@@ -59,10 +59,10 @@ class _ extends s.default {
       restricted: e.restricted || !1,
       slug: null !== (i = e.slug) && void 0 !== i ? i : "",
       exclusive: e.exclusive || !1,
-      locales: null !== (s = e.locales) && void 0 !== s ? s : ["en-US"],
+      locales: null !== (a = e.locales) && void 0 !== a ? a : ["en-US"],
       flags: e.flags,
       externalPurchaseUrl: e.external_purchase_url,
-      deleted: null !== (a = e.deleted) && void 0 !== a && a
+      deleted: null !== (s = e.deleted) && void 0 !== s && s
     })
   }
   get supportedOperatingSystems() {
@@ -110,16 +110,16 @@ class _ extends s.default {
     return d.includes(this.id)
   }
   get available() {
-    return (0, a.hasFlag)(this.flags, l.SKUFlags.AVAILABLE) || null != this.externalPurchaseUrl
+    return (0, s.hasFlag)(this.flags, l.SKUFlags.AVAILABLE) || null != this.externalPurchaseUrl
   }
   isAvailableForDistribution() {
-    return this.available && null != this.getPrice() && null == this.externalPurchaseUrl && (!this.premium || (0, a.hasFlag)(this.flags, l.SKUFlags.PREMIUM_AND_DISTRIBUTION))
+    return this.available && null != this.getPrice() && null == this.externalPurchaseUrl && (!this.premium || (0, s.hasFlag)(this.flags, l.SKUFlags.PREMIUM_AND_DISTRIBUTION))
   }
   isAvailable() {
-    return (0, a.hasFlag)(this.flags, l.SKUFlags.AVAILABLE)
+    return (0, s.hasFlag)(this.flags, l.SKUFlags.AVAILABLE)
   }
   isPremiumPerk() {
-    return this.premium && ((0, a.hasFlag)(this.flags, l.SKUFlags.PREMIUM_PURCHASE) || (0, a.hasFlag)(this.flags, l.SKUFlags.PREMIUM_AND_DISTRIBUTION))
+    return this.premium && ((0, s.hasFlag)(this.flags, l.SKUFlags.PREMIUM_PURCHASE) || (0, s.hasFlag)(this.flags, l.SKUFlags.PREMIUM_AND_DISTRIBUTION))
   }
   hasFeature(e) {
     return this.features.has(e)

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("442837"),
   l = n("481060"),
   u = n("100527"),
@@ -41,7 +41,7 @@ function C(e) {
   var t;
   let {
     className: n,
-    iconOnly: s,
+    iconOnly: a,
     remaining: C
   } = e, R = (0, o.useStateFromStores)([T.default, I.default], () => {
     let e = I.default.getChannel(T.default.getChannelId());
@@ -67,7 +67,7 @@ function C(e) {
     children: N.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
       onLearnMore: O
     })
-  }) : s ? (0, i.jsx)(l.Clickable, {
+  }) : a ? (0, i.jsx)(l.Clickable, {
     className: p.iconOnly,
     onClick: () => O(),
     children: (0, i.jsx)(l.Tooltip, {
@@ -79,7 +79,7 @@ function C(e) {
       })
     })
   }) : (0, i.jsxs)("div", {
-    className: a()(p.root, n),
+    className: s()(p.root, n),
     children: [(0, i.jsx)(S.default, {
       className: p.premium,
       color: f.GradientCssUrls.PREMIUM_TIER_2

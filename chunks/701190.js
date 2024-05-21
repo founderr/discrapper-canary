@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("789020");
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140"),
   u = n("264229"),
   d = n("981631");
@@ -13,19 +13,19 @@ function I(e, t) {
   e = null != e ? e : "";
   let i = (0, u.parseExtraDataFromInviteKey)(e),
     r = _[e],
-    s = null != r ? {
+    a = null != r ? {
       state: d.InviteStates.RESOLVING,
       ...r
     } : {
       state: d.InviteStates.RESOLVING,
       code: i.baseCode
     };
-  t(s), _ = {
+  t(a), _ = {
     ..._,
-    [e]: s
-  }, (null === (n = s.guild) || void 0 === n ? void 0 : n.id) != null && (E = {
+    [e]: a
+  }, (null === (n = a.guild) || void 0 === n ? void 0 : n.id) != null && (E = {
     ...E,
-    [s.guild.id]: e
+    [a.guild.id]: e
   })
 }
 
@@ -48,12 +48,12 @@ class f extends(i = o.default.Store) {
     return E[e]
   }
 }
-a = "InviteStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
-  value: a,
+s = "InviteStore", (a = "displayName") in(r = f) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new f(l.default, {
+}) : r[a] = s, t.default = new f(l.default, {
   INVITE_RESOLVE: function(e) {
     let {
       code: t

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("481060"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("272903");
 
 function l(e) {
@@ -18,21 +18,21 @@ function l(e) {
     className: r,
     tooltip: l
   } = e;
-  return (0, i.jsx)(a.Tooltip, {
+  return (0, i.jsx)(s.Tooltip, {
     text: l,
     children: e => {
       let {
         onClick: l,
         ...u
       } = e;
-      return (0, i.jsx)(a.Button, {
+      return (0, i.jsx)(s.Button, {
         ...u,
         onClick: e => {
           null == n || n(e), null == l || l()
         },
         innerClassName: o.buttonReset,
-        color: s()(o.cta, r),
-        size: a.Button.Sizes.MIN,
+        color: a()(o.cta, r),
+        size: s.Button.Sizes.MIN,
         children: t
       })
     }

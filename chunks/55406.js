@@ -2,17 +2,17 @@
 let i;
 n.r(t), n("757143");
 var r = n("302454"),
-  s = n.n(r),
-  a = n("800927"),
+  a = n.n(r),
+  s = n("800927"),
   o = n("945884"),
   l = n("594199");
-let u = s().defaultRules.lheading,
-  d = s().defaultRules.heading,
-  _ = s().defaultRules.link,
-  c = s().defaultRules.image,
-  E = s().defaultRules.list,
-  I = s().defaultRules.blockQuote,
-  T = s().defaultRules.paragraph,
+let u = a().defaultRules.lheading,
+  d = a().defaultRules.heading,
+  _ = a().defaultRules.link,
+  c = a().defaultRules.image,
+  E = a().defaultRules.list,
+  I = a().defaultRules.blockQuote,
+  T = a().defaultRules.paragraph,
   f = /\{(.+?)}/,
   S = /^\$(\w+?)\$/;
 i = n("235375");
@@ -22,11 +22,11 @@ let h = e => {
     } = e;
     return (e, n, i) => {
       let r = f.exec(e[1]),
-        a = e[1].replace(f, "");
-      return t && (a = a.toUpperCase()), {
+        s = e[1].replace(f, "");
+      return t && (s = s.toUpperCase()), {
         className: null != r ? r[1] : null,
         level: "=" === e[2] ? 1 : 2,
-        content: s().parseInline(n, a, i)
+        content: a().parseInline(n, s, i)
       }
     }
   },
@@ -91,10 +91,10 @@ let h = e => {
   N = e => ({
     ...A(e),
     newline: {
-      ...s().defaultRules.newline
+      ...a().defaultRules.newline
     },
     text: l.default,
-    list: a.default,
+    list: s.default,
     subtext: o.default
   });
 t.default = {

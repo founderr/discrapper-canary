@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("390547"), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("392711"),
   l = n.n(o),
   u = n("442837"),
@@ -84,7 +84,7 @@ function Q(e) {
 }
 
 function q(e) {
-  var t, n, s;
+  var t, n, a;
   let {
     guild: o
   } = e, d = o.id, E = (0, u.useStateFromStoresArray)([R.default, p.default], () => {
@@ -118,7 +118,7 @@ function q(e) {
     for (let t of T) e += A.default.getParticipantCount(t, m.StageChannelParticipantNamedIndex.AUDIENCE);
     return e
   }), y = (0, u.useStateFromStoresArray)([O.default], () => O.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), V = (0, x.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), F = (0, u.useStateFromStoresArray)([g.default, C.default], () => S.filter(e => g.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != C.default.getDetectableGame(null == e ? void 0 : e.application_id)))), H = X(P.default, F, d), j = V ? F.map(e => e.id) : [], K = (0, u.useStateFromStoresArray)([c.default], () => c.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), z = (0, u.useStateFromStoresArray)([v.default], () => K.map(e => v.default.getUser(e)), [K]), Z = (0, u.useStateFromStoresArray)([v.default], () => y.map(e => v.default.getUser(e)), [y]), q = X(G.default, S.filter(e => !y.includes(e.id) && !K.includes(e.id) && !j.includes(e.id)), d);
-  let J = (t = d, n = h, s = M, 0 === n.length ? null : (0, i.jsxs)("div", {
+  let J = (t = d, n = h, a = M, 0 === n.length ? null : (0, i.jsxs)("div", {
       className: W.row,
       children: [(0, i.jsx)(w.default, {
         className: W.activityIcon
@@ -135,7 +135,7 @@ function q(e) {
           className: W.stageListenerCount,
           color: "text-normal",
           variant: "text-xs/normal",
-          children: s
+          children: a
         })]
       })]
     })),
@@ -153,7 +153,7 @@ function q(e) {
   }), (0, i.jsxs)(i.Fragment, {
     children: [J, q, $, V && H, ee, et ? (0, i.jsx)(Q, {
       muteConfig: en,
-      className: a()(W.muteText, {
+      className: s()(W.muteText, {
         [W.muteTextWithActivity]: null != q || null != $
       })
     }) : null]
@@ -187,14 +187,14 @@ function $(e) {
   let {
     guild: t,
     includeActivity: n = !0
-  } = e, r = (0, E.default)(t), s = (0, T.useCurrentUserGuildBadgeStatus)(t.id), o = null != s ? (0, i.jsx)(J, {
-    guildJoinRequestStatus: s
+  } = e, r = (0, E.default)(t), a = (0, T.useCurrentUserGuildBadgeStatus)(t.id), o = null != a ? (0, i.jsx)(J, {
+    guildJoinRequestStatus: a
   }) : null, l = n ? (0, i.jsx)(q, {
     guild: t
   }) : null, d = (0, u.useStateFromStores)([S.default], () => S.default.isViewingRoles(t.id)), c = (0, f.useShouldShowInvitesDisabledNotif)(t);
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)("div", {
-      className: a()(W.row, W.rowGuildName),
+      className: s()(W.row, W.rowGuildName),
       children: [r ? (0, i.jsx)(y.default, {
         guild: t,
         size: Z,
@@ -204,7 +204,7 @@ function $(e) {
         size: z,
         className: W.rowIcon
       }), (0, i.jsx)("span", {
-        className: a()(W.guildNameText, {
+        className: s()(W.guildNameText, {
           [W.guildNameTextLimitedSize]: null != l
         }),
         children: t.toString()
@@ -227,8 +227,8 @@ function ee(e) {
   let {
     guild: t,
     disabled: n = !1,
-    "aria-label": s = !1,
-    children: a,
+    "aria-label": a = !1,
+    children: s,
     includeActivity: o = !0,
     isDragging: l
   } = e, u = (0, F.useCanShowNewGuildTooltip)(), [d, c] = r.useState(!1);
@@ -246,7 +246,7 @@ function ee(e) {
       shouldShow: !l && d,
       children: e => (0, i.jsx)("div", {
         ...e,
-        children: a
+        children: s
       })
     })
   }) : (0, i.jsx)(_.Tooltip, {
@@ -257,19 +257,19 @@ function ee(e) {
       guild: t,
       includeActivity: o
     }),
-    "aria-label": s,
+    "aria-label": a,
     tooltipClassName: K.listItemTooltip,
     children: e => {
       let {
         onFocus: t,
         onBlur: n,
-        ...s
+        ...a
       } = e;
       return (0, i.jsx)("div", {
         onFocus: t,
         onBlur: n,
-        children: r.cloneElement(r.Children.only(a), {
-          ...s
+        children: r.cloneElement(r.Children.only(s), {
+          ...a
         })
       })
     }

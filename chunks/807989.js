@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("243814"),
+  a = n.n(r),
+  s = n("243814"),
   o = n("389507"),
   l = n("993365"),
   u = n("979200"),
@@ -40,14 +40,14 @@ function C(e) {
   var t;
   let n, {
       application: r,
-      scopes: s,
+      scopes: a,
       redirectUri: o,
       approximateGuildCount: l,
       isEmbeddedFlow: _,
       disclosures: C
     } = e,
     g = new Date(S.default.extractTimestamp(r.id)),
-    L = (0, A.getSecurityMessage)(s),
+    L = (0, A.getSecurityMessage)(a),
     v = (0, f.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, m.ApplicationFlags.EMBEDDED);
   if (null != o && !v && !_) {
     let e = new URL(o);
@@ -69,7 +69,7 @@ function C(e) {
       text: N.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
         date: g
       })
-    }), s.includes(a.OAuth2Scopes.BOT) && null != l ? (0, i.jsx)(R, {
+    }), a.includes(s.OAuth2Scopes.BOT) && null != l ? (0, i.jsx)(R, {
       icon: I.default,
       text: N.default.Messages.OAUTH2_DETAILS_GUILDS.format({
         guildCount: l
@@ -95,7 +95,7 @@ function R(e) {
     className: r
   } = e;
   return (0, i.jsxs)("div", {
-    className: s()(p.entry, r),
+    className: a()(p.entry, r),
     children: [(0, i.jsx)(t, {
       className: p.entryIcon
     }), (0, i.jsx)(l.Text, {

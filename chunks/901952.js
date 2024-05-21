@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("411104"), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("493683"),
-  a = n("904245"),
+  a = n("493683"),
+  s = n("904245"),
   o = n("906732"),
   l = n("541716"),
   u = n("752305"),
@@ -39,19 +39,19 @@ let m = (0, c.createChannelRecord)({
       channel: null
     });
     if (!r) throw Error(o);
-    let u = await s.default.openPrivateChannel(t, !1, !1, i),
+    let u = await a.default.openPrivateChannel(t, !1, !1, i),
       d = E.default.getChannel(u);
     if (null == d) throw Error("Failed to open private channel");
     let c = _.default.parse(d, n);
-    return a.default.sendMessage(d.id, c)
+    return s.default.sendMessage(d.id, c)
   };
 
 function p(e) {
   let {
     user: t,
     guildId: n,
-    channelId: s,
-    onClose: a
+    channelId: a,
+    onClose: s
   } = e, {
     newestAnalyticsLocation: _
   } = (0, o.default)(), {
@@ -62,7 +62,7 @@ function p(e) {
     editorClassName: A.editor,
     type: l.ChatInputTypes.USER_PROFILE,
     placeholder: h.default.Messages.QUICK_DM_USER.format({
-      name: I.default.getName(n, s, t)
+      name: I.default.getName(n, a, t)
     }),
     channel: m,
     textValue: E,
@@ -88,7 +88,7 @@ function p(e) {
           userId: t.id,
           content: n.trim(),
           location: _
-        }), null == a || a(), {
+        }), null == s || s(), {
           shouldClear: !0,
           shouldRefocus: !1
         }

@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("789020");
 var i, r = n("442837"),
-  s = n("570140"),
-  a = n("695346"),
+  a = n("570140"),
+  s = n("695346"),
   o = n("630388"),
   l = n("981631");
 
@@ -37,7 +37,7 @@ class I extends(i = r.default.PersistedStore) {
     return _
   }
   getIsEnabled() {
-    return a.DeveloperMode.getSetting() && E.length > 0
+    return s.DeveloperMode.getSetting() && E.length > 0
   }
   getLastUsedObject() {
     return _.lastUsedObject
@@ -63,7 +63,7 @@ class I extends(i = r.default.PersistedStore) {
 }
 u(I, "displayName", "DeveloperActivityShelfStore"), u(I, "persistKey", "DeveloperActivityShelfStore"), u(I, "migrations", [e => (delete e.isEnabled, {
   ...e
-})]), t.default = new I(s.default, {
+})]), t.default = new I(a.default, {
   LOGOUT: function() {
     _ = d(), c = null, E = []
   },

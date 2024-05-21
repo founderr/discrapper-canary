@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  s = n("231757"),
-  a = n("553795"),
+  a = n("231757"),
+  s = n("553795"),
   o = n("915863"),
   l = n("689938"),
   u = n("605690");
@@ -20,9 +20,9 @@ function d(e) {
     look: d,
     onAction: _
   } = e;
-  return (0, r.useStateFromStores)([a.default], () => a.default.getAccounts().some(e => e.type === t.type)) ? null : (0, i.jsx)(o.default, {
+  return (0, r.useStateFromStores)([s.default], () => s.default.getAccounts().some(e => e.type === t.type)) ? null : (0, i.jsx)(o.default, {
     onClick: () => {
-      null == _ || _(), (0, s.default)({
+      null == _ || _(), (0, a.default)({
         platformType: t.type,
         location: "Activity Action"
       })

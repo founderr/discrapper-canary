@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("771845"),
   h = n("880080"),
   m = n("624138"),
-  p = n("727258"),
-  C = n("199540"),
+  C = n("727258"),
+  p = n("199540"),
   g = n("40153"),
   E = n("252686"),
   _ = n("682662"),
@@ -39,8 +39,8 @@ function x(e) {
     mentionCount: x = 0,
     unread: R = !1,
     defaultFolderName: M,
-    useCircleMask: y = !1,
-    draggable: O = !1,
+    useCircleMask: O = !1,
+    draggable: y = !1,
     sorting: D = !1,
     onDragStart: b,
     onDragEnd: j,
@@ -59,9 +59,9 @@ function x(e) {
   let [{
     dragging: z
   }, Z] = (0, r.useDrag)({
-    type: p.GuildsNodeType.FOLDER,
+    type: C.GuildsNodeType.FOLDER,
     item: () => (null == b || b(), {
-      type: p.GuildsNodeType.FOLDER,
+      type: C.GuildsNodeType.FOLDER,
       nodeId: t.id
     }),
     end() {
@@ -100,15 +100,15 @@ function x(e) {
       selected: s,
       disableWrapper: !0,
       children: (0, l.jsx)("div", {
-        ref: O ? Z : void 0,
+        ref: y ? Z : void 0,
         className: i()({
           [T.wobble]: !z && Y && !d
         }),
         "data-dnd-name": J,
-        children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(C.default, {
+        children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(p.default, {
           folderNode: t,
           expanded: d,
-          forceCircular: y,
+          forceCircular: O,
           sorting: D,
           mediaState: m,
           mentionCount: x,
@@ -122,7 +122,7 @@ function x(e) {
           folderIconContent: w
         })
       })
-    }), O ? (0, l.jsx)(g.default, {
+    }), y ? (0, l.jsx)(g.default, {
       name: J,
       targetNode: t,
       onDragOverChanged: X
@@ -149,7 +149,7 @@ function x(e) {
         role: "group",
         children: H.map(U)
       }, a)
-    }), O && d ? (0, l.jsx)(g.FolderEndDropTarget, {
+    }), y && d ? (0, l.jsx)(g.FolderEndDropTarget, {
       name: J,
       targetNode: t
     }) : null]

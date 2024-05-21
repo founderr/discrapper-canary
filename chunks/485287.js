@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("442837"),
   r = n("147913"),
-  s = n("592125"),
-  a = n("131951"),
+  a = n("592125"),
+  s = n("131951"),
   o = n("944486"),
   l = n("979651"),
   u = n("557177"),
@@ -21,7 +21,7 @@ var i = n("442837"),
   I = n("754277");
 let T = e => e / 400,
   f = !1,
-  S = (0, u.createSound)("stage_waiting", "stage_waiting", T(a.default.getOutputVolume()));
+  S = (0, u.createSound)("stage_waiting", "stage_waiting", T(s.default.getOutputVolume()));
 
 function h() {
   let e = o.default.getVoiceChannelId();
@@ -29,13 +29,13 @@ function h() {
     S.stop(), f = !1;
     return
   }
-  let t = s.default.getChannel(e);
-  if (!(null == t ? void 0 : t.isGuildStageVoice()) || a.default.isSelfDeaf()) {
+  let t = a.default.getChannel(e);
+  if (!(null == t ? void 0 : t.isGuildStageVoice()) || s.default.isSelfDeaf()) {
     S.stop(), f = !1;
     return
   }
   if (I.default.shouldPlay()) {
-    S.volume = T(a.default.getOutputVolume()), S.loop(), f = !0;
+    S.volume = T(s.default.getOutputVolume()), S.loop(), f = !0;
     return
   }
   if (E.default.isLive(e)) {
@@ -47,7 +47,7 @@ function h() {
     return
   }
   let n = null != Object.values(l.default.getVoiceStatesForChannel(e)).find(e => !e.suppress && !e.isVoiceMuted());
-  n || f ? n && (S.pause(), f = !1) : (S.volume = T(a.default.getOutputVolume()), S.loop(), f = !0)
+  n || f ? n && (S.pause(), f = !1) : (S.volume = T(s.default.getOutputVolume()), S.loop(), f = !0)
 }
 
 function A(e) {
@@ -69,7 +69,7 @@ class N extends r.default {
       channelId: t
     } = e;
     if (null != t) {
-      let e = s.default.getChannel(t);
+      let e = a.default.getChannel(t);
       (null == e ? void 0 : e.isGuildStageVoice()) ? h(): (S.stop(), f = !1)
     } else S.stop(), f = !1
   }

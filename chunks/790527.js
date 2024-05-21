@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("481060"),
   l = n("100527"),
   u = n("906732"),
@@ -26,7 +26,7 @@ var i = n("735250"),
   p = n("769860");
 
 function O(e) {
-  var t, n, s;
+  var t, n, a;
   let {
     title: O,
     type: C,
@@ -72,14 +72,14 @@ function O(e) {
       sku_id: (0, c.castPremiumSubscriptionAsSkuId)(H)
     }))
   }, [X, H, Y]);
-  let ee = F ? a()(N.artContainer, N.artContainerBoxShadow, P) : a()(N.artContainer, P),
+  let ee = F ? s()(N.artContainer, N.artContainerBoxShadow, P) : s()(N.artContainer, P),
     et = null;
   return et = "artURL" in Z ? (0, i.jsx)("img", {
     className: N.art,
     alt: "",
     src: Z.artURL
   }) : Z.artElement, (0, i.jsxs)(o.ModalRoot, {
-    className: a()(N.root, y),
+    className: s()(N.root, y),
     "aria-label": O,
     transitionState: b,
     children: [(0, i.jsxs)("div", {
@@ -100,7 +100,7 @@ function O(e) {
           children: (0, i.jsx)(T.default, {
             onClose: G,
             type: C,
-            subscriptionTier: null !== (s = null == Q ? void 0 : null === (n = Q.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : h.PremiumSubscriptionSKUs.TIER_2,
+            subscriptionTier: null !== (a = null == Q ? void 0 : null === (n = Q.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : h.PremiumSubscriptionSKUs.TIER_2,
             headingText: O,
             context: D,
             analyticsLocationObject: L,
@@ -110,7 +110,7 @@ function O(e) {
           })
         }) : (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(o.Heading, {
-            className: a()(N.header, {
+            className: s()(N.header, {
               [N.enhancedHeader]: K
             }),
             variant: "heading-xl/semibold",
@@ -119,21 +119,21 @@ function O(e) {
             premiumUpsellType: C
           }), z, (0, i.jsx)(o.Text, {
             variant: "text-md/normal",
-            className: a()(U, N.subHeader),
+            className: s()(U, N.subHeader),
             children: v
           })]
         })
       })
     }), (0, i.jsxs)(o.ModalFooter, {
-      className: a()(N.footer, {
+      className: s()(N.footer, {
         [N.enhancedFooter]: K
       }),
       children: [(0, i.jsxs)("div", {
-        className: a()(N.primaryActions, {
+        className: s()(N.primaryActions, {
           [N.enhancedPrimaryActions]: K
         }),
         children: [null != B ? (0, i.jsx)(o.Button, {
-          className: a()(N.secondaryAction, {
+          className: s()(N.secondaryAction, {
             [N.enhancedSecondaryAction]: K
           }),
           onClick: k,
@@ -161,7 +161,7 @@ function O(e) {
             }))
           }
           return (0, i.jsx)(f.default, {
-            className: a()({
+            className: s()({
               [N.getNitroCTA]: K
             }),
             premiumModalAnalyticsLocation: L,

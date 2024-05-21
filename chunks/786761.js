@@ -15,9 +15,9 @@ n.r(t), n.d(t, {
 }), n("789020"), n("47120");
 var i = n("913527"),
   r = n.n(i),
-  s = n("830121");
+  a = n("830121");
 n("712057");
-var a = n("292419"),
+var s = n("292419"),
   o = n("330044"),
   l = n("378233"),
   u = n("360742"),
@@ -47,18 +47,18 @@ function N(e) {
     editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
     attachments: R(e),
     embeds: L(e),
-    components: (0, a.transformComponents)(null !== (t = e.components) && void 0 !== t ? t : [], {
+    components: (0, s.transformComponents)(null !== (t = e.components) && void 0 !== t ? t : [], {
       includeEmojiSrc: !1
     })
   })
 }
 
 function p(e) {
-  var t, n, i, r, a, l, T, h, p, O;
+  var t, n, i, r, s, l, T, h, p, O;
   let {
     reactions: C,
     interactionData: R
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, L = N(e), D = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], M = null !== (a = e.mention_roles) && void 0 !== a ? a : [], y = null !== (l = e.mention_channels) && void 0 !== l ? l : [], P = e.message_reference, U = e.type === A.MessageTypes.THREAD_CREATED ? [] : (0, s.default)(e.content);
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, L = N(e), D = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], M = null !== (s = e.mention_roles) && void 0 !== s ? s : [], y = null !== (l = e.mention_channels) && void 0 !== l ? l : [], P = e.message_reference, U = e.type === A.MessageTypes.THREAD_CREATED ? [] : (0, a.default)(e.content);
   let b = null == (h = e).author ? m : null != h.webhook_id ? new _.default(h.author) : null !== (p = I.default.getUser(h.author.id)) && void 0 !== p ? p : new _.default(h.author),
     G = null == e ? void 0 : e.gift_info,
     w = null != e.interaction ? u.default.createFromServer(e.interaction) : null,
@@ -128,7 +128,7 @@ function C(e, t) {
     interactionData: e.interactionData
   });
   let n = e;
-  if (null != t.call && (n = n.set("call", g(t.call, e.timestamp))), null != t.attachments && (n = n.set("attachments", R(t))), null != t.content && "" !== t.content && (n = n.set("content", t.content)), null != t.embeds && (n = n.set("embeds", L(t))), t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)), null != n.webhookId && null != t.author && (n = n.set("author", new _.default(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)), null != t.components && (n = n.set("components", (0, a.transformComponents)(t.components, {
+  if (null != t.call && (n = n.set("call", g(t.call, e.timestamp))), null != t.attachments && (n = n.set("attachments", R(t))), null != t.content && "" !== t.content && (n = n.set("content", t.content)), null != t.embeds && (n = n.set("embeds", L(t))), t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)), null != n.webhookId && null != t.author && (n = n.set("author", new _.default(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)), null != t.components && (n = n.set("components", (0, s.transformComponents)(t.components, {
       includeEmojiSrc: !1
     }))), null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)), null != t.reactions) {
     var i;

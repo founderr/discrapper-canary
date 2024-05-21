@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, s, a, o = n("392711"),
+var i, r, a, s, o = n("392711"),
   l = n.n(o),
   u = n("442837"),
   d = n("570140"),
@@ -105,12 +105,12 @@ class P extends(i = u.default.Store) {
     return p
   }
 }
-a = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(r, s, {
-  value: a,
+s = "ThreadMessageStore", (a = "displayName") in(r = P) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new P(d.default, {
+}) : r[a] = s, t.default = new P(d.default, {
   CONNECTION_OPEN: function(e) {
     O = {}, N.clear(), e.guilds.forEach(g)
   },
@@ -183,11 +183,11 @@ a = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
       sendMessageOptions: r
     } = e;
     if (n || i || null != r) return !1;
-    let s = f.default.getChannel(t.channel_id);
-    if (null == s || !E.THREAD_CHANNEL_TYPES.has(s.type) || ! function(e, t) {
+    let a = f.default.getChannel(t.channel_id);
+    if (null == a || !E.THREAD_CHANNEL_TYPES.has(a.type) || ! function(e, t) {
         return !(t.type === m.MessageTypes.THREAD_STARTER_MESSAGE || e.isForumPost() && t.id === h.default.castChannelIdAsMessageId(e.id)) && !0
-      }(s, t)) return !1;
-    C(s, e => {
+      }(a, t)) return !1;
+    C(a, e => {
       e.count = Math.min(e.count + 1, A.MAX_THREAD_MESSAGE_COUNT), e.mostRecentRawMessage = t, e.mostRecentMessage = null
     })
   },
@@ -208,11 +208,11 @@ a = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
     } = e, i = p[n];
     if (null == i) return !1;
     let r = h.default.castChannelIdAsMessageId(n) !== t,
-      s = !N.has(t);
+      a = !N.has(t);
     R(i, e => {
       var n;
       let i = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
-      null != i && i.id === t && (e.mostRecentMessage = null, e.mostRecentRawMessage = null), e.count = r && s ? Math.max(e.count - 1, 0) : e.count, N.add(t)
+      null != i && i.id === t && (e.mostRecentMessage = null, e.mostRecentRawMessage = null), e.count = r && a ? Math.max(e.count - 1, 0) : e.count, N.add(t)
     })
   },
   MESSAGE_DELETE_BULK: function(e) {

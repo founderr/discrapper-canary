@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
 var i = n("735250");
 n("470079");
 var r = n("325767");
 
-function s(e) {
+function a(e) {
   let {
     width: t = 12,
     height: n = 12,
-    color: s = "currentColor",
-    foreground: a,
+    color: a = "currentColor",
+    foreground: s,
     ...o
   } = e;
   return (0, i.jsx)("svg", {
@@ -27,8 +27,8 @@ function s(e) {
       x: "1.5",
       y: "1.5",
       fill: "none",
-      stroke: s,
-      className: a
+      stroke: a,
+      className: s
     })
   })
 }

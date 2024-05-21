@@ -1,8 +1,8 @@
 "use strict";
 let i;
 n.r(t), n("47120"), n("757143");
-var r, s = n("442837"),
-  a = n("570140"),
+var r, a = n("442837"),
+  s = n("570140"),
   o = n("579806"),
   l = n("358085"),
   u = n("417363"),
@@ -59,7 +59,7 @@ function S(e) {
   let t = new Set(i.installationPaths);
   t.add(e.path), i.installationPaths = t
 }
-class h extends(r = s.default.PersistedStore) {
+class h extends(r = a.default.PersistedStore) {
   initialize(e) {
     let t = {
       ...e
@@ -101,7 +101,7 @@ class h extends(r = s.default.PersistedStore) {
     return e === E ? d.default.Messages.INSTALL_LOCATION_MAIN : null !== (n = null !== (t = o.default.fileManager.basename(e)) && void 0 !== t ? t : e.replace(/[/\\]+$/, "").split(/[/\\]+/g).slice(-1)[0]) && void 0 !== n ? n : "?"
   }
 }
-_(h, "displayName", "InstallationManagerStore"), _(h, "persistKey", "InstallationManagerStore"), t.default = new h(a.default, {
+_(h, "displayName", "InstallationManagerStore"), _(h, "persistKey", "InstallationManagerStore"), t.default = new h(s.default, {
   DISPATCH_APPLICATION_INSTALL: T,
   DISPATCH_APPLICATION_UNINSTALL: f,
   DISPATCH_APPLICATION_CANCEL: function(e) {
@@ -139,10 +139,10 @@ _(h, "displayName", "InstallationManagerStore"), _(h, "persistKey", "Installatio
     } = e;
     if (!i.installationPaths.has(t)) return !1;
     if (null != n && "" !== n && i.pathLabels[t] !== n) {
-      var s, a;
-      s = t, a = n, i.pathLabels = {
+      var a, s;
+      a = t, s = n, i.pathLabels = {
         ...i.pathLabels,
-        [s]: a
+        [a]: s
       }
     }
     r && i.defaultInstallationPath !== t && (i.defaultInstallationPath = t)

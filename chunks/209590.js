@@ -1,7 +1,7 @@
 "use strict";
 let i, r;
 n.r(t), n("724458");
-var s, a, o, l, u = n("442837"),
+var a, s, o, l, u = n("442837"),
   d = n("433517"),
   _ = n("570140"),
   c = n("592125"),
@@ -10,7 +10,7 @@ let I = "hideSuppressWarning",
   T = !1,
   f = !0,
   S = !1;
-class h extends(s = u.default.Store) {
+class h extends(a = u.default.Store) {
   initialize() {
     S = d.Storage.get(I) || S
   }
@@ -25,12 +25,12 @@ class h extends(s = u.default.Store) {
     return !(null === (e = c.default.getChannel(r)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !f
   }
 }
-l = "PermissionSpeakStore", (o = "displayName") in(a = h) ? Object.defineProperty(a, o, {
+l = "PermissionSpeakStore", (o = "displayName") in(s = h) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new h(_.default, {
+}) : s[o] = l, t.default = new h(_.default, {
   CONNECTION_OPEN: function(e) {
     i = e.sessionId, T = !1
   },

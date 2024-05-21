@@ -8,11 +8,11 @@ function r(e, t) {
   return e | t
 }
 
-function s(e, t) {
+function a(e, t) {
   return e & ~t
 }
 
-function a(e) {
+function s(e) {
   for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
   return n.reduce((e, t) => e & ~t, e)
 }
@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return i
   },
   removeFlag: function() {
-    return s
+    return a
   },
   removeFlags: function() {
-    return a
+    return s
   },
   setFlag: function() {
     return o

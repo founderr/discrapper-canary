@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getChannelListSectionHeight: function() {
-    return p
+    return C
   },
   getKeyForSection: function() {
-    return C
+    return p
   }
 });
 var l = n("735250"),
@@ -20,7 +20,7 @@ var l = n("735250"),
   h = n("689938"),
   m = n("333960");
 
-function p(e, t, n) {
+function C(e, t, n) {
   if (e === u.SECTION_INDEX_COMMUNITY) return c.HEIGHT_BUFFER;
   if (e === u.SECTION_INDEX_UNCATEGORIZED_CHANNELS) return t.hasFeature(f.GuildFeatures.HUB) ? 0 : c.HEIGHT_BUFFER;
   if (e === n.voiceChannelsSectionNumber) {
@@ -34,7 +34,7 @@ function p(e, t, n) {
   return c.HEIGHT_SECTION
 }
 
-function C(e, t) {
+function p(e, t) {
   switch (e) {
     case u.SECTION_INDEX_COMMUNITY:
       return "hoisted-spacer";
@@ -57,19 +57,19 @@ t.default = a.memo(function(e) {
   let {
     sectionIndex: t,
     guild: n,
-    guildChannels: p,
-    guildChannelsVersion: C,
+    guildChannels: C,
+    guildChannelsVersion: p,
     selectedChannelId: g,
     disableManageChannels: E
   } = e, {
     isFavoritesPerk: _
   } = (0, s.useFavoritesServerExperiment)("ChannelListSection"), S = a.useCallback(() => {
-    let e = p.getCategoryFromSection(p.recentsSectionNumber);
+    let e = C.getCategoryFromSection(C.recentsSectionNumber);
     if (null == e) return;
     let t = null,
       l = e.getShownChannelAndThreadIds();
-    null != g && l.includes(g) && (t = (0, i.getFirstRouteFor)(p)), (0, i.clearRecentChannels)(n.id, l, t)
-  }, [n.id, g, p, C]);
+    null != g && l.includes(g) && (t = (0, i.getFirstRouteFor)(C)), (0, i.clearRecentChannels)(n.id, l, t)
+  }, [n.id, g, C, p]);
   switch (t) {
     case u.SECTION_INDEX_COMMUNITY:
       return (0, l.jsx)("div", {
@@ -88,16 +88,16 @@ t.default = a.memo(function(e) {
       return (0, l.jsx)(d.NonChannelCategory, {
         name: _ ? h.default.Messages.PINNED_CHANNELS : h.default.Messages.FAVORITES
       });
-    case p.recentsSectionNumber:
+    case C.recentsSectionNumber:
       return (0, l.jsx)(d.NonChannelCategory, {
         name: h.default.Messages.RECENTS_CATEGORY_HEADER,
         onDismiss: S
       });
-    case p.voiceChannelsSectionNumber: {
+    case C.voiceChannelsSectionNumber: {
       var I;
-      let e = p.getCategoryFromSection(p.voiceChannelsSectionNumber);
+      let e = C.getCategoryFromSection(C.voiceChannelsSectionNumber);
       if (null == e || e.isEmpty()) return null;
-      let n = null === (I = p.getChannelFromSectionRow(t, 0)) || void 0 === I ? void 0 : I.channel;
+      let n = null === (I = C.getChannelFromSectionRow(t, 0)) || void 0 === I ? void 0 : I.channel;
       return (0, l.jsxs)(a.Fragment, {
         children: [(0, l.jsx)("div", {
           className: m.sectionDivider
@@ -108,7 +108,7 @@ t.default = a.memo(function(e) {
       })
     }
     case u.SECTION_INDEX_FIRST_NAMED_CATEGORY: {
-      let e = p.getNamedCategoryFromSection(t);
+      let e = C.getNamedCategoryFromSection(t);
       if (null == e) return null;
       return (0, l.jsx)(d.default, {
         channel: e.record,
@@ -123,7 +123,7 @@ t.default = a.memo(function(e) {
       })
     }
     default: {
-      let e = p.getNamedCategoryFromSection(t);
+      let e = C.getNamedCategoryFromSection(t);
       if (null == e) return null;
       return (0, l.jsx)(d.default, {
         channel: e.record,

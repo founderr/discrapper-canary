@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("685501"),
   l = n("481060"),
   u = n("410030"),
@@ -32,7 +32,7 @@ let m = (0, I.createChannelRecord)({
     let {
       placeholder: n,
       headerText: r,
-      onEnter: s,
+      onEnter: a,
       showPopout: o,
       children: d,
       hide: _
@@ -43,7 +43,7 @@ let m = (0, I.createChannelRecord)({
       shouldShow: o,
       disablePointerEvents: !1,
       renderPopout: () => (0, i.jsx)("div", {
-        className: a()([A.reply, "theme-".concat(c)]),
+        className: s()([A.reply, "theme-".concat(c)]),
         ref: t,
         children: (0, i.jsx)(l.FocusLock, {
           containerRef: t,
@@ -54,7 +54,7 @@ let m = (0, I.createChannelRecord)({
               children: null != r ? r : h.default.Messages.CHAT
             }), (0, i.jsx)(p, {
               onEnter: e => {
-                s(e), _()
+                a(e), _()
               },
               placeholder: null != n ? n : h.default.Messages.CHAT
             })]
@@ -69,7 +69,7 @@ function p(e) {
   let {
     placeholder: t,
     onEnter: n,
-    setEditorRef: s,
+    setEditorRef: a,
     showEmojiButton: o = !1,
     renderAttachButton: l,
     onFocus: u,
@@ -83,7 +83,7 @@ function p(e) {
   }), (0, i.jsx)(c.default, {
     ref: C,
     placeholder: t,
-    className: a()(A.replyInput, I),
+    className: s()(A.replyInput, I),
     showRemainingCharsAfterCount: -1,
     allowNewLines: !1,
     maxCharacterCount: f.MAX_CHAR_COUNT,
@@ -106,7 +106,7 @@ function p(e) {
         shouldRefocus: !1
       }))
     },
-    setEditorRef: s,
+    setEditorRef: a,
     focused: !0,
     onFocus: u,
     disableThemedBackground: !0,
@@ -139,14 +139,14 @@ let O = (e, t) => {
     let {
       onSelectEmoji: t,
       onClick: n
-    } = e, s = (0, u.default)(), [a, o] = r.useState(!1), d = r.useRef(null);
+    } = e, a = (0, u.default)(), [s, o] = r.useState(!1), d = r.useRef(null);
     return O(() => o(!1), d), (0, i.jsx)(l.Popout, {
       align: "right",
       position: "top",
-      shouldShow: a,
+      shouldShow: s,
       disablePointerEvents: !1,
       renderPopout: () => (0, i.jsx)("div", {
-        className: "theme-".concat(s),
+        className: "theme-".concat(a),
         ref: d,
         children: (0, i.jsx)(E.ReactionPicker, {
           messageId: S.EMPTY_STRING_SNOWFLAKE_ID,
@@ -179,7 +179,7 @@ t.default = e => {
   let {
     onInteraction: t,
     replyHeaderText: n,
-    replyPlaceholder: s,
+    replyPlaceholder: a,
     showReact: u = !0,
     showReply: d = !0
   } = e, [_, c] = r.useState(!1), E = r.useRef(null);
@@ -205,7 +205,7 @@ t.default = e => {
         hide: () => c(!1),
         ref: E,
         headerText: n,
-        placeholder: s,
+        placeholder: a,
         showPopout: _,
         onEnter: e => {
           t({
@@ -218,7 +218,7 @@ t.default = e => {
           text: h.default.Messages.MESSAGE_ACTION_REPLY,
           children: e => (0, i.jsx)("button", {
             ...e,
-            className: a()(A.reaction, A.emojiButton),
+            className: s()(A.reaction, A.emojiButton),
             onClick: () => {
               t({
                 interactionType: f.AtomicReactorInteractionTypes.ReplyBegin,

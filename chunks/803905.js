@@ -84,8 +84,8 @@ n.r(t), n.d(t, {
 });
 var i = n("848246"),
   r = n("710845"),
-  s = n("380684"),
-  a = n("533293"),
+  a = n("380684"),
+  s = n("533293"),
   o = n("575691"),
   l = n("474936");
 let u = new r.default("ProductCatalog.tsx"),
@@ -94,7 +94,7 @@ let u = new r.default("ProductCatalog.tsx"),
     [l.PremiumTypes.TIER_1]: l.PremiumSubscriptionSKUs.TIER_1,
     [l.PremiumTypes.TIER_2]: l.PremiumSubscriptionSKUs.TIER_2
   });
-class _ extends a.default {
+class _ extends s.default {
   constructor(e, t) {
     super(e, e => (function(e, t) {
       if (null == t || null == t.premiumType) return !1;
@@ -134,7 +134,7 @@ let c = new _(i.EntitlementFeatureNames.ANIMATED_EMOJIS),
   y = new _("installPremiumApplications"),
   P = new _("redeemPremiumPerks"),
   U = new _(i.EntitlementFeatureNames.VIDEO_FILTER_ASSETS);
-new a.default(i.EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE, s.getUserMaxFileSize);
+new s.default(i.EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE, a.getUserMaxFileSize);
 let b = new _(i.EntitlementFeatureNames.INCREASED_GUILD_LIMIT),
   G = new _(i.EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH),
   w = new _("increasedVideoUploadQuality"),

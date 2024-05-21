@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 });
 var i = n("153832"),
   r = n("433517");
-let s = "LATEST_SESSION_TIMESTAMP",
-  a = "LATEST_SESSION_UUID",
+let a = "LATEST_SESSION_TIMESTAMP",
+  s = "LATEST_SESSION_UUID",
   o = "LATEST_SESSION_INITIALIZED_TIMESTAMP",
   l = Promise.resolve(),
   u = !1;
@@ -34,15 +34,15 @@ function _() {
         initialized: Date.now(),
         lastUsed: Date.now()
       };
-      r.Storage.set(a, t.uuid), r.Storage.set(o, t.initialized.toString()), r.Storage.set(s, Date.now().toString()), e = t
-    } else u && r.Storage.set(s, Date.now().toString());
+      r.Storage.set(s, t.uuid), r.Storage.set(o, t.initialized.toString()), r.Storage.set(a, Date.now().toString()), e = t
+    } else u && r.Storage.set(a, Date.now().toString());
     return e
   })
 }
 async function c() {
-  let e = await r.Storage.getAfterRefresh(a),
+  let e = await r.Storage.getAfterRefresh(s),
     t = await r.Storage.getAfterRefresh(o).then(E),
-    n = await r.Storage.getAfterRefresh(s).then(E);
+    n = await r.Storage.getAfterRefresh(a).then(E);
   return null != e && null != t ? {
     uuid: e,
     initialized: t,

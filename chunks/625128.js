@@ -4,7 +4,7 @@ var i = n("570140"),
   r = n("188785");
 t.default = {
   openNativeAppModal(e, t) {
-    let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     !r.CONFERENCE_MODE_ENABLED && (i.default.dispatch({
       type: "NATIVE_APP_MODAL_OPENING",
       code: e
@@ -14,7 +14,7 @@ t.default = {
       } = n;
       i.request(t, {
         code: e,
-        ...s
+        ...a
       }).then(t => {
         var n;
         this.nativeModalOpened(null !== (n = null == t ? void 0 : t.code) && void 0 !== n ? n : e)

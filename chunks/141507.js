@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("442837"),
-  a = n("481060"),
+  a = n("442837"),
+  s = n("481060"),
   o = n("607070"),
   l = n("906411"),
   u = n("438332"),
@@ -69,9 +69,9 @@ let L = e => {
         guildId: null == b ? void 0 : b.guildId,
         allNamesString: null == b ? void 0 : b.name
       },
-      w = (0, s.useStateFromStores)([I.default], () => null !== G && G.type === l.EmojiTypes.GUILD ? I.default.getGuild(G.guildId) : null, [G]),
-      k = (0, s.useStateFromStores)([T.default], () => T.default.isFocused()),
-      B = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion, []),
+      w = (0, a.useStateFromStores)([I.default], () => null !== G && G.type === l.EmojiTypes.GUILD ? I.default.getGuild(G.guildId) : null, [G]),
+      k = (0, a.useStateFromStores)([T.default], () => T.default.isFocused()),
+      B = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion, []),
       V = E.AnimateEmoji.useSetting(),
       x = (0, A.useIsFavoriteEmoji)(D, g(G) ? G : null),
       {
@@ -97,7 +97,7 @@ let L = e => {
         animated: V && G.animated,
         size: 28
       }) : G.url;
-      t = "" === e ? (0, i.jsx)(a.Text, {
+      t = "" === e ? (0, i.jsx)(s.Text, {
         variant: "text-md/normal",
         className: R.glyphEmoji,
         children: "surrogates" in G ? G.surrogates : null

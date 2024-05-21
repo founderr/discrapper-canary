@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("442837"),
   l = n("481060"),
   u = n("239091"),
@@ -28,7 +28,7 @@ let O = (e, t) => "".concat(e, ":").concat(t),
   C = r.forwardRef(function(e, t) {
     let n, {
         emoji: r,
-        isFavorite: s,
+        isFavorite: a,
         isLargeSize: u,
         isMediumSize: d,
         isInspected: _,
@@ -55,7 +55,7 @@ let O = (e, t) => "".concat(e, ":").concat(t),
     return (0, i.jsx)(l.FocusRing, {
       children: (0, i.jsx)("button", {
         ...v,
-        className: a()(p.emojiItem, {
+        className: s()(p.emojiItem, {
           [p.emojiItemLarge]: u,
           [p.emojiItemMedium]: d,
           [p.emojiItemSelected]: _,
@@ -71,7 +71,7 @@ let O = (e, t) => "".concat(e, ":").concat(t),
           "aria-label": (n = r.allNamesString, ((null == D ? void 0 : D.name) != null && (n = N.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
             names: n,
             guildName: D.name
-          })), s) ? N.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
+          })), a) ? N.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
             names: n
           }) : n),
           columnIndex: f,
@@ -89,8 +89,8 @@ let O = (e, t) => "".concat(e, ":").concat(t),
 function R(e) {
   let {
     descriptor: t,
-    emojiItemKey: s,
-    isInspected: a,
+    emojiItemKey: a,
+    isInspected: s,
     rowIndex: c,
     channelGuildId: I,
     onInspect: S,
@@ -118,7 +118,7 @@ function R(e) {
   } = t, z = e => {
     if (e.stopPropagation(), m.current || p.current) return;
     let n = e.altKey;
-    n && !_.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(Y) && U(s), (0, T.hideHotspot)(T.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), A(t, {
+    n && !_.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(Y) && U(a), (0, T.hideHotspot)(T.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), A(t, {
       isFinalSelection: !e.shiftKey,
       toggleFavorite: n
     })
@@ -146,7 +146,7 @@ function R(e) {
     } = null !== (e = v(K, c)) && void 0 !== e ? e : {};
     return (0, r.createElement)("li", {
       ...d,
-      key: s,
+      key: a,
       ref: H
     }, B !== O(K, c) && (0, i.jsx)(C, {
       ref: o,
@@ -154,9 +154,9 @@ function R(e) {
       isFavorite: F.isFavoriteEmojiWithoutFetchingLatest(Y),
       isLargeSize: M,
       isMediumSize: D,
-      isInspected: a,
+      isInspected: s,
       isDisabled: W,
-      showPulse: y === s,
+      showPulse: y === a,
       allowAnimatedEmoji: P,
       onFocus: null != u ? u : Z,
       onMouseMove: Z,
@@ -187,5 +187,5 @@ function R(e) {
     position: "top",
     delay: 200,
     children: e => Q(e)
-  }, s) : Q()
+  }, a) : Q()
 }

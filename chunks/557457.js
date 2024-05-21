@@ -21,8 +21,8 @@ n.r(t), n.d(t, {
 });
 var i = n("430824"),
   r = n("19780"),
-  s = n("594174"),
-  a = n("626135"),
+  a = n("594174"),
+  s = n("626135"),
   o = n("981631"),
   l = n("37113"),
   u = n("474936"),
@@ -68,10 +68,10 @@ function S(e) {
 function h(e, t, n) {
   var d, _, c;
   let E = (d = e, _ = t, c = n, l.ApplicationStreamSettingRequirements.find(e => (null == e.preset || e.preset === d) && e.resolution === _ && e.fps === c)),
-    I = s.default.getCurrentUser(),
+    I = a.default.getCurrentUser(),
     T = r.default.getGuildId(),
     f = null != T ? i.default.getGuild(T) : null;
-  a.default.track(o.AnalyticEvents.STREAM_SETTINGS_UPDATE, {
+  s.default.track(o.AnalyticEvents.STREAM_SETTINGS_UPDATE, {
     user_premium_tier: null == I ? void 0 : I.premiumType,
     guild_premium_tier: null == f ? void 0 : f.premiumTier,
     stream_quality_user_premium_tier: (null == E ? void 0 : E.quality) != null ? u.StreamQualitiesToPremiumType[E.quality] : null,

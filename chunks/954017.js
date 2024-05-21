@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("512722"),
   r = n.n(i),
-  s = n("493683"),
-  a = n("726542"),
+  a = n("493683"),
+  s = n("726542"),
   o = n("122810"),
   l = n("503438"),
   u = n("693824"),
@@ -40,9 +40,9 @@ let A = async e => {
     reply: t,
     altText: n,
     ...i
-  } = e, a = await p(i), o = await s.default.openPrivateChannel(i.user.id, !1, !1), l = _.default.getChannel(o);
+  } = e, s = await p(i), o = await a.default.openPrivateChannel(i.user.id, !1, !1), l = _.default.getChannel(o);
   r()(null != l, "Channel cannot be null"), (0, I.sendReply)({
-    file: a,
+    file: s,
     altText: n,
     channel: l,
     reply: t
@@ -52,10 +52,10 @@ let A = async e => {
   let {
     activity: i,
     application: r,
-    user: s
+    user: a
   } = e, {
-    theme: a
-  } = (0, f.getProfileInfo)(s, "black"), o = "dark" === a, l = (0, f.getActivityPlatform)(i), {
+    theme: s
+  } = (0, f.getProfileInfo)(a, "black"), o = "dark" === s, l = (0, f.getActivityPlatform)(i), {
     assets: u,
     application_id: d
   } = i, _ = (0, c.getAssetImage)(d, null == u ? void 0 : u.large_image, 64), I = null == r ? void 0 : r.getIconURL(64), T = null != l ? o ? l.icon.darkPNG : l.icon.lightPNG : i.type === S.ActivityTypes.PLAYING ? o ? n("414575") : n("807612") : null, h = i.type === S.ActivityTypes.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, E.getEmojiUrl)({
@@ -83,7 +83,7 @@ let A = async e => {
     activity: n,
     application: i,
     stream: r
-  } = e, _ = await s.default.openPrivateChannel(t.id, !1, !1), c = N({
+  } = e, _ = await a.default.openPrivateChannel(t.id, !1, !1), c = N({
     activity: n,
     application: i,
     user: t
@@ -94,7 +94,7 @@ let A = async e => {
       var i;
       e.setFont({
         truncate: u.TextTruncationMethod.Truncate
-      }), null != r ? v(e, n, t) : (0, l.default)(n) ? R(e, n, t) : (0, o.default)(n) && n.name === a.default.get(S.PlatformTypes.LEAGUE_OF_LEGENDS).name ? L(e, n, t) : n.type === S.ActivityTypes.HANG_STATUS ? g(e, n, t) : C(e, n, t), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) && e.drawImage("Platform", {
+      }), null != r ? v(e, n, t) : (0, l.default)(n) ? R(e, n, t) : (0, o.default)(n) && n.name === s.default.get(S.PlatformTypes.LEAGUE_OF_LEGENDS).name ? L(e, n, t) : n.type === S.ActivityTypes.HANG_STATUS ? g(e, n, t) : C(e, n, t), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) && e.drawImage("Platform", {
         x: T.canvasWidth - T.padding - T.platformSize,
         y: T.padding
       }, {
@@ -116,16 +116,16 @@ let A = async e => {
     y: T.padding
   }, !0, 2 + 2 / 3)
 }, C = (e, t, n) => {
-  var i, r, s;
+  var i, r, a;
   e.setSize({
     w: T.canvasWidth,
     h: T.canvasHeight
   });
   let {
-    color: a,
+    color: s,
     theme: o
   } = (0, f.getProfileInfo)(n, "black");
-  e.setColor(a), e.drawRoundedRect({
+  e.setColor(s), e.drawRoundedRect({
     x: 0,
     y: 0,
     h: T.canvasHeight,
@@ -156,7 +156,7 @@ let A = async e => {
   }), e.drawText("".concat(t.name), {
     x: l,
     y: T.fontPadding + 1 * T.lineHeight,
-    w: (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has(T.AssetTypes.Platform)) ? T.titleMaxWidthPlatform : T.titleMaxWidthNoPlatform
+    w: (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(T.AssetTypes.Platform)) ? T.titleMaxWidthPlatform : T.titleMaxWidthNoPlatform
   }, !0), null != t.timestamps && (e.setFont({
     size: 14,
     weight: 400
@@ -171,15 +171,15 @@ let A = async e => {
     h: T.canvasHeight
   });
   let {
-    color: s,
-    theme: a
+    color: a,
+    theme: s
   } = (0, f.getProfileInfo)(n, "black");
-  e.setColor(s), e.drawRoundedRect({
+  e.setColor(a), e.drawRoundedRect({
     x: 0,
     y: 0,
     h: T.canvasHeight,
     w: T.canvasWidth
-  }, 8, !0), e.setColor("dark" === a ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), e.drawRoundedRect({
+  }, 8, !0), e.setColor("dark" === s ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), e.drawRoundedRect({
     x: 0,
     y: 0,
     h: T.canvasHeight,
@@ -192,7 +192,7 @@ let A = async e => {
     h: T.activitySize
   }, 8);
   let o = T.activitySize + T.padding + T.imagePadding;
-  e.setColor("dark" === a ? "white" : "rgb(6, 6, 7)"), e.setFont({
+  e.setColor("dark" === s ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 14,
     family: ["gg sans", "sans-serif"],
     weight: 700
@@ -208,16 +208,16 @@ let A = async e => {
     y: T.fontPadding + 2 * T.lineHeight
   }, !0)
 }, g = (e, t, i) => {
-  var r, s;
+  var r, a;
   e.setSize({
     w: T.canvasWidth,
     h: T.canvasHeight
   });
   let {
-    color: a,
+    color: s,
     theme: o
   } = (0, f.getProfileInfo)(i, "black");
-  e.setColor(a), e.drawRoundedRect({
+  e.setColor(s), e.drawRoundedRect({
     x: 0,
     y: 0,
     h: T.canvasHeight,
@@ -242,7 +242,7 @@ let A = async e => {
   }), e.drawText(h.default.Messages.STATUS_LEAD_IN_JUST, {
     x: l,
     y: T.fontPadding + 1 * T.lineHeight,
-    w: (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has(T.AssetTypes.Platform)) ? T.titleMaxWidthPlatform : T.titleMaxWidthNoPlatform
+    w: (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(T.AssetTypes.Platform)) ? T.titleMaxWidthPlatform : T.titleMaxWidthNoPlatform
   }, !0), e.setFont({
     size: 14,
     weight: 400
@@ -260,19 +260,19 @@ let A = async e => {
   });
   let {
     color: r,
-    theme: s
+    theme: a
   } = (0, f.getProfileInfo)(n, "black");
   e.setColor(r), e.drawRoundedRect({
     x: 0,
     y: 0,
     h: T.canvasHeight,
     w: T.canvasWidth
-  }, 8, !0), e.setColor("dark" === s ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), e.drawRoundedRect({
+  }, 8, !0), e.setColor("dark" === a ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), e.drawRoundedRect({
     x: 0,
     y: 0,
     h: T.canvasHeight,
     w: T.canvasWidth
-  }, 8, !0), e.setColor("dark" === s ? "white" : "black"), e.drawRoundedImage("AssetImage", {
+  }, 8, !0), e.setColor("dark" === a ? "white" : "black"), e.drawRoundedImage("AssetImage", {
     x: T.padding,
     y: T.padding
   }, {
@@ -282,33 +282,33 @@ let A = async e => {
     x: T.padding,
     y: T.padding
   }, !0, 2 + 2 / 3);
-  let a = T.activitySize + T.padding + T.imagePadding;
-  e.setColor("dark" === s ? "white" : "rgb(6, 6, 7)"), e.setFont({
+  let s = T.activitySize + T.padding + T.imagePadding;
+  e.setColor("dark" === a ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 14,
     family: ["gg sans", "sans-serif"],
     weight: 700
   }), e.drawText("".concat(t.details), {
-    x: a,
+    x: s,
     y: T.fontPadding + 1 * T.lineHeight,
     w: (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) ? T.titleMaxWidthPlatform : T.titleMaxWidthNoPlatform
   }, !0), e.setFont({
     size: 14,
     weight: 400
   }), e.drawText("".concat(t.state), {
-    x: a,
+    x: s,
     y: T.fontPadding + 2 * T.lineHeight
   }, !0)
 }, v = (e, t, n) => {
-  var i, r, s;
+  var i, r, a;
   e.setSize({
     w: T.canvasWidth,
     h: T.canvasHeight
   });
   let {
-    color: a,
+    color: s,
     theme: o
   } = (0, f.getProfileInfo)(n, "black");
-  e.setColor(a), e.drawRoundedRect({
+  e.setColor(s), e.drawRoundedRect({
     x: 0,
     y: 0,
     h: T.canvasHeight,
@@ -339,7 +339,7 @@ let A = async e => {
   }), e.drawText("Streaming ".concat(t.name), {
     x: l,
     y: T.fontPadding + T.lineHeight * (null != t.timestamps ? 1 : 1.5),
-    w: (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has(T.AssetTypes.Platform)) ? T.titleMaxWidthPlatform : T.titleMaxWidthNoPlatform
+    w: (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(T.AssetTypes.Platform)) ? T.titleMaxWidthPlatform : T.titleMaxWidthNoPlatform
   }, !0), null != t.timestamps && (e.setFont({
     size: 14,
     weight: 500

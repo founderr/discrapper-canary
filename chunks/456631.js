@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return h
   }
 }), n("47120"), n("733860");
-var r, s, a, o, l = n("392711"),
+var r, a, s, o, l = n("392711"),
   u = n("442837"),
   d = n("780384"),
   _ = n("570140"),
@@ -41,12 +41,12 @@ class p extends(r = u.default.Store) {
     return f[e]
   }
 }
-o = "VoiceChannelEffectsStore", (a = "displayName") in(s = p) ? Object.defineProperty(s, a, {
+o = "VoiceChannelEffectsStore", (s = "displayName") in(a = p) ? Object.defineProperty(a, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new p(_.default, {
+}) : a[s] = o, t.default = new p(_.default, {
   VOICE_CHANNEL_EFFECT_CLEAR: e => {
     let {
       userId: t

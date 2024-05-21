@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("752916"),
   h = n("898140"),
   m = n("768581"),
-  p = n("358555"),
-  C = n("981631"),
+  C = n("358555"),
+  p = n("981631"),
   g = n("647086"),
   E = n("689938"),
   _ = n("431264");
@@ -66,7 +66,7 @@ function I(e) {
     hasSubheader: s
   } = e, {
     value: o
-  } = n.springs, d = t.hasFeature(C.GuildFeatures.DISCOVERABLE), c = (0, l.jsx)("div", {
+  } = n.springs, d = t.hasFeature(p.GuildFeatures.DISCOVERABLE), c = (0, l.jsx)("div", {
     className: _.communityInfo,
     children: d && (0, l.jsx)(u.Tooltip, {
       text: E.default.Messages.DISCOVERABLE_GUILD_HEADER_PUBLIC_INFO,
@@ -122,11 +122,11 @@ t.default = a.memo(function(e) {
     guild: x,
     guildBanner: R,
     animationOverlayHeight: M,
-    children: y,
-    headerClassName: O,
+    children: O,
+    headerClassName: y,
     communityInfoVisible: D,
     hasSubheader: b
-  } = e, j = x.hasFeature(C.GuildFeatures.ANIMATED_BANNER), P = (0, d.default)(x), G = !P && x.hasCommunityInfoSubheader(), U = (0, m.isAnimatedIconHash)(R) && j && !A, [w, B] = a.useState(!1), F = a.useRef(), H = a.useRef(null), V = a.useRef(), k = c.GifAutoPlay.getSetting();
+  } = e, j = x.hasFeature(p.GuildFeatures.ANIMATED_BANNER), P = (0, d.default)(x), G = !P && x.hasCommunityInfoSubheader(), U = (0, m.isAnimatedIconHash)(R) && j && !A, [w, B] = a.useState(!1), F = a.useRef(), H = a.useRef(null), V = a.useRef(), k = c.GifAutoPlay.getSetting();
   a.useEffect(() => {
     if (U && n && !F.current && k) return B(!0), V.current = setTimeout(() => {
       B(!1)
@@ -158,12 +158,12 @@ t.default = a.memo(function(e) {
       onContextMenu: h,
       onClick: f,
       children: [(0, l.jsxs)("header", {
-        className: i()(_.header, O, {
+        className: i()(_.header, y, {
           [_.themedHeaderMobile]: o.isMobile
         }),
         children: [(0, l.jsxs)("div", {
           className: i()(_.headerContent, _.primaryInfo),
-          children: [(0, l.jsx)(p.default, {
+          children: [(0, l.jsx)(C.default, {
             guild: x,
             isBannerVisible: n
           }), x.id === g.FAVORITES_RAW_GUILD_ID && (0, l.jsx)(N, {}), (0, l.jsx)(u.Heading, {
@@ -186,7 +186,7 @@ t.default = a.memo(function(e) {
             })
           }), (0, l.jsx)("div", {
             className: _.headerChildren,
-            children: y
+            children: O
           })]
         }), G && (0, l.jsx)(I, {
           guild: x,

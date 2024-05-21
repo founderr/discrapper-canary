@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return h
   }
 }), n("47120"), n("411104");
-var i, r, s = n("392711"),
-  a = n.n(s),
+var i, r, a = n("392711"),
+  s = n.n(a),
   o = n("304809"),
   l = n("22382"),
   u = n("747071"),
@@ -47,11 +47,11 @@ function h(e, t) {
 function A() {
   null != window.navigator.mediaDevices && window.navigator.mediaDevices.enumerateDevices().then(e => {
     let t = d.default.getOutputDevices(),
-      n = a()(t).sortBy(e => e.index).findIndex(e => e.id === d.default.getOutputDeviceId()),
+      n = s()(t).sortBy(e => e.index).findIndex(e => e.id === d.default.getOutputDeviceId()),
       i = t[d.default.getOutputDeviceId()],
       r = e.filter(e => "audiooutput" === e.kind && "communications" !== e.deviceId),
-      s = r[n];
-    null != i && (null == s || s.label !== i.name) && (s = r.find(e => e.label === i.name)), I = null != s ? s.deviceId : E
+      a = r[n];
+    null != i && (null == a || a.label !== i.name) && (a = r.find(e => e.label === i.name)), I = null != a ? a.deviceId : E
   }).catch(() => {
     I = E
   })

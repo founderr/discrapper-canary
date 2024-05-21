@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("773603");
 var i = n("735250"),
   r = n("470079"),
-  s = n("481060"),
-  a = n("285952"),
+  a = n("481060"),
+  s = n("285952"),
   o = n("185625"),
   l = n("273389"),
   u = n("816342"),
@@ -91,7 +91,7 @@ t.default = e => {
       if (e === M.AbortCodes.INVALID_FORM_BODY) X(y.default.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
       else X(y.default.Messages.MOBILE_REPORTS_SUBMIT_FAILED)
     },
-    es = () => e.onSubmit({
+    ea = () => e.onSubmit({
       nodeRef: t.id,
       destination: ["", e.successNodeId]
     }).then(() => {
@@ -104,9 +104,9 @@ t.default = e => {
     });
   return (0, i.jsxs)("div", {
     className: P.container,
-    children: [(0, i.jsxs)(s.ModalHeader, {
+    children: [(0, i.jsxs)(a.ModalHeader, {
       separator: !1,
-      direction: a.default.Direction.VERTICAL,
+      direction: s.default.Direction.VERTICAL,
       className: P.header,
       children: [(0, i.jsx)(g.default, {
         element: U(t, "success")
@@ -115,7 +115,7 @@ t.default = e => {
       }), (0, i.jsx)(N.default, {
         node: t
       })]
-    }), (0, i.jsxs)(s.ModalContent, {
+    }), (0, i.jsxs)(a.ModalContent, {
       className: P.body,
       children: [null != H ? (0, i.jsx)(L.default, {
         element: H
@@ -135,7 +135,7 @@ t.default = e => {
           } = e;
           return D.REMEDIATION_ELEMENT_TYPES.includes(t)
         })
-      }(t) && (0, i.jsx)(s.Heading, {
+      }(t) && (0, i.jsx)(a.Heading, {
         className: P.remediationElementsHeader,
         variant: "heading-sm/semibold",
         children: y.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_HEADER
@@ -199,12 +199,12 @@ t.default = e => {
             ei(["", e.target]);
             break;
           case "submit":
-            z(!0), es()
+            z(!0), ea()
         }
       },
       onBackClicked: e.onNavigateBack,
       canNavigateBack: G.length > 0
-    }), (0, i.jsx)(s.ModalCloseButton, {
+    }), (0, i.jsx)(a.ModalCloseButton, {
       className: P.closeButton,
       onClick: k
     })]

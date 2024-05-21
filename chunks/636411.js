@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("442837"),
+  a = n.n(r),
+  s = n("442837"),
   o = n("481060"),
   l = n("607070"),
   u = n("104494"),
@@ -27,7 +27,7 @@ function m(e) {
   var t, n;
   let {
     onDismiss: r
-  } = e, m = (0, a.useStateFromStores)([l.default], () => l.default.useReducedMotion), N = h.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, p = (0, d.usePremiumTrialOffer)(), O = (0, u.usePremiumDiscountOffer)(), C = (null == p ? void 0 : p.subscription_trial) != null || null != O, R = {
+  } = e, m = (0, s.useStateFromStores)([l.default], () => l.default.useReducedMotion), N = h.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, p = (0, d.usePremiumTrialOffer)(), O = (0, u.usePremiumDiscountOffer)(), C = (null == p ? void 0 : p.subscription_trial) != null || null != O, R = {
     object: f.AnalyticsObjects.BUTTON_CTA,
     section: f.AnalyticsSections.SUPER_REACTION_PICKER
   };
@@ -46,7 +46,7 @@ function m(e) {
       children: [(0, i.jsx)("div", {
         className: A.contentFill,
         children: (0, i.jsx)(T.default, {
-          className: s()(A.banner, {
+          className: a()(A.banner, {
             [A.hasTrialOffer]: C
           }),
           src: "https://cdn.discordapp.com/attachments/955557117622886410/1085270553759322153/super-reactions-launch.mp4",

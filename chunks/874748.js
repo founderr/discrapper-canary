@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 }), n("789020");
 var i = n("830121"),
   r = n("754688"),
-  s = n("430824"),
-  a = n("768581"),
+  a = n("430824"),
+  s = n("768581"),
   o = n("5192"),
   l = n("154135"),
   u = n("981631"),
@@ -21,7 +21,7 @@ var i = n("830121"),
   _ = n("689938");
 
 function c(e) {
-  var t, n, i, r, s;
+  var t, n, i, r, a;
   let {
     mediaPostEmbedData: u,
     guild: c,
@@ -37,7 +37,7 @@ function c(e) {
     m = S ? _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
     N = null != T ? o.default.getName(u.guild_id, u.channel_id, T) : void 0,
     p = null == T ? void 0 : T.getAvatarURL(null == c ? void 0 : c.id, 40);
-  (null == p || f !== u.guild_id) && (p = a.default.getGuildIconURL({
+  (null == p || f !== u.guild_id) && (p = s.default.getGuildIconURL({
     id: u.guild_id,
     icon: u.guild_icon,
     size: 40,
@@ -64,7 +64,7 @@ function c(e) {
     messageId: u.message_id,
     canAccess: S,
     guildId: u.guild_id,
-    guildName: null !== (s = null == c ? void 0 : c.name) && void 0 !== s ? s : u.guild_name,
+    guildName: null !== (a = null == c ? void 0 : c.name) && void 0 !== a ? a : u.guild_name,
     authorId: null == u ? void 0 : u.author_id,
     authorName: N,
     channelName: null == E ? void 0 : E.name,
@@ -87,7 +87,7 @@ function E(e) {
 }
 
 function I(e, t) {
-  let n = s.default.getGuild(e);
+  let n = a.default.getGuild(e);
   if (null == n || null == t) return !1;
   let i = n.hasFeature(u.GuildFeatures.CREATOR_MONETIZABLE) || n.hasFeature(u.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
   return !0 === t.isMediaChannel() && i

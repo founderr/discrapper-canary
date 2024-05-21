@@ -27,8 +27,8 @@ n.r(t), n.d(t, {
 }), n("653041"), n("47120");
 var i = n("434179"),
   r = n("771649"),
-  s = n("544891"),
-  a = n("570140"),
+  a = n("544891"),
+  s = n("570140"),
   o = n("668781"),
   l = n("340332"),
   u = n("19780"),
@@ -51,12 +51,12 @@ function h(e, t) {
 async function A() {
   let e = I.default.getAwaitingRemoteSessionInfo(),
     t = null == e ? void 0 : e.nonce;
-  a.default.dispatch({
+  s.default.dispatch({
     type: "REMOTE_SESSION_DISCONNECT"
   });
   let n = [];
   ((null == e ? void 0 : e.type) === f.PlatformTypes.PLAYSTATION || (null == e ? void 0 : e.type) === f.PlatformTypes.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(v(e.type, e.deviceId, e.commandId)), null != t && n.push(function(e) {
-    return s.HTTP.del({
+    return a.HTTP.del({
       url: f.Endpoints.CONNECT_REQUEST(e)
     })
   }(t));
@@ -71,7 +71,7 @@ async function A() {
 }
 
 function m(e) {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "REMOTE_SESSION_CONNECT",
     sessionId: e
   })
@@ -82,7 +82,7 @@ function N(e, t) {
     selfMute: n,
     selfDeaf: i
   } = t;
-  a.default.dispatch({
+  s.default.dispatch({
     type: "REMOTE_COMMAND",
     sessionId: e,
     payload: {
@@ -94,7 +94,7 @@ function N(e, t) {
 }
 
 function p(e) {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "REMOTE_COMMAND",
     sessionId: e,
     payload: {
@@ -105,7 +105,7 @@ function p(e) {
 
 function O(e, t, n, i) {
   let r = (0, l.coerceAudioContextForProto)(n);
-  null != r && (a.default.dispatch({
+  null != r && (s.default.dispatch({
     type: "REMOTE_COMMAND",
     sessionId: e,
     payload: {
@@ -120,7 +120,7 @@ async function C() {
   let e;
   try {
     let t = null != u.default.getRTCConnectionId() ? r.ConsoleHandoffType.TRANSFER_EXISTING_CALL : r.ConsoleHandoffType.CREATE_NEW_CALL;
-    e = (await s.HTTP.post({
+    e = (await a.HTTP.post({
       url: f.Endpoints.CONNECT_REQUEST_CREATE,
       body: {
         analytics_properties: {
@@ -135,23 +135,23 @@ async function C() {
 }
 async function R(e) {
   let t;
-  a.default.dispatch({
+  s.default.dispatch({
     type: "GAME_CONSOLE_FETCH_DEVICES_START",
     platform: e
   });
   try {
-    t = await s.HTTP.get({
+    t = await a.HTTP.get({
       url: f.Endpoints.CONSOLES_DEVICES(e)
     })
   } catch (t) {
-    throw a.default.dispatch({
+    throw s.default.dispatch({
       type: "GAME_CONSOLE_FETCH_DEVICES_FAIL",
       platform: e,
       error: t
     }), t
   }
   let n = t.body.devices;
-  return a.default.dispatch({
+  return s.default.dispatch({
     type: "GAME_CONSOLE_FETCH_DEVICES_SUCCESS",
     platform: e,
     devices: n
@@ -159,7 +159,7 @@ async function R(e) {
 }
 
 function g(e, t) {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "GAME_CONSOLE_SELECT_DEVICE",
     platform: e,
     deviceId: t
@@ -167,12 +167,12 @@ function g(e, t) {
 }
 async function L(e, t, n, r) {
   let o;
-  a.default.dispatch({
+  s.default.dispatch({
     type: "GAME_CONSOLE_DEVICE_SEND_COMMAND_START",
     platform: e
   });
   try {
-    o = await s.HTTP.post({
+    o = await a.HTTP.post({
       url: f.Endpoints.CONSOLES_DEVICES_COMMANDS(e, t),
       body: {
         command: i.ConsoleCommands.CONNECT_VOICE,
@@ -182,14 +182,14 @@ async function L(e, t, n, r) {
       }
     })
   } catch (t) {
-    throw a.default.dispatch({
+    throw s.default.dispatch({
       type: "GAME_CONSOLE_DEVICE_SEND_COMMAND_FAIL",
       platform: e,
       error: t
     }), t
   }
   let l = o.body.id;
-  return a.default.dispatch({
+  return s.default.dispatch({
     type: "WAIT_FOR_REMOTE_SESSION",
     sessionType: e,
     nonce: r,
@@ -199,18 +199,18 @@ async function L(e, t, n, r) {
   }), l
 }
 async function v(e, t, n) {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_START",
     platform: e,
     deviceId: t,
     commandId: n
   });
   try {
-    await s.HTTP.del({
+    await a.HTTP.del({
       url: f.Endpoints.CONSOLES_DEVICES_COMMAND(e, t, n)
     })
   } catch (i) {
-    throw a.default.dispatch({
+    throw s.default.dispatch({
       type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_FAIL",
       platform: e,
       deviceId: t,
@@ -218,7 +218,7 @@ async function v(e, t, n) {
       error: i
     }), i
   }
-  a.default.dispatch({
+  s.default.dispatch({
     type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_SUCCESS",
     platform: e,
     deviceId: t,

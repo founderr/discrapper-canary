@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("481060"),
   l = n("166459"),
   u = n("53281"),
@@ -24,7 +24,7 @@ function h(e) {
   let {
     channelId: t,
     option: n,
-    keyboardModeEnabled: s
+    keyboardModeEnabled: a
   } = e, h = r.useRef(null), [A, m] = r.useState(!1), N = c.default.getUpload(t, n.name, _.DraftType.SlashCommand), p = r.useRef(null), O = r.useCallback(() => {
     m(!0)
   }, []), C = r.useCallback(() => {
@@ -52,7 +52,7 @@ function h(e) {
   }, [N, O, C, R]), null != N) ? (0, i.jsx)(I.default, {
     channelId: t,
     upload: N,
-    keyboardModeEnabled: s,
+    keyboardModeEnabled: a,
     draftType: _.DraftType.SlashCommand,
     label: (0, i.jsxs)(r.Fragment, {
       children: [(0, i.jsxs)(o.Text, {
@@ -70,20 +70,20 @@ function h(e) {
   }) : (0, i.jsxs)(E.default, {
     id: n.name,
     channelId: t,
-    keyboardModeEnabled: s,
+    keyboardModeEnabled: a,
     onKeyDown: e => {
       if (e.which === T.KeyboardKeys.ENTER) {
         var t;
         e.preventDefault(), null === (t = h.current) || void 0 === t || t.activateUploadDialogue()
       }
     },
-    className: a()(f.emptyOption, {
+    className: s()(f.emptyOption, {
       [f.emptyOptionActive]: A
     }),
     draftType: _.DraftType.SlashCommand,
     ref: p,
     children: [(0, i.jsx)("span", {
-      className: a()(f.optionName, {
+      className: s()(f.optionName, {
         [f.optionNameActive]: A
       }),
       children: n.name

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return l
   }
 }), n("47120"), n("411104"), n("653041");
-var i, r, s, a, o, l, u, d, _ = n("512722"),
+var i, r, a, s, o, l, u, d, _ = n("512722"),
   c = n.n(_),
   E = n("719711"),
   I = n("544891"),
@@ -23,7 +23,7 @@ let N = window.DiscordNative,
   C = null,
   R = null,
   g = {};
-null != N && (O = N.remoteApp.getVersion().split(".").map(e => parseInt(e)), R = null === (i = (r = N.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r), C = null === (s = (a = N.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(a));
+null != N && (O = N.remoteApp.getVersion().split(".").map(e => parseInt(e)), R = null === (i = (r = N.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r), C = null === (a = (s = N.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s));
 let L = new Set(["discord_erlpack", "discord_game_utils", "discord_rpc", "discord_spellcheck", "discord_utils", "discord_voice"]),
   v = !1;
 async function D(e) {
@@ -41,7 +41,7 @@ function M(e) {
 }
 
 function y(e) {
-  var t, n, i, r, s, a, o, l;
+  var t, n, i, r, a, s, o, l;
   return {
     id: g[null !== (t = e.id) && void 0 !== t ? t : ""],
     nativeProcessObserverId: parseInt(null !== (n = e.id) && void 0 !== n ? n : "", 10),
@@ -49,7 +49,7 @@ function y(e) {
     processName: null !== (r = e.name) && void 0 !== r ? r : "",
     hidden: e.hidden,
     elevated: e.elevated,
-    sandboxed: null !== (s = e.sandboxed) && void 0 !== s && s,
+    sandboxed: null !== (a = e.sandboxed) && void 0 !== a && a,
     lastFocused: e.lastFocused,
     exePath: e.exePath,
     exeName: e.exeName,
@@ -57,7 +57,7 @@ function y(e) {
     distributor: e.distributor,
     sku: e.sku,
     pid: e.pid,
-    pidPath: null !== (a = e.pidPath) && void 0 !== a ? a : [],
+    pidPath: null !== (s = e.pidPath) && void 0 !== s ? s : [],
     windowHandle: null !== (o = e.windowHandle) && void 0 !== o ? o : null,
     fullscreenType: null !== (l = e.fullscreenType) && void 0 !== l ? l : f.RunningProcessFullscreenType.UNKNOWN
   }
@@ -205,8 +205,8 @@ function y(e) {
     if (null == n) return;
     let i = null !== (t = n.pathname.split("/").pop()) && void 0 !== t ? t : "unknown",
       r = await D(e),
-      s = m.from(r);
-    N.fileManager.saveWithDialog(s, i)
+      a = m.from(r);
+    N.fileManager.saveWithDialog(a, i)
   },
   async saveFile(e, t) {
     var n;
@@ -214,9 +214,9 @@ function y(e) {
     let i = h.default.toURLSafe(e);
     if (null == i) return;
     let r = null !== (n = null != t ? t : i.pathname.split("/").pop()) && void 0 !== n ? n : "unknown",
-      s = await D(e),
-      a = m.from(s);
-    N.fileManager.saveWithDialog(a, r)
+      a = await D(e),
+      s = m.from(a);
+    N.fileManager.saveWithDialog(s, r)
   },
   canCopyImage() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
@@ -379,8 +379,8 @@ function y(e) {
     if (null == N.http) return Promise.reject(Error("HTTP module not available"));
     let {
       method: r,
-      maxBps: s,
-      token: a,
+      maxBps: a,
+      token: s,
       chunkInterval: o,
       contentType: l
     } = {
@@ -390,7 +390,7 @@ function y(e) {
       ...n
     }, u = t;
     "application/json" === l && (u = JSON.stringify(t));
-    let d = o / 1e3 * s,
+    let d = o / 1e3 * a,
       _ = Math.ceil(u.length / d),
       c = Array(_);
     for (let e = 0; e < _; e++) {
@@ -402,7 +402,7 @@ function y(e) {
         method: r,
         chunkInterval: o,
         contentType: l,
-        token: a
+        token: s
       }, (n, i) => null != n ? t(n) : i.status >= 400 ? t(Error(i.body)) : void e(i))
     })
   },
@@ -454,17 +454,17 @@ function y(e) {
     var i;
     let {
       getWindowFullscreenTypeByPid: r
-    } = this.getDiscordUtils(), s = 0 !== e && null != r && null != t ? r(e, t) : null;
-    return -1 === s && (s = null), null !== (i = null != s ? s : n) && void 0 !== i ? i : f.RunningProcessFullscreenType.UNKNOWN
+    } = this.getDiscordUtils(), a = 0 !== e && null != r && null != t ? r(e, t) : null;
+    return -1 === a && (a = null), null !== (i = null != a ? a : n) && void 0 !== i ? i : f.RunningProcessFullscreenType.UNKNOWN
   },
   isModuleVersionAtLeast(e, t) {
     var n, i, r;
-    let s = [...null != O ? O : [0, 0, 0]];
-    s.push(null !== (i = null === (n = this.moduleVersions) || void 0 === n ? void 0 : n[e]) && void 0 !== i ? i : 0);
-    let a = null !== (r = t[this.releaseChannel]) && void 0 !== r ? r : t.stable;
-    for (let [e, t] of s.entries()) {
-      if (t > a[e]) break;
-      if (t < a[e]) return !1
+    let a = [...null != O ? O : [0, 0, 0]];
+    a.push(null !== (i = null === (n = this.moduleVersions) || void 0 === n ? void 0 : n[e]) && void 0 !== i ? i : 0);
+    let s = null !== (r = t[this.releaseChannel]) && void 0 !== r ? r : t.stable;
+    for (let [e, t] of a.entries()) {
+      if (t > s[e]) break;
+      if (t < s[e]) return !1
     }
     return !0
   }

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  s = n("481060"),
-  a = n("100527"),
+  a = n("481060"),
+  s = n("100527"),
   o = n("906732"),
   l = n("299206"),
   u = n("389052"),
@@ -31,7 +31,7 @@ function S(e) {
   } = (0, E.useUserProfileAnalyticsContext)(), {
     analyticsLocations: N,
     newestAnalyticsLocation: p
-  } = (0, o.default)(a.default.USER_PROFILE_OVERFLOW_MENU), O = (0, u.default)({
+  } = (0, o.default)(s.default.USER_PROFILE_OVERFLOW_MENU), O = (0, u.default)({
     user: t,
     color: "danger",
     location: p,
@@ -57,25 +57,25 @@ function S(e) {
     label: f.default.Messages.COPY_ID_USER
   });
   if (A && n !== T.UserProfileTypes.FULL_SIZE) return null;
-  let g = () => A ? null : (0, i.jsxs)(s.MenuGroup, {
+  let g = () => A ? null : (0, i.jsxs)(a.MenuGroup, {
       children: [O, C]
     }),
-    L = () => null == R ? null : (0, i.jsx)(s.MenuGroup, {
+    L = () => null == R ? null : (0, i.jsx)(a.MenuGroup, {
       children: R
     });
   return (0, i.jsx)(o.AnalyticsLocationProvider, {
     value: N,
-    children: (0, i.jsx)(s.Popout, {
+    children: (0, i.jsx)(a.Popout, {
       renderPopout: e => {
         let {
           closePopout: t
         } = e;
-        return (0, i.jsxs)(s.Menu, {
+        return (0, i.jsxs)(a.Menu, {
           navId: "user-profile-overflow-menu",
           onSelect: void 0,
           onClose: t,
           "aria-label": f.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
-          children: [(0, i.jsx)(s.MenuGroup, {
+          children: [(0, i.jsx)(a.MenuGroup, {
             children: h
           }), g(), L()]
         })

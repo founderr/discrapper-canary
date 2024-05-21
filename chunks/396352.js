@@ -1,9 +1,9 @@
 "use strict";
 n.r(t);
 var i, r = n("442837"),
-  s = n("570140");
+  a = n("570140");
 
-function a(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,7 +30,7 @@ class d extends(i = r.default.PersistedStore) {
     return u[e]
   }
 }
-a(d, "displayName", "TopEmojiStore"), a(d, "persistKey", "TopEmojiStore"), t.default = new d(s.default, {
+s(d, "displayName", "TopEmojiStore"), s(d, "persistKey", "TopEmojiStore"), t.default = new d(a.default, {
   LOGOUT: function() {
     l = o, u = {}
   },

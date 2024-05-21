@@ -39,8 +39,8 @@ n.r(t), n.d(t, {
 });
 var i = n("367907"),
   r = n("427679"),
-  s = n("23750"),
-  a = n("598077"),
+  a = n("23750"),
+  s = n("598077"),
   o = n("91156"),
   l = n("545197"),
   u = n("82554"),
@@ -74,8 +74,8 @@ function T(e, t, n) {
     channel_id: e.channel_id
   });
   let r = (0, o.isIarMessageDislikeEnabled)(t),
-    s = (0, l.isIarSpamReorderExperimentEnabled)(t);
-  s && r ? i = "6a_spam_reorder_with_dislikes_experiment" : s ? i = "6b_spam_reorder_experiment" : r && (i = "5_dislike_experiment"), (0, _.showReportModal)({
+    a = (0, l.isIarSpamReorderExperimentEnabled)(t);
+  a && r ? i = "6a_spam_reorder_with_dislikes_experiment" : a ? i = "6b_spam_reorder_experiment" : r && (i = "5_dislike_experiment"), (0, _.showReportModal)({
     name: u.ReportNames.MESSAGE,
     record: e
   }, {
@@ -138,7 +138,7 @@ function m(e, t, n) {
 }
 
 function N(e, t) {
-  let n = new a.default({});
+  let n = new s.default({});
   R(u.UnauthenticatedReportNames.USER, {
     reported_user_id: n.id
   }), (0, _.showReportModal)({
@@ -148,7 +148,7 @@ function N(e, t) {
 }
 
 function p(e, t) {
-  let n = new s.default({});
+  let n = new a.default({});
   R(u.UnauthenticatedReportNames.MESSAGE, {
     message_id: void 0,
     channel_id: void 0

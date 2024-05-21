@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return u
   }
 }), n("47120");
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140");
 let u = {
     enabled: !1
@@ -72,12 +72,12 @@ class f extends(i = o.default.Store) {
     return null == e || null == t ? null : null !== (r = null === (i = _[e]) || void 0 === i ? void 0 : null === (n = i.newMemberActions) || void 0 === n ? void 0 : n.find(e => e.channelId === t)) && void 0 !== r ? r : null
   }
 }
-a = "GuildOnboardingHomeSettingsStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
-  value: a,
+s = "GuildOnboardingHomeSettingsStore", (a = "displayName") in(r = f) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new f(l.default, {
+}) : r[a] = s, t.default = new f(l.default, {
   GUILD_HOME_SETTINGS_FETCH_START: function(e) {
     let {
       guildId: t
@@ -108,8 +108,8 @@ a = "GuildOnboardingHomeSettingsStore", (s = "displayName") in(r = f) ? Object.d
     } = e, r = _[n];
     if (null == r) return !1;
     r.resourceChannels = null !== (t = r.resourceChannels) && void 0 !== t ? t : [];
-    let s = r.resourceChannels.findIndex(e => e.channelId === i.channelId);
-    return -1 !== s && (r.resourceChannels[s] = {
+    let a = r.resourceChannels.findIndex(e => e.channelId === i.channelId);
+    return -1 !== a && (r.resourceChannels[a] = {
       ...i
     }, !0)
   },
@@ -121,8 +121,8 @@ a = "GuildOnboardingHomeSettingsStore", (s = "displayName") in(r = f) ? Object.d
     } = e, r = _[n];
     if (null == r) return !1;
     r.newMemberActions = null !== (t = r.newMemberActions) && void 0 !== t ? t : [];
-    let s = r.newMemberActions.findIndex(e => e.channelId === i.channelId);
-    return -1 !== s && (r.newMemberActions[s] = {
+    let a = r.newMemberActions.findIndex(e => e.channelId === i.channelId);
+    return -1 !== a && (r.newMemberActions[a] = {
       ...i
     }, !0)
   },

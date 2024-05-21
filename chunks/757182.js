@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("655922"),
-  s = n("420660"),
-  a = n("915863"),
+  a = n("420660"),
+  s = n("915863"),
   o = n("689938");
 
 function l(e) {
@@ -18,7 +18,7 @@ function l(e) {
     look: l,
     onAction: u
   } = e;
-  return (0, s.default)(t) ? (0, i.jsx)(a.default, {
+  return (0, a.default)(t) ? (0, i.jsx)(s.default, {
     onClick: () => {
       null == u || u();
       let e = (0, r.default)(t);

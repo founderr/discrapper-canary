@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("481060"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("315263"),
   l = n("100527"),
   u = n("906732"),
@@ -36,13 +36,13 @@ function m(e) {
     ...O
   } = (0, E.useUserProfileAnalyticsContext)();
   return (0, i.jsx)("div", {
-    className: s()(A.container, n),
+    className: a()(A.container, n),
     "aria-label": h.default.Messages.PROFILE_USER_BADGES,
     role: "group",
-    children: t.map(e => (0, i.jsx)(a.TooltipContainer, {
+    children: t.map(e => (0, i.jsx)(s.TooltipContainer, {
       text: e.description,
       delay: f.USER_PROFILE_TOOLTIP_DELAY,
-      children: (0, i.jsx)(a.Anchor, {
+      children: (0, i.jsx)(s.Anchor, {
         onClick: t => {
           p({
             action: "PRESS_BADGE"
@@ -72,7 +72,7 @@ function m(e) {
           alt: " ",
           "aria-hidden": !0,
           src: (0, f.getBadgeAsset)(e.icon),
-          className: s()(A.badge, r)
+          className: a()(A.badge, r)
         })
       })
     }, e.id))

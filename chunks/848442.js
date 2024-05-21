@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return y
   }
 });
 var l = n("735250");
@@ -17,8 +17,8 @@ var a = n("120356"),
   f = n("367907"),
   h = n("357352"),
   m = n("652515"),
-  p = n("550951"),
-  C = n("886176"),
+  C = n("550951"),
+  p = n("886176"),
   g = n("605236"),
   E = n("703656"),
   _ = n("984933"),
@@ -33,20 +33,20 @@ var a = n("120356"),
   R = n("689938"),
   M = n("119059");
 
-function y(e) {
+function O(e) {
   let {
     guildId: t,
     selected: n,
     handleClick: a
-  } = e, d = (0, m.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), p = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(t)), v = (null == p ? void 0 : p.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, y = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
+  } = e, d = (0, m.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), C = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(t)), v = (null == C ? void 0 : C.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, O = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
   return (0, l.jsx)(A.BasicChannelRow, {
     id: "shop-".concat(t),
     className: s()(M.previewChannelRow, {
       [M.selected]: n,
-      [M.phantomPreview]: y
+      [M.phantomPreview]: O
     }),
     innerClassName: M.previewChannelRowContent,
-    renderIcon: e => (0, l.jsx)(C.default, {
+    renderIcon: e => (0, l.jsx)(p.default, {
       width: 20,
       height: 20,
       className: s()([e, M.shopIcon])
@@ -56,7 +56,7 @@ function y(e) {
     onClick: a,
     trailing: (0, l.jsxs)("div", {
       className: M.gifSection,
-      children: [O ? (0, l.jsx)(N.TextBadge, {
+      children: [y ? (0, l.jsx)(N.TextBadge, {
         color: u.tokens.unsafe_rawColors.BRAND_260.css,
         text: R.default.Messages.NEW,
         className: M.newBadge
@@ -85,20 +85,20 @@ function y(e) {
   })
 }
 
-function O(e) {
+function y(e) {
   let {
     guild: t,
     selected: a
-  } = e, s = (0, p.useGuildShopPreviewVisible)(t, "guild_shop_channel_row"), i = () => {
+  } = e, s = (0, C.useGuildShopPreviewVisible)(t, "guild_shop_channel_row"), i = () => {
     o.Storage.set(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "true"), (0, E.transitionTo)(L.Routes.CHANNEL(t.id, v.StaticChannelRoute.GUILD_SHOP))
   };
-  return s ? (0, l.jsx)(y, {
+  return s ? (0, l.jsx)(O, {
     guildId: t.id,
     selected: a,
     handleClick: i
   }) : (0, l.jsx)(A.BasicChannelRow, {
     id: "shop-".concat(t.id),
-    renderIcon: e => (0, l.jsx)(C.default, {
+    renderIcon: e => (0, l.jsx)(p.default, {
       width: 20,
       height: 20,
       className: e

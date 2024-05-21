@@ -13,8 +13,8 @@ var a = n("120356"),
   f = n("131704"),
   h = n("314897"),
   m = n("594174"),
-  p = n("409216"),
-  C = n("768581"),
+  C = n("409216"),
+  p = n("768581"),
   g = n("51144"),
   E = n("754231"),
   _ = n("24285");
@@ -24,7 +24,7 @@ function S(e) {
     guildId: t,
     member: n,
     className: a
-  } = e, i = null != n.member ? (0, C.getGuildMemberAvatarURL)(n.member) : null;
+  } = e, i = null != n.member ? (0, p.getGuildMemberAvatarURL)(n.member) : null;
   return (0, l.jsx)(r.Tooltip, {
     text: n.nick,
     position: "bottom",
@@ -46,7 +46,7 @@ function I(e) {
     members: t,
     guildId: n
   } = e;
-  return (0, l.jsx)(p.default, {
+  return (0, l.jsx)(C.default, {
     className: _.partyMembers,
     guildId: n,
     users: t,
@@ -69,15 +69,15 @@ t.default = e => {
     members: a,
     embeddedApp: s,
     onAction: r
-  } = e, p = null != s, C = p ? Array.from(s.embeddedActivity.userIds) : [], g = (0, i.useStateFromStores)([m.default, h.default], () => {
-    if (p) return m.default.getUser(C[0]);
+  } = e, C = null != s, p = C ? Array.from(s.embeddedActivity.userIds) : [], g = (0, i.useStateFromStores)([m.default, h.default], () => {
+    if (C) return m.default.getUser(p[0]);
     if (null != a) {
       var e, t;
       return a.length <= 0 ? null : null !== (t = null === (e = a.find(e => e.user.id !== h.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : a[0].user
     }
   });
   if (null == g) return null;
-  let S = p || (0, u.default)(n),
+  let S = C || (0, u.default)(n),
     N = (0, f.isVoiceChannel)(t.type);
   return (0, l.jsxs)("div", {
     className: _.activity,
@@ -102,7 +102,7 @@ t.default = e => {
           guildId: t.guild_id,
           members: a
         }) : void 0,
-        isEmbedded: p
+        isEmbedded: C
       })
     }), (0, l.jsx)("div", {
       className: _.activityActionsContainer,
@@ -115,7 +115,7 @@ t.default = e => {
         channelId: t.id,
         color: _.button,
         onAction: r,
-        isEmbedded: p
+        isEmbedded: C
       })
     })]
   })

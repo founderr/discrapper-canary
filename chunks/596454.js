@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120"), n("411104"), n("733860"), n("653041");
 var i, r = n("735250"),
-  s = n("470079"),
-  a = n("120356"),
-  o = n.n(a),
+  a = n("470079"),
+  s = n("120356"),
+  o = n.n(s),
   l = n("699581"),
   u = n.n(l),
   d = n("374470"),
@@ -29,7 +29,7 @@ function m(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class N extends(i = s.PureComponent) {
+class N extends(i = a.PureComponent) {
   componentWillUnmount() {
     var e;
     null === (e = this.cancelLoadImage) || void 0 === e || e.call(this)
@@ -41,8 +41,8 @@ class N extends(i = s.PureComponent) {
         emojiId: n,
         emojiName: i,
         animated: r,
-        shouldAnimate: s,
-        isFocused: a,
+        shouldAnimate: a,
+        isFocused: s,
         isInteracting: o,
         size: l = "default"
       } = e,
@@ -54,7 +54,7 @@ class N extends(i = s.PureComponent) {
       let e = A.EMOJI_SIZE_MAP[l];
       return f.default.getEmojiURL({
         id: n,
-        animated: a && !0 === r && (!0 === s || u || !0 === o),
+        animated: s && !0 === r && (!0 === a || u || !0 === o),
         size: e
       })
     }
@@ -66,7 +66,7 @@ class N extends(i = s.PureComponent) {
     let {
       emojiName: n,
       animated: i,
-      className: a,
+      className: s,
       size: l = "default",
       alt: u,
       shouldAnimate: d,
@@ -82,14 +82,14 @@ class N extends(i = s.PureComponent) {
     }) : (i && (t = {
       onMouseEnter: this.onMouseEnter,
       onMouseLeave: this.onMouseLeave
-    }), (0, s.createElement)("img", {
+    }), (0, a.createElement)("img", {
       ...T,
       key: this.key,
       src: f,
       alt: null !== (e = null != u ? u : n) && void 0 !== e ? e : void 0,
       draggable: !1,
       ...t,
-      className: o()("emoji", a, {
+      className: o()("emoji", s, {
         jumboable: "jumbo" === l
       }),
       onError: this.onError,
@@ -149,9 +149,9 @@ let p = function(e) {
         if (null == i) return;
         let r = i[1];
         if (e.intersectionRatio >= .7) {
-          var s, a;
+          var a, s;
           if (-1 !== t.indexOf(r)) return;
-          let n = Math.abs(e.intersectionRect.bottom - Number(null === (s = e.rootBounds) || void 0 === s ? void 0 : s.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (a = e.rootBounds) || void 0 === a ? void 0 : a.top));
+          let n = Math.abs(e.intersectionRect.bottom - Number(null === (a = e.rootBounds) || void 0 === a ? void 0 : a.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (s = e.rootBounds) || void 0 === s ? void 0 : s.top));
           n ? t.unshift(r) : t.push(r), r.forceUpdate(), n && t.length > 100 && t[100].forceUpdate()
         } else {
           let e = t.indexOf(r); - 1 !== e && (t.splice(e, 1), r.forceUpdate(), e < 100 && t.length >= 100 && t[99].forceUpdate())
@@ -161,7 +161,7 @@ let p = function(e) {
       threshold: .7
     });
 
-  function a(e) {
+  function s(e) {
     let t = u().findDOMNode(e);
     (0, d.isElement)(t) && (n.push([t, e]), i.observe(t))
   }
@@ -169,22 +169,22 @@ let p = function(e) {
   function o(e) {
     let r = u().findDOMNode(e);
     i.unobserve(r);
-    let s = n.findIndex(t => {
+    let a = n.findIndex(t => {
       let [n, i] = t;
       return i === e
-    }); - 1 !== s && (n.splice(s, 1), -1 !== (s = t.indexOf(e)) && (t.splice(s, 1), s < 100 && t.length >= 100 && t[99].forceUpdate()))
+    }); - 1 !== a && (n.splice(a, 1), -1 !== (a = t.indexOf(e)) && (t.splice(a, 1), a < 100 && t.length >= 100 && t[99].forceUpdate()))
   }
-  return class extends s.Component {
+  return class extends a.Component {
     shouldAutoplay(e) {
       return e.animated && e.autoplay
     }
     componentDidMount() {
-      this.shouldAutoplay(this.props) && a(this)
+      this.shouldAutoplay(this.props) && s(this)
     }
     componentDidUpdate(e) {
       let t = this.shouldAutoplay(e),
         n = this.shouldAutoplay(this.props);
-      n !== t && (n ? a(this) : o(this))
+      n !== t && (n ? s(this) : o(this))
     }
     componentWillUnmount() {
       this.shouldAutoplay(this.props) && o(this)
@@ -193,14 +193,14 @@ let p = function(e) {
       let n = t.indexOf(this),
         {
           autoplay: i,
-          allowAnimatedEmoji: s,
-          ...a
+          allowAnimatedEmoji: a,
+          ...s
         } = this.props;
       return (0, r.jsx)(T.MessagesInteractionContext.Consumer, {
         children: t => (0, r.jsx)(e, {
-          ...a,
+          ...s,
           autoplay: i || !1,
-          shouldAnimate: -1 !== n && n < 100 && !t.disableAnimations && s
+          shouldAnimate: -1 !== n && n < 100 && !t.disableAnimations && a
         })
       })
     }

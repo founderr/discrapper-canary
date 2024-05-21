@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 }), n("653041");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("692547"),
   l = n("780384"),
   u = n("481060"),
@@ -35,7 +35,7 @@ var i = n("735250"),
 
 function R(e) {
   var t, n;
-  let r, s, d, {
+  let r, a, d, {
     connectedAccount: S,
     theme: R,
     locale: g,
@@ -57,7 +57,7 @@ function R(e) {
       r = (0, T.generateSteamMetadataItems)(y);
       break;
     case N.PlatformTypes.TWITTER:
-      r = (0, T.generateTwitterMetadataItems)(y), "1" === y[p.MetadataFields.TWITTER_VERIFIED] && (s = U, b = O.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
+      r = (0, T.generateTwitterMetadataItems)(y), "1" === y[p.MetadataFields.TWITTER_VERIFIED] && (a = U, b = O.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
       break;
     case N.PlatformTypes.PAYPAL:
       r = (0, T.generatePaypalMetadataItems)(y);
@@ -71,7 +71,7 @@ function R(e) {
   let G = _.default.get((0, E.useLegacyPlatformType)(S.type)),
     w = null == G ? void 0 : null === (t = G.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(G, S);
   null != M && M ? d = (0, i.jsx)(A.default, {
-    className: a()(C.__invalid_connectedAccountOpenIconContainer, C.connectedAccountHideIcon),
+    className: s()(C.__invalid_connectedAccountOpenIconContainer, C.connectedAccountHideIcon),
     foregroundColor: "currentColor"
   }) : null != w && (d = (0, i.jsx)(u.Anchor, {
     href: w,
@@ -94,13 +94,13 @@ function R(e) {
     B = (0, u.useToken)(o.default.colors.INTERACTIVE_ACTIVE).hex(),
     V = S.verified ? (0, i.jsx)(f.default, {
       className: C.connectedAccountVerifiedIcon,
-      color: null != s ? s : k,
+      color: null != a ? a : k,
       forcedIconColor: B,
       size: 16,
       tooltipText: b
     }) : null;
   return (0, i.jsxs)("div", {
-    className: a()(C.connectedAccountContainer, null != r && r.length > 0 || null != P ? C.connectedAccountContainerWithMetadata : null, v),
+    className: s()(C.connectedAccountContainer, null != r && r.length > 0 || null != P ? C.connectedAccountContainerWithMetadata : null, v),
     children: [(0, i.jsxs)("div", {
       className: C.connectedAccount,
       children: [(0, i.jsx)(u.Tooltip, {
@@ -151,9 +151,9 @@ function g(e) {
     applicationRoleConnection: t,
     className: n,
     locale: r
-  } = e, s = (0, T.generateRoleConnectionMetadataItems)(t, void 0, r);
+  } = e, a = (0, T.generateRoleConnectionMetadataItems)(t, void 0, r);
   return (0, i.jsxs)("div", {
-    className: a()(C.connectedAccountContainer, null != s && s.length > 0 ? C.connectedAccountContainerWithMetadata : null, n),
+    className: s()(C.connectedAccountContainer, null != a && a.length > 0 ? C.connectedAccountContainerWithMetadata : null, n),
     children: [(0, i.jsx)("div", {
       className: C.connectedAccount,
       children: (0, i.jsxs)("div", {
@@ -175,9 +175,9 @@ function g(e) {
           })
         }) : null]
       })
-    }), null != s && s.length > 0 ? (0, i.jsx)("div", {
-      className: a()(C.connectedAccountChildren, C.connectedAccountChildrenNoIcon),
-      children: s
+    }), null != a && a.length > 0 ? (0, i.jsx)("div", {
+      className: s()(C.connectedAccountChildren, C.connectedAccountChildrenNoIcon),
+      children: a
     }) : null, (0, i.jsx)("div", {
       children: (0, i.jsx)("div", {
         className: C.connectedAccountPoweredBy,
@@ -206,7 +206,7 @@ let L = r.forwardRef(function(e, t) {
   let {
     connectedAccounts: n,
     theme: r,
-    locale: s,
+    locale: a,
     className: o,
     userId: l
   } = e;
@@ -214,7 +214,7 @@ let L = r.forwardRef(function(e, t) {
   let u = n.filter(e => _.default.isSupported(e.type)).map(e => (0, i.jsx)(R, {
       connectedAccount: e,
       theme: r,
-      locale: s,
+      locale: a,
       userId: l
     }, "".concat(e.type, ":").concat(e.id))),
     d = [],
@@ -225,7 +225,7 @@ let L = r.forwardRef(function(e, t) {
   }
   return (0, i.jsxs)("div", {
     ref: t,
-    className: a()(C.connectedAccounts, o),
+    className: s()(C.connectedAccounts, o),
     children: [(0, i.jsx)("div", {
       className: C.connectedAccountsColumn,
       children: d

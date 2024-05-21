@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   isGuildEligibleForGuildProducts: function() {
-    return a
+    return s
   },
   useGuildEligibleForGuildProducts: function() {
-    return s
+    return a
   }
 });
 var i = n("482833"),
   r = n("981631");
 
-function s(e, t) {
+function a(e, t) {
   let {
     enabled: n
   } = i.GuildProductsExperiment.useExperiment({
@@ -20,7 +20,7 @@ function s(e, t) {
   return n
 }
 
-function a(e, t) {
+function s(e, t) {
   let {
     enabled: n
   } = i.GuildProductsExperiment.getCurrentConfig({

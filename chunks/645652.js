@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("819758"),
+  a = n.n(r),
+  s = n("819758"),
   o = n("108671");
 
 function l(e) {
@@ -19,15 +19,15 @@ function l(e) {
     hideStars: l
   } = e;
   return (0, i.jsxs)("span", {
-    className: s()(o.container, t, {
+    className: a()(o.container, t, {
       [o.containerColored]: r
     }),
     children: [n, l ? null : (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(a.default, {
+      children: [(0, i.jsx)(s.default, {
         foreground: o.sparkleStarTopRight
-      }), (0, i.jsx)(a.default, {
+      }), (0, i.jsx)(s.default, {
         foreground: o.sparkleStarRight
-      }), (0, i.jsx)(a.default, {
+      }), (0, i.jsx)(s.default, {
         foreground: o.sparkleStarBottomLeft
       })]
     })]

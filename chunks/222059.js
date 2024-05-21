@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("67212"),
   h = n("770471"),
   m = n("292584"),
-  p = n("835865"),
-  C = n("456541"),
+  C = n("835865"),
+  p = n("456541"),
   g = n("143614"),
   E = n("544803"),
   _ = n("899740"),
@@ -31,8 +31,8 @@ var l = n("735250"),
   x = n("417363"),
   R = n("941128"),
   M = n("436088"),
-  y = n("880080"),
-  O = n("26290"),
+  O = n("880080"),
+  y = n("26290"),
   D = n("15434"),
   b = n("780570"),
   j = n("557177"),
@@ -64,7 +64,7 @@ function W(e) {
     user: n,
     badge: f,
     link: m,
-    showProgressBadge: p
+    showProgressBadge: C
   } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [S, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, R] = a.useState(0), [b, P] = a.useState(!1), {
     canViewBroadcasts: F
   } = h.default.useExperiment({
@@ -72,7 +72,7 @@ function W(e) {
   }, {
     autoTrackExposure: !1
   }), W = (0, g.default)(), K = W.length > 0 && F;
-  (0, C.useTrackNewBroadcastDetected)();
+  (0, p.useTrackNewBroadcastDetected)();
   let z = (0, s.useTreeItem)("home"),
     Z = () => {
       v(null), R(0), clearTimeout(L)
@@ -83,7 +83,7 @@ function W(e) {
     location: "home_button"
   });
   let Q = null;
-  !t && p ? Q = (0, l.jsx)(u.default, {
+  !t && C ? Q = (0, l.jsx)(u.default, {
     className: k.downloadProgress,
     determineOwnVisibility: !1
   }) : K && (Q = (0, l.jsx)(M.default, {
@@ -95,7 +95,7 @@ function W(e) {
       selected: J,
       lowerBadge: f > 0 ? (0, w.renderMentionBadge)(f) : null,
       upperBadge: Q,
-      lowerBadgeWidth: (0, O.getBadgeWidthForValue)(f),
+      lowerBadgeWidth: (0, y.getBadgeWidthForValue)(f),
       children: (0, l.jsx)(D.default, {
         onMouseEnter: () => N(!0),
         onMouseLeave: () => N(!1),
@@ -156,7 +156,7 @@ function W(e) {
       tutorialId: "friends-list",
       position: "right",
       children: (0, l.jsxs)(G.ListItem, {
-        children: [(0, l.jsx)(y.default, {
+        children: [(0, l.jsx)(O.default, {
           selected: t,
           hovered: S,
           className: k.pill
@@ -195,12 +195,12 @@ function K() {
     })),
     c = o + d,
     h = (0, i.useStateFromStores)([A.default], () => A.default.getCurrentUser()),
-    C = (0, _.useMessageRequestsCount)(),
-    g = s + c + C + (0, S.useWhatsNewBadgeCount)(),
-    E = g === c && c > 0 && s + C === 0;
+    p = (0, _.useMessageRequestsCount)(),
+    g = s + c + p + (0, S.useWhatsNewBadgeCount)(),
+    E = g === c && c > 0 && s + p === 0;
   a.useEffect(() => {
     n.length > 0 && (0, f.fetchBroadcasterBuckets)()
-  }, [n]), (0, p.default)();
+  }, [n]), (0, C.default)();
   let I = v.default.getHomeLink();
   return E && (I = B.Routes.APPLICATION_STORE), (0, l.jsx)(W, {
     selected: e,

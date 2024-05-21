@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("356842"),
   h = n("308570"),
   m = n("434479"),
-  p = n("981631"),
-  C = n("176505"),
+  C = n("981631"),
+  p = n("176505"),
   g = n("490897"),
   E = n("689938");
 
@@ -50,10 +50,10 @@ function _(e) {
     selected: n,
     showUnread: I,
     onMouseDown: function() {
-      i.default.preload(t.id, C.StaticChannelRoute.GUILD_HOME)
+      i.default.preload(t.id, p.StaticChannelRoute.GUILD_HOME)
     },
     onClick: function() {
-      (0, o.ackGuildHome)(t.id), (0, d.transitionTo)(p.Routes.CHANNEL(t.id, C.StaticChannelRoute.GUILD_HOME))
+      (0, o.ackGuildHome)(t.id), (0, d.transitionTo)(C.Routes.CHANNEL(t.id, p.StaticChannelRoute.GUILD_HOME))
     }
   })
 }

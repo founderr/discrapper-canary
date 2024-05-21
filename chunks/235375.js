@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("302454"),
   l = n.n(o),
   u = n("481060"),
@@ -29,13 +29,13 @@ let S = l().defaultRules.link,
     var t, n;
     let {
       level: i,
-      children: s,
+      children: a,
       className: o = null,
       styleSheet: l = {}
     } = e, d = (0, u.usePrivateHeadingLevel)(), _ = parseInt(i, 10), c = isNaN(_) ? 1 : _;
     return r.createElement("h".concat(d + c - 1), {
-      className: a()(...(t = l, null == (n = o) ? [] : n.split(" ").map(e => t[e])))
-    }, s)
+      className: s()(...(t = l, null == (n = o) ? [] : n.split(" ").map(e => t[e])))
+    }, a)
   },
   m = null != c.default ? c.default.defaultRules : null,
   N = {
@@ -43,13 +43,13 @@ let S = l().defaultRules.link,
       parse(e, t, n) {
         let i;
         let r = e[2],
-          s = r.startsWith("https://discordapp.com/nitro") || r.startsWith("https://discord.com/nitro"),
-          a = r.startsWith("https://discordapp.com/hypesquad") || r.startsWith("https://discord.com/hypesquad"),
+          a = r.startsWith("https://discordapp.com/nitro") || r.startsWith("https://discord.com/nitro"),
+          s = r.startsWith("https://discordapp.com/hypesquad") || r.startsWith("https://discord.com/hypesquad"),
           o = r.startsWith("/shop/fullscreen?source=1") || r.startsWith("/activities");
-        return i = s || a ? e => {
+        return i = a || s ? e => {
           I.default.track(T.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
             location: h
-          }), s ? _.default.open(T.UserSettingsSections.PREMIUM) : a && _.default.open(T.UserSettingsSections.HYPESQUAD_ONLINE), n.changeLog.track(T.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+          }), a ? _.default.open(T.UserSettingsSections.PREMIUM) : s && _.default.open(T.UserSettingsSections.HYPESQUAD_ONLINE), n.changeLog.track(T.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
             cta_type: "nitro"
           }), (0, u.closeModal)(f.CHANGELOG_MODAL_KEY), e.preventDefault()
         } : o ? e => {
@@ -92,10 +92,10 @@ let S = l().defaultRules.link,
     },
     image: {
       react(e, t, r) {
-        let s = n("866483")("../../images/change-log/".concat(e.target).replace("../../images/change-log/", "./"));
+        let a = n("866483")("../../images/change-log/".concat(e.target).replace("../../images/change-log/", "./"));
         return (0, i.jsx)("img", {
           alt: e.alt,
-          src: s
+          src: a
         }, r.key)
       }
     },

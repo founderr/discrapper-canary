@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("481060"),
   l = n("68405"),
   u = n("985375"),
@@ -17,7 +17,7 @@ t.default = r.memo(function(e) {
   let {
     width: t,
     height: n,
-    src: s,
+    src: a,
     url: f,
     format: S,
     className: h
@@ -32,7 +32,7 @@ t.default = r.memo(function(e) {
   let C = e => {
     e.preventDefault(), e.stopPropagation(), m(!0), N ? (0, l.removeFavoriteGIF)(f) : ((0, l.addFavoriteGIF)({
       url: f,
-      src: s,
+      src: a,
       width: t,
       height: n,
       format: S
@@ -42,7 +42,7 @@ t.default = r.memo(function(e) {
     text: p,
     children: e => (0, i.jsx)(o.Clickable, {
       ...e,
-      className: a()(h, T.size, T.gifFavoriteButton, {
+      className: s()(h, T.size, T.gifFavoriteButton, {
         [T.selected]: N,
         [T.showPulse]: A
       }),

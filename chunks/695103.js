@@ -1,7 +1,7 @@
 "use strict";
-let i, r, s;
+let i, r, a;
 n.r(t), n("47120"), n("177593");
-var a, o = n("442837"),
+var s, o = n("442837"),
   l = n("570140"),
   u = n("238514"),
   d = n("695346"),
@@ -25,13 +25,13 @@ let I = {
   S = !1;
 
 function h() {
-  s = null
+  a = null
 }
 
 function A() {
   i = null, r = null, f = new Set, T.applicationId = null, T.originURL = null, h()
 }
-class m extends(a = o.default.PersistedStore) {
+class m extends(s = o.default.PersistedStore) {
   initialize(e) {
     i = (T = {
       ...null != e ? e : I
@@ -67,7 +67,7 @@ class m extends(a = o.default.PersistedStore) {
     return r
   }
   get error() {
-    return s
+    return a
   }
   whenInitialized(e) {
     this.addConditionalChangeListener(() => {
@@ -80,21 +80,21 @@ E(m, "displayName", "TestModeStore"), E(m, "persistKey", "TestModeStore"), t.def
     let {
       applicationId: t
     } = e;
-    f.add(t), s = null
+    f.add(t), a = null
   },
   DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: function(e) {
     let {
       applicationId: t,
       originURL: n
     } = e;
-    i = t, r = n, f.delete(t), s = null, T.applicationId = t, T.originURL = n
+    i = t, r = n, f.delete(t), a = null, T.applicationId = t, T.originURL = n
   },
   DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: function(e) {
     let {
       applicationId: t,
       error: n
     } = e;
-    f.delete(t), s = n
+    f.delete(t), a = n
   },
   OVERLAY_INITIALIZE: function(e) {
     let {

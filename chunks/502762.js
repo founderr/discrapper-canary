@@ -2,8 +2,8 @@
 n.r(t), n("627341");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("278074"),
   l = n("721987"),
   u = n("138655"),
@@ -14,7 +14,7 @@ var i = n("735250"),
 let I = (e, t) => {
     let n = (0, o.match)(e).with(c.UserProfileTypes.MODAL, () => E.userProfileModalOuter).with(c.UserProfileTypes.PANEL, () => E.userPanelOuter).with(c.UserProfileTypes.CARD, () => E.userCardOuter).with(c.UserProfileTypes.BITE_SIZE, () => E.biteSizeOuter).with(c.UserProfileTypes.FULL_SIZE, () => E.fullSizeOuter).otherwise(() => E.userPopoutOuter),
       i = t ? E.userProfileOuterThemed : E.userProfileOuterUnthemed;
-    return a()(n, i)
+    return s()(n, i)
   },
   T = (e, t, n) => {
     let i = (0, o.match)(e).with(c.UserProfileTypes.MODAL, c.UserProfileTypes.FULL_SIZE, () => E.userProfileModalInner).with(c.UserProfileTypes.PANEL, () => E.userPanelInner).with(c.UserProfileTypes.CARD, () => E.userCardInner).otherwise(() => E.userPopoutInner),
@@ -26,13 +26,13 @@ let I = (e, t) => {
         isPremium: t,
         hasBanner: n
       }));
-    return a()(i, r)
+    return s()(i, r)
   },
   f = r.forwardRef(function(e, t) {
     let {
       user: n,
       displayProfile: r,
-      profileType: s,
+      profileType: a,
       className: o,
       pendingThemeColors: d,
       pendingProfileEffectId: c,
@@ -58,13 +58,13 @@ let I = (e, t) => {
       secondaryColor: p
     }), R = (null == r ? void 0 : r.canEditThemes) || h, g = null !== c && ((null == r ? void 0 : r.banner) != null || void 0 !== c);
     return (0, i.jsx)("div", {
-      className: a()(I(s, R), A ? E.showOutOfBoundaryComponents : void 0, C, o),
+      className: s()(I(a, R), A ? E.showOutOfBoundaryComponents : void 0, C, o),
       style: O,
       ref: t,
       children: (0, i.jsx)("div", {
-        className: T(s, R, g),
+        className: T(a, R, g),
         children: (0, i.jsx)(_.UserProfileThemeContextProvider, {
-          profileType: s,
+          profileType: a,
           theme: null != f ? f : m,
           primaryColor: N,
           secondaryColor: p,
@@ -83,7 +83,7 @@ t.default = Object.assign(f, {
       profileType: r
     } = (0, _.useUserProfileThemeContext)();
     return (0, i.jsx)("div", {
-      className: a()(S(r), n),
+      className: s()(S(r), n),
       children: t
     })
   }

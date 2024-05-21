@@ -22,8 +22,8 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var i, r, s = n("735250"),
-  a = n("470079"),
+var i, r, a = n("735250"),
+  s = n("470079"),
   o = n("120356"),
   l = n.n(o),
   u = n("920906"),
@@ -65,7 +65,7 @@ function g(e) {
     ...m
   } = e, O = n === N.ModalTransitionState.ENTERING || n === N.ModalTransitionState.ENTERED, {
     reducedMotion: g
-  } = a.useContext(c.AccessibilityPreferencesContext), L = (0, u.useSpring)({
+  } = s.useContext(c.AccessibilityPreferencesContext), L = (0, u.useSpring)({
     opacity: O ? 1 : 0,
     transform: O || g.enabled ? "scale(1)" : "scale(0.7)",
     config: {
@@ -74,27 +74,27 @@ function g(e) {
       clamp: !0
     },
     onRest: h
-  }), v = a.useRef(null), D = null != m["aria-label"], M = null != m["aria-labelledby"], y = a.useId(), P = null !== (t = m["aria-labelledby"]) && void 0 !== t ? t : y, U = a.useMemo(() => ({
+  }), v = s.useRef(null), D = null != m["aria-label"], M = null != m["aria-labelledby"], y = s.useId(), P = null !== (t = m["aria-labelledby"]) && void 0 !== t ? t : y, U = s.useMemo(() => ({
     headerId: P,
     headerIdIsManaged: M
   }), [P, M]);
-  return (0, s.jsx)(N.ModalContentContext.Provider, {
+  return (0, a.jsx)(N.ModalContentContext.Provider, {
     value: U,
-    children: (0, s.jsx)(I.Dialog, {
+    children: (0, a.jsx)(I.Dialog, {
       className: C.focusLock,
       role: o,
       returnRef: A,
       impressionType: d.ImpressionTypes.MODAL,
       "aria-labelledby": D ? void 0 : U.headerId,
       ...m,
-      children: (0, s.jsx)(u.animated.div, {
+      children: (0, a.jsx)(u.animated.div, {
         className: l()(E, C.root, R[r], {
           [C.fullscreenOnMobile]: f,
           [C.rootWithShadow]: !S
         }),
         ref: v,
         style: L,
-        children: (0, s.jsx)(T.FocusRingScope, {
+        children: (0, a.jsx)(T.FocusRingScope, {
           containerRef: v,
           children: i
         })
@@ -108,8 +108,8 @@ function L(e) {
   let {
     headerId: u,
     headerIdIsManaged: d
-  } = a.useContext(N.ModalContentContext);
-  return (0, s.jsx)(A.default, {
+  } = s.useContext(N.ModalContentContext);
+  return (0, a.jsx)(A.default, {
     grow: 0,
     shrink: 0,
     direction: null !== (t = e.direction) && void 0 !== t ? t : A.default.Direction.HORIZONTAL,
@@ -130,7 +130,7 @@ function v(e) {
     children: n,
     scrollerRef: i,
     scrollbarType: r,
-    ...a
+    ...s
   } = e, o = function(e) {
     switch (null != e ? e : "thin") {
       case "auto":
@@ -141,19 +141,19 @@ function v(e) {
         return h.AdvancedScrollerThin
     }
   }(r);
-  return (0, s.jsx)(o, {
+  return (0, a.jsx)(o, {
     className: l()(C.content, t),
     ref: i,
-    ...a,
-    children: (0, s.jsx)(f.HeadingLevel, {
+    ...s,
+    children: (0, a.jsx)(f.HeadingLevel, {
       children: n
     })
   })
 }
 
 function D(e) {
-  var t, n, i, r, a;
-  return (0, s.jsx)(A.default, {
+  var t, n, i, r, s;
+  return (0, a.jsx)(A.default, {
     grow: 0,
     shrink: 0,
     direction: null !== (t = e.direction) && void 0 !== t ? t : A.default.Direction.HORIZONTAL_REVERSE,
@@ -161,16 +161,16 @@ function D(e) {
     align: null !== (i = e.align) && void 0 !== i ? i : A.default.Align.STRETCH,
     wrap: null !== (r = e.wrap) && void 0 !== r ? r : A.default.Wrap.NO_WRAP,
     className: l()(C.footer, e.className, {
-      [C.footerSeparator]: null === (a = e.separator) || void 0 === a || a
+      [C.footerSeparator]: null === (s = e.separator) || void 0 === s || s
     }),
-    children: (0, s.jsx)(f.HeadingLevel, {
+    children: (0, a.jsx)(f.HeadingLevel, {
       children: e.children
     })
   })
 }
 
 function M(e) {
-  return (0, s.jsx)(E.Button, {
+  return (0, a.jsx)(E.Button, {
     focusProps: e.focusProps,
     "aria-label": O.default.Messages.CLOSE,
     look: E.Button.Looks.BLANK,
@@ -183,7 +183,7 @@ function M(e) {
       [C.hideOnFullscreen]: e.hideOnFullscreen,
       [C.close]: !e.withCircleBackground
     }),
-    children: (0, s.jsx)(m.default, {
+    children: (0, a.jsx)(m.default, {
       width: 24,
       height: 24,
       className: C.closeIcon
@@ -197,7 +197,7 @@ function y(e) {
     scrollerRef: n,
     ...i
   } = e;
-  return (0, s.jsx)(S.ListThin, {
+  return (0, a.jsx)(S.ListThin, {
     className: t,
     ref: n,
     ...i

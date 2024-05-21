@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   isThemeDark: function() {
-    return s
+    return a
   },
   isThemeLight: function() {
     return r
@@ -13,7 +13,7 @@ function r(e) {
   return e === i.ThemeTypes.LIGHT
 }
 
-function s(e) {
+function a(e) {
   switch (e) {
     case i.ThemeTypes.DARK:
     case i.ThemeTypes.MIDNIGHT:

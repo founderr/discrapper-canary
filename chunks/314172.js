@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("442837"),
+  a = n.n(r),
+  s = n("442837"),
   o = n("693789"),
   l = n("235874"),
   u = n("481060"),
@@ -29,7 +29,7 @@ function h(e) {
     onAddRole: h,
     compact: A = !0,
     ...m
-  } = e, N = (0, a.useStateFromStores)([_.default], () => _.default.roleStyle), p = e => (0, c.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && E.default.isRoleHigher(t, r, e) && -1 === n.roles.indexOf(e.id);
+  } = e, N = (0, s.useStateFromStores)([_.default], () => _.default.roleStyle), p = e => (0, c.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && E.default.isRoleHigher(t, r, e) && -1 === n.roles.indexOf(e.id);
   return (0, i.jsx)(l.Popout, {
     position: "bottom",
     align: "center",
@@ -46,7 +46,7 @@ function h(e) {
       })
     },
     children: e => (0, i.jsx)(T.default, {
-      className: s()(S.button),
+      className: a()(S.button),
       text: (0, i.jsx)(u.Text, {
         variant: "text-xs/medium",
         children: f.default.Messages.USER_PROFILE_ADD_ROLE

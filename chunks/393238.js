@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return r
   },
   useDimensionsEffect: function() {
-    return s
+    return a
   }
 }), n("47120");
 var i = n("470079");
 
 function r() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-  let [r, a] = i.useState(void 0), [o, l] = i.useState(void 0), [u, d] = i.useState(void 0), [_, c] = i.useState(void 0), E = i.useRef(null);
-  return s(E, e => {
+  let [r, s] = i.useState(void 0), [o, l] = i.useState(void 0), [u, d] = i.useState(void 0), [_, c] = i.useState(void 0), E = i.useRef(null);
+  return a(E, e => {
     let {
       width: t,
       height: n,
       scrollWidth: i,
       scrollHeight: r
     } = e;
-    l(n), a(t), d(i), c(r)
+    l(n), s(t), d(i), c(r)
   }, t), {
     ref: E,
     width: r,
@@ -29,17 +29,17 @@ function r() {
   }
 }
 
-function s(e, t) {
+function a(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
   i.useLayoutEffect(() => {
     let n = e.current,
       i = null == n ? void 0 : n.ownerDocument.defaultView;
     if (null != n && null != i) {
       let r = new i.ResizeObserver(n => {
-        var i, r, s, a, o, l;
+        var i, r, a, s, o, l;
         let u = n[0],
           d = null == u ? void 0 : null === (r = u.borderBoxSize) || void 0 === r ? void 0 : null === (i = r[0]) || void 0 === i ? void 0 : i.inlineSize,
-          _ = null == u ? void 0 : null === (a = u.borderBoxSize) || void 0 === a ? void 0 : null === (s = a[0]) || void 0 === s ? void 0 : s.blockSize;
+          _ = null == u ? void 0 : null === (s = u.borderBoxSize) || void 0 === s ? void 0 : null === (a = s[0]) || void 0 === a ? void 0 : a.blockSize;
         if (null == d || null == _) {
           let t = e.current;
           if (null != t) {

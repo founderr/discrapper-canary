@@ -21,8 +21,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("512722"),
   r = n.n(i),
-  s = n("544891"),
-  a = n("570140"),
+  a = n("544891"),
+  s = n("570140"),
   o = n("911969"),
   l = n("314897"),
   u = n("709054"),
@@ -35,25 +35,25 @@ function E(e) {
     channelId: t,
     command: n,
     section: i,
-    location: s,
+    location: a,
     initialValues: o,
     triggerSection: l,
     queryLength: u
   } = e;
-  null != n && r()(n.inputType !== _.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder"), a.default.dispatch({
+  null != n && r()(n.inputType !== _.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder"), s.default.dispatch({
     type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
     channelId: t,
     command: n,
     section: i,
     initialValues: o,
-    location: s,
+    location: a,
     triggerSection: l,
     queryLength: u
   })
 }
 
 function I(e, t) {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND",
     channelId: e,
     commandId: t
@@ -61,7 +61,7 @@ function I(e, t) {
 }
 
 function T(e, t) {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "APPLICATION_COMMAND_UPDATE_OPTIONS",
     channelId: e,
     changedOptionStates: t
@@ -78,7 +78,7 @@ function f(e, t) {
 }
 
 function S(e, t, n, i) {
-  return s.HTTP.put({
+  return a.HTTP.put({
     body: {
       permissions: i
     },
@@ -93,13 +93,13 @@ function h(e, t, n) {
     query: _,
     name: E
   } = t.autocomplete, I = u.default.fromTimestamp(Date.now());
-  a.default.dispatch({
+  s.default.dispatch({
     type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST",
     nonce: I,
     channelId: t.channel.id,
     query: _,
     name: E
-  }), null == d.default.getAutocompleteChoices(t.channel.id, E, _) && s.HTTP.post({
+  }), null == d.default.getAutocompleteChoices(t.channel.id, E, _) && a.HTTP.post({
     url: c.Endpoints.INTERACTIONS,
     body: {
       type: o.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
@@ -112,7 +112,7 @@ function h(e, t, n) {
     },
     timeout: 3e3
   }).catch(() => {
-    a.default.dispatch({
+    s.default.dispatch({
       type: "INTERACTION_FAILURE",
       nonce: I
     })

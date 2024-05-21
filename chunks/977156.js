@@ -16,8 +16,8 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var i, r, s = n("818083");
-let a = (0, s.createExperiment)({
+var i, r, a = n("818083");
+let s = (0, a.createExperiment)({
     id: "2023-12_quests",
     kind: "user",
     label: "Quests",
@@ -42,7 +42,7 @@ let a = (0, s.createExperiment)({
     let {
       location: t
     } = e;
-    return a.getCurrentConfig({
+    return s.getCurrentConfig({
       location: t
     }, {
       autoTrackExposure: !1
@@ -52,13 +52,13 @@ let a = (0, s.createExperiment)({
     let {
       location: t
     } = e;
-    return a.useExperiment({
+    return s.useExperiment({
       location: t
     }, {
       autoTrackExposure: !1
     }).enabled
   },
-  u = (0, s.createExperiment)({
+  u = (0, a.createExperiment)({
     id: "2024-04_quest_preview_tool",
     kind: "user",
     label: "Quest Preview Tool",
@@ -84,7 +84,7 @@ function d(e) {
     autoTrackExposure: !1
   }).enabled
 }(i = r || (r = {}))[i.V1 = 0] = "V1", i[i.V2 = 1] = "V2";
-let _ = (0, s.createExperiment)({
+let _ = (0, a.createExperiment)({
   id: "2024-05_quest_bar",
   kind: "user",
   label: "Quest Bar",

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var i, r = n("442837"),
-  s = n("570140"),
-  a = n("906467");
+  a = n("570140"),
+  s = n("906467");
 
 function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ let l = 360,
   };
 class d extends(i = r.default.DeviceSettingsStore) {
   initialize(e) {
-    u = null != e ? e : u, s.default.actionLogger.persist = a.default.isDeveloper
+    u = null != e ? e : u, a.default.actionLogger.persist = s.default.isDeveloper
   }
   getUserAgnosticState() {
     return u
@@ -42,18 +42,18 @@ class d extends(i = r.default.DeviceSettingsStore) {
     return null !== (e = u.lastOpenTabId) && void 0 !== e ? e : null
   }
   get displayTools() {
-    return a.default.isDeveloper && u.displayTools
+    return s.default.isDeveloper && u.displayTools
   }
   get showDevWidget() {
-    return a.default.isDeveloper && u.showDevWidget
+    return s.default.isDeveloper && u.showDevWidget
   }
   get devWidgetPosition() {
     return u.devWidgetPosition
   }
 }
-o(d, "displayName", "DevToolsSettingsStore"), o(d, "persistKey", "DevToolsSettingsStore"), t.default = new d(s.default, {
+o(d, "displayName", "DevToolsSettingsStore"), o(d, "persistKey", "DevToolsSettingsStore"), t.default = new d(a.default, {
   DEV_TOOLS_SETTINGS_UPDATE: function(e) {
-    a.default.isDeveloper && (u = {
+    s.default.isDeveloper && (u = {
       ...u,
       ...e.settings
     })

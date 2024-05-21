@@ -6,13 +6,13 @@ n.r(t), n.d(t, {
 });
 var i = n("106351"),
   r = n("314897"),
-  s = n("592125"),
-  a = n("944486"),
+  a = n("592125"),
+  s = n("944486"),
   o = n("979651");
 
 function l(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.default,
-    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.default,
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.default,
+    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.default,
     l = t.getChannel(e),
     u = n.getVoiceChannelId();
   if (null == l) return !1;

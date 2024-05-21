@@ -2,8 +2,8 @@
 n.r(t), n("627341");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("278074"),
   l = n("831209"),
   u = n("399606"),
@@ -28,11 +28,11 @@ let R = () => 80,
       children: t,
       className: n,
       onSelect: r,
-      isSelected: s = !1,
+      isSelected: a = !1,
       ...o
     } = e;
     return (0, i.jsx)(d.Clickable, {
-      className: a()(C.decorationGridItem, s ? C.selected : void 0, n),
+      className: s()(C.decorationGridItem, a ? C.selected : void 0, n),
       ...o,
       onClick: r,
       children: t
@@ -42,14 +42,14 @@ let R = () => 80,
     let {
       user: t,
       avatarDecoration: n,
-      innerRef: s,
-      section: a,
+      innerRef: a,
+      section: s,
       isSelected: o = !1,
       ...d
     } = e, I = (0, u.useStateFromStores)([c.default], () => {
       let e = c.default.getProduct(n.skuId);
       return (0, E.isPremiumCollectiblesProduct)(e)
-    }), f = (0, E.isProductNew)(n.skuId), m = A.default.canUseCollectibles(t), R = a === N.Section.PREMIUM_PURCHASE && !m, L = r.useRef(null), v = (0, _.default)(null != s ? s : L), {
+    }), f = (0, E.isProductNew)(n.skuId), m = A.default.canUseCollectibles(t), R = s === N.Section.PREMIUM_PURCHASE && !m, L = r.useRef(null), v = (0, _.default)(null != a ? a : L), {
       avatarDecorationSrc: D
     } = (0, p.default)({
       user: t,
@@ -59,14 +59,14 @@ let R = () => 80,
     });
     return (0, i.jsxs)(g, {
       className: R ? C.decorationGridItemChurned : void 0,
-      innerRef: null != s ? s : L,
+      innerRef: null != a ? a : L,
       isSelected: o,
       ...d,
       children: [(0, i.jsx)("img", {
         className: C.presetDecorationImg,
         src: D,
         alt: n.label
-      }), a === N.Section.PURCHASE || a === N.Section.PREMIUM_PURCHASE && m ? null : f ? (0, i.jsx)(h.PremiumBadge, {
+      }), s === N.Section.PURCHASE || s === N.Section.PREMIUM_PURCHASE && m ? null : f ? (0, i.jsx)(h.PremiumBadge, {
         className: C.newBadge,
         text: (0, i.jsxs)("div", {
           className: C.newBadgeText,
@@ -92,8 +92,8 @@ t.default = e => {
   let {
     user: t,
     guild: n,
-    pendingAvatarDecoration: s,
-    selectedAvatarDecorationRef: a,
+    pendingAvatarDecoration: a,
+    selectedAvatarDecorationRef: s,
     onSelect: l,
     onOpenShop: u
   } = e, _ = (0, N.default)(), c = r.useCallback(() => {
@@ -123,7 +123,7 @@ t.default = e => {
         style: {
           ...u
         },
-        isSelected: null === s,
+        isSelected: null === a,
         onSelect: () => l(null),
         children: [(0, i.jsx)(f.default, {
           className: C.notAllowedIcon
@@ -143,7 +143,7 @@ t.default = e => {
           children: O.default.Messages.COLLECTIBLES_SHOP
         })]
       }, E)).otherwise(e => {
-        let n = (null == s ? void 0 : s.id) === e.id;
+        let n = (null == a ? void 0 : a.id) === e.id;
         return (0, i.jsx)(L, {
           style: {
             ...u
@@ -151,7 +151,7 @@ t.default = e => {
           user: t,
           avatarDecoration: e,
           section: T,
-          innerRef: n ? a : void 0,
+          innerRef: n ? s : void 0,
           isSelected: n,
           onSelect: () => l(e)
         }, E)

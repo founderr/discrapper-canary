@@ -7,15 +7,15 @@ n.r(t), n.d(t, {
     return l
   },
   FileUploadIconClassNames: function() {
-    return a
+    return s
   }
 });
-var i, r, s = n("239792");
+var i, r, a = n("239792");
 (i = r || (r = {}))[i.IMAGE = 0] = "IMAGE", i[i.DOCUMENT = 1] = "DOCUMENT", i[i.CODE = 2] = "CODE";
-let a = {
-    0: s.image,
-    1: s.document,
-    2: s.code
+let s = {
+    0: a.image,
+    1: a.document,
+    2: a.code
   },
   o = [1, 0, 2],
   l = [0, 0, 0]

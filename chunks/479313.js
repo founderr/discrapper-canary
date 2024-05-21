@@ -24,8 +24,8 @@ n.r(t), n.d(t, {
 });
 var i = n("470079"),
   r = n("392711"),
-  s = n.n(r),
-  a = n("399606"),
+  a = n.n(r),
+  s = n("399606"),
   o = n("544891"),
   l = n("570140"),
   u = n("881052"),
@@ -65,11 +65,11 @@ async function h(e) {
   var t, n;
   let i, r;
   if (!I.default.shouldFetch(e)) return;
-  let a = Date.now();
+  let s = Date.now();
   l.default.dispatch({
     type: "REQUEST_CHANNEL_SUMMARIES",
     channelId: e,
-    requestedAt: a
+    requestedAt: s
   });
   try {
     r = await o.HTTP.get(T.Routes.CHANNEL_SUMMARIES(e))
@@ -77,12 +77,12 @@ async function h(e) {
     i = new u.APIError(e)
   }
   let d = (null == r ? void 0 : null === (t = r.body) || void 0 === t ? void 0 : t.summaries) instanceof Array ? r.body.summaries : null !== (n = null == r ? void 0 : r.body) && void 0 !== n ? n : [];
-  d = s().takeRight(d, 75), l.default.dispatch({
+  d = a().takeRight(d, 75), l.default.dispatch({
     type: "RECEIVE_CHANNEL_SUMMARIES",
     channelId: e,
     summaries: d,
     error: null != i ? i : void 0,
-    requestedAt: a,
+    requestedAt: s,
     receivedAt: Date.now()
   })
 }
@@ -153,7 +153,7 @@ async function R(e) {
     useChannelAffinities: r = !0
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   e = null != e ? e : [];
-  let s = Date.now();
+  let a = Date.now();
   if (0 === (e = e.concat(I.default.defaultChannelIds({
       withQuickSwitcher: i,
       withChannelAffinities: r
@@ -170,7 +170,7 @@ async function R(e) {
   l.default.dispatch({
     type: "REQUEST_CHANNEL_SUMMARIES_BULK",
     channelIds: e,
-    requestedAt: s
+    requestedAt: a
   });
   try {
     n = await o.HTTP.post({
@@ -182,12 +182,12 @@ async function R(e) {
   } catch (e) {
     t = new u.APIError(e)
   }
-  let a = null == n ? void 0 : n.body.summaries;
+  let s = null == n ? void 0 : n.body.summaries;
   l.default.dispatch({
     type: "RECEIVE_CHANNEL_SUMMARIES_BULK",
-    requestedAt: s,
+    requestedAt: a,
     receivedAt: Date.now(),
-    summaries: a,
+    summaries: s,
     requestArgs: {
       channelIds: e
     },
@@ -217,7 +217,7 @@ t.default = {
     } = e;
     return ! function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-        t = (0, a.useStateFromStores)([_.default], () => _.default.isConnected()),
+        t = (0, s.useStateFromStores)([_.default], () => _.default.isConnected()),
         n = i.useMemo(() => e.join(","), [e]);
       i.useEffect(() => {
         t && e();
@@ -228,7 +228,7 @@ t.default = {
           await R(n.split(","))
         }
       }, [n, t])
-    }(t), (0, a.useStateFromStoresArray)([I.default], () => I.default.topSummaries(), [])
+    }(t), (0, s.useStateFromStoresArray)([I.default], () => I.default.topSummaries(), [])
   },
   deleteSummary: g
 }

@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("648414"),
+  a = n.n(r),
+  s = n("648414"),
   o = n("93879"),
   l = n("974029"),
   u = n("481479"),
@@ -81,7 +81,7 @@ t.default = function(e) {
       break;
     case "browse":
     case "customize":
-      r = (0, i.jsx)(a.default, {
+      r = (0, i.jsx)(s.default, {
         className: A.icon,
         "aria-label": h.default.Messages.CHANNEL_BROWSER_TITLE
       });
@@ -105,7 +105,7 @@ t.default = function(e) {
       })
   }
   return (0, i.jsxs)("span", {
-    className: s()("channelWithIcon", {
+    className: a()("channelWithIcon", {
       [A.iconMentionText]: "text" === t
     }),
     children: [(0, i.jsx)(S.default, {

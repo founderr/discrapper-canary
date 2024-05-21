@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 });
 var i, r = n("873546"),
-  s = n("442837"),
-  a = n("570140"),
+  a = n("442837"),
+  s = n("570140"),
   o = n("897473"),
   l = n("585483"),
   u = n("709054"),
@@ -75,11 +75,11 @@ function y() {
   if (C === c.default.isActive()) return !1;
   C = c.default.isActive()
 }
-class P extends(i = s.default.PersistedStore) {
+class P extends(i = a.default.PersistedStore) {
   initialize(e) {
     if (null != e) {
-      var t, n, i, r, s;
-      N = null !== (t = e.isMembersOpen) && void 0 !== t && t, p = null !== (n = e.isSummariesOpen) && void 0 !== n && n, O = null === (i = e.isProfileOpen) || void 0 === i || i, R = null !== (r = e.sidebars) && void 0 !== r ? r : {}, g = null !== (s = e.guildSidebars) && void 0 !== s ? s : {}
+      var t, n, i, r, a;
+      N = null !== (t = e.isMembersOpen) && void 0 !== t && t, p = null !== (n = e.isSummariesOpen) && void 0 !== n && n, O = null === (i = e.isProfileOpen) || void 0 === i || i, R = null !== (r = e.sidebars) && void 0 !== r ? r : {}, g = null !== (a = e.guildSidebars) && void 0 !== a ? a : {}
     }
     this.syncWith([c.default], y), this.syncWith([_.default], M)
   }
@@ -118,7 +118,7 @@ class P extends(i = s.default.PersistedStore) {
     return null == i ? null : i.type === o.SidebarType.VIEW_THREAD || i.type === o.SidebarType.VIEW_CHANNEL ? null === (t = i.details) || void 0 === t ? void 0 : t.initialMessageId : null
   }
 }
-A(P, "displayName", "ChannelSectionStore"), A(P, "persistKey", "ChannelSectionStore2"), t.default = new P(a.default, {
+A(P, "displayName", "ChannelSectionStore"), A(P, "persistKey", "ChannelSectionStore2"), t.default = new P(s.default, {
   CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
     p && (p = D(p)), N = D(N)
   },
@@ -136,8 +136,8 @@ A(P, "displayName", "ChannelSectionStore"), A(P, "persistKey", "ChannelSectionSt
       details: r
     } = e;
     C = !1;
-    let s = L(n);
-    return null != s && (R[s] = {
+    let a = L(n);
+    return null != a && (R[a] = {
       type: t,
       channelId: i,
       details: r
@@ -151,10 +151,10 @@ A(P, "displayName", "ChannelSectionStore"), A(P, "persistKey", "ChannelSectionSt
       details: r
     } = e;
     C = !1;
-    let s = L(i);
-    return null != s && (g[n] = {
+    let a = L(i);
+    return null != a && (g[n] = {
       type: t,
-      baseChannelId: s,
+      baseChannelId: a,
       guildId: n,
       details: r
     }, !0)

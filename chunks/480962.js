@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("539907"),
   l = n("743236"),
   u = n("21340"),
@@ -17,7 +17,7 @@ function _(e) {
   let {
     subMenuClassName: t,
     parentItem: n,
-    isFocused: s,
+    isFocused: a,
     menuSubmenuProps: _,
     renderSubmenu: c
   } = e, {
@@ -27,13 +27,13 @@ function _(e) {
   } = _, f = r.useRef(null), S = r.useRef(null), h = r.useRef(null);
   return r.useLayoutEffect(() => {
     var e;
-    s && ((0, l.ensureItemVisible)(f), null === (e = h.current) || void 0 === e || e.focus())
-  }, [s]), (0, i.jsxs)("div", {
+    a && ((0, l.ensureItemVisible)(f), null === (e = h.current) || void 0 === e || e.focus())
+  }, [a]), (0, i.jsxs)("div", {
     ref: f,
     className: d.__invalid_submenuContainer,
     children: [(0, i.jsx)("div", {
       ref: S
-    }), n, s ? (0, i.jsx)(o.ReferencePositionLayer, {
+    }), n, a ? (0, i.jsx)(o.ReferencePositionLayer, {
       targetRef: S,
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
@@ -44,7 +44,7 @@ function _(e) {
       children: () => (0, i.jsx)("div", {
         className: d.submenuPaddingContainer,
         children: (0, i.jsx)("div", {
-          className: a()(d.submenu, t),
+          className: s()(d.submenu, t),
           ...T,
           ref: h,
           children: (0, i.jsx)(u.ScrollerThin, {

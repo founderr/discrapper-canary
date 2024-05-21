@@ -1,5 +1,5 @@
 "use strict";
-let i, r, s;
+let i, r, a;
 n.r(t), n.d(t, {
   AnalyticsActionHandlers: function() {
     return T
@@ -8,7 +8,7 @@ n.r(t), n.d(t, {
     return h
   }
 }), n("177593"), n("733860"), n("47120"), n("653041"), n("17089");
-var a, o = n("756647"),
+var s, o = n("756647"),
   l = n("442837"),
   u = n("544891"),
   d = n("761609");
@@ -22,7 +22,7 @@ function _(e, t, n) {
   }) : e[t] = n, e
 }
 let c = 1500,
-  E = null !== (a = window.requestIdleCallback) && void 0 !== a ? a : e => setImmediate(() => e()),
+  E = null !== (s = window.requestIdleCallback) && void 0 !== s ? s : e => setImmediate(() => e()),
   I = new d.IdGenerator,
   T = {
     handleConnectionOpen: () => {},
@@ -38,7 +38,7 @@ let c = 1500,
     let {
       dispatcher: t,
       actionHandler: n,
-      getFingerprint: a,
+      getFingerprint: s,
       getSessionId: d = S,
       TRACKING_URL: h,
       drainTimeoutOverride: A,
@@ -47,17 +47,17 @@ let c = 1500,
     c = null != A ? A : 1500;
 
     function N() {
-      return 0 !== f.length && (null != r ? null != i : null != a())
+      return 0 !== f.length && (null != r ? null != i : null != s())
     }
 
     function p() {
-      null == s && N() && (s = E(O, {
+      null == a && N() && (a = E(O, {
         timeout: c
       }))
     }
 
     function O() {
-      if (s = null, !N()) return;
+      if (a = null, !N()) return;
       let e = f.slice();
       f = [], C(e).then(() => {
         e.forEach(e => {
@@ -106,7 +106,7 @@ let c = 1500,
         event: t,
         properties: n,
         flush: i,
-        fingerprint: s,
+        fingerprint: a,
         resolve: l
       } = e;
       return d().then(e => {
@@ -114,7 +114,7 @@ let c = 1500,
           sessionId: u
         } = e, d = {
           type: t,
-          fingerprint: s,
+          fingerprint: a,
           properties: {
             client_track_timestamp: Date.now(),
             client_heartbeat_session_id: u,
@@ -123,7 +123,7 @@ let c = 1500,
           resolve: l
         }, _ = function(e) {
           if (null != r) return r;
-          let t = e.fingerprint || a();
+          let t = e.fingerprint || s();
           return null != t ? (0, o.extractId)(t) : null
         }(d);
         null != _ && (d.properties.client_uuid = I.generate(_)), f.push(d), f.length > 1e4 && (f = f.slice(-1e4)), i ? O() : p()

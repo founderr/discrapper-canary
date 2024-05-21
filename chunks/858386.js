@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  s = n("893776"),
-  a = n("147913"),
+  a = n("893776"),
+  s = n("147913"),
   o = n("594174"),
   l = n("626135"),
   u = n("374023"),
@@ -16,7 +16,7 @@ var r = n("481060"),
   _ = n("981631"),
   c = n("231338");
 let E = "LOGIN_REQUIRED_ACTIONS_MODAL_KEY";
-class I extends a.default {
+class I extends s.default {
   handleConnectionOpen() {
     let e = o.default.getCurrentUser();
     if (null == e || u.ProcessArgs.isDisallowPopupsSet()) return;
@@ -32,7 +32,7 @@ class I extends a.default {
             l.default.track(_.AnalyticEvents.FORCED_UPDATE_PASSWORD_SUCCEEDED), t.onClose()
           },
           onClose: () => {
-            t.onClose(), s.default.logout(_.Routes.LOGIN)
+            t.onClose(), a.default.logout(_.Routes.LOGIN)
           },
           requirementsUpdated: !0
         })
@@ -41,7 +41,7 @@ class I extends a.default {
       modalKey: E,
       onCloseRequest: c.NOOP_NULL,
       instant: !0
-    }) : t && s.default.logout(_.Routes.LOGIN)
+    }) : t && a.default.logout(_.Routes.LOGIN)
   }
   constructor(...e) {
     var t, n, i;

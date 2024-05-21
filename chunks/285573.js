@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("496675"),
   h = n("98597"),
   m = n("473403"),
-  p = n("981631"),
-  C = n("490897"),
+  C = n("981631"),
+  p = n("490897"),
   g = n("513285");
 let E = (0, u.makeChannelSortable)(function(e) {
   let {
@@ -30,7 +30,7 @@ let E = (0, u.makeChannelSortable)(function(e) {
   } = e, L = (0, r.useStateFromStores)([d.default, c.default], () => {
     let e = c.default.getDirectoryChannelIds(t.id);
     return 0 === e.length ? null : d.default.getChannel(e[0])
-  }), v = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), x = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != v ? f.default.can(p.Permissions.MANAGE_CHANNELS, v) : null != t && f.default.can(p.Permissions.MANAGE_CHANNELS, t)), M = a.useCallback(e => {
+  }), v = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), x = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != v ? f.default.can(C.Permissions.MANAGE_CHANNELS, v) : null != t && f.default.can(C.Permissions.MANAGE_CHANNELS, t)), M = a.useCallback(e => {
     null != L && (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -42,11 +42,11 @@ let E = (0, u.makeChannelSortable)(function(e) {
     })
   }, [L]);
   if (null == L) return null;
-  let y = (0, h.getChannelItemClassName)(u, I),
-    O = (0, h.isChannelItemDisabled)(L, _, S),
+  let O = (0, h.getChannelItemClassName)(u, I),
+    y = (0, h.isChannelItemDisabled)(L, _, S),
     D = (0, l.jsx)("div", {
-      className: i()(y, {
-        [g.disabled]: O,
+      className: i()(O, {
+        [g.disabled]: y,
         [g.selected]: x
       }),
       "data-dnd-name": L.name,
@@ -57,7 +57,7 @@ let E = (0, u.makeChannelSortable)(function(e) {
         selected: x,
         onContextMenu: M,
         forceInteractable: !0,
-        resolvedUnreadSetting: C.UnreadSetting.ONLY_MENTIONS,
+        resolvedUnreadSetting: p.UnreadSetting.ONLY_MENTIONS,
         children: [(0, l.jsx)(h.ChannelItemInviteButton, {
           channel: L,
           tabIndex: A

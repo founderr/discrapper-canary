@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("153832"),
-  a = n("331595"),
+  a = n("153832"),
+  s = n("331595"),
   o = n("249849");
 let l = ["#be0351", "#ff2c52", "#f0f0f0"],
   u = ["#ffb84b", "#ffe361", "#f0f0f0"],
@@ -40,7 +40,7 @@ let l = ["#be0351", "#ff2c52", "#f0f0f0"],
       primaryTintColor: I,
       secondaryTintColor: T,
       ...f
-    } = e, S = r.useMemo(() => "badge-force-gradient-".concat((0, s.v4)()), []), {
+    } = e, S = r.useMemo(() => "badge-force-gradient-".concat((0, a.v4)()), []), {
       primaryColorsTransformed: h,
       secondaryColorsTransformed: A
     } = (0, o.getTransformedBadgeColors)({
@@ -54,7 +54,7 @@ let l = ["#be0351", "#ff2c52", "#f0f0f0"],
       secondaryLuminanceWeights: E
     });
     return (0, i.jsxs)("svg", {
-      ...(0, a.default)(f),
+      ...(0, s.default)(f),
       width: t,
       height: n,
       viewBox: "0 0 16 16",

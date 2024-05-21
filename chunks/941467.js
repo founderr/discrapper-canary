@@ -2,7 +2,7 @@
 n.r(t), n("47120");
 var i = n("147913"),
   r = n("405656");
-class s extends i.default {
+class a extends i.default {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
@@ -17,4 +17,4 @@ class s extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new s
+t.default = new a

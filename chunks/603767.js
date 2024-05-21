@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 }), n("47120");
 var i = n("920906");
@@ -14,7 +14,7 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class s extends i.FrameLoop {
+class a extends i.FrameLoop {
   setRAF(e, t) {
     0 !== this.id && (this._cancelAnimationFrame(this.id), this.id = 0), this._requestAnimationFrame = e, this._cancelAnimationFrame = t, this.loop()
   }
@@ -35,7 +35,7 @@ class s extends i.FrameLoop {
     }), r(this, "advance", () => {
       let e = i.Globals.now();
       if (this.startQueue.size > 0 && (this.startQueue.forEach(this.addAnimation), this.startQueue.clear()), this.timeoutQueue.length > 0 && i.Globals.batchedUpdates(() => {
-          let t = a(this.timeoutQueue, t => t.time > e);
+          let t = s(this.timeoutQueue, t => t.time > e);
           this.timeoutQueue.splice(0, t).forEach(e => e.handler())
         }), e > this.lastTime) {
         let t = Math.min(64, e - this.lastTime);
@@ -51,13 +51,13 @@ class s extends i.FrameLoop {
           let e = this.timeoutQueue.findIndex(e => e.cancel === r);
           e >= 0 && this.timeoutQueue.splice(e, 1)
         },
-        s = a(this.timeoutQueue, e => e.time > n),
+        a = s(this.timeoutQueue, e => e.time > n),
         o = {
           time: n,
           handler: e,
           cancel: r
         };
-      return this.timeoutQueue.splice(s, 0, o), this.startLoop(), o
+      return this.timeoutQueue.splice(a, 0, o), this.startLoop(), o
     }), r(this, "onFrame", e => {
       this.frameQueue.add(e), this.startLoop()
     }), r(this, "onWrite", e => {
@@ -66,7 +66,7 @@ class s extends i.FrameLoop {
   }
 }
 
-function a(e, t) {
+function s(e, t) {
   let n = e.findIndex(t);
   return n < 0 ? e.length : n
 }

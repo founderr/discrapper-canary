@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("653041");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("911969"),
   l = n("367907"),
   u = n("998698"),
@@ -31,7 +31,7 @@ var i = n("735250"),
 t.default = r.forwardRef(function(e, t) {
   let {
     value: n,
-    type: s,
+    type: a,
     channel: y,
     className: P,
     id: U,
@@ -60,8 +60,8 @@ t.default = r.forwardRef(function(e, t) {
     disableEnterToSubmit: en,
     allowNewLines: ei,
     "aria-owns": er,
-    "aria-expanded": es,
-    "aria-haspopup": ea,
+    "aria-expanded": ea,
+    "aria-haspopup": es,
     "aria-activedescendant": eo,
     "aria-controls": el,
     "aria-invalid": eu,
@@ -72,29 +72,29 @@ t.default = r.forwardRef(function(e, t) {
     var i;
     let {
       value: r,
-      selection: s
-    } = n, a = h.EditorUtils.richValue(e), o = e.selection, l = !1;
-    if (void 0 !== r && r !== a) {
+      selection: a
+    } = n, s = h.EditorUtils.richValue(e), o = e.selection, l = !1;
+    if (void 0 !== r && r !== s) {
       if (e.children = r, "parent" === t && !e.previewMarkdown) {
         try {
           e.previewMarkdown = !0, (0, g.run)(e, y.guild_id, y.id)
         } finally {
           e.previewMarkdown = !1
-        }(0, g.run)(e, y.guild_id, y.id), s = void 0
+        }(0, g.run)(e, y.guild_id, y.id), a = void 0
       }
-      "undo" !== t && void 0 !== r && r !== a && I.HistoryUtils.insertEntry(e, "other", !1, a, o), l = !0
+      "undo" !== t && void 0 !== r && r !== s && I.HistoryUtils.insertEntry(e, "other", !1, s, o), l = !0
     }
-    if (null != s && !h.SelectionUtils.isValid(e, s) && (s = void 0), (l || !h.SelectionUtils.isValid(e, o)) && void 0 === s) {
+    if (null != a && !h.SelectionUtils.isValid(e, a) && (a = void 0), (l || !h.SelectionUtils.isValid(e, o)) && void 0 === a) {
       let t = h.EditorUtils.end(e, []);
-      s = {
+      a = {
         anchor: t,
         focus: t
       }
     }
-    if (null != s && !h.SelectionUtils.equals(s, o)) {
-      e.selection = s;
+    if (null != a && !h.SelectionUtils.equals(a, o)) {
+      e.selection = a;
       let t = I.HistoryUtils.currentEntry(e);
-      null != t && (t.selection = s), l = !0
+      null != t && (t.selection = a), l = !0
     }
     let d = E.getCommandBlock(e);
     if (null != d && d[0].command.id !== (null === (i = u.default.getActiveCommand(y.id)) || void 0 === i ? void 0 : i.id) && I.HistoryUtils.withMergedEntry(e, () => {
@@ -112,7 +112,7 @@ t.default = r.forwardRef(function(e, t) {
     eT.current = !0
   }, []), eN = (0, m.default)({
     channel: y,
-    chatInputType: s,
+    chatInputType: a,
     canUseCommands: $,
     canOnlyUseTextCommands: ee,
     onChangeStart: eA,
@@ -131,14 +131,14 @@ t.default = r.forwardRef(function(e, t) {
     if (null != t && null != t.options) {
       let r = ep(t, !1);
       e = r.values;
-      let s = E.getOptionNames(eN).filter(e => !r.results[e].success).map(e => {
+      let a = E.getOptionNames(eN).filter(e => !r.results[e].success).map(e => {
         var n;
         return (null !== (n = t.options) && void 0 !== n ? n : []).find(t => t.name === e)
       });
-      for (let e of t.options) e.required && !(e.name in r.values) && (S.SlateTransforms.insertCommandOption(eN, e), s.push(e));
-      if (s.length > 0) {
+      for (let e of t.options) e.required && !(e.name in r.values) && (S.SlateTransforms.insertCommandOption(eN, e), a.push(e));
+      if (a.length > 0) {
         var n, i;
-        let e = s[0];
+        let e = a[0];
         S.SlateTransforms.selectCommandOption(eN, e.name), c.ComponentDispatch.dispatch(D.ComponentActions.SHAKE_APP, {
           duration: 200,
           intensity: 2
@@ -203,13 +203,13 @@ t.default = r.forwardRef(function(e, t) {
       handler: eL
     }), (0, i.jsx)("div", {
       ref: eE,
-      className: a()(P, M.slateContainer),
+      className: s()(P, M.slateContainer),
       children: (0, i.jsx)(T.default, {
         id: U,
         editor: eN,
         channelId: y.id,
         guildId: y.guild_id,
-        className: a()(M.slateTextArea, B),
+        className: s()(M.slateTextArea, B),
         placeholder: w,
         readOnly: eS,
         spellCheck: J,
@@ -226,8 +226,8 @@ t.default = r.forwardRef(function(e, t) {
         renderExtraElement: ey,
         renderExtraLeaf: eP,
         "aria-owns": er,
-        "aria-haspopup": ea,
-        "aria-expanded": es,
+        "aria-haspopup": es,
+        "aria-expanded": ea,
         "aria-activedescendant": eo,
         "aria-controls": el,
         "aria-labelledby": e_,

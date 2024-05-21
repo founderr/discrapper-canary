@@ -18,8 +18,8 @@ t.default = a.memo(function(e) {
     selectedVoiceChannelId: a,
     sortedThreadIds: s,
     withGuildIcon: m
-  } = e, p = (0, r.useStateFromStoresArray)([o.default], () => s.map(e => o.default.getChannel(e)).filter(d.isNotNullish), [s]), C = (0, r.useStateFromStores)([u.default], () => {
-    let e = p[p.length - 1];
+  } = e, C = (0, r.useStateFromStoresArray)([o.default], () => s.map(e => o.default.getChannel(e)).filter(d.isNotNullish), [s]), p = (0, r.useStateFromStores)([u.default], () => {
+    let e = C[C.length - 1];
     if (null == e) return 0;
     let t = u.default.getVoiceStates(e.guild_id)[e.id];
     return null == t || 0 === t.length ? 0 : a !== e.id ? 40 : 32 * t.length + 8
@@ -36,13 +36,13 @@ t.default = a.memo(function(e) {
           [h.spineBorderWithGuildIcon]: m
         }),
         style: {
-          bottom: 24 + C
+          bottom: 24 + p
         }
-      }), p.map((e, t) => (0, l.jsx)(c.default, {
+      }), C.map((e, t) => (0, l.jsx)(c.default, {
         thread: e,
         isSelectedChannel: (null == n ? void 0 : n.id) === e.id,
         isSelectedVoice: a === e.id,
-        isLast: t === p.length - 1,
+        isLast: t === C.length - 1,
         withGuildIcon: m
       }, e.id))]
     })

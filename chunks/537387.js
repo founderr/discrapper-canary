@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("481060"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("766321");
 
 function l(e) {
@@ -21,16 +21,16 @@ function l(e) {
     tooltipClassName: d,
     ..._
   } = e;
-  return (0, i.jsx)(a.TooltipContainer, {
+  return (0, i.jsx)(s.TooltipContainer, {
     tooltipClassName: d,
     text: n,
     delay: u,
-    children: (0, i.jsx)(a.Button, {
-      className: s()(o.button, r),
-      innerClassName: s()(o.buttonInner, l),
+    children: (0, i.jsx)(s.Button, {
+      className: a()(o.button, r),
+      innerClassName: a()(o.buttonInner, l),
       color: o.color,
-      look: a.Button.Looks.FILLED,
-      size: a.Button.Sizes.NONE,
+      look: s.Button.Looks.FILLED,
+      size: s.Button.Sizes.NONE,
       grow: !1,
       "aria-label": n,
       ..._,

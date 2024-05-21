@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("442837"),
   l = n("481060"),
   u = n("607070"),
@@ -26,16 +26,16 @@ function O(e) {
     played: t,
     duration: n,
     currentTime: r
-  } = e, s = null == n ? "--:--" : t ? (0, _.convertSecondsToClockFormat)(Math.ceil(n - r)) : (0, _.convertSecondsToClockFormat)(Math.ceil(n));
+  } = e, a = null == n ? "--:--" : t ? (0, _.convertSecondsToClockFormat)(Math.ceil(n - r)) : (0, _.convertSecondsToClockFormat)(Math.ceil(n));
   return (0, i.jsx)(l.Text, {
     variant: "text-sm/normal",
     className: N.duration,
     tabularNumbers: !0,
-    children: s
+    children: a
   })
 }
 t.default = r.memo(function(e) {
-  var t, n, s, _, C, R;
+  var t, n, a, _, C, R;
   let g, {
       src: L,
       volume: v = 1,
@@ -69,14 +69,14 @@ t.default = r.memo(function(e) {
       let t = e.currentTarget.duration;
       !isNaN(t) && H(t)
     }, []),
-    es = r.useCallback(() => {
+    ea = r.useCallback(() => {
       K(!1), null == et.current && (et.current = setTimeout(() => {
         Q(!1), et.current = void 0
       }, 500))
     }, []),
-    ea = r.useCallback(() => {
-      !z && es()
-    }, [es, z]),
+    es = r.useCallback(() => {
+      !z && ea()
+    }, [ea, z]),
     eo = r.useCallback(() => {
       let e = B.current;
       if (null == e) return;
@@ -94,8 +94,8 @@ t.default = r.memo(function(e) {
       Z(!0)
     }, []),
     e_ = r.useCallback(() => {
-      Z(!1), V === F && es()
-    }, [V, F, es]),
+      Z(!1), V === F && ea()
+    }, [V, F, ea]),
     ec = r.useCallback(e => {
       let t = B.current;
       if (null == F || null == t) return;
@@ -117,15 +117,15 @@ t.default = r.memo(function(e) {
         null == w || w(V, null != t ? (e - t) / 1e3 : 0), eE.current = null
       }
     }
-  }, [W]), t = B, n = W, s = x, r.useEffect(() => {
+  }, [W]), t = B, n = W, a = x, r.useEffect(() => {
     let e;
     return ! function i() {
       let r = t.current;
-      if (null != r) s(r.currentTime), n && (e = requestAnimationFrame(i))
+      if (null != r) a(r.currentTime), n && (e = requestAnimationFrame(i))
     }(), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [t, n, s]), _ = L, C = W, R = K, r.useEffect(() => {
+  }, [t, n, a]), _ = L, C = W, R = K, r.useEffect(() => {
     if (C) return T.ComponentDispatch.dispatch(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
       src: _
     }), T.ComponentDispatch.subscribe(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
@@ -148,7 +148,7 @@ t.default = r.memo(function(e) {
       src: L,
       preload: q,
       playing: W && !z,
-      onEnded: ea,
+      onEnded: es,
       onLoadedMetadata: er,
       onError: eo,
       muted: Y,
@@ -159,7 +159,7 @@ t.default = r.memo(function(e) {
     className: N.audioElement,
     controls: !1,
     preload: q,
-    onEnded: ea,
+    onEnded: es,
     onLoadedMetadata: er,
     onError: eo,
     muted: Y,
@@ -174,14 +174,14 @@ t.default = r.memo(function(e) {
       enabled: eS
     } = (0, l.useRedesignIconContext)();
   return (0, i.jsxs)("div", {
-    className: a()(N.container, {
+    className: s()(N.container, {
       [N.playing]: W
     }),
     onMouseEnter: ei,
     children: [(0, i.jsx)("div", {
       className: N.rippleContainer,
       children: (0, i.jsx)("div", {
-        className: a()(N.ripple, {
+        className: s()(N.ripple, {
           [N.reducedMotion]: ef
         })
       })
@@ -190,7 +190,7 @@ t.default = r.memo(function(e) {
       onClick: en,
       "aria-label": eT,
       children: (0, i.jsx)(eI, {
-        className: a()(N.playIcon, {
+        className: s()(N.playIcon, {
           [N.oldPlayIconSpacing]: !eS && !W
         }),
         width: 18,

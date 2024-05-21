@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120"), n("411104"), n("177593");
-var i, r, s, a, o, l = n("392711"),
+var i, r, a, s, o, l = n("392711"),
   u = n.n(l),
   d = n("442837"),
   _ = n("570140"),
@@ -128,12 +128,12 @@ class H extends(r = d.default.Store) {
     })
   }
 }
-o = "DispatchApplicationStore", (a = "displayName") in(s = H) ? Object.defineProperty(s, a, {
+o = "DispatchApplicationStore", (s = "displayName") in(a = H) ? Object.defineProperty(a, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new H(_.default, {
+}) : a[s] = o, t.default = new H(_.default, {
   CONNECTION_OPEN: function() {
     L = !1
   },
@@ -145,18 +145,18 @@ o = "DispatchApplicationStore", (a = "displayName") in(s = H) ? Object.definePro
     let n = {},
       i = t.applications,
       r = null != t.currentTask ? t.currentTask.branchId : null,
-      s = !1;
+      a = !1;
     for (let e in i)
       for (let t in i[e]) {
-        let a = (0, h.getComboId)(e, t);
-        if (n[a] = function(e) {
+        let s = (0, h.getComboId)(e, t);
+        if (n[s] = function(e) {
             let {
               build_id: t,
               target_build_id: n,
               manifest_ids: i,
               target_manifest_ids: r,
-              application_id: s,
-              branch_id: a,
+              application_id: a,
+              branch_id: s,
               launch_commands: o,
               launch_options: l,
               storage: d,
@@ -186,12 +186,12 @@ o = "DispatchApplicationStore", (a = "displayName") in(s = H) ? Object.definePro
                         let {
                           executable: i,
                           name: r,
-                          working_dir: s
-                        } = n, a = c.default.fileManager.join(e, i);
-                        (0, A.isMac)() && !a.startsWith(g) && (a = "".concat(g).concat(a)), t = null != s ? c.default.fileManager.join(e, s) : c.default.fileManager.dirname(a), h[r] = {
+                          working_dir: a
+                        } = n, s = c.default.fileManager.join(e, i);
+                        (0, A.isMac)() && !s.startsWith(g) && (s = "".concat(g).concat(s)), t = null != a ? c.default.fileManager.join(e, a) : c.default.fileManager.dirname(s), h[r] = {
                           ...n,
                           id: r,
-                          fullExecutablePath: a,
+                          fullExecutablePath: s,
                           fullWorkingDir: t
                         }, null == m && (m = r)
                       }
@@ -215,8 +215,8 @@ o = "DispatchApplicationStore", (a = "displayName") in(s = H) ? Object.definePro
                 }
                 return {
                   type: e,
-                  applicationId: s,
-                  branchId: a,
+                  applicationId: a,
+                  branchId: s,
                   buildId: t,
                   manifestIds: i,
                   targetBuildId: n,
@@ -243,8 +243,8 @@ o = "DispatchApplicationStore", (a = "displayName") in(s = H) ? Object.definePro
                 return {
                   type: o = A === O.DispatchApplicationStages.UNINSTALLING ? O.LocalDispatchApplicationStates.UNINSTALLING : I ? O.LocalDispatchApplicationStates.REPAIRING : null == t ? O.LocalDispatchApplicationStates.INSTALLING : O.LocalDispatchApplicationStates.UPDATING,
                   stage: A,
-                  applicationId: s,
-                  branchId: a,
+                  applicationId: a,
+                  branchId: s,
                   buildId: t,
                   manifestIds: i,
                   targetBuildId: n,
@@ -262,26 +262,26 @@ o = "DispatchApplicationStore", (a = "displayName") in(s = H) ? Object.definePro
               }
             }
             throw Error("Invalid Dispatch State. state=".concat(e.state.type))
-          }(i[e][t]), null != R[a]) {
-          let e = F(n, a, G);
+          }(i[e][t]), null != R[s]) {
+          let e = F(n, s, G);
           e > 0 && B(v += e);
-          let i = F(n, a, w);
+          let i = F(n, s, w);
           i > 0 && x(D += i);
-          let o = F(n, a, k);
+          let o = F(n, s, k);
           if (o > 0 && V(M += o), r === t) {
-            let e = n[a];
+            let e = n[s];
             if (!0 !== e.paused && (e.type === O.LocalDispatchApplicationStates.UNINSTALLING || e.type === O.LocalDispatchApplicationStates.INSTALLING || e.type === O.LocalDispatchApplicationStates.UPDATING)) switch (e.stage) {
               case O.DispatchApplicationStages.PATCHING:
               case O.DispatchApplicationStages.FINALIZING:
               case O.DispatchApplicationStages.VERIFYING:
               case O.DispatchApplicationStages.REPAIRING:
               case O.DispatchApplicationStages.POST_INSTALL_SCRIPTS:
-                E.default.setProgress("dispatch_application_progress", (0, h.calculateProgressPercentage)(e.progress, e.total) / 100), s = !0
+                E.default.setProgress("dispatch_application_progress", (0, h.calculateProgressPercentage)(e.progress, e.total) / 100), a = !0
             }
           }
         }
         if (!b) {
-          let i = c.default.fileManager.dirname(n[a].installPath);
+          let i = c.default.fileManager.dirname(n[s].installPath);
           p.default.getInstallationPath(e, t) !== i && _.default.wait(() => {
             _.default.dispatch({
               type: "DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS",
@@ -289,7 +289,7 @@ o = "DispatchApplicationStore", (a = "displayName") in(s = H) ? Object.definePro
               branchId: t,
               installationPath: i
             })
-          }), -1 === N.default.getQueuePosition(e, t) && (n[a].type === O.LocalDispatchApplicationStates.INSTALLING || n[a].type === O.LocalDispatchApplicationStates.UPDATING) && T.default.hasApplication(e, t) && p.default.shouldBeInstalled(e, t) && _.default.wait(() => {
+          }), -1 === N.default.getQueuePosition(e, t) && (n[s].type === O.LocalDispatchApplicationStates.INSTALLING || n[s].type === O.LocalDispatchApplicationStates.UPDATING) && T.default.hasApplication(e, t) && p.default.shouldBeInstalled(e, t) && _.default.wait(() => {
             _.default.dispatch({
               type: "DISPATCH_APPLICATION_UPDATE",
               applicationId: e,
@@ -298,6 +298,6 @@ o = "DispatchApplicationStore", (a = "displayName") in(s = H) ? Object.definePro
             })
           })
         }
-      }!s && "dispatch_application_progress" === E.default.taskID && E.default.clearProgress("dispatch_application_progress"), R = n, b = !0
+      }!a && "dispatch_application_progress" === E.default.taskID && E.default.clearProgress("dispatch_application_progress"), R = n, b = !0
   }
 })

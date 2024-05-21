@@ -30,8 +30,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("112456"),
   r = n.n(i),
-  s = n("392711"),
-  a = n.n(s),
+  a = n("392711"),
+  s = n.n(a),
   o = n("206744"),
   l = n("948350"),
   u = n("430824"),
@@ -105,7 +105,7 @@ function S(e) {
 function h(e, t) {
   var n;
   e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : "";
-  let i = a().find(f, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e));
+  let i = s().find(f, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e));
   return null != i ? i.klass : "unknown"
 }
 

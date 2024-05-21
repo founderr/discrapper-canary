@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120"), n("653041");
-var i, r, s, a, o = n("913527"),
+var i, r, a, s, o = n("913527"),
   l = n.n(o),
   u = n("442837"),
   d = n("759174"),
@@ -62,10 +62,10 @@ function P(e) {
   let {
     guildId: i,
     request: r
-  } = e, s = (0, S.joinRequestFromServer)(r), a = E.default.getCurrentUser();
-  if (null == a || s.userId === a.id) return !1;
-  let o = null === (n = s.joinRequestId, t = L.get(n)) || void 0 === t ? void 0 : t.applicationStatus;
-  return O(i, s.applicationStatus, o), y(s), !0
+  } = e, a = (0, S.joinRequestFromServer)(r), s = E.default.getCurrentUser();
+  if (null == s || a.userId === s.id) return !1;
+  let o = null === (n = a.joinRequestId, t = L.get(n)) || void 0 === t ? void 0 : t.applicationStatus;
+  return O(i, a.applicationStatus, o), y(a), !0
 }
 let U = {},
   b = {},
@@ -107,12 +107,12 @@ class B extends(i = u.default.Store) {
     return null != n ? (t = n.joinRequestId, L.get(t)) : null
   }
 }
-a = "GuildJoinRequestStoreV2", (s = "displayName") in(r = B) ? Object.defineProperty(r, s, {
-  value: a,
+s = "GuildJoinRequestStoreV2", (a = "displayName") in(r = B) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new B(_.default, {
+}) : r[a] = s, t.default = new B(_.default, {
   GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: function(e) {
     let {
       joinRequest: t
@@ -156,10 +156,10 @@ a = "GuildJoinRequestStoreV2", (s = "displayName") in(r = B) ? Object.defineProp
       id: i,
       guildId: r
     } = e;
-    let s = (t = i, L.get(t));
-    if (null != s) {
+    let a = (t = i, L.get(t));
+    if (null != a) {
       ;
-      O(r, null, s.applicationStatus), n = i, delete w[n], L.delete(n), v.delete(n), D.delete(n)
+      O(r, null, a.applicationStatus), n = i, delete w[n], L.delete(n), v.delete(n), D.delete(n)
     }
   },
   GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function(e) {

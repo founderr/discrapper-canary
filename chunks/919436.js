@@ -11,8 +11,8 @@ var l, a = n("735250"),
   f = n("43267"),
   h = n("933557"),
   m = n("93687"),
-  p = n("266076"),
-  C = n("199902"),
+  C = n("266076"),
+  p = n("199902"),
   g = n("19780"),
   E = n("306680"),
   _ = n("944486"),
@@ -27,7 +27,7 @@ var l, a = n("735250"),
   R = n("981631"),
   M = n("134751");
 
-function y(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -35,7 +35,7 @@ function y(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let O = {
+let y = {
   friction: 28,
   tension: 600
 };
@@ -45,11 +45,11 @@ function D(e) {
     case "height":
     case "opacity":
       return {
-        duration: 150, ...O
+        duration: 150, ...y
       };
     case "scale":
       return {
-        ...O
+        ...y
       };
     default:
       throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)))
@@ -133,15 +133,15 @@ class b extends(l = s.PureComponent) {
       isGDMFacepileEnabled: h
     } = this.props, {
       hovered: m,
-      animating: C
+      animating: p
     } = this.state, g = e.isMultiUserDM() && null == e.icon && h;
     return (0, a.jsx)(i.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, a.jsxs)(L.ListItem, {
         children: [(0, a.jsx)(N.default, {
-          hovered: !C && m,
-          selected: !C && n,
-          unread: !C && f,
+          hovered: !p && m,
+          selected: !p && n,
+          unread: !p && f,
           className: M.pill
         }), (0, a.jsx)(v.default, {
           text: null != t ? t : "",
@@ -171,7 +171,7 @@ class b extends(l = s.PureComponent) {
                 onContextMenu: this.handleContextMenu,
                 icon: g ? void 0 : this.getChannelIcon(),
                 backgroundStyle: g ? "on-hover" : "always",
-                children: g ? (0, a.jsx)(p.default, {
+                children: g ? (0, a.jsx)(C.default, {
                   channel: e,
                   size: u.AvatarSizes.SIZE_48,
                   facepileSizeOverride: u.AvatarSizes.SIZE_32,
@@ -187,7 +187,7 @@ class b extends(l = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), y(this, "state", {
+    super(...e), O(this, "state", {
       hovered: !1,
       animating: !0,
       controller: new i.Controller({
@@ -196,7 +196,7 @@ class b extends(l = s.PureComponent) {
         opacity: 0,
         config: D
       })
-    }), y(this, "handleContextMenu", e => {
+    }), O(this, "handleContextMenu", e => {
       let {
         channel: t
       } = this.props, l = t.type === R.ChannelTypes.DM ? S.default.getUser(t.getRecipientId()) : null;
@@ -222,7 +222,7 @@ class b extends(l = s.PureComponent) {
     })
   }
 }
-y(b, "defaultProps", {
+O(b, "defaultProps", {
   badge: 0,
   audio: !1,
   video: !1,
@@ -232,7 +232,7 @@ y(b, "defaultProps", {
     l = (0, h.default)(e.channel),
     s = (0, o.useStateFromStores)([g.default], () => g.default.getChannelId(), []),
     i = (0, o.useStateFromStores)([c.default], () => null != s ? c.default.getMode(s) : R.ChannelModes.VOICE, [s]),
-    r = (0, o.useStateFromStores)([C.default], () => C.default.getAllApplicationStreamsForChannel(n).length > 0),
+    r = (0, o.useStateFromStores)([p.default], () => p.default.getAllApplicationStreamsForChannel(n).length > 0),
     u = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(), []),
     d = (0, o.useStateFromStores)([E.default], () => E.default.getMentionCount(n), [n]),
     {
@@ -242,10 +242,10 @@ y(b, "defaultProps", {
     }, {
       autoTrackExposure: !1
     }),
-    p = s === n,
+    C = s === n,
     S = !1,
     I = !1;
-  return p && (S = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
+  return C && (S = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
     ...e,
     ref: t,
     channelName: l,
@@ -255,7 +255,7 @@ y(b, "defaultProps", {
     audio: S,
     video: I,
     stream: r,
-    isCurrentUserInThisDMCall: p,
+    isCurrentUserInThisDMCall: C,
     isGDMFacepileEnabled: f
   })
 })

@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return o
   },
   openEditor: function() {
-    return a
+    return s
   },
   resetBackgroundGradientPreset: function() {
-    return s
+    return a
   },
   resetPreviewClientTheme: function() {
     return l
@@ -23,13 +23,13 @@ let r = e => {
       presetId: e
     })
   },
-  s = () => {
+  a = () => {
     i.default.dispatch({
       type: "UPDATE_BACKGROUND_GRADIENT_PRESET",
       presetId: null
     })
   },
-  a = () => {
+  s = () => {
     i.default.dispatch({
       type: "CLIENT_THEMES_EDITOR_OPEN"
     })

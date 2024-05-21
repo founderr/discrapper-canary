@@ -8,8 +8,8 @@ var l, a, s, i, r = n("392711"),
   f = n("527805"),
   h = n("841784"),
   m = n("503438"),
-  p = n("802856"),
-  C = n("420660"),
+  C = n("802856"),
+  p = n("420660"),
   g = n("728345"),
   E = n("812206"),
   _ = n("710845"),
@@ -23,8 +23,8 @@ var l, a, s, i, r = n("392711"),
   x = n("592125"),
   R = n("480294"),
   M = n("831506"),
-  y = n("731290"),
-  O = n("430824"),
+  O = n("731290"),
+  y = n("430824"),
   D = n("496675"),
   b = n("158776"),
   j = n("699516"),
@@ -76,7 +76,7 @@ function q(e) {
 function $(e) {
   if ((0, m.default)(e)) return T.SpotifyApplication;
   let t = null != e.application_id ? E.default.getApplication(e.application_id) : null;
-  return null != t ? t : (0, p.default)(e) ? Q(e.name) : (0, C.default)(e) && null != e.url ? J(e.url) : (null != e.application_id && q(e.application_id), t)
+  return null != t ? t : (0, C.default)(e) ? Q(e.name) : (0, p.default)(e) && null != e.url ? J(e.url) : (null != e.application_id && q(e.application_id), t)
 }
 
 function ee(e) {
@@ -94,8 +94,8 @@ function en(e, t, n) {
   var l, a, s, i, r, u;
   let d;
   let m = G.default.getCurrentUser(),
-    p = null !== (l = null == m ? void 0 : m.nsfwAllowed) && void 0 !== l && l,
-    C = t.map(e => e.id),
+    C = null !== (l = null == m ? void 0 : m.nsfwAllowed) && void 0 !== l && l,
+    p = t.map(e => e.id),
     g = t.filter(t => e.has(t.id)),
     S = !1,
     R = [],
@@ -105,7 +105,7 @@ function en(e, t, n) {
   for (let e of t) {
     let n = v.default.getAnyStreamForUser(e.id),
       l = x.default.getChannel(null == n ? void 0 : n.channelId);
-    if ((null == l ? void 0 : l.isNSFW()) && (!p || !y.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
+    if ((null == l ? void 0 : l.isNSFW()) && (!C || !O.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
     let r = X(e.id);
     if (null != n && B.push({
         stream: n,
@@ -123,7 +123,7 @@ function en(e, t, n) {
           }
         }), null) : e === T.SPOTIFY_APPLICATION_ID ? T.SpotifyApplication : e.startsWith(L.XBOX_APPLICATION_ID_PREFIX) ? Q(e.slice(L.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(A.TWITCH_APPLICATION_ID_PREFIX) ? J(e.slice(A.TWITCH_APPLICATION_ID_PREFIX.length)) : (q(e), null)
       }(u),
-      C = null === (a = r.timestamps) || void 0 === a ? void 0 : a.start;
+      p = null === (a = r.timestamps) || void 0 === a ? void 0 : a.start;
     if ((0, h.default)(r)) {
       let t = (0, c.getIsActivitiesEnabledForCurrentPlatform)();
       if ((0, f.default)({
@@ -136,9 +136,9 @@ function en(e, t, n) {
           ChannelStore: x.default,
           VoiceStateStore: U.default,
           PermissionStore: D.default,
-          GuildStore: O.default
+          GuildStore: y.default
         }) !== f.EmbeddedActivityJoinability.CAN_JOIN) continue
-    } else if (null == C) continue;
+    } else if (null == p) continue;
     if (!N.shouldShowActivity(r) || null == d || j.has(d.id)) continue;
     let g = null != r ? $(r) : null;
     (null == g || g.id !== d.id) && (r = null);
@@ -154,7 +154,7 @@ function en(e, t, n) {
       game: d,
       activity: r,
       activityUser: e,
-      startedPlayingTime: C,
+      startedPlayingTime: p,
       playingMembers: b
     })
   }
@@ -166,7 +166,7 @@ function en(e, t, n) {
     let n = ee(e.id),
       l = x.default.getChannel(n),
       a = null != l ? l.getGuildId() : null,
-      s = O.default.getGuild(a);
+      s = y.default.getGuild(a);
     if (k.has(a) && V.has(n) || null == l || null == s || l.id === s.afkChannelId) null == l && (d = null, F = !0);
     else {
       let e = o()(U.default.getVoiceStatesForChannel(l.id)).map(e => {
@@ -175,7 +175,7 @@ function en(e, t, n) {
         } = e;
         return G.default.getUser(t)
       }).filter(w.isNotNullish).orderBy([et], ["desc"]).value();
-      e.filter(e => !C.includes(e.id)).forEach(e => t.push(e)), F ? !k.has(a) && (d = null) : (d = s, F = !0), k.add(a), V.add(n), H.push({
+      e.filter(e => !p.includes(e.id)).forEach(e => t.push(e)), F ? !k.has(a) && (d = null) : (d = s, F = !0), k.add(a), V.add(n), H.push({
         channel: l,
         guild: s,
         members: e
@@ -237,7 +237,7 @@ function es() {
 }
 class ei extends(l = u.default.Store) {
   initialize() {
-    this.syncWith([G.default, E.default, b.default, M.default, U.default, v.default, j.default, R.default, P.default], es), this.waitFor(S.default, O.default, E.default, G.default, P.default)
+    this.syncWith([G.default, E.default, b.default, M.default, U.default, v.default, j.default, R.default, P.default], es), this.waitFor(S.default, y.default, E.default, G.default, P.default)
   }
   get currentActivityParties() {
     return V

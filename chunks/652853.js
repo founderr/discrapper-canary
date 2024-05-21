@@ -8,12 +8,12 @@ n.r(t), n.d(t, {
   }
 });
 var i, r = n("735250"),
-  s = n("470079"),
-  a = n("541049"),
+  a = n("470079"),
+  s = n("541049"),
   o = n("231338");
-let l = s.createContext({
+let l = a.createContext({
   profileType: null,
-  theme: null !== (i = (0, a.default)()) && void 0 !== i ? i : o.ThemeTypes.DARK,
+  theme: null !== (i = (0, s.default)()) && void 0 !== i ? i : o.ThemeTypes.DARK,
   primaryColor: null,
   secondaryColor: null
 });
@@ -23,17 +23,17 @@ function u(e) {
     profileType: t,
     theme: n,
     primaryColor: i,
-    secondaryColor: a,
+    secondaryColor: s,
     children: o
-  } = e, u = s.useMemo(() => ({
+  } = e, u = a.useMemo(() => ({
     profileType: t,
     theme: n,
     primaryColor: i,
-    secondaryColor: a
-  }), [t, n, i, a]);
+    secondaryColor: s
+  }), [t, n, i, s]);
   return (0, r.jsx)(l.Provider, {
     value: u,
     children: o
   })
 }
-let d = () => s.useContext(l)
+let d = () => a.useContext(l)

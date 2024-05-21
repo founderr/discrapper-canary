@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("544891"),
   r = n("433517"),
-  s = n("570140"),
-  a = n("443684"),
+  a = n("570140"),
+  s = n("443684"),
   o = n("663389"),
   l = n("626135"),
   u = n("768581"),
@@ -18,12 +18,12 @@ t.default = {
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
         openWithoutBackstack: !1
       };
-    (0, a.default)(e, t, n)
+    (0, s.default)(e, t, n)
   },
   init: function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
       n = arguments.length > 2 ? arguments[2] : void 0;
-    s.default.dispatch({
+    a.default.dispatch({
       type: "USER_SETTINGS_MODAL_INIT",
       section: e,
       subsection: t,
@@ -32,14 +32,14 @@ t.default = {
   },
   close() {
     let e = o.default.onClose;
-    s.default.dispatch({
+    a.default.dispatch({
       type: "USER_SETTINGS_MODAL_CLOSE"
     }), null != e && e()
   },
   setSection(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    s.default.dispatch({
+    a.default.dispatch({
       type: "USER_SETTINGS_MODAL_SET_SECTION",
       section: e,
       subsection: t,
@@ -47,40 +47,40 @@ t.default = {
     })
   },
   clearSubsection(e) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "USER_SETTINGS_MODAL_CLEAR_SUBSECTION",
       forSection: e
     })
   },
   clearScrollPosition(e) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION",
       forSection: e
     })
   },
   updateAccount(e) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "USER_SETTINGS_MODAL_UPDATE_ACCOUNT",
       settings: e
     })
   },
   submitComplete() {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE"
     })
   },
   reset() {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "USER_SETTINGS_MODAL_RESET"
     })
   },
   saveAccountChanges(e, t) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "USER_SETTINGS_MODAL_SUBMIT"
     });
     let {
       username: n,
-      email: a,
+      email: s,
       emailToken: o,
       password: I,
       avatar: T,
@@ -92,7 +92,7 @@ t.default = {
     return (0, d.default)(e => {
       let t = {
           username: n,
-          email: a,
+          email: s,
           email_token: o,
           password: I,
           avatar: T,
@@ -100,9 +100,9 @@ t.default = {
           ...e,
           discriminator: null != S && "" !== S ? S : void 0
         },
-        s = r.Storage.get(_.DEVICE_TOKEN),
+        a = r.Storage.get(_.DEVICE_TOKEN),
         l = (0, c.getDevicePushProvider)();
-      null != l && null != s && (t.push_provider = l, t.push_token = s);
+      null != l && null != a && (t.push_provider = l, t.push_token = a);
       let u = r.Storage.get(_.DEVICE_VOIP_TOKEN);
       return null != c.DEVICE_PUSH_VOIP_PROVIDER && null != u && (t.push_voip_provider = c.DEVICE_PUSH_VOIP_PROVIDER, t.push_voip_token = u), i.HTTP.patch({
         url: _.Endpoints.ME,
@@ -115,7 +115,7 @@ t.default = {
         title: E.default.Messages.TWO_FA_CHANGE_ACCOUNT
       },
       hooks: {
-        onEarlyClose: () => s.default.dispatch({
+        onEarlyClose: () => a.default.dispatch({
           type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
           errors: {}
         })
@@ -125,22 +125,22 @@ t.default = {
         n = t.token;
       return l.default.track(_.AnalyticEvents.USER_AVATAR_UPDATED, {
         animated: (0, u.isAnimatedIconHash)(t.avatar)
-      }), delete t.token, s.default.dispatch({
+      }), delete t.token, a.default.dispatch({
         type: "UPDATE_TOKEN",
         token: n,
         userId: t.id
-      }), s.default.dispatch({
+      }), a.default.dispatch({
         type: "CURRENT_USER_UPDATE",
         user: t
-      }), null != f && s.default.dispatch({
+      }), null != f && a.default.dispatch({
         type: "USER_PASSWORD_UPDATE",
         user: t,
         newPassword: f
-      }), null != I && null != f && s.default.dispatch({
+      }), null != I && null != f && a.default.dispatch({
         type: "PASSWORD_UPDATED",
         userId: t.id
       }), h ? this.close() : this.submitComplete(), e
-    }, e => (s.default.dispatch({
+    }, e => (a.default.dispatch({
       type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
       errors: e.body
     }), e))

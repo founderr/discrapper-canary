@@ -18,8 +18,8 @@ n.r(t), n.d(t, {
 });
 var i = n("536285"),
   r = n("996106"),
-  s = n("812967"),
-  a = n("511405"),
+  a = n("812967"),
+  s = n("511405"),
   o = n("981631"),
   l = n("186901");
 
@@ -37,14 +37,14 @@ function _(e, t) {
   }, "called from wrong app context");
   i.default.subscribe(o.RPCEvents.OVERLAY, {
     token: t
-  }, t => e((0, a.deserializeObject)(t)))
+  }, t => e((0, s.deserializeObject)(t)))
 }
 
 function c(e, t) {
   if (__OVERLAY__) throw new r.default({
     errorCode: o.RPCErrors.UNKNOWN_ERROR
   }, "called from wrong app context");
-  s.default.setCommandHandler(o.RPCCommands.OVERLAY, {
+  a.default.setCommandHandler(o.RPCCommands.OVERLAY, {
     scope: l.RPC_PRIVATE_SCOPE,
     handler(n) {
       let {
@@ -53,9 +53,9 @@ function c(e, t) {
       if (!t(i.token)) throw new r.default({
         errorCode: o.RPCErrors.INVALID_TOKEN
       }, "Invalid RPC auth token provided");
-      e((0, a.deserializeObject)(i))
+      e((0, s.deserializeObject)(i))
     }
-  }), s.default.setEventHandler(o.RPCEvents.OVERLAY, {
+  }), a.default.setEventHandler(o.RPCEvents.OVERLAY, {
     scope: l.RPC_PRIVATE_SCOPE,
     handler(e) {
       let {
@@ -69,5 +69,5 @@ function c(e, t) {
 }
 
 function E(e) {
-  __OVERLAY__ ? i.default.request(o.RPCCommands.OVERLAY, (0, a.serializeObject)(e)) : s.default.dispatchToSubscriptions(o.RPCEvents.OVERLAY, {}, (0, a.serializeObject)(e))
+  __OVERLAY__ ? i.default.request(o.RPCCommands.OVERLAY, (0, s.serializeObject)(e)) : a.default.dispatchToSubscriptions(o.RPCEvents.OVERLAY, {}, (0, s.serializeObject)(e))
 }

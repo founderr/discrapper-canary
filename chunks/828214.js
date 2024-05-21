@@ -8,11 +8,11 @@ function r(e) {
   return null
 }
 
-function s(e) {
+function a(e) {
   return null
 }
 
-function a(e) {
+function s(e) {
   return null
 }
 
@@ -25,7 +25,7 @@ function l(e) {
 }
 n.r(t), n.d(t, {
   MenuCheckboxItem: function() {
-    return a
+    return s
   },
   MenuControlItem: function() {
     return l
@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return r
   },
   MenuItem: function() {
-    return s
+    return a
   },
   MenuRadioItem: function() {
     return o

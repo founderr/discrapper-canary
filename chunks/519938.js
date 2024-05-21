@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   close: function() {
-    return s
+    return a
   },
   hide: function() {
-    return a
+    return s
   },
   moveTo: function() {
     return l
@@ -34,14 +34,14 @@ function r(e, t) {
   })
 }
 
-function s(e) {
+function a(e) {
   i.default.dispatch({
     type: "PICTURE_IN_PICTURE_CLOSE",
     id: e
   })
 }
 
-function a(e) {
+function s(e) {
   i.default.dispatch({
     type: "PICTURE_IN_PICTURE_HIDE",
     id: e

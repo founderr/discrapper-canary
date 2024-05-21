@@ -19,8 +19,8 @@ var l = n("735250"),
   f = n("442837"),
   h = n("481060"),
   m = n("493683"),
-  p = n("239091"),
-  C = n("420660"),
+  C = n("239091"),
+  p = n("420660"),
   g = n("702321"),
   E = n("201895"),
   _ = n("43267"),
@@ -34,8 +34,8 @@ var l = n("735250"),
   x = n("509275"),
   R = n("878857"),
   M = n("204197"),
-  y = n("199902"),
-  O = n("158776"),
+  O = n("199902"),
+  y = n("158776"),
   D = n("306680"),
   b = n("111583"),
   j = n("9156"),
@@ -92,8 +92,8 @@ class $ extends a.Component {
       locationState: d,
       onClick: f,
       className: m,
-      role: p,
-      "aria-posinset": C,
+      role: C,
+      "aria-posinset": p,
       "aria-setsize": g,
       ...E
     } = this.props;
@@ -102,12 +102,12 @@ class $ extends a.Component {
         [Z.fullWidth]: c.isMobile
       }, m),
       onClick: f,
-      role: p,
+      role: C,
       focusProps: {
         within: !0,
         ...Q
       },
-      "aria-posinset": C,
+      "aria-posinset": p,
       "aria-setsize": g,
       children: (0, l.jsx)(h.Interactive, {
         as: "div",
@@ -145,8 +145,8 @@ function ee(e) {
     user: c,
     activities: A,
     applicationStream: v,
-    isTyping: y,
-    status: O,
+    isTyping: O,
+    status: y,
     isMobile: b,
     lastOnlineTimestamp: P,
     "aria-posinset": F,
@@ -176,7 +176,7 @@ function ee(e) {
       null === (t = $.current) || void 0 === t || t.click()
     }
   }, em = e => {
-    t.isMultiUserDM() ? (0, p.openContextMenuLazy)(e, async () => {
+    t.isMultiUserDM() ? (0, C.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("25421")]).then(n.bind(n, "354741"));
@@ -187,7 +187,7 @@ function ee(e) {
       })
     }, {
       noBlurEvent: !0
-    }) : (0, p.openContextMenuLazy)(e, async () => {
+    }) : (0, C.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("36441"), n.e("56826")]).then(n.bind(n, "131404"));
@@ -198,7 +198,7 @@ function ee(e) {
         channelSelected: r
       })
     })
-  }, ep = e => {
+  }, eC = e => {
     e.preventDefault(), e.stopPropagation();
     let n = z.default.Messages.LEAVE_GROUP_DM_TITLE.format({
         name
@@ -216,7 +216,7 @@ function ee(e) {
       onSubmit: ed,
       ...e
     }))
-  }, eC = () => {
+  }, ep = () => {
     let e = {
       className: Z.activity,
       textClassName: Z.activityText,
@@ -254,27 +254,27 @@ function ee(e) {
       "aria-hidden": !0,
       recipients: t.recipients,
       size: e,
-      isTyping: y,
-      status: O
+      isTyping: O,
+      status: y
     }) : (0, l.jsx)(X, {
       ...el,
       src: (0, _.getChannelIconURL)(t),
       "aria-hidden": !0,
       className: Z.__invalid_avatar,
       size: e,
-      status: y ? K.StatusTypes.ONLINE : O,
-      isTyping: y
+      status: O ? K.StatusTypes.ONLINE : y,
+      isTyping: O
     });
     o()(null != c, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
     let n = null;
-    return !c.isSystemUser() && (n = (0, C.default)(A) ? K.StatusTypes.STREAMING : O), (0, l.jsx)(X, {
+    return !c.isSystemUser() && (n = (0, p.default)(A) ? K.StatusTypes.STREAMING : y), (0, l.jsx)(X, {
       ...el,
       size: h.AvatarSizes.SIZE_32,
       src: et,
       avatarDecoration: en,
       status: n,
       isMobile: b,
-      isTyping: y,
+      isTyping: O,
       className: Z.__invalid_avatar,
       "aria-label": c.username,
       statusTooltip: !0
@@ -331,7 +331,7 @@ function ee(e) {
               selected: r,
               highlighted: es,
               muted: null != ea && ea,
-              subText: eC(),
+              subText: ep(),
               name: (0, l.jsx)(U.default, {
                 tooltipClassName: Z.overflowTooltip,
                 children: eA
@@ -344,7 +344,7 @@ function ee(e) {
             })
           }), er ? (0, l.jsx)(q, {}) : null, (0, l.jsx)(J, {
             "aria-label": eE ? z.default.Messages.LEAVE_GROUP_DM : z.default.Messages.CLOSE_DM,
-            onClick: eE ? ep : ed,
+            onClick: eE ? eC : ed,
             onMouseDown: ef
           })]
         })
@@ -371,20 +371,20 @@ t.default = e => {
     location: "private_channel"
   }, {
     autoTrackExposure: !0
-  }), d = null == s ? void 0 : s.id, c = (0, f.useStateFromStoresObject)([O.default, y.default], () => {
+  }), d = null == s ? void 0 : s.id, c = (0, f.useStateFromStoresObject)([y.default, O.default], () => {
     let e, n;
     if (t.isMultiUserDM()) {
       if (i) {
-        let n = O.default.getState().statuses;
+        let n = y.default.getState().statuses;
         t.recipients.some(e => n[e] === K.StatusTypes.ONLINE) && (e = K.StatusTypes.ONLINE)
       }
-    } else null != d && (e = O.default.getStatus(d), u && (n = O.default.getLastOnlineTimestamp(d)));
+    } else null != d && (e = y.default.getStatus(d), u && (n = y.default.getLastOnlineTimestamp(d)));
     return {
       status: e,
       lastOnlineTimestamp: n,
-      activities: null != d ? O.default.getActivities(d) : null,
-      applicationStream: null != d ? y.default.getAnyStreamForUser(d) : null,
-      isMobile: null != d && O.default.isMobileOnline(d)
+      activities: null != d ? y.default.getActivities(d) : null,
+      applicationStream: null != d ? O.default.getAnyStreamForUser(d) : null,
+      isMobile: null != d && y.default.isMobileOnline(d)
     }
   }, [t, d, i, u]), h = (0, f.useStateFromStores)([P.default, b.default], () => {
     if (t.isMultiUserDM()) return !!r && V.default.keys(b.default.getTypingUsers(t.id)).some(e => {

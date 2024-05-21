@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 });
 var i = n("392711"),
   r = n.n(i),
-  s = n("105797"),
-  a = n("63725"),
+  a = n("105797"),
+  s = n("63725"),
   o = n("924997"),
   l = n("861498"),
   u = n("749834"),
@@ -40,7 +40,7 @@ var i = n("392711"),
 let M = 60,
   y = [{
     id: v.FreemiumAppIconIds.DEFAULT,
-    iconSource: a,
+    iconSource: s,
     name: D.default.Messages.APP_ICON_DEFAULT,
     isPremium: !1
   }].concat([{
@@ -125,7 +125,7 @@ let M = 60,
     name: D.default.Messages.APP_ICON_BLUSH
   }, {
     id: v.PremiumAppIconIds.ANGRY,
-    iconSource: s,
+    iconSource: a,
     isPremium: !0,
     name: D.default.Messages.APP_ICON_ANGRY
   }, {

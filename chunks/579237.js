@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("836560"),
   r = n("68721"),
-  s = n("961304"),
-  a = n("65154");
+  a = n("961304"),
+  s = n("65154");
 
 function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ class u extends i.EventEmitter {
   }
   createOutput(e, t) {
     let n = this.outputs[e];
-    null == n && ((n = new s.default(this.userId, this.audioContext)).mute = !1, n.volume = 100, n.setSpeakingFlags(a.SpeakingFlags.VOICE), n.setSinkId(this.sinkId), this.outputs[e] = n), n.addTrack(t), n.play()
+    null == n && ((n = new a.default(this.userId, this.audioContext)).mute = !1, n.volume = 100, n.setSpeakingFlags(s.SpeakingFlags.VOICE), n.setSinkId(this.sinkId), this.outputs[e] = n), n.addTrack(t), n.play()
   }
   destroyOutput(e, t) {
     let n = this.outputs[e];

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("470079"),
   r = n("481060"),
-  s = n("1585"),
-  a = n("125988"),
+  a = n("1585"),
+  s = n("125988"),
   o = n("252532");
 
 function l(e) {
@@ -35,10 +35,10 @@ function l(e) {
     avatarPlaceholderSrc: S,
     avatarDecorationSrc: h,
     eventHandlers: A
-  } = (0, a.default)({
+  } = (0, s.default)({
     user: t,
     guildId: null != n ? n : void 0,
-    size: (0, s.getDecorationSizeForAvatarSize)(l),
+    size: (0, a.getDecorationSizeForAvatarSize)(l),
     showPending: u,
     animateOnHover: _,
     avatarDecorationOverride: c,

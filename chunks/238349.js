@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return V
   }
 }), n("47120");
-var r, s, a, o, l = n("392711"),
+var r, a, s, o, l = n("392711"),
   u = n.n(l),
   d = n("683860"),
   _ = n("442837"),
@@ -81,7 +81,7 @@ function x(e) {
     return t
   }), L = 0, D = !0), 0 !== U.size && (M = M.filter(e => !U.has(e)), U.clear()), 0 !== b.size && (M = Array.from(new Set([...M, ...b])), b.clear()), ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && (P = u().chain(M).sort(w(d.ThreadSortOrder.LATEST_ACTIVITY)), y = u().chain(M).sort(w(d.ThreadSortOrder.CREATION_DATE)));
   let r = (g === d.ThreadSortOrder.LATEST_ACTIVITY ? P : y).value();
-  let s = (v = 0 === R.size ? r : r.filter((t = R, function(e) {
+  let a = (v = 0 === R.size ? r : r.filter((t = R, function(e) {
     var n;
     let i = null === (n = f.default.getChannel(e)) || void 0 === n ? void 0 : n.appliedTags;
     return null != i && 0 !== i.length && i.some(e => t.has(e))
@@ -89,7 +89,7 @@ function x(e) {
     let t = I.default.getCount(e);
     return null === t || 0 === t
   })(e));
-  i = null == s ? null : s
+  i = null == a ? null : a
 }
 class F extends(r = _.default.Store) {
   initialize() {
@@ -104,10 +104,10 @@ class F extends(r = _.default.Store) {
   getThreadIds(e, t, n) {
     let i = e !== C,
       r = !(0, A.areSetsEqual)(n, R),
-      s = t !== g;
+      a = t !== g;
     return C = e, R = n, g = t, i ? x({
       refreshThreadIds: !0
-    }) : s ? x({
+    }) : a ? x({
       sortThreadIds: !0
     }) : r && x(), v
   }
@@ -122,12 +122,12 @@ class F extends(r = _.default.Store) {
     return i
   }
 }
-o = "ForumActivePostStore", (a = "displayName") in(s = F) ? Object.defineProperty(s, a, {
+o = "ForumActivePostStore", (s = "displayName") in(a = F) ? Object.defineProperty(a, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new F(c.default, {
+}) : a[s] = o, t.default = new F(c.default, {
   CONNECTION_OPEN: B,
   OVERLAY_INITIALIZE: B,
   GUILD_CREATE: B,

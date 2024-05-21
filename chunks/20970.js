@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("302454");
 let {
   newline: r,
-  paragraph: s,
-  url: a,
+  paragraph: a,
+  url: s,
   link: o,
   strong: l,
   u,
@@ -18,8 +18,8 @@ let {
   text: E
 } = i.defaultRules, I = {
   newline: r,
-  paragraph: s,
-  url: a,
+  paragraph: a,
+  url: s,
   link: {
     ...o,
     parse(e, t, n) {

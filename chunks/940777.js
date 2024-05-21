@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("317381"),
   h = n("682662"),
   m = n("674552"),
-  p = n("593364"),
-  C = n("905423"),
+  C = n("593364"),
+  p = n("905423"),
   g = n("199902"),
   E = n("592125"),
   _ = n("944486"),
@@ -31,14 +31,14 @@ var l = n("735250"),
   x = n("919755"),
   R = n("110977"),
   M = n("603274"),
-  y = n("981631"),
-  O = n("689938"),
+  O = n("981631"),
+  y = n("689938"),
   D = n("561349");
 let b = {
   analyticsSource: {
-    page: y.AnalyticsPages.GUILD_CHANNEL,
-    section: y.AnalyticsSections.CHANNEL_LIST,
-    object: y.AnalyticsObjects.CHANNEL
+    page: O.AnalyticsPages.GUILD_CHANNEL,
+    section: O.AnalyticsSections.CHANNEL_LIST,
+    object: O.AnalyticsObjects.CHANNEL
   }
 };
 
@@ -56,9 +56,9 @@ function j() {
       favoriteChannels: L.default.getFavoriteChannels(),
       favoriteServerMuted: L.default.favoriteServerMuted
     })),
-    w = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(y.FAVORITES)),
+    w = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(O.FAVORITES)),
     B = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(w)),
-    F = (0, C.default)(e => e.guildId) === y.FAVORITES,
+    F = (0, p.default)(e => e.guildId) === O.FAVORITES,
     {
       badge: H,
       unread: V
@@ -84,17 +84,17 @@ function j() {
         d = !1,
         c = !1,
         h = !1,
-        p = !1;
-      return n ? (d = !s, c = s, h = l, p = r) : (h = a, p = u), (0, m.renderMediaBadge)({
+        C = !1;
+      return n ? (d = !s, c = s, h = l, C = r) : (h = a, C = u), (0, m.renderMediaBadge)({
         audio: d,
         video: c,
         screenshare: h,
         liveStage: !1,
         isCurrentUserConnected: n,
-        activity: p
+        activity: C
       })
     }(U),
-    Y = H > 0 ? (0, p.renderMentionBadge)(H) : null,
+    Y = H > 0 ? (0, C.renderMentionBadge)(H) : null,
     W = a.useCallback(() => {
       s()
     }, [s]);
@@ -113,12 +113,12 @@ function j() {
           lowerBadge: Y,
           children: (0, l.jsx)(T.default, {
             ...e,
-            ariaLabel: O.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
-              guildName: O.default.Messages.FAVORITES_GUILD_NAME,
+            ariaLabel: y.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
+              guildName: y.default.Messages.FAVORITES_GUILD_NAME,
               mentions: H
             }),
             to: {
-              pathname: y.Routes.CHANNEL(y.FAVORITES, w),
+              pathname: O.Routes.CHANNEL(O.FAVORITES, w),
               state: b
             },
             selected: F || j,

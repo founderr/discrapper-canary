@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140"),
   u = n("741847"),
   d = n("58346");
@@ -37,7 +37,7 @@ function f(e) {
     e.state = d.GuildTemplateStates.EXPIRED
   })
 }
-class S extends(a = o.default.Store) {
+class S extends(s = o.default.Store) {
   getGuildTemplate(e) {
     return null != e ? _[e] : null
   }
@@ -54,12 +54,12 @@ class S extends(a = o.default.Store) {
     return c
   }
 }
-s = "GuildTemplateStore", (r = "displayName") in(i = S) ? Object.defineProperty(i, r, {
-  value: s,
+a = "GuildTemplateStore", (r = "displayName") in(i = S) ? Object.defineProperty(i, r, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new S(l.default, {
+}) : i[r] = a, t.default = new S(l.default, {
   GUILD_TEMPLATE_RESOLVE: function(e) {
     let {
       code: t

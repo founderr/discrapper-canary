@@ -1,7 +1,7 @@
 "use strict";
 let i;
 n.r(t);
-var r, s, a, o, l = n("259443"),
+var r, a, s, o, l = n("259443"),
   u = n("442837"),
   d = n("570140"),
   _ = n("818083"),
@@ -104,12 +104,12 @@ class C extends(o = u.default.Store) {
     m = !1
   }
 }
-a = "GatewayZstdStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
-  value: a,
+s = "GatewayZstdStore", (a = "displayName") in(r = C) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new C(d.default, {
+}) : r[a] = s, t.default = new C(d.default, {
   CONNECTION_OPEN: p,
   CONNECTION_INTERRUPTED: function(e) {
     let {

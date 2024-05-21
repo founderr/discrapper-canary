@@ -1,5 +1,5 @@
 "use strict";
-let i, r, s, a, o, l, u, d, _, c, E, I;
+let i, r, a, s, o, l, u, d, _, c, E, I;
 n.r(t), n("47120");
 var T, f, S, h, A = n("887003"),
   m = n("442837"),
@@ -10,7 +10,7 @@ var T, f, S, h, A = n("887003"),
   R = n("46140");
 
 function g() {
-  i = !1, r = new Map, s = 0, a = new Set, o = new Set, l = new Set, u = new Set, d = new Set, _ = new Map, c = new Map, E = new Map, I = null
+  i = !1, r = new Map, a = 0, s = new Set, o = new Set, l = new Set, u = new Set, d = new Set, _ = new Map, c = new Map, E = new Map, I = null
 }
 
 function L(e, t) {
@@ -19,15 +19,15 @@ function L(e, t) {
     },
     i = (r = new Map(r)).get(e);
   if (null != i) {
-    var s;
-    let a = null === (s = i.userStatus) || void 0 === s ? void 0 : s.streamProgressSeconds,
+    var a;
+    let s = null === (a = i.userStatus) || void 0 === a ? void 0 : a.streamProgressSeconds,
       o = {
         ...i,
         ...t
       };
-    !(n.updateProgress || null == o.userStatus || null == a || null != o.userStatus.completedAt || null == o.userStatus.enrolledAt) && null != o.userStatus && (o.userStatus = {
+    !(n.updateProgress || null == o.userStatus || null == s || null != o.userStatus.completedAt || null == o.userStatus.enrolledAt) && null != o.userStatus && (o.userStatus = {
       ...o.userStatus,
-      streamProgressSeconds: a
+      streamProgressSeconds: s
     }), r.set(e, o)
   }
 }
@@ -55,8 +55,8 @@ function M(e) {
 }
 
 function y(e) {
-  let t = new Set(a);
-  t.delete(e), a = t
+  let t = new Set(s);
+  t.delete(e), s = t
 }
 
 function P(e) {
@@ -71,13 +71,13 @@ class U extends(T = m.default.Store) {
     return i
   }
   get lastFetchedCurrentQuests() {
-    return s
+    return a
   }
   get questDeliveryOverride() {
     return r.get(null != I ? I : "")
   }
   isEnrolling(e) {
-    return a.has(e)
+    return s.has(e)
   }
   isClaimingRewardCode(e) {
     return o.has(e)
@@ -114,7 +114,7 @@ h = "QuestsStore", (S = "displayName") in(f = U) ? Object.defineProperty(f, S, {
     g()
   },
   QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
-    s = Date.now(), i = !0
+    a = Date.now(), i = !0
   },
   QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function(e) {
     let {
@@ -125,7 +125,7 @@ h = "QuestsStore", (S = "displayName") in(f = U) ? Object.defineProperty(f, S, {
     }).log("Delivered ".concat(e.config.messages.questName, " (").concat(e.id, ")"))
   },
   QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function() {
-    s = 0, i = !1
+    a = 0, i = !1
   },
   QUESTS_SEND_HEARTBEAT_SUCCESS: function(e) {
     let {
@@ -153,8 +153,8 @@ h = "QuestsStore", (S = "displayName") in(f = U) ? Object.defineProperty(f, S, {
   QUESTS_ENROLL_BEGIN: function(e) {
     let {
       questId: t
-    } = e, n = new Set(a);
-    n.add(t), a = n
+    } = e, n = new Set(s);
+    n.add(t), s = n
   },
   QUESTS_ENROLL_SUCCESS: function(e) {
     let {
@@ -223,9 +223,9 @@ h = "QuestsStore", (S = "displayName") in(f = U) ? Object.defineProperty(f, S, {
       let n = new Map(c);
       n.set(e, t.items), c = n;
       let i = r.get(e),
-        s = null == i ? void 0 : i.userStatus;
-      if (null != i && null != s && null == s.claimedAt) {
-        var a;
+        a = null == i ? void 0 : i.userStatus;
+      if (null != i && null != a && null == a.claimedAt) {
+        var s;
         let n = function(e) {
           var t;
           let {
@@ -243,9 +243,9 @@ h = "QuestsStore", (S = "displayName") in(f = U) ? Object.defineProperty(f, S, {
         });
         null != n && v(e, n), L(e, {
           userStatus: {
-            ...s,
+            ...a,
             claimedAt: t.claimedAt,
-            claimedTier: null !== (a = null == n ? void 0 : n.tier) && void 0 !== a ? a : null
+            claimedTier: null !== (s = null == n ? void 0 : n.tier) && void 0 !== s ? s : null
           }
         })
       }

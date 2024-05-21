@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("924826"),
   l = n("442837"),
   u = n("846519"),
@@ -40,7 +40,7 @@ function M(e) {
     disabled: t = !1,
     onClick: n,
     text: r,
-    children: s,
+    children: a,
     tooltipPosition: o = "top"
   } = e;
   return (0, i.jsx)(_.Tooltip, {
@@ -49,11 +49,11 @@ function M(e) {
     children: e => (0, i.jsx)(_.Clickable, {
       ...e,
       "aria-label": r,
-      className: a()(D.secondaryButton, {
+      className: s()(D.secondaryButton, {
         [D.buttonDisabled]: t
       }),
       onClick: n,
-      children: s
+      children: a
     })
   })
 }
@@ -63,10 +63,10 @@ function y(e) {
     sound: t,
     previewSound: n,
     disabled: r = !1,
-    tooltipPosition: s = "top"
+    tooltipPosition: a = "top"
   } = e;
   return (0, i.jsx)(M, {
-    tooltipPosition: s,
+    tooltipPosition: a,
     disabled: r,
     onClick: function(e) {
       e.stopPropagation(), e.currentTarget.blur(), n()
@@ -81,7 +81,7 @@ function y(e) {
   })
 }
 t.default = r.forwardRef(function(e, t) {
-  var n, s, m;
+  var n, a, m;
   let {
     sound: P,
     channel: U,
@@ -108,8 +108,8 @@ t.default = r.forwardRef(function(e, t) {
   } = (0, R.default)(P, null !== (n = null == U ? void 0 : U.id) && void 0 !== n ? n : null), {
     createMultipleConfettiAt: ee
   } = r.useContext(I.ConfettiCannonContext), et = r.useRef(null);
-  let en = (s = P.soundId, m = et.current, r.useMemo(() => {
-      if (null == m || "1" !== s) return {
+  let en = (a = P.soundId, m = et.current, r.useMemo(() => {
+      if (null == m || "1" !== a) return {
         x: 0,
         y: 0
       };
@@ -118,11 +118,11 @@ t.default = r.forwardRef(function(e, t) {
         x: e.left + e.width / 2,
         y: e.top + e.height / 2
       }
-    }, [m, s])),
+    }, [m, a])),
     ei = (0, l.useStateFromStores)([E.default], () => E.default.useReducedMotion),
     er = r.useRef(.01),
-    es = r.useRef(new u.Interval),
-    ea = "1" === P.soundId,
+    ea = r.useRef(new u.Interval),
+    es = "1" === P.soundId,
     eo = (0, l.useStateFromStores)([p.default], () => p.default.isFavoriteSound(W), [W]),
     el = "sound-".concat(P.soundId),
     eu = (0, o.useListItem)(el),
@@ -143,7 +143,7 @@ t.default = r.forwardRef(function(e, t) {
         soundName: P.name
       }),
       children: eo ? (0, i.jsx)(S.default, {
-        className: a()(D.secondaryIcon, D.favoriteIconFavorite),
+        className: s()(D.secondaryIcon, D.favoriteIconFavorite),
         color: d.default.unsafe_rawColors.GOLD.css
       }) : (0, i.jsx)(f.default, {
         className: D.secondaryIcon
@@ -158,7 +158,7 @@ t.default = r.forwardRef(function(e, t) {
     ef = () => (0, i.jsxs)("div", {
       className: D.buttonOverlay,
       children: [(0, i.jsx)("div", {
-        className: a()({
+        className: s()({
           [D.buttonOverlayBackground]: !V
         })
       }), (0, i.jsxs)("div", {
@@ -169,11 +169,11 @@ t.default = r.forwardRef(function(e, t) {
       })]
     });
   return r.useEffect(() => {
-    let e = es.current;
-    return ea && e.start(1e3, () => {
+    let e = ea.current;
+    return es && e.start(1e3, () => {
       er.current = Math.max(er.current - .01, .01)
     }), () => e.stop()
-  }, [ea]), (0, i.jsxs)("li", {
+  }, [es]), (0, i.jsxs)("li", {
     ref: t,
     className: D.soundButtonWrapper,
     onMouseEnter: x,
@@ -188,7 +188,7 @@ t.default = r.forwardRef(function(e, t) {
         emojiName: P.emojiName,
         soundName: P.name
       }),
-      className: a()(b, D.soundButton, {
+      className: s()(b, D.soundButton, {
         [D.playing]: $,
         [D.hoverActiveBackground]: V,
         [D.soundButtonInteractive]: k,
@@ -198,7 +198,7 @@ t.default = r.forwardRef(function(e, t) {
         [D.focused]: k && G
       }),
       onClick: function() {
-        if (ea && !ei && (er.current = Math.min(er.current + .01, .1), Math.random() < er.current && ee(en.x, en.y, void 0, void 0, {
+        if (es && !ei && (er.current = Math.min(er.current + .01, .1), Math.random() < er.current && ee(en.x, en.y, void 0, void 0, {
             sprite: L.DUCK_CONFETTI_SPRITE
           })), null != F) {
           F();
@@ -218,7 +218,7 @@ t.default = r.forwardRef(function(e, t) {
         }), (0, i.jsx)(_.Text, {
           variant: "text-xs/medium",
           color: k ? "header-primary" : "text-muted",
-          className: a()(D.soundName, {
+          className: s()(D.soundName, {
             [D.hasEmoji]: ed
           }),
           children: K

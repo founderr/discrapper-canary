@@ -66,8 +66,8 @@ n.r(t), n.d(t, {
 });
 var i = n("524437"),
   r = n("605236"),
-  s = n("314897"),
-  a = n("271383"),
+  a = n("314897"),
+  s = n("271383"),
   o = n("626135"),
   l = n("308083"),
   u = n("981631"),
@@ -81,7 +81,7 @@ function _(e) {
     messageId: r,
     tagUserId: l,
     location: d
-  } = e, _ = s.default.getId(), c = a.default.getMember(t, s.default.getId()), E = (null == c ? void 0 : c.joinedAt) != null;
+  } = e, _ = a.default.getId(), c = s.default.getMember(t, a.default.getId()), E = (null == c ? void 0 : c.joinedAt) != null;
   o.default.track(u.AnalyticEvents.CLAN_PROFILE_VIEWED, {
     guild_id: t,
     is_member: E,
@@ -100,14 +100,14 @@ function c(e) {
     source: n,
     location: i,
     messageId: r,
-    tagUserId: a
-  } = e, l = s.default.getId();
+    tagUserId: s
+  } = e, l = a.default.getId();
   o.default.track(u.AnalyticEvents.CLAN_APPLY_TO_JOIN_VIEWED, {
     guild_id: t,
     source: n,
     location: i,
     viewing_user_id: l,
-    tag_owner_user_id: a,
+    tag_owner_user_id: s,
     message_id: r
   })
 }
@@ -237,14 +237,14 @@ function R(e) {
     isMember: n,
     hasJoinRequest: i,
     affinity: r,
-    index: s
+    index: a
   } = e;
   o.default.track(u.AnalyticEvents.CLAN_DISCOVERY_CARD_CLICKED, {
     guild_id: t,
     is_member: n,
     has_join_request: i,
     affinity: r,
-    index: s
+    index: a
   })
 }
 
@@ -262,7 +262,7 @@ function L(e) {
     channelId: r,
     joinRequestStatus: l,
     joinRequestUserId: d
-  } = e, _ = s.default.getId(), c = (null === (t = a.default.getMember(n, _)) || void 0 === t ? void 0 : t.joinedAt) != null;
+  } = e, _ = a.default.getId(), c = (null === (t = s.default.getMember(n, _)) || void 0 === t ? void 0 : t.joinedAt) != null;
   o.default.track(u.AnalyticEvents.CLAN_SEND_INTERVIEW_MESSAGE, {
     guild_id: n,
     channel_id: r,
@@ -297,7 +297,7 @@ function D(e) {
     guild_id: t,
     action_type: n,
     application_user_id: i,
-    viewing_user_id: s.default.getId()
+    viewing_user_id: a.default.getId()
   })
 }
 
@@ -309,7 +309,7 @@ function M(e) {
   } = e;
   o.default.track(u.AnalyticEvents.CLAN_APPLICATION_VIEWED, {
     guild_id: t,
-    viewing_user_id: s.default.getId(),
+    viewing_user_id: a.default.getId(),
     application_user_id: n,
     application_status: i
   })
@@ -319,15 +319,15 @@ function y(e) {
   let {
     originGuildId: t,
     tagGuildId: n,
-    tagUserId: a,
+    tagUserId: s,
     messageId: l,
     location: _
   } = e;
   !(0, r.isDismissibleContentDismissed)(i.DismissibleContent.CLAN_TAG_WAITLIST) && (o.default.track(u.AnalyticEvents.CLAN_APPLY_WAITLIST, {
-    user_id: s.default.getId(),
+    user_id: a.default.getId(),
     origin_guild_id: t,
     tag_guild_id: n,
-    tag_user_id: a,
+    tag_user_id: s,
     message_id: l,
     location: _
   }), (0, r.markDismissibleContentAsDismissed)(i.DismissibleContent.CLAN_TAG_WAITLIST, {

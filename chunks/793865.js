@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("512722"),
-  s = n.n(r),
-  a = n("442837"),
+  a = n.n(r),
+  s = n("442837"),
   o = n("481060"),
   l = n("410575"),
   u = n("594174"),
@@ -21,9 +21,9 @@ function I(e) {
   let {
     onClose: t,
     onSelect: n
-  } = e, r = (0, a.useStateFromStores)([u.default], () => {
+  } = e, r = (0, s.useStateFromStores)([u.default], () => {
     let e = u.default.getCurrentUser();
-    return s()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e
+    return a()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e
   }), I = (0, d.default)(), T = (0, _.default)(r.id);
   return (0, i.jsx)(l.default, {
     object: c.AnalyticsObjects.CONTEXT_MENU,

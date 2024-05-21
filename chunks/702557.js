@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("470079"),
   r = n("442837"),
-  s = n("544891"),
-  a = n("570140"),
+  a = n("544891"),
+  s = n("570140"),
   o = n("722086"),
   l = n("981631");
 
@@ -21,24 +21,24 @@ function u(e) {
   }
 }
 async function d(e) {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "USER_NOTE_LOAD_START",
     userId: e
   });
   try {
     let {
       body: t
-    } = await s.HTTP.get({
+    } = await a.HTTP.get({
       url: l.Endpoints.NOTE(e),
       oldFormErrors: !0
     });
-    a.default.dispatch({
+    s.default.dispatch({
       type: "USER_NOTE_LOADED",
       userId: e,
       note: t
     })
   } catch (t) {
-    a.default.dispatch({
+    s.default.dispatch({
       type: "USER_NOTE_LOADED",
       userId: e
     })

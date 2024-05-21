@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("445346"),
   r = n("570140"),
-  s = n("710845"),
-  a = n("93093");
+  a = n("710845"),
+  s = n("93093");
 
 function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -13,7 +13,7 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let l = new s.default("BasicChannelCacheStore");
+let l = new a.default("BasicChannelCacheStore");
 class u extends i.Store {
   hasChannel(e) {
     return this.channels.has(e)
@@ -36,7 +36,7 @@ class u extends i.Store {
     this.delete(e)
   }
   initialize() {
-    this.waitFor(a.default)
+    this.waitFor(s.default)
   }
   handleCacheLoadedLazy(e) {
     for (let [t, n] of(this.guilds = new Map, this.channels = new Map, e.basicGuildChannels))
@@ -46,7 +46,7 @@ class u extends i.Store {
     this.guilds.clear(), this.channels.clear()
   }
   handleConnectionOpen(e) {
-    let t = a.default.allGuildIds();
+    let t = s.default.allGuildIds();
     for (let e of this.guilds.keys()) !t.has(e) && this.delete(e)
   }
   handleLogout(e) {

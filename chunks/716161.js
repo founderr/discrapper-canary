@@ -24,8 +24,8 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("570140"),
-  s = n("675478"),
-  a = n("131951"),
+  a = n("675478"),
+  s = n("131951"),
   o = n("594174"),
   l = n("932724"),
   u = n("647177"),
@@ -40,7 +40,7 @@ async function c() {
 }
 async function E(e, t, n) {
   try {
-    let s = await i.HTTP.post({
+    let a = await i.HTTP.post({
       url: _.Endpoints.VIDEO_FILTER_ASSETS,
       body: {
         type: t,
@@ -50,8 +50,8 @@ async function E(e, t, n) {
     });
     return r.default.dispatch({
       type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS",
-      videoFilterAsset: s.body
-    }), s.body
+      videoFilterAsset: a.body
+    }), a.body
   } catch (e) {
     throw new d.default(e)
   }
@@ -65,9 +65,9 @@ async function I(e) {
   })
 }
 async function T(e) {
-  if (await s.PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", t => {
+  if (await a.PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", t => {
       t.videoBackgroundFilterDesktop = (0, u.getVideoBackgroundProtoFromOption)(e)
-    }, s.UserSettingsDelay.FREQUENT_USER_ACTION), (0, u.isCustomBackgroundOption)(e)) {
+    }, a.UserSettingsDelay.FREQUENT_USER_ACTION), (0, u.isCustomBackgroundOption)(e)) {
     let t = await i.HTTP.post(_.Endpoints.VIDEO_FILTER_ASSET_LAST_USED(e.id));
     r.default.dispatch({
       type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
@@ -80,14 +80,14 @@ async function T(e) {
 }
 
 function f(e) {
-  a.default.isSupported() && r.default.dispatch({
+  s.default.isSupported() && r.default.dispatch({
     type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS",
     settings: e
   })
 }
 
 function S() {
-  a.default.isSupported() && r.default.dispatch({
+  s.default.isSupported() && r.default.dispatch({
     type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START"
   })
 }

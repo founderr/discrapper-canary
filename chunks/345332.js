@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("153832"),
-  a = n("993365"),
+  a = n("153832"),
+  s = n("993365"),
   o = n("481060"),
   l = n("529653"),
   u = n("502283"),
@@ -23,16 +23,16 @@ function E(e, t) {
     {
       position: i = _.TOAST_DEFAULT_OPTIONS.position,
       component: r = _.TOAST_DEFAULT_OPTIONS.component,
-      duration: a = _.TOAST_DEFAULT_OPTIONS.duration
+      duration: s = _.TOAST_DEFAULT_OPTIONS.duration
     } = n;
   return {
     message: e,
-    id: (0, s.v4)(),
+    id: (0, a.v4)(),
     type: t,
     options: {
       position: i,
       component: r,
-      duration: a
+      duration: s
     }
   }
 }
@@ -42,11 +42,11 @@ let I = r.memo(function(e) {
     type: n,
     id: r,
     options: {
-      component: s = _.TOAST_DEFAULT_OPTIONS.component
+      component: a = _.TOAST_DEFAULT_OPTIONS.component
     } = _.TOAST_DEFAULT_OPTIONS
   } = e;
-  return null != s ? (0, i.jsx)(i.Fragment, {
-    children: s
+  return null != a ? (0, i.jsx)(i.Fragment, {
+    children: a
   }) : (0, i.jsxs)("div", {
     id: r,
     className: c.toast,
@@ -70,7 +70,7 @@ let I = r.memo(function(e) {
         default:
           return null
       }
-    }(n), (0, i.jsx)(a.Text, {
+    }(n), (0, i.jsx)(s.Text, {
       className: c.__invalid_content,
       color: "header-primary",
       variant: "text-md/normal",

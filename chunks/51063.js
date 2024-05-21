@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("913527"),
-  s = n.n(r),
-  a = n("481060"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("835473"),
   l = n("366695"),
   u = n("630388"),
@@ -27,12 +27,12 @@ function E(e) {
       game: t
     }), (0, i.jsxs)("div", {
       className: c.textContainer,
-      children: [(0, i.jsx)(a.Text, {
+      children: [(0, i.jsx)(s.Text, {
         className: c.timestamp,
         variant: "text-xs/medium",
         color: "text-muted",
-        children: s()(n).format("LLLL")
-      }), (0, i.jsx)(a.Text, {
+        children: a()(n).format("LLLL")
+      }), (0, i.jsx)(s.Text, {
         variant: "text-md/normal",
         color: "interactive-active",
         children: _.default.Messages.MESSAGE_GAME_ICON_TOOLTIP_CONTENT.format({
@@ -47,7 +47,7 @@ function I(e) {
   let {
     message: t
   } = e, n = (0, o.useGetOrFetchApplication)(t.applicationId);
-  return null != n && (0, u.hasFlag)(n.flags, d.ApplicationFlags.SOCIAL_LAYER_INTEGRATION) ? (0, i.jsx)(a.Tooltip, {
+  return null != n && (0, u.hasFlag)(n.flags, d.ApplicationFlags.SOCIAL_LAYER_INTEGRATION) ? (0, i.jsx)(s.Tooltip, {
     hideOnClick: !0,
     position: "top",
     "aria-label": _.default.Messages.MESSAGE_GAME_ICON_TOOLTIP,
@@ -57,7 +57,7 @@ function I(e) {
       application: n,
       messageTimestamp: t.timestamp
     }),
-    children: e => (0, i.jsx)(a.Clickable, {
+    children: e => (0, i.jsx)(s.Clickable, {
       tag: "span",
       ...e,
       children: (0, i.jsx)(l.default, {

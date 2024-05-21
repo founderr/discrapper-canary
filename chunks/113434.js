@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return v
   }
 }), n("47120"), n("653041");
-var i, r, s, a, o = n("470079"),
+var i, r, a, s, o = n("470079"),
   l = n("846519"),
   u = n("442837"),
   d = n("583434"),
@@ -57,17 +57,17 @@ function N() {
     i = (0, u.useStateFromStoresArray)([E.default], () => [...E.default.quests.values()]),
     {
       isFetchingCurrentQuests: r,
-      lastFetchedCurrentQuests: s
+      lastFetchedCurrentQuests: a
     } = (0, u.useStateFromStoresObject)([E.default], () => ({
       isFetchingCurrentQuests: E.default.isFetchingCurrentQuests,
       lastFetchedCurrentQuests: E.default.lastFetchedCurrentQuests
     })),
-    a = (0, S.getIsEligibleForQuests)({
+    s = (0, S.getIsEligibleForQuests)({
       location: A.QuestsExperimentLocations.USE_QUESTS
     });
   return o.useEffect(() => {
-    if ("cache-only" !== e.fetchPolicy)("cache-and-network" === e.fetchPolicy || "cache-or-network" === e.fetchPolicy && 0 === s) && a && !t && !r && (n(!0), (0, c.fetchCurrentQuests)())
-  }, [e.fetchPolicy, a, t, r, s]), {
+    if ("cache-only" !== e.fetchPolicy)("cache-and-network" === e.fetchPolicy || "cache-or-network" === e.fetchPolicy && 0 === a) && s && !t && !r && (n(!0), (0, c.fetchCurrentQuests)())
+  }, [e.fetchPolicy, s, t, r, a]), {
     quests: i,
     isFetchingCurrentQuests: r
   }
@@ -75,7 +75,7 @@ function N() {
 
 function p(e, t, n) {
   return e.localeCompare(t) * (0 === n ? -1 : 1)
-}(s = i || (i = {}))[s.DESC = 0] = "DESC", s[s.ASC = 1] = "ASC";
+}(a = i || (i = {}))[a.DESC = 0] = "DESC", a[a.ASC = 1] = "ASC";
 
 function O(e) {
   let {
@@ -93,7 +93,7 @@ function O(e) {
       if (0 === t.length) return [];
       if (n.current.length > 0) return n.current;
       let e = t.sort((e, t) => {
-        var n, i, r, s, a, o;
+        var n, i, r, a, s, o;
         let l = !(0, T.isQuestExpired)(e),
           u = !(0, T.isQuestExpired)(t);
         if (l !== u) return l ? -1 : 1;
@@ -106,7 +106,7 @@ function O(e) {
           S = E && l;
         if (S !== (f && u)) return S ? -1 : 1;
         let h = d && !l;
-        return h !== (_ && !u) ? h ? -1 : 1 : l && u ? p(null === (a = e.config) || void 0 === a ? void 0 : a.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : p(null === (r = e.config) || void 0 === r ? void 0 : r.expiresAt, null === (s = t.config) || void 0 === s ? void 0 : s.expiresAt, 0)
+        return h !== (_ && !u) ? h ? -1 : 1 : l && u ? p(null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : p(null === (r = e.config) || void 0 === r ? void 0 : r.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0)
       });
       return n.current = e, e
     }, [t])
@@ -120,17 +120,17 @@ function O(e) {
       if (0 === t.length) return [];
       if (n.current.length > 0) return n.current;
       let e = t.sort((e, t) => {
-        var n, i, r, s;
-        let a = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null;
-        if (a !== ((null === (i = t.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null)) return a ? -1 : 1;
+        var n, i, r, a;
+        let s = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null;
+        if (s !== ((null === (i = t.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null)) return s ? -1 : 1;
         let o = null === (r = e.config) || void 0 === r ? void 0 : r.rewardCodeExpiresAt;
-        return p(o, null === (s = t.config) || void 0 === s ? void 0 : s.rewardCodeExpiresAt, 1)
+        return p(o, null === (a = t.config) || void 0 === a ? void 0 : a.rewardCodeExpiresAt, 1)
       });
       return n.current = e, e
     }, [t])
-  }(t), s = [];
+  }(t), a = [];
   return {
-    quests: s = "incomplete" === e ? i : r,
+    quests: a = "incomplete" === e ? i : r,
     isFetchingCurrentQuests: n
   }
 }
@@ -150,8 +150,8 @@ function C() {
       else {
         let e = new l.Timeout,
           r = () => {
-            let s = Date.parse(t.config.expiresAt) - Date.now();
-            e.start(s, () => {
+            let a = Date.parse(t.config.expiresAt) - Date.now();
+            e.start(a, () => {
               (0, T.isQuestExpired)(t) ? i(e => new Map(e).set(t.id, !0)): r()
             }), n.push(e)
           };
@@ -207,8 +207,8 @@ function v() {
         continue
       }
       let e = null != t.userStatus.claimedAt,
-        s = (0, T.isDismissed)(t.userStatus, I.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE);
-      if (!e && !s) {
+        a = (0, T.isDismissed)(t.userStatus, I.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE);
+      if (!e && !a) {
         i.push(t);
         continue
       }
@@ -245,4 +245,4 @@ function y(e) {
     avatarDecoration: null == i ? void 0 : null === (t = i.items) || void 0 === t ? void 0 : t[0],
     isFetching: r
   }
-}(a = r || (r = {})).INCOMPLETE = "incomplete", a.COMPLETE = "complete"
+}(s = r || (r = {})).INCOMPLETE = "incomplete", s.COMPLETE = "complete"

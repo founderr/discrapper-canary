@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var i, r = n("442837"),
-  s = n("570140");
+  a = n("570140");
 
-function a(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -58,7 +58,7 @@ class u extends(i = r.default.DeviceSettingsStore) {
     })
   }
 }
-a(u, "displayName", "DevToolsDesignTogglesStore"), a(u, "persistKey", "DevToolsDesignTogglesStore"), t.default = new u(s.default, {
+s(u, "displayName", "DevToolsDesignTogglesStore"), s(u, "persistKey", "DevToolsDesignTogglesStore"), t.default = new u(a.default, {
   DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: function(e) {
     l[e.toggle] = e.value
   }

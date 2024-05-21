@@ -7,16 +7,16 @@ n.r(t), n.d(t, {
     return o
   },
   savedMessageToClient: function() {
-    return a
+    return s
   },
   savedMessageToServer: function() {
-    return s
+    return a
   }
 });
 var i = n("70956"),
   r = n("689938");
 
-function s(e) {
+function a(e) {
   var t;
   return {
     channel_id: e.channelId,
@@ -32,7 +32,7 @@ function s(e) {
   }
 }
 
-function a(e) {
+function s(e) {
   return {
     channelId: e.channel_id,
     messageId: e.message_id,

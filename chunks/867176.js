@@ -18,12 +18,12 @@ n.r(t), n.d(t, {
 });
 var i = n("106351"),
   r = n("442837"),
-  s = n("818083"),
-  a = n("592125"),
+  a = n("818083"),
+  s = n("592125"),
   o = n("496675"),
   l = n("944486"),
   u = n("231338");
-let d = (0, s.createExperiment)({
+let d = (0, a.createExperiment)({
   kind: "user",
   id: "2023-08_activities_in_text",
   label: "Activities in Text User",
@@ -57,7 +57,7 @@ let d = (0, s.createExperiment)({
 function _(e) {
   var t;
   if (null == e || void 0 === e) return !1;
-  let n = a.default.getChannel(e.parent_id);
+  let n = s.default.getChannel(e.parent_id);
   if (null != n && (null == n ? void 0 : n.type) !== i.ChannelTypes.GUILD_CATEGORY) return !1;
   return t = e.type, [i.ChannelTypes.GUILD_TEXT, i.ChannelTypes.GROUP_DM, i.ChannelTypes.DM].includes(t)
 }
@@ -66,8 +66,8 @@ function c(e, t, n) {
   if (null == e) return !1;
   let i = _(e),
     r = o.default.can(u.Permissions.USE_EMBEDDED_ACTIVITIES, e),
-    s = r && o.default.can(u.Permissions.SEND_MESSAGES | u.Permissions.USE_APPLICATION_COMMANDS, e);
-  if ((null == e ? void 0 : e.guild_id) != null) return t ? s && i : r && i;
+    a = r && o.default.can(u.Permissions.SEND_MESSAGES | u.Permissions.USE_APPLICATION_COMMANDS, e);
+  if ((null == e ? void 0 : e.guild_id) != null) return t ? a && i : r && i;
   return t ? d.getCurrentConfig({
     location: n
   }, {
@@ -78,10 +78,10 @@ function c(e, t, n) {
 function E(e, t, n) {
   let {
     isActivitiesInTextEnabledForChannelType: i,
-    channelGuildId: s,
+    channelGuildId: a,
     hasPermission: l
-  } = (0, r.useStateFromStoresObject)([a.default, o.default], () => {
-    let n = a.default.getChannel(e),
+  } = (0, r.useStateFromStoresObject)([s.default, o.default], () => {
+    let n = s.default.getChannel(e),
       i = o.default.can(u.Permissions.USE_EMBEDDED_ACTIVITIES, n),
       r = i && o.default.can(u.Permissions.SEND_MESSAGES | u.Permissions.USE_APPLICATION_COMMANDS, n);
     return {
@@ -89,7 +89,7 @@ function E(e, t, n) {
       channelGuildId: null == n ? void 0 : n.guild_id,
       hasPermission: t ? r : i
     }
-  }), c = null != s, E = d.useExperiment({
+  }), c = null != a, E = d.useExperiment({
     location: n
   }, {
     autoTrackExposure: !c,
@@ -99,9 +99,9 @@ function E(e, t, n) {
 }
 
 function I(e, t) {
-  let n = (0, r.useStateFromStores)([a.default], () => a.default.getChannel(e)),
+  let n = (0, r.useStateFromStores)([s.default], () => s.default.getChannel(e)),
     i = (0, r.useStateFromStores)([o.default], () => o.default.can(u.Permissions.USE_EMBEDDED_ACTIVITIES, n)),
-    s = _(n),
+    a = _(n),
     l = null == n ? void 0 : n.guild_id,
     c = null != l,
     E = d.useExperiment({
@@ -110,16 +110,16 @@ function I(e, t) {
       autoTrackExposure: !c,
       disable: c
     });
-  return c ? i && s : E.showInOmniButtonMenu && s
+  return c ? i && a : E.showInOmniButtonMenu && a
 }
 
 function T(e, t) {
   let {
     hasGuildId: n,
-    isGuildVoiceChannel: s,
+    isGuildVoiceChannel: a,
     isInPrivateVoiceCall: o
-  } = (0, r.useStateFromStoresObject)([a.default, l.default], () => {
-    let t = a.default.getChannel(e),
+  } = (0, r.useStateFromStoresObject)([s.default, l.default], () => {
+    let t = s.default.getChannel(e),
       n = (null == t ? void 0 : t.guild_id) !== void 0 && (null == t ? void 0 : t.guild_id) !== null,
       r = (null == t ? void 0 : t.type) === i.ChannelTypes.GUILD_VOICE;
     return {
@@ -133,5 +133,5 @@ function T(e, t) {
     autoTrackExposure: !n,
     disable: n
   }), _ = o && u.activitiesInTextEnabled;
-  return s || _
+  return a || _
 }

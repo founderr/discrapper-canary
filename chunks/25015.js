@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("470079"),
   r = n("626135"),
-  s = n("937889"),
-  a = n("761910"),
+  a = n("937889"),
+  s = n("761910"),
   o = n("981631"),
   l = n("689938"),
   u = n("354088");
@@ -28,11 +28,11 @@ function d(e, t) {
   return i.useMemo(() => null != e.customRenderedContent ? e.customRenderedContent : e.isUnsupported ? {
     content: l.default.Messages.MESSAGE_UNSUPPORTED,
     hasSpoilerEmbeds: !1
-  } : e.isCommandType() && 0 === e.content.length || e.hasFlag(o.MessageFlags.LOADING) ? (0, a.default)(e) : e.type === o.MessageTypes.CHANGELOG ? (0, s.renderChangelogMessageMarkup)(e, u, {
+  } : e.isCommandType() && 0 === e.content.length || e.hasFlag(o.MessageFlags.LOADING) ? (0, s.default)(e) : e.type === o.MessageTypes.CHANGELOG ? (0, a.renderChangelogMessageMarkup)(e, u, {
     track: (e, t) => {
       r.default.track(e, t)
     }
-  }) : (0, s.default)(e, {
+  }) : (0, a.default)(e, {
     hideSimpleEmbedContent: n,
     formatInline: d,
     noStyleAndInteraction: _,

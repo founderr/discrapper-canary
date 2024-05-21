@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("758426"),
-  s = n("973675"),
-  a = n("949605"),
+  a = n("973675"),
+  s = n("949605"),
   o = n("981631");
 
 function l(e) {
@@ -23,11 +23,11 @@ function l(e) {
         ...n
       });
     case o.BoostedGuildTiers.TIER_2:
-      return (0, i.jsx)(s.default, {
+      return (0, i.jsx)(a.default, {
         ...n
       });
     case o.BoostedGuildTiers.TIER_3:
-      return (0, i.jsx)(a.default, {
+      return (0, i.jsx)(s.default, {
         ...n
       });
     default:

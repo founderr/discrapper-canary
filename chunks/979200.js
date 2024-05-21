@@ -15,24 +15,24 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("921072"),
-  s = n("981631"),
-  a = n("689938");
+  a = n("981631"),
+  s = n("689938");
 async function o(e) {
-  let t = s.Endpoints.APPLICATION_DISCLOSURES(e),
+  let t = a.Endpoints.APPLICATION_DISCLOSURES(e),
     n = await i.HTTP.get({
       url: t,
       retries: 3
     }),
     r = n.body.disclosures,
-    a = n.body.acked_disclosures;
+    s = n.body.acked_disclosures;
   return {
     disclosures: r,
-    ackedDisclosures: a,
+    ackedDisclosures: s,
     allAcked: n.body.all_acked
   }
 }
 async function l(e, t) {
-  let n = s.Endpoints.APPLICATION_DISCLOSURES(e);
+  let n = a.Endpoints.APPLICATION_DISCLOSURES(e);
   await i.HTTP.post({
     url: n,
     body: {
@@ -44,9 +44,9 @@ async function l(e, t) {
 function u(e) {
   switch (e) {
     case r.ApplicationDisclosureType.IP_LOCATION:
-      return a.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE;
+      return s.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE;
     case r.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS:
-      return a.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE;
+      return s.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE;
     default:
       return null
   }

@@ -1,9 +1,9 @@
 "use strict";
 n.r(t);
 var i, r = n("512722"),
-  s = n.n(r),
-  a = n("392711"),
-  o = n.n(a),
+  a = n.n(r),
+  s = n("392711"),
+  o = n.n(s),
   l = n("442837"),
   u = n("377108"),
   d = n("524437"),
@@ -64,26 +64,26 @@ function C(e) {
     },
     partial: i,
     resetEditInfo: r,
-    local: a
+    local: s
   } = e;
-  m = !a;
+  m = !s;
   let o = A[n];
-  r && O(o), i ? (o.proto = (0, I.mergeTopLevelFields)(o.ProtoClass, o.proto, t), s()("string" != typeof o.proto, "UserSettingsProto cannot be a string")) : (o.proto = t, s()("string" != typeof o.proto, "UserSettingsProto cannot be a string"), o.editInfo.loaded = !0, o.editInfo.loading = !1)
+  r && O(o), i ? (o.proto = (0, I.mergeTopLevelFields)(o.ProtoClass, o.proto, t), a()("string" != typeof o.proto, "UserSettingsProto cannot be a string")) : (o.proto = t, a()("string" != typeof o.proto, "UserSettingsProto cannot be a string"), o.editInfo.loaded = !0, o.editInfo.loading = !1)
 }
 
 function R(e) {
   null != e && o().forEach(A, (t, n) => {
     var i, r;
-    let a = e[Number(n)];
-    if (null == a) return;
-    let o = null !== (i = null == a ? void 0 : a.proto) && void 0 !== i ? i : "",
+    let s = e[Number(n)];
+    if (null == s) return;
+    let o = null !== (i = null == s ? void 0 : s.proto) && void 0 !== i ? i : "",
       l = (0, I.b64ToProto)(t.ProtoClass, o);
     if (null == l) return;
-    t.proto = l, s()("string" != typeof t.proto, "UserSettingsProto cannot be a string");
-    let u = null !== (r = null == a ? void 0 : a.protoToSave) && void 0 !== r ? r : null;
-    if (null == u || null == a.offlineEditDataVersion) return;
+    t.proto = l, a()("string" != typeof t.proto, "UserSettingsProto cannot be a string");
+    let u = null !== (r = null == s ? void 0 : s.protoToSave) && void 0 !== r ? r : null;
+    if (null == u || null == s.offlineEditDataVersion) return;
     let d = (0, I.b64ToProto)(t.ProtoClass, u);
-    null != d && (t.editInfo.protoToSave = d, t.editInfo.offlineEditDataVersion = a.offlineEditDataVersion)
+    null != d && (t.editInfo.protoToSave = d, t.editInfo.offlineEditDataVersion = s.offlineEditDataVersion)
   })
 }
 class g extends(i = l.default.PersistedStore) {
@@ -122,12 +122,12 @@ class g extends(i = l.default.PersistedStore) {
     return null == t ? null : t.map(e => {
       var t, n, i;
       let r = null === (t = e.id) || void 0 === t ? void 0 : t.value,
-        s = null === (n = e.color) || void 0 === n ? void 0 : n.value;
+        a = null === (n = e.color) || void 0 === n ? void 0 : n.value;
       return {
         guildIds: e.guildIds,
         folderId: null == r ? void 0 : Number(r),
         folderName: null === (i = e.name) || void 0 === i ? void 0 : i.value,
-        folderColor: null == s ? void 0 : Number(s)
+        folderColor: null == a ? void 0 : Number(a)
       }
     })
   }
@@ -162,7 +162,7 @@ f(g, "displayName", "UserSettingsProtoStore"), f(g, "persistKey", "UserSettingsP
         changes: n
       }
     } = e;
-    s()(!__OVERLAY__, "this cannot run in the overlay");
+    a()(!__OVERLAY__, "this cannot run in the overlay");
     let i = A[t];
     return i.editInfo = {
       ...i.editInfo,
@@ -173,13 +173,13 @@ f(g, "displayName", "UserSettingsProtoStore"), f(g, "persistKey", "UserSettingsP
     let {
       userSettingsProto: t
     } = e;
-    null != t && (S.proto = t, s()("string" != typeof S.proto, "UserSettingsProto cannot be a string"));
+    null != t && (S.proto = t, a()("string" != typeof S.proto, "UserSettingsProto cannot be a string"));
     let {
       proto: n,
       isDirty: i,
       cleanupFuncs: r
     } = (0, I.runMigrations)(S.proto, E.default[T.UserSettingsTypes.PRELOADED_USER_SETTINGS]);
-    i && O(S), S.proto = n, s()("string" != typeof S.proto, "UserSettingsProto cannot be a string"), S.editInfo.triggeredMigrations = i, S.editInfo.cleanupFuncs = r, S.editInfo.loaded = !0, Object.values(A).forEach(e => {
+    i && O(S), S.proto = n, a()("string" != typeof S.proto, "UserSettingsProto cannot be a string"), S.editInfo.triggeredMigrations = i, S.editInfo.cleanupFuncs = r, S.editInfo.loaded = !0, Object.values(A).forEach(e => {
       e.lazyLoaded && (e.editInfo.loaded = !1, e.editInfo.loading = !1)
     }), p()
   },
@@ -189,7 +189,7 @@ f(g, "displayName", "UserSettingsProtoStore"), f(g, "persistKey", "UserSettingsP
     let {
       userSettingsProto: t
     } = e;
-    S.proto = (0, I.b64ToPreloadedUserSettingsProto)(t), s()("string" != typeof S.proto, "UserSettingsProto cannot be a string")
+    S.proto = (0, I.b64ToPreloadedUserSettingsProto)(t), a()("string" != typeof S.proto, "UserSettingsProto cannot be a string")
   },
   LOGOUT: function() {
     p(), Object.values(A).forEach(e => {

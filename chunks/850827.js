@@ -3,9 +3,9 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("512722"),
-  o = n.n(a),
+  a = n.n(r),
+  s = n("512722"),
+  o = n.n(s),
   l = n("442837"),
   u = n("481060"),
   d = n("730749"),
@@ -36,7 +36,7 @@ t.default = (0, d.default)(e => {
     activity: t,
     embeddedActivity: n,
     user: r,
-    applicationStream: a,
+    applicationStream: s,
     className: d,
     guildId: U,
     channelId: b,
@@ -49,7 +49,7 @@ t.default = (0, d.default)(e => {
   } = e, F = (0, m.default)(), H = (0, l.useStateFromStores)([I.default], () => {
     let e = I.default.getCurrentUser();
     return o()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
-  }), Y = B === S.Types.PROFILE || B === S.Types.PROFILE_V2 || B === S.Types.SIMPLIFIED_PROFILE, j = B === S.Types.STREAM_PREVIEW || null != a, W = B === S.Types.SIMPLIFIED_PROFILE || B === S.Types.BITE_SIZE_POPOUT, K = (0, h.default)(t), z = Y ? f.default.Align.END : f.default.Align.STRETCH, Z = K || j ? f.default.Direction.HORIZONTAL : f.default.Direction.VERTICAL, X = (null == t ? void 0 : t.type) === y.ActivityTypes.HANG_STATUS, Q = (0, l.useStateFromStores)([T.default, E.default], () => {
+  }), Y = B === S.Types.PROFILE || B === S.Types.PROFILE_V2 || B === S.Types.SIMPLIFIED_PROFILE, j = B === S.Types.STREAM_PREVIEW || null != s, W = B === S.Types.SIMPLIFIED_PROFILE || B === S.Types.BITE_SIZE_POPOUT, K = (0, h.default)(t), z = Y ? f.default.Align.END : f.default.Align.STRETCH, Z = K || j ? f.default.Direction.HORIZONTAL : f.default.Direction.VERTICAL, X = (null == t ? void 0 : t.type) === y.ActivityTypes.HANG_STATUS, Q = (0, l.useStateFromStores)([T.default, E.default], () => {
     var e;
     return X ? E.default.getChannel(null === (e = T.default.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), q = Z === f.default.Direction.VERTICAL;
@@ -58,7 +58,7 @@ t.default = (0, d.default)(e => {
     align: z,
     direction: Z,
     wrap: q ? f.default.Wrap.WRAP : f.default.Wrap.NO_WRAP,
-    className: s()(d, P.buttonsWrapper, q ? P.vertical : P.horizontal),
+    className: a()(d, P.buttonsWrapper, q ? P.vertical : P.horizontal),
     children: (() => {
       if ((0, A.default)(t)) return (0, i.jsx)(N.default, {
         platform: _.default.get(y.PlatformTypes.XBOX),
@@ -112,7 +112,7 @@ t.default = (0, d.default)(e => {
         isCurrentUser: H.id === r.id,
         color: w,
         look: k,
-        applicationStream: a,
+        applicationStream: s,
         onAction: V
       }, "watch-button") : X && null != Q ? (0, i.jsx)(C.default, {
         color: w,

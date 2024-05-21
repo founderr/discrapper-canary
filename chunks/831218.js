@@ -9,8 +9,8 @@ var l, a, s, i = n("735250"),
   f = n("902704"),
   h = n("481060"),
   m = n("925549"),
-  p = n("607070"),
-  C = n("367907"),
+  C = n("607070"),
+  p = n("367907"),
   g = n("453542"),
   E = n("762914"),
   _ = n("702321"),
@@ -24,8 +24,8 @@ var l, a, s, i = n("735250"),
   x = n("55589"),
   R = n("153124"),
   M = n("908773"),
-  y = n("151827"),
-  O = n("515753"),
+  O = n("151827"),
+  y = n("515753"),
   D = n("981631"),
   b = n("689938"),
   j = n("181235");
@@ -283,7 +283,7 @@ class U extends(a = r.Component) {
           num_users_visible: i.length,
           num_users_visible_with_mobile_indicator: o.filter(e => null != e && v.default.isMobileOnline(e)).length
         };
-      this.hasReportedAnalytics = !0, C.default.trackWithMetadata(D.AnalyticEvents.DM_LIST_VIEWED, {
+      this.hasReportedAnalytics = !0, p.default.trackWithMetadata(D.AnalyticEvents.DM_LIST_VIEWED, {
         ...d,
         ...(0, g.getNowPlayingAnalytics)(),
         changelog_dm_visible: u
@@ -307,7 +307,7 @@ class U extends(a = r.Component) {
         totalRowCount: s,
         preRenderedChildren: r
       } = this.state, o = l[n[t]];
-      return null == o ? null : (0, i.jsx)(O.default, {
+      return null == o ? null : (0, i.jsx)(y.default, {
         channel: o,
         selected: o.id === a,
         "aria-posinset": r + t + 1,
@@ -336,7 +336,7 @@ class U extends(a = r.Component) {
       } = e, {
         showDMHeader: n
       } = this.props;
-      return 0 !== t && n ? (0, i.jsxs)(y.default, {
+      return 0 !== t && n ? (0, i.jsxs)(O.default, {
         className: j.privateChannelsHeaderContainer,
         children: [(0, i.jsx)("span", {
           className: j.headerText,
@@ -371,11 +371,11 @@ t.default = e => {
     let e = x.default.getPrivateChannelIds(),
       t = (0, N.filterOutMessageRequestsAndSpamById)(e, [I.default, T.default]);
     return (0, E.filterBroadcastingGDMs)(t)
-  }, []), h = (0, c.useStateFromStoresObject)([p.default, A.default, L.default], () => ({
+  }, []), h = (0, c.useStateFromStoresObject)([C.default, A.default, L.default], () => ({
     theme: A.default.darkSidebar ? D.ThemeTypes.DARK : n,
-    keyboardModeEnabled: p.default.keyboardModeEnabled,
+    keyboardModeEnabled: C.default.keyboardModeEnabled,
     version: null != t ? "".concat(t, ":").concat(L.default.getPrivateChannelsVersion()) : L.default.getPrivateChannelsVersion()
-  })), m = r.useRef(null), C = r.useCallback(e => {
+  })), m = r.useRef(null), p = r.useCallback(e => {
     let t = m.current,
       n = document.querySelector(e);
     null != t && null != n && t.scrollIntoViewNode({
@@ -409,7 +409,7 @@ t.default = e => {
     scrollToStart: g,
     scrollToEnd: _,
     defaultFocused: (s + (a ? 1 : 0)).toString(),
-    setFocus: C
+    setFocus: p
   });
   return (0, i.jsx)(d.ListNavigatorProvider, {
     navigator: v,

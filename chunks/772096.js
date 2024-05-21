@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("411104");
 var i = n("392711"),
   r = n.n(i),
-  s = n("31775"),
-  a = n.n(s);
+  a = n("31775"),
+  s = n.n(a);
 n("711739");
 var o = n("302454"),
   l = n.n(o),
@@ -15,7 +15,7 @@ var o = n("302454"),
   d = n("823379"),
   _ = n("172244"),
   c = n("571989");
-let E = new(a())({
+let E = new(s())({
   max: 50
 });
 
@@ -59,10 +59,10 @@ function p(e) {
     if (("http:" === i || "https:" === i) && (null == n.hostname || 0 === n.hostname.length)) throw Error("no hostname");
     let r = (0, c.safelyMakeUrlHumanReadable)(n);
     n.username = "", n.password = "";
-    let s = (0, c.safelyMakeUrlHumanReadable)(n);
+    let a = (0, c.safelyMakeUrlHumanReadable)(n);
     return {
       target: r,
-      displayTarget: s
+      displayTarget: a
     }
   } catch (e) {
     return null
@@ -72,13 +72,13 @@ t.default = {
   ...l().defaultRules.link,
   match: (e, t, n) => t.allowLinks ? l().defaultRules.link.match(e, t, n) : null,
   parse(e, t, n) {
-    let [i, s, a, o] = e, c = () => ({
+    let [i, a, s, o] = e, c = () => ({
       type: _.AST_KEY.TEXT,
       content: i
-    }), E = I(a), T = I(s), O = I(null != o ? o : ""), C = E.whitespaceSanitized, R = T.fullySanitized, g = O.fullySanitized, L = R.trim();
+    }), E = I(s), T = I(a), O = I(null != o ? o : ""), C = E.whitespaceSanitized, R = T.fullySanitized, g = O.fullySanitized, L = R.trim();
     if (0 === C.trim().length || 0 === L.length) return c();
-    let v = p(l().unescapeUrl(a)),
-      D = (0, u.default)(s).length > 0 || (0, u.default)(o).length > 0;
+    let v = p(l().unescapeUrl(s)),
+      D = (0, u.default)(a).length > 0 || (0, u.default)(o).length > 0;
     if (null == v || D) return c();
     let M = {
         ...n,

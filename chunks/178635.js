@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("392711"),
   r = n.n(i),
-  s = n("433517"),
-  a = n("147913"),
+  a = n("433517"),
+  s = n("147913"),
   o = n("536442"),
   l = n("810788"),
   u = n("19780"),
@@ -68,12 +68,12 @@ function T(e) {
 
 function f(e) {
   if (null != e.storageKey) {
-    let t = s.Storage.get(e.storageKey);
+    let t = a.Storage.get(e.storageKey);
     if (null != t && Date.now() - t < e.cooldown) return !1
   }
   return !0
 }
-class S extends a.default {
+class S extends s.default {
   possiblyShowFeedbackModal(e, t) {
     (function(e) {
       var t;
@@ -87,7 +87,7 @@ class S extends a.default {
     super(...e), _(this, "feedbackTypeToShow", null), _(this, "showFeedbackModalDebounced", r().debounce(e => {
       null != this.feedbackTypeToShow && (! function(e) {
         let t = E[e];
-        null != t.storageKey && s.Storage.set(t.storageKey, Date.now())
+        null != t.storageKey && a.Storage.set(t.storageKey, Date.now())
       }(this.feedbackTypeToShow), this.feedbackTypeToShow = null, e())
     }, 200))
   }

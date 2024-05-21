@@ -22,8 +22,8 @@ t.default = e => {
       backgroundStyle: s = "always",
       children: h,
       icon: m,
-      name: p,
-      ariaLabel: C,
+      name: C,
+      ariaLabel: p,
       className: g,
       style: E,
       to: _,
@@ -32,9 +32,9 @@ t.default = e => {
       ...N
     } = e,
     T = (0, r.useHistory)();
-  if (null == m && null != p) {
+  if (null == m && null != C) {
     var A;
-    n = null !== (A = c[(t = (0, u.getAcronym)(p)).length - 1]) && void 0 !== A ? A : c[c.length - 1]
+    n = null !== (A = c[(t = (0, u.getAcronym)(C)).length - 1]) && void 0 !== A ? A : c[c.length - 1]
   }
   let L = a.useCallback(e => {
     if (null == _);
@@ -54,7 +54,7 @@ t.default = e => {
     className: i()(g, d.wrapper, {
       [d.selected]: I
     }),
-    "aria-label": null != C && "" !== C ? C : null != p ? p : "",
+    "aria-label": null != p && "" !== p ? p : null != C ? C : "",
     style: {
       ...E,
       fontSize: n

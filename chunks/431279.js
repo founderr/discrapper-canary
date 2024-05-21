@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i, r = n("735250"),
-  s = n("470079"),
-  a = n("374470"),
+  a = n("470079"),
+  s = n("374470"),
   o = n("481060"),
   l = n("40851"),
   u = n("261922"),
@@ -25,7 +25,7 @@ function T(e, t, n) {
   }) : e[t] = n, e
 }
 let f = "Zoomed Lazy Image Modal";
-class S extends(i = s.PureComponent) {
+class S extends(i = a.PureComponent) {
   render() {
     let {
       appContext: e,
@@ -57,7 +57,7 @@ class S extends(i = s.PureComponent) {
       } = t;
       e.preventDefault();
       let {
-        alt: s,
+        alt: a,
         src: l,
         original: u,
         width: _,
@@ -68,7 +68,7 @@ class S extends(i = s.PureComponent) {
         isWindowFocused: A,
         shouldHideMediaOptions: m = !1
       } = this.props, N = {
-        alt: s,
+        alt: a,
         src: l,
         original: null != u ? u : l,
         width: _,
@@ -82,7 +82,7 @@ class S extends(i = s.PureComponent) {
         } : void 0,
         trigger: i
       };
-      (0, a.isElement)(e.currentTarget) && e.currentTarget.blur(), (0, o.openModal)(e => (0, r.jsx)(o.ModalRoot, {
+      (0, s.isElement)(e.currentTarget) && e.currentTarget.blur(), (0, o.openModal)(e => (0, r.jsx)(o.ModalRoot, {
         className: I.modal,
         ...e,
         size: o.ModalSize.DYNAMIC,

@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("695464"),
-  a = n("28546"),
+  a = n("695464"),
+  s = n("28546"),
   o = n("98528"),
   l = n("889");
 let u = r.forwardRef(function(e, t) {
@@ -22,7 +22,7 @@ let u = r.forwardRef(function(e, t) {
     rowHeight: A,
     sectionHeaderHeight: m,
     sectionFooterHeight: N
-  } = e, p = r.useRef(!1), O = r.useRef(null), C = (0, a.useExpressionPickerStore)(e => e.searchQuery), R = n.useStore(e => e.activeCategoryIndex), g = (0, o.useSynchronizedActiveCategoryIndexForScrollPosition)({
+  } = e, p = r.useRef(!1), O = r.useRef(null), C = (0, s.useExpressionPickerStore)(e => e.searchQuery), R = n.useStore(e => e.activeCategoryIndex), g = (0, o.useSynchronizedActiveCategoryIndexForScrollPosition)({
     activeCategoryIndex: R,
     isScrolling: p,
     listRef: O,
@@ -72,7 +72,7 @@ let u = r.forwardRef(function(e, t) {
     }
   }), []), (0, i.jsxs)("div", {
     className: l.wrapper,
-    children: [C.length > 0 && !u && null != f ? f() : (0, i.jsx)(s.default, {
+    children: [C.length > 0 && !u && null != f ? f() : (0, i.jsx)(a.default, {
       role: "none presentation",
       listPadding: d,
       onScroll: g,

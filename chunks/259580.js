@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("531057"),
+  a = n.n(r),
+  s = n("531057"),
   o = n("605260"),
   l = n("465270"),
   u = n("865824"),
@@ -34,7 +34,7 @@ let E = {
     if (!0 === h ? N = E.DOWN : !1 === h && (N = E.RIGHT), m) {
       let e = {
         [E.UP]: u.ChevronSmallUpIcon,
-        [E.DOWN]: a.ChevronSmallDownIcon,
+        [E.DOWN]: s.ChevronSmallDownIcon,
         [E.LEFT]: o.ChevronSmallLeftIcon,
         [E.RIGHT]: l.ChevronSmallRightIcon
       } [N];
@@ -48,7 +48,7 @@ let E = {
       })
     }
     return (0, i.jsx)("svg", {
-      className: s()(f, T, N),
+      className: a()(f, T, N),
       width: n,
       height: r,
       viewBox: "0 0 24 24",

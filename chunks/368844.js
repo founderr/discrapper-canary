@@ -22,8 +22,8 @@ n.r(t), n.d(t, {
     return p
   }
 }), n("789020"), n("47120"), n("724458");
-var i, r, s = n("470079"),
-  a = n("118139"),
+var i, r, a = n("470079"),
+  s = n("118139"),
   o = n("144140"),
   l = n("695346"),
   u = n("592125"),
@@ -42,11 +42,11 @@ function S(e) {
     height: n,
     width: i
   } = e;
-  return (0, a.isImageFile)(t) && null != n && n > 0 && null != i && i > 0
+  return (0, s.isImageFile)(t) && null != n && n > 0 && null != i && i > 0
 }
 
 function h(e) {
-  return null != e && null != e && (0, a.isVideoFile)(e.filename) && null != e.proxy_url
+  return null != e && null != e && (0, s.isVideoFile)(e.filename) && null != e.proxy_url
 }
 
 function A(e) {
@@ -64,14 +64,14 @@ function m(e) {
         url: n,
         description: i,
         spoiler: r,
-        flags: s,
+        flags: a,
         width: o,
         height: l,
         filename: u,
         content_scan_version: d
       } = e;
       if (null == o || null == l) return null;
-      let _ = (0, a.isVideoFile)(u),
+      let _ = (0, s.isVideoFile)(u),
         E = null != e.flags && (0, c.hasFlag)(e.flags, f.MessageAttachmentFlags.IS_THUMBNAIL),
         I = null != t ? t : n;
       if (_) {
@@ -84,7 +84,7 @@ function m(e) {
         width: o,
         height: l,
         spoiler: null != r && r,
-        flags: s,
+        flags: a,
         contentScanVersion: d,
         alt: i,
         isVideo: _,
@@ -107,11 +107,11 @@ function N(e, t) {
       let {
         height: n,
         proxyURL: r,
-        url: s,
+        url: a,
         width: o
-      } = i, l = null != r && (0, a.isVideoUrl)(r);
+      } = i, l = null != r && (0, s.isVideoUrl)(r);
       return {
-        src: null != r && "" !== r ? r : s,
+        src: null != r && "" !== r ? r : a,
         height: n,
         width: o,
         spoiler: t,
@@ -127,7 +127,7 @@ function N(e, t) {
 function p(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = O(e, n);
-  return s.useMemo(() => {
+  return a.useMemo(() => {
     if (null == t) return [];
     if (!t.isMediaChannel()) return i;
     {
@@ -145,8 +145,8 @@ function O(e, t) {
 function C(e, t) {
   var n, i;
   let r = m(e),
-    s = N(e, t);
-  return null !== (i = null !== (n = r[0]) && void 0 !== n ? n : s[0]) && void 0 !== i ? i : null
+    a = N(e, t);
+  return null !== (i = null !== (n = r[0]) && void 0 !== n ? n : a[0]) && void 0 !== i ? i : null
 }
 
 function R(e, t) {
@@ -166,7 +166,7 @@ function g(e, t) {
 function L(e) {
   return e.reduce((e, t) => ({
     containsVideo: e.containsVideo || t.isVideo,
-    containsGif: e.containsGif || (0, a.isAnimatedImageUrl)(t.src)
+    containsGif: e.containsGif || (0, s.isAnimatedImageUrl)(t.src)
   }), {
     containsVideo: !1,
     containsGif: !1

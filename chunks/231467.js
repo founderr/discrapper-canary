@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("481060"),
   l = n("442837"),
   u = n("239091"),
@@ -41,11 +41,11 @@ function D(e) {
   let {
     wildcardDescriptors: t,
     primaryColor: n
-  } = e, s = t.filter(e => e !== g.EMPTY_WILDCARD).join(", "), a = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), l = (0, E.getAccessibleClanColor)(n, a.hex()), u = r.useRef(null), [d, _] = r.useState(!1);
+  } = e, a = t.filter(e => e !== g.EMPTY_WILDCARD).join(", "), s = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), l = (0, E.getAccessibleClanColor)(n, s.hex()), u = r.useRef(null), [d, _] = r.useState(!1);
   if (r.useEffect(() => {
       let e = u.current;
       null != e && null != e.offsetWidth && null != e.scrollWidth && _(e.offsetWidth < e.scrollWidth)
-    }, []), 0 === s.length) return null;
+    }, []), 0 === a.length) return null;
   let c = null != l ? {
     color: l.css()
   } : void 0;
@@ -56,7 +56,7 @@ function D(e) {
       className: v.clanInfoItem,
       children: "\xb7"
     }), (0, i.jsx)(o.Tooltip, {
-      text: s,
+      text: a,
       color: o.Tooltip.Colors.PRIMARY,
       shouldShow: d,
       children: e => (0, i.jsx)("span", {
@@ -64,7 +64,7 @@ function D(e) {
         style: c,
         className: v.wildCardText,
         ref: u,
-        children: s
+        children: a
       })
     })]
   })
@@ -77,7 +77,7 @@ function M(e) {
     className: r
   } = e;
   return (0, i.jsx)("div", {
-    className: a()(r, v.trait, {
+    className: s()(r, v.trait, {
       [v.highlightedTrait]: n
     }),
     children: (0, i.jsx)(o.Text, {
@@ -93,8 +93,8 @@ function y(e) {
   let {
     traits: t,
     traitsToHighlight: n,
-    expanded: s,
-    traitClassName: a
+    expanded: a,
+    traitClassName: s
   } = e, l = r.useMemo(() => new Set(n), [n]), u = r.useCallback(e => (0, i.jsx)(M, {
     trait: e,
     isHighlighted: l.has(e)
@@ -124,10 +124,10 @@ function y(e) {
       })
     })
   }), []);
-  return s ? (0, i.jsx)("div", {
+  return a ? (0, i.jsx)("div", {
     className: v.expandedTraitsContainer,
     children: t.map(e => (0, i.jsx)(M, {
-      className: a,
+      className: s,
       trait: e,
       isHighlighted: l.has(e)
     }, e))
@@ -144,7 +144,7 @@ function y(e) {
 function P(e) {
   var t, n;
   let {
-    clan: s,
+    clan: a,
     bannerComponent: l,
     expanded: u,
     isMember: _,
@@ -161,22 +161,22 @@ function P(e) {
       secondaryColor: M
     },
     bannerHash: P
-  } = s, U = (0, d.default)(s.games), b = (0, T.default)("clan_discovery_card"), G = L.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
-    count: s.memberCount
+  } = a, U = (0, d.default)(a.games), b = (0, T.default)("clan_discovery_card"), G = L.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+    count: a.memberCount
   }), w = null !== (t = p.default.getGuildIconURL({
-    id: s.id,
-    icon: s.icon,
+    id: a.id,
+    icon: a.icon,
     size: 64,
     canAnimate: !0
-  })) && void 0 !== t ? t : void 0, k = null != m ? m : (0, I.getClanBannerUrl)(s.id, P), B = null == l && null == k ? {
+  })) && void 0 !== t ? t : void 0, k = null != m ? m : (0, I.getClanBannerUrl)(a.id, P), B = null == l && null == k ? {
     background: "linear-gradient(90deg, ".concat(R, ", ").concat(M, ")")
   } : void 0, V = null != l ? l : null != k ? (0, i.jsx)("img", {
     alt: L.default.Messages.CLAN_LOOK_BANNER,
     src: k,
     className: v.bannerImage
-  }) : null, x = r.useMemo(() => (0, g.getSortedTraits)(s.traits, c), [s.traits, c]);
+  }) : null, x = r.useMemo(() => (0, g.getSortedTraits)(a.traits, c), [a.traits, c]);
   return (0, i.jsxs)("div", {
-    className: a()(v.card, h),
+    className: s()(v.card, h),
     children: [(0, i.jsx)("div", {
       className: v.cardBrandingHeader,
       style: B,
@@ -188,7 +188,7 @@ function P(e) {
         children: [(0, i.jsxs)("div", {
           className: v.cardNameAndTagWrapper,
           children: [(0, i.jsx)(f.ClanGuildIconSimple, {
-            guildName: s.name,
+            guildName: a.name,
             guildIconURL: w,
             iconSize: 64,
             className: v.clanIcon
@@ -219,7 +219,7 @@ function P(e) {
           variant: "heading-md/medium",
           color: "header-primary",
           lineClamp: 1,
-          children: s.name
+          children: a.name
         }), (0, i.jsxs)("div", {
           className: v.clanInfoRow,
           children: [(0, i.jsx)(o.Text, {
@@ -234,10 +234,10 @@ function P(e) {
             variant: "text-xs/normal",
             color: "text-secondary",
             className: v.clanInfoItem,
-            children: null !== (n = (0, g.getPlaystyleTitle)(s.playstyle)) && void 0 !== n ? n : L.default.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+            children: null !== (n = (0, g.getPlaystyleTitle)(a.playstyle)) && void 0 !== n ? n : L.default.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
           }), (0, i.jsx)(D, {
-            wildcardDescriptors: s.wildcardDescriptors,
-            primaryColor: s.branding.primaryColor
+            wildcardDescriptors: a.wildcardDescriptors,
+            primaryColor: a.branding.primaryColor
           })]
         })]
       }), (0, i.jsx)("div", {
@@ -245,7 +245,7 @@ function P(e) {
         children: (0, i.jsx)(o.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: s.description
+          children: a.description
         })
       }), (0, i.jsx)(y, {
         traits: x,
@@ -282,14 +282,14 @@ function P(e) {
 t.default = function(e) {
   let {
     style: t,
-    prioritizedGameIds: s,
-    ...a
+    prioritizedGameIds: a,
+    ...s
   } = e, {
     clan: d,
     affinity: E,
     index: I,
     source: T
-  } = a, f = (0, l.useStateFromStores)([N.default], () => N.default.getCurrentUser()), S = (0, l.useStateFromStores)([m.default], () => m.default.isMember(d.id, null == f ? void 0 : f.id), [d, f]), p = r.useCallback(() => {
+  } = s, f = (0, l.useStateFromStores)([N.default], () => N.default.getCurrentUser()), S = (0, l.useStateFromStores)([m.default], () => m.default.isMember(d.id, null == f ? void 0 : f.id), [d, f]), p = r.useCallback(() => {
     let e = null != h.default.getRequest(d.id);
     if ((0, _.trackClanDiscoveryCardClicked)({
         guildId: d.id,
@@ -307,8 +307,8 @@ t.default = function(e) {
     }(0, c.openClanApplyFlow)(d.id, d, {
       source: T,
       location: R.AnalyticsLocations.CLAN_DISCOVERY_CARD
-    }, s)
-  }, [d, S, E, I, T, s]), O = r.useCallback(e => {
+    }, a)
+  }, [d, S, E, I, T, a]), O = r.useCallback(e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -325,9 +325,9 @@ t.default = function(e) {
     style: t,
     onContextMenu: O,
     children: (0, i.jsx)(P, {
-      ...a,
+      ...s,
       isMember: S,
-      prioritizedGameIds: s,
+      prioritizedGameIds: a,
       showBrandingFooter: !0
     })
   })

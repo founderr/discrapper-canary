@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   COMMON_CONFETTI_COLORS: function() {
-    return s
+    return a
   },
   COMMON_CONFETTI_ENVIRONMENT: function() {
     return u
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return o
   },
   COMMON_CONFETTI_SPRITES: function() {
-    return a
+    return s
   },
   DUCK_CONFETTI_SPRITE: function() {
     return r
@@ -21,8 +21,8 @@ n.r(t), n.d(t, {
 });
 var i = n("887024");
 let r = n("177351"),
-  s = ["#FF73FA", "#FFC0FF", "#FFD836", "#FF9A15", "#A5F7DE", "#51BC9D", "#AEC7FF", "#3E70DD"],
-  a = [n("294521"), r, n("817812"), n("602002"), n("673910"), n("337242"), n("678282"), {
+  a = ["#FF73FA", "#FFC0FF", "#FFD836", "#FF9A15", "#A5F7DE", "#51BC9D", "#AEC7FF", "#3E70DD"],
+  s = [n("294521"), r, n("817812"), n("602002"), n("673910"), n("337242"), n("678282"), {
     src: n("688815"),
     colorize: !1
   }],

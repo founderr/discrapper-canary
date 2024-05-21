@@ -17,8 +17,8 @@ var a = n("120356"),
   f = n("201895"),
   h = n("305325"),
   m = n("281956"),
-  p = n("66999"),
-  C = n("506936"),
+  C = n("66999"),
+  p = n("506936"),
   g = n("359110"),
   E = n("922482"),
   _ = n("431328"),
@@ -32,8 +32,8 @@ var a = n("120356"),
   x = n("607744"),
   R = n("496675"),
   M = n("306680"),
-  y = n("9156"),
-  O = n("979651"),
+  O = n("9156"),
+  y = n("979651"),
   D = n("514342"),
   b = n("974029"),
   j = n("934415"),
@@ -67,7 +67,7 @@ class W extends P.default {
     let {
       channel: e
     } = this.props;
-    return (0, j.isChannelFull)(e, O.default, v.default)
+    return (0, j.isChannelFull)(e, y.default, v.default)
   }
   getModeClass() {
     let {
@@ -112,8 +112,8 @@ class W extends P.default {
       canReorderChannel: c,
       canMoveMembers: h,
       stageInstance: m,
-      isSubscriptionGated: p,
-      needSubscriptionToAccess: C,
+      isSubscriptionGated: C,
+      needSubscriptionToAccess: p,
       unread: g,
       resolvedUnreadSetting: E,
       mentionCount: _,
@@ -165,8 +165,8 @@ class W extends P.default {
                 unread: g,
                 mentionCount: _,
                 userCount: N,
-                isSubscriptionGated: p,
-                needSubscriptionToAccess: C
+                isSubscriptionGated: C,
+                needSubscriptionToAccess: p
               }),
               ...u,
               children: [S && this.renderAcceptSuggestionButton(), S && this.renderRemoveSuggestionButton(), !S && this.renderOpenChatButton(), !S && this.renderInviteButton(), !S && this.renderEditButton(), !S && this.renderChannelInfo()]
@@ -220,8 +220,8 @@ class W extends P.default {
       } = this.props, {
         shouldShowGuildVerificationPopout: t
       } = this.state;
-      if (t) return (0, l.jsx)(C.default, {
-        type: C.GuildVerificationPopoutTypes.VOICE,
+      if (t) return (0, l.jsx)(p.default, {
+        type: p.GuildVerificationPopoutTypes.VOICE,
         guildId: e.guild_id,
         closePopout: this.closeGuildVerificationPopout
       });
@@ -286,7 +286,7 @@ function z(e) {
   } = e, u = (0, i.useStateFromStoresObject)([M.default], () => ({
     unread: M.default.hasUnread(n.id),
     mentionCount: M.default.getMentionCount(n.id)
-  })), d = (0, i.useStateFromStores)([y.default], () => y.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
+  })), d = (0, i.useStateFromStores)([O.default], () => O.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
     let e = L.default.getChannel(n.parent_id),
       l = x.default.getCheck(n.guild_id);
     return {
@@ -297,22 +297,22 @@ function z(e) {
       bypassLimit: R.default.can(B.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), m = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, _.useStageParticipantsCount)(n.id, S.StageChannelParticipantNamedIndex.AUDIENCE), {
+  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), m = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), p = (0, _.useStageParticipantsCount)(n.id, S.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E
-  } = (0, p.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), D = (0, G.default)({
+  } = (0, C.default)(n.id), v = (0, i.useStateFromStores)([O.default], () => O.default.isFavorite(t.id, n.id)), y = (0, N.getStageHasMedia)(n.id), D = (0, G.default)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: r,
     voiceStates: o,
     isSubscriptionGated: g,
     needSubscriptionToAccess: E,
-    enableConnectedUserLimit: O || n.userLimit > 0 && n.userLimit < B.MAX_STAGE_VOICE_USER_LIMIT
+    enableConnectedUserLimit: y || n.userLimit > 0 && n.userLimit < B.MAX_STAGE_VOICE_USER_LIMIT
   }), b = e.connected && null == D;
   return (0, l.jsx)(K, {
     categoryCollapsed: f,
     connectAction: h,
-    numAudience: C,
+    numAudience: p,
     stageInstance: m,
     isSubscriptionGated: g,
     needSubscriptionToAccess: E,

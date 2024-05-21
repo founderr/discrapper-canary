@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("481060"),
   h = n("210887"),
   m = n("19780"),
-  p = n("72416"),
-  C = n("476221"),
+  C = n("72416"),
+  p = n("476221"),
   g = n("236756"),
   E = n("981631"),
   _ = n("854903");
@@ -59,7 +59,7 @@ class A extends a.PureComponent {
     } = this.props, {
       connectionStatus: a,
       connectionStatusText: s
-    } = C.default.getStatus(n, t);
+    } = p.default.getStatus(n, t);
     return this.renderPopoutTarget(t => {
       let {
         onClick: n
@@ -120,7 +120,7 @@ function L(e) {
     smallPing: n,
     ...a
   } = e;
-  if (!(0, f.useRedesignIconContext)().enabled) return (0, l.jsx)(p.default, {
+  if (!(0, f.useRedesignIconContext)().enabled) return (0, l.jsx)(C.default, {
     className: i()(_.ping, {
       [_.smallPing]: n
     }),

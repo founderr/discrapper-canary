@@ -19,8 +19,8 @@ var l = n("735250"),
   f = n("727258"),
   h = n("662146"),
   m = n("981631"),
-  p = n("689938"),
-  C = n("990237");
+  C = n("689938"),
+  p = n("990237");
 
 function g(e) {
   let t = a.useRef(null),
@@ -64,17 +64,17 @@ function _(e) {
     canDrop: d,
     isOver: c
   }, h] = (0, u.useDrop)(o), m = g([
-    [d, C.autoPointerEvents],
-    [c, C.dragOver]
+    [d, p.autoPointerEvents],
+    [c, p.dragOver]
   ]);
   return (0, l.jsx)("div", {
     ref: e => {
       m.current = e, h(e)
     },
-    "data-dnd-name": p.default.Messages.DND_DROP_ABOVE.format({
+    "data-dnd-name": C.default.Messages.DND_DROP_ABOVE.format({
       itemName: t
     }),
-    className: i()(C.target)
+    className: i()(p.target)
   })
 }
 
@@ -91,23 +91,23 @@ function S(e) {
     null == s || s(o)
   }, [s, o]);
   let c = g([
-    [r, C.autoPointerEvents],
-    [o, C.dragOver]
+    [r, p.autoPointerEvents],
+    [o, p.dragOver]
   ]);
   return (0, l.jsx)(h.default, {
     text: t,
     shouldShow: o,
     forceOpen: o,
     disableWrapper: !0,
-    tooltipClass: C.centerTargetTooltip,
+    tooltipClass: p.centerTargetTooltip,
     children: (0, l.jsx)("div", {
       ref: e => {
         c.current = e, d(e)
       },
-      "data-dnd-name": p.default.Messages.DND_DROP_COMBINE.format({
+      "data-dnd-name": C.default.Messages.DND_DROP_COMBINE.format({
         itemName: t
       }),
-      className: i()(C.centerTarget, {})
+      className: i()(p.centerTarget, {})
     })
   })
 }
@@ -120,23 +120,23 @@ function I(e) {
     canDrop: a,
     isOver: s
   }, r] = (0, u.useDrop)(() => E([f.GuildsNodeType.GUILD], n, !0, !0)), o = g([
-    [s, C.wrapperOver]
+    [s, p.wrapperOver]
   ]), d = g([
-    [s, C.dragOver],
-    [a, C.autoPointerEvents]
+    [s, p.dragOver],
+    [a, p.autoPointerEvents]
   ]);
   return (0, l.jsx)("div", {
     ref: o,
-    className: i()(C.folderEndWrapper),
+    className: i()(p.folderEndWrapper),
     "aria-hidden": !0,
     children: (0, l.jsx)("div", {
-      className: C.folderTarget,
+      className: p.folderTarget,
       children: (0, l.jsx)("div", {
         ref: e => {
           d.current = e, r(e)
         },
         "aria-label": "At end of ".concat(t),
-        className: i()(C.target)
+        className: i()(p.target)
       })
     })
   })
@@ -162,7 +162,7 @@ t.default = a.memo(function(e) {
     onDragOverChanged: i
   } = e, r = !a && null == n.parentId;
   return (0, l.jsxs)("div", {
-    className: C.wrapper,
+    className: p.wrapper,
     "aria-hidden": !0,
     children: [(0, l.jsx)(_, {
       name: t,

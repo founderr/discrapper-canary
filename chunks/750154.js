@@ -15,8 +15,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("314897"),
   r = n("592125"),
-  s = n("430824"),
-  a = n("88751"),
+  a = n("430824"),
+  s = n("88751"),
   o = n("157925"),
   l = n("981631");
 let u = "stage:";
@@ -24,8 +24,8 @@ let u = "stage:";
 function d(e, t) {
   let n = 0,
     r = i.default.getId();
-  a.default.isSpeaker(r, e.id) && (n |= 1);
-  let o = s.default.getGuild(e.getGuildId());
+  s.default.isSpeaker(r, e.id) && (n |= 1);
+  let o = a.default.getGuild(e.getGuildId());
   null != o && (o.hasFeature(l.GuildFeatures.PARTNERED) && (n |= 2), o.hasFeature(l.GuildFeatures.VERIFIED) && (n |= 4));
   let d = n.toString(16);
   return "".concat(u).concat(e.guild_id, ":").concat(e.id, ":").concat(d, ":").concat(t.id)
@@ -39,15 +39,15 @@ function _(e) {
   } = e.party;
   try {
     if (null == t || !t.startsWith(u)) return;
-    let [, e, i, r, s] = t.split(":"), a = parseInt(r, 16);
+    let [, e, i, r, a] = t.split(":"), s = parseInt(r, 16);
     return {
       guildId: e,
       channelId: i,
       size: n,
-      userIsSpeaker: (1 & a) != 0,
-      guildIsPartnered: (2 & a) != 0,
-      guildIsVerified: (4 & a) != 0,
-      stageInstanceId: s
+      userIsSpeaker: (1 & s) != 0,
+      guildIsPartnered: (2 & s) != 0,
+      guildIsVerified: (4 & s) != 0,
+      stageInstanceId: a
     }
   } catch (e) {
     return null

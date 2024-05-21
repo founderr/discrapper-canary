@@ -3,16 +3,16 @@ n.r(t), n("47120");
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  s = n("586724");
-let a = e => {
+  a = n("586724");
+let s = e => {
   let {
     onChange: t,
     label: n,
-    subtitle: a,
+    subtitle: s,
     selected: o
   } = e;
   return (0, i.jsx)("div", {
-    className: s.checkboxRow,
+    className: a.checkboxRow,
     children: (0, i.jsxs)(r.Checkbox, {
       type: r.Checkbox.Types.INVERTED,
       onChange: () => t(),
@@ -21,10 +21,10 @@ let a = e => {
         color: "interactive-active",
         variant: "text-md/semibold",
         children: n
-      }), null != a ? (0, i.jsx)(r.Text, {
+      }), null != s ? (0, i.jsx)(r.Text, {
         color: "interactive-active",
         variant: "text-sm/normal",
-        children: a
+        children: s
       }) : null]
     })
   })
@@ -37,14 +37,14 @@ t.default = e => {
   } = e;
   if ((null == t ? void 0 : t.type) !== "checkbox") return null;
   let {
-    data: s
+    data: a
   } = t;
   return (0, i.jsx)("div", {
-    children: s.map((e, t) => {
-      let [s, o, l] = e;
-      return (0, i.jsx)(a, {
-        onChange: () => r(s, o),
-        selected: s in n,
+    children: a.map((e, t) => {
+      let [a, o, l] = e;
+      return (0, i.jsx)(s, {
+        onChange: () => r(a, o),
+        selected: a in n,
         label: o,
         subtitle: l
       }, "".concat(t, "+button"))

@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("442837"),
   r = n("652515"),
-  s = n("200876"),
-  a = n("674180"),
+  a = n("200876"),
+  s = n("674180"),
   o = n("160404"),
   l = n("430824"),
   u = n("772021"),
@@ -22,9 +22,9 @@ var i = n("442837"),
 function _(e) {
   let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.default, o.default], i = t.getGuild(e);
   if (null == i) return !1;
-  let r = (0, s.isCreatorMonetizationEnabledGuild)(i),
-    a = i.hasFeature(d.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
-  return !!(r && a || n.isViewingServerShop(e)) || !1
+  let r = (0, a.isCreatorMonetizationEnabledGuild)(i),
+    s = i.hasFeature(d.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
+  return !!(r && s || n.isViewingServerShop(e)) || !1
 }
 
 function c(e, t) {
@@ -36,7 +36,7 @@ function E(e) {
     n = (0, i.useStateFromStores)([l.default, o.default], () => _(e, [l.default, o.default]), [e]),
     {
       shouldHideGuildPurchaseEntryPoints: r
-    } = (0, a.useShouldHideGuildPurchaseEntryPoints)(e);
+    } = (0, s.useShouldHideGuildPurchaseEntryPoints)(e);
   return !r && (n || t)
 }
 

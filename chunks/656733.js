@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("757143"), n("47120");
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("377108"),
   u = n("570140"),
   d = n("187500"),
@@ -60,12 +60,12 @@ class C extends(i = o.default.Store) {
     return p
   }
 }
-a = "GIFPickerViewStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
-  value: a,
+s = "GIFPickerViewStore", (a = "displayName") in(r = C) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new C(u.default, {
+}) : r[a] = s, t.default = new C(u.default, {
   GIF_PICKER_INITIALIZE: function(e) {
     f = e.analyticsID
   },
@@ -80,16 +80,16 @@ a = "GIFPickerViewStore", (s = "displayName") in(r = C) ? Object.defineProperty(
         height: n,
         src: i,
         gif_src: r,
-        url: s,
-        id: a
+        url: a,
+        id: s
       } = e;
       return {
         width: t,
         height: n,
         src: O(i),
         gifSrc: O(r),
-        url: s,
-        id: a,
+        url: a,
+        id: s,
         format: ! function(e) {
           switch (e) {
             case I.FIXED_HEIGHT_MP4:

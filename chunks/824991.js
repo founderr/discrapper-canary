@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _
   },
   ClanUpsellInviteByline: function() {
-    return C
+    return p
   },
   ClanUpsellMessage: function() {
     return E
@@ -28,19 +28,19 @@ var l = n("735250"),
   f = n("981631"),
   h = n("921944"),
   m = n("689938"),
-  p = n("207030");
+  C = n("207030");
 
-function C() {
+function p() {
   return (0, l.jsxs)("div", {
-    className: p.inviteContainer,
+    className: C.inviteContainer,
     children: [(0, l.jsx)(s.EnvelopeIcon, {
       color: "currentColor",
       height: 12,
       width: 12,
-      className: p.envelope
+      className: C.envelope
     }), (0, l.jsx)(i.Text, {
       variant: "text-xs/bold",
-      className: p.invite,
+      className: C.invite,
       children: m.default.Messages.CLAN_UPSELL_INVITE
     })]
   })
@@ -54,7 +54,7 @@ function g(e) {
     children: (0, l.jsx)(i.Heading, {
       variant: "heading-md/semibold",
       color: "header-primary",
-      className: p.title,
+      className: C.title,
       children: t
     })
   })
@@ -67,7 +67,7 @@ function E(e) {
   return (0, l.jsx)(i.Text, {
     variant: "text-xs/normal",
     color: "text-muted",
-    className: p.message,
+    className: C.message,
     children: t
   })
 }
@@ -81,7 +81,7 @@ function _(e) {
     look: i.ButtonLooks.FILLED,
     size: i.ButtonSizes.SMALL,
     color: i.ButtonColors.BRAND_NEW,
-    className: p.button,
+    className: C.button,
     onClick: t,
     children: (0, l.jsx)(i.Text, {
       variant: "text-sm/semibold",
@@ -104,7 +104,7 @@ function S(e) {
     })
   }, [t.id]);
   let i = s === c.GENSHIN_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : s === c.VALORANT_ID ? m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
-    C = a.useCallback(() => (0, l.jsx)(E, {
+    p = a.useCallback(() => (0, l.jsx)(E, {
       message: m.default.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
     }), []),
     S = a.useCallback(() => (0, l.jsx)(g, {
@@ -120,11 +120,11 @@ function S(e) {
       onClick: I
     }), [I]);
   return (0, l.jsx)(o.default, {
-    className: p.notice,
+    className: C.notice,
     guild: t,
     onDismissed: () => n(h.ContentDismissActionType.DISMISS),
     title: S,
-    message: C,
+    message: p,
     cta: N,
     trackingSource: f.ChannelNoticeCtaSources.CLAN_ADMIN_UPSELL,
     type: f.ChannelNoticeTypes.CLAN_ADMIN_UPSELL

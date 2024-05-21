@@ -2,12 +2,12 @@
 n.r(t);
 var i = n("392711"),
   r = n.n(i),
-  s = n("250407"),
-  a = n("710845"),
+  a = n("250407"),
+  s = n("710845"),
   o = n("914010"),
   l = n("70956"),
   u = n("287328");
-let d = new a.default("NonGuildVersions");
+let d = new s.default("NonGuildVersions");
 t.default = new class e {
   async getCommittedVersions() {
     try {
@@ -36,7 +36,7 @@ t.default = new class e {
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : e[t] = n, !(0, s.isCacheEnabled)()) return;
+      }) : e[t] = n, !(0, a.isCacheEnabled)()) return;
     o.default.addChangeListener(r().throttle(() => {
       var e;
       null === (e = u.default.database()) || void 0 === e || e.transaction(e => {

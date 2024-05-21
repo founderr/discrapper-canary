@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("207561"),
+  a = n.n(r),
+  s = n("207561"),
   o = n("373793"),
   l = n("243814"),
   u = n("260034"),
@@ -28,7 +28,7 @@ function f(e) {
   return (0, i.jsxs)("div", {
     className: T.scope,
     children: [(0, i.jsx)("div", {
-      className: s()(T.iconWrapper, r ? T.fakeScopeIcon : T.scopeIcon),
+      className: a()(T.iconWrapper, r ? T.fakeScopeIcon : T.scopeIcon),
       children: r ? (0, i.jsx)(c.default, {
         className: T.icon
       }) : (0, i.jsx)(_.default, {
@@ -53,15 +53,15 @@ function S(e) {
   let {
     application: n,
     accountScopes: r,
-    requestedScopes: s,
+    requestedScopes: a,
     integrationType: d,
     errors: _,
     isTrustedName: c = !1
-  } = e, S = (0, a.useLazyValue)(() => E.FAKE_SCOPES[Math.floor(Math.random() * E.FAKE_SCOPES.length)]);
+  } = e, S = (0, s.useLazyValue)(() => E.FAKE_SCOPES[Math.floor(Math.random() * E.FAKE_SCOPES.length)]);
   if (0 === r.length) return null;
   let h = S(),
     A = c ? I.default.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : I.default.Messages.OAUTH2_SCOPES_LABEL,
-    m = d === o.ApplicationIntegrationType.USER_INSTALL && s.includes(l.OAuth2Scopes.APPLICATIONS_COMMANDS);
+    m = d === o.ApplicationIntegrationType.USER_INSTALL && a.includes(l.OAuth2Scopes.APPLICATIONS_COMMANDS);
   return (0, i.jsxs)("div", {
     className: T.scopes,
     children: [(0, i.jsx)(u.Heading, {

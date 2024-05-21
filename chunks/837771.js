@@ -22,8 +22,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("831209"),
-  s = n("481060"),
-  a = n("812206"),
+  a = n("481060"),
+  s = n("812206"),
   o = n("557135"),
   l = n("471445"),
   u = n("66999"),
@@ -73,21 +73,21 @@ function j(e, t) {
       let r = A.default.getNick(i, n.id);
       return null !== (t = null != r ? r : M.default.getGlobalName(n)) && void 0 !== t ? t : M.default.getUserTag(n)
     }).filter(e => null != e)),
-    s = r.length;
-  if (s > 0) return 1 === s ? r[0] : (2 === s ? H.default.Messages.USER_SUMMARY_TWO : 3 === s ? H.default.Messages.USER_SUMMARY_THREE : H.default.Messages.USER_SUMMARY_THREE_AND_OTHERS).format({
+    a = r.length;
+  if (a > 0) return 1 === a ? r[0] : (2 === a ? H.default.Messages.USER_SUMMARY_TWO : 3 === a ? H.default.Messages.USER_SUMMARY_THREE : H.default.Messages.USER_SUMMARY_THREE_AND_OTHERS).format({
     first: r[0],
     second: null == r ? void 0 : r[1],
     third: null == r ? void 0 : r[2],
-    count: s - 3
+    count: a - 3
   })
 }
 
 function W(e, t) {
   let {
     category: n
-  } = e, i = (0, U.useSortUserIdsByAffinity)(n === V.CardCategory.HANGOUT ? null == e ? void 0 : e.userIds : []), r = (0, U.useSortUserIdsByAffinity)(n === V.CardCategory.HANGOUT ? null == e ? void 0 : e.streamUserIds : []), s = (0, U.useSortUserIdsByAffinity)(n === V.CardCategory.GAMING ? null == e ? void 0 : e.gameUserIds : []), a = (0, y.default)(e), {
+  } = e, i = (0, U.useSortUserIdsByAffinity)(n === V.CardCategory.HANGOUT ? null == e ? void 0 : e.userIds : []), r = (0, U.useSortUserIdsByAffinity)(n === V.CardCategory.HANGOUT ? null == e ? void 0 : e.streamUserIds : []), a = (0, U.useSortUserIdsByAffinity)(n === V.CardCategory.GAMING ? null == e ? void 0 : e.gameUserIds : []), s = (0, y.default)(e), {
     usersToShow: o
-  } = (0, U.useGetEventCardUsers)(a), l = (0, U.useSortUserIdsByAffinity)(n === V.CardCategory.HANGOUT && e.isStage ? o.map(e => e.id) : []), u = new Set;
+  } = (0, U.useGetEventCardUsers)(s), l = (0, U.useSortUserIdsByAffinity)(n === V.CardCategory.HANGOUT && e.isStage ? o.map(e => e.id) : []), u = new Set;
   n === V.CardCategory.EMBEDDED_ACTIVITY && e.embeddedActivities.forEach(e => {
     u = new Set([...u, ...e.userIds])
   });
@@ -106,7 +106,7 @@ function W(e, t) {
     case V.CardCategory.EMBEDDED_ACTIVITY:
       return j(d, t);
     case V.CardCategory.GAMING:
-      return j(s, t);
+      return j(a, t);
     default:
       return null
   }
@@ -127,18 +127,18 @@ function K(e) {
       return [];
     case V.CardCategory.HANGOUT:
       let {
-        streamUserIds: r, userIds: s, channelId: a, isStage: o
+        streamUserIds: r, userIds: a, channelId: s, isStage: o
       } = e;
       if (o) {
         var l;
         return [{
           icon: R.default,
-          count: null !== (l = T.default.getParticipantCount(a, f.StageChannelParticipantNamedIndex.AUDIENCE)) && void 0 !== l ? l : 0
+          count: null !== (l = T.default.getParticipantCount(s, f.StageChannelParticipantNamedIndex.AUDIENCE)) && void 0 !== l ? l : 0
         }]
       }
       if (r.length > 0) return [{
         icon: g.default,
-        count: s.length > 0 ? s.length : null
+        count: a.length > 0 ? a.length : null
       }];
       return [];
     case V.CardCategory.EMBEDDED_ACTIVITY:
@@ -175,7 +175,7 @@ function z(e, t, n) {
       } = e;
       if (null == d[0].application_id) return (0, i.jsx)(C.default, {});
       return (0, i.jsx)(O.default, {
-        game: a.default.getApplication(d[0].application_id),
+        game: s.default.getApplication(d[0].application_id),
         size: "xl",
         className: Y.gameIcon
       });
@@ -195,13 +195,13 @@ function z(e, t, n) {
       } = e;
       if (null == _[0].applicationId) return (0, i.jsx)(L.default, {});
       return (0, i.jsx)(O.default, {
-        game: a.default.getApplication(_[0].applicationId),
+        game: s.default.getApplication(_[0].applicationId),
         size: "xl",
         className: Y.gameIcon
       });
     case V.CardCategory.HANGOUT: {
       let {
-        streamUserIds: a,
+        streamUserIds: s,
         userIds: o,
         channelHasVideo: l,
         isStage: d
@@ -215,14 +215,14 @@ function z(e, t, n) {
           users: _
         })
       }
-      if (a.length > 0) {
+      if (s.length > 0) {
         let e;
         return (0, i.jsxs)(i.Fragment, {
           children: [null != n ? (0, i.jsx)("img", {
             src: n,
             alt: "",
             className: Y.streamPreview
-          }) : (0, i.jsx)(s.Spinner, {
+          }) : (0, i.jsx)(a.Spinner, {
             className: Y.streamPreview
           }), (e = Y.liveBadge, (0, i.jsx)(D.TextBadge, {
             text: H.default.Messages.LIVE,
@@ -255,7 +255,7 @@ function Z(e) {
       return (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(C.default, {
           className: Y.categoryIcon
-        }), (0, i.jsx)(s.Text, {
+        }), (0, i.jsx)(a.Text, {
           variant: "text-xs/medium",
           color: "text-secondary",
           className: Y.ellipsis,
@@ -264,7 +264,7 @@ function Z(e) {
           })
         }), "•", null != c && (0, i.jsx)(c, {
           className: Y.categoryIcon
-        }), (0, i.jsx)(s.Text, {
+        }), (0, i.jsx)(a.Text, {
           variant: "text-xs/medium",
           color: "text-secondary",
           className: Y.ellipsis,
@@ -278,7 +278,7 @@ function Z(e) {
       if (null != A && null != m) return (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(A, {
           className: Y.categoryIcon
-        }), (0, i.jsx)(s.Text, {
+        }), (0, i.jsx)(a.Text, {
           variant: "text-xs/medium",
           color: "text-secondary",
           className: Y.ellipsis,
@@ -286,7 +286,7 @@ function Z(e) {
         }), null != E && E > 0 && (0, i.jsxs)(i.Fragment, {
           children: ["•", (0, i.jsx)(g.default, {
             className: Y.categoryIcon
-          }), (0, i.jsx)(s.Text, {
+          }), (0, i.jsx)(a.Text, {
             variant: "text-xs/medium",
             color: "text-secondary",
             className: Y.ellipsis,
@@ -302,16 +302,16 @@ function Z(e) {
       return (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(L.default, {
           className: Y.categoryIcon
-        }), (0, i.jsx)(s.Text, {
+        }), (0, i.jsx)(a.Text, {
           variant: "text-xs/medium",
           color: "text-secondary",
           className: Y.ellipsis,
-          children: 1 === N.length ? null === (n = a.default.getApplication(N[0].applicationId)) || void 0 === n ? void 0 : n.name : H.default.Messages.MULTIPLE_ACTIVITIES_IN_CHANNEL.format({
+          children: 1 === N.length ? null === (n = s.default.getApplication(N[0].applicationId)) || void 0 === n ? void 0 : n.name : H.default.Messages.MULTIPLE_ACTIVITIES_IN_CHANNEL.format({
             numActivities: N.length
           })
         }), "•", null != c && (0, i.jsx)(c, {
           className: Y.categoryIcon
-        }), (0, i.jsx)(s.Text, {
+        }), (0, i.jsx)(a.Text, {
           variant: "text-xs/medium",
           color: "text-secondary",
           className: Y.ellipsis,
@@ -325,7 +325,7 @@ function Z(e) {
       return (0, i.jsxs)(i.Fragment, {
         children: [null != c && (0, i.jsx)(c, {
           className: Y.categoryIcon
-        }), (0, i.jsx)(s.Text, {
+        }), (0, i.jsx)(a.Text, {
           variant: "text-xs/medium",
           color: "text-secondary",
           className: Y.ellipsis,
@@ -333,7 +333,7 @@ function Z(e) {
         }), null != E && E > 0 && (0, i.jsxs)(i.Fragment, {
           children: ["•", (0, i.jsx)(g.default, {
             className: Y.categoryIcon
-          }), (0, i.jsx)(s.Text, {
+          }), (0, i.jsx)(a.Text, {
             variant: "text-xs/medium",
             color: "text-secondary",
             className: Y.ellipsis,
@@ -380,8 +380,8 @@ function Q(e, t) {
     category: n
   } = e, r = null;
   if (null == (r = n === V.CardCategory.EVENT ? e.event.channel_id : n === V.CardCategory.EMBEDDED_ACTIVITY ? e.embeddedActivities[0].channelId : e.channelId)) return;
-  let a = p.default.isInChannel(r),
-    l = a ? H.default.Messages.GUILD_POPOUT_JOINED : H.default.Messages.JOIN,
+  let s = p.default.isInChannel(r),
+    l = s ? H.default.Messages.GUILD_POPOUT_JOINED : H.default.Messages.JOIN,
     _ = function(e, t) {
       let {
         category: n
@@ -420,19 +420,19 @@ function Q(e, t) {
               channel_id: n,
               guild_id: i,
               entity_type: r
-            } = t, s = h.default.getChannel(n);
-            if (null == n || null == s || !m.default.can(x.Permissions.CONNECT, s)) {
+            } = t, a = h.default.getChannel(n);
+            if (null == n || null == a || !m.default.can(x.Permissions.CONNECT, a)) {
               (0, d.openGuildEventDetails)({
                 eventId: t.id
               });
               return
             }
-            let a = async () => {
+            let s = async () => {
               let e = await (0, I.connectOrLurkStage)(i, n);
               (0, E.navigateToStage)(e)
             };
-            r === F.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? a() : r === F.GuildScheduledEventEntityTypes.VOICE && (o.default.handleVoiceConnect({
-              channel: s,
+            r === F.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? s() : r === F.GuildScheduledEventEntityTypes.VOICE && (o.default.handleVoiceConnect({
+              channel: a,
               connected: p.default.isInChannel(n),
               needSubscriptionToAccess: (0, u.getChannelRoleSubscriptionStatus)(n).needSubscriptionToAccess,
               locked: !1
@@ -442,10 +442,10 @@ function Q(e, t) {
           return null
       }
     }(e, t),
-    T = (0, i.jsx)(s.Button, {
-      size: s.Button.Sizes.MIN,
-      color: s.Button.Colors.GREEN,
-      disabled: a,
+    T = (0, i.jsx)(a.Button, {
+      size: a.Button.Sizes.MIN,
+      color: a.Button.Colors.GREEN,
+      disabled: s,
       onClick: e => {
         e.stopPropagation(), null == _ || _()
       },

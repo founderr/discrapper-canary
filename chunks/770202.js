@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("703656"),
   h = n("592125"),
   m = n("430824"),
-  p = n("496675"),
-  C = n("98597"),
+  C = n("496675"),
+  p = n("98597"),
   g = n("473403"),
   E = n("981631"),
   _ = n("490897"),
@@ -33,7 +33,7 @@ function N(e, t) {
   if (null == n) throw Error("TextChannel, preloadChannel: Channel does not have a guildId");
   o.default.preload(n, t.id)
 }
-class T extends C.default {
+class T extends p.default {
   render() {
     let {
       channel: e,
@@ -102,11 +102,11 @@ t.default = a.memo(function(e) {
     channel: t,
     guild: n,
     disableSorting: a
-  } = e, s = (0, r.useStateFromStoresObject)([h.default, p.default], () => {
+  } = e, s = (0, r.useStateFromStoresObject)([h.default, C.default], () => {
     let e = h.default.getChannel(t.parent_id);
     return {
-      canManageChannel: p.default.can(E.Permissions.MANAGE_CHANNELS, t),
-      canReorderChannel: !0 !== a && null != e ? p.default.can(E.Permissions.MANAGE_CHANNELS, e) : p.default.can(E.Permissions.MANAGE_CHANNELS, n)
+      canManageChannel: C.default.can(E.Permissions.MANAGE_CHANNELS, t),
+      canReorderChannel: !0 !== a && null != e ? C.default.can(E.Permissions.MANAGE_CHANNELS, e) : C.default.can(E.Permissions.MANAGE_CHANNELS, n)
     }
   });
   return (0, l.jsx)(A, {

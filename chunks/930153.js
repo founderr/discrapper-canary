@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return o
   },
   humanizeValue: function() {
-    return s
+    return a
   },
   parseInteger: function() {
-    return a
+    return s
   },
   shortenAndLocalizeNumber: function() {
     return r
@@ -25,7 +25,7 @@ function r(e) {
   })
 }
 
-function s(e, t) {
+function a(e, t) {
   if (e < 1e3) return i.default.Messages.NUMBER_ABBREVIATION_FULL.format({
     value: Math.floor(e)
   });
@@ -40,7 +40,7 @@ function s(e, t) {
   })
 }
 
-function a(e) {
+function s(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NaN;
   if (null == e) return t;
   let n = parseInt(e);

@@ -16,7 +16,7 @@ let d = {
 function m() {
   for (let e in c = null, f) delete f[e]
 }
-class p extends(l = r.default.Store) {
+class C extends(l = r.default.Store) {
   getActiveUserSignUp() {
     return c
   }
@@ -28,12 +28,12 @@ class p extends(l = r.default.Store) {
     return h.has(e)
   }
 }
-i = "SignUpStore", (s = "displayName") in(a = p) ? Object.defineProperty(a, s, {
+i = "SignUpStore", (s = "displayName") in(a = C) ? Object.defineProperty(a, s, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = i, t.default = new p(o.default, {
+}) : a[s] = i, t.default = new C(o.default, {
   ENABLE_USER_SIGN_UP: function(e) {
     let {
       key: t

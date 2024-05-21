@@ -1,5 +1,5 @@
 "use strict";
-let i, r, s, a, o, l, u;
+let i, r, a, s, o, l, u;
 n.r(t), n.d(t, {
   findFirstVoiceChannelId: function() {
     return F
@@ -35,9 +35,9 @@ function k(e) {
 
 function B() {
   !__OVERLAY__ && S.Storage.set(P, {
-    selectedChannelId: s,
+    selectedChannelId: a,
     selectedVoiceChannelId: o,
-    lastChannelFollowingDestination: a,
+    lastChannelFollowingDestination: s,
     lastConnectedTime: l,
     selectedChannelIds: U,
     mostRecentSelectedTextChannelIds: G,
@@ -73,7 +73,7 @@ function H() {
   let e = !1,
     t = L.default.getGuilds();
   return T().each(U, (t, n) => {
-    (null == t || !R.default.hasChannel(t) && t !== s && !w.has(t) && !(0, y.isGuildHomeChannel)(t)) && (delete U[n], delete b[n], e = !0)
+    (null == t || !R.default.hasChannel(t) && t !== a && !w.has(t) && !(0, y.isGuildHomeChannel)(t)) && (delete U[n], delete b[n], e = !0)
   }), T().each(G, (t, n) => {
     (null == t || !R.default.hasChannel(t) && !w.has(t)) && (delete G[n], e = !0)
   }), T().each(t, e => {
@@ -106,14 +106,14 @@ class W extends(d = f.default.Store) {
     if (!__OVERLAY__) {
       var e, t;
       let n = null !== (e = S.Storage.get(P)) && void 0 !== e ? e : {
-        selectedChannelId: s,
+        selectedChannelId: a,
         selectedVoiceChannelId: o,
-        lastChannelFollowingDestination: a,
+        lastChannelFollowingDestination: s,
         lastConnectedTime: l,
         selectedChannelIds: U,
         mostRecentSelectedTextChannelIds: G
       };
-      null != n.knownThreadIds && (w = new Set(n.knownThreadIds)), o = n.selectedVoiceChannelId, a = n.lastChannelFollowingDestination, l = n.lastConnectedTime, G = null !== (t = n.mostRecentSelectedTextChannelIds) && void 0 !== t ? t : {}, null != n.selectedChannelIds && (U = {
+      null != n.knownThreadIds && (w = new Set(n.knownThreadIds)), o = n.selectedVoiceChannelId, s = n.lastChannelFollowingDestination, l = n.lastConnectedTime, G = null !== (t = n.mostRecentSelectedTextChannelIds) && void 0 !== t ? t : {}, null != n.selectedChannelIds && (U = {
         ...n.selectedChannelIds,
         null: null
       })
@@ -134,7 +134,7 @@ class W extends(d = f.default.Store) {
     return null == e ? null : null !== (t = G[e]) && void 0 !== t ? t : null
   }
   getCurrentlySelectedChannelId(e) {
-    return null != e ? U[e] : s
+    return null != e ? U[e] : a
   }
   getLastSelectedChannelId(e) {
     return null != e ? b[e] : r
@@ -143,7 +143,7 @@ class W extends(d = f.default.Store) {
     return b[e]
   }
   getLastChannelFollowingDestination() {
-    return a
+    return s
   }
 }
 E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.defineProperty(_, c, {
@@ -156,7 +156,7 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
     i = e.sessionId, null != o && null == R.default.getChannel(o) && (o = null), H() && B()
   },
   OVERLAY_INITIALIZE: function(e) {
-    i = e.sessionId, o = e.selectedVoiceChannelId, U = {}, b = {}, s = e.selectedChannelId, U[e.selectedGuildId] = e.selectedChannelId, x(e.selectedGuildId, s), H()
+    i = e.sessionId, o = e.selectedVoiceChannelId, U = {}, b = {}, a = e.selectedChannelId, U[e.selectedGuildId] = e.selectedChannelId, x(e.selectedGuildId, a), H()
   },
   CONNECTION_CLOSED: function() {
     i = null
@@ -167,7 +167,7 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
       channelId: n
     } = e;
     if (void 0 === t) return !1;
-    null == n && (!(0, A.isInMainTabsExperiment)() || (0, m.shouldHandleNewPanelsRoute)(t)) && (n = V(t)), null != s && n !== s && (r = s), s = n, x(t, n), U[k(t)] !== n && (b[k(t)] = U[k(t)], U[k(t)] = s), B()
+    null == n && (!(0, A.isInMainTabsExperiment)() || (0, m.shouldHandleNewPanelsRoute)(t)) && (n = V(t)), null != a && n !== a && (r = a), a = n, x(t, n), U[k(t)] !== n && (b[k(t)] = U[k(t)], U[k(t)] = a), B()
   },
   CHANNEL_CREATE: function(e) {
     let {
@@ -224,7 +224,7 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
       voiceStates: t
     } = e;
     return t.reduce((e, t) => {
-      var n, r, s;
+      var n, r, a;
       if (t.sessionId === i) {
         clearInterval(u);
         let e = null === (n = R.default.getChannel(o)) || void 0 === n ? void 0 : n.getGuildId();
@@ -235,7 +235,7 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
         if (t.userId !== C.default.getId()) return e;
         clearInterval(u), u = void 0, l = 0;
         let n = null === (r = R.default.getChannel(o)) || void 0 === r ? void 0 : r.getGuildId(),
-          i = null === (s = R.default.getChannel(t.channelId)) || void 0 === s ? void 0 : s.getGuildId();
+          i = null === (a = R.default.getChannel(t.channelId)) || void 0 === a ? void 0 : a.getGuildId();
         (null != n && i === n || o === t.channelId) && (o = null), B()
       }
       return !0
@@ -246,12 +246,12 @@ E = "SelectedChannelStore", (c = "displayName") in(_ = W) ? Object.definePropert
       channelId: t,
       guildId: n
     } = e;
-    (null == a || t !== a.channelId) && (a = {
+    (null == s || t !== s.channelId) && (s = {
       channelId: t,
       guildId: n
     }, B())
   },
   LOGOUT: function() {
-    U = {}, s = null, r = void 0, G = {}, a = {}, o = null, S.Storage.remove(P)
+    U = {}, a = null, r = void 0, G = {}, s = {}, o = null, S.Storage.remove(P)
   }
 })

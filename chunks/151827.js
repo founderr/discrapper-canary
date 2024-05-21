@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  s = n.n(r),
-  a = n("481060"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("447960");
 t.default = e => {
   let {
@@ -13,8 +13,8 @@ t.default = e => {
     "aria-label": r,
     id: l
   } = e;
-  return (0, i.jsx)(a.H, {
-    className: s()(t, o.container),
+  return (0, i.jsx)(s.H, {
+    className: a()(t, o.container),
     "aria-label": r,
     id: l,
     children: n

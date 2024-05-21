@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var s = n("626135"),
-  a = n("307320"),
+var a = n("626135"),
+  s = n("307320"),
   o = n("981631");
 
 function l(e, t, n) {
@@ -19,8 +19,8 @@ function l(e, t, n) {
     allowedPoorFpsRatio: d,
     fpsThreshold: _,
     backoffTimeSec: c
-  } = a.default.getConfig(!1);
-  s.default.track(o.AnalyticEvents.VIDEO_TOGGLED, {
+  } = s.default.getConfig(!1);
+  a.default.track(o.AnalyticEvents.VIDEO_TOGGLED, {
     video_toggle_reason: t,
     toggled_user_id: e,
     rtc_connection_id: null == i ? void 0 : i(),

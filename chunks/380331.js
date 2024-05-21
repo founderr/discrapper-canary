@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("392711"),
   l = n.n(o),
   u = n("924826"),
@@ -46,7 +46,7 @@ function j(e) {
   let {
     activeIndex: t,
     categoryIndex: n,
-    analyticsContext: s,
+    analyticsContext: a,
     categories: o,
     category: l,
     handleCategorySelect: d,
@@ -61,7 +61,7 @@ function j(e) {
   }), N = A && l.isNitroLocked, g = (0, i.jsxs)(c.Clickable, {
     ...I,
     "aria-label": (0, O.getAriaIdForEmojiCategory)(l, h),
-    className: a()({
+    className: s()({
       [y.categoryItemGuildCategory]: null != h,
       [y.categoryItemDefaultCategory]: null == h,
       [y.categoryItemDefaultCategorySelected]: null == h && f,
@@ -69,7 +69,7 @@ function j(e) {
     }),
     onClick: () => {
       null != h && m.default.track(v.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
-        location: null == s ? void 0 : s.location,
+        location: null == a ? void 0 : a.location,
         tab: D.ExpressionPickerViewType.EMOJI,
         guild_id: h.id
       }), d(n)
@@ -102,11 +102,11 @@ t.default = e => {
   let {
     className: t,
     emojiListRef: n,
-    sectionDescriptors: s,
+    sectionDescriptors: a,
     intention: o,
     channel: u
   } = e, _ = T.EmojiPickerStore.useStore(e => e.activeCategoryIndex), S = (0, g.useCategorySelectHandler)({
-    sectionDescriptors: s,
+    sectionDescriptors: a,
     emojiListRef: n
   }), m = (0, E.useAnalyticsContext)(), N = (0, O.useEmojiCategories)(o, u), p = r.useRef(null), C = (0, d.useStateFromStores)([h.default], () => h.default.isFocused()), R = (0, d.useStateFromStores)([I.default], () => I.default.useReducedMotion, []), v = r.useMemo(() => l().memoize((e, t) => {
     let n = N[t];
@@ -195,7 +195,7 @@ t.default = e => {
     children: e => w >= 7 && (0, i.jsx)(c.Clickable, {
       "aria-hidden": !Z,
       "aria-label": M.default.Messages.EMOJI_PICKER_SCROLL_TO_UNICODE_A11Y_LABEL,
-      className: a()(y.unicodeShortcut, {
+      className: s()(y.unicodeShortcut, {
         [y.unicodeShortcutInvisible]: !Z
       }),
       tabIndex: Z ? 0 : -1,

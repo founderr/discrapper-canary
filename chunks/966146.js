@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MediaSinkWantsLadder: function() {
-    return s
+    return a
   }
 }), n("411104"), n("47120"), n("653041");
 var i = n("65154");
@@ -14,7 +14,7 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class s {
+class a {
   getMaxSinkValue(e) {
     if (e < 0) throw Error("getMaxSinkValue: Requested " + e);
     let t = this.orderedLadder[0].wantValue;
@@ -58,7 +58,7 @@ class s {
       }
     }
     let r = {},
-      a = 0,
+      s = 0,
       o = 100;
     for (let t = 1; t <= 25; ++t) {
       let l = 0,
@@ -68,15 +68,15 @@ class s {
         if (i.pixelCount * t > e) break;
         l = i.width, u = i.height, d = i.budgetPortion
       }
-      if (a !== l) {
-        let e = s.getMutedFramerate(o);
+      if (s !== l) {
+        let e = a.getMutedFramerate(o);
         r[o] = {
           width: l,
           height: u,
           budgetPortion: d,
           mutedFramerate: e,
           framerate: i.VIDEO_QUALITY_FRAMERATE
-        }, o -= 10, a = l
+        }, o -= 10, s = l
       }
     }
     return r
@@ -104,6 +104,6 @@ class s {
       height: n
     } = e.videoBudget;
     if (t <= 0 || n <= 0) throw Error("Invalid argument");
-    this.pixelBudget = t * n, this.ladder = s.calculateLadder(this.pixelBudget), this.orderedLadder = s.calculateOrderedLadder(this.ladder)
+    this.pixelBudget = t * n, this.ladder = a.calculateLadder(this.pixelBudget), this.orderedLadder = a.calculateOrderedLadder(this.ladder)
   }
 }

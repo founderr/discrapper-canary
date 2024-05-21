@@ -2,8 +2,8 @@
 let i;
 n.r(t), n("47120");
 var r = n("266067"),
-  s = n("259443"),
-  a = n("433517"),
+  a = n("259443"),
+  s = n("433517"),
   o = n("570140"),
   l = n("668781"),
   u = n("904245"),
@@ -35,14 +35,14 @@ function D(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let M = new s.Logger("MessageManager");
+let M = new a.Logger("MessageManager");
 
 function y(e) {
   let {
     guildId: t,
     channelId: n,
     messageId: r,
-    forceFetch: s,
+    forceFetch: a,
     isPreload: o,
     jumpType: l,
     skipLocalFetch: _,
@@ -71,7 +71,7 @@ function y(e) {
   }), c.default.commit(S)), null != S.focusTargetId && null == r && (S = S.mutate({
     focusTargetId: null
   }), c.default.commit(S));
-  let N = s;
+  let N = a;
   if (!o || I.default.isConnected() || S.loadingMore ? S.loadingMore || S.ready && !S.cached ? null != r ? N = !0 : T && M.log("Skipping fetch because no other conditions matched") : null == t || null != A.default.getGuild(t) ? N = !0 : T && M.log("Skipping fetch we are connected and have loaded messages") : N = !0, (0, E.default)(n) && m.default.hasUnread(n) && (N = !0), N) {
     if (c.default.commit(S.mutate({
         loadingMore: !0
@@ -87,13 +87,13 @@ function y(e) {
         if (m.default.hasOpenedThread(e)) return !1;
         if (null == i) {
           var t;
-          i = null !== (t = a.Storage.get(U, {})) && void 0 !== t ? t : {}
+          i = null !== (t = s.Storage.get(U, {})) && void 0 !== t ? t : {}
         }
         if (e in i) return !1;
         i[e] = Date.now();
         let n = Date.now() - P;
         for (let e in i) i[e] < n && delete i[e];
-        return a.Storage.set(U, i), !0
+        return s.Storage.set(U, i), !0
       }(n)) M.log("Jumping to start of thread ".concat(f.id)), u.default.fetchMessages({
       channelId: n,
       limit: g.MAX_MESSAGES_PER_CHANNEL,
@@ -268,11 +268,11 @@ function W(e) {
     channelId: n,
     jump: i,
     isStale: r,
-    isPreview: s = !1
+    isPreview: a = !1
   } = e;
-  if (s) return;
-  let a = null !== (t = j[n]) && void 0 !== t ? t : 0;
-  if (Date.now() - a < 10 * O.default.Millis.SECOND) return;
+  if (a) return;
+  let s = null !== (t = j[n]) && void 0 !== t ? t : 0;
+  if (Date.now() - s < 10 * O.default.Millis.SECOND) return;
   j[n] = Date.now();
   let o = N.default.getChannelId(),
     l = S.default.getCurrentSidebarChannelId(o),

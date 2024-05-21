@@ -16,8 +16,8 @@ t.default = a.forwardRef(function(e, t) {
   let {
     body: n,
     header: s,
-    artClassName: p,
-    headerClassName: C,
+    artClassName: C,
+    headerClassName: p,
     contentClassName: g,
     tryItText: E,
     dismissText: _,
@@ -31,8 +31,8 @@ t.default = a.forwardRef(function(e, t) {
     dismissibleContent: x,
     position: R = "top",
     align: M = "center",
-    art: y,
-    isPremiumEarlyAccess: O = !1,
+    art: O,
+    isPremiumEarlyAccess: y = !1,
     maxWidth: D = 280
   } = e, b = L ? r.Button.Sizes.LARGE : r.Button.Sizes.MAX, [j, P] = a.useState(!1), {
     ref: G,
@@ -55,23 +55,23 @@ t.default = a.forwardRef(function(e, t) {
     ref: t,
     children: (0, l.jsxs)("div", {
       className: i()(m.content, g, {
-        [m.contentNoArt]: null == p || T,
-        [m.contentPremium]: A || O
+        [m.contentNoArt]: null == C || T,
+        [m.contentPremium]: A || y
       }),
       children: [(0, l.jsxs)("div", {
-        className: i()(p, T ? m.artInline : m.artAbsolute),
+        className: i()(C, T ? m.artInline : m.artAbsolute),
         children: [v && (0, l.jsx)(d.default, {
           className: m.gifTag
-        }), y]
+        }), O]
       }), (0, l.jsxs)("div", {
         className: m.body,
         children: [(0, l.jsxs)(r.Heading, {
-          className: i()(A ? m.headerWithPremiumIcon : m.header, C),
+          className: i()(A ? m.headerWithPremiumIcon : m.header, p),
           variant: "heading-md/bold",
           color: "always-white",
-          children: [A && !O ? (0, l.jsx)(c.default, {
+          children: [A && !y ? (0, l.jsx)(c.default, {
             className: m.premiumIcon
-          }) : null, O ? (0, l.jsxs)(r.Text, {
+          }) : null, y ? (0, l.jsxs)(r.Text, {
             color: "always-white",
             variant: "eyebrow",
             className: m.earlyAccessBadgeContainer,
@@ -97,8 +97,8 @@ t.default = a.forwardRef(function(e, t) {
             onClick: e => {
               null == I || I(e), S(e), w(f.ContentDismissActionType.PRIMARY)
             },
-            color: A || O ? r.Button.Colors.BRAND : r.Button.Colors.WHITE,
-            look: A || O ? r.Button.Looks.INVERTED : r.Button.Looks.FILLED,
+            color: A || y ? r.Button.Colors.BRAND : r.Button.Colors.WHITE,
+            look: A || y ? r.Button.Looks.INVERTED : r.Button.Looks.FILLED,
             children: null != E ? E : h.default.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }), (0, l.jsx)(r.Button, {
             className: m.button,
@@ -106,8 +106,8 @@ t.default = a.forwardRef(function(e, t) {
             onClick: e => {
               null == I || I(e), w(f.ContentDismissActionType.DISMISS)
             },
-            color: A || O ? r.Button.Colors.WHITE : r.Button.Colors.BRAND,
-            look: A || O ? r.Button.Looks.LINK : r.Button.Looks.FILLED,
+            color: A || y ? r.Button.Colors.WHITE : r.Button.Colors.BRAND,
+            look: A || y ? r.Button.Looks.LINK : r.Button.Looks.FILLED,
             children: null != _ ? _ : h.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
           })]
         }) : (0, l.jsx)(r.Button, {

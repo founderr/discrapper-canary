@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120"), n("724458");
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140"),
   u = n("981631"),
   d = n("65154");
@@ -21,8 +21,8 @@ function I(e, t) {
 class T extends(i = o.default.Store) {
   getStreamId(e, t) {
     var n, i, r;
-    let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MediaEngineContextTypes.DEFAULT;
-    return null === (r = E[e]) || void 0 === r ? void 0 : null === (i = r[null != t ? t : u.NULL_STRING_GUILD_ID]) || void 0 === i ? void 0 : null === (n = i[s]) || void 0 === n ? void 0 : n.streamId
+    let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MediaEngineContextTypes.DEFAULT;
+    return null === (r = E[e]) || void 0 === r ? void 0 : null === (i = r[null != t ? t : u.NULL_STRING_GUILD_ID]) || void 0 === i ? void 0 : null === (n = i[a]) || void 0 === n ? void 0 : n.streamId
   }
   getUserStreamData(e, t) {
     var n, i;
@@ -30,12 +30,12 @@ class T extends(i = o.default.Store) {
     return null === (i = E[e]) || void 0 === i ? void 0 : null === (n = i[null != t ? t : u.NULL_STRING_GUILD_ID]) || void 0 === n ? void 0 : n[r]
   }
 }
-a = "VideoStreamStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
-  value: a,
+s = "VideoStreamStore", (a = "displayName") in(r = T) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new T(l.default, {
+}) : r[a] = s, t.default = new T(l.default, {
   CONNECTION_OPEN: function(e) {
     let {
       user: t,
@@ -60,9 +60,9 @@ a = "VideoStreamStore", (s = "displayName") in(r = T) ? Object.defineProperty(r,
     null != i ? ! function(e, t, n, i) {
       var r;
       !(e in E) && (E[e] = {});
-      let s = null !== (r = E[e][null != t ? t : u.NULL_STRING_GUILD_ID]) && void 0 !== r ? r : {};
+      let a = null !== (r = E[e][null != t ? t : u.NULL_STRING_GUILD_ID]) && void 0 !== r ? r : {};
       E[e][null != t ? t : u.NULL_STRING_GUILD_ID] = {
-        ...s,
+        ...a,
         [i]: {
           streamId: n
         }
@@ -78,15 +78,15 @@ a = "VideoStreamStore", (s = "displayName") in(r = T) ? Object.defineProperty(r,
       let {
         userId: i,
         sessionId: r,
-        channelId: s,
-        guildId: a
+        channelId: a,
+        guildId: s
       } = t;
-      if (null == s && i === _) {
+      if (null == a && i === _) {
         if (r !== c) return e;
         E = {}
       } else {
-        if (null != s || (null === (n = E[i]) || void 0 === n ? void 0 : n[null != a ? a : u.NULL_STRING_GUILD_ID]) == null) return e;
-        I(i, a)
+        if (null != a || (null === (n = E[i]) || void 0 === n ? void 0 : n[null != s ? s : u.NULL_STRING_GUILD_ID]) == null) return e;
+        I(i, s)
       }
       return !0
     }, !1)

@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("709054"),
   h = n("208049"),
   m = n("763296"),
-  p = n("242291"),
-  C = n("174470"),
+  C = n("242291"),
+  p = n("174470"),
   g = n("549771"),
   E = n("964398"),
   _ = n("409673"),
@@ -48,17 +48,17 @@ function N(e) {
         };
       return a.forEach(e => s(e, !0)), a.forEach(e => s(e, !1)), l
     }, [t, n, e])
-  }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), M = (0, C.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [O, D] = a.useState(void 0), b = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
+  }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), M = (0, p.useGuildIdsToFetchSoundsFor)(), O = a.useRef(null), [y, D] = a.useState(void 0), b = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
     analyticsLocations: j
   } = (0, o.default)(r.default.SOUNDBOARD_WHEEL), P = a.useCallback(e => {
-    (0, p.playSound)(e, n.id, j), x()
+    (0, C.playSound)(e, n.id, j), x()
   }, [j, n.id, x]);
   a.useEffect(() => {
     h.maybeFetchSoundboardSounds(), d.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []), a.useEffect(() => {
     0 === R.length && 0 === M.length && x()
   }, [R.length, M, x]), a.useEffect(() => () => {
-    let e = y.current;
+    let e = O.current;
     !A && null != e && P(e)
   }, [A, P]), (0, u.default)({
     type: s.ImpressionTypes.POPOUT,
@@ -72,7 +72,7 @@ function N(e) {
     disableTrack: !L
   });
   let G = a.useCallback(e => {
-      y.current = e, D(null == e ? void 0 : e.soundId)
+      O.current = e, D(null == e ? void 0 : e.soundId)
     }, []),
     U = a.useCallback(e => {
       if (null == e) {
@@ -91,9 +91,9 @@ function N(e) {
       interactive: L,
       className: I.soundButton,
       sound: e,
-      focused: O === e.soundId,
+      focused: y === e.soundId,
       channel: n
-    }, e.soundId)), [O, n, L, R]);
+    }, e.soundId)), [y, n, L, R]);
   return 0 === R.length ? null : (0, l.jsx)(o.AnalyticsLocationProvider, {
     value: j,
     children: (0, l.jsx)(E.default, {
@@ -102,7 +102,7 @@ function N(e) {
       itemWidth: 96,
       itemHeight: 52,
       showDeadZoneIndicator: !A,
-      activeItem: O,
+      activeItem: y,
       onItemSelect: U,
       onItemAction: w,
       interactive: L,

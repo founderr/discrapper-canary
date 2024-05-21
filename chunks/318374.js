@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("392711"),
   l = n.n(o),
   u = n("481060"),
@@ -19,7 +19,7 @@ var i = n("735250"),
 function I(e) {
   let {
     className: t,
-    avatarClassName: s,
+    avatarClassName: a,
     maxUsers: o,
     users: I,
     guildId: T,
@@ -54,12 +54,12 @@ function I(e) {
     })
   }
   return I.length <= 0 ? null : (0, i.jsx)("div", {
-    className: a()(t, E.avatars),
+    className: s()(t, E.avatars),
     children: function() {
       let e = l()(I).take(o).map(e => {
           let t = c.default.getName(e);
           return A ? (0, i.jsx)("div", {
-            className: a()(E.avatar, s),
+            className: s()(E.avatar, a),
             children: (0, i.jsx)(u.Avatar, {
               src: e.getAvatarURL(T, 24),
               "aria-label": t,
@@ -67,7 +67,7 @@ function I(e) {
             })
           }) : (0, i.jsx)(u.TooltipContainer, {
             text: t,
-            className: a()(E.avatar, s),
+            className: s()(E.avatar, a),
             children: (0, i.jsx)(u.Avatar, {
               src: e.getAvatarURL(T, 24),
               "aria-label": t,
@@ -82,7 +82,7 @@ function I(e) {
         position: "bottom",
         onRequestClose: () => N(!1),
         children: () => (0, i.jsxs)(u.Button, {
-          className: a()(E.avatar, E.overflow),
+          className: s()(E.avatar, E.overflow),
           onFocus: f,
           onClick: () => N(!0),
           look: u.Button.Looks.BLANK,

@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("442837"),
   l = n("481060"),
   u = n("230711"),
@@ -20,7 +20,7 @@ t.default = function(e) {
   let {
     className: t,
     quest: n,
-    autoplay: s = !0,
+    autoplay: a = !0,
     learnMoreStyle: A = null
   } = e, m = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), N = r.useMemo(() => (0, I.isAssetAnimated)(n.config.assets.rewardTile), [n]), p = r.useCallback(t => {
     var i;
@@ -30,11 +30,11 @@ t.default = function(e) {
       questContentPosition: e.questContentPosition,
       questContentCTA: E.QuestContentCTA.REWARD_LEARN_MORE
     }), u.default.open(f.UserSettingsSections.INVENTORY), null === (i = e.onClick) || void 0 === i || i.call(e, t)
-  }, [n.id, e]), O = r.useRef(null), C = r.useRef(s);
+  }, [n.id, e]), O = r.useRef(null), C = r.useRef(a);
   r.useEffect(() => {
     var e, t;
-    N && !m && null != O.current && (s && !C.current ? null === (e = O.current) || void 0 === e || e.play() : !s && C.current && (null === (t = O.current) || void 0 === t || t.pause()), C.current = s)
-  }, [s, N, m]);
+    N && !m && null != O.current && (a && !C.current ? null === (e = O.current) || void 0 === e || e.play() : !a && C.current && (null === (t = O.current) || void 0 === t || t.pause()), C.current = a)
+  }, [a, N, m]);
   let R = (0, I.getRewardAssetUrl)(n),
     g = N ? (0, i.jsx)(T.QuestsAsset, {
       id: "QuestRewardTile_rewardTileAnimated",
@@ -42,7 +42,7 @@ t.default = function(e) {
         ref: t => {
           e.current = t, O.current = t
         },
-        autoPlay: !m && s,
+        autoPlay: !m && a,
         loop: !0,
         muted: !0,
         playsInline: !0,
@@ -58,15 +58,15 @@ t.default = function(e) {
       children: e => (0, i.jsx)("img", {
         ref: e,
         alt: n.config.messages.rewardName,
-        className: a()(h.questRewardTileAsset, h.questRewardTileAssetStatic),
+        className: s()(h.questRewardTileAsset, h.questRewardTileAssetStatic),
         src: R
       })
     });
   return null == A ? (0, i.jsx)("div", {
-    className: a()(t, h.questRewardTile),
+    className: s()(t, h.questRewardTile),
     children: g
   }) : (0, i.jsxs)(l.Clickable, {
-    className: a()(h.questRewardTile, h.questRewardTileInteractive, t),
+    className: s()(h.questRewardTile, h.questRewardTileInteractive, t),
     onClick: p,
     children: ["text" === A && (0, i.jsx)(l.Text, {
       color: "always-white",

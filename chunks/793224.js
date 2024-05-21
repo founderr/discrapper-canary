@@ -17,8 +17,8 @@ var a = n("442837"),
   f = n("286328"),
   h = n("493355"),
   m = n("134598"),
-  p = n("243778"),
-  C = n("594190"),
+  C = n("243778"),
+  p = n("594190"),
   g = n("569545"),
   E = n("989941"),
   _ = n("199902"),
@@ -35,7 +35,7 @@ var a = n("442837"),
 function M() {
   let e = (0, a.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
     t = (0, a.useStateFromStores)([S.default], () => S.default.getId()),
-    n = (0, a.useStateFromStores)([C.default, T.default], () => (0, E.default)(C.default, T.default)),
+    n = (0, a.useStateFromStores)([p.default, T.default], () => (0, E.default)(p.default, T.default)),
     {
       canBroadcast: M
     } = d.default.useExperiment({
@@ -43,22 +43,22 @@ function M() {
     }, {
       autoTrackExposure: !1
     }),
-    y = (0, c.default)() && null != n,
-    O = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
+    O = (0, c.default)() && null != n,
+    y = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
     D = (0, a.useStateFromStoresArray)([_.default], () => _.default.getAllActiveStreams());
-  if (!y && !O) return null;
+  if (!O && !y) return null;
   if (d.default.trackExposure({
       location: "broadcast_button_rtc_panel"
     }), !M) return null;
   let b = [];
-  y && b.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
+  O && b.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
   let j = () => {
       o.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
         game_id: null == n ? void 0 : n.id
       })
     },
     P = () => {
-      if (y) {
+      if (O) {
         let l = D.find(e => e.ownerId === t);
         null == l ? (0, m.openBroadcastingPrivacySettingsModal)(R.default.Messages.START_BROADCASTING, R.default.Messages.START_BROADCASTING_CTA, () => {
           (0, r.createBroadcastChannelOrStartStream)({
@@ -69,12 +69,12 @@ function M() {
       } else(0, u.stopBroadcast)()
     },
     G = e => (0, l.jsx)(L.default, {
-      tooltipText: y ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,
+      tooltipText: O ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,
       onClick: () => {
         P(), null == e || e(x.ContentDismissActionType.UNKNOWN)
       },
       onMouseEnter: j,
-      icon: y ? A.default : () => (0, l.jsx)(h.default, {
+      icon: O ? A.default : () => (0, l.jsx)(h.default, {
         width: 20,
         height: 20
       })
@@ -82,7 +82,7 @@ function M() {
     U = e => (0, l.jsx)(f.default, {
       markAsDismissed: e
     });
-  return (0, l.jsx)(p.default, {
+  return (0, l.jsx)(C.default, {
     contentTypes: b,
     bypassAutoDismiss: !0,
     children: e => {

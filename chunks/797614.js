@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n("47120"), n("653041");
-var i, r, s = n("404097"),
-  a = n("544891"),
+var i, r, a = n("404097"),
+  s = n("544891"),
   o = n("358085"),
   l = n("747268"),
   u = n("250471"),
@@ -31,17 +31,17 @@ t.default = new class e {
     null != i && i.forEach(e => {
       r.tags.push(e)
     });
-    let a = function() {
+    let s = function() {
       if ((0, o.isWeb)()) return "web";
       {
         let e = (0, o.getPlatformName)();
         return E.has(e) ? e : null
       }
     }();
-    null != a && r.tags.push("platform:".concat(a));
+    null != s && r.tags.push("platform:".concat(s));
     let u = function() {
       let e = l.CurrentReleaseChannel;
-      return null != e && s.ReleaseChannelsSets.ALL.has(e) ? e : null
+      return null != e && a.ReleaseChannelsSets.ALL.has(e) ? e : null
     }();
     return null != u && r.tags.push("release_channel:".concat(u)), r
   }
@@ -62,13 +62,13 @@ t.default = new class e {
   _flush() {
     if (this._metrics.length > 0) {
       let e = [...this._metrics];
-      a.HTTP.post({
+      s.HTTP.post({
         url: (0, u.isMetricsEndpointV2Enabled)("monitoring-agent") ? _.Endpoints.METRICS_V2 : _.Endpoints.METRICS,
         body: {
           metrics: e,
           client_info: {
-            built_at: "1716309516645",
-            build_number: "295064"
+            built_at: "1716313436242",
+            build_number: "295115"
           }
         },
         retries: 1

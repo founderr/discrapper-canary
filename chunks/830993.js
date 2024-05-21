@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("430824"),
   h = n("496675"),
   m = n("158776"),
-  p = n("979651"),
-  C = n("823379"),
+  C = n("979651"),
+  p = n("823379"),
   g = n("355363"),
   E = n("737592"),
   _ = n("561788"),
@@ -32,7 +32,7 @@ function L(e) {
   let {
     channel: f,
     guild: h,
-    onAction: p,
+    onAction: C,
     voiceStates: g,
     isChannelSelected: _,
     shouldShowSettingNudge: S
@@ -56,7 +56,7 @@ function L(e) {
   I.forEach(e => {
     L.set(e.application.id, e)
   });
-  let x = null !== (t = null == g ? void 0 : g.filter(C.isNotNullish)) && void 0 !== t ? t : [],
+  let x = null !== (t = null == g ? void 0 : g.filter(p.isNotNullish)) && void 0 !== t ? t : [],
     R = e => t => [N.ActivityTypes.PLAYING, N.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId) || t.type === N.ActivityTypes.LISTENING,
     M = (0, s.useStateFromStores)([m.default], () => {
       let e = new Map;
@@ -71,7 +71,7 @@ function L(e) {
         }
       }), e
     }, [x, L], s.statesWillNeverBeEqual),
-    y = (0, s.useStateFromStores)([m.default], () => {
+    O = (0, s.useStateFromStores)([m.default], () => {
       let e = {};
       return x.forEach(t => {
         let n = m.default.findActivity(t.user.id, R(t));
@@ -86,11 +86,11 @@ function L(e) {
         }
       }), Object.values(e)
     }, [x], s.statesWillNeverBeEqual),
-    O = Array.from(M.values()).map(e => ({
+    y = Array.from(M.values()).map(e => ({
       members: x,
       activity: e.presenceActivity
     })),
-    D = [...O, ...y];
+    D = [...y, ...O];
   return 0 === D.length ? null : (0, l.jsxs)(i.Scroller, {
     className: A.container,
     children: [(0, l.jsx)(v, {
@@ -109,7 +109,7 @@ function L(e) {
         embeddedApp: i,
         channel: f,
         members: n,
-        onAction: p
+        onAction: C
       }, t)
     }), S && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
@@ -143,7 +143,7 @@ function v(e) {
     channel: t,
     isChannelSelected: n,
     voiceStatesCount: a
-  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([p.default], () => p.default.hasVideo(t.id)), o = (0, g.default)({
+  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), o = (0, g.default)({
     channel: t,
     locked: i,
     video: r,

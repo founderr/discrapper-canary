@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("411104");
 var i = n("911969"),
   r = n("592125"),
-  s = n("963456"),
-  a = n("213459"),
+  a = n("963456"),
+  s = n("213459"),
   o = n("367790");
 let l = "no primary app command for application";
 async function u(e, t) {
@@ -23,7 +23,7 @@ async function u(e, t) {
           applicationId: t
         },
         r = new AbortController;
-      (0, s.requestApplicationCommandIndex)(e, !1), await (0, s.fetchApplicationCommandIndex)(e, 0, r), n = d(i, t).commands[0]
+      (0, a.requestApplicationCommandIndex)(e, !1), await (0, a.fetchApplicationCommandIndex)(e, 0, r), n = d(i, t).commands[0]
     } else n = e.commands[0]
   }
   if (null != n) return n;
@@ -31,7 +31,7 @@ async function u(e, t) {
 }
 
 function d(e, t) {
-  return a.default.query(e, {
+  return s.default.query(e, {
     commandType: i.ApplicationCommandType.PRIMARY_ENTRY_POINT
   }, {
     placeholderCount: 1,

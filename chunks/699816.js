@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   useStaffTeenSafetyAssistAgeBypass: function() {
-    return s
+    return a
   }
 });
 let i = (0, n("818083").createExperiment)({
@@ -34,7 +34,7 @@ function r(e) {
   return t
 }
 
-function s(e) {
+function a(e) {
   return i.useExperiment({
     location: e
   }, {
