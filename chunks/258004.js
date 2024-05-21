@@ -3,6 +3,7 @@ e.exports = {
   activityContainer: "activityContainer_f23569",
   activityContainerNoMargin: "activityContainerNoMargin_e942bd",
   activityPanelContainer: "activityPanelContainer__57291",
+  avatar: "avatar__2fbe1",
   circularButton: "circularButton__5daa7",
   flex: "flex__5ddc8",
   footer: "footer__7a7bf",

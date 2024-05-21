@@ -21467,6 +21467,12 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     flex: 1
 }
 
+.avatar__2fbe1 {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px
+}
+
 .regionSelectPopout_a270cb {
     direction: rtl;
     box-shadow: 0 0 1px rgba(0, 0, 0, .82), 0 1px 4px rgba(0, 0, 0, .1)
