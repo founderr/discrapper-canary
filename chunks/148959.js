@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return u
   }
 }), n("653041"), n("47120");
-var i, r, a = n("392711"),
-  s = n.n(a),
+var i, r, s = n("392711"),
+  a = n.n(s),
   o = n("47770");
 
 function l(e, t, n) {
@@ -27,25 +27,29 @@ class u extends o.default {
     this.audioSSRC = e, this.videoStreams = t, this.update()
   }
   setGoLiveStreamDowngraded(e) {
-    this.downgraded = e, this.update()
+    e !== this.downgraded && (this.downgraded = e, this.update())
+  }
+  setFirstFrameReceived(e) {
+    this.framesReceived.set(e, !0), this.update()
+  }
+  hasEverReceivedFrame() {
+    return this.framesReceived.size > 0
   }
   update() {
-    let e = {
-      any: 100
-    };
-    if (null != this.userId) {
-      let t = [];
-      if (this.downgraded) {
-        let n = s().minBy(this.videoStreams, e => e.quality);
-        null != n && (t.push(n.ssrc), e[n.ssrc] = 60)
-      } else {
-        let n = s().maxBy(this.videoStreams, e => e.quality);
-        null != n && (t.push(n.ssrc), e[n.ssrc] = 100)
-      }
-      this.emit("requested-ssrcs-update", this.userId, this.audioSSRC, t), this.emit("requested-streams-update", e)
-    }
+    if (void 0 === this.userId || null === this.userId) return;
+    let e = a().minBy(this.videoStreams, e => e.quality),
+      t = a().maxBy(this.videoStreams, e => e.quality);
+    if (void 0 === e || void 0 === t) return;
+    let n = [],
+      i = {
+        any: 100
+      };
+    for (let r of (this.downgraded ? (n.push(e.ssrc), this.supportsSeamless && !this.framesReceived.get(e.ssrc) && this.hasEverReceivedFrame() && n.push(t.ssrc)) : (n.push(t.ssrc), this.supportsSeamless && !this.framesReceived.get(t.ssrc) && this.hasEverReceivedFrame() && n.push(e.ssrc)), n)) r === e.ssrc ? i[r] = 60 : r === t.ssrc && (i[r] = 100);
+    if (this.hasEverReceivedFrame())
+      for (let e of this.videoStreams) !n.includes(e.ssrc) && this.framesReceived.delete(e.ssrc);
+    this.emit("requested-ssrcs-update", this.userId, this.audioSSRC, n), this.emit("requested-streams-update", i)
   }
-  constructor(...e) {
-    super(...e), l(this, "userId", void 0), l(this, "videoStreams", []), l(this, "audioSSRC", 0), l(this, "downgraded", !1)
+  constructor(e) {
+    super(), l(this, "supportsSeamless", void 0), l(this, "userId", void 0), l(this, "videoStreams", void 0), l(this, "audioSSRC", void 0), l(this, "downgraded", void 0), l(this, "framesReceived", void 0), this.supportsSeamless = e, this.videoStreams = [], this.audioSSRC = 0, this.downgraded = !1, this.framesReceived = new Map
   }
 }
