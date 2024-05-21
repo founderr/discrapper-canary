@@ -1,7 +1,6 @@
 "use strict";
 e.exports = {
   card: "card_e4e263",
-  gradient: "gradient__3bfb3",
   masonryList: "masonryList__7a8d2",
   masonryListContainer: "masonryListContainer__755e5",
   masonryListGradient: "masonryListGradient__25591",
