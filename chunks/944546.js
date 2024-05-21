@@ -71,9 +71,9 @@ function g(e) {
     channelId: u,
     messageId: E,
     roleId: g
-  } = (0, d.useUserProfileAnalyticsContext)(), S = () => {
+  } = (0, d.useUserProfileAnalyticsContext)(), S = e => {
     n(), (0, f.openUserProfileModal)({
-      userId: t.id,
+      userId: e,
       guildId: r,
       channelId: u,
       messageId: E,
@@ -107,7 +107,7 @@ function g(e) {
       return (0, a.jsx)(C, {
         user: n,
         status: l,
-        onSelect: S
+        onSelect: () => S(n.id)
       }, t)
     })
   })
