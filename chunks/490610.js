@@ -12,43 +12,43 @@ var a = n("735250"),
   f = n("777734"),
   E = n("976757"),
   h = n("981631"),
-  _ = n("689938"),
-  C = n("886722");
-t.default = s.memo(function() {
+  _ = n("886722");
+t.default = s.memo(function(e) {
   let {
-    loaded: e,
-    clans: t,
-    searchResult: n,
-    searchCriteria: m
-  } = (0, d.useClanDiscoveryList)(10), S = (0, c.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default), p = s.useMemo(() => new Set(m.games), [m.games]), g = s.useCallback(e => {
+    title: t,
+    subtitle: n
+  } = e, {
+    loaded: C,
+    clans: m,
+    searchResult: S,
+    searchCriteria: p
+  } = (0, d.useClanDiscoveryList)(20), g = (0, c.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default), I = s.useMemo(() => new Set(p.games), [p.games]), T = s.useCallback(e => {
     var t;
-    return (0, a.jsx)("div", {
-      className: C.card,
-      children: (0, a.jsx)(u.default, {
-        clan: e,
-        affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, o.getClanDiscoveryAffinity)(e, m),
-        traitsToHighlight: S,
-        source: h.AnalyticsSections.DISCOVER_SEARCH,
-        prioritizedGameIds: p
-      })
+    return (0, a.jsx)(u.default, {
+      clan: e,
+      className: _.card,
+      affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, o.getClanDiscoveryAffinity)(e, p),
+      traitsToHighlight: g,
+      source: h.AnalyticsSections.DISCOVER_SEARCH,
+      prioritizedGameIds: I
     }, e.id)
-  }, [m, S, p]), I = s.useMemo(() => null != n && (0, E.isLoadedSearchResult)(n) ? t : [], [t, n]), T = s.useCallback(e => {
-    e && I.length > 0 && (0, r.trackClanDiscoveryViewed)(I.map(e => e.id), "top_picks", m)
-  }, [I, m]);
-  return 0 !== t.length && e ? (0, a.jsx)(i.VisibilitySensor, {
-    onChange: T,
+  }, [p, g, I]), A = s.useMemo(() => null != S && (0, E.isLoadedSearchResult)(S) ? m : [], [m, S]), N = s.useCallback(e => {
+    e && A.length > 0 && (0, r.trackClanDiscoveryViewed)(A.map(e => e.id), "top_picks", p)
+  }, [A, p]);
+  return 0 !== m.length && C ? (0, a.jsx)(i.VisibilitySensor, {
+    onChange: N,
     threshold: .25,
     children: (0, a.jsxs)("div", {
-      className: C.previewListContainer,
+      className: _.previewListContainer,
       children: [(0, a.jsx)("div", {
-        className: C.previewListSection,
+        className: _.previewListSection,
         children: (0, a.jsx)(f.default, {
-          title: _.default.Messages.CLAN_DISCOVERY_STANDBY_TITLE,
-          subtitle: _.default.Messages.CLAN_DISCOVERY_PREPILOT_SUBTITLE
+          title: t,
+          subtitle: n
         })
       }), (0, a.jsx)("div", {
-        className: C.previewList,
-        children: I.map(e => g(e))
+        className: _.previewList,
+        children: A.map(e => T(e))
       })]
     })
   }) : null

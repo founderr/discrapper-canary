@@ -22,12 +22,14 @@ let o = s.forwardRef(function(e, t) {
           color: "header-primary",
           children: n
         })]
-      }), (0, a.jsx)("div", {
-        className: r.sectionHeaderSpacer
-      }), (0, a.jsx)(i.Text, {
-        variant: "text-sm/normal",
-        color: "text-muted",
-        children: s
+      }), null != s && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)("div", {
+          className: r.sectionHeaderSpacer
+        }), (0, a.jsx)(i.Text, {
+          variant: "text-sm/normal",
+          color: "text-muted",
+          children: s
+        })]
       })]
     }), (0, a.jsx)("div", {
       ref: t
