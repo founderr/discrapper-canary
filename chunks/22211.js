@@ -22,16 +22,22 @@ function h(e) {
       return r.default.getChannel(null == t ? void 0 : t.channelId)
     }, [e]),
     n = (0, a.useStateFromStores)([u.default], () => u.default.getPrimaryActivity(e.author_id, null == t ? void 0 : t.guild_id), [t, e]),
-    h = (0, a.useStateFromStores)([i.default, o.default, s.default], () => {
-      if (null == t) return;
-      let n = i.default.getAnyStreamForUser(e.author_id);
-      if (null != n) {
-        if (o.default.canBasicChannel(f.BasicPermissions.CONNECT, t) && (null == n ? void 0 : n.channelId) === t.id) return s.default.getPreviewURL(n.guildId, n.channelId, n.ownerId)
-      }
+    {
+      streamPreviewUrl: h,
+      stream: m
+    } = (0, a.useStateFromStoresObject)([i.default, o.default, s.default], () => {
+      let n;
+      if (null == t) return {};
+      let a = i.default.getAnyStreamForUser(e.author_id);
+      return null == a ? {} : (o.default.canBasicChannel(f.BasicPermissions.CONNECT, t) && (null == a ? void 0 : a.channelId) === t.id && (n = s.default.getPreviewURL(a.guildId, a.channelId, a.ownerId)), {
+        stream: a,
+        streamPreviewUrl: n
+      })
     }, [t, e]);
   return {
     channel: t,
     activity: n,
-    streamPreviewUrl: h
+    streamPreviewUrl: h,
+    stream: m
   }
 }

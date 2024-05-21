@@ -43824,6 +43824,25 @@ img.thumbnail__18ece {
     gap: 0
 }
 
+.streamCTA__558dc {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-backdrop);
+    opacity: 0;
+    transition: opacity.1s linear
+}
+
+.streamCTA__558dc:hover {
+    opacity: 1
+}
+
 .maybeClickable__0a29f[role=button] {
     cursor: pointer
 }
