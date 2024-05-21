@@ -30,6 +30,5 @@ e.exports = {
   profileEffectShopPreview: "profileEffectShopPreview__291e4",
   purchaseButton: "purchaseButton__6b7c9",
   shopCard: "shopCard__3d319",
-  shopCardDefaultAnimation: "shopCardDefaultAnimation__9f764",
-  shopCardTransformationAnimation: "shopCardTransformationAnimation__0e0be"
+  shopCardAnimation: "shopCardAnimation_e4a1b5"
 }
