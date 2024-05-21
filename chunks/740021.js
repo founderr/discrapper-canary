@@ -34,18 +34,19 @@ function x(e) {
     customStatusActivity: d,
     guildId: x,
     channelId: N,
-    onClose: C
+    transitionState: C,
+    onClose: p
   } = e, {
-    theme: p
-  } = (0, E.useUserProfileThemeContext)(), h = (0, c.default)(t.id, x), {
-    avatarSrc: R,
-    eventHandlers: P,
-    avatarDecorationSrc: M
+    theme: h
+  } = (0, E.useUserProfileThemeContext)(), R = (0, c.default)(t.id, x), {
+    avatarSrc: P,
+    eventHandlers: M,
+    avatarDecorationSrc: j
   } = (0, f.default)({
     user: t,
     guildId: null == s ? void 0 : s.guildId,
     size: T.AvatarSizes.SIZE_120
-  }), [j, L] = (0, a.useStateFromStoresArray)([u.default], () => {
+  }), [L, y] = (0, a.useStateFromStoresArray)([u.default], () => {
     let e = u.default.isMobileOnline(t.id);
     return (0, o.shouldDisableUserPresenceInChannel)(t, N) ? [A.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [A.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
   });
@@ -58,31 +59,32 @@ function x(e) {
     }), (0, l.jsx)("div", {
       className: g.inner,
       children: (0, l.jsxs)("div", {
-        ...P,
+        ...M,
         children: [(0, l.jsx)(U, {
-          src: R,
-          avatarDecoration: M,
+          src: P,
+          avatarDecoration: j,
           size: T.AvatarSizes.SIZE_120,
           className: g.avatar,
-          status: j,
-          statusBackdropColor: (0, n.getStatusBackdropColor)(p),
+          status: L,
+          statusBackdropColor: (0, n.getStatusBackdropColor)(h),
           "aria-label": t.username,
-          isMobile: L,
+          isMobile: y,
           statusTooltip: !0,
           statusTooltipDelay: v.USER_PROFILE_TOOLTIP_DELAY
         }), (0, l.jsxs)("div", {
           className: g.buttons,
-          children: [h && (0, l.jsx)(_.default, {
+          children: [R && (0, l.jsx)(_.default, {
             user: t,
-            onClose: C
-          }), !h && (0, l.jsx)(I.default, {
+            onClose: p
+          }), !R && (0, l.jsx)(I.default, {
             user: t,
             guildId: x,
-            onClose: C
+            onClose: p
           })]
         }), (0, l.jsx)(m.UserProfileCustomStatusBubble, {
           statusActivity: d,
-          profileType: v.UserProfileTypes.FULL_SIZE
+          profileType: v.UserProfileTypes.FULL_SIZE,
+          transitionState: C
         })]
       })
     })]

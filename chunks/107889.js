@@ -133,6 +133,7 @@ function p(e) {
             channelId: p,
             activity: H,
             customStatusActivity: V,
+            transitionState: L,
             onClose: O
           }), (0, l.jsx)(A.default, {
             user: t,
