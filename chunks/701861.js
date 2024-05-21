@@ -97,29 +97,32 @@ class L extends s.PureComponent {
       activities: n,
       applicationStream: s,
       status: l,
-      isMobile: i
+      lastOnlineTimestamp: i,
+      isMobile: r
     } = this.props, {
-      isActiveRow: r
+      isActiveRow: o
     } = this.state;
     return (0, a.jsx)(p.default, {
       ref: this.peopleListItemRef,
       isFocused: t,
-      isActive: r,
+      isActive: o,
       user: e,
-      onOtherHover: () => r ? null : (0, d.closeContextMenu)(),
+      onOtherHover: () => o ? null : (0, d.closeContextMenu)(),
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, a.jsxs)("div", {
         className: v.listItemContents,
         children: [(0, a.jsx)(I.default, {
           user: e,
           status: l,
-          isMobile: i,
+          isMobile: r,
           subText: (0, a.jsx)(g.default, {
             hovered: t,
             activities: n,
             applicationStream: s,
             status: l,
-            user: e
+            user: e,
+            lastOnlineTimestamp: i,
+            experimentLocation: "friend_row"
           }),
           hovered: t,
           showAccountIdentifier: !0

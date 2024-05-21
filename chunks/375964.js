@@ -17429,5 +17429,6 @@ e.exports = Object.freeze({
   GUILD_POPOUT_JOINED: "Joined",
   GUILD_POPOUT_EMPTY_PROMPT_HEADER: "No one's in voice yet",
   GUILD_POPOUT_EMPTY_PROMPT_BODY: "Voice channels are for hanging out. When you're ready to talk, just hop in.",
-  GUILD_POPOUT_EMPTY_PROMPT_ARIA: "Hang out in !!{channelName}!!"
+  GUILD_POPOUT_EMPTY_PROMPT_ARIA: "Hang out in !!{channelName}!!",
+  RECENTLY_ONLINE_STATUS: "Online **{time}** ago"
 })
