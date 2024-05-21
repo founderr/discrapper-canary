@@ -42,7 +42,8 @@ function B(e) {
   let {
     onClose: t
   } = e, s = (0, r.useStateFromStores)([S.default], () => S.default.getCandidateGames()), [l, o] = n.useState(null), c = s.map(e => ({
-    value: e.pid,
+    key: e.pid,
+    value: e,
     label: null != e.name ? e.name : ""
   }));
   return (0, a.jsxs)(d.Dialog, {
@@ -68,7 +69,7 @@ function B(e) {
       }), (0, a.jsx)(d.Button, {
         disabled: null == l,
         onClick: function() {
-          null != l && (u.default.addGame(l), t())
+          null != l && (u.default.addGame(l.pid, l.name), t())
         },
         children: L.default.Messages.SETTINGS_GAMES_ADD_NEW_GAME
       })]

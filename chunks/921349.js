@@ -569,19 +569,22 @@ function w(e) {
       let t = e.relatedTarget;
       !G(s.current, t) && c(null)
     },
-    children: t.map((e, t) => (0, i.jsx)("li", {
-      className: M.optionPillItem,
-      children: (0, i.jsx)(H, {
-        focused: null == _ ? 0 === t : _ === String(e.value),
-        option: e,
-        onClick: () => n(e.value),
-        onKeyDown: async t => {
-          "Backspace" === t.key ? (await a(!0), n(e.value, !1)) : "Delete" === t.key && (await o(!0), n(e.value, !1))
-        },
-        renderOptionPrefix: u,
-        renderOptionSuffix: l
-      })
-    }, "".concat(e.label, "-").concat(e.value)))
+    children: t.map((e, t) => {
+      var r;
+      return (0, i.jsx)("li", {
+        className: M.optionPillItem,
+        children: (0, i.jsx)(H, {
+          focused: null == _ ? 0 === t : _ === String(e.value),
+          option: e,
+          onClick: () => n(e.value),
+          onKeyDown: async t => {
+            "Backspace" === t.key ? (await a(!0), n(e.value, !1)) : "Delete" === t.key && (await o(!0), n(e.value, !1))
+          },
+          renderOptionPrefix: u,
+          renderOptionSuffix: l
+        })
+      }, null !== (r = e.key) && void 0 !== r ? r : "".concat(e.label, "-").concat(e.value))
+    })
   })
 }
 

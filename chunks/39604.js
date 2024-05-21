@@ -143,6 +143,8 @@ function b(e) {
     settings: {
       remindersEnabled: e
     }
+  }), m.default.track(M.AnalyticEvents.CLIPS_SETTINGS_UPDATED, {
+    reminders_enabled: e
   })
 }
 
