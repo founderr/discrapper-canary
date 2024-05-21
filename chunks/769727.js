@@ -268,7 +268,7 @@ let D = i.memo(function(e) {
         (0, v.setClanDiscoveryMode)(v.ClanDiscoveryMode.ADMIN_UPSELL);
         return
       }
-      if (!e && I) {
+      if (!e && I && !_) {
         (0, v.setClanDiscoveryMode)(v.ClanDiscoveryMode.GET_STARTED);
         return
       }
