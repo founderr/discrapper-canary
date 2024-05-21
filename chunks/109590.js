@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("392711"),
   r = n.n(i),
-  a = n("442837"),
-  s = n("544891"),
+  s = n("442837"),
+  a = n("544891"),
   o = n("570140"),
   l = n("592125"),
   u = n("709054"),
@@ -85,14 +85,14 @@ function h(e) {
   let {
     loaded: i,
     firstMessage: r
-  } = (0, a.useStateFromStoresObject)([_.default], () => _.default.getMessage(e.id)), s = (0, a.useStateFromStores)([l.default], () => l.default.getChannel(e.parent_id));
-  if (null != s && (t = i, n = r, !t && null == n))(function(e, t) {
+  } = (0, s.useStateFromStoresObject)([_.default], () => _.default.getMessage(e.id)), a = (0, s.useStateFromStores)([l.default], () => l.default.getChannel(e.parent_id));
+  if (null != a && (t = i, n = r, !t && null == n))(function(e, t) {
     if (T.hasRequested(e.id, t)) return;
     let n = (0, d.computeThreadIdsSnapshot)(e.id),
       i = n.findIndex(e => e === t),
       r = n.slice(i, i + 5).filter(t => !T.hasRequested(e.id, t));
     A(e, r)
-  })(s, e.id);
+  })(a, e.id);
   return {
     loaded: i,
     firstMessage: r
@@ -104,10 +104,10 @@ function A(e, t) {
   t.forEach(t => {
     var i, r;
     let {
-      loaded: a,
-      firstMessage: s
+      loaded: s,
+      firstMessage: a
     } = _.default.getMessage(t);
-    if (i = a, r = s, !i && null == r) T.request(e.id, t), n = !0
+    if (i = s, r = a, !i && null == r) T.request(e.id, t), n = !0
   }), n && null == f && (f = setTimeout(N, 0))
 }
 
@@ -132,7 +132,7 @@ async function p(e) {
       body: {
         threads: r
       }
-    } = await s.HTTP.post({
+    } = await a.HTTP.post({
       url: c.Endpoints.FORUM_POSTS(e),
       body: {
         thread_ids: t

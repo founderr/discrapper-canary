@@ -2,8 +2,8 @@
 n.r(t), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
 var i = n("990547"),
   r = n("544891"),
-  a = n("570140"),
-  s = n("275759"),
+  s = n("570140"),
+  a = n("275759"),
   o = n("710845"),
   l = n("626135"),
   u = n("573261"),
@@ -26,11 +26,11 @@ t.default = {
   fetch: () => r.HTTP.get({
     url: d.Endpoints.CONNECTIONS,
     oldFormErrors: !0
-  }).then(e => a.default.dispatch({
+  }).then(e => s.default.dispatch({
     type: "USER_CONNECTIONS_UPDATE",
     local: !0,
     accounts: e.body
-  }), () => a.default.dispatch({
+  }), () => s.default.dispatch({
     type: "USER_CONNECTIONS_UPDATE",
     local: !0,
     accounts: []
@@ -40,8 +40,8 @@ t.default = {
       location: t,
       twoWayLinkType: n,
       userCode: i,
-      twoWayLink: a,
-      successRedirect: s
+      twoWayLink: s,
+      successRedirect: a
     } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     l.default.track(d.AnalyticEvents.CONNECTED_ACCOUNT_INITIATED, {
       platform_type: e,
@@ -49,19 +49,19 @@ t.default = {
     });
     let o = d.Endpoints.CONNECTIONS_AUTHORIZE(e),
       u = new URLSearchParams;
-    return null != i && u.append("two_way_user_code", i), null != s && u.append("success_redirect", s), null != n ? (u.append("two_way_link_type", n), u.append("two_way_link", "true")) : null != a && u.append("two_way_link", String(a)), o = o + "?" + u.toString(), r.HTTP.get({
+    return null != i && u.append("two_way_user_code", i), null != a && u.append("success_redirect", a), null != n ? (u.append("two_way_link_type", n), u.append("two_way_link", "true")) : null != s && u.append("two_way_link", String(s)), o = o + "?" + u.toString(), r.HTTP.get({
       url: o,
       oldFormErrors: !0
     })
   },
   callback: c,
-  connect(e, t, n, r, a) {
-    var s;
+  connect(e, t, n, r, s) {
+    var a;
     return u.default.put({
       url: d.Endpoints.CONNECTION(e, t),
       body: {
         name: n,
-        friend_sync: null !== (s = null == a ? void 0 : a.friend_sync) && void 0 !== s ? s : d.FRIEND_SYNC_PLATFORM_TYPES.has(e)
+        friend_sync: null !== (a = null == s ? void 0 : s.friend_sync) && void 0 !== a ? a : d.FRIEND_SYNC_PLATFORM_TYPES.has(e)
       },
       context: {
         location: r
@@ -116,7 +116,7 @@ t.default = {
     }
   }),
   joinServer(e, t) {
-    a.default.dispatch({
+    s.default.dispatch({
       type: "USER_CONNECTIONS_INTEGRATION_JOINING",
       integrationId: e,
       joining: !0
@@ -124,11 +124,11 @@ t.default = {
       url: d.Endpoints.INTEGRATION_JOIN(e),
       oldFormErrors: !0
     }, n => {
-      a.default.dispatch({
+      s.default.dispatch({
         type: "USER_CONNECTIONS_INTEGRATION_JOINING",
         integrationId: e,
         joining: !1
-      }), !n.ok && (a.default.dispatch({
+      }), !n.ok && (s.default.dispatch({
         type: "USER_CONNECTIONS_INTEGRATION_JOINING_ERROR",
         integrationId: e,
         error: n.hasErr ? void 0 : n.body.message
@@ -145,14 +145,14 @@ t.default = {
         url: d.Endpoints.CONNECTION_ACCESS_TOKEN(e, t),
         oldFormErrors: !0
       });
-      return a.default.dispatch({
+      return s.default.dispatch({
         type: "USER_CONNECTION_UPDATE",
         platformType: e,
         id: t,
         accessToken: n
       }), n
     } catch (n) {
-      throw n.body.code === d.AbortCodes.CONNECTION_REVOKED && a.default.dispatch({
+      throw n.body.code === d.AbortCodes.CONNECTION_REVOKED && s.default.dispatch({
         type: "USER_CONNECTION_UPDATE",
         platformType: e,
         id: t,
@@ -173,10 +173,10 @@ t.default = {
       return
     }
     let {
-      code: a,
+      code: s,
       error: o,
       errorDescription: l
-    } = (0, s.getCallbackParamsFromURL)(t);
+    } = (0, a.getCallbackParamsFromURL)(t);
     if (null != o) {
       _.error("Two-way link: missing authorize code", {
         error: o,
@@ -187,7 +187,7 @@ t.default = {
     return await c(e, {
       code: n,
       state: i,
-      two_way_link_code: a,
+      two_way_link_code: s,
       token_redirect_uri: r
     })
   }

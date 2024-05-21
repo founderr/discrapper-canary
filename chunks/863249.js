@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("544891"),
   r = n("570140"),
-  a = n("668781"),
-  s = n("239091"),
+  s = n("668781"),
+  a = n("239091"),
   o = n("962086"),
   l = n("160404"),
   u = n("264229"),
@@ -14,31 +14,31 @@ var i = n("544891"),
   I = n("689938");
 let T = async (e, t) => {
   let n = null != t ? t : _.default.getInviteKeyForGuildId(e),
-    a = c.default.getCurrentUser(),
-    s = !d.default.isMember(e, null == a ? void 0 : a.id);
+    s = c.default.getCurrentUser(),
+    a = !d.default.isMember(e, null == s ? void 0 : s.id);
   try {
     let t = await i.HTTP.get({
       url: E.Endpoints.GUILD_MEMBER_VERIFICATION(e),
       query: {
-        with_guild: s,
+        with_guild: a,
         invite_code: null != n ? (0, u.parseInviteCodeFromInviteKey)(n) : void 0
       },
       oldFormErrors: !0
     });
     if (null == t.body) throw t;
     let {
-      body: a
+      body: s
     } = t;
     return r.default.dispatch({
       type: "MEMBER_VERIFICATION_FORM_UPDATE",
       guildId: e,
       form: {
-        version: a.version,
-        description: a.description,
-        formFields: a.form_fields,
-        guild: a.guild
+        version: s.version,
+        description: s.description,
+        formFields: s.form_fields,
+        guild: s.guild
       }
-    }), a
+    }), s
   } catch (t) {
     r.default.dispatch({
       type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL",
@@ -119,7 +119,7 @@ let T = async (e, t) => {
     let {
       status: e
     } = t;
-    if (429 === e)(0, s.closeContextMenu)(), a.default.show({
+    if (429 === e)(0, a.closeContextMenu)(), s.default.show({
       title: I.default.Messages.CLAN_APPLICATION_RATE_LIMITED_HEADER,
       body: I.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY,
       confirmText: I.default.Messages.CLAN_APPLICATION_RATE_LIMITED_BUTTON

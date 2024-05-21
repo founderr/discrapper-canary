@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120"), n("724458");
-var i, r, a, s, o = n("442837"),
+var i, r, s, a, o = n("442837"),
   l = n("570140"),
   u = n("271383"),
   d = n("430824"),
@@ -52,12 +52,12 @@ class A extends(i = o.default.Store) {
     return null != e ? I[e] : null
   }
 }
-s = "LurkingStore", (a = "displayName") in(r = A) ? Object.defineProperty(r, a, {
-  value: s,
+a = "LurkingStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new A(l.default, {
+}) : r[s] = a, t.default = new A(l.default, {
   CONNECTION_OPEN: function() {
     E = Object.values(d.default.getGuilds()).reduce((e, t) => t.isLurker() ? [...e, t.id] : e, [])
   },
@@ -67,11 +67,11 @@ s = "LurkingStore", (a = "displayName") in(r = A) ? Object.defineProperty(r, a, 
       lurker: n,
       source: i,
       directoryChannelId: r,
-      loadId: a
+      loadId: s
     } = e;
     if (n) {
-      var s, o;
-      switch (h(t), s = t, null != (o = a) && (I[s] = o), i) {
+      var a, o;
+      switch (h(t), a = t, null != (o = s) && (I[a] = o), i) {
         case c.JoinGuildSources.MOBILE_GUILD_DISCOVERY:
           f = {
             type: c.JoinGuildSources.MOBILE_GUILD_DISCOVERY
@@ -124,7 +124,7 @@ s = "LurkingStore", (a = "displayName") in(r = A) ? Object.defineProperty(r, a, 
       guildId: n,
       joinedAt: i,
       user: r
-    } = e, a = r.id === (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
-    return !!(a && null != i && E.includes(n)) && (S(n), T = null, f = null, !0)
+    } = e, s = r.id === (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
+    return !!(s && null != i && E.includes(n)) && (S(n), T = null, f = null, !0)
   }
 })

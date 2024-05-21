@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("724458");
 var i, r = n("180650"),
-  a = n("979554"),
-  s = n("442837"),
+  s = n("979554"),
+  a = n("442837"),
   o = n("570140"),
   l = n("597688");
 
@@ -19,24 +19,24 @@ let d = new Date(2023, 8, 25),
   c = () => ({
     categoryItemViews: {
       [r.CollectiblesCategorySkuId.FANTASY]: {
-        [a.CollectiblesItemType.AVATAR_DECORATION]: d,
-        [a.CollectiblesItemType.PROFILE_EFFECT]: _
+        [s.CollectiblesItemType.AVATAR_DECORATION]: d,
+        [s.CollectiblesItemType.PROFILE_EFFECT]: _
       },
       [r.CollectiblesCategorySkuId.ANIME]: {
-        [a.CollectiblesItemType.AVATAR_DECORATION]: d,
-        [a.CollectiblesItemType.PROFILE_EFFECT]: _
+        [s.CollectiblesItemType.AVATAR_DECORATION]: d,
+        [s.CollectiblesItemType.PROFILE_EFFECT]: _
       },
       [r.CollectiblesCategorySkuId.BREAKFAST]: {
-        [a.CollectiblesItemType.AVATAR_DECORATION]: d,
-        [a.CollectiblesItemType.PROFILE_EFFECT]: _
+        [s.CollectiblesItemType.AVATAR_DECORATION]: d,
+        [s.CollectiblesItemType.PROFILE_EFFECT]: _
       },
       [r.CollectiblesCategorySkuId.DISXCORE]: {
-        [a.CollectiblesItemType.AVATAR_DECORATION]: d
+        [s.CollectiblesItemType.AVATAR_DECORATION]: d
       }
     }
   }),
   E = c();
-class I extends(i = s.default.PersistedStore) {
+class I extends(i = a.default.PersistedStore) {
   initialize(e) {
     null != e && (E = e)
   }
@@ -61,11 +61,11 @@ u(I, "displayName", "CollectiblesPersistedStore"), u(I, "persistKey", "Collectib
     return t.reduce((e, t) => {
       let {
         skuId: r
-      } = t, a = n.reduce((e, t) => {
+      } = t, s = n.reduce((e, t) => {
         var n;
         return (null === (n = E.categoryItemViews[r]) || void 0 === n ? void 0 : n[t]) != null ? e : (null == E.categoryItemViews[r] && (E.categoryItemViews[r] = {}), E.categoryItemViews[r][t] = i, !0)
       }, !1);
-      return e || a
+      return e || s
     }, !1)
   }
 })

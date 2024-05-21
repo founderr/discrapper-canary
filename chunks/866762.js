@@ -1,22 +1,22 @@
     "use strict";
-    r.r(t), r("312677");
+    r.r(e), r("312677");
     var n = r("945124");
-    self.addEventListener("message", e => {
-      var t, r;
+    self.addEventListener("message", t => {
+      var e, r;
       let {
         data: {
           unsortedClans: i,
           id: o,
           criteria: u
         }
-      } = e;
-      let f = (t = i, r = u, t.map(e => ({
-        ...e,
-        affinity: (0, n.getClanDiscoveryAffinity)(e, r)
-      })).sort((e, t) => {
+      } = t;
+      let f = (e = i, r = u, e.map(t => ({
+        ...t,
+        affinity: (0, n.getClanDiscoveryAffinity)(t, r)
+      })).sort((t, e) => {
         var i, o;
-        let u = null !== (i = t.affinity) && void 0 !== i ? i : (0, n.getClanDiscoveryAffinity)(t, r);
-        return u - (null !== (o = e.affinity) && void 0 !== o ? o : (0, n.getClanDiscoveryAffinity)(e, r))
+        let u = null !== (i = e.affinity) && void 0 !== i ? i : (0, n.getClanDiscoveryAffinity)(e, r);
+        return u - (null !== (o = t.affinity) && void 0 !== o ? o : (0, n.getClanDiscoveryAffinity)(t, r))
       }));
       self.postMessage({
         sortedClans: f,

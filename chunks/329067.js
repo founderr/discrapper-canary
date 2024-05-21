@@ -26,9 +26,9 @@ var l = a("735250"),
   b = a("333867"),
   x = a("74179"),
   v = a("981631"),
-  S = a("689938"),
-  I = a("834042");
-let T = e => {
+  I = a("689938"),
+  S = a("834042");
+let L = e => {
     let {
       children: t,
       style: a,
@@ -46,7 +46,7 @@ let T = e => {
       children: t
     })
   },
-  L = e => {
+  T = e => {
     let {
       children: t,
       className: a,
@@ -86,15 +86,15 @@ function _(e) {
     isGift: y = !1,
     baseAnalyticsData: A
   } = e, {
-    step: O,
-    setStep: j,
-    paymentError: R,
-    paymentAuthenticationState: k,
+    step: j,
+    setStep: O,
+    paymentError: k,
+    paymentAuthenticationState: R,
     application: P,
-    skuPricePreviewsById: M
+    skuPricePreviewsById: B
   } = (0, E.usePaymentContext)(), {
-    analyticsLocations: B
-  } = (0, f.default)(), [D, F] = s.useState(!1), H = s.useRef(null), w = M[_], U = null != w ? w[x.id] : null, W = null != U ? (0, g.formatPrice)(null == U ? void 0 : U.amount, null == U ? void 0 : U.currency) : null, V = s.useMemo(() => ({
+    analyticsLocations: M
+  } = (0, f.default)(), [D, F] = s.useState(!1), H = s.useRef(null), w = B[_], U = null != w ? w[x.id] : null, W = null != U ? (0, g.formatPrice)(null == U ? void 0 : U.amount, null == U ? void 0 : U.currency) : null, G = s.useMemo(() => ({
     ...A,
     load_id: N,
     payment_type: v.PurchaseTypeToAnalyticsPaymentType[v.PurchaseTypes.ONE_TIME],
@@ -102,12 +102,12 @@ function _(e) {
     currency: null == U ? void 0 : U.currency
   }), [A, U, N]);
   s.useEffect(() => {
-    O !== h.Step.REVIEW && j(h.Step.REVIEW)
+    j !== h.Step.REVIEW && O(h.Step.REVIEW)
   }), s.useEffect(() => {
-    k === C.PaymentAuthenticationState.ERROR && a(R)
-  }, [a, R, k]);
-  let G = async () => {
-    await m.default.track(v.AnalyticEvents.PAYMENT_FLOW_COMPLETED, V), n()(null != U, "skuPricePreview can't be null"), n()(null != P, "application can't be null");
+    R === C.PaymentAuthenticationState.ERROR && a(k)
+  }, [a, k, R]);
+  let V = async () => {
+    await m.default.track(v.AnalyticEvents.PAYMENT_FLOW_COMPLETED, G), n()(null != U, "skuPricePreview can't be null"), n()(null != P, "application can't be null");
     try {
       await (0, o.purchaseSKU)(P.id, _, {
         expectedAmount: U.amount,
@@ -122,12 +122,12 @@ function _(e) {
     }
   }, K = s.useCallback(e => {
     m.default.track(v.AnalyticEvents.PAYMENT_FLOW_STEP, {
-      ...V,
+      ...G,
       to_step: e
-    }), e === h.Step.CONFIRM && (F(!1), t()), j(e)
-  }, [V, j, t]);
-  return (0, C.usePaymentStepForAuthentication)(O, k, K), (0, l.jsxs)("div", {
-    className: I.reviewContainer,
+    }), e === h.Step.CONFIRM && (F(!1), t()), O(e)
+  }, [G, O, t]);
+  return (0, C.usePaymentStepForAuthentication)(j, R, K), (0, l.jsxs)("div", {
+    className: S.reviewContainer,
     children: [(0, l.jsx)(i.FormSection, {
       children: (0, l.jsx)(i.FormItem, {
         children: (0, l.jsx)(c.default, {
@@ -140,34 +140,34 @@ function _(e) {
         })
       })
     }), (0, l.jsx)("div", {
-      className: I.legalTerms,
+      className: S.legalTerms,
       children: (0, l.jsx)("p", {
-        children: S.default.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
+        children: I.default.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
           paidURL: p.default.getArticleURL(v.HelpdeskArticles.PAID_TERMS)
         })
       })
-    }), (0, l.jsx)(T, {
-      className: I.buyButton,
+    }), (0, l.jsx)(L, {
+      className: S.buyButton,
       submitting: D,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
-        F(!0), await G()
+        F(!0), await V()
       },
-      children: null !== W ? S.default.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
+      children: null !== W ? I.default.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
         price: W
       }) : (0, l.jsx)(i.Spinner, {
         type: i.Spinner.Type.PULSING_ELLIPSIS
       })
-    }), !D && (0, l.jsx)(L, {
-      className: I.reviewButton,
+    }), !D && (0, l.jsx)(T, {
+      className: S.reviewButton,
       onClick: () => {
         r(), (0, b.default)({
           skuId: _,
-          analyticsLocations: B,
+          analyticsLocations: M,
           returnRef: H
         })
       },
-      children: S.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
+      children: I.default.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
     })]
   })
 }

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("570140"),
-  a = n("881052"),
-  s = n("25251"),
+  s = n("881052"),
+  a = n("25251"),
   o = n("981631");
 let l = e => {
     let {
@@ -25,8 +25,8 @@ let l = e => {
   },
   u = async function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    if (!(!e && (s.default.hasFetched() || s.default.isFetching))) {
-      if (s.default.canFetch()) {
+    if (!(!e && (a.default.hasFetched() || a.default.isFetching))) {
+      if (a.default.canFetch()) {
         r.default.dispatch({
           type: "USER_PROFILE_EFFECTS_FETCH"
         });
@@ -42,7 +42,7 @@ let l = e => {
           throw r.default.dispatch({
             type: "USER_PROFILE_EFFECTS_FETCH_FAILURE",
             error: e
-          }), new a.APIError(e)
+          }), new s.APIError(e)
         }
       }
     }

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("844099"),
   l = n("442837"),
   u = n("481060"),
@@ -35,16 +35,16 @@ function v(e) {
     emoji: t,
     className: n,
     animate: r = !0,
-    hideTooltip: a,
+    hideTooltip: s,
     tooltipDelay: o
   } = e, l = h.AnimateEmoji.useSetting(), _ = null != t.id ? ":".concat(t.name, ":") : I.default.translateSurrogatesToInlineEmoji(t.name), c = {
-    className: s()(g.emoji, n),
+    className: a()(g.emoji, n),
     emojiId: t.id,
     emojiName: t.name,
     autoplay: !0,
     animated: !!(t.animated && l && r)
   };
-  return a ? (0, i.jsx)(d.default, {
+  return s ? (0, i.jsx)(d.default, {
     ...c
   }) : (0, i.jsx)(u.Tooltip, {
     text: _,
@@ -59,11 +59,11 @@ let D = e => {
   let {
     className: t,
     text: n
-  } = e, a = r.useRef(null), o = r.useRef(null), [l, d] = r.useState(!1);
+  } = e, s = r.useRef(null), o = r.useRef(null), [l, d] = r.useState(!1);
   return r.useLayoutEffect(() => {
     let {
       current: e
-    } = a, {
+    } = s, {
       current: t
     } = o;
     if (null != e && null != t) d(!(e.clientWidth < t.clientWidth && e.clientHeight <= t.clientHeight))
@@ -75,10 +75,10 @@ let D = e => {
       children: [(0, i.jsx)("div", {
         ...e,
         className: t,
-        ref: a,
+        ref: s,
         children: n
       }), (0, i.jsx)("div", {
-        className: s()(g.textRuler, t),
+        className: a()(g.textRuler, t),
         ref: o,
         "aria-hidden": !0,
         children: n
@@ -91,8 +91,8 @@ t.default = e => {
   let {
     activities: n,
     applicationStream: r,
-    className: a,
-    textClassName: s,
+    className: s,
+    textClassName: a,
     emojiClassName: u,
     animate: d = !0,
     hideTooltip: I = !1,
@@ -124,10 +124,10 @@ t.default = e => {
     H = null === (t = (0, c.default)(n, r, void 0, V)) || void 0 === t ? void 0 : t.activityText,
     Y = null != H && H.length > 0;
   return F || null == B && !Y ? null : (0, i.jsxs)("div", {
-    className: a,
+    className: s,
     children: [B, (0, i.jsx)(D, {
       text: H,
-      className: s
+      className: a
     }), y && (0, i.jsx)(o.QuestsIcon, {
       className: g.questsIcon,
       height: L,

@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("952265"),
-  a = n("723359"),
-  s = n("231338");
+  s = n("723359"),
+  a = n("231338");
 
 function o(e) {
   (0, r.openModalLazy)(async () => {
@@ -22,8 +22,8 @@ function o(e) {
       ...t
     })
   }, {
-    modalKey: a.NEW_USER_AGE_GATE_MODAL_KEY,
-    onCloseRequest: s.NOOP,
+    modalKey: s.NEW_USER_AGE_GATE_MODAL_KEY,
+    onCloseRequest: a.NOOP,
     onCloseCallback: e
   })
 }
@@ -40,7 +40,7 @@ function l() {
       ...n
     })
   }, {
-    onCloseRequest: e ? s.NOOP : null,
+    onCloseRequest: e ? a.NOOP : null,
     onCloseCallback: t
   })
 }

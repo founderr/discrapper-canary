@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("358085"),
-  a = n("374023"),
-  s = n("865033"),
+  s = n("374023"),
+  a = n("865033"),
   o = n("58406");
-s.default.initialize(), i = a.ProcessArgs.isDiscordTestSet() ? n("903387").default : (0, r.isDesktop)() ? n("716546").default : n("903387").default, t.default = i
+a.default.initialize(), i = s.ProcessArgs.isDiscordTestSet() ? n("903387").default : (0, r.isDesktop)() ? n("716546").default : n("903387").default, t.default = i

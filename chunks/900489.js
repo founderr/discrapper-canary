@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getMessagesFromGuildFeedFetch: function() {
-    return s
+    return a
   },
   getThreadsFromGuildFeedFetch: function() {
     return o
@@ -10,12 +10,12 @@ n.r(t), n.d(t, {
 var i = n("536402"),
   r = n("823379");
 
-function a(e) {
-  let t = e.children.map(e => a(e));
+function s(e) {
+  let t = e.children.map(e => s(e));
   return [e.messages.map(e => e.message), ...t].flat()
 }
 
-function s(e) {
+function a(e) {
   return e.results.items.flatMap(e => {
     switch (e.type) {
       case i.GuildFeedItemTypes.MESSAGE:
@@ -24,7 +24,7 @@ function s(e) {
       case i.GuildFeedItemTypes.MESSAGE_BUNDLE:
         return e.messages.map(e => e.message);
       case i.GuildFeedItemTypes.CONVERSATION:
-        return a(e.root);
+        return s(e.root);
       default:
         (0, r.assertNever)(e)
     }
@@ -45,7 +45,7 @@ function o(e) {
         t.push(...e.messages.map(e => e.message.thread));
         break;
       case i.GuildFeedItemTypes.CONVERSATION:
-        t.push(...a(e.root).map(e => e.thread));
+        t.push(...s(e.root).map(e => e.thread));
         break;
       default:
         (0, r.assertNever)(e)

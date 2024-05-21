@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, a, s, o = n("442837"),
+var i, r, s, a, o = n("442837"),
   l = n("570140"),
   u = n("457330"),
   d = n("726542"),
@@ -43,12 +43,12 @@ class p extends(i = o.default.Store) {
     return A[e] || !1
   }
 }
-s = "ConnectedAccountsStore", (a = "displayName") in(r = p) ? Object.defineProperty(r, a, {
-  value: s,
+a = "ConnectedAccountsStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new p(l.default, {
+}) : r[s] = a, t.default = new p(l.default, {
   CONNECTION_OPEN: function(e) {
     N(e.connectedAccounts.map(e => new _.default(e)))
   },
@@ -70,9 +70,9 @@ s = "ConnectedAccountsStore", (a = "displayName") in(r = p) ? Object.definePrope
       id: n,
       revoked: i,
       accessToken: r
-    } = e, a = f.find(e => e.id === n && e.type === t);
-    if (null == a) return !1;
-    null != i && (a.revoked = i), null != r && (a.accessToken = r)
+    } = e, s = f.find(e => e.id === n && e.type === t);
+    if (null == s) return !1;
+    null != i && (s.revoked = i), null != r && (s.accessToken = r)
   },
   USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function(e) {
     m[e.integrationId] = void 0 !== e.error ? e.error : ""

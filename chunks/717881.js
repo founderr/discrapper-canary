@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("442837"),
   l = n("481060"),
   u = n("620662"),
@@ -39,8 +39,8 @@ function P(e) {
     type: t,
     source: n,
     activity: r,
-    applicationStream: a,
-    user: s,
+    applicationStream: s,
+    user: a,
     guildId: o,
     channelId: u,
     onAction: c,
@@ -52,8 +52,8 @@ function P(e) {
     type: t,
     source: n,
     activity: r,
-    applicationStream: a,
-    user: s,
+    applicationStream: s,
+    user: a,
     guildId: o,
     look: l.Button.Looks.FILLED,
     color: null != I ? I : l.Button.Colors.PRIMARY,
@@ -67,7 +67,7 @@ t.default = function(e) {
   let {
     activity: t,
     user: n,
-    useStoreStream: a = !0,
+    useStoreStream: s = !0,
     showActions: l = !0,
     hideHeader: d = !1,
     showChannelDetails: _ = !1,
@@ -83,7 +83,7 @@ t.default = function(e) {
     location: "UserActivityContainer"
   }, {
     autoTrackExposure: !1
-  }), w = (0, o.useStateFromStores)([N.default], () => a ? N.default.getAnyStreamForUser(n.id) : null), k = G && C.default.can(D.Permissions.CONNECT, b), B = (null == t ? void 0 : t.type) === D.ActivityTypes.HANG_STATUS && k ? b : null, V = (0, o.useStateFromStores)([O.default, R.default, p.default], () => {
+  }), w = (0, o.useStateFromStores)([N.default], () => s ? N.default.getAnyStreamForUser(n.id) : null), k = G && C.default.can(D.Permissions.CONNECT, b), B = (null == t ? void 0 : t.type) === D.ActivityTypes.HANG_STATUS && k ? b : null, V = (0, o.useStateFromStores)([O.default, R.default, p.default], () => {
     var e, i;
     return (0, u.default)(t, D.ActivityFlags.EMBEDDED) ? O.default.getGuild(null === (e = p.default.getChannel(null === (i = R.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != B ? O.default.getGuild(B.getGuildId()) : null
   }), x = (0, o.useStateFromStores)([O.default], () => null != w ? O.default.getGuild(w.guildId) : null), F = (0, o.useStateFromStores)([c.default], () => {
@@ -107,7 +107,7 @@ t.default = function(e) {
     showChannelDetails: _,
     channel: _ ? b : void 0,
     renderActions: l ? () => (0, i.jsxs)("div", {
-      className: s()(j && y.actionsWrapper),
+      className: a()(j && y.actionsWrapper),
       children: [(0, i.jsx)(P, {
         ...U,
         applicationStream: w,
@@ -126,7 +126,7 @@ t.default = function(e) {
           let {
             interactionType: i,
             emoji: r,
-            reply: a
+            reply: s
           } = e;
           L.default.track(D.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
             application_id: t.application_id,
@@ -139,8 +139,8 @@ t.default = function(e) {
             application: F,
             altText: (0, S.getActivityAltText)(n, t),
             stream: w
-          }), i === T.AtomicReactorInteractionTypes.ReplySubmit && null != a && (0, f.sendReplyToActivity)({
-            reply: a,
+          }), i === T.AtomicReactorInteractionTypes.ReplySubmit && null != s && (0, f.sendReplyToActivity)({
+            reply: s,
             user: n,
             activity: t,
             application: F,

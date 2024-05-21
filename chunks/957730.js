@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("724458"), n("653041"), n("390547");
 var i = n("392711"),
   r = n.n(i),
-  a = n("302454"),
-  s = n.n(a),
+  s = n("302454"),
+  a = n.n(s),
   o = n("933557"),
   l = n("339085"),
   u = n("633302"),
@@ -68,7 +68,7 @@ function M(e) {
 
 function y(e) {
   return {
-    match: s().anyScopeRegex(e),
+    match: a().anyScopeRegex(e),
     parse: e => ({
       type: "text",
       content: e[0]
@@ -83,9 +83,9 @@ let P = d.default.RULES,
   k = /^<a?:(\w+):(\d+)>/,
   B = /(@everyone|@here|@Clyde)\b/,
   V = {
-    link: M(s().defaultRules.link),
-    autolink: M(s().defaultRules.autolink),
-    url: M(s().defaultRules.url),
+    link: M(a().defaultRules.link),
+    autolink: M(a().defaultRules.autolink),
+    url: M(a().defaultRules.url),
     inlineCode: M(P.inlineCode),
     codeBlock: M(P.codeBlock),
     rawUserMention: y(b),
@@ -102,8 +102,8 @@ let P = d.default.RULES,
             ...e,
             text: e.text.split("#")[0]
           })), "mention"))) return null;
-        let a = B.exec(e);
-        if (null != a && r[0].length <= a[0].length) return null;
+        let s = B.exec(e);
+        if (null != s && r[0].length <= s[0].length) return null;
         if ("" === n && (0, c.canSuppressNotifications)()) {
           let t = c.SILENT_RE.exec(e);
           if (null != t && r[0].length <= t[0].length) return null
@@ -131,8 +131,8 @@ let P = d.default.RULES,
           }
           if ('"' === t[r]) break
         }
-        let a = t.substring(0, r + 1),
-          s = (0, o.unescapeChannelName)(t.substring(2, r));
+        let s = t.substring(0, r + 1),
+          a = (0, o.unescapeChannelName)(t.substring(2, r));
         return n.sortBy(e => {
           let {
             text: t
@@ -142,12 +142,12 @@ let P = d.default.RULES,
           let {
             text: t
           } = e;
-          return s === t
+          return a === t
         }).map(e => {
           let {
             id: t
           } = e;
-          return [a, t, i]
+          return [s, t, i]
         }).first()
       })("#", e, t.channels),
       parse: e => ({
@@ -172,14 +172,14 @@ let P = d.default.RULES,
       match: e => u.default.EMOJI_NAME_RE.exec(e),
       parse(e, t, n) {
         let [i, r] = e, {
-          customEmoji: a
-        } = n, s = Object.prototype.hasOwnProperty.call(a, r) ? a[r] : null;
-        if (null != s) {
+          customEmoji: s
+        } = n, a = Object.prototype.hasOwnProperty.call(s, r) ? s[r] : null;
+        if (null != a) {
           var o;
           return {
             type: "customEmoticon",
-            content: "<".concat(!0 === s.animated ? "a" : "", ":").concat(null !== (o = s.originalName) && void 0 !== o ? o : s.name, ":").concat(s.id, ">"),
-            emoji: s
+            content: "<".concat(!0 === a.animated ? "a" : "", ":").concat(null !== (o = a.originalName) && void 0 !== o ? o : a.name, ":").concat(a.id, ">"),
+            emoji: a
           }
         }
         return {
@@ -195,12 +195,12 @@ let P = d.default.RULES,
       },
       parse(e, t, n) {
         let [i, r] = e, {
-          emojiContext: a
-        } = n, s = a.getEmoticonByName(r);
-        return null != s ? {
+          emojiContext: s
+        } = n, a = s.getEmoticonByName(r);
+        return null != a ? {
           type: "customEmoticon",
-          content: "<".concat(!0 === s.animated ? "a" : "", ":").concat(s.name, ":").concat(s.id, ">"),
-          emoji: s
+          content: "<".concat(!0 === a.animated ? "a" : "", ":").concat(a.name, ":").concat(a.id, ">"),
+          emoji: a
         } : {
           type: "text",
           content: i
@@ -216,7 +216,7 @@ let P = d.default.RULES,
     inlineCode: M(P.inlineCode),
     codeBlock: M(P.codeBlock),
     mention: {
-      match: s().anyScopeRegex(b),
+      match: a().anyScopeRegex(b),
       parse(e, t, n) {
         let {
           isNotification: i
@@ -224,22 +224,22 @@ let P = d.default.RULES,
         if (null == r) return {
           content: e[0]
         };
-        let a = R.default.getUserTag(r, {
+        let s = R.default.getUserTag(r, {
           identifiable: i && N.default.enabled ? "never" : "always"
         });
         if (!i) return {
-          content: "@".concat(a)
+          content: "@".concat(s)
         };
         {
           let e = R.default.getGlobalName(r);
           return {
-            content: null != e ? "@".concat(e) : "@".concat(a)
+            content: null != e ? "@".concat(e) : "@".concat(s)
           }
         }
       }
     },
     roleMention: {
-      match: s().anyScopeRegex(G),
+      match: a().anyScopeRegex(G),
       parse(e, t, n) {
         let {
           guild: i
@@ -256,7 +256,7 @@ let P = d.default.RULES,
       }
     },
     channel: {
-      match: s().anyScopeRegex(w),
+      match: a().anyScopeRegex(w),
       parse(e) {
         let t = T.default.getChannel(e[1]);
         return {
@@ -265,18 +265,18 @@ let P = d.default.RULES,
       }
     },
     emoji: {
-      match: s().anyScopeRegex(k),
+      match: a().anyScopeRegex(k),
       parse(e, t, n) {
-        let [i, r, a] = e, {
-          guild: s
-        } = n, o = l.default.getDisambiguatedEmojiContext(s ? s.id : null).getById(a), u = null != o ? o.name : r;
+        let [i, r, s] = e, {
+          guild: a
+        } = n, o = l.default.getDisambiguatedEmojiContext(a ? a.id : null).getById(s), u = null != o ? o.name : r;
         return {
           content: ":".concat(u, ":")
         }
       }
     },
     soundboard: {
-      match: s().anyScopeRegex(/^<sound:(\d+)>/),
+      match: a().anyScopeRegex(/^<sound:(\d+)>/),
       parse(e) {
         let [t, n] = e;
         return {
@@ -285,13 +285,13 @@ let P = d.default.RULES,
       }
     },
     spoiler: {
-      match: s().anyScopeRegex(g.MARKDOWN_SPOILER_REGEXP),
+      match: a().anyScopeRegex(g.MARKDOWN_SPOILER_REGEXP),
       parse: () => ({
         content: "<".concat(v.default.Messages.SPOILER.toLowerCase(), ">")
       })
     },
     staticRouteLink: {
-      match: s().anyScopeRegex(g.MARKDOWN_STATIC_ROUTE_NAME_REGEXP),
+      match: a().anyScopeRegex(g.MARKDOWN_STATIC_ROUTE_NAME_REGEXP),
       parse: e => ({
         content: "<id:".concat(e[1], ">")
       })
@@ -314,7 +314,7 @@ let P = d.default.RULES,
     e[t].order = n
   })
 });
-let F = s().parserFor(V),
+let F = a().parserFor(V),
   H = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
 
 function Y(e, t, n, i) {
@@ -348,7 +348,7 @@ function j(e) {
   let t;
   let n = null == e ? void 0 : e.getGuildId(),
     i = null != n ? h.default.getGuild(n) : null,
-    a = A.default.can(g.Permissions.MENTION_EVERYONE, e);
+    s = A.default.can(g.Permissions.MENTION_EVERYONE, e);
   t = (null == e ? void 0 : e.isPrivate()) ? e.recipients.map(e => ({
     userId: e,
     nick: null
@@ -362,7 +362,7 @@ function j(e) {
       nick: n
     }
   }) : [];
-  let s = r()(t.reduce((e, t) => {
+  let a = r()(t.reduce((e, t) => {
       let {
         userId: n
       } = t, i = p.default.getUser(n);
@@ -375,7 +375,7 @@ function j(e) {
       let {
         mentionable: t
       } = e;
-      return a || t
+      return s || t
     }).map(e => {
       let {
         id: t,
@@ -412,7 +412,7 @@ function j(e) {
     inline: !0,
     mentionableRoles: o,
     guild: i,
-    users: s,
+    users: a,
     channels: u.concat(d).concat(_),
     emojiContext: c,
     customEmoticonsRegex: m,
@@ -428,15 +428,15 @@ function W(e) {
 t.default = {
   parse(e, t) {
     var n, i, r;
-    let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
-      s = null != a ? a : j(e),
+    let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
+      a = null != s ? s : j(e),
       o = {
         content: t,
         tts: !1,
         invalidEmojis: [],
         validNonShortcutEmojis: []
       };
-    return o.content = (n = o.content, i = s, r = (t, n) => {
+    return o.content = (n = o.content, i = a, r = (t, n) => {
       C.default.isEmojiPremiumLocked({
         emoji: t,
         channel: e,
@@ -447,11 +447,11 @@ t.default = {
   parsePreprocessor: (e, t) => F(t, j(e)),
   unparse(e, t, n) {
     let i = T.default.getChannel(t),
-      a = null != i ? i.getGuildId() : null,
-      o = null != a ? h.default.getGuild(a) : null,
+      s = null != i ? i.getGuildId() : null,
+      o = null != s ? h.default.getGuild(s) : null,
       l = n ? x : r().omit(x, ["spoiler", "timestamp"]),
       d = n ? W : u.default.translateSurrogatesToInlineEmoji,
-      _ = s().parserFor(l),
+      _ = a().parserFor(l),
       c = {
         inline: !0,
         guild: o,

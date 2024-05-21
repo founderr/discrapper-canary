@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var i, r, a = n("735250");
+var i, r, s = n("735250");
 n("470079");
-var s = n("120356"),
-  o = n.n(s),
+var a = n("120356"),
+  o = n.n(a),
   l = n("337033"),
   u = n("227103");
 
@@ -19,7 +19,7 @@ function d(e) {
     tag: n = "h5",
     children: i,
     className: r,
-    faded: s,
+    faded: a,
     disabled: d,
     required: _ = !1,
     error: c,
@@ -34,21 +34,21 @@ function d(e) {
     default:
       t = l.H
   }
-  return (0, a.jsxs)(t, {
+  return (0, s.jsxs)(t, {
     className: o()(u[n], "h5" !== n ? u.defaultColor : null, r, {
       [u["defaultMargin".concat(n)]]: null == r,
-      [u.faded]: s,
+      [u.faded]: a,
       [u.disabled]: d,
       [u.error]: null != c
     }),
     ...I,
-    children: [i, _ && null == c ? (0, a.jsx)("span", {
+    children: [i, _ && null == c ? (0, s.jsx)("span", {
       className: u.required,
       children: "*"
-    }) : null, null != c ? (0, a.jsxs)("span", {
+    }) : null, null != c ? (0, s.jsxs)("span", {
       id: E,
       className: u.errorMessage,
-      children: [null != i ? (0, a.jsx)("span", {
+      children: [null != i ? (0, s.jsx)("span", {
         className: u.errorSeparator,
         children: "-"
       }) : null, c]

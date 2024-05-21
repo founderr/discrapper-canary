@@ -1,7 +1,7 @@
 "use strict";
-let i, r, a;
+let i, r, s;
 n.r(t);
-var s, o, l, u, d = n("153832"),
+var a, o, l, u, d = n("153832"),
   _ = n("442837"),
   c = n("433517"),
   E = n("846519"),
@@ -34,18 +34,18 @@ class g extends(u = _.default.Store) {
     return !A.ProcessArgs.isDisallowPopupsSet() && N
   }
   get user() {
-    return a
+    return s
   }
   get key() {
     return r
   }
 }
-l = "BrowserHandoffStore", (o = "displayName") in(s = g) ? Object.defineProperty(s, o, {
+l = "BrowserHandoffStore", (o = "displayName") in(a = g) ? Object.defineProperty(a, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = l, t.default = new g(I.default, {
+}) : a[o] = l, t.default = new g(I.default, {
   RPC_SERVER_READY: function(e) {
     i = "".concat(location.protocol, "//").concat(location.host, "/handoff?rpc=").concat(e.port), O()
   },
@@ -64,7 +64,7 @@ l = "BrowserHandoffStore", (o = "displayName") in(s = g) ? Object.defineProperty
   },
   BROWSER_HANDOFF_UNAVAILABLE: C,
   BROWSER_HANDOFF_SET_USER: function(e) {
-    a = new f.default(e.user)
+    s = new f.default(e.user)
   },
   LOGIN: R,
   LOGIN_SUCCESS: R,

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   isInDndMode: function() {
-    return s
+    return a
   },
   toggleDndMode: function() {
     return r
   },
   useDndMode: function() {
-    return a
+    return s
   },
   useDndStore: function() {
     return i
@@ -23,10 +23,10 @@ function r(e) {
   })
 }
 
-function a() {
+function s() {
   return i(e => e.inDndMode)
 }
 
-function s() {
+function a() {
   return i.getState().inDndMode
 }

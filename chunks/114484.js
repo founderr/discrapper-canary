@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("207561"),
   l = n("442837"),
   u = n("481060"),
@@ -40,7 +40,7 @@ function h(e) {
     icon: (0, i.jsx)(E.default, {
       width: 16,
       height: 16,
-      className: s()(f.icon, f.errorIcon)
+      className: a()(f.icon, f.errorIcon)
     })
   }
 }
@@ -50,13 +50,13 @@ function A(e) {
     className: t,
     icon: n,
     text: r,
-    color: a
+    color: s
   } = e;
   return (0, i.jsxs)("div", {
-    className: s()(f.wrapper, t),
+    className: a()(f.wrapper, t),
     children: [n, (0, i.jsx)(u.Text, {
       variant: "text-md/normal",
-      color: a,
+      color: s,
       scaleFontToUserSetting: !0,
       children: r
     })]
@@ -66,20 +66,20 @@ t.default = r.memo(function(e) {
   let {
     message: t,
     className: n,
-    component: a
-  } = e, s = (0, o.useForceUpdate)(), u = (0, l.useStateFromStores)([_.default], () => _.default.getInteraction(t), [t]);
+    component: s
+  } = e, a = (0, o.useForceUpdate)(), u = (0, l.useStateFromStores)([_.default], () => _.default.getInteraction(t), [t]);
   r.useEffect(() => {
     let e = null;
     if (t.hasFlag(I.MessageFlags.LOADING) && null != u) {
       let n = (0, c.getInteractionTimeoutTimestamp)(t.id) - Date.now();
-      n > 0 && (e = setTimeout(() => s(), 1e3 + n))
+      n > 0 && (e = setTimeout(() => a(), 1e3 + n))
     }
     return () => {
       clearTimeout(e)
     }
-  }, [s, u, t]);
+  }, [a, u, t]);
   let E = null;
-  if (null == a) E = function(e, t) {
+  if (null == s) E = function(e, t) {
     switch ((0, c.getInteractionStatusViewState)(t, e)) {
       case c.InteractionStatusViewState.SENDING:
         return S(T.default.Messages.APPLICATION_COMMAND_SENDING);
@@ -94,7 +94,7 @@ t.default = r.memo(function(e) {
     }
   }(u, t);
   else {
-    let e = (0, d.getLayoutComponentErrorText)(u, t, a);
+    let e = (0, d.getLayoutComponentErrorText)(u, t, s);
     null != e && (E = h(e))
   }
   if (null == E) return null;

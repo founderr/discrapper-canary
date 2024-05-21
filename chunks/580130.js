@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, a, s, o = n("392711"),
+var i, r, s, a, o = n("392711"),
   l = n.n(o),
   u = n("442837"),
   d = n("570140"),
@@ -87,19 +87,19 @@ class L extends(i = u.Store) {
         if (null != n && n.isValid(e, I.default, i)) return !0
       }
     if (p.has(n)) return !1;
-    let a = null != i ? c.default.getLibraryApplication(n, i) : c.default.getActiveLibraryApplication(n);
-    return !!(null != a && a.sku.id === t && (0, E.isUserEntitledToLibraryApplication)(a)) || null
+    let s = null != i ? c.default.getLibraryApplication(n, i) : c.default.getActiveLibraryApplication(n);
+    return !!(null != s && s.sku.id === t && (0, E.isUserEntitledToLibraryApplication)(s)) || null
   }
   hasFetchedForApplicationIds(e) {
     return e.every(e => p.has(e))
   }
 }
-s = "EntitlementStore", (a = "displayName") in(r = L) ? Object.defineProperty(r, a, {
-  value: s,
+a = "EntitlementStore", (s = "displayName") in(r = L) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new L(d.default, {
+}) : r[s] = a, t.default = new L(d.default, {
   ENTITLEMENT_FETCH_APPLICATION_START: function(e) {
     let {
       applicationId: t

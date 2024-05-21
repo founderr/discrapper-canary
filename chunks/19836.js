@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  a = n.n(r),
-  s = n("442837"),
+  s = n.n(r),
+  a = n("442837"),
   o = n("481060"),
   l = n("2052"),
   u = n("580552"),
@@ -50,7 +50,7 @@ function N(e) {
     userId: g
   } = e, {
     location: L
-  } = (0, l.useAnalyticsContext)(), v = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), D = E.default.canUsePremiumGuildMemberProfile(v), M = (0, u.default)(g);
+  } = (0, l.useAnalyticsContext)(), v = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser()), D = E.default.canUsePremiumGuildMemberProfile(v), M = (0, u.default)(g);
   return (c || null == r || "" === r) && !M ? null : (0, i.jsxs)(T.default, {
     lastSection: p,
     children: [(0, i.jsxs)(o.Heading, {
@@ -84,7 +84,7 @@ function N(e) {
           },
           guild: t,
           size: _.default.Sizes.SMOL,
-          className: a()(h.aboutMeGuildIcon, {
+          className: s()(h.aboutMeGuildIcon, {
             [h.nonPremiumHoverState]: !D
           })
         })

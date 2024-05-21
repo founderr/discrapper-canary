@@ -1,7 +1,7 @@
 "use strict";
 let i, r;
 n.r(t), n("47120"), n("177593"), n("653041"), n("411104");
-var a, s, o, l, u = n("512722"),
+var s, a, o, l, u = n("512722"),
   d = n.n(u),
   _ = n("213919"),
   c = n("756647"),
@@ -51,8 +51,8 @@ let y = n("952265").hasModalOpen,
   en = {},
   ei = null,
   er = null,
-  ea = null,
-  es = null;
+  es = null,
+  ea = null;
 
 function eo(e) {
   let t = null != _.getToken(),
@@ -136,15 +136,15 @@ function eI(e) {
     type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
   }), v.default.clearAll(), m.clear(), g.default.clearUser(), T.Storage.remove(G), w = null, Y = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, j = D.RegistrationStates.NONE, z = "", J = "", X = null, Z = !1, $ = !1, ee = !1, et = {}, en = {}
 }
-class eT extends(a = E.default.Store) {
+class eT extends(s = E.default.Store) {
   initialize() {
-    w = T.Storage.get(G), k = T.Storage.get(b), ea = T.Storage.get("login_cache"), null == _.getToken() && el(), this.addChangeListener(() => (0, A.setClientState)(w))
+    w = T.Storage.get(G), k = T.Storage.get(b), es = T.Storage.get("login_cache"), null == _.getToken() && el(), this.addChangeListener(() => (0, A.setClientState)(w))
   }
   getEmail() {
     return k
   }
   getLogin() {
-    return ea
+    return es
   }
   didVerifyFail() {
     return $
@@ -243,25 +243,25 @@ class eT extends(a = E.default.Store) {
     return X
   }
   getSuspendedUserToken() {
-    return es
+    return ea
   }
 }
-l = "AuthenticationStore", (o = "displayName") in(s = eT) ? Object.defineProperty(s, o, {
+l = "AuthenticationStore", (o = "displayName") in(a = eT) ? Object.defineProperty(a, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = l, t.default = new eT(f.default, {
+}) : a[o] = l, t.default = new eT(f.default, {
   CONNECTION_OPEN: function(e) {
     var t;
     let {
       user: n,
       sessionId: i,
       authSessionIdHash: r,
-      analyticsToken: a,
-      auth: s
+      analyticsToken: s,
+      auth: a
     } = e;
-    eo("handleConnectionOpen called"), g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), B = i, V = r, H = a, w = n.id, k = n.email, void 0 !== s && (K = s.authenticator_types), T.Storage.set(b, n.email), T.Storage.set(G, n.id)
+    eo("handleConnectionOpen called"), g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), B = i, V = r, H = s, w = n.id, k = n.email, void 0 !== a && (K = a.authenticator_types), T.Storage.set(b, n.email), T.Storage.set(G, n.id)
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -269,9 +269,9 @@ l = "AuthenticationStore", (o = "displayName") in(s = eT) ? Object.definePropert
       user: n,
       sessionId: i,
       analyticsToken: r,
-      token: a
+      token: s
     } = e;
-    g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), B = i, H = r, e_(a), ed(), w = n.id, T.Storage.set(G, n.id)
+    g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), B = i, H = r, e_(s), ed(), w = n.id, T.Storage.set(G, n.id)
   },
   CONNECTION_CLOSED: function(e) {
     let {
@@ -294,7 +294,7 @@ l = "AuthenticationStore", (o = "displayName") in(s = eT) ? Object.definePropert
     null != t && (V = t)
   },
   LOGIN: function(e) {
-    en = {}, Y = D.LoginStates.LOGGING_IN, J = "", r = null, null != e.login && (ea = e.login)
+    en = {}, Y = D.LoginStates.LOGGING_IN, J = "", r = null, null != e.login && (es = e.login)
   },
   LOGIN_SUCCESS: function(e) {
     let {
@@ -320,9 +320,9 @@ l = "AuthenticationStore", (o = "displayName") in(s = eT) ? Object.definePropert
       sms: n,
       webauthn: i,
       backup: r,
-      totp: a
+      totp: s
     } = e;
-    null != t && (z = t, Z = n, J = "", X = null != i ? i : null, q = r, Q = a), en = {}, Y = D.LoginStates.MFA_STEP
+    null != t && (z = t, Z = n, J = "", X = null != i ? i : null, q = r, Q = s), en = {}, Y = D.LoginStates.MFA_STEP
   },
   LOGIN_MFA: function() {
     Y = D.LoginStates.LOGGING_IN_MFA
@@ -377,7 +377,7 @@ l = "AuthenticationStore", (o = "displayName") in(s = eT) ? Object.definePropert
     let {
       suspendedUserToken: t
     } = e;
-    es = t, setImmediate(() => (0, p.transitionTo)(D.Routes.ACCOUNT_STANDING))
+    ea = t, setImmediate(() => (0, p.transitionTo)(D.Routes.ACCOUNT_STANDING))
   },
   SET_LOGIN_CREDENTIALS: function(e) {
     let {
@@ -472,6 +472,6 @@ l = "AuthenticationStore", (o = "displayName") in(s = eT) ? Object.definePropert
     en = {}
   },
   CLOSE_SUSPENDED_USER: function() {
-    es = null, Y = D.LoginStates.NONE, eI(), setImmediate(() => (0, p.transitionTo)(D.Routes.DEFAULT_LOGGED_OUT))
+    ea = null, Y = D.LoginStates.NONE, eI(), setImmediate(() => (0, p.transitionTo)(D.Routes.DEFAULT_LOGGED_OUT))
   }
 }, f.DispatchBand.Early)

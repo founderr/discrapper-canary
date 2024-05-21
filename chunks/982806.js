@@ -7,8 +7,8 @@ t.default = {
   show(e) {
     let {
       url: t,
-      trustUrl: a,
-      onConfirm: s,
+      trustUrl: s,
+      onConfirm: a,
       isProtocol: o
     } = e;
     (0, r.openModalLazy)(async () => {
@@ -19,8 +19,8 @@ t.default = {
         ...n,
         url: t,
         isProtocol: o,
-        trustUrl: a,
-        onConfirm: s
+        trustUrl: s,
+        onConfirm: a
       })
     })
   }

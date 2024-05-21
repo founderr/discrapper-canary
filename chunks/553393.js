@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("920906"),
-  s = n("91192"),
+  s = n("920906"),
+  a = n("91192"),
   o = n("946835"),
   l = n("442837"),
   u = n("780384"),
@@ -55,7 +55,7 @@ t.default = function(e) {
   }), H = (0, R.useIsQuestExpired)(N), Y = (null == N ? void 0 : null === (t = N.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, j = (null == N ? void 0 : null === (S = N.userStatus) || void 0 === S ? void 0 : S.enrolledAt) != null, W = (null == N ? void 0 : null === (h = N.userStatus) || void 0 === h ? void 0 : h.completedAt) != null, K = (0, l.useStateFromStores)([A.default], () => A.default.getState().theme), z = (0, u.isThemeDark)(K) ? P.ThemeTypes.DARK : P.ThemeTypes.LIGHT, Z = (0, l.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
     ref: X,
     height: Q
-  } = (0, I.default)(), [q, J] = r.useState(Z), $ = (0, T.useWindowDispatch)(), ee = (0, s.useListContainerScrollerRef)();
+  } = (0, I.default)(), [q, J] = r.useState(Z), $ = (0, T.useWindowDispatch)(), ee = (0, a.useListContainerScrollerRef)();
   r.useEffect(() => {
     let e = ee.current;
     return null == e || e.addEventListener("scroll", B), () => {
@@ -73,7 +73,7 @@ t.default = function(e) {
       n.disconnect()
     }
   }, [p, ee, V]);
-  let et = (0, a.useSpring)({
+  let et = (0, s.useSpring)({
       from: {
         height: 0
       },
@@ -85,7 +85,7 @@ t.default = function(e) {
       immediate: Z,
       onRest: () => J(!0)
     }),
-    en = (0, a.useTransition)(q, {
+    en = (0, s.useTransition)(q, {
       from: {
         opacity: 0,
         scale: 0
@@ -100,7 +100,7 @@ t.default = function(e) {
     },
     er = "top" === k ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px");
   if (null == N || H || Y && !w(O, x)) return null;
-  let ea = () => {
+  let es = () => {
       (0, C.trackQuestContentClicked)({
         questId: N.id,
         questContent: g.QuestContent.MEMBERS_LIST,
@@ -117,7 +117,7 @@ t.default = function(e) {
         })
       })
     },
-    es = () => {
+    ea = () => {
       (0, C.trackQuestContentClicked)({
         questId: N.id,
         questContent: g.QuestContent.MEMBERS_LIST,
@@ -126,7 +126,7 @@ t.default = function(e) {
       }), E.default.open(y.UserSettingsSections.INVENTORY)
     },
     eo = e => {
-      e.stopPropagation(), ea()
+      e.stopPropagation(), es()
     },
     el = () => {
       if (w(O, x) && null != x) return (0, C.trackQuestContentClicked)({
@@ -135,7 +135,7 @@ t.default = function(e) {
         questContentCTA: C.QuestContentCTA.WATCH_STREAM,
         trackGuildAndChannelMetadata: !0
       }), _.default.selectVoiceChannel(x.id), (0, c.watchStreamAndTransitionToStream)(O);
-      es()
+      ea()
     },
     eu = W && !Y ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
@@ -145,7 +145,7 @@ t.default = function(e) {
     } : j && !Y ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
       ctaText: U.default.Messages.QUESTS_CHECK_PROGRESS,
-      handleClickCta: es,
+      handleClickCta: ea,
       tileAssetType: "reward"
     } : w(O, x) ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
@@ -155,7 +155,7 @@ t.default = function(e) {
     } : {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
       ctaText: U.default.Messages.QUESTS_UNLOCK_REWARDS,
-      handleClickCta: es,
+      handleClickCta: ea,
       tileAssetType: "game"
     };
   return (0, i.jsx)(v.QuestContentImpressionTracker, {
@@ -164,7 +164,7 @@ t.default = function(e) {
     trackGuildAndChannelMetadata: !0,
     children: e => {
       var t, n;
-      return (0, i.jsx)(a.animated.div, {
+      return (0, i.jsx)(s.animated.div, {
         ref: t => {
           e.current = t
         },
@@ -214,7 +214,7 @@ t.default = function(e) {
               className: b.right,
               children: (0, i.jsxs)("div", {
                 className: b.imgWrapper,
-                children: [en((e, t) => t && (0, i.jsx)(a.animated.div, {
+                children: [en((e, t) => t && (0, i.jsx)(s.animated.div, {
                   style: e,
                   className: b.imgUnderlay
                 })), "game" === eu.tileAssetType && (0, i.jsx)("img", {

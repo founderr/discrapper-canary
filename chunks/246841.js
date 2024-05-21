@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  a = n("285952"),
-  s = n("395361"),
+  s = n("285952"),
+  a = n("395361"),
   o = n("829820"),
   l = n("22387");
 
@@ -50,9 +50,9 @@ function u(e) {
         onMouseLeave: n,
         disabled: A,
         submitting: h,
-        children: (0, i.jsxs)(a.default, {
-          align: a.default.Align.CENTER,
-          children: [(0, i.jsx)(s.default, {
+        children: (0, i.jsxs)(s.default, {
+          align: s.default.Align.CENTER,
+          children: [(0, i.jsx)(a.default, {
             className: l.spotifyButtonLogo
           }), f]
         })

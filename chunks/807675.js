@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("653041");
 var i = n("593473"),
   r = n("243814"),
-  a = n("149765"),
-  s = n("592125"),
+  s = n("149765"),
+  a = n("592125"),
   o = n("914010"),
   l = n("700785"),
   u = n("713938");
@@ -27,10 +27,10 @@ function _(e) {
     }),
     E = l.NONE;
   try {
-    E = a.deserialize(null != c.permissions && "" !== c.permissions ? c.permissions : "0")
+    E = s.deserialize(null != c.permissions && "" !== c.permissions ? c.permissions : "0")
   } catch (e) {}
   let I = c.channel_id,
-    T = null !== (u = null !== (r = null !== (n = c.guild_id) && void 0 !== n ? n : null === (t = s.default.getChannel(I)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== r ? r : o.default.getGuildId()) && void 0 !== u ? u : void 0;
+    T = null !== (u = null !== (r = null !== (n = c.guild_id) && void 0 !== n ? n : null === (t = a.default.getChannel(I)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== r ? r : o.default.getGuildId()) && void 0 !== u ? u : void 0;
   return {
     clientId: null !== (d = c.client_id) && void 0 !== d ? d : "",
     scopes: (null !== (_ = c.scope) && void 0 !== _ ? _ : "").split(" ").filter(e => e.length > 0),

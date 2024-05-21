@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("952265"),
-  s = n("813197");
+  s = n("952265"),
+  a = n("813197");
 let o = r.forwardRef(function(e, t) {
   let o = r.useRef(null);
   return r.useImperativeHandle(t, () => ({
@@ -20,15 +20,15 @@ let o = r.forwardRef(function(e, t) {
     style: {
       position: "relative"
     },
-    children: (0, i.jsx)(s.default, {
+    children: (0, i.jsx)(a.default, {
       ...e,
       ref: o,
       onChange: function(t, r) {
-        (0, a.openModalLazy)(async () => {
+        (0, s.openModalLazy)(async () => {
           let {
-            default: a
+            default: s
           } = await Promise.all([n.e("99387"), n.e("48017")]).then(n.bind(n, "850085"));
-          return n => (0, i.jsx)(a, {
+          return n => (0, i.jsx)(s, {
             imgURI: t,
             file: r,
             onCrop: e.onChange,

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   hideHotspot: function() {
-    return s
+    return a
   },
   setHotspotOverride: function() {
     return o
@@ -12,10 +12,10 @@ n.r(t), n.d(t, {
 });
 var i = n("570140"),
   r = n("626135"),
-  a = n("981631");
+  s = n("981631");
 
-function s(e) {
-  r.default.track(a.AnalyticEvents.HOTSPOT_HIDDEN, {
+function a(e) {
+  r.default.track(s.AnalyticEvents.HOTSPOT_HIDDEN, {
     hotspot_location: e
   }), i.default.wait(() => {
     i.default.dispatch({

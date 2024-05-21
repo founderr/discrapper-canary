@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return I
   }
 }), n("653041"), n("47120"), n("724458");
-var i, r, a, s, o = n("392711"),
+var i, r, s, a, o = n("392711"),
   l = n.n(o),
   u = n("442837"),
   d = n("570140"),
@@ -61,12 +61,12 @@ class p extends(i = u.default.Store) {
     return null == T[e] && !(null === (t = h[e]) || void 0 === t ? void 0 : t.loading)
   }
 }
-s = "ActiveChannelsStore", (a = "displayName") in(r = p) ? Object.defineProperty(r, a, {
-  value: s,
+a = "ActiveChannelsStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new p(d.default, {
+}) : r[s] = a, t.default = new p(d.default, {
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t,
@@ -91,12 +91,12 @@ s = "ActiveChannelsStore", (a = "displayName") in(r = p) ? Object.defineProperty
       channelId: n,
       message: i,
       optimistic: r,
-      isPushNotification: a
+      isPushNotification: s
     } = e;
-    if (r || a) return !1;
-    let s = _.default.getChannel(n);
-    if (null == s) return !1;
-    let o = s.guild_id;
+    if (r || s) return !1;
+    let a = _.default.getChannel(n);
+    if (null == a) return !1;
+    let o = a.guild_id;
     if (null == o || null == T[o]) return !1;
     m(o, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id)
   },

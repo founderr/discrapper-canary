@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("392711"),
   l = n("468194"),
   u = n("481060"),
@@ -25,7 +25,7 @@ let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
   R = r.memo(function(e) {
     let {
       isDisplayingIndividualStickers: t = !1,
-      preferAnimation: a = !0,
+      preferAnimation: s = !0,
       getStickerItemProps: l,
       getStickerRowProps: R,
       gutterWidth: g,
@@ -79,7 +79,7 @@ let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
               ...Y,
               children: (0, i.jsxs)(u.Clickable, {
                 "aria-label": e.name,
-                className: s()(p.createSticker, U, {
+                className: a()(p.createSticker, U, {
                   [p.createInspected]: O
                 }),
                 innerRef: g,
@@ -121,7 +121,7 @@ let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
               ...Y,
               key: e.sticker.id
             }, (0, i.jsxs)(u.Clickable, {
-              className: s()(p.sticker, U, {
+              className: a()(p.sticker, U, {
                 [p.stickerInspected]: O
               }),
               innerRef: g,
@@ -151,12 +151,12 @@ let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
                 children: [!B && (0, i.jsx)("div", {
                   className: p.inspectedIndicator
                 }), (0, i.jsx)(h.default, {
-                  className: s()(p.stickerNode, {
+                  className: a()(p.stickerNode, {
                     [p.stickerNodeDimmed]: B && !O && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
                     [p.stickerNodeHidden]: C,
                     [p.stickerUnsendable]: F && !(0, T.isSendableSticker)(e.sticker, x, V)
                   }),
-                  disableAnimation: !O && !a,
+                  disableAnimation: !O && !s,
                   enlargeOnInteraction: B,
                   isInteracting: O,
                   maskAsset: O,

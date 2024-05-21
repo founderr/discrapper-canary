@@ -3,17 +3,17 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("960259"),
-  a = n("609959"),
-  s = n("325767");
+  s = n("609959"),
+  a = n("325767");
 t.default = (0, r.replaceIcon)(function(e) {
   let {
     width: t = 24,
     height: n = 24,
     color: r = "currentColor",
-    ...a
+    ...s
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, s.default)(a),
+    ...(0, a.default)(s),
     width: t,
     height: n,
     viewBox: "0 0 20 20",
@@ -29,6 +29,6 @@ t.default = (0, r.replaceIcon)(function(e) {
       fill: r
     })]
   })
-}, a.ChannelListMagnifyingGlassIcon, void 0, {
+}, s.ChannelListMagnifyingGlassIcon, void 0, {
   size: 24
 })

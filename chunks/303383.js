@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i, r, a, s, o, l, u = n("31775"),
+var i, r, s, a, o, l, u = n("31775"),
   d = n.n(u),
   _ = n("442837"),
   c = n("570140");
@@ -49,12 +49,12 @@ class f extends(l = _.default.Store) {
     })]
   }
 }
-s = "ApplicationDirectorySimilarApplicationsStore", (a = "displayName") in(r = f) ? Object.defineProperty(r, a, {
-  value: s,
+a = "ApplicationDirectorySimilarApplicationsStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new f(c.default, {
+}) : r[s] = a, t.default = new f(c.default, {
   APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: function(e) {
     let {
       applicationId: t,
@@ -76,19 +76,19 @@ s = "ApplicationDirectorySimilarApplicationsStore", (a = "displayName") in(r = f
       guildId: n,
       similarApplications: i,
       loadId: r,
-      page: a,
-      totalPages: s
+      page: s,
+      totalPages: a
     } = e, o = E({
       applicationId: t,
       guildId: n,
-      page: a
+      page: s
     });
     I.set(o, {
       lastFetchTimeMs: Date.now(),
       applications: i,
       loadId: r,
-      page: a,
-      totalPages: s
+      page: s,
+      totalPages: a
     }), T = {
       ...T,
       [o]: 2

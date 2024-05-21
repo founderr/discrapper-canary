@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   registerVideoStream: function() {
-    return s
+    return a
   },
   unregisterVideoStream: function() {
     return o
@@ -12,17 +12,17 @@ n.r(t), n.d(t, {
 });
 var i = n("39383"),
   r = n.n(i);
-let a = {};
+let s = {};
 
-function s(e) {
+function a(e) {
   let t = r()("VideoStream");
-  return a[t] = e, t
+  return s[t] = e, t
 }
 
 function o(e) {
-  delete a[e]
+  delete s[e]
 }
 
 function l(e) {
-  return a[e]
+  return s[e]
 }

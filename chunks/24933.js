@@ -1,9 +1,9 @@
 "use strict";
 n.r(t);
 var i, r = n("442837"),
-  a = n("570140");
+  s = n("570140");
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,7 +30,7 @@ class u extends(i = r.default.PersistedStore) {
     return l
   }
 }
-s(u, "displayName", "ActivityShelfStore"), s(u, "persistKey", "ActivityShelfStore"), t.default = new u(a.default, {
+a(u, "displayName", "ActivityShelfStore"), a(u, "persistKey", "ActivityShelfStore"), t.default = new u(s.default, {
   LOGOUT: function() {
     l = o()
   }

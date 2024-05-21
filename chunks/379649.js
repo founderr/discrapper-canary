@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return l
   },
   TimeStampProducer: function() {
-    return s
+    return a
   },
   now: function() {
-    return a
+    return s
   },
   sleep: function() {
     return u
@@ -23,10 +23,10 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let a = () => Math.floor(i.timeOrigin + i.performance.now()),
-  s = new class {
+let s = () => Math.floor(i.timeOrigin + i.performance.now()),
+  a = new class {
     now() {
-      return a()
+      return s()
     }
   };
 class o {
@@ -69,7 +69,7 @@ class l {
     let e = new l;
     return e.start(), e
   }
-  constructor(e = s) {
+  constructor(e = a) {
     r(this, "timestampProducer", void 0), r(this, "startTime", void 0), r(this, "timePassed", void 0), this.timestampProducer = e, this.startTime = void 0, this.timePassed = 0
   }
 }

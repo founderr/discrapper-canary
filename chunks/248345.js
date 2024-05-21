@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  a = n("717881"),
-  s = n("906732"),
+  s = n("717881"),
+  a = n("906732"),
   o = n("199902"),
   l = n("785717"),
   u = n("221292"),
@@ -26,13 +26,13 @@ function E(e) {
     analyticsParams: f
   } = e, {
     analyticsLocations: S
-  } = (0, s.default)(), {
+  } = (0, a.default)(), {
     trackUserProfileAction: h,
     ...A
   } = (0, l.useUserProfileAnalyticsContext)(), m = (0, r.useStateFromStores)([o.default], () => null != o.default.getAnyStreamForUser(n.id));
   return (0, i.jsx)(d.default, {
-    children: (0, i.jsx)(a.default, {
-      type: a.UserActivityTypes.USER_POPOUT_V2,
+    children: (0, i.jsx)(s.default, {
+      type: s.UserActivityTypes.USER_POPOUT_V2,
       activity: t,
       className: c.activity,
       user: n,

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  a = n("481060"),
-  s = n("846027"),
+  s = n("481060"),
+  a = n("846027"),
   o = n("131951");
 
 function l() {
@@ -20,13 +20,13 @@ function l() {
       disabled: r,
       name: o
     } = e;
-    return (0, i.jsx)(a.MenuRadioItem, {
+    return (0, i.jsx)(s.MenuRadioItem, {
       group: "video-devices",
       id: "video-device-".concat(n),
       disabled: r,
       label: o,
       checked: n === t,
-      action: () => s.default.setVideoDevice(n)
+      action: () => a.default.setVideoDevice(n)
     }, "video-device-".concat(n))
   })
 }

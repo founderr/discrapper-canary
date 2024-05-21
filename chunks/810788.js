@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("47120");
 var i, r = n("442837"),
-  a = n("570140"),
-  s = n("374023"),
+  s = n("570140"),
+  a = n("374023"),
   o = n("188785");
 
 function l(e, t, n) {
@@ -22,7 +22,7 @@ class _ extends(i = r.default.PersistedStore) {
   hasHotspot(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = !t && d[e];
-    return !(o.CONFERENCE_MODE_ENABLED || s.ProcessArgs.isDisallowPopupsSet()) && (n || !u.has(e))
+    return !(o.CONFERENCE_MODE_ENABLED || a.ProcessArgs.isDisallowPopupsSet()) && (n || !u.has(e))
   }
   hasHiddenHotspot(e) {
     return u.has(e)
@@ -40,7 +40,7 @@ class _ extends(i = r.default.PersistedStore) {
 l(_, "displayName", "HotspotStore"), l(_, "persistKey", "hotspots"), l(_, "migrations", [e => ({
   hiddenHotspots: null != e ? e : [],
   hotspotOverrides: {}
-})]), t.default = new _(a.default, {
+})]), t.default = new _(s.default, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       hiddenHotspots: t

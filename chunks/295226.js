@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("47120");
 var i, r = n("906280"),
-  a = n.n(r),
-  s = n("442837"),
+  s = n.n(r),
+  a = n("442837"),
   o = n("570140"),
   l = n("276444"),
   u = n("594174"),
@@ -34,8 +34,8 @@ let S = () => !0;
 
 function h() {
   if (null != _.default.getPremiumTypeSubscription()) {
-    let e = a()(T.userDiscountOffers[c.PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID]),
-      t = a()(T.userDiscountOffers[c.PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID]);
+    let e = s()(T.userDiscountOffers[c.PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID]),
+      t = s()(T.userDiscountOffers[c.PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID]);
     return T.userDiscountOffers = {}, null != e ? T.userDiscountOffers[c.PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID] = e : null != t && (T.userDiscountOffers[c.PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID] = t), T.userTrialOffers = {}, !0
   }
   return !1
@@ -55,7 +55,7 @@ function A() {
   }
   return !1
 }
-class m extends(i = s.default.PersistedStore) {
+class m extends(i = a.default.PersistedStore) {
   initialize(e) {
     T = null != e ? e : I, this.waitFor(u.default), this.syncWith([u.default], S), this.syncWith([_.default], h), this.syncWith([l.default], A)
   }

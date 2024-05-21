@@ -27,8 +27,8 @@ n.r(t), n.d(t, {
 }), n("653041"), n("47120");
 var i = n("911969"),
   r = n("555573"),
-  a = n("998698"),
-  s = n("509716"),
+  s = n("998698"),
+  a = n("509716"),
   o = n("897473"),
   l = n("433355"),
   u = n("703558"),
@@ -72,9 +72,9 @@ function m(e, t) {
   if (null == t.options) return {};
   let i = S(e),
     r = Object.fromEntries(t.options.map(e => [e.name, e])),
-    a = null == i ? void 0 : i[0].children;
-  if (null != a) {
-    for (let t of a)
+    s = null == i ? void 0 : i[0].children;
+  if (null != s) {
+    for (let t of s)
       if (I.NodeUtils.isType(t, "applicationCommandOption")) {
         let i = r[t.optionName];
         null != i && (n[t.optionName] = N(e, i, t))
@@ -85,11 +85,11 @@ function m(e, t) {
 
 function N(e, t, n) {
   let r = d.default.getCurrentlySelectedChannelId(),
-    a = l.default.getSidebarState(r),
-    s = (null == a ? void 0 : a.type) === o.SidebarType.VIEW_THREAD ? a.channelId : r,
+    s = l.default.getSidebarState(r),
+    a = (null == s ? void 0 : s.type) === o.SidebarType.VIEW_THREAD ? s.channelId : r,
     T = n.children.map(n => {
       if (t.type === i.ApplicationCommandOptionType.ATTACHMENT) {
-        let e = _.default.getUpload(s, t.name, u.DraftType.SlashCommand);
+        let e = _.default.getUpload(a, t.name, u.DraftType.SlashCommand);
         if (null != e) {
           var r;
           return {
@@ -120,16 +120,16 @@ function N(e, t, n) {
   return T
 }
 
-function p(e, t, n, i, a) {
+function p(e, t, n, i, s) {
   if (null == e.options) return {};
   let o = Object.fromEntries(e.options.map(e => {
     var r;
-    return [e.name, s.validateOptionContent({
+    return [e.name, a.validateOptionContent({
       option: e,
       content: null !== (r = i[e.name]) && void 0 !== r ? r : null,
       guildId: t,
       channelId: n,
-      allowEmptyValues: a
+      allowEmptyValues: s
     })]
   }));
   return r.updateOptionValidationStates(n, o), o
@@ -137,10 +137,10 @@ function p(e, t, n, i, a) {
 
 function O(e, t, n, i, o) {
   var l;
-  let [u] = i, d = a.default.getActiveCommand(n), _ = null == d ? void 0 : null === (l = d.options) || void 0 === l ? void 0 : l.find(e => e.name === u.optionName);
+  let [u] = i, d = s.default.getActiveCommand(n), _ = null == d ? void 0 : null === (l = d.options) || void 0 === l ? void 0 : l.find(e => e.name === u.optionName);
   if (null == _) return;
   let c = N(e, _, u),
-    E = s.validateOptionContent({
+    E = a.validateOptionContent({
       option: _,
       content: c,
       guildId: t,
@@ -159,9 +159,9 @@ function C(e, t) {
   let n = I.EditorUtils.richValue(e),
     i = [],
     r = new Set(A(e)),
-    a = {},
-    s = new Set;
-  for (let e of t.options) a[e.displayName] = e, !r.has(e.name) && s.add(e.displayName);
+    s = {},
+    a = new Set;
+  for (let e of t.options) s[e.displayName] = e, !r.has(e.name) && a.add(e.displayName);
   let o = null;
   for (let t = 0; t < n.length; t++) {
     let r = n[t];
@@ -184,9 +184,9 @@ function C(e, t) {
           for (f.lastIndex = 0; null != (d = f.exec(_.text));) {
             if (0 !== d.index && null == _.text.charAt(d.index - 1).match(/(\t|\s)/)) continue;
             let e = d[1];
-            if (!s.has(e)) continue;
-            s.delete(e);
-            let t = a[e];
+            if (!a.has(e)) continue;
+            a.delete(e);
+            let t = s[e];
             if (null == t) continue;
             let r = {
                 path: c,

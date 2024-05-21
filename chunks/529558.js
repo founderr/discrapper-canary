@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SecureFramesGuildExperiment: function() {
-    return a
+    return s
   },
   SecureFramesUserExperiment: function() {
     return r
@@ -51,7 +51,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  a = (0, i.createExperiment)({
+  s = (0, i.createExperiment)({
     kind: "guild",
     id: "2023-11_secure_frames_encryption_guilds",
     label: "Allowing testing secure frames for voice/video (Guilds)",

@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("207561"),
-  s = n("622535"),
+  s = n("207561"),
+  a = n("622535"),
   o = n("481060"),
   l = n("425493"),
   u = n("906732"),
@@ -25,7 +25,7 @@ t.default = function(e) {
     analyticsLocation: t,
     guild: n,
     onClose: O
-  } = e, [C, R] = r.useState(!0), g = r.useRef(!1), L = (0, a.useLazyValue)(() => Date.now()), {
+  } = e, [C, R] = r.useState(!0), g = r.useRef(!1), L = (0, s.useLazyValue)(() => Date.now()), {
     analyticsLocations: v
   } = (0, u.default)(), D = r.useCallback(() => {
     O(), d.default.track(m.AnalyticEvents.MODAL_DISMISSED, {
@@ -104,7 +104,7 @@ t.default = function(e) {
         }), (0, i.jsx)(A.BodyWave, {}), (0, i.jsx)("div", {
           className: p.lowerBodyBackgroundImage
         })]
-      }), (0, i.jsx)(s.VisibilitySensor, {
+      }), (0, i.jsx)(a.VisibilitySensor, {
         onChange: M,
         children: (0, i.jsx)("div", {
           className: p.persistentCtaSpacer

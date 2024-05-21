@@ -24,8 +24,8 @@ n.r(t), n.d(t, {
 }), n("653041");
 var i = n("392711"),
   r = n.n(i),
-  a = n("544891"),
-  s = n("381499"),
+  s = n("544891"),
+  a = n("381499"),
   o = n("570140"),
   l = n("479531"),
   u = n("339085"),
@@ -40,7 +40,7 @@ var i = n("392711"),
 
 function h(e) {
   c.PreloadedUserSettingsActionCreators.updateAsync("textAndImages", t => {
-    t.diversitySurrogate = s.StringValue.create(), t.diversitySurrogate.value = e
+    t.diversitySurrogate = a.StringValue.create(), t.diversitySurrogate.value = e
   }, f.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
@@ -48,7 +48,7 @@ function A(e) {
   o.default.dispatch({
     type: "EMOJI_FETCH",
     guildId: e
-  }), a.HTTP.get({
+  }), s.HTTP.get({
     url: T.Endpoints.GUILD_EMOJIS(e),
     oldFormErrors: !0
   }).then(t => o.default.dispatch({
@@ -71,7 +71,7 @@ function m(e) {
   return o.default.dispatch({
     type: "EMOJI_UPLOAD_START",
     guildId: t
-  }), a.HTTP.post({
+  }), s.HTTP.post({
     url: T.Endpoints.GUILD_EMOJIS(t),
     body: {
       image: n,
@@ -93,7 +93,7 @@ function N(e, t) {
     type: "EMOJI_DELETE",
     guildId: e,
     emojiId: t
-  }), a.HTTP.del({
+  }), s.HTTP.del({
     url: T.Endpoints.GUILD_EMOJI(e, t),
     oldFormErrors: !0
   })
@@ -106,7 +106,7 @@ async function p(e) {
     roles: r
   } = e;
   try {
-    return await a.HTTP.patch({
+    return await s.HTTP.patch({
       url: T.Endpoints.GUILD_EMOJI(t, n),
       body: {
         name: i,

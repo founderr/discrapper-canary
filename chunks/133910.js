@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("403182"),
-  s = n("261922"),
+  s = n("403182"),
+  a = n("261922"),
   o = n("715246"),
   l = n("981631"),
   u = n("689938");
@@ -43,7 +43,7 @@ class d extends r.Component {
       alt: P = u.default.Messages.VIDEO,
       ...U
     } = this.props;
-    return (0, i.jsx)(s.default, {
+    return (0, i.jsx)(a.default, {
       alt: P,
       className: n,
       src: d,
@@ -56,7 +56,7 @@ class d extends r.Component {
       responsive: A,
       children: n => {
         let {
-          src: s,
+          src: a,
           size: {
             width: u,
             height: d
@@ -66,7 +66,7 @@ class d extends r.Component {
           className: r,
           forceExternal: P,
           src: e,
-          poster: s,
+          poster: a,
           width: u,
           height: d,
           responsive: A,
@@ -76,7 +76,7 @@ class d extends r.Component {
           type: o.default.Types.VIDEO,
           mediaLayoutType: m,
           fileName: _,
-          fileSize: null == t ? void 0 : (0, a.sizeString)(t),
+          fileSize: null == t ? void 0 : (0, s.sizeString)(t),
           fileSizeBytes: null == t ? void 0 : t,
           playable: I,
           renderLinkComponent: O,

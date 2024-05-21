@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("481060");
+  s = n("481060");
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,7 +24,7 @@ class o extends r.PureComponent {
       className: n
     } = this.props;
     return (0, i.jsxs)("span", {
-      children: [(0, i.jsx)(a.Anchor, {
+      children: [(0, i.jsx)(s.Anchor, {
         className: n,
         onClick: this.handleClick,
         children: e
@@ -32,7 +32,7 @@ class o extends r.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), s(this, "handleClick", () => {
+    super(...e), a(this, "handleClick", () => {
       let {
         onClick: e,
         index: t
@@ -55,7 +55,7 @@ class l extends r.PureComponent {
     }, "spotify-artist-".concat(n)))
   }
   constructor(...e) {
-    super(...e), s(this, "handleOpenSpotifyArtist", e => {
+    super(...e), a(this, "handleOpenSpotifyArtist", e => {
       let {
         onOpenSpotifyArtist: t
       } = this.props;

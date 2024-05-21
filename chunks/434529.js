@@ -8,18 +8,18 @@ function r(e, t) {
   let {
     top: n,
     bottom: r,
-    left: a,
-    right: s
+    left: s,
+    right: a
   } = e;
   return {
     top: null != n ? Math.floor(i(n) * t.height) : null,
-    left: null != a ? Math.floor(i(a) * t.width) : null,
+    left: null != s ? Math.floor(i(s) * t.width) : null,
     bottom: null != r ? Math.floor(i(r) * t.height) : null,
-    right: null != s ? Math.floor(i(s) * t.width) : null
+    right: null != a ? Math.floor(i(a) * t.width) : null
   }
 }
 
-function a(e, t) {
+function s(e, t) {
   let {
     width: n,
     height: r
@@ -30,18 +30,18 @@ function a(e, t) {
   }
 }
 
-function s(e, t) {
+function a(e, t) {
   let {
     top: n,
     bottom: r,
-    left: a,
-    right: s
+    left: s,
+    right: a
   } = e;
   return {
     top: null != n ? i(n / t.height) : null,
-    left: null != a ? i(a / t.width) : null,
+    left: null != s ? i(s / t.width) : null,
     bottom: null != r ? i(r / t.height) : null,
-    right: null != s ? i(s / t.width) : null
+    right: null != a ? i(a / t.width) : null
   }
 }
 
@@ -58,16 +58,16 @@ function o(e, t) {
 
 function l(e, t, n, i, r) {
   let {
-    top: a,
-    bottom: s,
+    top: s,
+    bottom: a,
     left: o,
     right: l
   } = e;
-  if (null == a && null == s ? (a = 0, s = n - r) : null == a && null != s ? a = n - (s + r) : null != a && (s = n - (a + r)), null == o && null == l ? (o = 0, l = t - i) : null == o && null != l ? o = t - (l + i) : null == l && null != o && (l = t - (o + i)), null == a || null == s || null == o || null == l) throw Error("Logically this can never happen based on our if/else statements");
+  if (null == s && null == a ? (s = 0, a = n - r) : null == s && null != a ? s = n - (a + r) : null != s && (a = n - (s + r)), null == o && null == l ? (o = 0, l = t - i) : null == o && null != l ? o = t - (l + i) : null == l && null != o && (l = t - (o + i)), null == s || null == a || null == o || null == l) throw Error("Logically this can never happen based on our if/else statements");
   return {
-    top: a,
+    top: s,
     left: o,
-    bottom: s,
+    bottom: a,
     right: l
   }
 }
@@ -106,9 +106,9 @@ function _(e, t, n) {
   e = r(e, n);
   let {
     width: i,
-    height: s
-  } = a(t, n);
-  return i = "string" == typeof i ? 0 : i, s = "string" == typeof s ? 0 : s, l(e, n.width, n.height, i, s)
+    height: a
+  } = s(t, n);
+  return i = "string" == typeof i ? 0 : i, a = "string" == typeof a ? 0 : a, l(e, n.width, n.height, i, a)
 }
 
 function c(e, t, n) {
@@ -116,7 +116,7 @@ function c(e, t, n) {
     top: i,
     left: r
   } = e, {
-    x: a,
+    x: s,
     y: _
   } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
     x: 0,
@@ -125,9 +125,9 @@ function c(e, t, n) {
     width: c,
     height: E
   } = t;
-  return [s(u(d(l({
+  return [a(u(d(l({
     top: i + _,
-    left: r + a,
+    left: r + s,
     bottom: null,
     right: null
   }, n.width, n.height, "number" == typeof c ? c : 0, "number" == typeof E ? E : 0))), n), o(t, n)]
@@ -138,7 +138,7 @@ function E(e, t, n) {
     top: i,
     right: r
   } = e, {
-    x: a,
+    x: s,
     y: _
   } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
     x: 0,
@@ -147,11 +147,11 @@ function E(e, t, n) {
     width: c,
     height: E
   } = t;
-  return [s(u(d(l({
+  return [a(u(d(l({
     top: i + _,
     left: null,
     bottom: null,
-    right: r - a
+    right: r - s
   }, n.width, n.height, "number" == typeof c ? c : 0, "number" == typeof E ? E : 0))), n), o(t, n)]
 }
 n.r(t), n.d(t, {
@@ -165,7 +165,7 @@ n.r(t), n.d(t, {
     return r
   },
   getAnchorPercentageFromLayoutSize: function() {
-    return s
+    return a
   },
   getFullCoordsFromAnchorCoords: function() {
     return l
@@ -180,7 +180,7 @@ n.r(t), n.d(t, {
     return E
   },
   getSizeFromLayoutSize: function() {
-    return a
+    return s
   },
   getSizePercentageFromSize: function() {
     return o

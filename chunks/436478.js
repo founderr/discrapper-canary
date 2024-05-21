@@ -7,19 +7,19 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i, r, a = n("652874");
+var i, r, s = n("652874");
 (i = r || (r = {})).PROFILE_PANEL = "profile panel", i.USER_POPOUT = "user popout";
-let s = {
+let a = {
     upsellSource: null
   },
-  o = (0, a.default)(e => ({
-    ...s,
+  o = (0, s.default)(e => ({
+    ...a,
     setUpsellSource: t => e({
       upsellSource: t
     }),
     reset: () => {
       e({
-        ...s
+        ...a
       })
     }
   }))

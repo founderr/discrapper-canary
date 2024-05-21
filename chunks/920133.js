@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i, r, a = n("626135"),
-  s = n("981631");
+var i, r, s = n("626135"),
+  a = n("981631");
 
 function o(e, t) {
-  a.default.track(s.AnalyticEvents.DM_SETTINGS_UPSELL_ACTION, {
+  s.default.track(a.AnalyticEvents.DM_SETTINGS_UPSELL_ACTION, {
     action: e,
     guild_id: t
   })

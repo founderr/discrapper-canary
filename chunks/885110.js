@@ -1,7 +1,7 @@
 "use strict";
 let i, r;
 n.r(t), n("47120");
-var a, s, o, l, u = n("348327"),
+var s, a, o, l, u = n("348327"),
   d = n.n(u),
   _ = n("392711"),
   c = n.n(_),
@@ -80,7 +80,7 @@ function H() {
 function Y() {
   w = !1, P = D.StatusTypes.UNKNOWN, F(), L.default.setCurrentUserOnConnectionOpen(y, B)
 }
-class j extends(a = E.default.Store) {
+class j extends(s = E.default.Store) {
   initialize() {
     this.waitFor(C.default, A.default, g.default, v.default, R.default, O.default), this.syncWith([g.default], F)
   }
@@ -116,12 +116,12 @@ class j extends(a = E.default.Store) {
     return i
   }
 }
-l = "SelfPresenceStore", (o = "displayName") in(s = j) ? Object.defineProperty(s, o, {
+l = "SelfPresenceStore", (o = "displayName") in(a = j) ? Object.defineProperty(a, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = l, t.default = new j(I.default, {
+}) : a[o] = l, t.default = new j(I.default, {
   START_SESSION: F,
   CONNECTION_OPEN: function() {
     Y()

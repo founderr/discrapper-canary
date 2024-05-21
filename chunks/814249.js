@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _
   },
   SummariesSidebarToggledSource: function() {
-    return s
+    return a
   },
   SummariesTopicClickedSource: function() {
     return o
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var i, r, a, s, o, l, u = n("70956"),
+var i, r, s, a, o, l, u = n("70956"),
   d = n("689938");
 let _ = 5 * u.default.Millis.SECOND;
 
@@ -40,4 +40,4 @@ function c() {
     value: "OTHER",
     label: d.default.Messages.SUMMARIES_FEEDBACK_OPTION_OTHER
   }]
-}(i = s || (s = {})).TOOLBAR_BUTTON = "toolbar button", i.PILL = "pill", (r = o || (o = {})).SIDEBAR = "sidebar", r.PILL_DROPDOWN = "pill dropdown", r.PILL_NEXT_ARROW = "pill next arrow", r.PILL_PREVIOUS_ARROW = "pill previous arrow", (a = l || (l = {})).DUPLICATED = "DUPLICATED", a.TOO_GENERIC = "TOO_GENERIC", a.TOO_MANY = "TOO_MANY", a.INACCURATE = "INACCURATE", a.NOT_USEFUL = "NOT_USEFUL", a.OTHER = "OTHER"
+}(i = a || (a = {})).TOOLBAR_BUTTON = "toolbar button", i.PILL = "pill", (r = o || (o = {})).SIDEBAR = "sidebar", r.PILL_DROPDOWN = "pill dropdown", r.PILL_NEXT_ARROW = "pill next arrow", r.PILL_PREVIOUS_ARROW = "pill previous arrow", (s = l || (l = {})).DUPLICATED = "DUPLICATED", s.TOO_GENERIC = "TOO_GENERIC", s.TOO_MANY = "TOO_MANY", s.INACCURATE = "INACCURATE", s.NOT_USEFUL = "NOT_USEFUL", s.OTHER = "OTHER"

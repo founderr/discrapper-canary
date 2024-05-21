@@ -21,8 +21,8 @@ class r {
     i(this, "message", void 0), i(this, "code", void 0), i(this, "retryAfter", void 0), i(this, "fields", void 0), i(this, "error", void 0), i(this, "status", void 0);
     let {
       message: r,
-      code: a,
-      retryAfter: s,
+      code: s,
+      retryAfter: a,
       fields: o,
       status: l
     } = function(e, t) {
@@ -49,6 +49,6 @@ class r {
       }
       return {}
     }(e, t);
-    this.message = r || n, this.retryAfter = s, this.code = a || -1, this.fields = o || {}, this.status = l, this.error = Error(r)
+    this.message = r || n, this.retryAfter = a, this.code = s || -1, this.fields = o || {}, this.status = l, this.error = Error(r)
   }
 }

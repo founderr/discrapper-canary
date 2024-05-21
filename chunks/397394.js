@@ -21,8 +21,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("593473"),
   l = n("613828"),
   u = n("729594"),
@@ -44,7 +44,7 @@ function p(e) {
     message: t,
     footer: n,
     headerClassName: r,
-    showsCloseWindowText: a,
+    showsCloseWindowText: s,
     spinner: o,
     onClose: l
   } = e;
@@ -57,12 +57,12 @@ function p(e) {
     }) : null, (0, i.jsxs)("div", {
       className: N.wrapper,
       children: [o ? (0, i.jsx)(_.Spinner, {}) : null, (0, i.jsx)("div", {
-        className: s()(N.header, r)
+        className: a()(N.header, r)
       }), (0, i.jsx)(c.Text, {
         variant: "text-md/normal",
         className: N.text,
         children: t
-      }), null != n ? n : null, a ? (0, i.jsx)(c.Text, {
+      }), null != n ? n : null, s ? (0, i.jsx)(c.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         className: N.cta,
@@ -83,19 +83,19 @@ function C(e) {
   let {
     guild: t,
     application: n,
-    ...a
+    ...s
   } = e, {
-    onClose: s
-  } = a, o = m.default.Messages.AUTHORIZED_SUCCESS, l = r.useCallback(() => {
-    (null == t ? void 0 : t.id) != null && ((0, f.transitionToGuild)(null == t ? void 0 : t.id), null == s || s(), S.default.track(A.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
+    onClose: a
+  } = s, o = m.default.Messages.AUTHORIZED_SUCCESS, l = r.useCallback(() => {
+    (null == t ? void 0 : t.id) != null && ((0, f.transitionToGuild)(null == t ? void 0 : t.id), null == a || a(), S.default.track(A.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
       application_id: null == n ? void 0 : n.id,
       guild_id: null == t ? void 0 : t.id
     }))
-  }, [s, null == n ? void 0 : n.id, null == t ? void 0 : t.id]), u = r.useCallback(() => {
-    null == s || s(), S.default.track(A.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
+  }, [a, null == n ? void 0 : n.id, null == t ? void 0 : t.id]), u = r.useCallback(() => {
+    null == a || a(), S.default.track(A.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
       application_id: null == n ? void 0 : n.id
     })
-  }, [s, null == n ? void 0 : n.id]), d = r.useMemo(() => {
+  }, [a, null == n ? void 0 : n.id]), d = r.useMemo(() => {
     if (null != n) return null != t ? m.default.Messages.AUTHORIZED_APP_TO_SERVER.format({
       installedApplicationName: null == n ? void 0 : n.name,
       guildName: null == t ? void 0 : t.name
@@ -108,7 +108,7 @@ function C(e) {
       variant: "text-sm/normal",
       className: N.authorizedSuccessSubtext,
       children: d
-    }), (null != t || null != s) && (0, i.jsxs)("div", {
+    }), (null != t || null != a) && (0, i.jsxs)("div", {
       className: N.buttonsContainer,
       children: [null != t && (0, i.jsx)(E.Button, {
         fullWidth: !0,
@@ -118,7 +118,7 @@ function C(e) {
         children: (null == t ? void 0 : t.name.length) > 30 ? m.default.Messages.OAUTH2_GO_TO_SERVER_DEFAULT_CTA : m.default.Messages.OAUTH2_GO_TO_SERVER_NAME_CTA.format({
           guildName: null == t ? void 0 : t.name
         })
-      }), null != s && (0, i.jsx)(E.Button, {
+      }), null != a && (0, i.jsx)(E.Button, {
         fullWidth: !0,
         color: E.Button.Colors.PRIMARY,
         onClick: u,
@@ -136,7 +136,7 @@ function C(e) {
     children: (0, i.jsx)(O, {
       message: o,
       footer: _,
-      ...a
+      ...s
     })
   })
 }
@@ -163,15 +163,15 @@ function g() {
 function L(e) {
   var t, n;
   let {
-    location: a
+    location: s
   } = e;
   r.useEffect(() => {
-    if (null == a) return;
+    if (null == s) return;
     let e = null != document.referrer && "" !== document.referrer ? u.parse(document.referrer) : null;
     (null == e || e.host !== window.location.host || e.pathname !== A.Routes.OAUTH2_AUTHORIZE) && (0, T.transitionTo)(A.Routes.INDEX)
-  }, [a]);
-  let s = null != a ? (0, o.parse)(a.search) : {},
-    l = null !== (n = null !== (t = s.error_description) && void 0 !== t ? t : s.error) && void 0 !== n ? n : m.default.Messages.OAUTH2_UNKNOWN_ERROR;
+  }, [s]);
+  let a = null != s ? (0, o.parse)(s.search) : {},
+    l = null !== (n = null !== (t = a.error_description) && void 0 !== t ? t : a.error) && void 0 !== n ? n : m.default.Messages.OAUTH2_UNKNOWN_ERROR;
   return (0, i.jsx)(h.OAuth2Page, {
     children: (0, i.jsx)(R, {
       message: l,

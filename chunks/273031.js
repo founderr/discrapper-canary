@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("481060"),
   l = n("404975"),
   u = n("725446");
@@ -16,13 +16,13 @@ function d(e) {
   let {
     onClick: t,
     children: n,
-    tooltip: a,
+    tooltip: s,
     dangerous: d = !1,
     className: _,
     "aria-label": c
   } = e;
   return (0, i.jsx)(o.Tooltip, {
-    text: a,
+    text: s,
     hideOnClick: !0,
     children: e => {
       let {
@@ -37,10 +37,10 @@ function d(e) {
           e.stopPropagation(), null == I || I(), t(e)
         },
         dangerous: d,
-        "aria-label": null != c ? c : a,
+        "aria-label": null != c ? c : s,
         className: _,
         children: r.Children.map(n, e => r.isValidElement(e) ? r.cloneElement(e, {
-          className: s()(e.props.className, u.actionBarIcon)
+          className: a()(e.props.className, u.actionBarIcon)
         }) : e)
       })
     }

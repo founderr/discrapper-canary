@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return N
   },
   default: function() {
-    return O
+    return j
   }
 });
 var l = a("735250"),
@@ -26,10 +26,10 @@ var l = a("735250"),
   b = a("813083"),
   x = a("372654"),
   v = a("994896"),
-  S = a("215023"),
-  I = a("474936"),
-  T = a("689938"),
-  L = a("897246");
+  I = a("215023"),
+  S = a("474936"),
+  L = a("689938"),
+  T = a("897246");
 let N = (0, g.getLogoSize)(96),
   _ = {
     [i.CollectiblesCategorySkuId.DISXCORE]: {
@@ -84,13 +84,13 @@ let N = (0, g.getLogoSize)(96),
     return p.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
       children: t.summary
     }) : (0, l.jsx)(l.Fragment, {
-      children: T.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
+      children: L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
         getPremium: e => (0, l.jsx)(c.Clickable, {
           innerRef: r,
-          className: L.getPremiumHook,
+          className: T.getPremiumHook,
           onClick: () => {
             (0, d.default)({
-              subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: a,
               returnRef: r
             })
@@ -123,40 +123,40 @@ function A(e) {
     outlineColor: null != C ? C.border.toHslString() : void 0
   };
   return (0, l.jsxs)("div", {
-    className: n()(L.condensedBannerContainer),
+    className: n()(T.condensedBannerContainer),
     children: [(0, l.jsx)("img", {
       src: d,
       style: m,
-      className: L.condensedBannerImage,
+      className: T.condensedBannerImage,
       alt: ""
     }), null != f && (0, l.jsx)("img", {
       src: f,
-      className: n()(L.overflowImage, {
-        [L.overflowImageLeft]: u
+      className: n()(T.overflowImage, {
+        [T.overflowImageLeft]: u
       }),
       alt: ""
     }), (0, l.jsx)("img", {
-      className: n()(L.condensedCategoryLogo, {
-        [L.condensedCategoryLogoLeft]: !u
+      className: n()(T.condensedCategoryLogo, {
+        [T.condensedCategoryLogoLeft]: !u
       }),
       src: (0, g.getCollectiblesAssetURL)(i.logo, {
         size: N
       }),
       alt: i.name,
       style: {
-        maxWidth: null === (s = S.categoryBannerOverrides[i.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
+        maxWidth: null === (s = I.categoryBannerOverrides[i.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth
       }
     }), (0, l.jsx)(b.default, {
       category: i,
-      className: n()(L.limitedTimeBadge, {
-        [L.limitedTimeBadgeLeft]: u
+      className: n()(T.limitedTimeBadge, {
+        [T.limitedTimeBadgeLeft]: u
       }),
       display: "banner"
     })]
   })
 }
 
-function O(e) {
+function j(e) {
   var t, a;
   let {
     category: s,
@@ -165,7 +165,7 @@ function O(e) {
     index: u = 0
   } = e, {
     backgroundColors: d
-  } = (0, E.default)(s.styles), f = !!(null === (t = S.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
+  } = (0, E.default)(s.styles), f = !!(null === (t = I.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText), {
     condensedBannersEnabled: p
   } = (0, v.useCollectiblesCondensedBannersExperiment)({
     location: "Collectibles Shop Banner"
@@ -175,30 +175,30 @@ function O(e) {
     index: u
   }) : (0, l.jsxs)(h.default, {
     asset: s.banner,
-    className: n()(L.shopBanner, r),
+    className: n()(T.shopBanner, r),
     style: null != d ? {
       background: "".concat((0, x.getBackgroundGradient)(d), " border-box border-box"),
       outlineColor: d.border.toHslString()
     } : void 0,
     children: [(0, l.jsxs)("div", {
-      className: L.discordLogo,
+      className: T.discordLogo,
       children: [(0, l.jsx)(C.default, {
-        className: L.discordIcon
+        className: T.discordIcon
       }), (0, l.jsx)(m.default, {
-        className: L.discordWordmark
+        className: T.discordWordmark
       })]
     }), (0, l.jsx)("img", {
-      className: L.categoryLogo,
+      className: T.categoryLogo,
       src: (0, g.getCollectiblesAssetURL)(s.logo, {
         size: N
       }),
       alt: s.name,
       style: {
-        maxWidth: null === (a = S.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
+        maxWidth: null === (a = I.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
       }
     }), (0, l.jsx)(c.Text, {
-      className: n()(L.summary, {
-        [L.blackSummary]: f
+      className: n()(T.summary, {
+        [T.blackSummary]: f
       }),
       variant: "text-md/normal",
       children: s.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, l.jsx)(y, {
@@ -206,7 +206,7 @@ function O(e) {
       }) : s.summary
     }), !o && (0, l.jsx)(b.default, {
       category: s,
-      className: L.limitedTimeBadge,
+      className: T.limitedTimeBadge,
       display: "banner"
     })]
   })

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("442837"),
-  s = n("481060"),
+  s = n("442837"),
+  a = n("481060"),
   o = n("570140"),
   l = n("605236"),
   u = n("837741"),
@@ -29,10 +29,10 @@ function p(e) {
     className: t,
     disabled: n,
     renderCTAButtons: p
-  } = e, [O, C] = (0, a.useStateFromStoresArray)([I.default], () => [I.default.getCurrentDesktopIcon(), I.default.isEditorOpen]), R = r.useRef(null);
+  } = e, [O, C] = (0, s.useStateFromStoresArray)([I.default], () => [I.default.getCurrentDesktopIcon(), I.default.isEditorOpen]), R = r.useRef(null);
   (0, c.default)(R, A.AppearanceScrollPositions.CUSTOM_APP_ICONS);
   let g = (0, E.useUID)(),
-    L = (0, s.useRadioGroup)({
+    L = (0, a.useRadioGroup)({
       orientation: "horizontal",
       labelledBy: g
     }),
@@ -93,13 +93,13 @@ function p(e) {
             className: N.headings,
             children: [C ? null : (0, i.jsxs)("div", {
               className: N.title,
-              children: [(0, i.jsx)(s.Heading, {
+              children: [(0, i.jsx)(a.Heading, {
                 variant: "text-md/medium",
                 children: m.default.Messages.APP_ICON_SETTINGS_TITLE
               }), (0, i.jsx)(_.default, {
                 className: N.premiumIcon
               })]
-            }), (0, i.jsx)(s.Heading, {
+            }), (0, i.jsx)(a.Heading, {
               variant: "text-sm/normal",
               children: m.default.Messages.APP_ICON_SETTINGS_DESCRIPTION
             })]

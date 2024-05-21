@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("544891"),
   r = n("570140"),
-  a = n("19780"),
-  s = n("823379"),
+  s = n("19780"),
+  a = n("823379"),
   o = n("41776"),
   l = n("981631");
 async function u(e) {
@@ -41,6 +41,6 @@ async function d() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
     t = o.default.lurkingGuildIds();
   if (0 === t.length || !(null == e || !t.includes(e))) return;
-  let n = [e, a.default.getGuildId()].filter(s.isNotNullish);
+  let n = [e, s.default.getGuildId()].filter(a.isNotNullish);
   await u(n)
 }

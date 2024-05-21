@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  a = n.n(r),
-  s = n("467679"),
+  s = n.n(r),
+  a = n("467679"),
   o = n("674563"),
   l = n("77351");
 t.default = e => {
@@ -28,10 +28,10 @@ t.default = e => {
     usernameIcon: S
   } = e;
   return (0, i.jsxs)("div", {
-    className: a()(u, l.nameTag),
+    className: s()(u, l.nameTag),
     style: T,
     children: [(0, i.jsxs)("span", {
-      className: a()(l.username, _),
+      className: s()(l.username, _),
       style: null != o ? {
         color: o
       } : void 0,
@@ -39,10 +39,10 @@ t.default = e => {
     }), null != n ? (0, i.jsxs)("span", {
       className: null != c ? c : void 0,
       children: ["#", n]
-    }) : null, null != d ? (0, i.jsx)(s.default, {
+    }) : null, null != d ? (0, i.jsx)(a.default, {
       type: d,
       invertColor: r,
-      className: a()(E, l.bot),
+      className: s()(E, l.bot),
       verified: I,
       useRemSizes: f
     }) : null]

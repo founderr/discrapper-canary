@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  a = n("442837"),
-  s = n("524437"),
+  s = n("442837"),
+  a = n("524437"),
   o = n("230711"),
   l = n("906732"),
   u = n("605236"),
@@ -15,7 +15,7 @@ var i = n("735250"),
   T = n("526761"),
   f = n("689938"),
   S = n("157542");
-let h = s.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
+let h = a.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
   A = e => {
     (0, u.markDismissibleContentAsDismissed)(h, {
       dismissAction: e,
@@ -27,8 +27,8 @@ t.default = e => {
     position: t,
     onClose: n
   } = e, {
-    analyticsLocations: s
-  } = (0, l.default)(), u = (0, a.useStateFromStores)([c.default], () => c.default.getIsAccessibilityTooltipViewed());
+    analyticsLocations: a
+  } = (0, l.default)(), u = (0, s.useStateFromStores)([c.default], () => c.default.getIsAccessibilityTooltipViewed());
   return r.useEffect(() => u ? () => A(I.ContentDismissActionType.AUTO) : () => (0, _.handleProfileAccessibilityTooltipViewed)(), [u]), (0, i.jsx)(d.default, {
     markAsDismissed: A,
     header: f.default.Messages.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP_TITLE,
@@ -41,7 +41,7 @@ t.default = e => {
     onClick: () => {
       null == n || n(), o.default.open(E.UserSettingsSections.ACCESSIBILITY, null, {
         scrollPosition: T.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME,
-        analyticsLocations: s
+        analyticsLocations: a
       })
     },
     secondaryButtonCTA: f.default.Messages.DISMISS,

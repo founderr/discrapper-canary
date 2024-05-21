@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return u
   }
 }), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
-var i, r, a, s, o = n("243814"),
+var i, r, s, a, o = n("243814"),
   l = n("981631");
 let u = "xbox://communitylinking/donut/audio",
   d = "https://www.xbox.com/en-US/apps/xbox-app-for-mobile",
@@ -51,21 +51,21 @@ let u = "xbox://communitylinking/donut/audio",
       channelName: n,
       guildName: i,
       channelId: r,
-      muted: a,
-      deafened: s,
+      muted: s,
+      deafened: a,
       nonce: o
     } = e, l = {
       channelid: r,
       guildid: t,
       channelname: n,
       guildname: i,
-      muted: String(a),
-      deafened: String(s)
+      muted: String(s),
+      deafened: String(a)
     };
     return null != o && (l.nonce = o), new URLSearchParams(l)
   };
-(a = i || (i = {})).PLAYSTATION = "playstation", a.XBOX = "xbox";
+(s = i || (i = {})).PLAYSTATION = "playstation", s.XBOX = "xbox";
 let f = new Set(["xbox", "playstation"]);
-l.ActivityGamePlatforms.XBOX, l.ActivityGamePlatforms.PS5, (s = r || (r = {}))[s.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 27e4] = "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED", s[s.CONSOLE_DEVICE_UNAVAILABLE = 270001] = "CONSOLE_DEVICE_UNAVAILABLE", s[s.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS = 270002] = "CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS", s[s.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED = 270003] = "CONSOLE_DEVICE_COMMUNICATION_RESTRICTED", s[s.CONSOLE_DEVICE_INVALID_POWER_MODE = 270004] = "CONSOLE_DEVICE_INVALID_POWER_MODE", s[s.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR = 270005] = "CONSOLE_DEVICE_ACCOUNT_LINK_ERROR", s[s.CONSOLE_DEVICE_MAX_MEMBERS_REACHED = 270006] = "CONSOLE_DEVICE_MAX_MEMBERS_REACHED", s[s.CONSOLE_DEVICE_BAD_COMMAND = 270007] = "CONSOLE_DEVICE_BAD_COMMAND";
+l.ActivityGamePlatforms.XBOX, l.ActivityGamePlatforms.PS5, (a = r || (r = {}))[a.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 27e4] = "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED", a[a.CONSOLE_DEVICE_UNAVAILABLE = 270001] = "CONSOLE_DEVICE_UNAVAILABLE", a[a.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS = 270002] = "CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS", a[a.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED = 270003] = "CONSOLE_DEVICE_COMMUNICATION_RESTRICTED", a[a.CONSOLE_DEVICE_INVALID_POWER_MODE = 270004] = "CONSOLE_DEVICE_INVALID_POWER_MODE", a[a.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR = 270005] = "CONSOLE_DEVICE_ACCOUNT_LINK_ERROR", a[a.CONSOLE_DEVICE_MAX_MEMBERS_REACHED = 270006] = "CONSOLE_DEVICE_MAX_MEMBERS_REACHED", a[a.CONSOLE_DEVICE_BAD_COMMAND = 270007] = "CONSOLE_DEVICE_BAD_COMMAND";
 let S = new Set([27e4]),
   h = "console error alert"

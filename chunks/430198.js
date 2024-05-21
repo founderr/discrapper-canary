@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, a, s, o = n("149765"),
+var i, r, s, a, o = n("149765"),
   l = n("442837"),
   u = n("570140"),
   d = n("223892"),
@@ -43,13 +43,13 @@ function R(e, t) {
         role: r,
         isPreviewingRoles: n
       })) continue;
-    let a = e.permissionOverwrites[i];
-    if ((0, T.isChannelAccessGrantedBy)(e, a)) return !0
+    let s = e.permissionOverwrites[i];
+    if ((0, T.isChannelAccessGrantedBy)(e, s)) return !0
   }
   let i = A.default.getRole(t.id, t.getEveryoneRoleId()),
     r = null != i && !o.has(i.permissions, N.Permissions.VIEW_CHANNEL),
-    a = (0, T.isChannelAccessDeniedBy)(e, e.permissionOverwrites[t.id]);
-  if (r && !a) {
+    s = (0, T.isChannelAccessDeniedBy)(e, e.permissionOverwrites[t.id]);
+  if (r && !s) {
     for (let e of Object.values(A.default.getRoles(t.id)))
       if (C({
           guildId: t.id,
@@ -67,9 +67,9 @@ function g(e, t) {
   if (null == i) return !1;
   let r = A.default.getGuild(i.getGuildId());
   if (null == r) return !1;
-  let a = n.has(t),
-    s = R(i, r);
-  return a !== s && (s ? n.add(t) : n.delete(t), !0)
+  let s = n.has(t),
+    a = R(i, r);
+  return s !== a && (a ? n.add(t) : n.delete(t), !0)
 }
 
 function L() {
@@ -121,12 +121,12 @@ class y extends(i = l.default.Store) {
     return null != e && this.isChannelGated(e, t) && !O.has(e)
   }
 }
-s = "GatedChannelStore", (a = "displayName") in(r = y) ? Object.defineProperty(r, a, {
-  value: s,
+a = "GatedChannelStore", (s = "displayName") in(r = y) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new y(u.default, {
+}) : r[s] = a, t.default = new y(u.default, {
   CONNECTION_OPEN: L,
   OVERLAY_INITIALIZE: L,
   CACHE_LOADED_LAZY: L,

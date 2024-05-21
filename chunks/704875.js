@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  a = n.n(r),
-  s = n("845537"),
+  s = n.n(r),
+  a = n("845537"),
   o = n("653309"),
   l = n("453875"),
   u = n("697692"),
@@ -43,7 +43,7 @@ function _(e, t, n) {
         children: E
       });
     case "blockQuote": {
-      let e = a()(d.blockquoteContainer, d.slateBlockquoteContainer);
+      let e = s()(d.blockquoteContainer, d.slateBlockquoteContainer);
       return (0, i.jsxs)("div", {
         ..._,
         className: e,
@@ -59,7 +59,7 @@ function _(e, t, n) {
       return (0, i.jsxs)(c, {
         attributes: _,
         className: f,
-        children: [(0, i.jsx)(s.Emoji, {
+        children: [(0, i.jsx)(a.Emoji, {
           emoji: I.emoji
         }), E]
       });
@@ -67,7 +67,7 @@ function _(e, t, n) {
       return (0, i.jsxs)(c, {
         attributes: _,
         className: f,
-        children: [(0, i.jsx)(s.CustomEmoji, {
+        children: [(0, i.jsx)(a.CustomEmoji, {
           emoji: I.emoji
         }), E]
       });
@@ -75,7 +75,7 @@ function _(e, t, n) {
       return (0, i.jsxs)(c, {
         attributes: _,
         className: f,
-        children: [(0, i.jsx)(s.TextMention, {
+        children: [(0, i.jsx)(a.TextMention, {
           text: I.name,
           channelId: n,
           guildId: t
@@ -85,7 +85,7 @@ function _(e, t, n) {
       return (0, i.jsxs)(c, {
         attributes: _,
         className: f,
-        children: [(0, i.jsx)(s.UserMention, {
+        children: [(0, i.jsx)(a.UserMention, {
           id: I.userId,
           channelId: n,
           guildId: t
@@ -95,7 +95,7 @@ function _(e, t, n) {
       return (0, i.jsxs)(c, {
         attributes: _,
         className: f,
-        children: [(0, i.jsx)(s.RoleMention, {
+        children: [(0, i.jsx)(a.RoleMention, {
           id: I.roleId,
           guildId: t
         }), E]
@@ -104,7 +104,7 @@ function _(e, t, n) {
       return (0, i.jsxs)(c, {
         attributes: _,
         className: f,
-        children: [(0, i.jsx)(s.ChannelMention, {
+        children: [(0, i.jsx)(a.ChannelMention, {
           id: I.channelId
         }), E]
       });
@@ -112,7 +112,7 @@ function _(e, t, n) {
       return (0, i.jsxs)(c, {
         attributes: _,
         className: f,
-        children: [(0, i.jsx)(s.StaticRouteMention, {
+        children: [(0, i.jsx)(a.StaticRouteMention, {
           id: I.channelId
         }), E]
       });
@@ -120,7 +120,7 @@ function _(e, t, n) {
       return (0, i.jsxs)(c, {
         attributes: _,
         className: f,
-        children: [(0, i.jsx)(s.SoundboardMention, {
+        children: [(0, i.jsx)(a.SoundboardMention, {
           id: I.soundId
         }), E]
       });
@@ -128,7 +128,7 @@ function _(e, t, n) {
       return (0, i.jsxs)(c, {
         attributes: _,
         className: f,
-        children: [(0, i.jsx)(s.CommandMention, {
+        children: [(0, i.jsx)(a.CommandMention, {
           text: I.commandName,
           id: I.commandId
         }), E]
@@ -137,7 +137,7 @@ function _(e, t, n) {
       return (0, i.jsxs)(c, {
         attributes: _,
         className: f,
-        children: [(0, i.jsx)(s.Timestamp, {
+        children: [(0, i.jsx)(a.Timestamp, {
           timestamp: I.parsed
         }), E]
       });
@@ -150,10 +150,10 @@ let c = e => {
     className: t,
     attributes: n,
     children: r
-  } = e, s = a()(u.inlineElement, u.inlineVoid, t);
+  } = e, a = s()(u.inlineElement, u.inlineVoid, t);
   return (0, i.jsx)("span", {
     ...n,
-    className: s,
+    className: a,
     contentEditable: !1,
     children: r
   })

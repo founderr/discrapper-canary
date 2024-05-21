@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i, r = n("735250"),
-  a = n("470079");
+  s = n("470079");
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -26,15 +26,15 @@ let o = "file-input",
     cursor: e ? "not-allowed" : "pointer",
     fontSize: 0
   });
-class u extends(i = a.Component) {
+class u extends(i = s.Component) {
   render() {
     let {
       disabled: e,
       tabIndex: t,
       className: n,
       name: i,
-      "aria-label": a,
-      "aria-hidden": s
+      "aria-label": s,
+      "aria-hidden": a
     } = this.props;
     if (this.props.embedded) return (0, r.jsx)("div", {
       role: "button",
@@ -44,8 +44,8 @@ class u extends(i = a.Component) {
       onKeyDown: e ? void 0 : this.handleNativeKeyDown,
       onClick: e ? void 0 : this.handleNativeClick,
       "aria-disabled": e,
-      "aria-label": a,
-      "aria-hidden": s || void 0
+      "aria-label": s,
+      "aria-hidden": a || void 0
     });
     {
       let u = "";
@@ -60,25 +60,25 @@ class u extends(i = a.Component) {
         multiple: this.props.multiple,
         accept: u,
         name: i,
-        "aria-label": a,
-        "aria-hidden": s || void 0,
+        "aria-label": s,
+        "aria-hidden": a || void 0,
         ref: e => this._input = e
       })
     }
   }
   constructor(...e) {
-    super(...e), s(this, "_input", null), s(this, "activateUploadDialogue", () => {
+    super(...e), a(this, "_input", null), a(this, "activateUploadDialogue", () => {
       this.props.embedded ? this.handleNativeClick() : this._input && this._input.click()
-    }), s(this, "handleNativeClick", () => {
+    }), a(this, "handleNativeClick", () => {
       this.props.handleNativeClick && this.props.handleNativeClick(this.props)
-    }), s(this, "handleNativeKeyDown", e => {
+    }), a(this, "handleNativeKeyDown", e => {
       (" " === e.key || "Enter" === e.key) && this.handleNativeClick()
-    }), s(this, "handleBrowserInputMouseDown", e => {
+    }), a(this, "handleBrowserInputMouseDown", e => {
       e.currentTarget.value = null
     })
   }
 }
-s(u, "defaultProps", {
+a(u, "defaultProps", {
   multiple: !1,
   disabled: !1,
   tabIndex: 0

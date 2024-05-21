@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  a = n("481060"),
-  s = n("300284"),
+  s = n("481060"),
+  a = n("300284"),
   o = n("314897"),
   l = n("430824"),
   u = n("185403"),
@@ -24,7 +24,7 @@ function I(e) {
     onClose: I
   } = e, T = (0, r.useStateFromStores)([o.default], () => o.default.getId() === t.id), f = (0, r.useStateFromStores)([l.default], () => null != n ? l.default.getGuild(n) : null), {
     trackUserProfileAction: S
-  } = (0, d.useUserProfileAnalyticsContext)(), h = (0, s.default)();
+  } = (0, d.useUserProfileAnalyticsContext)(), h = (0, a.default)();
   return T ? null == f ? (0, i.jsx)(c.default, {
     icon: u.default,
     text: E.default.Messages.EDIT_PROFILE,
@@ -33,7 +33,7 @@ function I(e) {
         action: "EDIT_PROFILE"
       }), null == I || I(), h()
     }
-  }) : (0, i.jsx)(a.Popout, {
+  }) : (0, i.jsx)(s.Popout, {
     renderPopout: e => {
       let {
         closePopout: t

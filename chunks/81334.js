@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("399606"),
-  a = n("481060"),
-  s = n("275759"),
+  s = n("481060"),
+  a = n("275759"),
   o = n("706454"),
   l = n("271383"),
   u = n("430824"),
@@ -24,8 +24,8 @@ function T(e) {
     guildId: n,
     textClassName: T,
     tooltipDelay: f
-  } = e, S = (0, r.useStateFromStores)([o.default], () => o.default.locale), h = (0, r.useStateFromStores)([u.default], () => null != n ? u.default.getGuild(n) : null), A = (0, r.useStateFromStores)([l.default], () => null != n ? l.default.getMember(n, t) : null), m = (0, s.getCreatedAtDate)(c.default.extractTimestamp(t), S), N = (0, s.getCreatedAtDate)(null == A ? void 0 : A.joinedAt, S);
-  return null == h || null == A ? (0, i.jsx)(a.Text, {
+  } = e, S = (0, r.useStateFromStores)([o.default], () => o.default.locale), h = (0, r.useStateFromStores)([u.default], () => null != n ? u.default.getGuild(n) : null), A = (0, r.useStateFromStores)([l.default], () => null != n ? l.default.getMember(n, t) : null), m = (0, a.getCreatedAtDate)(c.default.extractTimestamp(t), S), N = (0, a.getCreatedAtDate)(null == A ? void 0 : A.joinedAt, S);
+  return null == h || null == A ? (0, i.jsx)(s.Text, {
     variant: "text-sm/normal",
     className: T,
     children: m
@@ -33,14 +33,14 @@ function T(e) {
     className: I.memberSinceWrapper,
     children: [(0, i.jsxs)("div", {
       className: I.memberSince,
-      children: [(0, i.jsx)(a.Tooltip, {
+      children: [(0, i.jsx)(s.Tooltip, {
         text: E.default.Messages.DISCORD_NAME,
         delay: f,
         children: e => (0, i.jsx)(_.default, {
           ...e,
           className: I.discordIcon
         })
-      }), (0, i.jsx)(a.Text, {
+      }), (0, i.jsx)(s.Text, {
         variant: "text-sm/normal",
         className: T,
         children: m
@@ -49,7 +49,7 @@ function T(e) {
       className: I.divider
     }), (0, i.jsxs)("div", {
       className: I.memberSince,
-      children: [(0, i.jsx)(a.Tooltip, {
+      children: [(0, i.jsx)(s.Tooltip, {
         text: h.name,
         delay: f,
         children: e => (0, i.jsx)(d.default, {
@@ -57,7 +57,7 @@ function T(e) {
           guild: h,
           size: d.default.Sizes.SMOL
         })
-      }), (0, i.jsx)(a.Text, {
+      }), (0, i.jsx)(s.Text, {
         variant: "text-sm/normal",
         className: T,
         children: N

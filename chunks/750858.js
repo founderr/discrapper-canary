@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return g
   }
 });
-var i, r, a = n("735250"),
-  s = n("470079"),
+var i, r, s = n("735250"),
+  a = n("470079"),
   o = n("120356"),
   l = n.n(o),
   u = n("873546"),
@@ -32,7 +32,7 @@ function R(e) {
   let {
     compact: t
   } = e;
-  return (0, a.jsx)(m.default, {
+  return (0, s.jsx)(m.default, {
     className: t ? C.botTagCompact : C.botTagCozy,
     type: m.default.Types.REMIX,
     useRemSizes: !0
@@ -55,7 +55,7 @@ function g(e) {
       renderRemixTag: P = !1,
       decorations: U
     } = e,
-    b = s.useContext(f.default),
+    b = a.useContext(f.default),
     {
       analyticsLocations: G
     } = (0, I.default)(E.default.USERNAME),
@@ -68,7 +68,7 @@ function g(e) {
     x = null != i.messageReference && null != i.webhookId,
     F = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
     H = (0, h.useCanSeeRemixBadge)(),
-    Y = s.useMemo(() => ({
+    Y = a.useMemo(() => ({
       source: O.AnalyticsSections.CHANNEL,
       messageId: i.id,
       tagUserId: i.author.id
@@ -80,19 +80,19 @@ function g(e) {
       } : void 0,
       onClick: v,
       onContextMenu: D,
-      children: o ? (0, a.jsxs)(a.Fragment, {
-        children: [w + k, (0, a.jsx)(T.default, {
+      children: o ? (0, s.jsxs)(s.Fragment, {
+        children: [w + k, (0, s.jsx)(T.default, {
           clan: n.clan,
           userId: i.author.id,
           contextGuildId: b,
           className: C.clanTagChiplet,
           profileViewedAnalytics: Y
         })]
-      }) : (0, a.jsx)(a.Fragment, {
+      }) : (0, s.jsx)(s.Fragment, {
         children: w + k
       })
     };
-  t = null != y && null != g ? (0, a.jsx)(_.Popout, {
+  t = null != y && null != g ? (0, s.jsx)(_.Popout, {
     preload: x ? void 0 : function() {
       let e = null != r ? r : i.author;
       return (0, A.maybeFetchUserProfileForPopout)(e.id, null != n.guildMemberAvatar && null != b ? (0, N.getGuildMemberAvatarURLSimple)({
@@ -114,39 +114,39 @@ function g(e) {
         onClick: t,
         ...n
       } = e;
-      return (0, a.jsx)(_.Clickable, {
+      return (0, s.jsx)(_.Clickable, {
         tag: "span",
         ...n,
         ...j,
         className: l()(j.className, C.clickable, L)
       })
     }
-  }) : (0, a.jsx)(_.Clickable, {
+  }) : (0, s.jsx)(_.Clickable, {
     ...j,
     className: l()(j.className, L)
   });
   let W = null != U ? U[0] : null,
     K = null != U ? U[1] : null;
-  return (0, a.jsxs)(I.AnalyticsLocationProvider, {
+  return (0, s.jsxs)(I.AnalyticsLocationProvider, {
     value: G,
-    children: [null != W && o ? (0, a.jsxs)(a.Fragment, {
+    children: [null != W && o ? (0, s.jsxs)(s.Fragment, {
       children: [" ", W, " "]
-    }) : null, "dot" === F ? (0, a.jsx)(_.RoleDot, {
+    }) : null, "dot" === F ? (0, s.jsx)(_.RoleDot, {
       color: B,
       name: V,
       className: C.roleDot
-    }) : null, t, !o && (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(T.default, {
+    }) : null, t, !o && (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(T.default, {
         clan: n.clan,
         userId: i.author.id,
         contextGuildId: b,
         className: C.clanTagChiplet,
         profileViewedAnalytics: Y
-      }), (0, a.jsx)(p.default, {
+      }), (0, s.jsx)(p.default, {
         message: i
       })]
-    }), null != K ? (0, a.jsx)(a.Fragment, {
+    }), null != K ? (0, s.jsx)(s.Fragment, {
       children: K
-    }) : null, null == W || o ? null : W, null != i && (0, S.default)(i) && H && P ? (0, a.jsx)(R, {}) : null]
+    }) : null, null == W || o ? null : W, null != i && (0, S.default)(i) && H && P ? (0, s.jsx)(R, {}) : null]
   })
 }(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("920906"),
-  s = n("442837"),
+  s = n("920906"),
+  a = n("442837"),
   o = n("607070"),
   l = n("267642"),
   u = n("198466"),
@@ -20,7 +20,7 @@ let I = [_.BoostedGuildTiers.NONE, _.BoostedGuildTiers.TIER_1, _.BoostedGuildTie
 function T(e) {
   let {
     guild: t
-  } = e, n = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), [T, f] = r.useState(!1), [S, h] = r.useState(0), A = r.useRef(null), m = Math.min(_.BoostedGuildTiers.TIER_3, t.premiumTier + 1), N = _.AppliedGuildBoostsRequiredForBoostedGuildTier[t.premiumTier], p = _.AppliedGuildBoostsRequiredForBoostedGuildTier[m], O = (t.premiumSubscriberCount - N) / (p - N), C = d.TierMarkerPositions[t.premiumTier], R = d.TierMarkerPositions[m], g = t.premiumTier === _.BoostedGuildTiers.TIER_3, {
+  } = e, n = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), [T, f] = r.useState(!1), [S, h] = r.useState(0), A = r.useRef(null), m = Math.min(_.BoostedGuildTiers.TIER_3, t.premiumTier + 1), N = _.AppliedGuildBoostsRequiredForBoostedGuildTier[t.premiumTier], p = _.AppliedGuildBoostsRequiredForBoostedGuildTier[m], O = (t.premiumSubscriberCount - N) / (p - N), C = d.TierMarkerPositions[t.premiumTier], R = d.TierMarkerPositions[m], g = t.premiumTier === _.BoostedGuildTiers.TIER_3, {
     progressBarFillWidthFactor: L,
     isProgressBarAnimationComplete: v,
     setShouldFireConfetti: D,
@@ -31,16 +31,16 @@ function T(e) {
       fillFactor: t,
       guildBoostCount: n,
       premiumTier: i,
-      isRevealed: s,
+      isRevealed: a,
       useReducedMotion: o
     } = e, [l, u] = r.useState(o ? i : -1), [c, E] = r.useState(0 === n), [I, T] = r.useState(!1), f = r.useRef(!0), {
       widthFactor: S
-    } = (0, a.useSpring)({
+    } = (0, s.useSpring)({
       from: {
         widthFactor: 0
       },
       to: {
-        widthFactor: s ? t : 0
+        widthFactor: a ? t : 0
       },
       config: {
         tension: 15,
@@ -104,7 +104,7 @@ function T(e) {
     }),
     children: [(0, i.jsxs)("div", {
       className: E.progressBarScrubber,
-      children: [(0, i.jsx)(a.animated.div, {
+      children: [(0, i.jsx)(s.animated.div, {
         className: E.progressBarFill,
         style: {
           width: L.to({

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   }
 }), n("47120");
 let i = [
@@ -17,16 +17,16 @@ let i = [
     ["height", "200px"]
   ];
 
-function a() {
+function s() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
     t = document.createElement("div"),
     n = document.createElement("div");
   for (let [e, n] of i) t.style[e] = n;
   for (let [e, t] of r) n.style[e] = t;
   t.appendChild(n), document.body.appendChild(t), t.className = e;
-  let a = {
+  let s = {
     width: t.offsetWidth - t.clientWidth,
     height: t.offsetHeight - t.clientHeight
   };
-  return document.body.removeChild(t), a
+  return document.body.removeChild(t), s
 }

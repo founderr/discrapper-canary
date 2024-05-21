@@ -23,17 +23,17 @@ n.r(t), n.d(t, {
     return d
   },
   STICKER_PICKER_TAB_ID: function() {
-    return s
+    return a
   },
   STICKER_PICKER_TAB_PANEL_ID: function() {
-    return a
+    return s
   },
   StickerAnimationSettings: function() {
     return i
   }
 });
-let a = "sticker-picker-tab-panel",
-  s = "sticker-picker-tab",
+let s = "sticker-picker-tab-panel",
+  a = "sticker-picker-tab",
   o = "sticker-picker-grid",
   l = -1,
   u = 160,

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   }
 });
 var i = n("570140"),
   r = n("65154");
 
-function a(e, t) {
+function s(e, t) {
   i.default.wait(() => {
     i.default.dispatch({
       type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",

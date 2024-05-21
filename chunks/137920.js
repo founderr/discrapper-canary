@@ -1,6 +1,6 @@
     "use strict";
     var n, i;
-    r.r(t), r.d(t, {
+    r.r(e), r.d(e, {
       ClanPlaystyles: function() {
         return n
       },

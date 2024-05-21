@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("399606"),
   r = n("592125"),
-  a = n("699516"),
-  s = n("594174"),
+  s = n("699516"),
+  a = n("594174"),
   o = n("651530"),
   l = n("163268"),
   u = n("294602");
@@ -21,8 +21,8 @@ let d = (e, t) => {
         explicitContentFriendDm: _,
         explicitContentNonFriendDm: c
       } = (0, u.useExplicitContentSettingOrDefault)(),
-      E = (0, i.useStateFromStores)([a.default], () => a.default.getFriendIDs().includes(t)),
-      I = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
+      E = (0, i.useStateFromStores)([s.default], () => s.default.getFriendIDs().includes(t)),
+      I = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
       T = (0, i.useStateFromStores)([r.default], () => {
         let t = r.default.getChannel(e);
         return null != t && t.isPrivate()
@@ -34,6 +34,6 @@ let d = (e, t) => {
       {
         explicitContentGuilds: t
       } = (0, u.useExplicitContentSettingOrDefault)(),
-      n = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser());
+      n = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser());
     return !!e && null != n && (0, l.getShouldObscureForSetting)(t)
   }

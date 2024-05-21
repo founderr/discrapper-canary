@@ -3,7 +3,7 @@ n.r(t), n("47120");
 var i = n("592125"),
   r = n("412788");
 
-function a(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -11,7 +11,7 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let s = new Set,
+let a = new Set,
   o = new Set,
   l = !1;
 
@@ -21,14 +21,14 @@ function u(e) {
 
 function d(e) {
   let t = !1;
-  if (e.isSpam && !s.has(e.id)) s.add(e.id), t = !0;
-  if (!e.isSpam && s.has(e.id)) s.delete(e.id), t = !0;
+  if (e.isSpam && !a.has(e.id)) a.add(e.id), t = !0;
+  if (!e.isSpam && a.has(e.id)) a.delete(e.id), t = !0;
   if (!e.isSpam && o.has(e.id)) o.delete(e.id), t = !0;
   return t
 }
 
 function _() {
-  s.clear(), o.clear(), Object.values(i.default.getMutablePrivateChannels()).forEach(e => {
+  a.clear(), o.clear(), Object.values(i.default.getMutablePrivateChannels()).forEach(e => {
     d(e)
   }), l = !0
 }
@@ -58,7 +58,7 @@ function T(e) {
   let {
     channel: t
   } = e, n = !1;
-  return s.has(t.id) && (s.delete(t.id), n = !0), n
+  return a.has(t.id) && (a.delete(t.id), n = !0), n
 }
 class f extends r.default {
   initialize() {
@@ -66,22 +66,22 @@ class f extends r.default {
   }
   loadCache() {
     let e = this.readSnapshot(f.LATEST_SNAPSHOT_VERSION);
-    null != e && (s = new Set(e))
+    null != e && (a = new Set(e))
   }
   takeSnapshot() {
     return {
       version: f.LATEST_SNAPSHOT_VERSION,
-      data: Array.from(s)
+      data: Array.from(a)
     }
   }
   getSpamChannelIds() {
-    return s
+    return a
   }
   getSpamChannelsCount() {
-    return s.size
+    return a.size
   }
   isSpam(e) {
-    return s.has(e)
+    return a.has(e)
   }
   isAcceptedOptimistic(e) {
     return o.has(e)
@@ -101,4 +101,4 @@ class f extends r.default {
     })
   }
 }
-a(f, "displayName", "SpamMessageRequestStore"), a(f, "LATEST_SNAPSHOT_VERSION", 1), t.default = new f
+s(f, "displayName", "SpamMessageRequestStore"), s(f, "LATEST_SNAPSHOT_VERSION", 1), t.default = new f

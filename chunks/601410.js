@@ -1,5 +1,5 @@
 "use strict";
-let i, r, a, s;
+let i, r, s, a;
 n.r(t);
 var o, l, u, d, _ = n("153832"),
   c = n("442837"),
@@ -16,17 +16,17 @@ function S(e) {
 }
 
 function h(e) {
-  null != a && a.guildId === e ? (r = a, a = void 0) : r = S(e)
+  null != s && s.guildId === e ? (r = s, s = void 0) : r = S(e)
 }
 class A extends(d = c.default.Store) {
   getSavedScrollPosition(e) {
     return f[e]
   }
   getHomeSessionId(e) {
-    return null != r && r.guildId === e ? r.sessionId : null != a && a.guildId === e ? a.sessionId : void 0
+    return null != r && r.guildId === e ? r.sessionId : null != s && s.guildId === e ? s.sessionId : void 0
   }
   getHomeSessionSource(e) {
-    return null != s && s.guildId === e ? s.source : T.GuildHomeLandingSource.ORGANIC
+    return null != a && a.guildId === e ? a.source : T.GuildHomeLandingSource.ORGANIC
   }
 }
 u = "GuildHomeStore", (l = "displayName") in(o = A) ? Object.defineProperty(o, l, {
@@ -57,12 +57,12 @@ u = "GuildHomeStore", (l = "displayName") in(o = A) ? Object.defineProperty(o, l
       channelId: n
     } = e;
     if (null == t || null == n || !(0, I.isStaticChannelRoute)(n) || !(0, I.isGuildHomeChannel)(n)) {
-      i = void 0, r = void 0, a = void 0, s = void 0;
+      i = void 0, r = void 0, s = void 0, a = void 0;
       return
     }
     let o = (0, I.buildGuildStaticChannelId)(n, t);
     if (i === o || null != r && r.guildId === t) return !1;
-    h(t), i = o, null != s && s.guildId !== t && (s = void 0)
+    h(t), i = o, null != a && a.guildId !== t && (a = void 0)
   },
   CHANNEL_PRELOAD: function(e) {
     let {
@@ -70,18 +70,18 @@ u = "GuildHomeStore", (l = "displayName") in(o = A) ? Object.defineProperty(o, l
       channelId: n
     } = e;
     if (null == t || null == n || !(0, I.isStaticChannelRoute)(n) || !(0, I.isGuildHomeChannel)(n)) {
-      a = void 0;
+      s = void 0;
       return
     }
-    if (null != a && a.guildId === t) return !1;
-    a = S(t)
+    if (null != s && s.guildId === t) return !1;
+    s = S(t)
   },
   GUILD_HOME_SET_SOURCE: function(e) {
     let {
       source: t,
       guildId: n
     } = e;
-    s = {
+    a = {
       guildId: n,
       source: t
     }
@@ -94,6 +94,6 @@ u = "GuildHomeStore", (l = "displayName") in(o = A) ? Object.defineProperty(o, l
     h(t)
   },
   LOGOUT: function() {
-    r = void 0, a = void 0, s = void 0
+    r = void 0, s = void 0, a = void 0
   }
 })

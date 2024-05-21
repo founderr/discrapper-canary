@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, a, s, o = n("658722"),
+var i, r, s, a, o = n("658722"),
   l = n.n(o),
   u = n("392711"),
   d = n.n(u),
@@ -55,8 +55,8 @@ let F = {
   W = (0, v.cachedFunction)((e, t, n, i) => {
     let r = F[t];
     if (null == r) return e;
-    let a = [...e].sort(r);
-    return n === G.TableSortDirections.DESCENDING ? a.reverse() : a
+    let s = [...e].sort(r);
+    return n === G.TableSortDirections.DESCENDING ? s.reverse() : s
   }),
   K = (0, v.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.libraryApplication.isHidden()));
 
@@ -76,7 +76,7 @@ function Z() {
       return null != n ? (t[n.id] = e.lastFocused * L.default.Millis.SECOND, n.id) : null
     }),
     r = Object.values(N.default.getAllLibraryApplications()).map(i => (function(e, t, n, i, r) {
-      var a, s;
+      var s, a;
       if (!r && t.has(e.id)) return null;
       let o = T.default.getApplication(e.id);
       if (null == o) return null;
@@ -88,7 +88,7 @@ function Z() {
         libraryApplication: e,
         lastPlayed: l,
         supportsCloudSync: null != e && R.default.supportsCloudSync(e.id, e.branchId),
-        isNew: (a = e, s = l, null != a && c()(a.createdAt).isAfter(w) && 0 === s),
+        isNew: (s = e, a = l, null != s && c()(s.createdAt).isAfter(w) && 0 === a),
         isLaunching: S.default.launchingGames.has(e.id),
         isRunning: i.has(e.id),
         isLaunchable: (0, U.isLaunchable)({
@@ -104,14 +104,14 @@ function Z() {
         defaultAction: (0, b.getDefaultLibraryApplicationAction)(e, R.default, g.default)
       }
     })(i, n, t, e, !0)).filter(D.isNotNullish),
-    a = [...i.map(i => (function(e, t, n, i) {
+    s = [...i.map(i => (function(e, t, n, i) {
       let r = null != e ? T.default.getApplication(e) : null;
       if (null == r || null == e || t.has(e)) return null;
-      let a = z(r, n);
+      let s = z(r, n);
       return t.add(e), {
         key: e,
         application: r,
-        lastPlayed: a,
+        lastPlayed: s,
         supportsCloudSync: !1,
         isNew: !1,
         isLaunching: S.default.launchingGames.has(e),
@@ -130,7 +130,7 @@ function Z() {
         defaultAction: null
       }
     })(i, n, t, e)).filter(D.isNotNullish), ...r].sort((e, t) => e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1);
-  return V = null != m.default.lastFetched && N.default.fetched, !d().isEqual(a, k) && (k = a, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(k).map(e => e.application).slice(0, 5)), !0)
+  return V = null != m.default.lastFetched && N.default.fetched, !d().isEqual(s, k) && (k = s, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(k).map(e => e.application).slice(0, 5)), !0)
 }
 class X extends(i = E.default.Store) {
   initialize() {
@@ -161,12 +161,12 @@ class X extends(i = E.default.Store) {
     return V
   }
 }
-s = "ApplicationViewStore", (a = "displayName") in(r = X) ? Object.defineProperty(r, a, {
-  value: s,
+a = "ApplicationViewStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new X(I.default, {
+}) : r[s] = a, t.default = new X(I.default, {
   LIBRARY_APPLICATION_FILTER_UPDATE: function(e) {
     let {
       query: t

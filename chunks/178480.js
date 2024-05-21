@@ -21,8 +21,8 @@ n.r(t), n.d(t, {
 });
 var i = n("695346"),
   r = n("709054"),
-  a = n("360629"),
-  s = n("497089"),
+  s = n("360629"),
+  a = n("497089"),
   o = n("925928");
 let l = function(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -42,7 +42,7 @@ function d(e, t) {
     kind: "notification-center-item",
     local_id: "incoming_friend_requests_".concat(e.id, "_").concat(n),
     deeplink: "https://discord.com/users/".concat(e.id),
-    type: s.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
+    type: a.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
     id: n
   }
 }
@@ -54,12 +54,12 @@ function _(e) {
     id: r.default.fromTimestamp(new Date().getTime()),
     kind: "notification-center-item",
     local_id: "mobile_update_available_".concat(e.build),
-    type: s.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE,
+    type: a.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE,
     deeplink: e.urls.install.toString()
   }
 }
-let c = e => e.type === s.NotificationCenterItems.RECENT_MENTION || e.type === s.NotificationCenterItems.REPLY_MENTION;
+let c = e => e.type === a.NotificationCenterItems.RECENT_MENTION || e.type === a.NotificationCenterItems.REPLY_MENTION;
 
 function E() {
-  return (0, a.inDesktopNotificationCenterExperiment)()
+  return (0, s.inDesktopNotificationCenterExperiment)()
 }

@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("399606"),
-  a = n("481060"),
-  s = n("607070"),
+  s = n("481060"),
+  a = n("607070"),
   o = n("689938"),
   l = n("440476"),
   u = n("567949"),
@@ -24,11 +24,11 @@ function E(e) {
       className: l.topPerksCardImage,
       src: r,
       alt: ""
-    }), (0, i.jsx)(a.Heading, {
+    }), (0, i.jsx)(s.Heading, {
       className: l.topPerksCardHeading,
       variant: "heading-lg/extrabold",
       children: n
-    }), (0, i.jsx)(a.Text, {
+    }), (0, i.jsx)(s.Text, {
       className: l.topPerksCardDescription,
       variant: "text-sm/normal",
       children: t
@@ -36,10 +36,10 @@ function E(e) {
   })
 }
 t.default = function() {
-  let e = (0, r.useStateFromStores)([s.default], () => s.default.useReducedMotion);
+  let e = (0, r.useStateFromStores)([a.default], () => a.default.useReducedMotion);
   return (0, i.jsxs)("div", {
     className: l.wrapper,
-    children: [(0, i.jsx)(a.Heading, {
+    children: [(0, i.jsx)(s.Heading, {
       className: l.heading,
       variant: "heading-xxl/extrabold",
       children: o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HEADING

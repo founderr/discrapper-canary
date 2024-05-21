@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, a, s, o = n("392711"),
+var i, r, s, a, o = n("392711"),
   l = n.n(o),
   u = n("442837"),
   d = n("570140");
@@ -19,12 +19,12 @@ class c extends(i = u.default.Store) {
     return _
   }
 }
-s = "ConnectedAppsStore", (a = "displayName") in(r = c) ? Object.defineProperty(r, a, {
-  value: s,
+a = "ConnectedAppsStore", (s = "displayName") in(r = c) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new c(d.default, {
+}) : r[s] = a, t.default = new c(d.default, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       connectedApps: t

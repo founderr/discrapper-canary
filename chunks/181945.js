@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("390547"), n("47120"), n("653041");
 var i = n("392711"),
   r = n.n(i),
-  a = n("45114"),
-  s = n("45966"),
+  s = n("45114"),
+  a = n("45966"),
   o = n("601070"),
   l = n("984933"),
   u = n("306680"),
@@ -40,10 +40,10 @@ function I(e, t, n) {
     }), i.push({
       channelId: _.default.cast(e),
       readStateType: E.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
-      messageId: s.default.ackIdForGuild(e)
+      messageId: a.default.ackIdForGuild(e)
     })
   }), d.default.track(c.AnalyticEvents.MARK_AS_READ, {
     source: t,
     type: "guild"
-  }), (0, a.bulkAck)(i, n)
+  }), (0, s.bulkAck)(i, n)
 }

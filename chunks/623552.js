@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("481060"),
   l = n("718582"),
   u = n("411511");
@@ -86,21 +86,21 @@ function _(e) {
   let {
     users: t,
     guildId: n
-  } = e, a = (0, l.useSortUsersByAffinity)(t), o = r.useRef(!1);
+  } = e, s = (0, l.useSortUsersByAffinity)(t), o = r.useRef(!1);
   r.useEffect(() => {
     o.current = !0
   }, []);
-  let _ = Math.min(d.length - 1, a.length - 1),
+  let _ = Math.min(d.length - 1, s.length - 1),
     I = d[Math.max(0, _)],
-    T = a.length > 4,
-    f = a.length - 3,
+    T = s.length > 4,
+    f = s.length - 3,
     S = f >= 10 ? 1 : 2,
     h = I.map((e, t) => {
-      let r = a[t];
+      let r = s[t];
       if (null == r) return null;
       let o = T && t === S;
       return (0, i.jsx)("div", {
-        className: s()(u.avatarContainer),
+        className: a()(u.avatarContainer),
         style: {
           opacity: 1,
           transform: "translateX(".concat(e.translateX, "px) translateY(").concat(e.translateY, "px) scale(").concat(e.scale, ")")

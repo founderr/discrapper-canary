@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  a = n.n(r),
-  s = n("442837"),
+  s = n.n(r),
+  a = n("442837"),
   o = n("481060"),
   l = n("230711"),
   u = n("906732"),
@@ -45,7 +45,7 @@ t.default = function(e) {
     overrideDisabledButtonText: x,
     shinyButtonClassName: F,
     ...H
-  } = e, Y = (0, s.useStateFromStores)([I.default], () => I.default.getCurrentUser()), j = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), W = (0, s.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), {
+  } = e, Y = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), j = (0, a.useStateFromStores)([f.default], () => f.default.isFocused()), W = (0, a.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), {
     analyticsLocations: K
   } = (0, u.default)(), z = e => {
     if (e.preventDefault(), null == Y) {
@@ -59,8 +59,8 @@ t.default = function(e) {
       let {
         isClaimed: t,
         isVerified: r,
-        isGift: a,
-        subscriptionTier: s,
+        isGift: s,
+        subscriptionTier: a,
         trialId: l,
         postSuccessGuild: u,
         onSubscribeModalClose: d,
@@ -106,10 +106,10 @@ t.default = function(e) {
         return
       }
       let f = p.AnalyticsObjectTypes.BUY;
-      null != l ? f = p.AnalyticsObjectTypes.TRIAL : a && (f = p.AnalyticsObjectTypes.GIFT), (0, _.default)({
-        isGift: a,
+      null != l ? f = p.AnalyticsObjectTypes.TRIAL : s && (f = p.AnalyticsObjectTypes.GIFT), (0, _.default)({
+        isGift: s,
         initialPlanId: null,
-        subscriptionTier: s,
+        subscriptionTier: a,
         analyticsLocations: c,
         analyticsObject: {
           object: p.AnalyticsObjects.BUTTON_CTA,
@@ -146,7 +146,7 @@ t.default = function(e) {
     children: [w && (0, i.jsx)(A.default, {
       className: C.premiumIcon
     }), (0, i.jsx)("span", {
-      className: a()(C.buttonText, y),
+      className: s()(C.buttonText, y),
       children: null != M ? M : O.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT
     })]
   });
@@ -160,7 +160,7 @@ t.default = function(e) {
     children: [(0, i.jsx)(h.default, {
       className: C.giftIcon
     }), (0, i.jsx)("span", {
-      className: a()(C.buttonText, y),
+      className: s()(C.buttonText, y),
       children: null != M ? M : O.default.Messages.PREMIUM_GIFTING_BUTTON
     })]
   });
@@ -179,10 +179,10 @@ t.default = function(e) {
         disabledButtonText: i,
         disabledButtonTooltipText: r
       };
-      let a = null != t ? N.PremiumSubscriptionSKUToPremiumType[(0, m.castPremiumSubscriptionAsSkuId)(t)] : null,
-        s = null != a ? N.PremiumTypeOrder[a] : null,
+      let s = null != t ? N.PremiumSubscriptionSKUToPremiumType[(0, m.castPremiumSubscriptionAsSkuId)(t)] : null,
+        a = null != s ? N.PremiumTypeOrder[s] : null,
         o = null != n ? N.PremiumTypeOrder[n] : null;
-      return null != o && null != s && s < o ? (i = O.default.Messages.APPLICATION_STORE_GET_PREMIUM, r = O.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null != a && null != n && a === n ? (i = O.default.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, r = O.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null == a && null != n && n === N.PremiumTypes.TIER_2 && (r = O.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP), {
+      return null != o && null != a && a < o ? (i = O.default.Messages.APPLICATION_STORE_GET_PREMIUM, r = O.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null != s && null != n && s === n ? (i = O.default.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, r = O.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null == s && null != n && n === N.PremiumTypes.TIER_2 && (r = O.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP), {
         disabledButtonText: i,
         disabledButtonTooltipText: r
       }
@@ -205,9 +205,9 @@ t.default = function(e) {
       ...H,
       ...e,
       children: [w && (0, i.jsx)(A.default, {
-        className: a()(C.premiumIcon, P)
+        className: s()(C.premiumIcon, P)
       }), (0, i.jsx)("span", {
-        className: a()(C.buttonText, y),
+        className: s()(C.buttonText, y),
         children: null !== (n = null !== (t = null == $ ? void 0 : $.disabledButtonText) && void 0 !== t ? t : M) && void 0 !== n ? n : Z
       })]
     })

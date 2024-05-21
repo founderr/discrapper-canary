@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  a = n.n(r),
-  s = n("10683"),
+  s = n.n(r),
+  a = n("10683"),
   o = n("793080"),
   l = n("481060"),
   u = n("785717"),
@@ -38,17 +38,17 @@ function I(e) {
     onClick: f,
     color: E.color,
     look: l.Button.Looks.BLANK,
-    className: a()(E.button, {
+    className: s()(E.button, {
       [E.visible]: n
     })
   }) : (0, i.jsx)(_.default, {
     text: T,
     "aria-label": T,
-    icon: s.PaperIcon,
+    icon: a.PaperIcon,
     onClick: f,
     color: E.color,
     look: l.Button.Looks.BLANK,
-    className: a()(E.button, {
+    className: s()(E.button, {
       [E.visible]: n
     }),
     tooltipClassName: E.tooltip

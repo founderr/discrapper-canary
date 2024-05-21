@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return r
   },
   impl: function() {
-    return a
+    return s
   }
 });
 try {
@@ -49,7 +49,7 @@ class r {
     }) : e[t] = n, this.storage = {}
   }
 }
-let a = ! function() {
+let s = ! function() {
   let e = "test";
   try {
     return i.setItem(e, e), i.removeItem(e), !0

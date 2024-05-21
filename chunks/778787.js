@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("724458"), n("627341"), n("653041");
 var i = n("278074"),
   r = n("979554"),
-  a = n("922347"),
-  s = n("587177"),
+  s = n("922347"),
+  a = n("587177"),
   o = n("311850"),
   l = n("803358"),
   u = n("212161"),
@@ -39,10 +39,10 @@ class c extends l.default {
       prices: (0, o.getPricesFromServer)(_),
       items: I.items.reduce((e, t) => (0, i.match)(t).with({
         type: r.CollectiblesItemType.AVATAR_DECORATION
-      }, t => (e.push(a.default.fromServer(t)), e)).with({
+      }, t => (e.push(s.default.fromServer(t)), e)).with({
         type: r.CollectiblesItemType.PROFILE_EFFECT
       }, t => (e.push(u.default.fromServer(t)), e)).otherwise(() => e), []),
-      bundledProducts: null == E ? void 0 : E.map(s.default.fromServer)
+      bundledProducts: null == E ? void 0 : E.map(a.default.fromServer)
     })
   }
   constructor(e) {

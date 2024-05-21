@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("470079"),
   r = n("399606"),
-  a = n("634894"),
-  s = n("335131"),
+  s = n("634894"),
+  a = n("335131"),
   o = n("597688"),
   l = n("337679"),
   u = n("1870"),
@@ -21,10 +21,10 @@ var i = n("470079"),
 
 function _(e) {
   let t = "useMaybeFetchCollectiblesCategories";
-  (0, a.useTriggerDebuggingAA)({
+  (0, s.useTriggerDebuggingAA)({
     location: t + " auto on",
     autoTrackExposure: !0
-  }), (0, a.useTriggerDebuggingAA)({
+  }), (0, s.useTriggerDebuggingAA)({
     location: t + " auto off",
     autoTrackExposure: !1
   });
@@ -34,7 +34,7 @@ function _(e) {
       return [o.default.isFetchingCategories, o.default.error, null !== (e = o.default.lastFetched) && void 0 !== e ? e : 0, o.default.categories]
     });
   return (0, i.useEffect)(() => {
-    !(l || u || Date.now() - _ < 6e5) && (0, s.fetchCollectiblesCategories)({
+    !(l || u || Date.now() - _ < 6e5) && (0, a.fetchCollectiblesCategories)({
       ...e,
       includeBundles: n
     })
@@ -47,10 +47,10 @@ function _(e) {
 
 function c() {
   let e = "useFetchPurchases";
-  (0, a.useTriggerDebuggingAA)({
+  (0, s.useTriggerDebuggingAA)({
     location: e + " auto on",
     autoTrackExposure: !0
-  }), (0, a.useTriggerDebuggingAA)({
+  }), (0, s.useTriggerDebuggingAA)({
     location: e + " auto off",
     autoTrackExposure: !1
   });
@@ -60,7 +60,7 @@ function c() {
     location: "useFetchPurchases"
   });
   return (0, i.useEffect)(() => {
-    (!c || !(_.size > 0)) && (0, s.fetchCollectiblesPurchases)()
+    (!c || !(_.size > 0)) && (0, a.fetchCollectiblesPurchases)()
   }, [c]), {
     isClaiming: n,
     fetchError: o,
@@ -73,17 +73,17 @@ function c() {
 function E(e) {
   var t;
   let n = "useFetchCollectiblesCategoriesAndPurchases";
-  (0, a.useTriggerDebuggingAA)({
+  (0, s.useTriggerDebuggingAA)({
     location: n + " auto on",
     autoTrackExposure: !0
-  }), (0, a.useTriggerDebuggingAA)({
+  }), (0, s.useTriggerDebuggingAA)({
     location: n + " auto off",
     autoTrackExposure: !1
   });
   let {
     isFetching: i,
     categories: r,
-    error: s
+    error: a
   } = _(e), {
     isClaiming: o,
     fetchError: l,
@@ -98,6 +98,6 @@ function E(e) {
     isClaiming: o,
     categories: r,
     purchases: E,
-    error: null !== (t = null != s ? s : l) && void 0 !== t ? t : u
+    error: null !== (t = null != a ? a : l) && void 0 !== t ? t : u
   }
 }

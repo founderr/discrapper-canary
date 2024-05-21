@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   }
 });
 var i = n("81825");
@@ -14,13 +14,13 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a extends i.default {
+class s extends i.default {
   static fromServer(e) {
     let {
       sku_id: t,
       ...n
     } = e;
-    return new a({
+    return new s({
       ...n,
       skuId: t
     })

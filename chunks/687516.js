@@ -12,11 +12,11 @@ n.r(t), n.d(t, {
 });
 var i = n("442837"),
   r = n("902704"),
-  a = n("158776"),
-  s = n("981631");
+  s = n("158776"),
+  a = n("981631");
 
 function o(e) {
-  return e.type === s.ActivityTypes.PLAYING
+  return e.type === a.ActivityTypes.PLAYING
 }
 
 function l(e, t) {
@@ -38,5 +38,5 @@ function d(e, t) {
 }
 
 function _(e) {
-  return (0, i.useStateFromStores)([a.default], () => u(e, a.default), [e], d)
+  return (0, i.useStateFromStores)([s.default], () => u(e, s.default), [e], d)
 }

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("153832"),
-  s = n("286379"),
+  s = n("153832"),
+  a = n("286379"),
   o = n("442837"),
   l = n("434650"),
   u = n("110924"),
@@ -73,13 +73,13 @@ class f {
           trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata
         })
       }), (0, E.isEligibleForQuestsClientMonitoring)("QuestImpressionTracker") && d.default.increment({
-        name: s.MetricEvents.QUEST_CONTENT_IMPRESSION,
+        name: a.MetricEvents.QUEST_CONTENT_IMPRESSION,
         tags: ["quest_content:".concat((0, c.getQuestContentName)(this.questContent))]
       })
     }), T(this, "stop", function() {
       let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
       e && o.heartbeat(!0), o.lastBeatTime = void 0, clearInterval(o.beatTimeout), clearTimeout(o.minViewTimeReachedTimeout)
-    }), this.id = (0, a.v4)(), this.questContent = t, this.questContentPosition = n, this.minViewTimeSecond = 1, this.minViewportPercentage = .5, this.quests = Array.isArray(e) ? e : [e], this.trackGuildAndChannelMetadata = r, this.triggeredByStatusChange = i
+    }), this.id = (0, s.v4)(), this.questContent = t, this.questContentPosition = n, this.minViewTimeSecond = 1, this.minViewportPercentage = .5, this.quests = Array.isArray(e) ? e : [e], this.trackGuildAndChannelMetadata = r, this.triggeredByStatusChange = i
   }
 }
 
@@ -93,9 +93,9 @@ function S(e) {
 function h(e) {
   var t;
   let n = (0, o.useStateFromStores)([_.default], () => _.default.isFocused()),
-    a = n !== (0, u.default)(n),
-    [s, d] = r.useState(!1),
-    E = null !== (t = e.overrideVisibility) && void 0 !== t ? t : s,
+    s = n !== (0, u.default)(n),
+    [a, d] = r.useState(!1),
+    E = null !== (t = e.overrideVisibility) && void 0 !== t ? t : a,
     I = E !== (0, u.default)(E),
     T = Array.isArray(e.questOrQuests) ? null : (0, c.getQuestStatus)(e.questOrQuests),
     S = (0, u.default)(T),
@@ -106,10 +106,10 @@ function h(e) {
     null != A.current && A.current.stop()
   }, []), r.useEffect(() => {
     let t = n && E,
-      i = (I || a || h) && t,
-      r = (I || a) && !t || h;
+      i = (I || s || h) && t,
+      r = (I || s) && !t || h;
     (i || r) && null != A.current && A.current.stop(), i && (A.current = new f(e.questOrQuests, e.questContent, e.questContentPosition, h, e.trackGuildAndChannelMetadata), A.current.start())
-  }, [n, E, A, a, I, e.questOrQuests, e.questContent, e.questContentPosition, e.trackGuildAndChannelMetadata, h]), (0, i.jsx)(i.Fragment, {
+  }, [n, E, A, s, I, e.questOrQuests, e.questContent, e.questContentPosition, e.trackGuildAndChannelMetadata, h]), (0, i.jsx)(i.Fragment, {
     children: e.children(m)
   })
 }

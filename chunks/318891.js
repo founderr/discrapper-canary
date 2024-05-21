@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("570140"),
-  a = n("519938"),
-  s = n("317770"),
+  s = n("519938"),
+  a = n("317770"),
   o = n("928518"),
   l = n("592125"),
   u = n("819640"),
@@ -25,12 +25,12 @@ var r = n("570140"),
 
 function h(e) {
   let t = null != e ? e : i;
-  null != t && d.default.isOpen(t) && r.default.wait(() => a.hide(t))
+  null != t && d.default.isOpen(t) && r.default.wait(() => s.hide(t))
 }
 
 function A(e) {
   let t = null != e ? e : i;
-  null != t && d.default.isOpen(t) && r.default.wait(() => a.show(t))
+  null != t && d.default.isOpen(t) && r.default.wait(() => s.show(t))
 }
 
 function m() {
@@ -39,10 +39,10 @@ function m() {
     n = l.default.getChannel(e);
   return null == e || null == n || null == t ? function() {
     let e = i;
-    null != e && d.default.isOpen(e) && (r.default.wait(() => a.close(e)), i = null)
+    null != e && d.default.isOpen(e) && (r.default.wait(() => s.close(e)), i = null)
   }() : function(e, t) {
     if (d.default.isOpen(t)) return !1;
-    r.default.wait(() => a.open(t, S.PictureInPictureComponents.EMBED_IFRAME, {
+    r.default.wait(() => s.open(t, S.PictureInPictureComponents.EMBED_IFRAME, {
       channel: e
     })), i = t
   }(n, (0, f.default)(e, t.applicationId))
@@ -53,7 +53,7 @@ function N() {
     t = o.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
   return e && !t ? h() : A()
 }
-class p extends s.default {
+class p extends a.default {
   _initialize() {
     c.default.addChangeListener(m), E.default.addChangeListener(m), _.default.addChangeListener(m), I.default.addChangeListener(m), o.default.addChangeListener(m), T.default.addChangeListener(m), u.default.addChangeListener(N)
   }

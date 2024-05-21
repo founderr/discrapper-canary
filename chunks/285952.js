@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("335607"),
   l = n("961047");
 let u = {
@@ -34,7 +34,7 @@ let u = {
     let {
       children: t,
       className: n,
-      shrink: a,
+      shrink: s,
       grow: l,
       basis: u,
       style: d,
@@ -44,7 +44,7 @@ let u = {
       className: n = null != n ? n : o.flexChild,
       style: {
         flexGrow: l,
-        flexShrink: a,
+        flexShrink: s,
         flexBasis: u,
         ...d
       },
@@ -55,7 +55,7 @@ let u = {
       return E.style = {
         ...E.style,
         ...e.props.style
-      }, E.className = s()(e.props.className, n), r.cloneElement(e, E)
+      }, E.className = a()(e.props.className, n), r.cloneElement(e, E)
     }
     return (0, i.jsx)("div", {
       ...E,
@@ -73,7 +73,7 @@ let I = e => {
     children: t,
     className: n,
     direction: r = u.HORIZONTAL,
-    justify: a = d.START,
+    justify: s = d.START,
     align: l = _.STRETCH,
     wrap: E = c.NO_WRAP,
     shrink: I,
@@ -89,7 +89,7 @@ let I = e => {
       flexBasis: f,
       ...S
     },
-    className: s()(o.flex, r, a, l, E, n),
+    className: a()(o.flex, r, s, l, E, n),
     ...h,
     children: t
   })

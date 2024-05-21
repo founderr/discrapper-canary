@@ -39,8 +39,8 @@ n.r(t), n.d(t, {
 }), n("411104"), n("47120"), n("653041");
 var i = n("578012"),
   r = n("392711"),
-  a = n.n(r),
-  s = n("377108"),
+  s = n.n(r),
+  a = n("377108"),
   o = n("524437"),
   l = n("397696"),
   u = n("526761"),
@@ -50,7 +50,7 @@ let _ = {
   },
   c = {
     [u.UserSettingsTypes.PRELOADED_USER_SETTINGS]: o.PreloadedUserSettings,
-    [u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: s.FrecencyUserSettings
+    [u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: a.FrecencyUserSettings
   };
 
 function E(e, t) {
@@ -91,8 +91,8 @@ function A(e, t, n) {
 }
 
 function m(e, t, n, i) {
-  var r, a, s;
-  return r = e, a = t, s = e => N(e, n, i), null == r.guilds && (r.guilds = o.AllGuildSettings.create()), A(r.guilds, a, s)
+  var r, s, a;
+  return r = e, s = t, a = e => N(e, n, i), null == r.guilds && (r.guilds = o.AllGuildSettings.create()), A(r.guilds, s, a)
 }
 
 function N(e, t, n) {
@@ -108,11 +108,11 @@ function p(e, t) {
   }
   let i = .1 > Math.random(),
     r = !1,
-    a = [];
+    s = [];
   for (let n of t) {
-    var s, o;
+    var a, o;
     if (n.version <= e.versions.clientVersion) {
-      i && (null === (s = n.cleanup) || void 0 === s || s.call(n));
+      i && (null === (a = n.cleanup) || void 0 === a || a.call(n));
       continue
     }
     let t = n.run(e);
@@ -120,25 +120,25 @@ function p(e, t) {
       null === (o = n.cleanup) || void 0 === o || o.call(n);
       continue
     }
-    r = !0, null != n.cleanup && a.push(n.cleanup)
+    r = !0, null != n.cleanup && s.push(n.cleanup)
   }
   return {
     proto: e,
     isDirty: r,
-    cleanupFuncs: a
+    cleanupFuncs: s
   }
 }
 
 function O(e, t) {
   let n = Object.entries(e);
   if (n.length > t)
-    for (n = a().sortBy(n, e => {
+    for (n = s().sortBy(n, e => {
         let [t, n] = e;
         return n.recentUses[n.recentUses.length - 1]
       }).reverse(); n.length > t;) n.pop();
   let i = {};
   for (let [e, t] of n) {
-    let n = s.FrecencyItem.create();
+    let n = a.FrecencyItem.create();
     n.frecency = t.frecency, n.recentUses = t.recentUses.filter(e => null != e && e > 0).map(String), n.score = Math.round(t.score), n.totalUses = t.totalUses, i[e] = n
   }
   return i

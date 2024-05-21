@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   setIsPaused: function() {
-    return a
+    return s
   }
 });
 let i = !1;
@@ -13,6 +13,6 @@ function r() {
   return i
 }
 
-function a(e) {
+function s(e) {
   i = e
 }

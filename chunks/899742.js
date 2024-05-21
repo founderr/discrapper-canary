@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   },
   handoffEnd: function() {
-    return a
+    return s
   },
   handoffFromApp: function() {
-    return s
+    return a
   },
   handoffSetUser: function() {
     return l
@@ -26,7 +26,7 @@ function r() {
   })
 }
 
-function a(e, t) {
+function s(e, t) {
   i.default.dispatch({
     type: "BROWSER_HANDOFF_END",
     handoffToken: e,
@@ -34,19 +34,19 @@ function a(e, t) {
   })
 }
 
-function s(e) {
+function a(e) {
   let {
     handoffKey: t,
     handoffToken: n,
     handoffSource: r,
-    timeout: a = 1e4
+    timeout: s = 1e4
   } = e;
   i.default.dispatch({
     type: "BROWSER_HANDOFF_FROM_APP",
     handoffKey: t,
     handoffToken: n,
     handoffSource: r,
-    timeout: a
+    timeout: s
   })
 }
 

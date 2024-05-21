@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return u
   },
   queueInteractionComponentState: function() {
-    return s
+    return a
   },
   setFailed: function() {
     return l
@@ -15,9 +15,9 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("570140"),
-  a = n("981631");
+  s = n("981631");
 
-function s(e, t, n, i) {
+function a(e, t, n, i) {
   r.default.dispatch({
     type: "QUEUE_INTERACTION_COMPONENT_STATE",
     messageId: e,
@@ -31,8 +31,8 @@ function o(e, t) {
   let {
     data: n,
     messageId: i,
-    onCreate: a,
-    onSuccess: s,
+    onCreate: s,
+    onSuccess: a,
     onFailure: o
   } = t;
   r.default.dispatch({
@@ -40,8 +40,8 @@ function o(e, t) {
     data: n,
     nonce: e,
     messageId: i,
-    onCreate: a,
-    onSuccess: s,
+    onCreate: s,
+    onSuccess: a,
     onFailure: o
   })
 }
@@ -56,7 +56,7 @@ function l(e, t, n) {
 }
 async function u(e, t) {
   let n = await i.HTTP.get({
-    url: a.Endpoints.MESSAGE_INTERACTION_DATA(e, t),
+    url: s.Endpoints.MESSAGE_INTERACTION_DATA(e, t),
     oldFormErrors: !0
   });
   if (n.ok) {

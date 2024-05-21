@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  a = n("976644"),
-  s = n("466111"),
+  s = n("976644"),
+  a = n("466111"),
   o = n("929204"),
   l = n("689938"),
   u = n("450671");
@@ -18,7 +18,7 @@ function d(e) {
     analyticsSection: t,
     buttonText: n
   } = e;
-  return (0, i.jsxs)(a.default, {
+  return (0, i.jsxs)(s.default, {
     className: u.premiumButton,
     innerClassName: u.premiumButtonInner,
     color: r.Button.Colors.GREEN,
@@ -26,7 +26,7 @@ function d(e) {
     onClick: () => (0, o.default)({
       section: t
     }),
-    children: [(0, i.jsx)(s.default, {
+    children: [(0, i.jsx)(a.default, {
       className: u.premiumButtonNitroWheel
     }), null != n ? n : l.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_CTA]
   })

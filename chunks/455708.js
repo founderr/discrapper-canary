@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("442837"),
   l = n("481060"),
   u = n("570140"),
@@ -99,8 +99,8 @@ class R extends r.PureComponent {
       resultQuery: t,
       query: n,
       favorites: r,
-      searchOffset: a,
-      searchLimit: s,
+      searchOffset: s,
+      searchLimit: a,
       searchTotalResults: o,
       suggestions: l,
       hideFavorites: u
@@ -116,8 +116,8 @@ class R extends r.PureComponent {
       resultType: d,
       resultQuery: t,
       query: n,
-      searchOffset: a,
-      searchLimit: s,
+      searchOffset: s,
+      searchLimit: a,
       searchTotalResults: o,
       suggestions: l,
       onSelectSuggestion: this.handleSelectSuggestion
@@ -132,7 +132,7 @@ class R extends r.PureComponent {
       id: m.GIF_PICKER_TAB_PANEL_ID,
       role: "tabpanel",
       "aria-labelledby": m.GIF_PICKER_TAB_ID,
-      className: s()(p.container, e),
+      className: a()(p.container, e),
       onClick: C,
       ref: t,
       children: [(0, i.jsx)("div", {
@@ -190,8 +190,8 @@ t.default = r.forwardRef((e, t) => {
   let {
     query: n,
     resultQuery: r,
-    resultItems: a,
-    suggestions: s
+    resultItems: s,
+    suggestions: a
   } = (0, o.useStateFromStoresObject)([c.default], () => ({
     query: c.default.getQuery(),
     resultQuery: c.default.getResultQuery(),
@@ -203,8 +203,8 @@ t.default = r.forwardRef((e, t) => {
     forwardedRef: t,
     query: null != l && "" !== l ? l : n,
     resultQuery: r,
-    resultItems: a,
-    suggestions: s,
+    resultItems: s,
+    suggestions: a,
     favorites: u,
     searchOffset: 0,
     searchTotalResults: c.default.getResultItems().length,

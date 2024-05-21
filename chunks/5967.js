@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   eventOwnerDocument: function() {
-    return s
+    return a
   },
   isInputLikeElement: function() {
-    return a
+    return s
   }
 });
 let i = /input/i,
   r = /textarea/i;
 
-function a(e) {
+function s(e) {
   if (null == e) return !1;
   if ("true" === e.getAttribute("contenteditable") || r.test(e.tagName)) return !0;
   if (i.test(e.tagName)) {
@@ -21,7 +21,7 @@ function a(e) {
   return !1
 }
 
-function s(e) {
+function a(e) {
   let {
     target: t
   } = e;

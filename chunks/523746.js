@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var i, r, a, s, o = n("392711"),
+var i, r, s, a, o = n("392711"),
   l = n.n(o),
   u = n("442837"),
   d = n("544891"),
@@ -28,7 +28,7 @@ function h() {
   }
   return !1
 }
-class A extends(s = u.default.Store) {
+class A extends(a = u.default.Store) {
   initialize() {
     this.waitFor(I.default, E.default)
   }
@@ -57,12 +57,12 @@ class A extends(s = u.default.Store) {
     }
   }
 }
-a = "CallStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
-  value: a,
+s = "CallStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = a, t.default = new A(_.default, {
+}) : i[r] = s, t.default = new A(_.default, {
   CONNECTION_OPEN: function() {
     return h(!0)
   },
@@ -126,13 +126,13 @@ a = "CallStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
       messageId: n,
       region: i,
       ringing: r
-    } = e, a = f[t], s = null != a && (a.regionUpdated || a.region !== i);
+    } = e, s = f[t], a = null != s && (s.regionUpdated || s.region !== i);
     f[t] = {
       ...f[t],
       messageId: n,
       region: i,
       ringing: r,
-      regionUpdated: s
+      regionUpdated: a
     }
   },
   CALL_DELETE: function(e) {

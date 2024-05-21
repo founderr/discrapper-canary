@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var i, r, a, s, o = n("442837"),
+var i, r, s, a, o = n("442837"),
   l = n("570140");
 let u = !1,
   d = null,
@@ -22,7 +22,7 @@ function E(e) {
   } = e;
   u = !0, d = t
 }
-class I extends(s = o.default.Store) {
+class I extends(a = o.default.Store) {
   isLoading() {
     return u
   }
@@ -30,12 +30,12 @@ class I extends(s = o.default.Store) {
     return _
   }
 }
-a = "I18nLoaderStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, r, {
-  value: a,
+s = "I18nLoaderStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = a, t.default = new I(l.default, {
+}) : i[r] = s, t.default = new I(l.default, {
   I18N_LOAD_START: E,
   I18N_LOAD_SUCCESS: function(e) {
     let {

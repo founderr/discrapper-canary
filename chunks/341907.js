@@ -16,8 +16,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  a = n("782568"),
-  s = n("572004"),
+  s = n("782568"),
+  a = n("572004"),
   o = n("49012"),
   l = n("617136"),
   u = n("918701");
@@ -25,8 +25,8 @@ var r = n("481060"),
 function d(e) {
   let {
     questId: t,
-    location: a,
-    questContentPosition: s
+    location: s,
+    questContentPosition: a
   } = e;
   (0, r.openModalLazy)(async () => {
     let {
@@ -35,8 +35,8 @@ function d(e) {
     return n => (0, i.jsx)(e, {
       ...n,
       questId: t,
-      questContentPosition: s,
-      location: a
+      questContentPosition: a,
+      location: s
     })
   })
 }
@@ -50,7 +50,7 @@ function _(e, t) {
         questContent: t.content,
         questContentCTA: t.ctaContent,
         questContentPosition: t.position
-      }), (0, a.default)(e.config.getGameLink)
+      }), (0, s.default)(e.config.getGameLink)
     }
   })
 }
@@ -78,5 +78,5 @@ let E = (e, t) => {
     questContent: t.content,
     questContentCTA: t.ctaContent,
     questContentPosition: t.position
-  }), (0, s.copy)((0, u.getQuestUrl)(e))
+  }), (0, a.copy)((0, u.getQuestUrl)(e))
 }

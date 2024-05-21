@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n.d(t, {
   ChannelBackNavigationSources: function() {
-    return a
+    return s
   }
 }), n("47120");
 var i, r = n("124368");
 (i || (i = {})).INVITE_ACCEPT = "invite_accept", t.default = i;
-let a = new Set([r.OpenThreadAnalyticsLocations.EMBED, r.OpenThreadAnalyticsLocations.FORUM])
+let s = new Set([r.OpenThreadAnalyticsLocations.EMBED, r.OpenThreadAnalyticsLocations.FORUM])

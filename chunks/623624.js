@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("512722"),
-  a = n.n(r),
-  s = n("442837"),
+  s = n.n(r),
+  a = n("442837"),
   o = n("100527"),
   l = n("906732"),
   u = n("430824"),
@@ -20,9 +20,9 @@ let E = e => {
     guildId: t,
     close: n,
     location: r
-  } = e, _ = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser());
-  a()(null != _, "PremiumGuildPerksModalConnected: currentUser cannot be undefined");
-  let E = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]),
+  } = e, _ = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser());
+  s()(null != _, "PremiumGuildPerksModalConnected: currentUser cannot be undefined");
+  let E = (0, a.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]),
     {
       analyticsLocations: I
     } = (0, l.default)(o.default.BOOSTED_GUILD_PERKS_MODAL);

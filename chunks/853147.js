@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("536402"),
   r = n("660189"),
-  a = n("823379"),
-  s = n("313531");
+  s = n("823379"),
+  a = n("313531");
 
 function o(e) {
   switch (e.entityType) {
@@ -27,7 +27,7 @@ function o(e) {
         }, entityType: e.entityType, guildId: e.guildId
       };
     default:
-      (0, a.assertNever)(e)
+      (0, s.assertNever)(e)
   }
 }
 
@@ -40,11 +40,11 @@ function l(e) {
         } = r.default.getMessage(t);
       if (null == n) return null;
       return {
-        type: i.GuildFeedItemTypes.FORUM_POST, id: (0, s.getGuildFeedItemIdFromFeatureableItem)(e), sortIndex: 0, message: n, thread: e.entity, featured: !0, seen: !1, highlighted: !1, unreadMention: !1
+        type: i.GuildFeedItemTypes.FORUM_POST, id: (0, a.getGuildFeedItemIdFromFeatureableItem)(e), sortIndex: 0, message: n, thread: e.entity, featured: !0, seen: !1, highlighted: !1, unreadMention: !1
       };
     case i.GuildFeedItemTypes.MESSAGE:
       return {
-        type: i.GuildFeedItemTypes.MESSAGE, id: (0, s.getGuildFeedItemIdFromFeatureableItem)(e), sortIndex: 0, message: e.entity, referenceMessages: [], featured: !0, seen: !1, highlighted: !1, unreadMention: !1
+        type: i.GuildFeedItemTypes.MESSAGE, id: (0, a.getGuildFeedItemIdFromFeatureableItem)(e), sortIndex: 0, message: e.entity, referenceMessages: [], featured: !0, seen: !1, highlighted: !1, unreadMention: !1
       }
   }
 }

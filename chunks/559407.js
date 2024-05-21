@@ -4,14 +4,14 @@ n.r(t), n.d(t, {
     return r
   },
   default: function() {
-    return s
+    return a
   }
 });
 var i = n("735250");
 n("470079"), n("637515");
 let r = "cash-app-pay-container";
 
-function a() {
+function s() {
   return (0, i.jsx)(i.Fragment, {
     children: (0, i.jsx)("div", {
       id: r
@@ -19,8 +19,8 @@ function a() {
   })
 }
 
-function s() {
+function a() {
   return (0, i.jsx)(i.Fragment, {
-    children: (0, i.jsx)(a, {})
+    children: (0, i.jsx)(s, {})
   })
 }

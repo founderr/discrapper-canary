@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   isMemberVerificationManualApproval: function() {
-    return a
+    return s
   },
   useIsMemberVerificationManualApproval: function() {
     return r
@@ -35,7 +35,7 @@ function r(e) {
   }).manualApprovalEnabled
 }
 
-function a(e) {
+function s(e) {
   return i.getCurrentConfig({
     guildId: e,
     location: "bda51f_3"

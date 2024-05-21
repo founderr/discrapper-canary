@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i, r = n("544891"),
-  a = n("81825"),
-  s = n("601964"),
+  s = n("81825"),
+  a = n("601964"),
   o = n("768581"),
   l = n("624138"),
   u = n("981631");
@@ -35,7 +35,7 @@ let _ = async e => {
   } catch {}
   return t
 };
-class c extends a.default {
+class c extends s.default {
   getIconURL(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return o.default.getGuildIconURL({
@@ -108,7 +108,7 @@ class c extends a.default {
     })
   }
   static createFromGuildType(e) {
-    return e instanceof c ? e : e instanceof s.default ? c.createFromGuildRecord(e) : c.createFromDiscoverableGuild(e)
+    return e instanceof c ? e : e instanceof a.default ? c.createFromGuildRecord(e) : c.createFromDiscoverableGuild(e)
   }
   constructor(e) {
     super(), d(this, "id", void 0), d(this, "name", void 0), d(this, "icon", void 0), d(this, "description", void 0), d(this, "features", void 0), d(this, "premiumTier", void 0), d(this, "premiumSubscriberCount", void 0), d(this, "presenceCount", void 0), d(this, "memberCount", void 0), d(this, "emojis", void 0), this.id = e.id, this.name = e.name, this.icon = e.icon, this.description = e.description, this.features = e.features, this.premiumTier = e.premiumTier, this.premiumSubscriberCount = e.premiumSubscriberCount, this.presenceCount = e.presenceCount, this.memberCount = e.memberCount, this.emojis = e.emojis

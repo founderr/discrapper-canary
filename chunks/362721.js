@@ -9,13 +9,13 @@ n.r(t), n.d(t, {
 });
 var i = n("442837"),
   r = n("496675"),
-  a = n("700785"),
-  s = n("231338");
-let o = [s.Permissions.SET_VOICE_CHANNEL_STATUS, s.Permissions.CONNECT, s.Permissions.VIEW_CHANNEL],
-  l = [s.Permissions.SET_VOICE_CHANNEL_STATUS];
+  s = n("700785"),
+  a = n("231338");
+let o = [a.Permissions.SET_VOICE_CHANNEL_STATUS, a.Permissions.CONNECT, a.Permissions.VIEW_CHANNEL],
+  l = [a.Permissions.SET_VOICE_CHANNEL_STATUS];
 
 function u(e, t, n, i) {
-  return (n ? l : o).every(n => null == i ? t.can(n, e) : a.can({
+  return (n ? l : o).every(n => null == i ? t.can(n, e) : s.can({
     permission: n,
     user: i,
     context: e

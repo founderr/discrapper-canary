@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var i, r, a = n("735250");
+var i, r, s = n("735250");
 n("470079");
-var s = n("120356"),
-  o = n.n(s),
+var a = n("120356"),
+  o = n.n(a),
   l = n("481060"),
   u = n("263704"),
   d = n("696202"),
@@ -21,7 +21,7 @@ t.default = function(e) {
     messageType: n,
     className: i,
     textColor: r = "text-normal",
-    textVariant: s = "text-sm/medium"
+    textVariant: a = "text-sm/medium"
   } = e, I = function(e) {
     switch (e) {
       case 0:
@@ -45,17 +45,17 @@ t.default = function(e) {
         return E.positive
     }
   }(n);
-  return (0, a.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: o()(E.container, T, i),
-    children: [(0, a.jsx)("div", {
+    children: [(0, s.jsx)("div", {
       className: E.iconDiv,
-      children: (0, a.jsx)(I, {
+      children: (0, s.jsx)(I, {
         className: E.icon
       })
-    }), (0, a.jsx)(l.Text, {
+    }), (0, s.jsx)(l.Text, {
       className: E.text,
       color: r,
-      variant: s,
+      variant: a,
       children: t
     })]
   })

@@ -3,24 +3,24 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("960259"),
-  a = n("637441"),
-  s = n("325767");
+  s = n("637441"),
+  a = n("325767");
 t.default = (0, r.replaceIcon)(function(e) {
   let {
     width: t = 24,
     height: n = 24,
     color: r = "currentColor",
-    foreground: a,
+    foreground: s,
     ...o
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, s.default)(o),
+    ...(0, a.default)(o),
     width: t,
     height: n,
     viewBox: "0 0 24 24",
     fill: "none",
     children: [(0, i.jsx)("path", {
-      className: a,
+      className: s,
       fill: r,
       fillRule: "evenodd",
       clipRule: "evenodd",
@@ -30,6 +30,6 @@ t.default = (0, r.replaceIcon)(function(e) {
       fill: r
     })]
   })
-}, a.BellZIcon, void 0, {
+}, s.BellZIcon, void 0, {
   size: 24
 })

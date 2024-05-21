@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("442837"),
-  s = n("524437"),
+  s = n("442837"),
+  a = n("524437"),
   o = n("780384"),
   l = n("481060"),
   u = n("410030"),
@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("228168"),
   f = n("157542");
 let S = () => {
-  let e = (0, c.useIsDismissibleContentDismissed)(s.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP),
-    t = (0, a.useStateFromStores)([_.default], () => _.default.syncProfileThemeWithUserTheme),
+  let e = (0, c.useIsDismissibleContentDismissed)(a.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP),
+    t = (0, s.useStateFromStores)([_.default], () => _.default.syncProfileThemeWithUserTheme),
     n = (0, u.default)(),
     {
       theme: i
@@ -29,15 +29,15 @@ t.default = e => {
     onTooltipClose: t
   } = e, {
     profileType: n
-  } = (0, I.useUserProfileThemeContext)(), a = n === T.UserProfileTypes.POPOUT, s = S(), [o, u] = r.useState(!a && s);
-  return (0, d.default)(() => u(s), a ? 300 : null), (0, i.jsx)(l.Popout, {
+  } = (0, I.useUserProfileThemeContext)(), s = n === T.UserProfileTypes.POPOUT, a = S(), [o, u] = r.useState(!s && a);
+  return (0, d.default)(() => u(a), s ? 300 : null), (0, i.jsx)(l.Popout, {
     shouldShow: o,
     position: "left",
     align: "center",
     spacing: 32,
     ignoreModalClicks: !0,
     onRequestClose: () => {
-      !a && u(!1)
+      !s && u(!1)
     },
     renderPopout: e => {
       let {

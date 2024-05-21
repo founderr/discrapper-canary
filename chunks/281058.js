@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
 var i, r = n("442837"),
-  a = n("570140"),
-  s = n("626135"),
+  s = n("570140"),
+  a = n("626135"),
   o = n("761274"),
   l = n("981631");
 
@@ -33,14 +33,14 @@ class _ extends(i = r.default.DeviceSettingsStore) {
       state: t,
       permissionType: n
     } = e, i = d.permissionStates, r = i[n];
-    i[n] = t, r !== t && s.default.track(l.AnalyticEvents.PERMISSIONS_ACKED, {
+    i[n] = t, r !== t && a.default.track(l.AnalyticEvents.PERMISSIONS_ACKED, {
       type: n,
       action: t,
       previous_action: null != r ? r : o.NativePermissionStates.NONE
     })
   }
   constructor() {
-    super(a.default, {
+    super(s.default, {
       SET_NATIVE_PERMISSION: e => this.handleSetNativePermission(e)
     })
   }

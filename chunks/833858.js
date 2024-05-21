@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 });
 var i = n("981631"),
   r = n("689938"),
-  a = n("337258"),
-  s = n("705196"),
+  s = n("337258"),
+  a = n("705196"),
   o = n("190878"),
   l = n("991254"),
   u = n("485686"),
@@ -22,7 +22,7 @@ var i = n("981631"),
 let c = () => ({
     [i.HangStatusTypes.CHILLING]: {
       title: r.default.Messages.STATUS_CHILLING,
-      icon: s,
+      icon: a,
       color: "#567C7E"
     },
     [i.HangStatusTypes.GAMING]: {
@@ -37,7 +37,7 @@ let c = () => ({
     },
     [i.HangStatusTypes.BRB]: {
       title: r.default.Messages.STATUS_BRB,
-      icon: a,
+      icon: s,
       color: "#76567E"
     },
     [i.HangStatusTypes.EATING]: {

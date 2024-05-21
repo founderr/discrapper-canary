@@ -1,5 +1,5 @@
 "use strict";
-var i, r, a, s, o, l;
+var i, r, s, a, o, l;
 
 function u(e) {
   return !((null == e ? void 0 : e.type) !== 0 && (null == e ? void 0 : e.type) !== 1)
@@ -26,7 +26,7 @@ n.r(t), n.d(t, {
     return i
   },
   VoicePlatforms: function() {
-    return a
+    return s
   },
   isActivityParticipant: function() {
     return _
@@ -37,6 +37,6 @@ n.r(t), n.d(t, {
   isUserParticipant: function() {
     return d
   }
-}), (s = i || (i = {}))[s.STREAM = 0] = "STREAM", s[s.HIDDEN_STREAM = 1] = "HIDDEN_STREAM", s[s.USER = 2] = "USER", s[s.ACTIVITY = 3] = "ACTIVITY", (o = r || (r = {})).NONE = "NONE", o.AUTO = "AUTO", (l = a || (a = {}))[l.DESKTOP = 0] = "DESKTOP", l[l.MOBILE = 1] = "MOBILE", l[l.XBOX = 2] = "XBOX", l[l.PLAYSTATION = 3] = "PLAYSTATION";
+}), (a = i || (i = {}))[a.STREAM = 0] = "STREAM", a[a.HIDDEN_STREAM = 1] = "HIDDEN_STREAM", a[a.USER = 2] = "USER", a[a.ACTIVITY = 3] = "ACTIVITY", (o = r || (r = {})).NONE = "NONE", o.AUTO = "AUTO", (l = s || (s = {}))[l.DESKTOP = 0] = "DESKTOP", l[l.MOBILE = 1] = "MOBILE", l[l.XBOX = 2] = "XBOX", l[l.PLAYSTATION = 3] = "PLAYSTATION";
 let c = 320,
   E = 8

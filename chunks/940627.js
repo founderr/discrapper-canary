@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, a = n("735250"),
-  s = n("470079"),
+var i, r, s = n("735250"),
+  a = n("470079"),
   o = n("120356"),
   l = n.n(o),
   u = n("481060"),
@@ -15,12 +15,12 @@ var i, r, a = n("735250"),
   S = n("689938"),
   h = n("298829");
 (r = i || (i = {}))[r.PARTNERED = 0] = "PARTNERED", r[r.STAFF = 1] = "STAFF", r[r.VERIFIED = 2] = "VERIFIED", r[r.VERIFIED_AND_PARTNERED = 3] = "VERIFIED_AND_PARTNERED", r[r.VERIFIED_AND_HUB = 4] = "VERIFIED_AND_HUB", r[r.HUB = 5] = "HUB", r[r.NONE = 6] = "NONE";
-class A extends s.PureComponent {
+class A extends a.PureComponent {
   renderBadge(e, t, n) {
     let {
       className: i,
       badgeStrokeColor: r,
-      tooltipColor: s = u.Tooltip.Colors.BRAND,
+      tooltipColor: a = u.Tooltip.Colors.BRAND,
       tooltipPosition: o,
       tooltipDelay: c,
       size: E = 16,
@@ -47,29 +47,29 @@ class A extends s.PureComponent {
           (0, d.assertNever)(e)
       }
     }(e);
-    return (0, a.jsx)(u.Tooltip, {
-      color: s,
+    return (0, s.jsx)(u.Tooltip, {
+      color: a,
       position: o,
       delay: c,
       text: A,
-      children: s => 5 === e || 4 === e ? (0, a.jsx)("div", {
-        ...s,
+      children: a => 5 === e || 4 === e ? (0, s.jsx)("div", {
+        ...a,
         className: l()(n, i),
         style: {
           width: E,
           height: E
         },
-        children: (0, a.jsx)(t, {
+        children: (0, s.jsx)(t, {
           className: l()(h.icon, T)
         })
-      }) : (0, a.jsx)(_.default, {
-        ...s,
+      }) : (0, s.jsx)(_.default, {
+        ...a,
         className: l()(n, i),
         flowerStarClassName: f,
         color: I,
         stroke: r,
         size: E,
-        children: (0, a.jsx)(t, {
+        children: (0, s.jsx)(t, {
           className: l()(h.icon, T)
         })
       })

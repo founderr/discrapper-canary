@@ -10,11 +10,11 @@ function i(e, t, n) {
 }
 n.r(t), n.d(t, {
   Lru: function() {
-    return a
+    return s
   }
 }), n("47120");
 let r = Symbol.iterator;
-class a {
+class s {
   get length() {
     return this.items.size
   }

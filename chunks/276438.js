@@ -39,8 +39,8 @@ n.r(t), n.d(t, {
 });
 var i = n("392711"),
   r = n.n(i),
-  a = n("536402"),
-  s = n("974900"),
+  s = n("536402"),
+  a = n("974900"),
   o = n("106831"),
   l = n("544891"),
   u = n("570140"),
@@ -78,7 +78,7 @@ async function g(e) {
     guildId: t,
     refresh: n,
     flushSeenItems: i,
-    highlightedItemData: s,
+    highlightedItemData: a,
     limit: o
   } = e, c = Date.now(), E = n ? 0 : h.default.getPaginationStatus(t).offset, I = null == E || 0 === E;
   u.default.dispatch({
@@ -92,9 +92,9 @@ async function g(e) {
         limit: null != o ? o : h.GUILD_FEED_FETCH_LIMIT,
         offset: I ? 0 : E,
         load_id: I ? null : h.default.getLoadId(t),
-        ...null != s && I && {
-          highlight_channel_id: s.channelId,
-          highlight_message_id: s.messageId
+        ...null != a && I && {
+          highlight_channel_id: a.channelId,
+          highlight_message_id: a.messageId
         }
       },
       n = (await l.HTTP.get({
@@ -121,15 +121,15 @@ async function g(e) {
         loadTime: n,
         startHomeSessionId: i,
         page: r,
-        newUnreadFeedItemIds: a,
-        newReadFeedItemIds: s,
+        newUnreadFeedItemIds: s,
+        newReadFeedItemIds: a,
         newFeaturedItemIds: o
       } = e;
       T.default.track(O.AnalyticEvents.FEED_LOADED, {
         guild_id: t,
         load_id: h.default.getLoadId(t),
-        unread_feed_item_ids: C(t, a),
-        read_feed_item_ids: C(t, s),
+        unread_feed_item_ids: C(t, s),
+        read_feed_item_ids: C(t, a),
         load_time_millis: n,
         home_session_id: _.default.getHomeSessionId(t),
         start_home_session_id: i,
@@ -145,7 +145,7 @@ async function g(e) {
       newUnreadFeedItemIds: r().difference(N, S),
       newFeaturedItemIds: r().difference(R, A)
     }), ! function(e, t) {
-      let n = t.results.items.filter(e => e.type === a.GuildFeedItemTypes.FORUM_POST);
+      let n = t.results.items.filter(e => e.type === s.GuildFeedItemTypes.FORUM_POST);
       n.length > 0 && u.default.dispatch({
         type: "LOAD_THREADS_SUCCESS",
         threads: n.map(e => e.thread),
@@ -188,7 +188,7 @@ async function M(e, t) {
         message_id: n.id,
         load_id: h.default.getLoadId(t),
         preference: o.GuildFeedPreferenceOptions.HIDDEN,
-        entity_type: s.GuildFeedPreferenceEntityTypes.MESSAGE
+        entity_type: a.GuildFeedPreferenceEntityTypes.MESSAGE
       }
     });
   return u.default.dispatch({
@@ -218,15 +218,15 @@ async function P(e, t, n) {
   let {
     entityId: i,
     details: r,
-    guildId: a,
-    entityType: s
+    guildId: s,
+    entityType: a
   } = (0, m.default)(e);
   try {
     let o = await l.HTTP.put({
-      url: O.Endpoints.GUILD_FEED_FEATURE_ITEM(a),
+      url: O.Endpoints.GUILD_FEED_FEATURE_ITEM(s),
       body: {
         entity_id: i,
-        entity_type: s,
+        entity_type: a,
         expires_at: t,
         details: r
       }
@@ -270,7 +270,7 @@ async function b(e, t) {
         channel_id: n.channel_id,
         message_id: n.id,
         load_id: h.default.getLoadId(t),
-        entity_type: s.GuildFeedPreferenceEntityTypes.MESSAGE
+        entity_type: a.GuildFeedPreferenceEntityTypes.MESSAGE
       }
     });
   return u.default.dispatch({

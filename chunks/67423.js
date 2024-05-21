@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DISCORD_EPOCH: function() {
-    return a
+    return s
   },
   age: function() {
     return u
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return d
   },
   extractTimestamp: function() {
-    return s
+    return a
   },
   fromTimestamp: function() {
     return o
@@ -21,23 +21,23 @@ n.r(t), n.d(t, {
 });
 var i = n("654861"),
   r = n.n(i);
-let a = 14200704e5;
+let s = 14200704e5;
 
-function s(e) {
-  return Math.floor(Number(e) / 4194304) + a
+function a(e) {
+  return Math.floor(Number(e) / 4194304) + s
 }
 
 function o(e) {
-  let t = e - a;
+  let t = e - s;
   return t <= 0 ? "0" : r()(t).shiftLeft(22).toString()
 }
 
 function l(e) {
-  return o(s(e) - 1)
+  return o(a(e) - 1)
 }
 
 function u(e) {
-  return Date.now() - s(e)
+  return Date.now() - a(e)
 }
 
 function d(e, t) {

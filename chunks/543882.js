@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120"), n("724458");
-var i, r, a, s, o = n("392711"),
+var i, r, s, a, o = n("392711"),
   l = n.n(o),
   u = n("442837"),
   d = n("570140"),
@@ -45,12 +45,12 @@ class h extends(i = u.default.Store) {
     return f.has(i)
   }
 }
-s = "ApplicationStreamPreviewStore", (a = "displayName") in(r = h) ? Object.defineProperty(r, a, {
-  value: s,
+a = "ApplicationStreamPreviewStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new h(d.default, {
+}) : r[s] = a, t.default = new h(d.default, {
   CONNECTION_OPEN: S,
   LOGOUT: S,
   STREAM_PREVIEW_FETCH_START: function(e) {
@@ -89,16 +89,16 @@ s = "ApplicationStreamPreviewStore", (a = "displayName") in(r = h) ? Object.defi
         userId: n,
         guildId: i,
         channelId: r,
-        selfStream: a
+        selfStream: s
       } = t;
-      if (a) return e;
-      let s = (0, c.encodeStreamKey)({
+      if (s) return e;
+      let a = (0, c.encodeStreamKey)({
         streamType: null != i ? E.StreamTypes.GUILD : E.StreamTypes.CALL,
         guildId: i,
         channelId: r,
         ownerId: n
       });
-      return delete I[s], delete T[s], !0
+      return delete I[a], delete T[a], !0
     }, !1)
   }
 })

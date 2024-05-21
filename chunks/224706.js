@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("411104");
 var i = n("664751"),
   r = n("243814"),
-  a = n("544891"),
-  s = n("570140"),
+  s = n("544891"),
+  a = n("570140"),
   o = n("566620"),
   l = n("812206"),
   u = n("439849"),
@@ -30,18 +30,18 @@ function g(e) {
     secret: n,
     channelId: i,
     intent: r = C.ActivityIntent.PLAY,
-    embedded: a = !1,
+    embedded: s = !1,
     analyticsLocations: o = []
   } = e;
-  L(t, null, i, a, o).then(() => h.default.waitConnected(t)).then(() => Promise.race([h.default.waitSubscribed(t, O.RPCEvents.ACTIVITY_JOIN)])).then(() => {
-    s.default.dispatch({
+  L(t, null, i, s, o).then(() => h.default.waitConnected(t)).then(() => Promise.race([h.default.waitSubscribed(t, O.RPCEvents.ACTIVITY_JOIN)])).then(() => {
+    a.default.dispatch({
       type: "ACTIVITY_JOIN",
       applicationId: t,
       secret: n,
       intent: r,
-      embedded: a
+      embedded: s
     })
-  }).catch(() => s.default.dispatch({
+  }).catch(() => a.default.dispatch({
     type: "ACTIVITY_JOIN_FAILED",
     applicationId: t
   }))
@@ -60,11 +60,11 @@ function L(e, t, n) {
   if (T.default.isLaunchable(e, t)) {
     var f;
     let n = T.default.getState(e, t),
-      s = I.default.getActiveLaunchOptionId(e, t);
+      a = I.default.getActiveLaunchOptionId(e, t);
     if (null == n) throw Error("Missing dispatch game when launching");
     let o = I.default.getLibraryApplication(e, t);
     if (null == o) throw Error("Missing library application when launching");
-    E = (f = e, a.HTTP.post({
+    E = (f = e, s.HTTP.post({
       url: O.Endpoints.OAUTH2_AUTHORIZE,
       query: {
         client_id: f,
@@ -88,32 +88,32 @@ function L(e, t, n) {
     }, e => {
       if (404 === e.status) return null;
       throw e
-    })).then(e => h.default.launchDispatchApplication(n, e, _.default.locale, o.getBranchName(), s))
+    })).then(e => h.default.launchDispatchApplication(n, e, _.default.locale, o.getBranchName(), a))
   } else {
     let t = l.default.getApplication(e);
     E = null != t ? h.default.launch(t) : h.default.launchGame(e)
   }
   let S = Error("game not found");
-  return null != E ? (s.default.dispatch({
+  return null != E ? (a.default.dispatch({
     type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE",
     applicationId: e,
     branchId: t
-  }), s.default.dispatch({
+  }), a.default.dispatch({
     type: "GAME_LAUNCH_START",
     applicationId: e
   }), E.then(t => {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "GAME_LAUNCH_SUCCESS",
       applicationId: e,
       pids: t
     })
   }).catch(t => {
-    p.default.show(O.NoticeTypes.LAUNCH_GAME_FAILURE, R.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), s.default.dispatch({
+    p.default.show(O.NoticeTypes.LAUNCH_GAME_FAILURE, R.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), a.default.dispatch({
       type: "GAME_LAUNCH_FAIL",
       applicationId: e,
       error: S
     })
-  })) : (s.default.dispatch({
+  })) : (a.default.dispatch({
     type: "GAME_LAUNCH_FAIL",
     applicationId: e,
     error: S
@@ -121,7 +121,7 @@ function L(e, t, n) {
 }
 t.default = {
   addGame(e, t) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "RUNNING_GAME_ADD_OVERRIDE",
       pid: e
     }), f.default.track(O.AnalyticEvents.RUNNING_GAME_OVERRIDE_ADDED, {
@@ -138,20 +138,20 @@ t.default = {
         return
       }
     }
-    s.default.dispatch({
+    a.default.dispatch({
       type: "RUNNING_GAME_TOGGLE_OVERLAY",
       game: e,
       newEnabledValue: t
     })
   },
   toggleDetection(e) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "RUNNING_GAME_TOGGLE_DETECTION",
       game: e
     })
   },
   editName(e, t) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "RUNNING_GAME_EDIT_NAME",
       game: e,
       newName: t
@@ -171,7 +171,7 @@ t.default = {
         i(Error("Did not find data on ".concat(e)));
         return
       }
-      s.default.dispatch({
+      a.default.dispatch({
         type: "GAME_ICON_UPDATE",
         gameName: r.name,
         icon: "data:image/png;base64,".concat(r.icon)
@@ -181,24 +181,24 @@ t.default = {
   async getDetectableGamesSupplemental(e) {
     let t = e.filter(d.default.canFetch);
     if (0 !== t.length) {
-      s.default.dispatch({
+      a.default.dispatch({
         type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH",
         applicationIds: t
       });
       try {
-        let e = await a.HTTP.get({
+        let e = await s.HTTP.get({
           url: O.Endpoints.APPLICATIONS_GAMES_SUPPLEMENTAL,
           query: {
             application_ids: t
           }
         });
-        s.default.dispatch({
+        a.default.dispatch({
           type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS",
           applicationIds: t,
           supplementalGameData: e.body.supplemental_game_data
         })
       } catch {
-        s.default.dispatch({
+        a.default.dispatch({
           type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE",
           applicationIds: t
         })
@@ -206,10 +206,10 @@ t.default = {
     }
   },
   getDetectableGames() {
-    !E.default.fetching && null == E.default.lastFetched && s.default.wait(() => {
-      s.default.dispatch({
+    !E.default.fetching && null == E.default.lastFetched && a.default.wait(() => {
+      a.default.dispatch({
         type: "GAMES_DATABASE_FETCH"
-      }), a.HTTP.get({
+      }), s.HTTP.get({
         url: O.Endpoints.APPLICATIONS_DETECTABLE,
         headers: {
           "If-None-Match": E.default.detectableGamesEtag
@@ -223,7 +223,7 @@ t.default = {
             etag: n
           }
         } = e;
-        s.default.dispatch({
+        a.default.dispatch({
           type: "GAMES_DATABASE_UPDATE",
           games: t,
           etag: n
@@ -232,11 +232,11 @@ t.default = {
         let {
           status: t
         } = e;
-        304 === t ? s.default.dispatch({
+        304 === t ? a.default.dispatch({
           type: "GAMES_DATABASE_UPDATE",
           games: [],
           etag: E.default.detectableGamesEtag
-        }) : s.default.dispatch({
+        }) : a.default.dispatch({
           type: "GAMES_DATABASE_FETCH_FAIL"
         })
       })
@@ -253,7 +253,7 @@ t.default = {
     } = e, d = (0, u.cleanExecutablePath)(l);
     if (null != d) {
       var _, c;
-      a.HTTP.post({
+      s.HTTP.post({
         url: O.Endpoints.UNVERIFIED_APPLICATIONS,
         body: {
           name: t,
@@ -277,7 +277,7 @@ t.default = {
             missing_data: i
           }
         } = e;
-        s.default.dispatch({
+        a.default.dispatch({
           type: "UNVERIFIED_GAME_UPDATE",
           name: t,
           hash: n,
@@ -287,7 +287,7 @@ t.default = {
     }
   },
   uploadIcon(e, t, n) {
-    a.HTTP.post({
+    s.HTTP.post({
       url: O.Endpoints.UNVERIFIED_APPLICATIONS_ICONS,
       body: {
         application_name: e,
@@ -299,7 +299,7 @@ t.default = {
     })
   },
   deleteEntry(e) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "RUNNING_GAME_DELETE_ENTRY",
       game: e
     })
@@ -311,24 +311,24 @@ t.default = {
       sessionId: n,
       applicationId: i,
       channelId: r,
-      messageId: a,
+      messageId: s,
       intent: o = C.ActivityIntent.PLAY,
       embedded: l = !1
     } = e;
-    if (__OVERLAY__) return s.default.dispatch({
+    if (__OVERLAY__) return a.default.dispatch({
       type: "OVERLAY_JOIN_GAME",
       userId: t,
       sessionId: n,
       applicationId: i,
       channelId: r,
-      messageId: a
+      messageId: s
     }), Promise.resolve(!0);
-    s.default.dispatch({
+    a.default.dispatch({
       type: "ACTIVITY_JOIN_LOADING",
       applicationId: i
     });
     try {
-      let e = await m.default.getJoinSecret(t, n, i, r, a);
+      let e = await m.default.getJoinSecret(t, n, i, r, s);
       return g({
         applicationId: i,
         secret: e,
@@ -337,7 +337,7 @@ t.default = {
         embedded: l
       }), !0
     } catch (e) {
-      return s.default.dispatch({
+      return a.default.dispatch({
         type: "ACTIVITY_JOIN_FAILED",
         applicationId: i
       }), !1

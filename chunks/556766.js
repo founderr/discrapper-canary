@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  a = n("392711"),
-  s = n.n(a),
+  s = n("392711"),
+  a = n.n(s),
   o = n("207561"),
   l = n("920906"),
   u = n("442837"),
@@ -36,18 +36,18 @@ t.default = () => {
     activityPanelMode: d.default.getActivityPanelMode()
   })), {
     currentChannelId: n,
-    selectedVoiceChannelId: a
+    selectedVoiceChannelId: s
   } = (0, u.useStateFromStoresObject)([f.default], () => ({
     currentChannelId: f.default.getChannelId(),
     selectedVoiceChannelId: f.default.getVoiceChannelId()
   })), C = (0, u.useStateFromStoresArray)([h.default], () => h.default.getIncomingCalls().filter(i => {
     let {
       channel: r
-    } = i, s = e === r.id && a !== r.id && t === m.ActivityPanelModes.PANEL;
-    return n !== r.id || s
+    } = i, a = e === r.id && s !== r.id && t === m.ActivityPanelModes.PANEL;
+    return n !== r.id || a
   })), R = (0, u.useStateFromStores)([h.default], () => h.default.hasIncomingCalls()), g = (0, u.useStateFromStores)([T.default], () => T.default.isSoundDisabled("call_ringing")), L = E.default.useIsRingtoneEligible(), v = E.default.useIsRingtoneDisabled(), D = (0, u.useStateFromStores)([S.default], () => S.default.disableSounds), M = (0, u.useStateFromStores)([I.default], () => I.default.getSoundpack()), y = r.useRef(!1), P = (0, o.useStableMemo)(() => {
     let e = "call_ringing";
-    return L && !v ? (0, A.createSound)(c.default.ringtone, e) : M === N.Soundpacks.CLASSIC ? (0, A.createSound)(500 !== s().random(1, 1e3) ? "call_ringing" : s().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, A.createSoundForPack)("call_ringing", M)
+    return L && !v ? (0, A.createSound)(c.default.ringtone, e) : M === N.Soundpacks.CLASSIC ? (0, A.createSound)(500 !== a().random(1, 1e3) ? "call_ringing" : a().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, A.createSoundForPack)("call_ringing", M)
   }, [M, v, L]);
   return r.useEffect(() => () => {
     P.stop()

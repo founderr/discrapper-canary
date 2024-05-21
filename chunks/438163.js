@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("920906"),
   l = n("442837"),
   u = n("846519"),
@@ -22,7 +22,7 @@ function f(e) {
   let {
     statusActivity: t,
     profileType: n,
-    transitionState: a,
+    transitionState: s,
     animate: f = !0
   } = e, S = (0, l.useStateFromStores)([E.default], () => E.default.useReducedMotion), [h, A] = r.useState(1), [m, N] = r.useState(!0), [p] = r.useState(() => new u.Timeout), O = r.useRef(null), C = r.useRef(null), R = r.useRef(null), g = r.useRef(null), {
     emoji: L
@@ -35,7 +35,7 @@ function f(e) {
     i > 0 && r > 0 && A(Math.floor(r / i))
   }, [n]), U = (0, c.useResizeObserver)(P);
   r.useLayoutEffect(() => {
-    (n !== I.UserProfileTypes.FULL_SIZE || a === d.ModalTransitionState.ENTERED) && (! function() {
+    (n !== I.UserProfileTypes.FULL_SIZE || s === d.ModalTransitionState.ENTERED) && (! function() {
       if (null != O.current && null == C.current) {
         let e = O.current.getBoundingClientRect();
         C.current = e.height
@@ -45,7 +45,7 @@ function f(e) {
         g.current = e.height
       }
     }(), P())
-  }, [U, P, p, n, a]);
+  }, [U, P, p, n, s]);
   let [b, G] = (0, o.useSpring)(() => ({
     maxHeight: "".concat(36, "px"),
     config: {
@@ -80,13 +80,13 @@ function f(e) {
       children: D
     }) : null,
     V = n === I.UserProfileTypes.BITE_SIZE ? T.biteSize : T.fullSize,
-    x = s()(T.statusBubbleOuter, {
+    x = a()(T.statusBubbleOuter, {
       [T.statusBubbleShape]: h <= 1 && !M && v || h > 1,
       [T.statusBubbleSingleLineWithTextShape]: 1 === h && M,
       [T.biteSize]: n === I.UserProfileTypes.BITE_SIZE,
       [T.fullSize]: n === I.UserProfileTypes.FULL_SIZE
     }),
-    F = s()(T.statusBubble, {
+    F = a()(T.statusBubble, {
       [T.statusBubbleShape]: h <= 1 && !M && v || h > 1,
       [T.statusBubbleSingleLineWithTextShape]: h <= 1 && M,
       [T.statusBubbleEmojiOnlyPadding]: v && !M,
@@ -96,13 +96,13 @@ function f(e) {
     });
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)("div", {
-      className: s()(T.invisibleContainer, V),
+      className: a()(T.invisibleContainer, V),
       children: (0, i.jsx)("div", {
         className: x,
         children: (0, i.jsxs)("span", {
           className: F,
           children: [(() => {
-            let e = s()(T.content, T.clamp, T.placeholderWidth, {
+            let e = a()(T.content, T.clamp, T.placeholderWidth, {
               [T.biteSize]: n === I.UserProfileTypes.BITE_SIZE,
               [T.fullSize]: n === I.UserProfileTypes.FULL_SIZE
             });
@@ -112,7 +112,7 @@ function f(e) {
               children: [k(), B()]
             })
           })(), (() => {
-            let e = s()(T.content, T.unclamp, T.placeholderWidth, T.incorporeal, {
+            let e = a()(T.content, T.unclamp, T.placeholderWidth, T.incorporeal, {
               [T.biteSize]: n === I.UserProfileTypes.BITE_SIZE,
               [T.fullSize]: n === I.UserProfileTypes.FULL_SIZE
             });
@@ -125,7 +125,7 @@ function f(e) {
         })
       })
     }), (0, i.jsx)("div", {
-      className: s()(T.visibleContainer, V),
+      className: a()(T.visibleContainer, V),
       children: (0, i.jsx)("div", {
         tabIndex: 0,
         className: x,
@@ -136,13 +136,13 @@ function f(e) {
         children: (0, i.jsx)("span", {
           className: F,
           children: (() => {
-            let e = s()(T.content, {
+            let e = a()(T.content, {
               [T.clamp]: m,
               [T.unclamp]: !m
             });
             return (0, i.jsx)(o.animated.div, {
               style: b,
-              className: s()(T.content, e),
+              className: a()(T.content, e),
               children: (0, i.jsxs)("div", {
                 ref: U,
                 children: [k(), B()]

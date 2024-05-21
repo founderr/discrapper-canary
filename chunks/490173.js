@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("699581"),
-  s = n("990547"),
+  s = n("699581"),
+  a = n("990547"),
   o = n("442837"),
   l = n("481060"),
   u = n("239091"),
@@ -43,11 +43,11 @@ let h = e => {
   }), [u]);
   r.useEffect(() => {
     var e, t;
-    let i = (0, a.findDOMNode)(A.current);
+    let i = (0, s.findDOMNode)(A.current);
     if (null == i) return;
     let r = e => {
       let t = e.target,
-        i = (0, a.findDOMNode)(A.current);
+        i = (0, s.findDOMNode)(A.current);
       !(null != i && (0, l.referencePortalAwareContains)(i, t)) && (window.getSelection().removeAllRanges(), n())
     };
     return null === (e = i.ownerDocument) || void 0 === e || e.addEventListener("click", r, !0), null === (t = i.ownerDocument) || void 0 === t || t.addEventListener("contextmenu", r, !0), () => {
@@ -63,7 +63,7 @@ let h = e => {
     var e;
     null === (e = A.current) || void 0 === e || e.updatePosition()
   }), (0, _.default)({
-    type: s.ImpressionTypes.MENU,
+    type: a.ImpressionTypes.MENU,
     name: S,
     properties: h
   });
@@ -127,28 +127,28 @@ class A extends r.PureComponent {
       appContext: t,
       target: n,
       isOpen: r,
-      theme: a,
-      config: s,
+      theme: s,
+      config: a,
       rect: o
     } = this.props, l = null !== (e = this.state.render) && void 0 !== e ? e : this.props.render;
-    return r && null != o && null != s && null != n && null != l && s.context === t ? (0, i.jsx)(h, {
+    return r && null != o && null != a && null != n && null != l && a.context === t ? (0, i.jsx)(h, {
       target: n,
       rect: o,
       close: this.close,
-      onUnmount: s.onClose,
-      align: s.align,
-      position: s.position,
-      impressionName: s.impressionName,
-      impressionProperties: s.impressionProperties,
+      onUnmount: a.onClose,
+      align: a.align,
+      position: a.position,
+      impressionName: a.impressionName,
+      impressionProperties: a.impressionProperties,
       children: (e, i) => {
         let {
           position: r
         } = e;
         return l({
           position: r,
-          theme: a,
+          theme: s,
           onHeightUpdate: i,
-          config: s,
+          config: a,
           target: n,
           context: t
         })
@@ -182,16 +182,16 @@ function m() {
     contextMenu: E.default.getContextMenu(),
     version: E.default.version,
     isOpen: E.default.isOpen()
-  })), a = (0, o.useStateFromStores)([c.default], () => c.default.theme), {
-    appContext: s,
+  })), s = (0, o.useStateFromStores)([c.default], () => c.default.theme), {
+    appContext: a,
     renderWindow: l
   } = r.useContext(d.default);
   return (0, i.jsx)(A, {
-    appContext: s,
+    appContext: a,
     renderWindow: l,
     ...e,
     isOpen: n,
-    theme: a,
+    theme: s,
     closeContextMenu: u.closeContextMenu
   }, t)
 }

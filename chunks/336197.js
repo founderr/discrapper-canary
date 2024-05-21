@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("727429"),
   r = n("703656"),
-  a = n("769654"),
-  s = n("592125"),
+  s = n("769654"),
+  a = n("592125"),
   o = n("754688"),
   l = n("849027"),
   u = n("927723"),
@@ -26,7 +26,7 @@ async function _(e, t, n) {
   }
   let c = function(e) {
     if (null == e.channelId) return e;
-    let t = s.default.getChannel(e.channelId);
+    let t = a.default.getChannel(e.channelId);
     if (null == t) return e;
     let n = (0, i.getGuildIdForGenericRedirect)(t);
     return {
@@ -35,7 +35,7 @@ async function _(e, t, n) {
     }
   }(_);
   if (null == c.channelId) {
-    (0, a.transitionToGuild)(c.guildId);
+    (0, s.transitionToGuild)(c.guildId);
     return
   }
   null != c.threadId ? (0, r.transitionTo)(d.Routes.CHANNEL_THREAD_VIEW(c.guildId, c.channelId, c.threadId, c.messageId), t, n) : (0, r.transitionTo)(d.Routes.CHANNEL(c.guildId, c.channelId, c.messageId), t, n)

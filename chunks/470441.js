@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 });
 var i, r = n("735250"),
-  a = n("470079"),
-  s = n("120356"),
-  o = n.n(s),
+  s = n("470079"),
+  a = n("120356"),
+  o = n.n(a),
   l = n("748780"),
   u = n("846519"),
   d = n("215569"),
@@ -29,7 +29,7 @@ let T = {
   [c.ChannelLayouts.NO_CHAT]: E.noChat,
   [c.ChannelLayouts.FULL_SCREEN]: E.fullScreen
 };
-class f extends a.PureComponent {
+class f extends s.PureComponent {
   componentDidAppear() {
     this.state.animation.setValue(1)
   }
@@ -63,7 +63,7 @@ class f extends a.PureComponent {
     }
   }
 }
-class S extends(i = a.PureComponent) {
+class S extends(i = s.PureComponent) {
   componentDidMount() {
     document.addEventListener("mousedown", this.handleMouseEvent, !0), document.addEventListener("mousemove", this.handleMouseEvent, !0)
   }
@@ -102,13 +102,13 @@ class S extends(i = a.PureComponent) {
       center: t,
       bottom: n,
       layout: i,
-      focused: a
+      focused: s
     } = this.props, {
-      idle: s
+      idle: a
     } = this.state;
     return (0, r.jsx)(_.default, {
       className: o()(E.video, T[i], {
-        [E.idle]: s
+        [E.idle]: a
       }),
       direction: _.default.Direction.VERTICAL,
       justify: _.default.Justify.CENTER,
@@ -117,7 +117,7 @@ class S extends(i = a.PureComponent) {
         direction: _.default.Direction.VERTICAL,
         children: [this.renderBackground(), (0, r.jsxs)(_.default, {
           className: o()(E.videoInner, {
-            [E.focused]: a
+            [E.focused]: s
           }),
           direction: _.default.Direction.VERTICAL,
           justify: _.default.Justify.BETWEEN,

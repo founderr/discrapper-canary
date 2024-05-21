@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return c
   },
   ActivityPlatform: function() {
-    return a
+    return s
   },
   ActivityScreenOrientation: function() {
     return _
@@ -100,7 +100,7 @@ n.r(t), n.d(t, {
     return H
   },
   PRIVATE_APPS_HELP_ARTICLE: function() {
-    return es
+    return ea
   },
   PUTT_PARTY_APPLICATION_ID: function() {
     return K
@@ -112,7 +112,7 @@ n.r(t), n.d(t, {
     return $
   },
   SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES: function() {
-    return ea
+    return es
   },
   WATCH_YOUTUBE_PROD_APP_ID: function() {
     return w
@@ -127,7 +127,7 @@ n.r(t), n.d(t, {
     return g
   }
 }), n("47120");
-var i, r, a, s, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O = n("911969"),
+var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O = n("911969"),
   C = n("981631");
 let R = 160,
   g = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
@@ -161,7 +161,7 @@ let R = 160,
     LARGE: 160
   },
   $ = ["in_development", "activities_team", "employee_release"];
-(E = i || (i = {})).ADS = "ADS", E.FAILED_LOAD = "FAILED_LOAD", E.LAGGING = "LAGGING", E.CONFUSING = "CONFUSING", E.NOT_FUN = "NOT_FUN", E.OTHER = "OTHER", (I = r || (r = {}))[I.PLAY = 0] = "PLAY", I[I.SPECTATE = 1] = "SPECTATE", (T = a || (a = {})).DESKTOP = "desktop", T.MOBILE = "mobile", (f = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", f.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", f.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", f.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (S = o || (o = {}))[S.NO_UPDATE = 0] = "NO_UPDATE", S[S.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", S[S.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", S[S.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", S[S.USER_JOINED = 4] = "USER_JOINED", S[S.USER_LEFT = 5] = "USER_LEFT", S[S.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (h = l || (l = {}))[h.UNLOCKED = 1] = "UNLOCKED", h[h.PORTRAIT = 2] = "PORTRAIT", h[h.LANDSCAPE = 3] = "LANDSCAPE", (A = u || (u = {}))[A.DIRECTORY = 0] = "DIRECTORY", A[A.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", A[A.DETAIL_PAGE = 2] = "DETAIL_PAGE";
+(E = i || (i = {})).ADS = "ADS", E.FAILED_LOAD = "FAILED_LOAD", E.LAGGING = "LAGGING", E.CONFUSING = "CONFUSING", E.NOT_FUN = "NOT_FUN", E.OTHER = "OTHER", (I = r || (r = {}))[I.PLAY = 0] = "PLAY", I[I.SPECTATE = 1] = "SPECTATE", (T = s || (s = {})).DESKTOP = "desktop", T.MOBILE = "mobile", (f = a || (a = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", f.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", f.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", f.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (S = o || (o = {}))[S.NO_UPDATE = 0] = "NO_UPDATE", S[S.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", S[S.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", S[S.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", S[S.USER_JOINED = 4] = "USER_JOINED", S[S.USER_LEFT = 5] = "USER_LEFT", S[S.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (h = l || (l = {}))[h.UNLOCKED = 1] = "UNLOCKED", h[h.PORTRAIT = 2] = "PORTRAIT", h[h.LANDSCAPE = 3] = "LANDSCAPE", (A = u || (u = {}))[A.DIRECTORY = 0] = "DIRECTORY", A[A.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", A[A.DETAIL_PAGE = 2] = "DETAIL_PAGE";
 let ee = "activity-shelf",
   et = new Set(["755600276941176913", D, M, w]),
   en = new Set([D, M, w]);
@@ -185,5 +185,5 @@ let ei = {
     has_csp_exception: !1,
     displays_advertisements: !1
   },
-  ea = [C.ChannelTypes.GUILD_TEXT, C.ChannelTypes.DM, C.ChannelTypes.GROUP_DM],
-  es = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"
+  es = [C.ChannelTypes.GUILD_TEXT, C.ChannelTypes.DM, C.ChannelTypes.GROUP_DM],
+  ea = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"

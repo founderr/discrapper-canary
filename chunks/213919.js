@@ -23,8 +23,8 @@ n.r(t), n.d(t, {
     return O
   }
 }), n("47120"), n("724458");
-var a = n("433517"),
-  s = n("231338");
+var s = n("433517"),
+  a = n("231338");
 let o = "dQw4w9WgXcQ:";
 
 function l(e) {
@@ -44,10 +44,10 @@ let _ = !1,
 
 function f() {
   if (I) {
-    a.Storage.remove(s.TOKEN_KEY), a.Storage.remove(s.TOKENS_KEY);
+    s.Storage.remove(a.TOKEN_KEY), s.Storage.remove(a.TOKENS_KEY);
     return
   }
-  null != r ? a.Storage.set(s.TOKEN_KEY, r) : a.Storage.remove(s.TOKEN_KEY), a.Storage.set(s.TOKENS_KEY, E)
+  null != r ? s.Storage.set(a.TOKEN_KEY, r) : s.Storage.remove(a.TOKEN_KEY), s.Storage.set(a.TOKENS_KEY, E)
 }
 
 function S(e) {
@@ -69,7 +69,7 @@ function h(e) {
 
 function A() {
   if (T) return;
-  r = a.Storage.get(s.TOKEN_KEY), E = a.Storage.get(s.TOKENS_KEY) || {};
+  r = s.Storage.get(a.TOKEN_KEY), E = s.Storage.get(a.TOKENS_KEY) || {};
   let {
     decryptedToken: e,
     wasEncrypted: t

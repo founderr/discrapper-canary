@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  a = n.n(r),
-  s = n("404538");
+  s = n.n(r),
+  a = n("404538");
 
 function o(e) {
   let {
@@ -18,8 +18,8 @@ function o(e) {
     ...o
   } = e;
   return (0, i.jsx)("div", {
-    className: a()(s.section, r, {
-      [s.lastSection]: n
+    className: s()(a.section, r, {
+      [a.lastSection]: n
     }),
     ...o,
     children: t

@@ -2,15 +2,15 @@
 n.r(t);
 var i = n("470079"),
   r = n("580747"),
-  a = n("607789");
+  s = n("607789");
 t.default = (e, t) => {
   let n = (0, r.default)("profile_effect_debug_controls"),
     {
-      id: s,
+      id: a,
       preset: o,
       increment: l,
       decrement: u
-    } = (0, a.default)(e);
+    } = (0, s.default)(e);
   return i.useEffect(() => {
     if (!n) return;
     let e = e => {
@@ -20,7 +20,7 @@ t.default = (e, t) => {
       window.removeEventListener("keydown", e)
     }
   }, []), {
-    id: null != s ? s : null,
+    id: null != a ? a : null,
     preset: o
   }
 }

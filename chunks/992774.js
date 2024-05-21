@@ -1,35 +1,35 @@
 "use strict";
 let i, r;
 
-function a() {
+function s() {
   if (null == i) throw Error("Native dependencies have not been injected.")
 }
 
-function s(e) {
+function a(e) {
   i = e
 }
 
 function o() {
-  return a(), i.supported()
+  return s(), i.supported()
 }
 
 function l(e) {
-  return a(), i.supportsFeature(e)
+  return s(), i.supportsFeature(e)
 }
 
 function u(e) {
-  a(), i.setProcessPriority(e)
+  s(), i.setProcessPriority(e)
 }
 
 function d() {
-  return a(), null != r ? r : r = i.getVoiceEngine()
+  return s(), null != r ? r : r = i.getVoiceEngine()
 }
 n.r(t), n.d(t, {
   getVoiceEngine: function() {
     return d
   },
   inject: function() {
-    return s
+    return a
   },
   setProcessPriority: function() {
     return u

@@ -2,8 +2,8 @@
 n.r(t), n("653041");
 var i = n("442837"),
   r = n("292556"),
-  a = n("695346"),
-  s = n("292959"),
+  s = n("695346"),
+  a = n("292959"),
   o = n("626135"),
   l = n("378364"),
   u = n("981631"),
@@ -44,13 +44,13 @@ t.default = {
   },
   isEligible: _,
   isRingtoneDisabled: function() {
-    return null == l.default.ringtone || s.default.isSoundDisabled(l.default.ringtone)
+    return null == l.default.ringtone || a.default.isSoundDisabled(l.default.ringtone)
   },
   isRingtoneEligible: function() {
     return _() && E()
   },
   onRingtoneSettingValueChange: function(e) {
-    let t = s.default.getDisabledSounds();
+    let t = a.default.getDisabledSounds();
     if (null == l.default.ringtone) return;
     let n = t.filter(e => e !== l.default.ringtone);
     !e && n.push(l.default.ringtone), r.default.setDisabledSounds(n), o.default.track(u.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
@@ -60,17 +60,17 @@ t.default = {
   },
   useIsEligible: c,
   useIsRingtoneDisabled: function() {
-    return (0, i.useStateFromStores)([s.default], () => null == l.default.ringtone || s.default.isSoundDisabled(l.default.ringtone))
+    return (0, i.useStateFromStores)([a.default], () => null == l.default.ringtone || a.default.isSoundDisabled(l.default.ringtone))
   },
   useIsRingtoneEligible: function() {
     return c() && E()
   },
   useRingtoneSettingDescription: function() {
-    return a.NativePhoneIntegrationEnabled.useSetting() ? void 0 : d.default.Messages.ENABLE_PHONE_INTEGRATION
+    return s.NativePhoneIntegrationEnabled.useSetting() ? void 0 : d.default.Messages.ENABLE_PHONE_INTEGRATION
   },
   useRingtoneSettingValue: function() {
-    let e = (0, i.useStateFromStores)([s.default], () => s.default.getDisabledSounds()),
-      t = a.NativePhoneIntegrationEnabled.useSetting();
+    let e = (0, i.useStateFromStores)([a.default], () => a.default.getDisabledSounds()),
+      t = s.NativePhoneIntegrationEnabled.useSetting();
     return null != l.default.ringtone && t && !e.includes(l.default.ringtone)
   },
   getAppSpinnerSources: function() {

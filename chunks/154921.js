@@ -3,23 +3,23 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  a = n.n(r),
-  s = n("674298"),
+  s = n.n(r),
+  a = n("674298"),
   o = n("928217");
 let l = Object.freeze({
-    STANDARD: s.colorStandard,
-    MUTED: s.colorMuted,
-    ERROR: s.colorError,
-    BRAND: s.colorBrand,
-    LINK: s.colorLink,
-    HEADER_PRIMARY: s.colorHeaderPrimary,
-    HEADER_SECONDARY: s.colorHeaderSecondary,
-    STATUS_YELLOW: s.colorStatusYellow,
-    STATUS_GREEN: s.colorStatusGreen,
-    STATUS_RED: s.colorStatusRed,
-    INTERACTIVE_ACTIVE: s.colorInteractiveActive,
-    INTERACTIVE_NORMAL: s.colorInteractiveNormal,
-    ALWAYS_WHITE: s.colorWhite,
+    STANDARD: a.colorStandard,
+    MUTED: a.colorMuted,
+    ERROR: a.colorError,
+    BRAND: a.colorBrand,
+    LINK: a.colorLink,
+    HEADER_PRIMARY: a.colorHeaderPrimary,
+    HEADER_SECONDARY: a.colorHeaderSecondary,
+    STATUS_YELLOW: a.colorStatusYellow,
+    STATUS_GREEN: a.colorStatusGreen,
+    STATUS_RED: a.colorStatusRed,
+    INTERACTIVE_ACTIVE: a.colorInteractiveActive,
+    INTERACTIVE_NORMAL: a.colorInteractiveNormal,
+    ALWAYS_WHITE: a.colorWhite,
     CUSTOM: null
   }),
   u = Object.freeze({
@@ -46,9 +46,9 @@ let l = Object.freeze({
     } = e;
     return (0, i.jsx)(o, {
       "aria-label": I,
-      className: a()(n, r, t, {
-        [s.selectable]: d,
-        [s.strong]: _
+      className: s()(n, r, t, {
+        [a.selectable]: d,
+        [a.strong]: _
       }),
       style: E,
       ...T,

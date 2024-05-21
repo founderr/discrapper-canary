@@ -2,9 +2,9 @@
 n.r(t), n("653041");
 var i = n("269054"),
   r = n("217209"),
-  a = n.n(r),
-  s = n("78650"),
-  o = n.n(s),
+  s = n.n(r),
+  a = n("78650"),
+  o = n.n(a),
   l = n("505444"),
   u = n.n(l);
 
@@ -32,7 +32,7 @@ function E(e, t, n) {
 }
 t.default = {
   ...i,
-  Easing: a(),
+  Easing: s(),
   accelerate: function(e) {
     return e.transform = e.transform || [], e.transform.push({
       translateZ: 0
@@ -41,8 +41,8 @@ t.default = {
   animate: function e(t, n) {
     let r;
     let {
-      toValueMin: a,
-      toValueMax: s,
+      toValueMin: s,
+      toValueMax: a,
       tension: o = 0,
       friction: l = 0,
       loop: u,
@@ -54,7 +54,7 @@ t.default = {
       durationMin: f,
       durationMax: S,
       ...h
-    } = n, A = t._value, m = E(n.duration, f, S), N = E(n.toValue, a, s), p = i[I](t, {
+    } = n, A = t._value, m = E(n.duration, f, S), N = E(n.toValue, s, a), p = i[I](t, {
       ...h,
       toValue: N,
       tension: o,

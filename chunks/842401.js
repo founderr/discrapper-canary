@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  a = n("99690"),
-  s = n("689938"),
+  s = n("99690"),
+  a = n("689938"),
   o = n("412356");
 t.default = e => {
   let {
@@ -15,12 +15,12 @@ t.default = e => {
     children: [(0, i.jsx)(r.Heading, {
       className: o.header,
       variant: "heading-sm/semibold",
-      children: s.default.Messages.REPORTS_USER_PREVIEW_TITLE
+      children: a.default.Messages.REPORTS_USER_PREVIEW_TITLE
     }), (0, i.jsx)("div", {
       className: o.userContainer,
       children: (0, i.jsxs)("div", {
         className: o.userInfo,
-        children: [(0, i.jsx)(a.default, {
+        children: [(0, i.jsx)(s.default, {
           className: o.userIcon,
           user: t,
           size: r.AvatarSizes.SIZE_40

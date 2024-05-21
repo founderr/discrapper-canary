@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("392711"),
   l = n.n(o),
   u = n("866442"),
@@ -38,7 +38,7 @@ class A extends r.PureComponent {
       selected: t,
       color: n,
       className: r,
-      children: a
+      children: s
     } = this.props, o = h(n);
     return t ? e = {
       color: o,
@@ -50,7 +50,7 @@ class A extends r.PureComponent {
         left: 4
       },
       children: (0, i.jsxs)(c.default, {
-        className: s()(T.selectableItem, r, {
+        className: a()(T.selectableItem, r, {
           [T.selected]: t
         }),
         onClick: this.handleClick,
@@ -66,7 +66,7 @@ class A extends r.PureComponent {
           align: c.default.Align.CENTER,
           className: T.selectableItemLabel,
           shrink: 1,
-          children: a
+          children: s
         }), t && (0, i.jsx)(c.default, {
           wrap: c.default.Wrap.WRAP,
           className: f.marginReset,

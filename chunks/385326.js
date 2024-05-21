@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("442837"),
   l = n("481060"),
   u = n("570140"),
@@ -37,9 +37,9 @@ var i = n("735250"),
 function w(e) {
   var t, n;
   let {
-    channel: a,
+    channel: s,
     isLoading: v
-  } = e, [w, k] = r.useState(!1), B = (0, o.useStateFromStores)([O.default], () => O.default.getSelfEmbeddedActivityForChannel(a.id)), V = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelMode()), x = (0, E.useGetOrFetchApplication)(null == B ? void 0 : B.applicationId), F = null == B ? void 0 : B.launchId, H = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === a.id), {
+  } = e, [w, k] = r.useState(!1), B = (0, o.useStateFromStores)([O.default], () => O.default.getSelfEmbeddedActivityForChannel(s.id)), V = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelMode()), x = (0, E.useGetOrFetchApplication)(null == B ? void 0 : B.applicationId), F = null == B ? void 0 : B.launchId, H = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === s.id), {
     dockedRect: Y,
     isHidden: j
   } = (0, o.useStateFromStoresObject)([A.default], () => {
@@ -53,16 +53,16 @@ function w(e) {
     selectedParticipant: z,
     participantsOpen: Z
   } = (0, o.useStateFromStoresObject)([I.default], () => ({
-    activityParticipant: null != B ? I.default.getParticipant(a.id, B.applicationId) : null,
-    selectedParticipant: I.default.getSelectedParticipant(a.id),
-    participantsOpen: I.default.getParticipantsOpen(a.id)
-  })), X = H || null != W, Q = (0, R.default)(a.id), q = Q && (null == z ? void 0 : z.type) !== P.ParticipantTypes.ACTIVITY, J = !Q && V === M.ActivityPanelModes.PIP, $ = (!X || X && (q || J) && null == Y) && !j, ee = $ && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
+    activityParticipant: null != B ? I.default.getParticipant(s.id, B.applicationId) : null,
+    selectedParticipant: I.default.getSelectedParticipant(s.id),
+    participantsOpen: I.default.getParticipantsOpen(s.id)
+  })), X = H || null != W, Q = (0, R.default)(s.id), q = Q && (null == z ? void 0 : z.type) !== P.ParticipantTypes.ACTIVITY, J = !Q && V === M.ActivityPanelModes.PIP, $ = (!X || X && (q || J) && null == Y) && !j, ee = $ && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
 
   function et() {
     var e;
-    null != B && d.default.selectParticipant(a.id, B.applicationId);
-    let t = null !== (e = a.getGuildId()) && void 0 !== e ? e : y.ME;
-    _.default.channelListScrollTo(t, a.id), (0, f.transitionToGuild)(t, a.id), null == W && (0, c.popAllLayers)()
+    null != B && d.default.selectParticipant(s.id, B.applicationId);
+    let t = null !== (e = s.getGuildId()) && void 0 !== e ? e : y.ME;
+    _.default.channelListScrollTo(t, s.id), (0, f.transitionToGuild)(t, s.id), null == W && (0, c.popAllLayers)()
   }
 
   function en() {
@@ -78,13 +78,13 @@ function w(e) {
       })
     }
   }, [null == B ? void 0 : B.applicationId, $]);
-  if (null == B || null == F || null == K && (0, R.default)(a.id) || null == x) return null;
+  if (null == B || null == F || null == K && (0, R.default)(s.id) || null == x) return null;
   let ei = Array.from(B.userIds).map(e => N.default.getUser(e)).filter(e => null != e),
     er = {
       instance_id: null !== (n = null !== (t = B.compositeInstanceId) && void 0 !== t ? t : B.launchId) && void 0 !== n ? n : "",
-      channel_id: a.id
+      channel_id: s.id
     };
-  return null != a.guild_id && "" !== a.guild_id && (er.guild_id = a.guild_id), (0, i.jsx)(h.default, {
+  return null != s.guild_id && "" !== s.guild_id && (er.guild_id = s.guild_id), (0, i.jsx)(h.default, {
     timeout: 2e3,
     children: e => {
       var t, n, r, o, u, d, _, c;
@@ -94,7 +94,7 @@ function w(e) {
         onForceIdle: T
       } = e;
       return (0, i.jsxs)(S.default, {
-        className: s()(U.root, {
+        className: a()(U.root, {
           [U.pipMode]: $,
           [G.elevationHigh]: $,
           [b.idle]: E && !(null === (t = B.config) || void 0 === t ? void 0 : t.useInteractivePIP),
@@ -107,7 +107,7 @@ function w(e) {
         children: [(r = I, o = T, u = E, d = J, _ = ei, $ && null != B && ((null == K ? void 0 : K.type) === P.ParticipantTypes.ACTIVITY || d) ? (null === (c = B.config) || void 0 === c ? void 0 : c.useInteractivePIP) ? (0, i.jsx)(L.InteractivePIPHeader, {
           onJumpToChannel: et,
           applicationId: B.applicationId,
-          channel: a,
+          channel: s,
           showControls: !u,
           onMouseDown: r,
           onMouseMove: r,
@@ -124,7 +124,7 @@ function w(e) {
             onJumpToChannel: () => {
               et(), (0, p.updateActivityPanelMode)(M.ActivityPanelModes.PANEL)
             },
-            channel: a,
+            channel: s,
             applicationId: B.applicationId,
             users: _
           })
@@ -141,12 +141,12 @@ function w(e) {
             onMouseDown: r,
             onMouseLeave: o,
             onJumpToChannel: et,
-            channel: a,
+            channel: s,
             applicationId: B.applicationId,
             selectedParticipant: K
           })]
         }) : null), v ? (0, i.jsx)(l.Spinner, {
-          className: s()(U.iframe, {
+          className: a()(U.iframe, {
             [U.pipModeShort]: $ && !w,
             [U.pipModeTall]: $ && w
           })
@@ -155,7 +155,7 @@ function w(e) {
           referrerPolicy: D.APPLICATIONS_WITH_NO_REFFERER.has(B.applicationId) ? "no-referrer" : "origin",
           url: B.url,
           queryParams: er,
-          className: s()(U.iframe, {
+          className: a()(U.iframe, {
             [U.pipModeShort]: $ && !w,
             [U.pipModeTall]: $ && w,
             [U.pipNonInteractive]: $ && !(null === (n = B.config) || void 0 === n ? void 0 : n.useInteractivePIP)
@@ -164,7 +164,7 @@ function w(e) {
         }), !$ && (0, i.jsx)(L.TileOverlay, {
           participantsOpen: Z,
           showToggleParticipants: !1,
-          channelId: a.id
+          channelId: s.id
         })]
       })
     }

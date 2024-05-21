@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("481060"),
   l = n("239091"),
   u = n("688465"),
@@ -20,7 +20,7 @@ var i = n("735250"),
 function T(e) {
   var t;
   let {
-    className: a,
+    className: s,
     activeCommand: T
   } = e, f = r.useCallback(e => {
     var t;
@@ -40,7 +40,7 @@ function T(e) {
     })
   }, [null == T ? void 0 : null === (t = T.rootCommand) || void 0 === t ? void 0 : t.id]);
   return null == T ? null : (0, i.jsxs)("div", {
-    className: s()(a, I.bar),
+    className: a()(s, I.bar),
     onContextMenu: f,
     children: [(0, i.jsx)(u.default, {}), (0, i.jsxs)(o.Text, {
       variant: "text-sm/normal",

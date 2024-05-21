@@ -4,5 +4,5 @@ var i = n("470079");
 let r = {
     currentPreviewRef: i.createRef()
   },
-  a = i.createContext(r);
-t.default = a
+  s = i.createContext(r);
+t.default = s

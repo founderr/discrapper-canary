@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("653041");
 var i, r = n("392711"),
-  a = n.n(r),
-  s = n("442837"),
+  s = n.n(r),
+  a = n("442837"),
   o = n("570140"),
   l = n("704907"),
   u = n("581883"),
@@ -61,7 +61,7 @@ function p() {
   var e;
   let t = null === (e = u.default.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
   if (null == t) return !1;
-  h.overwriteHistory(a().mapValues(t, e => ({
+  h.overwriteHistory(s().mapValues(t, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), O.pendingUsages)
@@ -69,7 +69,7 @@ function p() {
 let O = {
   pendingUsages: []
 };
-class C extends(i = s.default.PersistedStore) {
+class C extends(i = a.default.PersistedStore) {
   initialize(e) {
     this.waitFor(E.default, c.default), null != e && (e.pendingUsages = e.pendingUsages.filter(e => null != e && I.ID_REGEX.test(e.key)), O = e), this.syncWith([u.default], p)
   }

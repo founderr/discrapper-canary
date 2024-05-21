@@ -19,8 +19,8 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var i, r, a = n("367907"),
-  s = n("857192"),
+var i, r, s = n("367907"),
+  a = n("857192"),
   o = n("626135"),
   l = n("569984"),
   u = n("497505"),
@@ -61,11 +61,11 @@ function f(e) {
     trackGuildAndChannelMetadata: r = !1
   } = e, u = l.default.quests.get(t);
   if (null != u) {
-    if (s.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", n, {
+    if (a.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", n, {
         ...I(u),
         ...i
       }), !u.preview) {
-      if (r) return a.default.trackWithMetadata(n, {
+      if (r) return s.default.trackWithMetadata(n, {
         ...I(u),
         ...i
       });
@@ -83,7 +83,7 @@ function S(e) {
     questContent: n,
     questContentCTA: i,
     questContentPosition: r,
-    trackGuildAndChannelMetadata: a = !1
+    trackGuildAndChannelMetadata: s = !1
   } = e;
   f({
     questId: t,
@@ -92,6 +92,6 @@ function S(e) {
       ...T(n, r),
       cta_name: i
     },
-    trackGuildAndChannelMetadata: a
+    trackGuildAndChannelMetadata: s
   })
 }(i = r || (r = {})).LEARN_MORE = "LEARN_MORE", i.SHOW_REWARD = "SHOW_REWARD", i.CLAIM_REWARD = "CLAIM_REWARD", i.GET_REWARD_CODE = "GET_REWARD_CODE", i.COPY_REWARD_CODE = "COPY_REWARD_CODE", i.ACCEPT_QUEST = "ACCEPT_QUEST", i.COPY_QUEST_URL = "COPY_QUEST_URL", i.TRACK_PROGRESS = "TRACK_PROGRESS", i.OPEN_DISCLOSURE = "OPEN_DISCLOSURE", i.WATCH_STREAM = "WATCH_STREAM", i.REWARD_LEARN_MORE = "REWARD_LEARN_MORE", i.OPEN_GAME_LINK = "OPEN_GAME_LINK", i.OPEN_CONTEXT_MENU = "OPEN_CONTEXT_MENU", i.QUEST_BAR_COPY_LINK = "QUEST_BAR.COPY_LINK", i.CONTEXT_MENU_COPY_LINK = "CONTEXT_MENU.COPY_LINK", i.CONTEXT_MENU_HIDE_CONTENT = "CONTEXT_MENU.HIDE_CONTENT", i.CONTEXT_MENU_OPEN_GAME_LINK = "CONTEXT_MENU.OPEN_GAME_LINK", i.CONTEXT_MENU_OPEN_DISCLOSURE = "CONTEXT_MENU.OPEN_DISCLOSURE", i.CONTEXT_MENU_LEARN_MORE = "CONTEXT_MENU.LEARN_MORE", i.EXPAND = "EXPAND", i.COLLAPSE = "COLLAPSE"

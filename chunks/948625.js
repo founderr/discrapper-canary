@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   COLLECTIBLES_HEADERS: function() {
-    return S
+    return I
   }
 });
 var l = a("180650"),
@@ -29,7 +29,7 @@ let x = {
   v = {
     TAKE_ME_THERE: () => n.default.Messages.TAKE_ME_THERE
   },
-  S = [{
+  I = [{
     headerImageSrc: i,
     headerVideoSrc: o,
     overflowImageSrc: u,

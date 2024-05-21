@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  a = n("246946"),
-  s = n("5192"),
+  s = n("246946"),
+  a = n("5192"),
   o = n("447452"),
   l = n("681837"),
   u = n("724593"),
@@ -36,7 +36,7 @@ function A(e) {
     moreUserDetailsEnabled: R
   } = (0, o.useSimplifiedProfileExperiment)({
     location: "BiteSizeProfileBody"
-  }), g = s.default.getName(null == m ? void 0 : m.id, O, t), L = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation);
+  }), g = a.default.getName(null == m ? void 0 : m.id, O, t), L = (0, r.useStateFromStores)([s.default], () => s.default.hidePersonalInformation);
   return (0, i.jsxs)("div", {
     className: h.body,
     children: [(0, i.jsx)(d.default, {

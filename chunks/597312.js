@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   ScrollerAuto: function() {
-    return s
+    return a
   },
   ScrollerNone: function() {
     return o
   },
   ScrollerThin: function() {
-    return a
+    return s
   }
 });
 var i = n("257705"),
   r = n("274641");
-let a = (0, i.createScroller)(r.thin, r.fade),
-  s = (0, i.createScroller)(r.auto, r.fade),
+let s = (0, i.createScroller)(r.thin, r.fade),
+  a = (0, i.createScroller)(r.auto, r.fade),
   o = (0, i.createScroller)(r.none, r.fade)

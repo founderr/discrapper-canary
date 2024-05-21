@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   performance: function() {
-    return a
+    return s
   },
   timeOrigin: function() {
     return r
@@ -35,4 +35,4 @@ if (null == n.g.performance.timing) try {
 if (null == n.g.performance.timeOrigin) try {
   n.g.performance.timeOrigin = r
 } catch (e) {}
-let a = n.g.performance
+let s = n.g.performance

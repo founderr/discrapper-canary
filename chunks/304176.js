@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  a = n("442837"),
-  s = n("481060"),
+  s = n("442837"),
+  a = n("481060"),
   o = n("367907"),
   l = n("829883"),
   u = n("623624"),
@@ -35,7 +35,7 @@ t.default = e => {
       ...(0, o.collectChannelAnalyticsMetadata)(c.default.getChannel(I.default.getChannelId(n.id)))
     })
   }, []);
-  let R = (0, a.useStateFromStores)([E.default], () => null != t.roleId ? E.default.getRole(n.id, t.roleId) : void 0),
+  let R = (0, s.useStateFromStores)([E.default], () => null != t.roleId ? E.default.getRole(n.id, t.roleId) : void 0),
     g = (0, d.isSubscriptionRole)(R),
     L = g ? p.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({
       name: C
@@ -47,7 +47,7 @@ t.default = e => {
       src: null == t.src ? t.src : (0, l.replaceRoleIconSourceSize)(t.src, 40),
       size: 40
     };
-  return (0, i.jsx)(s.Dialog, {
+  return (0, i.jsx)(a.Dialog, {
     children: (0, i.jsx)(A.MessagePopoutContent, {
       children: (0, i.jsxs)("div", {
         className: O.popoutContainer,
@@ -63,20 +63,20 @@ t.default = e => {
             })
           }), (0, i.jsxs)("div", {
             className: O.truncatingText,
-            children: [(0, i.jsx)(s.Heading, {
+            children: [(0, i.jsx)(a.Heading, {
               variant: "heading-md/semibold",
               className: O.roleName,
               children: (0, i.jsx)(T.default, {
                 children: C
               })
-            }), (0, i.jsx)(s.Text, {
+            }), (0, i.jsx)(a.Text, {
               variant: "text-sm/normal",
               children: L
             })]
           })]
-        }), (0, i.jsxs)(s.Button, {
-          size: s.Button.Sizes.SMALL,
-          color: s.Button.Colors.PRIMARY,
+        }), (0, i.jsxs)(a.Button, {
+          size: a.Button.Sizes.SMALL,
+          color: a.Button.Colors.PRIMARY,
           className: O.ctaButton,
           innerClassName: O.ctaButtonContent,
           fullWidth: !0,

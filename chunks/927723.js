@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   showInaccessibleLinkModal: function() {
-    return a
+    return s
   }
 });
 var i = n("735250");
 n("470079");
 var r = n("481060");
 
-function a(e) {
+function s(e) {
   let {
     kind: t
   } = e;

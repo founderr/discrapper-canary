@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("622535"),
   l = n("481060"),
   u = n("2052"),
@@ -24,7 +24,7 @@ t.default = function(e) {
   let {
     bodyCopy: t = N.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_BODY,
     className: n,
-    onDismiss: a,
+    onDismiss: s,
     onCtaClick: O
   } = e, {
     location: C
@@ -49,7 +49,7 @@ t.default = function(e) {
     }), null == O || O()
   }, [R, C, O, L]), M = L === m.PremiumTypes.TIER_0;
   return (0, i.jsx)("div", {
-    className: s()(p.wrapper, n),
+    className: a()(p.wrapper, n),
     children: g ? (0, i.jsx)(l.Spinner, {
       type: l.SpinnerTypes.PULSING_ELLIPSIS
     }) : (0, i.jsx)(o.VisibilitySensor, {
@@ -78,8 +78,8 @@ t.default = function(e) {
           color: l.Button.Colors.LINK,
           onClick: D,
           children: M ? N.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : N.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA
-        }), null != a && (0, i.jsx)(l.Button, {
-          onClick: a,
+        }), null != s && (0, i.jsx)(l.Button, {
+          onClick: s,
           className: p.dismissButton,
           look: l.Button.Looks.BLANK,
           size: l.Button.Sizes.ICON,

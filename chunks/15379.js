@@ -6,36 +6,36 @@ n.r(t), n.d(t, {
 }), n("411104");
 var i = n("592125"),
   r = n("19780"),
-  a = n("981631"),
-  s = n("176505");
+  s = n("981631"),
+  a = n("176505");
 
 function o(e, t) {
   let n;
   switch (e) {
-    case a.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM:
+    case s.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM:
       var o, l;
       let u = (n = t).channelId;
       switch (u) {
-        case s.StaticChannelRoute.CHANNEL_BROWSER:
-        case s.StaticChannelRoute.GUILD_HOME:
-        case s.StaticChannelRoute.GUILD_SHOP:
-        case s.StaticChannelRoute.MEMBER_APPLICATIONS:
-        case s.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
-        case s.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-        case s.StaticChannelRoute.MEMBER_SAFETY:
-        case s.StaticChannelRoute.GUILD_ONBOARDING:
+        case a.StaticChannelRoute.CHANNEL_BROWSER:
+        case a.StaticChannelRoute.GUILD_HOME:
+        case a.StaticChannelRoute.GUILD_SHOP:
+        case a.StaticChannelRoute.MEMBER_APPLICATIONS:
+        case a.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
+        case a.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
+        case a.StaticChannelRoute.MEMBER_SAFETY:
+        case a.StaticChannelRoute.GUILD_ONBOARDING:
           return
       }
-      let d = null !== (l = null === (o = i.default.getChannel(u)) || void 0 === o ? void 0 : o.type) && void 0 !== l ? l : a.ChannelTypes.UNKNOWN;
+      let d = null !== (l = null === (o = i.default.getChannel(u)) || void 0 === o ? void 0 : o.type) && void 0 !== l ? l : s.ChannelTypes.UNKNOWN;
       return {
         timestamp: new Date, rtc_state: r.default.getState(), channelId: u, channelType: d
       };
-    case a.AnalyticEvents.GUILD_VIEWED_CLICKSTREAM:
+    case s.AnalyticEvents.GUILD_VIEWED_CLICKSTREAM:
       let _ = (n = t).guildId;
       return {
         timestamp: new Date, rtc_state: r.default.getState(), guildId: _
       };
-    case a.AnalyticEvents.FRIENDS_LIST_VIEWED_CLICKSTREAM:
+    case s.AnalyticEvents.FRIENDS_LIST_VIEWED_CLICKSTREAM:
       return n = t, {
         timestamp: new Date,
         rtc_state: r.default.getState(),

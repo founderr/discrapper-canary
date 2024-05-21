@@ -1,5 +1,5 @@
 "use strict";
-let i, r, a, s, o, l, u, d;
+let i, r, s, a, o, l, u, d;
 n.r(t), n("47120"), n("724458");
 var _, c, E, I, T = n("392711"),
   f = n.n(T),
@@ -55,9 +55,9 @@ let w = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkCh
   et = null;
 
 function en(e) {
-  if (null == o || null == s || s.id !== e) return !1;
+  if (null == o || null == a || a.id !== e) return !1;
   let t = v.default.getGuild(e);
-  return null != t && (s === o ? o = s = t : s = t, !0)
+  return null != t && (a === o ? o = a = t : a = t, !0)
 }
 
 function ei(e) {
@@ -65,21 +65,21 @@ function ei(e) {
   let {
     guildId: n,
     section: r,
-    subsection: a,
+    subsection: s,
     location: u
   } = e, _ = v.default.getGuild(n);
   if (null == _) return er();
-  s = o = _, V = U.FormStates.OPEN, x = {}, l = M.default.castGuildIdAsEveryoneGuildRoleId(n), W = o.mfaLevel, Q = X, d = null, K = u, ea({
+  a = o = _, V = U.FormStates.OPEN, x = {}, l = M.default.castGuildIdAsEveryoneGuildRoleId(n), W = o.mfaLevel, Q = X, d = null, K = u, es({
     section: null !== (t = null != r ? r : i) && void 0 !== t ? t : U.GuildSettingsSections.OVERVIEW,
-    subsection: null != a ? a : null
+    subsection: null != s ? s : null
   })
 }
 
 function er() {
-  B = !1, V = U.FormStates.CLOSED, s = o = null, F = !1, H = null, Y = null, j = 0, q = null, ee = null, et = null, i = null, r = null, a = null, W = U.MFALevels.NONE, u = void 0
+  B = !1, V = U.FormStates.CLOSED, a = o = null, F = !1, H = null, Y = null, j = 0, q = null, ee = null, et = null, i = null, r = null, s = null, W = U.MFALevels.NONE, u = void 0
 }
 
-function ea(e) {
+function es(e) {
   if (null == o) return !1;
   let t = i;
   if (i = e.section, r = e.subsection, i === U.GuildSettingsSections.BANS) {
@@ -134,7 +134,7 @@ function ea(e) {
   })
 }
 
-function es(e) {
+function ea(e) {
   var t;
   return new g.default({
     code: e.code,
@@ -162,7 +162,7 @@ class el extends(_ = A.default.Store) {
     return Q
   }
   hasChanges() {
-    return !f().isEqual(o, s) || !f().isEqual(Q, X)
+    return !f().isEqual(o, a) || !f().isEqual(Q, X)
   }
   isOpen() {
     return B
@@ -218,10 +218,10 @@ class el extends(_ = A.default.Store) {
       embedEnabled: F,
       embedChannelId: H,
       mfaLevel: W,
-      searchQuery: a,
+      searchQuery: s,
       vanityURLCode: Y,
       vanityURLUses: j,
-      originalGuild: s,
+      originalGuild: a,
       hasChanges: this.hasChanges(),
       guildMetadata: Q,
       analyticsLocation: K,
@@ -247,8 +247,8 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
     }), ! function() {
       if (null == o) return;
       let e = o.toJS(),
-        t = s.toJS();
-      !w.some(n => e[n] !== t[n]) && (o = s)
+        t = a.toJS();
+      !w.some(n => e[n] !== t[n]) && (o = a)
     }()
   },
   GUILD_SETTINGS_CANCEL_CHANGES: function(e) {
@@ -257,7 +257,7 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
     } = e;
     x = {};
     let n = v.default.getGuild(t);
-    null != n && (s = o = n)
+    null != n && (a = o = n)
   },
   GUILD_SETTINGS_SAVE_ROUTE_STACK: function(e) {
     let {
@@ -275,9 +275,9 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
     var t;
     V = U.FormStates.OPEN, i = null != i ? i : U.GuildSettingsSections.OVERVIEW, r = null, x = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
-  GUILD_SETTINGS_SET_SECTION: ea,
+  GUILD_SETTINGS_SET_SECTION: es,
   GUILD_SETTINGS_SET_SEARCH_QUERY: function(e) {
-    a = e.searchQuery
+    s = e.searchQuery
   },
   GUILD_SETTINGS_LOADED_BANS: function(e) {
     q = e.bans.reduce((e, t) => (null != t.user && null != t.user.id && e.set(t.user.id, t), e), new Map), J++
@@ -290,7 +290,7 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
     ($ !== n || null == q) && ($ = n, q = new Map), q = t.reduce((e, t) => (null != t.user && null != t.user.id && e.set(t.user.id, t), e), q), J++
   },
   GUILD_SETTINGS_LOADED_INVITES: function(e) {
-    ee = e.invites.reduce((e, t) => (e[t.code] = es(t), e), {})
+    ee = e.invites.reduce((e, t) => (e[t.code] = ea(t), e), {})
   },
   GUILD_SETTINGS_SET_WIDGET: function(e) {
     F = e.enabled, H = e.channelId
@@ -358,7 +358,7 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
     {
       let e = v.default.getGuild(o.id);
       if (null == e) return !1;
-      let t = s = e,
+      let t = a = e,
         n = o.toJS();
       w.forEach(e => {
         if (!k.has(e)) {
@@ -387,11 +387,11 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
   INSTANT_INVITE_CREATE_SUCCESS: function(e) {
     ee = {
       ...ee,
-      [e.invite.code]: es(e.invite)
+      [e.invite.code]: ea(e.invite)
     }
   },
   GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: function(e) {
-    var t, n, i, r, a, s, l, u, d, _;
+    var t, n, i, r, s, a, l, u, d, _;
     let {
       guildId: c,
       metadata: E
@@ -401,8 +401,8 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
       secondaryCategoryIds: null !== (n = E.secondaryCategoryIds) && void 0 !== n ? n : [],
       keywords: null !== (i = E.keywords) && void 0 !== i ? i : [],
       emojiDiscoverabilityEnabled: null !== (r = E.emojiDiscoverabilityEnabled) && void 0 !== r ? r : b.DEFAULT_EMOJI_DISCOVERABILITY_SETTING,
-      partnerActionedTimestamp: null !== (a = E.partnerActionedTimestamp) && void 0 !== a ? a : null,
-      partnerApplicationTimestamp: null !== (s = E.partnerApplicationTimestamp) && void 0 !== s ? s : null,
+      partnerActionedTimestamp: null !== (s = E.partnerActionedTimestamp) && void 0 !== s ? s : null,
+      partnerApplicationTimestamp: null !== (a = E.partnerApplicationTimestamp) && void 0 !== a ? a : null,
       isPublished: null !== (l = E.isPublished) && void 0 !== l && l,
       reasonsToJoin: null !== (u = E.reasonsToJoin) && void 0 !== u ? u : [],
       socialLinks: null !== (d = E.socialLinks) && void 0 !== d ? d : [],
@@ -452,8 +452,8 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
       primaryCategoryId: n,
       keywords: i,
       emojiDiscoverabilityEnabled: r,
-      isPublished: a,
-      reasonsToJoin: s,
+      isPublished: s,
+      reasonsToJoin: a,
       socialLinks: l,
       about: u
     } = e;
@@ -462,8 +462,8 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
       primaryCategoryId: null != n ? n : Q.primaryCategoryId,
       keywords: null != i ? i : Q.keywords,
       emojiDiscoverabilityEnabled: null != r ? r : Q.emojiDiscoverabilityEnabled,
-      isPublished: null != a ? a : Q.isPublished,
-      reasonsToJoin: null != s ? s : Q.reasonsToJoin,
+      isPublished: null != s ? s : Q.isPublished,
+      reasonsToJoin: null != a ? a : Q.reasonsToJoin,
       socialLinks: null != l ? l : Q.socialLinks,
       about: null != u ? u : Q.about
     })

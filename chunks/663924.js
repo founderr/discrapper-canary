@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("374470"),
   l = n("442837"),
   u = n("952265"),
@@ -24,7 +24,7 @@ t.default = r.memo(function(e) {
   let {
     positionTargetRef: t,
     channel: n,
-    closeOnModalOuterClick: a = !1,
+    closeOnModalOuterClick: s = !1,
     parentModalKey: O
   } = e, C = r.useRef(null), R = r.useRef(null), {
     renderWindow: g,
@@ -33,7 +33,7 @@ t.default = r.memo(function(e) {
     f.dismissAppLauncherPopup()
   }, y = r.useCallback(e => {
     var t;
-    if (!v && (0, u.hasAnyModalOpen)() || v && !(D && a)) return;
+    if (!v && (0, u.hasAnyModalOpen)() || v && !(D && s)) return;
     let {
       target: n
     } = e;
@@ -46,7 +46,7 @@ t.default = r.memo(function(e) {
     M();
     let i = null === (t = (0, T.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
     (null == i || "BODY" === i.tagName) && I.ComponentDispatch.dispatchToLastSubscribed(m.ComponentActions.TEXTAREA_FOCUS)
-  }, [a, D, v]), P = r.useCallback(() => {
+  }, [s, D, v]), P = r.useCallback(() => {
     M()
   }, []);
   r.useLayoutEffect(() => (g.addEventListener("mousedown", y), g.addEventListener("contextmenu", y), L.subscribe(m.ComponentActions.POPOUT_CLOSE, P), () => {
@@ -69,7 +69,7 @@ t.default = r.memo(function(e) {
           isPositioned: t
         } = e;
         return (0, i.jsx)("section", {
-          className: s()(p.positionContainer),
+          className: a()(p.positionContainer),
           ref: C,
           role: "dialog",
           "aria-label": "Application Launcher",

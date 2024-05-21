@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("149765"),
-  s = n("178940"),
+  s = n("149765"),
+  a = n("178940"),
   o = n("993365"),
   l = n("465670"),
   u = n("422559"),
@@ -21,20 +21,20 @@ function c(e) {
     deniedPermissions: c,
     onPermissionsChange: E,
     guild: I
-  } = e, T = r.useMemo(() => a.invert(I.permissions), [I.permissions]);
+  } = e, T = r.useMemo(() => s.invert(I.permissions), [I.permissions]);
   r.useEffect(() => {
-    E(!1, a.filter(n, T))
+    E(!1, s.filter(n, T))
   }, [T, E, n]);
-  let f = u.OrderedPermissions.filter(e => a.has(n, e)),
-    S = f.filter(e => !a.has(T, e)).map(e => {
+  let f = u.OrderedPermissions.filter(e => s.has(n, e)),
+    S = f.filter(e => !s.has(T, e)).map(e => {
       let t = (0, u.getPermissionName)(e),
-        n = !a.has(c, e);
+        n = !s.has(c, e);
       return (0, i.jsx)("li", {
         className: _.permission,
-        children: (0, i.jsx)(s.Checkbox, {
+        children: (0, i.jsx)(a.Checkbox, {
           value: n,
           onChange: (t, n) => E(n, e),
-          type: s.Checkbox.Types.INVERTED,
+          type: a.Checkbox.Types.INVERTED,
           children: (0, i.jsx)(o.Text, {
             variant: "text-md/normal",
             children: t
@@ -42,7 +42,7 @@ function c(e) {
         })
       }, String(e))
     }),
-    h = f.filter(e => a.has(T, e)).map(e => {
+    h = f.filter(e => s.has(T, e)).map(e => {
       let t = (0, u.getPermissionName)(e);
       return (0, i.jsxs)("li", {
         className: _.permission,

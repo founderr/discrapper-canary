@@ -11,8 +11,8 @@ n.r(t), n.d(t, {
     return E
   }
 }), n("47120"), n("757143");
-var a = n("400053"),
-  s = n.n(a),
+var s = n("400053"),
+  a = n.n(s),
   o = n("302454"),
   l = n.n(o),
   u = n("20970"),
@@ -49,7 +49,7 @@ class c {
     return [e, n]
   }
   constructor(e, t, n) {
-    _(this, "message", void 0), _(this, "hasMarkdown", void 0), _(this, "intlMessage", void 0), this.message = n ? e : e.replace(d.UNSAFE_RE_ALL, ""), this.hasMarkdown = n, this.intlMessage = new(s())(this.message, t)
+    _(this, "message", void 0), _(this, "hasMarkdown", void 0), _(this, "intlMessage", void 0), this.message = n ? e : e.replace(d.UNSAFE_RE_ALL, ""), this.hasMarkdown = n, this.intlMessage = new(a())(this.message, t)
   }
 }
 
@@ -58,9 +58,9 @@ function E(e) {
     let n = l().parserFor(t(e)),
       i = l().reactFor(l().ruleOutput(e, "react"));
     return (e, t, r) => {
-      let a = !e.includes("\n\n");
-      return !a && (e += "\n\n"), i(n(e, {
-        inline: a,
+      let s = !e.includes("\n\n");
+      return !s && (e += "\n\n"), i(n(e, {
+        inline: s,
         context: t,
         unsafeContext: r
       }))
@@ -79,6 +79,6 @@ function I(e, t) {
   if (null == e) return "";
   null == i && E(n("281071").default), e = e.replace(/^\n+|\n+$/g, "");
   let r = d.FORMAT_RE.test(e),
-    a = d.MARKDOWN_RE.test(e);
-  return r || a ? new c(e, t, a) : e
+    s = d.MARKDOWN_RE.test(e);
+  return r || s ? new c(e, t, s) : e
 }

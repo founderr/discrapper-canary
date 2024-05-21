@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("120356"),
-  a = n.n(r),
-  s = n("481060"),
+  s = n.n(r),
+  a = n("481060"),
   o = n("949058");
 
 function l(e) {
@@ -19,7 +19,7 @@ function l(e) {
     className: t
   } = e;
   return (0, i.jsx)("div", {
-    className: a()(t, o.separator)
+    className: s()(t, o.separator)
   })
 }
 
@@ -34,10 +34,10 @@ function u(e) {
     dangerous: _,
     ...c
   } = e;
-  return (0, i.jsx)(s.Clickable, {
+  return (0, i.jsx)(a.Clickable, {
     onClick: d ? void 0 : t,
     onContextMenu: d ? void 0 : n,
-    className: a()(r, {
+    className: s()(r, {
       [o.button]: !0,
       [o.selected]: l,
       [o.disabled]: d,
@@ -53,7 +53,7 @@ t.default = function(e) {
     children: n
   } = e;
   return (0, i.jsx)("div", {
-    className: a()(t, o.wrapper),
+    className: s()(t, o.wrapper),
     children: n
   })
 }

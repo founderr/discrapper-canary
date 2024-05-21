@@ -1,7 +1,7 @@
 "use strict";
 let i;
 n.r(t), n("47120");
-var r, a, s, o, l = n("442837"),
+var r, s, a, o, l = n("442837"),
   u = n("570140");
 let d = new Map,
   _ = !1,
@@ -31,12 +31,12 @@ class I extends(r = l.default.Store) {
     return _
   }
 }
-o = "ContentInventoryStore", (s = "displayName") in(a = I) ? Object.defineProperty(a, s, {
+o = "ContentInventoryStore", (a = "displayName") in(s = I) ? Object.defineProperty(s, a, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = o, t.default = new I(u.default, {
+}) : s[a] = o, t.default = new I(u.default, {
   CONNECTION_OPEN: function() {
     d = new Map, _ = !1
   },

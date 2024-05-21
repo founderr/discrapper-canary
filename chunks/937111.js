@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var i, r, a, s, o = n("442837"),
+var i, r, s, a, o = n("442837"),
   l = n("570140"),
   u = n("601964"),
   d = n("594174"),
@@ -42,7 +42,7 @@ function S(e) {
   if (null != r && i.userId !== r.id) return !1;
   (0, _.isApprovedAndAcked)(i) ? delete E[t]: E[t] = i
 }
-class h extends(s = o.default.Store) {
+class h extends(a = o.default.Store) {
   getRequest(e) {
     return E[e]
   }
@@ -59,12 +59,12 @@ class h extends(s = o.default.Store) {
     return c
   }
 }
-a = "UserGuildJoinRequestStore", (r = "displayName") in(i = h) ? Object.defineProperty(i, r, {
-  value: a,
+s = "UserGuildJoinRequestStore", (r = "displayName") in(i = h) ? Object.defineProperty(i, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = a, t.default = new h(l.default, {
+}) : i[r] = s, t.default = new h(l.default, {
   CONNECTION_OPEN: function(e) {
     let {
       guildJoinRequests: t
@@ -125,13 +125,13 @@ a = "UserGuildJoinRequestStore", (r = "displayName") in(i = h) ? Object.definePr
         id: e,
         name: i,
         icon: r,
-        features: a
+        features: s
       } = t.guild;
       T[n] = {
         id: e,
         name: i,
         icon: r,
-        features: null != a ? a : []
+        features: null != s ? s : []
       }
     }
   },
@@ -150,14 +150,14 @@ a = "UserGuildJoinRequestStore", (r = "displayName") in(i = h) ? Object.definePr
       let {
         id: t,
         name: r,
-        icon: a,
-        features: s
+        icon: s,
+        features: a
       } = n;
       T[t] = {
         id: t,
         name: r,
-        icon: a,
-        features: null != s ? s : []
+        icon: s,
+        features: null != a ? a : []
       }
     }
   },

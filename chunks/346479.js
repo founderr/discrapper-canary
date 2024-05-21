@@ -2,8 +2,8 @@
 n.r(t), n("789020");
 var i = n("697988"),
   r = n("544891"),
-  a = n("570140"),
-  s = n("668781"),
+  s = n("570140"),
+  a = n("668781"),
   o = n("430742"),
   l = n("367907"),
   u = n("555573"),
@@ -24,17 +24,17 @@ function p(e, t) {
   return r.HTTP.patch({
     url: A.Endpoints.CHANNEL(e.id),
     body: t
-  }).then(t => (a.default.dispatch({
+  }).then(t => (s.default.dispatch({
     type: "THREAD_UPDATE",
     channel: (0, d.createChannelRecordFromServer)(t.body)
-  }), e.isForumPost() && null != e.parent_id && a.default.dispatch({
+  }), e.isForumPost() && null != e.parent_id && s.default.dispatch({
     type: "RESORT_THREADS",
     channelId: e.parent_id
   }), t))
 }
 
 function O(e, t) {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "THREAD_MEMBER_LOCAL_UPDATE",
     id: e.id,
     guildId: e.getGuildId(),
@@ -72,17 +72,17 @@ t.default = {
     try {
       return await p(e, n)
     } catch (e) {
-      var r, a;
-      throw (null === (r = e.body) || void 0 === r ? void 0 : r.code) === A.AbortCodes.TOO_MANY_THREADS ? s.default.show({
+      var r, s;
+      throw (null === (r = e.body) || void 0 === r ? void 0 : r.code) === A.AbortCodes.TOO_MANY_THREADS ? a.default.show({
         title: i ? N.default.Messages.CANNOT_UNARCHIVE_FORUM_POST : N.default.Messages.CANNOT_UNARCHIVE_THREAD,
         body: i ? N.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : N.default.Messages.TOO_MANY_THREADS_MESSAGE
-      }) : (null === (a = e.body) || void 0 === a ? void 0 : a.code) === A.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS ? s.default.show({
+      }) : (null === (s = e.body) || void 0 === s ? void 0 : s.code) === A.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS ? a.default.show({
         title: N.default.Messages.CANNOT_UNARCHIVE_THREAD,
         body: N.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
-      }) : 429 === e.status ? s.default.show({
+      }) : 429 === e.status ? a.default.show({
         title: i ? N.default.Messages.CANNOT_UNARCHIVE_FORUM_POST : N.default.Messages.CANNOT_UNARCHIVE_THREAD,
         body: N.default.Messages.RATE_LIMITED
-      }) : s.default.show({
+      }) : a.default.show({
         title: N.default.Messages.ERROR,
         body: N.default.Messages.ERROR_OCCURRED_TRY_AGAIN
       }), e
@@ -110,11 +110,11 @@ t.default = {
       var n;
       if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === A.AbortCodes.TOO_MANY_THREAD_MEMBERS) {
         let t = e.isForumPost();
-        s.default.show({
+        a.default.show({
           title: t ? N.default.Messages.CANNOT_JOIN_FORUM_POST : N.default.Messages.CANNOT_JOIN_THREAD,
           body: t ? N.default.Messages.TOO_MANY_MEMBERS_MESSAGE_FORUM_POST : N.default.Messages.TOO_MANY_MEMBERS_MESSAGE
         })
-      } else s.default.show({
+      } else a.default.show({
         title: N.default.Messages.ERROR,
         body: N.default.Messages.ERROR_OCCURRED_TRY_AGAIN
       });
@@ -133,11 +133,11 @@ t.default = {
       var i;
       if ((null === (i = t.body) || void 0 === i ? void 0 : i.code) === A.AbortCodes.TOO_MANY_THREAD_MEMBERS) {
         let t = e.isForumPost();
-        s.default.show({
+        a.default.show({
           title: t ? N.default.Messages.CANNOT_ADD_USER_TO_FORUM_POST : N.default.Messages.CANNOT_ADD_USER_TO_THREAD,
           body: t ? N.default.Messages.TOO_MANY_MEMBERS_MESSAGE_FORUM_POST : N.default.Messages.TOO_MANY_MEMBERS_MESSAGE
         })
-      } else s.default.show({
+      } else a.default.show({
         title: N.default.Messages.ERROR,
         body: N.default.Messages.ERROR_OCCURRED_TRY_AGAIN
       })
@@ -171,7 +171,7 @@ t.default = {
   },
   async updateFlags(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    a.default.dispatch({
+    s.default.dispatch({
       type: "THREAD_UPDATE",
       channel: e.merge({
         flags: t
@@ -187,7 +187,7 @@ t.default = {
         body: i
       })
     } catch {
-      a.default.dispatch({
+      s.default.dispatch({
         type: "THREAD_UPDATE",
         channel: e
       })
@@ -200,10 +200,10 @@ t.default = {
       i = t.merge({
         flags: t.flags | m.ChannelFlags.PINNED
       });
-    a.default.dispatch({
+    s.default.dispatch({
       type: "THREAD_UPDATE",
       channel: n
-    }), a.default.dispatch({
+    }), s.default.dispatch({
       type: "THREAD_UPDATE",
       channel: i
     }), await this.unarchiveThreadIfNecessary(e.id), await this.unarchiveThreadIfNecessary(t.id);
@@ -215,10 +215,10 @@ t.default = {
         }
       })
     } catch {
-      a.default.dispatch({
+      s.default.dispatch({
         type: "THREAD_UPDATE",
         channel: e
-      }), a.default.dispatch({
+      }), s.default.dispatch({
         type: "THREAD_UPDATE",
         channel: t
       });
@@ -232,7 +232,7 @@ t.default = {
         }
       })
     } catch {
-      a.default.dispatch({
+      s.default.dispatch({
         type: "THREAD_UPDATE",
         channel: t
       })
@@ -259,12 +259,12 @@ t.default = {
       body: t
     })
   },
-  loadArchivedThreads(e, t, n, s, o) {
-    !T.default.isLoading(t, n, s) && (a.default.dispatch({
+  loadArchivedThreads(e, t, n, a, o) {
+    !T.default.isLoading(t, n, a) && (s.default.dispatch({
       type: "LOAD_ARCHIVED_THREADS",
       channelId: t,
       sortOrder: n,
-      tagFilter: s
+      tagFilter: a
     }), r.HTTP.get({
       url: A.Endpoints.THREAD_SEARCH(t),
       query: {
@@ -272,7 +272,7 @@ t.default = {
         sort_by: "last_message_time",
         sort_order: "desc",
         limit: T.PAGE_SIZE,
-        tag: s.size > 0 ? Array.from(s).join(",") : void 0,
+        tag: a.size > 0 ? Array.from(a).join(",") : void 0,
         tag_setting: i.ThreadSearchTagSetting.MATCH_SOME,
         offset: o
       },
@@ -287,18 +287,18 @@ t.default = {
           most_recent_messages: _
         }
       } = i;
-      null == r ? a.default.dispatch({
+      null == r ? s.default.dispatch({
         type: "LOAD_ARCHIVED_THREADS_FAIL",
         channelId: t,
         sortOrder: n,
-        tagFilter: s
-      }) : a.default.dispatch({
+        tagFilter: a
+      }) : s.default.dispatch({
         type: "LOAD_ARCHIVED_THREADS_SUCCESS",
         guildId: e,
         channelId: t,
         offset: o,
         sortOrder: n,
-        tagFilter: s,
+        tagFilter: a,
         threads: r,
         firstMessages: d,
         mostRecentMessages: _,
@@ -307,16 +307,16 @@ t.default = {
         hasMore: u
       })
     }, () => {
-      a.default.dispatch({
+      s.default.dispatch({
         type: "LOAD_ARCHIVED_THREADS_FAIL",
         channelId: t,
         sortOrder: n,
-        tagFilter: s
+        tagFilter: a
       })
     }))
   },
-  async searchThreads(e, t, n, s) {
-    let o = null != s && s.size > 0 ? Array.from(s).join(",") : void 0,
+  async searchThreads(e, t, n, a) {
+    let o = null != a && a.size > 0 ? Array.from(a).join(",") : void 0,
       {
         body: {
           threads: l,
@@ -332,7 +332,7 @@ t.default = {
           tag_setting: i.ThreadSearchTagSetting.MATCH_SOME
         }
       });
-    return a.default.dispatch({
+    return s.default.dispatch({
       type: "LOAD_THREADS_SUCCESS",
       threads: l,
       members: u,

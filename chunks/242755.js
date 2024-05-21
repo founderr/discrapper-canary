@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   isEligibleForQuestPlaytime: function() {
-    return s
+    return a
   },
   useIsEligibleForQuestPlaytime: function() {
     return o
@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
 });
 var i = n("818083"),
   r = n("977156");
-let a = (0, i.createExperiment)({
+let s = (0, i.createExperiment)({
     id: "2024-04_quest_playtime_task",
     kind: "user",
     label: "Quest Playtime Task",
@@ -30,12 +30,12 @@ let a = (0, i.createExperiment)({
       }
     }]
   }),
-  s = e => {
+  a = e => {
     let {
       location: t,
       autoTrackExposure: n = !1
     } = e;
-    return a.getCurrentConfig({
+    return s.getCurrentConfig({
       location: t
     }, {
       autoTrackExposure: n
@@ -48,11 +48,11 @@ let a = (0, i.createExperiment)({
     } = e, i = (0, r.useIsEligibleForQuests)({
       location: t
     }), {
-      enabled: s
-    } = a.useExperiment({
+      enabled: a
+    } = s.useExperiment({
       location: t
     }, {
       autoTrackExposure: n
     });
-    return i && s
+    return i && a
   }

@@ -37,13 +37,13 @@ n.r(t), n.d(t, {
     return b
   },
   sanitizeGuildTextChannelName: function() {
-    return a.default
+    return s.default
   }
 }), n("411104"), n("653041"), n("47120");
 var i = n("149765"),
   r = n("911969"),
-  a = n("90463"),
-  s = n("968358"),
+  s = n("90463"),
+  a = n("968358"),
   o = n("874748"),
   l = n("590415"),
   u = n("131704"),
@@ -78,12 +78,12 @@ function C(e, t, n) {
 }
 
 function R(e, t, n) {
-  let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    s = [];
-  if (n.length > 0 || a) {
+  let s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+    a = [];
+  if (n.length > 0 || s) {
     var o, l, d;
     let n;
-    s.push((o = e, l = t, d = r.PermissionOverwriteType.ROLE, n = T.NONE, ((0, u.isGuildSelectableChannelType)(l) || l === N) && (n = i.add(n, S.Permissions.VIEW_CHANNEL)), O(l, m) && (n = i.add(n, S.Permissions.VIEW_CHANNEL), n = i.add(n, S.Permissions.CONNECT)), {
+    a.push((o = e, l = t, d = r.PermissionOverwriteType.ROLE, n = T.NONE, ((0, u.isGuildSelectableChannelType)(l) || l === N) && (n = i.add(n, S.Permissions.VIEW_CHANNEL)), O(l, m) && (n = i.add(n, S.Permissions.VIEW_CHANNEL), n = i.add(n, S.Permissions.CONNECT)), {
       id: o,
       type: d,
       allow: T.NONE,
@@ -91,8 +91,8 @@ function R(e, t, n) {
     }))
   }
   return n.forEach(e => {
-    s.push(C(e, t, r.PermissionOverwriteType.ROLE))
-  }), s
+    a.push(C(e, t, r.PermissionOverwriteType.ROLE))
+  }), a
 }
 
 function g(e, t) {
@@ -114,15 +114,15 @@ function v(e) {
 
 function D(e, t, n) {
   var i, r;
-  let a = e.getGuildId(),
-    o = n.getGuild(a),
+  let s = e.getGuildId(),
+    o = n.getGuild(s),
     l = null !== (i = null == o ? void 0 : o.maxVideoChannelUsers) && void 0 !== i ? i : -1,
     u = null !== (r = null == o ? void 0 : o.maxStageVideoChannelUsers) && void 0 !== r ? r : -1,
     d = I.default.countVoiceStatesForChannel(e.id),
     _ = I.default.getVoiceStatesForChannel(e),
     E = c.default.can(S.Permissions.MOVE_MEMBERS, e) && c.default.can(S.Permissions.CONNECT, e),
     T = !1;
-  T = e.type === p ? null != a && (t.hasVideo(e.id) || (0, s.hasStream)(_)) && u > 0 && d >= u : null != a && t.hasVideo(e.id) && l > 0 && d >= l + (E ? 1 : 0);
+  T = e.type === p ? null != s && (t.hasVideo(e.id) || (0, a.hasStream)(_)) && u > 0 && d >= u : null != s && t.hasVideo(e.id) && l > 0 && d >= l + (E ? 1 : 0);
   let f = e.userLimit > 0 && d >= e.userLimit;
   return T || f && !E
 }
@@ -144,14 +144,14 @@ function y(e) {
       selectedChannelId: n,
       selectedVoiceChannelId: i,
       voiceStates: r
-    } = e, a = [];
+    } = e, s = [];
     return t.forEach(e => {
       if (e.id === i || e.id === n) return;
       let t = r[e.id];
       null != t && (e.isGuildStageVoice() ? t.forEach(e => {
-        (0, l.getAudienceRequestToSpeakState)(e.voiceState) === l.RequestToSpeakStates.ON_STAGE && a.push(e)
-      }) : t.forEach(e => a.push(e)))
-    }), a
+        (0, l.getAudienceRequestToSpeakState)(e.voiceState) === l.RequestToSpeakStates.ON_STAGE && s.push(e)
+      }) : t.forEach(e => s.push(e)))
+    }), s
   })({
     channels: t,
     selectedChannelId: n,
@@ -218,11 +218,11 @@ function G(e, t, n, i) {
 
 function w(e, t, n, i) {
   let r;
-  let a = e.getGuildId(),
-    s = (0, o.canUseMediaPostEmbed)(a, t);
-  if (null != t && s) {
+  let s = e.getGuildId(),
+    a = (0, o.canUseMediaPostEmbed)(s, t);
+  if (null != t && a) {
     var l, u, d, _;
-    l = a, u = t.id, d = e.id, _ = f.default.castChannelIdAsMessageId(e.id), r = null == l || null == u || null == d ? G(l, u, _) : "".concat(location.protocol, "//").concat(location.host).concat(S.Routes.CHANNEL_THREAD_VIEW(l, u, d, _))
-  } else r = null != i ? i : G(a, e.id, n);
+    l = s, u = t.id, d = e.id, _ = f.default.castChannelIdAsMessageId(e.id), r = null == l || null == u || null == d ? G(l, u, _) : "".concat(location.protocol, "//").concat(location.host).concat(S.Routes.CHANNEL_THREAD_VIEW(l, u, d, _))
+  } else r = null != i ? i : G(s, e.id, n);
   return r
 }

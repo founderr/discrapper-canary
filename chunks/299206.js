@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("512722"),
-  a = n.n(r),
-  s = n("481060"),
+  s = n.n(r),
+  a = n("481060"),
   o = n("695346"),
   l = n("754424"),
   u = n("572004");
@@ -24,12 +24,12 @@ function d(e) {
   } = e, E = o.DeveloperMode.useSetting();
   if (__OVERLAY__ || !(c || E) || !u.SUPPORTS_COPY || null == t) return null;
   let I = "devmode-copy-id-".concat(t);
-  return (0, i.jsx)(s.MenuItem, {
+  return (0, i.jsx)(a.MenuItem, {
     id: I,
     label: n,
     action: function(e) {
       let n = null != d && e.shiftKey ? d : t;
-      a()(null != n, "cannot copy null text"), (0, u.copy)(n), null == r || r()
+      s()(null != n, "cannot copy null text"), (0, u.copy)(n), null == r || r()
     },
     icon: l.default,
     showIconFirst: _

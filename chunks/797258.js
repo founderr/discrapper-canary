@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var i, r, a, s, o = n("392711"),
+var i, r, s, a, o = n("392711"),
   l = n.n(o),
   u = n("442837"),
   d = n("570140"),
@@ -13,7 +13,7 @@ function I(e) {
     E[e.sessionId] = e
   })
 }
-class T extends(s = u.default.Store) {
+class T extends(a = u.default.Store) {
   initialize() {
     this.waitFor(_.default)
   }
@@ -41,12 +41,12 @@ class T extends(s = u.default.Store) {
     })
   }
 }
-a = "SessionsStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
-  value: a,
+s = "SessionsStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = a, t.default = new T(d.default, {
+}) : i[r] = s, t.default = new T(d.default, {
   CONNECTION_OPEN: I,
   SESSIONS_REPLACE: I
 })

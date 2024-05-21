@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return S
   }
 }), n("411104");
-var i, r, a = n("570140"),
-  s = n("923928"),
+var i, r, s = n("570140"),
+  a = n("923928"),
   o = n("593472"),
   l = n("594190"),
   u = n("77498"),
@@ -75,7 +75,7 @@ function A(e, t) {
         };
       null == I.allowHook || I.allowHook ? (c = setTimeout(() => {
         n.cancelAttachToProcess(e), u("Timed out waiting for hook response", !1)
-      }, 12e4), n.attachToProcess(e, I, u), a.default.wait(() => s.default.clearElevatedProcess())) : i("Hook is disabled for this game")
+      }, 12e4), n.attachToProcess(e, I, u), s.default.wait(() => a.default.clearElevatedProcess())) : i("Hook is disabled for this game")
     })
   })
 }

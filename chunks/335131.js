@@ -30,8 +30,8 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("570140"),
-  a = n("37234"),
-  s = n("881052");
+  s = n("37234"),
+  a = n("881052");
 n("777639");
 var o = n("549616"),
   l = n("778787"),
@@ -46,12 +46,12 @@ let _ = e => {
     r.default.dispatch({
       type: "COLLECTIBLES_SHOP_OPEN",
       ...n
-    }), t && (0, a.pushLayer)(d.Layers.COLLECTIBLES_SHOP)
+    }), t && (0, s.pushLayer)(d.Layers.COLLECTIBLES_SHOP)
   },
   c = () => {
     r.default.dispatch({
       type: "COLLECTIBLES_SHOP_CLOSE"
-    }), (0, a.popLayer)()
+    }), (0, s.popLayer)()
   },
   E = e => {
     r.default.dispatch({
@@ -78,7 +78,7 @@ let _ = e => {
       throw r.default.dispatch({
         type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
         error: e
-      }), new s.APIError(e)
+      }), new a.APIError(e)
     }
   }, T = async () => {
     r.default.dispatch({
@@ -94,7 +94,7 @@ let _ = e => {
       throw r.default.dispatch({
         type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
         error: e
-      }), new s.APIError(e)
+      }), new a.APIError(e)
     }
   }, f = async (e, t) => {
     r.default.dispatch({
@@ -104,21 +104,21 @@ let _ = e => {
     try {
       let n = {};
       (null == t ? void 0 : t.countryCode) !== null && (n.country_code = null == t ? void 0 : t.countryCode), (null == t ? void 0 : t.paymentGateway) !== null && (n.payment_gateway = null == t ? void 0 : t.paymentGateway);
-      let a = await i.HTTP.get({
+      let s = await i.HTTP.get({
         url: d.Endpoints.COLLECTIBLES_PRODUCTS(e),
         query: n
       });
       r.default.dispatch({
         type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
         skuId: e,
-        product: l.default.fromServer(a.body)
+        product: l.default.fromServer(s.body)
       })
     } catch (t) {
       throw r.default.dispatch({
         type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
         skuId: e,
         error: t
-      }), new s.APIError(t)
+      }), new a.APIError(t)
     }
   }, S = async e => {
     r.default.dispatch({
@@ -143,7 +143,7 @@ let _ = e => {
         type: "COLLECTIBLES_CLAIM_FAILURE",
         skuId: e,
         error: t
-      }), new s.APIError(t)
+      }), new a.APIError(t)
     }
   }, h = async (e, t) => {
     try {
@@ -155,7 +155,7 @@ let _ = e => {
         }
       })).body.valid
     } catch (e) {
-      throw new s.APIError(e)
+      throw new a.APIError(e)
     }
   }, A = e => {
     r.default.dispatch({

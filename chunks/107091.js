@@ -23,10 +23,10 @@ var l = a("735250"),
   b = a("598"),
   x = a("333867"),
   v = a("329067"),
-  S = a("981631"),
-  I = a("302800"),
-  T = a("689938"),
-  L = a("894775");
+  I = a("981631"),
+  S = a("302800"),
+  L = a("689938"),
+  T = a("894775");
 let N = {
     xMin: -100,
     xMax: 100,
@@ -52,15 +52,15 @@ function y(e) {
     paymentSource: a,
     onPurchaseComplete: y,
     onUse: A,
-    onError: O,
-    onReviewPurchase: j,
-    loadId: R,
-    baseAnalyticsData: k,
+    onError: j,
+    onReviewPurchase: O,
+    loadId: k,
+    baseAnalyticsData: R,
     confettiCanvas: P = null
   } = e;
-  R = null != R ? R : (0, r.v4)();
-  let M = s.useRef(null),
-    [B] = t.items,
+  k = null != k ? k : (0, r.v4)();
+  let B = s.useRef(null),
+    [M] = t.items,
     {
       analyticsLocations: D
     } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD, d.default.COLLECTIBLES_LIGHTNING_CHECKOUT),
@@ -68,9 +68,9 @@ function y(e) {
       buttonColors: F
     } = (0, m.default)(t.styles),
     H = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    w = (0, I.getCustomConfettiDisplayOptions)(t.skuId),
+    w = (0, S.getCustomConfettiDisplayOptions)(t.skuId),
     [U, W] = s.useState(!1),
-    [V, G] = s.useState(!1),
+    [G, V] = s.useState(!1),
     K = null != F ? {
       background: (0, p.getBackgroundGradient)(F, 90),
       color: F.text.toHslString()
@@ -83,91 +83,91 @@ function y(e) {
         W(!0), y()
       },
       onError: e => {
-        O(e), G(!0)
+        j(e), V(!0)
       },
-      onReviewPurchase: j,
+      onReviewPurchase: O,
       paymentSource: a,
       skuId: t.skuId,
-      loadId: R,
-      baseAnalyticsData: k
+      loadId: k,
+      baseAnalyticsData: R
     };
   return (0, l.jsxs)("div", {
-    ref: M,
-    className: L.container,
-    children: [V && (0, l.jsxs)("div", {
-      className: L.cardDetails,
+    ref: B,
+    className: T.container,
+    children: [G && (0, l.jsxs)("div", {
+      className: T.cardDetails,
       children: [(0, l.jsx)(o.Text, {
         variant: "text-lg/bold",
-        className: L.productName,
-        children: T.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE
+        className: T.productName,
+        children: L.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE
       }), (0, l.jsx)("div", {
-        className: L.innerBlur,
+        className: T.innerBlur,
         children: (0, l.jsx)(o.Text, {
-          className: L.description,
+          className: T.description,
           variant: "text-md/normal",
-          children: T.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION
+          children: L.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION
         })
       }), (0, l.jsx)(o.Button, {
         onClick: () => {
-          j(), (0, x.default)({
+          O(), (0, x.default)({
             skuId: t.skuId,
             analyticsLocations: D,
-            returnRef: M
+            returnRef: B
           })
         },
-        children: T.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
+        children: L.default.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
       })]
-    }), !V && (U ? (0, l.jsxs)("div", {
-      className: L.cardDetails,
+    }), !G && (U ? (0, l.jsxs)("div", {
+      className: T.cardDetails,
       children: [(0, l.jsx)(o.Text, {
         variant: "text-lg/bold",
-        className: L.productName,
-        children: T.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
+        className: T.productName,
+        children: L.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
           itemName: t.name
         })
       }), (0, l.jsx)("div", {
-        className: L.innerBlur,
+        className: T.innerBlur,
         children: (0, l.jsx)(o.Text, {
-          className: L.description,
+          className: T.description,
           variant: "text-xs/normal",
-          children: T.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
+          children: L.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
         })
       }), (0, l.jsx)(_, {
         style: K,
         onClick: () => {
-          if (A(), (0, c.popLayer)(), z(), (null == B ? void 0 : B.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
+          if (A(), (0, c.popLayer)(), z(), (null == M ? void 0 : M.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
             (0, C.openAvatarDecorationModal)({
-              initialSelectedDecoration: B,
+              initialSelectedDecoration: M,
               analyticsLocations: D
             });
             return
-          }(null == B ? void 0 : B.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, h.openProfileEffectModal)({
-            initialSelectedEffectId: B.id,
+          }(null == M ? void 0 : M.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, h.openProfileEffectModal)({
+            initialSelectedEffectId: M.id,
             analyticsLocations: D
           })
         },
-        children: T.default.Messages.COLLECTIBLES_USE_NOW
+        children: L.default.Messages.COLLECTIBLES_USE_NOW
       })]
     }) : (0, l.jsxs)("div", {
-      className: L.cardDetails,
+      className: T.cardDetails,
       children: [(0, l.jsx)(o.Text, {
         variant: "text-lg/bold",
-        className: L.productName,
+        className: T.productName,
         children: t.name
       }), (0, l.jsx)(b.PaymentContextProvider, {
-        loadId: R,
+        loadId: k,
         stepConfigs: [],
-        applicationId: S.COLLECTIBLES_APPLICATION_ID,
+        applicationId: I.COLLECTIBLES_APPLICATION_ID,
         skuIDs: [t.skuId],
         isGift: !1,
         activeSubscription: null,
-        purchaseType: S.PurchaseTypes.ONE_TIME,
+        purchaseType: I.PurchaseTypes.ONE_TIME,
         children: (0, l.jsx)(v.default, {
           ...Y
         })
       })]
-    })), !V && U && !(null != w) && !H && (0, l.jsx)(g.default, {
-      confettiTarget: M.current,
+    })), !G && U && !(null != w) && !H && (0, l.jsx)(g.default, {
+      confettiTarget: B.current,
       customConfettiCanvas: P,
       speedValues: N,
       numBursts: 4,

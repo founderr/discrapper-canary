@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("120356"),
-  s = n.n(a),
+  s = n("120356"),
+  a = n.n(s),
   o = n("153832"),
   l = n("481060"),
   u = n("596454"),
@@ -27,7 +27,7 @@ let A = e => {
     var t;
     let {
       node: n,
-      tooltipPosition: a = I.EXPRESSION_TOOLTIP_PROPS.position,
+      tooltipPosition: s = I.EXPRESSION_TOOLTIP_PROPS.position,
       enableClick: o = !0
     } = e, d = null === (t = n.originalMatch) || void 0 === t ? void 0 : t[0], _ = null != d ? d : n.name, [c, T] = r.useState(!1), f = e => (0, i.jsx)(u.default, {
       ...e,
@@ -40,7 +40,7 @@ let A = e => {
       text: (0, I.renderClickableTooltipNode)(n.name, o),
       "aria-label": _,
       ...I.EXPRESSION_TOOLTIP_PROPS,
-      position: a,
+      position: s,
       shouldShow: !c,
       onTooltipShow: () => {
         o && N({
@@ -55,7 +55,7 @@ let A = e => {
           var n;
           T(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
-        className: s()(h.emojiContainer, {
+        className: a()(h.emojiContainer, {
           [h.emojiContainerClickable]: o
         }),
         children: f(t)
@@ -81,7 +81,7 @@ let A = e => {
     let {
       node: t,
       isInteracting: n,
-      tooltipPosition: a = I.EXPRESSION_TOOLTIP_PROPS.position,
+      tooltipPosition: s = I.EXPRESSION_TOOLTIP_PROPS.position,
       enableClick: d = !0
     } = e, [S, A] = r.useState(String(Date.now())), [m, p] = r.useState(!1), [O, C] = r.useState(!1), R = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -97,7 +97,7 @@ let A = e => {
       text: (0, I.renderClickableTooltipNode)(t.name, d),
       "aria-label": t.name,
       ...I.EXPRESSION_TOOLTIP_PROPS,
-      position: a,
+      position: s,
       shouldShow: !O,
       onTooltipShow: () => {
         p(!0), d && (N({
@@ -122,7 +122,7 @@ let A = e => {
           }), p(!1))
         },
         tag: "span",
-        className: s()(h.emojiContainer, {
+        className: a()(h.emojiContainer, {
           [h.emojiContainerClickable]: d
         }),
         children: R(t)

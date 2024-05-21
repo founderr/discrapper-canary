@@ -4,18 +4,18 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i, r, a = n("836560");
+var i, r, s = n("836560");
 (i = r || (r = {})).VERTICAL = "vertical", i.HORIZONTAL = "horizontal";
-let s = {
+let a = {
   open: !1,
   orientation: null
 };
-class o extends a.EventEmitter {
+class o extends s.EventEmitter {
   get orientations() {
     return Object.values(r)
   }
   get state() {
-    return s
+    return a
   }
   check() {
     let e = function() {
@@ -34,12 +34,12 @@ class o extends a.EventEmitter {
       }() > 160,
       n = e ? "vertical" : "horizontal";
     if (!(t && e) && (e || t)) {
-      let e = s.open;
-      s = {
+      let e = a.open;
+      a = {
         open: !0,
         orientation: n
-      }, (!e || s.orientation !== n) && this.emit("changed", s)
-    } else s.open && (s.open = !1, this.emit("changed", s))
+      }, (!e || a.orientation !== n) && this.emit("changed", a)
+    } else a.open && (a.open = !1, this.emit("changed", a))
   }
   constructor() {
     super(), setInterval(() => this.check(), 500)

@@ -5,8 +5,8 @@ function i(e, t) {
   let n = [],
     i = e[0];
   for (let r = 1; r < e.length; r++) {
-    let a = e[r];
-    n.push(t(i, a)), i = a
+    let s = e[r];
+    n.push(t(i, s)), i = s
   }
   return n
 }

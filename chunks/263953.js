@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return A
   }
 }), n("47120");
-var i, r, a, s, o, l, u = n("735250"),
+var i, r, s, a, o, l, u = n("735250"),
   d = n("470079"),
   _ = n("120356"),
   c = n.n(_),
@@ -21,7 +21,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(o = i || (i = {}))[o.ENTERING = 0] = "ENTERING", o[o.LEAVING = 1] = "LEAVING", o[o.APPEARING = 2] = "APPEARING", o[o.STATIC = 3] = "STATIC", (l = r || (r = {})).SLIDE = "slide", l.LIFT = "lift";
-class h extends(a = d.PureComponent) {
+class h extends(s = d.PureComponent) {
   componentDidMount() {
     if (null != this._measureRef.current) {
       let {
@@ -134,8 +134,8 @@ class h extends(a = d.PureComponent) {
     } = this.props, {
       animationProgress: i,
       animationState: r,
-      baseHeight: a,
-      targetHeight: s
+      baseHeight: s,
+      targetHeight: a
     } = this.state, o = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0, l = null !== (t = this.props.verticalMargin) && void 0 !== t ? t : 0, u = 1 === r, d = 0 === r;
     return {
       overflow: d || u ? "hidden" : "visible",
@@ -153,7 +153,7 @@ class h extends(a = d.PureComponent) {
       }),
       height: d ? i.interpolate({
         inputRange: [0, 1],
-        outputRange: [a, s],
+        outputRange: [s, a],
         extrapolate: "clamp",
         easing: E.default.Easing.inOut(E.default.Easing.ease)
       }) : n ? "100%" : "auto"
@@ -200,7 +200,7 @@ class h extends(a = d.PureComponent) {
 S(h, "contextType", T.AccessibilityPreferencesContext), S(h, "defaultProps", {
   duration: 300
 });
-class A extends(s = d.Component) {
+class A extends(a = d.Component) {
   componentDidMount() {
     this.setPrevSteps()
   }
@@ -221,8 +221,8 @@ class A extends(s = d.Component) {
       innerClassName: n,
       animatedNodeClassName: i,
       staticClassName: r,
-      sideMargin: a,
-      verticalMargin: s,
+      sideMargin: s,
+      verticalMargin: a,
       children: o,
       fillParent: l,
       animationMotionType: d
@@ -232,9 +232,9 @@ class A extends(s = d.Component) {
       className: c()(f.transitionGroup, t),
       children: (0, u.jsx)(h, {
         fillParent: l,
-        sideMargin: a,
+        sideMargin: s,
         animationMotionType: null != d ? d : "slide",
-        verticalMargin: s,
+        verticalMargin: a,
         getDirection: this.getDirection,
         getBaseHeight: this.getBaseHeight,
         className: n,
