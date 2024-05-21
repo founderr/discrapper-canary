@@ -95,7 +95,35 @@ function y(e) {
     traitsToHighlight: n,
     expanded: s,
     traitClassName: a
-  } = e, l = r.useMemo(() => new Set(n), [n]);
+  } = e, l = r.useMemo(() => new Set(n), [n]), u = r.useCallback(e => (0, i.jsx)(M, {
+    trait: e,
+    isHighlighted: l.has(e)
+  }, e), [l]), d = r.useCallback(e => (0, i.jsx)(o.Tooltip, {
+    text: (0, i.jsx)("div", {
+      className: v.overflowTooltip,
+      children: e.map(e => (0, i.jsx)("div", {
+        className: v.trait,
+        children: (0, i.jsx)(o.Text, {
+          variant: "text-xs/normal",
+          color: "text-normal",
+          lineClamp: 1,
+          children: e
+        })
+      }, e))
+    }),
+    "aria-label": "overflow",
+    children: t => (0, i.jsx)("div", {
+      ...t,
+      className: v.trait,
+      children: (0, i.jsx)(o.Text, {
+        variant: "text-xs/normal",
+        color: "text-normal",
+        children: L.default.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({
+          count: e.length
+        })
+      })
+    })
+  }), []);
   return s ? (0, i.jsx)("div", {
     className: v.expandedTraitsContainer,
     children: t.map(e => (0, i.jsx)(M, {
@@ -105,38 +133,11 @@ function y(e) {
     }, e))
   }) : (0, i.jsx)(C.default, {
     items: t,
-    renderItem: e => (0, i.jsx)(M, {
-      trait: e,
-      isHighlighted: l.has(e)
-    }, e),
-    renderOverflow: e => (0, i.jsx)(o.Tooltip, {
-      text: (0, i.jsx)("div", {
-        className: v.overflowTooltip,
-        children: e.map(e => (0, i.jsx)("div", {
-          className: v.trait,
-          children: (0, i.jsx)(o.Text, {
-            variant: "text-xs/normal",
-            color: "text-normal",
-            lineClamp: 1,
-            children: e
-          })
-        }, e))
-      }),
-      "aria-label": "overflow",
-      children: t => (0, i.jsx)("div", {
-        ...t,
-        className: v.trait,
-        children: (0, i.jsx)(o.Text, {
-          variant: "text-xs/normal",
-          color: "text-normal",
-          children: L.default.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({
-            count: e.length
-          })
-        })
-      })
-    }),
+    renderItem: u,
+    renderOverflow: d,
     maxLines: 2,
-    className: v.traitsContainer
+    className: v.traitsContainer,
+    spacing: 4
   })
 }
 

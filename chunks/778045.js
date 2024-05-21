@@ -23,7 +23,9 @@ function l(e) {
             alt: e.name,
             className: o.tooltipGameImage
           })
-        }), (0, i.jsx)("span", {
+        }), (0, i.jsx)(s.Text, {
+          variant: "text-xs/medium",
+          color: "text-normal",
           className: o.tooltipGameName,
           children: e.name
         })]

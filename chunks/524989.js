@@ -20,10 +20,10 @@ function u(e, t) {
       _ = s === t.maxLines - 1,
       c = s + 2 < t.maxLines,
       E = u > t.parentWidth,
-      I = _ && !d ? t.overflowWidth : 0,
+      I = _ && !d ? t.spacing + t.overflowWidth : 0,
       T = 0 === t.parentWidth,
-      f = !a && r + u + t.spacing + I < t.parentWidth;
-    T || f ? (r += u + t.spacing, n.push(l)) : s < t.maxLines - 1 ? (s++, r = u + t.spacing, n.push(l)) : E && !_ && 0 === r ? (s++, n.push(l)) : E && c && r > 0 ? (n.push(l), s += 2) : (a = !0, i.push(l))
+      f = !a && r + t.spacing + u + I < t.parentWidth;
+    T || f || 0 === r ? (r > 0 && (r += t.spacing), r += u, n.push(l)) : s < t.maxLines - 1 ? (s++, r = u, n.push(l)) : E && !_ && 0 === r ? (s++, n.push(l)) : E && c && r > 0 ? (n.push(l), s += 2) : (a = !0, i.push(l))
   }
   return {
     ...t,
