@@ -10,5 +10,5 @@ var a = n("442837"),
   i = n("823379");
 
 function r(e) {
-  return (0, a.useStateFromStores)([s.default, l.default], () => s.default.memberOf(e).map(l.default.getGuild).filter(i.isNotNullish))
+  return (0, a.useStateFromStoresArray)([s.default, l.default], () => s.default.memberOf(e).map(l.default.getGuild).filter(i.isNotNullish))
 }
