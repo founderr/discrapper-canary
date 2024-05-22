@@ -38,8 +38,8 @@ var a = s("735250"),
   U = s("450474"),
   P = s("354051"),
   b = s("347604"),
-  B = s("203377"),
-  y = s("981631"),
+  y = s("203377"),
+  B = s("981631"),
   F = s("731455"),
   H = s("689938"),
   k = s("612247");
@@ -112,7 +112,7 @@ class Y extends l.PureComponent {
       isGuildAdmin: t
     } = this.props;
     if (null == e) return;
-    let s = e.hasFeature(y.GuildFeatures.DISCOVERABLE);
+    let s = e.hasFeature(B.GuildFeatures.DISCOVERABLE);
     return (0, a.jsxs)(r.FormSection, {
       className: k.twoColumnFormSection,
       children: [(0, a.jsxs)("div", {
@@ -133,7 +133,6 @@ class Y extends l.PureComponent {
             size: r.Button.Sizes.SMALL,
             onClick: this.handleToggleDiscovery,
             color: s ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
-            hover: s ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
             disabled: !t,
             ...e,
             children: s ? H.default.Messages.GUILD_SETTINGS_DISABLE_DISCOVERABLE : H.default.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
@@ -166,7 +165,6 @@ class Y extends l.PureComponent {
           }), (0, a.jsxs)(r.Button, {
             size: r.Button.Sizes.SMALL,
             color: r.Button.Colors.PRIMARY,
-            hover: r.Button.Colors.PRIMARY,
             children: [H.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(C.default, {
               disabled: !s,
               onChange: this.handleSplashChange
@@ -239,7 +237,6 @@ class Y extends l.PureComponent {
         }), (0, a.jsx)(r.Button, {
           size: r.Button.Sizes.SMALL,
           color: o ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
-          hover: o ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
           disabled: !t,
           onClick: this.handleToggleEmojiDiscoverability,
           children: o ? H.default.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_DISABLE : H.default.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_ENABLE
@@ -247,7 +244,7 @@ class Y extends l.PureComponent {
       }), null != u && u.isDiscoverable() && (0, a.jsx)(x.CustomGuildEmojiPopout, {
         expressionSourceGuild: u,
         node: E,
-        closePopout: y.NOOP,
+        closePopout: B.NOOP,
         nonce: (0, n.v4)(),
         demoMode: !0
       })]
@@ -342,8 +339,8 @@ class Y extends l.PureComponent {
         tags: t.keywords,
         onRemoveTag: this.handleRemoveKeyword,
         onAddTag: this.handleAddKeyword,
-        maxTags: B.MAX_KEYWORDS,
-        maxTaxLength: B.MAX_KEYWORD_LENGTH,
+        maxTags: y.MAX_KEYWORDS,
+        maxTaxLength: y.MAX_KEYWORD_LENGTH,
         disabled: !e
       }), (null == s ? void 0 : s.keywords) != null ? (0, a.jsx)(r.Text, {
         color: "text-danger",
@@ -398,7 +395,7 @@ class Y extends l.PureComponent {
     }), w(this, "checkForLowerMemberCountReqEnabled", e => {
       let {
         isGuildAdmin: t
-      } = this.props, s = e.hasFeature(y.GuildFeatures.COMMUNITY), {
+      } = this.props, s = e.hasFeature(B.GuildFeatures.COMMUNITY), {
         enableLowerMemberCountReq: a
       } = T.DiscoveryRequirementsM2Experiment.getCurrentConfig({
         guildId: e.id,
@@ -414,7 +411,7 @@ class Y extends l.PureComponent {
       } = this.props;
       if (null == e) return;
       let t = new Set(e.features);
-      e.hasFeature(y.GuildFeatures.DISCOVERABLE) ? t.delete(y.GuildFeatures.DISCOVERABLE) : t.add(y.GuildFeatures.DISCOVERABLE), j.default.updateGuild({
+      e.hasFeature(B.GuildFeatures.DISCOVERABLE) ? t.delete(B.GuildFeatures.DISCOVERABLE) : t.add(B.GuildFeatures.DISCOVERABLE), j.default.updateGuild({
         features: t
       })
     }), w(this, "handleEnableDiscovery", async () => {
@@ -464,7 +461,7 @@ class Y extends l.PureComponent {
       } = this.props, {
         keywords: a
       } = s;
-      if ((null == t ? void 0 : t.id) != null) !(a.length >= B.MAX_KEYWORDS) && S.updateGuildKeywords(t.id, [...a, e])
+      if ((null == t ? void 0 : t.id) != null) !(a.length >= y.MAX_KEYWORDS) && S.updateGuildKeywords(t.id, [...a, e])
     }), w(this, "handleToggleEmojiDiscoverability", () => {
       let {
         guild: e,
@@ -482,12 +479,12 @@ t.default = i.default.connectStores([G.default, O.default, _.default, L.default,
     errors: t,
     submitting: s,
     guildMetadata: a
-  } = G.default.getProps(), l = O.default.can(y.Permissions.MANAGE_GUILD, e), n = O.default.can(y.Permissions.ADMINISTRATOR, e), i = null != e ? _.default.getDiscoveryChecklist(e.id) : null, r = null != e ? L.default.getChannels(e.id) : null, o = [];
+  } = G.default.getProps(), l = O.default.can(B.Permissions.MANAGE_GUILD, e), n = O.default.can(B.Permissions.ADMINISTRATOR, e), i = null != e ? _.default.getDiscoveryChecklist(e.id) : null, r = null != e ? L.default.getChannels(e.id) : null, o = [];
   null != r && r[0, L.GUILD_SELECTABLE_CHANNELS_KEY].forEach(e => {
     let {
       channel: t
     } = e;
-    t.type === y.ChannelTypes.GUILD_TEXT && o.push({
+    t.type === B.ChannelTypes.GUILD_TEXT && o.push({
       value: t.id,
       label: (0, u.computeChannelName)(t, A.default, p.default, !0)
     })

@@ -401,7 +401,7 @@ function et() {
       }), (0, a.jsx)("div", {
         className: G.ttsPreviewWrapper,
         children: (0, a.jsx)(u.Button, {
-          color: u.ButtonColors.BRAND_NEW,
+          color: u.ButtonColors.BRAND,
           onClick: () => {
             if (s) {
               (0, h.stopSpeaking)(), l(!1);

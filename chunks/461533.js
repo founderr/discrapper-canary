@@ -60,7 +60,7 @@ function o(e) {
     }), (0, a.jsxs)(s.ModalFooter, {
       children: [(0, a.jsx)(s.Button, {
         onClick: c,
-        color: s.Button.Colors.BRAND_NEW,
+        color: s.Button.Colors.BRAND,
         look: s.Button.Looks.FILLED,
         children: d.default.Messages.SUBMIT
       }), (0, a.jsx)(s.Button, {

@@ -1,7 +1,7 @@
 "use strict";
 o.r(t), o.d(t, {
   default: function() {
-    return h
+    return A
   }
 });
 var s = o("735250"),
@@ -13,21 +13,21 @@ var s = o("735250"),
   l = o("36459"),
   c = o("981631"),
   u = o("689938"),
-  _ = o("11385");
+  h = o("11385");
 
-function h(e) {
+function A(e) {
   let {
     automodDecision: t,
     transitionState: o,
-    onClose: h
-  } = e, A = a.useCallback(() => {
+    onClose: A
+  } = e, _ = a.useCallback(() => {
     (0, d.trackWithMetadata)(c.AnalyticEvents.GUILD_AUTOMOD_FEEDBACK, {
       feedback_type: r.Feedback.BUG,
       decision_id: t.decisionId,
       message_id: t.messageId,
       content: t.messageContent
-    }), (0, l.executeAlertAction)(t.messageId, t.channel, i.AutomodAlertActionType.SUBMIT_FEEDBACK), h()
-  }, [t, h]);
+    }), (0, l.executeAlertAction)(t.messageId, t.channel, i.AutomodAlertActionType.SUBMIT_FEEDBACK), A()
+  }, [t, A]);
   return (0, s.jsxs)(n.ModalRoot, {
     transitionState: o,
     size: n.ModalSize.SMALL,
@@ -46,15 +46,15 @@ function h(e) {
       })
     }), (0, s.jsxs)(n.ModalFooter, {
       children: [(0, s.jsx)("div", {
-        className: _.button,
+        className: h.button,
         children: (0, s.jsx)(n.Button, {
-          onClick: A,
-          color: n.Button.Colors.BRAND_NEW,
+          onClick: _,
+          color: n.Button.Colors.BRAND,
           look: n.Button.Looks.FILLED,
           children: u.default.Messages.YES_TEXT
         })
       }), (0, s.jsx)(n.Button, {
-        onClick: h,
+        onClick: A,
         color: n.Button.Colors.PRIMARY,
         look: n.Button.Looks.LINK,
         children: u.default.Messages.CANCEL

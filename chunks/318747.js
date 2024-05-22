@@ -23,10 +23,9 @@ t.default = e => {
     isGift: !0,
     color: f,
     look: l.ButtonLooks.OUTLINED,
-    hover: l.ButtonHovers.BRAND,
     buttonText: S,
     giftMessage: r,
-    className: i()(t, R ? _.buttonWhite : _.buttonBrand),
+    className: i()(t, _.giftButton, R ? _.buttonWhite : _.buttonBrand),
     subscriptionTier: E,
     ...T
   })

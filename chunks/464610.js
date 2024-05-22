@@ -93,7 +93,6 @@ function S(e) {
       size: n.Button.Sizes.SMALL,
       color: n.Button.Colors.PRIMARY,
       look: n.Button.Looks.OUTLINED,
-      borderColor: n.Button.BorderColors.PRIMARY,
       onClick: () => (0, u.setSafetyPage)(i),
       children: _.default.Messages.EDIT
     })]

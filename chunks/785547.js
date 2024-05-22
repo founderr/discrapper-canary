@@ -21,8 +21,8 @@ var s, a, l, i = n("735250"),
   N = n("780570"),
   S = n("358085"),
   C = n("814225"),
-  A = n("346329"),
-  g = n("701560"),
+  g = n("346329"),
+  A = n("701560"),
   M = n("981631"),
   R = n("689938"),
   v = n("340514");
@@ -101,7 +101,7 @@ class D extends(a = r.Component) {
       analyticsListSort: u,
       analyticsListIndex: d
     } = this.props;
-    return (0, i.jsx)(g.default, {
+    return (0, i.jsx)(A.default, {
       applicationId: e.id,
       libraryApplication: e,
       fullWidth: t,
@@ -172,7 +172,6 @@ class D extends(a = r.Component) {
       fullWidth: s,
       size: a,
       color: null != l ? l : d.Button.Colors.GREEN,
-      hover: null != l ? d.Button.Hovers.GREEN : d.Button.Hovers.DEFAULT,
       submitting: "uninstalling" === e || r,
       onClick: e => this.handleClick(e, t),
       children: [this.getText(e), this.renderProgressBar()]
@@ -212,12 +211,12 @@ class D extends(a = r.Component) {
         libraryApplication: e,
         source: t
       } = this.props;
-      A.installApplication(e.id, e.branchId, t)
+      g.installApplication(e.id, e.branchId, t)
     }), O(this, "handleUpdate", () => {
       let {
         libraryApplication: e
       } = this.props;
-      A.updateApplication(e.id, e.branchId)
+      g.updateApplication(e.id, e.branchId)
     }), O(this, "onClickHandlers", {
       add_to_library: this.handleAddToLibrary,
       install: this.handleInstall,

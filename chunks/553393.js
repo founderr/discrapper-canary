@@ -238,7 +238,6 @@ t.default = function(e) {
               ei(), eu.handleClickCta()
             },
             color: d.Button.Colors.CUSTOM,
-            hover: d.Button.Hovers.PRIMARY,
             className: b.ctaButton,
             children: eu.ctaText
           })]

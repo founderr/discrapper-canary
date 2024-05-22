@@ -47,7 +47,7 @@ a.default = e => {
         wrap: o.default.Wrap.WRAP,
         children: [(0, t.jsx)(n.Button, {
           type: "submit",
-          size: n.Button.Sizes.XLARGE,
+          size: n.Button.Sizes.LARGE,
           className: l()(d.primaryButton, d.gutter),
           autoFocus: !0,
           children: c.default.Messages.GOT_IT

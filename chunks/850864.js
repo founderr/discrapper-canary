@@ -41,8 +41,8 @@ var a = s("735250"),
   U = s("709586"),
   P = s("151785"),
   b = s("931468"),
-  B = s("768581"),
-  y = s("700785"),
+  y = s("768581"),
+  B = s("700785"),
   F = s("434404"),
   H = s("999382"),
   k = s("8426"),
@@ -120,13 +120,13 @@ function ee(e) {
   } = e, O = (0, r.useStateFromStores)([L.default], () => L.default.getChannel(T.channelId)), A = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(I)), {
     customEmoji: D,
     unicodeEmoji: v
-  } = (0, f.default)(null === (t = T.emoji) || void 0 === t ? void 0 : t.id, null === (n = T.emoji) || void 0 === n ? void 0 : n.name), U = null == T.emoji || null != D || null != v, P = B.default.getNewMemberActionIconURL({
+  } = (0, f.default)(null === (t = T.emoji) || void 0 === t ? void 0 : t.id, null === (n = T.emoji) || void 0 === n ? void 0 : n.name), U = null == T.emoji || null != D || null != v, P = y.default.getNewMemberActionIconURL({
     channelId: T.channelId,
     icon: T.icon
   }), b = null;
   null != O && (0, m.isChannelValidForNewMemberAction)(O) ? !U && (b = K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : b = K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL;
   let {
-    drag: y,
+    drag: B,
     dragSourcePosition: F,
     drop: H,
     setIsDraggable: w
@@ -164,7 +164,7 @@ function ee(e) {
         [Z.dropIndicatorAfter]: null != F && S > F,
         [Z.actionItemError]: null != b
       }),
-      ref: e => y(H(e)),
+      ref: e => B(H(e)),
       children: [(0, a.jsx)("div", {
         className: Z.dragContainer,
         onMouseEnter: () => w(!0),
@@ -410,7 +410,7 @@ function en(e) {
   if (null == i) return null;
   let _ = (0, a.jsx)(h.default, {
     image: i.homeHeader,
-    makeURL: e => null != e ? B.default.getGuildHomeHeaderURL({
+    makeURL: e => null != e ? y.default.getGuildHomeHeaderURL({
       id: i.id,
       homeHeader: e
     }) : null,
@@ -442,7 +442,7 @@ function en(e) {
           color: "header-secondary",
           children: K.default.Messages.GUILD_SETTINGS_HOME_HEADER_RECOMMEND
         }), (0, a.jsxs)(d.Button, {
-          color: d.ButtonColors.BRAND_NEW,
+          color: d.ButtonColors.BRAND,
           className: Z.uploadButton,
           children: [K.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(C.default, {
             onChange: u,
@@ -519,7 +519,7 @@ function ei(e) {
   } = n, N = L.default.getChannel(S), g = null;
   (null == N || !(0, m.isChannelValidForResourceChannel)(N)) && (g = K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_RESOURCE_CHANNEL);
   let h = null == f || 0 === f.length,
-    C = B.default.getResourceChannelIconURL({
+    C = y.default.getResourceChannelIconURL({
       channelId: n.channelId,
       icon: n.icon
     }),
@@ -667,7 +667,7 @@ function eo(e) {
   } = e, s = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(t)), n = (0, r.useStateFromStoresArray)([w.default], () => {
     var e, t;
     return null !== (t = null === (e = w.default.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map(e => e.channelId)) && void 0 !== t ? t : []
-  }), i = (0, r.useStateFromStoresArray)([w.default], () => w.default.getDismissedSuggestedChannelIds(t)), o = (0, r.useStateFromStores)([O.default], () => null == t ? [] : O.default.getSelectableChannels(t)).filter(e => !i.includes(e.channel.id) && !n.includes(e.channel.id) && e.channel.type === V.ChannelTypes.GUILD_TEXT && y.canEveryoneRole(V.Permissions.VIEW_CHANNEL, e.channel) && !y.canEveryoneRole(V.Permissions.SEND_MESSAGES, e.channel) && e.channel.id !== (null == s ? void 0 : s.rulesChannelId)).slice(0, 5), u = l.useCallback(() => {
+  }), i = (0, r.useStateFromStoresArray)([w.default], () => w.default.getDismissedSuggestedChannelIds(t)), o = (0, r.useStateFromStores)([O.default], () => null == t ? [] : O.default.getSelectableChannels(t)).filter(e => !i.includes(e.channel.id) && !n.includes(e.channel.id) && e.channel.type === V.ChannelTypes.GUILD_TEXT && B.canEveryoneRole(V.Permissions.VIEW_CHANNEL, e.channel) && !B.canEveryoneRole(V.Permissions.SEND_MESSAGES, e.channel) && e.channel.id !== (null == s ? void 0 : s.rulesChannelId)).slice(0, 5), u = l.useCallback(() => {
     let e = o.map(e => e.channel.id);
     (0, k.dismissSuggestedChannels)(t, e)
   }, [t, o]);

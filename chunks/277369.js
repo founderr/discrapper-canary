@@ -32,7 +32,7 @@ function c(e) {
       size: 16
     }), (0, a.jsx)(n.Button, {
       look: n.Button.Looks.FILLED,
-      color: null != T ? n.Button.Colors.PRIMARY : n.Button.Colors.BRAND_NEW,
+      color: null != T ? n.Button.Colors.PRIMARY : n.Button.Colors.BRAND,
       onClick: () => {
         var e;
         return e = c, void(0, n.openModalLazy)(async () => {

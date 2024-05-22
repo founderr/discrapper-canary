@@ -19,8 +19,8 @@ var s, a = n("735250"),
   N = n("646288"),
   S = n("703656"),
   C = n("706454"),
-  A = n("594174"),
-  g = n("580130"),
+  g = n("594174"),
+  A = n("580130"),
   M = n("855775"),
   R = n("55563"),
   v = n("695103"),
@@ -55,13 +55,6 @@ class G extends(s = l.Component) {
       objectType: t ? j.AnalyticsObjectTypes.GIFT : j.AnalyticsObjectTypes.BUY,
       promotionId: n
     }
-  }
-  get hover() {
-    let {
-      hover: e,
-      color: t
-    } = this.props;
-    return null != e ? e : null != t ? d.Button.Hovers.GREEN : d.Button.Hovers.DEFAULT
   }
   componentDidMount() {
     let {
@@ -122,27 +115,26 @@ class G extends(s = l.Component) {
       } = this.props,
       S = !0 === m && (null == I || I.type !== j.SKUTypes.CONSUMABLE),
       C = !0 === n.disabled || null != I && !I.available && !(null != p) && !h || S && !T,
-      A = n.disabledTooltipText,
-      g = {
+      g = n.disabledTooltipText,
+      A = {
         wrapperClassName: l,
         className: i,
         fullWidth: o,
         size: u,
         color: C && null != E ? E : null != f ? f : d.Button.Colors.GREEN,
-        hover: this.hover,
         innerClassName: r()(null != N ? N : null, B.applicationBuyButton),
         disabled: C,
         submitting: s || !0 === n.submitting,
         onClick: null != n.onClick ? n.onClick : this.handleClick
       };
     return (t = !0 === n.useShinyButton ? (0, a.jsxs)(x.default, {
-      ...g,
+      ...A,
       pauseAnimation: !c || _,
       children: [n.buttonIcon, e]
     }) : (0, a.jsxs)(d.Button, {
-      ...g,
+      ...A,
       children: [n.buttonIcon, e]
-    }), null != A) ? this.wrapWithDisabledTooltip(t, A) : t
+    }), null != g) ? this.wrapWithDisabledTooltip(t, g) : t
   }
   renderFreeButton(e, t) {
     let {
@@ -280,13 +272,13 @@ F(G, "defaultProps", {
     channelId: l,
     skuId: i,
     ...r
-  } = e, o = (0, u.useStateFromStores)([p.default, v.default], () => v.default.inTestModeForApplication(s) || p.default.inDevModeForApplication(s), [s]), [d, c, f, E, _, m] = (0, u.useStateFromStoresArray)([h.default, A.default, R.default, g.default], () => {
+  } = e, o = (0, u.useStateFromStores)([p.default, v.default], () => v.default.inTestModeForApplication(s) || p.default.inDevModeForApplication(s), [s]), [d, c, f, E, _, m] = (0, u.useStateFromStoresArray)([h.default, g.default, R.default, A.default], () => {
     let e = h.default.getApplication(s),
-      t = A.default.getCurrentUser(),
+      t = g.default.getCurrentUser(),
       a = null == i && null != e ? e.destinationSkuId : i,
       l = null != a ? R.default.get(a) : null,
       r = null != n ? n : s,
-      o = null != a ? g.default.isEntitledToSku(t, a, s, r) : null,
+      o = null != a ? A.default.isEntitledToSku(t, a, s, r) : null,
       u = y.default.canInstallPremiumApplications(t);
     return [e, t, l, o, u, a]
   }), T = (0, u.useStateFromStores)([O.default], () => O.default.isFocused()), N = (0, u.useStateFromStores)([M.default], () => M.default.isPurchasingSKU), S = (0, u.useStateFromStores)([C.default], () => C.default.locale), x = (0, I.useAnalyticsContext)();

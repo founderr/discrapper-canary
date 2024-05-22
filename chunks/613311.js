@@ -514,7 +514,7 @@ class eE extends r.PureComponent {
             size: ei.TestModeStoreListingButtonEnums.Sizes.MIN,
             dropdownSize: ei.TestModeStoreListingButtonEnums.DropdownSizes.MEDIUM,
             look: ei.TestModeStoreListingButtonEnums.Looks.OUTLINED,
-            color: ei.TestModeStoreListingButtonEnums.Colors.YELLOW,
+            color: ei.TestModeStoreListingButtonEnums.Colors.RED,
             skuId: t.id,
             className: ec.testModeSelectButton,
             currentStoreListingId: null != i ? i.id : null,

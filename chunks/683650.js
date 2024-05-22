@@ -21,7 +21,7 @@ function E() {
     className: c.buttonContainer,
     children: (0, s.jsx)(i.Button, {
       className: c.button,
-      color: i.ButtonColors.BRAND_NEW,
+      color: i.ButtonColors.BRAND,
       onClick: () => {
         r.default.open(u.UserSettingsSections.INVENTORY)
       },

@@ -80,7 +80,7 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       canManageGuild: U
     } = (0, n.useStateFromStoresObject)([f.default], () => ({
       canManageGuild: f.default.can(A.Permissions.MANAGE_GUILD, s)
-    })), P = (0, n.useStateFromStores)([L.default], () => L.default.isGuildMetadataLoaded()), b = (0, n.useStateFromStores)([L.default], () => null != s ? L.default.getMetadata() : null), B = (0, n.useStateFromStores)([L.default], () => null != s && (null == b ? void 0 : b.isPublished) ? L.default.getSlug() : null), [y, F] = l.useState([!0]), [H, k] = l.useState(!0), [w, V] = l.useState([!1]), [Y, W] = l.useState([""]), z = e => {
+    })), P = (0, n.useStateFromStores)([L.default], () => L.default.isGuildMetadataLoaded()), b = (0, n.useStateFromStores)([L.default], () => null != s ? L.default.getMetadata() : null), y = (0, n.useStateFromStores)([L.default], () => null != s && (null == b ? void 0 : b.isPublished) ? L.default.getSlug() : null), [B, F] = l.useState([!0]), [H, k] = l.useState(!0), [w, V] = l.useState([!1]), [Y, W] = l.useState([""]), z = e => {
       let t = Object.entries(M.ALLOWED_SOCIAL_LINKS_DOMAINS).filter(e => !Y.includes(e[1].presentation)).map(e => ({
         label: e[1].presentation,
         value: e[0]
@@ -171,7 +171,7 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       es = (e, t) => {
         let a = [...b.socialLinks],
           l = [...Y],
-          n = [...y];
+          n = [...B];
         l[t] = e, a[t] = M.ALLOWED_SOCIAL_LINKS_DOMAINS[e].baseUrl, n[t] = !0, F(n), W(l), k(n.every(e => !0 === e)), c.updateGuildDiscoveryMetadataSocialLinks(s.id, a)
       },
       ea = (e, t) => {
@@ -183,7 +183,7 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       el = e => {
         let t = [...w];
         t.splice(e, 1), V(t);
-        let a = [...y];
+        let a = [...B];
         a.splice(e, 1), F(a);
         let l = [...Y];
         l.splice(e, 1), W(l);
@@ -258,8 +258,8 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                       learnMoreURL: R.default.getArticleURL(A.HelpdeskArticles.SERVER_WEB_PAGES)
                     })]
                   }), (() => {
-                    if (!b.isPublished || null == B) return;
-                    let e = j + B;
+                    if (!b.isPublished || null == y) return;
+                    let e = j + y;
                     return (0, a.jsx)(a.Fragment, {
                       children: (0, a.jsxs)(r.FormSection, {
                         className: v.noDividerFormSection,
@@ -272,7 +272,6 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           className: v.viewPageButton,
                           size: r.Button.Sizes.SMALL,
                           color: r.Button.Colors.BRAND,
-                          hover: r.Button.Colors.BRAND,
                           onClick: () => window.open(e),
                           children: D.default.Messages.DISCOVERY_LANDING_PAGE_PUBLISHED_URL_VIEW_PAGE_BUTTON
                         })]
@@ -333,7 +332,6 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           }), (0, a.jsxs)(r.Button, {
                             size: r.Button.Sizes.SMALL,
                             color: r.Button.Colors.PRIMARY,
-                            hover: r.Button.Colors.PRIMARY,
                             children: [D.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(T.default, {
                               disabled: !U,
                               onChange: Q
@@ -463,7 +461,7 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           placeholder: D.default.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_HINT,
                           maxLength: 150,
                           disabled: !U
-                        }, "link-" + t), y[t] ? (0, a.jsx)(g.default, {
+                        }, "link-" + t), B[t] ? (0, a.jsx)(g.default, {
                           className: b.isPublished ? v.validationButtonMax : v.validationButtonMin,
                           color: i.default.unsafe_rawColors.GREEN_230.css,
                           width: 20,
@@ -484,7 +482,6 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                       }) : null, (0, a.jsx)(r.Button, {
                         size: r.Button.Sizes.SMALL,
                         color: r.Button.Colors.PRIMARY,
-                        hover: r.Button.Colors.PRIMARY,
                         onClick: et,
                         disabled: !U || b.socialLinks.length >= 9,
                         children: D.default.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_BUTTON_ADD_ANOTHER
@@ -504,7 +501,6 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                       }), (0, a.jsx)(r.Button, {
                         size: r.Button.Sizes.SMALL,
                         color: r.Button.Colors.RED,
-                        hover: r.Button.Colors.RED,
                         onClick: () => ee(!1),
                         disabled: !U,
                         children: D.default.Messages.DISCOVERY_LANDING_PAGE_DISABLE_BUTTON

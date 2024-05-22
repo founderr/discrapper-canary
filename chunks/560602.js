@@ -163,7 +163,7 @@ l.default = e => {
       className: h.footer,
       children: [(0, a.jsx)(d.Button, {
         type: "submit",
-        color: d.Button.Colors.BRAND_NEW,
+        color: d.Button.Colors.BRAND,
         size: d.Button.Sizes.SMALL,
         className: h.button,
         onClick: F,

@@ -112,7 +112,6 @@ function R(e) {
         size: i.Button.Sizes.SMALL,
         color: i.Button.Colors.PRIMARY,
         look: i.Button.Looks.OUTLINED,
-        borderColor: i.Button.BorderColors.PRIMARY,
         onClick: d,
         children: h.default.Messages.EDIT
       }) : (0, a.jsxs)(i.Button, {

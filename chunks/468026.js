@@ -30,7 +30,7 @@ t.default = e => {
   } = e;
   return null != T && "" !== T && (t = (0, i.jsx)(a.Button, {
     type: "button",
-    size: a.Button.Sizes.XLARGE,
+    size: a.Button.Sizes.LARGE,
     color: a.Button.Colors.PRIMARY,
     onClick: () => {
       null == N || N(), null == m || m()
@@ -40,7 +40,7 @@ t.default = e => {
   })), null != h && "" !== h && (n = (0, i.jsx)(a.Button, {
     type: "submit",
     color: S,
-    size: a.Button.Sizes.XLARGE,
+    size: a.Button.Sizes.LARGE,
     className: s()(E.primaryButton, null != t ? E.gutter : null),
     autoFocus: !0,
     children: h

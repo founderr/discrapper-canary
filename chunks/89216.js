@@ -18,11 +18,11 @@ var s = l("735250"),
   h = l("633302"),
   E = l("984933"),
   N = l("153124"),
-  _ = l("93879"),
-  T = l("689938"),
-  j = l("644737");
+  T = l("93879"),
+  j = l("689938"),
+  _ = l("644737");
 
-function v(e) {
+function I(e) {
   var a, t, n;
   let {
     onClose: i,
@@ -35,59 +35,59 @@ function v(e) {
   });
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)(r.ModalContent, {
-      className: j.infoContent,
+      className: _.infoContent,
       children: [(0, s.jsxs)("div", {
-        className: j.modalHeader,
+        className: _.modalHeader,
         children: [(0, s.jsx)("img", {
-          className: j.modalImage,
+          className: _.modalImage,
           "data-accessibility": "desaturate",
           alt: "",
           src: l("592614")
         }), (0, s.jsx)(r.Heading, {
           variant: "heading-lg/semibold",
           color: "header-primary",
-          children: T.default.Messages.GUILD_SETTINGS_DEPRIVATE_MODAL_HEADER
+          children: j.default.Messages.GUILD_SETTINGS_DEPRIVATE_MODAL_HEADER
         })]
       }), (0, s.jsxs)("ul", {
         children: [(0, s.jsxs)("li", {
-          className: j.infoListItem,
+          className: _.infoListItem,
           children: [(0, s.jsx)("div", {
-            className: j.iconWrapper,
+            className: _.iconWrapper,
             children: (0, s.jsx)(c.default, {
               emojiName: null === (a = h.default.getByName("eyes")) || void 0 === a ? void 0 : a.surrogates
             })
           }), (0, s.jsx)(r.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: T.default.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_1.format({
+            children: j.default.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_1.format({
               emphasisHook: o
             })
           })]
         }), (0, s.jsxs)("li", {
-          className: j.infoListItem,
+          className: _.infoListItem,
           children: [(0, s.jsx)("div", {
-            className: j.iconWrapper,
+            className: _.iconWrapper,
             children: (0, s.jsx)(c.default, {
               emojiName: null === (t = h.default.getByName("star_struck")) || void 0 === t ? void 0 : t.surrogates
             })
           }), (0, s.jsx)(r.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: T.default.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_2.format({
+            children: j.default.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_2.format({
               emphasisHook: o
             })
           })]
         }), (0, s.jsxs)("li", {
-          className: j.infoListItem,
+          className: _.infoListItem,
           children: [(0, s.jsx)("div", {
-            className: j.iconWrapper,
+            className: _.iconWrapper,
             children: (0, s.jsx)(c.default, {
               emojiName: null === (n = h.default.getByName("books")) || void 0 === n ? void 0 : n.surrogates
             })
           }), (0, s.jsx)(r.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: T.default.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_3.format({
+            children: j.default.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_3.format({
               emphasisHook: o
             })
           })]
@@ -99,51 +99,51 @@ function v(e) {
         children: (0, s.jsx)(r.Text, {
           variant: "text-md/medium",
           color: "always-white",
-          children: T.default.Messages.GUILD_SETTINGS_REVIEW_PERMISSIONS
+          children: j.default.Messages.GUILD_SETTINGS_REVIEW_PERMISSIONS
         })
       }), (0, s.jsx)(r.Button, {
-        className: j.__invalid_modalCancel,
+        className: _.__invalid_modalCancel,
         look: r.Button.Looks.LINK,
         color: r.Button.Colors.PRIMARY,
         onClick: i,
         children: (0, s.jsx)(r.Text, {
           variant: "text-md/medium",
-          children: T.default.Messages.CANCEL
+          children: j.default.Messages.CANCEL
         })
       })]
     })]
   })
 }
 
-function I(e) {
+function v(e) {
   var a;
   let {
     channel: l,
     selected: n,
     onChange: i
-  } = e, d = null !== (a = (0, x.getChannelIconComponent)(l)) && void 0 !== a ? a : _.default, o = t.useCallback(() => {
+  } = e, d = null !== (a = (0, x.getChannelIconComponent)(l)) && void 0 !== a ? a : T.default, o = t.useCallback(() => {
     i(l)
   }, [l, i]);
   return (0, s.jsxs)(r.Clickable, {
     "aria-label": l.name,
     "aria-checked": n,
-    className: j.selectableChannelRow,
+    className: _.selectableChannelRow,
     onClick: o,
     children: [(0, s.jsxs)("div", {
-      className: j.selectableChannelCellFirst,
+      className: _.selectableChannelCellFirst,
       children: [(0, s.jsx)(d, {
-        className: j.channelIcon,
+        className: _.channelIcon,
         width: 16,
         height: 16
       }), (0, s.jsx)(r.Text, {
-        className: j.__invalid_channelName,
+        className: _.__invalid_channelName,
         variant: "text-md/medium",
         color: "text-normal",
         lineClamp: 1,
         children: l.name
       })]
     }), (0, s.jsx)("div", {
-      className: j.selectableChannelCellSecond,
+      className: _.selectableChannelCellSecond,
       children: (0, s.jsx)(r.Checkbox, {
         type: r.Checkbox.Types.INVERTED,
         value: n,
@@ -163,9 +163,9 @@ function C(e) {
     var e, a;
     let l = E.default.getChannels(n);
     return (null !== (e = l[0, E.GUILD_SELECTABLE_CHANNELS_KEY]) && void 0 !== e ? e : []).concat(null !== (a = l[E.GUILD_VOCAL_CHANNELS_KEY]) && void 0 !== a ? a : []).filter(e => (0, m.default)(e.channel)).map(e => e.channel)
-  }), [h, _] = t.useState(0), C = x.find(e => e.id === c), [f, L] = t.useState(null != C ? [C] : []), S = (0, N.useUID)(), g = f.length === x.length, p = t.useCallback(() => {
-    _(1)
-  }, [_]), b = t.useCallback(e => {
+  }), [h, T] = t.useState(0), C = x.find(e => e.id === c), [f, L] = t.useState(null != C ? [C] : []), S = (0, N.useUID)(), g = f.length === x.length, p = t.useCallback(() => {
+    T(1)
+  }, [T]), b = t.useCallback(e => {
     L(a => a.includes(e) ? [...i().pull(a, e)] : [...a, e])
   }, [L]), A = t.useCallback(() => {
     g ? L([]) : L(x)
@@ -179,7 +179,7 @@ function C(e) {
     transitionState: a,
     "aria-labelledby": S,
     size: r.ModalSize.SMALL,
-    children: (0, s.jsx)(v, {
+    children: (0, s.jsx)(I, {
       handleReviewPermissions: p,
       onClose: l
     })
@@ -188,35 +188,35 @@ function C(e) {
     "aria-labelledby": S,
     size: r.ModalSize.SMALL,
     children: [(0, s.jsxs)(r.ModalContent, {
-      className: j.updateContent,
+      className: _.updateContent,
       children: [(0, s.jsxs)("div", {
-        className: j.modalHeader,
+        className: _.modalHeader,
         children: [(0, s.jsx)(r.Heading, {
           variant: "heading-lg/semibold",
           color: "header-primary",
-          children: T.default.Messages.GUILD_SETTINGS_DEPRIVATE_TITLE
+          children: j.default.Messages.GUILD_SETTINGS_DEPRIVATE_TITLE
         }), (0, s.jsx)(r.Text, {
-          className: j.__invalid_modalSubheader,
+          className: _.__invalid_modalSubheader,
           variant: "text-sm/normal",
           color: "header-secondary",
-          children: T.default.Messages.GUILD_SETTINGS_DEPRIVATE_SUBTITLE
+          children: j.default.Messages.GUILD_SETTINGS_DEPRIVATE_SUBTITLE
         })]
       }), (0, s.jsxs)("div", {
-        className: j.selectAllContainer,
+        className: _.selectAllContainer,
         children: [(0, s.jsx)(r.Text, {
-          className: j.selectAllTitle,
+          className: _.selectAllTitle,
           variant: "text-xs/semibold",
           color: "text-muted",
-          children: T.default.Messages.GUILD_SETTINGS_DEPRIVATE_CHANNEL_COUNT.format({
+          children: j.default.Messages.GUILD_SETTINGS_DEPRIVATE_CHANNEL_COUNT.format({
             count: x.length
           })
         }), (0, s.jsxs)(r.Clickable, {
-          "aria-label": T.default.Messages.SELECT_ALL,
-          className: j.selectAllButton,
+          "aria-label": j.default.Messages.SELECT_ALL,
+          className: _.selectAllButton,
           onClick: A,
           children: [(0, s.jsx)(r.Text, {
             variant: "text-xs/normal",
-            children: T.default.Messages.SELECT_ALL
+            children: j.default.Messages.SELECT_ALL
           }), (0, s.jsx)(r.Checkbox, {
             size: 16,
             type: r.Checkbox.Types.INVERTED,
@@ -225,18 +225,18 @@ function C(e) {
           })]
         })]
       }), (0, s.jsx)("div", {
-        className: j.deprivateTableBody,
-        children: x.map(e => (0, s.jsx)(I, {
+        className: _.deprivateTableBody,
+        children: x.map(e => (0, s.jsx)(v, {
           channel: e,
           selected: f.includes(e),
           onChange: b
         }, e.id))
       }), (0, s.jsx)("div", {
-        className: j.deprivateExplainer,
+        className: _.deprivateExplainer,
         children: (0, s.jsx)(r.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: T.default.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_4.format({
+          children: j.default.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_4.format({
             emphasisHook: e => (0, s.jsx)(r.Text, {
               tag: "span",
               variant: "text-xs/medium",
@@ -253,23 +253,22 @@ function C(e) {
         })
       })]
     }), (0, s.jsxs)(r.ModalFooter, {
-      className: j.modalFooter,
+      className: _.modalFooter,
       children: [(0, s.jsx)(r.Button, {
         disabled: 0 === f.length,
         onClick: k,
         children: (0, s.jsx)(r.Text, {
           variant: "text-md/medium",
           color: "always-white",
-          children: T.default.Messages.GUILD_SETTINGS_UPDATE_PERMISSIONS
+          children: j.default.Messages.GUILD_SETTINGS_UPDATE_PERMISSIONS
         })
       }), (0, s.jsx)(r.Button, {
-        className: j.__invalid_modalCancel,
         look: r.Button.Looks.LINK,
-        borderColor: r.Button.Colors.PRIMARY,
+        color: r.Button.Colors.PRIMARY,
         onClick: l,
         children: (0, s.jsx)(r.Text, {
           variant: "text-md/medium",
-          children: T.default.Messages.CANCEL
+          children: j.default.Messages.CANCEL
         })
       })]
     })]

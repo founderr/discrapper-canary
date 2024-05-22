@@ -33,7 +33,7 @@ let m = e => {
         onSuccess: u,
         headerText: T.default.Messages.ENTER_EMAIL,
         confirmButtonText: T.default.Messages.NEXT,
-        confirmButtonColor: r.Button.Colors.BRAND_NEW,
+        confirmButtonColor: r.Button.Colors.BRAND,
         impressionName: l.ImpressionNames.URF_ENTER_EMAIL
       })
     })
@@ -55,7 +55,7 @@ let m = e => {
         onSuccess: u,
         headerText: T.default.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
         confirmButtonText: T.default.Messages.VERIFY,
-        confirmButtonColor: r.Button.Colors.BRAND_NEW,
+        confirmButtonColor: r.Button.Colors.BRAND,
         impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE
       })
     })
@@ -65,8 +65,7 @@ let m = e => {
     children: (0, s.jsx)(r.Button, {
       className: g.__invalid_reportButton,
       fullWidth: !0,
-      color: r.Button.Colors.BRAND_NEW,
-      hover: r.Button.Colors.BRAND_NEW,
+      color: r.Button.Colors.BRAND,
       onClick: () => i(),
       children: t
     })

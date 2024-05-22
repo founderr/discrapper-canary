@@ -124,7 +124,7 @@ function D(e) {
             guild_id: t
           }), d()
         },
-        color: o.Button.Colors.BRAND_NEW,
+        color: o.Button.Colors.BRAND,
         look: o.Button.Looks.FILLED,
         submitting: !1,
         children: I.default.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_SUBMIT

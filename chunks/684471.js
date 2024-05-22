@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return I
   }
 });
 var n = s("735250");
@@ -12,45 +12,45 @@ var a = s("481060"),
   i = s("51144"),
   u = s("473092"),
   l = s("955708"),
-  E = s("850165"),
-  T = s("689938"),
+  T = s("850165"),
+  E = s("689938"),
   c = s("418586"),
   d = s("282668");
 
-function N(e) {
+function I(e) {
   let {
     senderId: t,
     trackAnalyticsEvent: s,
-    onNavigate: N
-  } = e, I = (0, r.useStateFromStores)([o.default], () => {
+    onNavigate: I
+  } = e, N = (0, r.useStateFromStores)([o.default], () => {
     let e = o.default.getUser(t);
     return i.default.getName(e)
   });
-  return (0, n.jsx)(E.default, {
-    header: T.default.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_HEADER,
-    description: T.default.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_DESCRIPTION.format({
-      username: I
+  return (0, n.jsx)(T.default, {
+    header: E.default.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_HEADER,
+    description: E.default.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_DESCRIPTION.format({
+      username: N
     }),
     heroImageSrc: d,
-    heroImageAlt: T.default.Messages.INAPPROPRIATE_CONVERSATION_WUMPUS_EXCLAMATION_ALT,
+    heroImageAlt: E.default.Messages.INAPPROPRIATE_CONVERSATION_WUMPUS_EXCLAMATION_ALT,
     children: (0, n.jsxs)("div", {
       className: c.buttonContainer,
       children: [(0, n.jsx)(a.Button, {
-        color: a.Button.Colors.BRAND_NEW,
+        color: a.Button.Colors.BRAND,
         size: a.Button.Sizes.LARGE,
         className: c.button,
         onClick: () => {
-          N(l.InappropriateConversationModalSlideKeys.TAKE_ACTION), s(u.CtaEventTypes.USER_TAKEOVER_MODAL_TAKE_ACTION)
+          I(l.InappropriateConversationModalSlideKeys.TAKE_ACTION), s(u.CtaEventTypes.USER_TAKEOVER_MODAL_TAKE_ACTION)
         },
-        children: T.default.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION
+        children: E.default.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION
       }), (0, n.jsx)(a.Button, {
         color: a.Button.Colors.PRIMARY,
         size: a.Button.Sizes.LARGE,
         className: c.button,
         onClick: () => {
-          N(l.InappropriateConversationModalSlideKeys.SAFETY_TIPS), s(u.CtaEventTypes.USER_TAKEOVER_MODAL_SAFETY_TIPS)
+          I(l.InappropriateConversationModalSlideKeys.SAFETY_TIPS), s(u.CtaEventTypes.USER_TAKEOVER_MODAL_SAFETY_TIPS)
         },
-        children: T.default.Messages.INAPPROPRIATE_CONVERSATION_READ_SAFETY_TIPS
+        children: E.default.Messages.INAPPROPRIATE_CONVERSATION_READ_SAFETY_TIPS
       })]
     })
   })

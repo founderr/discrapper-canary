@@ -195,7 +195,7 @@ t.default = e => {
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1,
         look: u.ButtonLooks.OUTLINED,
-        color: z ? u.ButtonColors.BRAND_NEW : u.ButtonColors.WHITE,
+        color: z ? u.ButtonColors.BRAND : u.ButtonColors.WHITE,
         buttonShineClassName: void 0
       }) : (0, a.jsx)(M.default, {
         className: x.button,
@@ -212,7 +212,7 @@ t.default = e => {
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
         look: u.ButtonLooks.OUTLINED,
-        color: z ? u.ButtonColors.BRAND_NEW : u.ButtonColors.WHITE,
+        color: z ? u.ButtonColors.BRAND : u.ButtonColors.WHITE,
         buttonShineClassName: void 0
       }) : (0, a.jsx)(M.default, {
         className: x.button,

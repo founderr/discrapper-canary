@@ -1,28 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   Button: function() {
-    return A
-  },
-  ButtonBorderColors: function() {
-    return T
+    return S
   },
   ButtonColors: function() {
     return I
   },
-  ButtonHovers: function() {
-    return f
-  },
   ButtonLink: function() {
-    return m
+    return h
   },
   ButtonLooks: function() {
     return E
   },
   ButtonSizes: function() {
-    return S
+    return T
   },
   getButtonStyle: function() {
-    return h
+    return f
   }
 });
 var i = n("735250"),
@@ -46,102 +40,70 @@ let E = {
     BRAND: c.colorBrand,
     RED: c.colorRed,
     GREEN: c.colorGreen,
-    YELLOW: c.colorYellow,
     PRIMARY: c.colorPrimary,
     LINK: c.colorLink,
     WHITE: c.colorWhite,
     TRANSPARENT: c.colorTransparent,
-    BRAND_NEW: c.colorBrandNew,
     CUSTOM: ""
   },
   T = {
-    BRAND: c.borderBrand,
-    RED: c.borderRed,
-    GREEN: c.borderGreen,
-    YELLOW: c.borderYellow,
-    PRIMARY: c.borderPrimary,
-    LINK: c.borderLink,
-    WHITE: c.borderWhite,
-    BLACK: c.__invalid_borderBlack,
-    TRANSPARENT: c.borderTransparent,
-    BRAND_NEW: c.borderBrandNew
-  },
-  f = {
-    DEFAULT: "",
-    BRAND: c.hoverBrand,
-    RED: c.hoverRed,
-    GREEN: c.hoverGreen,
-    YELLOW: c.hoverYellow,
-    PRIMARY: c.hoverPrimary,
-    LINK: c.hoverLink,
-    WHITE: c.hoverWhite,
-    BLACK: c.__invalid_hoverBlack,
-    TRANSPARENT: c.hoverTransparent
-  },
-  S = {
     NONE: "",
     TINY: c.sizeTiny,
     SMALL: c.sizeSmall,
     MEDIUM: c.sizeMedium,
     LARGE: c.sizeLarge,
-    XLARGE: c.sizeXlarge,
     MIN: c.sizeMin,
     MAX: c.sizeMax,
     ICON: c.sizeIcon
   };
 
-function h() {
+function f() {
   let {
     look: e = E.FILLED,
     color: t = I.BRAND,
-    borderColor: n,
-    hover: i,
-    size: r = S.MEDIUM,
-    fullWidth: s = !1,
-    grow: o = !0,
-    submitting: l = !1,
-    disabled: u = !1
+    size: n = T.MEDIUM,
+    fullWidth: i = !1,
+    grow: r = !0,
+    submitting: s = !1,
+    disabled: o = !1
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-  return a()(c.button, e, t, n, i, r, {
-    [c.fullWidth]: s,
-    [c.grow]: o,
-    [c.hasHover]: null != i && i !== f.DEFAULT,
-    [c.submitting]: l && !u
+  return a()(c.button, e, t, n, {
+    [c.fullWidth]: i,
+    [c.grow]: r,
+    [c.submitting]: s && !o
   })
 }
 
-function A(e) {
+function S(e) {
   let {
     look: t = E.FILLED,
     color: n = I.BRAND,
-    borderColor: s,
-    hover: o,
-    size: T = S.MEDIUM,
-    fullWidth: f = !1,
-    grow: A = !0,
-    disabled: m = !1,
-    submitting: N = !1,
-    type: p = "button",
-    style: O,
-    wrapperClassName: C,
-    className: R,
-    innerClassName: g,
-    onClick: L,
-    onDoubleClick: v,
-    onMouseDown: D,
-    onMouseUp: M,
-    onMouseEnter: y,
-    onMouseLeave: P,
-    onKeyDown: U,
-    children: b,
-    rel: G,
-    buttonRef: w,
-    focusProps: k,
-    "aria-label": B,
-    submittingStartedLabel: V,
-    submittingFinishedLabel: x,
-    ...F
-  } = e, H = m || N, Y = H && (null != y || null != P), j = function(e, t) {
+    size: s = T.MEDIUM,
+    fullWidth: o = !1,
+    grow: S = !0,
+    disabled: h = !1,
+    submitting: A = !1,
+    type: m = "button",
+    style: N,
+    wrapperClassName: p,
+    className: O,
+    innerClassName: C,
+    onClick: R,
+    onDoubleClick: g,
+    onMouseDown: L,
+    onMouseUp: v,
+    onMouseEnter: D,
+    onMouseLeave: M,
+    onKeyDown: y,
+    children: P,
+    rel: U,
+    buttonRef: b,
+    focusProps: G,
+    "aria-label": w,
+    submittingStartedLabel: k,
+    submittingFinishedLabel: B,
+    ...V
+  } = e, x = h || A, F = x && (null != D || null != M), H = function(e, t) {
     var n, i, r, s;
     let a = null == e ? void 0 : e.offset;
     if (t === E.LINK || t === E.BLANK) return a;
@@ -153,100 +115,95 @@ function A(e) {
       bottom: (null !== (r = a.bottom) && void 0 !== r ? r : 0) - 2,
       left: (null !== (s = a.left) && void 0 !== s ? s : 0) - 2
     }
-  }(k, t), W = r.useRef(!1);
+  }(G, t), Y = r.useRef(!1);
   r.useEffect(() => {
-    !0 === N && (W.current = !0, l.AccessibilityAnnouncer.announce(null != V ? V : _.default.Messages.A11Y_LOADING_STARTED)), !1 === N && !0 === W.current && l.AccessibilityAnnouncer.announce(null != x ? x : _.default.Messages.A11Y_LOADING_FINISHED)
-  }, [N, V, x]);
-  let K = (0, i.jsx)(u.FocusRing, {
-    ...k,
-    offset: j,
+    !0 === A && (Y.current = !0, l.AccessibilityAnnouncer.announce(null != k ? k : _.default.Messages.A11Y_LOADING_STARTED)), !1 === A && !0 === Y.current && l.AccessibilityAnnouncer.announce(null != B ? B : _.default.Messages.A11Y_LOADING_FINISHED)
+  }, [A, k, B]);
+  let j = (0, i.jsx)(u.FocusRing, {
+    ...G,
+    offset: H,
     children: (0, i.jsxs)("button", {
-      ...H ? null : F,
-      "aria-label": B,
-      "aria-busy": !!N || void 0,
-      ref: w,
-      onClick: H ? e => e.preventDefault() : L,
-      onDoubleClick: H ? e => e.preventDefault() : v,
-      onMouseUp: m ? void 0 : M,
-      onMouseDown: m ? void 0 : D,
-      onMouseEnter: y,
-      onMouseLeave: P,
-      onKeyDown: m ? void 0 : U,
-      type: p,
-      disabled: m,
-      style: O,
-      rel: G,
-      className: a()(R, h({
+      ...x ? null : V,
+      "aria-label": w,
+      "aria-busy": !!A || void 0,
+      ref: b,
+      onClick: x ? e => e.preventDefault() : R,
+      onDoubleClick: x ? e => e.preventDefault() : g,
+      onMouseUp: h ? void 0 : v,
+      onMouseDown: h ? void 0 : L,
+      onMouseEnter: D,
+      onMouseLeave: M,
+      onKeyDown: h ? void 0 : y,
+      type: m,
+      disabled: h,
+      style: N,
+      rel: U,
+      className: a()(O, f({
         look: t,
         color: n,
-        borderColor: s,
-        hover: o,
-        size: T,
-        fullWidth: f,
-        grow: A,
-        submitting: N,
-        disabled: m
-      }), Y ? null : C),
-      children: [N && !m ? (0, i.jsx)(d.Spinner, {
+        size: s,
+        fullWidth: o,
+        grow: S,
+        submitting: A,
+        disabled: h
+      }), F ? null : p),
+      children: [A && !h ? (0, i.jsx)(d.Spinner, {
         type: d.Spinner.Type.PULSING_ELLIPSIS,
         className: c.spinner,
         itemClassName: c.spinnerItem
       }) : null, (0, i.jsx)("div", {
-        className: a()(c.contents, g),
-        children: b
+        className: a()(c.contents, C),
+        children: P
       })]
     })
   });
-  return Y ? (0, i.jsxs)("span", {
-    className: a()(c.disabledButtonWrapper, C, T, {
-      [c.grow]: A,
-      [c.fullWidth]: f
+  return F ? (0, i.jsxs)("span", {
+    className: a()(c.disabledButtonWrapper, p, s, {
+      [c.grow]: S,
+      [c.fullWidth]: o
     }),
-    children: [K, (0, i.jsx)("span", {
-      onMouseEnter: y,
-      onMouseLeave: P,
+    children: [j, (0, i.jsx)("span", {
+      onMouseEnter: D,
+      onMouseLeave: M,
       className: c.disabledButtonOverlay
     })]
-  }) : K
+  }) : j
 }
 
-function m(e) {
+function h(e) {
   let {
     look: t = E.FILLED,
     color: n = I.BRAND,
-    borderColor: r,
-    hover: s,
-    size: l = S.MEDIUM,
-    fullWidth: u = !1,
-    grow: d = !0,
-    style: _,
-    className: T,
-    innerClassName: h,
-    to: A,
-    onClick: m,
-    onMouseDown: N,
-    onMouseUp: p,
-    children: O,
-    rel: C,
-    ...R
+    size: r = T.MEDIUM,
+    fullWidth: s = !1,
+    grow: l = !0,
+    style: u,
+    className: d,
+    innerClassName: _,
+    to: f,
+    onClick: S,
+    onMouseDown: h,
+    onMouseUp: A,
+    children: m,
+    rel: N,
+    ...p
   } = e;
   return (0, i.jsx)(o.Link, {
-    ...R,
-    to: A,
-    onClick: m,
-    onMouseUp: p,
-    onMouseDown: N,
-    style: _,
-    rel: C,
-    className: a()(T, c.button, t, n, r, s, l, {
-      [c.fullWidth]: u,
-      [c.grow]: d,
-      [c.hasHover]: null != s && s !== f.DEFAULT
+    ...p,
+    to: f,
+    onClick: S,
+    onMouseUp: A,
+    onMouseDown: h,
+    style: u,
+    rel: N,
+    className: a()(d, c.button, t, n, r, {
+      [c.fullWidth]: s,
+      [c.grow]: l
     }),
     children: (0, i.jsx)("span", {
-      className: a()(c.contents, h),
-      children: O
+      className: a()(c.contents, _),
+      children: m
     })
   })
 }
-A.Looks = E, A.Colors = I, A.BorderColors = T, A.Hovers = f, A.Sizes = S, A.Link = m
+S.Looks = E, S.Colors = I, S.Sizes = T, S.Link = h

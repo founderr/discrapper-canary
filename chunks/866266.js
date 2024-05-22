@@ -132,7 +132,7 @@ function f(e) {
     }), (0, l.jsxs)(r.ModalFooter, {
       children: [(0, l.jsx)(r.Button, {
         onClick: y,
-        color: r.Button.Colors.BRAND_NEW,
+        color: r.Button.Colors.BRAND,
         look: r.Button.Looks.FILLED,
         submitting: x,
         children: S.default.Messages.SAVE

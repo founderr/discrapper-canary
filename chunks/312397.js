@@ -41,8 +41,8 @@ var a = s("735250"),
   U = s("884858"),
   P = s("516129"),
   b = s("813197"),
-  B = s("208567"),
-  y = s("592125"),
+  y = s("208567"),
+  B = s("592125"),
   F = s("324067"),
   H = s("650774"),
   k = s("496675"),
@@ -108,7 +108,7 @@ function eg(e) {
     value: e.id,
     label: (0, C.computeChannelName)(e, V.default, w.default),
     channel: e,
-    category: y.default.getChannel(e.parent_id)
+    category: B.default.getChannel(e.parent_id)
   }
 }
 let eh = () => {
@@ -226,7 +226,7 @@ class eC extends l.PureComponent {
         justify: Y.default.Justify.BETWEEN,
         children: [(0, a.jsxs)(Y.default.Child, {
           wrap: !0,
-          children: [(0, a.jsx)(B.default, {
+          children: [(0, a.jsx)(y.default, {
             showIcon: !0,
             name: e.name,
             image: e.icon,
@@ -579,7 +579,7 @@ class eC extends l.PureComponent {
               })
             }), s ? (0, a.jsxs)(I.Button, {
               disabled: !l,
-              color: I.ButtonColors.BRAND_NEW,
+              color: I.ButtonColors.BRAND,
               className: er.marginTop16,
               children: [ei.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(b.default, {
                 disabled: !l,
@@ -655,7 +655,7 @@ class eC extends l.PureComponent {
             children: ei.default.Messages.GUILD_SETTINGS_HOME_HEADER_RECOMMEND
           }), s ? (0, a.jsxs)(I.Button, {
             disabled: !n,
-            color: I.ButtonColors.BRAND_NEW,
+            color: I.ButtonColors.BRAND,
             className: er.marginTop16,
             children: [ei.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(b.default, {
               disabled: !n,
@@ -699,7 +699,7 @@ class eC extends l.PureComponent {
       enabled: i
     }), o = (0, a.jsx)(I.Button, {
       disabled: !i,
-      color: I.Button.Colors.BRAND_NEW,
+      color: I.Button.Colors.BRAND,
       className: er.marginTop16,
       onClick: () => ex(el.UploadTypes.GUILD_BANNER, en.MAX_IMAGE_UPLOAD_FILESIZE_BYTES, this.handleBannerChange, !0, {
         page: es.AnalyticsPages.GUILD_SETTINGS,

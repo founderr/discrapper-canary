@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return T
+    return E
   }
 }), a("47120");
 var l = a("735250"),
@@ -13,16 +13,16 @@ var l = a("735250"),
   u = a("910693"),
   c = a("594174"),
   d = a("746124"),
-  _ = a("153124"),
-  D = a("465670"),
-  I = a("626135"),
+  D = a("153124"),
+  I = a("465670"),
+  _ = a("626135"),
   C = a("5192"),
   N = a("590433"),
   m = a("981631"),
   A = a("689938"),
-  E = a("11838");
+  M = a("11838");
 
-function M(e) {
+function O(e) {
   return {
     value: e,
     get label() {
@@ -31,27 +31,27 @@ function M(e) {
     }
   }
 }
-let O = [M(N.DisableCommunicationDuration.DURATION_60_SEC), M(N.DisableCommunicationDuration.DURATION_5_MIN), M(N.DisableCommunicationDuration.DURATION_10_MIN), M(N.DisableCommunicationDuration.DURATION_1_HOUR), M(N.DisableCommunicationDuration.DURATION_1_DAY), M(N.DisableCommunicationDuration.DURATION_1_WEEK)];
+let T = [O(N.DisableCommunicationDuration.DURATION_60_SEC), O(N.DisableCommunicationDuration.DURATION_5_MIN), O(N.DisableCommunicationDuration.DURATION_10_MIN), O(N.DisableCommunicationDuration.DURATION_1_HOUR), O(N.DisableCommunicationDuration.DURATION_1_DAY), O(N.DisableCommunicationDuration.DURATION_1_WEEK)];
 
-function T(e) {
+function E(e) {
   var t, a;
   let {
-    guildId: M,
-    userId: T,
+    guildId: O,
+    userId: E,
     anaylticsLocations: f,
     transitionState: U,
     onClose: S
-  } = e, x = (0, _.useUID)(), {
+  } = e, x = (0, D.useUID)(), {
     analyticsLocations: h
-  } = (0, r.default)(), L = null !== (a = null !== (t = null == f ? void 0 : f[0]) && void 0 !== t ? t : null == h ? void 0 : h[0]) && void 0 !== a ? a : null, R = (0, n.useStateFromStores)([c.default], () => c.default.getUser(T), [T]), [b, g] = s.useState(N.DisableCommunicationDuration.DURATION_60_SEC), v = (0, u.useTrackModerationAction)(M, {
+  } = (0, r.default)(), L = null !== (a = null !== (t = null == f ? void 0 : f[0]) && void 0 !== t ? t : null == h ? void 0 : h[0]) && void 0 !== a ? a : null, R = (0, n.useStateFromStores)([c.default], () => c.default.getUser(E), [E]), [b, g] = s.useState(N.DisableCommunicationDuration.DURATION_60_SEC), v = (0, u.useTrackModerationAction)(O, {
     location: L,
-    targetUserId: T
+    targetUserId: E
   }), [p, j] = s.useState(""), [B, k] = s.useState(!1), y = s.useCallback(async () => {
     if (null != R) {
       k(!0);
       try {
-        await i.default.setCommunicationDisabledDuration(M, T, b, p, L), v(u.ModerationActionType.TIMEOUT), (0, o.showToast)((0, o.createToast)(A.default.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({
-          user: C.default.getName(M, null, R)
+        await i.default.setCommunicationDisabledDuration(O, E, b, p, L), v(u.ModerationActionType.TIMEOUT), (0, o.showToast)((0, o.createToast)(A.default.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({
+          user: C.default.getName(O, null, R)
         }), o.ToastType.SUCCESS)), S()
       } catch (e) {
         (0, o.showToast)((0, o.createToast)(A.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, o.ToastType.FAILURE))
@@ -59,39 +59,39 @@ function T(e) {
         k(!1)
       }
     }
-  }, [M, R, T, S, b, p, L, v]);
+  }, [O, R, E, S, b, p, L, v]);
   return (s.useEffect(() => {
-    null != R && I.default.track(m.AnalyticEvents.OPEN_MODAL, {
+    null != R && _.default.track(m.AnalyticEvents.OPEN_MODAL, {
       type: N.CLEAR_COMMUNICATION_DISABLED_MODAL_NAME,
-      guild_id: M,
+      guild_id: O,
       other_user_id: R.id
     })
   }, []), s.useEffect(() => {
-    (null == R || null == M) && S()
-  }, [M, R, S]), null == R || null == M) ? null : (0, l.jsxs)(o.ModalRoot, {
+    (null == R || null == O) && S()
+  }, [O, R, S]), null == R || null == O) ? null : (0, l.jsxs)(o.ModalRoot, {
     transitionState: U,
     "aria-labelledby": x,
     children: [(0, l.jsxs)(o.ModalHeader, {
-      className: E.header,
+      className: M.header,
       separator: !1,
       children: [(0, l.jsx)(o.Heading, {
         id: x,
         variant: "heading-lg/semibold",
         children: A.default.Messages.DISABLE_GUILD_COMMUNICATION_FOR_USER.format({
-          user: C.default.getName(M, null, R)
+          user: C.default.getName(O, null, R)
         })
       }), (0, l.jsx)(o.Clickable, {
         onClick: S,
-        className: E.closeButton,
+        className: M.closeButton,
         "aria-label": A.default.Messages.CLOSE,
-        children: (0, l.jsx)(D.default, {
-          className: E.closeIcon,
+        children: (0, l.jsx)(I.default, {
+          className: M.closeIcon,
           width: 16,
           height: 16
         })
       })]
     }), (0, l.jsxs)(o.ModalContent, {
-      className: E.contentContainer,
+      className: M.contentContainer,
       children: [(0, l.jsx)(o.Text, {
         variant: "text-md/normal",
         color: "interactive-normal",
@@ -99,12 +99,12 @@ function T(e) {
           helpdeskArticle: N.GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK
         })
       }), (0, l.jsx)(o.Text, {
-        className: E.selectorHeader,
+        className: M.selectorHeader,
         variant: "text-xs/semibold",
         color: "interactive-normal",
         children: A.default.Messages.GUILD_COMMUNICATION_DISABLED_DURATION
       }), (0, l.jsx)(d.default, {
-        buttons: O.map(e => (function(e, t, a) {
+        buttons: T.map(e => (function(e, t, a) {
           let {
             value: s,
             label: n
@@ -112,15 +112,15 @@ function T(e) {
           return {
             content: (0, l.jsx)(o.Text, {
               variant: "text-xs/normal",
-              className: t ? E.selectorTextSelected : E.selectorText,
+              className: t ? M.selectorTextSelected : M.selectorText,
               children: n
             }),
-            className: t ? E.selectorButtonSelected : E.selectorButton,
+            className: t ? M.selectorButtonSelected : M.selectorButton,
             onClick: () => a(s)
           }
         })(e, e.value === b, g))
       }), (0, l.jsx)(o.Text, {
-        className: E.selectorHeader,
+        className: M.selectorHeader,
         variant: "text-xs/semibold",
         color: "interactive-normal",
         children: A.default.Messages.GUILD_COMMUNICATION_DISABLED_REASON
@@ -134,7 +134,7 @@ function T(e) {
     }), (0, l.jsxs)(o.ModalFooter, {
       children: [(0, l.jsx)(o.Button, {
         onClick: y,
-        color: o.Button.Colors.BRAND_NEW,
+        color: o.Button.Colors.BRAND,
         submitting: B,
         children: A.default.Messages.TIMEOUT_SUBMIT
       }), (0, l.jsx)(o.Button, {

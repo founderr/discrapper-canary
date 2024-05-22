@@ -17,9 +17,9 @@ var a = l("735250"),
   _ = l("760623"),
   I = l("626135"),
   A = l("715903"),
-  E = l("295474"),
-  L = l("273504"),
-  M = l("981631"),
+  L = l("295474"),
+  M = l("273504"),
+  E = l("981631"),
   O = l("372897"),
   N = l("689938"),
   C = l("693408");
@@ -32,7 +32,7 @@ function R(e) {
     guildId: U
   } = e, g = (0, n.useStateFromStores)([o.default], () => o.default.getId()), h = (0, n.useStateFromStores)([d.default], () => d.default.getMember(U, g), [U, g]), D = (0, n.useStateFromStores)([f.default], () => f.default.getGuild(U), [U]), m = null !== (t = null == D ? void 0 : D.name) && void 0 !== t ? t : "", T = (0, A.getAutomodQuarantinedGuildMemberFlags)(h), {
     analyticsLocations: S
-  } = (0, i.default)(r.default.AUTOMOD_PROFILE_QUARANTINE_ALERT), [v, x] = (0, E.useOpenFixQuarantinedProfileModal)({
+  } = (0, i.default)(r.default.AUTOMOD_PROFILE_QUARANTINE_ALERT), [v, x] = (0, L.useOpenFixQuarantinedProfileModal)({
     guildId: U,
     analyticsLocations: S,
     openWithoutBackstack: !0
@@ -40,8 +40,8 @@ function R(e) {
   !x && (p = N.default.Messages.GUILD_AUTOMOD_USERNAME_INVALID_NO_PERMS_MODAL_DESCRIPTION_MOBILE);
   let G = x ? N.default.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : N.default.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
   return (s.useEffect(() => {
-    I.default.track(M.AnalyticEvents.OPEN_MODAL, {
-      type: L.QUARANTINE_USER_ALERT_KEY,
+    I.default.track(E.AnalyticEvents.OPEN_MODAL, {
+      type: M.QUARANTINE_USER_ALERT_KEY,
       guild_id: U,
       other_user_id: g
     })
@@ -92,7 +92,7 @@ function R(e) {
         onClick: () => {
           v(), l()
         },
-        color: u.Button.Colors.BRAND_NEW,
+        color: u.Button.Colors.BRAND,
         look: u.Button.Looks.FILLED,
         children: G
       }), (0, a.jsx)(u.Button, {

@@ -80,7 +80,7 @@ function _(e) {
     fullWidth: !0,
     look: i.ButtonLooks.FILLED,
     size: i.ButtonSizes.SMALL,
-    color: i.ButtonColors.BRAND_NEW,
+    color: i.ButtonColors.BRAND,
     className: C.button,
     onClick: t,
     children: (0, l.jsx)(i.Text, {

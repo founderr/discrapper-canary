@@ -29,7 +29,7 @@ t.default = e => {
     }), (0, l.jsx)(r.Button, {
       className: o.reload,
       size: r.Button.Sizes.MEDIUM,
-      color: r.Button.Colors.BRAND_NEW,
+      color: r.Button.Colors.BRAND,
       onClick: t,
       children: i.default.Messages.ERRORS_RELOAD
     })]

@@ -54,14 +54,8 @@ n.r(t), n.d(t, {
   Button: function() {
     return _.Button
   },
-  ButtonBorderColors: function() {
-    return _.ButtonBorderColors
-  },
   ButtonColors: function() {
     return _.ButtonColors
-  },
-  ButtonHovers: function() {
-    return _.ButtonHovers
   },
   ButtonLink: function() {
     return _.ButtonLink

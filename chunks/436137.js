@@ -16,7 +16,7 @@ t.default = s.memo(function(e) {
     className: i()(o.button, s),
     wrapperClassName: o.buttonWrapper,
     look: r.Button.Looks.FILLED,
-    color: r.Button.Colors.BRAND_NEW,
+    color: r.Button.Colors.BRAND,
     onClick: t,
     children: n
   })

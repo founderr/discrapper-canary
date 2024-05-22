@@ -103,7 +103,7 @@ t.default = e => {
       className: c.__invalid_footer,
       children: [(0, o.jsx)(l.Button, {
         type: "submit",
-        color: l.Button.Colors.BRAND_NEW,
+        color: l.Button.Colors.BRAND,
         size: l.Button.Sizes.SMALL,
         className: c.button,
         onClick: R,

@@ -90,8 +90,7 @@ function S(e) {
       }), (0, a.jsx)(u.Button, {
         className: I.button,
         size: u.Button.Sizes.SMALL,
-        color: u.Button.Colors.BRAND_NEW,
-        hover: u.Button.Colors.BRAND_NEW,
+        color: u.Button.Colors.BRAND,
         onClick: i,
         disabled: 1 !== N || d,
         children: n

@@ -60,7 +60,7 @@ function v(e) {
       className: p.addVerificationButton,
       size: u.Button.Sizes.MEDIUM,
       look: u.Button.Looks.FILLED,
-      color: u.Button.Colors.BRAND_NEW,
+      color: u.Button.Colors.BRAND,
       onClick: t,
       children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION
     })]
@@ -86,18 +86,18 @@ function j(e) {
   }, [s.id, t.id]), b = (0, d.useStateFromStoresArray)([N.default], () => {
     var e;
     return null !== (e = N.default.getEditedRoleConnectionConfigurationsMap().get(s.id)) && void 0 !== e ? e : []
-  }), B = b.length > 1 ? E.ConnectionConfigurationRuleOperator.OR : E.ConnectionConfigurationRuleOperator.AND, y = l.useMemo(() => B === E.ConnectionConfigurationRuleOperator.OR ? b.flat() : null != b && b.length > 0 ? b[0] : [], [B, b]), F = l.useMemo(() => new Set(y.map(e => e.connectionType)), [y]);
+  }), y = b.length > 1 ? E.ConnectionConfigurationRuleOperator.OR : E.ConnectionConfigurationRuleOperator.AND, B = l.useMemo(() => y === E.ConnectionConfigurationRuleOperator.OR ? b.flat() : null != b && b.length > 0 ? b[0] : [], [y, b]), F = l.useMemo(() => new Set(B.map(e => e.connectionType)), [B]);
 
   function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-      a = [...y];
+      a = [...B];
     a.push({
       connectionType: e,
       connectionMetadataField: void 0,
       applicationId: t,
       operator: void 0,
       value: void 0
-    }), (0, m.updateRoleConnectionConfigurations)(s.id, D(a, B))
+    }), (0, m.updateRoleConnectionConfigurations)(s.id, D(a, y))
   }
 
   function k() {
@@ -110,14 +110,14 @@ function j(e) {
     })
   }
   let w = null;
-  if (0 === y.length) w = (0, a.jsx)(v, {
+  if (0 === B.length) w = (0, a.jsx)(v, {
     handleAddVerificationClicked: k,
     locked: n
   });
-  else if (y.length > 0) {
+  else if (B.length > 0) {
     var V, Y;
     let e = null;
-    y.length < 10 && (e = (0, a.jsx)(u.Button, {
+    B.length < 10 && (e = (0, a.jsx)(u.Button, {
       className: i()(p.addVerificationButton, p.addVerificationButtonAppend),
       size: u.Button.Sizes.LARGE,
       look: u.Button.Looks.BLANK,
@@ -172,7 +172,7 @@ function j(e) {
             "aria-labelledby": M
           })
         })
-      }(n, s.id, B, y, (e, t) => (0, m.updateRoleConnectionConfigurations)(s.id, D(e, t))), function(e, t, s, l, n) {
+      }(n, s.id, y, B, (e, t) => (0, m.updateRoleConnectionConfigurations)(s.id, D(e, t))), function(e, t, s, l, n) {
         function i(s, a) {
           let l = [];
           for (let t of e) l.push({
@@ -225,7 +225,7 @@ function j(e) {
             integrations: n
           }, e[0].configuration.connectionType + ":" + e[0].index))
         })
-      }(y, e => (0, m.updateRoleConnectionConfigurations)(s.id, D(e, B)), n, s.id, o), e]
+      }(B, e => (0, m.updateRoleConnectionConfigurations)(s.id, D(e, y)), n, s.id, o), e]
     })
   }
   return (0, a.jsx)(u.AdvancedScrollerAuto, {

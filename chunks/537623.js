@@ -22,15 +22,15 @@ function I(e) {
     messageId: s,
     transitionState: I,
     onClose: A
-  } = e, [E, T] = n.useState([]), [D, N] = n.useState(), h = n.useCallback(() => {
+  } = e, [T, E] = n.useState([]), [D, h] = n.useState(), N = n.useCallback(() => {
     let e = {
       raid_alert_type: u.RaidAlertType.JOIN_RAID,
       raid_alert_id: s,
-      false_alarm_type: E.map(e => e.toString()),
+      false_alarm_type: T.map(e => e.toString()),
       false_alarm_other_reason: D,
       guild_id: t
     };
-    (0, o.trackWithMetadata)(_.AnalyticEvents.GUILD_RAID_FEEDBACK, e), (0, r.handleResolveRaid)(t, s, (0, u.getMostImportantRaidResolutionType)(E)), A(), (0, d.openModalLazy)(async () => {
+    (0, o.trackWithMetadata)(_.AnalyticEvents.GUILD_RAID_FEEDBACK, e), (0, r.handleResolveRaid)(t, s, (0, u.getMostImportantRaidResolutionType)(T)), A(), (0, d.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([a.e("99387"), a.e("37564")]).then(a.bind(a, "969214"));
@@ -38,7 +38,7 @@ function I(e) {
         ...t
       })
     })
-  }, [A, s, t, D, E]), O = [{
+  }, [A, s, t, D, T]), O = [{
     text: R.default.Messages.GUILD_ANTIRAID_RESOLVE_REASON_LEGITIMATE_ACTIVITY,
     value: u.RaidResolutionType.LEGITIMATE_ACTIVITY
   }, {
@@ -53,7 +53,7 @@ function I(e) {
   }];
 
   function L(e) {
-    E.includes(e) ? T(t => t.filter(t => t !== e)) : T(t => [...t, e])
+    T.includes(e) ? E(t => t.filter(t => t !== e)) : E(t => [...t, e])
   }
   return (0, l.jsxs)(d.ModalRoot, {
     transitionState: I,
@@ -91,7 +91,7 @@ function I(e) {
                 children: (0, l.jsx)(d.Checkbox, {
                   type: d.Checkbox.Types.INVERTED,
                   size: 20,
-                  value: E.includes(a),
+                  value: T.includes(a),
                   onChange: () => L(a)
                 })
               }), (0, l.jsx)(d.Text, {
@@ -99,12 +99,12 @@ function I(e) {
                 color: "header-primary",
                 children: t
               })]
-            }), a === u.RaidResolutionType.OTHER && E.includes(u.RaidResolutionType.OTHER) && (0, l.jsx)("div", {
+            }), a === u.RaidResolutionType.OTHER && T.includes(u.RaidResolutionType.OTHER) && (0, l.jsx)("div", {
               className: c.textboxContainer,
               children: (0, l.jsx)(d.TextArea, {
                 className: c.falseAlarmReasonText,
                 placeholder: R.default.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_MODAL_OTHER_REASON_PLACEHOLDER,
-                onChange: e => N(e),
+                onChange: e => h(e),
                 value: D,
                 rows: 2,
                 autoFocus: !0,
@@ -119,8 +119,8 @@ function I(e) {
       children: [(0, l.jsx)("div", {
         className: c.button,
         children: (0, l.jsx)(d.Button, {
-          onClick: h,
-          color: d.Button.Colors.BRAND_NEW,
+          onClick: N,
+          color: d.Button.Colors.BRAND,
           look: d.Button.Looks.FILLED,
           children: R.default.Messages.GUILD_AUTOMOD_NOTIFICATION_MARK_AS_RESOLVED
         })

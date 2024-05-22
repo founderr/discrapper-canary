@@ -24,7 +24,7 @@ var s, a = n("735250"),
   S = n("689938"),
   C = n("2050");
 
-function A(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -32,7 +32,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class g extends(s = l.PureComponent) {
+class A extends(s = l.PureComponent) {
   get analyticsLocation() {
     return {
       ...this.props.analyticsContext.location,
@@ -102,7 +102,6 @@ class g extends(s = l.PureComponent) {
       fullWidth: t,
       size: n,
       color: null != s ? s : u.Button.Colors.GREEN,
-      hover: null != s ? u.Button.Hovers.GREEN : u.Button.Hovers.DEFAULT,
       submitting: i,
       onClick: this.handleClick,
       children: [(0, a.jsx)("div", {
@@ -112,7 +111,7 @@ class g extends(s = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), A(this, "handleDropdownClick", e => {
+    super(...e), g(this, "handleDropdownClick", e => {
       e.stopPropagation();
       let {
         libraryApplication: t,
@@ -132,7 +131,7 @@ class g extends(s = l.PureComponent) {
       }, {
         onClose: l
       })
-    }), A(this, "handleClick", () => {
+    }), g(this, "handleClick", () => {
       let {
         applicationId: e,
         libraryApplication: t,
@@ -155,7 +154,7 @@ function M(e) {
     applicationId: t,
     libraryApplication: n
   } = e, s = (0, c.useAnalyticsContext)(), [l, i] = (0, o.useStateFromStoresArray)([_.default, E.default, m.default], () => [_.default.isConnected(t) || E.default.isLaunchable(t) || null != n && m.default.isLaunchable(n.id, n.branchId), E.default.launchingGames.has(t)], [t, n]), r = (0, o.useStateFromStores)([f.default], () => new Set(f.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, o.useStateFromStores)([m.default], () => null != n ? m.default.getState(n.id, n.branchId) : null, [n]);
-  return (0, a.jsx)(g, {
+  return (0, a.jsx)(A, {
     ...e,
     analyticsContext: s,
     isLaunchable: l,
@@ -164,7 +163,7 @@ function M(e) {
     dispatchState: u
   })
 }
-A(g, "defaultProps", {
+g(A, "defaultProps", {
   fullWidth: !1,
   size: u.Button.Sizes.LARGE,
   tooltipPosition: "top",

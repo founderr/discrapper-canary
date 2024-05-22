@@ -133,7 +133,7 @@ function h(e) {
             duration: 60 * x
           }), h()
         },
-        color: s.Button.Colors.BRAND_NEW,
+        color: s.Button.Colors.BRAND,
         look: s.Button.Looks.FILLED,
         submitting: S,
         disabled: !y,

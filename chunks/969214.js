@@ -38,7 +38,7 @@ function i(e) {
         children: n.default.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_CONFIRM_SUBTITLE
       }), (0, t.jsx)(o.Button, {
         onClick: i,
-        color: o.Button.Colors.BRAND_NEW,
+        color: o.Button.Colors.BRAND,
         look: o.Button.Looks.FILLED,
         children: n.default.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_CONFIRM_CTA
       })]

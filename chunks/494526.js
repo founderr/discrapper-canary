@@ -119,7 +119,7 @@ function G(e) {
         }) : (0, l.jsx)(A.SubTitle, {
           children: L.default.Messages.LOGIN_WITH_QR_DESCRIPTION.format()
         }), a && (0, l.jsx)(f.Button, {
-          size: f.ButtonSizes.XLARGE,
+          size: f.ButtonSizes.LARGE,
           look: f.ButtonLooks.LINK,
           color: f.ButtonColors.LINK,
           onClick: () => P(i),
