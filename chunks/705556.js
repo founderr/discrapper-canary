@@ -28,6 +28,7 @@ function I(e) {
   return T ? null == f ? (0, i.jsx)(c.default, {
     icon: u.default,
     text: E.default.Messages.EDIT_PROFILE,
+    autoFocus: !0,
     onClick: () => {
       S({
         action: "EDIT_PROFILE"
