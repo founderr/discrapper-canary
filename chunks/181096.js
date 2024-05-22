@@ -8,11 +8,11 @@ e.exports = {
   ellipsis: "ellipsis_d32cd5",
   fadeIn: "fadeIn__485ae",
   gameIcon: "gameIcon__4a06f",
-  groupAvatar: "groupAvatar__4cf21",
   image: "image__75373",
   imageIcon: "imageIcon_fdf820",
   inline: "inline__51026",
   joinButton: "joinButton__081d8",
+  joinButtonInner: "joinButtonInner__6554f",
   joinButtonWhatWrapper: "joinButtonWhatWrapper_fa34bc",
   joinButtonWhoWrapper: "joinButtonWhoWrapper__15fe3",
   liveBadge: "liveBadge__4290f",
@@ -22,6 +22,7 @@ e.exports = {
   pillIcon: "pillIcon__62bae",
   singleLineTitle: "singleLineTitle_f21580",
   streamContainer: "streamContainer_a26d75",
+  streamPlaceholder: "streamPlaceholder_b6c795",
   streamPreview: "streamPreview__38008",
   subtitle: "subtitle__8eb80"
 }

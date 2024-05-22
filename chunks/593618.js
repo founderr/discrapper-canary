@@ -237,10 +237,14 @@ function ee(e) {
     onMouseLeave: () => c(!1),
     children: (0, i.jsx)(_.Popout, {
       position: "right",
-      renderPopout: () => (0, i.jsx)(H.default, {
-        guild: t,
-        closePopout: () => c(!1)
-      }),
+      renderPopout: e => {
+        var n;
+        return (0, i.jsx)(H.default, {
+          guild: t,
+          closePopout: () => c(!1),
+          nudge: null !== (n = e.nudge) && void 0 !== n ? n : 0
+        })
+      },
       spacing: 0,
       onRequestClose: () => c(!1),
       shouldShow: !l && d,

@@ -50,7 +50,7 @@ var a = n("735250"),
   K = n("258609"),
   z = n("278464"),
   q = n("917112"),
-  Q = n("331541"),
+  Q = n("443669"),
   Z = n("332473"),
   X = n("240504"),
   J = n("804545"),
@@ -602,6 +602,7 @@ class eq extends s.PureComponent {
         return (0, a.jsx)("div", {
           className: eY.accountProfilePopoutWrapper,
           children: (0, a.jsx)(Q.default, {
+            location: "StatusPickerPopout",
             ...e
           })
         })

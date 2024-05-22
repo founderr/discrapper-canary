@@ -429,50 +429,56 @@ function en(e) {
 }
 
 function ei(e) {
+  var t;
   let {
-    guild: t,
-    closePopout: n
-  } = e, r = (0, E.default)(t), s = (0, m.useShouldShowInvitesDisabledNotif)(t), {
-    isViewingRoles: a,
-    backNavigationSection: u
+    guild: n,
+    closePopout: s,
+    nudge: a
+  } = e, u = r.useRef(null), d = (0, E.default)(n), _ = (0, m.useShouldShowInvitesDisabledNotif)(n), {
+    isViewingRoles: c,
+    backNavigationSection: h
   } = (0, o.useStateFromStoresObject)([O.default], () => ({
-    isViewingRoles: O.default.isViewingRoles(t.id),
-    backNavigationSection: O.default.getBackNavigationSection(t.id)
+    isViewingRoles: O.default.isViewingRoles(n.id),
+    backNavigationSection: O.default.getBackNavigationSection(n.id)
   })), {
-    isUserLurking: d,
-    isUnverifiedAccount: _
+    isUserLurking: A,
+    isUnverifiedAccount: g
   } = (0, o.useStateFromStoresObject)([C.default, v.default], () => {
-    let e = C.default.isLurking(t.id);
+    let e = C.default.isLurking(n.id);
     return {
       isUserLurking: e,
-      isUnverifiedAccount: !v.default.getCheck(t.id).canChat
+      isUnverifiedAccount: !v.default.getCheck(n.id).canChat
     }
-  }), c = () => {
-    O.default.isFullServerPreview(t.id) && (0, R.transitionTo)(j.Routes.CHANNEL(t.id)), T.default.shouldShowOnboarding(t.id) && (I.default.finishOnboarding(t.id), (0, f.discardOnboardingPromise)(t.id)), (0, p.stopImpersonating)(t.id), N.default.open(t.id, u), u === j.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, S.announceDeleteTemplateChannels)(t.id)
-  };
+  }), L = () => {
+    O.default.isFullServerPreview(n.id) && (0, R.transitionTo)(j.Routes.CHANNEL(n.id)), T.default.shouldShowOnboarding(n.id) && (I.default.finishOnboarding(n.id), (0, f.discardOnboardingPromise)(n.id)), (0, p.stopImpersonating)(n.id), N.default.open(n.id, h), h === j.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, S.announceDeleteTemplateChannels)(n.id)
+  }, D = null === (t = u.current) || void 0 === t ? void 0 : t.clientHeight, M = a + 10;
   return (0, i.jsxs)("div", {
     className: z.container,
+    ref: u,
     children: [(0, i.jsx)("div", {
-      className: z.tooltipPointer
+      className: z.tooltipPointer,
+      style: {
+        top: Math.min(M, null != D ? D - 18 : M)
+      }
     }), (0, i.jsxs)("div", {
       className: z.header,
-      children: [r ? (0, i.jsx)(P.default, {
-        guild: t,
+      children: [d ? (0, i.jsx)(P.default, {
+        guild: n,
         size: 16,
         className: z.rowIconV2,
         tooltipColor: l.Tooltip.Colors.PRIMARY
       }) : (0, i.jsx)(y.default, {
-        guild: t,
+        guild: n,
         size: 20,
         className: z.rowIcon
       }), (0, i.jsx)(l.Text, {
         variant: "text-md/bold",
         color: "header-primary",
-        children: t.name
+        children: n.name
       })]
-    }), !d && !_ && (0, i.jsx)(en, {
-      guild: t
-    }), s ? (0, i.jsxs)("div", {
+    }), !A && !g && (0, i.jsx)(en, {
+      guild: n
+    }), _ ? (0, i.jsxs)("div", {
       className: z.footer,
       children: [(0, i.jsx)(b.default, {
         width: 12,
@@ -483,11 +489,11 @@ function ei(e) {
         variant: "text-xs/medium",
         children: K.default.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
           onClick: () => {
-            n(), N.default.open(t.id, j.GuildSettingsSections.INSTANT_INVITES)
+            s(), N.default.open(n.id, j.GuildSettingsSections.INSTANT_INVITES)
           }
         })
       })]
-    }) : null, a ? (0, i.jsxs)("div", {
+    }) : null, c ? (0, i.jsxs)("div", {
       className: z.footer,
       children: [(0, i.jsx)(b.default, {
         width: 12,
@@ -498,7 +504,7 @@ function ei(e) {
         variant: "text-xs/medium",
         children: K.default.Messages.GUILD_POPOUT_VIEWING_AS_ROLES.format({
           onClick: () => {
-            n(), c()
+            s(), L()
           }
         })
       })]

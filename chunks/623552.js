@@ -15,7 +15,7 @@ let d = [
   [{
     translateY: 0,
     translateX: 0,
-    scale: 1
+    scale: 1.2
   }, {
     translateY: 0,
     translateX: 0,
@@ -114,8 +114,11 @@ function _(e) {
       }, r.id)
     });
   return (0, i.jsx)("div", {
-    className: u.groupContainer,
-    children: h
+    className: u.gradientContainer,
+    children: (0, i.jsx)("div", {
+      className: u.groupContainer,
+      children: h
+    })
   })
 }
 
