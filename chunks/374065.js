@@ -37,7 +37,7 @@ function E(e) {
     let t = i.getGuild(e);
     if ((null == t ? void 0 : t.afkChannelId) === s.id) return 5;
     if (!r.can(_.Permissions.CONNECT, s)) return 2;
-    if (!r.can(_.Permissions.USE_EXTERNAL_APPS, s)) return 1
+    if (!r.can(_.Permissions.USE_EMBEDDED_ACTIVITIES, s)) return 1
   }
   return 0
 }

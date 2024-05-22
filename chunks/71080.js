@@ -280,7 +280,7 @@ function A(e, t, n, i) {
       })(),
       flag: T.Permissions.STREAM
     },
-    [T.Permissions.USE_EXTERNAL_APPS.toString()]: {
+    [T.Permissions.USE_EMBEDDED_ACTIVITIES.toString()]: {
       title: f.default.Messages.USE_EMBEDDED_ACTIVITIES,
       description: (() => {
         switch (r) {
@@ -293,7 +293,7 @@ function A(e, t, n, i) {
             return f.default.Messages.ROLE_PERMISSIONS_USE_EMBEDDED_ACTIVITIES_DESCRIPTION_CHANNEL
         }
       })(),
-      flag: T.Permissions.USE_EXTERNAL_APPS
+      flag: T.Permissions.USE_EMBEDDED_ACTIVITIES
     },
     [T.Permissions.USE_SOUNDBOARD.toString()]: {
       title: f.default.Messages.USE_SOUNDBOARD,

@@ -51,7 +51,7 @@ function T(e) {
     let t = c.getCurrentClientVoiceChannelId(h.getGuildId()) === S,
       n = (0, _.isChannelFull)(h, c, f),
       i = T.can(I.Permissions.CONNECT, h);
-    if (!T.can(I.Permissions.USE_EXTERNAL_APPS, h)) return 1;
+    if (!T.can(I.Permissions.USE_EMBEDDED_ACTIVITIES, h)) return 1;
     if (h.isVocal() && !t) {
       if (n) return 3;
       if (!i) return 2

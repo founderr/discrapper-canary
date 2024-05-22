@@ -65,7 +65,7 @@ function _(e) {
 function c(e, t, n) {
   if (null == e) return !1;
   let i = _(e),
-    r = o.default.can(u.Permissions.USE_EXTERNAL_APPS, e),
+    r = o.default.can(u.Permissions.USE_EMBEDDED_ACTIVITIES, e),
     s = r && o.default.can(u.Permissions.SEND_MESSAGES | u.Permissions.USE_APPLICATION_COMMANDS, e);
   if ((null == e ? void 0 : e.guild_id) != null) return t ? s && i : r && i;
   return t ? d.getCurrentConfig({
@@ -82,7 +82,7 @@ function E(e, t, n) {
     hasPermission: l
   } = (0, r.useStateFromStoresObject)([a.default, o.default], () => {
     let n = a.default.getChannel(e),
-      i = o.default.can(u.Permissions.USE_EXTERNAL_APPS, n),
+      i = o.default.can(u.Permissions.USE_EMBEDDED_ACTIVITIES, n),
       r = i && o.default.can(u.Permissions.SEND_MESSAGES | u.Permissions.USE_APPLICATION_COMMANDS, n);
     return {
       isActivitiesInTextEnabledForChannelType: _(n),
@@ -100,7 +100,7 @@ function E(e, t, n) {
 
 function I(e, t) {
   let n = (0, r.useStateFromStores)([a.default], () => a.default.getChannel(e)),
-    i = (0, r.useStateFromStores)([o.default], () => o.default.can(u.Permissions.USE_EXTERNAL_APPS, n)),
+    i = (0, r.useStateFromStores)([o.default], () => o.default.can(u.Permissions.USE_EMBEDDED_ACTIVITIES, n)),
     s = _(n),
     l = null == n ? void 0 : n.guild_id,
     c = null != l,

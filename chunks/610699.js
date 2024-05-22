@@ -165,7 +165,7 @@ function G(e) {
       })
     }),
     X = S.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-    Z = (0, u.useStateFromStores)([A.default], () => null != X && A.default.can(L.Permissions.USE_EXTERNAL_APPS, X), [X]),
+    Z = (0, u.useStateFromStores)([A.default], () => null != X && A.default.can(L.Permissions.USE_EMBEDDED_ACTIVITIES, X), [X]),
     {
       analyticsLocations: J
     } = (0, I.default)(T.default.INVITE_EMBED),
