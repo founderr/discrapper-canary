@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return Q
+    return q
   }
 }), s("47120");
 var a = s("735250"),
@@ -22,28 +22,29 @@ var a = s("735250"),
   g = s("144114"),
   I = s("918505"),
   h = s("332473"),
-  N = s("318661"),
-  p = s("735336"),
-  C = s("184325"),
-  A = s("204197"),
-  O = s("25990"),
-  x = s("594174"),
-  R = s("808268"),
-  M = s("759231"),
-  v = s("572004"),
-  L = s("51144"),
-  D = s("998502"),
-  P = s("695346"),
-  j = s("461877"),
-  b = s("981631"),
-  U = s("815660"),
-  y = s("801461"),
-  G = s("228168"),
-  B = s("689938"),
-  F = s("276380");
-let k = D.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
+  N = s("290421"),
+  p = s("318661"),
+  C = s("80132"),
+  A = s("735336"),
+  O = s("204197"),
+  x = s("25990"),
+  R = s("594174"),
+  M = s("808268"),
+  v = s("759231"),
+  L = s("572004"),
+  D = s("51144"),
+  P = s("998502"),
+  j = s("695346"),
+  b = s("461877"),
+  U = s("981631"),
+  y = s("815660"),
+  G = s("801461"),
+  B = s("228168"),
+  F = s("689938"),
+  k = s("276380");
+let w = P.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
-function w(e) {
+function H(e) {
   var t, l;
   let {
     className: r,
@@ -54,18 +55,18 @@ function w(e) {
   }, [o.username]);
   let N = !o.isClaimed(),
     p = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || N,
-    C = p ? B.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+    C = p ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, a.jsxs)("div", {
-    className: i()(F.field, r),
+    className: i()(k.field, r),
     children: [(0, a.jsx)("div", {
-      className: F.constrainedRow,
+      className: k.constrainedRow,
       children: (0, a.jsxs)("div", {
-        className: F.usernameRow,
+        className: k.usernameRow,
         children: [(0, a.jsx)(c.FormTitle, {
-          className: F.fieldTitle,
-          children: B.default.Messages.USER_SETTINGS_LABEL_USERNAME
+          className: k.fieldTitle,
+          children: F.default.Messages.USER_SETTINGS_LABEL_USERNAME
         }), (0, a.jsxs)("div", {
-          className: F.usernameInnerRow,
+          className: k.usernameInnerRow,
           ref: d,
           children: [(0, a.jsx)(c.Text, {
             tag: "span",
@@ -81,20 +82,20 @@ function w(e) {
         })]
       })
     }), E && (0, a.jsx)("div", {
-      className: F.pomeloWarning,
+      className: k.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
-        text: B.default.Messages.ACTION_NEEDED,
-        children: e => (0, a.jsx)(M.default, {
+        text: F.default.Messages.ACTION_NEEDED,
+        children: e => (0, a.jsx)(v.default, {
           ...e,
           color: u.default.colors.STATUS_WARNING.css
         })
       })
     }), null != f && (0, a.jsx)("div", {
-      className: F.pomeloWarning,
+      className: k.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
         text: f,
         "aria-label": !1,
-        children: e => (0, a.jsx)(M.default, {
+        children: e => (0, a.jsx)(v.default, {
           ...e,
           color: u.default.colors.STATUS_WARNING.css
         })
@@ -105,16 +106,16 @@ function w(e) {
         ...e,
         disabled: p,
         size: c.Button.Sizes.SMALL,
-        className: F.fieldButton,
+        className: k.fieldButton,
         color: c.Button.Colors.PRIMARY,
-        "aria-label": B.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_USERNAME_A11Y_LABEL,
+        "aria-label": F.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_USERNAME_A11Y_LABEL,
         onClick: () => (0, c.openModalLazy)(async () => {
           if (E) {
             let {
               default: e
             } = await Promise.all([s.e("99387"), s.e("85342")]).then(s.bind(s, "193049"));
             return t => (0, a.jsx)(e, {
-              source: y.PomeloEntrypoints.USER_SETTINGS_EDIT,
+              source: G.PomeloEntrypoints.USER_SETTINGS_EDIT,
               ...t
             })
           } {
@@ -126,62 +127,62 @@ function w(e) {
             })
           }
         }),
-        children: _ ? B.default.Messages.DISAPPROVAL : B.default.Messages.EDIT
+        children: _ ? F.default.Messages.DISAPPROVAL : F.default.Messages.EDIT
       })
-    })]
-  })
-}
-
-function H(e) {
-  var t, s;
-  let {
-    user: l,
-    className: r
-  } = e, o = (0, m.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = L.default.getGlobalName(l), E = n.useRef(null), [T, f] = n.useState(!1);
-  return n.useEffect(() => {
-    f(null != E.current && E.current.scrollWidth > E.current.clientWidth)
-  }, [S]), (0, a.jsxs)("div", {
-    className: i()(F.field, r),
-    children: [(0, a.jsx)("div", {
-      className: F.constrainedRow,
-      children: (0, a.jsxs)("div", {
-        className: F.usernameRow,
-        children: [(0, a.jsx)(c.FormTitle, {
-          className: F.fieldTitle,
-          children: B.default.Messages.DISPLAY_NAME
-        }), (0, a.jsx)("div", {
-          className: F.usernameInnerRow,
-          ref: E,
-          children: (0, a.jsx)(c.Text, {
-            tag: "span",
-            color: "header-primary",
-            variant: "text-md/normal",
-            children: null == S ? B.default.Messages.USER_SETTINGS_NO_DISPLAYNAME_PLACEHOLDER : S
-          })
-        })]
-      })
-    }), null != d && (0, a.jsx)("div", {
-      className: F.pomeloWarning,
-      children: (0, a.jsx)(c.Tooltip, {
-        text: d,
-        "aria-label": !1,
-        children: e => (0, a.jsx)(M.default, {
-          ...e,
-          color: u.default.colors.STATUS_WARNING.css
-        })
-      })
-    }), (0, a.jsx)(c.Button, {
-      className: F.fieldButton,
-      size: c.Button.Sizes.SMALL,
-      color: c.Button.Colors.PRIMARY,
-      "aria-label": B.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_DISPLAYNAME_A11Y_LABEL,
-      onClick: z,
-      children: T ? B.default.Messages.DISAPPROVAL : B.default.Messages.EDIT
     })]
   })
 }
 
 function V(e) {
+  var t, s;
+  let {
+    user: l,
+    className: r
+  } = e, o = (0, m.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = D.default.getGlobalName(l), E = n.useRef(null), [T, f] = n.useState(!1);
+  return n.useEffect(() => {
+    f(null != E.current && E.current.scrollWidth > E.current.clientWidth)
+  }, [S]), (0, a.jsxs)("div", {
+    className: i()(k.field, r),
+    children: [(0, a.jsx)("div", {
+      className: k.constrainedRow,
+      children: (0, a.jsxs)("div", {
+        className: k.usernameRow,
+        children: [(0, a.jsx)(c.FormTitle, {
+          className: k.fieldTitle,
+          children: F.default.Messages.DISPLAY_NAME
+        }), (0, a.jsx)("div", {
+          className: k.usernameInnerRow,
+          ref: E,
+          children: (0, a.jsx)(c.Text, {
+            tag: "span",
+            color: "header-primary",
+            variant: "text-md/normal",
+            children: null == S ? F.default.Messages.USER_SETTINGS_NO_DISPLAYNAME_PLACEHOLDER : S
+          })
+        })]
+      })
+    }), null != d && (0, a.jsx)("div", {
+      className: k.pomeloWarning,
+      children: (0, a.jsx)(c.Tooltip, {
+        text: d,
+        "aria-label": !1,
+        children: e => (0, a.jsx)(v.default, {
+          ...e,
+          color: u.default.colors.STATUS_WARNING.css
+        })
+      })
+    }), (0, a.jsx)(c.Button, {
+      className: k.fieldButton,
+      size: c.Button.Sizes.SMALL,
+      color: c.Button.Colors.PRIMARY,
+      "aria-label": F.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_DISPLAYNAME_A11Y_LABEL,
+      onClick: Q,
+      children: T ? F.default.Messages.DISAPPROVAL : F.default.Messages.EDIT
+    })]
+  })
+}
+
+function Y(e) {
   let {
     text: t,
     censor: s,
@@ -195,22 +196,22 @@ function V(e) {
       color: c.Button.Colors.LINK,
       "aria-label": r ? i : l,
       onClick: () => o(!r),
-      children: r ? B.default.Messages.HIDE : B.default.Messages.REVEAL
+      children: r ? F.default.Messages.HIDE : F.default.Messages.REVEAL
     })]
   })
 }
 
-function Y(e) {
+function W(e) {
   let t, {
     className: n,
     user: l
   } = e;
   if (l.isClaimed()) {
     if (null == l.email) t = {
-      buttonText: B.default.Messages.ADD,
-      buttonAriaLabel: B.default.Messages.USER_SETTINGS_ACCOUNT_ADD_EMAIL_A11Y_LABEL,
+      buttonText: F.default.Messages.ADD,
+      buttonAriaLabel: F.default.Messages.USER_SETTINGS_ACCOUNT_ADD_EMAIL_A11Y_LABEL,
       buttonColor: c.Button.Colors.PRIMARY,
-      valueMessage: B.default.Messages.USER_SETTINGS_NO_EMAIL_PLACEHOLDER,
+      valueMessage: F.default.Messages.USER_SETTINGS_NO_EMAIL_PLACEHOLDER,
       handleClick: () => (0, c.openModalLazy)(async () => {
         let {
           default: e
@@ -225,14 +226,14 @@ function Y(e) {
         email: e
       } = l;
       t = {
-        buttonText: B.default.Messages.EDIT,
-        buttonAriaLabel: B.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_EMAIL_A11Y_LABEL,
+        buttonText: F.default.Messages.EDIT,
+        buttonAriaLabel: F.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_EMAIL_A11Y_LABEL,
         buttonColor: c.Button.Colors.PRIMARY,
-        valueMessage: (0, a.jsx)(V, {
+        valueMessage: (0, a.jsx)(Y, {
           text: e,
-          censor: j.censorEmail,
-          revealLabel: B.default.Messages.USER_SETTINGS_ACCOUNT_REVEAL_EMAIL_A11Y_LABEL,
-          hideLabel: B.default.Messages.USER_SETTINGS_ACCOUNT_HIDE_EMAIL_A11Y_LABEL
+          censor: b.censorEmail,
+          revealLabel: F.default.Messages.USER_SETTINGS_ACCOUNT_REVEAL_EMAIL_A11Y_LABEL,
+          hideLabel: F.default.Messages.USER_SETTINGS_ACCOUNT_HIDE_EMAIL_A11Y_LABEL
         }),
         handleClick: () => (0, c.openModalLazy)(async () => {
           let {
@@ -245,20 +246,20 @@ function Y(e) {
       }
     }
   } else t = {
-    buttonText: B.default.Messages.CLAIM_ACCOUNT_SHORT,
-    buttonAriaLabel: B.default.Messages.CLAIM_ACCOUNT_SHORT,
+    buttonText: F.default.Messages.CLAIM_ACCOUNT_SHORT,
+    buttonAriaLabel: F.default.Messages.CLAIM_ACCOUNT_SHORT,
     buttonColor: c.Button.Colors.BRAND,
-    valueMessage: B.default.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
+    valueMessage: F.default.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
     handleClick: () => f.default.openClaimAccountModal()
   };
   return (0, a.jsxs)("div", {
-    className: i()(F.field, n),
+    className: i()(k.field, n),
     children: [(0, a.jsx)("div", {
-      className: F.constrainedRow,
+      className: k.constrainedRow,
       children: (0, a.jsxs)("div", {
         children: [(0, a.jsx)(c.FormTitle, {
-          className: F.fieldTitle,
-          children: B.default.Messages.USER_SETTINGS_LABEL_EMAIL
+          className: k.fieldTitle,
+          children: F.default.Messages.USER_SETTINGS_LABEL_EMAIL
         }), (0, a.jsx)("div", {
           children: (0, a.jsx)(c.Text, {
             tag: "span",
@@ -269,7 +270,7 @@ function Y(e) {
         })]
       })
     }), (0, a.jsx)(c.Button, {
-      className: F.fieldButton,
+      className: k.fieldButton,
       size: c.Button.Sizes.SMALL,
       color: c.Button.Colors.PRIMARY,
       "aria-label": t.buttonAriaLabel,
@@ -279,7 +280,7 @@ function Y(e) {
   })
 }
 
-function W(e) {
+function K(e) {
   let t, {
     className: n,
     user: l
@@ -289,19 +290,19 @@ function W(e) {
     phone: r,
     email: o
   } = l, d = null != r;
-  return t = d ? (0, a.jsx)(V, {
+  return t = d ? (0, a.jsx)(Y, {
     text: r,
-    censor: j.censorPhone,
-    revealLabel: B.default.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
-    hideLabel: B.default.Messages.USER_SETTINGS_ACCOUNT_HIDE_PHONE_A11Y_LABEL
-  }) : B.default.Messages.USER_SETTINGS_NO_PHONE_PLACEHOLDER, (0, a.jsxs)("div", {
-    className: i()(F.field, n),
+    censor: b.censorPhone,
+    revealLabel: F.default.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
+    hideLabel: F.default.Messages.USER_SETTINGS_ACCOUNT_HIDE_PHONE_A11Y_LABEL
+  }) : F.default.Messages.USER_SETTINGS_NO_PHONE_PLACEHOLDER, (0, a.jsxs)("div", {
+    className: i()(k.field, n),
     children: [(0, a.jsx)("div", {
-      className: F.constrainedRow,
+      className: k.constrainedRow,
       children: (0, a.jsxs)("div", {
         children: [(0, a.jsx)(c.FormTitle, {
-          className: F.fieldTitle,
-          children: B.default.Messages.USER_SETTINGS_LABEL_PHONE_NUMBER
+          className: k.fieldTitle,
+          children: F.default.Messages.USER_SETTINGS_LABEL_PHONE_NUMBER
         }), (0, a.jsx)("div", {
           children: (0, a.jsx)(c.Text, {
             tag: "span",
@@ -312,28 +313,28 @@ function W(e) {
         })]
       })
     }), (0, a.jsxs)("div", {
-      className: F.fieldButtonList,
+      className: k.fieldButtonList,
       children: [d && null != o ? (0, a.jsx)(c.Button, {
-        className: i()(F.fieldButton, F.removeButton),
+        className: i()(k.fieldButton, k.removeButton),
         size: c.Button.Sizes.SMALL,
         look: c.Button.Looks.LINK,
         color: c.Button.Colors.PRIMARY,
-        "aria-label": B.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_A11Y_LABEL,
+        "aria-label": F.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_A11Y_LABEL,
         onClick: function() {
           (0, c.openModal)(e => (0, a.jsx)(T.default, {
             ...e,
-            title: B.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
-            children: l.hasFlag(b.UserFlags.MFA_SMS) ? B.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
-            actionText: B.default.Messages.REMOVE,
+            title: F.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
+            children: l.hasFlag(U.UserFlags.MFA_SMS) ? F.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
+            actionText: F.default.Messages.REMOVE,
             handleSubmit: e => g.default.removePhone(e, g.ChangePhoneReason.USER_SETTINGS_UPDATE)
           }))
         },
-        children: B.default.Messages.REMOVE
+        children: F.default.Messages.REMOVE
       }) : null, (0, a.jsx)(c.Button, {
-        className: F.fieldButton,
+        className: k.fieldButton,
         size: c.Button.Sizes.SMALL,
         color: c.Button.Colors.PRIMARY,
-        "aria-label": d ? B.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_PHONE_A11Y_LABEL : B.default.Messages.USER_SETTINGS_ACCOUNT_ADD_PHONE_A11Y_LABEL,
+        "aria-label": d ? F.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_PHONE_A11Y_LABEL : F.default.Messages.USER_SETTINGS_ACCOUNT_ADD_PHONE_A11Y_LABEL,
         onClick: function() {
           (0, c.openModalLazy)(async () => {
             let {
@@ -344,23 +345,23 @@ function W(e) {
               ...t
             })
           }, {
-            modalKey: U.PHONE_VERIFICATION_MODAL_KEY
+            modalKey: y.PHONE_VERIFICATION_MODAL_KEY
           })
         },
-        children: d ? B.default.Messages.EDIT : B.default.Messages.ADD
+        children: d ? F.default.Messages.EDIT : F.default.Messages.ADD
       })]
     })]
   })
 }
 
-function K(e) {
+function z(e) {
   let {
     user: t
   } = e, s = (0, _.default)({
     id: t.id,
-    label: B.default.Messages.COPY_ID_USER
+    label: F.default.Messages.COPY_ID_USER
   });
-  return P.DeveloperMode.useSetting() && v.SUPPORTS_COPY ? (0, a.jsx)(c.Popout, {
+  return j.DeveloperMode.useSetting() && L.SUPPORTS_COPY ? (0, a.jsx)(c.Popout, {
     renderPopout: e => {
       let {
         closePopout: t
@@ -369,16 +370,16 @@ function K(e) {
         onClose: t,
         onSelect: void 0,
         navId: "copy-id",
-        "aria-label": B.default.Messages.USER_MORE_ACTIONS_MENU_LABEL,
+        "aria-label": F.default.Messages.USER_MORE_ACTIONS_MENU_LABEL,
         children: s
       })
     },
     children: e => (0, a.jsx)(c.Clickable, {
       ...e,
-      className: F.overflowMenuButton,
-      "aria-label": B.default.Messages.ACTIONS,
-      children: (0, a.jsx)(R.default, {
-        className: F.overflowMenuIcon,
+      className: k.overflowMenuButton,
+      "aria-label": F.default.Messages.ACTIONS,
+      children: (0, a.jsx)(M.default, {
+        className: k.overflowMenuIcon,
         height: 24,
         width: 24
       })
@@ -386,83 +387,83 @@ function K(e) {
   }) : null
 }
 
-function z() {
-  S.default.setSection(b.UserSettingsSections.PROFILE_CUSTOMIZATION)
+function Q() {
+  S.default.setSection(U.UserSettingsSections.PROFILE_CUSTOMIZATION)
 }
 
-function Q() {
+function q() {
   var e;
-  let t = (0, d.useStateFromStores)([x.default], () => {
-      let e = x.default.getCurrentUser();
+  let t = (0, d.useStateFromStores)([R.default], () => {
+      let e = R.default.getCurrentUser();
       return o()(null != e, "UserSettingsAccountProfileCard: currentUser cannot be undefined"), e
     }),
-    s = (0, N.default)(t.id),
-    n = P.StatusSetting.useSetting(),
-    l = (0, d.useStateFromStores)([O.default], () => O.default.getErrors()),
-    i = null == l ? void 0 : null === (e = l.avatar) || void 0 === e ? void 0 : e[0],
+    s = (0, p.default)(t.id),
+    n = (0, N.default)(s),
+    l = j.StatusSetting.useSetting(),
+    i = (0, d.useStateFromStores)([x.default], () => x.default.getErrors()),
+    r = null == i ? void 0 : null === (e = i.avatar) || void 0 === e ? void 0 : e[0],
     {
-      avatarSrc: r,
-      avatarDecorationSrc: u
-    } = (0, A.default)({
+      avatarSrc: u,
+      avatarDecorationSrc: S
+    } = (0, O.default)({
       user: t,
       size: c.AvatarSizes.SIZE_80
     });
   return (0, a.jsxs)("div", {
-    className: F.accountProfileCard,
-    children: [(0, a.jsx)(p.default, {
+    className: k.accountProfileCard,
+    children: [(0, a.jsx)(A.default, {
       displayProfile: s,
       user: t,
       allowEdit: !1,
       guildId: void 0,
-      profileType: G.UserProfileTypes.SETTINGS
+      profileType: B.UserProfileTypes.SETTINGS
     }), (0, a.jsxs)("div", {
-      className: F.userInfo,
-      children: [(0, a.jsx)(k, {
-        className: F.avatar,
-        src: r,
-        avatarDecoration: u,
-        status: n,
+      className: k.userInfo,
+      children: [(0, a.jsx)(w, {
+        className: k.avatar,
+        src: u,
+        avatarDecoration: S,
+        status: l,
         size: c.AvatarSizes.SIZE_80,
         "aria-label": t.username
       }), (0, a.jsxs)("div", {
         children: [(0, a.jsxs)("div", {
-          className: F.profileCardUsernameRow,
+          className: k.profileCardUsernameRow,
           children: [(0, a.jsx)(E.default, {
             user: t,
-            className: F.userTag,
-            discriminatorClass: F.discriminator
-          }), (0, a.jsx)(K, {
+            className: k.userTag,
+            discriminatorClass: k.discriminator
+          }), (0, a.jsx)(z, {
             user: t
           })]
         }), (0, a.jsx)(C.default, {
-          className: F.badgeList,
-          user: t,
-          size: C.BadgeSizes.SIZE_22
+          badges: n,
+          className: k.badgeList
         })]
       }), (0, a.jsx)(c.Button, {
-        onClick: z,
+        onClick: Q,
         size: c.Button.Sizes.SMALL,
-        children: B.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE
+        children: F.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE
       })]
     }), (0, a.jsxs)("div", {
-      className: F.background,
-      children: [null != i ? (0, a.jsx)(c.Text, {
-        className: F.avatarError,
+      className: k.background,
+      children: [null != r ? (0, a.jsx)(c.Text, {
+        className: k.avatarError,
         variant: "text-xs/normal",
         color: "text-danger",
-        children: i
+        children: r
       }) : null, (0, a.jsxs)("div", {
-        className: F.fieldList,
-        children: [(0, a.jsx)(H, {
-          className: F.fieldSpacerBottom,
+        className: k.fieldList,
+        children: [(0, a.jsx)(V, {
+          className: k.fieldSpacerBottom,
           user: t
-        }), (0, a.jsx)(w, {
-          user: t
-        }), (0, a.jsx)(Y, {
-          className: F.fieldSpacer,
+        }), (0, a.jsx)(H, {
           user: t
         }), (0, a.jsx)(W, {
-          className: F.fieldSpacer,
+          className: k.fieldSpacer,
+          user: t
+        }), (0, a.jsx)(K, {
+          className: k.fieldSpacer,
           user: t
         })]
       })]
