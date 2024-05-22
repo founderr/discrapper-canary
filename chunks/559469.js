@@ -105,10 +105,10 @@ function r(e) {
     preset: l.ClanBrandPresets.CASCADE,
     banner: l.ClanBannerKind.NIGHT_SKY,
     bannerHash: "37cd6a7f90faafeb8c54e5ea5163407b",
-    name: "Moewtopia",
+    name: "Meowtopia",
     description: "the purrfect place for a pawsitive and hissterical time :D are you kitten me...i feline like that’s too many puns...",
     tag: "meow",
-    wildcardDescriptors: ["Meow", "Meow", "Meow"],
+    wildcardDescriptors: ["Meow", "Meow", "Moew"],
     traits: ["All Ages", "Streamers", "Parent Friendly", "sleepy cats", "DnD", "travel", "catnaps"],
     memberCount: 94
   })], [e])
