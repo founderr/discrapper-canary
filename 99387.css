@@ -20657,8 +20657,7 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     overflow: hidden;
     color: var(--text-normal);
     word-wrap: break-word;
-    word-break: break-word;
-    line-height: 16px
+    word-break: break-word
 }
 
 .clamp__79a59 {
@@ -20681,15 +20680,21 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     position: absolute
 }
 
+.singleLineAlign__355e0 {
+    text-align: center
+}
+
 .statusText__32d26 {
     display: inline;
-    color: var(--text-normal)
+    color: var(--text-normal);
+    line-height: 18px
 }
 
 .statusEmojiInline__099a8 {
     display: inline;
     height: 16px;
     width: 16px;
+    line-height: 18px;
     margin-right: 4px
 }
 
@@ -44826,6 +44831,12 @@ img.thumbnail__18ece {
     display: flex;
     justify-content: space-between;
     align-items: center
+}
+
+.searchFilterCount_e1a1c9 {
+    color: var(--brand-360);
+    font-size: 14px;
+    font-weight: 500
 }
 
 .role__9f030 {

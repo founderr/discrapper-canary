@@ -7,6 +7,7 @@ e.exports = {
   incorporeal: "incorporeal_cb0354",
   invisibleContainer: "invisibleContainer__1e05d",
   placeholderWidth: "placeholderWidth__1e10a",
+  singleLineAlign: "singleLineAlign__355e0",
   statusBubble: "statusBubble__1a4c3",
   statusBubbleCopyStatusCursor: "statusBubbleCopyStatusCursor_d67753",
   statusBubbleEmojiOnlyPadding: "statusBubbleEmojiOnlyPadding_ff949e",
