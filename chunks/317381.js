@@ -31,7 +31,6 @@ function N(e, t, n) {
   }) : e[t] = n, e
 }
 let p = {
-    seenActivities: new Set,
     everLaunchedActivities: new Set,
     seenNewActivities: {},
     seenUpdatedActivities: {},
@@ -160,13 +159,11 @@ function Y(e, t) {
 }
 class j extends(r = s.default.PersistedStore) {
   initialize(e) {
-    var t, n;
-    let i = new Set(null !== (t = null == e ? void 0 : e.seenActivities) && void 0 !== t ? t : []),
-      r = new Set(null !== (n = null == e ? void 0 : e.everLaunchedActivities) && void 0 !== n ? n : []);
+    var t;
+    let n = new Set(null !== (t = null == e ? void 0 : e.everLaunchedActivities) && void 0 !== t ? t : []);
     null != e && (p = {
       ...e,
-      seenActivities: i,
-      everLaunchedActivities: r
+      everLaunchedActivities: n
     })
   }
   getState() {
@@ -269,22 +266,16 @@ N(j, "displayName", "EmbeddedActivitiesStore"), N(j, "persistKey", "EmbeddedActi
   seenFeaturedActivities: [],
   shouldShowNewActivityIndicator: !1
 }), e => (delete e.seenFeaturedActivities, {
-  ...e,
-  seenActivities: []
-}), e => ({
+  ...e
+}), e => (delete e.seenActivities, {
   ...e
 }), e => (delete e.currentFreeActivity, delete e.lastFreeActivityRotationTimestampMs, delete e.freePeriodActivities, delete e.shouldShowFreeActivityIndicator, {
   ...e
+}), e => ({
+  ...e,
+  seenNewActivities: {},
+  seenUpdatedActivities: {}
 }), e => {
-  var t;
-  let n = new Set(null !== (t = e.seenActivities) && void 0 !== t ? t : []);
-  return {
-    ...e,
-    seenActivities: n,
-    seenNewActivities: {},
-    seenUpdatedActivities: {}
-  }
-}, e => {
   var t;
   let n = new Set(null !== (t = e.everLaunchedActivities) && void 0 !== t ? t : []);
   return {
@@ -472,7 +463,7 @@ let W = new j(a.default, {
       t.forEach(e => {
         let t = e.application_id,
           i = e.client_platform_config[(0, S.default)((0, I.getOS)())];
-        if (!p.seenActivities.has(t) && (p.shouldShowNewActivityIndicator = !0, p.seenActivities.add(t)), null == i.label_until) return;
+        if (null == i.label_until) return;
         let r = new Date(i.label_until).getTime();
         if (r < n) return;
         let s = p.seenNewActivities[t],
