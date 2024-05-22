@@ -83,7 +83,7 @@ let E = {
     eventType: d.AutomodEventType.GUILD_MEMBER_JOIN_OR_UPDATE,
     perGuildMaxCount: 1,
     availableActionTypes: new Set([d.AutomodActionType.QUARANTINE_USER, d.AutomodActionType.FLAG_TO_CHANNEL]),
-    flags: new Set(["beta"]),
+    flags: new Set([]),
     defaultActionTypes: new Set([d.AutomodActionType.QUARANTINE_USER])
   },
   [d.AutomodTriggerType.SERVER_POLICY]: {
