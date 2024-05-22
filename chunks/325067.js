@@ -8,8 +8,8 @@ var a, n, l, i, r = s("392711"),
 let S = !1,
   E = [],
   T = "",
-  f = "",
-  _ = !1,
+  _ = "",
+  f = !1,
   m = {
     viewNonce: "",
     regenerateNonce: ""
@@ -28,10 +28,10 @@ class g extends(i = u.default.Store) {
     return m
   }
   get emailToken() {
-    return f
+    return _
   }
   get hasSeenBackupPrompt() {
-    return _
+    return f
   }
 }
 l = "MFAStore", (n = "displayName") in(a = g) ? Object.defineProperty(a, n, {
@@ -51,7 +51,7 @@ l = "MFAStore", (n = "displayName") in(a = g) ? Object.defineProperty(a, n, {
     let {
       token: t
     } = e;
-    f = t
+    _ = t
   },
   MFA_DISABLE_SUCCESS: function(e) {
     let {
@@ -82,6 +82,6 @@ l = "MFAStore", (n = "displayName") in(a = g) ? Object.defineProperty(a, n, {
     m = t
   },
   MFA_SEEN_BACKUP_CODE_PROMPT: function() {
-    _ = !0
+    f = !0
   }
 })

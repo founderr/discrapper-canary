@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("37303"),
   E = s("46140"),
   T = s("981631"),
-  f = s("689938"),
-  _ = s("201403");
+  _ = s("689938"),
+  f = s("201403");
 
 function m(e) {
   if (null == e) return !1;
@@ -35,9 +35,9 @@ t.default = () => {
     var t, a;
     let n = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return !(null !== (a = s.get(e.id)) && void 0 !== a && a) || n
-  }), [e, s]), h = n.useMemo(() => new Map(I.map(e => [e.id, e])), [I]), N = n.useRef(!1), p = n.useRef([]), C = n.useMemo(() => {
+  }), [e, s]), N = n.useMemo(() => new Map(I.map(e => [e.id, e])), [I]), h = n.useRef(!1), C = n.useRef([]), p = n.useMemo(() => {
     if (0 === I.length) return [];
-    if (N.current) return p.current;
+    if (h.current) return C.current;
     let e = I.sort((e, t) => {
       var s, a, n, l, i, r;
       let o = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
@@ -48,48 +48,48 @@ t.default = () => {
       if (o && !d) return -1;
       if (S && !E) return 1;
       let T = (null === (i = e.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null,
-        f = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
-      if (T && !o && f && !S) {
+        _ = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
+      if (T && !o && _ && !S) {
         let s = (0, c.calculatePercentComplete)(e);
         return (0, c.calculatePercentComplete)(t) - s
       }
       if (T && !o) return -1;
-      if (f && !S) return 1;
-      let _ = (0, c.isTargetedForContent)(e, u.QuestContent.QUEST_BAR),
+      if (_ && !S) return 1;
+      let f = (0, c.isTargetedForContent)(e, u.QuestContent.QUEST_BAR),
         m = (0, c.isTargetedForContent)(t, u.QuestContent.QUEST_BAR);
-      if (_ && m) return 0;
-      if (_) return -1;
+      if (f && m) return 0;
+      if (f) return -1;
       if (m) return 1;
       let g = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
         I = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
-      if (g && !T && !o && I && !f && !S) return 0;
+      if (g && !T && !o && I && !_ && !S) return 0;
       if (g && !T && !o) return -1;
-      if (I && !f && !S) return 1;
-      let h = o && d,
-        N = S && E;
-      return h && !N ? 1 : !h && N ? -1 : 0
+      if (I && !_ && !S) return 1;
+      let N = o && d,
+        h = S && E;
+      return N && !h ? 1 : !N && h ? -1 : 0
     }).map(e => e.id);
-    return N.current = !0, p.current = e, e
+    return h.current = !0, C.current = e, e
   }, [I]), A = n.useRef(null), O = n.useMemo(() => {
     if (null != A.current) return A.current;
     let e = g ? [{
       location: u.QuestContent.GIFT_INVENTORY_FOR_YOU,
-      title: f.default.Messages.QUESTS_FOR_YOU,
-      questIds: C.filter(e => m(h.get(e)))
+      title: _.default.Messages.QUESTS_FOR_YOU,
+      questIds: p.filter(e => m(N.get(e)))
     }, {
       location: u.QuestContent.GIFT_INVENTORY_OTHER,
-      title: f.default.Messages.QUESTS_OTHER,
-      questIds: C.filter(e => !m(h.get(e)))
+      title: _.default.Messages.QUESTS_OTHER,
+      questIds: p.filter(e => !m(N.get(e)))
     }] : [];
     return A.current = e, e
-  }, [g, C, h]), x = O.every(e => {
+  }, [g, p, N]), x = O.every(e => {
     let {
       questIds: t
     } = e;
     return t.length > 0
   });
   n.useEffect(() => {
-    t && (A.current = null, N.current = !1)
+    t && (A.current = null, h.current = !1)
   }, [t]);
   let R = n.useCallback(e => {
     let {
@@ -99,7 +99,7 @@ t.default = () => {
     } = e;
     return (0, a.jsx)(a.Fragment, {
       children: t.map((e, t) => {
-        let l = h.get(e);
+        let l = N.get(e);
         return null == l ? null : (0, a.jsx)(S.QuestsCard, {
           quest: l,
           location: s,
@@ -108,30 +108,30 @@ t.default = () => {
         }, l.id)
       })
     })
-  }, [x, h]);
+  }, [x, N]);
   return t ? (0, a.jsx)(i.Spinner, {
-    className: _.spinner
-  }) : 0 === C.length ? null : (0, a.jsx)(i.FormSection, {
-    className: _.questsContainer,
+    className: f.spinner
+  }) : 0 === p.length ? null : (0, a.jsx)(i.FormSection, {
+    className: f.questsContainer,
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsxs)("div", {
-        className: _.questsHeading,
+        className: f.questsHeading,
         children: [g && (0, a.jsx)(l.QuestsIcon, {
-          className: _.questsIcon
+          className: f.questsIcon
         }), (0, a.jsx)(i.Heading, {
           variant: "heading-md/semibold",
-          className: _.questsHeading,
-          children: f.default.Messages.QUESTS
+          className: f.questsHeading,
+          children: _.default.Messages.QUESTS
         }), (0, a.jsx)(i.Text, {
           variant: "text-xs/normal",
-          className: _.questsHeadingLearnMore,
-          children: f.default.Messages.QUESTS_LEARN_MORE_LINK.format({
+          className: f.questsHeadingLearnMore,
+          children: _.default.Messages.QUESTS_LEARN_MORE_LINK.format({
             questsLearnMoreLink: r.default.getArticleURL(T.HelpdeskArticles.QUESTS_LEARN_MORE)
           })
         })]
       }),
       children: [(0, a.jsx)(i.FormDivider, {
-        className: _.divider
+        className: f.divider
       }), g ? O.map((e, t, s) => {
         let {
           location: n,
@@ -146,11 +146,11 @@ t.default = () => {
           return e + s.length
         }, 0);
         return (0, a.jsxs)("section", {
-          className: _.questsListContainer,
+          className: f.questsListContainer,
           children: [x && (0, a.jsx)(i.Text, {
             variant: "text-xs/semibold",
             color: "header-secondary",
-            className: _.sectionHeader,
+            className: f.sectionHeader,
             children: r
           }), (0, a.jsx)(R, {
             questIds: l,
@@ -159,7 +159,7 @@ t.default = () => {
           })]
         }, n)
       }) : (0, a.jsx)(R, {
-        questIds: C,
+        questIds: p,
         location: u.QuestContent.GIFT_INVENTORY_FOR_YOU
       })]
     })

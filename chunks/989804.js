@@ -1,29 +1,29 @@
 "use strict";
-s.r(t);
-var a = s("735250"),
-  n = s("470079"),
-  i = s("442837"),
-  r = s("37234"),
-  u = s("230711"),
-  l = s("410575"),
-  o = s("503089"),
-  c = s("110924"),
-  d = s("100527"),
-  f = s("367907"),
-  S = s("906732"),
-  g = s("254901"),
-  h = s("45493"),
-  E = s("332473"),
-  _ = s("113434"),
-  p = s("663389"),
-  m = s("210887"),
-  b = s("394644"),
-  T = s("295545"),
-  k = s("839469"),
-  v = s("981631"),
-  P = s("689938");
-let y = n.forwardRef(function() {
-  h.default.trackExposure({
+a.r(t);
+var s = a("735250"),
+  l = a("470079"),
+  n = a("442837"),
+  o = a("37234"),
+  i = a("230711"),
+  u = a("410575"),
+  r = a("503089"),
+  d = a("110924"),
+  c = a("100527"),
+  f = a("367907"),
+  S = a("906732"),
+  g = a("254901"),
+  p = a("45493"),
+  E = a("332473"),
+  _ = a("113434"),
+  m = a("663389"),
+  h = a("210887"),
+  b = a("394644"),
+  k = a("295545"),
+  T = a("839469"),
+  y = a("981631"),
+  A = a("689938");
+let P = l.forwardRef(function() {
+  p.default.trackExposure({
     location: "cd25e4_1"
   }), g.default.useExperiment({
     location: "user_setting_auto"
@@ -32,99 +32,99 @@ let y = n.forwardRef(function() {
   }), g.default.trackExposure({
     location: "user_setting_manual"
   });
-  let e = (0, i.useStateFromStores)([m.default], () => m.default.theme),
-    t = (0, i.useStateFromStores)([m.default], () => m.default.darkSidebar ? v.ThemeTypes.DARK : void 0),
+  let e = (0, n.useStateFromStores)([h.default], () => h.default.theme),
+    t = (0, n.useStateFromStores)([h.default], () => h.default.darkSidebar ? y.ThemeTypes.DARK : void 0),
     {
-      section: s,
-      subsection: y,
-      analyticsLocation: I,
-      analyticsLocations: w
-    } = (0, i.useStateFromStoresObject)([p.default], () => {
-      let e = p.default.getSection(),
-        t = p.default.getSubsection(),
+      section: a,
+      subsection: P,
+      analyticsLocation: v,
+      analyticsLocations: x
+    } = (0, n.useStateFromStoresObject)([m.default], () => {
+      let e = m.default.getSection(),
+        t = m.default.getSubsection(),
         {
-          analyticsLocation: s,
-          analyticsLocations: a
-        } = p.default.getProps();
+          analyticsLocation: a,
+          analyticsLocations: s
+        } = m.default.getProps();
       return {
         section: e,
         subsection: t,
-        analyticsLocation: s,
-        analyticsLocations: a
+        analyticsLocation: a,
+        analyticsLocations: s
       }
     }),
-    A = (0, c.default)(s),
-    L = (0, c.default)(y),
+    F = (0, d.default)(a),
+    I = (0, d.default)(P),
     {
-      analyticsLocations: x
-    } = (0, S.default)(d.default.USER_SETTINGS);
-  n.useEffect(() => {
-    null != s && (s !== A || y !== L) && ! function(e) {
+      analyticsLocations: R
+    } = (0, S.default)(c.default.USER_SETTINGS);
+  l.useEffect(() => {
+    null != a && (a !== F || P !== I) && ! function(e) {
       let {
         destinationPane: t,
-        originPane: s = null,
-        source: a = null,
-        subsection: n = null,
-        locationStack: i = null
+        originPane: a = null,
+        source: s = null,
+        subsection: l = null,
+        locationStack: n = null
       } = e;
-      f.default.trackWithMetadata(v.AnalyticEvents.SETTINGS_PANE_VIEWED, {
+      f.default.trackWithMetadata(y.AnalyticEvents.SETTINGS_PANE_VIEWED, {
         settings_type: "user",
-        origin_pane: s,
+        origin_pane: a,
         destination_pane: t,
-        location_stack: i,
-        source: a,
-        subsection: n
+        location_stack: n,
+        source: s,
+        subsection: l
       })
     }({
-      destinationPane: s,
-      originPane: null != A ? A : null,
-      source: I,
-      subsection: y,
-      locationStack: w
+      destinationPane: a,
+      originPane: null != F ? F : null,
+      source: v,
+      subsection: P,
+      locationStack: x
     })
-  }, [s, A, y, L, I, w]);
-  let F = (0, T.useIsEligibleForUserSettingsSearchDesktop)({
+  }, [a, F, P, I, v, x]);
+  let U = (0, k.useIsEligibleForUserSettingsSearchDesktop)({
       location: "user_settings"
     }),
     {
-      hasSearchResults: R,
-      searchResults: C
-    } = (0, k.useSettingSearchResults)(),
-    M = n.useMemo(() => F && R, [F, R]),
-    N = (0, b.useDefaultUserSettingsSections)(),
-    U = (0, b.useSearchUserSettingsSections)(C),
-    j = n.useMemo(() => M ? U : N, [M, U, N]),
+      hasSearchResults: j,
+      searchResults: L
+    } = (0, T.useSettingSearchResults)(),
+    N = l.useMemo(() => U && j, [U, j]),
+    C = (0, b.useDefaultUserSettingsSections)(),
+    w = (0, b.useSearchUserSettingsSections)(L),
+    D = l.useMemo(() => N ? w : C, [N, w, C]),
     G = (0, E.useIsEligibleForPomelo)(),
-    D = (0, _.useQuestsForSettingsBadge)(),
-    B = n.useCallback(e => {
-      u.default.setSection(e)
+    M = (0, _.useQuestsForSettingsBadge)(),
+    B = l.useCallback(e => {
+      i.default.setSection(e)
     }, []);
-  return (0, a.jsx)(S.AnalyticsLocationProvider, {
-    value: x,
-    children: (0, a.jsx)(l.default, {
+  return (0, s.jsx)(S.AnalyticsLocationProvider, {
+    value: R,
+    children: (0, s.jsx)(u.default, {
       root: !0,
-      page: v.AnalyticsPages.USER_SETTINGS,
-      children: (0, a.jsx)(o.default, {
+      page: y.AnalyticsPages.USER_SETTINGS,
+      children: (0, s.jsx)(r.default, {
         theme: e,
-        title: P.default.Messages.USER_SETTINGS,
+        title: A.default.Messages.USER_SETTINGS,
         sidebarTheme: t,
-        section: s,
+        section: a,
         onSetSection: B,
-        onClose: r.popLayer,
-        sections: j,
+        onClose: o.popLayer,
+        sections: D,
         isEligibleForPomelo: G,
-        questsForBadge: D
+        questsForBadge: M
       })
     })
   })
 });
-t.default = n.forwardRef(function() {
-  let e = (0, i.useStateFromStores)([p.default], () => p.default.getProps().analyticsLocations),
+t.default = l.forwardRef(function() {
+  let e = (0, n.useStateFromStores)([m.default], () => m.default.getProps().analyticsLocations),
     {
       analyticsLocations: t
     } = (0, S.default)(e);
-  return (0, a.jsx)(S.AnalyticsLocationProvider, {
+  return (0, s.jsx)(S.AnalyticsLocationProvider, {
     value: t,
-    children: (0, a.jsx)(y, {})
+    children: (0, s.jsx)(P, {})
   })
 })

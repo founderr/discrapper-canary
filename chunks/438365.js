@@ -27,13 +27,13 @@ function d(e) {
     (0, r.fetchClanInfo)(E)
   }, [E]);
   let T = (0, r.useClanInfo)(null == u ? void 0 : u.identityGuildId),
-    f = (0, n.useStateFromStores)([l.default], () => l.default.getGuild(null == u ? void 0 : u.identityGuildId));
+    _ = (0, n.useStateFromStores)([l.default], () => l.default.getGuild(null == u ? void 0 : u.identityGuildId));
   return {
     userClanTag: c,
     userClanBadge: S,
     guildId: E,
-    guildName: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : null == T ? void 0 : T.name,
-    guildIcon: null !== (s = null == f ? void 0 : f.icon) && void 0 !== s ? s : null == T ? void 0 : T.icon,
+    guildName: null !== (t = null == _ ? void 0 : _.name) && void 0 !== t ? t : null == T ? void 0 : T.name,
+    guildIcon: null !== (s = null == _ ? void 0 : _.icon) && void 0 !== s ? s : null == T ? void 0 : T.icon,
     clan: T
   }
 }

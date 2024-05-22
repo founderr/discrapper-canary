@@ -20,8 +20,8 @@ function E() {
     t = (0, l.useStateFromStores)([c.default], () => c.default.getGuild()),
     s = (0, l.useStateFromStores)([c.default], () => c.default.getErrors()),
     [E, T] = n.useState(!1),
-    f = n.useMemo(() => (null == s ? void 0 : s.message) != null ? null == s ? void 0 : s.message : Object.keys(null != s ? s : {}).length > 0 ? S.default.Messages.GUILD_SETTINGS_EDIT_PROFILE_GENERIC_ERROR : null, [s]),
-    _ = n.useCallback(async () => {
+    _ = n.useMemo(() => (null == s ? void 0 : s.message) != null ? null == s ? void 0 : s.message : Object.keys(null != s ? s : {}).length > 0 ? S.default.Messages.GUILD_SETTINGS_EDIT_PROFILE_GENERIC_ERROR : null, [s]),
+    f = n.useCallback(async () => {
       var e, s;
       T(!0);
       let a = c.default.getAllPending(),
@@ -43,9 +43,9 @@ function E() {
     }, []);
   return (0, a.jsx)(i.default, {
     submitting: E,
-    onSave: _,
+    onSave: f,
     onReset: m,
     disabled: e,
-    errorMessage: null != f ? f : void 0
+    errorMessage: null != _ ? _ : void 0
   })
 }

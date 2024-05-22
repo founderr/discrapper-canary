@@ -15,8 +15,8 @@ var l = s("735250"),
   c = s("158776"),
   f = s("5192"),
   S = s("785717"),
-  m = s("318661"),
-  E = s("502762"),
+  E = s("318661"),
+  m = s("502762"),
   I = s("544989"),
   _ = s("301984"),
   v = s("94918"),
@@ -50,7 +50,7 @@ function p(e) {
     channelId: p,
     messageId: h,
     roleId: R
-  }), [B, G] = a.useState(F), k = (0, m.default)(t.id), w = (0, m.default)(t.id, F), Y = null == B ? k : w, {
+  }), [B, G] = a.useState(F), k = (0, E.default)(t.id), w = (0, E.default)(t.id, F), Y = null == B ? k : w, {
     activity: H,
     customStatusActivity: V
   } = (0, i.useStateFromStoresObject)([c.default], () => ({
@@ -81,7 +81,7 @@ function p(e) {
         className: C.root,
         hideShadow: !0,
         "aria-label": N.default.Messages.USER_PROFILE_MODAL,
-        children: [(0, l.jsxs)(E.default, {
+        children: [(0, l.jsxs)(m.default, {
           user: t,
           displayProfile: Y,
           profileType: U.UserProfileTypes.FULL_SIZE,

@@ -17,8 +17,8 @@ var n = s("120356"),
   S = s("721987"),
   E = s("74538"),
   T = s("193528"),
-  f = s("993413"),
-  _ = s("689938"),
+  _ = s("993413"),
+  f = s("689938"),
   m = s("452240");
 
 function g(e) {
@@ -29,10 +29,10 @@ function g(e) {
     onThemeColorsChange: i,
     preventDisabled: g,
     guildId: I,
-    className: h,
-    showPremiumIcon: N = !0,
-    showResetThemeButton: p = !1,
-    forcedDivider: C
+    className: N,
+    showPremiumIcon: h = !0,
+    showResetThemeButton: C = !1,
+    forcedDivider: p
   } = e, A = (0, c.default)(t.id, I), {
     primaryColor: O,
     secondaryColor: x
@@ -46,12 +46,12 @@ function g(e) {
   let D = e => {
     i(r()(e, null == A ? void 0 : A.themeColors) ? void 0 : e)
   };
-  return (0, a.jsx)(f.default, {
-    title: _.default.Messages.USER_SETTINGS_PROFILE_THEME,
+  return (0, a.jsx)(_.default, {
+    title: f.default.Messages.USER_SETTINGS_PROFILE_THEME,
     disabled: !R && !g,
-    className: l()(m.__invalid_profileThemesSection, h),
-    showPremiumIcon: N,
-    forcedDivider: C,
+    className: l()(m.__invalid_profileThemesSection, N),
+    showPremiumIcon: h,
+    forcedDivider: p,
     children: (0, a.jsxs)("div", {
       className: m.sectionContainer,
       children: [(0, a.jsx)("div", {
@@ -66,7 +66,7 @@ function g(e) {
             color: "header-secondary",
             variant: "text-xs/normal",
             "aria-hidden": !0,
-            children: _.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
+            children: f.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
           })
         })
       }), (0, a.jsx)("div", {
@@ -81,16 +81,16 @@ function g(e) {
             color: "header-secondary",
             variant: "text-xs/normal",
             "aria-hidden": !0,
-            children: _.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
+            children: f.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
           })
         })
-      }), p && null != I && (0, a.jsx)(d.Button, {
+      }), C && null != I && (0, a.jsx)(d.Button, {
         className: m.resetButton,
         color: d.Button.Colors.PRIMARY,
         look: d.Button.Looks.LINK,
         size: d.Button.Sizes.SMALL,
         onClick: () => D([null, null]),
-        children: _.default.Messages.USER_SETTINGS_RESET_PROFILE_THEME
+        children: f.default.Messages.USER_SETTINGS_RESET_PROFILE_THEME
       })]
     })
   })

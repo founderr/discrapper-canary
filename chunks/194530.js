@@ -17,21 +17,21 @@ var a = s("735250"),
   E = s("559912");
 
 function T(e) {
-  var t, s, T, f;
+  var t, s, T, _;
   let {
-    transitionState: _,
+    transitionState: f,
     onSuccess: m,
     onClose: g,
     requirementsUpdated: I,
-    noSkip: h = !1
-  } = e, [N, p] = n.useState(""), [C, A] = n.useState(""), [O, x] = n.useState(""), [R, M] = n.useState(null), [v, L] = n.useState(null), D = (0, l.useStateFromStores)([o.default], () => o.default.getErrors()), P = (0, l.useStateFromStores)([o.default], () => o.default.getFormState()), j = n.useRef(null);
-  async function b(e) {
+    noSkip: N = !1
+  } = e, [h, C] = n.useState(""), [p, A] = n.useState(""), [O, x] = n.useState(""), [R, M] = n.useState(null), [v, L] = n.useState(null), D = (0, l.useStateFromStores)([o.default], () => o.default.getErrors()), P = (0, l.useStateFromStores)([o.default], () => o.default.getFormState()), b = n.useRef(null);
+  async function j(e) {
     e.preventDefault(), (0, r.clearErrors)();
     let t = !1;
-    if ("" === C ? (M(S.default.Messages.PASSWORD_REQUIREMENTS_EMPTY), t = !0) : M(null), C !== O ? (L(S.default.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), t = !0) : L(null), t) return;
+    if ("" === p ? (M(S.default.Messages.PASSWORD_REQUIREMENTS_EMPTY), t = !0) : M(null), p !== O ? (L(S.default.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), t = !0) : L(null), t) return;
     let s = await (0, r.saveAccountChanges)({
-      password: N,
-      newPassword: C
+      password: h,
+      newPassword: p
     });
     if (null == s ? void 0 : s.ok) m();
     else {
@@ -40,12 +40,12 @@ function T(e) {
     }
   }
   return n.useEffect(() => {
-    if (_ === i.ModalTransitionState.ENTERED) {
+    if (f === i.ModalTransitionState.ENTERED) {
       var e;
-      null === (e = j.current) || void 0 === e || e.focus()
+      null === (e = b.current) || void 0 === e || e.focus()
     }
-  }, [_]), (0, a.jsxs)(i.ModalRoot, {
-    transitionState: _,
+  }, [f]), (0, a.jsxs)(i.ModalRoot, {
+    transitionState: f,
     children: [(0, a.jsxs)(i.ModalHeader, {
       separator: !1,
       className: E.header,
@@ -59,12 +59,12 @@ function T(e) {
         variant: "text-md/normal",
         className: E.subtitle,
         children: I ? S.default.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : S.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
-      }), !0 !== h && (0, a.jsx)(i.ModalCloseButton, {
+      }), !0 !== N && (0, a.jsx)(i.ModalCloseButton, {
         onClick: g,
         className: E.modalCloseButton
       })]
     }), (0, a.jsxs)("form", {
-      onSubmit: b,
+      onSubmit: j,
       children: [(0, a.jsxs)(i.ModalContent, {
         className: E.content,
         children: [(0, a.jsx)(i.FormItem, {
@@ -72,17 +72,17 @@ function T(e) {
           error: null == D ? void 0 : null === (t = D.password) || void 0 === t ? void 0 : t[0],
           children: (0, a.jsx)(i.TextInput, {
             type: "password",
-            value: N,
-            onChange: p,
-            inputRef: j
+            value: h,
+            onChange: C,
+            inputRef: b
           })
         }), (0, a.jsx)(i.FormItem, {
           className: E.newPassword,
           title: S.default.Messages.FORM_LABEL_NEW_PASSWORD,
-          error: null !== (f = null !== (T = null == D ? void 0 : null === (s = D.new_password) || void 0 === s ? void 0 : s[0]) && void 0 !== T ? T : R) && void 0 !== f ? f : void 0,
+          error: null !== (_ = null !== (T = null == D ? void 0 : null === (s = D.new_password) || void 0 === s ? void 0 : s[0]) && void 0 !== T ? T : R) && void 0 !== _ ? _ : void 0,
           children: (0, a.jsx)(i.TextInput, {
             type: "password",
-            value: C,
+            value: p,
             onChange: A
           })
         }), (0, a.jsx)(i.FormItem, {
@@ -102,7 +102,7 @@ function T(e) {
           size: i.Button.Sizes.MEDIUM,
           submitting: P === c.FormStates.SUBMITTING,
           children: S.default.Messages.DONE
-        }), !0 !== h && (0, a.jsx)(i.Button, {
+        }), !0 !== N && (0, a.jsx)(i.Button, {
           className: E.cancel,
           look: i.Button.Looks.LINK,
           color: i.Button.Colors.PRIMARY,

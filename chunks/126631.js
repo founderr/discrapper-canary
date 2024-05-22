@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("981631"),
   E = s("689938"),
   T = s("496166");
-let f = (0, u.uid)(),
-  _ = (0, d.createChannelRecord)({
+let _ = (0, u.uid)(),
+  f = (0, d.createChannelRecord)({
     id: "1",
     type: S.ChannelTypes.DM
   }),
@@ -31,31 +31,31 @@ function g(e) {
     pendingBio: u,
     placeholder: g,
     currentBio: I,
-    disabled: h = !1
-  } = e, [N, p] = n.useState(null != u ? u : I), [C, A] = n.useState((0, r.toRichValue)(N)), O = n.useRef(!1);
+    disabled: N = !1
+  } = e, [h, C] = n.useState(null != u ? u : I), [p, A] = n.useState((0, r.toRichValue)(h)), O = n.useRef(!1);
   return n.useEffect(() => {
     if (void 0 === u) {
       let e = (0, r.toRichValue)(I);
-      p(I), A(e)
+      C(I), A(e)
     }
   }, [u, I]), (0, a.jsxs)(c.default, {
     title: t,
-    titleId: f,
+    titleId: _,
     description: E.default.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
     errors: s,
-    disabled: h,
+    disabled: N,
     children: [(0, a.jsx)(o.default, {
       "aria-describedby": m,
-      "aria-labelledby": f,
+      "aria-labelledby": _,
       innerClassName: T.bioTextArea,
       maxCharacterCount: S.BIO_MAX_LENGTH,
       onChange: function(e, t, s) {
-        t !== N && (p(t), A(s), d(t))
+        t !== h && (C(t), A(s), d(t))
       },
       placeholder: g,
-      channel: _,
-      textValue: N,
-      richValue: C,
+      channel: f,
+      textValue: h,
+      richValue: p,
       type: i.ChatInputTypes.PROFILE_BIO_INPUT,
       onBlur: () => {
         O.current = !1

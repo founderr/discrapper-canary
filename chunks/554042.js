@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return C
+    return p
   }
 }), s("47120");
 var a = s("735250"),
@@ -16,13 +16,13 @@ var a = s("735250"),
   S = s("425493"),
   E = s("607070"),
   T = s("304761"),
-  f = s("865427"),
-  _ = s("358085"),
+  _ = s("865427"),
+  f = s("358085"),
   m = s("210887"),
   g = s("981631"),
   I = s("689938"),
-  h = s("307723");
-let N = [{
+  N = s("307723");
+let h = [{
   label: "Latin alphabet",
   value: "aBcDeFgHiJkLmNoPqRsTuVwXyZ"
 }, {
@@ -45,7 +45,7 @@ let N = [{
   value: "custom"
 }];
 
-function p(e, t) {
+function C(e, t) {
   let [s, a] = n.useState(() => {
     let s = o.Storage.get(e);
     return null != s ? s : t
@@ -55,14 +55,14 @@ function p(e, t) {
   }, [e, s]), [s, a]
 }
 
-function C() {
+function p() {
   let [e, t] = n.useState(Math.round(window.outerWidth / window.innerWidth * 100)), {
     platformZoom: s,
     theme: l
   } = (0, r.useStateFromStoresObject)([m.default, E.default], () => ({
     theme: m.default.theme,
     platformZoom: E.default.zoom
-  })), [o, C] = n.useState("upright"), A = ["normal", "medium", "semibold", "bold", "extrabold"], O = new Map([
+  })), [o, p] = n.useState("upright"), A = ["normal", "medium", "semibold", "bold", "extrabold"], O = new Map([
     ["normal", 400],
     ["medium", 500],
     ["semibold", 600],
@@ -70,28 +70,28 @@ function C() {
     ["extrabold", 800]
   ]);
   n.useEffect(() => {
-    !_.isPlatformEmbedded && window.addEventListener("resize", () => {
+    !f.isPlatformEmbedded && window.addEventListener("resize", () => {
       t(Math.round(window.outerWidth / window.innerWidth * 100))
     })
   }, []);
-  let x = _.isPlatformEmbedded ? s : e,
+  let x = f.isPlatformEmbedded ? s : e,
     R = (0, r.useStateFromStores)([T.default], () => {
       var e, t;
-      return (0, f.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, _.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    [M, v] = p("playground-overrideText", null),
-    [L, D] = p("playground-defaultText", N[0].value),
+    [M, v] = C("playground-overrideText", null),
+    [L, D] = C("playground-defaultText", h[0].value),
     P = n.useCallback(e => {
-      let t = N.find(t => {
+      let t = h.find(t => {
         let {
           value: s
         } = t;
         return s === e
       });
-      "" === e || null == e ? (D(N[0].value), v(null)) : null != t ? D(t.value) : (D("custom"), v(e))
+      "" === e || null == e ? (D(h[0].value), v(null)) : null != t ? D(t.value) : (D("custom"), v(e))
     }, [v, D]);
   return (0, a.jsx)("div", {
-    className: h.fullscreen,
+    className: N.fullscreen,
     style: {
       "--playground-font-family": "mono" === o ? "gg mono" : "gg sans",
       "--playground-font-style": "italic" === o ? "italic" : "normal"
@@ -99,7 +99,7 @@ function C() {
     children: (0, a.jsxs)(d.FormSection, {
       tag: d.FormTitleTags.H1,
       children: [(0, a.jsxs)("div", {
-        className: h.toolbar,
+        className: N.toolbar,
         children: [(0, a.jsxs)("div", {
           children: [(0, a.jsxs)(d.Text, {
             tag: "div",
@@ -120,14 +120,14 @@ function C() {
           }) : null]
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.SingleSelect, {
-            className: h.select,
-            options: N,
+            className: N.select,
+            options: h,
             onChange: e => P(e),
             value: L
           })
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)("div", {
-            className: h.input,
+            className: N.input,
             children: (0, a.jsx)(d.TextInput, {
               placeholder: "Enter custom input...",
               value: null != M ? M : "",
@@ -137,7 +137,7 @@ function C() {
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.RadioGroup, {
             withTransparentBackground: !0,
-            className: h.theme,
+            className: N.theme,
             orientation: "horizontal",
             options: [{
               name: I.default.Messages.THEME_DARK,
@@ -156,7 +156,7 @@ function C() {
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.RadioGroup, {
             withTransparentBackground: !0,
-            className: h.theme,
+            className: N.theme,
             orientation: "horizontal",
             options: [{
               name: "Upright",
@@ -169,7 +169,7 @@ function C() {
               value: "mono"
             }],
             onChange: e => {
-              C(e.value)
+              p(e.value)
             },
             value: o
           })
@@ -178,16 +178,16 @@ function C() {
           keybind: "ESC"
         })]
       }), (0, a.jsxs)("div", {
-        className: h.textGrid,
+        className: N.textGrid,
         children: [(0, a.jsx)("div", {}), A.map(e => (0, a.jsx)("div", {
-          className: h.columnHeading,
+          className: N.columnHeading,
           children: (0, a.jsx)(d.Heading, {
             variant: "eyebrow",
             children: e
           })
         }, e)), [10, 12, 14, 15, 16, 18, 20, 24].map(e => (0, a.jsxs)(n.Fragment, {
           children: [(0, a.jsxs)("div", {
-            className: h.fontSize,
+            className: N.fontSize,
             children: [(0, a.jsxs)(d.Heading, {
               variant: "eyebrow",
               children: [e, "px"]
@@ -200,11 +200,11 @@ function C() {
             var s;
             let n = null !== (s = "custom" === L ? M : L) && void 0 !== s ? s : "";
             return (0, a.jsx)("div", {
-              className: h.textSample,
+              className: N.textSample,
               children: (0, a.jsxs)("div", {
                 title: "".concat(e, "px at ").concat(t),
-                className: i()(h.text, {
-                  [h.breakAnywhere]: !n.includes(" ")
+                className: i()(N.text, {
+                  [N.breakAnywhere]: !n.includes(" ")
                 }),
                 style: {
                   fontSize: e,

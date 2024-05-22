@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return _
   }
 });
 var a = s("735250");
@@ -18,20 +18,20 @@ var n = s("120356"),
   E = s("689938"),
   T = s("611273");
 
-function f() {
+function _() {
   let e = c.ExpressionSuggestionsEnabled.useSetting(),
     t = c.IncludeStickersInAutocomplete.useSetting(),
     s = c.UseRichChatInput.useSetting(),
     n = c.RenderSpoilers.useSetting(),
-    f = c.UseThreadSidebar.useSetting(),
-    _ = c.ViewImageDescriptions.useSetting(),
+    _ = c.UseThreadSidebar.useSetting(),
+    f = c.ViewImageDescriptions.useSetting(),
     m = c.ConvertEmoticons.useSetting(),
     g = c.InlineAttachmentMedia.useSetting(),
     I = c.InlineEmbedMedia.useSetting(),
-    h = c.RenderEmbeds.useSetting(),
-    N = c.RenderReactions.useSetting(),
+    N = c.RenderEmbeds.useSetting(),
+    h = c.RenderReactions.useSetting(),
     {
-      analyticsLocations: p
+      analyticsLocations: C
     } = (0, o.default)(r.default.TEXT_AND_IMAGES);
   return (0, a.jsxs)(i.FormSection, {
     tag: i.FormTitleTags.H1,
@@ -54,7 +54,7 @@ function f() {
       children: E.default.Messages.INLINE_ATTACHMENT_MEDIA
     }), (0, a.jsx)(i.FormSwitch, {
       className: l()(T.marginTop8, T.marginBottom20),
-      value: _,
+      value: f,
       note: E.default.Messages.IMAGE_DESCRIPTION_HELP,
       onChange: c.ViewImageDescriptions.updateSetting,
       children: E.default.Messages.USER_SETTINGS_WITH_IMAGE_DESCRIPTIONS
@@ -63,7 +63,7 @@ function f() {
       children: E.default.Messages.RENDER_EMBEDS_LABEL
     }), (0, a.jsx)(i.FormSwitch, {
       className: l()(T.marginTop8, T.marginBottom40),
-      value: h,
+      value: N,
       onChange: c.RenderEmbeds.updateSetting,
       children: E.default.Messages.RENDER_EMBEDS
     }), (0, a.jsx)(i.FormTitle, {
@@ -71,7 +71,7 @@ function f() {
       children: E.default.Messages.EMOJI
     }), (0, a.jsx)(i.FormSwitch, {
       className: l()(T.marginTop8, T.marginBottom20),
-      value: N,
+      value: h,
       onChange: c.RenderReactions.updateSetting,
       children: E.default.Messages.RENDER_REACTIONS
     }), (0, a.jsx)(i.FormSwitch, {
@@ -95,7 +95,7 @@ function f() {
             location: {
               section: S.AnalyticsSections.SETTINGS_TEXT_AND_IMAGES
             },
-            location_stack: p
+            location_stack: C
           }), c.ExpressionSuggestionsEnabled.updateSetting(!e)
         },
         children: E.default.Messages.AUTO_SUGGEST_STICKERS
@@ -109,7 +109,7 @@ function f() {
             location: {
               section: S.AnalyticsSections.SETTINGS_TEXT_AND_IMAGES
             },
-            location_stack: p
+            location_stack: C
           }), c.IncludeStickersInAutocomplete.updateSetting(e)
         },
         children: E.default.Messages.STICKERS_IN_AUTOCOMPLETE
@@ -139,7 +139,7 @@ function f() {
         children: E.default.Messages.THREADS
       }), (0, a.jsx)(i.FormSwitch, {
         className: T.marginTop8,
-        value: f,
+        value: _,
         onChange: c.UseThreadSidebar.updateSetting,
         children: E.default.Messages.USE_THREADS_SIDEBAR_DESCRIPTION
       })]

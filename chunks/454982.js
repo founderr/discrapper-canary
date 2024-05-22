@@ -16,18 +16,18 @@ t.default = function(e) {
     code: S,
     outboundPromotion: E,
     transitionState: T
-  } = e, [f, _] = n.useState(null), m = (0, o.useUID)();
+  } = e, [_, f] = n.useState(null), m = (0, o.useUID)();
   return n.useEffect(() => {
     null == S && (0, d.claimOutboundPromotion)(E.id).then(e => s(e)).catch(e => {
       var t;
-      return _(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code)
+      return f(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code)
     })
   }, [S, E.id, s]), (0, a.jsx)(l.ModalRoot, {
     transitionState: T,
     "aria-labelledby": m,
-    children: null != f ? (0, a.jsx)(r.DropsModalClaimErrorBody, {
+    children: null != _ ? (0, a.jsx)(r.DropsModalClaimErrorBody, {
       onClose: t,
-      errorCode: f
+      errorCode: _
     }) : null == S ? (0, a.jsx)(l.ModalContent, {
       children: (0, a.jsx)(l.Spinner, {
         className: c.loading

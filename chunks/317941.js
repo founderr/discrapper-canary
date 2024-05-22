@@ -12,15 +12,15 @@ var a = s("735250"),
   S = s("981632"),
   E = s("314897"),
   T = s("82142"),
-  f = s("246946"),
-  _ = s("509545"),
+  _ = s("246946"),
+  f = s("509545"),
   m = s("55563"),
   g = s("15887"),
   I = s("581874"),
-  h = s("285952"),
-  N = s("366695"),
-  p = s("259580"),
-  C = s("572004"),
+  N = s("285952"),
+  h = s("366695"),
+  C = s("259580"),
+  p = s("572004"),
   A = s("669079"),
   O = s("296848"),
   x = s("474936"),
@@ -59,15 +59,15 @@ class L extends n.PureComponent {
     } = this.props, {
       copyMode: s
     } = this.state;
-    return (0, a.jsxs)(h.default, {
-      direction: h.default.Direction.VERTICAL,
+    return (0, a.jsxs)(N.default, {
+      direction: N.default.Direction.VERTICAL,
       className: M.giftCodeRow,
       children: [(0, a.jsx)(I.default, {
         className: M.codeText,
         value: (0, A.getGiftCodeURL)(t.code),
         text: this.copyButtonText,
         mode: s,
-        supportsCopy: C.SUPPORTS_COPY,
+        supportsCopy: p.SUPPORTS_COPY,
         hideMessage: e ? R.default.Messages.GIFT_INVENTORY_HIDDEN : null,
         onCopy: this.handleCopy,
         buttonColor: I.default.ButtonColors.BRAND,
@@ -96,7 +96,7 @@ class L extends n.PureComponent {
       } = this.props;
       (0, A.trackGiftCodeCopy)(t, s);
       try {
-        (0, C.copy)(e), this.setState({
+        (0, p.copy)(e), this.setState({
           copyMode: I.CopyInputModes.SUCCESS
         })
       } catch (e) {
@@ -135,9 +135,9 @@ class D extends n.PureComponent {
     })
   }
   renderGenerateGiftCodeRow() {
-    return (0, a.jsxs)(h.default, {
-      justify: h.default.Justify.BETWEEN,
-      align: h.default.Align.CENTER,
+    return (0, a.jsxs)(N.default, {
+      justify: N.default.Justify.BETWEEN,
+      align: N.default.Align.CENTER,
       className: M.generateCodeRow,
       children: [(0, a.jsx)("div", {
         className: M.codeText,
@@ -180,15 +180,15 @@ class D extends n.PureComponent {
           splashArtURL: t.getSplashURL(512),
           children: (0, a.jsxs)("div", {
             className: M.cardHeader,
-            children: [(0, a.jsxs)(h.default, {
-              align: h.default.Align.CENTER,
+            children: [(0, a.jsxs)(N.default, {
+              align: N.default.Align.CENTER,
               children: [null != u ? (0, a.jsx)(S.default, {
                 giftStyle: u,
                 className: M.seasonalGiftBox,
                 shouldAnimate: this.state.isHovered
-              }) : (0, a.jsx)(N.default, {
+              }) : (0, a.jsx)(h.default, {
                 game: t,
-                size: N.default.Sizes.MEDIUM,
+                size: h.default.Sizes.MEDIUM,
                 skuId: i.id
               }), (0, a.jsxs)("div", {
                 className: M.headerText,
@@ -199,8 +199,8 @@ class D extends n.PureComponent {
                   })
                 })]
               })]
-            }), (0, a.jsx)(p.default, {
-              direction: c ? p.default.Directions.UP : p.default.Directions.DOWN,
+            }), (0, a.jsx)(C.default, {
+              direction: c ? C.default.Directions.UP : C.default.Directions.DOWN,
               className: M.expandIcon
             })]
           })
@@ -248,7 +248,7 @@ class D extends n.PureComponent {
     })
   }
 }
-t.default = r.default.connectStores([m.default, f.default, T.default, c.default, _.default, E.default], e => {
+t.default = r.default.connectStores([m.default, _.default, T.default, c.default, f.default, E.default], e => {
   let {
     skuId: t,
     subscriptionPlanId: s,
@@ -258,7 +258,7 @@ t.default = r.default.connectStores([m.default, f.default, T.default, c.default,
   let l = T.default.getForGifterSKUAndPlan(E.default.getId(), t, s).filter(e => !e.isClaimed).filter(e => e.giftStyle === a);
   return {
     sku: n,
-    hideCodes: f.default.enabled,
+    hideCodes: _.default.enabled,
     isFetching: T.default.getUserGiftCodesFetchingForSKUAndPlan(t, s),
     loadedAt: T.default.getUserGiftCodesLoadedAtForSKUAndPlan(t, s),
     application: c.default.getApplication(n.applicationId),

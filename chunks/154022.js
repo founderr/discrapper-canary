@@ -16,15 +16,15 @@ var a = s("735250"),
   S = s("419363"),
   E = s("857595"),
   T = s("607070"),
-  f = s("627845"),
-  _ = s("786761"),
+  _ = s("627845"),
+  f = s("786761"),
   m = s("3148"),
   g = s("739566"),
   I = s("753206"),
-  h = s("440849"),
-  N = s("196051"),
-  p = s("441729"),
-  C = s("285952"),
+  N = s("440849"),
+  h = s("196051"),
+  C = s("441729"),
+  p = s("285952"),
   A = s("153124"),
   O = s("786048"),
   x = s("897353"),
@@ -34,8 +34,8 @@ var a = s("735250"),
   L = s("263937"),
   D = s("996073"),
   P = s("526761"),
-  j = s("981631"),
-  b = s("611480"),
+  b = s("981631"),
+  j = s("611480"),
   U = s("653477"),
   y = s("689938"),
   G = s("572965"),
@@ -48,20 +48,20 @@ let k = (0, A.uid)(),
     (0, E.setSaturation)(e)
   }, 250),
   Y = o().debounce(e => {
-    (0, N.setSpeechRate)(e)
+    (0, h.setSpeechRate)(e)
   }, 250);
 
 function W(e) {
   return (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
     title: y.default.Messages.ACCESSIBILITY,
-    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
+    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, _.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
       className: B.marginBottom20
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
       children: y.default.Messages.ACCESSIBILITY_SETTINGS_APPEARANCE_LINK.format({
         onAppearanceClick() {
-          c.default.open(j.UserSettingsSections.APPEARANCE)
+          c.default.open(b.UserSettingsSections.APPEARANCE)
         }
       })
     })]
@@ -71,14 +71,14 @@ function W(e) {
 function K() {
   let e = v.MessageDisplayCompact.useSetting(),
     [t] = n.useState(() => {
-      let e = (0, _.createMessageRecord)({
+      let e = (0, f.createMessageRecord)({
         ...(0, m.default)({
           channelId: "1337",
           content: y.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_LINK_PREVIEW_MESSAGE.format({
             previewLink: "https://discord.com/accessibility"
           })
         }),
-        state: j.MessageStates.SENT,
+        state: b.MessageStates.SENT,
         id: "".concat(0)
       });
       return e.colorString = "green", e
@@ -95,7 +95,7 @@ function K() {
           children: y.default.Messages.ACCESSIBILITY_EXAMPLE_BUTTON_LABEL
         }), (0, a.jsx)("div", {
           className: G.previewAvatars,
-          children: [j.StatusTypes.ONLINE, j.StatusTypes.DND, j.StatusTypes.IDLE].map(e => (0, a.jsx)(u.AnimatedAvatar, {
+          children: [b.StatusTypes.ONLINE, b.StatusTypes.DND, b.StatusTypes.IDLE].map(e => (0, a.jsx)(u.AnimatedAvatar, {
             "aria-label": y.default.Messages.USER_SETTINGS_AVATAR,
             src: F,
             size: u.AvatarSizes.SIZE_32,
@@ -139,7 +139,7 @@ function z() {
     }), (0, a.jsx)(u.Slider, {
       "aria-labelledby": k,
       "aria-describedby": w,
-      markers: j.Accessibility.SATURATION_INCREMENTS,
+      markers: b.Accessibility.SATURATION_INCREMENTS,
       equidistant: !0,
       stickToMarkers: !0,
       maxValue: 1,
@@ -215,7 +215,7 @@ function Z() {
     children: (0, a.jsx)(u.FormSwitch, {
       note: y.default.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_NOTE.format({
         onThemeClick() {
-          c.default.open(j.UserSettingsSections.APPEARANCE)
+          c.default.open(b.UserSettingsSections.APPEARANCE)
         }
       }),
       className: B.marginTop20,
@@ -236,7 +236,7 @@ function X() {
     null != l.current && (clearTimeout(l.current), l.current = null), t !== e && (l.current = setTimeout(() => (0, E.setSyncForcedColors)(t), 150))
   }, [t, e]);
   let i = y.default.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_DESCRIPTION.format({
-    learnMoreLink: M.default.getArticleURL(j.HelpdeskArticles.FORCED_COLORS)
+    learnMoreLink: M.default.getArticleURL(b.HelpdeskArticles.FORCED_COLORS)
   });
   return (0, a.jsx)(u.FormItem, {
     title: y.default.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
@@ -268,10 +268,10 @@ function J() {
     })),
     S = n.useRef(null);
   (0, D.default)(S, P.AccessibilityScrollPositions.REDUCED_MOTION);
-  let f = n.useCallback((e, t) => {
+  let _ = n.useCallback((e, t) => {
       (0, E.setPrefersReducedMotion)(t ? "auto" : r)
     }, [r]),
-    _ = n.useCallback(e => {
+    f = n.useCallback(e => {
       (0, E.setPrefersReducedMotion)(e ? "reduce" : "no-preference")
     }, []);
   return (0, a.jsxs)(u.FormItem, {
@@ -282,14 +282,14 @@ function J() {
       type: u.FormText.Types.DESCRIPTION,
       className: B.marginBottom8,
       children: y.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({
-        helpdeskArticle: M.default.getArticleURL(j.HelpdeskArticles.REDUCED_MOTION)
+        helpdeskArticle: M.default.getArticleURL(b.HelpdeskArticles.REDUCED_MOTION)
       })
     }), (0, a.jsx)(u.Checkbox, {
       className: B.marginTop20,
       value: "auto" === l,
       shape: u.Checkbox.Shapes.BOX,
       type: u.Checkbox.Types.INVERTED,
-      onChange: f,
+      onChange: _,
       children: (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
         children: y.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_AUTO
@@ -297,18 +297,18 @@ function J() {
     }), (0, a.jsx)(u.FormSwitch, {
       className: B.marginTop20,
       value: s,
-      onChange: _,
+      onChange: f,
       children: y.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE
     }), (0, a.jsx)(u.FormSwitch, {
       className: B.marginBottom40,
       value: e,
-      note: null != o ? (0, h.default)(o) : void 0,
+      note: null != o ? (0, N.default)(o) : void 0,
       onChange: v.GifAutoPlay.updateSetting,
       children: y.default.Messages.GIF_AUTO_PLAY_LABEL
     }), (0, a.jsx)(u.FormSwitch, {
       className: i()(B.marginTop8, B.marginBottom20),
       value: t,
-      note: null != c ? (0, h.default)(c) : void 0,
+      note: null != c ? (0, N.default)(c) : void 0,
       onChange: v.AnimateEmoji.updateSetting,
       children: y.default.Messages.ANIMATE_EMOJI
     })]
@@ -327,18 +327,18 @@ function $() {
     children: [(0, a.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
       className: B.marginBottom8,
-      children: null != t ? (0, h.default)(t) : y.default.Messages.STICKERS_AUTO_PLAY_HELP
+      children: null != t ? (0, N.default)(t) : y.default.Messages.STICKERS_AUTO_PLAY_HELP
     }), (0, a.jsx)(u.RadioGroup, {
       options: [{
         name: y.default.Messages.STICKERS_ALWAYS_ANIMATE,
-        value: b.StickerAnimationSettings.ALWAYS_ANIMATE
+        value: j.StickerAnimationSettings.ALWAYS_ANIMATE
       }, {
         name: y.default.Messages.STICKERS_ANIMATE_ON_INTERACTION,
         desc: y.default.Messages.STICKERS_ANIMATE_ON_INTERACTION_DESCRIPTION,
-        value: b.StickerAnimationSettings.ANIMATE_ON_INTERACTION
+        value: j.StickerAnimationSettings.ANIMATE_ON_INTERACTION
       }, {
         name: y.default.Messages.STICKERS_NEVER_ANIMATE,
-        value: b.StickerAnimationSettings.NEVER_ANIMATE
+        value: j.StickerAnimationSettings.NEVER_ANIMATE
       }],
       onChange: s,
       value: e
@@ -365,10 +365,10 @@ function ee() {
       value: t,
       note: y.default.Messages.LEGACY_CHAT_INPUT_DESCRIPTION,
       onChange: e => {
-        R.default.track(j.AnalyticEvents.LEGACY_CHAT_INPUT_TOGGLED, {
+        R.default.track(b.AnalyticEvents.LEGACY_CHAT_INPUT_TOGGLED, {
           enabled: e,
           location: {
-            section: j.AnalyticsSections.SETTINGS_ACCESSIBILITY
+            section: b.AnalyticsSections.SETTINGS_ACCESSIBILITY
           }
         }), v.UseLegacyChatInput.updateSetting(e)
       },
@@ -379,7 +379,7 @@ function ee() {
 
 function et() {
   let e = v.EnableTTSCommand.useSetting(),
-    t = (0, d.useStateFromStores)([p.default], () => p.default.speechRate),
+    t = (0, d.useStateFromStores)([C.default], () => C.default.speechRate),
     [s, l] = n.useState(!1);
   return S.supported ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormItem, {
@@ -404,12 +404,12 @@ function et() {
           color: u.ButtonColors.BRAND_NEW,
           onClick: () => {
             if (s) {
-              (0, N.stopSpeaking)(), l(!1);
+              (0, h.stopSpeaking)(), l(!1);
               return
-            }(0, N.speakText)(y.default.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST, !0, void 0, () => l(!0), () => l(!1)), l(!0)
+            }(0, h.speakText)(y.default.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST, !0, void 0, () => l(!0), () => l(!1)), l(!0)
           },
-          children: (0, a.jsxs)(C.default, {
-            align: C.default.Align.CENTER,
+          children: (0, a.jsxs)(p.default, {
+            align: p.default.Align.CENTER,
             children: [s ? (0, a.jsx)(O.default, {
               width: 24,
               height: 24

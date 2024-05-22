@@ -17,12 +17,12 @@ var n = s("410575"),
   S = s("541540"),
   E = s("206339"),
   T = s("981631"),
-  f = s("46140"),
-  _ = s("313026");
+  _ = s("46140"),
+  f = s("313026");
 
 function m() {
   let e = (0, u.useIsEligibleForQuests)({
-      location: f.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
+      location: _.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
     }),
     {
       enabled: t
@@ -36,8 +36,8 @@ function m() {
     children: [!s && (0, a.jsxs)(a.Fragment, {
       children: [t && (0, a.jsx)(d.default, {
         location: l.default.USER_SETTINGS_GIFT_INVENTORY,
-        className: _.giftNitro,
-        imageClassName: _.giftNitroImage,
+        className: f.giftNitro,
+        imageClassName: f.giftNitroImage,
         textContainerOverrideStyles: {
           padding: "32px",
           width: "360px"

@@ -14,7 +14,7 @@ t.default = function(e) {
   let {
     hasAppliedGuildBoosts: t,
     subscriptionIsPausedOrPausePending: s
-  } = e, E = (0, l.useStateFromStores)([r.default], () => r.default.affinities), T = (0, l.useStateFromStores)([o.default], () => o.default.getFlattenedGuildIds()), f = n.useMemo(() => {
+  } = e, E = (0, l.useStateFromStores)([r.default], () => r.default.affinities), T = (0, l.useStateFromStores)([o.default], () => o.default.getFlattenedGuildIds()), _ = n.useMemo(() => {
     let e = E.slice(0, 3).map(e => e.guildId);
     for (let t = 0; t < T.length && !(e.length >= 3); t++) {
       let s = T[t];
@@ -22,13 +22,13 @@ t.default = function(e) {
     }
     return e
   }, [E, T]);
-  return 0 === f.length ? null : (0, a.jsxs)("div", {
+  return 0 === _.length ? null : (0, a.jsxs)("div", {
     className: S.wrapper,
     children: [t && (0, a.jsx)(i.Heading, {
       variant: "heading-lg/semibold",
       className: S.header,
       children: c.default.Messages.GUILD_BOOSTING_USER_SETTINGS_RECOMMENDED_SERVERS_HEADING
-    }), f.map(e => (0, a.jsx)(u.default, {
+    }), _.map(e => (0, a.jsx)(u.default, {
       className: S.recommendedServerCard,
       guildId: e,
       boostingVariant: !0

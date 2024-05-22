@@ -15,8 +15,8 @@ var l = s("735250"),
   c = s("246946"),
   f = s("594174"),
   S = s("543595"),
-  m = s("785717"),
-  E = s("726059"),
+  E = s("785717"),
+  m = s("726059"),
   I = s("162267"),
   _ = s("100849"),
   v = s("944546"),
@@ -37,7 +37,7 @@ let p = e => {
       type: t
     } = e;
     return t !== x.ActivityTypes.CUSTOM_STATUS
-  })), c = null === (t = (0, E.default)(l.id, l.id !== (null == a ? void 0 : a.id)).mutualFriends) || void 0 === t ? void 0 : t.length, f = null === (s = (0, I.default)(l.id, l.id !== (null == a ? void 0 : a.id)).mutualGuilds) || void 0 === s ? void 0 : s.length, S = [{
+  })), c = null === (t = (0, m.default)(l.id, l.id !== (null == a ? void 0 : a.id)).mutualFriends) || void 0 === t ? void 0 : t.length, f = null === (s = (0, I.default)(l.id, l.id !== (null == a ? void 0 : a.id)).mutualGuilds) || void 0 === s ? void 0 : s.length, S = [{
     section: U.UserProfileSections.USER_INFO,
     text: N.default.Messages.USER_PROFILE_ABOUT_ME
   }];
@@ -90,10 +90,10 @@ function R(e) {
     displayProfile: u,
     initialSection: d = U.UserProfileSections.USER_INFO,
     autoFocusNote: S,
-    onClose: E
+    onClose: m
   } = e, {
     trackUserProfileAction: I
-  } = (0, m.useUserProfileAnalyticsContext)(), _ = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), v = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), T = p({
+  } = (0, E.useUserProfileAnalyticsContext)(), _ = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), v = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), T = p({
     user: i,
     currentUser: _
   }), [g, x] = a.useState(S), [N, R] = a.useState(null !== (s = null === (t = T.find(e => {
@@ -138,7 +138,7 @@ function R(e) {
       currentUser: _,
       displayProfile: u,
       autoFocusNote: g,
-      onClose: E
+      onClose: m
     })]
   })
 }

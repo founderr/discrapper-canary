@@ -12,15 +12,15 @@ var a, n, l, i, r = s("735250"),
   S = s("481060"),
   E = s("37234"),
   T = s("607070"),
-  f = s("301822"),
-  _ = s("206895"),
+  _ = s("301822"),
+  f = s("206895"),
   m = s("692437"),
   g = s("783539"),
   I = s("585483"),
-  h = s("557177"),
-  N = s("57562"),
-  p = s("955204"),
-  C = s("64078"),
+  N = s("557177"),
+  h = s("57562"),
+  C = s("955204"),
+  p = s("64078"),
   A = s("351780"),
   O = s("533662"),
   x = s("112843"),
@@ -35,8 +35,8 @@ let D = {
     confettiEnabled: !1
   },
   P = (0, d.range)(0, 11),
-  j = (0, d.range)(0, 2.25, .25),
-  b = (0, d.range)(1, 11),
+  b = (0, d.range)(0, 2.25, .25),
+  j = (0, d.range)(1, 11),
   U = (0, d.range)(1, 26);
 (l = a || (a = {}))[l.CONFETTI = 0] = "CONFETTI", l[l.SHAKE = 1] = "SHAKE", (i = n || (n = {}))[i.USER_SETTINGS = 0] = "USER_SETTINGS", i[i.ACHIEVEMENT_LIST = 1] = "ACHIEVEMENT_LIST";
 let y = () => [{
@@ -117,7 +117,7 @@ function k(e) {
     value: t,
     note: v.default.Messages.POGGERMODE_ENABLE_DESCRIPTION,
     onChange: e => {
-      !e && (0, N.unlockAchievement)(p.PoggermodeAchievementId.DISABLE_POGGERMODE), e && (!s || n) ? (0, S.openModal)(e => (0, r.jsx)(S.ConfirmModal, {
+      !e && (0, h.unlockAchievement)(C.PoggermodeAchievementId.DISABLE_POGGERMODE), e && (!s || n) ? (0, S.openModal)(e => (0, r.jsx)(S.ConfirmModal, {
         header: n ? v.default.Messages.POGGERMODE_WARNING_TITLE_REDUCED_MOTION : v.default.Messages.POGGERMODE_WARNING_TITLE,
         confirmText: v.default.Messages.ENABLE,
         cancelText: v.default.Messages.CANCEL,
@@ -168,10 +168,10 @@ function w(e) {
         children: v.default.Messages.POGGERMODE_CONFETTI_COUNT_DESCRIPTION
       }), (0, r.jsx)(S.Slider, {
         disabled: o,
-        markers: b,
+        markers: j,
         stickToMarkers: !0,
-        minValue: b[0],
-        maxValue: b[b.length - 1],
+        minValue: j[0],
+        maxValue: j[j.length - 1],
         initialValue: a,
         onValueChange: e => i({
           confettiCount: e
@@ -270,7 +270,7 @@ function V(e) {
     },
     updateSettings: l
   } = e, i = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), o = !t || !s || i, d = (e, t) => {
-    null != e.shakeIntensity && e.shakeIntensity > a && (0, N.unlockAchievement)(p.PoggermodeAchievementId.MORE), l(e, t)
+    null != e.shakeIntensity && e.shakeIntensity > a && (0, h.unlockAchievement)(C.PoggermodeAchievementId.MORE), l(e, t)
   };
   return (0, r.jsxs)(S.FormSection, {
     tag: S.FormTitleTags.H1,
@@ -292,16 +292,16 @@ function V(e) {
         children: v.default.Messages.POGGERMODE_SCREENSHAKE_DESCRIPTION
       }), (0, r.jsx)(S.Slider, {
         disabled: o,
-        markers: j,
+        markers: b,
         equidistant: !0,
         stickToMarkers: !0,
-        minValue: j[0],
-        maxValue: j[j.length - 1],
+        minValue: b[0],
+        maxValue: b[b.length - 1],
         initialValue: a,
         onValueChange: e => d({
           shakeIntensity: e
         }, 1),
-        onMarkerRender: e => e === j[j.length - 1] ? v.default.Messages.POGGERMODE_SCREENSHAKE_MAX : "".concat(100 * e, "%")
+        onMarkerRender: e => e === b[b.length - 1] ? v.default.Messages.POGGERMODE_SCREENSHAKE_MAX : "".concat(100 * e, "%")
       })]
     }), (0, r.jsx)(B, {
       disabled: o,
@@ -396,14 +396,14 @@ function z(e) {
   let c = e => {
       if (e.enabled && !1 === a.enabled) {
         var t;
-        s(!0), (0, h.playSound)("poggermode_enabled"), I.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
+        s(!0), (0, N.playSound)("poggermode_enabled"), I.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
           duration: 2e3,
           intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : a.shakeIntensity
         })
       }
     },
     E = (e, t) => {
-      if (c(e), (0, C.updatePoggermodeSettings)(e), null == t) return;
+      if (c(e), (0, p.updatePoggermodeSettings)(e), null == t) return;
       let s = d(a.confettiEnabled, e.confettiEnabled, a.enabled, e.enabled);
       0 === t && s && i.fire(n.x, n.y, {
         settings: e
@@ -465,7 +465,7 @@ let Q = (e, t, s) => {
         return null
     }
   },
-  q = e => 0 === e ? _.SlideDirection.LEFT : _.SlideDirection.RIGHT;
+  q = e => 0 === e ? f.SlideDirection.LEFT : f.SlideDirection.RIGHT;
 
 function Z() {
   let [e, t] = o.useState(0), [s, a] = o.useState(q(e)), [n, l] = o.useState(!1), i = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), d = n && !i;
@@ -475,16 +475,16 @@ function Z() {
     }, 500);
     return () => clearTimeout(t)
   }, [e]), o.useEffect(() => {
-    Math.random() > .99 && (0, N.unlockAchievement)(p.PoggermodeAchievementId.VISITOR_100)
+    Math.random() > .99 && (0, h.unlockAchievement)(C.PoggermodeAchievementId.VISITOR_100)
   }, []), (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(_.default, {
+    children: [(0, r.jsx)(f.default, {
       className: L.slideAnimator,
       step: e,
       direction: s,
       children: Q(e, t, l)
     }), (0, r.jsx)("div", {
       className: d ? L.enableAnimationOverlayVisible : L.enableAnimationOverlayHidden,
-      children: (0, r.jsx)(f.default, {
+      children: (0, r.jsx)(_.default, {
         className: L.enableAnimation,
         importData: K,
         shouldAnimate: d,

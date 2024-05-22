@@ -14,7 +14,7 @@ t.default = function(e) {
     initialValue: c,
     onFileChange: S,
     title: E
-  } = e, [T, f] = n.useState(null), [_, m] = n.useState(!1);
+  } = e, [T, _] = n.useState(null), [f, m] = n.useState(!1);
   return (0, a.jsxs)(i.FormItem, {
     children: [(0, a.jsx)(i.FormTitle, {
       tag: i.FormTitleTags.H5,
@@ -38,7 +38,7 @@ t.default = function(e) {
       buttonText: "Browse",
       placeholder: "Select an asset",
       onFileSelect: function(e) {
-        if (f(null != e ? e : null), null == e) return;
+        if (_(null != e ? e : null), null == e) return;
         m(!0);
         let t = new FileReader;
         t.onload = function() {

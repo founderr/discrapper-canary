@@ -17,8 +17,8 @@ var n = s("120356"),
   S = s("358085"),
   E = s("981631"),
   T = s("689938"),
-  f = s("247763"),
-  _ = s("611273");
+  _ = s("247763"),
+  f = s("611273");
 
 function m() {
   var e, t, n;
@@ -26,10 +26,10 @@ function m() {
     enabled: m,
     autoToggle: g,
     hideInstantInvites: I,
-    hidePersonalInformation: h,
-    disableSounds: N,
-    disableNotifications: p,
-    enableContentProtection: C
+    hidePersonalInformation: N,
+    disableSounds: h,
+    disableNotifications: C,
+    enableContentProtection: p
   } = (0, i.useStateFromStoresObject)([c.default], () => ({
     ...c.default.getSettings()
   })), A = (e, t) => {
@@ -38,12 +38,12 @@ function m() {
     })
   }, O = null !== (n = null === u.default || void 0 === u.default ? void 0 : null === (t = u.default.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n && n;
   return (0, a.jsxs)(r.FormSection, {
-    className: f.container,
+    className: _.container,
     tag: r.FormTitleTags.H1,
     title: T.default.Messages.STREAMER_MODE,
     children: [(0, a.jsx)(r.FormNotice, {
-      className: _.marginBottom40,
-      iconClassName: f.noticeIcon,
+      className: f.marginBottom40,
+      iconClassName: _.noticeIcon,
       type: r.FormNoticeTypes.PRIMARY,
       imageData: {
         src: s("560264"),
@@ -72,10 +72,10 @@ function m() {
         children: T.default.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
       })
     })(), (0, a.jsx)(r.FormTitle, {
-      className: l()(_.marginTop40, _.marginBottom8),
+      className: l()(f.marginTop40, f.marginBottom8),
       children: T.default.Messages.OPTIONS
     }), (0, a.jsx)(r.FormSwitch, {
-      value: h,
+      value: N,
       onChange: e => A("hidePersonalInformation", e),
       note: T.default.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
       children: T.default.Messages.HIDE_PERSONAL_INFORMATION_LABEL
@@ -85,17 +85,17 @@ function m() {
       note: T.default.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
       children: T.default.Messages.HIDE_INSTANT_INVITES_LABEL
     }), (0, a.jsx)(r.FormSwitch, {
-      value: N,
+      value: h,
       onChange: e => A("disableSounds", e),
       note: T.default.Messages.DISABLE_SOUNDS_DESCRIPTION,
       children: T.default.Messages.DISABLE_SOUNDS_LABEL
     }), (0, a.jsx)(r.FormSwitch, {
-      value: p,
+      value: C,
       onChange: e => A("disableNotifications", e),
       note: T.default.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
       children: T.default.Messages.DISABLE_NOTIFICATIONS_LABEL
     }), O && (0, a.jsx)(r.FormSwitch, {
-      value: C,
+      value: p,
       onChange: e => A("enableContentProtection", e),
       note: T.default.Messages.HIDE_WINDOW_FROM_STREAM_DESCRIPTION,
       children: T.default.Messages.HIDE_WINDOW_FROM_STREAM_LABEL

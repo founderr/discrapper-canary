@@ -26,19 +26,19 @@ function E(e) {
     {
       name: E,
       description: T,
-      hideDescriptionUntilUnlock: f,
-      onAction: _
+      hideDescriptionUntilUnlock: _,
+      onAction: f
     } = n,
-    m = f && !i,
+    m = _ && !i,
     g = i ? "header-primary" : "text-muted",
     I = i ? "header-secondary" : "text-muted",
-    h = r()(s),
-    N = null != _ && i,
-    p = N ? o.Clickable : "div";
-  return (0, a.jsxs)(p, {
-    className: l()(S.container, N && S.actionable),
+    N = r()(s),
+    h = null != f && i,
+    C = h ? o.Clickable : "div";
+  return (0, a.jsxs)(C, {
+    className: l()(S.container, h && S.actionable),
     onClick: () => {
-      N && _()
+      h && f()
     },
     children: [(0, a.jsx)("div", {
       className: S.iconContainer,
@@ -53,7 +53,7 @@ function E(e) {
         variant: "text-xxs/semibold",
         color: "text-muted",
         className: S.unlocked,
-        children: (0, d.calendarFormat)(h)
+        children: (0, d.calendarFormat)(N)
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
         color: g,

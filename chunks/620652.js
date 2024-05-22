@@ -4,7 +4,7 @@ i.r(t), i.d(t, {
     return a
   },
   default: function() {
-    return S
+    return v
   }
 });
 var n, a, s = i("735250"),
@@ -28,7 +28,7 @@ let T = async e => {
   return a.assets[0].p = i.url, a
 };
 
-function S(e) {
+function v(e) {
   let {
     className: t,
     effect: i,

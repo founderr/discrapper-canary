@@ -62,15 +62,15 @@ function c(e, t, s) {
     S = 0,
     E = null,
     T = null,
-    f = null,
     _ = null,
+    f = null,
     m = null;
   for (let e = 0; e < i.byteLength / r; e++) {
     let t = i.getUint32(4 * (4 * e + 0)),
       a = i.getUint32(4 * (4 * e + 1)),
       n = i.getUint32(4 * (4 * e + 2)),
       l = i.getUint32(4 * (4 * e + 3));
-    u++, c += a, S += a + s, null == T && (T = l), f = l, null == E && (E = n), null == _ && (_ = t);
+    u++, c += a, S += a + s, null == T && (T = l), _ = l, null == E && (E = n), null == f && (f = t);
     let r = l - (n - E);
     null == m && (m = r), r < m && (m = r)
   }
@@ -81,15 +81,15 @@ function c(e, t, s) {
       s = (i.getUint32(4 * (4 * e + 3)) - (t - E) - m) / 1e3;
     g.addSample(s), null == I && (I = s), s > I && (I = s)
   }
-  let h = null != T && null != f ? (f - T) / 1e3 : 0,
-    N = 1 - u / d,
-    p = 8 * c / h,
-    C = 8 * S / h,
+  let N = null != T && null != _ ? (_ - T) / 1e3 : 0,
+    h = 1 - u / d,
+    C = 8 * c / N,
+    p = 8 * S / N,
     A = g.getReport([50, 95, 99]);
   return {
-    payloadBandwidth: p,
-    networkBandwidth: C,
-    loss: N,
+    payloadBandwidth: C,
+    networkBandwidth: p,
+    loss: h,
     iatP50: A.percentiles[50],
     iatP95: A.percentiles[95],
     iatP99: A.percentiles[99],

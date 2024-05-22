@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("674985"),
   E = s("594174"),
   T = s("63063"),
-  f = s("843200"),
-  _ = s("981631"),
+  _ = s("843200"),
+  f = s("981631"),
   m = s("689938"),
   g = s("459056");
 class I extends n.PureComponent {
@@ -41,7 +41,7 @@ class I extends n.PureComponent {
           children: m.default.Messages.HYPESQUAD_SUBHEADING
         })]
       }),
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(_.default, {
         className: g.verificationNotice,
         unclaimedNotice: m.default.Messages.HYPESQUAD_UNCLAIMED_ACCOUNT_NOTICE,
         unverifiedNotice: m.default.Messages.HYPESQUAD_UNVERIFIED_EMAIL_NOTICE
@@ -54,7 +54,7 @@ class I extends n.PureComponent {
       }), (0, a.jsx)(o.Card, {
         className: g.attendeeCTA,
         children: m.default.Messages.HYPESQUAD_ATTENDEE_CTA.format({
-          url: T.default.getArticleURL(_.HelpdeskArticles.PROFILE_BADGES)
+          url: T.default.getArticleURL(f.HelpdeskArticles.PROFILE_BADGES)
         })
       })]
     })

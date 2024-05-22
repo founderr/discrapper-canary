@@ -16,15 +16,15 @@ var a = s("735250"),
   S = s("836157"),
   E = s("706454"),
   T = s("494620"),
-  f = s("131951"),
-  _ = s("556296"),
+  _ = s("131951"),
+  f = s("556296"),
   m = s("924557"),
   g = s("435064"),
   I = s("894694"),
-  h = s("779618"),
-  N = s("39604"),
-  p = s("442334"),
-  C = s("356659"),
+  N = s("779618"),
+  h = s("39604"),
+  C = s("442334"),
+  p = s("356659"),
   A = s("981631"),
   O = s("37113"),
   x = s("526761"),
@@ -34,7 +34,7 @@ var a = s("735250"),
   L = s("611273");
 
 function D() {
-  let e = (0, r.useStateFromStores)([f.default], () => f.default.getHardwareH264()),
+  let e = (0, r.useStateFromStores)([_.default], () => _.default.getHardwareH264()),
     {
       clipsEnabled: t,
       remindersEnabled: s,
@@ -42,8 +42,8 @@ function D() {
       clipsLength: D,
       clipsQuality: P
     } = (0, r.useStateFromStoresObject)([g.default], () => g.default.getSettings()),
-    j = (0, r.useStateFromStores)([g.default], () => g.default.getHardwareClassification()),
-    b = (0, r.useStateFromStores)([_.default], () => _.default.getKeybindForAction(A.GlobalKeybindActions.SAVE_CLIP, !0)),
+    b = (0, r.useStateFromStores)([g.default], () => g.default.getHardwareClassification()),
+    j = (0, r.useStateFromStores)([f.default], () => f.default.getKeybindForAction(A.GlobalKeybindActions.SAVE_CLIP, !0)),
     {
       enableDecoupledGameClipping: U
     } = S.default.useExperiment({
@@ -51,7 +51,7 @@ function D() {
     }, {
       autoTrackExposure: !1
     }),
-    y = (0, h.default)(f.default),
+    y = (0, N.default)(_.default),
     {
       showClipsHeaderEntrypoint: G
     } = m.ClipsExperiment.useExperiment({
@@ -59,20 +59,20 @@ function D() {
     }, {
       autoTrackExposure: !1
     });
-  i()(null != b, "Save clip keybind unset");
+  i()(null != j, "Save clip keybind unset");
   let B = (0, r.useStateFromStores)([E.default], () => E.default.locale),
     F = n.useMemo(() => [{
-      value: C.ClipsLengthSettings.SECONDS_30,
+      value: p.ClipsLengthSettings.SECONDS_30,
       label: R.default.Messages.CLIPS_LENGTH_SECONDS.format({
         count: 30
       })
     }, {
-      value: C.ClipsLengthSettings.MINUTES_1,
+      value: p.ClipsLengthSettings.MINUTES_1,
       label: R.default.Messages.CLIPS_LENGTH_MINUTES.format({
         count: 1
       })
     }, {
-      value: C.ClipsLengthSettings.MINUTES_2,
+      value: p.ClipsLengthSettings.MINUTES_2,
       label: R.default.Messages.CLIPS_LENGTH_MINUTES.format({
         count: 2
       })
@@ -119,10 +119,10 @@ function D() {
     }], [B]),
     H = n.useCallback(e => {
       d.default.setKeybind({
-        ...b,
+        ...j,
         shortcut: e
       })
-    }, [b]);
+    }, [j]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(o.FormSection, {
       disabled: !e,
@@ -134,7 +134,7 @@ function D() {
             scrollPosition: x.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })
-      }), j === I.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
+      }), b === I.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
         look: T.InfoBoxLooks.WARNING,
         className: v.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
@@ -144,7 +144,7 @@ function D() {
         className: v.formItem,
         value: t,
         note: R.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
-        onChange: e => N.updateClipsEnabled({
+        onChange: e => h.updateClipsEnabled({
           clipsEnabled: e,
           trackAnalytics: !0
         }),
@@ -163,7 +163,7 @@ function D() {
           className: v.formItem,
           value: l,
           note: R.default.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
-          onChange: e => N.updateDecoupledClipsEnabled({
+          onChange: e => h.updateDecoupledClipsEnabled({
             enabled: e,
             trackAnalytics: !0
           }),
@@ -178,22 +178,22 @@ function D() {
           className: v.formItem,
           value: s,
           note: R.default.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
-          onChange: e => N.updateRemindersEnabled(e),
+          onChange: e => h.updateRemindersEnabled(e),
           children: R.default.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
         })
       })]
     }), (0, a.jsx)(o.FormDivider, {}), (0, a.jsxs)(o.FormSection, {
       className: L.marginTop20,
-      children: [(0, a.jsx)(p.SelectItem, {
+      children: [(0, a.jsx)(C.SelectItem, {
         className: v.formItem,
-        select: N.updateClipsLength,
+        select: h.updateClipsLength,
         title: R.default.Messages.CLIPS_SETTINGS_LENGTH,
         note: R.default.Messages.CLIPS_SETTINGS_LENGTH_HELP,
         value: D,
         options: F
-      }), (0, a.jsx)(p.SelectItem, {
+      }), (0, a.jsx)(C.SelectItem, {
         className: v.formItem,
-        select: e => N.updateClipsQuality({
+        select: e => h.updateClipsQuality({
           resolution: e,
           frameRate: P.frameRate
         }),
@@ -201,9 +201,9 @@ function D() {
         note: R.default.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
         value: P.resolution,
         options: k
-      }), (0, a.jsx)(p.SelectItem, {
+      }), (0, a.jsx)(C.SelectItem, {
         className: v.formItem,
-        select: e => N.updateClipsQuality({
+        select: e => h.updateClipsQuality({
           resolution: P.resolution,
           frameRate: e
         }),
@@ -211,14 +211,14 @@ function D() {
         note: R.default.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
         value: P.frameRate,
         options: w
-      }), (0, a.jsx)(p.InputItem, {
+      }), (0, a.jsx)(C.InputItem, {
         className: v.formItem,
         title: R.default.Messages.CLIPS_SETTINGS_KEYBIND,
         note: R.default.Messages.CLIPS_SETTINGS_KEYBIND_HELP,
         children: (0, a.jsx)("div", {
           className: M.keyRecorder,
           children: (0, a.jsx)(c.default, {
-            defaultValue: b.shortcut,
+            defaultValue: j.shortcut,
             onChange: H
           })
         })

@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return r
+    return i
   }
 }), s("47120"), s("653041");
 var a = s("658722"),
   n = s.n(a);
 
-function i(e, t, s) {
+function l(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -15,24 +15,24 @@ function i(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class r {
+class i {
+  search(e) {
+    return new Promise(t => {
+      t(this.getMatchingSettings(e))
+    })
+  }
   getMatchingSettings(e) {
     let t = this.cache[e];
     if (null != t) return t;
     {
       let t = [];
       return this.terms.forEach(s => {
-        let [a, i] = s;
-        n()(e.toLowerCase(), i.toLowerCase()) && t.push(a)
+        let [a, l] = s;
+        n()(e.toLowerCase(), l.toLowerCase()) && t.push(a)
       }), this.cache[e] = t, t
     }
   }
-  search(e) {
-    return new Promise(t => {
-      t(this.getMatchingSettings(e))
-    })
-  }
   constructor(e) {
-    i(this, "terms", void 0), i(this, "cache", void 0), this.terms = e, this.cache = {}
+    l(this, "terms", void 0), l(this, "cache", void 0), this.terms = e, this.cache = {}
   }
 }

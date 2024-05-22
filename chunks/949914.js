@@ -12,15 +12,15 @@ var a = s("735250"),
   S = s("254854"),
   E = s("230711"),
   T = s("100527"),
-  f = s("906732"),
-  _ = s("377171"),
+  _ = s("906732"),
+  f = s("377171"),
   m = s("674180"),
   g = s("374649"),
   I = s("908951"),
-  h = s("703656"),
-  N = s("853872"),
-  p = s("346656"),
-  C = s("755596"),
+  N = s("703656"),
+  h = s("853872"),
+  C = s("346656"),
+  p = s("755596"),
   A = s("682864"),
   O = s("153124"),
   x = s("86813"),
@@ -30,8 +30,8 @@ var a = s("735250"),
   L = s("404203"),
   D = s("330181"),
   P = s("954821"),
-  j = s("980864"),
-  b = s("981631"),
+  b = s("980864"),
+  j = s("981631"),
   U = s("176505"),
   y = s("526761"),
   G = s("689938"),
@@ -71,12 +71,12 @@ let F = e => {
       subscription: t
     } = e, {
       analyticsLocations: s
-    } = (0, f.default)(), [n] = (0, g.useSubscriptionInvoicePreview)({
+    } = (0, _.default)(), [n] = (0, g.useSubscriptionInvoicePreview)({
       subscriptionId: t.id,
       renewal: !0,
       analyticsLocations: s,
       analyticsLocation: T.default.GUILD_ROLE_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
-    }), l = (0, o.useStateFromStores)([N.default], () => N.default.hasFetchedPaymentSources);
+    }), l = (0, o.useStateFromStores)([h.default], () => h.default.hasFetchedPaymentSources);
     return null != n && l ? (0, a.jsx)(I.default, {
       subscription: t,
       currentInvoicePreview: n,
@@ -103,10 +103,10 @@ let F = e => {
           submitting: n,
           children: G.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_RESTART_SUBSCRIPTION
         }) : (0, a.jsxs)(a.Fragment, {
-          children: [!t && !l && (0, a.jsx)(C.default, {
+          children: [!t && !l && (0, a.jsx)(p.default, {
             label: G.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_CHANGE_TIER,
             onClick: o
-          }), (0, a.jsx)(C.default, {
+          }), (0, a.jsx)(p.default, {
             label: G.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_CANCEL,
             onClick: i
           })]
@@ -124,14 +124,14 @@ t.default = e => {
     expanded: T,
     handleToggleExpanded: g,
     subscriptionInfo: I
-  } = (0, v.default)(t), [N, C] = n.useState(!1), R = (0, O.useUID)(), {
+  } = (0, v.default)(t), [h, p] = n.useState(!1), R = (0, O.useUID)(), {
     analyticsLocations: H
-  } = (0, f.default)(), {
+  } = (0, _.default)(), {
     shouldHideGuildPurchaseEntryPoints: V
-  } = (0, m.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), Y = (null == t ? void 0 : t.paymentGateway) === b.PaymentGateways.APPLE_PARTNER;
+  } = (0, m.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), Y = (null == t ? void 0 : t.paymentGateway) === j.PaymentGateways.APPLE_PARTNER;
   if (null == l || null == s || null == I) return null;
   let W = () => {
-      null != o && ((0, h.transitionTo)(b.Routes.CHANNEL(o.id, U.StaticChannelRoute.ROLE_SUBSCRIPTIONS)), (0, c.popLayer)(), S.default.show(b.NoticeTypes.BACK_TO_PREVIOUS_SCREEN, void 0, G.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => E.default.open(b.UserSettingsSections.SUBSCRIPTIONS, y.ROLE_SUBSCRIPTION_SUBSECTION)))
+      null != o && ((0, N.transitionTo)(j.Routes.CHANNEL(o.id, U.StaticChannelRoute.ROLE_SUBSCRIPTIONS)), (0, c.popLayer)(), S.default.show(j.NoticeTypes.BACK_TO_PREVIOUS_SCREEN, void 0, G.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => E.default.open(j.UserSettingsSections.SUBSCRIPTIONS, y.ROLE_SUBSCRIPTION_SUBSECTION)))
     },
     K = () => {
       null != o && (0, P.openModal)({
@@ -143,9 +143,9 @@ t.default = e => {
     },
     z = async () => {
       try {
-        C(!0), await u.resubscribeToSubscription(t, H), (0, j.openModal)()
+        p(!0), await u.resubscribeToSubscription(t, H), (0, b.openModal)()
       } finally {
-        C(!1)
+        p(!1)
       }
     }, {
       isCancelled: Q,
@@ -181,7 +181,7 @@ t.default = e => {
         ...e,
         children: (0, a.jsx)(M.TextBadge, {
           text: G.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_IOS_PLATFORM,
-          color: _.default.INTERACTIVE_MUTED
+          color: f.default.INTERACTIVE_MUTED
         })
       })
     }) : null;
@@ -196,10 +196,10 @@ t.default = e => {
           handleStopPropagation: n
         } = e;
         return (0, a.jsxs)(a.Fragment, {
-          children: [null != o && (0, a.jsx)(p.default, {
+          children: [null != o && (0, a.jsx)(C.default, {
             guild: o,
             active: !0,
-            size: p.default.Sizes.MEDIUM
+            size: C.default.Sizes.MEDIUM
           }), (0, a.jsxs)("div", {
             className: B.headerTextContainer,
             children: [(0, a.jsx)(d.Text, {
@@ -263,7 +263,7 @@ t.default = e => {
       }), !et && (0, a.jsx)(w, {
         isTrial: ee,
         isCancelled: Q,
-        isResubscribing: N,
+        isResubscribing: h,
         shouldHideRoleSubscriptionEntryPoints: V,
         onCancelSubscriptionClick: K,
         onChangePlanClick: W,

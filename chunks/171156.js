@@ -8,15 +8,15 @@ var a, n, l, i, r = s("442837"),
   S = s("131951"),
   E = s("866960"),
   T = s("936349"),
-  f = s("979651"),
-  _ = s("622414"),
+  _ = s("979651"),
+  f = s("622414"),
   m = s("42955"),
   g = s("399002"),
   I = s("369541"),
-  h = s("981631"),
-  N = s("65154");
+  N = s("981631"),
+  h = s("65154");
 new u.default("RTCSpeedTestStore");
-let p = [{
+let C = [{
     clusterSize: 40,
     clusterIntervalMs: 20,
     numClusters: 1500,
@@ -57,7 +57,7 @@ let p = [{
     numClusters: 295,
     direction: I.SpeedTestDirections.SERVER_TO_CLIENT
   }],
-  C = p.length,
+  p = C.length,
   A = {
     running: !1,
     region: null,
@@ -74,11 +74,11 @@ let p = [{
   };
 
 function O(e, t, s) {
-  e === h.RTCConnectionStates.RTC_CONNECTED ? A.connected = !0 : (e === h.RTCConnectionStates.DISCONNECTED || e === h.RTCConnectionStates.RTC_DISCONNECTED) && (A.lifecycle === I.SpeedTestLifecycles.TESTING && (A.failed = !0, b(), U()), A.connected = !1)
+  e === N.RTCConnectionStates.RTC_CONNECTED ? A.connected = !0 : (e === N.RTCConnectionStates.DISCONNECTED || e === N.RTCConnectionStates.RTC_DISCONNECTED) && (A.lifecycle === I.SpeedTestLifecycles.TESTING && (A.failed = !0, j(), U()), A.connected = !1)
 }
 
 function x() {
-  A.lifecycle === I.SpeedTestLifecycles.TESTING && (A.failed = !0, b(), U())
+  A.lifecycle === I.SpeedTestLifecycles.TESTING && (A.failed = !0, j(), U())
 }
 
 function R() {
@@ -92,7 +92,7 @@ function M(e, t) {
   if (null != A.currentTest) !0 !== A.failed && (A.currentTest = A.currentTest + 1, A.results.push({
     payload: e,
     summary: t
-  }), A.currentTest === C ? (P(I.SpeedTestLifecycles.UPLOADING), U()) : j())
+  }), A.currentTest === p ? (P(I.SpeedTestLifecycles.UPLOADING), U()) : b())
 }
 
 function v(e) {
@@ -102,7 +102,7 @@ function v(e) {
 function L() {
   if (A.lifecycle === I.SpeedTestLifecycles.PINGING && 10 === A.pings.length) {
     var e;
-    null === (e = A.connection) || void 0 === e || e.setPingInterval(5e3), A.currentTest = 0, j()
+    null === (e = A.connection) || void 0 === e || e.setPingInterval(5e3), A.currentTest = 0, b()
   }
 }
 
@@ -118,15 +118,15 @@ function P(e) {
   })
 }
 
-function j() {
+function b() {
   var e, t;
-  null !== A.currentTest && (p[A.currentTest].direction === I.SpeedTestDirections.CLIENT_TO_SERVER ? null === (e = A.connection) || void 0 === e || e.startClientToServerSpeedTest(p[A.currentTest]) : p[A.currentTest].direction === I.SpeedTestDirections.SERVER_TO_CLIENT && (null === (t = A.connection) || void 0 === t || t.startServerToClientSpeedTest(p[A.currentTest])), P(I.SpeedTestLifecycles.TESTING))
+  null !== A.currentTest && (C[A.currentTest].direction === I.SpeedTestDirections.CLIENT_TO_SERVER ? null === (e = A.connection) || void 0 === e || e.startClientToServerSpeedTest(C[A.currentTest]) : C[A.currentTest].direction === I.SpeedTestDirections.SERVER_TO_CLIENT && (null === (t = A.connection) || void 0 === t || t.startServerToClientSpeedTest(C[A.currentTest])), P(I.SpeedTestLifecycles.TESTING))
 }
 
-function b() {
+function j() {
   if (A.lifecycle === I.SpeedTestLifecycles.TESTING && null != A.currentTest) {
     var e, t;
-    p[A.currentTest].direction === I.SpeedTestDirections.CLIENT_TO_SERVER ? null === (e = A.connection) || void 0 === e || e.stopClientToServerSpeedTest() : null === (t = A.connection) || void 0 === t || t.stopServerToClientSpeedTest()
+    C[A.currentTest].direction === I.SpeedTestDirections.CLIENT_TO_SERVER ? null === (e = A.connection) || void 0 === e || e.stopClientToServerSpeedTest() : null === (t = A.connection) || void 0 === t || t.stopServerToClientSpeedTest()
   }
 }
 async function U() {
@@ -151,7 +151,7 @@ async function U() {
       pings: A.pings,
       tests: []
     };
-  for (let e = 0; e < p.length; e++) {
+  for (let e = 0; e < C.length; e++) {
     let t = {
         params: null,
         results: null
@@ -160,30 +160,30 @@ async function U() {
         params: null,
         results: null
       };
-    t.params = p[e], s.params = p[e], e < A.results.length && (t.results = A.results[e].summary, s.results = A.results[e].payload), n.tests.push(t), l.tests.push(s)
+    t.params = C[e], s.params = C[e], e < A.results.length && (t.results = A.results[e].summary, s.results = A.results[e].payload), n.tests.push(t), l.tests.push(s)
   }
   await Promise.all([o.HTTP.post({
-    url: h.Endpoints.DEBUG_LOG(h.DebugLogCategory.SPEED_TEST, "speed_test_summary_".concat(s, ".json")),
+    url: N.Endpoints.DEBUG_LOG(N.DebugLogCategory.SPEED_TEST, "speed_test_summary_".concat(s, ".json")),
     body: JSON.stringify(n, void 0, 2),
     retries: 3,
     headers: {
       "Content-Type": "text/plain"
     }
   }), o.HTTP.post({
-    url: h.Endpoints.DEBUG_LOG(h.DebugLogCategory.SPEED_TEST, "speed_test_results_".concat(s, ".json")),
+    url: N.Endpoints.DEBUG_LOG(N.DebugLogCategory.SPEED_TEST, "speed_test_results_".concat(s, ".json")),
     body: JSON.stringify(l, void 0, 2),
     retries: 3,
     headers: {
       "Content-Type": "text/plain"
     }
-  })]), P(I.SpeedTestLifecycles.COMPLETED), D(), _.default.stopSpeedTest(), A.running = !1, A.notes = ""
+  })]), P(I.SpeedTestLifecycles.COMPLETED), D(), f.default.stopSpeedTest(), A.running = !1, A.notes = ""
 }
 class y extends(a = r.default.Store) {
   initialize() {
-    this.waitFor(c.default, S.default, T.default, f.default)
+    this.waitFor(c.default, S.default, T.default, _.default)
   }
   getAvailable() {
-    return !f.default.isCurrentClientInVoiceChannel()
+    return !_.default.isCurrentClientInVoiceChannel()
   }
   getActive() {
     return A.running
@@ -205,7 +205,7 @@ class y extends(a = r.default.Store) {
     return A.currentTest
   }
   getTestCases() {
-    return p
+    return C
   }
   getTestResults() {
     return A.results
@@ -220,7 +220,7 @@ class y extends(a = r.default.Store) {
     A.notes = e
   }
   isSupported() {
-    return S.default.supports(N.Features.SPEED_TEST)
+    return S.default.supports(h.Features.SPEED_TEST)
   }
 }
 i = "RTCSpeedTestStore", (l = "displayName") in(n = y) ? Object.defineProperty(n, l, {
@@ -237,7 +237,7 @@ i = "RTCSpeedTestStore", (l = "displayName") in(n = y) ? Object.defineProperty(n
   },
   SPEED_TEST_CREATE: function(e) {
     if (!A.running) {
-      _.default.stopSpeedTest();
+      f.default.stopSpeedTest();
       return
     }
     A.rtcServerId = e.rtcServerId

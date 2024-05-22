@@ -1,41 +1,41 @@
 "use strict";
-l.r(t), l.d(t, {
+s.r(t), s.d(t, {
   InfoBoxLooks: function() {
     return n
   },
   default: function() {
-    return S
+    return T
   }
 });
-var a, n, s = l("735250");
-l("470079");
-var i = l("120356"),
-  r = l.n(i),
-  u = l("481060"),
-  o = l("507893"),
-  d = l("759231"),
-  c = l("239260");
+var a, n, l = s("735250");
+s("470079");
+var i = s("120356"),
+  r = s.n(i),
+  o = s("481060"),
+  d = s("507893"),
+  u = s("759231"),
+  c = s("239260");
 (a = n || (n = {})).INFO = "info", a.WARNING = "warning";
-let f = {
+let S = {
     info: c.info,
     warning: c.warning
   },
-  m = {
-    info: o.default,
-    warning: d.default
+  E = {
+    info: d.default,
+    warning: u.default
   };
 
-function S(e) {
+function T(e) {
   let {
     children: t,
-    className: l,
+    className: s,
     look: a = "info"
-  } = e, n = m[a];
-  return (0, s.jsxs)("div", {
-    className: r()(c.root, l, f[a]),
-    children: [(0, s.jsx)(n, {
+  } = e, n = E[a];
+  return (0, l.jsxs)("div", {
+    className: r()(c.root, s, S[a]),
+    children: [(0, l.jsx)(n, {
       className: c.icon
-    }), (0, s.jsx)(u.Text, {
+    }), (0, l.jsx)(o.Text, {
       className: c.text,
       variant: "text-sm/medium",
       color: "text-normal",

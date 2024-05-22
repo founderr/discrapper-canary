@@ -19,21 +19,21 @@ var a = s("735250"),
   S = s("514361"),
   E = s("705262"),
   T = s("605236"),
-  f = s("104494"),
-  _ = s("639119"),
+  _ = s("104494"),
+  f = s("639119"),
   m = s("165583"),
   g = s("197115"),
   I = s("504983"),
-  h = s("626135"),
-  N = s("981631"),
-  p = s("921944"),
-  C = s("474936"),
+  N = s("626135"),
+  h = s("981631"),
+  C = s("921944"),
+  p = s("474936"),
   A = s("689938"),
   O = s("922844"),
   x = s("611273");
 let R = () => {
     (0, T.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIENT_THEMES_SPARKLE_PREVIEW, {
-      dismissAction: p.ContentDismissActionType.PRIMARY,
+      dismissAction: C.ContentDismissActionType.PRIMARY,
       forceTrack: !0
     }), (0, c.openEditor)(), (0, o.popLayer)()
   },
@@ -41,10 +41,10 @@ let R = () => {
     var e, t;
     let {
       analyticsLocations: s
-    } = (0, u.default)(d.default.USER_SETTINGS), i = (0, l.useStateFromStores)([S.default], () => S.default.isPreview), o = (null === (t = (0, _.usePremiumTrialOffer)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === C.PremiumSubscriptionSKUs.TIER_2, c = (0, f.usePremiumDiscountOffer)(), T = (0, f.discountOfferHasTier)(c, C.PremiumSubscriptionSKUs.TIER_2);
+    } = (0, u.default)(d.default.USER_SETTINGS), i = (0, l.useStateFromStores)([S.default], () => S.default.isPreview), o = (null === (t = (0, f.usePremiumTrialOffer)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === p.PremiumSubscriptionSKUs.TIER_2, c = (0, _.usePremiumDiscountOffer)(), T = (0, _.discountOfferHasTier)(c, p.PremiumSubscriptionSKUs.TIER_2);
     return n.useEffect(() => {
-      i && h.default.track(N.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-        type: C.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+      i && N.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+        type: p.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
         location_stack: s
       })
     }, [i, s]), (0, a.jsxs)("div", {
@@ -65,7 +65,7 @@ let R = () => {
                 onClick: () => R(),
                 children: A.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
               }), (0, a.jsx)(g.default, {
-                subscriptionTier: C.PremiumSubscriptionSKUs.TIER_2,
+                subscriptionTier: p.PremiumSubscriptionSKUs.TIER_2,
                 buttonText: T ? A.default.Messages.PREMIUM_DISCOUNT_CTA.format({
                   percent: null == c ? void 0 : c.discount.amount
                 }) : A.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
@@ -81,8 +81,8 @@ let R = () => {
             }), (0, a.jsx)("div", {
               className: O.premiumTier2Divider
             }), (0, a.jsx)(m.default, {
-              type: C.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
-              subscriptionTier: C.PremiumSubscriptionSKUs.TIER_2
+              type: p.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
+              subscriptionTier: p.PremiumSubscriptionSKUs.TIER_2
             })]
           })]
         })]

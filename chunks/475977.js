@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("335131"),
   E = s("410154"),
   T = s("981631"),
-  f = s("474936"),
-  _ = s("689938"),
+  _ = s("474936"),
+  f = s("689938"),
   m = s("449221"),
   g = s("786792");
 let I = e => {
@@ -36,17 +36,17 @@ let I = e => {
           variant: "heading-lg/extrabold",
           color: "always-white",
           className: m.title,
-          children: _.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
+          children: f.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
         }), (0, a.jsx)(o.Text, {
           className: m.__invalid_textBody,
           variant: "text-sm/normal",
           color: "always-white",
-          children: _.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+          children: f.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
         })]
       })]
     })
   },
-  h = e => {
+  N = e => {
     let {
       variation: t
     } = e;
@@ -62,7 +62,7 @@ t.default = () => {
   } = (0, u.default)(d.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL), t = n.useRef(null), s = (0, E.default)("CollectiblesUpsellBanner");
   return n.useEffect(() => {
     c.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: f.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
+      type: _.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
       location_stack: e
     })
   }, [e]), (0, a.jsxs)("div", {
@@ -71,7 +71,7 @@ t.default = () => {
     style: {
       backgroundImage: "url(".concat(g, ")")
     },
-    children: [(0, a.jsx)(h, {
+    children: [(0, a.jsx)(N, {
       variation: s
     }), (0, a.jsx)(o.Button, {
       onClick: () => {
@@ -82,7 +82,7 @@ t.default = () => {
       },
       className: m.ctaButton,
       look: o.Button.Looks.INVERTED,
-      children: (0, r.match)(s).with(E.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => _.default.Messages.CHECK_IT_OUT).otherwise(() => _.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
+      children: (0, r.match)(s).with(E.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => f.default.Messages.CHECK_IT_OUT).otherwise(() => f.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
     })]
   })
 }

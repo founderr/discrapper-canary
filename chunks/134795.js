@@ -23,22 +23,22 @@ function E(e) {
     onBannerChange: n,
     guildId: E,
     className: T,
-    disabled: f = !1,
-    showPremiumIcon: _ = !0,
+    disabled: _ = !1,
+    showPremiumIcon: f = !0,
     isTryItOutFlow: m = !1,
     forcedDivider: g,
     withHighlight: I = !1
-  } = e, h = I ? r.default : i.Button;
+  } = e, N = I ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
     className: T,
     title: c.default.Messages.USER_SETTINGS_PROFILE_BANNER,
-    showPremiumIcon: _,
+    showPremiumIcon: f,
     errors: s,
-    disabled: f,
+    disabled: _,
     forcedDivider: g,
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,
-      children: [(0, a.jsx)(h, {
+      children: [(0, a.jsx)(N, {
         className: l()({
           [S.buttonHighlighted]: I
         }),

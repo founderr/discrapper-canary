@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return C
+    return p
   }
 });
 var a = s("735250"),
@@ -16,15 +16,15 @@ var a = s("735250"),
   S = s("285952"),
   E = s("998502"),
   T = s("210887"),
-  f = s("996073"),
-  _ = s("526761"),
+  _ = s("996073"),
+  f = s("526761"),
   m = s("65154"),
   g = s("689938"),
   I = s("611273");
-let h = s("651714"),
-  N = s("297166");
+let N = s("651714"),
+  h = s("297166");
 
-function p() {
+function C() {
   let {
     experimentalEncoders: e
   } = (0, r.useStateFromStoresObject)([c.default], () => ({
@@ -39,7 +39,7 @@ function p() {
   }) : null
 }
 
-function C() {
+function p() {
   let e = (0, r.useStateFromStores)([T.default], () => T.default.theme),
     {
       openH264: t,
@@ -51,7 +51,7 @@ function C() {
       supportsOpenH264: c.default.supports(m.Features.OPEN_H264)
     })),
     E = n.useRef(null);
-  return (0, f.default)(E, _.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
+  return (0, _.default)(E, f.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.FormSection, {
       className: I.marginBottom20,
       title: g.default.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
@@ -59,7 +59,7 @@ function C() {
         className: I.marginBottom20,
         type: d.FormNoticeTypes.PRIMARY,
         imageData: {
-          src: (0, o.isThemeLight)(e) ? h : N,
+          src: (0, o.isThemeLight)(e) ? N : h,
           width: 70,
           height: 40
         },
@@ -87,7 +87,7 @@ function C() {
         onChange: e => u.default.setHardwareH264(e),
         note: g.default.Messages.FORM_HELP_HARDWARE_H264,
         children: g.default.Messages.USER_SETTINGS_VOICE_HARDWARE_H264
-      }), (0, a.jsx)(p, {})]
+      }), (0, a.jsx)(C, {})]
     })]
   })
 }

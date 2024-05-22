@@ -12,15 +12,15 @@ var a = s("735250"),
   S = s("594190"),
   E = s("320724"),
   T = s("77498"),
-  f = s("283595"),
-  _ = s("186095"),
+  _ = s("283595"),
+  f = s("186095"),
   m = s("797717"),
   g = s("546591"),
   I = s("794358"),
-  h = s("880008"),
-  N = s("795295"),
-  p = s("169278"),
-  C = s("931003"),
+  N = s("880008"),
+  h = s("795295"),
+  C = s("169278"),
+  p = s("931003"),
   A = s("507957"),
   O = s("626135"),
   x = s("251625"),
@@ -30,12 +30,12 @@ var a = s("735250"),
   L = s("689938"),
   D = s("159618"),
   P = s("661781"),
-  j = s("961047"),
-  b = s("164149"),
+  b = s("961047"),
+  j = s("164149"),
   U = s("611273");
 let y = r.default.connectStores([M.default], () => ({
     theme: M.default.theme
-  }))(_.default),
+  }))(f.default),
   G = (0, R.isWindows)();
 
 function B(e) {
@@ -59,7 +59,7 @@ function B(e) {
     }), (0, a.jsx)(d.FormDivider, {
       className: i()(U.marginTop8, U.marginBottom8)
     }), (0, a.jsxs)("div", {
-      className: i()(D.actions, j.horizontal),
+      className: i()(D.actions, b.horizontal),
       children: [(0, a.jsx)(d.Button, {
         className: D.cancelButton,
         look: d.ButtonLooks.LINK,
@@ -83,19 +83,19 @@ function F(e) {
     rawGame: s,
     nowPlaying: l = !1,
     isOverride: E
-  } = e, _ = (0, r.useStateFromStoresObject)([T.default, S.default, f.default], () => (0, S.transformForGameSettings)(s)), [x, R] = n.useState(!1), [M, P] = n.useState(null !== (t = _.name) && void 0 !== t ? t : "???"), U = i()(j.flexCenter, {
+  } = e, f = (0, r.useStateFromStoresObject)([T.default, S.default, _.default], () => (0, S.transformForGameSettings)(s)), [x, R] = n.useState(!1), [M, P] = n.useState(null !== (t = f.name) && void 0 !== t ? t : "???"), U = i()(b.flexCenter, {
     [D.game]: !l,
     [D.activeGame]: l,
-    [b.card]: !l,
-    [D.nowPlaying]: null != _ && l
+    [j.card]: !l,
+    [D.nowPlaying]: null != f && l
   });
 
   function y() {
-    u.default.deleteEntry(_)
+    u.default.deleteEntry(f)
   }
 
   function B() {
-    _.name !== M && u.default.editName(_, M)
+    f.name !== M && u.default.editName(f, M)
   }
 
   function F(e) {
@@ -103,28 +103,28 @@ function F(e) {
   }
 
   function k() {
-    u.default.toggleDetection(_)
+    u.default.toggleDetection(f)
   }
 
   function w() {
     if (x) return;
-    let e = null != _.id ? T.default.getDetectableGame(_.id) : null;
+    let e = null != f.id ? T.default.getDetectableGame(f.id) : null;
     O.default.track(v.AnalyticEvents.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
       application_id: null == e ? void 0 : e.id,
-      game_name: _.name
+      game_name: f.name
     }), (0, d.showToast)((0, d.createToast)(L.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({
-      gameName: _.name
+      gameName: f.name
     }), d.ToastType.SUCCESS)), R(!0)
   }
   return (0, a.jsxs)("div", {
     className: U,
     children: [(0, a.jsxs)("div", {
-      className: i()(D.gameNameLastPlayed, j.vertical),
-      children: [_.verified && !E ? (0, a.jsxs)("div", {
+      className: i()(D.gameNameLastPlayed, b.vertical),
+      children: [f.verified && !E ? (0, a.jsxs)("div", {
         className: D.detectedApplication,
         children: [(0, a.jsx)("div", {
           className: D.gameName,
-          children: _.name
+          children: f.name
         }), (0, a.jsx)(d.Tooltip, {
           text: L.default.Messages.SETTINGS_GAMES_VERIFIED_ICON,
           children: e => (0, a.jsx)(m.default, {
@@ -152,7 +152,7 @@ function F(e) {
         let {
           played: t,
           exePath: s
-        } = _;
+        } = f;
         return l ? e = L.default.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE : null != t && "" !== t && (e = L.default.Messages.SETTINGS_GAMES_LAST_PLAYED.format({
           when: t
         })), (0, a.jsx)("div", {
@@ -164,7 +164,7 @@ function F(e) {
         })
       }()]
     }), E ? null : x ? null : (0, a.jsx)("div", {
-      className: i()(j.flexCenter, j.noWrap, j.justifyBetween, D.toggleContainer),
+      className: i()(b.flexCenter, b.noWrap, b.justifyBetween, D.toggleContainer),
       children: (0, a.jsx)(d.Tooltip, {
         text: L.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION,
         children: e => {
@@ -178,7 +178,7 @@ function F(e) {
             onClick: w,
             onMouseEnter: t,
             onMouseLeave: s,
-            children: (0, a.jsx)(N.default, {
+            children: (0, a.jsx)(h.default, {
               className: D.toggleIconOn,
               foreground: D.fill,
               width: 24,
@@ -190,12 +190,12 @@ function F(e) {
     }), function() {
       let {
         detectable: e
-      } = _, t = e ? (0, a.jsx)(I.default, {
+      } = f, t = e ? (0, a.jsx)(I.default, {
         className: D.toggleIconOn,
         foreground: D.fill,
         width: 24,
         height: 24
-      }) : (0, a.jsx)(h.default, {
+      }) : (0, a.jsx)(N.default, {
         className: D.toggleIconOff,
         background: D.fill,
         foreground: D.fill,
@@ -203,7 +203,7 @@ function F(e) {
         height: 24
       });
       return (0, a.jsx)("div", {
-        className: i()(j.flexCenter, j.noWrap, j.justifyBetween, D.toggleContainer),
+        className: i()(b.flexCenter, b.noWrap, b.justifyBetween, D.toggleContainer),
         children: (0, a.jsx)(d.Tooltip, {
           text: L.default.Messages.SETTINGS_GAMES_TOGGLE_DETECTION,
           children: e => {
@@ -227,10 +227,10 @@ function F(e) {
       let {
         overlay: e,
         overlayWarn: t
-      } = _, s = e ? (0, a.jsx)(p.default, {
+      } = f, s = e ? (0, a.jsx)(C.default, {
         className: D.toggleIconOn,
         foreground: D.fill
-      }) : (0, a.jsx)(C.default, {
+      }) : (0, a.jsx)(p.default, {
         className: D.toggleIconOff,
         foreground: D.fill
       }), n = t ? (0, a.jsx)(d.Tooltip, {
@@ -241,7 +241,7 @@ function F(e) {
         })
       }) : null;
       return (0, a.jsxs)("div", {
-        className: i()(j.flexCenter, j.noWrap, j.justifyBetween, D.toggleContainer),
+        className: i()(b.flexCenter, b.noWrap, b.justifyBetween, D.toggleContainer),
         children: [n, (0, a.jsx)(d.Tooltip, {
           text: L.default.Messages.SETTINGS_GAMES_TOGGLE_OVERLAY,
           children: t => {
@@ -254,7 +254,7 @@ function F(e) {
               className: D.toggleIcon,
               onClick: () => {
                 var t;
-                return t = !e, void u.default.toggleOverlay(_, t)
+                return t = !e, void u.default.toggleOverlay(f, t)
               },
               onMouseEnter: n,
               onMouseLeave: l,
@@ -272,9 +272,9 @@ function F(e) {
 
 function k() {
   return (0, a.jsx)("div", {
-    className: i()(j.flexCenter, D.notDetected, D.activeGame),
+    className: i()(b.flexCenter, D.notDetected, D.activeGame),
     children: (0, a.jsxs)("div", {
-      className: i()(D.gameNameLastPlayed, j.vertical),
+      className: i()(D.gameNameLastPlayed, b.vertical),
       children: [(0, a.jsx)("div", {
         className: D.gameName,
         children: L.default.Messages.SETTINGS_GAMES_NO_GAME_DETECTED
@@ -292,7 +292,7 @@ function w(e) {
   } = e;
   return (0, a.jsxs)(y, {
     className: U.marginTop40,
-    children: [(0, a.jsx)(_.EmptyStateImage, {
+    children: [(0, a.jsx)(f.EmptyStateImage, {
       darkSrc: s("879601"),
       lightSrc: s("889000"),
       width: 430,
@@ -347,7 +347,7 @@ t.default = function(e) {
         })
       })]
     }), 0 === l.length ? (0, a.jsx)(w, {
-      children: (0, a.jsx)(_.EmptyStateText, {
+      children: (0, a.jsx)(f.EmptyStateText, {
         children: L.default.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
       })
     }) : (0, a.jsxs)(d.FormSection, {

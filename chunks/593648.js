@@ -16,15 +16,15 @@ var a = s("735250"),
   S = s("292556"),
   E = s("92114"),
   T = s("419363"),
-  f = s("818083"),
-  _ = s("688465"),
+  _ = s("818083"),
+  f = s("688465"),
   m = s("487419"),
   g = s("378364"),
   I = s("197344"),
-  h = s("734934"),
-  N = s("223683"),
-  p = s("312400"),
-  C = s("115345"),
+  N = s("734934"),
+  h = s("223683"),
+  C = s("312400"),
+  p = s("115345"),
   A = s("392888"),
   O = s("657254"),
   x = s("470647"),
@@ -34,8 +34,8 @@ var a = s("735250"),
   L = s("626135"),
   D = s("912101"),
   P = s("358085"),
-  j = s("709054"),
-  b = s("557177"),
+  b = s("709054"),
+  j = s("557177"),
   U = s("695346"),
   y = s("675478"),
   G = s("33656"),
@@ -107,9 +107,9 @@ function W(e) {
     })
   }, []);
   let d = n.useRef(),
-    c = (0, h.useFocusModeEnabled)(),
+    c = (0, N.useFocusModeEnabled)(),
     E = n.useCallback((e, t) => {
-      t.stopPropagation(), t.preventDefault(), null != d.current && d.current.stop(), d.current = b.playSound(e)
+      t.stopPropagation(), t.preventDefault(), null != d.current && d.current.stop(), d.current = j.playSound(e)
     }, []),
     T = n.useCallback((e, s) => {
       let a = t.filter(t => t !== e);
@@ -122,7 +122,7 @@ function W(e) {
     var e;
     null === (e = d.current) || void 0 === e || e.stop()
   });
-  let f = [{
+  let _ = [{
     label: k.default.Messages.SOUND_MESSAGE,
     sound: "message1",
     focusModeDisabled: c
@@ -214,7 +214,7 @@ function W(e) {
       value: s,
       onChange: S.default.toggleDisableAllSounds,
       children: k.default.Messages.SOUND_DISABLE_ALL
-    }), f.map(e => {
+    }), _.map(e => {
       let {
         label: n,
         sound: l,
@@ -236,7 +236,7 @@ function W(e) {
 function K() {
   let e = (0, d.useStateFromStores)([m.default], () => m.default.getGuildAlertSettings()),
     [t, s] = n.useState(null),
-    l = j.default.keys(e).map(t => {
+    l = b.default.keys(e).map(t => {
       let s = e[t];
       return {
         label: s.guildName,
@@ -247,7 +247,7 @@ function K() {
     children: [(0, a.jsxs)(u.Heading, {
       variant: "heading-lg/semibold",
       className: i()(w.titleWithBeta, H.marginBottom20),
-      children: [k.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(_.default, {})]
+      children: [k.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(f.default, {})]
     }), (0, a.jsx)(u.FormText, {
       type: u.FormTextTypes.DESCRIPTION,
       className: H.marginBottom20,
@@ -399,7 +399,7 @@ class z extends n.PureComponent {
     })
   }
 }
-let Q = (0, f.createExperiment)({
+let Q = (0, _.createExperiment)({
   kind: "user",
   id: "2024-01_mention_on_all_messages",
   label: "Mention on all messages",
@@ -434,14 +434,14 @@ function q() {
 }
 
 function Z() {
-  let e = p.NotificationsExperiment.useExperiment({
+  let e = C.NotificationsExperiment.useExperiment({
       location: "UserSettingsNotifications"
     }, {
       autoTrackExposure: !1
     }).enabled,
     {
       manuallyOpen: t
-    } = p.UnreadsEntryPointExperiment.useExperiment({
+    } = C.UnreadsEntryPointExperiment.useExperiment({
       location: "UserSettingsNotifications"
     }, {
       autoTrackExposure: !1
@@ -474,20 +474,20 @@ function Z() {
 }
 async function X(e) {
   e(!0);
-  let t = await (0, N.listSnapshots)();
-  0 === t.length ? await (0, C.revertToOldSystem)() : c.default.show({
+  let t = await (0, h.listSnapshots)();
+  0 === t.length ? await (0, p.revertToOldSystem)() : c.default.show({
     title: k.default.Messages.CONFIRM,
     body: k.default.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({
       date: new Date(t[t.length - 1].recorded_at)
     }),
     cancelText: k.default.Messages.CANCEL,
     confirmText: k.default.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_ACTION,
-    onConfirm: C.revertToOldSystem
+    onConfirm: p.revertToOldSystem
   }), e(!1)
 }
 
 function J(e) {
-  let t = (0, h.useFocusModeEnabled)();
+  let t = (0, N.useFocusModeEnabled)();
   return (0, a.jsx)(z, {
     ...e,
     focusMode: t

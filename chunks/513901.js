@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return N
   }
 });
 var a = s("735250"),
@@ -16,21 +16,21 @@ var a = s("735250"),
   S = s("74538"),
   E = s("150039"),
   T = s("993413"),
-  f = s("504983"),
-  _ = s("981631"),
+  _ = s("504983"),
+  f = s("981631"),
   m = s("474936"),
   g = s("689938"),
   I = s("484589");
 
-function h(e) {
+function N(e) {
   let {
     user: t,
     guild: s,
     className: l,
-    sectionTitle: h,
-    forcedDivider: N = !1,
-    withTutorial: p = !1,
-    showBorder: C = !1,
+    sectionTitle: N,
+    forcedDivider: h = !1,
+    withTutorial: C = !1,
+    showBorder: p = !1,
     isTryItOutFlow: A = !1,
     initialSelectedEffectId: O
   } = e, x = (0, E.useGlobalOrGuildIdentityProfileEffect)(t, s), R = S.default.canUsePremiumProfileCustomization(t), {
@@ -44,32 +44,32 @@ function h(e) {
     guild: s
   }), [M, O, s]);
   n.useEffect(() => {
-    R && c.default.track(_.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    R && c.default.track(f.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: m.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
       location_stack: M
     })
   }, [R, M]);
   let P = null != s,
-    j = A || void 0 !== v ? null != v : null != x,
-    b = p ? u.default : r.Button;
+    b = A || void 0 !== v ? null != v : null != x,
+    j = C ? u.default : r.Button;
   return (0, a.jsx)(T.default, {
-    forcedDivider: N,
-    borderType: f.FeatureBorderTypes.PREMIUM,
+    forcedDivider: h,
+    borderType: _.FeatureBorderTypes.PREMIUM,
     hasBackground: !0,
-    title: h,
-    showBorder: C,
+    title: N,
+    showBorder: p,
     errors: L,
     className: l,
     children: (0, a.jsxs)("div", {
       className: I.buttonsContainer,
-      children: [(0, a.jsx)(b, {
+      children: [(0, a.jsx)(j, {
         size: r.Button.Sizes.SMALL,
         onClick: D,
         className: i()({
-          [I.buttonHighlighted]: p
+          [I.buttonHighlighted]: C
         }),
         children: g.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
-      }), j && (0, a.jsx)(r.Button, {
+      }), b && (0, a.jsx)(r.Button, {
         className: I.removeButton,
         color: r.Button.Colors.PRIMARY,
         look: r.Button.Looks.LINK,

@@ -16,20 +16,20 @@ var a = s("735250"),
   S = s("914010"),
   E = s("285952"),
   T = s("107828"),
-  f = s("727785"),
-  _ = s("689938"),
+  _ = s("727785"),
+  f = s("689938"),
   m = s("158200");
 
 function g() {}
-let I = [f.AutocompleterResultTypes.VOICE_CHANNEL];
+let I = [_.AutocompleterResultTypes.VOICE_CHANNEL];
 
-function h(e) {
+function N(e) {
   e.setOptions({
     voiceChannelGuildFilter: null
   }), e.setLimit(1 / 0)
 }
 
-function N(e) {
+function h(e) {
   let {
     height: t
   } = e;
@@ -40,14 +40,14 @@ function N(e) {
   })
 }
 
-function p() {
-  return (0, a.jsx)(N, {
+function C() {
+  return (0, a.jsx)(h, {
     height: 16
   }, "footer")
 }
 
-function C() {
-  return (0, a.jsx)(N, {
+function p() {
+  return (0, a.jsx)(h, {
     height: 8
   }, "header")
 }
@@ -59,7 +59,7 @@ function A() {
       variant: "text-md/medium",
       color: "text-muted",
       className: m.noVoiceChannelSelected,
-      children: _.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_NO_RESULTS_FOUND
+      children: f.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_NO_RESULTS_FOUND
     })
   })
 }
@@ -84,7 +84,7 @@ function O(e) {
     }))
   }, []);
   return (0, a.jsx)(i.FormSection, {
-    title: _.default.Messages.USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION,
+    title: f.default.Messages.USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION,
     className: m.channelIdSection,
     children: (0, a.jsxs)(E.default, {
       align: E.default.Align.STRETCH,
@@ -98,7 +98,7 @@ function O(e) {
         shrink: 0,
         children: (0, a.jsx)(i.Button, {
           onClick: c,
-          children: _.default.Messages.USER_SETTINGS_KEYBINDS_SELECT_VOICE_CHANNEL
+          children: f.default.Messages.USER_SETTINGS_KEYBINDS_SELECT_VOICE_CHANNEL
         })
       })]
     })
@@ -111,7 +111,7 @@ function x(e) {
     onClose: s,
     onSelect: r
   } = e, E = n.useId(), g = n.useRef(null), {
-    mouseFocusEnabled: N,
+    mouseFocusEnabled: h,
     enableMouseFocus: O,
     disableMouseFocus: x
   } = function() {
@@ -134,7 +134,7 @@ function x(e) {
   } = (0, o.default)({
     visible: !0,
     autocompleterResultTypes: I,
-    autocompleterBeforeCreateSearchContext: h
+    autocompleterBeforeCreateSearchContext: N
   }), L = function(e) {
     let t = "" !== e,
       s = (0, l.useStateFromStoresArray)([u.default, d.default, S.default], () => {
@@ -167,14 +167,14 @@ function x(e) {
       row: D
     })
   }, [D]);
-  let j = null != L ? L.length : v.length,
-    b = (() => {
+  let b = null != L ? L.length : v.length,
+    j = (() => {
       if (null != L) {
         var e;
         return null === (e = L[D]) || void 0 === e ? void 0 : e.id
       }
       let t = v[D];
-      if ((null == t ? void 0 : t.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
+      if ((null == t ? void 0 : t.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
     })();
   return (0, a.jsx)("div", {
     className: m.voiceModalContainer,
@@ -199,39 +199,39 @@ function x(e) {
                 let e = (() => {
                   if (null != L) return L[D];
                   let e = v[D];
-                  if ((null == e ? void 0 : e.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
+                  if ((null == e ? void 0 : e.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
                 })();
                 null == e ? r(void 0) : r(e.id), s();
                 break
               }
               case "arrowup":
-                0 === D ? P(j - 1) : P(D - 1);
+                0 === D ? P(b - 1) : P(D - 1);
                 break;
               case "arrowdown":
-                D >= j - 1 ? P(0) : P(D + 1)
+                D >= b - 1 ? P(0) : P(D + 1)
             }
           },
-          placeholder: _.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
+          placeholder: f.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
           role: "combobox",
           "aria-controls": E,
-          "aria-expanded": j > 0,
-          "aria-activedescendant": j > 0 && null != b ? b : void 0,
+          "aria-expanded": b > 0,
+          "aria-activedescendant": b > 0 && null != j ? j : void 0,
           "aria-autocomplete": "list",
           spellCheck: !1
         })
-      }), 0 === j && "" !== R && (0, a.jsx)(A, {}), (j > 0 || "" === R) && (0, a.jsx)(i.ListThin, {
+      }), 0 === b && "" !== R && (0, a.jsx)(A, {}), (b > 0 || "" === R) && (0, a.jsx)(i.ListThin, {
         innerId: E,
         innerRole: "listbox",
-        "aria-label": _.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
+        "aria-label": f.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
         ref: g,
-        sections: [j],
+        sections: [b],
         renderRow: function(e) {
           let {
             row: t
           } = e, n = (() => {
             if (null != L) return L[t];
             let e = v[t];
-            if ((null == e ? void 0 : e.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
+            if ((null == e ? void 0 : e.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
           })();
           if (null == n) return null;
           let l = null != n.parent_id ? d.default.getChannel(n.parent_id) : void 0,
@@ -241,7 +241,7 @@ function x(e) {
             channel: n,
             category: l,
             focused: D === t,
-            onMouseEnter: () => N.current && P(t),
+            onMouseEnter: () => h.current && P(t),
             onClick: () => {
               r(n.id), s()
             },
@@ -252,8 +252,8 @@ function x(e) {
             }) : null
           }, n.id)
         },
-        renderListHeader: C,
-        renderFooter: p,
+        renderListHeader: p,
+        renderFooter: C,
         sectionHeight: 0,
         rowHeight: 34,
         className: m.voiceChannelList,
@@ -287,7 +287,7 @@ function R(e) {
     variant: "text-md/medium",
     color: "text-muted",
     className: m.noVoiceChannelSelected,
-    children: _.default.Messages.USER_SETTINGS_KEYBINDS_NO_VOICE_CHANNEL_SELECTED
+    children: f.default.Messages.USER_SETTINGS_KEYBINDS_NO_VOICE_CHANNEL_SELECTED
   }) : (0, a.jsx)(T.Channel, {
     channel: s,
     id: s.id,

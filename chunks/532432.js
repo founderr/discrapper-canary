@@ -26,36 +26,36 @@ function T(e) {
     errors: s,
     onAvatarChange: n,
     sectionTitle: T,
-    changeAvatarButtonText: f,
-    guildId: _,
+    changeAvatarButtonText: _,
+    guildId: f,
     className: m,
     disabled: g = !1,
     isTryItOutFlow: I = !1,
-    forcedDivider: h,
-    withHighlight: N = !1
-  } = e, p = N ? r.default : i.Button;
+    forcedDivider: N,
+    withHighlight: h = !1
+  } = e, C = h ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
     className: m,
     title: T,
     errors: s,
     disabled: g,
-    forcedDivider: h,
+    forcedDivider: N,
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,
-      children: [(0, a.jsx)(p, {
+      children: [(0, a.jsx)(C, {
         className: l()({
-          [S.buttonHighlighted]: N
+          [S.buttonHighlighted]: h
         }),
         size: i.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, _, I, I ? E : void 0),
-        children: null != f ? f : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
+        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, f, I, I ? E : void 0),
+        children: null != _ ? _ : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
       }), t && (0, a.jsx)(i.Button, {
         className: S.removeButton,
         color: i.Button.Colors.PRIMARY,
         look: i.Button.Looks.LINK,
         size: i.Button.Sizes.SMALL,
         onClick: () => n(null),
-        children: null != _ ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
+        children: null != f ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
       })]
     })
   })

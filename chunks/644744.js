@@ -24,12 +24,12 @@ let E = {
     [u.HypeSquadHouses.HOUSE_2]: S.__invalid_houseLogoHouse2,
     [u.HypeSquadHouses.HOUSE_3]: S.__invalid_houseLogoHouse3
   },
-  f = {
+  _ = {
     [u.HypeSquadHouses.HOUSE_1]: s("246300"),
     [u.HypeSquadHouses.HOUSE_2]: s("797148"),
     [u.HypeSquadHouses.HOUSE_3]: s("374347")
   },
-  _ = e => ({
+  f = e => ({
     [u.HypeSquadHouses.HOUSE_1]: c.default.Messages.HYPESQUAD_DESCRIPTION_HOUSE_1,
     [u.HypeSquadHouses.HOUSE_2]: c.default.Messages.HYPESQUAD_DESCRIPTION_HOUSE_2,
     [u.HypeSquadHouses.HOUSE_3]: c.default.Messages.HYPESQUAD_DESCRIPTION_HOUSE_3
@@ -65,7 +65,7 @@ class m extends n.Component {
               }), (0, a.jsx)(r.Text, {
                 className: S.membershipDialogHouseDescription,
                 variant: "text-md/normal",
-                children: _(e)
+                children: f(e)
               })]
             }), (0, a.jsx)(o.default.Child, {
               className: S.houseLogoWrapper,
@@ -74,7 +74,7 @@ class m extends n.Component {
               wrap: !0,
               children: (0, a.jsx)("img", {
                 className: i()(S.houseLogo, T[e]),
-                src: f[e],
+                src: _[e],
                 alt: t
               })
             })]

@@ -15,15 +15,15 @@ var l = s("735250"),
   c = s("543595"),
   f = s("785717"),
   S = s("221292"),
-  m = s("981631"),
-  E = s("886140"),
+  E = s("981631"),
+  m = s("886140"),
   I = s("305944");
 
 function _(e) {
   let {
     user: t,
     type: s
-  } = e, _ = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), v = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), T = a.useMemo(() => v.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [v]), A = a.useMemo(() => _ ? T.find(e => e.type === m.ActivityTypes.PLAYING) : null, [T, _]), g = a.useMemo(() => T.filter(e => e !== A), [A, T]), {
+  } = e, _ = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), v = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), T = a.useMemo(() => v.filter(e => e.type !== E.ActivityTypes.CUSTOM_STATUS), [v]), A = a.useMemo(() => _ ? T.find(e => e.type === E.ActivityTypes.PLAYING) : null, [T, _]), g = a.useMemo(() => T.filter(e => e !== A), [A, T]), {
     analyticsLocations: U,
     newestAnalyticsLocation: x
   } = (0, o.default)(), {
@@ -31,8 +31,8 @@ function _(e) {
     ...C
   } = (0, f.useUserProfileAnalyticsContext)(), p = {
     location: {
-      page: m.AnalyticsPages.USER_PROFILE,
-      section: m.AnalyticsSections.PROFILE_MODAL
+      page: E.AnalyticsPages.USER_PROFILE,
+      section: E.AnalyticsSections.PROFILE_MODAL
     }
   };
   return (0, l.jsxs)(n.ScrollerThin, {
@@ -42,17 +42,17 @@ function _(e) {
       type: s,
       user: t,
       source: x,
-      className: E.userProfileActivity,
+      className: m.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       showChannelDetails: s === c.Types.SIMPLIFIED_PROFILE,
       activity: A,
-      actionColor: E.actionColor,
+      actionColor: m.actionColor,
       analyticsParams: p,
       onAction: () => {
         N({
           action: "JOIN_ACTIVITY"
         }), (0, S.trackUserProfileActivityJoined)({
-          activityType: m.ActivityTypes.STREAMING,
+          activityType: E.ActivityTypes.STREAMING,
           activityName: null == A ? void 0 : A.name,
           activityPlatform: null == A ? void 0 : A.platform,
           activitySessionId: null == A ? void 0 : A.session_id,
@@ -67,10 +67,10 @@ function _(e) {
       user: t,
       useStoreStream: !1,
       source: x,
-      className: E.userProfileActivity,
+      className: m.userProfileActivity,
       hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
       showChannelDetails: s === c.Types.SIMPLIFIED_PROFILE,
-      actionColor: E.actionColor,
+      actionColor: m.actionColor,
       analyticsParams: p,
       onAction: () => {
         N({

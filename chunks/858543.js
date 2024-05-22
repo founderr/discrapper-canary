@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return S
+    return v
   },
   useTagsRowHooks: function() {
     return T
@@ -38,7 +38,7 @@ function T(e) {
   }
 }
 
-function S(e) {
+function v(e) {
   let {
     channel: t,
     isNew: i,
@@ -46,8 +46,8 @@ function S(e) {
     className: c
   } = e, {
     shownTags: f,
-    remainingTags: S,
-    moreTagsCount: v,
+    remainingTags: v,
+    moreTagsCount: S,
     isPinned: E,
     shouldRenderTagsRow: R
   } = T({
@@ -79,9 +79,9 @@ function S(e) {
       className: s()(a, {
         [g.tagFiltered]: I.has(e.id)
       })
-    }, e.id)), v > 0 ? (0, n.jsx)(h.ForumTagOverflow, {
-      tags: S,
-      count: v,
+    }, e.id)), S > 0 ? (0, n.jsx)(h.ForumTagOverflow, {
+      tags: v,
+      count: S,
       size: h.default.Sizes.SMALL
     }) : null]
   }) : null

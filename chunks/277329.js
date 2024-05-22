@@ -17,8 +17,8 @@ var n = s("442837"),
   S = s("326528"),
   E = s("332325"),
   T = s("981631"),
-  f = s("689938"),
-  _ = s("417433");
+  _ = s("689938"),
+  f = s("417433");
 
 function m() {
   let e = (0, S.useGameSettingsTabs)(),
@@ -26,11 +26,11 @@ function m() {
     s = null != t ? t : e[0].id;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(l.Heading, {
-      className: _.heading,
+      className: f.heading,
       variant: "heading-xl/semibold",
-      children: f.default.Messages.GAMES
+      children: _.default.Messages.GAMES
     }), (0, a.jsx)(l.TabBar, {
-      className: _.tabBar,
+      className: f.tabBar,
       selectedItem: s,
       onItemSelect: e => {
         i.default.setSection(T.UserSettingsSections.GAMES, e)
@@ -39,14 +39,14 @@ function m() {
       type: "top",
       look: "brand",
       children: e.map(e => (0, a.jsxs)(l.TabBar.Item, {
-        className: _.tab,
+        className: f.tab,
         id: e.id,
         "aria-label": e.title,
         children: [(0, a.jsx)(e.icon, {
-          className: _.tabIcon,
+          className: f.tabIcon,
           color: "currentColor"
         }), (0, a.jsx)("div", {
-          className: _.iconTitle,
+          className: f.iconTitle,
           children: e.title
         })]
       }, e.id))
@@ -54,23 +54,23 @@ function m() {
       switch (s) {
         case E.GameSettingsTab.CLIPS:
           return (0, a.jsx)(r.default, {
-            className: _.body,
+            className: f.body,
             showHeader: !1
           });
         case E.GameSettingsTab.OVERLAY:
           return (0, a.jsx)(c.default, {
-            className: _.body,
+            className: f.body,
             showHeader: !1
           });
         case E.GameSettingsTab.ACTIVITY_PRIVACY:
           return (0, a.jsx)(d.default, {
-            className: _.body,
+            className: f.body,
             showHeader: !1
           });
         case E.GameSettingsTab.MY_GAMES:
         default:
           return (0, a.jsx)(u.default, {
-            className: _.body,
+            className: f.body,
             showHeader: !1
           })
       }

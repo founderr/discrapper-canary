@@ -16,15 +16,15 @@ var a = s("735250"),
   S = s("524437"),
   E = s("481060"),
   T = s("570140"),
-  f = s("668781"),
-  _ = s("409700"),
+  _ = s("668781"),
+  f = s("409700"),
   m = s("809206"),
   g = s("230711"),
   I = s("241420"),
-  h = s("651530"),
-  N = s("163268"),
-  p = s("294602"),
-  C = s("778825"),
+  N = s("651530"),
+  h = s("163268"),
+  C = s("294602"),
+  p = s("778825"),
   A = s("856768"),
   O = s("592204"),
   x = s("712950"),
@@ -34,8 +34,8 @@ var a = s("735250"),
   L = s("236289"),
   D = s("518560"),
   P = s("237292"),
-  j = s("604849"),
-  b = s("278828"),
+  b = s("604849"),
+  j = s("278828"),
   U = s("480294"),
   y = s("430824"),
   G = s("663389"),
@@ -70,7 +70,7 @@ function en(e, t, s) {
 }
 
 function el() {
-  let e = (0, c.useStateFromStores)([C.default], () => C.default.getGuild()),
+  let e = (0, c.useStateFromStores)([p.default], () => p.default.getGuild()),
     t = (0, v.default)(),
     s = null != e ? e : t;
   n.useEffect(() => {
@@ -107,7 +107,7 @@ function ei() {
     s = (0, P.useIsEligibleForInappropriateConversationWarning)({
       location: "user_settings_web"
     }),
-    n = (0, j.useSafetyAlertsSettingOrDefault)(),
+    n = (0, b.useSafetyAlertsSettingOrDefault)(),
     l = (0, Q.useScrollToSetting)(J.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
   return t || !s ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(E.FormDivider, {
@@ -126,7 +126,7 @@ function ei() {
           note: et.default.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({
             learnMoreLink: H.default.getArticleURL($.HelpdeskArticles.SAFETY_ALERTS)
           }),
-          onChange: b.updateDmSafetyAlertsSetting,
+          onChange: j.updateDmSafetyAlertsSetting,
           hideBorder: !0,
           children: et.default.Messages.SAFETY_ALERTS_SETTING_TITLE
         }), (0, a.jsx)(q.default, {
@@ -199,7 +199,7 @@ function ed() {
       explicitContentGuilds: s,
       explicitContentFriendDm: n,
       explicitContentNonFriendDm: l
-    } = (0, p.useExplicitContentSettingOrDefault)(),
+    } = (0, C.useExplicitContentSettingOrDefault)(),
     i = (0, Q.useScrollToSetting)(J.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS),
     r = [{
       value: S.ExplicitContentRedaction.BLUR,
@@ -238,7 +238,7 @@ function ed() {
         children: (0, a.jsx)(E.SingleSelect, {
           options: r,
           value: n,
-          onChange: e => (0, N.updateExplicitContentSetting)({
+          onChange: e => (0, h.updateExplicitContentSetting)({
             explicitContentFriendDm: e
           })
         })
@@ -249,7 +249,7 @@ function ed() {
         children: (0, a.jsx)(E.SingleSelect, {
           options: r,
           value: l,
-          onChange: e => (0, N.updateExplicitContentSetting)({
+          onChange: e => (0, h.updateExplicitContentSetting)({
             explicitContentNonFriendDm: e
           })
         })
@@ -260,7 +260,7 @@ function ed() {
         children: (0, a.jsx)(E.SingleSelect, {
           options: o,
           value: s,
-          onChange: e => (0, N.updateExplicitContentSetting)({
+          onChange: e => (0, h.updateExplicitContentSetting)({
             explicitContentGuilds: e
           })
         })
@@ -300,7 +300,7 @@ function ec(e) {
 }
 class eS extends n.PureComponent {
   componentDidMount() {
-    (0, _.fetchConsents)(), (0, m.getHarvestStatus)().then(e => {
+    (0, f.fetchConsents)(), (0, m.getHarvestStatus)().then(e => {
       let t = {
         requestingHarvest: !1,
         currentHarvestRequest: e.body
@@ -752,18 +752,18 @@ class eS extends n.PureComponent {
         body: et.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_BODY,
         confirmText: et.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CONFIRM,
         cancelText: et.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CANCEL,
-        onConfirm: () => (0, _.setConsents)([], [$.Consents.USAGE_STATISTICS]).catch(ec)
-      }) : (0, _.setConsents)([$.Consents.USAGE_STATISTICS], []).catch(ec)
+        onConfirm: () => (0, f.setConsents)([], [$.Consents.USAGE_STATISTICS]).catch(ec)
+      }) : (0, f.setConsents)([$.Consents.USAGE_STATISTICS], []).catch(ec)
     }), en(this, "handlePersonalizationChange", () => {
       this.props.personalization ? eu({
         header: et.default.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
         confirmText: et.default.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
         cancelText: et.default.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
         onConfirm: () => {
-          (0, _.setConsents)([], [$.Consents.PERSONALIZATION]).catch(ec)
+          (0, f.setConsents)([], [$.Consents.PERSONALIZATION]).catch(ec)
         },
         body: et.default.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
-      }) : (0, _.setConsents)([$.Consents.PERSONALIZATION], []).catch(ec)
+      }) : (0, f.setConsents)([$.Consents.PERSONALIZATION], []).catch(ec)
     }), en(this, "handleDataDownloadRequest", () => {
       eu({
         header: et.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
@@ -777,13 +777,13 @@ class eS extends n.PureComponent {
             (0, m.requestHarvest)().then(e => {
               null != e && null != e.body ? (this.setState({
                 currentHarvestRequest: e.body
-              }), f.default.show({
+              }), _.default.show({
                 body: et.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS
-              })) : f.default.show({
+              })) : _.default.show({
                 title: et.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
                 body: et.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
               })
-            }, () => f.default.show({
+            }, () => _.default.show({
               title: et.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
               body: et.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
             })).finally(() => this.setState({
@@ -821,7 +821,7 @@ function eE() {
     })),
     s = (0, c.useStateFromStores)([L.default], () => L.default.getFetchError()),
     n = (0, c.useStateFromStores)([G.default], () => G.default.getSubsection()),
-    l = (0, h.useIsEligibleForExplicitMediaRedaction)(),
+    l = (0, N.useIsEligibleForExplicitMediaRedaction)(),
     i = (0, O.useIsEligibleForKeywordFiltering)({
       location: "web_user_privacy_and_safety_settings"
     }),

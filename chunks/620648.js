@@ -15,8 +15,8 @@ var l = s("735250"),
   c = s("369077"),
   f = s("761174"),
   S = s("706454"),
-  m = s("246946"),
-  E = s("785717"),
+  E = s("246946"),
+  m = s("785717"),
   I = s("648067"),
   _ = s("588822"),
   v = s("81334"),
@@ -36,7 +36,7 @@ function C(e) {
     scrollToConnections: p = !1
   } = e, {
     trackUserProfileAction: h
-  } = (0, E.useUserProfileAnalyticsContext)(), R = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
+  } = (0, m.useUserProfileAnalyticsContext)(), R = (0, r.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
     theme: P
   } = (0, T.useUserProfileThemeContext)(), M = (0, r.useStateFromStores)([S.default], () => S.default.locale), j = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,

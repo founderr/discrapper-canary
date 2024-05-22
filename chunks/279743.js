@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return _
   }
 }), s("47120");
 var a = s("735250"),
@@ -22,7 +22,7 @@ function T(e) {
     className: s,
     onFlashEnd: l,
     animationDelay: S = 500
-  } = e, T = d.tokens.colors.TEXT_LINK, f = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), _ = (0, d.useToken)(T).spring({
+  } = e, T = d.tokens.colors.TEXT_LINK, _ = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), f = (0, d.useToken)(T).spring({
     opacity: 0
   }), m = (0, d.useToken)(T).spring({
     opacity: .1
@@ -30,30 +30,30 @@ function T(e) {
     opacity: 0
   }), I = (0, d.useToken)(T).spring({
     opacity: 1
-  }), h = e => {
+  }), N = e => {
     e.finished && (null == l || l())
-  }, [N, p] = (0, r.useSpring)(() => ({
+  }, [h, C] = (0, r.useSpring)(() => ({
     immediate: !0,
     from: {
-      backgroundColor: _,
-      borderColor: _
+      backgroundColor: f,
+      borderColor: f
     }
-  })), C = S + 200 + 200, A = f ? 0 : 200;
+  })), p = S + 200 + 200, A = _ ? 0 : 200;
   return n.useEffect(() => {
-    p({
+    C({
       reset: !0,
       immediate: !1,
       to: {
-        backgroundColor: _,
-        borderColor: _
+        backgroundColor: f,
+        borderColor: f
       },
       config: {
         duration: A,
         easing: o.default.Easing.ease
       }
-    }), p({
+    }), C({
       delay: S,
-      immediate: f,
+      immediate: _,
       to: [{
         backgroundColor: m,
         borderColor: I
@@ -62,9 +62,9 @@ function T(e) {
         duration: A,
         easing: o.default.Easing.ease
       }
-    }), p({
-      delay: C,
-      immediate: f,
+    }), C({
+      delay: p,
+      immediate: _,
       to: [{
         backgroundColor: g,
         borderColor: g
@@ -73,16 +73,16 @@ function T(e) {
         duration: A,
         easing: o.default.Easing.ease
       },
-      onRest: h
+      onRest: N
     })
-  }, [p]), (0, a.jsx)(r.animated.div, {
-    style: N,
+  }, [C]), (0, a.jsx)(r.animated.div, {
+    style: h,
     className: i()(E.settingsItemHighlight, s),
     children: t
   })
 }
 
-function f(e) {
+function _(e) {
   let {
     children: t,
     scrollPosition: s,

@@ -15,8 +15,8 @@ var l = s("735250"),
   c = s("194359"),
   f = s("726521"),
   S = s("233440"),
-  m = s("314897"),
-  E = s("158776"),
+  E = s("314897"),
+  m = s("158776"),
   I = s("699516"),
   _ = s("621113"),
   v = s("759231"),
@@ -48,7 +48,7 @@ function F(e) {
     isStreaming: G,
     hasProfileEffect: k,
     onClose: w
-  } = e, Y = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(T.id)), H = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(T.id)), V = (0, i.useStateFromStores)([E.default], () => E.default.getStatus(T.id)), z = (0, i.useStateFromStores)([g.default], () => g.default.getUserProfile(T.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === T.id), {
+  } = e, Y = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(T.id)), H = (0, i.useStateFromStores)([m.default], () => m.default.isMobileOnline(T.id)), V = (0, i.useStateFromStores)([m.default], () => m.default.getStatus(T.id)), z = (0, i.useStateFromStores)([g.default], () => g.default.getUserProfile(T.id)), W = (0, i.useStateFromStores)([E.default], () => E.default.getId() === T.id), {
     theme: Z
   } = (0, p.useUserProfileThemeContext)(), {
     trackUserProfileAction: K

@@ -16,29 +16,29 @@ var a = s("735250"),
   S = s("634894"),
   E = s("100527"),
   T = s("906732"),
-  f = s("475977"),
-  _ = s("957730"),
+  _ = s("475977"),
+  f = s("957730"),
   m = s("962746"),
   g = s("296810"),
   I = s("935147"),
-  h = s("350327"),
-  N = s("246946"),
-  p = s("25990"),
-  C = s("594174"),
+  N = s("350327"),
+  h = s("246946"),
+  C = s("25990"),
+  p = s("594174"),
   A = s("74538"),
   O = s("695346"),
   x = s("265159"),
   R = s("532495");
 
 function M() {
-  let e = (0, r.useStateFromStores)([C.default], () => {
-    let e = C.default.getCurrentUser();
+  let e = (0, r.useStateFromStores)([p.default], () => {
+    let e = p.default.getCurrentUser();
     return i()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
   });
   n.useEffect(() => {
     (0, d.fetchProfile)(e.id)
   }, [e.id]);
-  let t = (0, r.useStateFromStores)([N.default], () => N.default.hidePersonalInformation),
+  let t = (0, r.useStateFromStores)([h.default], () => h.default.hidePersonalInformation),
     {
       pendingAvatar: s,
       pendingBanner: l,
@@ -47,17 +47,17 @@ function M() {
       pendingGlobalName: L,
       pendingAccentColor: D,
       pendingAvatarDecoration: P,
-      pendingThemeColors: j,
-      pendingProfileEffectId: b
-    } = (0, r.useStateFromStoresObject)([p.default], () => {
-      let e = p.default.getAllPending(),
-        t = p.default.getErrors();
+      pendingThemeColors: b,
+      pendingProfileEffectId: j
+    } = (0, r.useStateFromStoresObject)([C.default], () => {
+      let e = C.default.getAllPending(),
+        t = C.default.getErrors();
       return {
         ...e,
         errors: t
       }
     }),
-    U = O.UseLegacyChatInput.useSetting() && null != M ? _.default.parse(void 0, M).content : M,
+    U = O.UseLegacyChatInput.useSetting() && null != M ? f.default.parse(void 0, M).content : M,
     y = A.default.canUsePremiumProfileCustomization(e),
     {
       analyticsLocations: G
@@ -67,14 +67,14 @@ function M() {
       canUsePremiumCustomization: y,
       onUpsellClick: x.default,
       onAvatarChange: u.setPendingAvatar,
-      onBannerChange: h.setPendingBanner,
+      onBannerChange: N.setPendingBanner,
       pendingBanner: l,
       pendingBio: U,
       pendingPronouns: v,
       pendingAvatar: s,
       pendingGlobalName: L,
       pendingAvatarDecoration: P,
-      pendingProfileEffectId: b
+      pendingProfileEffectId: j
     };
   n.useEffect(() => () => o.default.wait(u.resetAllPending), []);
   let F = "UserSettingsProfileCustomization";
@@ -87,10 +87,10 @@ function M() {
   }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(T.AnalyticsLocationProvider, {
     value: G,
     children: (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(f.default, {}), (0, a.jsx)(g.default, {
+      children: [(0, a.jsx)(_.default, {}), (0, a.jsx)(g.default, {
         profilePreview: (0, a.jsx)(m.default, {
           ...B,
-          pendingThemeColors: j,
+          pendingThemeColors: b,
           pendingAccentColor: D
         }),
         children: (0, a.jsx)(R.default, {})

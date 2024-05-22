@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("44315"),
   E = s("703685"),
   T = s("586791"),
-  f = s("654904"),
-  _ = s("981631"),
+  _ = s("654904"),
+  f = s("981631"),
   m = s("689938"),
   g = s("395495");
 
@@ -27,23 +27,23 @@ function I(e) {
     onClose: s,
     color: l,
     suggestedColors: I,
-    disabled: h,
-    label: N,
-    colorPickerMiddle: p,
-    colorPickerFooter: C,
+    disabled: N,
+    label: h,
+    colorPickerMiddle: C,
+    colorPickerFooter: p,
     showEyeDropper: A
-  } = e, O = n.useRef(null), x = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), R = d.default.colors.BACKGROUND_ACCENT.css, M = (0, f.isColorDark)(l), v = (0, o.int2hex)(l), L = v === x ? R : v, D = (0, S.getColor)(M ? _.Color.WHITE_500 : _.Color.PRIMARY_530), P = (0, c.default)(p), j = (0, c.default)(C), [b, U] = n.useState((0, r.v4)());
+  } = e, O = n.useRef(null), x = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), R = d.default.colors.BACKGROUND_ACCENT.css, M = (0, _.isColorDark)(l), v = (0, o.int2hex)(l), L = v === x ? R : v, D = (0, S.getColor)(M ? f.Color.WHITE_500 : f.Color.PRIMARY_530), P = (0, c.default)(C), b = (0, c.default)(p), [j, U] = n.useState((0, r.v4)());
   return n.useEffect(() => {
-    (P !== p || j !== C) && U((0, r.v4)())
-  }, [C, p, j, P]), (0, a.jsx)(u.Popout, {
-    positionKey: b,
+    (P !== C || b !== p) && U((0, r.v4)())
+  }, [p, C, b, P]), (0, a.jsx)(u.Popout, {
+    positionKey: j,
     renderPopout: e => (0, a.jsx)(E.CustomColorPicker, {
       ...e,
       value: l,
       onChange: t,
       suggestedColors: I,
-      middle: p,
-      footer: C,
+      middle: C,
+      footer: p,
       showEyeDropper: A
     }),
     onRequestClose: s,
@@ -55,12 +55,12 @@ function I(e) {
       return (0, a.jsxs)("div", {
         ref: O,
         className: i()(g.colorSwatch, {
-          [g.disabled]: h
+          [g.disabled]: N
         }),
         children: [(0, a.jsx)(u.Clickable, {
           ...s,
-          tabIndex: h ? -1 : 0,
-          onClick: h ? _.NOOP : t,
+          tabIndex: N ? -1 : 0,
+          onClick: N ? f.NOOP : t,
           style: {
             backgroundColor: v,
             borderColor: L
@@ -76,7 +76,7 @@ function I(e) {
             height: 14,
             color: D
           })
-        }), N]
+        }), h]
       })
     }
   })

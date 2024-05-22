@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return E
   }
 });
 var l = s("735250");
@@ -17,12 +17,12 @@ var a = s("290421"),
   f = s("602091"),
   S = s("854898");
 
-function m(e) {
+function E(e) {
   let {
     user: t,
     displayProfile: s,
-    initialSection: m,
-    autoFocusNote: E,
+    initialSection: E,
+    autoFocusNote: m,
     transitionState: I,
     onClose: _
   } = e, v = (0, a.default)(s);
@@ -54,8 +54,8 @@ function m(e) {
       }), (0, l.jsx)(d.default, {
         user: t,
         displayProfile: s,
-        initialSection: m,
-        autoFocusNote: E,
+        initialSection: E,
+        autoFocusNote: m,
         onClose: _
       })]
     })]

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return b
+    return j
   }
 });
 var a = s("735250");
@@ -17,15 +17,15 @@ var n = s("512722"),
   S = s("295474"),
   E = s("150039"),
   T = s("126631"),
-  f = s("433411"),
-  _ = s("532432"),
+  _ = s("433411"),
+  f = s("532432"),
   m = s("349177"),
   g = s("872736"),
   I = s("134795"),
-  h = s("610966"),
-  N = s("513901"),
-  p = s("451392"),
-  C = s("906364"),
+  N = s("610966"),
+  h = s("513901"),
+  C = s("451392"),
+  p = s("906364"),
   A = s("676934"),
   O = s("350327"),
   x = s("621853"),
@@ -35,10 +35,10 @@ var n = s("512722"),
   L = s("594174"),
   D = s("74538"),
   P = s("689938"),
-  j = s("741129");
+  b = s("741129");
 
-function b() {
-  var e, t, s, n, b, U, y, G;
+function j() {
+  var e, t, s, n, j, U, y, G;
   let B = (0, i.useStateFromStores)([L.default], () => {
       let e = L.default.getCurrentUser();
       return l()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e
@@ -76,7 +76,7 @@ function b() {
   let $ = (0, R.default)(B.id),
     ee = null == $ ? void 0 : $.getLegacyUsername(),
     et = (null !== (s = null === (e = z.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? z.global_name : null !== (n = null == Q ? void 0 : Q.nick) && void 0 !== n ? n : [],
-    es = (null !== (b = null === (t = z.bio) || void 0 === t ? void 0 : t.length) && void 0 !== b ? b : 0) > 0 ? z.bio : null !== (U = null == Q ? void 0 : Q.bio) && void 0 !== U ? U : [],
+    es = (null !== (j = null === (t = z.bio) || void 0 === t ? void 0 : t.length) && void 0 !== j ? j : 0) > 0 ? z.bio : null !== (U = null == Q ? void 0 : Q.bio) && void 0 !== U ? U : [],
     ea = (0, M.useUserIsRecentGamesExperimentEnabled)({
       location: "28tk0bf_7",
       autoTrackExposure: !0
@@ -84,29 +84,29 @@ function b() {
     en = (0, d.default)("user_profile"),
     el = (0, u.useCurrentUserAvailableClans)();
   return (0, a.jsxs)("div", {
-    className: j.sectionsContainer,
+    className: b.sectionsContainer,
     children: [(0, a.jsx)(m.default, {
       placeholder: B.username,
       errors: et,
       currentGlobalName: B.globalName,
       pendingGlobalName: w,
       onGlobalNameChange: r.setPendingGlobalNameName
-    }), (0, a.jsx)(C.default, {
+    }), (0, a.jsx)(p.default, {
       sectionTitle: P.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: z.pronouns,
       onPronounsChange: O.setPendingPronouns,
       pendingPronouns: Y,
       currentPronouns: null !== (y = null == F ? void 0 : F.pronouns) && void 0 !== y ? y : ""
-    }, "pronouns"), (0, a.jsx)(_.default, {
+    }, "pronouns"), (0, a.jsx)(f.default, {
       onAvatarChange: r.setPendingAvatar,
       showRemoveAvatarButton: Z,
       errors: z.avatar,
       sectionTitle: P.default.Messages.USER_SETTINGS_AVATAR,
       forcedDivider: !0
-    }, "avatar"), (0, a.jsx)(f.default, {
+    }, "avatar"), (0, a.jsx)(_.default, {
       user: B,
       sectionTitle: P.default.Messages.USER_SETTINGS_AVATAR_DECORATION
-    }, "decoration"), (0, a.jsx)(N.default, {
+    }, "decoration"), (0, a.jsx)(h.default, {
       user: B,
       sectionTitle: P.default.Messages.USER_SETTINGS_PROFILE_EFFECT
     }, "effect"), q ? (0, a.jsxs)(a.Fragment, {
@@ -115,14 +115,14 @@ function b() {
         errors: z.banner,
         onBannerChange: O.setPendingBanner,
         forcedDivider: !0
-      }, "banner"), (0, a.jsx)(p.default, {
+      }, "banner"), (0, a.jsx)(C.default, {
         user: B,
         pendingAvatar: k,
         pendingColors: K,
         onThemeColorsChange: O.setPendingThemeColors,
         forcedDivider: !0
       })]
-    }) : (0, a.jsx)(h.default, {
+    }) : (0, a.jsx)(N.default, {
       user: B,
       savedUserColor: null == F ? void 0 : F.accentColor,
       pendingColor: W,

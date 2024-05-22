@@ -16,20 +16,20 @@ var a = s("735250"),
   S = s("581883"),
   E = s("285952"),
   T = s("6048"),
-  f = s("154921"),
-  _ = s("915486"),
+  _ = s("154921"),
+  f = s("915486"),
   m = s("883904"),
   g = s("68985"),
   I = s("211644"),
-  h = s("312244"),
-  N = s("611273");
+  N = s("312244"),
+  h = s("611273");
 
-function p(e) {
+function C(e) {
   let {
     contents: t,
     content: s,
     onChange: n
-  } = e, l = (0, _.hasBit)(t, o.DismissibleContent[s]);
+  } = e, l = (0, f.hasBit)(t, o.DismissibleContent[s]);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsx)(u.FormSwitch, {
       value: l,
@@ -37,22 +37,22 @@ function p(e) {
         n(s), l ? (0, c.removeDismissedContent)(o.DismissibleContent[s]) : (0, c.addDismissedContent)(o.DismissibleContent[s])
       },
       children: (0, a.jsx)(u.FormText, {
-        size: f.default.Sizes.SIZE_16,
-        className: N.marginTop4,
+        size: _.default.Sizes.SIZE_16,
+        className: h.marginTop4,
         children: "".concat(s.toLowerCase(), " (").concat(o.DismissibleContent[s], ")")
       })
     })
   })
 }
 
-function C(e) {
+function p(e) {
   let {
     items: t,
     dismissedContents: s,
     handleChange: n
   } = e;
   return (0, a.jsx)(a.Fragment, {
-    children: t.filter(e => isNaN(Number(e))).map(e => (0, a.jsx)(p, {
+    children: t.filter(e => isNaN(Number(e))).map(e => (0, a.jsx)(C, {
       contents: s,
       content: e,
       onChange: n
@@ -70,8 +70,8 @@ function A() {
       dailyCapReached: g.default.hasUserHitDCCap(),
       dailyCapOverridden: g.default.dailyCapOverridden
     })),
-    [f, _] = n.useState(""),
-    p = null !== (e = (0, r.useStateFromStores)([S.default], () => {
+    [_, f] = n.useState(""),
+    C = null !== (e = (0, r.useStateFromStores)([S.default], () => {
       var e;
       return null === (e = S.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
     })) && void 0 !== e ? e : new Uint8Array,
@@ -93,16 +93,16 @@ function A() {
       })
     },
     R = t.map(e => o.DismissibleContent[e]),
-    M = A.filter(e => e.toLowerCase().includes(f.toLowerCase())).filter(e => !R.includes(e)),
-    v = Object.keys(o.DismissibleContent).filter(e => !R.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(f.toLowerCase())).sort((e, t) => e.localeCompare(t));
+    M = A.filter(e => e.toLowerCase().includes(_.toLowerCase())).filter(e => !R.includes(e)),
+    v = Object.keys(o.DismissibleContent).filter(e => !R.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(_.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormSection, {
       title: "Dismissible Content Fatigue",
       tag: u.FormTitleTags.H1,
-      className: N.marginBottom60,
+      className: h.marginBottom60,
       children: [(0, a.jsx)(u.FormItem, {
         children: (0, a.jsxs)(u.FormText, {
-          className: N.marginBottom4,
+          className: h.marginBottom4,
           children: ["Daily Cap Reached: ", s ? "Yes" : "No"]
         })
       }), (0, a.jsx)(u.FormSwitch, {
@@ -114,7 +114,7 @@ function A() {
           onClick: () => (0, m.resetDismissibleContentFrameworkStore)(),
           children: "Reset DismissibleContentFrameworkStore"
         }), (0, a.jsx)(u.FormText, {
-          className: N.marginTop4,
+          className: h.marginTop4,
           children: "This will reset the daily cap and content seen during session"
         })]
       })]
@@ -122,13 +122,13 @@ function A() {
       title: "Dismissible Contents",
       tag: u.FormTitleTags.H1,
       children: [(0, a.jsx)(T.default, {
-        className: N.marginBottom20,
+        className: h.marginBottom20,
         size: T.default.Sizes.LARGE,
-        query: f,
-        onChange: _,
-        onClear: () => _("")
+        query: _,
+        onChange: f,
+        onClear: () => f("")
       }), (0, a.jsxs)(u.FormItem, {
-        className: h.buttonsContainer,
+        className: N.buttonsContainer,
         children: [(0, a.jsx)(u.Button, {
           onClick: c.clearDismissedContents,
           children: "Clear All Dismissed Contents"
@@ -137,36 +137,36 @@ function A() {
           children: "Check All Dismissed Contents"
         })]
       }), t.length > 0 ? (0, a.jsxs)("div", {
-        className: N.marginBottom20,
+        className: h.marginBottom20,
         children: [(0, a.jsx)("div", {
-          className: N.marginBottom20,
+          className: h.marginBottom20,
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recently Shown"
           })
-        }), (0, a.jsx)(C, {
+        }), (0, a.jsx)(p, {
           items: R,
-          dismissedContents: p,
+          dismissedContents: C,
           handleChange: x
         })]
       }) : null, M.length > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("div", {
-          className: N.marginBottom20,
+          className: h.marginBottom20,
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recent Overrides"
           })
-        }), (0, a.jsx)(C, {
+        }), (0, a.jsx)(p, {
           items: M,
-          dismissedContents: p,
+          dismissedContents: C,
           handleChange: x
         })]
       }) : null, (0, a.jsx)(E.default, {
-        className: i()(N.marginBottom20, N.marginTop20),
+        className: i()(h.marginBottom20, h.marginTop20),
         children: (0, a.jsx)(u.FormTitle, {
           children: "Available Dismissible Contents"
         })
-      }), (0, a.jsx)(C, {
+      }), (0, a.jsx)(p, {
         items: v,
-        dismissedContents: p,
+        dismissedContents: C,
         handleChange: x
       })]
     })]

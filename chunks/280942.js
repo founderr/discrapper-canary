@@ -21,7 +21,7 @@ function c(e) {
     hasCancelableGuildBoostSlot: S,
     premiumSubscription: E,
     onSelect: T
-  } = e, f = {
+  } = e, _ = {
     transfer: {
       label: null != t.premiumGuildSubscription ? d.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON : d.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_SELECT_SERVER_BUTTON,
       subtext: t.isOnCooldown() ? d.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON_DISABLED_TOOLTIP : null,
@@ -40,11 +40,11 @@ function c(e) {
   };
   switch (E.status) {
     case o.SubscriptionStatusTypes.PAST_DUE:
-      f.cancel.disabled = !0, f.cancel.subtext = d.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_PAST_DUE_TOOLTIP, f.uncancel.disabled = !0;
+      _.cancel.disabled = !0, _.cancel.subtext = d.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_PAST_DUE_TOOLTIP, _.uncancel.disabled = !0;
       break;
     case o.SubscriptionStatusTypes.PAUSE_PENDING:
     case o.SubscriptionStatusTypes.PAUSED:
-      f.transfer.disabled = !0, f.transfer.subtext = d.default.Messages.GUILD_BOOSTING_TRANSFER_DISABLED_FOR_PAUSED_SUBSCRIPTION, f.cancel.disabled = !0, f.cancel.subtext = d.default.Messages.GUILD_BOOSTING_CANCEL_DISABLED_FOR_PAUSED_SUBSCRIPTION, f.uncancel.disabled = !0
+      _.transfer.disabled = !0, _.transfer.subtext = d.default.Messages.GUILD_BOOSTING_TRANSFER_DISABLED_FOR_PAUSED_SUBSCRIPTION, _.cancel.disabled = !0, _.cancel.subtext = d.default.Messages.GUILD_BOOSTING_CANCEL_DISABLED_FOR_PAUSED_SUBSCRIPTION, _.uncancel.disabled = !0
   }
   return (0, a.jsxs)(l.Menu, {
     onSelect: T,
@@ -54,8 +54,8 @@ function c(e) {
     onClose: c,
     children: [(0, a.jsx)(l.MenuItem, {
       id: "apply",
-      label: f.transfer.label,
-      subtext: f.transfer.subtext,
+      label: _.transfer.label,
+      subtext: _.transfer.subtext,
       action: function() {
         (0, l.openModalLazy)(async () => {
           let {
@@ -68,11 +68,11 @@ function c(e) {
           })
         })
       },
-      disabled: f.transfer.disabled
+      disabled: _.transfer.disabled
     }), (0, r.isGuildBoostSlotCanceled)(t) ? (0, a.jsx)(l.MenuItem, {
       id: "uncancel",
-      label: f.uncancel.label,
-      subtext: f.uncancel.subtext,
+      label: _.uncancel.label,
+      subtext: _.uncancel.subtext,
       action: function() {
         (0, l.openModalLazy)(async () => {
           let {
@@ -84,11 +84,11 @@ function c(e) {
           })
         })
       },
-      disabled: f.uncancel.disabled
+      disabled: _.uncancel.disabled
     }) : (0, a.jsx)(l.MenuItem, {
       id: "cancel",
-      label: f.cancel.label,
-      subtext: f.cancel.subtext,
+      label: _.cancel.label,
+      subtext: _.cancel.subtext,
       action: function() {
         (0, l.openModalLazy)(async () => {
           let {
@@ -100,7 +100,7 @@ function c(e) {
           })
         })
       },
-      disabled: f.cancel.disabled,
+      disabled: _.cancel.disabled,
       color: "danger"
     }), E.isPausedOrPausePending ? (0, a.jsx)(l.MenuItem, {
       id: "manage-subscription",

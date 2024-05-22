@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return C
+    return p
   }
 }), s("47120");
 var a = s("735250"),
@@ -16,14 +16,14 @@ var a = s("735250"),
   S = s("740727"),
   E = s("74538"),
   T = s("242291"),
-  f = s("706667"),
-  _ = s("792165"),
+  _ = s("706667"),
+  f = s("792165"),
   m = s("409673"),
   g = s("603074"),
   I = s("689938"),
-  h = s("152951");
+  N = s("152951");
 
-function N(e) {
+function h(e) {
   let {
     onSelect: t
   } = e, [s, i] = n.useState(!1), o = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), c = E.default.canUseCustomCallSounds(o);
@@ -47,7 +47,7 @@ function N(e) {
           channel: null,
           onClose: t,
           onSelect: S,
-          gridNotice: c ? null : (0, a.jsx)(_.CustomCallSoundUpsell, {}),
+          gridNotice: c ? null : (0, a.jsx)(f.CustomCallSoundUpsell, {}),
           analyticsSource: "call sounds edit setting"
         })
       })
@@ -59,18 +59,18 @@ function N(e) {
       },
       text: I.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
       children: (0, a.jsx)(u.default, {
-        className: h.secondaryIcon
+        className: N.secondaryIcon
       })
     })
   })
 }
 
-function p(e) {
+function C(e) {
   let {
     sound: t
   } = e, {
     previewSound: s
-  } = (0, f.default)(t, null), n = 0 === (0, T.getAmplitudinalSoundboardVolume)() ? I.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : I.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
+  } = (0, _.default)(t, null), n = 0 === (0, T.getAmplitudinalSoundboardVolume)() ? I.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : I.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
     emojiName: t.emojiName,
     soundName: t.name
   });
@@ -78,12 +78,12 @@ function p(e) {
     onClick: s,
     text: n,
     children: (0, a.jsx)(c.default, {
-      className: h.secondaryIconActive
+      className: N.secondaryIconActive
     })
   })
 }
 
-function C(e) {
+function p(e) {
   let {
     sound: t,
     isGlobal: s,
@@ -95,36 +95,36 @@ function C(e) {
     children: e
   });
   return (0, a.jsxs)("div", {
-    className: h.soundButtonSettingContainer,
+    className: N.soundButtonSettingContainer,
     children: [(0, a.jsxs)("div", {
-      className: h.container,
+      className: N.container,
       children: [E && (0, a.jsx)(o.default, {
         emojiId: d,
         emojiName: u,
-        className: h.emoji
+        className: N.emoji
       }), (0, a.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-primary",
-        className: h.soundText,
+        className: N.soundText,
         children: null == t ? I.default.Messages.NONE : s ? I.default.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
           soundName: t.name,
           subtextHook: T
         }) : t.name
-      }), l ? (0, a.jsx)(p, {
+      }), l ? (0, a.jsx)(C, {
         sound: t
       }) : (0, a.jsx)(c.default, {
-        className: h.secondaryIconDisabled
+        className: N.secondaryIconDisabled
       })]
     }), (0, a.jsxs)("div", {
-      className: h.container,
-      children: [(0, a.jsx)(N, {
+      className: N.container,
+      children: [(0, a.jsx)(h, {
         onSelect: n
       }), l && !s && (0, a.jsx)(m.SecondaryActionButton, {
         onClick: () => n(null),
         text: I.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
         children: (0, a.jsx)(S.default, {
           color: i.default.unsafe_rawColors.RED_400.css,
-          className: h.secondaryIcon
+          className: N.secondaryIcon
         })
       })]
     })]

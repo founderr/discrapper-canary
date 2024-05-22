@@ -16,15 +16,15 @@ var a = s("735250"),
   S = s("175756"),
   E = s("104494"),
   T = s("639119"),
-  f = s("165583"),
-  _ = s("197115"),
+  _ = s("165583"),
+  f = s("197115"),
   m = s("350327"),
   g = s("318661"),
   I = s("996073"),
-  h = s("25990"),
-  N = s("466111"),
-  p = s("626135"),
-  C = s("74538"),
+  N = s("25990"),
+  h = s("466111"),
+  C = s("626135"),
+  p = s("74538"),
   A = s("962746"),
   O = s("296810"),
   x = s("433411"),
@@ -34,8 +34,8 @@ var a = s("735250"),
   L = s("513901"),
   D = s("451392"),
   P = s("981631"),
-  j = s("474936"),
-  b = s("526761"),
+  b = s("474936"),
+  j = s("526761"),
   U = s("689938"),
   y = s("764277");
 
@@ -45,7 +45,7 @@ function G(e) {
     user: F
   } = e, {
     reducedMotion: k
-  } = n.useContext(i.AccessibilityPreferencesContext), w = C.default.isPremium(F), {
+  } = n.useContext(i.AccessibilityPreferencesContext), w = p.default.isPremium(F), {
     pendingAvatar: H,
     pendingBanner: V,
     pendingThemeColors: Y,
@@ -56,17 +56,17 @@ function G(e) {
     tryItOutBanner: q,
     tryItOutAvatarDecoration: Z,
     tryItOutProfileEffectId: X
-  } = (0, l.useStateFromStoresObject)([h.default], () => {
-    let e = h.default.getAllPending(),
-      t = h.default.getErrors(),
-      s = h.default.getAllTryItOut();
+  } = (0, l.useStateFromStoresObject)([N.default], () => {
+    let e = N.default.getAllPending(),
+      t = N.default.getErrors(),
+      s = N.default.getAllTryItOut();
     return {
       ...e,
       ...s,
       errors: t
     }
   }), J = (0, c.default)(Z), $ = (0, S.default)(X), ee = n.useRef(null);
-  (0, I.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
+  (0, I.default)(ee, j.ProfileCustomizationScrollPositions.TRY_IT_OUT);
   let et = (0, g.default)(F.id),
     es = null == et ? void 0 : et.getPreviewBio(K),
     {
@@ -74,17 +74,17 @@ function G(e) {
       sourceAnalyticsLocations: en
     } = (0, u.default)(d.default.USER_SETTINGS_TRY_OUT_PREMIUM);
   n.useEffect(() => {
-    p.default.track(P.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: j.PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT,
+    C.default.track(P.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: b.PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT,
       location: {
         page: P.AnalyticsPages.USER_SETTINGS
       },
       location_stack: en
     })
   }, [en, F]);
-  let el = (null === (G = (0, T.usePremiumTrialOffer)()) || void 0 === G ? void 0 : null === (t = G.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === j.PremiumSubscriptionSKUs.TIER_2,
+  let el = (null === (G = (0, T.usePremiumTrialOffer)()) || void 0 === G ? void 0 : null === (t = G.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === b.PremiumSubscriptionSKUs.TIER_2,
     ei = (0, E.usePremiumDiscountOffer)(),
-    er = (0, E.discountOfferHasTier)(ei, j.PremiumSubscriptionSKUs.TIER_2),
+    er = (0, E.discountOfferHasTier)(ei, b.PremiumSubscriptionSKUs.TIER_2),
     eo = "TryOutPremiumSection";
   return (0, o.useTriggerDebuggingAA)({
     location: eo + " auto on",
@@ -103,7 +103,7 @@ function G(e) {
       children: [(0, a.jsx)(O.default, {
         layoutClassName: y.tryItOutLayout,
         previewTitle: (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(N.default, {
+          children: [(0, a.jsx)(h.default, {
             className: y.premiumIcon
           }), U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
         }),
@@ -172,11 +172,11 @@ function G(e) {
               variant: "text-sm/normal",
               className: y.premiumPerksListTitle,
               children: U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
-            }), (0, a.jsx)(_.default, {
+            }), (0, a.jsx)(f.default, {
               onSubscribeModalClose: e => {
                 e && ((0, r.setPendingAvatar)(Q), (0, m.setPendingBanner)(q), (0, m.setPendingThemeColors)(z))
               },
-              subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: b.PremiumSubscriptionSKUs.TIER_2,
               className: y.premiumSubscribeButton,
               size: i.Button.Sizes.MEDIUM,
               buttonText: w ? U.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : er ? U.default.Messages.PREMIUM_DISCOUNT_CTA.format({
@@ -188,9 +188,9 @@ function G(e) {
       }), el && (0, a.jsxs)("div", {
         children: [(0, a.jsx)("div", {
           className: y.premiumTier2Divider
-        }), (0, a.jsx)(f.default, {
-          type: j.PremiumUpsellTypes.CUSTOM_PROFILE_TRY_OUT_UPSELL,
-          subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2
+        }), (0, a.jsx)(_.default, {
+          type: b.PremiumUpsellTypes.CUSTOM_PROFILE_TRY_OUT_UPSELL,
+          subscriptionTier: b.PremiumSubscriptionSKUs.TIER_2
         })]
       })]
     })

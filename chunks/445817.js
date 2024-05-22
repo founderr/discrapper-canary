@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("747545"),
   E = s("131951"),
   T = s("594174"),
-  f = s("981631"),
-  _ = s("689938"),
+  _ = s("981631"),
+  f = s("689938"),
   m = s("688725");
 let g = {
   width: 387,
@@ -28,15 +28,15 @@ function I(e) {
   let {
     previewEnabled: t,
     onEnablePreview: s
-  } = e, I = E.default.getCameraComponent(), [h, N] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), p = n.useRef(!1), C = n.useRef(h), A = (0, o.useAnalyticsContext)(), O = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
+  } = e, I = E.default.getCameraComponent(), [N, h] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), C = n.useRef(!1), p = n.useRef(N), A = (0, o.useAnalyticsContext)(), O = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
   return n.useEffect(() => () => {
-    p.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(C.current))
+    C.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(p.current))
   }, []), (0, a.jsx)(S.default, {
-    selectedBackgroundOption: h,
+    selectedBackgroundOption: N,
     onSelectBackgroundOption: e => {
-      p.current = !0, C.current = e, N(e), (0, c.applyBackgroundOptionLive)(e, {
+      C.current = !0, p.current = e, h(e), (0, c.applyBackgroundOptionLive)(e, {
         location: A.location
-      }).catch(f.NOOP)
+      }).catch(_.NOOP)
     },
     renderCamera: e => t ? (0, a.jsx)("div", {
       className: m.cameraWrapper,
@@ -54,12 +54,12 @@ function I(e) {
       children: [(0, a.jsx)("div", {
         className: m.previewImage
       }), (0, a.jsx)(i.Tooltip, {
-        text: O ? null : _.default.Messages.CAMERA_UNAVAILABLE,
+        text: O ? null : f.default.Messages.CAMERA_UNAVAILABLE,
         children: e => (0, a.jsx)(i.Button, {
           ...e,
           onClick: s,
           disabled: !O,
-          children: _.default.Messages.TEST_VIDEO
+          children: f.default.Messages.TEST_VIDEO
         })
       })]
     })

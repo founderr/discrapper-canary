@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("285952"),
   E = s("418632"),
   T = s("689938"),
-  f = s("70983");
-class _ extends n.Component {
+  _ = s("70983");
+class f extends n.Component {
   renderNotice() {
     let {
       isClaimed: e,
@@ -82,11 +82,11 @@ class _ extends n.Component {
       isVerified: s
     } = this.props;
     return t && s ? null : (0, a.jsx)(u.Card, {
-      className: i()(f.wrapper, e),
+      className: i()(_.wrapper, e),
       children: (0, a.jsxs)(S.default, {
         align: S.default.Align.CENTER,
         children: [(0, a.jsx)(S.default.Child, {
-          className: f.image,
+          className: _.image,
           grow: 0,
           shrink: 0
         }), (0, a.jsxs)(S.default.Child, {
@@ -95,7 +95,7 @@ class _ extends n.Component {
             children: this.renderNotice()
           }), (0, a.jsxs)(S.default, {
             justify: S.default.Justify.CENTER,
-            className: f.content,
+            className: _.content,
             children: [this.renderPrimaryAction(), this.renderSecondaryAction()]
           })]
         })]
@@ -110,4 +110,4 @@ t.default = d.default.connectStores([c.default], () => {
     isVerified: e.verified,
     hasEmail: null != e.email
   }
-})(_)
+})(f)

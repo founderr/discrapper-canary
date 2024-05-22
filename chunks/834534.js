@@ -15,8 +15,8 @@ var l = s("735250"),
   c = s("32966"),
   f = s("706454"),
   S = s("430824"),
-  m = s("785717"),
-  E = s("648067"),
+  E = s("785717"),
+  m = s("648067"),
   I = s("588822"),
   _ = s("81334"),
   v = s("652853"),
@@ -39,7 +39,7 @@ function p(e) {
     theme: R
   } = (0, v.useUserProfileThemeContext)(), {
     trackUserProfileAction: P
-  } = (0, m.useUserProfileAnalyticsContext)(), M = null == i ? void 0 : i.guildId, j = (0, r.useStateFromStores)([S.default], () => null != M ? S.default.getGuild(M) : null), {
+  } = (0, E.useUserProfileAnalyticsContext)(), M = null == i ? void 0 : i.guildId, j = (0, r.useStateFromStores)([S.default], () => null != M ? S.default.getGuild(M) : null), {
     recentGames: L,
     isFetching: y,
     currentUserApplicationIds: O
@@ -49,7 +49,7 @@ function p(e) {
   }, [L]), D = (0, d.useIsUserRecentGamesEnabled)({
     location: "SimplifiedUserProfileModalInfo",
     userId: t.id
-  }), b = (0, r.useStateFromStores)([f.default], () => f.default.locale), B = (0, E.default)(t.id);
+  }), b = (0, r.useStateFromStores)([f.default], () => f.default.locale), B = (0, m.default)(t.id);
   return (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: n()(C.scroller, h),

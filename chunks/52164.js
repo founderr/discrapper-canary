@@ -17,8 +17,8 @@ var n = s("512722"),
   S = s("374649"),
   E = s("474936"),
   T = s("981631"),
-  f = s("689938"),
-  _ = s("904014");
+  _ = s("689938"),
+  f = s("904014");
 
 function m(e) {
   let {
@@ -33,7 +33,7 @@ function m(e) {
     analyticsLocation: r.default.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
   });
   if (null == m) return null;
-  let g = s ? _.finePrintWithOverheadSeparator : _.finePrint,
+  let g = s ? f.finePrintWithOverheadSeparator : f.finePrint,
     I = m.invoiceItems.find(e => {
       let {
         subscriptionPlanId: t
@@ -41,32 +41,32 @@ function m(e) {
       return (0, u.isPremiumBaseSubscriptionPlan)(t)
     });
   if (null == I) return null;
-  let h = I.subscriptionPlanId,
-    N = d.default.get(h);
-  l()(null != N, "Missing plan");
-  let p = (0, c.formatPrice)(m.total, m.currency),
-    C = "";
-  return N.interval === E.SubscriptionIntervalTypes.YEAR ? C = f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
-    price: p,
+  let N = I.subscriptionPlanId,
+    h = d.default.get(N);
+  l()(null != h, "Missing plan");
+  let C = (0, c.formatPrice)(m.total, m.currency),
+    p = "";
+  return h.interval === E.SubscriptionIntervalTypes.YEAR ? p = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+    price: C,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY
-  }) : N.interval === E.SubscriptionIntervalTypes.MONTH && (C = 1 === N.intervalCount ? f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
-    price: p,
+  }) : h.interval === E.SubscriptionIntervalTypes.MONTH && (p = 1 === h.intervalCount ? _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
+    price: C,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY
-  }) : f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
-    price: p,
+  }) : _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
+    price: C,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY,
-    intervalCount: N.intervalCount
+    intervalCount: h.intervalCount
   })), (0, a.jsx)(i.Text, {
     color: "text-muted",
     className: g,
     variant: "text-xs/normal",
-    children: C
+    children: p
   })
 }
 

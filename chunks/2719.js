@@ -16,15 +16,15 @@ var a = s("735250"),
   S = s("230711"),
   E = s("129861"),
   T = s("279837"),
-  f = s("952306"),
-  _ = s("299206"),
+  _ = s("952306"),
+  f = s("299206"),
   m = s("295474"),
   g = s("144114"),
   I = s("918505"),
-  h = s("332473"),
-  N = s("290421"),
-  p = s("318661"),
-  C = s("80132"),
+  N = s("332473"),
+  h = s("290421"),
+  C = s("318661"),
+  p = s("80132"),
   A = s("735336"),
   O = s("204197"),
   x = s("25990"),
@@ -34,8 +34,8 @@ var a = s("735250"),
   L = s("572004"),
   D = s("51144"),
   P = s("998502"),
-  j = s("695346"),
-  b = s("461877"),
+  b = s("695346"),
+  j = s("461877"),
   U = s("981631"),
   y = s("815660"),
   G = s("801461"),
@@ -49,13 +49,13 @@ function H(e) {
   let {
     className: r,
     user: o
-  } = e, d = n.useRef(null), S = (0, I.usePomeloEligibility)(), E = (0, h.useIsEligibleForPomelo)(), T = (0, m.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [_, g] = n.useState(!1);
+  } = e, d = n.useRef(null), S = (0, I.usePomeloEligibility)(), E = (0, N.useIsEligibleForPomelo)(), T = (0, m.useGuildAutomodProfileQuarantineErrors)(), _ = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [f, g] = n.useState(!1);
   n.useEffect(() => {
     g(null != d.current && d.current.scrollWidth > d.current.clientWidth)
   }, [o.username]);
-  let N = !o.isClaimed(),
-    p = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || N,
-    C = p ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+  let h = !o.isClaimed(),
+    C = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || h,
+    p = C ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, a.jsxs)("div", {
     className: i()(k.field, r),
     children: [(0, a.jsx)("div", {
@@ -90,10 +90,10 @@ function H(e) {
           color: u.default.colors.STATUS_WARNING.css
         })
       })
-    }), null != f && (0, a.jsx)("div", {
+    }), null != _ && (0, a.jsx)("div", {
       className: k.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
-        text: f,
+        text: _,
         "aria-label": !1,
         children: e => (0, a.jsx)(v.default, {
           ...e,
@@ -101,10 +101,10 @@ function H(e) {
         })
       })
     }), (0, a.jsx)(c.Tooltip, {
-      text: C,
+      text: p,
       children: e => (0, a.jsx)(c.Button, {
         ...e,
-        disabled: p,
+        disabled: C,
         size: c.Button.Sizes.SMALL,
         className: k.fieldButton,
         color: c.Button.Colors.PRIMARY,
@@ -127,7 +127,7 @@ function H(e) {
             })
           }
         }),
-        children: _ ? F.default.Messages.DISAPPROVAL : F.default.Messages.EDIT
+        children: f ? F.default.Messages.DISAPPROVAL : F.default.Messages.EDIT
       })
     })]
   })
@@ -138,9 +138,9 @@ function V(e) {
   let {
     user: l,
     className: r
-  } = e, o = (0, m.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = D.default.getGlobalName(l), E = n.useRef(null), [T, f] = n.useState(!1);
+  } = e, o = (0, m.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = D.default.getGlobalName(l), E = n.useRef(null), [T, _] = n.useState(!1);
   return n.useEffect(() => {
-    f(null != E.current && E.current.scrollWidth > E.current.clientWidth)
+    _(null != E.current && E.current.scrollWidth > E.current.clientWidth)
   }, [S]), (0, a.jsxs)("div", {
     className: i()(k.field, r),
     children: [(0, a.jsx)("div", {
@@ -231,7 +231,7 @@ function W(e) {
         buttonColor: c.Button.Colors.PRIMARY,
         valueMessage: (0, a.jsx)(Y, {
           text: e,
-          censor: b.censorEmail,
+          censor: j.censorEmail,
           revealLabel: F.default.Messages.USER_SETTINGS_ACCOUNT_REVEAL_EMAIL_A11Y_LABEL,
           hideLabel: F.default.Messages.USER_SETTINGS_ACCOUNT_HIDE_EMAIL_A11Y_LABEL
         }),
@@ -250,7 +250,7 @@ function W(e) {
     buttonAriaLabel: F.default.Messages.CLAIM_ACCOUNT_SHORT,
     buttonColor: c.Button.Colors.BRAND,
     valueMessage: F.default.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
-    handleClick: () => f.default.openClaimAccountModal()
+    handleClick: () => _.default.openClaimAccountModal()
   };
   return (0, a.jsxs)("div", {
     className: i()(k.field, n),
@@ -292,7 +292,7 @@ function K(e) {
   } = l, d = null != r;
   return t = d ? (0, a.jsx)(Y, {
     text: r,
-    censor: b.censorPhone,
+    censor: j.censorPhone,
     revealLabel: F.default.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
     hideLabel: F.default.Messages.USER_SETTINGS_ACCOUNT_HIDE_PHONE_A11Y_LABEL
   }) : F.default.Messages.USER_SETTINGS_NO_PHONE_PLACEHOLDER, (0, a.jsxs)("div", {
@@ -357,11 +357,11 @@ function K(e) {
 function z(e) {
   let {
     user: t
-  } = e, s = (0, _.default)({
+  } = e, s = (0, f.default)({
     id: t.id,
     label: F.default.Messages.COPY_ID_USER
   });
-  return j.DeveloperMode.useSetting() && L.SUPPORTS_COPY ? (0, a.jsx)(c.Popout, {
+  return b.DeveloperMode.useSetting() && L.SUPPORTS_COPY ? (0, a.jsx)(c.Popout, {
     renderPopout: e => {
       let {
         closePopout: t
@@ -397,9 +397,9 @@ function q() {
       let e = R.default.getCurrentUser();
       return o()(null != e, "UserSettingsAccountProfileCard: currentUser cannot be undefined"), e
     }),
-    s = (0, p.default)(t.id),
-    n = (0, N.default)(s),
-    l = j.StatusSetting.useSetting(),
+    s = (0, C.default)(t.id),
+    n = (0, h.default)(s),
+    l = b.StatusSetting.useSetting(),
     i = (0, d.useStateFromStores)([x.default], () => x.default.getErrors()),
     r = null == i ? void 0 : null === (e = i.avatar) || void 0 === e ? void 0 : e[0],
     {
@@ -436,7 +436,7 @@ function q() {
           }), (0, a.jsx)(z, {
             user: t
           })]
-        }), (0, a.jsx)(C.default, {
+        }), (0, a.jsx)(p.default, {
           badges: n,
           className: k.badgeList
         })]

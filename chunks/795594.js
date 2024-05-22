@@ -12,15 +12,15 @@ var a = s("735250"),
   S = s("1561"),
   E = s("882485"),
   T = s("389507"),
-  f = s("689773"),
-  _ = s("481060"),
+  _ = s("689773"),
+  f = s("481060"),
   m = s("384275"),
   g = s("230711"),
   I = s("497321"),
-  h = s("468026"),
-  N = s("566620"),
-  p = s("317381"),
-  C = s("979200"),
+  N = s("468026"),
+  h = s("566620"),
+  C = s("317381"),
+  p = s("979200"),
   A = s("713938"),
   O = s("881998"),
   x = s("246946"),
@@ -30,16 +30,16 @@ var a = s("735250"),
   L = s("950463"),
   D = s("507893"),
   P = s("768581"),
-  j = s("49012"),
-  b = s("210887"),
+  b = s("49012"),
+  j = s("210887"),
   U = s("436267"),
   y = s("494620"),
   G = s("981631"),
   B = s("689938"),
   F = s("338009"),
   k = s("611273");
-let w = u.default.connectStores([b.default], () => ({
-  theme: b.default.theme
+let w = u.default.connectStores([j.default], () => ({
+  theme: j.default.theme
 }))(R.default);
 
 function H(e) {
@@ -50,7 +50,7 @@ function H(e) {
     className: F.twoWayWarning,
     children: [(0, a.jsx)(D.default, {
       className: F.twoWayWarningIcon
-    }), (0, a.jsx)(_.Text, {
+    }), (0, a.jsx)(f.Text, {
       color: "text-normal",
       variant: "text-sm/medium",
       children: B.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT.format({
@@ -96,7 +96,7 @@ let V = e => {
             applicationName: s.name
           })
         })]
-      })), (0, _.openModal)(t => (0, a.jsx)(h.default, {
+      })), (0, f.openModal)(t => (0, a.jsx)(N.default, {
         title: B.default.Messages.DEAUTHORIZE_APP,
         body: e,
         confirmText: B.default.Messages.DEAUTHORIZE,
@@ -105,20 +105,20 @@ let V = e => {
         ...t
       }))
     }, o = () => {
-      null != s.terms_of_service_url && (0, j.handleClick)({
+      null != s.terms_of_service_url && (0, b.handleClick)({
         href: s.terms_of_service_url,
         shouldConfirm: !0
       })
     }, u = () => {
-      null != s.privacy_policy_url && (0, j.handleClick)({
+      null != s.privacy_policy_url && (0, b.handleClick)({
         href: s.privacy_policy_url,
         shouldConfirm: !0
       })
     }, c = (0, U.useShouldWarnAuthorizedAppTwoWay)(s.id);
-    return (0, a.jsx)(_.Card, {
+    return (0, a.jsx)(f.Card, {
       className: i()(F.authedApp, k.marginBottom8),
       outline: !0,
-      children: (0, a.jsxs)(_.HeadingLevel, {
+      children: (0, a.jsxs)(f.HeadingLevel, {
         component: (() => {
           let e = P.default.getApplicationIconURL({
               id: s.id,
@@ -137,7 +137,7 @@ let V = e => {
             children: [(0, a.jsxs)(M.default, {
               className: F.headerInfo,
               children: [t, (0, a.jsx)(M.default.Child, {
-                children: (0, a.jsx)(_.Heading, {
+                children: (0, a.jsx)(f.Heading, {
                   variant: "text-sm/semibold",
                   children: s.name
                 })
@@ -145,11 +145,11 @@ let V = e => {
             }), (0, a.jsx)(M.default.Child, {
               wrap: !0,
               grow: 0,
-              children: (0, a.jsx)(_.Button, {
+              children: (0, a.jsx)(f.Button, {
                 className: F.deleteApp,
-                color: _.ButtonColors.RED,
-                look: _.ButtonLooks.OUTLINED,
-                size: _.ButtonSizes.SMALL,
+                color: f.ButtonColors.RED,
+                look: f.ButtonLooks.OUTLINED,
+                size: f.ButtonSizes.SMALL,
                 onClick: r,
                 children: B.default.Messages.DEAUTHORIZE
               })
@@ -157,10 +157,10 @@ let V = e => {
           })
         })(),
         children: [(() => {
-          if (null != s.description && "" !== s.description) return (0, a.jsx)(_.FormItem, {
+          if (null != s.description && "" !== s.description) return (0, a.jsx)(f.FormItem, {
             faded: !0,
             title: B.default.Messages.ABOUT_THIS_APP,
-            children: (0, a.jsx)(_.FormText, {
+            children: (0, a.jsx)(f.FormText, {
               children: s.description
             })
           })
@@ -171,10 +171,10 @@ let V = e => {
               tag: "a",
               onClick: o,
               className: F.tos,
-              children: [(0, a.jsx)(_.FormText, {
+              children: [(0, a.jsx)(f.FormText, {
                 className: F.link,
                 children: B.default.Messages.AUTHORIZED_APPS_TERMS_OF_SERVICE
-              }), (0, a.jsx)(f.LinkExternalSmallIcon, {
+              }), (0, a.jsx)(_.LinkExternalSmallIcon, {
                 className: F.externalLinkIcon,
                 color: "var(--text-link)"
               })]
@@ -186,10 +186,10 @@ let V = e => {
                 tag: "a",
                 onClick: u,
                 className: F.privacy,
-                children: [(0, a.jsx)(_.FormText, {
+                children: [(0, a.jsx)(f.FormText, {
                   className: F.link,
                   children: B.default.Messages.AUTHORIZED_APPS_PRIVACY_POLICY
-                }), (0, a.jsx)(f.LinkExternalSmallIcon, {
+                }), (0, a.jsx)(_.LinkExternalSmallIcon, {
                   className: F.externalLinkIcon,
                   color: "var(--text-link)"
                 })]
@@ -199,7 +199,7 @@ let V = e => {
         })(), (() => {
           let e = [];
           for (let s of t) e.push((0, A.getScopeName)(s, t)), s === d.OAuth2Scopes.APPLICATIONS_COMMANDS && e.push(B.default.Messages.SCOPE_DM_YOU);
-          if (e.length > 0 || null != l && l.length > 0) return (0, a.jsx)(_.FormItem, {
+          if (e.length > 0 || null != l && l.length > 0) return (0, a.jsx)(f.FormItem, {
             faded: !0,
             title: B.default.Messages.PERMISSIONS,
             className: k.marginTop20,
@@ -208,16 +208,16 @@ let V = e => {
                 className: i()(F.permission, k.marginTop8),
                 children: [(0, a.jsx)("i", {
                   className: F.permissionCheckmark
-                }), (0, a.jsx)(_.FormText, {
+                }), (0, a.jsx)(f.FormText, {
                   children: e
                 })]
               }, t)), null == l ? void 0 : l.map((t, s) => {
-                let n = (0, C.getTextForDisclosure)(t);
+                let n = (0, p.getTextForDisclosure)(t);
                 return null != n ? (0, a.jsxs)("li", {
                   className: i()(F.permission, k.marginTop8),
                   children: [(0, a.jsx)(V, {
                     disclosure: t
-                  }), (0, a.jsx)(_.FormText, {
+                  }), (0, a.jsx)(f.FormText, {
                     children: n
                   })]
                 }, s + e.length) : null
@@ -233,7 +233,7 @@ let V = e => {
 t.default = () => {
   let e = (0, u.useStateFromStores)([x.default], () => x.default.hidePersonalInformation),
     t = (0, u.useStateFromStores)([O.default], () => O.default.getApps()),
-    l = (0, u.useStateFromStores)([p.default], () => p.default.getSelfEmbeddedActivities());
+    l = (0, u.useStateFromStores)([C.default], () => C.default.getSelfEmbeddedActivities());
   n.useEffect(() => {
     m.default.fetch()
   }, []);
@@ -244,7 +244,7 @@ t.default = () => {
       } = e;
       m.default.delete(t);
       let a = l.get(s.id);
-      null != a && (0, N.stopEmbeddedActivity)({
+      null != a && (0, h.stopEmbeddedActivity)({
         channelId: a.channelId,
         applicationId: s.id
       })
@@ -279,27 +279,27 @@ t.default = () => {
         children: t
       })]
     }),
-    f = n.useMemo(() => {
+    _ = n.useMemo(() => {
       let e = r.trim().toLowerCase();
       return "" === e || null == t ? t : t.length < 100 ? t.filter(t => o()(e, t.application.name.toLowerCase())) : t.filter(t => t.application.name.toLowerCase().includes(e))
     }, [t, r]);
-  return e ? (0, a.jsx)(I.default, {}) : (0, a.jsx)(_.FormSection, {
-    tag: _.FormTitleTags.H1,
+  return e ? (0, a.jsx)(I.default, {}) : (0, a.jsx)(f.FormSection, {
+    tag: f.FormTitleTags.H1,
     title: B.default.Messages.AUTHORIZED_APPS,
-    children: (0, a.jsx)(_.HeadingLevel, {
-      component: (0, a.jsx)(_.FormNotice, {
+    children: (0, a.jsx)(f.HeadingLevel, {
+      component: (0, a.jsx)(f.FormNotice, {
         className: k.marginBottom40,
-        type: _.CardTypes.PRIMARY,
+        type: f.CardTypes.PRIMARY,
         title: B.default.Messages.APPLICATIONS_AND_CONNECTIONS,
         body: B.default.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
       }),
-      children: null == t || null == f ? (0, a.jsx)(_.Spinner, {
+      children: null == t || null == _ ? (0, a.jsx)(f.Spinner, {
         className: k.marginTop20,
-        type: _.Spinner.Type.SPINNING_CIRCLE
-      }) : 0 === t.length ? T(B.default.Messages.NO_AUTHORIZED_APPS_NOTE, B.default.Messages.NO_AUTHORIZED_APPS) : 0 === f.length ? (0, a.jsxs)(a.Fragment, {
+        type: f.Spinner.Type.SPINNING_CIRCLE
+      }) : 0 === t.length ? T(B.default.Messages.NO_AUTHORIZED_APPS_NOTE, B.default.Messages.NO_AUTHORIZED_APPS) : 0 === _.length ? (0, a.jsxs)(a.Fragment, {
         children: [E(), T(null, B.default.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
       }) : (0, a.jsxs)(a.Fragment, {
-        children: [E(), f.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(Y, {
+        children: [E(), _.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(Y, {
           onDelete: () => i(e),
           ...e
         }, e.id))]

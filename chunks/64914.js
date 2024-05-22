@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return h
   }
 }), s("47120");
 var a = s("735250"),
@@ -16,22 +16,22 @@ var a = s("735250"),
   S = s("572004"),
   E = s("63063"),
   T = s("358085"),
-  f = s("998502"),
-  _ = s("695346"),
+  _ = s("998502"),
+  f = s("695346"),
   m = s("399970"),
   g = s("981631"),
   I = s("689938"),
-  h = s("485767");
+  N = s("485767");
 
-function N() {
-  let [e] = n.useState(() => f.default.getEnableHardwareAcceleration()), t = _.DisableGamesTab.useSetting(), s = _.DeveloperMode.useSetting(), N = _.DisableHomeAutoNav.useSetting(), {
-    hasLibraryApplication: p,
-    testModeApplicationId: C
+function h() {
+  let [e] = n.useState(() => _.default.getEnableHardwareAcceleration()), t = f.DisableGamesTab.useSetting(), s = f.DeveloperMode.useSetting(), h = f.DisableHomeAutoNav.useSetting(), {
+    hasLibraryApplication: C,
+    testModeApplicationId: p
   } = (0, l.useStateFromStoresObject)([u.default, d.default], () => ({
     hasLibraryApplication: d.default.hasLibraryApplication(),
     testModeApplicationId: u.default.testModeApplicationId
   })), A = n.useCallback(e => {
-    _.DisableGamesTab.updateSetting(!e)
+    f.DisableGamesTab.updateSetting(!e)
   }, []), O = n.useCallback(e => {
     e ? (0, r.openModal)(e => (0, a.jsx)(m.default, {
       ...e
@@ -41,7 +41,7 @@ function N() {
       header: I.default.Messages.SWITCH_HARDWARE_ACCELERATION,
       confirmText: I.default.Messages.OKAY,
       cancelText: I.default.Messages.CANCEL,
-      onConfirm: () => f.default.setEnableHardwareAcceleration(e),
+      onConfirm: () => _.default.setEnableHardwareAcceleration(e),
       ...t,
       children: (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
@@ -49,14 +49,14 @@ function N() {
       })
     }))
   }, []), R = n.useCallback(e => {
-    _.DisableHomeAutoNav.updateSetting(!e)
+    f.DisableHomeAutoNav.updateSetting(!e)
   }, []);
   return (0, a.jsxs)(r.FormSection, {
     tag: r.FormTitleTags.H1,
     title: I.default.Messages.SETTINGS_ADVANCED,
     children: [S.SUPPORTS_COPY && (0, a.jsx)(r.FormSwitch, {
       value: s,
-      onChange: _.DeveloperMode.updateSetting,
+      onChange: f.DeveloperMode.updateSetting,
       note: I.default.Messages.DEVELOPER_MODE_HELP_TEXT.format({
         apiDocsUrl: g.MarketingURLs.API_DOCS
       }),
@@ -66,28 +66,28 @@ function N() {
       onChange: x,
       note: I.default.Messages.HARDWARE_ACCELERATION_HELP_TEXT,
       children: I.default.Messages.HARDWARE_ACCELERATION
-    }), p && (0, a.jsx)(r.FormSwitch, {
+    }), C && (0, a.jsx)(r.FormSwitch, {
       value: !t,
       onChange: A,
       note: I.default.Messages.USER_SETTINGS_SHOW_LIBRARY_NOTE,
       children: I.default.Messages.USER_SETTINGS_SHOW_LIBRARY
     }), s && (0, a.jsx)(r.FormSwitch, {
-      value: null != C,
+      value: null != p,
       note: I.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_NOTE,
       onChange: O,
       children: I.default.Messages.DEVELOPER_APPLICATION_TEST_MODE
     }), (0, a.jsx)(r.FormSwitch, {
-      value: !N,
+      value: !h,
       note: I.default.Messages.USER_SETTINGS_HOME_AUTO_NAV_HELP_TEXT.format({
         helpCenterLink: E.default.getArticleURL(g.HelpdeskArticles.GUILD_HOME)
       }),
       onChange: R,
       children: (0, a.jsxs)("div", {
-        className: h.badgedItem,
+        className: N.badgedItem,
         children: [I.default.Messages.USER_SETTINGS_HOME_AUTO_NAV, (0, a.jsx)(c.TextBadge, {
           text: I.default.Messages.BETA,
           color: i.default.unsafe_rawColors.BRAND_500.css,
-          className: h.__invalid_betaTag
+          className: N.__invalid_betaTag
         })]
       })
     })]

@@ -1,47 +1,47 @@
 "use strict";
-t.r(l), t.d(l, {
+s.r(t), s.d(t, {
   default: function() {
-    return r
+    return u
   }
 });
-var a = t("735250"),
-  s = t("470079"),
-  i = t("120356"),
-  n = t.n(i),
-  o = t("481060"),
-  u = t("53281"),
-  d = t("383638");
+var a = s("735250"),
+  n = s("470079"),
+  l = s("120356"),
+  i = s.n(l),
+  r = s("481060"),
+  o = s("53281"),
+  d = s("383638");
 
-function r(e) {
+function u(e) {
   let {
-    filename: l,
-    className: t,
-    filters: i,
-    buttonText: r,
+    filename: t,
+    className: s,
+    filters: l,
+    buttonText: u,
     placeholder: c,
-    onFileSelect: m
-  } = e, I = s.useRef(null);
+    onFileSelect: S
+  } = e, E = n.useRef(null);
   return (0, a.jsxs)("div", {
-    className: n()(t, d.fileUpload),
+    className: i()(s, d.fileUpload),
     children: [(0, a.jsx)("input", {
       className: d.fileUploadInput,
       tabIndex: -1,
       readOnly: !0,
       placeholder: c,
       type: "text",
-      value: l
-    }), (0, a.jsxs)(o.Button, {
-      size: o.Button.Sizes.MIN,
+      value: t
+    }), (0, a.jsxs)(r.Button, {
+      size: r.Button.Sizes.MIN,
       className: d.fileUploadButton,
-      children: [r, (0, a.jsx)(u.default, {
-        ref: I,
+      children: [u, (0, a.jsx)(o.default, {
+        ref: E,
         tabIndex: -1,
         onChange: e => {
-          var l;
-          m(null === (l = e.currentTarget.files) || void 0 === l ? void 0 : l[0])
+          var t;
+          S(null === (t = e.currentTarget.files) || void 0 === t ? void 0 : t[0])
         },
         multiple: !1,
-        filters: i
+        filters: l
       })]
     })]
   })

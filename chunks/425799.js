@@ -16,24 +16,24 @@ var a = s("735250"),
   S = s("680295"),
   E = s("594174"),
   T = s("590259"),
-  f = s("301733"),
-  _ = s("334428"),
+  _ = s("301733"),
+  f = s("334428"),
   m = s("844593");
 
 function g() {
   let e = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
     [t, s] = n.useState(!0),
     [g, I] = n.useState([]),
-    h = n.useRef(null),
-    [N, p] = n.useState(!1),
-    [C, A] = n.useState(!1),
+    N = n.useRef(null),
+    [h, C] = n.useState(!1),
+    [p, A] = n.useState(!1),
     [O, x] = n.useState(!1),
     R = (0, r.isThemeDark)((0, u.default)());
   return null == e ? (0, a.jsx)("div", {}) : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: f.root,
+      className: _.root,
       children: [(0, a.jsx)("img", {
-        src: N ? _ : m,
+        src: h ? f : m,
         alt: "",
         width: 450
       }), t && (0, a.jsx)(S.ProfileEffect, {
@@ -48,8 +48,8 @@ function g() {
         },
         profileEffectId: "debug"
       })]
-    }), C && (0, a.jsxs)("div", {
-      className: f.userProfilePreview,
+    }), p && (0, a.jsxs)("div", {
+      className: _.userProfilePreview,
       children: [(0, a.jsx)(c.default, {
         user: e,
         pendingAvatar: void 0,
@@ -71,26 +71,26 @@ function g() {
         profileEffectId: "debug"
       })]
     }), (0, a.jsxs)("div", {
-      className: f.options,
+      className: _.options,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-md/normal",
         children: "Dark Theme"
       }), (0, a.jsx)("input", {
         type: "checkbox",
-        checked: N,
-        className: f.checkBox,
+        checked: h,
+        className: _.checkBox,
         onChange: () => {
-          p(!N)
+          C(!h)
         }
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/normal",
         children: "Show User Profile"
       }), (0, a.jsx)("input", {
         type: "checkbox",
-        checked: C,
-        className: f.checkBox,
+        checked: p,
+        className: _.checkBox,
         onChange: () => {
-          A(!C)
+          A(!p)
         }
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/normal",
@@ -98,20 +98,20 @@ function g() {
       }), (0, a.jsx)("input", {
         type: "checkbox",
         checked: O,
-        className: f.checkBox,
+        className: _.checkBox,
         onChange: () => {
           x(!O)
         }
       })]
     }), (0, a.jsxs)("div", {
       children: [(0, a.jsxs)("div", {
-        className: f.uploadButton,
+        className: _.uploadButton,
         children: [(0, a.jsx)(o.Text, {
           variant: "text-md/normal",
           color: "always-white",
           children: "Click to upload image"
         }), (0, a.jsx)(d.default, {
-          ref: h,
+          ref: N,
           onChange: e => {
             let t = e.currentTarget.files[0],
               s = new FileReader;
@@ -157,7 +157,7 @@ function g() {
       }), (0, a.jsx)("input", {
         type: "number",
         value: e.start,
-        className: f.numberInput,
+        className: _.numberInput,
         onChange: e => {
           I(s => {
             let a = [...s],
@@ -170,7 +170,7 @@ function g() {
       }), (0, a.jsx)("input", {
         type: "number",
         value: e.duration,
-        className: f.numberInput,
+        className: _.numberInput,
         onChange: e => {
           I(s => {
             let a = [...s],
@@ -183,7 +183,7 @@ function g() {
       }), (0, a.jsx)("input", {
         type: "checkbox",
         checked: e.loop,
-        className: f.checkBox,
+        className: _.checkBox,
         onChange: e => {
           I(s => {
             let a = [...s],
@@ -197,7 +197,7 @@ function g() {
         }), (0, a.jsx)("input", {
           type: "number",
           value: e.loopDelay,
-          className: f.checkBox,
+          className: _.checkBox,
           onChange: e => {
             I(s => {
               let a = [...s],
@@ -211,7 +211,7 @@ function g() {
       }), (0, a.jsx)("input", {
         type: "number",
         value: e.zIndex,
-        className: f.checkBox,
+        className: _.checkBox,
         disabled: !0,
         onChange: e => {
           I(s => {
@@ -222,7 +222,7 @@ function g() {
         }
       })]
     }, t)), (0, a.jsxs)("div", {
-      className: f.bottomControls,
+      className: _.bottomControls,
       children: [(0, a.jsx)(o.Button, {
         color: o.ButtonColors.RED,
         look: o.ButtonLooks.LINK,

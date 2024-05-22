@@ -11,13 +11,13 @@ var a, n = s("735250"),
   S = s("242411"),
   E = s("212895"),
   T = s("709054"),
-  f = s("156729"),
-  _ = s("244526"),
+  _ = s("156729"),
+  f = s("244526"),
   m = s("981631"),
   g = s("689938"),
   I = s("788988");
 
-function h(e, t, s) {
+function N(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -25,7 +25,7 @@ function h(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class N extends(a = l.PureComponent) {
+class h extends(a = l.PureComponent) {
   render() {
     let {
       paymentSource: e,
@@ -41,7 +41,7 @@ class N extends(a = l.PureComponent) {
       onCancel: E,
       onDelete: T
     } = this.props;
-    return s ? (0, n.jsx)(f.default, {
+    return s ? (0, n.jsx)(_.default, {
       paymentSource: e,
       isDefault: t,
       removing: d,
@@ -59,7 +59,7 @@ class N extends(a = l.PureComponent) {
         align: c.default.Align.CENTER,
         justify: c.default.Justify.BETWEEN,
         className: I.paymentSourceRow,
-        children: [(0, n.jsx)(_.default, {
+        children: [(0, n.jsx)(f.default, {
           paymentSource: e,
           isDefault: t,
           isForSubscription: i,
@@ -77,17 +77,17 @@ class N extends(a = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), h(this, "handleEditClick", () => {
+    super(...e), N(this, "handleEditClick", () => {
       this.props.onEditClick(this.props.paymentSource.id)
     })
   }
 }
-h(N, "defaultProps", {
+N(h, "defaultProps", {
   isEditing: !1,
   hideDivider: !1,
   onEditClick: () => {}
 });
-class p extends l.PureComponent {
+class C extends l.PureComponent {
   renderFooter() {
     let {
       paymentSources: e
@@ -117,7 +117,7 @@ class p extends l.PureComponent {
       removing: a,
       submitting: l,
       premiumSubscriptionPaymentSourceId: i
-    } = this.props, d = r().values(t).sort((t, s) => t.id === e ? -1 : s.id === e ? 1 : T.default.compare(t.id, s.id)), u = this.state.editingPayment, E = d.findIndex(e => e.id === u), f = d.map((t, r) => (0, n.jsx)(N, {
+    } = this.props, d = r().values(t).sort((t, s) => t.id === e ? -1 : s.id === e ? 1 : T.default.compare(t.id, s.id)), u = this.state.editingPayment, E = d.findIndex(e => e.id === u), _ = d.map((t, r) => (0, n.jsx)(h, {
       locale: s,
       paymentSource: t,
       isDefault: e === t.id,
@@ -146,37 +146,37 @@ class p extends l.PureComponent {
             })
           }), g.default.Messages.BILLING_PAYMENT_SOURCES]
         })
-      }), f, E !== d.length - 1 ? (0, n.jsx)(o.FormDivider, {
+      }), _, E !== d.length - 1 ? (0, n.jsx)(o.FormDivider, {
         className: I.__invalid_sourceDivider
       }) : null, this.renderFooter()]
     })
   }
   constructor(...e) {
-    super(...e), h(this, "state", {
+    super(...e), N(this, "state", {
       editingPayment: null
-    }), h(this, "handleEditClick", e => {
+    }), N(this, "handleEditClick", e => {
       this.setState({
         editingPayment: e
       })
-    }), h(this, "handleCancel", () => {
+    }), N(this, "handleCancel", () => {
       this.setState({
         editingPayment: null
       })
-    }), h(this, "handleDelete", async e => {
+    }), N(this, "handleDelete", async e => {
       try {
         await d.deletePaymentSource(e), this.setState({
           editingPayment: null
         })
       } catch (e) {}
-    }), h(this, "handleSubmit", async (e, t) => {
+    }), N(this, "handleSubmit", async (e, t) => {
       if (null != e) try {
         await d.updatePaymentSource(e, t), this.setState({
           editingPayment: null
         })
       } catch (e) {}
-    }), h(this, "handlePaymentSourceAdded", async e => {
+    }), N(this, "handlePaymentSourceAdded", async e => {
       await (0, E.fetchSubscriptionPlansOnNewPaymentSource)(e.id)
-    }), h(this, "handleAddPaymentMethod", () => {
+    }), N(this, "handleAddPaymentMethod", () => {
       (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -194,4 +194,4 @@ class p extends l.PureComponent {
     })
   }
 }
-t.default = p
+t.default = C

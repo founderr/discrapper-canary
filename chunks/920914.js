@@ -12,15 +12,15 @@ var a = s("735250"),
   S = s("570140"),
   E = s("457330"),
   T = s("497321"),
-  f = s("23551"),
-  _ = s("468026"),
+  _ = s("23551"),
+  f = s("468026"),
   m = s("410030"),
   g = s("726542"),
   I = s("122021"),
-  h = s("275759"),
-  N = s("231757"),
-  p = s("323588"),
-  C = s("605236"),
+  N = s("275759"),
+  h = s("231757"),
+  C = s("323588"),
+  p = s("605236"),
   A = s("553795"),
   O = s("430824"),
   x = s("771845"),
@@ -30,8 +30,8 @@ var a = s("735250"),
   L = s("346656"),
   D = s("465670"),
   P = s("692437"),
-  j = s("507957"),
-  b = s("26290"),
+  b = s("507957"),
+  j = s("26290"),
   U = s("626135"),
   y = s("63063"),
   G = s("706454"),
@@ -106,10 +106,10 @@ function q(e) {
   let i, r, o, {
       onDisconnect: S,
       account: T,
-      theme: f,
+      theme: _,
       locale: m
     } = e,
-    [C, A] = n.useState(T.friendSync),
+    [p, A] = n.useState(T.friendSync),
     [O, x] = n.useState(T.visibility),
     [R, M] = n.useState(T.metadataVisibility),
     [L, P] = n.useState(T.showActivity),
@@ -126,7 +126,7 @@ function q(e) {
   }, [T]);
 
   function et() {
-    (0, N.default)({
+    (0, h.default)({
       platformType: T.type,
       location: "User Settings"
     })
@@ -142,7 +142,7 @@ function q(e) {
           platformName: e.name
         })
       })]
-    })), (0, c.openModal)(s => (0, a.jsx)(_.default, {
+    })), (0, c.openModal)(s => (0, a.jsx)(f.default, {
       title: W.default.Messages.DISCONNECT_ACCOUNT_TITLE.format({
         name: e.name
       }),
@@ -159,7 +159,7 @@ function q(e) {
       verified: t
     } = T, s = e ? 1 : 0;
     if (e && !t) {
-      G(s), (0, N.default)({
+      G(s), (0, h.default)({
         platformType: T.type,
         location: "User Settings"
       });
@@ -173,7 +173,7 @@ function q(e) {
       verified: t
     } = T, s = e ? 1 : 0;
     if (e && !t) {
-      z(s), (0, N.default)({
+      z(s), (0, h.default)({
         platformType: T.type,
         location: "User Settings"
       });
@@ -203,7 +203,7 @@ function q(e) {
           ...e,
           className: K.connectionAccountLabelVerified,
           color: d.default.unsafe_rawColors.TWITTER.css,
-          children: (0, a.jsx)(j.default, {
+          children: (0, a.jsx)(b.default, {
             color: d.default.unsafe_rawColors.WHITE_500.css
           })
         })
@@ -212,7 +212,7 @@ function q(e) {
         children: [(0, a.jsx)("img", {
           alt: n.name,
           className: K.connectionIcon,
-          src: (0, u.isThemeDark)(f) ? n.icon.darkSVG : n.icon.lightSVG
+          src: (0, u.isThemeDark)(_) ? n.icon.darkSVG : n.icon.lightSVG
         }), (0, a.jsxs)("div", {
           children: [(0, a.jsx)(c.Text, {
             color: "header-primary",
@@ -255,25 +255,25 @@ function q(e) {
       var t;
       let s = null !== (t = e.metadata) && void 0 !== t ? t : {},
         n = null,
-        l = (0, h.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], m);
+        l = (0, N.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], m);
       switch (e.type) {
         case H.PlatformTypes.REDDIT:
-          n = (0, p.generateRedditMetadataItems)(s, K.metadataItem);
+          n = (0, C.generateRedditMetadataItems)(s, K.metadataItem);
           break;
         case H.PlatformTypes.STEAM:
-          n = (0, p.generateSteamMetadataItems)(s, K.metadataItem);
+          n = (0, C.generateSteamMetadataItems)(s, K.metadataItem);
           break;
         case H.PlatformTypes.TWITTER:
-          n = (0, p.generateTwitterMetadataItems)(s, K.metadataItem);
+          n = (0, C.generateTwitterMetadataItems)(s, K.metadataItem);
           break;
         case H.PlatformTypes.EBAY:
-          n = (0, p.generateEbayMetadataItems)(s, K.metadataItem);
+          n = (0, C.generateEbayMetadataItems)(s, K.metadataItem);
           break;
         case H.PlatformTypes.PAYPAL:
-          n = (0, p.generatePaypalMetadataItems)(s, K.metadataItem);
+          n = (0, C.generatePaypalMetadataItems)(s, K.metadataItem);
           break;
         case H.PlatformTypes.TIKTOK:
-          n = (0, p.generateTikTokMetadataItems)(s, K.metadataItem)
+          n = (0, C.generateTikTokMetadataItems)(s, K.metadataItem)
       }
       null !== l && (null == n && (n = []), null == n || n.push((0, a.jsx)(c.Text, {
         variant: "text-xs/normal",
@@ -287,7 +287,7 @@ function q(e) {
         r = W.default.Messages.REFRESH;
       if (null == n || 0 === n.length) {
         if (!0 !== g.default.get(e.type).hasMetadata) return null;
-        n = [(0, a.jsx)(b.TextBadge, {
+        n = [(0, a.jsx)(j.TextBadge, {
           className: K.connectionMetadataUpsellTag,
           text: W.default.Messages.NEW
         }, "badge"), (0, a.jsx)(c.Text, {
@@ -319,7 +319,7 @@ function q(e) {
     }(T), (s = ee, H.FRIEND_SYNC_PLATFORM_TYPES.has(T.type) && (i = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
-      value: C,
+      value: p,
       onChange: el,
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/semibold",
@@ -392,7 +392,7 @@ function q(e) {
 
 function Z() {
   return n.useEffect(() => () => {
-    (0, C.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
+    (0, p.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
       dismissAction: Y.ContentDismissActionType.AUTO
     })
   }, []), (0, a.jsxs)("div", {
@@ -415,7 +415,7 @@ function Z() {
 function X() {
   function e(e) {
     let t = g.default.get(e);
-    (0, N.default)({
+    (0, h.default)({
       platformType: t.type
     }), U.default.track(H.AnalyticEvents.ACCOUNT_LINK_STEP, {
       previous_step: "desktop connections",
@@ -434,7 +434,7 @@ function X() {
     n = (0, c.useRedesignIconContext)().enabled ? 24 : 18;
   return (0, a.jsxs)("div", {
     className: K.connectionsContainer,
-    children: [s.slice(0, 10).map(e => (0, a.jsx)(f.default, {
+    children: [s.slice(0, 10).map(e => (0, a.jsx)(_.default, {
       type: e.type,
       className: K.__invalid_accountButton,
       innerClassName: K.accountButtonInner

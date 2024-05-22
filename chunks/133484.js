@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("981631"),
   E = s("474936"),
   T = s("689938"),
-  f = s("664338"),
-  _ = s("699623"),
+  _ = s("664338"),
+  f = s("699623"),
   m = s("820350");
 
 function g(e) {
@@ -26,32 +26,32 @@ function g(e) {
     showOverlay: s,
     children: g
   } = e, I = (0, i.default)(), {
-    analyticsLocations: h
+    analyticsLocations: N
   } = (0, o.default)(r.default.PREMIUM_UPSELL_OVERLAY);
   return (n.useEffect(() => {
     s && u.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      location_stack: h,
+      location_stack: N,
       type: E.PremiumUpsellTypes.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
     })
-  }, [s, h]), s) ? (0, a.jsxs)("div", {
-    className: f.upsellOverlayContainer,
+  }, [s, N]), s) ? (0, a.jsxs)("div", {
+    className: _.upsellOverlayContainer,
     children: [(0, a.jsx)("div", {
       children: g
     }), (0, a.jsxs)("div", {
-      className: f.upsellOverlay,
+      className: _.upsellOverlay,
       children: [(0, a.jsx)("img", {
-        className: f.upsellImage,
+        className: _.upsellImage,
         alt: T.default.Messages.GUILD_IDENTITY_UPSELL_OVERLAY_IMAGE_ALT,
         src: function(e) {
           switch (e) {
             case S.ThemeTypes.DARK:
-              return _;
+              return f;
             case S.ThemeTypes.LIGHT:
               return m
           }
         }(I)
       }), (0, a.jsxs)("div", {
-        className: f.upsellTextContainer,
+        className: _.upsellTextContainer,
         children: [(0, a.jsx)(l.Text, {
           variant: "text-lg/semibold",
           color: "always-white",

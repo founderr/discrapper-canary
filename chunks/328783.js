@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("369077"),
   E = s("981631"),
   T = s("689938"),
-  f = s("101331");
-let _ = (0, d.uid)();
+  _ = s("101331");
+let f = (0, d.uid)();
 t.default = n.memo(function(e) {
   let {
     availableClans: t
@@ -45,24 +45,24 @@ t.default = n.memo(function(e) {
     return null == t ? null : (0, a.jsx)(a.Fragment, {
       children: g(t)
     })
-  }, [g]), h = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, E.AnalyticsLocations.USER_SETTINGS), []), N = n.useCallback(e => e === d, [d]), p = n.useCallback(e => e, []), C = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
+  }, [g]), N = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0, E.AnalyticsLocations.USER_SETTINGS), []), h = n.useCallback(e => e === d, [d]), C = n.useCallback(e => e, []), p = n.useCallback(() => (0, u.adoptClanIdentity)(null, !1), []);
   return (0, a.jsxs)(r.default, {
     title: T.default.Messages.CLANS,
-    titleId: _,
+    titleId: f,
     children: [(0, a.jsx)(i.Text, {
-      className: f.subtitle,
+      className: _.subtitle,
       variant: "text-sm/normal",
       children: T.default.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN_SUBTITLE
     }), (0, a.jsx)(i.Select, {
-      className: f.select,
-      optionClassName: f.selectPopout,
-      isSelected: N,
+      className: _.select,
+      optionClassName: _.selectPopout,
+      isSelected: h,
       options: m,
-      select: h,
+      select: N,
       renderOptionValue: I,
       renderOptionLabel: g,
-      serialize: p,
-      clear: C,
+      serialize: C,
+      clear: p,
       clearable: null != d
     })]
   })

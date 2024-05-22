@@ -1,28 +1,28 @@
 "use strict";
 s.r(t), s.d(t, {
   useSettingSearchResults: function() {
-    return l
+    return o
   }
 }), s("47120");
 var a = s("470079"),
   n = s("170401"),
-  i = s("128277"),
-  r = s("394644"),
-  u = s("726985");
+  l = s("128277"),
+  i = s("394644"),
+  r = s("726985");
 
-function l() {
-  let e = (0, i.useSettingSearchQuery)(),
-    t = (0, r.useGenerateUserSettingsSections)(),
-    s = a.useRef(new n.default((0, r.getSearchableSettingTitles)(t))),
-    [l, o] = a.useState(!1),
-    [c, d] = a.useState(u.EMPTY_SETTINGS_LIST),
-    f = a.useCallback(async e => {
-      d(await s.current.search(e.trim())), o(!0)
+function o() {
+  let e = (0, l.useSettingSearchQuery)(),
+    t = (0, i.useGenerateUserSettingsSections)(),
+    s = a.useRef(new n.default((0, i.getSearchableSettingTitles)(t))),
+    [o, d] = a.useState(!1),
+    [u, c] = a.useState(r.EMPTY_SETTINGS_LIST),
+    S = a.useCallback(async e => {
+      c(await s.current.search(e.trim())), d(!0)
     }, []);
   return a.useEffect(() => {
-    "" === e ? (d(u.EMPTY_SETTINGS_LIST), o(!1)) : f(e)
-  }, [e, f]), {
-    hasSearchResults: l,
-    searchResults: c
+    "" === e ? (c(r.EMPTY_SETTINGS_LIST), d(!1)) : S(e)
+  }, [e, S]), {
+    hasSearchResults: o,
+    searchResults: u
   }
 }

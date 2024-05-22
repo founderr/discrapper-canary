@@ -23,7 +23,7 @@ function f(e) {
     p = (0, n.useStateFromStores)([d.default], () => i && d.default.can(h.Permissions.ADD_REACTIONS, e), [i, e]),
     g = (0, a.useCurrentUserAutomodQuaratinedProfile)(t),
     [, T] = (0, s.useCurrentUserCommunicationDisabled)(t),
-    S = (0, o.useIsActiveChannelOrUnarchivableThread)(e);
+    v = (0, o.useIsActiveChannelOrUnarchivableThread)(e);
   return null == e ? {
     disableReactionReads: !0,
     disableReactionCreates: !0,
@@ -40,7 +40,7 @@ function f(e) {
       isLurking: f,
       isGuest: m,
       communicationDisabled: T,
-      isActiveChannelOrUnarchivableThread: S,
+      isActiveChannelOrUnarchivableThread: v,
       isAutomodQuarantined: g
     }),
     isLurking: f,

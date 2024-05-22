@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return C
+    return p
   }
 }), s("47120");
 var a = s("735250"),
@@ -16,19 +16,19 @@ var a = s("735250"),
   S = s("226961"),
   E = s("594174"),
   T = s("285952"),
-  f = s("12647"),
-  _ = s("998502"),
+  _ = s("12647"),
+  f = s("998502"),
   m = s("981631"),
   g = s("65154"),
   I = s("689938"),
-  h = s("611273");
-async function N() {
+  N = s("611273");
+async function h() {
   let e = await d.default.fileManager.getModulePath(),
     t = d.default.fileManager.join(e, "discord_voice");
   d.default.fileManager.showItemInFolder(t)
 }
 
-function p(e) {
+function C(e) {
   (0, i.openModal)(t => (0, a.jsx)(i.ConfirmModal, {
     header: I.default.Messages.SET_DEBUG_LOGGING,
     confirmText: I.default.Messages.OKAY,
@@ -43,11 +43,11 @@ function p(e) {
   }))
 }
 
-function C() {
+function p() {
   let [e, t] = n.useState(!1), {
     aecDumpSupported: s,
     debugLogging: d,
-    aecDumpEnabled: C,
+    aecDumpEnabled: p,
     supportsConnectionReplay: A
   } = (0, l.useStateFromStoresObject)([c.default], () => ({
     aecDumpSupported: c.default.isAecDumpSupported(),
@@ -57,11 +57,11 @@ function C() {
   })), O = (0, l.useStateFromStores)([S.default], () => S.default.shouldRecordNextConnection()), x = (0, l.useStateFromStores)([E.default], () => {
     var e, t;
     return null !== (t = null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t
-  }), R = ("canary" === _.default.releaseChannel || "development" === _.default.releaseChannel) && x && A;
+  }), R = ("canary" === f.default.releaseChannel || "development" === f.default.releaseChannel) && x && A;
   async function M() {
     t(!0);
     try {
-      await c.default.getMediaEngine().writeAudioDebugState(), await f.default.submitLiveCrashReport({
+      await c.default.getMediaEngine().writeAudioDebugState(), await _.default.submitLiveCrashReport({
         message: {
           message: "User Live Dump"
         }
@@ -97,10 +97,10 @@ function C() {
     }
   }
   return (0, a.jsxs)(i.FormSection, {
-    className: h.marginBottom40,
+    className: N.marginBottom40,
     title: I.default.Messages.FORM_LABEL_DEBUG,
     children: [s && (0, a.jsx)(i.FormSwitch, {
-      value: C,
+      value: p,
       onChange: e => r.default.setAecDump(e),
       note: I.default.Messages.FORM_HELP_AEC_DUMP,
       children: I.default.Messages.FORM_CHECKBOX_AEC_DUMP
@@ -113,7 +113,7 @@ function C() {
         children: I.default.Messages.FORM_CHECKBOX_CONNECTION_LOG
       }), (0, a.jsx)(i.FormItem, {
         children: (0, a.jsx)(T.default, {
-          className: h.marginBottom20,
+          className: N.marginBottom20,
           children: (0, a.jsx)(T.default.Child, {
             grow: 0,
             shrink: 0,
@@ -128,7 +128,7 @@ function C() {
     }), (0, a.jsx)(i.FormSwitch, {
       hideBorder: !0,
       value: d,
-      onChange: p,
+      onChange: C,
       note: I.default.Messages.FORM_HELP_DEBUG_LOGGING,
       children: I.default.Messages.FORM_CHECKBOX_DEBUG_LOGGING
     }), (0, a.jsx)(i.FormItem, {
@@ -147,7 +147,7 @@ function C() {
           shrink: 0,
           children: (0, a.jsx)(i.Button, {
             size: i.Button.Sizes.SMALL,
-            onClick: N,
+            onClick: h,
             children: I.default.Messages.SHOW_FOLDER
           })
         })]

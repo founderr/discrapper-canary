@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   UserSettingsAppearanceInAppIcon: function() {
-    return N
+    return h
   }
 });
 var a = s("735250"),
@@ -16,23 +16,23 @@ var a = s("735250"),
   S = s("539873"),
   E = s("197115"),
   T = s("626135"),
-  f = s("981631"),
-  _ = s("474936"),
+  _ = s("981631"),
+  f = s("474936"),
   m = s("689938"),
   g = s("772866"),
   I = s("611273");
-let h = () => {
+let N = () => {
     r.default.dispatch({
       type: "APP_ICON_EDITOR_OPEN"
     }), (0, o.popLayer)()
   },
-  N = () => {
+  h = () => {
     let {
       analyticsLocations: e
     } = (0, u.default)(d.default.USER_SETTINGS), t = (0, l.useStateFromStores)([c.default], () => c.default.isUpsellPreview);
     return n.useEffect(() => {
-      t && T.default.track(f.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-        type: _.PremiumUpsellTypes.APP_ICON_UPSELL,
+      t && T.default.track(_.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+        type: f.PremiumUpsellTypes.APP_ICON_UPSELL,
         location_stack: e
       })
     }, []), (0, a.jsxs)("div", {
@@ -43,10 +43,10 @@ let h = () => {
           className: g.tryItOutButtons,
           children: [(0, a.jsx)(i.Button, {
             color: t ? i.Button.Colors.PRIMARY : i.Button.Colors.BRAND,
-            onClick: () => h(),
+            onClick: () => N(),
             children: m.default.Messages.APP_ICON_PREVIEW_TITLE
           }), t ? (0, a.jsx)(E.default, {
-            subscriptionTier: _.PremiumSubscriptionSKUs.TIER_2,
+            subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
             buttonText: m.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
           }) : null]
         })

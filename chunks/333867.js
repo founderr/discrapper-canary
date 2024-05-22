@@ -21,12 +21,12 @@ function E(e) {
   let {
     skuId: E,
     isGift: T = !1,
-    giftMessage: f,
-    onClose: _,
+    giftMessage: _,
+    onClose: f,
     onComplete: m,
     analyticsLocations: g,
     analyticsObject: I
-  } = e, h = !1, N = (0, n.v4)(), p = e => {
+  } = e, N = !1, h = (0, n.v4)(), C = e => {
     t = e
   };
   (0, l.openModalLazy)(async () => {
@@ -41,31 +41,31 @@ function E(e) {
       } = t;
       return (0, a.jsx)(e, {
         ...l,
-        loadId: N,
+        loadId: h,
         skuId: E,
         isGift: T,
-        giftMessage: f,
+        giftMessage: _,
         analyticsLocations: g,
         onClose: e => {
-          s(), null == _ || _(e)
+          s(), null == f || f(e)
         },
         onComplete: () => {
-          h = !0, null == m || m()
+          N = !0, null == m || m()
         },
         returnRef: n,
-        onStepChange: p
+        onStepChange: C
       })
     }
   }, {
     modalKey: S,
     onCloseCallback: () => {
-      !h && d.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-        load_id: N,
+      !N && d.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+        load_id: h,
         payment_type: c.PurchaseTypeToAnalyticsPaymentType[c.PurchaseTypes.ONE_TIME],
         location: I,
         is_gift: T,
         location_stack: g
-      }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == _ || _(h), h && (0, o.fetchCollectiblesPurchases)()
+      }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == f || f(N), N && (0, o.fetchCollectiblesPurchases)()
     },
     onCloseRequest: () => {
       t === u.Step.REVIEW && (0, l.closeModal)(S)

@@ -12,15 +12,15 @@ var a = s("735250"),
   S = s("481060"),
   E = s("570140"),
   T = s("661111"),
-  f = s("179658"),
-  _ = s("491428"),
+  _ = s("179658"),
+  f = s("491428"),
   m = s("225433"),
   g = s("484614"),
   I = s("386506"),
-  h = s("865427"),
-  N = s("758182"),
-  p = s("802098"),
-  C = s("663993"),
+  N = s("865427"),
+  h = s("758182"),
+  C = s("802098"),
+  p = s("663993"),
   A = s("38618"),
   O = s("906467"),
   x = s("857192"),
@@ -30,8 +30,8 @@ var a = s("735250"),
   L = s("186095"),
   D = s("285952"),
   P = s("154921"),
-  j = s("998502"),
-  b = s("210887"),
+  b = s("998502"),
+  j = s("210887"),
   U = s("601948"),
   y = s("981631"),
   G = s("908442"),
@@ -141,7 +141,7 @@ class z extends n.Component {
     this.setState({
       loading: !0
     });
-    let e = await (0, h.getBuildOverride)();
+    let e = await (0, N.getBuildOverride)();
     this.setState({
       loading: !1,
       buildOverrides: e,
@@ -169,7 +169,7 @@ class z extends n.Component {
   }
   renderEmpty() {
     return (0, a.jsxs)(L.default, {
-      theme: b.default.theme,
+      theme: j.default.theme,
       className: i()(k.marginTop40, k.marginBottom20),
       children: [(0, a.jsx)(L.EmptyStateImage, {
         darkSrc: s("770227"),
@@ -548,7 +548,7 @@ class Q extends n.Component {
   renderPayloadBlock() {
     let e = JSON.stringify(this.generatePayload(), null, 2),
       t = () => e,
-      n = (0, a.jsx)(C.LazyLibrary, {
+      n = (0, a.jsx)(p.LazyLibrary, {
         createPromise: () => Promise.resolve().then(s.bind(s, "364964")),
         webpackId: "364964",
         renderFallback: t,
@@ -772,7 +772,7 @@ function Z() {
           A.default.getSocket().close(), A.default.getSocket().connect()
         },
         children: "Reset Socket"
-      }), N.ENABLE_CACHE_STORE && (0, a.jsx)(S.Button, {
+      }), h.ENABLE_CACHE_STORE && (0, a.jsx)(S.Button, {
         onClick: () => {
           E.default.dispatch({
             type: "CLEAR_CACHES",
@@ -809,7 +809,7 @@ function Z() {
             value: 4,
             label: "Out of Memory"
           }],
-          onChange: e => null != e && j.default.crash(e)
+          onChange: e => null != e && b.default.crash(e)
         }), (0, a.jsx)(S.SingleSelect, {
           value: void 0,
           options: [{
@@ -827,7 +827,7 @@ function Z() {
           }],
           onChange: e => {
             var t;
-            return null != e ? (t = e, void j.default.triggerJSException(t)) : void 0
+            return null != e ? (t = e, void b.default.triggerJSException(t)) : void 0
           }
         }), (0, a.jsx)(S.Button, {
           onClick: () => t(!0),
@@ -870,63 +870,63 @@ let X = u.default.connectStores([x.default], () => ({
     children: [(0, a.jsx)(S.FormSwitch, {
       value: t,
       note: "Force trace all client requests with APM",
-      onChange: e => (0, f.setDeveloperOptionSettings)({
+      onChange: e => (0, _.setDeveloperOptionSettings)({
         trace: e
       }),
       children: "Enable Tracing Requests"
     }), (0, a.jsx)(S.FormSwitch, {
       value: s,
       note: "Force all API requests to canary instances",
-      onChange: e => (0, f.setDeveloperOptionSettings)({
+      onChange: e => (0, _.setDeveloperOptionSettings)({
         canary: e
       }),
       children: "Enable Forced Canary"
     }), (0, a.jsx)(S.FormSwitch, {
       value: n,
       note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
-      onChange: e => (0, f.setDeveloperOptionSettings)({
+      onChange: e => (0, _.setDeveloperOptionSettings)({
         logGatewayEvents: e
       }),
       children: "Enable Logging of Gateway Events to Console"
     }), (0, a.jsx)(S.FormSwitch, {
       value: l,
       note: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
-      onChange: e => (0, f.setDeveloperOptionSettings)({
+      onChange: e => (0, _.setDeveloperOptionSettings)({
         logOverlayEvents: e
       }),
       children: "Enable Logging of Overlay RPC Events & Commands"
     }), (0, a.jsx)(S.FormSwitch, {
       value: i,
       note: "Logs all analytics events to the developer console",
-      onChange: e => (0, f.setDeveloperOptionSettings)({
+      onChange: e => (0, _.setDeveloperOptionSettings)({
         logAnalyticsEvents: e
       }),
       children: "Enable Logging of Analytics Events"
     }), (0, a.jsx)(S.FormSwitch, {
       value: o,
       note: "Only enable on devices you trust.",
-      onChange: e => (0, f.setDeveloperOptionSettings)({
+      onChange: e => (0, _.setDeveloperOptionSettings)({
         sourceMapsEnabled: e
       }),
       children: "Enable source maps to be loaded on this client"
     }), (0, a.jsx)(S.FormSwitch, {
       value: d,
       note: "Displays a floating debugger with viewed impressions",
-      onChange: e => (0, f.setDeveloperOptionSettings)({
+      onChange: e => (0, _.setDeveloperOptionSettings)({
         analyticsDebuggerEnabled: e
       }),
       children: "Enable standard analytics debugger view"
     }), (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
       value: c,
       note: "Displays a floating idle status indicator",
-      onChange: e => (0, f.setDeveloperOptionSettings)({
+      onChange: e => (0, _.setDeveloperOptionSettings)({
         idleStatusIndicatorEnabled: e
       }),
       children: "Enable idle status indicator"
     }) : null, null, (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
       value: E,
       note: "In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.",
-      onChange: e => (0, f.setDeveloperOptionSettings)({
+      onChange: e => (0, _.setDeveloperOptionSettings)({
         appDirectoryIncludesInactiveCollections: e
       }),
       children: "Preview Unpublished Collections on App Directory Homepage"
@@ -953,7 +953,7 @@ function J() {
     }), (0, a.jsxs)("form", {
       className: B.surveyOverride,
       onSubmit: e => {
-        e.preventDefault(), t.length > 0 ? _.overrideSurvey(t) : _.overrideSurvey(null)
+        e.preventDefault(), t.length > 0 ? f.overrideSurvey(t) : f.overrideSurvey(null)
       },
       children: [(0, a.jsx)(S.TextInput, {
         className: B.surveyOverrideInput,
@@ -969,8 +969,8 @@ function J() {
 
 function $() {
   var e;
-  let t = (0, u.useStateFromStores)([p.default], () => p.default.overrideId()),
-    [s, l] = n.useState(null !== (e = p.default.overrideId()) && void 0 !== e ? e : "");
+  let t = (0, u.useStateFromStores)([C.default], () => C.default.overrideId()),
+    [s, l] = n.useState(null !== (e = C.default.overrideId()) && void 0 !== e ? e : "");
   return (0, a.jsxs)(S.FormSection, {
     tag: S.FormTitleTags.H1,
     title: "Changelog Override",

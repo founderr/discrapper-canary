@@ -12,13 +12,13 @@ var a = s("735250"),
   S = s("134483"),
   E = s("478977"),
   T = s("456799"),
-  f = s("210851"),
-  _ = s("602683"),
+  _ = s("210851"),
+  f = s("602683"),
   m = s("15033"),
   g = s("899457"),
   I = s("975266");
 
-function h(e, t, s) {
+function N(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -26,9 +26,9 @@ function h(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let N = ["svg", "png", "gif", "webp"],
-  p = [...N, "jpg", "jpeg"],
-  C = Array.from(new Set([...p, "gif", "mp4", "webm"]));
+let h = ["svg", "png", "gif", "webp"],
+  C = [...h, "jpg", "jpeg"],
+  p = Array.from(new Set([...C, "gif", "mp4", "webm"]));
 
 function A() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -103,7 +103,7 @@ let O = {
 
 function x() {
   var e, t;
-  let [s, l] = n.useState(O), [h, x] = n.useState(g.UserState.UNENROLLED), [R, M] = n.useState(s.config.variants), [v, L] = n.useState(!1);
+  let [s, l] = n.useState(O), [N, x] = n.useState(g.UserState.UNENROLLED), [R, M] = n.useState(s.config.variants), [v, L] = n.useState(!1);
 
   function D(e, t) {
     l({
@@ -131,7 +131,7 @@ function x() {
     })
   }
 
-  function j(e, t) {
+  function b(e, t) {
     l({
       ...s,
       config: {
@@ -154,22 +154,22 @@ function x() {
       children: "Messages"
     }), (0, a.jsxs)("div", {
       className: I.fields,
-      children: [(0, a.jsx)(_.default, {
+      children: [(0, a.jsx)(f.default, {
         title: "Quest Name",
         assetKey: "questName",
         onMessageChange: P,
         initialValue: s.config.messages.questName
-      }), (0, a.jsx)(_.default, {
+      }), (0, a.jsx)(f.default, {
         title: "Game Title",
         assetKey: "gameTitle",
         onMessageChange: P,
         initialValue: s.config.messages.gameTitle
-      }), (0, a.jsx)(_.default, {
+      }), (0, a.jsx)(f.default, {
         title: "Reward Name",
         assetKey: "rewardName",
         onMessageChange: P,
         initialValue: s.config.messages.rewardName
-      }), (0, a.jsx)(_.default, {
+      }), (0, a.jsx)(f.default, {
         title: "Reward Name With Article",
         assetKey: "rewardNameWithArticle",
         onMessageChange: P,
@@ -181,35 +181,35 @@ function x() {
       children: "Assets"
     }), (0, a.jsxs)("div", {
       className: I.fields,
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(_.default, {
         title: "Game Tile Asset",
         assetKey: "gameTile",
         onFileChange: D,
-        filters: p,
+        filters: C,
         initialValue: s.config.assets.gameTile
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(_.default, {
         title: "Logotype",
         assetKey: "logotype",
         onFileChange: D,
-        filters: N,
+        filters: h,
         initialValue: s.config.assets.logotype
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(_.default, {
         title: "Quest Bar Hero Asset",
         assetKey: "questBarHero",
         onFileChange: D,
-        filters: C,
+        filters: p,
         initialValue: s.config.assets.questBarHero
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(_.default, {
         title: "Reward Tile Asset",
         assetKey: "rewardTile",
         onFileChange: D,
-        filters: C,
+        filters: p,
         initialValue: s.config.assets.rewardTile
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(_.default, {
         title: "Gift Inventory Hero",
         assetKey: "hero",
         onFileChange: D,
-        filters: C,
+        filters: p,
         initialValue: s.config.assets.hero
       })]
     }), (0, a.jsx)("div", {
@@ -243,12 +243,12 @@ function x() {
         children: [(0, a.jsx)(E.default, {
           title: "Primary",
           colorKey: "primary",
-          onChange: j,
+          onChange: b,
           value: s.config.colors.primary
         }), (0, a.jsx)(E.default, {
           title: "Secondary",
           colorKey: "secondary",
-          onChange: j,
+          onChange: b,
           value: s.config.colors.secondary
         })]
       }), (0, a.jsx)(g.default, {
@@ -317,7 +317,7 @@ function x() {
               })
           }
         },
-        value: h
+        value: N
       })]
     }), (0, a.jsx)(i.Heading, {
       variant: "heading-lg/bold",
@@ -425,10 +425,10 @@ class R extends n.Component {
     }) : (0, a.jsx)(x, {}, t)
   }
   constructor(...e) {
-    super(...e), h(this, "state", {
+    super(...e), N(this, "state", {
       error: null,
       renderKey: 0
-    }), h(this, "handleResetState", () => {
+    }), N(this, "handleResetState", () => {
       this.setState(e => ({
         error: null,
         renderKey: e.renderKey + 1

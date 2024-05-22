@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return C
   }
 });
-var i, s, r, l, o, a, c = n("735250"),
+var i, s, l, r, o, a, c = n("735250"),
   u = n("470079"),
   d = n("120356"),
   h = n.n(d),
@@ -23,8 +23,8 @@ var i, s, r, l, o, a, c = n("735250"),
   b = n("215569"),
   S = n("481060"),
   g = n("110924"),
-  v = n("864293"),
-  x = n("358085"),
+  x = n("864293"),
+  v = n("358085"),
   T = n("792125"),
   N = n("425493"),
   j = n("84885");
@@ -72,15 +72,15 @@ function R(e) {
     })
   })
 }
-r = {
+l = {
   paddingTop: 60,
   paddingBottom: 60
 }, (s = "defaultProps") in(i = P) ? Object.defineProperty(i, s, {
-  value: r,
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = r, (l = a || (a = {})).MINIMAL = "minimal", l.CUSTOM = "custom", l.DEFAULT = "default", l.WIDE = "wide";
+}) : i[s] = l, (r = a || (a = {})).MINIMAL = "minimal", r.CUSTOM = "custom", r.DEFAULT = "default", r.WIDE = "wide";
 let I = Object.freeze({
   minimal: "contentColumnMinimal",
   custom: "contentColumnCustom",
@@ -99,7 +99,7 @@ function y(e) {
       [j.mobileToolsContainer]: t,
       [j.mobileSidebarTools]: t,
       [j.closeIconOnly]: !n,
-      [j.isMobileAndroid]: !n && !0 === (0, x.isAndroidWeb)()
+      [j.isMobileAndroid]: !n && !0 === (0, v.isAndroidWeb)()
     }),
     ref: s,
     children: (0, c.jsx)(S.FocusRingScope, {
@@ -123,12 +123,12 @@ t.default = function(e) {
     content: n,
     notice: i,
     section: s,
-    closeAction: r,
-    sidebarTheme: l,
+    closeAction: l,
+    sidebarTheme: r,
     contentType: o,
     scrollerRef: a,
     mobileSidebarOpen: d,
-    toggleSidebar: x,
+    toggleSidebar: v,
     hideSidebar: N = !1
   } = e, C = u.useRef(null), P = u.useRef(null), R = (0, g.default)(s), A = (0, m.useTransition)(N, {
     from: {
@@ -151,11 +151,11 @@ t.default = function(e) {
   let O = (0, c.jsx)(y, {
     isMobile: f.isMobile,
     mobileSidebarOpen: d,
-    closeAction: r
+    closeAction: l
   });
 
   function M() {
-    return null == i ? null : (0, c.jsx)(v.default, {
+    return null == i ? null : (0, c.jsx)(x.default, {
       className: h()(j.noticeRegion, {
         [j.noticeRegionHiddenSidebar]: N
       }),
@@ -167,7 +167,7 @@ t.default = function(e) {
       style: e,
       className: j.standardSidebarView,
       children: [!i && (null == t ? null : (0, c.jsx)("div", {
-        className: h()(j.sidebarRegion, (0, T.getThemeClass)(l), {
+        className: h()(j.sidebarRegion, (0, T.getThemeClass)(r), {
           [j.flexFullWidth]: f.isMobile,
           [j.hidden]: f.isMobile && !1 === d
         }),
@@ -185,13 +185,13 @@ t.default = function(e) {
           })
         })
       })), function() {
-        let e = null != x && null != r && d,
+        let e = null != v && null != l && d,
           t = f.isMobile && (0, c.jsxs)("div", {
             className: h()(j.mobileContentHeader, {
               [j.hideHamburger]: !e
             }),
             children: [e && (0, c.jsx)(p.HamburgerButton, {
-              onClick: x
+              onClick: v
             }), O]
           });
         if ("custom" === o) return (0, c.jsxs)(b.TransitionGroup, {

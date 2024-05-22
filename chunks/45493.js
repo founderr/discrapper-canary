@@ -1,7 +1,7 @@
 "use strict";
-s.r(t);
-var a = s("987170");
-t.default = (0, a.default)({
+a.r(t);
+var s = a("987170");
+t.default = (0, s.default)({
   kind: "user",
   id: "2023-03_aa_user_segment_filter",
   label: "AA test to validate segmentation filter",
