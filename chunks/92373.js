@@ -20,7 +20,7 @@ t.default = function(e) {
     onClick: s,
     selected: p,
     locked: T = !1,
-    remainingGame: C = 0
+    otherGamesCount: C = 0
   } = e, _ = (0, c.useToken)(c.tokens.colors.WHITE), {
     isFetching: x,
     coverImageUrl: g
