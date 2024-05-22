@@ -1,66 +1,72 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanGuildIconSimple: function() {
-    return _
+    return E
   }
 });
 var i = n("735250"),
   r = n("470079"),
   s = n("120356"),
   a = n.n(s),
-  o = n("806519"),
-  l = n("768581"),
-  u = n("624138"),
-  d = n("545866");
+  o = n("442837"),
+  l = n("451478"),
+  u = n("806519"),
+  d = n("768581"),
+  _ = n("624138"),
+  c = n("545866");
 
-function _(e) {
+function E(e) {
   let {
-    guildName: t,
-    guildIconURL: n,
-    iconSize: r,
-    className: s
-  } = e;
-  if (null == n) {
-    let e = (0, u.getAcronym)(t);
-    return (0, i.jsx)(o.default, {
-      mask: o.default.Masks.SQUIRCLE,
-      width: r,
-      height: r,
-      className: s,
+    guildId: t,
+    guildName: n,
+    guildIcon: r,
+    iconSize: s,
+    className: E,
+    animate: I
+  } = e, T = (0, o.useStateFromStores)([l.default], () => l.default.isFocused()), f = d.default.getGuildIconURL({
+    id: t,
+    icon: r,
+    size: s,
+    canAnimate: I && T
+  });
+  if (null == f) {
+    let e = (0, _.getAcronym)(n);
+    return (0, i.jsx)(u.default, {
+      mask: u.default.Masks.SQUIRCLE,
+      width: s,
+      height: s,
+      className: E,
       children: (0, i.jsx)("div", {
-        className: a()(d.guildIconImage, d.acronym),
+        className: a()(c.guildIconImage, c.acronym),
         children: e
       })
     })
   }
-  return (0, i.jsx)(o.default, {
-    mask: o.default.Masks.SQUIRCLE,
-    width: r,
-    height: r,
-    className: s,
+  return (0, i.jsx)(u.default, {
+    mask: u.default.Masks.SQUIRCLE,
+    width: s,
+    height: s,
+    className: E,
     children: (0, i.jsx)("img", {
-      src: n,
-      alt: t,
-      className: d.guildIconImage
+      src: f,
+      alt: n,
+      className: c.guildIconImage
     })
   })
 }
 t.default = r.memo(function(e) {
-  var t;
   let {
-    guild: n,
-    iconSize: r,
-    className: s
-  } = e, a = null !== (t = l.default.getGuildIconURL({
-    id: n.id,
-    icon: n.icon,
-    size: r,
-    canAnimate: !0
-  })) && void 0 !== t ? t : void 0;
-  return (0, i.jsx)(_, {
-    guildName: n.name,
-    guildIconURL: a,
-    iconSize: r,
-    className: s
+    guild: t,
+    iconSize: n,
+    className: r,
+    animate: s
+  } = e;
+  return (0, i.jsx)(E, {
+    guildName: t.name,
+    guildId: t.id,
+    guildIcon: t.icon,
+    iconSize: n,
+    className: r,
+    animate: s
   })
 })

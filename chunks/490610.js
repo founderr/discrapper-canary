@@ -30,7 +30,8 @@ t.default = s.memo(function(e) {
       affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, o.getClanDiscoveryAffinity)(e, p),
       traitsToHighlight: g,
       source: h.AnalyticsSections.DISCOVER_SEARCH,
-      prioritizedGameIds: I
+      prioritizedGameIds: I,
+      onlyAnimateIconOnHover: !0
     }, e.id)
   }, [p, g, I]), A = s.useMemo(() => null != S && (0, E.isLoadedSearchResult)(S) ? m : [], [m, S]), N = s.useCallback(e => {
     e && A.length > 0 && (0, r.trackClanDiscoveryViewed)(A.map(e => e.id), "top_picks", p)

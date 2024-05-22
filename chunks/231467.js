@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryCardTraits: function() {
-    return y
+    return M
   },
   ClanDiscoveryCardView: function() {
-    return P
+    return y
   },
   Wildcards: function() {
-    return D
+    return v
   }
 }), n("47120");
 var i = n("735250"),
@@ -29,19 +29,18 @@ var i = n("735250"),
   A = n("703656"),
   m = n("271383"),
   N = n("594174"),
-  p = n("768581"),
-  O = n("778045"),
-  C = n("524989"),
-  R = n("981631"),
-  g = n("308083"),
-  L = n("689938"),
-  v = n("449729");
+  p = n("778045"),
+  O = n("524989"),
+  C = n("981631"),
+  R = n("308083"),
+  g = n("689938"),
+  L = n("449729");
 
-function D(e) {
+function v(e) {
   let {
     wildcardDescriptors: t,
     primaryColor: n
-  } = e, s = t.filter(e => e !== g.EMPTY_WILDCARD).join(", "), a = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), l = (0, E.getAccessibleClanColor)(n, a.hex()), u = r.useRef(null), [d, _] = r.useState(!1);
+  } = e, s = t.filter(e => e !== R.EMPTY_WILDCARD).join(", "), a = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING), l = (0, E.getAccessibleClanColor)(n, a.hex()), u = r.useRef(null), [d, _] = r.useState(!1);
   if (r.useEffect(() => {
       let e = u.current;
       null != e && null != e.offsetWidth && null != e.scrollWidth && _(e.offsetWidth < e.scrollWidth)
@@ -53,7 +52,7 @@ function D(e) {
     children: [(0, i.jsx)(o.Text, {
       variant: "text-xs/normal",
       color: "text-secondary",
-      className: v.clanInfoItem,
+      className: L.clanInfoItem,
       children: "\xb7"
     }), (0, i.jsx)(o.Tooltip, {
       text: s,
@@ -62,7 +61,7 @@ function D(e) {
       children: e => (0, i.jsx)("span", {
         ...e,
         style: c,
-        className: v.wildCardText,
+        className: L.wildCardText,
         ref: u,
         children: s
       })
@@ -70,15 +69,15 @@ function D(e) {
   })
 }
 
-function M(e) {
+function D(e) {
   let {
     trait: t,
     isHighlighted: n,
     className: r
   } = e;
   return (0, i.jsx)("div", {
-    className: a()(r, v.trait, {
-      [v.highlightedTrait]: n
+    className: a()(r, L.trait, {
+      [L.highlightedTrait]: n
     }),
     children: (0, i.jsx)(o.Text, {
       variant: "text-xs/normal",
@@ -89,20 +88,20 @@ function M(e) {
   })
 }
 
-function y(e) {
+function M(e) {
   let {
     traits: t,
     traitsToHighlight: n,
     expanded: s,
     traitClassName: a
-  } = e, l = r.useMemo(() => new Set(n), [n]), u = r.useCallback(e => (0, i.jsx)(M, {
+  } = e, l = r.useMemo(() => new Set(n), [n]), u = r.useCallback(e => (0, i.jsx)(D, {
     trait: e,
     isHighlighted: l.has(e)
   }, e), [l]), d = r.useCallback(e => (0, i.jsx)(o.Tooltip, {
     text: (0, i.jsx)("div", {
-      className: v.overflowTooltip,
+      className: L.overflowTooltip,
       children: e.map(e => (0, i.jsx)("div", {
-        className: v.trait,
+        className: L.trait,
         children: (0, i.jsx)(o.Text, {
           variant: "text-xs/normal",
           color: "text-normal",
@@ -114,99 +113,103 @@ function y(e) {
     "aria-label": "overflow",
     children: t => (0, i.jsx)("div", {
       ...t,
-      className: v.trait,
+      className: L.trait,
       children: (0, i.jsx)(o.Text, {
         variant: "text-xs/normal",
         color: "text-normal",
-        children: L.default.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({
+        children: g.default.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({
           count: e.length
         })
       })
     })
   }), []);
   return s ? (0, i.jsx)("div", {
-    className: v.expandedTraitsContainer,
-    children: t.map(e => (0, i.jsx)(M, {
+    className: L.expandedTraitsContainer,
+    children: t.map(e => (0, i.jsx)(D, {
       className: a,
       trait: e,
       isHighlighted: l.has(e)
     }, e))
-  }) : (0, i.jsx)(C.default, {
+  }) : (0, i.jsx)(O.default, {
     items: t,
     renderItem: u,
     renderOverflow: d,
     maxLines: 2,
-    className: v.traitsContainer,
+    className: L.traitsContainer,
     spacing: 4
   })
 }
 
-function P(e) {
-  var t, n;
+function y(e) {
+  var t;
   let {
-    clan: s,
-    bannerComponent: l,
-    expanded: u,
-    isMember: _,
-    traitsToHighlight: c,
-    prioritizedGameIds: E,
-    className: h,
-    showBrandingFooter: A = !1,
-    bannerUrl: m
+    clan: n,
+    bannerComponent: s,
+    expanded: l,
+    isMember: u,
+    traitsToHighlight: _,
+    prioritizedGameIds: c,
+    className: E,
+    showBrandingFooter: h = !1,
+    bannerUrl: A,
+    onlyAnimateIconOnHover: m = !1
   } = e, {
     tag: N,
-    badge: C,
+    badge: O,
     branding: {
-      primaryColor: R,
-      secondaryColor: M
+      primaryColor: C,
+      secondaryColor: D
     },
-    bannerHash: P
-  } = s, U = (0, d.default)(s.games), b = (0, T.default)("clan_discovery_card"), G = L.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
-    count: s.memberCount
-  }), w = null !== (t = p.default.getGuildIconURL({
-    id: s.id,
-    icon: s.icon,
-    size: 64,
-    canAnimate: !0
-  })) && void 0 !== t ? t : void 0, k = null != m ? m : (0, I.getClanBannerUrl)(s.id, P), B = null == l && null == k ? {
-    background: "linear-gradient(90deg, ".concat(R, ", ").concat(M, ")")
-  } : void 0, V = null != l ? l : null != k ? (0, i.jsx)("img", {
-    alt: L.default.Messages.CLAN_LOOK_BANNER,
-    src: k,
-    className: v.bannerImage
-  }) : null, x = r.useMemo(() => (0, g.getSortedTraits)(s.traits, c), [s.traits, c]);
+    bannerHash: y
+  } = n, P = (0, d.default)(n.games), U = (0, T.default)("clan_discovery_card"), [b, G] = r.useState(!1), w = r.useCallback(() => {
+    G(!0)
+  }, []), k = r.useCallback(() => {
+    G(!1)
+  }, []), B = g.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+    count: n.memberCount
+  }), V = null != A ? A : (0, I.getClanBannerUrl)(n.id, y), x = null == s && null == V ? {
+    background: "linear-gradient(90deg, ".concat(C, ", ").concat(D, ")")
+  } : void 0, F = null != s ? s : null != V ? (0, i.jsx)("img", {
+    alt: g.default.Messages.CLAN_LOOK_BANNER,
+    src: V,
+    className: L.bannerImage
+  }) : null, H = r.useMemo(() => (0, R.getSortedTraits)(n.traits, _), [n.traits, _]);
   return (0, i.jsxs)("div", {
-    className: a()(v.card, h),
+    className: a()(L.card, E),
+    onMouseEnter: w,
+    onMouseLeave: k,
     children: [(0, i.jsx)("div", {
-      className: v.cardBrandingHeader,
-      style: B,
-      children: V
+      className: L.cardBrandingHeader,
+      style: x,
+      children: F
     }), (0, i.jsxs)("div", {
-      className: v.cardContent,
+      className: L.cardContent,
       children: [(0, i.jsxs)("div", {
-        className: v.cardContentTitleSection,
+        className: L.cardContentTitleSection,
         children: [(0, i.jsxs)("div", {
-          className: v.cardNameAndTagWrapper,
+          className: L.cardNameAndTagWrapper,
           children: [(0, i.jsx)(f.ClanGuildIconSimple, {
-            guildName: s.name,
-            guildIconURL: w,
+            guildId: n.id,
+            guildName: n.name,
+            guildIcon: n.icon,
             iconSize: 64,
-            className: v.clanIcon
+            className: L.clanIcon,
+            animate: !m || b
           }), (0, i.jsx)("div", {
-            className: v.clanTagChipletWrapper,
+            className: L.clanTagChipletWrapper,
             children: (0, i.jsx)(o.Tooltip, {
-              text: L.default.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
+              text: g.default.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
               position: "top",
-              shouldShow: !_ && b,
+              shouldShow: !u && U,
               children: e => (0, i.jsxs)("div", {
                 ...e,
-                className: v.clanTagChiplet,
+                className: L.clanTagChiplet,
                 children: [(0, i.jsx)(S.ClanBadge, {
                   width: 16,
                   height: 16,
-                  badge: C.badgeKind,
-                  primaryTintColor: C.primaryColor,
-                  secondaryTintColor: C.secondaryColor
+                  badge: O.badgeKind,
+                  primaryTintColor: O.primaryColor,
+                  secondaryTintColor: O.secondaryColor
                 }), (0, i.jsx)(o.Text, {
                   variant: "text-xs/medium",
                   color: "text-primary",
@@ -219,62 +222,62 @@ function P(e) {
           variant: "heading-md/medium",
           color: "header-primary",
           lineClamp: 1,
-          children: s.name
+          children: n.name
         }), (0, i.jsxs)("div", {
-          className: v.clanInfoRow,
+          className: L.clanInfoRow,
           children: [(0, i.jsx)(o.Text, {
             variant: "text-xxs/normal",
-            className: v.clanInfoItem,
+            className: L.clanInfoItem,
             children: (0, i.jsx)("span", {
               role: "img",
-              "aria-label": L.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
+              "aria-label": g.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
               children: "\uD83C\uDFAE"
             })
           }), (0, i.jsx)(o.Text, {
             variant: "text-xs/normal",
             color: "text-secondary",
-            className: v.clanInfoItem,
-            children: null !== (n = (0, g.getPlaystyleTitle)(s.playstyle)) && void 0 !== n ? n : L.default.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
-          }), (0, i.jsx)(D, {
-            wildcardDescriptors: s.wildcardDescriptors,
-            primaryColor: s.branding.primaryColor
+            className: L.clanInfoItem,
+            children: null !== (t = (0, R.getPlaystyleTitle)(n.playstyle)) && void 0 !== t ? t : g.default.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+          }), (0, i.jsx)(v, {
+            wildcardDescriptors: n.wildcardDescriptors,
+            primaryColor: n.branding.primaryColor
           })]
         })]
       }), (0, i.jsx)("div", {
-        className: v.cardContentDescriptionSection,
+        className: L.cardContentDescriptionSection,
         children: (0, i.jsx)(o.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: s.description
+          children: n.description
         })
-      }), (0, i.jsx)(y, {
-        traits: x,
-        expanded: u,
-        traitsToHighlight: c
+      }), (0, i.jsx)(M, {
+        traits: H,
+        expanded: l,
+        traitsToHighlight: _
       })]
     }), (0, i.jsxs)("div", {
-      className: v.cardFooter,
+      className: L.cardFooter,
       children: [(0, i.jsx)("div", {
-        className: v.cardFooterInfo,
+        className: L.cardFooterInfo,
         children: (0, i.jsx)("div", {
-          className: v.cardFooterMembers,
+          className: L.cardFooterMembers,
           children: (0, i.jsx)(o.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            children: G
+            children: B
           })
         })
       }), (0, i.jsx)("div", {
-        className: v.cardFooterGames,
-        children: (0, i.jsx)(O.default, {
-          games: U,
-          prioritizedGameIds: E
+        className: L.cardFooterGames,
+        children: (0, i.jsx)(p.default, {
+          games: P,
+          prioritizedGameIds: c
         })
       })]
-    }), A && (0, i.jsx)("div", {
-      className: v.cardBrandingFooter,
+    }), h && (0, i.jsx)("div", {
+      className: L.cardBrandingFooter,
       style: {
-        background: "linear-gradient(90deg, ".concat(R, ", ").concat(M, ")")
+        background: "linear-gradient(90deg, ".concat(C, ", ").concat(D, ")")
       }
     })]
   })
@@ -302,11 +305,11 @@ t.default = function(e) {
       return
     }
     if (e) {
-      (0, A.transitionTo)(R.Routes.GUILD_MEMBER_VERIFICATION(d.id));
+      (0, A.transitionTo)(C.Routes.GUILD_MEMBER_VERIFICATION(d.id));
       return
     }(0, c.openClanApplyFlow)(d.id, d, {
       source: T,
-      location: R.AnalyticsLocations.CLAN_DISCOVERY_CARD
+      location: C.AnalyticsLocations.CLAN_DISCOVERY_CARD
     }, s)
   }, [d, S, E, I, T, s]), O = r.useCallback(e => {
     (0, u.openContextMenuLazy)(e, async () => {
@@ -321,10 +324,10 @@ t.default = function(e) {
   }, [d.id]);
   return (0, i.jsx)(o.Clickable, {
     onClick: p,
-    className: v.clickableCard,
+    className: L.clickableCard,
     style: t,
     onContextMenu: O,
-    children: (0, i.jsx)(P, {
+    children: (0, i.jsx)(y, {
       ...a,
       isMember: S,
       prioritizedGameIds: s,

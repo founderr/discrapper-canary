@@ -91,7 +91,8 @@ function A(e) {
         className: T.card,
         style: n,
         source: g.AnalyticsSections.DISCOVER_SEARCH,
-        prioritizedGameIds: B
+        prioritizedGameIds: B,
+        onlyAnimateIconOnHover: !0
       }, a)
     }, [A, w, N, B]),
     H = i.useCallback(e => {
