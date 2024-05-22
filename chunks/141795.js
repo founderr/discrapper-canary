@@ -236,20 +236,14 @@ class g extends A.default {
   }
   async reactNativeCompressAndExtractData() {
     var e;
-    if (!(0, m.getUploadTarget)(this.item.target).shouldReactNativeCompressUploads) {
-      this.uploadAnalytics.compressAndExtractDisabled = !0, O.log("reactNativeCompressAndExtractData() disabled by upload target");
-      return
-    }
-    if (!0 === this.reactNativeFilePrepped) {
-      this.uploadAnalytics.fileAlreadyPrepped = !0, O.log("reactNativeCompressAndExtractData() file already prepped - ".concat(this.id));
-      return
-    }
+    if (!(0, m.getUploadTarget)(this.item.target).shouldReactNativeCompressUploads) return this.uploadAnalytics.compressAndExtractDisabled = !0, O.log("reactNativeCompressAndExtractData() disabled by upload target"), this;
+    if (!0 === this.reactNativeFilePrepped) return this.uploadAnalytics.fileAlreadyPrepped = !0, O.log("reactNativeCompressAndExtractData() file already prepped - ".concat(this.id)), this;
     O.log("Starting compression/conversion for ".concat(this.id));
     let t = await this.trackTime("compressTimeMs", async () => {
       var e;
       return await (0, T.getAttachmentFile)(this, null !== (e = this.reactNativeFileIndex) && void 0 !== e ? e : 0)
     });
-    if (null == t || null == t.file) return;
+    if (null == t || null == t.file) return this;
     let n = t.uri,
       i = t.file.name,
       r = t.file.type;
@@ -264,13 +258,12 @@ class g extends A.default {
     }));
     let s = null !== (e = t.fileSize) && void 0 !== e ? e : (await (0, h.getFileData)(n)).size;
     if (this.postCompressionSize = s, this.currentSize = s, null == s) throw O.error("Size missing from file data for ".concat(this.id)), Error("Size missing from file data");
-    O.log("Completed compression and conversion. Output size=".concat(s, " bytes; filename=").concat(i, " for ").concat(this.id));
-    this.item = {
+    return O.log("Completed compression and conversion. Output size=".concat(s, " bytes; filename=").concat(i, " for ").concat(this.id)), this.item = {
       ...this.item,
       uri: n,
       filename: i,
       mimeType: r
-    }, this.reactNativeFilePrepped = !0
+    }, this.reactNativeFilePrepped = !0, this
   }
   handleError(e) {
     this.setStatus("ERROR"), this.error = e, this.trackUploadFinished("ERROR");
