@@ -38,15 +38,15 @@ let I = r.forwardRef(function(e, t) {
       if (null != C.current) {
         if (O.current = e, D) {
           let t = A[e];
-          C.current.setSegment(t.start, t.start + t.duration), C.current.goToAndStop(t.duration, !0)
-        } else C.current.setLoop(!g && e.includes("hover")), C.current.goToAndPlay(e)
+          C.current.resetSegments(!0), C.current.setSegment(t.start + t.duration, t.start + t.duration), C.current.stop()
+        } else C.current.setLoop(!g && e.includes("hover")), C.current.resetSegments(!0), C.current.playSegments([A[e].start, A[e].start + A[e].duration], !0)
       }
     },
     stop: () => {
-      null != C.current && !D && C.current.goToAndStop(0, !0)
+      if (null == C.current || D) return
     },
     stopIfPlaying: e => {
-      null != C.current && !D && O.current === e && C.current.goToAndStop(0, !0)
+      null != C.current && !D && O.current === e && (C.current.resetSegments(!0), C.current.setSegment(A[e].start, A[e].start), C.current.stop())
     }
   }), [D, g, A]), r.useEffect(() => {
     null == m && o().then(e => N(e.default))
