@@ -534,6 +534,7 @@ e.exports = Object.freeze({
   CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP: "You cannot apply to Guilds right now",
   MESSAGE_ACTION_FORWARD: "Forward",
   MESSAGE_FORWARDED: "Forwarded",
+  MESSAGE_FORWARD_ORIGINAL_MESSAGE: "Go to message",
   MESSAGE_ACTION_FORWARD_MEDIA_A11Y: "Forward media from this message",
   MESSAGE_ACTION_FORWARD_EMBED_A11Y: "Forward embed from this message"
 })

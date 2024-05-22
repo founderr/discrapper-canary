@@ -1,16 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   accessibilityLabelCalendarFormat: function() {
-    return S
+    return h
   },
   calendarFormat: function() {
     return I
+  },
+  calendarFormatCompact: function() {
+    return T
   },
   dateFormat: function() {
     return E
   },
   diffAsUnits: function() {
-    return A
+    return m
   },
   isSameDay: function() {
     return _
@@ -19,7 +22,7 @@ n.r(t), n.d(t, {
     return c
   },
   unitsAsStrings: function() {
-    return m
+    return N
   }
 });
 var i = n("913527"),
@@ -48,29 +51,39 @@ function c(e, t, n) {
 }
 
 function E(e, t) {
-  let n = T(e).locale(),
+  let n = f(e).locale(),
     i = "".concat(n, ":").concat(t),
     r = l[i];
-  return null == r && (r = l[i] = (0, s.default)(t)), r(f(e))
+  return null == r && (r = l[i] = (0, s.default)(t)), r(S(e))
 }
 
 function I(e) {
   let t;
   let n = r().localeData(),
     i = r()(),
-    s = d(f(e), i.toDate());
-  return s < -1 ? E(e, "L LT") : (t = s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse", E(e, n.calendar(t, T(e), i)))
+    s = d(S(e), i.toDate());
+  return s < -1 ? E(e, "L LT") : (t = s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse", E(e, n.calendar(t, f(e), i)))
 }
 
 function T(e) {
-  return r().isMoment(e) ? e : r()(e)
+  let t = r().localeData(),
+    n = r()(),
+    i = d(S(e), n.toDate());
+  if (0 === i) return E(e, t.longDateFormat("LT"));
+  if (-1 === i) return E(e, t.calendar("lastDay", f(e), n));
+  if (i > -7) return E(e, "dddd");
+  return E(e, t.longDateFormat("l"))
 }
 
 function f(e) {
-  return r().isMoment(e) ? e.toDate() : e
+  return r().isMoment(e) ? e : r()(e)
 }
 
 function S(e) {
+  return r().isMoment(e) ? e.toDate() : e
+}
+
+function h(e) {
   let t;
   let n = r().localeData(),
     i = new Date,
@@ -80,7 +93,7 @@ function S(e) {
 a.default.addChangeListener(() => {
   l = Object.create(null)
 });
-let h = [{
+let A = [{
   key: "days",
   millisecondsInUnit: 864e5
 }, {
@@ -94,7 +107,7 @@ let h = [{
   millisecondsInUnit: 1e3
 }];
 
-function A(e, t) {
+function m(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = {
       days: 0,
@@ -104,7 +117,7 @@ function A(e, t) {
     };
   if (e > t || n && Number(e) + 1200 > Number(t)) return i;
   let r = Number(t) - Number(e);
-  return h.forEach(e => {
+  return A.forEach(e => {
     let {
       key: t,
       millisecondsInUnit: n
@@ -113,7 +126,7 @@ function A(e, t) {
   }), i
 }
 
-function m(e, t) {
+function N(e, t) {
   return e.days > 0 ? t.days.format({
     days: e.days,
     hours: e.hours
