@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
   default: function() {
     return y
   }
-});
+}), n("653041"), n("47120");
 var i = n("392711"),
   r = n.n(i),
   s = n("46973"),
@@ -105,24 +105,29 @@ class y extends o.default {
     return this.analyticsContext.maxViewers
   }
   updateStats(e) {
-    I.default.getCurrentConfig({
-      location: "RTCConnection"
-    }, {
-      autoTrackExposure: !1
-    }).enableGoLiveSimulcast && e.forEach(e => {
-      let {
-        connection: t,
-        stats: n
-      } = e;
-      if (t === this._connection) {
-        let e = n.transport.inboundBitrateEstimate;
-        if (null != e) {
-          var i;
-          null === (i = this._goLiveQualityManager) || void 0 === i || i.setGoLiveStreamDowngraded(e < 15e5)
+    if (I.default.getCurrentConfig({
+        location: "RTCConnection"
+      }, {
+        autoTrackExposure: !1
+      }).enableGoLiveSimulcast) {
+      for (let {
+          connection: n,
+          stats: i
         }
-        return
-      }
-    })
+        of e)
+        if (n === this._connection) {
+          let e = i.transport.inboundBitrateEstimate;
+          if (null != e) {
+            if (e > 1e8) break;
+            if (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 15 && this._bandwidthSamples.shift(), 15 === this._bandwidthSamples.length) {
+              var t;
+              let e = r().mean(this._bandwidthSamples);
+              null === (t = this._goLiveQualityManager) || void 0 === t || t.setGoLiveStreamDowngraded(e < 15e5)
+            }
+            break
+          }
+        }
+    }
   }
   _initializeEvents() {
     let e = !1;
@@ -324,7 +329,7 @@ class y extends o.default {
       context: v.MediaEngineContextTypes.STREAM,
       rtcServerId: n,
       parentMediaSessionId: l
-    }), D(this, "analyticsContext", void 0), D(this, "_videoStreamStats", void 0), D(this, "_streamContext", void 0), D(this, "_streamKey", void 0), D(this, "_isStreamer", void 0), D(this, "_updateVideoStreamId", void 0), this._streamContext = u, this._streamKey = t, this._isStreamer = o, this._videoStreamStats = new C.default(i, this.isOwner), this.analyticsContext = s, this._updateVideoStreamId = r().debounce((e, t) => {
+    }), D(this, "analyticsContext", void 0), D(this, "_videoStreamStats", void 0), D(this, "_streamContext", void 0), D(this, "_streamKey", void 0), D(this, "_isStreamer", void 0), D(this, "_updateVideoStreamId", void 0), D(this, "_bandwidthSamples", []), this._streamContext = u, this._streamKey = t, this._isStreamer = o, this._videoStreamStats = new C.default(i, this.isOwner), this.analyticsContext = s, this._updateVideoStreamId = r().debounce((e, t) => {
       let {
         guildId: n,
         channelId: i,
