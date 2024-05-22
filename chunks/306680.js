@@ -1266,13 +1266,14 @@ let e$ = new eJ(T.default, {
   },
   DRAWER_OPEN: function(e) {
     let {
-      drawer: t
+      drawer: t,
+      isLandscapedTablet: n
     } = e;
     if (null != ed) {
       let e = ey.get(ed);
       !e.hasUnread() && (e.oldestUnreadMessageIdStale = !0)
     }
-    return eh = null != t, !1
+    return eh = null != t && !n, !1
   },
   DRAWER_CLOSE: function() {
     return eh = !1, eB(ed)
