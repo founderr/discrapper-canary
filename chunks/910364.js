@@ -66,13 +66,13 @@ function y(e) {
         className: L.tabBarItem,
         id: P.UserProfileSections.MUTUAL_FRIENDS,
         children: null == f ? j.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER : j.default.Messages.MUTUAL_FRIENDS_WITH_END_COUNT.format({
-          count: f
+          count: "".concat(f)
         })
       }), r || a.isClyde() ? null : (0, l.jsx)(n.TabBar.Item, {
         className: L.tabBarItem,
         id: P.UserProfileSections.MUTUAL_GUILDS,
         children: null == S ? j.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER : j.default.Messages.MUTUAL_GUILDS_WITH_END_COUNT.format({
-          count: S
+          count: "".concat(S)
         })
       }), a.bot && c ? (0, l.jsx)(n.TabBar.Item, {
         className: L.tabBarItem,
