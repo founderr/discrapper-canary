@@ -1,5 +1,6 @@
 "use strict";
 e.exports = {
+  body: "body_cdd5b8",
   description: "description__3eff0",
   divider: "divider__7d1fe",
   expiringStatusIcon: "expiringStatusIcon__0be5b",

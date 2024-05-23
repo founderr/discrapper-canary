@@ -18,22 +18,22 @@ var a = n("735250"),
   h = n("232567"),
   _ = n("2052"),
   C = n("393238"),
-  m = n("727637"),
-  S = n("420660"),
-  p = n("100527"),
-  I = n("906732"),
-  g = n("521868"),
-  T = n("299206"),
-  A = n("440051"),
-  N = n("734934"),
-  v = n("158238"),
-  R = n("785717"),
-  O = n("221292"),
-  L = n("318661"),
-  M = n("502762"),
-  P = n("192133"),
-  x = n("138394"),
-  y = n("131640"),
+  m = n("100527"),
+  S = n("906732"),
+  p = n("521868"),
+  I = n("299206"),
+  g = n("440051"),
+  T = n("734934"),
+  A = n("158238"),
+  N = n("785717"),
+  v = n("221292"),
+  R = n("318661"),
+  O = n("681837"),
+  L = n("502762"),
+  M = n("530"),
+  P = n("894374"),
+  x = n("171368"),
+  y = n("23293"),
   D = n("695346"),
   b = n("199902"),
   U = n("293273"),
@@ -157,17 +157,17 @@ function $(e) {
     closePopout: b
   } = e, U = (0, _.useAnalyticsContext)(), {
     analyticsLocations: G
-  } = (0, I.default)(p.default.ACCOUNT_PROFILE_POPOUT), F = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
+  } = (0, S.default)(m.default.ACCOUNT_PROFILE_POPOUT), F = (0, R.default)(t.id, l), V = __OVERLAY__, [$, ee] = (0, c.useStateFromStoresArray)([j.default], () => {
     var e;
     let n = t.id;
-    return "string" != typeof n ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = j.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), j.default.getStatus(n), j.default.isMobileOnline(n)]
-  }), en = function(e, t) {
-    let n = A.ExpiringStatusExperiment.useExperiment({
+    return "string" != typeof n ? [void 0, K.StatusTypes.UNKNOWN] : [null !== (e = j.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.getStatus(n)]
+  }), et = function(e, t) {
+    let n = g.ExpiringStatusExperiment.useExperiment({
         location: "account popout"
       }).expiringStatus,
       s = D.StatusExpiresAtSetting.useSetting(),
-      l = (0, N.useFocusModeEnabled)(),
-      i = v.QuietModeExperiment.useExperiment({
+      l = (0, T.useFocusModeEnabled)(),
+      i = A.QuietModeExperiment.useExperiment({
         location: "account popout"
       }).allowQuietMode || l,
       r = D.FocusModeExpiresAtSetting.useSetting(),
@@ -201,7 +201,7 @@ function $(e) {
             id: "".concat(e, "-").concat(n),
             label: s(),
             action: () => {
-              (0, N.setFocusMode)(!0, n)
+              (0, T.setFocusMode)(!0, n)
             },
             dontCloseOnAction: !0
           }, n)
@@ -240,164 +240,167 @@ function $(e) {
           })]
         }),
         action: () => {
-          (0, N.setFocusMode)(!l)
+          (0, T.setFocusMode)(!l)
         },
         dontCloseOnAction: !0,
         children: c
       }, "quiet-mode") : null]
     })
   }(ee, U), {
-    ref: ea
-  } = (0, C.default)(), es = (0, m.default)(ea);
+    ref: en
+  } = (0, C.default)();
   s.useEffect(() => {
     B.default.track(K.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != n,
       other_user_id: t.id,
-      application_id: null != V ? V.application_id : void 0,
+      application_id: null != $ ? $.application_id : void 0,
       is_streaming: r,
-      application_name: null != V ? V.name : void 0,
+      application_name: null != $ ? $.name : void 0,
       profile_has_nitro_customization: (null == F ? void 0 : F.banner) != null,
       location: U.location,
       has_profile_effect: (null == F ? void 0 : F.profileEffectId) != null
     })
   }, []);
-  let el = (0, N.useFocusModeEnabled)(),
-    ei = ee === K.StatusTypes.DND,
-    er = (0, Y.useMultiAccountMenuItems)(),
-    eo = (0, g.useCustomStatusMenuItem)(null != n ? n : void 0, Q.menuItemFocused),
-    eu = (0, T.default)({
+  let ea = e => {
+      null == b || b(), (0, x.openUserProfileModal)({
+        sourceAnalyticsLocations: G,
+        userId: t.id,
+        guildId: l,
+        ...e
+      })
+    },
+    es = (0, T.useFocusModeEnabled)(),
+    el = ee === K.StatusTypes.DND,
+    ei = (0, Y.useMultiAccountMenuItems)(),
+    er = (0, p.useCustomStatusMenuItem)(null != n ? n : void 0, Q.menuItemFocused),
+    eo = (0, I.default)({
       id: t.id,
       label: q.default.Messages.COPY_ID_USER,
       showIconFirst: !0
     });
-  return (0, a.jsx)(I.AnalyticsLocationProvider, {
+  return (0, a.jsx)(S.AnalyticsLocationProvider, {
     value: G,
-    children: (0, a.jsx)(R.UserProfileAnalyticsProvider, {
+    children: (0, a.jsx)(N.UserProfileAnalyticsProvider, {
       layout: "SIMPLIFIED_ACCOUNT_POPOUT",
       userId: t.id,
       guildId: l,
       children: (0, a.jsx)("div", {
         className: Q.popoutContainer,
-        children: (0, a.jsx)("div", {
-          ref: ea,
-          children: (0, a.jsxs)(M.default, {
-            className: Q.themeContainer,
+        ref: en,
+        children: (0, a.jsxs)(L.default, {
+          className: Q.themeContainer,
+          user: t,
+          displayProfile: F,
+          profileType: z.UserProfileTypes.BITE_SIZE,
+          children: [(0, a.jsx)(y.default, {
             user: t,
             displayProfile: F,
-            profileType: z.UserProfileTypes.POPOUT,
-            children: [(0, a.jsx)(y.default, {
+            onOpenProfile: V ? void 0 : ea
+          }), (0, a.jsxs)("div", {
+            className: Q.body,
+            children: [(0, a.jsx)(M.default, {
               user: t,
-              displayProfile: F,
-              onClose: () => null == b ? void 0 : b(),
-              isMobile: et,
-              isStreaming: (0, S.default)(V),
-              status: ee,
-              disableUserProfileLink: __OVERLAY__,
-              isHovering: es,
-              showPremiumBadgeUpsell: !1
-            }), (0, a.jsxs)(M.default.Overlay, {
-              children: [(0, a.jsx)(P.default, {
-                activity: V,
-                customStatusActivity: $,
+              profileType: z.UserProfileTypes.BITE_SIZE,
+              onOpenProfile: () => ea({
+                autoFocusNote: !1
+              }),
+              pronouns: null == F ? void 0 : F.pronouns,
+              tags: (0, a.jsx)(P.UserProfileBadgesTag, {
                 displayProfile: F,
-                user: t,
-                onClose: o,
-                setNote: !1,
-                canDM: !1,
-                hideNote: !0,
-                showCopiableUsername: !0
-              }), (0, a.jsx)(x.default, {
-                className: Q.divider
-              }), (0, a.jsxs)(E.Menu, {
-                navId: "account",
-                "aria-label": q.default.Messages.SET_STATUS,
-                hideScroller: !0,
-                className: Q.menu,
-                onClose: o,
-                onSelect: h,
-                children: [(0, a.jsxs)(E.MenuGroup, {
-                  children: [(0, a.jsx)(E.MenuItem, {
-                    id: "status-picker",
-                    label: (0, a.jsxs)("div", {
-                      style: {
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between"
-                      },
-                      children: [(0, H.humanizeStatus)(ee), el || ei ? (0, a.jsx)(f.BellSlashIcon, {
-                        width: 12,
-                        height: 12
-                      }) : null]
-                    }),
-                    focusedClassName: Q.menuItemFocused,
-                    subMenuIconClassName: Q.subMenuIcon,
-                    action: d.isMobile ? function() {
-                      (0, O.trackUserProfileAction)({
-                        action: "PRESS_SET_STATUS",
-                        layout: "SIMPLIFIED_ACCOUNT_POPOUT",
-                        userId: t.id,
-                        guildId: l,
-                        analyticsLocations: G
-                      }), (0, E.openModalLazy)(() => new Promise(e => {
-                        e(e => (0, a.jsx)(E.ModalRoot, {
-                          ...e,
-                          size: E.ModalSize.SMALL,
-                          className: Q.modal,
+                onClose: o
+              }),
+              nicknameIcons: (0, a.jsx)(O.default, {
+                userId: t.id
+              })
+            }), (0, a.jsxs)(E.Menu, {
+              navId: "account",
+              "aria-label": q.default.Messages.SET_STATUS,
+              hideScroller: !0,
+              className: Q.menu,
+              onClose: o,
+              onSelect: h,
+              children: [(0, a.jsxs)(E.MenuGroup, {
+                children: [(0, a.jsx)(E.MenuItem, {
+                  id: "status-picker",
+                  label: (0, a.jsxs)("div", {
+                    style: {
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between"
+                    },
+                    children: [(0, H.humanizeStatus)(ee), es || el ? (0, a.jsx)(f.BellSlashIcon, {
+                      width: 12,
+                      height: 12
+                    }) : null]
+                  }),
+                  focusedClassName: Q.menuItemFocused,
+                  subMenuIconClassName: Q.subMenuIcon,
+                  action: d.isMobile ? function() {
+                    (0, v.trackUserProfileAction)({
+                      action: "PRESS_SET_STATUS",
+                      layout: "SIMPLIFIED_ACCOUNT_POPOUT",
+                      userId: t.id,
+                      guildId: l,
+                      analyticsLocations: G
+                    }), (0, E.openModalLazy)(() => new Promise(e => {
+                      e(e => (0, a.jsx)(E.ModalRoot, {
+                        ...e,
+                        size: E.ModalSize.SMALL,
+                        className: Q.modal,
+                        "aria-label": q.default.Messages.SET_STATUS,
+                        children: (0, a.jsx)(E.Menu, {
+                          navId: "account",
+                          variant: "fixed",
                           "aria-label": q.default.Messages.SET_STATUS,
-                          children: (0, a.jsx)(E.Menu, {
-                            navId: "account",
-                            variant: "fixed",
-                            "aria-label": q.default.Messages.SET_STATUS,
-                            hideScroller: !0,
-                            className: Q.statusPickerModalMenu,
-                            onClose: e.onClose,
-                            onSelect: e.onClose,
-                            children: en
-                          })
-                        }))
+                          hideScroller: !0,
+                          className: Q.statusPickerModalMenu,
+                          onClose: e.onClose,
+                          onSelect: e.onClose,
+                          children: et
+                        })
                       }))
-                    } : void 0,
-                    showIconFirst: !0,
-                    icon: e => {
-                      let {
-                        className: t,
-                        isFocused: n
-                      } = e;
-                      return (0, a.jsx)(E.Status, {
-                        status: ee,
-                        size: 12,
-                        className: i()(t, Q.mainStatusIcon),
-                        color: n ? "currentColor" : void 0
-                      })
-                    },
-                    children: d.isMobile ? void 0 : en
-                  }, "status-picker"), eo]
-                }), (0, a.jsx)(E.MenuGroup, {
-                  children: (0, a.jsx)(E.MenuItem, {
-                    id: "switch-account",
-                    focusedClassName: Q.menuItemFocused,
-                    subMenuIconClassName: Q.subMenuIcon,
-                    label: q.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-                    icon: w.default,
-                    showIconFirst: !0,
-                    action: () => {
-                      (0, O.trackUserProfileAction)({
-                        action: "PRESS_SWITCH_ACCOUNTS",
-                        layout: "SIMPLIFIED_ACCOUNT_POPOUT",
-                        userId: t.id,
-                        guildId: l,
-                        analyticsLocations: G
-                      }), (0, W.default)()
-                    },
-                    children: er
-                  }, "switch-account")
-                }), (0, a.jsx)(E.MenuGroup, {
-                  children: eu
-                })]
+                    }))
+                  } : void 0,
+                  showIconFirst: !0,
+                  icon: e => {
+                    let {
+                      className: t,
+                      isFocused: n
+                    } = e;
+                    return (0, a.jsx)(E.Status, {
+                      status: ee,
+                      size: 12,
+                      className: i()(t, Q.mainStatusIcon),
+                      color: n ? "currentColor" : void 0
+                    })
+                  },
+                  children: d.isMobile ? void 0 : et
+                }, "status-picker"), er]
+              }), (0, a.jsx)(E.MenuGroup, {
+                children: (0, a.jsx)(E.MenuItem, {
+                  id: "switch-account",
+                  focusedClassName: Q.menuItemFocused,
+                  subMenuIconClassName: Q.subMenuIcon,
+                  label: q.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
+                  icon: w.default,
+                  showIconFirst: !0,
+                  action: () => {
+                    (0, v.trackUserProfileAction)({
+                      action: "PRESS_SWITCH_ACCOUNTS",
+                      layout: "SIMPLIFIED_ACCOUNT_POPOUT",
+                      userId: t.id,
+                      guildId: l,
+                      analyticsLocations: G
+                    }), (0, W.default)()
+                  },
+                  children: ei
+                }, "switch-account")
+              }), (0, a.jsx)(E.MenuGroup, {
+                children: eo
               })]
             })]
-          })
+          })]
         })
       })
     })
