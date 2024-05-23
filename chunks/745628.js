@@ -19,7 +19,7 @@ t.default = e => {
   } = e, {
     wildcardDescriptors: E,
     description: p
-  } = m, T = (e, t) => {
+  } = m, C = (e, t) => {
     let a = [...E];
     a[t] = e, f({
       wildcardDescriptors: a
@@ -79,19 +79,19 @@ t.default = e => {
           children: [(0, n.jsx)(i.TextInput, {
             inputClassName: s()(d.input, d.wildcardInput),
             value: null !== (t = E[0]) && void 0 !== t ? t : "",
-            onChange: e => T(e, 0),
+            onChange: e => C(e, 0),
             maxLength: o.MAX_WILDCARD_LENGTH,
             placeholder: o.CLAN_WILDCARD_PLACEHOLDERS["0"]
           }), (0, n.jsx)(i.TextInput, {
             inputClassName: s()(d.input, d.wildcardInput),
             value: null !== (a = E[1]) && void 0 !== a ? a : "",
-            onChange: e => T(e, 1),
+            onChange: e => C(e, 1),
             maxLength: o.MAX_WILDCARD_LENGTH,
             placeholder: o.CLAN_WILDCARD_PLACEHOLDERS["1"]
           }), (0, n.jsx)(i.TextInput, {
             inputClassName: s()(d.input, d.wildcardInput),
             value: null !== (r = E[2]) && void 0 !== r ? r : "",
-            onChange: e => T(e, 2),
+            onChange: e => C(e, 2),
             maxLength: o.MAX_WILDCARD_LENGTH,
             placeholder: o.CLAN_WILDCARD_PLACEHOLDERS["2"]
           })]

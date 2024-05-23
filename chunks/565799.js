@@ -227,7 +227,7 @@ a = "StageChannelParticipantStore", (s = "displayName") in(r = z) ? Object.defin
   RELATIONSHIP_REMOVE: Y,
   GUILD_CREATE: j,
   GUILD_DELETE: j,
-  PASSIVE_UPDATE_V1: function(e) {
+  PASSIVE_UPDATE_V2: function(e) {
     let t = !1;
     for (let n of P(e.guildId)) t = G(n).rebuild() || t;
     return t

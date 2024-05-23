@@ -28,7 +28,7 @@ a.r(t), a.d(t, {
     return h
   },
   removeMonetization: function() {
-    return C
+    return T
   }
 });
 var n = a("544891"),
@@ -99,14 +99,14 @@ function p(e) {
     url: i.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e)
   })
 }
-async function T(e) {
+async function C(e) {
   await n.HTTP.post({
     url: i.Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(e),
     body: {}
   })
 }
-async function C(e) {
-  return await T(e), await s.default.getApplicationsForGuild(e, {
+async function T(e) {
+  return await C(e), await s.default.getApplicationsForGuild(e, {
     type: l.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS,
     includeTeam: !0
   })

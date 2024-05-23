@@ -19,8 +19,8 @@ t.default = r.memo(function(e) {
     isStuck: h,
     onExpand: E,
     disableAnimation: p,
-    disableBackground: T
-  } = e, C = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [_, x] = r.useState(!0), [g, N] = r.useState(!1), {
+    disableBackground: C
+  } = e, T = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [_, x] = r.useState(!0), [g, N] = r.useState(!1), {
     ref: I,
     height: v = 0
   } = (0, d.default)(), {
@@ -28,7 +28,7 @@ t.default = r.memo(function(e) {
     height: S = 0
   } = (0, d.default)(), [L, R] = r.useState(s), y = (0, l.useSpring)({
     height: L ? S + v : v,
-    immediate: _ || C || p,
+    immediate: _ || T || p,
     config: {
       ...l.config.stiff,
       clamp: !0
@@ -50,7 +50,7 @@ t.default = r.memo(function(e) {
   }, []), (0, n.jsx)(c.Clickable, {
     className: i()(m.editCard, {
       [m.toggled]: s,
-      [m.noBackground]: T
+      [m.noBackground]: C
     }),
     children: (0, n.jsxs)(l.animated.div, {
       className: i()(m.contentExpandContainer, {

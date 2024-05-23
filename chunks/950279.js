@@ -18,8 +18,8 @@ t.default = e => {
     description: a,
     handleUpdate: E,
     gameApplicationIds: p,
-    error: T,
-    requiredGameId: C,
+    error: C,
+    requiredGameId: T,
     inSettings: _
   } = e, x = (0, s.useStateFromStores)([o.default], () => o.default.getId()), {
     recentGames: g
@@ -28,10 +28,10 @@ t.default = e => {
     matchSorterOptions: I
   } = (0, d.useClanSetupGameSelectableSearch)();
   r.useEffect(() => {
-    !_ && null != C && !p.has(C) && N.length > 0 && A(C)
-  }, [N.length, C, _]);
+    !_ && null != T && !p.has(T) && N.length > 0 && A(T)
+  }, [N.length, T, _]);
   let v = e => {
-      if (!p.has(e) || e === C) return;
+      if (!p.has(e) || e === T) return;
       let t = new Set(p);
       t.delete(e), E(t)
     },
@@ -65,11 +65,11 @@ t.default = e => {
       })
     }), (0, n.jsxs)("div", {
       className: h.contentWithMinHeight,
-      children: [null != T && (0, n.jsx)(i.Text, {
+      children: [null != C && (0, n.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "status-danger",
         className: h.errorText,
-        children: T
+        children: C
       }), p.size > 0 && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(i.Text, {
           variant: "text-xs/medium",
@@ -80,10 +80,10 @@ t.default = e => {
           className: h.selectedSection,
           children: Array.from(p).map(e => (0, n.jsx)(u.default, {
             applicationId: e,
-            onClick: e !== C ? v : void 0,
-            imageContainerClassName: e !== C ? h.clickableGame : h.defaultGame,
+            onClick: e !== T ? v : void 0,
+            imageContainerClassName: e !== T ? h.clickableGame : h.defaultGame,
             selected: !0,
-            locked: e === C
+            locked: e === T
           }, e))
         })]
       }), null != g && g.length > 0 && (0, n.jsxs)(n.Fragment, {

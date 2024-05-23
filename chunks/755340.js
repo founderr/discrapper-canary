@@ -18,8 +18,8 @@ t.default = function(e) {
   let {
     guild: t,
     submittedGuildJoinRequestsCount: a,
-    onFormFieldUpdate: T,
-    hideVerificationLevelField: C,
+    onFormFieldUpdate: C,
+    hideVerificationLevelField: T,
     isClanContext: _,
     formDescription: x,
     onFieldsSave: g,
@@ -42,14 +42,14 @@ t.default = function(e) {
       if (!I.current) {
         I.current = !0, _ && (e = e.filter(e => e.field_type !== l.VerificationFormFieldTypes.TERMS));
         try {
-          await g(t.id, e), T(), L(e), R.current = e
+          await g(t.id, e), C(), L(e), R.current = e
         } catch (e) {
           throw L(R.current), e
         } finally {
           null != v && A(null), I.current = !1
         }
       }
-    }, [v, t.id, T, g, _]),
+    }, [v, t.id, C, g, _]),
     G = r.useCallback(async e => {
       let t = e.field_type === l.VerificationFormFieldTypes.TERMS ? [e, ...S] : [...S, e];
       await B(t)
@@ -59,7 +59,7 @@ t.default = function(e) {
       let a = [...S];
       a[e] = t, await B(a)
     }, [S, B]),
-    H = r.useCallback(async (e, t, a) => {
+    k = r.useCallback(async (e, t, a) => {
       let n = S.indexOf(e),
         r = [...S];
       if (null != t && t !== n && (r.splice(n, 1), r.splice(t, 0, e), L(r)), a) try {
@@ -68,7 +68,7 @@ t.default = function(e) {
         w()
       } else v !== t && A(t)
     }, [v, S, B, w]),
-    k = r.useCallback(async e => {
+    H = r.useCallback(async e => {
       try {
         await B([...S.slice(0, e), ...S.slice(e + 1)])
       } catch (e) {
@@ -76,7 +76,7 @@ t.default = function(e) {
       }
     }, [S, B, w]),
     V = (0, n.jsxs)(n.Fragment, {
-      children: [!C && (0, n.jsx)(f.default, {
+      children: [!T && (0, n.jsx)(f.default, {
         guild: t
       }), (0, n.jsx)(d.default, {
         formDescription: x,
@@ -92,9 +92,9 @@ t.default = function(e) {
         index: S.indexOf(e),
         isDragEnabled: !1,
         submittedGuildJoinRequestsCount: a,
-        removeFormField: k,
+        removeFormField: H,
         updateFormField: U,
-        updateFormFieldOrder: H,
+        updateFormFieldOrder: k,
         canRemove: !0,
         actionsLocation: _ ? "side" : "footer"
       }))]
@@ -112,9 +112,9 @@ t.default = function(e) {
       index: S.indexOf(e),
       isDragEnabled: P,
       submittedGuildJoinRequestsCount: a,
-      removeFormField: k,
+      removeFormField: H,
       updateFormField: U,
-      updateFormFieldOrder: H,
+      updateFormFieldOrder: k,
       canRemove: !(_ && M.length <= 1),
       actionsLocation: _ ? "side" : "footer"
     })), D && !j && (0, n.jsx)(m.default, {

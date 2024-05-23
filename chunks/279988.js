@@ -20,8 +20,8 @@ t.default = function(e) {
     isDropHovered: h,
     onDrop: E,
     onEdit: p,
-    onRemove: T,
-    canRemove: C,
+    onRemove: C,
+    canRemove: T,
     title: _,
     actionsLocation: x
   } = e, g = a.values, N = g.slice(0, 1), I = g.length - N.length;
@@ -32,9 +32,9 @@ t.default = function(e) {
     isDropHovered: h,
     onDrop: E,
     onEdit: p,
-    onRemove: T,
+    onRemove: C,
     title: _,
-    canRemove: C,
+    canRemove: T,
     actionsLocation: x,
     children: [(0, n.jsx)(c.TermsFieldBody, {
       className: s()(f.fieldBackground, {

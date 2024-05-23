@@ -13,7 +13,7 @@ let c = {},
 function p() {
   m = !0
 }
-class T extends(n = l.default.Store) {
+class C extends(n = l.default.Store) {
   getAppliedGuildBoostsForGuild(e) {
     return null != c[e] ? c[e].subscriptions : null
   }
@@ -42,12 +42,12 @@ class T extends(n = l.default.Store) {
     return f
   }
 }
-i = "AppliedGuildBoostStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
+i = "AppliedGuildBoostStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = i, t.default = new T(o.default, {
+}) : r[s] = i, t.default = new C(o.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,

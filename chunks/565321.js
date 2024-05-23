@@ -13,20 +13,20 @@ t.default = function(e) {
     guildId: t,
     onSave: a,
     formDescription: u
-  } = e, [f, m] = r.useState(null), [h, E] = r.useState(u), p = r.useRef(!1), T = r.useRef(!1);
+  } = e, [f, m] = r.useState(null), [h, E] = r.useState(u), p = r.useRef(!1), C = r.useRef(!1);
   r.useEffect(() => () => {
-    T.current = !0
+    C.current = !0
   }, []);
-  let C = r.useCallback(async () => {
+  let T = r.useCallback(async () => {
     if (!p.current) {
       m(null);
       try {
         await a(t, h)
       } catch (e) {
-        if (T.current) return;
+        if (C.current) return;
         m(new i.APIError(e).getAnyErrorMessage())
       } finally {
-        if (T.current) return;
+        if (C.current) return;
         p.current = !1
       }
     }
@@ -41,7 +41,7 @@ t.default = function(e) {
       onChange: e => {
         E(e)
       },
-      onBlur: C,
+      onBlur: T,
       autosize: !0
     }), null != f && "" !== f ? (0, n.jsx)(s.Text, {
       className: d.errorText,

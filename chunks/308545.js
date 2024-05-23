@@ -55,8 +55,8 @@ function h(e) {
     secondaryTintColor: E,
     ...p
   } = e, {
-    primaryColorsTransformed: T,
-    secondaryColorsTransformed: C
+    primaryColorsTransformed: C,
+    secondaryColorsTransformed: T
   } = (0, r.getTransformedBadgeColors)({
     primaryBaseColors: o,
     primaryTintColor: h,
@@ -69,7 +69,7 @@ function h(e) {
   }), {
     styleContent: _,
     containerId: x
-  } = (0, s.useClanBannerStyleInjection)(T, C);
+  } = (0, s.useClanBannerStyleInjection)(C, T);
   return (0, n.jsxs)("svg", {
     ...p,
     "aria-label": i.default.Messages.CLAN_LOOK_BANNER,

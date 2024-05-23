@@ -26,16 +26,16 @@ let p = () => ({
     brandPrimaryColor: E.CLAN_BRAND_PALETTE_PRESETS["0"].primary,
     brandSecondaryColor: E.CLAN_BRAND_PALETTE_PRESETS["0"].secondary
   }),
-  T = p(),
-  C = d()(T),
+  C = p(),
+  T = d()(C),
   _ = !1,
   x = !1,
   g = {};
 class N extends(n = u.default.Store) {
   getState() {
     return {
-      initialSettings: T,
-      settings: C,
+      initialSettings: C,
+      settings: T,
       dirty: _,
       errors: g,
       submitting: x
@@ -49,34 +49,34 @@ i = "ClanSettingsStore", (s = "displayName") in(r = N) ? Object.defineProperty(r
   writable: !0
 }) : r[s] = i, t.default = new N(f.default, {
   CLAN_SETTINGS_FETCH_START: function() {
-    x = !1, T = p(), C = d()(T), _ = !1, g = {}
+    x = !1, C = p(), T = d()(C), _ = !1, g = {}
   },
   CLAN_SETTINGS_FETCH_SUCCESS: function(e) {
     let {
       settings: t
     } = e;
-    T = {
+    C = {
       ...p(),
       ...t
-    }, C = d()(T), _ = !1
+    }, T = d()(C), _ = !1
   },
   CLAN_SETTINGS_UPDATE: function(e) {
     let {
       updates: t
     } = e;
-    for (let e in C = {
-        ...C,
+    for (let e in T = {
+        ...T,
         ...d()(t)
       }, t) delete g[e], g = {
       ...g
     };
-    _ = !o().isEqual(o().omit(C, "verificationForm"), o().omit(T, "verificationForm"))
+    _ = !o().isEqual(o().omit(T, "verificationForm"), o().omit(C, "verificationForm"))
   },
   CLAN_SETTINGS_SUBMIT: function() {
     x = !0, g = {}
   },
   CLAN_SETTINGS_SUBMIT_SUCCESS: function() {
-    x = !1, T = d()(C), _ = !1, g = {}
+    x = !1, C = d()(T), _ = !1, g = {}
   },
   CLAN_SETTINGS_SUBMIT_ERROR: function(e) {
     let {
@@ -96,16 +96,16 @@ i = "ClanSettingsStore", (s = "displayName") in(r = N) ? Object.defineProperty(r
       form: t,
       isLocalUpdate: a
     } = e;
-    if (null == C.verificationForm) return !1;
-    if (C = {
-        ...C,
+    if (null == T.verificationForm) return !1;
+    if (T = {
+        ...T,
         verificationForm: {
-          ...C.verificationForm,
+          ...T.verificationForm,
           ...t
         }
       }, a) {
       var n;
-      _ = !o().isEqual(C.verificationForm.formFields, null === (n = T.verificationForm) || void 0 === n ? void 0 : n.formFields)
+      _ = !o().isEqual(T.verificationForm.formFields, null === (n = C.verificationForm) || void 0 === n ? void 0 : n.formFields)
     } else _ = !1
   }
 })

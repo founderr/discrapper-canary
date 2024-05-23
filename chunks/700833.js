@@ -26,14 +26,14 @@ function m(e) {
     guild: m,
     index: h,
     isDragEnabled: p,
-    submittedGuildJoinRequestsCount: T,
-    removeFormField: C,
+    submittedGuildJoinRequestsCount: C,
+    removeFormField: T,
     updateFormField: _,
     updateFormFieldOrder: x,
     canRemove: g,
     actionsLocation: N
   } = e, I = async () => {
-    await C(h)
+    await T(h)
   }, v = async e => {
     await _(h, e)
   }, A = async (e, t, a) => {
@@ -44,14 +44,14 @@ function m(e) {
     isDragEnabled: p,
     isDropHovered: L,
     onEdit: () => {
-      0 === T ? E(u, v, m) : (0, s.openModalLazy)(async () => {
+      0 === C ? E(u, v, m) : (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([a.e("99387"), a.e("74673")]).then(a.bind(a, "394045"));
         return t => (0, n.jsx)(e, {
           ...t,
           guildId: m.id,
-          submittedGuildJoinRequestsCount: T,
+          submittedGuildJoinRequestsCount: C,
           onConfirm: () => E(u, v, m)
         })
       })

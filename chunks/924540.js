@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   PremiumDiscountOfferTabBadge: function() {
-    return C
+    return T
   },
   PremiumTrialOfferTabBadge: function() {
-    return T
+    return C
   }
 });
 var n = a("735250"),
@@ -45,7 +45,7 @@ function p(e) {
   })
 }
 
-function T(e) {
+function C(e) {
   var t;
   let {
     isTabSelected: a,
@@ -62,7 +62,7 @@ function T(e) {
   })
 }
 
-function C(e) {
+function T(e) {
   let {
     isTabSelected: t,
     userDiscount: a,

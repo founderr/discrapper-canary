@@ -17,34 +17,34 @@ function h(e, t) {
 }
 let E = null,
   p = [],
-  T = [],
-  C = {};
+  C = [],
+  T = {};
 class _ extends(n = c.default.Store) {
   getPrimaryCategories() {
     return p
   }
   getDiscoveryCategories() {
-    let e = f.DISCOVERY_SIDEBAR_CATEGORIES.map(e => T.find(t => t.categoryId === e)).filter(u.isNotNullish);
+    let e = f.DISCOVERY_SIDEBAR_CATEGORIES.map(e => C.find(t => t.categoryId === e)).filter(u.isNotNullish);
     return [{
       categoryId: f.DISCOVERY_ALL_CATEGORIES_ID,
       name: m.default.Messages.HOME
     }, ...e]
   }
   getClanDiscoveryCategories() {
-    let e = f.DISCOVERY_SIDEBAR_CATEGORIES.map(e => T.find(t => t.categoryId === e)).filter(u.isNotNullish);
+    let e = f.DISCOVERY_SIDEBAR_CATEGORIES.map(e => C.find(t => t.categoryId === e)).filter(u.isNotNullish);
     return [{
       categoryId: f.DISCOVERY_ALL_CATEGORIES_ID,
       name: m.default.Messages.COMMUNITIES
     }, ...e]
   }
   getAllCategories() {
-    return T
+    return C
   }
   getFetchedLocale() {
     return E
   }
   getCategoryName(e) {
-    return e === f.DISCOVERY_ALL_CATEGORIES_ID ? m.default.Messages.HOME : C[e]
+    return e === f.DISCOVERY_ALL_CATEGORIES_ID ? m.default.Messages.HOME : T[e]
   }
 }
 i = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = _) ? Object.defineProperty(r, s, {
@@ -79,7 +79,7 @@ i = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = _) ? Object.define
           }), s.push({
             categoryId: a,
             name: n
-          }), C[a] = n
+          }), T[a] = n
         }
       }), null != t) {
       let {
@@ -89,8 +89,8 @@ i = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = _) ? Object.define
       r.push({
         categoryId: e,
         name: a
-      }), C[e] = a
+      }), T[e] = a
     }
-    E = n, p = r, T = s
+    E = n, p = r, C = s
   }
 })

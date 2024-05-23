@@ -40,11 +40,11 @@ t.default = function(e) {
   let {
     addFormField: t,
     showManualApprovalWarning: s,
-    guild: T,
-    showHeader: C
+    guild: C,
+    showHeader: T
   } = e, _ = r.useCallback(e => {
-    (0, m.openEmptyFormFieldModal)(e, t, T)
-  }, [t, T]), x = r.useCallback(e => {
+    (0, m.openEmptyFormFieldModal)(e, t, C)
+  }, [t, C]), x = r.useCallback(e => {
     s ? (0, l.openModalLazy)(async () => {
       let {
         default: t
@@ -57,7 +57,7 @@ t.default = function(e) {
   }, [s, _]);
   return (0, n.jsxs)("div", {
     className: i()(E.spacingContainer, E.backgroundContainer),
-    children: [C && (0, n.jsx)("div", {
+    children: [T && (0, n.jsx)("div", {
       className: E.containerTopHat,
       children: (0, n.jsx)(l.Text, {
         className: E.containerTopHatText,

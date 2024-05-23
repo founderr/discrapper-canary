@@ -18,8 +18,8 @@ var n = a("735250"),
   h = a("755340"),
   E = a("794358"),
   p = a("931468"),
-  T = a("449226"),
-  C = a("689938"),
+  C = a("449226"),
+  T = a("689938"),
   _ = a("212723"),
   x = a("5288");
 
@@ -44,13 +44,13 @@ function g(e) {
       } = await Promise.resolve().then(a.bind(a, "481060"));
       return a => (0, n.jsx)(t, {
         ...a,
-        header: C.default.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
-        cancelText: C.default.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
-        confirmText: C.default.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
+        header: T.default.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
+        cancelText: T.default.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
+        confirmText: T.default.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
         onConfirm: () => h(e),
         children: (0, n.jsx)(o.Text, {
           variant: "text-md/normal",
-          children: C.default.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
+          children: T.default.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
         })
       })
     }) : h(e)
@@ -73,11 +73,11 @@ function g(e) {
       children: [(0, n.jsx)(o.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_SCREENING
+        children: T.default.Messages.GUILD_SETTINGS_SAFETY_RULES_SCREENING
       }), (s || i && !u) && (0, n.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
+        children: T.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
       }), !s && (0, n.jsx)("div", {
         className: x.pillRow,
         children: l && (0, n.jsxs)(o.Text, {
@@ -87,7 +87,7 @@ function g(e) {
           children: [(0, n.jsx)(p.default, {
             width: 16,
             height: 16
-          }), C.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
+          }), T.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
         })
       })]
     }), (0, n.jsx)("div", {
@@ -101,7 +101,7 @@ function g(e) {
           },
           children: (0, n.jsx)(o.Tooltip, {
             tooltipContentClassName: x.__invalid_tooltip,
-            text: C.default.Messages.PREVIEW,
+            text: T.default.Messages.PREVIEW,
             children: e => (0, n.jsx)(E.default, {
               height: 24,
               width: 24,
@@ -109,13 +109,13 @@ function g(e) {
               ...e
             })
           })
-        }), (0, n.jsx)(T.default, {
+        }), (0, n.jsx)(C.default, {
           checked: u,
           onChange: () => g(!u)
         })]
       }) : (0, n.jsx)(o.Button, {
         size: o.Button.Sizes.SMALL,
-        children: C.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
+        children: T.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
       })
     })]
   })
@@ -133,13 +133,13 @@ function v(e) {
     guild: o,
     isClanContext: E = !1,
     onFieldsSave: p,
-    onDescriptionSave: T,
-    verificationForm: C
+    onDescriptionSave: C,
+    verificationForm: T
   } = e, [v, A] = r.useState(E), S = r.useRef(!1), L = r.useCallback(() => {
     S.current = !0
   }, []), R = null !== (t = (0, m.useSubmittedGuildJoinRequestTotal)({
     guildId: o.id
-  })) && void 0 !== t ? t : 0, y = (0, l.useStateFromStores)([u.default], () => null != C ? C : u.default.get(o.id)), M = null !== (a = null == y ? void 0 : y.formFields) && void 0 !== a ? a : [];
+  })) && void 0 !== t ? t : 0, y = (0, l.useStateFromStores)([u.default], () => null != T ? T : u.default.get(o.id)), M = null !== (a = null == y ? void 0 : y.formFields) && void 0 !== a ? a : [];
   r.useEffect(() => {
     d.default.fetchVerificationForm(o.id)
   }, [o.id]);
@@ -168,7 +168,7 @@ function v(e) {
         hideVerificationLevelField: !0,
         isClanContext: E,
         onFieldsSave: null != p ? p : N,
-        onDescriptionSave: null != T ? T : I,
+        onDescriptionSave: null != C ? C : I,
         formDescription: null !== (s = null == y ? void 0 : y.description) && void 0 !== s ? s : ""
       })
     })

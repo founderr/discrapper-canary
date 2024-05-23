@@ -470,7 +470,7 @@ class V extends i.default {
       STREAM_START: this.handleStreamStart,
       STREAM_CREATE: this.handleStreamCreate,
       STREAM_CLOSE: this.handleStreamClose,
-      PASSIVE_UPDATE_V1: this.handleVoiceStateChange,
+      PASSIVE_UPDATE_V2: this.handleVoiceStateChange,
       VOICE_STATE_UPDATES: this.handleVoiceStateChange,
       EMBEDDED_ACTIVITY_UPDATE: e => {
         let {

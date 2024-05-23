@@ -19,8 +19,8 @@ t.default = function(e) {
     imageContainerClassName: a,
     onClick: s,
     selected: p,
-    locked: T = !1,
-    otherGamesCount: C = 0
+    locked: C = !1,
+    otherGamesCount: T = 0
   } = e, _ = (0, c.useToken)(c.tokens.colors.WHITE), {
     isFetching: x,
     coverImageUrl: g
@@ -53,16 +53,16 @@ t.default = function(e) {
         children: (0, n.jsx)(m.default, {
           backgroundColor: _.hex(),
           className: i()(E.selectedGameCheck, {
-            [E.selectedGameCheckLocked]: T
+            [E.selectedGameCheckLocked]: C
           })
         })
-      }), v, C > 0 && (0, n.jsx)("div", {
+      }), v, T > 0 && (0, n.jsx)("div", {
         className: E.remainingGame,
         children: (0, n.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "always-white",
           children: h.default.Messages.COUNT_REMAINING.format({
-            count: C
+            count: T
           })
         })
       })]
@@ -70,7 +70,7 @@ t.default = function(e) {
       className: E.gameName,
       variant: "text-xs/normal",
       color: "header-primary",
-      children: [N, T && (0, n.jsx)(o.LockIcon, {
+      children: [N, C && (0, n.jsx)(o.LockIcon, {
         width: 12,
         height: 12
       })]
