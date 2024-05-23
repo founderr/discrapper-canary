@@ -350,6 +350,7 @@ e.exports = Object.freeze({
   CLAN_SETUP_TAG_STEP: "Badge",
   CLAN_SETUP_BANNER_STEP: "Banner",
   CLAN_SETUP_APPLICATIONS_STEP: "Member Applications",
+  CLAN_SETUP_RANDOMIZE_LOOK: "Randomize",
   CLAN_PRIMETIME_PLACEHOLDER: "Day",
   CLAN_PRIMETIME_MONDAY: "Monday",
   CLAN_PRIMETIME_TUESDAY: "Tuesday",
