@@ -8,8 +8,8 @@ var a = n("470079"),
   l = n("149765"),
   s = n("442837"),
   i = n("902704"),
-  r = n("58540"),
-  o = n("592125"),
+  r = n("592125"),
+  o = n("720202"),
   u = n("271383"),
   d = n("700785"),
   c = n("231338");
@@ -21,13 +21,17 @@ function p(e) {
   let {
     entries: t,
     channelId: n
-  } = e, p = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(n)), E = null == p ? void 0 : p.guild_id, C = a.useRef(new Set), g = a.useMemo(() => {
+  } = e, p = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(n)), E = null == p ? void 0 : p.guild_id, C = a.useRef(new Set), g = a.useMemo(() => {
     let e = new Set(null == t ? void 0 : t.map(e => e.author_id));
     return !(0, i.areArraysShallowEqual)([...C.current], [...e]) && (C.current = e), C.current
   }, [t]), S = a.useMemo(() => null == E ? m : {
     [E]: Array.from(g)
   }, [g, E]);
-  (0, r.useSubscribeGuildMembers)(S);
+  Object.keys(S).forEach(e => {
+    S[e].forEach(t => {
+      o.default.requestMember(e, t)
+    })
+  });
   let _ = (0, s.useStateFromStoresArray)([u.default], () => {
       if (null == E) return f;
       let e = [];
