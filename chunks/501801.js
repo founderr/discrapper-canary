@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   AuditLogExpandedChangeDetails: function() {
-    return f
+    return R
   },
   AuditLogIcon: function() {
-    return R
+    return f
   },
   shouldNotRenderChangeDetail: function() {
     return C
@@ -129,7 +129,7 @@ function M(e) {
     })]
   }, _)
 }
-class R extends _.PureComponent {
+class f extends _.PureComponent {
   render() {
     var e, t;
     let {
@@ -169,7 +169,7 @@ class R extends _.PureComponent {
   }
 }
 
-function f(e) {
+function R(e) {
   let {
     log: t,
     guild: s,
@@ -238,7 +238,7 @@ function f(e) {
             return (!i().isEqual(e.title, s.title) && S.push("title"), !i().isEqual(e.description, s.description) && S.push("description"), 0 === o.length && 0 === L.length && 0 === d.length && 0 === N.length && 0 === S.length) ? null : (0, E.jsxs)("li", {
               children: [(0, E.jsxs)("div", {
                 className: O.onboardingChangeLogItemTitle,
-                children: [(0, E.jsx)(R, {
+                children: [(0, E.jsx)(f, {
                   actionType: c.AuditLogActionTypes.UPDATE,
                   targetType: t.targetType,
                   action: t.action
@@ -293,7 +293,7 @@ function f(e) {
               return (0, E.jsxs)("li", {
                 children: [(0, E.jsxs)("div", {
                   className: O.onboardingChangeLogItemTitle,
-                  children: [(0, E.jsx)(R, {
+                  children: [(0, E.jsx)(f, {
                     actionType: c.AuditLogActionTypes.CREATE,
                     targetType: t.targetType,
                     action: t.action
@@ -321,7 +321,7 @@ function f(e) {
             }), d.map(e => (0, E.jsx)("li", {
               children: (0, E.jsxs)("div", {
                 className: O.onboardingChangeLogItemTitle,
-                children: [(0, E.jsx)(R, {
+                children: [(0, E.jsx)(f, {
                   actionType: c.AuditLogActionTypes.DELETE,
                   targetType: t.targetType,
                   action: t.action
@@ -389,7 +389,7 @@ function f(e) {
                   children: [A.map(e => (0, E.jsx)("li", {
                     children: (0, E.jsxs)("div", {
                       className: O.onboardingChangeLogItemTitle,
-                      children: [(0, E.jsx)(R, {
+                      children: [(0, E.jsx)(f, {
                         actionType: c.AuditLogActionTypes.CREATE,
                         targetType: n,
                         action: T
@@ -403,7 +403,7 @@ function f(e) {
                   }, e.channel_id)), I.map(e => (0, E.jsx)("li", {
                     children: (0, E.jsxs)("div", {
                       className: O.onboardingChangeLogItemTitle,
-                      children: [(0, E.jsx)(R, {
+                      children: [(0, E.jsx)(f, {
                         actionType: c.AuditLogActionTypes.DELETE,
                         targetType: n,
                         action: T
@@ -429,7 +429,7 @@ function f(e) {
                   children: [A.map(e => (0, E.jsx)("li", {
                     children: (0, E.jsxs)("div", {
                       className: O.onboardingChangeLogItemTitle,
-                      children: [(0, E.jsx)(R, {
+                      children: [(0, E.jsx)(f, {
                         actionType: c.AuditLogActionTypes.CREATE,
                         targetType: n,
                         action: T
@@ -443,7 +443,7 @@ function f(e) {
                   }, e.channel_id)), I.map(e => (0, E.jsx)("li", {
                     children: (0, E.jsxs)("div", {
                       className: O.onboardingChangeLogItemTitle,
-                      children: [(0, E.jsx)(R, {
+                      children: [(0, E.jsx)(f, {
                         actionType: c.AuditLogActionTypes.DELETE,
                         targetType: n,
                         action: T

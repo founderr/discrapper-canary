@@ -10,14 +10,14 @@ var s, a = n("735250"),
   c = n("17894"),
   f = n("108427"),
   E = n("314897"),
-  I = n("819570"),
-  _ = n("626135"),
+  _ = n("819570"),
+  I = n("626135"),
   p = n("981631"),
   h = n("689938"),
   T = n("88197"),
-  g = n("611273");
+  N = n("611273");
 
-function m(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -26,55 +26,55 @@ function m(e, t, n) {
   }) : e[t] = n, e
 }
 u.default.initialize();
-class N extends(s = l.PureComponent) {
+class m extends(s = l.PureComponent) {
   componentDidMount() {
     this.handleVerify(), (0, f.trackAppUIViewed)("verify_email")
   }
   renderVerifyFailed() {
-    return (0, a.jsxs)(I.default, {
-      children: [(0, a.jsx)(I.Image, {
+    return (0, a.jsxs)(_.default, {
+      children: [(0, a.jsx)(_.Image, {
         src: n("375673"),
-        className: r()(T.image, g.marginBottom20)
-      }), (0, a.jsx)(I.Title, {
-        className: g.marginBottom8,
+        className: r()(T.image, N.marginBottom20)
+      }), (0, a.jsx)(_.Title, {
+        className: N.marginBottom8,
         children: h.default.Messages.VERFICATION_EXPIRED
-      }), (0, a.jsx)(I.SubTitle, {
-        className: g.marginBottom40,
+      }), (0, a.jsx)(_.SubTitle, {
+        className: N.marginBottom40,
         children: h.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
-      }), (0, a.jsx)(I.Button, {
+      }), (0, a.jsx)(_.Button, {
         onClick: this.handleLogin,
         children: h.default.Messages._LOGIN
       })]
     })
   }
   renderVerifySucceeded() {
-    return (0, a.jsxs)(I.default, {
-      children: [(0, a.jsx)(I.Image, {
+    return (0, a.jsxs)(_.default, {
+      children: [(0, a.jsx)(_.Image, {
         src: n("73962"),
-        className: r()(T.image, g.marginBottom20)
-      }), (0, a.jsx)(I.Title, {
-        className: g.marginBottom40,
+        className: r()(T.image, N.marginBottom20)
+      }), (0, a.jsx)(_.Title, {
+        className: N.marginBottom40,
         children: h.default.Messages.VERIFICATION_VERIFIED
-      }), (0, a.jsx)(I.Button, {
+      }), (0, a.jsx)(_.Button, {
         onClick: this.handleOpenApp,
         children: h.default.Messages.VERIFICATION_OPEN_DISCORD
       })]
     })
   }
   renderVerifying() {
-    return (0, a.jsxs)(I.default, {
-      children: [(0, a.jsx)(I.Image, {
+    return (0, a.jsxs)(_.default, {
+      children: [(0, a.jsx)(_.Image, {
         src: n("892235"),
-        className: r()(T.image, g.marginBottom20)
-      }), (0, a.jsx)(I.Title, {
-        className: g.marginBottom8,
+        className: r()(T.image, N.marginBottom20)
+      }), (0, a.jsx)(_.Title, {
+        className: N.marginBottom8,
         children: h.default.Messages.VERIFICATION_VERIFYING
-      }), (0, a.jsx)(I.SubTitle, {
-        className: g.marginBottom40,
+      }), (0, a.jsx)(_.SubTitle, {
+        className: N.marginBottom40,
         children: h.default.Messages.ACTION_MAY_TAKE_A_MOMENT
-      }), (0, a.jsx)(I.Button, {
+      }), (0, a.jsx)(_.Button, {
         submitting: !0,
-        color: I.Button.Colors.PRIMARY
+        color: _.Button.Colors.PRIMARY
       })]
     })
   }
@@ -86,25 +86,25 @@ class N extends(s = l.PureComponent) {
     return e ? this.renderVerifyFailed() : t ? this.renderVerifySucceeded() : this.renderVerifying()
   }
   constructor(...e) {
-    super(...e), m(this, "handleVerify", () => {
+    super(...e), g(this, "handleVerify", () => {
       let e = (0, d.default)(this.props.location);
       null != e && o.default.verify(e)
-    }), m(this, "handleLogin", () => {
+    }), g(this, "handleLogin", () => {
       let {
         transitionTo: e
       } = this.props;
       e(p.Routes.LOGIN)
-    }), m(this, "handleOpenApp", () => {
+    }), g(this, "handleOpenApp", () => {
       let {
         verifyingUserId: e
       } = this.props;
-      _.default.track(p.AnalyticEvents.VERIFY_ACCOUNT_APP_OPENED, {
+      I.default.track(p.AnalyticEvents.VERIFY_ACCOUNT_APP_OPENED, {
         verifying_user_id: e
       }), (0, c.default)("verify_email")
     })
   }
 }
-m(N, "defaultProps", {
+g(m, "defaultProps", {
   transitionTo: e => n.g.location.assign(e)
 }), t.default = u.default.connectStores([E.default], () => ({
   verifyFailed: E.default.didVerifyFail(),
@@ -112,4 +112,4 @@ m(N, "defaultProps", {
   verifySucceeded: E.default.didVerifySucceed(),
   fingerprint: E.default.getFingerprint(),
   verifyingUserId: E.default.getVerifyingUserId()
-}))(N)
+}))(m)

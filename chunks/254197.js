@@ -114,7 +114,7 @@ let b = e => {
       onCtxMenuSelect: j,
       quest: G,
       useReducedMotion: k
-    } = e, w = s.useRef(null), F = (0, o.useStateFromStores)([p.default], () => p.default.isEnrolling(G.id), [G]), B = (0, S.useQuestFormattedDate)(G.config.expiresAt), H = s.useMemo(() => (0, I.isAssetAnimated)(G.config.assets.questBarHero), [G]), V = s.useCallback(() => {
+    } = e, w = s.useRef(null), B = (0, o.useStateFromStores)([p.default], () => p.default.isEnrolling(G.id), [G]), F = (0, S.useQuestFormattedDate)(G.config.expiresAt), H = s.useMemo(() => (0, I.isAssetAnimated)(G.config.assets.questBarHero), [G]), V = s.useCallback(() => {
       (0, m.enrollInQuest)(G.id, {
         questContent: g.QuestContent.QUEST_BAR,
         questContentCTA: C.QuestContentCTA.ACCEPT_QUEST
@@ -155,7 +155,7 @@ let b = e => {
             variant: "text-xxs/medium",
             className: i()(D.flex, D.headerText),
             children: x.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
-              expirationDate: B
+              expirationDate: F
             })
           }), (0, a.jsx)(R.QuestsEntryContextMenuPopout, {
             onOpen: E,
@@ -264,7 +264,7 @@ let b = e => {
             fullWidth: !0,
             onClick: Q ? V : void 0,
             size: c.Button.Sizes.SMALL,
-            submitting: F,
+            submitting: B,
             children: x.default.Messages.QUESTS_ACCEPT_QUEST
           })]
         }), (0, a.jsx)("div", {

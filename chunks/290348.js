@@ -83,7 +83,7 @@ var E = s("470079"),
   U = s("981631"),
   M = s("474936");
 
-function R(e, t, s) {
+function f(e, t, s) {
   let _ = (0, O.useEditStateStore)(e => e.setListing),
     a = E.useCallback(E => {
       _(e, e => {
@@ -101,45 +101,45 @@ function R(e, t, s) {
   return [void 0 !== n ? n : s, a]
 }
 
-function f(e, t) {
+function R(e, t) {
   let s = (0, u.useStateFromStores)([N.default], () => N.default.getSubscriptionListing(e));
   return E.useMemo(() => t(s), [s])
 }
 
 function h(e) {
-  let t = f(e, e => {
+  let t = R(e, e => {
     var t;
     return null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : ""
   });
-  return R(e, "name", t)
+  return f(e, "name", t)
 }
 
 function p(e) {
-  let t = f(e, e => {
+  let t = R(e, e => {
     var t;
     return null == e ? void 0 : null === (t = e.subscription_plans[0]) || void 0 === t ? void 0 : t.price
   });
-  return R(e, "priceTier", t)
+  return f(e, "priceTier", t)
 }
 
 function y(e) {
-  let t = f(e, e => {
+  let t = R(e, e => {
     var t;
     return null !== (t = null == e ? void 0 : e.description) && void 0 !== t ? t : ""
   });
-  return R(e, "description", t)
+  return f(e, "description", t)
 }
 
 function P(e, t) {
-  let s = f(e, e => {
+  let s = R(e, e => {
     if ((null == e ? void 0 : e.image_asset) != null) return (0, r.getAssetURL)(e.application_id, e.image_asset, t)
   });
-  return R(e, "image", s)
+  return f(e, "image", s)
 }
 
 function m(e, t) {
   let s = (0, D.default)(t, e);
-  return R(e, "roleIcon", E.useMemo(() => {
+  return f(e, "roleIcon", E.useMemo(() => {
     var e, t;
     return {
       icon: null !== (e = null == s ? void 0 : s.icon) && void 0 !== e ? e : void 0,
@@ -172,7 +172,7 @@ function v(e, t) {
 
 function H(e, t) {
   let s = (0, D.default)(t, e);
-  return R(e, "roleColor", E.useMemo(() => {
+  return f(e, "roleColor", E.useMemo(() => {
     var e;
     return null !== (e = null == s ? void 0 : s.color) && void 0 !== e ? e : U.DEFAULT_ROLE_COLOR
   }, [s]))
@@ -180,19 +180,19 @@ function H(e, t) {
 
 function V(e, t) {
   let s = (0, D.default)(t, e);
-  return R(e, "channelAccessFormat", E.useMemo(() => null == s ? O.AllChannelAccessOptions.SOME_CHANNELS_ACCESS : (0, S.isAllChannelsRole)(s) ? O.AllChannelAccessOptions.ALL_CHANNELS_ACCESS : O.AllChannelAccessOptions.SOME_CHANNELS_ACCESS, [s]))
+  return f(e, "channelAccessFormat", E.useMemo(() => null == s ? O.AllChannelAccessOptions.SOME_CHANNELS_ACCESS : (0, S.isAllChannelsRole)(s) ? O.AllChannelAccessOptions.ALL_CHANNELS_ACCESS : O.AllChannelAccessOptions.SOME_CHANNELS_ACCESS, [s]))
 }
 let B = [];
 
 function K(e) {
-  let t = f(e, e => null == e ? B : e.role_benefits.benefits.filter(o.isChannelBenefit));
-  return R(e, "channelBenefits", t)
+  let t = R(e, e => null == e ? B : e.role_benefits.benefits.filter(o.isChannelBenefit));
+  return f(e, "channelBenefits", t)
 }
 let F = [];
 
 function x(e) {
-  let t = f(e, e => null == e ? F : e.role_benefits.benefits.filter(o.isIntangibleBenefit));
-  return R(e, "intangibleBenefits", t)
+  let t = R(e, e => null == e ? F : e.role_benefits.benefits.filter(o.isIntangibleBenefit));
+  return f(e, "intangibleBenefits", t)
 }
 let b = new Set;
 
@@ -210,7 +210,7 @@ function j(e, t) {
 function w(e, t) {
   let s = (0, D.default)(t, e),
     _ = (0, u.useStateFromStoresArray)([I.default], () => I.default.getGuildEmoji(t), [t]);
-  return R(e, "tierEmojiIds", E.useMemo(() => null == s ? b : j(_, s.id), [_, s]))
+  return f(e, "tierEmojiIds", E.useMemo(() => null == s ? b : j(_, s.id), [_, s]))
 }
 
 function k(e) {
@@ -219,13 +219,13 @@ function k(e) {
     {
       selectedOption: E
     } = (0, c.default)(null !== (t = null == s ? void 0 : s.active_trial) && void 0 !== t ? t : null);
-  return R(e, "trialInterval", null != E ? E : null)
+  return f(e, "trialInterval", null != E ? E : null)
 }
 
 function Y(e) {
   var t;
   let s = (0, d.useSubscriptionTrial)(e);
-  return R(e, "trialLimit", null !== (t = null == s ? void 0 : s.max_num_active_trial_users) && void 0 !== t ? t : null)
+  return f(e, "trialLimit", null !== (t = null == s ? void 0 : s.max_num_active_trial_users) && void 0 !== t ? t : null)
 }
 
 function W(e) {
@@ -241,8 +241,8 @@ function J(e) {
 }
 
 function X(e) {
-  let t = f(e, e => null == e ? void 0 : e.subscription_plans[0]),
-    [s] = R(e, "priceTier", void 0);
+  let t = R(e, e => null == e ? void 0 : e.subscription_plans[0]),
+    [s] = f(e, "priceTier", void 0);
   return [E.useMemo(() => {
     var e, E, _, a, n;
     return {

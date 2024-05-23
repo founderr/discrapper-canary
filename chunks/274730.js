@@ -109,8 +109,8 @@ var E = s("654861"),
   C = s("699516"),
   U = s("594174"),
   M = s("55935"),
-  R = s("630388"),
-  f = s("823379"),
+  f = s("630388"),
+  R = s("823379"),
   h = s("971130"),
   p = s("709054"),
   y = s("981631"),
@@ -330,7 +330,7 @@ let V = new r.default("AuditLogUtils"),
         return t.map(e => (function(e) {
           if (e === i.GuildInviteFlags.IS_GUEST_INVITE) return H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_INVITE_GUEST_INVITE;
           return null
-        })(e)).filter(f.isNotNullish)
+        })(e)).filter(R.isNotNullish)
       }({
         newValue: t
       })
@@ -1193,13 +1193,13 @@ function el(e, t) {
                   } = function(e, t) {
                     let s = "number" == typeof e ? e : 0,
                       E = "number" == typeof t ? t : 0,
-                      _ = R.removeFlag(E, s),
-                      a = R.removeFlag(s, E),
+                      _ = f.removeFlag(E, s),
+                      a = f.removeFlag(s, E),
                       n = [],
                       T = [];
                     for (let e in P.ChannelFlags) {
                       let t = P.ChannelFlags[e];
-                      R.hasFlag(_, t) && n.push(t), R.hasFlag(a, t) && T.push(t)
+                      f.hasFlag(_, t) && n.push(t), f.hasFlag(a, t) && T.push(t)
                     }
                     return {
                       added: n,

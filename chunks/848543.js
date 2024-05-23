@@ -55,8 +55,8 @@ function v(e) {
     })
   }
   let {
-    Component: F,
-    play: B,
+    Component: B,
+    play: F,
     events: {
       onMouseEnter: H,
       onMouseLeave: V
@@ -93,7 +93,7 @@ function v(e) {
         disabled: P,
         onClick: () => {
           var t, n;
-          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(T.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!x), B()
+          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(T.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!x), F()
         },
         onMouseEnter: t => {
           var n, a;
@@ -107,7 +107,7 @@ function v(e) {
         fullWidth: !0,
         size: d.Button.Sizes.SMALL,
         ...O,
-        children: (0, a.jsx)(F, {
+        children: (0, a.jsx)(B, {
           className: l,
           size: "sm",
           color: x ? "white" : d.tokens.colors.INTERACTIVE_ACTIVE

@@ -15,91 +15,91 @@ var s = n("735250"),
   c = n("409059"),
   f = n("659900"),
   E = n("962220"),
-  I = n("473855"),
-  _ = n("306453"),
+  _ = n("473855"),
+  I = n("306453"),
   p = n("929809"),
   h = n("108427"),
   T = n("390885"),
-  g = n("314897"),
-  m = n("896797"),
-  N = n("819570"),
+  N = n("314897"),
+  g = n("896797"),
+  m = n("819570"),
   A = n("954824"),
   S = n("781428"),
   v = n("163671"),
   C = n("423527"),
   O = n("981631"),
   R = n("58346"),
-  x = n("701476"),
-  L = n("630724"),
-  D = n("436620"),
-  P = n("689938"),
-  M = n("146722"),
+  L = n("701476"),
+  x = n("630724"),
+  M = n("436620"),
+  D = n("689938"),
+  P = n("146722"),
   j = n("611273");
 o.default.initialize();
 class U extends a.PureComponent {
   componentDidMount() {
-    (0, h.trackAppUIViewed)("guildTemplate"), !D.IS_APP_COMPATIBLE_BROWSER && A.default.launch("discord://" + O.Routes.GUILD_TEMPLATE(this.props.code), () => void 0)
+    (0, h.trackAppUIViewed)("guildTemplate"), !M.IS_APP_COMPATIBLE_BROWSER && A.default.launch("discord://" + O.Routes.GUILD_TEMPLATE(this.props.code), () => void 0)
   }
   componentDidUpdate(e) {
     this.props.code !== e.code && E.default.resolveGuildTemplate(this.props.code)
   }
   renderButton(e, t) {
-    return D.IS_APP_COMPATIBLE_BROWSER ? (0, s.jsx)(N.Button, {
+    return M.IS_APP_COMPATIBLE_BROWSER ? (0, s.jsx)(m.Button, {
       className: j.marginTop40,
       onClick: t,
       children: e
-    }) : (0, s.jsx)(N.IncompatibleBrowser, {
+    }) : (0, s.jsx)(m.IncompatibleBrowser, {
       className: j.marginTop40
     })
   }
   renderSpinner(e) {
-    return (0, s.jsxs)(N.default, {
-      children: [(0, s.jsx)(N.Title, {
+    return (0, s.jsxs)(m.default, {
+      children: [(0, s.jsx)(m.Title, {
         children: e
-      }), (0, s.jsx)(N.AuthSpinner, {})]
+      }), (0, s.jsx)(m.AuthSpinner, {})]
     })
   }
   renderInvalidGuildTemplate() {
-    return (0, s.jsxs)(N.default, {
-      children: [(0, s.jsx)(N.Image, {
+    return (0, s.jsxs)(m.default, {
+      children: [(0, s.jsx)(m.Image, {
         src: n("167969"),
         className: j.marginBottom8
-      }), (0, s.jsx)(N.Title, {
+      }), (0, s.jsx)(m.Title, {
         className: i()(j.marginTop8, j.marginBottom8),
-        children: P.default.Messages.GUILD_TEMPLATE_INVALID_TITLE
-      }), (0, s.jsx)(N.SubTitle, {
-        children: P.default.Messages.GUILD_TEMPLATE_INVALID_SUBTITLE
-      }), this.renderButton(P.default.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)]
+        children: D.default.Messages.GUILD_TEMPLATE_INVALID_TITLE
+      }), (0, s.jsx)(m.SubTitle, {
+        children: D.default.Messages.GUILD_TEMPLATE_INVALID_SUBTITLE
+      }), this.renderButton(D.default.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)]
     })
   }
   renderAppOpened() {
-    return (0, s.jsxs)(N.default, {
-      children: [(0, s.jsx)(N.Title, {
+    return (0, s.jsxs)(m.default, {
+      children: [(0, s.jsx)(m.Title, {
         className: j.marginBottom8,
-        children: P.default.Messages.APP_OPENED_TITLE
-      }), (0, s.jsx)(N.SubTitle, {
-        children: P.default.Messages.APP_OPENED_BODY
-      }), this.renderButton(P.default.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)]
+        children: D.default.Messages.APP_OPENED_TITLE
+      }), (0, s.jsx)(m.SubTitle, {
+        children: D.default.Messages.APP_OPENED_BODY
+      }), this.renderButton(D.default.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)]
     })
   }
   renderAuthenticatedOrDownload() {
     let {
       guildTemplate: e
     } = this.props;
-    return (u()(null != e, "guild template must not be null"), e.state === R.GuildTemplateStates.RESOLVING) ? (0, s.jsx)(N.default, {
-      className: M.authBox,
-      children: (0, s.jsx)(_.default, {
+    return (u()(null != e, "guild template must not be null"), e.state === R.GuildTemplateStates.RESOLVING) ? (0, s.jsx)(m.default, {
+      className: P.authBox,
+      children: (0, s.jsx)(I.default, {
         guildTemplate: e
       })
-    }) : (0, s.jsx)(B, {
+    }) : (0, s.jsx)(G, {
       guildTemplate: e
     })
   }
   renderContinue() {
-    return (0, s.jsxs)(N.default, {
-      children: [(0, s.jsx)(N.Title, {
-        children: P.default.Messages.APP_NOT_OPENED
-      }), this.renderButton(P.default.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)]
+    return (0, s.jsxs)(m.default, {
+      children: [(0, s.jsx)(m.Title, {
+        children: D.default.Messages.APP_NOT_OPENED
+      }), this.renderButton(D.default.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)]
     })
   }
   render() {
@@ -110,14 +110,14 @@ class U extends a.PureComponent {
       transitionTo: a,
       location: l
     } = this.props;
-    if (null == e) return this.renderSpinner(P.default.Messages.LOADING);
+    if (null == e) return this.renderSpinner(D.default.Messages.LOADING);
     if (t === O.NativeAppStates.OPEN) return this.renderAppOpened();
-    if (t === O.NativeAppStates.OPENING) return this.renderSpinner(P.default.Messages.APP_OPENING);
+    if (t === O.NativeAppStates.OPENING) return this.renderSpinner(D.default.Messages.APP_OPENING);
     switch (e.state) {
       case R.GuildTemplateStates.RESOLVING:
-        return this.renderSpinner(P.default.Messages.APP_OPENING);
+        return this.renderSpinner(D.default.Messages.APP_OPENING);
       case R.GuildTemplateStates.RESOLVED:
-        if (n || !D.IS_APP_COMPATIBLE_BROWSER) return this.renderAuthenticatedOrDownload();
+        if (n || !M.IS_APP_COMPATIBLE_BROWSER) return this.renderAuthenticatedOrDownload();
         if (this.props.login) return (0, s.jsx)(S.default, {
           guildTemplate: e,
           transitionTo: a,
@@ -128,7 +128,7 @@ class U extends a.PureComponent {
           transitionTo: a,
           location: l,
           onRegister: () => {
-            (0, p.setNewUser)(x.NewUserTypes.ORGANIC_REGISTERED_GUILD_TEMPLATE), T.default.flowStart(L.FlowType.ORGANIC_GUILD_TEMPLATES, L.RegistrationSteps.NUF_STARTED)
+            (0, p.setNewUser)(L.NewUserTypes.ORGANIC_REGISTERED_GUILD_TEMPLATE), T.default.flowStart(x.FlowType.ORGANIC_GUILD_TEMPLATES, x.RegistrationSteps.NUF_STARTED)
           }
         });
       case R.GuildTemplateStates.EXPIRED:
@@ -158,8 +158,8 @@ function b(e) {
   let t = {
     guildTemplate: (0, o.useStateFromStores)([c.default], () => c.default.getGuildTemplate(e.code)),
     nativeAppState: (0, o.useStateFromStores)([d.default], () => d.default.getState(e.code)),
-    authenticated: (0, o.useStateFromStores)([g.default], () => g.default.isAuthenticated()),
-    defaultRoute: (0, o.useStateFromStores)([m.default], () => m.default.defaultRoute)
+    authenticated: (0, o.useStateFromStores)([N.default], () => N.default.isAuthenticated()),
+    defaultRoute: (0, o.useStateFromStores)([g.default], () => g.default.defaultRoute)
   };
   return (0, s.jsx)(U, {
     ...e,
@@ -167,30 +167,30 @@ function b(e) {
   })
 }
 
-function B(e) {
+function G(e) {
   let {
     guildTemplate: t
   } = e, {
     form: n,
     handleSubmit: a
   } = (0, f.default)(t, !1);
-  T.default.flowStep(L.FlowType.ORGANIC_GUILD_TEMPLATES, L.CreateGuildSteps.GUILD_CREATE);
+  T.default.flowStep(x.FlowType.ORGANIC_GUILD_TEMPLATES, x.CreateGuildSteps.GUILD_CREATE);
   let l = (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(N.Title, {
-      className: M.header,
-      children: P.default.Messages.GUILD_TEMPLATE_SETUP_DISCORD
-    }), n, (0, s.jsx)(N.Button, {
-      className: M.createButton,
+    children: [(0, s.jsx)(m.Title, {
+      className: P.header,
+      children: D.default.Messages.GUILD_TEMPLATE_SETUP_DISCORD
+    }), n, (0, s.jsx)(m.Button, {
+      className: P.createButton,
       onClick: a,
-      children: P.default.Messages.GUILD_TEMPLATE_CREATE_DISCORD
+      children: D.default.Messages.GUILD_TEMPLATE_CREATE_DISCORD
     })]
   });
   return (0, s.jsx)(v.default, {
-    className: M.authBox,
-    children: () => [(0, s.jsx)(I.default, {
+    className: P.authBox,
+    children: () => [(0, s.jsx)(_.default, {
       guildTemplate: t
     }, "template"), (0, s.jsx)("div", {
-      className: M.formContainer,
+      className: P.formContainer,
       children: l
     }, "contents")]
   })

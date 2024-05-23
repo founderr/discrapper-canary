@@ -37,8 +37,8 @@ var a = n("735250"),
   G = n("696287"),
   k = n("408026"),
   w = n("763916"),
-  F = n("306721"),
-  B = n("531551"),
+  B = n("306721"),
+  F = n("531551"),
   H = n("38618"),
   V = n("972830"),
   Y = n("981283"),
@@ -91,8 +91,8 @@ var a = n("735250"),
   eG = n("430824"),
   ek = n("819640"),
   ew = n("283595"),
-  eF = n("944486"),
-  eB = n("914010"),
+  eB = n("944486"),
+  eF = n("914010"),
   eH = n("695103"),
   eV = n("241890"),
   eY = n("396296"),
@@ -427,7 +427,7 @@ function e8(e) {
 }
 class te extends s.PureComponent {
   componentDidMount() {
-    M.default.initialize(), eQ.default.setZoomFactor(C.default.zoom), eC.default.init(), O.default.initialize(), eo.default.initialize(), k.default.initialize(), ex.default.initialize(), w.default.initialize(), ed.default.initialize(), J.default.initialize(), m.default.init(), B.default.init(), F.default.init(), ea.default.initialize(), T.default.initialize(), j.default.initialize(), ec.default.initialize(), I.default.initialize(), eP.default.initialize(), er.default.initialize(), g.default.initialize(), Y.default.init(), Z.default.init(), eW.default.init(), ez.default.init(), p.default.initialize(), ev.default.init(), eY.default.init(), eV.default.init(), eL.default.init(), eI.default.initialize(), eT.default.initialize(), eO.default.initialize(), eM.default.init(), U.default.initialize(), S.default.initialize(), em.default.initialize(), eg.default.initialize(), el.default.initialize(), es.default.initialize(), ei.default.initialize(), y.default.initialize(), X.default.init({
+    M.default.initialize(), eQ.default.setZoomFactor(C.default.zoom), eC.default.init(), O.default.initialize(), eo.default.initialize(), k.default.initialize(), ex.default.initialize(), w.default.initialize(), ed.default.initialize(), J.default.initialize(), m.default.init(), F.default.init(), B.default.init(), ea.default.initialize(), T.default.initialize(), j.default.initialize(), ec.default.initialize(), I.default.initialize(), eP.default.initialize(), er.default.initialize(), g.default.initialize(), Y.default.init(), Z.default.init(), eW.default.init(), ez.default.init(), p.default.initialize(), ev.default.init(), eY.default.init(), eV.default.init(), eL.default.init(), eI.default.initialize(), eT.default.initialize(), eO.default.initialize(), eM.default.init(), U.default.initialize(), S.default.initialize(), em.default.initialize(), eg.default.initialize(), el.default.initialize(), es.default.initialize(), ei.default.initialize(), y.default.initialize(), X.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -472,9 +472,9 @@ class te extends s.PureComponent {
         channelId: s,
         messageId: r,
         threadId: o
-      } = e5(n), u = (0, eh.isValidGuildId)(a), d = (0, eh.isValidChannelId)(s), c = (0, eh.isValidChannelId)(o), h = eB.default.getGuildId(), _ = h !== a;
+      } = e5(n), u = (0, eh.isValidGuildId)(a), d = (0, eh.isValidChannelId)(s), c = (0, eh.isValidChannelId)(o), h = eF.default.getGuildId(), _ = h !== a;
       if (u && _ && f.default.selectGuild(a), u && d) {
-        let n = eF.default.getChannelId(h),
+        let n = eB.default.getChannelId(h),
           i = n !== s;
         if (!e1 || _ || i || null != r) {
           e1 = !0, E.default.selectChannel({

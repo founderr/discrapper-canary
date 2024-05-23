@@ -7,17 +7,17 @@ var s, a, l, i, r = n("735250"),
   c = n("442837"),
   f = n("893776"),
   E = n("129293"),
-  I = n("108427"),
-  _ = n("314897"),
+  _ = n("108427"),
+  I = n("314897"),
   p = n("819570"),
   h = n("981631"),
   T = n("689938"),
-  g = n("611273");
+  N = n("611273");
 c.default.initialize();
-class m extends(i = u.PureComponent) {
+class g extends(i = u.PureComponent) {
   componentDidMount() {
     let e = (0, E.default)(this.props.location);
-    null != e && f.default.authorizeIPAddress(e), (0, I.trackAppUIViewed)("authorize_ip")
+    null != e && f.default.authorizeIPAddress(e), (0, _.trackAppUIViewed)("authorize_ip")
   }
   renderLoginButton() {
     if ("Android" === d().os.family || "iOS" === d().os.family) return null;
@@ -34,12 +34,12 @@ class m extends(i = u.PureComponent) {
       children: [(0, r.jsx)("img", {
         alt: "",
         src: n("211095"),
-        className: g.marginBottom20
+        className: N.marginBottom20
       }), (0, r.jsx)(p.Title, {
-        className: g.marginBottom8,
+        className: N.marginBottom8,
         children: T.default.Messages.AUTHORIZATION_EXPIRED
       }), (0, r.jsx)(p.SubTitle, {
-        className: g.marginBottom40,
+        className: N.marginBottom40,
         children: T.default.Messages._AUTH_EXPIRED_SUGGESTION
       }), this.renderLoginButton()]
     })
@@ -49,12 +49,12 @@ class m extends(i = u.PureComponent) {
       children: [(0, r.jsx)("img", {
         alt: "",
         src: n("640356"),
-        className: g.marginBottom20
+        className: N.marginBottom20
       }), (0, r.jsx)(p.Title, {
-        className: g.marginBottom8,
+        className: N.marginBottom8,
         children: T.default.Messages.IP_AUTHORIZATION_SUCCEEDED
       }), (0, r.jsx)(p.SubTitle, {
-        className: g.marginBottom40,
+        className: N.marginBottom40,
         children: T.default.Messages._AUTH_IP_AUTH_SUCCEEDED_SUGGESTION
       }), this.renderLoginButton()]
     })
@@ -74,14 +74,14 @@ class m extends(i = u.PureComponent) {
     return e ? this.renderFailed() : t ? this.renderSucceeded() : this.renderDefault()
   }
 }
-s = m, a = "defaultProps", l = {
+s = g, a = "defaultProps", l = {
   transitionTo: e => n.g.location.assign(e)
 }, a in s ? Object.defineProperty(s, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = c.default.connectStores([_.default], () => ({
-  verifyFailed: _.default.didVerifyFail(),
-  verifySucceeded: _.default.didVerifySucceed()
-}))(m)
+}) : s[a] = l, t.default = c.default.connectStores([I.default], () => ({
+  verifyFailed: I.default.didVerifyFail(),
+  verifySucceeded: I.default.didVerifySucceed()
+}))(g)

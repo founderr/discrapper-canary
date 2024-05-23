@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
     return P
   },
   getFirstRouteFor: function() {
-    return f
+    return R
   },
   useChannelBrowserChannelCount: function() {
     return y
@@ -16,7 +16,7 @@ s.r(t), s.d(t, {
     return p
   },
   useFilterCategoriesByQuery: function() {
-    return R
+    return f
   }
 }), s("733860");
 var E = s("470079"),
@@ -47,7 +47,7 @@ function M(e, t) {
   e.index = t
 }
 
-function R(e, t, s, _) {
+function f(e, t, s, _) {
   _ = _.toLowerCase();
   let n = (0, r.useCanSeeOnboardingHome)(e),
     T = E.useCallback((e, t) => !(n && e.channel.hasFlag(G.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== c.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || a()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [n]);
@@ -65,7 +65,7 @@ function R(e, t, s, _) {
   }, [t, s, T, _])
 }
 
-function f(e) {
+function R(e) {
   let t = e.getSections();
   if (t[o.SECTION_INDEX_COMMUNITY] > 0) switch (e.getCommunitySection().getRow(0)) {
     case O.ChannelListCommunityRow.GUILD_HOME:

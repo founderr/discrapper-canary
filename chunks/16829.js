@@ -35,7 +35,7 @@ let M = _.memo(function() {
       })
     })
   }),
-  R = _.memo(function() {
+  f = _.memo(function() {
     return (0, E.jsx)(i.Tooltip, {
       text: C.default.Messages.MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP,
       children: e => (0, E.jsx)(i.Text, {
@@ -47,7 +47,7 @@ let M = _.memo(function() {
       })
     })
   }),
-  f = {
+  R = {
     [O.JoinSourceType.UNSPECIFIED]: {
       type: O.JoinSourceType.UNSPECIFIED,
       getJoinTypeLabel: () => C.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN,
@@ -192,7 +192,7 @@ function P(e) {
     inviterUser: A,
     onClickInviter: l,
     ...I
-  } = e, r = null != s ? f[s] : null, o = s === O.JoinSourceType.INTEGRATION && null != a, L = _.useCallback(e => {
+  } = e, r = null != s ? R[s] : null, o = s === O.JoinSourceType.INTEGRATION && null != a, L = _.useCallback(e => {
     switch (e.stopPropagation(), e.preventDefault(), !0) {
       case null == t && null == s:
       case null == s:
@@ -281,8 +281,8 @@ t.default = _.memo(function(e) {
     sourceInviteCode: S,
     joinSourceType: g,
     integrationType: D
-  } = I, G = null != g ? f[g] : null, C = null !== (s = null == G ? void 0 : G.hasTooltip) && void 0 !== s && s;
-  return (g === O.JoinSourceType.INVITE || g === O.JoinSourceType.VANITY_URL) && N ? (0, E.jsx)(R, {}) : (0, E.jsx)(p, {
+  } = I, G = null != g ? R[g] : null, C = null !== (s = null == G ? void 0 : G.hasTooltip) && void 0 !== s && s;
+  return (g === O.JoinSourceType.INVITE || g === O.JoinSourceType.VANITY_URL) && N ? (0, E.jsx)(f, {}) : (0, E.jsx)(p, {
     hasTooltip: C && !i,
     inviterUser: null != d ? d : null,
     guildId: n,

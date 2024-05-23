@@ -51,7 +51,7 @@ function M(e) {
       errors: null === (n = S.default.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
       submitting: null === (a = S.default.getStateForGuild(t)) || void 0 === a ? void 0 : a.submitting
     }
-  }), D = (0, p.useDefaultGameIdForClan)(t, "ClanSetupModal"), b = s.useMemo(() => (0, v.getClanSetupProgressSteps)(P), [P]), [U, j] = s.useState(!1), [G, k] = s.useState(window.innerWidth), [w, F] = s.useState(1), [B, H] = s.useState(!0), V = (0, g.useFullScreenModalAnimationStyle)(), Y = (0, o.useSpring)({
+  }), D = (0, p.useDefaultGameIdForClan)(t, "ClanSetupModal"), b = s.useMemo(() => (0, v.getClanSetupProgressSteps)(P), [P]), [U, j] = s.useState(!1), [G, k] = s.useState(window.innerWidth), [w, B] = s.useState(1), [F, H] = s.useState(!0), V = (0, g.useFullScreenModalAnimationStyle)(), Y = (0, o.useSpring)({
     opacity: w,
     config: L,
     onStart: () => H(!0),
@@ -84,8 +84,8 @@ function M(e) {
     config: L,
     immediate: l
   }), q = s.useCallback(e => {
-    if (e === b.length) F(0), (0, C.trackConvertStepViewed)(t, "signature");
-    else if (0 === w) F(1);
+    if (e === b.length) B(0), (0, C.trackConvertStepViewed)(t, "signature");
+    else if (0 === w) B(1);
     else {
       var n;
       _.updateClanSetup(t, {
@@ -99,7 +99,7 @@ function M(e) {
   }, [t, y.currentStep]), s.useEffect(() => {
     let e = (0, h.getResizeObserver)((0, r.debounce)(() => k(window.innerWidth), 250));
     return (0, h.watch)(e, document.body), () => (0, h.unwatch)(e, document.body)
-  }, [w, B]), s.useEffect(() => {
+  }, [w, F]), s.useEffect(() => {
     null != D && (0, _.updateClanSetup)(t, {
       requiredGameId: D
     })
@@ -107,7 +107,7 @@ function M(e) {
   let Q = s.useMemo(() => null != P && Object.values(P).some(e => null != e), [P]),
     Z = s.useMemo(() => null != P && Object.values(P).length > 0 ? (0, v.getClanSetupProgressSteps)(P).find(e => e.hasError) : null, [P]),
     X = s.useCallback(() => {
-      F(1), _.updateClanSetup(t, {
+      B(1), _.updateClanSetup(t, {
         currentStep: null == Z ? void 0 : Z.index
       })
     }, [null == Z ? void 0 : Z.index, t]),
@@ -175,14 +175,14 @@ function M(e) {
           children: [(0, a.jsx)(o.animated.div, {
             style: Y,
             className: i()(O.stepsContainer, {
-              [O.hidden]: !B
+              [O.hidden]: !F
             }),
             children: (0, a.jsx)(N.default, {
               guildId: t
             })
           }), (0, a.jsx)("div", {
             className: i()(O.navigationContainer, {
-              [O.elevatedNavigationContainer]: !B
+              [O.elevatedNavigationContainer]: !F
             }),
             children: (0, a.jsx)(T.default, {
               steps: b,
@@ -190,25 +190,25 @@ function M(e) {
               updateCurrentStep: q,
               animationStyle: Y,
               animationClassName: i()({
-                [O.hidden]: !B
+                [O.hidden]: !F
               })
             })
           })]
         }), (0, a.jsx)(o.animated.div, {
           style: Y,
           className: i()(O.divider, {
-            [O.hidden]: !B,
-            [O.dividerResponsive]: B
+            [O.hidden]: !F,
+            [O.dividerResponsive]: F
           })
         }), (0, a.jsx)(o.animated.div, {
           style: W,
           className: i()(O.sidebar, {
-            [O.sidebarResponsive]: B
+            [O.sidebarResponsive]: F
           }),
           children: (0, a.jsx)(A.default, {
             guildId: t,
             signed: U,
-            setSigned: B ? void 0 : j,
+            setSigned: F ? void 0 : j,
             sidebarWidth: 380,
             windowWidth: G,
             transition: K,

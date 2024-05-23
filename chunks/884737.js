@@ -13,7 +13,7 @@ s.r(t), s.d(t, {
     return v
   },
   GuildChangeStrings: function() {
-    return f
+    return R
   },
   GuildScheduledEventChangeStrings: function() {
     return K
@@ -91,10 +91,10 @@ var E = s("654861"),
   C = s("689938");
 let U = new A.default("AuditLogUtils"),
   M = -1,
-  R = () => ({
+  f = () => ({
     [G.AuditLogChangeKeys.REASON]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
   }),
-  f = () => ({
+  R = () => ({
     [G.AuditLogChangeKeys.NAME]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
     [G.AuditLogChangeKeys.DESCRIPTION]: e_(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE),
     [G.AuditLogChangeKeys.ICON_HASH]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_ICON_HASH_CHANGE,
@@ -144,7 +144,7 @@ let U = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTIONS,
     [G.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_REMINDER_NOTIFICATIONS,
     [G.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
-    ...R()
+    ...f()
   }),
   h = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE),
@@ -185,7 +185,7 @@ let U = new A.default("AuditLogUtils"),
       false: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_OFF
     },
     [G.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
-    ...R()
+    ...f()
   }),
   y = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE),
@@ -205,7 +205,7 @@ let U = new A.default("AuditLogUtils"),
     },
     [G.AuditLogChangeKeys.ICON_HASH]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_ICON_HASH_CHANGE,
     [G.AuditLogChangeKeys.UNICODE_EMOJI]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
-    ...R()
+    ...f()
   }),
   P = () => ({
     [G.AuditLogChangeKeys.CODE]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
@@ -222,7 +222,7 @@ let U = new A.default("AuditLogUtils"),
       true: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_ON,
       false: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_OFF
     },
-    ...R()
+    ...f()
   }),
   m = () => ({
     [G.AuditLogChangeKeys.CHANNEL_ID]: eE(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE),
@@ -232,13 +232,13 @@ let U = new A.default("AuditLogUtils"),
   }),
   v = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE),
-    ...R()
+    ...f()
   }),
   H = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE),
     [G.AuditLogChangeKeys.TAGS]: eE(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE),
     [G.AuditLogChangeKeys.DESCRIPTION]: eE(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
-    ...R()
+    ...f()
   }),
   V = () => ({
     [G.AuditLogChangeKeys.ENABLE_EMOTICONS]: {
@@ -250,7 +250,7 @@ let U = new A.default("AuditLogUtils"),
       1: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_KICK_FROM_SERVER
     },
     [G.AuditLogChangeKeys.EXPIRE_GRACE_PERIOD]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_GRACE_PERIOD,
-    ...R()
+    ...f()
   }),
   B = () => ({
     [G.AuditLogChangeKeys.TOPIC]: eE(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE),
@@ -258,7 +258,7 @@ let U = new A.default("AuditLogUtils"),
       [O.GuildScheduledEventPrivacyLevel.GUILD_ONLY]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
       [O.GuildScheduledEventPrivacyLevel.PUBLIC]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC
     },
-    ...R()
+    ...f()
   }),
   K = () => ({
     [G.AuditLogChangeKeys.NAME]: C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
@@ -282,7 +282,7 @@ let U = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.CHANNEL_ID]: e_(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL_CLEAR, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL),
     [G.AuditLogChangeKeys.LOCATION]: e_(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION_CLEAR, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION),
     [G.AuditLogChangeKeys.RECURRENCE_RULE]: e_(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE_CLEAR, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE),
-    ...R()
+    ...f()
   }),
   F = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE),
@@ -300,11 +300,11 @@ let U = new A.default("AuditLogUtils"),
     },
     [G.AuditLogChangeKeys.AUTO_ARCHIVE_DURATION]: eE(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CREATE, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CHANGE),
     [G.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: eE(C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
-    ...R()
+    ...f()
   }),
   x = e => {
     let t = {
-      ...R()
+      ...f()
     };
     return null == e || e.forEach(e => {
       e.newValue ? e.newValue.permission ? t[e.key] = C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_GRANTED : t[e.key] = C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_DENIED : t[e.key] = C.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_REMOVED

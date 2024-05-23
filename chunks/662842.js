@@ -39,8 +39,8 @@ var a, s, l = n("735250"),
   G = n("393112"),
   k = n("170039"),
   w = n("898140"),
-  F = n("981631"),
-  B = n("765305"),
+  B = n("981631"),
+  F = n("765305"),
   H = n("689938"),
   V = n("53116");
 (s = a || (a = {}))[s.STAGE = 0] = "STAGE", s[s.EVENT_EXTERNAL = 1] = "EVENT_EXTERNAL", s[s.EVENT_VOICE = 2] = "EVENT_VOICE", s[s.STUDY_ROOM = 3] = "STUDY_ROOM";
@@ -59,7 +59,7 @@ function Y(e) {
     isEventNoticeHidden: S.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([x.default], () => x.default.can(F.Permissions.CONNECT, a)), Z = (0, M.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
+  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([x.default], () => x.default.can(B.Permissions.CONNECT, a)), Z = (0, M.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
   i.useEffect(() => {
     null != X && (0, f.getUser)(X)
   }, [X]);
@@ -138,7 +138,7 @@ function Y(e) {
         }
       }
     } else {
-      if (t.entity_type === B.GuildScheduledEventEntityTypes.STAGE_INSTANCE && _) {
+      if (t.entity_type === F.GuildScheduledEventEntityTypes.STAGE_INSTANCE && _) {
         let e = H.default.Messages.STAGE_CHANNEL_JOIN_BUTTON;
         return (null == i ? void 0 : i.speaker) ? e = H.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != i && (e = H.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
           noticeType: 0,
@@ -170,7 +170,7 @@ function Y(e) {
           })
         }
       }
-      if (t.entity_type === B.GuildScheduledEventEntityTypes.EXTERNAL) {
+      if (t.entity_type === F.GuildScheduledEventEntityTypes.EXTERNAL) {
         let e = (0, T.getLocationFromEvent)(t);
         if (null == e) return {
           noticeType: null
@@ -205,7 +205,7 @@ function Y(e) {
             })]
           })
         }
-      } else if (t.entity_type === B.GuildScheduledEventEntityTypes.VOICE && null != a) {
+      } else if (t.entity_type === F.GuildScheduledEventEntityTypes.VOICE && null != a) {
         let e = (0, h.getChannelIconComponent)(a),
           n = C.default.getUserCount(t.id, S);
         return {

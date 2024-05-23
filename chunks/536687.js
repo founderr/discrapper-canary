@@ -60,8 +60,8 @@ function N(e) {
     } = (0, c.useHubStudyGroupExperiment)(e),
     k = j.length > 0,
     w = G && !(null == e ? void 0 : e.hasFeature(A.GuildFeatures.HUB)),
-    F = (0, d.useGuildUpcomingEventsNotice)(n),
-    B = (0, i.useStateFromStores)([_.default], () => null != _.default.getActiveGuildSignUp(n));
+    B = (0, d.useGuildUpcomingEventsNotice)(n),
+    F = (0, i.useStateFromStores)([_.default], () => null != _.default.getActiveGuildSignUp(n));
   if (l.useEffect(() => {
       o.default.getGuildEventsForCurrentUser(n)
     }, [n]), l.useEffect(() => {
@@ -74,11 +74,11 @@ function N(e) {
     }, [n, x]), v) return 0;
   if (N) return 1;
   if (R) return 2;
-  else if (D || null != F) return 3;
+  else if (D || null != B) return 3;
   else if (b) return 4;
   else if (U) return 5;
   else if (k) return 6;
   else if (w) return 7;
-  else if (B) return 8;
+  else if (F) return 8;
   return null
 }(a = s || (s = {}))[a.ENABLE_PUBLIC_GUILD = 0] = "ENABLE_PUBLIC_GUILD", a[a.APPLIED_GUILD_BOOST_GRACE_PERIOD = 1] = "APPLIED_GUILD_BOOST_GRACE_PERIOD", a[a.MAX_MEMBER_COUNT = 2] = "MAX_MEMBER_COUNT", a[a.GUILD_LIVE_CHANNEL = 3] = "GUILD_LIVE_CHANNEL", a[a.GUILD_MFA_WARNING = 4] = "GUILD_MFA_WARNING", a[a.COMMANDS_MIGRATION = 5] = "COMMANDS_MIGRATION", a[a.APPLICATION_SUBSCRIPTION_EXPIRATION = 6] = "APPLICATION_SUBSCRIPTION_EXPIRATION", a[a.HUB_STUDY_ROOM = 7] = "HUB_STUDY_ROOM", a[a.SIGNUP = 8] = "SIGNUP", a[a.CLAN_UPSELL = 9] = "CLAN_UPSELL"

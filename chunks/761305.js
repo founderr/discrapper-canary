@@ -10,8 +10,8 @@ var s, a = n("735250"),
   c = n("896797"),
   f = n("819570"),
   E = n("129293"),
-  I = n("981631"),
-  _ = n("689938"),
+  _ = n("981631"),
+  I = n("689938"),
   p = n("611273");
 
 function h(e, t, n) {
@@ -28,7 +28,7 @@ class T extends(s = l.PureComponent) {
     let e = (0, E.default)(this.props.location),
       t = (0, i.parse)(this.props.location.search);
     u.HTTP.post({
-      url: I.Endpoints.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+      url: _.Endpoints.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
       body: {
         token: e,
         pixel_uuid: t.hash,
@@ -66,23 +66,23 @@ class T extends(s = l.PureComponent) {
     return (0, a.jsxs)(f.default, {
       children: [(0, a.jsx)(f.Title, {
         className: p.marginBottom8,
-        children: _.default.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_HEADER
+        children: I.default.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_HEADER
       }), (0, a.jsx)(f.SubTitle, {
-        children: _.default.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({
+        children: I.default.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({
           guildName: n.name
         })
       }), (0, a.jsx)(f.Button, {
         className: p.marginTop40,
         onClick: () => t(e),
-        children: _.default.Messages.CONTINUE_TO_WEBAPP
+        children: I.default.Messages.CONTINUE_TO_WEBAPP
       }), (0, a.jsx)(f.Button, {
         className: p.marginTop8,
         color: f.Button.Colors.LINK,
         look: f.Button.Looks.LINK,
         onClick: () => {
-          t(I.Routes.USER_GUILD_NOTIFICATION_SETTINGS(n.id))
+          t(_.Routes.USER_GUILD_NOTIFICATION_SETTINGS(n.id))
         },
-        children: _.default.Messages.SERVER_HIGHLIGHT_MANAGE_SETTINGS
+        children: I.default.Messages.SERVER_HIGHLIGHT_MANAGE_SETTINGS
       })]
     })
   }
@@ -97,13 +97,13 @@ class T extends(s = l.PureComponent) {
         className: p.marginBottom20
       }), (0, a.jsx)(f.Title, {
         className: p.marginBottom8,
-        children: _.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
+        children: I.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
       }), (0, a.jsx)(f.SubTitle, {
-        children: _.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
+        children: I.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
       }), (0, a.jsx)(f.Button, {
         className: p.marginTop40,
         onClick: () => t(e),
-        children: _.default.Messages.CONTINUE_TO_WEBAPP
+        children: I.default.Messages.CONTINUE_TO_WEBAPP
       })]
     })
   }

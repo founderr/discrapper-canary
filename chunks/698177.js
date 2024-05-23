@@ -11,51 +11,51 @@ var s = n("735250"),
   c = n("952802"),
   f = n("819570"),
   E = n("441674"),
-  I = n("815660"),
-  _ = n("689938"),
+  _ = n("815660"),
+  I = n("689938"),
   p = n("961047"),
   h = n("611273");
 t.default = () => {
-  let [e, t] = a.useState(""), [l, T] = a.useState(""), [g, m] = a.useState(!1), [N, A] = a.useState(!1), [S, v] = a.useState(null), [C, O] = a.useState(null), R = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), x = R.code.split(" ")[0], L = async () => {
+  let [e, t] = a.useState(""), [l, T] = a.useState(""), [N, g] = a.useState(!1), [m, A] = a.useState(!1), [S, v] = a.useState(null), [C, O] = a.useState(null), R = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), L = R.code.split(" ")[0], x = async () => {
     try {
       await u.default.resendCode(e)
     } catch (e) {
       O(e.body.message)
     }
-  }, D = async () => {
-    m(!0);
+  }, M = async () => {
+    g(!0);
     try {
       let {
         token: t
-      } = await u.default.verifyPhone(x + e, l);
+      } = await u.default.verifyPhone(L + e, l);
       v(null), O(null), A(!0), u.default.validatePhoneForSupport(t)
     } catch (e) {
       e.body.message ? (v(null), O(e.body.message)) : (v(e.body.phone), O(e.body.code))
     } finally {
-      m(!1)
+      g(!1)
     }
-  }, P = (0, s.jsxs)(f.default, {
+  }, D = (0, s.jsxs)(f.default, {
     children: [(0, s.jsx)(f.Image, {
       src: n("292824")
     }), (0, s.jsxs)(f.Title, {
       className: i()(h.marginTop20, p.flex, p.justifyCenter, p.alignCenter),
-      children: [_.default.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED, (0, s.jsx)(E.default, {
+      children: [I.default.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED, (0, s.jsx)(E.default, {
         className: h.marginLeft8
       })]
     })]
   });
-  return N ? P : (0, s.jsxs)(f.default, {
+  return m ? D : (0, s.jsxs)(f.default, {
     children: [(0, s.jsx)(f.Title, {
-      children: _.default.Messages.ENTER_CODE
+      children: I.default.Messages.ENTER_CODE
     }), (0, s.jsx)(f.SubTitle, {
       className: h.marginTop8,
-      children: _.default.Messages.VERIFY_PHONE_FOR_SUPPORT
+      children: I.default.Messages.VERIFY_PHONE_FOR_SUPPORT
     }), (0, s.jsxs)(f.Block, {
       className: h.marginTop20,
       children: [(0, s.jsx)(c.default, {
-        label: _.default.Messages.FORM_LABEL_PHONE_NUMBER,
+        label: I.default.Messages.FORM_LABEL_PHONE_NUMBER,
         alpha2: R.alpha2,
-        countryCode: x,
+        countryCode: L,
         value: e,
         autoComplete: "off",
         spellCheck: "false",
@@ -64,21 +64,21 @@ t.default = () => {
         error: S
       }), (0, s.jsx)(f.Input, {
         className: h.marginTop20,
-        label: _.default.Messages.CONFIRMATION_CODE,
+        label: I.default.Messages.CONFIRMATION_CODE,
         value: l,
         onChange: T,
-        maxLength: I.PHONE_VERIFICATION_CODE_NUM_DIGITS,
+        maxLength: _.PHONE_VERIFICATION_CODE_NUM_DIGITS,
         error: C
       }), (0, s.jsx)(f.Button, {
         size: f.Button.Sizes.SMALL,
         look: f.Button.Looks.LINK,
-        onClick: L,
-        children: _.default.Messages.RESEND_CODE
+        onClick: x,
+        children: I.default.Messages.RESEND_CODE
       }), (0, s.jsx)(f.Button, {
         className: h.marginTop20,
-        onClick: D,
-        submitting: g,
-        children: _.default.Messages.DONE
+        onClick: M,
+        submitting: N,
+        children: I.default.Messages.DONE
       })]
     })]
   })

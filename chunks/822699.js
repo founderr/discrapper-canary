@@ -11,30 +11,30 @@ var s = n("735250"),
   c = n("533307"),
   f = n("447543"),
   E = n("126399"),
-  I = n("765717"),
-  _ = n("267394"),
+  _ = n("765717"),
+  I = n("267394"),
   p = n("761305"),
   h = n("698177"),
   T = n("409059"),
-  g = n("962220"),
-  m = n("637776"),
-  N = n("264229"),
+  N = n("962220"),
+  g = n("637776"),
+  m = n("264229"),
   A = n("677760"),
   S = n("314897"),
   v = n("828695"),
   C = n("82142"),
   O = n("701190"),
   R = n("626135"),
-  x = n("81063"),
-  L = n("449934"),
-  D = n("768581"),
-  P = n("625054"),
-  M = n("645499"),
+  L = n("81063"),
+  x = n("449934"),
+  M = n("768581"),
+  D = n("625054"),
+  P = n("645499"),
   j = n("320830"),
   U = n("721751"),
   b = n("718182"),
-  B = n("223543"),
-  G = n("73906"),
+  G = n("223543"),
+  B = n("73906"),
   y = n("299852"),
   F = n("39514"),
   V = n("236446"),
@@ -60,15 +60,15 @@ let $ = (0, j.default)(H.default),
   ea = (0, j.default)(A.default),
   el = (0, j.default)(W.default),
   ei = (0, j.default)(b.default),
-  er = (0, j.default)(B.default),
+  er = (0, j.default)(G.default),
   eu = (0, j.default)(Z.default),
   eo = (0, j.default)(h.default),
   ed = (0, j.default)(J.default),
   ec = (0, j.default)(y.default),
   ef = (0, j.default)(p.default),
-  eE = (0, j.default)(m.default),
-  eI = (0, j.default)(G.default),
-  e_ = (0, j.default)(K.default),
+  eE = (0, j.default)(g.default),
+  e_ = (0, j.default)(B.default),
+  eI = (0, j.default)(K.default),
   ep = (0, j.default)(X.default),
   eh = (0, j.default)(z.default);
 class eT extends a.PureComponent {
@@ -80,15 +80,15 @@ class eT extends a.PureComponent {
     } = e, {
       backgroundId: i
     } = t, r = null !== (n = (0, l.parse)(a.search).redirect_to) && void 0 !== n ? n : null;
-    (null == r || "" === r || !(0, M.isSafeRedirect)(r) || r.startsWith(q.Routes.ME)) && (r = null);
+    (null == r || "" === r || !(0, P.isSafeRedirect)(r) || r.startsWith(q.Routes.ME)) && (r = null);
     let u = null;
-    if (null == s) u = (0, L.getArtForPath)(r);
+    if (null == s) u = (0, x.getArtForPath)(r);
     else if ((null == s ? void 0 : s.state) === q.InviteStates.RESOLVED) {
       let {
         guild: e,
         target_application: t
       } = s;
-      null != t ? null != i && (u = (0, x.getAssetImage)(t.id, i, 1024)) : null != e && "string" == typeof e.splash && (u = D.default.getGuildSplashURL({
+      null != t ? null != i && (u = (0, L.getAssetImage)(t.id, i, 1024)) : null != e && "string" == typeof e.splash && (u = M.default.getGuildSplashURL({
         id: e.id,
         splash: e.splash
       }))
@@ -105,8 +105,8 @@ class eT extends a.PureComponent {
       isAuthenticated: n
     } = this.props;
     null != e && (!t && n && d.default.getExperiments(!0), R.default.track(q.AnalyticEvents.INVITE_OPENED, {
-      invite_code: (0, N.parseInviteCodeFromInviteKey)(e),
-      load_time: P.default.getTimeSinceNavigationStart()
+      invite_code: (0, m.parseInviteCodeFromInviteKey)(e),
+      load_time: D.default.getTimeSinceNavigationStart()
     }, {
       flush: !0
     })), (t || Q.CONFERENCE_MODE_ENABLED) && this.resolveInvite(), this.resolveGiftCode(), this.resolveGuildTemplate(), E.default.initialize()
@@ -126,7 +126,7 @@ class eT extends a.PureComponent {
       let {
         target_application: t
       } = e;
-      null != t && (0, x.fetchAssetIds)(t.id, ["embedded_splash"]).then(e => {
+      null != t && (0, L.fetchAssetIds)(t.id, ["embedded_splash"]).then(e => {
         let [t] = e;
         return this.setState({
           backgroundId: t
@@ -142,7 +142,7 @@ class eT extends a.PureComponent {
       let {
         invite: t
       } = await f.default.resolveInvite(e, q.PageAnalyticsLocations.INVITE);
-      null != t && (0, _.updateAuthInvite)(t)
+      null != t && (0, I.updateAuthInvite)(t)
     })(), f.default.openNativeAppModal(e)
   }
   resolveGuildTemplate() {
@@ -151,10 +151,10 @@ class eT extends a.PureComponent {
     } = this.props;
     null != e && (R.default.track(q.AnalyticEvents.GUILD_TEMPLATE_OPENED, {
       guild_template_code: e,
-      load_time: P.default.getTimeSinceNavigationStart()
+      load_time: D.default.getTimeSinceNavigationStart()
     }, {
       flush: !0
-    }), g.default.resolveGuildTemplate(e), g.default.openNativeAppModal(e))
+    }), N.default.resolveGuildTemplate(e), N.default.openNativeAppModal(e))
   }
   resolveGiftCode() {
     let {
@@ -173,20 +173,20 @@ class eT extends a.PureComponent {
     } = this.props;
     return (0, s.jsxs)(U.default, {
       splash: e,
-      children: [(0, s.jsx)(I.default, {
+      children: [(0, s.jsx)(_.default, {
         path: q.Routes.LOGIN_HANDOFF,
         render: e => (0, s.jsx)(ee, {
           ...e,
           redirectTo: t
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         impressionName: i.ImpressionNames.USER_LOGIN,
         path: q.Routes.LOGIN,
         render: e => (0, s.jsx)($, {
           ...e,
           redirectTo: t
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         impressionName: i.ImpressionNames.USER_REGISTRATION,
         path: q.Routes.REGISTER,
         render: e => Q.CONFERENCE_MODE_ENABLED ? (0, s.jsx)(et, {
@@ -197,18 +197,18 @@ class eT extends a.PureComponent {
           ...e,
           redirectTo: t
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.GIFT_CODE_LOGIN(":giftCode"),
         render: e => (0, s.jsx)(es, {
           login: !0,
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.GIFT_CODE(":giftCode"),
         render: e => (0, s.jsx)(es, {
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: [q.Routes.INVITE_LOGIN(":inviteCode"), q.Routes.INVITE(":inviteCode")],
         render: e => {
           let {
@@ -220,7 +220,7 @@ class eT extends a.PureComponent {
             },
             location: a,
             transitionTo: l
-          } = e, i = (0, N.generateInviteKeyFromUrlParams)(t, a.search);
+          } = e, i = (0, m.generateInviteKeyFromUrlParams)(t, a.search);
           return r.isMobile || r.isTablet ? (0, s.jsx)(ea, {
             inviteKey: i,
             transitionTo: l
@@ -231,7 +231,7 @@ class eT extends a.PureComponent {
             login: n === q.Routes.INVITE_LOGIN(":inviteCode")
           })
         }
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: [q.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), q.Routes.GUILD_TEMPLATE(":guildTemplateCode")],
         render: e => {
           let {
@@ -253,75 +253,75 @@ class eT extends a.PureComponent {
             login: n === q.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode")
           })
         }
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.VERIFY,
         render: e => (0, s.jsx)(eu, {
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.VERIFY_HUB_EMAIL,
         render: e => (0, s.jsx)(eE, {
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.VERIFY_REQUEST,
         render: e => (0, s.jsx)(eo, {
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.DISABLE_EMAIL_NOTIFICATIONS,
         render: e => (0, s.jsx)(ec, {
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
         render: e => (0, s.jsx)(ef, {
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.AUTHORIZE_IP,
         render: e => (0, s.jsx)(ei, {
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.REJECT_IP,
         render: e => (0, s.jsx)(ed, {
           source: q.Routes.REJECT_IP,
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.REJECT_MFA,
         render: e => (0, s.jsx)(ed, {
           source: q.Routes.REJECT_MFA,
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.AUTHORIZE_PAYMENT,
         render: e => (0, s.jsx)(er, {
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.RESET,
         render: e => (0, s.jsx)(ed, {
           source: q.Routes.RESET,
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
-        render: e => (0, s.jsx)(e_, {
-          ...e
-        })
-      }), (0, s.jsx)(I.default, {
-        path: q.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"),
         render: e => (0, s.jsx)(eI, {
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
+        path: q.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"),
+        render: e => (0, s.jsx)(e_, {
+          ...e
+        })
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.REPORT,
         render: e => (0, s.jsx)(ep, {
           ...e
         })
-      }), (0, s.jsx)(I.default, {
+      }), (0, s.jsx)(_.default, {
         path: q.Routes.REPORT_SECOND_LOOK,
         render: e => (0, s.jsx)(eh, {
           ...e
@@ -348,7 +348,7 @@ t.default = u.default.connectStores([S.default, O.default, C.default, v.default,
   let {
     match: a,
     location: l
-  } = e, i = null == a ? void 0 : null === (t = a.params) || void 0 === t ? void 0 : t.inviteCode, r = Q.CONFERENCE_MODE_ENABLED ? Q.DEFAULT_INVITE_CODE : void 0, u = null != i ? (0, N.generateInviteKeyFromUrlParams)(i, l.search) : r, o = null == a ? void 0 : null === (n = a.params) || void 0 === n ? void 0 : n.giftCode, d = null == a ? void 0 : null === (s = a.params) || void 0 === s ? void 0 : s.guildTemplateCode;
+  } = e, i = null == a ? void 0 : null === (t = a.params) || void 0 === t ? void 0 : t.inviteCode, r = Q.CONFERENCE_MODE_ENABLED ? Q.DEFAULT_INVITE_CODE : void 0, u = null != i ? (0, m.generateInviteKeyFromUrlParams)(i, l.search) : r, o = null == a ? void 0 : null === (n = a.params) || void 0 === n ? void 0 : n.giftCode, d = null == a ? void 0 : null === (s = a.params) || void 0 === s ? void 0 : s.guildTemplateCode;
   return {
     inviteKey: u,
     isAuthenticated: S.default.isAuthenticated(),

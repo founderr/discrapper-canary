@@ -33,8 +33,8 @@ t.default = function(e) {
     j = r.useMemo(() => S.length === E.MAX_FORM_ELEMENTS, [S]),
     O = r.useMemo(() => S.some(l.isTermsFormField), [S]),
     D = r.useMemo(() => S.some(e => !(0, l.isTermsFormField)(e)), [S]),
-    F = b > 0,
-    P = (0, i.useIsMemberVerificationManualApproval)(t.id) || _,
+    P = b > 0,
+    F = (0, i.useIsMemberVerificationManualApproval)(t.id) || _,
     w = r.useCallback(() => {
       (0, s.showToast)((0, s.createToast)(p.default.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE))
     }, []),
@@ -99,10 +99,10 @@ t.default = function(e) {
         actionsLocation: _ ? "side" : "footer"
       }))]
     });
-  return P ? (0, n.jsxs)(n.Fragment, {
+  return F ? (0, n.jsxs)(n.Fragment, {
     children: [!_ && V, !D && (0, n.jsx)(c.default, {
       addFormField: G,
-      showManualApprovalWarning: !_ && !F,
+      showManualApprovalWarning: !_ && !P,
       guild: t,
       showHeader: !_
     }), M.map(e => (0, h.getFormFieldBuilderComponent)({
@@ -110,7 +110,7 @@ t.default = function(e) {
       formField: e,
       guild: t,
       index: S.indexOf(e),
-      isDragEnabled: F,
+      isDragEnabled: P,
       submittedGuildJoinRequestsCount: a,
       removeFormField: k,
       updateFormField: U,

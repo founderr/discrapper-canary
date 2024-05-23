@@ -20,8 +20,8 @@ let N = [d.Permissions.KICK_MEMBERS, d.Permissions.BAN_MEMBERS, d.Permissions.AD
   C = [],
   U = [],
   M = [],
-  R = !0,
-  f = !1,
+  f = !0,
+  R = !1,
   h = !1,
   p = !0,
   y = !1,
@@ -120,10 +120,10 @@ class F extends(E = A.default.Store) {
     return M
   }
   get isInitialLoading() {
-    return R
+    return f
   }
   get isLoading() {
-    return f
+    return R
   }
   get isLoadingNextPage() {
     return h
@@ -160,14 +160,14 @@ n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = F) ? Object.defineP
   writable: !0
 }) : _[a] = n, t.default = new F(l.default, {
   AUDIT_LOG_FETCH_START: function() {
-    f = !0
+    R = !0
   },
   AUDIT_LOG_FETCH_SUCCESS: function(e) {
     var t;
-    V = 0, R = !1, f = !1, p = !0, y = !1, g = B(e.logs), D = e.integrations, G = e.webhooks, O = e.guildScheduledEvents, C = null !== (t = e.automodRules) && void 0 !== t ? t : [], U = e.threads, M = e.applicationCommands, e.logs.length < d.AUDIT_LOG_PAGE_LIMIT && (p = !1)
+    V = 0, f = !1, R = !1, p = !0, y = !1, g = B(e.logs), D = e.integrations, G = e.webhooks, O = e.guildScheduledEvents, C = null !== (t = e.automodRules) && void 0 !== t ? t : [], U = e.threads, M = e.applicationCommands, e.logs.length < d.AUDIT_LOG_PAGE_LIMIT && (p = !1)
   },
   AUDIT_LOG_FETCH_FAIL: function() {
-    f = !1, y = !0, g = []
+    R = !1, y = !0, g = []
   },
   AUDIT_LOG_FETCH_NEXT_PAGE_START: function(e) {
     let {
@@ -222,6 +222,6 @@ n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = F) ? Object.defineP
     })
   },
   GUILD_SETTINGS_CLOSE: function() {
-    g = [], c = [], m = d.AuditLogActions.ALL, P = null, v = null, H = {}, V = 0, R = !0, D = [], G = [], O = [], C = [], U = []
+    g = [], c = [], m = d.AuditLogActions.ALL, P = null, v = null, H = {}, V = 0, f = !0, D = [], G = [], O = [], C = [], U = []
   }
 })

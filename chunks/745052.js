@@ -37,8 +37,8 @@ var a = n("735250"),
   G = n("792125"),
   k = n("647090"),
   w = n("385956"),
-  F = n("610697"),
-  B = n("26373"),
+  B = n("610697"),
+  F = n("26373"),
   H = n("486622"),
   V = n("922409"),
   Y = n("899740"),
@@ -59,7 +59,7 @@ function ea() {
   let e = s.useRef(null),
     t = (0, Y.useMessageRequestsCount)(),
     n = (0, W.default)(),
-    l = (0, B.useListHasSingleMessageRequest)(),
+    l = (0, F.useListHasSingleMessageRequest)(),
     u = (0, _.useIsRejectAllMessageRequestsEnabled)(),
     d = s.useCallback(() => {
       (0, c.showToast)((0, c.createToast)(ee.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE))
@@ -184,7 +184,7 @@ let el = function(e) {
     })
   },
   ei = e => {
-    let t = (0, F.default)(),
+    let t = (0, B.default)(),
       n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       l = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion);
     return s.useEffect(() => {

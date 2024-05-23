@@ -41,8 +41,8 @@ var a = n("735250"),
   G = n("676035"),
   k = n("427217"),
   w = n("605236"),
-  F = n("243778"),
-  B = n("730417"),
+  B = n("243778"),
+  F = n("730417"),
   H = n("524347"),
   V = n("853197"),
   Y = n("810280"),
@@ -95,8 +95,8 @@ var a = n("735250"),
   eG = n("374023"),
   ek = n("51144"),
   ew = n("998502"),
-  eF = n("981631"),
-  eB = n("215023"),
+  eB = n("981631"),
+  eF = n("215023"),
   eH = n("702512"),
   eV = n("689938"),
   eY = n("999872");
@@ -152,7 +152,7 @@ class eq extends s.PureComponent {
     } = this.props;
     if (null == l) return null;
     let r = ek.default.getName(l),
-      o = null != i && i !== eF.StatusTypes.UNKNOWN,
+      o = null != i && i !== eB.StatusTypes.UNKNOWN,
       u = null != n;
     return (u || o && l.isPomelo()) && (e = (0, a.jsx)(eN.default, {
       hoverText: s,
@@ -193,7 +193,7 @@ class eq extends s.PureComponent {
       color: l,
       delay: 500,
       onAnimationRest: (e, a) => {
-        n && !t && a.phase === eF.SpringTransitionPhases.LEAVE && this.setState({
+        n && !t && a.phase === eB.SpringTransitionPhases.LEAVE && this.setState({
           shouldShowCopiedFeedback: !1
         })
       },
@@ -236,7 +236,7 @@ class eq extends s.PureComponent {
       size: (0, L.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
     });
     return (0, a.jsx)(T.default, {
-      object: eF.AnalyticsObjects.AVATAR,
+      object: eB.AnalyticsObjects.AVATAR,
       children: (0, a.jsx)(m.Popout, {
         renderPopout: this.renderStatusPickerPopout,
         position: "top",
@@ -257,7 +257,7 @@ class eq extends s.PureComponent {
             src: n.getAvatarURL(void 0, 32, !1),
             avatarDecoration: o,
             "aria-label": n.username,
-            status: t ? eF.StatusTypes.STREAMING : s,
+            status: t ? eB.StatusTypes.STREAMING : s,
             isSpeaking: e,
             className: eY.avatar
           }), l || r ? (0, a.jsx)("div", {
@@ -284,7 +284,7 @@ class eq extends s.PureComponent {
       showTaglessAccountPanel: s
     } = this.props;
     return null == e ? null : (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(F.default, {
+      children: [(0, a.jsx)(B.default, {
         contentTypes: t.avatar,
         children: e => {
           let {
@@ -337,7 +337,7 @@ class eq extends s.PureComponent {
           onClick: this.handleToggleSelfDeaf,
           onContextMenu: this.handleOutputAudioContextMenu,
           awaitingRemote: s
-        }), (0, a.jsx)(F.default, {
+        }), (0, a.jsx)(B.default, {
           contentTypes: u.settings,
           children: e => {
             let {
@@ -473,7 +473,7 @@ class eq extends s.PureComponent {
     }), eW(this, "handleOpenAccountSettings", () => {
       this.handleOpenSettings()
     }), eW(this, "handleOpenSettings", function() {
-      let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eF.UserSettingsSections.ACCOUNT,
+      let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eB.UserSettingsSections.ACCOUNT,
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = arguments.length > 2 ? arguments[2] : void 0;
       g.default.open(e, t, n)
@@ -543,7 +543,7 @@ class eq extends s.PureComponent {
       (0, eU.copy)(ek.default.getUserTag(e, {
         decoration: "never",
         identifiable: "always"
-      })), eD.default.track(eF.AnalyticEvents.TEXT_COPIED, {
+      })), eD.default.track(eB.AnalyticEvents.TEXT_COPIED, {
         type: "User Tag"
       });
       let a = {
@@ -624,14 +624,14 @@ class eq extends s.PureComponent {
 function eQ() {
   var e, t;
   let n = (0, r.useStateFromStores)([eI.default], () => eI.default.getCurrentUser()),
-    l = (0, B.useShowEligibilityEnrollmentTooltip)(eH.PartnerGame.FORTNITE),
+    l = (0, F.useShowEligibilityEnrollmentTooltip)(eH.PartnerGame.FORTNITE),
     i = (0, r.useStateFromStores)([eh.default], () => eh.default.getId()),
     u = (0, G.useCustomStatusActivity)(),
     {
       streaming: d,
       status: c
     } = (0, r.useStateFromStoresObject)([ep.default], () => ({
-      streaming: null != ep.default.findActivity(e => e.type === eF.ActivityTypes.STREAMING),
+      streaming: null != ep.default.findActivity(e => e.type === eB.ActivityTypes.STREAMING),
       status: ep.default.getStatus()
     })),
     f = (0, R.default)({
@@ -672,7 +672,7 @@ function eQ() {
     {
       isPopupEnabled: j,
       isJoinedTagButtonEnabled: k,
-      isTaglessAccountPanelEnabled: F
+      isTaglessAccountPanelEnabled: B
     } = q.default.useExperiment({
       location: "08bd40_4"
     }, {
@@ -686,7 +686,7 @@ function eQ() {
     es = (0, A.useIsSafetyConsumerEducationBlockMuteBucket)(),
     el = (0, en.useCanSeeSafetyEducationReportingCoachmark)(),
     er = (0, eu.default)(n),
-    eo = (null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eB.GYOIKO_SAKURA_DECO_SKU_ID,
+    eo = (null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eF.GYOIKO_SAKURA_DECO_SKU_ID,
     ed = "account";
   (0, v.useTriggerDebuggingAA)({
     location: ed + " auto on",
@@ -709,7 +709,7 @@ function eQ() {
         }),
         u = s.useMemo(() => {
           let e = new Date().getTime();
-          return null != l && (l.status === eF.SubscriptionStatusTypes.ACTIVE || e - l.currentPeriodEnd.getTime() < ez)
+          return null != l && (l.status === eB.SubscriptionStatusTypes.ACTIVE || e - l.currentPeriodEnd.getTime() < ez)
         }, [l]);
       return s.useEffect(() => {
         (async () => {
@@ -745,7 +745,7 @@ function eQ() {
     serverMute: C,
     showRichProfilePopup: j,
     showTagAsButton: k,
-    showTaglessAccountPanel: F,
+    showTaglessAccountPanel: B,
     speaking: f,
     speakingWhileMuted: P,
     status: c,
