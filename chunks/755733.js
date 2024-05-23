@@ -4,4 +4,4 @@ s.r(t), s.d(t, {
   WebAuthnScreens: function() {
     return a
   }
-}), (n = a || (a = {})).INIT = "INIT", n.REGISTER = "REGISTER", n.NAME = "NAME", n.SUCCESS = "SUCCESS"
+}), (n = a || (a = {})).INIT = "INIT", n.EDIT = "EDIT", n.REGISTER = "REGISTER", n.NAME = "NAME", n.SUCCESS = "SUCCESS"
