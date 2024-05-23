@@ -261,8 +261,7 @@ S(v, "displayName", "ThreadMemberListStore"), t.default = new v(r.default, {
   },
   GUILD_ROLE_UPDATE: N,
   GUILD_ROLE_DELETE: N,
-  PASSIVE_UPDATE_V1: function(e) {
-    var t;
-    return null === (t = e.members) || void 0 === t ? void 0 : t.reduce((e, t) => A(t.user.id) || e, !1)
+  PASSIVE_UPDATE_V2: function(e) {
+    return e.members.reduce((e, t) => A(t.user.id) || e, !1)
   }
 })

@@ -1343,18 +1343,17 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     result: e.result,
     error: e.error
   })
-}), B(["PASSIVE_UPDATE_V1"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  var t, n;
+}), B(["PASSIVE_UPDATE_V2"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
   x({
-    type: "PASSIVE_UPDATE_V1",
+    type: "PASSIVE_UPDATE_V2",
     guildId: e.guild_id,
-    members: e.members,
-    channels: null === (t = e.channels) || void 0 === t ? void 0 : t.map(e => ({
+    members: e.updated_members,
+    channels: e.updated_channels.map(e => ({
       id: e.id,
       lastMessageId: e.last_message_id,
       lastPinTimestamp: e.last_pin_timestamp
     })),
-    voiceStates: null === (n = e.voice_states) || void 0 === n ? void 0 : n.map(e => {
+    voiceStates: e.updated_voice_states.map(e => {
       var t;
       return {
         channelId: e.channel_id,
@@ -1369,7 +1368,8 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
         suppress: e.suppress,
         userId: e.user_id
       }
-    })
+    }),
+    removedVoiceStateUsers: e.removed_voice_states
   })
 }), k(["PRIVATE_CHANNEL_INTEGRATION_CREATE"], e => {
   x({

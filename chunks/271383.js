@@ -639,8 +639,8 @@ l = "GuildMemberStore", (o = "displayName") in(a = ee) ? Object.defineProperty(a
   },
   IMPERSONATE_UPDATE: Q,
   IMPERSONATE_STOP: Q,
-  PASSIVE_UPDATE_V1: function(e) {
-    return null != e.members && K(e.guildId, e.members)
+  PASSIVE_UPDATE_V2: function(e) {
+    return !!(e.members.length > 0) && K(e.guildId, e.members)
   },
   CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES: function(e) {
     let {

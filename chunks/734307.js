@@ -280,8 +280,8 @@ u = "ChannelListStore", (a = "displayName") in(i = W) ? Object.defineProperty(i,
   MESSAGE_DELETE: y,
   NOTIFICATION_SETTINGS_UPDATE: x,
   OVERLAY_INITIALIZE: x,
-  PASSIVE_UPDATE_V1: function(e) {
-    return null != e.channels && (H.clearGuildId(e.guildId), !0)
+  PASSIVE_UPDATE_V2: function(e) {
+    return H.clearGuildId(e.guildId)
   },
   RECOMPUTE_READ_STATES: x,
   RESORT_THREADS: y,

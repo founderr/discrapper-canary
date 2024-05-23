@@ -145,7 +145,7 @@ class O extends l.default {
       CHANNEL_CREATE: e => this._handleDMCreate(e),
       CHANNEL_UPDATES: e => this._handleDMUpdates(e),
       CHANNEL_RECIPIENT_ADD: e => this._handleRecipientChanges(e),
-      PASSIVE_UPDATE_V1: e => this._handlePassiveUpdateV1(e)
+      PASSIVE_UPDATE_V2: e => this._handlePassiveUpdateV2(e)
     }), S(this, "_handleLogout", () => {
       this.rebootWebworker()
     }), S(this, "_handleConnectionOpen", () => {
@@ -218,8 +218,8 @@ class O extends l.default {
         nick: i
       } = e, r = h(n);
       null != r && (A(r, t, i), this.updateUsers([r]))
-    }), S(this, "_handlePassiveUpdateV1", e => {
-      null != e.members && this.updateUsers(N(e.members, e.guildId))
+    }), S(this, "_handlePassiveUpdateV2", e => {
+      this.updateUsers(N(e.members, e.guildId))
     }), S(this, "_handleRelationshipAdd", e => {
       let t = h(e.relationship.user);
       this.updateUsers([t])

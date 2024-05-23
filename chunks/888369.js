@@ -361,7 +361,7 @@ function el(e) {
 }
 
 function eu(e) {
-  return null != e.channels && V(e.guildId, e.channels.map(e => e.id))
+  return !!(e.channels.length > 0) && V(e.guildId, e.channels.map(e => e.id))
 }
 
 function ed(e) {
@@ -512,7 +512,7 @@ class eT extends S.default {
       THREAD_LIST_SYNC: el,
       THREAD_MEMBER_UPDATE: ea,
       THREAD_MEMBERS_UPDATE: eo,
-      PASSIVE_UPDATE_V1: eu,
+      PASSIVE_UPDATE_V2: eu,
       GUILD_MEMBER_UPDATE: X,
       USER_GUILD_SETTINGS_FULL_UPDATE: ec,
       USER_GUILD_SETTINGS_CHANNEL_UPDATE: eI,

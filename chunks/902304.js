@@ -49,7 +49,7 @@ class L extends l.default {
       AUDIO_TOGGLE_SELF_MUTE: e => this.handleAudioStateToggle(e),
       VOICE_STATE_UPDATES: e => this.handleVoiceStateUpdates(e),
       CONSOLE_COMMAND_UPDATE: e => this.handleConsoleCommandUpdate(e),
-      PASSIVE_UPDATE_V1: e => this.handleVoiceStateUpdates(e),
+      PASSIVE_UPDATE_V2: e => this.handleVoiceStateUpdates(e),
       REMOTE_SESSION_DISCONNECT: () => this.handleRemoteSessionDisconnect()
     }), C(this, "maybeConnect", e => {
       let t = function(e) {
@@ -84,11 +84,10 @@ class L extends l.default {
         g(o)
       }))
     }), C(this, "handleVoiceStateUpdates", e => {
-      var t;
-      let n = null !== (t = e.voiceStates) && void 0 !== t ? t : [],
-        i = h.default.getRemoteSessionId();
-      if (null == i) {
-        let e = n.map(e => {
+      let t = e.voiceStates,
+        n = h.default.getRemoteSessionId();
+      if (null == n) {
+        let e = t.map(e => {
           let {
             sessionId: t
           } = e;
@@ -96,13 +95,13 @@ class L extends l.default {
         }).filter(T.isNotNullish);
         return this.maybeConnect(e)
       }
-      let r = n.find(e => {
+      let i = t.find(e => {
         let {
           sessionId: t
         } = e;
-        return t === i
+        return t === n
       });
-      null != r && (this.rollbackCommandTimeout.stop(), g(r))
+      null != i && (this.rollbackCommandTimeout.stop(), g(i))
     }), C(this, "handleSessionsChanged", () => {
       let e = h.default.getRemoteSessionId();
       null != e && null == E.default.getSessionById(e) && (0, f.disconnectRemote)(), null == e && this.maybeConnect(Object.values(E.default.getSessions()))

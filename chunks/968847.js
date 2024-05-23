@@ -205,9 +205,9 @@ o = "ChannelListUnreadsStore", (r = "displayName") in(i = F) ? Object.defineProp
   MESSAGE_CREATE: w,
   MESSAGE_DELETE_BULK: w,
   MESSAGE_DELETE: w,
-  PASSIVE_UPDATE_V1: function(e) {
+  PASSIVE_UPDATE_V2: function(e) {
     let t = E.default.getGuild(e.guildId);
-    return !!(null != e.channels && null != t && t.hasFeature(L.GuildFeatures.COMMUNITY)) && j(e.guildId)
+    return !!(e.channels.length > 0 && null != t && t.hasFeature(L.GuildFeatures.COMMUNITY)) && j(e.guildId)
   },
   RESORT_THREADS: w,
   THREAD_CREATE: U,

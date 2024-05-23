@@ -47,14 +47,7 @@ function C(e, t) {
   return p[t][e] = i, i
 }
 
-function R(e, t) {
-  var n;
-  if (null == t) return !1;
-  let i = E.default.getChannel(t);
-  return !!(null != i && i.isGuildStageVoice()) && (null === (n = p[t]) || void 0 === n || delete n[e], !0)
-}
-
-function g(e) {
+function R(e) {
   let t = I.default.getChannels(e)[I.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
     let {
       channel: t
@@ -68,7 +61,7 @@ function g(e) {
   return t.length > 0
 }
 
-function L(e) {
+function g(e) {
   let {
     guildId: t,
     user: n
@@ -82,7 +75,7 @@ function L(e) {
   }(n.id, t)
 }
 
-function v(e) {
+function L(e) {
   let {
     guild: t
   } = e;
@@ -91,7 +84,7 @@ function v(e) {
     (null == n || n.guild_id === t.id) && delete p[e]
   }
 }
-class D extends(r = _.default.Store) {
+class v extends(r = _.default.Store) {
   initialize() {
     this.waitFor(T.default, E.default, f.default, S.default, h.default)
   }
@@ -115,12 +108,12 @@ class D extends(r = _.default.Store) {
     return C(e, t, i)
   }
 }
-l = "StageChannelRoleStore", (o = "displayName") in(a = D) ? Object.defineProperty(a, o, {
+l = "StageChannelRoleStore", (o = "displayName") in(a = v) ? Object.defineProperty(a, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new D(c.default, {
+}) : a[o] = l, t.default = new v(c.default, {
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
@@ -130,19 +123,16 @@ l = "StageChannelRoleStore", (o = "displayName") in(a = D) ? Object.defineProper
   CONNECTION_OPEN: function() {
     p = {}
   },
-  GUILD_MEMBER_REMOVE: L,
-  GUILD_MEMBER_UPDATE: L,
+  GUILD_MEMBER_REMOVE: g,
+  GUILD_MEMBER_UPDATE: g,
   GUILD_ROLE_UPDATE: function(e) {
     let {
       guildId: t
     } = e;
-    g(t)
+    R(t)
   },
-  PASSIVE_UPDATE_V1: function(e) {
-    var t;
-    let n = g(e.guildId);
-    for (let i of null !== (t = e.voiceStates) && void 0 !== t ? t : []) n = R(i.userId, i.channelId) || n;
-    return n
+  PASSIVE_UPDATE_V2: function(e) {
+    return R(e.guildId)
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
@@ -153,9 +143,14 @@ l = "StageChannelRoleStore", (o = "displayName") in(a = D) ? Object.defineProper
         userId: n,
         channelId: i
       } = t;
-      return R(n, i) || e
+      return function(e, t) {
+        var n;
+        if (null == t) return !1;
+        let i = E.default.getChannel(t);
+        return !!(null != i && i.isGuildStageVoice()) && (null === (n = p[t]) || void 0 === n || delete n[e], !0)
+      }(n, i) || e
     }, !1)
   },
-  GUILD_CREATE: v,
-  GUILD_DELETE: v
+  GUILD_CREATE: L,
+  GUILD_DELETE: L
 })

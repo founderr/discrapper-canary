@@ -248,13 +248,14 @@ h(D, "displayName", "SortedVoiceStateStore"), t.default = new D(l.default, {
     } = e;
     delete m[t.id]
   },
-  PASSIVE_UPDATE_V1: function(e) {
+  PASSIVE_UPDATE_V2: function(e) {
     var t, n;
     let i = !1,
       r = new Set(null === (t = m[e.guildId]) || void 0 === t ? void 0 : t.getUserIds()),
-      s = new Set(null === (n = e.voiceStates) || void 0 === n ? void 0 : n.map(e => e.userId));
+      s = new Set(null === (n = e.voiceStates) || void 0 === n ? void 0 : n.map(e => e.userId)),
+      a = new Set(e.removedVoiceStateUsers);
     for (let t of new Set([...r, ...s])) i = N(e.guildId).updateVoiceState(t) || i;
-    for (let t of s) r.has(t) && (i = N(e.guildId).updateMember(t) || i);
+    for (let t of r) !a.has(t) && (i = N(e.guildId).updateMember(t) || i);
     return i
   }
 })

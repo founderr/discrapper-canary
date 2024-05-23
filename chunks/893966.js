@@ -145,12 +145,12 @@ let v = new L(l.default, {
       n = N(t).updateClientMembers(Object.values(i)) || n
     }), n
   },
-  PASSIVE_UPDATE_V1: function(e) {
+  PASSIVE_UPDATE_V2: function(e) {
     let {
       members: t,
       guildId: n
     } = e;
-    return null != t && N(n).updateServerMembers(t)
+    return !!(t.length > 0) && N(n).updateServerMembers(t)
   },
   GUILD_CREATE: function(e) {
     let {

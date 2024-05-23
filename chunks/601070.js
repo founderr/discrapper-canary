@@ -386,8 +386,8 @@ a = "ActiveJoinedThreadsStore", (s = "displayName") in(r = $) ? Object.definePro
   CHANNEL_SELECT: function(e) {
     B(e), x()
   },
-  PASSIVE_UPDATE_V1: function(e) {
-    null != e.channels && V()
+  PASSIVE_UPDATE_V2: function(e) {
+    if (e.channels.length > 0) return M(e.guildId)
   },
   WINDOW_FOCUS: V,
   UPDATE_CHANNEL_DIMENSIONS: V,

@@ -419,10 +419,9 @@ function es(e) {
 }
 
 function ea(e) {
-  var t;
-  let n = !1;
-  for (let i of null !== (t = e.members) && void 0 !== t ? t : []) L(i.user) && (n = !0), null != m[i.user.id] && O(m[i.user.id], e.guildId, i.avatar) && (n = !0);
-  return n
+  let t = !1;
+  for (let n of e.members) L(n.user) && (t = !0), null != m[n.user.id] && O(m[n.user.id], e.guildId, n.avatar) && (t = !0);
+  return t
 }
 
 function eo(e) {
@@ -717,7 +716,7 @@ class ev extends T.default {
       LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: K,
       NOTIFICATION_CENTER_ITEM_CREATE: z,
       LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: j,
-      PASSIVE_UPDATE_V1: ea,
+      PASSIVE_UPDATE_V2: ea,
       LOCAL_MESSAGES_LOADED: eo,
       FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eA,
       PRIVATE_CHANNEL_INTEGRATION_CREATE: em,

@@ -1429,15 +1429,14 @@ let e$ = new eJ(T.default, {
     } = e, s = null === (t = ee.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
     return null != s && eq(s, n, i, r)
   },
-  PASSIVE_UPDATE_V1: function(e) {
-    var t;
-    let n = !1;
-    for (let i of null !== (t = e.channels) && void 0 !== t ? t : []) {
-      let e = ey.get(i.id),
-        t = eR(i.lastPinTimestamp);
-      (e.lastMessageId !== i.lastMessageId || e.lastPinTimestamp !== t) && (n = !0, e.lastMessageId = i.lastMessageId, e.lastPinTimestamp = t)
+  PASSIVE_UPDATE_V2: function(e) {
+    let t = !1;
+    for (let n of e.channels) {
+      let e = ey.get(n.id),
+        i = eR(n.lastPinTimestamp);
+      (e.lastMessageId !== n.lastMessageId || e.lastPinTimestamp !== i) && (t = !0, e.lastMessageId = n.lastMessageId, e.lastPinTimestamp = i)
     }
-    return n
+    return t
   },
   CLEAR_OLDEST_UNREAD_MESSAGE: function(e) {
     let {
