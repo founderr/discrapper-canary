@@ -14,8 +14,8 @@ var s = l("735250"),
   h = l("410030"),
   I = l("100527"),
   f = l("906732"),
-  E = l("1585"),
-  p = l("786761"),
+  p = l("1585"),
+  E = l("786761"),
   x = l("3148"),
   T = l("739566"),
   g = l("753206"),
@@ -36,7 +36,7 @@ var s = l("735250"),
   B = l("335131"),
   k = l("1870"),
   F = l("884697"),
-  U = l("539861"),
+  U = l("328456"),
   w = l("141011"),
   H = l("426171"),
   z = l("224068"),
@@ -176,9 +176,9 @@ let ea = e => {
       onClose: r,
       returnRef: I
     } = e, {
-      analyticsLocations: p
+      analyticsLocations: E
     } = (0, f.default)(), x = D.default.canUseCollectibles(l), [T, g] = (0, d.useStateFromStoresArray)([k.default], () => [k.default.getPurchase(t.skuId), k.default.isClaiming === t.skuId]), L = (0, A.default)({
-      analyticsLocations: p
+      analyticsLocations: E
     }), _ = (0, h.default)(), b = (0, c.isThemeDark)(_), j = (0, F.isPremiumCollectiblesProduct)(t), O = (0, F.extractPriceByPurchaseTypes)(t, Q.PriceSetAssignmentPurchaseTypes.DEFAULT), P = (null == O ? void 0 : O.amount) === 0, [R] = t.items;
     a.useEffect(() => {
       if ((null == R ? void 0 : R.type) === o.CollectiblesItemType.AVATAR_DECORATION) return (0, C.setPendingAvatarDecoration)(R), () => (0, C.setPendingAvatarDecoration)(void 0)
@@ -193,7 +193,7 @@ let ea = e => {
           product: t,
           category: i,
           returnRef: I,
-          analyticsLocations: p
+          analyticsLocations: E
         })
       }
     });
@@ -254,14 +254,14 @@ let ea = e => {
               look: u.Button.Looks.FILLED,
               onClick: () => {
                 if (r(), (0, m.popLayer)(), L(), (null == R ? void 0 : R.type) === o.CollectiblesItemType.AVATAR_DECORATION) {
-                  (0, E.openAvatarDecorationModal)({
+                  (0, p.openAvatarDecorationModal)({
                     initialSelectedDecoration: R,
-                    analyticsLocations: p
+                    analyticsLocations: E
                   });
                   return
                 }(null == R ? void 0 : R.type) === o.CollectiblesItemType.PROFILE_EFFECT && (0, S.openProfileEffectModal)({
                   initialSelectedEffectId: R.id,
-                  analyticsLocations: p
+                  analyticsLocations: E
                 })
               },
               children: et.default.Messages.COLLECTIBLES_USE_NOW
@@ -274,7 +274,7 @@ let ea = e => {
               onClick: async () => {
                 await (0, B.claimPremiumCollectiblesProduct)(t.skuId), r(), (0, q.default)({
                   product: t,
-                  analyticsLocations: p
+                  analyticsLocations: E
                 })
               },
               children: et.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION
@@ -283,7 +283,7 @@ let ea = e => {
               look: u.Button.Looks.FILLED,
               onClick: () => (0, v.default)({
                 skuId: t.skuId,
-                analyticsLocations: p,
+                analyticsLocations: E,
                 onClose: e => e ? r() : (0, ee.NOOP)()
               }),
               children: (null == R ? void 0 : R.type) === o.CollectiblesItemType.PROFILE_EFFECT ? et.default.Messages.COLLECTIBLES_BUY_PROFILE_EFFECT : et.default.Messages.COLLECTIBLES_BUY_DECORATION
@@ -308,7 +308,7 @@ let ea = e => {
     } = e, a = D.default.canUsePremiumProfileCustomization(l), i = (0, d.useStateFromStoresObject)([O.default], () => O.default.getAllPending()), n = (0, j.useDisplayProfileWithFetchEffect)(l.id), r = t.type === o.CollectiblesItemType.AVATAR_DECORATION, c = !!(null == n ? void 0 : n.getPreviewBio(i.pendingBio).value), [u] = t.items, {
       firstAvatarDecoration: m,
       firstProfileEffect: C
-    } = (0, U.useProductItems)(t);
+    } = (0, U.useShopProductItems)(t);
     return (0, s.jsxs)("div", {
       className: (null == u ? void 0 : u.type) === o.CollectiblesItemType.AVATAR_DECORATION ? el.previewsContainerInner : el.profileEffectPreviewsContainerInner,
       children: [(0, s.jsx)(_.default, {
@@ -337,7 +337,7 @@ let ea = e => {
     let {
       author: t
     } = e;
-    return (0, p.createMessageRecord)({
+    return (0, E.createMessageRecord)({
       ...(0, x.default)({
         author: t,
         channelId: "1337",
@@ -387,8 +387,8 @@ t.default = e => {
     returnRef: m,
     analyticsSource: C,
     analyticsLocations: h
-  } = e, E = (0, d.useStateFromStores)([P.default], () => P.default.getCurrentUser()), {
-    analyticsLocations: p
+  } = e, p = (0, d.useStateFromStores)([P.default], () => P.default.getCurrentUser()), {
+    analyticsLocations: E
   } = (0, f.default)([...h, I.default.COLLECTIBLES_SHOP_DETAILS_MODAL]);
   (0, H.useProductDetailsLinkableRoute)(r);
   let [x] = r.items;
@@ -397,12 +397,12 @@ t.default = e => {
     M.default.track(Q.AnalyticEvents.OPEN_MODAL, {
       type: Q.AnalyticsSections.COLLECTIBLES_SHOP_DETAILS_MODAL,
       source: C,
-      location_stack: p,
+      location_stack: E,
       sku_id: r.skuId,
       product_type: e
     }), r.items.map(B.productDetailsOpened)
-  }, [C, p, r.skuId, r.items, null == x ? void 0 : x.type]), null == E) ? null : (0, s.jsx)(f.AnalyticsLocationProvider, {
-    value: p,
+  }, [C, E, r.skuId, r.items, null == x ? void 0 : x.type]), null == p) ? null : (0, s.jsx)(f.AnalyticsLocationProvider, {
+    value: E,
     children: (0, s.jsx)(u.ModalRoot, {
       hideShadow: !0,
       className: el.modalRoot,
@@ -412,7 +412,7 @@ t.default = e => {
       children: (0, s.jsxs)(u.ModalContent, {
         className: el.modalContent,
         children: [(0, s.jsx)(ed, {
-          user: E,
+          user: p,
           product: r,
           category: c,
           onClose: n
@@ -425,7 +425,7 @@ t.default = e => {
             className: el.categoryBanner,
             blur: !0
           }), (0, s.jsx)(ec, {
-            user: E,
+            user: p,
             product: r
           }), (0, s.jsxs)("div", {
             className: el.profilePreviewHeader,

@@ -1,44 +1,49 @@
 "use strict";
-a.r(t), a.d(t, {
+r.r(t), r.d(t, {
   BundlePreview: function() {
-    return c
+    return d
   }
 });
-var l = a("735250");
-a("470079");
-var s = a("481060"),
-  r = a("876917"),
-  n = a("539861"),
-  i = a("616066"),
-  o = a("141169");
-let c = e => {
+var a = r("735250");
+r("470079");
+var l = r("120356"),
+  o = r.n(l),
+  n = r("481060"),
+  s = r("876917"),
+  i = r("328456"),
+  c = r("616066"),
+  u = r("141169");
+let d = e => {
   let {
     product: t,
-    isPurchased: a,
-    isHighlighted: c,
-    user: u
+    isPurchased: r,
+    isHighlighted: l,
+    user: d,
+    forCollectedModal: f,
+    profileEffectClassName: C
   } = e, {
-    firstProfileEffect: d,
-    firstAvatarDecoration: f
-  } = (0, n.useProductItems)(t);
-  return (0, l.jsxs)("div", {
-    className: o.container,
-    children: [null != d ? (0, l.jsx)("div", {
-      className: o.profileEffectShopPreview,
-      children: (0, l.jsx)(r.default, {
-        isHovering: c,
-        profileEffectId: d.id,
-        isPurchased: a,
+    firstProfileEffect: p,
+    firstAvatarDecoration: g
+  } = (0, i.useShopProductItems)(t);
+  return (0, a.jsxs)("div", {
+    className: u.container,
+    children: [null != p ? (0, a.jsx)("div", {
+      className: o()(u.profileEffectShopPreview, C),
+      children: (0, a.jsx)(s.default, {
+        isHovering: l,
+        profileEffectId: p.id,
+        isPurchased: r,
+        forCollectedModal: f,
         removeSetHeight: !0
       })
-    }) : null, null != f ? (0, l.jsx)("div", {
-      className: o.avatarDecorationPreview,
-      children: (0, l.jsx)(i.AvatarDecorationPreview, {
-        item: f,
-        user: u,
-        avatarSize: s.AvatarSizes.SIZE_120,
-        isPurchased: a,
-        isHighlighted: c
+    }) : null, null != g ? (0, a.jsx)("div", {
+      className: u.avatarDecorationPreview,
+      children: (0, a.jsx)(c.AvatarDecorationPreview, {
+        item: g,
+        user: d,
+        avatarSize: n.AvatarSizes.SIZE_120,
+        isPurchased: r,
+        isHighlighted: l
       })
     }) : null]
   })

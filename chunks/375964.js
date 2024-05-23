@@ -15529,6 +15529,7 @@ e.exports = Object.freeze({
   COLLECTIBLES_COLLECTING_FINISHED: "Collecting finished",
   COLLECTIBLES_NITRO_EXCLUSIVE: "Nitro exclusive",
   COLLECTIBLES_PERMANENT_COLLECTION: "This decoration is now part of your collection and can be used anytime!",
+  COLLECTIBLES_PERMANENT_COLLECTION_BUNDLE: "These decorations are now part of your collection and can be used anytime from your User Profile.",
   COLLECTIBLES_YOU_COLLECTED: "You've collected {itemName}!",
   COLLECTIBLES_ALREADY_OWNED: "Already owned",
   COLLECTIBLES_INCLUDED_WITH_PREMIUM: "Included with Nitro",
