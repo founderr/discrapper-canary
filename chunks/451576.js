@@ -1,24 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return s
-  },
-  isPrivateChannelWithEnabledActivities: function() {
     return a
   }
 });
-var i = n("399606"),
-  r = n("592125");
-
-function s(e) {
-  var t;
-  let n = (0, i.useStateFromStores)([r.default], () => r.default.getChannel(e));
-  return null !== (t = null == n ? void 0 : n.isPrivate()) && void 0 !== t && t
-}
+var l = i("399606"),
+  n = i("592125");
 
 function a(e) {
   var t;
-  if (null == e) return !1;
-  let n = r.default.getChannel(e);
-  return null !== (t = null == n ? void 0 : n.isPrivate()) && void 0 !== t && t
+  let i = (0, l.useStateFromStores)([n.default], () => n.default.getChannel(e));
+  return null !== (t = null == i ? void 0 : i.isPrivate()) && void 0 !== t && t
 }
